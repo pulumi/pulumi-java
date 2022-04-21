@@ -25,7 +25,7 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enumvalue", required=true)
-      private final List<EnumValueResponse> enumvalue;
+    private List<EnumValueResponse> enumvalue;
 
     public List<EnumValueResponse> enumvalue() {
         return this.enumvalue;
@@ -36,7 +36,7 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -47,7 +47,7 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="options", required=true)
-      private final List<OptionResponse> options;
+    private List<OptionResponse> options;
 
     public List<OptionResponse> options() {
         return this.options;
@@ -58,7 +58,7 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceContext", required=true)
-      private final SourceContextResponse sourceContext;
+    private SourceContextResponse sourceContext;
 
     public SourceContextResponse sourceContext() {
         return this.sourceContext;
@@ -69,88 +69,81 @@ public final class EnumResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syntax", required=true)
-      private final String syntax;
+    private String syntax;
 
     public String syntax() {
         return this.syntax;
     }
 
-    public EnumResponse(
-        List<EnumValueResponse> enumvalue,
-        String name,
-        List<OptionResponse> options,
-        SourceContextResponse sourceContext,
-        String syntax) {
-        this.enumvalue = Objects.requireNonNull(enumvalue, "expected parameter 'enumvalue' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-        this.sourceContext = Objects.requireNonNull(sourceContext, "expected parameter 'sourceContext' to be non-null");
-        this.syntax = Objects.requireNonNull(syntax, "expected parameter 'syntax' to be non-null");
-    }
+    private EnumResponse() {}
 
-    private EnumResponse() {
-        this.enumvalue = List.of();
-        this.name = null;
-        this.options = List.of();
-        this.sourceContext = null;
-        this.syntax = null;
+    private EnumResponse(EnumResponse $) {
+        this.enumvalue = $.enumvalue;
+        this.name = $.name;
+        this.options = $.options;
+        this.sourceContext = $.sourceContext;
+        this.syntax = $.syntax;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnumResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<EnumValueResponse> enumvalue;
-        private String name;
-        private List<OptionResponse> options;
-        private SourceContextResponse sourceContext;
-        private String syntax;
+        private EnumResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnumResponse();
         }
 
         public Builder(EnumResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enumvalue = defaults.enumvalue;
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
-    	      this.sourceContext = defaults.sourceContext;
-    	      this.syntax = defaults.syntax;
+            $ = new EnumResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enumvalue(List<EnumValueResponse> enumvalue) {
-            this.enumvalue = Objects.requireNonNull(enumvalue);
+            $.enumvalue = enumvalue;
             return this;
         }
+
         public Builder enumvalue(EnumValueResponse... enumvalue) {
             return enumvalue(List.of(enumvalue));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder options(List<OptionResponse> options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder options(OptionResponse... options) {
             return options(List.of(options));
         }
+
         public Builder sourceContext(SourceContextResponse sourceContext) {
-            this.sourceContext = Objects.requireNonNull(sourceContext);
+            $.sourceContext = sourceContext;
             return this;
         }
+
         public Builder syntax(String syntax) {
-            this.syntax = Objects.requireNonNull(syntax);
+            $.syntax = syntax;
             return this;
-        }        public EnumResponse build() {
-            return new EnumResponse(enumvalue, name, options, sourceContext, syntax);
+        }
+
+        public EnumResponse build() {
+            $.enumvalue = Objects.requireNonNull($.enumvalue, "expected parameter 'enumvalue' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            $.sourceContext = Objects.requireNonNull($.sourceContext, "expected parameter 'sourceContext' to be non-null");
+            $.syntax = Objects.requireNonNull($.syntax, "expected parameter 'syntax' to be non-null");
+            return $;
         }
     }
+
 }

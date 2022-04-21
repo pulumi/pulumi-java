@@ -6,9 +6,9 @@ package com.pulumi.aws.securityhub.inputs;
 import com.pulumi.aws.securityhub.inputs.InsightFiltersUpdatedAtDateRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InsightFiltersUpdatedAtArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dateRange")
-      private final @Nullable Output<InsightFiltersUpdatedAtDateRangeArgs> dateRange;
+    private @Nullable Output<InsightFiltersUpdatedAtDateRangeArgs> dateRange;
 
-    public Output<InsightFiltersUpdatedAtDateRangeArgs> dateRange() {
-        return this.dateRange == null ? Codegen.empty() : this.dateRange;
+    public Optional<Output<InsightFiltersUpdatedAtDateRangeArgs>> dateRange() {
+        return Optional.ofNullable(this.dateRange);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InsightFiltersUpdatedAtArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<String> end;
+    private @Nullable Output<String> end;
 
-    public Output<String> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<String>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class InsightFiltersUpdatedAtArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<String> start;
+    private @Nullable Output<String> start;
 
-    public Output<String> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<String>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public InsightFiltersUpdatedAtArgs(
-        @Nullable Output<InsightFiltersUpdatedAtDateRangeArgs> dateRange,
-        @Nullable Output<String> end,
-        @Nullable Output<String> start) {
-        this.dateRange = dateRange;
-        this.end = end;
-        this.start = start;
-    }
+    private InsightFiltersUpdatedAtArgs() {}
 
-    private InsightFiltersUpdatedAtArgs() {
-        this.dateRange = Codegen.empty();
-        this.end = Codegen.empty();
-        this.start = Codegen.empty();
+    private InsightFiltersUpdatedAtArgs(InsightFiltersUpdatedAtArgs $) {
+        this.dateRange = $.dateRange;
+        this.end = $.end;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightFiltersUpdatedAtArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InsightFiltersUpdatedAtDateRangeArgs> dateRange;
-        private @Nullable Output<String> end;
-        private @Nullable Output<String> start;
+        private InsightFiltersUpdatedAtArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightFiltersUpdatedAtArgs();
         }
 
         public Builder(InsightFiltersUpdatedAtArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dateRange = defaults.dateRange;
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
+            $ = new InsightFiltersUpdatedAtArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dateRange(@Nullable Output<InsightFiltersUpdatedAtDateRangeArgs> dateRange) {
-            this.dateRange = dateRange;
+            $.dateRange = dateRange;
             return this;
         }
-        public Builder dateRange(@Nullable InsightFiltersUpdatedAtDateRangeArgs dateRange) {
-            this.dateRange = Codegen.ofNullable(dateRange);
-            return this;
+
+        public Builder dateRange(InsightFiltersUpdatedAtDateRangeArgs dateRange) {
+            return dateRange(Output.of(dateRange));
         }
+
         public Builder end(@Nullable Output<String> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable String end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
+
+        public Builder end(String end) {
+            return end(Output.of(end));
         }
+
         public Builder start(@Nullable Output<String> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable String start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
-        }        public InsightFiltersUpdatedAtArgs build() {
-            return new InsightFiltersUpdatedAtArgs(dateRange, end, start);
+
+        public Builder start(String start) {
+            return start(Output.of(start));
+        }
+
+        public InsightFiltersUpdatedAtArgs build() {
+            return $;
         }
     }
+
 }

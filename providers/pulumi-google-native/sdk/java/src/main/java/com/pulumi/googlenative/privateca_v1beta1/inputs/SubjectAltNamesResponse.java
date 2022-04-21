@@ -23,7 +23,7 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="customSans", required=true)
-      private final List<X509ExtensionResponse> customSans;
+    private List<X509ExtensionResponse> customSans;
 
     public List<X509ExtensionResponse> customSans() {
         return this.customSans;
@@ -34,7 +34,7 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dnsNames", required=true)
-      private final List<String> dnsNames;
+    private List<String> dnsNames;
 
     public List<String> dnsNames() {
         return this.dnsNames;
@@ -45,7 +45,7 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="emailAddresses", required=true)
-      private final List<String> emailAddresses;
+    private List<String> emailAddresses;
 
     public List<String> emailAddresses() {
         return this.emailAddresses;
@@ -56,7 +56,7 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ipAddresses", required=true)
-      private final List<String> ipAddresses;
+    private List<String> ipAddresses;
 
     public List<String> ipAddresses() {
         return this.ipAddresses;
@@ -67,97 +67,93 @@ public final class SubjectAltNamesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="uris", required=true)
-      private final List<String> uris;
+    private List<String> uris;
 
     public List<String> uris() {
         return this.uris;
     }
 
-    public SubjectAltNamesResponse(
-        List<X509ExtensionResponse> customSans,
-        List<String> dnsNames,
-        List<String> emailAddresses,
-        List<String> ipAddresses,
-        List<String> uris) {
-        this.customSans = Objects.requireNonNull(customSans, "expected parameter 'customSans' to be non-null");
-        this.dnsNames = Objects.requireNonNull(dnsNames, "expected parameter 'dnsNames' to be non-null");
-        this.emailAddresses = Objects.requireNonNull(emailAddresses, "expected parameter 'emailAddresses' to be non-null");
-        this.ipAddresses = Objects.requireNonNull(ipAddresses, "expected parameter 'ipAddresses' to be non-null");
-        this.uris = Objects.requireNonNull(uris, "expected parameter 'uris' to be non-null");
-    }
+    private SubjectAltNamesResponse() {}
 
-    private SubjectAltNamesResponse() {
-        this.customSans = List.of();
-        this.dnsNames = List.of();
-        this.emailAddresses = List.of();
-        this.ipAddresses = List.of();
-        this.uris = List.of();
+    private SubjectAltNamesResponse(SubjectAltNamesResponse $) {
+        this.customSans = $.customSans;
+        this.dnsNames = $.dnsNames;
+        this.emailAddresses = $.emailAddresses;
+        this.ipAddresses = $.ipAddresses;
+        this.uris = $.uris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubjectAltNamesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<X509ExtensionResponse> customSans;
-        private List<String> dnsNames;
-        private List<String> emailAddresses;
-        private List<String> ipAddresses;
-        private List<String> uris;
+        private SubjectAltNamesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubjectAltNamesResponse();
         }
 
         public Builder(SubjectAltNamesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customSans = defaults.customSans;
-    	      this.dnsNames = defaults.dnsNames;
-    	      this.emailAddresses = defaults.emailAddresses;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.uris = defaults.uris;
+            $ = new SubjectAltNamesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customSans(List<X509ExtensionResponse> customSans) {
-            this.customSans = Objects.requireNonNull(customSans);
+            $.customSans = customSans;
             return this;
         }
+
         public Builder customSans(X509ExtensionResponse... customSans) {
             return customSans(List.of(customSans));
         }
+
         public Builder dnsNames(List<String> dnsNames) {
-            this.dnsNames = Objects.requireNonNull(dnsNames);
+            $.dnsNames = dnsNames;
             return this;
         }
+
         public Builder dnsNames(String... dnsNames) {
             return dnsNames(List.of(dnsNames));
         }
+
         public Builder emailAddresses(List<String> emailAddresses) {
-            this.emailAddresses = Objects.requireNonNull(emailAddresses);
+            $.emailAddresses = emailAddresses;
             return this;
         }
+
         public Builder emailAddresses(String... emailAddresses) {
             return emailAddresses(List.of(emailAddresses));
         }
+
         public Builder ipAddresses(List<String> ipAddresses) {
-            this.ipAddresses = Objects.requireNonNull(ipAddresses);
+            $.ipAddresses = ipAddresses;
             return this;
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder uris(List<String> uris) {
-            this.uris = Objects.requireNonNull(uris);
+            $.uris = uris;
             return this;
         }
+
         public Builder uris(String... uris) {
             return uris(List.of(uris));
-        }        public SubjectAltNamesResponse build() {
-            return new SubjectAltNamesResponse(customSans, dnsNames, emailAddresses, ipAddresses, uris);
+        }
+
+        public SubjectAltNamesResponse build() {
+            $.customSans = Objects.requireNonNull($.customSans, "expected parameter 'customSans' to be non-null");
+            $.dnsNames = Objects.requireNonNull($.dnsNames, "expected parameter 'dnsNames' to be non-null");
+            $.emailAddresses = Objects.requireNonNull($.emailAddresses, "expected parameter 'emailAddresses' to be non-null");
+            $.ipAddresses = Objects.requireNonNull($.ipAddresses, "expected parameter 'ipAddresses' to be non-null");
+            $.uris = Objects.requireNonNull($.uris, "expected parameter 'uris' to be non-null");
+            return $;
         }
     }
+
 }

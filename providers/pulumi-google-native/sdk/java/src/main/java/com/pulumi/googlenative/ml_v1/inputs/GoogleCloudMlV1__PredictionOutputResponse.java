@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends com.pulumi.
      * 
      */
     @Import(name="errorCount", required=true)
-      private final String errorCount;
+    private String errorCount;
 
     public String errorCount() {
         return this.errorCount;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends com.pulumi.
      * 
      */
     @Import(name="nodeHours", required=true)
-      private final Double nodeHours;
+    private Double nodeHours;
 
     public Double nodeHours() {
         return this.nodeHours;
@@ -44,7 +44,7 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends com.pulumi.
      * 
      */
     @Import(name="outputPath", required=true)
-      private final String outputPath;
+    private String outputPath;
 
     public String outputPath() {
         return this.outputPath;
@@ -55,73 +55,66 @@ public final class GoogleCloudMlV1__PredictionOutputResponse extends com.pulumi.
      * 
      */
     @Import(name="predictionCount", required=true)
-      private final String predictionCount;
+    private String predictionCount;
 
     public String predictionCount() {
         return this.predictionCount;
     }
 
-    public GoogleCloudMlV1__PredictionOutputResponse(
-        String errorCount,
-        Double nodeHours,
-        String outputPath,
-        String predictionCount) {
-        this.errorCount = Objects.requireNonNull(errorCount, "expected parameter 'errorCount' to be non-null");
-        this.nodeHours = Objects.requireNonNull(nodeHours, "expected parameter 'nodeHours' to be non-null");
-        this.outputPath = Objects.requireNonNull(outputPath, "expected parameter 'outputPath' to be non-null");
-        this.predictionCount = Objects.requireNonNull(predictionCount, "expected parameter 'predictionCount' to be non-null");
-    }
+    private GoogleCloudMlV1__PredictionOutputResponse() {}
 
-    private GoogleCloudMlV1__PredictionOutputResponse() {
-        this.errorCount = null;
-        this.nodeHours = null;
-        this.outputPath = null;
-        this.predictionCount = null;
+    private GoogleCloudMlV1__PredictionOutputResponse(GoogleCloudMlV1__PredictionOutputResponse $) {
+        this.errorCount = $.errorCount;
+        this.nodeHours = $.nodeHours;
+        this.outputPath = $.outputPath;
+        this.predictionCount = $.predictionCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__PredictionOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorCount;
-        private Double nodeHours;
-        private String outputPath;
-        private String predictionCount;
+        private GoogleCloudMlV1__PredictionOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__PredictionOutputResponse();
         }
 
         public Builder(GoogleCloudMlV1__PredictionOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCount = defaults.errorCount;
-    	      this.nodeHours = defaults.nodeHours;
-    	      this.outputPath = defaults.outputPath;
-    	      this.predictionCount = defaults.predictionCount;
+            $ = new GoogleCloudMlV1__PredictionOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCount(String errorCount) {
-            this.errorCount = Objects.requireNonNull(errorCount);
+            $.errorCount = errorCount;
             return this;
         }
+
         public Builder nodeHours(Double nodeHours) {
-            this.nodeHours = Objects.requireNonNull(nodeHours);
+            $.nodeHours = nodeHours;
             return this;
         }
+
         public Builder outputPath(String outputPath) {
-            this.outputPath = Objects.requireNonNull(outputPath);
+            $.outputPath = outputPath;
             return this;
         }
+
         public Builder predictionCount(String predictionCount) {
-            this.predictionCount = Objects.requireNonNull(predictionCount);
+            $.predictionCount = predictionCount;
             return this;
-        }        public GoogleCloudMlV1__PredictionOutputResponse build() {
-            return new GoogleCloudMlV1__PredictionOutputResponse(errorCount, nodeHours, outputPath, predictionCount);
+        }
+
+        public GoogleCloudMlV1__PredictionOutputResponse build() {
+            $.errorCount = Objects.requireNonNull($.errorCount, "expected parameter 'errorCount' to be non-null");
+            $.nodeHours = Objects.requireNonNull($.nodeHours, "expected parameter 'nodeHours' to be non-null");
+            $.outputPath = Objects.requireNonNull($.outputPath, "expected parameter 'outputPath' to be non-null");
+            $.predictionCount = Objects.requireNonNull($.predictionCount, "expected parameter 'predictionCount' to be non-null");
+            return $;
         }
     }
+
 }

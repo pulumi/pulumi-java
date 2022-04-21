@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="container")
-      private final @Nullable Output<Object> container;
+    private @Nullable Output<Object> container;
 
-    public Output<Object> container() {
-        return this.container == null ? Codegen.empty() : this.container;
+    public Optional<Output<Object>> container() {
+        return Optional.ofNullable(this.container);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Output<Object> fileName;
+    private @Nullable Output<Object> fileName;
 
-    public Output<Object> fileName() {
-        return this.fileName == null ? Codegen.empty() : this.fileName;
+    public Optional<Output<Object>> fileName() {
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Output<Object> folderPath;
+    private @Nullable Output<Object> folderPath;
 
-    public Output<Object> folderPath() {
-        return this.folderPath == null ? Codegen.empty() : this.folderPath;
+    public Optional<Output<Object>> folderPath() {
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -59,89 +60,79 @@ public final class AzureBlobStorageLocationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AzureBlobStorageLocationArgs(
-        @Nullable Output<Object> container,
-        @Nullable Output<Object> fileName,
-        @Nullable Output<Object> folderPath,
-        Output<String> type) {
-        this.container = container;
-        this.fileName = fileName;
-        this.folderPath = folderPath;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AzureBlobStorageLocationArgs() {}
 
-    private AzureBlobStorageLocationArgs() {
-        this.container = Codegen.empty();
-        this.fileName = Codegen.empty();
-        this.folderPath = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzureBlobStorageLocationArgs(AzureBlobStorageLocationArgs $) {
+        this.container = $.container;
+        this.fileName = $.fileName;
+        this.folderPath = $.folderPath;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobStorageLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> container;
-        private @Nullable Output<Object> fileName;
-        private @Nullable Output<Object> folderPath;
-        private Output<String> type;
+        private AzureBlobStorageLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobStorageLocationArgs();
         }
 
         public Builder(AzureBlobStorageLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.fileName = defaults.fileName;
-    	      this.folderPath = defaults.folderPath;
-    	      this.type = defaults.type;
+            $ = new AzureBlobStorageLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder container(@Nullable Output<Object> container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
-        public Builder container(@Nullable Object container) {
-            this.container = Codegen.ofNullable(container);
-            return this;
+
+        public Builder container(Object container) {
+            return container(Output.of(container));
         }
+
         public Builder fileName(@Nullable Output<Object> fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
-        public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Codegen.ofNullable(fileName);
-            return this;
+
+        public Builder fileName(Object fileName) {
+            return fileName(Output.of(fileName));
         }
+
         public Builder folderPath(@Nullable Output<Object> folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
-        public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Codegen.ofNullable(folderPath);
-            return this;
+
+        public Builder folderPath(Object folderPath) {
+            return folderPath(Output.of(folderPath));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AzureBlobStorageLocationArgs build() {
-            return new AzureBlobStorageLocationArgs(container, fileName, folderPath, type);
+            return type(Output.of(type));
+        }
+
+        public AzureBlobStorageLocationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

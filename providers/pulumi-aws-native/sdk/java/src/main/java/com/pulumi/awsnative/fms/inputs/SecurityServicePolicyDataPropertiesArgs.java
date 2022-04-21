@@ -6,9 +6,9 @@ package com.pulumi.awsnative.fms.inputs;
 import com.pulumi.awsnative.fms.enums.PolicySecurityServicePolicyDataPropertiesType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class SecurityServicePolicyDataPropertiesArgs extends com.pulumi.re
     public static final SecurityServicePolicyDataPropertiesArgs Empty = new SecurityServicePolicyDataPropertiesArgs();
 
     @Import(name="managedServiceData")
-      private final @Nullable Output<String> managedServiceData;
+    private @Nullable Output<String> managedServiceData;
 
-    public Output<String> managedServiceData() {
-        return this.managedServiceData == null ? Codegen.empty() : this.managedServiceData;
+    public Optional<Output<String>> managedServiceData() {
+        return Optional.ofNullable(this.managedServiceData);
     }
 
     @Import(name="type", required=true)
-      private final Output<PolicySecurityServicePolicyDataPropertiesType> type;
+    private Output<PolicySecurityServicePolicyDataPropertiesType> type;
 
     public Output<PolicySecurityServicePolicyDataPropertiesType> type() {
         return this.type;
     }
 
-    public SecurityServicePolicyDataPropertiesArgs(
-        @Nullable Output<String> managedServiceData,
-        Output<PolicySecurityServicePolicyDataPropertiesType> type) {
-        this.managedServiceData = managedServiceData;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SecurityServicePolicyDataPropertiesArgs() {}
 
-    private SecurityServicePolicyDataPropertiesArgs() {
-        this.managedServiceData = Codegen.empty();
-        this.type = Codegen.empty();
+    private SecurityServicePolicyDataPropertiesArgs(SecurityServicePolicyDataPropertiesArgs $) {
+        this.managedServiceData = $.managedServiceData;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityServicePolicyDataPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> managedServiceData;
-        private Output<PolicySecurityServicePolicyDataPropertiesType> type;
+        private SecurityServicePolicyDataPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityServicePolicyDataPropertiesArgs();
         }
 
         public Builder(SecurityServicePolicyDataPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedServiceData = defaults.managedServiceData;
-    	      this.type = defaults.type;
+            $ = new SecurityServicePolicyDataPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedServiceData(@Nullable Output<String> managedServiceData) {
-            this.managedServiceData = managedServiceData;
+            $.managedServiceData = managedServiceData;
             return this;
         }
-        public Builder managedServiceData(@Nullable String managedServiceData) {
-            this.managedServiceData = Codegen.ofNullable(managedServiceData);
-            return this;
+
+        public Builder managedServiceData(String managedServiceData) {
+            return managedServiceData(Output.of(managedServiceData));
         }
+
         public Builder type(Output<PolicySecurityServicePolicyDataPropertiesType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(PolicySecurityServicePolicyDataPropertiesType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SecurityServicePolicyDataPropertiesArgs build() {
-            return new SecurityServicePolicyDataPropertiesArgs(managedServiceData, type);
+            return type(Output.of(type));
+        }
+
+        public SecurityServicePolicyDataPropertiesArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

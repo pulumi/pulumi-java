@@ -20,10 +20,10 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
@@ -53,73 +53,63 @@ public final class GetManagementGroupArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="recurse")
-      private final @Nullable Boolean recurse;
+    private @Nullable Boolean recurse;
 
     public Optional<Boolean> recurse() {
-        return this.recurse == null ? Optional.empty() : Optional.ofNullable(this.recurse);
+        return Optional.ofNullable(this.recurse);
     }
 
-    public GetManagementGroupArgs(
-        @Nullable String expand,
-        @Nullable String filter,
-        String groupId,
-        @Nullable Boolean recurse) {
-        this.expand = expand;
-        this.filter = filter;
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.recurse = recurse;
-    }
+    private GetManagementGroupArgs() {}
 
-    private GetManagementGroupArgs() {
-        this.expand = null;
-        this.filter = null;
-        this.groupId = null;
-        this.recurse = null;
+    private GetManagementGroupArgs(GetManagementGroupArgs $) {
+        this.expand = $.expand;
+        this.filter = $.filter;
+        this.groupId = $.groupId;
+        this.recurse = $.recurse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private @Nullable String filter;
-        private String groupId;
-        private @Nullable Boolean recurse;
+        private GetManagementGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementGroupArgs();
         }
 
         public Builder(GetManagementGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.filter = defaults.filter;
-    	      this.groupId = defaults.groupId;
-    	      this.recurse = defaults.recurse;
+            $ = new GetManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder recurse(@Nullable Boolean recurse) {
-            this.recurse = recurse;
+            $.recurse = recurse;
             return this;
-        }        public GetManagementGroupArgs build() {
-            return new GetManagementGroupArgs(expand, filter, groupId, recurse);
+        }
+
+        public GetManagementGroupArgs build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.backup;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class VaultPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupVaultName", required=true)
-      private final Output<String> backupVaultName;
+    private Output<String> backupVaultName;
 
     public Output<String> backupVaultName() {
         return this.backupVaultName;
@@ -30,63 +29,60 @@ public final class VaultPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public VaultPolicyArgs(
-        Output<String> backupVaultName,
-        Output<String> policy) {
-        this.backupVaultName = Objects.requireNonNull(backupVaultName, "expected parameter 'backupVaultName' to be non-null");
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private VaultPolicyArgs() {}
 
-    private VaultPolicyArgs() {
-        this.backupVaultName = Codegen.empty();
-        this.policy = Codegen.empty();
+    private VaultPolicyArgs(VaultPolicyArgs $) {
+        this.backupVaultName = $.backupVaultName;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupVaultName;
-        private Output<String> policy;
+        private VaultPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultPolicyArgs();
         }
 
         public Builder(VaultPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupVaultName = defaults.backupVaultName;
-    	      this.policy = defaults.policy;
+            $ = new VaultPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupVaultName(Output<String> backupVaultName) {
-            this.backupVaultName = Objects.requireNonNull(backupVaultName);
+            $.backupVaultName = backupVaultName;
             return this;
         }
+
         public Builder backupVaultName(String backupVaultName) {
-            this.backupVaultName = Output.of(Objects.requireNonNull(backupVaultName));
-            return this;
+            return backupVaultName(Output.of(backupVaultName));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public VaultPolicyArgs build() {
-            return new VaultPolicyArgs(backupVaultName, policy);
+            return policy(Output.of(policy));
+        }
+
+        public VaultPolicyArgs build() {
+            $.backupVaultName = Objects.requireNonNull($.backupVaultName, "expected parameter 'backupVaultName' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

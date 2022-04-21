@@ -25,7 +25,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="annotations", required=true)
-      private final Map<String,String> annotations;
+    private Map<String,String> annotations;
 
     public Map<String,String> annotations() {
         return this.annotations;
@@ -36,7 +36,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -47,7 +47,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="creationTimestamp", required=true)
-      private final String creationTimestamp;
+    private String creationTimestamp;
 
     public String creationTimestamp() {
         return this.creationTimestamp;
@@ -58,7 +58,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deletionGracePeriodSeconds", required=true)
-      private final Integer deletionGracePeriodSeconds;
+    private Integer deletionGracePeriodSeconds;
 
     public Integer deletionGracePeriodSeconds() {
         return this.deletionGracePeriodSeconds;
@@ -69,7 +69,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deletionTimestamp", required=true)
-      private final String deletionTimestamp;
+    private String deletionTimestamp;
 
     public String deletionTimestamp() {
         return this.deletionTimestamp;
@@ -80,7 +80,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="finalizers", required=true)
-      private final List<String> finalizers;
+    private List<String> finalizers;
 
     public List<String> finalizers() {
         return this.finalizers;
@@ -91,7 +91,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="generateName", required=true)
-      private final String generateName;
+    private String generateName;
 
     public String generateName() {
         return this.generateName;
@@ -102,7 +102,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="generation", required=true)
-      private final Integer generation;
+    private Integer generation;
 
     public Integer generation() {
         return this.generation;
@@ -113,7 +113,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -124,7 +124,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -135,7 +135,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
@@ -146,7 +146,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ownerReferences", required=true)
-      private final List<OwnerReferenceResponse> ownerReferences;
+    private List<OwnerReferenceResponse> ownerReferences;
 
     public List<OwnerReferenceResponse> ownerReferences() {
         return this.ownerReferences;
@@ -157,7 +157,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceVersion", required=true)
-      private final String resourceVersion;
+    private String resourceVersion;
 
     public String resourceVersion() {
         return this.resourceVersion;
@@ -168,7 +168,7 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selfLink", required=true)
-      private final String selfLink;
+    private String selfLink;
 
     public String selfLink() {
         return this.selfLink;
@@ -179,178 +179,151 @@ public final class ObjectMetaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uid", required=true)
-      private final String uid;
+    private String uid;
 
     public String uid() {
         return this.uid;
     }
 
-    public ObjectMetaResponse(
-        Map<String,String> annotations,
-        String clusterName,
-        String creationTimestamp,
-        Integer deletionGracePeriodSeconds,
-        String deletionTimestamp,
-        List<String> finalizers,
-        String generateName,
-        Integer generation,
-        Map<String,String> labels,
-        String name,
-        String namespace,
-        List<OwnerReferenceResponse> ownerReferences,
-        String resourceVersion,
-        String selfLink,
-        String uid) {
-        this.annotations = Objects.requireNonNull(annotations, "expected parameter 'annotations' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.creationTimestamp = Objects.requireNonNull(creationTimestamp, "expected parameter 'creationTimestamp' to be non-null");
-        this.deletionGracePeriodSeconds = Objects.requireNonNull(deletionGracePeriodSeconds, "expected parameter 'deletionGracePeriodSeconds' to be non-null");
-        this.deletionTimestamp = Objects.requireNonNull(deletionTimestamp, "expected parameter 'deletionTimestamp' to be non-null");
-        this.finalizers = Objects.requireNonNull(finalizers, "expected parameter 'finalizers' to be non-null");
-        this.generateName = Objects.requireNonNull(generateName, "expected parameter 'generateName' to be non-null");
-        this.generation = Objects.requireNonNull(generation, "expected parameter 'generation' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.ownerReferences = Objects.requireNonNull(ownerReferences, "expected parameter 'ownerReferences' to be non-null");
-        this.resourceVersion = Objects.requireNonNull(resourceVersion, "expected parameter 'resourceVersion' to be non-null");
-        this.selfLink = Objects.requireNonNull(selfLink, "expected parameter 'selfLink' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-    }
+    private ObjectMetaResponse() {}
 
-    private ObjectMetaResponse() {
-        this.annotations = Map.of();
-        this.clusterName = null;
-        this.creationTimestamp = null;
-        this.deletionGracePeriodSeconds = null;
-        this.deletionTimestamp = null;
-        this.finalizers = List.of();
-        this.generateName = null;
-        this.generation = null;
-        this.labels = Map.of();
-        this.name = null;
-        this.namespace = null;
-        this.ownerReferences = List.of();
-        this.resourceVersion = null;
-        this.selfLink = null;
-        this.uid = null;
+    private ObjectMetaResponse(ObjectMetaResponse $) {
+        this.annotations = $.annotations;
+        this.clusterName = $.clusterName;
+        this.creationTimestamp = $.creationTimestamp;
+        this.deletionGracePeriodSeconds = $.deletionGracePeriodSeconds;
+        this.deletionTimestamp = $.deletionTimestamp;
+        this.finalizers = $.finalizers;
+        this.generateName = $.generateName;
+        this.generation = $.generation;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.ownerReferences = $.ownerReferences;
+        this.resourceVersion = $.resourceVersion;
+        this.selfLink = $.selfLink;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectMetaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> annotations;
-        private String clusterName;
-        private String creationTimestamp;
-        private Integer deletionGracePeriodSeconds;
-        private String deletionTimestamp;
-        private List<String> finalizers;
-        private String generateName;
-        private Integer generation;
-        private Map<String,String> labels;
-        private String name;
-        private String namespace;
-        private List<OwnerReferenceResponse> ownerReferences;
-        private String resourceVersion;
-        private String selfLink;
-        private String uid;
+        private ObjectMetaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectMetaResponse();
         }
 
         public Builder(ObjectMetaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.clusterName = defaults.clusterName;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.deletionGracePeriodSeconds = defaults.deletionGracePeriodSeconds;
-    	      this.deletionTimestamp = defaults.deletionTimestamp;
-    	      this.finalizers = defaults.finalizers;
-    	      this.generateName = defaults.generateName;
-    	      this.generation = defaults.generation;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.ownerReferences = defaults.ownerReferences;
-    	      this.resourceVersion = defaults.resourceVersion;
-    	      this.selfLink = defaults.selfLink;
-    	      this.uid = defaults.uid;
+            $ = new ObjectMetaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(Map<String,String> annotations) {
-            this.annotations = Objects.requireNonNull(annotations);
+            $.annotations = annotations;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder creationTimestamp(String creationTimestamp) {
-            this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
+
         public Builder deletionGracePeriodSeconds(Integer deletionGracePeriodSeconds) {
-            this.deletionGracePeriodSeconds = Objects.requireNonNull(deletionGracePeriodSeconds);
+            $.deletionGracePeriodSeconds = deletionGracePeriodSeconds;
             return this;
         }
+
         public Builder deletionTimestamp(String deletionTimestamp) {
-            this.deletionTimestamp = Objects.requireNonNull(deletionTimestamp);
+            $.deletionTimestamp = deletionTimestamp;
             return this;
         }
+
         public Builder finalizers(List<String> finalizers) {
-            this.finalizers = Objects.requireNonNull(finalizers);
+            $.finalizers = finalizers;
             return this;
         }
+
         public Builder finalizers(String... finalizers) {
             return finalizers(List.of(finalizers));
         }
+
         public Builder generateName(String generateName) {
-            this.generateName = Objects.requireNonNull(generateName);
+            $.generateName = generateName;
             return this;
         }
+
         public Builder generation(Integer generation) {
-            this.generation = Objects.requireNonNull(generation);
+            $.generation = generation;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder ownerReferences(List<OwnerReferenceResponse> ownerReferences) {
-            this.ownerReferences = Objects.requireNonNull(ownerReferences);
+            $.ownerReferences = ownerReferences;
             return this;
         }
+
         public Builder ownerReferences(OwnerReferenceResponse... ownerReferences) {
             return ownerReferences(List.of(ownerReferences));
         }
+
         public Builder resourceVersion(String resourceVersion) {
-            this.resourceVersion = Objects.requireNonNull(resourceVersion);
+            $.resourceVersion = resourceVersion;
             return this;
         }
+
         public Builder selfLink(String selfLink) {
-            this.selfLink = Objects.requireNonNull(selfLink);
+            $.selfLink = selfLink;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
-        }        public ObjectMetaResponse build() {
-            return new ObjectMetaResponse(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
+        }
+
+        public ObjectMetaResponse build() {
+            $.annotations = Objects.requireNonNull($.annotations, "expected parameter 'annotations' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.creationTimestamp = Objects.requireNonNull($.creationTimestamp, "expected parameter 'creationTimestamp' to be non-null");
+            $.deletionGracePeriodSeconds = Objects.requireNonNull($.deletionGracePeriodSeconds, "expected parameter 'deletionGracePeriodSeconds' to be non-null");
+            $.deletionTimestamp = Objects.requireNonNull($.deletionTimestamp, "expected parameter 'deletionTimestamp' to be non-null");
+            $.finalizers = Objects.requireNonNull($.finalizers, "expected parameter 'finalizers' to be non-null");
+            $.generateName = Objects.requireNonNull($.generateName, "expected parameter 'generateName' to be non-null");
+            $.generation = Objects.requireNonNull($.generation, "expected parameter 'generation' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.ownerReferences = Objects.requireNonNull($.ownerReferences, "expected parameter 'ownerReferences' to be non-null");
+            $.resourceVersion = Objects.requireNonNull($.resourceVersion, "expected parameter 'resourceVersion' to be non-null");
+            $.selfLink = Objects.requireNonNull($.selfLink, "expected parameter 'selfLink' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            return $;
         }
     }
+
 }

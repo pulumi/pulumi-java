@@ -15,78 +15,71 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetInstanceArgs Empty = new GetInstanceArgs();
 
     @Import(name="fieldMask")
-      private final @Nullable String fieldMask;
+    private @Nullable String fieldMask;
 
     public Optional<String> fieldMask() {
-        return this.fieldMask == null ? Optional.empty() : Optional.ofNullable(this.fieldMask);
+        return Optional.ofNullable(this.fieldMask);
     }
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetInstanceArgs(
-        @Nullable String fieldMask,
-        String instanceId,
-        @Nullable String project) {
-        this.fieldMask = fieldMask;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = project;
-    }
+    private GetInstanceArgs() {}
 
-    private GetInstanceArgs() {
-        this.fieldMask = null;
-        this.instanceId = null;
-        this.project = null;
+    private GetInstanceArgs(GetInstanceArgs $) {
+        this.fieldMask = $.fieldMask;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String fieldMask;
-        private String instanceId;
-        private @Nullable String project;
+        private GetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceArgs();
         }
 
         public Builder(GetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldMask = defaults.fieldMask;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldMask(@Nullable String fieldMask) {
-            this.fieldMask = fieldMask;
+            $.fieldMask = fieldMask;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetInstanceArgs build() {
-            return new GetInstanceArgs(fieldMask, instanceId, project);
+        }
+
+        public GetInstanceArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

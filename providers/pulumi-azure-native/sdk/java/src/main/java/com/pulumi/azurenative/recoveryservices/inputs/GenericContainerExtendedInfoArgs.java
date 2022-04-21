@@ -6,10 +6,10 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.ContainerIdentityInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GenericContainerExtendedInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="containerIdentityInfo")
-      private final @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo;
+    private @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo;
 
-    public Output<ContainerIdentityInfoArgs> containerIdentityInfo() {
-        return this.containerIdentityInfo == null ? Codegen.empty() : this.containerIdentityInfo;
+    public Optional<Output<ContainerIdentityInfoArgs>> containerIdentityInfo() {
+        return Optional.ofNullable(this.containerIdentityInfo);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GenericContainerExtendedInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rawCertData")
-      private final @Nullable Output<String> rawCertData;
+    private @Nullable Output<String> rawCertData;
 
-    public Output<String> rawCertData() {
-        return this.rawCertData == null ? Codegen.empty() : this.rawCertData;
+    public Optional<Output<String>> rawCertData() {
+        return Optional.ofNullable(this.rawCertData);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class GenericContainerExtendedInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="serviceEndpoints")
-      private final @Nullable Output<Map<String,String>> serviceEndpoints;
+    private @Nullable Output<Map<String,String>> serviceEndpoints;
 
-    public Output<Map<String,String>> serviceEndpoints() {
-        return this.serviceEndpoints == null ? Codegen.empty() : this.serviceEndpoints;
+    public Optional<Output<Map<String,String>>> serviceEndpoints() {
+        return Optional.ofNullable(this.serviceEndpoints);
     }
 
-    public GenericContainerExtendedInfoArgs(
-        @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo,
-        @Nullable Output<String> rawCertData,
-        @Nullable Output<Map<String,String>> serviceEndpoints) {
-        this.containerIdentityInfo = containerIdentityInfo;
-        this.rawCertData = rawCertData;
-        this.serviceEndpoints = serviceEndpoints;
-    }
+    private GenericContainerExtendedInfoArgs() {}
 
-    private GenericContainerExtendedInfoArgs() {
-        this.containerIdentityInfo = Codegen.empty();
-        this.rawCertData = Codegen.empty();
-        this.serviceEndpoints = Codegen.empty();
+    private GenericContainerExtendedInfoArgs(GenericContainerExtendedInfoArgs $) {
+        this.containerIdentityInfo = $.containerIdentityInfo;
+        this.rawCertData = $.rawCertData;
+        this.serviceEndpoints = $.serviceEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GenericContainerExtendedInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo;
-        private @Nullable Output<String> rawCertData;
-        private @Nullable Output<Map<String,String>> serviceEndpoints;
+        private GenericContainerExtendedInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GenericContainerExtendedInfoArgs();
         }
 
         public Builder(GenericContainerExtendedInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerIdentityInfo = defaults.containerIdentityInfo;
-    	      this.rawCertData = defaults.rawCertData;
-    	      this.serviceEndpoints = defaults.serviceEndpoints;
+            $ = new GenericContainerExtendedInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerIdentityInfo(@Nullable Output<ContainerIdentityInfoArgs> containerIdentityInfo) {
-            this.containerIdentityInfo = containerIdentityInfo;
+            $.containerIdentityInfo = containerIdentityInfo;
             return this;
         }
-        public Builder containerIdentityInfo(@Nullable ContainerIdentityInfoArgs containerIdentityInfo) {
-            this.containerIdentityInfo = Codegen.ofNullable(containerIdentityInfo);
-            return this;
+
+        public Builder containerIdentityInfo(ContainerIdentityInfoArgs containerIdentityInfo) {
+            return containerIdentityInfo(Output.of(containerIdentityInfo));
         }
+
         public Builder rawCertData(@Nullable Output<String> rawCertData) {
-            this.rawCertData = rawCertData;
+            $.rawCertData = rawCertData;
             return this;
         }
-        public Builder rawCertData(@Nullable String rawCertData) {
-            this.rawCertData = Codegen.ofNullable(rawCertData);
-            return this;
+
+        public Builder rawCertData(String rawCertData) {
+            return rawCertData(Output.of(rawCertData));
         }
+
         public Builder serviceEndpoints(@Nullable Output<Map<String,String>> serviceEndpoints) {
-            this.serviceEndpoints = serviceEndpoints;
+            $.serviceEndpoints = serviceEndpoints;
             return this;
         }
-        public Builder serviceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
-            this.serviceEndpoints = Codegen.ofNullable(serviceEndpoints);
-            return this;
-        }        public GenericContainerExtendedInfoArgs build() {
-            return new GenericContainerExtendedInfoArgs(containerIdentityInfo, rawCertData, serviceEndpoints);
+
+        public Builder serviceEndpoints(Map<String,String> serviceEndpoints) {
+            return serviceEndpoints(Output.of(serviceEndpoints));
+        }
+
+        public GenericContainerExtendedInfoArgs build() {
+            return $;
         }
     }
+
 }

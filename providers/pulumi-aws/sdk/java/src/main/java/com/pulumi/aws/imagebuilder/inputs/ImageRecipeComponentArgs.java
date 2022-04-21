@@ -5,7 +5,6 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ImageRecipeComponentArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="componentArn", required=true)
-      private final Output<String> componentArn;
+    private Output<String> componentArn;
 
     public Output<String> componentArn() {
         return this.componentArn;
     }
 
-    public ImageRecipeComponentArgs(Output<String> componentArn) {
-        this.componentArn = Objects.requireNonNull(componentArn, "expected parameter 'componentArn' to be non-null");
-    }
+    private ImageRecipeComponentArgs() {}
 
-    private ImageRecipeComponentArgs() {
-        this.componentArn = Codegen.empty();
+    private ImageRecipeComponentArgs(ImageRecipeComponentArgs $) {
+        this.componentArn = $.componentArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRecipeComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> componentArn;
+        private ImageRecipeComponentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRecipeComponentArgs();
         }
 
         public Builder(ImageRecipeComponentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentArn = defaults.componentArn;
+            $ = new ImageRecipeComponentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentArn(Output<String> componentArn) {
-            this.componentArn = Objects.requireNonNull(componentArn);
+            $.componentArn = componentArn;
             return this;
         }
+
         public Builder componentArn(String componentArn) {
-            this.componentArn = Output.of(Objects.requireNonNull(componentArn));
-            return this;
-        }        public ImageRecipeComponentArgs build() {
-            return new ImageRecipeComponentArgs(componentArn);
+            return componentArn(Output.of(componentArn));
+        }
+
+        public ImageRecipeComponentArgs build() {
+            $.componentArn = Objects.requireNonNull($.componentArn, "expected parameter 'componentArn' to be non-null");
+            return $;
         }
     }
+
 }

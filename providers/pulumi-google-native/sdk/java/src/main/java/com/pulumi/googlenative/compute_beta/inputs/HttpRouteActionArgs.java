@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.CorsPolicyArgs;
 import com.pulumi.googlenative.compute_beta.inputs.DurationArgs;
 import com.pulumi.googlenative.compute_beta.inputs.HttpFaultInjectionArgs;
@@ -15,6 +14,7 @@ import com.pulumi.googlenative.compute_beta.inputs.UrlRewriteArgs;
 import com.pulumi.googlenative.compute_beta.inputs.WeightedBackendServiceArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="corsPolicy")
-      private final @Nullable Output<CorsPolicyArgs> corsPolicy;
+    private @Nullable Output<CorsPolicyArgs> corsPolicy;
 
-    public Output<CorsPolicyArgs> corsPolicy() {
-        return this.corsPolicy == null ? Codegen.empty() : this.corsPolicy;
+    public Optional<Output<CorsPolicyArgs>> corsPolicy() {
+        return Optional.ofNullable(this.corsPolicy);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="faultInjectionPolicy")
-      private final @Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy;
+    private @Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy;
 
-    public Output<HttpFaultInjectionArgs> faultInjectionPolicy() {
-        return this.faultInjectionPolicy == null ? Codegen.empty() : this.faultInjectionPolicy;
+    public Optional<Output<HttpFaultInjectionArgs>> faultInjectionPolicy() {
+        return Optional.ofNullable(this.faultInjectionPolicy);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxStreamDuration")
-      private final @Nullable Output<DurationArgs> maxStreamDuration;
+    private @Nullable Output<DurationArgs> maxStreamDuration;
 
-    public Output<DurationArgs> maxStreamDuration() {
-        return this.maxStreamDuration == null ? Codegen.empty() : this.maxStreamDuration;
+    public Optional<Output<DurationArgs>> maxStreamDuration() {
+        return Optional.ofNullable(this.maxStreamDuration);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="requestMirrorPolicy")
-      private final @Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy;
+    private @Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy;
 
-    public Output<RequestMirrorPolicyArgs> requestMirrorPolicy() {
-        return this.requestMirrorPolicy == null ? Codegen.empty() : this.requestMirrorPolicy;
+    public Optional<Output<RequestMirrorPolicyArgs>> requestMirrorPolicy() {
+        return Optional.ofNullable(this.requestMirrorPolicy);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable Output<HttpRetryPolicyArgs> retryPolicy;
+    private @Nullable Output<HttpRetryPolicyArgs> retryPolicy;
 
-    public Output<HttpRetryPolicyArgs> retryPolicy() {
-        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
+    public Optional<Output<HttpRetryPolicyArgs>> retryPolicy() {
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<DurationArgs> timeout;
+    private @Nullable Output<DurationArgs> timeout;
 
-    public Output<DurationArgs> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<DurationArgs>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="urlRewrite")
-      private final @Nullable Output<UrlRewriteArgs> urlRewrite;
+    private @Nullable Output<UrlRewriteArgs> urlRewrite;
 
-    public Output<UrlRewriteArgs> urlRewrite() {
-        return this.urlRewrite == null ? Codegen.empty() : this.urlRewrite;
+    public Optional<Output<UrlRewriteArgs>> urlRewrite() {
+        return Optional.ofNullable(this.urlRewrite);
     }
 
     /**
@@ -104,144 +104,122 @@ public final class HttpRouteActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="weightedBackendServices")
-      private final @Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices;
+    private @Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices;
 
-    public Output<List<WeightedBackendServiceArgs>> weightedBackendServices() {
-        return this.weightedBackendServices == null ? Codegen.empty() : this.weightedBackendServices;
+    public Optional<Output<List<WeightedBackendServiceArgs>>> weightedBackendServices() {
+        return Optional.ofNullable(this.weightedBackendServices);
     }
 
-    public HttpRouteActionArgs(
-        @Nullable Output<CorsPolicyArgs> corsPolicy,
-        @Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy,
-        @Nullable Output<DurationArgs> maxStreamDuration,
-        @Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy,
-        @Nullable Output<HttpRetryPolicyArgs> retryPolicy,
-        @Nullable Output<DurationArgs> timeout,
-        @Nullable Output<UrlRewriteArgs> urlRewrite,
-        @Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices) {
-        this.corsPolicy = corsPolicy;
-        this.faultInjectionPolicy = faultInjectionPolicy;
-        this.maxStreamDuration = maxStreamDuration;
-        this.requestMirrorPolicy = requestMirrorPolicy;
-        this.retryPolicy = retryPolicy;
-        this.timeout = timeout;
-        this.urlRewrite = urlRewrite;
-        this.weightedBackendServices = weightedBackendServices;
-    }
+    private HttpRouteActionArgs() {}
 
-    private HttpRouteActionArgs() {
-        this.corsPolicy = Codegen.empty();
-        this.faultInjectionPolicy = Codegen.empty();
-        this.maxStreamDuration = Codegen.empty();
-        this.requestMirrorPolicy = Codegen.empty();
-        this.retryPolicy = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.urlRewrite = Codegen.empty();
-        this.weightedBackendServices = Codegen.empty();
+    private HttpRouteActionArgs(HttpRouteActionArgs $) {
+        this.corsPolicy = $.corsPolicy;
+        this.faultInjectionPolicy = $.faultInjectionPolicy;
+        this.maxStreamDuration = $.maxStreamDuration;
+        this.requestMirrorPolicy = $.requestMirrorPolicy;
+        this.retryPolicy = $.retryPolicy;
+        this.timeout = $.timeout;
+        this.urlRewrite = $.urlRewrite;
+        this.weightedBackendServices = $.weightedBackendServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CorsPolicyArgs> corsPolicy;
-        private @Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy;
-        private @Nullable Output<DurationArgs> maxStreamDuration;
-        private @Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy;
-        private @Nullable Output<HttpRetryPolicyArgs> retryPolicy;
-        private @Nullable Output<DurationArgs> timeout;
-        private @Nullable Output<UrlRewriteArgs> urlRewrite;
-        private @Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices;
+        private HttpRouteActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteActionArgs();
         }
 
         public Builder(HttpRouteActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.corsPolicy = defaults.corsPolicy;
-    	      this.faultInjectionPolicy = defaults.faultInjectionPolicy;
-    	      this.maxStreamDuration = defaults.maxStreamDuration;
-    	      this.requestMirrorPolicy = defaults.requestMirrorPolicy;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.timeout = defaults.timeout;
-    	      this.urlRewrite = defaults.urlRewrite;
-    	      this.weightedBackendServices = defaults.weightedBackendServices;
+            $ = new HttpRouteActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder corsPolicy(@Nullable Output<CorsPolicyArgs> corsPolicy) {
-            this.corsPolicy = corsPolicy;
+            $.corsPolicy = corsPolicy;
             return this;
         }
-        public Builder corsPolicy(@Nullable CorsPolicyArgs corsPolicy) {
-            this.corsPolicy = Codegen.ofNullable(corsPolicy);
-            return this;
+
+        public Builder corsPolicy(CorsPolicyArgs corsPolicy) {
+            return corsPolicy(Output.of(corsPolicy));
         }
+
         public Builder faultInjectionPolicy(@Nullable Output<HttpFaultInjectionArgs> faultInjectionPolicy) {
-            this.faultInjectionPolicy = faultInjectionPolicy;
+            $.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
-        public Builder faultInjectionPolicy(@Nullable HttpFaultInjectionArgs faultInjectionPolicy) {
-            this.faultInjectionPolicy = Codegen.ofNullable(faultInjectionPolicy);
-            return this;
+
+        public Builder faultInjectionPolicy(HttpFaultInjectionArgs faultInjectionPolicy) {
+            return faultInjectionPolicy(Output.of(faultInjectionPolicy));
         }
+
         public Builder maxStreamDuration(@Nullable Output<DurationArgs> maxStreamDuration) {
-            this.maxStreamDuration = maxStreamDuration;
+            $.maxStreamDuration = maxStreamDuration;
             return this;
         }
-        public Builder maxStreamDuration(@Nullable DurationArgs maxStreamDuration) {
-            this.maxStreamDuration = Codegen.ofNullable(maxStreamDuration);
-            return this;
+
+        public Builder maxStreamDuration(DurationArgs maxStreamDuration) {
+            return maxStreamDuration(Output.of(maxStreamDuration));
         }
+
         public Builder requestMirrorPolicy(@Nullable Output<RequestMirrorPolicyArgs> requestMirrorPolicy) {
-            this.requestMirrorPolicy = requestMirrorPolicy;
+            $.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
-        public Builder requestMirrorPolicy(@Nullable RequestMirrorPolicyArgs requestMirrorPolicy) {
-            this.requestMirrorPolicy = Codegen.ofNullable(requestMirrorPolicy);
-            return this;
+
+        public Builder requestMirrorPolicy(RequestMirrorPolicyArgs requestMirrorPolicy) {
+            return requestMirrorPolicy(Output.of(requestMirrorPolicy));
         }
+
         public Builder retryPolicy(@Nullable Output<HttpRetryPolicyArgs> retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
-        public Builder retryPolicy(@Nullable HttpRetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Codegen.ofNullable(retryPolicy);
-            return this;
+
+        public Builder retryPolicy(HttpRetryPolicyArgs retryPolicy) {
+            return retryPolicy(Output.of(retryPolicy));
         }
+
         public Builder timeout(@Nullable Output<DurationArgs> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable DurationArgs timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(DurationArgs timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder urlRewrite(@Nullable Output<UrlRewriteArgs> urlRewrite) {
-            this.urlRewrite = urlRewrite;
+            $.urlRewrite = urlRewrite;
             return this;
         }
-        public Builder urlRewrite(@Nullable UrlRewriteArgs urlRewrite) {
-            this.urlRewrite = Codegen.ofNullable(urlRewrite);
-            return this;
+
+        public Builder urlRewrite(UrlRewriteArgs urlRewrite) {
+            return urlRewrite(Output.of(urlRewrite));
         }
+
         public Builder weightedBackendServices(@Nullable Output<List<WeightedBackendServiceArgs>> weightedBackendServices) {
-            this.weightedBackendServices = weightedBackendServices;
+            $.weightedBackendServices = weightedBackendServices;
             return this;
         }
-        public Builder weightedBackendServices(@Nullable List<WeightedBackendServiceArgs> weightedBackendServices) {
-            this.weightedBackendServices = Codegen.ofNullable(weightedBackendServices);
-            return this;
+
+        public Builder weightedBackendServices(List<WeightedBackendServiceArgs> weightedBackendServices) {
+            return weightedBackendServices(Output.of(weightedBackendServices));
         }
+
         public Builder weightedBackendServices(WeightedBackendServiceArgs... weightedBackendServices) {
             return weightedBackendServices(List.of(weightedBackendServices));
-        }        public HttpRouteActionArgs build() {
-            return new HttpRouteActionArgs(corsPolicy, faultInjectionPolicy, maxStreamDuration, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
+        }
+
+        public HttpRouteActionArgs build() {
+            return $;
         }
     }
+
 }

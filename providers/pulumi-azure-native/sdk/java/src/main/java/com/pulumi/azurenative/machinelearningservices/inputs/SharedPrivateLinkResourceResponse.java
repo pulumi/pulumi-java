@@ -19,10 +19,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="groupId")
-      private final @Nullable String groupId;
+    private @Nullable String groupId;
 
     public Optional<String> groupId() {
-        return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable String privateLinkResourceId;
+    private @Nullable String privateLinkResourceId;
 
     public Optional<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable String requestMessage;
+    private @Nullable String requestMessage;
 
     public Optional<String> requestMessage() {
-        return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
+        return Optional.ofNullable(this.requestMessage);
     }
 
     /**
@@ -63,82 +63,68 @@ public final class SharedPrivateLinkResourceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public SharedPrivateLinkResourceResponse(
-        @Nullable String groupId,
-        @Nullable String name,
-        @Nullable String privateLinkResourceId,
-        @Nullable String requestMessage,
-        @Nullable String status) {
-        this.groupId = groupId;
-        this.name = name;
-        this.privateLinkResourceId = privateLinkResourceId;
-        this.requestMessage = requestMessage;
-        this.status = status;
-    }
+    private SharedPrivateLinkResourceResponse() {}
 
-    private SharedPrivateLinkResourceResponse() {
-        this.groupId = null;
-        this.name = null;
-        this.privateLinkResourceId = null;
-        this.requestMessage = null;
-        this.status = null;
+    private SharedPrivateLinkResourceResponse(SharedPrivateLinkResourceResponse $) {
+        this.groupId = $.groupId;
+        this.name = $.name;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.requestMessage = $.requestMessage;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedPrivateLinkResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String groupId;
-        private @Nullable String name;
-        private @Nullable String privateLinkResourceId;
-        private @Nullable String requestMessage;
-        private @Nullable String status;
+        private SharedPrivateLinkResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedPrivateLinkResourceResponse();
         }
 
         public Builder(SharedPrivateLinkResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.name = defaults.name;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.requestMessage = defaults.requestMessage;
-    	      this.status = defaults.status;
+            $ = new SharedPrivateLinkResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
+
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public SharedPrivateLinkResourceResponse build() {
-            return new SharedPrivateLinkResourceResponse(groupId, name, privateLinkResourceId, requestMessage, status);
+        }
+
+        public SharedPrivateLinkResourceResponse build() {
+            return $;
         }
     }
+
 }

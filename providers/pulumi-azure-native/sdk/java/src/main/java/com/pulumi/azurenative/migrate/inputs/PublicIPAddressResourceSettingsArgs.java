@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="domainNameLabel")
-      private final @Nullable Output<String> domainNameLabel;
+    private @Nullable Output<String> domainNameLabel;
 
-    public Output<String> domainNameLabel() {
-        return this.domainNameLabel == null ? Codegen.empty() : this.domainNameLabel;
+    public Optional<Output<String>> domainNameLabel() {
+        return Optional.ofNullable(this.domainNameLabel);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable Output<String> fqdn;
+    private @Nullable Output<String> fqdn;
 
-    public Output<String> fqdn() {
-        return this.fqdn == null ? Codegen.empty() : this.fqdn;
+    public Optional<Output<String>> fqdn() {
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="publicIpAllocationMethod")
-      private final @Nullable Output<String> publicIpAllocationMethod;
+    private @Nullable Output<String> publicIpAllocationMethod;
 
-    public Output<String> publicIpAllocationMethod() {
-        return this.publicIpAllocationMethod == null ? Codegen.empty() : this.publicIpAllocationMethod;
+    public Optional<Output<String>> publicIpAllocationMethod() {
+        return Optional.ofNullable(this.publicIpAllocationMethod);
     }
 
     /**
@@ -58,7 +59,7 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
@@ -69,10 +70,10 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<String> sku;
+    private @Nullable Output<String> sku;
 
-    public Output<String> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<String>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -80,7 +81,7 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final Output<String> targetResourceName;
+    private Output<String> targetResourceName;
 
     public Output<String> targetResourceName() {
         return this.targetResourceName;
@@ -91,128 +92,110 @@ public final class PublicIPAddressResourceSettingsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<String> zones;
+    private @Nullable Output<String> zones;
 
-    public Output<String> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public PublicIPAddressResourceSettingsArgs(
-        @Nullable Output<String> domainNameLabel,
-        @Nullable Output<String> fqdn,
-        @Nullable Output<String> publicIpAllocationMethod,
-        Output<String> resourceType,
-        @Nullable Output<String> sku,
-        Output<String> targetResourceName,
-        @Nullable Output<String> zones) {
-        this.domainNameLabel = domainNameLabel;
-        this.fqdn = fqdn;
-        this.publicIpAllocationMethod = publicIpAllocationMethod;
-        this.resourceType = Codegen.stringProp("resourceType").output().arg(resourceType).require();
-        this.sku = sku;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-        this.zones = zones;
-    }
+    private PublicIPAddressResourceSettingsArgs() {}
 
-    private PublicIPAddressResourceSettingsArgs() {
-        this.domainNameLabel = Codegen.empty();
-        this.fqdn = Codegen.empty();
-        this.publicIpAllocationMethod = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.targetResourceName = Codegen.empty();
-        this.zones = Codegen.empty();
+    private PublicIPAddressResourceSettingsArgs(PublicIPAddressResourceSettingsArgs $) {
+        this.domainNameLabel = $.domainNameLabel;
+        this.fqdn = $.fqdn;
+        this.publicIpAllocationMethod = $.publicIpAllocationMethod;
+        this.resourceType = $.resourceType;
+        this.sku = $.sku;
+        this.targetResourceName = $.targetResourceName;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIPAddressResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainNameLabel;
-        private @Nullable Output<String> fqdn;
-        private @Nullable Output<String> publicIpAllocationMethod;
-        private Output<String> resourceType;
-        private @Nullable Output<String> sku;
-        private Output<String> targetResourceName;
-        private @Nullable Output<String> zones;
+        private PublicIPAddressResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIPAddressResourceSettingsArgs();
         }
 
         public Builder(PublicIPAddressResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainNameLabel = defaults.domainNameLabel;
-    	      this.fqdn = defaults.fqdn;
-    	      this.publicIpAllocationMethod = defaults.publicIpAllocationMethod;
-    	      this.resourceType = defaults.resourceType;
-    	      this.sku = defaults.sku;
-    	      this.targetResourceName = defaults.targetResourceName;
-    	      this.zones = defaults.zones;
+            $ = new PublicIPAddressResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainNameLabel(@Nullable Output<String> domainNameLabel) {
-            this.domainNameLabel = domainNameLabel;
+            $.domainNameLabel = domainNameLabel;
             return this;
         }
-        public Builder domainNameLabel(@Nullable String domainNameLabel) {
-            this.domainNameLabel = Codegen.ofNullable(domainNameLabel);
-            return this;
+
+        public Builder domainNameLabel(String domainNameLabel) {
+            return domainNameLabel(Output.of(domainNameLabel));
         }
+
         public Builder fqdn(@Nullable Output<String> fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
-        public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Codegen.ofNullable(fqdn);
-            return this;
+
+        public Builder fqdn(String fqdn) {
+            return fqdn(Output.of(fqdn));
         }
+
         public Builder publicIpAllocationMethod(@Nullable Output<String> publicIpAllocationMethod) {
-            this.publicIpAllocationMethod = publicIpAllocationMethod;
+            $.publicIpAllocationMethod = publicIpAllocationMethod;
             return this;
         }
-        public Builder publicIpAllocationMethod(@Nullable String publicIpAllocationMethod) {
-            this.publicIpAllocationMethod = Codegen.ofNullable(publicIpAllocationMethod);
-            return this;
+
+        public Builder publicIpAllocationMethod(String publicIpAllocationMethod) {
+            return publicIpAllocationMethod(Output.of(publicIpAllocationMethod));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder sku(@Nullable Output<String> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable String sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(String sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder targetResourceName(Output<String> targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Output.of(Objects.requireNonNull(targetResourceName));
-            return this;
+            return targetResourceName(Output.of(targetResourceName));
         }
+
         public Builder zones(@Nullable Output<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable String zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
-        }        public PublicIPAddressResourceSettingsArgs build() {
-            return new PublicIPAddressResourceSettingsArgs(domainNameLabel, fqdn, publicIpAllocationMethod, resourceType, sku, targetResourceName, zones);
+
+        public Builder zones(String zones) {
+            return zones(Output.of(zones));
+        }
+
+        public PublicIPAddressResourceSettingsArgs build() {
+            $.resourceType = Codegen.stringProp("resourceType").output().arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

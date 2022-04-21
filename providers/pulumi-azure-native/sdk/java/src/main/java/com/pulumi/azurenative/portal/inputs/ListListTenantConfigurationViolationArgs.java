@@ -3,35 +3,26 @@
 
 package com.pulumi.azurenative.portal.inputs;
 
-import java.util.Objects;
+
 
 
 public final class ListListTenantConfigurationViolationArgs extends com.pulumi.resources.InvokeArgs {
 
     public static final ListListTenantConfigurationViolationArgs Empty = new ListListTenantConfigurationViolationArgs();
 
-    public ListListTenantConfigurationViolationArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ListListTenantConfigurationViolationArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ListListTenantConfigurationViolationArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ListListTenantConfigurationViolationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ListListTenantConfigurationViolationArgs();
         }
         public ListListTenantConfigurationViolationArgs build() {
-            return new ListListTenantConfigurationViolationArgs();
+            return $;
         }
     }
+
 }

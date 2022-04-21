@@ -14,62 +14,59 @@ public final class GetBackendServiceLogConfig extends com.pulumi.resources.Invok
     public static final GetBackendServiceLogConfig Empty = new GetBackendServiceLogConfig();
 
     @Import(name="enable", required=true)
-      private final Boolean enable;
+    private Boolean enable;
 
     public Boolean enable() {
         return this.enable;
     }
 
     @Import(name="sampleRate", required=true)
-      private final Double sampleRate;
+    private Double sampleRate;
 
     public Double sampleRate() {
         return this.sampleRate;
     }
 
-    public GetBackendServiceLogConfig(
-        Boolean enable,
-        Double sampleRate) {
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.sampleRate = Objects.requireNonNull(sampleRate, "expected parameter 'sampleRate' to be non-null");
-    }
+    private GetBackendServiceLogConfig() {}
 
-    private GetBackendServiceLogConfig() {
-        this.enable = null;
-        this.sampleRate = null;
+    private GetBackendServiceLogConfig(GetBackendServiceLogConfig $) {
+        this.enable = $.enable;
+        this.sampleRate = $.sampleRate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceLogConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enable;
-        private Double sampleRate;
+        private GetBackendServiceLogConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceLogConfig();
         }
 
         public Builder(GetBackendServiceLogConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.sampleRate = defaults.sampleRate;
+            $ = new GetBackendServiceLogConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder sampleRate(Double sampleRate) {
-            this.sampleRate = Objects.requireNonNull(sampleRate);
+            $.sampleRate = sampleRate;
             return this;
-        }        public GetBackendServiceLogConfig build() {
-            return new GetBackendServiceLogConfig(enable, sampleRate);
+        }
+
+        public GetBackendServiceLogConfig build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            $.sampleRate = Objects.requireNonNull($.sampleRate, "expected parameter 'sampleRate' to be non-null");
+            return $;
         }
     }
+
 }

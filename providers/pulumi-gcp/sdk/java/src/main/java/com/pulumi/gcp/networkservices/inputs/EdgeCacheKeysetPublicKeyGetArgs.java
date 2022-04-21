@@ -5,7 +5,6 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class EdgeCacheKeysetPublicKeyGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -34,63 +33,60 @@ public final class EdgeCacheKeysetPublicKeyGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public EdgeCacheKeysetPublicKeyGetArgs(
-        Output<String> id,
-        Output<String> value) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private EdgeCacheKeysetPublicKeyGetArgs() {}
 
-    private EdgeCacheKeysetPublicKeyGetArgs() {
-        this.id = Codegen.empty();
-        this.value = Codegen.empty();
+    private EdgeCacheKeysetPublicKeyGetArgs(EdgeCacheKeysetPublicKeyGetArgs $) {
+        this.id = $.id;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheKeysetPublicKeyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private Output<String> value;
+        private EdgeCacheKeysetPublicKeyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheKeysetPublicKeyGetArgs();
         }
 
         public Builder(EdgeCacheKeysetPublicKeyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.value = defaults.value;
+            $ = new EdgeCacheKeysetPublicKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public EdgeCacheKeysetPublicKeyGetArgs build() {
-            return new EdgeCacheKeysetPublicKeyGetArgs(id, value);
+            return value(Output.of(value));
+        }
+
+        public EdgeCacheKeysetPublicKeyGetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

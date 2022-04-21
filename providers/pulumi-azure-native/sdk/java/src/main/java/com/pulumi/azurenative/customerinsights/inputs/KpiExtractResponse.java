@@ -21,7 +21,7 @@ public final class KpiExtractResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expression", required=true)
-      private final String expression;
+    private String expression;
 
     public String expression() {
         return this.expression;
@@ -32,55 +32,52 @@ public final class KpiExtractResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extractName", required=true)
-      private final String extractName;
+    private String extractName;
 
     public String extractName() {
         return this.extractName;
     }
 
-    public KpiExtractResponse(
-        String expression,
-        String extractName) {
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.extractName = Objects.requireNonNull(extractName, "expected parameter 'extractName' to be non-null");
-    }
+    private KpiExtractResponse() {}
 
-    private KpiExtractResponse() {
-        this.expression = null;
-        this.extractName = null;
+    private KpiExtractResponse(KpiExtractResponse $) {
+        this.expression = $.expression;
+        this.extractName = $.extractName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KpiExtractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expression;
-        private String extractName;
+        private KpiExtractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KpiExtractResponse();
         }
 
         public Builder(KpiExtractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expression = defaults.expression;
-    	      this.extractName = defaults.extractName;
+            $ = new KpiExtractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expression(String expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder extractName(String extractName) {
-            this.extractName = Objects.requireNonNull(extractName);
+            $.extractName = extractName;
             return this;
-        }        public KpiExtractResponse build() {
-            return new KpiExtractResponse(expression, extractName);
+        }
+
+        public KpiExtractResponse build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.extractName = Objects.requireNonNull($.extractName, "expected parameter 'extractName' to be non-null");
+            return $;
         }
     }
+
 }

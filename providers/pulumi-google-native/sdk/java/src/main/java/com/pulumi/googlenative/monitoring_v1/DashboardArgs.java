@@ -5,7 +5,6 @@ package com.pulumi.googlenative.monitoring_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.ColumnLayoutArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.GridLayoutArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.MosaicLayoutArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.monitoring_v1.inputs.RowLayoutArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columnLayout")
-      private final @Nullable Output<ColumnLayoutArgs> columnLayout;
+    private @Nullable Output<ColumnLayoutArgs> columnLayout;
 
-    public Output<ColumnLayoutArgs> columnLayout() {
-        return this.columnLayout == null ? Codegen.empty() : this.columnLayout;
+    public Optional<Output<ColumnLayoutArgs>> columnLayout() {
+        return Optional.ofNullable(this.columnLayout);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -47,10 +47,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gridLayout")
-      private final @Nullable Output<GridLayoutArgs> gridLayout;
+    private @Nullable Output<GridLayoutArgs> gridLayout;
 
-    public Output<GridLayoutArgs> gridLayout() {
-        return this.gridLayout == null ? Codegen.empty() : this.gridLayout;
+    public Optional<Output<GridLayoutArgs>> gridLayout() {
+        return Optional.ofNullable(this.gridLayout);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mosaicLayout")
-      private final @Nullable Output<MosaicLayoutArgs> mosaicLayout;
+    private @Nullable Output<MosaicLayoutArgs> mosaicLayout;
 
-    public Output<MosaicLayoutArgs> mosaicLayout() {
-        return this.mosaicLayout == null ? Codegen.empty() : this.mosaicLayout;
+    public Optional<Output<MosaicLayoutArgs>> mosaicLayout() {
+        return Optional.ofNullable(this.mosaicLayout);
     }
 
     /**
@@ -91,17 +91,17 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -109,174 +109,146 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rowLayout")
-      private final @Nullable Output<RowLayoutArgs> rowLayout;
+    private @Nullable Output<RowLayoutArgs> rowLayout;
 
-    public Output<RowLayoutArgs> rowLayout() {
-        return this.rowLayout == null ? Codegen.empty() : this.rowLayout;
+    public Optional<Output<RowLayoutArgs>> rowLayout() {
+        return Optional.ofNullable(this.rowLayout);
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public DashboardArgs(
-        @Nullable Output<ColumnLayoutArgs> columnLayout,
-        Output<String> displayName,
-        @Nullable Output<String> etag,
-        @Nullable Output<GridLayoutArgs> gridLayout,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<MosaicLayoutArgs> mosaicLayout,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<RowLayoutArgs> rowLayout,
-        @Nullable Output<String> validateOnly) {
-        this.columnLayout = columnLayout;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.etag = etag;
-        this.gridLayout = gridLayout;
-        this.labels = labels;
-        this.mosaicLayout = mosaicLayout;
-        this.name = name;
-        this.project = project;
-        this.rowLayout = rowLayout;
-        this.validateOnly = validateOnly;
-    }
+    private DashboardArgs() {}
 
-    private DashboardArgs() {
-        this.columnLayout = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.gridLayout = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.mosaicLayout = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rowLayout = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private DashboardArgs(DashboardArgs $) {
+        this.columnLayout = $.columnLayout;
+        this.displayName = $.displayName;
+        this.etag = $.etag;
+        this.gridLayout = $.gridLayout;
+        this.labels = $.labels;
+        this.mosaicLayout = $.mosaicLayout;
+        this.name = $.name;
+        this.project = $.project;
+        this.rowLayout = $.rowLayout;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ColumnLayoutArgs> columnLayout;
-        private Output<String> displayName;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<GridLayoutArgs> gridLayout;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<MosaicLayoutArgs> mosaicLayout;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<RowLayoutArgs> rowLayout;
-        private @Nullable Output<String> validateOnly;
+        private DashboardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardArgs();
         }
 
         public Builder(DashboardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnLayout = defaults.columnLayout;
-    	      this.displayName = defaults.displayName;
-    	      this.etag = defaults.etag;
-    	      this.gridLayout = defaults.gridLayout;
-    	      this.labels = defaults.labels;
-    	      this.mosaicLayout = defaults.mosaicLayout;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rowLayout = defaults.rowLayout;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new DashboardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnLayout(@Nullable Output<ColumnLayoutArgs> columnLayout) {
-            this.columnLayout = columnLayout;
+            $.columnLayout = columnLayout;
             return this;
         }
-        public Builder columnLayout(@Nullable ColumnLayoutArgs columnLayout) {
-            this.columnLayout = Codegen.ofNullable(columnLayout);
-            return this;
+
+        public Builder columnLayout(ColumnLayoutArgs columnLayout) {
+            return columnLayout(Output.of(columnLayout));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder gridLayout(@Nullable Output<GridLayoutArgs> gridLayout) {
-            this.gridLayout = gridLayout;
+            $.gridLayout = gridLayout;
             return this;
         }
-        public Builder gridLayout(@Nullable GridLayoutArgs gridLayout) {
-            this.gridLayout = Codegen.ofNullable(gridLayout);
-            return this;
+
+        public Builder gridLayout(GridLayoutArgs gridLayout) {
+            return gridLayout(Output.of(gridLayout));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder mosaicLayout(@Nullable Output<MosaicLayoutArgs> mosaicLayout) {
-            this.mosaicLayout = mosaicLayout;
+            $.mosaicLayout = mosaicLayout;
             return this;
         }
-        public Builder mosaicLayout(@Nullable MosaicLayoutArgs mosaicLayout) {
-            this.mosaicLayout = Codegen.ofNullable(mosaicLayout);
-            return this;
+
+        public Builder mosaicLayout(MosaicLayoutArgs mosaicLayout) {
+            return mosaicLayout(Output.of(mosaicLayout));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rowLayout(@Nullable Output<RowLayoutArgs> rowLayout) {
-            this.rowLayout = rowLayout;
+            $.rowLayout = rowLayout;
             return this;
         }
-        public Builder rowLayout(@Nullable RowLayoutArgs rowLayout) {
-            this.rowLayout = Codegen.ofNullable(rowLayout);
-            return this;
+
+        public Builder rowLayout(RowLayoutArgs rowLayout) {
+            return rowLayout(Output.of(rowLayout));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public DashboardArgs build() {
-            return new DashboardArgs(columnLayout, displayName, etag, gridLayout, labels, mosaicLayout, name, project, rowLayout, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public DashboardArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

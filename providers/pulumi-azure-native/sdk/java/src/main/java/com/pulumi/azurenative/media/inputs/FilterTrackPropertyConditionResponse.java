@@ -21,7 +21,7 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="operation", required=true)
-      private final String operation;
+    private String operation;
 
     public String operation() {
         return this.operation;
@@ -32,7 +32,7 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="property", required=true)
-      private final String property;
+    private String property;
 
     public String property() {
         return this.property;
@@ -43,64 +43,59 @@ public final class FilterTrackPropertyConditionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public FilterTrackPropertyConditionResponse(
-        String operation,
-        String property,
-        String value) {
-        this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
-        this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private FilterTrackPropertyConditionResponse() {}
 
-    private FilterTrackPropertyConditionResponse() {
-        this.operation = null;
-        this.property = null;
-        this.value = null;
+    private FilterTrackPropertyConditionResponse(FilterTrackPropertyConditionResponse $) {
+        this.operation = $.operation;
+        this.property = $.property;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterTrackPropertyConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operation;
-        private String property;
-        private String value;
+        private FilterTrackPropertyConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterTrackPropertyConditionResponse();
         }
 
         public Builder(FilterTrackPropertyConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operation = defaults.operation;
-    	      this.property = defaults.property;
-    	      this.value = defaults.value;
+            $ = new FilterTrackPropertyConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operation(String operation) {
-            this.operation = Objects.requireNonNull(operation);
+            $.operation = operation;
             return this;
         }
+
         public Builder property(String property) {
-            this.property = Objects.requireNonNull(property);
+            $.property = property;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public FilterTrackPropertyConditionResponse build() {
-            return new FilterTrackPropertyConditionResponse(operation, property, value);
+        }
+
+        public FilterTrackPropertyConditionResponse build() {
+            $.operation = Objects.requireNonNull($.operation, "expected parameter 'operation' to be non-null");
+            $.property = Objects.requireNonNull($.property, "expected parameter 'property' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

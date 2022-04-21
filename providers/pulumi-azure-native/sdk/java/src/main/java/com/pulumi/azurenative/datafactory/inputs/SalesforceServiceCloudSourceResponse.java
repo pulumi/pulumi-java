@@ -25,10 +25,10 @@ public final class SalesforceServiceCloudSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Object additionalColumns;
+    private @Nullable Object additionalColumns;
 
     public Optional<Object> additionalColumns() {
-        return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SalesforceServiceCloudSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SalesforceServiceCloudSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SalesforceServiceCloudSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="query")
-      private final @Nullable Object query;
+    private @Nullable Object query;
 
     public Optional<Object> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SalesforceServiceCloudSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="readBehavior")
-      private final @Nullable String readBehavior;
+    private @Nullable String readBehavior;
 
     public Optional<String> readBehavior() {
-        return this.readBehavior == null ? Optional.empty() : Optional.ofNullable(this.readBehavior);
+        return Optional.ofNullable(this.readBehavior);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SalesforceServiceCloudSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SalesforceServiceCloudSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -103,109 +103,87 @@ public final class SalesforceServiceCloudSourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SalesforceServiceCloudSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object query,
-        @Nullable String readBehavior,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
-        this.additionalColumns = additionalColumns;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.query = query;
-        this.readBehavior = readBehavior;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private SalesforceServiceCloudSourceResponse() {}
 
-    private SalesforceServiceCloudSourceResponse() {
-        this.additionalColumns = null;
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.query = null;
-        this.readBehavior = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.type = null;
+    private SalesforceServiceCloudSourceResponse(SalesforceServiceCloudSourceResponse $) {
+        this.additionalColumns = $.additionalColumns;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.query = $.query;
+        this.readBehavior = $.readBehavior;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SalesforceServiceCloudSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalColumns;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object query;
-        private @Nullable String readBehavior;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private String type;
+        private SalesforceServiceCloudSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SalesforceServiceCloudSourceResponse();
         }
 
         public Builder(SalesforceServiceCloudSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.query = defaults.query;
-    	      this.readBehavior = defaults.readBehavior;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new SalesforceServiceCloudSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder query(@Nullable Object query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
+
         public Builder readBehavior(@Nullable String readBehavior) {
-            this.readBehavior = readBehavior;
+            $.readBehavior = readBehavior;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SalesforceServiceCloudSourceResponse build() {
-            return new SalesforceServiceCloudSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, query, readBehavior, sourceRetryCount, sourceRetryWait, type);
+        }
+
+        public SalesforceServiceCloudSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudwatch;
 import com.pulumi.aws.cloudwatch.inputs.LogMetricFilterMetricTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class LogMetricFilterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="logGroupName", required=true)
-      private final Output<String> logGroupName;
+    private Output<String> logGroupName;
 
     public Output<String> logGroupName() {
         return this.logGroupName;
@@ -32,7 +32,7 @@ public final class LogMetricFilterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metricTransformation", required=true)
-      private final Output<LogMetricFilterMetricTransformationArgs> metricTransformation;
+    private Output<LogMetricFilterMetricTransformationArgs> metricTransformation;
 
     public Output<LogMetricFilterMetricTransformationArgs> metricTransformation() {
         return this.metricTransformation;
@@ -43,10 +43,10 @@ public final class LogMetricFilterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,89 +55,81 @@ public final class LogMetricFilterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="pattern", required=true)
-      private final Output<String> pattern;
+    private Output<String> pattern;
 
     public Output<String> pattern() {
         return this.pattern;
     }
 
-    public LogMetricFilterArgs(
-        Output<String> logGroupName,
-        Output<LogMetricFilterMetricTransformationArgs> metricTransformation,
-        @Nullable Output<String> name,
-        Output<String> pattern) {
-        this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
-        this.metricTransformation = Objects.requireNonNull(metricTransformation, "expected parameter 'metricTransformation' to be non-null");
-        this.name = name;
-        this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
-    }
+    private LogMetricFilterArgs() {}
 
-    private LogMetricFilterArgs() {
-        this.logGroupName = Codegen.empty();
-        this.metricTransformation = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pattern = Codegen.empty();
+    private LogMetricFilterArgs(LogMetricFilterArgs $) {
+        this.logGroupName = $.logGroupName;
+        this.metricTransformation = $.metricTransformation;
+        this.name = $.name;
+        this.pattern = $.pattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogMetricFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> logGroupName;
-        private Output<LogMetricFilterMetricTransformationArgs> metricTransformation;
-        private @Nullable Output<String> name;
-        private Output<String> pattern;
+        private LogMetricFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogMetricFilterArgs();
         }
 
         public Builder(LogMetricFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.metricTransformation = defaults.metricTransformation;
-    	      this.name = defaults.name;
-    	      this.pattern = defaults.pattern;
+            $ = new LogMetricFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(Output<String> logGroupName) {
-            this.logGroupName = Objects.requireNonNull(logGroupName);
+            $.logGroupName = logGroupName;
             return this;
         }
+
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
-            return this;
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder metricTransformation(Output<LogMetricFilterMetricTransformationArgs> metricTransformation) {
-            this.metricTransformation = Objects.requireNonNull(metricTransformation);
+            $.metricTransformation = metricTransformation;
             return this;
         }
+
         public Builder metricTransformation(LogMetricFilterMetricTransformationArgs metricTransformation) {
-            this.metricTransformation = Output.of(Objects.requireNonNull(metricTransformation));
-            return this;
+            return metricTransformation(Output.of(metricTransformation));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pattern(Output<String> pattern) {
-            this.pattern = Objects.requireNonNull(pattern);
+            $.pattern = pattern;
             return this;
         }
+
         public Builder pattern(String pattern) {
-            this.pattern = Output.of(Objects.requireNonNull(pattern));
-            return this;
-        }        public LogMetricFilterArgs build() {
-            return new LogMetricFilterArgs(logGroupName, metricTransformation, name, pattern);
+            return pattern(Output.of(pattern));
+        }
+
+        public LogMetricFilterArgs build() {
+            $.logGroupName = Objects.requireNonNull($.logGroupName, "expected parameter 'logGroupName' to be non-null");
+            $.metricTransformation = Objects.requireNonNull($.metricTransformation, "expected parameter 'metricTransformation' to be non-null");
+            $.pattern = Objects.requireNonNull($.pattern, "expected parameter 'pattern' to be non-null");
+            return $;
         }
     }
+
 }

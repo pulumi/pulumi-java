@@ -6,8 +6,8 @@ package com.pulumi.aws.cfg.inputs;
 import com.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsSsmControlsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class RemediationConfigurationExecutionControlsGetArgs extends com.
      * 
      */
     @Import(name="ssmControls")
-      private final @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls;
+    private @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls;
 
-    public Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls() {
-        return this.ssmControls == null ? Codegen.empty() : this.ssmControls;
+    public Optional<Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs>> ssmControls() {
+        return Optional.ofNullable(this.ssmControls);
     }
 
-    public RemediationConfigurationExecutionControlsGetArgs(@Nullable Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls) {
-        this.ssmControls = ssmControls;
-    }
+    private RemediationConfigurationExecutionControlsGetArgs() {}
 
-    private RemediationConfigurationExecutionControlsGetArgs() {
-        this.ssmControls = Codegen.empty();
+    private RemediationConfigurationExecutionControlsGetArgs(RemediationConfigurationExecutionControlsGetArgs $) {
+        this.ssmControls = $.ssmControls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationConfigurationExecutionControlsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls;
+        private RemediationConfigurationExecutionControlsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationConfigurationExecutionControlsGetArgs();
         }
 
         public Builder(RemediationConfigurationExecutionControlsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ssmControls = defaults.ssmControls;
+            $ = new RemediationConfigurationExecutionControlsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ssmControls(@Nullable Output<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls) {
-            this.ssmControls = ssmControls;
+            $.ssmControls = ssmControls;
             return this;
         }
-        public Builder ssmControls(@Nullable RemediationConfigurationExecutionControlsSsmControlsGetArgs ssmControls) {
-            this.ssmControls = Codegen.ofNullable(ssmControls);
-            return this;
-        }        public RemediationConfigurationExecutionControlsGetArgs build() {
-            return new RemediationConfigurationExecutionControlsGetArgs(ssmControls);
+
+        public Builder ssmControls(RemediationConfigurationExecutionControlsSsmControlsGetArgs ssmControls) {
+            return ssmControls(Output.of(ssmControls));
+        }
+
+        public RemediationConfigurationExecutionControlsGetArgs build() {
+            return $;
         }
     }
+
 }

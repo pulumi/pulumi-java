@@ -21,45 +21,45 @@ public final class DataSourceAmazonOpenSearchParameters extends com.pulumi.resou
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
     }
 
-    public DataSourceAmazonOpenSearchParameters(String domain) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-    }
+    private DataSourceAmazonOpenSearchParameters() {}
 
-    private DataSourceAmazonOpenSearchParameters() {
-        this.domain = null;
+    private DataSourceAmazonOpenSearchParameters(DataSourceAmazonOpenSearchParameters $) {
+        this.domain = $.domain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceAmazonOpenSearchParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domain;
+        private DataSourceAmazonOpenSearchParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceAmazonOpenSearchParameters();
         }
 
         public Builder(DataSourceAmazonOpenSearchParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
+            $ = new DataSourceAmazonOpenSearchParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
-        }        public DataSourceAmazonOpenSearchParameters build() {
-            return new DataSourceAmazonOpenSearchParameters(domain);
+        }
+
+        public DataSourceAmazonOpenSearchParameters build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

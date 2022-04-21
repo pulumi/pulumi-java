@@ -22,7 +22,7 @@ public final class AllocationSpecificSKUReservationResponse extends com.pulumi.r
      * 
      */
     @Import(name="assuredCount", required=true)
-      private final String assuredCount;
+    private String assuredCount;
 
     public String assuredCount() {
         return this.assuredCount;
@@ -33,7 +33,7 @@ public final class AllocationSpecificSKUReservationResponse extends com.pulumi.r
      * 
      */
     @Import(name="count", required=true)
-      private final String count;
+    private String count;
 
     public String count() {
         return this.count;
@@ -44,7 +44,7 @@ public final class AllocationSpecificSKUReservationResponse extends com.pulumi.r
      * 
      */
     @Import(name="inUseCount", required=true)
-      private final String inUseCount;
+    private String inUseCount;
 
     public String inUseCount() {
         return this.inUseCount;
@@ -55,73 +55,66 @@ public final class AllocationSpecificSKUReservationResponse extends com.pulumi.r
      * 
      */
     @Import(name="instanceProperties", required=true)
-      private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
+    private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties() {
         return this.instanceProperties;
     }
 
-    public AllocationSpecificSKUReservationResponse(
-        String assuredCount,
-        String count,
-        String inUseCount,
-        AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
-        this.assuredCount = Objects.requireNonNull(assuredCount, "expected parameter 'assuredCount' to be non-null");
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.inUseCount = Objects.requireNonNull(inUseCount, "expected parameter 'inUseCount' to be non-null");
-        this.instanceProperties = Objects.requireNonNull(instanceProperties, "expected parameter 'instanceProperties' to be non-null");
-    }
+    private AllocationSpecificSKUReservationResponse() {}
 
-    private AllocationSpecificSKUReservationResponse() {
-        this.assuredCount = null;
-        this.count = null;
-        this.inUseCount = null;
-        this.instanceProperties = null;
+    private AllocationSpecificSKUReservationResponse(AllocationSpecificSKUReservationResponse $) {
+        this.assuredCount = $.assuredCount;
+        this.count = $.count;
+        this.inUseCount = $.inUseCount;
+        this.instanceProperties = $.instanceProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllocationSpecificSKUReservationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assuredCount;
-        private String count;
-        private String inUseCount;
-        private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
+        private AllocationSpecificSKUReservationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllocationSpecificSKUReservationResponse();
         }
 
         public Builder(AllocationSpecificSKUReservationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assuredCount = defaults.assuredCount;
-    	      this.count = defaults.count;
-    	      this.inUseCount = defaults.inUseCount;
-    	      this.instanceProperties = defaults.instanceProperties;
+            $ = new AllocationSpecificSKUReservationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assuredCount(String assuredCount) {
-            this.assuredCount = Objects.requireNonNull(assuredCount);
+            $.assuredCount = assuredCount;
             return this;
         }
+
         public Builder count(String count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder inUseCount(String inUseCount) {
-            this.inUseCount = Objects.requireNonNull(inUseCount);
+            $.inUseCount = inUseCount;
             return this;
         }
+
         public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
-            this.instanceProperties = Objects.requireNonNull(instanceProperties);
+            $.instanceProperties = instanceProperties;
             return this;
-        }        public AllocationSpecificSKUReservationResponse build() {
-            return new AllocationSpecificSKUReservationResponse(assuredCount, count, inUseCount, instanceProperties);
+        }
+
+        public AllocationSpecificSKUReservationResponse build() {
+            $.assuredCount = Objects.requireNonNull($.assuredCount, "expected parameter 'assuredCount' to be non-null");
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.inUseCount = Objects.requireNonNull($.inUseCount, "expected parameter 'inUseCount' to be non-null");
+            $.instanceProperties = Objects.requireNonNull($.instanceProperties, "expected parameter 'instanceProperties' to be non-null");
+            return $;
         }
     }
+
 }

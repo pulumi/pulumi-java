@@ -21,10 +21,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="engine")
-      private final @Nullable String engine;
+    private @Nullable String engine;
 
     public Optional<String> engine() {
-        return this.engine == null ? Optional.empty() : Optional.ofNullable(this.engine);
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable String engineVersion;
+    private @Nullable String engineVersion;
 
     public Optional<String> engineVersion() {
-        return this.engineVersion == null ? Optional.empty() : Optional.ofNullable(this.engineVersion);
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="instanceClass")
-      private final @Nullable String instanceClass;
+    private @Nullable String instanceClass;
 
     public Optional<String> instanceClass() {
-        return this.instanceClass == null ? Optional.empty() : Optional.ofNullable(this.instanceClass);
+        return Optional.ofNullable(this.instanceClass);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="licenseModel")
-      private final @Nullable String licenseModel;
+    private @Nullable String licenseModel;
 
     public Optional<String> licenseModel() {
-        return this.licenseModel == null ? Optional.empty() : Optional.ofNullable(this.licenseModel);
+        return Optional.ofNullable(this.licenseModel);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preferredInstanceClasses")
-      private final @Nullable List<String> preferredInstanceClasses;
+    private @Nullable List<String> preferredInstanceClasses;
 
-    public List<String> preferredInstanceClasses() {
-        return this.preferredInstanceClasses == null ? List.of() : this.preferredInstanceClasses;
+    public Optional<List<String>> preferredInstanceClasses() {
+        return Optional.ofNullable(this.preferredInstanceClasses);
     }
 
     /**
@@ -76,94 +76,78 @@ public final class GetOrderableDbInstanceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vpc")
-      private final @Nullable Boolean vpc;
+    private @Nullable Boolean vpc;
 
     public Optional<Boolean> vpc() {
-        return this.vpc == null ? Optional.empty() : Optional.ofNullable(this.vpc);
+        return Optional.ofNullable(this.vpc);
     }
 
-    public GetOrderableDbInstanceArgs(
-        @Nullable String engine,
-        @Nullable String engineVersion,
-        @Nullable String instanceClass,
-        @Nullable String licenseModel,
-        @Nullable List<String> preferredInstanceClasses,
-        @Nullable Boolean vpc) {
-        this.engine = engine;
-        this.engineVersion = engineVersion;
-        this.instanceClass = instanceClass;
-        this.licenseModel = licenseModel;
-        this.preferredInstanceClasses = preferredInstanceClasses;
-        this.vpc = vpc;
-    }
+    private GetOrderableDbInstanceArgs() {}
 
-    private GetOrderableDbInstanceArgs() {
-        this.engine = null;
-        this.engineVersion = null;
-        this.instanceClass = null;
-        this.licenseModel = null;
-        this.preferredInstanceClasses = List.of();
-        this.vpc = null;
+    private GetOrderableDbInstanceArgs(GetOrderableDbInstanceArgs $) {
+        this.engine = $.engine;
+        this.engineVersion = $.engineVersion;
+        this.instanceClass = $.instanceClass;
+        this.licenseModel = $.licenseModel;
+        this.preferredInstanceClasses = $.preferredInstanceClasses;
+        this.vpc = $.vpc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrderableDbInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String engine;
-        private @Nullable String engineVersion;
-        private @Nullable String instanceClass;
-        private @Nullable String licenseModel;
-        private @Nullable List<String> preferredInstanceClasses;
-        private @Nullable Boolean vpc;
+        private GetOrderableDbInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrderableDbInstanceArgs();
         }
 
         public Builder(GetOrderableDbInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.engine = defaults.engine;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.instanceClass = defaults.instanceClass;
-    	      this.licenseModel = defaults.licenseModel;
-    	      this.preferredInstanceClasses = defaults.preferredInstanceClasses;
-    	      this.vpc = defaults.vpc;
+            $ = new GetOrderableDbInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder engine(@Nullable String engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
+
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
+
         public Builder instanceClass(@Nullable String instanceClass) {
-            this.instanceClass = instanceClass;
+            $.instanceClass = instanceClass;
             return this;
         }
+
         public Builder licenseModel(@Nullable String licenseModel) {
-            this.licenseModel = licenseModel;
+            $.licenseModel = licenseModel;
             return this;
         }
+
         public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
-            this.preferredInstanceClasses = preferredInstanceClasses;
+            $.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
+
         public Builder preferredInstanceClasses(String... preferredInstanceClasses) {
             return preferredInstanceClasses(List.of(preferredInstanceClasses));
         }
+
         public Builder vpc(@Nullable Boolean vpc) {
-            this.vpc = vpc;
+            $.vpc = vpc;
             return this;
-        }        public GetOrderableDbInstanceArgs build() {
-            return new GetOrderableDbInstanceArgs(engine, engineVersion, instanceClass, licenseModel, preferredInstanceClasses, vpc);
+        }
+
+        public GetOrderableDbInstanceArgs build() {
+            return $;
         }
     }
+
 }

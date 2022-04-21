@@ -22,7 +22,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
-      private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
+    private Boolean allowLeadingAndTrailingSpacesAndZeroes;
 
     public Boolean allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
@@ -33,7 +33,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="messageId", required=true)
-      private final String messageId;
+    private String messageId;
 
     public String messageId() {
         return this.messageId;
@@ -44,7 +44,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="trailingSeparatorPolicy", required=true)
-      private final String trailingSeparatorPolicy;
+    private String trailingSeparatorPolicy;
 
     public String trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
@@ -55,7 +55,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
-      private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
+    private Boolean trimLeadingAndTrailingSpacesAndZeroes;
 
     public Boolean trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
@@ -66,7 +66,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="validateCharacterSet", required=true)
-      private final Boolean validateCharacterSet;
+    private Boolean validateCharacterSet;
 
     public Boolean validateCharacterSet() {
         return this.validateCharacterSet;
@@ -77,7 +77,7 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="validateEDITypes", required=true)
-      private final Boolean validateEDITypes;
+    private Boolean validateEDITypes;
 
     public Boolean validateEDITypes() {
         return this.validateEDITypes;
@@ -88,100 +88,87 @@ public final class X12ValidationOverrideResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="validateXSDTypes", required=true)
-      private final Boolean validateXSDTypes;
+    private Boolean validateXSDTypes;
 
     public Boolean validateXSDTypes() {
         return this.validateXSDTypes;
     }
 
-    public X12ValidationOverrideResponse(
-        Boolean allowLeadingAndTrailingSpacesAndZeroes,
-        String messageId,
-        String trailingSeparatorPolicy,
-        Boolean trimLeadingAndTrailingSpacesAndZeroes,
-        Boolean validateCharacterSet,
-        Boolean validateEDITypes,
-        Boolean validateXSDTypes) {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes, "expected parameter 'allowLeadingAndTrailingSpacesAndZeroes' to be non-null");
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-        this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy, "expected parameter 'trailingSeparatorPolicy' to be non-null");
-        this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes, "expected parameter 'trimLeadingAndTrailingSpacesAndZeroes' to be non-null");
-        this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet, "expected parameter 'validateCharacterSet' to be non-null");
-        this.validateEDITypes = Objects.requireNonNull(validateEDITypes, "expected parameter 'validateEDITypes' to be non-null");
-        this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes, "expected parameter 'validateXSDTypes' to be non-null");
-    }
+    private X12ValidationOverrideResponse() {}
 
-    private X12ValidationOverrideResponse() {
-        this.allowLeadingAndTrailingSpacesAndZeroes = null;
-        this.messageId = null;
-        this.trailingSeparatorPolicy = null;
-        this.trimLeadingAndTrailingSpacesAndZeroes = null;
-        this.validateCharacterSet = null;
-        this.validateEDITypes = null;
-        this.validateXSDTypes = null;
+    private X12ValidationOverrideResponse(X12ValidationOverrideResponse $) {
+        this.allowLeadingAndTrailingSpacesAndZeroes = $.allowLeadingAndTrailingSpacesAndZeroes;
+        this.messageId = $.messageId;
+        this.trailingSeparatorPolicy = $.trailingSeparatorPolicy;
+        this.trimLeadingAndTrailingSpacesAndZeroes = $.trimLeadingAndTrailingSpacesAndZeroes;
+        this.validateCharacterSet = $.validateCharacterSet;
+        this.validateEDITypes = $.validateEDITypes;
+        this.validateXSDTypes = $.validateXSDTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12ValidationOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowLeadingAndTrailingSpacesAndZeroes;
-        private String messageId;
-        private String trailingSeparatorPolicy;
-        private Boolean trimLeadingAndTrailingSpacesAndZeroes;
-        private Boolean validateCharacterSet;
-        private Boolean validateEDITypes;
-        private Boolean validateXSDTypes;
+        private X12ValidationOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12ValidationOverrideResponse();
         }
 
         public Builder(X12ValidationOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowLeadingAndTrailingSpacesAndZeroes = defaults.allowLeadingAndTrailingSpacesAndZeroes;
-    	      this.messageId = defaults.messageId;
-    	      this.trailingSeparatorPolicy = defaults.trailingSeparatorPolicy;
-    	      this.trimLeadingAndTrailingSpacesAndZeroes = defaults.trimLeadingAndTrailingSpacesAndZeroes;
-    	      this.validateCharacterSet = defaults.validateCharacterSet;
-    	      this.validateEDITypes = defaults.validateEDITypes;
-    	      this.validateXSDTypes = defaults.validateXSDTypes;
+            $ = new X12ValidationOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
-            this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
+            $.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
+
         public Builder messageId(String messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
         }
+
         public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
-            this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
+            $.trailingSeparatorPolicy = trailingSeparatorPolicy;
             return this;
         }
+
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
-            this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
+            $.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
+
         public Builder validateCharacterSet(Boolean validateCharacterSet) {
-            this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
+            $.validateCharacterSet = validateCharacterSet;
             return this;
         }
+
         public Builder validateEDITypes(Boolean validateEDITypes) {
-            this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
+            $.validateEDITypes = validateEDITypes;
             return this;
         }
+
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
-            this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
+            $.validateXSDTypes = validateXSDTypes;
             return this;
-        }        public X12ValidationOverrideResponse build() {
-            return new X12ValidationOverrideResponse(allowLeadingAndTrailingSpacesAndZeroes, messageId, trailingSeparatorPolicy, trimLeadingAndTrailingSpacesAndZeroes, validateCharacterSet, validateEDITypes, validateXSDTypes);
+        }
+
+        public X12ValidationOverrideResponse build() {
+            $.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull($.allowLeadingAndTrailingSpacesAndZeroes, "expected parameter 'allowLeadingAndTrailingSpacesAndZeroes' to be non-null");
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            $.trailingSeparatorPolicy = Objects.requireNonNull($.trailingSeparatorPolicy, "expected parameter 'trailingSeparatorPolicy' to be non-null");
+            $.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull($.trimLeadingAndTrailingSpacesAndZeroes, "expected parameter 'trimLeadingAndTrailingSpacesAndZeroes' to be non-null");
+            $.validateCharacterSet = Objects.requireNonNull($.validateCharacterSet, "expected parameter 'validateCharacterSet' to be non-null");
+            $.validateEDITypes = Objects.requireNonNull($.validateEDITypes, "expected parameter 'validateEDITypes' to be non-null");
+            $.validateXSDTypes = Objects.requireNonNull($.validateXSDTypes, "expected parameter 'validateXSDTypes' to be non-null");
+            return $;
         }
     }
+
 }

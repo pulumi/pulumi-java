@@ -17,7 +17,7 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
      * 
      */
     @Import(name="mongoUserDefinitionId", required=true)
-      private final String mongoUserDefinitionId;
+    private String mongoUserDefinitionId;
 
     public String mongoUserDefinitionId() {
         return this.mongoUserDefinitionId;
@@ -39,64 +39,59 @@ public final class GetMongoDBResourceMongoUserDefinitionArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMongoDBResourceMongoUserDefinitionArgs(
-        String accountName,
-        String mongoUserDefinitionId,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.mongoUserDefinitionId = Objects.requireNonNull(mongoUserDefinitionId, "expected parameter 'mongoUserDefinitionId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMongoDBResourceMongoUserDefinitionArgs() {}
 
-    private GetMongoDBResourceMongoUserDefinitionArgs() {
-        this.accountName = null;
-        this.mongoUserDefinitionId = null;
-        this.resourceGroupName = null;
+    private GetMongoDBResourceMongoUserDefinitionArgs(GetMongoDBResourceMongoUserDefinitionArgs $) {
+        this.accountName = $.accountName;
+        this.mongoUserDefinitionId = $.mongoUserDefinitionId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMongoDBResourceMongoUserDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String mongoUserDefinitionId;
-        private String resourceGroupName;
+        private GetMongoDBResourceMongoUserDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMongoDBResourceMongoUserDefinitionArgs();
         }
 
         public Builder(GetMongoDBResourceMongoUserDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.mongoUserDefinitionId = defaults.mongoUserDefinitionId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMongoDBResourceMongoUserDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder mongoUserDefinitionId(String mongoUserDefinitionId) {
-            this.mongoUserDefinitionId = Objects.requireNonNull(mongoUserDefinitionId);
+            $.mongoUserDefinitionId = mongoUserDefinitionId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMongoDBResourceMongoUserDefinitionArgs build() {
-            return new GetMongoDBResourceMongoUserDefinitionArgs(accountName, mongoUserDefinitionId, resourceGroupName);
+        }
+
+        public GetMongoDBResourceMongoUserDefinitionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.mongoUserDefinitionId = Objects.requireNonNull($.mongoUserDefinitionId, "expected parameter 'mongoUserDefinitionId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

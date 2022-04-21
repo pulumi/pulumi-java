@@ -5,11 +5,11 @@ package com.pulumi.gcp.redis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstanceMaintenancePolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InstanceMaintenancePolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class InstanceMaintenancePolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -66,92 +66,82 @@ public final class InstanceMaintenancePolicyGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="weeklyMaintenanceWindows")
-      private final @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
+    private @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
 
-    public Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows() {
-        return this.weeklyMaintenanceWindows == null ? Codegen.empty() : this.weeklyMaintenanceWindows;
+    public Optional<Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>>> weeklyMaintenanceWindows() {
+        return Optional.ofNullable(this.weeklyMaintenanceWindows);
     }
 
-    public InstanceMaintenancePolicyGetArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows) {
-        this.createTime = createTime;
-        this.description = description;
-        this.updateTime = updateTime;
-        this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
-    }
+    private InstanceMaintenancePolicyGetArgs() {}
 
-    private InstanceMaintenancePolicyGetArgs() {
-        this.createTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.weeklyMaintenanceWindows = Codegen.empty();
+    private InstanceMaintenancePolicyGetArgs(InstanceMaintenancePolicyGetArgs $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.updateTime = $.updateTime;
+        this.weeklyMaintenanceWindows = $.weeklyMaintenanceWindows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceMaintenancePolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
+        private InstanceMaintenancePolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceMaintenancePolicyGetArgs();
         }
 
         public Builder(InstanceMaintenancePolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.updateTime = defaults.updateTime;
-    	      this.weeklyMaintenanceWindows = defaults.weeklyMaintenanceWindows;
+            $ = new InstanceMaintenancePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder weeklyMaintenanceWindows(@Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows) {
-            this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
+            $.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
             return this;
         }
-        public Builder weeklyMaintenanceWindows(@Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs> weeklyMaintenanceWindows) {
-            this.weeklyMaintenanceWindows = Codegen.ofNullable(weeklyMaintenanceWindows);
-            return this;
+
+        public Builder weeklyMaintenanceWindows(List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs> weeklyMaintenanceWindows) {
+            return weeklyMaintenanceWindows(Output.of(weeklyMaintenanceWindows));
         }
+
         public Builder weeklyMaintenanceWindows(InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs... weeklyMaintenanceWindows) {
             return weeklyMaintenanceWindows(List.of(weeklyMaintenanceWindows));
-        }        public InstanceMaintenancePolicyGetArgs build() {
-            return new InstanceMaintenancePolicyGetArgs(createTime, description, updateTime, weeklyMaintenanceWindows);
+        }
+
+        public InstanceMaintenancePolicyGetArgs build() {
+            return $;
         }
     }
+
 }

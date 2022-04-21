@@ -21,7 +21,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
      * 
      */
     @Import(name="maxSize", required=true)
-      private final String maxSize;
+    private String maxSize;
 
     public String maxSize() {
         return this.maxSize;
@@ -32,55 +32,52 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
      * 
      */
     @Import(name="minSize", required=true)
-      private final String minSize;
+    private String minSize;
 
     public String minSize() {
         return this.minSize;
     }
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(
-        String maxSize,
-        String minSize) {
-        this.maxSize = Objects.requireNonNull(maxSize, "expected parameter 'maxSize' to be non-null");
-        this.minSize = Objects.requireNonNull(minSize, "expected parameter 'minSize' to be non-null");
-    }
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse() {}
 
-    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse() {
-        this.maxSize = null;
-        this.minSize = null;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse $) {
+        this.maxSize = $.maxSize;
+        this.minSize = $.minSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String maxSize;
-        private String minSize;
+        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse();
         }
 
         public Builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSize = defaults.maxSize;
-    	      this.minSize = defaults.minSize;
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSize(String maxSize) {
-            this.maxSize = Objects.requireNonNull(maxSize);
+            $.maxSize = maxSize;
             return this;
         }
+
         public Builder minSize(String minSize) {
-            this.minSize = Objects.requireNonNull(minSize);
+            $.minSize = minSize;
             return this;
-        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse build() {
-            return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(maxSize, minSize);
+        }
+
+        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse build() {
+            $.maxSize = Objects.requireNonNull($.maxSize, "expected parameter 'maxSize' to be non-null");
+            $.minSize = Objects.requireNonNull($.minSize, "expected parameter 'minSize' to be non-null");
+            return $;
         }
     }
+
 }

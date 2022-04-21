@@ -22,7 +22,7 @@ public final class AllowedKeyTypeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ellipticCurve", required=true)
-      private final EcKeyTypeResponse ellipticCurve;
+    private EcKeyTypeResponse ellipticCurve;
 
     public EcKeyTypeResponse ellipticCurve() {
         return this.ellipticCurve;
@@ -33,55 +33,52 @@ public final class AllowedKeyTypeResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rsa", required=true)
-      private final RsaKeyTypeResponse rsa;
+    private RsaKeyTypeResponse rsa;
 
     public RsaKeyTypeResponse rsa() {
         return this.rsa;
     }
 
-    public AllowedKeyTypeResponse(
-        EcKeyTypeResponse ellipticCurve,
-        RsaKeyTypeResponse rsa) {
-        this.ellipticCurve = Objects.requireNonNull(ellipticCurve, "expected parameter 'ellipticCurve' to be non-null");
-        this.rsa = Objects.requireNonNull(rsa, "expected parameter 'rsa' to be non-null");
-    }
+    private AllowedKeyTypeResponse() {}
 
-    private AllowedKeyTypeResponse() {
-        this.ellipticCurve = null;
-        this.rsa = null;
+    private AllowedKeyTypeResponse(AllowedKeyTypeResponse $) {
+        this.ellipticCurve = $.ellipticCurve;
+        this.rsa = $.rsa;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllowedKeyTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EcKeyTypeResponse ellipticCurve;
-        private RsaKeyTypeResponse rsa;
+        private AllowedKeyTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllowedKeyTypeResponse();
         }
 
         public Builder(AllowedKeyTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ellipticCurve = defaults.ellipticCurve;
-    	      this.rsa = defaults.rsa;
+            $ = new AllowedKeyTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ellipticCurve(EcKeyTypeResponse ellipticCurve) {
-            this.ellipticCurve = Objects.requireNonNull(ellipticCurve);
+            $.ellipticCurve = ellipticCurve;
             return this;
         }
+
         public Builder rsa(RsaKeyTypeResponse rsa) {
-            this.rsa = Objects.requireNonNull(rsa);
+            $.rsa = rsa;
             return this;
-        }        public AllowedKeyTypeResponse build() {
-            return new AllowedKeyTypeResponse(ellipticCurve, rsa);
+        }
+
+        public AllowedKeyTypeResponse build() {
+            $.ellipticCurve = Objects.requireNonNull($.ellipticCurve, "expected parameter 'ellipticCurve' to be non-null");
+            $.rsa = Objects.requireNonNull($.rsa, "expected parameter 'rsa' to be non-null");
+            return $;
         }
     }
+
 }

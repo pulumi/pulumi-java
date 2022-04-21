@@ -23,7 +23,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
     public static final MonitorPropertiesResponse Empty = new MonitorPropertiesResponse();
 
     @Import(name="liftrResourceCategory", required=true)
-      private final String liftrResourceCategory;
+    private String liftrResourceCategory;
 
     public String liftrResourceCategory() {
         return this.liftrResourceCategory;
@@ -34,17 +34,17 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="liftrResourcePreference", required=true)
-      private final Integer liftrResourcePreference;
+    private Integer liftrResourcePreference;
 
     public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
     }
 
     @Import(name="logzOrganizationProperties")
-      private final @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
+    private @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
 
     public Optional<LogzOrganizationPropertiesResponse> logzOrganizationProperties() {
-        return this.logzOrganizationProperties == null ? Optional.empty() : Optional.ofNullable(this.logzOrganizationProperties);
+        return Optional.ofNullable(this.logzOrganizationProperties);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="marketplaceSubscriptionStatus")
-      private final @Nullable String marketplaceSubscriptionStatus;
+    private @Nullable String marketplaceSubscriptionStatus;
 
     public Optional<String> marketplaceSubscriptionStatus() {
-        return this.marketplaceSubscriptionStatus == null ? Optional.empty() : Optional.ofNullable(this.marketplaceSubscriptionStatus);
+        return Optional.ofNullable(this.marketplaceSubscriptionStatus);
     }
 
     /**
@@ -63,17 +63,17 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="monitoringStatus")
-      private final @Nullable String monitoringStatus;
+    private @Nullable String monitoringStatus;
 
     public Optional<String> monitoringStatus() {
-        return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
+        return Optional.ofNullable(this.monitoringStatus);
     }
 
     @Import(name="planData")
-      private final @Nullable PlanDataResponse planData;
+    private @Nullable PlanDataResponse planData;
 
     public Optional<PlanDataResponse> planData() {
-        return this.planData == null ? Optional.empty() : Optional.ofNullable(this.planData);
+        return Optional.ofNullable(this.planData);
     }
 
     /**
@@ -81,116 +81,96 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
     @Import(name="userInfo")
-      private final @Nullable UserInfoResponse userInfo;
+    private @Nullable UserInfoResponse userInfo;
 
     public Optional<UserInfoResponse> userInfo() {
-        return this.userInfo == null ? Optional.empty() : Optional.ofNullable(this.userInfo);
+        return Optional.ofNullable(this.userInfo);
     }
 
-    public MonitorPropertiesResponse(
-        String liftrResourceCategory,
-        Integer liftrResourcePreference,
-        @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties,
-        @Nullable String marketplaceSubscriptionStatus,
-        @Nullable String monitoringStatus,
-        @Nullable PlanDataResponse planData,
-        String provisioningState,
-        @Nullable UserInfoResponse userInfo) {
-        this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory, "expected parameter 'liftrResourceCategory' to be non-null");
-        this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference, "expected parameter 'liftrResourcePreference' to be non-null");
-        this.logzOrganizationProperties = logzOrganizationProperties;
-        this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
-        this.monitoringStatus = monitoringStatus;
-        this.planData = planData;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.userInfo = userInfo;
-    }
+    private MonitorPropertiesResponse() {}
 
-    private MonitorPropertiesResponse() {
-        this.liftrResourceCategory = null;
-        this.liftrResourcePreference = null;
-        this.logzOrganizationProperties = null;
-        this.marketplaceSubscriptionStatus = null;
-        this.monitoringStatus = null;
-        this.planData = null;
-        this.provisioningState = null;
-        this.userInfo = null;
+    private MonitorPropertiesResponse(MonitorPropertiesResponse $) {
+        this.liftrResourceCategory = $.liftrResourceCategory;
+        this.liftrResourcePreference = $.liftrResourcePreference;
+        this.logzOrganizationProperties = $.logzOrganizationProperties;
+        this.marketplaceSubscriptionStatus = $.marketplaceSubscriptionStatus;
+        this.monitoringStatus = $.monitoringStatus;
+        this.planData = $.planData;
+        this.provisioningState = $.provisioningState;
+        this.userInfo = $.userInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitorPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String liftrResourceCategory;
-        private Integer liftrResourcePreference;
-        private @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
-        private @Nullable String marketplaceSubscriptionStatus;
-        private @Nullable String monitoringStatus;
-        private @Nullable PlanDataResponse planData;
-        private String provisioningState;
-        private @Nullable UserInfoResponse userInfo;
+        private MonitorPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitorPropertiesResponse();
         }
 
         public Builder(MonitorPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.liftrResourceCategory = defaults.liftrResourceCategory;
-    	      this.liftrResourcePreference = defaults.liftrResourcePreference;
-    	      this.logzOrganizationProperties = defaults.logzOrganizationProperties;
-    	      this.marketplaceSubscriptionStatus = defaults.marketplaceSubscriptionStatus;
-    	      this.monitoringStatus = defaults.monitoringStatus;
-    	      this.planData = defaults.planData;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.userInfo = defaults.userInfo;
+            $ = new MonitorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder liftrResourceCategory(String liftrResourceCategory) {
-            this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
+            $.liftrResourceCategory = liftrResourceCategory;
             return this;
         }
+
         public Builder liftrResourcePreference(Integer liftrResourcePreference) {
-            this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
+            $.liftrResourcePreference = liftrResourcePreference;
             return this;
         }
+
         public Builder logzOrganizationProperties(@Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties) {
-            this.logzOrganizationProperties = logzOrganizationProperties;
+            $.logzOrganizationProperties = logzOrganizationProperties;
             return this;
         }
+
         public Builder marketplaceSubscriptionStatus(@Nullable String marketplaceSubscriptionStatus) {
-            this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
+            $.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
+
         public Builder monitoringStatus(@Nullable String monitoringStatus) {
-            this.monitoringStatus = monitoringStatus;
+            $.monitoringStatus = monitoringStatus;
             return this;
         }
+
         public Builder planData(@Nullable PlanDataResponse planData) {
-            this.planData = planData;
+            $.planData = planData;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder userInfo(@Nullable UserInfoResponse userInfo) {
-            this.userInfo = userInfo;
+            $.userInfo = userInfo;
             return this;
-        }        public MonitorPropertiesResponse build() {
-            return new MonitorPropertiesResponse(liftrResourceCategory, liftrResourcePreference, logzOrganizationProperties, marketplaceSubscriptionStatus, monitoringStatus, planData, provisioningState, userInfo);
+        }
+
+        public MonitorPropertiesResponse build() {
+            $.liftrResourceCategory = Objects.requireNonNull($.liftrResourceCategory, "expected parameter 'liftrResourceCategory' to be non-null");
+            $.liftrResourcePreference = Objects.requireNonNull($.liftrResourcePreference, "expected parameter 'liftrResourcePreference' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentGroupLabelGetArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentOsTypeGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="groupLabels")
-      private final @Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels;
+    private @Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels;
 
-    public Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels() {
-        return this.groupLabels == null ? Codegen.empty() : this.groupLabels;
+    public Optional<Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>>> groupLabels() {
+        return Optional.ofNullable(this.groupLabels);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="instanceNamePrefixes")
-      private final @Nullable Output<List<String>> instanceNamePrefixes;
+    private @Nullable Output<List<String>> instanceNamePrefixes;
 
-    public Output<List<String>> instanceNamePrefixes() {
-        return this.instanceNamePrefixes == null ? Codegen.empty() : this.instanceNamePrefixes;
+    public Optional<Output<List<String>>> instanceNamePrefixes() {
+        return Optional.ofNullable(this.instanceNamePrefixes);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="instances")
-      private final @Nullable Output<List<String>> instances;
+    private @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> instances() {
-        return this.instances == null ? Codegen.empty() : this.instances;
+    public Optional<Output<List<String>>> instances() {
+        return Optional.ofNullable(this.instances);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="osTypes")
-      private final @Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes;
+    private @Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes;
 
-    public Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes() {
-        return this.osTypes == null ? Codegen.empty() : this.osTypes;
+    public Optional<Output<List<GuestPoliciesAssignmentOsTypeGetArgs>>> osTypes() {
+        return Optional.ofNullable(this.osTypes);
     }
 
     /**
@@ -79,117 +79,108 @@ public final class GuestPoliciesAssignmentGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public GuestPoliciesAssignmentGetArgs(
-        @Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels,
-        @Nullable Output<List<String>> instanceNamePrefixes,
-        @Nullable Output<List<String>> instances,
-        @Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes,
-        @Nullable Output<List<String>> zones) {
-        this.groupLabels = groupLabels;
-        this.instanceNamePrefixes = instanceNamePrefixes;
-        this.instances = instances;
-        this.osTypes = osTypes;
-        this.zones = zones;
-    }
+    private GuestPoliciesAssignmentGetArgs() {}
 
-    private GuestPoliciesAssignmentGetArgs() {
-        this.groupLabels = Codegen.empty();
-        this.instanceNamePrefixes = Codegen.empty();
-        this.instances = Codegen.empty();
-        this.osTypes = Codegen.empty();
-        this.zones = Codegen.empty();
+    private GuestPoliciesAssignmentGetArgs(GuestPoliciesAssignmentGetArgs $) {
+        this.groupLabels = $.groupLabels;
+        this.instanceNamePrefixes = $.instanceNamePrefixes;
+        this.instances = $.instances;
+        this.osTypes = $.osTypes;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesAssignmentGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels;
-        private @Nullable Output<List<String>> instanceNamePrefixes;
-        private @Nullable Output<List<String>> instances;
-        private @Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes;
-        private @Nullable Output<List<String>> zones;
+        private GuestPoliciesAssignmentGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesAssignmentGetArgs();
         }
 
         public Builder(GuestPoliciesAssignmentGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupLabels = defaults.groupLabels;
-    	      this.instanceNamePrefixes = defaults.instanceNamePrefixes;
-    	      this.instances = defaults.instances;
-    	      this.osTypes = defaults.osTypes;
-    	      this.zones = defaults.zones;
+            $ = new GuestPoliciesAssignmentGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupLabels(@Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels) {
-            this.groupLabels = groupLabels;
+            $.groupLabels = groupLabels;
             return this;
         }
-        public Builder groupLabels(@Nullable List<GuestPoliciesAssignmentGroupLabelGetArgs> groupLabels) {
-            this.groupLabels = Codegen.ofNullable(groupLabels);
-            return this;
+
+        public Builder groupLabels(List<GuestPoliciesAssignmentGroupLabelGetArgs> groupLabels) {
+            return groupLabels(Output.of(groupLabels));
         }
+
         public Builder groupLabels(GuestPoliciesAssignmentGroupLabelGetArgs... groupLabels) {
             return groupLabels(List.of(groupLabels));
         }
+
         public Builder instanceNamePrefixes(@Nullable Output<List<String>> instanceNamePrefixes) {
-            this.instanceNamePrefixes = instanceNamePrefixes;
+            $.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
-        public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
-            this.instanceNamePrefixes = Codegen.ofNullable(instanceNamePrefixes);
-            return this;
+
+        public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
+            return instanceNamePrefixes(Output.of(instanceNamePrefixes));
         }
+
         public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
             return instanceNamePrefixes(List.of(instanceNamePrefixes));
         }
+
         public Builder instances(@Nullable Output<List<String>> instances) {
-            this.instances = instances;
+            $.instances = instances;
             return this;
         }
-        public Builder instances(@Nullable List<String> instances) {
-            this.instances = Codegen.ofNullable(instances);
-            return this;
+
+        public Builder instances(List<String> instances) {
+            return instances(Output.of(instances));
         }
+
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
+
         public Builder osTypes(@Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes) {
-            this.osTypes = osTypes;
+            $.osTypes = osTypes;
             return this;
         }
-        public Builder osTypes(@Nullable List<GuestPoliciesAssignmentOsTypeGetArgs> osTypes) {
-            this.osTypes = Codegen.ofNullable(osTypes);
-            return this;
+
+        public Builder osTypes(List<GuestPoliciesAssignmentOsTypeGetArgs> osTypes) {
+            return osTypes(Output.of(osTypes));
         }
+
         public Builder osTypes(GuestPoliciesAssignmentOsTypeGetArgs... osTypes) {
             return osTypes(List.of(osTypes));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public GuestPoliciesAssignmentGetArgs build() {
-            return new GuestPoliciesAssignmentGetArgs(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
+        }
+
+        public GuestPoliciesAssignmentGetArgs build() {
+            return $;
         }
     }
+
 }

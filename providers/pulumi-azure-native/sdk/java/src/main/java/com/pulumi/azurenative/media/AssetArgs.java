@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,10 +31,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alternateId")
-      private final @Nullable Output<String> alternateId;
+    private @Nullable Output<String> alternateId;
 
-    public Output<String> alternateId() {
-        return this.alternateId == null ? Codegen.empty() : this.alternateId;
+    public Optional<Output<String>> alternateId() {
+        return Optional.ofNullable(this.alternateId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetName")
-      private final @Nullable Output<String> assetName;
+    private @Nullable Output<String> assetName;
 
-    public Output<String> assetName() {
-        return this.assetName == null ? Codegen.empty() : this.assetName;
+    public Optional<Output<String>> assetName() {
+        return Optional.ofNullable(this.assetName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="container")
-      private final @Nullable Output<String> container;
+    private @Nullable Output<String> container;
 
-    public Output<String> container() {
-        return this.container == null ? Codegen.empty() : this.container;
+    public Optional<Output<String>> container() {
+        return Optional.ofNullable(this.container);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -86,128 +86,110 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountName")
-      private final @Nullable Output<String> storageAccountName;
+    private @Nullable Output<String> storageAccountName;
 
-    public Output<String> storageAccountName() {
-        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
+    public Optional<Output<String>> storageAccountName() {
+        return Optional.ofNullable(this.storageAccountName);
     }
 
-    public AssetArgs(
-        Output<String> accountName,
-        @Nullable Output<String> alternateId,
-        @Nullable Output<String> assetName,
-        @Nullable Output<String> container,
-        @Nullable Output<String> description,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> storageAccountName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.alternateId = alternateId;
-        this.assetName = assetName;
-        this.container = container;
-        this.description = description;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountName = storageAccountName;
-    }
+    private AssetArgs() {}
 
-    private AssetArgs() {
-        this.accountName = Codegen.empty();
-        this.alternateId = Codegen.empty();
-        this.assetName = Codegen.empty();
-        this.container = Codegen.empty();
-        this.description = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccountName = Codegen.empty();
+    private AssetArgs(AssetArgs $) {
+        this.accountName = $.accountName;
+        this.alternateId = $.alternateId;
+        this.assetName = $.assetName;
+        this.container = $.container;
+        this.description = $.description;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> alternateId;
-        private @Nullable Output<String> assetName;
-        private @Nullable Output<String> container;
-        private @Nullable Output<String> description;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> storageAccountName;
+        private AssetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetArgs();
         }
 
         public Builder(AssetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.alternateId = defaults.alternateId;
-    	      this.assetName = defaults.assetName;
-    	      this.container = defaults.container;
-    	      this.description = defaults.description;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new AssetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder alternateId(@Nullable Output<String> alternateId) {
-            this.alternateId = alternateId;
+            $.alternateId = alternateId;
             return this;
         }
-        public Builder alternateId(@Nullable String alternateId) {
-            this.alternateId = Codegen.ofNullable(alternateId);
-            return this;
+
+        public Builder alternateId(String alternateId) {
+            return alternateId(Output.of(alternateId));
         }
+
         public Builder assetName(@Nullable Output<String> assetName) {
-            this.assetName = assetName;
+            $.assetName = assetName;
             return this;
         }
-        public Builder assetName(@Nullable String assetName) {
-            this.assetName = Codegen.ofNullable(assetName);
-            return this;
+
+        public Builder assetName(String assetName) {
+            return assetName(Output.of(assetName));
         }
+
         public Builder container(@Nullable Output<String> container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
-        public Builder container(@Nullable String container) {
-            this.container = Codegen.ofNullable(container);
-            return this;
+
+        public Builder container(String container) {
+            return container(Output.of(container));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
-            this.storageAccountName = storageAccountName;
+            $.storageAccountName = storageAccountName;
             return this;
         }
-        public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Codegen.ofNullable(storageAccountName);
-            return this;
-        }        public AssetArgs build() {
-            return new AssetArgs(accountName, alternateId, assetName, container, description, resourceGroupName, storageAccountName);
+
+        public Builder storageAccountName(String storageAccountName) {
+            return storageAccountName(Output.of(storageAccountName));
+        }
+
+        public AssetArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

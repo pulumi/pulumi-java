@@ -5,10 +5,10 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TaskSetScaleGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="unit")
-      private final @Nullable Output<String> unit;
+    private @Nullable Output<String> unit;
 
-    public Output<String> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<String>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class TaskSetScaleGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Double> value;
+    private @Nullable Output<Double> value;
 
-    public Output<Double> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Double>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TaskSetScaleGetArgs(
-        @Nullable Output<String> unit,
-        @Nullable Output<Double> value) {
-        this.unit = unit;
-        this.value = value;
-    }
+    private TaskSetScaleGetArgs() {}
 
-    private TaskSetScaleGetArgs() {
-        this.unit = Codegen.empty();
-        this.value = Codegen.empty();
+    private TaskSetScaleGetArgs(TaskSetScaleGetArgs $) {
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSetScaleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> unit;
-        private @Nullable Output<Double> value;
+        private TaskSetScaleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSetScaleGetArgs();
         }
 
         public Builder(TaskSetScaleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new TaskSetScaleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder unit(@Nullable Output<String> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable String unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
+
+        public Builder unit(String unit) {
+            return unit(Output.of(unit));
         }
+
         public Builder value(@Nullable Output<Double> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Double value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public TaskSetScaleGetArgs build() {
-            return new TaskSetScaleGetArgs(unit, value);
+
+        public Builder value(Double value) {
+            return value(Output.of(value));
+        }
+
+        public TaskSetScaleGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SecurityProfileMetricValueArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="cidrs")
-      private final @Nullable Output<List<String>> cidrs;
+    private @Nullable Output<List<String>> cidrs;
 
-    public Output<List<String>> cidrs() {
-        return this.cidrs == null ? Codegen.empty() : this.cidrs;
+    public Optional<Output<List<String>>> cidrs() {
+        return Optional.ofNullable(this.cidrs);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SecurityProfileMetricValueArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<String> count;
+    private @Nullable Output<String> count;
 
-    public Output<String> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<String>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SecurityProfileMetricValueArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="number")
-      private final @Nullable Output<Double> number;
+    private @Nullable Output<Double> number;
 
-    public Output<Double> number() {
-        return this.number == null ? Codegen.empty() : this.number;
+    public Optional<Output<Double>> number() {
+        return Optional.ofNullable(this.number);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SecurityProfileMetricValueArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="numbers")
-      private final @Nullable Output<List<Double>> numbers;
+    private @Nullable Output<List<Double>> numbers;
 
-    public Output<List<Double>> numbers() {
-        return this.numbers == null ? Codegen.empty() : this.numbers;
+    public Optional<Output<List<Double>>> numbers() {
+        return Optional.ofNullable(this.numbers);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class SecurityProfileMetricValueArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<Integer>> ports;
+    private @Nullable Output<List<Integer>> ports;
 
-    public Output<List<Integer>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<Integer>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -82,127 +82,114 @@ public final class SecurityProfileMetricValueArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="strings")
-      private final @Nullable Output<List<String>> strings;
+    private @Nullable Output<List<String>> strings;
 
-    public Output<List<String>> strings() {
-        return this.strings == null ? Codegen.empty() : this.strings;
+    public Optional<Output<List<String>>> strings() {
+        return Optional.ofNullable(this.strings);
     }
 
-    public SecurityProfileMetricValueArgs(
-        @Nullable Output<List<String>> cidrs,
-        @Nullable Output<String> count,
-        @Nullable Output<Double> number,
-        @Nullable Output<List<Double>> numbers,
-        @Nullable Output<List<Integer>> ports,
-        @Nullable Output<List<String>> strings) {
-        this.cidrs = cidrs;
-        this.count = count;
-        this.number = number;
-        this.numbers = numbers;
-        this.ports = ports;
-        this.strings = strings;
-    }
+    private SecurityProfileMetricValueArgs() {}
 
-    private SecurityProfileMetricValueArgs() {
-        this.cidrs = Codegen.empty();
-        this.count = Codegen.empty();
-        this.number = Codegen.empty();
-        this.numbers = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.strings = Codegen.empty();
+    private SecurityProfileMetricValueArgs(SecurityProfileMetricValueArgs $) {
+        this.cidrs = $.cidrs;
+        this.count = $.count;
+        this.number = $.number;
+        this.numbers = $.numbers;
+        this.ports = $.ports;
+        this.strings = $.strings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileMetricValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cidrs;
-        private @Nullable Output<String> count;
-        private @Nullable Output<Double> number;
-        private @Nullable Output<List<Double>> numbers;
-        private @Nullable Output<List<Integer>> ports;
-        private @Nullable Output<List<String>> strings;
+        private SecurityProfileMetricValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileMetricValueArgs();
         }
 
         public Builder(SecurityProfileMetricValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrs = defaults.cidrs;
-    	      this.count = defaults.count;
-    	      this.number = defaults.number;
-    	      this.numbers = defaults.numbers;
-    	      this.ports = defaults.ports;
-    	      this.strings = defaults.strings;
+            $ = new SecurityProfileMetricValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrs(@Nullable Output<List<String>> cidrs) {
-            this.cidrs = cidrs;
+            $.cidrs = cidrs;
             return this;
         }
-        public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = Codegen.ofNullable(cidrs);
-            return this;
+
+        public Builder cidrs(List<String> cidrs) {
+            return cidrs(Output.of(cidrs));
         }
+
         public Builder cidrs(String... cidrs) {
             return cidrs(List.of(cidrs));
         }
+
         public Builder count(@Nullable Output<String> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable String count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(String count) {
+            return count(Output.of(count));
         }
+
         public Builder number(@Nullable Output<Double> number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
-        public Builder number(@Nullable Double number) {
-            this.number = Codegen.ofNullable(number);
-            return this;
+
+        public Builder number(Double number) {
+            return number(Output.of(number));
         }
+
         public Builder numbers(@Nullable Output<List<Double>> numbers) {
-            this.numbers = numbers;
+            $.numbers = numbers;
             return this;
         }
-        public Builder numbers(@Nullable List<Double> numbers) {
-            this.numbers = Codegen.ofNullable(numbers);
-            return this;
+
+        public Builder numbers(List<Double> numbers) {
+            return numbers(Output.of(numbers));
         }
+
         public Builder numbers(Double... numbers) {
             return numbers(List.of(numbers));
         }
+
         public Builder ports(@Nullable Output<List<Integer>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<Integer> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<Integer> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(Integer... ports) {
             return ports(List.of(ports));
         }
+
         public Builder strings(@Nullable Output<List<String>> strings) {
-            this.strings = strings;
+            $.strings = strings;
             return this;
         }
-        public Builder strings(@Nullable List<String> strings) {
-            this.strings = Codegen.ofNullable(strings);
-            return this;
+
+        public Builder strings(List<String> strings) {
+            return strings(Output.of(strings));
         }
+
         public Builder strings(String... strings) {
             return strings(List.of(strings));
-        }        public SecurityProfileMetricValueArgs build() {
-            return new SecurityProfileMetricValueArgs(cidrs, count, number, numbers, ports, strings);
+        }
+
+        public SecurityProfileMetricValueArgs build() {
+            return $;
         }
     }
+
 }

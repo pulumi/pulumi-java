@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.GRPCHealthCheckPortSpecification;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GRPCHealthCheckArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="grpcServiceName")
-      private final @Nullable Output<String> grpcServiceName;
+    private @Nullable Output<String> grpcServiceName;
 
-    public Output<String> grpcServiceName() {
-        return this.grpcServiceName == null ? Codegen.empty() : this.grpcServiceName;
+    public Optional<Output<String>> grpcServiceName() {
+        return Optional.ofNullable(this.grpcServiceName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GRPCHealthCheckArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GRPCHealthCheckArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="portName")
-      private final @Nullable Output<String> portName;
+    private @Nullable Output<String> portName;
 
-    public Output<String> portName() {
-        return this.portName == null ? Codegen.empty() : this.portName;
+    public Optional<Output<String>> portName() {
+        return Optional.ofNullable(this.portName);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class GRPCHealthCheckArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="portSpecification")
-      private final @Nullable Output<GRPCHealthCheckPortSpecification> portSpecification;
+    private @Nullable Output<GRPCHealthCheckPortSpecification> portSpecification;
 
-    public Output<GRPCHealthCheckPortSpecification> portSpecification() {
-        return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
+    public Optional<Output<GRPCHealthCheckPortSpecification>> portSpecification() {
+        return Optional.ofNullable(this.portSpecification);
     }
 
-    public GRPCHealthCheckArgs(
-        @Nullable Output<String> grpcServiceName,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> portName,
-        @Nullable Output<GRPCHealthCheckPortSpecification> portSpecification) {
-        this.grpcServiceName = grpcServiceName;
-        this.port = port;
-        this.portName = portName;
-        this.portSpecification = portSpecification;
-    }
+    private GRPCHealthCheckArgs() {}
 
-    private GRPCHealthCheckArgs() {
-        this.grpcServiceName = Codegen.empty();
-        this.port = Codegen.empty();
-        this.portName = Codegen.empty();
-        this.portSpecification = Codegen.empty();
+    private GRPCHealthCheckArgs(GRPCHealthCheckArgs $) {
+        this.grpcServiceName = $.grpcServiceName;
+        this.port = $.port;
+        this.portName = $.portName;
+        this.portSpecification = $.portSpecification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GRPCHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> grpcServiceName;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> portName;
-        private @Nullable Output<GRPCHealthCheckPortSpecification> portSpecification;
+        private GRPCHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GRPCHealthCheckArgs();
         }
 
         public Builder(GRPCHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grpcServiceName = defaults.grpcServiceName;
-    	      this.port = defaults.port;
-    	      this.portName = defaults.portName;
-    	      this.portSpecification = defaults.portSpecification;
+            $ = new GRPCHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder grpcServiceName(@Nullable Output<String> grpcServiceName) {
-            this.grpcServiceName = grpcServiceName;
+            $.grpcServiceName = grpcServiceName;
             return this;
         }
-        public Builder grpcServiceName(@Nullable String grpcServiceName) {
-            this.grpcServiceName = Codegen.ofNullable(grpcServiceName);
-            return this;
+
+        public Builder grpcServiceName(String grpcServiceName) {
+            return grpcServiceName(Output.of(grpcServiceName));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder portName(@Nullable Output<String> portName) {
-            this.portName = portName;
+            $.portName = portName;
             return this;
         }
-        public Builder portName(@Nullable String portName) {
-            this.portName = Codegen.ofNullable(portName);
-            return this;
+
+        public Builder portName(String portName) {
+            return portName(Output.of(portName));
         }
+
         public Builder portSpecification(@Nullable Output<GRPCHealthCheckPortSpecification> portSpecification) {
-            this.portSpecification = portSpecification;
+            $.portSpecification = portSpecification;
             return this;
         }
-        public Builder portSpecification(@Nullable GRPCHealthCheckPortSpecification portSpecification) {
-            this.portSpecification = Codegen.ofNullable(portSpecification);
-            return this;
-        }        public GRPCHealthCheckArgs build() {
-            return new GRPCHealthCheckArgs(grpcServiceName, port, portName, portSpecification);
+
+        public Builder portSpecification(GRPCHealthCheckPortSpecification portSpecification) {
+            return portSpecification(Output.of(portSpecification));
+        }
+
+        public GRPCHealthCheckArgs build() {
+            return $;
         }
     }
+
 }

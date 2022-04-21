@@ -17,7 +17,7 @@ public final class GetIotConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iotConnectorName", required=true)
-      private final String iotConnectorName;
+    private String iotConnectorName;
 
     public String iotConnectorName() {
         return this.iotConnectorName;
@@ -28,7 +28,7 @@ public final class GetIotConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetIotConnectorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetIotConnectorArgs(
-        String iotConnectorName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.iotConnectorName = Objects.requireNonNull(iotConnectorName, "expected parameter 'iotConnectorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetIotConnectorArgs() {}
 
-    private GetIotConnectorArgs() {
-        this.iotConnectorName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetIotConnectorArgs(GetIotConnectorArgs $) {
+        this.iotConnectorName = $.iotConnectorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIotConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String iotConnectorName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetIotConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIotConnectorArgs();
         }
 
         public Builder(GetIotConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iotConnectorName = defaults.iotConnectorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetIotConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iotConnectorName(String iotConnectorName) {
-            this.iotConnectorName = Objects.requireNonNull(iotConnectorName);
+            $.iotConnectorName = iotConnectorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetIotConnectorArgs build() {
-            return new GetIotConnectorArgs(iotConnectorName, resourceGroupName, workspaceName);
+        }
+
+        public GetIotConnectorArgs build() {
+            $.iotConnectorName = Objects.requireNonNull($.iotConnectorName, "expected parameter 'iotConnectorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

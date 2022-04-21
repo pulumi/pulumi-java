@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,150 +17,133 @@ public final class ServiceUpdateConfigGetArgs extends com.pulumi.resources.Resou
     public static final ServiceUpdateConfigGetArgs Empty = new ServiceUpdateConfigGetArgs();
 
     @Import(name="delay")
-      private final @Nullable Output<String> delay;
+    private @Nullable Output<String> delay;
 
-    public Output<String> delay() {
-        return this.delay == null ? Codegen.empty() : this.delay;
+    public Optional<Output<String>> delay() {
+        return Optional.ofNullable(this.delay);
     }
 
     @Import(name="failureAction")
-      private final @Nullable Output<String> failureAction;
+    private @Nullable Output<String> failureAction;
 
-    public Output<String> failureAction() {
-        return this.failureAction == null ? Codegen.empty() : this.failureAction;
+    public Optional<Output<String>> failureAction() {
+        return Optional.ofNullable(this.failureAction);
     }
 
     @Import(name="maxFailureRatio")
-      private final @Nullable Output<String> maxFailureRatio;
+    private @Nullable Output<String> maxFailureRatio;
 
-    public Output<String> maxFailureRatio() {
-        return this.maxFailureRatio == null ? Codegen.empty() : this.maxFailureRatio;
+    public Optional<Output<String>> maxFailureRatio() {
+        return Optional.ofNullable(this.maxFailureRatio);
     }
 
     @Import(name="monitor")
-      private final @Nullable Output<String> monitor;
+    private @Nullable Output<String> monitor;
 
-    public Output<String> monitor() {
-        return this.monitor == null ? Codegen.empty() : this.monitor;
+    public Optional<Output<String>> monitor() {
+        return Optional.ofNullable(this.monitor);
     }
 
     @Import(name="order")
-      private final @Nullable Output<String> order;
+    private @Nullable Output<String> order;
 
-    public Output<String> order() {
-        return this.order == null ? Codegen.empty() : this.order;
+    public Optional<Output<String>> order() {
+        return Optional.ofNullable(this.order);
     }
 
     @Import(name="parallelism")
-      private final @Nullable Output<Integer> parallelism;
+    private @Nullable Output<Integer> parallelism;
 
-    public Output<Integer> parallelism() {
-        return this.parallelism == null ? Codegen.empty() : this.parallelism;
+    public Optional<Output<Integer>> parallelism() {
+        return Optional.ofNullable(this.parallelism);
     }
 
-    public ServiceUpdateConfigGetArgs(
-        @Nullable Output<String> delay,
-        @Nullable Output<String> failureAction,
-        @Nullable Output<String> maxFailureRatio,
-        @Nullable Output<String> monitor,
-        @Nullable Output<String> order,
-        @Nullable Output<Integer> parallelism) {
-        this.delay = delay;
-        this.failureAction = failureAction;
-        this.maxFailureRatio = maxFailureRatio;
-        this.monitor = monitor;
-        this.order = order;
-        this.parallelism = parallelism;
-    }
+    private ServiceUpdateConfigGetArgs() {}
 
-    private ServiceUpdateConfigGetArgs() {
-        this.delay = Codegen.empty();
-        this.failureAction = Codegen.empty();
-        this.maxFailureRatio = Codegen.empty();
-        this.monitor = Codegen.empty();
-        this.order = Codegen.empty();
-        this.parallelism = Codegen.empty();
+    private ServiceUpdateConfigGetArgs(ServiceUpdateConfigGetArgs $) {
+        this.delay = $.delay;
+        this.failureAction = $.failureAction;
+        this.maxFailureRatio = $.maxFailureRatio;
+        this.monitor = $.monitor;
+        this.order = $.order;
+        this.parallelism = $.parallelism;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceUpdateConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> delay;
-        private @Nullable Output<String> failureAction;
-        private @Nullable Output<String> maxFailureRatio;
-        private @Nullable Output<String> monitor;
-        private @Nullable Output<String> order;
-        private @Nullable Output<Integer> parallelism;
+        private ServiceUpdateConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceUpdateConfigGetArgs();
         }
 
         public Builder(ServiceUpdateConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delay = defaults.delay;
-    	      this.failureAction = defaults.failureAction;
-    	      this.maxFailureRatio = defaults.maxFailureRatio;
-    	      this.monitor = defaults.monitor;
-    	      this.order = defaults.order;
-    	      this.parallelism = defaults.parallelism;
+            $ = new ServiceUpdateConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delay(@Nullable Output<String> delay) {
-            this.delay = delay;
+            $.delay = delay;
             return this;
         }
-        public Builder delay(@Nullable String delay) {
-            this.delay = Codegen.ofNullable(delay);
-            return this;
+
+        public Builder delay(String delay) {
+            return delay(Output.of(delay));
         }
+
         public Builder failureAction(@Nullable Output<String> failureAction) {
-            this.failureAction = failureAction;
+            $.failureAction = failureAction;
             return this;
         }
-        public Builder failureAction(@Nullable String failureAction) {
-            this.failureAction = Codegen.ofNullable(failureAction);
-            return this;
+
+        public Builder failureAction(String failureAction) {
+            return failureAction(Output.of(failureAction));
         }
+
         public Builder maxFailureRatio(@Nullable Output<String> maxFailureRatio) {
-            this.maxFailureRatio = maxFailureRatio;
+            $.maxFailureRatio = maxFailureRatio;
             return this;
         }
-        public Builder maxFailureRatio(@Nullable String maxFailureRatio) {
-            this.maxFailureRatio = Codegen.ofNullable(maxFailureRatio);
-            return this;
+
+        public Builder maxFailureRatio(String maxFailureRatio) {
+            return maxFailureRatio(Output.of(maxFailureRatio));
         }
+
         public Builder monitor(@Nullable Output<String> monitor) {
-            this.monitor = monitor;
+            $.monitor = monitor;
             return this;
         }
-        public Builder monitor(@Nullable String monitor) {
-            this.monitor = Codegen.ofNullable(monitor);
-            return this;
+
+        public Builder monitor(String monitor) {
+            return monitor(Output.of(monitor));
         }
+
         public Builder order(@Nullable Output<String> order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
-        public Builder order(@Nullable String order) {
-            this.order = Codegen.ofNullable(order);
-            return this;
+
+        public Builder order(String order) {
+            return order(Output.of(order));
         }
+
         public Builder parallelism(@Nullable Output<Integer> parallelism) {
-            this.parallelism = parallelism;
+            $.parallelism = parallelism;
             return this;
         }
-        public Builder parallelism(@Nullable Integer parallelism) {
-            this.parallelism = Codegen.ofNullable(parallelism);
-            return this;
-        }        public ServiceUpdateConfigGetArgs build() {
-            return new ServiceUpdateConfigGetArgs(delay, failureAction, maxFailureRatio, monitor, order, parallelism);
+
+        public Builder parallelism(Integer parallelism) {
+            return parallelism(Output.of(parallelism));
+        }
+
+        public ServiceUpdateConfigGetArgs build() {
+            return $;
         }
     }
+
 }

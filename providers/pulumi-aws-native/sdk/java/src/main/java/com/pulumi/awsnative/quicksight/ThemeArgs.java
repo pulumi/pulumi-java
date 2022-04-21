@@ -8,10 +8,10 @@ import com.pulumi.awsnative.quicksight.inputs.ThemeResourcePermissionArgs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
     public static final ThemeArgs Empty = new ThemeArgs();
 
     @Import(name="awsAccountId", required=true)
-      private final Output<String> awsAccountId;
+    private Output<String> awsAccountId;
 
     public Output<String> awsAccountId() {
         return this.awsAccountId;
@@ -34,17 +34,17 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="baseThemeId")
-      private final @Nullable Output<String> baseThemeId;
+    private @Nullable Output<String> baseThemeId;
 
-    public Output<String> baseThemeId() {
-        return this.baseThemeId == null ? Codegen.empty() : this.baseThemeId;
+    public Optional<Output<String>> baseThemeId() {
+        return Optional.ofNullable(this.baseThemeId);
     }
 
     @Import(name="configuration")
-      private final @Nullable Output<ThemeConfigurationArgs> configuration;
+    private @Nullable Output<ThemeConfigurationArgs> configuration;
 
-    public Output<ThemeConfigurationArgs> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<ThemeConfigurationArgs>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
+    private @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
 
-    public Output<List<ThemeResourcePermissionArgs>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<ThemeResourcePermissionArgs>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -76,14 +76,14 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ThemeTagArgs>> tags;
+    private @Nullable Output<List<ThemeTagArgs>> tags;
 
-    public Output<List<ThemeTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ThemeTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="themeId", required=true)
-      private final Output<String> themeId;
+    private Output<String> themeId;
 
     public Output<String> themeId() {
         return this.themeId;
@@ -97,147 +97,128 @@ public final class ThemeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionDescription")
-      private final @Nullable Output<String> versionDescription;
+    private @Nullable Output<String> versionDescription;
 
-    public Output<String> versionDescription() {
-        return this.versionDescription == null ? Codegen.empty() : this.versionDescription;
+    public Optional<Output<String>> versionDescription() {
+        return Optional.ofNullable(this.versionDescription);
     }
 
-    public ThemeArgs(
-        Output<String> awsAccountId,
-        @Nullable Output<String> baseThemeId,
-        @Nullable Output<ThemeConfigurationArgs> configuration,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ThemeResourcePermissionArgs>> permissions,
-        @Nullable Output<List<ThemeTagArgs>> tags,
-        Output<String> themeId,
-        @Nullable Output<String> versionDescription) {
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-        this.baseThemeId = baseThemeId;
-        this.configuration = configuration;
-        this.name = name;
-        this.permissions = permissions;
-        this.tags = tags;
-        this.themeId = Objects.requireNonNull(themeId, "expected parameter 'themeId' to be non-null");
-        this.versionDescription = versionDescription;
-    }
+    private ThemeArgs() {}
 
-    private ThemeArgs() {
-        this.awsAccountId = Codegen.empty();
-        this.baseThemeId = Codegen.empty();
-        this.configuration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.themeId = Codegen.empty();
-        this.versionDescription = Codegen.empty();
+    private ThemeArgs(ThemeArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.baseThemeId = $.baseThemeId;
+        this.configuration = $.configuration;
+        this.name = $.name;
+        this.permissions = $.permissions;
+        this.tags = $.tags;
+        this.themeId = $.themeId;
+        this.versionDescription = $.versionDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> awsAccountId;
-        private @Nullable Output<String> baseThemeId;
-        private @Nullable Output<ThemeConfigurationArgs> configuration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
-        private @Nullable Output<List<ThemeTagArgs>> tags;
-        private Output<String> themeId;
-        private @Nullable Output<String> versionDescription;
+        private ThemeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeArgs();
         }
 
         public Builder(ThemeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.baseThemeId = defaults.baseThemeId;
-    	      this.configuration = defaults.configuration;
-    	      this.name = defaults.name;
-    	      this.permissions = defaults.permissions;
-    	      this.tags = defaults.tags;
-    	      this.themeId = defaults.themeId;
-    	      this.versionDescription = defaults.versionDescription;
+            $ = new ThemeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(Output<String> awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Output.of(Objects.requireNonNull(awsAccountId));
-            return this;
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder baseThemeId(@Nullable Output<String> baseThemeId) {
-            this.baseThemeId = baseThemeId;
+            $.baseThemeId = baseThemeId;
             return this;
         }
-        public Builder baseThemeId(@Nullable String baseThemeId) {
-            this.baseThemeId = Codegen.ofNullable(baseThemeId);
-            return this;
+
+        public Builder baseThemeId(String baseThemeId) {
+            return baseThemeId(Output.of(baseThemeId));
         }
+
         public Builder configuration(@Nullable Output<ThemeConfigurationArgs> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable ThemeConfigurationArgs configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(ThemeConfigurationArgs configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder permissions(@Nullable Output<List<ThemeResourcePermissionArgs>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<ThemeResourcePermissionArgs> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<ThemeResourcePermissionArgs> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(ThemeResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder tags(@Nullable Output<List<ThemeTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ThemeTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ThemeTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ThemeTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder themeId(Output<String> themeId) {
-            this.themeId = Objects.requireNonNull(themeId);
+            $.themeId = themeId;
             return this;
         }
+
         public Builder themeId(String themeId) {
-            this.themeId = Output.of(Objects.requireNonNull(themeId));
-            return this;
+            return themeId(Output.of(themeId));
         }
+
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
-            this.versionDescription = versionDescription;
+            $.versionDescription = versionDescription;
             return this;
         }
-        public Builder versionDescription(@Nullable String versionDescription) {
-            this.versionDescription = Codegen.ofNullable(versionDescription);
-            return this;
-        }        public ThemeArgs build() {
-            return new ThemeArgs(awsAccountId, baseThemeId, configuration, name, permissions, tags, themeId, versionDescription);
+
+        public Builder versionDescription(String versionDescription) {
+            return versionDescription(Output.of(versionDescription));
+        }
+
+        public ThemeArgs build() {
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            $.themeId = Objects.requireNonNull($.themeId, "expected parameter 'themeId' to be non-null");
+            return $;
         }
     }
+
 }

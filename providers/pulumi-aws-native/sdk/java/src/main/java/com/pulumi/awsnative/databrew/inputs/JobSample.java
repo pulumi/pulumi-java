@@ -20,62 +20,57 @@ public final class JobSample extends com.pulumi.resources.InvokeArgs {
     public static final JobSample Empty = new JobSample();
 
     @Import(name="mode")
-      private final @Nullable JobSampleMode mode;
+    private @Nullable JobSampleMode mode;
 
     public Optional<JobSampleMode> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     @Import(name="size")
-      private final @Nullable Integer size;
+    private @Nullable Integer size;
 
     public Optional<Integer> size() {
-        return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
+        return Optional.ofNullable(this.size);
     }
 
-    public JobSample(
-        @Nullable JobSampleMode mode,
-        @Nullable Integer size) {
-        this.mode = mode;
-        this.size = size;
-    }
+    private JobSample() {}
 
-    private JobSample() {
-        this.mode = null;
-        this.size = null;
+    private JobSample(JobSample $) {
+        this.mode = $.mode;
+        this.size = $.size;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobSample defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable JobSampleMode mode;
-        private @Nullable Integer size;
+        private JobSample $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobSample();
         }
 
         public Builder(JobSample defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.size = defaults.size;
+            $ = new JobSample(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable JobSampleMode mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder size(@Nullable Integer size) {
-            this.size = size;
+            $.size = size;
             return this;
-        }        public JobSample build() {
-            return new JobSample(mode, size);
+        }
+
+        public JobSample build() {
+            return $;
         }
     }
+
 }

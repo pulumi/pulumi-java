@@ -6,10 +6,10 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 import com.pulumi.azurenative.sqlvirtualmachine.enums.DayOfWeek;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AutoPatchingSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="dayOfWeek")
-      private final @Nullable Output<DayOfWeek> dayOfWeek;
+    private @Nullable Output<DayOfWeek> dayOfWeek;
 
-    public Output<DayOfWeek> dayOfWeek() {
-        return this.dayOfWeek == null ? Codegen.empty() : this.dayOfWeek;
+    public Optional<Output<DayOfWeek>> dayOfWeek() {
+        return Optional.ofNullable(this.dayOfWeek);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AutoPatchingSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AutoPatchingSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maintenanceWindowDuration")
-      private final @Nullable Output<Integer> maintenanceWindowDuration;
+    private @Nullable Output<Integer> maintenanceWindowDuration;
 
-    public Output<Integer> maintenanceWindowDuration() {
-        return this.maintenanceWindowDuration == null ? Codegen.empty() : this.maintenanceWindowDuration;
+    public Optional<Output<Integer>> maintenanceWindowDuration() {
+        return Optional.ofNullable(this.maintenanceWindowDuration);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class AutoPatchingSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maintenanceWindowStartingHour")
-      private final @Nullable Output<Integer> maintenanceWindowStartingHour;
+    private @Nullable Output<Integer> maintenanceWindowStartingHour;
 
-    public Output<Integer> maintenanceWindowStartingHour() {
-        return this.maintenanceWindowStartingHour == null ? Codegen.empty() : this.maintenanceWindowStartingHour;
+    public Optional<Output<Integer>> maintenanceWindowStartingHour() {
+        return Optional.ofNullable(this.maintenanceWindowStartingHour);
     }
 
-    public AutoPatchingSettingsArgs(
-        @Nullable Output<DayOfWeek> dayOfWeek,
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<Integer> maintenanceWindowDuration,
-        @Nullable Output<Integer> maintenanceWindowStartingHour) {
-        this.dayOfWeek = dayOfWeek;
-        this.enable = enable;
-        this.maintenanceWindowDuration = maintenanceWindowDuration;
-        this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
-    }
+    private AutoPatchingSettingsArgs() {}
 
-    private AutoPatchingSettingsArgs() {
-        this.dayOfWeek = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.maintenanceWindowDuration = Codegen.empty();
-        this.maintenanceWindowStartingHour = Codegen.empty();
+    private AutoPatchingSettingsArgs(AutoPatchingSettingsArgs $) {
+        this.dayOfWeek = $.dayOfWeek;
+        this.enable = $.enable;
+        this.maintenanceWindowDuration = $.maintenanceWindowDuration;
+        this.maintenanceWindowStartingHour = $.maintenanceWindowStartingHour;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoPatchingSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DayOfWeek> dayOfWeek;
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<Integer> maintenanceWindowDuration;
-        private @Nullable Output<Integer> maintenanceWindowStartingHour;
+        private AutoPatchingSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoPatchingSettingsArgs();
         }
 
         public Builder(AutoPatchingSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.enable = defaults.enable;
-    	      this.maintenanceWindowDuration = defaults.maintenanceWindowDuration;
-    	      this.maintenanceWindowStartingHour = defaults.maintenanceWindowStartingHour;
+            $ = new AutoPatchingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(@Nullable Output<DayOfWeek> dayOfWeek) {
-            this.dayOfWeek = dayOfWeek;
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
-        public Builder dayOfWeek(@Nullable DayOfWeek dayOfWeek) {
-            this.dayOfWeek = Codegen.ofNullable(dayOfWeek);
-            return this;
+
+        public Builder dayOfWeek(DayOfWeek dayOfWeek) {
+            return dayOfWeek(Output.of(dayOfWeek));
         }
+
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder maintenanceWindowDuration(@Nullable Output<Integer> maintenanceWindowDuration) {
-            this.maintenanceWindowDuration = maintenanceWindowDuration;
+            $.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
-        public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
-            this.maintenanceWindowDuration = Codegen.ofNullable(maintenanceWindowDuration);
-            return this;
+
+        public Builder maintenanceWindowDuration(Integer maintenanceWindowDuration) {
+            return maintenanceWindowDuration(Output.of(maintenanceWindowDuration));
         }
+
         public Builder maintenanceWindowStartingHour(@Nullable Output<Integer> maintenanceWindowStartingHour) {
-            this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
+            $.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }
-        public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
-            this.maintenanceWindowStartingHour = Codegen.ofNullable(maintenanceWindowStartingHour);
-            return this;
-        }        public AutoPatchingSettingsArgs build() {
-            return new AutoPatchingSettingsArgs(dayOfWeek, enable, maintenanceWindowDuration, maintenanceWindowStartingHour);
+
+        public Builder maintenanceWindowStartingHour(Integer maintenanceWindowStartingHour) {
+            return maintenanceWindowStartingHour(Output.of(maintenanceWindowStartingHour));
+        }
+
+        public AutoPatchingSettingsArgs build() {
+            return $;
         }
     }
+
 }

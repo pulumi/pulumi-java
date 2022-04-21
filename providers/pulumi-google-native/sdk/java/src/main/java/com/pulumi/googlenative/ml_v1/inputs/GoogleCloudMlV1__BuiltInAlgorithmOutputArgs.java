@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulum
      * 
      */
     @Import(name="framework")
-      private final @Nullable Output<String> framework;
+    private @Nullable Output<String> framework;
 
-    public Output<String> framework() {
-        return this.framework == null ? Codegen.empty() : this.framework;
+    public Optional<Output<String>> framework() {
+        return Optional.ofNullable(this.framework);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulum
      * 
      */
     @Import(name="modelPath")
-      private final @Nullable Output<String> modelPath;
+    private @Nullable Output<String> modelPath;
 
-    public Output<String> modelPath() {
-        return this.modelPath == null ? Codegen.empty() : this.modelPath;
+    public Optional<Output<String>> modelPath() {
+        return Optional.ofNullable(this.modelPath);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulum
      * 
      */
     @Import(name="pythonVersion")
-      private final @Nullable Output<String> pythonVersion;
+    private @Nullable Output<String> pythonVersion;
 
-    public Output<String> pythonVersion() {
-        return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
+    public Optional<Output<String>> pythonVersion() {
+        return Optional.ofNullable(this.pythonVersion);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends com.pulum
      * 
      */
     @Import(name="runtimeVersion")
-      private final @Nullable Output<String> runtimeVersion;
+    private @Nullable Output<String> runtimeVersion;
 
-    public Output<String> runtimeVersion() {
-        return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
+    public Optional<Output<String>> runtimeVersion() {
+        return Optional.ofNullable(this.runtimeVersion);
     }
 
-    public GoogleCloudMlV1__BuiltInAlgorithmOutputArgs(
-        @Nullable Output<String> framework,
-        @Nullable Output<String> modelPath,
-        @Nullable Output<String> pythonVersion,
-        @Nullable Output<String> runtimeVersion) {
-        this.framework = framework;
-        this.modelPath = modelPath;
-        this.pythonVersion = pythonVersion;
-        this.runtimeVersion = runtimeVersion;
-    }
+    private GoogleCloudMlV1__BuiltInAlgorithmOutputArgs() {}
 
-    private GoogleCloudMlV1__BuiltInAlgorithmOutputArgs() {
-        this.framework = Codegen.empty();
-        this.modelPath = Codegen.empty();
-        this.pythonVersion = Codegen.empty();
-        this.runtimeVersion = Codegen.empty();
+    private GoogleCloudMlV1__BuiltInAlgorithmOutputArgs(GoogleCloudMlV1__BuiltInAlgorithmOutputArgs $) {
+        this.framework = $.framework;
+        this.modelPath = $.modelPath;
+        this.pythonVersion = $.pythonVersion;
+        this.runtimeVersion = $.runtimeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__BuiltInAlgorithmOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> framework;
-        private @Nullable Output<String> modelPath;
-        private @Nullable Output<String> pythonVersion;
-        private @Nullable Output<String> runtimeVersion;
+        private GoogleCloudMlV1__BuiltInAlgorithmOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__BuiltInAlgorithmOutputArgs();
         }
 
         public Builder(GoogleCloudMlV1__BuiltInAlgorithmOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.framework = defaults.framework;
-    	      this.modelPath = defaults.modelPath;
-    	      this.pythonVersion = defaults.pythonVersion;
-    	      this.runtimeVersion = defaults.runtimeVersion;
+            $ = new GoogleCloudMlV1__BuiltInAlgorithmOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder framework(@Nullable Output<String> framework) {
-            this.framework = framework;
+            $.framework = framework;
             return this;
         }
-        public Builder framework(@Nullable String framework) {
-            this.framework = Codegen.ofNullable(framework);
-            return this;
+
+        public Builder framework(String framework) {
+            return framework(Output.of(framework));
         }
+
         public Builder modelPath(@Nullable Output<String> modelPath) {
-            this.modelPath = modelPath;
+            $.modelPath = modelPath;
             return this;
         }
-        public Builder modelPath(@Nullable String modelPath) {
-            this.modelPath = Codegen.ofNullable(modelPath);
-            return this;
+
+        public Builder modelPath(String modelPath) {
+            return modelPath(Output.of(modelPath));
         }
+
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
-            this.pythonVersion = pythonVersion;
+            $.pythonVersion = pythonVersion;
             return this;
         }
-        public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Codegen.ofNullable(pythonVersion);
-            return this;
+
+        public Builder pythonVersion(String pythonVersion) {
+            return pythonVersion(Output.of(pythonVersion));
         }
+
         public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
-            this.runtimeVersion = runtimeVersion;
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
-        public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Codegen.ofNullable(runtimeVersion);
-            return this;
-        }        public GoogleCloudMlV1__BuiltInAlgorithmOutputArgs build() {
-            return new GoogleCloudMlV1__BuiltInAlgorithmOutputArgs(framework, modelPath, pythonVersion, runtimeVersion);
+
+        public Builder runtimeVersion(String runtimeVersion) {
+            return runtimeVersion(Output.of(runtimeVersion));
+        }
+
+        public GoogleCloudMlV1__BuiltInAlgorithmOutputArgs build() {
+            return $;
         }
     }
+
 }

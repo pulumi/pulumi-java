@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudscheduler_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PubsubTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PubsubTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class PubsubTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topicName", required=true)
-      private final Output<String> topicName;
+    private Output<String> topicName;
 
     public Output<String> topicName() {
         return this.topicName;
     }
 
-    public PubsubTargetArgs(
-        @Nullable Output<Map<String,String>> attributes,
-        @Nullable Output<String> data,
-        Output<String> topicName) {
-        this.attributes = attributes;
-        this.data = data;
-        this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
-    }
+    private PubsubTargetArgs() {}
 
-    private PubsubTargetArgs() {
-        this.attributes = Codegen.empty();
-        this.data = Codegen.empty();
-        this.topicName = Codegen.empty();
+    private PubsubTargetArgs(PubsubTargetArgs $) {
+        this.attributes = $.attributes;
+        this.data = $.data;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PubsubTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> attributes;
-        private @Nullable Output<String> data;
-        private Output<String> topicName;
+        private PubsubTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PubsubTargetArgs();
         }
 
         public Builder(PubsubTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.data = defaults.data;
-    	      this.topicName = defaults.topicName;
+            $ = new PubsubTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder topicName(Output<String> topicName) {
-            this.topicName = Objects.requireNonNull(topicName);
+            $.topicName = topicName;
             return this;
         }
+
         public Builder topicName(String topicName) {
-            this.topicName = Output.of(Objects.requireNonNull(topicName));
-            return this;
-        }        public PubsubTargetArgs build() {
-            return new PubsubTargetArgs(attributes, data, topicName);
+            return topicName(Output.of(topicName));
+        }
+
+        public PubsubTargetArgs build() {
+            $.topicName = Objects.requireNonNull($.topicName, "expected parameter 'topicName' to be non-null");
+            return $;
         }
     }
+
 }

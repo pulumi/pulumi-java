@@ -27,10 +27,10 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="enableAcceleratedNetworking")
-      private final @Nullable Boolean enableAcceleratedNetworking;
+    private @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> enableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
+        return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
+    private @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
 
-    public List<NicIpConfigurationResourceSettingsResponse> ipConfigurations() {
-        return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
+    public Optional<List<NicIpConfigurationResourceSettingsResponse>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -61,76 +61,68 @@ public final class NetworkInterfaceResourceSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final String targetResourceName;
+    private String targetResourceName;
 
     public String targetResourceName() {
         return this.targetResourceName;
     }
 
-    public NetworkInterfaceResourceSettingsResponse(
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations,
-        String resourceType,
-        String targetResourceName) {
-        this.enableAcceleratedNetworking = enableAcceleratedNetworking;
-        this.ipConfigurations = ipConfigurations;
-        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-    }
+    private NetworkInterfaceResourceSettingsResponse() {}
 
-    private NetworkInterfaceResourceSettingsResponse() {
-        this.enableAcceleratedNetworking = null;
-        this.ipConfigurations = List.of();
-        this.resourceType = null;
-        this.targetResourceName = null;
+    private NetworkInterfaceResourceSettingsResponse(NetworkInterfaceResourceSettingsResponse $) {
+        this.enableAcceleratedNetworking = $.enableAcceleratedNetworking;
+        this.ipConfigurations = $.ipConfigurations;
+        this.resourceType = $.resourceType;
+        this.targetResourceName = $.targetResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableAcceleratedNetworking;
-        private @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
-        private String resourceType;
-        private String targetResourceName;
+        private NetworkInterfaceResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceResourceSettingsResponse();
         }
 
         public Builder(NetworkInterfaceResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableAcceleratedNetworking = defaults.enableAcceleratedNetworking;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetResourceName = defaults.targetResourceName;
+            $ = new NetworkInterfaceResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = enableAcceleratedNetworking;
+            $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
+
         public Builder ipConfigurations(@Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
+
         public Builder ipConfigurations(NicIpConfigurationResourceSettingsResponse... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
-        }        public NetworkInterfaceResourceSettingsResponse build() {
-            return new NetworkInterfaceResourceSettingsResponse(enableAcceleratedNetworking, ipConfigurations, resourceType, targetResourceName);
+        }
+
+        public NetworkInterfaceResourceSettingsResponse build() {
+            $.resourceType = Codegen.stringProp("resourceType").arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

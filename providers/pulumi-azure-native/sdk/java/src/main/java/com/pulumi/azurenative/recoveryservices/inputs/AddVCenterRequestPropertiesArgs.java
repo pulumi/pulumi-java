@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<String> port;
+    private @Nullable Output<String> port;
 
-    public Output<String> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<String>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="processServerId")
-      private final @Nullable Output<String> processServerId;
+    private @Nullable Output<String> processServerId;
 
-    public Output<String> processServerId() {
-        return this.processServerId == null ? Codegen.empty() : this.processServerId;
+    public Optional<Output<String>> processServerId() {
+        return Optional.ofNullable(this.processServerId);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class AddVCenterRequestPropertiesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="runAsAccountId")
-      private final @Nullable Output<String> runAsAccountId;
+    private @Nullable Output<String> runAsAccountId;
 
-    public Output<String> runAsAccountId() {
-        return this.runAsAccountId == null ? Codegen.empty() : this.runAsAccountId;
+    public Optional<Output<String>> runAsAccountId() {
+        return Optional.ofNullable(this.runAsAccountId);
     }
 
-    public AddVCenterRequestPropertiesArgs(
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> port,
-        @Nullable Output<String> processServerId,
-        @Nullable Output<String> runAsAccountId) {
-        this.friendlyName = friendlyName;
-        this.ipAddress = ipAddress;
-        this.port = port;
-        this.processServerId = processServerId;
-        this.runAsAccountId = runAsAccountId;
-    }
+    private AddVCenterRequestPropertiesArgs() {}
 
-    private AddVCenterRequestPropertiesArgs() {
-        this.friendlyName = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.port = Codegen.empty();
-        this.processServerId = Codegen.empty();
-        this.runAsAccountId = Codegen.empty();
+    private AddVCenterRequestPropertiesArgs(AddVCenterRequestPropertiesArgs $) {
+        this.friendlyName = $.friendlyName;
+        this.ipAddress = $.ipAddress;
+        this.port = $.port;
+        this.processServerId = $.processServerId;
+        this.runAsAccountId = $.runAsAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddVCenterRequestPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> port;
-        private @Nullable Output<String> processServerId;
-        private @Nullable Output<String> runAsAccountId;
+        private AddVCenterRequestPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddVCenterRequestPropertiesArgs();
         }
 
         public Builder(AddVCenterRequestPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.port = defaults.port;
-    	      this.processServerId = defaults.processServerId;
-    	      this.runAsAccountId = defaults.runAsAccountId;
+            $ = new AddVCenterRequestPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder port(@Nullable Output<String> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable String port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(String port) {
+            return port(Output.of(port));
         }
+
         public Builder processServerId(@Nullable Output<String> processServerId) {
-            this.processServerId = processServerId;
+            $.processServerId = processServerId;
             return this;
         }
-        public Builder processServerId(@Nullable String processServerId) {
-            this.processServerId = Codegen.ofNullable(processServerId);
-            return this;
+
+        public Builder processServerId(String processServerId) {
+            return processServerId(Output.of(processServerId));
         }
+
         public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
-            this.runAsAccountId = runAsAccountId;
+            $.runAsAccountId = runAsAccountId;
             return this;
         }
-        public Builder runAsAccountId(@Nullable String runAsAccountId) {
-            this.runAsAccountId = Codegen.ofNullable(runAsAccountId);
-            return this;
-        }        public AddVCenterRequestPropertiesArgs build() {
-            return new AddVCenterRequestPropertiesArgs(friendlyName, ipAddress, port, processServerId, runAsAccountId);
+
+        public Builder runAsAccountId(String runAsAccountId) {
+            return runAsAccountId(Output.of(runAsAccountId));
+        }
+
+        public AddVCenterRequestPropertiesArgs build() {
+            return $;
         }
     }
+
 }

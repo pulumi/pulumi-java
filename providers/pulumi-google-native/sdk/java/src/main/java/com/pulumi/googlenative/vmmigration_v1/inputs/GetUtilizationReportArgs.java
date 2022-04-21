@@ -15,110 +15,99 @@ public final class GetUtilizationReportArgs extends com.pulumi.resources.InvokeA
     public static final GetUtilizationReportArgs Empty = new GetUtilizationReportArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="sourceId", required=true)
-      private final String sourceId;
+    private String sourceId;
 
     public String sourceId() {
         return this.sourceId;
     }
 
     @Import(name="utilizationReportId", required=true)
-      private final String utilizationReportId;
+    private String utilizationReportId;
 
     public String utilizationReportId() {
         return this.utilizationReportId;
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetUtilizationReportArgs(
-        String location,
-        @Nullable String project,
-        String sourceId,
-        String utilizationReportId,
-        @Nullable String view) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-        this.utilizationReportId = Objects.requireNonNull(utilizationReportId, "expected parameter 'utilizationReportId' to be non-null");
-        this.view = view;
-    }
+    private GetUtilizationReportArgs() {}
 
-    private GetUtilizationReportArgs() {
-        this.location = null;
-        this.project = null;
-        this.sourceId = null;
-        this.utilizationReportId = null;
-        this.view = null;
+    private GetUtilizationReportArgs(GetUtilizationReportArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.sourceId = $.sourceId;
+        this.utilizationReportId = $.utilizationReportId;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUtilizationReportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String sourceId;
-        private String utilizationReportId;
-        private @Nullable String view;
+        private GetUtilizationReportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUtilizationReportArgs();
         }
 
         public Builder(GetUtilizationReportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.sourceId = defaults.sourceId;
-    	      this.utilizationReportId = defaults.utilizationReportId;
-    	      this.view = defaults.view;
+            $ = new GetUtilizationReportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
         }
+
         public Builder utilizationReportId(String utilizationReportId) {
-            this.utilizationReportId = Objects.requireNonNull(utilizationReportId);
+            $.utilizationReportId = utilizationReportId;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetUtilizationReportArgs build() {
-            return new GetUtilizationReportArgs(location, project, sourceId, utilizationReportId, view);
+        }
+
+        public GetUtilizationReportArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            $.utilizationReportId = Objects.requireNonNull($.utilizationReportId, "expected parameter 'utilizationReportId' to be non-null");
+            return $;
         }
     }
+
 }

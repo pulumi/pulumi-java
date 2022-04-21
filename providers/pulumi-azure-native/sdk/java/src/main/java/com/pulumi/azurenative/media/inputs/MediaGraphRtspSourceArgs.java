@@ -27,7 +27,7 @@ public final class MediaGraphRtspSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
+    private Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
 
     public Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint() {
         return this.endpoint;
@@ -38,7 +38,7 @@ public final class MediaGraphRtspSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -50,7 +50,7 @@ public final class MediaGraphRtspSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -61,89 +61,82 @@ public final class MediaGraphRtspSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="transport", required=true)
-      private final Output<Either<String,MediaGraphRtspTransport>> transport;
+    private Output<Either<String,MediaGraphRtspTransport>> transport;
 
     public Output<Either<String,MediaGraphRtspTransport>> transport() {
         return this.transport;
     }
 
-    public MediaGraphRtspSourceArgs(
-        Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint,
-        Output<String> name,
-        Output<String> odataType,
-        Output<Either<String,MediaGraphRtspTransport>> transport) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.transport = Objects.requireNonNull(transport, "expected parameter 'transport' to be non-null");
-    }
+    private MediaGraphRtspSourceArgs() {}
 
-    private MediaGraphRtspSourceArgs() {
-        this.endpoint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.transport = Codegen.empty();
+    private MediaGraphRtspSourceArgs(MediaGraphRtspSourceArgs $) {
+        this.endpoint = $.endpoint;
+        this.name = $.name;
+        this.odataType = $.odataType;
+        this.transport = $.transport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphRtspSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
-        private Output<String> name;
-        private Output<String> odataType;
-        private Output<Either<String,MediaGraphRtspTransport>> transport;
+        private MediaGraphRtspSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphRtspSourceArgs();
         }
 
         public Builder(MediaGraphRtspSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.name = defaults.name;
-    	      this.odataType = defaults.odataType;
-    	      this.transport = defaults.transport;
+            $ = new MediaGraphRtspSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(Output<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder endpoint(Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs> endpoint) {
-            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
-            return this;
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder transport(Output<Either<String,MediaGraphRtspTransport>> transport) {
-            this.transport = Objects.requireNonNull(transport);
+            $.transport = transport;
             return this;
         }
+
         public Builder transport(Either<String,MediaGraphRtspTransport> transport) {
-            this.transport = Output.of(Objects.requireNonNull(transport));
-            return this;
-        }        public MediaGraphRtspSourceArgs build() {
-            return new MediaGraphRtspSourceArgs(endpoint, name, odataType, transport);
+            return transport(Output.of(transport));
+        }
+
+        public MediaGraphRtspSourceArgs build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            $.transport = Objects.requireNonNull($.transport, "expected parameter 'transport' to be non-null");
+            return $;
         }
     }
+
 }

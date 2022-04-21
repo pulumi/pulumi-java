@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersHeaderGe
      * 
      */
     @Import(name="isValueSecret")
-      private final @Nullable Output<Boolean> isValueSecret;
+    private @Nullable Output<Boolean> isValueSecret;
 
-    public Output<Boolean> isValueSecret() {
-        return this.isValueSecret == null ? Codegen.empty() : this.isValueSecret;
+    public Optional<Output<Boolean>> isValueSecret() {
+        return Optional.ofNullable(this.isValueSecret);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersHeaderGe
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersHeaderGe
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs(
-        @Nullable Output<Boolean> isValueSecret,
-        @Nullable Output<String> key,
-        @Nullable Output<String> value) {
-        this.isValueSecret = isValueSecret;
-        this.key = key;
-        this.value = value;
-    }
+    private EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs() {}
 
-    private EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs() {
-        this.isValueSecret = Codegen.empty();
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs(EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs $) {
+        this.isValueSecret = $.isValueSecret;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isValueSecret;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> value;
+        private EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs();
         }
 
         public Builder(EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isValueSecret = defaults.isValueSecret;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isValueSecret(@Nullable Output<Boolean> isValueSecret) {
-            this.isValueSecret = isValueSecret;
+            $.isValueSecret = isValueSecret;
             return this;
         }
-        public Builder isValueSecret(@Nullable Boolean isValueSecret) {
-            this.isValueSecret = Codegen.ofNullable(isValueSecret);
-            return this;
+
+        public Builder isValueSecret(Boolean isValueSecret) {
+            return isValueSecret(Output.of(isValueSecret));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs build() {
-            return new EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs(isValueSecret, key, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public EventConnectionAuthParametersOauthOauthHttpParametersHeaderGetArgs build() {
+            return $;
         }
     }
+
 }

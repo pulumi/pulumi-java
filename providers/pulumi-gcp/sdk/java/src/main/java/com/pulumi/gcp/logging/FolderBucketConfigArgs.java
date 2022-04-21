@@ -5,10 +5,10 @@ package com.pulumi.gcp.logging;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class FolderBucketConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bucketId", required=true)
-      private final Output<String> bucketId;
+    private Output<String> bucketId;
 
     public Output<String> bucketId() {
         return this.bucketId;
@@ -32,10 +32,10 @@ public final class FolderBucketConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class FolderBucketConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="folder", required=true)
-      private final Output<String> folder;
+    private Output<String> folder;
 
     public Output<String> folder() {
         return this.folder;
@@ -54,7 +54,7 @@ public final class FolderBucketConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -65,102 +65,91 @@ public final class FolderBucketConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="retentionDays")
-      private final @Nullable Output<Integer> retentionDays;
+    private @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> retentionDays() {
-        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
+    public Optional<Output<Integer>> retentionDays() {
+        return Optional.ofNullable(this.retentionDays);
     }
 
-    public FolderBucketConfigArgs(
-        Output<String> bucketId,
-        @Nullable Output<String> description,
-        Output<String> folder,
-        Output<String> location,
-        @Nullable Output<Integer> retentionDays) {
-        this.bucketId = Objects.requireNonNull(bucketId, "expected parameter 'bucketId' to be non-null");
-        this.description = description;
-        this.folder = Objects.requireNonNull(folder, "expected parameter 'folder' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.retentionDays = retentionDays;
-    }
+    private FolderBucketConfigArgs() {}
 
-    private FolderBucketConfigArgs() {
-        this.bucketId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.location = Codegen.empty();
-        this.retentionDays = Codegen.empty();
+    private FolderBucketConfigArgs(FolderBucketConfigArgs $) {
+        this.bucketId = $.bucketId;
+        this.description = $.description;
+        this.folder = $.folder;
+        this.location = $.location;
+        this.retentionDays = $.retentionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FolderBucketConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketId;
-        private @Nullable Output<String> description;
-        private Output<String> folder;
-        private Output<String> location;
-        private @Nullable Output<Integer> retentionDays;
+        private FolderBucketConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FolderBucketConfigArgs();
         }
 
         public Builder(FolderBucketConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketId = defaults.bucketId;
-    	      this.description = defaults.description;
-    	      this.folder = defaults.folder;
-    	      this.location = defaults.location;
-    	      this.retentionDays = defaults.retentionDays;
+            $ = new FolderBucketConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketId(Output<String> bucketId) {
-            this.bucketId = Objects.requireNonNull(bucketId);
+            $.bucketId = bucketId;
             return this;
         }
+
         public Builder bucketId(String bucketId) {
-            this.bucketId = Output.of(Objects.requireNonNull(bucketId));
-            return this;
+            return bucketId(Output.of(bucketId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder folder(Output<String> folder) {
-            this.folder = Objects.requireNonNull(folder);
+            $.folder = folder;
             return this;
         }
+
         public Builder folder(String folder) {
-            this.folder = Output.of(Objects.requireNonNull(folder));
-            return this;
+            return folder(Output.of(folder));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
-            this.retentionDays = retentionDays;
+            $.retentionDays = retentionDays;
             return this;
         }
-        public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Codegen.ofNullable(retentionDays);
-            return this;
-        }        public FolderBucketConfigArgs build() {
-            return new FolderBucketConfigArgs(bucketId, description, folder, location, retentionDays);
+
+        public Builder retentionDays(Integer retentionDays) {
+            return retentionDays(Output.of(retentionDays));
+        }
+
+        public FolderBucketConfigArgs build() {
+            $.bucketId = Objects.requireNonNull($.bucketId, "expected parameter 'bucketId' to be non-null");
+            $.folder = Objects.requireNonNull($.folder, "expected parameter 'folder' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

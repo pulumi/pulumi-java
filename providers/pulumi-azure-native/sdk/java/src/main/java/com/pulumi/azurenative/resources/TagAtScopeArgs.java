@@ -6,7 +6,6 @@ package com.pulumi.azurenative.resources;
 import com.pulumi.azurenative.resources.inputs.TagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class TagAtScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<TagsArgs> properties;
+    private Output<TagsArgs> properties;
 
     public Output<TagsArgs> properties() {
         return this.properties;
@@ -31,63 +30,60 @@ public final class TagAtScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
     }
 
-    public TagAtScopeArgs(
-        Output<TagsArgs> properties,
-        Output<String> scope) {
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private TagAtScopeArgs() {}
 
-    private TagAtScopeArgs() {
-        this.properties = Codegen.empty();
-        this.scope = Codegen.empty();
+    private TagAtScopeArgs(TagAtScopeArgs $) {
+        this.properties = $.properties;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagAtScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<TagsArgs> properties;
-        private Output<String> scope;
+        private TagAtScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagAtScopeArgs();
         }
 
         public Builder(TagAtScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.scope = defaults.scope;
+            $ = new TagAtScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(Output<TagsArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(TagsArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
-        }        public TagAtScopeArgs build() {
-            return new TagAtScopeArgs(properties, scope);
+            return scope(Output.of(scope));
+        }
+
+        public TagAtScopeArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

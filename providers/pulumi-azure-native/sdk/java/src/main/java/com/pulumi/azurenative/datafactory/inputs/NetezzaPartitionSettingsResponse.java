@@ -23,10 +23,10 @@ public final class NetezzaPartitionSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="partitionColumnName")
-      private final @Nullable Object partitionColumnName;
+    private @Nullable Object partitionColumnName;
 
     public Optional<Object> partitionColumnName() {
-        return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
+        return Optional.ofNullable(this.partitionColumnName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NetezzaPartitionSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="partitionLowerBound")
-      private final @Nullable Object partitionLowerBound;
+    private @Nullable Object partitionLowerBound;
 
     public Optional<Object> partitionLowerBound() {
-        return this.partitionLowerBound == null ? Optional.empty() : Optional.ofNullable(this.partitionLowerBound);
+        return Optional.ofNullable(this.partitionLowerBound);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class NetezzaPartitionSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="partitionUpperBound")
-      private final @Nullable Object partitionUpperBound;
+    private @Nullable Object partitionUpperBound;
 
     public Optional<Object> partitionUpperBound() {
-        return this.partitionUpperBound == null ? Optional.empty() : Optional.ofNullable(this.partitionUpperBound);
+        return Optional.ofNullable(this.partitionUpperBound);
     }
 
-    public NetezzaPartitionSettingsResponse(
-        @Nullable Object partitionColumnName,
-        @Nullable Object partitionLowerBound,
-        @Nullable Object partitionUpperBound) {
-        this.partitionColumnName = partitionColumnName;
-        this.partitionLowerBound = partitionLowerBound;
-        this.partitionUpperBound = partitionUpperBound;
-    }
+    private NetezzaPartitionSettingsResponse() {}
 
-    private NetezzaPartitionSettingsResponse() {
-        this.partitionColumnName = null;
-        this.partitionLowerBound = null;
-        this.partitionUpperBound = null;
+    private NetezzaPartitionSettingsResponse(NetezzaPartitionSettingsResponse $) {
+        this.partitionColumnName = $.partitionColumnName;
+        this.partitionLowerBound = $.partitionLowerBound;
+        this.partitionUpperBound = $.partitionUpperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetezzaPartitionSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object partitionColumnName;
-        private @Nullable Object partitionLowerBound;
-        private @Nullable Object partitionUpperBound;
+        private NetezzaPartitionSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetezzaPartitionSettingsResponse();
         }
 
         public Builder(NetezzaPartitionSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionColumnName = defaults.partitionColumnName;
-    	      this.partitionLowerBound = defaults.partitionLowerBound;
-    	      this.partitionUpperBound = defaults.partitionUpperBound;
+            $ = new NetezzaPartitionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = partitionColumnName;
+            $.partitionColumnName = partitionColumnName;
             return this;
         }
+
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
-            this.partitionLowerBound = partitionLowerBound;
+            $.partitionLowerBound = partitionLowerBound;
             return this;
         }
+
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
-            this.partitionUpperBound = partitionUpperBound;
+            $.partitionUpperBound = partitionUpperBound;
             return this;
-        }        public NetezzaPartitionSettingsResponse build() {
-            return new NetezzaPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
+        }
+
+        public NetezzaPartitionSettingsResponse build() {
+            return $;
         }
     }
+
 }

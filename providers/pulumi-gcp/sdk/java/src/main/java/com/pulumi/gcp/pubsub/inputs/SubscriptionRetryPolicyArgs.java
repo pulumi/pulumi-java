@@ -5,9 +5,9 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SubscriptionRetryPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maximumBackoff")
-      private final @Nullable Output<String> maximumBackoff;
+    private @Nullable Output<String> maximumBackoff;
 
-    public Output<String> maximumBackoff() {
-        return this.maximumBackoff == null ? Codegen.empty() : this.maximumBackoff;
+    public Optional<Output<String>> maximumBackoff() {
+        return Optional.ofNullable(this.maximumBackoff);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class SubscriptionRetryPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="minimumBackoff")
-      private final @Nullable Output<String> minimumBackoff;
+    private @Nullable Output<String> minimumBackoff;
 
-    public Output<String> minimumBackoff() {
-        return this.minimumBackoff == null ? Codegen.empty() : this.minimumBackoff;
+    public Optional<Output<String>> minimumBackoff() {
+        return Optional.ofNullable(this.minimumBackoff);
     }
 
-    public SubscriptionRetryPolicyArgs(
-        @Nullable Output<String> maximumBackoff,
-        @Nullable Output<String> minimumBackoff) {
-        this.maximumBackoff = maximumBackoff;
-        this.minimumBackoff = minimumBackoff;
-    }
+    private SubscriptionRetryPolicyArgs() {}
 
-    private SubscriptionRetryPolicyArgs() {
-        this.maximumBackoff = Codegen.empty();
-        this.minimumBackoff = Codegen.empty();
+    private SubscriptionRetryPolicyArgs(SubscriptionRetryPolicyArgs $) {
+        this.maximumBackoff = $.maximumBackoff;
+        this.minimumBackoff = $.minimumBackoff;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionRetryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> maximumBackoff;
-        private @Nullable Output<String> minimumBackoff;
+        private SubscriptionRetryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionRetryPolicyArgs();
         }
 
         public Builder(SubscriptionRetryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximumBackoff = defaults.maximumBackoff;
-    	      this.minimumBackoff = defaults.minimumBackoff;
+            $ = new SubscriptionRetryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maximumBackoff(@Nullable Output<String> maximumBackoff) {
-            this.maximumBackoff = maximumBackoff;
+            $.maximumBackoff = maximumBackoff;
             return this;
         }
-        public Builder maximumBackoff(@Nullable String maximumBackoff) {
-            this.maximumBackoff = Codegen.ofNullable(maximumBackoff);
-            return this;
+
+        public Builder maximumBackoff(String maximumBackoff) {
+            return maximumBackoff(Output.of(maximumBackoff));
         }
+
         public Builder minimumBackoff(@Nullable Output<String> minimumBackoff) {
-            this.minimumBackoff = minimumBackoff;
+            $.minimumBackoff = minimumBackoff;
             return this;
         }
-        public Builder minimumBackoff(@Nullable String minimumBackoff) {
-            this.minimumBackoff = Codegen.ofNullable(minimumBackoff);
-            return this;
-        }        public SubscriptionRetryPolicyArgs build() {
-            return new SubscriptionRetryPolicyArgs(maximumBackoff, minimumBackoff);
+
+        public Builder minimumBackoff(String minimumBackoff) {
+            return minimumBackoff(Output.of(minimumBackoff));
+        }
+
+        public SubscriptionRetryPolicyArgs build() {
+            return $;
         }
     }
+
 }

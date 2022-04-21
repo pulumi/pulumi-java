@@ -6,10 +6,10 @@ package com.pulumi.awsnative.lightsail.inputs;
 import com.pulumi.awsnative.lightsail.inputs.InstanceDiskArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cpuCount")
-      private final @Nullable Output<Integer> cpuCount;
+    private @Nullable Output<Integer> cpuCount;
 
-    public Output<Integer> cpuCount() {
-        return this.cpuCount == null ? Codegen.empty() : this.cpuCount;
+    public Optional<Output<Integer>> cpuCount() {
+        return Optional.ofNullable(this.cpuCount);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disks")
-      private final @Nullable Output<List<InstanceDiskArgs>> disks;
+    private @Nullable Output<List<InstanceDiskArgs>> disks;
 
-    public Output<List<InstanceDiskArgs>> disks() {
-        return this.disks == null ? Codegen.empty() : this.disks;
+    public Optional<Output<List<InstanceDiskArgs>>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class InstanceHardwareArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ramSizeInGb")
-      private final @Nullable Output<Integer> ramSizeInGb;
+    private @Nullable Output<Integer> ramSizeInGb;
 
-    public Output<Integer> ramSizeInGb() {
-        return this.ramSizeInGb == null ? Codegen.empty() : this.ramSizeInGb;
+    public Optional<Output<Integer>> ramSizeInGb() {
+        return Optional.ofNullable(this.ramSizeInGb);
     }
 
-    public InstanceHardwareArgs(
-        @Nullable Output<Integer> cpuCount,
-        @Nullable Output<List<InstanceDiskArgs>> disks,
-        @Nullable Output<Integer> ramSizeInGb) {
-        this.cpuCount = cpuCount;
-        this.disks = disks;
-        this.ramSizeInGb = ramSizeInGb;
-    }
+    private InstanceHardwareArgs() {}
 
-    private InstanceHardwareArgs() {
-        this.cpuCount = Codegen.empty();
-        this.disks = Codegen.empty();
-        this.ramSizeInGb = Codegen.empty();
+    private InstanceHardwareArgs(InstanceHardwareArgs $) {
+        this.cpuCount = $.cpuCount;
+        this.disks = $.disks;
+        this.ramSizeInGb = $.ramSizeInGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceHardwareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cpuCount;
-        private @Nullable Output<List<InstanceDiskArgs>> disks;
-        private @Nullable Output<Integer> ramSizeInGb;
+        private InstanceHardwareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceHardwareArgs();
         }
 
         public Builder(InstanceHardwareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuCount = defaults.cpuCount;
-    	      this.disks = defaults.disks;
-    	      this.ramSizeInGb = defaults.ramSizeInGb;
+            $ = new InstanceHardwareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
-            this.cpuCount = cpuCount;
+            $.cpuCount = cpuCount;
             return this;
         }
-        public Builder cpuCount(@Nullable Integer cpuCount) {
-            this.cpuCount = Codegen.ofNullable(cpuCount);
-            return this;
+
+        public Builder cpuCount(Integer cpuCount) {
+            return cpuCount(Output.of(cpuCount));
         }
+
         public Builder disks(@Nullable Output<List<InstanceDiskArgs>> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
-        public Builder disks(@Nullable List<InstanceDiskArgs> disks) {
-            this.disks = Codegen.ofNullable(disks);
-            return this;
+
+        public Builder disks(List<InstanceDiskArgs> disks) {
+            return disks(Output.of(disks));
         }
+
         public Builder disks(InstanceDiskArgs... disks) {
             return disks(List.of(disks));
         }
+
         public Builder ramSizeInGb(@Nullable Output<Integer> ramSizeInGb) {
-            this.ramSizeInGb = ramSizeInGb;
+            $.ramSizeInGb = ramSizeInGb;
             return this;
         }
-        public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
-            this.ramSizeInGb = Codegen.ofNullable(ramSizeInGb);
-            return this;
-        }        public InstanceHardwareArgs build() {
-            return new InstanceHardwareArgs(cpuCount, disks, ramSizeInGb);
+
+        public Builder ramSizeInGb(Integer ramSizeInGb) {
+            return ramSizeInGb(Output.of(ramSizeInGb));
+        }
+
+        public InstanceHardwareArgs build() {
+            return $;
         }
     }
+
 }

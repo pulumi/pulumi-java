@@ -22,7 +22,7 @@ public final class IngressPolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ingressFrom", required=true)
-      private final IngressFromResponse ingressFrom;
+    private IngressFromResponse ingressFrom;
 
     public IngressFromResponse ingressFrom() {
         return this.ingressFrom;
@@ -33,55 +33,52 @@ public final class IngressPolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ingressTo", required=true)
-      private final IngressToResponse ingressTo;
+    private IngressToResponse ingressTo;
 
     public IngressToResponse ingressTo() {
         return this.ingressTo;
     }
 
-    public IngressPolicyResponse(
-        IngressFromResponse ingressFrom,
-        IngressToResponse ingressTo) {
-        this.ingressFrom = Objects.requireNonNull(ingressFrom, "expected parameter 'ingressFrom' to be non-null");
-        this.ingressTo = Objects.requireNonNull(ingressTo, "expected parameter 'ingressTo' to be non-null");
-    }
+    private IngressPolicyResponse() {}
 
-    private IngressPolicyResponse() {
-        this.ingressFrom = null;
-        this.ingressTo = null;
+    private IngressPolicyResponse(IngressPolicyResponse $) {
+        this.ingressFrom = $.ingressFrom;
+        this.ingressTo = $.ingressTo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private IngressFromResponse ingressFrom;
-        private IngressToResponse ingressTo;
+        private IngressPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressPolicyResponse();
         }
 
         public Builder(IngressPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingressFrom = defaults.ingressFrom;
-    	      this.ingressTo = defaults.ingressTo;
+            $ = new IngressPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ingressFrom(IngressFromResponse ingressFrom) {
-            this.ingressFrom = Objects.requireNonNull(ingressFrom);
+            $.ingressFrom = ingressFrom;
             return this;
         }
+
         public Builder ingressTo(IngressToResponse ingressTo) {
-            this.ingressTo = Objects.requireNonNull(ingressTo);
+            $.ingressTo = ingressTo;
             return this;
-        }        public IngressPolicyResponse build() {
-            return new IngressPolicyResponse(ingressFrom, ingressTo);
+        }
+
+        public IngressPolicyResponse build() {
+            $.ingressFrom = Objects.requireNonNull($.ingressFrom, "expected parameter 'ingressFrom' to be non-null");
+            $.ingressTo = Objects.requireNonNull($.ingressTo, "expected parameter 'ingressTo' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.route53recoverycontrol.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +24,7 @@ public final class SafetyRuleAssertionRuleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="assertedControls", required=true)
-      private final Output<List<String>> assertedControls;
+    private Output<List<String>> assertedControls;
 
     public Output<List<String>> assertedControls() {
         return this.assertedControls;
@@ -36,66 +35,64 @@ public final class SafetyRuleAssertionRuleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="waitPeriodMs", required=true)
-      private final Output<Integer> waitPeriodMs;
+    private Output<Integer> waitPeriodMs;
 
     public Output<Integer> waitPeriodMs() {
         return this.waitPeriodMs;
     }
 
-    public SafetyRuleAssertionRuleArgs(
-        Output<List<String>> assertedControls,
-        Output<Integer> waitPeriodMs) {
-        this.assertedControls = Objects.requireNonNull(assertedControls, "expected parameter 'assertedControls' to be non-null");
-        this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
-    }
+    private SafetyRuleAssertionRuleArgs() {}
 
-    private SafetyRuleAssertionRuleArgs() {
-        this.assertedControls = Codegen.empty();
-        this.waitPeriodMs = Codegen.empty();
+    private SafetyRuleAssertionRuleArgs(SafetyRuleAssertionRuleArgs $) {
+        this.assertedControls = $.assertedControls;
+        this.waitPeriodMs = $.waitPeriodMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SafetyRuleAssertionRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> assertedControls;
-        private Output<Integer> waitPeriodMs;
+        private SafetyRuleAssertionRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SafetyRuleAssertionRuleArgs();
         }
 
         public Builder(SafetyRuleAssertionRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assertedControls = defaults.assertedControls;
-    	      this.waitPeriodMs = defaults.waitPeriodMs;
+            $ = new SafetyRuleAssertionRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assertedControls(Output<List<String>> assertedControls) {
-            this.assertedControls = Objects.requireNonNull(assertedControls);
+            $.assertedControls = assertedControls;
             return this;
         }
+
         public Builder assertedControls(List<String> assertedControls) {
-            this.assertedControls = Output.of(Objects.requireNonNull(assertedControls));
-            return this;
+            return assertedControls(Output.of(assertedControls));
         }
+
         public Builder assertedControls(String... assertedControls) {
             return assertedControls(List.of(assertedControls));
         }
+
         public Builder waitPeriodMs(Output<Integer> waitPeriodMs) {
-            this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
+            $.waitPeriodMs = waitPeriodMs;
             return this;
         }
+
         public Builder waitPeriodMs(Integer waitPeriodMs) {
-            this.waitPeriodMs = Output.of(Objects.requireNonNull(waitPeriodMs));
-            return this;
-        }        public SafetyRuleAssertionRuleArgs build() {
-            return new SafetyRuleAssertionRuleArgs(assertedControls, waitPeriodMs);
+            return waitPeriodMs(Output.of(waitPeriodMs));
+        }
+
+        public SafetyRuleAssertionRuleArgs build() {
+            $.assertedControls = Objects.requireNonNull($.assertedControls, "expected parameter 'assertedControls' to be non-null");
+            $.waitPeriodMs = Objects.requireNonNull($.waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
+            return $;
         }
     }
+
 }

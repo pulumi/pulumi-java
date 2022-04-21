@@ -5,10 +5,10 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TaskSetCapacityProviderStrategyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="base")
-      private final @Nullable Output<Integer> base;
+    private @Nullable Output<Integer> base;
 
-    public Output<Integer> base() {
-        return this.base == null ? Codegen.empty() : this.base;
+    public Optional<Output<Integer>> base() {
+        return Optional.ofNullable(this.base);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class TaskSetCapacityProviderStrategyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="capacityProvider", required=true)
-      private final Output<String> capacityProvider;
+    private Output<String> capacityProvider;
 
     public Output<String> capacityProvider() {
         return this.capacityProvider;
@@ -43,76 +43,70 @@ public final class TaskSetCapacityProviderStrategyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="weight", required=true)
-      private final Output<Integer> weight;
+    private Output<Integer> weight;
 
     public Output<Integer> weight() {
         return this.weight;
     }
 
-    public TaskSetCapacityProviderStrategyArgs(
-        @Nullable Output<Integer> base,
-        Output<String> capacityProvider,
-        Output<Integer> weight) {
-        this.base = base;
-        this.capacityProvider = Objects.requireNonNull(capacityProvider, "expected parameter 'capacityProvider' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private TaskSetCapacityProviderStrategyArgs() {}
 
-    private TaskSetCapacityProviderStrategyArgs() {
-        this.base = Codegen.empty();
-        this.capacityProvider = Codegen.empty();
-        this.weight = Codegen.empty();
+    private TaskSetCapacityProviderStrategyArgs(TaskSetCapacityProviderStrategyArgs $) {
+        this.base = $.base;
+        this.capacityProvider = $.capacityProvider;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSetCapacityProviderStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> base;
-        private Output<String> capacityProvider;
-        private Output<Integer> weight;
+        private TaskSetCapacityProviderStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSetCapacityProviderStrategyArgs();
         }
 
         public Builder(TaskSetCapacityProviderStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.base = defaults.base;
-    	      this.capacityProvider = defaults.capacityProvider;
-    	      this.weight = defaults.weight;
+            $ = new TaskSetCapacityProviderStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder base(@Nullable Output<Integer> base) {
-            this.base = base;
+            $.base = base;
             return this;
         }
-        public Builder base(@Nullable Integer base) {
-            this.base = Codegen.ofNullable(base);
-            return this;
+
+        public Builder base(Integer base) {
+            return base(Output.of(base));
         }
+
         public Builder capacityProvider(Output<String> capacityProvider) {
-            this.capacityProvider = Objects.requireNonNull(capacityProvider);
+            $.capacityProvider = capacityProvider;
             return this;
         }
+
         public Builder capacityProvider(String capacityProvider) {
-            this.capacityProvider = Output.of(Objects.requireNonNull(capacityProvider));
-            return this;
+            return capacityProvider(Output.of(capacityProvider));
         }
+
         public Builder weight(Output<Integer> weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Output.of(Objects.requireNonNull(weight));
-            return this;
-        }        public TaskSetCapacityProviderStrategyArgs build() {
-            return new TaskSetCapacityProviderStrategyArgs(base, capacityProvider, weight);
+            return weight(Output.of(weight));
+        }
+
+        public TaskSetCapacityProviderStrategyArgs build() {
+            $.capacityProvider = Objects.requireNonNull($.capacityProvider, "expected parameter 'capacityProvider' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

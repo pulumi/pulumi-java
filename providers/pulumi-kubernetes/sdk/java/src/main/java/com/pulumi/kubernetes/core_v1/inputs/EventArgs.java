@@ -13,6 +13,7 @@ import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventTime")
-      private final @Nullable Output<String> eventTime;
+    private @Nullable Output<String> eventTime;
 
-    public Output<String> eventTime() {
-        return this.eventTime == null ? Codegen.empty() : this.eventTime;
+    public Optional<Output<String>> eventTime() {
+        return Optional.ofNullable(this.eventTime);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstTimestamp")
-      private final @Nullable Output<String> firstTimestamp;
+    private @Nullable Output<String> firstTimestamp;
 
-    public Output<String> firstTimestamp() {
-        return this.firstTimestamp == null ? Codegen.empty() : this.firstTimestamp;
+    public Optional<Output<String>> firstTimestamp() {
+        return Optional.ofNullable(this.firstTimestamp);
     }
 
     /**
@@ -84,7 +85,7 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="involvedObject", required=true)
-      private final Output<ObjectReferenceArgs> involvedObject;
+    private Output<ObjectReferenceArgs> involvedObject;
 
     public Output<ObjectReferenceArgs> involvedObject() {
         return this.involvedObject;
@@ -95,10 +96,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -106,10 +107,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastTimestamp")
-      private final @Nullable Output<String> lastTimestamp;
+    private @Nullable Output<String> lastTimestamp;
 
-    public Output<String> lastTimestamp() {
-        return this.lastTimestamp == null ? Codegen.empty() : this.lastTimestamp;
+    public Optional<Output<String>> lastTimestamp() {
+        return Optional.ofNullable(this.lastTimestamp);
     }
 
     /**
@@ -117,10 +118,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -128,7 +129,7 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata", required=true)
-      private final Output<ObjectMetaArgs> metadata;
+    private Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> metadata() {
         return this.metadata;
@@ -139,10 +140,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
     /**
@@ -150,10 +151,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="related")
-      private final @Nullable Output<ObjectReferenceArgs> related;
+    private @Nullable Output<ObjectReferenceArgs> related;
 
-    public Output<ObjectReferenceArgs> related() {
-        return this.related == null ? Codegen.empty() : this.related;
+    public Optional<Output<ObjectReferenceArgs>> related() {
+        return Optional.ofNullable(this.related);
     }
 
     /**
@@ -161,10 +162,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reportingComponent")
-      private final @Nullable Output<String> reportingComponent;
+    private @Nullable Output<String> reportingComponent;
 
-    public Output<String> reportingComponent() {
-        return this.reportingComponent == null ? Codegen.empty() : this.reportingComponent;
+    public Optional<Output<String>> reportingComponent() {
+        return Optional.ofNullable(this.reportingComponent);
     }
 
     /**
@@ -172,10 +173,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reportingInstance")
-      private final @Nullable Output<String> reportingInstance;
+    private @Nullable Output<String> reportingInstance;
 
-    public Output<String> reportingInstance() {
-        return this.reportingInstance == null ? Codegen.empty() : this.reportingInstance;
+    public Optional<Output<String>> reportingInstance() {
+        return Optional.ofNullable(this.reportingInstance);
     }
 
     /**
@@ -183,10 +184,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="series")
-      private final @Nullable Output<EventSeriesArgs> series;
+    private @Nullable Output<EventSeriesArgs> series;
 
-    public Output<EventSeriesArgs> series() {
-        return this.series == null ? Codegen.empty() : this.series;
+    public Optional<Output<EventSeriesArgs>> series() {
+        return Optional.ofNullable(this.series);
     }
 
     /**
@@ -194,10 +195,10 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<EventSourceArgs> source;
+    private @Nullable Output<EventSourceArgs> source;
 
-    public Output<EventSourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<EventSourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -205,258 +206,212 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public EventArgs(
-        @Nullable Output<String> action,
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<Integer> count,
-        @Nullable Output<String> eventTime,
-        @Nullable Output<String> firstTimestamp,
-        Output<ObjectReferenceArgs> involvedObject,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> lastTimestamp,
-        @Nullable Output<String> message,
-        Output<ObjectMetaArgs> metadata,
-        @Nullable Output<String> reason,
-        @Nullable Output<ObjectReferenceArgs> related,
-        @Nullable Output<String> reportingComponent,
-        @Nullable Output<String> reportingInstance,
-        @Nullable Output<EventSeriesArgs> series,
-        @Nullable Output<EventSourceArgs> source,
-        @Nullable Output<String> type) {
-        this.action = action;
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.count = count;
-        this.eventTime = eventTime;
-        this.firstTimestamp = firstTimestamp;
-        this.involvedObject = Objects.requireNonNull(involvedObject, "expected parameter 'involvedObject' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.lastTimestamp = lastTimestamp;
-        this.message = message;
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.reason = reason;
-        this.related = related;
-        this.reportingComponent = reportingComponent;
-        this.reportingInstance = reportingInstance;
-        this.series = series;
-        this.source = source;
-        this.type = type;
-    }
+    private EventArgs() {}
 
-    private EventArgs() {
-        this.action = Codegen.empty();
-        this.apiVersion = Codegen.empty();
-        this.count = Codegen.empty();
-        this.eventTime = Codegen.empty();
-        this.firstTimestamp = Codegen.empty();
-        this.involvedObject = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.lastTimestamp = Codegen.empty();
-        this.message = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.reason = Codegen.empty();
-        this.related = Codegen.empty();
-        this.reportingComponent = Codegen.empty();
-        this.reportingInstance = Codegen.empty();
-        this.series = Codegen.empty();
-        this.source = Codegen.empty();
-        this.type = Codegen.empty();
+    private EventArgs(EventArgs $) {
+        this.action = $.action;
+        this.apiVersion = $.apiVersion;
+        this.count = $.count;
+        this.eventTime = $.eventTime;
+        this.firstTimestamp = $.firstTimestamp;
+        this.involvedObject = $.involvedObject;
+        this.kind = $.kind;
+        this.lastTimestamp = $.lastTimestamp;
+        this.message = $.message;
+        this.metadata = $.metadata;
+        this.reason = $.reason;
+        this.related = $.related;
+        this.reportingComponent = $.reportingComponent;
+        this.reportingInstance = $.reportingInstance;
+        this.series = $.series;
+        this.source = $.source;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<String> eventTime;
-        private @Nullable Output<String> firstTimestamp;
-        private Output<ObjectReferenceArgs> involvedObject;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> lastTimestamp;
-        private @Nullable Output<String> message;
-        private Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<String> reason;
-        private @Nullable Output<ObjectReferenceArgs> related;
-        private @Nullable Output<String> reportingComponent;
-        private @Nullable Output<String> reportingInstance;
-        private @Nullable Output<EventSeriesArgs> series;
-        private @Nullable Output<EventSourceArgs> source;
-        private @Nullable Output<String> type;
+        private EventArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventArgs();
         }
 
         public Builder(EventArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.count = defaults.count;
-    	      this.eventTime = defaults.eventTime;
-    	      this.firstTimestamp = defaults.firstTimestamp;
-    	      this.involvedObject = defaults.involvedObject;
-    	      this.kind = defaults.kind;
-    	      this.lastTimestamp = defaults.lastTimestamp;
-    	      this.message = defaults.message;
-    	      this.metadata = defaults.metadata;
-    	      this.reason = defaults.reason;
-    	      this.related = defaults.related;
-    	      this.reportingComponent = defaults.reportingComponent;
-    	      this.reportingInstance = defaults.reportingInstance;
-    	      this.series = defaults.series;
-    	      this.source = defaults.source;
-    	      this.type = defaults.type;
+            $ = new EventArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder eventTime(@Nullable Output<String> eventTime) {
-            this.eventTime = eventTime;
+            $.eventTime = eventTime;
             return this;
         }
-        public Builder eventTime(@Nullable String eventTime) {
-            this.eventTime = Codegen.ofNullable(eventTime);
-            return this;
+
+        public Builder eventTime(String eventTime) {
+            return eventTime(Output.of(eventTime));
         }
+
         public Builder firstTimestamp(@Nullable Output<String> firstTimestamp) {
-            this.firstTimestamp = firstTimestamp;
+            $.firstTimestamp = firstTimestamp;
             return this;
         }
-        public Builder firstTimestamp(@Nullable String firstTimestamp) {
-            this.firstTimestamp = Codegen.ofNullable(firstTimestamp);
-            return this;
+
+        public Builder firstTimestamp(String firstTimestamp) {
+            return firstTimestamp(Output.of(firstTimestamp));
         }
+
         public Builder involvedObject(Output<ObjectReferenceArgs> involvedObject) {
-            this.involvedObject = Objects.requireNonNull(involvedObject);
+            $.involvedObject = involvedObject;
             return this;
         }
+
         public Builder involvedObject(ObjectReferenceArgs involvedObject) {
-            this.involvedObject = Output.of(Objects.requireNonNull(involvedObject));
-            return this;
+            return involvedObject(Output.of(involvedObject));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder lastTimestamp(@Nullable Output<String> lastTimestamp) {
-            this.lastTimestamp = lastTimestamp;
+            $.lastTimestamp = lastTimestamp;
             return this;
         }
-        public Builder lastTimestamp(@Nullable String lastTimestamp) {
-            this.lastTimestamp = Codegen.ofNullable(lastTimestamp);
-            return this;
+
+        public Builder lastTimestamp(String lastTimestamp) {
+            return lastTimestamp(Output.of(lastTimestamp));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder metadata(Output<ObjectMetaArgs> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder metadata(ObjectMetaArgs metadata) {
-            this.metadata = Output.of(Objects.requireNonNull(metadata));
-            return this;
+            return metadata(Output.of(metadata));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
         }
+
         public Builder related(@Nullable Output<ObjectReferenceArgs> related) {
-            this.related = related;
+            $.related = related;
             return this;
         }
-        public Builder related(@Nullable ObjectReferenceArgs related) {
-            this.related = Codegen.ofNullable(related);
-            return this;
+
+        public Builder related(ObjectReferenceArgs related) {
+            return related(Output.of(related));
         }
+
         public Builder reportingComponent(@Nullable Output<String> reportingComponent) {
-            this.reportingComponent = reportingComponent;
+            $.reportingComponent = reportingComponent;
             return this;
         }
-        public Builder reportingComponent(@Nullable String reportingComponent) {
-            this.reportingComponent = Codegen.ofNullable(reportingComponent);
-            return this;
+
+        public Builder reportingComponent(String reportingComponent) {
+            return reportingComponent(Output.of(reportingComponent));
         }
+
         public Builder reportingInstance(@Nullable Output<String> reportingInstance) {
-            this.reportingInstance = reportingInstance;
+            $.reportingInstance = reportingInstance;
             return this;
         }
-        public Builder reportingInstance(@Nullable String reportingInstance) {
-            this.reportingInstance = Codegen.ofNullable(reportingInstance);
-            return this;
+
+        public Builder reportingInstance(String reportingInstance) {
+            return reportingInstance(Output.of(reportingInstance));
         }
+
         public Builder series(@Nullable Output<EventSeriesArgs> series) {
-            this.series = series;
+            $.series = series;
             return this;
         }
-        public Builder series(@Nullable EventSeriesArgs series) {
-            this.series = Codegen.ofNullable(series);
-            return this;
+
+        public Builder series(EventSeriesArgs series) {
+            return series(Output.of(series));
         }
+
         public Builder source(@Nullable Output<EventSourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable EventSourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(EventSourceArgs source) {
+            return source(Output.of(source));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public EventArgs build() {
-            return new EventArgs(action, apiVersion, count, eventTime, firstTimestamp, involvedObject, kind, lastTimestamp, message, metadata, reason, related, reportingComponent, reportingInstance, series, source, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public EventArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.involvedObject = Objects.requireNonNull($.involvedObject, "expected parameter 'involvedObject' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            return $;
         }
     }
+
 }

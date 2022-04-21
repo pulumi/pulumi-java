@@ -23,45 +23,44 @@ public final class StudioComponentLicenseServiceConfiguration extends com.pulumi
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
-    public StudioComponentLicenseServiceConfiguration(@Nullable String endpoint) {
-        this.endpoint = endpoint;
-    }
+    private StudioComponentLicenseServiceConfiguration() {}
 
-    private StudioComponentLicenseServiceConfiguration() {
-        this.endpoint = null;
+    private StudioComponentLicenseServiceConfiguration(StudioComponentLicenseServiceConfiguration $) {
+        this.endpoint = $.endpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentLicenseServiceConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpoint;
+        private StudioComponentLicenseServiceConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentLicenseServiceConfiguration();
         }
 
         public Builder(StudioComponentLicenseServiceConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
+            $ = new StudioComponentLicenseServiceConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
-        }        public StudioComponentLicenseServiceConfiguration build() {
-            return new StudioComponentLicenseServiceConfiguration(endpoint);
+        }
+
+        public StudioComponentLicenseServiceConfiguration build() {
+            return $;
         }
     }
+
 }

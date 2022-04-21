@@ -22,10 +22,10 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetInternetGatewayFilter> filters;
+    private @Nullable List<GetInternetGatewayFilter> filters;
 
-    public List<GetInternetGatewayFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetInternetGatewayFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="internetGatewayId")
-      private final @Nullable String internetGatewayId;
+    private @Nullable String internetGatewayId;
 
     public Optional<String> internetGatewayId() {
-        return this.internetGatewayId == null ? Optional.empty() : Optional.ofNullable(this.internetGatewayId);
+        return Optional.ofNullable(this.internetGatewayId);
     }
 
     /**
@@ -45,67 +45,60 @@ public final class GetInternetGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetInternetGatewayArgs(
-        @Nullable List<GetInternetGatewayFilter> filters,
-        @Nullable String internetGatewayId,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.internetGatewayId = internetGatewayId;
-        this.tags = tags;
-    }
+    private GetInternetGatewayArgs() {}
 
-    private GetInternetGatewayArgs() {
-        this.filters = List.of();
-        this.internetGatewayId = null;
-        this.tags = Map.of();
+    private GetInternetGatewayArgs(GetInternetGatewayArgs $) {
+        this.filters = $.filters;
+        this.internetGatewayId = $.internetGatewayId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInternetGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetInternetGatewayFilter> filters;
-        private @Nullable String internetGatewayId;
-        private @Nullable Map<String,String> tags;
+        private GetInternetGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInternetGatewayArgs();
         }
 
         public Builder(GetInternetGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.internetGatewayId = defaults.internetGatewayId;
-    	      this.tags = defaults.tags;
+            $ = new GetInternetGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetInternetGatewayFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetInternetGatewayFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder internetGatewayId(@Nullable String internetGatewayId) {
-            this.internetGatewayId = internetGatewayId;
+            $.internetGatewayId = internetGatewayId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetInternetGatewayArgs build() {
-            return new GetInternetGatewayArgs(filters, internetGatewayId, tags);
+        }
+
+        public GetInternetGatewayArgs build() {
+            return $;
         }
     }
+
 }

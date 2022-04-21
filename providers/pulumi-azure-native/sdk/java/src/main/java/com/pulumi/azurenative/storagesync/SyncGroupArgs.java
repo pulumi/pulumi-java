@@ -5,9 +5,9 @@ package com.pulumi.azurenative.storagesync;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -31,7 +31,7 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageSyncServiceName", required=true)
-      private final Output<String> storageSyncServiceName;
+    private Output<String> storageSyncServiceName;
 
     public Output<String> storageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -42,76 +42,70 @@ public final class SyncGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncGroupName")
-      private final @Nullable Output<String> syncGroupName;
+    private @Nullable Output<String> syncGroupName;
 
-    public Output<String> syncGroupName() {
-        return this.syncGroupName == null ? Codegen.empty() : this.syncGroupName;
+    public Optional<Output<String>> syncGroupName() {
+        return Optional.ofNullable(this.syncGroupName);
     }
 
-    public SyncGroupArgs(
-        Output<String> resourceGroupName,
-        Output<String> storageSyncServiceName,
-        @Nullable Output<String> syncGroupName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
-        this.syncGroupName = syncGroupName;
-    }
+    private SyncGroupArgs() {}
 
-    private SyncGroupArgs() {
-        this.resourceGroupName = Codegen.empty();
-        this.storageSyncServiceName = Codegen.empty();
-        this.syncGroupName = Codegen.empty();
+    private SyncGroupArgs(SyncGroupArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageSyncServiceName = $.storageSyncServiceName;
+        this.syncGroupName = $.syncGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SyncGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceGroupName;
-        private Output<String> storageSyncServiceName;
-        private @Nullable Output<String> syncGroupName;
+        private SyncGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SyncGroupArgs();
         }
 
         public Builder(SyncGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageSyncServiceName = defaults.storageSyncServiceName;
-    	      this.syncGroupName = defaults.syncGroupName;
+            $ = new SyncGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageSyncServiceName(Output<String> storageSyncServiceName) {
-            this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
+            $.storageSyncServiceName = storageSyncServiceName;
             return this;
         }
+
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            this.storageSyncServiceName = Output.of(Objects.requireNonNull(storageSyncServiceName));
-            return this;
+            return storageSyncServiceName(Output.of(storageSyncServiceName));
         }
+
         public Builder syncGroupName(@Nullable Output<String> syncGroupName) {
-            this.syncGroupName = syncGroupName;
+            $.syncGroupName = syncGroupName;
             return this;
         }
-        public Builder syncGroupName(@Nullable String syncGroupName) {
-            this.syncGroupName = Codegen.ofNullable(syncGroupName);
-            return this;
-        }        public SyncGroupArgs build() {
-            return new SyncGroupArgs(resourceGroupName, storageSyncServiceName, syncGroupName);
+
+        public Builder syncGroupName(String syncGroupName) {
+            return syncGroupName(Output.of(syncGroupName));
+        }
+
+        public SyncGroupArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageSyncServiceName = Objects.requireNonNull($.storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
+            return $;
         }
     }
+
 }

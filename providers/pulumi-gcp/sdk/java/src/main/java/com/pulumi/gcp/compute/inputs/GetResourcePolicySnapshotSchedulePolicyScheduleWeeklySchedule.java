@@ -14,48 +14,49 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule
     public static final GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule Empty = new GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule();
 
     @Import(name="dayOfWeeks", required=true)
-      private final List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks;
+    private List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks;
 
     public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks() {
         return this.dayOfWeeks;
     }
 
-    public GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks) {
-        this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks, "expected parameter 'dayOfWeeks' to be non-null");
-    }
+    private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule() {}
 
-    private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule() {
-        this.dayOfWeeks = List.of();
+    private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule $) {
+        this.dayOfWeeks = $.dayOfWeeks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks;
+        private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule();
         }
 
         public Builder(GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeeks = defaults.dayOfWeeks;
+            $ = new GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeeks(List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks) {
-            this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
+            $.dayOfWeeks = dayOfWeeks;
             return this;
         }
+
         public Builder dayOfWeeks(GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek... dayOfWeeks) {
             return dayOfWeeks(List.of(dayOfWeeks));
-        }        public GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule build() {
-            return new GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(dayOfWeeks);
+        }
+
+        public GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule build() {
+            $.dayOfWeeks = Objects.requireNonNull($.dayOfWeeks, "expected parameter 'dayOfWeeks' to be non-null");
+            return $;
         }
     }
+
 }

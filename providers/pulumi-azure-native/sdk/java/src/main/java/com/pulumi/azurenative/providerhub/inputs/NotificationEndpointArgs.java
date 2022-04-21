@@ -5,10 +5,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,73 +17,69 @@ public final class NotificationEndpointArgs extends com.pulumi.resources.Resourc
     public static final NotificationEndpointArgs Empty = new NotificationEndpointArgs();
 
     @Import(name="locations")
-      private final @Nullable Output<List<String>> locations;
+    private @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<String>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     @Import(name="notificationDestination")
-      private final @Nullable Output<String> notificationDestination;
+    private @Nullable Output<String> notificationDestination;
 
-    public Output<String> notificationDestination() {
-        return this.notificationDestination == null ? Codegen.empty() : this.notificationDestination;
+    public Optional<Output<String>> notificationDestination() {
+        return Optional.ofNullable(this.notificationDestination);
     }
 
-    public NotificationEndpointArgs(
-        @Nullable Output<List<String>> locations,
-        @Nullable Output<String> notificationDestination) {
-        this.locations = locations;
-        this.notificationDestination = notificationDestination;
-    }
+    private NotificationEndpointArgs() {}
 
-    private NotificationEndpointArgs() {
-        this.locations = Codegen.empty();
-        this.notificationDestination = Codegen.empty();
+    private NotificationEndpointArgs(NotificationEndpointArgs $) {
+        this.locations = $.locations;
+        this.notificationDestination = $.notificationDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> locations;
-        private @Nullable Output<String> notificationDestination;
+        private NotificationEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationEndpointArgs();
         }
 
         public Builder(NotificationEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
-    	      this.notificationDestination = defaults.notificationDestination;
+            $ = new NotificationEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable Output<List<String>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<String> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder notificationDestination(@Nullable Output<String> notificationDestination) {
-            this.notificationDestination = notificationDestination;
+            $.notificationDestination = notificationDestination;
             return this;
         }
-        public Builder notificationDestination(@Nullable String notificationDestination) {
-            this.notificationDestination = Codegen.ofNullable(notificationDestination);
-            return this;
-        }        public NotificationEndpointArgs build() {
-            return new NotificationEndpointArgs(locations, notificationDestination);
+
+        public Builder notificationDestination(String notificationDestination) {
+            return notificationDestination(Output.of(notificationDestination));
+        }
+
+        public NotificationEndpointArgs build() {
+            return $;
         }
     }
+
 }

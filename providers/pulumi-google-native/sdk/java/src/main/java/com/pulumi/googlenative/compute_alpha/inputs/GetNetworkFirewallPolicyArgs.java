@@ -15,62 +15,58 @@ public final class GetNetworkFirewallPolicyArgs extends com.pulumi.resources.Inv
     public static final GetNetworkFirewallPolicyArgs Empty = new GetNetworkFirewallPolicyArgs();
 
     @Import(name="firewallPolicy", required=true)
-      private final String firewallPolicy;
+    private String firewallPolicy;
 
     public String firewallPolicy() {
         return this.firewallPolicy;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetNetworkFirewallPolicyArgs(
-        String firewallPolicy,
-        @Nullable String project) {
-        this.firewallPolicy = Objects.requireNonNull(firewallPolicy, "expected parameter 'firewallPolicy' to be non-null");
-        this.project = project;
-    }
+    private GetNetworkFirewallPolicyArgs() {}
 
-    private GetNetworkFirewallPolicyArgs() {
-        this.firewallPolicy = null;
-        this.project = null;
+    private GetNetworkFirewallPolicyArgs(GetNetworkFirewallPolicyArgs $) {
+        this.firewallPolicy = $.firewallPolicy;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkFirewallPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewallPolicy;
-        private @Nullable String project;
+        private GetNetworkFirewallPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkFirewallPolicyArgs();
         }
 
         public Builder(GetNetworkFirewallPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallPolicy = defaults.firewallPolicy;
-    	      this.project = defaults.project;
+            $ = new GetNetworkFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallPolicy(String firewallPolicy) {
-            this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
+            $.firewallPolicy = firewallPolicy;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetNetworkFirewallPolicyArgs build() {
-            return new GetNetworkFirewallPolicyArgs(firewallPolicy, project);
+        }
+
+        public GetNetworkFirewallPolicyArgs build() {
+            $.firewallPolicy = Objects.requireNonNull($.firewallPolicy, "expected parameter 'firewallPolicy' to be non-null");
+            return $;
         }
     }
+
 }

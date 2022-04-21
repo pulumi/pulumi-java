@@ -22,7 +22,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
      * 
      */
     @Import(name="countOfDowngrades", required=true)
-      private final Double countOfDowngrades;
+    private Double countOfDowngrades;
 
     public Double countOfDowngrades() {
         return this.countOfDowngrades;
@@ -33,7 +33,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
      * 
      */
     @Import(name="countOfUpgradesAfterDowngrades", required=true)
-      private final Double countOfUpgradesAfterDowngrades;
+    private Double countOfUpgradesAfterDowngrades;
 
     public Double countOfUpgradesAfterDowngrades() {
         return this.countOfUpgradesAfterDowngrades;
@@ -44,64 +44,59 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends com.pul
      * 
      */
     @Import(name="lastChangeDate", required=true)
-      private final String lastChangeDate;
+    private String lastChangeDate;
 
     public String lastChangeDate() {
         return this.lastChangeDate;
     }
 
-    public CognitiveServicesAccountSkuChangeInfoResponse(
-        Double countOfDowngrades,
-        Double countOfUpgradesAfterDowngrades,
-        String lastChangeDate) {
-        this.countOfDowngrades = Objects.requireNonNull(countOfDowngrades, "expected parameter 'countOfDowngrades' to be non-null");
-        this.countOfUpgradesAfterDowngrades = Objects.requireNonNull(countOfUpgradesAfterDowngrades, "expected parameter 'countOfUpgradesAfterDowngrades' to be non-null");
-        this.lastChangeDate = Objects.requireNonNull(lastChangeDate, "expected parameter 'lastChangeDate' to be non-null");
-    }
+    private CognitiveServicesAccountSkuChangeInfoResponse() {}
 
-    private CognitiveServicesAccountSkuChangeInfoResponse() {
-        this.countOfDowngrades = null;
-        this.countOfUpgradesAfterDowngrades = null;
-        this.lastChangeDate = null;
+    private CognitiveServicesAccountSkuChangeInfoResponse(CognitiveServicesAccountSkuChangeInfoResponse $) {
+        this.countOfDowngrades = $.countOfDowngrades;
+        this.countOfUpgradesAfterDowngrades = $.countOfUpgradesAfterDowngrades;
+        this.lastChangeDate = $.lastChangeDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CognitiveServicesAccountSkuChangeInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double countOfDowngrades;
-        private Double countOfUpgradesAfterDowngrades;
-        private String lastChangeDate;
+        private CognitiveServicesAccountSkuChangeInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CognitiveServicesAccountSkuChangeInfoResponse();
         }
 
         public Builder(CognitiveServicesAccountSkuChangeInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countOfDowngrades = defaults.countOfDowngrades;
-    	      this.countOfUpgradesAfterDowngrades = defaults.countOfUpgradesAfterDowngrades;
-    	      this.lastChangeDate = defaults.lastChangeDate;
+            $ = new CognitiveServicesAccountSkuChangeInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder countOfDowngrades(Double countOfDowngrades) {
-            this.countOfDowngrades = Objects.requireNonNull(countOfDowngrades);
+            $.countOfDowngrades = countOfDowngrades;
             return this;
         }
+
         public Builder countOfUpgradesAfterDowngrades(Double countOfUpgradesAfterDowngrades) {
-            this.countOfUpgradesAfterDowngrades = Objects.requireNonNull(countOfUpgradesAfterDowngrades);
+            $.countOfUpgradesAfterDowngrades = countOfUpgradesAfterDowngrades;
             return this;
         }
+
         public Builder lastChangeDate(String lastChangeDate) {
-            this.lastChangeDate = Objects.requireNonNull(lastChangeDate);
+            $.lastChangeDate = lastChangeDate;
             return this;
-        }        public CognitiveServicesAccountSkuChangeInfoResponse build() {
-            return new CognitiveServicesAccountSkuChangeInfoResponse(countOfDowngrades, countOfUpgradesAfterDowngrades, lastChangeDate);
+        }
+
+        public CognitiveServicesAccountSkuChangeInfoResponse build() {
+            $.countOfDowngrades = Objects.requireNonNull($.countOfDowngrades, "expected parameter 'countOfDowngrades' to be non-null");
+            $.countOfUpgradesAfterDowngrades = Objects.requireNonNull($.countOfUpgradesAfterDowngrades, "expected parameter 'countOfUpgradesAfterDowngrades' to be non-null");
+            $.lastChangeDate = Objects.requireNonNull($.lastChangeDate, "expected parameter 'lastChangeDate' to be non-null");
+            return $;
         }
     }
+
 }

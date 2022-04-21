@@ -5,13 +5,13 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ExternalRefArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.LicenseArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="analyzed")
-      private final @Nullable Output<Boolean> analyzed;
+    private @Nullable Output<Boolean> analyzed;
 
-    public Output<Boolean> analyzed() {
-        return this.analyzed == null ? Codegen.empty() : this.analyzed;
+    public Optional<Output<Boolean>> analyzed() {
+        return Optional.ofNullable(this.analyzed);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="attribution")
-      private final @Nullable Output<String> attribution;
+    private @Nullable Output<String> attribution;
 
-    public Output<String> attribution() {
-        return this.attribution == null ? Codegen.empty() : this.attribution;
+    public Optional<Output<String>> attribution() {
+        return Optional.ofNullable(this.attribution);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="checksum")
-      private final @Nullable Output<String> checksum;
+    private @Nullable Output<String> checksum;
 
-    public Output<String> checksum() {
-        return this.checksum == null ? Codegen.empty() : this.checksum;
+    public Optional<Output<String>> checksum() {
+        return Optional.ofNullable(this.checksum);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="copyright")
-      private final @Nullable Output<String> copyright;
+    private @Nullable Output<String> copyright;
 
-    public Output<String> copyright() {
-        return this.copyright == null ? Codegen.empty() : this.copyright;
+    public Optional<Output<String>> copyright() {
+        return Optional.ofNullable(this.copyright);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="detailedDescription")
-      private final @Nullable Output<String> detailedDescription;
+    private @Nullable Output<String> detailedDescription;
 
-    public Output<String> detailedDescription() {
-        return this.detailedDescription == null ? Codegen.empty() : this.detailedDescription;
+    public Optional<Output<String>> detailedDescription() {
+        return Optional.ofNullable(this.detailedDescription);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="downloadLocation")
-      private final @Nullable Output<String> downloadLocation;
+    private @Nullable Output<String> downloadLocation;
 
-    public Output<String> downloadLocation() {
-        return this.downloadLocation == null ? Codegen.empty() : this.downloadLocation;
+    public Optional<Output<String>> downloadLocation() {
+        return Optional.ofNullable(this.downloadLocation);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="externalRefs")
-      private final @Nullable Output<List<ExternalRefArgs>> externalRefs;
+    private @Nullable Output<List<ExternalRefArgs>> externalRefs;
 
-    public Output<List<ExternalRefArgs>> externalRefs() {
-        return this.externalRefs == null ? Codegen.empty() : this.externalRefs;
+    public Optional<Output<List<ExternalRefArgs>>> externalRefs() {
+        return Optional.ofNullable(this.externalRefs);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="filesLicenseInfo")
-      private final @Nullable Output<List<String>> filesLicenseInfo;
+    private @Nullable Output<List<String>> filesLicenseInfo;
 
-    public Output<List<String>> filesLicenseInfo() {
-        return this.filesLicenseInfo == null ? Codegen.empty() : this.filesLicenseInfo;
+    public Optional<Output<List<String>>> filesLicenseInfo() {
+        return Optional.ofNullable(this.filesLicenseInfo);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="homePage")
-      private final @Nullable Output<String> homePage;
+    private @Nullable Output<String> homePage;
 
-    public Output<String> homePage() {
-        return this.homePage == null ? Codegen.empty() : this.homePage;
+    public Optional<Output<String>> homePage() {
+        return Optional.ofNullable(this.homePage);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="licenseDeclared")
-      private final @Nullable Output<LicenseArgs> licenseDeclared;
+    private @Nullable Output<LicenseArgs> licenseDeclared;
 
-    public Output<LicenseArgs> licenseDeclared() {
-        return this.licenseDeclared == null ? Codegen.empty() : this.licenseDeclared;
+    public Optional<Output<LicenseArgs>> licenseDeclared() {
+        return Optional.ofNullable(this.licenseDeclared);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="originator")
-      private final @Nullable Output<String> originator;
+    private @Nullable Output<String> originator;
 
-    public Output<String> originator() {
-        return this.originator == null ? Codegen.empty() : this.originator;
+    public Optional<Output<String>> originator() {
+        return Optional.ofNullable(this.originator);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="packageType")
-      private final @Nullable Output<String> packageType;
+    private @Nullable Output<String> packageType;
 
-    public Output<String> packageType() {
-        return this.packageType == null ? Codegen.empty() : this.packageType;
+    public Optional<Output<String>> packageType() {
+        return Optional.ofNullable(this.packageType);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="summaryDescription")
-      private final @Nullable Output<String> summaryDescription;
+    private @Nullable Output<String> summaryDescription;
 
-    public Output<String> summaryDescription() {
-        return this.summaryDescription == null ? Codegen.empty() : this.summaryDescription;
+    public Optional<Output<String>> summaryDescription() {
+        return Optional.ofNullable(this.summaryDescription);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="supplier")
-      private final @Nullable Output<String> supplier;
+    private @Nullable Output<String> supplier;
 
-    public Output<String> supplier() {
-        return this.supplier == null ? Codegen.empty() : this.supplier;
+    public Optional<Output<String>> supplier() {
+        return Optional.ofNullable(this.supplier);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="verificationCode")
-      private final @Nullable Output<String> verificationCode;
+    private @Nullable Output<String> verificationCode;
 
-    public Output<String> verificationCode() {
-        return this.verificationCode == null ? Codegen.empty() : this.verificationCode;
+    public Optional<Output<String>> verificationCode() {
+        return Optional.ofNullable(this.verificationCode);
     }
 
     /**
@@ -204,264 +204,216 @@ public final class PackageInfoNoteArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public PackageInfoNoteArgs(
-        @Nullable Output<Boolean> analyzed,
-        @Nullable Output<String> attribution,
-        @Nullable Output<String> checksum,
-        @Nullable Output<String> copyright,
-        @Nullable Output<String> detailedDescription,
-        @Nullable Output<String> downloadLocation,
-        @Nullable Output<List<ExternalRefArgs>> externalRefs,
-        @Nullable Output<List<String>> filesLicenseInfo,
-        @Nullable Output<String> homePage,
-        @Nullable Output<LicenseArgs> licenseDeclared,
-        @Nullable Output<String> originator,
-        @Nullable Output<String> packageType,
-        @Nullable Output<String> summaryDescription,
-        @Nullable Output<String> supplier,
-        @Nullable Output<String> title,
-        @Nullable Output<String> verificationCode,
-        @Nullable Output<String> version) {
-        this.analyzed = analyzed;
-        this.attribution = attribution;
-        this.checksum = checksum;
-        this.copyright = copyright;
-        this.detailedDescription = detailedDescription;
-        this.downloadLocation = downloadLocation;
-        this.externalRefs = externalRefs;
-        this.filesLicenseInfo = filesLicenseInfo;
-        this.homePage = homePage;
-        this.licenseDeclared = licenseDeclared;
-        this.originator = originator;
-        this.packageType = packageType;
-        this.summaryDescription = summaryDescription;
-        this.supplier = supplier;
-        this.title = title;
-        this.verificationCode = verificationCode;
-        this.version = version;
-    }
+    private PackageInfoNoteArgs() {}
 
-    private PackageInfoNoteArgs() {
-        this.analyzed = Codegen.empty();
-        this.attribution = Codegen.empty();
-        this.checksum = Codegen.empty();
-        this.copyright = Codegen.empty();
-        this.detailedDescription = Codegen.empty();
-        this.downloadLocation = Codegen.empty();
-        this.externalRefs = Codegen.empty();
-        this.filesLicenseInfo = Codegen.empty();
-        this.homePage = Codegen.empty();
-        this.licenseDeclared = Codegen.empty();
-        this.originator = Codegen.empty();
-        this.packageType = Codegen.empty();
-        this.summaryDescription = Codegen.empty();
-        this.supplier = Codegen.empty();
-        this.title = Codegen.empty();
-        this.verificationCode = Codegen.empty();
-        this.version = Codegen.empty();
+    private PackageInfoNoteArgs(PackageInfoNoteArgs $) {
+        this.analyzed = $.analyzed;
+        this.attribution = $.attribution;
+        this.checksum = $.checksum;
+        this.copyright = $.copyright;
+        this.detailedDescription = $.detailedDescription;
+        this.downloadLocation = $.downloadLocation;
+        this.externalRefs = $.externalRefs;
+        this.filesLicenseInfo = $.filesLicenseInfo;
+        this.homePage = $.homePage;
+        this.licenseDeclared = $.licenseDeclared;
+        this.originator = $.originator;
+        this.packageType = $.packageType;
+        this.summaryDescription = $.summaryDescription;
+        this.supplier = $.supplier;
+        this.title = $.title;
+        this.verificationCode = $.verificationCode;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageInfoNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> analyzed;
-        private @Nullable Output<String> attribution;
-        private @Nullable Output<String> checksum;
-        private @Nullable Output<String> copyright;
-        private @Nullable Output<String> detailedDescription;
-        private @Nullable Output<String> downloadLocation;
-        private @Nullable Output<List<ExternalRefArgs>> externalRefs;
-        private @Nullable Output<List<String>> filesLicenseInfo;
-        private @Nullable Output<String> homePage;
-        private @Nullable Output<LicenseArgs> licenseDeclared;
-        private @Nullable Output<String> originator;
-        private @Nullable Output<String> packageType;
-        private @Nullable Output<String> summaryDescription;
-        private @Nullable Output<String> supplier;
-        private @Nullable Output<String> title;
-        private @Nullable Output<String> verificationCode;
-        private @Nullable Output<String> version;
+        private PackageInfoNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageInfoNoteArgs();
         }
 
         public Builder(PackageInfoNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyzed = defaults.analyzed;
-    	      this.attribution = defaults.attribution;
-    	      this.checksum = defaults.checksum;
-    	      this.copyright = defaults.copyright;
-    	      this.detailedDescription = defaults.detailedDescription;
-    	      this.downloadLocation = defaults.downloadLocation;
-    	      this.externalRefs = defaults.externalRefs;
-    	      this.filesLicenseInfo = defaults.filesLicenseInfo;
-    	      this.homePage = defaults.homePage;
-    	      this.licenseDeclared = defaults.licenseDeclared;
-    	      this.originator = defaults.originator;
-    	      this.packageType = defaults.packageType;
-    	      this.summaryDescription = defaults.summaryDescription;
-    	      this.supplier = defaults.supplier;
-    	      this.title = defaults.title;
-    	      this.verificationCode = defaults.verificationCode;
-    	      this.version = defaults.version;
+            $ = new PackageInfoNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analyzed(@Nullable Output<Boolean> analyzed) {
-            this.analyzed = analyzed;
+            $.analyzed = analyzed;
             return this;
         }
-        public Builder analyzed(@Nullable Boolean analyzed) {
-            this.analyzed = Codegen.ofNullable(analyzed);
-            return this;
+
+        public Builder analyzed(Boolean analyzed) {
+            return analyzed(Output.of(analyzed));
         }
+
         public Builder attribution(@Nullable Output<String> attribution) {
-            this.attribution = attribution;
+            $.attribution = attribution;
             return this;
         }
-        public Builder attribution(@Nullable String attribution) {
-            this.attribution = Codegen.ofNullable(attribution);
-            return this;
+
+        public Builder attribution(String attribution) {
+            return attribution(Output.of(attribution));
         }
+
         public Builder checksum(@Nullable Output<String> checksum) {
-            this.checksum = checksum;
+            $.checksum = checksum;
             return this;
         }
-        public Builder checksum(@Nullable String checksum) {
-            this.checksum = Codegen.ofNullable(checksum);
-            return this;
+
+        public Builder checksum(String checksum) {
+            return checksum(Output.of(checksum));
         }
+
         public Builder copyright(@Nullable Output<String> copyright) {
-            this.copyright = copyright;
+            $.copyright = copyright;
             return this;
         }
-        public Builder copyright(@Nullable String copyright) {
-            this.copyright = Codegen.ofNullable(copyright);
-            return this;
+
+        public Builder copyright(String copyright) {
+            return copyright(Output.of(copyright));
         }
+
         public Builder detailedDescription(@Nullable Output<String> detailedDescription) {
-            this.detailedDescription = detailedDescription;
+            $.detailedDescription = detailedDescription;
             return this;
         }
-        public Builder detailedDescription(@Nullable String detailedDescription) {
-            this.detailedDescription = Codegen.ofNullable(detailedDescription);
-            return this;
+
+        public Builder detailedDescription(String detailedDescription) {
+            return detailedDescription(Output.of(detailedDescription));
         }
+
         public Builder downloadLocation(@Nullable Output<String> downloadLocation) {
-            this.downloadLocation = downloadLocation;
+            $.downloadLocation = downloadLocation;
             return this;
         }
-        public Builder downloadLocation(@Nullable String downloadLocation) {
-            this.downloadLocation = Codegen.ofNullable(downloadLocation);
-            return this;
+
+        public Builder downloadLocation(String downloadLocation) {
+            return downloadLocation(Output.of(downloadLocation));
         }
+
         public Builder externalRefs(@Nullable Output<List<ExternalRefArgs>> externalRefs) {
-            this.externalRefs = externalRefs;
+            $.externalRefs = externalRefs;
             return this;
         }
-        public Builder externalRefs(@Nullable List<ExternalRefArgs> externalRefs) {
-            this.externalRefs = Codegen.ofNullable(externalRefs);
-            return this;
+
+        public Builder externalRefs(List<ExternalRefArgs> externalRefs) {
+            return externalRefs(Output.of(externalRefs));
         }
+
         public Builder externalRefs(ExternalRefArgs... externalRefs) {
             return externalRefs(List.of(externalRefs));
         }
+
         public Builder filesLicenseInfo(@Nullable Output<List<String>> filesLicenseInfo) {
-            this.filesLicenseInfo = filesLicenseInfo;
+            $.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
-        public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
-            this.filesLicenseInfo = Codegen.ofNullable(filesLicenseInfo);
-            return this;
+
+        public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
+            return filesLicenseInfo(Output.of(filesLicenseInfo));
         }
+
         public Builder filesLicenseInfo(String... filesLicenseInfo) {
             return filesLicenseInfo(List.of(filesLicenseInfo));
         }
+
         public Builder homePage(@Nullable Output<String> homePage) {
-            this.homePage = homePage;
+            $.homePage = homePage;
             return this;
         }
-        public Builder homePage(@Nullable String homePage) {
-            this.homePage = Codegen.ofNullable(homePage);
-            return this;
+
+        public Builder homePage(String homePage) {
+            return homePage(Output.of(homePage));
         }
+
         public Builder licenseDeclared(@Nullable Output<LicenseArgs> licenseDeclared) {
-            this.licenseDeclared = licenseDeclared;
+            $.licenseDeclared = licenseDeclared;
             return this;
         }
-        public Builder licenseDeclared(@Nullable LicenseArgs licenseDeclared) {
-            this.licenseDeclared = Codegen.ofNullable(licenseDeclared);
-            return this;
+
+        public Builder licenseDeclared(LicenseArgs licenseDeclared) {
+            return licenseDeclared(Output.of(licenseDeclared));
         }
+
         public Builder originator(@Nullable Output<String> originator) {
-            this.originator = originator;
+            $.originator = originator;
             return this;
         }
-        public Builder originator(@Nullable String originator) {
-            this.originator = Codegen.ofNullable(originator);
-            return this;
+
+        public Builder originator(String originator) {
+            return originator(Output.of(originator));
         }
+
         public Builder packageType(@Nullable Output<String> packageType) {
-            this.packageType = packageType;
+            $.packageType = packageType;
             return this;
         }
-        public Builder packageType(@Nullable String packageType) {
-            this.packageType = Codegen.ofNullable(packageType);
-            return this;
+
+        public Builder packageType(String packageType) {
+            return packageType(Output.of(packageType));
         }
+
         public Builder summaryDescription(@Nullable Output<String> summaryDescription) {
-            this.summaryDescription = summaryDescription;
+            $.summaryDescription = summaryDescription;
             return this;
         }
-        public Builder summaryDescription(@Nullable String summaryDescription) {
-            this.summaryDescription = Codegen.ofNullable(summaryDescription);
-            return this;
+
+        public Builder summaryDescription(String summaryDescription) {
+            return summaryDescription(Output.of(summaryDescription));
         }
+
         public Builder supplier(@Nullable Output<String> supplier) {
-            this.supplier = supplier;
+            $.supplier = supplier;
             return this;
         }
-        public Builder supplier(@Nullable String supplier) {
-            this.supplier = Codegen.ofNullable(supplier);
-            return this;
+
+        public Builder supplier(String supplier) {
+            return supplier(Output.of(supplier));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder verificationCode(@Nullable Output<String> verificationCode) {
-            this.verificationCode = verificationCode;
+            $.verificationCode = verificationCode;
             return this;
         }
-        public Builder verificationCode(@Nullable String verificationCode) {
-            this.verificationCode = Codegen.ofNullable(verificationCode);
-            return this;
+
+        public Builder verificationCode(String verificationCode) {
+            return verificationCode(Output.of(verificationCode));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public PackageInfoNoteArgs build() {
-            return new PackageInfoNoteArgs(analyzed, attribution, checksum, copyright, detailedDescription, downloadLocation, externalRefs, filesLicenseInfo, homePage, licenseDeclared, originator, packageType, summaryDescription, supplier, title, verificationCode, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public PackageInfoNoteArgs build() {
+            return $;
         }
     }
+
 }

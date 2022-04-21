@@ -5,11 +5,11 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.inputs.AttributeArgs;
 import com.pulumi.googlenative.healthcare_v1.inputs.ExprArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends com.pulumi.r
      * 
      */
     @Import(name="authorizationRule", required=true)
-      private final Output<ExprArgs> authorizationRule;
+    private Output<ExprArgs> authorizationRule;
 
     public Output<ExprArgs> authorizationRule() {
         return this.authorizationRule;
@@ -37,66 +37,63 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceAttributes")
-      private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
+    private @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
-    public Output<List<AttributeArgs>> resourceAttributes() {
-        return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
+    public Optional<Output<List<AttributeArgs>>> resourceAttributes() {
+        return Optional.ofNullable(this.resourceAttributes);
     }
 
-    public GoogleCloudHealthcareV1ConsentPolicyArgs(
-        Output<ExprArgs> authorizationRule,
-        @Nullable Output<List<AttributeArgs>> resourceAttributes) {
-        this.authorizationRule = Objects.requireNonNull(authorizationRule, "expected parameter 'authorizationRule' to be non-null");
-        this.resourceAttributes = resourceAttributes;
-    }
+    private GoogleCloudHealthcareV1ConsentPolicyArgs() {}
 
-    private GoogleCloudHealthcareV1ConsentPolicyArgs() {
-        this.authorizationRule = Codegen.empty();
-        this.resourceAttributes = Codegen.empty();
+    private GoogleCloudHealthcareV1ConsentPolicyArgs(GoogleCloudHealthcareV1ConsentPolicyArgs $) {
+        this.authorizationRule = $.authorizationRule;
+        this.resourceAttributes = $.resourceAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudHealthcareV1ConsentPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ExprArgs> authorizationRule;
-        private @Nullable Output<List<AttributeArgs>> resourceAttributes;
+        private GoogleCloudHealthcareV1ConsentPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudHealthcareV1ConsentPolicyArgs();
         }
 
         public Builder(GoogleCloudHealthcareV1ConsentPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationRule = defaults.authorizationRule;
-    	      this.resourceAttributes = defaults.resourceAttributes;
+            $ = new GoogleCloudHealthcareV1ConsentPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationRule(Output<ExprArgs> authorizationRule) {
-            this.authorizationRule = Objects.requireNonNull(authorizationRule);
+            $.authorizationRule = authorizationRule;
             return this;
         }
+
         public Builder authorizationRule(ExprArgs authorizationRule) {
-            this.authorizationRule = Output.of(Objects.requireNonNull(authorizationRule));
-            return this;
+            return authorizationRule(Output.of(authorizationRule));
         }
+
         public Builder resourceAttributes(@Nullable Output<List<AttributeArgs>> resourceAttributes) {
-            this.resourceAttributes = resourceAttributes;
+            $.resourceAttributes = resourceAttributes;
             return this;
         }
-        public Builder resourceAttributes(@Nullable List<AttributeArgs> resourceAttributes) {
-            this.resourceAttributes = Codegen.ofNullable(resourceAttributes);
-            return this;
+
+        public Builder resourceAttributes(List<AttributeArgs> resourceAttributes) {
+            return resourceAttributes(Output.of(resourceAttributes));
         }
+
         public Builder resourceAttributes(AttributeArgs... resourceAttributes) {
             return resourceAttributes(List.of(resourceAttributes));
-        }        public GoogleCloudHealthcareV1ConsentPolicyArgs build() {
-            return new GoogleCloudHealthcareV1ConsentPolicyArgs(authorizationRule, resourceAttributes);
+        }
+
+        public GoogleCloudHealthcareV1ConsentPolicyArgs build() {
+            $.authorizationRule = Objects.requireNonNull($.authorizationRule, "expected parameter 'authorizationRule' to be non-null");
+            return $;
         }
     }
+
 }

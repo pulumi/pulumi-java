@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class A2AVmManagedDiskInputDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="diskEncryptionInfo")
-      private final @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
+    private @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
 
-    public Output<DiskEncryptionInfoArgs> diskEncryptionInfo() {
-        return this.diskEncryptionInfo == null ? Codegen.empty() : this.diskEncryptionInfo;
+    public Optional<Output<DiskEncryptionInfoArgs>> diskEncryptionInfo() {
+        return Optional.ofNullable(this.diskEncryptionInfo);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class A2AVmManagedDiskInputDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="diskId")
-      private final @Nullable Output<String> diskId;
+    private @Nullable Output<String> diskId;
 
-    public Output<String> diskId() {
-        return this.diskId == null ? Codegen.empty() : this.diskId;
+    public Optional<Output<String>> diskId() {
+        return Optional.ofNullable(this.diskId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class A2AVmManagedDiskInputDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="primaryStagingAzureStorageAccountId")
-      private final @Nullable Output<String> primaryStagingAzureStorageAccountId;
+    private @Nullable Output<String> primaryStagingAzureStorageAccountId;
 
-    public Output<String> primaryStagingAzureStorageAccountId() {
-        return this.primaryStagingAzureStorageAccountId == null ? Codegen.empty() : this.primaryStagingAzureStorageAccountId;
+    public Optional<Output<String>> primaryStagingAzureStorageAccountId() {
+        return Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class A2AVmManagedDiskInputDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="recoveryDiskEncryptionSetId")
-      private final @Nullable Output<String> recoveryDiskEncryptionSetId;
+    private @Nullable Output<String> recoveryDiskEncryptionSetId;
 
-    public Output<String> recoveryDiskEncryptionSetId() {
-        return this.recoveryDiskEncryptionSetId == null ? Codegen.empty() : this.recoveryDiskEncryptionSetId;
+    public Optional<Output<String>> recoveryDiskEncryptionSetId() {
+        return Optional.ofNullable(this.recoveryDiskEncryptionSetId);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class A2AVmManagedDiskInputDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="recoveryReplicaDiskAccountType")
-      private final @Nullable Output<String> recoveryReplicaDiskAccountType;
+    private @Nullable Output<String> recoveryReplicaDiskAccountType;
 
-    public Output<String> recoveryReplicaDiskAccountType() {
-        return this.recoveryReplicaDiskAccountType == null ? Codegen.empty() : this.recoveryReplicaDiskAccountType;
+    public Optional<Output<String>> recoveryReplicaDiskAccountType() {
+        return Optional.ofNullable(this.recoveryReplicaDiskAccountType);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class A2AVmManagedDiskInputDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="recoveryResourceGroupId")
-      private final @Nullable Output<String> recoveryResourceGroupId;
+    private @Nullable Output<String> recoveryResourceGroupId;
 
-    public Output<String> recoveryResourceGroupId() {
-        return this.recoveryResourceGroupId == null ? Codegen.empty() : this.recoveryResourceGroupId;
+    public Optional<Output<String>> recoveryResourceGroupId() {
+        return Optional.ofNullable(this.recoveryResourceGroupId);
     }
 
     /**
@@ -91,128 +91,108 @@ public final class A2AVmManagedDiskInputDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="recoveryTargetDiskAccountType")
-      private final @Nullable Output<String> recoveryTargetDiskAccountType;
+    private @Nullable Output<String> recoveryTargetDiskAccountType;
 
-    public Output<String> recoveryTargetDiskAccountType() {
-        return this.recoveryTargetDiskAccountType == null ? Codegen.empty() : this.recoveryTargetDiskAccountType;
+    public Optional<Output<String>> recoveryTargetDiskAccountType() {
+        return Optional.ofNullable(this.recoveryTargetDiskAccountType);
     }
 
-    public A2AVmManagedDiskInputDetailsArgs(
-        @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo,
-        @Nullable Output<String> diskId,
-        @Nullable Output<String> primaryStagingAzureStorageAccountId,
-        @Nullable Output<String> recoveryDiskEncryptionSetId,
-        @Nullable Output<String> recoveryReplicaDiskAccountType,
-        @Nullable Output<String> recoveryResourceGroupId,
-        @Nullable Output<String> recoveryTargetDiskAccountType) {
-        this.diskEncryptionInfo = diskEncryptionInfo;
-        this.diskId = diskId;
-        this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
-        this.recoveryDiskEncryptionSetId = recoveryDiskEncryptionSetId;
-        this.recoveryReplicaDiskAccountType = recoveryReplicaDiskAccountType;
-        this.recoveryResourceGroupId = recoveryResourceGroupId;
-        this.recoveryTargetDiskAccountType = recoveryTargetDiskAccountType;
-    }
+    private A2AVmManagedDiskInputDetailsArgs() {}
 
-    private A2AVmManagedDiskInputDetailsArgs() {
-        this.diskEncryptionInfo = Codegen.empty();
-        this.diskId = Codegen.empty();
-        this.primaryStagingAzureStorageAccountId = Codegen.empty();
-        this.recoveryDiskEncryptionSetId = Codegen.empty();
-        this.recoveryReplicaDiskAccountType = Codegen.empty();
-        this.recoveryResourceGroupId = Codegen.empty();
-        this.recoveryTargetDiskAccountType = Codegen.empty();
+    private A2AVmManagedDiskInputDetailsArgs(A2AVmManagedDiskInputDetailsArgs $) {
+        this.diskEncryptionInfo = $.diskEncryptionInfo;
+        this.diskId = $.diskId;
+        this.primaryStagingAzureStorageAccountId = $.primaryStagingAzureStorageAccountId;
+        this.recoveryDiskEncryptionSetId = $.recoveryDiskEncryptionSetId;
+        this.recoveryReplicaDiskAccountType = $.recoveryReplicaDiskAccountType;
+        this.recoveryResourceGroupId = $.recoveryResourceGroupId;
+        this.recoveryTargetDiskAccountType = $.recoveryTargetDiskAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(A2AVmManagedDiskInputDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
-        private @Nullable Output<String> diskId;
-        private @Nullable Output<String> primaryStagingAzureStorageAccountId;
-        private @Nullable Output<String> recoveryDiskEncryptionSetId;
-        private @Nullable Output<String> recoveryReplicaDiskAccountType;
-        private @Nullable Output<String> recoveryResourceGroupId;
-        private @Nullable Output<String> recoveryTargetDiskAccountType;
+        private A2AVmManagedDiskInputDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new A2AVmManagedDiskInputDetailsArgs();
         }
 
         public Builder(A2AVmManagedDiskInputDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionInfo = defaults.diskEncryptionInfo;
-    	      this.diskId = defaults.diskId;
-    	      this.primaryStagingAzureStorageAccountId = defaults.primaryStagingAzureStorageAccountId;
-    	      this.recoveryDiskEncryptionSetId = defaults.recoveryDiskEncryptionSetId;
-    	      this.recoveryReplicaDiskAccountType = defaults.recoveryReplicaDiskAccountType;
-    	      this.recoveryResourceGroupId = defaults.recoveryResourceGroupId;
-    	      this.recoveryTargetDiskAccountType = defaults.recoveryTargetDiskAccountType;
+            $ = new A2AVmManagedDiskInputDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionInfo(@Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo) {
-            this.diskEncryptionInfo = diskEncryptionInfo;
+            $.diskEncryptionInfo = diskEncryptionInfo;
             return this;
         }
-        public Builder diskEncryptionInfo(@Nullable DiskEncryptionInfoArgs diskEncryptionInfo) {
-            this.diskEncryptionInfo = Codegen.ofNullable(diskEncryptionInfo);
-            return this;
+
+        public Builder diskEncryptionInfo(DiskEncryptionInfoArgs diskEncryptionInfo) {
+            return diskEncryptionInfo(Output.of(diskEncryptionInfo));
         }
+
         public Builder diskId(@Nullable Output<String> diskId) {
-            this.diskId = diskId;
+            $.diskId = diskId;
             return this;
         }
-        public Builder diskId(@Nullable String diskId) {
-            this.diskId = Codegen.ofNullable(diskId);
-            return this;
+
+        public Builder diskId(String diskId) {
+            return diskId(Output.of(diskId));
         }
+
         public Builder primaryStagingAzureStorageAccountId(@Nullable Output<String> primaryStagingAzureStorageAccountId) {
-            this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
+            $.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
-        public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
-            this.primaryStagingAzureStorageAccountId = Codegen.ofNullable(primaryStagingAzureStorageAccountId);
-            return this;
+
+        public Builder primaryStagingAzureStorageAccountId(String primaryStagingAzureStorageAccountId) {
+            return primaryStagingAzureStorageAccountId(Output.of(primaryStagingAzureStorageAccountId));
         }
+
         public Builder recoveryDiskEncryptionSetId(@Nullable Output<String> recoveryDiskEncryptionSetId) {
-            this.recoveryDiskEncryptionSetId = recoveryDiskEncryptionSetId;
+            $.recoveryDiskEncryptionSetId = recoveryDiskEncryptionSetId;
             return this;
         }
-        public Builder recoveryDiskEncryptionSetId(@Nullable String recoveryDiskEncryptionSetId) {
-            this.recoveryDiskEncryptionSetId = Codegen.ofNullable(recoveryDiskEncryptionSetId);
-            return this;
+
+        public Builder recoveryDiskEncryptionSetId(String recoveryDiskEncryptionSetId) {
+            return recoveryDiskEncryptionSetId(Output.of(recoveryDiskEncryptionSetId));
         }
+
         public Builder recoveryReplicaDiskAccountType(@Nullable Output<String> recoveryReplicaDiskAccountType) {
-            this.recoveryReplicaDiskAccountType = recoveryReplicaDiskAccountType;
+            $.recoveryReplicaDiskAccountType = recoveryReplicaDiskAccountType;
             return this;
         }
-        public Builder recoveryReplicaDiskAccountType(@Nullable String recoveryReplicaDiskAccountType) {
-            this.recoveryReplicaDiskAccountType = Codegen.ofNullable(recoveryReplicaDiskAccountType);
-            return this;
+
+        public Builder recoveryReplicaDiskAccountType(String recoveryReplicaDiskAccountType) {
+            return recoveryReplicaDiskAccountType(Output.of(recoveryReplicaDiskAccountType));
         }
+
         public Builder recoveryResourceGroupId(@Nullable Output<String> recoveryResourceGroupId) {
-            this.recoveryResourceGroupId = recoveryResourceGroupId;
+            $.recoveryResourceGroupId = recoveryResourceGroupId;
             return this;
         }
-        public Builder recoveryResourceGroupId(@Nullable String recoveryResourceGroupId) {
-            this.recoveryResourceGroupId = Codegen.ofNullable(recoveryResourceGroupId);
-            return this;
+
+        public Builder recoveryResourceGroupId(String recoveryResourceGroupId) {
+            return recoveryResourceGroupId(Output.of(recoveryResourceGroupId));
         }
+
         public Builder recoveryTargetDiskAccountType(@Nullable Output<String> recoveryTargetDiskAccountType) {
-            this.recoveryTargetDiskAccountType = recoveryTargetDiskAccountType;
+            $.recoveryTargetDiskAccountType = recoveryTargetDiskAccountType;
             return this;
         }
-        public Builder recoveryTargetDiskAccountType(@Nullable String recoveryTargetDiskAccountType) {
-            this.recoveryTargetDiskAccountType = Codegen.ofNullable(recoveryTargetDiskAccountType);
-            return this;
-        }        public A2AVmManagedDiskInputDetailsArgs build() {
-            return new A2AVmManagedDiskInputDetailsArgs(diskEncryptionInfo, diskId, primaryStagingAzureStorageAccountId, recoveryDiskEncryptionSetId, recoveryReplicaDiskAccountType, recoveryResourceGroupId, recoveryTargetDiskAccountType);
+
+        public Builder recoveryTargetDiskAccountType(String recoveryTargetDiskAccountType) {
+            return recoveryTargetDiskAccountType(Output.of(recoveryTargetDiskAccountType));
+        }
+
+        public A2AVmManagedDiskInputDetailsArgs build() {
+            return $;
         }
     }
+
 }

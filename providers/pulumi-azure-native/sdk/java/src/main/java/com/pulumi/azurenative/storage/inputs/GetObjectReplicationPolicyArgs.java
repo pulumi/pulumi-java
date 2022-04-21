@@ -17,7 +17,7 @@ public final class GetObjectReplicationPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetObjectReplicationPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="objectReplicationPolicyId", required=true)
-      private final String objectReplicationPolicyId;
+    private String objectReplicationPolicyId;
 
     public String objectReplicationPolicyId() {
         return this.objectReplicationPolicyId;
@@ -39,64 +39,59 @@ public final class GetObjectReplicationPolicyArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetObjectReplicationPolicyArgs(
-        String accountName,
-        String objectReplicationPolicyId,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.objectReplicationPolicyId = Objects.requireNonNull(objectReplicationPolicyId, "expected parameter 'objectReplicationPolicyId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetObjectReplicationPolicyArgs() {}
 
-    private GetObjectReplicationPolicyArgs() {
-        this.accountName = null;
-        this.objectReplicationPolicyId = null;
-        this.resourceGroupName = null;
+    private GetObjectReplicationPolicyArgs(GetObjectReplicationPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.objectReplicationPolicyId = $.objectReplicationPolicyId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetObjectReplicationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String objectReplicationPolicyId;
-        private String resourceGroupName;
+        private GetObjectReplicationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetObjectReplicationPolicyArgs();
         }
 
         public Builder(GetObjectReplicationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.objectReplicationPolicyId = defaults.objectReplicationPolicyId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetObjectReplicationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder objectReplicationPolicyId(String objectReplicationPolicyId) {
-            this.objectReplicationPolicyId = Objects.requireNonNull(objectReplicationPolicyId);
+            $.objectReplicationPolicyId = objectReplicationPolicyId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetObjectReplicationPolicyArgs build() {
-            return new GetObjectReplicationPolicyArgs(accountName, objectReplicationPolicyId, resourceGroupName);
+        }
+
+        public GetObjectReplicationPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.objectReplicationPolicyId = Objects.requireNonNull($.objectReplicationPolicyId, "expected parameter 'objectReplicationPolicyId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

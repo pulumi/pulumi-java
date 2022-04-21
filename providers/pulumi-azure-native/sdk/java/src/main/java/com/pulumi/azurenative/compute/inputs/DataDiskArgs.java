@@ -12,11 +12,11 @@ import com.pulumi.azurenative.compute.inputs.VirtualHardDiskArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caching")
-      private final @Nullable Output<CachingTypes> caching;
+    private @Nullable Output<CachingTypes> caching;
 
-    public Output<CachingTypes> caching() {
-        return this.caching == null ? Codegen.empty() : this.caching;
+    public Optional<Output<CachingTypes>> caching() {
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createOption", required=true)
-      private final Output<Either<String,DiskCreateOptionTypes>> createOption;
+    private Output<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Output<Either<String,DiskCreateOptionTypes>> createOption() {
         return this.createOption;
@@ -55,10 +55,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
+    private @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
 
-    public Output<Either<String,DiskDeleteOptionTypes>> deleteOption() {
-        return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
+    public Optional<Output<Either<String,DiskDeleteOptionTypes>>> deleteOption() {
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="detachOption")
-      private final @Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption;
+    private @Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption;
 
-    public Output<Either<String,DiskDetachOptionTypes>> detachOption() {
-        return this.detachOption == null ? Codegen.empty() : this.detachOption;
+    public Optional<Output<Either<String,DiskDetachOptionTypes>>> detachOption() {
+        return Optional.ofNullable(this.detachOption);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<VirtualHardDiskArgs> image;
+    private @Nullable Output<VirtualHardDiskArgs> image;
 
-    public Output<VirtualHardDiskArgs> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<VirtualHardDiskArgs>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lun", required=true)
-      private final Output<Integer> lun;
+    private Output<Integer> lun;
 
     public Output<Integer> lun() {
         return this.lun;
@@ -110,10 +110,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable Output<ManagedDiskParametersArgs> managedDisk;
+    private @Nullable Output<ManagedDiskParametersArgs> managedDisk;
 
-    public Output<ManagedDiskParametersArgs> managedDisk() {
-        return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
+    public Optional<Output<ManagedDiskParametersArgs>> managedDisk() {
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="toBeDetached")
-      private final @Nullable Output<Boolean> toBeDetached;
+    private @Nullable Output<Boolean> toBeDetached;
 
-    public Output<Boolean> toBeDetached() {
-        return this.toBeDetached == null ? Codegen.empty() : this.toBeDetached;
+    public Optional<Output<Boolean>> toBeDetached() {
+        return Optional.ofNullable(this.toBeDetached);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vhd")
-      private final @Nullable Output<VirtualHardDiskArgs> vhd;
+    private @Nullable Output<VirtualHardDiskArgs> vhd;
 
-    public Output<VirtualHardDiskArgs> vhd() {
-        return this.vhd == null ? Codegen.empty() : this.vhd;
+    public Optional<Output<VirtualHardDiskArgs>> vhd() {
+        return Optional.ofNullable(this.vhd);
     }
 
     /**
@@ -154,193 +154,160 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="writeAcceleratorEnabled")
-      private final @Nullable Output<Boolean> writeAcceleratorEnabled;
+    private @Nullable Output<Boolean> writeAcceleratorEnabled;
 
-    public Output<Boolean> writeAcceleratorEnabled() {
-        return this.writeAcceleratorEnabled == null ? Codegen.empty() : this.writeAcceleratorEnabled;
+    public Optional<Output<Boolean>> writeAcceleratorEnabled() {
+        return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
 
-    public DataDiskArgs(
-        @Nullable Output<CachingTypes> caching,
-        Output<Either<String,DiskCreateOptionTypes>> createOption,
-        @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption,
-        @Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption,
-        @Nullable Output<Integer> diskSizeGB,
-        @Nullable Output<VirtualHardDiskArgs> image,
-        Output<Integer> lun,
-        @Nullable Output<ManagedDiskParametersArgs> managedDisk,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> toBeDetached,
-        @Nullable Output<VirtualHardDiskArgs> vhd,
-        @Nullable Output<Boolean> writeAcceleratorEnabled) {
-        this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption, "expected parameter 'createOption' to be non-null");
-        this.deleteOption = deleteOption;
-        this.detachOption = detachOption;
-        this.diskSizeGB = diskSizeGB;
-        this.image = image;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.managedDisk = managedDisk;
-        this.name = name;
-        this.toBeDetached = toBeDetached;
-        this.vhd = vhd;
-        this.writeAcceleratorEnabled = writeAcceleratorEnabled;
-    }
+    private DataDiskArgs() {}
 
-    private DataDiskArgs() {
-        this.caching = Codegen.empty();
-        this.createOption = Codegen.empty();
-        this.deleteOption = Codegen.empty();
-        this.detachOption = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.image = Codegen.empty();
-        this.lun = Codegen.empty();
-        this.managedDisk = Codegen.empty();
-        this.name = Codegen.empty();
-        this.toBeDetached = Codegen.empty();
-        this.vhd = Codegen.empty();
-        this.writeAcceleratorEnabled = Codegen.empty();
+    private DataDiskArgs(DataDiskArgs $) {
+        this.caching = $.caching;
+        this.createOption = $.createOption;
+        this.deleteOption = $.deleteOption;
+        this.detachOption = $.detachOption;
+        this.diskSizeGB = $.diskSizeGB;
+        this.image = $.image;
+        this.lun = $.lun;
+        this.managedDisk = $.managedDisk;
+        this.name = $.name;
+        this.toBeDetached = $.toBeDetached;
+        this.vhd = $.vhd;
+        this.writeAcceleratorEnabled = $.writeAcceleratorEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CachingTypes> caching;
-        private Output<Either<String,DiskCreateOptionTypes>> createOption;
-        private @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
-        private @Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption;
-        private @Nullable Output<Integer> diskSizeGB;
-        private @Nullable Output<VirtualHardDiskArgs> image;
-        private Output<Integer> lun;
-        private @Nullable Output<ManagedDiskParametersArgs> managedDisk;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> toBeDetached;
-        private @Nullable Output<VirtualHardDiskArgs> vhd;
-        private @Nullable Output<Boolean> writeAcceleratorEnabled;
+        private DataDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskArgs();
         }
 
         public Builder(DataDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.createOption = defaults.createOption;
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.detachOption = defaults.detachOption;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.image = defaults.image;
-    	      this.lun = defaults.lun;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.name = defaults.name;
-    	      this.toBeDetached = defaults.toBeDetached;
-    	      this.vhd = defaults.vhd;
-    	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
+            $ = new DataDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable Output<CachingTypes> caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
-        public Builder caching(@Nullable CachingTypes caching) {
-            this.caching = Codegen.ofNullable(caching);
-            return this;
+
+        public Builder caching(CachingTypes caching) {
+            return caching(Output.of(caching));
         }
+
         public Builder createOption(Output<Either<String,DiskCreateOptionTypes>> createOption) {
-            this.createOption = Objects.requireNonNull(createOption);
+            $.createOption = createOption;
             return this;
         }
+
         public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
-            this.createOption = Output.of(Objects.requireNonNull(createOption));
-            return this;
+            return createOption(Output.of(createOption));
         }
+
         public Builder deleteOption(@Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
-        public Builder deleteOption(@Nullable Either<String,DiskDeleteOptionTypes> deleteOption) {
-            this.deleteOption = Codegen.ofNullable(deleteOption);
-            return this;
+
+        public Builder deleteOption(Either<String,DiskDeleteOptionTypes> deleteOption) {
+            return deleteOption(Output.of(deleteOption));
         }
+
         public Builder detachOption(@Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption) {
-            this.detachOption = detachOption;
+            $.detachOption = detachOption;
             return this;
         }
-        public Builder detachOption(@Nullable Either<String,DiskDetachOptionTypes> detachOption) {
-            this.detachOption = Codegen.ofNullable(detachOption);
-            return this;
+
+        public Builder detachOption(Either<String,DiskDetachOptionTypes> detachOption) {
+            return detachOption(Output.of(detachOption));
         }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder image(@Nullable Output<VirtualHardDiskArgs> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable VirtualHardDiskArgs image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(VirtualHardDiskArgs image) {
+            return image(Output.of(image));
         }
+
         public Builder lun(Output<Integer> lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Output.of(Objects.requireNonNull(lun));
-            return this;
+            return lun(Output.of(lun));
         }
+
         public Builder managedDisk(@Nullable Output<ManagedDiskParametersArgs> managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
-        public Builder managedDisk(@Nullable ManagedDiskParametersArgs managedDisk) {
-            this.managedDisk = Codegen.ofNullable(managedDisk);
-            return this;
+
+        public Builder managedDisk(ManagedDiskParametersArgs managedDisk) {
+            return managedDisk(Output.of(managedDisk));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder toBeDetached(@Nullable Output<Boolean> toBeDetached) {
-            this.toBeDetached = toBeDetached;
+            $.toBeDetached = toBeDetached;
             return this;
         }
-        public Builder toBeDetached(@Nullable Boolean toBeDetached) {
-            this.toBeDetached = Codegen.ofNullable(toBeDetached);
-            return this;
+
+        public Builder toBeDetached(Boolean toBeDetached) {
+            return toBeDetached(Output.of(toBeDetached));
         }
+
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
-            this.vhd = vhd;
+            $.vhd = vhd;
             return this;
         }
-        public Builder vhd(@Nullable VirtualHardDiskArgs vhd) {
-            this.vhd = Codegen.ofNullable(vhd);
-            return this;
+
+        public Builder vhd(VirtualHardDiskArgs vhd) {
+            return vhd(Output.of(vhd));
         }
+
         public Builder writeAcceleratorEnabled(@Nullable Output<Boolean> writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = writeAcceleratorEnabled;
+            $.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = Codegen.ofNullable(writeAcceleratorEnabled);
-            return this;
-        }        public DataDiskArgs build() {
-            return new DataDiskArgs(caching, createOption, deleteOption, detachOption, diskSizeGB, image, lun, managedDisk, name, toBeDetached, vhd, writeAcceleratorEnabled);
+
+        public Builder writeAcceleratorEnabled(Boolean writeAcceleratorEnabled) {
+            return writeAcceleratorEnabled(Output.of(writeAcceleratorEnabled));
+        }
+
+        public DataDiskArgs build() {
+            $.createOption = Objects.requireNonNull($.createOption, "expected parameter 'createOption' to be non-null");
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

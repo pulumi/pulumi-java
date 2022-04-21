@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
      * 
      */
     @Import(name="estimatedProbability", required=true)
-      private final Double estimatedProbability;
+    private Double estimatedProbability;
 
     public Double estimatedProbability() {
         return this.estimatedProbability;
@@ -34,58 +34,56 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
      * 
      */
     @Import(name="quasiIdsValues", required=true)
-      private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+    private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
 
-    public GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(
-        Double estimatedProbability,
-        List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-        this.estimatedProbability = Objects.requireNonNull(estimatedProbability, "expected parameter 'estimatedProbability' to be non-null");
-        this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues, "expected parameter 'quasiIdsValues' to be non-null");
-    }
+    private GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse() {}
 
-    private GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse() {
-        this.estimatedProbability = null;
-        this.quasiIdsValues = List.of();
+    private GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse $) {
+        this.estimatedProbability = $.estimatedProbability;
+        this.quasiIdsValues = $.quasiIdsValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double estimatedProbability;
-        private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+        private GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse();
         }
 
         public Builder(GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.estimatedProbability = defaults.estimatedProbability;
-    	      this.quasiIdsValues = defaults.quasiIdsValues;
+            $ = new GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder estimatedProbability(Double estimatedProbability) {
-            this.estimatedProbability = Objects.requireNonNull(estimatedProbability);
+            $.estimatedProbability = estimatedProbability;
             return this;
         }
+
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-            this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
+            $.quasiIdsValues = quasiIdsValues;
             return this;
         }
+
         public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
             return quasiIdsValues(List.of(quasiIdsValues));
-        }        public GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse build() {
-            return new GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(estimatedProbability, quasiIdsValues);
+        }
+
+        public GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse build() {
+            $.estimatedProbability = Objects.requireNonNull($.estimatedProbability, "expected parameter 'estimatedProbability' to be non-null");
+            $.quasiIdsValues = Objects.requireNonNull($.quasiIdsValues, "expected parameter 'quasiIdsValues' to be non-null");
+            return $;
         }
     }
+
 }

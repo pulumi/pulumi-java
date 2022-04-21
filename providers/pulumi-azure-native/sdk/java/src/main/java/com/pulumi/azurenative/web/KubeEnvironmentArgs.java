@@ -8,11 +8,11 @@ import com.pulumi.azurenative.web.inputs.ArcConfigurationArgs;
 import com.pulumi.azurenative.web.inputs.ExtendedLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
     public static final KubeEnvironmentArgs Empty = new KubeEnvironmentArgs();
 
     @Import(name="aksResourceID")
-      private final @Nullable Output<String> aksResourceID;
+    private @Nullable Output<String> aksResourceID;
 
-    public Output<String> aksResourceID() {
-        return this.aksResourceID == null ? Codegen.empty() : this.aksResourceID;
+    public Optional<Output<String>> aksResourceID() {
+        return Optional.ofNullable(this.aksResourceID);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="appLogsConfiguration")
-      private final @Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration;
+    private @Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration;
 
-    public Output<AppLogsConfigurationArgs> appLogsConfiguration() {
-        return this.appLogsConfiguration == null ? Codegen.empty() : this.appLogsConfiguration;
+    public Optional<Output<AppLogsConfigurationArgs>> appLogsConfiguration() {
+        return Optional.ofNullable(this.appLogsConfiguration);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="arcConfiguration")
-      private final @Nullable Output<ArcConfigurationArgs> arcConfiguration;
+    private @Nullable Output<ArcConfigurationArgs> arcConfiguration;
 
-    public Output<ArcConfigurationArgs> arcConfiguration() {
-        return this.arcConfiguration == null ? Codegen.empty() : this.arcConfiguration;
+    public Optional<Output<ArcConfigurationArgs>> arcConfiguration() {
+        return Optional.ofNullable(this.arcConfiguration);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="internalLoadBalancerEnabled")
-      private final @Nullable Output<Boolean> internalLoadBalancerEnabled;
+    private @Nullable Output<Boolean> internalLoadBalancerEnabled;
 
-    public Output<Boolean> internalLoadBalancerEnabled() {
-        return this.internalLoadBalancerEnabled == null ? Codegen.empty() : this.internalLoadBalancerEnabled;
+    public Optional<Output<Boolean>> internalLoadBalancerEnabled() {
+        return Optional.ofNullable(this.internalLoadBalancerEnabled);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -124,10 +124,10 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="staticIp")
-      private final @Nullable Output<String> staticIp;
+    private @Nullable Output<String> staticIp;
 
-    public Output<String> staticIp() {
-        return this.staticIp == null ? Codegen.empty() : this.staticIp;
+    public Optional<Output<String>> staticIp() {
+        return Optional.ofNullable(this.staticIp);
     }
 
     /**
@@ -135,180 +135,149 @@ public final class KubeEnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public KubeEnvironmentArgs(
-        @Nullable Output<String> aksResourceID,
-        @Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration,
-        @Nullable Output<ArcConfigurationArgs> arcConfiguration,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<Boolean> internalLoadBalancerEnabled,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> staticIp,
-        @Nullable Output<Map<String,String>> tags) {
-        this.aksResourceID = aksResourceID;
-        this.appLogsConfiguration = appLogsConfiguration;
-        this.arcConfiguration = arcConfiguration;
-        this.extendedLocation = extendedLocation;
-        this.internalLoadBalancerEnabled = internalLoadBalancerEnabled;
-        this.kind = kind;
-        this.location = location;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.staticIp = staticIp;
-        this.tags = tags;
-    }
+    private KubeEnvironmentArgs() {}
 
-    private KubeEnvironmentArgs() {
-        this.aksResourceID = Codegen.empty();
-        this.appLogsConfiguration = Codegen.empty();
-        this.arcConfiguration = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.internalLoadBalancerEnabled = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.staticIp = Codegen.empty();
-        this.tags = Codegen.empty();
+    private KubeEnvironmentArgs(KubeEnvironmentArgs $) {
+        this.aksResourceID = $.aksResourceID;
+        this.appLogsConfiguration = $.appLogsConfiguration;
+        this.arcConfiguration = $.arcConfiguration;
+        this.extendedLocation = $.extendedLocation;
+        this.internalLoadBalancerEnabled = $.internalLoadBalancerEnabled;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.staticIp = $.staticIp;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubeEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aksResourceID;
-        private @Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration;
-        private @Nullable Output<ArcConfigurationArgs> arcConfiguration;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<Boolean> internalLoadBalancerEnabled;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> staticIp;
-        private @Nullable Output<Map<String,String>> tags;
+        private KubeEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubeEnvironmentArgs();
         }
 
         public Builder(KubeEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aksResourceID = defaults.aksResourceID;
-    	      this.appLogsConfiguration = defaults.appLogsConfiguration;
-    	      this.arcConfiguration = defaults.arcConfiguration;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.internalLoadBalancerEnabled = defaults.internalLoadBalancerEnabled;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.staticIp = defaults.staticIp;
-    	      this.tags = defaults.tags;
+            $ = new KubeEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aksResourceID(@Nullable Output<String> aksResourceID) {
-            this.aksResourceID = aksResourceID;
+            $.aksResourceID = aksResourceID;
             return this;
         }
-        public Builder aksResourceID(@Nullable String aksResourceID) {
-            this.aksResourceID = Codegen.ofNullable(aksResourceID);
-            return this;
+
+        public Builder aksResourceID(String aksResourceID) {
+            return aksResourceID(Output.of(aksResourceID));
         }
+
         public Builder appLogsConfiguration(@Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration) {
-            this.appLogsConfiguration = appLogsConfiguration;
+            $.appLogsConfiguration = appLogsConfiguration;
             return this;
         }
-        public Builder appLogsConfiguration(@Nullable AppLogsConfigurationArgs appLogsConfiguration) {
-            this.appLogsConfiguration = Codegen.ofNullable(appLogsConfiguration);
-            return this;
+
+        public Builder appLogsConfiguration(AppLogsConfigurationArgs appLogsConfiguration) {
+            return appLogsConfiguration(Output.of(appLogsConfiguration));
         }
+
         public Builder arcConfiguration(@Nullable Output<ArcConfigurationArgs> arcConfiguration) {
-            this.arcConfiguration = arcConfiguration;
+            $.arcConfiguration = arcConfiguration;
             return this;
         }
-        public Builder arcConfiguration(@Nullable ArcConfigurationArgs arcConfiguration) {
-            this.arcConfiguration = Codegen.ofNullable(arcConfiguration);
-            return this;
+
+        public Builder arcConfiguration(ArcConfigurationArgs arcConfiguration) {
+            return arcConfiguration(Output.of(arcConfiguration));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder internalLoadBalancerEnabled(@Nullable Output<Boolean> internalLoadBalancerEnabled) {
-            this.internalLoadBalancerEnabled = internalLoadBalancerEnabled;
+            $.internalLoadBalancerEnabled = internalLoadBalancerEnabled;
             return this;
         }
-        public Builder internalLoadBalancerEnabled(@Nullable Boolean internalLoadBalancerEnabled) {
-            this.internalLoadBalancerEnabled = Codegen.ofNullable(internalLoadBalancerEnabled);
-            return this;
+
+        public Builder internalLoadBalancerEnabled(Boolean internalLoadBalancerEnabled) {
+            return internalLoadBalancerEnabled(Output.of(internalLoadBalancerEnabled));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder staticIp(@Nullable Output<String> staticIp) {
-            this.staticIp = staticIp;
+            $.staticIp = staticIp;
             return this;
         }
-        public Builder staticIp(@Nullable String staticIp) {
-            this.staticIp = Codegen.ofNullable(staticIp);
-            return this;
+
+        public Builder staticIp(String staticIp) {
+            return staticIp(Output.of(staticIp));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public KubeEnvironmentArgs build() {
-            return new KubeEnvironmentArgs(aksResourceID, appLogsConfiguration, arcConfiguration, extendedLocation, internalLoadBalancerEnabled, kind, location, name, resourceGroupName, staticIp, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public KubeEnvironmentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

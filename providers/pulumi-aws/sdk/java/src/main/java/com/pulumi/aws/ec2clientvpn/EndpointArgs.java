@@ -7,12 +7,12 @@ import com.pulumi.aws.ec2clientvpn.inputs.EndpointAuthenticationOptionArgs;
 import com.pulumi.aws.ec2clientvpn.inputs.EndpointConnectionLogOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationOptions", required=true)
-      private final Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
+    private Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
 
     public Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions() {
         return this.authenticationOptions;
@@ -36,7 +36,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientCidrBlock", required=true)
-      private final Output<String> clientCidrBlock;
+    private Output<String> clientCidrBlock;
 
     public Output<String> clientCidrBlock() {
         return this.clientCidrBlock;
@@ -47,7 +47,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionLogOptions", required=true)
-      private final Output<EndpointConnectionLogOptionsArgs> connectionLogOptions;
+    private Output<EndpointConnectionLogOptionsArgs> connectionLogOptions;
 
     public Output<EndpointConnectionLogOptionsArgs> connectionLogOptions() {
         return this.connectionLogOptions;
@@ -58,10 +58,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable Output<List<String>> dnsServers;
+    private @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> dnsServers() {
-        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
+    public Optional<Output<List<String>>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfServicePortal")
-      private final @Nullable Output<String> selfServicePortal;
+    private @Nullable Output<String> selfServicePortal;
 
-    public Output<String> selfServicePortal() {
-        return this.selfServicePortal == null ? Codegen.empty() : this.selfServicePortal;
+    public Optional<Output<String>> selfServicePortal() {
+        return Optional.ofNullable(this.selfServicePortal);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverCertificateArn", required=true)
-      private final Output<String> serverCertificateArn;
+    private Output<String> serverCertificateArn;
 
     public Output<String> serverCertificateArn() {
         return this.serverCertificateArn;
@@ -102,10 +102,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="splitTunnel")
-      private final @Nullable Output<Boolean> splitTunnel;
+    private @Nullable Output<Boolean> splitTunnel;
 
-    public Output<Boolean> splitTunnel() {
-        return this.splitTunnel == null ? Codegen.empty() : this.splitTunnel;
+    public Optional<Output<Boolean>> splitTunnel() {
+        return Optional.ofNullable(this.splitTunnel);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -124,173 +124,150 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transportProtocol")
-      private final @Nullable Output<String> transportProtocol;
+    private @Nullable Output<String> transportProtocol;
 
-    public Output<String> transportProtocol() {
-        return this.transportProtocol == null ? Codegen.empty() : this.transportProtocol;
+    public Optional<Output<String>> transportProtocol() {
+        return Optional.ofNullable(this.transportProtocol);
     }
 
-    public EndpointArgs(
-        Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions,
-        Output<String> clientCidrBlock,
-        Output<EndpointConnectionLogOptionsArgs> connectionLogOptions,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> dnsServers,
-        @Nullable Output<String> selfServicePortal,
-        Output<String> serverCertificateArn,
-        @Nullable Output<Boolean> splitTunnel,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> transportProtocol) {
-        this.authenticationOptions = Objects.requireNonNull(authenticationOptions, "expected parameter 'authenticationOptions' to be non-null");
-        this.clientCidrBlock = Objects.requireNonNull(clientCidrBlock, "expected parameter 'clientCidrBlock' to be non-null");
-        this.connectionLogOptions = Objects.requireNonNull(connectionLogOptions, "expected parameter 'connectionLogOptions' to be non-null");
-        this.description = description;
-        this.dnsServers = dnsServers;
-        this.selfServicePortal = selfServicePortal;
-        this.serverCertificateArn = Objects.requireNonNull(serverCertificateArn, "expected parameter 'serverCertificateArn' to be non-null");
-        this.splitTunnel = splitTunnel;
-        this.tags = tags;
-        this.transportProtocol = transportProtocol;
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.authenticationOptions = Codegen.empty();
-        this.clientCidrBlock = Codegen.empty();
-        this.connectionLogOptions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.dnsServers = Codegen.empty();
-        this.selfServicePortal = Codegen.empty();
-        this.serverCertificateArn = Codegen.empty();
-        this.splitTunnel = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transportProtocol = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.authenticationOptions = $.authenticationOptions;
+        this.clientCidrBlock = $.clientCidrBlock;
+        this.connectionLogOptions = $.connectionLogOptions;
+        this.description = $.description;
+        this.dnsServers = $.dnsServers;
+        this.selfServicePortal = $.selfServicePortal;
+        this.serverCertificateArn = $.serverCertificateArn;
+        this.splitTunnel = $.splitTunnel;
+        this.tags = $.tags;
+        this.transportProtocol = $.transportProtocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions;
-        private Output<String> clientCidrBlock;
-        private Output<EndpointConnectionLogOptionsArgs> connectionLogOptions;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> dnsServers;
-        private @Nullable Output<String> selfServicePortal;
-        private Output<String> serverCertificateArn;
-        private @Nullable Output<Boolean> splitTunnel;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> transportProtocol;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationOptions = defaults.authenticationOptions;
-    	      this.clientCidrBlock = defaults.clientCidrBlock;
-    	      this.connectionLogOptions = defaults.connectionLogOptions;
-    	      this.description = defaults.description;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.selfServicePortal = defaults.selfServicePortal;
-    	      this.serverCertificateArn = defaults.serverCertificateArn;
-    	      this.splitTunnel = defaults.splitTunnel;
-    	      this.tags = defaults.tags;
-    	      this.transportProtocol = defaults.transportProtocol;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationOptions(Output<List<EndpointAuthenticationOptionArgs>> authenticationOptions) {
-            this.authenticationOptions = Objects.requireNonNull(authenticationOptions);
+            $.authenticationOptions = authenticationOptions;
             return this;
         }
+
         public Builder authenticationOptions(List<EndpointAuthenticationOptionArgs> authenticationOptions) {
-            this.authenticationOptions = Output.of(Objects.requireNonNull(authenticationOptions));
-            return this;
+            return authenticationOptions(Output.of(authenticationOptions));
         }
+
         public Builder authenticationOptions(EndpointAuthenticationOptionArgs... authenticationOptions) {
             return authenticationOptions(List.of(authenticationOptions));
         }
+
         public Builder clientCidrBlock(Output<String> clientCidrBlock) {
-            this.clientCidrBlock = Objects.requireNonNull(clientCidrBlock);
+            $.clientCidrBlock = clientCidrBlock;
             return this;
         }
+
         public Builder clientCidrBlock(String clientCidrBlock) {
-            this.clientCidrBlock = Output.of(Objects.requireNonNull(clientCidrBlock));
-            return this;
+            return clientCidrBlock(Output.of(clientCidrBlock));
         }
+
         public Builder connectionLogOptions(Output<EndpointConnectionLogOptionsArgs> connectionLogOptions) {
-            this.connectionLogOptions = Objects.requireNonNull(connectionLogOptions);
+            $.connectionLogOptions = connectionLogOptions;
             return this;
         }
+
         public Builder connectionLogOptions(EndpointConnectionLogOptionsArgs connectionLogOptions) {
-            this.connectionLogOptions = Output.of(Objects.requireNonNull(connectionLogOptions));
-            return this;
+            return connectionLogOptions(Output.of(connectionLogOptions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
-        public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Codegen.ofNullable(dnsServers);
-            return this;
+
+        public Builder dnsServers(List<String> dnsServers) {
+            return dnsServers(Output.of(dnsServers));
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder selfServicePortal(@Nullable Output<String> selfServicePortal) {
-            this.selfServicePortal = selfServicePortal;
+            $.selfServicePortal = selfServicePortal;
             return this;
         }
-        public Builder selfServicePortal(@Nullable String selfServicePortal) {
-            this.selfServicePortal = Codegen.ofNullable(selfServicePortal);
-            return this;
+
+        public Builder selfServicePortal(String selfServicePortal) {
+            return selfServicePortal(Output.of(selfServicePortal));
         }
+
         public Builder serverCertificateArn(Output<String> serverCertificateArn) {
-            this.serverCertificateArn = Objects.requireNonNull(serverCertificateArn);
+            $.serverCertificateArn = serverCertificateArn;
             return this;
         }
+
         public Builder serverCertificateArn(String serverCertificateArn) {
-            this.serverCertificateArn = Output.of(Objects.requireNonNull(serverCertificateArn));
-            return this;
+            return serverCertificateArn(Output.of(serverCertificateArn));
         }
+
         public Builder splitTunnel(@Nullable Output<Boolean> splitTunnel) {
-            this.splitTunnel = splitTunnel;
+            $.splitTunnel = splitTunnel;
             return this;
         }
-        public Builder splitTunnel(@Nullable Boolean splitTunnel) {
-            this.splitTunnel = Codegen.ofNullable(splitTunnel);
-            return this;
+
+        public Builder splitTunnel(Boolean splitTunnel) {
+            return splitTunnel(Output.of(splitTunnel));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder transportProtocol(@Nullable Output<String> transportProtocol) {
-            this.transportProtocol = transportProtocol;
+            $.transportProtocol = transportProtocol;
             return this;
         }
-        public Builder transportProtocol(@Nullable String transportProtocol) {
-            this.transportProtocol = Codegen.ofNullable(transportProtocol);
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(authenticationOptions, clientCidrBlock, connectionLogOptions, description, dnsServers, selfServicePortal, serverCertificateArn, splitTunnel, tags, transportProtocol);
+
+        public Builder transportProtocol(String transportProtocol) {
+            return transportProtocol(Output.of(transportProtocol));
+        }
+
+        public EndpointArgs build() {
+            $.authenticationOptions = Objects.requireNonNull($.authenticationOptions, "expected parameter 'authenticationOptions' to be non-null");
+            $.clientCidrBlock = Objects.requireNonNull($.clientCidrBlock, "expected parameter 'clientCidrBlock' to be non-null");
+            $.connectionLogOptions = Objects.requireNonNull($.connectionLogOptions, "expected parameter 'connectionLogOptions' to be non-null");
+            $.serverCertificateArn = Objects.requireNonNull($.serverCertificateArn, "expected parameter 'serverCertificateArn' to be non-null");
+            return $;
         }
     }
+
 }

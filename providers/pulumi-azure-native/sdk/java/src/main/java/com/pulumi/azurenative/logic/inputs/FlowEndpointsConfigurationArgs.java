@@ -6,8 +6,8 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.FlowEndpointsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FlowEndpointsConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="connector")
-      private final @Nullable Output<FlowEndpointsArgs> connector;
+    private @Nullable Output<FlowEndpointsArgs> connector;
 
-    public Output<FlowEndpointsArgs> connector() {
-        return this.connector == null ? Codegen.empty() : this.connector;
+    public Optional<Output<FlowEndpointsArgs>> connector() {
+        return Optional.ofNullable(this.connector);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class FlowEndpointsConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="workflow")
-      private final @Nullable Output<FlowEndpointsArgs> workflow;
+    private @Nullable Output<FlowEndpointsArgs> workflow;
 
-    public Output<FlowEndpointsArgs> workflow() {
-        return this.workflow == null ? Codegen.empty() : this.workflow;
+    public Optional<Output<FlowEndpointsArgs>> workflow() {
+        return Optional.ofNullable(this.workflow);
     }
 
-    public FlowEndpointsConfigurationArgs(
-        @Nullable Output<FlowEndpointsArgs> connector,
-        @Nullable Output<FlowEndpointsArgs> workflow) {
-        this.connector = connector;
-        this.workflow = workflow;
-    }
+    private FlowEndpointsConfigurationArgs() {}
 
-    private FlowEndpointsConfigurationArgs() {
-        this.connector = Codegen.empty();
-        this.workflow = Codegen.empty();
+    private FlowEndpointsConfigurationArgs(FlowEndpointsConfigurationArgs $) {
+        this.connector = $.connector;
+        this.workflow = $.workflow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowEndpointsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowEndpointsArgs> connector;
-        private @Nullable Output<FlowEndpointsArgs> workflow;
+        private FlowEndpointsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowEndpointsConfigurationArgs();
         }
 
         public Builder(FlowEndpointsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connector = defaults.connector;
-    	      this.workflow = defaults.workflow;
+            $ = new FlowEndpointsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connector(@Nullable Output<FlowEndpointsArgs> connector) {
-            this.connector = connector;
+            $.connector = connector;
             return this;
         }
-        public Builder connector(@Nullable FlowEndpointsArgs connector) {
-            this.connector = Codegen.ofNullable(connector);
-            return this;
+
+        public Builder connector(FlowEndpointsArgs connector) {
+            return connector(Output.of(connector));
         }
+
         public Builder workflow(@Nullable Output<FlowEndpointsArgs> workflow) {
-            this.workflow = workflow;
+            $.workflow = workflow;
             return this;
         }
-        public Builder workflow(@Nullable FlowEndpointsArgs workflow) {
-            this.workflow = Codegen.ofNullable(workflow);
-            return this;
-        }        public FlowEndpointsConfigurationArgs build() {
-            return new FlowEndpointsConfigurationArgs(connector, workflow);
+
+        public Builder workflow(FlowEndpointsArgs workflow) {
+            return workflow(Output.of(workflow));
+        }
+
+        public FlowEndpointsConfigurationArgs build() {
+            return $;
         }
     }
+
 }

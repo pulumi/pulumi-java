@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.DaemonEndpointArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NodeDaemonEndpointsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="kubeletEndpoint")
-      private final @Nullable Output<DaemonEndpointArgs> kubeletEndpoint;
+    private @Nullable Output<DaemonEndpointArgs> kubeletEndpoint;
 
-    public Output<DaemonEndpointArgs> kubeletEndpoint() {
-        return this.kubeletEndpoint == null ? Codegen.empty() : this.kubeletEndpoint;
+    public Optional<Output<DaemonEndpointArgs>> kubeletEndpoint() {
+        return Optional.ofNullable(this.kubeletEndpoint);
     }
 
-    public NodeDaemonEndpointsArgs(@Nullable Output<DaemonEndpointArgs> kubeletEndpoint) {
-        this.kubeletEndpoint = kubeletEndpoint;
-    }
+    private NodeDaemonEndpointsArgs() {}
 
-    private NodeDaemonEndpointsArgs() {
-        this.kubeletEndpoint = Codegen.empty();
+    private NodeDaemonEndpointsArgs(NodeDaemonEndpointsArgs $) {
+        this.kubeletEndpoint = $.kubeletEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeDaemonEndpointsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DaemonEndpointArgs> kubeletEndpoint;
+        private NodeDaemonEndpointsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeDaemonEndpointsArgs();
         }
 
         public Builder(NodeDaemonEndpointsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kubeletEndpoint = defaults.kubeletEndpoint;
+            $ = new NodeDaemonEndpointsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kubeletEndpoint(@Nullable Output<DaemonEndpointArgs> kubeletEndpoint) {
-            this.kubeletEndpoint = kubeletEndpoint;
+            $.kubeletEndpoint = kubeletEndpoint;
             return this;
         }
-        public Builder kubeletEndpoint(@Nullable DaemonEndpointArgs kubeletEndpoint) {
-            this.kubeletEndpoint = Codegen.ofNullable(kubeletEndpoint);
-            return this;
-        }        public NodeDaemonEndpointsArgs build() {
-            return new NodeDaemonEndpointsArgs(kubeletEndpoint);
+
+        public Builder kubeletEndpoint(DaemonEndpointArgs kubeletEndpoint) {
+            return kubeletEndpoint(Output.of(kubeletEndpoint));
+        }
+
+        public NodeDaemonEndpointsArgs build() {
+            return $;
         }
     }
+
 }

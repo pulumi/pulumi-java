@@ -21,7 +21,7 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="discoveryStatus", required=true)
-      private final String discoveryStatus;
+    private String discoveryStatus;
 
     public String discoveryStatus() {
         return this.discoveryStatus;
@@ -32,7 +32,7 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,7 +43,7 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
@@ -54,7 +54,7 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -65,82 +65,73 @@ public final class DeploymentInstanceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public DeploymentInstanceResponse(
-        String discoveryStatus,
-        String name,
-        String reason,
-        String startTime,
-        String status) {
-        this.discoveryStatus = Objects.requireNonNull(discoveryStatus, "expected parameter 'discoveryStatus' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private DeploymentInstanceResponse() {}
 
-    private DeploymentInstanceResponse() {
-        this.discoveryStatus = null;
-        this.name = null;
-        this.reason = null;
-        this.startTime = null;
-        this.status = null;
+    private DeploymentInstanceResponse(DeploymentInstanceResponse $) {
+        this.discoveryStatus = $.discoveryStatus;
+        this.name = $.name;
+        this.reason = $.reason;
+        this.startTime = $.startTime;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentInstanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String discoveryStatus;
-        private String name;
-        private String reason;
-        private String startTime;
-        private String status;
+        private DeploymentInstanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentInstanceResponse();
         }
 
         public Builder(DeploymentInstanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.discoveryStatus = defaults.discoveryStatus;
-    	      this.name = defaults.name;
-    	      this.reason = defaults.reason;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
+            $ = new DeploymentInstanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder discoveryStatus(String discoveryStatus) {
-            this.discoveryStatus = Objects.requireNonNull(discoveryStatus);
+            $.discoveryStatus = discoveryStatus;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public DeploymentInstanceResponse build() {
-            return new DeploymentInstanceResponse(discoveryStatus, name, reason, startTime, status);
+        }
+
+        public DeploymentInstanceResponse build() {
+            $.discoveryStatus = Objects.requireNonNull($.discoveryStatus, "expected parameter 'discoveryStatus' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

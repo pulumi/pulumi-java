@@ -5,10 +5,10 @@ package com.pulumi.aws.opsworks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="batchCount")
-      private final @Nullable Output<Integer> batchCount;
+    private @Nullable Output<Integer> batchCount;
 
-    public Output<Integer> batchCount() {
-        return this.batchCount == null ? Codegen.empty() : this.batchCount;
+    public Optional<Output<Integer>> batchCount() {
+        return Optional.ofNullable(this.batchCount);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="batchSize")
-      private final @Nullable Output<Integer> batchSize;
+    private @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> batchSize() {
-        return this.batchSize == null ? Codegen.empty() : this.batchSize;
+    public Optional<Output<Integer>> batchSize() {
+        return Optional.ofNullable(this.batchSize);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="bufferDuration")
-      private final @Nullable Output<Integer> bufferDuration;
+    private @Nullable Output<Integer> bufferDuration;
 
-    public Output<Integer> bufferDuration() {
-        return this.bufferDuration == null ? Codegen.empty() : this.bufferDuration;
+    public Optional<Output<Integer>> bufferDuration() {
+        return Optional.ofNullable(this.bufferDuration);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="datetimeFormat")
-      private final @Nullable Output<String> datetimeFormat;
+    private @Nullable Output<String> datetimeFormat;
 
-    public Output<String> datetimeFormat() {
-        return this.datetimeFormat == null ? Codegen.empty() : this.datetimeFormat;
+    public Optional<Output<String>> datetimeFormat() {
+        return Optional.ofNullable(this.datetimeFormat);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<String> encoding;
+    private @Nullable Output<String> encoding;
 
-    public Output<String> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<String>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="file", required=true)
-      private final Output<String> file;
+    private Output<String> file;
 
     public Output<String> file() {
         return this.file;
@@ -87,10 +87,10 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="fileFingerprintLines")
-      private final @Nullable Output<String> fileFingerprintLines;
+    private @Nullable Output<String> fileFingerprintLines;
 
-    public Output<String> fileFingerprintLines() {
-        return this.fileFingerprintLines == null ? Codegen.empty() : this.fileFingerprintLines;
+    public Optional<Output<String>> fileFingerprintLines() {
+        return Optional.ofNullable(this.fileFingerprintLines);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="initialPosition")
-      private final @Nullable Output<String> initialPosition;
+    private @Nullable Output<String> initialPosition;
 
-    public Output<String> initialPosition() {
-        return this.initialPosition == null ? Codegen.empty() : this.initialPosition;
+    public Optional<Output<String>> initialPosition() {
+        return Optional.ofNullable(this.initialPosition);
     }
 
     /**
@@ -109,7 +109,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="logGroupName", required=true)
-      private final Output<String> logGroupName;
+    private Output<String> logGroupName;
 
     public Output<String> logGroupName() {
         return this.logGroupName;
@@ -120,10 +120,10 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="multilineStartPattern")
-      private final @Nullable Output<String> multilineStartPattern;
+    private @Nullable Output<String> multilineStartPattern;
 
-    public Output<String> multilineStartPattern() {
-        return this.multilineStartPattern == null ? Codegen.empty() : this.multilineStartPattern;
+    public Optional<Output<String>> multilineStartPattern() {
+        return Optional.ofNullable(this.multilineStartPattern);
     }
 
     /**
@@ -131,180 +131,150 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends co
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public CustomLayerCloudwatchConfigurationLogStreamGetArgs(
-        @Nullable Output<Integer> batchCount,
-        @Nullable Output<Integer> batchSize,
-        @Nullable Output<Integer> bufferDuration,
-        @Nullable Output<String> datetimeFormat,
-        @Nullable Output<String> encoding,
-        Output<String> file,
-        @Nullable Output<String> fileFingerprintLines,
-        @Nullable Output<String> initialPosition,
-        Output<String> logGroupName,
-        @Nullable Output<String> multilineStartPattern,
-        @Nullable Output<String> timeZone) {
-        this.batchCount = batchCount;
-        this.batchSize = batchSize;
-        this.bufferDuration = bufferDuration;
-        this.datetimeFormat = datetimeFormat;
-        this.encoding = encoding;
-        this.file = Objects.requireNonNull(file, "expected parameter 'file' to be non-null");
-        this.fileFingerprintLines = fileFingerprintLines;
-        this.initialPosition = initialPosition;
-        this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
-        this.multilineStartPattern = multilineStartPattern;
-        this.timeZone = timeZone;
-    }
+    private CustomLayerCloudwatchConfigurationLogStreamGetArgs() {}
 
-    private CustomLayerCloudwatchConfigurationLogStreamGetArgs() {
-        this.batchCount = Codegen.empty();
-        this.batchSize = Codegen.empty();
-        this.bufferDuration = Codegen.empty();
-        this.datetimeFormat = Codegen.empty();
-        this.encoding = Codegen.empty();
-        this.file = Codegen.empty();
-        this.fileFingerprintLines = Codegen.empty();
-        this.initialPosition = Codegen.empty();
-        this.logGroupName = Codegen.empty();
-        this.multilineStartPattern = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private CustomLayerCloudwatchConfigurationLogStreamGetArgs(CustomLayerCloudwatchConfigurationLogStreamGetArgs $) {
+        this.batchCount = $.batchCount;
+        this.batchSize = $.batchSize;
+        this.bufferDuration = $.bufferDuration;
+        this.datetimeFormat = $.datetimeFormat;
+        this.encoding = $.encoding;
+        this.file = $.file;
+        this.fileFingerprintLines = $.fileFingerprintLines;
+        this.initialPosition = $.initialPosition;
+        this.logGroupName = $.logGroupName;
+        this.multilineStartPattern = $.multilineStartPattern;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomLayerCloudwatchConfigurationLogStreamGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> batchCount;
-        private @Nullable Output<Integer> batchSize;
-        private @Nullable Output<Integer> bufferDuration;
-        private @Nullable Output<String> datetimeFormat;
-        private @Nullable Output<String> encoding;
-        private Output<String> file;
-        private @Nullable Output<String> fileFingerprintLines;
-        private @Nullable Output<String> initialPosition;
-        private Output<String> logGroupName;
-        private @Nullable Output<String> multilineStartPattern;
-        private @Nullable Output<String> timeZone;
+        private CustomLayerCloudwatchConfigurationLogStreamGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomLayerCloudwatchConfigurationLogStreamGetArgs();
         }
 
         public Builder(CustomLayerCloudwatchConfigurationLogStreamGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchCount = defaults.batchCount;
-    	      this.batchSize = defaults.batchSize;
-    	      this.bufferDuration = defaults.bufferDuration;
-    	      this.datetimeFormat = defaults.datetimeFormat;
-    	      this.encoding = defaults.encoding;
-    	      this.file = defaults.file;
-    	      this.fileFingerprintLines = defaults.fileFingerprintLines;
-    	      this.initialPosition = defaults.initialPosition;
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.multilineStartPattern = defaults.multilineStartPattern;
-    	      this.timeZone = defaults.timeZone;
+            $ = new CustomLayerCloudwatchConfigurationLogStreamGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchCount(@Nullable Output<Integer> batchCount) {
-            this.batchCount = batchCount;
+            $.batchCount = batchCount;
             return this;
         }
-        public Builder batchCount(@Nullable Integer batchCount) {
-            this.batchCount = Codegen.ofNullable(batchCount);
-            return this;
+
+        public Builder batchCount(Integer batchCount) {
+            return batchCount(Output.of(batchCount));
         }
+
         public Builder batchSize(@Nullable Output<Integer> batchSize) {
-            this.batchSize = batchSize;
+            $.batchSize = batchSize;
             return this;
         }
-        public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = Codegen.ofNullable(batchSize);
-            return this;
+
+        public Builder batchSize(Integer batchSize) {
+            return batchSize(Output.of(batchSize));
         }
+
         public Builder bufferDuration(@Nullable Output<Integer> bufferDuration) {
-            this.bufferDuration = bufferDuration;
+            $.bufferDuration = bufferDuration;
             return this;
         }
-        public Builder bufferDuration(@Nullable Integer bufferDuration) {
-            this.bufferDuration = Codegen.ofNullable(bufferDuration);
-            return this;
+
+        public Builder bufferDuration(Integer bufferDuration) {
+            return bufferDuration(Output.of(bufferDuration));
         }
+
         public Builder datetimeFormat(@Nullable Output<String> datetimeFormat) {
-            this.datetimeFormat = datetimeFormat;
+            $.datetimeFormat = datetimeFormat;
             return this;
         }
-        public Builder datetimeFormat(@Nullable String datetimeFormat) {
-            this.datetimeFormat = Codegen.ofNullable(datetimeFormat);
-            return this;
+
+        public Builder datetimeFormat(String datetimeFormat) {
+            return datetimeFormat(Output.of(datetimeFormat));
         }
+
         public Builder encoding(@Nullable Output<String> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable String encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder file(Output<String> file) {
-            this.file = Objects.requireNonNull(file);
+            $.file = file;
             return this;
         }
+
         public Builder file(String file) {
-            this.file = Output.of(Objects.requireNonNull(file));
-            return this;
+            return file(Output.of(file));
         }
+
         public Builder fileFingerprintLines(@Nullable Output<String> fileFingerprintLines) {
-            this.fileFingerprintLines = fileFingerprintLines;
+            $.fileFingerprintLines = fileFingerprintLines;
             return this;
         }
-        public Builder fileFingerprintLines(@Nullable String fileFingerprintLines) {
-            this.fileFingerprintLines = Codegen.ofNullable(fileFingerprintLines);
-            return this;
+
+        public Builder fileFingerprintLines(String fileFingerprintLines) {
+            return fileFingerprintLines(Output.of(fileFingerprintLines));
         }
+
         public Builder initialPosition(@Nullable Output<String> initialPosition) {
-            this.initialPosition = initialPosition;
+            $.initialPosition = initialPosition;
             return this;
         }
-        public Builder initialPosition(@Nullable String initialPosition) {
-            this.initialPosition = Codegen.ofNullable(initialPosition);
-            return this;
+
+        public Builder initialPosition(String initialPosition) {
+            return initialPosition(Output.of(initialPosition));
         }
+
         public Builder logGroupName(Output<String> logGroupName) {
-            this.logGroupName = Objects.requireNonNull(logGroupName);
+            $.logGroupName = logGroupName;
             return this;
         }
+
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
-            return this;
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder multilineStartPattern(@Nullable Output<String> multilineStartPattern) {
-            this.multilineStartPattern = multilineStartPattern;
+            $.multilineStartPattern = multilineStartPattern;
             return this;
         }
-        public Builder multilineStartPattern(@Nullable String multilineStartPattern) {
-            this.multilineStartPattern = Codegen.ofNullable(multilineStartPattern);
-            return this;
+
+        public Builder multilineStartPattern(String multilineStartPattern) {
+            return multilineStartPattern(Output.of(multilineStartPattern));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public CustomLayerCloudwatchConfigurationLogStreamGetArgs build() {
-            return new CustomLayerCloudwatchConfigurationLogStreamGetArgs(batchCount, batchSize, bufferDuration, datetimeFormat, encoding, file, fileFingerprintLines, initialPosition, logGroupName, multilineStartPattern, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public CustomLayerCloudwatchConfigurationLogStreamGetArgs build() {
+            $.file = Objects.requireNonNull($.file, "expected parameter 'file' to be non-null");
+            $.logGroupName = Objects.requireNonNull($.logGroupName, "expected parameter 'logGroupName' to be non-null");
+            return $;
         }
     }
+
 }

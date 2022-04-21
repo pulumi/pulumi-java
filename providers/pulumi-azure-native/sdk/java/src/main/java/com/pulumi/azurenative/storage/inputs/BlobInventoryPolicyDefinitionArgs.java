@@ -6,7 +6,6 @@ package com.pulumi.azurenative.storage.inputs;
 import com.pulumi.azurenative.storage.inputs.BlobInventoryPolicyFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class BlobInventoryPolicyDefinitionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="filters", required=true)
-      private final Output<BlobInventoryPolicyFilterArgs> filters;
+    private Output<BlobInventoryPolicyFilterArgs> filters;
 
     public Output<BlobInventoryPolicyFilterArgs> filters() {
         return this.filters;
     }
 
-    public BlobInventoryPolicyDefinitionArgs(Output<BlobInventoryPolicyFilterArgs> filters) {
-        this.filters = Objects.requireNonNull(filters, "expected parameter 'filters' to be non-null");
-    }
+    private BlobInventoryPolicyDefinitionArgs() {}
 
-    private BlobInventoryPolicyDefinitionArgs() {
-        this.filters = Codegen.empty();
+    private BlobInventoryPolicyDefinitionArgs(BlobInventoryPolicyDefinitionArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobInventoryPolicyDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BlobInventoryPolicyFilterArgs> filters;
+        private BlobInventoryPolicyDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobInventoryPolicyDefinitionArgs();
         }
 
         public Builder(BlobInventoryPolicyDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new BlobInventoryPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(Output<BlobInventoryPolicyFilterArgs> filters) {
-            this.filters = Objects.requireNonNull(filters);
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(BlobInventoryPolicyFilterArgs filters) {
-            this.filters = Output.of(Objects.requireNonNull(filters));
-            return this;
-        }        public BlobInventoryPolicyDefinitionArgs build() {
-            return new BlobInventoryPolicyDefinitionArgs(filters);
+            return filters(Output.of(filters));
+        }
+
+        public BlobInventoryPolicyDefinitionArgs build() {
+            $.filters = Objects.requireNonNull($.filters, "expected parameter 'filters' to be non-null");
+            return $;
         }
     }
+
 }

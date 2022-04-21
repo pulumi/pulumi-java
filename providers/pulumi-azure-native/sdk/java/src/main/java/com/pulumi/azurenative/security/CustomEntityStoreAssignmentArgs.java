@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CustomEntityStoreAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="customEntityStoreAssignmentName")
-      private final @Nullable Output<String> customEntityStoreAssignmentName;
+    private @Nullable Output<String> customEntityStoreAssignmentName;
 
-    public Output<String> customEntityStoreAssignmentName() {
-        return this.customEntityStoreAssignmentName == null ? Codegen.empty() : this.customEntityStoreAssignmentName;
+    public Optional<Output<String>> customEntityStoreAssignmentName() {
+        return Optional.ofNullable(this.customEntityStoreAssignmentName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CustomEntityStoreAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="principal")
-      private final @Nullable Output<String> principal;
+    private @Nullable Output<String> principal;
 
-    public Output<String> principal() {
-        return this.principal == null ? Codegen.empty() : this.principal;
+    public Optional<Output<String>> principal() {
+        return Optional.ofNullable(this.principal);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class CustomEntityStoreAssignmentArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public CustomEntityStoreAssignmentArgs(
-        @Nullable Output<String> customEntityStoreAssignmentName,
-        @Nullable Output<String> principal,
-        Output<String> resourceGroupName) {
-        this.customEntityStoreAssignmentName = customEntityStoreAssignmentName;
-        this.principal = principal;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private CustomEntityStoreAssignmentArgs() {}
 
-    private CustomEntityStoreAssignmentArgs() {
-        this.customEntityStoreAssignmentName = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private CustomEntityStoreAssignmentArgs(CustomEntityStoreAssignmentArgs $) {
+        this.customEntityStoreAssignmentName = $.customEntityStoreAssignmentName;
+        this.principal = $.principal;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomEntityStoreAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customEntityStoreAssignmentName;
-        private @Nullable Output<String> principal;
-        private Output<String> resourceGroupName;
+        private CustomEntityStoreAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomEntityStoreAssignmentArgs();
         }
 
         public Builder(CustomEntityStoreAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customEntityStoreAssignmentName = defaults.customEntityStoreAssignmentName;
-    	      this.principal = defaults.principal;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new CustomEntityStoreAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customEntityStoreAssignmentName(@Nullable Output<String> customEntityStoreAssignmentName) {
-            this.customEntityStoreAssignmentName = customEntityStoreAssignmentName;
+            $.customEntityStoreAssignmentName = customEntityStoreAssignmentName;
             return this;
         }
-        public Builder customEntityStoreAssignmentName(@Nullable String customEntityStoreAssignmentName) {
-            this.customEntityStoreAssignmentName = Codegen.ofNullable(customEntityStoreAssignmentName);
-            return this;
+
+        public Builder customEntityStoreAssignmentName(String customEntityStoreAssignmentName) {
+            return customEntityStoreAssignmentName(Output.of(customEntityStoreAssignmentName));
         }
+
         public Builder principal(@Nullable Output<String> principal) {
-            this.principal = principal;
+            $.principal = principal;
             return this;
         }
-        public Builder principal(@Nullable String principal) {
-            this.principal = Codegen.ofNullable(principal);
-            return this;
+
+        public Builder principal(String principal) {
+            return principal(Output.of(principal));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public CustomEntityStoreAssignmentArgs build() {
-            return new CustomEntityStoreAssignmentArgs(customEntityStoreAssignmentName, principal, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public CustomEntityStoreAssignmentArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

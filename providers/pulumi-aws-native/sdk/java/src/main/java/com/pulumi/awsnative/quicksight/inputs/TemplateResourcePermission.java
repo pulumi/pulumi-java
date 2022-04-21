@@ -22,7 +22,7 @@ public final class TemplateResourcePermission extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="actions", required=true)
-      private final List<String> actions;
+    private List<String> actions;
 
     public List<String> actions() {
         return this.actions;
@@ -47,58 +47,56 @@ public final class TemplateResourcePermission extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="principal", required=true)
-      private final String principal;
+    private String principal;
 
     public String principal() {
         return this.principal;
     }
 
-    public TemplateResourcePermission(
-        List<String> actions,
-        String principal) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-    }
+    private TemplateResourcePermission() {}
 
-    private TemplateResourcePermission() {
-        this.actions = List.of();
-        this.principal = null;
+    private TemplateResourcePermission(TemplateResourcePermission $) {
+        this.actions = $.actions;
+        this.principal = $.principal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateResourcePermission defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> actions;
-        private String principal;
+        private TemplateResourcePermission $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateResourcePermission();
         }
 
         public Builder(TemplateResourcePermission defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.principal = defaults.principal;
+            $ = new TemplateResourcePermission(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder principal(String principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
-        }        public TemplateResourcePermission build() {
-            return new TemplateResourcePermission(actions, principal);
+        }
+
+        public TemplateResourcePermission build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            return $;
         }
     }
+
 }

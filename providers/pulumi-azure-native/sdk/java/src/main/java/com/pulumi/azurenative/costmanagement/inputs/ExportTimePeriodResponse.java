@@ -21,7 +21,7 @@ public final class ExportTimePeriodResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="from", required=true)
-      private final String from;
+    private String from;
 
     public String from() {
         return this.from;
@@ -32,55 +32,52 @@ public final class ExportTimePeriodResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="to", required=true)
-      private final String to;
+    private String to;
 
     public String to() {
         return this.to;
     }
 
-    public ExportTimePeriodResponse(
-        String from,
-        String to) {
-        this.from = Objects.requireNonNull(from, "expected parameter 'from' to be non-null");
-        this.to = Objects.requireNonNull(to, "expected parameter 'to' to be non-null");
-    }
+    private ExportTimePeriodResponse() {}
 
-    private ExportTimePeriodResponse() {
-        this.from = null;
-        this.to = null;
+    private ExportTimePeriodResponse(ExportTimePeriodResponse $) {
+        this.from = $.from;
+        this.to = $.to;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportTimePeriodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String from;
-        private String to;
+        private ExportTimePeriodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportTimePeriodResponse();
         }
 
         public Builder(ExportTimePeriodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.from = defaults.from;
-    	      this.to = defaults.to;
+            $ = new ExportTimePeriodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder from(String from) {
-            this.from = Objects.requireNonNull(from);
+            $.from = from;
             return this;
         }
+
         public Builder to(String to) {
-            this.to = Objects.requireNonNull(to);
+            $.to = to;
             return this;
-        }        public ExportTimePeriodResponse build() {
-            return new ExportTimePeriodResponse(from, to);
+        }
+
+        public ExportTimePeriodResponse build() {
+            $.from = Objects.requireNonNull($.from, "expected parameter 'from' to be non-null");
+            $.to = Objects.requireNonNull($.to, "expected parameter 'to' to be non-null");
+            return $;
         }
     }
+
 }

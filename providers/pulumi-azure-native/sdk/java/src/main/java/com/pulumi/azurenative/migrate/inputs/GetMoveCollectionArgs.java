@@ -17,7 +17,7 @@ public final class GetMoveCollectionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="moveCollectionName", required=true)
-      private final String moveCollectionName;
+    private String moveCollectionName;
 
     public String moveCollectionName() {
         return this.moveCollectionName;
@@ -28,55 +28,52 @@ public final class GetMoveCollectionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMoveCollectionArgs(
-        String moveCollectionName,
-        String resourceGroupName) {
-        this.moveCollectionName = Objects.requireNonNull(moveCollectionName, "expected parameter 'moveCollectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMoveCollectionArgs() {}
 
-    private GetMoveCollectionArgs() {
-        this.moveCollectionName = null;
-        this.resourceGroupName = null;
+    private GetMoveCollectionArgs(GetMoveCollectionArgs $) {
+        this.moveCollectionName = $.moveCollectionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMoveCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String moveCollectionName;
-        private String resourceGroupName;
+        private GetMoveCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMoveCollectionArgs();
         }
 
         public Builder(GetMoveCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.moveCollectionName = defaults.moveCollectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMoveCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder moveCollectionName(String moveCollectionName) {
-            this.moveCollectionName = Objects.requireNonNull(moveCollectionName);
+            $.moveCollectionName = moveCollectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMoveCollectionArgs build() {
-            return new GetMoveCollectionArgs(moveCollectionName, resourceGroupName);
+        }
+
+        public GetMoveCollectionArgs build() {
+            $.moveCollectionName = Objects.requireNonNull($.moveCollectionName, "expected parameter 'moveCollectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

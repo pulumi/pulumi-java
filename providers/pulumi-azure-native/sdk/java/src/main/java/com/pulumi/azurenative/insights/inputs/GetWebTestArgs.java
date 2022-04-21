@@ -17,7 +17,7 @@ public final class GetWebTestArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetWebTestArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="webTestName", required=true)
-      private final String webTestName;
+    private String webTestName;
 
     public String webTestName() {
         return this.webTestName;
     }
 
-    public GetWebTestArgs(
-        String resourceGroupName,
-        String webTestName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.webTestName = Objects.requireNonNull(webTestName, "expected parameter 'webTestName' to be non-null");
-    }
+    private GetWebTestArgs() {}
 
-    private GetWebTestArgs() {
-        this.resourceGroupName = null;
-        this.webTestName = null;
+    private GetWebTestArgs(GetWebTestArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.webTestName = $.webTestName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String webTestName;
+        private GetWebTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebTestArgs();
         }
 
         public Builder(GetWebTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.webTestName = defaults.webTestName;
+            $ = new GetWebTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder webTestName(String webTestName) {
-            this.webTestName = Objects.requireNonNull(webTestName);
+            $.webTestName = webTestName;
             return this;
-        }        public GetWebTestArgs build() {
-            return new GetWebTestArgs(resourceGroupName, webTestName);
+        }
+
+        public GetWebTestArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.webTestName = Objects.requireNonNull($.webTestName, "expected parameter 'webTestName' to be non-null");
+            return $;
         }
     }
+
 }

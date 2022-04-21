@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class NodeInitializationActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="executableFile", required=true)
-      private final Output<String> executableFile;
+    private Output<String> executableFile;
 
     public Output<String> executableFile() {
         return this.executableFile;
@@ -35,63 +35,59 @@ public final class NodeInitializationActionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="executionTimeout")
-      private final @Nullable Output<String> executionTimeout;
+    private @Nullable Output<String> executionTimeout;
 
-    public Output<String> executionTimeout() {
-        return this.executionTimeout == null ? Codegen.empty() : this.executionTimeout;
+    public Optional<Output<String>> executionTimeout() {
+        return Optional.ofNullable(this.executionTimeout);
     }
 
-    public NodeInitializationActionArgs(
-        Output<String> executableFile,
-        @Nullable Output<String> executionTimeout) {
-        this.executableFile = Objects.requireNonNull(executableFile, "expected parameter 'executableFile' to be non-null");
-        this.executionTimeout = executionTimeout;
-    }
+    private NodeInitializationActionArgs() {}
 
-    private NodeInitializationActionArgs() {
-        this.executableFile = Codegen.empty();
-        this.executionTimeout = Codegen.empty();
+    private NodeInitializationActionArgs(NodeInitializationActionArgs $) {
+        this.executableFile = $.executableFile;
+        this.executionTimeout = $.executionTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeInitializationActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> executableFile;
-        private @Nullable Output<String> executionTimeout;
+        private NodeInitializationActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeInitializationActionArgs();
         }
 
         public Builder(NodeInitializationActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executableFile = defaults.executableFile;
-    	      this.executionTimeout = defaults.executionTimeout;
+            $ = new NodeInitializationActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executableFile(Output<String> executableFile) {
-            this.executableFile = Objects.requireNonNull(executableFile);
+            $.executableFile = executableFile;
             return this;
         }
+
         public Builder executableFile(String executableFile) {
-            this.executableFile = Output.of(Objects.requireNonNull(executableFile));
-            return this;
+            return executableFile(Output.of(executableFile));
         }
+
         public Builder executionTimeout(@Nullable Output<String> executionTimeout) {
-            this.executionTimeout = executionTimeout;
+            $.executionTimeout = executionTimeout;
             return this;
         }
-        public Builder executionTimeout(@Nullable String executionTimeout) {
-            this.executionTimeout = Codegen.ofNullable(executionTimeout);
-            return this;
-        }        public NodeInitializationActionArgs build() {
-            return new NodeInitializationActionArgs(executableFile, executionTimeout);
+
+        public Builder executionTimeout(String executionTimeout) {
+            return executionTimeout(Output.of(executionTimeout));
+        }
+
+        public NodeInitializationActionArgs build() {
+            $.executableFile = Objects.requireNonNull($.executableFile, "expected parameter 'executableFile' to be non-null");
+            return $;
         }
     }
+
 }

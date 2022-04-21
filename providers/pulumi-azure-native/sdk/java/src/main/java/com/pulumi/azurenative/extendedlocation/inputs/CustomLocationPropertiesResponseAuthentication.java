@@ -23,45 +23,44 @@ public final class CustomLocationPropertiesResponseAuthentication extends com.pu
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public CustomLocationPropertiesResponseAuthentication(@Nullable String type) {
-        this.type = type;
-    }
+    private CustomLocationPropertiesResponseAuthentication() {}
 
-    private CustomLocationPropertiesResponseAuthentication() {
-        this.type = null;
+    private CustomLocationPropertiesResponseAuthentication(CustomLocationPropertiesResponseAuthentication $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomLocationPropertiesResponseAuthentication defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
+        private CustomLocationPropertiesResponseAuthentication $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomLocationPropertiesResponseAuthentication();
         }
 
         public Builder(CustomLocationPropertiesResponseAuthentication defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new CustomLocationPropertiesResponseAuthentication(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public CustomLocationPropertiesResponseAuthentication build() {
-            return new CustomLocationPropertiesResponseAuthentication(type);
+        }
+
+        public CustomLocationPropertiesResponseAuthentication build() {
+            return $;
         }
     }
+
 }

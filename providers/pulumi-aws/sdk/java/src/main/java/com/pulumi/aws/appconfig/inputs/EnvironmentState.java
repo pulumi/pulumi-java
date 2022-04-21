@@ -6,11 +6,11 @@ package com.pulumi.aws.appconfig.inputs;
 import com.pulumi.aws.appconfig.inputs.EnvironmentMonitorGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable Output<String> environmentId;
+    private @Nullable Output<String> environmentId;
 
-    public Output<String> environmentId() {
-        return this.environmentId == null ? Codegen.empty() : this.environmentId;
+    public Optional<Output<String>> environmentId() {
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitors")
-      private final @Nullable Output<List<EnvironmentMonitorGetArgs>> monitors;
+    private @Nullable Output<List<EnvironmentMonitorGetArgs>> monitors;
 
-    public Output<List<EnvironmentMonitorGetArgs>> monitors() {
-        return this.monitors == null ? Codegen.empty() : this.monitors;
+    public Optional<Output<List<EnvironmentMonitorGetArgs>>> monitors() {
+        return Optional.ofNullable(this.monitors);
     }
 
     /**
@@ -78,17 +78,17 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -107,157 +107,132 @@ public final class EnvironmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public EnvironmentState(
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> environmentId,
-        @Nullable Output<List<EnvironmentMonitorGetArgs>> monitors,
-        @Nullable Output<String> name,
-        @Nullable Output<String> state,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.applicationId = applicationId;
-        this.arn = arn;
-        this.description = description;
-        this.environmentId = environmentId;
-        this.monitors = monitors;
-        this.name = name;
-        this.state = state;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private EnvironmentState() {}
 
-    private EnvironmentState() {
-        this.applicationId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.monitors = Codegen.empty();
-        this.name = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private EnvironmentState(EnvironmentState $) {
+        this.applicationId = $.applicationId;
+        this.arn = $.arn;
+        this.description = $.description;
+        this.environmentId = $.environmentId;
+        this.monitors = $.monitors;
+        this.name = $.name;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> environmentId;
-        private @Nullable Output<List<EnvironmentMonitorGetArgs>> monitors;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> state;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private EnvironmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentState();
         }
 
         public Builder(EnvironmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.environmentId = defaults.environmentId;
-    	      this.monitors = defaults.monitors;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new EnvironmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentId(@Nullable Output<String> environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
-        public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Codegen.ofNullable(environmentId);
-            return this;
+
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder monitors(@Nullable Output<List<EnvironmentMonitorGetArgs>> monitors) {
-            this.monitors = monitors;
+            $.monitors = monitors;
             return this;
         }
-        public Builder monitors(@Nullable List<EnvironmentMonitorGetArgs> monitors) {
-            this.monitors = Codegen.ofNullable(monitors);
-            return this;
+
+        public Builder monitors(List<EnvironmentMonitorGetArgs> monitors) {
+            return monitors(Output.of(monitors));
         }
+
         public Builder monitors(EnvironmentMonitorGetArgs... monitors) {
             return monitors(List.of(monitors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public EnvironmentState build() {
-            return new EnvironmentState(applicationId, arn, description, environmentId, monitors, name, state, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public EnvironmentState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionId", required=true)
-      private final Output<String> connectionId;
+    private Output<String> connectionId;
 
     public Output<String> connectionId() {
         return this.connectionId;
@@ -34,7 +33,7 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -45,7 +44,7 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
@@ -56,7 +55,7 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ticketConfiguration", required=true)
-      private final Output<String> ticketConfiguration;
+    private Output<String> ticketConfiguration;
 
     public Output<String> ticketConfiguration() {
         return this.ticketConfiguration;
@@ -67,102 +66,93 @@ public final class ItsmReceiverArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceId", required=true)
-      private final Output<String> workspaceId;
+    private Output<String> workspaceId;
 
     public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
-    public ItsmReceiverArgs(
-        Output<String> connectionId,
-        Output<String> name,
-        Output<String> region,
-        Output<String> ticketConfiguration,
-        Output<String> workspaceId) {
-        this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.ticketConfiguration = Objects.requireNonNull(ticketConfiguration, "expected parameter 'ticketConfiguration' to be non-null");
-        this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
-    }
+    private ItsmReceiverArgs() {}
 
-    private ItsmReceiverArgs() {
-        this.connectionId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.region = Codegen.empty();
-        this.ticketConfiguration = Codegen.empty();
-        this.workspaceId = Codegen.empty();
+    private ItsmReceiverArgs(ItsmReceiverArgs $) {
+        this.connectionId = $.connectionId;
+        this.name = $.name;
+        this.region = $.region;
+        this.ticketConfiguration = $.ticketConfiguration;
+        this.workspaceId = $.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ItsmReceiverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectionId;
-        private Output<String> name;
-        private Output<String> region;
-        private Output<String> ticketConfiguration;
-        private Output<String> workspaceId;
+        private ItsmReceiverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ItsmReceiverArgs();
         }
 
         public Builder(ItsmReceiverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionId = defaults.connectionId;
-    	      this.name = defaults.name;
-    	      this.region = defaults.region;
-    	      this.ticketConfiguration = defaults.ticketConfiguration;
-    	      this.workspaceId = defaults.workspaceId;
+            $ = new ItsmReceiverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionId(Output<String> connectionId) {
-            this.connectionId = Objects.requireNonNull(connectionId);
+            $.connectionId = connectionId;
             return this;
         }
+
         public Builder connectionId(String connectionId) {
-            this.connectionId = Output.of(Objects.requireNonNull(connectionId));
-            return this;
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder ticketConfiguration(Output<String> ticketConfiguration) {
-            this.ticketConfiguration = Objects.requireNonNull(ticketConfiguration);
+            $.ticketConfiguration = ticketConfiguration;
             return this;
         }
+
         public Builder ticketConfiguration(String ticketConfiguration) {
-            this.ticketConfiguration = Output.of(Objects.requireNonNull(ticketConfiguration));
-            return this;
+            return ticketConfiguration(Output.of(ticketConfiguration));
         }
+
         public Builder workspaceId(Output<String> workspaceId) {
-            this.workspaceId = Objects.requireNonNull(workspaceId);
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
-            return this;
-        }        public ItsmReceiverArgs build() {
-            return new ItsmReceiverArgs(connectionId, name, region, ticketConfiguration, workspaceId);
+            return workspaceId(Output.of(workspaceId));
+        }
+
+        public ItsmReceiverArgs build() {
+            $.connectionId = Objects.requireNonNull($.connectionId, "expected parameter 'connectionId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.ticketConfiguration = Objects.requireNonNull($.ticketConfiguration, "expected parameter 'ticketConfiguration' to be non-null");
+            $.workspaceId = Objects.requireNonNull($.workspaceId, "expected parameter 'workspaceId' to be non-null");
+            return $;
         }
     }
+
 }

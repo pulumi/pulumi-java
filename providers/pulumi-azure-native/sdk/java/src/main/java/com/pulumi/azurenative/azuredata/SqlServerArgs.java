@@ -5,10 +5,10 @@ package com.pulumi.azurenative.azuredata;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cores")
-      private final @Nullable Output<Integer> cores;
+    private @Nullable Output<Integer> cores;
 
-    public Output<Integer> cores() {
-        return this.cores == null ? Codegen.empty() : this.cores;
+    public Optional<Output<Integer>> cores() {
+        return Optional.ofNullable(this.cores);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="edition")
-      private final @Nullable Output<String> edition;
+    private @Nullable Output<String> edition;
 
-    public Output<String> edition() {
-        return this.edition == null ? Codegen.empty() : this.edition;
+    public Optional<Output<String>> edition() {
+        return Optional.ofNullable(this.edition);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="propertyBag")
-      private final @Nullable Output<String> propertyBag;
+    private @Nullable Output<String> propertyBag;
 
-    public Output<String> propertyBag() {
-        return this.propertyBag == null ? Codegen.empty() : this.propertyBag;
+    public Optional<Output<String>> propertyBag() {
+        return Optional.ofNullable(this.propertyBag);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registrationID")
-      private final @Nullable Output<String> registrationID;
+    private @Nullable Output<String> registrationID;
 
-    public Output<String> registrationID() {
-        return this.registrationID == null ? Codegen.empty() : this.registrationID;
+    public Optional<Output<String>> registrationID() {
+        return Optional.ofNullable(this.registrationID);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,10 +76,10 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlServerName")
-      private final @Nullable Output<String> sqlServerName;
+    private @Nullable Output<String> sqlServerName;
 
-    public Output<String> sqlServerName() {
-        return this.sqlServerName == null ? Codegen.empty() : this.sqlServerName;
+    public Optional<Output<String>> sqlServerName() {
+        return Optional.ofNullable(this.sqlServerName);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlServerRegistrationName", required=true)
-      private final Output<String> sqlServerRegistrationName;
+    private Output<String> sqlServerRegistrationName;
 
     public Output<String> sqlServerRegistrationName() {
         return this.sqlServerRegistrationName;
@@ -98,141 +98,120 @@ public final class SqlServerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public SqlServerArgs(
-        @Nullable Output<Integer> cores,
-        @Nullable Output<String> edition,
-        @Nullable Output<String> propertyBag,
-        @Nullable Output<String> registrationID,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> sqlServerName,
-        Output<String> sqlServerRegistrationName,
-        @Nullable Output<String> version) {
-        this.cores = cores;
-        this.edition = edition;
-        this.propertyBag = propertyBag;
-        this.registrationID = registrationID;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlServerName = sqlServerName;
-        this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName, "expected parameter 'sqlServerRegistrationName' to be non-null");
-        this.version = version;
-    }
+    private SqlServerArgs() {}
 
-    private SqlServerArgs() {
-        this.cores = Codegen.empty();
-        this.edition = Codegen.empty();
-        this.propertyBag = Codegen.empty();
-        this.registrationID = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sqlServerName = Codegen.empty();
-        this.sqlServerRegistrationName = Codegen.empty();
-        this.version = Codegen.empty();
+    private SqlServerArgs(SqlServerArgs $) {
+        this.cores = $.cores;
+        this.edition = $.edition;
+        this.propertyBag = $.propertyBag;
+        this.registrationID = $.registrationID;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlServerName = $.sqlServerName;
+        this.sqlServerRegistrationName = $.sqlServerRegistrationName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cores;
-        private @Nullable Output<String> edition;
-        private @Nullable Output<String> propertyBag;
-        private @Nullable Output<String> registrationID;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> sqlServerName;
-        private Output<String> sqlServerRegistrationName;
-        private @Nullable Output<String> version;
+        private SqlServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerArgs();
         }
 
         public Builder(SqlServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cores = defaults.cores;
-    	      this.edition = defaults.edition;
-    	      this.propertyBag = defaults.propertyBag;
-    	      this.registrationID = defaults.registrationID;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlServerName = defaults.sqlServerName;
-    	      this.sqlServerRegistrationName = defaults.sqlServerRegistrationName;
-    	      this.version = defaults.version;
+            $ = new SqlServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cores(@Nullable Output<Integer> cores) {
-            this.cores = cores;
+            $.cores = cores;
             return this;
         }
-        public Builder cores(@Nullable Integer cores) {
-            this.cores = Codegen.ofNullable(cores);
-            return this;
+
+        public Builder cores(Integer cores) {
+            return cores(Output.of(cores));
         }
+
         public Builder edition(@Nullable Output<String> edition) {
-            this.edition = edition;
+            $.edition = edition;
             return this;
         }
-        public Builder edition(@Nullable String edition) {
-            this.edition = Codegen.ofNullable(edition);
-            return this;
+
+        public Builder edition(String edition) {
+            return edition(Output.of(edition));
         }
+
         public Builder propertyBag(@Nullable Output<String> propertyBag) {
-            this.propertyBag = propertyBag;
+            $.propertyBag = propertyBag;
             return this;
         }
-        public Builder propertyBag(@Nullable String propertyBag) {
-            this.propertyBag = Codegen.ofNullable(propertyBag);
-            return this;
+
+        public Builder propertyBag(String propertyBag) {
+            return propertyBag(Output.of(propertyBag));
         }
+
         public Builder registrationID(@Nullable Output<String> registrationID) {
-            this.registrationID = registrationID;
+            $.registrationID = registrationID;
             return this;
         }
-        public Builder registrationID(@Nullable String registrationID) {
-            this.registrationID = Codegen.ofNullable(registrationID);
-            return this;
+
+        public Builder registrationID(String registrationID) {
+            return registrationID(Output.of(registrationID));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sqlServerName(@Nullable Output<String> sqlServerName) {
-            this.sqlServerName = sqlServerName;
+            $.sqlServerName = sqlServerName;
             return this;
         }
-        public Builder sqlServerName(@Nullable String sqlServerName) {
-            this.sqlServerName = Codegen.ofNullable(sqlServerName);
-            return this;
+
+        public Builder sqlServerName(String sqlServerName) {
+            return sqlServerName(Output.of(sqlServerName));
         }
+
         public Builder sqlServerRegistrationName(Output<String> sqlServerRegistrationName) {
-            this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName);
+            $.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;
         }
+
         public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
-            this.sqlServerRegistrationName = Output.of(Objects.requireNonNull(sqlServerRegistrationName));
-            return this;
+            return sqlServerRegistrationName(Output.of(sqlServerRegistrationName));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public SqlServerArgs build() {
-            return new SqlServerArgs(cores, edition, propertyBag, registrationID, resourceGroupName, sqlServerName, sqlServerRegistrationName, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public SqlServerArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlServerRegistrationName = Objects.requireNonNull($.sqlServerRegistrationName, "expected parameter 'sqlServerRegistrationName' to be non-null");
+            return $;
         }
     }
+
 }

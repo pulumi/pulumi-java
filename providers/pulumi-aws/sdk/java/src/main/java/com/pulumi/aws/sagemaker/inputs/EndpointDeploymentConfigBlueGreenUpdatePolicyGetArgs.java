@@ -6,9 +6,9 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs extends 
      * 
      */
     @Import(name="maximumExecutionTimeoutInSeconds")
-      private final @Nullable Output<Integer> maximumExecutionTimeoutInSeconds;
+    private @Nullable Output<Integer> maximumExecutionTimeoutInSeconds;
 
-    public Output<Integer> maximumExecutionTimeoutInSeconds() {
-        return this.maximumExecutionTimeoutInSeconds == null ? Codegen.empty() : this.maximumExecutionTimeoutInSeconds;
+    public Optional<Output<Integer>> maximumExecutionTimeoutInSeconds() {
+        return Optional.ofNullable(this.maximumExecutionTimeoutInSeconds);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs extends 
      * 
      */
     @Import(name="terminationWaitInSeconds")
-      private final @Nullable Output<Integer> terminationWaitInSeconds;
+    private @Nullable Output<Integer> terminationWaitInSeconds;
 
-    public Output<Integer> terminationWaitInSeconds() {
-        return this.terminationWaitInSeconds == null ? Codegen.empty() : this.terminationWaitInSeconds;
+    public Optional<Output<Integer>> terminationWaitInSeconds() {
+        return Optional.ofNullable(this.terminationWaitInSeconds);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs extends 
      * 
      */
     @Import(name="trafficRoutingConfiguration", required=true)
-      private final Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs> trafficRoutingConfiguration;
+    private Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs> trafficRoutingConfiguration;
 
     public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs> trafficRoutingConfiguration() {
         return this.trafficRoutingConfiguration;
     }
 
-    public EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs(
-        @Nullable Output<Integer> maximumExecutionTimeoutInSeconds,
-        @Nullable Output<Integer> terminationWaitInSeconds,
-        Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs> trafficRoutingConfiguration) {
-        this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
-        this.terminationWaitInSeconds = terminationWaitInSeconds;
-        this.trafficRoutingConfiguration = Objects.requireNonNull(trafficRoutingConfiguration, "expected parameter 'trafficRoutingConfiguration' to be non-null");
-    }
+    private EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs() {}
 
-    private EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs() {
-        this.maximumExecutionTimeoutInSeconds = Codegen.empty();
-        this.terminationWaitInSeconds = Codegen.empty();
-        this.trafficRoutingConfiguration = Codegen.empty();
+    private EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs(EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs $) {
+        this.maximumExecutionTimeoutInSeconds = $.maximumExecutionTimeoutInSeconds;
+        this.terminationWaitInSeconds = $.terminationWaitInSeconds;
+        this.trafficRoutingConfiguration = $.trafficRoutingConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maximumExecutionTimeoutInSeconds;
-        private @Nullable Output<Integer> terminationWaitInSeconds;
-        private Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs> trafficRoutingConfiguration;
+        private EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs();
         }
 
         public Builder(EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximumExecutionTimeoutInSeconds = defaults.maximumExecutionTimeoutInSeconds;
-    	      this.terminationWaitInSeconds = defaults.terminationWaitInSeconds;
-    	      this.trafficRoutingConfiguration = defaults.trafficRoutingConfiguration;
+            $ = new EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maximumExecutionTimeoutInSeconds(@Nullable Output<Integer> maximumExecutionTimeoutInSeconds) {
-            this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
+            $.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
             return this;
         }
-        public Builder maximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
-            this.maximumExecutionTimeoutInSeconds = Codegen.ofNullable(maximumExecutionTimeoutInSeconds);
-            return this;
+
+        public Builder maximumExecutionTimeoutInSeconds(Integer maximumExecutionTimeoutInSeconds) {
+            return maximumExecutionTimeoutInSeconds(Output.of(maximumExecutionTimeoutInSeconds));
         }
+
         public Builder terminationWaitInSeconds(@Nullable Output<Integer> terminationWaitInSeconds) {
-            this.terminationWaitInSeconds = terminationWaitInSeconds;
+            $.terminationWaitInSeconds = terminationWaitInSeconds;
             return this;
         }
-        public Builder terminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
-            this.terminationWaitInSeconds = Codegen.ofNullable(terminationWaitInSeconds);
-            return this;
+
+        public Builder terminationWaitInSeconds(Integer terminationWaitInSeconds) {
+            return terminationWaitInSeconds(Output.of(terminationWaitInSeconds));
         }
+
         public Builder trafficRoutingConfiguration(Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs> trafficRoutingConfiguration) {
-            this.trafficRoutingConfiguration = Objects.requireNonNull(trafficRoutingConfiguration);
+            $.trafficRoutingConfiguration = trafficRoutingConfiguration;
             return this;
         }
+
         public Builder trafficRoutingConfiguration(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs trafficRoutingConfiguration) {
-            this.trafficRoutingConfiguration = Output.of(Objects.requireNonNull(trafficRoutingConfiguration));
-            return this;
-        }        public EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs build() {
-            return new EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs(maximumExecutionTimeoutInSeconds, terminationWaitInSeconds, trafficRoutingConfiguration);
+            return trafficRoutingConfiguration(Output.of(trafficRoutingConfiguration));
+        }
+
+        public EndpointDeploymentConfigBlueGreenUpdatePolicyGetArgs build() {
+            $.trafficRoutingConfiguration = Objects.requireNonNull($.trafficRoutingConfiguration, "expected parameter 'trafficRoutingConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

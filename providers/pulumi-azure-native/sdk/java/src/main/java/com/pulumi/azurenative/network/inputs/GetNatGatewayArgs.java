@@ -19,10 +19,10 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natGatewayName", required=true)
-      private final String natGatewayName;
+    private String natGatewayName;
 
     public String natGatewayName() {
         return this.natGatewayName;
@@ -41,64 +41,58 @@ public final class GetNatGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNatGatewayArgs(
-        @Nullable String expand,
-        String natGatewayName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.natGatewayName = Objects.requireNonNull(natGatewayName, "expected parameter 'natGatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNatGatewayArgs() {}
 
-    private GetNatGatewayArgs() {
-        this.expand = null;
-        this.natGatewayName = null;
-        this.resourceGroupName = null;
+    private GetNatGatewayArgs(GetNatGatewayArgs $) {
+        this.expand = $.expand;
+        this.natGatewayName = $.natGatewayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNatGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String natGatewayName;
-        private String resourceGroupName;
+        private GetNatGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNatGatewayArgs();
         }
 
         public Builder(GetNatGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.natGatewayName = defaults.natGatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNatGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder natGatewayName(String natGatewayName) {
-            this.natGatewayName = Objects.requireNonNull(natGatewayName);
+            $.natGatewayName = natGatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNatGatewayArgs build() {
-            return new GetNatGatewayArgs(expand, natGatewayName, resourceGroupName);
+        }
+
+        public GetNatGatewayArgs build() {
+            $.natGatewayName = Objects.requireNonNull($.natGatewayName, "expected parameter 'natGatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

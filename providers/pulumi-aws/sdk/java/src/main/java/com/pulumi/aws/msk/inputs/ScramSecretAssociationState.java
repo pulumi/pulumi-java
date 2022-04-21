@@ -5,10 +5,10 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ScramSecretAssociationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="clusterArn")
-      private final @Nullable Output<String> clusterArn;
+    private @Nullable Output<String> clusterArn;
 
-    public Output<String> clusterArn() {
-        return this.clusterArn == null ? Codegen.empty() : this.clusterArn;
+    public Optional<Output<String>> clusterArn() {
+        return Optional.ofNullable(this.clusterArn);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class ScramSecretAssociationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="secretArnLists")
-      private final @Nullable Output<List<String>> secretArnLists;
+    private @Nullable Output<List<String>> secretArnLists;
 
-    public Output<List<String>> secretArnLists() {
-        return this.secretArnLists == null ? Codegen.empty() : this.secretArnLists;
+    public Optional<Output<List<String>>> secretArnLists() {
+        return Optional.ofNullable(this.secretArnLists);
     }
 
-    public ScramSecretAssociationState(
-        @Nullable Output<String> clusterArn,
-        @Nullable Output<List<String>> secretArnLists) {
-        this.clusterArn = clusterArn;
-        this.secretArnLists = secretArnLists;
-    }
+    private ScramSecretAssociationState() {}
 
-    private ScramSecretAssociationState() {
-        this.clusterArn = Codegen.empty();
-        this.secretArnLists = Codegen.empty();
+    private ScramSecretAssociationState(ScramSecretAssociationState $) {
+        this.clusterArn = $.clusterArn;
+        this.secretArnLists = $.secretArnLists;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScramSecretAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterArn;
-        private @Nullable Output<List<String>> secretArnLists;
+        private ScramSecretAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScramSecretAssociationState();
         }
 
         public Builder(ScramSecretAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterArn = defaults.clusterArn;
-    	      this.secretArnLists = defaults.secretArnLists;
+            $ = new ScramSecretAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
-            this.clusterArn = clusterArn;
+            $.clusterArn = clusterArn;
             return this;
         }
-        public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Codegen.ofNullable(clusterArn);
-            return this;
+
+        public Builder clusterArn(String clusterArn) {
+            return clusterArn(Output.of(clusterArn));
         }
+
         public Builder secretArnLists(@Nullable Output<List<String>> secretArnLists) {
-            this.secretArnLists = secretArnLists;
+            $.secretArnLists = secretArnLists;
             return this;
         }
-        public Builder secretArnLists(@Nullable List<String> secretArnLists) {
-            this.secretArnLists = Codegen.ofNullable(secretArnLists);
-            return this;
+
+        public Builder secretArnLists(List<String> secretArnLists) {
+            return secretArnLists(Output.of(secretArnLists));
         }
+
         public Builder secretArnLists(String... secretArnLists) {
             return secretArnLists(List.of(secretArnLists));
-        }        public ScramSecretAssociationState build() {
-            return new ScramSecretAssociationState(clusterArn, secretArnLists);
+        }
+
+        public ScramSecretAssociationState build() {
+            return $;
         }
     }
+
 }

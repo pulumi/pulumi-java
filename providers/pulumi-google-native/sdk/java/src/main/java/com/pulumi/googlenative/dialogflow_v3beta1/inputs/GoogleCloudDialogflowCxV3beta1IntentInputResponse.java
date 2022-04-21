@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse extends com
      * 
      */
     @Import(name="intent", required=true)
-      private final String intent;
+    private String intent;
 
     public String intent() {
         return this.intent;
     }
 
-    public GoogleCloudDialogflowCxV3beta1IntentInputResponse(String intent) {
-        this.intent = Objects.requireNonNull(intent, "expected parameter 'intent' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1IntentInputResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1IntentInputResponse() {
-        this.intent = null;
+    private GoogleCloudDialogflowCxV3beta1IntentInputResponse(GoogleCloudDialogflowCxV3beta1IntentInputResponse $) {
+        this.intent = $.intent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1IntentInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String intent;
+        private GoogleCloudDialogflowCxV3beta1IntentInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1IntentInputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1IntentInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intent = defaults.intent;
+            $ = new GoogleCloudDialogflowCxV3beta1IntentInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder intent(String intent) {
-            this.intent = Objects.requireNonNull(intent);
+            $.intent = intent;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1IntentInputResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1IntentInputResponse(intent);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1IntentInputResponse build() {
+            $.intent = Objects.requireNonNull($.intent, "expected parameter 'intent' to be non-null");
+            return $;
         }
     }
+
 }

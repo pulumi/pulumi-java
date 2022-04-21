@@ -7,8 +7,8 @@ import com.pulumi.awsnative.acmpca.inputs.CertificateExtensionsArgs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateSubjectArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class CertificateApiPassthroughArgs extends com.pulumi.resources.Re
     public static final CertificateApiPassthroughArgs Empty = new CertificateApiPassthroughArgs();
 
     @Import(name="extensions")
-      private final @Nullable Output<CertificateExtensionsArgs> extensions;
+    private @Nullable Output<CertificateExtensionsArgs> extensions;
 
-    public Output<CertificateExtensionsArgs> extensions() {
-        return this.extensions == null ? Codegen.empty() : this.extensions;
+    public Optional<Output<CertificateExtensionsArgs>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     @Import(name="subject")
-      private final @Nullable Output<CertificateSubjectArgs> subject;
+    private @Nullable Output<CertificateSubjectArgs> subject;
 
-    public Output<CertificateSubjectArgs> subject() {
-        return this.subject == null ? Codegen.empty() : this.subject;
+    public Optional<Output<CertificateSubjectArgs>> subject() {
+        return Optional.ofNullable(this.subject);
     }
 
-    public CertificateApiPassthroughArgs(
-        @Nullable Output<CertificateExtensionsArgs> extensions,
-        @Nullable Output<CertificateSubjectArgs> subject) {
-        this.extensions = extensions;
-        this.subject = subject;
-    }
+    private CertificateApiPassthroughArgs() {}
 
-    private CertificateApiPassthroughArgs() {
-        this.extensions = Codegen.empty();
-        this.subject = Codegen.empty();
+    private CertificateApiPassthroughArgs(CertificateApiPassthroughArgs $) {
+        this.extensions = $.extensions;
+        this.subject = $.subject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateApiPassthroughArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateExtensionsArgs> extensions;
-        private @Nullable Output<CertificateSubjectArgs> subject;
+        private CertificateApiPassthroughArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateApiPassthroughArgs();
         }
 
         public Builder(CertificateApiPassthroughArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensions = defaults.extensions;
-    	      this.subject = defaults.subject;
+            $ = new CertificateApiPassthroughArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extensions(@Nullable Output<CertificateExtensionsArgs> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
-        public Builder extensions(@Nullable CertificateExtensionsArgs extensions) {
-            this.extensions = Codegen.ofNullable(extensions);
-            return this;
+
+        public Builder extensions(CertificateExtensionsArgs extensions) {
+            return extensions(Output.of(extensions));
         }
+
         public Builder subject(@Nullable Output<CertificateSubjectArgs> subject) {
-            this.subject = subject;
+            $.subject = subject;
             return this;
         }
-        public Builder subject(@Nullable CertificateSubjectArgs subject) {
-            this.subject = Codegen.ofNullable(subject);
-            return this;
-        }        public CertificateApiPassthroughArgs build() {
-            return new CertificateApiPassthroughArgs(extensions, subject);
+
+        public Builder subject(CertificateSubjectArgs subject) {
+            return subject(Output.of(subject));
+        }
+
+        public CertificateApiPassthroughArgs build() {
+            return $;
         }
     }
+
 }

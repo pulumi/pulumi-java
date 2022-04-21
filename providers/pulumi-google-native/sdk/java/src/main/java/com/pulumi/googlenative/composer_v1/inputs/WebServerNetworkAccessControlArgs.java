@@ -5,10 +5,10 @@ package com.pulumi.googlenative.composer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.composer_v1.inputs.AllowedIpRangeArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class WebServerNetworkAccessControlArgs extends com.pulumi.resource
      * 
      */
     @Import(name="allowedIpRanges")
-      private final @Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges;
+    private @Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges;
 
-    public Output<List<AllowedIpRangeArgs>> allowedIpRanges() {
-        return this.allowedIpRanges == null ? Codegen.empty() : this.allowedIpRanges;
+    public Optional<Output<List<AllowedIpRangeArgs>>> allowedIpRanges() {
+        return Optional.ofNullable(this.allowedIpRanges);
     }
 
-    public WebServerNetworkAccessControlArgs(@Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges) {
-        this.allowedIpRanges = allowedIpRanges;
-    }
+    private WebServerNetworkAccessControlArgs() {}
 
-    private WebServerNetworkAccessControlArgs() {
-        this.allowedIpRanges = Codegen.empty();
+    private WebServerNetworkAccessControlArgs(WebServerNetworkAccessControlArgs $) {
+        this.allowedIpRanges = $.allowedIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServerNetworkAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges;
+        private WebServerNetworkAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServerNetworkAccessControlArgs();
         }
 
         public Builder(WebServerNetworkAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIpRanges = defaults.allowedIpRanges;
+            $ = new WebServerNetworkAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIpRanges(@Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges) {
-            this.allowedIpRanges = allowedIpRanges;
+            $.allowedIpRanges = allowedIpRanges;
             return this;
         }
-        public Builder allowedIpRanges(@Nullable List<AllowedIpRangeArgs> allowedIpRanges) {
-            this.allowedIpRanges = Codegen.ofNullable(allowedIpRanges);
-            return this;
+
+        public Builder allowedIpRanges(List<AllowedIpRangeArgs> allowedIpRanges) {
+            return allowedIpRanges(Output.of(allowedIpRanges));
         }
+
         public Builder allowedIpRanges(AllowedIpRangeArgs... allowedIpRanges) {
             return allowedIpRanges(List.of(allowedIpRanges));
-        }        public WebServerNetworkAccessControlArgs build() {
-            return new WebServerNetworkAccessControlArgs(allowedIpRanges);
+        }
+
+        public WebServerNetworkAccessControlArgs build() {
+            return $;
         }
     }
+
 }

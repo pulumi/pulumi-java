@@ -7,9 +7,9 @@ import com.pulumi.azurenative.appplatform.inputs.BuildpacksGroupPropertiesArgs;
 import com.pulumi.azurenative.appplatform.inputs.StackPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BuilderPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="buildpackGroups")
-      private final @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
+    private @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
 
-    public Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups() {
-        return this.buildpackGroups == null ? Codegen.empty() : this.buildpackGroups;
+    public Optional<Output<List<BuildpacksGroupPropertiesArgs>>> buildpackGroups() {
+        return Optional.ofNullable(this.buildpackGroups);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class BuilderPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="stack")
-      private final @Nullable Output<StackPropertiesArgs> stack;
+    private @Nullable Output<StackPropertiesArgs> stack;
 
-    public Output<StackPropertiesArgs> stack() {
-        return this.stack == null ? Codegen.empty() : this.stack;
+    public Optional<Output<StackPropertiesArgs>> stack() {
+        return Optional.ofNullable(this.stack);
     }
 
-    public BuilderPropertiesArgs(
-        @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups,
-        @Nullable Output<StackPropertiesArgs> stack) {
-        this.buildpackGroups = buildpackGroups;
-        this.stack = stack;
-    }
+    private BuilderPropertiesArgs() {}
 
-    private BuilderPropertiesArgs() {
-        this.buildpackGroups = Codegen.empty();
-        this.stack = Codegen.empty();
+    private BuilderPropertiesArgs(BuilderPropertiesArgs $) {
+        this.buildpackGroups = $.buildpackGroups;
+        this.stack = $.stack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuilderPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
-        private @Nullable Output<StackPropertiesArgs> stack;
+        private BuilderPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuilderPropertiesArgs();
         }
 
         public Builder(BuilderPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildpackGroups = defaults.buildpackGroups;
-    	      this.stack = defaults.stack;
+            $ = new BuilderPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildpackGroups(@Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups) {
-            this.buildpackGroups = buildpackGroups;
+            $.buildpackGroups = buildpackGroups;
             return this;
         }
-        public Builder buildpackGroups(@Nullable List<BuildpacksGroupPropertiesArgs> buildpackGroups) {
-            this.buildpackGroups = Codegen.ofNullable(buildpackGroups);
-            return this;
+
+        public Builder buildpackGroups(List<BuildpacksGroupPropertiesArgs> buildpackGroups) {
+            return buildpackGroups(Output.of(buildpackGroups));
         }
+
         public Builder buildpackGroups(BuildpacksGroupPropertiesArgs... buildpackGroups) {
             return buildpackGroups(List.of(buildpackGroups));
         }
+
         public Builder stack(@Nullable Output<StackPropertiesArgs> stack) {
-            this.stack = stack;
+            $.stack = stack;
             return this;
         }
-        public Builder stack(@Nullable StackPropertiesArgs stack) {
-            this.stack = Codegen.ofNullable(stack);
-            return this;
-        }        public BuilderPropertiesArgs build() {
-            return new BuilderPropertiesArgs(buildpackGroups, stack);
+
+        public Builder stack(StackPropertiesArgs stack) {
+            return stack(Output.of(stack));
+        }
+
+        public BuilderPropertiesArgs build() {
+            return $;
         }
     }
+
 }

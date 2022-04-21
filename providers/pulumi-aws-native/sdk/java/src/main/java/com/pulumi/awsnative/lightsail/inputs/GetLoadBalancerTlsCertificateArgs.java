@@ -17,7 +17,7 @@ public final class GetLoadBalancerTlsCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="certificateName", required=true)
-      private final String certificateName;
+    private String certificateName;
 
     public String certificateName() {
         return this.certificateName;
@@ -28,55 +28,52 @@ public final class GetLoadBalancerTlsCertificateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="loadBalancerName", required=true)
-      private final String loadBalancerName;
+    private String loadBalancerName;
 
     public String loadBalancerName() {
         return this.loadBalancerName;
     }
 
-    public GetLoadBalancerTlsCertificateArgs(
-        String certificateName,
-        String loadBalancerName) {
-        this.certificateName = Objects.requireNonNull(certificateName, "expected parameter 'certificateName' to be non-null");
-        this.loadBalancerName = Objects.requireNonNull(loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
-    }
+    private GetLoadBalancerTlsCertificateArgs() {}
 
-    private GetLoadBalancerTlsCertificateArgs() {
-        this.certificateName = null;
-        this.loadBalancerName = null;
+    private GetLoadBalancerTlsCertificateArgs(GetLoadBalancerTlsCertificateArgs $) {
+        this.certificateName = $.certificateName;
+        this.loadBalancerName = $.loadBalancerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoadBalancerTlsCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateName;
-        private String loadBalancerName;
+        private GetLoadBalancerTlsCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoadBalancerTlsCertificateArgs();
         }
 
         public Builder(GetLoadBalancerTlsCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.loadBalancerName = defaults.loadBalancerName;
+            $ = new GetLoadBalancerTlsCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(String certificateName) {
-            this.certificateName = Objects.requireNonNull(certificateName);
+            $.certificateName = certificateName;
             return this;
         }
+
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
+            $.loadBalancerName = loadBalancerName;
             return this;
-        }        public GetLoadBalancerTlsCertificateArgs build() {
-            return new GetLoadBalancerTlsCertificateArgs(certificateName, loadBalancerName);
+        }
+
+        public GetLoadBalancerTlsCertificateArgs build() {
+            $.certificateName = Objects.requireNonNull($.certificateName, "expected parameter 'certificateName' to be non-null");
+            $.loadBalancerName = Objects.requireNonNull($.loadBalancerName, "expected parameter 'loadBalancerName' to be non-null");
+            return $;
         }
     }
+
 }

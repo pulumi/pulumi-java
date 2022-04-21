@@ -5,9 +5,9 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualMachineScaleSetIpTagArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="ipTagType")
-      private final @Nullable Output<String> ipTagType;
+    private @Nullable Output<String> ipTagType;
 
-    public Output<String> ipTagType() {
-        return this.ipTagType == null ? Codegen.empty() : this.ipTagType;
+    public Optional<Output<String>> ipTagType() {
+        return Optional.ofNullable(this.ipTagType);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class VirtualMachineScaleSetIpTagArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public VirtualMachineScaleSetIpTagArgs(
-        @Nullable Output<String> ipTagType,
-        @Nullable Output<String> tag) {
-        this.ipTagType = ipTagType;
-        this.tag = tag;
-    }
+    private VirtualMachineScaleSetIpTagArgs() {}
 
-    private VirtualMachineScaleSetIpTagArgs() {
-        this.ipTagType = Codegen.empty();
-        this.tag = Codegen.empty();
+    private VirtualMachineScaleSetIpTagArgs(VirtualMachineScaleSetIpTagArgs $) {
+        this.ipTagType = $.ipTagType;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetIpTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipTagType;
-        private @Nullable Output<String> tag;
+        private VirtualMachineScaleSetIpTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetIpTagArgs();
         }
 
         public Builder(VirtualMachineScaleSetIpTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipTagType = defaults.ipTagType;
-    	      this.tag = defaults.tag;
+            $ = new VirtualMachineScaleSetIpTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipTagType(@Nullable Output<String> ipTagType) {
-            this.ipTagType = ipTagType;
+            $.ipTagType = ipTagType;
             return this;
         }
-        public Builder ipTagType(@Nullable String ipTagType) {
-            this.ipTagType = Codegen.ofNullable(ipTagType);
-            return this;
+
+        public Builder ipTagType(String ipTagType) {
+            return ipTagType(Output.of(ipTagType));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public VirtualMachineScaleSetIpTagArgs build() {
-            return new VirtualMachineScaleSetIpTagArgs(ipTagType, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public VirtualMachineScaleSetIpTagArgs build() {
+            return $;
         }
     }
+
 }

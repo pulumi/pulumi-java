@@ -24,10 +24,10 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encryptedSecret")
-      private final @Nullable AsymmetricEncryptedSecretResponse encryptedSecret;
+    private @Nullable AsymmetricEncryptedSecretResponse encryptedSecret;
 
     public Optional<AsymmetricEncryptedSecretResponse> encryptedSecret() {
-        return this.encryptedSecret == null ? Optional.empty() : Optional.ofNullable(this.encryptedSecret);
+        return Optional.ofNullable(this.encryptedSecret);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyVaultId")
-      private final @Nullable String keyVaultId;
+    private @Nullable String keyVaultId;
 
     public Optional<String> keyVaultId() {
-        return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
+        return Optional.ofNullable(this.keyVaultId);
     }
 
-    public SecretResponse(
-        @Nullable AsymmetricEncryptedSecretResponse encryptedSecret,
-        @Nullable String keyVaultId) {
-        this.encryptedSecret = encryptedSecret;
-        this.keyVaultId = keyVaultId;
-    }
+    private SecretResponse() {}
 
-    private SecretResponse() {
-        this.encryptedSecret = null;
-        this.keyVaultId = null;
+    private SecretResponse(SecretResponse $) {
+        this.encryptedSecret = $.encryptedSecret;
+        this.keyVaultId = $.keyVaultId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AsymmetricEncryptedSecretResponse encryptedSecret;
-        private @Nullable String keyVaultId;
+        private SecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretResponse();
         }
 
         public Builder(SecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptedSecret = defaults.encryptedSecret;
-    	      this.keyVaultId = defaults.keyVaultId;
+            $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptedSecret(@Nullable AsymmetricEncryptedSecretResponse encryptedSecret) {
-            this.encryptedSecret = encryptedSecret;
+            $.encryptedSecret = encryptedSecret;
             return this;
         }
+
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = keyVaultId;
+            $.keyVaultId = keyVaultId;
             return this;
-        }        public SecretResponse build() {
-            return new SecretResponse(encryptedSecret, keyVaultId);
+        }
+
+        public SecretResponse build() {
+            return $;
         }
     }
+
 }

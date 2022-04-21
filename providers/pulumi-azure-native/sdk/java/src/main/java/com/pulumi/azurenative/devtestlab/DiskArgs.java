@@ -7,11 +7,11 @@ import com.pulumi.azurenative.devtestlab.enums.StorageType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskBlobName")
-      private final @Nullable Output<String> diskBlobName;
+    private @Nullable Output<String> diskBlobName;
 
-    public Output<String> diskBlobName() {
-        return this.diskBlobName == null ? Codegen.empty() : this.diskBlobName;
+    public Optional<Output<String>> diskBlobName() {
+        return Optional.ofNullable(this.diskBlobName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGiB")
-      private final @Nullable Output<Integer> diskSizeGiB;
+    private @Nullable Output<Integer> diskSizeGiB;
 
-    public Output<Integer> diskSizeGiB() {
-        return this.diskSizeGiB == null ? Codegen.empty() : this.diskSizeGiB;
+    public Optional<Output<Integer>> diskSizeGiB() {
+        return Optional.ofNullable(this.diskSizeGiB);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<Either<String,StorageType>> diskType;
+    private @Nullable Output<Either<String,StorageType>> diskType;
 
-    public Output<Either<String,StorageType>> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<Either<String,StorageType>>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskUri")
-      private final @Nullable Output<String> diskUri;
+    private @Nullable Output<String> diskUri;
 
-    public Output<String> diskUri() {
-        return this.diskUri == null ? Codegen.empty() : this.diskUri;
+    public Optional<Output<String>> diskUri() {
+        return Optional.ofNullable(this.diskUri);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostCaching")
-      private final @Nullable Output<String> hostCaching;
+    private @Nullable Output<String> hostCaching;
 
-    public Output<String> hostCaching() {
-        return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
+    public Optional<Output<String>> hostCaching() {
+        return Optional.ofNullable(this.hostCaching);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labName", required=true)
-      private final Output<String> labName;
+    private Output<String> labName;
 
     public Output<String> labName() {
         return this.labName;
@@ -90,10 +90,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="leasedByLabVmId")
-      private final @Nullable Output<String> leasedByLabVmId;
+    private @Nullable Output<String> leasedByLabVmId;
 
-    public Output<String> leasedByLabVmId() {
-        return this.leasedByLabVmId == null ? Codegen.empty() : this.leasedByLabVmId;
+    public Optional<Output<String>> leasedByLabVmId() {
+        return Optional.ofNullable(this.leasedByLabVmId);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedDiskId")
-      private final @Nullable Output<String> managedDiskId;
+    private @Nullable Output<String> managedDiskId;
 
-    public Output<String> managedDiskId() {
-        return this.managedDiskId == null ? Codegen.empty() : this.managedDiskId;
+    public Optional<Output<String>> managedDiskId() {
+        return Optional.ofNullable(this.managedDiskId);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -134,7 +134,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -145,10 +145,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountId")
-      private final @Nullable Output<String> storageAccountId;
+    private @Nullable Output<String> storageAccountId;
 
-    public Output<String> storageAccountId() {
-        return this.storageAccountId == null ? Codegen.empty() : this.storageAccountId;
+    public Optional<Output<String>> storageAccountId() {
+        return Optional.ofNullable(this.storageAccountId);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -167,219 +167,181 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final Output<String> userName;
+    private Output<String> userName;
 
     public Output<String> userName() {
         return this.userName;
     }
 
-    public DiskArgs(
-        @Nullable Output<String> diskBlobName,
-        @Nullable Output<Integer> diskSizeGiB,
-        @Nullable Output<Either<String,StorageType>> diskType,
-        @Nullable Output<String> diskUri,
-        @Nullable Output<String> hostCaching,
-        Output<String> labName,
-        @Nullable Output<String> leasedByLabVmId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> managedDiskId,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> storageAccountId,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> userName) {
-        this.diskBlobName = diskBlobName;
-        this.diskSizeGiB = diskSizeGiB;
-        this.diskType = diskType;
-        this.diskUri = diskUri;
-        this.hostCaching = hostCaching;
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.leasedByLabVmId = leasedByLabVmId;
-        this.location = location;
-        this.managedDiskId = managedDiskId;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountId = storageAccountId;
-        this.tags = tags;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private DiskArgs() {}
 
-    private DiskArgs() {
-        this.diskBlobName = Codegen.empty();
-        this.diskSizeGiB = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.diskUri = Codegen.empty();
-        this.hostCaching = Codegen.empty();
-        this.labName = Codegen.empty();
-        this.leasedByLabVmId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managedDiskId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccountId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userName = Codegen.empty();
+    private DiskArgs(DiskArgs $) {
+        this.diskBlobName = $.diskBlobName;
+        this.diskSizeGiB = $.diskSizeGiB;
+        this.diskType = $.diskType;
+        this.diskUri = $.diskUri;
+        this.hostCaching = $.hostCaching;
+        this.labName = $.labName;
+        this.leasedByLabVmId = $.leasedByLabVmId;
+        this.location = $.location;
+        this.managedDiskId = $.managedDiskId;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountId = $.storageAccountId;
+        this.tags = $.tags;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskBlobName;
-        private @Nullable Output<Integer> diskSizeGiB;
-        private @Nullable Output<Either<String,StorageType>> diskType;
-        private @Nullable Output<String> diskUri;
-        private @Nullable Output<String> hostCaching;
-        private Output<String> labName;
-        private @Nullable Output<String> leasedByLabVmId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> managedDiskId;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> storageAccountId;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> userName;
+        private DiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskArgs();
         }
 
         public Builder(DiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskBlobName = defaults.diskBlobName;
-    	      this.diskSizeGiB = defaults.diskSizeGiB;
-    	      this.diskType = defaults.diskType;
-    	      this.diskUri = defaults.diskUri;
-    	      this.hostCaching = defaults.hostCaching;
-    	      this.labName = defaults.labName;
-    	      this.leasedByLabVmId = defaults.leasedByLabVmId;
-    	      this.location = defaults.location;
-    	      this.managedDiskId = defaults.managedDiskId;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountId = defaults.storageAccountId;
-    	      this.tags = defaults.tags;
-    	      this.userName = defaults.userName;
+            $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskBlobName(@Nullable Output<String> diskBlobName) {
-            this.diskBlobName = diskBlobName;
+            $.diskBlobName = diskBlobName;
             return this;
         }
-        public Builder diskBlobName(@Nullable String diskBlobName) {
-            this.diskBlobName = Codegen.ofNullable(diskBlobName);
-            return this;
+
+        public Builder diskBlobName(String diskBlobName) {
+            return diskBlobName(Output.of(diskBlobName));
         }
+
         public Builder diskSizeGiB(@Nullable Output<Integer> diskSizeGiB) {
-            this.diskSizeGiB = diskSizeGiB;
+            $.diskSizeGiB = diskSizeGiB;
             return this;
         }
-        public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
-            this.diskSizeGiB = Codegen.ofNullable(diskSizeGiB);
-            return this;
+
+        public Builder diskSizeGiB(Integer diskSizeGiB) {
+            return diskSizeGiB(Output.of(diskSizeGiB));
         }
+
         public Builder diskType(@Nullable Output<Either<String,StorageType>> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable Either<String,StorageType> diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(Either<String,StorageType> diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder diskUri(@Nullable Output<String> diskUri) {
-            this.diskUri = diskUri;
+            $.diskUri = diskUri;
             return this;
         }
-        public Builder diskUri(@Nullable String diskUri) {
-            this.diskUri = Codegen.ofNullable(diskUri);
-            return this;
+
+        public Builder diskUri(String diskUri) {
+            return diskUri(Output.of(diskUri));
         }
+
         public Builder hostCaching(@Nullable Output<String> hostCaching) {
-            this.hostCaching = hostCaching;
+            $.hostCaching = hostCaching;
             return this;
         }
-        public Builder hostCaching(@Nullable String hostCaching) {
-            this.hostCaching = Codegen.ofNullable(hostCaching);
-            return this;
+
+        public Builder hostCaching(String hostCaching) {
+            return hostCaching(Output.of(hostCaching));
         }
+
         public Builder labName(Output<String> labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Output.of(Objects.requireNonNull(labName));
-            return this;
+            return labName(Output.of(labName));
         }
+
         public Builder leasedByLabVmId(@Nullable Output<String> leasedByLabVmId) {
-            this.leasedByLabVmId = leasedByLabVmId;
+            $.leasedByLabVmId = leasedByLabVmId;
             return this;
         }
-        public Builder leasedByLabVmId(@Nullable String leasedByLabVmId) {
-            this.leasedByLabVmId = Codegen.ofNullable(leasedByLabVmId);
-            return this;
+
+        public Builder leasedByLabVmId(String leasedByLabVmId) {
+            return leasedByLabVmId(Output.of(leasedByLabVmId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managedDiskId(@Nullable Output<String> managedDiskId) {
-            this.managedDiskId = managedDiskId;
+            $.managedDiskId = managedDiskId;
             return this;
         }
-        public Builder managedDiskId(@Nullable String managedDiskId) {
-            this.managedDiskId = Codegen.ofNullable(managedDiskId);
-            return this;
+
+        public Builder managedDiskId(String managedDiskId) {
+            return managedDiskId(Output.of(managedDiskId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
-            this.storageAccountId = storageAccountId;
+            $.storageAccountId = storageAccountId;
             return this;
         }
-        public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = Codegen.ofNullable(storageAccountId);
-            return this;
+
+        public Builder storageAccountId(String storageAccountId) {
+            return storageAccountId(Output.of(storageAccountId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userName(Output<String> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
-        }        public DiskArgs build() {
-            return new DiskArgs(diskBlobName, diskSizeGiB, diskType, diskUri, hostCaching, labName, leasedByLabVmId, location, managedDiskId, name, resourceGroupName, storageAccountId, tags, userName);
+            return userName(Output.of(userName));
+        }
+
+        public DiskArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

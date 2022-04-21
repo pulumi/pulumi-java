@@ -17,45 +17,45 @@ public final class GetAlarmArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alarmName", required=true)
-      private final String alarmName;
+    private String alarmName;
 
     public String alarmName() {
         return this.alarmName;
     }
 
-    public GetAlarmArgs(String alarmName) {
-        this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
-    }
+    private GetAlarmArgs() {}
 
-    private GetAlarmArgs() {
-        this.alarmName = null;
+    private GetAlarmArgs(GetAlarmArgs $) {
+        this.alarmName = $.alarmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAlarmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alarmName;
+        private GetAlarmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAlarmArgs();
         }
 
         public Builder(GetAlarmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmName = defaults.alarmName;
+            $ = new GetAlarmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmName(String alarmName) {
-            this.alarmName = Objects.requireNonNull(alarmName);
+            $.alarmName = alarmName;
             return this;
-        }        public GetAlarmArgs build() {
-            return new GetAlarmArgs(alarmName);
+        }
+
+        public GetAlarmArgs build() {
+            $.alarmName = Objects.requireNonNull($.alarmName, "expected parameter 'alarmName' to be non-null");
+            return $;
         }
     }
+
 }

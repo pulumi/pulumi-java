@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="disksToInclude")
-      private final @Nullable Output<List<String>> disksToInclude;
+    private @Nullable Output<List<String>> disksToInclude;
 
-    public Output<List<String>> disksToInclude() {
-        return this.disksToInclude == null ? Codegen.empty() : this.disksToInclude;
+    public Optional<Output<List<String>>> disksToInclude() {
+        return Optional.ofNullable(this.disksToInclude);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="enableRdpOnTargetOption")
-      private final @Nullable Output<String> enableRdpOnTargetOption;
+    private @Nullable Output<String> enableRdpOnTargetOption;
 
-    public Output<String> enableRdpOnTargetOption() {
-        return this.enableRdpOnTargetOption == null ? Codegen.empty() : this.enableRdpOnTargetOption;
+    public Optional<Output<String>> enableRdpOnTargetOption() {
+        return Optional.ofNullable(this.enableRdpOnTargetOption);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="hvHostVmId")
-      private final @Nullable Output<String> hvHostVmId;
+    private @Nullable Output<String> hvHostVmId;
 
-    public Output<String> hvHostVmId() {
-        return this.hvHostVmId == null ? Codegen.empty() : this.hvHostVmId;
+    public Optional<Output<String>> hvHostVmId() {
+        return Optional.ofNullable(this.hvHostVmId);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="logStorageAccountId")
-      private final @Nullable Output<String> logStorageAccountId;
+    private @Nullable Output<String> logStorageAccountId;
 
-    public Output<String> logStorageAccountId() {
-        return this.logStorageAccountId == null ? Codegen.empty() : this.logStorageAccountId;
+    public Optional<Output<String>> logStorageAccountId() {
+        return Optional.ofNullable(this.logStorageAccountId);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<String> osType;
+    private @Nullable Output<String> osType;
 
-    public Output<String> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<String>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetAvailabilitySetId")
-      private final @Nullable Output<String> targetAvailabilitySetId;
+    private @Nullable Output<String> targetAvailabilitySetId;
 
-    public Output<String> targetAvailabilitySetId() {
-        return this.targetAvailabilitySetId == null ? Codegen.empty() : this.targetAvailabilitySetId;
+    public Optional<Output<String>> targetAvailabilitySetId() {
+        return Optional.ofNullable(this.targetAvailabilitySetId);
     }
 
     /**
@@ -103,10 +104,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetAvailabilityZone")
-      private final @Nullable Output<String> targetAvailabilityZone;
+    private @Nullable Output<String> targetAvailabilityZone;
 
-    public Output<String> targetAvailabilityZone() {
-        return this.targetAvailabilityZone == null ? Codegen.empty() : this.targetAvailabilityZone;
+    public Optional<Output<String>> targetAvailabilityZone() {
+        return Optional.ofNullable(this.targetAvailabilityZone);
     }
 
     /**
@@ -114,10 +115,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetAzureNetworkId")
-      private final @Nullable Output<String> targetAzureNetworkId;
+    private @Nullable Output<String> targetAzureNetworkId;
 
-    public Output<String> targetAzureNetworkId() {
-        return this.targetAzureNetworkId == null ? Codegen.empty() : this.targetAzureNetworkId;
+    public Optional<Output<String>> targetAzureNetworkId() {
+        return Optional.ofNullable(this.targetAzureNetworkId);
     }
 
     /**
@@ -125,10 +126,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetAzureSubnetId")
-      private final @Nullable Output<String> targetAzureSubnetId;
+    private @Nullable Output<String> targetAzureSubnetId;
 
-    public Output<String> targetAzureSubnetId() {
-        return this.targetAzureSubnetId == null ? Codegen.empty() : this.targetAzureSubnetId;
+    public Optional<Output<String>> targetAzureSubnetId() {
+        return Optional.ofNullable(this.targetAzureSubnetId);
     }
 
     /**
@@ -136,10 +137,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetAzureV1ResourceGroupId")
-      private final @Nullable Output<String> targetAzureV1ResourceGroupId;
+    private @Nullable Output<String> targetAzureV1ResourceGroupId;
 
-    public Output<String> targetAzureV1ResourceGroupId() {
-        return this.targetAzureV1ResourceGroupId == null ? Codegen.empty() : this.targetAzureV1ResourceGroupId;
+    public Optional<Output<String>> targetAzureV1ResourceGroupId() {
+        return Optional.ofNullable(this.targetAzureV1ResourceGroupId);
     }
 
     /**
@@ -147,10 +148,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetAzureV2ResourceGroupId")
-      private final @Nullable Output<String> targetAzureV2ResourceGroupId;
+    private @Nullable Output<String> targetAzureV2ResourceGroupId;
 
-    public Output<String> targetAzureV2ResourceGroupId() {
-        return this.targetAzureV2ResourceGroupId == null ? Codegen.empty() : this.targetAzureV2ResourceGroupId;
+    public Optional<Output<String>> targetAzureV2ResourceGroupId() {
+        return Optional.ofNullable(this.targetAzureV2ResourceGroupId);
     }
 
     /**
@@ -158,10 +159,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetAzureVmName")
-      private final @Nullable Output<String> targetAzureVmName;
+    private @Nullable Output<String> targetAzureVmName;
 
-    public Output<String> targetAzureVmName() {
-        return this.targetAzureVmName == null ? Codegen.empty() : this.targetAzureVmName;
+    public Optional<Output<String>> targetAzureVmName() {
+        return Optional.ofNullable(this.targetAzureVmName);
     }
 
     /**
@@ -169,10 +170,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetProximityPlacementGroupId")
-      private final @Nullable Output<String> targetProximityPlacementGroupId;
+    private @Nullable Output<String> targetProximityPlacementGroupId;
 
-    public Output<String> targetProximityPlacementGroupId() {
-        return this.targetProximityPlacementGroupId == null ? Codegen.empty() : this.targetProximityPlacementGroupId;
+    public Optional<Output<String>> targetProximityPlacementGroupId() {
+        return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
 
     /**
@@ -180,10 +181,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetStorageAccountId")
-      private final @Nullable Output<String> targetStorageAccountId;
+    private @Nullable Output<String> targetStorageAccountId;
 
-    public Output<String> targetStorageAccountId() {
-        return this.targetStorageAccountId == null ? Codegen.empty() : this.targetStorageAccountId;
+    public Optional<Output<String>> targetStorageAccountId() {
+        return Optional.ofNullable(this.targetStorageAccountId);
     }
 
     /**
@@ -191,10 +192,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="targetVmSize")
-      private final @Nullable Output<String> targetVmSize;
+    private @Nullable Output<String> targetVmSize;
 
-    public Output<String> targetVmSize() {
-        return this.targetVmSize == null ? Codegen.empty() : this.targetVmSize;
+    public Optional<Output<String>> targetVmSize() {
+        return Optional.ofNullable(this.targetVmSize);
     }
 
     /**
@@ -202,10 +203,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="useManagedDisks")
-      private final @Nullable Output<String> useManagedDisks;
+    private @Nullable Output<String> useManagedDisks;
 
-    public Output<String> useManagedDisks() {
-        return this.useManagedDisks == null ? Codegen.empty() : this.useManagedDisks;
+    public Optional<Output<String>> useManagedDisks() {
+        return Optional.ofNullable(this.useManagedDisks);
     }
 
     /**
@@ -213,10 +214,10 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="vhdId")
-      private final @Nullable Output<String> vhdId;
+    private @Nullable Output<String> vhdId;
 
-    public Output<String> vhdId() {
-        return this.vhdId == null ? Codegen.empty() : this.vhdId;
+    public Optional<Output<String>> vhdId() {
+        return Optional.ofNullable(this.vhdId);
     }
 
     /**
@@ -224,287 +225,233 @@ public final class HyperVReplicaAzureEnableProtectionInputArgs extends com.pulum
      * 
      */
     @Import(name="vmName")
-      private final @Nullable Output<String> vmName;
+    private @Nullable Output<String> vmName;
 
-    public Output<String> vmName() {
-        return this.vmName == null ? Codegen.empty() : this.vmName;
+    public Optional<Output<String>> vmName() {
+        return Optional.ofNullable(this.vmName);
     }
 
-    public HyperVReplicaAzureEnableProtectionInputArgs(
-        @Nullable Output<List<String>> disksToInclude,
-        @Nullable Output<String> enableRdpOnTargetOption,
-        @Nullable Output<String> hvHostVmId,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> logStorageAccountId,
-        @Nullable Output<String> osType,
-        @Nullable Output<String> targetAvailabilitySetId,
-        @Nullable Output<String> targetAvailabilityZone,
-        @Nullable Output<String> targetAzureNetworkId,
-        @Nullable Output<String> targetAzureSubnetId,
-        @Nullable Output<String> targetAzureV1ResourceGroupId,
-        @Nullable Output<String> targetAzureV2ResourceGroupId,
-        @Nullable Output<String> targetAzureVmName,
-        @Nullable Output<String> targetProximityPlacementGroupId,
-        @Nullable Output<String> targetStorageAccountId,
-        @Nullable Output<String> targetVmSize,
-        @Nullable Output<String> useManagedDisks,
-        @Nullable Output<String> vhdId,
-        @Nullable Output<String> vmName) {
-        this.disksToInclude = disksToInclude;
-        this.enableRdpOnTargetOption = enableRdpOnTargetOption;
-        this.hvHostVmId = hvHostVmId;
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.logStorageAccountId = logStorageAccountId;
-        this.osType = osType;
-        this.targetAvailabilitySetId = targetAvailabilitySetId;
-        this.targetAvailabilityZone = targetAvailabilityZone;
-        this.targetAzureNetworkId = targetAzureNetworkId;
-        this.targetAzureSubnetId = targetAzureSubnetId;
-        this.targetAzureV1ResourceGroupId = targetAzureV1ResourceGroupId;
-        this.targetAzureV2ResourceGroupId = targetAzureV2ResourceGroupId;
-        this.targetAzureVmName = targetAzureVmName;
-        this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
-        this.targetStorageAccountId = targetStorageAccountId;
-        this.targetVmSize = targetVmSize;
-        this.useManagedDisks = useManagedDisks;
-        this.vhdId = vhdId;
-        this.vmName = vmName;
-    }
+    private HyperVReplicaAzureEnableProtectionInputArgs() {}
 
-    private HyperVReplicaAzureEnableProtectionInputArgs() {
-        this.disksToInclude = Codegen.empty();
-        this.enableRdpOnTargetOption = Codegen.empty();
-        this.hvHostVmId = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.logStorageAccountId = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.targetAvailabilitySetId = Codegen.empty();
-        this.targetAvailabilityZone = Codegen.empty();
-        this.targetAzureNetworkId = Codegen.empty();
-        this.targetAzureSubnetId = Codegen.empty();
-        this.targetAzureV1ResourceGroupId = Codegen.empty();
-        this.targetAzureV2ResourceGroupId = Codegen.empty();
-        this.targetAzureVmName = Codegen.empty();
-        this.targetProximityPlacementGroupId = Codegen.empty();
-        this.targetStorageAccountId = Codegen.empty();
-        this.targetVmSize = Codegen.empty();
-        this.useManagedDisks = Codegen.empty();
-        this.vhdId = Codegen.empty();
-        this.vmName = Codegen.empty();
+    private HyperVReplicaAzureEnableProtectionInputArgs(HyperVReplicaAzureEnableProtectionInputArgs $) {
+        this.disksToInclude = $.disksToInclude;
+        this.enableRdpOnTargetOption = $.enableRdpOnTargetOption;
+        this.hvHostVmId = $.hvHostVmId;
+        this.instanceType = $.instanceType;
+        this.logStorageAccountId = $.logStorageAccountId;
+        this.osType = $.osType;
+        this.targetAvailabilitySetId = $.targetAvailabilitySetId;
+        this.targetAvailabilityZone = $.targetAvailabilityZone;
+        this.targetAzureNetworkId = $.targetAzureNetworkId;
+        this.targetAzureSubnetId = $.targetAzureSubnetId;
+        this.targetAzureV1ResourceGroupId = $.targetAzureV1ResourceGroupId;
+        this.targetAzureV2ResourceGroupId = $.targetAzureV2ResourceGroupId;
+        this.targetAzureVmName = $.targetAzureVmName;
+        this.targetProximityPlacementGroupId = $.targetProximityPlacementGroupId;
+        this.targetStorageAccountId = $.targetStorageAccountId;
+        this.targetVmSize = $.targetVmSize;
+        this.useManagedDisks = $.useManagedDisks;
+        this.vhdId = $.vhdId;
+        this.vmName = $.vmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HyperVReplicaAzureEnableProtectionInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> disksToInclude;
-        private @Nullable Output<String> enableRdpOnTargetOption;
-        private @Nullable Output<String> hvHostVmId;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> logStorageAccountId;
-        private @Nullable Output<String> osType;
-        private @Nullable Output<String> targetAvailabilitySetId;
-        private @Nullable Output<String> targetAvailabilityZone;
-        private @Nullable Output<String> targetAzureNetworkId;
-        private @Nullable Output<String> targetAzureSubnetId;
-        private @Nullable Output<String> targetAzureV1ResourceGroupId;
-        private @Nullable Output<String> targetAzureV2ResourceGroupId;
-        private @Nullable Output<String> targetAzureVmName;
-        private @Nullable Output<String> targetProximityPlacementGroupId;
-        private @Nullable Output<String> targetStorageAccountId;
-        private @Nullable Output<String> targetVmSize;
-        private @Nullable Output<String> useManagedDisks;
-        private @Nullable Output<String> vhdId;
-        private @Nullable Output<String> vmName;
+        private HyperVReplicaAzureEnableProtectionInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HyperVReplicaAzureEnableProtectionInputArgs();
         }
 
         public Builder(HyperVReplicaAzureEnableProtectionInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disksToInclude = defaults.disksToInclude;
-    	      this.enableRdpOnTargetOption = defaults.enableRdpOnTargetOption;
-    	      this.hvHostVmId = defaults.hvHostVmId;
-    	      this.instanceType = defaults.instanceType;
-    	      this.logStorageAccountId = defaults.logStorageAccountId;
-    	      this.osType = defaults.osType;
-    	      this.targetAvailabilitySetId = defaults.targetAvailabilitySetId;
-    	      this.targetAvailabilityZone = defaults.targetAvailabilityZone;
-    	      this.targetAzureNetworkId = defaults.targetAzureNetworkId;
-    	      this.targetAzureSubnetId = defaults.targetAzureSubnetId;
-    	      this.targetAzureV1ResourceGroupId = defaults.targetAzureV1ResourceGroupId;
-    	      this.targetAzureV2ResourceGroupId = defaults.targetAzureV2ResourceGroupId;
-    	      this.targetAzureVmName = defaults.targetAzureVmName;
-    	      this.targetProximityPlacementGroupId = defaults.targetProximityPlacementGroupId;
-    	      this.targetStorageAccountId = defaults.targetStorageAccountId;
-    	      this.targetVmSize = defaults.targetVmSize;
-    	      this.useManagedDisks = defaults.useManagedDisks;
-    	      this.vhdId = defaults.vhdId;
-    	      this.vmName = defaults.vmName;
+            $ = new HyperVReplicaAzureEnableProtectionInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disksToInclude(@Nullable Output<List<String>> disksToInclude) {
-            this.disksToInclude = disksToInclude;
+            $.disksToInclude = disksToInclude;
             return this;
         }
-        public Builder disksToInclude(@Nullable List<String> disksToInclude) {
-            this.disksToInclude = Codegen.ofNullable(disksToInclude);
-            return this;
+
+        public Builder disksToInclude(List<String> disksToInclude) {
+            return disksToInclude(Output.of(disksToInclude));
         }
+
         public Builder disksToInclude(String... disksToInclude) {
             return disksToInclude(List.of(disksToInclude));
         }
+
         public Builder enableRdpOnTargetOption(@Nullable Output<String> enableRdpOnTargetOption) {
-            this.enableRdpOnTargetOption = enableRdpOnTargetOption;
+            $.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
-        public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
-            this.enableRdpOnTargetOption = Codegen.ofNullable(enableRdpOnTargetOption);
-            return this;
+
+        public Builder enableRdpOnTargetOption(String enableRdpOnTargetOption) {
+            return enableRdpOnTargetOption(Output.of(enableRdpOnTargetOption));
         }
+
         public Builder hvHostVmId(@Nullable Output<String> hvHostVmId) {
-            this.hvHostVmId = hvHostVmId;
+            $.hvHostVmId = hvHostVmId;
             return this;
         }
-        public Builder hvHostVmId(@Nullable String hvHostVmId) {
-            this.hvHostVmId = Codegen.ofNullable(hvHostVmId);
-            return this;
+
+        public Builder hvHostVmId(String hvHostVmId) {
+            return hvHostVmId(Output.of(hvHostVmId));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder logStorageAccountId(@Nullable Output<String> logStorageAccountId) {
-            this.logStorageAccountId = logStorageAccountId;
+            $.logStorageAccountId = logStorageAccountId;
             return this;
         }
-        public Builder logStorageAccountId(@Nullable String logStorageAccountId) {
-            this.logStorageAccountId = Codegen.ofNullable(logStorageAccountId);
-            return this;
+
+        public Builder logStorageAccountId(String logStorageAccountId) {
+            return logStorageAccountId(Output.of(logStorageAccountId));
         }
+
         public Builder osType(@Nullable Output<String> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable String osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(String osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = targetAvailabilitySetId;
+            $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
-        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = Codegen.ofNullable(targetAvailabilitySetId);
-            return this;
+
+        public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
+            return targetAvailabilitySetId(Output.of(targetAvailabilitySetId));
         }
+
         public Builder targetAvailabilityZone(@Nullable Output<String> targetAvailabilityZone) {
-            this.targetAvailabilityZone = targetAvailabilityZone;
+            $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
-        public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
-            this.targetAvailabilityZone = Codegen.ofNullable(targetAvailabilityZone);
-            return this;
+
+        public Builder targetAvailabilityZone(String targetAvailabilityZone) {
+            return targetAvailabilityZone(Output.of(targetAvailabilityZone));
         }
+
         public Builder targetAzureNetworkId(@Nullable Output<String> targetAzureNetworkId) {
-            this.targetAzureNetworkId = targetAzureNetworkId;
+            $.targetAzureNetworkId = targetAzureNetworkId;
             return this;
         }
-        public Builder targetAzureNetworkId(@Nullable String targetAzureNetworkId) {
-            this.targetAzureNetworkId = Codegen.ofNullable(targetAzureNetworkId);
-            return this;
+
+        public Builder targetAzureNetworkId(String targetAzureNetworkId) {
+            return targetAzureNetworkId(Output.of(targetAzureNetworkId));
         }
+
         public Builder targetAzureSubnetId(@Nullable Output<String> targetAzureSubnetId) {
-            this.targetAzureSubnetId = targetAzureSubnetId;
+            $.targetAzureSubnetId = targetAzureSubnetId;
             return this;
         }
-        public Builder targetAzureSubnetId(@Nullable String targetAzureSubnetId) {
-            this.targetAzureSubnetId = Codegen.ofNullable(targetAzureSubnetId);
-            return this;
+
+        public Builder targetAzureSubnetId(String targetAzureSubnetId) {
+            return targetAzureSubnetId(Output.of(targetAzureSubnetId));
         }
+
         public Builder targetAzureV1ResourceGroupId(@Nullable Output<String> targetAzureV1ResourceGroupId) {
-            this.targetAzureV1ResourceGroupId = targetAzureV1ResourceGroupId;
+            $.targetAzureV1ResourceGroupId = targetAzureV1ResourceGroupId;
             return this;
         }
-        public Builder targetAzureV1ResourceGroupId(@Nullable String targetAzureV1ResourceGroupId) {
-            this.targetAzureV1ResourceGroupId = Codegen.ofNullable(targetAzureV1ResourceGroupId);
-            return this;
+
+        public Builder targetAzureV1ResourceGroupId(String targetAzureV1ResourceGroupId) {
+            return targetAzureV1ResourceGroupId(Output.of(targetAzureV1ResourceGroupId));
         }
+
         public Builder targetAzureV2ResourceGroupId(@Nullable Output<String> targetAzureV2ResourceGroupId) {
-            this.targetAzureV2ResourceGroupId = targetAzureV2ResourceGroupId;
+            $.targetAzureV2ResourceGroupId = targetAzureV2ResourceGroupId;
             return this;
         }
-        public Builder targetAzureV2ResourceGroupId(@Nullable String targetAzureV2ResourceGroupId) {
-            this.targetAzureV2ResourceGroupId = Codegen.ofNullable(targetAzureV2ResourceGroupId);
-            return this;
+
+        public Builder targetAzureV2ResourceGroupId(String targetAzureV2ResourceGroupId) {
+            return targetAzureV2ResourceGroupId(Output.of(targetAzureV2ResourceGroupId));
         }
+
         public Builder targetAzureVmName(@Nullable Output<String> targetAzureVmName) {
-            this.targetAzureVmName = targetAzureVmName;
+            $.targetAzureVmName = targetAzureVmName;
             return this;
         }
-        public Builder targetAzureVmName(@Nullable String targetAzureVmName) {
-            this.targetAzureVmName = Codegen.ofNullable(targetAzureVmName);
-            return this;
+
+        public Builder targetAzureVmName(String targetAzureVmName) {
+            return targetAzureVmName(Output.of(targetAzureVmName));
         }
+
         public Builder targetProximityPlacementGroupId(@Nullable Output<String> targetProximityPlacementGroupId) {
-            this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
+            $.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
-        public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
-            this.targetProximityPlacementGroupId = Codegen.ofNullable(targetProximityPlacementGroupId);
-            return this;
+
+        public Builder targetProximityPlacementGroupId(String targetProximityPlacementGroupId) {
+            return targetProximityPlacementGroupId(Output.of(targetProximityPlacementGroupId));
         }
+
         public Builder targetStorageAccountId(@Nullable Output<String> targetStorageAccountId) {
-            this.targetStorageAccountId = targetStorageAccountId;
+            $.targetStorageAccountId = targetStorageAccountId;
             return this;
         }
-        public Builder targetStorageAccountId(@Nullable String targetStorageAccountId) {
-            this.targetStorageAccountId = Codegen.ofNullable(targetStorageAccountId);
-            return this;
+
+        public Builder targetStorageAccountId(String targetStorageAccountId) {
+            return targetStorageAccountId(Output.of(targetStorageAccountId));
         }
+
         public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
-            this.targetVmSize = targetVmSize;
+            $.targetVmSize = targetVmSize;
             return this;
         }
-        public Builder targetVmSize(@Nullable String targetVmSize) {
-            this.targetVmSize = Codegen.ofNullable(targetVmSize);
-            return this;
+
+        public Builder targetVmSize(String targetVmSize) {
+            return targetVmSize(Output.of(targetVmSize));
         }
+
         public Builder useManagedDisks(@Nullable Output<String> useManagedDisks) {
-            this.useManagedDisks = useManagedDisks;
+            $.useManagedDisks = useManagedDisks;
             return this;
         }
-        public Builder useManagedDisks(@Nullable String useManagedDisks) {
-            this.useManagedDisks = Codegen.ofNullable(useManagedDisks);
-            return this;
+
+        public Builder useManagedDisks(String useManagedDisks) {
+            return useManagedDisks(Output.of(useManagedDisks));
         }
+
         public Builder vhdId(@Nullable Output<String> vhdId) {
-            this.vhdId = vhdId;
+            $.vhdId = vhdId;
             return this;
         }
-        public Builder vhdId(@Nullable String vhdId) {
-            this.vhdId = Codegen.ofNullable(vhdId);
-            return this;
+
+        public Builder vhdId(String vhdId) {
+            return vhdId(Output.of(vhdId));
         }
+
         public Builder vmName(@Nullable Output<String> vmName) {
-            this.vmName = vmName;
+            $.vmName = vmName;
             return this;
         }
-        public Builder vmName(@Nullable String vmName) {
-            this.vmName = Codegen.ofNullable(vmName);
-            return this;
-        }        public HyperVReplicaAzureEnableProtectionInputArgs build() {
-            return new HyperVReplicaAzureEnableProtectionInputArgs(disksToInclude, enableRdpOnTargetOption, hvHostVmId, instanceType, logStorageAccountId, osType, targetAvailabilitySetId, targetAvailabilityZone, targetAzureNetworkId, targetAzureSubnetId, targetAzureV1ResourceGroupId, targetAzureV2ResourceGroupId, targetAzureVmName, targetProximityPlacementGroupId, targetStorageAccountId, targetVmSize, useManagedDisks, vhdId, vmName);
+
+        public Builder vmName(String vmName) {
+            return vmName(Output.of(vmName));
+        }
+
+        public HyperVReplicaAzureEnableProtectionInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

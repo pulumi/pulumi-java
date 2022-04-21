@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.SourceContextArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalContexts")
-      private final @Nullable Output<List<SourceContextArgs>> additionalContexts;
+    private @Nullable Output<List<SourceContextArgs>> additionalContexts;
 
-    public Output<List<SourceContextArgs>> additionalContexts() {
-        return this.additionalContexts == null ? Codegen.empty() : this.additionalContexts;
+    public Optional<Output<List<SourceContextArgs>>> additionalContexts() {
+        return Optional.ofNullable(this.additionalContexts);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactStorageSourceUri")
-      private final @Nullable Output<String> artifactStorageSourceUri;
+    private @Nullable Output<String> artifactStorageSourceUri;
 
-    public Output<String> artifactStorageSourceUri() {
-        return this.artifactStorageSourceUri == null ? Codegen.empty() : this.artifactStorageSourceUri;
+    public Optional<Output<String>> artifactStorageSourceUri() {
+        return Optional.ofNullable(this.artifactStorageSourceUri);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<SourceContextArgs> context;
+    private @Nullable Output<SourceContextArgs> context;
 
-    public Output<SourceContextArgs> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<SourceContextArgs>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -60,92 +60,82 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileHashes")
-      private final @Nullable Output<Map<String,String>> fileHashes;
+    private @Nullable Output<Map<String,String>> fileHashes;
 
-    public Output<Map<String,String>> fileHashes() {
-        return this.fileHashes == null ? Codegen.empty() : this.fileHashes;
+    public Optional<Output<Map<String,String>>> fileHashes() {
+        return Optional.ofNullable(this.fileHashes);
     }
 
-    public SourceArgs(
-        @Nullable Output<List<SourceContextArgs>> additionalContexts,
-        @Nullable Output<String> artifactStorageSourceUri,
-        @Nullable Output<SourceContextArgs> context,
-        @Nullable Output<Map<String,String>> fileHashes) {
-        this.additionalContexts = additionalContexts;
-        this.artifactStorageSourceUri = artifactStorageSourceUri;
-        this.context = context;
-        this.fileHashes = fileHashes;
-    }
+    private SourceArgs() {}
 
-    private SourceArgs() {
-        this.additionalContexts = Codegen.empty();
-        this.artifactStorageSourceUri = Codegen.empty();
-        this.context = Codegen.empty();
-        this.fileHashes = Codegen.empty();
+    private SourceArgs(SourceArgs $) {
+        this.additionalContexts = $.additionalContexts;
+        this.artifactStorageSourceUri = $.artifactStorageSourceUri;
+        this.context = $.context;
+        this.fileHashes = $.fileHashes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SourceContextArgs>> additionalContexts;
-        private @Nullable Output<String> artifactStorageSourceUri;
-        private @Nullable Output<SourceContextArgs> context;
-        private @Nullable Output<Map<String,String>> fileHashes;
+        private SourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceArgs();
         }
 
         public Builder(SourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalContexts = defaults.additionalContexts;
-    	      this.artifactStorageSourceUri = defaults.artifactStorageSourceUri;
-    	      this.context = defaults.context;
-    	      this.fileHashes = defaults.fileHashes;
+            $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalContexts(@Nullable Output<List<SourceContextArgs>> additionalContexts) {
-            this.additionalContexts = additionalContexts;
+            $.additionalContexts = additionalContexts;
             return this;
         }
-        public Builder additionalContexts(@Nullable List<SourceContextArgs> additionalContexts) {
-            this.additionalContexts = Codegen.ofNullable(additionalContexts);
-            return this;
+
+        public Builder additionalContexts(List<SourceContextArgs> additionalContexts) {
+            return additionalContexts(Output.of(additionalContexts));
         }
+
         public Builder additionalContexts(SourceContextArgs... additionalContexts) {
             return additionalContexts(List.of(additionalContexts));
         }
+
         public Builder artifactStorageSourceUri(@Nullable Output<String> artifactStorageSourceUri) {
-            this.artifactStorageSourceUri = artifactStorageSourceUri;
+            $.artifactStorageSourceUri = artifactStorageSourceUri;
             return this;
         }
-        public Builder artifactStorageSourceUri(@Nullable String artifactStorageSourceUri) {
-            this.artifactStorageSourceUri = Codegen.ofNullable(artifactStorageSourceUri);
-            return this;
+
+        public Builder artifactStorageSourceUri(String artifactStorageSourceUri) {
+            return artifactStorageSourceUri(Output.of(artifactStorageSourceUri));
         }
+
         public Builder context(@Nullable Output<SourceContextArgs> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable SourceContextArgs context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(SourceContextArgs context) {
+            return context(Output.of(context));
         }
+
         public Builder fileHashes(@Nullable Output<Map<String,String>> fileHashes) {
-            this.fileHashes = fileHashes;
+            $.fileHashes = fileHashes;
             return this;
         }
-        public Builder fileHashes(@Nullable Map<String,String> fileHashes) {
-            this.fileHashes = Codegen.ofNullable(fileHashes);
-            return this;
-        }        public SourceArgs build() {
-            return new SourceArgs(additionalContexts, artifactStorageSourceUri, context, fileHashes);
+
+        public Builder fileHashes(Map<String,String> fileHashes) {
+            return fileHashes(Output.of(fileHashes));
+        }
+
+        public SourceArgs build() {
+            return $;
         }
     }
+
 }

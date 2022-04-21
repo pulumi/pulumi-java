@@ -7,11 +7,11 @@ import com.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreArgs;
 import com.pulumi.aws.codepipeline.inputs.PipelineStageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactStore", required=true)
-      private final Output<PipelineArtifactStoreArgs> artifactStore;
+    private Output<PipelineArtifactStoreArgs> artifactStore;
 
     public Output<PipelineArtifactStoreArgs> artifactStore() {
         return this.artifactStore;
@@ -35,10 +35,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -57,7 +57,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stages", required=true)
-      private final Output<List<PipelineStageArgs>> stages;
+    private Output<List<PipelineStageArgs>> stages;
 
     public Output<List<PipelineStageArgs>> stages() {
         return this.stages;
@@ -68,105 +68,95 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PipelineArgs(
-        Output<PipelineArtifactStoreArgs> artifactStore,
-        @Nullable Output<String> name,
-        Output<String> roleArn,
-        Output<List<PipelineStageArgs>> stages,
-        @Nullable Output<Map<String,String>> tags) {
-        this.artifactStore = Objects.requireNonNull(artifactStore, "expected parameter 'artifactStore' to be non-null");
-        this.name = name;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.stages = Objects.requireNonNull(stages, "expected parameter 'stages' to be non-null");
-        this.tags = tags;
-    }
+    private PipelineArgs() {}
 
-    private PipelineArgs() {
-        this.artifactStore = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.stages = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PipelineArgs(PipelineArgs $) {
+        this.artifactStore = $.artifactStore;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
+        this.stages = $.stages;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PipelineArtifactStoreArgs> artifactStore;
-        private @Nullable Output<String> name;
-        private Output<String> roleArn;
-        private Output<List<PipelineStageArgs>> stages;
-        private @Nullable Output<Map<String,String>> tags;
+        private PipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineArgs();
         }
 
         public Builder(PipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactStore = defaults.artifactStore;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
-    	      this.stages = defaults.stages;
-    	      this.tags = defaults.tags;
+            $ = new PipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactStore(Output<PipelineArtifactStoreArgs> artifactStore) {
-            this.artifactStore = Objects.requireNonNull(artifactStore);
+            $.artifactStore = artifactStore;
             return this;
         }
+
         public Builder artifactStore(PipelineArtifactStoreArgs artifactStore) {
-            this.artifactStore = Output.of(Objects.requireNonNull(artifactStore));
-            return this;
+            return artifactStore(Output.of(artifactStore));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder stages(Output<List<PipelineStageArgs>> stages) {
-            this.stages = Objects.requireNonNull(stages);
+            $.stages = stages;
             return this;
         }
+
         public Builder stages(List<PipelineStageArgs> stages) {
-            this.stages = Output.of(Objects.requireNonNull(stages));
-            return this;
+            return stages(Output.of(stages));
         }
+
         public Builder stages(PipelineStageArgs... stages) {
             return stages(List.of(stages));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PipelineArgs build() {
-            return new PipelineArgs(artifactStore, name, roleArn, stages, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PipelineArgs build() {
+            $.artifactStore = Objects.requireNonNull($.artifactStore, "expected parameter 'artifactStore' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.stages = Objects.requireNonNull($.stages, "expected parameter 'stages' to be non-null");
+            return $;
         }
     }
+
 }

@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dependsOn", required=true)
-      private final Output<List<PipelineReferenceArgs>> dependsOn;
+    private Output<List<PipelineReferenceArgs>> dependsOn;
 
     public Output<List<PipelineReferenceArgs>> dependsOn() {
         return this.dependsOn;
@@ -50,10 +51,10 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="pipeline", required=true)
-      private final Output<TriggerPipelineReferenceArgs> pipeline;
+    private Output<TriggerPipelineReferenceArgs> pipeline;
 
     public Output<TriggerPipelineReferenceArgs> pipeline() {
         return this.pipeline;
@@ -72,7 +73,7 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="runDimension", required=true)
-      private final Output<String> runDimension;
+    private Output<String> runDimension;
 
     public Output<String> runDimension() {
         return this.runDimension;
@@ -84,121 +85,110 @@ public final class ChainingTriggerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ChainingTriggerArgs(
-        @Nullable Output<List<Object>> annotations,
-        Output<List<PipelineReferenceArgs>> dependsOn,
-        @Nullable Output<String> description,
-        Output<TriggerPipelineReferenceArgs> pipeline,
-        Output<String> runDimension,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.dependsOn = Objects.requireNonNull(dependsOn, "expected parameter 'dependsOn' to be non-null");
-        this.description = description;
-        this.pipeline = Objects.requireNonNull(pipeline, "expected parameter 'pipeline' to be non-null");
-        this.runDimension = Objects.requireNonNull(runDimension, "expected parameter 'runDimension' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ChainingTriggerArgs() {}
 
-    private ChainingTriggerArgs() {
-        this.annotations = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.pipeline = Codegen.empty();
-        this.runDimension = Codegen.empty();
-        this.type = Codegen.empty();
+    private ChainingTriggerArgs(ChainingTriggerArgs $) {
+        this.annotations = $.annotations;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.pipeline = $.pipeline;
+        this.runDimension = $.runDimension;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChainingTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private Output<List<PipelineReferenceArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private Output<TriggerPipelineReferenceArgs> pipeline;
-        private Output<String> runDimension;
-        private Output<String> type;
+        private ChainingTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChainingTriggerArgs();
         }
 
         public Builder(ChainingTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.pipeline = defaults.pipeline;
-    	      this.runDimension = defaults.runDimension;
-    	      this.type = defaults.type;
+            $ = new ChainingTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder dependsOn(Output<List<PipelineReferenceArgs>> dependsOn) {
-            this.dependsOn = Objects.requireNonNull(dependsOn);
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(List<PipelineReferenceArgs> dependsOn) {
-            this.dependsOn = Output.of(Objects.requireNonNull(dependsOn));
-            return this;
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(PipelineReferenceArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder pipeline(Output<TriggerPipelineReferenceArgs> pipeline) {
-            this.pipeline = Objects.requireNonNull(pipeline);
+            $.pipeline = pipeline;
             return this;
         }
+
         public Builder pipeline(TriggerPipelineReferenceArgs pipeline) {
-            this.pipeline = Output.of(Objects.requireNonNull(pipeline));
-            return this;
+            return pipeline(Output.of(pipeline));
         }
+
         public Builder runDimension(Output<String> runDimension) {
-            this.runDimension = Objects.requireNonNull(runDimension);
+            $.runDimension = runDimension;
             return this;
         }
+
         public Builder runDimension(String runDimension) {
-            this.runDimension = Output.of(Objects.requireNonNull(runDimension));
-            return this;
+            return runDimension(Output.of(runDimension));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ChainingTriggerArgs build() {
-            return new ChainingTriggerArgs(annotations, dependsOn, description, pipeline, runDimension, type);
+            return type(Output.of(type));
+        }
+
+        public ChainingTriggerArgs build() {
+            $.dependsOn = Objects.requireNonNull($.dependsOn, "expected parameter 'dependsOn' to be non-null");
+            $.pipeline = Objects.requireNonNull($.pipeline, "expected parameter 'pipeline' to be non-null");
+            $.runDimension = Objects.requireNonNull($.runDimension, "expected parameter 'runDimension' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

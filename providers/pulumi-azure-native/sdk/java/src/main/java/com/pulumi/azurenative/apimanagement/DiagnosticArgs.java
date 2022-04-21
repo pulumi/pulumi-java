@@ -12,10 +12,10 @@ import com.pulumi.azurenative.apimanagement.inputs.SamplingSettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alwaysLog")
-      private final @Nullable Output<Either<String,AlwaysLog>> alwaysLog;
+    private @Nullable Output<Either<String,AlwaysLog>> alwaysLog;
 
-    public Output<Either<String,AlwaysLog>> alwaysLog() {
-        return this.alwaysLog == null ? Codegen.empty() : this.alwaysLog;
+    public Optional<Output<Either<String,AlwaysLog>>> alwaysLog() {
+        return Optional.ofNullable(this.alwaysLog);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backend")
-      private final @Nullable Output<PipelineDiagnosticSettingsArgs> backend;
+    private @Nullable Output<PipelineDiagnosticSettingsArgs> backend;
 
-    public Output<PipelineDiagnosticSettingsArgs> backend() {
-        return this.backend == null ? Codegen.empty() : this.backend;
+    public Optional<Output<PipelineDiagnosticSettingsArgs>> backend() {
+        return Optional.ofNullable(this.backend);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diagnosticId")
-      private final @Nullable Output<String> diagnosticId;
+    private @Nullable Output<String> diagnosticId;
 
-    public Output<String> diagnosticId() {
-        return this.diagnosticId == null ? Codegen.empty() : this.diagnosticId;
+    public Optional<Output<String>> diagnosticId() {
+        return Optional.ofNullable(this.diagnosticId);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frontend")
-      private final @Nullable Output<PipelineDiagnosticSettingsArgs> frontend;
+    private @Nullable Output<PipelineDiagnosticSettingsArgs> frontend;
 
-    public Output<PipelineDiagnosticSettingsArgs> frontend() {
-        return this.frontend == null ? Codegen.empty() : this.frontend;
+    public Optional<Output<PipelineDiagnosticSettingsArgs>> frontend() {
+        return Optional.ofNullable(this.frontend);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpCorrelationProtocol")
-      private final @Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol;
+    private @Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol;
 
-    public Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol() {
-        return this.httpCorrelationProtocol == null ? Codegen.empty() : this.httpCorrelationProtocol;
+    public Optional<Output<Either<String,HttpCorrelationProtocol>>> httpCorrelationProtocol() {
+        return Optional.ofNullable(this.httpCorrelationProtocol);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logClientIp")
-      private final @Nullable Output<Boolean> logClientIp;
+    private @Nullable Output<Boolean> logClientIp;
 
-    public Output<Boolean> logClientIp() {
-        return this.logClientIp == null ? Codegen.empty() : this.logClientIp;
+    public Optional<Output<Boolean>> logClientIp() {
+        return Optional.ofNullable(this.logClientIp);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggerId", required=true)
-      private final Output<String> loggerId;
+    private Output<String> loggerId;
 
     public Output<String> loggerId() {
         return this.loggerId;
@@ -105,10 +105,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationNameFormat")
-      private final @Nullable Output<Either<String,OperationNameFormat>> operationNameFormat;
+    private @Nullable Output<Either<String,OperationNameFormat>> operationNameFormat;
 
-    public Output<Either<String,OperationNameFormat>> operationNameFormat() {
-        return this.operationNameFormat == null ? Codegen.empty() : this.operationNameFormat;
+    public Optional<Output<Either<String,OperationNameFormat>>> operationNameFormat() {
+        return Optional.ofNullable(this.operationNameFormat);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -127,10 +127,10 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sampling")
-      private final @Nullable Output<SamplingSettingsArgs> sampling;
+    private @Nullable Output<SamplingSettingsArgs> sampling;
 
-    public Output<SamplingSettingsArgs> sampling() {
-        return this.sampling == null ? Codegen.empty() : this.sampling;
+    public Optional<Output<SamplingSettingsArgs>> sampling() {
+        return Optional.ofNullable(this.sampling);
     }
 
     /**
@@ -138,7 +138,7 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -149,193 +149,161 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="verbosity")
-      private final @Nullable Output<Either<String,Verbosity>> verbosity;
+    private @Nullable Output<Either<String,Verbosity>> verbosity;
 
-    public Output<Either<String,Verbosity>> verbosity() {
-        return this.verbosity == null ? Codegen.empty() : this.verbosity;
+    public Optional<Output<Either<String,Verbosity>>> verbosity() {
+        return Optional.ofNullable(this.verbosity);
     }
 
-    public DiagnosticArgs(
-        @Nullable Output<Either<String,AlwaysLog>> alwaysLog,
-        @Nullable Output<PipelineDiagnosticSettingsArgs> backend,
-        @Nullable Output<String> diagnosticId,
-        @Nullable Output<PipelineDiagnosticSettingsArgs> frontend,
-        @Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol,
-        @Nullable Output<Boolean> logClientIp,
-        Output<String> loggerId,
-        @Nullable Output<Either<String,OperationNameFormat>> operationNameFormat,
-        Output<String> resourceGroupName,
-        @Nullable Output<SamplingSettingsArgs> sampling,
-        Output<String> serviceName,
-        @Nullable Output<Either<String,Verbosity>> verbosity) {
-        this.alwaysLog = alwaysLog;
-        this.backend = backend;
-        this.diagnosticId = diagnosticId;
-        this.frontend = frontend;
-        this.httpCorrelationProtocol = httpCorrelationProtocol;
-        this.logClientIp = logClientIp;
-        this.loggerId = Objects.requireNonNull(loggerId, "expected parameter 'loggerId' to be non-null");
-        this.operationNameFormat = operationNameFormat;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sampling = sampling;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.verbosity = verbosity;
-    }
+    private DiagnosticArgs() {}
 
-    private DiagnosticArgs() {
-        this.alwaysLog = Codegen.empty();
-        this.backend = Codegen.empty();
-        this.diagnosticId = Codegen.empty();
-        this.frontend = Codegen.empty();
-        this.httpCorrelationProtocol = Codegen.empty();
-        this.logClientIp = Codegen.empty();
-        this.loggerId = Codegen.empty();
-        this.operationNameFormat = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sampling = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.verbosity = Codegen.empty();
+    private DiagnosticArgs(DiagnosticArgs $) {
+        this.alwaysLog = $.alwaysLog;
+        this.backend = $.backend;
+        this.diagnosticId = $.diagnosticId;
+        this.frontend = $.frontend;
+        this.httpCorrelationProtocol = $.httpCorrelationProtocol;
+        this.logClientIp = $.logClientIp;
+        this.loggerId = $.loggerId;
+        this.operationNameFormat = $.operationNameFormat;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sampling = $.sampling;
+        this.serviceName = $.serviceName;
+        this.verbosity = $.verbosity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiagnosticArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AlwaysLog>> alwaysLog;
-        private @Nullable Output<PipelineDiagnosticSettingsArgs> backend;
-        private @Nullable Output<String> diagnosticId;
-        private @Nullable Output<PipelineDiagnosticSettingsArgs> frontend;
-        private @Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol;
-        private @Nullable Output<Boolean> logClientIp;
-        private Output<String> loggerId;
-        private @Nullable Output<Either<String,OperationNameFormat>> operationNameFormat;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SamplingSettingsArgs> sampling;
-        private Output<String> serviceName;
-        private @Nullable Output<Either<String,Verbosity>> verbosity;
+        private DiagnosticArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiagnosticArgs();
         }
 
         public Builder(DiagnosticArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alwaysLog = defaults.alwaysLog;
-    	      this.backend = defaults.backend;
-    	      this.diagnosticId = defaults.diagnosticId;
-    	      this.frontend = defaults.frontend;
-    	      this.httpCorrelationProtocol = defaults.httpCorrelationProtocol;
-    	      this.logClientIp = defaults.logClientIp;
-    	      this.loggerId = defaults.loggerId;
-    	      this.operationNameFormat = defaults.operationNameFormat;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sampling = defaults.sampling;
-    	      this.serviceName = defaults.serviceName;
-    	      this.verbosity = defaults.verbosity;
+            $ = new DiagnosticArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alwaysLog(@Nullable Output<Either<String,AlwaysLog>> alwaysLog) {
-            this.alwaysLog = alwaysLog;
+            $.alwaysLog = alwaysLog;
             return this;
         }
-        public Builder alwaysLog(@Nullable Either<String,AlwaysLog> alwaysLog) {
-            this.alwaysLog = Codegen.ofNullable(alwaysLog);
-            return this;
+
+        public Builder alwaysLog(Either<String,AlwaysLog> alwaysLog) {
+            return alwaysLog(Output.of(alwaysLog));
         }
+
         public Builder backend(@Nullable Output<PipelineDiagnosticSettingsArgs> backend) {
-            this.backend = backend;
+            $.backend = backend;
             return this;
         }
-        public Builder backend(@Nullable PipelineDiagnosticSettingsArgs backend) {
-            this.backend = Codegen.ofNullable(backend);
-            return this;
+
+        public Builder backend(PipelineDiagnosticSettingsArgs backend) {
+            return backend(Output.of(backend));
         }
+
         public Builder diagnosticId(@Nullable Output<String> diagnosticId) {
-            this.diagnosticId = diagnosticId;
+            $.diagnosticId = diagnosticId;
             return this;
         }
-        public Builder diagnosticId(@Nullable String diagnosticId) {
-            this.diagnosticId = Codegen.ofNullable(diagnosticId);
-            return this;
+
+        public Builder diagnosticId(String diagnosticId) {
+            return diagnosticId(Output.of(diagnosticId));
         }
+
         public Builder frontend(@Nullable Output<PipelineDiagnosticSettingsArgs> frontend) {
-            this.frontend = frontend;
+            $.frontend = frontend;
             return this;
         }
-        public Builder frontend(@Nullable PipelineDiagnosticSettingsArgs frontend) {
-            this.frontend = Codegen.ofNullable(frontend);
-            return this;
+
+        public Builder frontend(PipelineDiagnosticSettingsArgs frontend) {
+            return frontend(Output.of(frontend));
         }
+
         public Builder httpCorrelationProtocol(@Nullable Output<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol) {
-            this.httpCorrelationProtocol = httpCorrelationProtocol;
+            $.httpCorrelationProtocol = httpCorrelationProtocol;
             return this;
         }
-        public Builder httpCorrelationProtocol(@Nullable Either<String,HttpCorrelationProtocol> httpCorrelationProtocol) {
-            this.httpCorrelationProtocol = Codegen.ofNullable(httpCorrelationProtocol);
-            return this;
+
+        public Builder httpCorrelationProtocol(Either<String,HttpCorrelationProtocol> httpCorrelationProtocol) {
+            return httpCorrelationProtocol(Output.of(httpCorrelationProtocol));
         }
+
         public Builder logClientIp(@Nullable Output<Boolean> logClientIp) {
-            this.logClientIp = logClientIp;
+            $.logClientIp = logClientIp;
             return this;
         }
-        public Builder logClientIp(@Nullable Boolean logClientIp) {
-            this.logClientIp = Codegen.ofNullable(logClientIp);
-            return this;
+
+        public Builder logClientIp(Boolean logClientIp) {
+            return logClientIp(Output.of(logClientIp));
         }
+
         public Builder loggerId(Output<String> loggerId) {
-            this.loggerId = Objects.requireNonNull(loggerId);
+            $.loggerId = loggerId;
             return this;
         }
+
         public Builder loggerId(String loggerId) {
-            this.loggerId = Output.of(Objects.requireNonNull(loggerId));
-            return this;
+            return loggerId(Output.of(loggerId));
         }
+
         public Builder operationNameFormat(@Nullable Output<Either<String,OperationNameFormat>> operationNameFormat) {
-            this.operationNameFormat = operationNameFormat;
+            $.operationNameFormat = operationNameFormat;
             return this;
         }
-        public Builder operationNameFormat(@Nullable Either<String,OperationNameFormat> operationNameFormat) {
-            this.operationNameFormat = Codegen.ofNullable(operationNameFormat);
-            return this;
+
+        public Builder operationNameFormat(Either<String,OperationNameFormat> operationNameFormat) {
+            return operationNameFormat(Output.of(operationNameFormat));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sampling(@Nullable Output<SamplingSettingsArgs> sampling) {
-            this.sampling = sampling;
+            $.sampling = sampling;
             return this;
         }
-        public Builder sampling(@Nullable SamplingSettingsArgs sampling) {
-            this.sampling = Codegen.ofNullable(sampling);
-            return this;
+
+        public Builder sampling(SamplingSettingsArgs sampling) {
+            return sampling(Output.of(sampling));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder verbosity(@Nullable Output<Either<String,Verbosity>> verbosity) {
-            this.verbosity = verbosity;
+            $.verbosity = verbosity;
             return this;
         }
-        public Builder verbosity(@Nullable Either<String,Verbosity> verbosity) {
-            this.verbosity = Codegen.ofNullable(verbosity);
-            return this;
-        }        public DiagnosticArgs build() {
-            return new DiagnosticArgs(alwaysLog, backend, diagnosticId, frontend, httpCorrelationProtocol, logClientIp, loggerId, operationNameFormat, resourceGroupName, sampling, serviceName, verbosity);
+
+        public Builder verbosity(Either<String,Verbosity> verbosity) {
+            return verbosity(Output.of(verbosity));
+        }
+
+        public DiagnosticArgs build() {
+            $.loggerId = Objects.requireNonNull($.loggerId, "expected parameter 'loggerId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

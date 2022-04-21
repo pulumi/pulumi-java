@@ -22,7 +22,7 @@ public final class AggregationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alignmentPeriod", required=true)
-      private final String alignmentPeriod;
+    private String alignmentPeriod;
 
     public String alignmentPeriod() {
         return this.alignmentPeriod;
@@ -33,7 +33,7 @@ public final class AggregationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="crossSeriesReducer", required=true)
-      private final String crossSeriesReducer;
+    private String crossSeriesReducer;
 
     public String crossSeriesReducer() {
         return this.crossSeriesReducer;
@@ -44,7 +44,7 @@ public final class AggregationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupByFields", required=true)
-      private final List<String> groupByFields;
+    private List<String> groupByFields;
 
     public List<String> groupByFields() {
         return this.groupByFields;
@@ -55,76 +55,70 @@ public final class AggregationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="perSeriesAligner", required=true)
-      private final String perSeriesAligner;
+    private String perSeriesAligner;
 
     public String perSeriesAligner() {
         return this.perSeriesAligner;
     }
 
-    public AggregationResponse(
-        String alignmentPeriod,
-        String crossSeriesReducer,
-        List<String> groupByFields,
-        String perSeriesAligner) {
-        this.alignmentPeriod = Objects.requireNonNull(alignmentPeriod, "expected parameter 'alignmentPeriod' to be non-null");
-        this.crossSeriesReducer = Objects.requireNonNull(crossSeriesReducer, "expected parameter 'crossSeriesReducer' to be non-null");
-        this.groupByFields = Objects.requireNonNull(groupByFields, "expected parameter 'groupByFields' to be non-null");
-        this.perSeriesAligner = Objects.requireNonNull(perSeriesAligner, "expected parameter 'perSeriesAligner' to be non-null");
-    }
+    private AggregationResponse() {}
 
-    private AggregationResponse() {
-        this.alignmentPeriod = null;
-        this.crossSeriesReducer = null;
-        this.groupByFields = List.of();
-        this.perSeriesAligner = null;
+    private AggregationResponse(AggregationResponse $) {
+        this.alignmentPeriod = $.alignmentPeriod;
+        this.crossSeriesReducer = $.crossSeriesReducer;
+        this.groupByFields = $.groupByFields;
+        this.perSeriesAligner = $.perSeriesAligner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AggregationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alignmentPeriod;
-        private String crossSeriesReducer;
-        private List<String> groupByFields;
-        private String perSeriesAligner;
+        private AggregationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AggregationResponse();
         }
 
         public Builder(AggregationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alignmentPeriod = defaults.alignmentPeriod;
-    	      this.crossSeriesReducer = defaults.crossSeriesReducer;
-    	      this.groupByFields = defaults.groupByFields;
-    	      this.perSeriesAligner = defaults.perSeriesAligner;
+            $ = new AggregationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alignmentPeriod(String alignmentPeriod) {
-            this.alignmentPeriod = Objects.requireNonNull(alignmentPeriod);
+            $.alignmentPeriod = alignmentPeriod;
             return this;
         }
+
         public Builder crossSeriesReducer(String crossSeriesReducer) {
-            this.crossSeriesReducer = Objects.requireNonNull(crossSeriesReducer);
+            $.crossSeriesReducer = crossSeriesReducer;
             return this;
         }
+
         public Builder groupByFields(List<String> groupByFields) {
-            this.groupByFields = Objects.requireNonNull(groupByFields);
+            $.groupByFields = groupByFields;
             return this;
         }
+
         public Builder groupByFields(String... groupByFields) {
             return groupByFields(List.of(groupByFields));
         }
+
         public Builder perSeriesAligner(String perSeriesAligner) {
-            this.perSeriesAligner = Objects.requireNonNull(perSeriesAligner);
+            $.perSeriesAligner = perSeriesAligner;
             return this;
-        }        public AggregationResponse build() {
-            return new AggregationResponse(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
+        }
+
+        public AggregationResponse build() {
+            $.alignmentPeriod = Objects.requireNonNull($.alignmentPeriod, "expected parameter 'alignmentPeriod' to be non-null");
+            $.crossSeriesReducer = Objects.requireNonNull($.crossSeriesReducer, "expected parameter 'crossSeriesReducer' to be non-null");
+            $.groupByFields = Objects.requireNonNull($.groupByFields, "expected parameter 'groupByFields' to be non-null");
+            $.perSeriesAligner = Objects.requireNonNull($.perSeriesAligner, "expected parameter 'perSeriesAligner' to be non-null");
+            return $;
         }
     }
+
 }

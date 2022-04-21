@@ -24,7 +24,7 @@ public final class MediaGraphPemCertificateListArgs extends com.pulumi.resources
      * 
      */
     @Import(name="certificates", required=true)
-      private final Output<List<String>> certificates;
+    private Output<List<String>> certificates;
 
     public Output<List<String>> certificates() {
         return this.certificates;
@@ -36,66 +36,64 @@ public final class MediaGraphPemCertificateListArgs extends com.pulumi.resources
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public MediaGraphPemCertificateListArgs(
-        Output<List<String>> certificates,
-        Output<String> odataType) {
-        this.certificates = Objects.requireNonNull(certificates, "expected parameter 'certificates' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private MediaGraphPemCertificateListArgs() {}
 
-    private MediaGraphPemCertificateListArgs() {
-        this.certificates = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private MediaGraphPemCertificateListArgs(MediaGraphPemCertificateListArgs $) {
+        this.certificates = $.certificates;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaGraphPemCertificateListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> certificates;
-        private Output<String> odataType;
+        private MediaGraphPemCertificateListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaGraphPemCertificateListArgs();
         }
 
         public Builder(MediaGraphPemCertificateListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificates = defaults.certificates;
-    	      this.odataType = defaults.odataType;
+            $ = new MediaGraphPemCertificateListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificates(Output<List<String>> certificates) {
-            this.certificates = Objects.requireNonNull(certificates);
+            $.certificates = certificates;
             return this;
         }
+
         public Builder certificates(List<String> certificates) {
-            this.certificates = Output.of(Objects.requireNonNull(certificates));
-            return this;
+            return certificates(Output.of(certificates));
         }
+
         public Builder certificates(String... certificates) {
             return certificates(List.of(certificates));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public MediaGraphPemCertificateListArgs build() {
-            return new MediaGraphPemCertificateListArgs(certificates, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public MediaGraphPemCertificateListArgs build() {
+            $.certificates = Objects.requireNonNull($.certificates, "expected parameter 'certificates' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

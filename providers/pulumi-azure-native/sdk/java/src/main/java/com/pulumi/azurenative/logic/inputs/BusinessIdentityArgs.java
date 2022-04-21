@@ -5,7 +5,6 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class BusinessIdentityArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="qualifier", required=true)
-      private final Output<String> qualifier;
+    private Output<String> qualifier;
 
     public Output<String> qualifier() {
         return this.qualifier;
@@ -34,63 +33,60 @@ public final class BusinessIdentityArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public BusinessIdentityArgs(
-        Output<String> qualifier,
-        Output<String> value) {
-        this.qualifier = Objects.requireNonNull(qualifier, "expected parameter 'qualifier' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private BusinessIdentityArgs() {}
 
-    private BusinessIdentityArgs() {
-        this.qualifier = Codegen.empty();
-        this.value = Codegen.empty();
+    private BusinessIdentityArgs(BusinessIdentityArgs $) {
+        this.qualifier = $.qualifier;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BusinessIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> qualifier;
-        private Output<String> value;
+        private BusinessIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BusinessIdentityArgs();
         }
 
         public Builder(BusinessIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.qualifier = defaults.qualifier;
-    	      this.value = defaults.value;
+            $ = new BusinessIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder qualifier(Output<String> qualifier) {
-            this.qualifier = Objects.requireNonNull(qualifier);
+            $.qualifier = qualifier;
             return this;
         }
+
         public Builder qualifier(String qualifier) {
-            this.qualifier = Output.of(Objects.requireNonNull(qualifier));
-            return this;
+            return qualifier(Output.of(qualifier));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public BusinessIdentityArgs build() {
-            return new BusinessIdentityArgs(qualifier, value);
+            return value(Output.of(value));
+        }
+
+        public BusinessIdentityArgs build() {
+            $.qualifier = Objects.requireNonNull($.qualifier, "expected parameter 'qualifier' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

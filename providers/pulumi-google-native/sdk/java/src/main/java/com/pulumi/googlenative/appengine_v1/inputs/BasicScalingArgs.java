@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BasicScalingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="idleTimeout")
-      private final @Nullable Output<String> idleTimeout;
+    private @Nullable Output<String> idleTimeout;
 
-    public Output<String> idleTimeout() {
-        return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
+    public Optional<Output<String>> idleTimeout() {
+        return Optional.ofNullable(this.idleTimeout);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class BasicScalingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxInstances")
-      private final @Nullable Output<Integer> maxInstances;
+    private @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> maxInstances() {
-        return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
+    public Optional<Output<Integer>> maxInstances() {
+        return Optional.ofNullable(this.maxInstances);
     }
 
-    public BasicScalingArgs(
-        @Nullable Output<String> idleTimeout,
-        @Nullable Output<Integer> maxInstances) {
-        this.idleTimeout = idleTimeout;
-        this.maxInstances = maxInstances;
-    }
+    private BasicScalingArgs() {}
 
-    private BasicScalingArgs() {
-        this.idleTimeout = Codegen.empty();
-        this.maxInstances = Codegen.empty();
+    private BasicScalingArgs(BasicScalingArgs $) {
+        this.idleTimeout = $.idleTimeout;
+        this.maxInstances = $.maxInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicScalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> idleTimeout;
-        private @Nullable Output<Integer> maxInstances;
+        private BasicScalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicScalingArgs();
         }
 
         public Builder(BasicScalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idleTimeout = defaults.idleTimeout;
-    	      this.maxInstances = defaults.maxInstances;
+            $ = new BasicScalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder idleTimeout(@Nullable Output<String> idleTimeout) {
-            this.idleTimeout = idleTimeout;
+            $.idleTimeout = idleTimeout;
             return this;
         }
-        public Builder idleTimeout(@Nullable String idleTimeout) {
-            this.idleTimeout = Codegen.ofNullable(idleTimeout);
-            return this;
+
+        public Builder idleTimeout(String idleTimeout) {
+            return idleTimeout(Output.of(idleTimeout));
         }
+
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
-            this.maxInstances = maxInstances;
+            $.maxInstances = maxInstances;
             return this;
         }
-        public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Codegen.ofNullable(maxInstances);
-            return this;
-        }        public BasicScalingArgs build() {
-            return new BasicScalingArgs(idleTimeout, maxInstances);
+
+        public Builder maxInstances(Integer maxInstances) {
+            return maxInstances(Output.of(maxInstances));
+        }
+
+        public BasicScalingArgs build() {
+            return $;
         }
     }
+
 }

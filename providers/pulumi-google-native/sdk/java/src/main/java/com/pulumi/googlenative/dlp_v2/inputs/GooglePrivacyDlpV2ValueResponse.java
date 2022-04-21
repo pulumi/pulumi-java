@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="booleanValue", required=true)
-      private final Boolean booleanValue;
+    private Boolean booleanValue;
 
     public Boolean booleanValue() {
         return this.booleanValue;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dateValue", required=true)
-      private final GoogleTypeDateResponse dateValue;
+    private GoogleTypeDateResponse dateValue;
 
     public GoogleTypeDateResponse dateValue() {
         return this.dateValue;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dayOfWeekValue", required=true)
-      private final String dayOfWeekValue;
+    private String dayOfWeekValue;
 
     public String dayOfWeekValue() {
         return this.dayOfWeekValue;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="floatValue", required=true)
-      private final Double floatValue;
+    private Double floatValue;
 
     public Double floatValue() {
         return this.floatValue;
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="integerValue", required=true)
-      private final String integerValue;
+    private String integerValue;
 
     public String integerValue() {
         return this.integerValue;
@@ -80,7 +80,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="stringValue", required=true)
-      private final String stringValue;
+    private String stringValue;
 
     public String stringValue() {
         return this.stringValue;
@@ -91,7 +91,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timeValue", required=true)
-      private final GoogleTypeTimeOfDayResponse timeValue;
+    private GoogleTypeTimeOfDayResponse timeValue;
 
     public GoogleTypeTimeOfDayResponse timeValue() {
         return this.timeValue;
@@ -102,109 +102,94 @@ public final class GooglePrivacyDlpV2ValueResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timestampValue", required=true)
-      private final String timestampValue;
+    private String timestampValue;
 
     public String timestampValue() {
         return this.timestampValue;
     }
 
-    public GooglePrivacyDlpV2ValueResponse(
-        Boolean booleanValue,
-        GoogleTypeDateResponse dateValue,
-        String dayOfWeekValue,
-        Double floatValue,
-        String integerValue,
-        String stringValue,
-        GoogleTypeTimeOfDayResponse timeValue,
-        String timestampValue) {
-        this.booleanValue = Objects.requireNonNull(booleanValue, "expected parameter 'booleanValue' to be non-null");
-        this.dateValue = Objects.requireNonNull(dateValue, "expected parameter 'dateValue' to be non-null");
-        this.dayOfWeekValue = Objects.requireNonNull(dayOfWeekValue, "expected parameter 'dayOfWeekValue' to be non-null");
-        this.floatValue = Objects.requireNonNull(floatValue, "expected parameter 'floatValue' to be non-null");
-        this.integerValue = Objects.requireNonNull(integerValue, "expected parameter 'integerValue' to be non-null");
-        this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
-        this.timeValue = Objects.requireNonNull(timeValue, "expected parameter 'timeValue' to be non-null");
-        this.timestampValue = Objects.requireNonNull(timestampValue, "expected parameter 'timestampValue' to be non-null");
-    }
+    private GooglePrivacyDlpV2ValueResponse() {}
 
-    private GooglePrivacyDlpV2ValueResponse() {
-        this.booleanValue = null;
-        this.dateValue = null;
-        this.dayOfWeekValue = null;
-        this.floatValue = null;
-        this.integerValue = null;
-        this.stringValue = null;
-        this.timeValue = null;
-        this.timestampValue = null;
+    private GooglePrivacyDlpV2ValueResponse(GooglePrivacyDlpV2ValueResponse $) {
+        this.booleanValue = $.booleanValue;
+        this.dateValue = $.dateValue;
+        this.dayOfWeekValue = $.dayOfWeekValue;
+        this.floatValue = $.floatValue;
+        this.integerValue = $.integerValue;
+        this.stringValue = $.stringValue;
+        this.timeValue = $.timeValue;
+        this.timestampValue = $.timestampValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean booleanValue;
-        private GoogleTypeDateResponse dateValue;
-        private String dayOfWeekValue;
-        private Double floatValue;
-        private String integerValue;
-        private String stringValue;
-        private GoogleTypeTimeOfDayResponse timeValue;
-        private String timestampValue;
+        private GooglePrivacyDlpV2ValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ValueResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanValue = defaults.booleanValue;
-    	      this.dateValue = defaults.dateValue;
-    	      this.dayOfWeekValue = defaults.dayOfWeekValue;
-    	      this.floatValue = defaults.floatValue;
-    	      this.integerValue = defaults.integerValue;
-    	      this.stringValue = defaults.stringValue;
-    	      this.timeValue = defaults.timeValue;
-    	      this.timestampValue = defaults.timestampValue;
+            $ = new GooglePrivacyDlpV2ValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanValue(Boolean booleanValue) {
-            this.booleanValue = Objects.requireNonNull(booleanValue);
+            $.booleanValue = booleanValue;
             return this;
         }
+
         public Builder dateValue(GoogleTypeDateResponse dateValue) {
-            this.dateValue = Objects.requireNonNull(dateValue);
+            $.dateValue = dateValue;
             return this;
         }
+
         public Builder dayOfWeekValue(String dayOfWeekValue) {
-            this.dayOfWeekValue = Objects.requireNonNull(dayOfWeekValue);
+            $.dayOfWeekValue = dayOfWeekValue;
             return this;
         }
+
         public Builder floatValue(Double floatValue) {
-            this.floatValue = Objects.requireNonNull(floatValue);
+            $.floatValue = floatValue;
             return this;
         }
+
         public Builder integerValue(String integerValue) {
-            this.integerValue = Objects.requireNonNull(integerValue);
+            $.integerValue = integerValue;
             return this;
         }
+
         public Builder stringValue(String stringValue) {
-            this.stringValue = Objects.requireNonNull(stringValue);
+            $.stringValue = stringValue;
             return this;
         }
+
         public Builder timeValue(GoogleTypeTimeOfDayResponse timeValue) {
-            this.timeValue = Objects.requireNonNull(timeValue);
+            $.timeValue = timeValue;
             return this;
         }
+
         public Builder timestampValue(String timestampValue) {
-            this.timestampValue = Objects.requireNonNull(timestampValue);
+            $.timestampValue = timestampValue;
             return this;
-        }        public GooglePrivacyDlpV2ValueResponse build() {
-            return new GooglePrivacyDlpV2ValueResponse(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
+        }
+
+        public GooglePrivacyDlpV2ValueResponse build() {
+            $.booleanValue = Objects.requireNonNull($.booleanValue, "expected parameter 'booleanValue' to be non-null");
+            $.dateValue = Objects.requireNonNull($.dateValue, "expected parameter 'dateValue' to be non-null");
+            $.dayOfWeekValue = Objects.requireNonNull($.dayOfWeekValue, "expected parameter 'dayOfWeekValue' to be non-null");
+            $.floatValue = Objects.requireNonNull($.floatValue, "expected parameter 'floatValue' to be non-null");
+            $.integerValue = Objects.requireNonNull($.integerValue, "expected parameter 'integerValue' to be non-null");
+            $.stringValue = Objects.requireNonNull($.stringValue, "expected parameter 'stringValue' to be non-null");
+            $.timeValue = Objects.requireNonNull($.timeValue, "expected parameter 'timeValue' to be non-null");
+            $.timestampValue = Objects.requireNonNull($.timestampValue, "expected parameter 'timestampValue' to be non-null");
+            return $;
         }
     }
+
 }

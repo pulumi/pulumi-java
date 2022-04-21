@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlArgs extends
      * 
      */
     @Import(name="maxScaledDownReplicas")
-      private final @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas;
+    private @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas;
 
-    public Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas() {
-        return this.maxScaledDownReplicas == null ? Codegen.empty() : this.maxScaledDownReplicas;
+    public Optional<Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs>> maxScaledDownReplicas() {
+        return Optional.ofNullable(this.maxScaledDownReplicas);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlArgs extends
      * 
      */
     @Import(name="timeWindowSec")
-      private final @Nullable Output<Integer> timeWindowSec;
+    private @Nullable Output<Integer> timeWindowSec;
 
-    public Output<Integer> timeWindowSec() {
-        return this.timeWindowSec == null ? Codegen.empty() : this.timeWindowSec;
+    public Optional<Output<Integer>> timeWindowSec() {
+        return Optional.ofNullable(this.timeWindowSec);
     }
 
-    public RegionAutoscalerAutoscalingPolicyScaleDownControlArgs(
-        @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas,
-        @Nullable Output<Integer> timeWindowSec) {
-        this.maxScaledDownReplicas = maxScaledDownReplicas;
-        this.timeWindowSec = timeWindowSec;
-    }
+    private RegionAutoscalerAutoscalingPolicyScaleDownControlArgs() {}
 
-    private RegionAutoscalerAutoscalingPolicyScaleDownControlArgs() {
-        this.maxScaledDownReplicas = Codegen.empty();
-        this.timeWindowSec = Codegen.empty();
+    private RegionAutoscalerAutoscalingPolicyScaleDownControlArgs(RegionAutoscalerAutoscalingPolicyScaleDownControlArgs $) {
+        this.maxScaledDownReplicas = $.maxScaledDownReplicas;
+        this.timeWindowSec = $.timeWindowSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionAutoscalerAutoscalingPolicyScaleDownControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas;
-        private @Nullable Output<Integer> timeWindowSec;
+        private RegionAutoscalerAutoscalingPolicyScaleDownControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionAutoscalerAutoscalingPolicyScaleDownControlArgs();
         }
 
         public Builder(RegionAutoscalerAutoscalingPolicyScaleDownControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxScaledDownReplicas = defaults.maxScaledDownReplicas;
-    	      this.timeWindowSec = defaults.timeWindowSec;
+            $ = new RegionAutoscalerAutoscalingPolicyScaleDownControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxScaledDownReplicas(@Nullable Output<RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas) {
-            this.maxScaledDownReplicas = maxScaledDownReplicas;
+            $.maxScaledDownReplicas = maxScaledDownReplicas;
             return this;
         }
-        public Builder maxScaledDownReplicas(@Nullable RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs maxScaledDownReplicas) {
-            this.maxScaledDownReplicas = Codegen.ofNullable(maxScaledDownReplicas);
-            return this;
+
+        public Builder maxScaledDownReplicas(RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs maxScaledDownReplicas) {
+            return maxScaledDownReplicas(Output.of(maxScaledDownReplicas));
         }
+
         public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
-            this.timeWindowSec = timeWindowSec;
+            $.timeWindowSec = timeWindowSec;
             return this;
         }
-        public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
-            this.timeWindowSec = Codegen.ofNullable(timeWindowSec);
-            return this;
-        }        public RegionAutoscalerAutoscalingPolicyScaleDownControlArgs build() {
-            return new RegionAutoscalerAutoscalingPolicyScaleDownControlArgs(maxScaledDownReplicas, timeWindowSec);
+
+        public Builder timeWindowSec(Integer timeWindowSec) {
+            return timeWindowSec(Output.of(timeWindowSec));
+        }
+
+        public RegionAutoscalerAutoscalingPolicyScaleDownControlArgs build() {
+            return $;
         }
     }
+
 }

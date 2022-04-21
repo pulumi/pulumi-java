@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.InstancePropertiesPatchArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class InstanceGroupManagerAllInstancesConfigArgs extends com.pulumi
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<InstancePropertiesPatchArgs> properties;
+    private @Nullable Output<InstancePropertiesPatchArgs> properties;
 
-    public Output<InstancePropertiesPatchArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<InstancePropertiesPatchArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public InstanceGroupManagerAllInstancesConfigArgs(@Nullable Output<InstancePropertiesPatchArgs> properties) {
-        this.properties = properties;
-    }
+    private InstanceGroupManagerAllInstancesConfigArgs() {}
 
-    private InstanceGroupManagerAllInstancesConfigArgs() {
-        this.properties = Codegen.empty();
+    private InstanceGroupManagerAllInstancesConfigArgs(InstanceGroupManagerAllInstancesConfigArgs $) {
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerAllInstancesConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstancePropertiesPatchArgs> properties;
+        private InstanceGroupManagerAllInstancesConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerAllInstancesConfigArgs();
         }
 
         public Builder(InstanceGroupManagerAllInstancesConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
+            $ = new InstanceGroupManagerAllInstancesConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<InstancePropertiesPatchArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable InstancePropertiesPatchArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public InstanceGroupManagerAllInstancesConfigArgs build() {
-            return new InstanceGroupManagerAllInstancesConfigArgs(properties);
+
+        public Builder properties(InstancePropertiesPatchArgs properties) {
+            return properties(Output.of(properties));
+        }
+
+        public InstanceGroupManagerAllInstancesConfigArgs build() {
+            return $;
         }
     }
+
 }

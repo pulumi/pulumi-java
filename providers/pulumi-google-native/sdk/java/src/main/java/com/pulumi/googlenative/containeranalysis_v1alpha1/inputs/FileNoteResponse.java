@@ -22,7 +22,7 @@ public final class FileNoteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="checksum", required=true)
-      private final List<String> checksum;
+    private List<String> checksum;
 
     public List<String> checksum() {
         return this.checksum;
@@ -33,7 +33,7 @@ public final class FileNoteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileType", required=true)
-      private final String fileType;
+    private String fileType;
 
     public String fileType() {
         return this.fileType;
@@ -44,67 +44,63 @@ public final class FileNoteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public FileNoteResponse(
-        List<String> checksum,
-        String fileType,
-        String title) {
-        this.checksum = Objects.requireNonNull(checksum, "expected parameter 'checksum' to be non-null");
-        this.fileType = Objects.requireNonNull(fileType, "expected parameter 'fileType' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private FileNoteResponse() {}
 
-    private FileNoteResponse() {
-        this.checksum = List.of();
-        this.fileType = null;
-        this.title = null;
+    private FileNoteResponse(FileNoteResponse $) {
+        this.checksum = $.checksum;
+        this.fileType = $.fileType;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> checksum;
-        private String fileType;
-        private String title;
+        private FileNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileNoteResponse();
         }
 
         public Builder(FileNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checksum = defaults.checksum;
-    	      this.fileType = defaults.fileType;
-    	      this.title = defaults.title;
+            $ = new FileNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder checksum(List<String> checksum) {
-            this.checksum = Objects.requireNonNull(checksum);
+            $.checksum = checksum;
             return this;
         }
+
         public Builder checksum(String... checksum) {
             return checksum(List.of(checksum));
         }
+
         public Builder fileType(String fileType) {
-            this.fileType = Objects.requireNonNull(fileType);
+            $.fileType = fileType;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public FileNoteResponse build() {
-            return new FileNoteResponse(checksum, fileType, title);
+        }
+
+        public FileNoteResponse build() {
+            $.checksum = Objects.requireNonNull($.checksum, "expected parameter 'checksum' to be non-null");
+            $.fileType = Objects.requireNonNull($.fileType, "expected parameter 'fileType' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

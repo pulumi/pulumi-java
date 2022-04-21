@@ -21,45 +21,45 @@ public final class FileReferenceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fileUri", required=true)
-      private final String fileUri;
+    private String fileUri;
 
     public String fileUri() {
         return this.fileUri;
     }
 
-    public FileReferenceResponse(String fileUri) {
-        this.fileUri = Objects.requireNonNull(fileUri, "expected parameter 'fileUri' to be non-null");
-    }
+    private FileReferenceResponse() {}
 
-    private FileReferenceResponse() {
-        this.fileUri = null;
+    private FileReferenceResponse(FileReferenceResponse $) {
+        this.fileUri = $.fileUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fileUri;
+        private FileReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileReferenceResponse();
         }
 
         public Builder(FileReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileUri = defaults.fileUri;
+            $ = new FileReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileUri(String fileUri) {
-            this.fileUri = Objects.requireNonNull(fileUri);
+            $.fileUri = fileUri;
             return this;
-        }        public FileReferenceResponse build() {
-            return new FileReferenceResponse(fileUri);
+        }
+
+        public FileReferenceResponse build() {
+            $.fileUri = Objects.requireNonNull($.fileUri, "expected parameter 'fileUri' to be non-null");
+            return $;
         }
     }
+
 }

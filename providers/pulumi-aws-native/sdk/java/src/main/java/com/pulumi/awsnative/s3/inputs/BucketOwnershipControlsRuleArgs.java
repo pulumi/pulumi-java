@@ -6,8 +6,8 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketOwnershipControlsRuleObjectOwnership;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class BucketOwnershipControlsRuleArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="objectOwnership")
-      private final @Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
+    private @Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
 
-    public Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership() {
-        return this.objectOwnership == null ? Codegen.empty() : this.objectOwnership;
+    public Optional<Output<BucketOwnershipControlsRuleObjectOwnership>> objectOwnership() {
+        return Optional.ofNullable(this.objectOwnership);
     }
 
-    public BucketOwnershipControlsRuleArgs(@Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership) {
-        this.objectOwnership = objectOwnership;
-    }
+    private BucketOwnershipControlsRuleArgs() {}
 
-    private BucketOwnershipControlsRuleArgs() {
-        this.objectOwnership = Codegen.empty();
+    private BucketOwnershipControlsRuleArgs(BucketOwnershipControlsRuleArgs $) {
+        this.objectOwnership = $.objectOwnership;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketOwnershipControlsRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
+        private BucketOwnershipControlsRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketOwnershipControlsRuleArgs();
         }
 
         public Builder(BucketOwnershipControlsRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectOwnership = defaults.objectOwnership;
+            $ = new BucketOwnershipControlsRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectOwnership(@Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership) {
-            this.objectOwnership = objectOwnership;
+            $.objectOwnership = objectOwnership;
             return this;
         }
-        public Builder objectOwnership(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
-            this.objectOwnership = Codegen.ofNullable(objectOwnership);
-            return this;
-        }        public BucketOwnershipControlsRuleArgs build() {
-            return new BucketOwnershipControlsRuleArgs(objectOwnership);
+
+        public Builder objectOwnership(BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
+            return objectOwnership(Output.of(objectOwnership));
+        }
+
+        public BucketOwnershipControlsRuleArgs build() {
+            return $;
         }
     }
+
 }

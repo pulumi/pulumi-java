@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1.inputs.ManagedZonePeeringConfigTargetNetworkArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ManagedZonePeeringConfigArgs extends com.pulumi.resources.Res
     public static final ManagedZonePeeringConfigArgs Empty = new ManagedZonePeeringConfigArgs();
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -28,63 +28,58 @@ public final class ManagedZonePeeringConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="targetNetwork")
-      private final @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
+    private @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
 
-    public Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork() {
-        return this.targetNetwork == null ? Codegen.empty() : this.targetNetwork;
+    public Optional<Output<ManagedZonePeeringConfigTargetNetworkArgs>> targetNetwork() {
+        return Optional.ofNullable(this.targetNetwork);
     }
 
-    public ManagedZonePeeringConfigArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
-        this.kind = kind;
-        this.targetNetwork = targetNetwork;
-    }
+    private ManagedZonePeeringConfigArgs() {}
 
-    private ManagedZonePeeringConfigArgs() {
-        this.kind = Codegen.empty();
-        this.targetNetwork = Codegen.empty();
+    private ManagedZonePeeringConfigArgs(ManagedZonePeeringConfigArgs $) {
+        this.kind = $.kind;
+        this.targetNetwork = $.targetNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePeeringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
+        private ManagedZonePeeringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePeeringConfigArgs();
         }
 
         public Builder(ManagedZonePeeringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.targetNetwork = defaults.targetNetwork;
+            $ = new ManagedZonePeeringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder targetNetwork(@Nullable Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
-            this.targetNetwork = targetNetwork;
+            $.targetNetwork = targetNetwork;
             return this;
         }
-        public Builder targetNetwork(@Nullable ManagedZonePeeringConfigTargetNetworkArgs targetNetwork) {
-            this.targetNetwork = Codegen.ofNullable(targetNetwork);
-            return this;
-        }        public ManagedZonePeeringConfigArgs build() {
-            return new ManagedZonePeeringConfigArgs(kind, targetNetwork);
+
+        public Builder targetNetwork(ManagedZonePeeringConfigTargetNetworkArgs targetNetwork) {
+            return targetNetwork(Output.of(targetNetwork));
+        }
+
+        public ManagedZonePeeringConfigArgs build() {
+            return $;
         }
     }
+
 }

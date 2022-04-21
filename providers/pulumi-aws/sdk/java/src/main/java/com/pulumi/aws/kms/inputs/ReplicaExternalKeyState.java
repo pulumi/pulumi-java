@@ -5,12 +5,12 @@ package com.pulumi.aws.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="bypassPolicyLockoutSafetyCheck")
-      private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
+    private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Optional<Output<Boolean>> bypassPolicyLockoutSafetyCheck() {
+        return Optional.ofNullable(this.bypassPolicyLockoutSafetyCheck);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deletionWindowInDays")
-      private final @Nullable Output<Integer> deletionWindowInDays;
+    private @Nullable Output<Integer> deletionWindowInDays;
 
-    public Output<Integer> deletionWindowInDays() {
-        return this.deletionWindowInDays == null ? Codegen.empty() : this.deletionWindowInDays;
+    public Optional<Output<Integer>> deletionWindowInDays() {
+        return Optional.ofNullable(this.deletionWindowInDays);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="expirationModel")
-      private final @Nullable Output<String> expirationModel;
+    private @Nullable Output<String> expirationModel;
 
-    public Output<String> expirationModel() {
-        return this.expirationModel == null ? Codegen.empty() : this.expirationModel;
+    public Optional<Output<String>> expirationModel() {
+        return Optional.ofNullable(this.expirationModel);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="keyMaterialBase64")
-      private final @Nullable Output<String> keyMaterialBase64;
+    private @Nullable Output<String> keyMaterialBase64;
 
-    public Output<String> keyMaterialBase64() {
-        return this.keyMaterialBase64 == null ? Codegen.empty() : this.keyMaterialBase64;
+    public Optional<Output<String>> keyMaterialBase64() {
+        return Optional.ofNullable(this.keyMaterialBase64);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="keyState")
-      private final @Nullable Output<String> keyState;
+    private @Nullable Output<String> keyState;
 
-    public Output<String> keyState() {
-        return this.keyState == null ? Codegen.empty() : this.keyState;
+    public Optional<Output<String>> keyState() {
+        return Optional.ofNullable(this.keyState);
     }
 
     /**
@@ -126,17 +126,17 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="keyUsage")
-      private final @Nullable Output<String> keyUsage;
+    private @Nullable Output<String> keyUsage;
 
-    public Output<String> keyUsage() {
-        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
+    public Optional<Output<String>> keyUsage() {
+        return Optional.ofNullable(this.keyUsage);
     }
 
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="primaryKeyArn")
-      private final @Nullable Output<String> primaryKeyArn;
+    private @Nullable Output<String> primaryKeyArn;
 
-    public Output<String> primaryKeyArn() {
-        return this.primaryKeyArn == null ? Codegen.empty() : this.primaryKeyArn;
+    public Optional<Output<String>> primaryKeyArn() {
+        return Optional.ofNullable(this.primaryKeyArn);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -177,232 +177,188 @@ public final class ReplicaExternalKeyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="validTo")
-      private final @Nullable Output<String> validTo;
+    private @Nullable Output<String> validTo;
 
-    public Output<String> validTo() {
-        return this.validTo == null ? Codegen.empty() : this.validTo;
+    public Optional<Output<String>> validTo() {
+        return Optional.ofNullable(this.validTo);
     }
 
-    public ReplicaExternalKeyState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck,
-        @Nullable Output<Integer> deletionWindowInDays,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> expirationModel,
-        @Nullable Output<String> keyId,
-        @Nullable Output<String> keyMaterialBase64,
-        @Nullable Output<String> keyState,
-        @Nullable Output<String> keyUsage,
-        @Nullable Output<String> policy,
-        @Nullable Output<String> primaryKeyArn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> validTo) {
-        this.arn = arn;
-        this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
-        this.deletionWindowInDays = deletionWindowInDays;
-        this.description = description;
-        this.enabled = enabled;
-        this.expirationModel = expirationModel;
-        this.keyId = keyId;
-        this.keyMaterialBase64 = keyMaterialBase64;
-        this.keyState = keyState;
-        this.keyUsage = keyUsage;
-        this.policy = policy;
-        this.primaryKeyArn = primaryKeyArn;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.validTo = validTo;
-    }
+    private ReplicaExternalKeyState() {}
 
-    private ReplicaExternalKeyState() {
-        this.arn = Codegen.empty();
-        this.bypassPolicyLockoutSafetyCheck = Codegen.empty();
-        this.deletionWindowInDays = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.expirationModel = Codegen.empty();
-        this.keyId = Codegen.empty();
-        this.keyMaterialBase64 = Codegen.empty();
-        this.keyState = Codegen.empty();
-        this.keyUsage = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.primaryKeyArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.validTo = Codegen.empty();
+    private ReplicaExternalKeyState(ReplicaExternalKeyState $) {
+        this.arn = $.arn;
+        this.bypassPolicyLockoutSafetyCheck = $.bypassPolicyLockoutSafetyCheck;
+        this.deletionWindowInDays = $.deletionWindowInDays;
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.expirationModel = $.expirationModel;
+        this.keyId = $.keyId;
+        this.keyMaterialBase64 = $.keyMaterialBase64;
+        this.keyState = $.keyState;
+        this.keyUsage = $.keyUsage;
+        this.policy = $.policy;
+        this.primaryKeyArn = $.primaryKeyArn;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.validTo = $.validTo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicaExternalKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
-        private @Nullable Output<Integer> deletionWindowInDays;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> expirationModel;
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<String> keyMaterialBase64;
-        private @Nullable Output<String> keyState;
-        private @Nullable Output<String> keyUsage;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> primaryKeyArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> validTo;
+        private ReplicaExternalKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicaExternalKeyState();
         }
 
         public Builder(ReplicaExternalKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.bypassPolicyLockoutSafetyCheck = defaults.bypassPolicyLockoutSafetyCheck;
-    	      this.deletionWindowInDays = defaults.deletionWindowInDays;
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.expirationModel = defaults.expirationModel;
-    	      this.keyId = defaults.keyId;
-    	      this.keyMaterialBase64 = defaults.keyMaterialBase64;
-    	      this.keyState = defaults.keyState;
-    	      this.keyUsage = defaults.keyUsage;
-    	      this.policy = defaults.policy;
-    	      this.primaryKeyArn = defaults.primaryKeyArn;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.validTo = defaults.validTo;
+            $ = new ReplicaExternalKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
+            $.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
-        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Codegen.ofNullable(bypassPolicyLockoutSafetyCheck);
-            return this;
+
+        public Builder bypassPolicyLockoutSafetyCheck(Boolean bypassPolicyLockoutSafetyCheck) {
+            return bypassPolicyLockoutSafetyCheck(Output.of(bypassPolicyLockoutSafetyCheck));
         }
+
         public Builder deletionWindowInDays(@Nullable Output<Integer> deletionWindowInDays) {
-            this.deletionWindowInDays = deletionWindowInDays;
+            $.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
-        public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
-            this.deletionWindowInDays = Codegen.ofNullable(deletionWindowInDays);
-            return this;
+
+        public Builder deletionWindowInDays(Integer deletionWindowInDays) {
+            return deletionWindowInDays(Output.of(deletionWindowInDays));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder expirationModel(@Nullable Output<String> expirationModel) {
-            this.expirationModel = expirationModel;
+            $.expirationModel = expirationModel;
             return this;
         }
-        public Builder expirationModel(@Nullable String expirationModel) {
-            this.expirationModel = Codegen.ofNullable(expirationModel);
-            return this;
+
+        public Builder expirationModel(String expirationModel) {
+            return expirationModel(Output.of(expirationModel));
         }
+
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
         public Builder keyMaterialBase64(@Nullable Output<String> keyMaterialBase64) {
-            this.keyMaterialBase64 = keyMaterialBase64;
+            $.keyMaterialBase64 = keyMaterialBase64;
             return this;
         }
-        public Builder keyMaterialBase64(@Nullable String keyMaterialBase64) {
-            this.keyMaterialBase64 = Codegen.ofNullable(keyMaterialBase64);
-            return this;
+
+        public Builder keyMaterialBase64(String keyMaterialBase64) {
+            return keyMaterialBase64(Output.of(keyMaterialBase64));
         }
+
         public Builder keyState(@Nullable Output<String> keyState) {
-            this.keyState = keyState;
+            $.keyState = keyState;
             return this;
         }
-        public Builder keyState(@Nullable String keyState) {
-            this.keyState = Codegen.ofNullable(keyState);
-            return this;
+
+        public Builder keyState(String keyState) {
+            return keyState(Output.of(keyState));
         }
+
         public Builder keyUsage(@Nullable Output<String> keyUsage) {
-            this.keyUsage = keyUsage;
+            $.keyUsage = keyUsage;
             return this;
         }
-        public Builder keyUsage(@Nullable String keyUsage) {
-            this.keyUsage = Codegen.ofNullable(keyUsage);
-            return this;
+
+        public Builder keyUsage(String keyUsage) {
+            return keyUsage(Output.of(keyUsage));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder primaryKeyArn(@Nullable Output<String> primaryKeyArn) {
-            this.primaryKeyArn = primaryKeyArn;
+            $.primaryKeyArn = primaryKeyArn;
             return this;
         }
-        public Builder primaryKeyArn(@Nullable String primaryKeyArn) {
-            this.primaryKeyArn = Codegen.ofNullable(primaryKeyArn);
-            return this;
+
+        public Builder primaryKeyArn(String primaryKeyArn) {
+            return primaryKeyArn(Output.of(primaryKeyArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder validTo(@Nullable Output<String> validTo) {
-            this.validTo = validTo;
+            $.validTo = validTo;
             return this;
         }
-        public Builder validTo(@Nullable String validTo) {
-            this.validTo = Codegen.ofNullable(validTo);
-            return this;
-        }        public ReplicaExternalKeyState build() {
-            return new ReplicaExternalKeyState(arn, bypassPolicyLockoutSafetyCheck, deletionWindowInDays, description, enabled, expirationModel, keyId, keyMaterialBase64, keyState, keyUsage, policy, primaryKeyArn, tags, tagsAll, validTo);
+
+        public Builder validTo(String validTo) {
+            return validTo(Output.of(validTo));
+        }
+
+        public ReplicaExternalKeyState build() {
+            return $;
         }
     }
+
 }

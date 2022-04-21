@@ -17,45 +17,45 @@ public final class GetResolverQueryLoggingConfigAssociationArgs extends com.pulu
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetResolverQueryLoggingConfigAssociationArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetResolverQueryLoggingConfigAssociationArgs() {}
 
-    private GetResolverQueryLoggingConfigAssociationArgs() {
-        this.id = null;
+    private GetResolverQueryLoggingConfigAssociationArgs(GetResolverQueryLoggingConfigAssociationArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResolverQueryLoggingConfigAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetResolverQueryLoggingConfigAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResolverQueryLoggingConfigAssociationArgs();
         }
 
         public Builder(GetResolverQueryLoggingConfigAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetResolverQueryLoggingConfigAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetResolverQueryLoggingConfigAssociationArgs build() {
-            return new GetResolverQueryLoggingConfigAssociationArgs(id);
+        }
+
+        public GetResolverQueryLoggingConfigAssociationArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

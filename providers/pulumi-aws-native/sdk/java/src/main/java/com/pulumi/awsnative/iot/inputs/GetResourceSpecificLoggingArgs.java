@@ -17,45 +17,45 @@ public final class GetResourceSpecificLoggingArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="targetId", required=true)
-      private final String targetId;
+    private String targetId;
 
     public String targetId() {
         return this.targetId;
     }
 
-    public GetResourceSpecificLoggingArgs(String targetId) {
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-    }
+    private GetResourceSpecificLoggingArgs() {}
 
-    private GetResourceSpecificLoggingArgs() {
-        this.targetId = null;
+    private GetResourceSpecificLoggingArgs(GetResourceSpecificLoggingArgs $) {
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceSpecificLoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String targetId;
+        private GetResourceSpecificLoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceSpecificLoggingArgs();
         }
 
         public Builder(GetResourceSpecificLoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetId = defaults.targetId;
+            $ = new GetResourceSpecificLoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetId(String targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
-        }        public GetResourceSpecificLoggingArgs build() {
-            return new GetResourceSpecificLoggingArgs(targetId);
+        }
+
+        public GetResourceSpecificLoggingArgs build() {
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -31,7 +31,7 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="adBreaks", required=true)
-      private final List<AdBreakResponse> adBreaks;
+    private List<AdBreakResponse> adBreaks;
 
     public List<AdBreakResponse> adBreaks() {
         return this.adBreaks;
@@ -42,7 +42,7 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="editList", required=true)
-      private final List<EditAtomResponse> editList;
+    private List<EditAtomResponse> editList;
 
     public List<EditAtomResponse> editList() {
         return this.editList;
@@ -53,7 +53,7 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elementaryStreams", required=true)
-      private final List<ElementaryStreamResponse> elementaryStreams;
+    private List<ElementaryStreamResponse> elementaryStreams;
 
     public List<ElementaryStreamResponse> elementaryStreams() {
         return this.elementaryStreams;
@@ -64,7 +64,7 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputs", required=true)
-      private final List<InputResponse> inputs;
+    private List<InputResponse> inputs;
 
     public List<InputResponse> inputs() {
         return this.inputs;
@@ -75,7 +75,7 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="manifests", required=true)
-      private final List<ManifestResponse> manifests;
+    private List<ManifestResponse> manifests;
 
     public List<ManifestResponse> manifests() {
         return this.manifests;
@@ -86,7 +86,7 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="muxStreams", required=true)
-      private final List<MuxStreamResponse> muxStreams;
+    private List<MuxStreamResponse> muxStreams;
 
     public List<MuxStreamResponse> muxStreams() {
         return this.muxStreams;
@@ -97,7 +97,7 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="output", required=true)
-      private final OutputResponse output;
+    private OutputResponse output;
 
     public OutputResponse output() {
         return this.output;
@@ -108,7 +108,7 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="overlays", required=true)
-      private final List<OverlayResponse> overlays;
+    private List<OverlayResponse> overlays;
 
     public List<OverlayResponse> overlays() {
         return this.overlays;
@@ -119,7 +119,7 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pubsubDestination", required=true)
-      private final PubsubDestinationResponse pubsubDestination;
+    private PubsubDestinationResponse pubsubDestination;
 
     public PubsubDestinationResponse pubsubDestination() {
         return this.pubsubDestination;
@@ -130,151 +130,140 @@ public final class JobConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="spriteSheets", required=true)
-      private final List<SpriteSheetResponse> spriteSheets;
+    private List<SpriteSheetResponse> spriteSheets;
 
     public List<SpriteSheetResponse> spriteSheets() {
         return this.spriteSheets;
     }
 
-    public JobConfigResponse(
-        List<AdBreakResponse> adBreaks,
-        List<EditAtomResponse> editList,
-        List<ElementaryStreamResponse> elementaryStreams,
-        List<InputResponse> inputs,
-        List<ManifestResponse> manifests,
-        List<MuxStreamResponse> muxStreams,
-        OutputResponse output,
-        List<OverlayResponse> overlays,
-        PubsubDestinationResponse pubsubDestination,
-        List<SpriteSheetResponse> spriteSheets) {
-        this.adBreaks = Objects.requireNonNull(adBreaks, "expected parameter 'adBreaks' to be non-null");
-        this.editList = Objects.requireNonNull(editList, "expected parameter 'editList' to be non-null");
-        this.elementaryStreams = Objects.requireNonNull(elementaryStreams, "expected parameter 'elementaryStreams' to be non-null");
-        this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
-        this.manifests = Objects.requireNonNull(manifests, "expected parameter 'manifests' to be non-null");
-        this.muxStreams = Objects.requireNonNull(muxStreams, "expected parameter 'muxStreams' to be non-null");
-        this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
-        this.overlays = Objects.requireNonNull(overlays, "expected parameter 'overlays' to be non-null");
-        this.pubsubDestination = Objects.requireNonNull(pubsubDestination, "expected parameter 'pubsubDestination' to be non-null");
-        this.spriteSheets = Objects.requireNonNull(spriteSheets, "expected parameter 'spriteSheets' to be non-null");
-    }
+    private JobConfigResponse() {}
 
-    private JobConfigResponse() {
-        this.adBreaks = List.of();
-        this.editList = List.of();
-        this.elementaryStreams = List.of();
-        this.inputs = List.of();
-        this.manifests = List.of();
-        this.muxStreams = List.of();
-        this.output = null;
-        this.overlays = List.of();
-        this.pubsubDestination = null;
-        this.spriteSheets = List.of();
+    private JobConfigResponse(JobConfigResponse $) {
+        this.adBreaks = $.adBreaks;
+        this.editList = $.editList;
+        this.elementaryStreams = $.elementaryStreams;
+        this.inputs = $.inputs;
+        this.manifests = $.manifests;
+        this.muxStreams = $.muxStreams;
+        this.output = $.output;
+        this.overlays = $.overlays;
+        this.pubsubDestination = $.pubsubDestination;
+        this.spriteSheets = $.spriteSheets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AdBreakResponse> adBreaks;
-        private List<EditAtomResponse> editList;
-        private List<ElementaryStreamResponse> elementaryStreams;
-        private List<InputResponse> inputs;
-        private List<ManifestResponse> manifests;
-        private List<MuxStreamResponse> muxStreams;
-        private OutputResponse output;
-        private List<OverlayResponse> overlays;
-        private PubsubDestinationResponse pubsubDestination;
-        private List<SpriteSheetResponse> spriteSheets;
+        private JobConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigResponse();
         }
 
         public Builder(JobConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adBreaks = defaults.adBreaks;
-    	      this.editList = defaults.editList;
-    	      this.elementaryStreams = defaults.elementaryStreams;
-    	      this.inputs = defaults.inputs;
-    	      this.manifests = defaults.manifests;
-    	      this.muxStreams = defaults.muxStreams;
-    	      this.output = defaults.output;
-    	      this.overlays = defaults.overlays;
-    	      this.pubsubDestination = defaults.pubsubDestination;
-    	      this.spriteSheets = defaults.spriteSheets;
+            $ = new JobConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder adBreaks(List<AdBreakResponse> adBreaks) {
-            this.adBreaks = Objects.requireNonNull(adBreaks);
+            $.adBreaks = adBreaks;
             return this;
         }
+
         public Builder adBreaks(AdBreakResponse... adBreaks) {
             return adBreaks(List.of(adBreaks));
         }
+
         public Builder editList(List<EditAtomResponse> editList) {
-            this.editList = Objects.requireNonNull(editList);
+            $.editList = editList;
             return this;
         }
+
         public Builder editList(EditAtomResponse... editList) {
             return editList(List.of(editList));
         }
+
         public Builder elementaryStreams(List<ElementaryStreamResponse> elementaryStreams) {
-            this.elementaryStreams = Objects.requireNonNull(elementaryStreams);
+            $.elementaryStreams = elementaryStreams;
             return this;
         }
+
         public Builder elementaryStreams(ElementaryStreamResponse... elementaryStreams) {
             return elementaryStreams(List.of(elementaryStreams));
         }
+
         public Builder inputs(List<InputResponse> inputs) {
-            this.inputs = Objects.requireNonNull(inputs);
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(InputResponse... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder manifests(List<ManifestResponse> manifests) {
-            this.manifests = Objects.requireNonNull(manifests);
+            $.manifests = manifests;
             return this;
         }
+
         public Builder manifests(ManifestResponse... manifests) {
             return manifests(List.of(manifests));
         }
+
         public Builder muxStreams(List<MuxStreamResponse> muxStreams) {
-            this.muxStreams = Objects.requireNonNull(muxStreams);
+            $.muxStreams = muxStreams;
             return this;
         }
+
         public Builder muxStreams(MuxStreamResponse... muxStreams) {
             return muxStreams(List.of(muxStreams));
         }
+
         public Builder output(OutputResponse output) {
-            this.output = Objects.requireNonNull(output);
+            $.output = output;
             return this;
         }
+
         public Builder overlays(List<OverlayResponse> overlays) {
-            this.overlays = Objects.requireNonNull(overlays);
+            $.overlays = overlays;
             return this;
         }
+
         public Builder overlays(OverlayResponse... overlays) {
             return overlays(List.of(overlays));
         }
+
         public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
-            this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
+            $.pubsubDestination = pubsubDestination;
             return this;
         }
+
         public Builder spriteSheets(List<SpriteSheetResponse> spriteSheets) {
-            this.spriteSheets = Objects.requireNonNull(spriteSheets);
+            $.spriteSheets = spriteSheets;
             return this;
         }
+
         public Builder spriteSheets(SpriteSheetResponse... spriteSheets) {
             return spriteSheets(List.of(spriteSheets));
-        }        public JobConfigResponse build() {
-            return new JobConfigResponse(adBreaks, editList, elementaryStreams, inputs, manifests, muxStreams, output, overlays, pubsubDestination, spriteSheets);
+        }
+
+        public JobConfigResponse build() {
+            $.adBreaks = Objects.requireNonNull($.adBreaks, "expected parameter 'adBreaks' to be non-null");
+            $.editList = Objects.requireNonNull($.editList, "expected parameter 'editList' to be non-null");
+            $.elementaryStreams = Objects.requireNonNull($.elementaryStreams, "expected parameter 'elementaryStreams' to be non-null");
+            $.inputs = Objects.requireNonNull($.inputs, "expected parameter 'inputs' to be non-null");
+            $.manifests = Objects.requireNonNull($.manifests, "expected parameter 'manifests' to be non-null");
+            $.muxStreams = Objects.requireNonNull($.muxStreams, "expected parameter 'muxStreams' to be non-null");
+            $.output = Objects.requireNonNull($.output, "expected parameter 'output' to be non-null");
+            $.overlays = Objects.requireNonNull($.overlays, "expected parameter 'overlays' to be non-null");
+            $.pubsubDestination = Objects.requireNonNull($.pubsubDestination, "expected parameter 'pubsubDestination' to be non-null");
+            $.spriteSheets = Objects.requireNonNull($.spriteSheets, "expected parameter 'spriteSheets' to be non-null");
+            return $;
         }
     }
+
 }

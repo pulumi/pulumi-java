@@ -8,9 +8,9 @@ import com.pulumi.azurenative.security.enums.State;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends com.p
      * 
      */
     @Import(name="minimalSeverity")
-      private final @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
+    private @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
 
-    public Output<Either<String,MinimalSeverity>> minimalSeverity() {
-        return this.minimalSeverity == null ? Codegen.empty() : this.minimalSeverity;
+    public Optional<Output<Either<String,MinimalSeverity>>> minimalSeverity() {
+        return Optional.ofNullable(this.minimalSeverity);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class SecurityContactPropertiesAlertNotificationsArgs extends com.p
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,State>> state;
+    private @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,State>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public SecurityContactPropertiesAlertNotificationsArgs(
-        @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity,
-        @Nullable Output<Either<String,State>> state) {
-        this.minimalSeverity = minimalSeverity;
-        this.state = state;
-    }
+    private SecurityContactPropertiesAlertNotificationsArgs() {}
 
-    private SecurityContactPropertiesAlertNotificationsArgs() {
-        this.minimalSeverity = Codegen.empty();
-        this.state = Codegen.empty();
+    private SecurityContactPropertiesAlertNotificationsArgs(SecurityContactPropertiesAlertNotificationsArgs $) {
+        this.minimalSeverity = $.minimalSeverity;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityContactPropertiesAlertNotificationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,MinimalSeverity>> minimalSeverity;
-        private @Nullable Output<Either<String,State>> state;
+        private SecurityContactPropertiesAlertNotificationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityContactPropertiesAlertNotificationsArgs();
         }
 
         public Builder(SecurityContactPropertiesAlertNotificationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minimalSeverity = defaults.minimalSeverity;
-    	      this.state = defaults.state;
+            $ = new SecurityContactPropertiesAlertNotificationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minimalSeverity(@Nullable Output<Either<String,MinimalSeverity>> minimalSeverity) {
-            this.minimalSeverity = minimalSeverity;
+            $.minimalSeverity = minimalSeverity;
             return this;
         }
-        public Builder minimalSeverity(@Nullable Either<String,MinimalSeverity> minimalSeverity) {
-            this.minimalSeverity = Codegen.ofNullable(minimalSeverity);
-            return this;
+
+        public Builder minimalSeverity(Either<String,MinimalSeverity> minimalSeverity) {
+            return minimalSeverity(Output.of(minimalSeverity));
         }
+
         public Builder state(@Nullable Output<Either<String,State>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,State> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public SecurityContactPropertiesAlertNotificationsArgs build() {
-            return new SecurityContactPropertiesAlertNotificationsArgs(minimalSeverity, state);
+
+        public Builder state(Either<String,State> state) {
+            return state(Output.of(state));
+        }
+
+        public SecurityContactPropertiesAlertNotificationsArgs build() {
+            return $;
         }
     }
+
 }

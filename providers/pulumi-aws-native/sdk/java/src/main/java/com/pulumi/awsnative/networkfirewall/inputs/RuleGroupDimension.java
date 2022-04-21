@@ -13,45 +13,45 @@ public final class RuleGroupDimension extends com.pulumi.resources.InvokeArgs {
     public static final RuleGroupDimension Empty = new RuleGroupDimension();
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public RuleGroupDimension(String value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private RuleGroupDimension() {}
 
-    private RuleGroupDimension() {
-        this.value = null;
+    private RuleGroupDimension(RuleGroupDimension $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupDimension defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
+        private RuleGroupDimension $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupDimension();
         }
 
         public Builder(RuleGroupDimension defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new RuleGroupDimension(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public RuleGroupDimension build() {
-            return new RuleGroupDimension(value);
+        }
+
+        public RuleGroupDimension build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

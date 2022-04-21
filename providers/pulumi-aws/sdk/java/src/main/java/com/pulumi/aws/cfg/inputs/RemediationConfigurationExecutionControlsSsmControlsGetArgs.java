@@ -5,9 +5,9 @@ package com.pulumi.aws.cfg.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RemediationConfigurationExecutionControlsSsmControlsGetArgs e
      * 
      */
     @Import(name="concurrentExecutionRatePercentage")
-      private final @Nullable Output<Integer> concurrentExecutionRatePercentage;
+    private @Nullable Output<Integer> concurrentExecutionRatePercentage;
 
-    public Output<Integer> concurrentExecutionRatePercentage() {
-        return this.concurrentExecutionRatePercentage == null ? Codegen.empty() : this.concurrentExecutionRatePercentage;
+    public Optional<Output<Integer>> concurrentExecutionRatePercentage() {
+        return Optional.ofNullable(this.concurrentExecutionRatePercentage);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class RemediationConfigurationExecutionControlsSsmControlsGetArgs e
      * 
      */
     @Import(name="errorPercentage")
-      private final @Nullable Output<Integer> errorPercentage;
+    private @Nullable Output<Integer> errorPercentage;
 
-    public Output<Integer> errorPercentage() {
-        return this.errorPercentage == null ? Codegen.empty() : this.errorPercentage;
+    public Optional<Output<Integer>> errorPercentage() {
+        return Optional.ofNullable(this.errorPercentage);
     }
 
-    public RemediationConfigurationExecutionControlsSsmControlsGetArgs(
-        @Nullable Output<Integer> concurrentExecutionRatePercentage,
-        @Nullable Output<Integer> errorPercentage) {
-        this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
-        this.errorPercentage = errorPercentage;
-    }
+    private RemediationConfigurationExecutionControlsSsmControlsGetArgs() {}
 
-    private RemediationConfigurationExecutionControlsSsmControlsGetArgs() {
-        this.concurrentExecutionRatePercentage = Codegen.empty();
-        this.errorPercentage = Codegen.empty();
+    private RemediationConfigurationExecutionControlsSsmControlsGetArgs(RemediationConfigurationExecutionControlsSsmControlsGetArgs $) {
+        this.concurrentExecutionRatePercentage = $.concurrentExecutionRatePercentage;
+        this.errorPercentage = $.errorPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationConfigurationExecutionControlsSsmControlsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> concurrentExecutionRatePercentage;
-        private @Nullable Output<Integer> errorPercentage;
+        private RemediationConfigurationExecutionControlsSsmControlsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationConfigurationExecutionControlsSsmControlsGetArgs();
         }
 
         public Builder(RemediationConfigurationExecutionControlsSsmControlsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.concurrentExecutionRatePercentage = defaults.concurrentExecutionRatePercentage;
-    	      this.errorPercentage = defaults.errorPercentage;
+            $ = new RemediationConfigurationExecutionControlsSsmControlsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder concurrentExecutionRatePercentage(@Nullable Output<Integer> concurrentExecutionRatePercentage) {
-            this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
+            $.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
             return this;
         }
-        public Builder concurrentExecutionRatePercentage(@Nullable Integer concurrentExecutionRatePercentage) {
-            this.concurrentExecutionRatePercentage = Codegen.ofNullable(concurrentExecutionRatePercentage);
-            return this;
+
+        public Builder concurrentExecutionRatePercentage(Integer concurrentExecutionRatePercentage) {
+            return concurrentExecutionRatePercentage(Output.of(concurrentExecutionRatePercentage));
         }
+
         public Builder errorPercentage(@Nullable Output<Integer> errorPercentage) {
-            this.errorPercentage = errorPercentage;
+            $.errorPercentage = errorPercentage;
             return this;
         }
-        public Builder errorPercentage(@Nullable Integer errorPercentage) {
-            this.errorPercentage = Codegen.ofNullable(errorPercentage);
-            return this;
-        }        public RemediationConfigurationExecutionControlsSsmControlsGetArgs build() {
-            return new RemediationConfigurationExecutionControlsSsmControlsGetArgs(concurrentExecutionRatePercentage, errorPercentage);
+
+        public Builder errorPercentage(Integer errorPercentage) {
+            return errorPercentage(Output.of(errorPercentage));
+        }
+
+        public RemediationConfigurationExecutionControlsSsmControlsGetArgs build() {
+            return $;
         }
     }
+
 }

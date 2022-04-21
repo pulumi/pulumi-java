@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ManagedSslCertificateManagedArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<Integer> certificateId;
+    private @Nullable Output<Integer> certificateId;
 
-    public Output<Integer> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<Integer>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="managed")
-      private final @Nullable Output<ManagedSslCertificateManagedArgs> managed;
+    private @Nullable Output<ManagedSslCertificateManagedArgs> managed;
 
-    public Output<ManagedSslCertificateManagedArgs> managed() {
-        return this.managed == null ? Codegen.empty() : this.managed;
+    public Optional<Output<ManagedSslCertificateManagedArgs>> managed() {
+        return Optional.ofNullable(this.managed);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -89,115 +89,98 @@ public final class ManagedSslCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ManagedSslCertificateArgs(
-        @Nullable Output<Integer> certificateId,
-        @Nullable Output<String> description,
-        @Nullable Output<ManagedSslCertificateManagedArgs> managed,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> type) {
-        this.certificateId = certificateId;
-        this.description = description;
-        this.managed = managed;
-        this.name = name;
-        this.project = project;
-        this.type = type;
-    }
+    private ManagedSslCertificateArgs() {}
 
-    private ManagedSslCertificateArgs() {
-        this.certificateId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.managed = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.type = Codegen.empty();
+    private ManagedSslCertificateArgs(ManagedSslCertificateArgs $) {
+        this.certificateId = $.certificateId;
+        this.description = $.description;
+        this.managed = $.managed;
+        this.name = $.name;
+        this.project = $.project;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedSslCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> certificateId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<ManagedSslCertificateManagedArgs> managed;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> type;
+        private ManagedSslCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedSslCertificateArgs();
         }
 
         public Builder(ManagedSslCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.description = defaults.description;
-    	      this.managed = defaults.managed;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.type = defaults.type;
+            $ = new ManagedSslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(@Nullable Output<Integer> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable Integer certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(Integer certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder managed(@Nullable Output<ManagedSslCertificateManagedArgs> managed) {
-            this.managed = managed;
+            $.managed = managed;
             return this;
         }
-        public Builder managed(@Nullable ManagedSslCertificateManagedArgs managed) {
-            this.managed = Codegen.ofNullable(managed);
-            return this;
+
+        public Builder managed(ManagedSslCertificateManagedArgs managed) {
+            return managed(Output.of(managed));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ManagedSslCertificateArgs build() {
-            return new ManagedSslCertificateArgs(certificateId, description, managed, name, project, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ManagedSslCertificateArgs build() {
+            return $;
         }
     }
+
 }

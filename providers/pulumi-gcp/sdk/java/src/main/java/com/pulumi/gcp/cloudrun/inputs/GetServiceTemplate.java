@@ -15,68 +15,67 @@ public final class GetServiceTemplate extends com.pulumi.resources.InvokeArgs {
     public static final GetServiceTemplate Empty = new GetServiceTemplate();
 
     @Import(name="metadatas", required=true)
-      private final List<GetServiceTemplateMetadata> metadatas;
+    private List<GetServiceTemplateMetadata> metadatas;
 
     public List<GetServiceTemplateMetadata> metadatas() {
         return this.metadatas;
     }
 
     @Import(name="specs", required=true)
-      private final List<GetServiceTemplateSpec> specs;
+    private List<GetServiceTemplateSpec> specs;
 
     public List<GetServiceTemplateSpec> specs() {
         return this.specs;
     }
 
-    public GetServiceTemplate(
-        List<GetServiceTemplateMetadata> metadatas,
-        List<GetServiceTemplateSpec> specs) {
-        this.metadatas = Objects.requireNonNull(metadatas, "expected parameter 'metadatas' to be non-null");
-        this.specs = Objects.requireNonNull(specs, "expected parameter 'specs' to be non-null");
-    }
+    private GetServiceTemplate() {}
 
-    private GetServiceTemplate() {
-        this.metadatas = List.of();
-        this.specs = List.of();
+    private GetServiceTemplate(GetServiceTemplate $) {
+        this.metadatas = $.metadatas;
+        this.specs = $.specs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplate defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetServiceTemplateMetadata> metadatas;
-        private List<GetServiceTemplateSpec> specs;
+        private GetServiceTemplate $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplate();
         }
 
         public Builder(GetServiceTemplate defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadatas = defaults.metadatas;
-    	      this.specs = defaults.specs;
+            $ = new GetServiceTemplate(Objects.requireNonNull(defaults));
         }
 
         public Builder metadatas(List<GetServiceTemplateMetadata> metadatas) {
-            this.metadatas = Objects.requireNonNull(metadatas);
+            $.metadatas = metadatas;
             return this;
         }
+
         public Builder metadatas(GetServiceTemplateMetadata... metadatas) {
             return metadatas(List.of(metadatas));
         }
+
         public Builder specs(List<GetServiceTemplateSpec> specs) {
-            this.specs = Objects.requireNonNull(specs);
+            $.specs = specs;
             return this;
         }
+
         public Builder specs(GetServiceTemplateSpec... specs) {
             return specs(List.of(specs));
-        }        public GetServiceTemplate build() {
-            return new GetServiceTemplate(metadatas, specs);
+        }
+
+        public GetServiceTemplate build() {
+            $.metadatas = Objects.requireNonNull($.metadatas, "expected parameter 'metadatas' to be non-null");
+            $.specs = Objects.requireNonNull($.specs, "expected parameter 'specs' to be non-null");
+            return $;
         }
     }
+
 }

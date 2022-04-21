@@ -24,10 +24,10 @@ public final class ReliableCollectionsRefResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="doNotPersistState")
-      private final @Nullable Boolean doNotPersistState;
+    private @Nullable Boolean doNotPersistState;
 
     public Optional<Boolean> doNotPersistState() {
-        return this.doNotPersistState == null ? Optional.empty() : Optional.ofNullable(this.doNotPersistState);
+        return Optional.ofNullable(this.doNotPersistState);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class ReliableCollectionsRefResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ReliableCollectionsRefResponse(
-        @Nullable Boolean doNotPersistState,
-        String name) {
-        this.doNotPersistState = doNotPersistState;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ReliableCollectionsRefResponse() {}
 
-    private ReliableCollectionsRefResponse() {
-        this.doNotPersistState = null;
-        this.name = null;
+    private ReliableCollectionsRefResponse(ReliableCollectionsRefResponse $) {
+        this.doNotPersistState = $.doNotPersistState;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReliableCollectionsRefResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean doNotPersistState;
-        private String name;
+        private ReliableCollectionsRefResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReliableCollectionsRefResponse();
         }
 
         public Builder(ReliableCollectionsRefResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.doNotPersistState = defaults.doNotPersistState;
-    	      this.name = defaults.name;
+            $ = new ReliableCollectionsRefResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder doNotPersistState(@Nullable Boolean doNotPersistState) {
-            this.doNotPersistState = doNotPersistState;
+            $.doNotPersistState = doNotPersistState;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ReliableCollectionsRefResponse build() {
-            return new ReliableCollectionsRefResponse(doNotPersistState, name);
+        }
+
+        public ReliableCollectionsRefResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

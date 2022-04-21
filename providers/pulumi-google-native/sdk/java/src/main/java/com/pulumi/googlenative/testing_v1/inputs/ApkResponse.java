@@ -22,7 +22,7 @@ public final class ApkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final FileReferenceResponse location;
+    private FileReferenceResponse location;
 
     public FileReferenceResponse location() {
         return this.location;
@@ -33,55 +33,52 @@ public final class ApkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="packageName", required=true)
-      private final String packageName;
+    private String packageName;
 
     public String packageName() {
         return this.packageName;
     }
 
-    public ApkResponse(
-        FileReferenceResponse location,
-        String packageName) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.packageName = Objects.requireNonNull(packageName, "expected parameter 'packageName' to be non-null");
-    }
+    private ApkResponse() {}
 
-    private ApkResponse() {
-        this.location = null;
-        this.packageName = null;
+    private ApkResponse(ApkResponse $) {
+        this.location = $.location;
+        this.packageName = $.packageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FileReferenceResponse location;
-        private String packageName;
+        private ApkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApkResponse();
         }
 
         public Builder(ApkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.packageName = defaults.packageName;
+            $ = new ApkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(FileReferenceResponse location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder packageName(String packageName) {
-            this.packageName = Objects.requireNonNull(packageName);
+            $.packageName = packageName;
             return this;
-        }        public ApkResponse build() {
-            return new ApkResponse(location, packageName);
+        }
+
+        public ApkResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.packageName = Objects.requireNonNull($.packageName, "expected parameter 'packageName' to be non-null");
+            return $;
         }
     }
+
 }

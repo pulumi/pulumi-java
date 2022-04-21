@@ -5,11 +5,11 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CertificateTemplatePassthroughExtensionsGetArgs extends com.p
      * 
      */
     @Import(name="additionalExtensions")
-      private final @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions;
+    private @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions;
 
-    public Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions() {
-        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
+    public Optional<Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>>> additionalExtensions() {
+        return Optional.ofNullable(this.additionalExtensions);
     }
 
     /**
@@ -33,69 +33,66 @@ public final class CertificateTemplatePassthroughExtensionsGetArgs extends com.p
      * 
      */
     @Import(name="knownExtensions")
-      private final @Nullable Output<List<String>> knownExtensions;
+    private @Nullable Output<List<String>> knownExtensions;
 
-    public Output<List<String>> knownExtensions() {
-        return this.knownExtensions == null ? Codegen.empty() : this.knownExtensions;
+    public Optional<Output<List<String>>> knownExtensions() {
+        return Optional.ofNullable(this.knownExtensions);
     }
 
-    public CertificateTemplatePassthroughExtensionsGetArgs(
-        @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions,
-        @Nullable Output<List<String>> knownExtensions) {
-        this.additionalExtensions = additionalExtensions;
-        this.knownExtensions = knownExtensions;
-    }
+    private CertificateTemplatePassthroughExtensionsGetArgs() {}
 
-    private CertificateTemplatePassthroughExtensionsGetArgs() {
-        this.additionalExtensions = Codegen.empty();
-        this.knownExtensions = Codegen.empty();
+    private CertificateTemplatePassthroughExtensionsGetArgs(CertificateTemplatePassthroughExtensionsGetArgs $) {
+        this.additionalExtensions = $.additionalExtensions;
+        this.knownExtensions = $.knownExtensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateTemplatePassthroughExtensionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions;
-        private @Nullable Output<List<String>> knownExtensions;
+        private CertificateTemplatePassthroughExtensionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateTemplatePassthroughExtensionsGetArgs();
         }
 
         public Builder(CertificateTemplatePassthroughExtensionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExtensions = defaults.additionalExtensions;
-    	      this.knownExtensions = defaults.knownExtensions;
+            $ = new CertificateTemplatePassthroughExtensionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExtensions(@Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions) {
-            this.additionalExtensions = additionalExtensions;
+            $.additionalExtensions = additionalExtensions;
             return this;
         }
-        public Builder additionalExtensions(@Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs> additionalExtensions) {
-            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
-            return this;
+
+        public Builder additionalExtensions(List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs> additionalExtensions) {
+            return additionalExtensions(Output.of(additionalExtensions));
         }
+
         public Builder additionalExtensions(CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
+
         public Builder knownExtensions(@Nullable Output<List<String>> knownExtensions) {
-            this.knownExtensions = knownExtensions;
+            $.knownExtensions = knownExtensions;
             return this;
         }
-        public Builder knownExtensions(@Nullable List<String> knownExtensions) {
-            this.knownExtensions = Codegen.ofNullable(knownExtensions);
-            return this;
+
+        public Builder knownExtensions(List<String> knownExtensions) {
+            return knownExtensions(Output.of(knownExtensions));
         }
+
         public Builder knownExtensions(String... knownExtensions) {
             return knownExtensions(List.of(knownExtensions));
-        }        public CertificateTemplatePassthroughExtensionsGetArgs build() {
-            return new CertificateTemplatePassthroughExtensionsGetArgs(additionalExtensions, knownExtensions);
+        }
+
+        public CertificateTemplatePassthroughExtensionsGetArgs build() {
+            return $;
         }
     }
+
 }

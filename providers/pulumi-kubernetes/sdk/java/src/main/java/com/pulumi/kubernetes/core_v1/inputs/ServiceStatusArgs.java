@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<ConditionArgs>> conditions;
+    private @Nullable Output<List<ConditionArgs>> conditions;
 
-    public Output<List<ConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<ConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancer")
-      private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
+    private @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
-    public Output<LoadBalancerStatusArgs> loadBalancer() {
-        return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
+    public Optional<Output<LoadBalancerStatusArgs>> loadBalancer() {
+        return Optional.ofNullable(this.loadBalancer);
     }
 
-    public ServiceStatusArgs(
-        @Nullable Output<List<ConditionArgs>> conditions,
-        @Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
-        this.conditions = conditions;
-        this.loadBalancer = loadBalancer;
-    }
+    private ServiceStatusArgs() {}
 
-    private ServiceStatusArgs() {
-        this.conditions = Codegen.empty();
-        this.loadBalancer = Codegen.empty();
+    private ServiceStatusArgs(ServiceStatusArgs $) {
+        this.conditions = $.conditions;
+        this.loadBalancer = $.loadBalancer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ConditionArgs>> conditions;
-        private @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
+        private ServiceStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceStatusArgs();
         }
 
         public Builder(ServiceStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.loadBalancer = defaults.loadBalancer;
+            $ = new ServiceStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<ConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<ConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(ConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder loadBalancer(@Nullable Output<LoadBalancerStatusArgs> loadBalancer) {
-            this.loadBalancer = loadBalancer;
+            $.loadBalancer = loadBalancer;
             return this;
         }
-        public Builder loadBalancer(@Nullable LoadBalancerStatusArgs loadBalancer) {
-            this.loadBalancer = Codegen.ofNullable(loadBalancer);
-            return this;
-        }        public ServiceStatusArgs build() {
-            return new ServiceStatusArgs(conditions, loadBalancer);
+
+        public Builder loadBalancer(LoadBalancerStatusArgs loadBalancer) {
+            return loadBalancer(Output.of(loadBalancer));
+        }
+
+        public ServiceStatusArgs build() {
+            return $;
         }
     }
+
 }

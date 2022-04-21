@@ -7,9 +7,9 @@ import com.pulumi.awsnative.cloudfront.inputs.DistributionConfigArgs;
 import com.pulumi.awsnative.cloudfront.inputs.DistributionTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,70 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
     public static final DistributionArgs Empty = new DistributionArgs();
 
     @Import(name="distributionConfig", required=true)
-      private final Output<DistributionConfigArgs> distributionConfig;
+    private Output<DistributionConfigArgs> distributionConfig;
 
     public Output<DistributionConfigArgs> distributionConfig() {
         return this.distributionConfig;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<DistributionTagArgs>> tags;
+    private @Nullable Output<List<DistributionTagArgs>> tags;
 
-    public Output<List<DistributionTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DistributionTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DistributionArgs(
-        Output<DistributionConfigArgs> distributionConfig,
-        @Nullable Output<List<DistributionTagArgs>> tags) {
-        this.distributionConfig = Objects.requireNonNull(distributionConfig, "expected parameter 'distributionConfig' to be non-null");
-        this.tags = tags;
-    }
+    private DistributionArgs() {}
 
-    private DistributionArgs() {
-        this.distributionConfig = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DistributionArgs(DistributionArgs $) {
+        this.distributionConfig = $.distributionConfig;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DistributionConfigArgs> distributionConfig;
-        private @Nullable Output<List<DistributionTagArgs>> tags;
+        private DistributionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionArgs();
         }
 
         public Builder(DistributionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionConfig = defaults.distributionConfig;
-    	      this.tags = defaults.tags;
+            $ = new DistributionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionConfig(Output<DistributionConfigArgs> distributionConfig) {
-            this.distributionConfig = Objects.requireNonNull(distributionConfig);
+            $.distributionConfig = distributionConfig;
             return this;
         }
+
         public Builder distributionConfig(DistributionConfigArgs distributionConfig) {
-            this.distributionConfig = Output.of(Objects.requireNonNull(distributionConfig));
-            return this;
+            return distributionConfig(Output.of(distributionConfig));
         }
+
         public Builder tags(@Nullable Output<List<DistributionTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DistributionTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DistributionTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DistributionTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DistributionArgs build() {
-            return new DistributionArgs(distributionConfig, tags);
+        }
+
+        public DistributionArgs build() {
+            $.distributionConfig = Objects.requireNonNull($.distributionConfig, "expected parameter 'distributionConfig' to be non-null");
+            return $;
         }
     }
+
 }

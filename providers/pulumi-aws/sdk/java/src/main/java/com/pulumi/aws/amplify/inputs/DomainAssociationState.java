@@ -6,11 +6,11 @@ package com.pulumi.aws.amplify.inputs;
 import com.pulumi.aws.amplify.inputs.DomainAssociationSubDomainGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="certificateVerificationDnsRecord")
-      private final @Nullable Output<String> certificateVerificationDnsRecord;
+    private @Nullable Output<String> certificateVerificationDnsRecord;
 
-    public Output<String> certificateVerificationDnsRecord() {
-        return this.certificateVerificationDnsRecord == null ? Codegen.empty() : this.certificateVerificationDnsRecord;
+    public Optional<Output<String>> certificateVerificationDnsRecord() {
+        return Optional.ofNullable(this.certificateVerificationDnsRecord);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subDomains")
-      private final @Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains;
+    private @Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains;
 
-    public Output<List<DomainAssociationSubDomainGetArgs>> subDomains() {
-        return this.subDomains == null ? Codegen.empty() : this.subDomains;
+    public Optional<Output<List<DomainAssociationSubDomainGetArgs>>> subDomains() {
+        return Optional.ofNullable(this.subDomains);
     }
 
     /**
@@ -78,118 +78,102 @@ public final class DomainAssociationState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="waitForVerification")
-      private final @Nullable Output<Boolean> waitForVerification;
+    private @Nullable Output<Boolean> waitForVerification;
 
-    public Output<Boolean> waitForVerification() {
-        return this.waitForVerification == null ? Codegen.empty() : this.waitForVerification;
+    public Optional<Output<Boolean>> waitForVerification() {
+        return Optional.ofNullable(this.waitForVerification);
     }
 
-    public DomainAssociationState(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> certificateVerificationDnsRecord,
-        @Nullable Output<String> domainName,
-        @Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains,
-        @Nullable Output<Boolean> waitForVerification) {
-        this.appId = appId;
-        this.arn = arn;
-        this.certificateVerificationDnsRecord = certificateVerificationDnsRecord;
-        this.domainName = domainName;
-        this.subDomains = subDomains;
-        this.waitForVerification = waitForVerification;
-    }
+    private DomainAssociationState() {}
 
-    private DomainAssociationState() {
-        this.appId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.certificateVerificationDnsRecord = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.subDomains = Codegen.empty();
-        this.waitForVerification = Codegen.empty();
+    private DomainAssociationState(DomainAssociationState $) {
+        this.appId = $.appId;
+        this.arn = $.arn;
+        this.certificateVerificationDnsRecord = $.certificateVerificationDnsRecord;
+        this.domainName = $.domainName;
+        this.subDomains = $.subDomains;
+        this.waitForVerification = $.waitForVerification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> certificateVerificationDnsRecord;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains;
-        private @Nullable Output<Boolean> waitForVerification;
+        private DomainAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainAssociationState();
         }
 
         public Builder(DomainAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.arn = defaults.arn;
-    	      this.certificateVerificationDnsRecord = defaults.certificateVerificationDnsRecord;
-    	      this.domainName = defaults.domainName;
-    	      this.subDomains = defaults.subDomains;
-    	      this.waitForVerification = defaults.waitForVerification;
+            $ = new DomainAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder certificateVerificationDnsRecord(@Nullable Output<String> certificateVerificationDnsRecord) {
-            this.certificateVerificationDnsRecord = certificateVerificationDnsRecord;
+            $.certificateVerificationDnsRecord = certificateVerificationDnsRecord;
             return this;
         }
-        public Builder certificateVerificationDnsRecord(@Nullable String certificateVerificationDnsRecord) {
-            this.certificateVerificationDnsRecord = Codegen.ofNullable(certificateVerificationDnsRecord);
-            return this;
+
+        public Builder certificateVerificationDnsRecord(String certificateVerificationDnsRecord) {
+            return certificateVerificationDnsRecord(Output.of(certificateVerificationDnsRecord));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder subDomains(@Nullable Output<List<DomainAssociationSubDomainGetArgs>> subDomains) {
-            this.subDomains = subDomains;
+            $.subDomains = subDomains;
             return this;
         }
-        public Builder subDomains(@Nullable List<DomainAssociationSubDomainGetArgs> subDomains) {
-            this.subDomains = Codegen.ofNullable(subDomains);
-            return this;
+
+        public Builder subDomains(List<DomainAssociationSubDomainGetArgs> subDomains) {
+            return subDomains(Output.of(subDomains));
         }
+
         public Builder subDomains(DomainAssociationSubDomainGetArgs... subDomains) {
             return subDomains(List.of(subDomains));
         }
+
         public Builder waitForVerification(@Nullable Output<Boolean> waitForVerification) {
-            this.waitForVerification = waitForVerification;
+            $.waitForVerification = waitForVerification;
             return this;
         }
-        public Builder waitForVerification(@Nullable Boolean waitForVerification) {
-            this.waitForVerification = Codegen.ofNullable(waitForVerification);
-            return this;
-        }        public DomainAssociationState build() {
-            return new DomainAssociationState(appId, arn, certificateVerificationDnsRecord, domainName, subDomains, waitForVerification);
+
+        public Builder waitForVerification(Boolean waitForVerification) {
+            return waitForVerification(Output.of(waitForVerification));
+        }
+
+        public DomainAssociationState build() {
+            return $;
         }
     }
+
 }

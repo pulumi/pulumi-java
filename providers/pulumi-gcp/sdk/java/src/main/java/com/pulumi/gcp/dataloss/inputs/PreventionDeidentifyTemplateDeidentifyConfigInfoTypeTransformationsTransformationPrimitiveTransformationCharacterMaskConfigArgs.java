@@ -5,13 +5,13 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="charactersToIgnores")
-      private final @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>> charactersToIgnores;
+    private @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>> charactersToIgnores;
 
-    public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>> charactersToIgnores() {
-        return this.charactersToIgnores == null ? Codegen.empty() : this.charactersToIgnores;
+    public Optional<Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>>> charactersToIgnores() {
+        return Optional.ofNullable(this.charactersToIgnores);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="maskingCharacter")
-      private final @Nullable Output<String> maskingCharacter;
+    private @Nullable Output<String> maskingCharacter;
 
-    public Output<String> maskingCharacter() {
-        return this.maskingCharacter == null ? Codegen.empty() : this.maskingCharacter;
+    public Optional<Output<String>> maskingCharacter() {
+        return Optional.ofNullable(this.maskingCharacter);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="numberToMask")
-      private final @Nullable Output<Integer> numberToMask;
+    private @Nullable Output<Integer> numberToMask;
 
-    public Output<Integer> numberToMask() {
-        return this.numberToMask == null ? Codegen.empty() : this.numberToMask;
+    public Optional<Output<Integer>> numberToMask() {
+        return Optional.ofNullable(this.numberToMask);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="reverseOrder")
-      private final @Nullable Output<Boolean> reverseOrder;
+    private @Nullable Output<Boolean> reverseOrder;
 
-    public Output<Boolean> reverseOrder() {
-        return this.reverseOrder == null ? Codegen.empty() : this.reverseOrder;
+    public Optional<Output<Boolean>> reverseOrder() {
+        return Optional.ofNullable(this.reverseOrder);
     }
 
-    public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs(
-        @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>> charactersToIgnores,
-        @Nullable Output<String> maskingCharacter,
-        @Nullable Output<Integer> numberToMask,
-        @Nullable Output<Boolean> reverseOrder) {
-        this.charactersToIgnores = charactersToIgnores;
-        this.maskingCharacter = maskingCharacter;
-        this.numberToMask = numberToMask;
-        this.reverseOrder = reverseOrder;
-    }
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs() {}
 
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs() {
-        this.charactersToIgnores = Codegen.empty();
-        this.maskingCharacter = Codegen.empty();
-        this.numberToMask = Codegen.empty();
-        this.reverseOrder = Codegen.empty();
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs $) {
+        this.charactersToIgnores = $.charactersToIgnores;
+        this.maskingCharacter = $.maskingCharacter;
+        this.numberToMask = $.numberToMask;
+        this.reverseOrder = $.reverseOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>> charactersToIgnores;
-        private @Nullable Output<String> maskingCharacter;
-        private @Nullable Output<Integer> numberToMask;
-        private @Nullable Output<Boolean> reverseOrder;
+        private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs();
         }
 
         public Builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charactersToIgnores = defaults.charactersToIgnores;
-    	      this.maskingCharacter = defaults.maskingCharacter;
-    	      this.numberToMask = defaults.numberToMask;
-    	      this.reverseOrder = defaults.reverseOrder;
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder charactersToIgnores(@Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs>> charactersToIgnores) {
-            this.charactersToIgnores = charactersToIgnores;
+            $.charactersToIgnores = charactersToIgnores;
             return this;
         }
-        public Builder charactersToIgnores(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs> charactersToIgnores) {
-            this.charactersToIgnores = Codegen.ofNullable(charactersToIgnores);
-            return this;
+
+        public Builder charactersToIgnores(List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs> charactersToIgnores) {
+            return charactersToIgnores(Output.of(charactersToIgnores));
         }
+
         public Builder charactersToIgnores(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs... charactersToIgnores) {
             return charactersToIgnores(List.of(charactersToIgnores));
         }
+
         public Builder maskingCharacter(@Nullable Output<String> maskingCharacter) {
-            this.maskingCharacter = maskingCharacter;
+            $.maskingCharacter = maskingCharacter;
             return this;
         }
-        public Builder maskingCharacter(@Nullable String maskingCharacter) {
-            this.maskingCharacter = Codegen.ofNullable(maskingCharacter);
-            return this;
+
+        public Builder maskingCharacter(String maskingCharacter) {
+            return maskingCharacter(Output.of(maskingCharacter));
         }
+
         public Builder numberToMask(@Nullable Output<Integer> numberToMask) {
-            this.numberToMask = numberToMask;
+            $.numberToMask = numberToMask;
             return this;
         }
-        public Builder numberToMask(@Nullable Integer numberToMask) {
-            this.numberToMask = Codegen.ofNullable(numberToMask);
-            return this;
+
+        public Builder numberToMask(Integer numberToMask) {
+            return numberToMask(Output.of(numberToMask));
         }
+
         public Builder reverseOrder(@Nullable Output<Boolean> reverseOrder) {
-            this.reverseOrder = reverseOrder;
+            $.reverseOrder = reverseOrder;
             return this;
         }
-        public Builder reverseOrder(@Nullable Boolean reverseOrder) {
-            this.reverseOrder = Codegen.ofNullable(reverseOrder);
-            return this;
-        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs build() {
-            return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs(charactersToIgnores, maskingCharacter, numberToMask, reverseOrder);
+
+        public Builder reverseOrder(Boolean reverseOrder) {
+            return reverseOrder(Output.of(reverseOrder));
+        }
+
+        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigArgs build() {
+            return $;
         }
     }
+
 }

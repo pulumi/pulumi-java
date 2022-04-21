@@ -17,14 +17,14 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends co
      * 
      */
     @Import(name="deletionTime", required=true)
-      private final String deletionTime;
+    private String deletionTime;
 
     public String deletionTime() {
         return this.deletionTime;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -35,64 +35,59 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse extends co
      * 
      */
     @Import(name="namespaceUrl", required=true)
-      private final String namespaceUrl;
+    private String namespaceUrl;
 
     public String namespaceUrl() {
         return this.namespaceUrl;
     }
 
-    public ManagedZoneServiceDirectoryConfigNamespaceResponse(
-        String deletionTime,
-        String kind,
-        String namespaceUrl) {
-        this.deletionTime = Objects.requireNonNull(deletionTime, "expected parameter 'deletionTime' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.namespaceUrl = Objects.requireNonNull(namespaceUrl, "expected parameter 'namespaceUrl' to be non-null");
-    }
+    private ManagedZoneServiceDirectoryConfigNamespaceResponse() {}
 
-    private ManagedZoneServiceDirectoryConfigNamespaceResponse() {
-        this.deletionTime = null;
-        this.kind = null;
-        this.namespaceUrl = null;
+    private ManagedZoneServiceDirectoryConfigNamespaceResponse(ManagedZoneServiceDirectoryConfigNamespaceResponse $) {
+        this.deletionTime = $.deletionTime;
+        this.kind = $.kind;
+        this.namespaceUrl = $.namespaceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneServiceDirectoryConfigNamespaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deletionTime;
-        private String kind;
-        private String namespaceUrl;
+        private ManagedZoneServiceDirectoryConfigNamespaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneServiceDirectoryConfigNamespaceResponse();
         }
 
         public Builder(ManagedZoneServiceDirectoryConfigNamespaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deletionTime = defaults.deletionTime;
-    	      this.kind = defaults.kind;
-    	      this.namespaceUrl = defaults.namespaceUrl;
+            $ = new ManagedZoneServiceDirectoryConfigNamespaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deletionTime(String deletionTime) {
-            this.deletionTime = Objects.requireNonNull(deletionTime);
+            $.deletionTime = deletionTime;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder namespaceUrl(String namespaceUrl) {
-            this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
+            $.namespaceUrl = namespaceUrl;
             return this;
-        }        public ManagedZoneServiceDirectoryConfigNamespaceResponse build() {
-            return new ManagedZoneServiceDirectoryConfigNamespaceResponse(deletionTime, kind, namespaceUrl);
+        }
+
+        public ManagedZoneServiceDirectoryConfigNamespaceResponse build() {
+            $.deletionTime = Objects.requireNonNull($.deletionTime, "expected parameter 'deletionTime' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.namespaceUrl = Objects.requireNonNull($.namespaceUrl, "expected parameter 'namespaceUrl' to be non-null");
+            return $;
         }
     }
+
 }

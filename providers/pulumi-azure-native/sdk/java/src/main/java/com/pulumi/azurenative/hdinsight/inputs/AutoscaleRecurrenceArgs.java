@@ -6,10 +6,10 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.inputs.AutoscaleScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AutoscaleRecurrenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
+    private @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
 
-    public Output<List<AutoscaleScheduleArgs>> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<List<AutoscaleScheduleArgs>>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class AutoscaleRecurrenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public AutoscaleRecurrenceArgs(
-        @Nullable Output<List<AutoscaleScheduleArgs>> schedule,
-        @Nullable Output<String> timeZone) {
-        this.schedule = schedule;
-        this.timeZone = timeZone;
-    }
+    private AutoscaleRecurrenceArgs() {}
 
-    private AutoscaleRecurrenceArgs() {
-        this.schedule = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private AutoscaleRecurrenceArgs(AutoscaleRecurrenceArgs $) {
+        this.schedule = $.schedule;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleRecurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
-        private @Nullable Output<String> timeZone;
+        private AutoscaleRecurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleRecurrenceArgs();
         }
 
         public Builder(AutoscaleRecurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
-    	      this.timeZone = defaults.timeZone;
+            $ = new AutoscaleRecurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(@Nullable Output<List<AutoscaleScheduleArgs>> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable List<AutoscaleScheduleArgs> schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(List<AutoscaleScheduleArgs> schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder schedule(AutoscaleScheduleArgs... schedule) {
             return schedule(List.of(schedule));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public AutoscaleRecurrenceArgs build() {
-            return new AutoscaleRecurrenceArgs(schedule, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public AutoscaleRecurrenceArgs build() {
+            return $;
         }
     }
+
 }

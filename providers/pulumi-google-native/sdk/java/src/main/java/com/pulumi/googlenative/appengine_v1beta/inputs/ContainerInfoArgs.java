@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ContainerInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
-    public ContainerInfoArgs(@Nullable Output<String> image) {
-        this.image = image;
-    }
+    private ContainerInfoArgs() {}
 
-    private ContainerInfoArgs() {
-        this.image = Codegen.empty();
+    private ContainerInfoArgs(ContainerInfoArgs $) {
+        this.image = $.image;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> image;
+        private ContainerInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerInfoArgs();
         }
 
         public Builder(ContainerInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
+            $ = new ContainerInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
-        }        public ContainerInfoArgs build() {
-            return new ContainerInfoArgs(image);
+
+        public Builder image(String image) {
+            return image(Output.of(image));
+        }
+
+        public ContainerInfoArgs build() {
+            return $;
         }
     }
+
 }

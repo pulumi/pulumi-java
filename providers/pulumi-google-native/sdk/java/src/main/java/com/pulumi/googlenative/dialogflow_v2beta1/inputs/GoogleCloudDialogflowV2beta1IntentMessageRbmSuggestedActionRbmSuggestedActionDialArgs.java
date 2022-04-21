@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final Output<String> phoneNumber;
+    private Output<String> phoneNumber;
 
     public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs(Output<String> phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs() {
-        this.phoneNumber = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs $) {
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> phoneNumber;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder phoneNumber(Output<String> phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
         }
+
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs(phoneNumber);
+            return phoneNumber(Output.of(phoneNumber));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs build() {
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetSecretTopic extends com.pulumi.resources.InvokeArgs {
     public static final GetSecretTopic Empty = new GetSecretTopic();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetSecretTopic(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetSecretTopic() {}
 
-    private GetSecretTopic() {
-        this.name = null;
+    private GetSecretTopic(GetSecretTopic $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretTopic defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetSecretTopic $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretTopic();
         }
 
         public Builder(GetSecretTopic defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetSecretTopic(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetSecretTopic build() {
-            return new GetSecretTopic(name);
+        }
+
+        public GetSecretTopic build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

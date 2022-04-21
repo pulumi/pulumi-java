@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
      * 
      */
     @Import(name="audioUri", required=true)
-      private final String audioUri;
+    private String audioUri;
 
     public String audioUri() {
         return this.audioUri;
@@ -32,55 +32,52 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
      * 
      */
     @Import(name="dialogflowConversation", required=true)
-      private final String dialogflowConversation;
+    private String dialogflowConversation;
 
     public String dialogflowConversation() {
         return this.dialogflowConversation;
     }
 
-    public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(
-        String audioUri,
-        String dialogflowConversation) {
-        this.audioUri = Objects.requireNonNull(audioUri, "expected parameter 'audioUri' to be non-null");
-        this.dialogflowConversation = Objects.requireNonNull(dialogflowConversation, "expected parameter 'dialogflowConversation' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse() {
-        this.audioUri = null;
-        this.dialogflowConversation = null;
+    private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(GoogleCloudContactcenterinsightsV1DialogflowSourceResponse $) {
+        this.audioUri = $.audioUri;
+        this.dialogflowConversation = $.dialogflowConversation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1DialogflowSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String audioUri;
-        private String dialogflowConversation;
+        private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1DialogflowSourceResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1DialogflowSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioUri = defaults.audioUri;
-    	      this.dialogflowConversation = defaults.dialogflowConversation;
+            $ = new GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioUri(String audioUri) {
-            this.audioUri = Objects.requireNonNull(audioUri);
+            $.audioUri = audioUri;
             return this;
         }
+
         public Builder dialogflowConversation(String dialogflowConversation) {
-            this.dialogflowConversation = Objects.requireNonNull(dialogflowConversation);
+            $.dialogflowConversation = dialogflowConversation;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse build() {
-            return new GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(audioUri, dialogflowConversation);
+        }
+
+        public GoogleCloudContactcenterinsightsV1DialogflowSourceResponse build() {
+            $.audioUri = Objects.requireNonNull($.audioUri, "expected parameter 'audioUri' to be non-null");
+            $.dialogflowConversation = Objects.requireNonNull($.dialogflowConversation, "expected parameter 'dialogflowConversation' to be non-null");
+            return $;
         }
     }
+
 }

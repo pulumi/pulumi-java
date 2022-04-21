@@ -17,7 +17,7 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cacheName", required=true)
-      private final String cacheName;
+    private String cacheName;
 
     public String cacheName() {
         return this.cacheName;
@@ -28,7 +28,7 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleName", required=true)
-      private final String ruleName;
+    private String ruleName;
 
     public String ruleName() {
         return this.ruleName;
     }
 
-    public GetFirewallRuleArgs(
-        String cacheName,
-        String resourceGroupName,
-        String ruleName) {
-        this.cacheName = Objects.requireNonNull(cacheName, "expected parameter 'cacheName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-    }
+    private GetFirewallRuleArgs() {}
 
-    private GetFirewallRuleArgs() {
-        this.cacheName = null;
-        this.resourceGroupName = null;
-        this.ruleName = null;
+    private GetFirewallRuleArgs(GetFirewallRuleArgs $) {
+        this.cacheName = $.cacheName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cacheName;
-        private String resourceGroupName;
-        private String ruleName;
+        private GetFirewallRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallRuleArgs();
         }
 
         public Builder(GetFirewallRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheName = defaults.cacheName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleName = defaults.ruleName;
+            $ = new GetFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheName(String cacheName) {
-            this.cacheName = Objects.requireNonNull(cacheName);
+            $.cacheName = cacheName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
-        }        public GetFirewallRuleArgs build() {
-            return new GetFirewallRuleArgs(cacheName, resourceGroupName, ruleName);
+        }
+
+        public GetFirewallRuleArgs build() {
+            $.cacheName = Objects.requireNonNull($.cacheName, "expected parameter 'cacheName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            return $;
         }
     }
+
 }

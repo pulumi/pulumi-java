@@ -26,7 +26,7 @@ public final class BucketAnalyticsConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -37,90 +37,82 @@ public final class BucketAnalyticsConfiguration extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     @Import(name="storageClassAnalysis", required=true)
-      private final BucketStorageClassAnalysis storageClassAnalysis;
+    private BucketStorageClassAnalysis storageClassAnalysis;
 
     public BucketStorageClassAnalysis storageClassAnalysis() {
         return this.storageClassAnalysis;
     }
 
     @Import(name="tagFilters")
-      private final @Nullable List<BucketTagFilter> tagFilters;
+    private @Nullable List<BucketTagFilter> tagFilters;
 
-    public List<BucketTagFilter> tagFilters() {
-        return this.tagFilters == null ? List.of() : this.tagFilters;
+    public Optional<List<BucketTagFilter>> tagFilters() {
+        return Optional.ofNullable(this.tagFilters);
     }
 
-    public BucketAnalyticsConfiguration(
-        String id,
-        @Nullable String prefix,
-        BucketStorageClassAnalysis storageClassAnalysis,
-        @Nullable List<BucketTagFilter> tagFilters) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.prefix = prefix;
-        this.storageClassAnalysis = Objects.requireNonNull(storageClassAnalysis, "expected parameter 'storageClassAnalysis' to be non-null");
-        this.tagFilters = tagFilters;
-    }
+    private BucketAnalyticsConfiguration() {}
 
-    private BucketAnalyticsConfiguration() {
-        this.id = null;
-        this.prefix = null;
-        this.storageClassAnalysis = null;
-        this.tagFilters = List.of();
+    private BucketAnalyticsConfiguration(BucketAnalyticsConfiguration $) {
+        this.id = $.id;
+        this.prefix = $.prefix;
+        this.storageClassAnalysis = $.storageClassAnalysis;
+        this.tagFilters = $.tagFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAnalyticsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String prefix;
-        private BucketStorageClassAnalysis storageClassAnalysis;
-        private @Nullable List<BucketTagFilter> tagFilters;
+        private BucketAnalyticsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAnalyticsConfiguration();
         }
 
         public Builder(BucketAnalyticsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.prefix = defaults.prefix;
-    	      this.storageClassAnalysis = defaults.storageClassAnalysis;
-    	      this.tagFilters = defaults.tagFilters;
+            $ = new BucketAnalyticsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder storageClassAnalysis(BucketStorageClassAnalysis storageClassAnalysis) {
-            this.storageClassAnalysis = Objects.requireNonNull(storageClassAnalysis);
+            $.storageClassAnalysis = storageClassAnalysis;
             return this;
         }
+
         public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
-            this.tagFilters = tagFilters;
+            $.tagFilters = tagFilters;
             return this;
         }
+
         public Builder tagFilters(BucketTagFilter... tagFilters) {
             return tagFilters(List.of(tagFilters));
-        }        public BucketAnalyticsConfiguration build() {
-            return new BucketAnalyticsConfiguration(id, prefix, storageClassAnalysis, tagFilters);
+        }
+
+        public BucketAnalyticsConfiguration build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.storageClassAnalysis = Objects.requireNonNull($.storageClassAnalysis, "expected parameter 'storageClassAnalysis' to be non-null");
+            return $;
         }
     }
+
 }

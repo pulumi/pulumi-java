@@ -23,45 +23,44 @@ public final class HttpProxyConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="httpsProxy")
-      private final @Nullable String httpsProxy;
+    private @Nullable String httpsProxy;
 
     public Optional<String> httpsProxy() {
-        return this.httpsProxy == null ? Optional.empty() : Optional.ofNullable(this.httpsProxy);
+        return Optional.ofNullable(this.httpsProxy);
     }
 
-    public HttpProxyConfigurationResponse(@Nullable String httpsProxy) {
-        this.httpsProxy = httpsProxy;
-    }
+    private HttpProxyConfigurationResponse() {}
 
-    private HttpProxyConfigurationResponse() {
-        this.httpsProxy = null;
+    private HttpProxyConfigurationResponse(HttpProxyConfigurationResponse $) {
+        this.httpsProxy = $.httpsProxy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpProxyConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String httpsProxy;
+        private HttpProxyConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpProxyConfigurationResponse();
         }
 
         public Builder(HttpProxyConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpsProxy = defaults.httpsProxy;
+            $ = new HttpProxyConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder httpsProxy(@Nullable String httpsProxy) {
-            this.httpsProxy = httpsProxy;
+            $.httpsProxy = httpsProxy;
             return this;
-        }        public HttpProxyConfigurationResponse build() {
-            return new HttpProxyConfigurationResponse(httpsProxy);
+        }
+
+        public HttpProxyConfigurationResponse build() {
+            return $;
         }
     }
+
 }

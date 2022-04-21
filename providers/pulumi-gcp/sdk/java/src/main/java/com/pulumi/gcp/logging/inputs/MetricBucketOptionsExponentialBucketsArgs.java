@@ -5,10 +5,10 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MetricBucketOptionsExponentialBucketsArgs extends com.pulumi.
      * 
      */
     @Import(name="growthFactor")
-      private final @Nullable Output<Double> growthFactor;
+    private @Nullable Output<Double> growthFactor;
 
-    public Output<Double> growthFactor() {
-        return this.growthFactor == null ? Codegen.empty() : this.growthFactor;
+    public Optional<Output<Double>> growthFactor() {
+        return Optional.ofNullable(this.growthFactor);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MetricBucketOptionsExponentialBucketsArgs extends com.pulumi.
      * 
      */
     @Import(name="numFiniteBuckets")
-      private final @Nullable Output<Integer> numFiniteBuckets;
+    private @Nullable Output<Integer> numFiniteBuckets;
 
-    public Output<Integer> numFiniteBuckets() {
-        return this.numFiniteBuckets == null ? Codegen.empty() : this.numFiniteBuckets;
+    public Optional<Output<Integer>> numFiniteBuckets() {
+        return Optional.ofNullable(this.numFiniteBuckets);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class MetricBucketOptionsExponentialBucketsArgs extends com.pulumi.
      * 
      */
     @Import(name="scale")
-      private final @Nullable Output<Double> scale;
+    private @Nullable Output<Double> scale;
 
-    public Output<Double> scale() {
-        return this.scale == null ? Codegen.empty() : this.scale;
+    public Optional<Output<Double>> scale() {
+        return Optional.ofNullable(this.scale);
     }
 
-    public MetricBucketOptionsExponentialBucketsArgs(
-        @Nullable Output<Double> growthFactor,
-        @Nullable Output<Integer> numFiniteBuckets,
-        @Nullable Output<Double> scale) {
-        this.growthFactor = growthFactor;
-        this.numFiniteBuckets = numFiniteBuckets;
-        this.scale = scale;
-    }
+    private MetricBucketOptionsExponentialBucketsArgs() {}
 
-    private MetricBucketOptionsExponentialBucketsArgs() {
-        this.growthFactor = Codegen.empty();
-        this.numFiniteBuckets = Codegen.empty();
-        this.scale = Codegen.empty();
+    private MetricBucketOptionsExponentialBucketsArgs(MetricBucketOptionsExponentialBucketsArgs $) {
+        this.growthFactor = $.growthFactor;
+        this.numFiniteBuckets = $.numFiniteBuckets;
+        this.scale = $.scale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricBucketOptionsExponentialBucketsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> growthFactor;
-        private @Nullable Output<Integer> numFiniteBuckets;
-        private @Nullable Output<Double> scale;
+        private MetricBucketOptionsExponentialBucketsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricBucketOptionsExponentialBucketsArgs();
         }
 
         public Builder(MetricBucketOptionsExponentialBucketsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.growthFactor = defaults.growthFactor;
-    	      this.numFiniteBuckets = defaults.numFiniteBuckets;
-    	      this.scale = defaults.scale;
+            $ = new MetricBucketOptionsExponentialBucketsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder growthFactor(@Nullable Output<Double> growthFactor) {
-            this.growthFactor = growthFactor;
+            $.growthFactor = growthFactor;
             return this;
         }
-        public Builder growthFactor(@Nullable Double growthFactor) {
-            this.growthFactor = Codegen.ofNullable(growthFactor);
-            return this;
+
+        public Builder growthFactor(Double growthFactor) {
+            return growthFactor(Output.of(growthFactor));
         }
+
         public Builder numFiniteBuckets(@Nullable Output<Integer> numFiniteBuckets) {
-            this.numFiniteBuckets = numFiniteBuckets;
+            $.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
-        public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
-            this.numFiniteBuckets = Codegen.ofNullable(numFiniteBuckets);
-            return this;
+
+        public Builder numFiniteBuckets(Integer numFiniteBuckets) {
+            return numFiniteBuckets(Output.of(numFiniteBuckets));
         }
+
         public Builder scale(@Nullable Output<Double> scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
         }
-        public Builder scale(@Nullable Double scale) {
-            this.scale = Codegen.ofNullable(scale);
-            return this;
-        }        public MetricBucketOptionsExponentialBucketsArgs build() {
-            return new MetricBucketOptionsExponentialBucketsArgs(growthFactor, numFiniteBuckets, scale);
+
+        public Builder scale(Double scale) {
+            return scale(Output.of(scale));
+        }
+
+        public MetricBucketOptionsExponentialBucketsArgs build() {
+            return $;
         }
     }
+
 }

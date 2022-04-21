@@ -21,7 +21,7 @@ public final class NodeInitializationActionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="executableFile", required=true)
-      private final String executableFile;
+    private String executableFile;
 
     public String executableFile() {
         return this.executableFile;
@@ -32,55 +32,52 @@ public final class NodeInitializationActionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="executionTimeout", required=true)
-      private final String executionTimeout;
+    private String executionTimeout;
 
     public String executionTimeout() {
         return this.executionTimeout;
     }
 
-    public NodeInitializationActionResponse(
-        String executableFile,
-        String executionTimeout) {
-        this.executableFile = Objects.requireNonNull(executableFile, "expected parameter 'executableFile' to be non-null");
-        this.executionTimeout = Objects.requireNonNull(executionTimeout, "expected parameter 'executionTimeout' to be non-null");
-    }
+    private NodeInitializationActionResponse() {}
 
-    private NodeInitializationActionResponse() {
-        this.executableFile = null;
-        this.executionTimeout = null;
+    private NodeInitializationActionResponse(NodeInitializationActionResponse $) {
+        this.executableFile = $.executableFile;
+        this.executionTimeout = $.executionTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeInitializationActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String executableFile;
-        private String executionTimeout;
+        private NodeInitializationActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeInitializationActionResponse();
         }
 
         public Builder(NodeInitializationActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executableFile = defaults.executableFile;
-    	      this.executionTimeout = defaults.executionTimeout;
+            $ = new NodeInitializationActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder executableFile(String executableFile) {
-            this.executableFile = Objects.requireNonNull(executableFile);
+            $.executableFile = executableFile;
             return this;
         }
+
         public Builder executionTimeout(String executionTimeout) {
-            this.executionTimeout = Objects.requireNonNull(executionTimeout);
+            $.executionTimeout = executionTimeout;
             return this;
-        }        public NodeInitializationActionResponse build() {
-            return new NodeInitializationActionResponse(executableFile, executionTimeout);
+        }
+
+        public NodeInitializationActionResponse build() {
+            $.executableFile = Objects.requireNonNull($.executableFile, "expected parameter 'executableFile' to be non-null");
+            $.executionTimeout = Objects.requireNonNull($.executionTimeout, "expected parameter 'executionTimeout' to be non-null");
+            return $;
         }
     }
+
 }

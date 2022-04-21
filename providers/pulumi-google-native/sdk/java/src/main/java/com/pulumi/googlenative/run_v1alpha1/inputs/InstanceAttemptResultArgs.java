@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1alpha1.inputs.GoogleRpcStatusArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstanceAttemptResultArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="exitCode")
-      private final @Nullable Output<Integer> exitCode;
+    private @Nullable Output<Integer> exitCode;
 
-    public Output<Integer> exitCode() {
-        return this.exitCode == null ? Codegen.empty() : this.exitCode;
+    public Optional<Output<Integer>> exitCode() {
+        return Optional.ofNullable(this.exitCode);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class InstanceAttemptResultArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<GoogleRpcStatusArgs> status;
+    private @Nullable Output<GoogleRpcStatusArgs> status;
 
-    public Output<GoogleRpcStatusArgs> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<GoogleRpcStatusArgs>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public InstanceAttemptResultArgs(
-        @Nullable Output<Integer> exitCode,
-        @Nullable Output<GoogleRpcStatusArgs> status) {
-        this.exitCode = exitCode;
-        this.status = status;
-    }
+    private InstanceAttemptResultArgs() {}
 
-    private InstanceAttemptResultArgs() {
-        this.exitCode = Codegen.empty();
-        this.status = Codegen.empty();
+    private InstanceAttemptResultArgs(InstanceAttemptResultArgs $) {
+        this.exitCode = $.exitCode;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAttemptResultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> exitCode;
-        private @Nullable Output<GoogleRpcStatusArgs> status;
+        private InstanceAttemptResultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAttemptResultArgs();
         }
 
         public Builder(InstanceAttemptResultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exitCode = defaults.exitCode;
-    	      this.status = defaults.status;
+            $ = new InstanceAttemptResultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exitCode(@Nullable Output<Integer> exitCode) {
-            this.exitCode = exitCode;
+            $.exitCode = exitCode;
             return this;
         }
-        public Builder exitCode(@Nullable Integer exitCode) {
-            this.exitCode = Codegen.ofNullable(exitCode);
-            return this;
+
+        public Builder exitCode(Integer exitCode) {
+            return exitCode(Output.of(exitCode));
         }
+
         public Builder status(@Nullable Output<GoogleRpcStatusArgs> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable GoogleRpcStatusArgs status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public InstanceAttemptResultArgs build() {
-            return new InstanceAttemptResultArgs(exitCode, status);
+
+        public Builder status(GoogleRpcStatusArgs status) {
+            return status(Output.of(status));
+        }
+
+        public InstanceAttemptResultArgs build() {
+            return $;
         }
     }
+
 }

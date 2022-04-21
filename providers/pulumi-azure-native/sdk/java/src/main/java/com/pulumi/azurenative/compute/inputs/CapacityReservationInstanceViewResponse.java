@@ -25,10 +25,10 @@ public final class CapacityReservationInstanceViewResponse extends com.pulumi.re
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<InstanceViewStatusResponse> statuses;
+    private @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<InstanceViewStatusResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class CapacityReservationInstanceViewResponse extends com.pulumi.re
      * 
      */
     @Import(name="utilizationInfo")
-      private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
+    private @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
     public Optional<CapacityReservationUtilizationResponse> utilizationInfo() {
-        return this.utilizationInfo == null ? Optional.empty() : Optional.ofNullable(this.utilizationInfo);
+        return Optional.ofNullable(this.utilizationInfo);
     }
 
-    public CapacityReservationInstanceViewResponse(
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable CapacityReservationUtilizationResponse utilizationInfo) {
-        this.statuses = statuses;
-        this.utilizationInfo = utilizationInfo;
-    }
+    private CapacityReservationInstanceViewResponse() {}
 
-    private CapacityReservationInstanceViewResponse() {
-        this.statuses = List.of();
-        this.utilizationInfo = null;
+    private CapacityReservationInstanceViewResponse(CapacityReservationInstanceViewResponse $) {
+        this.statuses = $.statuses;
+        this.utilizationInfo = $.utilizationInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityReservationInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<InstanceViewStatusResponse> statuses;
-        private @Nullable CapacityReservationUtilizationResponse utilizationInfo;
+        private CapacityReservationInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityReservationInstanceViewResponse();
         }
 
         public Builder(CapacityReservationInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statuses = defaults.statuses;
-    	      this.utilizationInfo = defaults.utilizationInfo;
+            $ = new CapacityReservationInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder utilizationInfo(@Nullable CapacityReservationUtilizationResponse utilizationInfo) {
-            this.utilizationInfo = utilizationInfo;
+            $.utilizationInfo = utilizationInfo;
             return this;
-        }        public CapacityReservationInstanceViewResponse build() {
-            return new CapacityReservationInstanceViewResponse(statuses, utilizationInfo);
+        }
+
+        public CapacityReservationInstanceViewResponse build() {
+            return $;
         }
     }
+
 }

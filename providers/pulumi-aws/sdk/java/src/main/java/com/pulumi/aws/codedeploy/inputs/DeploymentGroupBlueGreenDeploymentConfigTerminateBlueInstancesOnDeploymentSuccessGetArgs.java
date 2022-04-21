@@ -5,10 +5,10 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      * 
      */
     @Import(name="terminationWaitTimeInMinutes")
-      private final @Nullable Output<Integer> terminationWaitTimeInMinutes;
+    private @Nullable Output<Integer> terminationWaitTimeInMinutes;
 
-    public Output<Integer> terminationWaitTimeInMinutes() {
-        return this.terminationWaitTimeInMinutes == null ? Codegen.empty() : this.terminationWaitTimeInMinutes;
+    public Optional<Output<Integer>> terminationWaitTimeInMinutes() {
+        return Optional.ofNullable(this.terminationWaitTimeInMinutes);
     }
 
-    public DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs(
-        @Nullable Output<String> action,
-        @Nullable Output<Integer> terminationWaitTimeInMinutes) {
-        this.action = action;
-        this.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
-    }
+    private DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs() {}
 
-    private DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs() {
-        this.action = Codegen.empty();
-        this.terminationWaitTimeInMinutes = Codegen.empty();
+    private DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs(DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs $) {
+        this.action = $.action;
+        this.terminationWaitTimeInMinutes = $.terminationWaitTimeInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<Integer> terminationWaitTimeInMinutes;
+        private DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs();
         }
 
         public Builder(DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.terminationWaitTimeInMinutes = defaults.terminationWaitTimeInMinutes;
+            $ = new DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder terminationWaitTimeInMinutes(@Nullable Output<Integer> terminationWaitTimeInMinutes) {
-            this.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
+            $.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
             return this;
         }
-        public Builder terminationWaitTimeInMinutes(@Nullable Integer terminationWaitTimeInMinutes) {
-            this.terminationWaitTimeInMinutes = Codegen.ofNullable(terminationWaitTimeInMinutes);
-            return this;
-        }        public DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs build() {
-            return new DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs(action, terminationWaitTimeInMinutes);
+
+        public Builder terminationWaitTimeInMinutes(Integer terminationWaitTimeInMinutes) {
+            return terminationWaitTimeInMinutes(Output.of(terminationWaitTimeInMinutes));
+        }
+
+        public DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessGetArgs build() {
+            return $;
         }
     }
+
 }

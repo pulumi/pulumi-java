@@ -6,7 +6,6 @@ package com.pulumi.aws.codecommit;
 import com.pulumi.aws.codecommit.inputs.TriggerTriggerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,73 +20,71 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryName", required=true)
-      private final Output<String> repositoryName;
+    private Output<String> repositoryName;
 
     public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
     @Import(name="triggers", required=true)
-      private final Output<List<TriggerTriggerArgs>> triggers;
+    private Output<List<TriggerTriggerArgs>> triggers;
 
     public Output<List<TriggerTriggerArgs>> triggers() {
         return this.triggers;
     }
 
-    public TriggerArgs(
-        Output<String> repositoryName,
-        Output<List<TriggerTriggerArgs>> triggers) {
-        this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
-        this.triggers = Objects.requireNonNull(triggers, "expected parameter 'triggers' to be non-null");
-    }
+    private TriggerArgs() {}
 
-    private TriggerArgs() {
-        this.repositoryName = Codegen.empty();
-        this.triggers = Codegen.empty();
+    private TriggerArgs(TriggerArgs $) {
+        this.repositoryName = $.repositoryName;
+        this.triggers = $.triggers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> repositoryName;
-        private Output<List<TriggerTriggerArgs>> triggers;
+        private TriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerArgs();
         }
 
         public Builder(TriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.triggers = defaults.triggers;
+            $ = new TriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repositoryName(Output<String> repositoryName) {
-            this.repositoryName = Objects.requireNonNull(repositoryName);
+            $.repositoryName = repositoryName;
             return this;
         }
+
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
-            return this;
+            return repositoryName(Output.of(repositoryName));
         }
+
         public Builder triggers(Output<List<TriggerTriggerArgs>> triggers) {
-            this.triggers = Objects.requireNonNull(triggers);
+            $.triggers = triggers;
             return this;
         }
+
         public Builder triggers(List<TriggerTriggerArgs> triggers) {
-            this.triggers = Output.of(Objects.requireNonNull(triggers));
-            return this;
+            return triggers(Output.of(triggers));
         }
+
         public Builder triggers(TriggerTriggerArgs... triggers) {
             return triggers(List.of(triggers));
-        }        public TriggerArgs build() {
-            return new TriggerArgs(repositoryName, triggers);
+        }
+
+        public TriggerArgs build() {
+            $.repositoryName = Objects.requireNonNull($.repositoryName, "expected parameter 'repositoryName' to be non-null");
+            $.triggers = Objects.requireNonNull($.triggers, "expected parameter 'triggers' to be non-null");
+            return $;
         }
     }
+
 }

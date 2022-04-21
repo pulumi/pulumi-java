@@ -23,45 +23,44 @@ public final class CmkKeyVaultPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="keyUri")
-      private final @Nullable String keyUri;
+    private @Nullable String keyUri;
 
     public Optional<String> keyUri() {
-        return this.keyUri == null ? Optional.empty() : Optional.ofNullable(this.keyUri);
+        return Optional.ofNullable(this.keyUri);
     }
 
-    public CmkKeyVaultPropertiesResponse(@Nullable String keyUri) {
-        this.keyUri = keyUri;
-    }
+    private CmkKeyVaultPropertiesResponse() {}
 
-    private CmkKeyVaultPropertiesResponse() {
-        this.keyUri = null;
+    private CmkKeyVaultPropertiesResponse(CmkKeyVaultPropertiesResponse $) {
+        this.keyUri = $.keyUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CmkKeyVaultPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyUri;
+        private CmkKeyVaultPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CmkKeyVaultPropertiesResponse();
         }
 
         public Builder(CmkKeyVaultPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyUri = defaults.keyUri;
+            $ = new CmkKeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyUri(@Nullable String keyUri) {
-            this.keyUri = keyUri;
+            $.keyUri = keyUri;
             return this;
-        }        public CmkKeyVaultPropertiesResponse build() {
-            return new CmkKeyVaultPropertiesResponse(keyUri);
+        }
+
+        public CmkKeyVaultPropertiesResponse build() {
+            return $;
         }
     }
+
 }

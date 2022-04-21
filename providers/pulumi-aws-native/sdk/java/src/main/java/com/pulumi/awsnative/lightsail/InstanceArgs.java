@@ -11,10 +11,10 @@ import com.pulumi.awsnative.lightsail.inputs.InstanceStateArgs;
 import com.pulumi.awsnative.lightsail.inputs.InstanceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addOns")
-      private final @Nullable Output<List<InstanceAddOnArgs>> addOns;
+    private @Nullable Output<List<InstanceAddOnArgs>> addOns;
 
-    public Output<List<InstanceAddOnArgs>> addOns() {
-        return this.addOns == null ? Codegen.empty() : this.addOns;
+    public Optional<Output<List<InstanceAddOnArgs>>> addOns() {
+        return Optional.ofNullable(this.addOns);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blueprintId", required=true)
-      private final Output<String> blueprintId;
+    private Output<String> blueprintId;
 
     public Output<String> blueprintId() {
         return this.blueprintId;
@@ -60,17 +60,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bundleId", required=true)
-      private final Output<String> bundleId;
+    private Output<String> bundleId;
 
     public Output<String> bundleId() {
         return this.bundleId;
     }
 
     @Import(name="hardware")
-      private final @Nullable Output<InstanceHardwareArgs> hardware;
+    private @Nullable Output<InstanceHardwareArgs> hardware;
 
-    public Output<InstanceHardwareArgs> hardware() {
-        return this.hardware == null ? Codegen.empty() : this.hardware;
+    public Optional<Output<InstanceHardwareArgs>> hardware() {
+        return Optional.ofNullable(this.hardware);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     /**
@@ -89,31 +89,31 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyPairName")
-      private final @Nullable Output<String> keyPairName;
+    private @Nullable Output<String> keyPairName;
 
-    public Output<String> keyPairName() {
-        return this.keyPairName == null ? Codegen.empty() : this.keyPairName;
+    public Optional<Output<String>> keyPairName() {
+        return Optional.ofNullable(this.keyPairName);
     }
 
     @Import(name="location")
-      private final @Nullable Output<InstanceLocationArgs> location;
+    private @Nullable Output<InstanceLocationArgs> location;
 
-    public Output<InstanceLocationArgs> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<InstanceLocationArgs>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="networking")
-      private final @Nullable Output<InstanceNetworkingArgs> networking;
+    private @Nullable Output<InstanceNetworkingArgs> networking;
 
-    public Output<InstanceNetworkingArgs> networking() {
-        return this.networking == null ? Codegen.empty() : this.networking;
+    public Optional<Output<InstanceNetworkingArgs>> networking() {
+        return Optional.ofNullable(this.networking);
     }
 
     @Import(name="state")
-      private final @Nullable Output<InstanceStateArgs> state;
+    private @Nullable Output<InstanceStateArgs> state;
 
-    public Output<InstanceStateArgs> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<InstanceStateArgs>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<InstanceTagArgs>> tags;
+    private @Nullable Output<List<InstanceTagArgs>> tags;
 
-    public Output<List<InstanceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<InstanceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -132,199 +132,168 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userData")
-      private final @Nullable Output<String> userData;
+    private @Nullable Output<String> userData;
 
-    public Output<String> userData() {
-        return this.userData == null ? Codegen.empty() : this.userData;
+    public Optional<Output<String>> userData() {
+        return Optional.ofNullable(this.userData);
     }
 
-    public InstanceArgs(
-        @Nullable Output<List<InstanceAddOnArgs>> addOns,
-        @Nullable Output<String> availabilityZone,
-        Output<String> blueprintId,
-        Output<String> bundleId,
-        @Nullable Output<InstanceHardwareArgs> hardware,
-        @Nullable Output<String> instanceName,
-        @Nullable Output<String> keyPairName,
-        @Nullable Output<InstanceLocationArgs> location,
-        @Nullable Output<InstanceNetworkingArgs> networking,
-        @Nullable Output<InstanceStateArgs> state,
-        @Nullable Output<List<InstanceTagArgs>> tags,
-        @Nullable Output<String> userData) {
-        this.addOns = addOns;
-        this.availabilityZone = availabilityZone;
-        this.blueprintId = Objects.requireNonNull(blueprintId, "expected parameter 'blueprintId' to be non-null");
-        this.bundleId = Objects.requireNonNull(bundleId, "expected parameter 'bundleId' to be non-null");
-        this.hardware = hardware;
-        this.instanceName = instanceName;
-        this.keyPairName = keyPairName;
-        this.location = location;
-        this.networking = networking;
-        this.state = state;
-        this.tags = tags;
-        this.userData = userData;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.addOns = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.blueprintId = Codegen.empty();
-        this.bundleId = Codegen.empty();
-        this.hardware = Codegen.empty();
-        this.instanceName = Codegen.empty();
-        this.keyPairName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networking = Codegen.empty();
-        this.state = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userData = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.addOns = $.addOns;
+        this.availabilityZone = $.availabilityZone;
+        this.blueprintId = $.blueprintId;
+        this.bundleId = $.bundleId;
+        this.hardware = $.hardware;
+        this.instanceName = $.instanceName;
+        this.keyPairName = $.keyPairName;
+        this.location = $.location;
+        this.networking = $.networking;
+        this.state = $.state;
+        this.tags = $.tags;
+        this.userData = $.userData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InstanceAddOnArgs>> addOns;
-        private @Nullable Output<String> availabilityZone;
-        private Output<String> blueprintId;
-        private Output<String> bundleId;
-        private @Nullable Output<InstanceHardwareArgs> hardware;
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<String> keyPairName;
-        private @Nullable Output<InstanceLocationArgs> location;
-        private @Nullable Output<InstanceNetworkingArgs> networking;
-        private @Nullable Output<InstanceStateArgs> state;
-        private @Nullable Output<List<InstanceTagArgs>> tags;
-        private @Nullable Output<String> userData;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addOns = defaults.addOns;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.blueprintId = defaults.blueprintId;
-    	      this.bundleId = defaults.bundleId;
-    	      this.hardware = defaults.hardware;
-    	      this.instanceName = defaults.instanceName;
-    	      this.keyPairName = defaults.keyPairName;
-    	      this.location = defaults.location;
-    	      this.networking = defaults.networking;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
-    	      this.userData = defaults.userData;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addOns(@Nullable Output<List<InstanceAddOnArgs>> addOns) {
-            this.addOns = addOns;
+            $.addOns = addOns;
             return this;
         }
-        public Builder addOns(@Nullable List<InstanceAddOnArgs> addOns) {
-            this.addOns = Codegen.ofNullable(addOns);
-            return this;
+
+        public Builder addOns(List<InstanceAddOnArgs> addOns) {
+            return addOns(Output.of(addOns));
         }
+
         public Builder addOns(InstanceAddOnArgs... addOns) {
             return addOns(List.of(addOns));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder blueprintId(Output<String> blueprintId) {
-            this.blueprintId = Objects.requireNonNull(blueprintId);
+            $.blueprintId = blueprintId;
             return this;
         }
+
         public Builder blueprintId(String blueprintId) {
-            this.blueprintId = Output.of(Objects.requireNonNull(blueprintId));
-            return this;
+            return blueprintId(Output.of(blueprintId));
         }
+
         public Builder bundleId(Output<String> bundleId) {
-            this.bundleId = Objects.requireNonNull(bundleId);
+            $.bundleId = bundleId;
             return this;
         }
+
         public Builder bundleId(String bundleId) {
-            this.bundleId = Output.of(Objects.requireNonNull(bundleId));
-            return this;
+            return bundleId(Output.of(bundleId));
         }
+
         public Builder hardware(@Nullable Output<InstanceHardwareArgs> hardware) {
-            this.hardware = hardware;
+            $.hardware = hardware;
             return this;
         }
-        public Builder hardware(@Nullable InstanceHardwareArgs hardware) {
-            this.hardware = Codegen.ofNullable(hardware);
-            return this;
+
+        public Builder hardware(InstanceHardwareArgs hardware) {
+            return hardware(Output.of(hardware));
         }
+
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder keyPairName(@Nullable Output<String> keyPairName) {
-            this.keyPairName = keyPairName;
+            $.keyPairName = keyPairName;
             return this;
         }
-        public Builder keyPairName(@Nullable String keyPairName) {
-            this.keyPairName = Codegen.ofNullable(keyPairName);
-            return this;
+
+        public Builder keyPairName(String keyPairName) {
+            return keyPairName(Output.of(keyPairName));
         }
+
         public Builder location(@Nullable Output<InstanceLocationArgs> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable InstanceLocationArgs location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(InstanceLocationArgs location) {
+            return location(Output.of(location));
         }
+
         public Builder networking(@Nullable Output<InstanceNetworkingArgs> networking) {
-            this.networking = networking;
+            $.networking = networking;
             return this;
         }
-        public Builder networking(@Nullable InstanceNetworkingArgs networking) {
-            this.networking = Codegen.ofNullable(networking);
-            return this;
+
+        public Builder networking(InstanceNetworkingArgs networking) {
+            return networking(Output.of(networking));
         }
+
         public Builder state(@Nullable Output<InstanceStateArgs> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable InstanceStateArgs state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(InstanceStateArgs state) {
+            return state(Output.of(state));
         }
+
         public Builder tags(@Nullable Output<List<InstanceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<InstanceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<InstanceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(InstanceTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder userData(@Nullable Output<String> userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
         }
-        public Builder userData(@Nullable String userData) {
-            this.userData = Codegen.ofNullable(userData);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(addOns, availabilityZone, blueprintId, bundleId, hardware, instanceName, keyPairName, location, networking, state, tags, userData);
+
+        public Builder userData(String userData) {
+            return userData(Output.of(userData));
+        }
+
+        public InstanceArgs build() {
+            $.blueprintId = Objects.requireNonNull($.blueprintId, "expected parameter 'blueprintId' to be non-null");
+            $.bundleId = Objects.requireNonNull($.bundleId, "expected parameter 'bundleId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,78 +13,73 @@ public final class GetNotificationChannelSensitiveLabel extends com.pulumi.resou
     public static final GetNotificationChannelSensitiveLabel Empty = new GetNotificationChannelSensitiveLabel();
 
     @Import(name="authToken", required=true)
-      private final String authToken;
+    private String authToken;
 
     public String authToken() {
         return this.authToken;
     }
 
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
     }
 
     @Import(name="serviceKey", required=true)
-      private final String serviceKey;
+    private String serviceKey;
 
     public String serviceKey() {
         return this.serviceKey;
     }
 
-    public GetNotificationChannelSensitiveLabel(
-        String authToken,
-        String password,
-        String serviceKey) {
-        this.authToken = Objects.requireNonNull(authToken, "expected parameter 'authToken' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.serviceKey = Objects.requireNonNull(serviceKey, "expected parameter 'serviceKey' to be non-null");
-    }
+    private GetNotificationChannelSensitiveLabel() {}
 
-    private GetNotificationChannelSensitiveLabel() {
-        this.authToken = null;
-        this.password = null;
-        this.serviceKey = null;
+    private GetNotificationChannelSensitiveLabel(GetNotificationChannelSensitiveLabel $) {
+        this.authToken = $.authToken;
+        this.password = $.password;
+        this.serviceKey = $.serviceKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationChannelSensitiveLabel defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authToken;
-        private String password;
-        private String serviceKey;
+        private GetNotificationChannelSensitiveLabel $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationChannelSensitiveLabel();
         }
 
         public Builder(GetNotificationChannelSensitiveLabel defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authToken = defaults.authToken;
-    	      this.password = defaults.password;
-    	      this.serviceKey = defaults.serviceKey;
+            $ = new GetNotificationChannelSensitiveLabel(Objects.requireNonNull(defaults));
         }
 
         public Builder authToken(String authToken) {
-            this.authToken = Objects.requireNonNull(authToken);
+            $.authToken = authToken;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder serviceKey(String serviceKey) {
-            this.serviceKey = Objects.requireNonNull(serviceKey);
+            $.serviceKey = serviceKey;
             return this;
-        }        public GetNotificationChannelSensitiveLabel build() {
-            return new GetNotificationChannelSensitiveLabel(authToken, password, serviceKey);
+        }
+
+        public GetNotificationChannelSensitiveLabel build() {
+            $.authToken = Objects.requireNonNull($.authToken, "expected parameter 'authToken' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.serviceKey = Objects.requireNonNull($.serviceKey, "expected parameter 'serviceKey' to be non-null");
+            return $;
         }
     }
+
 }

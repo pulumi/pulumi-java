@@ -5,10 +5,10 @@ package com.pulumi.awsnative.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isLatest")
-      private final @Nullable Output<Boolean> isLatest;
+    private @Nullable Output<Boolean> isLatest;
 
-    public Output<Boolean> isLatest() {
-        return this.isLatest == null ? Codegen.empty() : this.isLatest;
+    public Optional<Output<Boolean>> isLatest() {
+        return Optional.ofNullable(this.isLatest);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionNumber")
-      private final @Nullable Output<Integer> versionNumber;
+    private @Nullable Output<Integer> versionNumber;
 
-    public Output<Integer> versionNumber() {
-        return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
+    public Optional<Output<Integer>> versionNumber() {
+        return Optional.ofNullable(this.versionNumber);
     }
 
-    public SchemaVersionArgs(
-        @Nullable Output<Boolean> isLatest,
-        @Nullable Output<Integer> versionNumber) {
-        this.isLatest = isLatest;
-        this.versionNumber = versionNumber;
-    }
+    private SchemaVersionArgs() {}
 
-    private SchemaVersionArgs() {
-        this.isLatest = Codegen.empty();
-        this.versionNumber = Codegen.empty();
+    private SchemaVersionArgs(SchemaVersionArgs $) {
+        this.isLatest = $.isLatest;
+        this.versionNumber = $.versionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isLatest;
-        private @Nullable Output<Integer> versionNumber;
+        private SchemaVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaVersionArgs();
         }
 
         public Builder(SchemaVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isLatest = defaults.isLatest;
-    	      this.versionNumber = defaults.versionNumber;
+            $ = new SchemaVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isLatest(@Nullable Output<Boolean> isLatest) {
-            this.isLatest = isLatest;
+            $.isLatest = isLatest;
             return this;
         }
-        public Builder isLatest(@Nullable Boolean isLatest) {
-            this.isLatest = Codegen.ofNullable(isLatest);
-            return this;
+
+        public Builder isLatest(Boolean isLatest) {
+            return isLatest(Output.of(isLatest));
         }
+
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
-            this.versionNumber = versionNumber;
+            $.versionNumber = versionNumber;
             return this;
         }
-        public Builder versionNumber(@Nullable Integer versionNumber) {
-            this.versionNumber = Codegen.ofNullable(versionNumber);
-            return this;
-        }        public SchemaVersionArgs build() {
-            return new SchemaVersionArgs(isLatest, versionNumber);
+
+        public Builder versionNumber(Integer versionNumber) {
+            return versionNumber(Output.of(versionNumber));
+        }
+
+        public SchemaVersionArgs build() {
+            return $;
         }
     }
+
 }

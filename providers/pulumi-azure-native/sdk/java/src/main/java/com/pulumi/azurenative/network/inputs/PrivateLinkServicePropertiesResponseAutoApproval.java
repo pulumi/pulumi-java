@@ -24,48 +24,48 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval extends com.
      * 
      */
     @Import(name="subscriptions")
-      private final @Nullable List<String> subscriptions;
+    private @Nullable List<String> subscriptions;
 
-    public List<String> subscriptions() {
-        return this.subscriptions == null ? List.of() : this.subscriptions;
+    public Optional<List<String>> subscriptions() {
+        return Optional.ofNullable(this.subscriptions);
     }
 
-    public PrivateLinkServicePropertiesResponseAutoApproval(@Nullable List<String> subscriptions) {
-        this.subscriptions = subscriptions;
-    }
+    private PrivateLinkServicePropertiesResponseAutoApproval() {}
 
-    private PrivateLinkServicePropertiesResponseAutoApproval() {
-        this.subscriptions = List.of();
+    private PrivateLinkServicePropertiesResponseAutoApproval(PrivateLinkServicePropertiesResponseAutoApproval $) {
+        this.subscriptions = $.subscriptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServicePropertiesResponseAutoApproval defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> subscriptions;
+        private PrivateLinkServicePropertiesResponseAutoApproval $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServicePropertiesResponseAutoApproval();
         }
 
         public Builder(PrivateLinkServicePropertiesResponseAutoApproval defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subscriptions = defaults.subscriptions;
+            $ = new PrivateLinkServicePropertiesResponseAutoApproval(Objects.requireNonNull(defaults));
         }
 
         public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = subscriptions;
+            $.subscriptions = subscriptions;
             return this;
         }
+
         public Builder subscriptions(String... subscriptions) {
             return subscriptions(List.of(subscriptions));
-        }        public PrivateLinkServicePropertiesResponseAutoApproval build() {
-            return new PrivateLinkServicePropertiesResponseAutoApproval(subscriptions);
+        }
+
+        public PrivateLinkServicePropertiesResponseAutoApproval build() {
+            return $;
         }
     }
+
 }

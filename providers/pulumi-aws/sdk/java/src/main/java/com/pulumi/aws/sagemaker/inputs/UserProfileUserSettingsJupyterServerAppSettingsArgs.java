@@ -6,10 +6,10 @@ package com.pulumi.aws.sagemaker.inputs;
 import com.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsArgs extends c
      * 
      */
     @Import(name="defaultResourceSpec", required=true)
-      private final Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
+    private Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
     public Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec() {
         return this.defaultResourceSpec;
@@ -33,66 +33,63 @@ public final class UserProfileUserSettingsJupyterServerAppSettingsArgs extends c
      * 
      */
     @Import(name="lifecycleConfigArns")
-      private final @Nullable Output<List<String>> lifecycleConfigArns;
+    private @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Output<List<String>> lifecycleConfigArns() {
-        return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
+    public Optional<Output<List<String>>> lifecycleConfigArns() {
+        return Optional.ofNullable(this.lifecycleConfigArns);
     }
 
-    public UserProfileUserSettingsJupyterServerAppSettingsArgs(
-        Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec,
-        @Nullable Output<List<String>> lifecycleConfigArns) {
-        this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec, "expected parameter 'defaultResourceSpec' to be non-null");
-        this.lifecycleConfigArns = lifecycleConfigArns;
-    }
+    private UserProfileUserSettingsJupyterServerAppSettingsArgs() {}
 
-    private UserProfileUserSettingsJupyterServerAppSettingsArgs() {
-        this.defaultResourceSpec = Codegen.empty();
-        this.lifecycleConfigArns = Codegen.empty();
+    private UserProfileUserSettingsJupyterServerAppSettingsArgs(UserProfileUserSettingsJupyterServerAppSettingsArgs $) {
+        this.defaultResourceSpec = $.defaultResourceSpec;
+        this.lifecycleConfigArns = $.lifecycleConfigArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileUserSettingsJupyterServerAppSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
-        private @Nullable Output<List<String>> lifecycleConfigArns;
+        private UserProfileUserSettingsJupyterServerAppSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileUserSettingsJupyterServerAppSettingsArgs();
         }
 
         public Builder(UserProfileUserSettingsJupyterServerAppSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
-    	      this.lifecycleConfigArns = defaults.lifecycleConfigArns;
+            $ = new UserProfileUserSettingsJupyterServerAppSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultResourceSpec(Output<UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
-            this.defaultResourceSpec = Objects.requireNonNull(defaultResourceSpec);
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
+
         public Builder defaultResourceSpec(UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Output.of(Objects.requireNonNull(defaultResourceSpec));
-            return this;
+            return defaultResourceSpec(Output.of(defaultResourceSpec));
         }
+
         public Builder lifecycleConfigArns(@Nullable Output<List<String>> lifecycleConfigArns) {
-            this.lifecycleConfigArns = lifecycleConfigArns;
+            $.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
-        public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
-            this.lifecycleConfigArns = Codegen.ofNullable(lifecycleConfigArns);
-            return this;
+
+        public Builder lifecycleConfigArns(List<String> lifecycleConfigArns) {
+            return lifecycleConfigArns(Output.of(lifecycleConfigArns));
         }
+
         public Builder lifecycleConfigArns(String... lifecycleConfigArns) {
             return lifecycleConfigArns(List.of(lifecycleConfigArns));
-        }        public UserProfileUserSettingsJupyterServerAppSettingsArgs build() {
-            return new UserProfileUserSettingsJupyterServerAppSettingsArgs(defaultResourceSpec, lifecycleConfigArns);
+        }
+
+        public UserProfileUserSettingsJupyterServerAppSettingsArgs build() {
+            $.defaultResourceSpec = Objects.requireNonNull($.defaultResourceSpec, "expected parameter 'defaultResourceSpec' to be non-null");
+            return $;
         }
     }
+
 }

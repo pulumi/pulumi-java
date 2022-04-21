@@ -17,7 +17,7 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="gatewayName", required=true)
-      private final String gatewayName;
+    private String gatewayName;
 
     public String gatewayName() {
         return this.gatewayName;
@@ -28,7 +28,7 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="routeConfigName", required=true)
-      private final String routeConfigName;
+    private String routeConfigName;
 
     public String routeConfigName() {
         return this.routeConfigName;
@@ -50,73 +50,66 @@ public final class GetGatewayRouteConfigArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetGatewayRouteConfigArgs(
-        String gatewayName,
-        String resourceGroupName,
-        String routeConfigName,
-        String serviceName) {
-        this.gatewayName = Objects.requireNonNull(gatewayName, "expected parameter 'gatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeConfigName = Objects.requireNonNull(routeConfigName, "expected parameter 'routeConfigName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetGatewayRouteConfigArgs() {}
 
-    private GetGatewayRouteConfigArgs() {
-        this.gatewayName = null;
-        this.resourceGroupName = null;
-        this.routeConfigName = null;
-        this.serviceName = null;
+    private GetGatewayRouteConfigArgs(GetGatewayRouteConfigArgs $) {
+        this.gatewayName = $.gatewayName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeConfigName = $.routeConfigName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGatewayRouteConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gatewayName;
-        private String resourceGroupName;
-        private String routeConfigName;
-        private String serviceName;
+        private GetGatewayRouteConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGatewayRouteConfigArgs();
         }
 
         public Builder(GetGatewayRouteConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeConfigName = defaults.routeConfigName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetGatewayRouteConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayName(String gatewayName) {
-            this.gatewayName = Objects.requireNonNull(gatewayName);
+            $.gatewayName = gatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder routeConfigName(String routeConfigName) {
-            this.routeConfigName = Objects.requireNonNull(routeConfigName);
+            $.routeConfigName = routeConfigName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetGatewayRouteConfigArgs build() {
-            return new GetGatewayRouteConfigArgs(gatewayName, resourceGroupName, routeConfigName, serviceName);
+        }
+
+        public GetGatewayRouteConfigArgs build() {
+            $.gatewayName = Objects.requireNonNull($.gatewayName, "expected parameter 'gatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.routeConfigName = Objects.requireNonNull($.routeConfigName, "expected parameter 'routeConfigName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

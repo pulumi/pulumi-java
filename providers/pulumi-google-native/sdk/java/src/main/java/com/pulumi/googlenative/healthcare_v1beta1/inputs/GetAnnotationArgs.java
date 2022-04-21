@@ -15,110 +15,100 @@ public final class GetAnnotationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAnnotationArgs Empty = new GetAnnotationArgs();
 
     @Import(name="annotationId", required=true)
-      private final String annotationId;
+    private String annotationId;
 
     public String annotationId() {
         return this.annotationId;
     }
 
     @Import(name="annotationStoreId", required=true)
-      private final String annotationStoreId;
+    private String annotationStoreId;
 
     public String annotationStoreId() {
         return this.annotationStoreId;
     }
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAnnotationArgs(
-        String annotationId,
-        String annotationStoreId,
-        String datasetId,
-        String location,
-        @Nullable String project) {
-        this.annotationId = Objects.requireNonNull(annotationId, "expected parameter 'annotationId' to be non-null");
-        this.annotationStoreId = Objects.requireNonNull(annotationStoreId, "expected parameter 'annotationStoreId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetAnnotationArgs() {}
 
-    private GetAnnotationArgs() {
-        this.annotationId = null;
-        this.annotationStoreId = null;
-        this.datasetId = null;
-        this.location = null;
-        this.project = null;
+    private GetAnnotationArgs(GetAnnotationArgs $) {
+        this.annotationId = $.annotationId;
+        this.annotationStoreId = $.annotationStoreId;
+        this.datasetId = $.datasetId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAnnotationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String annotationId;
-        private String annotationStoreId;
-        private String datasetId;
-        private String location;
-        private @Nullable String project;
+        private GetAnnotationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAnnotationArgs();
         }
 
         public Builder(GetAnnotationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationId = defaults.annotationId;
-    	      this.annotationStoreId = defaults.annotationStoreId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetAnnotationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationId(String annotationId) {
-            this.annotationId = Objects.requireNonNull(annotationId);
+            $.annotationId = annotationId;
             return this;
         }
+
         public Builder annotationStoreId(String annotationStoreId) {
-            this.annotationStoreId = Objects.requireNonNull(annotationStoreId);
+            $.annotationStoreId = annotationStoreId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAnnotationArgs build() {
-            return new GetAnnotationArgs(annotationId, annotationStoreId, datasetId, location, project);
+        }
+
+        public GetAnnotationArgs build() {
+            $.annotationId = Objects.requireNonNull($.annotationId, "expected parameter 'annotationId' to be non-null");
+            $.annotationStoreId = Objects.requireNonNull($.annotationStoreId, "expected parameter 'annotationStoreId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,206 +20,174 @@ public final class NetworkInsightsAnalysisPathComponent extends com.pulumi.resou
     public static final NetworkInsightsAnalysisPathComponent Empty = new NetworkInsightsAnalysisPathComponent();
 
     @Import(name="aclRule")
-      private final @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule;
+    private @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule;
 
     public Optional<NetworkInsightsAnalysisAnalysisAclRule> aclRule() {
-        return this.aclRule == null ? Optional.empty() : Optional.ofNullable(this.aclRule);
+        return Optional.ofNullable(this.aclRule);
     }
 
     @Import(name="component")
-      private final @Nullable NetworkInsightsAnalysisAnalysisComponent component;
+    private @Nullable NetworkInsightsAnalysisAnalysisComponent component;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> component() {
-        return this.component == null ? Optional.empty() : Optional.ofNullable(this.component);
+        return Optional.ofNullable(this.component);
     }
 
     @Import(name="destinationVpc")
-      private final @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc;
+    private @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> destinationVpc() {
-        return this.destinationVpc == null ? Optional.empty() : Optional.ofNullable(this.destinationVpc);
+        return Optional.ofNullable(this.destinationVpc);
     }
 
     @Import(name="inboundHeader")
-      private final @Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader;
+    private @Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader;
 
     public Optional<NetworkInsightsAnalysisAnalysisPacketHeader> inboundHeader() {
-        return this.inboundHeader == null ? Optional.empty() : Optional.ofNullable(this.inboundHeader);
+        return Optional.ofNullable(this.inboundHeader);
     }
 
     @Import(name="outboundHeader")
-      private final @Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader;
+    private @Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader;
 
     public Optional<NetworkInsightsAnalysisAnalysisPacketHeader> outboundHeader() {
-        return this.outboundHeader == null ? Optional.empty() : Optional.ofNullable(this.outboundHeader);
+        return Optional.ofNullable(this.outboundHeader);
     }
 
     @Import(name="routeTableRoute")
-      private final @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute;
+    private @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute;
 
     public Optional<NetworkInsightsAnalysisAnalysisRouteTableRoute> routeTableRoute() {
-        return this.routeTableRoute == null ? Optional.empty() : Optional.ofNullable(this.routeTableRoute);
+        return Optional.ofNullable(this.routeTableRoute);
     }
 
     @Import(name="securityGroupRule")
-      private final @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule;
+    private @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule;
 
     public Optional<NetworkInsightsAnalysisAnalysisSecurityGroupRule> securityGroupRule() {
-        return this.securityGroupRule == null ? Optional.empty() : Optional.ofNullable(this.securityGroupRule);
+        return Optional.ofNullable(this.securityGroupRule);
     }
 
     @Import(name="sequenceNumber")
-      private final @Nullable Integer sequenceNumber;
+    private @Nullable Integer sequenceNumber;
 
     public Optional<Integer> sequenceNumber() {
-        return this.sequenceNumber == null ? Optional.empty() : Optional.ofNullable(this.sequenceNumber);
+        return Optional.ofNullable(this.sequenceNumber);
     }
 
     @Import(name="sourceVpc")
-      private final @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc;
+    private @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> sourceVpc() {
-        return this.sourceVpc == null ? Optional.empty() : Optional.ofNullable(this.sourceVpc);
+        return Optional.ofNullable(this.sourceVpc);
     }
 
     @Import(name="subnet")
-      private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
+    private @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     @Import(name="vpc")
-      private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
+    private @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> vpc() {
-        return this.vpc == null ? Optional.empty() : Optional.ofNullable(this.vpc);
+        return Optional.ofNullable(this.vpc);
     }
 
-    public NetworkInsightsAnalysisPathComponent(
-        @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule,
-        @Nullable NetworkInsightsAnalysisAnalysisComponent component,
-        @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc,
-        @Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader,
-        @Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader,
-        @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute,
-        @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule,
-        @Nullable Integer sequenceNumber,
-        @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc,
-        @Nullable NetworkInsightsAnalysisAnalysisComponent subnet,
-        @Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
-        this.aclRule = aclRule;
-        this.component = component;
-        this.destinationVpc = destinationVpc;
-        this.inboundHeader = inboundHeader;
-        this.outboundHeader = outboundHeader;
-        this.routeTableRoute = routeTableRoute;
-        this.securityGroupRule = securityGroupRule;
-        this.sequenceNumber = sequenceNumber;
-        this.sourceVpc = sourceVpc;
-        this.subnet = subnet;
-        this.vpc = vpc;
-    }
+    private NetworkInsightsAnalysisPathComponent() {}
 
-    private NetworkInsightsAnalysisPathComponent() {
-        this.aclRule = null;
-        this.component = null;
-        this.destinationVpc = null;
-        this.inboundHeader = null;
-        this.outboundHeader = null;
-        this.routeTableRoute = null;
-        this.securityGroupRule = null;
-        this.sequenceNumber = null;
-        this.sourceVpc = null;
-        this.subnet = null;
-        this.vpc = null;
+    private NetworkInsightsAnalysisPathComponent(NetworkInsightsAnalysisPathComponent $) {
+        this.aclRule = $.aclRule;
+        this.component = $.component;
+        this.destinationVpc = $.destinationVpc;
+        this.inboundHeader = $.inboundHeader;
+        this.outboundHeader = $.outboundHeader;
+        this.routeTableRoute = $.routeTableRoute;
+        this.securityGroupRule = $.securityGroupRule;
+        this.sequenceNumber = $.sequenceNumber;
+        this.sourceVpc = $.sourceVpc;
+        this.subnet = $.subnet;
+        this.vpc = $.vpc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisPathComponent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule;
-        private @Nullable NetworkInsightsAnalysisAnalysisComponent component;
-        private @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc;
-        private @Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader;
-        private @Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader;
-        private @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute;
-        private @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule;
-        private @Nullable Integer sequenceNumber;
-        private @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc;
-        private @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
-        private @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
+        private NetworkInsightsAnalysisPathComponent $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisPathComponent();
         }
 
         public Builder(NetworkInsightsAnalysisPathComponent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aclRule = defaults.aclRule;
-    	      this.component = defaults.component;
-    	      this.destinationVpc = defaults.destinationVpc;
-    	      this.inboundHeader = defaults.inboundHeader;
-    	      this.outboundHeader = defaults.outboundHeader;
-    	      this.routeTableRoute = defaults.routeTableRoute;
-    	      this.securityGroupRule = defaults.securityGroupRule;
-    	      this.sequenceNumber = defaults.sequenceNumber;
-    	      this.sourceVpc = defaults.sourceVpc;
-    	      this.subnet = defaults.subnet;
-    	      this.vpc = defaults.vpc;
+            $ = new NetworkInsightsAnalysisPathComponent(Objects.requireNonNull(defaults));
         }
 
         public Builder aclRule(@Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule) {
-            this.aclRule = aclRule;
+            $.aclRule = aclRule;
             return this;
         }
+
         public Builder component(@Nullable NetworkInsightsAnalysisAnalysisComponent component) {
-            this.component = component;
+            $.component = component;
             return this;
         }
+
         public Builder destinationVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc) {
-            this.destinationVpc = destinationVpc;
+            $.destinationVpc = destinationVpc;
             return this;
         }
+
         public Builder inboundHeader(@Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader) {
-            this.inboundHeader = inboundHeader;
+            $.inboundHeader = inboundHeader;
             return this;
         }
+
         public Builder outboundHeader(@Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader) {
-            this.outboundHeader = outboundHeader;
+            $.outboundHeader = outboundHeader;
             return this;
         }
+
         public Builder routeTableRoute(@Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute) {
-            this.routeTableRoute = routeTableRoute;
+            $.routeTableRoute = routeTableRoute;
             return this;
         }
+
         public Builder securityGroupRule(@Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule) {
-            this.securityGroupRule = securityGroupRule;
+            $.securityGroupRule = securityGroupRule;
             return this;
         }
+
         public Builder sequenceNumber(@Nullable Integer sequenceNumber) {
-            this.sequenceNumber = sequenceNumber;
+            $.sequenceNumber = sequenceNumber;
             return this;
         }
+
         public Builder sourceVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc) {
-            this.sourceVpc = sourceVpc;
+            $.sourceVpc = sourceVpc;
             return this;
         }
+
         public Builder subnet(@Nullable NetworkInsightsAnalysisAnalysisComponent subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder vpc(@Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
-            this.vpc = vpc;
+            $.vpc = vpc;
             return this;
-        }        public NetworkInsightsAnalysisPathComponent build() {
-            return new NetworkInsightsAnalysisPathComponent(aclRule, component, destinationVpc, inboundHeader, outboundHeader, routeTableRoute, securityGroupRule, sequenceNumber, sourceVpc, subnet, vpc);
+        }
+
+        public NetworkInsightsAnalysisPathComponent build() {
+            return $;
         }
     }
+
 }

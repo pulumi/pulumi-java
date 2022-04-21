@@ -5,7 +5,6 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="applicationName", required=true)
-      private final Output<String> applicationName;
+    private Output<String> applicationName;
 
     public Output<String> applicationName() {
         return this.applicationName;
@@ -34,7 +33,7 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="endpointName", required=true)
-      private final Output<String> endpointName;
+    private Output<String> endpointName;
 
     public Output<String> endpointName() {
         return this.endpointName;
@@ -45,76 +44,71 @@ public final class GatewayDestinationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public GatewayDestinationArgs(
-        Output<String> applicationName,
-        Output<String> endpointName,
-        Output<String> serviceName) {
-        this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GatewayDestinationArgs() {}
 
-    private GatewayDestinationArgs() {
-        this.applicationName = Codegen.empty();
-        this.endpointName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private GatewayDestinationArgs(GatewayDestinationArgs $) {
+        this.applicationName = $.applicationName;
+        this.endpointName = $.endpointName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationName;
-        private Output<String> endpointName;
-        private Output<String> serviceName;
+        private GatewayDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayDestinationArgs();
         }
 
         public Builder(GatewayDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.endpointName = defaults.endpointName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GatewayDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(Output<String> applicationName) {
-            this.applicationName = Objects.requireNonNull(applicationName);
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder applicationName(String applicationName) {
-            this.applicationName = Output.of(Objects.requireNonNull(applicationName));
-            return this;
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder endpointName(Output<String> endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder endpointName(String endpointName) {
-            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
-            return this;
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public GatewayDestinationArgs build() {
-            return new GatewayDestinationArgs(applicationName, endpointName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public GatewayDestinationArgs build() {
+            $.applicationName = Objects.requireNonNull($.applicationName, "expected parameter 'applicationName' to be non-null");
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

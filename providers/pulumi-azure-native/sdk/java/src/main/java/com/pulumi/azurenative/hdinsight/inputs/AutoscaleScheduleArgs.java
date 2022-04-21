@@ -7,9 +7,9 @@ import com.pulumi.azurenative.hdinsight.enums.DaysOfWeek;
 import com.pulumi.azurenative.hdinsight.inputs.AutoscaleTimeAndCapacityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AutoscaleScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="days")
-      private final @Nullable Output<List<DaysOfWeek>> days;
+    private @Nullable Output<List<DaysOfWeek>> days;
 
-    public Output<List<DaysOfWeek>> days() {
-        return this.days == null ? Codegen.empty() : this.days;
+    public Optional<Output<List<DaysOfWeek>>> days() {
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class AutoscaleScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeAndCapacity")
-      private final @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
+    private @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
 
-    public Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity() {
-        return this.timeAndCapacity == null ? Codegen.empty() : this.timeAndCapacity;
+    public Optional<Output<AutoscaleTimeAndCapacityArgs>> timeAndCapacity() {
+        return Optional.ofNullable(this.timeAndCapacity);
     }
 
-    public AutoscaleScheduleArgs(
-        @Nullable Output<List<DaysOfWeek>> days,
-        @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
-        this.days = days;
-        this.timeAndCapacity = timeAndCapacity;
-    }
+    private AutoscaleScheduleArgs() {}
 
-    private AutoscaleScheduleArgs() {
-        this.days = Codegen.empty();
-        this.timeAndCapacity = Codegen.empty();
+    private AutoscaleScheduleArgs(AutoscaleScheduleArgs $) {
+        this.days = $.days;
+        this.timeAndCapacity = $.timeAndCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DaysOfWeek>> days;
-        private @Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity;
+        private AutoscaleScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleScheduleArgs();
         }
 
         public Builder(AutoscaleScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.timeAndCapacity = defaults.timeAndCapacity;
+            $ = new AutoscaleScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Output<List<DaysOfWeek>> days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
-        public Builder days(@Nullable List<DaysOfWeek> days) {
-            this.days = Codegen.ofNullable(days);
-            return this;
+
+        public Builder days(List<DaysOfWeek> days) {
+            return days(Output.of(days));
         }
+
         public Builder days(DaysOfWeek... days) {
             return days(List.of(days));
         }
+
         public Builder timeAndCapacity(@Nullable Output<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
-            this.timeAndCapacity = timeAndCapacity;
+            $.timeAndCapacity = timeAndCapacity;
             return this;
         }
-        public Builder timeAndCapacity(@Nullable AutoscaleTimeAndCapacityArgs timeAndCapacity) {
-            this.timeAndCapacity = Codegen.ofNullable(timeAndCapacity);
-            return this;
-        }        public AutoscaleScheduleArgs build() {
-            return new AutoscaleScheduleArgs(days, timeAndCapacity);
+
+        public Builder timeAndCapacity(AutoscaleTimeAndCapacityArgs timeAndCapacity) {
+            return timeAndCapacity(Output.of(timeAndCapacity));
+        }
+
+        public AutoscaleScheduleArgs build() {
+            return $;
         }
     }
+
 }

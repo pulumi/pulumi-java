@@ -5,9 +5,9 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
      * 
      */
     @Import(name="offer")
-      private final @Nullable Output<String> offer;
+    private @Nullable Output<String> offer;
 
-    public Output<String> offer() {
-        return this.offer == null ? Codegen.empty() : this.offer;
+    public Optional<Output<String>> offer() {
+        return Optional.ofNullable(this.offer);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class CustomImagePropertiesFromPlanArgs extends com.pulumi.resource
      * 
      */
     @Import(name="publisher")
-      private final @Nullable Output<String> publisher;
+    private @Nullable Output<String> publisher;
 
-    public Output<String> publisher() {
-        return this.publisher == null ? Codegen.empty() : this.publisher;
+    public Optional<Output<String>> publisher() {
+        return Optional.ofNullable(this.publisher);
     }
 
-    public CustomImagePropertiesFromPlanArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> offer,
-        @Nullable Output<String> publisher) {
-        this.id = id;
-        this.offer = offer;
-        this.publisher = publisher;
-    }
+    private CustomImagePropertiesFromPlanArgs() {}
 
-    private CustomImagePropertiesFromPlanArgs() {
-        this.id = Codegen.empty();
-        this.offer = Codegen.empty();
-        this.publisher = Codegen.empty();
+    private CustomImagePropertiesFromPlanArgs(CustomImagePropertiesFromPlanArgs $) {
+        this.id = $.id;
+        this.offer = $.offer;
+        this.publisher = $.publisher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomImagePropertiesFromPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> offer;
-        private @Nullable Output<String> publisher;
+        private CustomImagePropertiesFromPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomImagePropertiesFromPlanArgs();
         }
 
         public Builder(CustomImagePropertiesFromPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.offer = defaults.offer;
-    	      this.publisher = defaults.publisher;
+            $ = new CustomImagePropertiesFromPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder offer(@Nullable Output<String> offer) {
-            this.offer = offer;
+            $.offer = offer;
             return this;
         }
-        public Builder offer(@Nullable String offer) {
-            this.offer = Codegen.ofNullable(offer);
-            return this;
+
+        public Builder offer(String offer) {
+            return offer(Output.of(offer));
         }
+
         public Builder publisher(@Nullable Output<String> publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
-        public Builder publisher(@Nullable String publisher) {
-            this.publisher = Codegen.ofNullable(publisher);
-            return this;
-        }        public CustomImagePropertiesFromPlanArgs build() {
-            return new CustomImagePropertiesFromPlanArgs(id, offer, publisher);
+
+        public Builder publisher(String publisher) {
+            return publisher(Output.of(publisher));
+        }
+
+        public CustomImagePropertiesFromPlanArgs build() {
+            return $;
         }
     }
+
 }

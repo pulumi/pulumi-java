@@ -13,62 +13,59 @@ public final class GetSecretRotation extends com.pulumi.resources.InvokeArgs {
     public static final GetSecretRotation Empty = new GetSecretRotation();
 
     @Import(name="nextRotationTime", required=true)
-      private final String nextRotationTime;
+    private String nextRotationTime;
 
     public String nextRotationTime() {
         return this.nextRotationTime;
     }
 
     @Import(name="rotationPeriod", required=true)
-      private final String rotationPeriod;
+    private String rotationPeriod;
 
     public String rotationPeriod() {
         return this.rotationPeriod;
     }
 
-    public GetSecretRotation(
-        String nextRotationTime,
-        String rotationPeriod) {
-        this.nextRotationTime = Objects.requireNonNull(nextRotationTime, "expected parameter 'nextRotationTime' to be non-null");
-        this.rotationPeriod = Objects.requireNonNull(rotationPeriod, "expected parameter 'rotationPeriod' to be non-null");
-    }
+    private GetSecretRotation() {}
 
-    private GetSecretRotation() {
-        this.nextRotationTime = null;
-        this.rotationPeriod = null;
+    private GetSecretRotation(GetSecretRotation $) {
+        this.nextRotationTime = $.nextRotationTime;
+        this.rotationPeriod = $.rotationPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretRotation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nextRotationTime;
-        private String rotationPeriod;
+        private GetSecretRotation $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretRotation();
         }
 
         public Builder(GetSecretRotation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nextRotationTime = defaults.nextRotationTime;
-    	      this.rotationPeriod = defaults.rotationPeriod;
+            $ = new GetSecretRotation(Objects.requireNonNull(defaults));
         }
 
         public Builder nextRotationTime(String nextRotationTime) {
-            this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
+            $.nextRotationTime = nextRotationTime;
             return this;
         }
+
         public Builder rotationPeriod(String rotationPeriod) {
-            this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
+            $.rotationPeriod = rotationPeriod;
             return this;
-        }        public GetSecretRotation build() {
-            return new GetSecretRotation(nextRotationTime, rotationPeriod);
+        }
+
+        public GetSecretRotation build() {
+            $.nextRotationTime = Objects.requireNonNull($.nextRotationTime, "expected parameter 'nextRotationTime' to be non-null");
+            $.rotationPeriod = Objects.requireNonNull($.rotationPeriod, "expected parameter 'rotationPeriod' to be non-null");
+            return $;
         }
     }
+
 }

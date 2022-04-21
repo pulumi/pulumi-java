@@ -24,10 +24,10 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
      * 
      */
     @Import(name="isRequired")
-      private final @Nullable Boolean isRequired;
+    private @Nullable Boolean isRequired;
 
     public Optional<Boolean> isRequired() {
-        return this.isRequired == null ? Optional.empty() : Optional.ofNullable(this.isRequired);
+        return Optional.ofNullable(this.isRequired);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class ApiDeploymentParameterMetadataResponse extends com.pulumi.res
      * 
      */
     @Import(name="visibility")
-      private final @Nullable String visibility;
+    private @Nullable String visibility;
 
     public Optional<String> visibility() {
-        return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
+        return Optional.ofNullable(this.visibility);
     }
 
-    public ApiDeploymentParameterMetadataResponse(
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable Boolean isRequired,
-        @Nullable String type,
-        @Nullable String visibility) {
-        this.description = description;
-        this.displayName = displayName;
-        this.isRequired = isRequired;
-        this.type = type;
-        this.visibility = visibility;
-    }
+    private ApiDeploymentParameterMetadataResponse() {}
 
-    private ApiDeploymentParameterMetadataResponse() {
-        this.description = null;
-        this.displayName = null;
-        this.isRequired = null;
-        this.type = null;
-        this.visibility = null;
+    private ApiDeploymentParameterMetadataResponse(ApiDeploymentParameterMetadataResponse $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.isRequired = $.isRequired;
+        this.type = $.type;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiDeploymentParameterMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable Boolean isRequired;
-        private @Nullable String type;
-        private @Nullable String visibility;
+        private ApiDeploymentParameterMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiDeploymentParameterMetadataResponse();
         }
 
         public Builder(ApiDeploymentParameterMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.isRequired = defaults.isRequired;
-    	      this.type = defaults.type;
-    	      this.visibility = defaults.visibility;
+            $ = new ApiDeploymentParameterMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder isRequired(@Nullable Boolean isRequired) {
-            this.isRequired = isRequired;
+            $.isRequired = isRequired;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder visibility(@Nullable String visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
-        }        public ApiDeploymentParameterMetadataResponse build() {
-            return new ApiDeploymentParameterMetadataResponse(description, displayName, isRequired, type, visibility);
+        }
+
+        public ApiDeploymentParameterMetadataResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastUpdatedDate")
-      private final @Nullable Output<String> lastUpdatedDate;
+    private @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> lastUpdatedDate() {
-        return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
+    public Optional<Output<String>> lastUpdatedDate() {
+        return Optional.ofNullable(this.lastUpdatedDate);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="meshName")
-      private final @Nullable Output<String> meshName;
+    private @Nullable Output<String> meshName;
 
-    public Output<String> meshName() {
-        return this.meshName == null ? Codegen.empty() : this.meshName;
+    public Optional<Output<String>> meshName() {
+        return Optional.ofNullable(this.meshName);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="meshOwner")
-      private final @Nullable Output<String> meshOwner;
+    private @Nullable Output<String> meshOwner;
 
-    public Output<String> meshOwner() {
-        return this.meshOwner == null ? Codegen.empty() : this.meshOwner;
+    public Optional<Output<String>> meshOwner() {
+        return Optional.ofNullable(this.meshOwner);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceOwner")
-      private final @Nullable Output<String> resourceOwner;
+    private @Nullable Output<String> resourceOwner;
 
-    public Output<String> resourceOwner() {
-        return this.resourceOwner == null ? Codegen.empty() : this.resourceOwner;
+    public Optional<Output<String>> resourceOwner() {
+        return Optional.ofNullable(this.resourceOwner);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<GatewayRouteSpecGetArgs> spec;
+    private @Nullable Output<GatewayRouteSpecGetArgs> spec;
 
-    public Output<GatewayRouteSpecGetArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<GatewayRouteSpecGetArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -132,180 +132,148 @@ public final class GatewayRouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualGatewayName")
-      private final @Nullable Output<String> virtualGatewayName;
+    private @Nullable Output<String> virtualGatewayName;
 
-    public Output<String> virtualGatewayName() {
-        return this.virtualGatewayName == null ? Codegen.empty() : this.virtualGatewayName;
+    public Optional<Output<String>> virtualGatewayName() {
+        return Optional.ofNullable(this.virtualGatewayName);
     }
 
-    public GatewayRouteState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> lastUpdatedDate,
-        @Nullable Output<String> meshName,
-        @Nullable Output<String> meshOwner,
-        @Nullable Output<String> name,
-        @Nullable Output<String> resourceOwner,
-        @Nullable Output<GatewayRouteSpecGetArgs> spec,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> virtualGatewayName) {
-        this.arn = arn;
-        this.createdDate = createdDate;
-        this.lastUpdatedDate = lastUpdatedDate;
-        this.meshName = meshName;
-        this.meshOwner = meshOwner;
-        this.name = name;
-        this.resourceOwner = resourceOwner;
-        this.spec = spec;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.virtualGatewayName = virtualGatewayName;
-    }
+    private GatewayRouteState() {}
 
-    private GatewayRouteState() {
-        this.arn = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.lastUpdatedDate = Codegen.empty();
-        this.meshName = Codegen.empty();
-        this.meshOwner = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceOwner = Codegen.empty();
-        this.spec = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.virtualGatewayName = Codegen.empty();
+    private GatewayRouteState(GatewayRouteState $) {
+        this.arn = $.arn;
+        this.createdDate = $.createdDate;
+        this.lastUpdatedDate = $.lastUpdatedDate;
+        this.meshName = $.meshName;
+        this.meshOwner = $.meshOwner;
+        this.name = $.name;
+        this.resourceOwner = $.resourceOwner;
+        this.spec = $.spec;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.virtualGatewayName = $.virtualGatewayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> lastUpdatedDate;
-        private @Nullable Output<String> meshName;
-        private @Nullable Output<String> meshOwner;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> resourceOwner;
-        private @Nullable Output<GatewayRouteSpecGetArgs> spec;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> virtualGatewayName;
+        private GatewayRouteState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteState();
         }
 
         public Builder(GatewayRouteState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdDate = defaults.createdDate;
-    	      this.lastUpdatedDate = defaults.lastUpdatedDate;
-    	      this.meshName = defaults.meshName;
-    	      this.meshOwner = defaults.meshOwner;
-    	      this.name = defaults.name;
-    	      this.resourceOwner = defaults.resourceOwner;
-    	      this.spec = defaults.spec;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.virtualGatewayName = defaults.virtualGatewayName;
+            $ = new GatewayRouteState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
-            this.lastUpdatedDate = lastUpdatedDate;
+            $.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
-        public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
-            this.lastUpdatedDate = Codegen.ofNullable(lastUpdatedDate);
-            return this;
+
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
+            return lastUpdatedDate(Output.of(lastUpdatedDate));
         }
+
         public Builder meshName(@Nullable Output<String> meshName) {
-            this.meshName = meshName;
+            $.meshName = meshName;
             return this;
         }
-        public Builder meshName(@Nullable String meshName) {
-            this.meshName = Codegen.ofNullable(meshName);
-            return this;
+
+        public Builder meshName(String meshName) {
+            return meshName(Output.of(meshName));
         }
+
         public Builder meshOwner(@Nullable Output<String> meshOwner) {
-            this.meshOwner = meshOwner;
+            $.meshOwner = meshOwner;
             return this;
         }
-        public Builder meshOwner(@Nullable String meshOwner) {
-            this.meshOwner = Codegen.ofNullable(meshOwner);
-            return this;
+
+        public Builder meshOwner(String meshOwner) {
+            return meshOwner(Output.of(meshOwner));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
-            this.resourceOwner = resourceOwner;
+            $.resourceOwner = resourceOwner;
             return this;
         }
-        public Builder resourceOwner(@Nullable String resourceOwner) {
-            this.resourceOwner = Codegen.ofNullable(resourceOwner);
-            return this;
+
+        public Builder resourceOwner(String resourceOwner) {
+            return resourceOwner(Output.of(resourceOwner));
         }
+
         public Builder spec(@Nullable Output<GatewayRouteSpecGetArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable GatewayRouteSpecGetArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
+
+        public Builder spec(GatewayRouteSpecGetArgs spec) {
+            return spec(Output.of(spec));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder virtualGatewayName(@Nullable Output<String> virtualGatewayName) {
-            this.virtualGatewayName = virtualGatewayName;
+            $.virtualGatewayName = virtualGatewayName;
             return this;
         }
-        public Builder virtualGatewayName(@Nullable String virtualGatewayName) {
-            this.virtualGatewayName = Codegen.ofNullable(virtualGatewayName);
-            return this;
-        }        public GatewayRouteState build() {
-            return new GatewayRouteState(arn, createdDate, lastUpdatedDate, meshName, meshOwner, name, resourceOwner, spec, tags, tagsAll, virtualGatewayName);
+
+        public Builder virtualGatewayName(String virtualGatewayName) {
+            return virtualGatewayName(Output.of(virtualGatewayName));
+        }
+
+        public GatewayRouteState build() {
+            return $;
         }
     }
+
 }

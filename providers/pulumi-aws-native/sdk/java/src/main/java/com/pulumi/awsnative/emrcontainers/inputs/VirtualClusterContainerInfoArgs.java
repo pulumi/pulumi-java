@@ -6,7 +6,6 @@ package com.pulumi.awsnative.emrcontainers.inputs;
 import com.pulumi.awsnative.emrcontainers.inputs.VirtualClusterEksInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class VirtualClusterContainerInfoArgs extends com.pulumi.resources.
     public static final VirtualClusterContainerInfoArgs Empty = new VirtualClusterContainerInfoArgs();
 
     @Import(name="eksInfo", required=true)
-      private final Output<VirtualClusterEksInfoArgs> eksInfo;
+    private Output<VirtualClusterEksInfoArgs> eksInfo;
 
     public Output<VirtualClusterEksInfoArgs> eksInfo() {
         return this.eksInfo;
     }
 
-    public VirtualClusterContainerInfoArgs(Output<VirtualClusterEksInfoArgs> eksInfo) {
-        this.eksInfo = Objects.requireNonNull(eksInfo, "expected parameter 'eksInfo' to be non-null");
-    }
+    private VirtualClusterContainerInfoArgs() {}
 
-    private VirtualClusterContainerInfoArgs() {
-        this.eksInfo = Codegen.empty();
+    private VirtualClusterContainerInfoArgs(VirtualClusterContainerInfoArgs $) {
+        this.eksInfo = $.eksInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualClusterContainerInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VirtualClusterEksInfoArgs> eksInfo;
+        private VirtualClusterContainerInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualClusterContainerInfoArgs();
         }
 
         public Builder(VirtualClusterContainerInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eksInfo = defaults.eksInfo;
+            $ = new VirtualClusterContainerInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eksInfo(Output<VirtualClusterEksInfoArgs> eksInfo) {
-            this.eksInfo = Objects.requireNonNull(eksInfo);
+            $.eksInfo = eksInfo;
             return this;
         }
+
         public Builder eksInfo(VirtualClusterEksInfoArgs eksInfo) {
-            this.eksInfo = Output.of(Objects.requireNonNull(eksInfo));
-            return this;
-        }        public VirtualClusterContainerInfoArgs build() {
-            return new VirtualClusterContainerInfoArgs(eksInfo);
+            return eksInfo(Output.of(eksInfo));
+        }
+
+        public VirtualClusterContainerInfoArgs build() {
+            $.eksInfo = Objects.requireNonNull($.eksInfo, "expected parameter 'eksInfo' to be non-null");
+            return $;
         }
     }
+
 }

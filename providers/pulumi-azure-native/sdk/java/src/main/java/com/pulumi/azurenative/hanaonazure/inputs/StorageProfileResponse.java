@@ -26,10 +26,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="hanaSids")
-      private final @Nullable List<SAPSystemIDResponse> hanaSids;
+    private @Nullable List<SAPSystemIDResponse> hanaSids;
 
-    public List<SAPSystemIDResponse> hanaSids() {
-        return this.hanaSids == null ? List.of() : this.hanaSids;
+    public Optional<List<SAPSystemIDResponse>> hanaSids() {
+        return Optional.ofNullable(this.hanaSids);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="nfsIpAddress", required=true)
-      private final String nfsIpAddress;
+    private String nfsIpAddress;
 
     public String nfsIpAddress() {
         return this.nfsIpAddress;
@@ -48,70 +48,65 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="osDisks")
-      private final @Nullable List<DiskResponse> osDisks;
+    private @Nullable List<DiskResponse> osDisks;
 
-    public List<DiskResponse> osDisks() {
-        return this.osDisks == null ? List.of() : this.osDisks;
+    public Optional<List<DiskResponse>> osDisks() {
+        return Optional.ofNullable(this.osDisks);
     }
 
-    public StorageProfileResponse(
-        @Nullable List<SAPSystemIDResponse> hanaSids,
-        String nfsIpAddress,
-        @Nullable List<DiskResponse> osDisks) {
-        this.hanaSids = hanaSids;
-        this.nfsIpAddress = Objects.requireNonNull(nfsIpAddress, "expected parameter 'nfsIpAddress' to be non-null");
-        this.osDisks = osDisks;
-    }
+    private StorageProfileResponse() {}
 
-    private StorageProfileResponse() {
-        this.hanaSids = List.of();
-        this.nfsIpAddress = null;
-        this.osDisks = List.of();
+    private StorageProfileResponse(StorageProfileResponse $) {
+        this.hanaSids = $.hanaSids;
+        this.nfsIpAddress = $.nfsIpAddress;
+        this.osDisks = $.osDisks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SAPSystemIDResponse> hanaSids;
-        private String nfsIpAddress;
-        private @Nullable List<DiskResponse> osDisks;
+        private StorageProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileResponse();
         }
 
         public Builder(StorageProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hanaSids = defaults.hanaSids;
-    	      this.nfsIpAddress = defaults.nfsIpAddress;
-    	      this.osDisks = defaults.osDisks;
+            $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hanaSids(@Nullable List<SAPSystemIDResponse> hanaSids) {
-            this.hanaSids = hanaSids;
+            $.hanaSids = hanaSids;
             return this;
         }
+
         public Builder hanaSids(SAPSystemIDResponse... hanaSids) {
             return hanaSids(List.of(hanaSids));
         }
+
         public Builder nfsIpAddress(String nfsIpAddress) {
-            this.nfsIpAddress = Objects.requireNonNull(nfsIpAddress);
+            $.nfsIpAddress = nfsIpAddress;
             return this;
         }
+
         public Builder osDisks(@Nullable List<DiskResponse> osDisks) {
-            this.osDisks = osDisks;
+            $.osDisks = osDisks;
             return this;
         }
+
         public Builder osDisks(DiskResponse... osDisks) {
             return osDisks(List.of(osDisks));
-        }        public StorageProfileResponse build() {
-            return new StorageProfileResponse(hanaSids, nfsIpAddress, osDisks);
+        }
+
+        public StorageProfileResponse build() {
+            $.nfsIpAddress = Objects.requireNonNull($.nfsIpAddress, "expected parameter 'nfsIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

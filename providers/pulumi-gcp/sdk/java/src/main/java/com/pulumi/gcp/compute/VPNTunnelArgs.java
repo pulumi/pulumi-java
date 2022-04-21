@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ikeVersion")
-      private final @Nullable Output<Integer> ikeVersion;
+    private @Nullable Output<Integer> ikeVersion;
 
-    public Output<Integer> ikeVersion() {
-        return this.ikeVersion == null ? Codegen.empty() : this.ikeVersion;
+    public Optional<Output<Integer>> ikeVersion() {
+        return Optional.ofNullable(this.ikeVersion);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="localTrafficSelectors")
-      private final @Nullable Output<List<String>> localTrafficSelectors;
+    private @Nullable Output<List<String>> localTrafficSelectors;
 
-    public Output<List<String>> localTrafficSelectors() {
-        return this.localTrafficSelectors == null ? Codegen.empty() : this.localTrafficSelectors;
+    public Optional<Output<List<String>>> localTrafficSelectors() {
+        return Optional.ofNullable(this.localTrafficSelectors);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerExternalGateway")
-      private final @Nullable Output<String> peerExternalGateway;
+    private @Nullable Output<String> peerExternalGateway;
 
-    public Output<String> peerExternalGateway() {
-        return this.peerExternalGateway == null ? Codegen.empty() : this.peerExternalGateway;
+    public Optional<Output<String>> peerExternalGateway() {
+        return Optional.ofNullable(this.peerExternalGateway);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerExternalGatewayInterface")
-      private final @Nullable Output<Integer> peerExternalGatewayInterface;
+    private @Nullable Output<Integer> peerExternalGatewayInterface;
 
-    public Output<Integer> peerExternalGatewayInterface() {
-        return this.peerExternalGatewayInterface == null ? Codegen.empty() : this.peerExternalGatewayInterface;
+    public Optional<Output<Integer>> peerExternalGatewayInterface() {
+        return Optional.ofNullable(this.peerExternalGatewayInterface);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerGcpGateway")
-      private final @Nullable Output<String> peerGcpGateway;
+    private @Nullable Output<String> peerGcpGateway;
 
-    public Output<String> peerGcpGateway() {
-        return this.peerGcpGateway == null ? Codegen.empty() : this.peerGcpGateway;
+    public Optional<Output<String>> peerGcpGateway() {
+        return Optional.ofNullable(this.peerGcpGateway);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerIp")
-      private final @Nullable Output<String> peerIp;
+    private @Nullable Output<String> peerIp;
 
-    public Output<String> peerIp() {
-        return this.peerIp == null ? Codegen.empty() : this.peerIp;
+    public Optional<Output<String>> peerIp() {
+        return Optional.ofNullable(this.peerIp);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="remoteTrafficSelectors")
-      private final @Nullable Output<List<String>> remoteTrafficSelectors;
+    private @Nullable Output<List<String>> remoteTrafficSelectors;
 
-    public Output<List<String>> remoteTrafficSelectors() {
-        return this.remoteTrafficSelectors == null ? Codegen.empty() : this.remoteTrafficSelectors;
+    public Optional<Output<List<String>>> remoteTrafficSelectors() {
+        return Optional.ofNullable(this.remoteTrafficSelectors);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="router")
-      private final @Nullable Output<String> router;
+    private @Nullable Output<String> router;
 
-    public Output<String> router() {
-        return this.router == null ? Codegen.empty() : this.router;
+    public Optional<Output<String>> router() {
+        return Optional.ofNullable(this.router);
     }
 
     /**
@@ -186,7 +186,7 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sharedSecret", required=true)
-      private final Output<String> sharedSecret;
+    private Output<String> sharedSecret;
 
     public Output<String> sharedSecret() {
         return this.sharedSecret;
@@ -198,10 +198,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetVpnGateway")
-      private final @Nullable Output<String> targetVpnGateway;
+    private @Nullable Output<String> targetVpnGateway;
 
-    public Output<String> targetVpnGateway() {
-        return this.targetVpnGateway == null ? Codegen.empty() : this.targetVpnGateway;
+    public Optional<Output<String>> targetVpnGateway() {
+        return Optional.ofNullable(this.targetVpnGateway);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpnGateway")
-      private final @Nullable Output<String> vpnGateway;
+    private @Nullable Output<String> vpnGateway;
 
-    public Output<String> vpnGateway() {
-        return this.vpnGateway == null ? Codegen.empty() : this.vpnGateway;
+    public Optional<Output<String>> vpnGateway() {
+        return Optional.ofNullable(this.vpnGateway);
     }
 
     /**
@@ -222,264 +222,217 @@ public final class VPNTunnelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpnGatewayInterface")
-      private final @Nullable Output<Integer> vpnGatewayInterface;
+    private @Nullable Output<Integer> vpnGatewayInterface;
 
-    public Output<Integer> vpnGatewayInterface() {
-        return this.vpnGatewayInterface == null ? Codegen.empty() : this.vpnGatewayInterface;
+    public Optional<Output<Integer>> vpnGatewayInterface() {
+        return Optional.ofNullable(this.vpnGatewayInterface);
     }
 
-    public VPNTunnelArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> ikeVersion,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> localTrafficSelectors,
-        @Nullable Output<String> name,
-        @Nullable Output<String> peerExternalGateway,
-        @Nullable Output<Integer> peerExternalGatewayInterface,
-        @Nullable Output<String> peerGcpGateway,
-        @Nullable Output<String> peerIp,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<List<String>> remoteTrafficSelectors,
-        @Nullable Output<String> router,
-        Output<String> sharedSecret,
-        @Nullable Output<String> targetVpnGateway,
-        @Nullable Output<String> vpnGateway,
-        @Nullable Output<Integer> vpnGatewayInterface) {
-        this.description = description;
-        this.ikeVersion = ikeVersion;
-        this.labels = labels;
-        this.localTrafficSelectors = localTrafficSelectors;
-        this.name = name;
-        this.peerExternalGateway = peerExternalGateway;
-        this.peerExternalGatewayInterface = peerExternalGatewayInterface;
-        this.peerGcpGateway = peerGcpGateway;
-        this.peerIp = peerIp;
-        this.project = project;
-        this.region = region;
-        this.remoteTrafficSelectors = remoteTrafficSelectors;
-        this.router = router;
-        this.sharedSecret = Objects.requireNonNull(sharedSecret, "expected parameter 'sharedSecret' to be non-null");
-        this.targetVpnGateway = targetVpnGateway;
-        this.vpnGateway = vpnGateway;
-        this.vpnGatewayInterface = vpnGatewayInterface;
-    }
+    private VPNTunnelArgs() {}
 
-    private VPNTunnelArgs() {
-        this.description = Codegen.empty();
-        this.ikeVersion = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.localTrafficSelectors = Codegen.empty();
-        this.name = Codegen.empty();
-        this.peerExternalGateway = Codegen.empty();
-        this.peerExternalGatewayInterface = Codegen.empty();
-        this.peerGcpGateway = Codegen.empty();
-        this.peerIp = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.remoteTrafficSelectors = Codegen.empty();
-        this.router = Codegen.empty();
-        this.sharedSecret = Codegen.empty();
-        this.targetVpnGateway = Codegen.empty();
-        this.vpnGateway = Codegen.empty();
-        this.vpnGatewayInterface = Codegen.empty();
+    private VPNTunnelArgs(VPNTunnelArgs $) {
+        this.description = $.description;
+        this.ikeVersion = $.ikeVersion;
+        this.labels = $.labels;
+        this.localTrafficSelectors = $.localTrafficSelectors;
+        this.name = $.name;
+        this.peerExternalGateway = $.peerExternalGateway;
+        this.peerExternalGatewayInterface = $.peerExternalGatewayInterface;
+        this.peerGcpGateway = $.peerGcpGateway;
+        this.peerIp = $.peerIp;
+        this.project = $.project;
+        this.region = $.region;
+        this.remoteTrafficSelectors = $.remoteTrafficSelectors;
+        this.router = $.router;
+        this.sharedSecret = $.sharedSecret;
+        this.targetVpnGateway = $.targetVpnGateway;
+        this.vpnGateway = $.vpnGateway;
+        this.vpnGatewayInterface = $.vpnGatewayInterface;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VPNTunnelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> ikeVersion;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> localTrafficSelectors;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> peerExternalGateway;
-        private @Nullable Output<Integer> peerExternalGatewayInterface;
-        private @Nullable Output<String> peerGcpGateway;
-        private @Nullable Output<String> peerIp;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<List<String>> remoteTrafficSelectors;
-        private @Nullable Output<String> router;
-        private Output<String> sharedSecret;
-        private @Nullable Output<String> targetVpnGateway;
-        private @Nullable Output<String> vpnGateway;
-        private @Nullable Output<Integer> vpnGatewayInterface;
+        private VPNTunnelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VPNTunnelArgs();
         }
 
         public Builder(VPNTunnelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.ikeVersion = defaults.ikeVersion;
-    	      this.labels = defaults.labels;
-    	      this.localTrafficSelectors = defaults.localTrafficSelectors;
-    	      this.name = defaults.name;
-    	      this.peerExternalGateway = defaults.peerExternalGateway;
-    	      this.peerExternalGatewayInterface = defaults.peerExternalGatewayInterface;
-    	      this.peerGcpGateway = defaults.peerGcpGateway;
-    	      this.peerIp = defaults.peerIp;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.remoteTrafficSelectors = defaults.remoteTrafficSelectors;
-    	      this.router = defaults.router;
-    	      this.sharedSecret = defaults.sharedSecret;
-    	      this.targetVpnGateway = defaults.targetVpnGateway;
-    	      this.vpnGateway = defaults.vpnGateway;
-    	      this.vpnGatewayInterface = defaults.vpnGatewayInterface;
+            $ = new VPNTunnelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ikeVersion(@Nullable Output<Integer> ikeVersion) {
-            this.ikeVersion = ikeVersion;
+            $.ikeVersion = ikeVersion;
             return this;
         }
-        public Builder ikeVersion(@Nullable Integer ikeVersion) {
-            this.ikeVersion = Codegen.ofNullable(ikeVersion);
-            return this;
+
+        public Builder ikeVersion(Integer ikeVersion) {
+            return ikeVersion(Output.of(ikeVersion));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder localTrafficSelectors(@Nullable Output<List<String>> localTrafficSelectors) {
-            this.localTrafficSelectors = localTrafficSelectors;
+            $.localTrafficSelectors = localTrafficSelectors;
             return this;
         }
-        public Builder localTrafficSelectors(@Nullable List<String> localTrafficSelectors) {
-            this.localTrafficSelectors = Codegen.ofNullable(localTrafficSelectors);
-            return this;
+
+        public Builder localTrafficSelectors(List<String> localTrafficSelectors) {
+            return localTrafficSelectors(Output.of(localTrafficSelectors));
         }
+
         public Builder localTrafficSelectors(String... localTrafficSelectors) {
             return localTrafficSelectors(List.of(localTrafficSelectors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder peerExternalGateway(@Nullable Output<String> peerExternalGateway) {
-            this.peerExternalGateway = peerExternalGateway;
+            $.peerExternalGateway = peerExternalGateway;
             return this;
         }
-        public Builder peerExternalGateway(@Nullable String peerExternalGateway) {
-            this.peerExternalGateway = Codegen.ofNullable(peerExternalGateway);
-            return this;
+
+        public Builder peerExternalGateway(String peerExternalGateway) {
+            return peerExternalGateway(Output.of(peerExternalGateway));
         }
+
         public Builder peerExternalGatewayInterface(@Nullable Output<Integer> peerExternalGatewayInterface) {
-            this.peerExternalGatewayInterface = peerExternalGatewayInterface;
+            $.peerExternalGatewayInterface = peerExternalGatewayInterface;
             return this;
         }
-        public Builder peerExternalGatewayInterface(@Nullable Integer peerExternalGatewayInterface) {
-            this.peerExternalGatewayInterface = Codegen.ofNullable(peerExternalGatewayInterface);
-            return this;
+
+        public Builder peerExternalGatewayInterface(Integer peerExternalGatewayInterface) {
+            return peerExternalGatewayInterface(Output.of(peerExternalGatewayInterface));
         }
+
         public Builder peerGcpGateway(@Nullable Output<String> peerGcpGateway) {
-            this.peerGcpGateway = peerGcpGateway;
+            $.peerGcpGateway = peerGcpGateway;
             return this;
         }
-        public Builder peerGcpGateway(@Nullable String peerGcpGateway) {
-            this.peerGcpGateway = Codegen.ofNullable(peerGcpGateway);
-            return this;
+
+        public Builder peerGcpGateway(String peerGcpGateway) {
+            return peerGcpGateway(Output.of(peerGcpGateway));
         }
+
         public Builder peerIp(@Nullable Output<String> peerIp) {
-            this.peerIp = peerIp;
+            $.peerIp = peerIp;
             return this;
         }
-        public Builder peerIp(@Nullable String peerIp) {
-            this.peerIp = Codegen.ofNullable(peerIp);
-            return this;
+
+        public Builder peerIp(String peerIp) {
+            return peerIp(Output.of(peerIp));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder remoteTrafficSelectors(@Nullable Output<List<String>> remoteTrafficSelectors) {
-            this.remoteTrafficSelectors = remoteTrafficSelectors;
+            $.remoteTrafficSelectors = remoteTrafficSelectors;
             return this;
         }
-        public Builder remoteTrafficSelectors(@Nullable List<String> remoteTrafficSelectors) {
-            this.remoteTrafficSelectors = Codegen.ofNullable(remoteTrafficSelectors);
-            return this;
+
+        public Builder remoteTrafficSelectors(List<String> remoteTrafficSelectors) {
+            return remoteTrafficSelectors(Output.of(remoteTrafficSelectors));
         }
+
         public Builder remoteTrafficSelectors(String... remoteTrafficSelectors) {
             return remoteTrafficSelectors(List.of(remoteTrafficSelectors));
         }
+
         public Builder router(@Nullable Output<String> router) {
-            this.router = router;
+            $.router = router;
             return this;
         }
-        public Builder router(@Nullable String router) {
-            this.router = Codegen.ofNullable(router);
-            return this;
+
+        public Builder router(String router) {
+            return router(Output.of(router));
         }
+
         public Builder sharedSecret(Output<String> sharedSecret) {
-            this.sharedSecret = Objects.requireNonNull(sharedSecret);
+            $.sharedSecret = sharedSecret;
             return this;
         }
+
         public Builder sharedSecret(String sharedSecret) {
-            this.sharedSecret = Output.of(Objects.requireNonNull(sharedSecret));
-            return this;
+            return sharedSecret(Output.of(sharedSecret));
         }
+
         public Builder targetVpnGateway(@Nullable Output<String> targetVpnGateway) {
-            this.targetVpnGateway = targetVpnGateway;
+            $.targetVpnGateway = targetVpnGateway;
             return this;
         }
-        public Builder targetVpnGateway(@Nullable String targetVpnGateway) {
-            this.targetVpnGateway = Codegen.ofNullable(targetVpnGateway);
-            return this;
+
+        public Builder targetVpnGateway(String targetVpnGateway) {
+            return targetVpnGateway(Output.of(targetVpnGateway));
         }
+
         public Builder vpnGateway(@Nullable Output<String> vpnGateway) {
-            this.vpnGateway = vpnGateway;
+            $.vpnGateway = vpnGateway;
             return this;
         }
-        public Builder vpnGateway(@Nullable String vpnGateway) {
-            this.vpnGateway = Codegen.ofNullable(vpnGateway);
-            return this;
+
+        public Builder vpnGateway(String vpnGateway) {
+            return vpnGateway(Output.of(vpnGateway));
         }
+
         public Builder vpnGatewayInterface(@Nullable Output<Integer> vpnGatewayInterface) {
-            this.vpnGatewayInterface = vpnGatewayInterface;
+            $.vpnGatewayInterface = vpnGatewayInterface;
             return this;
         }
-        public Builder vpnGatewayInterface(@Nullable Integer vpnGatewayInterface) {
-            this.vpnGatewayInterface = Codegen.ofNullable(vpnGatewayInterface);
-            return this;
-        }        public VPNTunnelArgs build() {
-            return new VPNTunnelArgs(description, ikeVersion, labels, localTrafficSelectors, name, peerExternalGateway, peerExternalGatewayInterface, peerGcpGateway, peerIp, project, region, remoteTrafficSelectors, router, sharedSecret, targetVpnGateway, vpnGateway, vpnGatewayInterface);
+
+        public Builder vpnGatewayInterface(Integer vpnGatewayInterface) {
+            return vpnGatewayInterface(Output.of(vpnGatewayInterface));
+        }
+
+        public VPNTunnelArgs build() {
+            $.sharedSecret = Objects.requireNonNull($.sharedSecret, "expected parameter 'sharedSecret' to be non-null");
+            return $;
         }
     }
+
 }

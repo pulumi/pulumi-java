@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs exte
     public static final InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs Empty = new InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs();
 
     @Import(name="ipCidrRange", required=true)
-      private final Output<String> ipCidrRange;
+    private Output<String> ipCidrRange;
 
     public Output<String> ipCidrRange() {
         return this.ipCidrRange;
     }
 
     @Import(name="subnetworkRangeName")
-      private final @Nullable Output<String> subnetworkRangeName;
+    private @Nullable Output<String> subnetworkRangeName;
 
-    public Output<String> subnetworkRangeName() {
-        return this.subnetworkRangeName == null ? Codegen.empty() : this.subnetworkRangeName;
+    public Optional<Output<String>> subnetworkRangeName() {
+        return Optional.ofNullable(this.subnetworkRangeName);
     }
 
-    public InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs(
-        Output<String> ipCidrRange,
-        @Nullable Output<String> subnetworkRangeName) {
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
-        this.subnetworkRangeName = subnetworkRangeName;
-    }
+    private InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs() {}
 
-    private InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs() {
-        this.ipCidrRange = Codegen.empty();
-        this.subnetworkRangeName = Codegen.empty();
+    private InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs(InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs $) {
+        this.ipCidrRange = $.ipCidrRange;
+        this.subnetworkRangeName = $.subnetworkRangeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ipCidrRange;
-        private @Nullable Output<String> subnetworkRangeName;
+        private InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs();
         }
 
         public Builder(InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.subnetworkRangeName = defaults.subnetworkRangeName;
+            $ = new InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipCidrRange(Output<String> ipCidrRange) {
-            this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
+
         public Builder ipCidrRange(String ipCidrRange) {
-            this.ipCidrRange = Output.of(Objects.requireNonNull(ipCidrRange));
-            return this;
+            return ipCidrRange(Output.of(ipCidrRange));
         }
+
         public Builder subnetworkRangeName(@Nullable Output<String> subnetworkRangeName) {
-            this.subnetworkRangeName = subnetworkRangeName;
+            $.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
-        public Builder subnetworkRangeName(@Nullable String subnetworkRangeName) {
-            this.subnetworkRangeName = Codegen.ofNullable(subnetworkRangeName);
-            return this;
-        }        public InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs build() {
-            return new InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs(ipCidrRange, subnetworkRangeName);
+
+        public Builder subnetworkRangeName(String subnetworkRangeName) {
+            return subnetworkRangeName(Output.of(subnetworkRangeName));
+        }
+
+        public InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs build() {
+            $.ipCidrRange = Objects.requireNonNull($.ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
+            return $;
         }
     }
+
 }

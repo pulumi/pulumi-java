@@ -5,10 +5,10 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class StandardAppVersionBasicScalingGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="idleTimeout")
-      private final @Nullable Output<String> idleTimeout;
+    private @Nullable Output<String> idleTimeout;
 
-    public Output<String> idleTimeout() {
-        return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
+    public Optional<Output<String>> idleTimeout() {
+        return Optional.ofNullable(this.idleTimeout);
     }
 
     /**
@@ -33,63 +33,59 @@ public final class StandardAppVersionBasicScalingGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="maxInstances", required=true)
-      private final Output<Integer> maxInstances;
+    private Output<Integer> maxInstances;
 
     public Output<Integer> maxInstances() {
         return this.maxInstances;
     }
 
-    public StandardAppVersionBasicScalingGetArgs(
-        @Nullable Output<String> idleTimeout,
-        Output<Integer> maxInstances) {
-        this.idleTimeout = idleTimeout;
-        this.maxInstances = Objects.requireNonNull(maxInstances, "expected parameter 'maxInstances' to be non-null");
-    }
+    private StandardAppVersionBasicScalingGetArgs() {}
 
-    private StandardAppVersionBasicScalingGetArgs() {
-        this.idleTimeout = Codegen.empty();
-        this.maxInstances = Codegen.empty();
+    private StandardAppVersionBasicScalingGetArgs(StandardAppVersionBasicScalingGetArgs $) {
+        this.idleTimeout = $.idleTimeout;
+        this.maxInstances = $.maxInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardAppVersionBasicScalingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> idleTimeout;
-        private Output<Integer> maxInstances;
+        private StandardAppVersionBasicScalingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardAppVersionBasicScalingGetArgs();
         }
 
         public Builder(StandardAppVersionBasicScalingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idleTimeout = defaults.idleTimeout;
-    	      this.maxInstances = defaults.maxInstances;
+            $ = new StandardAppVersionBasicScalingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder idleTimeout(@Nullable Output<String> idleTimeout) {
-            this.idleTimeout = idleTimeout;
+            $.idleTimeout = idleTimeout;
             return this;
         }
-        public Builder idleTimeout(@Nullable String idleTimeout) {
-            this.idleTimeout = Codegen.ofNullable(idleTimeout);
-            return this;
+
+        public Builder idleTimeout(String idleTimeout) {
+            return idleTimeout(Output.of(idleTimeout));
         }
+
         public Builder maxInstances(Output<Integer> maxInstances) {
-            this.maxInstances = Objects.requireNonNull(maxInstances);
+            $.maxInstances = maxInstances;
             return this;
         }
+
         public Builder maxInstances(Integer maxInstances) {
-            this.maxInstances = Output.of(Objects.requireNonNull(maxInstances));
-            return this;
-        }        public StandardAppVersionBasicScalingGetArgs build() {
-            return new StandardAppVersionBasicScalingGetArgs(idleTimeout, maxInstances);
+            return maxInstances(Output.of(maxInstances));
+        }
+
+        public StandardAppVersionBasicScalingGetArgs build() {
+            $.maxInstances = Objects.requireNonNull($.maxInstances, "expected parameter 'maxInstances' to be non-null");
+            return $;
         }
     }
+
 }

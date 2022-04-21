@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @Import(name="annotatedDatasetDescription", required=true)
-      private final String annotatedDatasetDescription;
+    private String annotatedDatasetDescription;
 
     public String annotatedDatasetDescription() {
         return this.annotatedDatasetDescription;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @Import(name="annotatedDatasetDisplayName", required=true)
-      private final String annotatedDatasetDisplayName;
+    private String annotatedDatasetDisplayName;
 
     public String annotatedDatasetDisplayName() {
         return this.annotatedDatasetDisplayName;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @Import(name="contributorEmails", required=true)
-      private final List<String> contributorEmails;
+    private List<String> contributorEmails;
 
     public List<String> contributorEmails() {
         return this.contributorEmails;
@@ -56,7 +56,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @Import(name="instruction", required=true)
-      private final String instruction;
+    private String instruction;
 
     public String instruction() {
         return this.instruction;
@@ -67,7 +67,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @Import(name="labelGroup", required=true)
-      private final String labelGroup;
+    private String labelGroup;
 
     public String labelGroup() {
         return this.labelGroup;
@@ -78,7 +78,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @Import(name="languageCode", required=true)
-      private final String languageCode;
+    private String languageCode;
 
     public String languageCode() {
         return this.languageCode;
@@ -89,7 +89,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @Import(name="questionDuration", required=true)
-      private final String questionDuration;
+    private String questionDuration;
 
     public String questionDuration() {
         return this.questionDuration;
@@ -100,7 +100,7 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @Import(name="replicaCount", required=true)
-      private final Integer replicaCount;
+    private Integer replicaCount;
 
     public Integer replicaCount() {
         return this.replicaCount;
@@ -111,121 +111,105 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse e
      * 
      */
     @Import(name="userEmailAddress", required=true)
-      private final String userEmailAddress;
+    private String userEmailAddress;
 
     public String userEmailAddress() {
         return this.userEmailAddress;
     }
 
-    public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(
-        String annotatedDatasetDescription,
-        String annotatedDatasetDisplayName,
-        List<String> contributorEmails,
-        String instruction,
-        String labelGroup,
-        String languageCode,
-        String questionDuration,
-        Integer replicaCount,
-        String userEmailAddress) {
-        this.annotatedDatasetDescription = Objects.requireNonNull(annotatedDatasetDescription, "expected parameter 'annotatedDatasetDescription' to be non-null");
-        this.annotatedDatasetDisplayName = Objects.requireNonNull(annotatedDatasetDisplayName, "expected parameter 'annotatedDatasetDisplayName' to be non-null");
-        this.contributorEmails = Objects.requireNonNull(contributorEmails, "expected parameter 'contributorEmails' to be non-null");
-        this.instruction = Objects.requireNonNull(instruction, "expected parameter 'instruction' to be non-null");
-        this.labelGroup = Objects.requireNonNull(labelGroup, "expected parameter 'labelGroup' to be non-null");
-        this.languageCode = Objects.requireNonNull(languageCode, "expected parameter 'languageCode' to be non-null");
-        this.questionDuration = Objects.requireNonNull(questionDuration, "expected parameter 'questionDuration' to be non-null");
-        this.replicaCount = Objects.requireNonNull(replicaCount, "expected parameter 'replicaCount' to be non-null");
-        this.userEmailAddress = Objects.requireNonNull(userEmailAddress, "expected parameter 'userEmailAddress' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse() {
-        this.annotatedDatasetDescription = null;
-        this.annotatedDatasetDisplayName = null;
-        this.contributorEmails = List.of();
-        this.instruction = null;
-        this.labelGroup = null;
-        this.languageCode = null;
-        this.questionDuration = null;
-        this.replicaCount = null;
-        this.userEmailAddress = null;
+    private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse $) {
+        this.annotatedDatasetDescription = $.annotatedDatasetDescription;
+        this.annotatedDatasetDisplayName = $.annotatedDatasetDisplayName;
+        this.contributorEmails = $.contributorEmails;
+        this.instruction = $.instruction;
+        this.labelGroup = $.labelGroup;
+        this.languageCode = $.languageCode;
+        this.questionDuration = $.questionDuration;
+        this.replicaCount = $.replicaCount;
+        this.userEmailAddress = $.userEmailAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String annotatedDatasetDescription;
-        private String annotatedDatasetDisplayName;
-        private List<String> contributorEmails;
-        private String instruction;
-        private String labelGroup;
-        private String languageCode;
-        private String questionDuration;
-        private Integer replicaCount;
-        private String userEmailAddress;
+        private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotatedDatasetDescription = defaults.annotatedDatasetDescription;
-    	      this.annotatedDatasetDisplayName = defaults.annotatedDatasetDisplayName;
-    	      this.contributorEmails = defaults.contributorEmails;
-    	      this.instruction = defaults.instruction;
-    	      this.labelGroup = defaults.labelGroup;
-    	      this.languageCode = defaults.languageCode;
-    	      this.questionDuration = defaults.questionDuration;
-    	      this.replicaCount = defaults.replicaCount;
-    	      this.userEmailAddress = defaults.userEmailAddress;
+            $ = new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotatedDatasetDescription(String annotatedDatasetDescription) {
-            this.annotatedDatasetDescription = Objects.requireNonNull(annotatedDatasetDescription);
+            $.annotatedDatasetDescription = annotatedDatasetDescription;
             return this;
         }
+
         public Builder annotatedDatasetDisplayName(String annotatedDatasetDisplayName) {
-            this.annotatedDatasetDisplayName = Objects.requireNonNull(annotatedDatasetDisplayName);
+            $.annotatedDatasetDisplayName = annotatedDatasetDisplayName;
             return this;
         }
+
         public Builder contributorEmails(List<String> contributorEmails) {
-            this.contributorEmails = Objects.requireNonNull(contributorEmails);
+            $.contributorEmails = contributorEmails;
             return this;
         }
+
         public Builder contributorEmails(String... contributorEmails) {
             return contributorEmails(List.of(contributorEmails));
         }
+
         public Builder instruction(String instruction) {
-            this.instruction = Objects.requireNonNull(instruction);
+            $.instruction = instruction;
             return this;
         }
+
         public Builder labelGroup(String labelGroup) {
-            this.labelGroup = Objects.requireNonNull(labelGroup);
+            $.labelGroup = labelGroup;
             return this;
         }
+
         public Builder languageCode(String languageCode) {
-            this.languageCode = Objects.requireNonNull(languageCode);
+            $.languageCode = languageCode;
             return this;
         }
+
         public Builder questionDuration(String questionDuration) {
-            this.questionDuration = Objects.requireNonNull(questionDuration);
+            $.questionDuration = questionDuration;
             return this;
         }
+
         public Builder replicaCount(Integer replicaCount) {
-            this.replicaCount = Objects.requireNonNull(replicaCount);
+            $.replicaCount = replicaCount;
             return this;
         }
+
         public Builder userEmailAddress(String userEmailAddress) {
-            this.userEmailAddress = Objects.requireNonNull(userEmailAddress);
+            $.userEmailAddress = userEmailAddress;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse build() {
-            return new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(annotatedDatasetDescription, annotatedDatasetDisplayName, contributorEmails, instruction, labelGroup, languageCode, questionDuration, replicaCount, userEmailAddress);
+        }
+
+        public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse build() {
+            $.annotatedDatasetDescription = Objects.requireNonNull($.annotatedDatasetDescription, "expected parameter 'annotatedDatasetDescription' to be non-null");
+            $.annotatedDatasetDisplayName = Objects.requireNonNull($.annotatedDatasetDisplayName, "expected parameter 'annotatedDatasetDisplayName' to be non-null");
+            $.contributorEmails = Objects.requireNonNull($.contributorEmails, "expected parameter 'contributorEmails' to be non-null");
+            $.instruction = Objects.requireNonNull($.instruction, "expected parameter 'instruction' to be non-null");
+            $.labelGroup = Objects.requireNonNull($.labelGroup, "expected parameter 'labelGroup' to be non-null");
+            $.languageCode = Objects.requireNonNull($.languageCode, "expected parameter 'languageCode' to be non-null");
+            $.questionDuration = Objects.requireNonNull($.questionDuration, "expected parameter 'questionDuration' to be non-null");
+            $.replicaCount = Objects.requireNonNull($.replicaCount, "expected parameter 'replicaCount' to be non-null");
+            $.userEmailAddress = Objects.requireNonNull($.userEmailAddress, "expected parameter 'userEmailAddress' to be non-null");
+            return $;
         }
     }
+
 }

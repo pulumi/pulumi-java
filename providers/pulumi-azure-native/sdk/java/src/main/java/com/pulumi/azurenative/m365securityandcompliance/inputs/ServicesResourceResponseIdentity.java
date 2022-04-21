@@ -23,7 +23,7 @@ public final class ServicesResourceResponseIdentity extends com.pulumi.resources
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -34,7 +34,7 @@ public final class ServicesResourceResponseIdentity extends com.pulumi.resources
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
@@ -45,64 +45,58 @@ public final class ServicesResourceResponseIdentity extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ServicesResourceResponseIdentity(
-        String principalId,
-        String tenantId,
-        @Nullable String type) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.type = type;
-    }
+    private ServicesResourceResponseIdentity() {}
 
-    private ServicesResourceResponseIdentity() {
-        this.principalId = null;
-        this.tenantId = null;
-        this.type = null;
+    private ServicesResourceResponseIdentity(ServicesResourceResponseIdentity $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicesResourceResponseIdentity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String principalId;
-        private String tenantId;
-        private @Nullable String type;
+        private ServicesResourceResponseIdentity $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicesResourceResponseIdentity();
         }
 
         public Builder(ServicesResourceResponseIdentity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new ServicesResourceResponseIdentity(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ServicesResourceResponseIdentity build() {
-            return new ServicesResourceResponseIdentity(principalId, tenantId, type);
+        }
+
+        public ServicesResourceResponseIdentity build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class InterconnectCircuitInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="customerDemarcId", required=true)
-      private final String customerDemarcId;
+    private String customerDemarcId;
 
     public String customerDemarcId() {
         return this.customerDemarcId;
@@ -32,7 +32,7 @@ public final class InterconnectCircuitInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="googleCircuitId", required=true)
-      private final String googleCircuitId;
+    private String googleCircuitId;
 
     public String googleCircuitId() {
         return this.googleCircuitId;
@@ -43,64 +43,59 @@ public final class InterconnectCircuitInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="googleDemarcId", required=true)
-      private final String googleDemarcId;
+    private String googleDemarcId;
 
     public String googleDemarcId() {
         return this.googleDemarcId;
     }
 
-    public InterconnectCircuitInfoResponse(
-        String customerDemarcId,
-        String googleCircuitId,
-        String googleDemarcId) {
-        this.customerDemarcId = Objects.requireNonNull(customerDemarcId, "expected parameter 'customerDemarcId' to be non-null");
-        this.googleCircuitId = Objects.requireNonNull(googleCircuitId, "expected parameter 'googleCircuitId' to be non-null");
-        this.googleDemarcId = Objects.requireNonNull(googleDemarcId, "expected parameter 'googleDemarcId' to be non-null");
-    }
+    private InterconnectCircuitInfoResponse() {}
 
-    private InterconnectCircuitInfoResponse() {
-        this.customerDemarcId = null;
-        this.googleCircuitId = null;
-        this.googleDemarcId = null;
+    private InterconnectCircuitInfoResponse(InterconnectCircuitInfoResponse $) {
+        this.customerDemarcId = $.customerDemarcId;
+        this.googleCircuitId = $.googleCircuitId;
+        this.googleDemarcId = $.googleDemarcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectCircuitInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customerDemarcId;
-        private String googleCircuitId;
-        private String googleDemarcId;
+        private InterconnectCircuitInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectCircuitInfoResponse();
         }
 
         public Builder(InterconnectCircuitInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerDemarcId = defaults.customerDemarcId;
-    	      this.googleCircuitId = defaults.googleCircuitId;
-    	      this.googleDemarcId = defaults.googleDemarcId;
+            $ = new InterconnectCircuitInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customerDemarcId(String customerDemarcId) {
-            this.customerDemarcId = Objects.requireNonNull(customerDemarcId);
+            $.customerDemarcId = customerDemarcId;
             return this;
         }
+
         public Builder googleCircuitId(String googleCircuitId) {
-            this.googleCircuitId = Objects.requireNonNull(googleCircuitId);
+            $.googleCircuitId = googleCircuitId;
             return this;
         }
+
         public Builder googleDemarcId(String googleDemarcId) {
-            this.googleDemarcId = Objects.requireNonNull(googleDemarcId);
+            $.googleDemarcId = googleDemarcId;
             return this;
-        }        public InterconnectCircuitInfoResponse build() {
-            return new InterconnectCircuitInfoResponse(customerDemarcId, googleCircuitId, googleDemarcId);
+        }
+
+        public InterconnectCircuitInfoResponse build() {
+            $.customerDemarcId = Objects.requireNonNull($.customerDemarcId, "expected parameter 'customerDemarcId' to be non-null");
+            $.googleCircuitId = Objects.requireNonNull($.googleCircuitId, "expected parameter 'googleCircuitId' to be non-null");
+            $.googleDemarcId = Objects.requireNonNull($.googleDemarcId, "expected parameter 'googleDemarcId' to be non-null");
+            return $;
         }
     }
+
 }

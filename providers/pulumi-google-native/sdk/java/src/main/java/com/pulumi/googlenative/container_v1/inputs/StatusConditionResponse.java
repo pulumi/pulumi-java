@@ -21,7 +21,7 @@ public final class StatusConditionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="canonicalCode", required=true)
-      private final String canonicalCode;
+    private String canonicalCode;
 
     public String canonicalCode() {
         return this.canonicalCode;
@@ -32,55 +32,52 @@ public final class StatusConditionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public StatusConditionResponse(
-        String canonicalCode,
-        String message) {
-        this.canonicalCode = Objects.requireNonNull(canonicalCode, "expected parameter 'canonicalCode' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private StatusConditionResponse() {}
 
-    private StatusConditionResponse() {
-        this.canonicalCode = null;
-        this.message = null;
+    private StatusConditionResponse(StatusConditionResponse $) {
+        this.canonicalCode = $.canonicalCode;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String canonicalCode;
-        private String message;
+        private StatusConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusConditionResponse();
         }
 
         public Builder(StatusConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalCode = defaults.canonicalCode;
-    	      this.message = defaults.message;
+            $ = new StatusConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalCode(String canonicalCode) {
-            this.canonicalCode = Objects.requireNonNull(canonicalCode);
+            $.canonicalCode = canonicalCode;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public StatusConditionResponse build() {
-            return new StatusConditionResponse(canonicalCode, message);
+        }
+
+        public StatusConditionResponse build() {
+            $.canonicalCode = Objects.requireNonNull($.canonicalCode, "expected parameter 'canonicalCode' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

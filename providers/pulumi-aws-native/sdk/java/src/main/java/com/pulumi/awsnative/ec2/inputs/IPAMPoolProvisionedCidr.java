@@ -17,45 +17,45 @@ public final class IPAMPoolProvisionedCidr extends com.pulumi.resources.InvokeAr
     public static final IPAMPoolProvisionedCidr Empty = new IPAMPoolProvisionedCidr();
 
     @Import(name="cidr", required=true)
-      private final String cidr;
+    private String cidr;
 
     public String cidr() {
         return this.cidr;
     }
 
-    public IPAMPoolProvisionedCidr(String cidr) {
-        this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
-    }
+    private IPAMPoolProvisionedCidr() {}
 
-    private IPAMPoolProvisionedCidr() {
-        this.cidr = null;
+    private IPAMPoolProvisionedCidr(IPAMPoolProvisionedCidr $) {
+        this.cidr = $.cidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAMPoolProvisionedCidr defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cidr;
+        private IPAMPoolProvisionedCidr $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAMPoolProvisionedCidr();
         }
 
         public Builder(IPAMPoolProvisionedCidr defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
+            $ = new IPAMPoolProvisionedCidr(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(String cidr) {
-            this.cidr = Objects.requireNonNull(cidr);
+            $.cidr = cidr;
             return this;
-        }        public IPAMPoolProvisionedCidr build() {
-            return new IPAMPoolProvisionedCidr(cidr);
+        }
+
+        public IPAMPoolProvisionedCidr build() {
+            $.cidr = Objects.requireNonNull($.cidr, "expected parameter 'cidr' to be non-null");
+            return $;
         }
     }
+
 }

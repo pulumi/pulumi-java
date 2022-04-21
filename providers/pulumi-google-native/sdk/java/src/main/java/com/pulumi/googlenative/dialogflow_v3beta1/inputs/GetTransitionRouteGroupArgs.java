@@ -15,126 +15,113 @@ public final class GetTransitionRouteGroupArgs extends com.pulumi.resources.Invo
     public static final GetTransitionRouteGroupArgs Empty = new GetTransitionRouteGroupArgs();
 
     @Import(name="agentId", required=true)
-      private final String agentId;
+    private String agentId;
 
     public String agentId() {
         return this.agentId;
     }
 
     @Import(name="flowId", required=true)
-      private final String flowId;
+    private String flowId;
 
     public String flowId() {
         return this.flowId;
     }
 
     @Import(name="languageCode")
-      private final @Nullable String languageCode;
+    private @Nullable String languageCode;
 
     public Optional<String> languageCode() {
-        return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
+        return Optional.ofNullable(this.languageCode);
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="transitionRouteGroupId", required=true)
-      private final String transitionRouteGroupId;
+    private String transitionRouteGroupId;
 
     public String transitionRouteGroupId() {
         return this.transitionRouteGroupId;
     }
 
-    public GetTransitionRouteGroupArgs(
-        String agentId,
-        String flowId,
-        @Nullable String languageCode,
-        String location,
-        @Nullable String project,
-        String transitionRouteGroupId) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.flowId = Objects.requireNonNull(flowId, "expected parameter 'flowId' to be non-null");
-        this.languageCode = languageCode;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.transitionRouteGroupId = Objects.requireNonNull(transitionRouteGroupId, "expected parameter 'transitionRouteGroupId' to be non-null");
-    }
+    private GetTransitionRouteGroupArgs() {}
 
-    private GetTransitionRouteGroupArgs() {
-        this.agentId = null;
-        this.flowId = null;
-        this.languageCode = null;
-        this.location = null;
-        this.project = null;
-        this.transitionRouteGroupId = null;
+    private GetTransitionRouteGroupArgs(GetTransitionRouteGroupArgs $) {
+        this.agentId = $.agentId;
+        this.flowId = $.flowId;
+        this.languageCode = $.languageCode;
+        this.location = $.location;
+        this.project = $.project;
+        this.transitionRouteGroupId = $.transitionRouteGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitionRouteGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentId;
-        private String flowId;
-        private @Nullable String languageCode;
-        private String location;
-        private @Nullable String project;
-        private String transitionRouteGroupId;
+        private GetTransitionRouteGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitionRouteGroupArgs();
         }
 
         public Builder(GetTransitionRouteGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.flowId = defaults.flowId;
-    	      this.languageCode = defaults.languageCode;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.transitionRouteGroupId = defaults.transitionRouteGroupId;
+            $ = new GetTransitionRouteGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(String agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder flowId(String flowId) {
-            this.flowId = Objects.requireNonNull(flowId);
+            $.flowId = flowId;
             return this;
         }
+
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder transitionRouteGroupId(String transitionRouteGroupId) {
-            this.transitionRouteGroupId = Objects.requireNonNull(transitionRouteGroupId);
+            $.transitionRouteGroupId = transitionRouteGroupId;
             return this;
-        }        public GetTransitionRouteGroupArgs build() {
-            return new GetTransitionRouteGroupArgs(agentId, flowId, languageCode, location, project, transitionRouteGroupId);
+        }
+
+        public GetTransitionRouteGroupArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.flowId = Objects.requireNonNull($.flowId, "expected parameter 'flowId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.transitionRouteGroupId = Objects.requireNonNull($.transitionRouteGroupId, "expected parameter 'transitionRouteGroupId' to be non-null");
+            return $;
         }
     }
+
 }

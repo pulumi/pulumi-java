@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpnConnectionRouteArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="destinationCidrBlock")
-      private final @Nullable Output<String> destinationCidrBlock;
+    private @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> destinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
+    public Optional<Output<String>> destinationCidrBlock() {
+        return Optional.ofNullable(this.destinationCidrBlock);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VpnConnectionRouteArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class VpnConnectionRouteArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public VpnConnectionRouteArgs(
-        @Nullable Output<String> destinationCidrBlock,
-        @Nullable Output<String> source,
-        @Nullable Output<String> state) {
-        this.destinationCidrBlock = destinationCidrBlock;
-        this.source = source;
-        this.state = state;
-    }
+    private VpnConnectionRouteArgs() {}
 
-    private VpnConnectionRouteArgs() {
-        this.destinationCidrBlock = Codegen.empty();
-        this.source = Codegen.empty();
-        this.state = Codegen.empty();
+    private VpnConnectionRouteArgs(VpnConnectionRouteArgs $) {
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.source = $.source;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnConnectionRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationCidrBlock;
-        private @Nullable Output<String> source;
-        private @Nullable Output<String> state;
+        private VpnConnectionRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnConnectionRouteArgs();
         }
 
         public Builder(VpnConnectionRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.source = defaults.source;
-    	      this.state = defaults.state;
+            $ = new VpnConnectionRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
-            this.destinationCidrBlock = destinationCidrBlock;
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
-            return this;
+
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(String source) {
+            return source(Output.of(source));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public VpnConnectionRouteArgs build() {
-            return new VpnConnectionRouteArgs(destinationCidrBlock, source, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public VpnConnectionRouteArgs build() {
+            return $;
         }
     }
+
 }

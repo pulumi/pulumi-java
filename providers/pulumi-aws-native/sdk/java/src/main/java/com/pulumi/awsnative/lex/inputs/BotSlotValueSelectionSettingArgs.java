@@ -7,8 +7,8 @@ import com.pulumi.awsnative.lex.enums.BotSlotValueResolutionStrategy;
 import com.pulumi.awsnative.lex.inputs.BotSlotValueRegexFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,66 @@ public final class BotSlotValueSelectionSettingArgs extends com.pulumi.resources
     public static final BotSlotValueSelectionSettingArgs Empty = new BotSlotValueSelectionSettingArgs();
 
     @Import(name="regexFilter")
-      private final @Nullable Output<BotSlotValueRegexFilterArgs> regexFilter;
+    private @Nullable Output<BotSlotValueRegexFilterArgs> regexFilter;
 
-    public Output<BotSlotValueRegexFilterArgs> regexFilter() {
-        return this.regexFilter == null ? Codegen.empty() : this.regexFilter;
+    public Optional<Output<BotSlotValueRegexFilterArgs>> regexFilter() {
+        return Optional.ofNullable(this.regexFilter);
     }
 
     @Import(name="resolutionStrategy", required=true)
-      private final Output<BotSlotValueResolutionStrategy> resolutionStrategy;
+    private Output<BotSlotValueResolutionStrategy> resolutionStrategy;
 
     public Output<BotSlotValueResolutionStrategy> resolutionStrategy() {
         return this.resolutionStrategy;
     }
 
-    public BotSlotValueSelectionSettingArgs(
-        @Nullable Output<BotSlotValueRegexFilterArgs> regexFilter,
-        Output<BotSlotValueResolutionStrategy> resolutionStrategy) {
-        this.regexFilter = regexFilter;
-        this.resolutionStrategy = Objects.requireNonNull(resolutionStrategy, "expected parameter 'resolutionStrategy' to be non-null");
-    }
+    private BotSlotValueSelectionSettingArgs() {}
 
-    private BotSlotValueSelectionSettingArgs() {
-        this.regexFilter = Codegen.empty();
-        this.resolutionStrategy = Codegen.empty();
+    private BotSlotValueSelectionSettingArgs(BotSlotValueSelectionSettingArgs $) {
+        this.regexFilter = $.regexFilter;
+        this.resolutionStrategy = $.resolutionStrategy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSlotValueSelectionSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BotSlotValueRegexFilterArgs> regexFilter;
-        private Output<BotSlotValueResolutionStrategy> resolutionStrategy;
+        private BotSlotValueSelectionSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSlotValueSelectionSettingArgs();
         }
 
         public Builder(BotSlotValueSelectionSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regexFilter = defaults.regexFilter;
-    	      this.resolutionStrategy = defaults.resolutionStrategy;
+            $ = new BotSlotValueSelectionSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regexFilter(@Nullable Output<BotSlotValueRegexFilterArgs> regexFilter) {
-            this.regexFilter = regexFilter;
+            $.regexFilter = regexFilter;
             return this;
         }
-        public Builder regexFilter(@Nullable BotSlotValueRegexFilterArgs regexFilter) {
-            this.regexFilter = Codegen.ofNullable(regexFilter);
-            return this;
+
+        public Builder regexFilter(BotSlotValueRegexFilterArgs regexFilter) {
+            return regexFilter(Output.of(regexFilter));
         }
+
         public Builder resolutionStrategy(Output<BotSlotValueResolutionStrategy> resolutionStrategy) {
-            this.resolutionStrategy = Objects.requireNonNull(resolutionStrategy);
+            $.resolutionStrategy = resolutionStrategy;
             return this;
         }
+
         public Builder resolutionStrategy(BotSlotValueResolutionStrategy resolutionStrategy) {
-            this.resolutionStrategy = Output.of(Objects.requireNonNull(resolutionStrategy));
-            return this;
-        }        public BotSlotValueSelectionSettingArgs build() {
-            return new BotSlotValueSelectionSettingArgs(regexFilter, resolutionStrategy);
+            return resolutionStrategy(Output.of(resolutionStrategy));
+        }
+
+        public BotSlotValueSelectionSettingArgs build() {
+            $.resolutionStrategy = Objects.requireNonNull($.resolutionStrategy, "expected parameter 'resolutionStrategy' to be non-null");
+            return $;
         }
     }
+
 }

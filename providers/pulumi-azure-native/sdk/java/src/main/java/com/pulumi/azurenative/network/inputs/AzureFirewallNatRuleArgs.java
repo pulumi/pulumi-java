@@ -7,10 +7,10 @@ import com.pulumi.azurenative.network.enums.AzureFirewallNetworkRuleProtocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="destinationAddresses")
-      private final @Nullable Output<List<String>> destinationAddresses;
+    private @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> destinationAddresses() {
-        return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
+    public Optional<Output<List<String>>> destinationAddresses() {
+        return Optional.ofNullable(this.destinationAddresses);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="destinationPorts")
-      private final @Nullable Output<List<String>> destinationPorts;
+    private @Nullable Output<List<String>> destinationPorts;
 
-    public Output<List<String>> destinationPorts() {
-        return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
+    public Optional<Output<List<String>>> destinationPorts() {
+        return Optional.ofNullable(this.destinationPorts);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="protocols")
-      private final @Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
+    private @Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
 
-    public Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols() {
-        return this.protocols == null ? Codegen.empty() : this.protocols;
+    public Optional<Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>>> protocols() {
+        return Optional.ofNullable(this.protocols);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceAddresses")
-      private final @Nullable Output<List<String>> sourceAddresses;
+    private @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> sourceAddresses() {
-        return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
+    public Optional<Output<List<String>>> sourceAddresses() {
+        return Optional.ofNullable(this.sourceAddresses);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sourceIpGroups")
-      private final @Nullable Output<List<String>> sourceIpGroups;
+    private @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> sourceIpGroups() {
-        return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
+    public Optional<Output<List<String>>> sourceIpGroups() {
+        return Optional.ofNullable(this.sourceIpGroups);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="translatedAddress")
-      private final @Nullable Output<String> translatedAddress;
+    private @Nullable Output<String> translatedAddress;
 
-    public Output<String> translatedAddress() {
-        return this.translatedAddress == null ? Codegen.empty() : this.translatedAddress;
+    public Optional<Output<String>> translatedAddress() {
+        return Optional.ofNullable(this.translatedAddress);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="translatedFqdn")
-      private final @Nullable Output<String> translatedFqdn;
+    private @Nullable Output<String> translatedFqdn;
 
-    public Output<String> translatedFqdn() {
-        return this.translatedFqdn == null ? Codegen.empty() : this.translatedFqdn;
+    public Optional<Output<String>> translatedFqdn() {
+        return Optional.ofNullable(this.translatedFqdn);
     }
 
     /**
@@ -126,182 +126,158 @@ public final class AzureFirewallNatRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="translatedPort")
-      private final @Nullable Output<String> translatedPort;
+    private @Nullable Output<String> translatedPort;
 
-    public Output<String> translatedPort() {
-        return this.translatedPort == null ? Codegen.empty() : this.translatedPort;
+    public Optional<Output<String>> translatedPort() {
+        return Optional.ofNullable(this.translatedPort);
     }
 
-    public AzureFirewallNatRuleArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> destinationAddresses,
-        @Nullable Output<List<String>> destinationPorts,
-        @Nullable Output<String> name,
-        @Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols,
-        @Nullable Output<List<String>> sourceAddresses,
-        @Nullable Output<List<String>> sourceIpGroups,
-        @Nullable Output<String> translatedAddress,
-        @Nullable Output<String> translatedFqdn,
-        @Nullable Output<String> translatedPort) {
-        this.description = description;
-        this.destinationAddresses = destinationAddresses;
-        this.destinationPorts = destinationPorts;
-        this.name = name;
-        this.protocols = protocols;
-        this.sourceAddresses = sourceAddresses;
-        this.sourceIpGroups = sourceIpGroups;
-        this.translatedAddress = translatedAddress;
-        this.translatedFqdn = translatedFqdn;
-        this.translatedPort = translatedPort;
-    }
+    private AzureFirewallNatRuleArgs() {}
 
-    private AzureFirewallNatRuleArgs() {
-        this.description = Codegen.empty();
-        this.destinationAddresses = Codegen.empty();
-        this.destinationPorts = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protocols = Codegen.empty();
-        this.sourceAddresses = Codegen.empty();
-        this.sourceIpGroups = Codegen.empty();
-        this.translatedAddress = Codegen.empty();
-        this.translatedFqdn = Codegen.empty();
-        this.translatedPort = Codegen.empty();
+    private AzureFirewallNatRuleArgs(AzureFirewallNatRuleArgs $) {
+        this.description = $.description;
+        this.destinationAddresses = $.destinationAddresses;
+        this.destinationPorts = $.destinationPorts;
+        this.name = $.name;
+        this.protocols = $.protocols;
+        this.sourceAddresses = $.sourceAddresses;
+        this.sourceIpGroups = $.sourceIpGroups;
+        this.translatedAddress = $.translatedAddress;
+        this.translatedFqdn = $.translatedFqdn;
+        this.translatedPort = $.translatedPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallNatRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> destinationAddresses;
-        private @Nullable Output<List<String>> destinationPorts;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols;
-        private @Nullable Output<List<String>> sourceAddresses;
-        private @Nullable Output<List<String>> sourceIpGroups;
-        private @Nullable Output<String> translatedAddress;
-        private @Nullable Output<String> translatedFqdn;
-        private @Nullable Output<String> translatedPort;
+        private AzureFirewallNatRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallNatRuleArgs();
         }
 
         public Builder(AzureFirewallNatRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destinationAddresses = defaults.destinationAddresses;
-    	      this.destinationPorts = defaults.destinationPorts;
-    	      this.name = defaults.name;
-    	      this.protocols = defaults.protocols;
-    	      this.sourceAddresses = defaults.sourceAddresses;
-    	      this.sourceIpGroups = defaults.sourceIpGroups;
-    	      this.translatedAddress = defaults.translatedAddress;
-    	      this.translatedFqdn = defaults.translatedFqdn;
-    	      this.translatedPort = defaults.translatedPort;
+            $ = new AzureFirewallNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
-            this.destinationAddresses = destinationAddresses;
+            $.destinationAddresses = destinationAddresses;
             return this;
         }
-        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Codegen.ofNullable(destinationAddresses);
-            return this;
+
+        public Builder destinationAddresses(List<String> destinationAddresses) {
+            return destinationAddresses(Output.of(destinationAddresses));
         }
+
         public Builder destinationAddresses(String... destinationAddresses) {
             return destinationAddresses(List.of(destinationAddresses));
         }
+
         public Builder destinationPorts(@Nullable Output<List<String>> destinationPorts) {
-            this.destinationPorts = destinationPorts;
+            $.destinationPorts = destinationPorts;
             return this;
         }
-        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = Codegen.ofNullable(destinationPorts);
-            return this;
+
+        public Builder destinationPorts(List<String> destinationPorts) {
+            return destinationPorts(Output.of(destinationPorts));
         }
+
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protocols(@Nullable Output<List<Either<String,AzureFirewallNetworkRuleProtocol>>> protocols) {
-            this.protocols = protocols;
+            $.protocols = protocols;
             return this;
         }
-        public Builder protocols(@Nullable List<Either<String,AzureFirewallNetworkRuleProtocol>> protocols) {
-            this.protocols = Codegen.ofNullable(protocols);
-            return this;
+
+        public Builder protocols(List<Either<String,AzureFirewallNetworkRuleProtocol>> protocols) {
+            return protocols(Output.of(protocols));
         }
+
         public Builder protocols(Either<String,AzureFirewallNetworkRuleProtocol>... protocols) {
             return protocols(List.of(protocols));
         }
+
         public Builder sourceAddresses(@Nullable Output<List<String>> sourceAddresses) {
-            this.sourceAddresses = sourceAddresses;
+            $.sourceAddresses = sourceAddresses;
             return this;
         }
-        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Codegen.ofNullable(sourceAddresses);
-            return this;
+
+        public Builder sourceAddresses(List<String> sourceAddresses) {
+            return sourceAddresses(Output.of(sourceAddresses));
         }
+
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
+
         public Builder sourceIpGroups(@Nullable Output<List<String>> sourceIpGroups) {
-            this.sourceIpGroups = sourceIpGroups;
+            $.sourceIpGroups = sourceIpGroups;
             return this;
         }
-        public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Codegen.ofNullable(sourceIpGroups);
-            return this;
+
+        public Builder sourceIpGroups(List<String> sourceIpGroups) {
+            return sourceIpGroups(Output.of(sourceIpGroups));
         }
+
         public Builder sourceIpGroups(String... sourceIpGroups) {
             return sourceIpGroups(List.of(sourceIpGroups));
         }
+
         public Builder translatedAddress(@Nullable Output<String> translatedAddress) {
-            this.translatedAddress = translatedAddress;
+            $.translatedAddress = translatedAddress;
             return this;
         }
-        public Builder translatedAddress(@Nullable String translatedAddress) {
-            this.translatedAddress = Codegen.ofNullable(translatedAddress);
-            return this;
+
+        public Builder translatedAddress(String translatedAddress) {
+            return translatedAddress(Output.of(translatedAddress));
         }
+
         public Builder translatedFqdn(@Nullable Output<String> translatedFqdn) {
-            this.translatedFqdn = translatedFqdn;
+            $.translatedFqdn = translatedFqdn;
             return this;
         }
-        public Builder translatedFqdn(@Nullable String translatedFqdn) {
-            this.translatedFqdn = Codegen.ofNullable(translatedFqdn);
-            return this;
+
+        public Builder translatedFqdn(String translatedFqdn) {
+            return translatedFqdn(Output.of(translatedFqdn));
         }
+
         public Builder translatedPort(@Nullable Output<String> translatedPort) {
-            this.translatedPort = translatedPort;
+            $.translatedPort = translatedPort;
             return this;
         }
-        public Builder translatedPort(@Nullable String translatedPort) {
-            this.translatedPort = Codegen.ofNullable(translatedPort);
-            return this;
-        }        public AzureFirewallNatRuleArgs build() {
-            return new AzureFirewallNatRuleArgs(description, destinationAddresses, destinationPorts, name, protocols, sourceAddresses, sourceIpGroups, translatedAddress, translatedFqdn, translatedPort);
+
+        public Builder translatedPort(String translatedPort) {
+            return translatedPort(Output.of(translatedPort));
+        }
+
+        public AzureFirewallNatRuleArgs build() {
+            return $;
         }
     }
+
 }

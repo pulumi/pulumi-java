@@ -19,7 +19,7 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="attachedEniId", required=true)
-      private final String attachedEniId;
+    private String attachedEniId;
 
     public String attachedEniId() {
         return this.attachedEniId;
@@ -30,7 +30,7 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="brokerId", required=true)
-      private final Double brokerId;
+    private Double brokerId;
 
     public Double brokerId() {
         return this.brokerId;
@@ -41,7 +41,7 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="clientSubnet", required=true)
-      private final String clientSubnet;
+    private String clientSubnet;
 
     public String clientSubnet() {
         return this.clientSubnet;
@@ -52,7 +52,7 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="clientVpcIpAddress", required=true)
-      private final String clientVpcIpAddress;
+    private String clientVpcIpAddress;
 
     public String clientVpcIpAddress() {
         return this.clientVpcIpAddress;
@@ -63,7 +63,7 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="endpoints", required=true)
-      private final List<String> endpoints;
+    private List<String> endpoints;
 
     public List<String> endpoints() {
         return this.endpoints;
@@ -74,94 +74,84 @@ public final class GetBrokerNodesNodeInfoList extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="nodeArn", required=true)
-      private final String nodeArn;
+    private String nodeArn;
 
     public String nodeArn() {
         return this.nodeArn;
     }
 
-    public GetBrokerNodesNodeInfoList(
-        String attachedEniId,
-        Double brokerId,
-        String clientSubnet,
-        String clientVpcIpAddress,
-        List<String> endpoints,
-        String nodeArn) {
-        this.attachedEniId = Objects.requireNonNull(attachedEniId, "expected parameter 'attachedEniId' to be non-null");
-        this.brokerId = Objects.requireNonNull(brokerId, "expected parameter 'brokerId' to be non-null");
-        this.clientSubnet = Objects.requireNonNull(clientSubnet, "expected parameter 'clientSubnet' to be non-null");
-        this.clientVpcIpAddress = Objects.requireNonNull(clientVpcIpAddress, "expected parameter 'clientVpcIpAddress' to be non-null");
-        this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
-        this.nodeArn = Objects.requireNonNull(nodeArn, "expected parameter 'nodeArn' to be non-null");
-    }
+    private GetBrokerNodesNodeInfoList() {}
 
-    private GetBrokerNodesNodeInfoList() {
-        this.attachedEniId = null;
-        this.brokerId = null;
-        this.clientSubnet = null;
-        this.clientVpcIpAddress = null;
-        this.endpoints = List.of();
-        this.nodeArn = null;
+    private GetBrokerNodesNodeInfoList(GetBrokerNodesNodeInfoList $) {
+        this.attachedEniId = $.attachedEniId;
+        this.brokerId = $.brokerId;
+        this.clientSubnet = $.clientSubnet;
+        this.clientVpcIpAddress = $.clientVpcIpAddress;
+        this.endpoints = $.endpoints;
+        this.nodeArn = $.nodeArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBrokerNodesNodeInfoList defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attachedEniId;
-        private Double brokerId;
-        private String clientSubnet;
-        private String clientVpcIpAddress;
-        private List<String> endpoints;
-        private String nodeArn;
+        private GetBrokerNodesNodeInfoList $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBrokerNodesNodeInfoList();
         }
 
         public Builder(GetBrokerNodesNodeInfoList defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachedEniId = defaults.attachedEniId;
-    	      this.brokerId = defaults.brokerId;
-    	      this.clientSubnet = defaults.clientSubnet;
-    	      this.clientVpcIpAddress = defaults.clientVpcIpAddress;
-    	      this.endpoints = defaults.endpoints;
-    	      this.nodeArn = defaults.nodeArn;
+            $ = new GetBrokerNodesNodeInfoList(Objects.requireNonNull(defaults));
         }
 
         public Builder attachedEniId(String attachedEniId) {
-            this.attachedEniId = Objects.requireNonNull(attachedEniId);
+            $.attachedEniId = attachedEniId;
             return this;
         }
+
         public Builder brokerId(Double brokerId) {
-            this.brokerId = Objects.requireNonNull(brokerId);
+            $.brokerId = brokerId;
             return this;
         }
+
         public Builder clientSubnet(String clientSubnet) {
-            this.clientSubnet = Objects.requireNonNull(clientSubnet);
+            $.clientSubnet = clientSubnet;
             return this;
         }
+
         public Builder clientVpcIpAddress(String clientVpcIpAddress) {
-            this.clientVpcIpAddress = Objects.requireNonNull(clientVpcIpAddress);
+            $.clientVpcIpAddress = clientVpcIpAddress;
             return this;
         }
+
         public Builder endpoints(List<String> endpoints) {
-            this.endpoints = Objects.requireNonNull(endpoints);
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(String... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder nodeArn(String nodeArn) {
-            this.nodeArn = Objects.requireNonNull(nodeArn);
+            $.nodeArn = nodeArn;
             return this;
-        }        public GetBrokerNodesNodeInfoList build() {
-            return new GetBrokerNodesNodeInfoList(attachedEniId, brokerId, clientSubnet, clientVpcIpAddress, endpoints, nodeArn);
+        }
+
+        public GetBrokerNodesNodeInfoList build() {
+            $.attachedEniId = Objects.requireNonNull($.attachedEniId, "expected parameter 'attachedEniId' to be non-null");
+            $.brokerId = Objects.requireNonNull($.brokerId, "expected parameter 'brokerId' to be non-null");
+            $.clientSubnet = Objects.requireNonNull($.clientSubnet, "expected parameter 'clientSubnet' to be non-null");
+            $.clientVpcIpAddress = Objects.requireNonNull($.clientVpcIpAddress, "expected parameter 'clientVpcIpAddress' to be non-null");
+            $.endpoints = Objects.requireNonNull($.endpoints, "expected parameter 'endpoints' to be non-null");
+            $.nodeArn = Objects.requireNonNull($.nodeArn, "expected parameter 'nodeArn' to be non-null");
+            return $;
         }
     }
+
 }

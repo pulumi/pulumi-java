@@ -13,110 +13,101 @@ public final class GetDatabaseInstanceServerCaCert extends com.pulumi.resources.
     public static final GetDatabaseInstanceServerCaCert Empty = new GetDatabaseInstanceServerCaCert();
 
     @Import(name="cert", required=true)
-      private final String cert;
+    private String cert;
 
     public String cert() {
         return this.cert;
     }
 
     @Import(name="commonName", required=true)
-      private final String commonName;
+    private String commonName;
 
     public String commonName() {
         return this.commonName;
     }
 
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
     }
 
     @Import(name="expirationTime", required=true)
-      private final String expirationTime;
+    private String expirationTime;
 
     public String expirationTime() {
         return this.expirationTime;
     }
 
     @Import(name="sha1Fingerprint", required=true)
-      private final String sha1Fingerprint;
+    private String sha1Fingerprint;
 
     public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 
-    public GetDatabaseInstanceServerCaCert(
-        String cert,
-        String commonName,
-        String createTime,
-        String expirationTime,
-        String sha1Fingerprint) {
-        this.cert = Objects.requireNonNull(cert, "expected parameter 'cert' to be non-null");
-        this.commonName = Objects.requireNonNull(commonName, "expected parameter 'commonName' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.expirationTime = Objects.requireNonNull(expirationTime, "expected parameter 'expirationTime' to be non-null");
-        this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint, "expected parameter 'sha1Fingerprint' to be non-null");
-    }
+    private GetDatabaseInstanceServerCaCert() {}
 
-    private GetDatabaseInstanceServerCaCert() {
-        this.cert = null;
-        this.commonName = null;
-        this.createTime = null;
-        this.expirationTime = null;
-        this.sha1Fingerprint = null;
+    private GetDatabaseInstanceServerCaCert(GetDatabaseInstanceServerCaCert $) {
+        this.cert = $.cert;
+        this.commonName = $.commonName;
+        this.createTime = $.createTime;
+        this.expirationTime = $.expirationTime;
+        this.sha1Fingerprint = $.sha1Fingerprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceServerCaCert defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cert;
-        private String commonName;
-        private String createTime;
-        private String expirationTime;
-        private String sha1Fingerprint;
+        private GetDatabaseInstanceServerCaCert $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceServerCaCert();
         }
 
         public Builder(GetDatabaseInstanceServerCaCert defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.commonName = defaults.commonName;
-    	      this.createTime = defaults.createTime;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.sha1Fingerprint = defaults.sha1Fingerprint;
+            $ = new GetDatabaseInstanceServerCaCert(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(String cert) {
-            this.cert = Objects.requireNonNull(cert);
+            $.cert = cert;
             return this;
         }
+
         public Builder commonName(String commonName) {
-            this.commonName = Objects.requireNonNull(commonName);
+            $.commonName = commonName;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder expirationTime(String expirationTime) {
-            this.expirationTime = Objects.requireNonNull(expirationTime);
+            $.expirationTime = expirationTime;
             return this;
         }
+
         public Builder sha1Fingerprint(String sha1Fingerprint) {
-            this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
+            $.sha1Fingerprint = sha1Fingerprint;
             return this;
-        }        public GetDatabaseInstanceServerCaCert build() {
-            return new GetDatabaseInstanceServerCaCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
+        }
+
+        public GetDatabaseInstanceServerCaCert build() {
+            $.cert = Objects.requireNonNull($.cert, "expected parameter 'cert' to be non-null");
+            $.commonName = Objects.requireNonNull($.commonName, "expected parameter 'commonName' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.expirationTime = Objects.requireNonNull($.expirationTime, "expected parameter 'expirationTime' to be non-null");
+            $.sha1Fingerprint = Objects.requireNonNull($.sha1Fingerprint, "expected parameter 'sha1Fingerprint' to be non-null");
+            return $;
         }
     }
+
 }

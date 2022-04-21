@@ -5,11 +5,11 @@ package com.pulumi.googlenative.notebooks_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.notebooks_v1.enums.ScheduleState;
 import com.pulumi.googlenative.notebooks_v1.inputs.ExecutionTemplateArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cronSchedule")
-      private final @Nullable Output<String> cronSchedule;
+    private @Nullable Output<String> cronSchedule;
 
-    public Output<String> cronSchedule() {
-        return this.cronSchedule == null ? Codegen.empty() : this.cronSchedule;
+    public Optional<Output<String>> cronSchedule() {
+        return Optional.ofNullable(this.cronSchedule);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,38 +44,38 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionTemplate")
-      private final @Nullable Output<ExecutionTemplateArgs> executionTemplate;
+    private @Nullable Output<ExecutionTemplateArgs> executionTemplate;
 
-    public Output<ExecutionTemplateArgs> executionTemplate() {
-        return this.executionTemplate == null ? Codegen.empty() : this.executionTemplate;
+    public Optional<Output<ExecutionTemplateArgs>> executionTemplate() {
+        return Optional.ofNullable(this.executionTemplate);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="scheduleId", required=true)
-      private final Output<String> scheduleId;
+    private Output<String> scheduleId;
 
     public Output<String> scheduleId() {
         return this.scheduleId;
     }
 
     @Import(name="state")
-      private final @Nullable Output<ScheduleState> state;
+    private @Nullable Output<ScheduleState> state;
 
-    public Output<ScheduleState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<ScheduleState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -83,141 +83,119 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public ScheduleArgs(
-        @Nullable Output<String> cronSchedule,
-        @Nullable Output<String> description,
-        @Nullable Output<ExecutionTemplateArgs> executionTemplate,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        Output<String> scheduleId,
-        @Nullable Output<ScheduleState> state,
-        @Nullable Output<String> timeZone) {
-        this.cronSchedule = cronSchedule;
-        this.description = description;
-        this.executionTemplate = executionTemplate;
-        this.location = location;
-        this.project = project;
-        this.scheduleId = Objects.requireNonNull(scheduleId, "expected parameter 'scheduleId' to be non-null");
-        this.state = state;
-        this.timeZone = timeZone;
-    }
+    private ScheduleArgs() {}
 
-    private ScheduleArgs() {
-        this.cronSchedule = Codegen.empty();
-        this.description = Codegen.empty();
-        this.executionTemplate = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.scheduleId = Codegen.empty();
-        this.state = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private ScheduleArgs(ScheduleArgs $) {
+        this.cronSchedule = $.cronSchedule;
+        this.description = $.description;
+        this.executionTemplate = $.executionTemplate;
+        this.location = $.location;
+        this.project = $.project;
+        this.scheduleId = $.scheduleId;
+        this.state = $.state;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cronSchedule;
-        private @Nullable Output<String> description;
-        private @Nullable Output<ExecutionTemplateArgs> executionTemplate;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private Output<String> scheduleId;
-        private @Nullable Output<ScheduleState> state;
-        private @Nullable Output<String> timeZone;
+        private ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleArgs();
         }
 
         public Builder(ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cronSchedule = defaults.cronSchedule;
-    	      this.description = defaults.description;
-    	      this.executionTemplate = defaults.executionTemplate;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.scheduleId = defaults.scheduleId;
-    	      this.state = defaults.state;
-    	      this.timeZone = defaults.timeZone;
+            $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cronSchedule(@Nullable Output<String> cronSchedule) {
-            this.cronSchedule = cronSchedule;
+            $.cronSchedule = cronSchedule;
             return this;
         }
-        public Builder cronSchedule(@Nullable String cronSchedule) {
-            this.cronSchedule = Codegen.ofNullable(cronSchedule);
-            return this;
+
+        public Builder cronSchedule(String cronSchedule) {
+            return cronSchedule(Output.of(cronSchedule));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder executionTemplate(@Nullable Output<ExecutionTemplateArgs> executionTemplate) {
-            this.executionTemplate = executionTemplate;
+            $.executionTemplate = executionTemplate;
             return this;
         }
-        public Builder executionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
-            this.executionTemplate = Codegen.ofNullable(executionTemplate);
-            return this;
+
+        public Builder executionTemplate(ExecutionTemplateArgs executionTemplate) {
+            return executionTemplate(Output.of(executionTemplate));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder scheduleId(Output<String> scheduleId) {
-            this.scheduleId = Objects.requireNonNull(scheduleId);
+            $.scheduleId = scheduleId;
             return this;
         }
+
         public Builder scheduleId(String scheduleId) {
-            this.scheduleId = Output.of(Objects.requireNonNull(scheduleId));
-            return this;
+            return scheduleId(Output.of(scheduleId));
         }
+
         public Builder state(@Nullable Output<ScheduleState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable ScheduleState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(ScheduleState state) {
+            return state(Output.of(state));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public ScheduleArgs build() {
-            return new ScheduleArgs(cronSchedule, description, executionTemplate, location, project, scheduleId, state, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public ScheduleArgs build() {
+            $.scheduleId = Objects.requireNonNull($.scheduleId, "expected parameter 'scheduleId' to be non-null");
+            return $;
         }
     }
+
 }

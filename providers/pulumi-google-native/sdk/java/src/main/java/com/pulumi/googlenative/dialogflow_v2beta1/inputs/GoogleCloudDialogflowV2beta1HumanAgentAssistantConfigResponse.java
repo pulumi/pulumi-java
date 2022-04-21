@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      * 
      */
     @Import(name="endUserSuggestionConfig", required=true)
-      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig() {
         return this.endUserSuggestionConfig;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      * 
      */
     @Import(name="humanAgentSuggestionConfig", required=true)
-      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig() {
         return this.humanAgentSuggestionConfig;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      * 
      */
     @Import(name="messageAnalysisConfig", required=true)
-      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig() {
         return this.messageAnalysisConfig;
@@ -56,73 +56,66 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      * 
      */
     @Import(name="notificationConfig", required=true)
-      private final GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
+    private GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
 
     public GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig() {
         return this.notificationConfig;
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse(
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig,
-        GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig) {
-        this.endUserSuggestionConfig = Objects.requireNonNull(endUserSuggestionConfig, "expected parameter 'endUserSuggestionConfig' to be non-null");
-        this.humanAgentSuggestionConfig = Objects.requireNonNull(humanAgentSuggestionConfig, "expected parameter 'humanAgentSuggestionConfig' to be non-null");
-        this.messageAnalysisConfig = Objects.requireNonNull(messageAnalysisConfig, "expected parameter 'messageAnalysisConfig' to be non-null");
-        this.notificationConfig = Objects.requireNonNull(notificationConfig, "expected parameter 'notificationConfig' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse() {}
 
-    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse() {
-        this.endUserSuggestionConfig = null;
-        this.humanAgentSuggestionConfig = null;
-        this.messageAnalysisConfig = null;
-        this.notificationConfig = null;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse $) {
+        this.endUserSuggestionConfig = $.endUserSuggestionConfig;
+        this.humanAgentSuggestionConfig = $.humanAgentSuggestionConfig;
+        this.messageAnalysisConfig = $.messageAnalysisConfig;
+        this.notificationConfig = $.notificationConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig;
-        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig;
-        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig;
-        private GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
+        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endUserSuggestionConfig = defaults.endUserSuggestionConfig;
-    	      this.humanAgentSuggestionConfig = defaults.humanAgentSuggestionConfig;
-    	      this.messageAnalysisConfig = defaults.messageAnalysisConfig;
-    	      this.notificationConfig = defaults.notificationConfig;
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endUserSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig) {
-            this.endUserSuggestionConfig = Objects.requireNonNull(endUserSuggestionConfig);
+            $.endUserSuggestionConfig = endUserSuggestionConfig;
             return this;
         }
+
         public Builder humanAgentSuggestionConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig) {
-            this.humanAgentSuggestionConfig = Objects.requireNonNull(humanAgentSuggestionConfig);
+            $.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
             return this;
         }
+
         public Builder messageAnalysisConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig) {
-            this.messageAnalysisConfig = Objects.requireNonNull(messageAnalysisConfig);
+            $.messageAnalysisConfig = messageAnalysisConfig;
             return this;
         }
+
         public Builder notificationConfig(GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig) {
-            this.notificationConfig = Objects.requireNonNull(notificationConfig);
+            $.notificationConfig = notificationConfig;
             return this;
-        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse build() {
-            return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse(endUserSuggestionConfig, humanAgentSuggestionConfig, messageAnalysisConfig, notificationConfig);
+        }
+
+        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse build() {
+            $.endUserSuggestionConfig = Objects.requireNonNull($.endUserSuggestionConfig, "expected parameter 'endUserSuggestionConfig' to be non-null");
+            $.humanAgentSuggestionConfig = Objects.requireNonNull($.humanAgentSuggestionConfig, "expected parameter 'humanAgentSuggestionConfig' to be non-null");
+            $.messageAnalysisConfig = Objects.requireNonNull($.messageAnalysisConfig, "expected parameter 'messageAnalysisConfig' to be non-null");
+            $.notificationConfig = Objects.requireNonNull($.notificationConfig, "expected parameter 'notificationConfig' to be non-null");
+            return $;
         }
     }
+
 }

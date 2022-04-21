@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpcEndpointConnectionAccepterState extends com.pulumi.resourc
      * 
      */
     @Import(name="vpcEndpointId")
-      private final @Nullable Output<String> vpcEndpointId;
+    private @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> vpcEndpointId() {
-        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
+    public Optional<Output<String>> vpcEndpointId() {
+        return Optional.ofNullable(this.vpcEndpointId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VpcEndpointConnectionAccepterState extends com.pulumi.resourc
      * 
      */
     @Import(name="vpcEndpointServiceId")
-      private final @Nullable Output<String> vpcEndpointServiceId;
+    private @Nullable Output<String> vpcEndpointServiceId;
 
-    public Output<String> vpcEndpointServiceId() {
-        return this.vpcEndpointServiceId == null ? Codegen.empty() : this.vpcEndpointServiceId;
+    public Optional<Output<String>> vpcEndpointServiceId() {
+        return Optional.ofNullable(this.vpcEndpointServiceId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class VpcEndpointConnectionAccepterState extends com.pulumi.resourc
      * 
      */
     @Import(name="vpcEndpointState")
-      private final @Nullable Output<String> vpcEndpointState;
+    private @Nullable Output<String> vpcEndpointState;
 
-    public Output<String> vpcEndpointState() {
-        return this.vpcEndpointState == null ? Codegen.empty() : this.vpcEndpointState;
+    public Optional<Output<String>> vpcEndpointState() {
+        return Optional.ofNullable(this.vpcEndpointState);
     }
 
-    public VpcEndpointConnectionAccepterState(
-        @Nullable Output<String> vpcEndpointId,
-        @Nullable Output<String> vpcEndpointServiceId,
-        @Nullable Output<String> vpcEndpointState) {
-        this.vpcEndpointId = vpcEndpointId;
-        this.vpcEndpointServiceId = vpcEndpointServiceId;
-        this.vpcEndpointState = vpcEndpointState;
-    }
+    private VpcEndpointConnectionAccepterState() {}
 
-    private VpcEndpointConnectionAccepterState() {
-        this.vpcEndpointId = Codegen.empty();
-        this.vpcEndpointServiceId = Codegen.empty();
-        this.vpcEndpointState = Codegen.empty();
+    private VpcEndpointConnectionAccepterState(VpcEndpointConnectionAccepterState $) {
+        this.vpcEndpointId = $.vpcEndpointId;
+        this.vpcEndpointServiceId = $.vpcEndpointServiceId;
+        this.vpcEndpointState = $.vpcEndpointState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointConnectionAccepterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> vpcEndpointId;
-        private @Nullable Output<String> vpcEndpointServiceId;
-        private @Nullable Output<String> vpcEndpointState;
+        private VpcEndpointConnectionAccepterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointConnectionAccepterState();
         }
 
         public Builder(VpcEndpointConnectionAccepterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcEndpointId = defaults.vpcEndpointId;
-    	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
-    	      this.vpcEndpointState = defaults.vpcEndpointState;
+            $ = new VpcEndpointConnectionAccepterState(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
-            this.vpcEndpointId = vpcEndpointId;
+            $.vpcEndpointId = vpcEndpointId;
             return this;
         }
-        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
-            return this;
+
+        public Builder vpcEndpointId(String vpcEndpointId) {
+            return vpcEndpointId(Output.of(vpcEndpointId));
         }
+
         public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = vpcEndpointServiceId;
+            $.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
-        public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Codegen.ofNullable(vpcEndpointServiceId);
-            return this;
+
+        public Builder vpcEndpointServiceId(String vpcEndpointServiceId) {
+            return vpcEndpointServiceId(Output.of(vpcEndpointServiceId));
         }
+
         public Builder vpcEndpointState(@Nullable Output<String> vpcEndpointState) {
-            this.vpcEndpointState = vpcEndpointState;
+            $.vpcEndpointState = vpcEndpointState;
             return this;
         }
-        public Builder vpcEndpointState(@Nullable String vpcEndpointState) {
-            this.vpcEndpointState = Codegen.ofNullable(vpcEndpointState);
-            return this;
-        }        public VpcEndpointConnectionAccepterState build() {
-            return new VpcEndpointConnectionAccepterState(vpcEndpointId, vpcEndpointServiceId, vpcEndpointState);
+
+        public Builder vpcEndpointState(String vpcEndpointState) {
+            return vpcEndpointState(Output.of(vpcEndpointState));
+        }
+
+        public VpcEndpointConnectionAccepterState build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class MitigationActionUpdateCACertificateParams extends com.pulumi.
     public static final MitigationActionUpdateCACertificateParams Empty = new MitigationActionUpdateCACertificateParams();
 
     @Import(name="action", required=true)
-      private final MitigationActionUpdateCACertificateParamsAction action;
+    private MitigationActionUpdateCACertificateParamsAction action;
 
     public MitigationActionUpdateCACertificateParamsAction action() {
         return this.action;
     }
 
-    public MitigationActionUpdateCACertificateParams(MitigationActionUpdateCACertificateParamsAction action) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-    }
+    private MitigationActionUpdateCACertificateParams() {}
 
-    private MitigationActionUpdateCACertificateParams() {
-        this.action = null;
+    private MitigationActionUpdateCACertificateParams(MitigationActionUpdateCACertificateParams $) {
+        this.action = $.action;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionUpdateCACertificateParams defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MitigationActionUpdateCACertificateParamsAction action;
+        private MitigationActionUpdateCACertificateParams $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionUpdateCACertificateParams();
         }
 
         public Builder(MitigationActionUpdateCACertificateParams defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
+            $ = new MitigationActionUpdateCACertificateParams(Objects.requireNonNull(defaults));
         }
 
         public Builder action(MitigationActionUpdateCACertificateParamsAction action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
-        }        public MitigationActionUpdateCACertificateParams build() {
-            return new MitigationActionUpdateCACertificateParams(action);
+        }
+
+        public MitigationActionUpdateCACertificateParams build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

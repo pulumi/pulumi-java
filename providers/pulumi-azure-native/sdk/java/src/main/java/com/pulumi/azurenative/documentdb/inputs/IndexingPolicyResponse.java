@@ -30,10 +30,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="automatic")
-      private final @Nullable Boolean automatic;
+    private @Nullable Boolean automatic;
 
     public Optional<Boolean> automatic() {
-        return this.automatic == null ? Optional.empty() : Optional.ofNullable(this.automatic);
+        return Optional.ofNullable(this.automatic);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compositeIndexes")
-      private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
+    private @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
-    public List<List<CompositePathResponse>> compositeIndexes() {
-        return this.compositeIndexes == null ? List.of() : this.compositeIndexes;
+    public Optional<List<List<CompositePathResponse>>> compositeIndexes() {
+        return Optional.ofNullable(this.compositeIndexes);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="excludedPaths")
-      private final @Nullable List<ExcludedPathResponse> excludedPaths;
+    private @Nullable List<ExcludedPathResponse> excludedPaths;
 
-    public List<ExcludedPathResponse> excludedPaths() {
-        return this.excludedPaths == null ? List.of() : this.excludedPaths;
+    public Optional<List<ExcludedPathResponse>> excludedPaths() {
+        return Optional.ofNullable(this.excludedPaths);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includedPaths")
-      private final @Nullable List<IncludedPathResponse> includedPaths;
+    private @Nullable List<IncludedPathResponse> includedPaths;
 
-    public List<IncludedPathResponse> includedPaths() {
-        return this.includedPaths == null ? List.of() : this.includedPaths;
+    public Optional<List<IncludedPathResponse>> includedPaths() {
+        return Optional.ofNullable(this.includedPaths);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="indexingMode")
-      private final @Nullable String indexingMode;
+    private @Nullable String indexingMode;
 
     public Optional<String> indexingMode() {
-        return this.indexingMode == null ? Optional.empty() : Optional.ofNullable(this.indexingMode);
+        return Optional.ofNullable(this.indexingMode);
     }
 
     /**
@@ -85,100 +85,91 @@ public final class IndexingPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="spatialIndexes")
-      private final @Nullable List<SpatialSpecResponse> spatialIndexes;
+    private @Nullable List<SpatialSpecResponse> spatialIndexes;
 
-    public List<SpatialSpecResponse> spatialIndexes() {
-        return this.spatialIndexes == null ? List.of() : this.spatialIndexes;
+    public Optional<List<SpatialSpecResponse>> spatialIndexes() {
+        return Optional.ofNullable(this.spatialIndexes);
     }
 
-    public IndexingPolicyResponse(
-        @Nullable Boolean automatic,
-        @Nullable List<List<CompositePathResponse>> compositeIndexes,
-        @Nullable List<ExcludedPathResponse> excludedPaths,
-        @Nullable List<IncludedPathResponse> includedPaths,
-        @Nullable String indexingMode,
-        @Nullable List<SpatialSpecResponse> spatialIndexes) {
-        this.automatic = automatic;
-        this.compositeIndexes = compositeIndexes;
-        this.excludedPaths = excludedPaths;
-        this.includedPaths = includedPaths;
-        this.indexingMode = Codegen.stringProp("indexingMode").arg(indexingMode).def("consistent").getNullable();
-        this.spatialIndexes = spatialIndexes;
-    }
+    private IndexingPolicyResponse() {}
 
-    private IndexingPolicyResponse() {
-        this.automatic = null;
-        this.compositeIndexes = List.of();
-        this.excludedPaths = List.of();
-        this.includedPaths = List.of();
-        this.indexingMode = null;
-        this.spatialIndexes = List.of();
+    private IndexingPolicyResponse(IndexingPolicyResponse $) {
+        this.automatic = $.automatic;
+        this.compositeIndexes = $.compositeIndexes;
+        this.excludedPaths = $.excludedPaths;
+        this.includedPaths = $.includedPaths;
+        this.indexingMode = $.indexingMode;
+        this.spatialIndexes = $.spatialIndexes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean automatic;
-        private @Nullable List<List<CompositePathResponse>> compositeIndexes;
-        private @Nullable List<ExcludedPathResponse> excludedPaths;
-        private @Nullable List<IncludedPathResponse> includedPaths;
-        private @Nullable String indexingMode;
-        private @Nullable List<SpatialSpecResponse> spatialIndexes;
+        private IndexingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexingPolicyResponse();
         }
 
         public Builder(IndexingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatic = defaults.automatic;
-    	      this.compositeIndexes = defaults.compositeIndexes;
-    	      this.excludedPaths = defaults.excludedPaths;
-    	      this.includedPaths = defaults.includedPaths;
-    	      this.indexingMode = defaults.indexingMode;
-    	      this.spatialIndexes = defaults.spatialIndexes;
+            $ = new IndexingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder automatic(@Nullable Boolean automatic) {
-            this.automatic = automatic;
+            $.automatic = automatic;
             return this;
         }
+
         public Builder compositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
-            this.compositeIndexes = compositeIndexes;
+            $.compositeIndexes = compositeIndexes;
             return this;
         }
+
+        public Builder compositeIndexes(List<CompositePathResponse>... compositeIndexes) {
+            return compositeIndexes(List.of(compositeIndexes));
+        }
+
         public Builder excludedPaths(@Nullable List<ExcludedPathResponse> excludedPaths) {
-            this.excludedPaths = excludedPaths;
+            $.excludedPaths = excludedPaths;
             return this;
         }
+
         public Builder excludedPaths(ExcludedPathResponse... excludedPaths) {
             return excludedPaths(List.of(excludedPaths));
         }
+
         public Builder includedPaths(@Nullable List<IncludedPathResponse> includedPaths) {
-            this.includedPaths = includedPaths;
+            $.includedPaths = includedPaths;
             return this;
         }
+
         public Builder includedPaths(IncludedPathResponse... includedPaths) {
             return includedPaths(List.of(includedPaths));
         }
+
         public Builder indexingMode(@Nullable String indexingMode) {
-            this.indexingMode = indexingMode;
+            $.indexingMode = indexingMode;
             return this;
         }
+
         public Builder spatialIndexes(@Nullable List<SpatialSpecResponse> spatialIndexes) {
-            this.spatialIndexes = spatialIndexes;
+            $.spatialIndexes = spatialIndexes;
             return this;
         }
+
         public Builder spatialIndexes(SpatialSpecResponse... spatialIndexes) {
             return spatialIndexes(List.of(spatialIndexes));
-        }        public IndexingPolicyResponse build() {
-            return new IndexingPolicyResponse(automatic, compositeIndexes, excludedPaths, includedPaths, indexingMode, spatialIndexes);
+        }
+
+        public IndexingPolicyResponse build() {
+            $.indexingMode = Codegen.stringProp("indexingMode").arg($.indexingMode).def("consistent").getNullable();
+            return $;
         }
     }
+
 }

@@ -15,7 +15,7 @@ public final class GetInstanceTemplateReservationAffinity extends com.pulumi.res
     public static final GetInstanceTemplateReservationAffinity Empty = new GetInstanceTemplateReservationAffinity();
 
     @Import(name="specificReservations", required=true)
-      private final List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations;
+    private List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations;
 
     public List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations() {
         return this.specificReservations;
@@ -26,58 +26,56 @@ public final class GetInstanceTemplateReservationAffinity extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetInstanceTemplateReservationAffinity(
-        List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations,
-        String type) {
-        this.specificReservations = Objects.requireNonNull(specificReservations, "expected parameter 'specificReservations' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetInstanceTemplateReservationAffinity() {}
 
-    private GetInstanceTemplateReservationAffinity() {
-        this.specificReservations = List.of();
-        this.type = null;
+    private GetInstanceTemplateReservationAffinity(GetInstanceTemplateReservationAffinity $) {
+        this.specificReservations = $.specificReservations;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTemplateReservationAffinity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations;
-        private String type;
+        private GetInstanceTemplateReservationAffinity $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTemplateReservationAffinity();
         }
 
         public Builder(GetInstanceTemplateReservationAffinity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.specificReservations = defaults.specificReservations;
-    	      this.type = defaults.type;
+            $ = new GetInstanceTemplateReservationAffinity(Objects.requireNonNull(defaults));
         }
 
         public Builder specificReservations(List<GetInstanceTemplateReservationAffinitySpecificReservation> specificReservations) {
-            this.specificReservations = Objects.requireNonNull(specificReservations);
+            $.specificReservations = specificReservations;
             return this;
         }
+
         public Builder specificReservations(GetInstanceTemplateReservationAffinitySpecificReservation... specificReservations) {
             return specificReservations(List.of(specificReservations));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetInstanceTemplateReservationAffinity build() {
-            return new GetInstanceTemplateReservationAffinity(specificReservations, type);
+        }
+
+        public GetInstanceTemplateReservationAffinity build() {
+            $.specificReservations = Objects.requireNonNull($.specificReservations, "expected parameter 'specificReservations' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

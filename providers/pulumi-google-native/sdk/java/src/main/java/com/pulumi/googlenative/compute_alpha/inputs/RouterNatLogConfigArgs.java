@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.RouterNatLogConfigFilter;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RouterNatLogConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RouterNatLogConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<RouterNatLogConfigFilter> filter;
+    private @Nullable Output<RouterNatLogConfigFilter> filter;
 
-    public Output<RouterNatLogConfigFilter> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<RouterNatLogConfigFilter>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
-    public RouterNatLogConfigArgs(
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<RouterNatLogConfigFilter> filter) {
-        this.enable = enable;
-        this.filter = filter;
-    }
+    private RouterNatLogConfigArgs() {}
 
-    private RouterNatLogConfigArgs() {
-        this.enable = Codegen.empty();
-        this.filter = Codegen.empty();
+    private RouterNatLogConfigArgs(RouterNatLogConfigArgs $) {
+        this.enable = $.enable;
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<RouterNatLogConfigFilter> filter;
+        private RouterNatLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatLogConfigArgs();
         }
 
         public Builder(RouterNatLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.filter = defaults.filter;
+            $ = new RouterNatLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder filter(@Nullable Output<RouterNatLogConfigFilter> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable RouterNatLogConfigFilter filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
-        }        public RouterNatLogConfigArgs build() {
-            return new RouterNatLogConfigArgs(enable, filter);
+
+        public Builder filter(RouterNatLogConfigFilter filter) {
+            return filter(Output.of(filter));
+        }
+
+        public RouterNatLogConfigArgs build() {
+            return $;
         }
     }
+
 }

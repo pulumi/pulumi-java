@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      * 
      */
     @Import(name="allowPlaybackInterruption", required=true)
-      private final Boolean allowPlaybackInterruption;
+    private Boolean allowPlaybackInterruption;
 
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      * 
      */
     @Import(name="audio", required=true)
-      private final String audio;
+    private String audio;
 
     public String audio() {
         return this.audio;
@@ -44,64 +44,59 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse(
-        Boolean allowPlaybackInterruption,
-        String audio,
-        String uri) {
-        this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption, "expected parameter 'allowPlaybackInterruption' to be non-null");
-        this.audio = Objects.requireNonNull(audio, "expected parameter 'audio' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse() {
-        this.allowPlaybackInterruption = null;
-        this.audio = null;
-        this.uri = null;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse $) {
+        this.allowPlaybackInterruption = $.allowPlaybackInterruption;
+        this.audio = $.audio;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowPlaybackInterruption;
-        private String audio;
-        private String uri;
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPlaybackInterruption = defaults.allowPlaybackInterruption;
-    	      this.audio = defaults.audio;
-    	      this.uri = defaults.uri;
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
-            this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
+            $.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
+
         public Builder audio(String audio) {
-            this.audio = Objects.requireNonNull(audio);
+            $.audio = audio;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse(allowPlaybackInterruption, audio, uri);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse build() {
+            $.allowPlaybackInterruption = Objects.requireNonNull($.allowPlaybackInterruption, "expected parameter 'allowPlaybackInterruption' to be non-null");
+            $.audio = Objects.requireNonNull($.audio, "expected parameter 'audio' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

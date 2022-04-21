@@ -5,9 +5,9 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class DocumentParameterGetArgs extends com.pulumi.resources.Resourc
     public static final DocumentParameterGetArgs Empty = new DocumentParameterGetArgs();
 
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -27,10 +27,10 @@ public final class DocumentParameterGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,96 +38,85 @@ public final class DocumentParameterGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public DocumentParameterGetArgs(
-        @Nullable Output<String> defaultValue,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> type) {
-        this.defaultValue = defaultValue;
-        this.description = description;
-        this.name = name;
-        this.type = type;
-    }
+    private DocumentParameterGetArgs() {}
 
-    private DocumentParameterGetArgs() {
-        this.defaultValue = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private DocumentParameterGetArgs(DocumentParameterGetArgs $) {
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentParameterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultValue;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> type;
+        private DocumentParameterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentParameterGetArgs();
         }
 
         public Builder(DocumentParameterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new DocumentParameterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public DocumentParameterGetArgs build() {
-            return new DocumentParameterGetArgs(defaultValue, description, name, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public DocumentParameterGetArgs build() {
+            return $;
         }
     }
+
 }

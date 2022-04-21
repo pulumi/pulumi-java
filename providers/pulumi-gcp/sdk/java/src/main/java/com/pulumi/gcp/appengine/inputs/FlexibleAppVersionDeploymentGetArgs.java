@@ -5,13 +5,13 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentContainerGetArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentFileGetArgs;
 import com.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentZipGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FlexibleAppVersionDeploymentGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="cloudBuildOptions")
-      private final @Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
+    private @Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
 
-    public Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions() {
-        return this.cloudBuildOptions == null ? Codegen.empty() : this.cloudBuildOptions;
+    public Optional<Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs>> cloudBuildOptions() {
+        return Optional.ofNullable(this.cloudBuildOptions);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FlexibleAppVersionDeploymentGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="container")
-      private final @Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container;
+    private @Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container;
 
-    public Output<FlexibleAppVersionDeploymentContainerGetArgs> container() {
-        return this.container == null ? Codegen.empty() : this.container;
+    public Optional<Output<FlexibleAppVersionDeploymentContainerGetArgs>> container() {
+        return Optional.ofNullable(this.container);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class FlexibleAppVersionDeploymentGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="files")
-      private final @Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
+    private @Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
 
-    public Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files() {
-        return this.files == null ? Codegen.empty() : this.files;
+    public Optional<Output<List<FlexibleAppVersionDeploymentFileGetArgs>>> files() {
+        return Optional.ofNullable(this.files);
     }
 
     /**
@@ -62,92 +62,82 @@ public final class FlexibleAppVersionDeploymentGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="zip")
-      private final @Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip;
+    private @Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip;
 
-    public Output<FlexibleAppVersionDeploymentZipGetArgs> zip() {
-        return this.zip == null ? Codegen.empty() : this.zip;
+    public Optional<Output<FlexibleAppVersionDeploymentZipGetArgs>> zip() {
+        return Optional.ofNullable(this.zip);
     }
 
-    public FlexibleAppVersionDeploymentGetArgs(
-        @Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions,
-        @Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container,
-        @Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files,
-        @Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip) {
-        this.cloudBuildOptions = cloudBuildOptions;
-        this.container = container;
-        this.files = files;
-        this.zip = zip;
-    }
+    private FlexibleAppVersionDeploymentGetArgs() {}
 
-    private FlexibleAppVersionDeploymentGetArgs() {
-        this.cloudBuildOptions = Codegen.empty();
-        this.container = Codegen.empty();
-        this.files = Codegen.empty();
-        this.zip = Codegen.empty();
+    private FlexibleAppVersionDeploymentGetArgs(FlexibleAppVersionDeploymentGetArgs $) {
+        this.cloudBuildOptions = $.cloudBuildOptions;
+        this.container = $.container;
+        this.files = $.files;
+        this.zip = $.zip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionDeploymentGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
-        private @Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container;
-        private @Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
-        private @Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip;
+        private FlexibleAppVersionDeploymentGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionDeploymentGetArgs();
         }
 
         public Builder(FlexibleAppVersionDeploymentGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudBuildOptions = defaults.cloudBuildOptions;
-    	      this.container = defaults.container;
-    	      this.files = defaults.files;
-    	      this.zip = defaults.zip;
+            $ = new FlexibleAppVersionDeploymentGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudBuildOptions(@Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions) {
-            this.cloudBuildOptions = cloudBuildOptions;
+            $.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
-        public Builder cloudBuildOptions(@Nullable FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs cloudBuildOptions) {
-            this.cloudBuildOptions = Codegen.ofNullable(cloudBuildOptions);
-            return this;
+
+        public Builder cloudBuildOptions(FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs cloudBuildOptions) {
+            return cloudBuildOptions(Output.of(cloudBuildOptions));
         }
+
         public Builder container(@Nullable Output<FlexibleAppVersionDeploymentContainerGetArgs> container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
-        public Builder container(@Nullable FlexibleAppVersionDeploymentContainerGetArgs container) {
-            this.container = Codegen.ofNullable(container);
-            return this;
+
+        public Builder container(FlexibleAppVersionDeploymentContainerGetArgs container) {
+            return container(Output.of(container));
         }
+
         public Builder files(@Nullable Output<List<FlexibleAppVersionDeploymentFileGetArgs>> files) {
-            this.files = files;
+            $.files = files;
             return this;
         }
-        public Builder files(@Nullable List<FlexibleAppVersionDeploymentFileGetArgs> files) {
-            this.files = Codegen.ofNullable(files);
-            return this;
+
+        public Builder files(List<FlexibleAppVersionDeploymentFileGetArgs> files) {
+            return files(Output.of(files));
         }
+
         public Builder files(FlexibleAppVersionDeploymentFileGetArgs... files) {
             return files(List.of(files));
         }
+
         public Builder zip(@Nullable Output<FlexibleAppVersionDeploymentZipGetArgs> zip) {
-            this.zip = zip;
+            $.zip = zip;
             return this;
         }
-        public Builder zip(@Nullable FlexibleAppVersionDeploymentZipGetArgs zip) {
-            this.zip = Codegen.ofNullable(zip);
-            return this;
-        }        public FlexibleAppVersionDeploymentGetArgs build() {
-            return new FlexibleAppVersionDeploymentGetArgs(cloudBuildOptions, container, files, zip);
+
+        public Builder zip(FlexibleAppVersionDeploymentZipGetArgs zip) {
+            return zip(Output.of(zip));
+        }
+
+        public FlexibleAppVersionDeploymentGetArgs build() {
+            return $;
         }
     }
+
 }

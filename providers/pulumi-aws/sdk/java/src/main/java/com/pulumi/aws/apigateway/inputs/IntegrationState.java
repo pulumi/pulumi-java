@@ -6,12 +6,12 @@ package com.pulumi.aws.apigateway.inputs;
 import com.pulumi.aws.apigateway.inputs.IntegrationTlsConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheKeyParameters")
-      private final @Nullable Output<List<String>> cacheKeyParameters;
+    private @Nullable Output<List<String>> cacheKeyParameters;
 
-    public Output<List<String>> cacheKeyParameters() {
-        return this.cacheKeyParameters == null ? Codegen.empty() : this.cacheKeyParameters;
+    public Optional<Output<List<String>>> cacheKeyParameters() {
+        return Optional.ofNullable(this.cacheKeyParameters);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheNamespace")
-      private final @Nullable Output<String> cacheNamespace;
+    private @Nullable Output<String> cacheNamespace;
 
-    public Output<String> cacheNamespace() {
-        return this.cacheNamespace == null ? Codegen.empty() : this.cacheNamespace;
+    public Optional<Output<String>> cacheNamespace() {
+        return Optional.ofNullable(this.cacheNamespace);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionId")
-      private final @Nullable Output<String> connectionId;
+    private @Nullable Output<String> connectionId;
 
-    public Output<String> connectionId() {
-        return this.connectionId == null ? Codegen.empty() : this.connectionId;
+    public Optional<Output<String>> connectionId() {
+        return Optional.ofNullable(this.connectionId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionType")
-      private final @Nullable Output<String> connectionType;
+    private @Nullable Output<String> connectionType;
 
-    public Output<String> connectionType() {
-        return this.connectionType == null ? Codegen.empty() : this.connectionType;
+    public Optional<Output<String>> connectionType() {
+        return Optional.ofNullable(this.connectionType);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentHandling")
-      private final @Nullable Output<String> contentHandling;
+    private @Nullable Output<String> contentHandling;
 
-    public Output<String> contentHandling() {
-        return this.contentHandling == null ? Codegen.empty() : this.contentHandling;
+    public Optional<Output<String>> contentHandling() {
+        return Optional.ofNullable(this.contentHandling);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<String> credentials;
+    private @Nullable Output<String> credentials;
 
-    public Output<String> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<String>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpMethod")
-      private final @Nullable Output<String> httpMethod;
+    private @Nullable Output<String> httpMethod;
 
-    public Output<String> httpMethod() {
-        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
+    public Optional<Output<String>> httpMethod() {
+        return Optional.ofNullable(this.httpMethod);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="integrationHttpMethod")
-      private final @Nullable Output<String> integrationHttpMethod;
+    private @Nullable Output<String> integrationHttpMethod;
 
-    public Output<String> integrationHttpMethod() {
-        return this.integrationHttpMethod == null ? Codegen.empty() : this.integrationHttpMethod;
+    public Optional<Output<String>> integrationHttpMethod() {
+        return Optional.ofNullable(this.integrationHttpMethod);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="passthroughBehavior")
-      private final @Nullable Output<String> passthroughBehavior;
+    private @Nullable Output<String> passthroughBehavior;
 
-    public Output<String> passthroughBehavior() {
-        return this.passthroughBehavior == null ? Codegen.empty() : this.passthroughBehavior;
+    public Optional<Output<String>> passthroughBehavior() {
+        return Optional.ofNullable(this.passthroughBehavior);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestParameters")
-      private final @Nullable Output<Map<String,String>> requestParameters;
+    private @Nullable Output<Map<String,String>> requestParameters;
 
-    public Output<Map<String,String>> requestParameters() {
-        return this.requestParameters == null ? Codegen.empty() : this.requestParameters;
+    public Optional<Output<Map<String,String>>> requestParameters() {
+        return Optional.ofNullable(this.requestParameters);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestTemplates")
-      private final @Nullable Output<Map<String,String>> requestTemplates;
+    private @Nullable Output<Map<String,String>> requestTemplates;
 
-    public Output<Map<String,String>> requestTemplates() {
-        return this.requestTemplates == null ? Codegen.empty() : this.requestTemplates;
+    public Optional<Output<Map<String,String>>> requestTemplates() {
+        return Optional.ofNullable(this.requestTemplates);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApi")
-      private final @Nullable Output<String> restApi;
+    private @Nullable Output<String> restApi;
 
-    public Output<String> restApi() {
-        return this.restApi == null ? Codegen.empty() : this.restApi;
+    public Optional<Output<String>> restApi() {
+        return Optional.ofNullable(this.restApi);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeoutMilliseconds")
-      private final @Nullable Output<Integer> timeoutMilliseconds;
+    private @Nullable Output<Integer> timeoutMilliseconds;
 
-    public Output<Integer> timeoutMilliseconds() {
-        return this.timeoutMilliseconds == null ? Codegen.empty() : this.timeoutMilliseconds;
+    public Optional<Output<Integer>> timeoutMilliseconds() {
+        return Optional.ofNullable(this.timeoutMilliseconds);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tlsConfig")
-      private final @Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig;
+    private @Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig;
 
-    public Output<IntegrationTlsConfigGetArgs> tlsConfig() {
-        return this.tlsConfig == null ? Codegen.empty() : this.tlsConfig;
+    public Optional<Output<IntegrationTlsConfigGetArgs>> tlsConfig() {
+        return Optional.ofNullable(this.tlsConfig);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -208,257 +208,212 @@ public final class IntegrationState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public IntegrationState(
-        @Nullable Output<List<String>> cacheKeyParameters,
-        @Nullable Output<String> cacheNamespace,
-        @Nullable Output<String> connectionId,
-        @Nullable Output<String> connectionType,
-        @Nullable Output<String> contentHandling,
-        @Nullable Output<String> credentials,
-        @Nullable Output<String> httpMethod,
-        @Nullable Output<String> integrationHttpMethod,
-        @Nullable Output<String> passthroughBehavior,
-        @Nullable Output<Map<String,String>> requestParameters,
-        @Nullable Output<Map<String,String>> requestTemplates,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> restApi,
-        @Nullable Output<Integer> timeoutMilliseconds,
-        @Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig,
-        @Nullable Output<String> type,
-        @Nullable Output<String> uri) {
-        this.cacheKeyParameters = cacheKeyParameters;
-        this.cacheNamespace = cacheNamespace;
-        this.connectionId = connectionId;
-        this.connectionType = connectionType;
-        this.contentHandling = contentHandling;
-        this.credentials = credentials;
-        this.httpMethod = httpMethod;
-        this.integrationHttpMethod = integrationHttpMethod;
-        this.passthroughBehavior = passthroughBehavior;
-        this.requestParameters = requestParameters;
-        this.requestTemplates = requestTemplates;
-        this.resourceId = resourceId;
-        this.restApi = restApi;
-        this.timeoutMilliseconds = timeoutMilliseconds;
-        this.tlsConfig = tlsConfig;
-        this.type = type;
-        this.uri = uri;
-    }
+    private IntegrationState() {}
 
-    private IntegrationState() {
-        this.cacheKeyParameters = Codegen.empty();
-        this.cacheNamespace = Codegen.empty();
-        this.connectionId = Codegen.empty();
-        this.connectionType = Codegen.empty();
-        this.contentHandling = Codegen.empty();
-        this.credentials = Codegen.empty();
-        this.httpMethod = Codegen.empty();
-        this.integrationHttpMethod = Codegen.empty();
-        this.passthroughBehavior = Codegen.empty();
-        this.requestParameters = Codegen.empty();
-        this.requestTemplates = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.restApi = Codegen.empty();
-        this.timeoutMilliseconds = Codegen.empty();
-        this.tlsConfig = Codegen.empty();
-        this.type = Codegen.empty();
-        this.uri = Codegen.empty();
+    private IntegrationState(IntegrationState $) {
+        this.cacheKeyParameters = $.cacheKeyParameters;
+        this.cacheNamespace = $.cacheNamespace;
+        this.connectionId = $.connectionId;
+        this.connectionType = $.connectionType;
+        this.contentHandling = $.contentHandling;
+        this.credentials = $.credentials;
+        this.httpMethod = $.httpMethod;
+        this.integrationHttpMethod = $.integrationHttpMethod;
+        this.passthroughBehavior = $.passthroughBehavior;
+        this.requestParameters = $.requestParameters;
+        this.requestTemplates = $.requestTemplates;
+        this.resourceId = $.resourceId;
+        this.restApi = $.restApi;
+        this.timeoutMilliseconds = $.timeoutMilliseconds;
+        this.tlsConfig = $.tlsConfig;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cacheKeyParameters;
-        private @Nullable Output<String> cacheNamespace;
-        private @Nullable Output<String> connectionId;
-        private @Nullable Output<String> connectionType;
-        private @Nullable Output<String> contentHandling;
-        private @Nullable Output<String> credentials;
-        private @Nullable Output<String> httpMethod;
-        private @Nullable Output<String> integrationHttpMethod;
-        private @Nullable Output<String> passthroughBehavior;
-        private @Nullable Output<Map<String,String>> requestParameters;
-        private @Nullable Output<Map<String,String>> requestTemplates;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> restApi;
-        private @Nullable Output<Integer> timeoutMilliseconds;
-        private @Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> uri;
+        private IntegrationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationState();
         }
 
         public Builder(IntegrationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheKeyParameters = defaults.cacheKeyParameters;
-    	      this.cacheNamespace = defaults.cacheNamespace;
-    	      this.connectionId = defaults.connectionId;
-    	      this.connectionType = defaults.connectionType;
-    	      this.contentHandling = defaults.contentHandling;
-    	      this.credentials = defaults.credentials;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.integrationHttpMethod = defaults.integrationHttpMethod;
-    	      this.passthroughBehavior = defaults.passthroughBehavior;
-    	      this.requestParameters = defaults.requestParameters;
-    	      this.requestTemplates = defaults.requestTemplates;
-    	      this.resourceId = defaults.resourceId;
-    	      this.restApi = defaults.restApi;
-    	      this.timeoutMilliseconds = defaults.timeoutMilliseconds;
-    	      this.tlsConfig = defaults.tlsConfig;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new IntegrationState(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheKeyParameters(@Nullable Output<List<String>> cacheKeyParameters) {
-            this.cacheKeyParameters = cacheKeyParameters;
+            $.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
-        public Builder cacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
-            this.cacheKeyParameters = Codegen.ofNullable(cacheKeyParameters);
-            return this;
+
+        public Builder cacheKeyParameters(List<String> cacheKeyParameters) {
+            return cacheKeyParameters(Output.of(cacheKeyParameters));
         }
+
         public Builder cacheKeyParameters(String... cacheKeyParameters) {
             return cacheKeyParameters(List.of(cacheKeyParameters));
         }
+
         public Builder cacheNamespace(@Nullable Output<String> cacheNamespace) {
-            this.cacheNamespace = cacheNamespace;
+            $.cacheNamespace = cacheNamespace;
             return this;
         }
-        public Builder cacheNamespace(@Nullable String cacheNamespace) {
-            this.cacheNamespace = Codegen.ofNullable(cacheNamespace);
-            return this;
+
+        public Builder cacheNamespace(String cacheNamespace) {
+            return cacheNamespace(Output.of(cacheNamespace));
         }
+
         public Builder connectionId(@Nullable Output<String> connectionId) {
-            this.connectionId = connectionId;
+            $.connectionId = connectionId;
             return this;
         }
-        public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Codegen.ofNullable(connectionId);
-            return this;
+
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder connectionType(@Nullable Output<String> connectionType) {
-            this.connectionType = connectionType;
+            $.connectionType = connectionType;
             return this;
         }
-        public Builder connectionType(@Nullable String connectionType) {
-            this.connectionType = Codegen.ofNullable(connectionType);
-            return this;
+
+        public Builder connectionType(String connectionType) {
+            return connectionType(Output.of(connectionType));
         }
+
         public Builder contentHandling(@Nullable Output<String> contentHandling) {
-            this.contentHandling = contentHandling;
+            $.contentHandling = contentHandling;
             return this;
         }
-        public Builder contentHandling(@Nullable String contentHandling) {
-            this.contentHandling = Codegen.ofNullable(contentHandling);
-            return this;
+
+        public Builder contentHandling(String contentHandling) {
+            return contentHandling(Output.of(contentHandling));
         }
+
         public Builder credentials(@Nullable Output<String> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable String credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(String credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
-            this.httpMethod = httpMethod;
+            $.httpMethod = httpMethod;
             return this;
         }
-        public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Codegen.ofNullable(httpMethod);
-            return this;
+
+        public Builder httpMethod(String httpMethod) {
+            return httpMethod(Output.of(httpMethod));
         }
+
         public Builder integrationHttpMethod(@Nullable Output<String> integrationHttpMethod) {
-            this.integrationHttpMethod = integrationHttpMethod;
+            $.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
-        public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
-            this.integrationHttpMethod = Codegen.ofNullable(integrationHttpMethod);
-            return this;
+
+        public Builder integrationHttpMethod(String integrationHttpMethod) {
+            return integrationHttpMethod(Output.of(integrationHttpMethod));
         }
+
         public Builder passthroughBehavior(@Nullable Output<String> passthroughBehavior) {
-            this.passthroughBehavior = passthroughBehavior;
+            $.passthroughBehavior = passthroughBehavior;
             return this;
         }
-        public Builder passthroughBehavior(@Nullable String passthroughBehavior) {
-            this.passthroughBehavior = Codegen.ofNullable(passthroughBehavior);
-            return this;
+
+        public Builder passthroughBehavior(String passthroughBehavior) {
+            return passthroughBehavior(Output.of(passthroughBehavior));
         }
+
         public Builder requestParameters(@Nullable Output<Map<String,String>> requestParameters) {
-            this.requestParameters = requestParameters;
+            $.requestParameters = requestParameters;
             return this;
         }
-        public Builder requestParameters(@Nullable Map<String,String> requestParameters) {
-            this.requestParameters = Codegen.ofNullable(requestParameters);
-            return this;
+
+        public Builder requestParameters(Map<String,String> requestParameters) {
+            return requestParameters(Output.of(requestParameters));
         }
+
         public Builder requestTemplates(@Nullable Output<Map<String,String>> requestTemplates) {
-            this.requestTemplates = requestTemplates;
+            $.requestTemplates = requestTemplates;
             return this;
         }
-        public Builder requestTemplates(@Nullable Map<String,String> requestTemplates) {
-            this.requestTemplates = Codegen.ofNullable(requestTemplates);
-            return this;
+
+        public Builder requestTemplates(Map<String,String> requestTemplates) {
+            return requestTemplates(Output.of(requestTemplates));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder restApi(@Nullable Output<String> restApi) {
-            this.restApi = restApi;
+            $.restApi = restApi;
             return this;
         }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
         public Builder timeoutMilliseconds(@Nullable Output<Integer> timeoutMilliseconds) {
-            this.timeoutMilliseconds = timeoutMilliseconds;
+            $.timeoutMilliseconds = timeoutMilliseconds;
             return this;
         }
-        public Builder timeoutMilliseconds(@Nullable Integer timeoutMilliseconds) {
-            this.timeoutMilliseconds = Codegen.ofNullable(timeoutMilliseconds);
-            return this;
+
+        public Builder timeoutMilliseconds(Integer timeoutMilliseconds) {
+            return timeoutMilliseconds(Output.of(timeoutMilliseconds));
         }
+
         public Builder tlsConfig(@Nullable Output<IntegrationTlsConfigGetArgs> tlsConfig) {
-            this.tlsConfig = tlsConfig;
+            $.tlsConfig = tlsConfig;
             return this;
         }
-        public Builder tlsConfig(@Nullable IntegrationTlsConfigGetArgs tlsConfig) {
-            this.tlsConfig = Codegen.ofNullable(tlsConfig);
-            return this;
+
+        public Builder tlsConfig(IntegrationTlsConfigGetArgs tlsConfig) {
+            return tlsConfig(Output.of(tlsConfig));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public IntegrationState build() {
-            return new IntegrationState(cacheKeyParameters, cacheNamespace, connectionId, connectionType, contentHandling, credentials, httpMethod, integrationHttpMethod, passthroughBehavior, requestParameters, requestTemplates, resourceId, restApi, timeoutMilliseconds, tlsConfig, type, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public IntegrationState build() {
+            return $;
         }
     }
+
 }

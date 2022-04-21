@@ -24,7 +24,7 @@ public final class WebChatSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -35,7 +35,7 @@ public final class WebChatSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isWebchatPreviewEnabled", required=true)
-      private final Output<Boolean> isWebchatPreviewEnabled;
+    private Output<Boolean> isWebchatPreviewEnabled;
 
     public Output<Boolean> isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
@@ -46,76 +46,71 @@ public final class WebChatSiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="siteName", required=true)
-      private final Output<String> siteName;
+    private Output<String> siteName;
 
     public Output<String> siteName() {
         return this.siteName;
     }
 
-    public WebChatSiteArgs(
-        Output<Boolean> isEnabled,
-        Output<Boolean> isWebchatPreviewEnabled,
-        Output<String> siteName) {
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isWebchatPreviewEnabled = Codegen.booleanProp("isWebchatPreviewEnabled").output().arg(isWebchatPreviewEnabled).def(false).require();
-        this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
-    }
+    private WebChatSiteArgs() {}
 
-    private WebChatSiteArgs() {
-        this.isEnabled = Codegen.empty();
-        this.isWebchatPreviewEnabled = Codegen.empty();
-        this.siteName = Codegen.empty();
+    private WebChatSiteArgs(WebChatSiteArgs $) {
+        this.isEnabled = $.isEnabled;
+        this.isWebchatPreviewEnabled = $.isWebchatPreviewEnabled;
+        this.siteName = $.siteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebChatSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> isEnabled;
-        private Output<Boolean> isWebchatPreviewEnabled;
-        private Output<String> siteName;
+        private WebChatSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebChatSiteArgs();
         }
 
         public Builder(WebChatSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.isWebchatPreviewEnabled = defaults.isWebchatPreviewEnabled;
-    	      this.siteName = defaults.siteName;
+            $ = new WebChatSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder isWebchatPreviewEnabled(Output<Boolean> isWebchatPreviewEnabled) {
-            this.isWebchatPreviewEnabled = Objects.requireNonNull(isWebchatPreviewEnabled);
+            $.isWebchatPreviewEnabled = isWebchatPreviewEnabled;
             return this;
         }
+
         public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
-            this.isWebchatPreviewEnabled = Output.of(Objects.requireNonNull(isWebchatPreviewEnabled));
-            return this;
+            return isWebchatPreviewEnabled(Output.of(isWebchatPreviewEnabled));
         }
+
         public Builder siteName(Output<String> siteName) {
-            this.siteName = Objects.requireNonNull(siteName);
+            $.siteName = siteName;
             return this;
         }
+
         public Builder siteName(String siteName) {
-            this.siteName = Output.of(Objects.requireNonNull(siteName));
-            return this;
-        }        public WebChatSiteArgs build() {
-            return new WebChatSiteArgs(isEnabled, isWebchatPreviewEnabled, siteName);
+            return siteName(Output.of(siteName));
+        }
+
+        public WebChatSiteArgs build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.isWebchatPreviewEnabled = Codegen.booleanProp("isWebchatPreviewEnabled").output().arg($.isWebchatPreviewEnabled).def(false).require();
+            $.siteName = Objects.requireNonNull($.siteName, "expected parameter 'siteName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="accountKey", required=true)
-      private final Output<String> accountKey;
+    private Output<String> accountKey;
 
     public Output<String> accountKey() {
         return this.accountKey;
@@ -34,7 +34,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -46,76 +46,71 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storageType", required=true)
-      private final Output<String> storageType;
+    private Output<String> storageType;
 
     public Output<String> storageType() {
         return this.storageType;
     }
 
-    public StorageAccountArgs(
-        Output<String> accountKey,
-        Output<String> accountName,
-        Output<String> storageType) {
-        this.accountKey = Objects.requireNonNull(accountKey, "expected parameter 'accountKey' to be non-null");
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.storageType = Codegen.stringProp("storageType").output().arg(storageType).require();
-    }
+    private StorageAccountArgs() {}
 
-    private StorageAccountArgs() {
-        this.accountKey = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.storageType = Codegen.empty();
+    private StorageAccountArgs(StorageAccountArgs $) {
+        this.accountKey = $.accountKey;
+        this.accountName = $.accountName;
+        this.storageType = $.storageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountKey;
-        private Output<String> accountName;
-        private Output<String> storageType;
+        private StorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountArgs();
         }
 
         public Builder(StorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountName = defaults.accountName;
-    	      this.storageType = defaults.storageType;
+            $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(Output<String> accountKey) {
-            this.accountKey = Objects.requireNonNull(accountKey);
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder accountKey(String accountKey) {
-            this.accountKey = Output.of(Objects.requireNonNull(accountKey));
-            return this;
+            return accountKey(Output.of(accountKey));
         }
+
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder storageType(Output<String> storageType) {
-            this.storageType = Objects.requireNonNull(storageType);
+            $.storageType = storageType;
             return this;
         }
+
         public Builder storageType(String storageType) {
-            this.storageType = Output.of(Objects.requireNonNull(storageType));
-            return this;
-        }        public StorageAccountArgs build() {
-            return new StorageAccountArgs(accountKey, accountName, storageType);
+            return storageType(Output.of(storageType));
+        }
+
+        public StorageAccountArgs build() {
+            $.accountKey = Objects.requireNonNull($.accountKey, "expected parameter 'accountKey' to be non-null");
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.storageType = Codegen.stringProp("storageType").output().arg($.storageType).require();
+            return $;
         }
     }
+
 }

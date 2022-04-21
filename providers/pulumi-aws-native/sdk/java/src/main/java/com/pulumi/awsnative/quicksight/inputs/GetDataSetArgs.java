@@ -13,62 +13,59 @@ public final class GetDataSetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDataSetArgs Empty = new GetDataSetArgs();
 
     @Import(name="awsAccountId", required=true)
-      private final String awsAccountId;
+    private String awsAccountId;
 
     public String awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="dataSetId", required=true)
-      private final String dataSetId;
+    private String dataSetId;
 
     public String dataSetId() {
         return this.dataSetId;
     }
 
-    public GetDataSetArgs(
-        String awsAccountId,
-        String dataSetId) {
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-        this.dataSetId = Objects.requireNonNull(dataSetId, "expected parameter 'dataSetId' to be non-null");
-    }
+    private GetDataSetArgs() {}
 
-    private GetDataSetArgs() {
-        this.awsAccountId = null;
-        this.dataSetId = null;
+    private GetDataSetArgs(GetDataSetArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.dataSetId = $.dataSetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String awsAccountId;
-        private String dataSetId;
+        private GetDataSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataSetArgs();
         }
 
         public Builder(GetDataSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.dataSetId = defaults.dataSetId;
+            $ = new GetDataSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder dataSetId(String dataSetId) {
-            this.dataSetId = Objects.requireNonNull(dataSetId);
+            $.dataSetId = dataSetId;
             return this;
-        }        public GetDataSetArgs build() {
-            return new GetDataSetArgs(awsAccountId, dataSetId);
+        }
+
+        public GetDataSetArgs build() {
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            $.dataSetId = Objects.requireNonNull($.dataSetId, "expected parameter 'dataSetId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="detailStatus", required=true)
-      private final String detailStatus;
+    private String detailStatus;
 
     public String detailStatus() {
         return this.detailStatus;
@@ -33,7 +33,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exitCode", required=true)
-      private final Integer exitCode;
+    private Integer exitCode;
 
     public Integer exitCode() {
         return this.exitCode;
@@ -44,7 +44,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="finishTime", required=true)
-      private final String finishTime;
+    private String finishTime;
 
     public String finishTime() {
         return this.finishTime;
@@ -55,7 +55,7 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -66,82 +66,73 @@ public final class ContainerStateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public ContainerStateResponse(
-        String detailStatus,
-        Integer exitCode,
-        String finishTime,
-        String startTime,
-        String state) {
-        this.detailStatus = Objects.requireNonNull(detailStatus, "expected parameter 'detailStatus' to be non-null");
-        this.exitCode = Objects.requireNonNull(exitCode, "expected parameter 'exitCode' to be non-null");
-        this.finishTime = Objects.requireNonNull(finishTime, "expected parameter 'finishTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private ContainerStateResponse() {}
 
-    private ContainerStateResponse() {
-        this.detailStatus = null;
-        this.exitCode = null;
-        this.finishTime = null;
-        this.startTime = null;
-        this.state = null;
+    private ContainerStateResponse(ContainerStateResponse $) {
+        this.detailStatus = $.detailStatus;
+        this.exitCode = $.exitCode;
+        this.finishTime = $.finishTime;
+        this.startTime = $.startTime;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String detailStatus;
-        private Integer exitCode;
-        private String finishTime;
-        private String startTime;
-        private String state;
+        private ContainerStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerStateResponse();
         }
 
         public Builder(ContainerStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detailStatus = defaults.detailStatus;
-    	      this.exitCode = defaults.exitCode;
-    	      this.finishTime = defaults.finishTime;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
+            $ = new ContainerStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder detailStatus(String detailStatus) {
-            this.detailStatus = Objects.requireNonNull(detailStatus);
+            $.detailStatus = detailStatus;
             return this;
         }
+
         public Builder exitCode(Integer exitCode) {
-            this.exitCode = Objects.requireNonNull(exitCode);
+            $.exitCode = exitCode;
             return this;
         }
+
         public Builder finishTime(String finishTime) {
-            this.finishTime = Objects.requireNonNull(finishTime);
+            $.finishTime = finishTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public ContainerStateResponse build() {
-            return new ContainerStateResponse(detailStatus, exitCode, finishTime, startTime, state);
+        }
+
+        public ContainerStateResponse build() {
+            $.detailStatus = Objects.requireNonNull($.detailStatus, "expected parameter 'detailStatus' to be non-null");
+            $.exitCode = Objects.requireNonNull($.exitCode, "expected parameter 'exitCode' to be non-null");
+            $.finishTime = Objects.requireNonNull($.finishTime, "expected parameter 'finishTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

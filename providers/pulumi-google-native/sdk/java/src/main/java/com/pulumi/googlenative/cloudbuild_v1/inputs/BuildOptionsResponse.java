@@ -25,7 +25,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final String diskSizeGb;
+    private String diskSizeGb;
 
     public String diskSizeGb() {
         return this.diskSizeGb;
@@ -36,7 +36,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dynamicSubstitutions", required=true)
-      private final Boolean dynamicSubstitutions;
+    private Boolean dynamicSubstitutions;
 
     public Boolean dynamicSubstitutions() {
         return this.dynamicSubstitutions;
@@ -47,7 +47,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="env", required=true)
-      private final List<String> env;
+    private List<String> env;
 
     public List<String> env() {
         return this.env;
@@ -58,7 +58,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="logStreamingOption", required=true)
-      private final String logStreamingOption;
+    private String logStreamingOption;
 
     public String logStreamingOption() {
         return this.logStreamingOption;
@@ -69,7 +69,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="logging", required=true)
-      private final String logging;
+    private String logging;
 
     public String logging() {
         return this.logging;
@@ -80,7 +80,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -91,7 +91,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="pool", required=true)
-      private final PoolOptionResponse pool;
+    private PoolOptionResponse pool;
 
     public PoolOptionResponse pool() {
         return this.pool;
@@ -102,7 +102,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="requestedVerifyOption", required=true)
-      private final String requestedVerifyOption;
+    private String requestedVerifyOption;
 
     public String requestedVerifyOption() {
         return this.requestedVerifyOption;
@@ -113,7 +113,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secretEnv", required=true)
-      private final List<String> secretEnv;
+    private List<String> secretEnv;
 
     public List<String> secretEnv() {
         return this.secretEnv;
@@ -124,7 +124,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceProvenanceHash", required=true)
-      private final List<String> sourceProvenanceHash;
+    private List<String> sourceProvenanceHash;
 
     public List<String> sourceProvenanceHash() {
         return this.sourceProvenanceHash;
@@ -135,7 +135,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="substitutionOption", required=true)
-      private final String substitutionOption;
+    private String substitutionOption;
 
     public String substitutionOption() {
         return this.substitutionOption;
@@ -146,7 +146,7 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="volumes", required=true)
-      private final List<VolumeResponse> volumes;
+    private List<VolumeResponse> volumes;
 
     public List<VolumeResponse> volumes() {
         return this.volumes;
@@ -157,166 +157,145 @@ public final class BuildOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="workerPool", required=true)
-      private final String workerPool;
+    private String workerPool;
 
     public String workerPool() {
         return this.workerPool;
     }
 
-    public BuildOptionsResponse(
-        String diskSizeGb,
-        Boolean dynamicSubstitutions,
-        List<String> env,
-        String logStreamingOption,
-        String logging,
-        String machineType,
-        PoolOptionResponse pool,
-        String requestedVerifyOption,
-        List<String> secretEnv,
-        List<String> sourceProvenanceHash,
-        String substitutionOption,
-        List<VolumeResponse> volumes,
-        String workerPool) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.dynamicSubstitutions = Objects.requireNonNull(dynamicSubstitutions, "expected parameter 'dynamicSubstitutions' to be non-null");
-        this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
-        this.logStreamingOption = Objects.requireNonNull(logStreamingOption, "expected parameter 'logStreamingOption' to be non-null");
-        this.logging = Objects.requireNonNull(logging, "expected parameter 'logging' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.pool = Objects.requireNonNull(pool, "expected parameter 'pool' to be non-null");
-        this.requestedVerifyOption = Objects.requireNonNull(requestedVerifyOption, "expected parameter 'requestedVerifyOption' to be non-null");
-        this.secretEnv = Objects.requireNonNull(secretEnv, "expected parameter 'secretEnv' to be non-null");
-        this.sourceProvenanceHash = Objects.requireNonNull(sourceProvenanceHash, "expected parameter 'sourceProvenanceHash' to be non-null");
-        this.substitutionOption = Objects.requireNonNull(substitutionOption, "expected parameter 'substitutionOption' to be non-null");
-        this.volumes = Objects.requireNonNull(volumes, "expected parameter 'volumes' to be non-null");
-        this.workerPool = Objects.requireNonNull(workerPool, "expected parameter 'workerPool' to be non-null");
-    }
+    private BuildOptionsResponse() {}
 
-    private BuildOptionsResponse() {
-        this.diskSizeGb = null;
-        this.dynamicSubstitutions = null;
-        this.env = List.of();
-        this.logStreamingOption = null;
-        this.logging = null;
-        this.machineType = null;
-        this.pool = null;
-        this.requestedVerifyOption = null;
-        this.secretEnv = List.of();
-        this.sourceProvenanceHash = List.of();
-        this.substitutionOption = null;
-        this.volumes = List.of();
-        this.workerPool = null;
+    private BuildOptionsResponse(BuildOptionsResponse $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.dynamicSubstitutions = $.dynamicSubstitutions;
+        this.env = $.env;
+        this.logStreamingOption = $.logStreamingOption;
+        this.logging = $.logging;
+        this.machineType = $.machineType;
+        this.pool = $.pool;
+        this.requestedVerifyOption = $.requestedVerifyOption;
+        this.secretEnv = $.secretEnv;
+        this.sourceProvenanceHash = $.sourceProvenanceHash;
+        this.substitutionOption = $.substitutionOption;
+        this.volumes = $.volumes;
+        this.workerPool = $.workerPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskSizeGb;
-        private Boolean dynamicSubstitutions;
-        private List<String> env;
-        private String logStreamingOption;
-        private String logging;
-        private String machineType;
-        private PoolOptionResponse pool;
-        private String requestedVerifyOption;
-        private List<String> secretEnv;
-        private List<String> sourceProvenanceHash;
-        private String substitutionOption;
-        private List<VolumeResponse> volumes;
-        private String workerPool;
+        private BuildOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildOptionsResponse();
         }
 
         public Builder(BuildOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.dynamicSubstitutions = defaults.dynamicSubstitutions;
-    	      this.env = defaults.env;
-    	      this.logStreamingOption = defaults.logStreamingOption;
-    	      this.logging = defaults.logging;
-    	      this.machineType = defaults.machineType;
-    	      this.pool = defaults.pool;
-    	      this.requestedVerifyOption = defaults.requestedVerifyOption;
-    	      this.secretEnv = defaults.secretEnv;
-    	      this.sourceProvenanceHash = defaults.sourceProvenanceHash;
-    	      this.substitutionOption = defaults.substitutionOption;
-    	      this.volumes = defaults.volumes;
-    	      this.workerPool = defaults.workerPool;
+            $ = new BuildOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(String diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder dynamicSubstitutions(Boolean dynamicSubstitutions) {
-            this.dynamicSubstitutions = Objects.requireNonNull(dynamicSubstitutions);
+            $.dynamicSubstitutions = dynamicSubstitutions;
             return this;
         }
+
         public Builder env(List<String> env) {
-            this.env = Objects.requireNonNull(env);
+            $.env = env;
             return this;
         }
+
         public Builder env(String... env) {
             return env(List.of(env));
         }
+
         public Builder logStreamingOption(String logStreamingOption) {
-            this.logStreamingOption = Objects.requireNonNull(logStreamingOption);
+            $.logStreamingOption = logStreamingOption;
             return this;
         }
+
         public Builder logging(String logging) {
-            this.logging = Objects.requireNonNull(logging);
+            $.logging = logging;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder pool(PoolOptionResponse pool) {
-            this.pool = Objects.requireNonNull(pool);
+            $.pool = pool;
             return this;
         }
+
         public Builder requestedVerifyOption(String requestedVerifyOption) {
-            this.requestedVerifyOption = Objects.requireNonNull(requestedVerifyOption);
+            $.requestedVerifyOption = requestedVerifyOption;
             return this;
         }
+
         public Builder secretEnv(List<String> secretEnv) {
-            this.secretEnv = Objects.requireNonNull(secretEnv);
+            $.secretEnv = secretEnv;
             return this;
         }
+
         public Builder secretEnv(String... secretEnv) {
             return secretEnv(List.of(secretEnv));
         }
+
         public Builder sourceProvenanceHash(List<String> sourceProvenanceHash) {
-            this.sourceProvenanceHash = Objects.requireNonNull(sourceProvenanceHash);
+            $.sourceProvenanceHash = sourceProvenanceHash;
             return this;
         }
+
         public Builder sourceProvenanceHash(String... sourceProvenanceHash) {
             return sourceProvenanceHash(List.of(sourceProvenanceHash));
         }
+
         public Builder substitutionOption(String substitutionOption) {
-            this.substitutionOption = Objects.requireNonNull(substitutionOption);
+            $.substitutionOption = substitutionOption;
             return this;
         }
+
         public Builder volumes(List<VolumeResponse> volumes) {
-            this.volumes = Objects.requireNonNull(volumes);
+            $.volumes = volumes;
             return this;
         }
+
         public Builder volumes(VolumeResponse... volumes) {
             return volumes(List.of(volumes));
         }
+
         public Builder workerPool(String workerPool) {
-            this.workerPool = Objects.requireNonNull(workerPool);
+            $.workerPool = workerPool;
             return this;
-        }        public BuildOptionsResponse build() {
-            return new BuildOptionsResponse(diskSizeGb, dynamicSubstitutions, env, logStreamingOption, logging, machineType, pool, requestedVerifyOption, secretEnv, sourceProvenanceHash, substitutionOption, volumes, workerPool);
+        }
+
+        public BuildOptionsResponse build() {
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.dynamicSubstitutions = Objects.requireNonNull($.dynamicSubstitutions, "expected parameter 'dynamicSubstitutions' to be non-null");
+            $.env = Objects.requireNonNull($.env, "expected parameter 'env' to be non-null");
+            $.logStreamingOption = Objects.requireNonNull($.logStreamingOption, "expected parameter 'logStreamingOption' to be non-null");
+            $.logging = Objects.requireNonNull($.logging, "expected parameter 'logging' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.pool = Objects.requireNonNull($.pool, "expected parameter 'pool' to be non-null");
+            $.requestedVerifyOption = Objects.requireNonNull($.requestedVerifyOption, "expected parameter 'requestedVerifyOption' to be non-null");
+            $.secretEnv = Objects.requireNonNull($.secretEnv, "expected parameter 'secretEnv' to be non-null");
+            $.sourceProvenanceHash = Objects.requireNonNull($.sourceProvenanceHash, "expected parameter 'sourceProvenanceHash' to be non-null");
+            $.substitutionOption = Objects.requireNonNull($.substitutionOption, "expected parameter 'substitutionOption' to be non-null");
+            $.volumes = Objects.requireNonNull($.volumes, "expected parameter 'volumes' to be non-null");
+            $.workerPool = Objects.requireNonNull($.workerPool, "expected parameter 'workerPool' to be non-null");
+            return $;
         }
     }
+
 }

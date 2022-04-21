@@ -27,7 +27,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="completionRatio", required=true)
-      private final Double completionRatio;
+    private Double completionRatio;
 
     public Double completionRatio() {
         return this.completionRatio;
@@ -38,7 +38,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="creationTime", required=true)
-      private final String creationTime;
+    private String creationTime;
 
     public String creationTime() {
         return this.creationTime;
@@ -49,7 +49,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -60,7 +60,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="extract", required=true)
-      private final JobStatistics4Response extract;
+    private JobStatistics4Response extract;
 
     public JobStatistics4Response extract() {
         return this.extract;
@@ -71,7 +71,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="load", required=true)
-      private final JobStatistics3Response load;
+    private JobStatistics3Response load;
 
     public JobStatistics3Response load() {
         return this.load;
@@ -82,7 +82,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="numChildJobs", required=true)
-      private final String numChildJobs;
+    private String numChildJobs;
 
     public String numChildJobs() {
         return this.numChildJobs;
@@ -93,7 +93,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="parentJobId", required=true)
-      private final String parentJobId;
+    private String parentJobId;
 
     public String parentJobId() {
         return this.parentJobId;
@@ -104,7 +104,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="query", required=true)
-      private final JobStatistics2Response query;
+    private JobStatistics2Response query;
 
     public JobStatistics2Response query() {
         return this.query;
@@ -115,7 +115,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="quotaDeferments", required=true)
-      private final List<String> quotaDeferments;
+    private List<String> quotaDeferments;
 
     public List<String> quotaDeferments() {
         return this.quotaDeferments;
@@ -126,7 +126,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="reservationId", required=true)
-      private final String reservationId;
+    private String reservationId;
 
     public String reservationId() {
         return this.reservationId;
@@ -137,7 +137,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="reservationUsage", required=true)
-      private final List<JobStatisticsReservationUsageItemResponse> reservationUsage;
+    private List<JobStatisticsReservationUsageItemResponse> reservationUsage;
 
     public List<JobStatisticsReservationUsageItemResponse> reservationUsage() {
         return this.reservationUsage;
@@ -148,7 +148,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rowLevelSecurityStatistics", required=true)
-      private final RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics;
+    private RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics;
 
     public RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics() {
         return this.rowLevelSecurityStatistics;
@@ -159,7 +159,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scriptStatistics", required=true)
-      private final ScriptStatisticsResponse scriptStatistics;
+    private ScriptStatisticsResponse scriptStatistics;
 
     public ScriptStatisticsResponse scriptStatistics() {
         return this.scriptStatistics;
@@ -170,7 +170,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sessionInfo", required=true)
-      private final SessionInfoResponse sessionInfo;
+    private SessionInfoResponse sessionInfo;
 
     public SessionInfoResponse sessionInfo() {
         return this.sessionInfo;
@@ -181,7 +181,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -192,7 +192,7 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="totalSlotMs", required=true)
-      private final String totalSlotMs;
+    private String totalSlotMs;
 
     public String totalSlotMs() {
         return this.totalSlotMs;
@@ -203,196 +203,165 @@ public final class JobStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="transactionInfo", required=true)
-      private final TransactionInfoResponse transactionInfo;
+    private TransactionInfoResponse transactionInfo;
 
     public TransactionInfoResponse transactionInfo() {
         return this.transactionInfo;
     }
 
-    public JobStatisticsResponse(
-        Double completionRatio,
-        String creationTime,
-        String endTime,
-        JobStatistics4Response extract,
-        JobStatistics3Response load,
-        String numChildJobs,
-        String parentJobId,
-        JobStatistics2Response query,
-        List<String> quotaDeferments,
-        String reservationId,
-        List<JobStatisticsReservationUsageItemResponse> reservationUsage,
-        RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics,
-        ScriptStatisticsResponse scriptStatistics,
-        SessionInfoResponse sessionInfo,
-        String startTime,
-        String totalSlotMs,
-        TransactionInfoResponse transactionInfo) {
-        this.completionRatio = Objects.requireNonNull(completionRatio, "expected parameter 'completionRatio' to be non-null");
-        this.creationTime = Objects.requireNonNull(creationTime, "expected parameter 'creationTime' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.extract = Objects.requireNonNull(extract, "expected parameter 'extract' to be non-null");
-        this.load = Objects.requireNonNull(load, "expected parameter 'load' to be non-null");
-        this.numChildJobs = Objects.requireNonNull(numChildJobs, "expected parameter 'numChildJobs' to be non-null");
-        this.parentJobId = Objects.requireNonNull(parentJobId, "expected parameter 'parentJobId' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.quotaDeferments = Objects.requireNonNull(quotaDeferments, "expected parameter 'quotaDeferments' to be non-null");
-        this.reservationId = Objects.requireNonNull(reservationId, "expected parameter 'reservationId' to be non-null");
-        this.reservationUsage = Objects.requireNonNull(reservationUsage, "expected parameter 'reservationUsage' to be non-null");
-        this.rowLevelSecurityStatistics = Objects.requireNonNull(rowLevelSecurityStatistics, "expected parameter 'rowLevelSecurityStatistics' to be non-null");
-        this.scriptStatistics = Objects.requireNonNull(scriptStatistics, "expected parameter 'scriptStatistics' to be non-null");
-        this.sessionInfo = Objects.requireNonNull(sessionInfo, "expected parameter 'sessionInfo' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.totalSlotMs = Objects.requireNonNull(totalSlotMs, "expected parameter 'totalSlotMs' to be non-null");
-        this.transactionInfo = Objects.requireNonNull(transactionInfo, "expected parameter 'transactionInfo' to be non-null");
-    }
+    private JobStatisticsResponse() {}
 
-    private JobStatisticsResponse() {
-        this.completionRatio = null;
-        this.creationTime = null;
-        this.endTime = null;
-        this.extract = null;
-        this.load = null;
-        this.numChildJobs = null;
-        this.parentJobId = null;
-        this.query = null;
-        this.quotaDeferments = List.of();
-        this.reservationId = null;
-        this.reservationUsage = List.of();
-        this.rowLevelSecurityStatistics = null;
-        this.scriptStatistics = null;
-        this.sessionInfo = null;
-        this.startTime = null;
-        this.totalSlotMs = null;
-        this.transactionInfo = null;
+    private JobStatisticsResponse(JobStatisticsResponse $) {
+        this.completionRatio = $.completionRatio;
+        this.creationTime = $.creationTime;
+        this.endTime = $.endTime;
+        this.extract = $.extract;
+        this.load = $.load;
+        this.numChildJobs = $.numChildJobs;
+        this.parentJobId = $.parentJobId;
+        this.query = $.query;
+        this.quotaDeferments = $.quotaDeferments;
+        this.reservationId = $.reservationId;
+        this.reservationUsage = $.reservationUsage;
+        this.rowLevelSecurityStatistics = $.rowLevelSecurityStatistics;
+        this.scriptStatistics = $.scriptStatistics;
+        this.sessionInfo = $.sessionInfo;
+        this.startTime = $.startTime;
+        this.totalSlotMs = $.totalSlotMs;
+        this.transactionInfo = $.transactionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double completionRatio;
-        private String creationTime;
-        private String endTime;
-        private JobStatistics4Response extract;
-        private JobStatistics3Response load;
-        private String numChildJobs;
-        private String parentJobId;
-        private JobStatistics2Response query;
-        private List<String> quotaDeferments;
-        private String reservationId;
-        private List<JobStatisticsReservationUsageItemResponse> reservationUsage;
-        private RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics;
-        private ScriptStatisticsResponse scriptStatistics;
-        private SessionInfoResponse sessionInfo;
-        private String startTime;
-        private String totalSlotMs;
-        private TransactionInfoResponse transactionInfo;
+        private JobStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatisticsResponse();
         }
 
         public Builder(JobStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completionRatio = defaults.completionRatio;
-    	      this.creationTime = defaults.creationTime;
-    	      this.endTime = defaults.endTime;
-    	      this.extract = defaults.extract;
-    	      this.load = defaults.load;
-    	      this.numChildJobs = defaults.numChildJobs;
-    	      this.parentJobId = defaults.parentJobId;
-    	      this.query = defaults.query;
-    	      this.quotaDeferments = defaults.quotaDeferments;
-    	      this.reservationId = defaults.reservationId;
-    	      this.reservationUsage = defaults.reservationUsage;
-    	      this.rowLevelSecurityStatistics = defaults.rowLevelSecurityStatistics;
-    	      this.scriptStatistics = defaults.scriptStatistics;
-    	      this.sessionInfo = defaults.sessionInfo;
-    	      this.startTime = defaults.startTime;
-    	      this.totalSlotMs = defaults.totalSlotMs;
-    	      this.transactionInfo = defaults.transactionInfo;
+            $ = new JobStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder completionRatio(Double completionRatio) {
-            this.completionRatio = Objects.requireNonNull(completionRatio);
+            $.completionRatio = completionRatio;
             return this;
         }
+
         public Builder creationTime(String creationTime) {
-            this.creationTime = Objects.requireNonNull(creationTime);
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder extract(JobStatistics4Response extract) {
-            this.extract = Objects.requireNonNull(extract);
+            $.extract = extract;
             return this;
         }
+
         public Builder load(JobStatistics3Response load) {
-            this.load = Objects.requireNonNull(load);
+            $.load = load;
             return this;
         }
+
         public Builder numChildJobs(String numChildJobs) {
-            this.numChildJobs = Objects.requireNonNull(numChildJobs);
+            $.numChildJobs = numChildJobs;
             return this;
         }
+
         public Builder parentJobId(String parentJobId) {
-            this.parentJobId = Objects.requireNonNull(parentJobId);
+            $.parentJobId = parentJobId;
             return this;
         }
+
         public Builder query(JobStatistics2Response query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder quotaDeferments(List<String> quotaDeferments) {
-            this.quotaDeferments = Objects.requireNonNull(quotaDeferments);
+            $.quotaDeferments = quotaDeferments;
             return this;
         }
+
         public Builder quotaDeferments(String... quotaDeferments) {
             return quotaDeferments(List.of(quotaDeferments));
         }
+
         public Builder reservationId(String reservationId) {
-            this.reservationId = Objects.requireNonNull(reservationId);
+            $.reservationId = reservationId;
             return this;
         }
+
         public Builder reservationUsage(List<JobStatisticsReservationUsageItemResponse> reservationUsage) {
-            this.reservationUsage = Objects.requireNonNull(reservationUsage);
+            $.reservationUsage = reservationUsage;
             return this;
         }
+
         public Builder reservationUsage(JobStatisticsReservationUsageItemResponse... reservationUsage) {
             return reservationUsage(List.of(reservationUsage));
         }
+
         public Builder rowLevelSecurityStatistics(RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics) {
-            this.rowLevelSecurityStatistics = Objects.requireNonNull(rowLevelSecurityStatistics);
+            $.rowLevelSecurityStatistics = rowLevelSecurityStatistics;
             return this;
         }
+
         public Builder scriptStatistics(ScriptStatisticsResponse scriptStatistics) {
-            this.scriptStatistics = Objects.requireNonNull(scriptStatistics);
+            $.scriptStatistics = scriptStatistics;
             return this;
         }
+
         public Builder sessionInfo(SessionInfoResponse sessionInfo) {
-            this.sessionInfo = Objects.requireNonNull(sessionInfo);
+            $.sessionInfo = sessionInfo;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder totalSlotMs(String totalSlotMs) {
-            this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
+            $.totalSlotMs = totalSlotMs;
             return this;
         }
+
         public Builder transactionInfo(TransactionInfoResponse transactionInfo) {
-            this.transactionInfo = Objects.requireNonNull(transactionInfo);
+            $.transactionInfo = transactionInfo;
             return this;
-        }        public JobStatisticsResponse build() {
-            return new JobStatisticsResponse(completionRatio, creationTime, endTime, extract, load, numChildJobs, parentJobId, query, quotaDeferments, reservationId, reservationUsage, rowLevelSecurityStatistics, scriptStatistics, sessionInfo, startTime, totalSlotMs, transactionInfo);
+        }
+
+        public JobStatisticsResponse build() {
+            $.completionRatio = Objects.requireNonNull($.completionRatio, "expected parameter 'completionRatio' to be non-null");
+            $.creationTime = Objects.requireNonNull($.creationTime, "expected parameter 'creationTime' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.extract = Objects.requireNonNull($.extract, "expected parameter 'extract' to be non-null");
+            $.load = Objects.requireNonNull($.load, "expected parameter 'load' to be non-null");
+            $.numChildJobs = Objects.requireNonNull($.numChildJobs, "expected parameter 'numChildJobs' to be non-null");
+            $.parentJobId = Objects.requireNonNull($.parentJobId, "expected parameter 'parentJobId' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.quotaDeferments = Objects.requireNonNull($.quotaDeferments, "expected parameter 'quotaDeferments' to be non-null");
+            $.reservationId = Objects.requireNonNull($.reservationId, "expected parameter 'reservationId' to be non-null");
+            $.reservationUsage = Objects.requireNonNull($.reservationUsage, "expected parameter 'reservationUsage' to be non-null");
+            $.rowLevelSecurityStatistics = Objects.requireNonNull($.rowLevelSecurityStatistics, "expected parameter 'rowLevelSecurityStatistics' to be non-null");
+            $.scriptStatistics = Objects.requireNonNull($.scriptStatistics, "expected parameter 'scriptStatistics' to be non-null");
+            $.sessionInfo = Objects.requireNonNull($.sessionInfo, "expected parameter 'sessionInfo' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.totalSlotMs = Objects.requireNonNull($.totalSlotMs, "expected parameter 'totalSlotMs' to be non-null");
+            $.transactionInfo = Objects.requireNonNull($.transactionInfo, "expected parameter 'transactionInfo' to be non-null");
+            return $;
         }
     }
+
 }

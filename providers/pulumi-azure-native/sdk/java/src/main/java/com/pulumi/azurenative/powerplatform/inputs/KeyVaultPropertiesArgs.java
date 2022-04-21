@@ -6,9 +6,9 @@ package com.pulumi.azurenative.powerplatform.inputs;
 import com.pulumi.azurenative.powerplatform.inputs.KeyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<KeyPropertiesArgs> key;
+    private @Nullable Output<KeyPropertiesArgs> key;
 
-    public Output<KeyPropertiesArgs> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<KeyPropertiesArgs>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public KeyVaultPropertiesArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<KeyPropertiesArgs> key) {
-        this.id = id;
-        this.key = key;
-    }
+    private KeyVaultPropertiesArgs() {}
 
-    private KeyVaultPropertiesArgs() {
-        this.id = Codegen.empty();
-        this.key = Codegen.empty();
+    private KeyVaultPropertiesArgs(KeyVaultPropertiesArgs $) {
+        this.id = $.id;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<KeyPropertiesArgs> key;
+        private KeyVaultPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesArgs();
         }
 
         public Builder(KeyVaultPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.key = defaults.key;
+            $ = new KeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder key(@Nullable Output<KeyPropertiesArgs> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable KeyPropertiesArgs key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public KeyVaultPropertiesArgs build() {
-            return new KeyVaultPropertiesArgs(id, key);
+
+        public Builder key(KeyPropertiesArgs key) {
+            return key(Output.of(key));
+        }
+
+        public KeyVaultPropertiesArgs build() {
+            return $;
         }
     }
+
 }

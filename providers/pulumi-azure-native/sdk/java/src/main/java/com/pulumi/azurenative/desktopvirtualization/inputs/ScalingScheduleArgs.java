@@ -8,12 +8,12 @@ import com.pulumi.azurenative.desktopvirtualization.enums.StopHostsWhen;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="daysOfWeek")
-      private final @Nullable Output<List<String>> daysOfWeek;
+    private @Nullable Output<List<String>> daysOfWeek;
 
-    public Output<List<String>> daysOfWeek() {
-        return this.daysOfWeek == null ? Codegen.empty() : this.daysOfWeek;
+    public Optional<Output<List<String>>> daysOfWeek() {
+        return Optional.ofNullable(this.daysOfWeek);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="offPeakLoadBalancingAlgorithm")
-      private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm;
+    private @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm;
 
-    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm() {
-        return this.offPeakLoadBalancingAlgorithm == null ? Codegen.empty() : this.offPeakLoadBalancingAlgorithm;
+    public Optional<Output<Either<String,SessionHostLoadBalancingAlgorithm>>> offPeakLoadBalancingAlgorithm() {
+        return Optional.ofNullable(this.offPeakLoadBalancingAlgorithm);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="offPeakStartTime")
-      private final @Nullable Output<String> offPeakStartTime;
+    private @Nullable Output<String> offPeakStartTime;
 
-    public Output<String> offPeakStartTime() {
-        return this.offPeakStartTime == null ? Codegen.empty() : this.offPeakStartTime;
+    public Optional<Output<String>> offPeakStartTime() {
+        return Optional.ofNullable(this.offPeakStartTime);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="peakLoadBalancingAlgorithm")
-      private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm;
+    private @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm;
 
-    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm() {
-        return this.peakLoadBalancingAlgorithm == null ? Codegen.empty() : this.peakLoadBalancingAlgorithm;
+    public Optional<Output<Either<String,SessionHostLoadBalancingAlgorithm>>> peakLoadBalancingAlgorithm() {
+        return Optional.ofNullable(this.peakLoadBalancingAlgorithm);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="peakStartTime")
-      private final @Nullable Output<String> peakStartTime;
+    private @Nullable Output<String> peakStartTime;
 
-    public Output<String> peakStartTime() {
-        return this.peakStartTime == null ? Codegen.empty() : this.peakStartTime;
+    public Optional<Output<String>> peakStartTime() {
+        return Optional.ofNullable(this.peakStartTime);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampDownCapacityThresholdPct")
-      private final @Nullable Output<Integer> rampDownCapacityThresholdPct;
+    private @Nullable Output<Integer> rampDownCapacityThresholdPct;
 
-    public Output<Integer> rampDownCapacityThresholdPct() {
-        return this.rampDownCapacityThresholdPct == null ? Codegen.empty() : this.rampDownCapacityThresholdPct;
+    public Optional<Output<Integer>> rampDownCapacityThresholdPct() {
+        return Optional.ofNullable(this.rampDownCapacityThresholdPct);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampDownForceLogoffUsers")
-      private final @Nullable Output<Boolean> rampDownForceLogoffUsers;
+    private @Nullable Output<Boolean> rampDownForceLogoffUsers;
 
-    public Output<Boolean> rampDownForceLogoffUsers() {
-        return this.rampDownForceLogoffUsers == null ? Codegen.empty() : this.rampDownForceLogoffUsers;
+    public Optional<Output<Boolean>> rampDownForceLogoffUsers() {
+        return Optional.ofNullable(this.rampDownForceLogoffUsers);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampDownLoadBalancingAlgorithm")
-      private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm;
+    private @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm;
 
-    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm() {
-        return this.rampDownLoadBalancingAlgorithm == null ? Codegen.empty() : this.rampDownLoadBalancingAlgorithm;
+    public Optional<Output<Either<String,SessionHostLoadBalancingAlgorithm>>> rampDownLoadBalancingAlgorithm() {
+        return Optional.ofNullable(this.rampDownLoadBalancingAlgorithm);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampDownMinimumHostsPct")
-      private final @Nullable Output<Integer> rampDownMinimumHostsPct;
+    private @Nullable Output<Integer> rampDownMinimumHostsPct;
 
-    public Output<Integer> rampDownMinimumHostsPct() {
-        return this.rampDownMinimumHostsPct == null ? Codegen.empty() : this.rampDownMinimumHostsPct;
+    public Optional<Output<Integer>> rampDownMinimumHostsPct() {
+        return Optional.ofNullable(this.rampDownMinimumHostsPct);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampDownNotificationMessage")
-      private final @Nullable Output<String> rampDownNotificationMessage;
+    private @Nullable Output<String> rampDownNotificationMessage;
 
-    public Output<String> rampDownNotificationMessage() {
-        return this.rampDownNotificationMessage == null ? Codegen.empty() : this.rampDownNotificationMessage;
+    public Optional<Output<String>> rampDownNotificationMessage() {
+        return Optional.ofNullable(this.rampDownNotificationMessage);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampDownStartTime")
-      private final @Nullable Output<String> rampDownStartTime;
+    private @Nullable Output<String> rampDownStartTime;
 
-    public Output<String> rampDownStartTime() {
-        return this.rampDownStartTime == null ? Codegen.empty() : this.rampDownStartTime;
+    public Optional<Output<String>> rampDownStartTime() {
+        return Optional.ofNullable(this.rampDownStartTime);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampDownStopHostsWhen")
-      private final @Nullable Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen;
+    private @Nullable Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen;
 
-    public Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen() {
-        return this.rampDownStopHostsWhen == null ? Codegen.empty() : this.rampDownStopHostsWhen;
+    public Optional<Output<Either<String,StopHostsWhen>>> rampDownStopHostsWhen() {
+        return Optional.ofNullable(this.rampDownStopHostsWhen);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampDownWaitTimeMinutes")
-      private final @Nullable Output<Integer> rampDownWaitTimeMinutes;
+    private @Nullable Output<Integer> rampDownWaitTimeMinutes;
 
-    public Output<Integer> rampDownWaitTimeMinutes() {
-        return this.rampDownWaitTimeMinutes == null ? Codegen.empty() : this.rampDownWaitTimeMinutes;
+    public Optional<Output<Integer>> rampDownWaitTimeMinutes() {
+        return Optional.ofNullable(this.rampDownWaitTimeMinutes);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampUpCapacityThresholdPct")
-      private final @Nullable Output<Integer> rampUpCapacityThresholdPct;
+    private @Nullable Output<Integer> rampUpCapacityThresholdPct;
 
-    public Output<Integer> rampUpCapacityThresholdPct() {
-        return this.rampUpCapacityThresholdPct == null ? Codegen.empty() : this.rampUpCapacityThresholdPct;
+    public Optional<Output<Integer>> rampUpCapacityThresholdPct() {
+        return Optional.ofNullable(this.rampUpCapacityThresholdPct);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampUpLoadBalancingAlgorithm")
-      private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm;
+    private @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm;
 
-    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm() {
-        return this.rampUpLoadBalancingAlgorithm == null ? Codegen.empty() : this.rampUpLoadBalancingAlgorithm;
+    public Optional<Output<Either<String,SessionHostLoadBalancingAlgorithm>>> rampUpLoadBalancingAlgorithm() {
+        return Optional.ofNullable(this.rampUpLoadBalancingAlgorithm);
     }
 
     /**
@@ -206,10 +206,10 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampUpMinimumHostsPct")
-      private final @Nullable Output<Integer> rampUpMinimumHostsPct;
+    private @Nullable Output<Integer> rampUpMinimumHostsPct;
 
-    public Output<Integer> rampUpMinimumHostsPct() {
-        return this.rampUpMinimumHostsPct == null ? Codegen.empty() : this.rampUpMinimumHostsPct;
+    public Optional<Output<Integer>> rampUpMinimumHostsPct() {
+        return Optional.ofNullable(this.rampUpMinimumHostsPct);
     }
 
     /**
@@ -217,274 +217,222 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rampUpStartTime")
-      private final @Nullable Output<String> rampUpStartTime;
+    private @Nullable Output<String> rampUpStartTime;
 
-    public Output<String> rampUpStartTime() {
-        return this.rampUpStartTime == null ? Codegen.empty() : this.rampUpStartTime;
+    public Optional<Output<String>> rampUpStartTime() {
+        return Optional.ofNullable(this.rampUpStartTime);
     }
 
-    public ScalingScheduleArgs(
-        @Nullable Output<List<String>> daysOfWeek,
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm,
-        @Nullable Output<String> offPeakStartTime,
-        @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm,
-        @Nullable Output<String> peakStartTime,
-        @Nullable Output<Integer> rampDownCapacityThresholdPct,
-        @Nullable Output<Boolean> rampDownForceLogoffUsers,
-        @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm,
-        @Nullable Output<Integer> rampDownMinimumHostsPct,
-        @Nullable Output<String> rampDownNotificationMessage,
-        @Nullable Output<String> rampDownStartTime,
-        @Nullable Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen,
-        @Nullable Output<Integer> rampDownWaitTimeMinutes,
-        @Nullable Output<Integer> rampUpCapacityThresholdPct,
-        @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm,
-        @Nullable Output<Integer> rampUpMinimumHostsPct,
-        @Nullable Output<String> rampUpStartTime) {
-        this.daysOfWeek = daysOfWeek;
-        this.name = name;
-        this.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;
-        this.offPeakStartTime = offPeakStartTime;
-        this.peakLoadBalancingAlgorithm = peakLoadBalancingAlgorithm;
-        this.peakStartTime = peakStartTime;
-        this.rampDownCapacityThresholdPct = rampDownCapacityThresholdPct;
-        this.rampDownForceLogoffUsers = rampDownForceLogoffUsers;
-        this.rampDownLoadBalancingAlgorithm = rampDownLoadBalancingAlgorithm;
-        this.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
-        this.rampDownNotificationMessage = rampDownNotificationMessage;
-        this.rampDownStartTime = rampDownStartTime;
-        this.rampDownStopHostsWhen = rampDownStopHostsWhen;
-        this.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
-        this.rampUpCapacityThresholdPct = rampUpCapacityThresholdPct;
-        this.rampUpLoadBalancingAlgorithm = rampUpLoadBalancingAlgorithm;
-        this.rampUpMinimumHostsPct = rampUpMinimumHostsPct;
-        this.rampUpStartTime = rampUpStartTime;
-    }
+    private ScalingScheduleArgs() {}
 
-    private ScalingScheduleArgs() {
-        this.daysOfWeek = Codegen.empty();
-        this.name = Codegen.empty();
-        this.offPeakLoadBalancingAlgorithm = Codegen.empty();
-        this.offPeakStartTime = Codegen.empty();
-        this.peakLoadBalancingAlgorithm = Codegen.empty();
-        this.peakStartTime = Codegen.empty();
-        this.rampDownCapacityThresholdPct = Codegen.empty();
-        this.rampDownForceLogoffUsers = Codegen.empty();
-        this.rampDownLoadBalancingAlgorithm = Codegen.empty();
-        this.rampDownMinimumHostsPct = Codegen.empty();
-        this.rampDownNotificationMessage = Codegen.empty();
-        this.rampDownStartTime = Codegen.empty();
-        this.rampDownStopHostsWhen = Codegen.empty();
-        this.rampDownWaitTimeMinutes = Codegen.empty();
-        this.rampUpCapacityThresholdPct = Codegen.empty();
-        this.rampUpLoadBalancingAlgorithm = Codegen.empty();
-        this.rampUpMinimumHostsPct = Codegen.empty();
-        this.rampUpStartTime = Codegen.empty();
+    private ScalingScheduleArgs(ScalingScheduleArgs $) {
+        this.daysOfWeek = $.daysOfWeek;
+        this.name = $.name;
+        this.offPeakLoadBalancingAlgorithm = $.offPeakLoadBalancingAlgorithm;
+        this.offPeakStartTime = $.offPeakStartTime;
+        this.peakLoadBalancingAlgorithm = $.peakLoadBalancingAlgorithm;
+        this.peakStartTime = $.peakStartTime;
+        this.rampDownCapacityThresholdPct = $.rampDownCapacityThresholdPct;
+        this.rampDownForceLogoffUsers = $.rampDownForceLogoffUsers;
+        this.rampDownLoadBalancingAlgorithm = $.rampDownLoadBalancingAlgorithm;
+        this.rampDownMinimumHostsPct = $.rampDownMinimumHostsPct;
+        this.rampDownNotificationMessage = $.rampDownNotificationMessage;
+        this.rampDownStartTime = $.rampDownStartTime;
+        this.rampDownStopHostsWhen = $.rampDownStopHostsWhen;
+        this.rampDownWaitTimeMinutes = $.rampDownWaitTimeMinutes;
+        this.rampUpCapacityThresholdPct = $.rampUpCapacityThresholdPct;
+        this.rampUpLoadBalancingAlgorithm = $.rampUpLoadBalancingAlgorithm;
+        this.rampUpMinimumHostsPct = $.rampUpMinimumHostsPct;
+        this.rampUpStartTime = $.rampUpStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> daysOfWeek;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm;
-        private @Nullable Output<String> offPeakStartTime;
-        private @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm;
-        private @Nullable Output<String> peakStartTime;
-        private @Nullable Output<Integer> rampDownCapacityThresholdPct;
-        private @Nullable Output<Boolean> rampDownForceLogoffUsers;
-        private @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm;
-        private @Nullable Output<Integer> rampDownMinimumHostsPct;
-        private @Nullable Output<String> rampDownNotificationMessage;
-        private @Nullable Output<String> rampDownStartTime;
-        private @Nullable Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen;
-        private @Nullable Output<Integer> rampDownWaitTimeMinutes;
-        private @Nullable Output<Integer> rampUpCapacityThresholdPct;
-        private @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm;
-        private @Nullable Output<Integer> rampUpMinimumHostsPct;
-        private @Nullable Output<String> rampUpStartTime;
+        private ScalingScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingScheduleArgs();
         }
 
         public Builder(ScalingScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysOfWeek = defaults.daysOfWeek;
-    	      this.name = defaults.name;
-    	      this.offPeakLoadBalancingAlgorithm = defaults.offPeakLoadBalancingAlgorithm;
-    	      this.offPeakStartTime = defaults.offPeakStartTime;
-    	      this.peakLoadBalancingAlgorithm = defaults.peakLoadBalancingAlgorithm;
-    	      this.peakStartTime = defaults.peakStartTime;
-    	      this.rampDownCapacityThresholdPct = defaults.rampDownCapacityThresholdPct;
-    	      this.rampDownForceLogoffUsers = defaults.rampDownForceLogoffUsers;
-    	      this.rampDownLoadBalancingAlgorithm = defaults.rampDownLoadBalancingAlgorithm;
-    	      this.rampDownMinimumHostsPct = defaults.rampDownMinimumHostsPct;
-    	      this.rampDownNotificationMessage = defaults.rampDownNotificationMessage;
-    	      this.rampDownStartTime = defaults.rampDownStartTime;
-    	      this.rampDownStopHostsWhen = defaults.rampDownStopHostsWhen;
-    	      this.rampDownWaitTimeMinutes = defaults.rampDownWaitTimeMinutes;
-    	      this.rampUpCapacityThresholdPct = defaults.rampUpCapacityThresholdPct;
-    	      this.rampUpLoadBalancingAlgorithm = defaults.rampUpLoadBalancingAlgorithm;
-    	      this.rampUpMinimumHostsPct = defaults.rampUpMinimumHostsPct;
-    	      this.rampUpStartTime = defaults.rampUpStartTime;
+            $ = new ScalingScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysOfWeek(@Nullable Output<List<String>> daysOfWeek) {
-            this.daysOfWeek = daysOfWeek;
+            $.daysOfWeek = daysOfWeek;
             return this;
         }
-        public Builder daysOfWeek(@Nullable List<String> daysOfWeek) {
-            this.daysOfWeek = Codegen.ofNullable(daysOfWeek);
-            return this;
+
+        public Builder daysOfWeek(List<String> daysOfWeek) {
+            return daysOfWeek(Output.of(daysOfWeek));
         }
+
         public Builder daysOfWeek(String... daysOfWeek) {
             return daysOfWeek(List.of(daysOfWeek));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder offPeakLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm) {
-            this.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;
+            $.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;
             return this;
         }
-        public Builder offPeakLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> offPeakLoadBalancingAlgorithm) {
-            this.offPeakLoadBalancingAlgorithm = Codegen.ofNullable(offPeakLoadBalancingAlgorithm);
-            return this;
+
+        public Builder offPeakLoadBalancingAlgorithm(Either<String,SessionHostLoadBalancingAlgorithm> offPeakLoadBalancingAlgorithm) {
+            return offPeakLoadBalancingAlgorithm(Output.of(offPeakLoadBalancingAlgorithm));
         }
+
         public Builder offPeakStartTime(@Nullable Output<String> offPeakStartTime) {
-            this.offPeakStartTime = offPeakStartTime;
+            $.offPeakStartTime = offPeakStartTime;
             return this;
         }
-        public Builder offPeakStartTime(@Nullable String offPeakStartTime) {
-            this.offPeakStartTime = Codegen.ofNullable(offPeakStartTime);
-            return this;
+
+        public Builder offPeakStartTime(String offPeakStartTime) {
+            return offPeakStartTime(Output.of(offPeakStartTime));
         }
+
         public Builder peakLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm) {
-            this.peakLoadBalancingAlgorithm = peakLoadBalancingAlgorithm;
+            $.peakLoadBalancingAlgorithm = peakLoadBalancingAlgorithm;
             return this;
         }
-        public Builder peakLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> peakLoadBalancingAlgorithm) {
-            this.peakLoadBalancingAlgorithm = Codegen.ofNullable(peakLoadBalancingAlgorithm);
-            return this;
+
+        public Builder peakLoadBalancingAlgorithm(Either<String,SessionHostLoadBalancingAlgorithm> peakLoadBalancingAlgorithm) {
+            return peakLoadBalancingAlgorithm(Output.of(peakLoadBalancingAlgorithm));
         }
+
         public Builder peakStartTime(@Nullable Output<String> peakStartTime) {
-            this.peakStartTime = peakStartTime;
+            $.peakStartTime = peakStartTime;
             return this;
         }
-        public Builder peakStartTime(@Nullable String peakStartTime) {
-            this.peakStartTime = Codegen.ofNullable(peakStartTime);
-            return this;
+
+        public Builder peakStartTime(String peakStartTime) {
+            return peakStartTime(Output.of(peakStartTime));
         }
+
         public Builder rampDownCapacityThresholdPct(@Nullable Output<Integer> rampDownCapacityThresholdPct) {
-            this.rampDownCapacityThresholdPct = rampDownCapacityThresholdPct;
+            $.rampDownCapacityThresholdPct = rampDownCapacityThresholdPct;
             return this;
         }
-        public Builder rampDownCapacityThresholdPct(@Nullable Integer rampDownCapacityThresholdPct) {
-            this.rampDownCapacityThresholdPct = Codegen.ofNullable(rampDownCapacityThresholdPct);
-            return this;
+
+        public Builder rampDownCapacityThresholdPct(Integer rampDownCapacityThresholdPct) {
+            return rampDownCapacityThresholdPct(Output.of(rampDownCapacityThresholdPct));
         }
+
         public Builder rampDownForceLogoffUsers(@Nullable Output<Boolean> rampDownForceLogoffUsers) {
-            this.rampDownForceLogoffUsers = rampDownForceLogoffUsers;
+            $.rampDownForceLogoffUsers = rampDownForceLogoffUsers;
             return this;
         }
-        public Builder rampDownForceLogoffUsers(@Nullable Boolean rampDownForceLogoffUsers) {
-            this.rampDownForceLogoffUsers = Codegen.ofNullable(rampDownForceLogoffUsers);
-            return this;
+
+        public Builder rampDownForceLogoffUsers(Boolean rampDownForceLogoffUsers) {
+            return rampDownForceLogoffUsers(Output.of(rampDownForceLogoffUsers));
         }
+
         public Builder rampDownLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm) {
-            this.rampDownLoadBalancingAlgorithm = rampDownLoadBalancingAlgorithm;
+            $.rampDownLoadBalancingAlgorithm = rampDownLoadBalancingAlgorithm;
             return this;
         }
-        public Builder rampDownLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> rampDownLoadBalancingAlgorithm) {
-            this.rampDownLoadBalancingAlgorithm = Codegen.ofNullable(rampDownLoadBalancingAlgorithm);
-            return this;
+
+        public Builder rampDownLoadBalancingAlgorithm(Either<String,SessionHostLoadBalancingAlgorithm> rampDownLoadBalancingAlgorithm) {
+            return rampDownLoadBalancingAlgorithm(Output.of(rampDownLoadBalancingAlgorithm));
         }
+
         public Builder rampDownMinimumHostsPct(@Nullable Output<Integer> rampDownMinimumHostsPct) {
-            this.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
+            $.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
             return this;
         }
-        public Builder rampDownMinimumHostsPct(@Nullable Integer rampDownMinimumHostsPct) {
-            this.rampDownMinimumHostsPct = Codegen.ofNullable(rampDownMinimumHostsPct);
-            return this;
+
+        public Builder rampDownMinimumHostsPct(Integer rampDownMinimumHostsPct) {
+            return rampDownMinimumHostsPct(Output.of(rampDownMinimumHostsPct));
         }
+
         public Builder rampDownNotificationMessage(@Nullable Output<String> rampDownNotificationMessage) {
-            this.rampDownNotificationMessage = rampDownNotificationMessage;
+            $.rampDownNotificationMessage = rampDownNotificationMessage;
             return this;
         }
-        public Builder rampDownNotificationMessage(@Nullable String rampDownNotificationMessage) {
-            this.rampDownNotificationMessage = Codegen.ofNullable(rampDownNotificationMessage);
-            return this;
+
+        public Builder rampDownNotificationMessage(String rampDownNotificationMessage) {
+            return rampDownNotificationMessage(Output.of(rampDownNotificationMessage));
         }
+
         public Builder rampDownStartTime(@Nullable Output<String> rampDownStartTime) {
-            this.rampDownStartTime = rampDownStartTime;
+            $.rampDownStartTime = rampDownStartTime;
             return this;
         }
-        public Builder rampDownStartTime(@Nullable String rampDownStartTime) {
-            this.rampDownStartTime = Codegen.ofNullable(rampDownStartTime);
-            return this;
+
+        public Builder rampDownStartTime(String rampDownStartTime) {
+            return rampDownStartTime(Output.of(rampDownStartTime));
         }
+
         public Builder rampDownStopHostsWhen(@Nullable Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen) {
-            this.rampDownStopHostsWhen = rampDownStopHostsWhen;
+            $.rampDownStopHostsWhen = rampDownStopHostsWhen;
             return this;
         }
-        public Builder rampDownStopHostsWhen(@Nullable Either<String,StopHostsWhen> rampDownStopHostsWhen) {
-            this.rampDownStopHostsWhen = Codegen.ofNullable(rampDownStopHostsWhen);
-            return this;
+
+        public Builder rampDownStopHostsWhen(Either<String,StopHostsWhen> rampDownStopHostsWhen) {
+            return rampDownStopHostsWhen(Output.of(rampDownStopHostsWhen));
         }
+
         public Builder rampDownWaitTimeMinutes(@Nullable Output<Integer> rampDownWaitTimeMinutes) {
-            this.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
+            $.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
             return this;
         }
-        public Builder rampDownWaitTimeMinutes(@Nullable Integer rampDownWaitTimeMinutes) {
-            this.rampDownWaitTimeMinutes = Codegen.ofNullable(rampDownWaitTimeMinutes);
-            return this;
+
+        public Builder rampDownWaitTimeMinutes(Integer rampDownWaitTimeMinutes) {
+            return rampDownWaitTimeMinutes(Output.of(rampDownWaitTimeMinutes));
         }
+
         public Builder rampUpCapacityThresholdPct(@Nullable Output<Integer> rampUpCapacityThresholdPct) {
-            this.rampUpCapacityThresholdPct = rampUpCapacityThresholdPct;
+            $.rampUpCapacityThresholdPct = rampUpCapacityThresholdPct;
             return this;
         }
-        public Builder rampUpCapacityThresholdPct(@Nullable Integer rampUpCapacityThresholdPct) {
-            this.rampUpCapacityThresholdPct = Codegen.ofNullable(rampUpCapacityThresholdPct);
-            return this;
+
+        public Builder rampUpCapacityThresholdPct(Integer rampUpCapacityThresholdPct) {
+            return rampUpCapacityThresholdPct(Output.of(rampUpCapacityThresholdPct));
         }
+
         public Builder rampUpLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm) {
-            this.rampUpLoadBalancingAlgorithm = rampUpLoadBalancingAlgorithm;
+            $.rampUpLoadBalancingAlgorithm = rampUpLoadBalancingAlgorithm;
             return this;
         }
-        public Builder rampUpLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> rampUpLoadBalancingAlgorithm) {
-            this.rampUpLoadBalancingAlgorithm = Codegen.ofNullable(rampUpLoadBalancingAlgorithm);
-            return this;
+
+        public Builder rampUpLoadBalancingAlgorithm(Either<String,SessionHostLoadBalancingAlgorithm> rampUpLoadBalancingAlgorithm) {
+            return rampUpLoadBalancingAlgorithm(Output.of(rampUpLoadBalancingAlgorithm));
         }
+
         public Builder rampUpMinimumHostsPct(@Nullable Output<Integer> rampUpMinimumHostsPct) {
-            this.rampUpMinimumHostsPct = rampUpMinimumHostsPct;
+            $.rampUpMinimumHostsPct = rampUpMinimumHostsPct;
             return this;
         }
-        public Builder rampUpMinimumHostsPct(@Nullable Integer rampUpMinimumHostsPct) {
-            this.rampUpMinimumHostsPct = Codegen.ofNullable(rampUpMinimumHostsPct);
-            return this;
+
+        public Builder rampUpMinimumHostsPct(Integer rampUpMinimumHostsPct) {
+            return rampUpMinimumHostsPct(Output.of(rampUpMinimumHostsPct));
         }
+
         public Builder rampUpStartTime(@Nullable Output<String> rampUpStartTime) {
-            this.rampUpStartTime = rampUpStartTime;
+            $.rampUpStartTime = rampUpStartTime;
             return this;
         }
-        public Builder rampUpStartTime(@Nullable String rampUpStartTime) {
-            this.rampUpStartTime = Codegen.ofNullable(rampUpStartTime);
-            return this;
-        }        public ScalingScheduleArgs build() {
-            return new ScalingScheduleArgs(daysOfWeek, name, offPeakLoadBalancingAlgorithm, offPeakStartTime, peakLoadBalancingAlgorithm, peakStartTime, rampDownCapacityThresholdPct, rampDownForceLogoffUsers, rampDownLoadBalancingAlgorithm, rampDownMinimumHostsPct, rampDownNotificationMessage, rampDownStartTime, rampDownStopHostsWhen, rampDownWaitTimeMinutes, rampUpCapacityThresholdPct, rampUpLoadBalancingAlgorithm, rampUpMinimumHostsPct, rampUpStartTime);
+
+        public Builder rampUpStartTime(String rampUpStartTime) {
+            return rampUpStartTime(Output.of(rampUpStartTime));
+        }
+
+        public ScalingScheduleArgs build() {
+            return $;
         }
     }
+
 }

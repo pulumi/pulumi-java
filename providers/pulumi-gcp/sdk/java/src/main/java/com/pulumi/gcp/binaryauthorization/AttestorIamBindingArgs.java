@@ -5,11 +5,11 @@ package com.pulumi.gcp.binaryauthorization;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.binaryauthorization.inputs.AttestorIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,21 +22,21 @@ public final class AttestorIamBindingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="attestor", required=true)
-      private final Output<String> attestor;
+    private Output<String> attestor;
 
     public Output<String> attestor() {
         return this.attestor;
     }
 
     @Import(name="condition")
-      private final @Nullable Output<AttestorIamBindingConditionArgs> condition;
+    private @Nullable Output<AttestorIamBindingConditionArgs> condition;
 
-    public Output<AttestorIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<AttestorIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -48,10 +48,10 @@ public final class AttestorIamBindingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -61,105 +61,95 @@ public final class AttestorIamBindingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public AttestorIamBindingArgs(
-        Output<String> attestor,
-        @Nullable Output<AttestorIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        Output<String> role) {
-        this.attestor = Objects.requireNonNull(attestor, "expected parameter 'attestor' to be non-null");
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private AttestorIamBindingArgs() {}
 
-    private AttestorIamBindingArgs() {
-        this.attestor = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
+    private AttestorIamBindingArgs(AttestorIamBindingArgs $) {
+        this.attestor = $.attestor;
+        this.condition = $.condition;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestorIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attestor;
-        private @Nullable Output<AttestorIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private Output<String> role;
+        private AttestorIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestorIamBindingArgs();
         }
 
         public Builder(AttestorIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestor = defaults.attestor;
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
+            $ = new AttestorIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestor(Output<String> attestor) {
-            this.attestor = Objects.requireNonNull(attestor);
+            $.attestor = attestor;
             return this;
         }
+
         public Builder attestor(String attestor) {
-            this.attestor = Output.of(Objects.requireNonNull(attestor));
-            return this;
+            return attestor(Output.of(attestor));
         }
+
         public Builder condition(@Nullable Output<AttestorIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable AttestorIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(AttestorIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public AttestorIamBindingArgs build() {
-            return new AttestorIamBindingArgs(attestor, condition, members, project, role);
+            return role(Output.of(role));
+        }
+
+        public AttestorIamBindingArgs build() {
+            $.attestor = Objects.requireNonNull($.attestor, "expected parameter 'attestor' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

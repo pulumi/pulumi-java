@@ -8,10 +8,10 @@ import com.pulumi.awsnative.kendra.inputs.DataSourceConfigurationArgs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,45 +20,45 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
     @Import(name="dataSourceConfiguration")
-      private final @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration;
+    private @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration;
 
-    public Output<DataSourceConfigurationArgs> dataSourceConfiguration() {
-        return this.dataSourceConfiguration == null ? Codegen.empty() : this.dataSourceConfiguration;
+    public Optional<Output<DataSourceConfigurationArgs>> dataSourceConfiguration() {
+        return Optional.ofNullable(this.dataSourceConfiguration);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="indexId", required=true)
-      private final Output<String> indexId;
+    private Output<String> indexId;
 
     public Output<String> indexId() {
         return this.indexId;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -66,151 +66,131 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DataSourceTagArgs>> tags;
+    private @Nullable Output<List<DataSourceTagArgs>> tags;
 
-    public Output<List<DataSourceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DataSourceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="type", required=true)
-      private final Output<DataSourceType> type;
+    private Output<DataSourceType> type;
 
     public Output<DataSourceType> type() {
         return this.type;
     }
 
-    public DataSourceArgs(
-        @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration,
-        @Nullable Output<String> description,
-        Output<String> indexId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> schedule,
-        @Nullable Output<List<DataSourceTagArgs>> tags,
-        Output<DataSourceType> type) {
-        this.dataSourceConfiguration = dataSourceConfiguration;
-        this.description = description;
-        this.indexId = Objects.requireNonNull(indexId, "expected parameter 'indexId' to be non-null");
-        this.name = name;
-        this.roleArn = roleArn;
-        this.schedule = schedule;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DataSourceArgs() {}
 
-    private DataSourceArgs() {
-        this.dataSourceConfiguration = Codegen.empty();
-        this.description = Codegen.empty();
-        this.indexId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private DataSourceArgs(DataSourceArgs $) {
+        this.dataSourceConfiguration = $.dataSourceConfiguration;
+        this.description = $.description;
+        this.indexId = $.indexId;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
+        this.schedule = $.schedule;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration;
-        private @Nullable Output<String> description;
-        private Output<String> indexId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> schedule;
-        private @Nullable Output<List<DataSourceTagArgs>> tags;
-        private Output<DataSourceType> type;
+        private DataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceArgs();
         }
 
         public Builder(DataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceConfiguration = defaults.dataSourceConfiguration;
-    	      this.description = defaults.description;
-    	      this.indexId = defaults.indexId;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
-    	      this.schedule = defaults.schedule;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new DataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceConfiguration(@Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration) {
-            this.dataSourceConfiguration = dataSourceConfiguration;
+            $.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
-        public Builder dataSourceConfiguration(@Nullable DataSourceConfigurationArgs dataSourceConfiguration) {
-            this.dataSourceConfiguration = Codegen.ofNullable(dataSourceConfiguration);
-            return this;
+
+        public Builder dataSourceConfiguration(DataSourceConfigurationArgs dataSourceConfiguration) {
+            return dataSourceConfiguration(Output.of(dataSourceConfiguration));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder indexId(Output<String> indexId) {
-            this.indexId = Objects.requireNonNull(indexId);
+            $.indexId = indexId;
             return this;
         }
+
         public Builder indexId(String indexId) {
-            this.indexId = Output.of(Objects.requireNonNull(indexId));
-            return this;
+            return indexId(Output.of(indexId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder tags(@Nullable Output<List<DataSourceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DataSourceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DataSourceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DataSourceTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(Output<DataSourceType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(DataSourceType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DataSourceArgs build() {
-            return new DataSourceArgs(dataSourceConfiguration, description, indexId, name, roleArn, schedule, tags, type);
+            return type(Output.of(type));
+        }
+
+        public DataSourceArgs build() {
+            $.indexId = Objects.requireNonNull($.indexId, "expected parameter 'indexId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

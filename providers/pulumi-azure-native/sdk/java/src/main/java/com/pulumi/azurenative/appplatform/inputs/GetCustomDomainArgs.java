@@ -17,7 +17,7 @@ public final class GetCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appName", required=true)
-      private final String appName;
+    private String appName;
 
     public String appName() {
         return this.appName;
@@ -28,7 +28,7 @@ public final class GetCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -39,7 +39,7 @@ public final class GetCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetCustomDomainArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetCustomDomainArgs(
-        String appName,
-        String domainName,
-        String resourceGroupName,
-        String serviceName) {
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetCustomDomainArgs() {}
 
-    private GetCustomDomainArgs() {
-        this.appName = null;
-        this.domainName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetCustomDomainArgs(GetCustomDomainArgs $) {
+        this.appName = $.appName;
+        this.domainName = $.domainName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appName;
-        private String domainName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetCustomDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomDomainArgs();
         }
 
         public Builder(GetCustomDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.domainName = defaults.domainName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetCustomDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(String appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetCustomDomainArgs build() {
-            return new GetCustomDomainArgs(appName, domainName, resourceGroupName, serviceName);
+        }
+
+        public GetCustomDomainArgs build() {
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

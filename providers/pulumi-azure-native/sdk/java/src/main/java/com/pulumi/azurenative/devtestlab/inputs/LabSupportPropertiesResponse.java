@@ -23,10 +23,10 @@ public final class LabSupportPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enabled")
-      private final @Nullable String enabled;
+    private @Nullable String enabled;
 
     public Optional<String> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class LabSupportPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="markdown")
-      private final @Nullable String markdown;
+    private @Nullable String markdown;
 
     public Optional<String> markdown() {
-        return this.markdown == null ? Optional.empty() : Optional.ofNullable(this.markdown);
+        return Optional.ofNullable(this.markdown);
     }
 
-    public LabSupportPropertiesResponse(
-        @Nullable String enabled,
-        @Nullable String markdown) {
-        this.enabled = enabled;
-        this.markdown = markdown;
-    }
+    private LabSupportPropertiesResponse() {}
 
-    private LabSupportPropertiesResponse() {
-        this.enabled = null;
-        this.markdown = null;
+    private LabSupportPropertiesResponse(LabSupportPropertiesResponse $) {
+        this.enabled = $.enabled;
+        this.markdown = $.markdown;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabSupportPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String enabled;
-        private @Nullable String markdown;
+        private LabSupportPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabSupportPropertiesResponse();
         }
 
         public Builder(LabSupportPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.markdown = defaults.markdown;
+            $ = new LabSupportPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable String enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder markdown(@Nullable String markdown) {
-            this.markdown = markdown;
+            $.markdown = markdown;
             return this;
-        }        public LabSupportPropertiesResponse build() {
-            return new LabSupportPropertiesResponse(enabled, markdown);
+        }
+
+        public LabSupportPropertiesResponse build() {
+            return $;
         }
     }
+
 }

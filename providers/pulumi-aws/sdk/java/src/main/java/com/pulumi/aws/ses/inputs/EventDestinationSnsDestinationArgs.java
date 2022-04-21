@@ -5,7 +5,6 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class EventDestinationSnsDestinationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="topicArn", required=true)
-      private final Output<String> topicArn;
+    private Output<String> topicArn;
 
     public Output<String> topicArn() {
         return this.topicArn;
     }
 
-    public EventDestinationSnsDestinationArgs(Output<String> topicArn) {
-        this.topicArn = Objects.requireNonNull(topicArn, "expected parameter 'topicArn' to be non-null");
-    }
+    private EventDestinationSnsDestinationArgs() {}
 
-    private EventDestinationSnsDestinationArgs() {
-        this.topicArn = Codegen.empty();
+    private EventDestinationSnsDestinationArgs(EventDestinationSnsDestinationArgs $) {
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventDestinationSnsDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> topicArn;
+        private EventDestinationSnsDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventDestinationSnsDestinationArgs();
         }
 
         public Builder(EventDestinationSnsDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topicArn = defaults.topicArn;
+            $ = new EventDestinationSnsDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topicArn(Output<String> topicArn) {
-            this.topicArn = Objects.requireNonNull(topicArn);
+            $.topicArn = topicArn;
             return this;
         }
+
         public Builder topicArn(String topicArn) {
-            this.topicArn = Output.of(Objects.requireNonNull(topicArn));
-            return this;
-        }        public EventDestinationSnsDestinationArgs build() {
-            return new EventDestinationSnsDestinationArgs(topicArn);
+            return topicArn(Output.of(topicArn));
+        }
+
+        public EventDestinationSnsDestinationArgs build() {
+            $.topicArn = Objects.requireNonNull($.topicArn, "expected parameter 'topicArn' to be non-null");
+            return $;
         }
     }
+
 }

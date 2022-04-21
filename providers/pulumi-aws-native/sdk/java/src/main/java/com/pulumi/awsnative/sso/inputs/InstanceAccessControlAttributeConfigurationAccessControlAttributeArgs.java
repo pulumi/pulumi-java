@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sso.inputs;
 import com.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs();
 
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value;
+    private Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value;
 
     public Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value() {
         return this.value;
     }
 
-    public InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs(
-        Output<String> key,
-        Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs() {}
 
-    private InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs(InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value;
+        private InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs();
         }
 
         public Builder(InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder value(Output<InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs build() {
-            return new InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs(key, value);
+            return value(Output.of(value));
+        }
+
+        public InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

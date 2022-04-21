@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
      * 
      */
     @Import(name="functionAlias")
-      private final @Nullable Output<String> functionAlias;
+    private @Nullable Output<String> functionAlias;
 
-    public Output<String> functionAlias() {
-        return this.functionAlias == null ? Codegen.empty() : this.functionAlias;
+    public Optional<Output<String>> functionAlias() {
+        return Optional.ofNullable(this.functionAlias);
     }
 
-    public ApplicationInsightsComponentAnalyticsItemPropertiesArgs(@Nullable Output<String> functionAlias) {
-        this.functionAlias = functionAlias;
-    }
+    private ApplicationInsightsComponentAnalyticsItemPropertiesArgs() {}
 
-    private ApplicationInsightsComponentAnalyticsItemPropertiesArgs() {
-        this.functionAlias = Codegen.empty();
+    private ApplicationInsightsComponentAnalyticsItemPropertiesArgs(ApplicationInsightsComponentAnalyticsItemPropertiesArgs $) {
+        this.functionAlias = $.functionAlias;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationInsightsComponentAnalyticsItemPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> functionAlias;
+        private ApplicationInsightsComponentAnalyticsItemPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationInsightsComponentAnalyticsItemPropertiesArgs();
         }
 
         public Builder(ApplicationInsightsComponentAnalyticsItemPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionAlias = defaults.functionAlias;
+            $ = new ApplicationInsightsComponentAnalyticsItemPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionAlias(@Nullable Output<String> functionAlias) {
-            this.functionAlias = functionAlias;
+            $.functionAlias = functionAlias;
             return this;
         }
-        public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = Codegen.ofNullable(functionAlias);
-            return this;
-        }        public ApplicationInsightsComponentAnalyticsItemPropertiesArgs build() {
-            return new ApplicationInsightsComponentAnalyticsItemPropertiesArgs(functionAlias);
+
+        public Builder functionAlias(String functionAlias) {
+            return functionAlias(Output.of(functionAlias));
+        }
+
+        public ApplicationInsightsComponentAnalyticsItemPropertiesArgs build() {
+            return $;
         }
     }
+
 }

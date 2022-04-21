@@ -24,48 +24,48 @@ public final class ExportDatasetConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="columns")
-      private final @Nullable List<String> columns;
+    private @Nullable List<String> columns;
 
-    public List<String> columns() {
-        return this.columns == null ? List.of() : this.columns;
+    public Optional<List<String>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
-    public ExportDatasetConfigurationResponse(@Nullable List<String> columns) {
-        this.columns = columns;
-    }
+    private ExportDatasetConfigurationResponse() {}
 
-    private ExportDatasetConfigurationResponse() {
-        this.columns = List.of();
+    private ExportDatasetConfigurationResponse(ExportDatasetConfigurationResponse $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportDatasetConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> columns;
+        private ExportDatasetConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportDatasetConfigurationResponse();
         }
 
         public Builder(ExportDatasetConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new ExportDatasetConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable List<String> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(String... columns) {
             return columns(List.of(columns));
-        }        public ExportDatasetConfigurationResponse build() {
-            return new ExportDatasetConfigurationResponse(columns);
+        }
+
+        public ExportDatasetConfigurationResponse build() {
+            return $;
         }
     }
+
 }

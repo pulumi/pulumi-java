@@ -15,45 +15,44 @@ public final class TopicRuleLambdaAction extends com.pulumi.resources.InvokeArgs
     public static final TopicRuleLambdaAction Empty = new TopicRuleLambdaAction();
 
     @Import(name="functionArn")
-      private final @Nullable String functionArn;
+    private @Nullable String functionArn;
 
     public Optional<String> functionArn() {
-        return this.functionArn == null ? Optional.empty() : Optional.ofNullable(this.functionArn);
+        return Optional.ofNullable(this.functionArn);
     }
 
-    public TopicRuleLambdaAction(@Nullable String functionArn) {
-        this.functionArn = functionArn;
-    }
+    private TopicRuleLambdaAction() {}
 
-    private TopicRuleLambdaAction() {
-        this.functionArn = null;
+    private TopicRuleLambdaAction(TopicRuleLambdaAction $) {
+        this.functionArn = $.functionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleLambdaAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String functionArn;
+        private TopicRuleLambdaAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleLambdaAction();
         }
 
         public Builder(TopicRuleLambdaAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionArn = defaults.functionArn;
+            $ = new TopicRuleLambdaAction(Objects.requireNonNull(defaults));
         }
 
         public Builder functionArn(@Nullable String functionArn) {
-            this.functionArn = functionArn;
+            $.functionArn = functionArn;
             return this;
-        }        public TopicRuleLambdaAction build() {
-            return new TopicRuleLambdaAction(functionArn);
+        }
+
+        public TopicRuleLambdaAction build() {
+            return $;
         }
     }
+
 }

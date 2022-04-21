@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TargetTCPProxyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="backendService", required=true)
-      private final Output<String> backendService;
+    private Output<String> backendService;
 
     public Output<String> backendService() {
         return this.backendService;
@@ -32,10 +32,10 @@ public final class TargetTCPProxyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class TargetTCPProxyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class TargetTCPProxyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class TargetTCPProxyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="proxyBind")
-      private final @Nullable Output<Boolean> proxyBind;
+    private @Nullable Output<Boolean> proxyBind;
 
-    public Output<Boolean> proxyBind() {
-        return this.proxyBind == null ? Codegen.empty() : this.proxyBind;
+    public Optional<Output<Boolean>> proxyBind() {
+        return Optional.ofNullable(this.proxyBind);
     }
 
     /**
@@ -87,115 +87,99 @@ public final class TargetTCPProxyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="proxyHeader")
-      private final @Nullable Output<String> proxyHeader;
+    private @Nullable Output<String> proxyHeader;
 
-    public Output<String> proxyHeader() {
-        return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
+    public Optional<Output<String>> proxyHeader() {
+        return Optional.ofNullable(this.proxyHeader);
     }
 
-    public TargetTCPProxyArgs(
-        Output<String> backendService,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> proxyBind,
-        @Nullable Output<String> proxyHeader) {
-        this.backendService = Objects.requireNonNull(backendService, "expected parameter 'backendService' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.proxyBind = proxyBind;
-        this.proxyHeader = proxyHeader;
-    }
+    private TargetTCPProxyArgs() {}
 
-    private TargetTCPProxyArgs() {
-        this.backendService = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.proxyBind = Codegen.empty();
-        this.proxyHeader = Codegen.empty();
+    private TargetTCPProxyArgs(TargetTCPProxyArgs $) {
+        this.backendService = $.backendService;
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.proxyBind = $.proxyBind;
+        this.proxyHeader = $.proxyHeader;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetTCPProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backendService;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> proxyBind;
-        private @Nullable Output<String> proxyHeader;
+        private TargetTCPProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetTCPProxyArgs();
         }
 
         public Builder(TargetTCPProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendService = defaults.backendService;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.proxyBind = defaults.proxyBind;
-    	      this.proxyHeader = defaults.proxyHeader;
+            $ = new TargetTCPProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendService(Output<String> backendService) {
-            this.backendService = Objects.requireNonNull(backendService);
+            $.backendService = backendService;
             return this;
         }
+
         public Builder backendService(String backendService) {
-            this.backendService = Output.of(Objects.requireNonNull(backendService));
-            return this;
+            return backendService(Output.of(backendService));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
-            this.proxyBind = proxyBind;
+            $.proxyBind = proxyBind;
             return this;
         }
-        public Builder proxyBind(@Nullable Boolean proxyBind) {
-            this.proxyBind = Codegen.ofNullable(proxyBind);
-            return this;
+
+        public Builder proxyBind(Boolean proxyBind) {
+            return proxyBind(Output.of(proxyBind));
         }
+
         public Builder proxyHeader(@Nullable Output<String> proxyHeader) {
-            this.proxyHeader = proxyHeader;
+            $.proxyHeader = proxyHeader;
             return this;
         }
-        public Builder proxyHeader(@Nullable String proxyHeader) {
-            this.proxyHeader = Codegen.ofNullable(proxyHeader);
-            return this;
-        }        public TargetTCPProxyArgs build() {
-            return new TargetTCPProxyArgs(backendService, description, name, project, proxyBind, proxyHeader);
+
+        public Builder proxyHeader(String proxyHeader) {
+            return proxyHeader(Output.of(proxyHeader));
+        }
+
+        public TargetTCPProxyArgs build() {
+            $.backendService = Objects.requireNonNull($.backendService, "expected parameter 'backendService' to be non-null");
+            return $;
         }
     }
+
 }

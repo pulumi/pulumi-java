@@ -5,11 +5,11 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="deleted")
-      private final @Nullable Output<Boolean> deleted;
+    private @Nullable Output<Boolean> deleted;
 
-    public Output<Boolean> deleted() {
-        return this.deleted == null ? Codegen.empty() : this.deleted;
+    public Optional<Output<Boolean>> deleted() {
+        return Optional.ofNullable(this.deleted);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<String>> permissions;
+    private @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<String>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="roleId")
-      private final @Nullable Output<String> roleId;
+    private @Nullable Output<String> roleId;
 
-    public Output<String> roleId() {
-        return this.roleId == null ? Codegen.empty() : this.roleId;
+    public Optional<Output<String>> roleId() {
+        return Optional.ofNullable(this.roleId);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="stage")
-      private final @Nullable Output<String> stage;
+    private @Nullable Output<String> stage;
 
-    public Output<String> stage() {
-        return this.stage == null ? Codegen.empty() : this.stage;
+    public Optional<Output<String>> stage() {
+        return Optional.ofNullable(this.stage);
     }
 
     /**
@@ -102,144 +102,122 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public IAMCustomRoleState(
-        @Nullable Output<Boolean> deleted,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> permissions,
-        @Nullable Output<String> project,
-        @Nullable Output<String> roleId,
-        @Nullable Output<String> stage,
-        @Nullable Output<String> title) {
-        this.deleted = deleted;
-        this.description = description;
-        this.name = name;
-        this.permissions = permissions;
-        this.project = project;
-        this.roleId = roleId;
-        this.stage = stage;
-        this.title = title;
-    }
+    private IAMCustomRoleState() {}
 
-    private IAMCustomRoleState() {
-        this.deleted = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.project = Codegen.empty();
-        this.roleId = Codegen.empty();
-        this.stage = Codegen.empty();
-        this.title = Codegen.empty();
+    private IAMCustomRoleState(IAMCustomRoleState $) {
+        this.deleted = $.deleted;
+        this.description = $.description;
+        this.name = $.name;
+        this.permissions = $.permissions;
+        this.project = $.project;
+        this.roleId = $.roleId;
+        this.stage = $.stage;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMCustomRoleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleted;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> permissions;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> roleId;
-        private @Nullable Output<String> stage;
-        private @Nullable Output<String> title;
+        private IAMCustomRoleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMCustomRoleState();
         }
 
         public Builder(IAMCustomRoleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleted = defaults.deleted;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.permissions = defaults.permissions;
-    	      this.project = defaults.project;
-    	      this.roleId = defaults.roleId;
-    	      this.stage = defaults.stage;
-    	      this.title = defaults.title;
+            $ = new IAMCustomRoleState(Objects.requireNonNull(defaults));
         }
 
         public Builder deleted(@Nullable Output<Boolean> deleted) {
-            this.deleted = deleted;
+            $.deleted = deleted;
             return this;
         }
-        public Builder deleted(@Nullable Boolean deleted) {
-            this.deleted = Codegen.ofNullable(deleted);
-            return this;
+
+        public Builder deleted(Boolean deleted) {
+            return deleted(Output.of(deleted));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder permissions(@Nullable Output<List<String>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<String> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder roleId(@Nullable Output<String> roleId) {
-            this.roleId = roleId;
+            $.roleId = roleId;
             return this;
         }
-        public Builder roleId(@Nullable String roleId) {
-            this.roleId = Codegen.ofNullable(roleId);
-            return this;
+
+        public Builder roleId(String roleId) {
+            return roleId(Output.of(roleId));
         }
+
         public Builder stage(@Nullable Output<String> stage) {
-            this.stage = stage;
+            $.stage = stage;
             return this;
         }
-        public Builder stage(@Nullable String stage) {
-            this.stage = Codegen.ofNullable(stage);
-            return this;
+
+        public Builder stage(String stage) {
+            return stage(Output.of(stage));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public IAMCustomRoleState build() {
-            return new IAMCustomRoleState(deleted, description, name, permissions, project, roleId, stage, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public IAMCustomRoleState build() {
+            return $;
         }
     }
+
 }

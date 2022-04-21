@@ -6,9 +6,9 @@ package com.pulumi.awsnative.backup;
 import com.pulumi.awsnative.backup.inputs.BackupPlanResourceTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class BackupPlanArgs extends com.pulumi.resources.ResourceArgs {
     public static final BackupPlanArgs Empty = new BackupPlanArgs();
 
     @Import(name="backupPlan", required=true)
-      private final Output<BackupPlanResourceTypeArgs> backupPlan;
+    private Output<BackupPlanResourceTypeArgs> backupPlan;
 
     public Output<BackupPlanResourceTypeArgs> backupPlan() {
         return this.backupPlan;
     }
 
     @Import(name="backupPlanTags")
-      private final @Nullable Output<Object> backupPlanTags;
+    private @Nullable Output<Object> backupPlanTags;
 
-    public Output<Object> backupPlanTags() {
-        return this.backupPlanTags == null ? Codegen.empty() : this.backupPlanTags;
+    public Optional<Output<Object>> backupPlanTags() {
+        return Optional.ofNullable(this.backupPlanTags);
     }
 
-    public BackupPlanArgs(
-        Output<BackupPlanResourceTypeArgs> backupPlan,
-        @Nullable Output<Object> backupPlanTags) {
-        this.backupPlan = Objects.requireNonNull(backupPlan, "expected parameter 'backupPlan' to be non-null");
-        this.backupPlanTags = backupPlanTags;
-    }
+    private BackupPlanArgs() {}
 
-    private BackupPlanArgs() {
-        this.backupPlan = Codegen.empty();
-        this.backupPlanTags = Codegen.empty();
+    private BackupPlanArgs(BackupPlanArgs $) {
+        this.backupPlan = $.backupPlan;
+        this.backupPlanTags = $.backupPlanTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BackupPlanResourceTypeArgs> backupPlan;
-        private @Nullable Output<Object> backupPlanTags;
+        private BackupPlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPlanArgs();
         }
 
         public Builder(BackupPlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupPlan = defaults.backupPlan;
-    	      this.backupPlanTags = defaults.backupPlanTags;
+            $ = new BackupPlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupPlan(Output<BackupPlanResourceTypeArgs> backupPlan) {
-            this.backupPlan = Objects.requireNonNull(backupPlan);
+            $.backupPlan = backupPlan;
             return this;
         }
+
         public Builder backupPlan(BackupPlanResourceTypeArgs backupPlan) {
-            this.backupPlan = Output.of(Objects.requireNonNull(backupPlan));
-            return this;
+            return backupPlan(Output.of(backupPlan));
         }
+
         public Builder backupPlanTags(@Nullable Output<Object> backupPlanTags) {
-            this.backupPlanTags = backupPlanTags;
+            $.backupPlanTags = backupPlanTags;
             return this;
         }
-        public Builder backupPlanTags(@Nullable Object backupPlanTags) {
-            this.backupPlanTags = Codegen.ofNullable(backupPlanTags);
-            return this;
-        }        public BackupPlanArgs build() {
-            return new BackupPlanArgs(backupPlan, backupPlanTags);
+
+        public Builder backupPlanTags(Object backupPlanTags) {
+            return backupPlanTags(Output.of(backupPlanTags));
+        }
+
+        public BackupPlanArgs build() {
+            $.backupPlan = Objects.requireNonNull($.backupPlan, "expected parameter 'backupPlan' to be non-null");
+            return $;
         }
     }
+
 }

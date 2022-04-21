@@ -25,7 +25,7 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -36,10 +36,10 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable PrivateEndpointResponse privateEndpoint;
+    private @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> privateEndpoint() {
-        return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -58,73 +58,64 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public PrivateEndpointConnectionForPrivateLinkHubBasicResponse(
-        String id,
-        @Nullable PrivateEndpointResponse privateEndpoint,
-        @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private PrivateEndpointConnectionForPrivateLinkHubBasicResponse() {}
 
-    private PrivateEndpointConnectionForPrivateLinkHubBasicResponse() {
-        this.id = null;
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
+    private PrivateEndpointConnectionForPrivateLinkHubBasicResponse(PrivateEndpointConnectionForPrivateLinkHubBasicResponse $) {
+        this.id = $.id;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionForPrivateLinkHubBasicResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable PrivateEndpointResponse privateEndpoint;
-        private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-        private String provisioningState;
+        private PrivateEndpointConnectionForPrivateLinkHubBasicResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionForPrivateLinkHubBasicResponse();
         }
 
         public Builder(PrivateEndpointConnectionForPrivateLinkHubBasicResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new PrivateEndpointConnectionForPrivateLinkHubBasicResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public PrivateEndpointConnectionForPrivateLinkHubBasicResponse build() {
-            return new PrivateEndpointConnectionForPrivateLinkHubBasicResponse(id, privateEndpoint, privateLinkServiceConnectionState, provisioningState);
+        }
+
+        public PrivateEndpointConnectionForPrivateLinkHubBasicResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

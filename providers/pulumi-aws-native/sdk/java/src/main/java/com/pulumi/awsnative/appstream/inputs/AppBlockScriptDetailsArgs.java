@@ -6,10 +6,10 @@ package com.pulumi.awsnative.appstream.inputs;
 import com.pulumi.awsnative.appstream.inputs.AppBlockS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,110 +18,102 @@ public final class AppBlockScriptDetailsArgs extends com.pulumi.resources.Resour
     public static final AppBlockScriptDetailsArgs Empty = new AppBlockScriptDetailsArgs();
 
     @Import(name="executableParameters")
-      private final @Nullable Output<String> executableParameters;
+    private @Nullable Output<String> executableParameters;
 
-    public Output<String> executableParameters() {
-        return this.executableParameters == null ? Codegen.empty() : this.executableParameters;
+    public Optional<Output<String>> executableParameters() {
+        return Optional.ofNullable(this.executableParameters);
     }
 
     @Import(name="executablePath", required=true)
-      private final Output<String> executablePath;
+    private Output<String> executablePath;
 
     public Output<String> executablePath() {
         return this.executablePath;
     }
 
     @Import(name="scriptS3Location", required=true)
-      private final Output<AppBlockS3LocationArgs> scriptS3Location;
+    private Output<AppBlockS3LocationArgs> scriptS3Location;
 
     public Output<AppBlockS3LocationArgs> scriptS3Location() {
         return this.scriptS3Location;
     }
 
     @Import(name="timeoutInSeconds", required=true)
-      private final Output<Integer> timeoutInSeconds;
+    private Output<Integer> timeoutInSeconds;
 
     public Output<Integer> timeoutInSeconds() {
         return this.timeoutInSeconds;
     }
 
-    public AppBlockScriptDetailsArgs(
-        @Nullable Output<String> executableParameters,
-        Output<String> executablePath,
-        Output<AppBlockS3LocationArgs> scriptS3Location,
-        Output<Integer> timeoutInSeconds) {
-        this.executableParameters = executableParameters;
-        this.executablePath = Objects.requireNonNull(executablePath, "expected parameter 'executablePath' to be non-null");
-        this.scriptS3Location = Objects.requireNonNull(scriptS3Location, "expected parameter 'scriptS3Location' to be non-null");
-        this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds, "expected parameter 'timeoutInSeconds' to be non-null");
-    }
+    private AppBlockScriptDetailsArgs() {}
 
-    private AppBlockScriptDetailsArgs() {
-        this.executableParameters = Codegen.empty();
-        this.executablePath = Codegen.empty();
-        this.scriptS3Location = Codegen.empty();
-        this.timeoutInSeconds = Codegen.empty();
+    private AppBlockScriptDetailsArgs(AppBlockScriptDetailsArgs $) {
+        this.executableParameters = $.executableParameters;
+        this.executablePath = $.executablePath;
+        this.scriptS3Location = $.scriptS3Location;
+        this.timeoutInSeconds = $.timeoutInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppBlockScriptDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> executableParameters;
-        private Output<String> executablePath;
-        private Output<AppBlockS3LocationArgs> scriptS3Location;
-        private Output<Integer> timeoutInSeconds;
+        private AppBlockScriptDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppBlockScriptDetailsArgs();
         }
 
         public Builder(AppBlockScriptDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executableParameters = defaults.executableParameters;
-    	      this.executablePath = defaults.executablePath;
-    	      this.scriptS3Location = defaults.scriptS3Location;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
+            $ = new AppBlockScriptDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executableParameters(@Nullable Output<String> executableParameters) {
-            this.executableParameters = executableParameters;
+            $.executableParameters = executableParameters;
             return this;
         }
-        public Builder executableParameters(@Nullable String executableParameters) {
-            this.executableParameters = Codegen.ofNullable(executableParameters);
-            return this;
+
+        public Builder executableParameters(String executableParameters) {
+            return executableParameters(Output.of(executableParameters));
         }
+
         public Builder executablePath(Output<String> executablePath) {
-            this.executablePath = Objects.requireNonNull(executablePath);
+            $.executablePath = executablePath;
             return this;
         }
+
         public Builder executablePath(String executablePath) {
-            this.executablePath = Output.of(Objects.requireNonNull(executablePath));
-            return this;
+            return executablePath(Output.of(executablePath));
         }
+
         public Builder scriptS3Location(Output<AppBlockS3LocationArgs> scriptS3Location) {
-            this.scriptS3Location = Objects.requireNonNull(scriptS3Location);
+            $.scriptS3Location = scriptS3Location;
             return this;
         }
+
         public Builder scriptS3Location(AppBlockS3LocationArgs scriptS3Location) {
-            this.scriptS3Location = Output.of(Objects.requireNonNull(scriptS3Location));
-            return this;
+            return scriptS3Location(Output.of(scriptS3Location));
         }
+
         public Builder timeoutInSeconds(Output<Integer> timeoutInSeconds) {
-            this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
+
         public Builder timeoutInSeconds(Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Output.of(Objects.requireNonNull(timeoutInSeconds));
-            return this;
-        }        public AppBlockScriptDetailsArgs build() {
-            return new AppBlockScriptDetailsArgs(executableParameters, executablePath, scriptS3Location, timeoutInSeconds);
+            return timeoutInSeconds(Output.of(timeoutInSeconds));
+        }
+
+        public AppBlockScriptDetailsArgs build() {
+            $.executablePath = Objects.requireNonNull($.executablePath, "expected parameter 'executablePath' to be non-null");
+            $.scriptS3Location = Objects.requireNonNull($.scriptS3Location, "expected parameter 'scriptS3Location' to be non-null");
+            $.timeoutInSeconds = Objects.requireNonNull($.timeoutInSeconds, "expected parameter 'timeoutInSeconds' to be non-null");
+            return $;
         }
     }
+
 }

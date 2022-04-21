@@ -5,10 +5,10 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbClusterIdentifier")
-      private final @Nullable Output<String> dbClusterIdentifier;
+    private @Nullable Output<String> dbClusterIdentifier;
 
-    public Output<String> dbClusterIdentifier() {
-        return this.dbClusterIdentifier == null ? Codegen.empty() : this.dbClusterIdentifier;
+    public Optional<Output<String>> dbClusterIdentifier() {
+        return Optional.ofNullable(this.dbClusterIdentifier);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbInstanceIdentifier")
-      private final @Nullable Output<String> dbInstanceIdentifier;
+    private @Nullable Output<String> dbInstanceIdentifier;
 
-    public Output<String> dbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Codegen.empty() : this.dbInstanceIdentifier;
+    public Optional<Output<String>> dbInstanceIdentifier() {
+        return Optional.ofNullable(this.dbInstanceIdentifier);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbProxyName")
-      private final @Nullable Output<String> dbProxyName;
+    private @Nullable Output<String> dbProxyName;
 
-    public Output<String> dbProxyName() {
-        return this.dbProxyName == null ? Codegen.empty() : this.dbProxyName;
+    public Optional<Output<String>> dbProxyName() {
+        return Optional.ofNullable(this.dbProxyName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rdsResourceId")
-      private final @Nullable Output<String> rdsResourceId;
+    private @Nullable Output<String> rdsResourceId;
 
-    public Output<String> rdsResourceId() {
-        return this.rdsResourceId == null ? Codegen.empty() : this.rdsResourceId;
+    public Optional<Output<String>> rdsResourceId() {
+        return Optional.ofNullable(this.rdsResourceId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetArn")
-      private final @Nullable Output<String> targetArn;
+    private @Nullable Output<String> targetArn;
 
-    public Output<String> targetArn() {
-        return this.targetArn == null ? Codegen.empty() : this.targetArn;
+    public Optional<Output<String>> targetArn() {
+        return Optional.ofNullable(this.targetArn);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetGroupName")
-      private final @Nullable Output<String> targetGroupName;
+    private @Nullable Output<String> targetGroupName;
 
-    public Output<String> targetGroupName() {
-        return this.targetGroupName == null ? Codegen.empty() : this.targetGroupName;
+    public Optional<Output<String>> targetGroupName() {
+        return Optional.ofNullable(this.targetGroupName);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trackedClusterId")
-      private final @Nullable Output<String> trackedClusterId;
+    private @Nullable Output<String> trackedClusterId;
 
-    public Output<String> trackedClusterId() {
-        return this.trackedClusterId == null ? Codegen.empty() : this.trackedClusterId;
+    public Optional<Output<String>> trackedClusterId() {
+        return Optional.ofNullable(this.trackedClusterId);
     }
 
     /**
@@ -120,167 +120,138 @@ public final class ProxyTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ProxyTargetState(
-        @Nullable Output<String> dbClusterIdentifier,
-        @Nullable Output<String> dbInstanceIdentifier,
-        @Nullable Output<String> dbProxyName,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> rdsResourceId,
-        @Nullable Output<String> targetArn,
-        @Nullable Output<String> targetGroupName,
-        @Nullable Output<String> trackedClusterId,
-        @Nullable Output<String> type) {
-        this.dbClusterIdentifier = dbClusterIdentifier;
-        this.dbInstanceIdentifier = dbInstanceIdentifier;
-        this.dbProxyName = dbProxyName;
-        this.endpoint = endpoint;
-        this.port = port;
-        this.rdsResourceId = rdsResourceId;
-        this.targetArn = targetArn;
-        this.targetGroupName = targetGroupName;
-        this.trackedClusterId = trackedClusterId;
-        this.type = type;
-    }
+    private ProxyTargetState() {}
 
-    private ProxyTargetState() {
-        this.dbClusterIdentifier = Codegen.empty();
-        this.dbInstanceIdentifier = Codegen.empty();
-        this.dbProxyName = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.port = Codegen.empty();
-        this.rdsResourceId = Codegen.empty();
-        this.targetArn = Codegen.empty();
-        this.targetGroupName = Codegen.empty();
-        this.trackedClusterId = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProxyTargetState(ProxyTargetState $) {
+        this.dbClusterIdentifier = $.dbClusterIdentifier;
+        this.dbInstanceIdentifier = $.dbInstanceIdentifier;
+        this.dbProxyName = $.dbProxyName;
+        this.endpoint = $.endpoint;
+        this.port = $.port;
+        this.rdsResourceId = $.rdsResourceId;
+        this.targetArn = $.targetArn;
+        this.targetGroupName = $.targetGroupName;
+        this.trackedClusterId = $.trackedClusterId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProxyTargetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dbClusterIdentifier;
-        private @Nullable Output<String> dbInstanceIdentifier;
-        private @Nullable Output<String> dbProxyName;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> rdsResourceId;
-        private @Nullable Output<String> targetArn;
-        private @Nullable Output<String> targetGroupName;
-        private @Nullable Output<String> trackedClusterId;
-        private @Nullable Output<String> type;
+        private ProxyTargetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProxyTargetState();
         }
 
         public Builder(ProxyTargetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbClusterIdentifier = defaults.dbClusterIdentifier;
-    	      this.dbInstanceIdentifier = defaults.dbInstanceIdentifier;
-    	      this.dbProxyName = defaults.dbProxyName;
-    	      this.endpoint = defaults.endpoint;
-    	      this.port = defaults.port;
-    	      this.rdsResourceId = defaults.rdsResourceId;
-    	      this.targetArn = defaults.targetArn;
-    	      this.targetGroupName = defaults.targetGroupName;
-    	      this.trackedClusterId = defaults.trackedClusterId;
-    	      this.type = defaults.type;
+            $ = new ProxyTargetState(Objects.requireNonNull(defaults));
         }
 
         public Builder dbClusterIdentifier(@Nullable Output<String> dbClusterIdentifier) {
-            this.dbClusterIdentifier = dbClusterIdentifier;
+            $.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
-        public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Codegen.ofNullable(dbClusterIdentifier);
-            return this;
+
+        public Builder dbClusterIdentifier(String dbClusterIdentifier) {
+            return dbClusterIdentifier(Output.of(dbClusterIdentifier));
         }
+
         public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = dbInstanceIdentifier;
+            $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
-        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Codegen.ofNullable(dbInstanceIdentifier);
-            return this;
+
+        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
+            return dbInstanceIdentifier(Output.of(dbInstanceIdentifier));
         }
+
         public Builder dbProxyName(@Nullable Output<String> dbProxyName) {
-            this.dbProxyName = dbProxyName;
+            $.dbProxyName = dbProxyName;
             return this;
         }
-        public Builder dbProxyName(@Nullable String dbProxyName) {
-            this.dbProxyName = Codegen.ofNullable(dbProxyName);
-            return this;
+
+        public Builder dbProxyName(String dbProxyName) {
+            return dbProxyName(Output.of(dbProxyName));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder rdsResourceId(@Nullable Output<String> rdsResourceId) {
-            this.rdsResourceId = rdsResourceId;
+            $.rdsResourceId = rdsResourceId;
             return this;
         }
-        public Builder rdsResourceId(@Nullable String rdsResourceId) {
-            this.rdsResourceId = Codegen.ofNullable(rdsResourceId);
-            return this;
+
+        public Builder rdsResourceId(String rdsResourceId) {
+            return rdsResourceId(Output.of(rdsResourceId));
         }
+
         public Builder targetArn(@Nullable Output<String> targetArn) {
-            this.targetArn = targetArn;
+            $.targetArn = targetArn;
             return this;
         }
-        public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Codegen.ofNullable(targetArn);
-            return this;
+
+        public Builder targetArn(String targetArn) {
+            return targetArn(Output.of(targetArn));
         }
+
         public Builder targetGroupName(@Nullable Output<String> targetGroupName) {
-            this.targetGroupName = targetGroupName;
+            $.targetGroupName = targetGroupName;
             return this;
         }
-        public Builder targetGroupName(@Nullable String targetGroupName) {
-            this.targetGroupName = Codegen.ofNullable(targetGroupName);
-            return this;
+
+        public Builder targetGroupName(String targetGroupName) {
+            return targetGroupName(Output.of(targetGroupName));
         }
+
         public Builder trackedClusterId(@Nullable Output<String> trackedClusterId) {
-            this.trackedClusterId = trackedClusterId;
+            $.trackedClusterId = trackedClusterId;
             return this;
         }
-        public Builder trackedClusterId(@Nullable String trackedClusterId) {
-            this.trackedClusterId = Codegen.ofNullable(trackedClusterId);
-            return this;
+
+        public Builder trackedClusterId(String trackedClusterId) {
+            return trackedClusterId(Output.of(trackedClusterId));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ProxyTargetState build() {
-            return new ProxyTargetState(dbClusterIdentifier, dbInstanceIdentifier, dbProxyName, endpoint, port, rdsResourceId, targetArn, targetGroupName, trackedClusterId, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ProxyTargetState build() {
+            return $;
         }
     }
+
 }

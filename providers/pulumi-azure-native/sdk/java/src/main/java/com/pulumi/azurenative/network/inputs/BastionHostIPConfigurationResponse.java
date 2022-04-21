@@ -24,7 +24,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -35,10 +35,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="privateIPAllocationMethod")
-      private final @Nullable String privateIPAllocationMethod;
+    private @Nullable String privateIPAllocationMethod;
 
     public Optional<String> privateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
+        return Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -79,7 +79,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="publicIPAddress", required=true)
-      private final SubResourceResponse publicIPAddress;
+    private SubResourceResponse publicIPAddress;
 
     public SubResourceResponse publicIPAddress() {
         return this.publicIPAddress;
@@ -90,7 +90,7 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="subnet", required=true)
-      private final SubResourceResponse subnet;
+    private SubResourceResponse subnet;
 
     public SubResourceResponse subnet() {
         return this.subnet;
@@ -101,109 +101,91 @@ public final class BastionHostIPConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BastionHostIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String privateIPAllocationMethod,
-        String provisioningState,
-        SubResourceResponse publicIPAddress,
-        SubResourceResponse subnet,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicIPAddress = Objects.requireNonNull(publicIPAddress, "expected parameter 'publicIPAddress' to be non-null");
-        this.subnet = Objects.requireNonNull(subnet, "expected parameter 'subnet' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BastionHostIPConfigurationResponse() {}
 
-    private BastionHostIPConfigurationResponse() {
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.privateIPAllocationMethod = null;
-        this.provisioningState = null;
-        this.publicIPAddress = null;
-        this.subnet = null;
-        this.type = null;
+    private BastionHostIPConfigurationResponse(BastionHostIPConfigurationResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.privateIPAllocationMethod = $.privateIPAllocationMethod;
+        this.provisioningState = $.provisioningState;
+        this.publicIPAddress = $.publicIPAddress;
+        this.subnet = $.subnet;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BastionHostIPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String privateIPAllocationMethod;
-        private String provisioningState;
-        private SubResourceResponse publicIPAddress;
-        private SubResourceResponse subnet;
-        private String type;
+        private BastionHostIPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BastionHostIPConfigurationResponse();
         }
 
         public Builder(BastionHostIPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateIPAllocationMethod = defaults.privateIPAllocationMethod;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.subnet = defaults.subnet;
-    	      this.type = defaults.type;
+            $ = new BastionHostIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = privateIPAllocationMethod;
+            $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicIPAddress(SubResourceResponse publicIPAddress) {
-            this.publicIPAddress = Objects.requireNonNull(publicIPAddress);
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
+
         public Builder subnet(SubResourceResponse subnet) {
-            this.subnet = Objects.requireNonNull(subnet);
+            $.subnet = subnet;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BastionHostIPConfigurationResponse build() {
-            return new BastionHostIPConfigurationResponse(etag, id, name, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet, type);
+        }
+
+        public BastionHostIPConfigurationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.publicIPAddress = Objects.requireNonNull($.publicIPAddress, "expected parameter 'publicIPAddress' to be non-null");
+            $.subnet = Objects.requireNonNull($.subnet, "expected parameter 'subnet' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

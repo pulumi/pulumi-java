@@ -24,10 +24,10 @@ public final class VirtualHubRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="addressPrefixes")
-      private final @Nullable List<String> addressPrefixes;
+    private @Nullable List<String> addressPrefixes;
 
-    public List<String> addressPrefixes() {
-        return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
+    public Optional<List<String>> addressPrefixes() {
+        return Optional.ofNullable(this.addressPrefixes);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class VirtualHubRouteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="nextHopIpAddress")
-      private final @Nullable String nextHopIpAddress;
+    private @Nullable String nextHopIpAddress;
 
     public Optional<String> nextHopIpAddress() {
-        return this.nextHopIpAddress == null ? Optional.empty() : Optional.ofNullable(this.nextHopIpAddress);
+        return Optional.ofNullable(this.nextHopIpAddress);
     }
 
-    public VirtualHubRouteResponse(
-        @Nullable List<String> addressPrefixes,
-        @Nullable String nextHopIpAddress) {
-        this.addressPrefixes = addressPrefixes;
-        this.nextHopIpAddress = nextHopIpAddress;
-    }
+    private VirtualHubRouteResponse() {}
 
-    private VirtualHubRouteResponse() {
-        this.addressPrefixes = List.of();
-        this.nextHopIpAddress = null;
+    private VirtualHubRouteResponse(VirtualHubRouteResponse $) {
+        this.addressPrefixes = $.addressPrefixes;
+        this.nextHopIpAddress = $.nextHopIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubRouteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> addressPrefixes;
-        private @Nullable String nextHopIpAddress;
+        private VirtualHubRouteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubRouteResponse();
         }
 
         public Builder(VirtualHubRouteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefixes = defaults.addressPrefixes;
-    	      this.nextHopIpAddress = defaults.nextHopIpAddress;
+            $ = new VirtualHubRouteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = addressPrefixes;
+            $.addressPrefixes = addressPrefixes;
             return this;
         }
+
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
+
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
-            this.nextHopIpAddress = nextHopIpAddress;
+            $.nextHopIpAddress = nextHopIpAddress;
             return this;
-        }        public VirtualHubRouteResponse build() {
-            return new VirtualHubRouteResponse(addressPrefixes, nextHopIpAddress);
+        }
+
+        public VirtualHubRouteResponse build() {
+            return $;
         }
     }
+
 }

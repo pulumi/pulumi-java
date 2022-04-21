@@ -10,10 +10,10 @@ import com.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigGetArgs;
 import com.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigPermissionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsKmsKeyArn")
-      private final @Nullable Output<String> awsKmsKeyArn;
+    private @Nullable Output<String> awsKmsKeyArn;
 
-    public Output<String> awsKmsKeyArn() {
-        return this.awsKmsKeyArn == null ? Codegen.empty() : this.awsKmsKeyArn;
+    public Optional<Output<String>> awsKmsKeyArn() {
+        return Optional.ofNullable(this.awsKmsKeyArn);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentConfig")
-      private final @Nullable Output<PipelineContentConfigGetArgs> contentConfig;
+    private @Nullable Output<PipelineContentConfigGetArgs> contentConfig;
 
-    public Output<PipelineContentConfigGetArgs> contentConfig() {
-        return this.contentConfig == null ? Codegen.empty() : this.contentConfig;
+    public Optional<Output<PipelineContentConfigGetArgs>> contentConfig() {
+        return Optional.ofNullable(this.contentConfig);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentConfigPermissions")
-      private final @Nullable Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions;
+    private @Nullable Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions;
 
-    public Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions() {
-        return this.contentConfigPermissions == null ? Codegen.empty() : this.contentConfigPermissions;
+    public Optional<Output<List<PipelineContentConfigPermissionGetArgs>>> contentConfigPermissions() {
+        return Optional.ofNullable(this.contentConfigPermissions);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputBucket")
-      private final @Nullable Output<String> inputBucket;
+    private @Nullable Output<String> inputBucket;
 
-    public Output<String> inputBucket() {
-        return this.inputBucket == null ? Codegen.empty() : this.inputBucket;
+    public Optional<Output<String>> inputBucket() {
+        return Optional.ofNullable(this.inputBucket);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notifications")
-      private final @Nullable Output<PipelineNotificationsGetArgs> notifications;
+    private @Nullable Output<PipelineNotificationsGetArgs> notifications;
 
-    public Output<PipelineNotificationsGetArgs> notifications() {
-        return this.notifications == null ? Codegen.empty() : this.notifications;
+    public Optional<Output<PipelineNotificationsGetArgs>> notifications() {
+        return Optional.ofNullable(this.notifications);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputBucket")
-      private final @Nullable Output<String> outputBucket;
+    private @Nullable Output<String> outputBucket;
 
-    public Output<String> outputBucket() {
-        return this.outputBucket == null ? Codegen.empty() : this.outputBucket;
+    public Optional<Output<String>> outputBucket() {
+        return Optional.ofNullable(this.outputBucket);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thumbnailConfig")
-      private final @Nullable Output<PipelineThumbnailConfigGetArgs> thumbnailConfig;
+    private @Nullable Output<PipelineThumbnailConfigGetArgs> thumbnailConfig;
 
-    public Output<PipelineThumbnailConfigGetArgs> thumbnailConfig() {
-        return this.thumbnailConfig == null ? Codegen.empty() : this.thumbnailConfig;
+    public Optional<Output<PipelineThumbnailConfigGetArgs>> thumbnailConfig() {
+        return Optional.ofNullable(this.thumbnailConfig);
     }
 
     /**
@@ -136,186 +136,156 @@ public final class PipelineState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thumbnailConfigPermissions")
-      private final @Nullable Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions;
+    private @Nullable Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions;
 
-    public Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions() {
-        return this.thumbnailConfigPermissions == null ? Codegen.empty() : this.thumbnailConfigPermissions;
+    public Optional<Output<List<PipelineThumbnailConfigPermissionGetArgs>>> thumbnailConfigPermissions() {
+        return Optional.ofNullable(this.thumbnailConfigPermissions);
     }
 
-    public PipelineState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> awsKmsKeyArn,
-        @Nullable Output<PipelineContentConfigGetArgs> contentConfig,
-        @Nullable Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions,
-        @Nullable Output<String> inputBucket,
-        @Nullable Output<String> name,
-        @Nullable Output<PipelineNotificationsGetArgs> notifications,
-        @Nullable Output<String> outputBucket,
-        @Nullable Output<String> role,
-        @Nullable Output<PipelineThumbnailConfigGetArgs> thumbnailConfig,
-        @Nullable Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions) {
-        this.arn = arn;
-        this.awsKmsKeyArn = awsKmsKeyArn;
-        this.contentConfig = contentConfig;
-        this.contentConfigPermissions = contentConfigPermissions;
-        this.inputBucket = inputBucket;
-        this.name = name;
-        this.notifications = notifications;
-        this.outputBucket = outputBucket;
-        this.role = role;
-        this.thumbnailConfig = thumbnailConfig;
-        this.thumbnailConfigPermissions = thumbnailConfigPermissions;
-    }
+    private PipelineState() {}
 
-    private PipelineState() {
-        this.arn = Codegen.empty();
-        this.awsKmsKeyArn = Codegen.empty();
-        this.contentConfig = Codegen.empty();
-        this.contentConfigPermissions = Codegen.empty();
-        this.inputBucket = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notifications = Codegen.empty();
-        this.outputBucket = Codegen.empty();
-        this.role = Codegen.empty();
-        this.thumbnailConfig = Codegen.empty();
-        this.thumbnailConfigPermissions = Codegen.empty();
+    private PipelineState(PipelineState $) {
+        this.arn = $.arn;
+        this.awsKmsKeyArn = $.awsKmsKeyArn;
+        this.contentConfig = $.contentConfig;
+        this.contentConfigPermissions = $.contentConfigPermissions;
+        this.inputBucket = $.inputBucket;
+        this.name = $.name;
+        this.notifications = $.notifications;
+        this.outputBucket = $.outputBucket;
+        this.role = $.role;
+        this.thumbnailConfig = $.thumbnailConfig;
+        this.thumbnailConfigPermissions = $.thumbnailConfigPermissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> awsKmsKeyArn;
-        private @Nullable Output<PipelineContentConfigGetArgs> contentConfig;
-        private @Nullable Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions;
-        private @Nullable Output<String> inputBucket;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PipelineNotificationsGetArgs> notifications;
-        private @Nullable Output<String> outputBucket;
-        private @Nullable Output<String> role;
-        private @Nullable Output<PipelineThumbnailConfigGetArgs> thumbnailConfig;
-        private @Nullable Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions;
+        private PipelineState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineState();
         }
 
         public Builder(PipelineState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.awsKmsKeyArn = defaults.awsKmsKeyArn;
-    	      this.contentConfig = defaults.contentConfig;
-    	      this.contentConfigPermissions = defaults.contentConfigPermissions;
-    	      this.inputBucket = defaults.inputBucket;
-    	      this.name = defaults.name;
-    	      this.notifications = defaults.notifications;
-    	      this.outputBucket = defaults.outputBucket;
-    	      this.role = defaults.role;
-    	      this.thumbnailConfig = defaults.thumbnailConfig;
-    	      this.thumbnailConfigPermissions = defaults.thumbnailConfigPermissions;
+            $ = new PipelineState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder awsKmsKeyArn(@Nullable Output<String> awsKmsKeyArn) {
-            this.awsKmsKeyArn = awsKmsKeyArn;
+            $.awsKmsKeyArn = awsKmsKeyArn;
             return this;
         }
-        public Builder awsKmsKeyArn(@Nullable String awsKmsKeyArn) {
-            this.awsKmsKeyArn = Codegen.ofNullable(awsKmsKeyArn);
-            return this;
+
+        public Builder awsKmsKeyArn(String awsKmsKeyArn) {
+            return awsKmsKeyArn(Output.of(awsKmsKeyArn));
         }
+
         public Builder contentConfig(@Nullable Output<PipelineContentConfigGetArgs> contentConfig) {
-            this.contentConfig = contentConfig;
+            $.contentConfig = contentConfig;
             return this;
         }
-        public Builder contentConfig(@Nullable PipelineContentConfigGetArgs contentConfig) {
-            this.contentConfig = Codegen.ofNullable(contentConfig);
-            return this;
+
+        public Builder contentConfig(PipelineContentConfigGetArgs contentConfig) {
+            return contentConfig(Output.of(contentConfig));
         }
+
         public Builder contentConfigPermissions(@Nullable Output<List<PipelineContentConfigPermissionGetArgs>> contentConfigPermissions) {
-            this.contentConfigPermissions = contentConfigPermissions;
+            $.contentConfigPermissions = contentConfigPermissions;
             return this;
         }
-        public Builder contentConfigPermissions(@Nullable List<PipelineContentConfigPermissionGetArgs> contentConfigPermissions) {
-            this.contentConfigPermissions = Codegen.ofNullable(contentConfigPermissions);
-            return this;
+
+        public Builder contentConfigPermissions(List<PipelineContentConfigPermissionGetArgs> contentConfigPermissions) {
+            return contentConfigPermissions(Output.of(contentConfigPermissions));
         }
+
         public Builder contentConfigPermissions(PipelineContentConfigPermissionGetArgs... contentConfigPermissions) {
             return contentConfigPermissions(List.of(contentConfigPermissions));
         }
+
         public Builder inputBucket(@Nullable Output<String> inputBucket) {
-            this.inputBucket = inputBucket;
+            $.inputBucket = inputBucket;
             return this;
         }
-        public Builder inputBucket(@Nullable String inputBucket) {
-            this.inputBucket = Codegen.ofNullable(inputBucket);
-            return this;
+
+        public Builder inputBucket(String inputBucket) {
+            return inputBucket(Output.of(inputBucket));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notifications(@Nullable Output<PipelineNotificationsGetArgs> notifications) {
-            this.notifications = notifications;
+            $.notifications = notifications;
             return this;
         }
-        public Builder notifications(@Nullable PipelineNotificationsGetArgs notifications) {
-            this.notifications = Codegen.ofNullable(notifications);
-            return this;
+
+        public Builder notifications(PipelineNotificationsGetArgs notifications) {
+            return notifications(Output.of(notifications));
         }
+
         public Builder outputBucket(@Nullable Output<String> outputBucket) {
-            this.outputBucket = outputBucket;
+            $.outputBucket = outputBucket;
             return this;
         }
-        public Builder outputBucket(@Nullable String outputBucket) {
-            this.outputBucket = Codegen.ofNullable(outputBucket);
-            return this;
+
+        public Builder outputBucket(String outputBucket) {
+            return outputBucket(Output.of(outputBucket));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder thumbnailConfig(@Nullable Output<PipelineThumbnailConfigGetArgs> thumbnailConfig) {
-            this.thumbnailConfig = thumbnailConfig;
+            $.thumbnailConfig = thumbnailConfig;
             return this;
         }
-        public Builder thumbnailConfig(@Nullable PipelineThumbnailConfigGetArgs thumbnailConfig) {
-            this.thumbnailConfig = Codegen.ofNullable(thumbnailConfig);
-            return this;
+
+        public Builder thumbnailConfig(PipelineThumbnailConfigGetArgs thumbnailConfig) {
+            return thumbnailConfig(Output.of(thumbnailConfig));
         }
+
         public Builder thumbnailConfigPermissions(@Nullable Output<List<PipelineThumbnailConfigPermissionGetArgs>> thumbnailConfigPermissions) {
-            this.thumbnailConfigPermissions = thumbnailConfigPermissions;
+            $.thumbnailConfigPermissions = thumbnailConfigPermissions;
             return this;
         }
-        public Builder thumbnailConfigPermissions(@Nullable List<PipelineThumbnailConfigPermissionGetArgs> thumbnailConfigPermissions) {
-            this.thumbnailConfigPermissions = Codegen.ofNullable(thumbnailConfigPermissions);
-            return this;
+
+        public Builder thumbnailConfigPermissions(List<PipelineThumbnailConfigPermissionGetArgs> thumbnailConfigPermissions) {
+            return thumbnailConfigPermissions(Output.of(thumbnailConfigPermissions));
         }
+
         public Builder thumbnailConfigPermissions(PipelineThumbnailConfigPermissionGetArgs... thumbnailConfigPermissions) {
             return thumbnailConfigPermissions(List.of(thumbnailConfigPermissions));
-        }        public PipelineState build() {
-            return new PipelineState(arn, awsKmsKeyArn, contentConfig, contentConfigPermissions, inputBucket, name, notifications, outputBucket, role, thumbnailConfig, thumbnailConfigPermissions);
+        }
+
+        public PipelineState build() {
+            return $;
         }
     }
+
 }

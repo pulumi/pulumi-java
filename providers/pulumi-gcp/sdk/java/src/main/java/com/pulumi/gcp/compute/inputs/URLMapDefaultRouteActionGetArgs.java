@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionCorsPolicyGetArgs;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionFaultInjectionPolicyGetArgs;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionRequestMirrorPolicyGetArgs;
@@ -15,6 +14,7 @@ import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionUrlRewriteGetArgs;
 import com.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionWeightedBackendServiceGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="corsPolicy")
-      private final @Nullable Output<URLMapDefaultRouteActionCorsPolicyGetArgs> corsPolicy;
+    private @Nullable Output<URLMapDefaultRouteActionCorsPolicyGetArgs> corsPolicy;
 
-    public Output<URLMapDefaultRouteActionCorsPolicyGetArgs> corsPolicy() {
-        return this.corsPolicy == null ? Codegen.empty() : this.corsPolicy;
+    public Optional<Output<URLMapDefaultRouteActionCorsPolicyGetArgs>> corsPolicy() {
+        return Optional.ofNullable(this.corsPolicy);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="faultInjectionPolicy")
-      private final @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
+    private @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
 
-    public Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy() {
-        return this.faultInjectionPolicy == null ? Codegen.empty() : this.faultInjectionPolicy;
+    public Optional<Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs>> faultInjectionPolicy() {
+        return Optional.ofNullable(this.faultInjectionPolicy);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="requestMirrorPolicy")
-      private final @Nullable Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
+    private @Nullable Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
 
-    public Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy() {
-        return this.requestMirrorPolicy == null ? Codegen.empty() : this.requestMirrorPolicy;
+    public Optional<Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs>> requestMirrorPolicy() {
+        return Optional.ofNullable(this.requestMirrorPolicy);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable Output<URLMapDefaultRouteActionRetryPolicyGetArgs> retryPolicy;
+    private @Nullable Output<URLMapDefaultRouteActionRetryPolicyGetArgs> retryPolicy;
 
-    public Output<URLMapDefaultRouteActionRetryPolicyGetArgs> retryPolicy() {
-        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
+    public Optional<Output<URLMapDefaultRouteActionRetryPolicyGetArgs>> retryPolicy() {
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<URLMapDefaultRouteActionTimeoutGetArgs> timeout;
+    private @Nullable Output<URLMapDefaultRouteActionTimeoutGetArgs> timeout;
 
-    public Output<URLMapDefaultRouteActionTimeoutGetArgs> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<URLMapDefaultRouteActionTimeoutGetArgs>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="urlRewrite")
-      private final @Nullable Output<URLMapDefaultRouteActionUrlRewriteGetArgs> urlRewrite;
+    private @Nullable Output<URLMapDefaultRouteActionUrlRewriteGetArgs> urlRewrite;
 
-    public Output<URLMapDefaultRouteActionUrlRewriteGetArgs> urlRewrite() {
-        return this.urlRewrite == null ? Codegen.empty() : this.urlRewrite;
+    public Optional<Output<URLMapDefaultRouteActionUrlRewriteGetArgs>> urlRewrite() {
+        return Optional.ofNullable(this.urlRewrite);
     }
 
     /**
@@ -115,131 +115,112 @@ public final class URLMapDefaultRouteActionGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="weightedBackendServices")
-      private final @Nullable Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
+    private @Nullable Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
 
-    public Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices() {
-        return this.weightedBackendServices == null ? Codegen.empty() : this.weightedBackendServices;
+    public Optional<Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>>> weightedBackendServices() {
+        return Optional.ofNullable(this.weightedBackendServices);
     }
 
-    public URLMapDefaultRouteActionGetArgs(
-        @Nullable Output<URLMapDefaultRouteActionCorsPolicyGetArgs> corsPolicy,
-        @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy,
-        @Nullable Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy,
-        @Nullable Output<URLMapDefaultRouteActionRetryPolicyGetArgs> retryPolicy,
-        @Nullable Output<URLMapDefaultRouteActionTimeoutGetArgs> timeout,
-        @Nullable Output<URLMapDefaultRouteActionUrlRewriteGetArgs> urlRewrite,
-        @Nullable Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices) {
-        this.corsPolicy = corsPolicy;
-        this.faultInjectionPolicy = faultInjectionPolicy;
-        this.requestMirrorPolicy = requestMirrorPolicy;
-        this.retryPolicy = retryPolicy;
-        this.timeout = timeout;
-        this.urlRewrite = urlRewrite;
-        this.weightedBackendServices = weightedBackendServices;
-    }
+    private URLMapDefaultRouteActionGetArgs() {}
 
-    private URLMapDefaultRouteActionGetArgs() {
-        this.corsPolicy = Codegen.empty();
-        this.faultInjectionPolicy = Codegen.empty();
-        this.requestMirrorPolicy = Codegen.empty();
-        this.retryPolicy = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.urlRewrite = Codegen.empty();
-        this.weightedBackendServices = Codegen.empty();
+    private URLMapDefaultRouteActionGetArgs(URLMapDefaultRouteActionGetArgs $) {
+        this.corsPolicy = $.corsPolicy;
+        this.faultInjectionPolicy = $.faultInjectionPolicy;
+        this.requestMirrorPolicy = $.requestMirrorPolicy;
+        this.retryPolicy = $.retryPolicy;
+        this.timeout = $.timeout;
+        this.urlRewrite = $.urlRewrite;
+        this.weightedBackendServices = $.weightedBackendServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapDefaultRouteActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<URLMapDefaultRouteActionCorsPolicyGetArgs> corsPolicy;
-        private @Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
-        private @Nullable Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
-        private @Nullable Output<URLMapDefaultRouteActionRetryPolicyGetArgs> retryPolicy;
-        private @Nullable Output<URLMapDefaultRouteActionTimeoutGetArgs> timeout;
-        private @Nullable Output<URLMapDefaultRouteActionUrlRewriteGetArgs> urlRewrite;
-        private @Nullable Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
+        private URLMapDefaultRouteActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapDefaultRouteActionGetArgs();
         }
 
         public Builder(URLMapDefaultRouteActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.corsPolicy = defaults.corsPolicy;
-    	      this.faultInjectionPolicy = defaults.faultInjectionPolicy;
-    	      this.requestMirrorPolicy = defaults.requestMirrorPolicy;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.timeout = defaults.timeout;
-    	      this.urlRewrite = defaults.urlRewrite;
-    	      this.weightedBackendServices = defaults.weightedBackendServices;
+            $ = new URLMapDefaultRouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder corsPolicy(@Nullable Output<URLMapDefaultRouteActionCorsPolicyGetArgs> corsPolicy) {
-            this.corsPolicy = corsPolicy;
+            $.corsPolicy = corsPolicy;
             return this;
         }
-        public Builder corsPolicy(@Nullable URLMapDefaultRouteActionCorsPolicyGetArgs corsPolicy) {
-            this.corsPolicy = Codegen.ofNullable(corsPolicy);
-            return this;
+
+        public Builder corsPolicy(URLMapDefaultRouteActionCorsPolicyGetArgs corsPolicy) {
+            return corsPolicy(Output.of(corsPolicy));
         }
+
         public Builder faultInjectionPolicy(@Nullable Output<URLMapDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy) {
-            this.faultInjectionPolicy = faultInjectionPolicy;
+            $.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
-        public Builder faultInjectionPolicy(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyGetArgs faultInjectionPolicy) {
-            this.faultInjectionPolicy = Codegen.ofNullable(faultInjectionPolicy);
-            return this;
+
+        public Builder faultInjectionPolicy(URLMapDefaultRouteActionFaultInjectionPolicyGetArgs faultInjectionPolicy) {
+            return faultInjectionPolicy(Output.of(faultInjectionPolicy));
         }
+
         public Builder requestMirrorPolicy(@Nullable Output<URLMapDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy) {
-            this.requestMirrorPolicy = requestMirrorPolicy;
+            $.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
-        public Builder requestMirrorPolicy(@Nullable URLMapDefaultRouteActionRequestMirrorPolicyGetArgs requestMirrorPolicy) {
-            this.requestMirrorPolicy = Codegen.ofNullable(requestMirrorPolicy);
-            return this;
+
+        public Builder requestMirrorPolicy(URLMapDefaultRouteActionRequestMirrorPolicyGetArgs requestMirrorPolicy) {
+            return requestMirrorPolicy(Output.of(requestMirrorPolicy));
         }
+
         public Builder retryPolicy(@Nullable Output<URLMapDefaultRouteActionRetryPolicyGetArgs> retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
-        public Builder retryPolicy(@Nullable URLMapDefaultRouteActionRetryPolicyGetArgs retryPolicy) {
-            this.retryPolicy = Codegen.ofNullable(retryPolicy);
-            return this;
+
+        public Builder retryPolicy(URLMapDefaultRouteActionRetryPolicyGetArgs retryPolicy) {
+            return retryPolicy(Output.of(retryPolicy));
         }
+
         public Builder timeout(@Nullable Output<URLMapDefaultRouteActionTimeoutGetArgs> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable URLMapDefaultRouteActionTimeoutGetArgs timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(URLMapDefaultRouteActionTimeoutGetArgs timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder urlRewrite(@Nullable Output<URLMapDefaultRouteActionUrlRewriteGetArgs> urlRewrite) {
-            this.urlRewrite = urlRewrite;
+            $.urlRewrite = urlRewrite;
             return this;
         }
-        public Builder urlRewrite(@Nullable URLMapDefaultRouteActionUrlRewriteGetArgs urlRewrite) {
-            this.urlRewrite = Codegen.ofNullable(urlRewrite);
-            return this;
+
+        public Builder urlRewrite(URLMapDefaultRouteActionUrlRewriteGetArgs urlRewrite) {
+            return urlRewrite(Output.of(urlRewrite));
         }
+
         public Builder weightedBackendServices(@Nullable Output<List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices) {
-            this.weightedBackendServices = weightedBackendServices;
+            $.weightedBackendServices = weightedBackendServices;
             return this;
         }
-        public Builder weightedBackendServices(@Nullable List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs> weightedBackendServices) {
-            this.weightedBackendServices = Codegen.ofNullable(weightedBackendServices);
-            return this;
+
+        public Builder weightedBackendServices(List<URLMapDefaultRouteActionWeightedBackendServiceGetArgs> weightedBackendServices) {
+            return weightedBackendServices(Output.of(weightedBackendServices));
         }
+
         public Builder weightedBackendServices(URLMapDefaultRouteActionWeightedBackendServiceGetArgs... weightedBackendServices) {
             return weightedBackendServices(List.of(weightedBackendServices));
-        }        public URLMapDefaultRouteActionGetArgs build() {
-            return new URLMapDefaultRouteActionGetArgs(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
+        }
+
+        public URLMapDefaultRouteActionGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class AS2OneWayAgreementResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="protocolSettings", required=true)
-      private final AS2ProtocolSettingsResponse protocolSettings;
+    private AS2ProtocolSettingsResponse protocolSettings;
 
     public AS2ProtocolSettingsResponse protocolSettings() {
         return this.protocolSettings;
@@ -33,7 +33,7 @@ public final class AS2OneWayAgreementResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="receiverBusinessIdentity", required=true)
-      private final BusinessIdentityResponse receiverBusinessIdentity;
+    private BusinessIdentityResponse receiverBusinessIdentity;
 
     public BusinessIdentityResponse receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
@@ -44,64 +44,59 @@ public final class AS2OneWayAgreementResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="senderBusinessIdentity", required=true)
-      private final BusinessIdentityResponse senderBusinessIdentity;
+    private BusinessIdentityResponse senderBusinessIdentity;
 
     public BusinessIdentityResponse senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
 
-    public AS2OneWayAgreementResponse(
-        AS2ProtocolSettingsResponse protocolSettings,
-        BusinessIdentityResponse receiverBusinessIdentity,
-        BusinessIdentityResponse senderBusinessIdentity) {
-        this.protocolSettings = Objects.requireNonNull(protocolSettings, "expected parameter 'protocolSettings' to be non-null");
-        this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity, "expected parameter 'receiverBusinessIdentity' to be non-null");
-        this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity, "expected parameter 'senderBusinessIdentity' to be non-null");
-    }
+    private AS2OneWayAgreementResponse() {}
 
-    private AS2OneWayAgreementResponse() {
-        this.protocolSettings = null;
-        this.receiverBusinessIdentity = null;
-        this.senderBusinessIdentity = null;
+    private AS2OneWayAgreementResponse(AS2OneWayAgreementResponse $) {
+        this.protocolSettings = $.protocolSettings;
+        this.receiverBusinessIdentity = $.receiverBusinessIdentity;
+        this.senderBusinessIdentity = $.senderBusinessIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2OneWayAgreementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AS2ProtocolSettingsResponse protocolSettings;
-        private BusinessIdentityResponse receiverBusinessIdentity;
-        private BusinessIdentityResponse senderBusinessIdentity;
+        private AS2OneWayAgreementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2OneWayAgreementResponse();
         }
 
         public Builder(AS2OneWayAgreementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.protocolSettings = defaults.protocolSettings;
-    	      this.receiverBusinessIdentity = defaults.receiverBusinessIdentity;
-    	      this.senderBusinessIdentity = defaults.senderBusinessIdentity;
+            $ = new AS2OneWayAgreementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder protocolSettings(AS2ProtocolSettingsResponse protocolSettings) {
-            this.protocolSettings = Objects.requireNonNull(protocolSettings);
+            $.protocolSettings = protocolSettings;
             return this;
         }
+
         public Builder receiverBusinessIdentity(BusinessIdentityResponse receiverBusinessIdentity) {
-            this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
+            $.receiverBusinessIdentity = receiverBusinessIdentity;
             return this;
         }
+
         public Builder senderBusinessIdentity(BusinessIdentityResponse senderBusinessIdentity) {
-            this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
+            $.senderBusinessIdentity = senderBusinessIdentity;
             return this;
-        }        public AS2OneWayAgreementResponse build() {
-            return new AS2OneWayAgreementResponse(protocolSettings, receiverBusinessIdentity, senderBusinessIdentity);
+        }
+
+        public AS2OneWayAgreementResponse build() {
+            $.protocolSettings = Objects.requireNonNull($.protocolSettings, "expected parameter 'protocolSettings' to be non-null");
+            $.receiverBusinessIdentity = Objects.requireNonNull($.receiverBusinessIdentity, "expected parameter 'receiverBusinessIdentity' to be non-null");
+            $.senderBusinessIdentity = Objects.requireNonNull($.senderBusinessIdentity, "expected parameter 'senderBusinessIdentity' to be non-null");
+            return $;
         }
     }
+
 }

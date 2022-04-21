@@ -5,9 +5,9 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class IntentFollowupIntentInfoGetArgs extends com.pulumi.resources.
     public static final IntentFollowupIntentInfoGetArgs Empty = new IntentFollowupIntentInfoGetArgs();
 
     @Import(name="followupIntentName")
-      private final @Nullable Output<String> followupIntentName;
+    private @Nullable Output<String> followupIntentName;
 
-    public Output<String> followupIntentName() {
-        return this.followupIntentName == null ? Codegen.empty() : this.followupIntentName;
+    public Optional<Output<String>> followupIntentName() {
+        return Optional.ofNullable(this.followupIntentName);
     }
 
     /**
@@ -28,63 +28,58 @@ public final class IntentFollowupIntentInfoGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="parentFollowupIntentName")
-      private final @Nullable Output<String> parentFollowupIntentName;
+    private @Nullable Output<String> parentFollowupIntentName;
 
-    public Output<String> parentFollowupIntentName() {
-        return this.parentFollowupIntentName == null ? Codegen.empty() : this.parentFollowupIntentName;
+    public Optional<Output<String>> parentFollowupIntentName() {
+        return Optional.ofNullable(this.parentFollowupIntentName);
     }
 
-    public IntentFollowupIntentInfoGetArgs(
-        @Nullable Output<String> followupIntentName,
-        @Nullable Output<String> parentFollowupIntentName) {
-        this.followupIntentName = followupIntentName;
-        this.parentFollowupIntentName = parentFollowupIntentName;
-    }
+    private IntentFollowupIntentInfoGetArgs() {}
 
-    private IntentFollowupIntentInfoGetArgs() {
-        this.followupIntentName = Codegen.empty();
-        this.parentFollowupIntentName = Codegen.empty();
+    private IntentFollowupIntentInfoGetArgs(IntentFollowupIntentInfoGetArgs $) {
+        this.followupIntentName = $.followupIntentName;
+        this.parentFollowupIntentName = $.parentFollowupIntentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntentFollowupIntentInfoGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> followupIntentName;
-        private @Nullable Output<String> parentFollowupIntentName;
+        private IntentFollowupIntentInfoGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntentFollowupIntentInfoGetArgs();
         }
 
         public Builder(IntentFollowupIntentInfoGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.followupIntentName = defaults.followupIntentName;
-    	      this.parentFollowupIntentName = defaults.parentFollowupIntentName;
+            $ = new IntentFollowupIntentInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder followupIntentName(@Nullable Output<String> followupIntentName) {
-            this.followupIntentName = followupIntentName;
+            $.followupIntentName = followupIntentName;
             return this;
         }
-        public Builder followupIntentName(@Nullable String followupIntentName) {
-            this.followupIntentName = Codegen.ofNullable(followupIntentName);
-            return this;
+
+        public Builder followupIntentName(String followupIntentName) {
+            return followupIntentName(Output.of(followupIntentName));
         }
+
         public Builder parentFollowupIntentName(@Nullable Output<String> parentFollowupIntentName) {
-            this.parentFollowupIntentName = parentFollowupIntentName;
+            $.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }
-        public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
-            this.parentFollowupIntentName = Codegen.ofNullable(parentFollowupIntentName);
-            return this;
-        }        public IntentFollowupIntentInfoGetArgs build() {
-            return new IntentFollowupIntentInfoGetArgs(followupIntentName, parentFollowupIntentName);
+
+        public Builder parentFollowupIntentName(String parentFollowupIntentName) {
+            return parentFollowupIntentName(Output.of(parentFollowupIntentName));
+        }
+
+        public IntentFollowupIntentInfoGetArgs build() {
+            return $;
         }
     }
+
 }

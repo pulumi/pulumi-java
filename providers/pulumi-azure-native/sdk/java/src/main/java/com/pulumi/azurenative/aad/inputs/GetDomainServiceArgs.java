@@ -17,7 +17,7 @@ public final class GetDomainServiceArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="domainServiceName", required=true)
-      private final String domainServiceName;
+    private String domainServiceName;
 
     public String domainServiceName() {
         return this.domainServiceName;
@@ -28,55 +28,52 @@ public final class GetDomainServiceArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDomainServiceArgs(
-        String domainServiceName,
-        String resourceGroupName) {
-        this.domainServiceName = Objects.requireNonNull(domainServiceName, "expected parameter 'domainServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDomainServiceArgs() {}
 
-    private GetDomainServiceArgs() {
-        this.domainServiceName = null;
-        this.resourceGroupName = null;
+    private GetDomainServiceArgs(GetDomainServiceArgs $) {
+        this.domainServiceName = $.domainServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainServiceName;
-        private String resourceGroupName;
+        private GetDomainServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainServiceArgs();
         }
 
         public Builder(GetDomainServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainServiceName = defaults.domainServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDomainServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainServiceName(String domainServiceName) {
-            this.domainServiceName = Objects.requireNonNull(domainServiceName);
+            $.domainServiceName = domainServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDomainServiceArgs build() {
-            return new GetDomainServiceArgs(domainServiceName, resourceGroupName);
+        }
+
+        public GetDomainServiceArgs build() {
+            $.domainServiceName = Objects.requireNonNull($.domainServiceName, "expected parameter 'domainServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

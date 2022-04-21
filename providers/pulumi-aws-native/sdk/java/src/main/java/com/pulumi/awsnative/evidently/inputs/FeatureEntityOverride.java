@@ -15,62 +15,57 @@ public final class FeatureEntityOverride extends com.pulumi.resources.InvokeArgs
     public static final FeatureEntityOverride Empty = new FeatureEntityOverride();
 
     @Import(name="entityId")
-      private final @Nullable String entityId;
+    private @Nullable String entityId;
 
     public Optional<String> entityId() {
-        return this.entityId == null ? Optional.empty() : Optional.ofNullable(this.entityId);
+        return Optional.ofNullable(this.entityId);
     }
 
     @Import(name="variation")
-      private final @Nullable String variation;
+    private @Nullable String variation;
 
     public Optional<String> variation() {
-        return this.variation == null ? Optional.empty() : Optional.ofNullable(this.variation);
+        return Optional.ofNullable(this.variation);
     }
 
-    public FeatureEntityOverride(
-        @Nullable String entityId,
-        @Nullable String variation) {
-        this.entityId = entityId;
-        this.variation = variation;
-    }
+    private FeatureEntityOverride() {}
 
-    private FeatureEntityOverride() {
-        this.entityId = null;
-        this.variation = null;
+    private FeatureEntityOverride(FeatureEntityOverride $) {
+        this.entityId = $.entityId;
+        this.variation = $.variation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureEntityOverride defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String entityId;
-        private @Nullable String variation;
+        private FeatureEntityOverride $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureEntityOverride();
         }
 
         public Builder(FeatureEntityOverride defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityId = defaults.entityId;
-    	      this.variation = defaults.variation;
+            $ = new FeatureEntityOverride(Objects.requireNonNull(defaults));
         }
 
         public Builder entityId(@Nullable String entityId) {
-            this.entityId = entityId;
+            $.entityId = entityId;
             return this;
         }
+
         public Builder variation(@Nullable String variation) {
-            this.variation = variation;
+            $.variation = variation;
             return this;
-        }        public FeatureEntityOverride build() {
-            return new FeatureEntityOverride(entityId, variation);
+        }
+
+        public FeatureEntityOverride build() {
+            return $;
         }
     }
+
 }

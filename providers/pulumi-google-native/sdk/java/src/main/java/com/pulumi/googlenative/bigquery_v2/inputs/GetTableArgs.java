@@ -15,94 +15,85 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTableArgs Empty = new GetTableArgs();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="selectedFields")
-      private final @Nullable String selectedFields;
+    private @Nullable String selectedFields;
 
     public Optional<String> selectedFields() {
-        return this.selectedFields == null ? Optional.empty() : Optional.ofNullable(this.selectedFields);
+        return Optional.ofNullable(this.selectedFields);
     }
 
     @Import(name="tableId", required=true)
-      private final String tableId;
+    private String tableId;
 
     public String tableId() {
         return this.tableId;
     }
 
-    public GetTableArgs(
-        String datasetId,
-        @Nullable String project,
-        @Nullable String selectedFields,
-        String tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.project = project;
-        this.selectedFields = selectedFields;
-        this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
-    }
+    private GetTableArgs() {}
 
-    private GetTableArgs() {
-        this.datasetId = null;
-        this.project = null;
-        this.selectedFields = null;
-        this.tableId = null;
+    private GetTableArgs(GetTableArgs $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
+        this.selectedFields = $.selectedFields;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private @Nullable String project;
-        private @Nullable String selectedFields;
-        private String tableId;
+        private GetTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTableArgs();
         }
 
         public Builder(GetTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
-    	      this.selectedFields = defaults.selectedFields;
-    	      this.tableId = defaults.tableId;
+            $ = new GetTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder selectedFields(@Nullable String selectedFields) {
-            this.selectedFields = selectedFields;
+            $.selectedFields = selectedFields;
             return this;
         }
+
         public Builder tableId(String tableId) {
-            this.tableId = Objects.requireNonNull(tableId);
+            $.tableId = tableId;
             return this;
-        }        public GetTableArgs build() {
-            return new GetTableArgs(datasetId, project, selectedFields, tableId);
+        }
+
+        public GetTableArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.tableId = Objects.requireNonNull($.tableId, "expected parameter 'tableId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -44,10 +44,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="compression")
-      private final @Nullable DatasetCompressionResponse compression;
+    private @Nullable DatasetCompressionResponse compression;
 
     public Optional<DatasetCompressionResponse> compression() {
-        return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
+        return Optional.ofNullable(this.compression);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="firstRowAsHeader")
-      private final @Nullable Object firstRowAsHeader;
+    private @Nullable Object firstRowAsHeader;
 
     public Optional<Object> firstRowAsHeader() {
-        return this.firstRowAsHeader == null ? Optional.empty() : Optional.ofNullable(this.firstRowAsHeader);
+        return Optional.ofNullable(this.firstRowAsHeader);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="folder")
-      private final @Nullable DatasetResponseFolder folder;
+    private @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -110,7 +110,7 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="location", required=true)
-      private final Object location;
+    private Object location;
 
     public Object location() {
         return this.location;
@@ -121,10 +121,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="nullValue")
-      private final @Nullable Object nullValue;
+    private @Nullable Object nullValue;
 
     public Optional<Object> nullValue() {
-        return this.nullValue == null ? Optional.empty() : Optional.ofNullable(this.nullValue);
+        return Optional.ofNullable(this.nullValue);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="range")
-      private final @Nullable Object range;
+    private @Nullable Object range;
 
     public Optional<Object> range() {
-        return this.range == null ? Optional.empty() : Optional.ofNullable(this.range);
+        return Optional.ofNullable(this.range);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="schema")
-      private final @Nullable Object schema;
+    private @Nullable Object schema;
 
     public Optional<Object> schema() {
-        return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sheetIndex")
-      private final @Nullable Object sheetIndex;
+    private @Nullable Object sheetIndex;
 
     public Optional<Object> sheetIndex() {
-        return this.sheetIndex == null ? Optional.empty() : Optional.ofNullable(this.sheetIndex);
+        return Optional.ofNullable(this.sheetIndex);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sheetName")
-      private final @Nullable Object sheetName;
+    private @Nullable Object sheetName;
 
     public Optional<Object> sheetName() {
-        return this.sheetName == null ? Optional.empty() : Optional.ofNullable(this.sheetName);
+        return Optional.ofNullable(this.sheetName);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="structure")
-      private final @Nullable Object structure;
+    private @Nullable Object structure;
 
     public Optional<Object> structure() {
-        return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -199,175 +199,135 @@ public final class ExcelDatasetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ExcelDatasetResponse(
-        @Nullable List<Object> annotations,
-        @Nullable DatasetCompressionResponse compression,
-        @Nullable String description,
-        @Nullable Object firstRowAsHeader,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        Object location,
-        @Nullable Object nullValue,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object range,
-        @Nullable Object schema,
-        @Nullable Object sheetIndex,
-        @Nullable Object sheetName,
-        @Nullable Object structure,
-        String type) {
-        this.annotations = annotations;
-        this.compression = compression;
-        this.description = description;
-        this.firstRowAsHeader = firstRowAsHeader;
-        this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.nullValue = nullValue;
-        this.parameters = parameters;
-        this.range = range;
-        this.schema = schema;
-        this.sheetIndex = sheetIndex;
-        this.sheetName = sheetName;
-        this.structure = structure;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ExcelDatasetResponse() {}
 
-    private ExcelDatasetResponse() {
-        this.annotations = List.of();
-        this.compression = null;
-        this.description = null;
-        this.firstRowAsHeader = null;
-        this.folder = null;
-        this.linkedServiceName = null;
-        this.location = null;
-        this.nullValue = null;
-        this.parameters = Map.of();
-        this.range = null;
-        this.schema = null;
-        this.sheetIndex = null;
-        this.sheetName = null;
-        this.structure = null;
-        this.type = null;
+    private ExcelDatasetResponse(ExcelDatasetResponse $) {
+        this.annotations = $.annotations;
+        this.compression = $.compression;
+        this.description = $.description;
+        this.firstRowAsHeader = $.firstRowAsHeader;
+        this.folder = $.folder;
+        this.linkedServiceName = $.linkedServiceName;
+        this.location = $.location;
+        this.nullValue = $.nullValue;
+        this.parameters = $.parameters;
+        this.range = $.range;
+        this.schema = $.schema;
+        this.sheetIndex = $.sheetIndex;
+        this.sheetName = $.sheetName;
+        this.structure = $.structure;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExcelDatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable DatasetCompressionResponse compression;
-        private @Nullable String description;
-        private @Nullable Object firstRowAsHeader;
-        private @Nullable DatasetResponseFolder folder;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private Object location;
-        private @Nullable Object nullValue;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object range;
-        private @Nullable Object schema;
-        private @Nullable Object sheetIndex;
-        private @Nullable Object sheetName;
-        private @Nullable Object structure;
-        private String type;
+        private ExcelDatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExcelDatasetResponse();
         }
 
         public Builder(ExcelDatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.compression = defaults.compression;
-    	      this.description = defaults.description;
-    	      this.firstRowAsHeader = defaults.firstRowAsHeader;
-    	      this.folder = defaults.folder;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.location = defaults.location;
-    	      this.nullValue = defaults.nullValue;
-    	      this.parameters = defaults.parameters;
-    	      this.range = defaults.range;
-    	      this.schema = defaults.schema;
-    	      this.sheetIndex = defaults.sheetIndex;
-    	      this.sheetName = defaults.sheetName;
-    	      this.structure = defaults.structure;
-    	      this.type = defaults.type;
+            $ = new ExcelDatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder compression(@Nullable DatasetCompressionResponse compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
-            this.firstRowAsHeader = firstRowAsHeader;
+            $.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
+
         public Builder folder(@Nullable DatasetResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder location(Object location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder nullValue(@Nullable Object nullValue) {
-            this.nullValue = nullValue;
+            $.nullValue = nullValue;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder range(@Nullable Object range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
+
         public Builder schema(@Nullable Object schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
+
         public Builder sheetIndex(@Nullable Object sheetIndex) {
-            this.sheetIndex = sheetIndex;
+            $.sheetIndex = sheetIndex;
             return this;
         }
+
         public Builder sheetName(@Nullable Object sheetName) {
-            this.sheetName = sheetName;
+            $.sheetName = sheetName;
             return this;
         }
+
         public Builder structure(@Nullable Object structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ExcelDatasetResponse build() {
-            return new ExcelDatasetResponse(annotations, compression, description, firstRowAsHeader, folder, linkedServiceName, location, nullValue, parameters, range, schema, sheetIndex, sheetName, structure, type);
+        }
+
+        public ExcelDatasetResponse build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

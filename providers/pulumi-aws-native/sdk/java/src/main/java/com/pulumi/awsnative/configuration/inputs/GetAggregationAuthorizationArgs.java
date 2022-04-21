@@ -17,45 +17,45 @@ public final class GetAggregationAuthorizationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="aggregationAuthorizationArn", required=true)
-      private final String aggregationAuthorizationArn;
+    private String aggregationAuthorizationArn;
 
     public String aggregationAuthorizationArn() {
         return this.aggregationAuthorizationArn;
     }
 
-    public GetAggregationAuthorizationArgs(String aggregationAuthorizationArn) {
-        this.aggregationAuthorizationArn = Objects.requireNonNull(aggregationAuthorizationArn, "expected parameter 'aggregationAuthorizationArn' to be non-null");
-    }
+    private GetAggregationAuthorizationArgs() {}
 
-    private GetAggregationAuthorizationArgs() {
-        this.aggregationAuthorizationArn = null;
+    private GetAggregationAuthorizationArgs(GetAggregationAuthorizationArgs $) {
+        this.aggregationAuthorizationArn = $.aggregationAuthorizationArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAggregationAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aggregationAuthorizationArn;
+        private GetAggregationAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAggregationAuthorizationArgs();
         }
 
         public Builder(GetAggregationAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationAuthorizationArn = defaults.aggregationAuthorizationArn;
+            $ = new GetAggregationAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationAuthorizationArn(String aggregationAuthorizationArn) {
-            this.aggregationAuthorizationArn = Objects.requireNonNull(aggregationAuthorizationArn);
+            $.aggregationAuthorizationArn = aggregationAuthorizationArn;
             return this;
-        }        public GetAggregationAuthorizationArgs build() {
-            return new GetAggregationAuthorizationArgs(aggregationAuthorizationArn);
+        }
+
+        public GetAggregationAuthorizationArgs build() {
+            $.aggregationAuthorizationArn = Objects.requireNonNull($.aggregationAuthorizationArn, "expected parameter 'aggregationAuthorizationArn' to be non-null");
+            return $;
         }
     }
+
 }

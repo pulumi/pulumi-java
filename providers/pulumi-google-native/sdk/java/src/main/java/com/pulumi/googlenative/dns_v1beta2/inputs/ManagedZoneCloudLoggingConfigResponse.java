@@ -22,62 +22,59 @@ public final class ManagedZoneCloudLoggingConfigResponse extends com.pulumi.reso
      * 
      */
     @Import(name="enableLogging", required=true)
-      private final Boolean enableLogging;
+    private Boolean enableLogging;
 
     public Boolean enableLogging() {
         return this.enableLogging;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public ManagedZoneCloudLoggingConfigResponse(
-        Boolean enableLogging,
-        String kind) {
-        this.enableLogging = Objects.requireNonNull(enableLogging, "expected parameter 'enableLogging' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private ManagedZoneCloudLoggingConfigResponse() {}
 
-    private ManagedZoneCloudLoggingConfigResponse() {
-        this.enableLogging = null;
-        this.kind = null;
+    private ManagedZoneCloudLoggingConfigResponse(ManagedZoneCloudLoggingConfigResponse $) {
+        this.enableLogging = $.enableLogging;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneCloudLoggingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableLogging;
-        private String kind;
+        private ManagedZoneCloudLoggingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneCloudLoggingConfigResponse();
         }
 
         public Builder(ManagedZoneCloudLoggingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.kind = defaults.kind;
+            $ = new ManagedZoneCloudLoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableLogging(Boolean enableLogging) {
-            this.enableLogging = Objects.requireNonNull(enableLogging);
+            $.enableLogging = enableLogging;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public ManagedZoneCloudLoggingConfigResponse build() {
-            return new ManagedZoneCloudLoggingConfigResponse(enableLogging, kind);
+        }
+
+        public ManagedZoneCloudLoggingConfigResponse build() {
+            $.enableLogging = Objects.requireNonNull($.enableLogging, "expected parameter 'enableLogging' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

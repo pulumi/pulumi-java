@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import com.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointConditionsArgs;
 import com.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointHintsArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addresses", required=true)
-      private final Output<List<String>> addresses;
+    private Output<List<String>> addresses;
 
     public Output<List<String>> addresses() {
         return this.addresses;
@@ -40,10 +40,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<EndpointConditionsArgs> conditions;
+    private @Nullable Output<EndpointConditionsArgs> conditions;
 
-    public Output<EndpointConditionsArgs> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<EndpointConditionsArgs>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deprecatedTopology")
-      private final @Nullable Output<Map<String,String>> deprecatedTopology;
+    private @Nullable Output<Map<String,String>> deprecatedTopology;
 
-    public Output<Map<String,String>> deprecatedTopology() {
-        return this.deprecatedTopology == null ? Codegen.empty() : this.deprecatedTopology;
+    public Optional<Output<Map<String,String>>> deprecatedTopology() {
+        return Optional.ofNullable(this.deprecatedTopology);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hints")
-      private final @Nullable Output<EndpointHintsArgs> hints;
+    private @Nullable Output<EndpointHintsArgs> hints;
 
-    public Output<EndpointHintsArgs> hints() {
-        return this.hints == null ? Codegen.empty() : this.hints;
+    public Optional<Output<EndpointHintsArgs>> hints() {
+        return Optional.ofNullable(this.hints);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeName")
-      private final @Nullable Output<String> nodeName;
+    private @Nullable Output<String> nodeName;
 
-    public Output<String> nodeName() {
-        return this.nodeName == null ? Codegen.empty() : this.nodeName;
+    public Optional<Output<String>> nodeName() {
+        return Optional.ofNullable(this.nodeName);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetRef")
-      private final @Nullable Output<ObjectReferenceArgs> targetRef;
+    private @Nullable Output<ObjectReferenceArgs> targetRef;
 
-    public Output<ObjectReferenceArgs> targetRef() {
-        return this.targetRef == null ? Codegen.empty() : this.targetRef;
+    public Optional<Output<ObjectReferenceArgs>> targetRef() {
+        return Optional.ofNullable(this.targetRef);
     }
 
     /**
@@ -106,144 +106,123 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public EndpointArgs(
-        Output<List<String>> addresses,
-        @Nullable Output<EndpointConditionsArgs> conditions,
-        @Nullable Output<Map<String,String>> deprecatedTopology,
-        @Nullable Output<EndpointHintsArgs> hints,
-        @Nullable Output<String> hostname,
-        @Nullable Output<String> nodeName,
-        @Nullable Output<ObjectReferenceArgs> targetRef,
-        @Nullable Output<String> zone) {
-        this.addresses = Objects.requireNonNull(addresses, "expected parameter 'addresses' to be non-null");
-        this.conditions = conditions;
-        this.deprecatedTopology = deprecatedTopology;
-        this.hints = hints;
-        this.hostname = hostname;
-        this.nodeName = nodeName;
-        this.targetRef = targetRef;
-        this.zone = zone;
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.addresses = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.deprecatedTopology = Codegen.empty();
-        this.hints = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.nodeName = Codegen.empty();
-        this.targetRef = Codegen.empty();
-        this.zone = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.addresses = $.addresses;
+        this.conditions = $.conditions;
+        this.deprecatedTopology = $.deprecatedTopology;
+        this.hints = $.hints;
+        this.hostname = $.hostname;
+        this.nodeName = $.nodeName;
+        this.targetRef = $.targetRef;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> addresses;
-        private @Nullable Output<EndpointConditionsArgs> conditions;
-        private @Nullable Output<Map<String,String>> deprecatedTopology;
-        private @Nullable Output<EndpointHintsArgs> hints;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<String> nodeName;
-        private @Nullable Output<ObjectReferenceArgs> targetRef;
-        private @Nullable Output<String> zone;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addresses = defaults.addresses;
-    	      this.conditions = defaults.conditions;
-    	      this.deprecatedTopology = defaults.deprecatedTopology;
-    	      this.hints = defaults.hints;
-    	      this.hostname = defaults.hostname;
-    	      this.nodeName = defaults.nodeName;
-    	      this.targetRef = defaults.targetRef;
-    	      this.zone = defaults.zone;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addresses(Output<List<String>> addresses) {
-            this.addresses = Objects.requireNonNull(addresses);
+            $.addresses = addresses;
             return this;
         }
+
         public Builder addresses(List<String> addresses) {
-            this.addresses = Output.of(Objects.requireNonNull(addresses));
-            return this;
+            return addresses(Output.of(addresses));
         }
+
         public Builder addresses(String... addresses) {
             return addresses(List.of(addresses));
         }
+
         public Builder conditions(@Nullable Output<EndpointConditionsArgs> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable EndpointConditionsArgs conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(EndpointConditionsArgs conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder deprecatedTopology(@Nullable Output<Map<String,String>> deprecatedTopology) {
-            this.deprecatedTopology = deprecatedTopology;
+            $.deprecatedTopology = deprecatedTopology;
             return this;
         }
-        public Builder deprecatedTopology(@Nullable Map<String,String> deprecatedTopology) {
-            this.deprecatedTopology = Codegen.ofNullable(deprecatedTopology);
-            return this;
+
+        public Builder deprecatedTopology(Map<String,String> deprecatedTopology) {
+            return deprecatedTopology(Output.of(deprecatedTopology));
         }
+
         public Builder hints(@Nullable Output<EndpointHintsArgs> hints) {
-            this.hints = hints;
+            $.hints = hints;
             return this;
         }
-        public Builder hints(@Nullable EndpointHintsArgs hints) {
-            this.hints = Codegen.ofNullable(hints);
-            return this;
+
+        public Builder hints(EndpointHintsArgs hints) {
+            return hints(Output.of(hints));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder nodeName(@Nullable Output<String> nodeName) {
-            this.nodeName = nodeName;
+            $.nodeName = nodeName;
             return this;
         }
-        public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Codegen.ofNullable(nodeName);
-            return this;
+
+        public Builder nodeName(String nodeName) {
+            return nodeName(Output.of(nodeName));
         }
+
         public Builder targetRef(@Nullable Output<ObjectReferenceArgs> targetRef) {
-            this.targetRef = targetRef;
+            $.targetRef = targetRef;
             return this;
         }
-        public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
-            this.targetRef = Codegen.ofNullable(targetRef);
-            return this;
+
+        public Builder targetRef(ObjectReferenceArgs targetRef) {
+            return targetRef(Output.of(targetRef));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(addresses, conditions, deprecatedTopology, hints, hostname, nodeName, targetRef, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public EndpointArgs build() {
+            $.addresses = Objects.requireNonNull($.addresses, "expected parameter 'addresses' to be non-null");
+            return $;
         }
     }
+
 }

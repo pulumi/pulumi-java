@@ -24,10 +24,10 @@ public final class DataPathAssetReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="datastoreId")
-      private final @Nullable String datastoreId;
+    private @Nullable String datastoreId;
 
     public Optional<String> datastoreId() {
-        return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
+        return Optional.ofNullable(this.datastoreId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DataPathAssetReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class DataPathAssetReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="referenceType", required=true)
-      private final String referenceType;
+    private String referenceType;
 
     public String referenceType() {
         return this.referenceType;
     }
 
-    public DataPathAssetReferenceResponse(
-        @Nullable String datastoreId,
-        @Nullable String path,
-        String referenceType) {
-        this.datastoreId = datastoreId;
-        this.path = path;
-        this.referenceType = Codegen.stringProp("referenceType").arg(referenceType).require();
-    }
+    private DataPathAssetReferenceResponse() {}
 
-    private DataPathAssetReferenceResponse() {
-        this.datastoreId = null;
-        this.path = null;
-        this.referenceType = null;
+    private DataPathAssetReferenceResponse(DataPathAssetReferenceResponse $) {
+        this.datastoreId = $.datastoreId;
+        this.path = $.path;
+        this.referenceType = $.referenceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataPathAssetReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String datastoreId;
-        private @Nullable String path;
-        private String referenceType;
+        private DataPathAssetReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataPathAssetReferenceResponse();
         }
 
         public Builder(DataPathAssetReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.path = defaults.path;
-    	      this.referenceType = defaults.referenceType;
+            $ = new DataPathAssetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = datastoreId;
+            $.datastoreId = datastoreId;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder referenceType(String referenceType) {
-            this.referenceType = Objects.requireNonNull(referenceType);
+            $.referenceType = referenceType;
             return this;
-        }        public DataPathAssetReferenceResponse build() {
-            return new DataPathAssetReferenceResponse(datastoreId, path, referenceType);
+        }
+
+        public DataPathAssetReferenceResponse build() {
+            $.referenceType = Codegen.stringProp("referenceType").arg($.referenceType).require();
+            return $;
         }
     }
+
 }

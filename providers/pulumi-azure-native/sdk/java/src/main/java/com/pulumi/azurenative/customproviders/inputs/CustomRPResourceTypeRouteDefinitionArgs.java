@@ -7,9 +7,9 @@ import com.pulumi.azurenative.customproviders.enums.ResourceTypeRouting;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends com.pulumi.re
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Output<String> endpoint;
+    private Output<String> endpoint;
 
     public Output<String> endpoint() {
         return this.endpoint;
@@ -37,7 +37,7 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -48,76 +48,70 @@ public final class CustomRPResourceTypeRouteDefinitionArgs extends com.pulumi.re
      * 
      */
     @Import(name="routingType")
-      private final @Nullable Output<Either<String,ResourceTypeRouting>> routingType;
+    private @Nullable Output<Either<String,ResourceTypeRouting>> routingType;
 
-    public Output<Either<String,ResourceTypeRouting>> routingType() {
-        return this.routingType == null ? Codegen.empty() : this.routingType;
+    public Optional<Output<Either<String,ResourceTypeRouting>>> routingType() {
+        return Optional.ofNullable(this.routingType);
     }
 
-    public CustomRPResourceTypeRouteDefinitionArgs(
-        Output<String> endpoint,
-        Output<String> name,
-        @Nullable Output<Either<String,ResourceTypeRouting>> routingType) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.routingType = routingType;
-    }
+    private CustomRPResourceTypeRouteDefinitionArgs() {}
 
-    private CustomRPResourceTypeRouteDefinitionArgs() {
-        this.endpoint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.routingType = Codegen.empty();
+    private CustomRPResourceTypeRouteDefinitionArgs(CustomRPResourceTypeRouteDefinitionArgs $) {
+        this.endpoint = $.endpoint;
+        this.name = $.name;
+        this.routingType = $.routingType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomRPResourceTypeRouteDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endpoint;
-        private Output<String> name;
-        private @Nullable Output<Either<String,ResourceTypeRouting>> routingType;
+        private CustomRPResourceTypeRouteDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomRPResourceTypeRouteDefinitionArgs();
         }
 
         public Builder(CustomRPResourceTypeRouteDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.name = defaults.name;
-    	      this.routingType = defaults.routingType;
+            $ = new CustomRPResourceTypeRouteDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(Output<String> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder endpoint(String endpoint) {
-            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
-            return this;
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder routingType(@Nullable Output<Either<String,ResourceTypeRouting>> routingType) {
-            this.routingType = routingType;
+            $.routingType = routingType;
             return this;
         }
-        public Builder routingType(@Nullable Either<String,ResourceTypeRouting> routingType) {
-            this.routingType = Codegen.ofNullable(routingType);
-            return this;
-        }        public CustomRPResourceTypeRouteDefinitionArgs build() {
-            return new CustomRPResourceTypeRouteDefinitionArgs(endpoint, name, routingType);
+
+        public Builder routingType(Either<String,ResourceTypeRouting> routingType) {
+            return routingType(Output.of(routingType));
+        }
+
+        public CustomRPResourceTypeRouteDefinitionArgs build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

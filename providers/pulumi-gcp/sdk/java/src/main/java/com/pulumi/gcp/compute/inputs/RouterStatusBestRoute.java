@@ -15,14 +15,14 @@ public final class RouterStatusBestRoute extends com.pulumi.resources.InvokeArgs
     public static final RouterStatusBestRoute Empty = new RouterStatusBestRoute();
 
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
     @Import(name="destRange", required=true)
-      private final String destRange;
+    private String destRange;
 
     public String destRange() {
         return this.destRange;
@@ -33,7 +33,7 @@ public final class RouterStatusBestRoute extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,63 +45,63 @@ public final class RouterStatusBestRoute extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
     }
 
     @Import(name="nextHopGateway", required=true)
-      private final String nextHopGateway;
+    private String nextHopGateway;
 
     public String nextHopGateway() {
         return this.nextHopGateway;
     }
 
     @Import(name="nextHopIlb", required=true)
-      private final String nextHopIlb;
+    private String nextHopIlb;
 
     public String nextHopIlb() {
         return this.nextHopIlb;
     }
 
     @Import(name="nextHopInstance", required=true)
-      private final String nextHopInstance;
+    private String nextHopInstance;
 
     public String nextHopInstance() {
         return this.nextHopInstance;
     }
 
     @Import(name="nextHopInstanceZone", required=true)
-      private final String nextHopInstanceZone;
+    private String nextHopInstanceZone;
 
     public String nextHopInstanceZone() {
         return this.nextHopInstanceZone;
     }
 
     @Import(name="nextHopIp", required=true)
-      private final String nextHopIp;
+    private String nextHopIp;
 
     public String nextHopIp() {
         return this.nextHopIp;
     }
 
     @Import(name="nextHopNetwork", required=true)
-      private final String nextHopNetwork;
+    private String nextHopNetwork;
 
     public String nextHopNetwork() {
         return this.nextHopNetwork;
     }
 
     @Import(name="nextHopVpnTunnel", required=true)
-      private final String nextHopVpnTunnel;
+    private String nextHopVpnTunnel;
 
     public String nextHopVpnTunnel() {
         return this.nextHopVpnTunnel;
     }
 
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -113,189 +113,161 @@ public final class RouterStatusBestRoute extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
     @Import(name="selfLink", required=true)
-      private final String selfLink;
+    private String selfLink;
 
     public String selfLink() {
         return this.selfLink;
     }
 
     @Import(name="tags", required=true)
-      private final List<String> tags;
+    private List<String> tags;
 
     public List<String> tags() {
         return this.tags;
     }
 
-    public RouterStatusBestRoute(
-        String description,
-        String destRange,
-        String name,
-        String network,
-        String nextHopGateway,
-        String nextHopIlb,
-        String nextHopInstance,
-        String nextHopInstanceZone,
-        String nextHopIp,
-        String nextHopNetwork,
-        String nextHopVpnTunnel,
-        Integer priority,
-        String project,
-        String selfLink,
-        List<String> tags) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.destRange = Objects.requireNonNull(destRange, "expected parameter 'destRange' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.nextHopGateway = Objects.requireNonNull(nextHopGateway, "expected parameter 'nextHopGateway' to be non-null");
-        this.nextHopIlb = Objects.requireNonNull(nextHopIlb, "expected parameter 'nextHopIlb' to be non-null");
-        this.nextHopInstance = Objects.requireNonNull(nextHopInstance, "expected parameter 'nextHopInstance' to be non-null");
-        this.nextHopInstanceZone = Objects.requireNonNull(nextHopInstanceZone, "expected parameter 'nextHopInstanceZone' to be non-null");
-        this.nextHopIp = Objects.requireNonNull(nextHopIp, "expected parameter 'nextHopIp' to be non-null");
-        this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork, "expected parameter 'nextHopNetwork' to be non-null");
-        this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel, "expected parameter 'nextHopVpnTunnel' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.selfLink = Objects.requireNonNull(selfLink, "expected parameter 'selfLink' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private RouterStatusBestRoute() {}
 
-    private RouterStatusBestRoute() {
-        this.description = null;
-        this.destRange = null;
-        this.name = null;
-        this.network = null;
-        this.nextHopGateway = null;
-        this.nextHopIlb = null;
-        this.nextHopInstance = null;
-        this.nextHopInstanceZone = null;
-        this.nextHopIp = null;
-        this.nextHopNetwork = null;
-        this.nextHopVpnTunnel = null;
-        this.priority = null;
-        this.project = null;
-        this.selfLink = null;
-        this.tags = List.of();
+    private RouterStatusBestRoute(RouterStatusBestRoute $) {
+        this.description = $.description;
+        this.destRange = $.destRange;
+        this.name = $.name;
+        this.network = $.network;
+        this.nextHopGateway = $.nextHopGateway;
+        this.nextHopIlb = $.nextHopIlb;
+        this.nextHopInstance = $.nextHopInstance;
+        this.nextHopInstanceZone = $.nextHopInstanceZone;
+        this.nextHopIp = $.nextHopIp;
+        this.nextHopNetwork = $.nextHopNetwork;
+        this.nextHopVpnTunnel = $.nextHopVpnTunnel;
+        this.priority = $.priority;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterStatusBestRoute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String destRange;
-        private String name;
-        private String network;
-        private String nextHopGateway;
-        private String nextHopIlb;
-        private String nextHopInstance;
-        private String nextHopInstanceZone;
-        private String nextHopIp;
-        private String nextHopNetwork;
-        private String nextHopVpnTunnel;
-        private Integer priority;
-        private String project;
-        private String selfLink;
-        private List<String> tags;
+        private RouterStatusBestRoute $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterStatusBestRoute();
         }
 
         public Builder(RouterStatusBestRoute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destRange = defaults.destRange;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.nextHopGateway = defaults.nextHopGateway;
-    	      this.nextHopIlb = defaults.nextHopIlb;
-    	      this.nextHopInstance = defaults.nextHopInstance;
-    	      this.nextHopInstanceZone = defaults.nextHopInstanceZone;
-    	      this.nextHopIp = defaults.nextHopIp;
-    	      this.nextHopNetwork = defaults.nextHopNetwork;
-    	      this.nextHopVpnTunnel = defaults.nextHopVpnTunnel;
-    	      this.priority = defaults.priority;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.tags = defaults.tags;
+            $ = new RouterStatusBestRoute(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder destRange(String destRange) {
-            this.destRange = Objects.requireNonNull(destRange);
+            $.destRange = destRange;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder nextHopGateway(String nextHopGateway) {
-            this.nextHopGateway = Objects.requireNonNull(nextHopGateway);
+            $.nextHopGateway = nextHopGateway;
             return this;
         }
+
         public Builder nextHopIlb(String nextHopIlb) {
-            this.nextHopIlb = Objects.requireNonNull(nextHopIlb);
+            $.nextHopIlb = nextHopIlb;
             return this;
         }
+
         public Builder nextHopInstance(String nextHopInstance) {
-            this.nextHopInstance = Objects.requireNonNull(nextHopInstance);
+            $.nextHopInstance = nextHopInstance;
             return this;
         }
+
         public Builder nextHopInstanceZone(String nextHopInstanceZone) {
-            this.nextHopInstanceZone = Objects.requireNonNull(nextHopInstanceZone);
+            $.nextHopInstanceZone = nextHopInstanceZone;
             return this;
         }
+
         public Builder nextHopIp(String nextHopIp) {
-            this.nextHopIp = Objects.requireNonNull(nextHopIp);
+            $.nextHopIp = nextHopIp;
             return this;
         }
+
         public Builder nextHopNetwork(String nextHopNetwork) {
-            this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork);
+            $.nextHopNetwork = nextHopNetwork;
             return this;
         }
+
         public Builder nextHopVpnTunnel(String nextHopVpnTunnel) {
-            this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel);
+            $.nextHopVpnTunnel = nextHopVpnTunnel;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder selfLink(String selfLink) {
-            this.selfLink = Objects.requireNonNull(selfLink);
+            $.selfLink = selfLink;
             return this;
         }
+
         public Builder tags(List<String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
-        }        public RouterStatusBestRoute build() {
-            return new RouterStatusBestRoute(description, destRange, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopInstanceZone, nextHopIp, nextHopNetwork, nextHopVpnTunnel, priority, project, selfLink, tags);
+        }
+
+        public RouterStatusBestRoute build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.destRange = Objects.requireNonNull($.destRange, "expected parameter 'destRange' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.nextHopGateway = Objects.requireNonNull($.nextHopGateway, "expected parameter 'nextHopGateway' to be non-null");
+            $.nextHopIlb = Objects.requireNonNull($.nextHopIlb, "expected parameter 'nextHopIlb' to be non-null");
+            $.nextHopInstance = Objects.requireNonNull($.nextHopInstance, "expected parameter 'nextHopInstance' to be non-null");
+            $.nextHopInstanceZone = Objects.requireNonNull($.nextHopInstanceZone, "expected parameter 'nextHopInstanceZone' to be non-null");
+            $.nextHopIp = Objects.requireNonNull($.nextHopIp, "expected parameter 'nextHopIp' to be non-null");
+            $.nextHopNetwork = Objects.requireNonNull($.nextHopNetwork, "expected parameter 'nextHopNetwork' to be non-null");
+            $.nextHopVpnTunnel = Objects.requireNonNull($.nextHopVpnTunnel, "expected parameter 'nextHopVpnTunnel' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.selfLink = Objects.requireNonNull($.selfLink, "expected parameter 'selfLink' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

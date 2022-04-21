@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class MainRouteTableAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="routeTableId", required=true)
-      private final Output<String> routeTableId;
+    private Output<String> routeTableId;
 
     public Output<String> routeTableId() {
         return this.routeTableId;
@@ -31,63 +30,60 @@ public final class MainRouteTableAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public MainRouteTableAssociationArgs(
-        Output<String> routeTableId,
-        Output<String> vpcId) {
-        this.routeTableId = Objects.requireNonNull(routeTableId, "expected parameter 'routeTableId' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private MainRouteTableAssociationArgs() {}
 
-    private MainRouteTableAssociationArgs() {
-        this.routeTableId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private MainRouteTableAssociationArgs(MainRouteTableAssociationArgs $) {
+        this.routeTableId = $.routeTableId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MainRouteTableAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> routeTableId;
-        private Output<String> vpcId;
+        private MainRouteTableAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MainRouteTableAssociationArgs();
         }
 
         public Builder(MainRouteTableAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new MainRouteTableAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder routeTableId(Output<String> routeTableId) {
-            this.routeTableId = Objects.requireNonNull(routeTableId);
+            $.routeTableId = routeTableId;
             return this;
         }
+
         public Builder routeTableId(String routeTableId) {
-            this.routeTableId = Output.of(Objects.requireNonNull(routeTableId));
-            return this;
+            return routeTableId(Output.of(routeTableId));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public MainRouteTableAssociationArgs build() {
-            return new MainRouteTableAssociationArgs(routeTableId, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public MainRouteTableAssociationArgs build() {
+            $.routeTableId = Objects.requireNonNull($.routeTableId, "expected parameter 'routeTableId' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

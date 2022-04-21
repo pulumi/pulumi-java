@@ -14,62 +14,59 @@ public final class GetSigningProfileSignatureValidityPeriod extends com.pulumi.r
     public static final GetSigningProfileSignatureValidityPeriod Empty = new GetSigningProfileSignatureValidityPeriod();
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
     @Import(name="value", required=true)
-      private final Integer value;
+    private Integer value;
 
     public Integer value() {
         return this.value;
     }
 
-    public GetSigningProfileSignatureValidityPeriod(
-        String type,
-        Integer value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GetSigningProfileSignatureValidityPeriod() {}
 
-    private GetSigningProfileSignatureValidityPeriod() {
-        this.type = null;
-        this.value = null;
+    private GetSigningProfileSignatureValidityPeriod(GetSigningProfileSignatureValidityPeriod $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSigningProfileSignatureValidityPeriod defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private Integer value;
+        private GetSigningProfileSignatureValidityPeriod $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSigningProfileSignatureValidityPeriod();
         }
 
         public Builder(GetSigningProfileSignatureValidityPeriod defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new GetSigningProfileSignatureValidityPeriod(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(Integer value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GetSigningProfileSignatureValidityPeriod build() {
-            return new GetSigningProfileSignatureValidityPeriod(type, value);
+        }
+
+        public GetSigningProfileSignatureValidityPeriod build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

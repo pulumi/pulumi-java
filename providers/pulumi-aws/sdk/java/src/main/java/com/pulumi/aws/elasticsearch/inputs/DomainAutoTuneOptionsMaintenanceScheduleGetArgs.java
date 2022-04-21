@@ -6,7 +6,6 @@ package com.pulumi.aws.elasticsearch.inputs;
 import com.pulumi.aws.elasticsearch.inputs.DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleGetArgs extends com.p
      * 
      */
     @Import(name="cronExpressionForRecurrence", required=true)
-      private final Output<String> cronExpressionForRecurrence;
+    private Output<String> cronExpressionForRecurrence;
 
     public Output<String> cronExpressionForRecurrence() {
         return this.cronExpressionForRecurrence;
@@ -31,7 +30,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleGetArgs extends com.p
      * 
      */
     @Import(name="duration", required=true)
-      private final Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration;
+    private Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration;
 
     public Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration() {
         return this.duration;
@@ -42,76 +41,71 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleGetArgs extends com.p
      * 
      */
     @Import(name="startAt", required=true)
-      private final Output<String> startAt;
+    private Output<String> startAt;
 
     public Output<String> startAt() {
         return this.startAt;
     }
 
-    public DomainAutoTuneOptionsMaintenanceScheduleGetArgs(
-        Output<String> cronExpressionForRecurrence,
-        Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration,
-        Output<String> startAt) {
-        this.cronExpressionForRecurrence = Objects.requireNonNull(cronExpressionForRecurrence, "expected parameter 'cronExpressionForRecurrence' to be non-null");
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.startAt = Objects.requireNonNull(startAt, "expected parameter 'startAt' to be non-null");
-    }
+    private DomainAutoTuneOptionsMaintenanceScheduleGetArgs() {}
 
-    private DomainAutoTuneOptionsMaintenanceScheduleGetArgs() {
-        this.cronExpressionForRecurrence = Codegen.empty();
-        this.duration = Codegen.empty();
-        this.startAt = Codegen.empty();
+    private DomainAutoTuneOptionsMaintenanceScheduleGetArgs(DomainAutoTuneOptionsMaintenanceScheduleGetArgs $) {
+        this.cronExpressionForRecurrence = $.cronExpressionForRecurrence;
+        this.duration = $.duration;
+        this.startAt = $.startAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainAutoTuneOptionsMaintenanceScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cronExpressionForRecurrence;
-        private Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration;
-        private Output<String> startAt;
+        private DomainAutoTuneOptionsMaintenanceScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainAutoTuneOptionsMaintenanceScheduleGetArgs();
         }
 
         public Builder(DomainAutoTuneOptionsMaintenanceScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cronExpressionForRecurrence = defaults.cronExpressionForRecurrence;
-    	      this.duration = defaults.duration;
-    	      this.startAt = defaults.startAt;
+            $ = new DomainAutoTuneOptionsMaintenanceScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cronExpressionForRecurrence(Output<String> cronExpressionForRecurrence) {
-            this.cronExpressionForRecurrence = Objects.requireNonNull(cronExpressionForRecurrence);
+            $.cronExpressionForRecurrence = cronExpressionForRecurrence;
             return this;
         }
+
         public Builder cronExpressionForRecurrence(String cronExpressionForRecurrence) {
-            this.cronExpressionForRecurrence = Output.of(Objects.requireNonNull(cronExpressionForRecurrence));
-            return this;
+            return cronExpressionForRecurrence(Output.of(cronExpressionForRecurrence));
         }
+
         public Builder duration(Output<DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(DomainAutoTuneOptionsMaintenanceScheduleDurationGetArgs duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
+            return duration(Output.of(duration));
         }
+
         public Builder startAt(Output<String> startAt) {
-            this.startAt = Objects.requireNonNull(startAt);
+            $.startAt = startAt;
             return this;
         }
+
         public Builder startAt(String startAt) {
-            this.startAt = Output.of(Objects.requireNonNull(startAt));
-            return this;
-        }        public DomainAutoTuneOptionsMaintenanceScheduleGetArgs build() {
-            return new DomainAutoTuneOptionsMaintenanceScheduleGetArgs(cronExpressionForRecurrence, duration, startAt);
+            return startAt(Output.of(startAt));
+        }
+
+        public DomainAutoTuneOptionsMaintenanceScheduleGetArgs build() {
+            $.cronExpressionForRecurrence = Objects.requireNonNull($.cronExpressionForRecurrence, "expected parameter 'cronExpressionForRecurrence' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.startAt = Objects.requireNonNull($.startAt, "expected parameter 'startAt' to be non-null");
+            return $;
         }
     }
+
 }

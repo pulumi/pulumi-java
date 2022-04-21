@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.IdentityProviderInputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
      * 
      */
     @Import(name="authenticationIdentityInput", required=true)
-      private final Output<IdentityProviderInputArgs> authenticationIdentityInput;
+    private Output<IdentityProviderInputArgs> authenticationIdentityInput;
 
     public Output<IdentityProviderInputArgs> authenticationIdentityInput() {
         return this.authenticationIdentityInput;
@@ -36,10 +36,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
      * 
      */
     @Import(name="dataPlaneAuthenticationIdentityInput")
-      private final @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
+    private @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
 
-    public Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput() {
-        return this.dataPlaneAuthenticationIdentityInput == null ? Codegen.empty() : this.dataPlaneAuthenticationIdentityInput;
+    public Optional<Output<IdentityProviderInputArgs>> dataPlaneAuthenticationIdentityInput() {
+        return Optional.ofNullable(this.dataPlaneAuthenticationIdentityInput);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
      * 
      */
     @Import(name="machineId")
-      private final @Nullable Output<String> machineId;
+    private @Nullable Output<String> machineId;
 
-    public Output<String> machineId() {
-        return this.machineId == null ? Codegen.empty() : this.machineId;
+    public Optional<Output<String>> machineId() {
+        return Optional.ofNullable(this.machineId);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
      * 
      */
     @Import(name="machineName", required=true)
-      private final Output<String> machineName;
+    private Output<String> machineName;
 
     public Output<String> machineName() {
         return this.machineName;
@@ -69,102 +69,91 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends com.pu
      * 
      */
     @Import(name="resourceAccessIdentityInput", required=true)
-      private final Output<IdentityProviderInputArgs> resourceAccessIdentityInput;
+    private Output<IdentityProviderInputArgs> resourceAccessIdentityInput;
 
     public Output<IdentityProviderInputArgs> resourceAccessIdentityInput() {
         return this.resourceAccessIdentityInput;
     }
 
-    public AddRecoveryServicesProviderInputPropertiesArgs(
-        Output<IdentityProviderInputArgs> authenticationIdentityInput,
-        @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput,
-        @Nullable Output<String> machineId,
-        Output<String> machineName,
-        Output<IdentityProviderInputArgs> resourceAccessIdentityInput) {
-        this.authenticationIdentityInput = Objects.requireNonNull(authenticationIdentityInput, "expected parameter 'authenticationIdentityInput' to be non-null");
-        this.dataPlaneAuthenticationIdentityInput = dataPlaneAuthenticationIdentityInput;
-        this.machineId = machineId;
-        this.machineName = Objects.requireNonNull(machineName, "expected parameter 'machineName' to be non-null");
-        this.resourceAccessIdentityInput = Objects.requireNonNull(resourceAccessIdentityInput, "expected parameter 'resourceAccessIdentityInput' to be non-null");
-    }
+    private AddRecoveryServicesProviderInputPropertiesArgs() {}
 
-    private AddRecoveryServicesProviderInputPropertiesArgs() {
-        this.authenticationIdentityInput = Codegen.empty();
-        this.dataPlaneAuthenticationIdentityInput = Codegen.empty();
-        this.machineId = Codegen.empty();
-        this.machineName = Codegen.empty();
-        this.resourceAccessIdentityInput = Codegen.empty();
+    private AddRecoveryServicesProviderInputPropertiesArgs(AddRecoveryServicesProviderInputPropertiesArgs $) {
+        this.authenticationIdentityInput = $.authenticationIdentityInput;
+        this.dataPlaneAuthenticationIdentityInput = $.dataPlaneAuthenticationIdentityInput;
+        this.machineId = $.machineId;
+        this.machineName = $.machineName;
+        this.resourceAccessIdentityInput = $.resourceAccessIdentityInput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddRecoveryServicesProviderInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<IdentityProviderInputArgs> authenticationIdentityInput;
-        private @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
-        private @Nullable Output<String> machineId;
-        private Output<String> machineName;
-        private Output<IdentityProviderInputArgs> resourceAccessIdentityInput;
+        private AddRecoveryServicesProviderInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddRecoveryServicesProviderInputPropertiesArgs();
         }
 
         public Builder(AddRecoveryServicesProviderInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationIdentityInput = defaults.authenticationIdentityInput;
-    	      this.dataPlaneAuthenticationIdentityInput = defaults.dataPlaneAuthenticationIdentityInput;
-    	      this.machineId = defaults.machineId;
-    	      this.machineName = defaults.machineName;
-    	      this.resourceAccessIdentityInput = defaults.resourceAccessIdentityInput;
+            $ = new AddRecoveryServicesProviderInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationIdentityInput(Output<IdentityProviderInputArgs> authenticationIdentityInput) {
-            this.authenticationIdentityInput = Objects.requireNonNull(authenticationIdentityInput);
+            $.authenticationIdentityInput = authenticationIdentityInput;
             return this;
         }
+
         public Builder authenticationIdentityInput(IdentityProviderInputArgs authenticationIdentityInput) {
-            this.authenticationIdentityInput = Output.of(Objects.requireNonNull(authenticationIdentityInput));
-            return this;
+            return authenticationIdentityInput(Output.of(authenticationIdentityInput));
         }
+
         public Builder dataPlaneAuthenticationIdentityInput(@Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput) {
-            this.dataPlaneAuthenticationIdentityInput = dataPlaneAuthenticationIdentityInput;
+            $.dataPlaneAuthenticationIdentityInput = dataPlaneAuthenticationIdentityInput;
             return this;
         }
-        public Builder dataPlaneAuthenticationIdentityInput(@Nullable IdentityProviderInputArgs dataPlaneAuthenticationIdentityInput) {
-            this.dataPlaneAuthenticationIdentityInput = Codegen.ofNullable(dataPlaneAuthenticationIdentityInput);
-            return this;
+
+        public Builder dataPlaneAuthenticationIdentityInput(IdentityProviderInputArgs dataPlaneAuthenticationIdentityInput) {
+            return dataPlaneAuthenticationIdentityInput(Output.of(dataPlaneAuthenticationIdentityInput));
         }
+
         public Builder machineId(@Nullable Output<String> machineId) {
-            this.machineId = machineId;
+            $.machineId = machineId;
             return this;
         }
-        public Builder machineId(@Nullable String machineId) {
-            this.machineId = Codegen.ofNullable(machineId);
-            return this;
+
+        public Builder machineId(String machineId) {
+            return machineId(Output.of(machineId));
         }
+
         public Builder machineName(Output<String> machineName) {
-            this.machineName = Objects.requireNonNull(machineName);
+            $.machineName = machineName;
             return this;
         }
+
         public Builder machineName(String machineName) {
-            this.machineName = Output.of(Objects.requireNonNull(machineName));
-            return this;
+            return machineName(Output.of(machineName));
         }
+
         public Builder resourceAccessIdentityInput(Output<IdentityProviderInputArgs> resourceAccessIdentityInput) {
-            this.resourceAccessIdentityInput = Objects.requireNonNull(resourceAccessIdentityInput);
+            $.resourceAccessIdentityInput = resourceAccessIdentityInput;
             return this;
         }
+
         public Builder resourceAccessIdentityInput(IdentityProviderInputArgs resourceAccessIdentityInput) {
-            this.resourceAccessIdentityInput = Output.of(Objects.requireNonNull(resourceAccessIdentityInput));
-            return this;
-        }        public AddRecoveryServicesProviderInputPropertiesArgs build() {
-            return new AddRecoveryServicesProviderInputPropertiesArgs(authenticationIdentityInput, dataPlaneAuthenticationIdentityInput, machineId, machineName, resourceAccessIdentityInput);
+            return resourceAccessIdentityInput(Output.of(resourceAccessIdentityInput));
+        }
+
+        public AddRecoveryServicesProviderInputPropertiesArgs build() {
+            $.authenticationIdentityInput = Objects.requireNonNull($.authenticationIdentityInput, "expected parameter 'authenticationIdentityInput' to be non-null");
+            $.machineName = Objects.requireNonNull($.machineName, "expected parameter 'machineName' to be non-null");
+            $.resourceAccessIdentityInput = Objects.requireNonNull($.resourceAccessIdentityInput, "expected parameter 'resourceAccessIdentityInput' to be non-null");
+            return $;
         }
     }
+
 }

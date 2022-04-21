@@ -16,10 +16,10 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetVMNetworkProf
 import com.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetVMProtectionPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="additionalCapabilities")
-      private final @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
+    private @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
 
-    public Output<AdditionalCapabilitiesArgs> additionalCapabilities() {
-        return this.additionalCapabilities == null ? Codegen.empty() : this.additionalCapabilities;
+    public Optional<Output<AdditionalCapabilitiesArgs>> additionalCapabilities() {
+        return Optional.ofNullable(this.additionalCapabilities);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="availabilitySet")
-      private final @Nullable Output<SubResourceArgs> availabilitySet;
+    private @Nullable Output<SubResourceArgs> availabilitySet;
 
-    public Output<SubResourceArgs> availabilitySet() {
-        return this.availabilitySet == null ? Codegen.empty() : this.availabilitySet;
+    public Optional<Output<SubResourceArgs>> availabilitySet() {
+        return Optional.ofNullable(this.availabilitySet);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="diagnosticsProfile")
-      private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
+    private @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
-    public Output<DiagnosticsProfileArgs> diagnosticsProfile() {
-        return this.diagnosticsProfile == null ? Codegen.empty() : this.diagnosticsProfile;
+    public Optional<Output<DiagnosticsProfileArgs>> diagnosticsProfile() {
+        return Optional.ofNullable(this.diagnosticsProfile);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="hardwareProfile")
-      private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
+    private @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Output<HardwareProfileArgs> hardwareProfile() {
-        return this.hardwareProfile == null ? Codegen.empty() : this.hardwareProfile;
+    public Optional<Output<HardwareProfileArgs>> hardwareProfile() {
+        return Optional.ofNullable(this.hardwareProfile);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<String> licenseType;
+    private @Nullable Output<String> licenseType;
 
-    public Output<String> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<String>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<NetworkProfileArgs> networkProfile;
+    private @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<NetworkProfileArgs>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="networkProfileConfiguration")
-      private final @Nullable Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration;
+    private @Nullable Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration;
 
-    public Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration() {
-        return this.networkProfileConfiguration == null ? Codegen.empty() : this.networkProfileConfiguration;
+    public Optional<Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs>> networkProfileConfiguration() {
+        return Optional.ofNullable(this.networkProfileConfiguration);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable Output<OSProfileArgs> osProfile;
+    private @Nullable Output<OSProfileArgs> osProfile;
 
-    public Output<OSProfileArgs> osProfile() {
-        return this.osProfile == null ? Codegen.empty() : this.osProfile;
+    public Optional<Output<OSProfileArgs>> osProfile() {
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="plan")
-      private final @Nullable Output<PlanArgs> plan;
+    private @Nullable Output<PlanArgs> plan;
 
-    public Output<PlanArgs> plan() {
-        return this.plan == null ? Codegen.empty() : this.plan;
+    public Optional<Output<PlanArgs>> plan() {
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="protectionPolicy")
-      private final @Nullable Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy;
+    private @Nullable Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy;
 
-    public Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy() {
-        return this.protectionPolicy == null ? Codegen.empty() : this.protectionPolicy;
+    public Optional<Output<VirtualMachineScaleSetVMProtectionPolicyArgs>> protectionPolicy() {
+        return Optional.ofNullable(this.protectionPolicy);
     }
 
     /**
@@ -164,7 +164,7 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -175,10 +175,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="securityProfile")
-      private final @Nullable Output<SecurityProfileArgs> securityProfile;
+    private @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Output<SecurityProfileArgs> securityProfile() {
-        return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
+    public Optional<Output<SecurityProfileArgs>> securityProfile() {
+        return Optional.ofNullable(this.securityProfile);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable Output<StorageProfileArgs> storageProfile;
+    private @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> storageProfile() {
-        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
+    public Optional<Output<StorageProfileArgs>> storageProfile() {
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userData")
-      private final @Nullable Output<String> userData;
+    private @Nullable Output<String> userData;
 
-    public Output<String> userData() {
-        return this.userData == null ? Codegen.empty() : this.userData;
+    public Optional<Output<String>> userData() {
+        return Optional.ofNullable(this.userData);
     }
 
     /**
@@ -219,271 +219,220 @@ public final class VirtualMachineScaleSetVMArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vmScaleSetName", required=true)
-      private final Output<String> vmScaleSetName;
+    private Output<String> vmScaleSetName;
 
     public Output<String> vmScaleSetName() {
         return this.vmScaleSetName;
     }
 
-    public VirtualMachineScaleSetVMArgs(
-        @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities,
-        @Nullable Output<SubResourceArgs> availabilitySet,
-        @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile,
-        @Nullable Output<HardwareProfileArgs> hardwareProfile,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> licenseType,
-        @Nullable Output<String> location,
-        @Nullable Output<NetworkProfileArgs> networkProfile,
-        @Nullable Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration,
-        @Nullable Output<OSProfileArgs> osProfile,
-        @Nullable Output<PlanArgs> plan,
-        @Nullable Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy,
-        Output<String> resourceGroupName,
-        @Nullable Output<SecurityProfileArgs> securityProfile,
-        @Nullable Output<StorageProfileArgs> storageProfile,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> userData,
-        Output<String> vmScaleSetName) {
-        this.additionalCapabilities = additionalCapabilities;
-        this.availabilitySet = availabilitySet;
-        this.diagnosticsProfile = diagnosticsProfile;
-        this.hardwareProfile = hardwareProfile;
-        this.instanceId = instanceId;
-        this.licenseType = licenseType;
-        this.location = location;
-        this.networkProfile = networkProfile;
-        this.networkProfileConfiguration = networkProfileConfiguration;
-        this.osProfile = osProfile;
-        this.plan = plan;
-        this.protectionPolicy = protectionPolicy;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityProfile = securityProfile;
-        this.storageProfile = storageProfile;
-        this.tags = tags;
-        this.userData = userData;
-        this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName, "expected parameter 'vmScaleSetName' to be non-null");
-    }
+    private VirtualMachineScaleSetVMArgs() {}
 
-    private VirtualMachineScaleSetVMArgs() {
-        this.additionalCapabilities = Codegen.empty();
-        this.availabilitySet = Codegen.empty();
-        this.diagnosticsProfile = Codegen.empty();
-        this.hardwareProfile = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkProfile = Codegen.empty();
-        this.networkProfileConfiguration = Codegen.empty();
-        this.osProfile = Codegen.empty();
-        this.plan = Codegen.empty();
-        this.protectionPolicy = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.securityProfile = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userData = Codegen.empty();
-        this.vmScaleSetName = Codegen.empty();
+    private VirtualMachineScaleSetVMArgs(VirtualMachineScaleSetVMArgs $) {
+        this.additionalCapabilities = $.additionalCapabilities;
+        this.availabilitySet = $.availabilitySet;
+        this.diagnosticsProfile = $.diagnosticsProfile;
+        this.hardwareProfile = $.hardwareProfile;
+        this.instanceId = $.instanceId;
+        this.licenseType = $.licenseType;
+        this.location = $.location;
+        this.networkProfile = $.networkProfile;
+        this.networkProfileConfiguration = $.networkProfileConfiguration;
+        this.osProfile = $.osProfile;
+        this.plan = $.plan;
+        this.protectionPolicy = $.protectionPolicy;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityProfile = $.securityProfile;
+        this.storageProfile = $.storageProfile;
+        this.tags = $.tags;
+        this.userData = $.userData;
+        this.vmScaleSetName = $.vmScaleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetVMArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
-        private @Nullable Output<SubResourceArgs> availabilitySet;
-        private @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
-        private @Nullable Output<HardwareProfileArgs> hardwareProfile;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> licenseType;
-        private @Nullable Output<String> location;
-        private @Nullable Output<NetworkProfileArgs> networkProfile;
-        private @Nullable Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration;
-        private @Nullable Output<OSProfileArgs> osProfile;
-        private @Nullable Output<PlanArgs> plan;
-        private @Nullable Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SecurityProfileArgs> securityProfile;
-        private @Nullable Output<StorageProfileArgs> storageProfile;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> userData;
-        private Output<String> vmScaleSetName;
+        private VirtualMachineScaleSetVMArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetVMArgs();
         }
 
         public Builder(VirtualMachineScaleSetVMArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalCapabilities = defaults.additionalCapabilities;
-    	      this.availabilitySet = defaults.availabilitySet;
-    	      this.diagnosticsProfile = defaults.diagnosticsProfile;
-    	      this.hardwareProfile = defaults.hardwareProfile;
-    	      this.instanceId = defaults.instanceId;
-    	      this.licenseType = defaults.licenseType;
-    	      this.location = defaults.location;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.networkProfileConfiguration = defaults.networkProfileConfiguration;
-    	      this.osProfile = defaults.osProfile;
-    	      this.plan = defaults.plan;
-    	      this.protectionPolicy = defaults.protectionPolicy;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityProfile = defaults.securityProfile;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.tags = defaults.tags;
-    	      this.userData = defaults.userData;
-    	      this.vmScaleSetName = defaults.vmScaleSetName;
+            $ = new VirtualMachineScaleSetVMArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalCapabilities(@Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities) {
-            this.additionalCapabilities = additionalCapabilities;
+            $.additionalCapabilities = additionalCapabilities;
             return this;
         }
-        public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
-            this.additionalCapabilities = Codegen.ofNullable(additionalCapabilities);
-            return this;
+
+        public Builder additionalCapabilities(AdditionalCapabilitiesArgs additionalCapabilities) {
+            return additionalCapabilities(Output.of(additionalCapabilities));
         }
+
         public Builder availabilitySet(@Nullable Output<SubResourceArgs> availabilitySet) {
-            this.availabilitySet = availabilitySet;
+            $.availabilitySet = availabilitySet;
             return this;
         }
-        public Builder availabilitySet(@Nullable SubResourceArgs availabilitySet) {
-            this.availabilitySet = Codegen.ofNullable(availabilitySet);
-            return this;
+
+        public Builder availabilitySet(SubResourceArgs availabilitySet) {
+            return availabilitySet(Output.of(availabilitySet));
         }
+
         public Builder diagnosticsProfile(@Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile) {
-            this.diagnosticsProfile = diagnosticsProfile;
+            $.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
-        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
-            this.diagnosticsProfile = Codegen.ofNullable(diagnosticsProfile);
-            return this;
+
+        public Builder diagnosticsProfile(DiagnosticsProfileArgs diagnosticsProfile) {
+            return diagnosticsProfile(Output.of(diagnosticsProfile));
         }
+
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
-            this.hardwareProfile = hardwareProfile;
+            $.hardwareProfile = hardwareProfile;
             return this;
         }
-        public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
-            this.hardwareProfile = Codegen.ofNullable(hardwareProfile);
-            return this;
+
+        public Builder hardwareProfile(HardwareProfileArgs hardwareProfile) {
+            return hardwareProfile(Output.of(hardwareProfile));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder licenseType(@Nullable Output<String> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(String licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
+
+        public Builder networkProfile(NetworkProfileArgs networkProfile) {
+            return networkProfile(Output.of(networkProfile));
         }
+
         public Builder networkProfileConfiguration(@Nullable Output<VirtualMachineScaleSetVMNetworkProfileConfigurationArgs> networkProfileConfiguration) {
-            this.networkProfileConfiguration = networkProfileConfiguration;
+            $.networkProfileConfiguration = networkProfileConfiguration;
             return this;
         }
-        public Builder networkProfileConfiguration(@Nullable VirtualMachineScaleSetVMNetworkProfileConfigurationArgs networkProfileConfiguration) {
-            this.networkProfileConfiguration = Codegen.ofNullable(networkProfileConfiguration);
-            return this;
+
+        public Builder networkProfileConfiguration(VirtualMachineScaleSetVMNetworkProfileConfigurationArgs networkProfileConfiguration) {
+            return networkProfileConfiguration(Output.of(networkProfileConfiguration));
         }
+
         public Builder osProfile(@Nullable Output<OSProfileArgs> osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
-        public Builder osProfile(@Nullable OSProfileArgs osProfile) {
-            this.osProfile = Codegen.ofNullable(osProfile);
-            return this;
+
+        public Builder osProfile(OSProfileArgs osProfile) {
+            return osProfile(Output.of(osProfile));
         }
+
         public Builder plan(@Nullable Output<PlanArgs> plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
-        public Builder plan(@Nullable PlanArgs plan) {
-            this.plan = Codegen.ofNullable(plan);
-            return this;
+
+        public Builder plan(PlanArgs plan) {
+            return plan(Output.of(plan));
         }
+
         public Builder protectionPolicy(@Nullable Output<VirtualMachineScaleSetVMProtectionPolicyArgs> protectionPolicy) {
-            this.protectionPolicy = protectionPolicy;
+            $.protectionPolicy = protectionPolicy;
             return this;
         }
-        public Builder protectionPolicy(@Nullable VirtualMachineScaleSetVMProtectionPolicyArgs protectionPolicy) {
-            this.protectionPolicy = Codegen.ofNullable(protectionPolicy);
-            return this;
+
+        public Builder protectionPolicy(VirtualMachineScaleSetVMProtectionPolicyArgs protectionPolicy) {
+            return protectionPolicy(Output.of(protectionPolicy));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
-            this.securityProfile = securityProfile;
+            $.securityProfile = securityProfile;
             return this;
         }
-        public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
-            this.securityProfile = Codegen.ofNullable(securityProfile);
-            return this;
+
+        public Builder securityProfile(SecurityProfileArgs securityProfile) {
+            return securityProfile(Output.of(securityProfile));
         }
+
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
-        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Codegen.ofNullable(storageProfile);
-            return this;
+
+        public Builder storageProfile(StorageProfileArgs storageProfile) {
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userData(@Nullable Output<String> userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
         }
-        public Builder userData(@Nullable String userData) {
-            this.userData = Codegen.ofNullable(userData);
-            return this;
+
+        public Builder userData(String userData) {
+            return userData(Output.of(userData));
         }
+
         public Builder vmScaleSetName(Output<String> vmScaleSetName) {
-            this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
+            $.vmScaleSetName = vmScaleSetName;
             return this;
         }
+
         public Builder vmScaleSetName(String vmScaleSetName) {
-            this.vmScaleSetName = Output.of(Objects.requireNonNull(vmScaleSetName));
-            return this;
-        }        public VirtualMachineScaleSetVMArgs build() {
-            return new VirtualMachineScaleSetVMArgs(additionalCapabilities, availabilitySet, diagnosticsProfile, hardwareProfile, instanceId, licenseType, location, networkProfile, networkProfileConfiguration, osProfile, plan, protectionPolicy, resourceGroupName, securityProfile, storageProfile, tags, userData, vmScaleSetName);
+            return vmScaleSetName(Output.of(vmScaleSetName));
+        }
+
+        public VirtualMachineScaleSetVMArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmScaleSetName = Objects.requireNonNull($.vmScaleSetName, "expected parameter 'vmScaleSetName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class ElasticPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="elasticCloudDeployment")
-      private final @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment;
+    private @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment;
 
     public Optional<ElasticCloudDeploymentResponse> elasticCloudDeployment() {
-        return this.elasticCloudDeployment == null ? Optional.empty() : Optional.ofNullable(this.elasticCloudDeployment);
+        return Optional.ofNullable(this.elasticCloudDeployment);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ElasticPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="elasticCloudUser")
-      private final @Nullable ElasticCloudUserResponse elasticCloudUser;
+    private @Nullable ElasticCloudUserResponse elasticCloudUser;
 
     public Optional<ElasticCloudUserResponse> elasticCloudUser() {
-        return this.elasticCloudUser == null ? Optional.empty() : Optional.ofNullable(this.elasticCloudUser);
+        return Optional.ofNullable(this.elasticCloudUser);
     }
 
-    public ElasticPropertiesResponse(
-        @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment,
-        @Nullable ElasticCloudUserResponse elasticCloudUser) {
-        this.elasticCloudDeployment = elasticCloudDeployment;
-        this.elasticCloudUser = elasticCloudUser;
-    }
+    private ElasticPropertiesResponse() {}
 
-    private ElasticPropertiesResponse() {
-        this.elasticCloudDeployment = null;
-        this.elasticCloudUser = null;
+    private ElasticPropertiesResponse(ElasticPropertiesResponse $) {
+        this.elasticCloudDeployment = $.elasticCloudDeployment;
+        this.elasticCloudUser = $.elasticCloudUser;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ElasticPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment;
-        private @Nullable ElasticCloudUserResponse elasticCloudUser;
+        private ElasticPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ElasticPropertiesResponse();
         }
 
         public Builder(ElasticPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elasticCloudDeployment = defaults.elasticCloudDeployment;
-    	      this.elasticCloudUser = defaults.elasticCloudUser;
+            $ = new ElasticPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder elasticCloudDeployment(@Nullable ElasticCloudDeploymentResponse elasticCloudDeployment) {
-            this.elasticCloudDeployment = elasticCloudDeployment;
+            $.elasticCloudDeployment = elasticCloudDeployment;
             return this;
         }
+
         public Builder elasticCloudUser(@Nullable ElasticCloudUserResponse elasticCloudUser) {
-            this.elasticCloudUser = elasticCloudUser;
+            $.elasticCloudUser = elasticCloudUser;
             return this;
-        }        public ElasticPropertiesResponse build() {
-            return new ElasticPropertiesResponse(elasticCloudDeployment, elasticCloudUser);
+        }
+
+        public ElasticPropertiesResponse build() {
+            return $;
         }
     }
+
 }

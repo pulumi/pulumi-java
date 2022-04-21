@@ -13,45 +13,45 @@ public final class GetSchedulingPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetSchedulingPolicyArgs Empty = new GetSchedulingPolicyArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetSchedulingPolicyArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetSchedulingPolicyArgs() {}
 
-    private GetSchedulingPolicyArgs() {
-        this.arn = null;
+    private GetSchedulingPolicyArgs(GetSchedulingPolicyArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSchedulingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetSchedulingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSchedulingPolicyArgs();
         }
 
         public Builder(GetSchedulingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetSchedulingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetSchedulingPolicyArgs build() {
-            return new GetSchedulingPolicyArgs(arn);
+        }
+
+        public GetSchedulingPolicyArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

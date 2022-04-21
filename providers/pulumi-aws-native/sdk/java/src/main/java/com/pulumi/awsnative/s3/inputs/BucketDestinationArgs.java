@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketDestinationFormat;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BucketDestinationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="bucketAccountId")
-      private final @Nullable Output<String> bucketAccountId;
+    private @Nullable Output<String> bucketAccountId;
 
-    public Output<String> bucketAccountId() {
-        return this.bucketAccountId == null ? Codegen.empty() : this.bucketAccountId;
+    public Optional<Output<String>> bucketAccountId() {
+        return Optional.ofNullable(this.bucketAccountId);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class BucketDestinationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="bucketArn", required=true)
-      private final Output<String> bucketArn;
+    private Output<String> bucketArn;
 
     public Output<String> bucketArn() {
         return this.bucketArn;
@@ -47,7 +47,7 @@ public final class BucketDestinationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="format", required=true)
-      private final Output<BucketDestinationFormat> format;
+    private Output<BucketDestinationFormat> format;
 
     public Output<BucketDestinationFormat> format() {
         return this.format;
@@ -58,89 +58,80 @@ public final class BucketDestinationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
-    public BucketDestinationArgs(
-        @Nullable Output<String> bucketAccountId,
-        Output<String> bucketArn,
-        Output<BucketDestinationFormat> format,
-        @Nullable Output<String> prefix) {
-        this.bucketAccountId = bucketAccountId;
-        this.bucketArn = Objects.requireNonNull(bucketArn, "expected parameter 'bucketArn' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.prefix = prefix;
-    }
+    private BucketDestinationArgs() {}
 
-    private BucketDestinationArgs() {
-        this.bucketAccountId = Codegen.empty();
-        this.bucketArn = Codegen.empty();
-        this.format = Codegen.empty();
-        this.prefix = Codegen.empty();
+    private BucketDestinationArgs(BucketDestinationArgs $) {
+        this.bucketAccountId = $.bucketAccountId;
+        this.bucketArn = $.bucketArn;
+        this.format = $.format;
+        this.prefix = $.prefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketAccountId;
-        private Output<String> bucketArn;
-        private Output<BucketDestinationFormat> format;
-        private @Nullable Output<String> prefix;
+        private BucketDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketDestinationArgs();
         }
 
         public Builder(BucketDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketAccountId = defaults.bucketAccountId;
-    	      this.bucketArn = defaults.bucketArn;
-    	      this.format = defaults.format;
-    	      this.prefix = defaults.prefix;
+            $ = new BucketDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketAccountId(@Nullable Output<String> bucketAccountId) {
-            this.bucketAccountId = bucketAccountId;
+            $.bucketAccountId = bucketAccountId;
             return this;
         }
-        public Builder bucketAccountId(@Nullable String bucketAccountId) {
-            this.bucketAccountId = Codegen.ofNullable(bucketAccountId);
-            return this;
+
+        public Builder bucketAccountId(String bucketAccountId) {
+            return bucketAccountId(Output.of(bucketAccountId));
         }
+
         public Builder bucketArn(Output<String> bucketArn) {
-            this.bucketArn = Objects.requireNonNull(bucketArn);
+            $.bucketArn = bucketArn;
             return this;
         }
+
         public Builder bucketArn(String bucketArn) {
-            this.bucketArn = Output.of(Objects.requireNonNull(bucketArn));
-            return this;
+            return bucketArn(Output.of(bucketArn));
         }
+
         public Builder format(Output<BucketDestinationFormat> format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder format(BucketDestinationFormat format) {
-            this.format = Output.of(Objects.requireNonNull(format));
-            return this;
+            return format(Output.of(format));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
-        }        public BucketDestinationArgs build() {
-            return new BucketDestinationArgs(bucketAccountId, bucketArn, format, prefix);
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
+        }
+
+        public BucketDestinationArgs build() {
+            $.bucketArn = Objects.requireNonNull($.bucketArn, "expected parameter 'bucketArn' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

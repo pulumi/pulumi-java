@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
      * 
      */
     @Import(name="categoricalStatsConfig", required=true)
-      private final GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig;
+    private GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig;
 
     public GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig() {
         return this.categoricalStatsConfig;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
      * 
      */
     @Import(name="deltaPresenceEstimationConfig", required=true)
-      private final GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig;
+    private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig;
 
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig() {
         return this.deltaPresenceEstimationConfig;
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
      * 
      */
     @Import(name="kAnonymityConfig", required=true)
-      private final GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig;
+    private GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig;
 
     public GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig() {
         return this.kAnonymityConfig;
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
      * 
      */
     @Import(name="kMapEstimationConfig", required=true)
-      private final GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig;
+    private GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig;
 
     public GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig() {
         return this.kMapEstimationConfig;
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
      * 
      */
     @Import(name="lDiversityConfig", required=true)
-      private final GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig;
+    private GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig;
 
     public GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig() {
         return this.lDiversityConfig;
@@ -81,91 +81,80 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends com.pulumi.re
      * 
      */
     @Import(name="numericalStatsConfig", required=true)
-      private final GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
+    private GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
 
     public GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig() {
         return this.numericalStatsConfig;
     }
 
-    public GooglePrivacyDlpV2PrivacyMetricResponse(
-        GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig,
-        GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig,
-        GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig,
-        GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig,
-        GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig,
-        GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
-        this.categoricalStatsConfig = Objects.requireNonNull(categoricalStatsConfig, "expected parameter 'categoricalStatsConfig' to be non-null");
-        this.deltaPresenceEstimationConfig = Objects.requireNonNull(deltaPresenceEstimationConfig, "expected parameter 'deltaPresenceEstimationConfig' to be non-null");
-        this.kAnonymityConfig = Objects.requireNonNull(kAnonymityConfig, "expected parameter 'kAnonymityConfig' to be non-null");
-        this.kMapEstimationConfig = Objects.requireNonNull(kMapEstimationConfig, "expected parameter 'kMapEstimationConfig' to be non-null");
-        this.lDiversityConfig = Objects.requireNonNull(lDiversityConfig, "expected parameter 'lDiversityConfig' to be non-null");
-        this.numericalStatsConfig = Objects.requireNonNull(numericalStatsConfig, "expected parameter 'numericalStatsConfig' to be non-null");
-    }
+    private GooglePrivacyDlpV2PrivacyMetricResponse() {}
 
-    private GooglePrivacyDlpV2PrivacyMetricResponse() {
-        this.categoricalStatsConfig = null;
-        this.deltaPresenceEstimationConfig = null;
-        this.kAnonymityConfig = null;
-        this.kMapEstimationConfig = null;
-        this.lDiversityConfig = null;
-        this.numericalStatsConfig = null;
+    private GooglePrivacyDlpV2PrivacyMetricResponse(GooglePrivacyDlpV2PrivacyMetricResponse $) {
+        this.categoricalStatsConfig = $.categoricalStatsConfig;
+        this.deltaPresenceEstimationConfig = $.deltaPresenceEstimationConfig;
+        this.kAnonymityConfig = $.kAnonymityConfig;
+        this.kMapEstimationConfig = $.kMapEstimationConfig;
+        this.lDiversityConfig = $.lDiversityConfig;
+        this.numericalStatsConfig = $.numericalStatsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2PrivacyMetricResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig;
-        private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig;
-        private GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig;
-        private GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig;
-        private GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig;
-        private GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
+        private GooglePrivacyDlpV2PrivacyMetricResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2PrivacyMetricResponse();
         }
 
         public Builder(GooglePrivacyDlpV2PrivacyMetricResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categoricalStatsConfig = defaults.categoricalStatsConfig;
-    	      this.deltaPresenceEstimationConfig = defaults.deltaPresenceEstimationConfig;
-    	      this.kAnonymityConfig = defaults.kAnonymityConfig;
-    	      this.kMapEstimationConfig = defaults.kMapEstimationConfig;
-    	      this.lDiversityConfig = defaults.lDiversityConfig;
-    	      this.numericalStatsConfig = defaults.numericalStatsConfig;
+            $ = new GooglePrivacyDlpV2PrivacyMetricResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categoricalStatsConfig(GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig) {
-            this.categoricalStatsConfig = Objects.requireNonNull(categoricalStatsConfig);
+            $.categoricalStatsConfig = categoricalStatsConfig;
             return this;
         }
+
         public Builder deltaPresenceEstimationConfig(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig) {
-            this.deltaPresenceEstimationConfig = Objects.requireNonNull(deltaPresenceEstimationConfig);
+            $.deltaPresenceEstimationConfig = deltaPresenceEstimationConfig;
             return this;
         }
+
         public Builder kAnonymityConfig(GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig) {
-            this.kAnonymityConfig = Objects.requireNonNull(kAnonymityConfig);
+            $.kAnonymityConfig = kAnonymityConfig;
             return this;
         }
+
         public Builder kMapEstimationConfig(GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig) {
-            this.kMapEstimationConfig = Objects.requireNonNull(kMapEstimationConfig);
+            $.kMapEstimationConfig = kMapEstimationConfig;
             return this;
         }
+
         public Builder lDiversityConfig(GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig) {
-            this.lDiversityConfig = Objects.requireNonNull(lDiversityConfig);
+            $.lDiversityConfig = lDiversityConfig;
             return this;
         }
+
         public Builder numericalStatsConfig(GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
-            this.numericalStatsConfig = Objects.requireNonNull(numericalStatsConfig);
+            $.numericalStatsConfig = numericalStatsConfig;
             return this;
-        }        public GooglePrivacyDlpV2PrivacyMetricResponse build() {
-            return new GooglePrivacyDlpV2PrivacyMetricResponse(categoricalStatsConfig, deltaPresenceEstimationConfig, kAnonymityConfig, kMapEstimationConfig, lDiversityConfig, numericalStatsConfig);
+        }
+
+        public GooglePrivacyDlpV2PrivacyMetricResponse build() {
+            $.categoricalStatsConfig = Objects.requireNonNull($.categoricalStatsConfig, "expected parameter 'categoricalStatsConfig' to be non-null");
+            $.deltaPresenceEstimationConfig = Objects.requireNonNull($.deltaPresenceEstimationConfig, "expected parameter 'deltaPresenceEstimationConfig' to be non-null");
+            $.kAnonymityConfig = Objects.requireNonNull($.kAnonymityConfig, "expected parameter 'kAnonymityConfig' to be non-null");
+            $.kMapEstimationConfig = Objects.requireNonNull($.kMapEstimationConfig, "expected parameter 'kMapEstimationConfig' to be non-null");
+            $.lDiversityConfig = Objects.requireNonNull($.lDiversityConfig, "expected parameter 'lDiversityConfig' to be non-null");
+            $.numericalStatsConfig = Objects.requireNonNull($.numericalStatsConfig, "expected parameter 'numericalStatsConfig' to be non-null");
+            return $;
         }
     }
+
 }

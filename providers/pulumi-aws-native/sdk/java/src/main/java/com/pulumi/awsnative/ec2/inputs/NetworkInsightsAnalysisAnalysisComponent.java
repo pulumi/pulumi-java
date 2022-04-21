@@ -15,62 +15,57 @@ public final class NetworkInsightsAnalysisAnalysisComponent extends com.pulumi.r
     public static final NetworkInsightsAnalysisAnalysisComponent Empty = new NetworkInsightsAnalysisAnalysisComponent();
 
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public NetworkInsightsAnalysisAnalysisComponent(
-        @Nullable String arn,
-        @Nullable String id) {
-        this.arn = arn;
-        this.id = id;
-    }
+    private NetworkInsightsAnalysisAnalysisComponent() {}
 
-    private NetworkInsightsAnalysisAnalysisComponent() {
-        this.arn = null;
-        this.id = null;
+    private NetworkInsightsAnalysisAnalysisComponent(NetworkInsightsAnalysisAnalysisComponent $) {
+        this.arn = $.arn;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisAnalysisComponent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String id;
+        private NetworkInsightsAnalysisAnalysisComponent $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisAnalysisComponent();
         }
 
         public Builder(NetworkInsightsAnalysisAnalysisComponent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.id = defaults.id;
+            $ = new NetworkInsightsAnalysisAnalysisComponent(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public NetworkInsightsAnalysisAnalysisComponent build() {
-            return new NetworkInsightsAnalysisAnalysisComponent(arn, id);
+        }
+
+        public NetworkInsightsAnalysisAnalysisComponent build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class VirtualNodeSpecBackendGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="virtualService", required=true)
-      private final Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
+    private Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
 
     public Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService() {
         return this.virtualService;
     }
 
-    public VirtualNodeSpecBackendGetArgs(Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService) {
-        this.virtualService = Objects.requireNonNull(virtualService, "expected parameter 'virtualService' to be non-null");
-    }
+    private VirtualNodeSpecBackendGetArgs() {}
 
-    private VirtualNodeSpecBackendGetArgs() {
-        this.virtualService = Codegen.empty();
+    private VirtualNodeSpecBackendGetArgs(VirtualNodeSpecBackendGetArgs $) {
+        this.virtualService = $.virtualService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService;
+        private VirtualNodeSpecBackendGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendGetArgs();
         }
 
         public Builder(VirtualNodeSpecBackendGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualService = defaults.virtualService;
+            $ = new VirtualNodeSpecBackendGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualService(Output<VirtualNodeSpecBackendVirtualServiceGetArgs> virtualService) {
-            this.virtualService = Objects.requireNonNull(virtualService);
+            $.virtualService = virtualService;
             return this;
         }
+
         public Builder virtualService(VirtualNodeSpecBackendVirtualServiceGetArgs virtualService) {
-            this.virtualService = Output.of(Objects.requireNonNull(virtualService));
-            return this;
-        }        public VirtualNodeSpecBackendGetArgs build() {
-            return new VirtualNodeSpecBackendGetArgs(virtualService);
+            return virtualService(Output.of(virtualService));
+        }
+
+        public VirtualNodeSpecBackendGetArgs build() {
+            $.virtualService = Objects.requireNonNull($.virtualService, "expected parameter 'virtualService' to be non-null");
+            return $;
         }
     }
+
 }

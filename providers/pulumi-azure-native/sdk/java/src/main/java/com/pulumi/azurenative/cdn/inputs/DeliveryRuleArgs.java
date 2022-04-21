@@ -27,12 +27,12 @@ import com.pulumi.azurenative.cdn.inputs.UrlRewriteActionArgs;
 import com.pulumi.azurenative.cdn.inputs.UrlSigningActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -49,7 +49,7 @@ public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<Object>> actions;
+    private Output<List<Object>> actions;
 
     public Output<List<Object>> actions() {
         return this.actions;
@@ -60,10 +60,10 @@ public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<Object>> conditions;
+    private @Nullable Output<List<Object>> conditions;
 
-    public Output<List<Object>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<Object>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -82,95 +82,88 @@ public final class DeliveryRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="order", required=true)
-      private final Output<Integer> order;
+    private Output<Integer> order;
 
     public Output<Integer> order() {
         return this.order;
     }
 
-    public DeliveryRuleArgs(
-        Output<List<Object>> actions,
-        @Nullable Output<List<Object>> conditions,
-        @Nullable Output<String> name,
-        Output<Integer> order) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.conditions = conditions;
-        this.name = name;
-        this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
-    }
+    private DeliveryRuleArgs() {}
 
-    private DeliveryRuleArgs() {
-        this.actions = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.order = Codegen.empty();
+    private DeliveryRuleArgs(DeliveryRuleArgs $) {
+        this.actions = $.actions;
+        this.conditions = $.conditions;
+        this.name = $.name;
+        this.order = $.order;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Object>> actions;
-        private @Nullable Output<List<Object>> conditions;
-        private @Nullable Output<String> name;
-        private Output<Integer> order;
+        private DeliveryRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleArgs();
         }
 
         public Builder(DeliveryRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.conditions = defaults.conditions;
-    	      this.name = defaults.name;
-    	      this.order = defaults.order;
+            $ = new DeliveryRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<Object>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<Object> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(Object... actions) {
             return actions(List.of(actions));
         }
+
         public Builder conditions(@Nullable Output<List<Object>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<Object> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<Object> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(Object... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder order(Output<Integer> order) {
-            this.order = Objects.requireNonNull(order);
+            $.order = order;
             return this;
         }
+
         public Builder order(Integer order) {
-            this.order = Output.of(Objects.requireNonNull(order));
-            return this;
-        }        public DeliveryRuleArgs build() {
-            return new DeliveryRuleArgs(actions, conditions, name, order);
+            return order(Output.of(order));
+        }
+
+        public DeliveryRuleArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.order = Objects.requireNonNull($.order, "expected parameter 'order' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
      * 
      */
     @Import(name="componentId", required=true)
-      private final String componentId;
+    private String componentId;
 
     public String componentId() {
         return this.componentId;
@@ -34,7 +34,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
      * 
      */
     @Import(name="failedLocationCount", required=true)
-      private final Double failedLocationCount;
+    private Double failedLocationCount;
 
     public Double failedLocationCount() {
         return this.failedLocationCount;
@@ -46,7 +46,7 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -57,73 +57,66 @@ public final class WebtestLocationAvailabilityCriteriaResponse extends com.pulum
      * 
      */
     @Import(name="webTestId", required=true)
-      private final String webTestId;
+    private String webTestId;
 
     public String webTestId() {
         return this.webTestId;
     }
 
-    public WebtestLocationAvailabilityCriteriaResponse(
-        String componentId,
-        Double failedLocationCount,
-        String odataType,
-        String webTestId) {
-        this.componentId = Objects.requireNonNull(componentId, "expected parameter 'componentId' to be non-null");
-        this.failedLocationCount = Objects.requireNonNull(failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.webTestId = Objects.requireNonNull(webTestId, "expected parameter 'webTestId' to be non-null");
-    }
+    private WebtestLocationAvailabilityCriteriaResponse() {}
 
-    private WebtestLocationAvailabilityCriteriaResponse() {
-        this.componentId = null;
-        this.failedLocationCount = null;
-        this.odataType = null;
-        this.webTestId = null;
+    private WebtestLocationAvailabilityCriteriaResponse(WebtestLocationAvailabilityCriteriaResponse $) {
+        this.componentId = $.componentId;
+        this.failedLocationCount = $.failedLocationCount;
+        this.odataType = $.odataType;
+        this.webTestId = $.webTestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebtestLocationAvailabilityCriteriaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String componentId;
-        private Double failedLocationCount;
-        private String odataType;
-        private String webTestId;
+        private WebtestLocationAvailabilityCriteriaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebtestLocationAvailabilityCriteriaResponse();
         }
 
         public Builder(WebtestLocationAvailabilityCriteriaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentId = defaults.componentId;
-    	      this.failedLocationCount = defaults.failedLocationCount;
-    	      this.odataType = defaults.odataType;
-    	      this.webTestId = defaults.webTestId;
+            $ = new WebtestLocationAvailabilityCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder componentId(String componentId) {
-            this.componentId = Objects.requireNonNull(componentId);
+            $.componentId = componentId;
             return this;
         }
+
         public Builder failedLocationCount(Double failedLocationCount) {
-            this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
+            $.failedLocationCount = failedLocationCount;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder webTestId(String webTestId) {
-            this.webTestId = Objects.requireNonNull(webTestId);
+            $.webTestId = webTestId;
             return this;
-        }        public WebtestLocationAvailabilityCriteriaResponse build() {
-            return new WebtestLocationAvailabilityCriteriaResponse(componentId, failedLocationCount, odataType, webTestId);
+        }
+
+        public WebtestLocationAvailabilityCriteriaResponse build() {
+            $.componentId = Objects.requireNonNull($.componentId, "expected parameter 'componentId' to be non-null");
+            $.failedLocationCount = Objects.requireNonNull($.failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.webTestId = Objects.requireNonNull($.webTestId, "expected parameter 'webTestId' to be non-null");
+            return $;
         }
     }
+
 }

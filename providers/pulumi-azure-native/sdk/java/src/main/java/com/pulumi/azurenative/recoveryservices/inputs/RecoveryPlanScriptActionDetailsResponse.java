@@ -24,7 +24,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="fabricLocation", required=true)
-      private final String fabricLocation;
+    private String fabricLocation;
 
     public String fabricLocation() {
         return this.fabricLocation;
@@ -36,7 +36,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -47,7 +47,7 @@ public final class RecoveryPlanScriptActionDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -58,73 +58,65 @@ public final class RecoveryPlanScriptActionDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public RecoveryPlanScriptActionDetailsResponse(
-        String fabricLocation,
-        String instanceType,
-        String path,
-        @Nullable String timeout) {
-        this.fabricLocation = Objects.requireNonNull(fabricLocation, "expected parameter 'fabricLocation' to be non-null");
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.timeout = timeout;
-    }
+    private RecoveryPlanScriptActionDetailsResponse() {}
 
-    private RecoveryPlanScriptActionDetailsResponse() {
-        this.fabricLocation = null;
-        this.instanceType = null;
-        this.path = null;
-        this.timeout = null;
+    private RecoveryPlanScriptActionDetailsResponse(RecoveryPlanScriptActionDetailsResponse $) {
+        this.fabricLocation = $.fabricLocation;
+        this.instanceType = $.instanceType;
+        this.path = $.path;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanScriptActionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fabricLocation;
-        private String instanceType;
-        private String path;
-        private @Nullable String timeout;
+        private RecoveryPlanScriptActionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanScriptActionDetailsResponse();
         }
 
         public Builder(RecoveryPlanScriptActionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricLocation = defaults.fabricLocation;
-    	      this.instanceType = defaults.instanceType;
-    	      this.path = defaults.path;
-    	      this.timeout = defaults.timeout;
+            $ = new RecoveryPlanScriptActionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricLocation(String fabricLocation) {
-            this.fabricLocation = Objects.requireNonNull(fabricLocation);
+            $.fabricLocation = fabricLocation;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public RecoveryPlanScriptActionDetailsResponse build() {
-            return new RecoveryPlanScriptActionDetailsResponse(fabricLocation, instanceType, path, timeout);
+        }
+
+        public RecoveryPlanScriptActionDetailsResponse build() {
+            $.fabricLocation = Objects.requireNonNull($.fabricLocation, "expected parameter 'fabricLocation' to be non-null");
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

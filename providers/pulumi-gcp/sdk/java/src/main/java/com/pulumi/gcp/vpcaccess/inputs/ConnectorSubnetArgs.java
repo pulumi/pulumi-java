@@ -5,9 +5,9 @@ package com.pulumi.gcp.vpcaccess.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConnectorSubnetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ConnectorSubnetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="projectId")
-      private final @Nullable Output<String> projectId;
+    private @Nullable Output<String> projectId;
 
-    public Output<String> projectId() {
-        return this.projectId == null ? Codegen.empty() : this.projectId;
+    public Optional<Output<String>> projectId() {
+        return Optional.ofNullable(this.projectId);
     }
 
-    public ConnectorSubnetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> projectId) {
-        this.name = name;
-        this.projectId = projectId;
-    }
+    private ConnectorSubnetArgs() {}
 
-    private ConnectorSubnetArgs() {
-        this.name = Codegen.empty();
-        this.projectId = Codegen.empty();
+    private ConnectorSubnetArgs(ConnectorSubnetArgs $) {
+        this.name = $.name;
+        this.projectId = $.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorSubnetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> projectId;
+        private ConnectorSubnetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorSubnetArgs();
         }
 
         public Builder(ConnectorSubnetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.projectId = defaults.projectId;
+            $ = new ConnectorSubnetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder projectId(@Nullable Output<String> projectId) {
-            this.projectId = projectId;
+            $.projectId = projectId;
             return this;
         }
-        public Builder projectId(@Nullable String projectId) {
-            this.projectId = Codegen.ofNullable(projectId);
-            return this;
-        }        public ConnectorSubnetArgs build() {
-            return new ConnectorSubnetArgs(name, projectId);
+
+        public Builder projectId(String projectId) {
+            return projectId(Output.of(projectId));
+        }
+
+        public ConnectorSubnetArgs build() {
+            return $;
         }
     }
+
 }

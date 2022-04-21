@@ -5,9 +5,9 @@ package com.pulumi.aws.servicecatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConstraintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ConstraintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class ConstraintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<String> parameters;
+    private Output<String> parameters;
 
     public Output<String> parameters() {
         return this.parameters;
@@ -53,7 +53,7 @@ public final class ConstraintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portfolioId", required=true)
-      private final Output<String> portfolioId;
+    private Output<String> portfolioId;
 
     public Output<String> portfolioId() {
         return this.portfolioId;
@@ -64,7 +64,7 @@ public final class ConstraintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productId", required=true)
-      private final Output<String> productId;
+    private Output<String> productId;
 
     public Output<String> productId() {
         return this.productId;
@@ -75,115 +75,102 @@ public final class ConstraintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ConstraintArgs(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<String> description,
-        Output<String> parameters,
-        Output<String> portfolioId,
-        Output<String> productId,
-        Output<String> type) {
-        this.acceptLanguage = acceptLanguage;
-        this.description = description;
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.portfolioId = Objects.requireNonNull(portfolioId, "expected parameter 'portfolioId' to be non-null");
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ConstraintArgs() {}
 
-    private ConstraintArgs() {
-        this.acceptLanguage = Codegen.empty();
-        this.description = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.portfolioId = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.type = Codegen.empty();
+    private ConstraintArgs(ConstraintArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.description = $.description;
+        this.parameters = $.parameters;
+        this.portfolioId = $.portfolioId;
+        this.productId = $.productId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<String> description;
-        private Output<String> parameters;
-        private Output<String> portfolioId;
-        private Output<String> productId;
-        private Output<String> type;
+        private ConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConstraintArgs();
         }
 
         public Builder(ConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.description = defaults.description;
-    	      this.parameters = defaults.parameters;
-    	      this.portfolioId = defaults.portfolioId;
-    	      this.productId = defaults.productId;
-    	      this.type = defaults.type;
+            $ = new ConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder parameters(Output<String> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(String parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder portfolioId(Output<String> portfolioId) {
-            this.portfolioId = Objects.requireNonNull(portfolioId);
+            $.portfolioId = portfolioId;
             return this;
         }
+
         public Builder portfolioId(String portfolioId) {
-            this.portfolioId = Output.of(Objects.requireNonNull(portfolioId));
-            return this;
+            return portfolioId(Output.of(portfolioId));
         }
+
         public Builder productId(Output<String> productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Output.of(Objects.requireNonNull(productId));
-            return this;
+            return productId(Output.of(productId));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ConstraintArgs build() {
-            return new ConstraintArgs(acceptLanguage, description, parameters, portfolioId, productId, type);
+            return type(Output.of(type));
+        }
+
+        public ConstraintArgs build() {
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.portfolioId = Objects.requireNonNull($.portfolioId, "expected parameter 'portfolioId' to be non-null");
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

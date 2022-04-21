@@ -5,10 +5,10 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BucketNotificationQueueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="events", required=true)
-      private final Output<List<String>> events;
+    private Output<List<String>> events;
 
     public Output<List<String>> events() {
         return this.events;
@@ -32,10 +32,10 @@ public final class BucketNotificationQueueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="filterPrefix")
-      private final @Nullable Output<String> filterPrefix;
+    private @Nullable Output<String> filterPrefix;
 
-    public Output<String> filterPrefix() {
-        return this.filterPrefix == null ? Codegen.empty() : this.filterPrefix;
+    public Optional<Output<String>> filterPrefix() {
+        return Optional.ofNullable(this.filterPrefix);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BucketNotificationQueueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="filterSuffix")
-      private final @Nullable Output<String> filterSuffix;
+    private @Nullable Output<String> filterSuffix;
 
-    public Output<String> filterSuffix() {
-        return this.filterSuffix == null ? Codegen.empty() : this.filterSuffix;
+    public Optional<Output<String>> filterSuffix() {
+        return Optional.ofNullable(this.filterSuffix);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BucketNotificationQueueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -65,105 +65,94 @@ public final class BucketNotificationQueueArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="queueArn", required=true)
-      private final Output<String> queueArn;
+    private Output<String> queueArn;
 
     public Output<String> queueArn() {
         return this.queueArn;
     }
 
-    public BucketNotificationQueueArgs(
-        Output<List<String>> events,
-        @Nullable Output<String> filterPrefix,
-        @Nullable Output<String> filterSuffix,
-        @Nullable Output<String> id,
-        Output<String> queueArn) {
-        this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
-        this.filterPrefix = filterPrefix;
-        this.filterSuffix = filterSuffix;
-        this.id = id;
-        this.queueArn = Objects.requireNonNull(queueArn, "expected parameter 'queueArn' to be non-null");
-    }
+    private BucketNotificationQueueArgs() {}
 
-    private BucketNotificationQueueArgs() {
-        this.events = Codegen.empty();
-        this.filterPrefix = Codegen.empty();
-        this.filterSuffix = Codegen.empty();
-        this.id = Codegen.empty();
-        this.queueArn = Codegen.empty();
+    private BucketNotificationQueueArgs(BucketNotificationQueueArgs $) {
+        this.events = $.events;
+        this.filterPrefix = $.filterPrefix;
+        this.filterSuffix = $.filterSuffix;
+        this.id = $.id;
+        this.queueArn = $.queueArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketNotificationQueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> events;
-        private @Nullable Output<String> filterPrefix;
-        private @Nullable Output<String> filterSuffix;
-        private @Nullable Output<String> id;
-        private Output<String> queueArn;
+        private BucketNotificationQueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketNotificationQueueArgs();
         }
 
         public Builder(BucketNotificationQueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.events = defaults.events;
-    	      this.filterPrefix = defaults.filterPrefix;
-    	      this.filterSuffix = defaults.filterSuffix;
-    	      this.id = defaults.id;
-    	      this.queueArn = defaults.queueArn;
+            $ = new BucketNotificationQueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder events(Output<List<String>> events) {
-            this.events = Objects.requireNonNull(events);
+            $.events = events;
             return this;
         }
+
         public Builder events(List<String> events) {
-            this.events = Output.of(Objects.requireNonNull(events));
-            return this;
+            return events(Output.of(events));
         }
+
         public Builder events(String... events) {
             return events(List.of(events));
         }
+
         public Builder filterPrefix(@Nullable Output<String> filterPrefix) {
-            this.filterPrefix = filterPrefix;
+            $.filterPrefix = filterPrefix;
             return this;
         }
-        public Builder filterPrefix(@Nullable String filterPrefix) {
-            this.filterPrefix = Codegen.ofNullable(filterPrefix);
-            return this;
+
+        public Builder filterPrefix(String filterPrefix) {
+            return filterPrefix(Output.of(filterPrefix));
         }
+
         public Builder filterSuffix(@Nullable Output<String> filterSuffix) {
-            this.filterSuffix = filterSuffix;
+            $.filterSuffix = filterSuffix;
             return this;
         }
-        public Builder filterSuffix(@Nullable String filterSuffix) {
-            this.filterSuffix = Codegen.ofNullable(filterSuffix);
-            return this;
+
+        public Builder filterSuffix(String filterSuffix) {
+            return filterSuffix(Output.of(filterSuffix));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder queueArn(Output<String> queueArn) {
-            this.queueArn = Objects.requireNonNull(queueArn);
+            $.queueArn = queueArn;
             return this;
         }
+
         public Builder queueArn(String queueArn) {
-            this.queueArn = Output.of(Objects.requireNonNull(queueArn));
-            return this;
-        }        public BucketNotificationQueueArgs build() {
-            return new BucketNotificationQueueArgs(events, filterPrefix, filterSuffix, id, queueArn);
+            return queueArn(Output.of(queueArn));
+        }
+
+        public BucketNotificationQueueArgs build() {
+            $.events = Objects.requireNonNull($.events, "expected parameter 'events' to be non-null");
+            $.queueArn = Objects.requireNonNull($.queueArn, "expected parameter 'queueArn' to be non-null");
+            return $;
         }
     }
+
 }

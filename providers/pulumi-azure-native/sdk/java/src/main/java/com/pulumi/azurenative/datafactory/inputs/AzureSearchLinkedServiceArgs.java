@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -99,7 +100,7 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -110,144 +111,124 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="url", required=true)
-      private final Output<Object> url;
+    private Output<Object> url;
 
     public Output<Object> url() {
         return this.url;
     }
 
-    public AzureSearchLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        Output<String> type,
-        Output<Object> url) {
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.key = key;
-        this.parameters = parameters;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private AzureSearchLinkedServiceArgs() {}
 
-    private AzureSearchLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.key = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.type = Codegen.empty();
-        this.url = Codegen.empty();
+    private AzureSearchLinkedServiceArgs(AzureSearchLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.key = $.key;
+        this.parameters = $.parameters;
+        this.type = $.type;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSearchLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private Output<String> type;
-        private Output<Object> url;
+        private AzureSearchLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSearchLinkedServiceArgs();
         }
 
         public Builder(AzureSearchLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.key = defaults.key;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
+            $ = new AzureSearchLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder key(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> key) {
+            return key(Output.of(key));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder url(Output<Object> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(Object url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public AzureSearchLinkedServiceArgs build() {
-            return new AzureSearchLinkedServiceArgs(annotations, connectVia, description, encryptedCredential, key, parameters, type, url);
+            return url(Output.of(url));
+        }
+
+        public AzureSearchLinkedServiceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

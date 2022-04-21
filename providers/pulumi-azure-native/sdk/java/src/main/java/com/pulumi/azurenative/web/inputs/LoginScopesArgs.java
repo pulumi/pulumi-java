@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class LoginScopesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<String>> scopes;
+    private @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<String>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
-    public LoginScopesArgs(@Nullable Output<List<String>> scopes) {
-        this.scopes = scopes;
-    }
+    private LoginScopesArgs() {}
 
-    private LoginScopesArgs() {
-        this.scopes = Codegen.empty();
+    private LoginScopesArgs(LoginScopesArgs $) {
+        this.scopes = $.scopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoginScopesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> scopes;
+        private LoginScopesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoginScopesArgs();
         }
 
         public Builder(LoginScopesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scopes = defaults.scopes;
+            $ = new LoginScopesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scopes(@Nullable Output<List<String>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<String> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
-        }        public LoginScopesArgs build() {
-            return new LoginScopesArgs(scopes);
+        }
+
+        public LoginScopesArgs build() {
+            return $;
         }
     }
+
 }

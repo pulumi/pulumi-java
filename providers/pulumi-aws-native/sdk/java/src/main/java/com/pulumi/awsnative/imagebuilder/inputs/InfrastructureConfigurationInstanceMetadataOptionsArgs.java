@@ -6,9 +6,9 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.enums.InfrastructureConfigurationInstanceMetadataOptionsHttpTokens;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
      * 
      */
     @Import(name="httpPutResponseHopLimit")
-      private final @Nullable Output<Integer> httpPutResponseHopLimit;
+    private @Nullable Output<Integer> httpPutResponseHopLimit;
 
-    public Output<Integer> httpPutResponseHopLimit() {
-        return this.httpPutResponseHopLimit == null ? Codegen.empty() : this.httpPutResponseHopLimit;
+    public Optional<Output<Integer>> httpPutResponseHopLimit() {
+        return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
      * 
      */
     @Import(name="httpTokens")
-      private final @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
+    private @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
 
-    public Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens() {
-        return this.httpTokens == null ? Codegen.empty() : this.httpTokens;
+    public Optional<Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens>> httpTokens() {
+        return Optional.ofNullable(this.httpTokens);
     }
 
-    public InfrastructureConfigurationInstanceMetadataOptionsArgs(
-        @Nullable Output<Integer> httpPutResponseHopLimit,
-        @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens) {
-        this.httpPutResponseHopLimit = httpPutResponseHopLimit;
-        this.httpTokens = httpTokens;
-    }
+    private InfrastructureConfigurationInstanceMetadataOptionsArgs() {}
 
-    private InfrastructureConfigurationInstanceMetadataOptionsArgs() {
-        this.httpPutResponseHopLimit = Codegen.empty();
-        this.httpTokens = Codegen.empty();
+    private InfrastructureConfigurationInstanceMetadataOptionsArgs(InfrastructureConfigurationInstanceMetadataOptionsArgs $) {
+        this.httpPutResponseHopLimit = $.httpPutResponseHopLimit;
+        this.httpTokens = $.httpTokens;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InfrastructureConfigurationInstanceMetadataOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> httpPutResponseHopLimit;
-        private @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
+        private InfrastructureConfigurationInstanceMetadataOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InfrastructureConfigurationInstanceMetadataOptionsArgs();
         }
 
         public Builder(InfrastructureConfigurationInstanceMetadataOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpPutResponseHopLimit = defaults.httpPutResponseHopLimit;
-    	      this.httpTokens = defaults.httpTokens;
+            $ = new InfrastructureConfigurationInstanceMetadataOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpPutResponseHopLimit(@Nullable Output<Integer> httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+            $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
-        public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = Codegen.ofNullable(httpPutResponseHopLimit);
-            return this;
+
+        public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+            return httpPutResponseHopLimit(Output.of(httpPutResponseHopLimit));
         }
+
         public Builder httpTokens(@Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens) {
-            this.httpTokens = httpTokens;
+            $.httpTokens = httpTokens;
             return this;
         }
-        public Builder httpTokens(@Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
-            this.httpTokens = Codegen.ofNullable(httpTokens);
-            return this;
-        }        public InfrastructureConfigurationInstanceMetadataOptionsArgs build() {
-            return new InfrastructureConfigurationInstanceMetadataOptionsArgs(httpPutResponseHopLimit, httpTokens);
+
+        public Builder httpTokens(InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
+            return httpTokens(Output.of(httpTokens));
+        }
+
+        public InfrastructureConfigurationInstanceMetadataOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AccountAliasState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountAlias")
-      private final @Nullable Output<String> accountAlias;
+    private @Nullable Output<String> accountAlias;
 
-    public Output<String> accountAlias() {
-        return this.accountAlias == null ? Codegen.empty() : this.accountAlias;
+    public Optional<Output<String>> accountAlias() {
+        return Optional.ofNullable(this.accountAlias);
     }
 
-    public AccountAliasState(@Nullable Output<String> accountAlias) {
-        this.accountAlias = accountAlias;
-    }
+    private AccountAliasState() {}
 
-    private AccountAliasState() {
-        this.accountAlias = Codegen.empty();
+    private AccountAliasState(AccountAliasState $) {
+        this.accountAlias = $.accountAlias;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountAliasState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountAlias;
+        private AccountAliasState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountAliasState();
         }
 
         public Builder(AccountAliasState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountAlias = defaults.accountAlias;
+            $ = new AccountAliasState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountAlias(@Nullable Output<String> accountAlias) {
-            this.accountAlias = accountAlias;
+            $.accountAlias = accountAlias;
             return this;
         }
-        public Builder accountAlias(@Nullable String accountAlias) {
-            this.accountAlias = Codegen.ofNullable(accountAlias);
-            return this;
-        }        public AccountAliasState build() {
-            return new AccountAliasState(accountAlias);
+
+        public Builder accountAlias(String accountAlias) {
+            return accountAlias(Output.of(accountAlias));
+        }
+
+        public AccountAliasState build() {
+            return $;
         }
     }
+
 }

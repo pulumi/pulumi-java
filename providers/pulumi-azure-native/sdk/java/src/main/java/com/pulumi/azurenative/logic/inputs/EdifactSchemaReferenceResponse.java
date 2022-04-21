@@ -23,10 +23,10 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="associationAssignedCode")
-      private final @Nullable String associationAssignedCode;
+    private @Nullable String associationAssignedCode;
 
     public Optional<String> associationAssignedCode() {
-        return this.associationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.associationAssignedCode);
+        return Optional.ofNullable(this.associationAssignedCode);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="messageId", required=true)
-      private final String messageId;
+    private String messageId;
 
     public String messageId() {
         return this.messageId;
@@ -45,7 +45,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="messageRelease", required=true)
-      private final String messageRelease;
+    private String messageRelease;
 
     public String messageRelease() {
         return this.messageRelease;
@@ -56,7 +56,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="messageVersion", required=true)
-      private final String messageVersion;
+    private String messageVersion;
 
     public String messageVersion() {
         return this.messageVersion;
@@ -67,7 +67,7 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="schemaName", required=true)
-      private final String schemaName;
+    private String schemaName;
 
     public String schemaName() {
         return this.schemaName;
@@ -78,10 +78,10 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="senderApplicationId")
-      private final @Nullable String senderApplicationId;
+    private @Nullable String senderApplicationId;
 
     public Optional<String> senderApplicationId() {
-        return this.senderApplicationId == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationId);
+        return Optional.ofNullable(this.senderApplicationId);
     }
 
     /**
@@ -89,100 +89,84 @@ public final class EdifactSchemaReferenceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="senderApplicationQualifier")
-      private final @Nullable String senderApplicationQualifier;
+    private @Nullable String senderApplicationQualifier;
 
     public Optional<String> senderApplicationQualifier() {
-        return this.senderApplicationQualifier == null ? Optional.empty() : Optional.ofNullable(this.senderApplicationQualifier);
+        return Optional.ofNullable(this.senderApplicationQualifier);
     }
 
-    public EdifactSchemaReferenceResponse(
-        @Nullable String associationAssignedCode,
-        String messageId,
-        String messageRelease,
-        String messageVersion,
-        String schemaName,
-        @Nullable String senderApplicationId,
-        @Nullable String senderApplicationQualifier) {
-        this.associationAssignedCode = associationAssignedCode;
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-        this.messageRelease = Objects.requireNonNull(messageRelease, "expected parameter 'messageRelease' to be non-null");
-        this.messageVersion = Objects.requireNonNull(messageVersion, "expected parameter 'messageVersion' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-        this.senderApplicationId = senderApplicationId;
-        this.senderApplicationQualifier = senderApplicationQualifier;
-    }
+    private EdifactSchemaReferenceResponse() {}
 
-    private EdifactSchemaReferenceResponse() {
-        this.associationAssignedCode = null;
-        this.messageId = null;
-        this.messageRelease = null;
-        this.messageVersion = null;
-        this.schemaName = null;
-        this.senderApplicationId = null;
-        this.senderApplicationQualifier = null;
+    private EdifactSchemaReferenceResponse(EdifactSchemaReferenceResponse $) {
+        this.associationAssignedCode = $.associationAssignedCode;
+        this.messageId = $.messageId;
+        this.messageRelease = $.messageRelease;
+        this.messageVersion = $.messageVersion;
+        this.schemaName = $.schemaName;
+        this.senderApplicationId = $.senderApplicationId;
+        this.senderApplicationQualifier = $.senderApplicationQualifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactSchemaReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String associationAssignedCode;
-        private String messageId;
-        private String messageRelease;
-        private String messageVersion;
-        private String schemaName;
-        private @Nullable String senderApplicationId;
-        private @Nullable String senderApplicationQualifier;
+        private EdifactSchemaReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactSchemaReferenceResponse();
         }
 
         public Builder(EdifactSchemaReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associationAssignedCode = defaults.associationAssignedCode;
-    	      this.messageId = defaults.messageId;
-    	      this.messageRelease = defaults.messageRelease;
-    	      this.messageVersion = defaults.messageVersion;
-    	      this.schemaName = defaults.schemaName;
-    	      this.senderApplicationId = defaults.senderApplicationId;
-    	      this.senderApplicationQualifier = defaults.senderApplicationQualifier;
+            $ = new EdifactSchemaReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
-            this.associationAssignedCode = associationAssignedCode;
+            $.associationAssignedCode = associationAssignedCode;
             return this;
         }
+
         public Builder messageId(String messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
         }
+
         public Builder messageRelease(String messageRelease) {
-            this.messageRelease = Objects.requireNonNull(messageRelease);
+            $.messageRelease = messageRelease;
             return this;
         }
+
         public Builder messageVersion(String messageVersion) {
-            this.messageVersion = Objects.requireNonNull(messageVersion);
+            $.messageVersion = messageVersion;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
-            this.senderApplicationId = senderApplicationId;
+            $.senderApplicationId = senderApplicationId;
             return this;
         }
+
         public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
-            this.senderApplicationQualifier = senderApplicationQualifier;
+            $.senderApplicationQualifier = senderApplicationQualifier;
             return this;
-        }        public EdifactSchemaReferenceResponse build() {
-            return new EdifactSchemaReferenceResponse(associationAssignedCode, messageId, messageRelease, messageVersion, schemaName, senderApplicationId, senderApplicationQualifier);
+        }
+
+        public EdifactSchemaReferenceResponse build() {
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            $.messageRelease = Objects.requireNonNull($.messageRelease, "expected parameter 'messageRelease' to be non-null");
+            $.messageVersion = Objects.requireNonNull($.messageVersion, "expected parameter 'messageVersion' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            return $;
         }
     }
+
 }

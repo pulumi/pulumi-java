@@ -17,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +30,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -40,10 +41,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupId")
-      private final @Nullable Output<String> backupId;
+    private @Nullable Output<String> backupId;
 
-    public Output<String> backupId() {
-        return this.backupId == null ? Codegen.empty() : this.backupId;
+    public Optional<Output<String>> backupId() {
+        return Optional.ofNullable(this.backupId);
     }
 
     /**
@@ -51,7 +52,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationToken", required=true)
-      private final Output<String> creationToken;
+    private Output<String> creationToken;
 
     public Output<String> creationToken() {
         return this.creationToken;
@@ -62,10 +63,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataProtection")
-      private final @Nullable Output<VolumePropertiesDataProtectionArgs> dataProtection;
+    private @Nullable Output<VolumePropertiesDataProtectionArgs> dataProtection;
 
-    public Output<VolumePropertiesDataProtectionArgs> dataProtection() {
-        return this.dataProtection == null ? Codegen.empty() : this.dataProtection;
+    public Optional<Output<VolumePropertiesDataProtectionArgs>> dataProtection() {
+        return Optional.ofNullable(this.dataProtection);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionKeySource")
-      private final @Nullable Output<String> encryptionKeySource;
+    private @Nullable Output<String> encryptionKeySource;
 
-    public Output<String> encryptionKeySource() {
-        return this.encryptionKeySource == null ? Codegen.empty() : this.encryptionKeySource;
+    public Optional<Output<String>> encryptionKeySource() {
+        return Optional.ofNullable(this.encryptionKeySource);
     }
 
     /**
@@ -84,10 +85,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exportPolicy")
-      private final @Nullable Output<VolumePropertiesExportPolicyArgs> exportPolicy;
+    private @Nullable Output<VolumePropertiesExportPolicyArgs> exportPolicy;
 
-    public Output<VolumePropertiesExportPolicyArgs> exportPolicy() {
-        return this.exportPolicy == null ? Codegen.empty() : this.exportPolicy;
+    public Optional<Output<VolumePropertiesExportPolicyArgs>> exportPolicy() {
+        return Optional.ofNullable(this.exportPolicy);
     }
 
     /**
@@ -95,10 +96,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isRestoring")
-      private final @Nullable Output<Boolean> isRestoring;
+    private @Nullable Output<Boolean> isRestoring;
 
-    public Output<Boolean> isRestoring() {
-        return this.isRestoring == null ? Codegen.empty() : this.isRestoring;
+    public Optional<Output<Boolean>> isRestoring() {
+        return Optional.ofNullable(this.isRestoring);
     }
 
     /**
@@ -106,10 +107,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kerberosEnabled")
-      private final @Nullable Output<Boolean> kerberosEnabled;
+    private @Nullable Output<Boolean> kerberosEnabled;
 
-    public Output<Boolean> kerberosEnabled() {
-        return this.kerberosEnabled == null ? Codegen.empty() : this.kerberosEnabled;
+    public Optional<Output<Boolean>> kerberosEnabled() {
+        return Optional.ofNullable(this.kerberosEnabled);
     }
 
     /**
@@ -117,10 +118,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ldapEnabled")
-      private final @Nullable Output<Boolean> ldapEnabled;
+    private @Nullable Output<Boolean> ldapEnabled;
 
-    public Output<Boolean> ldapEnabled() {
-        return this.ldapEnabled == null ? Codegen.empty() : this.ldapEnabled;
+    public Optional<Output<Boolean>> ldapEnabled() {
+        return Optional.ofNullable(this.ldapEnabled);
     }
 
     /**
@@ -128,10 +129,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -139,7 +140,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="poolName", required=true)
-      private final Output<String> poolName;
+    private Output<String> poolName;
 
     public Output<String> poolName() {
         return this.poolName;
@@ -150,10 +151,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocolTypes")
-      private final @Nullable Output<List<String>> protocolTypes;
+    private @Nullable Output<List<String>> protocolTypes;
 
-    public Output<List<String>> protocolTypes() {
-        return this.protocolTypes == null ? Codegen.empty() : this.protocolTypes;
+    public Optional<Output<List<String>>> protocolTypes() {
+        return Optional.ofNullable(this.protocolTypes);
     }
 
     /**
@@ -161,7 +162,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -172,10 +173,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityStyle")
-      private final @Nullable Output<Either<String,SecurityStyle>> securityStyle;
+    private @Nullable Output<Either<String,SecurityStyle>> securityStyle;
 
-    public Output<Either<String,SecurityStyle>> securityStyle() {
-        return this.securityStyle == null ? Codegen.empty() : this.securityStyle;
+    public Optional<Output<Either<String,SecurityStyle>>> securityStyle() {
+        return Optional.ofNullable(this.securityStyle);
     }
 
     /**
@@ -183,10 +184,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceLevel")
-      private final @Nullable Output<Either<String,ServiceLevel>> serviceLevel;
+    private @Nullable Output<Either<String,ServiceLevel>> serviceLevel;
 
-    public Output<Either<String,ServiceLevel>> serviceLevel() {
-        return this.serviceLevel == null ? Codegen.empty() : this.serviceLevel;
+    public Optional<Output<Either<String,ServiceLevel>>> serviceLevel() {
+        return Optional.ofNullable(this.serviceLevel);
     }
 
     /**
@@ -194,10 +195,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smbContinuouslyAvailable")
-      private final @Nullable Output<Boolean> smbContinuouslyAvailable;
+    private @Nullable Output<Boolean> smbContinuouslyAvailable;
 
-    public Output<Boolean> smbContinuouslyAvailable() {
-        return this.smbContinuouslyAvailable == null ? Codegen.empty() : this.smbContinuouslyAvailable;
+    public Optional<Output<Boolean>> smbContinuouslyAvailable() {
+        return Optional.ofNullable(this.smbContinuouslyAvailable);
     }
 
     /**
@@ -205,10 +206,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smbEncryption")
-      private final @Nullable Output<Boolean> smbEncryption;
+    private @Nullable Output<Boolean> smbEncryption;
 
-    public Output<Boolean> smbEncryption() {
-        return this.smbEncryption == null ? Codegen.empty() : this.smbEncryption;
+    public Optional<Output<Boolean>> smbEncryption() {
+        return Optional.ofNullable(this.smbEncryption);
     }
 
     /**
@@ -216,10 +217,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotDirectoryVisible")
-      private final @Nullable Output<Boolean> snapshotDirectoryVisible;
+    private @Nullable Output<Boolean> snapshotDirectoryVisible;
 
-    public Output<Boolean> snapshotDirectoryVisible() {
-        return this.snapshotDirectoryVisible == null ? Codegen.empty() : this.snapshotDirectoryVisible;
+    public Optional<Output<Boolean>> snapshotDirectoryVisible() {
+        return Optional.ofNullable(this.snapshotDirectoryVisible);
     }
 
     /**
@@ -227,10 +228,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotId")
-      private final @Nullable Output<String> snapshotId;
+    private @Nullable Output<String> snapshotId;
 
-    public Output<String> snapshotId() {
-        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
+    public Optional<Output<String>> snapshotId() {
+        return Optional.ofNullable(this.snapshotId);
     }
 
     /**
@@ -238,7 +239,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
@@ -249,17 +250,17 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="throughputMibps")
-      private final @Nullable Output<Double> throughputMibps;
+    private @Nullable Output<Double> throughputMibps;
 
-    public Output<Double> throughputMibps() {
-        return this.throughputMibps == null ? Codegen.empty() : this.throughputMibps;
+    public Optional<Output<Double>> throughputMibps() {
+        return Optional.ofNullable(this.throughputMibps);
     }
 
     /**
@@ -267,7 +268,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usageThreshold", required=true)
-      private final Output<Double> usageThreshold;
+    private Output<Double> usageThreshold;
 
     public Output<Double> usageThreshold() {
         return this.usageThreshold;
@@ -278,10 +279,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeName")
-      private final @Nullable Output<String> volumeName;
+    private @Nullable Output<String> volumeName;
 
-    public Output<String> volumeName() {
-        return this.volumeName == null ? Codegen.empty() : this.volumeName;
+    public Optional<Output<String>> volumeName() {
+        return Optional.ofNullable(this.volumeName);
     }
 
     /**
@@ -289,365 +290,306 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public VolumeArgs(
-        Output<String> accountName,
-        @Nullable Output<String> backupId,
-        Output<String> creationToken,
-        @Nullable Output<VolumePropertiesDataProtectionArgs> dataProtection,
-        @Nullable Output<String> encryptionKeySource,
-        @Nullable Output<VolumePropertiesExportPolicyArgs> exportPolicy,
-        @Nullable Output<Boolean> isRestoring,
-        @Nullable Output<Boolean> kerberosEnabled,
-        @Nullable Output<Boolean> ldapEnabled,
-        @Nullable Output<String> location,
-        Output<String> poolName,
-        @Nullable Output<List<String>> protocolTypes,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,SecurityStyle>> securityStyle,
-        @Nullable Output<Either<String,ServiceLevel>> serviceLevel,
-        @Nullable Output<Boolean> smbContinuouslyAvailable,
-        @Nullable Output<Boolean> smbEncryption,
-        @Nullable Output<Boolean> snapshotDirectoryVisible,
-        @Nullable Output<String> snapshotId,
-        Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Double> throughputMibps,
-        Output<Double> usageThreshold,
-        @Nullable Output<String> volumeName,
-        @Nullable Output<String> volumeType) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.backupId = backupId;
-        this.creationToken = Objects.requireNonNull(creationToken, "expected parameter 'creationToken' to be non-null");
-        this.dataProtection = dataProtection;
-        this.encryptionKeySource = encryptionKeySource;
-        this.exportPolicy = exportPolicy;
-        this.isRestoring = isRestoring;
-        this.kerberosEnabled = Codegen.booleanProp("kerberosEnabled").output().arg(kerberosEnabled).def(false).getNullable();
-        this.ldapEnabled = Codegen.booleanProp("ldapEnabled").output().arg(ldapEnabled).def(false).getNullable();
-        this.location = location;
-        this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
-        this.protocolTypes = protocolTypes;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityStyle = Codegen.stringProp("securityStyle").left(SecurityStyle.class).output().arg(securityStyle).def("unix").getNullable();
-        this.serviceLevel = Codegen.stringProp("serviceLevel").left(ServiceLevel.class).output().arg(serviceLevel).def("Premium").getNullable();
-        this.smbContinuouslyAvailable = Codegen.booleanProp("smbContinuouslyAvailable").output().arg(smbContinuouslyAvailable).def(false).getNullable();
-        this.smbEncryption = Codegen.booleanProp("smbEncryption").output().arg(smbEncryption).def(false).getNullable();
-        this.snapshotDirectoryVisible = Codegen.booleanProp("snapshotDirectoryVisible").output().arg(snapshotDirectoryVisible).def(true).getNullable();
-        this.snapshotId = snapshotId;
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.tags = tags;
-        this.throughputMibps = Codegen.doubleProp("throughputMibps").output().arg(throughputMibps).def(0e+00).getNullable();
-        this.usageThreshold = Codegen.doubleProp("usageThreshold").output().arg(usageThreshold).def(1.073741824e+11).require();
-        this.volumeName = volumeName;
-        this.volumeType = volumeType;
-    }
+    private VolumeArgs() {}
 
-    private VolumeArgs() {
-        this.accountName = Codegen.empty();
-        this.backupId = Codegen.empty();
-        this.creationToken = Codegen.empty();
-        this.dataProtection = Codegen.empty();
-        this.encryptionKeySource = Codegen.empty();
-        this.exportPolicy = Codegen.empty();
-        this.isRestoring = Codegen.empty();
-        this.kerberosEnabled = Codegen.empty();
-        this.ldapEnabled = Codegen.empty();
-        this.location = Codegen.empty();
-        this.poolName = Codegen.empty();
-        this.protocolTypes = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.securityStyle = Codegen.empty();
-        this.serviceLevel = Codegen.empty();
-        this.smbContinuouslyAvailable = Codegen.empty();
-        this.smbEncryption = Codegen.empty();
-        this.snapshotDirectoryVisible = Codegen.empty();
-        this.snapshotId = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.throughputMibps = Codegen.empty();
-        this.usageThreshold = Codegen.empty();
-        this.volumeName = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private VolumeArgs(VolumeArgs $) {
+        this.accountName = $.accountName;
+        this.backupId = $.backupId;
+        this.creationToken = $.creationToken;
+        this.dataProtection = $.dataProtection;
+        this.encryptionKeySource = $.encryptionKeySource;
+        this.exportPolicy = $.exportPolicy;
+        this.isRestoring = $.isRestoring;
+        this.kerberosEnabled = $.kerberosEnabled;
+        this.ldapEnabled = $.ldapEnabled;
+        this.location = $.location;
+        this.poolName = $.poolName;
+        this.protocolTypes = $.protocolTypes;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityStyle = $.securityStyle;
+        this.serviceLevel = $.serviceLevel;
+        this.smbContinuouslyAvailable = $.smbContinuouslyAvailable;
+        this.smbEncryption = $.smbEncryption;
+        this.snapshotDirectoryVisible = $.snapshotDirectoryVisible;
+        this.snapshotId = $.snapshotId;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.throughputMibps = $.throughputMibps;
+        this.usageThreshold = $.usageThreshold;
+        this.volumeName = $.volumeName;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> backupId;
-        private Output<String> creationToken;
-        private @Nullable Output<VolumePropertiesDataProtectionArgs> dataProtection;
-        private @Nullable Output<String> encryptionKeySource;
-        private @Nullable Output<VolumePropertiesExportPolicyArgs> exportPolicy;
-        private @Nullable Output<Boolean> isRestoring;
-        private @Nullable Output<Boolean> kerberosEnabled;
-        private @Nullable Output<Boolean> ldapEnabled;
-        private @Nullable Output<String> location;
-        private Output<String> poolName;
-        private @Nullable Output<List<String>> protocolTypes;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,SecurityStyle>> securityStyle;
-        private @Nullable Output<Either<String,ServiceLevel>> serviceLevel;
-        private @Nullable Output<Boolean> smbContinuouslyAvailable;
-        private @Nullable Output<Boolean> smbEncryption;
-        private @Nullable Output<Boolean> snapshotDirectoryVisible;
-        private @Nullable Output<String> snapshotId;
-        private Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Double> throughputMibps;
-        private Output<Double> usageThreshold;
-        private @Nullable Output<String> volumeName;
-        private @Nullable Output<String> volumeType;
+        private VolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeArgs();
         }
 
         public Builder(VolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.backupId = defaults.backupId;
-    	      this.creationToken = defaults.creationToken;
-    	      this.dataProtection = defaults.dataProtection;
-    	      this.encryptionKeySource = defaults.encryptionKeySource;
-    	      this.exportPolicy = defaults.exportPolicy;
-    	      this.isRestoring = defaults.isRestoring;
-    	      this.kerberosEnabled = defaults.kerberosEnabled;
-    	      this.ldapEnabled = defaults.ldapEnabled;
-    	      this.location = defaults.location;
-    	      this.poolName = defaults.poolName;
-    	      this.protocolTypes = defaults.protocolTypes;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityStyle = defaults.securityStyle;
-    	      this.serviceLevel = defaults.serviceLevel;
-    	      this.smbContinuouslyAvailable = defaults.smbContinuouslyAvailable;
-    	      this.smbEncryption = defaults.smbEncryption;
-    	      this.snapshotDirectoryVisible = defaults.snapshotDirectoryVisible;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.throughputMibps = defaults.throughputMibps;
-    	      this.usageThreshold = defaults.usageThreshold;
-    	      this.volumeName = defaults.volumeName;
-    	      this.volumeType = defaults.volumeType;
+            $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder backupId(@Nullable Output<String> backupId) {
-            this.backupId = backupId;
+            $.backupId = backupId;
             return this;
         }
-        public Builder backupId(@Nullable String backupId) {
-            this.backupId = Codegen.ofNullable(backupId);
-            return this;
+
+        public Builder backupId(String backupId) {
+            return backupId(Output.of(backupId));
         }
+
         public Builder creationToken(Output<String> creationToken) {
-            this.creationToken = Objects.requireNonNull(creationToken);
+            $.creationToken = creationToken;
             return this;
         }
+
         public Builder creationToken(String creationToken) {
-            this.creationToken = Output.of(Objects.requireNonNull(creationToken));
-            return this;
+            return creationToken(Output.of(creationToken));
         }
+
         public Builder dataProtection(@Nullable Output<VolumePropertiesDataProtectionArgs> dataProtection) {
-            this.dataProtection = dataProtection;
+            $.dataProtection = dataProtection;
             return this;
         }
-        public Builder dataProtection(@Nullable VolumePropertiesDataProtectionArgs dataProtection) {
-            this.dataProtection = Codegen.ofNullable(dataProtection);
-            return this;
+
+        public Builder dataProtection(VolumePropertiesDataProtectionArgs dataProtection) {
+            return dataProtection(Output.of(dataProtection));
         }
+
         public Builder encryptionKeySource(@Nullable Output<String> encryptionKeySource) {
-            this.encryptionKeySource = encryptionKeySource;
+            $.encryptionKeySource = encryptionKeySource;
             return this;
         }
-        public Builder encryptionKeySource(@Nullable String encryptionKeySource) {
-            this.encryptionKeySource = Codegen.ofNullable(encryptionKeySource);
-            return this;
+
+        public Builder encryptionKeySource(String encryptionKeySource) {
+            return encryptionKeySource(Output.of(encryptionKeySource));
         }
+
         public Builder exportPolicy(@Nullable Output<VolumePropertiesExportPolicyArgs> exportPolicy) {
-            this.exportPolicy = exportPolicy;
+            $.exportPolicy = exportPolicy;
             return this;
         }
-        public Builder exportPolicy(@Nullable VolumePropertiesExportPolicyArgs exportPolicy) {
-            this.exportPolicy = Codegen.ofNullable(exportPolicy);
-            return this;
+
+        public Builder exportPolicy(VolumePropertiesExportPolicyArgs exportPolicy) {
+            return exportPolicy(Output.of(exportPolicy));
         }
+
         public Builder isRestoring(@Nullable Output<Boolean> isRestoring) {
-            this.isRestoring = isRestoring;
+            $.isRestoring = isRestoring;
             return this;
         }
-        public Builder isRestoring(@Nullable Boolean isRestoring) {
-            this.isRestoring = Codegen.ofNullable(isRestoring);
-            return this;
+
+        public Builder isRestoring(Boolean isRestoring) {
+            return isRestoring(Output.of(isRestoring));
         }
+
         public Builder kerberosEnabled(@Nullable Output<Boolean> kerberosEnabled) {
-            this.kerberosEnabled = kerberosEnabled;
+            $.kerberosEnabled = kerberosEnabled;
             return this;
         }
-        public Builder kerberosEnabled(@Nullable Boolean kerberosEnabled) {
-            this.kerberosEnabled = Codegen.ofNullable(kerberosEnabled);
-            return this;
+
+        public Builder kerberosEnabled(Boolean kerberosEnabled) {
+            return kerberosEnabled(Output.of(kerberosEnabled));
         }
+
         public Builder ldapEnabled(@Nullable Output<Boolean> ldapEnabled) {
-            this.ldapEnabled = ldapEnabled;
+            $.ldapEnabled = ldapEnabled;
             return this;
         }
-        public Builder ldapEnabled(@Nullable Boolean ldapEnabled) {
-            this.ldapEnabled = Codegen.ofNullable(ldapEnabled);
-            return this;
+
+        public Builder ldapEnabled(Boolean ldapEnabled) {
+            return ldapEnabled(Output.of(ldapEnabled));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder poolName(Output<String> poolName) {
-            this.poolName = Objects.requireNonNull(poolName);
+            $.poolName = poolName;
             return this;
         }
+
         public Builder poolName(String poolName) {
-            this.poolName = Output.of(Objects.requireNonNull(poolName));
-            return this;
+            return poolName(Output.of(poolName));
         }
+
         public Builder protocolTypes(@Nullable Output<List<String>> protocolTypes) {
-            this.protocolTypes = protocolTypes;
+            $.protocolTypes = protocolTypes;
             return this;
         }
-        public Builder protocolTypes(@Nullable List<String> protocolTypes) {
-            this.protocolTypes = Codegen.ofNullable(protocolTypes);
-            return this;
+
+        public Builder protocolTypes(List<String> protocolTypes) {
+            return protocolTypes(Output.of(protocolTypes));
         }
+
         public Builder protocolTypes(String... protocolTypes) {
             return protocolTypes(List.of(protocolTypes));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder securityStyle(@Nullable Output<Either<String,SecurityStyle>> securityStyle) {
-            this.securityStyle = securityStyle;
+            $.securityStyle = securityStyle;
             return this;
         }
-        public Builder securityStyle(@Nullable Either<String,SecurityStyle> securityStyle) {
-            this.securityStyle = Codegen.ofNullable(securityStyle);
-            return this;
+
+        public Builder securityStyle(Either<String,SecurityStyle> securityStyle) {
+            return securityStyle(Output.of(securityStyle));
         }
+
         public Builder serviceLevel(@Nullable Output<Either<String,ServiceLevel>> serviceLevel) {
-            this.serviceLevel = serviceLevel;
+            $.serviceLevel = serviceLevel;
             return this;
         }
-        public Builder serviceLevel(@Nullable Either<String,ServiceLevel> serviceLevel) {
-            this.serviceLevel = Codegen.ofNullable(serviceLevel);
-            return this;
+
+        public Builder serviceLevel(Either<String,ServiceLevel> serviceLevel) {
+            return serviceLevel(Output.of(serviceLevel));
         }
+
         public Builder smbContinuouslyAvailable(@Nullable Output<Boolean> smbContinuouslyAvailable) {
-            this.smbContinuouslyAvailable = smbContinuouslyAvailable;
+            $.smbContinuouslyAvailable = smbContinuouslyAvailable;
             return this;
         }
-        public Builder smbContinuouslyAvailable(@Nullable Boolean smbContinuouslyAvailable) {
-            this.smbContinuouslyAvailable = Codegen.ofNullable(smbContinuouslyAvailable);
-            return this;
+
+        public Builder smbContinuouslyAvailable(Boolean smbContinuouslyAvailable) {
+            return smbContinuouslyAvailable(Output.of(smbContinuouslyAvailable));
         }
+
         public Builder smbEncryption(@Nullable Output<Boolean> smbEncryption) {
-            this.smbEncryption = smbEncryption;
+            $.smbEncryption = smbEncryption;
             return this;
         }
-        public Builder smbEncryption(@Nullable Boolean smbEncryption) {
-            this.smbEncryption = Codegen.ofNullable(smbEncryption);
-            return this;
+
+        public Builder smbEncryption(Boolean smbEncryption) {
+            return smbEncryption(Output.of(smbEncryption));
         }
+
         public Builder snapshotDirectoryVisible(@Nullable Output<Boolean> snapshotDirectoryVisible) {
-            this.snapshotDirectoryVisible = snapshotDirectoryVisible;
+            $.snapshotDirectoryVisible = snapshotDirectoryVisible;
             return this;
         }
-        public Builder snapshotDirectoryVisible(@Nullable Boolean snapshotDirectoryVisible) {
-            this.snapshotDirectoryVisible = Codegen.ofNullable(snapshotDirectoryVisible);
-            return this;
+
+        public Builder snapshotDirectoryVisible(Boolean snapshotDirectoryVisible) {
+            return snapshotDirectoryVisible(Output.of(snapshotDirectoryVisible));
         }
+
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
-            this.snapshotId = snapshotId;
+            $.snapshotId = snapshotId;
             return this;
         }
-        public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Codegen.ofNullable(snapshotId);
-            return this;
+
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder throughputMibps(@Nullable Output<Double> throughputMibps) {
-            this.throughputMibps = throughputMibps;
+            $.throughputMibps = throughputMibps;
             return this;
         }
-        public Builder throughputMibps(@Nullable Double throughputMibps) {
-            this.throughputMibps = Codegen.ofNullable(throughputMibps);
-            return this;
+
+        public Builder throughputMibps(Double throughputMibps) {
+            return throughputMibps(Output.of(throughputMibps));
         }
+
         public Builder usageThreshold(Output<Double> usageThreshold) {
-            this.usageThreshold = Objects.requireNonNull(usageThreshold);
+            $.usageThreshold = usageThreshold;
             return this;
         }
+
         public Builder usageThreshold(Double usageThreshold) {
-            this.usageThreshold = Output.of(Objects.requireNonNull(usageThreshold));
-            return this;
+            return usageThreshold(Output.of(usageThreshold));
         }
+
         public Builder volumeName(@Nullable Output<String> volumeName) {
-            this.volumeName = volumeName;
+            $.volumeName = volumeName;
             return this;
         }
-        public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Codegen.ofNullable(volumeName);
-            return this;
+
+        public Builder volumeName(String volumeName) {
+            return volumeName(Output.of(volumeName));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public VolumeArgs build() {
-            return new VolumeArgs(accountName, backupId, creationToken, dataProtection, encryptionKeySource, exportPolicy, isRestoring, kerberosEnabled, ldapEnabled, location, poolName, protocolTypes, resourceGroupName, securityStyle, serviceLevel, smbContinuouslyAvailable, smbEncryption, snapshotDirectoryVisible, snapshotId, subnetId, tags, throughputMibps, usageThreshold, volumeName, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public VolumeArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.creationToken = Objects.requireNonNull($.creationToken, "expected parameter 'creationToken' to be non-null");
+            $.kerberosEnabled = Codegen.booleanProp("kerberosEnabled").output().arg($.kerberosEnabled).def(false).getNullable();
+            $.ldapEnabled = Codegen.booleanProp("ldapEnabled").output().arg($.ldapEnabled).def(false).getNullable();
+            $.poolName = Objects.requireNonNull($.poolName, "expected parameter 'poolName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.securityStyle = Codegen.stringProp("securityStyle").left(SecurityStyle.class).output().arg($.securityStyle).def("unix").getNullable();
+            $.serviceLevel = Codegen.stringProp("serviceLevel").left(ServiceLevel.class).output().arg($.serviceLevel).def("Premium").getNullable();
+            $.smbContinuouslyAvailable = Codegen.booleanProp("smbContinuouslyAvailable").output().arg($.smbContinuouslyAvailable).def(false).getNullable();
+            $.smbEncryption = Codegen.booleanProp("smbEncryption").output().arg($.smbEncryption).def(false).getNullable();
+            $.snapshotDirectoryVisible = Codegen.booleanProp("snapshotDirectoryVisible").output().arg($.snapshotDirectoryVisible).def(true).getNullable();
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            $.throughputMibps = Codegen.doubleProp("throughputMibps").output().arg($.throughputMibps).def(0e+00).getNullable();
+            $.usageThreshold = Codegen.doubleProp("usageThreshold").output().arg($.usageThreshold).def(1.073741824e+11).require();
+            return $;
         }
     }
+
 }

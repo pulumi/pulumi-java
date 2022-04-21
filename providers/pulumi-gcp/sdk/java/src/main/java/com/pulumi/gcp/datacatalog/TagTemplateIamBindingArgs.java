@@ -5,11 +5,11 @@ package com.pulumi.gcp.datacatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,153 +18,140 @@ public final class TagTemplateIamBindingArgs extends com.pulumi.resources.Resour
     public static final TagTemplateIamBindingArgs Empty = new TagTemplateIamBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<TagTemplateIamBindingConditionArgs> condition;
+    private @Nullable Output<TagTemplateIamBindingConditionArgs> condition;
 
-    public Output<TagTemplateIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TagTemplateIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
     @Import(name="tagTemplate", required=true)
-      private final Output<String> tagTemplate;
+    private Output<String> tagTemplate;
 
     public Output<String> tagTemplate() {
         return this.tagTemplate;
     }
 
-    public TagTemplateIamBindingArgs(
-        @Nullable Output<TagTemplateIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> role,
-        Output<String> tagTemplate) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.region = region;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.tagTemplate = Objects.requireNonNull(tagTemplate, "expected parameter 'tagTemplate' to be non-null");
-    }
+    private TagTemplateIamBindingArgs() {}
 
-    private TagTemplateIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.role = Codegen.empty();
-        this.tagTemplate = Codegen.empty();
+    private TagTemplateIamBindingArgs(TagTemplateIamBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.project = $.project;
+        this.region = $.region;
+        this.role = $.role;
+        this.tagTemplate = $.tagTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TagTemplateIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> role;
-        private Output<String> tagTemplate;
+        private TagTemplateIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateIamBindingArgs();
         }
 
         public Builder(TagTemplateIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.role = defaults.role;
-    	      this.tagTemplate = defaults.tagTemplate;
+            $ = new TagTemplateIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TagTemplateIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TagTemplateIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TagTemplateIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder tagTemplate(Output<String> tagTemplate) {
-            this.tagTemplate = Objects.requireNonNull(tagTemplate);
+            $.tagTemplate = tagTemplate;
             return this;
         }
+
         public Builder tagTemplate(String tagTemplate) {
-            this.tagTemplate = Output.of(Objects.requireNonNull(tagTemplate));
-            return this;
-        }        public TagTemplateIamBindingArgs build() {
-            return new TagTemplateIamBindingArgs(condition, members, project, region, role, tagTemplate);
+            return tagTemplate(Output.of(tagTemplate));
+        }
+
+        public TagTemplateIamBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.tagTemplate = Objects.requireNonNull($.tagTemplate, "expected parameter 'tagTemplate' to be non-null");
+            return $;
         }
     }
+
 }

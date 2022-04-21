@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.RegexValidationArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.ValueValidationArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ParameterValidationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="regex")
-      private final @Nullable Output<RegexValidationArgs> regex;
+    private @Nullable Output<RegexValidationArgs> regex;
 
-    public Output<RegexValidationArgs> regex() {
-        return this.regex == null ? Codegen.empty() : this.regex;
+    public Optional<Output<RegexValidationArgs>> regex() {
+        return Optional.ofNullable(this.regex);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ParameterValidationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<ValueValidationArgs> values;
+    private @Nullable Output<ValueValidationArgs> values;
 
-    public Output<ValueValidationArgs> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<ValueValidationArgs>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ParameterValidationArgs(
-        @Nullable Output<RegexValidationArgs> regex,
-        @Nullable Output<ValueValidationArgs> values) {
-        this.regex = regex;
-        this.values = values;
-    }
+    private ParameterValidationArgs() {}
 
-    private ParameterValidationArgs() {
-        this.regex = Codegen.empty();
-        this.values = Codegen.empty();
+    private ParameterValidationArgs(ParameterValidationArgs $) {
+        this.regex = $.regex;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterValidationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RegexValidationArgs> regex;
-        private @Nullable Output<ValueValidationArgs> values;
+        private ParameterValidationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterValidationArgs();
         }
 
         public Builder(ParameterValidationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regex = defaults.regex;
-    	      this.values = defaults.values;
+            $ = new ParameterValidationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regex(@Nullable Output<RegexValidationArgs> regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
         }
-        public Builder regex(@Nullable RegexValidationArgs regex) {
-            this.regex = Codegen.ofNullable(regex);
-            return this;
+
+        public Builder regex(RegexValidationArgs regex) {
+            return regex(Output.of(regex));
         }
+
         public Builder values(@Nullable Output<ValueValidationArgs> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable ValueValidationArgs values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
-        }        public ParameterValidationArgs build() {
-            return new ParameterValidationArgs(regex, values);
+
+        public Builder values(ValueValidationArgs values) {
+            return values(Output.of(values));
+        }
+
+        public ParameterValidationArgs build() {
+            return $;
         }
     }
+
 }

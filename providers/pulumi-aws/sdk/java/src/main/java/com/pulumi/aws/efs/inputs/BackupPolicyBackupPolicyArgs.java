@@ -5,7 +5,6 @@ package com.pulumi.aws.efs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class BackupPolicyBackupPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
     }
 
-    public BackupPolicyBackupPolicyArgs(Output<String> status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BackupPolicyBackupPolicyArgs() {}
 
-    private BackupPolicyBackupPolicyArgs() {
-        this.status = Codegen.empty();
+    private BackupPolicyBackupPolicyArgs(BackupPolicyBackupPolicyArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPolicyBackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> status;
+        private BackupPolicyBackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPolicyBackupPolicyArgs();
         }
 
         public Builder(BackupPolicyBackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BackupPolicyBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public BackupPolicyBackupPolicyArgs build() {
-            return new BackupPolicyBackupPolicyArgs(status);
+            return status(Output.of(status));
+        }
+
+        public BackupPolicyBackupPolicyArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

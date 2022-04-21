@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="component")
-      private final @Nullable Output<String> component;
+    private @Nullable Output<String> component;
 
-    public Output<String> component() {
-        return this.component == null ? Codegen.empty() : this.component;
+    public Optional<Output<String>> component() {
+        return Optional.ofNullable(this.component);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
-    public EventSourceArgs(
-        @Nullable Output<String> component,
-        @Nullable Output<String> host) {
-        this.component = component;
-        this.host = host;
-    }
+    private EventSourceArgs() {}
 
-    private EventSourceArgs() {
-        this.component = Codegen.empty();
-        this.host = Codegen.empty();
+    private EventSourceArgs(EventSourceArgs $) {
+        this.component = $.component;
+        this.host = $.host;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> component;
-        private @Nullable Output<String> host;
+        private EventSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceArgs();
         }
 
         public Builder(EventSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.component = defaults.component;
-    	      this.host = defaults.host;
+            $ = new EventSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder component(@Nullable Output<String> component) {
-            this.component = component;
+            $.component = component;
             return this;
         }
-        public Builder component(@Nullable String component) {
-            this.component = Codegen.ofNullable(component);
-            return this;
+
+        public Builder component(String component) {
+            return component(Output.of(component));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
-        }        public EventSourceArgs build() {
-            return new EventSourceArgs(component, host);
+
+        public Builder host(String host) {
+            return host(Output.of(host));
+        }
+
+        public EventSourceArgs build() {
+            return $;
         }
     }
+
 }

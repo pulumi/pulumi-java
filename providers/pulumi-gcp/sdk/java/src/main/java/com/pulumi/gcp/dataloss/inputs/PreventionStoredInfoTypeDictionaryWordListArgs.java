@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,52 +20,53 @@ public final class PreventionStoredInfoTypeDictionaryWordListArgs extends com.pu
      * 
      */
     @Import(name="words", required=true)
-      private final Output<List<String>> words;
+    private Output<List<String>> words;
 
     public Output<List<String>> words() {
         return this.words;
     }
 
-    public PreventionStoredInfoTypeDictionaryWordListArgs(Output<List<String>> words) {
-        this.words = Objects.requireNonNull(words, "expected parameter 'words' to be non-null");
-    }
+    private PreventionStoredInfoTypeDictionaryWordListArgs() {}
 
-    private PreventionStoredInfoTypeDictionaryWordListArgs() {
-        this.words = Codegen.empty();
+    private PreventionStoredInfoTypeDictionaryWordListArgs(PreventionStoredInfoTypeDictionaryWordListArgs $) {
+        this.words = $.words;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionStoredInfoTypeDictionaryWordListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> words;
+        private PreventionStoredInfoTypeDictionaryWordListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionStoredInfoTypeDictionaryWordListArgs();
         }
 
         public Builder(PreventionStoredInfoTypeDictionaryWordListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.words = defaults.words;
+            $ = new PreventionStoredInfoTypeDictionaryWordListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder words(Output<List<String>> words) {
-            this.words = Objects.requireNonNull(words);
+            $.words = words;
             return this;
         }
+
         public Builder words(List<String> words) {
-            this.words = Output.of(Objects.requireNonNull(words));
-            return this;
+            return words(Output.of(words));
         }
+
         public Builder words(String... words) {
             return words(List.of(words));
-        }        public PreventionStoredInfoTypeDictionaryWordListArgs build() {
-            return new PreventionStoredInfoTypeDictionaryWordListArgs(words);
+        }
+
+        public PreventionStoredInfoTypeDictionaryWordListArgs build() {
+            $.words = Objects.requireNonNull($.words, "expected parameter 'words' to be non-null");
+            return $;
         }
     }
+
 }

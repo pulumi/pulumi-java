@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
      * 
      */
     @Import(name="partnerName", required=true)
-      private final Output<String> partnerName;
+    private Output<String> partnerName;
 
     public Output<String> partnerName() {
         return this.partnerName;
@@ -35,10 +35,10 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
      * 
      */
     @Import(name="productName")
-      private final @Nullable Output<String> productName;
+    private @Nullable Output<String> productName;
 
-    public Output<String> productName() {
-        return this.productName == null ? Codegen.empty() : this.productName;
+    public Optional<Output<String>> productName() {
+        return Optional.ofNullable(this.productName);
     }
 
     /**
@@ -46,76 +46,70 @@ public final class SecurityAssessmentMetadataPartnerDataArgs extends com.pulumi.
      * 
      */
     @Import(name="secret", required=true)
-      private final Output<String> secret;
+    private Output<String> secret;
 
     public Output<String> secret() {
         return this.secret;
     }
 
-    public SecurityAssessmentMetadataPartnerDataArgs(
-        Output<String> partnerName,
-        @Nullable Output<String> productName,
-        Output<String> secret) {
-        this.partnerName = Objects.requireNonNull(partnerName, "expected parameter 'partnerName' to be non-null");
-        this.productName = productName;
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private SecurityAssessmentMetadataPartnerDataArgs() {}
 
-    private SecurityAssessmentMetadataPartnerDataArgs() {
-        this.partnerName = Codegen.empty();
-        this.productName = Codegen.empty();
-        this.secret = Codegen.empty();
+    private SecurityAssessmentMetadataPartnerDataArgs(SecurityAssessmentMetadataPartnerDataArgs $) {
+        this.partnerName = $.partnerName;
+        this.productName = $.productName;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityAssessmentMetadataPartnerDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> partnerName;
-        private @Nullable Output<String> productName;
-        private Output<String> secret;
+        private SecurityAssessmentMetadataPartnerDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityAssessmentMetadataPartnerDataArgs();
         }
 
         public Builder(SecurityAssessmentMetadataPartnerDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerName = defaults.partnerName;
-    	      this.productName = defaults.productName;
-    	      this.secret = defaults.secret;
+            $ = new SecurityAssessmentMetadataPartnerDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerName(Output<String> partnerName) {
-            this.partnerName = Objects.requireNonNull(partnerName);
+            $.partnerName = partnerName;
             return this;
         }
+
         public Builder partnerName(String partnerName) {
-            this.partnerName = Output.of(Objects.requireNonNull(partnerName));
-            return this;
+            return partnerName(Output.of(partnerName));
         }
+
         public Builder productName(@Nullable Output<String> productName) {
-            this.productName = productName;
+            $.productName = productName;
             return this;
         }
-        public Builder productName(@Nullable String productName) {
-            this.productName = Codegen.ofNullable(productName);
-            return this;
+
+        public Builder productName(String productName) {
+            return productName(Output.of(productName));
         }
+
         public Builder secret(Output<String> secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Output.of(Objects.requireNonNull(secret));
-            return this;
-        }        public SecurityAssessmentMetadataPartnerDataArgs build() {
-            return new SecurityAssessmentMetadataPartnerDataArgs(partnerName, productName, secret);
+            return secret(Output.of(secret));
+        }
+
+        public SecurityAssessmentMetadataPartnerDataArgs build() {
+            $.partnerName = Objects.requireNonNull($.partnerName, "expected parameter 'partnerName' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

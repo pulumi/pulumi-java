@@ -13,45 +13,45 @@ public final class GetAnomalyDetectorArgs extends com.pulumi.resources.InvokeArg
     public static final GetAnomalyDetectorArgs Empty = new GetAnomalyDetectorArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetAnomalyDetectorArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetAnomalyDetectorArgs() {}
 
-    private GetAnomalyDetectorArgs() {
-        this.arn = null;
+    private GetAnomalyDetectorArgs(GetAnomalyDetectorArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAnomalyDetectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetAnomalyDetectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAnomalyDetectorArgs();
         }
 
         public Builder(GetAnomalyDetectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetAnomalyDetectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetAnomalyDetectorArgs build() {
-            return new GetAnomalyDetectorArgs(arn);
+        }
+
+        public GetAnomalyDetectorArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

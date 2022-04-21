@@ -6,10 +6,10 @@ package com.pulumi.azurenative.azurearcdata;
 import com.pulumi.azurenative.azurearcdata.inputs.SqlServerInstancePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<SqlServerInstancePropertiesArgs> properties;
+    private @Nullable Output<SqlServerInstancePropertiesArgs> properties;
 
-    public Output<SqlServerInstancePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<SqlServerInstancePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,10 +55,10 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sqlServerInstanceName")
-      private final @Nullable Output<String> sqlServerInstanceName;
+    private @Nullable Output<String> sqlServerInstanceName;
 
-    public Output<String> sqlServerInstanceName() {
-        return this.sqlServerInstanceName == null ? Codegen.empty() : this.sqlServerInstanceName;
+    public Optional<Output<String>> sqlServerInstanceName() {
+        return Optional.ofNullable(this.sqlServerInstanceName);
     }
 
     /**
@@ -66,102 +66,89 @@ public final class SqlServerInstanceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SqlServerInstanceArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<SqlServerInstancePropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> sqlServerInstanceName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.location = location;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlServerInstanceName = sqlServerInstanceName;
-        this.tags = tags;
-    }
+    private SqlServerInstanceArgs() {}
 
-    private SqlServerInstanceArgs() {
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sqlServerInstanceName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SqlServerInstanceArgs(SqlServerInstanceArgs $) {
+        this.location = $.location;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlServerInstanceName = $.sqlServerInstanceName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<SqlServerInstancePropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> sqlServerInstanceName;
-        private @Nullable Output<Map<String,String>> tags;
+        private SqlServerInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerInstanceArgs();
         }
 
         public Builder(SqlServerInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlServerInstanceName = defaults.sqlServerInstanceName;
-    	      this.tags = defaults.tags;
+            $ = new SqlServerInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<SqlServerInstancePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable SqlServerInstancePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(SqlServerInstancePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sqlServerInstanceName(@Nullable Output<String> sqlServerInstanceName) {
-            this.sqlServerInstanceName = sqlServerInstanceName;
+            $.sqlServerInstanceName = sqlServerInstanceName;
             return this;
         }
-        public Builder sqlServerInstanceName(@Nullable String sqlServerInstanceName) {
-            this.sqlServerInstanceName = Codegen.ofNullable(sqlServerInstanceName);
-            return this;
+
+        public Builder sqlServerInstanceName(String sqlServerInstanceName) {
+            return sqlServerInstanceName(Output.of(sqlServerInstanceName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public SqlServerInstanceArgs build() {
-            return new SqlServerInstanceArgs(location, properties, resourceGroupName, sqlServerInstanceName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public SqlServerInstanceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

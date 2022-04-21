@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs Empty = new WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs();
 
-    public WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs();
         }
         public WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs build() {
-            return new WebAclRuleStatementSqliMatchStatementFieldToMatchMethodArgs();
+            return $;
         }
     }
+
 }

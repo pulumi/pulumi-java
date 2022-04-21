@@ -6,7 +6,6 @@ package com.pulumi.aws.ecs.inputs;
 import com.pulumi.aws.ecs.inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAr
      * 
      */
     @Import(name="authorizationConfig", required=true)
-      private final Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
+    private Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
 
     public Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig() {
         return this.authorizationConfig;
@@ -31,7 +30,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAr
      * 
      */
     @Import(name="fileSystemId", required=true)
-      private final Output<String> fileSystemId;
+    private Output<String> fileSystemId;
 
     public Output<String> fileSystemId() {
         return this.fileSystemId;
@@ -42,76 +41,71 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAr
      * 
      */
     @Import(name="rootDirectory", required=true)
-      private final Output<String> rootDirectory;
+    private Output<String> rootDirectory;
 
     public Output<String> rootDirectory() {
         return this.rootDirectory;
     }
 
-    public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs(
-        Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig,
-        Output<String> fileSystemId,
-        Output<String> rootDirectory) {
-        this.authorizationConfig = Objects.requireNonNull(authorizationConfig, "expected parameter 'authorizationConfig' to be non-null");
-        this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
-        this.rootDirectory = Objects.requireNonNull(rootDirectory, "expected parameter 'rootDirectory' to be non-null");
-    }
+    private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs() {}
 
-    private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs() {
-        this.authorizationConfig = Codegen.empty();
-        this.fileSystemId = Codegen.empty();
-        this.rootDirectory = Codegen.empty();
+    private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs $) {
+        this.authorizationConfig = $.authorizationConfig;
+        this.fileSystemId = $.fileSystemId;
+        this.rootDirectory = $.rootDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig;
-        private Output<String> fileSystemId;
-        private Output<String> rootDirectory;
+        private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs();
         }
 
         public Builder(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationConfig = defaults.authorizationConfig;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.rootDirectory = defaults.rootDirectory;
+            $ = new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationConfig(Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs> authorizationConfig) {
-            this.authorizationConfig = Objects.requireNonNull(authorizationConfig);
+            $.authorizationConfig = authorizationConfig;
             return this;
         }
+
         public Builder authorizationConfig(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs authorizationConfig) {
-            this.authorizationConfig = Output.of(Objects.requireNonNull(authorizationConfig));
-            return this;
+            return authorizationConfig(Output.of(authorizationConfig));
         }
+
         public Builder fileSystemId(Output<String> fileSystemId) {
-            this.fileSystemId = Objects.requireNonNull(fileSystemId);
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
-            return this;
+            return fileSystemId(Output.of(fileSystemId));
         }
+
         public Builder rootDirectory(Output<String> rootDirectory) {
-            this.rootDirectory = Objects.requireNonNull(rootDirectory);
+            $.rootDirectory = rootDirectory;
             return this;
         }
+
         public Builder rootDirectory(String rootDirectory) {
-            this.rootDirectory = Output.of(Objects.requireNonNull(rootDirectory));
-            return this;
-        }        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs build() {
-            return new TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs(authorizationConfig, fileSystemId, rootDirectory);
+            return rootDirectory(Output.of(rootDirectory));
+        }
+
+        public TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs build() {
+            $.authorizationConfig = Objects.requireNonNull($.authorizationConfig, "expected parameter 'authorizationConfig' to be non-null");
+            $.fileSystemId = Objects.requireNonNull($.fileSystemId, "expected parameter 'fileSystemId' to be non-null");
+            $.rootDirectory = Objects.requireNonNull($.rootDirectory, "expected parameter 'rootDirectory' to be non-null");
+            return $;
         }
     }
+
 }

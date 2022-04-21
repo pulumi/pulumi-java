@@ -12,11 +12,11 @@ import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointMssPackageArgs;
 import com.pulumi.awsnative.mediapackage.inputs.OriginEndpointTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OriginEndpointArgs extends com.pulumi.resources.ResourceArgs 
     public static final OriginEndpointArgs Empty = new OriginEndpointArgs();
 
     @Import(name="authorization")
-      private final @Nullable Output<OriginEndpointAuthorizationArgs> authorization;
+    private @Nullable Output<OriginEndpointAuthorizationArgs> authorization;
 
-    public Output<OriginEndpointAuthorizationArgs> authorization() {
-        return this.authorization == null ? Codegen.empty() : this.authorization;
+    public Optional<Output<OriginEndpointAuthorizationArgs>> authorization() {
+        return Optional.ofNullable(this.authorization);
     }
 
     /**
@@ -36,24 +36,24 @@ public final class OriginEndpointArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="channelId", required=true)
-      private final Output<String> channelId;
+    private Output<String> channelId;
 
     public Output<String> channelId() {
         return this.channelId;
     }
 
     @Import(name="cmafPackage")
-      private final @Nullable Output<OriginEndpointCmafPackageArgs> cmafPackage;
+    private @Nullable Output<OriginEndpointCmafPackageArgs> cmafPackage;
 
-    public Output<OriginEndpointCmafPackageArgs> cmafPackage() {
-        return this.cmafPackage == null ? Codegen.empty() : this.cmafPackage;
+    public Optional<Output<OriginEndpointCmafPackageArgs>> cmafPackage() {
+        return Optional.ofNullable(this.cmafPackage);
     }
 
     @Import(name="dashPackage")
-      private final @Nullable Output<OriginEndpointDashPackageArgs> dashPackage;
+    private @Nullable Output<OriginEndpointDashPackageArgs> dashPackage;
 
-    public Output<OriginEndpointDashPackageArgs> dashPackage() {
-        return this.dashPackage == null ? Codegen.empty() : this.dashPackage;
+    public Optional<Output<OriginEndpointDashPackageArgs>> dashPackage() {
+        return Optional.ofNullable(this.dashPackage);
     }
 
     /**
@@ -61,17 +61,17 @@ public final class OriginEndpointArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="hlsPackage")
-      private final @Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage;
+    private @Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage;
 
-    public Output<OriginEndpointHlsPackageArgs> hlsPackage() {
-        return this.hlsPackage == null ? Codegen.empty() : this.hlsPackage;
+    public Optional<Output<OriginEndpointHlsPackageArgs>> hlsPackage() {
+        return Optional.ofNullable(this.hlsPackage);
     }
 
     /**
@@ -79,17 +79,17 @@ public final class OriginEndpointArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="manifestName")
-      private final @Nullable Output<String> manifestName;
+    private @Nullable Output<String> manifestName;
 
-    public Output<String> manifestName() {
-        return this.manifestName == null ? Codegen.empty() : this.manifestName;
+    public Optional<Output<String>> manifestName() {
+        return Optional.ofNullable(this.manifestName);
     }
 
     @Import(name="mssPackage")
-      private final @Nullable Output<OriginEndpointMssPackageArgs> mssPackage;
+    private @Nullable Output<OriginEndpointMssPackageArgs> mssPackage;
 
-    public Output<OriginEndpointMssPackageArgs> mssPackage() {
-        return this.mssPackage == null ? Codegen.empty() : this.mssPackage;
+    public Optional<Output<OriginEndpointMssPackageArgs>> mssPackage() {
+        return Optional.ofNullable(this.mssPackage);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class OriginEndpointArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="origination")
-      private final @Nullable Output<OriginEndpointOrigination> origination;
+    private @Nullable Output<OriginEndpointOrigination> origination;
 
-    public Output<OriginEndpointOrigination> origination() {
-        return this.origination == null ? Codegen.empty() : this.origination;
+    public Optional<Output<OriginEndpointOrigination>> origination() {
+        return Optional.ofNullable(this.origination);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class OriginEndpointArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="startoverWindowSeconds")
-      private final @Nullable Output<Integer> startoverWindowSeconds;
+    private @Nullable Output<Integer> startoverWindowSeconds;
 
-    public Output<Integer> startoverWindowSeconds() {
-        return this.startoverWindowSeconds == null ? Codegen.empty() : this.startoverWindowSeconds;
+    public Optional<Output<Integer>> startoverWindowSeconds() {
+        return Optional.ofNullable(this.startoverWindowSeconds);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class OriginEndpointArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<OriginEndpointTagArgs>> tags;
+    private @Nullable Output<List<OriginEndpointTagArgs>> tags;
 
-    public Output<List<OriginEndpointTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<OriginEndpointTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class OriginEndpointArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="timeDelaySeconds")
-      private final @Nullable Output<Integer> timeDelaySeconds;
+    private @Nullable Output<Integer> timeDelaySeconds;
 
-    public Output<Integer> timeDelaySeconds() {
-        return this.timeDelaySeconds == null ? Codegen.empty() : this.timeDelaySeconds;
+    public Optional<Output<Integer>> timeDelaySeconds() {
+        return Optional.ofNullable(this.timeDelaySeconds);
     }
 
     /**
@@ -141,212 +141,177 @@ public final class OriginEndpointArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="whitelist")
-      private final @Nullable Output<List<String>> whitelist;
+    private @Nullable Output<List<String>> whitelist;
 
-    public Output<List<String>> whitelist() {
-        return this.whitelist == null ? Codegen.empty() : this.whitelist;
+    public Optional<Output<List<String>>> whitelist() {
+        return Optional.ofNullable(this.whitelist);
     }
 
-    public OriginEndpointArgs(
-        @Nullable Output<OriginEndpointAuthorizationArgs> authorization,
-        Output<String> channelId,
-        @Nullable Output<OriginEndpointCmafPackageArgs> cmafPackage,
-        @Nullable Output<OriginEndpointDashPackageArgs> dashPackage,
-        @Nullable Output<String> description,
-        @Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage,
-        @Nullable Output<String> manifestName,
-        @Nullable Output<OriginEndpointMssPackageArgs> mssPackage,
-        @Nullable Output<OriginEndpointOrigination> origination,
-        @Nullable Output<Integer> startoverWindowSeconds,
-        @Nullable Output<List<OriginEndpointTagArgs>> tags,
-        @Nullable Output<Integer> timeDelaySeconds,
-        @Nullable Output<List<String>> whitelist) {
-        this.authorization = authorization;
-        this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
-        this.cmafPackage = cmafPackage;
-        this.dashPackage = dashPackage;
-        this.description = description;
-        this.hlsPackage = hlsPackage;
-        this.manifestName = manifestName;
-        this.mssPackage = mssPackage;
-        this.origination = origination;
-        this.startoverWindowSeconds = startoverWindowSeconds;
-        this.tags = tags;
-        this.timeDelaySeconds = timeDelaySeconds;
-        this.whitelist = whitelist;
-    }
+    private OriginEndpointArgs() {}
 
-    private OriginEndpointArgs() {
-        this.authorization = Codegen.empty();
-        this.channelId = Codegen.empty();
-        this.cmafPackage = Codegen.empty();
-        this.dashPackage = Codegen.empty();
-        this.description = Codegen.empty();
-        this.hlsPackage = Codegen.empty();
-        this.manifestName = Codegen.empty();
-        this.mssPackage = Codegen.empty();
-        this.origination = Codegen.empty();
-        this.startoverWindowSeconds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeDelaySeconds = Codegen.empty();
-        this.whitelist = Codegen.empty();
+    private OriginEndpointArgs(OriginEndpointArgs $) {
+        this.authorization = $.authorization;
+        this.channelId = $.channelId;
+        this.cmafPackage = $.cmafPackage;
+        this.dashPackage = $.dashPackage;
+        this.description = $.description;
+        this.hlsPackage = $.hlsPackage;
+        this.manifestName = $.manifestName;
+        this.mssPackage = $.mssPackage;
+        this.origination = $.origination;
+        this.startoverWindowSeconds = $.startoverWindowSeconds;
+        this.tags = $.tags;
+        this.timeDelaySeconds = $.timeDelaySeconds;
+        this.whitelist = $.whitelist;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OriginEndpointAuthorizationArgs> authorization;
-        private Output<String> channelId;
-        private @Nullable Output<OriginEndpointCmafPackageArgs> cmafPackage;
-        private @Nullable Output<OriginEndpointDashPackageArgs> dashPackage;
-        private @Nullable Output<String> description;
-        private @Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage;
-        private @Nullable Output<String> manifestName;
-        private @Nullable Output<OriginEndpointMssPackageArgs> mssPackage;
-        private @Nullable Output<OriginEndpointOrigination> origination;
-        private @Nullable Output<Integer> startoverWindowSeconds;
-        private @Nullable Output<List<OriginEndpointTagArgs>> tags;
-        private @Nullable Output<Integer> timeDelaySeconds;
-        private @Nullable Output<List<String>> whitelist;
+        private OriginEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointArgs();
         }
 
         public Builder(OriginEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorization = defaults.authorization;
-    	      this.channelId = defaults.channelId;
-    	      this.cmafPackage = defaults.cmafPackage;
-    	      this.dashPackage = defaults.dashPackage;
-    	      this.description = defaults.description;
-    	      this.hlsPackage = defaults.hlsPackage;
-    	      this.manifestName = defaults.manifestName;
-    	      this.mssPackage = defaults.mssPackage;
-    	      this.origination = defaults.origination;
-    	      this.startoverWindowSeconds = defaults.startoverWindowSeconds;
-    	      this.tags = defaults.tags;
-    	      this.timeDelaySeconds = defaults.timeDelaySeconds;
-    	      this.whitelist = defaults.whitelist;
+            $ = new OriginEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorization(@Nullable Output<OriginEndpointAuthorizationArgs> authorization) {
-            this.authorization = authorization;
+            $.authorization = authorization;
             return this;
         }
-        public Builder authorization(@Nullable OriginEndpointAuthorizationArgs authorization) {
-            this.authorization = Codegen.ofNullable(authorization);
-            return this;
+
+        public Builder authorization(OriginEndpointAuthorizationArgs authorization) {
+            return authorization(Output.of(authorization));
         }
+
         public Builder channelId(Output<String> channelId) {
-            this.channelId = Objects.requireNonNull(channelId);
+            $.channelId = channelId;
             return this;
         }
+
         public Builder channelId(String channelId) {
-            this.channelId = Output.of(Objects.requireNonNull(channelId));
-            return this;
+            return channelId(Output.of(channelId));
         }
+
         public Builder cmafPackage(@Nullable Output<OriginEndpointCmafPackageArgs> cmafPackage) {
-            this.cmafPackage = cmafPackage;
+            $.cmafPackage = cmafPackage;
             return this;
         }
-        public Builder cmafPackage(@Nullable OriginEndpointCmafPackageArgs cmafPackage) {
-            this.cmafPackage = Codegen.ofNullable(cmafPackage);
-            return this;
+
+        public Builder cmafPackage(OriginEndpointCmafPackageArgs cmafPackage) {
+            return cmafPackage(Output.of(cmafPackage));
         }
+
         public Builder dashPackage(@Nullable Output<OriginEndpointDashPackageArgs> dashPackage) {
-            this.dashPackage = dashPackage;
+            $.dashPackage = dashPackage;
             return this;
         }
-        public Builder dashPackage(@Nullable OriginEndpointDashPackageArgs dashPackage) {
-            this.dashPackage = Codegen.ofNullable(dashPackage);
-            return this;
+
+        public Builder dashPackage(OriginEndpointDashPackageArgs dashPackage) {
+            return dashPackage(Output.of(dashPackage));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder hlsPackage(@Nullable Output<OriginEndpointHlsPackageArgs> hlsPackage) {
-            this.hlsPackage = hlsPackage;
+            $.hlsPackage = hlsPackage;
             return this;
         }
-        public Builder hlsPackage(@Nullable OriginEndpointHlsPackageArgs hlsPackage) {
-            this.hlsPackage = Codegen.ofNullable(hlsPackage);
-            return this;
+
+        public Builder hlsPackage(OriginEndpointHlsPackageArgs hlsPackage) {
+            return hlsPackage(Output.of(hlsPackage));
         }
+
         public Builder manifestName(@Nullable Output<String> manifestName) {
-            this.manifestName = manifestName;
+            $.manifestName = manifestName;
             return this;
         }
-        public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = Codegen.ofNullable(manifestName);
-            return this;
+
+        public Builder manifestName(String manifestName) {
+            return manifestName(Output.of(manifestName));
         }
+
         public Builder mssPackage(@Nullable Output<OriginEndpointMssPackageArgs> mssPackage) {
-            this.mssPackage = mssPackage;
+            $.mssPackage = mssPackage;
             return this;
         }
-        public Builder mssPackage(@Nullable OriginEndpointMssPackageArgs mssPackage) {
-            this.mssPackage = Codegen.ofNullable(mssPackage);
-            return this;
+
+        public Builder mssPackage(OriginEndpointMssPackageArgs mssPackage) {
+            return mssPackage(Output.of(mssPackage));
         }
+
         public Builder origination(@Nullable Output<OriginEndpointOrigination> origination) {
-            this.origination = origination;
+            $.origination = origination;
             return this;
         }
-        public Builder origination(@Nullable OriginEndpointOrigination origination) {
-            this.origination = Codegen.ofNullable(origination);
-            return this;
+
+        public Builder origination(OriginEndpointOrigination origination) {
+            return origination(Output.of(origination));
         }
+
         public Builder startoverWindowSeconds(@Nullable Output<Integer> startoverWindowSeconds) {
-            this.startoverWindowSeconds = startoverWindowSeconds;
+            $.startoverWindowSeconds = startoverWindowSeconds;
             return this;
         }
-        public Builder startoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
-            this.startoverWindowSeconds = Codegen.ofNullable(startoverWindowSeconds);
-            return this;
+
+        public Builder startoverWindowSeconds(Integer startoverWindowSeconds) {
+            return startoverWindowSeconds(Output.of(startoverWindowSeconds));
         }
+
         public Builder tags(@Nullable Output<List<OriginEndpointTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<OriginEndpointTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<OriginEndpointTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(OriginEndpointTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder timeDelaySeconds(@Nullable Output<Integer> timeDelaySeconds) {
-            this.timeDelaySeconds = timeDelaySeconds;
+            $.timeDelaySeconds = timeDelaySeconds;
             return this;
         }
-        public Builder timeDelaySeconds(@Nullable Integer timeDelaySeconds) {
-            this.timeDelaySeconds = Codegen.ofNullable(timeDelaySeconds);
-            return this;
+
+        public Builder timeDelaySeconds(Integer timeDelaySeconds) {
+            return timeDelaySeconds(Output.of(timeDelaySeconds));
         }
+
         public Builder whitelist(@Nullable Output<List<String>> whitelist) {
-            this.whitelist = whitelist;
+            $.whitelist = whitelist;
             return this;
         }
-        public Builder whitelist(@Nullable List<String> whitelist) {
-            this.whitelist = Codegen.ofNullable(whitelist);
-            return this;
+
+        public Builder whitelist(List<String> whitelist) {
+            return whitelist(Output.of(whitelist));
         }
+
         public Builder whitelist(String... whitelist) {
             return whitelist(List.of(whitelist));
-        }        public OriginEndpointArgs build() {
-            return new OriginEndpointArgs(authorization, channelId, cmafPackage, dashPackage, description, hlsPackage, manifestName, mssPackage, origination, startoverWindowSeconds, tags, timeDelaySeconds, whitelist);
+        }
+
+        public OriginEndpointArgs build() {
+            $.channelId = Objects.requireNonNull($.channelId, "expected parameter 'channelId' to be non-null");
+            return $;
         }
     }
+
 }

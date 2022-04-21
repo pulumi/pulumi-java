@@ -15,78 +15,72 @@ public final class DataSourceToIndexFieldMapping extends com.pulumi.resources.In
     public static final DataSourceToIndexFieldMapping Empty = new DataSourceToIndexFieldMapping();
 
     @Import(name="dataSourceFieldName", required=true)
-      private final String dataSourceFieldName;
+    private String dataSourceFieldName;
 
     public String dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @Import(name="dateFieldFormat")
-      private final @Nullable String dateFieldFormat;
+    private @Nullable String dateFieldFormat;
 
     public Optional<String> dateFieldFormat() {
-        return this.dateFieldFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFieldFormat);
+        return Optional.ofNullable(this.dateFieldFormat);
     }
 
     @Import(name="indexFieldName", required=true)
-      private final String indexFieldName;
+    private String indexFieldName;
 
     public String indexFieldName() {
         return this.indexFieldName;
     }
 
-    public DataSourceToIndexFieldMapping(
-        String dataSourceFieldName,
-        @Nullable String dateFieldFormat,
-        String indexFieldName) {
-        this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName, "expected parameter 'dataSourceFieldName' to be non-null");
-        this.dateFieldFormat = dateFieldFormat;
-        this.indexFieldName = Objects.requireNonNull(indexFieldName, "expected parameter 'indexFieldName' to be non-null");
-    }
+    private DataSourceToIndexFieldMapping() {}
 
-    private DataSourceToIndexFieldMapping() {
-        this.dataSourceFieldName = null;
-        this.dateFieldFormat = null;
-        this.indexFieldName = null;
+    private DataSourceToIndexFieldMapping(DataSourceToIndexFieldMapping $) {
+        this.dataSourceFieldName = $.dataSourceFieldName;
+        this.dateFieldFormat = $.dateFieldFormat;
+        this.indexFieldName = $.indexFieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceToIndexFieldMapping defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataSourceFieldName;
-        private @Nullable String dateFieldFormat;
-        private String indexFieldName;
+        private DataSourceToIndexFieldMapping $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceToIndexFieldMapping();
         }
 
         public Builder(DataSourceToIndexFieldMapping defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceFieldName = defaults.dataSourceFieldName;
-    	      this.dateFieldFormat = defaults.dateFieldFormat;
-    	      this.indexFieldName = defaults.indexFieldName;
+            $ = new DataSourceToIndexFieldMapping(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceFieldName(String dataSourceFieldName) {
-            this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
+            $.dataSourceFieldName = dataSourceFieldName;
             return this;
         }
+
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
-            this.dateFieldFormat = dateFieldFormat;
+            $.dateFieldFormat = dateFieldFormat;
             return this;
         }
+
         public Builder indexFieldName(String indexFieldName) {
-            this.indexFieldName = Objects.requireNonNull(indexFieldName);
+            $.indexFieldName = indexFieldName;
             return this;
-        }        public DataSourceToIndexFieldMapping build() {
-            return new DataSourceToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
+        }
+
+        public DataSourceToIndexFieldMapping build() {
+            $.dataSourceFieldName = Objects.requireNonNull($.dataSourceFieldName, "expected parameter 'dataSourceFieldName' to be non-null");
+            $.indexFieldName = Objects.requireNonNull($.indexFieldName, "expected parameter 'indexFieldName' to be non-null");
+            return $;
         }
     }
+
 }

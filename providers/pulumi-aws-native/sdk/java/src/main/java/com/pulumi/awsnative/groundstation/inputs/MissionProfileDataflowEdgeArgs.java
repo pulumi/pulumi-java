@@ -5,9 +5,9 @@ package com.pulumi.awsnative.groundstation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class MissionProfileDataflowEdgeArgs extends com.pulumi.resources.R
     public static final MissionProfileDataflowEdgeArgs Empty = new MissionProfileDataflowEdgeArgs();
 
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public MissionProfileDataflowEdgeArgs(
-        @Nullable Output<String> destination,
-        @Nullable Output<String> source) {
-        this.destination = destination;
-        this.source = source;
-    }
+    private MissionProfileDataflowEdgeArgs() {}
 
-    private MissionProfileDataflowEdgeArgs() {
-        this.destination = Codegen.empty();
-        this.source = Codegen.empty();
+    private MissionProfileDataflowEdgeArgs(MissionProfileDataflowEdgeArgs $) {
+        this.destination = $.destination;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MissionProfileDataflowEdgeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destination;
-        private @Nullable Output<String> source;
+        private MissionProfileDataflowEdgeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MissionProfileDataflowEdgeArgs();
         }
 
         public Builder(MissionProfileDataflowEdgeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.source = defaults.source;
+            $ = new MissionProfileDataflowEdgeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public MissionProfileDataflowEdgeArgs build() {
-            return new MissionProfileDataflowEdgeArgs(destination, source);
+
+        public Builder source(String source) {
+            return source(Output.of(source));
+        }
+
+        public MissionProfileDataflowEdgeArgs build() {
+            return $;
         }
     }
+
 }

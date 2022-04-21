@@ -17,7 +17,7 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWebhookArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="webhookName", required=true)
-      private final String webhookName;
+    private String webhookName;
 
     public String webhookName() {
         return this.webhookName;
     }
 
-    public GetWebhookArgs(
-        String automationAccountName,
-        String resourceGroupName,
-        String webhookName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.webhookName = Objects.requireNonNull(webhookName, "expected parameter 'webhookName' to be non-null");
-    }
+    private GetWebhookArgs() {}
 
-    private GetWebhookArgs() {
-        this.automationAccountName = null;
-        this.resourceGroupName = null;
-        this.webhookName = null;
+    private GetWebhookArgs(GetWebhookArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.webhookName = $.webhookName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebhookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String resourceGroupName;
-        private String webhookName;
+        private GetWebhookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebhookArgs();
         }
 
         public Builder(GetWebhookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.webhookName = defaults.webhookName;
+            $ = new GetWebhookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder webhookName(String webhookName) {
-            this.webhookName = Objects.requireNonNull(webhookName);
+            $.webhookName = webhookName;
             return this;
-        }        public GetWebhookArgs build() {
-            return new GetWebhookArgs(automationAccountName, resourceGroupName, webhookName);
+        }
+
+        public GetWebhookArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.webhookName = Objects.requireNonNull($.webhookName, "expected parameter 'webhookName' to be non-null");
+            return $;
         }
     }
+
 }

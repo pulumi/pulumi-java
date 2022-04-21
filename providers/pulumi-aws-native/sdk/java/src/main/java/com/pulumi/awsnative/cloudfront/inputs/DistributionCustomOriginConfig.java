@@ -17,129 +17,114 @@ public final class DistributionCustomOriginConfig extends com.pulumi.resources.I
     public static final DistributionCustomOriginConfig Empty = new DistributionCustomOriginConfig();
 
     @Import(name="hTTPPort")
-      private final @Nullable Integer hTTPPort;
+    private @Nullable Integer hTTPPort;
 
     public Optional<Integer> hTTPPort() {
-        return this.hTTPPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPPort);
+        return Optional.ofNullable(this.hTTPPort);
     }
 
     @Import(name="hTTPSPort")
-      private final @Nullable Integer hTTPSPort;
+    private @Nullable Integer hTTPSPort;
 
     public Optional<Integer> hTTPSPort() {
-        return this.hTTPSPort == null ? Optional.empty() : Optional.ofNullable(this.hTTPSPort);
+        return Optional.ofNullable(this.hTTPSPort);
     }
 
     @Import(name="originKeepaliveTimeout")
-      private final @Nullable Integer originKeepaliveTimeout;
+    private @Nullable Integer originKeepaliveTimeout;
 
     public Optional<Integer> originKeepaliveTimeout() {
-        return this.originKeepaliveTimeout == null ? Optional.empty() : Optional.ofNullable(this.originKeepaliveTimeout);
+        return Optional.ofNullable(this.originKeepaliveTimeout);
     }
 
     @Import(name="originProtocolPolicy", required=true)
-      private final String originProtocolPolicy;
+    private String originProtocolPolicy;
 
     public String originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
     @Import(name="originReadTimeout")
-      private final @Nullable Integer originReadTimeout;
+    private @Nullable Integer originReadTimeout;
 
     public Optional<Integer> originReadTimeout() {
-        return this.originReadTimeout == null ? Optional.empty() : Optional.ofNullable(this.originReadTimeout);
+        return Optional.ofNullable(this.originReadTimeout);
     }
 
     @Import(name="originSSLProtocols")
-      private final @Nullable List<String> originSSLProtocols;
+    private @Nullable List<String> originSSLProtocols;
 
-    public List<String> originSSLProtocols() {
-        return this.originSSLProtocols == null ? List.of() : this.originSSLProtocols;
+    public Optional<List<String>> originSSLProtocols() {
+        return Optional.ofNullable(this.originSSLProtocols);
     }
 
-    public DistributionCustomOriginConfig(
-        @Nullable Integer hTTPPort,
-        @Nullable Integer hTTPSPort,
-        @Nullable Integer originKeepaliveTimeout,
-        String originProtocolPolicy,
-        @Nullable Integer originReadTimeout,
-        @Nullable List<String> originSSLProtocols) {
-        this.hTTPPort = hTTPPort;
-        this.hTTPSPort = hTTPSPort;
-        this.originKeepaliveTimeout = originKeepaliveTimeout;
-        this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy, "expected parameter 'originProtocolPolicy' to be non-null");
-        this.originReadTimeout = originReadTimeout;
-        this.originSSLProtocols = originSSLProtocols;
-    }
+    private DistributionCustomOriginConfig() {}
 
-    private DistributionCustomOriginConfig() {
-        this.hTTPPort = null;
-        this.hTTPSPort = null;
-        this.originKeepaliveTimeout = null;
-        this.originProtocolPolicy = null;
-        this.originReadTimeout = null;
-        this.originSSLProtocols = List.of();
+    private DistributionCustomOriginConfig(DistributionCustomOriginConfig $) {
+        this.hTTPPort = $.hTTPPort;
+        this.hTTPSPort = $.hTTPSPort;
+        this.originKeepaliveTimeout = $.originKeepaliveTimeout;
+        this.originProtocolPolicy = $.originProtocolPolicy;
+        this.originReadTimeout = $.originReadTimeout;
+        this.originSSLProtocols = $.originSSLProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionCustomOriginConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer hTTPPort;
-        private @Nullable Integer hTTPSPort;
-        private @Nullable Integer originKeepaliveTimeout;
-        private String originProtocolPolicy;
-        private @Nullable Integer originReadTimeout;
-        private @Nullable List<String> originSSLProtocols;
+        private DistributionCustomOriginConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionCustomOriginConfig();
         }
 
         public Builder(DistributionCustomOriginConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hTTPPort = defaults.hTTPPort;
-    	      this.hTTPSPort = defaults.hTTPSPort;
-    	      this.originKeepaliveTimeout = defaults.originKeepaliveTimeout;
-    	      this.originProtocolPolicy = defaults.originProtocolPolicy;
-    	      this.originReadTimeout = defaults.originReadTimeout;
-    	      this.originSSLProtocols = defaults.originSSLProtocols;
+            $ = new DistributionCustomOriginConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder hTTPPort(@Nullable Integer hTTPPort) {
-            this.hTTPPort = hTTPPort;
+            $.hTTPPort = hTTPPort;
             return this;
         }
+
         public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
-            this.hTTPSPort = hTTPSPort;
+            $.hTTPSPort = hTTPSPort;
             return this;
         }
+
         public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
-            this.originKeepaliveTimeout = originKeepaliveTimeout;
+            $.originKeepaliveTimeout = originKeepaliveTimeout;
             return this;
         }
+
         public Builder originProtocolPolicy(String originProtocolPolicy) {
-            this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
+            $.originProtocolPolicy = originProtocolPolicy;
             return this;
         }
+
         public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
-            this.originReadTimeout = originReadTimeout;
+            $.originReadTimeout = originReadTimeout;
             return this;
         }
+
         public Builder originSSLProtocols(@Nullable List<String> originSSLProtocols) {
-            this.originSSLProtocols = originSSLProtocols;
+            $.originSSLProtocols = originSSLProtocols;
             return this;
         }
+
         public Builder originSSLProtocols(String... originSSLProtocols) {
             return originSSLProtocols(List.of(originSSLProtocols));
-        }        public DistributionCustomOriginConfig build() {
-            return new DistributionCustomOriginConfig(hTTPPort, hTTPSPort, originKeepaliveTimeout, originProtocolPolicy, originReadTimeout, originSSLProtocols);
+        }
+
+        public DistributionCustomOriginConfig build() {
+            $.originProtocolPolicy = Objects.requireNonNull($.originProtocolPolicy, "expected parameter 'originProtocolPolicy' to be non-null");
+            return $;
         }
     }
+
 }

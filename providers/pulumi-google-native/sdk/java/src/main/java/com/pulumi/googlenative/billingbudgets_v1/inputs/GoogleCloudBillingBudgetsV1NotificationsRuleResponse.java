@@ -23,7 +23,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse extends 
      * 
      */
     @Import(name="disableDefaultIamRecipients", required=true)
-      private final Boolean disableDefaultIamRecipients;
+    private Boolean disableDefaultIamRecipients;
 
     public Boolean disableDefaultIamRecipients() {
         return this.disableDefaultIamRecipients;
@@ -34,7 +34,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse extends 
      * 
      */
     @Import(name="monitoringNotificationChannels", required=true)
-      private final List<String> monitoringNotificationChannels;
+    private List<String> monitoringNotificationChannels;
 
     public List<String> monitoringNotificationChannels() {
         return this.monitoringNotificationChannels;
@@ -45,7 +45,7 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse extends 
      * 
      */
     @Import(name="pubsubTopic", required=true)
-      private final String pubsubTopic;
+    private String pubsubTopic;
 
     public String pubsubTopic() {
         return this.pubsubTopic;
@@ -56,76 +56,70 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse extends 
      * 
      */
     @Import(name="schemaVersion", required=true)
-      private final String schemaVersion;
+    private String schemaVersion;
 
     public String schemaVersion() {
         return this.schemaVersion;
     }
 
-    public GoogleCloudBillingBudgetsV1NotificationsRuleResponse(
-        Boolean disableDefaultIamRecipients,
-        List<String> monitoringNotificationChannels,
-        String pubsubTopic,
-        String schemaVersion) {
-        this.disableDefaultIamRecipients = Objects.requireNonNull(disableDefaultIamRecipients, "expected parameter 'disableDefaultIamRecipients' to be non-null");
-        this.monitoringNotificationChannels = Objects.requireNonNull(monitoringNotificationChannels, "expected parameter 'monitoringNotificationChannels' to be non-null");
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
-        this.schemaVersion = Objects.requireNonNull(schemaVersion, "expected parameter 'schemaVersion' to be non-null");
-    }
+    private GoogleCloudBillingBudgetsV1NotificationsRuleResponse() {}
 
-    private GoogleCloudBillingBudgetsV1NotificationsRuleResponse() {
-        this.disableDefaultIamRecipients = null;
-        this.monitoringNotificationChannels = List.of();
-        this.pubsubTopic = null;
-        this.schemaVersion = null;
+    private GoogleCloudBillingBudgetsV1NotificationsRuleResponse(GoogleCloudBillingBudgetsV1NotificationsRuleResponse $) {
+        this.disableDefaultIamRecipients = $.disableDefaultIamRecipients;
+        this.monitoringNotificationChannels = $.monitoringNotificationChannels;
+        this.pubsubTopic = $.pubsubTopic;
+        this.schemaVersion = $.schemaVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1NotificationsRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disableDefaultIamRecipients;
-        private List<String> monitoringNotificationChannels;
-        private String pubsubTopic;
-        private String schemaVersion;
+        private GoogleCloudBillingBudgetsV1NotificationsRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1NotificationsRuleResponse();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1NotificationsRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableDefaultIamRecipients = defaults.disableDefaultIamRecipients;
-    	      this.monitoringNotificationChannels = defaults.monitoringNotificationChannels;
-    	      this.pubsubTopic = defaults.pubsubTopic;
-    	      this.schemaVersion = defaults.schemaVersion;
+            $ = new GoogleCloudBillingBudgetsV1NotificationsRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableDefaultIamRecipients(Boolean disableDefaultIamRecipients) {
-            this.disableDefaultIamRecipients = Objects.requireNonNull(disableDefaultIamRecipients);
+            $.disableDefaultIamRecipients = disableDefaultIamRecipients;
             return this;
         }
+
         public Builder monitoringNotificationChannels(List<String> monitoringNotificationChannels) {
-            this.monitoringNotificationChannels = Objects.requireNonNull(monitoringNotificationChannels);
+            $.monitoringNotificationChannels = monitoringNotificationChannels;
             return this;
         }
+
         public Builder monitoringNotificationChannels(String... monitoringNotificationChannels) {
             return monitoringNotificationChannels(List.of(monitoringNotificationChannels));
         }
+
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
+
         public Builder schemaVersion(String schemaVersion) {
-            this.schemaVersion = Objects.requireNonNull(schemaVersion);
+            $.schemaVersion = schemaVersion;
             return this;
-        }        public GoogleCloudBillingBudgetsV1NotificationsRuleResponse build() {
-            return new GoogleCloudBillingBudgetsV1NotificationsRuleResponse(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
+        }
+
+        public GoogleCloudBillingBudgetsV1NotificationsRuleResponse build() {
+            $.disableDefaultIamRecipients = Objects.requireNonNull($.disableDefaultIamRecipients, "expected parameter 'disableDefaultIamRecipients' to be non-null");
+            $.monitoringNotificationChannels = Objects.requireNonNull($.monitoringNotificationChannels, "expected parameter 'monitoringNotificationChannels' to be non-null");
+            $.pubsubTopic = Objects.requireNonNull($.pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
+            $.schemaVersion = Objects.requireNonNull($.schemaVersion, "expected parameter 'schemaVersion' to be non-null");
+            return $;
         }
     }
+
 }

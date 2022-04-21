@@ -25,10 +25,10 @@ public final class VideoEncoderH264Response extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="bitrateKbps")
-      private final @Nullable String bitrateKbps;
+    private @Nullable String bitrateKbps;
 
     public Optional<String> bitrateKbps() {
-        return this.bitrateKbps == null ? Optional.empty() : Optional.ofNullable(this.bitrateKbps);
+        return Optional.ofNullable(this.bitrateKbps);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VideoEncoderH264Response extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="frameRate")
-      private final @Nullable String frameRate;
+    private @Nullable String frameRate;
 
     public Optional<String> frameRate() {
-        return this.frameRate == null ? Optional.empty() : Optional.ofNullable(this.frameRate);
+        return Optional.ofNullable(this.frameRate);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VideoEncoderH264Response extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="scale")
-      private final @Nullable VideoScaleResponse scale;
+    private @Nullable VideoScaleResponse scale;
 
     public Optional<VideoScaleResponse> scale() {
-        return this.scale == null ? Optional.empty() : Optional.ofNullable(this.scale);
+        return Optional.ofNullable(this.scale);
     }
 
     /**
@@ -59,73 +59,63 @@ public final class VideoEncoderH264Response extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public VideoEncoderH264Response(
-        @Nullable String bitrateKbps,
-        @Nullable String frameRate,
-        @Nullable VideoScaleResponse scale,
-        String type) {
-        this.bitrateKbps = bitrateKbps;
-        this.frameRate = frameRate;
-        this.scale = scale;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private VideoEncoderH264Response() {}
 
-    private VideoEncoderH264Response() {
-        this.bitrateKbps = null;
-        this.frameRate = null;
-        this.scale = null;
-        this.type = null;
+    private VideoEncoderH264Response(VideoEncoderH264Response $) {
+        this.bitrateKbps = $.bitrateKbps;
+        this.frameRate = $.frameRate;
+        this.scale = $.scale;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoEncoderH264Response defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bitrateKbps;
-        private @Nullable String frameRate;
-        private @Nullable VideoScaleResponse scale;
-        private String type;
+        private VideoEncoderH264Response $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoEncoderH264Response();
         }
 
         public Builder(VideoEncoderH264Response defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitrateKbps = defaults.bitrateKbps;
-    	      this.frameRate = defaults.frameRate;
-    	      this.scale = defaults.scale;
-    	      this.type = defaults.type;
+            $ = new VideoEncoderH264Response(Objects.requireNonNull(defaults));
         }
 
         public Builder bitrateKbps(@Nullable String bitrateKbps) {
-            this.bitrateKbps = bitrateKbps;
+            $.bitrateKbps = bitrateKbps;
             return this;
         }
+
         public Builder frameRate(@Nullable String frameRate) {
-            this.frameRate = frameRate;
+            $.frameRate = frameRate;
             return this;
         }
+
         public Builder scale(@Nullable VideoScaleResponse scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public VideoEncoderH264Response build() {
-            return new VideoEncoderH264Response(bitrateKbps, frameRate, scale, type);
+        }
+
+        public VideoEncoderH264Response build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

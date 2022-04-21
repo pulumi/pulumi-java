@@ -5,9 +5,9 @@ package com.pulumi.aws.worklink.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WebsiteCertificateAuthorityAssociationState extends com.pulum
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WebsiteCertificateAuthorityAssociationState extends com.pulum
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WebsiteCertificateAuthorityAssociationState extends com.pulum
      * 
      */
     @Import(name="fleetArn")
-      private final @Nullable Output<String> fleetArn;
+    private @Nullable Output<String> fleetArn;
 
-    public Output<String> fleetArn() {
-        return this.fleetArn == null ? Codegen.empty() : this.fleetArn;
+    public Optional<Output<String>> fleetArn() {
+        return Optional.ofNullable(this.fleetArn);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class WebsiteCertificateAuthorityAssociationState extends com.pulum
      * 
      */
     @Import(name="websiteCaId")
-      private final @Nullable Output<String> websiteCaId;
+    private @Nullable Output<String> websiteCaId;
 
-    public Output<String> websiteCaId() {
-        return this.websiteCaId == null ? Codegen.empty() : this.websiteCaId;
+    public Optional<Output<String>> websiteCaId() {
+        return Optional.ofNullable(this.websiteCaId);
     }
 
-    public WebsiteCertificateAuthorityAssociationState(
-        @Nullable Output<String> certificate,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> fleetArn,
-        @Nullable Output<String> websiteCaId) {
-        this.certificate = certificate;
-        this.displayName = displayName;
-        this.fleetArn = fleetArn;
-        this.websiteCaId = websiteCaId;
-    }
+    private WebsiteCertificateAuthorityAssociationState() {}
 
-    private WebsiteCertificateAuthorityAssociationState() {
-        this.certificate = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.fleetArn = Codegen.empty();
-        this.websiteCaId = Codegen.empty();
+    private WebsiteCertificateAuthorityAssociationState(WebsiteCertificateAuthorityAssociationState $) {
+        this.certificate = $.certificate;
+        this.displayName = $.displayName;
+        this.fleetArn = $.fleetArn;
+        this.websiteCaId = $.websiteCaId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebsiteCertificateAuthorityAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificate;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> fleetArn;
-        private @Nullable Output<String> websiteCaId;
+        private WebsiteCertificateAuthorityAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebsiteCertificateAuthorityAssociationState();
         }
 
         public Builder(WebsiteCertificateAuthorityAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.displayName = defaults.displayName;
-    	      this.fleetArn = defaults.fleetArn;
-    	      this.websiteCaId = defaults.websiteCaId;
+            $ = new WebsiteCertificateAuthorityAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder fleetArn(@Nullable Output<String> fleetArn) {
-            this.fleetArn = fleetArn;
+            $.fleetArn = fleetArn;
             return this;
         }
-        public Builder fleetArn(@Nullable String fleetArn) {
-            this.fleetArn = Codegen.ofNullable(fleetArn);
-            return this;
+
+        public Builder fleetArn(String fleetArn) {
+            return fleetArn(Output.of(fleetArn));
         }
+
         public Builder websiteCaId(@Nullable Output<String> websiteCaId) {
-            this.websiteCaId = websiteCaId;
+            $.websiteCaId = websiteCaId;
             return this;
         }
-        public Builder websiteCaId(@Nullable String websiteCaId) {
-            this.websiteCaId = Codegen.ofNullable(websiteCaId);
-            return this;
-        }        public WebsiteCertificateAuthorityAssociationState build() {
-            return new WebsiteCertificateAuthorityAssociationState(certificate, displayName, fleetArn, websiteCaId);
+
+        public Builder websiteCaId(String websiteCaId) {
+            return websiteCaId(Output.of(websiteCaId));
+        }
+
+        public WebsiteCertificateAuthorityAssociationState build() {
+            return $;
         }
     }
+
 }

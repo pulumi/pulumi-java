@@ -6,9 +6,9 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationRedactedFieldsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class WebAclLoggingConfigurationGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="logDestination", required=true)
-      private final Output<String> logDestination;
+    private Output<String> logDestination;
 
     public Output<String> logDestination() {
         return this.logDestination;
@@ -32,63 +32,59 @@ public final class WebAclLoggingConfigurationGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="redactedFields")
-      private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
+    private @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields() {
-        return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
+    public Optional<Output<WebAclLoggingConfigurationRedactedFieldsGetArgs>> redactedFields() {
+        return Optional.ofNullable(this.redactedFields);
     }
 
-    public WebAclLoggingConfigurationGetArgs(
-        Output<String> logDestination,
-        @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields) {
-        this.logDestination = Objects.requireNonNull(logDestination, "expected parameter 'logDestination' to be non-null");
-        this.redactedFields = redactedFields;
-    }
+    private WebAclLoggingConfigurationGetArgs() {}
 
-    private WebAclLoggingConfigurationGetArgs() {
-        this.logDestination = Codegen.empty();
-        this.redactedFields = Codegen.empty();
+    private WebAclLoggingConfigurationGetArgs(WebAclLoggingConfigurationGetArgs $) {
+        this.logDestination = $.logDestination;
+        this.redactedFields = $.redactedFields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclLoggingConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> logDestination;
-        private @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
+        private WebAclLoggingConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclLoggingConfigurationGetArgs();
         }
 
         public Builder(WebAclLoggingConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logDestination = defaults.logDestination;
-    	      this.redactedFields = defaults.redactedFields;
+            $ = new WebAclLoggingConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logDestination(Output<String> logDestination) {
-            this.logDestination = Objects.requireNonNull(logDestination);
+            $.logDestination = logDestination;
             return this;
         }
+
         public Builder logDestination(String logDestination) {
-            this.logDestination = Output.of(Objects.requireNonNull(logDestination));
-            return this;
+            return logDestination(Output.of(logDestination));
         }
+
         public Builder redactedFields(@Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields) {
-            this.redactedFields = redactedFields;
+            $.redactedFields = redactedFields;
             return this;
         }
-        public Builder redactedFields(@Nullable WebAclLoggingConfigurationRedactedFieldsGetArgs redactedFields) {
-            this.redactedFields = Codegen.ofNullable(redactedFields);
-            return this;
-        }        public WebAclLoggingConfigurationGetArgs build() {
-            return new WebAclLoggingConfigurationGetArgs(logDestination, redactedFields);
+
+        public Builder redactedFields(WebAclLoggingConfigurationRedactedFieldsGetArgs redactedFields) {
+            return redactedFields(Output.of(redactedFields));
+        }
+
+        public WebAclLoggingConfigurationGetArgs build() {
+            $.logDestination = Objects.requireNonNull($.logDestination, "expected parameter 'logDestination' to be non-null");
+            return $;
         }
     }
+
 }

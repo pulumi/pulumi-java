@@ -14,48 +14,49 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsS
     public static final GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector Empty = new GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector();
 
     @Import(name="realms", required=true)
-      private final List<String> realms;
+    private List<String> realms;
 
     public List<String> realms() {
         return this.realms;
     }
 
-    public GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(List<String> realms) {
-        this.realms = Objects.requireNonNull(realms, "expected parameter 'realms' to be non-null");
-    }
+    private GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector() {}
 
-    private GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector() {
-        this.realms = List.of();
+    private GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector $) {
+        this.realms = $.realms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> realms;
+        private GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector();
         }
 
         public Builder(GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.realms = defaults.realms;
+            $ = new GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(Objects.requireNonNull(defaults));
         }
 
         public Builder realms(List<String> realms) {
-            this.realms = Objects.requireNonNull(realms);
+            $.realms = realms;
             return this;
         }
+
         public Builder realms(String... realms) {
             return realms(List.of(realms));
-        }        public GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector build() {
-            return new GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(realms);
+        }
+
+        public GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector build() {
+            $.realms = Objects.requireNonNull($.realms, "expected parameter 'realms' to be non-null");
+            return $;
         }
     }
+
 }

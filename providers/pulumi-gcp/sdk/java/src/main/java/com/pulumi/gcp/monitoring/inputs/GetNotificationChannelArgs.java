@@ -20,10 +20,10 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="labels")
-      private final @Nullable Map<String,String> labels;
+    private @Nullable Map<String,String> labels;
 
-    public Map<String,String> labels() {
-        return this.labels == null ? Map.of() : this.labels;
+    public Optional<Map<String,String>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -66,82 +66,68 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userLabels")
-      private final @Nullable Map<String,String> userLabels;
+    private @Nullable Map<String,String> userLabels;
 
-    public Map<String,String> userLabels() {
-        return this.userLabels == null ? Map.of() : this.userLabels;
+    public Optional<Map<String,String>> userLabels() {
+        return Optional.ofNullable(this.userLabels);
     }
 
-    public GetNotificationChannelArgs(
-        @Nullable String displayName,
-        @Nullable Map<String,String> labels,
-        @Nullable String project,
-        @Nullable String type,
-        @Nullable Map<String,String> userLabels) {
-        this.displayName = displayName;
-        this.labels = labels;
-        this.project = project;
-        this.type = type;
-        this.userLabels = userLabels;
-    }
+    private GetNotificationChannelArgs() {}
 
-    private GetNotificationChannelArgs() {
-        this.displayName = null;
-        this.labels = Map.of();
-        this.project = null;
-        this.type = null;
-        this.userLabels = Map.of();
+    private GetNotificationChannelArgs(GetNotificationChannelArgs $) {
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.project = $.project;
+        this.type = $.type;
+        this.userLabels = $.userLabels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable Map<String,String> labels;
-        private @Nullable String project;
-        private @Nullable String type;
-        private @Nullable Map<String,String> userLabels;
+        private GetNotificationChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationChannelArgs();
         }
 
         public Builder(GetNotificationChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.project = defaults.project;
-    	      this.type = defaults.type;
-    	      this.userLabels = defaults.userLabels;
+            $ = new GetNotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = userLabels;
+            $.userLabels = userLabels;
             return this;
-        }        public GetNotificationChannelArgs build() {
-            return new GetNotificationChannelArgs(displayName, labels, project, type, userLabels);
+        }
+
+        public GetNotificationChannelArgs build() {
+            return $;
         }
     }
+
 }

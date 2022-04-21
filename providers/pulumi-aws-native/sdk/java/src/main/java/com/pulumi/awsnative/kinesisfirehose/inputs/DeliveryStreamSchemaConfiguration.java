@@ -15,126 +15,109 @@ public final class DeliveryStreamSchemaConfiguration extends com.pulumi.resource
     public static final DeliveryStreamSchemaConfiguration Empty = new DeliveryStreamSchemaConfiguration();
 
     @Import(name="catalogId")
-      private final @Nullable String catalogId;
+    private @Nullable String catalogId;
 
     public Optional<String> catalogId() {
-        return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
+        return Optional.ofNullable(this.catalogId);
     }
 
     @Import(name="databaseName")
-      private final @Nullable String databaseName;
+    private @Nullable String databaseName;
 
     public Optional<String> databaseName() {
-        return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
+        return Optional.ofNullable(this.databaseName);
     }
 
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     @Import(name="roleARN")
-      private final @Nullable String roleARN;
+    private @Nullable String roleARN;
 
     public Optional<String> roleARN() {
-        return this.roleARN == null ? Optional.empty() : Optional.ofNullable(this.roleARN);
+        return Optional.ofNullable(this.roleARN);
     }
 
     @Import(name="tableName")
-      private final @Nullable String tableName;
+    private @Nullable String tableName;
 
     public Optional<String> tableName() {
-        return this.tableName == null ? Optional.empty() : Optional.ofNullable(this.tableName);
+        return Optional.ofNullable(this.tableName);
     }
 
     @Import(name="versionId")
-      private final @Nullable String versionId;
+    private @Nullable String versionId;
 
     public Optional<String> versionId() {
-        return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
+        return Optional.ofNullable(this.versionId);
     }
 
-    public DeliveryStreamSchemaConfiguration(
-        @Nullable String catalogId,
-        @Nullable String databaseName,
-        @Nullable String region,
-        @Nullable String roleARN,
-        @Nullable String tableName,
-        @Nullable String versionId) {
-        this.catalogId = catalogId;
-        this.databaseName = databaseName;
-        this.region = region;
-        this.roleARN = roleARN;
-        this.tableName = tableName;
-        this.versionId = versionId;
-    }
+    private DeliveryStreamSchemaConfiguration() {}
 
-    private DeliveryStreamSchemaConfiguration() {
-        this.catalogId = null;
-        this.databaseName = null;
-        this.region = null;
-        this.roleARN = null;
-        this.tableName = null;
-        this.versionId = null;
+    private DeliveryStreamSchemaConfiguration(DeliveryStreamSchemaConfiguration $) {
+        this.catalogId = $.catalogId;
+        this.databaseName = $.databaseName;
+        this.region = $.region;
+        this.roleARN = $.roleARN;
+        this.tableName = $.tableName;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamSchemaConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String catalogId;
-        private @Nullable String databaseName;
-        private @Nullable String region;
-        private @Nullable String roleARN;
-        private @Nullable String tableName;
-        private @Nullable String versionId;
+        private DeliveryStreamSchemaConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamSchemaConfiguration();
         }
 
         public Builder(DeliveryStreamSchemaConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.databaseName = defaults.databaseName;
-    	      this.region = defaults.region;
-    	      this.roleARN = defaults.roleARN;
-    	      this.tableName = defaults.tableName;
-    	      this.versionId = defaults.versionId;
+            $ = new DeliveryStreamSchemaConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder roleARN(@Nullable String roleARN) {
-            this.roleARN = roleARN;
+            $.roleARN = roleARN;
             return this;
         }
+
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
+
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = versionId;
+            $.versionId = versionId;
             return this;
-        }        public DeliveryStreamSchemaConfiguration build() {
-            return new DeliveryStreamSchemaConfiguration(catalogId, databaseName, region, roleARN, tableName, versionId);
+        }
+
+        public DeliveryStreamSchemaConfiguration build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="requestHeaderActions")
-      private final @Nullable List<HeaderActionResponse> requestHeaderActions;
+    private @Nullable List<HeaderActionResponse> requestHeaderActions;
 
-    public List<HeaderActionResponse> requestHeaderActions() {
-        return this.requestHeaderActions == null ? List.of() : this.requestHeaderActions;
+    public Optional<List<HeaderActionResponse>> requestHeaderActions() {
+        return Optional.ofNullable(this.requestHeaderActions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="responseHeaderActions")
-      private final @Nullable List<HeaderActionResponse> responseHeaderActions;
+    private @Nullable List<HeaderActionResponse> responseHeaderActions;
 
-    public List<HeaderActionResponse> responseHeaderActions() {
-        return this.responseHeaderActions == null ? List.of() : this.responseHeaderActions;
+    public Optional<List<HeaderActionResponse>> responseHeaderActions() {
+        return Optional.ofNullable(this.responseHeaderActions);
     }
 
     /**
@@ -49,70 +49,64 @@ public final class RulesEngineActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="routeConfigurationOverride")
-      private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
+    private @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
 
-    public Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride() {
-        return this.routeConfigurationOverride == null ? null : this.routeConfigurationOverride;
+    public Optional<Either<ForwardingConfigurationResponse,RedirectConfigurationResponse>> routeConfigurationOverride() {
+        return Optional.ofNullable(this.routeConfigurationOverride);
     }
 
-    public RulesEngineActionResponse(
-        @Nullable List<HeaderActionResponse> requestHeaderActions,
-        @Nullable List<HeaderActionResponse> responseHeaderActions,
-        @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
-        this.requestHeaderActions = requestHeaderActions;
-        this.responseHeaderActions = responseHeaderActions;
-        this.routeConfigurationOverride = routeConfigurationOverride;
-    }
+    private RulesEngineActionResponse() {}
 
-    private RulesEngineActionResponse() {
-        this.requestHeaderActions = List.of();
-        this.responseHeaderActions = List.of();
-        this.routeConfigurationOverride = null;
+    private RulesEngineActionResponse(RulesEngineActionResponse $) {
+        this.requestHeaderActions = $.requestHeaderActions;
+        this.responseHeaderActions = $.responseHeaderActions;
+        this.routeConfigurationOverride = $.routeConfigurationOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesEngineActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<HeaderActionResponse> requestHeaderActions;
-        private @Nullable List<HeaderActionResponse> responseHeaderActions;
-        private @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
+        private RulesEngineActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesEngineActionResponse();
         }
 
         public Builder(RulesEngineActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestHeaderActions = defaults.requestHeaderActions;
-    	      this.responseHeaderActions = defaults.responseHeaderActions;
-    	      this.routeConfigurationOverride = defaults.routeConfigurationOverride;
+            $ = new RulesEngineActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder requestHeaderActions(@Nullable List<HeaderActionResponse> requestHeaderActions) {
-            this.requestHeaderActions = requestHeaderActions;
+            $.requestHeaderActions = requestHeaderActions;
             return this;
         }
+
         public Builder requestHeaderActions(HeaderActionResponse... requestHeaderActions) {
             return requestHeaderActions(List.of(requestHeaderActions));
         }
+
         public Builder responseHeaderActions(@Nullable List<HeaderActionResponse> responseHeaderActions) {
-            this.responseHeaderActions = responseHeaderActions;
+            $.responseHeaderActions = responseHeaderActions;
             return this;
         }
+
         public Builder responseHeaderActions(HeaderActionResponse... responseHeaderActions) {
             return responseHeaderActions(List.of(responseHeaderActions));
         }
+
         public Builder routeConfigurationOverride(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
-            this.routeConfigurationOverride = routeConfigurationOverride;
+            $.routeConfigurationOverride = routeConfigurationOverride;
             return this;
-        }        public RulesEngineActionResponse build() {
-            return new RulesEngineActionResponse(requestHeaderActions, responseHeaderActions, routeConfigurationOverride);
+        }
+
+        public RulesEngineActionResponse build() {
+            return $;
         }
     }
+
 }

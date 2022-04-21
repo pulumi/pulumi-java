@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.settings.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.EnvFromSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeArgs;
@@ -13,6 +12,7 @@ import com.pulumi.kubernetes.core_v1.inputs.VolumeMountArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<List<EnvVarArgs>> env;
+    private @Nullable Output<List<EnvVarArgs>> env;
 
-    public Output<List<EnvVarArgs>> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<List<EnvVarArgs>>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="envFrom")
-      private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
+    private @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
-    public Output<List<EnvFromSourceArgs>> envFrom() {
-        return this.envFrom == null ? Codegen.empty() : this.envFrom;
+    public Optional<Output<List<EnvFromSourceArgs>>> envFrom() {
+        return Optional.ofNullable(this.envFrom);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<LabelSelectorArgs> selector;
+    private @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<LabelSelectorArgs>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeMounts")
-      private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
+    private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
-    public Output<List<VolumeMountArgs>> volumeMounts() {
-        return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
+    public Optional<Output<List<VolumeMountArgs>>> volumeMounts() {
+        return Optional.ofNullable(this.volumeMounts);
     }
 
     /**
@@ -73,114 +73,104 @@ public final class PodPresetSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<VolumeArgs>> volumes;
+    private @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<VolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public PodPresetSpecArgs(
-        @Nullable Output<List<EnvVarArgs>> env,
-        @Nullable Output<List<EnvFromSourceArgs>> envFrom,
-        @Nullable Output<LabelSelectorArgs> selector,
-        @Nullable Output<List<VolumeMountArgs>> volumeMounts,
-        @Nullable Output<List<VolumeArgs>> volumes) {
-        this.env = env;
-        this.envFrom = envFrom;
-        this.selector = selector;
-        this.volumeMounts = volumeMounts;
-        this.volumes = volumes;
-    }
+    private PodPresetSpecArgs() {}
 
-    private PodPresetSpecArgs() {
-        this.env = Codegen.empty();
-        this.envFrom = Codegen.empty();
-        this.selector = Codegen.empty();
-        this.volumeMounts = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private PodPresetSpecArgs(PodPresetSpecArgs $) {
+        this.env = $.env;
+        this.envFrom = $.envFrom;
+        this.selector = $.selector;
+        this.volumeMounts = $.volumeMounts;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodPresetSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EnvVarArgs>> env;
-        private @Nullable Output<List<EnvFromSourceArgs>> envFrom;
-        private @Nullable Output<LabelSelectorArgs> selector;
-        private @Nullable Output<List<VolumeMountArgs>> volumeMounts;
-        private @Nullable Output<List<VolumeArgs>> volumes;
+        private PodPresetSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodPresetSpecArgs();
         }
 
         public Builder(PodPresetSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.env = defaults.env;
-    	      this.envFrom = defaults.envFrom;
-    	      this.selector = defaults.selector;
-    	      this.volumeMounts = defaults.volumeMounts;
-    	      this.volumes = defaults.volumes;
+            $ = new PodPresetSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder env(@Nullable Output<List<EnvVarArgs>> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable List<EnvVarArgs> env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(List<EnvVarArgs> env) {
+            return env(Output.of(env));
         }
+
         public Builder env(EnvVarArgs... env) {
             return env(List.of(env));
         }
+
         public Builder envFrom(@Nullable Output<List<EnvFromSourceArgs>> envFrom) {
-            this.envFrom = envFrom;
+            $.envFrom = envFrom;
             return this;
         }
-        public Builder envFrom(@Nullable List<EnvFromSourceArgs> envFrom) {
-            this.envFrom = Codegen.ofNullable(envFrom);
-            return this;
+
+        public Builder envFrom(List<EnvFromSourceArgs> envFrom) {
+            return envFrom(Output.of(envFrom));
         }
+
         public Builder envFrom(EnvFromSourceArgs... envFrom) {
             return envFrom(List.of(envFrom));
         }
+
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
+
+        public Builder selector(LabelSelectorArgs selector) {
+            return selector(Output.of(selector));
         }
+
         public Builder volumeMounts(@Nullable Output<List<VolumeMountArgs>> volumeMounts) {
-            this.volumeMounts = volumeMounts;
+            $.volumeMounts = volumeMounts;
             return this;
         }
-        public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Codegen.ofNullable(volumeMounts);
-            return this;
+
+        public Builder volumeMounts(List<VolumeMountArgs> volumeMounts) {
+            return volumeMounts(Output.of(volumeMounts));
         }
+
         public Builder volumeMounts(VolumeMountArgs... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
         }
+
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<VolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public PodPresetSpecArgs build() {
-            return new PodPresetSpecArgs(env, envFrom, selector, volumeMounts, volumes);
+        }
+
+        public PodPresetSpecArgs build() {
+            return $;
         }
     }
+
 }

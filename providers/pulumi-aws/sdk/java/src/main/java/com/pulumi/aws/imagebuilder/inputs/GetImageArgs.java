@@ -20,7 +20,7 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
@@ -31,55 +31,51 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetImageArgs(
-        String arn,
-        @Nullable Map<String,String> tags) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.tags = tags;
-    }
+    private GetImageArgs() {}
 
-    private GetImageArgs() {
-        this.arn = null;
-        this.tags = Map.of();
+    private GetImageArgs(GetImageArgs $) {
+        this.arn = $.arn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private @Nullable Map<String,String> tags;
+        private GetImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageArgs();
         }
 
         public Builder(GetImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.tags = defaults.tags;
+            $ = new GetImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetImageArgs build() {
-            return new GetImageArgs(arn, tags);
+        }
+
+        public GetImageArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

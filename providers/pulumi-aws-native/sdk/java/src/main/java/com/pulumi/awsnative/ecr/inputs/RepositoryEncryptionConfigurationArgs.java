@@ -6,9 +6,9 @@ package com.pulumi.awsnative.ecr.inputs;
 import com.pulumi.awsnative.ecr.enums.RepositoryEncryptionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,66 @@ public final class RepositoryEncryptionConfigurationArgs extends com.pulumi.reso
     public static final RepositoryEncryptionConfigurationArgs Empty = new RepositoryEncryptionConfigurationArgs();
 
     @Import(name="encryptionType", required=true)
-      private final Output<RepositoryEncryptionType> encryptionType;
+    private Output<RepositoryEncryptionType> encryptionType;
 
     public Output<RepositoryEncryptionType> encryptionType() {
         return this.encryptionType;
     }
 
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
-    public RepositoryEncryptionConfigurationArgs(
-        Output<RepositoryEncryptionType> encryptionType,
-        @Nullable Output<String> kmsKey) {
-        this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
-        this.kmsKey = kmsKey;
-    }
+    private RepositoryEncryptionConfigurationArgs() {}
 
-    private RepositoryEncryptionConfigurationArgs() {
-        this.encryptionType = Codegen.empty();
-        this.kmsKey = Codegen.empty();
+    private RepositoryEncryptionConfigurationArgs(RepositoryEncryptionConfigurationArgs $) {
+        this.encryptionType = $.encryptionType;
+        this.kmsKey = $.kmsKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RepositoryEncryptionType> encryptionType;
-        private @Nullable Output<String> kmsKey;
+        private RepositoryEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryEncryptionConfigurationArgs();
         }
 
         public Builder(RepositoryEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionType = defaults.encryptionType;
-    	      this.kmsKey = defaults.kmsKey;
+            $ = new RepositoryEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionType(Output<RepositoryEncryptionType> encryptionType) {
-            this.encryptionType = Objects.requireNonNull(encryptionType);
+            $.encryptionType = encryptionType;
             return this;
         }
+
         public Builder encryptionType(RepositoryEncryptionType encryptionType) {
-            this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
-            return this;
+            return encryptionType(Output.of(encryptionType));
         }
+
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
-        }        public RepositoryEncryptionConfigurationArgs build() {
-            return new RepositoryEncryptionConfigurationArgs(encryptionType, kmsKey);
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
+        }
+
+        public RepositoryEncryptionConfigurationArgs build() {
+            $.encryptionType = Objects.requireNonNull($.encryptionType, "expected parameter 'encryptionType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.azurenative.cdn.enums.PolicyMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultCustomBlockResponseBody")
-      private final @Nullable Output<String> defaultCustomBlockResponseBody;
+    private @Nullable Output<String> defaultCustomBlockResponseBody;
 
-    public Output<String> defaultCustomBlockResponseBody() {
-        return this.defaultCustomBlockResponseBody == null ? Codegen.empty() : this.defaultCustomBlockResponseBody;
+    public Optional<Output<String>> defaultCustomBlockResponseBody() {
+        return Optional.ofNullable(this.defaultCustomBlockResponseBody);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultCustomBlockResponseStatusCode")
-      private final @Nullable Output<Integer> defaultCustomBlockResponseStatusCode;
+    private @Nullable Output<Integer> defaultCustomBlockResponseStatusCode;
 
-    public Output<Integer> defaultCustomBlockResponseStatusCode() {
-        return this.defaultCustomBlockResponseStatusCode == null ? Codegen.empty() : this.defaultCustomBlockResponseStatusCode;
+    public Optional<Output<Integer>> defaultCustomBlockResponseStatusCode() {
+        return Optional.ofNullable(this.defaultCustomBlockResponseStatusCode);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultRedirectUrl")
-      private final @Nullable Output<String> defaultRedirectUrl;
+    private @Nullable Output<String> defaultRedirectUrl;
 
-    public Output<String> defaultRedirectUrl() {
-        return this.defaultRedirectUrl == null ? Codegen.empty() : this.defaultRedirectUrl;
+    public Optional<Output<String>> defaultRedirectUrl() {
+        return Optional.ofNullable(this.defaultRedirectUrl);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
+    private @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
 
-    public Output<Either<String,PolicyEnabledState>> enabledState() {
-        return this.enabledState == null ? Codegen.empty() : this.enabledState;
+    public Optional<Output<Either<String,PolicyEnabledState>>> enabledState() {
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -72,102 +72,88 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,PolicyMode>> mode;
+    private @Nullable Output<Either<String,PolicyMode>> mode;
 
-    public Output<Either<String,PolicyMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,PolicyMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public PolicySettingsArgs(
-        @Nullable Output<String> defaultCustomBlockResponseBody,
-        @Nullable Output<Integer> defaultCustomBlockResponseStatusCode,
-        @Nullable Output<String> defaultRedirectUrl,
-        @Nullable Output<Either<String,PolicyEnabledState>> enabledState,
-        @Nullable Output<Either<String,PolicyMode>> mode) {
-        this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
-        this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
-        this.defaultRedirectUrl = defaultRedirectUrl;
-        this.enabledState = enabledState;
-        this.mode = mode;
-    }
+    private PolicySettingsArgs() {}
 
-    private PolicySettingsArgs() {
-        this.defaultCustomBlockResponseBody = Codegen.empty();
-        this.defaultCustomBlockResponseStatusCode = Codegen.empty();
-        this.defaultRedirectUrl = Codegen.empty();
-        this.enabledState = Codegen.empty();
-        this.mode = Codegen.empty();
+    private PolicySettingsArgs(PolicySettingsArgs $) {
+        this.defaultCustomBlockResponseBody = $.defaultCustomBlockResponseBody;
+        this.defaultCustomBlockResponseStatusCode = $.defaultCustomBlockResponseStatusCode;
+        this.defaultRedirectUrl = $.defaultRedirectUrl;
+        this.enabledState = $.enabledState;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultCustomBlockResponseBody;
-        private @Nullable Output<Integer> defaultCustomBlockResponseStatusCode;
-        private @Nullable Output<String> defaultRedirectUrl;
-        private @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
-        private @Nullable Output<Either<String,PolicyMode>> mode;
+        private PolicySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicySettingsArgs();
         }
 
         public Builder(PolicySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultCustomBlockResponseBody = defaults.defaultCustomBlockResponseBody;
-    	      this.defaultCustomBlockResponseStatusCode = defaults.defaultCustomBlockResponseStatusCode;
-    	      this.defaultRedirectUrl = defaults.defaultRedirectUrl;
-    	      this.enabledState = defaults.enabledState;
-    	      this.mode = defaults.mode;
+            $ = new PolicySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultCustomBlockResponseBody(@Nullable Output<String> defaultCustomBlockResponseBody) {
-            this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
+            $.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
             return this;
         }
-        public Builder defaultCustomBlockResponseBody(@Nullable String defaultCustomBlockResponseBody) {
-            this.defaultCustomBlockResponseBody = Codegen.ofNullable(defaultCustomBlockResponseBody);
-            return this;
+
+        public Builder defaultCustomBlockResponseBody(String defaultCustomBlockResponseBody) {
+            return defaultCustomBlockResponseBody(Output.of(defaultCustomBlockResponseBody));
         }
+
         public Builder defaultCustomBlockResponseStatusCode(@Nullable Output<Integer> defaultCustomBlockResponseStatusCode) {
-            this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
+            $.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
             return this;
         }
-        public Builder defaultCustomBlockResponseStatusCode(@Nullable Integer defaultCustomBlockResponseStatusCode) {
-            this.defaultCustomBlockResponseStatusCode = Codegen.ofNullable(defaultCustomBlockResponseStatusCode);
-            return this;
+
+        public Builder defaultCustomBlockResponseStatusCode(Integer defaultCustomBlockResponseStatusCode) {
+            return defaultCustomBlockResponseStatusCode(Output.of(defaultCustomBlockResponseStatusCode));
         }
+
         public Builder defaultRedirectUrl(@Nullable Output<String> defaultRedirectUrl) {
-            this.defaultRedirectUrl = defaultRedirectUrl;
+            $.defaultRedirectUrl = defaultRedirectUrl;
             return this;
         }
-        public Builder defaultRedirectUrl(@Nullable String defaultRedirectUrl) {
-            this.defaultRedirectUrl = Codegen.ofNullable(defaultRedirectUrl);
-            return this;
+
+        public Builder defaultRedirectUrl(String defaultRedirectUrl) {
+            return defaultRedirectUrl(Output.of(defaultRedirectUrl));
         }
+
         public Builder enabledState(@Nullable Output<Either<String,PolicyEnabledState>> enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
-        public Builder enabledState(@Nullable Either<String,PolicyEnabledState> enabledState) {
-            this.enabledState = Codegen.ofNullable(enabledState);
-            return this;
+
+        public Builder enabledState(Either<String,PolicyEnabledState> enabledState) {
+            return enabledState(Output.of(enabledState));
         }
+
         public Builder mode(@Nullable Output<Either<String,PolicyMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,PolicyMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public PolicySettingsArgs build() {
-            return new PolicySettingsArgs(defaultCustomBlockResponseBody, defaultCustomBlockResponseStatusCode, defaultRedirectUrl, enabledState, mode);
+
+        public Builder mode(Either<String,PolicyMode> mode) {
+            return mode(Output.of(mode));
+        }
+
+        public PolicySettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="categories", required=true)
-      private final List<CategoryResponse> categories;
+    private List<CategoryResponse> categories;
 
     public List<CategoryResponse> categories() {
         return this.categories;
@@ -35,7 +35,7 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -46,7 +46,7 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="identity", required=true)
-      private final IdentityResponse identity;
+    private IdentityResponse identity;
 
     public IdentityResponse identity() {
         return this.identity;
@@ -57,7 +57,7 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="kbArticleIds", required=true)
-      private final List<String> kbArticleIds;
+    private List<String> kbArticleIds;
 
     public List<String> kbArticleIds() {
         return this.kbArticleIds;
@@ -68,7 +68,7 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lastPublishedTimestamp", required=true)
-      private final String lastPublishedTimestamp;
+    private String lastPublishedTimestamp;
 
     public String lastPublishedTimestamp() {
         return this.lastPublishedTimestamp;
@@ -79,7 +79,7 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="supportUrl", required=true)
-      private final String supportUrl;
+    private String supportUrl;
 
     public String supportUrl() {
         return this.supportUrl;
@@ -90,106 +90,95 @@ public final class WindowsUpdateResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public WindowsUpdateResponse(
-        List<CategoryResponse> categories,
-        String description,
-        IdentityResponse identity,
-        List<String> kbArticleIds,
-        String lastPublishedTimestamp,
-        String supportUrl,
-        String title) {
-        this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-        this.kbArticleIds = Objects.requireNonNull(kbArticleIds, "expected parameter 'kbArticleIds' to be non-null");
-        this.lastPublishedTimestamp = Objects.requireNonNull(lastPublishedTimestamp, "expected parameter 'lastPublishedTimestamp' to be non-null");
-        this.supportUrl = Objects.requireNonNull(supportUrl, "expected parameter 'supportUrl' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private WindowsUpdateResponse() {}
 
-    private WindowsUpdateResponse() {
-        this.categories = List.of();
-        this.description = null;
-        this.identity = null;
-        this.kbArticleIds = List.of();
-        this.lastPublishedTimestamp = null;
-        this.supportUrl = null;
-        this.title = null;
+    private WindowsUpdateResponse(WindowsUpdateResponse $) {
+        this.categories = $.categories;
+        this.description = $.description;
+        this.identity = $.identity;
+        this.kbArticleIds = $.kbArticleIds;
+        this.lastPublishedTimestamp = $.lastPublishedTimestamp;
+        this.supportUrl = $.supportUrl;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsUpdateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<CategoryResponse> categories;
-        private String description;
-        private IdentityResponse identity;
-        private List<String> kbArticleIds;
-        private String lastPublishedTimestamp;
-        private String supportUrl;
-        private String title;
+        private WindowsUpdateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsUpdateResponse();
         }
 
         public Builder(WindowsUpdateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.description = defaults.description;
-    	      this.identity = defaults.identity;
-    	      this.kbArticleIds = defaults.kbArticleIds;
-    	      this.lastPublishedTimestamp = defaults.lastPublishedTimestamp;
-    	      this.supportUrl = defaults.supportUrl;
-    	      this.title = defaults.title;
+            $ = new WindowsUpdateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(List<CategoryResponse> categories) {
-            this.categories = Objects.requireNonNull(categories);
+            $.categories = categories;
             return this;
         }
+
         public Builder categories(CategoryResponse... categories) {
             return categories(List.of(categories));
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder identity(IdentityResponse identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder kbArticleIds(List<String> kbArticleIds) {
-            this.kbArticleIds = Objects.requireNonNull(kbArticleIds);
+            $.kbArticleIds = kbArticleIds;
             return this;
         }
+
         public Builder kbArticleIds(String... kbArticleIds) {
             return kbArticleIds(List.of(kbArticleIds));
         }
+
         public Builder lastPublishedTimestamp(String lastPublishedTimestamp) {
-            this.lastPublishedTimestamp = Objects.requireNonNull(lastPublishedTimestamp);
+            $.lastPublishedTimestamp = lastPublishedTimestamp;
             return this;
         }
+
         public Builder supportUrl(String supportUrl) {
-            this.supportUrl = Objects.requireNonNull(supportUrl);
+            $.supportUrl = supportUrl;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public WindowsUpdateResponse build() {
-            return new WindowsUpdateResponse(categories, description, identity, kbArticleIds, lastPublishedTimestamp, supportUrl, title);
+        }
+
+        public WindowsUpdateResponse build() {
+            $.categories = Objects.requireNonNull($.categories, "expected parameter 'categories' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            $.kbArticleIds = Objects.requireNonNull($.kbArticleIds, "expected parameter 'kbArticleIds' to be non-null");
+            $.lastPublishedTimestamp = Objects.requireNonNull($.lastPublishedTimestamp, "expected parameter 'lastPublishedTimestamp' to be non-null");
+            $.supportUrl = Objects.requireNonNull($.supportUrl, "expected parameter 'supportUrl' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

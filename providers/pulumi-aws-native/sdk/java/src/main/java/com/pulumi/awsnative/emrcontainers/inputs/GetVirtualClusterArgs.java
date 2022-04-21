@@ -17,45 +17,45 @@ public final class GetVirtualClusterArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetVirtualClusterArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetVirtualClusterArgs() {}
 
-    private GetVirtualClusterArgs() {
-        this.id = null;
+    private GetVirtualClusterArgs(GetVirtualClusterArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetVirtualClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualClusterArgs();
         }
 
         public Builder(GetVirtualClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetVirtualClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetVirtualClusterArgs build() {
-            return new GetVirtualClusterArgs(id);
+        }
+
+        public GetVirtualClusterArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

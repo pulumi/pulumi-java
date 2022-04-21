@@ -13,45 +13,45 @@ public final class RuleGroupImmunityTimeProperty extends com.pulumi.resources.In
     public static final RuleGroupImmunityTimeProperty Empty = new RuleGroupImmunityTimeProperty();
 
     @Import(name="immunityTime", required=true)
-      private final Integer immunityTime;
+    private Integer immunityTime;
 
     public Integer immunityTime() {
         return this.immunityTime;
     }
 
-    public RuleGroupImmunityTimeProperty(Integer immunityTime) {
-        this.immunityTime = Objects.requireNonNull(immunityTime, "expected parameter 'immunityTime' to be non-null");
-    }
+    private RuleGroupImmunityTimeProperty() {}
 
-    private RuleGroupImmunityTimeProperty() {
-        this.immunityTime = null;
+    private RuleGroupImmunityTimeProperty(RuleGroupImmunityTimeProperty $) {
+        this.immunityTime = $.immunityTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupImmunityTimeProperty defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer immunityTime;
+        private RuleGroupImmunityTimeProperty $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupImmunityTimeProperty();
         }
 
         public Builder(RuleGroupImmunityTimeProperty defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.immunityTime = defaults.immunityTime;
+            $ = new RuleGroupImmunityTimeProperty(Objects.requireNonNull(defaults));
         }
 
         public Builder immunityTime(Integer immunityTime) {
-            this.immunityTime = Objects.requireNonNull(immunityTime);
+            $.immunityTime = immunityTime;
             return this;
-        }        public RuleGroupImmunityTimeProperty build() {
-            return new RuleGroupImmunityTimeProperty(immunityTime);
+        }
+
+        public RuleGroupImmunityTimeProperty build() {
+            $.immunityTime = Objects.requireNonNull($.immunityTime, "expected parameter 'immunityTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class FlowSAPODataSourceProperties extends com.pulumi.resources.Inv
     public static final FlowSAPODataSourceProperties Empty = new FlowSAPODataSourceProperties();
 
     @Import(name="objectPath", required=true)
-      private final String objectPath;
+    private String objectPath;
 
     public String objectPath() {
         return this.objectPath;
     }
 
-    public FlowSAPODataSourceProperties(String objectPath) {
-        this.objectPath = Objects.requireNonNull(objectPath, "expected parameter 'objectPath' to be non-null");
-    }
+    private FlowSAPODataSourceProperties() {}
 
-    private FlowSAPODataSourceProperties() {
-        this.objectPath = null;
+    private FlowSAPODataSourceProperties(FlowSAPODataSourceProperties $) {
+        this.objectPath = $.objectPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSAPODataSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String objectPath;
+        private FlowSAPODataSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSAPODataSourceProperties();
         }
 
         public Builder(FlowSAPODataSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectPath = defaults.objectPath;
+            $ = new FlowSAPODataSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder objectPath(String objectPath) {
-            this.objectPath = Objects.requireNonNull(objectPath);
+            $.objectPath = objectPath;
             return this;
-        }        public FlowSAPODataSourceProperties build() {
-            return new FlowSAPODataSourceProperties(objectPath);
+        }
+
+        public FlowSAPODataSourceProperties build() {
+            $.objectPath = Objects.requireNonNull($.objectPath, "expected parameter 'objectPath' to be non-null");
+            return $;
         }
     }
+
 }

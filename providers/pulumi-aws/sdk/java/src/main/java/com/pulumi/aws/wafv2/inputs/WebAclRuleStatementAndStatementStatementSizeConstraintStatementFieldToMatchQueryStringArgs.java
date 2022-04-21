@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs Empty = new WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs();
 
-    public WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs();
         }
         public WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs build() {
-            return new WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchQueryStringArgs();
+            return $;
         }
     }
+
 }

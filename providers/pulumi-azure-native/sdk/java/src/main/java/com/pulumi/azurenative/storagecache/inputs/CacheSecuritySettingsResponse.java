@@ -24,48 +24,48 @@ public final class CacheSecuritySettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="accessPolicies")
-      private final @Nullable List<NfsAccessPolicyResponse> accessPolicies;
+    private @Nullable List<NfsAccessPolicyResponse> accessPolicies;
 
-    public List<NfsAccessPolicyResponse> accessPolicies() {
-        return this.accessPolicies == null ? List.of() : this.accessPolicies;
+    public Optional<List<NfsAccessPolicyResponse>> accessPolicies() {
+        return Optional.ofNullable(this.accessPolicies);
     }
 
-    public CacheSecuritySettingsResponse(@Nullable List<NfsAccessPolicyResponse> accessPolicies) {
-        this.accessPolicies = accessPolicies;
-    }
+    private CacheSecuritySettingsResponse() {}
 
-    private CacheSecuritySettingsResponse() {
-        this.accessPolicies = List.of();
+    private CacheSecuritySettingsResponse(CacheSecuritySettingsResponse $) {
+        this.accessPolicies = $.accessPolicies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheSecuritySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<NfsAccessPolicyResponse> accessPolicies;
+        private CacheSecuritySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheSecuritySettingsResponse();
         }
 
         public Builder(CacheSecuritySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicies = defaults.accessPolicies;
+            $ = new CacheSecuritySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicies(@Nullable List<NfsAccessPolicyResponse> accessPolicies) {
-            this.accessPolicies = accessPolicies;
+            $.accessPolicies = accessPolicies;
             return this;
         }
+
         public Builder accessPolicies(NfsAccessPolicyResponse... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
-        }        public CacheSecuritySettingsResponse build() {
-            return new CacheSecuritySettingsResponse(accessPolicies);
+        }
+
+        public CacheSecuritySettingsResponse build() {
+            return $;
         }
     }
+
 }

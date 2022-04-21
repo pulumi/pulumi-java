@@ -17,7 +17,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateId", required=true)
-      private final String certificateId;
+    private String certificateId;
 
     public String certificateId() {
         return this.certificateId;
@@ -28,7 +28,7 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetCertificateArgs(
-        String certificateId,
-        String resourceGroupName,
-        String serviceName) {
-        this.certificateId = Objects.requireNonNull(certificateId, "expected parameter 'certificateId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetCertificateArgs() {}
 
-    private GetCertificateArgs() {
-        this.certificateId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetCertificateArgs(GetCertificateArgs $) {
+        this.certificateId = $.certificateId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateArgs();
         }
 
         public Builder(GetCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(String certificateId) {
-            this.certificateId = Objects.requireNonNull(certificateId);
+            $.certificateId = certificateId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetCertificateArgs build() {
-            return new GetCertificateArgs(certificateId, resourceGroupName, serviceName);
+        }
+
+        public GetCertificateArgs build() {
+            $.certificateId = Objects.requireNonNull($.certificateId, "expected parameter 'certificateId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalInfo", required=true)
-      private final List<AdditionalErrorInfoResponse> additionalInfo;
+    private List<AdditionalErrorInfoResponse> additionalInfo;
 
     public List<AdditionalErrorInfoResponse> additionalInfo() {
         return this.additionalInfo;
@@ -36,10 +36,10 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="details", required=true)
-      private final List<CloudErrorResponse> details;
+    private List<CloudErrorResponse> details;
 
     public List<CloudErrorResponse> details() {
         return this.details;
@@ -58,10 +58,10 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -69,88 +69,78 @@ public final class CloudErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public CloudErrorResponse(
-        List<AdditionalErrorInfoResponse> additionalInfo,
-        @Nullable String code,
-        List<CloudErrorResponse> details,
-        @Nullable String message,
-        @Nullable String target) {
-        this.additionalInfo = Objects.requireNonNull(additionalInfo, "expected parameter 'additionalInfo' to be non-null");
-        this.code = code;
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.message = message;
-        this.target = target;
-    }
+    private CloudErrorResponse() {}
 
-    private CloudErrorResponse() {
-        this.additionalInfo = List.of();
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
-        this.target = null;
+    private CloudErrorResponse(CloudErrorResponse $) {
+        this.additionalInfo = $.additionalInfo;
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AdditionalErrorInfoResponse> additionalInfo;
-        private @Nullable String code;
-        private List<CloudErrorResponse> details;
-        private @Nullable String message;
-        private @Nullable String target;
+        private CloudErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudErrorResponse();
         }
 
         public Builder(CloudErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalInfo = defaults.additionalInfo;
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
-    	      this.target = defaults.target;
+            $ = new CloudErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalInfo(List<AdditionalErrorInfoResponse> additionalInfo) {
-            this.additionalInfo = Objects.requireNonNull(additionalInfo);
+            $.additionalInfo = additionalInfo;
             return this;
         }
+
         public Builder additionalInfo(AdditionalErrorInfoResponse... additionalInfo) {
             return additionalInfo(List.of(additionalInfo));
         }
+
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder details(List<CloudErrorResponse> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder details(CloudErrorResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public CloudErrorResponse build() {
-            return new CloudErrorResponse(additionalInfo, code, details, message, target);
+        }
+
+        public CloudErrorResponse build() {
+            $.additionalInfo = Objects.requireNonNull($.additionalInfo, "expected parameter 'additionalInfo' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            return $;
         }
     }
+
 }

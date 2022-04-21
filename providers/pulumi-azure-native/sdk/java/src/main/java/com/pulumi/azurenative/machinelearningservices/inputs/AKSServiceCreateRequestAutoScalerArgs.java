@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="autoscaleEnabled")
-      private final @Nullable Output<Boolean> autoscaleEnabled;
+    private @Nullable Output<Boolean> autoscaleEnabled;
 
-    public Output<Boolean> autoscaleEnabled() {
-        return this.autoscaleEnabled == null ? Codegen.empty() : this.autoscaleEnabled;
+    public Optional<Output<Boolean>> autoscaleEnabled() {
+        return Optional.ofNullable(this.autoscaleEnabled);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="maxReplicas")
-      private final @Nullable Output<Integer> maxReplicas;
+    private @Nullable Output<Integer> maxReplicas;
 
-    public Output<Integer> maxReplicas() {
-        return this.maxReplicas == null ? Codegen.empty() : this.maxReplicas;
+    public Optional<Output<Integer>> maxReplicas() {
+        return Optional.ofNullable(this.maxReplicas);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="minReplicas")
-      private final @Nullable Output<Integer> minReplicas;
+    private @Nullable Output<Integer> minReplicas;
 
-    public Output<Integer> minReplicas() {
-        return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
+    public Optional<Output<Integer>> minReplicas() {
+        return Optional.ofNullable(this.minReplicas);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="refreshPeriodInSeconds")
-      private final @Nullable Output<Integer> refreshPeriodInSeconds;
+    private @Nullable Output<Integer> refreshPeriodInSeconds;
 
-    public Output<Integer> refreshPeriodInSeconds() {
-        return this.refreshPeriodInSeconds == null ? Codegen.empty() : this.refreshPeriodInSeconds;
+    public Optional<Output<Integer>> refreshPeriodInSeconds() {
+        return Optional.ofNullable(this.refreshPeriodInSeconds);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class AKSServiceCreateRequestAutoScalerArgs extends com.pulumi.reso
      * 
      */
     @Import(name="targetUtilization")
-      private final @Nullable Output<Integer> targetUtilization;
+    private @Nullable Output<Integer> targetUtilization;
 
-    public Output<Integer> targetUtilization() {
-        return this.targetUtilization == null ? Codegen.empty() : this.targetUtilization;
+    public Optional<Output<Integer>> targetUtilization() {
+        return Optional.ofNullable(this.targetUtilization);
     }
 
-    public AKSServiceCreateRequestAutoScalerArgs(
-        @Nullable Output<Boolean> autoscaleEnabled,
-        @Nullable Output<Integer> maxReplicas,
-        @Nullable Output<Integer> minReplicas,
-        @Nullable Output<Integer> refreshPeriodInSeconds,
-        @Nullable Output<Integer> targetUtilization) {
-        this.autoscaleEnabled = autoscaleEnabled;
-        this.maxReplicas = maxReplicas;
-        this.minReplicas = minReplicas;
-        this.refreshPeriodInSeconds = refreshPeriodInSeconds;
-        this.targetUtilization = targetUtilization;
-    }
+    private AKSServiceCreateRequestAutoScalerArgs() {}
 
-    private AKSServiceCreateRequestAutoScalerArgs() {
-        this.autoscaleEnabled = Codegen.empty();
-        this.maxReplicas = Codegen.empty();
-        this.minReplicas = Codegen.empty();
-        this.refreshPeriodInSeconds = Codegen.empty();
-        this.targetUtilization = Codegen.empty();
+    private AKSServiceCreateRequestAutoScalerArgs(AKSServiceCreateRequestAutoScalerArgs $) {
+        this.autoscaleEnabled = $.autoscaleEnabled;
+        this.maxReplicas = $.maxReplicas;
+        this.minReplicas = $.minReplicas;
+        this.refreshPeriodInSeconds = $.refreshPeriodInSeconds;
+        this.targetUtilization = $.targetUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSServiceCreateRequestAutoScalerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoscaleEnabled;
-        private @Nullable Output<Integer> maxReplicas;
-        private @Nullable Output<Integer> minReplicas;
-        private @Nullable Output<Integer> refreshPeriodInSeconds;
-        private @Nullable Output<Integer> targetUtilization;
+        private AKSServiceCreateRequestAutoScalerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSServiceCreateRequestAutoScalerArgs();
         }
 
         public Builder(AKSServiceCreateRequestAutoScalerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaleEnabled = defaults.autoscaleEnabled;
-    	      this.maxReplicas = defaults.maxReplicas;
-    	      this.minReplicas = defaults.minReplicas;
-    	      this.refreshPeriodInSeconds = defaults.refreshPeriodInSeconds;
-    	      this.targetUtilization = defaults.targetUtilization;
+            $ = new AKSServiceCreateRequestAutoScalerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaleEnabled(@Nullable Output<Boolean> autoscaleEnabled) {
-            this.autoscaleEnabled = autoscaleEnabled;
+            $.autoscaleEnabled = autoscaleEnabled;
             return this;
         }
-        public Builder autoscaleEnabled(@Nullable Boolean autoscaleEnabled) {
-            this.autoscaleEnabled = Codegen.ofNullable(autoscaleEnabled);
-            return this;
+
+        public Builder autoscaleEnabled(Boolean autoscaleEnabled) {
+            return autoscaleEnabled(Output.of(autoscaleEnabled));
         }
+
         public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
-            this.maxReplicas = maxReplicas;
+            $.maxReplicas = maxReplicas;
             return this;
         }
-        public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = Codegen.ofNullable(maxReplicas);
-            return this;
+
+        public Builder maxReplicas(Integer maxReplicas) {
+            return maxReplicas(Output.of(maxReplicas));
         }
+
         public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
-            this.minReplicas = minReplicas;
+            $.minReplicas = minReplicas;
             return this;
         }
-        public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = Codegen.ofNullable(minReplicas);
-            return this;
+
+        public Builder minReplicas(Integer minReplicas) {
+            return minReplicas(Output.of(minReplicas));
         }
+
         public Builder refreshPeriodInSeconds(@Nullable Output<Integer> refreshPeriodInSeconds) {
-            this.refreshPeriodInSeconds = refreshPeriodInSeconds;
+            $.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
-        public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
-            this.refreshPeriodInSeconds = Codegen.ofNullable(refreshPeriodInSeconds);
-            return this;
+
+        public Builder refreshPeriodInSeconds(Integer refreshPeriodInSeconds) {
+            return refreshPeriodInSeconds(Output.of(refreshPeriodInSeconds));
         }
+
         public Builder targetUtilization(@Nullable Output<Integer> targetUtilization) {
-            this.targetUtilization = targetUtilization;
+            $.targetUtilization = targetUtilization;
             return this;
         }
-        public Builder targetUtilization(@Nullable Integer targetUtilization) {
-            this.targetUtilization = Codegen.ofNullable(targetUtilization);
-            return this;
-        }        public AKSServiceCreateRequestAutoScalerArgs build() {
-            return new AKSServiceCreateRequestAutoScalerArgs(autoscaleEnabled, maxReplicas, minReplicas, refreshPeriodInSeconds, targetUtilization);
+
+        public Builder targetUtilization(Integer targetUtilization) {
+            return targetUtilization(Output.of(targetUtilization));
+        }
+
+        public AKSServiceCreateRequestAutoScalerArgs build() {
+            return $;
         }
     }
+
 }

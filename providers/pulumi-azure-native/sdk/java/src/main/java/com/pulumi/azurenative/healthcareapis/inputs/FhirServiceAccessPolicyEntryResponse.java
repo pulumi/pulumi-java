@@ -21,45 +21,45 @@ public final class FhirServiceAccessPolicyEntryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="objectId", required=true)
-      private final String objectId;
+    private String objectId;
 
     public String objectId() {
         return this.objectId;
     }
 
-    public FhirServiceAccessPolicyEntryResponse(String objectId) {
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-    }
+    private FhirServiceAccessPolicyEntryResponse() {}
 
-    private FhirServiceAccessPolicyEntryResponse() {
-        this.objectId = null;
+    private FhirServiceAccessPolicyEntryResponse(FhirServiceAccessPolicyEntryResponse $) {
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirServiceAccessPolicyEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String objectId;
+        private FhirServiceAccessPolicyEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirServiceAccessPolicyEntryResponse();
         }
 
         public Builder(FhirServiceAccessPolicyEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
+            $ = new FhirServiceAccessPolicyEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(String objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
-        }        public FhirServiceAccessPolicyEntryResponse build() {
-            return new FhirServiceAccessPolicyEntryResponse(objectId);
+        }
+
+        public FhirServiceAccessPolicyEntryResponse build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            return $;
         }
     }
+
 }

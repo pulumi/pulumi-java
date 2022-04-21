@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DefenderForServersAwsOfferingDefenderForServersArgs extends c
      * 
      */
     @Import(name="cloudRoleArn")
-      private final @Nullable Output<String> cloudRoleArn;
+    private @Nullable Output<String> cloudRoleArn;
 
-    public Output<String> cloudRoleArn() {
-        return this.cloudRoleArn == null ? Codegen.empty() : this.cloudRoleArn;
+    public Optional<Output<String>> cloudRoleArn() {
+        return Optional.ofNullable(this.cloudRoleArn);
     }
 
-    public DefenderForServersAwsOfferingDefenderForServersArgs(@Nullable Output<String> cloudRoleArn) {
-        this.cloudRoleArn = cloudRoleArn;
-    }
+    private DefenderForServersAwsOfferingDefenderForServersArgs() {}
 
-    private DefenderForServersAwsOfferingDefenderForServersArgs() {
-        this.cloudRoleArn = Codegen.empty();
+    private DefenderForServersAwsOfferingDefenderForServersArgs(DefenderForServersAwsOfferingDefenderForServersArgs $) {
+        this.cloudRoleArn = $.cloudRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForServersAwsOfferingDefenderForServersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudRoleArn;
+        private DefenderForServersAwsOfferingDefenderForServersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForServersAwsOfferingDefenderForServersArgs();
         }
 
         public Builder(DefenderForServersAwsOfferingDefenderForServersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudRoleArn = defaults.cloudRoleArn;
+            $ = new DefenderForServersAwsOfferingDefenderForServersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudRoleArn(@Nullable Output<String> cloudRoleArn) {
-            this.cloudRoleArn = cloudRoleArn;
+            $.cloudRoleArn = cloudRoleArn;
             return this;
         }
-        public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
-            this.cloudRoleArn = Codegen.ofNullable(cloudRoleArn);
-            return this;
-        }        public DefenderForServersAwsOfferingDefenderForServersArgs build() {
-            return new DefenderForServersAwsOfferingDefenderForServersArgs(cloudRoleArn);
+
+        public Builder cloudRoleArn(String cloudRoleArn) {
+            return cloudRoleArn(Output.of(cloudRoleArn));
+        }
+
+        public DefenderForServersAwsOfferingDefenderForServersArgs build() {
+            return $;
         }
     }
+
 }

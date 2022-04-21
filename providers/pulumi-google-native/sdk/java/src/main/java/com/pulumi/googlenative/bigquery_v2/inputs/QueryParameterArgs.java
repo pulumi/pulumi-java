@@ -5,11 +5,11 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.QueryParameterValueArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class QueryParameterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class QueryParameterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="parameterType")
-      private final @Nullable Output<QueryParameterTypeArgs> parameterType;
+    private @Nullable Output<QueryParameterTypeArgs> parameterType;
 
-    public Output<QueryParameterTypeArgs> parameterType() {
-        return this.parameterType == null ? Codegen.empty() : this.parameterType;
+    public Optional<Output<QueryParameterTypeArgs>> parameterType() {
+        return Optional.ofNullable(this.parameterType);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class QueryParameterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="parameterValue")
-      private final @Nullable Output<QueryParameterValueArgs> parameterValue;
+    private @Nullable Output<QueryParameterValueArgs> parameterValue;
 
-    public Output<QueryParameterValueArgs> parameterValue() {
-        return this.parameterValue == null ? Codegen.empty() : this.parameterValue;
+    public Optional<Output<QueryParameterValueArgs>> parameterValue() {
+        return Optional.ofNullable(this.parameterValue);
     }
 
-    public QueryParameterArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<QueryParameterTypeArgs> parameterType,
-        @Nullable Output<QueryParameterValueArgs> parameterValue) {
-        this.name = name;
-        this.parameterType = parameterType;
-        this.parameterValue = parameterValue;
-    }
+    private QueryParameterArgs() {}
 
-    private QueryParameterArgs() {
-        this.name = Codegen.empty();
-        this.parameterType = Codegen.empty();
-        this.parameterValue = Codegen.empty();
+    private QueryParameterArgs(QueryParameterArgs $) {
+        this.name = $.name;
+        this.parameterType = $.parameterType;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<QueryParameterTypeArgs> parameterType;
-        private @Nullable Output<QueryParameterValueArgs> parameterValue;
+        private QueryParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryParameterArgs();
         }
 
         public Builder(QueryParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameterType = defaults.parameterType;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new QueryParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameterType(@Nullable Output<QueryParameterTypeArgs> parameterType) {
-            this.parameterType = parameterType;
+            $.parameterType = parameterType;
             return this;
         }
-        public Builder parameterType(@Nullable QueryParameterTypeArgs parameterType) {
-            this.parameterType = Codegen.ofNullable(parameterType);
-            return this;
+
+        public Builder parameterType(QueryParameterTypeArgs parameterType) {
+            return parameterType(Output.of(parameterType));
         }
+
         public Builder parameterValue(@Nullable Output<QueryParameterValueArgs> parameterValue) {
-            this.parameterValue = parameterValue;
+            $.parameterValue = parameterValue;
             return this;
         }
-        public Builder parameterValue(@Nullable QueryParameterValueArgs parameterValue) {
-            this.parameterValue = Codegen.ofNullable(parameterValue);
-            return this;
-        }        public QueryParameterArgs build() {
-            return new QueryParameterArgs(name, parameterType, parameterValue);
+
+        public Builder parameterValue(QueryParameterValueArgs parameterValue) {
+            return parameterValue(Output.of(parameterValue));
+        }
+
+        public QueryParameterArgs build() {
+            return $;
         }
     }
+
 }

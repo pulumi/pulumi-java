@@ -8,10 +8,10 @@ import com.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmentSkuArgs;
 import com.pulumi.azurenative.logic.inputs.ManagedServiceIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
+    private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ManagedServiceIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="integrationServiceEnvironmentName")
-      private final @Nullable Output<String> integrationServiceEnvironmentName;
+    private @Nullable Output<String> integrationServiceEnvironmentName;
 
-    public Output<String> integrationServiceEnvironmentName() {
-        return this.integrationServiceEnvironmentName == null ? Codegen.empty() : this.integrationServiceEnvironmentName;
+    public Optional<Output<String>> integrationServiceEnvironmentName() {
+        return Optional.ofNullable(this.integrationServiceEnvironmentName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties;
+    private @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties;
 
-    public Output<IntegrationServiceEnvironmentPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<IntegrationServiceEnvironmentPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroup", required=true)
-      private final Output<String> resourceGroup;
+    private Output<String> resourceGroup;
 
     public Output<String> resourceGroup() {
         return this.resourceGroup;
@@ -79,10 +79,10 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku;
+    private @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku;
 
-    public Output<IntegrationServiceEnvironmentSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<IntegrationServiceEnvironmentSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -90,128 +90,109 @@ public final class IntegrationServiceEnvironmentArgs extends com.pulumi.resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IntegrationServiceEnvironmentArgs(
-        @Nullable Output<ManagedServiceIdentityArgs> identity,
-        @Nullable Output<String> integrationServiceEnvironmentName,
-        @Nullable Output<String> location,
-        @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties,
-        Output<String> resourceGroup,
-        @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.identity = identity;
-        this.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
-        this.location = location;
-        this.properties = properties;
-        this.resourceGroup = Objects.requireNonNull(resourceGroup, "expected parameter 'resourceGroup' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private IntegrationServiceEnvironmentArgs() {}
 
-    private IntegrationServiceEnvironmentArgs() {
-        this.identity = Codegen.empty();
-        this.integrationServiceEnvironmentName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IntegrationServiceEnvironmentArgs(IntegrationServiceEnvironmentArgs $) {
+        this.identity = $.identity;
+        this.integrationServiceEnvironmentName = $.integrationServiceEnvironmentName;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.resourceGroup = $.resourceGroup;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationServiceEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ManagedServiceIdentityArgs> identity;
-        private @Nullable Output<String> integrationServiceEnvironmentName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties;
-        private Output<String> resourceGroup;
-        private @Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private IntegrationServiceEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationServiceEnvironmentArgs();
         }
 
         public Builder(IntegrationServiceEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identity = defaults.identity;
-    	      this.integrationServiceEnvironmentName = defaults.integrationServiceEnvironmentName;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new IntegrationServiceEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ManagedServiceIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder integrationServiceEnvironmentName(@Nullable Output<String> integrationServiceEnvironmentName) {
-            this.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
+            $.integrationServiceEnvironmentName = integrationServiceEnvironmentName;
             return this;
         }
-        public Builder integrationServiceEnvironmentName(@Nullable String integrationServiceEnvironmentName) {
-            this.integrationServiceEnvironmentName = Codegen.ofNullable(integrationServiceEnvironmentName);
-            return this;
+
+        public Builder integrationServiceEnvironmentName(String integrationServiceEnvironmentName) {
+            return integrationServiceEnvironmentName(Output.of(integrationServiceEnvironmentName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<IntegrationServiceEnvironmentPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable IntegrationServiceEnvironmentPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(IntegrationServiceEnvironmentPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroup(Output<String> resourceGroup) {
-            this.resourceGroup = Objects.requireNonNull(resourceGroup);
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
-            return this;
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder sku(@Nullable Output<IntegrationServiceEnvironmentSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable IntegrationServiceEnvironmentSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(IntegrationServiceEnvironmentSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public IntegrationServiceEnvironmentArgs build() {
-            return new IntegrationServiceEnvironmentArgs(identity, integrationServiceEnvironmentName, location, properties, resourceGroup, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public IntegrationServiceEnvironmentArgs build() {
+            $.resourceGroup = Objects.requireNonNull($.resourceGroup, "expected parameter 'resourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

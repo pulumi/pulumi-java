@@ -19,10 +19,10 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class TransitGatewayPeeringAttachmentPeeringAttachmentStatus extend
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
-    public TransitGatewayPeeringAttachmentPeeringAttachmentStatus(
-        @Nullable String code,
-        @Nullable String message) {
-        this.code = code;
-        this.message = message;
-    }
+    private TransitGatewayPeeringAttachmentPeeringAttachmentStatus() {}
 
-    private TransitGatewayPeeringAttachmentPeeringAttachmentStatus() {
-        this.code = null;
-        this.message = null;
+    private TransitGatewayPeeringAttachmentPeeringAttachmentStatus(TransitGatewayPeeringAttachmentPeeringAttachmentStatus $) {
+        this.code = $.code;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayPeeringAttachmentPeeringAttachmentStatus defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
-        private @Nullable String message;
+        private TransitGatewayPeeringAttachmentPeeringAttachmentStatus $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayPeeringAttachmentPeeringAttachmentStatus();
         }
 
         public Builder(TransitGatewayPeeringAttachmentPeeringAttachmentStatus defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
+            $ = new TransitGatewayPeeringAttachmentPeeringAttachmentStatus(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
-        }        public TransitGatewayPeeringAttachmentPeeringAttachmentStatus build() {
-            return new TransitGatewayPeeringAttachmentPeeringAttachmentStatus(code, message);
+        }
+
+        public TransitGatewayPeeringAttachmentPeeringAttachmentStatus build() {
+            return $;
         }
     }
+
 }

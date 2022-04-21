@@ -25,10 +25,10 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<InstanceViewStatusResponse> statuses;
+    private @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<InstanceViewStatusResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
      * 
      */
     @Import(name="substatuses")
-      private final @Nullable List<InstanceViewStatusResponse> substatuses;
+    private @Nullable List<InstanceViewStatusResponse> substatuses;
 
-    public List<InstanceViewStatusResponse> substatuses() {
-        return this.substatuses == null ? List.of() : this.substatuses;
+    public Optional<List<InstanceViewStatusResponse>> substatuses() {
+        return Optional.ofNullable(this.substatuses);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -69,88 +69,76 @@ public final class VirtualMachineExtensionInstanceViewResponse extends com.pulum
      * 
      */
     @Import(name="typeHandlerVersion")
-      private final @Nullable String typeHandlerVersion;
+    private @Nullable String typeHandlerVersion;
 
     public Optional<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Optional.empty() : Optional.ofNullable(this.typeHandlerVersion);
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
-    public VirtualMachineExtensionInstanceViewResponse(
-        @Nullable String name,
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable List<InstanceViewStatusResponse> substatuses,
-        @Nullable String type,
-        @Nullable String typeHandlerVersion) {
-        this.name = name;
-        this.statuses = statuses;
-        this.substatuses = substatuses;
-        this.type = type;
-        this.typeHandlerVersion = typeHandlerVersion;
-    }
+    private VirtualMachineExtensionInstanceViewResponse() {}
 
-    private VirtualMachineExtensionInstanceViewResponse() {
-        this.name = null;
-        this.statuses = List.of();
-        this.substatuses = List.of();
-        this.type = null;
-        this.typeHandlerVersion = null;
+    private VirtualMachineExtensionInstanceViewResponse(VirtualMachineExtensionInstanceViewResponse $) {
+        this.name = $.name;
+        this.statuses = $.statuses;
+        this.substatuses = $.substatuses;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineExtensionInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable List<InstanceViewStatusResponse> statuses;
-        private @Nullable List<InstanceViewStatusResponse> substatuses;
-        private @Nullable String type;
-        private @Nullable String typeHandlerVersion;
+        private VirtualMachineExtensionInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineExtensionInstanceViewResponse();
         }
 
         public Builder(VirtualMachineExtensionInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.statuses = defaults.statuses;
-    	      this.substatuses = defaults.substatuses;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new VirtualMachineExtensionInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
         }
+
         public Builder substatuses(@Nullable List<InstanceViewStatusResponse> substatuses) {
-            this.substatuses = substatuses;
+            $.substatuses = substatuses;
             return this;
         }
+
         public Builder substatuses(InstanceViewStatusResponse... substatuses) {
             return substatuses(List.of(substatuses));
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }        public VirtualMachineExtensionInstanceViewResponse build() {
-            return new VirtualMachineExtensionInstanceViewResponse(name, statuses, substatuses, type, typeHandlerVersion);
+        }
+
+        public VirtualMachineExtensionInstanceViewResponse build() {
+            return $;
         }
     }
+
 }

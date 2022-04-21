@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
      * 
      */
     @Import(name="additionalCases", required=true)
-      private final GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases;
+    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases;
 
     public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases() {
         return this.additionalCases;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
      * 
      */
     @Import(name="message", required=true)
-      private final GoogleCloudDialogflowCxV3ResponseMessageResponse message;
+    private GoogleCloudDialogflowCxV3ResponseMessageResponse message;
 
     public GoogleCloudDialogflowCxV3ResponseMessageResponse message() {
         return this.message;
     }
 
-    public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse(
-        GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases,
-        GoogleCloudDialogflowCxV3ResponseMessageResponse message) {
-        this.additionalCases = Objects.requireNonNull(additionalCases, "expected parameter 'additionalCases' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse() {}
 
-    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse() {
-        this.additionalCases = null;
-        this.message = null;
+    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse $) {
+        this.additionalCases = $.additionalCases;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases;
-        private GoogleCloudDialogflowCxV3ResponseMessageResponse message;
+        private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalCases = defaults.additionalCases;
-    	      this.message = defaults.message;
+            $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse additionalCases) {
-            this.additionalCases = Objects.requireNonNull(additionalCases);
+            $.additionalCases = additionalCases;
             return this;
         }
+
         public Builder message(GoogleCloudDialogflowCxV3ResponseMessageResponse message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse build() {
-            return new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse(additionalCases, message);
+        }
+
+        public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentResponse build() {
+            $.additionalCases = Objects.requireNonNull($.additionalCases, "expected parameter 'additionalCases' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

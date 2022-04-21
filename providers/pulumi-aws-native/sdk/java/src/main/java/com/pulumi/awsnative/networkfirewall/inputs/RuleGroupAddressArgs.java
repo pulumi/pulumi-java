@@ -5,7 +5,6 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class RuleGroupAddressArgs extends com.pulumi.resources.ResourceArg
     public static final RuleGroupAddressArgs Empty = new RuleGroupAddressArgs();
 
     @Import(name="addressDefinition", required=true)
-      private final Output<String> addressDefinition;
+    private Output<String> addressDefinition;
 
     public Output<String> addressDefinition() {
         return this.addressDefinition;
     }
 
-    public RuleGroupAddressArgs(Output<String> addressDefinition) {
-        this.addressDefinition = Objects.requireNonNull(addressDefinition, "expected parameter 'addressDefinition' to be non-null");
-    }
+    private RuleGroupAddressArgs() {}
 
-    private RuleGroupAddressArgs() {
-        this.addressDefinition = Codegen.empty();
+    private RuleGroupAddressArgs(RuleGroupAddressArgs $) {
+        this.addressDefinition = $.addressDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> addressDefinition;
+        private RuleGroupAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupAddressArgs();
         }
 
         public Builder(RuleGroupAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressDefinition = defaults.addressDefinition;
+            $ = new RuleGroupAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressDefinition(Output<String> addressDefinition) {
-            this.addressDefinition = Objects.requireNonNull(addressDefinition);
+            $.addressDefinition = addressDefinition;
             return this;
         }
+
         public Builder addressDefinition(String addressDefinition) {
-            this.addressDefinition = Output.of(Objects.requireNonNull(addressDefinition));
-            return this;
-        }        public RuleGroupAddressArgs build() {
-            return new RuleGroupAddressArgs(addressDefinition);
+            return addressDefinition(Output.of(addressDefinition));
+        }
+
+        public RuleGroupAddressArgs build() {
+            $.addressDefinition = Objects.requireNonNull($.addressDefinition, "expected parameter 'addressDefinition' to be non-null");
+            return $;
         }
     }
+
 }

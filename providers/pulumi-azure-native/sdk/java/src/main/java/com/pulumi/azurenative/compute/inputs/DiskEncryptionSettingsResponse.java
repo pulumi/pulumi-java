@@ -25,10 +25,10 @@ public final class DiskEncryptionSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="diskEncryptionKey")
-      private final @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey;
+    private @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey;
 
     public Optional<KeyVaultSecretReferenceResponse> diskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionKey);
+        return Optional.ofNullable(this.diskEncryptionKey);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DiskEncryptionSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class DiskEncryptionSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="keyEncryptionKey")
-      private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
+    private @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
     public Optional<KeyVaultKeyReferenceResponse> keyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
+        return Optional.ofNullable(this.keyEncryptionKey);
     }
 
-    public DiskEncryptionSettingsResponse(
-        @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey,
-        @Nullable Boolean enabled,
-        @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
-        this.diskEncryptionKey = diskEncryptionKey;
-        this.enabled = enabled;
-        this.keyEncryptionKey = keyEncryptionKey;
-    }
+    private DiskEncryptionSettingsResponse() {}
 
-    private DiskEncryptionSettingsResponse() {
-        this.diskEncryptionKey = null;
-        this.enabled = null;
-        this.keyEncryptionKey = null;
+    private DiskEncryptionSettingsResponse(DiskEncryptionSettingsResponse $) {
+        this.diskEncryptionKey = $.diskEncryptionKey;
+        this.enabled = $.enabled;
+        this.keyEncryptionKey = $.keyEncryptionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable KeyVaultSecretReferenceResponse diskEncryptionKey;
-        private @Nullable Boolean enabled;
-        private @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
+        private DiskEncryptionSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionSettingsResponse();
         }
 
         public Builder(DiskEncryptionSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.enabled = defaults.enabled;
-    	      this.keyEncryptionKey = defaults.keyEncryptionKey;
+            $ = new DiskEncryptionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionKey(@Nullable KeyVaultSecretReferenceResponse diskEncryptionKey) {
-            this.diskEncryptionKey = diskEncryptionKey;
+            $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
-            this.keyEncryptionKey = keyEncryptionKey;
+            $.keyEncryptionKey = keyEncryptionKey;
             return this;
-        }        public DiskEncryptionSettingsResponse build() {
-            return new DiskEncryptionSettingsResponse(diskEncryptionKey, enabled, keyEncryptionKey);
+        }
+
+        public DiskEncryptionSettingsResponse build() {
+            return $;
         }
     }
+
 }

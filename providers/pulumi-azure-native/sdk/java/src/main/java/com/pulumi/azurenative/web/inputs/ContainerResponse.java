@@ -26,10 +26,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="args")
-      private final @Nullable List<String> args;
+    private @Nullable List<String> args;
 
-    public List<String> args() {
-        return this.args == null ? List.of() : this.args;
+    public Optional<List<String>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable List<String> command;
+    private @Nullable List<String> command;
 
-    public List<String> command() {
-        return this.command == null ? List.of() : this.command;
+    public Optional<List<String>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="env")
-      private final @Nullable List<EnvironmentVarResponse> env;
+    private @Nullable List<EnvironmentVarResponse> env;
 
-    public List<EnvironmentVarResponse> env() {
-        return this.env == null ? List.of() : this.env;
+    public Optional<List<EnvironmentVarResponse>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable String image;
+    private @Nullable String image;
 
     public Optional<String> image() {
-        return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,100 +81,86 @@ public final class ContainerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resources")
-      private final @Nullable ContainerResourcesResponse resources;
+    private @Nullable ContainerResourcesResponse resources;
 
     public Optional<ContainerResourcesResponse> resources() {
-        return this.resources == null ? Optional.empty() : Optional.ofNullable(this.resources);
+        return Optional.ofNullable(this.resources);
     }
 
-    public ContainerResponse(
-        @Nullable List<String> args,
-        @Nullable List<String> command,
-        @Nullable List<EnvironmentVarResponse> env,
-        @Nullable String image,
-        @Nullable String name,
-        @Nullable ContainerResourcesResponse resources) {
-        this.args = args;
-        this.command = command;
-        this.env = env;
-        this.image = image;
-        this.name = name;
-        this.resources = resources;
-    }
+    private ContainerResponse() {}
 
-    private ContainerResponse() {
-        this.args = List.of();
-        this.command = List.of();
-        this.env = List.of();
-        this.image = null;
-        this.name = null;
-        this.resources = null;
+    private ContainerResponse(ContainerResponse $) {
+        this.args = $.args;
+        this.command = $.command;
+        this.env = $.env;
+        this.image = $.image;
+        this.name = $.name;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> args;
-        private @Nullable List<String> command;
-        private @Nullable List<EnvironmentVarResponse> env;
-        private @Nullable String image;
-        private @Nullable String name;
-        private @Nullable ContainerResourcesResponse resources;
+        private ContainerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerResponse();
         }
 
         public Builder(ContainerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.command = defaults.command;
-    	      this.env = defaults.env;
-    	      this.image = defaults.image;
-    	      this.name = defaults.name;
-    	      this.resources = defaults.resources;
+            $ = new ContainerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder command(@Nullable List<String> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder env(@Nullable List<EnvironmentVarResponse> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
+
         public Builder env(EnvironmentVarResponse... env) {
             return env(List.of(env));
         }
+
         public Builder image(@Nullable String image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder resources(@Nullable ContainerResourcesResponse resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
-        }        public ContainerResponse build() {
-            return new ContainerResponse(args, command, env, image, name, resources);
+        }
+
+        public ContainerResponse build() {
+            return $;
         }
     }
+
 }

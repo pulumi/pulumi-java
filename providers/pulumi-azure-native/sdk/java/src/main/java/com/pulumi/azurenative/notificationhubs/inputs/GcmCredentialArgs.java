@@ -5,9 +5,9 @@ package com.pulumi.azurenative.notificationhubs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GcmCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcmEndpoint")
-      private final @Nullable Output<String> gcmEndpoint;
+    private @Nullable Output<String> gcmEndpoint;
 
-    public Output<String> gcmEndpoint() {
-        return this.gcmEndpoint == null ? Codegen.empty() : this.gcmEndpoint;
+    public Optional<Output<String>> gcmEndpoint() {
+        return Optional.ofNullable(this.gcmEndpoint);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GcmCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="googleApiKey")
-      private final @Nullable Output<String> googleApiKey;
+    private @Nullable Output<String> googleApiKey;
 
-    public Output<String> googleApiKey() {
-        return this.googleApiKey == null ? Codegen.empty() : this.googleApiKey;
+    public Optional<Output<String>> googleApiKey() {
+        return Optional.ofNullable(this.googleApiKey);
     }
 
-    public GcmCredentialArgs(
-        @Nullable Output<String> gcmEndpoint,
-        @Nullable Output<String> googleApiKey) {
-        this.gcmEndpoint = gcmEndpoint;
-        this.googleApiKey = googleApiKey;
-    }
+    private GcmCredentialArgs() {}
 
-    private GcmCredentialArgs() {
-        this.gcmEndpoint = Codegen.empty();
-        this.googleApiKey = Codegen.empty();
+    private GcmCredentialArgs(GcmCredentialArgs $) {
+        this.gcmEndpoint = $.gcmEndpoint;
+        this.googleApiKey = $.googleApiKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcmCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gcmEndpoint;
-        private @Nullable Output<String> googleApiKey;
+        private GcmCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcmCredentialArgs();
         }
 
         public Builder(GcmCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcmEndpoint = defaults.gcmEndpoint;
-    	      this.googleApiKey = defaults.googleApiKey;
+            $ = new GcmCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcmEndpoint(@Nullable Output<String> gcmEndpoint) {
-            this.gcmEndpoint = gcmEndpoint;
+            $.gcmEndpoint = gcmEndpoint;
             return this;
         }
-        public Builder gcmEndpoint(@Nullable String gcmEndpoint) {
-            this.gcmEndpoint = Codegen.ofNullable(gcmEndpoint);
-            return this;
+
+        public Builder gcmEndpoint(String gcmEndpoint) {
+            return gcmEndpoint(Output.of(gcmEndpoint));
         }
+
         public Builder googleApiKey(@Nullable Output<String> googleApiKey) {
-            this.googleApiKey = googleApiKey;
+            $.googleApiKey = googleApiKey;
             return this;
         }
-        public Builder googleApiKey(@Nullable String googleApiKey) {
-            this.googleApiKey = Codegen.ofNullable(googleApiKey);
-            return this;
-        }        public GcmCredentialArgs build() {
-            return new GcmCredentialArgs(gcmEndpoint, googleApiKey);
+
+        public Builder googleApiKey(String googleApiKey) {
+            return googleApiKey(Output.of(googleApiKey));
+        }
+
+        public GcmCredentialArgs build() {
+            return $;
         }
     }
+
 }

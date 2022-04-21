@@ -5,11 +5,11 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class QueryParameterValueArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arrayValues")
-      private final @Nullable Output<List<QueryParameterValueArgs>> arrayValues;
+    private @Nullable Output<List<QueryParameterValueArgs>> arrayValues;
 
-    public Output<List<QueryParameterValueArgs>> arrayValues() {
-        return this.arrayValues == null ? Codegen.empty() : this.arrayValues;
+    public Optional<Output<List<QueryParameterValueArgs>>> arrayValues() {
+        return Optional.ofNullable(this.arrayValues);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class QueryParameterValueArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="structValues")
-      private final @Nullable Output<Map<String,String>> structValues;
+    private @Nullable Output<Map<String,String>> structValues;
 
-    public Output<Map<String,String>> structValues() {
-        return this.structValues == null ? Codegen.empty() : this.structValues;
+    public Optional<Output<Map<String,String>>> structValues() {
+        return Optional.ofNullable(this.structValues);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class QueryParameterValueArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public QueryParameterValueArgs(
-        @Nullable Output<List<QueryParameterValueArgs>> arrayValues,
-        @Nullable Output<Map<String,String>> structValues,
-        @Nullable Output<String> value) {
-        this.arrayValues = arrayValues;
-        this.structValues = structValues;
-        this.value = value;
-    }
+    private QueryParameterValueArgs() {}
 
-    private QueryParameterValueArgs() {
-        this.arrayValues = Codegen.empty();
-        this.structValues = Codegen.empty();
-        this.value = Codegen.empty();
+    private QueryParameterValueArgs(QueryParameterValueArgs $) {
+        this.arrayValues = $.arrayValues;
+        this.structValues = $.structValues;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryParameterValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<QueryParameterValueArgs>> arrayValues;
-        private @Nullable Output<Map<String,String>> structValues;
-        private @Nullable Output<String> value;
+        private QueryParameterValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryParameterValueArgs();
         }
 
         public Builder(QueryParameterValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arrayValues = defaults.arrayValues;
-    	      this.structValues = defaults.structValues;
-    	      this.value = defaults.value;
+            $ = new QueryParameterValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arrayValues(@Nullable Output<List<QueryParameterValueArgs>> arrayValues) {
-            this.arrayValues = arrayValues;
+            $.arrayValues = arrayValues;
             return this;
         }
-        public Builder arrayValues(@Nullable List<QueryParameterValueArgs> arrayValues) {
-            this.arrayValues = Codegen.ofNullable(arrayValues);
-            return this;
+
+        public Builder arrayValues(List<QueryParameterValueArgs> arrayValues) {
+            return arrayValues(Output.of(arrayValues));
         }
+
         public Builder arrayValues(QueryParameterValueArgs... arrayValues) {
             return arrayValues(List.of(arrayValues));
         }
+
         public Builder structValues(@Nullable Output<Map<String,String>> structValues) {
-            this.structValues = structValues;
+            $.structValues = structValues;
             return this;
         }
-        public Builder structValues(@Nullable Map<String,String> structValues) {
-            this.structValues = Codegen.ofNullable(structValues);
-            return this;
+
+        public Builder structValues(Map<String,String> structValues) {
+            return structValues(Output.of(structValues));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public QueryParameterValueArgs build() {
-            return new QueryParameterValueArgs(arrayValues, structValues, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public QueryParameterValueArgs build() {
+            return $;
         }
     }
+
 }

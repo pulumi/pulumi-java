@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RouterBgpAdvertisedIpRangeGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RouterBgpGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertiseMode")
-      private final @Nullable Output<String> advertiseMode;
+    private @Nullable Output<String> advertiseMode;
 
-    public Output<String> advertiseMode() {
-        return this.advertiseMode == null ? Codegen.empty() : this.advertiseMode;
+    public Optional<Output<String>> advertiseMode() {
+        return Optional.ofNullable(this.advertiseMode);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RouterBgpGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertisedGroups")
-      private final @Nullable Output<List<String>> advertisedGroups;
+    private @Nullable Output<List<String>> advertisedGroups;
 
-    public Output<List<String>> advertisedGroups() {
-        return this.advertisedGroups == null ? Codegen.empty() : this.advertisedGroups;
+    public Optional<Output<List<String>>> advertisedGroups() {
+        return Optional.ofNullable(this.advertisedGroups);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RouterBgpGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertisedIpRanges")
-      private final @Nullable Output<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges;
+    private @Nullable Output<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges;
 
-    public Output<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges() {
-        return this.advertisedIpRanges == null ? Codegen.empty() : this.advertisedIpRanges;
+    public Optional<Output<List<RouterBgpAdvertisedIpRangeGetArgs>>> advertisedIpRanges() {
+        return Optional.ofNullable(this.advertisedIpRanges);
     }
 
     /**
@@ -71,95 +71,87 @@ public final class RouterBgpGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="asn", required=true)
-      private final Output<Integer> asn;
+    private Output<Integer> asn;
 
     public Output<Integer> asn() {
         return this.asn;
     }
 
-    public RouterBgpGetArgs(
-        @Nullable Output<String> advertiseMode,
-        @Nullable Output<List<String>> advertisedGroups,
-        @Nullable Output<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges,
-        Output<Integer> asn) {
-        this.advertiseMode = advertiseMode;
-        this.advertisedGroups = advertisedGroups;
-        this.advertisedIpRanges = advertisedIpRanges;
-        this.asn = Objects.requireNonNull(asn, "expected parameter 'asn' to be non-null");
-    }
+    private RouterBgpGetArgs() {}
 
-    private RouterBgpGetArgs() {
-        this.advertiseMode = Codegen.empty();
-        this.advertisedGroups = Codegen.empty();
-        this.advertisedIpRanges = Codegen.empty();
-        this.asn = Codegen.empty();
+    private RouterBgpGetArgs(RouterBgpGetArgs $) {
+        this.advertiseMode = $.advertiseMode;
+        this.advertisedGroups = $.advertisedGroups;
+        this.advertisedIpRanges = $.advertisedIpRanges;
+        this.asn = $.asn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterBgpGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> advertiseMode;
-        private @Nullable Output<List<String>> advertisedGroups;
-        private @Nullable Output<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges;
-        private Output<Integer> asn;
+        private RouterBgpGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterBgpGetArgs();
         }
 
         public Builder(RouterBgpGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advertiseMode = defaults.advertiseMode;
-    	      this.advertisedGroups = defaults.advertisedGroups;
-    	      this.advertisedIpRanges = defaults.advertisedIpRanges;
-    	      this.asn = defaults.asn;
+            $ = new RouterBgpGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advertiseMode(@Nullable Output<String> advertiseMode) {
-            this.advertiseMode = advertiseMode;
+            $.advertiseMode = advertiseMode;
             return this;
         }
-        public Builder advertiseMode(@Nullable String advertiseMode) {
-            this.advertiseMode = Codegen.ofNullable(advertiseMode);
-            return this;
+
+        public Builder advertiseMode(String advertiseMode) {
+            return advertiseMode(Output.of(advertiseMode));
         }
+
         public Builder advertisedGroups(@Nullable Output<List<String>> advertisedGroups) {
-            this.advertisedGroups = advertisedGroups;
+            $.advertisedGroups = advertisedGroups;
             return this;
         }
-        public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
-            this.advertisedGroups = Codegen.ofNullable(advertisedGroups);
-            return this;
+
+        public Builder advertisedGroups(List<String> advertisedGroups) {
+            return advertisedGroups(Output.of(advertisedGroups));
         }
+
         public Builder advertisedGroups(String... advertisedGroups) {
             return advertisedGroups(List.of(advertisedGroups));
         }
+
         public Builder advertisedIpRanges(@Nullable Output<List<RouterBgpAdvertisedIpRangeGetArgs>> advertisedIpRanges) {
-            this.advertisedIpRanges = advertisedIpRanges;
+            $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
-        public Builder advertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRangeGetArgs> advertisedIpRanges) {
-            this.advertisedIpRanges = Codegen.ofNullable(advertisedIpRanges);
-            return this;
+
+        public Builder advertisedIpRanges(List<RouterBgpAdvertisedIpRangeGetArgs> advertisedIpRanges) {
+            return advertisedIpRanges(Output.of(advertisedIpRanges));
         }
+
         public Builder advertisedIpRanges(RouterBgpAdvertisedIpRangeGetArgs... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
+
         public Builder asn(Output<Integer> asn) {
-            this.asn = Objects.requireNonNull(asn);
+            $.asn = asn;
             return this;
         }
+
         public Builder asn(Integer asn) {
-            this.asn = Output.of(Objects.requireNonNull(asn));
-            return this;
-        }        public RouterBgpGetArgs build() {
-            return new RouterBgpGetArgs(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
+            return asn(Output.of(asn));
+        }
+
+        public RouterBgpGetArgs build() {
+            $.asn = Objects.requireNonNull($.asn, "expected parameter 'asn' to be non-null");
+            return $;
         }
     }
+
 }

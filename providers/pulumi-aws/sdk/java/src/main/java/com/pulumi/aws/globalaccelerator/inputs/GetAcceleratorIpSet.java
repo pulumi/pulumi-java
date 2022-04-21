@@ -14,65 +14,63 @@ public final class GetAcceleratorIpSet extends com.pulumi.resources.InvokeArgs {
     public static final GetAcceleratorIpSet Empty = new GetAcceleratorIpSet();
 
     @Import(name="ipAddresses", required=true)
-      private final List<String> ipAddresses;
+    private List<String> ipAddresses;
 
     public List<String> ipAddresses() {
         return this.ipAddresses;
     }
 
     @Import(name="ipFamily", required=true)
-      private final String ipFamily;
+    private String ipFamily;
 
     public String ipFamily() {
         return this.ipFamily;
     }
 
-    public GetAcceleratorIpSet(
-        List<String> ipAddresses,
-        String ipFamily) {
-        this.ipAddresses = Objects.requireNonNull(ipAddresses, "expected parameter 'ipAddresses' to be non-null");
-        this.ipFamily = Objects.requireNonNull(ipFamily, "expected parameter 'ipFamily' to be non-null");
-    }
+    private GetAcceleratorIpSet() {}
 
-    private GetAcceleratorIpSet() {
-        this.ipAddresses = List.of();
-        this.ipFamily = null;
+    private GetAcceleratorIpSet(GetAcceleratorIpSet $) {
+        this.ipAddresses = $.ipAddresses;
+        this.ipFamily = $.ipFamily;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAcceleratorIpSet defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> ipAddresses;
-        private String ipFamily;
+        private GetAcceleratorIpSet $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAcceleratorIpSet();
         }
 
         public Builder(GetAcceleratorIpSet defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.ipFamily = defaults.ipFamily;
+            $ = new GetAcceleratorIpSet(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddresses(List<String> ipAddresses) {
-            this.ipAddresses = Objects.requireNonNull(ipAddresses);
+            $.ipAddresses = ipAddresses;
             return this;
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder ipFamily(String ipFamily) {
-            this.ipFamily = Objects.requireNonNull(ipFamily);
+            $.ipFamily = ipFamily;
             return this;
-        }        public GetAcceleratorIpSet build() {
-            return new GetAcceleratorIpSet(ipAddresses, ipFamily);
+        }
+
+        public GetAcceleratorIpSet build() {
+            $.ipAddresses = Objects.requireNonNull($.ipAddresses, "expected parameter 'ipAddresses' to be non-null");
+            $.ipFamily = Objects.requireNonNull($.ipFamily, "expected parameter 'ipFamily' to be non-null");
+            return $;
         }
     }
+
 }

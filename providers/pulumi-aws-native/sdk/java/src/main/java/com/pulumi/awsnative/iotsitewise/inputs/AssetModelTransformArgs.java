@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iotsitewise.inputs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetModelExpressionVariableArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class AssetModelTransformArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="expression", required=true)
-      private final Output<String> expression;
+    private Output<String> expression;
 
     public Output<String> expression() {
         return this.expression;
@@ -32,66 +31,64 @@ public final class AssetModelTransformArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="variables", required=true)
-      private final Output<List<AssetModelExpressionVariableArgs>> variables;
+    private Output<List<AssetModelExpressionVariableArgs>> variables;
 
     public Output<List<AssetModelExpressionVariableArgs>> variables() {
         return this.variables;
     }
 
-    public AssetModelTransformArgs(
-        Output<String> expression,
-        Output<List<AssetModelExpressionVariableArgs>> variables) {
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.variables = Objects.requireNonNull(variables, "expected parameter 'variables' to be non-null");
-    }
+    private AssetModelTransformArgs() {}
 
-    private AssetModelTransformArgs() {
-        this.expression = Codegen.empty();
-        this.variables = Codegen.empty();
+    private AssetModelTransformArgs(AssetModelTransformArgs $) {
+        this.expression = $.expression;
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelTransformArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> expression;
-        private Output<List<AssetModelExpressionVariableArgs>> variables;
+        private AssetModelTransformArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelTransformArgs();
         }
 
         public Builder(AssetModelTransformArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expression = defaults.expression;
-    	      this.variables = defaults.variables;
+            $ = new AssetModelTransformArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expression(Output<String> expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Output.of(Objects.requireNonNull(expression));
-            return this;
+            return expression(Output.of(expression));
         }
+
         public Builder variables(Output<List<AssetModelExpressionVariableArgs>> variables) {
-            this.variables = Objects.requireNonNull(variables);
+            $.variables = variables;
             return this;
         }
+
         public Builder variables(List<AssetModelExpressionVariableArgs> variables) {
-            this.variables = Output.of(Objects.requireNonNull(variables));
-            return this;
+            return variables(Output.of(variables));
         }
+
         public Builder variables(AssetModelExpressionVariableArgs... variables) {
             return variables(List.of(variables));
-        }        public AssetModelTransformArgs build() {
-            return new AssetModelTransformArgs(expression, variables);
+        }
+
+        public AssetModelTransformArgs build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.variables = Objects.requireNonNull($.variables, "expected parameter 'variables' to be non-null");
+            return $;
         }
     }
+
 }

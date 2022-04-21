@@ -5,10 +5,10 @@ package com.pulumi.aws.pinpoint;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class AdmChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -32,7 +32,7 @@ public final class AdmChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -43,7 +43,7 @@ public final class AdmChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientSecret", required=true)
-      private final Output<String> clientSecret;
+    private Output<String> clientSecret;
 
     public Output<String> clientSecret() {
         return this.clientSecret;
@@ -54,89 +54,81 @@ public final class AdmChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public AdmChannelArgs(
-        Output<String> applicationId,
-        Output<String> clientId,
-        Output<String> clientSecret,
-        @Nullable Output<Boolean> enabled) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
-        this.enabled = enabled;
-    }
+    private AdmChannelArgs() {}
 
-    private AdmChannelArgs() {
-        this.applicationId = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private AdmChannelArgs(AdmChannelArgs $) {
+        this.applicationId = $.applicationId;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdmChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationId;
-        private Output<String> clientId;
-        private Output<String> clientSecret;
-        private @Nullable Output<Boolean> enabled;
+        private AdmChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdmChannelArgs();
         }
 
         public Builder(AdmChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.enabled = defaults.enabled;
+            $ = new AdmChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(Output<String> clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
-            return this;
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public AdmChannelArgs build() {
-            return new AdmChannelArgs(applicationId, clientId, clientSecret, enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public AdmChannelArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
+            return $;
         }
     }
+
 }

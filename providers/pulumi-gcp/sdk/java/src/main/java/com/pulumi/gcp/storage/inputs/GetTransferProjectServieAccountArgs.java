@@ -19,45 +19,44 @@ public final class GetTransferProjectServieAccountArgs extends com.pulumi.resour
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetTransferProjectServieAccountArgs(@Nullable String project) {
-        this.project = project;
-    }
+    private GetTransferProjectServieAccountArgs() {}
 
-    private GetTransferProjectServieAccountArgs() {
-        this.project = null;
+    private GetTransferProjectServieAccountArgs(GetTransferProjectServieAccountArgs $) {
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransferProjectServieAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
+        private GetTransferProjectServieAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransferProjectServieAccountArgs();
         }
 
         public Builder(GetTransferProjectServieAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
+            $ = new GetTransferProjectServieAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetTransferProjectServieAccountArgs build() {
-            return new GetTransferProjectServieAccountArgs(project);
+        }
+
+        public GetTransferProjectServieAccountArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.awsnative.s3.inputs.StorageLensActivityMetricsArgs;
 import com.pulumi.awsnative.s3.inputs.StorageLensPrefixLevelArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class StorageLensBucketLevelArgs extends com.pulumi.resources.Resou
     public static final StorageLensBucketLevelArgs Empty = new StorageLensBucketLevelArgs();
 
     @Import(name="activityMetrics")
-      private final @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
+    private @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
 
-    public Output<StorageLensActivityMetricsArgs> activityMetrics() {
-        return this.activityMetrics == null ? Codegen.empty() : this.activityMetrics;
+    public Optional<Output<StorageLensActivityMetricsArgs>> activityMetrics() {
+        return Optional.ofNullable(this.activityMetrics);
     }
 
     @Import(name="prefixLevel")
-      private final @Nullable Output<StorageLensPrefixLevelArgs> prefixLevel;
+    private @Nullable Output<StorageLensPrefixLevelArgs> prefixLevel;
 
-    public Output<StorageLensPrefixLevelArgs> prefixLevel() {
-        return this.prefixLevel == null ? Codegen.empty() : this.prefixLevel;
+    public Optional<Output<StorageLensPrefixLevelArgs>> prefixLevel() {
+        return Optional.ofNullable(this.prefixLevel);
     }
 
-    public StorageLensBucketLevelArgs(
-        @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics,
-        @Nullable Output<StorageLensPrefixLevelArgs> prefixLevel) {
-        this.activityMetrics = activityMetrics;
-        this.prefixLevel = prefixLevel;
-    }
+    private StorageLensBucketLevelArgs() {}
 
-    private StorageLensBucketLevelArgs() {
-        this.activityMetrics = Codegen.empty();
-        this.prefixLevel = Codegen.empty();
+    private StorageLensBucketLevelArgs(StorageLensBucketLevelArgs $) {
+        this.activityMetrics = $.activityMetrics;
+        this.prefixLevel = $.prefixLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensBucketLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
-        private @Nullable Output<StorageLensPrefixLevelArgs> prefixLevel;
+        private StorageLensBucketLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensBucketLevelArgs();
         }
 
         public Builder(StorageLensBucketLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activityMetrics = defaults.activityMetrics;
-    	      this.prefixLevel = defaults.prefixLevel;
+            $ = new StorageLensBucketLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activityMetrics(@Nullable Output<StorageLensActivityMetricsArgs> activityMetrics) {
-            this.activityMetrics = activityMetrics;
+            $.activityMetrics = activityMetrics;
             return this;
         }
-        public Builder activityMetrics(@Nullable StorageLensActivityMetricsArgs activityMetrics) {
-            this.activityMetrics = Codegen.ofNullable(activityMetrics);
-            return this;
+
+        public Builder activityMetrics(StorageLensActivityMetricsArgs activityMetrics) {
+            return activityMetrics(Output.of(activityMetrics));
         }
+
         public Builder prefixLevel(@Nullable Output<StorageLensPrefixLevelArgs> prefixLevel) {
-            this.prefixLevel = prefixLevel;
+            $.prefixLevel = prefixLevel;
             return this;
         }
-        public Builder prefixLevel(@Nullable StorageLensPrefixLevelArgs prefixLevel) {
-            this.prefixLevel = Codegen.ofNullable(prefixLevel);
-            return this;
-        }        public StorageLensBucketLevelArgs build() {
-            return new StorageLensBucketLevelArgs(activityMetrics, prefixLevel);
+
+        public Builder prefixLevel(StorageLensPrefixLevelArgs prefixLevel) {
+            return prefixLevel(Output.of(prefixLevel));
+        }
+
+        public StorageLensBucketLevelArgs build() {
+            return $;
         }
     }
+
 }

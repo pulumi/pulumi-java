@@ -5,9 +5,9 @@ package com.pulumi.aws.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetKeyId", required=true)
-      private final Output<String> targetKeyId;
+    private Output<String> targetKeyId;
 
     public Output<String> targetKeyId() {
         return this.targetKeyId;
     }
 
-    public AliasArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        Output<String> targetKeyId) {
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.targetKeyId = Objects.requireNonNull(targetKeyId, "expected parameter 'targetKeyId' to be non-null");
-    }
+    private AliasArgs() {}
 
-    private AliasArgs() {
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.targetKeyId = Codegen.empty();
+    private AliasArgs(AliasArgs $) {
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.targetKeyId = $.targetKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private Output<String> targetKeyId;
+        private AliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasArgs();
         }
 
         public Builder(AliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.targetKeyId = defaults.targetKeyId;
+            $ = new AliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder targetKeyId(Output<String> targetKeyId) {
-            this.targetKeyId = Objects.requireNonNull(targetKeyId);
+            $.targetKeyId = targetKeyId;
             return this;
         }
+
         public Builder targetKeyId(String targetKeyId) {
-            this.targetKeyId = Output.of(Objects.requireNonNull(targetKeyId));
-            return this;
-        }        public AliasArgs build() {
-            return new AliasArgs(name, namePrefix, targetKeyId);
+            return targetKeyId(Output.of(targetKeyId));
+        }
+
+        public AliasArgs build() {
+            $.targetKeyId = Objects.requireNonNull($.targetKeyId, "expected parameter 'targetKeyId' to be non-null");
+            return $;
         }
     }
+
 }

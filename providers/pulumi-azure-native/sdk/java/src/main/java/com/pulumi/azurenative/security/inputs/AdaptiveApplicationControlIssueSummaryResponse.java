@@ -24,10 +24,10 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends com.pu
      * 
      */
     @Import(name="issue")
-      private final @Nullable String issue;
+    private @Nullable String issue;
 
     public Optional<String> issue() {
-        return this.issue == null ? Optional.empty() : Optional.ofNullable(this.issue);
+        return Optional.ofNullable(this.issue);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends com.pu
      * 
      */
     @Import(name="numberOfVms")
-      private final @Nullable Double numberOfVms;
+    private @Nullable Double numberOfVms;
 
     public Optional<Double> numberOfVms() {
-        return this.numberOfVms == null ? Optional.empty() : Optional.ofNullable(this.numberOfVms);
+        return Optional.ofNullable(this.numberOfVms);
     }
 
-    public AdaptiveApplicationControlIssueSummaryResponse(
-        @Nullable String issue,
-        @Nullable Double numberOfVms) {
-        this.issue = issue;
-        this.numberOfVms = numberOfVms;
-    }
+    private AdaptiveApplicationControlIssueSummaryResponse() {}
 
-    private AdaptiveApplicationControlIssueSummaryResponse() {
-        this.issue = null;
-        this.numberOfVms = null;
+    private AdaptiveApplicationControlIssueSummaryResponse(AdaptiveApplicationControlIssueSummaryResponse $) {
+        this.issue = $.issue;
+        this.numberOfVms = $.numberOfVms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdaptiveApplicationControlIssueSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String issue;
-        private @Nullable Double numberOfVms;
+        private AdaptiveApplicationControlIssueSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdaptiveApplicationControlIssueSummaryResponse();
         }
 
         public Builder(AdaptiveApplicationControlIssueSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issue = defaults.issue;
-    	      this.numberOfVms = defaults.numberOfVms;
+            $ = new AdaptiveApplicationControlIssueSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder issue(@Nullable String issue) {
-            this.issue = issue;
+            $.issue = issue;
             return this;
         }
+
         public Builder numberOfVms(@Nullable Double numberOfVms) {
-            this.numberOfVms = numberOfVms;
+            $.numberOfVms = numberOfVms;
             return this;
-        }        public AdaptiveApplicationControlIssueSummaryResponse build() {
-            return new AdaptiveApplicationControlIssueSummaryResponse(issue, numberOfVms);
+        }
+
+        public AdaptiveApplicationControlIssueSummaryResponse build() {
+            return $;
         }
     }
+
 }

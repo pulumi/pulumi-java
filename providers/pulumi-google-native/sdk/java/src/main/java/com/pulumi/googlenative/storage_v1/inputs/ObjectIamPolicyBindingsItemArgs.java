@@ -5,11 +5,11 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storage_v1.inputs.ExprArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ObjectIamPolicyBindingsItemArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<ExprArgs> condition;
+    private @Nullable Output<ExprArgs> condition;
 
-    public Output<ExprArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ExprArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ObjectIamPolicyBindingsItemArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     /**
@@ -63,79 +63,72 @@ public final class ObjectIamPolicyBindingsItemArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public ObjectIamPolicyBindingsItemArgs(
-        @Nullable Output<ExprArgs> condition,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<String> role) {
-        this.condition = condition;
-        this.members = members;
-        this.role = role;
-    }
+    private ObjectIamPolicyBindingsItemArgs() {}
 
-    private ObjectIamPolicyBindingsItemArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.role = Codegen.empty();
+    private ObjectIamPolicyBindingsItemArgs(ObjectIamPolicyBindingsItemArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectIamPolicyBindingsItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExprArgs> condition;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<String> role;
+        private ObjectIamPolicyBindingsItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectIamPolicyBindingsItemArgs();
         }
 
         public Builder(ObjectIamPolicyBindingsItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
+            $ = new ObjectIamPolicyBindingsItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<ExprArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ExprArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ExprArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public ObjectIamPolicyBindingsItemArgs build() {
-            return new ObjectIamPolicyBindingsItemArgs(condition, members, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public ObjectIamPolicyBindingsItemArgs build() {
+            return $;
         }
     }
+
 }

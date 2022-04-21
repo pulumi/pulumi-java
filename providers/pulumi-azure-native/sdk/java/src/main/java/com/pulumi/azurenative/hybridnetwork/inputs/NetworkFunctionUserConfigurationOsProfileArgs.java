@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hybridnetwork.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends com.pul
      * 
      */
     @Import(name="customData")
-      private final @Nullable Output<String> customData;
+    private @Nullable Output<String> customData;
 
-    public Output<String> customData() {
-        return this.customData == null ? Codegen.empty() : this.customData;
+    public Optional<Output<String>> customData() {
+        return Optional.ofNullable(this.customData);
     }
 
-    public NetworkFunctionUserConfigurationOsProfileArgs(@Nullable Output<String> customData) {
-        this.customData = customData;
-    }
+    private NetworkFunctionUserConfigurationOsProfileArgs() {}
 
-    private NetworkFunctionUserConfigurationOsProfileArgs() {
-        this.customData = Codegen.empty();
+    private NetworkFunctionUserConfigurationOsProfileArgs(NetworkFunctionUserConfigurationOsProfileArgs $) {
+        this.customData = $.customData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkFunctionUserConfigurationOsProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customData;
+        private NetworkFunctionUserConfigurationOsProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkFunctionUserConfigurationOsProfileArgs();
         }
 
         public Builder(NetworkFunctionUserConfigurationOsProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customData = defaults.customData;
+            $ = new NetworkFunctionUserConfigurationOsProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customData(@Nullable Output<String> customData) {
-            this.customData = customData;
+            $.customData = customData;
             return this;
         }
-        public Builder customData(@Nullable String customData) {
-            this.customData = Codegen.ofNullable(customData);
-            return this;
-        }        public NetworkFunctionUserConfigurationOsProfileArgs build() {
-            return new NetworkFunctionUserConfigurationOsProfileArgs(customData);
+
+        public Builder customData(String customData) {
+            return customData(Output.of(customData));
+        }
+
+        public NetworkFunctionUserConfigurationOsProfileArgs build() {
+            return $;
         }
     }
+
 }

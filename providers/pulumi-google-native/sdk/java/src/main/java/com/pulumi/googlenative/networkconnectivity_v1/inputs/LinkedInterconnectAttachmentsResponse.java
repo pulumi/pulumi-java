@@ -23,7 +23,7 @@ public final class LinkedInterconnectAttachmentsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="siteToSiteDataTransfer", required=true)
-      private final Boolean siteToSiteDataTransfer;
+    private Boolean siteToSiteDataTransfer;
 
     public Boolean siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
@@ -34,58 +34,56 @@ public final class LinkedInterconnectAttachmentsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="uris", required=true)
-      private final List<String> uris;
+    private List<String> uris;
 
     public List<String> uris() {
         return this.uris;
     }
 
-    public LinkedInterconnectAttachmentsResponse(
-        Boolean siteToSiteDataTransfer,
-        List<String> uris) {
-        this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
-        this.uris = Objects.requireNonNull(uris, "expected parameter 'uris' to be non-null");
-    }
+    private LinkedInterconnectAttachmentsResponse() {}
 
-    private LinkedInterconnectAttachmentsResponse() {
-        this.siteToSiteDataTransfer = null;
-        this.uris = List.of();
+    private LinkedInterconnectAttachmentsResponse(LinkedInterconnectAttachmentsResponse $) {
+        this.siteToSiteDataTransfer = $.siteToSiteDataTransfer;
+        this.uris = $.uris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedInterconnectAttachmentsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean siteToSiteDataTransfer;
-        private List<String> uris;
+        private LinkedInterconnectAttachmentsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedInterconnectAttachmentsResponse();
         }
 
         public Builder(LinkedInterconnectAttachmentsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
-    	      this.uris = defaults.uris;
+            $ = new LinkedInterconnectAttachmentsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
+            $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
+
         public Builder uris(List<String> uris) {
-            this.uris = Objects.requireNonNull(uris);
+            $.uris = uris;
             return this;
         }
+
         public Builder uris(String... uris) {
             return uris(List.of(uris));
-        }        public LinkedInterconnectAttachmentsResponse build() {
-            return new LinkedInterconnectAttachmentsResponse(siteToSiteDataTransfer, uris);
+        }
+
+        public LinkedInterconnectAttachmentsResponse build() {
+            $.siteToSiteDataTransfer = Objects.requireNonNull($.siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
+            $.uris = Objects.requireNonNull($.uris, "expected parameter 'uris' to be non-null");
+            return $;
         }
     }
+
 }

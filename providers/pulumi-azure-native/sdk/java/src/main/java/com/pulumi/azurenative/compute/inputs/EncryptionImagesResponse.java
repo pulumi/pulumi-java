@@ -25,10 +25,10 @@ public final class EncryptionImagesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataDiskImages")
-      private final @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages;
+    private @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages;
 
-    public List<DataDiskImageEncryptionResponse> dataDiskImages() {
-        return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
+    public Optional<List<DataDiskImageEncryptionResponse>> dataDiskImages() {
+        return Optional.ofNullable(this.dataDiskImages);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class EncryptionImagesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="osDiskImage")
-      private final @Nullable OSDiskImageEncryptionResponse osDiskImage;
+    private @Nullable OSDiskImageEncryptionResponse osDiskImage;
 
     public Optional<OSDiskImageEncryptionResponse> osDiskImage() {
-        return this.osDiskImage == null ? Optional.empty() : Optional.ofNullable(this.osDiskImage);
+        return Optional.ofNullable(this.osDiskImage);
     }
 
-    public EncryptionImagesResponse(
-        @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages,
-        @Nullable OSDiskImageEncryptionResponse osDiskImage) {
-        this.dataDiskImages = dataDiskImages;
-        this.osDiskImage = osDiskImage;
-    }
+    private EncryptionImagesResponse() {}
 
-    private EncryptionImagesResponse() {
-        this.dataDiskImages = List.of();
-        this.osDiskImage = null;
+    private EncryptionImagesResponse(EncryptionImagesResponse $) {
+        this.dataDiskImages = $.dataDiskImages;
+        this.osDiskImage = $.osDiskImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionImagesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DataDiskImageEncryptionResponse> dataDiskImages;
-        private @Nullable OSDiskImageEncryptionResponse osDiskImage;
+        private EncryptionImagesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionImagesResponse();
         }
 
         public Builder(EncryptionImagesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDiskImages = defaults.dataDiskImages;
-    	      this.osDiskImage = defaults.osDiskImage;
+            $ = new EncryptionImagesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDiskImages(@Nullable List<DataDiskImageEncryptionResponse> dataDiskImages) {
-            this.dataDiskImages = dataDiskImages;
+            $.dataDiskImages = dataDiskImages;
             return this;
         }
+
         public Builder dataDiskImages(DataDiskImageEncryptionResponse... dataDiskImages) {
             return dataDiskImages(List.of(dataDiskImages));
         }
+
         public Builder osDiskImage(@Nullable OSDiskImageEncryptionResponse osDiskImage) {
-            this.osDiskImage = osDiskImage;
+            $.osDiskImage = osDiskImage;
             return this;
-        }        public EncryptionImagesResponse build() {
-            return new EncryptionImagesResponse(dataDiskImages, osDiskImage);
+        }
+
+        public EncryptionImagesResponse build() {
+            return $;
         }
     }
+
 }

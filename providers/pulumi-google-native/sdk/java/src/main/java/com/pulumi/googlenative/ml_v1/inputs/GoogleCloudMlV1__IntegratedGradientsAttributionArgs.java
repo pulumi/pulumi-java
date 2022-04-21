@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionArgs extends c
      * 
      */
     @Import(name="numIntegralSteps")
-      private final @Nullable Output<Integer> numIntegralSteps;
+    private @Nullable Output<Integer> numIntegralSteps;
 
-    public Output<Integer> numIntegralSteps() {
-        return this.numIntegralSteps == null ? Codegen.empty() : this.numIntegralSteps;
+    public Optional<Output<Integer>> numIntegralSteps() {
+        return Optional.ofNullable(this.numIntegralSteps);
     }
 
-    public GoogleCloudMlV1__IntegratedGradientsAttributionArgs(@Nullable Output<Integer> numIntegralSteps) {
-        this.numIntegralSteps = numIntegralSteps;
-    }
+    private GoogleCloudMlV1__IntegratedGradientsAttributionArgs() {}
 
-    private GoogleCloudMlV1__IntegratedGradientsAttributionArgs() {
-        this.numIntegralSteps = Codegen.empty();
+    private GoogleCloudMlV1__IntegratedGradientsAttributionArgs(GoogleCloudMlV1__IntegratedGradientsAttributionArgs $) {
+        this.numIntegralSteps = $.numIntegralSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__IntegratedGradientsAttributionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numIntegralSteps;
+        private GoogleCloudMlV1__IntegratedGradientsAttributionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__IntegratedGradientsAttributionArgs();
         }
 
         public Builder(GoogleCloudMlV1__IntegratedGradientsAttributionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numIntegralSteps = defaults.numIntegralSteps;
+            $ = new GoogleCloudMlV1__IntegratedGradientsAttributionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numIntegralSteps(@Nullable Output<Integer> numIntegralSteps) {
-            this.numIntegralSteps = numIntegralSteps;
+            $.numIntegralSteps = numIntegralSteps;
             return this;
         }
-        public Builder numIntegralSteps(@Nullable Integer numIntegralSteps) {
-            this.numIntegralSteps = Codegen.ofNullable(numIntegralSteps);
-            return this;
-        }        public GoogleCloudMlV1__IntegratedGradientsAttributionArgs build() {
-            return new GoogleCloudMlV1__IntegratedGradientsAttributionArgs(numIntegralSteps);
+
+        public Builder numIntegralSteps(Integer numIntegralSteps) {
+            return numIntegralSteps(Output.of(numIntegralSteps));
+        }
+
+        public GoogleCloudMlV1__IntegratedGradientsAttributionArgs build() {
+            return $;
         }
     }
+
 }

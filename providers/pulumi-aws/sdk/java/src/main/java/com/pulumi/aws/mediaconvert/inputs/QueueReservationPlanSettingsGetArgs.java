@@ -5,7 +5,6 @@ package com.pulumi.aws.mediaconvert.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class QueueReservationPlanSettingsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="commitment", required=true)
-      private final Output<String> commitment;
+    private Output<String> commitment;
 
     public Output<String> commitment() {
         return this.commitment;
@@ -31,7 +30,7 @@ public final class QueueReservationPlanSettingsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="renewalType", required=true)
-      private final Output<String> renewalType;
+    private Output<String> renewalType;
 
     public Output<String> renewalType() {
         return this.renewalType;
@@ -42,76 +41,71 @@ public final class QueueReservationPlanSettingsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="reservedSlots", required=true)
-      private final Output<Integer> reservedSlots;
+    private Output<Integer> reservedSlots;
 
     public Output<Integer> reservedSlots() {
         return this.reservedSlots;
     }
 
-    public QueueReservationPlanSettingsGetArgs(
-        Output<String> commitment,
-        Output<String> renewalType,
-        Output<Integer> reservedSlots) {
-        this.commitment = Objects.requireNonNull(commitment, "expected parameter 'commitment' to be non-null");
-        this.renewalType = Objects.requireNonNull(renewalType, "expected parameter 'renewalType' to be non-null");
-        this.reservedSlots = Objects.requireNonNull(reservedSlots, "expected parameter 'reservedSlots' to be non-null");
-    }
+    private QueueReservationPlanSettingsGetArgs() {}
 
-    private QueueReservationPlanSettingsGetArgs() {
-        this.commitment = Codegen.empty();
-        this.renewalType = Codegen.empty();
-        this.reservedSlots = Codegen.empty();
+    private QueueReservationPlanSettingsGetArgs(QueueReservationPlanSettingsGetArgs $) {
+        this.commitment = $.commitment;
+        this.renewalType = $.renewalType;
+        this.reservedSlots = $.reservedSlots;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueReservationPlanSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> commitment;
-        private Output<String> renewalType;
-        private Output<Integer> reservedSlots;
+        private QueueReservationPlanSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueReservationPlanSettingsGetArgs();
         }
 
         public Builder(QueueReservationPlanSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commitment = defaults.commitment;
-    	      this.renewalType = defaults.renewalType;
-    	      this.reservedSlots = defaults.reservedSlots;
+            $ = new QueueReservationPlanSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commitment(Output<String> commitment) {
-            this.commitment = Objects.requireNonNull(commitment);
+            $.commitment = commitment;
             return this;
         }
+
         public Builder commitment(String commitment) {
-            this.commitment = Output.of(Objects.requireNonNull(commitment));
-            return this;
+            return commitment(Output.of(commitment));
         }
+
         public Builder renewalType(Output<String> renewalType) {
-            this.renewalType = Objects.requireNonNull(renewalType);
+            $.renewalType = renewalType;
             return this;
         }
+
         public Builder renewalType(String renewalType) {
-            this.renewalType = Output.of(Objects.requireNonNull(renewalType));
-            return this;
+            return renewalType(Output.of(renewalType));
         }
+
         public Builder reservedSlots(Output<Integer> reservedSlots) {
-            this.reservedSlots = Objects.requireNonNull(reservedSlots);
+            $.reservedSlots = reservedSlots;
             return this;
         }
+
         public Builder reservedSlots(Integer reservedSlots) {
-            this.reservedSlots = Output.of(Objects.requireNonNull(reservedSlots));
-            return this;
-        }        public QueueReservationPlanSettingsGetArgs build() {
-            return new QueueReservationPlanSettingsGetArgs(commitment, renewalType, reservedSlots);
+            return reservedSlots(Output.of(reservedSlots));
+        }
+
+        public QueueReservationPlanSettingsGetArgs build() {
+            $.commitment = Objects.requireNonNull($.commitment, "expected parameter 'commitment' to be non-null");
+            $.renewalType = Objects.requireNonNull($.renewalType, "expected parameter 'renewalType' to be non-null");
+            $.reservedSlots = Objects.requireNonNull($.reservedSlots, "expected parameter 'reservedSlots' to be non-null");
+            return $;
         }
     }
+
 }

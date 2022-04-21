@@ -7,9 +7,9 @@ import com.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionFormatVers
 import com.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionPolicy;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,17 +26,17 @@ public final class DataSetRowLevelPermissionDataSetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="formatVersion")
-      private final @Nullable Output<DataSetRowLevelPermissionFormatVersion> formatVersion;
+    private @Nullable Output<DataSetRowLevelPermissionFormatVersion> formatVersion;
 
-    public Output<DataSetRowLevelPermissionFormatVersion> formatVersion() {
-        return this.formatVersion == null ? Codegen.empty() : this.formatVersion;
+    public Optional<Output<DataSetRowLevelPermissionFormatVersion>> formatVersion() {
+        return Optional.ofNullable(this.formatVersion);
     }
 
     /**
@@ -44,96 +44,87 @@ public final class DataSetRowLevelPermissionDataSetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     @Import(name="permissionPolicy", required=true)
-      private final Output<DataSetRowLevelPermissionPolicy> permissionPolicy;
+    private Output<DataSetRowLevelPermissionPolicy> permissionPolicy;
 
     public Output<DataSetRowLevelPermissionPolicy> permissionPolicy() {
         return this.permissionPolicy;
     }
 
-    public DataSetRowLevelPermissionDataSetArgs(
-        Output<String> arn,
-        @Nullable Output<DataSetRowLevelPermissionFormatVersion> formatVersion,
-        @Nullable Output<String> namespace,
-        Output<DataSetRowLevelPermissionPolicy> permissionPolicy) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.formatVersion = formatVersion;
-        this.namespace = namespace;
-        this.permissionPolicy = Objects.requireNonNull(permissionPolicy, "expected parameter 'permissionPolicy' to be non-null");
-    }
+    private DataSetRowLevelPermissionDataSetArgs() {}
 
-    private DataSetRowLevelPermissionDataSetArgs() {
-        this.arn = Codegen.empty();
-        this.formatVersion = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.permissionPolicy = Codegen.empty();
+    private DataSetRowLevelPermissionDataSetArgs(DataSetRowLevelPermissionDataSetArgs $) {
+        this.arn = $.arn;
+        this.formatVersion = $.formatVersion;
+        this.namespace = $.namespace;
+        this.permissionPolicy = $.permissionPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetRowLevelPermissionDataSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private @Nullable Output<DataSetRowLevelPermissionFormatVersion> formatVersion;
-        private @Nullable Output<String> namespace;
-        private Output<DataSetRowLevelPermissionPolicy> permissionPolicy;
+        private DataSetRowLevelPermissionDataSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetRowLevelPermissionDataSetArgs();
         }
 
         public Builder(DataSetRowLevelPermissionDataSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.formatVersion = defaults.formatVersion;
-    	      this.namespace = defaults.namespace;
-    	      this.permissionPolicy = defaults.permissionPolicy;
+            $ = new DataSetRowLevelPermissionDataSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder formatVersion(@Nullable Output<DataSetRowLevelPermissionFormatVersion> formatVersion) {
-            this.formatVersion = formatVersion;
+            $.formatVersion = formatVersion;
             return this;
         }
-        public Builder formatVersion(@Nullable DataSetRowLevelPermissionFormatVersion formatVersion) {
-            this.formatVersion = Codegen.ofNullable(formatVersion);
-            return this;
+
+        public Builder formatVersion(DataSetRowLevelPermissionFormatVersion formatVersion) {
+            return formatVersion(Output.of(formatVersion));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder permissionPolicy(Output<DataSetRowLevelPermissionPolicy> permissionPolicy) {
-            this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
+            $.permissionPolicy = permissionPolicy;
             return this;
         }
+
         public Builder permissionPolicy(DataSetRowLevelPermissionPolicy permissionPolicy) {
-            this.permissionPolicy = Output.of(Objects.requireNonNull(permissionPolicy));
-            return this;
-        }        public DataSetRowLevelPermissionDataSetArgs build() {
-            return new DataSetRowLevelPermissionDataSetArgs(arn, formatVersion, namespace, permissionPolicy);
+            return permissionPolicy(Output.of(permissionPolicy));
+        }
+
+        public DataSetRowLevelPermissionDataSetArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.permissionPolicy = Objects.requireNonNull($.permissionPolicy, "expected parameter 'permissionPolicy' to be non-null");
+            return $;
         }
     }
+
 }

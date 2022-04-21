@@ -5,11 +5,11 @@ package com.pulumi.gcp.vertex;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AiFeatureStoreEntityTypeArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="featurestore", required=true)
-      private final Output<String> featurestore;
+    private Output<String> featurestore;
 
     public Output<String> featurestore() {
         return this.featurestore;
@@ -33,10 +33,10 @@ public final class AiFeatureStoreEntityTypeArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AiFeatureStoreEntityTypeArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="monitoringConfig")
-      private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
+    private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
 
-    public Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig() {
-        return this.monitoringConfig == null ? Codegen.empty() : this.monitoringConfig;
+    public Optional<Output<AiFeatureStoreEntityTypeMonitoringConfigArgs>> monitoringConfig() {
+        return Optional.ofNullable(this.monitoringConfig);
     }
 
     /**
@@ -57,89 +57,79 @@ public final class AiFeatureStoreEntityTypeArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public AiFeatureStoreEntityTypeArgs(
-        Output<String> featurestore,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig,
-        @Nullable Output<String> name) {
-        this.featurestore = Objects.requireNonNull(featurestore, "expected parameter 'featurestore' to be non-null");
-        this.labels = labels;
-        this.monitoringConfig = monitoringConfig;
-        this.name = name;
-    }
+    private AiFeatureStoreEntityTypeArgs() {}
 
-    private AiFeatureStoreEntityTypeArgs() {
-        this.featurestore = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.monitoringConfig = Codegen.empty();
-        this.name = Codegen.empty();
+    private AiFeatureStoreEntityTypeArgs(AiFeatureStoreEntityTypeArgs $) {
+        this.featurestore = $.featurestore;
+        this.labels = $.labels;
+        this.monitoringConfig = $.monitoringConfig;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiFeatureStoreEntityTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> featurestore;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
-        private @Nullable Output<String> name;
+        private AiFeatureStoreEntityTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiFeatureStoreEntityTypeArgs();
         }
 
         public Builder(AiFeatureStoreEntityTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featurestore = defaults.featurestore;
-    	      this.labels = defaults.labels;
-    	      this.monitoringConfig = defaults.monitoringConfig;
-    	      this.name = defaults.name;
+            $ = new AiFeatureStoreEntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder featurestore(Output<String> featurestore) {
-            this.featurestore = Objects.requireNonNull(featurestore);
+            $.featurestore = featurestore;
             return this;
         }
+
         public Builder featurestore(String featurestore) {
-            this.featurestore = Output.of(Objects.requireNonNull(featurestore));
-            return this;
+            return featurestore(Output.of(featurestore));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig) {
-            this.monitoringConfig = monitoringConfig;
+            $.monitoringConfig = monitoringConfig;
             return this;
         }
-        public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigArgs monitoringConfig) {
-            this.monitoringConfig = Codegen.ofNullable(monitoringConfig);
-            return this;
+
+        public Builder monitoringConfig(AiFeatureStoreEntityTypeMonitoringConfigArgs monitoringConfig) {
+            return monitoringConfig(Output.of(monitoringConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public AiFeatureStoreEntityTypeArgs build() {
-            return new AiFeatureStoreEntityTypeArgs(featurestore, labels, monitoringConfig, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public AiFeatureStoreEntityTypeArgs build() {
+            $.featurestore = Objects.requireNonNull($.featurestore, "expected parameter 'featurestore' to be non-null");
+            return $;
         }
     }
+
 }

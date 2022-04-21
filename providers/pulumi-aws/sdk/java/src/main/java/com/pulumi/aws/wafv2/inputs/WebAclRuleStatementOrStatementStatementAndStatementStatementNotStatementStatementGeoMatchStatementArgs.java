@@ -6,10 +6,10 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
      * 
      */
     @Import(name="countryCodes", required=true)
-      private final Output<List<String>> countryCodes;
+    private Output<List<String>> countryCodes;
 
     public Output<List<String>> countryCodes() {
         return this.countryCodes;
@@ -33,66 +33,63 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementN
      * 
      */
     @Import(name="forwardedIpConfig")
-      private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig;
+    private @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig;
 
-    public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig() {
-        return this.forwardedIpConfig == null ? Codegen.empty() : this.forwardedIpConfig;
+    public Optional<Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs>> forwardedIpConfig() {
+        return Optional.ofNullable(this.forwardedIpConfig);
     }
 
-    public WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs(
-        Output<List<String>> countryCodes,
-        @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig) {
-        this.countryCodes = Objects.requireNonNull(countryCodes, "expected parameter 'countryCodes' to be non-null");
-        this.forwardedIpConfig = forwardedIpConfig;
-    }
+    private WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs() {}
 
-    private WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs() {
-        this.countryCodes = Codegen.empty();
-        this.forwardedIpConfig = Codegen.empty();
+    private WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs(WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs $) {
+        this.countryCodes = $.countryCodes;
+        this.forwardedIpConfig = $.forwardedIpConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> countryCodes;
-        private @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig;
+        private WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs();
         }
 
         public Builder(WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countryCodes = defaults.countryCodes;
-    	      this.forwardedIpConfig = defaults.forwardedIpConfig;
+            $ = new WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder countryCodes(Output<List<String>> countryCodes) {
-            this.countryCodes = Objects.requireNonNull(countryCodes);
+            $.countryCodes = countryCodes;
             return this;
         }
+
         public Builder countryCodes(List<String> countryCodes) {
-            this.countryCodes = Output.of(Objects.requireNonNull(countryCodes));
-            return this;
+            return countryCodes(Output.of(countryCodes));
         }
+
         public Builder countryCodes(String... countryCodes) {
             return countryCodes(List.of(countryCodes));
         }
+
         public Builder forwardedIpConfig(@Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig) {
-            this.forwardedIpConfig = forwardedIpConfig;
+            $.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
-        public Builder forwardedIpConfig(@Nullable WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs forwardedIpConfig) {
-            this.forwardedIpConfig = Codegen.ofNullable(forwardedIpConfig);
-            return this;
-        }        public WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs build() {
-            return new WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs(countryCodes, forwardedIpConfig);
+
+        public Builder forwardedIpConfig(WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs forwardedIpConfig) {
+            return forwardedIpConfig(Output.of(forwardedIpConfig));
+        }
+
+        public WebAclRuleStatementOrStatementStatementAndStatementStatementNotStatementStatementGeoMatchStatementArgs build() {
+            $.countryCodes = Objects.requireNonNull($.countryCodes, "expected parameter 'countryCodes' to be non-null");
+            return $;
         }
     }
+
 }

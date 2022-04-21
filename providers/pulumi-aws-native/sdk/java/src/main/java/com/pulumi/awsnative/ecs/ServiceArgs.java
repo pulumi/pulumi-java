@@ -17,12 +17,12 @@ import com.pulumi.awsnative.ecs.inputs.ServiceRegistryArgs;
 import com.pulumi.awsnative.ecs.inputs.ServiceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,468 +31,412 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServiceArgs Empty = new ServiceArgs();
 
     @Import(name="capacityProviderStrategy")
-      private final @Nullable Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy;
+    private @Nullable Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy;
 
-    public Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy() {
-        return this.capacityProviderStrategy == null ? Codegen.empty() : this.capacityProviderStrategy;
+    public Optional<Output<List<ServiceCapacityProviderStrategyItemArgs>>> capacityProviderStrategy() {
+        return Optional.ofNullable(this.capacityProviderStrategy);
     }
 
     @Import(name="cluster")
-      private final @Nullable Output<String> cluster;
+    private @Nullable Output<String> cluster;
 
-    public Output<String> cluster() {
-        return this.cluster == null ? Codegen.empty() : this.cluster;
+    public Optional<Output<String>> cluster() {
+        return Optional.ofNullable(this.cluster);
     }
 
     @Import(name="deploymentConfiguration")
-      private final @Nullable Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration;
+    private @Nullable Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration;
 
-    public Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration() {
-        return this.deploymentConfiguration == null ? Codegen.empty() : this.deploymentConfiguration;
+    public Optional<Output<ServiceDeploymentConfigurationArgs>> deploymentConfiguration() {
+        return Optional.ofNullable(this.deploymentConfiguration);
     }
 
     @Import(name="deploymentController")
-      private final @Nullable Output<ServiceDeploymentControllerArgs> deploymentController;
+    private @Nullable Output<ServiceDeploymentControllerArgs> deploymentController;
 
-    public Output<ServiceDeploymentControllerArgs> deploymentController() {
-        return this.deploymentController == null ? Codegen.empty() : this.deploymentController;
+    public Optional<Output<ServiceDeploymentControllerArgs>> deploymentController() {
+        return Optional.ofNullable(this.deploymentController);
     }
 
     @Import(name="desiredCount")
-      private final @Nullable Output<Integer> desiredCount;
+    private @Nullable Output<Integer> desiredCount;
 
-    public Output<Integer> desiredCount() {
-        return this.desiredCount == null ? Codegen.empty() : this.desiredCount;
+    public Optional<Output<Integer>> desiredCount() {
+        return Optional.ofNullable(this.desiredCount);
     }
 
     @Import(name="enableECSManagedTags")
-      private final @Nullable Output<Boolean> enableECSManagedTags;
+    private @Nullable Output<Boolean> enableECSManagedTags;
 
-    public Output<Boolean> enableECSManagedTags() {
-        return this.enableECSManagedTags == null ? Codegen.empty() : this.enableECSManagedTags;
+    public Optional<Output<Boolean>> enableECSManagedTags() {
+        return Optional.ofNullable(this.enableECSManagedTags);
     }
 
     @Import(name="enableExecuteCommand")
-      private final @Nullable Output<Boolean> enableExecuteCommand;
+    private @Nullable Output<Boolean> enableExecuteCommand;
 
-    public Output<Boolean> enableExecuteCommand() {
-        return this.enableExecuteCommand == null ? Codegen.empty() : this.enableExecuteCommand;
+    public Optional<Output<Boolean>> enableExecuteCommand() {
+        return Optional.ofNullable(this.enableExecuteCommand);
     }
 
     @Import(name="healthCheckGracePeriodSeconds")
-      private final @Nullable Output<Integer> healthCheckGracePeriodSeconds;
+    private @Nullable Output<Integer> healthCheckGracePeriodSeconds;
 
-    public Output<Integer> healthCheckGracePeriodSeconds() {
-        return this.healthCheckGracePeriodSeconds == null ? Codegen.empty() : this.healthCheckGracePeriodSeconds;
+    public Optional<Output<Integer>> healthCheckGracePeriodSeconds() {
+        return Optional.ofNullable(this.healthCheckGracePeriodSeconds);
     }
 
     @Import(name="launchType")
-      private final @Nullable Output<ServiceLaunchType> launchType;
+    private @Nullable Output<ServiceLaunchType> launchType;
 
-    public Output<ServiceLaunchType> launchType() {
-        return this.launchType == null ? Codegen.empty() : this.launchType;
+    public Optional<Output<ServiceLaunchType>> launchType() {
+        return Optional.ofNullable(this.launchType);
     }
 
     @Import(name="loadBalancers")
-      private final @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers;
+    private @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers;
 
-    public Output<List<ServiceLoadBalancerArgs>> loadBalancers() {
-        return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
+    public Optional<Output<List<ServiceLoadBalancerArgs>>> loadBalancers() {
+        return Optional.ofNullable(this.loadBalancers);
     }
 
     @Import(name="networkConfiguration")
-      private final @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
+    private @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
 
-    public Output<ServiceNetworkConfigurationArgs> networkConfiguration() {
-        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
+    public Optional<Output<ServiceNetworkConfigurationArgs>> networkConfiguration() {
+        return Optional.ofNullable(this.networkConfiguration);
     }
 
     @Import(name="placementConstraints")
-      private final @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints;
+    private @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints;
 
-    public Output<List<ServicePlacementConstraintArgs>> placementConstraints() {
-        return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
+    public Optional<Output<List<ServicePlacementConstraintArgs>>> placementConstraints() {
+        return Optional.ofNullable(this.placementConstraints);
     }
 
     @Import(name="placementStrategies")
-      private final @Nullable Output<List<ServicePlacementStrategyArgs>> placementStrategies;
+    private @Nullable Output<List<ServicePlacementStrategyArgs>> placementStrategies;
 
-    public Output<List<ServicePlacementStrategyArgs>> placementStrategies() {
-        return this.placementStrategies == null ? Codegen.empty() : this.placementStrategies;
+    public Optional<Output<List<ServicePlacementStrategyArgs>>> placementStrategies() {
+        return Optional.ofNullable(this.placementStrategies);
     }
 
     @Import(name="platformVersion")
-      private final @Nullable Output<String> platformVersion;
+    private @Nullable Output<String> platformVersion;
 
-    public Output<String> platformVersion() {
-        return this.platformVersion == null ? Codegen.empty() : this.platformVersion;
+    public Optional<Output<String>> platformVersion() {
+        return Optional.ofNullable(this.platformVersion);
     }
 
     @Import(name="propagateTags")
-      private final @Nullable Output<ServicePropagateTags> propagateTags;
+    private @Nullable Output<ServicePropagateTags> propagateTags;
 
-    public Output<ServicePropagateTags> propagateTags() {
-        return this.propagateTags == null ? Codegen.empty() : this.propagateTags;
+    public Optional<Output<ServicePropagateTags>> propagateTags() {
+        return Optional.ofNullable(this.propagateTags);
     }
 
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     @Import(name="schedulingStrategy")
-      private final @Nullable Output<ServiceSchedulingStrategy> schedulingStrategy;
+    private @Nullable Output<ServiceSchedulingStrategy> schedulingStrategy;
 
-    public Output<ServiceSchedulingStrategy> schedulingStrategy() {
-        return this.schedulingStrategy == null ? Codegen.empty() : this.schedulingStrategy;
+    public Optional<Output<ServiceSchedulingStrategy>> schedulingStrategy() {
+        return Optional.ofNullable(this.schedulingStrategy);
     }
 
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     @Import(name="serviceRegistries")
-      private final @Nullable Output<List<ServiceRegistryArgs>> serviceRegistries;
+    private @Nullable Output<List<ServiceRegistryArgs>> serviceRegistries;
 
-    public Output<List<ServiceRegistryArgs>> serviceRegistries() {
-        return this.serviceRegistries == null ? Codegen.empty() : this.serviceRegistries;
+    public Optional<Output<List<ServiceRegistryArgs>>> serviceRegistries() {
+        return Optional.ofNullable(this.serviceRegistries);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ServiceTagArgs>> tags;
+    private @Nullable Output<List<ServiceTagArgs>> tags;
 
-    public Output<List<ServiceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ServiceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="taskDefinition")
-      private final @Nullable Output<String> taskDefinition;
+    private @Nullable Output<String> taskDefinition;
 
-    public Output<String> taskDefinition() {
-        return this.taskDefinition == null ? Codegen.empty() : this.taskDefinition;
+    public Optional<Output<String>> taskDefinition() {
+        return Optional.ofNullable(this.taskDefinition);
     }
 
-    public ServiceArgs(
-        @Nullable Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy,
-        @Nullable Output<String> cluster,
-        @Nullable Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration,
-        @Nullable Output<ServiceDeploymentControllerArgs> deploymentController,
-        @Nullable Output<Integer> desiredCount,
-        @Nullable Output<Boolean> enableECSManagedTags,
-        @Nullable Output<Boolean> enableExecuteCommand,
-        @Nullable Output<Integer> healthCheckGracePeriodSeconds,
-        @Nullable Output<ServiceLaunchType> launchType,
-        @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers,
-        @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration,
-        @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints,
-        @Nullable Output<List<ServicePlacementStrategyArgs>> placementStrategies,
-        @Nullable Output<String> platformVersion,
-        @Nullable Output<ServicePropagateTags> propagateTags,
-        @Nullable Output<String> role,
-        @Nullable Output<ServiceSchedulingStrategy> schedulingStrategy,
-        @Nullable Output<String> serviceName,
-        @Nullable Output<List<ServiceRegistryArgs>> serviceRegistries,
-        @Nullable Output<List<ServiceTagArgs>> tags,
-        @Nullable Output<String> taskDefinition) {
-        this.capacityProviderStrategy = capacityProviderStrategy;
-        this.cluster = cluster;
-        this.deploymentConfiguration = deploymentConfiguration;
-        this.deploymentController = deploymentController;
-        this.desiredCount = desiredCount;
-        this.enableECSManagedTags = enableECSManagedTags;
-        this.enableExecuteCommand = enableExecuteCommand;
-        this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
-        this.launchType = launchType;
-        this.loadBalancers = loadBalancers;
-        this.networkConfiguration = networkConfiguration;
-        this.placementConstraints = placementConstraints;
-        this.placementStrategies = placementStrategies;
-        this.platformVersion = platformVersion;
-        this.propagateTags = propagateTags;
-        this.role = role;
-        this.schedulingStrategy = schedulingStrategy;
-        this.serviceName = serviceName;
-        this.serviceRegistries = serviceRegistries;
-        this.tags = tags;
-        this.taskDefinition = taskDefinition;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.capacityProviderStrategy = Codegen.empty();
-        this.cluster = Codegen.empty();
-        this.deploymentConfiguration = Codegen.empty();
-        this.deploymentController = Codegen.empty();
-        this.desiredCount = Codegen.empty();
-        this.enableECSManagedTags = Codegen.empty();
-        this.enableExecuteCommand = Codegen.empty();
-        this.healthCheckGracePeriodSeconds = Codegen.empty();
-        this.launchType = Codegen.empty();
-        this.loadBalancers = Codegen.empty();
-        this.networkConfiguration = Codegen.empty();
-        this.placementConstraints = Codegen.empty();
-        this.placementStrategies = Codegen.empty();
-        this.platformVersion = Codegen.empty();
-        this.propagateTags = Codegen.empty();
-        this.role = Codegen.empty();
-        this.schedulingStrategy = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.serviceRegistries = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.taskDefinition = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.capacityProviderStrategy = $.capacityProviderStrategy;
+        this.cluster = $.cluster;
+        this.deploymentConfiguration = $.deploymentConfiguration;
+        this.deploymentController = $.deploymentController;
+        this.desiredCount = $.desiredCount;
+        this.enableECSManagedTags = $.enableECSManagedTags;
+        this.enableExecuteCommand = $.enableExecuteCommand;
+        this.healthCheckGracePeriodSeconds = $.healthCheckGracePeriodSeconds;
+        this.launchType = $.launchType;
+        this.loadBalancers = $.loadBalancers;
+        this.networkConfiguration = $.networkConfiguration;
+        this.placementConstraints = $.placementConstraints;
+        this.placementStrategies = $.placementStrategies;
+        this.platformVersion = $.platformVersion;
+        this.propagateTags = $.propagateTags;
+        this.role = $.role;
+        this.schedulingStrategy = $.schedulingStrategy;
+        this.serviceName = $.serviceName;
+        this.serviceRegistries = $.serviceRegistries;
+        this.tags = $.tags;
+        this.taskDefinition = $.taskDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy;
-        private @Nullable Output<String> cluster;
-        private @Nullable Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration;
-        private @Nullable Output<ServiceDeploymentControllerArgs> deploymentController;
-        private @Nullable Output<Integer> desiredCount;
-        private @Nullable Output<Boolean> enableECSManagedTags;
-        private @Nullable Output<Boolean> enableExecuteCommand;
-        private @Nullable Output<Integer> healthCheckGracePeriodSeconds;
-        private @Nullable Output<ServiceLaunchType> launchType;
-        private @Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers;
-        private @Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration;
-        private @Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints;
-        private @Nullable Output<List<ServicePlacementStrategyArgs>> placementStrategies;
-        private @Nullable Output<String> platformVersion;
-        private @Nullable Output<ServicePropagateTags> propagateTags;
-        private @Nullable Output<String> role;
-        private @Nullable Output<ServiceSchedulingStrategy> schedulingStrategy;
-        private @Nullable Output<String> serviceName;
-        private @Nullable Output<List<ServiceRegistryArgs>> serviceRegistries;
-        private @Nullable Output<List<ServiceTagArgs>> tags;
-        private @Nullable Output<String> taskDefinition;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityProviderStrategy = defaults.capacityProviderStrategy;
-    	      this.cluster = defaults.cluster;
-    	      this.deploymentConfiguration = defaults.deploymentConfiguration;
-    	      this.deploymentController = defaults.deploymentController;
-    	      this.desiredCount = defaults.desiredCount;
-    	      this.enableECSManagedTags = defaults.enableECSManagedTags;
-    	      this.enableExecuteCommand = defaults.enableExecuteCommand;
-    	      this.healthCheckGracePeriodSeconds = defaults.healthCheckGracePeriodSeconds;
-    	      this.launchType = defaults.launchType;
-    	      this.loadBalancers = defaults.loadBalancers;
-    	      this.networkConfiguration = defaults.networkConfiguration;
-    	      this.placementConstraints = defaults.placementConstraints;
-    	      this.placementStrategies = defaults.placementStrategies;
-    	      this.platformVersion = defaults.platformVersion;
-    	      this.propagateTags = defaults.propagateTags;
-    	      this.role = defaults.role;
-    	      this.schedulingStrategy = defaults.schedulingStrategy;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceRegistries = defaults.serviceRegistries;
-    	      this.tags = defaults.tags;
-    	      this.taskDefinition = defaults.taskDefinition;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityProviderStrategy(@Nullable Output<List<ServiceCapacityProviderStrategyItemArgs>> capacityProviderStrategy) {
-            this.capacityProviderStrategy = capacityProviderStrategy;
+            $.capacityProviderStrategy = capacityProviderStrategy;
             return this;
         }
-        public Builder capacityProviderStrategy(@Nullable List<ServiceCapacityProviderStrategyItemArgs> capacityProviderStrategy) {
-            this.capacityProviderStrategy = Codegen.ofNullable(capacityProviderStrategy);
-            return this;
+
+        public Builder capacityProviderStrategy(List<ServiceCapacityProviderStrategyItemArgs> capacityProviderStrategy) {
+            return capacityProviderStrategy(Output.of(capacityProviderStrategy));
         }
+
         public Builder capacityProviderStrategy(ServiceCapacityProviderStrategyItemArgs... capacityProviderStrategy) {
             return capacityProviderStrategy(List.of(capacityProviderStrategy));
         }
+
         public Builder cluster(@Nullable Output<String> cluster) {
-            this.cluster = cluster;
+            $.cluster = cluster;
             return this;
         }
-        public Builder cluster(@Nullable String cluster) {
-            this.cluster = Codegen.ofNullable(cluster);
-            return this;
+
+        public Builder cluster(String cluster) {
+            return cluster(Output.of(cluster));
         }
+
         public Builder deploymentConfiguration(@Nullable Output<ServiceDeploymentConfigurationArgs> deploymentConfiguration) {
-            this.deploymentConfiguration = deploymentConfiguration;
+            $.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
-        public Builder deploymentConfiguration(@Nullable ServiceDeploymentConfigurationArgs deploymentConfiguration) {
-            this.deploymentConfiguration = Codegen.ofNullable(deploymentConfiguration);
-            return this;
+
+        public Builder deploymentConfiguration(ServiceDeploymentConfigurationArgs deploymentConfiguration) {
+            return deploymentConfiguration(Output.of(deploymentConfiguration));
         }
+
         public Builder deploymentController(@Nullable Output<ServiceDeploymentControllerArgs> deploymentController) {
-            this.deploymentController = deploymentController;
+            $.deploymentController = deploymentController;
             return this;
         }
-        public Builder deploymentController(@Nullable ServiceDeploymentControllerArgs deploymentController) {
-            this.deploymentController = Codegen.ofNullable(deploymentController);
-            return this;
+
+        public Builder deploymentController(ServiceDeploymentControllerArgs deploymentController) {
+            return deploymentController(Output.of(deploymentController));
         }
+
         public Builder desiredCount(@Nullable Output<Integer> desiredCount) {
-            this.desiredCount = desiredCount;
+            $.desiredCount = desiredCount;
             return this;
         }
-        public Builder desiredCount(@Nullable Integer desiredCount) {
-            this.desiredCount = Codegen.ofNullable(desiredCount);
-            return this;
+
+        public Builder desiredCount(Integer desiredCount) {
+            return desiredCount(Output.of(desiredCount));
         }
+
         public Builder enableECSManagedTags(@Nullable Output<Boolean> enableECSManagedTags) {
-            this.enableECSManagedTags = enableECSManagedTags;
+            $.enableECSManagedTags = enableECSManagedTags;
             return this;
         }
-        public Builder enableECSManagedTags(@Nullable Boolean enableECSManagedTags) {
-            this.enableECSManagedTags = Codegen.ofNullable(enableECSManagedTags);
-            return this;
+
+        public Builder enableECSManagedTags(Boolean enableECSManagedTags) {
+            return enableECSManagedTags(Output.of(enableECSManagedTags));
         }
+
         public Builder enableExecuteCommand(@Nullable Output<Boolean> enableExecuteCommand) {
-            this.enableExecuteCommand = enableExecuteCommand;
+            $.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
-        public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
-            this.enableExecuteCommand = Codegen.ofNullable(enableExecuteCommand);
-            return this;
+
+        public Builder enableExecuteCommand(Boolean enableExecuteCommand) {
+            return enableExecuteCommand(Output.of(enableExecuteCommand));
         }
+
         public Builder healthCheckGracePeriodSeconds(@Nullable Output<Integer> healthCheckGracePeriodSeconds) {
-            this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
+            $.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
         }
-        public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
-            this.healthCheckGracePeriodSeconds = Codegen.ofNullable(healthCheckGracePeriodSeconds);
-            return this;
+
+        public Builder healthCheckGracePeriodSeconds(Integer healthCheckGracePeriodSeconds) {
+            return healthCheckGracePeriodSeconds(Output.of(healthCheckGracePeriodSeconds));
         }
+
         public Builder launchType(@Nullable Output<ServiceLaunchType> launchType) {
-            this.launchType = launchType;
+            $.launchType = launchType;
             return this;
         }
-        public Builder launchType(@Nullable ServiceLaunchType launchType) {
-            this.launchType = Codegen.ofNullable(launchType);
-            return this;
+
+        public Builder launchType(ServiceLaunchType launchType) {
+            return launchType(Output.of(launchType));
         }
+
         public Builder loadBalancers(@Nullable Output<List<ServiceLoadBalancerArgs>> loadBalancers) {
-            this.loadBalancers = loadBalancers;
+            $.loadBalancers = loadBalancers;
             return this;
         }
-        public Builder loadBalancers(@Nullable List<ServiceLoadBalancerArgs> loadBalancers) {
-            this.loadBalancers = Codegen.ofNullable(loadBalancers);
-            return this;
+
+        public Builder loadBalancers(List<ServiceLoadBalancerArgs> loadBalancers) {
+            return loadBalancers(Output.of(loadBalancers));
         }
+
         public Builder loadBalancers(ServiceLoadBalancerArgs... loadBalancers) {
             return loadBalancers(List.of(loadBalancers));
         }
+
         public Builder networkConfiguration(@Nullable Output<ServiceNetworkConfigurationArgs> networkConfiguration) {
-            this.networkConfiguration = networkConfiguration;
+            $.networkConfiguration = networkConfiguration;
             return this;
         }
-        public Builder networkConfiguration(@Nullable ServiceNetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
-            return this;
+
+        public Builder networkConfiguration(ServiceNetworkConfigurationArgs networkConfiguration) {
+            return networkConfiguration(Output.of(networkConfiguration));
         }
+
         public Builder placementConstraints(@Nullable Output<List<ServicePlacementConstraintArgs>> placementConstraints) {
-            this.placementConstraints = placementConstraints;
+            $.placementConstraints = placementConstraints;
             return this;
         }
-        public Builder placementConstraints(@Nullable List<ServicePlacementConstraintArgs> placementConstraints) {
-            this.placementConstraints = Codegen.ofNullable(placementConstraints);
-            return this;
+
+        public Builder placementConstraints(List<ServicePlacementConstraintArgs> placementConstraints) {
+            return placementConstraints(Output.of(placementConstraints));
         }
+
         public Builder placementConstraints(ServicePlacementConstraintArgs... placementConstraints) {
             return placementConstraints(List.of(placementConstraints));
         }
+
         public Builder placementStrategies(@Nullable Output<List<ServicePlacementStrategyArgs>> placementStrategies) {
-            this.placementStrategies = placementStrategies;
+            $.placementStrategies = placementStrategies;
             return this;
         }
-        public Builder placementStrategies(@Nullable List<ServicePlacementStrategyArgs> placementStrategies) {
-            this.placementStrategies = Codegen.ofNullable(placementStrategies);
-            return this;
+
+        public Builder placementStrategies(List<ServicePlacementStrategyArgs> placementStrategies) {
+            return placementStrategies(Output.of(placementStrategies));
         }
+
         public Builder placementStrategies(ServicePlacementStrategyArgs... placementStrategies) {
             return placementStrategies(List.of(placementStrategies));
         }
+
         public Builder platformVersion(@Nullable Output<String> platformVersion) {
-            this.platformVersion = platformVersion;
+            $.platformVersion = platformVersion;
             return this;
         }
-        public Builder platformVersion(@Nullable String platformVersion) {
-            this.platformVersion = Codegen.ofNullable(platformVersion);
-            return this;
+
+        public Builder platformVersion(String platformVersion) {
+            return platformVersion(Output.of(platformVersion));
         }
+
         public Builder propagateTags(@Nullable Output<ServicePropagateTags> propagateTags) {
-            this.propagateTags = propagateTags;
+            $.propagateTags = propagateTags;
             return this;
         }
-        public Builder propagateTags(@Nullable ServicePropagateTags propagateTags) {
-            this.propagateTags = Codegen.ofNullable(propagateTags);
-            return this;
+
+        public Builder propagateTags(ServicePropagateTags propagateTags) {
+            return propagateTags(Output.of(propagateTags));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder schedulingStrategy(@Nullable Output<ServiceSchedulingStrategy> schedulingStrategy) {
-            this.schedulingStrategy = schedulingStrategy;
+            $.schedulingStrategy = schedulingStrategy;
             return this;
         }
-        public Builder schedulingStrategy(@Nullable ServiceSchedulingStrategy schedulingStrategy) {
-            this.schedulingStrategy = Codegen.ofNullable(schedulingStrategy);
-            return this;
+
+        public Builder schedulingStrategy(ServiceSchedulingStrategy schedulingStrategy) {
+            return schedulingStrategy(Output.of(schedulingStrategy));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder serviceRegistries(@Nullable Output<List<ServiceRegistryArgs>> serviceRegistries) {
-            this.serviceRegistries = serviceRegistries;
+            $.serviceRegistries = serviceRegistries;
             return this;
         }
-        public Builder serviceRegistries(@Nullable List<ServiceRegistryArgs> serviceRegistries) {
-            this.serviceRegistries = Codegen.ofNullable(serviceRegistries);
-            return this;
+
+        public Builder serviceRegistries(List<ServiceRegistryArgs> serviceRegistries) {
+            return serviceRegistries(Output.of(serviceRegistries));
         }
+
         public Builder serviceRegistries(ServiceRegistryArgs... serviceRegistries) {
             return serviceRegistries(List.of(serviceRegistries));
         }
+
         public Builder tags(@Nullable Output<List<ServiceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ServiceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ServiceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ServiceTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder taskDefinition(@Nullable Output<String> taskDefinition) {
-            this.taskDefinition = taskDefinition;
+            $.taskDefinition = taskDefinition;
             return this;
         }
-        public Builder taskDefinition(@Nullable String taskDefinition) {
-            this.taskDefinition = Codegen.ofNullable(taskDefinition);
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(capacityProviderStrategy, cluster, deploymentConfiguration, deploymentController, desiredCount, enableECSManagedTags, enableExecuteCommand, healthCheckGracePeriodSeconds, launchType, loadBalancers, networkConfiguration, placementConstraints, placementStrategies, platformVersion, propagateTags, role, schedulingStrategy, serviceName, serviceRegistries, tags, taskDefinition);
+
+        public Builder taskDefinition(String taskDefinition) {
+            return taskDefinition(Output.of(taskDefinition));
+        }
+
+        public ServiceArgs build() {
+            return $;
         }
     }
+
 }

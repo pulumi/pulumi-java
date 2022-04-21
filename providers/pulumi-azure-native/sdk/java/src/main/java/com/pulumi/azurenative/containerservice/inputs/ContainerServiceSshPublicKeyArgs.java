@@ -5,7 +5,6 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ContainerServiceSshPublicKeyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keyData", required=true)
-      private final Output<String> keyData;
+    private Output<String> keyData;
 
     public Output<String> keyData() {
         return this.keyData;
     }
 
-    public ContainerServiceSshPublicKeyArgs(Output<String> keyData) {
-        this.keyData = Objects.requireNonNull(keyData, "expected parameter 'keyData' to be non-null");
-    }
+    private ContainerServiceSshPublicKeyArgs() {}
 
-    private ContainerServiceSshPublicKeyArgs() {
-        this.keyData = Codegen.empty();
+    private ContainerServiceSshPublicKeyArgs(ContainerServiceSshPublicKeyArgs $) {
+        this.keyData = $.keyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceSshPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyData;
+        private ContainerServiceSshPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceSshPublicKeyArgs();
         }
 
         public Builder(ContainerServiceSshPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyData = defaults.keyData;
+            $ = new ContainerServiceSshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyData(Output<String> keyData) {
-            this.keyData = Objects.requireNonNull(keyData);
+            $.keyData = keyData;
             return this;
         }
+
         public Builder keyData(String keyData) {
-            this.keyData = Output.of(Objects.requireNonNull(keyData));
-            return this;
-        }        public ContainerServiceSshPublicKeyArgs build() {
-            return new ContainerServiceSshPublicKeyArgs(keyData);
+            return keyData(Output.of(keyData));
+        }
+
+        public ContainerServiceSshPublicKeyArgs build() {
+            $.keyData = Objects.requireNonNull($.keyData, "expected parameter 'keyData' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<String> dependsOn;
+    private @Nullable List<String> dependsOn;
 
-    public List<String> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<String>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="strongType")
-      private final @Nullable String strongType;
+    private @Nullable String strongType;
 
     public Optional<String> strongType() {
-        return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
+        return Optional.ofNullable(this.strongType);
     }
 
     /**
@@ -91,103 +91,84 @@ public final class ResourceGroupDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ResourceGroupDefinitionResponse(
-        @Nullable List<String> dependsOn,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable String strongType,
-        @Nullable Map<String,String> tags) {
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.displayName = displayName;
-        this.location = location;
-        this.name = name;
-        this.strongType = strongType;
-        this.tags = tags;
-    }
+    private ResourceGroupDefinitionResponse() {}
 
-    private ResourceGroupDefinitionResponse() {
-        this.dependsOn = List.of();
-        this.description = null;
-        this.displayName = null;
-        this.location = null;
-        this.name = null;
-        this.strongType = null;
-        this.tags = Map.of();
+    private ResourceGroupDefinitionResponse(ResourceGroupDefinitionResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.name = $.name;
+        this.strongType = $.strongType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGroupDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> dependsOn;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable String location;
-        private @Nullable String name;
-        private @Nullable String strongType;
-        private @Nullable Map<String,String> tags;
+        private ResourceGroupDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGroupDefinitionResponse();
         }
 
         public Builder(ResourceGroupDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.strongType = defaults.strongType;
-    	      this.tags = defaults.tags;
+            $ = new ResourceGroupDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable List<String> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(String... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder strongType(@Nullable String strongType) {
-            this.strongType = strongType;
+            $.strongType = strongType;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public ResourceGroupDefinitionResponse build() {
-            return new ResourceGroupDefinitionResponse(dependsOn, description, displayName, location, name, strongType, tags);
+        }
+
+        public ResourceGroupDefinitionResponse build() {
+            return $;
         }
     }
+
 }

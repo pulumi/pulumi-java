@@ -22,10 +22,10 @@ public final class GetEbsVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetEbsVolumesFilter> filters;
+    private @Nullable List<GetEbsVolumesFilter> filters;
 
-    public List<GetEbsVolumesFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetEbsVolumesFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,58 +34,54 @@ public final class GetEbsVolumesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetEbsVolumesArgs(
-        @Nullable List<GetEbsVolumesFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetEbsVolumesArgs() {}
 
-    private GetEbsVolumesArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetEbsVolumesArgs(GetEbsVolumesArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEbsVolumesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetEbsVolumesFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetEbsVolumesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEbsVolumesArgs();
         }
 
         public Builder(GetEbsVolumesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetEbsVolumesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetEbsVolumesFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetEbsVolumesFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetEbsVolumesArgs build() {
-            return new GetEbsVolumesArgs(filters, tags);
+        }
+
+        public GetEbsVolumesArgs build() {
+            return $;
         }
     }
+
 }

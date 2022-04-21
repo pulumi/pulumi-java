@@ -27,10 +27,10 @@ public final class VirtualNetworkResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="addressSpace")
-      private final @Nullable List<String> addressSpace;
+    private @Nullable List<String> addressSpace;
 
-    public List<String> addressSpace() {
-        return this.addressSpace == null ? List.of() : this.addressSpace;
+    public Optional<List<String>> addressSpace() {
+        return Optional.ofNullable(this.addressSpace);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class VirtualNetworkResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable List<String> dnsServers;
+    private @Nullable List<String> dnsServers;
 
-    public List<String> dnsServers() {
-        return this.dnsServers == null ? List.of() : this.dnsServers;
+    public Optional<List<String>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class VirtualNetworkResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="enableDdosProtection")
-      private final @Nullable Boolean enableDdosProtection;
+    private @Nullable Boolean enableDdosProtection;
 
     public Optional<Boolean> enableDdosProtection() {
-        return this.enableDdosProtection == null ? Optional.empty() : Optional.ofNullable(this.enableDdosProtection);
+        return Optional.ofNullable(this.enableDdosProtection);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class VirtualNetworkResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -74,10 +74,10 @@ public final class VirtualNetworkResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="subnets")
-      private final @Nullable List<SubnetResourceSettingsResponse> subnets;
+    private @Nullable List<SubnetResourceSettingsResponse> subnets;
 
-    public List<SubnetResourceSettingsResponse> subnets() {
-        return this.subnets == null ? List.of() : this.subnets;
+    public Optional<List<SubnetResourceSettingsResponse>> subnets() {
+        return Optional.ofNullable(this.subnets);
     }
 
     /**
@@ -85,100 +85,88 @@ public final class VirtualNetworkResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final String targetResourceName;
+    private String targetResourceName;
 
     public String targetResourceName() {
         return this.targetResourceName;
     }
 
-    public VirtualNetworkResourceSettingsResponse(
-        @Nullable List<String> addressSpace,
-        @Nullable List<String> dnsServers,
-        @Nullable Boolean enableDdosProtection,
-        String resourceType,
-        @Nullable List<SubnetResourceSettingsResponse> subnets,
-        String targetResourceName) {
-        this.addressSpace = addressSpace;
-        this.dnsServers = dnsServers;
-        this.enableDdosProtection = enableDdosProtection;
-        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
-        this.subnets = subnets;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-    }
+    private VirtualNetworkResourceSettingsResponse() {}
 
-    private VirtualNetworkResourceSettingsResponse() {
-        this.addressSpace = List.of();
-        this.dnsServers = List.of();
-        this.enableDdosProtection = null;
-        this.resourceType = null;
-        this.subnets = List.of();
-        this.targetResourceName = null;
+    private VirtualNetworkResourceSettingsResponse(VirtualNetworkResourceSettingsResponse $) {
+        this.addressSpace = $.addressSpace;
+        this.dnsServers = $.dnsServers;
+        this.enableDdosProtection = $.enableDdosProtection;
+        this.resourceType = $.resourceType;
+        this.subnets = $.subnets;
+        this.targetResourceName = $.targetResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> addressSpace;
-        private @Nullable List<String> dnsServers;
-        private @Nullable Boolean enableDdosProtection;
-        private String resourceType;
-        private @Nullable List<SubnetResourceSettingsResponse> subnets;
-        private String targetResourceName;
+        private VirtualNetworkResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkResourceSettingsResponse();
         }
 
         public Builder(VirtualNetworkResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressSpace = defaults.addressSpace;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.enableDdosProtection = defaults.enableDdosProtection;
-    	      this.resourceType = defaults.resourceType;
-    	      this.subnets = defaults.subnets;
-    	      this.targetResourceName = defaults.targetResourceName;
+            $ = new VirtualNetworkResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressSpace(@Nullable List<String> addressSpace) {
-            this.addressSpace = addressSpace;
+            $.addressSpace = addressSpace;
             return this;
         }
+
         public Builder addressSpace(String... addressSpace) {
             return addressSpace(List.of(addressSpace));
         }
+
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
-            this.enableDdosProtection = enableDdosProtection;
+            $.enableDdosProtection = enableDdosProtection;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder subnets(@Nullable List<SubnetResourceSettingsResponse> subnets) {
-            this.subnets = subnets;
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(SubnetResourceSettingsResponse... subnets) {
             return subnets(List.of(subnets));
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
-        }        public VirtualNetworkResourceSettingsResponse build() {
-            return new VirtualNetworkResourceSettingsResponse(addressSpace, dnsServers, enableDdosProtection, resourceType, subnets, targetResourceName);
+        }
+
+        public VirtualNetworkResourceSettingsResponse build() {
+            $.resourceType = Codegen.stringProp("resourceType").arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

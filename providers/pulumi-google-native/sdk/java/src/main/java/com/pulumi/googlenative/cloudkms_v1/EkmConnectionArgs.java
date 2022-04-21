@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudkms_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudkms_v1.inputs.ServiceResolverArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
     public static final EkmConnectionArgs Empty = new EkmConnectionArgs();
 
     @Import(name="ekmConnectionId", required=true)
-      private final Output<String> ekmConnectionId;
+    private Output<String> ekmConnectionId;
 
     public Output<String> ekmConnectionId() {
         return this.ekmConnectionId;
@@ -29,24 +29,24 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -54,105 +54,93 @@ public final class EkmConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceResolvers")
-      private final @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;
+    private @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;
 
-    public Output<List<ServiceResolverArgs>> serviceResolvers() {
-        return this.serviceResolvers == null ? Codegen.empty() : this.serviceResolvers;
+    public Optional<Output<List<ServiceResolverArgs>>> serviceResolvers() {
+        return Optional.ofNullable(this.serviceResolvers);
     }
 
-    public EkmConnectionArgs(
-        Output<String> ekmConnectionId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<List<ServiceResolverArgs>> serviceResolvers) {
-        this.ekmConnectionId = Objects.requireNonNull(ekmConnectionId, "expected parameter 'ekmConnectionId' to be non-null");
-        this.etag = etag;
-        this.location = location;
-        this.project = project;
-        this.serviceResolvers = serviceResolvers;
-    }
+    private EkmConnectionArgs() {}
 
-    private EkmConnectionArgs() {
-        this.ekmConnectionId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceResolvers = Codegen.empty();
+    private EkmConnectionArgs(EkmConnectionArgs $) {
+        this.ekmConnectionId = $.ekmConnectionId;
+        this.etag = $.etag;
+        this.location = $.location;
+        this.project = $.project;
+        this.serviceResolvers = $.serviceResolvers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EkmConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ekmConnectionId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;
+        private EkmConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EkmConnectionArgs();
         }
 
         public Builder(EkmConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ekmConnectionId = defaults.ekmConnectionId;
-    	      this.etag = defaults.etag;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.serviceResolvers = defaults.serviceResolvers;
+            $ = new EkmConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ekmConnectionId(Output<String> ekmConnectionId) {
-            this.ekmConnectionId = Objects.requireNonNull(ekmConnectionId);
+            $.ekmConnectionId = ekmConnectionId;
             return this;
         }
+
         public Builder ekmConnectionId(String ekmConnectionId) {
-            this.ekmConnectionId = Output.of(Objects.requireNonNull(ekmConnectionId));
-            return this;
+            return ekmConnectionId(Output.of(ekmConnectionId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceResolvers(@Nullable Output<List<ServiceResolverArgs>> serviceResolvers) {
-            this.serviceResolvers = serviceResolvers;
+            $.serviceResolvers = serviceResolvers;
             return this;
         }
-        public Builder serviceResolvers(@Nullable List<ServiceResolverArgs> serviceResolvers) {
-            this.serviceResolvers = Codegen.ofNullable(serviceResolvers);
-            return this;
+
+        public Builder serviceResolvers(List<ServiceResolverArgs> serviceResolvers) {
+            return serviceResolvers(Output.of(serviceResolvers));
         }
+
         public Builder serviceResolvers(ServiceResolverArgs... serviceResolvers) {
             return serviceResolvers(List.of(serviceResolvers));
-        }        public EkmConnectionArgs build() {
-            return new EkmConnectionArgs(ekmConnectionId, etag, location, project, serviceResolvers);
+        }
+
+        public EkmConnectionArgs build() {
+            $.ekmConnectionId = Objects.requireNonNull($.ekmConnectionId, "expected parameter 'ekmConnectionId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computerName")
-      private final @Nullable String computerName;
+    private @Nullable String computerName;
 
     public Optional<String> computerName() {
-        return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
+        return Optional.ofNullable(this.computerName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osType", required=true)
-      private final String osType;
+    private String osType;
 
     public String osType() {
         return this.osType;
@@ -45,10 +45,10 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sshPublicKey")
-      private final @Nullable String sshPublicKey;
+    private @Nullable String sshPublicKey;
 
     public Optional<String> sshPublicKey() {
-        return this.sshPublicKey == null ? Optional.empty() : Optional.ofNullable(this.sshPublicKey);
+        return Optional.ofNullable(this.sshPublicKey);
     }
 
     /**
@@ -56,73 +56,64 @@ public final class OSProfileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public OSProfileResponse(
-        @Nullable String computerName,
-        String osType,
-        @Nullable String sshPublicKey,
-        String version) {
-        this.computerName = computerName;
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.sshPublicKey = sshPublicKey;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private OSProfileResponse() {}
 
-    private OSProfileResponse() {
-        this.computerName = null;
-        this.osType = null;
-        this.sshPublicKey = null;
-        this.version = null;
+    private OSProfileResponse(OSProfileResponse $) {
+        this.computerName = $.computerName;
+        this.osType = $.osType;
+        this.sshPublicKey = $.sshPublicKey;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String computerName;
-        private String osType;
-        private @Nullable String sshPublicKey;
-        private String version;
+        private OSProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSProfileResponse();
         }
 
         public Builder(OSProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computerName = defaults.computerName;
-    	      this.osType = defaults.osType;
-    	      this.sshPublicKey = defaults.sshPublicKey;
-    	      this.version = defaults.version;
+            $ = new OSProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = computerName;
+            $.computerName = computerName;
             return this;
         }
+
         public Builder osType(String osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = sshPublicKey;
+            $.sshPublicKey = sshPublicKey;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public OSProfileResponse build() {
-            return new OSProfileResponse(computerName, osType, sshPublicKey, version);
+        }
+
+        public OSProfileResponse build() {
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

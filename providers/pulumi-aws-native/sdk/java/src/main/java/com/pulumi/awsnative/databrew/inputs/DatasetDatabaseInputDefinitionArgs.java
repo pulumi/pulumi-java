@@ -6,9 +6,9 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="databaseTableName")
-      private final @Nullable Output<String> databaseTableName;
+    private @Nullable Output<String> databaseTableName;
 
-    public Output<String> databaseTableName() {
-        return this.databaseTableName == null ? Codegen.empty() : this.databaseTableName;
+    public Optional<Output<String>> databaseTableName() {
+        return Optional.ofNullable(this.databaseTableName);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="glueConnectionName", required=true)
-      private final Output<String> glueConnectionName;
+    private Output<String> glueConnectionName;
 
     public Output<String> glueConnectionName() {
         return this.glueConnectionName;
@@ -43,96 +43,86 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="queryString")
-      private final @Nullable Output<String> queryString;
+    private @Nullable Output<String> queryString;
 
-    public Output<String> queryString() {
-        return this.queryString == null ? Codegen.empty() : this.queryString;
+    public Optional<Output<String>> queryString() {
+        return Optional.ofNullable(this.queryString);
     }
 
     @Import(name="tempDirectory")
-      private final @Nullable Output<DatasetS3LocationArgs> tempDirectory;
+    private @Nullable Output<DatasetS3LocationArgs> tempDirectory;
 
-    public Output<DatasetS3LocationArgs> tempDirectory() {
-        return this.tempDirectory == null ? Codegen.empty() : this.tempDirectory;
+    public Optional<Output<DatasetS3LocationArgs>> tempDirectory() {
+        return Optional.ofNullable(this.tempDirectory);
     }
 
-    public DatasetDatabaseInputDefinitionArgs(
-        @Nullable Output<String> databaseTableName,
-        Output<String> glueConnectionName,
-        @Nullable Output<String> queryString,
-        @Nullable Output<DatasetS3LocationArgs> tempDirectory) {
-        this.databaseTableName = databaseTableName;
-        this.glueConnectionName = Objects.requireNonNull(glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
-        this.queryString = queryString;
-        this.tempDirectory = tempDirectory;
-    }
+    private DatasetDatabaseInputDefinitionArgs() {}
 
-    private DatasetDatabaseInputDefinitionArgs() {
-        this.databaseTableName = Codegen.empty();
-        this.glueConnectionName = Codegen.empty();
-        this.queryString = Codegen.empty();
-        this.tempDirectory = Codegen.empty();
+    private DatasetDatabaseInputDefinitionArgs(DatasetDatabaseInputDefinitionArgs $) {
+        this.databaseTableName = $.databaseTableName;
+        this.glueConnectionName = $.glueConnectionName;
+        this.queryString = $.queryString;
+        this.tempDirectory = $.tempDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetDatabaseInputDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> databaseTableName;
-        private Output<String> glueConnectionName;
-        private @Nullable Output<String> queryString;
-        private @Nullable Output<DatasetS3LocationArgs> tempDirectory;
+        private DatasetDatabaseInputDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetDatabaseInputDefinitionArgs();
         }
 
         public Builder(DatasetDatabaseInputDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseTableName = defaults.databaseTableName;
-    	      this.glueConnectionName = defaults.glueConnectionName;
-    	      this.queryString = defaults.queryString;
-    	      this.tempDirectory = defaults.tempDirectory;
+            $ = new DatasetDatabaseInputDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseTableName(@Nullable Output<String> databaseTableName) {
-            this.databaseTableName = databaseTableName;
+            $.databaseTableName = databaseTableName;
             return this;
         }
-        public Builder databaseTableName(@Nullable String databaseTableName) {
-            this.databaseTableName = Codegen.ofNullable(databaseTableName);
-            return this;
+
+        public Builder databaseTableName(String databaseTableName) {
+            return databaseTableName(Output.of(databaseTableName));
         }
+
         public Builder glueConnectionName(Output<String> glueConnectionName) {
-            this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
+            $.glueConnectionName = glueConnectionName;
             return this;
         }
+
         public Builder glueConnectionName(String glueConnectionName) {
-            this.glueConnectionName = Output.of(Objects.requireNonNull(glueConnectionName));
-            return this;
+            return glueConnectionName(Output.of(glueConnectionName));
         }
+
         public Builder queryString(@Nullable Output<String> queryString) {
-            this.queryString = queryString;
+            $.queryString = queryString;
             return this;
         }
-        public Builder queryString(@Nullable String queryString) {
-            this.queryString = Codegen.ofNullable(queryString);
-            return this;
+
+        public Builder queryString(String queryString) {
+            return queryString(Output.of(queryString));
         }
+
         public Builder tempDirectory(@Nullable Output<DatasetS3LocationArgs> tempDirectory) {
-            this.tempDirectory = tempDirectory;
+            $.tempDirectory = tempDirectory;
             return this;
         }
-        public Builder tempDirectory(@Nullable DatasetS3LocationArgs tempDirectory) {
-            this.tempDirectory = Codegen.ofNullable(tempDirectory);
-            return this;
-        }        public DatasetDatabaseInputDefinitionArgs build() {
-            return new DatasetDatabaseInputDefinitionArgs(databaseTableName, glueConnectionName, queryString, tempDirectory);
+
+        public Builder tempDirectory(DatasetS3LocationArgs tempDirectory) {
+            return tempDirectory(Output.of(tempDirectory));
+        }
+
+        public DatasetDatabaseInputDefinitionArgs build() {
+            $.glueConnectionName = Objects.requireNonNull($.glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

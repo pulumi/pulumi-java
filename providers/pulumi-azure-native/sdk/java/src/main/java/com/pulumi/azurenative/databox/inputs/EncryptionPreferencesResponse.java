@@ -24,45 +24,45 @@ public final class EncryptionPreferencesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="doubleEncryption")
-      private final @Nullable String doubleEncryption;
+    private @Nullable String doubleEncryption;
 
     public Optional<String> doubleEncryption() {
-        return this.doubleEncryption == null ? Optional.empty() : Optional.ofNullable(this.doubleEncryption);
+        return Optional.ofNullable(this.doubleEncryption);
     }
 
-    public EncryptionPreferencesResponse(@Nullable String doubleEncryption) {
-        this.doubleEncryption = Codegen.stringProp("doubleEncryption").arg(doubleEncryption).def("Disabled").getNullable();
-    }
+    private EncryptionPreferencesResponse() {}
 
-    private EncryptionPreferencesResponse() {
-        this.doubleEncryption = null;
+    private EncryptionPreferencesResponse(EncryptionPreferencesResponse $) {
+        this.doubleEncryption = $.doubleEncryption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPreferencesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String doubleEncryption;
+        private EncryptionPreferencesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPreferencesResponse();
         }
 
         public Builder(EncryptionPreferencesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.doubleEncryption = defaults.doubleEncryption;
+            $ = new EncryptionPreferencesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder doubleEncryption(@Nullable String doubleEncryption) {
-            this.doubleEncryption = doubleEncryption;
+            $.doubleEncryption = doubleEncryption;
             return this;
-        }        public EncryptionPreferencesResponse build() {
-            return new EncryptionPreferencesResponse(doubleEncryption);
+        }
+
+        public EncryptionPreferencesResponse build() {
+            $.doubleEncryption = Codegen.stringProp("doubleEncryption").arg($.doubleEncryption).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

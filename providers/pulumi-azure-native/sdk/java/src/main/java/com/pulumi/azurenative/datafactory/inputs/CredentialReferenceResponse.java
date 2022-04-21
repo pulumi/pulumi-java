@@ -21,7 +21,7 @@ public final class CredentialReferenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="referenceName", required=true)
-      private final String referenceName;
+    private String referenceName;
 
     public String referenceName() {
         return this.referenceName;
@@ -32,55 +32,52 @@ public final class CredentialReferenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public CredentialReferenceResponse(
-        String referenceName,
-        String type) {
-        this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private CredentialReferenceResponse() {}
 
-    private CredentialReferenceResponse() {
-        this.referenceName = null;
-        this.type = null;
+    private CredentialReferenceResponse(CredentialReferenceResponse $) {
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CredentialReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String referenceName;
-        private String type;
+        private CredentialReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CredentialReferenceResponse();
         }
 
         public Builder(CredentialReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new CredentialReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder referenceName(String referenceName) {
-            this.referenceName = Objects.requireNonNull(referenceName);
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public CredentialReferenceResponse build() {
-            return new CredentialReferenceResponse(referenceName, type);
+        }
+
+        public CredentialReferenceResponse build() {
+            $.referenceName = Objects.requireNonNull($.referenceName, "expected parameter 'referenceName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

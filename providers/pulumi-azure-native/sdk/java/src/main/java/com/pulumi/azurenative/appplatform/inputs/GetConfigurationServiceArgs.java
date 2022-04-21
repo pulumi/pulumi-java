@@ -17,7 +17,7 @@ public final class GetConfigurationServiceArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="configurationServiceName", required=true)
-      private final String configurationServiceName;
+    private String configurationServiceName;
 
     public String configurationServiceName() {
         return this.configurationServiceName;
@@ -28,7 +28,7 @@ public final class GetConfigurationServiceArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetConfigurationServiceArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetConfigurationServiceArgs(
-        String configurationServiceName,
-        String resourceGroupName,
-        String serviceName) {
-        this.configurationServiceName = Objects.requireNonNull(configurationServiceName, "expected parameter 'configurationServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetConfigurationServiceArgs() {}
 
-    private GetConfigurationServiceArgs() {
-        this.configurationServiceName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetConfigurationServiceArgs(GetConfigurationServiceArgs $) {
+        this.configurationServiceName = $.configurationServiceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigurationServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationServiceName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetConfigurationServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigurationServiceArgs();
         }
 
         public Builder(GetConfigurationServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationServiceName = defaults.configurationServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetConfigurationServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationServiceName(String configurationServiceName) {
-            this.configurationServiceName = Objects.requireNonNull(configurationServiceName);
+            $.configurationServiceName = configurationServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetConfigurationServiceArgs build() {
-            return new GetConfigurationServiceArgs(configurationServiceName, resourceGroupName, serviceName);
+        }
+
+        public GetConfigurationServiceArgs build() {
+            $.configurationServiceName = Objects.requireNonNull($.configurationServiceName, "expected parameter 'configurationServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

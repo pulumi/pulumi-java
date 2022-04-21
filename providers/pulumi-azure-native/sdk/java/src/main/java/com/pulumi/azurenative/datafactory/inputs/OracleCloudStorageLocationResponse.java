@@ -25,10 +25,10 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Object bucketName;
+    private @Nullable Object bucketName;
 
     public Optional<Object> bucketName() {
-        return this.bucketName == null ? Optional.empty() : Optional.ofNullable(this.bucketName);
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Object fileName;
+    private @Nullable Object fileName;
 
     public Optional<Object> fileName() {
-        return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Object folderPath;
+    private @Nullable Object folderPath;
 
     public Optional<Object> folderPath() {
-        return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -70,82 +70,69 @@ public final class OracleCloudStorageLocationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="version")
-      private final @Nullable Object version;
+    private @Nullable Object version;
 
     public Optional<Object> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public OracleCloudStorageLocationResponse(
-        @Nullable Object bucketName,
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        String type,
-        @Nullable Object version) {
-        this.bucketName = bucketName;
-        this.fileName = fileName;
-        this.folderPath = folderPath;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.version = version;
-    }
+    private OracleCloudStorageLocationResponse() {}
 
-    private OracleCloudStorageLocationResponse() {
-        this.bucketName = null;
-        this.fileName = null;
-        this.folderPath = null;
-        this.type = null;
-        this.version = null;
+    private OracleCloudStorageLocationResponse(OracleCloudStorageLocationResponse $) {
+        this.bucketName = $.bucketName;
+        this.fileName = $.fileName;
+        this.folderPath = $.folderPath;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleCloudStorageLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object bucketName;
-        private @Nullable Object fileName;
-        private @Nullable Object folderPath;
-        private String type;
-        private @Nullable Object version;
+        private OracleCloudStorageLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleCloudStorageLocationResponse();
         }
 
         public Builder(OracleCloudStorageLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.fileName = defaults.fileName;
-    	      this.folderPath = defaults.folderPath;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new OracleCloudStorageLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Object bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
+
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder version(@Nullable Object version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public OracleCloudStorageLocationResponse build() {
-            return new OracleCloudStorageLocationResponse(bucketName, fileName, folderPath, type, version);
+        }
+
+        public OracleCloudStorageLocationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.cloudkms_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rawDer", required=true)
-      private final Output<String> rawDer;
+    private Output<String> rawDer;
 
     public Output<String> rawDer() {
         return this.rawDer;
     }
 
-    public CertificateArgs(Output<String> rawDer) {
-        this.rawDer = Objects.requireNonNull(rawDer, "expected parameter 'rawDer' to be non-null");
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.rawDer = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.rawDer = $.rawDer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> rawDer;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rawDer = defaults.rawDer;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rawDer(Output<String> rawDer) {
-            this.rawDer = Objects.requireNonNull(rawDer);
+            $.rawDer = rawDer;
             return this;
         }
+
         public Builder rawDer(String rawDer) {
-            this.rawDer = Output.of(Objects.requireNonNull(rawDer));
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(rawDer);
+            return rawDer(Output.of(rawDer));
+        }
+
+        public CertificateArgs build() {
+            $.rawDer = Objects.requireNonNull($.rawDer, "expected parameter 'rawDer' to be non-null");
+            return $;
         }
     }
+
 }

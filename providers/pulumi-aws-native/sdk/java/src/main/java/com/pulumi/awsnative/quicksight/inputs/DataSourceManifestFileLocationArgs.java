@@ -5,7 +5,6 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class DataSourceManifestFileLocationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -34,63 +33,60 @@ public final class DataSourceManifestFileLocationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
     }
 
-    public DataSourceManifestFileLocationArgs(
-        Output<String> bucket,
-        Output<String> key) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private DataSourceManifestFileLocationArgs() {}
 
-    private DataSourceManifestFileLocationArgs() {
-        this.bucket = Codegen.empty();
-        this.key = Codegen.empty();
+    private DataSourceManifestFileLocationArgs(DataSourceManifestFileLocationArgs $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceManifestFileLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<String> key;
+        private DataSourceManifestFileLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceManifestFileLocationArgs();
         }
 
         public Builder(DataSourceManifestFileLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
+            $ = new DataSourceManifestFileLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
-        }        public DataSourceManifestFileLocationArgs build() {
-            return new DataSourceManifestFileLocationArgs(bucket, key);
+            return key(Output.of(key));
+        }
+
+        public DataSourceManifestFileLocationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

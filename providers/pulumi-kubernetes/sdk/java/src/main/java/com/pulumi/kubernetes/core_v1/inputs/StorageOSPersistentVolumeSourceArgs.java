@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable Output<ObjectReferenceArgs> secretRef;
+    private @Nullable Output<ObjectReferenceArgs> secretRef;
 
-    public Output<ObjectReferenceArgs> secretRef() {
-        return this.secretRef == null ? Codegen.empty() : this.secretRef;
+    public Optional<Output<ObjectReferenceArgs>> secretRef() {
+        return Optional.ofNullable(this.secretRef);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="volumeName")
-      private final @Nullable Output<String> volumeName;
+    private @Nullable Output<String> volumeName;
 
-    public Output<String> volumeName() {
-        return this.volumeName == null ? Codegen.empty() : this.volumeName;
+    public Optional<Output<String>> volumeName() {
+        return Optional.ofNullable(this.volumeName);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class StorageOSPersistentVolumeSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="volumeNamespace")
-      private final @Nullable Output<String> volumeNamespace;
+    private @Nullable Output<String> volumeNamespace;
 
-    public Output<String> volumeNamespace() {
-        return this.volumeNamespace == null ? Codegen.empty() : this.volumeNamespace;
+    public Optional<Output<String>> volumeNamespace() {
+        return Optional.ofNullable(this.volumeNamespace);
     }
 
-    public StorageOSPersistentVolumeSourceArgs(
-        @Nullable Output<String> fsType,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<ObjectReferenceArgs> secretRef,
-        @Nullable Output<String> volumeName,
-        @Nullable Output<String> volumeNamespace) {
-        this.fsType = fsType;
-        this.readOnly = readOnly;
-        this.secretRef = secretRef;
-        this.volumeName = volumeName;
-        this.volumeNamespace = volumeNamespace;
-    }
+    private StorageOSPersistentVolumeSourceArgs() {}
 
-    private StorageOSPersistentVolumeSourceArgs() {
-        this.fsType = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.secretRef = Codegen.empty();
-        this.volumeName = Codegen.empty();
-        this.volumeNamespace = Codegen.empty();
+    private StorageOSPersistentVolumeSourceArgs(StorageOSPersistentVolumeSourceArgs $) {
+        this.fsType = $.fsType;
+        this.readOnly = $.readOnly;
+        this.secretRef = $.secretRef;
+        this.volumeName = $.volumeName;
+        this.volumeNamespace = $.volumeNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageOSPersistentVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fsType;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<ObjectReferenceArgs> secretRef;
-        private @Nullable Output<String> volumeName;
-        private @Nullable Output<String> volumeNamespace;
+        private StorageOSPersistentVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageOSPersistentVolumeSourceArgs();
         }
 
         public Builder(StorageOSPersistentVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsType = defaults.fsType;
-    	      this.readOnly = defaults.readOnly;
-    	      this.secretRef = defaults.secretRef;
-    	      this.volumeName = defaults.volumeName;
-    	      this.volumeNamespace = defaults.volumeNamespace;
+            $ = new StorageOSPersistentVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder secretRef(@Nullable Output<ObjectReferenceArgs> secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
-        public Builder secretRef(@Nullable ObjectReferenceArgs secretRef) {
-            this.secretRef = Codegen.ofNullable(secretRef);
-            return this;
+
+        public Builder secretRef(ObjectReferenceArgs secretRef) {
+            return secretRef(Output.of(secretRef));
         }
+
         public Builder volumeName(@Nullable Output<String> volumeName) {
-            this.volumeName = volumeName;
+            $.volumeName = volumeName;
             return this;
         }
-        public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Codegen.ofNullable(volumeName);
-            return this;
+
+        public Builder volumeName(String volumeName) {
+            return volumeName(Output.of(volumeName));
         }
+
         public Builder volumeNamespace(@Nullable Output<String> volumeNamespace) {
-            this.volumeNamespace = volumeNamespace;
+            $.volumeNamespace = volumeNamespace;
             return this;
         }
-        public Builder volumeNamespace(@Nullable String volumeNamespace) {
-            this.volumeNamespace = Codegen.ofNullable(volumeNamespace);
-            return this;
-        }        public StorageOSPersistentVolumeSourceArgs build() {
-            return new StorageOSPersistentVolumeSourceArgs(fsType, readOnly, secretRef, volumeName, volumeNamespace);
+
+        public Builder volumeNamespace(String volumeNamespace) {
+            return volumeNamespace(Output.of(volumeNamespace));
+        }
+
+        public StorageOSPersistentVolumeSourceArgs build() {
+            return $;
         }
     }
+
 }

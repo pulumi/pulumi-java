@@ -7,9 +7,9 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDow
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
      * 
      */
     @Import(name="fieldToMatch")
-      private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
+    private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch() {
-        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
+    public Optional<Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementFieldToMatchArgs>> fieldToMatch() {
+        return Optional.ofNullable(this.fieldToMatch);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
      * 
      */
     @Import(name="textTransformations", required=true)
-      private final Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations;
+    private Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations;
 
     public Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
-    public WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs(
-        @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch,
-        Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations) {
-        this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs() {}
 
-    private WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.textTransformations = Codegen.empty();
+    private WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs(WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch;
-        private Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations;
+        private WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs();
         }
 
         public Builder(WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = fieldToMatch;
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
-        public Builder fieldToMatch(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
-            return this;
+
+        public Builder fieldToMatch(WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementFieldToMatchArgs fieldToMatch) {
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder textTransformations(Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementTextTransformationArgs>> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementTextTransformationArgs> textTransformations) {
-            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
-            return this;
+            return textTransformations(Output.of(textTransformations));
         }
+
         public Builder textTransformations(WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementTextTransformationArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs build() {
-            return new WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs(fieldToMatch, textTransformations);
+        }
+
+        public WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementXssMatchStatementArgs build() {
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

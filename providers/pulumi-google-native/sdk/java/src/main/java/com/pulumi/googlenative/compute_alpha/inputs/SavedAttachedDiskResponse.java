@@ -26,7 +26,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="autoDelete", required=true)
-      private final Boolean autoDelete;
+    private Boolean autoDelete;
 
     public Boolean autoDelete() {
         return this.autoDelete;
@@ -37,7 +37,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="boot", required=true)
-      private final Boolean boot;
+    private Boolean boot;
 
     public Boolean boot() {
         return this.boot;
@@ -48,7 +48,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -59,7 +59,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="diskEncryptionKey", required=true)
-      private final CustomerEncryptionKeyResponse diskEncryptionKey;
+    private CustomerEncryptionKeyResponse diskEncryptionKey;
 
     public CustomerEncryptionKeyResponse diskEncryptionKey() {
         return this.diskEncryptionKey;
@@ -70,7 +70,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final String diskSizeGb;
+    private String diskSizeGb;
 
     public String diskSizeGb() {
         return this.diskSizeGb;
@@ -81,7 +81,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
@@ -92,7 +92,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="guestOsFeatures", required=true)
-      private final List<GuestOsFeatureResponse> guestOsFeatures;
+    private List<GuestOsFeatureResponse> guestOsFeatures;
 
     public List<GuestOsFeatureResponse> guestOsFeatures() {
         return this.guestOsFeatures;
@@ -103,7 +103,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="index", required=true)
-      private final Integer index;
+    private Integer index;
 
     public Integer index() {
         return this.index;
@@ -114,7 +114,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="interface", required=true)
-      private final String interface_;
+    private String interface_;
 
     public String interface_() {
         return this.interface_;
@@ -125,7 +125,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -136,7 +136,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="licenses", required=true)
-      private final List<String> licenses;
+    private List<String> licenses;
 
     public List<String> licenses() {
         return this.licenses;
@@ -147,7 +147,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -158,7 +158,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -169,7 +169,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="storageBytes", required=true)
-      private final String storageBytes;
+    private String storageBytes;
 
     public String storageBytes() {
         return this.storageBytes;
@@ -180,7 +180,7 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="storageBytesStatus", required=true)
-      private final String storageBytesStatus;
+    private String storageBytesStatus;
 
     public String storageBytesStatus() {
         return this.storageBytesStatus;
@@ -191,187 +191,158 @@ public final class SavedAttachedDiskResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SavedAttachedDiskResponse(
-        Boolean autoDelete,
-        Boolean boot,
-        String deviceName,
-        CustomerEncryptionKeyResponse diskEncryptionKey,
-        String diskSizeGb,
-        String diskType,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        Integer index,
-        String interface_,
-        String kind,
-        List<String> licenses,
-        String mode,
-        String source,
-        String storageBytes,
-        String storageBytesStatus,
-        String type) {
-        this.autoDelete = Objects.requireNonNull(autoDelete, "expected parameter 'autoDelete' to be non-null");
-        this.boot = Objects.requireNonNull(boot, "expected parameter 'boot' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey, "expected parameter 'diskEncryptionKey' to be non-null");
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures, "expected parameter 'guestOsFeatures' to be non-null");
-        this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.licenses = Objects.requireNonNull(licenses, "expected parameter 'licenses' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.storageBytes = Objects.requireNonNull(storageBytes, "expected parameter 'storageBytes' to be non-null");
-        this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus, "expected parameter 'storageBytesStatus' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SavedAttachedDiskResponse() {}
 
-    private SavedAttachedDiskResponse() {
-        this.autoDelete = null;
-        this.boot = null;
-        this.deviceName = null;
-        this.diskEncryptionKey = null;
-        this.diskSizeGb = null;
-        this.diskType = null;
-        this.guestOsFeatures = List.of();
-        this.index = null;
-        this.interface_ = null;
-        this.kind = null;
-        this.licenses = List.of();
-        this.mode = null;
-        this.source = null;
-        this.storageBytes = null;
-        this.storageBytesStatus = null;
-        this.type = null;
+    private SavedAttachedDiskResponse(SavedAttachedDiskResponse $) {
+        this.autoDelete = $.autoDelete;
+        this.boot = $.boot;
+        this.deviceName = $.deviceName;
+        this.diskEncryptionKey = $.diskEncryptionKey;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.guestOsFeatures = $.guestOsFeatures;
+        this.index = $.index;
+        this.interface_ = $.interface_;
+        this.kind = $.kind;
+        this.licenses = $.licenses;
+        this.mode = $.mode;
+        this.source = $.source;
+        this.storageBytes = $.storageBytes;
+        this.storageBytesStatus = $.storageBytesStatus;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SavedAttachedDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autoDelete;
-        private Boolean boot;
-        private String deviceName;
-        private CustomerEncryptionKeyResponse diskEncryptionKey;
-        private String diskSizeGb;
-        private String diskType;
-        private List<GuestOsFeatureResponse> guestOsFeatures;
-        private Integer index;
-        private String interface_;
-        private String kind;
-        private List<String> licenses;
-        private String mode;
-        private String source;
-        private String storageBytes;
-        private String storageBytesStatus;
-        private String type;
+        private SavedAttachedDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SavedAttachedDiskResponse();
         }
 
         public Builder(SavedAttachedDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDelete = defaults.autoDelete;
-    	      this.boot = defaults.boot;
-    	      this.deviceName = defaults.deviceName;
-    	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.guestOsFeatures = defaults.guestOsFeatures;
-    	      this.index = defaults.index;
-    	      this.interface_ = defaults.interface_;
-    	      this.kind = defaults.kind;
-    	      this.licenses = defaults.licenses;
-    	      this.mode = defaults.mode;
-    	      this.source = defaults.source;
-    	      this.storageBytes = defaults.storageBytes;
-    	      this.storageBytesStatus = defaults.storageBytesStatus;
-    	      this.type = defaults.type;
+            $ = new SavedAttachedDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDelete(Boolean autoDelete) {
-            this.autoDelete = Objects.requireNonNull(autoDelete);
+            $.autoDelete = autoDelete;
             return this;
         }
+
         public Builder boot(Boolean boot) {
-            this.boot = Objects.requireNonNull(boot);
+            $.boot = boot;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
-            this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
+            $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
+
         public Builder diskSizeGb(String diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
-            this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
+            $.guestOsFeatures = guestOsFeatures;
             return this;
         }
+
         public Builder guestOsFeatures(GuestOsFeatureResponse... guestOsFeatures) {
             return guestOsFeatures(List.of(guestOsFeatures));
         }
+
         public Builder index(Integer index) {
-            this.index = Objects.requireNonNull(index);
+            $.index = index;
             return this;
         }
+
         public Builder interface_(String interface_) {
-            this.interface_ = Objects.requireNonNull(interface_);
+            $.interface_ = interface_;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder licenses(List<String> licenses) {
-            this.licenses = Objects.requireNonNull(licenses);
+            $.licenses = licenses;
             return this;
         }
+
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder storageBytes(String storageBytes) {
-            this.storageBytes = Objects.requireNonNull(storageBytes);
+            $.storageBytes = storageBytes;
             return this;
         }
+
         public Builder storageBytesStatus(String storageBytesStatus) {
-            this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
+            $.storageBytesStatus = storageBytesStatus;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SavedAttachedDiskResponse build() {
-            return new SavedAttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, diskType, guestOsFeatures, index, interface_, kind, licenses, mode, source, storageBytes, storageBytesStatus, type);
+        }
+
+        public SavedAttachedDiskResponse build() {
+            $.autoDelete = Objects.requireNonNull($.autoDelete, "expected parameter 'autoDelete' to be non-null");
+            $.boot = Objects.requireNonNull($.boot, "expected parameter 'boot' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.diskEncryptionKey = Objects.requireNonNull($.diskEncryptionKey, "expected parameter 'diskEncryptionKey' to be non-null");
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.guestOsFeatures = Objects.requireNonNull($.guestOsFeatures, "expected parameter 'guestOsFeatures' to be non-null");
+            $.index = Objects.requireNonNull($.index, "expected parameter 'index' to be non-null");
+            $.interface_ = Objects.requireNonNull($.interface_, "expected parameter 'interface' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.licenses = Objects.requireNonNull($.licenses, "expected parameter 'licenses' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.storageBytes = Objects.requireNonNull($.storageBytes, "expected parameter 'storageBytes' to be non-null");
+            $.storageBytesStatus = Objects.requireNonNull($.storageBytesStatus, "expected parameter 'storageBytesStatus' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,10 +21,10 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
      * 
      */
     @Import(name="bindingSelector")
-      private final @Nullable String bindingSelector;
+    private @Nullable String bindingSelector;
 
     public Optional<String> bindingSelector() {
-        return this.bindingSelector == null ? Optional.empty() : Optional.ofNullable(this.bindingSelector);
+        return Optional.ofNullable(this.bindingSelector);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
      * 
      */
     @Import(name="identity", required=true)
-      private final UserAssignedIdentityResponse identity;
+    private UserAssignedIdentityResponse identity;
 
     public UserAssignedIdentityResponse identity() {
         return this.identity;
@@ -43,7 +43,7 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -54,14 +54,14 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
     }
 
     @Import(name="provisioningInfo", required=true)
-      private final ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo;
+    private ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo;
 
     public ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo() {
         return this.provisioningInfo;
@@ -72,91 +72,79 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public ManagedClusterPodIdentityResponse(
-        @Nullable String bindingSelector,
-        UserAssignedIdentityResponse identity,
-        String name,
-        String namespace,
-        ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo,
-        String provisioningState) {
-        this.bindingSelector = bindingSelector;
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.provisioningInfo = Objects.requireNonNull(provisioningInfo, "expected parameter 'provisioningInfo' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private ManagedClusterPodIdentityResponse() {}
 
-    private ManagedClusterPodIdentityResponse() {
-        this.bindingSelector = null;
-        this.identity = null;
-        this.name = null;
-        this.namespace = null;
-        this.provisioningInfo = null;
-        this.provisioningState = null;
+    private ManagedClusterPodIdentityResponse(ManagedClusterPodIdentityResponse $) {
+        this.bindingSelector = $.bindingSelector;
+        this.identity = $.identity;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.provisioningInfo = $.provisioningInfo;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterPodIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bindingSelector;
-        private UserAssignedIdentityResponse identity;
-        private String name;
-        private String namespace;
-        private ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo;
-        private String provisioningState;
+        private ManagedClusterPodIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterPodIdentityResponse();
         }
 
         public Builder(ManagedClusterPodIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindingSelector = defaults.bindingSelector;
-    	      this.identity = defaults.identity;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.provisioningInfo = defaults.provisioningInfo;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new ManagedClusterPodIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bindingSelector(@Nullable String bindingSelector) {
-            this.bindingSelector = bindingSelector;
+            $.bindingSelector = bindingSelector;
             return this;
         }
+
         public Builder identity(UserAssignedIdentityResponse identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder provisioningInfo(ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo) {
-            this.provisioningInfo = Objects.requireNonNull(provisioningInfo);
+            $.provisioningInfo = provisioningInfo;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public ManagedClusterPodIdentityResponse build() {
-            return new ManagedClusterPodIdentityResponse(bindingSelector, identity, name, namespace, provisioningInfo, provisioningState);
+        }
+
+        public ManagedClusterPodIdentityResponse build() {
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.provisioningInfo = Objects.requireNonNull($.provisioningInfo, "expected parameter 'provisioningInfo' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

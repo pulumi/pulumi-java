@@ -21,45 +21,45 @@ public final class SoftwareRecipeStepInstallRpmResponse extends com.pulumi.resou
      * 
      */
     @Import(name="artifactId", required=true)
-      private final String artifactId;
+    private String artifactId;
 
     public String artifactId() {
         return this.artifactId;
     }
 
-    public SoftwareRecipeStepInstallRpmResponse(String artifactId) {
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-    }
+    private SoftwareRecipeStepInstallRpmResponse() {}
 
-    private SoftwareRecipeStepInstallRpmResponse() {
-        this.artifactId = null;
+    private SoftwareRecipeStepInstallRpmResponse(SoftwareRecipeStepInstallRpmResponse $) {
+        this.artifactId = $.artifactId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeStepInstallRpmResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactId;
+        private SoftwareRecipeStepInstallRpmResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeStepInstallRpmResponse();
         }
 
         public Builder(SoftwareRecipeStepInstallRpmResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
+            $ = new SoftwareRecipeStepInstallRpmResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(String artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
-        }        public SoftwareRecipeStepInstallRpmResponse build() {
-            return new SoftwareRecipeStepInstallRpmResponse(artifactId);
+        }
+
+        public SoftwareRecipeStepInstallRpmResponse build() {
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            return $;
         }
     }
+
 }

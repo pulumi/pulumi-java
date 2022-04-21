@@ -26,7 +26,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accessConfigs", required=true)
-      private final List<AccessConfigResponse> accessConfigs;
+    private List<AccessConfigResponse> accessConfigs;
 
     public List<AccessConfigResponse> accessConfigs() {
         return this.accessConfigs;
@@ -37,7 +37,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="aliasIpRanges", required=true)
-      private final List<AliasIpRangeResponse> aliasIpRanges;
+    private List<AliasIpRangeResponse> aliasIpRanges;
 
     public List<AliasIpRangeResponse> aliasIpRanges() {
         return this.aliasIpRanges;
@@ -48,7 +48,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fingerprint", required=true)
-      private final String fingerprint;
+    private String fingerprint;
 
     public String fingerprint() {
         return this.fingerprint;
@@ -59,7 +59,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="internalIpv6PrefixLength", required=true)
-      private final Integer internalIpv6PrefixLength;
+    private Integer internalIpv6PrefixLength;
 
     public Integer internalIpv6PrefixLength() {
         return this.internalIpv6PrefixLength;
@@ -70,7 +70,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipv6AccessConfigs", required=true)
-      private final List<AccessConfigResponse> ipv6AccessConfigs;
+    private List<AccessConfigResponse> ipv6AccessConfigs;
 
     public List<AccessConfigResponse> ipv6AccessConfigs() {
         return this.ipv6AccessConfigs;
@@ -81,7 +81,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipv6AccessType", required=true)
-      private final String ipv6AccessType;
+    private String ipv6AccessType;
 
     public String ipv6AccessType() {
         return this.ipv6AccessType;
@@ -92,7 +92,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipv6Address", required=true)
-      private final String ipv6Address;
+    private String ipv6Address;
 
     public String ipv6Address() {
         return this.ipv6Address;
@@ -103,7 +103,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -114,7 +114,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -125,7 +125,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -136,7 +136,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkIP", required=true)
-      private final String networkIP;
+    private String networkIP;
 
     public String networkIP() {
         return this.networkIP;
@@ -147,7 +147,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nicType", required=true)
-      private final String nicType;
+    private String nicType;
 
     public String nicType() {
         return this.nicType;
@@ -158,7 +158,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="queueCount", required=true)
-      private final Integer queueCount;
+    private Integer queueCount;
 
     public Integer queueCount() {
         return this.queueCount;
@@ -169,7 +169,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="stackType", required=true)
-      private final String stackType;
+    private String stackType;
 
     public String stackType() {
         return this.stackType;
@@ -180,7 +180,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subinterfaces", required=true)
-      private final List<NetworkInterfaceSubInterfaceResponse> subinterfaces;
+    private List<NetworkInterfaceSubInterfaceResponse> subinterfaces;
 
     public List<NetworkInterfaceSubInterfaceResponse> subinterfaces() {
         return this.subinterfaces;
@@ -191,193 +191,166 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
     }
 
-    public NetworkInterfaceResponse(
-        List<AccessConfigResponse> accessConfigs,
-        List<AliasIpRangeResponse> aliasIpRanges,
-        String fingerprint,
-        Integer internalIpv6PrefixLength,
-        List<AccessConfigResponse> ipv6AccessConfigs,
-        String ipv6AccessType,
-        String ipv6Address,
-        String kind,
-        String name,
-        String network,
-        String networkIP,
-        String nicType,
-        Integer queueCount,
-        String stackType,
-        List<NetworkInterfaceSubInterfaceResponse> subinterfaces,
-        String subnetwork) {
-        this.accessConfigs = Objects.requireNonNull(accessConfigs, "expected parameter 'accessConfigs' to be non-null");
-        this.aliasIpRanges = Objects.requireNonNull(aliasIpRanges, "expected parameter 'aliasIpRanges' to be non-null");
-        this.fingerprint = Objects.requireNonNull(fingerprint, "expected parameter 'fingerprint' to be non-null");
-        this.internalIpv6PrefixLength = Objects.requireNonNull(internalIpv6PrefixLength, "expected parameter 'internalIpv6PrefixLength' to be non-null");
-        this.ipv6AccessConfigs = Objects.requireNonNull(ipv6AccessConfigs, "expected parameter 'ipv6AccessConfigs' to be non-null");
-        this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType, "expected parameter 'ipv6AccessType' to be non-null");
-        this.ipv6Address = Objects.requireNonNull(ipv6Address, "expected parameter 'ipv6Address' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.networkIP = Objects.requireNonNull(networkIP, "expected parameter 'networkIP' to be non-null");
-        this.nicType = Objects.requireNonNull(nicType, "expected parameter 'nicType' to be non-null");
-        this.queueCount = Objects.requireNonNull(queueCount, "expected parameter 'queueCount' to be non-null");
-        this.stackType = Objects.requireNonNull(stackType, "expected parameter 'stackType' to be non-null");
-        this.subinterfaces = Objects.requireNonNull(subinterfaces, "expected parameter 'subinterfaces' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-    }
+    private NetworkInterfaceResponse() {}
 
-    private NetworkInterfaceResponse() {
-        this.accessConfigs = List.of();
-        this.aliasIpRanges = List.of();
-        this.fingerprint = null;
-        this.internalIpv6PrefixLength = null;
-        this.ipv6AccessConfigs = List.of();
-        this.ipv6AccessType = null;
-        this.ipv6Address = null;
-        this.kind = null;
-        this.name = null;
-        this.network = null;
-        this.networkIP = null;
-        this.nicType = null;
-        this.queueCount = null;
-        this.stackType = null;
-        this.subinterfaces = List.of();
-        this.subnetwork = null;
+    private NetworkInterfaceResponse(NetworkInterfaceResponse $) {
+        this.accessConfigs = $.accessConfigs;
+        this.aliasIpRanges = $.aliasIpRanges;
+        this.fingerprint = $.fingerprint;
+        this.internalIpv6PrefixLength = $.internalIpv6PrefixLength;
+        this.ipv6AccessConfigs = $.ipv6AccessConfigs;
+        this.ipv6AccessType = $.ipv6AccessType;
+        this.ipv6Address = $.ipv6Address;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkIP = $.networkIP;
+        this.nicType = $.nicType;
+        this.queueCount = $.queueCount;
+        this.stackType = $.stackType;
+        this.subinterfaces = $.subinterfaces;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AccessConfigResponse> accessConfigs;
-        private List<AliasIpRangeResponse> aliasIpRanges;
-        private String fingerprint;
-        private Integer internalIpv6PrefixLength;
-        private List<AccessConfigResponse> ipv6AccessConfigs;
-        private String ipv6AccessType;
-        private String ipv6Address;
-        private String kind;
-        private String name;
-        private String network;
-        private String networkIP;
-        private String nicType;
-        private Integer queueCount;
-        private String stackType;
-        private List<NetworkInterfaceSubInterfaceResponse> subinterfaces;
-        private String subnetwork;
+        private NetworkInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceResponse();
         }
 
         public Builder(NetworkInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessConfigs = defaults.accessConfigs;
-    	      this.aliasIpRanges = defaults.aliasIpRanges;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.internalIpv6PrefixLength = defaults.internalIpv6PrefixLength;
-    	      this.ipv6AccessConfigs = defaults.ipv6AccessConfigs;
-    	      this.ipv6AccessType = defaults.ipv6AccessType;
-    	      this.ipv6Address = defaults.ipv6Address;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkIP = defaults.networkIP;
-    	      this.nicType = defaults.nicType;
-    	      this.queueCount = defaults.queueCount;
-    	      this.stackType = defaults.stackType;
-    	      this.subinterfaces = defaults.subinterfaces;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessConfigs(List<AccessConfigResponse> accessConfigs) {
-            this.accessConfigs = Objects.requireNonNull(accessConfigs);
+            $.accessConfigs = accessConfigs;
             return this;
         }
+
         public Builder accessConfigs(AccessConfigResponse... accessConfigs) {
             return accessConfigs(List.of(accessConfigs));
         }
+
         public Builder aliasIpRanges(List<AliasIpRangeResponse> aliasIpRanges) {
-            this.aliasIpRanges = Objects.requireNonNull(aliasIpRanges);
+            $.aliasIpRanges = aliasIpRanges;
             return this;
         }
+
         public Builder aliasIpRanges(AliasIpRangeResponse... aliasIpRanges) {
             return aliasIpRanges(List.of(aliasIpRanges));
         }
+
         public Builder fingerprint(String fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint);
+            $.fingerprint = fingerprint;
             return this;
         }
+
         public Builder internalIpv6PrefixLength(Integer internalIpv6PrefixLength) {
-            this.internalIpv6PrefixLength = Objects.requireNonNull(internalIpv6PrefixLength);
+            $.internalIpv6PrefixLength = internalIpv6PrefixLength;
             return this;
         }
+
         public Builder ipv6AccessConfigs(List<AccessConfigResponse> ipv6AccessConfigs) {
-            this.ipv6AccessConfigs = Objects.requireNonNull(ipv6AccessConfigs);
+            $.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
+
         public Builder ipv6AccessConfigs(AccessConfigResponse... ipv6AccessConfigs) {
             return ipv6AccessConfigs(List.of(ipv6AccessConfigs));
         }
+
         public Builder ipv6AccessType(String ipv6AccessType) {
-            this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
+            $.ipv6AccessType = ipv6AccessType;
             return this;
         }
+
         public Builder ipv6Address(String ipv6Address) {
-            this.ipv6Address = Objects.requireNonNull(ipv6Address);
+            $.ipv6Address = ipv6Address;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder networkIP(String networkIP) {
-            this.networkIP = Objects.requireNonNull(networkIP);
+            $.networkIP = networkIP;
             return this;
         }
+
         public Builder nicType(String nicType) {
-            this.nicType = Objects.requireNonNull(nicType);
+            $.nicType = nicType;
             return this;
         }
+
         public Builder queueCount(Integer queueCount) {
-            this.queueCount = Objects.requireNonNull(queueCount);
+            $.queueCount = queueCount;
             return this;
         }
+
         public Builder stackType(String stackType) {
-            this.stackType = Objects.requireNonNull(stackType);
+            $.stackType = stackType;
             return this;
         }
+
         public Builder subinterfaces(List<NetworkInterfaceSubInterfaceResponse> subinterfaces) {
-            this.subinterfaces = Objects.requireNonNull(subinterfaces);
+            $.subinterfaces = subinterfaces;
             return this;
         }
+
         public Builder subinterfaces(NetworkInterfaceSubInterfaceResponse... subinterfaces) {
             return subinterfaces(List.of(subinterfaces));
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
-        }        public NetworkInterfaceResponse build() {
-            return new NetworkInterfaceResponse(accessConfigs, aliasIpRanges, fingerprint, internalIpv6PrefixLength, ipv6AccessConfigs, ipv6AccessType, ipv6Address, kind, name, network, networkIP, nicType, queueCount, stackType, subinterfaces, subnetwork);
+        }
+
+        public NetworkInterfaceResponse build() {
+            $.accessConfigs = Objects.requireNonNull($.accessConfigs, "expected parameter 'accessConfigs' to be non-null");
+            $.aliasIpRanges = Objects.requireNonNull($.aliasIpRanges, "expected parameter 'aliasIpRanges' to be non-null");
+            $.fingerprint = Objects.requireNonNull($.fingerprint, "expected parameter 'fingerprint' to be non-null");
+            $.internalIpv6PrefixLength = Objects.requireNonNull($.internalIpv6PrefixLength, "expected parameter 'internalIpv6PrefixLength' to be non-null");
+            $.ipv6AccessConfigs = Objects.requireNonNull($.ipv6AccessConfigs, "expected parameter 'ipv6AccessConfigs' to be non-null");
+            $.ipv6AccessType = Objects.requireNonNull($.ipv6AccessType, "expected parameter 'ipv6AccessType' to be non-null");
+            $.ipv6Address = Objects.requireNonNull($.ipv6Address, "expected parameter 'ipv6Address' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.networkIP = Objects.requireNonNull($.networkIP, "expected parameter 'networkIP' to be non-null");
+            $.nicType = Objects.requireNonNull($.nicType, "expected parameter 'nicType' to be non-null");
+            $.queueCount = Objects.requireNonNull($.queueCount, "expected parameter 'queueCount' to be non-null");
+            $.stackType = Objects.requireNonNull($.stackType, "expected parameter 'stackType' to be non-null");
+            $.subinterfaces = Objects.requireNonNull($.subinterfaces, "expected parameter 'subinterfaces' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            return $;
         }
     }
+
 }

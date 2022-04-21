@@ -23,10 +23,10 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="product")
-      private final @Nullable String product;
+    private @Nullable String product;
 
     public Optional<String> product() {
-        return this.product == null ? Optional.empty() : Optional.ofNullable(this.product);
+        return Optional.ofNullable(this.product);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="promotionCode")
-      private final @Nullable String promotionCode;
+    private @Nullable String promotionCode;
 
     public Optional<String> promotionCode() {
-        return this.promotionCode == null ? Optional.empty() : Optional.ofNullable(this.promotionCode);
+        return Optional.ofNullable(this.promotionCode);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="publisher")
-      private final @Nullable String publisher;
+    private @Nullable String publisher;
 
     public Optional<String> publisher() {
-        return this.publisher == null ? Optional.empty() : Optional.ofNullable(this.publisher);
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class ExtensionResourcePlanResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ExtensionResourcePlanResponse(
-        @Nullable String name,
-        @Nullable String product,
-        @Nullable String promotionCode,
-        @Nullable String publisher,
-        @Nullable String version) {
-        this.name = name;
-        this.product = product;
-        this.promotionCode = promotionCode;
-        this.publisher = publisher;
-        this.version = version;
-    }
+    private ExtensionResourcePlanResponse() {}
 
-    private ExtensionResourcePlanResponse() {
-        this.name = null;
-        this.product = null;
-        this.promotionCode = null;
-        this.publisher = null;
-        this.version = null;
+    private ExtensionResourcePlanResponse(ExtensionResourcePlanResponse $) {
+        this.name = $.name;
+        this.product = $.product;
+        this.promotionCode = $.promotionCode;
+        this.publisher = $.publisher;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionResourcePlanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String product;
-        private @Nullable String promotionCode;
-        private @Nullable String publisher;
-        private @Nullable String version;
+        private ExtensionResourcePlanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionResourcePlanResponse();
         }
 
         public Builder(ExtensionResourcePlanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.product = defaults.product;
-    	      this.promotionCode = defaults.promotionCode;
-    	      this.publisher = defaults.publisher;
-    	      this.version = defaults.version;
+            $ = new ExtensionResourcePlanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder product(@Nullable String product) {
-            this.product = product;
+            $.product = product;
             return this;
         }
+
         public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = promotionCode;
+            $.promotionCode = promotionCode;
             return this;
         }
+
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ExtensionResourcePlanResponse build() {
-            return new ExtensionResourcePlanResponse(name, product, promotionCode, publisher, version);
+        }
+
+        public ExtensionResourcePlanResponse build() {
+            return $;
         }
     }
+
 }

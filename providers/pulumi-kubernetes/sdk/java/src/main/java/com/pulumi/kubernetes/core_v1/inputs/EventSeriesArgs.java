@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastObservedTime")
-      private final @Nullable Output<String> lastObservedTime;
+    private @Nullable Output<String> lastObservedTime;
 
-    public Output<String> lastObservedTime() {
-        return this.lastObservedTime == null ? Codegen.empty() : this.lastObservedTime;
+    public Optional<Output<String>> lastObservedTime() {
+        return Optional.ofNullable(this.lastObservedTime);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class EventSeriesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public EventSeriesArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<String> lastObservedTime,
-        @Nullable Output<String> state) {
-        this.count = count;
-        this.lastObservedTime = lastObservedTime;
-        this.state = state;
-    }
+    private EventSeriesArgs() {}
 
-    private EventSeriesArgs() {
-        this.count = Codegen.empty();
-        this.lastObservedTime = Codegen.empty();
-        this.state = Codegen.empty();
+    private EventSeriesArgs(EventSeriesArgs $) {
+        this.count = $.count;
+        this.lastObservedTime = $.lastObservedTime;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSeriesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<String> lastObservedTime;
-        private @Nullable Output<String> state;
+        private EventSeriesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSeriesArgs();
         }
 
         public Builder(EventSeriesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.lastObservedTime = defaults.lastObservedTime;
-    	      this.state = defaults.state;
+            $ = new EventSeriesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder lastObservedTime(@Nullable Output<String> lastObservedTime) {
-            this.lastObservedTime = lastObservedTime;
+            $.lastObservedTime = lastObservedTime;
             return this;
         }
-        public Builder lastObservedTime(@Nullable String lastObservedTime) {
-            this.lastObservedTime = Codegen.ofNullable(lastObservedTime);
-            return this;
+
+        public Builder lastObservedTime(String lastObservedTime) {
+            return lastObservedTime(Output.of(lastObservedTime));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public EventSeriesArgs build() {
-            return new EventSeriesArgs(count, lastObservedTime, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public EventSeriesArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetServiceTopologyArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serviceTopologyName", required=true)
-      private final String serviceTopologyName;
+    private String serviceTopologyName;
 
     public String serviceTopologyName() {
         return this.serviceTopologyName;
     }
 
-    public GetServiceTopologyArgs(
-        String resourceGroupName,
-        String serviceTopologyName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName, "expected parameter 'serviceTopologyName' to be non-null");
-    }
+    private GetServiceTopologyArgs() {}
 
-    private GetServiceTopologyArgs() {
-        this.resourceGroupName = null;
-        this.serviceTopologyName = null;
+    private GetServiceTopologyArgs(GetServiceTopologyArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceTopologyName = $.serviceTopologyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTopologyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serviceTopologyName;
+        private GetServiceTopologyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTopologyArgs();
         }
 
         public Builder(GetServiceTopologyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceTopologyName = defaults.serviceTopologyName;
+            $ = new GetServiceTopologyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceTopologyName(String serviceTopologyName) {
-            this.serviceTopologyName = Objects.requireNonNull(serviceTopologyName);
+            $.serviceTopologyName = serviceTopologyName;
             return this;
-        }        public GetServiceTopologyArgs build() {
-            return new GetServiceTopologyArgs(resourceGroupName, serviceTopologyName);
+        }
+
+        public GetServiceTopologyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceTopologyName = Objects.requireNonNull($.serviceTopologyName, "expected parameter 'serviceTopologyName' to be non-null");
+            return $;
         }
     }
+
 }

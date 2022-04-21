@@ -5,11 +5,11 @@ package com.pulumi.gcp.firestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.firestore.inputs.IndexFieldGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collection")
-      private final @Nullable Output<String> collection;
+    private @Nullable Output<String> collection;
 
-    public Output<String> collection() {
-        return this.collection == null ? Codegen.empty() : this.collection;
+    public Optional<Output<String>> collection() {
+        return Optional.ofNullable(this.collection);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="database")
-      private final @Nullable Output<String> database;
+    private @Nullable Output<String> database;
 
-    public Output<String> database() {
-        return this.database == null ? Codegen.empty() : this.database;
+    public Optional<Output<String>> database() {
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<IndexFieldGetArgs>> fields;
+    private @Nullable Output<List<IndexFieldGetArgs>> fields;
 
-    public Output<List<IndexFieldGetArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<IndexFieldGetArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -87,118 +87,102 @@ public final class IndexState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queryScope")
-      private final @Nullable Output<String> queryScope;
+    private @Nullable Output<String> queryScope;
 
-    public Output<String> queryScope() {
-        return this.queryScope == null ? Codegen.empty() : this.queryScope;
+    public Optional<Output<String>> queryScope() {
+        return Optional.ofNullable(this.queryScope);
     }
 
-    public IndexState(
-        @Nullable Output<String> collection,
-        @Nullable Output<String> database,
-        @Nullable Output<List<IndexFieldGetArgs>> fields,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> queryScope) {
-        this.collection = collection;
-        this.database = database;
-        this.fields = fields;
-        this.name = name;
-        this.project = project;
-        this.queryScope = queryScope;
-    }
+    private IndexState() {}
 
-    private IndexState() {
-        this.collection = Codegen.empty();
-        this.database = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.queryScope = Codegen.empty();
+    private IndexState(IndexState $) {
+        this.collection = $.collection;
+        this.database = $.database;
+        this.fields = $.fields;
+        this.name = $.name;
+        this.project = $.project;
+        this.queryScope = $.queryScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> collection;
-        private @Nullable Output<String> database;
-        private @Nullable Output<List<IndexFieldGetArgs>> fields;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> queryScope;
+        private IndexState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexState();
         }
 
         public Builder(IndexState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collection = defaults.collection;
-    	      this.database = defaults.database;
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.queryScope = defaults.queryScope;
+            $ = new IndexState(Objects.requireNonNull(defaults));
         }
 
         public Builder collection(@Nullable Output<String> collection) {
-            this.collection = collection;
+            $.collection = collection;
             return this;
         }
-        public Builder collection(@Nullable String collection) {
-            this.collection = Codegen.ofNullable(collection);
-            return this;
+
+        public Builder collection(String collection) {
+            return collection(Output.of(collection));
         }
+
         public Builder database(@Nullable Output<String> database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
-        public Builder database(@Nullable String database) {
-            this.database = Codegen.ofNullable(database);
-            return this;
+
+        public Builder database(String database) {
+            return database(Output.of(database));
         }
+
         public Builder fields(@Nullable Output<List<IndexFieldGetArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<IndexFieldGetArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<IndexFieldGetArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(IndexFieldGetArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder queryScope(@Nullable Output<String> queryScope) {
-            this.queryScope = queryScope;
+            $.queryScope = queryScope;
             return this;
         }
-        public Builder queryScope(@Nullable String queryScope) {
-            this.queryScope = Codegen.ofNullable(queryScope);
-            return this;
-        }        public IndexState build() {
-            return new IndexState(collection, database, fields, name, project, queryScope);
+
+        public Builder queryScope(String queryScope) {
+            return queryScope(Output.of(queryScope));
+        }
+
+        public IndexState build() {
+            return $;
         }
     }
+
 }

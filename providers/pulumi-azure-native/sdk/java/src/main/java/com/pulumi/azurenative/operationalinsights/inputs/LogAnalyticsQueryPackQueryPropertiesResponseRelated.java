@@ -24,10 +24,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends c
      * 
      */
     @Import(name="categories")
-      private final @Nullable List<String> categories;
+    private @Nullable List<String> categories;
 
-    public List<String> categories() {
-        return this.categories == null ? List.of() : this.categories;
+    public Optional<List<String>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends c
      * 
      */
     @Import(name="resourceTypes")
-      private final @Nullable List<String> resourceTypes;
+    private @Nullable List<String> resourceTypes;
 
-    public List<String> resourceTypes() {
-        return this.resourceTypes == null ? List.of() : this.resourceTypes;
+    public Optional<List<String>> resourceTypes() {
+        return Optional.ofNullable(this.resourceTypes);
     }
 
     /**
@@ -46,73 +46,68 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends c
      * 
      */
     @Import(name="solutions")
-      private final @Nullable List<String> solutions;
+    private @Nullable List<String> solutions;
 
-    public List<String> solutions() {
-        return this.solutions == null ? List.of() : this.solutions;
+    public Optional<List<String>> solutions() {
+        return Optional.ofNullable(this.solutions);
     }
 
-    public LogAnalyticsQueryPackQueryPropertiesResponseRelated(
-        @Nullable List<String> categories,
-        @Nullable List<String> resourceTypes,
-        @Nullable List<String> solutions) {
-        this.categories = categories;
-        this.resourceTypes = resourceTypes;
-        this.solutions = solutions;
-    }
+    private LogAnalyticsQueryPackQueryPropertiesResponseRelated() {}
 
-    private LogAnalyticsQueryPackQueryPropertiesResponseRelated() {
-        this.categories = List.of();
-        this.resourceTypes = List.of();
-        this.solutions = List.of();
+    private LogAnalyticsQueryPackQueryPropertiesResponseRelated(LogAnalyticsQueryPackQueryPropertiesResponseRelated $) {
+        this.categories = $.categories;
+        this.resourceTypes = $.resourceTypes;
+        this.solutions = $.solutions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsQueryPackQueryPropertiesResponseRelated defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> categories;
-        private @Nullable List<String> resourceTypes;
-        private @Nullable List<String> solutions;
+        private LogAnalyticsQueryPackQueryPropertiesResponseRelated $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsQueryPackQueryPropertiesResponseRelated();
         }
 
         public Builder(LogAnalyticsQueryPackQueryPropertiesResponseRelated defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.resourceTypes = defaults.resourceTypes;
-    	      this.solutions = defaults.solutions;
+            $ = new LogAnalyticsQueryPackQueryPropertiesResponseRelated(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = categories;
+            $.categories = categories;
             return this;
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = resourceTypes;
+            $.resourceTypes = resourceTypes;
             return this;
         }
+
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
+
         public Builder solutions(@Nullable List<String> solutions) {
-            this.solutions = solutions;
+            $.solutions = solutions;
             return this;
         }
+
         public Builder solutions(String... solutions) {
             return solutions(List.of(solutions));
-        }        public LogAnalyticsQueryPackQueryPropertiesResponseRelated build() {
-            return new LogAnalyticsQueryPackQueryPropertiesResponseRelated(categories, resourceTypes, solutions);
+        }
+
+        public LogAnalyticsQueryPackQueryPropertiesResponseRelated build() {
+            return $;
         }
     }
+
 }

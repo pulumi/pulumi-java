@@ -5,10 +5,10 @@ package com.pulumi.aws.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DomainAssociationSubDomainArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="branchName", required=true)
-      private final Output<String> branchName;
+    private Output<String> branchName;
 
     public Output<String> branchName() {
         return this.branchName;
@@ -32,10 +32,10 @@ public final class DomainAssociationSubDomainArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="dnsRecord")
-      private final @Nullable Output<String> dnsRecord;
+    private @Nullable Output<String> dnsRecord;
 
-    public Output<String> dnsRecord() {
-        return this.dnsRecord == null ? Codegen.empty() : this.dnsRecord;
+    public Optional<Output<String>> dnsRecord() {
+        return Optional.ofNullable(this.dnsRecord);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class DomainAssociationSubDomainArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="prefix", required=true)
-      private final Output<String> prefix;
+    private Output<String> prefix;
 
     public Output<String> prefix() {
         return this.prefix;
@@ -54,89 +54,80 @@ public final class DomainAssociationSubDomainArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="verified")
-      private final @Nullable Output<Boolean> verified;
+    private @Nullable Output<Boolean> verified;
 
-    public Output<Boolean> verified() {
-        return this.verified == null ? Codegen.empty() : this.verified;
+    public Optional<Output<Boolean>> verified() {
+        return Optional.ofNullable(this.verified);
     }
 
-    public DomainAssociationSubDomainArgs(
-        Output<String> branchName,
-        @Nullable Output<String> dnsRecord,
-        Output<String> prefix,
-        @Nullable Output<Boolean> verified) {
-        this.branchName = Objects.requireNonNull(branchName, "expected parameter 'branchName' to be non-null");
-        this.dnsRecord = dnsRecord;
-        this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
-        this.verified = verified;
-    }
+    private DomainAssociationSubDomainArgs() {}
 
-    private DomainAssociationSubDomainArgs() {
-        this.branchName = Codegen.empty();
-        this.dnsRecord = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.verified = Codegen.empty();
+    private DomainAssociationSubDomainArgs(DomainAssociationSubDomainArgs $) {
+        this.branchName = $.branchName;
+        this.dnsRecord = $.dnsRecord;
+        this.prefix = $.prefix;
+        this.verified = $.verified;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainAssociationSubDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> branchName;
-        private @Nullable Output<String> dnsRecord;
-        private Output<String> prefix;
-        private @Nullable Output<Boolean> verified;
+        private DomainAssociationSubDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainAssociationSubDomainArgs();
         }
 
         public Builder(DomainAssociationSubDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchName = defaults.branchName;
-    	      this.dnsRecord = defaults.dnsRecord;
-    	      this.prefix = defaults.prefix;
-    	      this.verified = defaults.verified;
+            $ = new DomainAssociationSubDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branchName(Output<String> branchName) {
-            this.branchName = Objects.requireNonNull(branchName);
+            $.branchName = branchName;
             return this;
         }
+
         public Builder branchName(String branchName) {
-            this.branchName = Output.of(Objects.requireNonNull(branchName));
-            return this;
+            return branchName(Output.of(branchName));
         }
+
         public Builder dnsRecord(@Nullable Output<String> dnsRecord) {
-            this.dnsRecord = dnsRecord;
+            $.dnsRecord = dnsRecord;
             return this;
         }
-        public Builder dnsRecord(@Nullable String dnsRecord) {
-            this.dnsRecord = Codegen.ofNullable(dnsRecord);
-            return this;
+
+        public Builder dnsRecord(String dnsRecord) {
+            return dnsRecord(Output.of(dnsRecord));
         }
+
         public Builder prefix(Output<String> prefix) {
-            this.prefix = Objects.requireNonNull(prefix);
+            $.prefix = prefix;
             return this;
         }
+
         public Builder prefix(String prefix) {
-            this.prefix = Output.of(Objects.requireNonNull(prefix));
-            return this;
+            return prefix(Output.of(prefix));
         }
+
         public Builder verified(@Nullable Output<Boolean> verified) {
-            this.verified = verified;
+            $.verified = verified;
             return this;
         }
-        public Builder verified(@Nullable Boolean verified) {
-            this.verified = Codegen.ofNullable(verified);
-            return this;
-        }        public DomainAssociationSubDomainArgs build() {
-            return new DomainAssociationSubDomainArgs(branchName, dnsRecord, prefix, verified);
+
+        public Builder verified(Boolean verified) {
+            return verified(Output.of(verified));
+        }
+
+        public DomainAssociationSubDomainArgs build() {
+            $.branchName = Objects.requireNonNull($.branchName, "expected parameter 'branchName' to be non-null");
+            $.prefix = Objects.requireNonNull($.prefix, "expected parameter 'prefix' to be non-null");
+            return $;
         }
     }
+
 }

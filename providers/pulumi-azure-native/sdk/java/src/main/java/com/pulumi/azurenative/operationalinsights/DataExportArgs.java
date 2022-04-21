@@ -5,11 +5,11 @@ package com.pulumi.azurenative.operationalinsights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataExportId")
-      private final @Nullable Output<String> dataExportId;
+    private @Nullable Output<String> dataExportId;
 
-    public Output<String> dataExportId() {
-        return this.dataExportId == null ? Codegen.empty() : this.dataExportId;
+    public Optional<Output<String>> dataExportId() {
+        return Optional.ofNullable(this.dataExportId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataExportName")
-      private final @Nullable Output<String> dataExportName;
+    private @Nullable Output<String> dataExportName;
 
-    public Output<String> dataExportName() {
-        return this.dataExportName == null ? Codegen.empty() : this.dataExportName;
+    public Optional<Output<String>> dataExportName() {
+        return Optional.ofNullable(this.dataExportName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventHubName")
-      private final @Nullable Output<String> eventHubName;
+    private @Nullable Output<String> eventHubName;
 
-    public Output<String> eventHubName() {
-        return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
+    public Optional<Output<String>> eventHubName() {
+        return Optional.ofNullable(this.eventHubName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedDate")
-      private final @Nullable Output<String> lastModifiedDate;
+    private @Nullable Output<String> lastModifiedDate;
 
-    public Output<String> lastModifiedDate() {
-        return this.lastModifiedDate == null ? Codegen.empty() : this.lastModifiedDate;
+    public Optional<Output<String>> lastModifiedDate() {
+        return Optional.ofNullable(this.lastModifiedDate);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -110,7 +110,7 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableNames", required=true)
-      private final Output<List<String>> tableNames;
+    private Output<List<String>> tableNames;
 
     public Output<List<String>> tableNames() {
         return this.tableNames;
@@ -121,170 +121,146 @@ public final class DataExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public DataExportArgs(
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> dataExportId,
-        @Nullable Output<String> dataExportName,
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<String> eventHubName,
-        @Nullable Output<String> lastModifiedDate,
-        Output<String> resourceGroupName,
-        Output<String> resourceId,
-        Output<List<String>> tableNames,
-        Output<String> workspaceName) {
-        this.createdDate = createdDate;
-        this.dataExportId = dataExportId;
-        this.dataExportName = dataExportName;
-        this.enable = enable;
-        this.eventHubName = eventHubName;
-        this.lastModifiedDate = lastModifiedDate;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.tableNames = Objects.requireNonNull(tableNames, "expected parameter 'tableNames' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private DataExportArgs() {}
 
-    private DataExportArgs() {
-        this.createdDate = Codegen.empty();
-        this.dataExportId = Codegen.empty();
-        this.dataExportName = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.eventHubName = Codegen.empty();
-        this.lastModifiedDate = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.tableNames = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private DataExportArgs(DataExportArgs $) {
+        this.createdDate = $.createdDate;
+        this.dataExportId = $.dataExportId;
+        this.dataExportName = $.dataExportName;
+        this.enable = $.enable;
+        this.eventHubName = $.eventHubName;
+        this.lastModifiedDate = $.lastModifiedDate;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceId = $.resourceId;
+        this.tableNames = $.tableNames;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> dataExportId;
-        private @Nullable Output<String> dataExportName;
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<String> eventHubName;
-        private @Nullable Output<String> lastModifiedDate;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceId;
-        private Output<List<String>> tableNames;
-        private Output<String> workspaceName;
+        private DataExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataExportArgs();
         }
 
         public Builder(DataExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdDate = defaults.createdDate;
-    	      this.dataExportId = defaults.dataExportId;
-    	      this.dataExportName = defaults.dataExportName;
-    	      this.enable = defaults.enable;
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.lastModifiedDate = defaults.lastModifiedDate;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.tableNames = defaults.tableNames;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new DataExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder dataExportId(@Nullable Output<String> dataExportId) {
-            this.dataExportId = dataExportId;
+            $.dataExportId = dataExportId;
             return this;
         }
-        public Builder dataExportId(@Nullable String dataExportId) {
-            this.dataExportId = Codegen.ofNullable(dataExportId);
-            return this;
+
+        public Builder dataExportId(String dataExportId) {
+            return dataExportId(Output.of(dataExportId));
         }
+
         public Builder dataExportName(@Nullable Output<String> dataExportName) {
-            this.dataExportName = dataExportName;
+            $.dataExportName = dataExportName;
             return this;
         }
-        public Builder dataExportName(@Nullable String dataExportName) {
-            this.dataExportName = Codegen.ofNullable(dataExportName);
-            return this;
+
+        public Builder dataExportName(String dataExportName) {
+            return dataExportName(Output.of(dataExportName));
         }
+
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
-            this.eventHubName = eventHubName;
+            $.eventHubName = eventHubName;
             return this;
         }
-        public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Codegen.ofNullable(eventHubName);
-            return this;
+
+        public Builder eventHubName(String eventHubName) {
+            return eventHubName(Output.of(eventHubName));
         }
+
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
-            this.lastModifiedDate = lastModifiedDate;
+            $.lastModifiedDate = lastModifiedDate;
             return this;
         }
-        public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
-            this.lastModifiedDate = Codegen.ofNullable(lastModifiedDate);
-            return this;
+
+        public Builder lastModifiedDate(String lastModifiedDate) {
+            return lastModifiedDate(Output.of(lastModifiedDate));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder tableNames(Output<List<String>> tableNames) {
-            this.tableNames = Objects.requireNonNull(tableNames);
+            $.tableNames = tableNames;
             return this;
         }
+
         public Builder tableNames(List<String> tableNames) {
-            this.tableNames = Output.of(Objects.requireNonNull(tableNames));
-            return this;
+            return tableNames(Output.of(tableNames));
         }
+
         public Builder tableNames(String... tableNames) {
             return tableNames(List.of(tableNames));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public DataExportArgs build() {
-            return new DataExportArgs(createdDate, dataExportId, dataExportName, enable, eventHubName, lastModifiedDate, resourceGroupName, resourceId, tableNames, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public DataExportArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.tableNames = Objects.requireNonNull($.tableNames, "expected parameter 'tableNames' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

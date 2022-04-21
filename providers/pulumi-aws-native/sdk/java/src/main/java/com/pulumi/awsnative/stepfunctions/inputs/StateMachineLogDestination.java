@@ -15,45 +15,44 @@ public final class StateMachineLogDestination extends com.pulumi.resources.Invok
     public static final StateMachineLogDestination Empty = new StateMachineLogDestination();
 
     @Import(name="cloudWatchLogsLogGroup")
-      private final @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup;
+    private @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup;
 
     public Optional<StateMachineCloudWatchLogsLogGroup> cloudWatchLogsLogGroup() {
-        return this.cloudWatchLogsLogGroup == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLogsLogGroup);
+        return Optional.ofNullable(this.cloudWatchLogsLogGroup);
     }
 
-    public StateMachineLogDestination(@Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
-        this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
-    }
+    private StateMachineLogDestination() {}
 
-    private StateMachineLogDestination() {
-        this.cloudWatchLogsLogGroup = null;
+    private StateMachineLogDestination(StateMachineLogDestination $) {
+        this.cloudWatchLogsLogGroup = $.cloudWatchLogsLogGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateMachineLogDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup;
+        private StateMachineLogDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateMachineLogDestination();
         }
 
         public Builder(StateMachineLogDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchLogsLogGroup = defaults.cloudWatchLogsLogGroup;
+            $ = new StateMachineLogDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchLogsLogGroup(@Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
-            this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
+            $.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
             return this;
-        }        public StateMachineLogDestination build() {
-            return new StateMachineLogDestination(cloudWatchLogsLogGroup);
+        }
+
+        public StateMachineLogDestination build() {
+            return $;
         }
     }
+
 }

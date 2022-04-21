@@ -21,7 +21,7 @@ public final class VideoFlagsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="canStream", required=true)
-      private final Boolean canStream;
+    private Boolean canStream;
 
     public Boolean canStream() {
         return this.canStream;
@@ -32,7 +32,7 @@ public final class VideoFlagsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hasData", required=true)
-      private final Boolean hasData;
+    private Boolean hasData;
 
     public Boolean hasData() {
         return this.hasData;
@@ -43,64 +43,59 @@ public final class VideoFlagsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isRecording", required=true)
-      private final Boolean isRecording;
+    private Boolean isRecording;
 
     public Boolean isRecording() {
         return this.isRecording;
     }
 
-    public VideoFlagsResponse(
-        Boolean canStream,
-        Boolean hasData,
-        Boolean isRecording) {
-        this.canStream = Objects.requireNonNull(canStream, "expected parameter 'canStream' to be non-null");
-        this.hasData = Objects.requireNonNull(hasData, "expected parameter 'hasData' to be non-null");
-        this.isRecording = Objects.requireNonNull(isRecording, "expected parameter 'isRecording' to be non-null");
-    }
+    private VideoFlagsResponse() {}
 
-    private VideoFlagsResponse() {
-        this.canStream = null;
-        this.hasData = null;
-        this.isRecording = null;
+    private VideoFlagsResponse(VideoFlagsResponse $) {
+        this.canStream = $.canStream;
+        this.hasData = $.hasData;
+        this.isRecording = $.isRecording;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoFlagsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean canStream;
-        private Boolean hasData;
-        private Boolean isRecording;
+        private VideoFlagsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoFlagsResponse();
         }
 
         public Builder(VideoFlagsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canStream = defaults.canStream;
-    	      this.hasData = defaults.hasData;
-    	      this.isRecording = defaults.isRecording;
+            $ = new VideoFlagsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canStream(Boolean canStream) {
-            this.canStream = Objects.requireNonNull(canStream);
+            $.canStream = canStream;
             return this;
         }
+
         public Builder hasData(Boolean hasData) {
-            this.hasData = Objects.requireNonNull(hasData);
+            $.hasData = hasData;
             return this;
         }
+
         public Builder isRecording(Boolean isRecording) {
-            this.isRecording = Objects.requireNonNull(isRecording);
+            $.isRecording = isRecording;
             return this;
-        }        public VideoFlagsResponse build() {
-            return new VideoFlagsResponse(canStream, hasData, isRecording);
+        }
+
+        public VideoFlagsResponse build() {
+            $.canStream = Objects.requireNonNull($.canStream, "expected parameter 'canStream' to be non-null");
+            $.hasData = Objects.requireNonNull($.hasData, "expected parameter 'hasData' to be non-null");
+            $.isRecording = Objects.requireNonNull($.isRecording, "expected parameter 'isRecording' to be non-null");
+            return $;
         }
     }
+
 }

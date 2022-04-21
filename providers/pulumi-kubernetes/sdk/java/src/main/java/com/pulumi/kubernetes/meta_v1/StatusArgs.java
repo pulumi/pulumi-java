@@ -11,6 +11,7 @@ import com.pulumi.kubernetes.meta_v1.inputs.StatusDetailsArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class StatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -34,10 +35,10 @@ public final class StatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable Output<Integer> code;
+    private @Nullable Output<Integer> code;
 
-    public Output<Integer> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<Integer>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -45,10 +46,10 @@ public final class StatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="details")
-      private final @Nullable Output<StatusDetailsArgs> details;
+    private @Nullable Output<StatusDetailsArgs> details;
 
-    public Output<StatusDetailsArgs> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<StatusDetailsArgs>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class StatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class StatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -78,10 +79,10 @@ public final class StatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ListMetaArgs> metadata;
+    private @Nullable Output<ListMetaArgs> metadata;
 
-    public Output<ListMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ListMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -89,128 +90,110 @@ public final class StatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
-    public StatusArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<Integer> code,
-        @Nullable Output<StatusDetailsArgs> details,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> message,
-        @Nullable Output<ListMetaArgs> metadata,
-        @Nullable Output<String> reason) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.code = code;
-        this.details = details;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.message = message;
-        this.metadata = metadata;
-        this.reason = reason;
-    }
+    private StatusArgs() {}
 
-    private StatusArgs() {
-        this.apiVersion = Codegen.empty();
-        this.code = Codegen.empty();
-        this.details = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.message = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.reason = Codegen.empty();
+    private StatusArgs(StatusArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.code = $.code;
+        this.details = $.details;
+        this.kind = $.kind;
+        this.message = $.message;
+        this.metadata = $.metadata;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<Integer> code;
-        private @Nullable Output<StatusDetailsArgs> details;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> message;
-        private @Nullable Output<ListMetaArgs> metadata;
-        private @Nullable Output<String> reason;
+        private StatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusArgs();
         }
 
         public Builder(StatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.kind = defaults.kind;
-    	      this.message = defaults.message;
-    	      this.metadata = defaults.metadata;
-    	      this.reason = defaults.reason;
+            $ = new StatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder code(@Nullable Output<Integer> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable Integer code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(Integer code) {
+            return code(Output.of(code));
         }
+
         public Builder details(@Nullable Output<StatusDetailsArgs> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable StatusDetailsArgs details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
+
+        public Builder details(StatusDetailsArgs details) {
+            return details(Output.of(details));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ListMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ListMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
-        }        public StatusArgs build() {
-            return new StatusArgs(apiVersion, code, details, kind, message, metadata, reason);
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
+        }
+
+        public StatusArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            return $;
         }
     }
+
 }

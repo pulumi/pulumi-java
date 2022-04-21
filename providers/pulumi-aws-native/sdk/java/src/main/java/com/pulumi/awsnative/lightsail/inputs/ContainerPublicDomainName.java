@@ -20,10 +20,10 @@ public final class ContainerPublicDomainName extends com.pulumi.resources.Invoke
     public static final ContainerPublicDomainName Empty = new ContainerPublicDomainName();
 
     @Import(name="certificateName")
-      private final @Nullable String certificateName;
+    private @Nullable String certificateName;
 
     public Optional<String> certificateName() {
-        return this.certificateName == null ? Optional.empty() : Optional.ofNullable(this.certificateName);
+        return Optional.ofNullable(this.certificateName);
     }
 
     /**
@@ -31,58 +31,54 @@ public final class ContainerPublicDomainName extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domainNames")
-      private final @Nullable List<String> domainNames;
+    private @Nullable List<String> domainNames;
 
-    public List<String> domainNames() {
-        return this.domainNames == null ? List.of() : this.domainNames;
+    public Optional<List<String>> domainNames() {
+        return Optional.ofNullable(this.domainNames);
     }
 
-    public ContainerPublicDomainName(
-        @Nullable String certificateName,
-        @Nullable List<String> domainNames) {
-        this.certificateName = certificateName;
-        this.domainNames = domainNames;
-    }
+    private ContainerPublicDomainName() {}
 
-    private ContainerPublicDomainName() {
-        this.certificateName = null;
-        this.domainNames = List.of();
+    private ContainerPublicDomainName(ContainerPublicDomainName $) {
+        this.certificateName = $.certificateName;
+        this.domainNames = $.domainNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPublicDomainName defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateName;
-        private @Nullable List<String> domainNames;
+        private ContainerPublicDomainName $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPublicDomainName();
         }
 
         public Builder(ContainerPublicDomainName defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.domainNames = defaults.domainNames;
+            $ = new ContainerPublicDomainName(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = certificateName;
+            $.certificateName = certificateName;
             return this;
         }
+
         public Builder domainNames(@Nullable List<String> domainNames) {
-            this.domainNames = domainNames;
+            $.domainNames = domainNames;
             return this;
         }
+
         public Builder domainNames(String... domainNames) {
             return domainNames(List.of(domainNames));
-        }        public ContainerPublicDomainName build() {
-            return new ContainerPublicDomainName(certificateName, domainNames);
+        }
+
+        public ContainerPublicDomainName build() {
+            return $;
         }
     }
+
 }

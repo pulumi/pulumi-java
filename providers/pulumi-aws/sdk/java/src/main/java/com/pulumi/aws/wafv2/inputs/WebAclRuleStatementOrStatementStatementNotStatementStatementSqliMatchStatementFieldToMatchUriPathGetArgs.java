@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs Empty = new WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs();
 
-    public WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs();
         }
         public WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs build() {
-            return new WebAclRuleStatementOrStatementStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathGetArgs();
+            return $;
         }
     }
+
 }

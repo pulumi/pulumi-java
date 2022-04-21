@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs Empty = new WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs();
 
-    public WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs();
         }
         public WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs build() {
-            return new WebAclRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchBodyGetArgs();
+            return $;
         }
     }
+
 }

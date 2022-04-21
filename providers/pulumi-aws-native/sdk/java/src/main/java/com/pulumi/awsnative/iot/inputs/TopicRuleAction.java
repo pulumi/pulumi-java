@@ -35,366 +35,304 @@ public final class TopicRuleAction extends com.pulumi.resources.InvokeArgs {
     public static final TopicRuleAction Empty = new TopicRuleAction();
 
     @Import(name="cloudwatchAlarm")
-      private final @Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm;
+    private @Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm;
 
     public Optional<TopicRuleCloudwatchAlarmAction> cloudwatchAlarm() {
-        return this.cloudwatchAlarm == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchAlarm);
+        return Optional.ofNullable(this.cloudwatchAlarm);
     }
 
     @Import(name="cloudwatchLogs")
-      private final @Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs;
+    private @Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs;
 
     public Optional<TopicRuleCloudwatchLogsAction> cloudwatchLogs() {
-        return this.cloudwatchLogs == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchLogs);
+        return Optional.ofNullable(this.cloudwatchLogs);
     }
 
     @Import(name="cloudwatchMetric")
-      private final @Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric;
+    private @Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric;
 
     public Optional<TopicRuleCloudwatchMetricAction> cloudwatchMetric() {
-        return this.cloudwatchMetric == null ? Optional.empty() : Optional.ofNullable(this.cloudwatchMetric);
+        return Optional.ofNullable(this.cloudwatchMetric);
     }
 
     @Import(name="dynamoDB")
-      private final @Nullable TopicRuleDynamoDBAction dynamoDB;
+    private @Nullable TopicRuleDynamoDBAction dynamoDB;
 
     public Optional<TopicRuleDynamoDBAction> dynamoDB() {
-        return this.dynamoDB == null ? Optional.empty() : Optional.ofNullable(this.dynamoDB);
+        return Optional.ofNullable(this.dynamoDB);
     }
 
     @Import(name="dynamoDBv2")
-      private final @Nullable TopicRuleDynamoDBv2Action dynamoDBv2;
+    private @Nullable TopicRuleDynamoDBv2Action dynamoDBv2;
 
     public Optional<TopicRuleDynamoDBv2Action> dynamoDBv2() {
-        return this.dynamoDBv2 == null ? Optional.empty() : Optional.ofNullable(this.dynamoDBv2);
+        return Optional.ofNullable(this.dynamoDBv2);
     }
 
     @Import(name="elasticsearch")
-      private final @Nullable TopicRuleElasticsearchAction elasticsearch;
+    private @Nullable TopicRuleElasticsearchAction elasticsearch;
 
     public Optional<TopicRuleElasticsearchAction> elasticsearch() {
-        return this.elasticsearch == null ? Optional.empty() : Optional.ofNullable(this.elasticsearch);
+        return Optional.ofNullable(this.elasticsearch);
     }
 
     @Import(name="firehose")
-      private final @Nullable TopicRuleFirehoseAction firehose;
+    private @Nullable TopicRuleFirehoseAction firehose;
 
     public Optional<TopicRuleFirehoseAction> firehose() {
-        return this.firehose == null ? Optional.empty() : Optional.ofNullable(this.firehose);
+        return Optional.ofNullable(this.firehose);
     }
 
     @Import(name="http")
-      private final @Nullable TopicRuleHttpAction http;
+    private @Nullable TopicRuleHttpAction http;
 
     public Optional<TopicRuleHttpAction> http() {
-        return this.http == null ? Optional.empty() : Optional.ofNullable(this.http);
+        return Optional.ofNullable(this.http);
     }
 
     @Import(name="iotAnalytics")
-      private final @Nullable TopicRuleIotAnalyticsAction iotAnalytics;
+    private @Nullable TopicRuleIotAnalyticsAction iotAnalytics;
 
     public Optional<TopicRuleIotAnalyticsAction> iotAnalytics() {
-        return this.iotAnalytics == null ? Optional.empty() : Optional.ofNullable(this.iotAnalytics);
+        return Optional.ofNullable(this.iotAnalytics);
     }
 
     @Import(name="iotEvents")
-      private final @Nullable TopicRuleIotEventsAction iotEvents;
+    private @Nullable TopicRuleIotEventsAction iotEvents;
 
     public Optional<TopicRuleIotEventsAction> iotEvents() {
-        return this.iotEvents == null ? Optional.empty() : Optional.ofNullable(this.iotEvents);
+        return Optional.ofNullable(this.iotEvents);
     }
 
     @Import(name="iotSiteWise")
-      private final @Nullable TopicRuleIotSiteWiseAction iotSiteWise;
+    private @Nullable TopicRuleIotSiteWiseAction iotSiteWise;
 
     public Optional<TopicRuleIotSiteWiseAction> iotSiteWise() {
-        return this.iotSiteWise == null ? Optional.empty() : Optional.ofNullable(this.iotSiteWise);
+        return Optional.ofNullable(this.iotSiteWise);
     }
 
     @Import(name="kafka")
-      private final @Nullable TopicRuleKafkaAction kafka;
+    private @Nullable TopicRuleKafkaAction kafka;
 
     public Optional<TopicRuleKafkaAction> kafka() {
-        return this.kafka == null ? Optional.empty() : Optional.ofNullable(this.kafka);
+        return Optional.ofNullable(this.kafka);
     }
 
     @Import(name="kinesis")
-      private final @Nullable TopicRuleKinesisAction kinesis;
+    private @Nullable TopicRuleKinesisAction kinesis;
 
     public Optional<TopicRuleKinesisAction> kinesis() {
-        return this.kinesis == null ? Optional.empty() : Optional.ofNullable(this.kinesis);
+        return Optional.ofNullable(this.kinesis);
     }
 
     @Import(name="lambda")
-      private final @Nullable TopicRuleLambdaAction lambda;
+    private @Nullable TopicRuleLambdaAction lambda;
 
     public Optional<TopicRuleLambdaAction> lambda() {
-        return this.lambda == null ? Optional.empty() : Optional.ofNullable(this.lambda);
+        return Optional.ofNullable(this.lambda);
     }
 
     @Import(name="openSearch")
-      private final @Nullable TopicRuleOpenSearchAction openSearch;
+    private @Nullable TopicRuleOpenSearchAction openSearch;
 
     public Optional<TopicRuleOpenSearchAction> openSearch() {
-        return this.openSearch == null ? Optional.empty() : Optional.ofNullable(this.openSearch);
+        return Optional.ofNullable(this.openSearch);
     }
 
     @Import(name="republish")
-      private final @Nullable TopicRuleRepublishAction republish;
+    private @Nullable TopicRuleRepublishAction republish;
 
     public Optional<TopicRuleRepublishAction> republish() {
-        return this.republish == null ? Optional.empty() : Optional.ofNullable(this.republish);
+        return Optional.ofNullable(this.republish);
     }
 
     @Import(name="s3")
-      private final @Nullable TopicRuleS3Action s3;
+    private @Nullable TopicRuleS3Action s3;
 
     public Optional<TopicRuleS3Action> s3() {
-        return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
+        return Optional.ofNullable(this.s3);
     }
 
     @Import(name="sns")
-      private final @Nullable TopicRuleSnsAction sns;
+    private @Nullable TopicRuleSnsAction sns;
 
     public Optional<TopicRuleSnsAction> sns() {
-        return this.sns == null ? Optional.empty() : Optional.ofNullable(this.sns);
+        return Optional.ofNullable(this.sns);
     }
 
     @Import(name="sqs")
-      private final @Nullable TopicRuleSqsAction sqs;
+    private @Nullable TopicRuleSqsAction sqs;
 
     public Optional<TopicRuleSqsAction> sqs() {
-        return this.sqs == null ? Optional.empty() : Optional.ofNullable(this.sqs);
+        return Optional.ofNullable(this.sqs);
     }
 
     @Import(name="stepFunctions")
-      private final @Nullable TopicRuleStepFunctionsAction stepFunctions;
+    private @Nullable TopicRuleStepFunctionsAction stepFunctions;
 
     public Optional<TopicRuleStepFunctionsAction> stepFunctions() {
-        return this.stepFunctions == null ? Optional.empty() : Optional.ofNullable(this.stepFunctions);
+        return Optional.ofNullable(this.stepFunctions);
     }
 
     @Import(name="timestream")
-      private final @Nullable TopicRuleTimestreamAction timestream;
+    private @Nullable TopicRuleTimestreamAction timestream;
 
     public Optional<TopicRuleTimestreamAction> timestream() {
-        return this.timestream == null ? Optional.empty() : Optional.ofNullable(this.timestream);
+        return Optional.ofNullable(this.timestream);
     }
 
-    public TopicRuleAction(
-        @Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm,
-        @Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs,
-        @Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric,
-        @Nullable TopicRuleDynamoDBAction dynamoDB,
-        @Nullable TopicRuleDynamoDBv2Action dynamoDBv2,
-        @Nullable TopicRuleElasticsearchAction elasticsearch,
-        @Nullable TopicRuleFirehoseAction firehose,
-        @Nullable TopicRuleHttpAction http,
-        @Nullable TopicRuleIotAnalyticsAction iotAnalytics,
-        @Nullable TopicRuleIotEventsAction iotEvents,
-        @Nullable TopicRuleIotSiteWiseAction iotSiteWise,
-        @Nullable TopicRuleKafkaAction kafka,
-        @Nullable TopicRuleKinesisAction kinesis,
-        @Nullable TopicRuleLambdaAction lambda,
-        @Nullable TopicRuleOpenSearchAction openSearch,
-        @Nullable TopicRuleRepublishAction republish,
-        @Nullable TopicRuleS3Action s3,
-        @Nullable TopicRuleSnsAction sns,
-        @Nullable TopicRuleSqsAction sqs,
-        @Nullable TopicRuleStepFunctionsAction stepFunctions,
-        @Nullable TopicRuleTimestreamAction timestream) {
-        this.cloudwatchAlarm = cloudwatchAlarm;
-        this.cloudwatchLogs = cloudwatchLogs;
-        this.cloudwatchMetric = cloudwatchMetric;
-        this.dynamoDB = dynamoDB;
-        this.dynamoDBv2 = dynamoDBv2;
-        this.elasticsearch = elasticsearch;
-        this.firehose = firehose;
-        this.http = http;
-        this.iotAnalytics = iotAnalytics;
-        this.iotEvents = iotEvents;
-        this.iotSiteWise = iotSiteWise;
-        this.kafka = kafka;
-        this.kinesis = kinesis;
-        this.lambda = lambda;
-        this.openSearch = openSearch;
-        this.republish = republish;
-        this.s3 = s3;
-        this.sns = sns;
-        this.sqs = sqs;
-        this.stepFunctions = stepFunctions;
-        this.timestream = timestream;
-    }
+    private TopicRuleAction() {}
 
-    private TopicRuleAction() {
-        this.cloudwatchAlarm = null;
-        this.cloudwatchLogs = null;
-        this.cloudwatchMetric = null;
-        this.dynamoDB = null;
-        this.dynamoDBv2 = null;
-        this.elasticsearch = null;
-        this.firehose = null;
-        this.http = null;
-        this.iotAnalytics = null;
-        this.iotEvents = null;
-        this.iotSiteWise = null;
-        this.kafka = null;
-        this.kinesis = null;
-        this.lambda = null;
-        this.openSearch = null;
-        this.republish = null;
-        this.s3 = null;
-        this.sns = null;
-        this.sqs = null;
-        this.stepFunctions = null;
-        this.timestream = null;
+    private TopicRuleAction(TopicRuleAction $) {
+        this.cloudwatchAlarm = $.cloudwatchAlarm;
+        this.cloudwatchLogs = $.cloudwatchLogs;
+        this.cloudwatchMetric = $.cloudwatchMetric;
+        this.dynamoDB = $.dynamoDB;
+        this.dynamoDBv2 = $.dynamoDBv2;
+        this.elasticsearch = $.elasticsearch;
+        this.firehose = $.firehose;
+        this.http = $.http;
+        this.iotAnalytics = $.iotAnalytics;
+        this.iotEvents = $.iotEvents;
+        this.iotSiteWise = $.iotSiteWise;
+        this.kafka = $.kafka;
+        this.kinesis = $.kinesis;
+        this.lambda = $.lambda;
+        this.openSearch = $.openSearch;
+        this.republish = $.republish;
+        this.s3 = $.s3;
+        this.sns = $.sns;
+        this.sqs = $.sqs;
+        this.stepFunctions = $.stepFunctions;
+        this.timestream = $.timestream;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm;
-        private @Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs;
-        private @Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric;
-        private @Nullable TopicRuleDynamoDBAction dynamoDB;
-        private @Nullable TopicRuleDynamoDBv2Action dynamoDBv2;
-        private @Nullable TopicRuleElasticsearchAction elasticsearch;
-        private @Nullable TopicRuleFirehoseAction firehose;
-        private @Nullable TopicRuleHttpAction http;
-        private @Nullable TopicRuleIotAnalyticsAction iotAnalytics;
-        private @Nullable TopicRuleIotEventsAction iotEvents;
-        private @Nullable TopicRuleIotSiteWiseAction iotSiteWise;
-        private @Nullable TopicRuleKafkaAction kafka;
-        private @Nullable TopicRuleKinesisAction kinesis;
-        private @Nullable TopicRuleLambdaAction lambda;
-        private @Nullable TopicRuleOpenSearchAction openSearch;
-        private @Nullable TopicRuleRepublishAction republish;
-        private @Nullable TopicRuleS3Action s3;
-        private @Nullable TopicRuleSnsAction sns;
-        private @Nullable TopicRuleSqsAction sqs;
-        private @Nullable TopicRuleStepFunctionsAction stepFunctions;
-        private @Nullable TopicRuleTimestreamAction timestream;
+        private TopicRuleAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleAction();
         }
 
         public Builder(TopicRuleAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchAlarm = defaults.cloudwatchAlarm;
-    	      this.cloudwatchLogs = defaults.cloudwatchLogs;
-    	      this.cloudwatchMetric = defaults.cloudwatchMetric;
-    	      this.dynamoDB = defaults.dynamoDB;
-    	      this.dynamoDBv2 = defaults.dynamoDBv2;
-    	      this.elasticsearch = defaults.elasticsearch;
-    	      this.firehose = defaults.firehose;
-    	      this.http = defaults.http;
-    	      this.iotAnalytics = defaults.iotAnalytics;
-    	      this.iotEvents = defaults.iotEvents;
-    	      this.iotSiteWise = defaults.iotSiteWise;
-    	      this.kafka = defaults.kafka;
-    	      this.kinesis = defaults.kinesis;
-    	      this.lambda = defaults.lambda;
-    	      this.openSearch = defaults.openSearch;
-    	      this.republish = defaults.republish;
-    	      this.s3 = defaults.s3;
-    	      this.sns = defaults.sns;
-    	      this.sqs = defaults.sqs;
-    	      this.stepFunctions = defaults.stepFunctions;
-    	      this.timestream = defaults.timestream;
+            $ = new TopicRuleAction(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchAlarm(@Nullable TopicRuleCloudwatchAlarmAction cloudwatchAlarm) {
-            this.cloudwatchAlarm = cloudwatchAlarm;
+            $.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
+
         public Builder cloudwatchLogs(@Nullable TopicRuleCloudwatchLogsAction cloudwatchLogs) {
-            this.cloudwatchLogs = cloudwatchLogs;
+            $.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
+
         public Builder cloudwatchMetric(@Nullable TopicRuleCloudwatchMetricAction cloudwatchMetric) {
-            this.cloudwatchMetric = cloudwatchMetric;
+            $.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
+
         public Builder dynamoDB(@Nullable TopicRuleDynamoDBAction dynamoDB) {
-            this.dynamoDB = dynamoDB;
+            $.dynamoDB = dynamoDB;
             return this;
         }
+
         public Builder dynamoDBv2(@Nullable TopicRuleDynamoDBv2Action dynamoDBv2) {
-            this.dynamoDBv2 = dynamoDBv2;
+            $.dynamoDBv2 = dynamoDBv2;
             return this;
         }
+
         public Builder elasticsearch(@Nullable TopicRuleElasticsearchAction elasticsearch) {
-            this.elasticsearch = elasticsearch;
+            $.elasticsearch = elasticsearch;
             return this;
         }
+
         public Builder firehose(@Nullable TopicRuleFirehoseAction firehose) {
-            this.firehose = firehose;
+            $.firehose = firehose;
             return this;
         }
+
         public Builder http(@Nullable TopicRuleHttpAction http) {
-            this.http = http;
+            $.http = http;
             return this;
         }
+
         public Builder iotAnalytics(@Nullable TopicRuleIotAnalyticsAction iotAnalytics) {
-            this.iotAnalytics = iotAnalytics;
+            $.iotAnalytics = iotAnalytics;
             return this;
         }
+
         public Builder iotEvents(@Nullable TopicRuleIotEventsAction iotEvents) {
-            this.iotEvents = iotEvents;
+            $.iotEvents = iotEvents;
             return this;
         }
+
         public Builder iotSiteWise(@Nullable TopicRuleIotSiteWiseAction iotSiteWise) {
-            this.iotSiteWise = iotSiteWise;
+            $.iotSiteWise = iotSiteWise;
             return this;
         }
+
         public Builder kafka(@Nullable TopicRuleKafkaAction kafka) {
-            this.kafka = kafka;
+            $.kafka = kafka;
             return this;
         }
+
         public Builder kinesis(@Nullable TopicRuleKinesisAction kinesis) {
-            this.kinesis = kinesis;
+            $.kinesis = kinesis;
             return this;
         }
+
         public Builder lambda(@Nullable TopicRuleLambdaAction lambda) {
-            this.lambda = lambda;
+            $.lambda = lambda;
             return this;
         }
+
         public Builder openSearch(@Nullable TopicRuleOpenSearchAction openSearch) {
-            this.openSearch = openSearch;
+            $.openSearch = openSearch;
             return this;
         }
+
         public Builder republish(@Nullable TopicRuleRepublishAction republish) {
-            this.republish = republish;
+            $.republish = republish;
             return this;
         }
+
         public Builder s3(@Nullable TopicRuleS3Action s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
+
         public Builder sns(@Nullable TopicRuleSnsAction sns) {
-            this.sns = sns;
+            $.sns = sns;
             return this;
         }
+
         public Builder sqs(@Nullable TopicRuleSqsAction sqs) {
-            this.sqs = sqs;
+            $.sqs = sqs;
             return this;
         }
+
         public Builder stepFunctions(@Nullable TopicRuleStepFunctionsAction stepFunctions) {
-            this.stepFunctions = stepFunctions;
+            $.stepFunctions = stepFunctions;
             return this;
         }
+
         public Builder timestream(@Nullable TopicRuleTimestreamAction timestream) {
-            this.timestream = timestream;
+            $.timestream = timestream;
             return this;
-        }        public TopicRuleAction build() {
-            return new TopicRuleAction(cloudwatchAlarm, cloudwatchLogs, cloudwatchMetric, dynamoDB, dynamoDBv2, elasticsearch, firehose, http, iotAnalytics, iotEvents, iotSiteWise, kafka, kinesis, lambda, openSearch, republish, s3, sns, sqs, stepFunctions, timestream);
+        }
+
+        public TopicRuleAction build() {
+            return $;
         }
     }
+
 }

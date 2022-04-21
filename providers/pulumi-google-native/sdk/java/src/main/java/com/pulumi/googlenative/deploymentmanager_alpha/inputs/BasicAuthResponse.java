@@ -17,62 +17,59 @@ public final class BasicAuthResponse extends com.pulumi.resources.InvokeArgs {
     public static final BasicAuthResponse Empty = new BasicAuthResponse();
 
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
     }
 
     @Import(name="user", required=true)
-      private final String user;
+    private String user;
 
     public String user() {
         return this.user;
     }
 
-    public BasicAuthResponse(
-        String password,
-        String user) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-    }
+    private BasicAuthResponse() {}
 
-    private BasicAuthResponse() {
-        this.password = null;
-        this.user = null;
+    private BasicAuthResponse(BasicAuthResponse $) {
+        this.password = $.password;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicAuthResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String password;
-        private String user;
+        private BasicAuthResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicAuthResponse();
         }
 
         public Builder(BasicAuthResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.user = defaults.user;
+            $ = new BasicAuthResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder user(String user) {
-            this.user = Objects.requireNonNull(user);
+            $.user = user;
             return this;
-        }        public BasicAuthResponse build() {
-            return new BasicAuthResponse(password, user);
+        }
+
+        public BasicAuthResponse build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            return $;
         }
     }
+
 }

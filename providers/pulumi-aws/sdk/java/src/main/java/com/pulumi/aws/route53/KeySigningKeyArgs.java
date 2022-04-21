@@ -5,9 +5,9 @@ package com.pulumi.aws.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class KeySigningKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostedZoneId", required=true)
-      private final Output<String> hostedZoneId;
+    private Output<String> hostedZoneId;
 
     public Output<String> hostedZoneId() {
         return this.hostedZoneId;
@@ -31,7 +31,7 @@ public final class KeySigningKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyManagementServiceArn", required=true)
-      private final Output<String> keyManagementServiceArn;
+    private Output<String> keyManagementServiceArn;
 
     public Output<String> keyManagementServiceArn() {
         return this.keyManagementServiceArn;
@@ -42,10 +42,10 @@ public final class KeySigningKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,89 +53,80 @@ public final class KeySigningKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public KeySigningKeyArgs(
-        Output<String> hostedZoneId,
-        Output<String> keyManagementServiceArn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> status) {
-        this.hostedZoneId = Objects.requireNonNull(hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
-        this.keyManagementServiceArn = Objects.requireNonNull(keyManagementServiceArn, "expected parameter 'keyManagementServiceArn' to be non-null");
-        this.name = name;
-        this.status = status;
-    }
+    private KeySigningKeyArgs() {}
 
-    private KeySigningKeyArgs() {
-        this.hostedZoneId = Codegen.empty();
-        this.keyManagementServiceArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.status = Codegen.empty();
+    private KeySigningKeyArgs(KeySigningKeyArgs $) {
+        this.hostedZoneId = $.hostedZoneId;
+        this.keyManagementServiceArn = $.keyManagementServiceArn;
+        this.name = $.name;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeySigningKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hostedZoneId;
-        private Output<String> keyManagementServiceArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> status;
+        private KeySigningKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeySigningKeyArgs();
         }
 
         public Builder(KeySigningKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostedZoneId = defaults.hostedZoneId;
-    	      this.keyManagementServiceArn = defaults.keyManagementServiceArn;
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
+            $ = new KeySigningKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostedZoneId(Output<String> hostedZoneId) {
-            this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
+            $.hostedZoneId = hostedZoneId;
             return this;
         }
+
         public Builder hostedZoneId(String hostedZoneId) {
-            this.hostedZoneId = Output.of(Objects.requireNonNull(hostedZoneId));
-            return this;
+            return hostedZoneId(Output.of(hostedZoneId));
         }
+
         public Builder keyManagementServiceArn(Output<String> keyManagementServiceArn) {
-            this.keyManagementServiceArn = Objects.requireNonNull(keyManagementServiceArn);
+            $.keyManagementServiceArn = keyManagementServiceArn;
             return this;
         }
+
         public Builder keyManagementServiceArn(String keyManagementServiceArn) {
-            this.keyManagementServiceArn = Output.of(Objects.requireNonNull(keyManagementServiceArn));
-            return this;
+            return keyManagementServiceArn(Output.of(keyManagementServiceArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public KeySigningKeyArgs build() {
-            return new KeySigningKeyArgs(hostedZoneId, keyManagementServiceArn, name, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public KeySigningKeyArgs build() {
+            $.hostedZoneId = Objects.requireNonNull($.hostedZoneId, "expected parameter 'hostedZoneId' to be non-null");
+            $.keyManagementServiceArn = Objects.requireNonNull($.keyManagementServiceArn, "expected parameter 'keyManagementServiceArn' to be non-null");
+            return $;
         }
     }
+
 }

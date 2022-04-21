@@ -21,45 +21,45 @@ public final class AdBreakResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTimeOffset", required=true)
-      private final String startTimeOffset;
+    private String startTimeOffset;
 
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
 
-    public AdBreakResponse(String startTimeOffset) {
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
-    }
+    private AdBreakResponse() {}
 
-    private AdBreakResponse() {
-        this.startTimeOffset = null;
+    private AdBreakResponse(AdBreakResponse $) {
+        this.startTimeOffset = $.startTimeOffset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdBreakResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String startTimeOffset;
+        private AdBreakResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdBreakResponse();
         }
 
         public Builder(AdBreakResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTimeOffset = defaults.startTimeOffset;
+            $ = new AdBreakResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder startTimeOffset(String startTimeOffset) {
-            this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
+            $.startTimeOffset = startTimeOffset;
             return this;
-        }        public AdBreakResponse build() {
-            return new AdBreakResponse(startTimeOffset);
+        }
+
+        public AdBreakResponse build() {
+            $.startTimeOffset = Objects.requireNonNull($.startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -31,55 +31,51 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetStreamArgs(
-        String name,
-        @Nullable Map<String,String> tags) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tags = tags;
-    }
+    private GetStreamArgs() {}
 
-    private GetStreamArgs() {
-        this.name = null;
-        this.tags = Map.of();
+    private GetStreamArgs(GetStreamArgs $) {
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable Map<String,String> tags;
+        private GetStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStreamArgs();
         }
 
         public Builder(GetStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetStreamArgs build() {
-            return new GetStreamArgs(name, tags);
+        }
+
+        public GetStreamArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

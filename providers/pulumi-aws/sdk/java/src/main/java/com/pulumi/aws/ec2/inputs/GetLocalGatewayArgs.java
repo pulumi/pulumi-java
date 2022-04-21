@@ -22,10 +22,10 @@ public final class GetLocalGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetLocalGatewayFilter> filters;
+    private @Nullable List<GetLocalGatewayFilter> filters;
 
-    public List<GetLocalGatewayFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetLocalGatewayFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetLocalGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GetLocalGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -57,76 +57,66 @@ public final class GetLocalGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetLocalGatewayArgs(
-        @Nullable List<GetLocalGatewayFilter> filters,
-        @Nullable String id,
-        @Nullable String state,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.id = id;
-        this.state = state;
-        this.tags = tags;
-    }
+    private GetLocalGatewayArgs() {}
 
-    private GetLocalGatewayArgs() {
-        this.filters = List.of();
-        this.id = null;
-        this.state = null;
-        this.tags = Map.of();
+    private GetLocalGatewayArgs(GetLocalGatewayArgs $) {
+        this.filters = $.filters;
+        this.id = $.id;
+        this.state = $.state;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocalGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetLocalGatewayFilter> filters;
-        private @Nullable String id;
-        private @Nullable String state;
-        private @Nullable Map<String,String> tags;
+        private GetLocalGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocalGatewayArgs();
         }
 
         public Builder(GetLocalGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
+            $ = new GetLocalGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetLocalGatewayFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetLocalGatewayFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetLocalGatewayArgs build() {
-            return new GetLocalGatewayArgs(filters, id, state, tags);
+        }
+
+        public GetLocalGatewayArgs build() {
+            return $;
         }
     }
+
 }

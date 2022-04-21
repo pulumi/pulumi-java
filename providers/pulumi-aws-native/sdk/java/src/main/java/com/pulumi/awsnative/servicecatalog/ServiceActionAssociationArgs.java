@@ -5,7 +5,6 @@ package com.pulumi.awsnative.servicecatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,90 +14,85 @@ public final class ServiceActionAssociationArgs extends com.pulumi.resources.Res
     public static final ServiceActionAssociationArgs Empty = new ServiceActionAssociationArgs();
 
     @Import(name="productId", required=true)
-      private final Output<String> productId;
+    private Output<String> productId;
 
     public Output<String> productId() {
         return this.productId;
     }
 
     @Import(name="provisioningArtifactId", required=true)
-      private final Output<String> provisioningArtifactId;
+    private Output<String> provisioningArtifactId;
 
     public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId;
     }
 
     @Import(name="serviceActionId", required=true)
-      private final Output<String> serviceActionId;
+    private Output<String> serviceActionId;
 
     public Output<String> serviceActionId() {
         return this.serviceActionId;
     }
 
-    public ServiceActionAssociationArgs(
-        Output<String> productId,
-        Output<String> provisioningArtifactId,
-        Output<String> serviceActionId) {
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.provisioningArtifactId = Objects.requireNonNull(provisioningArtifactId, "expected parameter 'provisioningArtifactId' to be non-null");
-        this.serviceActionId = Objects.requireNonNull(serviceActionId, "expected parameter 'serviceActionId' to be non-null");
-    }
+    private ServiceActionAssociationArgs() {}
 
-    private ServiceActionAssociationArgs() {
-        this.productId = Codegen.empty();
-        this.provisioningArtifactId = Codegen.empty();
-        this.serviceActionId = Codegen.empty();
+    private ServiceActionAssociationArgs(ServiceActionAssociationArgs $) {
+        this.productId = $.productId;
+        this.provisioningArtifactId = $.provisioningArtifactId;
+        this.serviceActionId = $.serviceActionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceActionAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> productId;
-        private Output<String> provisioningArtifactId;
-        private Output<String> serviceActionId;
+        private ServiceActionAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceActionAssociationArgs();
         }
 
         public Builder(ServiceActionAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.productId = defaults.productId;
-    	      this.provisioningArtifactId = defaults.provisioningArtifactId;
-    	      this.serviceActionId = defaults.serviceActionId;
+            $ = new ServiceActionAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder productId(Output<String> productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Output.of(Objects.requireNonNull(productId));
-            return this;
+            return productId(Output.of(productId));
         }
+
         public Builder provisioningArtifactId(Output<String> provisioningArtifactId) {
-            this.provisioningArtifactId = Objects.requireNonNull(provisioningArtifactId);
+            $.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
+
         public Builder provisioningArtifactId(String provisioningArtifactId) {
-            this.provisioningArtifactId = Output.of(Objects.requireNonNull(provisioningArtifactId));
-            return this;
+            return provisioningArtifactId(Output.of(provisioningArtifactId));
         }
+
         public Builder serviceActionId(Output<String> serviceActionId) {
-            this.serviceActionId = Objects.requireNonNull(serviceActionId);
+            $.serviceActionId = serviceActionId;
             return this;
         }
+
         public Builder serviceActionId(String serviceActionId) {
-            this.serviceActionId = Output.of(Objects.requireNonNull(serviceActionId));
-            return this;
-        }        public ServiceActionAssociationArgs build() {
-            return new ServiceActionAssociationArgs(productId, provisioningArtifactId, serviceActionId);
+            return serviceActionId(Output.of(serviceActionId));
+        }
+
+        public ServiceActionAssociationArgs build() {
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            $.provisioningArtifactId = Objects.requireNonNull($.provisioningArtifactId, "expected parameter 'provisioningArtifactId' to be non-null");
+            $.serviceActionId = Objects.requireNonNull($.serviceActionId, "expected parameter 'serviceActionId' to be non-null");
+            return $;
         }
     }
+
 }

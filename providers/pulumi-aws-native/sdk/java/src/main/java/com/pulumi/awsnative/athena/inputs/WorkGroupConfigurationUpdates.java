@@ -22,142 +22,122 @@ public final class WorkGroupConfigurationUpdates extends com.pulumi.resources.In
     public static final WorkGroupConfigurationUpdates Empty = new WorkGroupConfigurationUpdates();
 
     @Import(name="bytesScannedCutoffPerQuery")
-      private final @Nullable Integer bytesScannedCutoffPerQuery;
+    private @Nullable Integer bytesScannedCutoffPerQuery;
 
     public Optional<Integer> bytesScannedCutoffPerQuery() {
-        return this.bytesScannedCutoffPerQuery == null ? Optional.empty() : Optional.ofNullable(this.bytesScannedCutoffPerQuery);
+        return Optional.ofNullable(this.bytesScannedCutoffPerQuery);
     }
 
     @Import(name="enforceWorkGroupConfiguration")
-      private final @Nullable Boolean enforceWorkGroupConfiguration;
+    private @Nullable Boolean enforceWorkGroupConfiguration;
 
     public Optional<Boolean> enforceWorkGroupConfiguration() {
-        return this.enforceWorkGroupConfiguration == null ? Optional.empty() : Optional.ofNullable(this.enforceWorkGroupConfiguration);
+        return Optional.ofNullable(this.enforceWorkGroupConfiguration);
     }
 
     @Import(name="engineVersion")
-      private final @Nullable WorkGroupEngineVersion engineVersion;
+    private @Nullable WorkGroupEngineVersion engineVersion;
 
     public Optional<WorkGroupEngineVersion> engineVersion() {
-        return this.engineVersion == null ? Optional.empty() : Optional.ofNullable(this.engineVersion);
+        return Optional.ofNullable(this.engineVersion);
     }
 
     @Import(name="publishCloudWatchMetricsEnabled")
-      private final @Nullable Boolean publishCloudWatchMetricsEnabled;
+    private @Nullable Boolean publishCloudWatchMetricsEnabled;
 
     public Optional<Boolean> publishCloudWatchMetricsEnabled() {
-        return this.publishCloudWatchMetricsEnabled == null ? Optional.empty() : Optional.ofNullable(this.publishCloudWatchMetricsEnabled);
+        return Optional.ofNullable(this.publishCloudWatchMetricsEnabled);
     }
 
     @Import(name="removeBytesScannedCutoffPerQuery")
-      private final @Nullable Boolean removeBytesScannedCutoffPerQuery;
+    private @Nullable Boolean removeBytesScannedCutoffPerQuery;
 
     public Optional<Boolean> removeBytesScannedCutoffPerQuery() {
-        return this.removeBytesScannedCutoffPerQuery == null ? Optional.empty() : Optional.ofNullable(this.removeBytesScannedCutoffPerQuery);
+        return Optional.ofNullable(this.removeBytesScannedCutoffPerQuery);
     }
 
     @Import(name="requesterPaysEnabled")
-      private final @Nullable Boolean requesterPaysEnabled;
+    private @Nullable Boolean requesterPaysEnabled;
 
     public Optional<Boolean> requesterPaysEnabled() {
-        return this.requesterPaysEnabled == null ? Optional.empty() : Optional.ofNullable(this.requesterPaysEnabled);
+        return Optional.ofNullable(this.requesterPaysEnabled);
     }
 
     @Import(name="resultConfigurationUpdates")
-      private final @Nullable WorkGroupResultConfigurationUpdates resultConfigurationUpdates;
+    private @Nullable WorkGroupResultConfigurationUpdates resultConfigurationUpdates;
 
     public Optional<WorkGroupResultConfigurationUpdates> resultConfigurationUpdates() {
-        return this.resultConfigurationUpdates == null ? Optional.empty() : Optional.ofNullable(this.resultConfigurationUpdates);
+        return Optional.ofNullable(this.resultConfigurationUpdates);
     }
 
-    public WorkGroupConfigurationUpdates(
-        @Nullable Integer bytesScannedCutoffPerQuery,
-        @Nullable Boolean enforceWorkGroupConfiguration,
-        @Nullable WorkGroupEngineVersion engineVersion,
-        @Nullable Boolean publishCloudWatchMetricsEnabled,
-        @Nullable Boolean removeBytesScannedCutoffPerQuery,
-        @Nullable Boolean requesterPaysEnabled,
-        @Nullable WorkGroupResultConfigurationUpdates resultConfigurationUpdates) {
-        this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
-        this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
-        this.engineVersion = engineVersion;
-        this.publishCloudWatchMetricsEnabled = publishCloudWatchMetricsEnabled;
-        this.removeBytesScannedCutoffPerQuery = removeBytesScannedCutoffPerQuery;
-        this.requesterPaysEnabled = requesterPaysEnabled;
-        this.resultConfigurationUpdates = resultConfigurationUpdates;
-    }
+    private WorkGroupConfigurationUpdates() {}
 
-    private WorkGroupConfigurationUpdates() {
-        this.bytesScannedCutoffPerQuery = null;
-        this.enforceWorkGroupConfiguration = null;
-        this.engineVersion = null;
-        this.publishCloudWatchMetricsEnabled = null;
-        this.removeBytesScannedCutoffPerQuery = null;
-        this.requesterPaysEnabled = null;
-        this.resultConfigurationUpdates = null;
+    private WorkGroupConfigurationUpdates(WorkGroupConfigurationUpdates $) {
+        this.bytesScannedCutoffPerQuery = $.bytesScannedCutoffPerQuery;
+        this.enforceWorkGroupConfiguration = $.enforceWorkGroupConfiguration;
+        this.engineVersion = $.engineVersion;
+        this.publishCloudWatchMetricsEnabled = $.publishCloudWatchMetricsEnabled;
+        this.removeBytesScannedCutoffPerQuery = $.removeBytesScannedCutoffPerQuery;
+        this.requesterPaysEnabled = $.requesterPaysEnabled;
+        this.resultConfigurationUpdates = $.resultConfigurationUpdates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkGroupConfigurationUpdates defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer bytesScannedCutoffPerQuery;
-        private @Nullable Boolean enforceWorkGroupConfiguration;
-        private @Nullable WorkGroupEngineVersion engineVersion;
-        private @Nullable Boolean publishCloudWatchMetricsEnabled;
-        private @Nullable Boolean removeBytesScannedCutoffPerQuery;
-        private @Nullable Boolean requesterPaysEnabled;
-        private @Nullable WorkGroupResultConfigurationUpdates resultConfigurationUpdates;
+        private WorkGroupConfigurationUpdates $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkGroupConfigurationUpdates();
         }
 
         public Builder(WorkGroupConfigurationUpdates defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bytesScannedCutoffPerQuery = defaults.bytesScannedCutoffPerQuery;
-    	      this.enforceWorkGroupConfiguration = defaults.enforceWorkGroupConfiguration;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.publishCloudWatchMetricsEnabled = defaults.publishCloudWatchMetricsEnabled;
-    	      this.removeBytesScannedCutoffPerQuery = defaults.removeBytesScannedCutoffPerQuery;
-    	      this.requesterPaysEnabled = defaults.requesterPaysEnabled;
-    	      this.resultConfigurationUpdates = defaults.resultConfigurationUpdates;
+            $ = new WorkGroupConfigurationUpdates(Objects.requireNonNull(defaults));
         }
 
         public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
-            this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
+            $.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
+
         public Builder enforceWorkGroupConfiguration(@Nullable Boolean enforceWorkGroupConfiguration) {
-            this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
+            $.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
             return this;
         }
+
         public Builder engineVersion(@Nullable WorkGroupEngineVersion engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
+
         public Builder publishCloudWatchMetricsEnabled(@Nullable Boolean publishCloudWatchMetricsEnabled) {
-            this.publishCloudWatchMetricsEnabled = publishCloudWatchMetricsEnabled;
+            $.publishCloudWatchMetricsEnabled = publishCloudWatchMetricsEnabled;
             return this;
         }
+
         public Builder removeBytesScannedCutoffPerQuery(@Nullable Boolean removeBytesScannedCutoffPerQuery) {
-            this.removeBytesScannedCutoffPerQuery = removeBytesScannedCutoffPerQuery;
+            $.removeBytesScannedCutoffPerQuery = removeBytesScannedCutoffPerQuery;
             return this;
         }
+
         public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
-            this.requesterPaysEnabled = requesterPaysEnabled;
+            $.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
+
         public Builder resultConfigurationUpdates(@Nullable WorkGroupResultConfigurationUpdates resultConfigurationUpdates) {
-            this.resultConfigurationUpdates = resultConfigurationUpdates;
+            $.resultConfigurationUpdates = resultConfigurationUpdates;
             return this;
-        }        public WorkGroupConfigurationUpdates build() {
-            return new WorkGroupConfigurationUpdates(bytesScannedCutoffPerQuery, enforceWorkGroupConfiguration, engineVersion, publishCloudWatchMetricsEnabled, removeBytesScannedCutoffPerQuery, requesterPaysEnabled, resultConfigurationUpdates);
+        }
+
+        public WorkGroupConfigurationUpdates build() {
+            return $;
         }
     }
+
 }

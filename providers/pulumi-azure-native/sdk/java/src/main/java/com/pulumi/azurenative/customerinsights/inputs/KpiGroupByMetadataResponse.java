@@ -24,10 +24,10 @@ public final class KpiGroupByMetadataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Map<String,String> displayName;
+    private @Nullable Map<String,String> displayName;
 
-    public Map<String,String> displayName() {
-        return this.displayName == null ? Map.of() : this.displayName;
+    public Optional<Map<String,String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class KpiGroupByMetadataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fieldName")
-      private final @Nullable String fieldName;
+    private @Nullable String fieldName;
 
     public Optional<String> fieldName() {
-        return this.fieldName == null ? Optional.empty() : Optional.ofNullable(this.fieldName);
+        return Optional.ofNullable(this.fieldName);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class KpiGroupByMetadataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fieldType")
-      private final @Nullable String fieldType;
+    private @Nullable String fieldType;
 
     public Optional<String> fieldType() {
-        return this.fieldType == null ? Optional.empty() : Optional.ofNullable(this.fieldType);
+        return Optional.ofNullable(this.fieldType);
     }
 
-    public KpiGroupByMetadataResponse(
-        @Nullable Map<String,String> displayName,
-        @Nullable String fieldName,
-        @Nullable String fieldType) {
-        this.displayName = displayName;
-        this.fieldName = fieldName;
-        this.fieldType = fieldType;
-    }
+    private KpiGroupByMetadataResponse() {}
 
-    private KpiGroupByMetadataResponse() {
-        this.displayName = Map.of();
-        this.fieldName = null;
-        this.fieldType = null;
+    private KpiGroupByMetadataResponse(KpiGroupByMetadataResponse $) {
+        this.displayName = $.displayName;
+        this.fieldName = $.fieldName;
+        this.fieldType = $.fieldType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KpiGroupByMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> displayName;
-        private @Nullable String fieldName;
-        private @Nullable String fieldType;
+        private KpiGroupByMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KpiGroupByMetadataResponse();
         }
 
         public Builder(KpiGroupByMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.fieldName = defaults.fieldName;
-    	      this.fieldType = defaults.fieldType;
+            $ = new KpiGroupByMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = fieldName;
+            $.fieldName = fieldName;
             return this;
         }
+
         public Builder fieldType(@Nullable String fieldType) {
-            this.fieldType = fieldType;
+            $.fieldType = fieldType;
             return this;
-        }        public KpiGroupByMetadataResponse build() {
-            return new KpiGroupByMetadataResponse(displayName, fieldName, fieldType);
+        }
+
+        public KpiGroupByMetadataResponse build() {
+            return $;
         }
     }
+
 }

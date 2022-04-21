@@ -6,11 +6,11 @@ package com.pulumi.aws.workspaces;
 import com.pulumi.aws.workspaces.inputs.IpGroupRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<IpGroupRuleArgs>> rules;
+    private @Nullable Output<List<IpGroupRuleArgs>> rules;
 
-    public Output<List<IpGroupRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<IpGroupRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -56,92 +56,82 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IpGroupArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<List<IpGroupRuleArgs>> rules,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.name = name;
-        this.rules = rules;
-        this.tags = tags;
-    }
+    private IpGroupArgs() {}
 
-    private IpGroupArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IpGroupArgs(IpGroupArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.rules = $.rules;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<IpGroupRuleArgs>> rules;
-        private @Nullable Output<Map<String,String>> tags;
+        private IpGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpGroupArgs();
         }
 
         public Builder(IpGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.rules = defaults.rules;
-    	      this.tags = defaults.tags;
+            $ = new IpGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rules(@Nullable Output<List<IpGroupRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<IpGroupRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<IpGroupRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(IpGroupRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public IpGroupArgs build() {
-            return new IpGroupArgs(description, name, rules, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public IpGroupArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.awsnative.elasticache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends com
      * 
      */
     @Import(name="nodeGroupId")
-      private final @Nullable Output<String> nodeGroupId;
+    private @Nullable Output<String> nodeGroupId;
 
-    public Output<String> nodeGroupId() {
-        return this.nodeGroupId == null ? Codegen.empty() : this.nodeGroupId;
+    public Optional<Output<String>> nodeGroupId() {
+        return Optional.ofNullable(this.nodeGroupId);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends com
      * 
      */
     @Import(name="preferredAvailabilityZones")
-      private final @Nullable Output<List<String>> preferredAvailabilityZones;
+    private @Nullable Output<List<String>> preferredAvailabilityZones;
 
-    public Output<List<String>> preferredAvailabilityZones() {
-        return this.preferredAvailabilityZones == null ? Codegen.empty() : this.preferredAvailabilityZones;
+    public Optional<Output<List<String>>> preferredAvailabilityZones() {
+        return Optional.ofNullable(this.preferredAvailabilityZones);
     }
 
-    public GlobalReplicationGroupReshardingConfigurationArgs(
-        @Nullable Output<String> nodeGroupId,
-        @Nullable Output<List<String>> preferredAvailabilityZones) {
-        this.nodeGroupId = nodeGroupId;
-        this.preferredAvailabilityZones = preferredAvailabilityZones;
-    }
+    private GlobalReplicationGroupReshardingConfigurationArgs() {}
 
-    private GlobalReplicationGroupReshardingConfigurationArgs() {
-        this.nodeGroupId = Codegen.empty();
-        this.preferredAvailabilityZones = Codegen.empty();
+    private GlobalReplicationGroupReshardingConfigurationArgs(GlobalReplicationGroupReshardingConfigurationArgs $) {
+        this.nodeGroupId = $.nodeGroupId;
+        this.preferredAvailabilityZones = $.preferredAvailabilityZones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalReplicationGroupReshardingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nodeGroupId;
-        private @Nullable Output<List<String>> preferredAvailabilityZones;
+        private GlobalReplicationGroupReshardingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalReplicationGroupReshardingConfigurationArgs();
         }
 
         public Builder(GlobalReplicationGroupReshardingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeGroupId = defaults.nodeGroupId;
-    	      this.preferredAvailabilityZones = defaults.preferredAvailabilityZones;
+            $ = new GlobalReplicationGroupReshardingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeGroupId(@Nullable Output<String> nodeGroupId) {
-            this.nodeGroupId = nodeGroupId;
+            $.nodeGroupId = nodeGroupId;
             return this;
         }
-        public Builder nodeGroupId(@Nullable String nodeGroupId) {
-            this.nodeGroupId = Codegen.ofNullable(nodeGroupId);
-            return this;
+
+        public Builder nodeGroupId(String nodeGroupId) {
+            return nodeGroupId(Output.of(nodeGroupId));
         }
+
         public Builder preferredAvailabilityZones(@Nullable Output<List<String>> preferredAvailabilityZones) {
-            this.preferredAvailabilityZones = preferredAvailabilityZones;
+            $.preferredAvailabilityZones = preferredAvailabilityZones;
             return this;
         }
-        public Builder preferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
-            this.preferredAvailabilityZones = Codegen.ofNullable(preferredAvailabilityZones);
-            return this;
+
+        public Builder preferredAvailabilityZones(List<String> preferredAvailabilityZones) {
+            return preferredAvailabilityZones(Output.of(preferredAvailabilityZones));
         }
+
         public Builder preferredAvailabilityZones(String... preferredAvailabilityZones) {
             return preferredAvailabilityZones(List.of(preferredAvailabilityZones));
-        }        public GlobalReplicationGroupReshardingConfigurationArgs build() {
-            return new GlobalReplicationGroupReshardingConfigurationArgs(nodeGroupId, preferredAvailabilityZones);
+        }
+
+        public GlobalReplicationGroupReshardingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

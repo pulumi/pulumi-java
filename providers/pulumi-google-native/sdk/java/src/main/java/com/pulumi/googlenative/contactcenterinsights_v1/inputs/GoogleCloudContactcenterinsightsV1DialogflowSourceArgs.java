@@ -5,9 +5,9 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
      * 
      */
     @Import(name="audioUri")
-      private final @Nullable Output<String> audioUri;
+    private @Nullable Output<String> audioUri;
 
-    public Output<String> audioUri() {
-        return this.audioUri == null ? Codegen.empty() : this.audioUri;
+    public Optional<Output<String>> audioUri() {
+        return Optional.ofNullable(this.audioUri);
     }
 
-    public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(@Nullable Output<String> audioUri) {
-        this.audioUri = audioUri;
-    }
+    private GoogleCloudContactcenterinsightsV1DialogflowSourceArgs() {}
 
-    private GoogleCloudContactcenterinsightsV1DialogflowSourceArgs() {
-        this.audioUri = Codegen.empty();
+    private GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(GoogleCloudContactcenterinsightsV1DialogflowSourceArgs $) {
+        this.audioUri = $.audioUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1DialogflowSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audioUri;
+        private GoogleCloudContactcenterinsightsV1DialogflowSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1DialogflowSourceArgs();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1DialogflowSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioUri = defaults.audioUri;
+            $ = new GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audioUri(@Nullable Output<String> audioUri) {
-            this.audioUri = audioUri;
+            $.audioUri = audioUri;
             return this;
         }
-        public Builder audioUri(@Nullable String audioUri) {
-            this.audioUri = Codegen.ofNullable(audioUri);
-            return this;
-        }        public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs build() {
-            return new GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(audioUri);
+
+        public Builder audioUri(String audioUri) {
+            return audioUri(Output.of(audioUri));
+        }
+
+        public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs build() {
+            return $;
         }
     }
+
 }

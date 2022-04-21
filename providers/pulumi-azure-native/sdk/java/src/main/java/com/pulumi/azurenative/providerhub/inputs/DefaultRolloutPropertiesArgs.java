@@ -9,9 +9,9 @@ import com.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesStatusA
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,90 +24,82 @@ public final class DefaultRolloutPropertiesArgs extends com.pulumi.resources.Res
     public static final DefaultRolloutPropertiesArgs Empty = new DefaultRolloutPropertiesArgs();
 
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     @Import(name="specification")
-      private final @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification;
+    private @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification;
 
-    public Output<DefaultRolloutPropertiesSpecificationArgs> specification() {
-        return this.specification == null ? Codegen.empty() : this.specification;
+    public Optional<Output<DefaultRolloutPropertiesSpecificationArgs>> specification() {
+        return Optional.ofNullable(this.specification);
     }
 
     @Import(name="status")
-      private final @Nullable Output<DefaultRolloutPropertiesStatusArgs> status;
+    private @Nullable Output<DefaultRolloutPropertiesStatusArgs> status;
 
-    public Output<DefaultRolloutPropertiesStatusArgs> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<DefaultRolloutPropertiesStatusArgs>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public DefaultRolloutPropertiesArgs(
-        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
-        @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification,
-        @Nullable Output<DefaultRolloutPropertiesStatusArgs> status) {
-        this.provisioningState = provisioningState;
-        this.specification = specification;
-        this.status = status;
-    }
+    private DefaultRolloutPropertiesArgs() {}
 
-    private DefaultRolloutPropertiesArgs() {
-        this.provisioningState = Codegen.empty();
-        this.specification = Codegen.empty();
-        this.status = Codegen.empty();
+    private DefaultRolloutPropertiesArgs(DefaultRolloutPropertiesArgs $) {
+        this.provisioningState = $.provisioningState;
+        this.specification = $.specification;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
-        private @Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification;
-        private @Nullable Output<DefaultRolloutPropertiesStatusArgs> status;
+        private DefaultRolloutPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutPropertiesArgs();
         }
 
         public Builder(DefaultRolloutPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.specification = defaults.specification;
-    	      this.status = defaults.status;
+            $ = new DefaultRolloutPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder specification(@Nullable Output<DefaultRolloutPropertiesSpecificationArgs> specification) {
-            this.specification = specification;
+            $.specification = specification;
             return this;
         }
-        public Builder specification(@Nullable DefaultRolloutPropertiesSpecificationArgs specification) {
-            this.specification = Codegen.ofNullable(specification);
-            return this;
+
+        public Builder specification(DefaultRolloutPropertiesSpecificationArgs specification) {
+            return specification(Output.of(specification));
         }
+
         public Builder status(@Nullable Output<DefaultRolloutPropertiesStatusArgs> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable DefaultRolloutPropertiesStatusArgs status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public DefaultRolloutPropertiesArgs build() {
-            return new DefaultRolloutPropertiesArgs(provisioningState, specification, status);
+
+        public Builder status(DefaultRolloutPropertiesStatusArgs status) {
+            return status(Output.of(status));
+        }
+
+        public DefaultRolloutPropertiesArgs build() {
+            return $;
         }
     }
+
 }

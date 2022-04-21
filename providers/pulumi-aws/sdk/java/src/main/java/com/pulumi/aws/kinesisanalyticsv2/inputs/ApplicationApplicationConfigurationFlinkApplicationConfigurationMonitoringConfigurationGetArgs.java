@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="configurationType", required=true)
-      private final Output<String> configurationType;
+    private Output<String> configurationType;
 
     public Output<String> configurationType() {
         return this.configurationType;
@@ -31,10 +31,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Output<String> logLevel;
+    private @Nullable Output<String> logLevel;
 
-    public Output<String> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<String>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * 
      */
     @Import(name="metricsLevel")
-      private final @Nullable Output<String> metricsLevel;
+    private @Nullable Output<String> metricsLevel;
 
-    public Output<String> metricsLevel() {
-        return this.metricsLevel == null ? Codegen.empty() : this.metricsLevel;
+    public Optional<Output<String>> metricsLevel() {
+        return Optional.ofNullable(this.metricsLevel);
     }
 
-    public ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs(
-        Output<String> configurationType,
-        @Nullable Output<String> logLevel,
-        @Nullable Output<String> metricsLevel) {
-        this.configurationType = Objects.requireNonNull(configurationType, "expected parameter 'configurationType' to be non-null");
-        this.logLevel = logLevel;
-        this.metricsLevel = metricsLevel;
-    }
+    private ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs() {}
 
-    private ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs() {
-        this.configurationType = Codegen.empty();
-        this.logLevel = Codegen.empty();
-        this.metricsLevel = Codegen.empty();
+    private ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs(ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs $) {
+        this.configurationType = $.configurationType;
+        this.logLevel = $.logLevel;
+        this.metricsLevel = $.metricsLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configurationType;
-        private @Nullable Output<String> logLevel;
-        private @Nullable Output<String> metricsLevel;
+        private ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationType = defaults.configurationType;
-    	      this.logLevel = defaults.logLevel;
-    	      this.metricsLevel = defaults.metricsLevel;
+            $ = new ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationType(Output<String> configurationType) {
-            this.configurationType = Objects.requireNonNull(configurationType);
+            $.configurationType = configurationType;
             return this;
         }
+
         public Builder configurationType(String configurationType) {
-            this.configurationType = Output.of(Objects.requireNonNull(configurationType));
-            return this;
+            return configurationType(Output.of(configurationType));
         }
+
         public Builder logLevel(@Nullable Output<String> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
+
+        public Builder logLevel(String logLevel) {
+            return logLevel(Output.of(logLevel));
         }
+
         public Builder metricsLevel(@Nullable Output<String> metricsLevel) {
-            this.metricsLevel = metricsLevel;
+            $.metricsLevel = metricsLevel;
             return this;
         }
-        public Builder metricsLevel(@Nullable String metricsLevel) {
-            this.metricsLevel = Codegen.ofNullable(metricsLevel);
-            return this;
-        }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs build() {
-            return new ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs(configurationType, logLevel, metricsLevel);
+
+        public Builder metricsLevel(String metricsLevel) {
+            return metricsLevel(Output.of(metricsLevel));
+        }
+
+        public ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs build() {
+            $.configurationType = Objects.requireNonNull($.configurationType, "expected parameter 'configurationType' to be non-null");
+            return $;
         }
     }
+
 }

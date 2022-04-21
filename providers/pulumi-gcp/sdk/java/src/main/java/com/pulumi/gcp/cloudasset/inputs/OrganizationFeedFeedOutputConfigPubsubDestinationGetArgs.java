@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudasset.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs exte
      * 
      */
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
     }
 
-    public OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs(Output<String> topic) {
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs() {}
 
-    private OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs() {
-        this.topic = Codegen.empty();
+    private OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs(OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs $) {
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> topic;
+        private OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs();
         }
 
         public Builder(OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topic = defaults.topic;
+            $ = new OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Output.of(Objects.requireNonNull(topic));
-            return this;
-        }        public OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs build() {
-            return new OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs(topic);
+            return topic(Output.of(topic));
+        }
+
+        public OrganizationFeedFeedOutputConfigPubsubDestinationGetArgs build() {
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

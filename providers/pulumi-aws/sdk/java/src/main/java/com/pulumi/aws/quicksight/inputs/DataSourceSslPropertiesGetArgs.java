@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DataSourceSslPropertiesGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="disableSsl", required=true)
-      private final Output<Boolean> disableSsl;
+    private Output<Boolean> disableSsl;
 
     public Output<Boolean> disableSsl() {
         return this.disableSsl;
     }
 
-    public DataSourceSslPropertiesGetArgs(Output<Boolean> disableSsl) {
-        this.disableSsl = Objects.requireNonNull(disableSsl, "expected parameter 'disableSsl' to be non-null");
-    }
+    private DataSourceSslPropertiesGetArgs() {}
 
-    private DataSourceSslPropertiesGetArgs() {
-        this.disableSsl = Codegen.empty();
+    private DataSourceSslPropertiesGetArgs(DataSourceSslPropertiesGetArgs $) {
+        this.disableSsl = $.disableSsl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSslPropertiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> disableSsl;
+        private DataSourceSslPropertiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSslPropertiesGetArgs();
         }
 
         public Builder(DataSourceSslPropertiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableSsl = defaults.disableSsl;
+            $ = new DataSourceSslPropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableSsl(Output<Boolean> disableSsl) {
-            this.disableSsl = Objects.requireNonNull(disableSsl);
+            $.disableSsl = disableSsl;
             return this;
         }
+
         public Builder disableSsl(Boolean disableSsl) {
-            this.disableSsl = Output.of(Objects.requireNonNull(disableSsl));
-            return this;
-        }        public DataSourceSslPropertiesGetArgs build() {
-            return new DataSourceSslPropertiesGetArgs(disableSsl);
+            return disableSsl(Output.of(disableSsl));
+        }
+
+        public DataSourceSslPropertiesGetArgs build() {
+            $.disableSsl = Objects.requireNonNull($.disableSsl, "expected parameter 'disableSsl' to be non-null");
+            return $;
         }
     }
+
 }

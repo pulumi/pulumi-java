@@ -20,7 +20,7 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deleteOnTermination", required=true)
-      private final Boolean deleteOnTermination;
+    private Boolean deleteOnTermination;
 
     public Boolean deleteOnTermination() {
         return this.deleteOnTermination;
@@ -31,7 +31,7 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -42,7 +42,7 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="encrypted", required=true)
-      private final Boolean encrypted;
+    private Boolean encrypted;
 
     public Boolean encrypted() {
         return this.encrypted;
@@ -53,14 +53,14 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="iops", required=true)
-      private final Integer iops;
+    private Integer iops;
 
     public Integer iops() {
         return this.iops;
     }
 
     @Import(name="kmsKeyId", required=true)
-      private final String kmsKeyId;
+    private String kmsKeyId;
 
     public String kmsKeyId() {
         return this.kmsKeyId;
@@ -71,7 +71,7 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tags", required=true)
-      private final Map<String,String> tags;
+    private Map<String,String> tags;
 
     public Map<String,String> tags() {
         return this.tags;
@@ -82,14 +82,14 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="throughput", required=true)
-      private final Integer throughput;
+    private Integer throughput;
 
     public Integer throughput() {
         return this.throughput;
     }
 
     @Import(name="volumeId", required=true)
-      private final String volumeId;
+    private String volumeId;
 
     public String volumeId() {
         return this.volumeId;
@@ -100,7 +100,7 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="volumeSize", required=true)
-      private final Integer volumeSize;
+    private Integer volumeSize;
 
     public Integer volumeSize() {
         return this.volumeSize;
@@ -111,127 +111,108 @@ public final class GetInstanceRootBlockDevice extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="volumeType", required=true)
-      private final String volumeType;
+    private String volumeType;
 
     public String volumeType() {
         return this.volumeType;
     }
 
-    public GetInstanceRootBlockDevice(
-        Boolean deleteOnTermination,
-        String deviceName,
-        Boolean encrypted,
-        Integer iops,
-        String kmsKeyId,
-        Map<String,String> tags,
-        Integer throughput,
-        String volumeId,
-        Integer volumeSize,
-        String volumeType) {
-        this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.encrypted = Objects.requireNonNull(encrypted, "expected parameter 'encrypted' to be non-null");
-        this.iops = Objects.requireNonNull(iops, "expected parameter 'iops' to be non-null");
-        this.kmsKeyId = Objects.requireNonNull(kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-        this.throughput = Objects.requireNonNull(throughput, "expected parameter 'throughput' to be non-null");
-        this.volumeId = Objects.requireNonNull(volumeId, "expected parameter 'volumeId' to be non-null");
-        this.volumeSize = Objects.requireNonNull(volumeSize, "expected parameter 'volumeSize' to be non-null");
-        this.volumeType = Objects.requireNonNull(volumeType, "expected parameter 'volumeType' to be non-null");
-    }
+    private GetInstanceRootBlockDevice() {}
 
-    private GetInstanceRootBlockDevice() {
-        this.deleteOnTermination = null;
-        this.deviceName = null;
-        this.encrypted = null;
-        this.iops = null;
-        this.kmsKeyId = null;
-        this.tags = Map.of();
-        this.throughput = null;
-        this.volumeId = null;
-        this.volumeSize = null;
-        this.volumeType = null;
+    private GetInstanceRootBlockDevice(GetInstanceRootBlockDevice $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.deviceName = $.deviceName;
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.kmsKeyId = $.kmsKeyId;
+        this.tags = $.tags;
+        this.throughput = $.throughput;
+        this.volumeId = $.volumeId;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceRootBlockDevice defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean deleteOnTermination;
-        private String deviceName;
-        private Boolean encrypted;
-        private Integer iops;
-        private String kmsKeyId;
-        private Map<String,String> tags;
-        private Integer throughput;
-        private String volumeId;
-        private Integer volumeSize;
-        private String volumeType;
+        private GetInstanceRootBlockDevice $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceRootBlockDevice();
         }
 
         public Builder(GetInstanceRootBlockDevice defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.deviceName = defaults.deviceName;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.tags = defaults.tags;
-    	      this.throughput = defaults.throughput;
-    	      this.volumeId = defaults.volumeId;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new GetInstanceRootBlockDevice(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(Boolean deleteOnTermination) {
-            this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder encrypted(Boolean encrypted) {
-            this.encrypted = Objects.requireNonNull(encrypted);
+            $.encrypted = encrypted;
             return this;
         }
+
         public Builder iops(Integer iops) {
-            this.iops = Objects.requireNonNull(iops);
+            $.iops = iops;
             return this;
         }
+
         public Builder kmsKeyId(String kmsKeyId) {
-            this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
+
         public Builder tags(Map<String,String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder throughput(Integer throughput) {
-            this.throughput = Objects.requireNonNull(throughput);
+            $.throughput = throughput;
             return this;
         }
+
         public Builder volumeId(String volumeId) {
-            this.volumeId = Objects.requireNonNull(volumeId);
+            $.volumeId = volumeId;
             return this;
         }
+
         public Builder volumeSize(Integer volumeSize) {
-            this.volumeSize = Objects.requireNonNull(volumeSize);
+            $.volumeSize = volumeSize;
             return this;
         }
+
         public Builder volumeType(String volumeType) {
-            this.volumeType = Objects.requireNonNull(volumeType);
+            $.volumeType = volumeType;
             return this;
-        }        public GetInstanceRootBlockDevice build() {
-            return new GetInstanceRootBlockDevice(deleteOnTermination, deviceName, encrypted, iops, kmsKeyId, tags, throughput, volumeId, volumeSize, volumeType);
+        }
+
+        public GetInstanceRootBlockDevice build() {
+            $.deleteOnTermination = Objects.requireNonNull($.deleteOnTermination, "expected parameter 'deleteOnTermination' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.encrypted = Objects.requireNonNull($.encrypted, "expected parameter 'encrypted' to be non-null");
+            $.iops = Objects.requireNonNull($.iops, "expected parameter 'iops' to be non-null");
+            $.kmsKeyId = Objects.requireNonNull($.kmsKeyId, "expected parameter 'kmsKeyId' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            $.throughput = Objects.requireNonNull($.throughput, "expected parameter 'throughput' to be non-null");
+            $.volumeId = Objects.requireNonNull($.volumeId, "expected parameter 'volumeId' to be non-null");
+            $.volumeSize = Objects.requireNonNull($.volumeSize, "expected parameter 'volumeSize' to be non-null");
+            $.volumeType = Objects.requireNonNull($.volumeType, "expected parameter 'volumeType' to be non-null");
+            return $;
         }
     }
+
 }

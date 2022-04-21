@@ -17,45 +17,45 @@ public final class GetImageRecipeComponent extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="componentArn", required=true)
-      private final String componentArn;
+    private String componentArn;
 
     public String componentArn() {
         return this.componentArn;
     }
 
-    public GetImageRecipeComponent(String componentArn) {
-        this.componentArn = Objects.requireNonNull(componentArn, "expected parameter 'componentArn' to be non-null");
-    }
+    private GetImageRecipeComponent() {}
 
-    private GetImageRecipeComponent() {
-        this.componentArn = null;
+    private GetImageRecipeComponent(GetImageRecipeComponent $) {
+        this.componentArn = $.componentArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageRecipeComponent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String componentArn;
+        private GetImageRecipeComponent $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageRecipeComponent();
         }
 
         public Builder(GetImageRecipeComponent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentArn = defaults.componentArn;
+            $ = new GetImageRecipeComponent(Objects.requireNonNull(defaults));
         }
 
         public Builder componentArn(String componentArn) {
-            this.componentArn = Objects.requireNonNull(componentArn);
+            $.componentArn = componentArn;
             return this;
-        }        public GetImageRecipeComponent build() {
-            return new GetImageRecipeComponent(componentArn);
+        }
+
+        public GetImageRecipeComponent build() {
+            $.componentArn = Objects.requireNonNull($.componentArn, "expected parameter 'componentArn' to be non-null");
+            return $;
         }
     }
+
 }

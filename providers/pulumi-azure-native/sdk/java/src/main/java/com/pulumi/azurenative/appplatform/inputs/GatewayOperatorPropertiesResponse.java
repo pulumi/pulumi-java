@@ -23,7 +23,7 @@ public final class GatewayOperatorPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="instances", required=true)
-      private final List<GatewayInstanceResponse> instances;
+    private List<GatewayInstanceResponse> instances;
 
     public List<GatewayInstanceResponse> instances() {
         return this.instances;
@@ -34,58 +34,56 @@ public final class GatewayOperatorPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceRequests", required=true)
-      private final GatewayOperatorResourceRequestsResponse resourceRequests;
+    private GatewayOperatorResourceRequestsResponse resourceRequests;
 
     public GatewayOperatorResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
 
-    public GatewayOperatorPropertiesResponse(
-        List<GatewayInstanceResponse> instances,
-        GatewayOperatorResourceRequestsResponse resourceRequests) {
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.resourceRequests = Objects.requireNonNull(resourceRequests, "expected parameter 'resourceRequests' to be non-null");
-    }
+    private GatewayOperatorPropertiesResponse() {}
 
-    private GatewayOperatorPropertiesResponse() {
-        this.instances = List.of();
-        this.resourceRequests = null;
+    private GatewayOperatorPropertiesResponse(GatewayOperatorPropertiesResponse $) {
+        this.instances = $.instances;
+        this.resourceRequests = $.resourceRequests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayOperatorPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GatewayInstanceResponse> instances;
-        private GatewayOperatorResourceRequestsResponse resourceRequests;
+        private GatewayOperatorPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayOperatorPropertiesResponse();
         }
 
         public Builder(GatewayOperatorPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
-    	      this.resourceRequests = defaults.resourceRequests;
+            $ = new GatewayOperatorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(List<GatewayInstanceResponse> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(GatewayInstanceResponse... instances) {
             return instances(List.of(instances));
         }
+
         public Builder resourceRequests(GatewayOperatorResourceRequestsResponse resourceRequests) {
-            this.resourceRequests = Objects.requireNonNull(resourceRequests);
+            $.resourceRequests = resourceRequests;
             return this;
-        }        public GatewayOperatorPropertiesResponse build() {
-            return new GatewayOperatorPropertiesResponse(instances, resourceRequests);
+        }
+
+        public GatewayOperatorPropertiesResponse build() {
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.resourceRequests = Objects.requireNonNull($.resourceRequests, "expected parameter 'resourceRequests' to be non-null");
+            return $;
         }
     }
+
 }

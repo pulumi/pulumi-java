@@ -8,8 +8,8 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.azurenative.network.inputs.VnetRouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="associatedRouteTable")
-      private final @Nullable Output<SubResourceArgs> associatedRouteTable;
+    private @Nullable Output<SubResourceArgs> associatedRouteTable;
 
-    public Output<SubResourceArgs> associatedRouteTable() {
-        return this.associatedRouteTable == null ? Codegen.empty() : this.associatedRouteTable;
+    public Optional<Output<SubResourceArgs>> associatedRouteTable() {
+        return Optional.ofNullable(this.associatedRouteTable);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="propagatedRouteTables")
-      private final @Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables;
+    private @Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables;
 
-    public Output<PropagatedRouteTableArgs> propagatedRouteTables() {
-        return this.propagatedRouteTables == null ? Codegen.empty() : this.propagatedRouteTables;
+    public Optional<Output<PropagatedRouteTableArgs>> propagatedRouteTables() {
+        return Optional.ofNullable(this.propagatedRouteTables);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class RoutingConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="vnetRoutes")
-      private final @Nullable Output<VnetRouteArgs> vnetRoutes;
+    private @Nullable Output<VnetRouteArgs> vnetRoutes;
 
-    public Output<VnetRouteArgs> vnetRoutes() {
-        return this.vnetRoutes == null ? Codegen.empty() : this.vnetRoutes;
+    public Optional<Output<VnetRouteArgs>> vnetRoutes() {
+        return Optional.ofNullable(this.vnetRoutes);
     }
 
-    public RoutingConfigurationArgs(
-        @Nullable Output<SubResourceArgs> associatedRouteTable,
-        @Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables,
-        @Nullable Output<VnetRouteArgs> vnetRoutes) {
-        this.associatedRouteTable = associatedRouteTable;
-        this.propagatedRouteTables = propagatedRouteTables;
-        this.vnetRoutes = vnetRoutes;
-    }
+    private RoutingConfigurationArgs() {}
 
-    private RoutingConfigurationArgs() {
-        this.associatedRouteTable = Codegen.empty();
-        this.propagatedRouteTables = Codegen.empty();
-        this.vnetRoutes = Codegen.empty();
+    private RoutingConfigurationArgs(RoutingConfigurationArgs $) {
+        this.associatedRouteTable = $.associatedRouteTable;
+        this.propagatedRouteTables = $.propagatedRouteTables;
+        this.vnetRoutes = $.vnetRoutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> associatedRouteTable;
-        private @Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables;
-        private @Nullable Output<VnetRouteArgs> vnetRoutes;
+        private RoutingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingConfigurationArgs();
         }
 
         public Builder(RoutingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associatedRouteTable = defaults.associatedRouteTable;
-    	      this.propagatedRouteTables = defaults.propagatedRouteTables;
-    	      this.vnetRoutes = defaults.vnetRoutes;
+            $ = new RoutingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associatedRouteTable(@Nullable Output<SubResourceArgs> associatedRouteTable) {
-            this.associatedRouteTable = associatedRouteTable;
+            $.associatedRouteTable = associatedRouteTable;
             return this;
         }
-        public Builder associatedRouteTable(@Nullable SubResourceArgs associatedRouteTable) {
-            this.associatedRouteTable = Codegen.ofNullable(associatedRouteTable);
-            return this;
+
+        public Builder associatedRouteTable(SubResourceArgs associatedRouteTable) {
+            return associatedRouteTable(Output.of(associatedRouteTable));
         }
+
         public Builder propagatedRouteTables(@Nullable Output<PropagatedRouteTableArgs> propagatedRouteTables) {
-            this.propagatedRouteTables = propagatedRouteTables;
+            $.propagatedRouteTables = propagatedRouteTables;
             return this;
         }
-        public Builder propagatedRouteTables(@Nullable PropagatedRouteTableArgs propagatedRouteTables) {
-            this.propagatedRouteTables = Codegen.ofNullable(propagatedRouteTables);
-            return this;
+
+        public Builder propagatedRouteTables(PropagatedRouteTableArgs propagatedRouteTables) {
+            return propagatedRouteTables(Output.of(propagatedRouteTables));
         }
+
         public Builder vnetRoutes(@Nullable Output<VnetRouteArgs> vnetRoutes) {
-            this.vnetRoutes = vnetRoutes;
+            $.vnetRoutes = vnetRoutes;
             return this;
         }
-        public Builder vnetRoutes(@Nullable VnetRouteArgs vnetRoutes) {
-            this.vnetRoutes = Codegen.ofNullable(vnetRoutes);
-            return this;
-        }        public RoutingConfigurationArgs build() {
-            return new RoutingConfigurationArgs(associatedRouteTable, propagatedRouteTables, vnetRoutes);
+
+        public Builder vnetRoutes(VnetRouteArgs vnetRoutes) {
+            return vnetRoutes(Output.of(vnetRoutes));
+        }
+
+        public RoutingConfigurationArgs build() {
+            return $;
         }
     }
+
 }

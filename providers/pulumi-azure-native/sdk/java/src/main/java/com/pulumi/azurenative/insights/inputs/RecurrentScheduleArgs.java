@@ -5,7 +5,6 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +24,7 @@ public final class RecurrentScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="days", required=true)
-      private final Output<List<String>> days;
+    private Output<List<String>> days;
 
     public Output<List<String>> days() {
         return this.days;
@@ -36,7 +35,7 @@ public final class RecurrentScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hours", required=true)
-      private final Output<List<Integer>> hours;
+    private Output<List<Integer>> hours;
 
     public Output<List<Integer>> hours() {
         return this.hours;
@@ -47,7 +46,7 @@ public final class RecurrentScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minutes", required=true)
-      private final Output<List<Integer>> minutes;
+    private Output<List<Integer>> minutes;
 
     public Output<List<Integer>> minutes() {
         return this.minutes;
@@ -58,98 +57,94 @@ public final class RecurrentScheduleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeZone", required=true)
-      private final Output<String> timeZone;
+    private Output<String> timeZone;
 
     public Output<String> timeZone() {
         return this.timeZone;
     }
 
-    public RecurrentScheduleArgs(
-        Output<List<String>> days,
-        Output<List<Integer>> hours,
-        Output<List<Integer>> minutes,
-        Output<String> timeZone) {
-        this.days = Objects.requireNonNull(days, "expected parameter 'days' to be non-null");
-        this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-    }
+    private RecurrentScheduleArgs() {}
 
-    private RecurrentScheduleArgs() {
-        this.days = Codegen.empty();
-        this.hours = Codegen.empty();
-        this.minutes = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private RecurrentScheduleArgs(RecurrentScheduleArgs $) {
+        this.days = $.days;
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurrentScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> days;
-        private Output<List<Integer>> hours;
-        private Output<List<Integer>> minutes;
-        private Output<String> timeZone;
+        private RecurrentScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurrentScheduleArgs();
         }
 
         public Builder(RecurrentScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.timeZone = defaults.timeZone;
+            $ = new RecurrentScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(Output<List<String>> days) {
-            this.days = Objects.requireNonNull(days);
+            $.days = days;
             return this;
         }
+
         public Builder days(List<String> days) {
-            this.days = Output.of(Objects.requireNonNull(days));
-            return this;
+            return days(Output.of(days));
         }
+
         public Builder days(String... days) {
             return days(List.of(days));
         }
+
         public Builder hours(Output<List<Integer>> hours) {
-            this.hours = Objects.requireNonNull(hours);
+            $.hours = hours;
             return this;
         }
+
         public Builder hours(List<Integer> hours) {
-            this.hours = Output.of(Objects.requireNonNull(hours));
-            return this;
+            return hours(Output.of(hours));
         }
+
         public Builder hours(Integer... hours) {
             return hours(List.of(hours));
         }
+
         public Builder minutes(Output<List<Integer>> minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder minutes(List<Integer> minutes) {
-            this.minutes = Output.of(Objects.requireNonNull(minutes));
-            return this;
+            return minutes(Output.of(minutes));
         }
+
         public Builder minutes(Integer... minutes) {
             return minutes(List.of(minutes));
         }
+
         public Builder timeZone(Output<String> timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder timeZone(String timeZone) {
-            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
-            return this;
-        }        public RecurrentScheduleArgs build() {
-            return new RecurrentScheduleArgs(days, hours, minutes, timeZone);
+            return timeZone(Output.of(timeZone));
+        }
+
+        public RecurrentScheduleArgs build() {
+            $.days = Objects.requireNonNull($.days, "expected parameter 'days' to be non-null");
+            $.hours = Objects.requireNonNull($.hours, "expected parameter 'hours' to be non-null");
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            return $;
         }
     }
+
 }

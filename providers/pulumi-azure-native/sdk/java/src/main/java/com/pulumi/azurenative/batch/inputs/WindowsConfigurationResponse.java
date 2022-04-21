@@ -19,45 +19,44 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enableAutomaticUpdates")
-      private final @Nullable Boolean enableAutomaticUpdates;
+    private @Nullable Boolean enableAutomaticUpdates;
 
     public Optional<Boolean> enableAutomaticUpdates() {
-        return this.enableAutomaticUpdates == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticUpdates);
+        return Optional.ofNullable(this.enableAutomaticUpdates);
     }
 
-    public WindowsConfigurationResponse(@Nullable Boolean enableAutomaticUpdates) {
-        this.enableAutomaticUpdates = enableAutomaticUpdates;
-    }
+    private WindowsConfigurationResponse() {}
 
-    private WindowsConfigurationResponse() {
-        this.enableAutomaticUpdates = null;
+    private WindowsConfigurationResponse(WindowsConfigurationResponse $) {
+        this.enableAutomaticUpdates = $.enableAutomaticUpdates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableAutomaticUpdates;
+        private WindowsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsConfigurationResponse();
         }
 
         public Builder(WindowsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableAutomaticUpdates = defaults.enableAutomaticUpdates;
+            $ = new WindowsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
-            this.enableAutomaticUpdates = enableAutomaticUpdates;
+            $.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
-        }        public WindowsConfigurationResponse build() {
-            return new WindowsConfigurationResponse(enableAutomaticUpdates);
+        }
+
+        public WindowsConfigurationResponse build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.botservice.enums.EnterpriseChannelNodeState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="azureLocation", required=true)
-      private final Output<String> azureLocation;
+    private Output<String> azureLocation;
 
     public Output<String> azureLocation() {
         return this.azureLocation;
@@ -37,7 +37,7 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="azureSku", required=true)
-      private final Output<String> azureSku;
+    private Output<String> azureSku;
 
     public Output<String> azureSku() {
         return this.azureSku;
@@ -48,7 +48,7 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -59,89 +59,81 @@ public final class EnterpriseChannelNodeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
+    private @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
 
-    public Output<Either<String,EnterpriseChannelNodeState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,EnterpriseChannelNodeState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public EnterpriseChannelNodeArgs(
-        Output<String> azureLocation,
-        Output<String> azureSku,
-        Output<String> name,
-        @Nullable Output<Either<String,EnterpriseChannelNodeState>> state) {
-        this.azureLocation = Objects.requireNonNull(azureLocation, "expected parameter 'azureLocation' to be non-null");
-        this.azureSku = Objects.requireNonNull(azureSku, "expected parameter 'azureSku' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.state = state;
-    }
+    private EnterpriseChannelNodeArgs() {}
 
-    private EnterpriseChannelNodeArgs() {
-        this.azureLocation = Codegen.empty();
-        this.azureSku = Codegen.empty();
-        this.name = Codegen.empty();
-        this.state = Codegen.empty();
+    private EnterpriseChannelNodeArgs(EnterpriseChannelNodeArgs $) {
+        this.azureLocation = $.azureLocation;
+        this.azureSku = $.azureSku;
+        this.name = $.name;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseChannelNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> azureLocation;
-        private Output<String> azureSku;
-        private Output<String> name;
-        private @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
+        private EnterpriseChannelNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseChannelNodeArgs();
         }
 
         public Builder(EnterpriseChannelNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureLocation = defaults.azureLocation;
-    	      this.azureSku = defaults.azureSku;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
+            $ = new EnterpriseChannelNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureLocation(Output<String> azureLocation) {
-            this.azureLocation = Objects.requireNonNull(azureLocation);
+            $.azureLocation = azureLocation;
             return this;
         }
+
         public Builder azureLocation(String azureLocation) {
-            this.azureLocation = Output.of(Objects.requireNonNull(azureLocation));
-            return this;
+            return azureLocation(Output.of(azureLocation));
         }
+
         public Builder azureSku(Output<String> azureSku) {
-            this.azureSku = Objects.requireNonNull(azureSku);
+            $.azureSku = azureSku;
             return this;
         }
+
         public Builder azureSku(String azureSku) {
-            this.azureSku = Output.of(Objects.requireNonNull(azureSku));
-            return this;
+            return azureSku(Output.of(azureSku));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder state(@Nullable Output<Either<String,EnterpriseChannelNodeState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,EnterpriseChannelNodeState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public EnterpriseChannelNodeArgs build() {
-            return new EnterpriseChannelNodeArgs(azureLocation, azureSku, name, state);
+
+        public Builder state(Either<String,EnterpriseChannelNodeState> state) {
+            return state(Output.of(state));
+        }
+
+        public EnterpriseChannelNodeArgs build() {
+            $.azureLocation = Objects.requireNonNull($.azureLocation, "expected parameter 'azureLocation' to be non-null");
+            $.azureSku = Objects.requireNonNull($.azureSku, "expected parameter 'azureSku' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

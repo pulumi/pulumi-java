@@ -5,10 +5,10 @@ package com.pulumi.azurenative.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BootDiagnosticsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class BootDiagnosticsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="storageUri")
-      private final @Nullable Output<String> storageUri;
+    private @Nullable Output<String> storageUri;
 
-    public Output<String> storageUri() {
-        return this.storageUri == null ? Codegen.empty() : this.storageUri;
+    public Optional<Output<String>> storageUri() {
+        return Optional.ofNullable(this.storageUri);
     }
 
-    public BootDiagnosticsArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> storageUri) {
-        this.enabled = enabled;
-        this.storageUri = storageUri;
-    }
+    private BootDiagnosticsArgs() {}
 
-    private BootDiagnosticsArgs() {
-        this.enabled = Codegen.empty();
-        this.storageUri = Codegen.empty();
+    private BootDiagnosticsArgs(BootDiagnosticsArgs $) {
+        this.enabled = $.enabled;
+        this.storageUri = $.storageUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BootDiagnosticsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> storageUri;
+        private BootDiagnosticsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BootDiagnosticsArgs();
         }
 
         public Builder(BootDiagnosticsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.storageUri = defaults.storageUri;
+            $ = new BootDiagnosticsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder storageUri(@Nullable Output<String> storageUri) {
-            this.storageUri = storageUri;
+            $.storageUri = storageUri;
             return this;
         }
-        public Builder storageUri(@Nullable String storageUri) {
-            this.storageUri = Codegen.ofNullable(storageUri);
-            return this;
-        }        public BootDiagnosticsArgs build() {
-            return new BootDiagnosticsArgs(enabled, storageUri);
+
+        public Builder storageUri(String storageUri) {
+            return storageUri(Output.of(storageUri));
+        }
+
+        public BootDiagnosticsArgs build() {
+            return $;
         }
     }
+
 }

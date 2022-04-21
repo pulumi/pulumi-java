@@ -17,65 +17,61 @@ public final class DataSourceOneDriveUsers extends com.pulumi.resources.InvokeAr
     public static final DataSourceOneDriveUsers Empty = new DataSourceOneDriveUsers();
 
     @Import(name="oneDriveUserList")
-      private final @Nullable List<String> oneDriveUserList;
+    private @Nullable List<String> oneDriveUserList;
 
-    public List<String> oneDriveUserList() {
-        return this.oneDriveUserList == null ? List.of() : this.oneDriveUserList;
+    public Optional<List<String>> oneDriveUserList() {
+        return Optional.ofNullable(this.oneDriveUserList);
     }
 
     @Import(name="oneDriveUserS3Path")
-      private final @Nullable DataSourceS3Path oneDriveUserS3Path;
+    private @Nullable DataSourceS3Path oneDriveUserS3Path;
 
     public Optional<DataSourceS3Path> oneDriveUserS3Path() {
-        return this.oneDriveUserS3Path == null ? Optional.empty() : Optional.ofNullable(this.oneDriveUserS3Path);
+        return Optional.ofNullable(this.oneDriveUserS3Path);
     }
 
-    public DataSourceOneDriveUsers(
-        @Nullable List<String> oneDriveUserList,
-        @Nullable DataSourceS3Path oneDriveUserS3Path) {
-        this.oneDriveUserList = oneDriveUserList;
-        this.oneDriveUserS3Path = oneDriveUserS3Path;
-    }
+    private DataSourceOneDriveUsers() {}
 
-    private DataSourceOneDriveUsers() {
-        this.oneDriveUserList = List.of();
-        this.oneDriveUserS3Path = null;
+    private DataSourceOneDriveUsers(DataSourceOneDriveUsers $) {
+        this.oneDriveUserList = $.oneDriveUserList;
+        this.oneDriveUserS3Path = $.oneDriveUserS3Path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceOneDriveUsers defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> oneDriveUserList;
-        private @Nullable DataSourceS3Path oneDriveUserS3Path;
+        private DataSourceOneDriveUsers $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceOneDriveUsers();
         }
 
         public Builder(DataSourceOneDriveUsers defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oneDriveUserList = defaults.oneDriveUserList;
-    	      this.oneDriveUserS3Path = defaults.oneDriveUserS3Path;
+            $ = new DataSourceOneDriveUsers(Objects.requireNonNull(defaults));
         }
 
         public Builder oneDriveUserList(@Nullable List<String> oneDriveUserList) {
-            this.oneDriveUserList = oneDriveUserList;
+            $.oneDriveUserList = oneDriveUserList;
             return this;
         }
+
         public Builder oneDriveUserList(String... oneDriveUserList) {
             return oneDriveUserList(List.of(oneDriveUserList));
         }
+
         public Builder oneDriveUserS3Path(@Nullable DataSourceS3Path oneDriveUserS3Path) {
-            this.oneDriveUserS3Path = oneDriveUserS3Path;
+            $.oneDriveUserS3Path = oneDriveUserS3Path;
             return this;
-        }        public DataSourceOneDriveUsers build() {
-            return new DataSourceOneDriveUsers(oneDriveUserList, oneDriveUserS3Path);
+        }
+
+        public DataSourceOneDriveUsers build() {
+            return $;
         }
     }
+
 }

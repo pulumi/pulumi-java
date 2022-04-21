@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SecretEnvSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class SecretEnvSourceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="optional")
-      private final @Nullable Output<Boolean> optional;
+    private @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> optional() {
-        return this.optional == null ? Codegen.empty() : this.optional;
+    public Optional<Output<Boolean>> optional() {
+        return Optional.ofNullable(this.optional);
     }
 
-    public SecretEnvSourceArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> optional) {
-        this.name = name;
-        this.optional = optional;
-    }
+    private SecretEnvSourceArgs() {}
 
-    private SecretEnvSourceArgs() {
-        this.name = Codegen.empty();
-        this.optional = Codegen.empty();
+    private SecretEnvSourceArgs(SecretEnvSourceArgs $) {
+        this.name = $.name;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretEnvSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> optional;
+        private SecretEnvSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretEnvSourceArgs();
         }
 
         public Builder(SecretEnvSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.optional = defaults.optional;
+            $ = new SecretEnvSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder optional(@Nullable Output<Boolean> optional) {
-            this.optional = optional;
+            $.optional = optional;
             return this;
         }
-        public Builder optional(@Nullable Boolean optional) {
-            this.optional = Codegen.ofNullable(optional);
-            return this;
-        }        public SecretEnvSourceArgs build() {
-            return new SecretEnvSourceArgs(name, optional);
+
+        public Builder optional(Boolean optional) {
+            return optional(Output.of(optional));
+        }
+
+        public SecretEnvSourceArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public StepArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> properties) {
-        this.kind = kind;
-        this.name = name;
-        this.properties = properties;
-    }
+    private StepArgs() {}
 
-    private StepArgs() {
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
+    private StepArgs(StepArgs $) {
+        this.kind = $.kind;
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> properties;
+        private StepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StepArgs();
         }
 
         public Builder(StepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new StepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public StepArgs build() {
-            return new StepArgs(kind, name, properties);
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
+        }
+
+        public StepArgs build() {
+            return $;
         }
     }
+
 }

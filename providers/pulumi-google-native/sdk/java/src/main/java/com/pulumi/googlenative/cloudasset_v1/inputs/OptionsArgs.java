@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analyzeServiceAccountImpersonation")
-      private final @Nullable Output<Boolean> analyzeServiceAccountImpersonation;
+    private @Nullable Output<Boolean> analyzeServiceAccountImpersonation;
 
-    public Output<Boolean> analyzeServiceAccountImpersonation() {
-        return this.analyzeServiceAccountImpersonation == null ? Codegen.empty() : this.analyzeServiceAccountImpersonation;
+    public Optional<Output<Boolean>> analyzeServiceAccountImpersonation() {
+        return Optional.ofNullable(this.analyzeServiceAccountImpersonation);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expandGroups")
-      private final @Nullable Output<Boolean> expandGroups;
+    private @Nullable Output<Boolean> expandGroups;
 
-    public Output<Boolean> expandGroups() {
-        return this.expandGroups == null ? Codegen.empty() : this.expandGroups;
+    public Optional<Output<Boolean>> expandGroups() {
+        return Optional.ofNullable(this.expandGroups);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expandResources")
-      private final @Nullable Output<Boolean> expandResources;
+    private @Nullable Output<Boolean> expandResources;
 
-    public Output<Boolean> expandResources() {
-        return this.expandResources == null ? Codegen.empty() : this.expandResources;
+    public Optional<Output<Boolean>> expandResources() {
+        return Optional.ofNullable(this.expandResources);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expandRoles")
-      private final @Nullable Output<Boolean> expandRoles;
+    private @Nullable Output<Boolean> expandRoles;
 
-    public Output<Boolean> expandRoles() {
-        return this.expandRoles == null ? Codegen.empty() : this.expandRoles;
+    public Optional<Output<Boolean>> expandRoles() {
+        return Optional.ofNullable(this.expandRoles);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputGroupEdges")
-      private final @Nullable Output<Boolean> outputGroupEdges;
+    private @Nullable Output<Boolean> outputGroupEdges;
 
-    public Output<Boolean> outputGroupEdges() {
-        return this.outputGroupEdges == null ? Codegen.empty() : this.outputGroupEdges;
+    public Optional<Output<Boolean>> outputGroupEdges() {
+        return Optional.ofNullable(this.outputGroupEdges);
     }
 
     /**
@@ -79,115 +79,98 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputResourceEdges")
-      private final @Nullable Output<Boolean> outputResourceEdges;
+    private @Nullable Output<Boolean> outputResourceEdges;
 
-    public Output<Boolean> outputResourceEdges() {
-        return this.outputResourceEdges == null ? Codegen.empty() : this.outputResourceEdges;
+    public Optional<Output<Boolean>> outputResourceEdges() {
+        return Optional.ofNullable(this.outputResourceEdges);
     }
 
-    public OptionsArgs(
-        @Nullable Output<Boolean> analyzeServiceAccountImpersonation,
-        @Nullable Output<Boolean> expandGroups,
-        @Nullable Output<Boolean> expandResources,
-        @Nullable Output<Boolean> expandRoles,
-        @Nullable Output<Boolean> outputGroupEdges,
-        @Nullable Output<Boolean> outputResourceEdges) {
-        this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
-        this.expandGroups = expandGroups;
-        this.expandResources = expandResources;
-        this.expandRoles = expandRoles;
-        this.outputGroupEdges = outputGroupEdges;
-        this.outputResourceEdges = outputResourceEdges;
-    }
+    private OptionsArgs() {}
 
-    private OptionsArgs() {
-        this.analyzeServiceAccountImpersonation = Codegen.empty();
-        this.expandGroups = Codegen.empty();
-        this.expandResources = Codegen.empty();
-        this.expandRoles = Codegen.empty();
-        this.outputGroupEdges = Codegen.empty();
-        this.outputResourceEdges = Codegen.empty();
+    private OptionsArgs(OptionsArgs $) {
+        this.analyzeServiceAccountImpersonation = $.analyzeServiceAccountImpersonation;
+        this.expandGroups = $.expandGroups;
+        this.expandResources = $.expandResources;
+        this.expandRoles = $.expandRoles;
+        this.outputGroupEdges = $.outputGroupEdges;
+        this.outputResourceEdges = $.outputResourceEdges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> analyzeServiceAccountImpersonation;
-        private @Nullable Output<Boolean> expandGroups;
-        private @Nullable Output<Boolean> expandResources;
-        private @Nullable Output<Boolean> expandRoles;
-        private @Nullable Output<Boolean> outputGroupEdges;
-        private @Nullable Output<Boolean> outputResourceEdges;
+        private OptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OptionsArgs();
         }
 
         public Builder(OptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyzeServiceAccountImpersonation = defaults.analyzeServiceAccountImpersonation;
-    	      this.expandGroups = defaults.expandGroups;
-    	      this.expandResources = defaults.expandResources;
-    	      this.expandRoles = defaults.expandRoles;
-    	      this.outputGroupEdges = defaults.outputGroupEdges;
-    	      this.outputResourceEdges = defaults.outputResourceEdges;
+            $ = new OptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analyzeServiceAccountImpersonation(@Nullable Output<Boolean> analyzeServiceAccountImpersonation) {
-            this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
+            $.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
             return this;
         }
-        public Builder analyzeServiceAccountImpersonation(@Nullable Boolean analyzeServiceAccountImpersonation) {
-            this.analyzeServiceAccountImpersonation = Codegen.ofNullable(analyzeServiceAccountImpersonation);
-            return this;
+
+        public Builder analyzeServiceAccountImpersonation(Boolean analyzeServiceAccountImpersonation) {
+            return analyzeServiceAccountImpersonation(Output.of(analyzeServiceAccountImpersonation));
         }
+
         public Builder expandGroups(@Nullable Output<Boolean> expandGroups) {
-            this.expandGroups = expandGroups;
+            $.expandGroups = expandGroups;
             return this;
         }
-        public Builder expandGroups(@Nullable Boolean expandGroups) {
-            this.expandGroups = Codegen.ofNullable(expandGroups);
-            return this;
+
+        public Builder expandGroups(Boolean expandGroups) {
+            return expandGroups(Output.of(expandGroups));
         }
+
         public Builder expandResources(@Nullable Output<Boolean> expandResources) {
-            this.expandResources = expandResources;
+            $.expandResources = expandResources;
             return this;
         }
-        public Builder expandResources(@Nullable Boolean expandResources) {
-            this.expandResources = Codegen.ofNullable(expandResources);
-            return this;
+
+        public Builder expandResources(Boolean expandResources) {
+            return expandResources(Output.of(expandResources));
         }
+
         public Builder expandRoles(@Nullable Output<Boolean> expandRoles) {
-            this.expandRoles = expandRoles;
+            $.expandRoles = expandRoles;
             return this;
         }
-        public Builder expandRoles(@Nullable Boolean expandRoles) {
-            this.expandRoles = Codegen.ofNullable(expandRoles);
-            return this;
+
+        public Builder expandRoles(Boolean expandRoles) {
+            return expandRoles(Output.of(expandRoles));
         }
+
         public Builder outputGroupEdges(@Nullable Output<Boolean> outputGroupEdges) {
-            this.outputGroupEdges = outputGroupEdges;
+            $.outputGroupEdges = outputGroupEdges;
             return this;
         }
-        public Builder outputGroupEdges(@Nullable Boolean outputGroupEdges) {
-            this.outputGroupEdges = Codegen.ofNullable(outputGroupEdges);
-            return this;
+
+        public Builder outputGroupEdges(Boolean outputGroupEdges) {
+            return outputGroupEdges(Output.of(outputGroupEdges));
         }
+
         public Builder outputResourceEdges(@Nullable Output<Boolean> outputResourceEdges) {
-            this.outputResourceEdges = outputResourceEdges;
+            $.outputResourceEdges = outputResourceEdges;
             return this;
         }
-        public Builder outputResourceEdges(@Nullable Boolean outputResourceEdges) {
-            this.outputResourceEdges = Codegen.ofNullable(outputResourceEdges);
-            return this;
-        }        public OptionsArgs build() {
-            return new OptionsArgs(analyzeServiceAccountImpersonation, expandGroups, expandResources, expandRoles, outputGroupEdges, outputResourceEdges);
+
+        public Builder outputResourceEdges(Boolean outputResourceEdges) {
+            return outputResourceEdges(Output.of(outputResourceEdges));
+        }
+
+        public OptionsArgs build() {
+            return $;
         }
     }
+
 }

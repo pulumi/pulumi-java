@@ -24,10 +24,10 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -47,64 +47,58 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      * 
      */
     @Import(name="sizeDisk", required=true)
-      private final String sizeDisk;
+    private String sizeDisk;
 
     public String sizeDisk() {
         return this.sizeDisk;
     }
 
-    public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(
-        @Nullable String description,
-        String kind,
-        String sizeDisk) {
-        this.description = description;
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.sizeDisk = Objects.requireNonNull(sizeDisk, "expected parameter 'sizeDisk' to be non-null");
-    }
+    private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse() {}
 
-    private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse() {
-        this.description = null;
-        this.kind = null;
-        this.sizeDisk = null;
+    private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse $) {
+        this.description = $.description;
+        this.kind = $.kind;
+        this.sizeDisk = $.sizeDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String kind;
-        private String sizeDisk;
+        private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse();
         }
 
         public Builder(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.kind = defaults.kind;
-    	      this.sizeDisk = defaults.sizeDisk;
+            $ = new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder sizeDisk(String sizeDisk) {
-            this.sizeDisk = Objects.requireNonNull(sizeDisk);
+            $.sizeDisk = sizeDisk;
             return this;
-        }        public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse build() {
-            return new ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(description, kind, sizeDisk);
+        }
+
+        public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse build() {
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            $.sizeDisk = Objects.requireNonNull($.sizeDisk, "expected parameter 'sizeDisk' to be non-null");
+            return $;
         }
     }
+
 }

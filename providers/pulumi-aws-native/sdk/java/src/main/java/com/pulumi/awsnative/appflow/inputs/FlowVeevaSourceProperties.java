@@ -16,110 +16,97 @@ public final class FlowVeevaSourceProperties extends com.pulumi.resources.Invoke
     public static final FlowVeevaSourceProperties Empty = new FlowVeevaSourceProperties();
 
     @Import(name="documentType")
-      private final @Nullable String documentType;
+    private @Nullable String documentType;
 
     public Optional<String> documentType() {
-        return this.documentType == null ? Optional.empty() : Optional.ofNullable(this.documentType);
+        return Optional.ofNullable(this.documentType);
     }
 
     @Import(name="includeAllVersions")
-      private final @Nullable Boolean includeAllVersions;
+    private @Nullable Boolean includeAllVersions;
 
     public Optional<Boolean> includeAllVersions() {
-        return this.includeAllVersions == null ? Optional.empty() : Optional.ofNullable(this.includeAllVersions);
+        return Optional.ofNullable(this.includeAllVersions);
     }
 
     @Import(name="includeRenditions")
-      private final @Nullable Boolean includeRenditions;
+    private @Nullable Boolean includeRenditions;
 
     public Optional<Boolean> includeRenditions() {
-        return this.includeRenditions == null ? Optional.empty() : Optional.ofNullable(this.includeRenditions);
+        return Optional.ofNullable(this.includeRenditions);
     }
 
     @Import(name="includeSourceFiles")
-      private final @Nullable Boolean includeSourceFiles;
+    private @Nullable Boolean includeSourceFiles;
 
     public Optional<Boolean> includeSourceFiles() {
-        return this.includeSourceFiles == null ? Optional.empty() : Optional.ofNullable(this.includeSourceFiles);
+        return Optional.ofNullable(this.includeSourceFiles);
     }
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowVeevaSourceProperties(
-        @Nullable String documentType,
-        @Nullable Boolean includeAllVersions,
-        @Nullable Boolean includeRenditions,
-        @Nullable Boolean includeSourceFiles,
-        String object) {
-        this.documentType = documentType;
-        this.includeAllVersions = includeAllVersions;
-        this.includeRenditions = includeRenditions;
-        this.includeSourceFiles = includeSourceFiles;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowVeevaSourceProperties() {}
 
-    private FlowVeevaSourceProperties() {
-        this.documentType = null;
-        this.includeAllVersions = null;
-        this.includeRenditions = null;
-        this.includeSourceFiles = null;
-        this.object = null;
+    private FlowVeevaSourceProperties(FlowVeevaSourceProperties $) {
+        this.documentType = $.documentType;
+        this.includeAllVersions = $.includeAllVersions;
+        this.includeRenditions = $.includeRenditions;
+        this.includeSourceFiles = $.includeSourceFiles;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowVeevaSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String documentType;
-        private @Nullable Boolean includeAllVersions;
-        private @Nullable Boolean includeRenditions;
-        private @Nullable Boolean includeSourceFiles;
-        private String object;
+        private FlowVeevaSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowVeevaSourceProperties();
         }
 
         public Builder(FlowVeevaSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentType = defaults.documentType;
-    	      this.includeAllVersions = defaults.includeAllVersions;
-    	      this.includeRenditions = defaults.includeRenditions;
-    	      this.includeSourceFiles = defaults.includeSourceFiles;
-    	      this.object = defaults.object;
+            $ = new FlowVeevaSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder documentType(@Nullable String documentType) {
-            this.documentType = documentType;
+            $.documentType = documentType;
             return this;
         }
+
         public Builder includeAllVersions(@Nullable Boolean includeAllVersions) {
-            this.includeAllVersions = includeAllVersions;
+            $.includeAllVersions = includeAllVersions;
             return this;
         }
+
         public Builder includeRenditions(@Nullable Boolean includeRenditions) {
-            this.includeRenditions = includeRenditions;
+            $.includeRenditions = includeRenditions;
             return this;
         }
+
         public Builder includeSourceFiles(@Nullable Boolean includeSourceFiles) {
-            this.includeSourceFiles = includeSourceFiles;
+            $.includeSourceFiles = includeSourceFiles;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowVeevaSourceProperties build() {
-            return new FlowVeevaSourceProperties(documentType, includeAllVersions, includeRenditions, includeSourceFiles, object);
+        }
+
+        public FlowVeevaSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

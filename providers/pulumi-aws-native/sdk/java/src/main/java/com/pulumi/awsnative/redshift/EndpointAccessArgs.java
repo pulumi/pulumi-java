@@ -5,10 +5,10 @@ package com.pulumi.awsnative.redshift;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="clusterIdentifier")
-      private final @Nullable Output<String> clusterIdentifier;
+    private @Nullable Output<String> clusterIdentifier;
 
-    public Output<String> clusterIdentifier() {
-        return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
+    public Optional<Output<String>> clusterIdentifier() {
+        return Optional.ofNullable(this.clusterIdentifier);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="endpointName", required=true)
-      private final Output<String> endpointName;
+    private Output<String> endpointName;
 
     public Output<String> endpointName() {
         return this.endpointName;
@@ -43,10 +43,10 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceOwner")
-      private final @Nullable Output<String> resourceOwner;
+    private @Nullable Output<String> resourceOwner;
 
-    public Output<String> resourceOwner() {
-        return this.resourceOwner == null ? Codegen.empty() : this.resourceOwner;
+    public Optional<Output<String>> resourceOwner() {
+        return Optional.ofNullable(this.resourceOwner);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="subnetGroupName")
-      private final @Nullable Output<String> subnetGroupName;
+    private @Nullable Output<String> subnetGroupName;
 
-    public Output<String> subnetGroupName() {
-        return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
+    public Optional<Output<String>> subnetGroupName() {
+        return Optional.ofNullable(this.subnetGroupName);
     }
 
     /**
@@ -65,105 +65,94 @@ public final class EndpointAccessArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="vpcSecurityGroupIds", required=true)
-      private final Output<List<String>> vpcSecurityGroupIds;
+    private Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 
-    public EndpointAccessArgs(
-        @Nullable Output<String> clusterIdentifier,
-        Output<String> endpointName,
-        @Nullable Output<String> resourceOwner,
-        @Nullable Output<String> subnetGroupName,
-        Output<List<String>> vpcSecurityGroupIds) {
-        this.clusterIdentifier = clusterIdentifier;
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.resourceOwner = resourceOwner;
-        this.subnetGroupName = subnetGroupName;
-        this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds, "expected parameter 'vpcSecurityGroupIds' to be non-null");
-    }
+    private EndpointAccessArgs() {}
 
-    private EndpointAccessArgs() {
-        this.clusterIdentifier = Codegen.empty();
-        this.endpointName = Codegen.empty();
-        this.resourceOwner = Codegen.empty();
-        this.subnetGroupName = Codegen.empty();
-        this.vpcSecurityGroupIds = Codegen.empty();
+    private EndpointAccessArgs(EndpointAccessArgs $) {
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.endpointName = $.endpointName;
+        this.resourceOwner = $.resourceOwner;
+        this.subnetGroupName = $.subnetGroupName;
+        this.vpcSecurityGroupIds = $.vpcSecurityGroupIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointAccessArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterIdentifier;
-        private Output<String> endpointName;
-        private @Nullable Output<String> resourceOwner;
-        private @Nullable Output<String> subnetGroupName;
-        private Output<List<String>> vpcSecurityGroupIds;
+        private EndpointAccessArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointAccessArgs();
         }
 
         public Builder(EndpointAccessArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.endpointName = defaults.endpointName;
-    	      this.resourceOwner = defaults.resourceOwner;
-    	      this.subnetGroupName = defaults.subnetGroupName;
-    	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
+            $ = new EndpointAccessArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
-            this.clusterIdentifier = clusterIdentifier;
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
-        public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Codegen.ofNullable(clusterIdentifier);
-            return this;
+
+        public Builder clusterIdentifier(String clusterIdentifier) {
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
+
         public Builder endpointName(Output<String> endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder endpointName(String endpointName) {
-            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
-            return this;
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder resourceOwner(@Nullable Output<String> resourceOwner) {
-            this.resourceOwner = resourceOwner;
+            $.resourceOwner = resourceOwner;
             return this;
         }
-        public Builder resourceOwner(@Nullable String resourceOwner) {
-            this.resourceOwner = Codegen.ofNullable(resourceOwner);
-            return this;
+
+        public Builder resourceOwner(String resourceOwner) {
+            return resourceOwner(Output.of(resourceOwner));
         }
+
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
-            this.subnetGroupName = subnetGroupName;
+            $.subnetGroupName = subnetGroupName;
             return this;
         }
-        public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Codegen.ofNullable(subnetGroupName);
-            return this;
+
+        public Builder subnetGroupName(String subnetGroupName) {
+            return subnetGroupName(Output.of(subnetGroupName));
         }
+
         public Builder vpcSecurityGroupIds(Output<List<String>> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
+            $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
+
         public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Output.of(Objects.requireNonNull(vpcSecurityGroupIds));
-            return this;
+            return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
-        }        public EndpointAccessArgs build() {
-            return new EndpointAccessArgs(clusterIdentifier, endpointName, resourceOwner, subnetGroupName, vpcSecurityGroupIds);
+        }
+
+        public EndpointAccessArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.vpcSecurityGroupIds = Objects.requireNonNull($.vpcSecurityGroupIds, "expected parameter 'vpcSecurityGroupIds' to be non-null");
+            return $;
         }
     }
+
 }

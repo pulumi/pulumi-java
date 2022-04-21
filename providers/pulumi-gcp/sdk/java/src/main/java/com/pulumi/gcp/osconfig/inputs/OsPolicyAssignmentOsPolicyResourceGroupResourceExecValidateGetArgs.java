@@ -5,11 +5,11 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @Import(name="file")
-      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file;
+    private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs>> file() {
+        return Optional.ofNullable(this.file);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @Import(name="interpreter", required=true)
-      private final Output<String> interpreter;
+    private Output<String> interpreter;
 
     public Output<String> interpreter() {
         return this.interpreter;
@@ -55,10 +55,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @Import(name="outputFilePath")
-      private final @Nullable Output<String> outputFilePath;
+    private @Nullable Output<String> outputFilePath;
 
-    public Output<String> outputFilePath() {
-        return this.outputFilePath == null ? Codegen.empty() : this.outputFilePath;
+    public Optional<Output<String>> outputFilePath() {
+        return Optional.ofNullable(this.outputFilePath);
     }
 
     /**
@@ -66,105 +66,93 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
-    public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file,
-        Output<String> interpreter,
-        @Nullable Output<String> outputFilePath,
-        @Nullable Output<String> script) {
-        this.args = args;
-        this.file = file;
-        this.interpreter = Objects.requireNonNull(interpreter, "expected parameter 'interpreter' to be non-null");
-        this.outputFilePath = outputFilePath;
-        this.script = script;
-    }
+    private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs() {}
 
-    private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs() {
-        this.args = Codegen.empty();
-        this.file = Codegen.empty();
-        this.interpreter = Codegen.empty();
-        this.outputFilePath = Codegen.empty();
-        this.script = Codegen.empty();
+    private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs $) {
+        this.args = $.args;
+        this.file = $.file;
+        this.interpreter = $.interpreter;
+        this.outputFilePath = $.outputFilePath;
+        this.script = $.script;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file;
-        private Output<String> interpreter;
-        private @Nullable Output<String> outputFilePath;
-        private @Nullable Output<String> script;
+        private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs();
         }
 
         public Builder(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.file = defaults.file;
-    	      this.interpreter = defaults.interpreter;
-    	      this.outputFilePath = defaults.outputFilePath;
-    	      this.script = defaults.script;
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
+
+        public Builder file(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs file) {
+            return file(Output.of(file));
         }
+
         public Builder interpreter(Output<String> interpreter) {
-            this.interpreter = Objects.requireNonNull(interpreter);
+            $.interpreter = interpreter;
             return this;
         }
+
         public Builder interpreter(String interpreter) {
-            this.interpreter = Output.of(Objects.requireNonNull(interpreter));
-            return this;
+            return interpreter(Output.of(interpreter));
         }
+
         public Builder outputFilePath(@Nullable Output<String> outputFilePath) {
-            this.outputFilePath = outputFilePath;
+            $.outputFilePath = outputFilePath;
             return this;
         }
-        public Builder outputFilePath(@Nullable String outputFilePath) {
-            this.outputFilePath = Codegen.ofNullable(outputFilePath);
-            return this;
+
+        public Builder outputFilePath(String outputFilePath) {
+            return outputFilePath(Output.of(outputFilePath));
         }
+
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
-        }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs build() {
-            return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs(args, file, interpreter, outputFilePath, script);
+
+        public Builder script(String script) {
+            return script(Output.of(script));
+        }
+
+        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs build() {
+            $.interpreter = Objects.requireNonNull($.interpreter, "expected parameter 'interpreter' to be non-null");
+            return $;
         }
     }
+
 }

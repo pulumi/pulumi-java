@@ -17,62 +17,59 @@ public final class ResponsePolicyGKEClusterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="gkeClusterName", required=true)
-      private final String gkeClusterName;
+    private String gkeClusterName;
 
     public String gkeClusterName() {
         return this.gkeClusterName;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public ResponsePolicyGKEClusterResponse(
-        String gkeClusterName,
-        String kind) {
-        this.gkeClusterName = Objects.requireNonNull(gkeClusterName, "expected parameter 'gkeClusterName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private ResponsePolicyGKEClusterResponse() {}
 
-    private ResponsePolicyGKEClusterResponse() {
-        this.gkeClusterName = null;
-        this.kind = null;
+    private ResponsePolicyGKEClusterResponse(ResponsePolicyGKEClusterResponse $) {
+        this.gkeClusterName = $.gkeClusterName;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePolicyGKEClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gkeClusterName;
-        private String kind;
+        private ResponsePolicyGKEClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePolicyGKEClusterResponse();
         }
 
         public Builder(ResponsePolicyGKEClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gkeClusterName = defaults.gkeClusterName;
-    	      this.kind = defaults.kind;
+            $ = new ResponsePolicyGKEClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gkeClusterName(String gkeClusterName) {
-            this.gkeClusterName = Objects.requireNonNull(gkeClusterName);
+            $.gkeClusterName = gkeClusterName;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public ResponsePolicyGKEClusterResponse build() {
-            return new ResponsePolicyGKEClusterResponse(gkeClusterName, kind);
+        }
+
+        public ResponsePolicyGKEClusterResponse build() {
+            $.gkeClusterName = Objects.requireNonNull($.gkeClusterName, "expected parameter 'gkeClusterName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

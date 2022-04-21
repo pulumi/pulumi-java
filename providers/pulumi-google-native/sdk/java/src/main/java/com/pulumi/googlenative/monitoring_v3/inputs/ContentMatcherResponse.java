@@ -21,7 +21,7 @@ public final class ContentMatcherResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -32,55 +32,52 @@ public final class ContentMatcherResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="matcher", required=true)
-      private final String matcher;
+    private String matcher;
 
     public String matcher() {
         return this.matcher;
     }
 
-    public ContentMatcherResponse(
-        String content,
-        String matcher) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.matcher = Objects.requireNonNull(matcher, "expected parameter 'matcher' to be non-null");
-    }
+    private ContentMatcherResponse() {}
 
-    private ContentMatcherResponse() {
-        this.content = null;
-        this.matcher = null;
+    private ContentMatcherResponse(ContentMatcherResponse $) {
+        this.content = $.content;
+        this.matcher = $.matcher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentMatcherResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String content;
-        private String matcher;
+        private ContentMatcherResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentMatcherResponse();
         }
 
         public Builder(ContentMatcherResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.matcher = defaults.matcher;
+            $ = new ContentMatcherResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder matcher(String matcher) {
-            this.matcher = Objects.requireNonNull(matcher);
+            $.matcher = matcher;
             return this;
-        }        public ContentMatcherResponse build() {
-            return new ContentMatcherResponse(content, matcher);
+        }
+
+        public ContentMatcherResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.matcher = Objects.requireNonNull($.matcher, "expected parameter 'matcher' to be non-null");
+            return $;
         }
     }
+
 }

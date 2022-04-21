@@ -23,45 +23,44 @@ public final class MultichannelResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public MultichannelResponse(@Nullable Boolean enabled) {
-        this.enabled = enabled;
-    }
+    private MultichannelResponse() {}
 
-    private MultichannelResponse() {
-        this.enabled = null;
+    private MultichannelResponse(MultichannelResponse $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultichannelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
+        private MultichannelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultichannelResponse();
         }
 
         public Builder(MultichannelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new MultichannelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public MultichannelResponse build() {
-            return new MultichannelResponse(enabled);
+        }
+
+        public MultichannelResponse build() {
+            return $;
         }
     }
+
 }

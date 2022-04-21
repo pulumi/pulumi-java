@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DomainScalingParametersGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="desiredInstanceType")
-      private final @Nullable Output<String> desiredInstanceType;
+    private @Nullable Output<String> desiredInstanceType;
 
-    public Output<String> desiredInstanceType() {
-        return this.desiredInstanceType == null ? Codegen.empty() : this.desiredInstanceType;
+    public Optional<Output<String>> desiredInstanceType() {
+        return Optional.ofNullable(this.desiredInstanceType);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DomainScalingParametersGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="desiredPartitionCount")
-      private final @Nullable Output<Integer> desiredPartitionCount;
+    private @Nullable Output<Integer> desiredPartitionCount;
 
-    public Output<Integer> desiredPartitionCount() {
-        return this.desiredPartitionCount == null ? Codegen.empty() : this.desiredPartitionCount;
+    public Optional<Output<Integer>> desiredPartitionCount() {
+        return Optional.ofNullable(this.desiredPartitionCount);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class DomainScalingParametersGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="desiredReplicationCount")
-      private final @Nullable Output<Integer> desiredReplicationCount;
+    private @Nullable Output<Integer> desiredReplicationCount;
 
-    public Output<Integer> desiredReplicationCount() {
-        return this.desiredReplicationCount == null ? Codegen.empty() : this.desiredReplicationCount;
+    public Optional<Output<Integer>> desiredReplicationCount() {
+        return Optional.ofNullable(this.desiredReplicationCount);
     }
 
-    public DomainScalingParametersGetArgs(
-        @Nullable Output<String> desiredInstanceType,
-        @Nullable Output<Integer> desiredPartitionCount,
-        @Nullable Output<Integer> desiredReplicationCount) {
-        this.desiredInstanceType = desiredInstanceType;
-        this.desiredPartitionCount = desiredPartitionCount;
-        this.desiredReplicationCount = desiredReplicationCount;
-    }
+    private DomainScalingParametersGetArgs() {}
 
-    private DomainScalingParametersGetArgs() {
-        this.desiredInstanceType = Codegen.empty();
-        this.desiredPartitionCount = Codegen.empty();
-        this.desiredReplicationCount = Codegen.empty();
+    private DomainScalingParametersGetArgs(DomainScalingParametersGetArgs $) {
+        this.desiredInstanceType = $.desiredInstanceType;
+        this.desiredPartitionCount = $.desiredPartitionCount;
+        this.desiredReplicationCount = $.desiredReplicationCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainScalingParametersGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> desiredInstanceType;
-        private @Nullable Output<Integer> desiredPartitionCount;
-        private @Nullable Output<Integer> desiredReplicationCount;
+        private DomainScalingParametersGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainScalingParametersGetArgs();
         }
 
         public Builder(DomainScalingParametersGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desiredInstanceType = defaults.desiredInstanceType;
-    	      this.desiredPartitionCount = defaults.desiredPartitionCount;
-    	      this.desiredReplicationCount = defaults.desiredReplicationCount;
+            $ = new DomainScalingParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder desiredInstanceType(@Nullable Output<String> desiredInstanceType) {
-            this.desiredInstanceType = desiredInstanceType;
+            $.desiredInstanceType = desiredInstanceType;
             return this;
         }
-        public Builder desiredInstanceType(@Nullable String desiredInstanceType) {
-            this.desiredInstanceType = Codegen.ofNullable(desiredInstanceType);
-            return this;
+
+        public Builder desiredInstanceType(String desiredInstanceType) {
+            return desiredInstanceType(Output.of(desiredInstanceType));
         }
+
         public Builder desiredPartitionCount(@Nullable Output<Integer> desiredPartitionCount) {
-            this.desiredPartitionCount = desiredPartitionCount;
+            $.desiredPartitionCount = desiredPartitionCount;
             return this;
         }
-        public Builder desiredPartitionCount(@Nullable Integer desiredPartitionCount) {
-            this.desiredPartitionCount = Codegen.ofNullable(desiredPartitionCount);
-            return this;
+
+        public Builder desiredPartitionCount(Integer desiredPartitionCount) {
+            return desiredPartitionCount(Output.of(desiredPartitionCount));
         }
+
         public Builder desiredReplicationCount(@Nullable Output<Integer> desiredReplicationCount) {
-            this.desiredReplicationCount = desiredReplicationCount;
+            $.desiredReplicationCount = desiredReplicationCount;
             return this;
         }
-        public Builder desiredReplicationCount(@Nullable Integer desiredReplicationCount) {
-            this.desiredReplicationCount = Codegen.ofNullable(desiredReplicationCount);
-            return this;
-        }        public DomainScalingParametersGetArgs build() {
-            return new DomainScalingParametersGetArgs(desiredInstanceType, desiredPartitionCount, desiredReplicationCount);
+
+        public Builder desiredReplicationCount(Integer desiredReplicationCount) {
+            return desiredReplicationCount(Output.of(desiredReplicationCount));
+        }
+
+        public DomainScalingParametersGetArgs build() {
+            return $;
         }
     }
+
 }

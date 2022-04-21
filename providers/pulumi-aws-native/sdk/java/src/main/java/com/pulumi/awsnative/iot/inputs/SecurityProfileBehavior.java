@@ -22,10 +22,10 @@ public final class SecurityProfileBehavior extends com.pulumi.resources.InvokeAr
     public static final SecurityProfileBehavior Empty = new SecurityProfileBehavior();
 
     @Import(name="criteria")
-      private final @Nullable SecurityProfileBehaviorCriteria criteria;
+    private @Nullable SecurityProfileBehaviorCriteria criteria;
 
     public Optional<SecurityProfileBehaviorCriteria> criteria() {
-        return this.criteria == null ? Optional.empty() : Optional.ofNullable(this.criteria);
+        return Optional.ofNullable(this.criteria);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class SecurityProfileBehavior extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="metric")
-      private final @Nullable String metric;
+    private @Nullable String metric;
 
     public Optional<String> metric() {
-        return this.metric == null ? Optional.empty() : Optional.ofNullable(this.metric);
+        return Optional.ofNullable(this.metric);
     }
 
     @Import(name="metricDimension")
-      private final @Nullable SecurityProfileMetricDimension metricDimension;
+    private @Nullable SecurityProfileMetricDimension metricDimension;
 
     public Optional<SecurityProfileMetricDimension> metricDimension() {
-        return this.metricDimension == null ? Optional.empty() : Optional.ofNullable(this.metricDimension);
+        return Optional.ofNullable(this.metricDimension);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class SecurityProfileBehavior extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -62,82 +62,69 @@ public final class SecurityProfileBehavior extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="suppressAlerts")
-      private final @Nullable Boolean suppressAlerts;
+    private @Nullable Boolean suppressAlerts;
 
     public Optional<Boolean> suppressAlerts() {
-        return this.suppressAlerts == null ? Optional.empty() : Optional.ofNullable(this.suppressAlerts);
+        return Optional.ofNullable(this.suppressAlerts);
     }
 
-    public SecurityProfileBehavior(
-        @Nullable SecurityProfileBehaviorCriteria criteria,
-        @Nullable String metric,
-        @Nullable SecurityProfileMetricDimension metricDimension,
-        String name,
-        @Nullable Boolean suppressAlerts) {
-        this.criteria = criteria;
-        this.metric = metric;
-        this.metricDimension = metricDimension;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.suppressAlerts = suppressAlerts;
-    }
+    private SecurityProfileBehavior() {}
 
-    private SecurityProfileBehavior() {
-        this.criteria = null;
-        this.metric = null;
-        this.metricDimension = null;
-        this.name = null;
-        this.suppressAlerts = null;
+    private SecurityProfileBehavior(SecurityProfileBehavior $) {
+        this.criteria = $.criteria;
+        this.metric = $.metric;
+        this.metricDimension = $.metricDimension;
+        this.name = $.name;
+        this.suppressAlerts = $.suppressAlerts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileBehavior defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SecurityProfileBehaviorCriteria criteria;
-        private @Nullable String metric;
-        private @Nullable SecurityProfileMetricDimension metricDimension;
-        private String name;
-        private @Nullable Boolean suppressAlerts;
+        private SecurityProfileBehavior $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileBehavior();
         }
 
         public Builder(SecurityProfileBehavior defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.criteria = defaults.criteria;
-    	      this.metric = defaults.metric;
-    	      this.metricDimension = defaults.metricDimension;
-    	      this.name = defaults.name;
-    	      this.suppressAlerts = defaults.suppressAlerts;
+            $ = new SecurityProfileBehavior(Objects.requireNonNull(defaults));
         }
 
         public Builder criteria(@Nullable SecurityProfileBehaviorCriteria criteria) {
-            this.criteria = criteria;
+            $.criteria = criteria;
             return this;
         }
+
         public Builder metric(@Nullable String metric) {
-            this.metric = metric;
+            $.metric = metric;
             return this;
         }
+
         public Builder metricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
-            this.metricDimension = metricDimension;
+            $.metricDimension = metricDimension;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder suppressAlerts(@Nullable Boolean suppressAlerts) {
-            this.suppressAlerts = suppressAlerts;
+            $.suppressAlerts = suppressAlerts;
             return this;
-        }        public SecurityProfileBehavior build() {
-            return new SecurityProfileBehavior(criteria, metric, metricDimension, name, suppressAlerts);
+        }
+
+        public SecurityProfileBehavior build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

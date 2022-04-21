@@ -5,7 +5,6 @@ package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class CertificateProviderInstanceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="pluginInstance", required=true)
-      private final Output<String> pluginInstance;
+    private Output<String> pluginInstance;
 
     public Output<String> pluginInstance() {
         return this.pluginInstance;
     }
 
-    public CertificateProviderInstanceArgs(Output<String> pluginInstance) {
-        this.pluginInstance = Objects.requireNonNull(pluginInstance, "expected parameter 'pluginInstance' to be non-null");
-    }
+    private CertificateProviderInstanceArgs() {}
 
-    private CertificateProviderInstanceArgs() {
-        this.pluginInstance = Codegen.empty();
+    private CertificateProviderInstanceArgs(CertificateProviderInstanceArgs $) {
+        this.pluginInstance = $.pluginInstance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateProviderInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> pluginInstance;
+        private CertificateProviderInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateProviderInstanceArgs();
         }
 
         public Builder(CertificateProviderInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pluginInstance = defaults.pluginInstance;
+            $ = new CertificateProviderInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pluginInstance(Output<String> pluginInstance) {
-            this.pluginInstance = Objects.requireNonNull(pluginInstance);
+            $.pluginInstance = pluginInstance;
             return this;
         }
+
         public Builder pluginInstance(String pluginInstance) {
-            this.pluginInstance = Output.of(Objects.requireNonNull(pluginInstance));
-            return this;
-        }        public CertificateProviderInstanceArgs build() {
-            return new CertificateProviderInstanceArgs(pluginInstance);
+            return pluginInstance(Output.of(pluginInstance));
+        }
+
+        public CertificateProviderInstanceArgs build() {
+            $.pluginInstance = Objects.requireNonNull($.pluginInstance, "expected parameter 'pluginInstance' to be non-null");
+            return $;
         }
     }
+
 }

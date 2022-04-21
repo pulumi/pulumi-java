@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.enums.ResourceGroupResourceType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupId")
-      private final @Nullable Output<String> groupId;
+    private @Nullable Output<String> groupId;
 
-    public Output<String> groupId() {
-        return this.groupId == null ? Codegen.empty() : this.groupId;
+    public Optional<Output<String>> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<ResourceGroupResourceType> resourceType;
+    private @Nullable Output<ResourceGroupResourceType> resourceType;
 
-    public Output<ResourceGroupResourceType> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<ResourceGroupResourceType>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public ResourceGroupArgs(
-        @Nullable Output<String> groupId,
-        @Nullable Output<ResourceGroupResourceType> resourceType) {
-        this.groupId = groupId;
-        this.resourceType = resourceType;
-    }
+    private ResourceGroupArgs() {}
 
-    private ResourceGroupArgs() {
-        this.groupId = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private ResourceGroupArgs(ResourceGroupArgs $) {
+        this.groupId = $.groupId;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupId;
-        private @Nullable Output<ResourceGroupResourceType> resourceType;
+        private ResourceGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGroupArgs();
         }
 
         public Builder(ResourceGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(@Nullable Output<String> groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
-        public Builder groupId(@Nullable String groupId) {
-            this.groupId = Codegen.ofNullable(groupId);
-            return this;
+
+        public Builder groupId(String groupId) {
+            return groupId(Output.of(groupId));
         }
+
         public Builder resourceType(@Nullable Output<ResourceGroupResourceType> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable ResourceGroupResourceType resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
-        }        public ResourceGroupArgs build() {
-            return new ResourceGroupArgs(groupId, resourceType);
+
+        public Builder resourceType(ResourceGroupResourceType resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        public ResourceGroupArgs build() {
+            return $;
         }
     }
+
 }

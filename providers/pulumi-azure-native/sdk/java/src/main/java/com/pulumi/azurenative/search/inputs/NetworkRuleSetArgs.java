@@ -6,9 +6,9 @@ package com.pulumi.azurenative.search.inputs;
 import com.pulumi.azurenative.search.inputs.IpRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ipRules")
-      private final @Nullable Output<List<IpRuleArgs>> ipRules;
+    private @Nullable Output<List<IpRuleArgs>> ipRules;
 
-    public Output<List<IpRuleArgs>> ipRules() {
-        return this.ipRules == null ? Codegen.empty() : this.ipRules;
+    public Optional<Output<List<IpRuleArgs>>> ipRules() {
+        return Optional.ofNullable(this.ipRules);
     }
 
-    public NetworkRuleSetArgs(@Nullable Output<List<IpRuleArgs>> ipRules) {
-        this.ipRules = ipRules;
-    }
+    private NetworkRuleSetArgs() {}
 
-    private NetworkRuleSetArgs() {
-        this.ipRules = Codegen.empty();
+    private NetworkRuleSetArgs(NetworkRuleSetArgs $) {
+        this.ipRules = $.ipRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IpRuleArgs>> ipRules;
+        private NetworkRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleSetArgs();
         }
 
         public Builder(NetworkRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipRules = defaults.ipRules;
+            $ = new NetworkRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipRules(@Nullable Output<List<IpRuleArgs>> ipRules) {
-            this.ipRules = ipRules;
+            $.ipRules = ipRules;
             return this;
         }
-        public Builder ipRules(@Nullable List<IpRuleArgs> ipRules) {
-            this.ipRules = Codegen.ofNullable(ipRules);
-            return this;
+
+        public Builder ipRules(List<IpRuleArgs> ipRules) {
+            return ipRules(Output.of(ipRules));
         }
+
         public Builder ipRules(IpRuleArgs... ipRules) {
             return ipRules(List.of(ipRules));
-        }        public NetworkRuleSetArgs build() {
-            return new NetworkRuleSetArgs(ipRules);
+        }
+
+        public NetworkRuleSetArgs build() {
+            return $;
         }
     }
+
 }

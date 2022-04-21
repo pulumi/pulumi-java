@@ -5,8 +5,8 @@ package com.pulumi.awsnative.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,49 +23,48 @@ public final class ClusterLoggingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="clusterLogging")
-      private final @Nullable Output<ClusterLoggingArgs> clusterLogging;
+    private @Nullable Output<ClusterLoggingArgs> clusterLogging;
 
-    public Output<ClusterLoggingArgs> clusterLogging() {
-        return this.clusterLogging == null ? Codegen.empty() : this.clusterLogging;
+    public Optional<Output<ClusterLoggingArgs>> clusterLogging() {
+        return Optional.ofNullable(this.clusterLogging);
     }
 
-    public ClusterLoggingArgs(@Nullable Output<ClusterLoggingArgs> clusterLogging) {
-        this.clusterLogging = clusterLogging;
-    }
+    private ClusterLoggingArgs() {}
 
-    private ClusterLoggingArgs() {
-        this.clusterLogging = Codegen.empty();
+    private ClusterLoggingArgs(ClusterLoggingArgs $) {
+        this.clusterLogging = $.clusterLogging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterLoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterLoggingArgs> clusterLogging;
+        private ClusterLoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterLoggingArgs();
         }
 
         public Builder(ClusterLoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterLogging = defaults.clusterLogging;
+            $ = new ClusterLoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterLogging(@Nullable Output<ClusterLoggingArgs> clusterLogging) {
-            this.clusterLogging = clusterLogging;
+            $.clusterLogging = clusterLogging;
             return this;
         }
-        public Builder clusterLogging(@Nullable ClusterLoggingArgs clusterLogging) {
-            this.clusterLogging = Codegen.ofNullable(clusterLogging);
-            return this;
-        }        public ClusterLoggingArgs build() {
-            return new ClusterLoggingArgs(clusterLogging);
+
+        public Builder clusterLogging(ClusterLoggingArgs clusterLogging) {
+            return clusterLogging(Output.of(clusterLogging));
+        }
+
+        public ClusterLoggingArgs build() {
+            return $;
         }
     }
+
 }

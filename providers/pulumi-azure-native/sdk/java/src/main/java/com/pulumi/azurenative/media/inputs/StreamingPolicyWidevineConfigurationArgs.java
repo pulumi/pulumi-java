@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class StreamingPolicyWidevineConfigurationArgs extends com.pulumi.r
      * 
      */
     @Import(name="customLicenseAcquisitionUrlTemplate")
-      private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
+    private @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
-    public Output<String> customLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Codegen.empty() : this.customLicenseAcquisitionUrlTemplate;
+    public Optional<Output<String>> customLicenseAcquisitionUrlTemplate() {
+        return Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
     }
 
-    public StreamingPolicyWidevineConfigurationArgs(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
-        this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
-    }
+    private StreamingPolicyWidevineConfigurationArgs() {}
 
-    private StreamingPolicyWidevineConfigurationArgs() {
-        this.customLicenseAcquisitionUrlTemplate = Codegen.empty();
+    private StreamingPolicyWidevineConfigurationArgs(StreamingPolicyWidevineConfigurationArgs $) {
+        this.customLicenseAcquisitionUrlTemplate = $.customLicenseAcquisitionUrlTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyWidevineConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
+        private StreamingPolicyWidevineConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyWidevineConfigurationArgs();
         }
 
         public Builder(StreamingPolicyWidevineConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customLicenseAcquisitionUrlTemplate = defaults.customLicenseAcquisitionUrlTemplate;
+            $ = new StreamingPolicyWidevineConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
+            $.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-        public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = Codegen.ofNullable(customLicenseAcquisitionUrlTemplate);
-            return this;
-        }        public StreamingPolicyWidevineConfigurationArgs build() {
-            return new StreamingPolicyWidevineConfigurationArgs(customLicenseAcquisitionUrlTemplate);
+
+        public Builder customLicenseAcquisitionUrlTemplate(String customLicenseAcquisitionUrlTemplate) {
+            return customLicenseAcquisitionUrlTemplate(Output.of(customLicenseAcquisitionUrlTemplate));
+        }
+
+        public StreamingPolicyWidevineConfigurationArgs build() {
+            return $;
         }
     }
+
 }

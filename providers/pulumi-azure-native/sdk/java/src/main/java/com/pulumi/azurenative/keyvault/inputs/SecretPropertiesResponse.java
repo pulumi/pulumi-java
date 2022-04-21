@@ -24,10 +24,10 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="attributes")
-      private final @Nullable SecretAttributesResponse attributes;
+    private @Nullable SecretAttributesResponse attributes;
 
     public Optional<SecretAttributesResponse> attributes() {
-        return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="contentType")
-      private final @Nullable String contentType;
+    private @Nullable String contentType;
 
     public Optional<String> contentType() {
-        return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="secretUri", required=true)
-      private final String secretUri;
+    private String secretUri;
 
     public String secretUri() {
         return this.secretUri;
@@ -57,7 +57,7 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="secretUriWithVersion", required=true)
-      private final String secretUriWithVersion;
+    private String secretUriWithVersion;
 
     public String secretUriWithVersion() {
         return this.secretUriWithVersion;
@@ -68,82 +68,70 @@ public final class SecretPropertiesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public SecretPropertiesResponse(
-        @Nullable SecretAttributesResponse attributes,
-        @Nullable String contentType,
-        String secretUri,
-        String secretUriWithVersion,
-        @Nullable String value) {
-        this.attributes = attributes;
-        this.contentType = contentType;
-        this.secretUri = Objects.requireNonNull(secretUri, "expected parameter 'secretUri' to be non-null");
-        this.secretUriWithVersion = Objects.requireNonNull(secretUriWithVersion, "expected parameter 'secretUriWithVersion' to be non-null");
-        this.value = value;
-    }
+    private SecretPropertiesResponse() {}
 
-    private SecretPropertiesResponse() {
-        this.attributes = null;
-        this.contentType = null;
-        this.secretUri = null;
-        this.secretUriWithVersion = null;
-        this.value = null;
+    private SecretPropertiesResponse(SecretPropertiesResponse $) {
+        this.attributes = $.attributes;
+        this.contentType = $.contentType;
+        this.secretUri = $.secretUri;
+        this.secretUriWithVersion = $.secretUriWithVersion;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SecretAttributesResponse attributes;
-        private @Nullable String contentType;
-        private String secretUri;
-        private String secretUriWithVersion;
-        private @Nullable String value;
+        private SecretPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretPropertiesResponse();
         }
 
         public Builder(SecretPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.contentType = defaults.contentType;
-    	      this.secretUri = defaults.secretUri;
-    	      this.secretUriWithVersion = defaults.secretUriWithVersion;
-    	      this.value = defaults.value;
+            $ = new SecretPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable SecretAttributesResponse attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
+
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
+
         public Builder secretUri(String secretUri) {
-            this.secretUri = Objects.requireNonNull(secretUri);
+            $.secretUri = secretUri;
             return this;
         }
+
         public Builder secretUriWithVersion(String secretUriWithVersion) {
-            this.secretUriWithVersion = Objects.requireNonNull(secretUriWithVersion);
+            $.secretUriWithVersion = secretUriWithVersion;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public SecretPropertiesResponse build() {
-            return new SecretPropertiesResponse(attributes, contentType, secretUri, secretUriWithVersion, value);
+        }
+
+        public SecretPropertiesResponse build() {
+            $.secretUri = Objects.requireNonNull($.secretUri, "expected parameter 'secretUri' to be non-null");
+            $.secretUriWithVersion = Objects.requireNonNull($.secretUriWithVersion, "expected parameter 'secretUriWithVersion' to be non-null");
+            return $;
         }
     }
+
 }

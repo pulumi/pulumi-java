@@ -7,10 +7,10 @@ import com.pulumi.azurenative.edgeorder.inputs.AddressDetailsArgs;
 import com.pulumi.azurenative.edgeorder.inputs.OrderItemDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="addressDetails", required=true)
-      private final Output<AddressDetailsArgs> addressDetails;
+    private Output<AddressDetailsArgs> addressDetails;
 
     public Output<AddressDetailsArgs> addressDetails() {
         return this.addressDetails;
@@ -34,10 +34,10 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="orderId", required=true)
-      private final Output<String> orderId;
+    private Output<String> orderId;
 
     public Output<String> orderId() {
         return this.orderId;
@@ -56,7 +56,7 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="orderItemDetails", required=true)
-      private final Output<OrderItemDetailsArgs> orderItemDetails;
+    private Output<OrderItemDetailsArgs> orderItemDetails;
 
     public Output<OrderItemDetailsArgs> orderItemDetails() {
         return this.orderItemDetails;
@@ -67,10 +67,10 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="orderItemName")
-      private final @Nullable Output<String> orderItemName;
+    private @Nullable Output<String> orderItemName;
 
-    public Output<String> orderItemName() {
-        return this.orderItemName == null ? Codegen.empty() : this.orderItemName;
+    public Optional<Output<String>> orderItemName() {
+        return Optional.ofNullable(this.orderItemName);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,128 +89,112 @@ public final class OrderItemByNameArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public OrderItemByNameArgs(
-        Output<AddressDetailsArgs> addressDetails,
-        @Nullable Output<String> location,
-        Output<String> orderId,
-        Output<OrderItemDetailsArgs> orderItemDetails,
-        @Nullable Output<String> orderItemName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.addressDetails = Objects.requireNonNull(addressDetails, "expected parameter 'addressDetails' to be non-null");
-        this.location = location;
-        this.orderId = Objects.requireNonNull(orderId, "expected parameter 'orderId' to be non-null");
-        this.orderItemDetails = Objects.requireNonNull(orderItemDetails, "expected parameter 'orderItemDetails' to be non-null");
-        this.orderItemName = orderItemName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private OrderItemByNameArgs() {}
 
-    private OrderItemByNameArgs() {
-        this.addressDetails = Codegen.empty();
-        this.location = Codegen.empty();
-        this.orderId = Codegen.empty();
-        this.orderItemDetails = Codegen.empty();
-        this.orderItemName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private OrderItemByNameArgs(OrderItemByNameArgs $) {
+        this.addressDetails = $.addressDetails;
+        this.location = $.location;
+        this.orderId = $.orderId;
+        this.orderItemDetails = $.orderItemDetails;
+        this.orderItemName = $.orderItemName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrderItemByNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AddressDetailsArgs> addressDetails;
-        private @Nullable Output<String> location;
-        private Output<String> orderId;
-        private Output<OrderItemDetailsArgs> orderItemDetails;
-        private @Nullable Output<String> orderItemName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private OrderItemByNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrderItemByNameArgs();
         }
 
         public Builder(OrderItemByNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressDetails = defaults.addressDetails;
-    	      this.location = defaults.location;
-    	      this.orderId = defaults.orderId;
-    	      this.orderItemDetails = defaults.orderItemDetails;
-    	      this.orderItemName = defaults.orderItemName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new OrderItemByNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressDetails(Output<AddressDetailsArgs> addressDetails) {
-            this.addressDetails = Objects.requireNonNull(addressDetails);
+            $.addressDetails = addressDetails;
             return this;
         }
+
         public Builder addressDetails(AddressDetailsArgs addressDetails) {
-            this.addressDetails = Output.of(Objects.requireNonNull(addressDetails));
-            return this;
+            return addressDetails(Output.of(addressDetails));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder orderId(Output<String> orderId) {
-            this.orderId = Objects.requireNonNull(orderId);
+            $.orderId = orderId;
             return this;
         }
+
         public Builder orderId(String orderId) {
-            this.orderId = Output.of(Objects.requireNonNull(orderId));
-            return this;
+            return orderId(Output.of(orderId));
         }
+
         public Builder orderItemDetails(Output<OrderItemDetailsArgs> orderItemDetails) {
-            this.orderItemDetails = Objects.requireNonNull(orderItemDetails);
+            $.orderItemDetails = orderItemDetails;
             return this;
         }
+
         public Builder orderItemDetails(OrderItemDetailsArgs orderItemDetails) {
-            this.orderItemDetails = Output.of(Objects.requireNonNull(orderItemDetails));
-            return this;
+            return orderItemDetails(Output.of(orderItemDetails));
         }
+
         public Builder orderItemName(@Nullable Output<String> orderItemName) {
-            this.orderItemName = orderItemName;
+            $.orderItemName = orderItemName;
             return this;
         }
-        public Builder orderItemName(@Nullable String orderItemName) {
-            this.orderItemName = Codegen.ofNullable(orderItemName);
-            return this;
+
+        public Builder orderItemName(String orderItemName) {
+            return orderItemName(Output.of(orderItemName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public OrderItemByNameArgs build() {
-            return new OrderItemByNameArgs(addressDetails, location, orderId, orderItemDetails, orderItemName, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public OrderItemByNameArgs build() {
+            $.addressDetails = Objects.requireNonNull($.addressDetails, "expected parameter 'addressDetails' to be non-null");
+            $.orderId = Objects.requireNonNull($.orderId, "expected parameter 'orderId' to be non-null");
+            $.orderItemDetails = Objects.requireNonNull($.orderItemDetails, "expected parameter 'orderItemDetails' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

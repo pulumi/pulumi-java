@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends 
      * 
      */
     @Import(name="allowPlaybackInterruption", required=true)
-      private final Boolean allowPlaybackInterruption;
+    private Boolean allowPlaybackInterruption;
 
     public Boolean allowPlaybackInterruption() {
         return this.allowPlaybackInterruption;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse extends 
      * 
      */
     @Import(name="text", required=true)
-      private final List<String> text;
+    private List<String> text;
 
     public List<String> text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3ResponseMessageTextResponse(
-        Boolean allowPlaybackInterruption,
-        List<String> text) {
-        this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption, "expected parameter 'allowPlaybackInterruption' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3ResponseMessageTextResponse() {}
 
-    private GoogleCloudDialogflowCxV3ResponseMessageTextResponse() {
-        this.allowPlaybackInterruption = null;
-        this.text = List.of();
+    private GoogleCloudDialogflowCxV3ResponseMessageTextResponse(GoogleCloudDialogflowCxV3ResponseMessageTextResponse $) {
+        this.allowPlaybackInterruption = $.allowPlaybackInterruption;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ResponseMessageTextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowPlaybackInterruption;
-        private List<String> text;
+        private GoogleCloudDialogflowCxV3ResponseMessageTextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ResponseMessageTextResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ResponseMessageTextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPlaybackInterruption = defaults.allowPlaybackInterruption;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowCxV3ResponseMessageTextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
-            this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
+            $.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
+
         public Builder text(List<String> text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder text(String... text) {
             return text(List.of(text));
-        }        public GoogleCloudDialogflowCxV3ResponseMessageTextResponse build() {
-            return new GoogleCloudDialogflowCxV3ResponseMessageTextResponse(allowPlaybackInterruption, text);
+        }
+
+        public GoogleCloudDialogflowCxV3ResponseMessageTextResponse build() {
+            $.allowPlaybackInterruption = Objects.requireNonNull($.allowPlaybackInterruption, "expected parameter 'allowPlaybackInterruption' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

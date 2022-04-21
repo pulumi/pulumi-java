@@ -5,11 +5,11 @@ package com.pulumi.azurenative.labservices;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LabAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledRegionSelection")
-      private final @Nullable Output<Boolean> enabledRegionSelection;
+    private @Nullable Output<Boolean> enabledRegionSelection;
 
-    public Output<Boolean> enabledRegionSelection() {
-        return this.enabledRegionSelection == null ? Codegen.empty() : this.enabledRegionSelection;
+    public Optional<Output<Boolean>> enabledRegionSelection() {
+        return Optional.ofNullable(this.enabledRegionSelection);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LabAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labAccountName")
-      private final @Nullable Output<String> labAccountName;
+    private @Nullable Output<String> labAccountName;
 
-    public Output<String> labAccountName() {
-        return this.labAccountName == null ? Codegen.empty() : this.labAccountName;
+    public Optional<Output<String>> labAccountName() {
+        return Optional.ofNullable(this.labAccountName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LabAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class LabAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class LabAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,10 +77,10 @@ public final class LabAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,128 +88,109 @@ public final class LabAccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uniqueIdentifier")
-      private final @Nullable Output<String> uniqueIdentifier;
+    private @Nullable Output<String> uniqueIdentifier;
 
-    public Output<String> uniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
+    public Optional<Output<String>> uniqueIdentifier() {
+        return Optional.ofNullable(this.uniqueIdentifier);
     }
 
-    public LabAccountArgs(
-        @Nullable Output<Boolean> enabledRegionSelection,
-        @Nullable Output<String> labAccountName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> provisioningState,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> uniqueIdentifier) {
-        this.enabledRegionSelection = enabledRegionSelection;
-        this.labAccountName = labAccountName;
-        this.location = location;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.uniqueIdentifier = uniqueIdentifier;
-    }
+    private LabAccountArgs() {}
 
-    private LabAccountArgs() {
-        this.enabledRegionSelection = Codegen.empty();
-        this.labAccountName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.uniqueIdentifier = Codegen.empty();
+    private LabAccountArgs(LabAccountArgs $) {
+        this.enabledRegionSelection = $.enabledRegionSelection;
+        this.labAccountName = $.labAccountName;
+        this.location = $.location;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.uniqueIdentifier = $.uniqueIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabledRegionSelection;
-        private @Nullable Output<String> labAccountName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> provisioningState;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> uniqueIdentifier;
+        private LabAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabAccountArgs();
         }
 
         public Builder(LabAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabledRegionSelection = defaults.enabledRegionSelection;
-    	      this.labAccountName = defaults.labAccountName;
-    	      this.location = defaults.location;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.uniqueIdentifier = defaults.uniqueIdentifier;
+            $ = new LabAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabledRegionSelection(@Nullable Output<Boolean> enabledRegionSelection) {
-            this.enabledRegionSelection = enabledRegionSelection;
+            $.enabledRegionSelection = enabledRegionSelection;
             return this;
         }
-        public Builder enabledRegionSelection(@Nullable Boolean enabledRegionSelection) {
-            this.enabledRegionSelection = Codegen.ofNullable(enabledRegionSelection);
-            return this;
+
+        public Builder enabledRegionSelection(Boolean enabledRegionSelection) {
+            return enabledRegionSelection(Output.of(enabledRegionSelection));
         }
+
         public Builder labAccountName(@Nullable Output<String> labAccountName) {
-            this.labAccountName = labAccountName;
+            $.labAccountName = labAccountName;
             return this;
         }
-        public Builder labAccountName(@Nullable String labAccountName) {
-            this.labAccountName = Codegen.ofNullable(labAccountName);
-            return this;
+
+        public Builder labAccountName(String labAccountName) {
+            return labAccountName(Output.of(labAccountName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
-            this.uniqueIdentifier = uniqueIdentifier;
+            $.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-        public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Codegen.ofNullable(uniqueIdentifier);
-            return this;
-        }        public LabAccountArgs build() {
-            return new LabAccountArgs(enabledRegionSelection, labAccountName, location, provisioningState, resourceGroupName, tags, uniqueIdentifier);
+
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
+            return uniqueIdentifier(Output.of(uniqueIdentifier));
+        }
+
+        public LabAccountArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

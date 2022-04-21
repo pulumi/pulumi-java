@@ -7,9 +7,9 @@ import com.pulumi.awsnative.s3outposts.inputs.BucketFilterAndOperatorArgs;
 import com.pulumi.awsnative.s3outposts.inputs.BucketFilterTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BucketRuleFilterPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="andOperator")
-      private final @Nullable Output<BucketFilterAndOperatorArgs> andOperator;
+    private @Nullable Output<BucketFilterAndOperatorArgs> andOperator;
 
-    public Output<BucketFilterAndOperatorArgs> andOperator() {
-        return this.andOperator == null ? Codegen.empty() : this.andOperator;
+    public Optional<Output<BucketFilterAndOperatorArgs>> andOperator() {
+        return Optional.ofNullable(this.andOperator);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BucketRuleFilterPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class BucketRuleFilterPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<BucketFilterTagArgs> tag;
+    private @Nullable Output<BucketFilterTagArgs> tag;
 
-    public Output<BucketFilterTagArgs> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<BucketFilterTagArgs>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public BucketRuleFilterPropertiesArgs(
-        @Nullable Output<BucketFilterAndOperatorArgs> andOperator,
-        @Nullable Output<String> prefix,
-        @Nullable Output<BucketFilterTagArgs> tag) {
-        this.andOperator = andOperator;
-        this.prefix = prefix;
-        this.tag = tag;
-    }
+    private BucketRuleFilterPropertiesArgs() {}
 
-    private BucketRuleFilterPropertiesArgs() {
-        this.andOperator = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.tag = Codegen.empty();
+    private BucketRuleFilterPropertiesArgs(BucketRuleFilterPropertiesArgs $) {
+        this.andOperator = $.andOperator;
+        this.prefix = $.prefix;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRuleFilterPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketFilterAndOperatorArgs> andOperator;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<BucketFilterTagArgs> tag;
+        private BucketRuleFilterPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRuleFilterPropertiesArgs();
         }
 
         public Builder(BucketRuleFilterPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.andOperator = defaults.andOperator;
-    	      this.prefix = defaults.prefix;
-    	      this.tag = defaults.tag;
+            $ = new BucketRuleFilterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder andOperator(@Nullable Output<BucketFilterAndOperatorArgs> andOperator) {
-            this.andOperator = andOperator;
+            $.andOperator = andOperator;
             return this;
         }
-        public Builder andOperator(@Nullable BucketFilterAndOperatorArgs andOperator) {
-            this.andOperator = Codegen.ofNullable(andOperator);
-            return this;
+
+        public Builder andOperator(BucketFilterAndOperatorArgs andOperator) {
+            return andOperator(Output.of(andOperator));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder tag(@Nullable Output<BucketFilterTagArgs> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable BucketFilterTagArgs tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public BucketRuleFilterPropertiesArgs build() {
-            return new BucketRuleFilterPropertiesArgs(andOperator, prefix, tag);
+
+        public Builder tag(BucketFilterTagArgs tag) {
+            return tag(Output.of(tag));
+        }
+
+        public BucketRuleFilterPropertiesArgs build() {
+            return $;
         }
     }
+
 }

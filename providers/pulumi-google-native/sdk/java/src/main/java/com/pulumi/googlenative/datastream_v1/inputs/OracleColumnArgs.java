@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="column")
-      private final @Nullable Output<String> column;
+    private @Nullable Output<String> column;
 
-    public Output<String> column() {
-        return this.column == null ? Codegen.empty() : this.column;
+    public Optional<Output<String>> column() {
+        return Optional.ofNullable(this.column);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<String> dataType;
+    private @Nullable Output<String> dataType;
 
-    public Output<String> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<String>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<String> encoding;
+    private @Nullable Output<String> encoding;
 
-    public Output<String> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<String>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="length")
-      private final @Nullable Output<Integer> length;
+    private @Nullable Output<Integer> length;
 
-    public Output<Integer> length() {
-        return this.length == null ? Codegen.empty() : this.length;
+    public Optional<Output<Integer>> length() {
+        return Optional.ofNullable(this.length);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nullable")
-      private final @Nullable Output<Boolean> nullable;
+    private @Nullable Output<Boolean> nullable;
 
-    public Output<Boolean> nullable() {
-        return this.nullable == null ? Codegen.empty() : this.nullable;
+    public Optional<Output<Boolean>> nullable() {
+        return Optional.ofNullable(this.nullable);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ordinalPosition")
-      private final @Nullable Output<Integer> ordinalPosition;
+    private @Nullable Output<Integer> ordinalPosition;
 
-    public Output<Integer> ordinalPosition() {
-        return this.ordinalPosition == null ? Codegen.empty() : this.ordinalPosition;
+    public Optional<Output<Integer>> ordinalPosition() {
+        return Optional.ofNullable(this.ordinalPosition);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="precision")
-      private final @Nullable Output<Integer> precision;
+    private @Nullable Output<Integer> precision;
 
-    public Output<Integer> precision() {
-        return this.precision == null ? Codegen.empty() : this.precision;
+    public Optional<Output<Integer>> precision() {
+        return Optional.ofNullable(this.precision);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryKey")
-      private final @Nullable Output<Boolean> primaryKey;
+    private @Nullable Output<Boolean> primaryKey;
 
-    public Output<Boolean> primaryKey() {
-        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
+    public Optional<Output<Boolean>> primaryKey() {
+        return Optional.ofNullable(this.primaryKey);
     }
 
     /**
@@ -114,154 +114,128 @@ public final class OracleColumnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scale")
-      private final @Nullable Output<Integer> scale;
+    private @Nullable Output<Integer> scale;
 
-    public Output<Integer> scale() {
-        return this.scale == null ? Codegen.empty() : this.scale;
+    public Optional<Output<Integer>> scale() {
+        return Optional.ofNullable(this.scale);
     }
 
-    public OracleColumnArgs(
-        @Nullable Output<String> column,
-        @Nullable Output<String> dataType,
-        @Nullable Output<String> encoding,
-        @Nullable Output<Integer> length,
-        @Nullable Output<Boolean> nullable,
-        @Nullable Output<Integer> ordinalPosition,
-        @Nullable Output<Integer> precision,
-        @Nullable Output<Boolean> primaryKey,
-        @Nullable Output<Integer> scale) {
-        this.column = column;
-        this.dataType = dataType;
-        this.encoding = encoding;
-        this.length = length;
-        this.nullable = nullable;
-        this.ordinalPosition = ordinalPosition;
-        this.precision = precision;
-        this.primaryKey = primaryKey;
-        this.scale = scale;
-    }
+    private OracleColumnArgs() {}
 
-    private OracleColumnArgs() {
-        this.column = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.encoding = Codegen.empty();
-        this.length = Codegen.empty();
-        this.nullable = Codegen.empty();
-        this.ordinalPosition = Codegen.empty();
-        this.precision = Codegen.empty();
-        this.primaryKey = Codegen.empty();
-        this.scale = Codegen.empty();
+    private OracleColumnArgs(OracleColumnArgs $) {
+        this.column = $.column;
+        this.dataType = $.dataType;
+        this.encoding = $.encoding;
+        this.length = $.length;
+        this.nullable = $.nullable;
+        this.ordinalPosition = $.ordinalPosition;
+        this.precision = $.precision;
+        this.primaryKey = $.primaryKey;
+        this.scale = $.scale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleColumnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> column;
-        private @Nullable Output<String> dataType;
-        private @Nullable Output<String> encoding;
-        private @Nullable Output<Integer> length;
-        private @Nullable Output<Boolean> nullable;
-        private @Nullable Output<Integer> ordinalPosition;
-        private @Nullable Output<Integer> precision;
-        private @Nullable Output<Boolean> primaryKey;
-        private @Nullable Output<Integer> scale;
+        private OracleColumnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleColumnArgs();
         }
 
         public Builder(OracleColumnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.column = defaults.column;
-    	      this.dataType = defaults.dataType;
-    	      this.encoding = defaults.encoding;
-    	      this.length = defaults.length;
-    	      this.nullable = defaults.nullable;
-    	      this.ordinalPosition = defaults.ordinalPosition;
-    	      this.precision = defaults.precision;
-    	      this.primaryKey = defaults.primaryKey;
-    	      this.scale = defaults.scale;
+            $ = new OracleColumnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder column(@Nullable Output<String> column) {
-            this.column = column;
+            $.column = column;
             return this;
         }
-        public Builder column(@Nullable String column) {
-            this.column = Codegen.ofNullable(column);
-            return this;
+
+        public Builder column(String column) {
+            return column(Output.of(column));
         }
+
         public Builder dataType(@Nullable Output<String> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable String dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(String dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder encoding(@Nullable Output<String> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable String encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder length(@Nullable Output<Integer> length) {
-            this.length = length;
+            $.length = length;
             return this;
         }
-        public Builder length(@Nullable Integer length) {
-            this.length = Codegen.ofNullable(length);
-            return this;
+
+        public Builder length(Integer length) {
+            return length(Output.of(length));
         }
+
         public Builder nullable(@Nullable Output<Boolean> nullable) {
-            this.nullable = nullable;
+            $.nullable = nullable;
             return this;
         }
-        public Builder nullable(@Nullable Boolean nullable) {
-            this.nullable = Codegen.ofNullable(nullable);
-            return this;
+
+        public Builder nullable(Boolean nullable) {
+            return nullable(Output.of(nullable));
         }
+
         public Builder ordinalPosition(@Nullable Output<Integer> ordinalPosition) {
-            this.ordinalPosition = ordinalPosition;
+            $.ordinalPosition = ordinalPosition;
             return this;
         }
-        public Builder ordinalPosition(@Nullable Integer ordinalPosition) {
-            this.ordinalPosition = Codegen.ofNullable(ordinalPosition);
-            return this;
+
+        public Builder ordinalPosition(Integer ordinalPosition) {
+            return ordinalPosition(Output.of(ordinalPosition));
         }
+
         public Builder precision(@Nullable Output<Integer> precision) {
-            this.precision = precision;
+            $.precision = precision;
             return this;
         }
-        public Builder precision(@Nullable Integer precision) {
-            this.precision = Codegen.ofNullable(precision);
-            return this;
+
+        public Builder precision(Integer precision) {
+            return precision(Output.of(precision));
         }
+
         public Builder primaryKey(@Nullable Output<Boolean> primaryKey) {
-            this.primaryKey = primaryKey;
+            $.primaryKey = primaryKey;
             return this;
         }
-        public Builder primaryKey(@Nullable Boolean primaryKey) {
-            this.primaryKey = Codegen.ofNullable(primaryKey);
-            return this;
+
+        public Builder primaryKey(Boolean primaryKey) {
+            return primaryKey(Output.of(primaryKey));
         }
+
         public Builder scale(@Nullable Output<Integer> scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
         }
-        public Builder scale(@Nullable Integer scale) {
-            this.scale = Codegen.ofNullable(scale);
-            return this;
-        }        public OracleColumnArgs build() {
-            return new OracleColumnArgs(column, dataType, encoding, length, nullable, ordinalPosition, precision, primaryKey, scale);
+
+        public Builder scale(Integer scale) {
+            return scale(Output.of(scale));
+        }
+
+        public OracleColumnArgs build() {
+            return $;
         }
     }
+
 }

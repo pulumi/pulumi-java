@@ -6,8 +6,8 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.LoginMode;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class WindowsUserConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="loginMode")
-      private final @Nullable Output<LoginMode> loginMode;
+    private @Nullable Output<LoginMode> loginMode;
 
-    public Output<LoginMode> loginMode() {
-        return this.loginMode == null ? Codegen.empty() : this.loginMode;
+    public Optional<Output<LoginMode>> loginMode() {
+        return Optional.ofNullable(this.loginMode);
     }
 
-    public WindowsUserConfigurationArgs(@Nullable Output<LoginMode> loginMode) {
-        this.loginMode = loginMode;
-    }
+    private WindowsUserConfigurationArgs() {}
 
-    private WindowsUserConfigurationArgs() {
-        this.loginMode = Codegen.empty();
+    private WindowsUserConfigurationArgs(WindowsUserConfigurationArgs $) {
+        this.loginMode = $.loginMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsUserConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LoginMode> loginMode;
+        private WindowsUserConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsUserConfigurationArgs();
         }
 
         public Builder(WindowsUserConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginMode = defaults.loginMode;
+            $ = new WindowsUserConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loginMode(@Nullable Output<LoginMode> loginMode) {
-            this.loginMode = loginMode;
+            $.loginMode = loginMode;
             return this;
         }
-        public Builder loginMode(@Nullable LoginMode loginMode) {
-            this.loginMode = Codegen.ofNullable(loginMode);
-            return this;
-        }        public WindowsUserConfigurationArgs build() {
-            return new WindowsUserConfigurationArgs(loginMode);
+
+        public Builder loginMode(LoginMode loginMode) {
+            return loginMode(Output.of(loginMode));
+        }
+
+        public WindowsUserConfigurationArgs build() {
+            return $;
         }
     }
+
 }

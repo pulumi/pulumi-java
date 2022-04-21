@@ -5,9 +5,9 @@ package com.pulumi.azurenative.certificateregistration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AppServiceCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="keyVaultId")
-      private final @Nullable Output<String> keyVaultId;
+    private @Nullable Output<String> keyVaultId;
 
-    public Output<String> keyVaultId() {
-        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
+    public Optional<Output<String>> keyVaultId() {
+        return Optional.ofNullable(this.keyVaultId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AppServiceCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="keyVaultSecretName")
-      private final @Nullable Output<String> keyVaultSecretName;
+    private @Nullable Output<String> keyVaultSecretName;
 
-    public Output<String> keyVaultSecretName() {
-        return this.keyVaultSecretName == null ? Codegen.empty() : this.keyVaultSecretName;
+    public Optional<Output<String>> keyVaultSecretName() {
+        return Optional.ofNullable(this.keyVaultSecretName);
     }
 
-    public AppServiceCertificateArgs(
-        @Nullable Output<String> keyVaultId,
-        @Nullable Output<String> keyVaultSecretName) {
-        this.keyVaultId = keyVaultId;
-        this.keyVaultSecretName = keyVaultSecretName;
-    }
+    private AppServiceCertificateArgs() {}
 
-    private AppServiceCertificateArgs() {
-        this.keyVaultId = Codegen.empty();
-        this.keyVaultSecretName = Codegen.empty();
+    private AppServiceCertificateArgs(AppServiceCertificateArgs $) {
+        this.keyVaultId = $.keyVaultId;
+        this.keyVaultSecretName = $.keyVaultSecretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppServiceCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyVaultId;
-        private @Nullable Output<String> keyVaultSecretName;
+        private AppServiceCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppServiceCertificateArgs();
         }
 
         public Builder(AppServiceCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.keyVaultSecretName = defaults.keyVaultSecretName;
+            $ = new AppServiceCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
-            this.keyVaultId = keyVaultId;
+            $.keyVaultId = keyVaultId;
             return this;
         }
-        public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Codegen.ofNullable(keyVaultId);
-            return this;
+
+        public Builder keyVaultId(String keyVaultId) {
+            return keyVaultId(Output.of(keyVaultId));
         }
+
         public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
-            this.keyVaultSecretName = keyVaultSecretName;
+            $.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
-        public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
-            this.keyVaultSecretName = Codegen.ofNullable(keyVaultSecretName);
-            return this;
-        }        public AppServiceCertificateArgs build() {
-            return new AppServiceCertificateArgs(keyVaultId, keyVaultSecretName);
+
+        public Builder keyVaultSecretName(String keyVaultSecretName) {
+            return keyVaultSecretName(Output.of(keyVaultSecretName));
+        }
+
+        public AppServiceCertificateArgs build() {
+            return $;
         }
     }
+
 }

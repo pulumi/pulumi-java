@@ -21,45 +21,45 @@ public final class DataCollectionEndpointResponseLogsIngestion extends com.pulum
      * 
      */
     @Import(name="endpoint", required=true)
-      private final String endpoint;
+    private String endpoint;
 
     public String endpoint() {
         return this.endpoint;
     }
 
-    public DataCollectionEndpointResponseLogsIngestion(String endpoint) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-    }
+    private DataCollectionEndpointResponseLogsIngestion() {}
 
-    private DataCollectionEndpointResponseLogsIngestion() {
-        this.endpoint = null;
+    private DataCollectionEndpointResponseLogsIngestion(DataCollectionEndpointResponseLogsIngestion $) {
+        this.endpoint = $.endpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionEndpointResponseLogsIngestion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpoint;
+        private DataCollectionEndpointResponseLogsIngestion $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionEndpointResponseLogsIngestion();
         }
 
         public Builder(DataCollectionEndpointResponseLogsIngestion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
+            $ = new DataCollectionEndpointResponseLogsIngestion(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
-        }        public DataCollectionEndpointResponseLogsIngestion build() {
-            return new DataCollectionEndpointResponseLogsIngestion(endpoint);
+        }
+
+        public DataCollectionEndpointResponseLogsIngestion build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            return $;
         }
     }
+
 }

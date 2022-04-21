@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudcontrol.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,17 +16,17 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
     public static final ResourceState Empty = new ResourceState();
 
     @Import(name="desiredState")
-      private final @Nullable Output<String> desiredState;
+    private @Nullable Output<String> desiredState;
 
-    public Output<String> desiredState() {
-        return this.desiredState == null ? Codegen.empty() : this.desiredState;
+    public Optional<Output<String>> desiredState() {
+        return Optional.ofNullable(this.desiredState);
     }
 
     @Import(name="properties")
-      private final @Nullable Output<String> properties;
+    private @Nullable Output<String> properties;
 
-    public Output<String> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<String> schema;
+    private @Nullable Output<String> schema;
 
-    public Output<String> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<String>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="typeName")
-      private final @Nullable Output<String> typeName;
+    private @Nullable Output<String> typeName;
 
-    public Output<String> typeName() {
-        return this.typeName == null ? Codegen.empty() : this.typeName;
+    public Optional<Output<String>> typeName() {
+        return Optional.ofNullable(this.typeName);
     }
 
     /**
@@ -67,115 +67,98 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="typeVersionId")
-      private final @Nullable Output<String> typeVersionId;
+    private @Nullable Output<String> typeVersionId;
 
-    public Output<String> typeVersionId() {
-        return this.typeVersionId == null ? Codegen.empty() : this.typeVersionId;
+    public Optional<Output<String>> typeVersionId() {
+        return Optional.ofNullable(this.typeVersionId);
     }
 
-    public ResourceState(
-        @Nullable Output<String> desiredState,
-        @Nullable Output<String> properties,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> schema,
-        @Nullable Output<String> typeName,
-        @Nullable Output<String> typeVersionId) {
-        this.desiredState = desiredState;
-        this.properties = properties;
-        this.roleArn = roleArn;
-        this.schema = schema;
-        this.typeName = typeName;
-        this.typeVersionId = typeVersionId;
-    }
+    private ResourceState() {}
 
-    private ResourceState() {
-        this.desiredState = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.typeName = Codegen.empty();
-        this.typeVersionId = Codegen.empty();
+    private ResourceState(ResourceState $) {
+        this.desiredState = $.desiredState;
+        this.properties = $.properties;
+        this.roleArn = $.roleArn;
+        this.schema = $.schema;
+        this.typeName = $.typeName;
+        this.typeVersionId = $.typeVersionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> desiredState;
-        private @Nullable Output<String> properties;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> schema;
-        private @Nullable Output<String> typeName;
-        private @Nullable Output<String> typeVersionId;
+        private ResourceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceState();
         }
 
         public Builder(ResourceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desiredState = defaults.desiredState;
-    	      this.properties = defaults.properties;
-    	      this.roleArn = defaults.roleArn;
-    	      this.schema = defaults.schema;
-    	      this.typeName = defaults.typeName;
-    	      this.typeVersionId = defaults.typeVersionId;
+            $ = new ResourceState(Objects.requireNonNull(defaults));
         }
 
         public Builder desiredState(@Nullable Output<String> desiredState) {
-            this.desiredState = desiredState;
+            $.desiredState = desiredState;
             return this;
         }
-        public Builder desiredState(@Nullable String desiredState) {
-            this.desiredState = Codegen.ofNullable(desiredState);
-            return this;
+
+        public Builder desiredState(String desiredState) {
+            return desiredState(Output.of(desiredState));
         }
+
         public Builder properties(@Nullable Output<String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable String properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(String properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder schema(@Nullable Output<String> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable String schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(String schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder typeName(@Nullable Output<String> typeName) {
-            this.typeName = typeName;
+            $.typeName = typeName;
             return this;
         }
-        public Builder typeName(@Nullable String typeName) {
-            this.typeName = Codegen.ofNullable(typeName);
-            return this;
+
+        public Builder typeName(String typeName) {
+            return typeName(Output.of(typeName));
         }
+
         public Builder typeVersionId(@Nullable Output<String> typeVersionId) {
-            this.typeVersionId = typeVersionId;
+            $.typeVersionId = typeVersionId;
             return this;
         }
-        public Builder typeVersionId(@Nullable String typeVersionId) {
-            this.typeVersionId = Codegen.ofNullable(typeVersionId);
-            return this;
-        }        public ResourceState build() {
-            return new ResourceState(desiredState, properties, roleArn, schema, typeName, typeVersionId);
+
+        public Builder typeVersionId(String typeVersionId) {
+            return typeVersionId(Output.of(typeVersionId));
+        }
+
+        public ResourceState build() {
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.googlenative.gameservices_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gameservices_v1.inputs.FleetConfigArgs;
 import com.pulumi.googlenative.gameservices_v1.inputs.ScalingConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConfigArgs Empty = new ConfigArgs();
 
     @Import(name="configId", required=true)
-      private final Output<String> configId;
+    private Output<String> configId;
 
     public Output<String> configId() {
         return this.configId;
@@ -31,10 +31,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,14 +42,14 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleetConfigs")
-      private final @Nullable Output<List<FleetConfigArgs>> fleetConfigs;
+    private @Nullable Output<List<FleetConfigArgs>> fleetConfigs;
 
-    public Output<List<FleetConfigArgs>> fleetConfigs() {
-        return this.fleetConfigs == null ? Codegen.empty() : this.fleetConfigs;
+    public Optional<Output<List<FleetConfigArgs>>> fleetConfigs() {
+        return Optional.ofNullable(this.fleetConfigs);
     }
 
     @Import(name="gameServerDeploymentId", required=true)
-      private final Output<String> gameServerDeploymentId;
+    private Output<String> gameServerDeploymentId;
 
     public Output<String> gameServerDeploymentId() {
         return this.gameServerDeploymentId;
@@ -60,17 +60,17 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -78,17 +78,17 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -96,160 +96,138 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalingConfigs")
-      private final @Nullable Output<List<ScalingConfigArgs>> scalingConfigs;
+    private @Nullable Output<List<ScalingConfigArgs>> scalingConfigs;
 
-    public Output<List<ScalingConfigArgs>> scalingConfigs() {
-        return this.scalingConfigs == null ? Codegen.empty() : this.scalingConfigs;
+    public Optional<Output<List<ScalingConfigArgs>>> scalingConfigs() {
+        return Optional.ofNullable(this.scalingConfigs);
     }
 
-    public ConfigArgs(
-        Output<String> configId,
-        @Nullable Output<String> description,
-        @Nullable Output<List<FleetConfigArgs>> fleetConfigs,
-        Output<String> gameServerDeploymentId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<ScalingConfigArgs>> scalingConfigs) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.description = description;
-        this.fleetConfigs = fleetConfigs;
-        this.gameServerDeploymentId = Objects.requireNonNull(gameServerDeploymentId, "expected parameter 'gameServerDeploymentId' to be non-null");
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.scalingConfigs = scalingConfigs;
-    }
+    private ConfigArgs() {}
 
-    private ConfigArgs() {
-        this.configId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fleetConfigs = Codegen.empty();
-        this.gameServerDeploymentId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.scalingConfigs = Codegen.empty();
+    private ConfigArgs(ConfigArgs $) {
+        this.configId = $.configId;
+        this.description = $.description;
+        this.fleetConfigs = $.fleetConfigs;
+        this.gameServerDeploymentId = $.gameServerDeploymentId;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.scalingConfigs = $.scalingConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<FleetConfigArgs>> fleetConfigs;
-        private Output<String> gameServerDeploymentId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<ScalingConfigArgs>> scalingConfigs;
+        private ConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigArgs();
         }
 
         public Builder(ConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.description = defaults.description;
-    	      this.fleetConfigs = defaults.fleetConfigs;
-    	      this.gameServerDeploymentId = defaults.gameServerDeploymentId;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.scalingConfigs = defaults.scalingConfigs;
+            $ = new ConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(Output<String> configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder configId(String configId) {
-            this.configId = Output.of(Objects.requireNonNull(configId));
-            return this;
+            return configId(Output.of(configId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fleetConfigs(@Nullable Output<List<FleetConfigArgs>> fleetConfigs) {
-            this.fleetConfigs = fleetConfigs;
+            $.fleetConfigs = fleetConfigs;
             return this;
         }
-        public Builder fleetConfigs(@Nullable List<FleetConfigArgs> fleetConfigs) {
-            this.fleetConfigs = Codegen.ofNullable(fleetConfigs);
-            return this;
+
+        public Builder fleetConfigs(List<FleetConfigArgs> fleetConfigs) {
+            return fleetConfigs(Output.of(fleetConfigs));
         }
+
         public Builder fleetConfigs(FleetConfigArgs... fleetConfigs) {
             return fleetConfigs(List.of(fleetConfigs));
         }
+
         public Builder gameServerDeploymentId(Output<String> gameServerDeploymentId) {
-            this.gameServerDeploymentId = Objects.requireNonNull(gameServerDeploymentId);
+            $.gameServerDeploymentId = gameServerDeploymentId;
             return this;
         }
+
         public Builder gameServerDeploymentId(String gameServerDeploymentId) {
-            this.gameServerDeploymentId = Output.of(Objects.requireNonNull(gameServerDeploymentId));
-            return this;
+            return gameServerDeploymentId(Output.of(gameServerDeploymentId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder scalingConfigs(@Nullable Output<List<ScalingConfigArgs>> scalingConfigs) {
-            this.scalingConfigs = scalingConfigs;
+            $.scalingConfigs = scalingConfigs;
             return this;
         }
-        public Builder scalingConfigs(@Nullable List<ScalingConfigArgs> scalingConfigs) {
-            this.scalingConfigs = Codegen.ofNullable(scalingConfigs);
-            return this;
+
+        public Builder scalingConfigs(List<ScalingConfigArgs> scalingConfigs) {
+            return scalingConfigs(Output.of(scalingConfigs));
         }
+
         public Builder scalingConfigs(ScalingConfigArgs... scalingConfigs) {
             return scalingConfigs(List.of(scalingConfigs));
-        }        public ConfigArgs build() {
-            return new ConfigArgs(configId, description, fleetConfigs, gameServerDeploymentId, labels, location, name, project, scalingConfigs);
+        }
+
+        public ConfigArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            $.gameServerDeploymentId = Objects.requireNonNull($.gameServerDeploymentId, "expected parameter 'gameServerDeploymentId' to be non-null");
+            return $;
         }
     }
+
 }

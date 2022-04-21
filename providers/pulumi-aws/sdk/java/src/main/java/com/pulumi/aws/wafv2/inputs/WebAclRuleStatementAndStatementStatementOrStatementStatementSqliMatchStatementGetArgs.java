@@ -7,9 +7,9 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementOrSta
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementS
      * 
      */
     @Import(name="fieldToMatch")
-      private final @Nullable Output<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch;
+    private @Nullable Output<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch() {
-        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
+    public Optional<Output<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchGetArgs>> fieldToMatch() {
+        return Optional.ofNullable(this.fieldToMatch);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementS
      * 
      */
     @Import(name="textTransformations", required=true)
-      private final Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations;
+    private Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations;
 
     public Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 
-    public WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs(
-        @Nullable Output<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch,
-        Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations) {
-        this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs() {}
 
-    private WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.textTransformations = Codegen.empty();
+    private WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs(WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch;
-        private Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations;
+        private WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs();
         }
 
         public Builder(WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(@Nullable Output<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchGetArgs> fieldToMatch) {
-            this.fieldToMatch = fieldToMatch;
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
-        public Builder fieldToMatch(@Nullable WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
-            return this;
+
+        public Builder fieldToMatch(WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchGetArgs fieldToMatch) {
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder textTransformations(Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs>> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(List<WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs> textTransformations) {
-            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
-            return this;
+            return textTransformations(Output.of(textTransformations));
         }
+
         public Builder textTransformations(WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementTextTransformationGetArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs build() {
-            return new WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs(fieldToMatch, textTransformations);
+        }
+
+        public WebAclRuleStatementAndStatementStatementOrStatementStatementSqliMatchStatementGetArgs build() {
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

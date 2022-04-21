@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DatasetCreateRequestTimeSeriesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="coarseGrainTimestamp")
-      private final @Nullable Output<String> coarseGrainTimestamp;
+    private @Nullable Output<String> coarseGrainTimestamp;
 
-    public Output<String> coarseGrainTimestamp() {
-        return this.coarseGrainTimestamp == null ? Codegen.empty() : this.coarseGrainTimestamp;
+    public Optional<Output<String>> coarseGrainTimestamp() {
+        return Optional.ofNullable(this.coarseGrainTimestamp);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DatasetCreateRequestTimeSeriesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="fineGrainTimestamp")
-      private final @Nullable Output<String> fineGrainTimestamp;
+    private @Nullable Output<String> fineGrainTimestamp;
 
-    public Output<String> fineGrainTimestamp() {
-        return this.fineGrainTimestamp == null ? Codegen.empty() : this.fineGrainTimestamp;
+    public Optional<Output<String>> fineGrainTimestamp() {
+        return Optional.ofNullable(this.fineGrainTimestamp);
     }
 
-    public DatasetCreateRequestTimeSeriesArgs(
-        @Nullable Output<String> coarseGrainTimestamp,
-        @Nullable Output<String> fineGrainTimestamp) {
-        this.coarseGrainTimestamp = coarseGrainTimestamp;
-        this.fineGrainTimestamp = fineGrainTimestamp;
-    }
+    private DatasetCreateRequestTimeSeriesArgs() {}
 
-    private DatasetCreateRequestTimeSeriesArgs() {
-        this.coarseGrainTimestamp = Codegen.empty();
-        this.fineGrainTimestamp = Codegen.empty();
+    private DatasetCreateRequestTimeSeriesArgs(DatasetCreateRequestTimeSeriesArgs $) {
+        this.coarseGrainTimestamp = $.coarseGrainTimestamp;
+        this.fineGrainTimestamp = $.fineGrainTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetCreateRequestTimeSeriesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> coarseGrainTimestamp;
-        private @Nullable Output<String> fineGrainTimestamp;
+        private DatasetCreateRequestTimeSeriesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetCreateRequestTimeSeriesArgs();
         }
 
         public Builder(DatasetCreateRequestTimeSeriesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coarseGrainTimestamp = defaults.coarseGrainTimestamp;
-    	      this.fineGrainTimestamp = defaults.fineGrainTimestamp;
+            $ = new DatasetCreateRequestTimeSeriesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder coarseGrainTimestamp(@Nullable Output<String> coarseGrainTimestamp) {
-            this.coarseGrainTimestamp = coarseGrainTimestamp;
+            $.coarseGrainTimestamp = coarseGrainTimestamp;
             return this;
         }
-        public Builder coarseGrainTimestamp(@Nullable String coarseGrainTimestamp) {
-            this.coarseGrainTimestamp = Codegen.ofNullable(coarseGrainTimestamp);
-            return this;
+
+        public Builder coarseGrainTimestamp(String coarseGrainTimestamp) {
+            return coarseGrainTimestamp(Output.of(coarseGrainTimestamp));
         }
+
         public Builder fineGrainTimestamp(@Nullable Output<String> fineGrainTimestamp) {
-            this.fineGrainTimestamp = fineGrainTimestamp;
+            $.fineGrainTimestamp = fineGrainTimestamp;
             return this;
         }
-        public Builder fineGrainTimestamp(@Nullable String fineGrainTimestamp) {
-            this.fineGrainTimestamp = Codegen.ofNullable(fineGrainTimestamp);
-            return this;
-        }        public DatasetCreateRequestTimeSeriesArgs build() {
-            return new DatasetCreateRequestTimeSeriesArgs(coarseGrainTimestamp, fineGrainTimestamp);
+
+        public Builder fineGrainTimestamp(String fineGrainTimestamp) {
+            return fineGrainTimestamp(Output.of(fineGrainTimestamp));
+        }
+
+        public DatasetCreateRequestTimeSeriesArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,94 +15,86 @@ public final class GetProviderArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetProviderArgs Empty = new GetProviderArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="providerId", required=true)
-      private final String providerId;
+    private String providerId;
 
     public String providerId() {
         return this.providerId;
     }
 
     @Import(name="workloadIdentityPoolId", required=true)
-      private final String workloadIdentityPoolId;
+    private String workloadIdentityPoolId;
 
     public String workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 
-    public GetProviderArgs(
-        String location,
-        @Nullable String project,
-        String providerId,
-        String workloadIdentityPoolId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.providerId = Objects.requireNonNull(providerId, "expected parameter 'providerId' to be non-null");
-        this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
-    }
+    private GetProviderArgs() {}
 
-    private GetProviderArgs() {
-        this.location = null;
-        this.project = null;
-        this.providerId = null;
-        this.workloadIdentityPoolId = null;
+    private GetProviderArgs(GetProviderArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.providerId = $.providerId;
+        this.workloadIdentityPoolId = $.workloadIdentityPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String providerId;
-        private String workloadIdentityPoolId;
+        private GetProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProviderArgs();
         }
 
         public Builder(GetProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.providerId = defaults.providerId;
-    	      this.workloadIdentityPoolId = defaults.workloadIdentityPoolId;
+            $ = new GetProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder providerId(String providerId) {
-            this.providerId = Objects.requireNonNull(providerId);
+            $.providerId = providerId;
             return this;
         }
+
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
+            $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
-        }        public GetProviderArgs build() {
-            return new GetProviderArgs(location, project, providerId, workloadIdentityPoolId);
+        }
+
+        public GetProviderArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.providerId = Objects.requireNonNull($.providerId, "expected parameter 'providerId' to be non-null");
+            $.workloadIdentityPoolId = Objects.requireNonNull($.workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
+            return $;
         }
     }
+
 }

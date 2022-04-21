@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.HintArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hint")
-      private final @Nullable Output<HintArgs> hint;
+    private @Nullable Output<HintArgs> hint;
 
-    public Output<HintArgs> hint() {
-        return this.hint == null ? Codegen.empty() : this.hint;
+    public Optional<Output<HintArgs>> hint() {
+        return Optional.ofNullable(this.hint);
     }
 
-    public AuthorityArgs(@Nullable Output<HintArgs> hint) {
-        this.hint = hint;
-    }
+    private AuthorityArgs() {}
 
-    private AuthorityArgs() {
-        this.hint = Codegen.empty();
+    private AuthorityArgs(AuthorityArgs $) {
+        this.hint = $.hint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HintArgs> hint;
+        private AuthorityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityArgs();
         }
 
         public Builder(AuthorityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hint = defaults.hint;
+            $ = new AuthorityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hint(@Nullable Output<HintArgs> hint) {
-            this.hint = hint;
+            $.hint = hint;
             return this;
         }
-        public Builder hint(@Nullable HintArgs hint) {
-            this.hint = Codegen.ofNullable(hint);
-            return this;
-        }        public AuthorityArgs build() {
-            return new AuthorityArgs(hint);
+
+        public Builder hint(HintArgs hint) {
+            return hint(Output.of(hint));
+        }
+
+        public AuthorityArgs build() {
+            return $;
         }
     }
+
 }

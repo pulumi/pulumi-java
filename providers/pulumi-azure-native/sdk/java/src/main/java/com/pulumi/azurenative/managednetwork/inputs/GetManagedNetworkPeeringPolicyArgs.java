@@ -17,7 +17,7 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="managedNetworkName", required=true)
-      private final String managedNetworkName;
+    private String managedNetworkName;
 
     public String managedNetworkName() {
         return this.managedNetworkName;
@@ -28,7 +28,7 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="managedNetworkPeeringPolicyName", required=true)
-      private final String managedNetworkPeeringPolicyName;
+    private String managedNetworkPeeringPolicyName;
 
     public String managedNetworkPeeringPolicyName() {
         return this.managedNetworkPeeringPolicyName;
@@ -39,64 +39,59 @@ public final class GetManagedNetworkPeeringPolicyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagedNetworkPeeringPolicyArgs(
-        String managedNetworkName,
-        String managedNetworkPeeringPolicyName,
-        String resourceGroupName) {
-        this.managedNetworkName = Objects.requireNonNull(managedNetworkName, "expected parameter 'managedNetworkName' to be non-null");
-        this.managedNetworkPeeringPolicyName = Objects.requireNonNull(managedNetworkPeeringPolicyName, "expected parameter 'managedNetworkPeeringPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagedNetworkPeeringPolicyArgs() {}
 
-    private GetManagedNetworkPeeringPolicyArgs() {
-        this.managedNetworkName = null;
-        this.managedNetworkPeeringPolicyName = null;
-        this.resourceGroupName = null;
+    private GetManagedNetworkPeeringPolicyArgs(GetManagedNetworkPeeringPolicyArgs $) {
+        this.managedNetworkName = $.managedNetworkName;
+        this.managedNetworkPeeringPolicyName = $.managedNetworkPeeringPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedNetworkPeeringPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managedNetworkName;
-        private String managedNetworkPeeringPolicyName;
-        private String resourceGroupName;
+        private GetManagedNetworkPeeringPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedNetworkPeeringPolicyArgs();
         }
 
         public Builder(GetManagedNetworkPeeringPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedNetworkName = defaults.managedNetworkName;
-    	      this.managedNetworkPeeringPolicyName = defaults.managedNetworkPeeringPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagedNetworkPeeringPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedNetworkName(String managedNetworkName) {
-            this.managedNetworkName = Objects.requireNonNull(managedNetworkName);
+            $.managedNetworkName = managedNetworkName;
             return this;
         }
+
         public Builder managedNetworkPeeringPolicyName(String managedNetworkPeeringPolicyName) {
-            this.managedNetworkPeeringPolicyName = Objects.requireNonNull(managedNetworkPeeringPolicyName);
+            $.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagedNetworkPeeringPolicyArgs build() {
-            return new GetManagedNetworkPeeringPolicyArgs(managedNetworkName, managedNetworkPeeringPolicyName, resourceGroupName);
+        }
+
+        public GetManagedNetworkPeeringPolicyArgs build() {
+            $.managedNetworkName = Objects.requireNonNull($.managedNetworkName, "expected parameter 'managedNetworkName' to be non-null");
+            $.managedNetworkPeeringPolicyName = Objects.requireNonNull($.managedNetworkPeeringPolicyName, "expected parameter 'managedNetworkPeeringPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

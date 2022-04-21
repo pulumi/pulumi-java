@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends c
      * 
      */
     @Import(name="enableTextToSpeech", required=true)
-      private final Boolean enableTextToSpeech;
+    private Boolean enableTextToSpeech;
 
     public Boolean enableTextToSpeech() {
         return this.enableTextToSpeech;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends c
      * 
      */
     @Import(name="outputAudioEncoding", required=true)
-      private final String outputAudioEncoding;
+    private String outputAudioEncoding;
 
     public String outputAudioEncoding() {
         return this.outputAudioEncoding;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends c
      * 
      */
     @Import(name="sampleRateHertz", required=true)
-      private final Integer sampleRateHertz;
+    private Integer sampleRateHertz;
 
     public Integer sampleRateHertz() {
         return this.sampleRateHertz;
@@ -57,73 +57,66 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends c
      * 
      */
     @Import(name="synthesizeSpeechConfigs", required=true)
-      private final Map<String,String> synthesizeSpeechConfigs;
+    private Map<String,String> synthesizeSpeechConfigs;
 
     public Map<String,String> synthesizeSpeechConfigs() {
         return this.synthesizeSpeechConfigs;
     }
 
-    public GoogleCloudDialogflowV2TextToSpeechSettingsResponse(
-        Boolean enableTextToSpeech,
-        String outputAudioEncoding,
-        Integer sampleRateHertz,
-        Map<String,String> synthesizeSpeechConfigs) {
-        this.enableTextToSpeech = Objects.requireNonNull(enableTextToSpeech, "expected parameter 'enableTextToSpeech' to be non-null");
-        this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding, "expected parameter 'outputAudioEncoding' to be non-null");
-        this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz, "expected parameter 'sampleRateHertz' to be non-null");
-        this.synthesizeSpeechConfigs = Objects.requireNonNull(synthesizeSpeechConfigs, "expected parameter 'synthesizeSpeechConfigs' to be non-null");
-    }
+    private GoogleCloudDialogflowV2TextToSpeechSettingsResponse() {}
 
-    private GoogleCloudDialogflowV2TextToSpeechSettingsResponse() {
-        this.enableTextToSpeech = null;
-        this.outputAudioEncoding = null;
-        this.sampleRateHertz = null;
-        this.synthesizeSpeechConfigs = Map.of();
+    private GoogleCloudDialogflowV2TextToSpeechSettingsResponse(GoogleCloudDialogflowV2TextToSpeechSettingsResponse $) {
+        this.enableTextToSpeech = $.enableTextToSpeech;
+        this.outputAudioEncoding = $.outputAudioEncoding;
+        this.sampleRateHertz = $.sampleRateHertz;
+        this.synthesizeSpeechConfigs = $.synthesizeSpeechConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2TextToSpeechSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableTextToSpeech;
-        private String outputAudioEncoding;
-        private Integer sampleRateHertz;
-        private Map<String,String> synthesizeSpeechConfigs;
+        private GoogleCloudDialogflowV2TextToSpeechSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2TextToSpeechSettingsResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2TextToSpeechSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableTextToSpeech = defaults.enableTextToSpeech;
-    	      this.outputAudioEncoding = defaults.outputAudioEncoding;
-    	      this.sampleRateHertz = defaults.sampleRateHertz;
-    	      this.synthesizeSpeechConfigs = defaults.synthesizeSpeechConfigs;
+            $ = new GoogleCloudDialogflowV2TextToSpeechSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableTextToSpeech(Boolean enableTextToSpeech) {
-            this.enableTextToSpeech = Objects.requireNonNull(enableTextToSpeech);
+            $.enableTextToSpeech = enableTextToSpeech;
             return this;
         }
+
         public Builder outputAudioEncoding(String outputAudioEncoding) {
-            this.outputAudioEncoding = Objects.requireNonNull(outputAudioEncoding);
+            $.outputAudioEncoding = outputAudioEncoding;
             return this;
         }
+
         public Builder sampleRateHertz(Integer sampleRateHertz) {
-            this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
+            $.sampleRateHertz = sampleRateHertz;
             return this;
         }
+
         public Builder synthesizeSpeechConfigs(Map<String,String> synthesizeSpeechConfigs) {
-            this.synthesizeSpeechConfigs = Objects.requireNonNull(synthesizeSpeechConfigs);
+            $.synthesizeSpeechConfigs = synthesizeSpeechConfigs;
             return this;
-        }        public GoogleCloudDialogflowV2TextToSpeechSettingsResponse build() {
-            return new GoogleCloudDialogflowV2TextToSpeechSettingsResponse(enableTextToSpeech, outputAudioEncoding, sampleRateHertz, synthesizeSpeechConfigs);
+        }
+
+        public GoogleCloudDialogflowV2TextToSpeechSettingsResponse build() {
+            $.enableTextToSpeech = Objects.requireNonNull($.enableTextToSpeech, "expected parameter 'enableTextToSpeech' to be non-null");
+            $.outputAudioEncoding = Objects.requireNonNull($.outputAudioEncoding, "expected parameter 'outputAudioEncoding' to be non-null");
+            $.sampleRateHertz = Objects.requireNonNull($.sampleRateHertz, "expected parameter 'sampleRateHertz' to be non-null");
+            $.synthesizeSpeechConfigs = Objects.requireNonNull($.synthesizeSpeechConfigs, "expected parameter 'synthesizeSpeechConfigs' to be non-null");
+            return $;
         }
     }
+
 }

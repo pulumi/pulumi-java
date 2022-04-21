@@ -17,7 +17,7 @@ public final class GetNamedValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namedValueId", required=true)
-      private final String namedValueId;
+    private String namedValueId;
 
     public String namedValueId() {
         return this.namedValueId;
@@ -28,7 +28,7 @@ public final class GetNamedValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetNamedValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetNamedValueArgs(
-        String namedValueId,
-        String resourceGroupName,
-        String serviceName) {
-        this.namedValueId = Objects.requireNonNull(namedValueId, "expected parameter 'namedValueId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetNamedValueArgs() {}
 
-    private GetNamedValueArgs() {
-        this.namedValueId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetNamedValueArgs(GetNamedValueArgs $) {
+        this.namedValueId = $.namedValueId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNamedValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namedValueId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetNamedValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNamedValueArgs();
         }
 
         public Builder(GetNamedValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namedValueId = defaults.namedValueId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetNamedValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namedValueId(String namedValueId) {
-            this.namedValueId = Objects.requireNonNull(namedValueId);
+            $.namedValueId = namedValueId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetNamedValueArgs build() {
-            return new GetNamedValueArgs(namedValueId, resourceGroupName, serviceName);
+        }
+
+        public GetNamedValueArgs build() {
+            $.namedValueId = Objects.requireNonNull($.namedValueId, "expected parameter 'namedValueId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

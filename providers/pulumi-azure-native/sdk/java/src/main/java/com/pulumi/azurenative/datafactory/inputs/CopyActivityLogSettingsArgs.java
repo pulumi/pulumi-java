@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CopyActivityLogSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enableReliableLogging")
-      private final @Nullable Output<Object> enableReliableLogging;
+    private @Nullable Output<Object> enableReliableLogging;
 
-    public Output<Object> enableReliableLogging() {
-        return this.enableReliableLogging == null ? Codegen.empty() : this.enableReliableLogging;
+    public Optional<Output<Object>> enableReliableLogging() {
+        return Optional.ofNullable(this.enableReliableLogging);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CopyActivityLogSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Output<Object> logLevel;
+    private @Nullable Output<Object> logLevel;
 
-    public Output<Object> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<Object>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
-    public CopyActivityLogSettingsArgs(
-        @Nullable Output<Object> enableReliableLogging,
-        @Nullable Output<Object> logLevel) {
-        this.enableReliableLogging = enableReliableLogging;
-        this.logLevel = logLevel;
-    }
+    private CopyActivityLogSettingsArgs() {}
 
-    private CopyActivityLogSettingsArgs() {
-        this.enableReliableLogging = Codegen.empty();
-        this.logLevel = Codegen.empty();
+    private CopyActivityLogSettingsArgs(CopyActivityLogSettingsArgs $) {
+        this.enableReliableLogging = $.enableReliableLogging;
+        this.logLevel = $.logLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CopyActivityLogSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> enableReliableLogging;
-        private @Nullable Output<Object> logLevel;
+        private CopyActivityLogSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CopyActivityLogSettingsArgs();
         }
 
         public Builder(CopyActivityLogSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableReliableLogging = defaults.enableReliableLogging;
-    	      this.logLevel = defaults.logLevel;
+            $ = new CopyActivityLogSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableReliableLogging(@Nullable Output<Object> enableReliableLogging) {
-            this.enableReliableLogging = enableReliableLogging;
+            $.enableReliableLogging = enableReliableLogging;
             return this;
         }
-        public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
-            this.enableReliableLogging = Codegen.ofNullable(enableReliableLogging);
-            return this;
+
+        public Builder enableReliableLogging(Object enableReliableLogging) {
+            return enableReliableLogging(Output.of(enableReliableLogging));
         }
+
         public Builder logLevel(@Nullable Output<Object> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable Object logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
-        }        public CopyActivityLogSettingsArgs build() {
-            return new CopyActivityLogSettingsArgs(enableReliableLogging, logLevel);
+
+        public Builder logLevel(Object logLevel) {
+            return logLevel(Output.of(logLevel));
+        }
+
+        public CopyActivityLogSettingsArgs build() {
+            return $;
         }
     }
+
 }

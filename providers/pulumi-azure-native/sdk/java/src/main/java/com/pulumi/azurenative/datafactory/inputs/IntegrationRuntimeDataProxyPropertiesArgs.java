@@ -6,9 +6,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.EntityReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<EntityReferenceArgs> connectVia;
+    private @Nullable Output<EntityReferenceArgs> connectVia;
 
-    public Output<EntityReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<EntityReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends com.pulumi.
      * 
      */
     @Import(name="stagingLinkedService")
-      private final @Nullable Output<EntityReferenceArgs> stagingLinkedService;
+    private @Nullable Output<EntityReferenceArgs> stagingLinkedService;
 
-    public Output<EntityReferenceArgs> stagingLinkedService() {
-        return this.stagingLinkedService == null ? Codegen.empty() : this.stagingLinkedService;
+    public Optional<Output<EntityReferenceArgs>> stagingLinkedService() {
+        return Optional.ofNullable(this.stagingLinkedService);
     }
 
-    public IntegrationRuntimeDataProxyPropertiesArgs(
-        @Nullable Output<EntityReferenceArgs> connectVia,
-        @Nullable Output<String> path,
-        @Nullable Output<EntityReferenceArgs> stagingLinkedService) {
-        this.connectVia = connectVia;
-        this.path = path;
-        this.stagingLinkedService = stagingLinkedService;
-    }
+    private IntegrationRuntimeDataProxyPropertiesArgs() {}
 
-    private IntegrationRuntimeDataProxyPropertiesArgs() {
-        this.connectVia = Codegen.empty();
-        this.path = Codegen.empty();
-        this.stagingLinkedService = Codegen.empty();
+    private IntegrationRuntimeDataProxyPropertiesArgs(IntegrationRuntimeDataProxyPropertiesArgs $) {
+        this.connectVia = $.connectVia;
+        this.path = $.path;
+        this.stagingLinkedService = $.stagingLinkedService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeDataProxyPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EntityReferenceArgs> connectVia;
-        private @Nullable Output<String> path;
-        private @Nullable Output<EntityReferenceArgs> stagingLinkedService;
+        private IntegrationRuntimeDataProxyPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeDataProxyPropertiesArgs();
         }
 
         public Builder(IntegrationRuntimeDataProxyPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectVia = defaults.connectVia;
-    	      this.path = defaults.path;
-    	      this.stagingLinkedService = defaults.stagingLinkedService;
+            $ = new IntegrationRuntimeDataProxyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectVia(@Nullable Output<EntityReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable EntityReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(EntityReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder stagingLinkedService(@Nullable Output<EntityReferenceArgs> stagingLinkedService) {
-            this.stagingLinkedService = stagingLinkedService;
+            $.stagingLinkedService = stagingLinkedService;
             return this;
         }
-        public Builder stagingLinkedService(@Nullable EntityReferenceArgs stagingLinkedService) {
-            this.stagingLinkedService = Codegen.ofNullable(stagingLinkedService);
-            return this;
-        }        public IntegrationRuntimeDataProxyPropertiesArgs build() {
-            return new IntegrationRuntimeDataProxyPropertiesArgs(connectVia, path, stagingLinkedService);
+
+        public Builder stagingLinkedService(EntityReferenceArgs stagingLinkedService) {
+            return stagingLinkedService(Output.of(stagingLinkedService));
+        }
+
+        public IntegrationRuntimeDataProxyPropertiesArgs build() {
+            return $;
         }
     }
+
 }

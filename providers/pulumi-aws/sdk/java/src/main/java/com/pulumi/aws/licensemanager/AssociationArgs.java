@@ -5,7 +5,6 @@ package com.pulumi.aws.licensemanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseConfigurationArn", required=true)
-      private final Output<String> licenseConfigurationArn;
+    private Output<String> licenseConfigurationArn;
 
     public Output<String> licenseConfigurationArn() {
         return this.licenseConfigurationArn;
@@ -30,63 +29,60 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
-    public AssociationArgs(
-        Output<String> licenseConfigurationArn,
-        Output<String> resourceArn) {
-        this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn, "expected parameter 'licenseConfigurationArn' to be non-null");
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-    }
+    private AssociationArgs() {}
 
-    private AssociationArgs() {
-        this.licenseConfigurationArn = Codegen.empty();
-        this.resourceArn = Codegen.empty();
+    private AssociationArgs(AssociationArgs $) {
+        this.licenseConfigurationArn = $.licenseConfigurationArn;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> licenseConfigurationArn;
-        private Output<String> resourceArn;
+        private AssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssociationArgs();
         }
 
         public Builder(AssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.licenseConfigurationArn = defaults.licenseConfigurationArn;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new AssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder licenseConfigurationArn(Output<String> licenseConfigurationArn) {
-            this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn);
+            $.licenseConfigurationArn = licenseConfigurationArn;
             return this;
         }
+
         public Builder licenseConfigurationArn(String licenseConfigurationArn) {
-            this.licenseConfigurationArn = Output.of(Objects.requireNonNull(licenseConfigurationArn));
-            return this;
+            return licenseConfigurationArn(Output.of(licenseConfigurationArn));
         }
+
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
-        }        public AssociationArgs build() {
-            return new AssociationArgs(licenseConfigurationArn, resourceArn);
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public AssociationArgs build() {
+            $.licenseConfigurationArn = Objects.requireNonNull($.licenseConfigurationArn, "expected parameter 'licenseConfigurationArn' to be non-null");
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            return $;
         }
     }
+
 }

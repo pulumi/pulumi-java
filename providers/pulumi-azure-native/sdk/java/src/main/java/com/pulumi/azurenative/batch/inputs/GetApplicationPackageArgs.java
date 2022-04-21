@@ -17,7 +17,7 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="applicationName", required=true)
-      private final String applicationName;
+    private String applicationName;
 
     public String applicationName() {
         return this.applicationName;
@@ -39,7 +39,7 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetApplicationPackageArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="versionName", required=true)
-      private final String versionName;
+    private String versionName;
 
     public String versionName() {
         return this.versionName;
     }
 
-    public GetApplicationPackageArgs(
-        String accountName,
-        String applicationName,
-        String resourceGroupName,
-        String versionName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.versionName = Objects.requireNonNull(versionName, "expected parameter 'versionName' to be non-null");
-    }
+    private GetApplicationPackageArgs() {}
 
-    private GetApplicationPackageArgs() {
-        this.accountName = null;
-        this.applicationName = null;
-        this.resourceGroupName = null;
-        this.versionName = null;
+    private GetApplicationPackageArgs(GetApplicationPackageArgs $) {
+        this.accountName = $.accountName;
+        this.applicationName = $.applicationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationPackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String applicationName;
-        private String resourceGroupName;
-        private String versionName;
+        private GetApplicationPackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationPackageArgs();
         }
 
         public Builder(GetApplicationPackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.applicationName = defaults.applicationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.versionName = defaults.versionName;
+            $ = new GetApplicationPackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder applicationName(String applicationName) {
-            this.applicationName = Objects.requireNonNull(applicationName);
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder versionName(String versionName) {
-            this.versionName = Objects.requireNonNull(versionName);
+            $.versionName = versionName;
             return this;
-        }        public GetApplicationPackageArgs build() {
-            return new GetApplicationPackageArgs(accountName, applicationName, resourceGroupName, versionName);
+        }
+
+        public GetApplicationPackageArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.applicationName = Objects.requireNonNull($.applicationName, "expected parameter 'applicationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.versionName = Objects.requireNonNull($.versionName, "expected parameter 'versionName' to be non-null");
+            return $;
         }
     }
+
 }

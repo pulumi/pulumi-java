@@ -14,48 +14,49 @@ public final class GetSecretReplicationUserManaged extends com.pulumi.resources.
     public static final GetSecretReplicationUserManaged Empty = new GetSecretReplicationUserManaged();
 
     @Import(name="replicas", required=true)
-      private final List<GetSecretReplicationUserManagedReplica> replicas;
+    private List<GetSecretReplicationUserManagedReplica> replicas;
 
     public List<GetSecretReplicationUserManagedReplica> replicas() {
         return this.replicas;
     }
 
-    public GetSecretReplicationUserManaged(List<GetSecretReplicationUserManagedReplica> replicas) {
-        this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
-    }
+    private GetSecretReplicationUserManaged() {}
 
-    private GetSecretReplicationUserManaged() {
-        this.replicas = List.of();
+    private GetSecretReplicationUserManaged(GetSecretReplicationUserManaged $) {
+        this.replicas = $.replicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretReplicationUserManaged defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetSecretReplicationUserManagedReplica> replicas;
+        private GetSecretReplicationUserManaged $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretReplicationUserManaged();
         }
 
         public Builder(GetSecretReplicationUserManaged defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicas = defaults.replicas;
+            $ = new GetSecretReplicationUserManaged(Objects.requireNonNull(defaults));
         }
 
         public Builder replicas(List<GetSecretReplicationUserManagedReplica> replicas) {
-            this.replicas = Objects.requireNonNull(replicas);
+            $.replicas = replicas;
             return this;
         }
+
         public Builder replicas(GetSecretReplicationUserManagedReplica... replicas) {
             return replicas(List.of(replicas));
-        }        public GetSecretReplicationUserManaged build() {
-            return new GetSecretReplicationUserManaged(replicas);
+        }
+
+        public GetSecretReplicationUserManaged build() {
+            $.replicas = Objects.requireNonNull($.replicas, "expected parameter 'replicas' to be non-null");
+            return $;
         }
     }
+
 }

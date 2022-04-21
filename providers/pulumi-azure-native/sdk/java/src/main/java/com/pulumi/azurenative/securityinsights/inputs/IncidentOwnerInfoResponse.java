@@ -23,10 +23,10 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="assignedTo")
-      private final @Nullable String assignedTo;
+    private @Nullable String assignedTo;
 
     public Optional<String> assignedTo() {
-        return this.assignedTo == null ? Optional.empty() : Optional.ofNullable(this.assignedTo);
+        return Optional.ofNullable(this.assignedTo);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userPrincipalName")
-      private final @Nullable String userPrincipalName;
+    private @Nullable String userPrincipalName;
 
     public Optional<String> userPrincipalName() {
-        return this.userPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.userPrincipalName);
+        return Optional.ofNullable(this.userPrincipalName);
     }
 
-    public IncidentOwnerInfoResponse(
-        @Nullable String assignedTo,
-        @Nullable String email,
-        @Nullable String objectId,
-        @Nullable String userPrincipalName) {
-        this.assignedTo = assignedTo;
-        this.email = email;
-        this.objectId = objectId;
-        this.userPrincipalName = userPrincipalName;
-    }
+    private IncidentOwnerInfoResponse() {}
 
-    private IncidentOwnerInfoResponse() {
-        this.assignedTo = null;
-        this.email = null;
-        this.objectId = null;
-        this.userPrincipalName = null;
+    private IncidentOwnerInfoResponse(IncidentOwnerInfoResponse $) {
+        this.assignedTo = $.assignedTo;
+        this.email = $.email;
+        this.objectId = $.objectId;
+        this.userPrincipalName = $.userPrincipalName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncidentOwnerInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String assignedTo;
-        private @Nullable String email;
-        private @Nullable String objectId;
-        private @Nullable String userPrincipalName;
+        private IncidentOwnerInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncidentOwnerInfoResponse();
         }
 
         public Builder(IncidentOwnerInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignedTo = defaults.assignedTo;
-    	      this.email = defaults.email;
-    	      this.objectId = defaults.objectId;
-    	      this.userPrincipalName = defaults.userPrincipalName;
+            $ = new IncidentOwnerInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assignedTo(@Nullable String assignedTo) {
-            this.assignedTo = assignedTo;
+            $.assignedTo = assignedTo;
             return this;
         }
+
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
-            this.userPrincipalName = userPrincipalName;
+            $.userPrincipalName = userPrincipalName;
             return this;
-        }        public IncidentOwnerInfoResponse build() {
-            return new IncidentOwnerInfoResponse(assignedTo, email, objectId, userPrincipalName);
+        }
+
+        public IncidentOwnerInfoResponse build() {
+            return $;
         }
     }
+
 }

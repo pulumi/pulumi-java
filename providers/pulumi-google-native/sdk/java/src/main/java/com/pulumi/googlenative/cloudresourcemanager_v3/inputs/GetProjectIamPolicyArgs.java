@@ -15,45 +15,44 @@ public final class GetProjectIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetProjectIamPolicyArgs Empty = new GetProjectIamPolicyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetProjectIamPolicyArgs(@Nullable String project) {
-        this.project = project;
-    }
+    private GetProjectIamPolicyArgs() {}
 
-    private GetProjectIamPolicyArgs() {
-        this.project = null;
+    private GetProjectIamPolicyArgs(GetProjectIamPolicyArgs $) {
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProjectIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
+        private GetProjectIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProjectIamPolicyArgs();
         }
 
         public Builder(GetProjectIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
+            $ = new GetProjectIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetProjectIamPolicyArgs build() {
-            return new GetProjectIamPolicyArgs(project);
+        }
+
+        public GetProjectIamPolicyArgs build() {
+            return $;
         }
     }
+
 }

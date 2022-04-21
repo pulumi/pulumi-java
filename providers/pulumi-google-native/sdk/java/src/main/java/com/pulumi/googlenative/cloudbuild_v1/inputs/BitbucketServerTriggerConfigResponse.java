@@ -24,7 +24,7 @@ public final class BitbucketServerTriggerConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="bitbucketServerConfig", required=true)
-      private final BitbucketServerConfigResponse bitbucketServerConfig;
+    private BitbucketServerConfigResponse bitbucketServerConfig;
 
     public BitbucketServerConfigResponse bitbucketServerConfig() {
         return this.bitbucketServerConfig;
@@ -35,7 +35,7 @@ public final class BitbucketServerTriggerConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="bitbucketServerConfigResource", required=true)
-      private final String bitbucketServerConfigResource;
+    private String bitbucketServerConfigResource;
 
     public String bitbucketServerConfigResource() {
         return this.bitbucketServerConfigResource;
@@ -46,7 +46,7 @@ public final class BitbucketServerTriggerConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="projectKey", required=true)
-      private final String projectKey;
+    private String projectKey;
 
     public String projectKey() {
         return this.projectKey;
@@ -57,7 +57,7 @@ public final class BitbucketServerTriggerConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="pullRequest", required=true)
-      private final PullRequestFilterResponse pullRequest;
+    private PullRequestFilterResponse pullRequest;
 
     public PullRequestFilterResponse pullRequest() {
         return this.pullRequest;
@@ -68,7 +68,7 @@ public final class BitbucketServerTriggerConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="push", required=true)
-      private final PushFilterResponse push;
+    private PushFilterResponse push;
 
     public PushFilterResponse push() {
         return this.push;
@@ -79,91 +79,80 @@ public final class BitbucketServerTriggerConfigResponse extends com.pulumi.resou
      * 
      */
     @Import(name="repoSlug", required=true)
-      private final String repoSlug;
+    private String repoSlug;
 
     public String repoSlug() {
         return this.repoSlug;
     }
 
-    public BitbucketServerTriggerConfigResponse(
-        BitbucketServerConfigResponse bitbucketServerConfig,
-        String bitbucketServerConfigResource,
-        String projectKey,
-        PullRequestFilterResponse pullRequest,
-        PushFilterResponse push,
-        String repoSlug) {
-        this.bitbucketServerConfig = Objects.requireNonNull(bitbucketServerConfig, "expected parameter 'bitbucketServerConfig' to be non-null");
-        this.bitbucketServerConfigResource = Objects.requireNonNull(bitbucketServerConfigResource, "expected parameter 'bitbucketServerConfigResource' to be non-null");
-        this.projectKey = Objects.requireNonNull(projectKey, "expected parameter 'projectKey' to be non-null");
-        this.pullRequest = Objects.requireNonNull(pullRequest, "expected parameter 'pullRequest' to be non-null");
-        this.push = Objects.requireNonNull(push, "expected parameter 'push' to be non-null");
-        this.repoSlug = Objects.requireNonNull(repoSlug, "expected parameter 'repoSlug' to be non-null");
-    }
+    private BitbucketServerTriggerConfigResponse() {}
 
-    private BitbucketServerTriggerConfigResponse() {
-        this.bitbucketServerConfig = null;
-        this.bitbucketServerConfigResource = null;
-        this.projectKey = null;
-        this.pullRequest = null;
-        this.push = null;
-        this.repoSlug = null;
+    private BitbucketServerTriggerConfigResponse(BitbucketServerTriggerConfigResponse $) {
+        this.bitbucketServerConfig = $.bitbucketServerConfig;
+        this.bitbucketServerConfigResource = $.bitbucketServerConfigResource;
+        this.projectKey = $.projectKey;
+        this.pullRequest = $.pullRequest;
+        this.push = $.push;
+        this.repoSlug = $.repoSlug;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BitbucketServerTriggerConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BitbucketServerConfigResponse bitbucketServerConfig;
-        private String bitbucketServerConfigResource;
-        private String projectKey;
-        private PullRequestFilterResponse pullRequest;
-        private PushFilterResponse push;
-        private String repoSlug;
+        private BitbucketServerTriggerConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BitbucketServerTriggerConfigResponse();
         }
 
         public Builder(BitbucketServerTriggerConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitbucketServerConfig = defaults.bitbucketServerConfig;
-    	      this.bitbucketServerConfigResource = defaults.bitbucketServerConfigResource;
-    	      this.projectKey = defaults.projectKey;
-    	      this.pullRequest = defaults.pullRequest;
-    	      this.push = defaults.push;
-    	      this.repoSlug = defaults.repoSlug;
+            $ = new BitbucketServerTriggerConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bitbucketServerConfig(BitbucketServerConfigResponse bitbucketServerConfig) {
-            this.bitbucketServerConfig = Objects.requireNonNull(bitbucketServerConfig);
+            $.bitbucketServerConfig = bitbucketServerConfig;
             return this;
         }
+
         public Builder bitbucketServerConfigResource(String bitbucketServerConfigResource) {
-            this.bitbucketServerConfigResource = Objects.requireNonNull(bitbucketServerConfigResource);
+            $.bitbucketServerConfigResource = bitbucketServerConfigResource;
             return this;
         }
+
         public Builder projectKey(String projectKey) {
-            this.projectKey = Objects.requireNonNull(projectKey);
+            $.projectKey = projectKey;
             return this;
         }
+
         public Builder pullRequest(PullRequestFilterResponse pullRequest) {
-            this.pullRequest = Objects.requireNonNull(pullRequest);
+            $.pullRequest = pullRequest;
             return this;
         }
+
         public Builder push(PushFilterResponse push) {
-            this.push = Objects.requireNonNull(push);
+            $.push = push;
             return this;
         }
+
         public Builder repoSlug(String repoSlug) {
-            this.repoSlug = Objects.requireNonNull(repoSlug);
+            $.repoSlug = repoSlug;
             return this;
-        }        public BitbucketServerTriggerConfigResponse build() {
-            return new BitbucketServerTriggerConfigResponse(bitbucketServerConfig, bitbucketServerConfigResource, projectKey, pullRequest, push, repoSlug);
+        }
+
+        public BitbucketServerTriggerConfigResponse build() {
+            $.bitbucketServerConfig = Objects.requireNonNull($.bitbucketServerConfig, "expected parameter 'bitbucketServerConfig' to be non-null");
+            $.bitbucketServerConfigResource = Objects.requireNonNull($.bitbucketServerConfigResource, "expected parameter 'bitbucketServerConfigResource' to be non-null");
+            $.projectKey = Objects.requireNonNull($.projectKey, "expected parameter 'projectKey' to be non-null");
+            $.pullRequest = Objects.requireNonNull($.pullRequest, "expected parameter 'pullRequest' to be non-null");
+            $.push = Objects.requireNonNull($.push, "expected parameter 'push' to be non-null");
+            $.repoSlug = Objects.requireNonNull($.repoSlug, "expected parameter 'repoSlug' to be non-null");
+            return $;
         }
     }
+
 }

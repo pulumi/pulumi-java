@@ -5,9 +5,9 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BulkCreationParametersArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Output<Integer> instanceCount;
+    private @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> instanceCount() {
-        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
+    public Optional<Output<Integer>> instanceCount() {
+        return Optional.ofNullable(this.instanceCount);
     }
 
-    public BulkCreationParametersArgs(@Nullable Output<Integer> instanceCount) {
-        this.instanceCount = instanceCount;
-    }
+    private BulkCreationParametersArgs() {}
 
-    private BulkCreationParametersArgs() {
-        this.instanceCount = Codegen.empty();
+    private BulkCreationParametersArgs(BulkCreationParametersArgs $) {
+        this.instanceCount = $.instanceCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BulkCreationParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> instanceCount;
+        private BulkCreationParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BulkCreationParametersArgs();
         }
 
         public Builder(BulkCreationParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceCount = defaults.instanceCount;
+            $ = new BulkCreationParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
-        public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Codegen.ofNullable(instanceCount);
-            return this;
-        }        public BulkCreationParametersArgs build() {
-            return new BulkCreationParametersArgs(instanceCount);
+
+        public Builder instanceCount(Integer instanceCount) {
+            return instanceCount(Output.of(instanceCount));
+        }
+
+        public BulkCreationParametersArgs build() {
+            return $;
         }
     }
+
 }

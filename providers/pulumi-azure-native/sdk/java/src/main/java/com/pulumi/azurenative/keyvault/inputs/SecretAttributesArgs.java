@@ -5,10 +5,10 @@ package com.pulumi.azurenative.keyvault.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="expires")
-      private final @Nullable Output<Integer> expires;
+    private @Nullable Output<Integer> expires;
 
-    public Output<Integer> expires() {
-        return this.expires == null ? Codegen.empty() : this.expires;
+    public Optional<Output<Integer>> expires() {
+        return Optional.ofNullable(this.expires);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class SecretAttributesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="notBefore")
-      private final @Nullable Output<Integer> notBefore;
+    private @Nullable Output<Integer> notBefore;
 
-    public Output<Integer> notBefore() {
-        return this.notBefore == null ? Codegen.empty() : this.notBefore;
+    public Optional<Output<Integer>> notBefore() {
+        return Optional.ofNullable(this.notBefore);
     }
 
-    public SecretAttributesArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Integer> expires,
-        @Nullable Output<Integer> notBefore) {
-        this.enabled = enabled;
-        this.expires = expires;
-        this.notBefore = notBefore;
-    }
+    private SecretAttributesArgs() {}
 
-    private SecretAttributesArgs() {
-        this.enabled = Codegen.empty();
-        this.expires = Codegen.empty();
-        this.notBefore = Codegen.empty();
+    private SecretAttributesArgs(SecretAttributesArgs $) {
+        this.enabled = $.enabled;
+        this.expires = $.expires;
+        this.notBefore = $.notBefore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretAttributesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Integer> expires;
-        private @Nullable Output<Integer> notBefore;
+        private SecretAttributesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretAttributesArgs();
         }
 
         public Builder(SecretAttributesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.expires = defaults.expires;
-    	      this.notBefore = defaults.notBefore;
+            $ = new SecretAttributesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder expires(@Nullable Output<Integer> expires) {
-            this.expires = expires;
+            $.expires = expires;
             return this;
         }
-        public Builder expires(@Nullable Integer expires) {
-            this.expires = Codegen.ofNullable(expires);
-            return this;
+
+        public Builder expires(Integer expires) {
+            return expires(Output.of(expires));
         }
+
         public Builder notBefore(@Nullable Output<Integer> notBefore) {
-            this.notBefore = notBefore;
+            $.notBefore = notBefore;
             return this;
         }
-        public Builder notBefore(@Nullable Integer notBefore) {
-            this.notBefore = Codegen.ofNullable(notBefore);
-            return this;
-        }        public SecretAttributesArgs build() {
-            return new SecretAttributesArgs(enabled, expires, notBefore);
+
+        public Builder notBefore(Integer notBefore) {
+            return notBefore(Output.of(notBefore));
+        }
+
+        public SecretAttributesArgs build() {
+            return $;
         }
     }
+
 }

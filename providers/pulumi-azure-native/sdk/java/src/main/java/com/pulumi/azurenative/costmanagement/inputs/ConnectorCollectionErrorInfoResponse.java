@@ -21,7 +21,7 @@ public final class ConnectorCollectionErrorInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="errorCode", required=true)
-      private final String errorCode;
+    private String errorCode;
 
     public String errorCode() {
         return this.errorCode;
@@ -32,7 +32,7 @@ public final class ConnectorCollectionErrorInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="errorInnerMessage", required=true)
-      private final String errorInnerMessage;
+    private String errorInnerMessage;
 
     public String errorInnerMessage() {
         return this.errorInnerMessage;
@@ -43,7 +43,7 @@ public final class ConnectorCollectionErrorInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -54,73 +54,66 @@ public final class ConnectorCollectionErrorInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="errorStartTime", required=true)
-      private final String errorStartTime;
+    private String errorStartTime;
 
     public String errorStartTime() {
         return this.errorStartTime;
     }
 
-    public ConnectorCollectionErrorInfoResponse(
-        String errorCode,
-        String errorInnerMessage,
-        String errorMessage,
-        String errorStartTime) {
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.errorInnerMessage = Objects.requireNonNull(errorInnerMessage, "expected parameter 'errorInnerMessage' to be non-null");
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.errorStartTime = Objects.requireNonNull(errorStartTime, "expected parameter 'errorStartTime' to be non-null");
-    }
+    private ConnectorCollectionErrorInfoResponse() {}
 
-    private ConnectorCollectionErrorInfoResponse() {
-        this.errorCode = null;
-        this.errorInnerMessage = null;
-        this.errorMessage = null;
-        this.errorStartTime = null;
+    private ConnectorCollectionErrorInfoResponse(ConnectorCollectionErrorInfoResponse $) {
+        this.errorCode = $.errorCode;
+        this.errorInnerMessage = $.errorInnerMessage;
+        this.errorMessage = $.errorMessage;
+        this.errorStartTime = $.errorStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorCollectionErrorInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorCode;
-        private String errorInnerMessage;
-        private String errorMessage;
-        private String errorStartTime;
+        private ConnectorCollectionErrorInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorCollectionErrorInfoResponse();
         }
 
         public Builder(ConnectorCollectionErrorInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCode = defaults.errorCode;
-    	      this.errorInnerMessage = defaults.errorInnerMessage;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.errorStartTime = defaults.errorStartTime;
+            $ = new ConnectorCollectionErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCode(String errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder errorInnerMessage(String errorInnerMessage) {
-            this.errorInnerMessage = Objects.requireNonNull(errorInnerMessage);
+            $.errorInnerMessage = errorInnerMessage;
             return this;
         }
+
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder errorStartTime(String errorStartTime) {
-            this.errorStartTime = Objects.requireNonNull(errorStartTime);
+            $.errorStartTime = errorStartTime;
             return this;
-        }        public ConnectorCollectionErrorInfoResponse build() {
-            return new ConnectorCollectionErrorInfoResponse(errorCode, errorInnerMessage, errorMessage, errorStartTime);
+        }
+
+        public ConnectorCollectionErrorInfoResponse build() {
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            $.errorInnerMessage = Objects.requireNonNull($.errorInnerMessage, "expected parameter 'errorInnerMessage' to be non-null");
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.errorStartTime = Objects.requireNonNull($.errorStartTime, "expected parameter 'errorStartTime' to be non-null");
+            return $;
         }
     }
+
 }

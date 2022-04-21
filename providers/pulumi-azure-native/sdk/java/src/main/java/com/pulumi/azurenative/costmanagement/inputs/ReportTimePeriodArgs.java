@@ -5,7 +5,6 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ReportTimePeriodArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="from", required=true)
-      private final Output<String> from;
+    private Output<String> from;
 
     public Output<String> from() {
         return this.from;
@@ -34,63 +33,60 @@ public final class ReportTimePeriodArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="to", required=true)
-      private final Output<String> to;
+    private Output<String> to;
 
     public Output<String> to() {
         return this.to;
     }
 
-    public ReportTimePeriodArgs(
-        Output<String> from,
-        Output<String> to) {
-        this.from = Objects.requireNonNull(from, "expected parameter 'from' to be non-null");
-        this.to = Objects.requireNonNull(to, "expected parameter 'to' to be non-null");
-    }
+    private ReportTimePeriodArgs() {}
 
-    private ReportTimePeriodArgs() {
-        this.from = Codegen.empty();
-        this.to = Codegen.empty();
+    private ReportTimePeriodArgs(ReportTimePeriodArgs $) {
+        this.from = $.from;
+        this.to = $.to;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportTimePeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> from;
-        private Output<String> to;
+        private ReportTimePeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportTimePeriodArgs();
         }
 
         public Builder(ReportTimePeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.from = defaults.from;
-    	      this.to = defaults.to;
+            $ = new ReportTimePeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder from(Output<String> from) {
-            this.from = Objects.requireNonNull(from);
+            $.from = from;
             return this;
         }
+
         public Builder from(String from) {
-            this.from = Output.of(Objects.requireNonNull(from));
-            return this;
+            return from(Output.of(from));
         }
+
         public Builder to(Output<String> to) {
-            this.to = Objects.requireNonNull(to);
+            $.to = to;
             return this;
         }
+
         public Builder to(String to) {
-            this.to = Output.of(Objects.requireNonNull(to));
-            return this;
-        }        public ReportTimePeriodArgs build() {
-            return new ReportTimePeriodArgs(from, to);
+            return to(Output.of(to));
+        }
+
+        public ReportTimePeriodArgs build() {
+            $.from = Objects.requireNonNull($.from, "expected parameter 'from' to be non-null");
+            $.to = Objects.requireNonNull($.to, "expected parameter 'to' to be non-null");
+            return $;
         }
     }
+
 }

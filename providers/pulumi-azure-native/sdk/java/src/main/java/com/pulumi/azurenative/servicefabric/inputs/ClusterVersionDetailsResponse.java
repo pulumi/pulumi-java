@@ -23,10 +23,10 @@ public final class ClusterVersionDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="codeVersion")
-      private final @Nullable String codeVersion;
+    private @Nullable String codeVersion;
 
     public Optional<String> codeVersion() {
-        return this.codeVersion == null ? Optional.empty() : Optional.ofNullable(this.codeVersion);
+        return Optional.ofNullable(this.codeVersion);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterVersionDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="environment")
-      private final @Nullable String environment;
+    private @Nullable String environment;
 
     public Optional<String> environment() {
-        return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ClusterVersionDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="supportExpiryUtc")
-      private final @Nullable String supportExpiryUtc;
+    private @Nullable String supportExpiryUtc;
 
     public Optional<String> supportExpiryUtc() {
-        return this.supportExpiryUtc == null ? Optional.empty() : Optional.ofNullable(this.supportExpiryUtc);
+        return Optional.ofNullable(this.supportExpiryUtc);
     }
 
-    public ClusterVersionDetailsResponse(
-        @Nullable String codeVersion,
-        @Nullable String environment,
-        @Nullable String supportExpiryUtc) {
-        this.codeVersion = codeVersion;
-        this.environment = environment;
-        this.supportExpiryUtc = supportExpiryUtc;
-    }
+    private ClusterVersionDetailsResponse() {}
 
-    private ClusterVersionDetailsResponse() {
-        this.codeVersion = null;
-        this.environment = null;
-        this.supportExpiryUtc = null;
+    private ClusterVersionDetailsResponse(ClusterVersionDetailsResponse $) {
+        this.codeVersion = $.codeVersion;
+        this.environment = $.environment;
+        this.supportExpiryUtc = $.supportExpiryUtc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterVersionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String codeVersion;
-        private @Nullable String environment;
-        private @Nullable String supportExpiryUtc;
+        private ClusterVersionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterVersionDetailsResponse();
         }
 
         public Builder(ClusterVersionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeVersion = defaults.codeVersion;
-    	      this.environment = defaults.environment;
-    	      this.supportExpiryUtc = defaults.supportExpiryUtc;
+            $ = new ClusterVersionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder codeVersion(@Nullable String codeVersion) {
-            this.codeVersion = codeVersion;
+            $.codeVersion = codeVersion;
             return this;
         }
+
         public Builder environment(@Nullable String environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
+
         public Builder supportExpiryUtc(@Nullable String supportExpiryUtc) {
-            this.supportExpiryUtc = supportExpiryUtc;
+            $.supportExpiryUtc = supportExpiryUtc;
             return this;
-        }        public ClusterVersionDetailsResponse build() {
-            return new ClusterVersionDetailsResponse(codeVersion, environment, supportExpiryUtc);
+        }
+
+        public ClusterVersionDetailsResponse build() {
+            return $;
         }
     }
+
 }

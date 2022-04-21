@@ -5,9 +5,9 @@ package com.pulumi.aws.lakeformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModified")
-      private final @Nullable Output<String> lastModified;
+    private @Nullable Output<String> lastModified;
 
-    public Output<String> lastModified() {
-        return this.lastModified == null ? Codegen.empty() : this.lastModified;
+    public Optional<Output<String>> lastModified() {
+        return Optional.ofNullable(this.lastModified);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ResourceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public ResourceState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> lastModified,
-        @Nullable Output<String> roleArn) {
-        this.arn = arn;
-        this.lastModified = lastModified;
-        this.roleArn = roleArn;
-    }
+    private ResourceState() {}
 
-    private ResourceState() {
-        this.arn = Codegen.empty();
-        this.lastModified = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private ResourceState(ResourceState $) {
+        this.arn = $.arn;
+        this.lastModified = $.lastModified;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> lastModified;
-        private @Nullable Output<String> roleArn;
+        private ResourceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceState();
         }
 
         public Builder(ResourceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.lastModified = defaults.lastModified;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ResourceState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder lastModified(@Nullable Output<String> lastModified) {
-            this.lastModified = lastModified;
+            $.lastModified = lastModified;
             return this;
         }
-        public Builder lastModified(@Nullable String lastModified) {
-            this.lastModified = Codegen.ofNullable(lastModified);
-            return this;
+
+        public Builder lastModified(String lastModified) {
+            return lastModified(Output.of(lastModified));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public ResourceState build() {
-            return new ResourceState(arn, lastModified, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public ResourceState build() {
+            return $;
         }
     }
+
 }

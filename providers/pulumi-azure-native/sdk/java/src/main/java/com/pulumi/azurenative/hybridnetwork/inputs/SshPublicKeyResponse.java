@@ -23,10 +23,10 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="keyData")
-      private final @Nullable String keyData;
+    private @Nullable String keyData;
 
     public Optional<String> keyData() {
-        return this.keyData == null ? Optional.empty() : Optional.ofNullable(this.keyData);
+        return Optional.ofNullable(this.keyData);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
-    public SshPublicKeyResponse(
-        @Nullable String keyData,
-        @Nullable String path) {
-        this.keyData = keyData;
-        this.path = path;
-    }
+    private SshPublicKeyResponse() {}
 
-    private SshPublicKeyResponse() {
-        this.keyData = null;
-        this.path = null;
+    private SshPublicKeyResponse(SshPublicKeyResponse $) {
+        this.keyData = $.keyData;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshPublicKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyData;
-        private @Nullable String path;
+        private SshPublicKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshPublicKeyResponse();
         }
 
         public Builder(SshPublicKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyData = defaults.keyData;
-    	      this.path = defaults.path;
+            $ = new SshPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyData(@Nullable String keyData) {
-            this.keyData = keyData;
+            $.keyData = keyData;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
-        }        public SshPublicKeyResponse build() {
-            return new SshPublicKeyResponse(keyData, path);
+        }
+
+        public SshPublicKeyResponse build() {
+            return $;
         }
     }
+
 }

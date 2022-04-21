@@ -17,7 +17,7 @@ public final class GetConnectivityConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="configurationName", required=true)
-      private final String configurationName;
+    private String configurationName;
 
     public String configurationName() {
         return this.configurationName;
@@ -28,7 +28,7 @@ public final class GetConnectivityConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final String networkManagerName;
+    private String networkManagerName;
 
     public String networkManagerName() {
         return this.networkManagerName;
@@ -39,64 +39,59 @@ public final class GetConnectivityConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetConnectivityConfigurationArgs(
-        String configurationName,
-        String networkManagerName,
-        String resourceGroupName) {
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetConnectivityConfigurationArgs() {}
 
-    private GetConnectivityConfigurationArgs() {
-        this.configurationName = null;
-        this.networkManagerName = null;
-        this.resourceGroupName = null;
+    private GetConnectivityConfigurationArgs(GetConnectivityConfigurationArgs $) {
+        this.configurationName = $.configurationName;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectivityConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationName;
-        private String networkManagerName;
-        private String resourceGroupName;
+        private GetConnectivityConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectivityConfigurationArgs();
         }
 
         public Builder(GetConnectivityConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetConnectivityConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(String configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetConnectivityConfigurationArgs build() {
-            return new GetConnectivityConfigurationArgs(configurationName, networkManagerName, resourceGroupName);
+        }
+
+        public GetConnectivityConfigurationArgs build() {
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

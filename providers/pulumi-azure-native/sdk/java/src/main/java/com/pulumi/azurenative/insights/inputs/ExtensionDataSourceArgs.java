@@ -7,11 +7,11 @@ import com.pulumi.azurenative.insights.enums.KnownExtensionDataSourceStreams;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class ExtensionDataSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="extensionName", required=true)
-      private final Output<String> extensionName;
+    private Output<String> extensionName;
 
     public Output<String> extensionName() {
         return this.extensionName;
@@ -40,10 +40,10 @@ public final class ExtensionDataSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="extensionSettings")
-      private final @Nullable Output<Object> extensionSettings;
+    private @Nullable Output<Object> extensionSettings;
 
-    public Output<Object> extensionSettings() {
-        return this.extensionSettings == null ? Codegen.empty() : this.extensionSettings;
+    public Optional<Output<Object>> extensionSettings() {
+        return Optional.ofNullable(this.extensionSettings);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ExtensionDataSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="inputDataSources")
-      private final @Nullable Output<List<String>> inputDataSources;
+    private @Nullable Output<List<String>> inputDataSources;
 
-    public Output<List<String>> inputDataSources() {
-        return this.inputDataSources == null ? Codegen.empty() : this.inputDataSources;
+    public Optional<Output<List<String>>> inputDataSources() {
+        return Optional.ofNullable(this.inputDataSources);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ExtensionDataSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,108 +75,97 @@ public final class ExtensionDataSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="streams")
-      private final @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
+    private @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
 
-    public Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams() {
-        return this.streams == null ? Codegen.empty() : this.streams;
+    public Optional<Output<List<Either<String,KnownExtensionDataSourceStreams>>>> streams() {
+        return Optional.ofNullable(this.streams);
     }
 
-    public ExtensionDataSourceArgs(
-        Output<String> extensionName,
-        @Nullable Output<Object> extensionSettings,
-        @Nullable Output<List<String>> inputDataSources,
-        @Nullable Output<String> name,
-        @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
-        this.extensionName = Objects.requireNonNull(extensionName, "expected parameter 'extensionName' to be non-null");
-        this.extensionSettings = extensionSettings;
-        this.inputDataSources = inputDataSources;
-        this.name = name;
-        this.streams = streams;
-    }
+    private ExtensionDataSourceArgs() {}
 
-    private ExtensionDataSourceArgs() {
-        this.extensionName = Codegen.empty();
-        this.extensionSettings = Codegen.empty();
-        this.inputDataSources = Codegen.empty();
-        this.name = Codegen.empty();
-        this.streams = Codegen.empty();
+    private ExtensionDataSourceArgs(ExtensionDataSourceArgs $) {
+        this.extensionName = $.extensionName;
+        this.extensionSettings = $.extensionSettings;
+        this.inputDataSources = $.inputDataSources;
+        this.name = $.name;
+        this.streams = $.streams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> extensionName;
-        private @Nullable Output<Object> extensionSettings;
-        private @Nullable Output<List<String>> inputDataSources;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
+        private ExtensionDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionDataSourceArgs();
         }
 
         public Builder(ExtensionDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensionName = defaults.extensionName;
-    	      this.extensionSettings = defaults.extensionSettings;
-    	      this.inputDataSources = defaults.inputDataSources;
-    	      this.name = defaults.name;
-    	      this.streams = defaults.streams;
+            $ = new ExtensionDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extensionName(Output<String> extensionName) {
-            this.extensionName = Objects.requireNonNull(extensionName);
+            $.extensionName = extensionName;
             return this;
         }
+
         public Builder extensionName(String extensionName) {
-            this.extensionName = Output.of(Objects.requireNonNull(extensionName));
-            return this;
+            return extensionName(Output.of(extensionName));
         }
+
         public Builder extensionSettings(@Nullable Output<Object> extensionSettings) {
-            this.extensionSettings = extensionSettings;
+            $.extensionSettings = extensionSettings;
             return this;
         }
-        public Builder extensionSettings(@Nullable Object extensionSettings) {
-            this.extensionSettings = Codegen.ofNullable(extensionSettings);
-            return this;
+
+        public Builder extensionSettings(Object extensionSettings) {
+            return extensionSettings(Output.of(extensionSettings));
         }
+
         public Builder inputDataSources(@Nullable Output<List<String>> inputDataSources) {
-            this.inputDataSources = inputDataSources;
+            $.inputDataSources = inputDataSources;
             return this;
         }
-        public Builder inputDataSources(@Nullable List<String> inputDataSources) {
-            this.inputDataSources = Codegen.ofNullable(inputDataSources);
-            return this;
+
+        public Builder inputDataSources(List<String> inputDataSources) {
+            return inputDataSources(Output.of(inputDataSources));
         }
+
         public Builder inputDataSources(String... inputDataSources) {
             return inputDataSources(List.of(inputDataSources));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder streams(@Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
-            this.streams = streams;
+            $.streams = streams;
             return this;
         }
-        public Builder streams(@Nullable List<Either<String,KnownExtensionDataSourceStreams>> streams) {
-            this.streams = Codegen.ofNullable(streams);
-            return this;
+
+        public Builder streams(List<Either<String,KnownExtensionDataSourceStreams>> streams) {
+            return streams(Output.of(streams));
         }
+
         public Builder streams(Either<String,KnownExtensionDataSourceStreams>... streams) {
             return streams(List.of(streams));
-        }        public ExtensionDataSourceArgs build() {
-            return new ExtensionDataSourceArgs(extensionName, extensionSettings, inputDataSources, name, streams);
+        }
+
+        public ExtensionDataSourceArgs build() {
+            $.extensionName = Objects.requireNonNull($.extensionName, "expected parameter 'extensionName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetDeltaTimeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DatasetFilterArgs extends com.pulumi.resources.ResourceArgs {
     public static final DatasetFilterArgs Empty = new DatasetFilterArgs();
 
     @Import(name="deltaTime")
-      private final @Nullable Output<DatasetDeltaTimeArgs> deltaTime;
+    private @Nullable Output<DatasetDeltaTimeArgs> deltaTime;
 
-    public Output<DatasetDeltaTimeArgs> deltaTime() {
-        return this.deltaTime == null ? Codegen.empty() : this.deltaTime;
+    public Optional<Output<DatasetDeltaTimeArgs>> deltaTime() {
+        return Optional.ofNullable(this.deltaTime);
     }
 
-    public DatasetFilterArgs(@Nullable Output<DatasetDeltaTimeArgs> deltaTime) {
-        this.deltaTime = deltaTime;
-    }
+    private DatasetFilterArgs() {}
 
-    private DatasetFilterArgs() {
-        this.deltaTime = Codegen.empty();
+    private DatasetFilterArgs(DatasetFilterArgs $) {
+        this.deltaTime = $.deltaTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetDeltaTimeArgs> deltaTime;
+        private DatasetFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetFilterArgs();
         }
 
         public Builder(DatasetFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deltaTime = defaults.deltaTime;
+            $ = new DatasetFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deltaTime(@Nullable Output<DatasetDeltaTimeArgs> deltaTime) {
-            this.deltaTime = deltaTime;
+            $.deltaTime = deltaTime;
             return this;
         }
-        public Builder deltaTime(@Nullable DatasetDeltaTimeArgs deltaTime) {
-            this.deltaTime = Codegen.ofNullable(deltaTime);
-            return this;
-        }        public DatasetFilterArgs build() {
-            return new DatasetFilterArgs(deltaTime);
+
+        public Builder deltaTime(DatasetDeltaTimeArgs deltaTime) {
+            return deltaTime(Output.of(deltaTime));
+        }
+
+        public DatasetFilterArgs build() {
+            return $;
         }
     }
+
 }

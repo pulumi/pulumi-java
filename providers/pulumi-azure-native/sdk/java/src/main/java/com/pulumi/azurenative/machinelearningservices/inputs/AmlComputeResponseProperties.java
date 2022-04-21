@@ -33,7 +33,7 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="allocationState", required=true)
-      private final String allocationState;
+    private String allocationState;
 
     public String allocationState() {
         return this.allocationState;
@@ -44,7 +44,7 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="allocationStateTransitionTime", required=true)
-      private final String allocationStateTransitionTime;
+    private String allocationStateTransitionTime;
 
     public String allocationStateTransitionTime() {
         return this.allocationStateTransitionTime;
@@ -55,7 +55,7 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="currentNodeCount", required=true)
-      private final Integer currentNodeCount;
+    private Integer currentNodeCount;
 
     public Integer currentNodeCount() {
         return this.currentNodeCount;
@@ -66,10 +66,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enableNodePublicIp")
-      private final @Nullable Boolean enableNodePublicIp;
+    private @Nullable Boolean enableNodePublicIp;
 
     public Optional<Boolean> enableNodePublicIp() {
-        return this.enableNodePublicIp == null ? Optional.empty() : Optional.ofNullable(this.enableNodePublicIp);
+        return Optional.ofNullable(this.enableNodePublicIp);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="errors", required=true)
-      private final List<MachineLearningServiceErrorResponse> errors;
+    private List<MachineLearningServiceErrorResponse> errors;
 
     public List<MachineLearningServiceErrorResponse> errors() {
         return this.errors;
@@ -88,10 +88,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="isolatedNetwork")
-      private final @Nullable Boolean isolatedNetwork;
+    private @Nullable Boolean isolatedNetwork;
 
     public Optional<Boolean> isolatedNetwork() {
-        return this.isolatedNetwork == null ? Optional.empty() : Optional.ofNullable(this.isolatedNetwork);
+        return Optional.ofNullable(this.isolatedNetwork);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="nodeStateCounts", required=true)
-      private final NodeStateCountsResponse nodeStateCounts;
+    private NodeStateCountsResponse nodeStateCounts;
 
     public NodeStateCountsResponse nodeStateCounts() {
         return this.nodeStateCounts;
@@ -110,10 +110,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="remoteLoginPortPublicAccess")
-      private final @Nullable String remoteLoginPortPublicAccess;
+    private @Nullable String remoteLoginPortPublicAccess;
 
     public Optional<String> remoteLoginPortPublicAccess() {
-        return this.remoteLoginPortPublicAccess == null ? Optional.empty() : Optional.ofNullable(this.remoteLoginPortPublicAccess);
+        return Optional.ofNullable(this.remoteLoginPortPublicAccess);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scaleSettings")
-      private final @Nullable ScaleSettingsResponse scaleSettings;
+    private @Nullable ScaleSettingsResponse scaleSettings;
 
     public Optional<ScaleSettingsResponse> scaleSettings() {
-        return this.scaleSettings == null ? Optional.empty() : Optional.ofNullable(this.scaleSettings);
+        return Optional.ofNullable(this.scaleSettings);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="subnet")
-      private final @Nullable ResourceIdResponse subnet;
+    private @Nullable ResourceIdResponse subnet;
 
     public Optional<ResourceIdResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -154,7 +154,7 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="targetNodeCount", required=true)
-      private final Integer targetNodeCount;
+    private Integer targetNodeCount;
 
     public Integer targetNodeCount() {
         return this.targetNodeCount;
@@ -165,10 +165,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userAccountCredentials")
-      private final @Nullable UserAccountCredentialsResponse userAccountCredentials;
+    private @Nullable UserAccountCredentialsResponse userAccountCredentials;
 
     public Optional<UserAccountCredentialsResponse> userAccountCredentials() {
-        return this.userAccountCredentials == null ? Optional.empty() : Optional.ofNullable(this.userAccountCredentials);
+        return Optional.ofNullable(this.userAccountCredentials);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="virtualMachineImage")
-      private final @Nullable VirtualMachineImageResponse virtualMachineImage;
+    private @Nullable VirtualMachineImageResponse virtualMachineImage;
 
     public Optional<VirtualMachineImageResponse> virtualMachineImage() {
-        return this.virtualMachineImage == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineImage);
+        return Optional.ofNullable(this.virtualMachineImage);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vmPriority")
-      private final @Nullable String vmPriority;
+    private @Nullable String vmPriority;
 
     public Optional<String> vmPriority() {
-        return this.vmPriority == null ? Optional.empty() : Optional.ofNullable(this.vmPriority);
+        return Optional.ofNullable(this.vmPriority);
     }
 
     /**
@@ -198,184 +198,147 @@ public final class AmlComputeResponseProperties extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable String vmSize;
+    private @Nullable String vmSize;
 
     public Optional<String> vmSize() {
-        return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public AmlComputeResponseProperties(
-        String allocationState,
-        String allocationStateTransitionTime,
-        Integer currentNodeCount,
-        @Nullable Boolean enableNodePublicIp,
-        List<MachineLearningServiceErrorResponse> errors,
-        @Nullable Boolean isolatedNetwork,
-        NodeStateCountsResponse nodeStateCounts,
-        @Nullable String osType,
-        @Nullable String remoteLoginPortPublicAccess,
-        @Nullable ScaleSettingsResponse scaleSettings,
-        @Nullable ResourceIdResponse subnet,
-        Integer targetNodeCount,
-        @Nullable UserAccountCredentialsResponse userAccountCredentials,
-        @Nullable VirtualMachineImageResponse virtualMachineImage,
-        @Nullable String vmPriority,
-        @Nullable String vmSize) {
-        this.allocationState = Objects.requireNonNull(allocationState, "expected parameter 'allocationState' to be non-null");
-        this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime, "expected parameter 'allocationStateTransitionTime' to be non-null");
-        this.currentNodeCount = Objects.requireNonNull(currentNodeCount, "expected parameter 'currentNodeCount' to be non-null");
-        this.enableNodePublicIp = Codegen.booleanProp("enableNodePublicIp").arg(enableNodePublicIp).def(true).getNullable();
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.isolatedNetwork = isolatedNetwork;
-        this.nodeStateCounts = Objects.requireNonNull(nodeStateCounts, "expected parameter 'nodeStateCounts' to be non-null");
-        this.osType = Codegen.stringProp("osType").arg(osType).def("Linux").getNullable();
-        this.remoteLoginPortPublicAccess = Codegen.stringProp("remoteLoginPortPublicAccess").arg(remoteLoginPortPublicAccess).def("NotSpecified").getNullable();
-        this.scaleSettings = scaleSettings;
-        this.subnet = subnet;
-        this.targetNodeCount = Objects.requireNonNull(targetNodeCount, "expected parameter 'targetNodeCount' to be non-null");
-        this.userAccountCredentials = userAccountCredentials;
-        this.virtualMachineImage = virtualMachineImage;
-        this.vmPriority = vmPriority;
-        this.vmSize = vmSize;
-    }
+    private AmlComputeResponseProperties() {}
 
-    private AmlComputeResponseProperties() {
-        this.allocationState = null;
-        this.allocationStateTransitionTime = null;
-        this.currentNodeCount = null;
-        this.enableNodePublicIp = null;
-        this.errors = List.of();
-        this.isolatedNetwork = null;
-        this.nodeStateCounts = null;
-        this.osType = null;
-        this.remoteLoginPortPublicAccess = null;
-        this.scaleSettings = null;
-        this.subnet = null;
-        this.targetNodeCount = null;
-        this.userAccountCredentials = null;
-        this.virtualMachineImage = null;
-        this.vmPriority = null;
-        this.vmSize = null;
+    private AmlComputeResponseProperties(AmlComputeResponseProperties $) {
+        this.allocationState = $.allocationState;
+        this.allocationStateTransitionTime = $.allocationStateTransitionTime;
+        this.currentNodeCount = $.currentNodeCount;
+        this.enableNodePublicIp = $.enableNodePublicIp;
+        this.errors = $.errors;
+        this.isolatedNetwork = $.isolatedNetwork;
+        this.nodeStateCounts = $.nodeStateCounts;
+        this.osType = $.osType;
+        this.remoteLoginPortPublicAccess = $.remoteLoginPortPublicAccess;
+        this.scaleSettings = $.scaleSettings;
+        this.subnet = $.subnet;
+        this.targetNodeCount = $.targetNodeCount;
+        this.userAccountCredentials = $.userAccountCredentials;
+        this.virtualMachineImage = $.virtualMachineImage;
+        this.vmPriority = $.vmPriority;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmlComputeResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String allocationState;
-        private String allocationStateTransitionTime;
-        private Integer currentNodeCount;
-        private @Nullable Boolean enableNodePublicIp;
-        private List<MachineLearningServiceErrorResponse> errors;
-        private @Nullable Boolean isolatedNetwork;
-        private NodeStateCountsResponse nodeStateCounts;
-        private @Nullable String osType;
-        private @Nullable String remoteLoginPortPublicAccess;
-        private @Nullable ScaleSettingsResponse scaleSettings;
-        private @Nullable ResourceIdResponse subnet;
-        private Integer targetNodeCount;
-        private @Nullable UserAccountCredentialsResponse userAccountCredentials;
-        private @Nullable VirtualMachineImageResponse virtualMachineImage;
-        private @Nullable String vmPriority;
-        private @Nullable String vmSize;
+        private AmlComputeResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmlComputeResponseProperties();
         }
 
         public Builder(AmlComputeResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationState = defaults.allocationState;
-    	      this.allocationStateTransitionTime = defaults.allocationStateTransitionTime;
-    	      this.currentNodeCount = defaults.currentNodeCount;
-    	      this.enableNodePublicIp = defaults.enableNodePublicIp;
-    	      this.errors = defaults.errors;
-    	      this.isolatedNetwork = defaults.isolatedNetwork;
-    	      this.nodeStateCounts = defaults.nodeStateCounts;
-    	      this.osType = defaults.osType;
-    	      this.remoteLoginPortPublicAccess = defaults.remoteLoginPortPublicAccess;
-    	      this.scaleSettings = defaults.scaleSettings;
-    	      this.subnet = defaults.subnet;
-    	      this.targetNodeCount = defaults.targetNodeCount;
-    	      this.userAccountCredentials = defaults.userAccountCredentials;
-    	      this.virtualMachineImage = defaults.virtualMachineImage;
-    	      this.vmPriority = defaults.vmPriority;
-    	      this.vmSize = defaults.vmSize;
+            $ = new AmlComputeResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationState(String allocationState) {
-            this.allocationState = Objects.requireNonNull(allocationState);
+            $.allocationState = allocationState;
             return this;
         }
+
         public Builder allocationStateTransitionTime(String allocationStateTransitionTime) {
-            this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime);
+            $.allocationStateTransitionTime = allocationStateTransitionTime;
             return this;
         }
+
         public Builder currentNodeCount(Integer currentNodeCount) {
-            this.currentNodeCount = Objects.requireNonNull(currentNodeCount);
+            $.currentNodeCount = currentNodeCount;
             return this;
         }
+
         public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
-            this.enableNodePublicIp = enableNodePublicIp;
+            $.enableNodePublicIp = enableNodePublicIp;
             return this;
         }
+
         public Builder errors(List<MachineLearningServiceErrorResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(MachineLearningServiceErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
-            this.isolatedNetwork = isolatedNetwork;
+            $.isolatedNetwork = isolatedNetwork;
             return this;
         }
+
         public Builder nodeStateCounts(NodeStateCountsResponse nodeStateCounts) {
-            this.nodeStateCounts = Objects.requireNonNull(nodeStateCounts);
+            $.nodeStateCounts = nodeStateCounts;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder remoteLoginPortPublicAccess(@Nullable String remoteLoginPortPublicAccess) {
-            this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
+            $.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
         }
+
         public Builder scaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
-            this.scaleSettings = scaleSettings;
+            $.scaleSettings = scaleSettings;
             return this;
         }
+
         public Builder subnet(@Nullable ResourceIdResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder targetNodeCount(Integer targetNodeCount) {
-            this.targetNodeCount = Objects.requireNonNull(targetNodeCount);
+            $.targetNodeCount = targetNodeCount;
             return this;
         }
+
         public Builder userAccountCredentials(@Nullable UserAccountCredentialsResponse userAccountCredentials) {
-            this.userAccountCredentials = userAccountCredentials;
+            $.userAccountCredentials = userAccountCredentials;
             return this;
         }
+
         public Builder virtualMachineImage(@Nullable VirtualMachineImageResponse virtualMachineImage) {
-            this.virtualMachineImage = virtualMachineImage;
+            $.virtualMachineImage = virtualMachineImage;
             return this;
         }
+
         public Builder vmPriority(@Nullable String vmPriority) {
-            this.vmPriority = vmPriority;
+            $.vmPriority = vmPriority;
             return this;
         }
+
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
-        }        public AmlComputeResponseProperties build() {
-            return new AmlComputeResponseProperties(allocationState, allocationStateTransitionTime, currentNodeCount, enableNodePublicIp, errors, isolatedNetwork, nodeStateCounts, osType, remoteLoginPortPublicAccess, scaleSettings, subnet, targetNodeCount, userAccountCredentials, virtualMachineImage, vmPriority, vmSize);
+        }
+
+        public AmlComputeResponseProperties build() {
+            $.allocationState = Objects.requireNonNull($.allocationState, "expected parameter 'allocationState' to be non-null");
+            $.allocationStateTransitionTime = Objects.requireNonNull($.allocationStateTransitionTime, "expected parameter 'allocationStateTransitionTime' to be non-null");
+            $.currentNodeCount = Objects.requireNonNull($.currentNodeCount, "expected parameter 'currentNodeCount' to be non-null");
+            $.enableNodePublicIp = Codegen.booleanProp("enableNodePublicIp").arg($.enableNodePublicIp).def(true).getNullable();
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.nodeStateCounts = Objects.requireNonNull($.nodeStateCounts, "expected parameter 'nodeStateCounts' to be non-null");
+            $.osType = Codegen.stringProp("osType").arg($.osType).def("Linux").getNullable();
+            $.remoteLoginPortPublicAccess = Codegen.stringProp("remoteLoginPortPublicAccess").arg($.remoteLoginPortPublicAccess).def("NotSpecified").getNullable();
+            $.targetNodeCount = Objects.requireNonNull($.targetNodeCount, "expected parameter 'targetNodeCount' to be non-null");
+            return $;
         }
     }
+
 }

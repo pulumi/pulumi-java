@@ -5,12 +5,12 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.kms.inputs.KeyRingImportJobAttestationGetArgs;
 import com.pulumi.gcp.kms.inputs.KeyRingImportJobPublicKeyGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="attestations")
-      private final @Nullable Output<List<KeyRingImportJobAttestationGetArgs>> attestations;
+    private @Nullable Output<List<KeyRingImportJobAttestationGetArgs>> attestations;
 
-    public Output<List<KeyRingImportJobAttestationGetArgs>> attestations() {
-        return this.attestations == null ? Codegen.empty() : this.attestations;
+    public Optional<Output<List<KeyRingImportJobAttestationGetArgs>>> attestations() {
+        return Optional.ofNullable(this.attestations);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="importJobId")
-      private final @Nullable Output<String> importJobId;
+    private @Nullable Output<String> importJobId;
 
-    public Output<String> importJobId() {
-        return this.importJobId == null ? Codegen.empty() : this.importJobId;
+    public Optional<Output<String>> importJobId() {
+        return Optional.ofNullable(this.importJobId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="importMethod")
-      private final @Nullable Output<String> importMethod;
+    private @Nullable Output<String> importMethod;
 
-    public Output<String> importMethod() {
-        return this.importMethod == null ? Codegen.empty() : this.importMethod;
+    public Optional<Output<String>> importMethod() {
+        return Optional.ofNullable(this.importMethod);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keyRing")
-      private final @Nullable Output<String> keyRing;
+    private @Nullable Output<String> keyRing;
 
-    public Output<String> keyRing() {
-        return this.keyRing == null ? Codegen.empty() : this.keyRing;
+    public Optional<Output<String>> keyRing() {
+        return Optional.ofNullable(this.keyRing);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="protectionLevel")
-      private final @Nullable Output<String> protectionLevel;
+    private @Nullable Output<String> protectionLevel;
 
-    public Output<String> protectionLevel() {
-        return this.protectionLevel == null ? Codegen.empty() : this.protectionLevel;
+    public Optional<Output<String>> protectionLevel() {
+        return Optional.ofNullable(this.protectionLevel);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publicKeys")
-      private final @Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys;
+    private @Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys;
 
-    public Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys() {
-        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
+    public Optional<Output<List<KeyRingImportJobPublicKeyGetArgs>>> publicKeys() {
+        return Optional.ofNullable(this.publicKeys);
     }
 
     /**
@@ -117,160 +117,136 @@ public final class KeyRingImportJobState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public KeyRingImportJobState(
-        @Nullable Output<List<KeyRingImportJobAttestationGetArgs>> attestations,
-        @Nullable Output<String> expireTime,
-        @Nullable Output<String> importJobId,
-        @Nullable Output<String> importMethod,
-        @Nullable Output<String> keyRing,
-        @Nullable Output<String> name,
-        @Nullable Output<String> protectionLevel,
-        @Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys,
-        @Nullable Output<String> state) {
-        this.attestations = attestations;
-        this.expireTime = expireTime;
-        this.importJobId = importJobId;
-        this.importMethod = importMethod;
-        this.keyRing = keyRing;
-        this.name = name;
-        this.protectionLevel = protectionLevel;
-        this.publicKeys = publicKeys;
-        this.state = state;
-    }
+    private KeyRingImportJobState() {}
 
-    private KeyRingImportJobState() {
-        this.attestations = Codegen.empty();
-        this.expireTime = Codegen.empty();
-        this.importJobId = Codegen.empty();
-        this.importMethod = Codegen.empty();
-        this.keyRing = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protectionLevel = Codegen.empty();
-        this.publicKeys = Codegen.empty();
-        this.state = Codegen.empty();
+    private KeyRingImportJobState(KeyRingImportJobState $) {
+        this.attestations = $.attestations;
+        this.expireTime = $.expireTime;
+        this.importJobId = $.importJobId;
+        this.importMethod = $.importMethod;
+        this.keyRing = $.keyRing;
+        this.name = $.name;
+        this.protectionLevel = $.protectionLevel;
+        this.publicKeys = $.publicKeys;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyRingImportJobState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<KeyRingImportJobAttestationGetArgs>> attestations;
-        private @Nullable Output<String> expireTime;
-        private @Nullable Output<String> importJobId;
-        private @Nullable Output<String> importMethod;
-        private @Nullable Output<String> keyRing;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> protectionLevel;
-        private @Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys;
-        private @Nullable Output<String> state;
+        private KeyRingImportJobState $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyRingImportJobState();
         }
 
         public Builder(KeyRingImportJobState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestations = defaults.attestations;
-    	      this.expireTime = defaults.expireTime;
-    	      this.importJobId = defaults.importJobId;
-    	      this.importMethod = defaults.importMethod;
-    	      this.keyRing = defaults.keyRing;
-    	      this.name = defaults.name;
-    	      this.protectionLevel = defaults.protectionLevel;
-    	      this.publicKeys = defaults.publicKeys;
-    	      this.state = defaults.state;
+            $ = new KeyRingImportJobState(Objects.requireNonNull(defaults));
         }
 
         public Builder attestations(@Nullable Output<List<KeyRingImportJobAttestationGetArgs>> attestations) {
-            this.attestations = attestations;
+            $.attestations = attestations;
             return this;
         }
-        public Builder attestations(@Nullable List<KeyRingImportJobAttestationGetArgs> attestations) {
-            this.attestations = Codegen.ofNullable(attestations);
-            return this;
+
+        public Builder attestations(List<KeyRingImportJobAttestationGetArgs> attestations) {
+            return attestations(Output.of(attestations));
         }
+
         public Builder attestations(KeyRingImportJobAttestationGetArgs... attestations) {
             return attestations(List.of(attestations));
         }
+
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder importJobId(@Nullable Output<String> importJobId) {
-            this.importJobId = importJobId;
+            $.importJobId = importJobId;
             return this;
         }
-        public Builder importJobId(@Nullable String importJobId) {
-            this.importJobId = Codegen.ofNullable(importJobId);
-            return this;
+
+        public Builder importJobId(String importJobId) {
+            return importJobId(Output.of(importJobId));
         }
+
         public Builder importMethod(@Nullable Output<String> importMethod) {
-            this.importMethod = importMethod;
+            $.importMethod = importMethod;
             return this;
         }
-        public Builder importMethod(@Nullable String importMethod) {
-            this.importMethod = Codegen.ofNullable(importMethod);
-            return this;
+
+        public Builder importMethod(String importMethod) {
+            return importMethod(Output.of(importMethod));
         }
+
         public Builder keyRing(@Nullable Output<String> keyRing) {
-            this.keyRing = keyRing;
+            $.keyRing = keyRing;
             return this;
         }
-        public Builder keyRing(@Nullable String keyRing) {
-            this.keyRing = Codegen.ofNullable(keyRing);
-            return this;
+
+        public Builder keyRing(String keyRing) {
+            return keyRing(Output.of(keyRing));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protectionLevel(@Nullable Output<String> protectionLevel) {
-            this.protectionLevel = protectionLevel;
+            $.protectionLevel = protectionLevel;
             return this;
         }
-        public Builder protectionLevel(@Nullable String protectionLevel) {
-            this.protectionLevel = Codegen.ofNullable(protectionLevel);
-            return this;
+
+        public Builder protectionLevel(String protectionLevel) {
+            return protectionLevel(Output.of(protectionLevel));
         }
+
         public Builder publicKeys(@Nullable Output<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys) {
-            this.publicKeys = publicKeys;
+            $.publicKeys = publicKeys;
             return this;
         }
-        public Builder publicKeys(@Nullable List<KeyRingImportJobPublicKeyGetArgs> publicKeys) {
-            this.publicKeys = Codegen.ofNullable(publicKeys);
-            return this;
+
+        public Builder publicKeys(List<KeyRingImportJobPublicKeyGetArgs> publicKeys) {
+            return publicKeys(Output.of(publicKeys));
         }
+
         public Builder publicKeys(KeyRingImportJobPublicKeyGetArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public KeyRingImportJobState build() {
-            return new KeyRingImportJobState(attestations, expireTime, importJobId, importMethod, keyRing, name, protectionLevel, publicKeys, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public KeyRingImportJobState build() {
+            return $;
         }
     }
+
 }

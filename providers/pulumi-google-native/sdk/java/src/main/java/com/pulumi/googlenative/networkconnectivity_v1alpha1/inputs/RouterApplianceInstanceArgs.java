@@ -5,9 +5,9 @@ package com.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class RouterApplianceInstanceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     @Import(name="networkInterface")
-      private final @Nullable Output<String> networkInterface;
+    private @Nullable Output<String> networkInterface;
 
-    public Output<String> networkInterface() {
-        return this.networkInterface == null ? Codegen.empty() : this.networkInterface;
+    public Optional<Output<String>> networkInterface() {
+        return Optional.ofNullable(this.networkInterface);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class RouterApplianceInstanceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="virtualMachine")
-      private final @Nullable Output<String> virtualMachine;
+    private @Nullable Output<String> virtualMachine;
 
-    public Output<String> virtualMachine() {
-        return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
+    public Optional<Output<String>> virtualMachine() {
+        return Optional.ofNullable(this.virtualMachine);
     }
 
-    public RouterApplianceInstanceArgs(
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> networkInterface,
-        @Nullable Output<String> virtualMachine) {
-        this.ipAddress = ipAddress;
-        this.networkInterface = networkInterface;
-        this.virtualMachine = virtualMachine;
-    }
+    private RouterApplianceInstanceArgs() {}
 
-    private RouterApplianceInstanceArgs() {
-        this.ipAddress = Codegen.empty();
-        this.networkInterface = Codegen.empty();
-        this.virtualMachine = Codegen.empty();
+    private RouterApplianceInstanceArgs(RouterApplianceInstanceArgs $) {
+        this.ipAddress = $.ipAddress;
+        this.networkInterface = $.networkInterface;
+        this.virtualMachine = $.virtualMachine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterApplianceInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> networkInterface;
-        private @Nullable Output<String> virtualMachine;
+        private RouterApplianceInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterApplianceInstanceArgs();
         }
 
         public Builder(RouterApplianceInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.networkInterface = defaults.networkInterface;
-    	      this.virtualMachine = defaults.virtualMachine;
+            $ = new RouterApplianceInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder networkInterface(@Nullable Output<String> networkInterface) {
-            this.networkInterface = networkInterface;
+            $.networkInterface = networkInterface;
             return this;
         }
-        public Builder networkInterface(@Nullable String networkInterface) {
-            this.networkInterface = Codegen.ofNullable(networkInterface);
-            return this;
+
+        public Builder networkInterface(String networkInterface) {
+            return networkInterface(Output.of(networkInterface));
         }
+
         public Builder virtualMachine(@Nullable Output<String> virtualMachine) {
-            this.virtualMachine = virtualMachine;
+            $.virtualMachine = virtualMachine;
             return this;
         }
-        public Builder virtualMachine(@Nullable String virtualMachine) {
-            this.virtualMachine = Codegen.ofNullable(virtualMachine);
-            return this;
-        }        public RouterApplianceInstanceArgs build() {
-            return new RouterApplianceInstanceArgs(ipAddress, networkInterface, virtualMachine);
+
+        public Builder virtualMachine(String virtualMachine) {
+            return virtualMachine(Output.of(virtualMachine));
+        }
+
+        public RouterApplianceInstanceArgs build() {
+            return $;
         }
     }
+
 }

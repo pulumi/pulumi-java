@@ -6,10 +6,10 @@ package com.pulumi.azurenative.logz.inputs;
 import com.pulumi.azurenative.logz.inputs.FilteringTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MetricRulesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filteringTags")
-      private final @Nullable Output<List<FilteringTagArgs>> filteringTags;
+    private @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
-    public Output<List<FilteringTagArgs>> filteringTags() {
-        return this.filteringTags == null ? Codegen.empty() : this.filteringTags;
+    public Optional<Output<List<FilteringTagArgs>>> filteringTags() {
+        return Optional.ofNullable(this.filteringTags);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class MetricRulesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
-    public Output<String> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public MetricRulesArgs(
-        @Nullable Output<List<FilteringTagArgs>> filteringTags,
-        @Nullable Output<String> subscriptionId) {
-        this.filteringTags = filteringTags;
-        this.subscriptionId = subscriptionId;
-    }
+    private MetricRulesArgs() {}
 
-    private MetricRulesArgs() {
-        this.filteringTags = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
+    private MetricRulesArgs(MetricRulesArgs $) {
+        this.filteringTags = $.filteringTags;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FilteringTagArgs>> filteringTags;
-        private @Nullable Output<String> subscriptionId;
+        private MetricRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricRulesArgs();
         }
 
         public Builder(MetricRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filteringTags = defaults.filteringTags;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new MetricRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filteringTags(@Nullable Output<List<FilteringTagArgs>> filteringTags) {
-            this.filteringTags = filteringTags;
+            $.filteringTags = filteringTags;
             return this;
         }
-        public Builder filteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
-            this.filteringTags = Codegen.ofNullable(filteringTags);
-            return this;
+
+        public Builder filteringTags(List<FilteringTagArgs> filteringTags) {
+            return filteringTags(Output.of(filteringTags));
         }
+
         public Builder filteringTags(FilteringTagArgs... filteringTags) {
             return filteringTags(List.of(filteringTags));
         }
+
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
-        }        public MetricRulesArgs build() {
-            return new MetricRulesArgs(filteringTags, subscriptionId);
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        public MetricRulesArgs build() {
+            return $;
         }
     }
+
 }

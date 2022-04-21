@@ -17,7 +17,7 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zoneName", required=true)
-      private final String zoneName;
+    private String zoneName;
 
     public String zoneName() {
         return this.zoneName;
     }
 
-    public GetZoneArgs(
-        String resourceGroupName,
-        String zoneName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.zoneName = Objects.requireNonNull(zoneName, "expected parameter 'zoneName' to be non-null");
-    }
+    private GetZoneArgs() {}
 
-    private GetZoneArgs() {
-        this.resourceGroupName = null;
-        this.zoneName = null;
+    private GetZoneArgs(GetZoneArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.zoneName = $.zoneName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String zoneName;
+        private GetZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetZoneArgs();
         }
 
         public Builder(GetZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.zoneName = defaults.zoneName;
+            $ = new GetZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder zoneName(String zoneName) {
-            this.zoneName = Objects.requireNonNull(zoneName);
+            $.zoneName = zoneName;
             return this;
-        }        public GetZoneArgs build() {
-            return new GetZoneArgs(resourceGroupName, zoneName);
+        }
+
+        public GetZoneArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.zoneName = Objects.requireNonNull($.zoneName, "expected parameter 'zoneName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,13 +8,13 @@ import com.pulumi.aws.glue.inputs.JobExecutionPropertyArgs;
 import com.pulumi.aws.glue.inputs.JobNotificationPropertyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command", required=true)
-      private final Output<JobCommandArgs> command;
+    private Output<JobCommandArgs> command;
 
     public Output<JobCommandArgs> command() {
         return this.command;
@@ -38,10 +38,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connections")
-      private final @Nullable Output<List<String>> connections;
+    private @Nullable Output<List<String>> connections;
 
-    public Output<List<String>> connections() {
-        return this.connections == null ? Codegen.empty() : this.connections;
+    public Optional<Output<List<String>>> connections() {
+        return Optional.ofNullable(this.connections);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultArguments")
-      private final @Nullable Output<Map<String,String>> defaultArguments;
+    private @Nullable Output<Map<String,String>> defaultArguments;
 
-    public Output<Map<String,String>> defaultArguments() {
-        return this.defaultArguments == null ? Codegen.empty() : this.defaultArguments;
+    public Optional<Output<Map<String,String>>> defaultArguments() {
+        return Optional.ofNullable(this.defaultArguments);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionProperty")
-      private final @Nullable Output<JobExecutionPropertyArgs> executionProperty;
+    private @Nullable Output<JobExecutionPropertyArgs> executionProperty;
 
-    public Output<JobExecutionPropertyArgs> executionProperty() {
-        return this.executionProperty == null ? Codegen.empty() : this.executionProperty;
+    public Optional<Output<JobExecutionPropertyArgs>> executionProperty() {
+        return Optional.ofNullable(this.executionProperty);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="glueVersion")
-      private final @Nullable Output<String> glueVersion;
+    private @Nullable Output<String> glueVersion;
 
-    public Output<String> glueVersion() {
-        return this.glueVersion == null ? Codegen.empty() : this.glueVersion;
+    public Optional<Output<String>> glueVersion() {
+        return Optional.ofNullable(this.glueVersion);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxCapacity")
-      private final @Nullable Output<Double> maxCapacity;
+    private @Nullable Output<Double> maxCapacity;
 
-    public Output<Double> maxCapacity() {
-        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
+    public Optional<Output<Double>> maxCapacity() {
+        return Optional.ofNullable(this.maxCapacity);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxRetries")
-      private final @Nullable Output<Integer> maxRetries;
+    private @Nullable Output<Integer> maxRetries;
 
-    public Output<Integer> maxRetries() {
-        return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
+    public Optional<Output<Integer>> maxRetries() {
+        return Optional.ofNullable(this.maxRetries);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nonOverridableArguments")
-      private final @Nullable Output<Map<String,String>> nonOverridableArguments;
+    private @Nullable Output<Map<String,String>> nonOverridableArguments;
 
-    public Output<Map<String,String>> nonOverridableArguments() {
-        return this.nonOverridableArguments == null ? Codegen.empty() : this.nonOverridableArguments;
+    public Optional<Output<Map<String,String>>> nonOverridableArguments() {
+        return Optional.ofNullable(this.nonOverridableArguments);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationProperty")
-      private final @Nullable Output<JobNotificationPropertyArgs> notificationProperty;
+    private @Nullable Output<JobNotificationPropertyArgs> notificationProperty;
 
-    public Output<JobNotificationPropertyArgs> notificationProperty() {
-        return this.notificationProperty == null ? Codegen.empty() : this.notificationProperty;
+    public Optional<Output<JobNotificationPropertyArgs>> notificationProperty() {
+        return Optional.ofNullable(this.notificationProperty);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numberOfWorkers")
-      private final @Nullable Output<Integer> numberOfWorkers;
+    private @Nullable Output<Integer> numberOfWorkers;
 
-    public Output<Integer> numberOfWorkers() {
-        return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
+    public Optional<Output<Integer>> numberOfWorkers() {
+        return Optional.ofNullable(this.numberOfWorkers);
     }
 
     /**
@@ -159,7 +159,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -170,10 +170,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityConfiguration")
-      private final @Nullable Output<String> securityConfiguration;
+    private @Nullable Output<String> securityConfiguration;
 
-    public Output<String> securityConfiguration() {
-        return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
+    public Optional<Output<String>> securityConfiguration() {
+        return Optional.ofNullable(this.securityConfiguration);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Integer> timeout;
+    private @Nullable Output<Integer> timeout;
 
-    public Output<Integer> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Integer>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -203,261 +203,214 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerType")
-      private final @Nullable Output<String> workerType;
+    private @Nullable Output<String> workerType;
 
-    public Output<String> workerType() {
-        return this.workerType == null ? Codegen.empty() : this.workerType;
+    public Optional<Output<String>> workerType() {
+        return Optional.ofNullable(this.workerType);
     }
 
-    public JobArgs(
-        Output<JobCommandArgs> command,
-        @Nullable Output<List<String>> connections,
-        @Nullable Output<Map<String,String>> defaultArguments,
-        @Nullable Output<String> description,
-        @Nullable Output<JobExecutionPropertyArgs> executionProperty,
-        @Nullable Output<String> glueVersion,
-        @Nullable Output<Double> maxCapacity,
-        @Nullable Output<Integer> maxRetries,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> nonOverridableArguments,
-        @Nullable Output<JobNotificationPropertyArgs> notificationProperty,
-        @Nullable Output<Integer> numberOfWorkers,
-        Output<String> roleArn,
-        @Nullable Output<String> securityConfiguration,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> timeout,
-        @Nullable Output<String> workerType) {
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.connections = connections;
-        this.defaultArguments = defaultArguments;
-        this.description = description;
-        this.executionProperty = executionProperty;
-        this.glueVersion = glueVersion;
-        this.maxCapacity = maxCapacity;
-        this.maxRetries = maxRetries;
-        this.name = name;
-        this.nonOverridableArguments = nonOverridableArguments;
-        this.notificationProperty = notificationProperty;
-        this.numberOfWorkers = numberOfWorkers;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.securityConfiguration = securityConfiguration;
-        this.tags = tags;
-        this.timeout = timeout;
-        this.workerType = workerType;
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.command = Codegen.empty();
-        this.connections = Codegen.empty();
-        this.defaultArguments = Codegen.empty();
-        this.description = Codegen.empty();
-        this.executionProperty = Codegen.empty();
-        this.glueVersion = Codegen.empty();
-        this.maxCapacity = Codegen.empty();
-        this.maxRetries = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nonOverridableArguments = Codegen.empty();
-        this.notificationProperty = Codegen.empty();
-        this.numberOfWorkers = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.securityConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.workerType = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.command = $.command;
+        this.connections = $.connections;
+        this.defaultArguments = $.defaultArguments;
+        this.description = $.description;
+        this.executionProperty = $.executionProperty;
+        this.glueVersion = $.glueVersion;
+        this.maxCapacity = $.maxCapacity;
+        this.maxRetries = $.maxRetries;
+        this.name = $.name;
+        this.nonOverridableArguments = $.nonOverridableArguments;
+        this.notificationProperty = $.notificationProperty;
+        this.numberOfWorkers = $.numberOfWorkers;
+        this.roleArn = $.roleArn;
+        this.securityConfiguration = $.securityConfiguration;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
+        this.workerType = $.workerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<JobCommandArgs> command;
-        private @Nullable Output<List<String>> connections;
-        private @Nullable Output<Map<String,String>> defaultArguments;
-        private @Nullable Output<String> description;
-        private @Nullable Output<JobExecutionPropertyArgs> executionProperty;
-        private @Nullable Output<String> glueVersion;
-        private @Nullable Output<Double> maxCapacity;
-        private @Nullable Output<Integer> maxRetries;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> nonOverridableArguments;
-        private @Nullable Output<JobNotificationPropertyArgs> notificationProperty;
-        private @Nullable Output<Integer> numberOfWorkers;
-        private Output<String> roleArn;
-        private @Nullable Output<String> securityConfiguration;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> timeout;
-        private @Nullable Output<String> workerType;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.connections = defaults.connections;
-    	      this.defaultArguments = defaults.defaultArguments;
-    	      this.description = defaults.description;
-    	      this.executionProperty = defaults.executionProperty;
-    	      this.glueVersion = defaults.glueVersion;
-    	      this.maxCapacity = defaults.maxCapacity;
-    	      this.maxRetries = defaults.maxRetries;
-    	      this.name = defaults.name;
-    	      this.nonOverridableArguments = defaults.nonOverridableArguments;
-    	      this.notificationProperty = defaults.notificationProperty;
-    	      this.numberOfWorkers = defaults.numberOfWorkers;
-    	      this.roleArn = defaults.roleArn;
-    	      this.securityConfiguration = defaults.securityConfiguration;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
-    	      this.workerType = defaults.workerType;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder command(Output<JobCommandArgs> command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder command(JobCommandArgs command) {
-            this.command = Output.of(Objects.requireNonNull(command));
-            return this;
+            return command(Output.of(command));
         }
+
         public Builder connections(@Nullable Output<List<String>> connections) {
-            this.connections = connections;
+            $.connections = connections;
             return this;
         }
-        public Builder connections(@Nullable List<String> connections) {
-            this.connections = Codegen.ofNullable(connections);
-            return this;
+
+        public Builder connections(List<String> connections) {
+            return connections(Output.of(connections));
         }
+
         public Builder connections(String... connections) {
             return connections(List.of(connections));
         }
+
         public Builder defaultArguments(@Nullable Output<Map<String,String>> defaultArguments) {
-            this.defaultArguments = defaultArguments;
+            $.defaultArguments = defaultArguments;
             return this;
         }
-        public Builder defaultArguments(@Nullable Map<String,String> defaultArguments) {
-            this.defaultArguments = Codegen.ofNullable(defaultArguments);
-            return this;
+
+        public Builder defaultArguments(Map<String,String> defaultArguments) {
+            return defaultArguments(Output.of(defaultArguments));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder executionProperty(@Nullable Output<JobExecutionPropertyArgs> executionProperty) {
-            this.executionProperty = executionProperty;
+            $.executionProperty = executionProperty;
             return this;
         }
-        public Builder executionProperty(@Nullable JobExecutionPropertyArgs executionProperty) {
-            this.executionProperty = Codegen.ofNullable(executionProperty);
-            return this;
+
+        public Builder executionProperty(JobExecutionPropertyArgs executionProperty) {
+            return executionProperty(Output.of(executionProperty));
         }
+
         public Builder glueVersion(@Nullable Output<String> glueVersion) {
-            this.glueVersion = glueVersion;
+            $.glueVersion = glueVersion;
             return this;
         }
-        public Builder glueVersion(@Nullable String glueVersion) {
-            this.glueVersion = Codegen.ofNullable(glueVersion);
-            return this;
+
+        public Builder glueVersion(String glueVersion) {
+            return glueVersion(Output.of(glueVersion));
         }
+
         public Builder maxCapacity(@Nullable Output<Double> maxCapacity) {
-            this.maxCapacity = maxCapacity;
+            $.maxCapacity = maxCapacity;
             return this;
         }
-        public Builder maxCapacity(@Nullable Double maxCapacity) {
-            this.maxCapacity = Codegen.ofNullable(maxCapacity);
-            return this;
+
+        public Builder maxCapacity(Double maxCapacity) {
+            return maxCapacity(Output.of(maxCapacity));
         }
+
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
-            this.maxRetries = maxRetries;
+            $.maxRetries = maxRetries;
             return this;
         }
-        public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Codegen.ofNullable(maxRetries);
-            return this;
+
+        public Builder maxRetries(Integer maxRetries) {
+            return maxRetries(Output.of(maxRetries));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nonOverridableArguments(@Nullable Output<Map<String,String>> nonOverridableArguments) {
-            this.nonOverridableArguments = nonOverridableArguments;
+            $.nonOverridableArguments = nonOverridableArguments;
             return this;
         }
-        public Builder nonOverridableArguments(@Nullable Map<String,String> nonOverridableArguments) {
-            this.nonOverridableArguments = Codegen.ofNullable(nonOverridableArguments);
-            return this;
+
+        public Builder nonOverridableArguments(Map<String,String> nonOverridableArguments) {
+            return nonOverridableArguments(Output.of(nonOverridableArguments));
         }
+
         public Builder notificationProperty(@Nullable Output<JobNotificationPropertyArgs> notificationProperty) {
-            this.notificationProperty = notificationProperty;
+            $.notificationProperty = notificationProperty;
             return this;
         }
-        public Builder notificationProperty(@Nullable JobNotificationPropertyArgs notificationProperty) {
-            this.notificationProperty = Codegen.ofNullable(notificationProperty);
-            return this;
+
+        public Builder notificationProperty(JobNotificationPropertyArgs notificationProperty) {
+            return notificationProperty(Output.of(notificationProperty));
         }
+
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
-            this.numberOfWorkers = numberOfWorkers;
+            $.numberOfWorkers = numberOfWorkers;
             return this;
         }
-        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Codegen.ofNullable(numberOfWorkers);
-            return this;
+
+        public Builder numberOfWorkers(Integer numberOfWorkers) {
+            return numberOfWorkers(Output.of(numberOfWorkers));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
-            this.securityConfiguration = securityConfiguration;
+            $.securityConfiguration = securityConfiguration;
             return this;
         }
-        public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Codegen.ofNullable(securityConfiguration);
-            return this;
+
+        public Builder securityConfiguration(String securityConfiguration) {
+            return securityConfiguration(Output.of(securityConfiguration));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(Integer timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder workerType(@Nullable Output<String> workerType) {
-            this.workerType = workerType;
+            $.workerType = workerType;
             return this;
         }
-        public Builder workerType(@Nullable String workerType) {
-            this.workerType = Codegen.ofNullable(workerType);
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(command, connections, defaultArguments, description, executionProperty, glueVersion, maxCapacity, maxRetries, name, nonOverridableArguments, notificationProperty, numberOfWorkers, roleArn, securityConfiguration, tags, timeout, workerType);
+
+        public Builder workerType(String workerType) {
+            return workerType(Output.of(workerType));
+        }
+
+        public JobArgs build() {
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

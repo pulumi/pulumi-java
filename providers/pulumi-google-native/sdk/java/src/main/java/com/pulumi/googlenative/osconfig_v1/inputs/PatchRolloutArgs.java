@@ -5,10 +5,10 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1.enums.PatchRolloutMode;
 import com.pulumi.googlenative.osconfig_v1.inputs.FixedOrPercentArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PatchRolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disruptionBudget")
-      private final @Nullable Output<FixedOrPercentArgs> disruptionBudget;
+    private @Nullable Output<FixedOrPercentArgs> disruptionBudget;
 
-    public Output<FixedOrPercentArgs> disruptionBudget() {
-        return this.disruptionBudget == null ? Codegen.empty() : this.disruptionBudget;
+    public Optional<Output<FixedOrPercentArgs>> disruptionBudget() {
+        return Optional.ofNullable(this.disruptionBudget);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class PatchRolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<PatchRolloutMode> mode;
+    private @Nullable Output<PatchRolloutMode> mode;
 
-    public Output<PatchRolloutMode> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<PatchRolloutMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public PatchRolloutArgs(
-        @Nullable Output<FixedOrPercentArgs> disruptionBudget,
-        @Nullable Output<PatchRolloutMode> mode) {
-        this.disruptionBudget = disruptionBudget;
-        this.mode = mode;
-    }
+    private PatchRolloutArgs() {}
 
-    private PatchRolloutArgs() {
-        this.disruptionBudget = Codegen.empty();
-        this.mode = Codegen.empty();
+    private PatchRolloutArgs(PatchRolloutArgs $) {
+        this.disruptionBudget = $.disruptionBudget;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FixedOrPercentArgs> disruptionBudget;
-        private @Nullable Output<PatchRolloutMode> mode;
+        private PatchRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchRolloutArgs();
         }
 
         public Builder(PatchRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disruptionBudget = defaults.disruptionBudget;
-    	      this.mode = defaults.mode;
+            $ = new PatchRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disruptionBudget(@Nullable Output<FixedOrPercentArgs> disruptionBudget) {
-            this.disruptionBudget = disruptionBudget;
+            $.disruptionBudget = disruptionBudget;
             return this;
         }
-        public Builder disruptionBudget(@Nullable FixedOrPercentArgs disruptionBudget) {
-            this.disruptionBudget = Codegen.ofNullable(disruptionBudget);
-            return this;
+
+        public Builder disruptionBudget(FixedOrPercentArgs disruptionBudget) {
+            return disruptionBudget(Output.of(disruptionBudget));
         }
+
         public Builder mode(@Nullable Output<PatchRolloutMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable PatchRolloutMode mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public PatchRolloutArgs build() {
-            return new PatchRolloutArgs(disruptionBudget, mode);
+
+        public Builder mode(PatchRolloutMode mode) {
+            return mode(Output.of(mode));
+        }
+
+        public PatchRolloutArgs build() {
+            return $;
         }
     }
+
 }

@@ -10,11 +10,11 @@ import com.pulumi.azurenative.network.inputs.Ipv6ExpressRouteCircuitPeeringConfi
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="crossConnectionName", required=true)
-      private final Output<String> crossConnectionName;
+    private Output<String> crossConnectionName;
 
     public Output<String> crossConnectionName() {
         return this.crossConnectionName;
@@ -38,10 +38,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="gatewayManagerEtag")
-      private final @Nullable Output<String> gatewayManagerEtag;
+    private @Nullable Output<String> gatewayManagerEtag;
 
-    public Output<String> gatewayManagerEtag() {
-        return this.gatewayManagerEtag == null ? Codegen.empty() : this.gatewayManagerEtag;
+    public Optional<Output<String>> gatewayManagerEtag() {
+        return Optional.ofNullable(this.gatewayManagerEtag);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="ipv6PeeringConfig")
-      private final @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
+    private @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
 
-    public Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig() {
-        return this.ipv6PeeringConfig == null ? Codegen.empty() : this.ipv6PeeringConfig;
+    public Optional<Output<Ipv6ExpressRouteCircuitPeeringConfigArgs>> ipv6PeeringConfig() {
+        return Optional.ofNullable(this.ipv6PeeringConfig);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="microsoftPeeringConfig")
-      private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
+    private @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
-    public Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig() {
-        return this.microsoftPeeringConfig == null ? Codegen.empty() : this.microsoftPeeringConfig;
+    public Optional<Output<ExpressRouteCircuitPeeringConfigArgs>> microsoftPeeringConfig() {
+        return Optional.ofNullable(this.microsoftPeeringConfig);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="peerASN")
-      private final @Nullable Output<Double> peerASN;
+    private @Nullable Output<Double> peerASN;
 
-    public Output<Double> peerASN() {
-        return this.peerASN == null ? Codegen.empty() : this.peerASN;
+    public Optional<Output<Double>> peerASN() {
+        return Optional.ofNullable(this.peerASN);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="peeringName")
-      private final @Nullable Output<String> peeringName;
+    private @Nullable Output<String> peeringName;
 
-    public Output<String> peeringName() {
-        return this.peeringName == null ? Codegen.empty() : this.peeringName;
+    public Optional<Output<String>> peeringName() {
+        return Optional.ofNullable(this.peeringName);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="peeringType")
-      private final @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
+    private @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
 
-    public Output<Either<String,ExpressRoutePeeringType>> peeringType() {
-        return this.peeringType == null ? Codegen.empty() : this.peeringType;
+    public Optional<Output<Either<String,ExpressRoutePeeringType>>> peeringType() {
+        return Optional.ofNullable(this.peeringType);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="primaryPeerAddressPrefix")
-      private final @Nullable Output<String> primaryPeerAddressPrefix;
+    private @Nullable Output<String> primaryPeerAddressPrefix;
 
-    public Output<String> primaryPeerAddressPrefix() {
-        return this.primaryPeerAddressPrefix == null ? Codegen.empty() : this.primaryPeerAddressPrefix;
+    public Optional<Output<String>> primaryPeerAddressPrefix() {
+        return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
 
     /**
@@ -137,7 +137,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -148,10 +148,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="secondaryPeerAddressPrefix")
-      private final @Nullable Output<String> secondaryPeerAddressPrefix;
+    private @Nullable Output<String> secondaryPeerAddressPrefix;
 
-    public Output<String> secondaryPeerAddressPrefix() {
-        return this.secondaryPeerAddressPrefix == null ? Codegen.empty() : this.secondaryPeerAddressPrefix;
+    public Optional<Output<String>> secondaryPeerAddressPrefix() {
+        return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="sharedKey")
-      private final @Nullable Output<String> sharedKey;
+    private @Nullable Output<String> sharedKey;
 
-    public Output<String> sharedKey() {
-        return this.sharedKey == null ? Codegen.empty() : this.sharedKey;
+    public Optional<Output<String>> sharedKey() {
+        return Optional.ofNullable(this.sharedKey);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
+    private @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
 
-    public Output<Either<String,ExpressRoutePeeringState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,ExpressRoutePeeringState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -181,232 +181,190 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends com.pulumi.res
      * 
      */
     @Import(name="vlanId")
-      private final @Nullable Output<Integer> vlanId;
+    private @Nullable Output<Integer> vlanId;
 
-    public Output<Integer> vlanId() {
-        return this.vlanId == null ? Codegen.empty() : this.vlanId;
+    public Optional<Output<Integer>> vlanId() {
+        return Optional.ofNullable(this.vlanId);
     }
 
-    public ExpressRouteCrossConnectionPeeringArgs(
-        Output<String> crossConnectionName,
-        @Nullable Output<String> gatewayManagerEtag,
-        @Nullable Output<String> id,
-        @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig,
-        @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<Double> peerASN,
-        @Nullable Output<String> peeringName,
-        @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType,
-        @Nullable Output<String> primaryPeerAddressPrefix,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> secondaryPeerAddressPrefix,
-        @Nullable Output<String> sharedKey,
-        @Nullable Output<Either<String,ExpressRoutePeeringState>> state,
-        @Nullable Output<Integer> vlanId) {
-        this.crossConnectionName = Objects.requireNonNull(crossConnectionName, "expected parameter 'crossConnectionName' to be non-null");
-        this.gatewayManagerEtag = gatewayManagerEtag;
-        this.id = id;
-        this.ipv6PeeringConfig = ipv6PeeringConfig;
-        this.microsoftPeeringConfig = microsoftPeeringConfig;
-        this.name = name;
-        this.peerASN = peerASN;
-        this.peeringName = peeringName;
-        this.peeringType = peeringType;
-        this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
-        this.sharedKey = sharedKey;
-        this.state = state;
-        this.vlanId = vlanId;
-    }
+    private ExpressRouteCrossConnectionPeeringArgs() {}
 
-    private ExpressRouteCrossConnectionPeeringArgs() {
-        this.crossConnectionName = Codegen.empty();
-        this.gatewayManagerEtag = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipv6PeeringConfig = Codegen.empty();
-        this.microsoftPeeringConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.peerASN = Codegen.empty();
-        this.peeringName = Codegen.empty();
-        this.peeringType = Codegen.empty();
-        this.primaryPeerAddressPrefix = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.secondaryPeerAddressPrefix = Codegen.empty();
-        this.sharedKey = Codegen.empty();
-        this.state = Codegen.empty();
-        this.vlanId = Codegen.empty();
+    private ExpressRouteCrossConnectionPeeringArgs(ExpressRouteCrossConnectionPeeringArgs $) {
+        this.crossConnectionName = $.crossConnectionName;
+        this.gatewayManagerEtag = $.gatewayManagerEtag;
+        this.id = $.id;
+        this.ipv6PeeringConfig = $.ipv6PeeringConfig;
+        this.microsoftPeeringConfig = $.microsoftPeeringConfig;
+        this.name = $.name;
+        this.peerASN = $.peerASN;
+        this.peeringName = $.peeringName;
+        this.peeringType = $.peeringType;
+        this.primaryPeerAddressPrefix = $.primaryPeerAddressPrefix;
+        this.resourceGroupName = $.resourceGroupName;
+        this.secondaryPeerAddressPrefix = $.secondaryPeerAddressPrefix;
+        this.sharedKey = $.sharedKey;
+        this.state = $.state;
+        this.vlanId = $.vlanId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCrossConnectionPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> crossConnectionName;
-        private @Nullable Output<String> gatewayManagerEtag;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
-        private @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Double> peerASN;
-        private @Nullable Output<String> peeringName;
-        private @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
-        private @Nullable Output<String> primaryPeerAddressPrefix;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> secondaryPeerAddressPrefix;
-        private @Nullable Output<String> sharedKey;
-        private @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
-        private @Nullable Output<Integer> vlanId;
+        private ExpressRouteCrossConnectionPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCrossConnectionPeeringArgs();
         }
 
         public Builder(ExpressRouteCrossConnectionPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crossConnectionName = defaults.crossConnectionName;
-    	      this.gatewayManagerEtag = defaults.gatewayManagerEtag;
-    	      this.id = defaults.id;
-    	      this.ipv6PeeringConfig = defaults.ipv6PeeringConfig;
-    	      this.microsoftPeeringConfig = defaults.microsoftPeeringConfig;
-    	      this.name = defaults.name;
-    	      this.peerASN = defaults.peerASN;
-    	      this.peeringName = defaults.peeringName;
-    	      this.peeringType = defaults.peeringType;
-    	      this.primaryPeerAddressPrefix = defaults.primaryPeerAddressPrefix;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secondaryPeerAddressPrefix = defaults.secondaryPeerAddressPrefix;
-    	      this.sharedKey = defaults.sharedKey;
-    	      this.state = defaults.state;
-    	      this.vlanId = defaults.vlanId;
+            $ = new ExpressRouteCrossConnectionPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crossConnectionName(Output<String> crossConnectionName) {
-            this.crossConnectionName = Objects.requireNonNull(crossConnectionName);
+            $.crossConnectionName = crossConnectionName;
             return this;
         }
+
         public Builder crossConnectionName(String crossConnectionName) {
-            this.crossConnectionName = Output.of(Objects.requireNonNull(crossConnectionName));
-            return this;
+            return crossConnectionName(Output.of(crossConnectionName));
         }
+
         public Builder gatewayManagerEtag(@Nullable Output<String> gatewayManagerEtag) {
-            this.gatewayManagerEtag = gatewayManagerEtag;
+            $.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
-        public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
-            this.gatewayManagerEtag = Codegen.ofNullable(gatewayManagerEtag);
-            return this;
+
+        public Builder gatewayManagerEtag(String gatewayManagerEtag) {
+            return gatewayManagerEtag(Output.of(gatewayManagerEtag));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipv6PeeringConfig(@Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig) {
-            this.ipv6PeeringConfig = ipv6PeeringConfig;
+            $.ipv6PeeringConfig = ipv6PeeringConfig;
             return this;
         }
-        public Builder ipv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigArgs ipv6PeeringConfig) {
-            this.ipv6PeeringConfig = Codegen.ofNullable(ipv6PeeringConfig);
-            return this;
+
+        public Builder ipv6PeeringConfig(Ipv6ExpressRouteCircuitPeeringConfigArgs ipv6PeeringConfig) {
+            return ipv6PeeringConfig(Output.of(ipv6PeeringConfig));
         }
+
         public Builder microsoftPeeringConfig(@Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
-            this.microsoftPeeringConfig = microsoftPeeringConfig;
+            $.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
-        public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
-            this.microsoftPeeringConfig = Codegen.ofNullable(microsoftPeeringConfig);
-            return this;
+
+        public Builder microsoftPeeringConfig(ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
+            return microsoftPeeringConfig(Output.of(microsoftPeeringConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder peerASN(@Nullable Output<Double> peerASN) {
-            this.peerASN = peerASN;
+            $.peerASN = peerASN;
             return this;
         }
-        public Builder peerASN(@Nullable Double peerASN) {
-            this.peerASN = Codegen.ofNullable(peerASN);
-            return this;
+
+        public Builder peerASN(Double peerASN) {
+            return peerASN(Output.of(peerASN));
         }
+
         public Builder peeringName(@Nullable Output<String> peeringName) {
-            this.peeringName = peeringName;
+            $.peeringName = peeringName;
             return this;
         }
-        public Builder peeringName(@Nullable String peeringName) {
-            this.peeringName = Codegen.ofNullable(peeringName);
-            return this;
+
+        public Builder peeringName(String peeringName) {
+            return peeringName(Output.of(peeringName));
         }
+
         public Builder peeringType(@Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType) {
-            this.peeringType = peeringType;
+            $.peeringType = peeringType;
             return this;
         }
-        public Builder peeringType(@Nullable Either<String,ExpressRoutePeeringType> peeringType) {
-            this.peeringType = Codegen.ofNullable(peeringType);
-            return this;
+
+        public Builder peeringType(Either<String,ExpressRoutePeeringType> peeringType) {
+            return peeringType(Output.of(peeringType));
         }
+
         public Builder primaryPeerAddressPrefix(@Nullable Output<String> primaryPeerAddressPrefix) {
-            this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
+            $.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
-        public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
-            this.primaryPeerAddressPrefix = Codegen.ofNullable(primaryPeerAddressPrefix);
-            return this;
+
+        public Builder primaryPeerAddressPrefix(String primaryPeerAddressPrefix) {
+            return primaryPeerAddressPrefix(Output.of(primaryPeerAddressPrefix));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder secondaryPeerAddressPrefix(@Nullable Output<String> secondaryPeerAddressPrefix) {
-            this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
+            $.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
-        public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
-            this.secondaryPeerAddressPrefix = Codegen.ofNullable(secondaryPeerAddressPrefix);
-            return this;
+
+        public Builder secondaryPeerAddressPrefix(String secondaryPeerAddressPrefix) {
+            return secondaryPeerAddressPrefix(Output.of(secondaryPeerAddressPrefix));
         }
+
         public Builder sharedKey(@Nullable Output<String> sharedKey) {
-            this.sharedKey = sharedKey;
+            $.sharedKey = sharedKey;
             return this;
         }
-        public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = Codegen.ofNullable(sharedKey);
-            return this;
+
+        public Builder sharedKey(String sharedKey) {
+            return sharedKey(Output.of(sharedKey));
         }
+
         public Builder state(@Nullable Output<Either<String,ExpressRoutePeeringState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,ExpressRoutePeeringState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(Either<String,ExpressRoutePeeringState> state) {
+            return state(Output.of(state));
         }
+
         public Builder vlanId(@Nullable Output<Integer> vlanId) {
-            this.vlanId = vlanId;
+            $.vlanId = vlanId;
             return this;
         }
-        public Builder vlanId(@Nullable Integer vlanId) {
-            this.vlanId = Codegen.ofNullable(vlanId);
-            return this;
-        }        public ExpressRouteCrossConnectionPeeringArgs build() {
-            return new ExpressRouteCrossConnectionPeeringArgs(crossConnectionName, gatewayManagerEtag, id, ipv6PeeringConfig, microsoftPeeringConfig, name, peerASN, peeringName, peeringType, primaryPeerAddressPrefix, resourceGroupName, secondaryPeerAddressPrefix, sharedKey, state, vlanId);
+
+        public Builder vlanId(Integer vlanId) {
+            return vlanId(Output.of(vlanId));
+        }
+
+        public ExpressRouteCrossConnectionPeeringArgs build() {
+            $.crossConnectionName = Objects.requireNonNull($.crossConnectionName, "expected parameter 'crossConnectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

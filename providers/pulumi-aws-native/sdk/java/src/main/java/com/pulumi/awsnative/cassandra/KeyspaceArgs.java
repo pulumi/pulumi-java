@@ -6,10 +6,10 @@ package com.pulumi.awsnative.cassandra;
 import com.pulumi.awsnative.cassandra.inputs.KeyspaceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,73 +22,69 @@ public final class KeyspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyspaceName")
-      private final @Nullable Output<String> keyspaceName;
+    private @Nullable Output<String> keyspaceName;
 
-    public Output<String> keyspaceName() {
-        return this.keyspaceName == null ? Codegen.empty() : this.keyspaceName;
+    public Optional<Output<String>> keyspaceName() {
+        return Optional.ofNullable(this.keyspaceName);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<KeyspaceTagArgs>> tags;
+    private @Nullable Output<List<KeyspaceTagArgs>> tags;
 
-    public Output<List<KeyspaceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<KeyspaceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public KeyspaceArgs(
-        @Nullable Output<String> keyspaceName,
-        @Nullable Output<List<KeyspaceTagArgs>> tags) {
-        this.keyspaceName = keyspaceName;
-        this.tags = tags;
-    }
+    private KeyspaceArgs() {}
 
-    private KeyspaceArgs() {
-        this.keyspaceName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private KeyspaceArgs(KeyspaceArgs $) {
+        this.keyspaceName = $.keyspaceName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyspaceName;
-        private @Nullable Output<List<KeyspaceTagArgs>> tags;
+        private KeyspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyspaceArgs();
         }
 
         public Builder(KeyspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyspaceName = defaults.keyspaceName;
-    	      this.tags = defaults.tags;
+            $ = new KeyspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyspaceName(@Nullable Output<String> keyspaceName) {
-            this.keyspaceName = keyspaceName;
+            $.keyspaceName = keyspaceName;
             return this;
         }
-        public Builder keyspaceName(@Nullable String keyspaceName) {
-            this.keyspaceName = Codegen.ofNullable(keyspaceName);
-            return this;
+
+        public Builder keyspaceName(String keyspaceName) {
+            return keyspaceName(Output.of(keyspaceName));
         }
+
         public Builder tags(@Nullable Output<List<KeyspaceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<KeyspaceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<KeyspaceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(KeyspaceTagArgs... tags) {
             return tags(List.of(tags));
-        }        public KeyspaceArgs build() {
-            return new KeyspaceArgs(keyspaceName, tags);
+        }
+
+        public KeyspaceArgs build() {
+            return $;
         }
     }
+
 }

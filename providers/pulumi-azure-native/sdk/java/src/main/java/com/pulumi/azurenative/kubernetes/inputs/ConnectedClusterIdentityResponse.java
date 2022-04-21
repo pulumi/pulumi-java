@@ -22,7 +22,7 @@ public final class ConnectedClusterIdentityResponse extends com.pulumi.resources
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -33,7 +33,7 @@ public final class ConnectedClusterIdentityResponse extends com.pulumi.resources
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
@@ -44,64 +44,59 @@ public final class ConnectedClusterIdentityResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ConnectedClusterIdentityResponse(
-        String principalId,
-        String tenantId,
-        String type) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).def("SystemAssigned").require();
-    }
+    private ConnectedClusterIdentityResponse() {}
 
-    private ConnectedClusterIdentityResponse() {
-        this.principalId = null;
-        this.tenantId = null;
-        this.type = null;
+    private ConnectedClusterIdentityResponse(ConnectedClusterIdentityResponse $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectedClusterIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String principalId;
-        private String tenantId;
-        private String type;
+        private ConnectedClusterIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectedClusterIdentityResponse();
         }
 
         public Builder(ConnectedClusterIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new ConnectedClusterIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ConnectedClusterIdentityResponse build() {
-            return new ConnectedClusterIdentityResponse(principalId, tenantId, type);
+        }
+
+        public ConnectedClusterIdentityResponse build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).def("SystemAssigned").require();
+            return $;
         }
     }
+
 }

@@ -20,48 +20,48 @@ public final class GetDistributionConfigurationsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetDistributionConfigurationsFilter> filters;
+    private @Nullable List<GetDistributionConfigurationsFilter> filters;
 
-    public List<GetDistributionConfigurationsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetDistributionConfigurationsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
-    public GetDistributionConfigurationsArgs(@Nullable List<GetDistributionConfigurationsFilter> filters) {
-        this.filters = filters;
-    }
+    private GetDistributionConfigurationsArgs() {}
 
-    private GetDistributionConfigurationsArgs() {
-        this.filters = List.of();
+    private GetDistributionConfigurationsArgs(GetDistributionConfigurationsArgs $) {
+        this.filters = $.filters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDistributionConfigurationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetDistributionConfigurationsFilter> filters;
+        private GetDistributionConfigurationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDistributionConfigurationsArgs();
         }
 
         public Builder(GetDistributionConfigurationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
+            $ = new GetDistributionConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetDistributionConfigurationsFilter... filters) {
             return filters(List.of(filters));
-        }        public GetDistributionConfigurationsArgs build() {
-            return new GetDistributionConfigurationsArgs(filters);
+        }
+
+        public GetDistributionConfigurationsArgs build() {
+            return $;
         }
     }
+
 }

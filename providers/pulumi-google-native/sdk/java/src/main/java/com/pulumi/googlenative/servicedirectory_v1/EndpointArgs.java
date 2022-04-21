@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicedirectory_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -33,24 +33,24 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     @Import(name="endpointId", required=true)
-      private final Output<String> endpointId;
+    private Output<String> endpointId;
 
     public Output<String> endpointId() {
         return this.endpointId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -58,14 +58,14 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="namespaceId", required=true)
-      private final Output<String> namespaceId;
+    private Output<String> namespaceId;
 
     public Output<String> namespaceId() {
         return this.namespaceId;
@@ -76,10 +76,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -87,181 +87,155 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceId", required=true)
-      private final Output<String> serviceId;
+    private Output<String> serviceId;
 
     public Output<String> serviceId() {
         return this.serviceId;
     }
 
-    public EndpointArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<Map<String,String>> annotations,
-        Output<String> endpointId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> namespaceId,
-        @Nullable Output<String> network,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> project,
-        Output<String> serviceId) {
-        this.address = address;
-        this.annotations = annotations;
-        this.endpointId = Objects.requireNonNull(endpointId, "expected parameter 'endpointId' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.namespaceId = Objects.requireNonNull(namespaceId, "expected parameter 'namespaceId' to be non-null");
-        this.network = network;
-        this.port = port;
-        this.project = project;
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.address = Codegen.empty();
-        this.annotations = Codegen.empty();
-        this.endpointId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespaceId = Codegen.empty();
-        this.network = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceId = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.address = $.address;
+        this.annotations = $.annotations;
+        this.endpointId = $.endpointId;
+        this.location = $.location;
+        this.name = $.name;
+        this.namespaceId = $.namespaceId;
+        this.network = $.network;
+        this.port = $.port;
+        this.project = $.project;
+        this.serviceId = $.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<Map<String,String>> annotations;
-        private Output<String> endpointId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> namespaceId;
-        private @Nullable Output<String> network;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> project;
-        private Output<String> serviceId;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.annotations = defaults.annotations;
-    	      this.endpointId = defaults.endpointId;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.network = defaults.network;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.serviceId = defaults.serviceId;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder endpointId(Output<String> endpointId) {
-            this.endpointId = Objects.requireNonNull(endpointId);
+            $.endpointId = endpointId;
             return this;
         }
+
         public Builder endpointId(String endpointId) {
-            this.endpointId = Output.of(Objects.requireNonNull(endpointId));
-            return this;
+            return endpointId(Output.of(endpointId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespaceId(Output<String> namespaceId) {
-            this.namespaceId = Objects.requireNonNull(namespaceId);
+            $.namespaceId = namespaceId;
             return this;
         }
+
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Output.of(Objects.requireNonNull(namespaceId));
-            return this;
+            return namespaceId(Output.of(namespaceId));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceId(Output<String> serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(address, annotations, endpointId, location, name, namespaceId, network, port, project, serviceId);
+            return serviceId(Output.of(serviceId));
+        }
+
+        public EndpointArgs build() {
+            $.endpointId = Objects.requireNonNull($.endpointId, "expected parameter 'endpointId' to be non-null");
+            $.namespaceId = Objects.requireNonNull($.namespaceId, "expected parameter 'namespaceId' to be non-null");
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            return $;
         }
     }
+
 }

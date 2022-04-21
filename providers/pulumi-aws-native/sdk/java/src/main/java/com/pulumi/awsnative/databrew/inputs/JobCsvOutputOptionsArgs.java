@@ -5,9 +5,9 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class JobCsvOutputOptionsArgs extends com.pulumi.resources.Resource
     public static final JobCsvOutputOptionsArgs Empty = new JobCsvOutputOptionsArgs();
 
     @Import(name="delimiter")
-      private final @Nullable Output<String> delimiter;
+    private @Nullable Output<String> delimiter;
 
-    public Output<String> delimiter() {
-        return this.delimiter == null ? Codegen.empty() : this.delimiter;
+    public Optional<Output<String>> delimiter() {
+        return Optional.ofNullable(this.delimiter);
     }
 
-    public JobCsvOutputOptionsArgs(@Nullable Output<String> delimiter) {
-        this.delimiter = delimiter;
-    }
+    private JobCsvOutputOptionsArgs() {}
 
-    private JobCsvOutputOptionsArgs() {
-        this.delimiter = Codegen.empty();
+    private JobCsvOutputOptionsArgs(JobCsvOutputOptionsArgs $) {
+        this.delimiter = $.delimiter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobCsvOutputOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> delimiter;
+        private JobCsvOutputOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobCsvOutputOptionsArgs();
         }
 
         public Builder(JobCsvOutputOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delimiter = defaults.delimiter;
+            $ = new JobCsvOutputOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delimiter(@Nullable Output<String> delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
         }
-        public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Codegen.ofNullable(delimiter);
-            return this;
-        }        public JobCsvOutputOptionsArgs build() {
-            return new JobCsvOutputOptionsArgs(delimiter);
+
+        public Builder delimiter(String delimiter) {
+            return delimiter(Output.of(delimiter));
+        }
+
+        public JobCsvOutputOptionsArgs build() {
+            return $;
         }
     }
+
 }

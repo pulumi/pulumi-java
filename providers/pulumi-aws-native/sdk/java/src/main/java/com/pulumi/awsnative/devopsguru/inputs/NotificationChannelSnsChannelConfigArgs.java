@@ -5,9 +5,9 @@ package com.pulumi.awsnative.devopsguru.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class NotificationChannelSnsChannelConfigArgs extends com.pulumi.re
     public static final NotificationChannelSnsChannelConfigArgs Empty = new NotificationChannelSnsChannelConfigArgs();
 
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
-    public NotificationChannelSnsChannelConfigArgs(@Nullable Output<String> topicArn) {
-        this.topicArn = topicArn;
-    }
+    private NotificationChannelSnsChannelConfigArgs() {}
 
-    private NotificationChannelSnsChannelConfigArgs() {
-        this.topicArn = Codegen.empty();
+    private NotificationChannelSnsChannelConfigArgs(NotificationChannelSnsChannelConfigArgs $) {
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationChannelSnsChannelConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> topicArn;
+        private NotificationChannelSnsChannelConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationChannelSnsChannelConfigArgs();
         }
 
         public Builder(NotificationChannelSnsChannelConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topicArn = defaults.topicArn;
+            $ = new NotificationChannelSnsChannelConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
-        }        public NotificationChannelSnsChannelConfigArgs build() {
-            return new NotificationChannelSnsChannelConfigArgs(topicArn);
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
+        }
+
+        public NotificationChannelSnsChannelConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.LoggingConfigurationLoggingConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LoggingConfigurationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="firewallArn")
-      private final @Nullable Output<String> firewallArn;
+    private @Nullable Output<String> firewallArn;
 
-    public Output<String> firewallArn() {
-        return this.firewallArn == null ? Codegen.empty() : this.firewallArn;
+    public Optional<Output<String>> firewallArn() {
+        return Optional.ofNullable(this.firewallArn);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class LoggingConfigurationState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="loggingConfiguration")
-      private final @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
+    private @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
 
-    public Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration() {
-        return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
+    public Optional<Output<LoggingConfigurationLoggingConfigurationGetArgs>> loggingConfiguration() {
+        return Optional.ofNullable(this.loggingConfiguration);
     }
 
-    public LoggingConfigurationState(
-        @Nullable Output<String> firewallArn,
-        @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
-        this.firewallArn = firewallArn;
-        this.loggingConfiguration = loggingConfiguration;
-    }
+    private LoggingConfigurationState() {}
 
-    private LoggingConfigurationState() {
-        this.firewallArn = Codegen.empty();
-        this.loggingConfiguration = Codegen.empty();
+    private LoggingConfigurationState(LoggingConfigurationState $) {
+        this.firewallArn = $.firewallArn;
+        this.loggingConfiguration = $.loggingConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> firewallArn;
-        private @Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration;
+        private LoggingConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationState();
         }
 
         public Builder(LoggingConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallArn = defaults.firewallArn;
-    	      this.loggingConfiguration = defaults.loggingConfiguration;
+            $ = new LoggingConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallArn(@Nullable Output<String> firewallArn) {
-            this.firewallArn = firewallArn;
+            $.firewallArn = firewallArn;
             return this;
         }
-        public Builder firewallArn(@Nullable String firewallArn) {
-            this.firewallArn = Codegen.ofNullable(firewallArn);
-            return this;
+
+        public Builder firewallArn(String firewallArn) {
+            return firewallArn(Output.of(firewallArn));
         }
+
         public Builder loggingConfiguration(@Nullable Output<LoggingConfigurationLoggingConfigurationGetArgs> loggingConfiguration) {
-            this.loggingConfiguration = loggingConfiguration;
+            $.loggingConfiguration = loggingConfiguration;
             return this;
         }
-        public Builder loggingConfiguration(@Nullable LoggingConfigurationLoggingConfigurationGetArgs loggingConfiguration) {
-            this.loggingConfiguration = Codegen.ofNullable(loggingConfiguration);
-            return this;
-        }        public LoggingConfigurationState build() {
-            return new LoggingConfigurationState(firewallArn, loggingConfiguration);
+
+        public Builder loggingConfiguration(LoggingConfigurationLoggingConfigurationGetArgs loggingConfiguration) {
+            return loggingConfiguration(Output.of(loggingConfiguration));
+        }
+
+        public LoggingConfigurationState build() {
+            return $;
         }
     }
+
 }

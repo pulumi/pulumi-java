@@ -27,10 +27,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="details")
-      private final @Nullable List<UserFacingErrorResponse> details;
+    private @Nullable List<UserFacingErrorResponse> details;
 
-    public List<UserFacingErrorResponse> details() {
-        return this.details == null ? List.of() : this.details;
+    public Optional<List<UserFacingErrorResponse>> details() {
+        return Optional.ofNullable(this.details);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="innerError")
-      private final @Nullable InnerErrorResponse innerError;
+    private @Nullable InnerErrorResponse innerError;
 
     public Optional<InnerErrorResponse> innerError() {
-        return this.innerError == null ? Optional.empty() : Optional.ofNullable(this.innerError);
+        return Optional.ofNullable(this.innerError);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="isRetryable")
-      private final @Nullable Boolean isRetryable;
+    private @Nullable Boolean isRetryable;
 
     public Optional<Boolean> isRetryable() {
-        return this.isRetryable == null ? Optional.empty() : Optional.ofNullable(this.isRetryable);
+        return Optional.ofNullable(this.isRetryable);
     }
 
     /**
@@ -71,17 +71,17 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="isUserError")
-      private final @Nullable Boolean isUserError;
+    private @Nullable Boolean isUserError;
 
     public Optional<Boolean> isUserError() {
-        return this.isUserError == null ? Optional.empty() : Optional.ofNullable(this.isUserError);
+        return Optional.ofNullable(this.isUserError);
     }
 
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="recommendedAction")
-      private final @Nullable List<String> recommendedAction;
+    private @Nullable List<String> recommendedAction;
 
-    public List<String> recommendedAction() {
-        return this.recommendedAction == null ? List.of() : this.recommendedAction;
+    public Optional<List<String>> recommendedAction() {
+        return Optional.ofNullable(this.recommendedAction);
     }
 
     /**
@@ -111,124 +111,100 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
-    public UserFacingErrorResponse(
-        @Nullable String code,
-        @Nullable List<UserFacingErrorResponse> details,
-        @Nullable InnerErrorResponse innerError,
-        @Nullable Boolean isRetryable,
-        @Nullable Boolean isUserError,
-        @Nullable String message,
-        @Nullable Map<String,String> properties,
-        @Nullable List<String> recommendedAction,
-        @Nullable String target) {
-        this.code = code;
-        this.details = details;
-        this.innerError = innerError;
-        this.isRetryable = isRetryable;
-        this.isUserError = isUserError;
-        this.message = message;
-        this.properties = properties;
-        this.recommendedAction = recommendedAction;
-        this.target = target;
-    }
+    private UserFacingErrorResponse() {}
 
-    private UserFacingErrorResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.innerError = null;
-        this.isRetryable = null;
-        this.isUserError = null;
-        this.message = null;
-        this.properties = Map.of();
-        this.recommendedAction = List.of();
-        this.target = null;
+    private UserFacingErrorResponse(UserFacingErrorResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.innerError = $.innerError;
+        this.isRetryable = $.isRetryable;
+        this.isUserError = $.isUserError;
+        this.message = $.message;
+        this.properties = $.properties;
+        this.recommendedAction = $.recommendedAction;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserFacingErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
-        private @Nullable List<UserFacingErrorResponse> details;
-        private @Nullable InnerErrorResponse innerError;
-        private @Nullable Boolean isRetryable;
-        private @Nullable Boolean isUserError;
-        private @Nullable String message;
-        private @Nullable Map<String,String> properties;
-        private @Nullable List<String> recommendedAction;
-        private @Nullable String target;
+        private UserFacingErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserFacingErrorResponse();
         }
 
         public Builder(UserFacingErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.innerError = defaults.innerError;
-    	      this.isRetryable = defaults.isRetryable;
-    	      this.isUserError = defaults.isUserError;
-    	      this.message = defaults.message;
-    	      this.properties = defaults.properties;
-    	      this.recommendedAction = defaults.recommendedAction;
-    	      this.target = defaults.target;
+            $ = new UserFacingErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder details(@Nullable List<UserFacingErrorResponse> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
+
         public Builder details(UserFacingErrorResponse... details) {
             return details(List.of(details));
         }
+
         public Builder innerError(@Nullable InnerErrorResponse innerError) {
-            this.innerError = innerError;
+            $.innerError = innerError;
             return this;
         }
+
         public Builder isRetryable(@Nullable Boolean isRetryable) {
-            this.isRetryable = isRetryable;
+            $.isRetryable = isRetryable;
             return this;
         }
+
         public Builder isUserError(@Nullable Boolean isUserError) {
-            this.isUserError = isUserError;
+            $.isUserError = isUserError;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder recommendedAction(@Nullable List<String> recommendedAction) {
-            this.recommendedAction = recommendedAction;
+            $.recommendedAction = recommendedAction;
             return this;
         }
+
         public Builder recommendedAction(String... recommendedAction) {
             return recommendedAction(List.of(recommendedAction));
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
-        }        public UserFacingErrorResponse build() {
-            return new UserFacingErrorResponse(code, details, innerError, isRetryable, isUserError, message, properties, recommendedAction, target);
+        }
+
+        public UserFacingErrorResponse build() {
+            return $;
         }
     }
+
 }

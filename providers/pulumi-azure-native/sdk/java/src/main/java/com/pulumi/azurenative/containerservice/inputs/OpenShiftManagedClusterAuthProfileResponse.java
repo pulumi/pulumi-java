@@ -24,48 +24,48 @@ public final class OpenShiftManagedClusterAuthProfileResponse extends com.pulumi
      * 
      */
     @Import(name="identityProviders")
-      private final @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders;
+    private @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders;
 
-    public List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders() {
-        return this.identityProviders == null ? List.of() : this.identityProviders;
+    public Optional<List<OpenShiftManagedClusterIdentityProviderResponse>> identityProviders() {
+        return Optional.ofNullable(this.identityProviders);
     }
 
-    public OpenShiftManagedClusterAuthProfileResponse(@Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders) {
-        this.identityProviders = identityProviders;
-    }
+    private OpenShiftManagedClusterAuthProfileResponse() {}
 
-    private OpenShiftManagedClusterAuthProfileResponse() {
-        this.identityProviders = List.of();
+    private OpenShiftManagedClusterAuthProfileResponse(OpenShiftManagedClusterAuthProfileResponse $) {
+        this.identityProviders = $.identityProviders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftManagedClusterAuthProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders;
+        private OpenShiftManagedClusterAuthProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftManagedClusterAuthProfileResponse();
         }
 
         public Builder(OpenShiftManagedClusterAuthProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityProviders = defaults.identityProviders;
+            $ = new OpenShiftManagedClusterAuthProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identityProviders(@Nullable List<OpenShiftManagedClusterIdentityProviderResponse> identityProviders) {
-            this.identityProviders = identityProviders;
+            $.identityProviders = identityProviders;
             return this;
         }
+
         public Builder identityProviders(OpenShiftManagedClusterIdentityProviderResponse... identityProviders) {
             return identityProviders(List.of(identityProviders));
-        }        public OpenShiftManagedClusterAuthProfileResponse build() {
-            return new OpenShiftManagedClusterAuthProfileResponse(identityProviders);
+        }
+
+        public OpenShiftManagedClusterAuthProfileResponse build() {
+            return $;
         }
     }
+
 }

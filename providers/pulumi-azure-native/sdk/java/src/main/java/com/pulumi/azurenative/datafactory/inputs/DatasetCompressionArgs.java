@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DatasetCompressionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="level")
-      private final @Nullable Output<Object> level;
+    private @Nullable Output<Object> level;
 
-    public Output<Object> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<Object>> level() {
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class DatasetCompressionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Object> type;
+    private Output<Object> type;
 
     public Output<Object> type() {
         return this.type;
     }
 
-    public DatasetCompressionArgs(
-        @Nullable Output<Object> level,
-        Output<Object> type) {
-        this.level = level;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DatasetCompressionArgs() {}
 
-    private DatasetCompressionArgs() {
-        this.level = Codegen.empty();
-        this.type = Codegen.empty();
+    private DatasetCompressionArgs(DatasetCompressionArgs $) {
+        this.level = $.level;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetCompressionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> level;
-        private Output<Object> type;
+        private DatasetCompressionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetCompressionArgs();
         }
 
         public Builder(DatasetCompressionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
-    	      this.type = defaults.type;
+            $ = new DatasetCompressionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder level(@Nullable Output<Object> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable Object level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
+
+        public Builder level(Object level) {
+            return level(Output.of(level));
         }
+
         public Builder type(Output<Object> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Object type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DatasetCompressionArgs build() {
-            return new DatasetCompressionArgs(level, type);
+            return type(Output.of(type));
+        }
+
+        public DatasetCompressionArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

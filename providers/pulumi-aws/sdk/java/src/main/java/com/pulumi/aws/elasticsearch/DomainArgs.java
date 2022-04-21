@@ -16,11 +16,11 @@ import com.pulumi.aws.elasticsearch.inputs.DomainSnapshotOptionsArgs;
 import com.pulumi.aws.elasticsearch.inputs.DomainVpcOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,17 +33,17 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessPolicies")
-      private final @Nullable Output<String> accessPolicies;
+    private @Nullable Output<String> accessPolicies;
 
-    public Output<String> accessPolicies() {
-        return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
+    public Optional<Output<String>> accessPolicies() {
+        return Optional.ofNullable(this.accessPolicies);
     }
 
     @Import(name="advancedOptions")
-      private final @Nullable Output<Map<String,String>> advancedOptions;
+    private @Nullable Output<Map<String,String>> advancedOptions;
 
-    public Output<Map<String,String>> advancedOptions() {
-        return this.advancedOptions == null ? Codegen.empty() : this.advancedOptions;
+    public Optional<Output<Map<String,String>>> advancedOptions() {
+        return Optional.ofNullable(this.advancedOptions);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedSecurityOptions")
-      private final @Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions;
+    private @Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions;
 
-    public Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions() {
-        return this.advancedSecurityOptions == null ? Codegen.empty() : this.advancedSecurityOptions;
+    public Optional<Output<DomainAdvancedSecurityOptionsArgs>> advancedSecurityOptions() {
+        return Optional.ofNullable(this.advancedSecurityOptions);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoTuneOptions")
-      private final @Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions;
+    private @Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions;
 
-    public Output<DomainAutoTuneOptionsArgs> autoTuneOptions() {
-        return this.autoTuneOptions == null ? Codegen.empty() : this.autoTuneOptions;
+    public Optional<Output<DomainAutoTuneOptionsArgs>> autoTuneOptions() {
+        return Optional.ofNullable(this.autoTuneOptions);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterConfig")
-      private final @Nullable Output<DomainClusterConfigArgs> clusterConfig;
+    private @Nullable Output<DomainClusterConfigArgs> clusterConfig;
 
-    public Output<DomainClusterConfigArgs> clusterConfig() {
-        return this.clusterConfig == null ? Codegen.empty() : this.clusterConfig;
+    public Optional<Output<DomainClusterConfigArgs>> clusterConfig() {
+        return Optional.ofNullable(this.clusterConfig);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cognitoOptions")
-      private final @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
+    private @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
 
-    public Output<DomainCognitoOptionsArgs> cognitoOptions() {
-        return this.cognitoOptions == null ? Codegen.empty() : this.cognitoOptions;
+    public Optional<Output<DomainCognitoOptionsArgs>> cognitoOptions() {
+        return Optional.ofNullable(this.cognitoOptions);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainEndpointOptions")
-      private final @Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions;
+    private @Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions;
 
-    public Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions() {
-        return this.domainEndpointOptions == null ? Codegen.empty() : this.domainEndpointOptions;
+    public Optional<Output<DomainDomainEndpointOptionsArgs>> domainEndpointOptions() {
+        return Optional.ofNullable(this.domainEndpointOptions);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsOptions")
-      private final @Nullable Output<DomainEbsOptionsArgs> ebsOptions;
+    private @Nullable Output<DomainEbsOptionsArgs> ebsOptions;
 
-    public Output<DomainEbsOptionsArgs> ebsOptions() {
-        return this.ebsOptions == null ? Codegen.empty() : this.ebsOptions;
+    public Optional<Output<DomainEbsOptionsArgs>> ebsOptions() {
+        return Optional.ofNullable(this.ebsOptions);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elasticsearchVersion")
-      private final @Nullable Output<String> elasticsearchVersion;
+    private @Nullable Output<String> elasticsearchVersion;
 
-    public Output<String> elasticsearchVersion() {
-        return this.elasticsearchVersion == null ? Codegen.empty() : this.elasticsearchVersion;
+    public Optional<Output<String>> elasticsearchVersion() {
+        return Optional.ofNullable(this.elasticsearchVersion);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptAtRest")
-      private final @Nullable Output<DomainEncryptAtRestArgs> encryptAtRest;
+    private @Nullable Output<DomainEncryptAtRestArgs> encryptAtRest;
 
-    public Output<DomainEncryptAtRestArgs> encryptAtRest() {
-        return this.encryptAtRest == null ? Codegen.empty() : this.encryptAtRest;
+    public Optional<Output<DomainEncryptAtRestArgs>> encryptAtRest() {
+        return Optional.ofNullable(this.encryptAtRest);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logPublishingOptions")
-      private final @Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions;
+    private @Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions;
 
-    public Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions() {
-        return this.logPublishingOptions == null ? Codegen.empty() : this.logPublishingOptions;
+    public Optional<Output<List<DomainLogPublishingOptionArgs>>> logPublishingOptions() {
+        return Optional.ofNullable(this.logPublishingOptions);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeToNodeEncryption")
-      private final @Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption;
+    private @Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption;
 
-    public Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption() {
-        return this.nodeToNodeEncryption == null ? Codegen.empty() : this.nodeToNodeEncryption;
+    public Optional<Output<DomainNodeToNodeEncryptionArgs>> nodeToNodeEncryption() {
+        return Optional.ofNullable(this.nodeToNodeEncryption);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotOptions")
-      private final @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
+    private @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
 
-    public Output<DomainSnapshotOptionsArgs> snapshotOptions() {
-        return this.snapshotOptions == null ? Codegen.empty() : this.snapshotOptions;
+    public Optional<Output<DomainSnapshotOptionsArgs>> snapshotOptions() {
+        return Optional.ofNullable(this.snapshotOptions);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -194,244 +194,202 @@ public final class DomainArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcOptions")
-      private final @Nullable Output<DomainVpcOptionsArgs> vpcOptions;
+    private @Nullable Output<DomainVpcOptionsArgs> vpcOptions;
 
-    public Output<DomainVpcOptionsArgs> vpcOptions() {
-        return this.vpcOptions == null ? Codegen.empty() : this.vpcOptions;
+    public Optional<Output<DomainVpcOptionsArgs>> vpcOptions() {
+        return Optional.ofNullable(this.vpcOptions);
     }
 
-    public DomainArgs(
-        @Nullable Output<String> accessPolicies,
-        @Nullable Output<Map<String,String>> advancedOptions,
-        @Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions,
-        @Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions,
-        @Nullable Output<DomainClusterConfigArgs> clusterConfig,
-        @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions,
-        @Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions,
-        @Nullable Output<String> domainName,
-        @Nullable Output<DomainEbsOptionsArgs> ebsOptions,
-        @Nullable Output<String> elasticsearchVersion,
-        @Nullable Output<DomainEncryptAtRestArgs> encryptAtRest,
-        @Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions,
-        @Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption,
-        @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<DomainVpcOptionsArgs> vpcOptions) {
-        this.accessPolicies = accessPolicies;
-        this.advancedOptions = advancedOptions;
-        this.advancedSecurityOptions = advancedSecurityOptions;
-        this.autoTuneOptions = autoTuneOptions;
-        this.clusterConfig = clusterConfig;
-        this.cognitoOptions = cognitoOptions;
-        this.domainEndpointOptions = domainEndpointOptions;
-        this.domainName = domainName;
-        this.ebsOptions = ebsOptions;
-        this.elasticsearchVersion = elasticsearchVersion;
-        this.encryptAtRest = encryptAtRest;
-        this.logPublishingOptions = logPublishingOptions;
-        this.nodeToNodeEncryption = nodeToNodeEncryption;
-        this.snapshotOptions = snapshotOptions;
-        this.tags = tags;
-        this.vpcOptions = vpcOptions;
-    }
+    private DomainArgs() {}
 
-    private DomainArgs() {
-        this.accessPolicies = Codegen.empty();
-        this.advancedOptions = Codegen.empty();
-        this.advancedSecurityOptions = Codegen.empty();
-        this.autoTuneOptions = Codegen.empty();
-        this.clusterConfig = Codegen.empty();
-        this.cognitoOptions = Codegen.empty();
-        this.domainEndpointOptions = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.ebsOptions = Codegen.empty();
-        this.elasticsearchVersion = Codegen.empty();
-        this.encryptAtRest = Codegen.empty();
-        this.logPublishingOptions = Codegen.empty();
-        this.nodeToNodeEncryption = Codegen.empty();
-        this.snapshotOptions = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpcOptions = Codegen.empty();
+    private DomainArgs(DomainArgs $) {
+        this.accessPolicies = $.accessPolicies;
+        this.advancedOptions = $.advancedOptions;
+        this.advancedSecurityOptions = $.advancedSecurityOptions;
+        this.autoTuneOptions = $.autoTuneOptions;
+        this.clusterConfig = $.clusterConfig;
+        this.cognitoOptions = $.cognitoOptions;
+        this.domainEndpointOptions = $.domainEndpointOptions;
+        this.domainName = $.domainName;
+        this.ebsOptions = $.ebsOptions;
+        this.elasticsearchVersion = $.elasticsearchVersion;
+        this.encryptAtRest = $.encryptAtRest;
+        this.logPublishingOptions = $.logPublishingOptions;
+        this.nodeToNodeEncryption = $.nodeToNodeEncryption;
+        this.snapshotOptions = $.snapshotOptions;
+        this.tags = $.tags;
+        this.vpcOptions = $.vpcOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPolicies;
-        private @Nullable Output<Map<String,String>> advancedOptions;
-        private @Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions;
-        private @Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions;
-        private @Nullable Output<DomainClusterConfigArgs> clusterConfig;
-        private @Nullable Output<DomainCognitoOptionsArgs> cognitoOptions;
-        private @Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<DomainEbsOptionsArgs> ebsOptions;
-        private @Nullable Output<String> elasticsearchVersion;
-        private @Nullable Output<DomainEncryptAtRestArgs> encryptAtRest;
-        private @Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions;
-        private @Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption;
-        private @Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<DomainVpcOptionsArgs> vpcOptions;
+        private DomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainArgs();
         }
 
         public Builder(DomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicies = defaults.accessPolicies;
-    	      this.advancedOptions = defaults.advancedOptions;
-    	      this.advancedSecurityOptions = defaults.advancedSecurityOptions;
-    	      this.autoTuneOptions = defaults.autoTuneOptions;
-    	      this.clusterConfig = defaults.clusterConfig;
-    	      this.cognitoOptions = defaults.cognitoOptions;
-    	      this.domainEndpointOptions = defaults.domainEndpointOptions;
-    	      this.domainName = defaults.domainName;
-    	      this.ebsOptions = defaults.ebsOptions;
-    	      this.elasticsearchVersion = defaults.elasticsearchVersion;
-    	      this.encryptAtRest = defaults.encryptAtRest;
-    	      this.logPublishingOptions = defaults.logPublishingOptions;
-    	      this.nodeToNodeEncryption = defaults.nodeToNodeEncryption;
-    	      this.snapshotOptions = defaults.snapshotOptions;
-    	      this.tags = defaults.tags;
-    	      this.vpcOptions = defaults.vpcOptions;
+            $ = new DomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicies(@Nullable Output<String> accessPolicies) {
-            this.accessPolicies = accessPolicies;
+            $.accessPolicies = accessPolicies;
             return this;
         }
+
+        public Builder accessPolicies(String accessPolicies) {
+            return accessPolicies(Output.of(accessPolicies));
+        }
+
         public Builder advancedOptions(@Nullable Output<Map<String,String>> advancedOptions) {
-            this.advancedOptions = advancedOptions;
+            $.advancedOptions = advancedOptions;
             return this;
         }
-        public Builder advancedOptions(@Nullable Map<String,String> advancedOptions) {
-            this.advancedOptions = Codegen.ofNullable(advancedOptions);
-            return this;
+
+        public Builder advancedOptions(Map<String,String> advancedOptions) {
+            return advancedOptions(Output.of(advancedOptions));
         }
+
         public Builder advancedSecurityOptions(@Nullable Output<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions) {
-            this.advancedSecurityOptions = advancedSecurityOptions;
+            $.advancedSecurityOptions = advancedSecurityOptions;
             return this;
         }
-        public Builder advancedSecurityOptions(@Nullable DomainAdvancedSecurityOptionsArgs advancedSecurityOptions) {
-            this.advancedSecurityOptions = Codegen.ofNullable(advancedSecurityOptions);
-            return this;
+
+        public Builder advancedSecurityOptions(DomainAdvancedSecurityOptionsArgs advancedSecurityOptions) {
+            return advancedSecurityOptions(Output.of(advancedSecurityOptions));
         }
+
         public Builder autoTuneOptions(@Nullable Output<DomainAutoTuneOptionsArgs> autoTuneOptions) {
-            this.autoTuneOptions = autoTuneOptions;
+            $.autoTuneOptions = autoTuneOptions;
             return this;
         }
-        public Builder autoTuneOptions(@Nullable DomainAutoTuneOptionsArgs autoTuneOptions) {
-            this.autoTuneOptions = Codegen.ofNullable(autoTuneOptions);
-            return this;
+
+        public Builder autoTuneOptions(DomainAutoTuneOptionsArgs autoTuneOptions) {
+            return autoTuneOptions(Output.of(autoTuneOptions));
         }
+
         public Builder clusterConfig(@Nullable Output<DomainClusterConfigArgs> clusterConfig) {
-            this.clusterConfig = clusterConfig;
+            $.clusterConfig = clusterConfig;
             return this;
         }
-        public Builder clusterConfig(@Nullable DomainClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Codegen.ofNullable(clusterConfig);
-            return this;
+
+        public Builder clusterConfig(DomainClusterConfigArgs clusterConfig) {
+            return clusterConfig(Output.of(clusterConfig));
         }
+
         public Builder cognitoOptions(@Nullable Output<DomainCognitoOptionsArgs> cognitoOptions) {
-            this.cognitoOptions = cognitoOptions;
+            $.cognitoOptions = cognitoOptions;
             return this;
         }
-        public Builder cognitoOptions(@Nullable DomainCognitoOptionsArgs cognitoOptions) {
-            this.cognitoOptions = Codegen.ofNullable(cognitoOptions);
-            return this;
+
+        public Builder cognitoOptions(DomainCognitoOptionsArgs cognitoOptions) {
+            return cognitoOptions(Output.of(cognitoOptions));
         }
+
         public Builder domainEndpointOptions(@Nullable Output<DomainDomainEndpointOptionsArgs> domainEndpointOptions) {
-            this.domainEndpointOptions = domainEndpointOptions;
+            $.domainEndpointOptions = domainEndpointOptions;
             return this;
         }
-        public Builder domainEndpointOptions(@Nullable DomainDomainEndpointOptionsArgs domainEndpointOptions) {
-            this.domainEndpointOptions = Codegen.ofNullable(domainEndpointOptions);
-            return this;
+
+        public Builder domainEndpointOptions(DomainDomainEndpointOptionsArgs domainEndpointOptions) {
+            return domainEndpointOptions(Output.of(domainEndpointOptions));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder ebsOptions(@Nullable Output<DomainEbsOptionsArgs> ebsOptions) {
-            this.ebsOptions = ebsOptions;
+            $.ebsOptions = ebsOptions;
             return this;
         }
-        public Builder ebsOptions(@Nullable DomainEbsOptionsArgs ebsOptions) {
-            this.ebsOptions = Codegen.ofNullable(ebsOptions);
-            return this;
+
+        public Builder ebsOptions(DomainEbsOptionsArgs ebsOptions) {
+            return ebsOptions(Output.of(ebsOptions));
         }
+
         public Builder elasticsearchVersion(@Nullable Output<String> elasticsearchVersion) {
-            this.elasticsearchVersion = elasticsearchVersion;
+            $.elasticsearchVersion = elasticsearchVersion;
             return this;
         }
-        public Builder elasticsearchVersion(@Nullable String elasticsearchVersion) {
-            this.elasticsearchVersion = Codegen.ofNullable(elasticsearchVersion);
-            return this;
+
+        public Builder elasticsearchVersion(String elasticsearchVersion) {
+            return elasticsearchVersion(Output.of(elasticsearchVersion));
         }
+
         public Builder encryptAtRest(@Nullable Output<DomainEncryptAtRestArgs> encryptAtRest) {
-            this.encryptAtRest = encryptAtRest;
+            $.encryptAtRest = encryptAtRest;
             return this;
         }
-        public Builder encryptAtRest(@Nullable DomainEncryptAtRestArgs encryptAtRest) {
-            this.encryptAtRest = Codegen.ofNullable(encryptAtRest);
-            return this;
+
+        public Builder encryptAtRest(DomainEncryptAtRestArgs encryptAtRest) {
+            return encryptAtRest(Output.of(encryptAtRest));
         }
+
         public Builder logPublishingOptions(@Nullable Output<List<DomainLogPublishingOptionArgs>> logPublishingOptions) {
-            this.logPublishingOptions = logPublishingOptions;
+            $.logPublishingOptions = logPublishingOptions;
             return this;
         }
-        public Builder logPublishingOptions(@Nullable List<DomainLogPublishingOptionArgs> logPublishingOptions) {
-            this.logPublishingOptions = Codegen.ofNullable(logPublishingOptions);
-            return this;
+
+        public Builder logPublishingOptions(List<DomainLogPublishingOptionArgs> logPublishingOptions) {
+            return logPublishingOptions(Output.of(logPublishingOptions));
         }
+
         public Builder logPublishingOptions(DomainLogPublishingOptionArgs... logPublishingOptions) {
             return logPublishingOptions(List.of(logPublishingOptions));
         }
+
         public Builder nodeToNodeEncryption(@Nullable Output<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption) {
-            this.nodeToNodeEncryption = nodeToNodeEncryption;
+            $.nodeToNodeEncryption = nodeToNodeEncryption;
             return this;
         }
-        public Builder nodeToNodeEncryption(@Nullable DomainNodeToNodeEncryptionArgs nodeToNodeEncryption) {
-            this.nodeToNodeEncryption = Codegen.ofNullable(nodeToNodeEncryption);
-            return this;
+
+        public Builder nodeToNodeEncryption(DomainNodeToNodeEncryptionArgs nodeToNodeEncryption) {
+            return nodeToNodeEncryption(Output.of(nodeToNodeEncryption));
         }
+
         public Builder snapshotOptions(@Nullable Output<DomainSnapshotOptionsArgs> snapshotOptions) {
-            this.snapshotOptions = snapshotOptions;
+            $.snapshotOptions = snapshotOptions;
             return this;
         }
-        public Builder snapshotOptions(@Nullable DomainSnapshotOptionsArgs snapshotOptions) {
-            this.snapshotOptions = Codegen.ofNullable(snapshotOptions);
-            return this;
+
+        public Builder snapshotOptions(DomainSnapshotOptionsArgs snapshotOptions) {
+            return snapshotOptions(Output.of(snapshotOptions));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vpcOptions(@Nullable Output<DomainVpcOptionsArgs> vpcOptions) {
-            this.vpcOptions = vpcOptions;
+            $.vpcOptions = vpcOptions;
             return this;
         }
-        public Builder vpcOptions(@Nullable DomainVpcOptionsArgs vpcOptions) {
-            this.vpcOptions = Codegen.ofNullable(vpcOptions);
-            return this;
-        }        public DomainArgs build() {
-            return new DomainArgs(accessPolicies, advancedOptions, advancedSecurityOptions, autoTuneOptions, clusterConfig, cognitoOptions, domainEndpointOptions, domainName, ebsOptions, elasticsearchVersion, encryptAtRest, logPublishingOptions, nodeToNodeEncryption, snapshotOptions, tags, vpcOptions);
+
+        public Builder vpcOptions(DomainVpcOptionsArgs vpcOptions) {
+            return vpcOptions(Output.of(vpcOptions));
+        }
+
+        public DomainArgs build() {
+            return $;
         }
     }
+
 }

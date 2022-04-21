@@ -21,7 +21,7 @@ public final class NetworkInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class NetworkInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="matchedIpRange", required=true)
-      private final String matchedIpRange;
+    private String matchedIpRange;
 
     public String matchedIpRange() {
         return this.matchedIpRange;
@@ -43,64 +43,59 @@ public final class NetworkInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public NetworkInfoResponse(
-        String displayName,
-        String matchedIpRange,
-        String uri) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.matchedIpRange = Objects.requireNonNull(matchedIpRange, "expected parameter 'matchedIpRange' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private NetworkInfoResponse() {}
 
-    private NetworkInfoResponse() {
-        this.displayName = null;
-        this.matchedIpRange = null;
-        this.uri = null;
+    private NetworkInfoResponse(NetworkInfoResponse $) {
+        this.displayName = $.displayName;
+        this.matchedIpRange = $.matchedIpRange;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String matchedIpRange;
-        private String uri;
+        private NetworkInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInfoResponse();
         }
 
         public Builder(NetworkInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.matchedIpRange = defaults.matchedIpRange;
-    	      this.uri = defaults.uri;
+            $ = new NetworkInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder matchedIpRange(String matchedIpRange) {
-            this.matchedIpRange = Objects.requireNonNull(matchedIpRange);
+            $.matchedIpRange = matchedIpRange;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public NetworkInfoResponse build() {
-            return new NetworkInfoResponse(displayName, matchedIpRange, uri);
+        }
+
+        public NetworkInfoResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.matchedIpRange = Objects.requireNonNull($.matchedIpRange, "expected parameter 'matchedIpRange' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

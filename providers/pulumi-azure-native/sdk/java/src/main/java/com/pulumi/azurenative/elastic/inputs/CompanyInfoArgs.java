@@ -5,9 +5,9 @@ package com.pulumi.azurenative.elastic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="business")
-      private final @Nullable Output<String> business;
+    private @Nullable Output<String> business;
 
-    public Output<String> business() {
-        return this.business == null ? Codegen.empty() : this.business;
+    public Optional<Output<String>> business() {
+        return Optional.ofNullable(this.business);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="country")
-      private final @Nullable Output<String> country;
+    private @Nullable Output<String> country;
 
-    public Output<String> country() {
-        return this.country == null ? Codegen.empty() : this.country;
+    public Optional<Output<String>> country() {
+        return Optional.ofNullable(this.country);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="employeesNumber")
-      private final @Nullable Output<String> employeesNumber;
+    private @Nullable Output<String> employeesNumber;
 
-    public Output<String> employeesNumber() {
-        return this.employeesNumber == null ? Codegen.empty() : this.employeesNumber;
+    public Optional<Output<String>> employeesNumber() {
+        return Optional.ofNullable(this.employeesNumber);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class CompanyInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public CompanyInfoArgs(
-        @Nullable Output<String> business,
-        @Nullable Output<String> country,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> employeesNumber,
-        @Nullable Output<String> state) {
-        this.business = business;
-        this.country = country;
-        this.domain = domain;
-        this.employeesNumber = employeesNumber;
-        this.state = state;
-    }
+    private CompanyInfoArgs() {}
 
-    private CompanyInfoArgs() {
-        this.business = Codegen.empty();
-        this.country = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.employeesNumber = Codegen.empty();
-        this.state = Codegen.empty();
+    private CompanyInfoArgs(CompanyInfoArgs $) {
+        this.business = $.business;
+        this.country = $.country;
+        this.domain = $.domain;
+        this.employeesNumber = $.employeesNumber;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompanyInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> business;
-        private @Nullable Output<String> country;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> employeesNumber;
-        private @Nullable Output<String> state;
+        private CompanyInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompanyInfoArgs();
         }
 
         public Builder(CompanyInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.business = defaults.business;
-    	      this.country = defaults.country;
-    	      this.domain = defaults.domain;
-    	      this.employeesNumber = defaults.employeesNumber;
-    	      this.state = defaults.state;
+            $ = new CompanyInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder business(@Nullable Output<String> business) {
-            this.business = business;
+            $.business = business;
             return this;
         }
-        public Builder business(@Nullable String business) {
-            this.business = Codegen.ofNullable(business);
-            return this;
+
+        public Builder business(String business) {
+            return business(Output.of(business));
         }
+
         public Builder country(@Nullable Output<String> country) {
-            this.country = country;
+            $.country = country;
             return this;
         }
-        public Builder country(@Nullable String country) {
-            this.country = Codegen.ofNullable(country);
-            return this;
+
+        public Builder country(String country) {
+            return country(Output.of(country));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder employeesNumber(@Nullable Output<String> employeesNumber) {
-            this.employeesNumber = employeesNumber;
+            $.employeesNumber = employeesNumber;
             return this;
         }
-        public Builder employeesNumber(@Nullable String employeesNumber) {
-            this.employeesNumber = Codegen.ofNullable(employeesNumber);
-            return this;
+
+        public Builder employeesNumber(String employeesNumber) {
+            return employeesNumber(Output.of(employeesNumber));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public CompanyInfoArgs build() {
-            return new CompanyInfoArgs(business, country, domain, employeesNumber, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public CompanyInfoArgs build() {
+            return $;
         }
     }
+
 }

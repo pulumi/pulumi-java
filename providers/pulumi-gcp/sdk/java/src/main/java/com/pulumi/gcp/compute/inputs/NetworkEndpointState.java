@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkEndpointGroup")
-      private final @Nullable Output<String> networkEndpointGroup;
+    private @Nullable Output<String> networkEndpointGroup;
 
-    public Output<String> networkEndpointGroup() {
-        return this.networkEndpointGroup == null ? Codegen.empty() : this.networkEndpointGroup;
+    public Optional<Output<String>> networkEndpointGroup() {
+        return Optional.ofNullable(this.networkEndpointGroup);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class NetworkEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public NetworkEndpointState(
-        @Nullable Output<String> instance,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> networkEndpointGroup,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> project,
-        @Nullable Output<String> zone) {
-        this.instance = instance;
-        this.ipAddress = ipAddress;
-        this.networkEndpointGroup = networkEndpointGroup;
-        this.port = port;
-        this.project = project;
-        this.zone = zone;
-    }
+    private NetworkEndpointState() {}
 
-    private NetworkEndpointState() {
-        this.instance = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.networkEndpointGroup = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.zone = Codegen.empty();
+    private NetworkEndpointState(NetworkEndpointState $) {
+        this.instance = $.instance;
+        this.ipAddress = $.ipAddress;
+        this.networkEndpointGroup = $.networkEndpointGroup;
+        this.port = $.port;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> networkEndpointGroup;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> zone;
+        private NetworkEndpointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointState();
         }
 
         public Builder(NetworkEndpointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instance = defaults.instance;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.networkEndpointGroup = defaults.networkEndpointGroup;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new NetworkEndpointState(Objects.requireNonNull(defaults));
         }
 
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder networkEndpointGroup(@Nullable Output<String> networkEndpointGroup) {
-            this.networkEndpointGroup = networkEndpointGroup;
+            $.networkEndpointGroup = networkEndpointGroup;
             return this;
         }
-        public Builder networkEndpointGroup(@Nullable String networkEndpointGroup) {
-            this.networkEndpointGroup = Codegen.ofNullable(networkEndpointGroup);
-            return this;
+
+        public Builder networkEndpointGroup(String networkEndpointGroup) {
+            return networkEndpointGroup(Output.of(networkEndpointGroup));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public NetworkEndpointState build() {
-            return new NetworkEndpointState(instance, ipAddress, networkEndpointGroup, port, project, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public NetworkEndpointState build() {
+            return $;
         }
     }
+
 }

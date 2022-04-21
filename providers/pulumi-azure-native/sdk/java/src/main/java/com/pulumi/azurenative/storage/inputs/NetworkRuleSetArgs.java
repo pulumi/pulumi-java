@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="bypass")
-      private final @Nullable Output<Either<String,Bypass>> bypass;
+    private @Nullable Output<Either<String,Bypass>> bypass;
 
-    public Output<Either<String,Bypass>> bypass() {
-        return this.bypass == null ? Codegen.empty() : this.bypass;
+    public Optional<Output<Either<String,Bypass>>> bypass() {
+        return Optional.ofNullable(this.bypass);
     }
 
     /**
@@ -42,7 +43,7 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultAction", required=true)
-      private final Output<DefaultAction> defaultAction;
+    private Output<DefaultAction> defaultAction;
 
     public Output<DefaultAction> defaultAction() {
         return this.defaultAction;
@@ -53,10 +54,10 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ipRules")
-      private final @Nullable Output<List<IPRuleArgs>> ipRules;
+    private @Nullable Output<List<IPRuleArgs>> ipRules;
 
-    public Output<List<IPRuleArgs>> ipRules() {
-        return this.ipRules == null ? Codegen.empty() : this.ipRules;
+    public Optional<Output<List<IPRuleArgs>>> ipRules() {
+        return Optional.ofNullable(this.ipRules);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceAccessRules")
-      private final @Nullable Output<List<ResourceAccessRuleArgs>> resourceAccessRules;
+    private @Nullable Output<List<ResourceAccessRuleArgs>> resourceAccessRules;
 
-    public Output<List<ResourceAccessRuleArgs>> resourceAccessRules() {
-        return this.resourceAccessRules == null ? Codegen.empty() : this.resourceAccessRules;
+    public Optional<Output<List<ResourceAccessRuleArgs>>> resourceAccessRules() {
+        return Optional.ofNullable(this.resourceAccessRules);
     }
 
     /**
@@ -75,111 +76,102 @@ public final class NetworkRuleSetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="virtualNetworkRules")
-      private final @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+    private @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
-    public Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
+    public Optional<Output<List<VirtualNetworkRuleArgs>>> virtualNetworkRules() {
+        return Optional.ofNullable(this.virtualNetworkRules);
     }
 
-    public NetworkRuleSetArgs(
-        @Nullable Output<Either<String,Bypass>> bypass,
-        Output<DefaultAction> defaultAction,
-        @Nullable Output<List<IPRuleArgs>> ipRules,
-        @Nullable Output<List<ResourceAccessRuleArgs>> resourceAccessRules,
-        @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
-        this.bypass = Codegen.stringProp("bypass").left(Bypass.class).output().arg(bypass).def("AzureServices").getNullable();
-        this.defaultAction = Codegen.objectProp("defaultAction", DefaultAction.class).output().arg(defaultAction).def(DefaultAction.Allow).require();
-        this.ipRules = ipRules;
-        this.resourceAccessRules = resourceAccessRules;
-        this.virtualNetworkRules = virtualNetworkRules;
-    }
+    private NetworkRuleSetArgs() {}
 
-    private NetworkRuleSetArgs() {
-        this.bypass = Codegen.empty();
-        this.defaultAction = Codegen.empty();
-        this.ipRules = Codegen.empty();
-        this.resourceAccessRules = Codegen.empty();
-        this.virtualNetworkRules = Codegen.empty();
+    private NetworkRuleSetArgs(NetworkRuleSetArgs $) {
+        this.bypass = $.bypass;
+        this.defaultAction = $.defaultAction;
+        this.ipRules = $.ipRules;
+        this.resourceAccessRules = $.resourceAccessRules;
+        this.virtualNetworkRules = $.virtualNetworkRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Bypass>> bypass;
-        private Output<DefaultAction> defaultAction;
-        private @Nullable Output<List<IPRuleArgs>> ipRules;
-        private @Nullable Output<List<ResourceAccessRuleArgs>> resourceAccessRules;
-        private @Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+        private NetworkRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkRuleSetArgs();
         }
 
         public Builder(NetworkRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypass = defaults.bypass;
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.ipRules = defaults.ipRules;
-    	      this.resourceAccessRules = defaults.resourceAccessRules;
-    	      this.virtualNetworkRules = defaults.virtualNetworkRules;
+            $ = new NetworkRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bypass(@Nullable Output<Either<String,Bypass>> bypass) {
-            this.bypass = bypass;
+            $.bypass = bypass;
             return this;
         }
-        public Builder bypass(@Nullable Either<String,Bypass> bypass) {
-            this.bypass = Codegen.ofNullable(bypass);
-            return this;
+
+        public Builder bypass(Either<String,Bypass> bypass) {
+            return bypass(Output.of(bypass));
         }
+
         public Builder defaultAction(Output<DefaultAction> defaultAction) {
-            this.defaultAction = Objects.requireNonNull(defaultAction);
+            $.defaultAction = defaultAction;
             return this;
         }
+
         public Builder defaultAction(DefaultAction defaultAction) {
-            this.defaultAction = Output.of(Objects.requireNonNull(defaultAction));
-            return this;
+            return defaultAction(Output.of(defaultAction));
         }
+
         public Builder ipRules(@Nullable Output<List<IPRuleArgs>> ipRules) {
-            this.ipRules = ipRules;
+            $.ipRules = ipRules;
             return this;
         }
-        public Builder ipRules(@Nullable List<IPRuleArgs> ipRules) {
-            this.ipRules = Codegen.ofNullable(ipRules);
-            return this;
+
+        public Builder ipRules(List<IPRuleArgs> ipRules) {
+            return ipRules(Output.of(ipRules));
         }
+
         public Builder ipRules(IPRuleArgs... ipRules) {
             return ipRules(List.of(ipRules));
         }
+
         public Builder resourceAccessRules(@Nullable Output<List<ResourceAccessRuleArgs>> resourceAccessRules) {
-            this.resourceAccessRules = resourceAccessRules;
+            $.resourceAccessRules = resourceAccessRules;
             return this;
         }
-        public Builder resourceAccessRules(@Nullable List<ResourceAccessRuleArgs> resourceAccessRules) {
-            this.resourceAccessRules = Codegen.ofNullable(resourceAccessRules);
-            return this;
+
+        public Builder resourceAccessRules(List<ResourceAccessRuleArgs> resourceAccessRules) {
+            return resourceAccessRules(Output.of(resourceAccessRules));
         }
+
         public Builder resourceAccessRules(ResourceAccessRuleArgs... resourceAccessRules) {
             return resourceAccessRules(List.of(resourceAccessRules));
         }
+
         public Builder virtualNetworkRules(@Nullable Output<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
-            this.virtualNetworkRules = virtualNetworkRules;
+            $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
-        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Codegen.ofNullable(virtualNetworkRules);
-            return this;
+
+        public Builder virtualNetworkRules(List<VirtualNetworkRuleArgs> virtualNetworkRules) {
+            return virtualNetworkRules(Output.of(virtualNetworkRules));
         }
+
         public Builder virtualNetworkRules(VirtualNetworkRuleArgs... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
-        }        public NetworkRuleSetArgs build() {
-            return new NetworkRuleSetArgs(bypass, defaultAction, ipRules, resourceAccessRules, virtualNetworkRules);
+        }
+
+        public NetworkRuleSetArgs build() {
+            $.bypass = Codegen.stringProp("bypass").left(Bypass.class).output().arg($.bypass).def("AzureServices").getNullable();
+            $.defaultAction = Codegen.objectProp("defaultAction", DefaultAction.class).output().arg($.defaultAction).def(DefaultAction.Allow).require();
+            return $;
         }
     }
+
 }

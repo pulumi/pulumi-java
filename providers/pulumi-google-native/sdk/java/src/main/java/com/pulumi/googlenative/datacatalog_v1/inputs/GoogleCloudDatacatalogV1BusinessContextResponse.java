@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends com.p
      * 
      */
     @Import(name="contacts", required=true)
-      private final GoogleCloudDatacatalogV1ContactsResponse contacts;
+    private GoogleCloudDatacatalogV1ContactsResponse contacts;
 
     public GoogleCloudDatacatalogV1ContactsResponse contacts() {
         return this.contacts;
@@ -33,55 +33,52 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends com.p
      * 
      */
     @Import(name="entryOverview", required=true)
-      private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
+    private GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
     public GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview() {
         return this.entryOverview;
     }
 
-    public GoogleCloudDatacatalogV1BusinessContextResponse(
-        GoogleCloudDatacatalogV1ContactsResponse contacts,
-        GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
-        this.contacts = Objects.requireNonNull(contacts, "expected parameter 'contacts' to be non-null");
-        this.entryOverview = Objects.requireNonNull(entryOverview, "expected parameter 'entryOverview' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1BusinessContextResponse() {}
 
-    private GoogleCloudDatacatalogV1BusinessContextResponse() {
-        this.contacts = null;
-        this.entryOverview = null;
+    private GoogleCloudDatacatalogV1BusinessContextResponse(GoogleCloudDatacatalogV1BusinessContextResponse $) {
+        this.contacts = $.contacts;
+        this.entryOverview = $.entryOverview;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1BusinessContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDatacatalogV1ContactsResponse contacts;
-        private GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
+        private GoogleCloudDatacatalogV1BusinessContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1BusinessContextResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1BusinessContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contacts = defaults.contacts;
-    	      this.entryOverview = defaults.entryOverview;
+            $ = new GoogleCloudDatacatalogV1BusinessContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contacts(GoogleCloudDatacatalogV1ContactsResponse contacts) {
-            this.contacts = Objects.requireNonNull(contacts);
+            $.contacts = contacts;
             return this;
         }
+
         public Builder entryOverview(GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
-            this.entryOverview = Objects.requireNonNull(entryOverview);
+            $.entryOverview = entryOverview;
             return this;
-        }        public GoogleCloudDatacatalogV1BusinessContextResponse build() {
-            return new GoogleCloudDatacatalogV1BusinessContextResponse(contacts, entryOverview);
+        }
+
+        public GoogleCloudDatacatalogV1BusinessContextResponse build() {
+            $.contacts = Objects.requireNonNull($.contacts, "expected parameter 'contacts' to be non-null");
+            $.entryOverview = Objects.requireNonNull($.entryOverview, "expected parameter 'entryOverview' to be non-null");
+            return $;
         }
     }
+
 }

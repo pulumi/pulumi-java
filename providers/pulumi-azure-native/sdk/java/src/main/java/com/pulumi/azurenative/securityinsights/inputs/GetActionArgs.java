@@ -17,7 +17,7 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="actionId", required=true)
-      private final String actionId;
+    private String actionId;
 
     public String actionId() {
         return this.actionId;
@@ -28,7 +28,7 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleId", required=true)
-      private final String ruleId;
+    private String ruleId;
 
     public String ruleId() {
         return this.ruleId;
@@ -50,73 +50,66 @@ public final class GetActionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetActionArgs(
-        String actionId,
-        String resourceGroupName,
-        String ruleId,
-        String workspaceName) {
-        this.actionId = Objects.requireNonNull(actionId, "expected parameter 'actionId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleId = Objects.requireNonNull(ruleId, "expected parameter 'ruleId' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetActionArgs() {}
 
-    private GetActionArgs() {
-        this.actionId = null;
-        this.resourceGroupName = null;
-        this.ruleId = null;
-        this.workspaceName = null;
+    private GetActionArgs(GetActionArgs $) {
+        this.actionId = $.actionId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleId = $.ruleId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionId;
-        private String resourceGroupName;
-        private String ruleId;
-        private String workspaceName;
+        private GetActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetActionArgs();
         }
 
         public Builder(GetActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionId = defaults.actionId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleId = defaults.ruleId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionId(String actionId) {
-            this.actionId = Objects.requireNonNull(actionId);
+            $.actionId = actionId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleId(String ruleId) {
-            this.ruleId = Objects.requireNonNull(ruleId);
+            $.ruleId = ruleId;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetActionArgs build() {
-            return new GetActionArgs(actionId, resourceGroupName, ruleId, workspaceName);
+        }
+
+        public GetActionArgs build() {
+            $.actionId = Objects.requireNonNull($.actionId, "expected parameter 'actionId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

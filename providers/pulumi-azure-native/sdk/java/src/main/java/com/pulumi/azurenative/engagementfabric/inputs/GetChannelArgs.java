@@ -17,7 +17,7 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="channelName", required=true)
-      private final String channelName;
+    private String channelName;
 
     public String channelName() {
         return this.channelName;
@@ -39,64 +39,59 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetChannelArgs(
-        String accountName,
-        String channelName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetChannelArgs() {}
 
-    private GetChannelArgs() {
-        this.accountName = null;
-        this.channelName = null;
-        this.resourceGroupName = null;
+    private GetChannelArgs(GetChannelArgs $) {
+        this.accountName = $.accountName;
+        this.channelName = $.channelName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String channelName;
-        private String resourceGroupName;
+        private GetChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetChannelArgs();
         }
 
         public Builder(GetChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.channelName = defaults.channelName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder channelName(String channelName) {
-            this.channelName = Objects.requireNonNull(channelName);
+            $.channelName = channelName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetChannelArgs build() {
-            return new GetChannelArgs(accountName, channelName, resourceGroupName);
+        }
+
+        public GetChannelArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.channelName = Objects.requireNonNull($.channelName, "expected parameter 'channelName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

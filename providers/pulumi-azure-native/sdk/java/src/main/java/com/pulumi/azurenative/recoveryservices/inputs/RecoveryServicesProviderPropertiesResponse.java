@@ -28,10 +28,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="allowedScenarios")
-      private final @Nullable List<String> allowedScenarios;
+    private @Nullable List<String> allowedScenarios;
 
-    public List<String> allowedScenarios() {
-        return this.allowedScenarios == null ? List.of() : this.allowedScenarios;
+    public Optional<List<String>> allowedScenarios() {
+        return Optional.ofNullable(this.allowedScenarios);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="authenticationIdentityDetails")
-      private final @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
+    private @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
 
     public Optional<IdentityProviderDetailsResponse> authenticationIdentityDetails() {
-        return this.authenticationIdentityDetails == null ? Optional.empty() : Optional.ofNullable(this.authenticationIdentityDetails);
+        return Optional.ofNullable(this.authenticationIdentityDetails);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="connectionStatus")
-      private final @Nullable String connectionStatus;
+    private @Nullable String connectionStatus;
 
     public Optional<String> connectionStatus() {
-        return this.connectionStatus == null ? Optional.empty() : Optional.ofNullable(this.connectionStatus);
+        return Optional.ofNullable(this.connectionStatus);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="draIdentifier")
-      private final @Nullable String draIdentifier;
+    private @Nullable String draIdentifier;
 
     public Optional<String> draIdentifier() {
-        return this.draIdentifier == null ? Optional.empty() : Optional.ofNullable(this.draIdentifier);
+        return Optional.ofNullable(this.draIdentifier);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="fabricFriendlyName")
-      private final @Nullable String fabricFriendlyName;
+    private @Nullable String fabricFriendlyName;
 
     public Optional<String> fabricFriendlyName() {
-        return this.fabricFriendlyName == null ? Optional.empty() : Optional.ofNullable(this.fabricFriendlyName);
+        return Optional.ofNullable(this.fabricFriendlyName);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="fabricType")
-      private final @Nullable String fabricType;
+    private @Nullable String fabricType;
 
     public Optional<String> fabricType() {
-        return this.fabricType == null ? Optional.empty() : Optional.ofNullable(this.fabricType);
+        return Optional.ofNullable(this.fabricType);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="healthErrorDetails")
-      private final @Nullable List<HealthErrorResponse> healthErrorDetails;
+    private @Nullable List<HealthErrorResponse> healthErrorDetails;
 
-    public List<HealthErrorResponse> healthErrorDetails() {
-        return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
+    public Optional<List<HealthErrorResponse>> healthErrorDetails() {
+        return Optional.ofNullable(this.healthErrorDetails);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="lastHeartBeat")
-      private final @Nullable String lastHeartBeat;
+    private @Nullable String lastHeartBeat;
 
     public Optional<String> lastHeartBeat() {
-        return this.lastHeartBeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartBeat);
+        return Optional.ofNullable(this.lastHeartBeat);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="protectedItemCount")
-      private final @Nullable Integer protectedItemCount;
+    private @Nullable Integer protectedItemCount;
 
     public Optional<Integer> protectedItemCount() {
-        return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
+        return Optional.ofNullable(this.protectedItemCount);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="providerVersion")
-      private final @Nullable String providerVersion;
+    private @Nullable String providerVersion;
 
     public Optional<String> providerVersion() {
-        return this.providerVersion == null ? Optional.empty() : Optional.ofNullable(this.providerVersion);
+        return Optional.ofNullable(this.providerVersion);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="providerVersionDetails")
-      private final @Nullable VersionDetailsResponse providerVersionDetails;
+    private @Nullable VersionDetailsResponse providerVersionDetails;
 
     public Optional<VersionDetailsResponse> providerVersionDetails() {
-        return this.providerVersionDetails == null ? Optional.empty() : Optional.ofNullable(this.providerVersionDetails);
+        return Optional.ofNullable(this.providerVersionDetails);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="providerVersionExpiryDate")
-      private final @Nullable String providerVersionExpiryDate;
+    private @Nullable String providerVersionExpiryDate;
 
     public Optional<String> providerVersionExpiryDate() {
-        return this.providerVersionExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.providerVersionExpiryDate);
+        return Optional.ofNullable(this.providerVersionExpiryDate);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="providerVersionState")
-      private final @Nullable String providerVersionState;
+    private @Nullable String providerVersionState;
 
     public Optional<String> providerVersionState() {
-        return this.providerVersionState == null ? Optional.empty() : Optional.ofNullable(this.providerVersionState);
+        return Optional.ofNullable(this.providerVersionState);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="resourceAccessIdentityDetails")
-      private final @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
+    private @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
 
     public Optional<IdentityProviderDetailsResponse> resourceAccessIdentityDetails() {
-        return this.resourceAccessIdentityDetails == null ? Optional.empty() : Optional.ofNullable(this.resourceAccessIdentityDetails);
+        return Optional.ofNullable(this.resourceAccessIdentityDetails);
     }
 
     /**
@@ -193,187 +193,142 @@ public final class RecoveryServicesProviderPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="serverVersion")
-      private final @Nullable String serverVersion;
+    private @Nullable String serverVersion;
 
     public Optional<String> serverVersion() {
-        return this.serverVersion == null ? Optional.empty() : Optional.ofNullable(this.serverVersion);
+        return Optional.ofNullable(this.serverVersion);
     }
 
-    public RecoveryServicesProviderPropertiesResponse(
-        @Nullable List<String> allowedScenarios,
-        @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails,
-        @Nullable String connectionStatus,
-        @Nullable String draIdentifier,
-        @Nullable String fabricFriendlyName,
-        @Nullable String fabricType,
-        @Nullable String friendlyName,
-        @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @Nullable String lastHeartBeat,
-        @Nullable Integer protectedItemCount,
-        @Nullable String providerVersion,
-        @Nullable VersionDetailsResponse providerVersionDetails,
-        @Nullable String providerVersionExpiryDate,
-        @Nullable String providerVersionState,
-        @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails,
-        @Nullable String serverVersion) {
-        this.allowedScenarios = allowedScenarios;
-        this.authenticationIdentityDetails = authenticationIdentityDetails;
-        this.connectionStatus = connectionStatus;
-        this.draIdentifier = draIdentifier;
-        this.fabricFriendlyName = fabricFriendlyName;
-        this.fabricType = fabricType;
-        this.friendlyName = friendlyName;
-        this.healthErrorDetails = healthErrorDetails;
-        this.lastHeartBeat = lastHeartBeat;
-        this.protectedItemCount = protectedItemCount;
-        this.providerVersion = providerVersion;
-        this.providerVersionDetails = providerVersionDetails;
-        this.providerVersionExpiryDate = providerVersionExpiryDate;
-        this.providerVersionState = providerVersionState;
-        this.resourceAccessIdentityDetails = resourceAccessIdentityDetails;
-        this.serverVersion = serverVersion;
-    }
+    private RecoveryServicesProviderPropertiesResponse() {}
 
-    private RecoveryServicesProviderPropertiesResponse() {
-        this.allowedScenarios = List.of();
-        this.authenticationIdentityDetails = null;
-        this.connectionStatus = null;
-        this.draIdentifier = null;
-        this.fabricFriendlyName = null;
-        this.fabricType = null;
-        this.friendlyName = null;
-        this.healthErrorDetails = List.of();
-        this.lastHeartBeat = null;
-        this.protectedItemCount = null;
-        this.providerVersion = null;
-        this.providerVersionDetails = null;
-        this.providerVersionExpiryDate = null;
-        this.providerVersionState = null;
-        this.resourceAccessIdentityDetails = null;
-        this.serverVersion = null;
+    private RecoveryServicesProviderPropertiesResponse(RecoveryServicesProviderPropertiesResponse $) {
+        this.allowedScenarios = $.allowedScenarios;
+        this.authenticationIdentityDetails = $.authenticationIdentityDetails;
+        this.connectionStatus = $.connectionStatus;
+        this.draIdentifier = $.draIdentifier;
+        this.fabricFriendlyName = $.fabricFriendlyName;
+        this.fabricType = $.fabricType;
+        this.friendlyName = $.friendlyName;
+        this.healthErrorDetails = $.healthErrorDetails;
+        this.lastHeartBeat = $.lastHeartBeat;
+        this.protectedItemCount = $.protectedItemCount;
+        this.providerVersion = $.providerVersion;
+        this.providerVersionDetails = $.providerVersionDetails;
+        this.providerVersionExpiryDate = $.providerVersionExpiryDate;
+        this.providerVersionState = $.providerVersionState;
+        this.resourceAccessIdentityDetails = $.resourceAccessIdentityDetails;
+        this.serverVersion = $.serverVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryServicesProviderPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedScenarios;
-        private @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
-        private @Nullable String connectionStatus;
-        private @Nullable String draIdentifier;
-        private @Nullable String fabricFriendlyName;
-        private @Nullable String fabricType;
-        private @Nullable String friendlyName;
-        private @Nullable List<HealthErrorResponse> healthErrorDetails;
-        private @Nullable String lastHeartBeat;
-        private @Nullable Integer protectedItemCount;
-        private @Nullable String providerVersion;
-        private @Nullable VersionDetailsResponse providerVersionDetails;
-        private @Nullable String providerVersionExpiryDate;
-        private @Nullable String providerVersionState;
-        private @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
-        private @Nullable String serverVersion;
+        private RecoveryServicesProviderPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryServicesProviderPropertiesResponse();
         }
 
         public Builder(RecoveryServicesProviderPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedScenarios = defaults.allowedScenarios;
-    	      this.authenticationIdentityDetails = defaults.authenticationIdentityDetails;
-    	      this.connectionStatus = defaults.connectionStatus;
-    	      this.draIdentifier = defaults.draIdentifier;
-    	      this.fabricFriendlyName = defaults.fabricFriendlyName;
-    	      this.fabricType = defaults.fabricType;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthErrorDetails = defaults.healthErrorDetails;
-    	      this.lastHeartBeat = defaults.lastHeartBeat;
-    	      this.protectedItemCount = defaults.protectedItemCount;
-    	      this.providerVersion = defaults.providerVersion;
-    	      this.providerVersionDetails = defaults.providerVersionDetails;
-    	      this.providerVersionExpiryDate = defaults.providerVersionExpiryDate;
-    	      this.providerVersionState = defaults.providerVersionState;
-    	      this.resourceAccessIdentityDetails = defaults.resourceAccessIdentityDetails;
-    	      this.serverVersion = defaults.serverVersion;
+            $ = new RecoveryServicesProviderPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedScenarios(@Nullable List<String> allowedScenarios) {
-            this.allowedScenarios = allowedScenarios;
+            $.allowedScenarios = allowedScenarios;
             return this;
         }
+
         public Builder allowedScenarios(String... allowedScenarios) {
             return allowedScenarios(List.of(allowedScenarios));
         }
+
         public Builder authenticationIdentityDetails(@Nullable IdentityProviderDetailsResponse authenticationIdentityDetails) {
-            this.authenticationIdentityDetails = authenticationIdentityDetails;
+            $.authenticationIdentityDetails = authenticationIdentityDetails;
             return this;
         }
+
         public Builder connectionStatus(@Nullable String connectionStatus) {
-            this.connectionStatus = connectionStatus;
+            $.connectionStatus = connectionStatus;
             return this;
         }
+
         public Builder draIdentifier(@Nullable String draIdentifier) {
-            this.draIdentifier = draIdentifier;
+            $.draIdentifier = draIdentifier;
             return this;
         }
+
         public Builder fabricFriendlyName(@Nullable String fabricFriendlyName) {
-            this.fabricFriendlyName = fabricFriendlyName;
+            $.fabricFriendlyName = fabricFriendlyName;
             return this;
         }
+
         public Builder fabricType(@Nullable String fabricType) {
-            this.fabricType = fabricType;
+            $.fabricType = fabricType;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
-            this.healthErrorDetails = healthErrorDetails;
+            $.healthErrorDetails = healthErrorDetails;
             return this;
         }
+
         public Builder healthErrorDetails(HealthErrorResponse... healthErrorDetails) {
             return healthErrorDetails(List.of(healthErrorDetails));
         }
+
         public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
-            this.lastHeartBeat = lastHeartBeat;
+            $.lastHeartBeat = lastHeartBeat;
             return this;
         }
+
         public Builder protectedItemCount(@Nullable Integer protectedItemCount) {
-            this.protectedItemCount = protectedItemCount;
+            $.protectedItemCount = protectedItemCount;
             return this;
         }
+
         public Builder providerVersion(@Nullable String providerVersion) {
-            this.providerVersion = providerVersion;
+            $.providerVersion = providerVersion;
             return this;
         }
+
         public Builder providerVersionDetails(@Nullable VersionDetailsResponse providerVersionDetails) {
-            this.providerVersionDetails = providerVersionDetails;
+            $.providerVersionDetails = providerVersionDetails;
             return this;
         }
+
         public Builder providerVersionExpiryDate(@Nullable String providerVersionExpiryDate) {
-            this.providerVersionExpiryDate = providerVersionExpiryDate;
+            $.providerVersionExpiryDate = providerVersionExpiryDate;
             return this;
         }
+
         public Builder providerVersionState(@Nullable String providerVersionState) {
-            this.providerVersionState = providerVersionState;
+            $.providerVersionState = providerVersionState;
             return this;
         }
+
         public Builder resourceAccessIdentityDetails(@Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails) {
-            this.resourceAccessIdentityDetails = resourceAccessIdentityDetails;
+            $.resourceAccessIdentityDetails = resourceAccessIdentityDetails;
             return this;
         }
+
         public Builder serverVersion(@Nullable String serverVersion) {
-            this.serverVersion = serverVersion;
+            $.serverVersion = serverVersion;
             return this;
-        }        public RecoveryServicesProviderPropertiesResponse build() {
-            return new RecoveryServicesProviderPropertiesResponse(allowedScenarios, authenticationIdentityDetails, connectionStatus, draIdentifier, fabricFriendlyName, fabricType, friendlyName, healthErrorDetails, lastHeartBeat, protectedItemCount, providerVersion, providerVersionDetails, providerVersionExpiryDate, providerVersionState, resourceAccessIdentityDetails, serverVersion);
+        }
+
+        public RecoveryServicesProviderPropertiesResponse build() {
+            return $;
         }
     }
+
 }

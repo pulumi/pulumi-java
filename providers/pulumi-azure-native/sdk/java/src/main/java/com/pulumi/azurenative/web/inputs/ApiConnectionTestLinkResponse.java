@@ -23,10 +23,10 @@ public final class ApiConnectionTestLinkResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="method")
-      private final @Nullable String method;
+    private @Nullable String method;
 
     public Optional<String> method() {
-        return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ApiConnectionTestLinkResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="requestUri")
-      private final @Nullable String requestUri;
+    private @Nullable String requestUri;
 
     public Optional<String> requestUri() {
-        return this.requestUri == null ? Optional.empty() : Optional.ofNullable(this.requestUri);
+        return Optional.ofNullable(this.requestUri);
     }
 
-    public ApiConnectionTestLinkResponse(
-        @Nullable String method,
-        @Nullable String requestUri) {
-        this.method = method;
-        this.requestUri = requestUri;
-    }
+    private ApiConnectionTestLinkResponse() {}
 
-    private ApiConnectionTestLinkResponse() {
-        this.method = null;
-        this.requestUri = null;
+    private ApiConnectionTestLinkResponse(ApiConnectionTestLinkResponse $) {
+        this.method = $.method;
+        this.requestUri = $.requestUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConnectionTestLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String method;
-        private @Nullable String requestUri;
+        private ApiConnectionTestLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConnectionTestLinkResponse();
         }
 
         public Builder(ApiConnectionTestLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.method = defaults.method;
-    	      this.requestUri = defaults.requestUri;
+            $ = new ApiConnectionTestLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder method(@Nullable String method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
+
         public Builder requestUri(@Nullable String requestUri) {
-            this.requestUri = requestUri;
+            $.requestUri = requestUri;
             return this;
-        }        public ApiConnectionTestLinkResponse build() {
-            return new ApiConnectionTestLinkResponse(method, requestUri);
+        }
+
+        public ApiConnectionTestLinkResponse build() {
+            return $;
         }
     }
+
 }

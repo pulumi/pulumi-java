@@ -7,9 +7,9 @@ import com.pulumi.azurenative.eventgrid.enums.IpActionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InboundIpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<Either<String,IpActionType>> action;
+    private @Nullable Output<Either<String,IpActionType>> action;
 
-    public Output<Either<String,IpActionType>> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<Either<String,IpActionType>>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class InboundIpRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipMask")
-      private final @Nullable Output<String> ipMask;
+    private @Nullable Output<String> ipMask;
 
-    public Output<String> ipMask() {
-        return this.ipMask == null ? Codegen.empty() : this.ipMask;
+    public Optional<Output<String>> ipMask() {
+        return Optional.ofNullable(this.ipMask);
     }
 
-    public InboundIpRuleArgs(
-        @Nullable Output<Either<String,IpActionType>> action,
-        @Nullable Output<String> ipMask) {
-        this.action = action;
-        this.ipMask = ipMask;
-    }
+    private InboundIpRuleArgs() {}
 
-    private InboundIpRuleArgs() {
-        this.action = Codegen.empty();
-        this.ipMask = Codegen.empty();
+    private InboundIpRuleArgs(InboundIpRuleArgs $) {
+        this.action = $.action;
+        this.ipMask = $.ipMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InboundIpRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,IpActionType>> action;
-        private @Nullable Output<String> ipMask;
+        private InboundIpRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InboundIpRuleArgs();
         }
 
         public Builder(InboundIpRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.ipMask = defaults.ipMask;
+            $ = new InboundIpRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<Either<String,IpActionType>> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable Either<String,IpActionType> action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(Either<String,IpActionType> action) {
+            return action(Output.of(action));
         }
+
         public Builder ipMask(@Nullable Output<String> ipMask) {
-            this.ipMask = ipMask;
+            $.ipMask = ipMask;
             return this;
         }
-        public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = Codegen.ofNullable(ipMask);
-            return this;
-        }        public InboundIpRuleArgs build() {
-            return new InboundIpRuleArgs(action, ipMask);
+
+        public Builder ipMask(String ipMask) {
+            return ipMask(Output.of(ipMask));
+        }
+
+        public InboundIpRuleArgs build() {
+            return $;
         }
     }
+
 }

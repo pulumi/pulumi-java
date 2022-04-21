@@ -20,10 +20,10 @@ public final class GetImageVersionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -32,55 +32,50 @@ public final class GetImageVersionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public GetImageVersionsArgs(
-        @Nullable String project,
-        @Nullable String region) {
-        this.project = project;
-        this.region = region;
-    }
+    private GetImageVersionsArgs() {}
 
-    private GetImageVersionsArgs() {
-        this.project = null;
-        this.region = null;
+    private GetImageVersionsArgs(GetImageVersionsArgs $) {
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageVersionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private @Nullable String region;
+        private GetImageVersionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageVersionsArgs();
         }
 
         public Builder(GetImageVersionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetImageVersionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public GetImageVersionsArgs build() {
-            return new GetImageVersionsArgs(project, region);
+        }
+
+        public GetImageVersionsArgs build() {
+            return $;
         }
     }
+
 }

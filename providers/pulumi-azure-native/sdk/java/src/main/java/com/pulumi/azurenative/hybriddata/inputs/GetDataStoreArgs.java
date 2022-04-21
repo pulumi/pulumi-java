@@ -17,7 +17,7 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataManagerName", required=true)
-      private final String dataManagerName;
+    private String dataManagerName;
 
     public String dataManagerName() {
         return this.dataManagerName;
@@ -28,7 +28,7 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataStoreName", required=true)
-      private final String dataStoreName;
+    private String dataStoreName;
 
     public String dataStoreName() {
         return this.dataStoreName;
@@ -39,64 +39,59 @@ public final class GetDataStoreArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDataStoreArgs(
-        String dataManagerName,
-        String dataStoreName,
-        String resourceGroupName) {
-        this.dataManagerName = Objects.requireNonNull(dataManagerName, "expected parameter 'dataManagerName' to be non-null");
-        this.dataStoreName = Objects.requireNonNull(dataStoreName, "expected parameter 'dataStoreName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDataStoreArgs() {}
 
-    private GetDataStoreArgs() {
-        this.dataManagerName = null;
-        this.dataStoreName = null;
-        this.resourceGroupName = null;
+    private GetDataStoreArgs(GetDataStoreArgs $) {
+        this.dataManagerName = $.dataManagerName;
+        this.dataStoreName = $.dataStoreName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataManagerName;
-        private String dataStoreName;
-        private String resourceGroupName;
+        private GetDataStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataStoreArgs();
         }
 
         public Builder(GetDataStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataManagerName = defaults.dataManagerName;
-    	      this.dataStoreName = defaults.dataStoreName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDataStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataManagerName(String dataManagerName) {
-            this.dataManagerName = Objects.requireNonNull(dataManagerName);
+            $.dataManagerName = dataManagerName;
             return this;
         }
+
         public Builder dataStoreName(String dataStoreName) {
-            this.dataStoreName = Objects.requireNonNull(dataStoreName);
+            $.dataStoreName = dataStoreName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDataStoreArgs build() {
-            return new GetDataStoreArgs(dataManagerName, dataStoreName, resourceGroupName);
+        }
+
+        public GetDataStoreArgs build() {
+            $.dataManagerName = Objects.requireNonNull($.dataManagerName, "expected parameter 'dataManagerName' to be non-null");
+            $.dataStoreName = Objects.requireNonNull($.dataStoreName, "expected parameter 'dataStoreName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

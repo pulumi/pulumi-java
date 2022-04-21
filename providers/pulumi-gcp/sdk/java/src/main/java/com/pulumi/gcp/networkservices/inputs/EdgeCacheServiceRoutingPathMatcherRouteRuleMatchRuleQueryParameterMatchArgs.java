@@ -5,10 +5,10 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      * 
      */
     @Import(name="exactMatch")
-      private final @Nullable Output<String> exactMatch;
+    private @Nullable Output<String> exactMatch;
 
-    public Output<String> exactMatch() {
-        return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
+    public Optional<Output<String>> exactMatch() {
+        return Optional.ofNullable(this.exactMatch);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -43,76 +43,69 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      * 
      */
     @Import(name="presentMatch")
-      private final @Nullable Output<Boolean> presentMatch;
+    private @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> presentMatch() {
-        return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
+    public Optional<Output<Boolean>> presentMatch() {
+        return Optional.ofNullable(this.presentMatch);
     }
 
-    public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(
-        @Nullable Output<String> exactMatch,
-        Output<String> name,
-        @Nullable Output<Boolean> presentMatch) {
-        this.exactMatch = exactMatch;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.presentMatch = presentMatch;
-    }
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs() {}
 
-    private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs() {
-        this.exactMatch = Codegen.empty();
-        this.name = Codegen.empty();
-        this.presentMatch = Codegen.empty();
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs $) {
+        this.exactMatch = $.exactMatch;
+        this.name = $.name;
+        this.presentMatch = $.presentMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exactMatch;
-        private Output<String> name;
-        private @Nullable Output<Boolean> presentMatch;
+        private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs();
         }
 
         public Builder(EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exactMatch = defaults.exactMatch;
-    	      this.name = defaults.name;
-    	      this.presentMatch = defaults.presentMatch;
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exactMatch(@Nullable Output<String> exactMatch) {
-            this.exactMatch = exactMatch;
+            $.exactMatch = exactMatch;
             return this;
         }
-        public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Codegen.ofNullable(exactMatch);
-            return this;
+
+        public Builder exactMatch(String exactMatch) {
+            return exactMatch(Output.of(exactMatch));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
-            this.presentMatch = presentMatch;
+            $.presentMatch = presentMatch;
             return this;
         }
-        public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Codegen.ofNullable(presentMatch);
-            return this;
-        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs build() {
-            return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(exactMatch, name, presentMatch);
+
+        public Builder presentMatch(Boolean presentMatch) {
+            return presentMatch(Output.of(presentMatch));
+        }
+
+        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

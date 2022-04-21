@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.DownwardAPIVolumeFileArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DownwardAPIVolumeSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="defaultMode")
-      private final @Nullable Output<Integer> defaultMode;
+    private @Nullable Output<Integer> defaultMode;
 
-    public Output<Integer> defaultMode() {
-        return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
+    public Optional<Output<Integer>> defaultMode() {
+        return Optional.ofNullable(this.defaultMode);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class DownwardAPIVolumeSourceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
+    private @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
-    public Output<List<DownwardAPIVolumeFileArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<DownwardAPIVolumeFileArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public DownwardAPIVolumeSourceArgs(
-        @Nullable Output<Integer> defaultMode,
-        @Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
-        this.defaultMode = defaultMode;
-        this.items = items;
-    }
+    private DownwardAPIVolumeSourceArgs() {}
 
-    private DownwardAPIVolumeSourceArgs() {
-        this.defaultMode = Codegen.empty();
-        this.items = Codegen.empty();
+    private DownwardAPIVolumeSourceArgs(DownwardAPIVolumeSourceArgs $) {
+        this.defaultMode = $.defaultMode;
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DownwardAPIVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> defaultMode;
-        private @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
+        private DownwardAPIVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DownwardAPIVolumeSourceArgs();
         }
 
         public Builder(DownwardAPIVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultMode = defaults.defaultMode;
-    	      this.items = defaults.items;
+            $ = new DownwardAPIVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultMode(@Nullable Output<Integer> defaultMode) {
-            this.defaultMode = defaultMode;
+            $.defaultMode = defaultMode;
             return this;
         }
-        public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Codegen.ofNullable(defaultMode);
-            return this;
+
+        public Builder defaultMode(Integer defaultMode) {
+            return defaultMode(Output.of(defaultMode));
         }
+
         public Builder items(@Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<DownwardAPIVolumeFileArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<DownwardAPIVolumeFileArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(DownwardAPIVolumeFileArgs... items) {
             return items(List.of(items));
-        }        public DownwardAPIVolumeSourceArgs build() {
-            return new DownwardAPIVolumeSourceArgs(defaultMode, items);
+        }
+
+        public DownwardAPIVolumeSourceArgs build() {
+            return $;
         }
     }
+
 }

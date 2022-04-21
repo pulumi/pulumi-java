@@ -19,97 +19,90 @@ public final class GlobalTableGlobalSecondaryIndex extends com.pulumi.resources.
     public static final GlobalTableGlobalSecondaryIndex Empty = new GlobalTableGlobalSecondaryIndex();
 
     @Import(name="indexName", required=true)
-      private final String indexName;
+    private String indexName;
 
     public String indexName() {
         return this.indexName;
     }
 
     @Import(name="keySchema", required=true)
-      private final List<GlobalTableKeySchema> keySchema;
+    private List<GlobalTableKeySchema> keySchema;
 
     public List<GlobalTableKeySchema> keySchema() {
         return this.keySchema;
     }
 
     @Import(name="projection", required=true)
-      private final GlobalTableProjection projection;
+    private GlobalTableProjection projection;
 
     public GlobalTableProjection projection() {
         return this.projection;
     }
 
     @Import(name="writeProvisionedThroughputSettings")
-      private final @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
+    private @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
 
     public Optional<GlobalTableWriteProvisionedThroughputSettings> writeProvisionedThroughputSettings() {
-        return this.writeProvisionedThroughputSettings == null ? Optional.empty() : Optional.ofNullable(this.writeProvisionedThroughputSettings);
+        return Optional.ofNullable(this.writeProvisionedThroughputSettings);
     }
 
-    public GlobalTableGlobalSecondaryIndex(
-        String indexName,
-        List<GlobalTableKeySchema> keySchema,
-        GlobalTableProjection projection,
-        @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
-        this.indexName = Objects.requireNonNull(indexName, "expected parameter 'indexName' to be non-null");
-        this.keySchema = Objects.requireNonNull(keySchema, "expected parameter 'keySchema' to be non-null");
-        this.projection = Objects.requireNonNull(projection, "expected parameter 'projection' to be non-null");
-        this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
-    }
+    private GlobalTableGlobalSecondaryIndex() {}
 
-    private GlobalTableGlobalSecondaryIndex() {
-        this.indexName = null;
-        this.keySchema = List.of();
-        this.projection = null;
-        this.writeProvisionedThroughputSettings = null;
+    private GlobalTableGlobalSecondaryIndex(GlobalTableGlobalSecondaryIndex $) {
+        this.indexName = $.indexName;
+        this.keySchema = $.keySchema;
+        this.projection = $.projection;
+        this.writeProvisionedThroughputSettings = $.writeProvisionedThroughputSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableGlobalSecondaryIndex defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String indexName;
-        private List<GlobalTableKeySchema> keySchema;
-        private GlobalTableProjection projection;
-        private @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
+        private GlobalTableGlobalSecondaryIndex $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableGlobalSecondaryIndex();
         }
 
         public Builder(GlobalTableGlobalSecondaryIndex defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.indexName = defaults.indexName;
-    	      this.keySchema = defaults.keySchema;
-    	      this.projection = defaults.projection;
-    	      this.writeProvisionedThroughputSettings = defaults.writeProvisionedThroughputSettings;
+            $ = new GlobalTableGlobalSecondaryIndex(Objects.requireNonNull(defaults));
         }
 
         public Builder indexName(String indexName) {
-            this.indexName = Objects.requireNonNull(indexName);
+            $.indexName = indexName;
             return this;
         }
+
         public Builder keySchema(List<GlobalTableKeySchema> keySchema) {
-            this.keySchema = Objects.requireNonNull(keySchema);
+            $.keySchema = keySchema;
             return this;
         }
+
         public Builder keySchema(GlobalTableKeySchema... keySchema) {
             return keySchema(List.of(keySchema));
         }
+
         public Builder projection(GlobalTableProjection projection) {
-            this.projection = Objects.requireNonNull(projection);
+            $.projection = projection;
             return this;
         }
+
         public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
-            this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
+            $.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
-        }        public GlobalTableGlobalSecondaryIndex build() {
-            return new GlobalTableGlobalSecondaryIndex(indexName, keySchema, projection, writeProvisionedThroughputSettings);
+        }
+
+        public GlobalTableGlobalSecondaryIndex build() {
+            $.indexName = Objects.requireNonNull($.indexName, "expected parameter 'indexName' to be non-null");
+            $.keySchema = Objects.requireNonNull($.keySchema, "expected parameter 'keySchema' to be non-null");
+            $.projection = Objects.requireNonNull($.projection, "expected parameter 'projection' to be non-null");
+            return $;
         }
     }
+
 }

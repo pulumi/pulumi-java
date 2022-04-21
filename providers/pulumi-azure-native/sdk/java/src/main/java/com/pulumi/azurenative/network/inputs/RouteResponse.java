@@ -24,10 +24,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable String addressPrefix;
+    private @Nullable String addressPrefix;
 
     public Optional<String> addressPrefix() {
-        return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -46,10 +46,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hasBgpOverride")
-      private final @Nullable Boolean hasBgpOverride;
+    private @Nullable Boolean hasBgpOverride;
 
     public Optional<Boolean> hasBgpOverride() {
-        return this.hasBgpOverride == null ? Optional.empty() : Optional.ofNullable(this.hasBgpOverride);
+        return Optional.ofNullable(this.hasBgpOverride);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nextHopIpAddress")
-      private final @Nullable String nextHopIpAddress;
+    private @Nullable String nextHopIpAddress;
 
     public Optional<String> nextHopIpAddress() {
-        return this.nextHopIpAddress == null ? Optional.empty() : Optional.ofNullable(this.nextHopIpAddress);
+        return Optional.ofNullable(this.nextHopIpAddress);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nextHopType", required=true)
-      private final String nextHopType;
+    private String nextHopType;
 
     public String nextHopType() {
         return this.nextHopType;
@@ -101,7 +101,7 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -112,118 +112,95 @@ public final class RouteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public RouteResponse(
-        @Nullable String addressPrefix,
-        String etag,
-        @Nullable Boolean hasBgpOverride,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String nextHopIpAddress,
-        String nextHopType,
-        String provisioningState,
-        @Nullable String type) {
-        this.addressPrefix = addressPrefix;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.hasBgpOverride = hasBgpOverride;
-        this.id = id;
-        this.name = name;
-        this.nextHopIpAddress = nextHopIpAddress;
-        this.nextHopType = Objects.requireNonNull(nextHopType, "expected parameter 'nextHopType' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = type;
-    }
+    private RouteResponse() {}
 
-    private RouteResponse() {
-        this.addressPrefix = null;
-        this.etag = null;
-        this.hasBgpOverride = null;
-        this.id = null;
-        this.name = null;
-        this.nextHopIpAddress = null;
-        this.nextHopType = null;
-        this.provisioningState = null;
-        this.type = null;
+    private RouteResponse(RouteResponse $) {
+        this.addressPrefix = $.addressPrefix;
+        this.etag = $.etag;
+        this.hasBgpOverride = $.hasBgpOverride;
+        this.id = $.id;
+        this.name = $.name;
+        this.nextHopIpAddress = $.nextHopIpAddress;
+        this.nextHopType = $.nextHopType;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressPrefix;
-        private String etag;
-        private @Nullable Boolean hasBgpOverride;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String nextHopIpAddress;
-        private String nextHopType;
-        private String provisioningState;
-        private @Nullable String type;
+        private RouteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteResponse();
         }
 
         public Builder(RouteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.etag = defaults.etag;
-    	      this.hasBgpOverride = defaults.hasBgpOverride;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.nextHopIpAddress = defaults.nextHopIpAddress;
-    	      this.nextHopType = defaults.nextHopType;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new RouteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder hasBgpOverride(@Nullable Boolean hasBgpOverride) {
-            this.hasBgpOverride = hasBgpOverride;
+            $.hasBgpOverride = hasBgpOverride;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
-            this.nextHopIpAddress = nextHopIpAddress;
+            $.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
+
         public Builder nextHopType(String nextHopType) {
-            this.nextHopType = Objects.requireNonNull(nextHopType);
+            $.nextHopType = nextHopType;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public RouteResponse build() {
-            return new RouteResponse(addressPrefix, etag, hasBgpOverride, id, name, nextHopIpAddress, nextHopType, provisioningState, type);
+        }
+
+        public RouteResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.nextHopType = Objects.requireNonNull($.nextHopType, "expected parameter 'nextHopType' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocatedStorage")
-      private final @Nullable Output<Integer> allocatedStorage;
+    private @Nullable Output<Integer> allocatedStorage;
 
-    public Output<Integer> allocatedStorage() {
-        return this.allocatedStorage == null ? Codegen.empty() : this.allocatedStorage;
+    public Optional<Output<Integer>> allocatedStorage() {
+        return Optional.ofNullable(this.allocatedStorage);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbInstanceIdentifier")
-      private final @Nullable Output<String> dbInstanceIdentifier;
+    private @Nullable Output<String> dbInstanceIdentifier;
 
-    public Output<String> dbInstanceIdentifier() {
-        return this.dbInstanceIdentifier == null ? Codegen.empty() : this.dbInstanceIdentifier;
+    public Optional<Output<String>> dbInstanceIdentifier() {
+        return Optional.ofNullable(this.dbInstanceIdentifier);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbSnapshotArn")
-      private final @Nullable Output<String> dbSnapshotArn;
+    private @Nullable Output<String> dbSnapshotArn;
 
-    public Output<String> dbSnapshotArn() {
-        return this.dbSnapshotArn == null ? Codegen.empty() : this.dbSnapshotArn;
+    public Optional<Output<String>> dbSnapshotArn() {
+        return Optional.ofNullable(this.dbSnapshotArn);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dbSnapshotIdentifier")
-      private final @Nullable Output<String> dbSnapshotIdentifier;
+    private @Nullable Output<String> dbSnapshotIdentifier;
 
-    public Output<String> dbSnapshotIdentifier() {
-        return this.dbSnapshotIdentifier == null ? Codegen.empty() : this.dbSnapshotIdentifier;
+    public Optional<Output<String>> dbSnapshotIdentifier() {
+        return Optional.ofNullable(this.dbSnapshotIdentifier);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engine")
-      private final @Nullable Output<String> engine;
+    private @Nullable Output<String> engine;
 
-    public Output<String> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<String>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseModel")
-      private final @Nullable Output<String> licenseModel;
+    private @Nullable Output<String> licenseModel;
 
-    public Output<String> licenseModel() {
-        return this.licenseModel == null ? Codegen.empty() : this.licenseModel;
+    public Optional<Output<String>> licenseModel() {
+        return Optional.ofNullable(this.licenseModel);
     }
 
     /**
@@ -144,24 +144,24 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="optionGroupName")
-      private final @Nullable Output<String> optionGroupName;
+    private @Nullable Output<String> optionGroupName;
 
-    public Output<String> optionGroupName() {
-        return this.optionGroupName == null ? Codegen.empty() : this.optionGroupName;
+    public Optional<Output<String>> optionGroupName() {
+        return Optional.ofNullable(this.optionGroupName);
     }
 
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="snapshotType")
-      private final @Nullable Output<String> snapshotType;
+    private @Nullable Output<String> snapshotType;
 
-    public Output<String> snapshotType() {
-        return this.snapshotType == null ? Codegen.empty() : this.snapshotType;
+    public Optional<Output<String>> snapshotType() {
+        return Optional.ofNullable(this.snapshotType);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDbSnapshotIdentifier")
-      private final @Nullable Output<String> sourceDbSnapshotIdentifier;
+    private @Nullable Output<String> sourceDbSnapshotIdentifier;
 
-    public Output<String> sourceDbSnapshotIdentifier() {
-        return this.sourceDbSnapshotIdentifier == null ? Codegen.empty() : this.sourceDbSnapshotIdentifier;
+    public Optional<Output<String>> sourceDbSnapshotIdentifier() {
+        return Optional.ofNullable(this.sourceDbSnapshotIdentifier);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRegion")
-      private final @Nullable Output<String> sourceRegion;
+    private @Nullable Output<String> sourceRegion;
 
-    public Output<String> sourceRegion() {
-        return this.sourceRegion == null ? Codegen.empty() : this.sourceRegion;
+    public Optional<Output<String>> sourceRegion() {
+        return Optional.ofNullable(this.sourceRegion);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageType")
-      private final @Nullable Output<String> storageType;
+    private @Nullable Output<String> storageType;
 
-    public Output<String> storageType() {
-        return this.storageType == null ? Codegen.empty() : this.storageType;
+    public Optional<Output<String>> storageType() {
+        return Optional.ofNullable(this.storageType);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -224,10 +224,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -235,310 +235,248 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public SnapshotState(
-        @Nullable Output<Integer> allocatedStorage,
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> dbInstanceIdentifier,
-        @Nullable Output<String> dbSnapshotArn,
-        @Nullable Output<String> dbSnapshotIdentifier,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<String> engine,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<Integer> iops,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> licenseModel,
-        @Nullable Output<String> optionGroupName,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> snapshotType,
-        @Nullable Output<String> sourceDbSnapshotIdentifier,
-        @Nullable Output<String> sourceRegion,
-        @Nullable Output<String> status,
-        @Nullable Output<String> storageType,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> vpcId) {
-        this.allocatedStorage = allocatedStorage;
-        this.availabilityZone = availabilityZone;
-        this.dbInstanceIdentifier = dbInstanceIdentifier;
-        this.dbSnapshotArn = dbSnapshotArn;
-        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
-        this.encrypted = encrypted;
-        this.engine = engine;
-        this.engineVersion = engineVersion;
-        this.iops = iops;
-        this.kmsKeyId = kmsKeyId;
-        this.licenseModel = licenseModel;
-        this.optionGroupName = optionGroupName;
-        this.port = port;
-        this.snapshotType = snapshotType;
-        this.sourceDbSnapshotIdentifier = sourceDbSnapshotIdentifier;
-        this.sourceRegion = sourceRegion;
-        this.status = status;
-        this.storageType = storageType;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcId = vpcId;
-    }
+    private SnapshotState() {}
 
-    private SnapshotState() {
-        this.allocatedStorage = Codegen.empty();
-        this.availabilityZone = Codegen.empty();
-        this.dbInstanceIdentifier = Codegen.empty();
-        this.dbSnapshotArn = Codegen.empty();
-        this.dbSnapshotIdentifier = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.iops = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.licenseModel = Codegen.empty();
-        this.optionGroupName = Codegen.empty();
-        this.port = Codegen.empty();
-        this.snapshotType = Codegen.empty();
-        this.sourceDbSnapshotIdentifier = Codegen.empty();
-        this.sourceRegion = Codegen.empty();
-        this.status = Codegen.empty();
-        this.storageType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private SnapshotState(SnapshotState $) {
+        this.allocatedStorage = $.allocatedStorage;
+        this.availabilityZone = $.availabilityZone;
+        this.dbInstanceIdentifier = $.dbInstanceIdentifier;
+        this.dbSnapshotArn = $.dbSnapshotArn;
+        this.dbSnapshotIdentifier = $.dbSnapshotIdentifier;
+        this.encrypted = $.encrypted;
+        this.engine = $.engine;
+        this.engineVersion = $.engineVersion;
+        this.iops = $.iops;
+        this.kmsKeyId = $.kmsKeyId;
+        this.licenseModel = $.licenseModel;
+        this.optionGroupName = $.optionGroupName;
+        this.port = $.port;
+        this.snapshotType = $.snapshotType;
+        this.sourceDbSnapshotIdentifier = $.sourceDbSnapshotIdentifier;
+        this.sourceRegion = $.sourceRegion;
+        this.status = $.status;
+        this.storageType = $.storageType;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> allocatedStorage;
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> dbInstanceIdentifier;
-        private @Nullable Output<String> dbSnapshotArn;
-        private @Nullable Output<String> dbSnapshotIdentifier;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<String> engine;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> licenseModel;
-        private @Nullable Output<String> optionGroupName;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> snapshotType;
-        private @Nullable Output<String> sourceDbSnapshotIdentifier;
-        private @Nullable Output<String> sourceRegion;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> storageType;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> vpcId;
+        private SnapshotState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotState();
         }
 
         public Builder(SnapshotState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocatedStorage = defaults.allocatedStorage;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.dbInstanceIdentifier = defaults.dbInstanceIdentifier;
-    	      this.dbSnapshotArn = defaults.dbSnapshotArn;
-    	      this.dbSnapshotIdentifier = defaults.dbSnapshotIdentifier;
-    	      this.encrypted = defaults.encrypted;
-    	      this.engine = defaults.engine;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.iops = defaults.iops;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.licenseModel = defaults.licenseModel;
-    	      this.optionGroupName = defaults.optionGroupName;
-    	      this.port = defaults.port;
-    	      this.snapshotType = defaults.snapshotType;
-    	      this.sourceDbSnapshotIdentifier = defaults.sourceDbSnapshotIdentifier;
-    	      this.sourceRegion = defaults.sourceRegion;
-    	      this.status = defaults.status;
-    	      this.storageType = defaults.storageType;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcId = defaults.vpcId;
+            $ = new SnapshotState(Objects.requireNonNull(defaults));
         }
 
         public Builder allocatedStorage(@Nullable Output<Integer> allocatedStorage) {
-            this.allocatedStorage = allocatedStorage;
+            $.allocatedStorage = allocatedStorage;
             return this;
         }
-        public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
-            this.allocatedStorage = Codegen.ofNullable(allocatedStorage);
-            return this;
+
+        public Builder allocatedStorage(Integer allocatedStorage) {
+            return allocatedStorage(Output.of(allocatedStorage));
         }
+
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder dbInstanceIdentifier(@Nullable Output<String> dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = dbInstanceIdentifier;
+            $.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
-        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
-            this.dbInstanceIdentifier = Codegen.ofNullable(dbInstanceIdentifier);
-            return this;
+
+        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
+            return dbInstanceIdentifier(Output.of(dbInstanceIdentifier));
         }
+
         public Builder dbSnapshotArn(@Nullable Output<String> dbSnapshotArn) {
-            this.dbSnapshotArn = dbSnapshotArn;
+            $.dbSnapshotArn = dbSnapshotArn;
             return this;
         }
-        public Builder dbSnapshotArn(@Nullable String dbSnapshotArn) {
-            this.dbSnapshotArn = Codegen.ofNullable(dbSnapshotArn);
-            return this;
+
+        public Builder dbSnapshotArn(String dbSnapshotArn) {
+            return dbSnapshotArn(Output.of(dbSnapshotArn));
         }
+
         public Builder dbSnapshotIdentifier(@Nullable Output<String> dbSnapshotIdentifier) {
-            this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+            $.dbSnapshotIdentifier = dbSnapshotIdentifier;
             return this;
         }
-        public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
-            this.dbSnapshotIdentifier = Codegen.ofNullable(dbSnapshotIdentifier);
-            return this;
+
+        public Builder dbSnapshotIdentifier(String dbSnapshotIdentifier) {
+            return dbSnapshotIdentifier(Output.of(dbSnapshotIdentifier));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder engine(@Nullable Output<String> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable String engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(String engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder licenseModel(@Nullable Output<String> licenseModel) {
-            this.licenseModel = licenseModel;
+            $.licenseModel = licenseModel;
             return this;
         }
-        public Builder licenseModel(@Nullable String licenseModel) {
-            this.licenseModel = Codegen.ofNullable(licenseModel);
-            return this;
+
+        public Builder licenseModel(String licenseModel) {
+            return licenseModel(Output.of(licenseModel));
         }
+
         public Builder optionGroupName(@Nullable Output<String> optionGroupName) {
-            this.optionGroupName = optionGroupName;
+            $.optionGroupName = optionGroupName;
             return this;
         }
-        public Builder optionGroupName(@Nullable String optionGroupName) {
-            this.optionGroupName = Codegen.ofNullable(optionGroupName);
-            return this;
+
+        public Builder optionGroupName(String optionGroupName) {
+            return optionGroupName(Output.of(optionGroupName));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder snapshotType(@Nullable Output<String> snapshotType) {
-            this.snapshotType = snapshotType;
+            $.snapshotType = snapshotType;
             return this;
         }
-        public Builder snapshotType(@Nullable String snapshotType) {
-            this.snapshotType = Codegen.ofNullable(snapshotType);
-            return this;
+
+        public Builder snapshotType(String snapshotType) {
+            return snapshotType(Output.of(snapshotType));
         }
+
         public Builder sourceDbSnapshotIdentifier(@Nullable Output<String> sourceDbSnapshotIdentifier) {
-            this.sourceDbSnapshotIdentifier = sourceDbSnapshotIdentifier;
+            $.sourceDbSnapshotIdentifier = sourceDbSnapshotIdentifier;
             return this;
         }
-        public Builder sourceDbSnapshotIdentifier(@Nullable String sourceDbSnapshotIdentifier) {
-            this.sourceDbSnapshotIdentifier = Codegen.ofNullable(sourceDbSnapshotIdentifier);
-            return this;
+
+        public Builder sourceDbSnapshotIdentifier(String sourceDbSnapshotIdentifier) {
+            return sourceDbSnapshotIdentifier(Output.of(sourceDbSnapshotIdentifier));
         }
+
         public Builder sourceRegion(@Nullable Output<String> sourceRegion) {
-            this.sourceRegion = sourceRegion;
+            $.sourceRegion = sourceRegion;
             return this;
         }
-        public Builder sourceRegion(@Nullable String sourceRegion) {
-            this.sourceRegion = Codegen.ofNullable(sourceRegion);
-            return this;
+
+        public Builder sourceRegion(String sourceRegion) {
+            return sourceRegion(Output.of(sourceRegion));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder storageType(@Nullable Output<String> storageType) {
-            this.storageType = storageType;
+            $.storageType = storageType;
             return this;
         }
-        public Builder storageType(@Nullable String storageType) {
-            this.storageType = Codegen.ofNullable(storageType);
-            return this;
+
+        public Builder storageType(String storageType) {
+            return storageType(Output.of(storageType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public SnapshotState build() {
-            return new SnapshotState(allocatedStorage, availabilityZone, dbInstanceIdentifier, dbSnapshotArn, dbSnapshotIdentifier, encrypted, engine, engineVersion, iops, kmsKeyId, licenseModel, optionGroupName, port, snapshotType, sourceDbSnapshotIdentifier, sourceRegion, status, storageType, tags, tagsAll, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public SnapshotState build() {
+            return $;
         }
     }
+
 }

@@ -20,62 +20,58 @@ public final class FleetLocationConfiguration extends com.pulumi.resources.Invok
     public static final FleetLocationConfiguration Empty = new FleetLocationConfiguration();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="locationCapacity")
-      private final @Nullable FleetLocationCapacity locationCapacity;
+    private @Nullable FleetLocationCapacity locationCapacity;
 
     public Optional<FleetLocationCapacity> locationCapacity() {
-        return this.locationCapacity == null ? Optional.empty() : Optional.ofNullable(this.locationCapacity);
+        return Optional.ofNullable(this.locationCapacity);
     }
 
-    public FleetLocationConfiguration(
-        String location,
-        @Nullable FleetLocationCapacity locationCapacity) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.locationCapacity = locationCapacity;
-    }
+    private FleetLocationConfiguration() {}
 
-    private FleetLocationConfiguration() {
-        this.location = null;
-        this.locationCapacity = null;
+    private FleetLocationConfiguration(FleetLocationConfiguration $) {
+        this.location = $.location;
+        this.locationCapacity = $.locationCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetLocationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable FleetLocationCapacity locationCapacity;
+        private FleetLocationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetLocationConfiguration();
         }
 
         public Builder(FleetLocationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.locationCapacity = defaults.locationCapacity;
+            $ = new FleetLocationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder locationCapacity(@Nullable FleetLocationCapacity locationCapacity) {
-            this.locationCapacity = locationCapacity;
+            $.locationCapacity = locationCapacity;
             return this;
-        }        public FleetLocationConfiguration build() {
-            return new FleetLocationConfiguration(location, locationCapacity);
+        }
+
+        public FleetLocationConfiguration build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

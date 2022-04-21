@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.AttestationAuthorityArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BasisArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuildTypeArgs;
@@ -24,6 +23,7 @@ import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VulnerabilityTy
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,10 +36,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attestationAuthority")
-      private final @Nullable Output<AttestationAuthorityArgs> attestationAuthority;
+    private @Nullable Output<AttestationAuthorityArgs> attestationAuthority;
 
-    public Output<AttestationAuthorityArgs> attestationAuthority() {
-        return this.attestationAuthority == null ? Codegen.empty() : this.attestationAuthority;
+    public Optional<Output<AttestationAuthorityArgs>> attestationAuthority() {
+        return Optional.ofNullable(this.attestationAuthority);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="baseImage")
-      private final @Nullable Output<BasisArgs> baseImage;
+    private @Nullable Output<BasisArgs> baseImage;
 
-    public Output<BasisArgs> baseImage() {
-        return this.baseImage == null ? Codegen.empty() : this.baseImage;
+    public Optional<Output<BasisArgs>> baseImage() {
+        return Optional.ofNullable(this.baseImage);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildType")
-      private final @Nullable Output<BuildTypeArgs> buildType;
+    private @Nullable Output<BuildTypeArgs> buildType;
 
-    public Output<BuildTypeArgs> buildType() {
-        return this.buildType == null ? Codegen.empty() : this.buildType;
+    public Optional<Output<BuildTypeArgs>> buildType() {
+        return Optional.ofNullable(this.buildType);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compliance")
-      private final @Nullable Output<ComplianceNoteArgs> compliance;
+    private @Nullable Output<ComplianceNoteArgs> compliance;
 
-    public Output<ComplianceNoteArgs> compliance() {
-        return this.compliance == null ? Codegen.empty() : this.compliance;
+    public Optional<Output<ComplianceNoteArgs>> compliance() {
+        return Optional.ofNullable(this.compliance);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deployable")
-      private final @Nullable Output<DeployableArgs> deployable;
+    private @Nullable Output<DeployableArgs> deployable;
 
-    public Output<DeployableArgs> deployable() {
-        return this.deployable == null ? Codegen.empty() : this.deployable;
+    public Optional<Output<DeployableArgs>> deployable() {
+        return Optional.ofNullable(this.deployable);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="discovery")
-      private final @Nullable Output<DiscoveryArgs> discovery;
+    private @Nullable Output<DiscoveryArgs> discovery;
 
-    public Output<DiscoveryArgs> discovery() {
-        return this.discovery == null ? Codegen.empty() : this.discovery;
+    public Optional<Output<DiscoveryArgs>> discovery() {
+        return Optional.ofNullable(this.discovery);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dsseAttestation")
-      private final @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation;
+    private @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation;
 
-    public Output<DSSEAttestationNoteArgs> dsseAttestation() {
-        return this.dsseAttestation == null ? Codegen.empty() : this.dsseAttestation;
+    public Optional<Output<DSSEAttestationNoteArgs>> dsseAttestation() {
+        return Optional.ofNullable(this.dsseAttestation);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="longDescription")
-      private final @Nullable Output<String> longDescription;
+    private @Nullable Output<String> longDescription;
 
-    public Output<String> longDescription() {
-        return this.longDescription == null ? Codegen.empty() : this.longDescription;
+    public Optional<Output<String>> longDescription() {
+        return Optional.ofNullable(this.longDescription);
     }
 
     /**
@@ -135,17 +135,17 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="noteId")
-      private final @Nullable Output<String> noteId;
+    private @Nullable Output<String> noteId;
 
-    public Output<String> noteId() {
-        return this.noteId == null ? Codegen.empty() : this.noteId;
+    public Optional<Output<String>> noteId() {
+        return Optional.ofNullable(this.noteId);
     }
 
     /**
@@ -153,17 +153,17 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<PackageArgs> package_;
+    private @Nullable Output<PackageArgs> package_;
 
-    public Output<PackageArgs> package_() {
-        return this.package_ == null ? Codegen.empty() : this.package_;
+    public Optional<Output<PackageArgs>> package_() {
+        return Optional.ofNullable(this.package_);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relatedUrl")
-      private final @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
+    private @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
 
-    public Output<List<RelatedUrlArgs>> relatedUrl() {
-        return this.relatedUrl == null ? Codegen.empty() : this.relatedUrl;
+    public Optional<Output<List<RelatedUrlArgs>>> relatedUrl() {
+        return Optional.ofNullable(this.relatedUrl);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sbom")
-      private final @Nullable Output<DocumentNoteArgs> sbom;
+    private @Nullable Output<DocumentNoteArgs> sbom;
 
-    public Output<DocumentNoteArgs> sbom() {
-        return this.sbom == null ? Codegen.empty() : this.sbom;
+    public Optional<Output<DocumentNoteArgs>> sbom() {
+        return Optional.ofNullable(this.sbom);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortDescription")
-      private final @Nullable Output<String> shortDescription;
+    private @Nullable Output<String> shortDescription;
 
-    public Output<String> shortDescription() {
-        return this.shortDescription == null ? Codegen.empty() : this.shortDescription;
+    public Optional<Output<String>> shortDescription() {
+        return Optional.ofNullable(this.shortDescription);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spdxFile")
-      private final @Nullable Output<FileNoteArgs> spdxFile;
+    private @Nullable Output<FileNoteArgs> spdxFile;
 
-    public Output<FileNoteArgs> spdxFile() {
-        return this.spdxFile == null ? Codegen.empty() : this.spdxFile;
+    public Optional<Output<FileNoteArgs>> spdxFile() {
+        return Optional.ofNullable(this.spdxFile);
     }
 
     /**
@@ -215,10 +215,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spdxPackage")
-      private final @Nullable Output<PackageInfoNoteArgs> spdxPackage;
+    private @Nullable Output<PackageInfoNoteArgs> spdxPackage;
 
-    public Output<PackageInfoNoteArgs> spdxPackage() {
-        return this.spdxPackage == null ? Codegen.empty() : this.spdxPackage;
+    public Optional<Output<PackageInfoNoteArgs>> spdxPackage() {
+        return Optional.ofNullable(this.spdxPackage);
     }
 
     /**
@@ -226,10 +226,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spdxRelationship")
-      private final @Nullable Output<RelationshipNoteArgs> spdxRelationship;
+    private @Nullable Output<RelationshipNoteArgs> spdxRelationship;
 
-    public Output<RelationshipNoteArgs> spdxRelationship() {
-        return this.spdxRelationship == null ? Codegen.empty() : this.spdxRelationship;
+    public Optional<Output<RelationshipNoteArgs>> spdxRelationship() {
+        return Optional.ofNullable(this.spdxRelationship);
     }
 
     /**
@@ -237,10 +237,10 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upgrade")
-      private final @Nullable Output<UpgradeNoteArgs> upgrade;
+    private @Nullable Output<UpgradeNoteArgs> upgrade;
 
-    public Output<UpgradeNoteArgs> upgrade() {
-        return this.upgrade == null ? Codegen.empty() : this.upgrade;
+    public Optional<Output<UpgradeNoteArgs>> upgrade() {
+        return Optional.ofNullable(this.upgrade);
     }
 
     /**
@@ -248,313 +248,252 @@ public final class NoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vulnerabilityType")
-      private final @Nullable Output<VulnerabilityTypeArgs> vulnerabilityType;
+    private @Nullable Output<VulnerabilityTypeArgs> vulnerabilityType;
 
-    public Output<VulnerabilityTypeArgs> vulnerabilityType() {
-        return this.vulnerabilityType == null ? Codegen.empty() : this.vulnerabilityType;
+    public Optional<Output<VulnerabilityTypeArgs>> vulnerabilityType() {
+        return Optional.ofNullable(this.vulnerabilityType);
     }
 
-    public NoteArgs(
-        @Nullable Output<AttestationAuthorityArgs> attestationAuthority,
-        @Nullable Output<BasisArgs> baseImage,
-        @Nullable Output<BuildTypeArgs> buildType,
-        @Nullable Output<ComplianceNoteArgs> compliance,
-        @Nullable Output<DeployableArgs> deployable,
-        @Nullable Output<DiscoveryArgs> discovery,
-        @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation,
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<String> longDescription,
-        @Nullable Output<String> name,
-        @Nullable Output<String> noteId,
-        @Nullable Output<PackageArgs> package_,
-        @Nullable Output<String> project,
-        @Nullable Output<List<RelatedUrlArgs>> relatedUrl,
-        @Nullable Output<DocumentNoteArgs> sbom,
-        @Nullable Output<String> shortDescription,
-        @Nullable Output<FileNoteArgs> spdxFile,
-        @Nullable Output<PackageInfoNoteArgs> spdxPackage,
-        @Nullable Output<RelationshipNoteArgs> spdxRelationship,
-        @Nullable Output<UpgradeNoteArgs> upgrade,
-        @Nullable Output<VulnerabilityTypeArgs> vulnerabilityType) {
-        this.attestationAuthority = attestationAuthority;
-        this.baseImage = baseImage;
-        this.buildType = buildType;
-        this.compliance = compliance;
-        this.deployable = deployable;
-        this.discovery = discovery;
-        this.dsseAttestation = dsseAttestation;
-        this.expirationTime = expirationTime;
-        this.longDescription = longDescription;
-        this.name = name;
-        this.noteId = noteId;
-        this.package_ = package_;
-        this.project = project;
-        this.relatedUrl = relatedUrl;
-        this.sbom = sbom;
-        this.shortDescription = shortDescription;
-        this.spdxFile = spdxFile;
-        this.spdxPackage = spdxPackage;
-        this.spdxRelationship = spdxRelationship;
-        this.upgrade = upgrade;
-        this.vulnerabilityType = vulnerabilityType;
-    }
+    private NoteArgs() {}
 
-    private NoteArgs() {
-        this.attestationAuthority = Codegen.empty();
-        this.baseImage = Codegen.empty();
-        this.buildType = Codegen.empty();
-        this.compliance = Codegen.empty();
-        this.deployable = Codegen.empty();
-        this.discovery = Codegen.empty();
-        this.dsseAttestation = Codegen.empty();
-        this.expirationTime = Codegen.empty();
-        this.longDescription = Codegen.empty();
-        this.name = Codegen.empty();
-        this.noteId = Codegen.empty();
-        this.package_ = Codegen.empty();
-        this.project = Codegen.empty();
-        this.relatedUrl = Codegen.empty();
-        this.sbom = Codegen.empty();
-        this.shortDescription = Codegen.empty();
-        this.spdxFile = Codegen.empty();
-        this.spdxPackage = Codegen.empty();
-        this.spdxRelationship = Codegen.empty();
-        this.upgrade = Codegen.empty();
-        this.vulnerabilityType = Codegen.empty();
+    private NoteArgs(NoteArgs $) {
+        this.attestationAuthority = $.attestationAuthority;
+        this.baseImage = $.baseImage;
+        this.buildType = $.buildType;
+        this.compliance = $.compliance;
+        this.deployable = $.deployable;
+        this.discovery = $.discovery;
+        this.dsseAttestation = $.dsseAttestation;
+        this.expirationTime = $.expirationTime;
+        this.longDescription = $.longDescription;
+        this.name = $.name;
+        this.noteId = $.noteId;
+        this.package_ = $.package_;
+        this.project = $.project;
+        this.relatedUrl = $.relatedUrl;
+        this.sbom = $.sbom;
+        this.shortDescription = $.shortDescription;
+        this.spdxFile = $.spdxFile;
+        this.spdxPackage = $.spdxPackage;
+        this.spdxRelationship = $.spdxRelationship;
+        this.upgrade = $.upgrade;
+        this.vulnerabilityType = $.vulnerabilityType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AttestationAuthorityArgs> attestationAuthority;
-        private @Nullable Output<BasisArgs> baseImage;
-        private @Nullable Output<BuildTypeArgs> buildType;
-        private @Nullable Output<ComplianceNoteArgs> compliance;
-        private @Nullable Output<DeployableArgs> deployable;
-        private @Nullable Output<DiscoveryArgs> discovery;
-        private @Nullable Output<DSSEAttestationNoteArgs> dsseAttestation;
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<String> longDescription;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> noteId;
-        private @Nullable Output<PackageArgs> package_;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
-        private @Nullable Output<DocumentNoteArgs> sbom;
-        private @Nullable Output<String> shortDescription;
-        private @Nullable Output<FileNoteArgs> spdxFile;
-        private @Nullable Output<PackageInfoNoteArgs> spdxPackage;
-        private @Nullable Output<RelationshipNoteArgs> spdxRelationship;
-        private @Nullable Output<UpgradeNoteArgs> upgrade;
-        private @Nullable Output<VulnerabilityTypeArgs> vulnerabilityType;
+        private NoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NoteArgs();
         }
 
         public Builder(NoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestationAuthority = defaults.attestationAuthority;
-    	      this.baseImage = defaults.baseImage;
-    	      this.buildType = defaults.buildType;
-    	      this.compliance = defaults.compliance;
-    	      this.deployable = defaults.deployable;
-    	      this.discovery = defaults.discovery;
-    	      this.dsseAttestation = defaults.dsseAttestation;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.longDescription = defaults.longDescription;
-    	      this.name = defaults.name;
-    	      this.noteId = defaults.noteId;
-    	      this.package_ = defaults.package_;
-    	      this.project = defaults.project;
-    	      this.relatedUrl = defaults.relatedUrl;
-    	      this.sbom = defaults.sbom;
-    	      this.shortDescription = defaults.shortDescription;
-    	      this.spdxFile = defaults.spdxFile;
-    	      this.spdxPackage = defaults.spdxPackage;
-    	      this.spdxRelationship = defaults.spdxRelationship;
-    	      this.upgrade = defaults.upgrade;
-    	      this.vulnerabilityType = defaults.vulnerabilityType;
+            $ = new NoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestationAuthority(@Nullable Output<AttestationAuthorityArgs> attestationAuthority) {
-            this.attestationAuthority = attestationAuthority;
+            $.attestationAuthority = attestationAuthority;
             return this;
         }
-        public Builder attestationAuthority(@Nullable AttestationAuthorityArgs attestationAuthority) {
-            this.attestationAuthority = Codegen.ofNullable(attestationAuthority);
-            return this;
+
+        public Builder attestationAuthority(AttestationAuthorityArgs attestationAuthority) {
+            return attestationAuthority(Output.of(attestationAuthority));
         }
+
         public Builder baseImage(@Nullable Output<BasisArgs> baseImage) {
-            this.baseImage = baseImage;
+            $.baseImage = baseImage;
             return this;
         }
-        public Builder baseImage(@Nullable BasisArgs baseImage) {
-            this.baseImage = Codegen.ofNullable(baseImage);
-            return this;
+
+        public Builder baseImage(BasisArgs baseImage) {
+            return baseImage(Output.of(baseImage));
         }
+
         public Builder buildType(@Nullable Output<BuildTypeArgs> buildType) {
-            this.buildType = buildType;
+            $.buildType = buildType;
             return this;
         }
-        public Builder buildType(@Nullable BuildTypeArgs buildType) {
-            this.buildType = Codegen.ofNullable(buildType);
-            return this;
+
+        public Builder buildType(BuildTypeArgs buildType) {
+            return buildType(Output.of(buildType));
         }
+
         public Builder compliance(@Nullable Output<ComplianceNoteArgs> compliance) {
-            this.compliance = compliance;
+            $.compliance = compliance;
             return this;
         }
-        public Builder compliance(@Nullable ComplianceNoteArgs compliance) {
-            this.compliance = Codegen.ofNullable(compliance);
-            return this;
+
+        public Builder compliance(ComplianceNoteArgs compliance) {
+            return compliance(Output.of(compliance));
         }
+
         public Builder deployable(@Nullable Output<DeployableArgs> deployable) {
-            this.deployable = deployable;
+            $.deployable = deployable;
             return this;
         }
-        public Builder deployable(@Nullable DeployableArgs deployable) {
-            this.deployable = Codegen.ofNullable(deployable);
-            return this;
+
+        public Builder deployable(DeployableArgs deployable) {
+            return deployable(Output.of(deployable));
         }
+
         public Builder discovery(@Nullable Output<DiscoveryArgs> discovery) {
-            this.discovery = discovery;
+            $.discovery = discovery;
             return this;
         }
-        public Builder discovery(@Nullable DiscoveryArgs discovery) {
-            this.discovery = Codegen.ofNullable(discovery);
-            return this;
+
+        public Builder discovery(DiscoveryArgs discovery) {
+            return discovery(Output.of(discovery));
         }
+
         public Builder dsseAttestation(@Nullable Output<DSSEAttestationNoteArgs> dsseAttestation) {
-            this.dsseAttestation = dsseAttestation;
+            $.dsseAttestation = dsseAttestation;
             return this;
         }
-        public Builder dsseAttestation(@Nullable DSSEAttestationNoteArgs dsseAttestation) {
-            this.dsseAttestation = Codegen.ofNullable(dsseAttestation);
-            return this;
+
+        public Builder dsseAttestation(DSSEAttestationNoteArgs dsseAttestation) {
+            return dsseAttestation(Output.of(dsseAttestation));
         }
+
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder longDescription(@Nullable Output<String> longDescription) {
-            this.longDescription = longDescription;
+            $.longDescription = longDescription;
             return this;
         }
-        public Builder longDescription(@Nullable String longDescription) {
-            this.longDescription = Codegen.ofNullable(longDescription);
-            return this;
+
+        public Builder longDescription(String longDescription) {
+            return longDescription(Output.of(longDescription));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder noteId(@Nullable Output<String> noteId) {
-            this.noteId = noteId;
+            $.noteId = noteId;
             return this;
         }
-        public Builder noteId(@Nullable String noteId) {
-            this.noteId = Codegen.ofNullable(noteId);
-            return this;
+
+        public Builder noteId(String noteId) {
+            return noteId(Output.of(noteId));
         }
+
         public Builder package_(@Nullable Output<PackageArgs> package_) {
-            this.package_ = package_;
+            $.package_ = package_;
             return this;
         }
-        public Builder package_(@Nullable PackageArgs package_) {
-            this.package_ = Codegen.ofNullable(package_);
-            return this;
+
+        public Builder package_(PackageArgs package_) {
+            return package_(Output.of(package_));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder relatedUrl(@Nullable Output<List<RelatedUrlArgs>> relatedUrl) {
-            this.relatedUrl = relatedUrl;
+            $.relatedUrl = relatedUrl;
             return this;
         }
-        public Builder relatedUrl(@Nullable List<RelatedUrlArgs> relatedUrl) {
-            this.relatedUrl = Codegen.ofNullable(relatedUrl);
-            return this;
+
+        public Builder relatedUrl(List<RelatedUrlArgs> relatedUrl) {
+            return relatedUrl(Output.of(relatedUrl));
         }
+
         public Builder relatedUrl(RelatedUrlArgs... relatedUrl) {
             return relatedUrl(List.of(relatedUrl));
         }
+
         public Builder sbom(@Nullable Output<DocumentNoteArgs> sbom) {
-            this.sbom = sbom;
+            $.sbom = sbom;
             return this;
         }
-        public Builder sbom(@Nullable DocumentNoteArgs sbom) {
-            this.sbom = Codegen.ofNullable(sbom);
-            return this;
+
+        public Builder sbom(DocumentNoteArgs sbom) {
+            return sbom(Output.of(sbom));
         }
+
         public Builder shortDescription(@Nullable Output<String> shortDescription) {
-            this.shortDescription = shortDescription;
+            $.shortDescription = shortDescription;
             return this;
         }
-        public Builder shortDescription(@Nullable String shortDescription) {
-            this.shortDescription = Codegen.ofNullable(shortDescription);
-            return this;
+
+        public Builder shortDescription(String shortDescription) {
+            return shortDescription(Output.of(shortDescription));
         }
+
         public Builder spdxFile(@Nullable Output<FileNoteArgs> spdxFile) {
-            this.spdxFile = spdxFile;
+            $.spdxFile = spdxFile;
             return this;
         }
-        public Builder spdxFile(@Nullable FileNoteArgs spdxFile) {
-            this.spdxFile = Codegen.ofNullable(spdxFile);
-            return this;
+
+        public Builder spdxFile(FileNoteArgs spdxFile) {
+            return spdxFile(Output.of(spdxFile));
         }
+
         public Builder spdxPackage(@Nullable Output<PackageInfoNoteArgs> spdxPackage) {
-            this.spdxPackage = spdxPackage;
+            $.spdxPackage = spdxPackage;
             return this;
         }
-        public Builder spdxPackage(@Nullable PackageInfoNoteArgs spdxPackage) {
-            this.spdxPackage = Codegen.ofNullable(spdxPackage);
-            return this;
+
+        public Builder spdxPackage(PackageInfoNoteArgs spdxPackage) {
+            return spdxPackage(Output.of(spdxPackage));
         }
+
         public Builder spdxRelationship(@Nullable Output<RelationshipNoteArgs> spdxRelationship) {
-            this.spdxRelationship = spdxRelationship;
+            $.spdxRelationship = spdxRelationship;
             return this;
         }
-        public Builder spdxRelationship(@Nullable RelationshipNoteArgs spdxRelationship) {
-            this.spdxRelationship = Codegen.ofNullable(spdxRelationship);
-            return this;
+
+        public Builder spdxRelationship(RelationshipNoteArgs spdxRelationship) {
+            return spdxRelationship(Output.of(spdxRelationship));
         }
+
         public Builder upgrade(@Nullable Output<UpgradeNoteArgs> upgrade) {
-            this.upgrade = upgrade;
+            $.upgrade = upgrade;
             return this;
         }
-        public Builder upgrade(@Nullable UpgradeNoteArgs upgrade) {
-            this.upgrade = Codegen.ofNullable(upgrade);
-            return this;
+
+        public Builder upgrade(UpgradeNoteArgs upgrade) {
+            return upgrade(Output.of(upgrade));
         }
+
         public Builder vulnerabilityType(@Nullable Output<VulnerabilityTypeArgs> vulnerabilityType) {
-            this.vulnerabilityType = vulnerabilityType;
+            $.vulnerabilityType = vulnerabilityType;
             return this;
         }
-        public Builder vulnerabilityType(@Nullable VulnerabilityTypeArgs vulnerabilityType) {
-            this.vulnerabilityType = Codegen.ofNullable(vulnerabilityType);
-            return this;
-        }        public NoteArgs build() {
-            return new NoteArgs(attestationAuthority, baseImage, buildType, compliance, deployable, discovery, dsseAttestation, expirationTime, longDescription, name, noteId, package_, project, relatedUrl, sbom, shortDescription, spdxFile, spdxPackage, spdxRelationship, upgrade, vulnerabilityType);
+
+        public Builder vulnerabilityType(VulnerabilityTypeArgs vulnerabilityType) {
+            return vulnerabilityType(Output.of(vulnerabilityType));
+        }
+
+        public NoteArgs build() {
+            return $;
         }
     }
+
 }

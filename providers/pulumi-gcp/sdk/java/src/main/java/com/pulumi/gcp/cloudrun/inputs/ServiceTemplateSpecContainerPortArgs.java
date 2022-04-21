@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
      * 
      */
     @Import(name="containerPort", required=true)
-      private final Output<Integer> containerPort;
+    private Output<Integer> containerPort;
 
     public Output<Integer> containerPort() {
         return this.containerPort;
@@ -32,10 +32,10 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class ServiceTemplateSpecContainerPortArgs extends com.pulumi.resou
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public ServiceTemplateSpecContainerPortArgs(
-        Output<Integer> containerPort,
-        @Nullable Output<String> name,
-        @Nullable Output<String> protocol) {
-        this.containerPort = Objects.requireNonNull(containerPort, "expected parameter 'containerPort' to be non-null");
-        this.name = name;
-        this.protocol = protocol;
-    }
+    private ServiceTemplateSpecContainerPortArgs() {}
 
-    private ServiceTemplateSpecContainerPortArgs() {
-        this.containerPort = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private ServiceTemplateSpecContainerPortArgs(ServiceTemplateSpecContainerPortArgs $) {
+        this.containerPort = $.containerPort;
+        this.name = $.name;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecContainerPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> containerPort;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> protocol;
+        private ServiceTemplateSpecContainerPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecContainerPortArgs();
         }
 
         public Builder(ServiceTemplateSpecContainerPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPort = defaults.containerPort;
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
+            $ = new ServiceTemplateSpecContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPort(Output<Integer> containerPort) {
-            this.containerPort = Objects.requireNonNull(containerPort);
+            $.containerPort = containerPort;
             return this;
         }
+
         public Builder containerPort(Integer containerPort) {
-            this.containerPort = Output.of(Objects.requireNonNull(containerPort));
-            return this;
+            return containerPort(Output.of(containerPort));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public ServiceTemplateSpecContainerPortArgs build() {
-            return new ServiceTemplateSpecContainerPortArgs(containerPort, name, protocol);
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public ServiceTemplateSpecContainerPortArgs build() {
+            $.containerPort = Objects.requireNonNull($.containerPort, "expected parameter 'containerPort' to be non-null");
+            return $;
         }
     }
+
 }

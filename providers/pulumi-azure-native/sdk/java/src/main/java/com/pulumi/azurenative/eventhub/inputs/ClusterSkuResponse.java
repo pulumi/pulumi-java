@@ -24,10 +24,10 @@ public final class ClusterSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class ClusterSkuResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ClusterSkuResponse(
-        @Nullable Integer capacity,
-        String name) {
-        this.capacity = capacity;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ClusterSkuResponse() {}
 
-    private ClusterSkuResponse() {
-        this.capacity = null;
-        this.name = null;
+    private ClusterSkuResponse(ClusterSkuResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
-        private String name;
+        private ClusterSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterSkuResponse();
         }
 
         public Builder(ClusterSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new ClusterSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ClusterSkuResponse build() {
-            return new ClusterSkuResponse(capacity, name);
+        }
+
+        public ClusterSkuResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

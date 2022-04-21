@@ -5,7 +5,6 @@ package com.pulumi.gcp.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iot.inputs.DeviceConfigGetArgs;
 import com.pulumi.gcp.iot.inputs.DeviceCredentialGetArgs;
 import com.pulumi.gcp.iot.inputs.DeviceGatewayConfigGetArgs;
@@ -16,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blocked")
-      private final @Nullable Output<Boolean> blocked;
+    private @Nullable Output<Boolean> blocked;
 
-    public Output<Boolean> blocked() {
-        return this.blocked == null ? Codegen.empty() : this.blocked;
+    public Optional<Output<Boolean>> blocked() {
+        return Optional.ofNullable(this.blocked);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configs")
-      private final @Nullable Output<List<DeviceConfigGetArgs>> configs;
+    private @Nullable Output<List<DeviceConfigGetArgs>> configs;
 
-    public Output<List<DeviceConfigGetArgs>> configs() {
-        return this.configs == null ? Codegen.empty() : this.configs;
+    public Optional<Output<List<DeviceConfigGetArgs>>> configs() {
+        return Optional.ofNullable(this.configs);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
+    private @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
 
-    public Output<List<DeviceCredentialGetArgs>> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<List<DeviceCredentialGetArgs>>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayConfig")
-      private final @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
+    private @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
 
-    public Output<DeviceGatewayConfigGetArgs> gatewayConfig() {
-        return this.gatewayConfig == null ? Codegen.empty() : this.gatewayConfig;
+    public Optional<Output<DeviceGatewayConfigGetArgs>> gatewayConfig() {
+        return Optional.ofNullable(this.gatewayConfig);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastConfigAckTime")
-      private final @Nullable Output<String> lastConfigAckTime;
+    private @Nullable Output<String> lastConfigAckTime;
 
-    public Output<String> lastConfigAckTime() {
-        return this.lastConfigAckTime == null ? Codegen.empty() : this.lastConfigAckTime;
+    public Optional<Output<String>> lastConfigAckTime() {
+        return Optional.ofNullable(this.lastConfigAckTime);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastConfigSendTime")
-      private final @Nullable Output<String> lastConfigSendTime;
+    private @Nullable Output<String> lastConfigSendTime;
 
-    public Output<String> lastConfigSendTime() {
-        return this.lastConfigSendTime == null ? Codegen.empty() : this.lastConfigSendTime;
+    public Optional<Output<String>> lastConfigSendTime() {
+        return Optional.ofNullable(this.lastConfigSendTime);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastErrorStatuses")
-      private final @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
+    private @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
 
-    public Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses() {
-        return this.lastErrorStatuses == null ? Codegen.empty() : this.lastErrorStatuses;
+    public Optional<Output<List<DeviceLastErrorStatusGetArgs>>> lastErrorStatuses() {
+        return Optional.ofNullable(this.lastErrorStatuses);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastErrorTime")
-      private final @Nullable Output<String> lastErrorTime;
+    private @Nullable Output<String> lastErrorTime;
 
-    public Output<String> lastErrorTime() {
-        return this.lastErrorTime == null ? Codegen.empty() : this.lastErrorTime;
+    public Optional<Output<String>> lastErrorTime() {
+        return Optional.ofNullable(this.lastErrorTime);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastEventTime")
-      private final @Nullable Output<String> lastEventTime;
+    private @Nullable Output<String> lastEventTime;
 
-    public Output<String> lastEventTime() {
-        return this.lastEventTime == null ? Codegen.empty() : this.lastEventTime;
+    public Optional<Output<String>> lastEventTime() {
+        return Optional.ofNullable(this.lastEventTime);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastHeartbeatTime")
-      private final @Nullable Output<String> lastHeartbeatTime;
+    private @Nullable Output<String> lastHeartbeatTime;
 
-    public Output<String> lastHeartbeatTime() {
-        return this.lastHeartbeatTime == null ? Codegen.empty() : this.lastHeartbeatTime;
+    public Optional<Output<String>> lastHeartbeatTime() {
+        return Optional.ofNullable(this.lastHeartbeatTime);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastStateTime")
-      private final @Nullable Output<String> lastStateTime;
+    private @Nullable Output<String> lastStateTime;
 
-    public Output<String> lastStateTime() {
-        return this.lastStateTime == null ? Codegen.empty() : this.lastStateTime;
+    public Optional<Output<String>> lastStateTime() {
+        return Optional.ofNullable(this.lastStateTime);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Output<String> logLevel;
+    private @Nullable Output<String> logLevel;
 
-    public Output<String> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<String>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="numId")
-      private final @Nullable Output<String> numId;
+    private @Nullable Output<String> numId;
 
-    public Output<String> numId() {
-        return this.numId == null ? Codegen.empty() : this.numId;
+    public Optional<Output<String>> numId() {
+        return Optional.ofNullable(this.numId);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registry")
-      private final @Nullable Output<String> registry;
+    private @Nullable Output<String> registry;
 
-    public Output<String> registry() {
-        return this.registry == null ? Codegen.empty() : this.registry;
+    public Optional<Output<String>> registry() {
+        return Optional.ofNullable(this.registry);
     }
 
     /**
@@ -208,270 +208,224 @@ public final class DeviceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="states")
-      private final @Nullable Output<List<DeviceStateGetArgs>> states;
+    private @Nullable Output<List<DeviceStateGetArgs>> states;
 
-    public Output<List<DeviceStateGetArgs>> states() {
-        return this.states == null ? Codegen.empty() : this.states;
+    public Optional<Output<List<DeviceStateGetArgs>>> states() {
+        return Optional.ofNullable(this.states);
     }
 
-    public DeviceState(
-        @Nullable Output<Boolean> blocked,
-        @Nullable Output<List<DeviceConfigGetArgs>> configs,
-        @Nullable Output<List<DeviceCredentialGetArgs>> credentials,
-        @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig,
-        @Nullable Output<String> lastConfigAckTime,
-        @Nullable Output<String> lastConfigSendTime,
-        @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses,
-        @Nullable Output<String> lastErrorTime,
-        @Nullable Output<String> lastEventTime,
-        @Nullable Output<String> lastHeartbeatTime,
-        @Nullable Output<String> lastStateTime,
-        @Nullable Output<String> logLevel,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<String> numId,
-        @Nullable Output<String> registry,
-        @Nullable Output<List<DeviceStateGetArgs>> states) {
-        this.blocked = blocked;
-        this.configs = configs;
-        this.credentials = credentials;
-        this.gatewayConfig = gatewayConfig;
-        this.lastConfigAckTime = lastConfigAckTime;
-        this.lastConfigSendTime = lastConfigSendTime;
-        this.lastErrorStatuses = lastErrorStatuses;
-        this.lastErrorTime = lastErrorTime;
-        this.lastEventTime = lastEventTime;
-        this.lastHeartbeatTime = lastHeartbeatTime;
-        this.lastStateTime = lastStateTime;
-        this.logLevel = logLevel;
-        this.metadata = metadata;
-        this.name = name;
-        this.numId = numId;
-        this.registry = registry;
-        this.states = states;
-    }
+    private DeviceState() {}
 
-    private DeviceState() {
-        this.blocked = Codegen.empty();
-        this.configs = Codegen.empty();
-        this.credentials = Codegen.empty();
-        this.gatewayConfig = Codegen.empty();
-        this.lastConfigAckTime = Codegen.empty();
-        this.lastConfigSendTime = Codegen.empty();
-        this.lastErrorStatuses = Codegen.empty();
-        this.lastErrorTime = Codegen.empty();
-        this.lastEventTime = Codegen.empty();
-        this.lastHeartbeatTime = Codegen.empty();
-        this.lastStateTime = Codegen.empty();
-        this.logLevel = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.numId = Codegen.empty();
-        this.registry = Codegen.empty();
-        this.states = Codegen.empty();
+    private DeviceState(DeviceState $) {
+        this.blocked = $.blocked;
+        this.configs = $.configs;
+        this.credentials = $.credentials;
+        this.gatewayConfig = $.gatewayConfig;
+        this.lastConfigAckTime = $.lastConfigAckTime;
+        this.lastConfigSendTime = $.lastConfigSendTime;
+        this.lastErrorStatuses = $.lastErrorStatuses;
+        this.lastErrorTime = $.lastErrorTime;
+        this.lastEventTime = $.lastEventTime;
+        this.lastHeartbeatTime = $.lastHeartbeatTime;
+        this.lastStateTime = $.lastStateTime;
+        this.logLevel = $.logLevel;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.numId = $.numId;
+        this.registry = $.registry;
+        this.states = $.states;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> blocked;
-        private @Nullable Output<List<DeviceConfigGetArgs>> configs;
-        private @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
-        private @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
-        private @Nullable Output<String> lastConfigAckTime;
-        private @Nullable Output<String> lastConfigSendTime;
-        private @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
-        private @Nullable Output<String> lastErrorTime;
-        private @Nullable Output<String> lastEventTime;
-        private @Nullable Output<String> lastHeartbeatTime;
-        private @Nullable Output<String> lastStateTime;
-        private @Nullable Output<String> logLevel;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> numId;
-        private @Nullable Output<String> registry;
-        private @Nullable Output<List<DeviceStateGetArgs>> states;
+        private DeviceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceState();
         }
 
         public Builder(DeviceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blocked = defaults.blocked;
-    	      this.configs = defaults.configs;
-    	      this.credentials = defaults.credentials;
-    	      this.gatewayConfig = defaults.gatewayConfig;
-    	      this.lastConfigAckTime = defaults.lastConfigAckTime;
-    	      this.lastConfigSendTime = defaults.lastConfigSendTime;
-    	      this.lastErrorStatuses = defaults.lastErrorStatuses;
-    	      this.lastErrorTime = defaults.lastErrorTime;
-    	      this.lastEventTime = defaults.lastEventTime;
-    	      this.lastHeartbeatTime = defaults.lastHeartbeatTime;
-    	      this.lastStateTime = defaults.lastStateTime;
-    	      this.logLevel = defaults.logLevel;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.numId = defaults.numId;
-    	      this.registry = defaults.registry;
-    	      this.states = defaults.states;
+            $ = new DeviceState(Objects.requireNonNull(defaults));
         }
 
         public Builder blocked(@Nullable Output<Boolean> blocked) {
-            this.blocked = blocked;
+            $.blocked = blocked;
             return this;
         }
-        public Builder blocked(@Nullable Boolean blocked) {
-            this.blocked = Codegen.ofNullable(blocked);
-            return this;
+
+        public Builder blocked(Boolean blocked) {
+            return blocked(Output.of(blocked));
         }
+
         public Builder configs(@Nullable Output<List<DeviceConfigGetArgs>> configs) {
-            this.configs = configs;
+            $.configs = configs;
             return this;
         }
-        public Builder configs(@Nullable List<DeviceConfigGetArgs> configs) {
-            this.configs = Codegen.ofNullable(configs);
-            return this;
+
+        public Builder configs(List<DeviceConfigGetArgs> configs) {
+            return configs(Output.of(configs));
         }
+
         public Builder configs(DeviceConfigGetArgs... configs) {
             return configs(List.of(configs));
         }
+
         public Builder credentials(@Nullable Output<List<DeviceCredentialGetArgs>> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable List<DeviceCredentialGetArgs> credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(List<DeviceCredentialGetArgs> credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder credentials(DeviceCredentialGetArgs... credentials) {
             return credentials(List.of(credentials));
         }
+
         public Builder gatewayConfig(@Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig) {
-            this.gatewayConfig = gatewayConfig;
+            $.gatewayConfig = gatewayConfig;
             return this;
         }
-        public Builder gatewayConfig(@Nullable DeviceGatewayConfigGetArgs gatewayConfig) {
-            this.gatewayConfig = Codegen.ofNullable(gatewayConfig);
-            return this;
+
+        public Builder gatewayConfig(DeviceGatewayConfigGetArgs gatewayConfig) {
+            return gatewayConfig(Output.of(gatewayConfig));
         }
+
         public Builder lastConfigAckTime(@Nullable Output<String> lastConfigAckTime) {
-            this.lastConfigAckTime = lastConfigAckTime;
+            $.lastConfigAckTime = lastConfigAckTime;
             return this;
         }
-        public Builder lastConfigAckTime(@Nullable String lastConfigAckTime) {
-            this.lastConfigAckTime = Codegen.ofNullable(lastConfigAckTime);
-            return this;
+
+        public Builder lastConfigAckTime(String lastConfigAckTime) {
+            return lastConfigAckTime(Output.of(lastConfigAckTime));
         }
+
         public Builder lastConfigSendTime(@Nullable Output<String> lastConfigSendTime) {
-            this.lastConfigSendTime = lastConfigSendTime;
+            $.lastConfigSendTime = lastConfigSendTime;
             return this;
         }
-        public Builder lastConfigSendTime(@Nullable String lastConfigSendTime) {
-            this.lastConfigSendTime = Codegen.ofNullable(lastConfigSendTime);
-            return this;
+
+        public Builder lastConfigSendTime(String lastConfigSendTime) {
+            return lastConfigSendTime(Output.of(lastConfigSendTime));
         }
+
         public Builder lastErrorStatuses(@Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses) {
-            this.lastErrorStatuses = lastErrorStatuses;
+            $.lastErrorStatuses = lastErrorStatuses;
             return this;
         }
-        public Builder lastErrorStatuses(@Nullable List<DeviceLastErrorStatusGetArgs> lastErrorStatuses) {
-            this.lastErrorStatuses = Codegen.ofNullable(lastErrorStatuses);
-            return this;
+
+        public Builder lastErrorStatuses(List<DeviceLastErrorStatusGetArgs> lastErrorStatuses) {
+            return lastErrorStatuses(Output.of(lastErrorStatuses));
         }
+
         public Builder lastErrorStatuses(DeviceLastErrorStatusGetArgs... lastErrorStatuses) {
             return lastErrorStatuses(List.of(lastErrorStatuses));
         }
+
         public Builder lastErrorTime(@Nullable Output<String> lastErrorTime) {
-            this.lastErrorTime = lastErrorTime;
+            $.lastErrorTime = lastErrorTime;
             return this;
         }
-        public Builder lastErrorTime(@Nullable String lastErrorTime) {
-            this.lastErrorTime = Codegen.ofNullable(lastErrorTime);
-            return this;
+
+        public Builder lastErrorTime(String lastErrorTime) {
+            return lastErrorTime(Output.of(lastErrorTime));
         }
+
         public Builder lastEventTime(@Nullable Output<String> lastEventTime) {
-            this.lastEventTime = lastEventTime;
+            $.lastEventTime = lastEventTime;
             return this;
         }
-        public Builder lastEventTime(@Nullable String lastEventTime) {
-            this.lastEventTime = Codegen.ofNullable(lastEventTime);
-            return this;
+
+        public Builder lastEventTime(String lastEventTime) {
+            return lastEventTime(Output.of(lastEventTime));
         }
+
         public Builder lastHeartbeatTime(@Nullable Output<String> lastHeartbeatTime) {
-            this.lastHeartbeatTime = lastHeartbeatTime;
+            $.lastHeartbeatTime = lastHeartbeatTime;
             return this;
         }
-        public Builder lastHeartbeatTime(@Nullable String lastHeartbeatTime) {
-            this.lastHeartbeatTime = Codegen.ofNullable(lastHeartbeatTime);
-            return this;
+
+        public Builder lastHeartbeatTime(String lastHeartbeatTime) {
+            return lastHeartbeatTime(Output.of(lastHeartbeatTime));
         }
+
         public Builder lastStateTime(@Nullable Output<String> lastStateTime) {
-            this.lastStateTime = lastStateTime;
+            $.lastStateTime = lastStateTime;
             return this;
         }
-        public Builder lastStateTime(@Nullable String lastStateTime) {
-            this.lastStateTime = Codegen.ofNullable(lastStateTime);
-            return this;
+
+        public Builder lastStateTime(String lastStateTime) {
+            return lastStateTime(Output.of(lastStateTime));
         }
+
         public Builder logLevel(@Nullable Output<String> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
+
+        public Builder logLevel(String logLevel) {
+            return logLevel(Output.of(logLevel));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder numId(@Nullable Output<String> numId) {
-            this.numId = numId;
+            $.numId = numId;
             return this;
         }
-        public Builder numId(@Nullable String numId) {
-            this.numId = Codegen.ofNullable(numId);
-            return this;
+
+        public Builder numId(String numId) {
+            return numId(Output.of(numId));
         }
+
         public Builder registry(@Nullable Output<String> registry) {
-            this.registry = registry;
+            $.registry = registry;
             return this;
         }
-        public Builder registry(@Nullable String registry) {
-            this.registry = Codegen.ofNullable(registry);
-            return this;
+
+        public Builder registry(String registry) {
+            return registry(Output.of(registry));
         }
+
         public Builder states(@Nullable Output<List<DeviceStateGetArgs>> states) {
-            this.states = states;
+            $.states = states;
             return this;
         }
-        public Builder states(@Nullable List<DeviceStateGetArgs> states) {
-            this.states = Codegen.ofNullable(states);
-            return this;
+
+        public Builder states(List<DeviceStateGetArgs> states) {
+            return states(Output.of(states));
         }
+
         public Builder states(DeviceStateGetArgs... states) {
             return states(List.of(states));
-        }        public DeviceState build() {
-            return new DeviceState(blocked, configs, credentials, gatewayConfig, lastConfigAckTime, lastConfigSendTime, lastErrorStatuses, lastErrorTime, lastEventTime, lastHeartbeatTime, lastStateTime, logLevel, metadata, name, numId, registry, states);
+        }
+
+        public DeviceState build() {
+            return $;
         }
     }
+
 }

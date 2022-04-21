@@ -5,11 +5,11 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1alpha1.inputs.InstanceAttemptResultArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="completionTime")
-      private final @Nullable Output<String> completionTime;
+    private @Nullable Output<String> completionTime;
 
-    public Output<String> completionTime() {
-        return this.completionTime == null ? Codegen.empty() : this.completionTime;
+    public Optional<Output<String>> completionTime() {
+        return Optional.ofNullable(this.completionTime);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="failed")
-      private final @Nullable Output<Integer> failed;
+    private @Nullable Output<Integer> failed;
 
-    public Output<Integer> failed() {
-        return this.failed == null ? Codegen.empty() : this.failed;
+    public Optional<Output<Integer>> failed() {
+        return Optional.ofNullable(this.failed);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="index", required=true)
-      private final Output<Integer> index;
+    private Output<Integer> index;
 
     public Output<Integer> index() {
         return this.index;
@@ -59,10 +59,10 @@ public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="lastAttemptResult")
-      private final @Nullable Output<InstanceAttemptResultArgs> lastAttemptResult;
+    private @Nullable Output<InstanceAttemptResultArgs> lastAttemptResult;
 
-    public Output<InstanceAttemptResultArgs> lastAttemptResult() {
-        return this.lastAttemptResult == null ? Codegen.empty() : this.lastAttemptResult;
+    public Optional<Output<InstanceAttemptResultArgs>> lastAttemptResult() {
+        return Optional.ofNullable(this.lastAttemptResult);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="lastExitCode")
-      private final @Nullable Output<Integer> lastExitCode;
+    private @Nullable Output<Integer> lastExitCode;
 
-    public Output<Integer> lastExitCode() {
-        return this.lastExitCode == null ? Codegen.empty() : this.lastExitCode;
+    public Optional<Output<Integer>> lastExitCode() {
+        return Optional.ofNullable(this.lastExitCode);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="restarted")
-      private final @Nullable Output<Integer> restarted;
+    private @Nullable Output<Integer> restarted;
 
-    public Output<Integer> restarted() {
-        return this.restarted == null ? Codegen.empty() : this.restarted;
+    public Optional<Output<Integer>> restarted() {
+        return Optional.ofNullable(this.restarted);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -103,141 +103,119 @@ public final class InstanceStatusArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="succeeded")
-      private final @Nullable Output<Integer> succeeded;
+    private @Nullable Output<Integer> succeeded;
 
-    public Output<Integer> succeeded() {
-        return this.succeeded == null ? Codegen.empty() : this.succeeded;
+    public Optional<Output<Integer>> succeeded() {
+        return Optional.ofNullable(this.succeeded);
     }
 
-    public InstanceStatusArgs(
-        @Nullable Output<String> completionTime,
-        @Nullable Output<Integer> failed,
-        Output<Integer> index,
-        @Nullable Output<InstanceAttemptResultArgs> lastAttemptResult,
-        @Nullable Output<Integer> lastExitCode,
-        @Nullable Output<Integer> restarted,
-        @Nullable Output<String> startTime,
-        @Nullable Output<Integer> succeeded) {
-        this.completionTime = completionTime;
-        this.failed = failed;
-        this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
-        this.lastAttemptResult = lastAttemptResult;
-        this.lastExitCode = lastExitCode;
-        this.restarted = restarted;
-        this.startTime = startTime;
-        this.succeeded = succeeded;
-    }
+    private InstanceStatusArgs() {}
 
-    private InstanceStatusArgs() {
-        this.completionTime = Codegen.empty();
-        this.failed = Codegen.empty();
-        this.index = Codegen.empty();
-        this.lastAttemptResult = Codegen.empty();
-        this.lastExitCode = Codegen.empty();
-        this.restarted = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.succeeded = Codegen.empty();
+    private InstanceStatusArgs(InstanceStatusArgs $) {
+        this.completionTime = $.completionTime;
+        this.failed = $.failed;
+        this.index = $.index;
+        this.lastAttemptResult = $.lastAttemptResult;
+        this.lastExitCode = $.lastExitCode;
+        this.restarted = $.restarted;
+        this.startTime = $.startTime;
+        this.succeeded = $.succeeded;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> completionTime;
-        private @Nullable Output<Integer> failed;
-        private Output<Integer> index;
-        private @Nullable Output<InstanceAttemptResultArgs> lastAttemptResult;
-        private @Nullable Output<Integer> lastExitCode;
-        private @Nullable Output<Integer> restarted;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<Integer> succeeded;
+        private InstanceStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceStatusArgs();
         }
 
         public Builder(InstanceStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completionTime = defaults.completionTime;
-    	      this.failed = defaults.failed;
-    	      this.index = defaults.index;
-    	      this.lastAttemptResult = defaults.lastAttemptResult;
-    	      this.lastExitCode = defaults.lastExitCode;
-    	      this.restarted = defaults.restarted;
-    	      this.startTime = defaults.startTime;
-    	      this.succeeded = defaults.succeeded;
+            $ = new InstanceStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder completionTime(@Nullable Output<String> completionTime) {
-            this.completionTime = completionTime;
+            $.completionTime = completionTime;
             return this;
         }
-        public Builder completionTime(@Nullable String completionTime) {
-            this.completionTime = Codegen.ofNullable(completionTime);
-            return this;
+
+        public Builder completionTime(String completionTime) {
+            return completionTime(Output.of(completionTime));
         }
+
         public Builder failed(@Nullable Output<Integer> failed) {
-            this.failed = failed;
+            $.failed = failed;
             return this;
         }
-        public Builder failed(@Nullable Integer failed) {
-            this.failed = Codegen.ofNullable(failed);
-            return this;
+
+        public Builder failed(Integer failed) {
+            return failed(Output.of(failed));
         }
+
         public Builder index(Output<Integer> index) {
-            this.index = Objects.requireNonNull(index);
+            $.index = index;
             return this;
         }
+
         public Builder index(Integer index) {
-            this.index = Output.of(Objects.requireNonNull(index));
-            return this;
+            return index(Output.of(index));
         }
+
         public Builder lastAttemptResult(@Nullable Output<InstanceAttemptResultArgs> lastAttemptResult) {
-            this.lastAttemptResult = lastAttemptResult;
+            $.lastAttemptResult = lastAttemptResult;
             return this;
         }
-        public Builder lastAttemptResult(@Nullable InstanceAttemptResultArgs lastAttemptResult) {
-            this.lastAttemptResult = Codegen.ofNullable(lastAttemptResult);
-            return this;
+
+        public Builder lastAttemptResult(InstanceAttemptResultArgs lastAttemptResult) {
+            return lastAttemptResult(Output.of(lastAttemptResult));
         }
+
         public Builder lastExitCode(@Nullable Output<Integer> lastExitCode) {
-            this.lastExitCode = lastExitCode;
+            $.lastExitCode = lastExitCode;
             return this;
         }
-        public Builder lastExitCode(@Nullable Integer lastExitCode) {
-            this.lastExitCode = Codegen.ofNullable(lastExitCode);
-            return this;
+
+        public Builder lastExitCode(Integer lastExitCode) {
+            return lastExitCode(Output.of(lastExitCode));
         }
+
         public Builder restarted(@Nullable Output<Integer> restarted) {
-            this.restarted = restarted;
+            $.restarted = restarted;
             return this;
         }
-        public Builder restarted(@Nullable Integer restarted) {
-            this.restarted = Codegen.ofNullable(restarted);
-            return this;
+
+        public Builder restarted(Integer restarted) {
+            return restarted(Output.of(restarted));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder succeeded(@Nullable Output<Integer> succeeded) {
-            this.succeeded = succeeded;
+            $.succeeded = succeeded;
             return this;
         }
-        public Builder succeeded(@Nullable Integer succeeded) {
-            this.succeeded = Codegen.ofNullable(succeeded);
-            return this;
-        }        public InstanceStatusArgs build() {
-            return new InstanceStatusArgs(completionTime, failed, index, lastAttemptResult, lastExitCode, restarted, startTime, succeeded);
+
+        public Builder succeeded(Integer succeeded) {
+            return succeeded(Output.of(succeeded));
+        }
+
+        public InstanceStatusArgs build() {
+            $.index = Objects.requireNonNull($.index, "expected parameter 'index' to be non-null");
+            return $;
         }
     }
+
 }

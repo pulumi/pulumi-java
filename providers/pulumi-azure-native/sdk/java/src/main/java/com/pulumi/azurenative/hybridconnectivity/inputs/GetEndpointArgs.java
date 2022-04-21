@@ -17,7 +17,7 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
@@ -28,55 +28,52 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public GetEndpointArgs(
-        String endpointName,
-        String resourceUri) {
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private GetEndpointArgs() {}
 
-    private GetEndpointArgs() {
-        this.endpointName = null;
-        this.resourceUri = null;
+    private GetEndpointArgs(GetEndpointArgs $) {
+        this.endpointName = $.endpointName;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointName;
-        private String resourceUri;
+        private GetEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEndpointArgs();
         }
 
         public Builder(GetEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointName = defaults.endpointName;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new GetEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public GetEndpointArgs build() {
-            return new GetEndpointArgs(endpointName, resourceUri);
+        }
+
+        public GetEndpointArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

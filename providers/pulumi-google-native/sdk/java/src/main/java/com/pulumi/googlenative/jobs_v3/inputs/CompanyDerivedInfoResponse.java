@@ -21,45 +21,45 @@ public final class CompanyDerivedInfoResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="headquartersLocation", required=true)
-      private final LocationResponse headquartersLocation;
+    private LocationResponse headquartersLocation;
 
     public LocationResponse headquartersLocation() {
         return this.headquartersLocation;
     }
 
-    public CompanyDerivedInfoResponse(LocationResponse headquartersLocation) {
-        this.headquartersLocation = Objects.requireNonNull(headquartersLocation, "expected parameter 'headquartersLocation' to be non-null");
-    }
+    private CompanyDerivedInfoResponse() {}
 
-    private CompanyDerivedInfoResponse() {
-        this.headquartersLocation = null;
+    private CompanyDerivedInfoResponse(CompanyDerivedInfoResponse $) {
+        this.headquartersLocation = $.headquartersLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompanyDerivedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private LocationResponse headquartersLocation;
+        private CompanyDerivedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompanyDerivedInfoResponse();
         }
 
         public Builder(CompanyDerivedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headquartersLocation = defaults.headquartersLocation;
+            $ = new CompanyDerivedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headquartersLocation(LocationResponse headquartersLocation) {
-            this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
+            $.headquartersLocation = headquartersLocation;
             return this;
-        }        public CompanyDerivedInfoResponse build() {
-            return new CompanyDerivedInfoResponse(headquartersLocation);
+        }
+
+        public CompanyDerivedInfoResponse build() {
+            $.headquartersLocation = Objects.requireNonNull($.headquartersLocation, "expected parameter 'headquartersLocation' to be non-null");
+            return $;
         }
     }
+
 }

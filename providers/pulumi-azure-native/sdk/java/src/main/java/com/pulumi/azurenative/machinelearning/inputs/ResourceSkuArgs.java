@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Integer> capacity;
+    private @Nullable Output<Integer> capacity;
 
-    public Output<Integer> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Integer>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ResourceSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public ResourceSkuArgs(
-        @Nullable Output<Integer> capacity,
-        @Nullable Output<String> name,
-        @Nullable Output<String> tier) {
-        this.capacity = capacity;
-        this.name = name;
-        this.tier = tier;
-    }
+    private ResourceSkuArgs() {}
 
-    private ResourceSkuArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private ResourceSkuArgs(ResourceSkuArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> capacity;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> tier;
+        private ResourceSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSkuArgs();
         }
 
         public Builder(ResourceSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new ResourceSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<Integer> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Integer capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public ResourceSkuArgs build() {
-            return new ResourceSkuArgs(capacity, name, tier);
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
+        }
+
+        public ResourceSkuArgs build() {
+            return $;
         }
     }
+
 }

@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs Empty = new WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs();
 
-    public WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs();
         }
         public WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs build() {
-            return new WebAclRuleStatementNotStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs();
+            return $;
         }
     }
+
 }

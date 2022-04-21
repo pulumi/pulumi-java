@@ -16,62 +16,57 @@ public final class DeliveryStreamDeserializer extends com.pulumi.resources.Invok
     public static final DeliveryStreamDeserializer Empty = new DeliveryStreamDeserializer();
 
     @Import(name="hiveJsonSerDe")
-      private final @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe;
+    private @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe;
 
     public Optional<DeliveryStreamHiveJsonSerDe> hiveJsonSerDe() {
-        return this.hiveJsonSerDe == null ? Optional.empty() : Optional.ofNullable(this.hiveJsonSerDe);
+        return Optional.ofNullable(this.hiveJsonSerDe);
     }
 
     @Import(name="openXJsonSerDe")
-      private final @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe;
+    private @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe;
 
     public Optional<DeliveryStreamOpenXJsonSerDe> openXJsonSerDe() {
-        return this.openXJsonSerDe == null ? Optional.empty() : Optional.ofNullable(this.openXJsonSerDe);
+        return Optional.ofNullable(this.openXJsonSerDe);
     }
 
-    public DeliveryStreamDeserializer(
-        @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe,
-        @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe) {
-        this.hiveJsonSerDe = hiveJsonSerDe;
-        this.openXJsonSerDe = openXJsonSerDe;
-    }
+    private DeliveryStreamDeserializer() {}
 
-    private DeliveryStreamDeserializer() {
-        this.hiveJsonSerDe = null;
-        this.openXJsonSerDe = null;
+    private DeliveryStreamDeserializer(DeliveryStreamDeserializer $) {
+        this.hiveJsonSerDe = $.hiveJsonSerDe;
+        this.openXJsonSerDe = $.openXJsonSerDe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamDeserializer defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe;
-        private @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe;
+        private DeliveryStreamDeserializer $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamDeserializer();
         }
 
         public Builder(DeliveryStreamDeserializer defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hiveJsonSerDe = defaults.hiveJsonSerDe;
-    	      this.openXJsonSerDe = defaults.openXJsonSerDe;
+            $ = new DeliveryStreamDeserializer(Objects.requireNonNull(defaults));
         }
 
         public Builder hiveJsonSerDe(@Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe) {
-            this.hiveJsonSerDe = hiveJsonSerDe;
+            $.hiveJsonSerDe = hiveJsonSerDe;
             return this;
         }
+
         public Builder openXJsonSerDe(@Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe) {
-            this.openXJsonSerDe = openXJsonSerDe;
+            $.openXJsonSerDe = openXJsonSerDe;
             return this;
-        }        public DeliveryStreamDeserializer build() {
-            return new DeliveryStreamDeserializer(hiveJsonSerDe, openXJsonSerDe);
+        }
+
+        public DeliveryStreamDeserializer build() {
+            return $;
         }
     }
+
 }

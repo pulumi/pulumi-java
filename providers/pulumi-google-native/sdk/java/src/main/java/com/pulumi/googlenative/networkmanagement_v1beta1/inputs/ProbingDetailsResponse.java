@@ -25,7 +25,7 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="abortCause", required=true)
-      private final String abortCause;
+    private String abortCause;
 
     public String abortCause() {
         return this.abortCause;
@@ -36,7 +36,7 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="endpointInfo", required=true)
-      private final EndpointInfoResponse endpointInfo;
+    private EndpointInfoResponse endpointInfo;
 
     public EndpointInfoResponse endpointInfo() {
         return this.endpointInfo;
@@ -47,7 +47,7 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="error", required=true)
-      private final StatusResponse error;
+    private StatusResponse error;
 
     public StatusResponse error() {
         return this.error;
@@ -58,7 +58,7 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="probingLatency", required=true)
-      private final LatencyDistributionResponse probingLatency;
+    private LatencyDistributionResponse probingLatency;
 
     public LatencyDistributionResponse probingLatency() {
         return this.probingLatency;
@@ -69,7 +69,7 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="result", required=true)
-      private final String result;
+    private String result;
 
     public String result() {
         return this.result;
@@ -80,7 +80,7 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sentProbeCount", required=true)
-      private final Integer sentProbeCount;
+    private Integer sentProbeCount;
 
     public Integer sentProbeCount() {
         return this.sentProbeCount;
@@ -91,7 +91,7 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="successfulProbeCount", required=true)
-      private final Integer successfulProbeCount;
+    private Integer successfulProbeCount;
 
     public Integer successfulProbeCount() {
         return this.successfulProbeCount;
@@ -102,109 +102,94 @@ public final class ProbingDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="verifyTime", required=true)
-      private final String verifyTime;
+    private String verifyTime;
 
     public String verifyTime() {
         return this.verifyTime;
     }
 
-    public ProbingDetailsResponse(
-        String abortCause,
-        EndpointInfoResponse endpointInfo,
-        StatusResponse error,
-        LatencyDistributionResponse probingLatency,
-        String result,
-        Integer sentProbeCount,
-        Integer successfulProbeCount,
-        String verifyTime) {
-        this.abortCause = Objects.requireNonNull(abortCause, "expected parameter 'abortCause' to be non-null");
-        this.endpointInfo = Objects.requireNonNull(endpointInfo, "expected parameter 'endpointInfo' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.probingLatency = Objects.requireNonNull(probingLatency, "expected parameter 'probingLatency' to be non-null");
-        this.result = Objects.requireNonNull(result, "expected parameter 'result' to be non-null");
-        this.sentProbeCount = Objects.requireNonNull(sentProbeCount, "expected parameter 'sentProbeCount' to be non-null");
-        this.successfulProbeCount = Objects.requireNonNull(successfulProbeCount, "expected parameter 'successfulProbeCount' to be non-null");
-        this.verifyTime = Objects.requireNonNull(verifyTime, "expected parameter 'verifyTime' to be non-null");
-    }
+    private ProbingDetailsResponse() {}
 
-    private ProbingDetailsResponse() {
-        this.abortCause = null;
-        this.endpointInfo = null;
-        this.error = null;
-        this.probingLatency = null;
-        this.result = null;
-        this.sentProbeCount = null;
-        this.successfulProbeCount = null;
-        this.verifyTime = null;
+    private ProbingDetailsResponse(ProbingDetailsResponse $) {
+        this.abortCause = $.abortCause;
+        this.endpointInfo = $.endpointInfo;
+        this.error = $.error;
+        this.probingLatency = $.probingLatency;
+        this.result = $.result;
+        this.sentProbeCount = $.sentProbeCount;
+        this.successfulProbeCount = $.successfulProbeCount;
+        this.verifyTime = $.verifyTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProbingDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String abortCause;
-        private EndpointInfoResponse endpointInfo;
-        private StatusResponse error;
-        private LatencyDistributionResponse probingLatency;
-        private String result;
-        private Integer sentProbeCount;
-        private Integer successfulProbeCount;
-        private String verifyTime;
+        private ProbingDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProbingDetailsResponse();
         }
 
         public Builder(ProbingDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abortCause = defaults.abortCause;
-    	      this.endpointInfo = defaults.endpointInfo;
-    	      this.error = defaults.error;
-    	      this.probingLatency = defaults.probingLatency;
-    	      this.result = defaults.result;
-    	      this.sentProbeCount = defaults.sentProbeCount;
-    	      this.successfulProbeCount = defaults.successfulProbeCount;
-    	      this.verifyTime = defaults.verifyTime;
+            $ = new ProbingDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder abortCause(String abortCause) {
-            this.abortCause = Objects.requireNonNull(abortCause);
+            $.abortCause = abortCause;
             return this;
         }
+
         public Builder endpointInfo(EndpointInfoResponse endpointInfo) {
-            this.endpointInfo = Objects.requireNonNull(endpointInfo);
+            $.endpointInfo = endpointInfo;
             return this;
         }
+
         public Builder error(StatusResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder probingLatency(LatencyDistributionResponse probingLatency) {
-            this.probingLatency = Objects.requireNonNull(probingLatency);
+            $.probingLatency = probingLatency;
             return this;
         }
+
         public Builder result(String result) {
-            this.result = Objects.requireNonNull(result);
+            $.result = result;
             return this;
         }
+
         public Builder sentProbeCount(Integer sentProbeCount) {
-            this.sentProbeCount = Objects.requireNonNull(sentProbeCount);
+            $.sentProbeCount = sentProbeCount;
             return this;
         }
+
         public Builder successfulProbeCount(Integer successfulProbeCount) {
-            this.successfulProbeCount = Objects.requireNonNull(successfulProbeCount);
+            $.successfulProbeCount = successfulProbeCount;
             return this;
         }
+
         public Builder verifyTime(String verifyTime) {
-            this.verifyTime = Objects.requireNonNull(verifyTime);
+            $.verifyTime = verifyTime;
             return this;
-        }        public ProbingDetailsResponse build() {
-            return new ProbingDetailsResponse(abortCause, endpointInfo, error, probingLatency, result, sentProbeCount, successfulProbeCount, verifyTime);
+        }
+
+        public ProbingDetailsResponse build() {
+            $.abortCause = Objects.requireNonNull($.abortCause, "expected parameter 'abortCause' to be non-null");
+            $.endpointInfo = Objects.requireNonNull($.endpointInfo, "expected parameter 'endpointInfo' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.probingLatency = Objects.requireNonNull($.probingLatency, "expected parameter 'probingLatency' to be non-null");
+            $.result = Objects.requireNonNull($.result, "expected parameter 'result' to be non-null");
+            $.sentProbeCount = Objects.requireNonNull($.sentProbeCount, "expected parameter 'sentProbeCount' to be non-null");
+            $.successfulProbeCount = Objects.requireNonNull($.successfulProbeCount, "expected parameter 'successfulProbeCount' to be non-null");
+            $.verifyTime = Objects.requireNonNull($.verifyTime, "expected parameter 'verifyTime' to be non-null");
+            return $;
         }
     }
+
 }

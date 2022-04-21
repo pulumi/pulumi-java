@@ -6,9 +6,9 @@ package com.pulumi.azurenative.managednetwork;
 import com.pulumi.azurenative.managednetwork.inputs.ManagedNetworkPeeringPolicyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="managedNetworkName", required=true)
-      private final Output<String> managedNetworkName;
+    private Output<String> managedNetworkName;
 
     public Output<String> managedNetworkName() {
         return this.managedNetworkName;
@@ -43,10 +43,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="managedNetworkPeeringPolicyName")
-      private final @Nullable Output<String> managedNetworkPeeringPolicyName;
+    private @Nullable Output<String> managedNetworkPeeringPolicyName;
 
-    public Output<String> managedNetworkPeeringPolicyName() {
-        return this.managedNetworkPeeringPolicyName == null ? Codegen.empty() : this.managedNetworkPeeringPolicyName;
+    public Optional<Output<String>> managedNetworkPeeringPolicyName() {
+        return Optional.ofNullable(this.managedNetworkPeeringPolicyName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
+    private @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
 
-    public Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ManagedNetworkPeeringPolicyPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -65,102 +65,90 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ManagedNetworkPeeringPolicyArgs(
-        @Nullable Output<String> location,
-        Output<String> managedNetworkName,
-        @Nullable Output<String> managedNetworkPeeringPolicyName,
-        @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties,
-        Output<String> resourceGroupName) {
-        this.location = location;
-        this.managedNetworkName = Objects.requireNonNull(managedNetworkName, "expected parameter 'managedNetworkName' to be non-null");
-        this.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ManagedNetworkPeeringPolicyArgs() {}
 
-    private ManagedNetworkPeeringPolicyArgs() {
-        this.location = Codegen.empty();
-        this.managedNetworkName = Codegen.empty();
-        this.managedNetworkPeeringPolicyName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ManagedNetworkPeeringPolicyArgs(ManagedNetworkPeeringPolicyArgs $) {
+        this.location = $.location;
+        this.managedNetworkName = $.managedNetworkName;
+        this.managedNetworkPeeringPolicyName = $.managedNetworkPeeringPolicyName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedNetworkPeeringPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private Output<String> managedNetworkName;
-        private @Nullable Output<String> managedNetworkPeeringPolicyName;
-        private @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
+        private ManagedNetworkPeeringPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedNetworkPeeringPolicyArgs();
         }
 
         public Builder(ManagedNetworkPeeringPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.managedNetworkName = defaults.managedNetworkName;
-    	      this.managedNetworkPeeringPolicyName = defaults.managedNetworkPeeringPolicyName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ManagedNetworkPeeringPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managedNetworkName(Output<String> managedNetworkName) {
-            this.managedNetworkName = Objects.requireNonNull(managedNetworkName);
+            $.managedNetworkName = managedNetworkName;
             return this;
         }
+
         public Builder managedNetworkName(String managedNetworkName) {
-            this.managedNetworkName = Output.of(Objects.requireNonNull(managedNetworkName));
-            return this;
+            return managedNetworkName(Output.of(managedNetworkName));
         }
+
         public Builder managedNetworkPeeringPolicyName(@Nullable Output<String> managedNetworkPeeringPolicyName) {
-            this.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
+            $.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
             return this;
         }
-        public Builder managedNetworkPeeringPolicyName(@Nullable String managedNetworkPeeringPolicyName) {
-            this.managedNetworkPeeringPolicyName = Codegen.ofNullable(managedNetworkPeeringPolicyName);
-            return this;
+
+        public Builder managedNetworkPeeringPolicyName(String managedNetworkPeeringPolicyName) {
+            return managedNetworkPeeringPolicyName(Output.of(managedNetworkPeeringPolicyName));
         }
+
         public Builder properties(@Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ManagedNetworkPeeringPolicyPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ManagedNetworkPeeringPolicyPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ManagedNetworkPeeringPolicyArgs build() {
-            return new ManagedNetworkPeeringPolicyArgs(location, managedNetworkName, managedNetworkPeeringPolicyName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ManagedNetworkPeeringPolicyArgs build() {
+            $.managedNetworkName = Objects.requireNonNull($.managedNetworkName, "expected parameter 'managedNetworkName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

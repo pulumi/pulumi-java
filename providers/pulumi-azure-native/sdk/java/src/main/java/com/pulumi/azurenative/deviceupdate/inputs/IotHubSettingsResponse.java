@@ -23,10 +23,10 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="eventHubConnectionString")
-      private final @Nullable String eventHubConnectionString;
+    private @Nullable String eventHubConnectionString;
 
     public Optional<String> eventHubConnectionString() {
-        return this.eventHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.eventHubConnectionString);
+        return Optional.ofNullable(this.eventHubConnectionString);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="ioTHubConnectionString")
-      private final @Nullable String ioTHubConnectionString;
+    private @Nullable String ioTHubConnectionString;
 
     public Optional<String> ioTHubConnectionString() {
-        return this.ioTHubConnectionString == null ? Optional.empty() : Optional.ofNullable(this.ioTHubConnectionString);
+        return Optional.ofNullable(this.ioTHubConnectionString);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
     }
 
-    public IotHubSettingsResponse(
-        @Nullable String eventHubConnectionString,
-        @Nullable String ioTHubConnectionString,
-        String resourceId) {
-        this.eventHubConnectionString = eventHubConnectionString;
-        this.ioTHubConnectionString = ioTHubConnectionString;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private IotHubSettingsResponse() {}
 
-    private IotHubSettingsResponse() {
-        this.eventHubConnectionString = null;
-        this.ioTHubConnectionString = null;
-        this.resourceId = null;
+    private IotHubSettingsResponse(IotHubSettingsResponse $) {
+        this.eventHubConnectionString = $.eventHubConnectionString;
+        this.ioTHubConnectionString = $.ioTHubConnectionString;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IotHubSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String eventHubConnectionString;
-        private @Nullable String ioTHubConnectionString;
-        private String resourceId;
+        private IotHubSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IotHubSettingsResponse();
         }
 
         public Builder(IotHubSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubConnectionString = defaults.eventHubConnectionString;
-    	      this.ioTHubConnectionString = defaults.ioTHubConnectionString;
-    	      this.resourceId = defaults.resourceId;
+            $ = new IotHubSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
-            this.eventHubConnectionString = eventHubConnectionString;
+            $.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
+
         public Builder ioTHubConnectionString(@Nullable String ioTHubConnectionString) {
-            this.ioTHubConnectionString = ioTHubConnectionString;
+            $.ioTHubConnectionString = ioTHubConnectionString;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
-        }        public IotHubSettingsResponse build() {
-            return new IotHubSettingsResponse(eventHubConnectionString, ioTHubConnectionString, resourceId);
+        }
+
+        public IotHubSettingsResponse build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

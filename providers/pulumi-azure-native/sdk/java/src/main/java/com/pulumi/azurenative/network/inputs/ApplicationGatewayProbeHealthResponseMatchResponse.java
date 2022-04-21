@@ -24,10 +24,10 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse extends co
      * 
      */
     @Import(name="body")
-      private final @Nullable String body;
+    private @Nullable String body;
 
     public Optional<String> body() {
-        return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse extends co
      * 
      */
     @Import(name="statusCodes")
-      private final @Nullable List<String> statusCodes;
+    private @Nullable List<String> statusCodes;
 
-    public List<String> statusCodes() {
-        return this.statusCodes == null ? List.of() : this.statusCodes;
+    public Optional<List<String>> statusCodes() {
+        return Optional.ofNullable(this.statusCodes);
     }
 
-    public ApplicationGatewayProbeHealthResponseMatchResponse(
-        @Nullable String body,
-        @Nullable List<String> statusCodes) {
-        this.body = body;
-        this.statusCodes = statusCodes;
-    }
+    private ApplicationGatewayProbeHealthResponseMatchResponse() {}
 
-    private ApplicationGatewayProbeHealthResponseMatchResponse() {
-        this.body = null;
-        this.statusCodes = List.of();
+    private ApplicationGatewayProbeHealthResponseMatchResponse(ApplicationGatewayProbeHealthResponseMatchResponse $) {
+        this.body = $.body;
+        this.statusCodes = $.statusCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayProbeHealthResponseMatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String body;
-        private @Nullable List<String> statusCodes;
+        private ApplicationGatewayProbeHealthResponseMatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayProbeHealthResponseMatchResponse();
         }
 
         public Builder(ApplicationGatewayProbeHealthResponseMatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.statusCodes = defaults.statusCodes;
+            $ = new ApplicationGatewayProbeHealthResponseMatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder body(@Nullable String body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
+
         public Builder statusCodes(@Nullable List<String> statusCodes) {
-            this.statusCodes = statusCodes;
+            $.statusCodes = statusCodes;
             return this;
         }
+
         public Builder statusCodes(String... statusCodes) {
             return statusCodes(List.of(statusCodes));
-        }        public ApplicationGatewayProbeHealthResponseMatchResponse build() {
-            return new ApplicationGatewayProbeHealthResponseMatchResponse(body, statusCodes);
+        }
+
+        public ApplicationGatewayProbeHealthResponseMatchResponse build() {
+            return $;
         }
     }
+
 }

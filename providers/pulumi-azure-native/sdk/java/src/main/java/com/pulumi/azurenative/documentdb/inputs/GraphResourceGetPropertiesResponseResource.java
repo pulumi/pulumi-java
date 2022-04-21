@@ -17,45 +17,45 @@ public final class GraphResourceGetPropertiesResponseResource extends com.pulumi
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GraphResourceGetPropertiesResponseResource(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GraphResourceGetPropertiesResponseResource() {}
 
-    private GraphResourceGetPropertiesResponseResource() {
-        this.id = null;
+    private GraphResourceGetPropertiesResponseResource(GraphResourceGetPropertiesResponseResource $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphResourceGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GraphResourceGetPropertiesResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphResourceGetPropertiesResponseResource();
         }
 
         public Builder(GraphResourceGetPropertiesResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GraphResourceGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GraphResourceGetPropertiesResponseResource build() {
-            return new GraphResourceGetPropertiesResponseResource(id);
+        }
+
+        public GraphResourceGetPropertiesResponseResource build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

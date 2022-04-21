@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TopologySpreadConstraintArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="labelSelector")
-      private final @Nullable Output<LabelSelectorArgs> labelSelector;
+    private @Nullable Output<LabelSelectorArgs> labelSelector;
 
-    public Output<LabelSelectorArgs> labelSelector() {
-        return this.labelSelector == null ? Codegen.empty() : this.labelSelector;
+    public Optional<Output<LabelSelectorArgs>> labelSelector() {
+        return Optional.ofNullable(this.labelSelector);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class TopologySpreadConstraintArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxSkew", required=true)
-      private final Output<Integer> maxSkew;
+    private Output<Integer> maxSkew;
 
     public Output<Integer> maxSkew() {
         return this.maxSkew;
@@ -48,7 +48,7 @@ public final class TopologySpreadConstraintArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="topologyKey", required=true)
-      private final Output<String> topologyKey;
+    private Output<String> topologyKey;
 
     public Output<String> topologyKey() {
         return this.topologyKey;
@@ -66,89 +66,81 @@ public final class TopologySpreadConstraintArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="whenUnsatisfiable", required=true)
-      private final Output<String> whenUnsatisfiable;
+    private Output<String> whenUnsatisfiable;
 
     public Output<String> whenUnsatisfiable() {
         return this.whenUnsatisfiable;
     }
 
-    public TopologySpreadConstraintArgs(
-        @Nullable Output<LabelSelectorArgs> labelSelector,
-        Output<Integer> maxSkew,
-        Output<String> topologyKey,
-        Output<String> whenUnsatisfiable) {
-        this.labelSelector = labelSelector;
-        this.maxSkew = Objects.requireNonNull(maxSkew, "expected parameter 'maxSkew' to be non-null");
-        this.topologyKey = Objects.requireNonNull(topologyKey, "expected parameter 'topologyKey' to be non-null");
-        this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable, "expected parameter 'whenUnsatisfiable' to be non-null");
-    }
+    private TopologySpreadConstraintArgs() {}
 
-    private TopologySpreadConstraintArgs() {
-        this.labelSelector = Codegen.empty();
-        this.maxSkew = Codegen.empty();
-        this.topologyKey = Codegen.empty();
-        this.whenUnsatisfiable = Codegen.empty();
+    private TopologySpreadConstraintArgs(TopologySpreadConstraintArgs $) {
+        this.labelSelector = $.labelSelector;
+        this.maxSkew = $.maxSkew;
+        this.topologyKey = $.topologyKey;
+        this.whenUnsatisfiable = $.whenUnsatisfiable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopologySpreadConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LabelSelectorArgs> labelSelector;
-        private Output<Integer> maxSkew;
-        private Output<String> topologyKey;
-        private Output<String> whenUnsatisfiable;
+        private TopologySpreadConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopologySpreadConstraintArgs();
         }
 
         public Builder(TopologySpreadConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelSelector = defaults.labelSelector;
-    	      this.maxSkew = defaults.maxSkew;
-    	      this.topologyKey = defaults.topologyKey;
-    	      this.whenUnsatisfiable = defaults.whenUnsatisfiable;
+            $ = new TopologySpreadConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labelSelector(@Nullable Output<LabelSelectorArgs> labelSelector) {
-            this.labelSelector = labelSelector;
+            $.labelSelector = labelSelector;
             return this;
         }
-        public Builder labelSelector(@Nullable LabelSelectorArgs labelSelector) {
-            this.labelSelector = Codegen.ofNullable(labelSelector);
-            return this;
+
+        public Builder labelSelector(LabelSelectorArgs labelSelector) {
+            return labelSelector(Output.of(labelSelector));
         }
+
         public Builder maxSkew(Output<Integer> maxSkew) {
-            this.maxSkew = Objects.requireNonNull(maxSkew);
+            $.maxSkew = maxSkew;
             return this;
         }
+
         public Builder maxSkew(Integer maxSkew) {
-            this.maxSkew = Output.of(Objects.requireNonNull(maxSkew));
-            return this;
+            return maxSkew(Output.of(maxSkew));
         }
+
         public Builder topologyKey(Output<String> topologyKey) {
-            this.topologyKey = Objects.requireNonNull(topologyKey);
+            $.topologyKey = topologyKey;
             return this;
         }
+
         public Builder topologyKey(String topologyKey) {
-            this.topologyKey = Output.of(Objects.requireNonNull(topologyKey));
-            return this;
+            return topologyKey(Output.of(topologyKey));
         }
+
         public Builder whenUnsatisfiable(Output<String> whenUnsatisfiable) {
-            this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
+            $.whenUnsatisfiable = whenUnsatisfiable;
             return this;
         }
+
         public Builder whenUnsatisfiable(String whenUnsatisfiable) {
-            this.whenUnsatisfiable = Output.of(Objects.requireNonNull(whenUnsatisfiable));
-            return this;
-        }        public TopologySpreadConstraintArgs build() {
-            return new TopologySpreadConstraintArgs(labelSelector, maxSkew, topologyKey, whenUnsatisfiable);
+            return whenUnsatisfiable(Output.of(whenUnsatisfiable));
+        }
+
+        public TopologySpreadConstraintArgs build() {
+            $.maxSkew = Objects.requireNonNull($.maxSkew, "expected parameter 'maxSkew' to be non-null");
+            $.topologyKey = Objects.requireNonNull($.topologyKey, "expected parameter 'topologyKey' to be non-null");
+            $.whenUnsatisfiable = Objects.requireNonNull($.whenUnsatisfiable, "expected parameter 'whenUnsatisfiable' to be non-null");
+            return $;
         }
     }
+
 }

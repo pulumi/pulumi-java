@@ -13,45 +13,45 @@ public final class GetMountTargetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMountTargetArgs Empty = new GetMountTargetArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetMountTargetArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetMountTargetArgs() {}
 
-    private GetMountTargetArgs() {
-        this.id = null;
+    private GetMountTargetArgs(GetMountTargetArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMountTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetMountTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMountTargetArgs();
         }
 
         public Builder(GetMountTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetMountTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetMountTargetArgs build() {
-            return new GetMountTargetArgs(id);
+        }
+
+        public GetMountTargetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

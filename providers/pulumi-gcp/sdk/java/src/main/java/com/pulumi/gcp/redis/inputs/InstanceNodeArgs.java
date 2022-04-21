@@ -5,9 +5,9 @@ package com.pulumi.gcp.redis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class InstanceNodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceNodeArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> zone) {
-        this.id = id;
-        this.zone = zone;
-    }
+    private InstanceNodeArgs() {}
 
-    private InstanceNodeArgs() {
-        this.id = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceNodeArgs(InstanceNodeArgs $) {
+        this.id = $.id;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceNodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> zone;
+        private InstanceNodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceNodeArgs();
         }
 
         public Builder(InstanceNodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.zone = defaults.zone;
+            $ = new InstanceNodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceNodeArgs build() {
-            return new InstanceNodeArgs(id, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceNodeArgs build() {
+            return $;
         }
     }
+
 }

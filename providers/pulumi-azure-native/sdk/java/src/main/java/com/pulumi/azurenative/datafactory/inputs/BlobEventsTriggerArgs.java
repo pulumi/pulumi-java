@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="blobPathBeginsWith")
-      private final @Nullable Output<String> blobPathBeginsWith;
+    private @Nullable Output<String> blobPathBeginsWith;
 
-    public Output<String> blobPathBeginsWith() {
-        return this.blobPathBeginsWith == null ? Codegen.empty() : this.blobPathBeginsWith;
+    public Optional<Output<String>> blobPathBeginsWith() {
+        return Optional.ofNullable(this.blobPathBeginsWith);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="blobPathEndsWith")
-      private final @Nullable Output<String> blobPathEndsWith;
+    private @Nullable Output<String> blobPathEndsWith;
 
-    public Output<String> blobPathEndsWith() {
-        return this.blobPathEndsWith == null ? Codegen.empty() : this.blobPathEndsWith;
+    public Optional<Output<String>> blobPathEndsWith() {
+        return Optional.ofNullable(this.blobPathEndsWith);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,7 +75,7 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="events", required=true)
-      private final Output<List<Either<String,BlobEventTypes>>> events;
+    private Output<List<Either<String,BlobEventTypes>>> events;
 
     public Output<List<Either<String,BlobEventTypes>>> events() {
         return this.events;
@@ -85,10 +86,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="ignoreEmptyBlobs")
-      private final @Nullable Output<Boolean> ignoreEmptyBlobs;
+    private @Nullable Output<Boolean> ignoreEmptyBlobs;
 
-    public Output<Boolean> ignoreEmptyBlobs() {
-        return this.ignoreEmptyBlobs == null ? Codegen.empty() : this.ignoreEmptyBlobs;
+    public Optional<Output<Boolean>> ignoreEmptyBlobs() {
+        return Optional.ofNullable(this.ignoreEmptyBlobs);
     }
 
     /**
@@ -96,10 +97,10 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="pipelines")
-      private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
+    private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Output<List<TriggerPipelineReferenceArgs>> pipelines() {
-        return this.pipelines == null ? Codegen.empty() : this.pipelines;
+    public Optional<Output<List<TriggerPipelineReferenceArgs>>> pipelines() {
+        return Optional.ofNullable(this.pipelines);
     }
 
     /**
@@ -107,7 +108,7 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scope", required=true)
-      private final Output<String> scope;
+    private Output<String> scope;
 
     public Output<String> scope() {
         return this.scope;
@@ -119,163 +120,143 @@ public final class BlobEventsTriggerArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public BlobEventsTriggerArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<String> blobPathBeginsWith,
-        @Nullable Output<String> blobPathEndsWith,
-        @Nullable Output<String> description,
-        Output<List<Either<String,BlobEventTypes>>> events,
-        @Nullable Output<Boolean> ignoreEmptyBlobs,
-        @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines,
-        Output<String> scope,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.blobPathBeginsWith = blobPathBeginsWith;
-        this.blobPathEndsWith = blobPathEndsWith;
-        this.description = description;
-        this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
-        this.ignoreEmptyBlobs = ignoreEmptyBlobs;
-        this.pipelines = pipelines;
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private BlobEventsTriggerArgs() {}
 
-    private BlobEventsTriggerArgs() {
-        this.annotations = Codegen.empty();
-        this.blobPathBeginsWith = Codegen.empty();
-        this.blobPathEndsWith = Codegen.empty();
-        this.description = Codegen.empty();
-        this.events = Codegen.empty();
-        this.ignoreEmptyBlobs = Codegen.empty();
-        this.pipelines = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.type = Codegen.empty();
+    private BlobEventsTriggerArgs(BlobEventsTriggerArgs $) {
+        this.annotations = $.annotations;
+        this.blobPathBeginsWith = $.blobPathBeginsWith;
+        this.blobPathEndsWith = $.blobPathEndsWith;
+        this.description = $.description;
+        this.events = $.events;
+        this.ignoreEmptyBlobs = $.ignoreEmptyBlobs;
+        this.pipelines = $.pipelines;
+        this.scope = $.scope;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobEventsTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<String> blobPathBeginsWith;
-        private @Nullable Output<String> blobPathEndsWith;
-        private @Nullable Output<String> description;
-        private Output<List<Either<String,BlobEventTypes>>> events;
-        private @Nullable Output<Boolean> ignoreEmptyBlobs;
-        private @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
-        private Output<String> scope;
-        private Output<String> type;
+        private BlobEventsTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobEventsTriggerArgs();
         }
 
         public Builder(BlobEventsTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.blobPathBeginsWith = defaults.blobPathBeginsWith;
-    	      this.blobPathEndsWith = defaults.blobPathEndsWith;
-    	      this.description = defaults.description;
-    	      this.events = defaults.events;
-    	      this.ignoreEmptyBlobs = defaults.ignoreEmptyBlobs;
-    	      this.pipelines = defaults.pipelines;
-    	      this.scope = defaults.scope;
-    	      this.type = defaults.type;
+            $ = new BlobEventsTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder blobPathBeginsWith(@Nullable Output<String> blobPathBeginsWith) {
-            this.blobPathBeginsWith = blobPathBeginsWith;
+            $.blobPathBeginsWith = blobPathBeginsWith;
             return this;
         }
-        public Builder blobPathBeginsWith(@Nullable String blobPathBeginsWith) {
-            this.blobPathBeginsWith = Codegen.ofNullable(blobPathBeginsWith);
-            return this;
+
+        public Builder blobPathBeginsWith(String blobPathBeginsWith) {
+            return blobPathBeginsWith(Output.of(blobPathBeginsWith));
         }
+
         public Builder blobPathEndsWith(@Nullable Output<String> blobPathEndsWith) {
-            this.blobPathEndsWith = blobPathEndsWith;
+            $.blobPathEndsWith = blobPathEndsWith;
             return this;
         }
-        public Builder blobPathEndsWith(@Nullable String blobPathEndsWith) {
-            this.blobPathEndsWith = Codegen.ofNullable(blobPathEndsWith);
-            return this;
+
+        public Builder blobPathEndsWith(String blobPathEndsWith) {
+            return blobPathEndsWith(Output.of(blobPathEndsWith));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder events(Output<List<Either<String,BlobEventTypes>>> events) {
-            this.events = Objects.requireNonNull(events);
+            $.events = events;
             return this;
         }
+
         public Builder events(List<Either<String,BlobEventTypes>> events) {
-            this.events = Output.of(Objects.requireNonNull(events));
-            return this;
+            return events(Output.of(events));
         }
+
         public Builder events(Either<String,BlobEventTypes>... events) {
             return events(List.of(events));
         }
+
         public Builder ignoreEmptyBlobs(@Nullable Output<Boolean> ignoreEmptyBlobs) {
-            this.ignoreEmptyBlobs = ignoreEmptyBlobs;
+            $.ignoreEmptyBlobs = ignoreEmptyBlobs;
             return this;
         }
-        public Builder ignoreEmptyBlobs(@Nullable Boolean ignoreEmptyBlobs) {
-            this.ignoreEmptyBlobs = Codegen.ofNullable(ignoreEmptyBlobs);
-            return this;
+
+        public Builder ignoreEmptyBlobs(Boolean ignoreEmptyBlobs) {
+            return ignoreEmptyBlobs(Output.of(ignoreEmptyBlobs));
         }
+
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
-            this.pipelines = pipelines;
+            $.pipelines = pipelines;
             return this;
         }
-        public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Codegen.ofNullable(pipelines);
-            return this;
+
+        public Builder pipelines(List<TriggerPipelineReferenceArgs> pipelines) {
+            return pipelines(Output.of(pipelines));
         }
+
         public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {
             return pipelines(List.of(pipelines));
         }
+
         public Builder scope(Output<String> scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Output.of(Objects.requireNonNull(scope));
-            return this;
+            return scope(Output.of(scope));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public BlobEventsTriggerArgs build() {
-            return new BlobEventsTriggerArgs(annotations, blobPathBeginsWith, blobPathEndsWith, description, events, ignoreEmptyBlobs, pipelines, scope, type);
+            return type(Output.of(type));
+        }
+
+        public BlobEventsTriggerArgs build() {
+            $.events = Objects.requireNonNull($.events, "expected parameter 'events' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -33,7 +33,7 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="metricName", required=true)
-      private final String metricName;
+    private String metricName;
 
     public String metricName() {
         return this.metricName;
@@ -44,7 +44,7 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="singleInstanceAssignment", required=true)
-      private final Double singleInstanceAssignment;
+    private Double singleInstanceAssignment;
 
     public Double singleInstanceAssignment() {
         return this.singleInstanceAssignment;
@@ -55,7 +55,7 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetType", required=true)
-      private final String targetType;
+    private String targetType;
 
     public String targetType() {
         return this.targetType;
@@ -66,82 +66,73 @@ public final class CustomMetricResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetUtilization", required=true)
-      private final Double targetUtilization;
+    private Double targetUtilization;
 
     public Double targetUtilization() {
         return this.targetUtilization;
     }
 
-    public CustomMetricResponse(
-        String filter,
-        String metricName,
-        Double singleInstanceAssignment,
-        String targetType,
-        Double targetUtilization) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.singleInstanceAssignment = Objects.requireNonNull(singleInstanceAssignment, "expected parameter 'singleInstanceAssignment' to be non-null");
-        this.targetType = Objects.requireNonNull(targetType, "expected parameter 'targetType' to be non-null");
-        this.targetUtilization = Objects.requireNonNull(targetUtilization, "expected parameter 'targetUtilization' to be non-null");
-    }
+    private CustomMetricResponse() {}
 
-    private CustomMetricResponse() {
-        this.filter = null;
-        this.metricName = null;
-        this.singleInstanceAssignment = null;
-        this.targetType = null;
-        this.targetUtilization = null;
+    private CustomMetricResponse(CustomMetricResponse $) {
+        this.filter = $.filter;
+        this.metricName = $.metricName;
+        this.singleInstanceAssignment = $.singleInstanceAssignment;
+        this.targetType = $.targetType;
+        this.targetUtilization = $.targetUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomMetricResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
-        private String metricName;
-        private Double singleInstanceAssignment;
-        private String targetType;
-        private Double targetUtilization;
+        private CustomMetricResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomMetricResponse();
         }
 
         public Builder(CustomMetricResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.metricName = defaults.metricName;
-    	      this.singleInstanceAssignment = defaults.singleInstanceAssignment;
-    	      this.targetType = defaults.targetType;
-    	      this.targetUtilization = defaults.targetUtilization;
+            $ = new CustomMetricResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder singleInstanceAssignment(Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Objects.requireNonNull(singleInstanceAssignment);
+            $.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
+
         public Builder targetType(String targetType) {
-            this.targetType = Objects.requireNonNull(targetType);
+            $.targetType = targetType;
             return this;
         }
+
         public Builder targetUtilization(Double targetUtilization) {
-            this.targetUtilization = Objects.requireNonNull(targetUtilization);
+            $.targetUtilization = targetUtilization;
             return this;
-        }        public CustomMetricResponse build() {
-            return new CustomMetricResponse(filter, metricName, singleInstanceAssignment, targetType, targetUtilization);
+        }
+
+        public CustomMetricResponse build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.singleInstanceAssignment = Objects.requireNonNull($.singleInstanceAssignment, "expected parameter 'singleInstanceAssignment' to be non-null");
+            $.targetType = Objects.requireNonNull($.targetType, "expected parameter 'targetType' to be non-null");
+            $.targetUtilization = Objects.requireNonNull($.targetUtilization, "expected parameter 'targetUtilization' to be non-null");
+            return $;
         }
     }
+
 }

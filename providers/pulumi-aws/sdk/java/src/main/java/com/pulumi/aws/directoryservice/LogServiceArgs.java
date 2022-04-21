@@ -5,7 +5,6 @@ package com.pulumi.aws.directoryservice;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class LogServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="directoryId", required=true)
-      private final Output<String> directoryId;
+    private Output<String> directoryId;
 
     public Output<String> directoryId() {
         return this.directoryId;
@@ -30,63 +29,60 @@ public final class LogServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logGroupName", required=true)
-      private final Output<String> logGroupName;
+    private Output<String> logGroupName;
 
     public Output<String> logGroupName() {
         return this.logGroupName;
     }
 
-    public LogServiceArgs(
-        Output<String> directoryId,
-        Output<String> logGroupName) {
-        this.directoryId = Objects.requireNonNull(directoryId, "expected parameter 'directoryId' to be non-null");
-        this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
-    }
+    private LogServiceArgs() {}
 
-    private LogServiceArgs() {
-        this.directoryId = Codegen.empty();
-        this.logGroupName = Codegen.empty();
+    private LogServiceArgs(LogServiceArgs $) {
+        this.directoryId = $.directoryId;
+        this.logGroupName = $.logGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> directoryId;
-        private Output<String> logGroupName;
+        private LogServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogServiceArgs();
         }
 
         public Builder(LogServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryId = defaults.directoryId;
-    	      this.logGroupName = defaults.logGroupName;
+            $ = new LogServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryId(Output<String> directoryId) {
-            this.directoryId = Objects.requireNonNull(directoryId);
+            $.directoryId = directoryId;
             return this;
         }
+
         public Builder directoryId(String directoryId) {
-            this.directoryId = Output.of(Objects.requireNonNull(directoryId));
-            return this;
+            return directoryId(Output.of(directoryId));
         }
+
         public Builder logGroupName(Output<String> logGroupName) {
-            this.logGroupName = Objects.requireNonNull(logGroupName);
+            $.logGroupName = logGroupName;
             return this;
         }
+
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
-            return this;
-        }        public LogServiceArgs build() {
-            return new LogServiceArgs(directoryId, logGroupName);
+            return logGroupName(Output.of(logGroupName));
+        }
+
+        public LogServiceArgs build() {
+            $.directoryId = Objects.requireNonNull($.directoryId, "expected parameter 'directoryId' to be non-null");
+            $.logGroupName = Objects.requireNonNull($.logGroupName, "expected parameter 'logGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.mediapackage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class OriginEndpointAuthorizationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="cdnIdentifierSecret", required=true)
-      private final Output<String> cdnIdentifierSecret;
+    private Output<String> cdnIdentifierSecret;
 
     public Output<String> cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
@@ -34,63 +33,60 @@ public final class OriginEndpointAuthorizationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="secretsRoleArn", required=true)
-      private final Output<String> secretsRoleArn;
+    private Output<String> secretsRoleArn;
 
     public Output<String> secretsRoleArn() {
         return this.secretsRoleArn;
     }
 
-    public OriginEndpointAuthorizationArgs(
-        Output<String> cdnIdentifierSecret,
-        Output<String> secretsRoleArn) {
-        this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret, "expected parameter 'cdnIdentifierSecret' to be non-null");
-        this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn, "expected parameter 'secretsRoleArn' to be non-null");
-    }
+    private OriginEndpointAuthorizationArgs() {}
 
-    private OriginEndpointAuthorizationArgs() {
-        this.cdnIdentifierSecret = Codegen.empty();
-        this.secretsRoleArn = Codegen.empty();
+    private OriginEndpointAuthorizationArgs(OriginEndpointAuthorizationArgs $) {
+        this.cdnIdentifierSecret = $.cdnIdentifierSecret;
+        this.secretsRoleArn = $.secretsRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cdnIdentifierSecret;
-        private Output<String> secretsRoleArn;
+        private OriginEndpointAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointAuthorizationArgs();
         }
 
         public Builder(OriginEndpointAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cdnIdentifierSecret = defaults.cdnIdentifierSecret;
-    	      this.secretsRoleArn = defaults.secretsRoleArn;
+            $ = new OriginEndpointAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cdnIdentifierSecret(Output<String> cdnIdentifierSecret) {
-            this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret);
+            $.cdnIdentifierSecret = cdnIdentifierSecret;
             return this;
         }
+
         public Builder cdnIdentifierSecret(String cdnIdentifierSecret) {
-            this.cdnIdentifierSecret = Output.of(Objects.requireNonNull(cdnIdentifierSecret));
-            return this;
+            return cdnIdentifierSecret(Output.of(cdnIdentifierSecret));
         }
+
         public Builder secretsRoleArn(Output<String> secretsRoleArn) {
-            this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
+            $.secretsRoleArn = secretsRoleArn;
             return this;
         }
+
         public Builder secretsRoleArn(String secretsRoleArn) {
-            this.secretsRoleArn = Output.of(Objects.requireNonNull(secretsRoleArn));
-            return this;
-        }        public OriginEndpointAuthorizationArgs build() {
-            return new OriginEndpointAuthorizationArgs(cdnIdentifierSecret, secretsRoleArn);
+            return secretsRoleArn(Output.of(secretsRoleArn));
+        }
+
+        public OriginEndpointAuthorizationArgs build() {
+            $.cdnIdentifierSecret = Objects.requireNonNull($.cdnIdentifierSecret, "expected parameter 'cdnIdentifierSecret' to be non-null");
+            $.secretsRoleArn = Objects.requireNonNull($.secretsRoleArn, "expected parameter 'secretsRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

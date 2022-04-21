@@ -24,7 +24,7 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="componentSeparator", required=true)
-      private final Integer componentSeparator;
+    private Integer componentSeparator;
 
     public Integer componentSeparator() {
         return this.componentSeparator;
@@ -35,7 +35,7 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="dataElementSeparator", required=true)
-      private final Integer dataElementSeparator;
+    private Integer dataElementSeparator;
 
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
@@ -46,7 +46,7 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="decimalPointIndicator", required=true)
-      private final String decimalPointIndicator;
+    private String decimalPointIndicator;
 
     public String decimalPointIndicator() {
         return this.decimalPointIndicator;
@@ -57,10 +57,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="messageAssociationAssignedCode")
-      private final @Nullable String messageAssociationAssignedCode;
+    private @Nullable String messageAssociationAssignedCode;
 
     public Optional<String> messageAssociationAssignedCode() {
-        return this.messageAssociationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.messageAssociationAssignedCode);
+        return Optional.ofNullable(this.messageAssociationAssignedCode);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="messageId")
-      private final @Nullable String messageId;
+    private @Nullable String messageId;
 
     public Optional<String> messageId() {
-        return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
+        return Optional.ofNullable(this.messageId);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="messageRelease")
-      private final @Nullable String messageRelease;
+    private @Nullable String messageRelease;
 
     public Optional<String> messageRelease() {
-        return this.messageRelease == null ? Optional.empty() : Optional.ofNullable(this.messageRelease);
+        return Optional.ofNullable(this.messageRelease);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="messageVersion")
-      private final @Nullable String messageVersion;
+    private @Nullable String messageVersion;
 
     public Optional<String> messageVersion() {
-        return this.messageVersion == null ? Optional.empty() : Optional.ofNullable(this.messageVersion);
+        return Optional.ofNullable(this.messageVersion);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="releaseIndicator", required=true)
-      private final Integer releaseIndicator;
+    private Integer releaseIndicator;
 
     public Integer releaseIndicator() {
         return this.releaseIndicator;
@@ -112,7 +112,7 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="repetitionSeparator", required=true)
-      private final Integer repetitionSeparator;
+    private Integer repetitionSeparator;
 
     public Integer repetitionSeparator() {
         return this.repetitionSeparator;
@@ -123,7 +123,7 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="segmentTerminator", required=true)
-      private final Integer segmentTerminator;
+    private Integer segmentTerminator;
 
     public Integer segmentTerminator() {
         return this.segmentTerminator;
@@ -134,7 +134,7 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="segmentTerminatorSuffix", required=true)
-      private final String segmentTerminatorSuffix;
+    private String segmentTerminatorSuffix;
 
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
@@ -145,145 +145,117 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
      * 
      */
     @Import(name="targetNamespace")
-      private final @Nullable String targetNamespace;
+    private @Nullable String targetNamespace;
 
     public Optional<String> targetNamespace() {
-        return this.targetNamespace == null ? Optional.empty() : Optional.ofNullable(this.targetNamespace);
+        return Optional.ofNullable(this.targetNamespace);
     }
 
-    public EdifactDelimiterOverrideResponse(
-        Integer componentSeparator,
-        Integer dataElementSeparator,
-        String decimalPointIndicator,
-        @Nullable String messageAssociationAssignedCode,
-        @Nullable String messageId,
-        @Nullable String messageRelease,
-        @Nullable String messageVersion,
-        Integer releaseIndicator,
-        Integer repetitionSeparator,
-        Integer segmentTerminator,
-        String segmentTerminatorSuffix,
-        @Nullable String targetNamespace) {
-        this.componentSeparator = Objects.requireNonNull(componentSeparator, "expected parameter 'componentSeparator' to be non-null");
-        this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
-        this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator, "expected parameter 'decimalPointIndicator' to be non-null");
-        this.messageAssociationAssignedCode = messageAssociationAssignedCode;
-        this.messageId = messageId;
-        this.messageRelease = messageRelease;
-        this.messageVersion = messageVersion;
-        this.releaseIndicator = Objects.requireNonNull(releaseIndicator, "expected parameter 'releaseIndicator' to be non-null");
-        this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator, "expected parameter 'repetitionSeparator' to be non-null");
-        this.segmentTerminator = Objects.requireNonNull(segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
-        this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
-        this.targetNamespace = targetNamespace;
-    }
+    private EdifactDelimiterOverrideResponse() {}
 
-    private EdifactDelimiterOverrideResponse() {
-        this.componentSeparator = null;
-        this.dataElementSeparator = null;
-        this.decimalPointIndicator = null;
-        this.messageAssociationAssignedCode = null;
-        this.messageId = null;
-        this.messageRelease = null;
-        this.messageVersion = null;
-        this.releaseIndicator = null;
-        this.repetitionSeparator = null;
-        this.segmentTerminator = null;
-        this.segmentTerminatorSuffix = null;
-        this.targetNamespace = null;
+    private EdifactDelimiterOverrideResponse(EdifactDelimiterOverrideResponse $) {
+        this.componentSeparator = $.componentSeparator;
+        this.dataElementSeparator = $.dataElementSeparator;
+        this.decimalPointIndicator = $.decimalPointIndicator;
+        this.messageAssociationAssignedCode = $.messageAssociationAssignedCode;
+        this.messageId = $.messageId;
+        this.messageRelease = $.messageRelease;
+        this.messageVersion = $.messageVersion;
+        this.releaseIndicator = $.releaseIndicator;
+        this.repetitionSeparator = $.repetitionSeparator;
+        this.segmentTerminator = $.segmentTerminator;
+        this.segmentTerminatorSuffix = $.segmentTerminatorSuffix;
+        this.targetNamespace = $.targetNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactDelimiterOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer componentSeparator;
-        private Integer dataElementSeparator;
-        private String decimalPointIndicator;
-        private @Nullable String messageAssociationAssignedCode;
-        private @Nullable String messageId;
-        private @Nullable String messageRelease;
-        private @Nullable String messageVersion;
-        private Integer releaseIndicator;
-        private Integer repetitionSeparator;
-        private Integer segmentTerminator;
-        private String segmentTerminatorSuffix;
-        private @Nullable String targetNamespace;
+        private EdifactDelimiterOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactDelimiterOverrideResponse();
         }
 
         public Builder(EdifactDelimiterOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentSeparator = defaults.componentSeparator;
-    	      this.dataElementSeparator = defaults.dataElementSeparator;
-    	      this.decimalPointIndicator = defaults.decimalPointIndicator;
-    	      this.messageAssociationAssignedCode = defaults.messageAssociationAssignedCode;
-    	      this.messageId = defaults.messageId;
-    	      this.messageRelease = defaults.messageRelease;
-    	      this.messageVersion = defaults.messageVersion;
-    	      this.releaseIndicator = defaults.releaseIndicator;
-    	      this.repetitionSeparator = defaults.repetitionSeparator;
-    	      this.segmentTerminator = defaults.segmentTerminator;
-    	      this.segmentTerminatorSuffix = defaults.segmentTerminatorSuffix;
-    	      this.targetNamespace = defaults.targetNamespace;
+            $ = new EdifactDelimiterOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder componentSeparator(Integer componentSeparator) {
-            this.componentSeparator = Objects.requireNonNull(componentSeparator);
+            $.componentSeparator = componentSeparator;
             return this;
         }
+
         public Builder dataElementSeparator(Integer dataElementSeparator) {
-            this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
+            $.dataElementSeparator = dataElementSeparator;
             return this;
         }
+
         public Builder decimalPointIndicator(String decimalPointIndicator) {
-            this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
+            $.decimalPointIndicator = decimalPointIndicator;
             return this;
         }
+
         public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
-            this.messageAssociationAssignedCode = messageAssociationAssignedCode;
+            $.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
+
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = messageId;
+            $.messageId = messageId;
             return this;
         }
+
         public Builder messageRelease(@Nullable String messageRelease) {
-            this.messageRelease = messageRelease;
+            $.messageRelease = messageRelease;
             return this;
         }
+
         public Builder messageVersion(@Nullable String messageVersion) {
-            this.messageVersion = messageVersion;
+            $.messageVersion = messageVersion;
             return this;
         }
+
         public Builder releaseIndicator(Integer releaseIndicator) {
-            this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
+            $.releaseIndicator = releaseIndicator;
             return this;
         }
+
         public Builder repetitionSeparator(Integer repetitionSeparator) {
-            this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
+            $.repetitionSeparator = repetitionSeparator;
             return this;
         }
+
         public Builder segmentTerminator(Integer segmentTerminator) {
-            this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
+            $.segmentTerminator = segmentTerminator;
             return this;
         }
+
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
-            this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
+            $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
+
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = targetNamespace;
+            $.targetNamespace = targetNamespace;
             return this;
-        }        public EdifactDelimiterOverrideResponse build() {
-            return new EdifactDelimiterOverrideResponse(componentSeparator, dataElementSeparator, decimalPointIndicator, messageAssociationAssignedCode, messageId, messageRelease, messageVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
+        }
+
+        public EdifactDelimiterOverrideResponse build() {
+            $.componentSeparator = Objects.requireNonNull($.componentSeparator, "expected parameter 'componentSeparator' to be non-null");
+            $.dataElementSeparator = Objects.requireNonNull($.dataElementSeparator, "expected parameter 'dataElementSeparator' to be non-null");
+            $.decimalPointIndicator = Objects.requireNonNull($.decimalPointIndicator, "expected parameter 'decimalPointIndicator' to be non-null");
+            $.releaseIndicator = Objects.requireNonNull($.releaseIndicator, "expected parameter 'releaseIndicator' to be non-null");
+            $.repetitionSeparator = Objects.requireNonNull($.repetitionSeparator, "expected parameter 'repetitionSeparator' to be non-null");
+            $.segmentTerminator = Objects.requireNonNull($.segmentTerminator, "expected parameter 'segmentTerminator' to be non-null");
+            $.segmentTerminatorSuffix = Objects.requireNonNull($.segmentTerminatorSuffix, "expected parameter 'segmentTerminatorSuffix' to be non-null");
+            return $;
         }
     }
+
 }

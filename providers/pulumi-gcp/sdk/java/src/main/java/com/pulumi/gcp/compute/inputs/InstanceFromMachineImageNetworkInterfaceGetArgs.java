@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs;
 import com.pulumi.gcp.compute.inputs.InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs;
@@ -13,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,31 +21,31 @@ public final class InstanceFromMachineImageNetworkInterfaceGetArgs extends com.p
     public static final InstanceFromMachineImageNetworkInterfaceGetArgs Empty = new InstanceFromMachineImageNetworkInterfaceGetArgs();
 
     @Import(name="accessConfigs")
-      private final @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
+    private @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
 
-    public Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs>> accessConfigs() {
-        return this.accessConfigs == null ? Codegen.empty() : this.accessConfigs;
+    public Optional<Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs>>> accessConfigs() {
+        return Optional.ofNullable(this.accessConfigs);
     }
 
     @Import(name="aliasIpRanges")
-      private final @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
+    private @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
 
-    public Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges() {
-        return this.aliasIpRanges == null ? Codegen.empty() : this.aliasIpRanges;
+    public Optional<Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs>>> aliasIpRanges() {
+        return Optional.ofNullable(this.aliasIpRanges);
     }
 
     @Import(name="ipv6AccessConfigs")
-      private final @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
+    private @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
 
-    public Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs() {
-        return this.ipv6AccessConfigs == null ? Codegen.empty() : this.ipv6AccessConfigs;
+    public Optional<Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs>>> ipv6AccessConfigs() {
+        return Optional.ofNullable(this.ipv6AccessConfigs);
     }
 
     @Import(name="ipv6AccessType")
-      private final @Nullable Output<String> ipv6AccessType;
+    private @Nullable Output<String> ipv6AccessType;
 
-    public Output<String> ipv6AccessType() {
-        return this.ipv6AccessType == null ? Codegen.empty() : this.ipv6AccessType;
+    public Optional<Output<String>> ipv6AccessType() {
+        return Optional.ofNullable(this.ipv6AccessType);
     }
 
     /**
@@ -54,251 +54,219 @@ public final class InstanceFromMachineImageNetworkInterfaceGetArgs extends com.p
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     @Import(name="networkIp")
-      private final @Nullable Output<String> networkIp;
+    private @Nullable Output<String> networkIp;
 
-    public Output<String> networkIp() {
-        return this.networkIp == null ? Codegen.empty() : this.networkIp;
+    public Optional<Output<String>> networkIp() {
+        return Optional.ofNullable(this.networkIp);
     }
 
     @Import(name="nicType")
-      private final @Nullable Output<String> nicType;
+    private @Nullable Output<String> nicType;
 
-    public Output<String> nicType() {
-        return this.nicType == null ? Codegen.empty() : this.nicType;
+    public Optional<Output<String>> nicType() {
+        return Optional.ofNullable(this.nicType);
     }
 
     @Import(name="queueCount")
-      private final @Nullable Output<Integer> queueCount;
+    private @Nullable Output<Integer> queueCount;
 
-    public Output<Integer> queueCount() {
-        return this.queueCount == null ? Codegen.empty() : this.queueCount;
+    public Optional<Output<Integer>> queueCount() {
+        return Optional.ofNullable(this.queueCount);
     }
 
     @Import(name="stackType")
-      private final @Nullable Output<String> stackType;
+    private @Nullable Output<String> stackType;
 
-    public Output<String> stackType() {
-        return this.stackType == null ? Codegen.empty() : this.stackType;
+    public Optional<Output<String>> stackType() {
+        return Optional.ofNullable(this.stackType);
     }
 
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
     @Import(name="subnetworkProject")
-      private final @Nullable Output<String> subnetworkProject;
+    private @Nullable Output<String> subnetworkProject;
 
-    public Output<String> subnetworkProject() {
-        return this.subnetworkProject == null ? Codegen.empty() : this.subnetworkProject;
+    public Optional<Output<String>> subnetworkProject() {
+        return Optional.ofNullable(this.subnetworkProject);
     }
 
-    public InstanceFromMachineImageNetworkInterfaceGetArgs(
-        @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs>> accessConfigs,
-        @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges,
-        @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs,
-        @Nullable Output<String> ipv6AccessType,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<String> networkIp,
-        @Nullable Output<String> nicType,
-        @Nullable Output<Integer> queueCount,
-        @Nullable Output<String> stackType,
-        @Nullable Output<String> subnetwork,
-        @Nullable Output<String> subnetworkProject) {
-        this.accessConfigs = accessConfigs;
-        this.aliasIpRanges = aliasIpRanges;
-        this.ipv6AccessConfigs = ipv6AccessConfigs;
-        this.ipv6AccessType = ipv6AccessType;
-        this.name = name;
-        this.network = network;
-        this.networkIp = networkIp;
-        this.nicType = nicType;
-        this.queueCount = queueCount;
-        this.stackType = stackType;
-        this.subnetwork = subnetwork;
-        this.subnetworkProject = subnetworkProject;
-    }
+    private InstanceFromMachineImageNetworkInterfaceGetArgs() {}
 
-    private InstanceFromMachineImageNetworkInterfaceGetArgs() {
-        this.accessConfigs = Codegen.empty();
-        this.aliasIpRanges = Codegen.empty();
-        this.ipv6AccessConfigs = Codegen.empty();
-        this.ipv6AccessType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.networkIp = Codegen.empty();
-        this.nicType = Codegen.empty();
-        this.queueCount = Codegen.empty();
-        this.stackType = Codegen.empty();
-        this.subnetwork = Codegen.empty();
-        this.subnetworkProject = Codegen.empty();
+    private InstanceFromMachineImageNetworkInterfaceGetArgs(InstanceFromMachineImageNetworkInterfaceGetArgs $) {
+        this.accessConfigs = $.accessConfigs;
+        this.aliasIpRanges = $.aliasIpRanges;
+        this.ipv6AccessConfigs = $.ipv6AccessConfigs;
+        this.ipv6AccessType = $.ipv6AccessType;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkIp = $.networkIp;
+        this.nicType = $.nicType;
+        this.queueCount = $.queueCount;
+        this.stackType = $.stackType;
+        this.subnetwork = $.subnetwork;
+        this.subnetworkProject = $.subnetworkProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromMachineImageNetworkInterfaceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
-        private @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
-        private @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
-        private @Nullable Output<String> ipv6AccessType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> networkIp;
-        private @Nullable Output<String> nicType;
-        private @Nullable Output<Integer> queueCount;
-        private @Nullable Output<String> stackType;
-        private @Nullable Output<String> subnetwork;
-        private @Nullable Output<String> subnetworkProject;
+        private InstanceFromMachineImageNetworkInterfaceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromMachineImageNetworkInterfaceGetArgs();
         }
 
         public Builder(InstanceFromMachineImageNetworkInterfaceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessConfigs = defaults.accessConfigs;
-    	      this.aliasIpRanges = defaults.aliasIpRanges;
-    	      this.ipv6AccessConfigs = defaults.ipv6AccessConfigs;
-    	      this.ipv6AccessType = defaults.ipv6AccessType;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkIp = defaults.networkIp;
-    	      this.nicType = defaults.nicType;
-    	      this.queueCount = defaults.queueCount;
-    	      this.stackType = defaults.stackType;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.subnetworkProject = defaults.subnetworkProject;
+            $ = new InstanceFromMachineImageNetworkInterfaceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessConfigs(@Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs>> accessConfigs) {
-            this.accessConfigs = accessConfigs;
+            $.accessConfigs = accessConfigs;
             return this;
         }
-        public Builder accessConfigs(@Nullable List<InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs> accessConfigs) {
-            this.accessConfigs = Codegen.ofNullable(accessConfigs);
-            return this;
+
+        public Builder accessConfigs(List<InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs> accessConfigs) {
+            return accessConfigs(Output.of(accessConfigs));
         }
+
         public Builder accessConfigs(InstanceFromMachineImageNetworkInterfaceAccessConfigGetArgs... accessConfigs) {
             return accessConfigs(List.of(accessConfigs));
         }
+
         public Builder aliasIpRanges(@Nullable Output<List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges) {
-            this.aliasIpRanges = aliasIpRanges;
+            $.aliasIpRanges = aliasIpRanges;
             return this;
         }
-        public Builder aliasIpRanges(@Nullable List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs> aliasIpRanges) {
-            this.aliasIpRanges = Codegen.ofNullable(aliasIpRanges);
-            return this;
+
+        public Builder aliasIpRanges(List<InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs> aliasIpRanges) {
+            return aliasIpRanges(Output.of(aliasIpRanges));
         }
+
         public Builder aliasIpRanges(InstanceFromMachineImageNetworkInterfaceAliasIpRangeGetArgs... aliasIpRanges) {
             return aliasIpRanges(List.of(aliasIpRanges));
         }
+
         public Builder ipv6AccessConfigs(@Nullable Output<List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs) {
-            this.ipv6AccessConfigs = ipv6AccessConfigs;
+            $.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
-        public Builder ipv6AccessConfigs(@Nullable List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs> ipv6AccessConfigs) {
-            this.ipv6AccessConfigs = Codegen.ofNullable(ipv6AccessConfigs);
-            return this;
+
+        public Builder ipv6AccessConfigs(List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs> ipv6AccessConfigs) {
+            return ipv6AccessConfigs(Output.of(ipv6AccessConfigs));
         }
+
         public Builder ipv6AccessConfigs(InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs... ipv6AccessConfigs) {
             return ipv6AccessConfigs(List.of(ipv6AccessConfigs));
         }
+
         public Builder ipv6AccessType(@Nullable Output<String> ipv6AccessType) {
-            this.ipv6AccessType = ipv6AccessType;
+            $.ipv6AccessType = ipv6AccessType;
             return this;
         }
-        public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
-            this.ipv6AccessType = Codegen.ofNullable(ipv6AccessType);
-            return this;
+
+        public Builder ipv6AccessType(String ipv6AccessType) {
+            return ipv6AccessType(Output.of(ipv6AccessType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder networkIp(@Nullable Output<String> networkIp) {
-            this.networkIp = networkIp;
+            $.networkIp = networkIp;
             return this;
         }
-        public Builder networkIp(@Nullable String networkIp) {
-            this.networkIp = Codegen.ofNullable(networkIp);
-            return this;
+
+        public Builder networkIp(String networkIp) {
+            return networkIp(Output.of(networkIp));
         }
+
         public Builder nicType(@Nullable Output<String> nicType) {
-            this.nicType = nicType;
+            $.nicType = nicType;
             return this;
         }
-        public Builder nicType(@Nullable String nicType) {
-            this.nicType = Codegen.ofNullable(nicType);
-            return this;
+
+        public Builder nicType(String nicType) {
+            return nicType(Output.of(nicType));
         }
+
         public Builder queueCount(@Nullable Output<Integer> queueCount) {
-            this.queueCount = queueCount;
+            $.queueCount = queueCount;
             return this;
         }
-        public Builder queueCount(@Nullable Integer queueCount) {
-            this.queueCount = Codegen.ofNullable(queueCount);
-            return this;
+
+        public Builder queueCount(Integer queueCount) {
+            return queueCount(Output.of(queueCount));
         }
+
         public Builder stackType(@Nullable Output<String> stackType) {
-            this.stackType = stackType;
+            $.stackType = stackType;
             return this;
         }
-        public Builder stackType(@Nullable String stackType) {
-            this.stackType = Codegen.ofNullable(stackType);
-            return this;
+
+        public Builder stackType(String stackType) {
+            return stackType(Output.of(stackType));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
         }
+
         public Builder subnetworkProject(@Nullable Output<String> subnetworkProject) {
-            this.subnetworkProject = subnetworkProject;
+            $.subnetworkProject = subnetworkProject;
             return this;
         }
-        public Builder subnetworkProject(@Nullable String subnetworkProject) {
-            this.subnetworkProject = Codegen.ofNullable(subnetworkProject);
-            return this;
-        }        public InstanceFromMachineImageNetworkInterfaceGetArgs build() {
-            return new InstanceFromMachineImageNetworkInterfaceGetArgs(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
+
+        public Builder subnetworkProject(String subnetworkProject) {
+            return subnetworkProject(Output.of(subnetworkProject));
+        }
+
+        public InstanceFromMachineImageNetworkInterfaceGetArgs build() {
+            return $;
         }
     }
+
 }

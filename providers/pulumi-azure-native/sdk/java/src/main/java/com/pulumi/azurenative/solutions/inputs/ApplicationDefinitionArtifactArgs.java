@@ -8,7 +8,6 @@ import com.pulumi.azurenative.solutions.enums.ApplicationDefinitionArtifactName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +25,7 @@ public final class ApplicationDefinitionArtifactArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,ApplicationDefinitionArtifactName>> name;
+    private Output<Either<String,ApplicationDefinitionArtifactName>> name;
 
     public Output<Either<String,ApplicationDefinitionArtifactName>> name() {
         return this.name;
@@ -37,7 +36,7 @@ public final class ApplicationDefinitionArtifactArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ApplicationArtifactType> type;
+    private Output<ApplicationArtifactType> type;
 
     public Output<ApplicationArtifactType> type() {
         return this.type;
@@ -48,76 +47,71 @@ public final class ApplicationDefinitionArtifactArgs extends com.pulumi.resource
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public ApplicationDefinitionArtifactArgs(
-        Output<Either<String,ApplicationDefinitionArtifactName>> name,
-        Output<ApplicationArtifactType> type,
-        Output<String> uri) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ApplicationDefinitionArtifactArgs() {}
 
-    private ApplicationDefinitionArtifactArgs() {
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ApplicationDefinitionArtifactArgs(ApplicationDefinitionArtifactArgs $) {
+        this.name = $.name;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationDefinitionArtifactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ApplicationDefinitionArtifactName>> name;
-        private Output<ApplicationArtifactType> type;
-        private Output<String> uri;
+        private ApplicationDefinitionArtifactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationDefinitionArtifactArgs();
         }
 
         public Builder(ApplicationDefinitionArtifactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new ApplicationDefinitionArtifactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<Either<String,ApplicationDefinitionArtifactName>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,ApplicationDefinitionArtifactName> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<ApplicationArtifactType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ApplicationArtifactType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public ApplicationDefinitionArtifactArgs build() {
-            return new ApplicationDefinitionArtifactArgs(name, type, uri);
+            return uri(Output.of(uri));
+        }
+
+        public ApplicationDefinitionArtifactArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

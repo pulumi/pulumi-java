@@ -18,62 +18,59 @@ public final class ReplicationConfigurationRepositoryFilter extends com.pulumi.r
     public static final ReplicationConfigurationRepositoryFilter Empty = new ReplicationConfigurationRepositoryFilter();
 
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
     }
 
     @Import(name="filterType", required=true)
-      private final ReplicationConfigurationFilterType filterType;
+    private ReplicationConfigurationFilterType filterType;
 
     public ReplicationConfigurationFilterType filterType() {
         return this.filterType;
     }
 
-    public ReplicationConfigurationRepositoryFilter(
-        String filter,
-        ReplicationConfigurationFilterType filterType) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.filterType = Objects.requireNonNull(filterType, "expected parameter 'filterType' to be non-null");
-    }
+    private ReplicationConfigurationRepositoryFilter() {}
 
-    private ReplicationConfigurationRepositoryFilter() {
-        this.filter = null;
-        this.filterType = null;
+    private ReplicationConfigurationRepositoryFilter(ReplicationConfigurationRepositoryFilter $) {
+        this.filter = $.filter;
+        this.filterType = $.filterType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationRepositoryFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
-        private ReplicationConfigurationFilterType filterType;
+        private ReplicationConfigurationRepositoryFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationRepositoryFilter();
         }
 
         public Builder(ReplicationConfigurationRepositoryFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.filterType = defaults.filterType;
+            $ = new ReplicationConfigurationRepositoryFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filterType(ReplicationConfigurationFilterType filterType) {
-            this.filterType = Objects.requireNonNull(filterType);
+            $.filterType = filterType;
             return this;
-        }        public ReplicationConfigurationRepositoryFilter build() {
-            return new ReplicationConfigurationRepositoryFilter(filter, filterType);
+        }
+
+        public ReplicationConfigurationRepositoryFilter build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.filterType = Objects.requireNonNull($.filterType, "expected parameter 'filterType' to be non-null");
+            return $;
         }
     }
+
 }

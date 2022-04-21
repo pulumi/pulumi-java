@@ -23,7 +23,7 @@ public final class ApplicationLogPatternSet extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="logPatterns", required=true)
-      private final List<ApplicationLogPattern> logPatterns;
+    private List<ApplicationLogPattern> logPatterns;
 
     public List<ApplicationLogPattern> logPatterns() {
         return this.logPatterns;
@@ -34,58 +34,56 @@ public final class ApplicationLogPatternSet extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="patternSetName", required=true)
-      private final String patternSetName;
+    private String patternSetName;
 
     public String patternSetName() {
         return this.patternSetName;
     }
 
-    public ApplicationLogPatternSet(
-        List<ApplicationLogPattern> logPatterns,
-        String patternSetName) {
-        this.logPatterns = Objects.requireNonNull(logPatterns, "expected parameter 'logPatterns' to be non-null");
-        this.patternSetName = Objects.requireNonNull(patternSetName, "expected parameter 'patternSetName' to be non-null");
-    }
+    private ApplicationLogPatternSet() {}
 
-    private ApplicationLogPatternSet() {
-        this.logPatterns = List.of();
-        this.patternSetName = null;
+    private ApplicationLogPatternSet(ApplicationLogPatternSet $) {
+        this.logPatterns = $.logPatterns;
+        this.patternSetName = $.patternSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationLogPatternSet defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ApplicationLogPattern> logPatterns;
-        private String patternSetName;
+        private ApplicationLogPatternSet $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationLogPatternSet();
         }
 
         public Builder(ApplicationLogPatternSet defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logPatterns = defaults.logPatterns;
-    	      this.patternSetName = defaults.patternSetName;
+            $ = new ApplicationLogPatternSet(Objects.requireNonNull(defaults));
         }
 
         public Builder logPatterns(List<ApplicationLogPattern> logPatterns) {
-            this.logPatterns = Objects.requireNonNull(logPatterns);
+            $.logPatterns = logPatterns;
             return this;
         }
+
         public Builder logPatterns(ApplicationLogPattern... logPatterns) {
             return logPatterns(List.of(logPatterns));
         }
+
         public Builder patternSetName(String patternSetName) {
-            this.patternSetName = Objects.requireNonNull(patternSetName);
+            $.patternSetName = patternSetName;
             return this;
-        }        public ApplicationLogPatternSet build() {
-            return new ApplicationLogPatternSet(logPatterns, patternSetName);
+        }
+
+        public ApplicationLogPatternSet build() {
+            $.logPatterns = Objects.requireNonNull($.logPatterns, "expected parameter 'logPatterns' to be non-null");
+            $.patternSetName = Objects.requireNonNull($.patternSetName, "expected parameter 'patternSetName' to be non-null");
+            return $;
         }
     }
+
 }

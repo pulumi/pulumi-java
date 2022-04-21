@@ -14,62 +14,59 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
     public static final GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting Empty = new GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting();
 
     @Import(name="retainedBackups", required=true)
-      private final Integer retainedBackups;
+    private Integer retainedBackups;
 
     public Integer retainedBackups() {
         return this.retainedBackups;
     }
 
     @Import(name="retentionUnit", required=true)
-      private final String retentionUnit;
+    private String retentionUnit;
 
     public String retentionUnit() {
         return this.retentionUnit;
     }
 
-    public GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(
-        Integer retainedBackups,
-        String retentionUnit) {
-        this.retainedBackups = Objects.requireNonNull(retainedBackups, "expected parameter 'retainedBackups' to be non-null");
-        this.retentionUnit = Objects.requireNonNull(retentionUnit, "expected parameter 'retentionUnit' to be non-null");
-    }
+    private GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting() {}
 
-    private GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting() {
-        this.retainedBackups = null;
-        this.retentionUnit = null;
+    private GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting $) {
+        this.retainedBackups = $.retainedBackups;
+        this.retentionUnit = $.retentionUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer retainedBackups;
-        private String retentionUnit;
+        private GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting();
         }
 
         public Builder(GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retainedBackups = defaults.retainedBackups;
-    	      this.retentionUnit = defaults.retentionUnit;
+            $ = new GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder retainedBackups(Integer retainedBackups) {
-            this.retainedBackups = Objects.requireNonNull(retainedBackups);
+            $.retainedBackups = retainedBackups;
             return this;
         }
+
         public Builder retentionUnit(String retentionUnit) {
-            this.retentionUnit = Objects.requireNonNull(retentionUnit);
+            $.retentionUnit = retentionUnit;
             return this;
-        }        public GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting build() {
-            return new GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(retainedBackups, retentionUnit);
+        }
+
+        public GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting build() {
+            $.retainedBackups = Objects.requireNonNull($.retainedBackups, "expected parameter 'retainedBackups' to be non-null");
+            $.retentionUnit = Objects.requireNonNull($.retentionUnit, "expected parameter 'retentionUnit' to be non-null");
+            return $;
         }
     }
+
 }

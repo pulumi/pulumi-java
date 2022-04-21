@@ -5,11 +5,11 @@ package com.pulumi.azurenative.synapse;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="importance")
-      private final @Nullable Output<String> importance;
+    private @Nullable Output<String> importance;
 
-    public Output<String> importance() {
-        return this.importance == null ? Codegen.empty() : this.importance;
+    public Optional<Output<String>> importance() {
+        return Optional.ofNullable(this.importance);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maxResourcePercent", required=true)
-      private final Output<Integer> maxResourcePercent;
+    private Output<Integer> maxResourcePercent;
 
     public Output<Integer> maxResourcePercent() {
         return this.maxResourcePercent;
@@ -44,10 +44,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maxResourcePercentPerRequest")
-      private final @Nullable Output<Double> maxResourcePercentPerRequest;
+    private @Nullable Output<Double> maxResourcePercentPerRequest;
 
-    public Output<Double> maxResourcePercentPerRequest() {
-        return this.maxResourcePercentPerRequest == null ? Codegen.empty() : this.maxResourcePercentPerRequest;
+    public Optional<Output<Double>> maxResourcePercentPerRequest() {
+        return Optional.ofNullable(this.maxResourcePercentPerRequest);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="minResourcePercent", required=true)
-      private final Output<Integer> minResourcePercent;
+    private Output<Integer> minResourcePercent;
 
     public Output<Integer> minResourcePercent() {
         return this.minResourcePercent;
@@ -66,7 +66,7 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="minResourcePercentPerRequest", required=true)
-      private final Output<Double> minResourcePercentPerRequest;
+    private Output<Double> minResourcePercentPerRequest;
 
     public Output<Double> minResourcePercentPerRequest() {
         return this.minResourcePercentPerRequest;
@@ -77,10 +77,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="queryExecutionTimeout")
-      private final @Nullable Output<Integer> queryExecutionTimeout;
+    private @Nullable Output<Integer> queryExecutionTimeout;
 
-    public Output<Integer> queryExecutionTimeout() {
-        return this.queryExecutionTimeout == null ? Codegen.empty() : this.queryExecutionTimeout;
+    public Optional<Output<Integer>> queryExecutionTimeout() {
+        return Optional.ofNullable(this.queryExecutionTimeout);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sqlPoolName", required=true)
-      private final Output<String> sqlPoolName;
+    private Output<String> sqlPoolName;
 
     public Output<String> sqlPoolName() {
         return this.sqlPoolName;
@@ -110,10 +110,10 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="workloadGroupName")
-      private final @Nullable Output<String> workloadGroupName;
+    private @Nullable Output<String> workloadGroupName;
 
-    public Output<String> workloadGroupName() {
-        return this.workloadGroupName == null ? Codegen.empty() : this.workloadGroupName;
+    public Optional<Output<String>> workloadGroupName() {
+        return Optional.ofNullable(this.workloadGroupName);
     }
 
     /**
@@ -121,167 +121,144 @@ public final class SqlPoolWorkloadGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public SqlPoolWorkloadGroupArgs(
-        @Nullable Output<String> importance,
-        Output<Integer> maxResourcePercent,
-        @Nullable Output<Double> maxResourcePercentPerRequest,
-        Output<Integer> minResourcePercent,
-        Output<Double> minResourcePercentPerRequest,
-        @Nullable Output<Integer> queryExecutionTimeout,
-        Output<String> resourceGroupName,
-        Output<String> sqlPoolName,
-        @Nullable Output<String> workloadGroupName,
-        Output<String> workspaceName) {
-        this.importance = importance;
-        this.maxResourcePercent = Objects.requireNonNull(maxResourcePercent, "expected parameter 'maxResourcePercent' to be non-null");
-        this.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
-        this.minResourcePercent = Objects.requireNonNull(minResourcePercent, "expected parameter 'minResourcePercent' to be non-null");
-        this.minResourcePercentPerRequest = Objects.requireNonNull(minResourcePercentPerRequest, "expected parameter 'minResourcePercentPerRequest' to be non-null");
-        this.queryExecutionTimeout = queryExecutionTimeout;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlPoolName = Objects.requireNonNull(sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
-        this.workloadGroupName = workloadGroupName;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private SqlPoolWorkloadGroupArgs() {}
 
-    private SqlPoolWorkloadGroupArgs() {
-        this.importance = Codegen.empty();
-        this.maxResourcePercent = Codegen.empty();
-        this.maxResourcePercentPerRequest = Codegen.empty();
-        this.minResourcePercent = Codegen.empty();
-        this.minResourcePercentPerRequest = Codegen.empty();
-        this.queryExecutionTimeout = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sqlPoolName = Codegen.empty();
-        this.workloadGroupName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private SqlPoolWorkloadGroupArgs(SqlPoolWorkloadGroupArgs $) {
+        this.importance = $.importance;
+        this.maxResourcePercent = $.maxResourcePercent;
+        this.maxResourcePercentPerRequest = $.maxResourcePercentPerRequest;
+        this.minResourcePercent = $.minResourcePercent;
+        this.minResourcePercentPerRequest = $.minResourcePercentPerRequest;
+        this.queryExecutionTimeout = $.queryExecutionTimeout;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlPoolName = $.sqlPoolName;
+        this.workloadGroupName = $.workloadGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlPoolWorkloadGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> importance;
-        private Output<Integer> maxResourcePercent;
-        private @Nullable Output<Double> maxResourcePercentPerRequest;
-        private Output<Integer> minResourcePercent;
-        private Output<Double> minResourcePercentPerRequest;
-        private @Nullable Output<Integer> queryExecutionTimeout;
-        private Output<String> resourceGroupName;
-        private Output<String> sqlPoolName;
-        private @Nullable Output<String> workloadGroupName;
-        private Output<String> workspaceName;
+        private SqlPoolWorkloadGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlPoolWorkloadGroupArgs();
         }
 
         public Builder(SqlPoolWorkloadGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.importance = defaults.importance;
-    	      this.maxResourcePercent = defaults.maxResourcePercent;
-    	      this.maxResourcePercentPerRequest = defaults.maxResourcePercentPerRequest;
-    	      this.minResourcePercent = defaults.minResourcePercent;
-    	      this.minResourcePercentPerRequest = defaults.minResourcePercentPerRequest;
-    	      this.queryExecutionTimeout = defaults.queryExecutionTimeout;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlPoolName = defaults.sqlPoolName;
-    	      this.workloadGroupName = defaults.workloadGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new SqlPoolWorkloadGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder importance(@Nullable Output<String> importance) {
-            this.importance = importance;
+            $.importance = importance;
             return this;
         }
-        public Builder importance(@Nullable String importance) {
-            this.importance = Codegen.ofNullable(importance);
-            return this;
+
+        public Builder importance(String importance) {
+            return importance(Output.of(importance));
         }
+
         public Builder maxResourcePercent(Output<Integer> maxResourcePercent) {
-            this.maxResourcePercent = Objects.requireNonNull(maxResourcePercent);
+            $.maxResourcePercent = maxResourcePercent;
             return this;
         }
+
         public Builder maxResourcePercent(Integer maxResourcePercent) {
-            this.maxResourcePercent = Output.of(Objects.requireNonNull(maxResourcePercent));
-            return this;
+            return maxResourcePercent(Output.of(maxResourcePercent));
         }
+
         public Builder maxResourcePercentPerRequest(@Nullable Output<Double> maxResourcePercentPerRequest) {
-            this.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
+            $.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
             return this;
         }
-        public Builder maxResourcePercentPerRequest(@Nullable Double maxResourcePercentPerRequest) {
-            this.maxResourcePercentPerRequest = Codegen.ofNullable(maxResourcePercentPerRequest);
-            return this;
+
+        public Builder maxResourcePercentPerRequest(Double maxResourcePercentPerRequest) {
+            return maxResourcePercentPerRequest(Output.of(maxResourcePercentPerRequest));
         }
+
         public Builder minResourcePercent(Output<Integer> minResourcePercent) {
-            this.minResourcePercent = Objects.requireNonNull(minResourcePercent);
+            $.minResourcePercent = minResourcePercent;
             return this;
         }
+
         public Builder minResourcePercent(Integer minResourcePercent) {
-            this.minResourcePercent = Output.of(Objects.requireNonNull(minResourcePercent));
-            return this;
+            return minResourcePercent(Output.of(minResourcePercent));
         }
+
         public Builder minResourcePercentPerRequest(Output<Double> minResourcePercentPerRequest) {
-            this.minResourcePercentPerRequest = Objects.requireNonNull(minResourcePercentPerRequest);
+            $.minResourcePercentPerRequest = minResourcePercentPerRequest;
             return this;
         }
+
         public Builder minResourcePercentPerRequest(Double minResourcePercentPerRequest) {
-            this.minResourcePercentPerRequest = Output.of(Objects.requireNonNull(minResourcePercentPerRequest));
-            return this;
+            return minResourcePercentPerRequest(Output.of(minResourcePercentPerRequest));
         }
+
         public Builder queryExecutionTimeout(@Nullable Output<Integer> queryExecutionTimeout) {
-            this.queryExecutionTimeout = queryExecutionTimeout;
+            $.queryExecutionTimeout = queryExecutionTimeout;
             return this;
         }
-        public Builder queryExecutionTimeout(@Nullable Integer queryExecutionTimeout) {
-            this.queryExecutionTimeout = Codegen.ofNullable(queryExecutionTimeout);
-            return this;
+
+        public Builder queryExecutionTimeout(Integer queryExecutionTimeout) {
+            return queryExecutionTimeout(Output.of(queryExecutionTimeout));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sqlPoolName(Output<String> sqlPoolName) {
-            this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
+
         public Builder sqlPoolName(String sqlPoolName) {
-            this.sqlPoolName = Output.of(Objects.requireNonNull(sqlPoolName));
-            return this;
+            return sqlPoolName(Output.of(sqlPoolName));
         }
+
         public Builder workloadGroupName(@Nullable Output<String> workloadGroupName) {
-            this.workloadGroupName = workloadGroupName;
+            $.workloadGroupName = workloadGroupName;
             return this;
         }
-        public Builder workloadGroupName(@Nullable String workloadGroupName) {
-            this.workloadGroupName = Codegen.ofNullable(workloadGroupName);
-            return this;
+
+        public Builder workloadGroupName(String workloadGroupName) {
+            return workloadGroupName(Output.of(workloadGroupName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public SqlPoolWorkloadGroupArgs build() {
-            return new SqlPoolWorkloadGroupArgs(importance, maxResourcePercent, maxResourcePercentPerRequest, minResourcePercent, minResourcePercentPerRequest, queryExecutionTimeout, resourceGroupName, sqlPoolName, workloadGroupName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public SqlPoolWorkloadGroupArgs build() {
+            $.maxResourcePercent = Objects.requireNonNull($.maxResourcePercent, "expected parameter 'maxResourcePercent' to be non-null");
+            $.minResourcePercent = Objects.requireNonNull($.minResourcePercent, "expected parameter 'minResourcePercent' to be non-null");
+            $.minResourcePercentPerRequest = Objects.requireNonNull($.minResourcePercentPerRequest, "expected parameter 'minResourcePercentPerRequest' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlPoolName = Objects.requireNonNull($.sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

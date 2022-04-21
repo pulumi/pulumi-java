@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs Empty = new WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs();
 
-    public WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs();
         }
         public WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs build() {
-            return new WebAclRuleStatementNotStatementStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringGetArgs();
+            return $;
         }
     }
+
 }

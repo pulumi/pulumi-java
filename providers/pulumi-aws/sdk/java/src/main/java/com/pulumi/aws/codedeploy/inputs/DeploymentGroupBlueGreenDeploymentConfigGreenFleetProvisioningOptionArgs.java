@@ -5,9 +5,9 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
-    public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs(@Nullable Output<String> action) {
-        this.action = action;
-    }
+    private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs() {}
 
-    private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs() {
-        this.action = Codegen.empty();
+    private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs(DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs $) {
+        this.action = $.action;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
+        private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs();
         }
 
         public Builder(DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
+            $ = new DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
-        }        public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs build() {
-            return new DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs(action);
+
+        public Builder action(String action) {
+            return action(Output.of(action));
+        }
+
+        public DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs build() {
+            return $;
         }
     }
+
 }

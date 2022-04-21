@@ -23,7 +23,7 @@ public final class SoftwareRecipeStepInstallMsiResponse extends com.pulumi.resou
      * 
      */
     @Import(name="allowedExitCodes", required=true)
-      private final List<Integer> allowedExitCodes;
+    private List<Integer> allowedExitCodes;
 
     public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
@@ -34,7 +34,7 @@ public final class SoftwareRecipeStepInstallMsiResponse extends com.pulumi.resou
      * 
      */
     @Import(name="artifactId", required=true)
-      private final String artifactId;
+    private String artifactId;
 
     public String artifactId() {
         return this.artifactId;
@@ -45,70 +45,67 @@ public final class SoftwareRecipeStepInstallMsiResponse extends com.pulumi.resou
      * 
      */
     @Import(name="flags", required=true)
-      private final List<String> flags;
+    private List<String> flags;
 
     public List<String> flags() {
         return this.flags;
     }
 
-    public SoftwareRecipeStepInstallMsiResponse(
-        List<Integer> allowedExitCodes,
-        String artifactId,
-        List<String> flags) {
-        this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes, "expected parameter 'allowedExitCodes' to be non-null");
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-        this.flags = Objects.requireNonNull(flags, "expected parameter 'flags' to be non-null");
-    }
+    private SoftwareRecipeStepInstallMsiResponse() {}
 
-    private SoftwareRecipeStepInstallMsiResponse() {
-        this.allowedExitCodes = List.of();
-        this.artifactId = null;
-        this.flags = List.of();
+    private SoftwareRecipeStepInstallMsiResponse(SoftwareRecipeStepInstallMsiResponse $) {
+        this.allowedExitCodes = $.allowedExitCodes;
+        this.artifactId = $.artifactId;
+        this.flags = $.flags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeStepInstallMsiResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Integer> allowedExitCodes;
-        private String artifactId;
-        private List<String> flags;
+        private SoftwareRecipeStepInstallMsiResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeStepInstallMsiResponse();
         }
 
         public Builder(SoftwareRecipeStepInstallMsiResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedExitCodes = defaults.allowedExitCodes;
-    	      this.artifactId = defaults.artifactId;
-    	      this.flags = defaults.flags;
+            $ = new SoftwareRecipeStepInstallMsiResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
+            $.allowedExitCodes = allowedExitCodes;
             return this;
         }
+
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
+
         public Builder artifactId(String artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder flags(List<String> flags) {
-            this.flags = Objects.requireNonNull(flags);
+            $.flags = flags;
             return this;
         }
+
         public Builder flags(String... flags) {
             return flags(List.of(flags));
-        }        public SoftwareRecipeStepInstallMsiResponse build() {
-            return new SoftwareRecipeStepInstallMsiResponse(allowedExitCodes, artifactId, flags);
+        }
+
+        public SoftwareRecipeStepInstallMsiResponse build() {
+            $.allowedExitCodes = Objects.requireNonNull($.allowedExitCodes, "expected parameter 'allowedExitCodes' to be non-null");
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            $.flags = Objects.requireNonNull($.flags, "expected parameter 'flags' to be non-null");
+            return $;
         }
     }
+
 }

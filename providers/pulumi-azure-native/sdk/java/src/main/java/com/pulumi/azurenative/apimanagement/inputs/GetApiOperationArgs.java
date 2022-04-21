@@ -17,7 +17,7 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
@@ -28,7 +28,7 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationId", required=true)
-      private final String operationId;
+    private String operationId;
 
     public String operationId() {
         return this.operationId;
@@ -39,7 +39,7 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetApiOperationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetApiOperationArgs(
-        String apiId,
-        String operationId,
-        String resourceGroupName,
-        String serviceName) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.operationId = Objects.requireNonNull(operationId, "expected parameter 'operationId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetApiOperationArgs() {}
 
-    private GetApiOperationArgs() {
-        this.apiId = null;
-        this.operationId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetApiOperationArgs(GetApiOperationArgs $) {
+        this.apiId = $.apiId;
+        this.operationId = $.operationId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApiOperationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private String operationId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetApiOperationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApiOperationArgs();
         }
 
         public Builder(GetApiOperationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.operationId = defaults.operationId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetApiOperationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder operationId(String operationId) {
-            this.operationId = Objects.requireNonNull(operationId);
+            $.operationId = operationId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetApiOperationArgs build() {
-            return new GetApiOperationArgs(apiId, operationId, resourceGroupName, serviceName);
+        }
+
+        public GetApiOperationArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.operationId = Objects.requireNonNull($.operationId, "expected parameter 'operationId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

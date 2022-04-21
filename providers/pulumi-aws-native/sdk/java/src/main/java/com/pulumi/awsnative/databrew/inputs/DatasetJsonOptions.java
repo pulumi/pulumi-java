@@ -19,45 +19,44 @@ public final class DatasetJsonOptions extends com.pulumi.resources.InvokeArgs {
     public static final DatasetJsonOptions Empty = new DatasetJsonOptions();
 
     @Import(name="multiLine")
-      private final @Nullable Boolean multiLine;
+    private @Nullable Boolean multiLine;
 
     public Optional<Boolean> multiLine() {
-        return this.multiLine == null ? Optional.empty() : Optional.ofNullable(this.multiLine);
+        return Optional.ofNullable(this.multiLine);
     }
 
-    public DatasetJsonOptions(@Nullable Boolean multiLine) {
-        this.multiLine = multiLine;
-    }
+    private DatasetJsonOptions() {}
 
-    private DatasetJsonOptions() {
-        this.multiLine = null;
+    private DatasetJsonOptions(DatasetJsonOptions $) {
+        this.multiLine = $.multiLine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetJsonOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean multiLine;
+        private DatasetJsonOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetJsonOptions();
         }
 
         public Builder(DatasetJsonOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.multiLine = defaults.multiLine;
+            $ = new DatasetJsonOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder multiLine(@Nullable Boolean multiLine) {
-            this.multiLine = multiLine;
+            $.multiLine = multiLine;
             return this;
-        }        public DatasetJsonOptions build() {
-            return new DatasetJsonOptions(multiLine);
+        }
+
+        public DatasetJsonOptions build() {
+            return $;
         }
     }
+
 }

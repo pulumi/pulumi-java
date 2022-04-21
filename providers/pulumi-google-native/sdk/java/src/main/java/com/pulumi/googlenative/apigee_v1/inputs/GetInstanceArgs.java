@@ -13,62 +13,59 @@ public final class GetInstanceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetInstanceArgs Empty = new GetInstanceArgs();
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetInstanceArgs(
-        String instanceId,
-        String organizationId) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetInstanceArgs() {}
 
-    private GetInstanceArgs() {
-        this.instanceId = null;
-        this.organizationId = null;
+    private GetInstanceArgs(GetInstanceArgs $) {
+        this.instanceId = $.instanceId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private String organizationId;
+        private GetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceArgs();
         }
 
         public Builder(GetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetInstanceArgs build() {
-            return new GetInstanceArgs(instanceId, organizationId);
+        }
+
+        public GetInstanceArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -11,6 +11,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<List<ArgumentArgs>> arguments;
+    private @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Output<List<ArgumentArgs>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<List<ArgumentArgs>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="contextAccessToken")
-      private final @Nullable Output<String> contextAccessToken;
+    private @Nullable Output<String> contextAccessToken;
 
-    public Output<String> contextAccessToken() {
-        return this.contextAccessToken == null ? Codegen.empty() : this.contextAccessToken;
+    public Optional<Output<String>> contextAccessToken() {
+        return Optional.ofNullable(this.contextAccessToken);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="contextPath")
-      private final @Nullable Output<String> contextPath;
+    private @Nullable Output<String> contextPath;
 
-    public Output<String> contextPath() {
-        return this.contextPath == null ? Codegen.empty() : this.contextPath;
+    public Optional<Output<String>> contextPath() {
+        return Optional.ofNullable(this.contextPath);
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dockerFilePath", required=true)
-      private final Output<String> dockerFilePath;
+    private Output<String> dockerFilePath;
 
     public Output<String> dockerFilePath() {
         return this.dockerFilePath;
@@ -71,10 +72,10 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="imageNames")
-      private final @Nullable Output<List<String>> imageNames;
+    private @Nullable Output<List<String>> imageNames;
 
-    public Output<List<String>> imageNames() {
-        return this.imageNames == null ? Codegen.empty() : this.imageNames;
+    public Optional<Output<List<String>>> imageNames() {
+        return Optional.ofNullable(this.imageNames);
     }
 
     /**
@@ -82,10 +83,10 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="isPushEnabled")
-      private final @Nullable Output<Boolean> isPushEnabled;
+    private @Nullable Output<Boolean> isPushEnabled;
 
-    public Output<Boolean> isPushEnabled() {
-        return this.isPushEnabled == null ? Codegen.empty() : this.isPushEnabled;
+    public Optional<Output<Boolean>> isPushEnabled() {
+        return Optional.ofNullable(this.isPushEnabled);
     }
 
     /**
@@ -93,10 +94,10 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="noCache")
-      private final @Nullable Output<Boolean> noCache;
+    private @Nullable Output<Boolean> noCache;
 
-    public Output<Boolean> noCache() {
-        return this.noCache == null ? Codegen.empty() : this.noCache;
+    public Optional<Output<Boolean>> noCache() {
+        return Optional.ofNullable(this.noCache);
     }
 
     /**
@@ -104,10 +105,10 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -116,160 +117,140 @@ public final class DockerBuildStepArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DockerBuildStepArgs(
-        @Nullable Output<List<ArgumentArgs>> arguments,
-        @Nullable Output<String> contextAccessToken,
-        @Nullable Output<String> contextPath,
-        Output<String> dockerFilePath,
-        @Nullable Output<List<String>> imageNames,
-        @Nullable Output<Boolean> isPushEnabled,
-        @Nullable Output<Boolean> noCache,
-        @Nullable Output<String> target,
-        Output<String> type) {
-        this.arguments = arguments;
-        this.contextAccessToken = contextAccessToken;
-        this.contextPath = contextPath;
-        this.dockerFilePath = Objects.requireNonNull(dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
-        this.imageNames = imageNames;
-        this.isPushEnabled = Codegen.booleanProp("isPushEnabled").output().arg(isPushEnabled).def(true).getNullable();
-        this.noCache = Codegen.booleanProp("noCache").output().arg(noCache).def(false).getNullable();
-        this.target = target;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private DockerBuildStepArgs() {}
 
-    private DockerBuildStepArgs() {
-        this.arguments = Codegen.empty();
-        this.contextAccessToken = Codegen.empty();
-        this.contextPath = Codegen.empty();
-        this.dockerFilePath = Codegen.empty();
-        this.imageNames = Codegen.empty();
-        this.isPushEnabled = Codegen.empty();
-        this.noCache = Codegen.empty();
-        this.target = Codegen.empty();
-        this.type = Codegen.empty();
+    private DockerBuildStepArgs(DockerBuildStepArgs $) {
+        this.arguments = $.arguments;
+        this.contextAccessToken = $.contextAccessToken;
+        this.contextPath = $.contextPath;
+        this.dockerFilePath = $.dockerFilePath;
+        this.imageNames = $.imageNames;
+        this.isPushEnabled = $.isPushEnabled;
+        this.noCache = $.noCache;
+        this.target = $.target;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DockerBuildStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ArgumentArgs>> arguments;
-        private @Nullable Output<String> contextAccessToken;
-        private @Nullable Output<String> contextPath;
-        private Output<String> dockerFilePath;
-        private @Nullable Output<List<String>> imageNames;
-        private @Nullable Output<Boolean> isPushEnabled;
-        private @Nullable Output<Boolean> noCache;
-        private @Nullable Output<String> target;
-        private Output<String> type;
+        private DockerBuildStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DockerBuildStepArgs();
         }
 
         public Builder(DockerBuildStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.contextAccessToken = defaults.contextAccessToken;
-    	      this.contextPath = defaults.contextPath;
-    	      this.dockerFilePath = defaults.dockerFilePath;
-    	      this.imageNames = defaults.imageNames;
-    	      this.isPushEnabled = defaults.isPushEnabled;
-    	      this.noCache = defaults.noCache;
-    	      this.target = defaults.target;
-    	      this.type = defaults.type;
+            $ = new DockerBuildStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<List<ArgumentArgs>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(List<ArgumentArgs> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder arguments(ArgumentArgs... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder contextAccessToken(@Nullable Output<String> contextAccessToken) {
-            this.contextAccessToken = contextAccessToken;
+            $.contextAccessToken = contextAccessToken;
             return this;
         }
-        public Builder contextAccessToken(@Nullable String contextAccessToken) {
-            this.contextAccessToken = Codegen.ofNullable(contextAccessToken);
-            return this;
+
+        public Builder contextAccessToken(String contextAccessToken) {
+            return contextAccessToken(Output.of(contextAccessToken));
         }
+
         public Builder contextPath(@Nullable Output<String> contextPath) {
-            this.contextPath = contextPath;
+            $.contextPath = contextPath;
             return this;
         }
-        public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = Codegen.ofNullable(contextPath);
-            return this;
+
+        public Builder contextPath(String contextPath) {
+            return contextPath(Output.of(contextPath));
         }
+
         public Builder dockerFilePath(Output<String> dockerFilePath) {
-            this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
+            $.dockerFilePath = dockerFilePath;
             return this;
         }
+
         public Builder dockerFilePath(String dockerFilePath) {
-            this.dockerFilePath = Output.of(Objects.requireNonNull(dockerFilePath));
-            return this;
+            return dockerFilePath(Output.of(dockerFilePath));
         }
+
         public Builder imageNames(@Nullable Output<List<String>> imageNames) {
-            this.imageNames = imageNames;
+            $.imageNames = imageNames;
             return this;
         }
-        public Builder imageNames(@Nullable List<String> imageNames) {
-            this.imageNames = Codegen.ofNullable(imageNames);
-            return this;
+
+        public Builder imageNames(List<String> imageNames) {
+            return imageNames(Output.of(imageNames));
         }
+
         public Builder imageNames(String... imageNames) {
             return imageNames(List.of(imageNames));
         }
+
         public Builder isPushEnabled(@Nullable Output<Boolean> isPushEnabled) {
-            this.isPushEnabled = isPushEnabled;
+            $.isPushEnabled = isPushEnabled;
             return this;
         }
-        public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
-            this.isPushEnabled = Codegen.ofNullable(isPushEnabled);
-            return this;
+
+        public Builder isPushEnabled(Boolean isPushEnabled) {
+            return isPushEnabled(Output.of(isPushEnabled));
         }
+
         public Builder noCache(@Nullable Output<Boolean> noCache) {
-            this.noCache = noCache;
+            $.noCache = noCache;
             return this;
         }
-        public Builder noCache(@Nullable Boolean noCache) {
-            this.noCache = Codegen.ofNullable(noCache);
-            return this;
+
+        public Builder noCache(Boolean noCache) {
+            return noCache(Output.of(noCache));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DockerBuildStepArgs build() {
-            return new DockerBuildStepArgs(arguments, contextAccessToken, contextPath, dockerFilePath, imageNames, isPushEnabled, noCache, target, type);
+            return type(Output.of(type));
+        }
+
+        public DockerBuildStepArgs build() {
+            $.dockerFilePath = Objects.requireNonNull($.dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
+            $.isPushEnabled = Codegen.booleanProp("isPushEnabled").output().arg($.isPushEnabled).def(true).getNullable();
+            $.noCache = Codegen.booleanProp("noCache").output().arg($.noCache).def(false).getNullable();
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

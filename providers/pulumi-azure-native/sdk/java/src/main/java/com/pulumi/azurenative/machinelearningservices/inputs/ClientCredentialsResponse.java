@@ -20,10 +20,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="authorityUrl")
-      private final @Nullable String authorityUrl;
+    private @Nullable String authorityUrl;
 
     public Optional<String> authorityUrl() {
-        return this.authorityUrl == null ? Optional.empty() : Optional.ofNullable(this.authorityUrl);
+        return Optional.ofNullable(this.authorityUrl);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="certificate")
-      private final @Nullable String certificate;
+    private @Nullable String certificate;
 
     public Optional<String> certificate() {
-        return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable String clientSecret;
+    private @Nullable String clientSecret;
 
     public Optional<String> clientSecret() {
-        return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="isCertAuth")
-      private final @Nullable Boolean isCertAuth;
+    private @Nullable Boolean isCertAuth;
 
     public Optional<Boolean> isCertAuth() {
-        return this.isCertAuth == null ? Optional.empty() : Optional.ofNullable(this.isCertAuth);
+        return Optional.ofNullable(this.isCertAuth);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable String resourceGroup;
+    private @Nullable String resourceGroup;
 
     public Optional<String> resourceGroup() {
-        return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceUri")
-      private final @Nullable String resourceUri;
+    private @Nullable String resourceUri;
 
     public Optional<String> resourceUri() {
-        return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
+        return Optional.ofNullable(this.resourceUri);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serviceDataAccessAuthIdentity")
-      private final @Nullable String serviceDataAccessAuthIdentity;
+    private @Nullable String serviceDataAccessAuthIdentity;
 
     public Optional<String> serviceDataAccessAuthIdentity() {
-        return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
+        return Optional.ofNullable(this.serviceDataAccessAuthIdentity);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -130,136 +130,104 @@ public final class ClientCredentialsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public ClientCredentialsResponse(
-        @Nullable String authorityUrl,
-        @Nullable String certificate,
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable Boolean isCertAuth,
-        @Nullable String resourceGroup,
-        @Nullable String resourceUri,
-        @Nullable String serviceDataAccessAuthIdentity,
-        @Nullable String subscriptionId,
-        @Nullable String tenantId,
-        @Nullable String thumbprint) {
-        this.authorityUrl = authorityUrl;
-        this.certificate = certificate;
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.isCertAuth = isCertAuth;
-        this.resourceGroup = resourceGroup;
-        this.resourceUri = resourceUri;
-        this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
-        this.subscriptionId = subscriptionId;
-        this.tenantId = tenantId;
-        this.thumbprint = thumbprint;
-    }
+    private ClientCredentialsResponse() {}
 
-    private ClientCredentialsResponse() {
-        this.authorityUrl = null;
-        this.certificate = null;
-        this.clientId = null;
-        this.clientSecret = null;
-        this.isCertAuth = null;
-        this.resourceGroup = null;
-        this.resourceUri = null;
-        this.serviceDataAccessAuthIdentity = null;
-        this.subscriptionId = null;
-        this.tenantId = null;
-        this.thumbprint = null;
+    private ClientCredentialsResponse(ClientCredentialsResponse $) {
+        this.authorityUrl = $.authorityUrl;
+        this.certificate = $.certificate;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.isCertAuth = $.isCertAuth;
+        this.resourceGroup = $.resourceGroup;
+        this.resourceUri = $.resourceUri;
+        this.serviceDataAccessAuthIdentity = $.serviceDataAccessAuthIdentity;
+        this.subscriptionId = $.subscriptionId;
+        this.tenantId = $.tenantId;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authorityUrl;
-        private @Nullable String certificate;
-        private @Nullable String clientId;
-        private @Nullable String clientSecret;
-        private @Nullable Boolean isCertAuth;
-        private @Nullable String resourceGroup;
-        private @Nullable String resourceUri;
-        private @Nullable String serviceDataAccessAuthIdentity;
-        private @Nullable String subscriptionId;
-        private @Nullable String tenantId;
-        private @Nullable String thumbprint;
+        private ClientCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientCredentialsResponse();
         }
 
         public Builder(ClientCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorityUrl = defaults.authorityUrl;
-    	      this.certificate = defaults.certificate;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.isCertAuth = defaults.isCertAuth;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.resourceUri = defaults.resourceUri;
-    	      this.serviceDataAccessAuthIdentity = defaults.serviceDataAccessAuthIdentity;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new ClientCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorityUrl(@Nullable String authorityUrl) {
-            this.authorityUrl = authorityUrl;
+            $.authorityUrl = authorityUrl;
             return this;
         }
+
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
+
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder isCertAuth(@Nullable Boolean isCertAuth) {
-            this.isCertAuth = isCertAuth;
+            $.isCertAuth = isCertAuth;
             return this;
         }
+
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
+
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
-            this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
+            $.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
-        }        public ClientCredentialsResponse build() {
-            return new ClientCredentialsResponse(authorityUrl, certificate, clientId, clientSecret, isCertAuth, resourceGroup, resourceUri, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint);
+        }
+
+        public ClientCredentialsResponse build() {
+            return $;
         }
     }
+
 }

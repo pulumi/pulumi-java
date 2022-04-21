@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.ColumnArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ColumnLayoutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<List<ColumnArgs>> columns;
+    private @Nullable Output<List<ColumnArgs>> columns;
 
-    public Output<List<ColumnArgs>> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<List<ColumnArgs>>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
-    public ColumnLayoutArgs(@Nullable Output<List<ColumnArgs>> columns) {
-        this.columns = columns;
-    }
+    private ColumnLayoutArgs() {}
 
-    private ColumnLayoutArgs() {
-        this.columns = Codegen.empty();
+    private ColumnLayoutArgs(ColumnLayoutArgs $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ColumnLayoutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ColumnArgs>> columns;
+        private ColumnLayoutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ColumnLayoutArgs();
         }
 
         public Builder(ColumnLayoutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new ColumnLayoutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable Output<List<ColumnArgs>> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable List<ColumnArgs> columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(List<ColumnArgs> columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder columns(ColumnArgs... columns) {
             return columns(List.of(columns));
-        }        public ColumnLayoutArgs build() {
-            return new ColumnLayoutArgs(columns);
+        }
+
+        public ColumnLayoutArgs build() {
+            return $;
         }
     }
+
 }

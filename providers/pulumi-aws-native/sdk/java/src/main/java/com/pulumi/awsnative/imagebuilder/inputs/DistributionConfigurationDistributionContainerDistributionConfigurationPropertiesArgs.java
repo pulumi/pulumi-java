@@ -6,10 +6,10 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationTargetContainerRepositoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @Import(name="containerTags")
-      private final @Nullable Output<List<String>> containerTags;
+    private @Nullable Output<List<String>> containerTags;
 
-    public Output<List<String>> containerTags() {
-        return this.containerTags == null ? Codegen.empty() : this.containerTags;
+    public Optional<Output<List<String>>> containerTags() {
+        return Optional.ofNullable(this.containerTags);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @Import(name="targetRepository")
-      private final @Nullable Output<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository;
+    private @Nullable Output<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository;
 
-    public Output<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository() {
-        return this.targetRepository == null ? Codegen.empty() : this.targetRepository;
+    public Optional<Output<DistributionConfigurationTargetContainerRepositoryArgs>> targetRepository() {
+        return Optional.ofNullable(this.targetRepository);
     }
 
-    public DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs(
-        @Nullable Output<List<String>> containerTags,
-        @Nullable Output<String> description,
-        @Nullable Output<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository) {
-        this.containerTags = containerTags;
-        this.description = description;
-        this.targetRepository = targetRepository;
-    }
+    private DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs() {}
 
-    private DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs() {
-        this.containerTags = Codegen.empty();
-        this.description = Codegen.empty();
-        this.targetRepository = Codegen.empty();
+    private DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs(DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs $) {
+        this.containerTags = $.containerTags;
+        this.description = $.description;
+        this.targetRepository = $.targetRepository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> containerTags;
-        private @Nullable Output<String> description;
-        private @Nullable Output<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository;
+        private DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs();
         }
 
         public Builder(DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerTags = defaults.containerTags;
-    	      this.description = defaults.description;
-    	      this.targetRepository = defaults.targetRepository;
+            $ = new DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerTags(@Nullable Output<List<String>> containerTags) {
-            this.containerTags = containerTags;
+            $.containerTags = containerTags;
             return this;
         }
-        public Builder containerTags(@Nullable List<String> containerTags) {
-            this.containerTags = Codegen.ofNullable(containerTags);
-            return this;
+
+        public Builder containerTags(List<String> containerTags) {
+            return containerTags(Output.of(containerTags));
         }
+
         public Builder containerTags(String... containerTags) {
             return containerTags(List.of(containerTags));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder targetRepository(@Nullable Output<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository) {
-            this.targetRepository = targetRepository;
+            $.targetRepository = targetRepository;
             return this;
         }
-        public Builder targetRepository(@Nullable DistributionConfigurationTargetContainerRepositoryArgs targetRepository) {
-            this.targetRepository = Codegen.ofNullable(targetRepository);
-            return this;
-        }        public DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs build() {
-            return new DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs(containerTags, description, targetRepository);
+
+        public Builder targetRepository(DistributionConfigurationTargetContainerRepositoryArgs targetRepository) {
+            return targetRepository(Output.of(targetRepository));
+        }
+
+        public DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

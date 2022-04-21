@@ -6,10 +6,10 @@ package com.pulumi.azurenative.orbital.inputs;
 import com.pulumi.azurenative.orbital.inputs.EndPointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bandwidthMHz", required=true)
-      private final Output<Double> bandwidthMHz;
+    private Output<Double> bandwidthMHz;
 
     public Output<Double> bandwidthMHz() {
         return this.bandwidthMHz;
@@ -37,7 +37,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="centerFrequencyMHz", required=true)
-      private final Output<Double> centerFrequencyMHz;
+    private Output<Double> centerFrequencyMHz;
 
     public Output<Double> centerFrequencyMHz() {
         return this.centerFrequencyMHz;
@@ -48,10 +48,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="decodingConfiguration")
-      private final @Nullable Output<String> decodingConfiguration;
+    private @Nullable Output<String> decodingConfiguration;
 
-    public Output<String> decodingConfiguration() {
-        return this.decodingConfiguration == null ? Codegen.empty() : this.decodingConfiguration;
+    public Optional<Output<String>> decodingConfiguration() {
+        return Optional.ofNullable(this.decodingConfiguration);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="demodulationConfiguration")
-      private final @Nullable Output<String> demodulationConfiguration;
+    private @Nullable Output<String> demodulationConfiguration;
 
-    public Output<String> demodulationConfiguration() {
-        return this.demodulationConfiguration == null ? Codegen.empty() : this.demodulationConfiguration;
+    public Optional<Output<String>> demodulationConfiguration() {
+        return Optional.ofNullable(this.demodulationConfiguration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="encodingConfiguration")
-      private final @Nullable Output<String> encodingConfiguration;
+    private @Nullable Output<String> encodingConfiguration;
 
-    public Output<String> encodingConfiguration() {
-        return this.encodingConfiguration == null ? Codegen.empty() : this.encodingConfiguration;
+    public Optional<Output<String>> encodingConfiguration() {
+        return Optional.ofNullable(this.encodingConfiguration);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="endPoint", required=true)
-      private final Output<EndPointArgs> endPoint;
+    private Output<EndPointArgs> endPoint;
 
     public Output<EndPointArgs> endPoint() {
         return this.endPoint;
@@ -92,128 +92,111 @@ public final class ContactProfileLinkChannelArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="modulationConfiguration")
-      private final @Nullable Output<String> modulationConfiguration;
+    private @Nullable Output<String> modulationConfiguration;
 
-    public Output<String> modulationConfiguration() {
-        return this.modulationConfiguration == null ? Codegen.empty() : this.modulationConfiguration;
+    public Optional<Output<String>> modulationConfiguration() {
+        return Optional.ofNullable(this.modulationConfiguration);
     }
 
-    public ContactProfileLinkChannelArgs(
-        Output<Double> bandwidthMHz,
-        Output<Double> centerFrequencyMHz,
-        @Nullable Output<String> decodingConfiguration,
-        @Nullable Output<String> demodulationConfiguration,
-        @Nullable Output<String> encodingConfiguration,
-        Output<EndPointArgs> endPoint,
-        @Nullable Output<String> modulationConfiguration) {
-        this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz, "expected parameter 'bandwidthMHz' to be non-null");
-        this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz, "expected parameter 'centerFrequencyMHz' to be non-null");
-        this.decodingConfiguration = decodingConfiguration;
-        this.demodulationConfiguration = demodulationConfiguration;
-        this.encodingConfiguration = encodingConfiguration;
-        this.endPoint = Objects.requireNonNull(endPoint, "expected parameter 'endPoint' to be non-null");
-        this.modulationConfiguration = modulationConfiguration;
-    }
+    private ContactProfileLinkChannelArgs() {}
 
-    private ContactProfileLinkChannelArgs() {
-        this.bandwidthMHz = Codegen.empty();
-        this.centerFrequencyMHz = Codegen.empty();
-        this.decodingConfiguration = Codegen.empty();
-        this.demodulationConfiguration = Codegen.empty();
-        this.encodingConfiguration = Codegen.empty();
-        this.endPoint = Codegen.empty();
-        this.modulationConfiguration = Codegen.empty();
+    private ContactProfileLinkChannelArgs(ContactProfileLinkChannelArgs $) {
+        this.bandwidthMHz = $.bandwidthMHz;
+        this.centerFrequencyMHz = $.centerFrequencyMHz;
+        this.decodingConfiguration = $.decodingConfiguration;
+        this.demodulationConfiguration = $.demodulationConfiguration;
+        this.encodingConfiguration = $.encodingConfiguration;
+        this.endPoint = $.endPoint;
+        this.modulationConfiguration = $.modulationConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactProfileLinkChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> bandwidthMHz;
-        private Output<Double> centerFrequencyMHz;
-        private @Nullable Output<String> decodingConfiguration;
-        private @Nullable Output<String> demodulationConfiguration;
-        private @Nullable Output<String> encodingConfiguration;
-        private Output<EndPointArgs> endPoint;
-        private @Nullable Output<String> modulationConfiguration;
+        private ContactProfileLinkChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactProfileLinkChannelArgs();
         }
 
         public Builder(ContactProfileLinkChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidthMHz = defaults.bandwidthMHz;
-    	      this.centerFrequencyMHz = defaults.centerFrequencyMHz;
-    	      this.decodingConfiguration = defaults.decodingConfiguration;
-    	      this.demodulationConfiguration = defaults.demodulationConfiguration;
-    	      this.encodingConfiguration = defaults.encodingConfiguration;
-    	      this.endPoint = defaults.endPoint;
-    	      this.modulationConfiguration = defaults.modulationConfiguration;
+            $ = new ContactProfileLinkChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidthMHz(Output<Double> bandwidthMHz) {
-            this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
+            $.bandwidthMHz = bandwidthMHz;
             return this;
         }
+
         public Builder bandwidthMHz(Double bandwidthMHz) {
-            this.bandwidthMHz = Output.of(Objects.requireNonNull(bandwidthMHz));
-            return this;
+            return bandwidthMHz(Output.of(bandwidthMHz));
         }
+
         public Builder centerFrequencyMHz(Output<Double> centerFrequencyMHz) {
-            this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
+            $.centerFrequencyMHz = centerFrequencyMHz;
             return this;
         }
+
         public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
-            this.centerFrequencyMHz = Output.of(Objects.requireNonNull(centerFrequencyMHz));
-            return this;
+            return centerFrequencyMHz(Output.of(centerFrequencyMHz));
         }
+
         public Builder decodingConfiguration(@Nullable Output<String> decodingConfiguration) {
-            this.decodingConfiguration = decodingConfiguration;
+            $.decodingConfiguration = decodingConfiguration;
             return this;
         }
-        public Builder decodingConfiguration(@Nullable String decodingConfiguration) {
-            this.decodingConfiguration = Codegen.ofNullable(decodingConfiguration);
-            return this;
+
+        public Builder decodingConfiguration(String decodingConfiguration) {
+            return decodingConfiguration(Output.of(decodingConfiguration));
         }
+
         public Builder demodulationConfiguration(@Nullable Output<String> demodulationConfiguration) {
-            this.demodulationConfiguration = demodulationConfiguration;
+            $.demodulationConfiguration = demodulationConfiguration;
             return this;
         }
-        public Builder demodulationConfiguration(@Nullable String demodulationConfiguration) {
-            this.demodulationConfiguration = Codegen.ofNullable(demodulationConfiguration);
-            return this;
+
+        public Builder demodulationConfiguration(String demodulationConfiguration) {
+            return demodulationConfiguration(Output.of(demodulationConfiguration));
         }
+
         public Builder encodingConfiguration(@Nullable Output<String> encodingConfiguration) {
-            this.encodingConfiguration = encodingConfiguration;
+            $.encodingConfiguration = encodingConfiguration;
             return this;
         }
-        public Builder encodingConfiguration(@Nullable String encodingConfiguration) {
-            this.encodingConfiguration = Codegen.ofNullable(encodingConfiguration);
-            return this;
+
+        public Builder encodingConfiguration(String encodingConfiguration) {
+            return encodingConfiguration(Output.of(encodingConfiguration));
         }
+
         public Builder endPoint(Output<EndPointArgs> endPoint) {
-            this.endPoint = Objects.requireNonNull(endPoint);
+            $.endPoint = endPoint;
             return this;
         }
+
         public Builder endPoint(EndPointArgs endPoint) {
-            this.endPoint = Output.of(Objects.requireNonNull(endPoint));
-            return this;
+            return endPoint(Output.of(endPoint));
         }
+
         public Builder modulationConfiguration(@Nullable Output<String> modulationConfiguration) {
-            this.modulationConfiguration = modulationConfiguration;
+            $.modulationConfiguration = modulationConfiguration;
             return this;
         }
-        public Builder modulationConfiguration(@Nullable String modulationConfiguration) {
-            this.modulationConfiguration = Codegen.ofNullable(modulationConfiguration);
-            return this;
-        }        public ContactProfileLinkChannelArgs build() {
-            return new ContactProfileLinkChannelArgs(bandwidthMHz, centerFrequencyMHz, decodingConfiguration, demodulationConfiguration, encodingConfiguration, endPoint, modulationConfiguration);
+
+        public Builder modulationConfiguration(String modulationConfiguration) {
+            return modulationConfiguration(Output.of(modulationConfiguration));
+        }
+
+        public ContactProfileLinkChannelArgs build() {
+            $.bandwidthMHz = Objects.requireNonNull($.bandwidthMHz, "expected parameter 'bandwidthMHz' to be non-null");
+            $.centerFrequencyMHz = Objects.requireNonNull($.centerFrequencyMHz, "expected parameter 'centerFrequencyMHz' to be non-null");
+            $.endPoint = Objects.requireNonNull($.endPoint, "expected parameter 'endPoint' to be non-null");
+            return $;
         }
     }
+
 }

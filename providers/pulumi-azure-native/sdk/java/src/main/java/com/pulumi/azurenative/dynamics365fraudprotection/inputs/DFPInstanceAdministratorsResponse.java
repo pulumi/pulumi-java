@@ -24,48 +24,48 @@ public final class DFPInstanceAdministratorsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="members")
-      private final @Nullable List<String> members;
+    private @Nullable List<String> members;
 
-    public List<String> members() {
-        return this.members == null ? List.of() : this.members;
+    public Optional<List<String>> members() {
+        return Optional.ofNullable(this.members);
     }
 
-    public DFPInstanceAdministratorsResponse(@Nullable List<String> members) {
-        this.members = members;
-    }
+    private DFPInstanceAdministratorsResponse() {}
 
-    private DFPInstanceAdministratorsResponse() {
-        this.members = List.of();
+    private DFPInstanceAdministratorsResponse(DFPInstanceAdministratorsResponse $) {
+        this.members = $.members;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DFPInstanceAdministratorsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> members;
+        private DFPInstanceAdministratorsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DFPInstanceAdministratorsResponse();
         }
 
         public Builder(DFPInstanceAdministratorsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.members = defaults.members;
+            $ = new DFPInstanceAdministratorsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
-        }        public DFPInstanceAdministratorsResponse build() {
-            return new DFPInstanceAdministratorsResponse(members);
+        }
+
+        public DFPInstanceAdministratorsResponse build() {
+            return $;
         }
     }
+
 }

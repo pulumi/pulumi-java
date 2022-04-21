@@ -27,7 +27,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="bypassCacheOnRequestHeaders", required=true)
-      private final List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders;
+    private List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders;
 
     public List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders() {
         return this.bypassCacheOnRequestHeaders;
@@ -38,7 +38,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="cacheKeyPolicy", required=true)
-      private final BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy;
+    private BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy;
 
     public BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy() {
         return this.cacheKeyPolicy;
@@ -49,7 +49,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="cacheMode", required=true)
-      private final String cacheMode;
+    private String cacheMode;
 
     public String cacheMode() {
         return this.cacheMode;
@@ -60,7 +60,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="clientTtl", required=true)
-      private final Integer clientTtl;
+    private Integer clientTtl;
 
     public Integer clientTtl() {
         return this.clientTtl;
@@ -71,7 +71,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="defaultTtl", required=true)
-      private final Integer defaultTtl;
+    private Integer defaultTtl;
 
     public Integer defaultTtl() {
         return this.defaultTtl;
@@ -82,7 +82,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="maxTtl", required=true)
-      private final Integer maxTtl;
+    private Integer maxTtl;
 
     public Integer maxTtl() {
         return this.maxTtl;
@@ -93,7 +93,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="negativeCaching", required=true)
-      private final Boolean negativeCaching;
+    private Boolean negativeCaching;
 
     public Boolean negativeCaching() {
         return this.negativeCaching;
@@ -104,7 +104,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="negativeCachingPolicy", required=true)
-      private final List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy;
+    private List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy;
 
     public List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy() {
         return this.negativeCachingPolicy;
@@ -115,7 +115,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="requestCoalescing", required=true)
-      private final Boolean requestCoalescing;
+    private Boolean requestCoalescing;
 
     public Boolean requestCoalescing() {
         return this.requestCoalescing;
@@ -126,7 +126,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="serveWhileStale", required=true)
-      private final Integer serveWhileStale;
+    private Integer serveWhileStale;
 
     public Integer serveWhileStale() {
         return this.serveWhileStale;
@@ -137,7 +137,7 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="signedUrlCacheMaxAgeSec", required=true)
-      private final String signedUrlCacheMaxAgeSec;
+    private String signedUrlCacheMaxAgeSec;
 
     public String signedUrlCacheMaxAgeSec() {
         return this.signedUrlCacheMaxAgeSec;
@@ -148,154 +148,134 @@ public final class BackendBucketCdnPolicyResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="signedUrlKeyNames", required=true)
-      private final List<String> signedUrlKeyNames;
+    private List<String> signedUrlKeyNames;
 
     public List<String> signedUrlKeyNames() {
         return this.signedUrlKeyNames;
     }
 
-    public BackendBucketCdnPolicyResponse(
-        List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders,
-        BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy,
-        String cacheMode,
-        Integer clientTtl,
-        Integer defaultTtl,
-        Integer maxTtl,
-        Boolean negativeCaching,
-        List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy,
-        Boolean requestCoalescing,
-        Integer serveWhileStale,
-        String signedUrlCacheMaxAgeSec,
-        List<String> signedUrlKeyNames) {
-        this.bypassCacheOnRequestHeaders = Objects.requireNonNull(bypassCacheOnRequestHeaders, "expected parameter 'bypassCacheOnRequestHeaders' to be non-null");
-        this.cacheKeyPolicy = Objects.requireNonNull(cacheKeyPolicy, "expected parameter 'cacheKeyPolicy' to be non-null");
-        this.cacheMode = Objects.requireNonNull(cacheMode, "expected parameter 'cacheMode' to be non-null");
-        this.clientTtl = Objects.requireNonNull(clientTtl, "expected parameter 'clientTtl' to be non-null");
-        this.defaultTtl = Objects.requireNonNull(defaultTtl, "expected parameter 'defaultTtl' to be non-null");
-        this.maxTtl = Objects.requireNonNull(maxTtl, "expected parameter 'maxTtl' to be non-null");
-        this.negativeCaching = Objects.requireNonNull(negativeCaching, "expected parameter 'negativeCaching' to be non-null");
-        this.negativeCachingPolicy = Objects.requireNonNull(negativeCachingPolicy, "expected parameter 'negativeCachingPolicy' to be non-null");
-        this.requestCoalescing = Objects.requireNonNull(requestCoalescing, "expected parameter 'requestCoalescing' to be non-null");
-        this.serveWhileStale = Objects.requireNonNull(serveWhileStale, "expected parameter 'serveWhileStale' to be non-null");
-        this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec, "expected parameter 'signedUrlCacheMaxAgeSec' to be non-null");
-        this.signedUrlKeyNames = Objects.requireNonNull(signedUrlKeyNames, "expected parameter 'signedUrlKeyNames' to be non-null");
-    }
+    private BackendBucketCdnPolicyResponse() {}
 
-    private BackendBucketCdnPolicyResponse() {
-        this.bypassCacheOnRequestHeaders = List.of();
-        this.cacheKeyPolicy = null;
-        this.cacheMode = null;
-        this.clientTtl = null;
-        this.defaultTtl = null;
-        this.maxTtl = null;
-        this.negativeCaching = null;
-        this.negativeCachingPolicy = List.of();
-        this.requestCoalescing = null;
-        this.serveWhileStale = null;
-        this.signedUrlCacheMaxAgeSec = null;
-        this.signedUrlKeyNames = List.of();
+    private BackendBucketCdnPolicyResponse(BackendBucketCdnPolicyResponse $) {
+        this.bypassCacheOnRequestHeaders = $.bypassCacheOnRequestHeaders;
+        this.cacheKeyPolicy = $.cacheKeyPolicy;
+        this.cacheMode = $.cacheMode;
+        this.clientTtl = $.clientTtl;
+        this.defaultTtl = $.defaultTtl;
+        this.maxTtl = $.maxTtl;
+        this.negativeCaching = $.negativeCaching;
+        this.negativeCachingPolicy = $.negativeCachingPolicy;
+        this.requestCoalescing = $.requestCoalescing;
+        this.serveWhileStale = $.serveWhileStale;
+        this.signedUrlCacheMaxAgeSec = $.signedUrlCacheMaxAgeSec;
+        this.signedUrlKeyNames = $.signedUrlKeyNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendBucketCdnPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders;
-        private BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy;
-        private String cacheMode;
-        private Integer clientTtl;
-        private Integer defaultTtl;
-        private Integer maxTtl;
-        private Boolean negativeCaching;
-        private List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy;
-        private Boolean requestCoalescing;
-        private Integer serveWhileStale;
-        private String signedUrlCacheMaxAgeSec;
-        private List<String> signedUrlKeyNames;
+        private BackendBucketCdnPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendBucketCdnPolicyResponse();
         }
 
         public Builder(BackendBucketCdnPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypassCacheOnRequestHeaders = defaults.bypassCacheOnRequestHeaders;
-    	      this.cacheKeyPolicy = defaults.cacheKeyPolicy;
-    	      this.cacheMode = defaults.cacheMode;
-    	      this.clientTtl = defaults.clientTtl;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.maxTtl = defaults.maxTtl;
-    	      this.negativeCaching = defaults.negativeCaching;
-    	      this.negativeCachingPolicy = defaults.negativeCachingPolicy;
-    	      this.requestCoalescing = defaults.requestCoalescing;
-    	      this.serveWhileStale = defaults.serveWhileStale;
-    	      this.signedUrlCacheMaxAgeSec = defaults.signedUrlCacheMaxAgeSec;
-    	      this.signedUrlKeyNames = defaults.signedUrlKeyNames;
+            $ = new BackendBucketCdnPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bypassCacheOnRequestHeaders(List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders) {
-            this.bypassCacheOnRequestHeaders = Objects.requireNonNull(bypassCacheOnRequestHeaders);
+            $.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
             return this;
         }
+
         public Builder bypassCacheOnRequestHeaders(BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse... bypassCacheOnRequestHeaders) {
             return bypassCacheOnRequestHeaders(List.of(bypassCacheOnRequestHeaders));
         }
+
         public Builder cacheKeyPolicy(BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy) {
-            this.cacheKeyPolicy = Objects.requireNonNull(cacheKeyPolicy);
+            $.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
+
         public Builder cacheMode(String cacheMode) {
-            this.cacheMode = Objects.requireNonNull(cacheMode);
+            $.cacheMode = cacheMode;
             return this;
         }
+
         public Builder clientTtl(Integer clientTtl) {
-            this.clientTtl = Objects.requireNonNull(clientTtl);
+            $.clientTtl = clientTtl;
             return this;
         }
+
         public Builder defaultTtl(Integer defaultTtl) {
-            this.defaultTtl = Objects.requireNonNull(defaultTtl);
+            $.defaultTtl = defaultTtl;
             return this;
         }
+
         public Builder maxTtl(Integer maxTtl) {
-            this.maxTtl = Objects.requireNonNull(maxTtl);
+            $.maxTtl = maxTtl;
             return this;
         }
+
         public Builder negativeCaching(Boolean negativeCaching) {
-            this.negativeCaching = Objects.requireNonNull(negativeCaching);
+            $.negativeCaching = negativeCaching;
             return this;
         }
+
         public Builder negativeCachingPolicy(List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy) {
-            this.negativeCachingPolicy = Objects.requireNonNull(negativeCachingPolicy);
+            $.negativeCachingPolicy = negativeCachingPolicy;
             return this;
         }
+
         public Builder negativeCachingPolicy(BackendBucketCdnPolicyNegativeCachingPolicyResponse... negativeCachingPolicy) {
             return negativeCachingPolicy(List.of(negativeCachingPolicy));
         }
+
         public Builder requestCoalescing(Boolean requestCoalescing) {
-            this.requestCoalescing = Objects.requireNonNull(requestCoalescing);
+            $.requestCoalescing = requestCoalescing;
             return this;
         }
+
         public Builder serveWhileStale(Integer serveWhileStale) {
-            this.serveWhileStale = Objects.requireNonNull(serveWhileStale);
+            $.serveWhileStale = serveWhileStale;
             return this;
         }
+
         public Builder signedUrlCacheMaxAgeSec(String signedUrlCacheMaxAgeSec) {
-            this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
+            $.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }
+
         public Builder signedUrlKeyNames(List<String> signedUrlKeyNames) {
-            this.signedUrlKeyNames = Objects.requireNonNull(signedUrlKeyNames);
+            $.signedUrlKeyNames = signedUrlKeyNames;
             return this;
         }
+
         public Builder signedUrlKeyNames(String... signedUrlKeyNames) {
             return signedUrlKeyNames(List.of(signedUrlKeyNames));
-        }        public BackendBucketCdnPolicyResponse build() {
-            return new BackendBucketCdnPolicyResponse(bypassCacheOnRequestHeaders, cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, requestCoalescing, serveWhileStale, signedUrlCacheMaxAgeSec, signedUrlKeyNames);
+        }
+
+        public BackendBucketCdnPolicyResponse build() {
+            $.bypassCacheOnRequestHeaders = Objects.requireNonNull($.bypassCacheOnRequestHeaders, "expected parameter 'bypassCacheOnRequestHeaders' to be non-null");
+            $.cacheKeyPolicy = Objects.requireNonNull($.cacheKeyPolicy, "expected parameter 'cacheKeyPolicy' to be non-null");
+            $.cacheMode = Objects.requireNonNull($.cacheMode, "expected parameter 'cacheMode' to be non-null");
+            $.clientTtl = Objects.requireNonNull($.clientTtl, "expected parameter 'clientTtl' to be non-null");
+            $.defaultTtl = Objects.requireNonNull($.defaultTtl, "expected parameter 'defaultTtl' to be non-null");
+            $.maxTtl = Objects.requireNonNull($.maxTtl, "expected parameter 'maxTtl' to be non-null");
+            $.negativeCaching = Objects.requireNonNull($.negativeCaching, "expected parameter 'negativeCaching' to be non-null");
+            $.negativeCachingPolicy = Objects.requireNonNull($.negativeCachingPolicy, "expected parameter 'negativeCachingPolicy' to be non-null");
+            $.requestCoalescing = Objects.requireNonNull($.requestCoalescing, "expected parameter 'requestCoalescing' to be non-null");
+            $.serveWhileStale = Objects.requireNonNull($.serveWhileStale, "expected parameter 'serveWhileStale' to be non-null");
+            $.signedUrlCacheMaxAgeSec = Objects.requireNonNull($.signedUrlCacheMaxAgeSec, "expected parameter 'signedUrlCacheMaxAgeSec' to be non-null");
+            $.signedUrlKeyNames = Objects.requireNonNull($.signedUrlKeyNames, "expected parameter 'signedUrlKeyNames' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assignmentName", required=true)
-      private final String assignmentName;
+    private String assignmentName;
 
     public String assignmentName() {
         return this.assignmentName;
@@ -28,55 +28,52 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceScope", required=true)
-      private final String resourceScope;
+    private String resourceScope;
 
     public String resourceScope() {
         return this.resourceScope;
     }
 
-    public GetAssignmentArgs(
-        String assignmentName,
-        String resourceScope) {
-        this.assignmentName = Objects.requireNonNull(assignmentName, "expected parameter 'assignmentName' to be non-null");
-        this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");
-    }
+    private GetAssignmentArgs() {}
 
-    private GetAssignmentArgs() {
-        this.assignmentName = null;
-        this.resourceScope = null;
+    private GetAssignmentArgs(GetAssignmentArgs $) {
+        this.assignmentName = $.assignmentName;
+        this.resourceScope = $.resourceScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assignmentName;
-        private String resourceScope;
+        private GetAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssignmentArgs();
         }
 
         public Builder(GetAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignmentName = defaults.assignmentName;
-    	      this.resourceScope = defaults.resourceScope;
+            $ = new GetAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignmentName(String assignmentName) {
-            this.assignmentName = Objects.requireNonNull(assignmentName);
+            $.assignmentName = assignmentName;
             return this;
         }
+
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Objects.requireNonNull(resourceScope);
+            $.resourceScope = resourceScope;
             return this;
-        }        public GetAssignmentArgs build() {
-            return new GetAssignmentArgs(assignmentName, resourceScope);
+        }
+
+        public GetAssignmentArgs build() {
+            $.assignmentName = Objects.requireNonNull($.assignmentName, "expected parameter 'assignmentName' to be non-null");
+            $.resourceScope = Objects.requireNonNull($.resourceScope, "expected parameter 'resourceScope' to be non-null");
+            return $;
         }
     }
+
 }

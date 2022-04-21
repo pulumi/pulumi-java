@@ -6,8 +6,8 @@ package com.pulumi.awsnative.ec2.inputs;
 import com.pulumi.awsnative.ec2.enums.EC2FleetCapacityReservationOptionsRequestUsageStrategy;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends com.pul
     public static final EC2FleetCapacityReservationOptionsRequestArgs Empty = new EC2FleetCapacityReservationOptionsRequestArgs();
 
     @Import(name="usageStrategy")
-      private final @Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
+    private @Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
 
-    public Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy() {
-        return this.usageStrategy == null ? Codegen.empty() : this.usageStrategy;
+    public Optional<Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy>> usageStrategy() {
+        return Optional.ofNullable(this.usageStrategy);
     }
 
-    public EC2FleetCapacityReservationOptionsRequestArgs(@Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy) {
-        this.usageStrategy = usageStrategy;
-    }
+    private EC2FleetCapacityReservationOptionsRequestArgs() {}
 
-    private EC2FleetCapacityReservationOptionsRequestArgs() {
-        this.usageStrategy = Codegen.empty();
+    private EC2FleetCapacityReservationOptionsRequestArgs(EC2FleetCapacityReservationOptionsRequestArgs $) {
+        this.usageStrategy = $.usageStrategy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetCapacityReservationOptionsRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
+        private EC2FleetCapacityReservationOptionsRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetCapacityReservationOptionsRequestArgs();
         }
 
         public Builder(EC2FleetCapacityReservationOptionsRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.usageStrategy = defaults.usageStrategy;
+            $ = new EC2FleetCapacityReservationOptionsRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder usageStrategy(@Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy) {
-            this.usageStrategy = usageStrategy;
+            $.usageStrategy = usageStrategy;
             return this;
         }
-        public Builder usageStrategy(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
-            this.usageStrategy = Codegen.ofNullable(usageStrategy);
-            return this;
-        }        public EC2FleetCapacityReservationOptionsRequestArgs build() {
-            return new EC2FleetCapacityReservationOptionsRequestArgs(usageStrategy);
+
+        public Builder usageStrategy(EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
+            return usageStrategy(Output.of(usageStrategy));
+        }
+
+        public EC2FleetCapacityReservationOptionsRequestArgs build() {
+            return $;
         }
     }
+
 }

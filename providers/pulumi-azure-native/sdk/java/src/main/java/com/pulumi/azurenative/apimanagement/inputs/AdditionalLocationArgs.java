@@ -12,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="disableGateway")
-      private final @Nullable Output<Boolean> disableGateway;
+    private @Nullable Output<Boolean> disableGateway;
 
-    public Output<Boolean> disableGateway() {
-        return this.disableGateway == null ? Codegen.empty() : this.disableGateway;
+    public Optional<Output<Boolean>> disableGateway() {
+        return Optional.ofNullable(this.disableGateway);
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -50,7 +51,7 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<ApiManagementServiceSkuPropertiesArgs> sku;
+    private Output<ApiManagementServiceSkuPropertiesArgs> sku;
 
     public Output<ApiManagementServiceSkuPropertiesArgs> sku() {
         return this.sku;
@@ -61,10 +62,10 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualNetworkConfiguration")
-      private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
+    private @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
-    public Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration == null ? Codegen.empty() : this.virtualNetworkConfiguration;
+    public Optional<Output<VirtualNetworkConfigurationArgs>> virtualNetworkConfiguration() {
+        return Optional.ofNullable(this.virtualNetworkConfiguration);
     }
 
     /**
@@ -72,105 +73,95 @@ public final class AdditionalLocationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public AdditionalLocationArgs(
-        @Nullable Output<Boolean> disableGateway,
-        Output<String> location,
-        Output<ApiManagementServiceSkuPropertiesArgs> sku,
-        @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration,
-        @Nullable Output<List<String>> zones) {
-        this.disableGateway = Codegen.booleanProp("disableGateway").output().arg(disableGateway).def(false).getNullable();
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.virtualNetworkConfiguration = virtualNetworkConfiguration;
-        this.zones = zones;
-    }
+    private AdditionalLocationArgs() {}
 
-    private AdditionalLocationArgs() {
-        this.disableGateway = Codegen.empty();
-        this.location = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.virtualNetworkConfiguration = Codegen.empty();
-        this.zones = Codegen.empty();
+    private AdditionalLocationArgs(AdditionalLocationArgs $) {
+        this.disableGateway = $.disableGateway;
+        this.location = $.location;
+        this.sku = $.sku;
+        this.virtualNetworkConfiguration = $.virtualNetworkConfiguration;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdditionalLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableGateway;
-        private Output<String> location;
-        private Output<ApiManagementServiceSkuPropertiesArgs> sku;
-        private @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
-        private @Nullable Output<List<String>> zones;
+        private AdditionalLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdditionalLocationArgs();
         }
 
         public Builder(AdditionalLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableGateway = defaults.disableGateway;
-    	      this.location = defaults.location;
-    	      this.sku = defaults.sku;
-    	      this.virtualNetworkConfiguration = defaults.virtualNetworkConfiguration;
-    	      this.zones = defaults.zones;
+            $ = new AdditionalLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableGateway(@Nullable Output<Boolean> disableGateway) {
-            this.disableGateway = disableGateway;
+            $.disableGateway = disableGateway;
             return this;
         }
-        public Builder disableGateway(@Nullable Boolean disableGateway) {
-            this.disableGateway = Codegen.ofNullable(disableGateway);
-            return this;
+
+        public Builder disableGateway(Boolean disableGateway) {
+            return disableGateway(Output.of(disableGateway));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder sku(Output<ApiManagementServiceSkuPropertiesArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(ApiManagementServiceSkuPropertiesArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder virtualNetworkConfiguration(@Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = virtualNetworkConfiguration;
+            $.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
-        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = Codegen.ofNullable(virtualNetworkConfiguration);
-            return this;
+
+        public Builder virtualNetworkConfiguration(VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
+            return virtualNetworkConfiguration(Output.of(virtualNetworkConfiguration));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public AdditionalLocationArgs build() {
-            return new AdditionalLocationArgs(disableGateway, location, sku, virtualNetworkConfiguration, zones);
+        }
+
+        public AdditionalLocationArgs build() {
+            $.disableGateway = Codegen.booleanProp("disableGateway").output().arg($.disableGateway).def(false).getNullable();
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

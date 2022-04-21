@@ -6,13 +6,13 @@ package com.pulumi.aws.apigateway.inputs;
 import com.pulumi.aws.apigateway.inputs.RestApiEndpointConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiKeySource")
-      private final @Nullable Output<String> apiKeySource;
+    private @Nullable Output<String> apiKeySource;
 
-    public Output<String> apiKeySource() {
-        return this.apiKeySource == null ? Codegen.empty() : this.apiKeySource;
+    public Optional<Output<String>> apiKeySource() {
+        return Optional.ofNullable(this.apiKeySource);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="binaryMediaTypes")
-      private final @Nullable Output<List<String>> binaryMediaTypes;
+    private @Nullable Output<List<String>> binaryMediaTypes;
 
-    public Output<List<String>> binaryMediaTypes() {
-        return this.binaryMediaTypes == null ? Codegen.empty() : this.binaryMediaTypes;
+    public Optional<Output<List<String>>> binaryMediaTypes() {
+        return Optional.ofNullable(this.binaryMediaTypes);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableExecuteApiEndpoint")
-      private final @Nullable Output<Boolean> disableExecuteApiEndpoint;
+    private @Nullable Output<Boolean> disableExecuteApiEndpoint;
 
-    public Output<Boolean> disableExecuteApiEndpoint() {
-        return this.disableExecuteApiEndpoint == null ? Codegen.empty() : this.disableExecuteApiEndpoint;
+    public Optional<Output<Boolean>> disableExecuteApiEndpoint() {
+        return Optional.ofNullable(this.disableExecuteApiEndpoint);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointConfiguration")
-      private final @Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration;
+    private @Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration;
 
-    public Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration() {
-        return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
+    public Optional<Output<RestApiEndpointConfigurationGetArgs>> endpointConfiguration() {
+        return Optional.ofNullable(this.endpointConfiguration);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionArn")
-      private final @Nullable Output<String> executionArn;
+    private @Nullable Output<String> executionArn;
 
-    public Output<String> executionArn() {
-        return this.executionArn == null ? Codegen.empty() : this.executionArn;
+    public Optional<Output<String>> executionArn() {
+        return Optional.ofNullable(this.executionArn);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minimumCompressionSize")
-      private final @Nullable Output<Integer> minimumCompressionSize;
+    private @Nullable Output<Integer> minimumCompressionSize;
 
-    public Output<Integer> minimumCompressionSize() {
-        return this.minimumCompressionSize == null ? Codegen.empty() : this.minimumCompressionSize;
+    public Optional<Output<Integer>> minimumCompressionSize() {
+        return Optional.ofNullable(this.minimumCompressionSize);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootResourceId")
-      private final @Nullable Output<String> rootResourceId;
+    private @Nullable Output<String> rootResourceId;
 
-    public Output<String> rootResourceId() {
-        return this.rootResourceId == null ? Codegen.empty() : this.rootResourceId;
+    public Optional<Output<String>> rootResourceId() {
+        return Optional.ofNullable(this.rootResourceId);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -192,248 +192,202 @@ public final class RestApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public RestApiState(
-        @Nullable Output<String> apiKeySource,
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> binaryMediaTypes,
-        @Nullable Output<String> body,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disableExecuteApiEndpoint,
-        @Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration,
-        @Nullable Output<String> executionArn,
-        @Nullable Output<Integer> minimumCompressionSize,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> policy,
-        @Nullable Output<String> rootResourceId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.apiKeySource = apiKeySource;
-        this.arn = arn;
-        this.binaryMediaTypes = binaryMediaTypes;
-        this.body = body;
-        this.createdDate = createdDate;
-        this.description = description;
-        this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
-        this.endpointConfiguration = endpointConfiguration;
-        this.executionArn = executionArn;
-        this.minimumCompressionSize = minimumCompressionSize;
-        this.name = name;
-        this.parameters = parameters;
-        this.policy = policy;
-        this.rootResourceId = rootResourceId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private RestApiState() {}
 
-    private RestApiState() {
-        this.apiKeySource = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.binaryMediaTypes = Codegen.empty();
-        this.body = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disableExecuteApiEndpoint = Codegen.empty();
-        this.endpointConfiguration = Codegen.empty();
-        this.executionArn = Codegen.empty();
-        this.minimumCompressionSize = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.rootResourceId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private RestApiState(RestApiState $) {
+        this.apiKeySource = $.apiKeySource;
+        this.arn = $.arn;
+        this.binaryMediaTypes = $.binaryMediaTypes;
+        this.body = $.body;
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.disableExecuteApiEndpoint = $.disableExecuteApiEndpoint;
+        this.endpointConfiguration = $.endpointConfiguration;
+        this.executionArn = $.executionArn;
+        this.minimumCompressionSize = $.minimumCompressionSize;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.policy = $.policy;
+        this.rootResourceId = $.rootResourceId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestApiState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiKeySource;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> binaryMediaTypes;
-        private @Nullable Output<String> body;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disableExecuteApiEndpoint;
-        private @Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration;
-        private @Nullable Output<String> executionArn;
-        private @Nullable Output<Integer> minimumCompressionSize;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> rootResourceId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private RestApiState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestApiState();
         }
 
         public Builder(RestApiState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKeySource = defaults.apiKeySource;
-    	      this.arn = defaults.arn;
-    	      this.binaryMediaTypes = defaults.binaryMediaTypes;
-    	      this.body = defaults.body;
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.disableExecuteApiEndpoint = defaults.disableExecuteApiEndpoint;
-    	      this.endpointConfiguration = defaults.endpointConfiguration;
-    	      this.executionArn = defaults.executionArn;
-    	      this.minimumCompressionSize = defaults.minimumCompressionSize;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.policy = defaults.policy;
-    	      this.rootResourceId = defaults.rootResourceId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new RestApiState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKeySource(@Nullable Output<String> apiKeySource) {
-            this.apiKeySource = apiKeySource;
+            $.apiKeySource = apiKeySource;
             return this;
         }
-        public Builder apiKeySource(@Nullable String apiKeySource) {
-            this.apiKeySource = Codegen.ofNullable(apiKeySource);
-            return this;
+
+        public Builder apiKeySource(String apiKeySource) {
+            return apiKeySource(Output.of(apiKeySource));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder binaryMediaTypes(@Nullable Output<List<String>> binaryMediaTypes) {
-            this.binaryMediaTypes = binaryMediaTypes;
+            $.binaryMediaTypes = binaryMediaTypes;
             return this;
         }
-        public Builder binaryMediaTypes(@Nullable List<String> binaryMediaTypes) {
-            this.binaryMediaTypes = Codegen.ofNullable(binaryMediaTypes);
-            return this;
+
+        public Builder binaryMediaTypes(List<String> binaryMediaTypes) {
+            return binaryMediaTypes(Output.of(binaryMediaTypes));
         }
+
         public Builder binaryMediaTypes(String... binaryMediaTypes) {
             return binaryMediaTypes(List.of(binaryMediaTypes));
         }
+
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disableExecuteApiEndpoint(@Nullable Output<Boolean> disableExecuteApiEndpoint) {
-            this.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
+            $.disableExecuteApiEndpoint = disableExecuteApiEndpoint;
             return this;
         }
-        public Builder disableExecuteApiEndpoint(@Nullable Boolean disableExecuteApiEndpoint) {
-            this.disableExecuteApiEndpoint = Codegen.ofNullable(disableExecuteApiEndpoint);
-            return this;
+
+        public Builder disableExecuteApiEndpoint(Boolean disableExecuteApiEndpoint) {
+            return disableExecuteApiEndpoint(Output.of(disableExecuteApiEndpoint));
         }
+
         public Builder endpointConfiguration(@Nullable Output<RestApiEndpointConfigurationGetArgs> endpointConfiguration) {
-            this.endpointConfiguration = endpointConfiguration;
+            $.endpointConfiguration = endpointConfiguration;
             return this;
         }
-        public Builder endpointConfiguration(@Nullable RestApiEndpointConfigurationGetArgs endpointConfiguration) {
-            this.endpointConfiguration = Codegen.ofNullable(endpointConfiguration);
-            return this;
+
+        public Builder endpointConfiguration(RestApiEndpointConfigurationGetArgs endpointConfiguration) {
+            return endpointConfiguration(Output.of(endpointConfiguration));
         }
+
         public Builder executionArn(@Nullable Output<String> executionArn) {
-            this.executionArn = executionArn;
+            $.executionArn = executionArn;
             return this;
         }
-        public Builder executionArn(@Nullable String executionArn) {
-            this.executionArn = Codegen.ofNullable(executionArn);
-            return this;
+
+        public Builder executionArn(String executionArn) {
+            return executionArn(Output.of(executionArn));
         }
+
         public Builder minimumCompressionSize(@Nullable Output<Integer> minimumCompressionSize) {
-            this.minimumCompressionSize = minimumCompressionSize;
+            $.minimumCompressionSize = minimumCompressionSize;
             return this;
         }
-        public Builder minimumCompressionSize(@Nullable Integer minimumCompressionSize) {
-            this.minimumCompressionSize = Codegen.ofNullable(minimumCompressionSize);
-            return this;
+
+        public Builder minimumCompressionSize(Integer minimumCompressionSize) {
+            return minimumCompressionSize(Output.of(minimumCompressionSize));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder rootResourceId(@Nullable Output<String> rootResourceId) {
-            this.rootResourceId = rootResourceId;
+            $.rootResourceId = rootResourceId;
             return this;
         }
-        public Builder rootResourceId(@Nullable String rootResourceId) {
-            this.rootResourceId = Codegen.ofNullable(rootResourceId);
-            return this;
+
+        public Builder rootResourceId(String rootResourceId) {
+            return rootResourceId(Output.of(rootResourceId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public RestApiState build() {
-            return new RestApiState(apiKeySource, arn, binaryMediaTypes, body, createdDate, description, disableExecuteApiEndpoint, endpointConfiguration, executionArn, minimumCompressionSize, name, parameters, policy, rootResourceId, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public RestApiState build() {
+            return $;
         }
     }
+
 }

@@ -26,10 +26,10 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -48,10 +48,10 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imagePaths")
-      private final @Nullable List<String> imagePaths;
+    private @Nullable List<String> imagePaths;
 
-    public List<String> imagePaths() {
-        return this.imagePaths == null ? List.of() : this.imagePaths;
+    public Optional<List<String>> imagePaths() {
+        return Optional.ofNullable(this.imagePaths);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,Object> parameters;
+    private @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -81,97 +81,83 @@ public final class DetectorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="supportedResourceTypes")
-      private final @Nullable List<String> supportedResourceTypes;
+    private @Nullable List<String> supportedResourceTypes;
 
-    public List<String> supportedResourceTypes() {
-        return this.supportedResourceTypes == null ? List.of() : this.supportedResourceTypes;
+    public Optional<List<String>> supportedResourceTypes() {
+        return Optional.ofNullable(this.supportedResourceTypes);
     }
 
-    public DetectorResponse(
-        @Nullable String description,
-        String id,
-        @Nullable List<String> imagePaths,
-        @Nullable String name,
-        @Nullable Map<String,Object> parameters,
-        @Nullable List<String> supportedResourceTypes) {
-        this.description = description;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.imagePaths = imagePaths;
-        this.name = name;
-        this.parameters = parameters;
-        this.supportedResourceTypes = supportedResourceTypes;
-    }
+    private DetectorResponse() {}
 
-    private DetectorResponse() {
-        this.description = null;
-        this.id = null;
-        this.imagePaths = List.of();
-        this.name = null;
-        this.parameters = Map.of();
-        this.supportedResourceTypes = List.of();
+    private DetectorResponse(DetectorResponse $) {
+        this.description = $.description;
+        this.id = $.id;
+        this.imagePaths = $.imagePaths;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.supportedResourceTypes = $.supportedResourceTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String id;
-        private @Nullable List<String> imagePaths;
-        private @Nullable String name;
-        private @Nullable Map<String,Object> parameters;
-        private @Nullable List<String> supportedResourceTypes;
+        private DetectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorResponse();
         }
 
         public Builder(DetectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.imagePaths = defaults.imagePaths;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.supportedResourceTypes = defaults.supportedResourceTypes;
+            $ = new DetectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder imagePaths(@Nullable List<String> imagePaths) {
-            this.imagePaths = imagePaths;
+            $.imagePaths = imagePaths;
             return this;
         }
+
         public Builder imagePaths(String... imagePaths) {
             return imagePaths(List.of(imagePaths));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder supportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
-            this.supportedResourceTypes = supportedResourceTypes;
+            $.supportedResourceTypes = supportedResourceTypes;
             return this;
         }
+
         public Builder supportedResourceTypes(String... supportedResourceTypes) {
             return supportedResourceTypes(List.of(supportedResourceTypes));
-        }        public DetectorResponse build() {
-            return new DetectorResponse(description, id, imagePaths, name, parameters, supportedResourceTypes);
+        }
+
+        public DetectorResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

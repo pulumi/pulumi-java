@@ -51,10 +51,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="authenticationCertificates")
-      private final @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates;
+    private @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates;
 
-    public List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates() {
-        return this.authenticationCertificates == null ? List.of() : this.authenticationCertificates;
+    public Optional<List<ApplicationGatewayAuthenticationCertificateResponse>> authenticationCertificates() {
+        return Optional.ofNullable(this.authenticationCertificates);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autoscaleConfiguration")
-      private final @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration;
+    private @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration;
 
     public Optional<ApplicationGatewayAutoscaleConfigurationResponse> autoscaleConfiguration() {
-        return this.autoscaleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.autoscaleConfiguration);
+        return Optional.ofNullable(this.autoscaleConfiguration);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="backendAddressPools")
-      private final @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools;
+    private @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools;
 
-    public List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools() {
-        return this.backendAddressPools == null ? List.of() : this.backendAddressPools;
+    public Optional<List<ApplicationGatewayBackendAddressPoolResponse>> backendAddressPools() {
+        return Optional.ofNullable(this.backendAddressPools);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="backendHttpSettingsCollection")
-      private final @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection;
+    private @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection;
 
-    public List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection() {
-        return this.backendHttpSettingsCollection == null ? List.of() : this.backendHttpSettingsCollection;
+    public Optional<List<ApplicationGatewayBackendHttpSettingsResponse>> backendHttpSettingsCollection() {
+        return Optional.ofNullable(this.backendHttpSettingsCollection);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="customErrorConfigurations")
-      private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
+    private @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
-    public List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations() {
-        return this.customErrorConfigurations == null ? List.of() : this.customErrorConfigurations;
+    public Optional<List<ApplicationGatewayCustomErrorResponse>> customErrorConfigurations() {
+        return Optional.ofNullable(this.customErrorConfigurations);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enableFips")
-      private final @Nullable Boolean enableFips;
+    private @Nullable Boolean enableFips;
 
     public Optional<Boolean> enableFips() {
-        return this.enableFips == null ? Optional.empty() : Optional.ofNullable(this.enableFips);
+        return Optional.ofNullable(this.enableFips);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enableHttp2")
-      private final @Nullable Boolean enableHttp2;
+    private @Nullable Boolean enableHttp2;
 
     public Optional<Boolean> enableHttp2() {
-        return this.enableHttp2 == null ? Optional.empty() : Optional.ofNullable(this.enableHttp2);
+        return Optional.ofNullable(this.enableHttp2);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -139,10 +139,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="firewallPolicy")
-      private final @Nullable SubResourceResponse firewallPolicy;
+    private @Nullable SubResourceResponse firewallPolicy;
 
     public Optional<SubResourceResponse> firewallPolicy() {
-        return this.firewallPolicy == null ? Optional.empty() : Optional.ofNullable(this.firewallPolicy);
+        return Optional.ofNullable(this.firewallPolicy);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="forceFirewallPolicyAssociation")
-      private final @Nullable Boolean forceFirewallPolicyAssociation;
+    private @Nullable Boolean forceFirewallPolicyAssociation;
 
     public Optional<Boolean> forceFirewallPolicyAssociation() {
-        return this.forceFirewallPolicyAssociation == null ? Optional.empty() : Optional.ofNullable(this.forceFirewallPolicyAssociation);
+        return Optional.ofNullable(this.forceFirewallPolicyAssociation);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="frontendIPConfigurations")
-      private final @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations;
+    private @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations;
 
-    public List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations() {
-        return this.frontendIPConfigurations == null ? List.of() : this.frontendIPConfigurations;
+    public Optional<List<ApplicationGatewayFrontendIPConfigurationResponse>> frontendIPConfigurations() {
+        return Optional.ofNullable(this.frontendIPConfigurations);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="frontendPorts")
-      private final @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts;
+    private @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts;
 
-    public List<ApplicationGatewayFrontendPortResponse> frontendPorts() {
-        return this.frontendPorts == null ? List.of() : this.frontendPorts;
+    public Optional<List<ApplicationGatewayFrontendPortResponse>> frontendPorts() {
+        return Optional.ofNullable(this.frontendPorts);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="gatewayIPConfigurations")
-      private final @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations;
+    private @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations;
 
-    public List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations() {
-        return this.gatewayIPConfigurations == null ? List.of() : this.gatewayIPConfigurations;
+    public Optional<List<ApplicationGatewayIPConfigurationResponse>> gatewayIPConfigurations() {
+        return Optional.ofNullable(this.gatewayIPConfigurations);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="httpListeners")
-      private final @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners;
+    private @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners;
 
-    public List<ApplicationGatewayHttpListenerResponse> httpListeners() {
-        return this.httpListeners == null ? List.of() : this.httpListeners;
+    public Optional<List<ApplicationGatewayHttpListenerResponse>> httpListeners() {
+        return Optional.ofNullable(this.httpListeners);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="identity")
-      private final @Nullable ManagedServiceIdentityResponse identity;
+    private @Nullable ManagedServiceIdentityResponse identity;
 
     public Optional<ManagedServiceIdentityResponse> identity() {
-        return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -238,7 +238,7 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -249,7 +249,7 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="operationalState", required=true)
-      private final String operationalState;
+    private String operationalState;
 
     public String operationalState() {
         return this.operationalState;
@@ -260,7 +260,7 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateEndpointConnections", required=true)
-      private final List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections;
+    private List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
@@ -271,10 +271,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateLinkConfigurations")
-      private final @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations;
+    private @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations;
 
-    public List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations() {
-        return this.privateLinkConfigurations == null ? List.of() : this.privateLinkConfigurations;
+    public Optional<List<ApplicationGatewayPrivateLinkConfigurationResponse>> privateLinkConfigurations() {
+        return Optional.ofNullable(this.privateLinkConfigurations);
     }
 
     /**
@@ -282,10 +282,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="probes")
-      private final @Nullable List<ApplicationGatewayProbeResponse> probes;
+    private @Nullable List<ApplicationGatewayProbeResponse> probes;
 
-    public List<ApplicationGatewayProbeResponse> probes() {
-        return this.probes == null ? List.of() : this.probes;
+    public Optional<List<ApplicationGatewayProbeResponse>> probes() {
+        return Optional.ofNullable(this.probes);
     }
 
     /**
@@ -293,7 +293,7 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -304,10 +304,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="redirectConfigurations")
-      private final @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations;
+    private @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations;
 
-    public List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations() {
-        return this.redirectConfigurations == null ? List.of() : this.redirectConfigurations;
+    public Optional<List<ApplicationGatewayRedirectConfigurationResponse>> redirectConfigurations() {
+        return Optional.ofNullable(this.redirectConfigurations);
     }
 
     /**
@@ -315,10 +315,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="requestRoutingRules")
-      private final @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules;
+    private @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules;
 
-    public List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules() {
-        return this.requestRoutingRules == null ? List.of() : this.requestRoutingRules;
+    public Optional<List<ApplicationGatewayRequestRoutingRuleResponse>> requestRoutingRules() {
+        return Optional.ofNullable(this.requestRoutingRules);
     }
 
     /**
@@ -326,7 +326,7 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGuid", required=true)
-      private final String resourceGuid;
+    private String resourceGuid;
 
     public String resourceGuid() {
         return this.resourceGuid;
@@ -337,10 +337,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="rewriteRuleSets")
-      private final @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets;
+    private @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets;
 
-    public List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets() {
-        return this.rewriteRuleSets == null ? List.of() : this.rewriteRuleSets;
+    public Optional<List<ApplicationGatewayRewriteRuleSetResponse>> rewriteRuleSets() {
+        return Optional.ofNullable(this.rewriteRuleSets);
     }
 
     /**
@@ -348,10 +348,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sku")
-      private final @Nullable ApplicationGatewaySkuResponse sku;
+    private @Nullable ApplicationGatewaySkuResponse sku;
 
     public Optional<ApplicationGatewaySkuResponse> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -359,10 +359,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sslCertificates")
-      private final @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates;
+    private @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates;
 
-    public List<ApplicationGatewaySslCertificateResponse> sslCertificates() {
-        return this.sslCertificates == null ? List.of() : this.sslCertificates;
+    public Optional<List<ApplicationGatewaySslCertificateResponse>> sslCertificates() {
+        return Optional.ofNullable(this.sslCertificates);
     }
 
     /**
@@ -370,10 +370,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sslPolicy")
-      private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
+    private @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
 
     public Optional<ApplicationGatewaySslPolicyResponse> sslPolicy() {
-        return this.sslPolicy == null ? Optional.empty() : Optional.ofNullable(this.sslPolicy);
+        return Optional.ofNullable(this.sslPolicy);
     }
 
     /**
@@ -381,10 +381,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="sslProfiles")
-      private final @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles;
+    private @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles;
 
-    public List<ApplicationGatewaySslProfileResponse> sslProfiles() {
-        return this.sslProfiles == null ? List.of() : this.sslProfiles;
+    public Optional<List<ApplicationGatewaySslProfileResponse>> sslProfiles() {
+        return Optional.ofNullable(this.sslProfiles);
     }
 
     /**
@@ -392,10 +392,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -403,10 +403,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="trustedClientCertificates")
-      private final @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates;
+    private @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates;
 
-    public List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates() {
-        return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
+    public Optional<List<ApplicationGatewayTrustedClientCertificateResponse>> trustedClientCertificates() {
+        return Optional.ofNullable(this.trustedClientCertificates);
     }
 
     /**
@@ -414,10 +414,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="trustedRootCertificates")
-      private final @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates;
+    private @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates;
 
-    public List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates() {
-        return this.trustedRootCertificates == null ? List.of() : this.trustedRootCertificates;
+    public Optional<List<ApplicationGatewayTrustedRootCertificateResponse>> trustedRootCertificates() {
+        return Optional.ofNullable(this.trustedRootCertificates);
     }
 
     /**
@@ -425,7 +425,7 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -436,10 +436,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="urlPathMaps")
-      private final @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps;
+    private @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps;
 
-    public List<ApplicationGatewayUrlPathMapResponse> urlPathMaps() {
-        return this.urlPathMaps == null ? List.of() : this.urlPathMaps;
+    public Optional<List<ApplicationGatewayUrlPathMapResponse>> urlPathMaps() {
+        return Optional.ofNullable(this.urlPathMaps);
     }
 
     /**
@@ -447,10 +447,10 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="webApplicationFirewallConfiguration")
-      private final @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration;
+    private @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration;
 
     public Optional<ApplicationGatewayWebApplicationFirewallConfigurationResponse> webApplicationFirewallConfiguration() {
-        return this.webApplicationFirewallConfiguration == null ? Optional.empty() : Optional.ofNullable(this.webApplicationFirewallConfiguration);
+        return Optional.ofNullable(this.webApplicationFirewallConfiguration);
     }
 
     /**
@@ -458,439 +458,353 @@ public final class ApplicationGatewayResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="zones")
-      private final @Nullable List<String> zones;
+    private @Nullable List<String> zones;
 
-    public List<String> zones() {
-        return this.zones == null ? List.of() : this.zones;
+    public Optional<List<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public ApplicationGatewayResponse(
-        @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates,
-        @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration,
-        @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools,
-        @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection,
-        @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations,
-        @Nullable Boolean enableFips,
-        @Nullable Boolean enableHttp2,
-        String etag,
-        @Nullable SubResourceResponse firewallPolicy,
-        @Nullable Boolean forceFirewallPolicyAssociation,
-        @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations,
-        @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts,
-        @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations,
-        @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        String operationalState,
-        List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations,
-        @Nullable List<ApplicationGatewayProbeResponse> probes,
-        String provisioningState,
-        @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations,
-        @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules,
-        String resourceGuid,
-        @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets,
-        @Nullable ApplicationGatewaySkuResponse sku,
-        @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates,
-        @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
-        @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles,
-        @Nullable Map<String,String> tags,
-        @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates,
-        @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates,
-        String type,
-        @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps,
-        @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration,
-        @Nullable List<String> zones) {
-        this.authenticationCertificates = authenticationCertificates;
-        this.autoscaleConfiguration = autoscaleConfiguration;
-        this.backendAddressPools = backendAddressPools;
-        this.backendHttpSettingsCollection = backendHttpSettingsCollection;
-        this.customErrorConfigurations = customErrorConfigurations;
-        this.enableFips = enableFips;
-        this.enableHttp2 = enableHttp2;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.firewallPolicy = firewallPolicy;
-        this.forceFirewallPolicyAssociation = forceFirewallPolicyAssociation;
-        this.frontendIPConfigurations = frontendIPConfigurations;
-        this.frontendPorts = frontendPorts;
-        this.gatewayIPConfigurations = gatewayIPConfigurations;
-        this.httpListeners = httpListeners;
-        this.id = id;
-        this.identity = identity;
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.operationalState = Objects.requireNonNull(operationalState, "expected parameter 'operationalState' to be non-null");
-        this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
-        this.privateLinkConfigurations = privateLinkConfigurations;
-        this.probes = probes;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.redirectConfigurations = redirectConfigurations;
-        this.requestRoutingRules = requestRoutingRules;
-        this.resourceGuid = Objects.requireNonNull(resourceGuid, "expected parameter 'resourceGuid' to be non-null");
-        this.rewriteRuleSets = rewriteRuleSets;
-        this.sku = sku;
-        this.sslCertificates = sslCertificates;
-        this.sslPolicy = sslPolicy;
-        this.sslProfiles = sslProfiles;
-        this.tags = tags;
-        this.trustedClientCertificates = trustedClientCertificates;
-        this.trustedRootCertificates = trustedRootCertificates;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.urlPathMaps = urlPathMaps;
-        this.webApplicationFirewallConfiguration = webApplicationFirewallConfiguration;
-        this.zones = zones;
-    }
+    private ApplicationGatewayResponse() {}
 
-    private ApplicationGatewayResponse() {
-        this.authenticationCertificates = List.of();
-        this.autoscaleConfiguration = null;
-        this.backendAddressPools = List.of();
-        this.backendHttpSettingsCollection = List.of();
-        this.customErrorConfigurations = List.of();
-        this.enableFips = null;
-        this.enableHttp2 = null;
-        this.etag = null;
-        this.firewallPolicy = null;
-        this.forceFirewallPolicyAssociation = null;
-        this.frontendIPConfigurations = List.of();
-        this.frontendPorts = List.of();
-        this.gatewayIPConfigurations = List.of();
-        this.httpListeners = List.of();
-        this.id = null;
-        this.identity = null;
-        this.location = null;
-        this.name = null;
-        this.operationalState = null;
-        this.privateEndpointConnections = List.of();
-        this.privateLinkConfigurations = List.of();
-        this.probes = List.of();
-        this.provisioningState = null;
-        this.redirectConfigurations = List.of();
-        this.requestRoutingRules = List.of();
-        this.resourceGuid = null;
-        this.rewriteRuleSets = List.of();
-        this.sku = null;
-        this.sslCertificates = List.of();
-        this.sslPolicy = null;
-        this.sslProfiles = List.of();
-        this.tags = Map.of();
-        this.trustedClientCertificates = List.of();
-        this.trustedRootCertificates = List.of();
-        this.type = null;
-        this.urlPathMaps = List.of();
-        this.webApplicationFirewallConfiguration = null;
-        this.zones = List.of();
+    private ApplicationGatewayResponse(ApplicationGatewayResponse $) {
+        this.authenticationCertificates = $.authenticationCertificates;
+        this.autoscaleConfiguration = $.autoscaleConfiguration;
+        this.backendAddressPools = $.backendAddressPools;
+        this.backendHttpSettingsCollection = $.backendHttpSettingsCollection;
+        this.customErrorConfigurations = $.customErrorConfigurations;
+        this.enableFips = $.enableFips;
+        this.enableHttp2 = $.enableHttp2;
+        this.etag = $.etag;
+        this.firewallPolicy = $.firewallPolicy;
+        this.forceFirewallPolicyAssociation = $.forceFirewallPolicyAssociation;
+        this.frontendIPConfigurations = $.frontendIPConfigurations;
+        this.frontendPorts = $.frontendPorts;
+        this.gatewayIPConfigurations = $.gatewayIPConfigurations;
+        this.httpListeners = $.httpListeners;
+        this.id = $.id;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.name = $.name;
+        this.operationalState = $.operationalState;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.privateLinkConfigurations = $.privateLinkConfigurations;
+        this.probes = $.probes;
+        this.provisioningState = $.provisioningState;
+        this.redirectConfigurations = $.redirectConfigurations;
+        this.requestRoutingRules = $.requestRoutingRules;
+        this.resourceGuid = $.resourceGuid;
+        this.rewriteRuleSets = $.rewriteRuleSets;
+        this.sku = $.sku;
+        this.sslCertificates = $.sslCertificates;
+        this.sslPolicy = $.sslPolicy;
+        this.sslProfiles = $.sslProfiles;
+        this.tags = $.tags;
+        this.trustedClientCertificates = $.trustedClientCertificates;
+        this.trustedRootCertificates = $.trustedRootCertificates;
+        this.type = $.type;
+        this.urlPathMaps = $.urlPathMaps;
+        this.webApplicationFirewallConfiguration = $.webApplicationFirewallConfiguration;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates;
-        private @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration;
-        private @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools;
-        private @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection;
-        private @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
-        private @Nullable Boolean enableFips;
-        private @Nullable Boolean enableHttp2;
-        private String etag;
-        private @Nullable SubResourceResponse firewallPolicy;
-        private @Nullable Boolean forceFirewallPolicyAssociation;
-        private @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations;
-        private @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts;
-        private @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations;
-        private @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners;
-        private @Nullable String id;
-        private @Nullable ManagedServiceIdentityResponse identity;
-        private @Nullable String location;
-        private String name;
-        private String operationalState;
-        private List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections;
-        private @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations;
-        private @Nullable List<ApplicationGatewayProbeResponse> probes;
-        private String provisioningState;
-        private @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations;
-        private @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules;
-        private String resourceGuid;
-        private @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets;
-        private @Nullable ApplicationGatewaySkuResponse sku;
-        private @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates;
-        private @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
-        private @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles;
-        private @Nullable Map<String,String> tags;
-        private @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates;
-        private @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates;
-        private String type;
-        private @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps;
-        private @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration;
-        private @Nullable List<String> zones;
+        private ApplicationGatewayResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayResponse();
         }
 
         public Builder(ApplicationGatewayResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationCertificates = defaults.authenticationCertificates;
-    	      this.autoscaleConfiguration = defaults.autoscaleConfiguration;
-    	      this.backendAddressPools = defaults.backendAddressPools;
-    	      this.backendHttpSettingsCollection = defaults.backendHttpSettingsCollection;
-    	      this.customErrorConfigurations = defaults.customErrorConfigurations;
-    	      this.enableFips = defaults.enableFips;
-    	      this.enableHttp2 = defaults.enableHttp2;
-    	      this.etag = defaults.etag;
-    	      this.firewallPolicy = defaults.firewallPolicy;
-    	      this.forceFirewallPolicyAssociation = defaults.forceFirewallPolicyAssociation;
-    	      this.frontendIPConfigurations = defaults.frontendIPConfigurations;
-    	      this.frontendPorts = defaults.frontendPorts;
-    	      this.gatewayIPConfigurations = defaults.gatewayIPConfigurations;
-    	      this.httpListeners = defaults.httpListeners;
-    	      this.id = defaults.id;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.operationalState = defaults.operationalState;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.privateLinkConfigurations = defaults.privateLinkConfigurations;
-    	      this.probes = defaults.probes;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.redirectConfigurations = defaults.redirectConfigurations;
-    	      this.requestRoutingRules = defaults.requestRoutingRules;
-    	      this.resourceGuid = defaults.resourceGuid;
-    	      this.rewriteRuleSets = defaults.rewriteRuleSets;
-    	      this.sku = defaults.sku;
-    	      this.sslCertificates = defaults.sslCertificates;
-    	      this.sslPolicy = defaults.sslPolicy;
-    	      this.sslProfiles = defaults.sslProfiles;
-    	      this.tags = defaults.tags;
-    	      this.trustedClientCertificates = defaults.trustedClientCertificates;
-    	      this.trustedRootCertificates = defaults.trustedRootCertificates;
-    	      this.type = defaults.type;
-    	      this.urlPathMaps = defaults.urlPathMaps;
-    	      this.webApplicationFirewallConfiguration = defaults.webApplicationFirewallConfiguration;
-    	      this.zones = defaults.zones;
+            $ = new ApplicationGatewayResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationCertificates(@Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates) {
-            this.authenticationCertificates = authenticationCertificates;
+            $.authenticationCertificates = authenticationCertificates;
             return this;
         }
+
         public Builder authenticationCertificates(ApplicationGatewayAuthenticationCertificateResponse... authenticationCertificates) {
             return authenticationCertificates(List.of(authenticationCertificates));
         }
+
         public Builder autoscaleConfiguration(@Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration) {
-            this.autoscaleConfiguration = autoscaleConfiguration;
+            $.autoscaleConfiguration = autoscaleConfiguration;
             return this;
         }
+
         public Builder backendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools) {
-            this.backendAddressPools = backendAddressPools;
+            $.backendAddressPools = backendAddressPools;
             return this;
         }
+
         public Builder backendAddressPools(ApplicationGatewayBackendAddressPoolResponse... backendAddressPools) {
             return backendAddressPools(List.of(backendAddressPools));
         }
+
         public Builder backendHttpSettingsCollection(@Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection) {
-            this.backendHttpSettingsCollection = backendHttpSettingsCollection;
+            $.backendHttpSettingsCollection = backendHttpSettingsCollection;
             return this;
         }
+
         public Builder backendHttpSettingsCollection(ApplicationGatewayBackendHttpSettingsResponse... backendHttpSettingsCollection) {
             return backendHttpSettingsCollection(List.of(backendHttpSettingsCollection));
         }
+
         public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations) {
-            this.customErrorConfigurations = customErrorConfigurations;
+            $.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
+
         public Builder customErrorConfigurations(ApplicationGatewayCustomErrorResponse... customErrorConfigurations) {
             return customErrorConfigurations(List.of(customErrorConfigurations));
         }
+
         public Builder enableFips(@Nullable Boolean enableFips) {
-            this.enableFips = enableFips;
+            $.enableFips = enableFips;
             return this;
         }
+
         public Builder enableHttp2(@Nullable Boolean enableHttp2) {
-            this.enableHttp2 = enableHttp2;
+            $.enableHttp2 = enableHttp2;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder firewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
-            this.firewallPolicy = firewallPolicy;
+            $.firewallPolicy = firewallPolicy;
             return this;
         }
+
         public Builder forceFirewallPolicyAssociation(@Nullable Boolean forceFirewallPolicyAssociation) {
-            this.forceFirewallPolicyAssociation = forceFirewallPolicyAssociation;
+            $.forceFirewallPolicyAssociation = forceFirewallPolicyAssociation;
             return this;
         }
+
         public Builder frontendIPConfigurations(@Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations) {
-            this.frontendIPConfigurations = frontendIPConfigurations;
+            $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
+
         public Builder frontendIPConfigurations(ApplicationGatewayFrontendIPConfigurationResponse... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }
+
         public Builder frontendPorts(@Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts) {
-            this.frontendPorts = frontendPorts;
+            $.frontendPorts = frontendPorts;
             return this;
         }
+
         public Builder frontendPorts(ApplicationGatewayFrontendPortResponse... frontendPorts) {
             return frontendPorts(List.of(frontendPorts));
         }
+
         public Builder gatewayIPConfigurations(@Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations) {
-            this.gatewayIPConfigurations = gatewayIPConfigurations;
+            $.gatewayIPConfigurations = gatewayIPConfigurations;
             return this;
         }
+
         public Builder gatewayIPConfigurations(ApplicationGatewayIPConfigurationResponse... gatewayIPConfigurations) {
             return gatewayIPConfigurations(List.of(gatewayIPConfigurations));
         }
+
         public Builder httpListeners(@Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners) {
-            this.httpListeners = httpListeners;
+            $.httpListeners = httpListeners;
             return this;
         }
+
         public Builder httpListeners(ApplicationGatewayHttpListenerResponse... httpListeners) {
             return httpListeners(List.of(httpListeners));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder operationalState(String operationalState) {
-            this.operationalState = Objects.requireNonNull(operationalState);
+            $.operationalState = operationalState;
             return this;
         }
+
         public Builder privateEndpointConnections(List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(ApplicationGatewayPrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder privateLinkConfigurations(@Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations) {
-            this.privateLinkConfigurations = privateLinkConfigurations;
+            $.privateLinkConfigurations = privateLinkConfigurations;
             return this;
         }
+
         public Builder privateLinkConfigurations(ApplicationGatewayPrivateLinkConfigurationResponse... privateLinkConfigurations) {
             return privateLinkConfigurations(List.of(privateLinkConfigurations));
         }
+
         public Builder probes(@Nullable List<ApplicationGatewayProbeResponse> probes) {
-            this.probes = probes;
+            $.probes = probes;
             return this;
         }
+
         public Builder probes(ApplicationGatewayProbeResponse... probes) {
             return probes(List.of(probes));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder redirectConfigurations(@Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations) {
-            this.redirectConfigurations = redirectConfigurations;
+            $.redirectConfigurations = redirectConfigurations;
             return this;
         }
+
         public Builder redirectConfigurations(ApplicationGatewayRedirectConfigurationResponse... redirectConfigurations) {
             return redirectConfigurations(List.of(redirectConfigurations));
         }
+
         public Builder requestRoutingRules(@Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules) {
-            this.requestRoutingRules = requestRoutingRules;
+            $.requestRoutingRules = requestRoutingRules;
             return this;
         }
+
         public Builder requestRoutingRules(ApplicationGatewayRequestRoutingRuleResponse... requestRoutingRules) {
             return requestRoutingRules(List.of(requestRoutingRules));
         }
+
         public Builder resourceGuid(String resourceGuid) {
-            this.resourceGuid = Objects.requireNonNull(resourceGuid);
+            $.resourceGuid = resourceGuid;
             return this;
         }
+
         public Builder rewriteRuleSets(@Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets) {
-            this.rewriteRuleSets = rewriteRuleSets;
+            $.rewriteRuleSets = rewriteRuleSets;
             return this;
         }
+
         public Builder rewriteRuleSets(ApplicationGatewayRewriteRuleSetResponse... rewriteRuleSets) {
             return rewriteRuleSets(List.of(rewriteRuleSets));
         }
+
         public Builder sku(@Nullable ApplicationGatewaySkuResponse sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder sslCertificates(@Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates) {
-            this.sslCertificates = sslCertificates;
+            $.sslCertificates = sslCertificates;
             return this;
         }
+
         public Builder sslCertificates(ApplicationGatewaySslCertificateResponse... sslCertificates) {
             return sslCertificates(List.of(sslCertificates));
         }
+
         public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyResponse sslPolicy) {
-            this.sslPolicy = sslPolicy;
+            $.sslPolicy = sslPolicy;
             return this;
         }
+
         public Builder sslProfiles(@Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles) {
-            this.sslProfiles = sslProfiles;
+            $.sslProfiles = sslProfiles;
             return this;
         }
+
         public Builder sslProfiles(ApplicationGatewaySslProfileResponse... sslProfiles) {
             return sslProfiles(List.of(sslProfiles));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder trustedClientCertificates(@Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates) {
-            this.trustedClientCertificates = trustedClientCertificates;
+            $.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
+
         public Builder trustedClientCertificates(ApplicationGatewayTrustedClientCertificateResponse... trustedClientCertificates) {
             return trustedClientCertificates(List.of(trustedClientCertificates));
         }
+
         public Builder trustedRootCertificates(@Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates) {
-            this.trustedRootCertificates = trustedRootCertificates;
+            $.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
+
         public Builder trustedRootCertificates(ApplicationGatewayTrustedRootCertificateResponse... trustedRootCertificates) {
             return trustedRootCertificates(List.of(trustedRootCertificates));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder urlPathMaps(@Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps) {
-            this.urlPathMaps = urlPathMaps;
+            $.urlPathMaps = urlPathMaps;
             return this;
         }
+
         public Builder urlPathMaps(ApplicationGatewayUrlPathMapResponse... urlPathMaps) {
             return urlPathMaps(List.of(urlPathMaps));
         }
+
         public Builder webApplicationFirewallConfiguration(@Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration) {
-            this.webApplicationFirewallConfiguration = webApplicationFirewallConfiguration;
+            $.webApplicationFirewallConfiguration = webApplicationFirewallConfiguration;
             return this;
         }
+
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public ApplicationGatewayResponse build() {
-            return new ApplicationGatewayResponse(authenticationCertificates, autoscaleConfiguration, backendAddressPools, backendHttpSettingsCollection, customErrorConfigurations, enableFips, enableHttp2, etag, firewallPolicy, forceFirewallPolicyAssociation, frontendIPConfigurations, frontendPorts, gatewayIPConfigurations, httpListeners, id, identity, location, name, operationalState, privateEndpointConnections, privateLinkConfigurations, probes, provisioningState, redirectConfigurations, requestRoutingRules, resourceGuid, rewriteRuleSets, sku, sslCertificates, sslPolicy, sslProfiles, tags, trustedClientCertificates, trustedRootCertificates, type, urlPathMaps, webApplicationFirewallConfiguration, zones);
+        }
+
+        public ApplicationGatewayResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.operationalState = Objects.requireNonNull($.operationalState, "expected parameter 'operationalState' to be non-null");
+            $.privateEndpointConnections = Objects.requireNonNull($.privateEndpointConnections, "expected parameter 'privateEndpointConnections' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuid = Objects.requireNonNull($.resourceGuid, "expected parameter 'resourceGuid' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

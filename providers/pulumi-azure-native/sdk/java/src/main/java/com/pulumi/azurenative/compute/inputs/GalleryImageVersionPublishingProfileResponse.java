@@ -27,10 +27,10 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
      * 
      */
     @Import(name="endOfLifeDate")
-      private final @Nullable String endOfLifeDate;
+    private @Nullable String endOfLifeDate;
 
     public Optional<String> endOfLifeDate() {
-        return this.endOfLifeDate == null ? Optional.empty() : Optional.ofNullable(this.endOfLifeDate);
+        return Optional.ofNullable(this.endOfLifeDate);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
      * 
      */
     @Import(name="excludeFromLatest")
-      private final @Nullable Boolean excludeFromLatest;
+    private @Nullable Boolean excludeFromLatest;
 
     public Optional<Boolean> excludeFromLatest() {
-        return this.excludeFromLatest == null ? Optional.empty() : Optional.ofNullable(this.excludeFromLatest);
+        return Optional.ofNullable(this.excludeFromLatest);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
      * 
      */
     @Import(name="publishedDate", required=true)
-      private final String publishedDate;
+    private String publishedDate;
 
     public String publishedDate() {
         return this.publishedDate;
@@ -60,10 +60,10 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
      * 
      */
     @Import(name="replicaCount")
-      private final @Nullable Integer replicaCount;
+    private @Nullable Integer replicaCount;
 
     public Optional<Integer> replicaCount() {
-        return this.replicaCount == null ? Optional.empty() : Optional.ofNullable(this.replicaCount);
+        return Optional.ofNullable(this.replicaCount);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable String storageAccountType;
+    private @Nullable String storageAccountType;
 
     public Optional<String> storageAccountType() {
-        return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
+        return Optional.ofNullable(this.storageAccountType);
     }
 
     /**
@@ -82,94 +82,79 @@ public final class GalleryImageVersionPublishingProfileResponse extends com.pulu
      * 
      */
     @Import(name="targetRegions")
-      private final @Nullable List<TargetRegionResponse> targetRegions;
+    private @Nullable List<TargetRegionResponse> targetRegions;
 
-    public List<TargetRegionResponse> targetRegions() {
-        return this.targetRegions == null ? List.of() : this.targetRegions;
+    public Optional<List<TargetRegionResponse>> targetRegions() {
+        return Optional.ofNullable(this.targetRegions);
     }
 
-    public GalleryImageVersionPublishingProfileResponse(
-        @Nullable String endOfLifeDate,
-        @Nullable Boolean excludeFromLatest,
-        String publishedDate,
-        @Nullable Integer replicaCount,
-        @Nullable String storageAccountType,
-        @Nullable List<TargetRegionResponse> targetRegions) {
-        this.endOfLifeDate = endOfLifeDate;
-        this.excludeFromLatest = excludeFromLatest;
-        this.publishedDate = Objects.requireNonNull(publishedDate, "expected parameter 'publishedDate' to be non-null");
-        this.replicaCount = replicaCount;
-        this.storageAccountType = storageAccountType;
-        this.targetRegions = targetRegions;
-    }
+    private GalleryImageVersionPublishingProfileResponse() {}
 
-    private GalleryImageVersionPublishingProfileResponse() {
-        this.endOfLifeDate = null;
-        this.excludeFromLatest = null;
-        this.publishedDate = null;
-        this.replicaCount = null;
-        this.storageAccountType = null;
-        this.targetRegions = List.of();
+    private GalleryImageVersionPublishingProfileResponse(GalleryImageVersionPublishingProfileResponse $) {
+        this.endOfLifeDate = $.endOfLifeDate;
+        this.excludeFromLatest = $.excludeFromLatest;
+        this.publishedDate = $.publishedDate;
+        this.replicaCount = $.replicaCount;
+        this.storageAccountType = $.storageAccountType;
+        this.targetRegions = $.targetRegions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryImageVersionPublishingProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endOfLifeDate;
-        private @Nullable Boolean excludeFromLatest;
-        private String publishedDate;
-        private @Nullable Integer replicaCount;
-        private @Nullable String storageAccountType;
-        private @Nullable List<TargetRegionResponse> targetRegions;
+        private GalleryImageVersionPublishingProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryImageVersionPublishingProfileResponse();
         }
 
         public Builder(GalleryImageVersionPublishingProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endOfLifeDate = defaults.endOfLifeDate;
-    	      this.excludeFromLatest = defaults.excludeFromLatest;
-    	      this.publishedDate = defaults.publishedDate;
-    	      this.replicaCount = defaults.replicaCount;
-    	      this.storageAccountType = defaults.storageAccountType;
-    	      this.targetRegions = defaults.targetRegions;
+            $ = new GalleryImageVersionPublishingProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
-            this.endOfLifeDate = endOfLifeDate;
+            $.endOfLifeDate = endOfLifeDate;
             return this;
         }
+
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
-            this.excludeFromLatest = excludeFromLatest;
+            $.excludeFromLatest = excludeFromLatest;
             return this;
         }
+
         public Builder publishedDate(String publishedDate) {
-            this.publishedDate = Objects.requireNonNull(publishedDate);
+            $.publishedDate = publishedDate;
             return this;
         }
+
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = replicaCount;
+            $.replicaCount = replicaCount;
             return this;
         }
+
         public Builder storageAccountType(@Nullable String storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
+
         public Builder targetRegions(@Nullable List<TargetRegionResponse> targetRegions) {
-            this.targetRegions = targetRegions;
+            $.targetRegions = targetRegions;
             return this;
         }
+
         public Builder targetRegions(TargetRegionResponse... targetRegions) {
             return targetRegions(List.of(targetRegions));
-        }        public GalleryImageVersionPublishingProfileResponse build() {
-            return new GalleryImageVersionPublishingProfileResponse(endOfLifeDate, excludeFromLatest, publishedDate, replicaCount, storageAccountType, targetRegions);
+        }
+
+        public GalleryImageVersionPublishingProfileResponse build() {
+            $.publishedDate = Objects.requireNonNull($.publishedDate, "expected parameter 'publishedDate' to be non-null");
+            return $;
         }
     }
+
 }

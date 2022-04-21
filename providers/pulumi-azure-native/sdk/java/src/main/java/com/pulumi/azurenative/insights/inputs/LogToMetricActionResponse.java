@@ -24,7 +24,7 @@ public final class LogToMetricActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="criteria", required=true)
-      private final List<CriteriaResponse> criteria;
+    private List<CriteriaResponse> criteria;
 
     public List<CriteriaResponse> criteria() {
         return this.criteria;
@@ -36,58 +36,56 @@ public final class LogToMetricActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public LogToMetricActionResponse(
-        List<CriteriaResponse> criteria,
-        String odataType) {
-        this.criteria = Objects.requireNonNull(criteria, "expected parameter 'criteria' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private LogToMetricActionResponse() {}
 
-    private LogToMetricActionResponse() {
-        this.criteria = List.of();
-        this.odataType = null;
+    private LogToMetricActionResponse(LogToMetricActionResponse $) {
+        this.criteria = $.criteria;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogToMetricActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<CriteriaResponse> criteria;
-        private String odataType;
+        private LogToMetricActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogToMetricActionResponse();
         }
 
         public Builder(LogToMetricActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.criteria = defaults.criteria;
-    	      this.odataType = defaults.odataType;
+            $ = new LogToMetricActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder criteria(List<CriteriaResponse> criteria) {
-            this.criteria = Objects.requireNonNull(criteria);
+            $.criteria = criteria;
             return this;
         }
+
         public Builder criteria(CriteriaResponse... criteria) {
             return criteria(List.of(criteria));
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public LogToMetricActionResponse build() {
-            return new LogToMetricActionResponse(criteria, odataType);
+        }
+
+        public LogToMetricActionResponse build() {
+            $.criteria = Objects.requireNonNull($.criteria, "expected parameter 'criteria' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

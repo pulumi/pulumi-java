@@ -7,10 +7,10 @@ import com.pulumi.awsnative.emrcontainers.inputs.VirtualClusterContainerProvider
 import com.pulumi.awsnative.emrcontainers.inputs.VirtualClusterTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="containerProvider", required=true)
-      private final Output<VirtualClusterContainerProviderArgs> containerProvider;
+    private Output<VirtualClusterContainerProviderArgs> containerProvider;
 
     public Output<VirtualClusterContainerProviderArgs> containerProvider() {
         return this.containerProvider;
@@ -34,10 +34,10 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,79 +45,73 @@ public final class VirtualClusterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<VirtualClusterTagArgs>> tags;
+    private @Nullable Output<List<VirtualClusterTagArgs>> tags;
 
-    public Output<List<VirtualClusterTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<VirtualClusterTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public VirtualClusterArgs(
-        Output<VirtualClusterContainerProviderArgs> containerProvider,
-        @Nullable Output<String> name,
-        @Nullable Output<List<VirtualClusterTagArgs>> tags) {
-        this.containerProvider = Objects.requireNonNull(containerProvider, "expected parameter 'containerProvider' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private VirtualClusterArgs() {}
 
-    private VirtualClusterArgs() {
-        this.containerProvider = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private VirtualClusterArgs(VirtualClusterArgs $) {
+        this.containerProvider = $.containerProvider;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VirtualClusterContainerProviderArgs> containerProvider;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<VirtualClusterTagArgs>> tags;
+        private VirtualClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualClusterArgs();
         }
 
         public Builder(VirtualClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerProvider = defaults.containerProvider;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new VirtualClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerProvider(Output<VirtualClusterContainerProviderArgs> containerProvider) {
-            this.containerProvider = Objects.requireNonNull(containerProvider);
+            $.containerProvider = containerProvider;
             return this;
         }
+
         public Builder containerProvider(VirtualClusterContainerProviderArgs containerProvider) {
-            this.containerProvider = Output.of(Objects.requireNonNull(containerProvider));
-            return this;
+            return containerProvider(Output.of(containerProvider));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<VirtualClusterTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<VirtualClusterTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<VirtualClusterTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(VirtualClusterTagArgs... tags) {
             return tags(List.of(tags));
-        }        public VirtualClusterArgs build() {
-            return new VirtualClusterArgs(containerProvider, name, tags);
+        }
+
+        public VirtualClusterArgs build() {
+            $.containerProvider = Objects.requireNonNull($.containerProvider, "expected parameter 'containerProvider' to be non-null");
+            return $;
         }
     }
+
 }

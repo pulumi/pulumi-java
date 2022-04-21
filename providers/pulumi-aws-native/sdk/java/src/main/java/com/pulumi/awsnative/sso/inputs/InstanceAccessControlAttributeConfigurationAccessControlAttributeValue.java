@@ -14,48 +14,49 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     public static final InstanceAccessControlAttributeConfigurationAccessControlAttributeValue Empty = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValue();
 
     @Import(name="source", required=true)
-      private final List<String> source;
+    private List<String> source;
 
     public List<String> source() {
         return this.source;
     }
 
-    public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(List<String> source) {
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue() {}
 
-    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue() {
-        this.source = List.of();
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(InstanceAccessControlAttributeConfigurationAccessControlAttributeValue $) {
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAccessControlAttributeConfigurationAccessControlAttributeValue defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> source;
+        private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValue();
         }
 
         public Builder(InstanceAccessControlAttributeConfigurationAccessControlAttributeValue defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
+            $ = new InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(Objects.requireNonNull(defaults));
         }
 
         public Builder source(List<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String... source) {
             return source(List.of(source));
-        }        public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue build() {
-            return new InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(source);
+        }
+
+        public InstanceAccessControlAttributeConfigurationAccessControlAttributeValue build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

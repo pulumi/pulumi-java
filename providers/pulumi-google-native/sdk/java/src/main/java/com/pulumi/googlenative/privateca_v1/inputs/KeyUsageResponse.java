@@ -24,7 +24,7 @@ public final class KeyUsageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="baseKeyUsage", required=true)
-      private final KeyUsageOptionsResponse baseKeyUsage;
+    private KeyUsageOptionsResponse baseKeyUsage;
 
     public KeyUsageOptionsResponse baseKeyUsage() {
         return this.baseKeyUsage;
@@ -35,7 +35,7 @@ public final class KeyUsageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extendedKeyUsage", required=true)
-      private final ExtendedKeyUsageOptionsResponse extendedKeyUsage;
+    private ExtendedKeyUsageOptionsResponse extendedKeyUsage;
 
     public ExtendedKeyUsageOptionsResponse extendedKeyUsage() {
         return this.extendedKeyUsage;
@@ -46,67 +46,63 @@ public final class KeyUsageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="unknownExtendedKeyUsages", required=true)
-      private final List<ObjectIdResponse> unknownExtendedKeyUsages;
+    private List<ObjectIdResponse> unknownExtendedKeyUsages;
 
     public List<ObjectIdResponse> unknownExtendedKeyUsages() {
         return this.unknownExtendedKeyUsages;
     }
 
-    public KeyUsageResponse(
-        KeyUsageOptionsResponse baseKeyUsage,
-        ExtendedKeyUsageOptionsResponse extendedKeyUsage,
-        List<ObjectIdResponse> unknownExtendedKeyUsages) {
-        this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage, "expected parameter 'baseKeyUsage' to be non-null");
-        this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage, "expected parameter 'extendedKeyUsage' to be non-null");
-        this.unknownExtendedKeyUsages = Objects.requireNonNull(unknownExtendedKeyUsages, "expected parameter 'unknownExtendedKeyUsages' to be non-null");
-    }
+    private KeyUsageResponse() {}
 
-    private KeyUsageResponse() {
-        this.baseKeyUsage = null;
-        this.extendedKeyUsage = null;
-        this.unknownExtendedKeyUsages = List.of();
+    private KeyUsageResponse(KeyUsageResponse $) {
+        this.baseKeyUsage = $.baseKeyUsage;
+        this.extendedKeyUsage = $.extendedKeyUsage;
+        this.unknownExtendedKeyUsages = $.unknownExtendedKeyUsages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyUsageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private KeyUsageOptionsResponse baseKeyUsage;
-        private ExtendedKeyUsageOptionsResponse extendedKeyUsage;
-        private List<ObjectIdResponse> unknownExtendedKeyUsages;
+        private KeyUsageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyUsageResponse();
         }
 
         public Builder(KeyUsageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseKeyUsage = defaults.baseKeyUsage;
-    	      this.extendedKeyUsage = defaults.extendedKeyUsage;
-    	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
+            $ = new KeyUsageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseKeyUsage(KeyUsageOptionsResponse baseKeyUsage) {
-            this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
+            $.baseKeyUsage = baseKeyUsage;
             return this;
         }
+
         public Builder extendedKeyUsage(ExtendedKeyUsageOptionsResponse extendedKeyUsage) {
-            this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
+            $.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
+
         public Builder unknownExtendedKeyUsages(List<ObjectIdResponse> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = Objects.requireNonNull(unknownExtendedKeyUsages);
+            $.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
+
         public Builder unknownExtendedKeyUsages(ObjectIdResponse... unknownExtendedKeyUsages) {
             return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
-        }        public KeyUsageResponse build() {
-            return new KeyUsageResponse(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
+        }
+
+        public KeyUsageResponse build() {
+            $.baseKeyUsage = Objects.requireNonNull($.baseKeyUsage, "expected parameter 'baseKeyUsage' to be non-null");
+            $.extendedKeyUsage = Objects.requireNonNull($.extendedKeyUsage, "expected parameter 'extendedKeyUsage' to be non-null");
+            $.unknownExtendedKeyUsages = Objects.requireNonNull($.unknownExtendedKeyUsages, "expected parameter 'unknownExtendedKeyUsages' to be non-null");
+            return $;
         }
     }
+
 }

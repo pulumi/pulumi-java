@@ -23,10 +23,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="reasonForLogsStatus")
-      private final @Nullable String reasonForLogsStatus;
+    private @Nullable String reasonForLogsStatus;
 
     public Optional<String> reasonForLogsStatus() {
-        return this.reasonForLogsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForLogsStatus);
+        return Optional.ofNullable(this.reasonForLogsStatus);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class MonitoredResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sendingLogs")
-      private final @Nullable String sendingLogs;
+    private @Nullable String sendingLogs;
 
     public Optional<String> sendingLogs() {
-        return this.sendingLogs == null ? Optional.empty() : Optional.ofNullable(this.sendingLogs);
+        return Optional.ofNullable(this.sendingLogs);
     }
 
-    public MonitoredResourceResponse(
-        @Nullable String id,
-        @Nullable String reasonForLogsStatus,
-        @Nullable String sendingLogs) {
-        this.id = id;
-        this.reasonForLogsStatus = reasonForLogsStatus;
-        this.sendingLogs = sendingLogs;
-    }
+    private MonitoredResourceResponse() {}
 
-    private MonitoredResourceResponse() {
-        this.id = null;
-        this.reasonForLogsStatus = null;
-        this.sendingLogs = null;
+    private MonitoredResourceResponse(MonitoredResourceResponse $) {
+        this.id = $.id;
+        this.reasonForLogsStatus = $.reasonForLogsStatus;
+        this.sendingLogs = $.sendingLogs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoredResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String reasonForLogsStatus;
-        private @Nullable String sendingLogs;
+        private MonitoredResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoredResourceResponse();
         }
 
         public Builder(MonitoredResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.reasonForLogsStatus = defaults.reasonForLogsStatus;
-    	      this.sendingLogs = defaults.sendingLogs;
+            $ = new MonitoredResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder reasonForLogsStatus(@Nullable String reasonForLogsStatus) {
-            this.reasonForLogsStatus = reasonForLogsStatus;
+            $.reasonForLogsStatus = reasonForLogsStatus;
             return this;
         }
+
         public Builder sendingLogs(@Nullable String sendingLogs) {
-            this.sendingLogs = sendingLogs;
+            $.sendingLogs = sendingLogs;
             return this;
-        }        public MonitoredResourceResponse build() {
-            return new MonitoredResourceResponse(id, reasonForLogsStatus, sendingLogs);
+        }
+
+        public MonitoredResourceResponse build() {
+            return $;
         }
     }
+
 }

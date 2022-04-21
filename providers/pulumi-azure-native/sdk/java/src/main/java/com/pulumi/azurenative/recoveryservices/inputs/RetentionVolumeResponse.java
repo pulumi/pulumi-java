@@ -25,10 +25,10 @@ public final class RetentionVolumeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="capacityInBytes")
-      private final @Nullable Double capacityInBytes;
+    private @Nullable Double capacityInBytes;
 
     public Optional<Double> capacityInBytes() {
-        return this.capacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.capacityInBytes);
+        return Optional.ofNullable(this.capacityInBytes);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RetentionVolumeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="freeSpaceInBytes")
-      private final @Nullable Double freeSpaceInBytes;
+    private @Nullable Double freeSpaceInBytes;
 
     public Optional<Double> freeSpaceInBytes() {
-        return this.freeSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.freeSpaceInBytes);
+        return Optional.ofNullable(this.freeSpaceInBytes);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RetentionVolumeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="thresholdPercentage")
-      private final @Nullable Integer thresholdPercentage;
+    private @Nullable Integer thresholdPercentage;
 
     public Optional<Integer> thresholdPercentage() {
-        return this.thresholdPercentage == null ? Optional.empty() : Optional.ofNullable(this.thresholdPercentage);
+        return Optional.ofNullable(this.thresholdPercentage);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class RetentionVolumeResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="volumeName")
-      private final @Nullable String volumeName;
+    private @Nullable String volumeName;
 
     public Optional<String> volumeName() {
-        return this.volumeName == null ? Optional.empty() : Optional.ofNullable(this.volumeName);
+        return Optional.ofNullable(this.volumeName);
     }
 
-    public RetentionVolumeResponse(
-        @Nullable Double capacityInBytes,
-        @Nullable Double freeSpaceInBytes,
-        @Nullable Integer thresholdPercentage,
-        @Nullable String volumeName) {
-        this.capacityInBytes = capacityInBytes;
-        this.freeSpaceInBytes = freeSpaceInBytes;
-        this.thresholdPercentage = thresholdPercentage;
-        this.volumeName = volumeName;
-    }
+    private RetentionVolumeResponse() {}
 
-    private RetentionVolumeResponse() {
-        this.capacityInBytes = null;
-        this.freeSpaceInBytes = null;
-        this.thresholdPercentage = null;
-        this.volumeName = null;
+    private RetentionVolumeResponse(RetentionVolumeResponse $) {
+        this.capacityInBytes = $.capacityInBytes;
+        this.freeSpaceInBytes = $.freeSpaceInBytes;
+        this.thresholdPercentage = $.thresholdPercentage;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionVolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double capacityInBytes;
-        private @Nullable Double freeSpaceInBytes;
-        private @Nullable Integer thresholdPercentage;
-        private @Nullable String volumeName;
+        private RetentionVolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionVolumeResponse();
         }
 
         public Builder(RetentionVolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityInBytes = defaults.capacityInBytes;
-    	      this.freeSpaceInBytes = defaults.freeSpaceInBytes;
-    	      this.thresholdPercentage = defaults.thresholdPercentage;
-    	      this.volumeName = defaults.volumeName;
+            $ = new RetentionVolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityInBytes(@Nullable Double capacityInBytes) {
-            this.capacityInBytes = capacityInBytes;
+            $.capacityInBytes = capacityInBytes;
             return this;
         }
+
         public Builder freeSpaceInBytes(@Nullable Double freeSpaceInBytes) {
-            this.freeSpaceInBytes = freeSpaceInBytes;
+            $.freeSpaceInBytes = freeSpaceInBytes;
             return this;
         }
+
         public Builder thresholdPercentage(@Nullable Integer thresholdPercentage) {
-            this.thresholdPercentage = thresholdPercentage;
+            $.thresholdPercentage = thresholdPercentage;
             return this;
         }
+
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = volumeName;
+            $.volumeName = volumeName;
             return this;
-        }        public RetentionVolumeResponse build() {
-            return new RetentionVolumeResponse(capacityInBytes, freeSpaceInBytes, thresholdPercentage, volumeName);
+        }
+
+        public RetentionVolumeResponse build() {
+            return $;
         }
     }
+
 }

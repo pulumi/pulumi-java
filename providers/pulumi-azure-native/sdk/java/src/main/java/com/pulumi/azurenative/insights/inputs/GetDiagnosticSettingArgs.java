@@ -17,7 +17,7 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public GetDiagnosticSettingArgs(
-        String name,
-        String resourceUri) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private GetDiagnosticSettingArgs() {}
 
-    private GetDiagnosticSettingArgs() {
-        this.name = null;
-        this.resourceUri = null;
+    private GetDiagnosticSettingArgs(GetDiagnosticSettingArgs $) {
+        this.name = $.name;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDiagnosticSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceUri;
+        private GetDiagnosticSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDiagnosticSettingArgs();
         }
 
         public Builder(GetDiagnosticSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new GetDiagnosticSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public GetDiagnosticSettingArgs build() {
-            return new GetDiagnosticSettingArgs(name, resourceUri);
+        }
+
+        public GetDiagnosticSettingArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

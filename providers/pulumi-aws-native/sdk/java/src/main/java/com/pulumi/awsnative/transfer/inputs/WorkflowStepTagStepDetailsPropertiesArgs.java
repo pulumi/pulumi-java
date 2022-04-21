@@ -6,10 +6,10 @@ package com.pulumi.awsnative.transfer.inputs;
 import com.pulumi.awsnative.transfer.inputs.WorkflowS3TagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends com.pulumi.r
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<WorkflowS3TagArgs>> tags;
+    private @Nullable Output<List<WorkflowS3TagArgs>> tags;
 
-    public Output<List<WorkflowS3TagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<WorkflowS3TagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public WorkflowStepTagStepDetailsPropertiesArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<WorkflowS3TagArgs>> tags) {
-        this.name = name;
-        this.tags = tags;
-    }
+    private WorkflowStepTagStepDetailsPropertiesArgs() {}
 
-    private WorkflowStepTagStepDetailsPropertiesArgs() {
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private WorkflowStepTagStepDetailsPropertiesArgs(WorkflowStepTagStepDetailsPropertiesArgs $) {
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowStepTagStepDetailsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<WorkflowS3TagArgs>> tags;
+        private WorkflowStepTagStepDetailsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowStepTagStepDetailsPropertiesArgs();
         }
 
         public Builder(WorkflowStepTagStepDetailsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new WorkflowStepTagStepDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<WorkflowS3TagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<WorkflowS3TagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<WorkflowS3TagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(WorkflowS3TagArgs... tags) {
             return tags(List.of(tags));
-        }        public WorkflowStepTagStepDetailsPropertiesArgs build() {
-            return new WorkflowStepTagStepDetailsPropertiesArgs(name, tags);
+        }
+
+        public WorkflowStepTagStepDetailsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

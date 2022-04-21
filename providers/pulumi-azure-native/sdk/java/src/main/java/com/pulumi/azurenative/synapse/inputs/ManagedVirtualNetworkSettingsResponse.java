@@ -25,10 +25,10 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="allowedAadTenantIdsForLinking")
-      private final @Nullable List<String> allowedAadTenantIdsForLinking;
+    private @Nullable List<String> allowedAadTenantIdsForLinking;
 
-    public List<String> allowedAadTenantIdsForLinking() {
-        return this.allowedAadTenantIdsForLinking == null ? List.of() : this.allowedAadTenantIdsForLinking;
+    public Optional<List<String>> allowedAadTenantIdsForLinking() {
+        return Optional.ofNullable(this.allowedAadTenantIdsForLinking);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="linkedAccessCheckOnTargetResource")
-      private final @Nullable Boolean linkedAccessCheckOnTargetResource;
+    private @Nullable Boolean linkedAccessCheckOnTargetResource;
 
     public Optional<Boolean> linkedAccessCheckOnTargetResource() {
-        return this.linkedAccessCheckOnTargetResource == null ? Optional.empty() : Optional.ofNullable(this.linkedAccessCheckOnTargetResource);
+        return Optional.ofNullable(this.linkedAccessCheckOnTargetResource);
     }
 
     /**
@@ -47,67 +47,60 @@ public final class ManagedVirtualNetworkSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="preventDataExfiltration")
-      private final @Nullable Boolean preventDataExfiltration;
+    private @Nullable Boolean preventDataExfiltration;
 
     public Optional<Boolean> preventDataExfiltration() {
-        return this.preventDataExfiltration == null ? Optional.empty() : Optional.ofNullable(this.preventDataExfiltration);
+        return Optional.ofNullable(this.preventDataExfiltration);
     }
 
-    public ManagedVirtualNetworkSettingsResponse(
-        @Nullable List<String> allowedAadTenantIdsForLinking,
-        @Nullable Boolean linkedAccessCheckOnTargetResource,
-        @Nullable Boolean preventDataExfiltration) {
-        this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
-        this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
-        this.preventDataExfiltration = preventDataExfiltration;
-    }
+    private ManagedVirtualNetworkSettingsResponse() {}
 
-    private ManagedVirtualNetworkSettingsResponse() {
-        this.allowedAadTenantIdsForLinking = List.of();
-        this.linkedAccessCheckOnTargetResource = null;
-        this.preventDataExfiltration = null;
+    private ManagedVirtualNetworkSettingsResponse(ManagedVirtualNetworkSettingsResponse $) {
+        this.allowedAadTenantIdsForLinking = $.allowedAadTenantIdsForLinking;
+        this.linkedAccessCheckOnTargetResource = $.linkedAccessCheckOnTargetResource;
+        this.preventDataExfiltration = $.preventDataExfiltration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedVirtualNetworkSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedAadTenantIdsForLinking;
-        private @Nullable Boolean linkedAccessCheckOnTargetResource;
-        private @Nullable Boolean preventDataExfiltration;
+        private ManagedVirtualNetworkSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedVirtualNetworkSettingsResponse();
         }
 
         public Builder(ManagedVirtualNetworkSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedAadTenantIdsForLinking = defaults.allowedAadTenantIdsForLinking;
-    	      this.linkedAccessCheckOnTargetResource = defaults.linkedAccessCheckOnTargetResource;
-    	      this.preventDataExfiltration = defaults.preventDataExfiltration;
+            $ = new ManagedVirtualNetworkSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedAadTenantIdsForLinking(@Nullable List<String> allowedAadTenantIdsForLinking) {
-            this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
+            $.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
             return this;
         }
+
         public Builder allowedAadTenantIdsForLinking(String... allowedAadTenantIdsForLinking) {
             return allowedAadTenantIdsForLinking(List.of(allowedAadTenantIdsForLinking));
         }
+
         public Builder linkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
-            this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
+            $.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
             return this;
         }
+
         public Builder preventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
-            this.preventDataExfiltration = preventDataExfiltration;
+            $.preventDataExfiltration = preventDataExfiltration;
             return this;
-        }        public ManagedVirtualNetworkSettingsResponse build() {
-            return new ManagedVirtualNetworkSettingsResponse(allowedAadTenantIdsForLinking, linkedAccessCheckOnTargetResource, preventDataExfiltration);
+        }
+
+        public ManagedVirtualNetworkSettingsResponse build() {
+            return $;
         }
     }
+
 }

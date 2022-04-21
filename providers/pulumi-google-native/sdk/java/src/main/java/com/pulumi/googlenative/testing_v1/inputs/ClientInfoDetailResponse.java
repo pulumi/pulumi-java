@@ -21,7 +21,7 @@ public final class ClientInfoDetailResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -32,55 +32,52 @@ public final class ClientInfoDetailResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ClientInfoDetailResponse(
-        String key,
-        String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ClientInfoDetailResponse() {}
 
-    private ClientInfoDetailResponse() {
-        this.key = null;
-        this.value = null;
+    private ClientInfoDetailResponse(ClientInfoDetailResponse $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientInfoDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String value;
+        private ClientInfoDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientInfoDetailResponse();
         }
 
         public Builder(ClientInfoDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ClientInfoDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ClientInfoDetailResponse build() {
-            return new ClientInfoDetailResponse(key, value);
+        }
+
+        public ClientInfoDetailResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

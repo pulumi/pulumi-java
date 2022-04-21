@@ -22,7 +22,7 @@ public final class RevisionTemplateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="metadata", required=true)
-      private final ObjectMetaResponse metadata;
+    private ObjectMetaResponse metadata;
 
     public ObjectMetaResponse metadata() {
         return this.metadata;
@@ -33,55 +33,52 @@ public final class RevisionTemplateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="spec", required=true)
-      private final RevisionSpecResponse spec;
+    private RevisionSpecResponse spec;
 
     public RevisionSpecResponse spec() {
         return this.spec;
     }
 
-    public RevisionTemplateResponse(
-        ObjectMetaResponse metadata,
-        RevisionSpecResponse spec) {
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.spec = Objects.requireNonNull(spec, "expected parameter 'spec' to be non-null");
-    }
+    private RevisionTemplateResponse() {}
 
-    private RevisionTemplateResponse() {
-        this.metadata = null;
-        this.spec = null;
+    private RevisionTemplateResponse(RevisionTemplateResponse $) {
+        this.metadata = $.metadata;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RevisionTemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ObjectMetaResponse metadata;
-        private RevisionSpecResponse spec;
+        private RevisionTemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RevisionTemplateResponse();
         }
 
         public Builder(RevisionTemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.spec = defaults.spec;
+            $ = new RevisionTemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(ObjectMetaResponse metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder spec(RevisionSpecResponse spec) {
-            this.spec = Objects.requireNonNull(spec);
+            $.spec = spec;
             return this;
-        }        public RevisionTemplateResponse build() {
-            return new RevisionTemplateResponse(metadata, spec);
+        }
+
+        public RevisionTemplateResponse build() {
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.spec = Objects.requireNonNull($.spec, "expected parameter 'spec' to be non-null");
+            return $;
         }
     }
+
 }

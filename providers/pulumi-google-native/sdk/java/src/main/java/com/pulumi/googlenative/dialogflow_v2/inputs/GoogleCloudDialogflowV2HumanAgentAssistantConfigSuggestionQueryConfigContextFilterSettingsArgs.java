@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="dropHandoffMessages")
-      private final @Nullable Output<Boolean> dropHandoffMessages;
+    private @Nullable Output<Boolean> dropHandoffMessages;
 
-    public Output<Boolean> dropHandoffMessages() {
-        return this.dropHandoffMessages == null ? Codegen.empty() : this.dropHandoffMessages;
+    public Optional<Output<Boolean>> dropHandoffMessages() {
+        return Optional.ofNullable(this.dropHandoffMessages);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="dropIvrMessages")
-      private final @Nullable Output<Boolean> dropIvrMessages;
+    private @Nullable Output<Boolean> dropIvrMessages;
 
-    public Output<Boolean> dropIvrMessages() {
-        return this.dropIvrMessages == null ? Codegen.empty() : this.dropIvrMessages;
+    public Optional<Output<Boolean>> dropIvrMessages() {
+        return Optional.ofNullable(this.dropIvrMessages);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="dropVirtualAgentMessages")
-      private final @Nullable Output<Boolean> dropVirtualAgentMessages;
+    private @Nullable Output<Boolean> dropVirtualAgentMessages;
 
-    public Output<Boolean> dropVirtualAgentMessages() {
-        return this.dropVirtualAgentMessages == null ? Codegen.empty() : this.dropVirtualAgentMessages;
+    public Optional<Output<Boolean>> dropVirtualAgentMessages() {
+        return Optional.ofNullable(this.dropVirtualAgentMessages);
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs(
-        @Nullable Output<Boolean> dropHandoffMessages,
-        @Nullable Output<Boolean> dropIvrMessages,
-        @Nullable Output<Boolean> dropVirtualAgentMessages) {
-        this.dropHandoffMessages = dropHandoffMessages;
-        this.dropIvrMessages = dropIvrMessages;
-        this.dropVirtualAgentMessages = dropVirtualAgentMessages;
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs() {
-        this.dropHandoffMessages = Codegen.empty();
-        this.dropIvrMessages = Codegen.empty();
-        this.dropVirtualAgentMessages = Codegen.empty();
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs $) {
+        this.dropHandoffMessages = $.dropHandoffMessages;
+        this.dropIvrMessages = $.dropIvrMessages;
+        this.dropVirtualAgentMessages = $.dropVirtualAgentMessages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> dropHandoffMessages;
-        private @Nullable Output<Boolean> dropIvrMessages;
-        private @Nullable Output<Boolean> dropVirtualAgentMessages;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dropHandoffMessages = defaults.dropHandoffMessages;
-    	      this.dropIvrMessages = defaults.dropIvrMessages;
-    	      this.dropVirtualAgentMessages = defaults.dropVirtualAgentMessages;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dropHandoffMessages(@Nullable Output<Boolean> dropHandoffMessages) {
-            this.dropHandoffMessages = dropHandoffMessages;
+            $.dropHandoffMessages = dropHandoffMessages;
             return this;
         }
-        public Builder dropHandoffMessages(@Nullable Boolean dropHandoffMessages) {
-            this.dropHandoffMessages = Codegen.ofNullable(dropHandoffMessages);
-            return this;
+
+        public Builder dropHandoffMessages(Boolean dropHandoffMessages) {
+            return dropHandoffMessages(Output.of(dropHandoffMessages));
         }
+
         public Builder dropIvrMessages(@Nullable Output<Boolean> dropIvrMessages) {
-            this.dropIvrMessages = dropIvrMessages;
+            $.dropIvrMessages = dropIvrMessages;
             return this;
         }
-        public Builder dropIvrMessages(@Nullable Boolean dropIvrMessages) {
-            this.dropIvrMessages = Codegen.ofNullable(dropIvrMessages);
-            return this;
+
+        public Builder dropIvrMessages(Boolean dropIvrMessages) {
+            return dropIvrMessages(Output.of(dropIvrMessages));
         }
+
         public Builder dropVirtualAgentMessages(@Nullable Output<Boolean> dropVirtualAgentMessages) {
-            this.dropVirtualAgentMessages = dropVirtualAgentMessages;
+            $.dropVirtualAgentMessages = dropVirtualAgentMessages;
             return this;
         }
-        public Builder dropVirtualAgentMessages(@Nullable Boolean dropVirtualAgentMessages) {
-            this.dropVirtualAgentMessages = Codegen.ofNullable(dropVirtualAgentMessages);
-            return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs(dropHandoffMessages, dropIvrMessages, dropVirtualAgentMessages);
+
+        public Builder dropVirtualAgentMessages(Boolean dropVirtualAgentMessages) {
+            return dropVirtualAgentMessages(Output.of(dropVirtualAgentMessages));
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
      * 
      */
     @Import(name="destinationName", required=true)
-      private final String destinationName;
+    private String destinationName;
 
     public String destinationName() {
         return this.destinationName;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionRes
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse(
-        String destinationName,
-        String uri) {
-        this.destinationName = Objects.requireNonNull(destinationName, "expected parameter 'destinationName' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse() {
-        this.destinationName = null;
-        this.uri = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse(GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse $) {
+        this.destinationName = $.destinationName;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destinationName;
-        private String uri;
+        private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationName = defaults.destinationName;
-    	      this.uri = defaults.uri;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationName(String destinationName) {
-            this.destinationName = Objects.requireNonNull(destinationName);
+            $.destinationName = destinationName;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse(destinationName, uri);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse build() {
+            $.destinationName = Objects.requireNonNull($.destinationName, "expected parameter 'destinationName' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

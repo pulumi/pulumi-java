@@ -13,45 +13,45 @@ public final class GetClusterNodeConfigEphemeralStorageConfig extends com.pulumi
     public static final GetClusterNodeConfigEphemeralStorageConfig Empty = new GetClusterNodeConfigEphemeralStorageConfig();
 
     @Import(name="localSsdCount", required=true)
-      private final Integer localSsdCount;
+    private Integer localSsdCount;
 
     public Integer localSsdCount() {
         return this.localSsdCount;
     }
 
-    public GetClusterNodeConfigEphemeralStorageConfig(Integer localSsdCount) {
-        this.localSsdCount = Objects.requireNonNull(localSsdCount, "expected parameter 'localSsdCount' to be non-null");
-    }
+    private GetClusterNodeConfigEphemeralStorageConfig() {}
 
-    private GetClusterNodeConfigEphemeralStorageConfig() {
-        this.localSsdCount = null;
+    private GetClusterNodeConfigEphemeralStorageConfig(GetClusterNodeConfigEphemeralStorageConfig $) {
+        this.localSsdCount = $.localSsdCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodeConfigEphemeralStorageConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer localSsdCount;
+        private GetClusterNodeConfigEphemeralStorageConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodeConfigEphemeralStorageConfig();
         }
 
         public Builder(GetClusterNodeConfigEphemeralStorageConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localSsdCount = defaults.localSsdCount;
+            $ = new GetClusterNodeConfigEphemeralStorageConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder localSsdCount(Integer localSsdCount) {
-            this.localSsdCount = Objects.requireNonNull(localSsdCount);
+            $.localSsdCount = localSsdCount;
             return this;
-        }        public GetClusterNodeConfigEphemeralStorageConfig build() {
-            return new GetClusterNodeConfigEphemeralStorageConfig(localSsdCount);
+        }
+
+        public GetClusterNodeConfigEphemeralStorageConfig build() {
+            $.localSsdCount = Objects.requireNonNull($.localSsdCount, "expected parameter 'localSsdCount' to be non-null");
+            return $;
         }
     }
+
 }

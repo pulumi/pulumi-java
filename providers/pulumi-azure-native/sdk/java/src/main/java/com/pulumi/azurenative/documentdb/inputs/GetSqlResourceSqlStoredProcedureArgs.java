@@ -17,7 +17,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -39,7 +39,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -50,7 +50,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends com.pulumi.resou
      * 
      */
     @Import(name="storedProcedureName", required=true)
-      private final String storedProcedureName;
+    private String storedProcedureName;
 
     public String storedProcedureName() {
         return this.storedProcedureName;
     }
 
-    public GetSqlResourceSqlStoredProcedureArgs(
-        String accountName,
-        String containerName,
-        String databaseName,
-        String resourceGroupName,
-        String storedProcedureName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storedProcedureName = Objects.requireNonNull(storedProcedureName, "expected parameter 'storedProcedureName' to be non-null");
-    }
+    private GetSqlResourceSqlStoredProcedureArgs() {}
 
-    private GetSqlResourceSqlStoredProcedureArgs() {
-        this.accountName = null;
-        this.containerName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.storedProcedureName = null;
+    private GetSqlResourceSqlStoredProcedureArgs(GetSqlResourceSqlStoredProcedureArgs $) {
+        this.accountName = $.accountName;
+        this.containerName = $.containerName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storedProcedureName = $.storedProcedureName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlResourceSqlStoredProcedureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String containerName;
-        private String databaseName;
-        private String resourceGroupName;
-        private String storedProcedureName;
+        private GetSqlResourceSqlStoredProcedureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlResourceSqlStoredProcedureArgs();
         }
 
         public Builder(GetSqlResourceSqlStoredProcedureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.containerName = defaults.containerName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storedProcedureName = defaults.storedProcedureName;
+            $ = new GetSqlResourceSqlStoredProcedureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storedProcedureName(String storedProcedureName) {
-            this.storedProcedureName = Objects.requireNonNull(storedProcedureName);
+            $.storedProcedureName = storedProcedureName;
             return this;
-        }        public GetSqlResourceSqlStoredProcedureArgs build() {
-            return new GetSqlResourceSqlStoredProcedureArgs(accountName, containerName, databaseName, resourceGroupName, storedProcedureName);
+        }
+
+        public GetSqlResourceSqlStoredProcedureArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storedProcedureName = Objects.requireNonNull($.storedProcedureName, "expected parameter 'storedProcedureName' to be non-null");
+            return $;
         }
     }
+
 }

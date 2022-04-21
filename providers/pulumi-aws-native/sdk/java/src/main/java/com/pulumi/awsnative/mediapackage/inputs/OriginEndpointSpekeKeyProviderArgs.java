@@ -5,10 +5,10 @@ package com.pulumi.awsnative.mediapackage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -47,7 +47,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -58,7 +58,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="systemIds", required=true)
-      private final Output<List<String>> systemIds;
+    private Output<List<String>> systemIds;
 
     public Output<List<String>> systemIds() {
         return this.systemIds;
@@ -69,105 +69,96 @@ public final class OriginEndpointSpekeKeyProviderArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public OriginEndpointSpekeKeyProviderArgs(
-        @Nullable Output<String> certificateArn,
-        Output<String> resourceId,
-        Output<String> roleArn,
-        Output<List<String>> systemIds,
-        Output<String> url) {
-        this.certificateArn = certificateArn;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.systemIds = Objects.requireNonNull(systemIds, "expected parameter 'systemIds' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private OriginEndpointSpekeKeyProviderArgs() {}
 
-    private OriginEndpointSpekeKeyProviderArgs() {
-        this.certificateArn = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.systemIds = Codegen.empty();
-        this.url = Codegen.empty();
+    private OriginEndpointSpekeKeyProviderArgs(OriginEndpointSpekeKeyProviderArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.resourceId = $.resourceId;
+        this.roleArn = $.roleArn;
+        this.systemIds = $.systemIds;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointSpekeKeyProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateArn;
-        private Output<String> resourceId;
-        private Output<String> roleArn;
-        private Output<List<String>> systemIds;
-        private Output<String> url;
+        private OriginEndpointSpekeKeyProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointSpekeKeyProviderArgs();
         }
 
         public Builder(OriginEndpointSpekeKeyProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.resourceId = defaults.resourceId;
-    	      this.roleArn = defaults.roleArn;
-    	      this.systemIds = defaults.systemIds;
-    	      this.url = defaults.url;
+            $ = new OriginEndpointSpekeKeyProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder systemIds(Output<List<String>> systemIds) {
-            this.systemIds = Objects.requireNonNull(systemIds);
+            $.systemIds = systemIds;
             return this;
         }
+
         public Builder systemIds(List<String> systemIds) {
-            this.systemIds = Output.of(Objects.requireNonNull(systemIds));
-            return this;
+            return systemIds(Output.of(systemIds));
         }
+
         public Builder systemIds(String... systemIds) {
             return systemIds(List.of(systemIds));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public OriginEndpointSpekeKeyProviderArgs build() {
-            return new OriginEndpointSpekeKeyProviderArgs(certificateArn, resourceId, roleArn, systemIds, url);
+            return url(Output.of(url));
+        }
+
+        public OriginEndpointSpekeKeyProviderArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.systemIds = Objects.requireNonNull($.systemIds, "expected parameter 'systemIds' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="egressOption", required=true)
-      private final String egressOption;
+    private String egressOption;
 
     public String egressOption() {
         return this.egressOption;
@@ -32,55 +32,52 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="peeredNetwork", required=true)
-      private final String peeredNetwork;
+    private String peeredNetwork;
 
     public String peeredNetwork() {
         return this.peeredNetwork;
     }
 
-    public NetworkConfigResponse(
-        String egressOption,
-        String peeredNetwork) {
-        this.egressOption = Objects.requireNonNull(egressOption, "expected parameter 'egressOption' to be non-null");
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
-    }
+    private NetworkConfigResponse() {}
 
-    private NetworkConfigResponse() {
-        this.egressOption = null;
-        this.peeredNetwork = null;
+    private NetworkConfigResponse(NetworkConfigResponse $) {
+        this.egressOption = $.egressOption;
+        this.peeredNetwork = $.peeredNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String egressOption;
-        private String peeredNetwork;
+        private NetworkConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigResponse();
         }
 
         public Builder(NetworkConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egressOption = defaults.egressOption;
-    	      this.peeredNetwork = defaults.peeredNetwork;
+            $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder egressOption(String egressOption) {
-            this.egressOption = Objects.requireNonNull(egressOption);
+            $.egressOption = egressOption;
             return this;
         }
+
         public Builder peeredNetwork(String peeredNetwork) {
-            this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
+            $.peeredNetwork = peeredNetwork;
             return this;
-        }        public NetworkConfigResponse build() {
-            return new NetworkConfigResponse(egressOption, peeredNetwork);
+        }
+
+        public NetworkConfigResponse build() {
+            $.egressOption = Objects.requireNonNull($.egressOption, "expected parameter 'egressOption' to be non-null");
+            $.peeredNetwork = Objects.requireNonNull($.peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
+            return $;
         }
     }
+
 }

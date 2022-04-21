@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="exe")
-      private final @Nullable Output<String> exe;
+    private @Nullable Output<String> exe;
 
-    public Output<String> exe() {
-        return this.exe == null ? Codegen.empty() : this.exe;
+    public Optional<Output<String>> exe() {
+        return Optional.ofNullable(this.exe);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="executable")
-      private final @Nullable Output<String> executable;
+    private @Nullable Output<String> executable;
 
-    public Output<String> executable() {
-        return this.executable == null ? Codegen.empty() : this.executable;
+    public Optional<Output<String>> executable() {
+        return Optional.ofNullable(this.executable);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="msi")
-      private final @Nullable Output<String> msi;
+    private @Nullable Output<String> msi;
 
-    public Output<String> msi() {
-        return this.msi == null ? Codegen.empty() : this.msi;
+    public Optional<Output<String>> msi() {
+        return Optional.ofNullable(this.msi);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class ProtectionModeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
-    public ProtectionModeArgs(
-        @Nullable Output<String> exe,
-        @Nullable Output<String> executable,
-        @Nullable Output<String> msi,
-        @Nullable Output<String> script) {
-        this.exe = exe;
-        this.executable = executable;
-        this.msi = msi;
-        this.script = script;
-    }
+    private ProtectionModeArgs() {}
 
-    private ProtectionModeArgs() {
-        this.exe = Codegen.empty();
-        this.executable = Codegen.empty();
-        this.msi = Codegen.empty();
-        this.script = Codegen.empty();
+    private ProtectionModeArgs(ProtectionModeArgs $) {
+        this.exe = $.exe;
+        this.executable = $.executable;
+        this.msi = $.msi;
+        this.script = $.script;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtectionModeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exe;
-        private @Nullable Output<String> executable;
-        private @Nullable Output<String> msi;
-        private @Nullable Output<String> script;
+        private ProtectionModeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtectionModeArgs();
         }
 
         public Builder(ProtectionModeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exe = defaults.exe;
-    	      this.executable = defaults.executable;
-    	      this.msi = defaults.msi;
-    	      this.script = defaults.script;
+            $ = new ProtectionModeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exe(@Nullable Output<String> exe) {
-            this.exe = exe;
+            $.exe = exe;
             return this;
         }
-        public Builder exe(@Nullable String exe) {
-            this.exe = Codegen.ofNullable(exe);
-            return this;
+
+        public Builder exe(String exe) {
+            return exe(Output.of(exe));
         }
+
         public Builder executable(@Nullable Output<String> executable) {
-            this.executable = executable;
+            $.executable = executable;
             return this;
         }
-        public Builder executable(@Nullable String executable) {
-            this.executable = Codegen.ofNullable(executable);
-            return this;
+
+        public Builder executable(String executable) {
+            return executable(Output.of(executable));
         }
+
         public Builder msi(@Nullable Output<String> msi) {
-            this.msi = msi;
+            $.msi = msi;
             return this;
         }
-        public Builder msi(@Nullable String msi) {
-            this.msi = Codegen.ofNullable(msi);
-            return this;
+
+        public Builder msi(String msi) {
+            return msi(Output.of(msi));
         }
+
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
-        }        public ProtectionModeArgs build() {
-            return new ProtectionModeArgs(exe, executable, msi, script);
+
+        public Builder script(String script) {
+            return script(Output.of(script));
+        }
+
+        public ProtectionModeArgs build() {
+            return $;
         }
     }
+
 }

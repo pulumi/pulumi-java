@@ -6,7 +6,6 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementAndStatementStatementGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class WebAclRuleStatementNotStatementStatementAndStatementGetArgs e
      * 
      */
     @Import(name="statements", required=true)
-      private final Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementGetArgs>> statements;
+    private Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementGetArgs>> statements;
 
     public Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementGetArgs>> statements() {
         return this.statements;
     }
 
-    public WebAclRuleStatementNotStatementStatementAndStatementGetArgs(Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementGetArgs>> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private WebAclRuleStatementNotStatementStatementAndStatementGetArgs() {}
 
-    private WebAclRuleStatementNotStatementStatementAndStatementGetArgs() {
-        this.statements = Codegen.empty();
+    private WebAclRuleStatementNotStatementStatementAndStatementGetArgs(WebAclRuleStatementNotStatementStatementAndStatementGetArgs $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementNotStatementStatementAndStatementGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementGetArgs>> statements;
+        private WebAclRuleStatementNotStatementStatementAndStatementGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementNotStatementStatementAndStatementGetArgs();
         }
 
         public Builder(WebAclRuleStatementNotStatementStatementAndStatementGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new WebAclRuleStatementNotStatementStatementAndStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(Output<List<WebAclRuleStatementNotStatementStatementAndStatementStatementGetArgs>> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(List<WebAclRuleStatementNotStatementStatementAndStatementStatementGetArgs> statements) {
-            this.statements = Output.of(Objects.requireNonNull(statements));
-            return this;
+            return statements(Output.of(statements));
         }
+
         public Builder statements(WebAclRuleStatementNotStatementStatementAndStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
-        }        public WebAclRuleStatementNotStatementStatementAndStatementGetArgs build() {
-            return new WebAclRuleStatementNotStatementStatementAndStatementGetArgs(statements);
+        }
+
+        public WebAclRuleStatementNotStatementStatementAndStatementGetArgs build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

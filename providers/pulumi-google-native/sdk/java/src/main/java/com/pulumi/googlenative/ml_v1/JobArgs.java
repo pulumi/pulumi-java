@@ -5,7 +5,6 @@ package com.pulumi.googlenative.ml_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__PredictionInputArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__PredictionOutputArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__TrainingInputArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__TrainingOutputArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobId", required=true)
-      private final Output<String> jobId;
+    private Output<String> jobId;
 
     public Output<String> jobId() {
         return this.jobId;
@@ -47,10 +47,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predictionInput")
-      private final @Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
+    private @Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
 
-    public Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput() {
-        return this.predictionInput == null ? Codegen.empty() : this.predictionInput;
+    public Optional<Output<GoogleCloudMlV1__PredictionInputArgs>> predictionInput() {
+        return Optional.ofNullable(this.predictionInput);
     }
 
     /**
@@ -69,17 +69,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predictionOutput")
-      private final @Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
+    private @Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
 
-    public Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput() {
-        return this.predictionOutput == null ? Codegen.empty() : this.predictionOutput;
+    public Optional<Output<GoogleCloudMlV1__PredictionOutputArgs>> predictionOutput() {
+        return Optional.ofNullable(this.predictionOutput);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trainingInput")
-      private final @Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
+    private @Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
 
-    public Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput() {
-        return this.trainingInput == null ? Codegen.empty() : this.trainingInput;
+    public Optional<Output<GoogleCloudMlV1__TrainingInputArgs>> trainingInput() {
+        return Optional.ofNullable(this.trainingInput);
     }
 
     /**
@@ -98,141 +98,119 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trainingOutput")
-      private final @Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;
+    private @Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;
 
-    public Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput() {
-        return this.trainingOutput == null ? Codegen.empty() : this.trainingOutput;
+    public Optional<Output<GoogleCloudMlV1__TrainingOutputArgs>> trainingOutput() {
+        return Optional.ofNullable(this.trainingOutput);
     }
 
-    public JobArgs(
-        @Nullable Output<String> etag,
-        Output<String> jobId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput,
-        @Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput,
-        @Nullable Output<String> project,
-        @Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput,
-        @Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput) {
-        this.etag = etag;
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.labels = labels;
-        this.predictionInput = predictionInput;
-        this.predictionOutput = predictionOutput;
-        this.project = project;
-        this.trainingInput = trainingInput;
-        this.trainingOutput = trainingOutput;
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.etag = Codegen.empty();
-        this.jobId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.predictionInput = Codegen.empty();
-        this.predictionOutput = Codegen.empty();
-        this.project = Codegen.empty();
-        this.trainingInput = Codegen.empty();
-        this.trainingOutput = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.etag = $.etag;
+        this.jobId = $.jobId;
+        this.labels = $.labels;
+        this.predictionInput = $.predictionInput;
+        this.predictionOutput = $.predictionOutput;
+        this.project = $.project;
+        this.trainingInput = $.trainingInput;
+        this.trainingOutput = $.trainingOutput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private Output<String> jobId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
-        private @Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
-        private @Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.jobId = defaults.jobId;
-    	      this.labels = defaults.labels;
-    	      this.predictionInput = defaults.predictionInput;
-    	      this.predictionOutput = defaults.predictionOutput;
-    	      this.project = defaults.project;
-    	      this.trainingInput = defaults.trainingInput;
-    	      this.trainingOutput = defaults.trainingOutput;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder jobId(Output<String> jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder jobId(String jobId) {
-            this.jobId = Output.of(Objects.requireNonNull(jobId));
-            return this;
+            return jobId(Output.of(jobId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder predictionInput(@Nullable Output<GoogleCloudMlV1__PredictionInputArgs> predictionInput) {
-            this.predictionInput = predictionInput;
+            $.predictionInput = predictionInput;
             return this;
         }
-        public Builder predictionInput(@Nullable GoogleCloudMlV1__PredictionInputArgs predictionInput) {
-            this.predictionInput = Codegen.ofNullable(predictionInput);
-            return this;
+
+        public Builder predictionInput(GoogleCloudMlV1__PredictionInputArgs predictionInput) {
+            return predictionInput(Output.of(predictionInput));
         }
+
         public Builder predictionOutput(@Nullable Output<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput) {
-            this.predictionOutput = predictionOutput;
+            $.predictionOutput = predictionOutput;
             return this;
         }
-        public Builder predictionOutput(@Nullable GoogleCloudMlV1__PredictionOutputArgs predictionOutput) {
-            this.predictionOutput = Codegen.ofNullable(predictionOutput);
-            return this;
+
+        public Builder predictionOutput(GoogleCloudMlV1__PredictionOutputArgs predictionOutput) {
+            return predictionOutput(Output.of(predictionOutput));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder trainingInput(@Nullable Output<GoogleCloudMlV1__TrainingInputArgs> trainingInput) {
-            this.trainingInput = trainingInput;
+            $.trainingInput = trainingInput;
             return this;
         }
-        public Builder trainingInput(@Nullable GoogleCloudMlV1__TrainingInputArgs trainingInput) {
-            this.trainingInput = Codegen.ofNullable(trainingInput);
-            return this;
+
+        public Builder trainingInput(GoogleCloudMlV1__TrainingInputArgs trainingInput) {
+            return trainingInput(Output.of(trainingInput));
         }
+
         public Builder trainingOutput(@Nullable Output<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput) {
-            this.trainingOutput = trainingOutput;
+            $.trainingOutput = trainingOutput;
             return this;
         }
-        public Builder trainingOutput(@Nullable GoogleCloudMlV1__TrainingOutputArgs trainingOutput) {
-            this.trainingOutput = Codegen.ofNullable(trainingOutput);
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(etag, jobId, labels, predictionInput, predictionOutput, project, trainingInput, trainingOutput);
+
+        public Builder trainingOutput(GoogleCloudMlV1__TrainingOutputArgs trainingOutput) {
+            return trainingOutput(Output.of(trainingOutput));
+        }
+
+        public JobArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            return $;
         }
     }
+
 }

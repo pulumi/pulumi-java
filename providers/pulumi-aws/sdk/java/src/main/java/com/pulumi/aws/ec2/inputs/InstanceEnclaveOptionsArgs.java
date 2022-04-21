@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class InstanceEnclaveOptionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public InstanceEnclaveOptionsArgs(@Nullable Output<Boolean> enabled) {
-        this.enabled = enabled;
-    }
+    private InstanceEnclaveOptionsArgs() {}
 
-    private InstanceEnclaveOptionsArgs() {
-        this.enabled = Codegen.empty();
+    private InstanceEnclaveOptionsArgs(InstanceEnclaveOptionsArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceEnclaveOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
+        private InstanceEnclaveOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceEnclaveOptionsArgs();
         }
 
         public Builder(InstanceEnclaveOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new InstanceEnclaveOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public InstanceEnclaveOptionsArgs build() {
-            return new InstanceEnclaveOptionsArgs(enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public InstanceEnclaveOptionsArgs build() {
+            return $;
         }
     }
+
 }

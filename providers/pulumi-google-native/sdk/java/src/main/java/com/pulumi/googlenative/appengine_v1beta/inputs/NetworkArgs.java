@@ -5,12 +5,12 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1beta.enums.NetworkInstanceIpMode;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forwardedPorts")
-      private final @Nullable Output<List<String>> forwardedPorts;
+    private @Nullable Output<List<String>> forwardedPorts;
 
-    public Output<List<String>> forwardedPorts() {
-        return this.forwardedPorts == null ? Codegen.empty() : this.forwardedPorts;
+    public Optional<Output<List<String>>> forwardedPorts() {
+        return Optional.ofNullable(this.forwardedPorts);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceIpMode")
-      private final @Nullable Output<NetworkInstanceIpMode> instanceIpMode;
+    private @Nullable Output<NetworkInstanceIpMode> instanceIpMode;
 
-    public Output<NetworkInstanceIpMode> instanceIpMode() {
-        return this.instanceIpMode == null ? Codegen.empty() : this.instanceIpMode;
+    public Optional<Output<NetworkInstanceIpMode>> instanceIpMode() {
+        return Optional.ofNullable(this.instanceIpMode);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceTag")
-      private final @Nullable Output<String> instanceTag;
+    private @Nullable Output<String> instanceTag;
 
-    public Output<String> instanceTag() {
-        return this.instanceTag == null ? Codegen.empty() : this.instanceTag;
+    public Optional<Output<String>> instanceTag() {
+        return Optional.ofNullable(this.instanceTag);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sessionAffinity")
-      private final @Nullable Output<Boolean> sessionAffinity;
+    private @Nullable Output<Boolean> sessionAffinity;
 
-    public Output<Boolean> sessionAffinity() {
-        return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
+    public Optional<Output<Boolean>> sessionAffinity() {
+        return Optional.ofNullable(this.sessionAffinity);
     }
 
     /**
@@ -82,118 +82,102 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetworkName")
-      private final @Nullable Output<String> subnetworkName;
+    private @Nullable Output<String> subnetworkName;
 
-    public Output<String> subnetworkName() {
-        return this.subnetworkName == null ? Codegen.empty() : this.subnetworkName;
+    public Optional<Output<String>> subnetworkName() {
+        return Optional.ofNullable(this.subnetworkName);
     }
 
-    public NetworkArgs(
-        @Nullable Output<List<String>> forwardedPorts,
-        @Nullable Output<NetworkInstanceIpMode> instanceIpMode,
-        @Nullable Output<String> instanceTag,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> sessionAffinity,
-        @Nullable Output<String> subnetworkName) {
-        this.forwardedPorts = forwardedPorts;
-        this.instanceIpMode = instanceIpMode;
-        this.instanceTag = instanceTag;
-        this.name = name;
-        this.sessionAffinity = sessionAffinity;
-        this.subnetworkName = subnetworkName;
-    }
+    private NetworkArgs() {}
 
-    private NetworkArgs() {
-        this.forwardedPorts = Codegen.empty();
-        this.instanceIpMode = Codegen.empty();
-        this.instanceTag = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sessionAffinity = Codegen.empty();
-        this.subnetworkName = Codegen.empty();
+    private NetworkArgs(NetworkArgs $) {
+        this.forwardedPorts = $.forwardedPorts;
+        this.instanceIpMode = $.instanceIpMode;
+        this.instanceTag = $.instanceTag;
+        this.name = $.name;
+        this.sessionAffinity = $.sessionAffinity;
+        this.subnetworkName = $.subnetworkName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> forwardedPorts;
-        private @Nullable Output<NetworkInstanceIpMode> instanceIpMode;
-        private @Nullable Output<String> instanceTag;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> sessionAffinity;
-        private @Nullable Output<String> subnetworkName;
+        private NetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkArgs();
         }
 
         public Builder(NetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardedPorts = defaults.forwardedPorts;
-    	      this.instanceIpMode = defaults.instanceIpMode;
-    	      this.instanceTag = defaults.instanceTag;
-    	      this.name = defaults.name;
-    	      this.sessionAffinity = defaults.sessionAffinity;
-    	      this.subnetworkName = defaults.subnetworkName;
+            $ = new NetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardedPorts(@Nullable Output<List<String>> forwardedPorts) {
-            this.forwardedPorts = forwardedPorts;
+            $.forwardedPorts = forwardedPorts;
             return this;
         }
-        public Builder forwardedPorts(@Nullable List<String> forwardedPorts) {
-            this.forwardedPorts = Codegen.ofNullable(forwardedPorts);
-            return this;
+
+        public Builder forwardedPorts(List<String> forwardedPorts) {
+            return forwardedPorts(Output.of(forwardedPorts));
         }
+
         public Builder forwardedPorts(String... forwardedPorts) {
             return forwardedPorts(List.of(forwardedPorts));
         }
+
         public Builder instanceIpMode(@Nullable Output<NetworkInstanceIpMode> instanceIpMode) {
-            this.instanceIpMode = instanceIpMode;
+            $.instanceIpMode = instanceIpMode;
             return this;
         }
-        public Builder instanceIpMode(@Nullable NetworkInstanceIpMode instanceIpMode) {
-            this.instanceIpMode = Codegen.ofNullable(instanceIpMode);
-            return this;
+
+        public Builder instanceIpMode(NetworkInstanceIpMode instanceIpMode) {
+            return instanceIpMode(Output.of(instanceIpMode));
         }
+
         public Builder instanceTag(@Nullable Output<String> instanceTag) {
-            this.instanceTag = instanceTag;
+            $.instanceTag = instanceTag;
             return this;
         }
-        public Builder instanceTag(@Nullable String instanceTag) {
-            this.instanceTag = Codegen.ofNullable(instanceTag);
-            return this;
+
+        public Builder instanceTag(String instanceTag) {
+            return instanceTag(Output.of(instanceTag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sessionAffinity(@Nullable Output<Boolean> sessionAffinity) {
-            this.sessionAffinity = sessionAffinity;
+            $.sessionAffinity = sessionAffinity;
             return this;
         }
-        public Builder sessionAffinity(@Nullable Boolean sessionAffinity) {
-            this.sessionAffinity = Codegen.ofNullable(sessionAffinity);
-            return this;
+
+        public Builder sessionAffinity(Boolean sessionAffinity) {
+            return sessionAffinity(Output.of(sessionAffinity));
         }
+
         public Builder subnetworkName(@Nullable Output<String> subnetworkName) {
-            this.subnetworkName = subnetworkName;
+            $.subnetworkName = subnetworkName;
             return this;
         }
-        public Builder subnetworkName(@Nullable String subnetworkName) {
-            this.subnetworkName = Codegen.ofNullable(subnetworkName);
-            return this;
-        }        public NetworkArgs build() {
-            return new NetworkArgs(forwardedPorts, instanceIpMode, instanceTag, name, sessionAffinity, subnetworkName);
+
+        public Builder subnetworkName(String subnetworkName) {
+            return subnetworkName(Output.of(subnetworkName));
+        }
+
+        public NetworkArgs build() {
+            return $;
         }
     }
+
 }

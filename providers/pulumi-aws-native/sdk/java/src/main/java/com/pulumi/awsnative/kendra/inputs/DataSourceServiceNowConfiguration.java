@@ -19,126 +19,112 @@ public final class DataSourceServiceNowConfiguration extends com.pulumi.resource
     public static final DataSourceServiceNowConfiguration Empty = new DataSourceServiceNowConfiguration();
 
     @Import(name="authenticationType")
-      private final @Nullable DataSourceServiceNowAuthenticationType authenticationType;
+    private @Nullable DataSourceServiceNowAuthenticationType authenticationType;
 
     public Optional<DataSourceServiceNowAuthenticationType> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     @Import(name="hostUrl", required=true)
-      private final String hostUrl;
+    private String hostUrl;
 
     public String hostUrl() {
         return this.hostUrl;
     }
 
     @Import(name="knowledgeArticleConfiguration")
-      private final @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration;
+    private @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration;
 
     public Optional<DataSourceServiceNowKnowledgeArticleConfiguration> knowledgeArticleConfiguration() {
-        return this.knowledgeArticleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.knowledgeArticleConfiguration);
+        return Optional.ofNullable(this.knowledgeArticleConfiguration);
     }
 
     @Import(name="secretArn", required=true)
-      private final String secretArn;
+    private String secretArn;
 
     public String secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serviceCatalogConfiguration")
-      private final @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
+    private @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
 
     public Optional<DataSourceServiceNowServiceCatalogConfiguration> serviceCatalogConfiguration() {
-        return this.serviceCatalogConfiguration == null ? Optional.empty() : Optional.ofNullable(this.serviceCatalogConfiguration);
+        return Optional.ofNullable(this.serviceCatalogConfiguration);
     }
 
     @Import(name="serviceNowBuildVersion", required=true)
-      private final DataSourceServiceNowBuildVersionType serviceNowBuildVersion;
+    private DataSourceServiceNowBuildVersionType serviceNowBuildVersion;
 
     public DataSourceServiceNowBuildVersionType serviceNowBuildVersion() {
         return this.serviceNowBuildVersion;
     }
 
-    public DataSourceServiceNowConfiguration(
-        @Nullable DataSourceServiceNowAuthenticationType authenticationType,
-        String hostUrl,
-        @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration,
-        String secretArn,
-        @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration,
-        DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
-        this.authenticationType = authenticationType;
-        this.hostUrl = Objects.requireNonNull(hostUrl, "expected parameter 'hostUrl' to be non-null");
-        this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-        this.serviceCatalogConfiguration = serviceCatalogConfiguration;
-        this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion, "expected parameter 'serviceNowBuildVersion' to be non-null");
-    }
+    private DataSourceServiceNowConfiguration() {}
 
-    private DataSourceServiceNowConfiguration() {
-        this.authenticationType = null;
-        this.hostUrl = null;
-        this.knowledgeArticleConfiguration = null;
-        this.secretArn = null;
-        this.serviceCatalogConfiguration = null;
-        this.serviceNowBuildVersion = null;
+    private DataSourceServiceNowConfiguration(DataSourceServiceNowConfiguration $) {
+        this.authenticationType = $.authenticationType;
+        this.hostUrl = $.hostUrl;
+        this.knowledgeArticleConfiguration = $.knowledgeArticleConfiguration;
+        this.secretArn = $.secretArn;
+        this.serviceCatalogConfiguration = $.serviceCatalogConfiguration;
+        this.serviceNowBuildVersion = $.serviceNowBuildVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceServiceNowConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataSourceServiceNowAuthenticationType authenticationType;
-        private String hostUrl;
-        private @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration;
-        private String secretArn;
-        private @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
-        private DataSourceServiceNowBuildVersionType serviceNowBuildVersion;
+        private DataSourceServiceNowConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceServiceNowConfiguration();
         }
 
         public Builder(DataSourceServiceNowConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.hostUrl = defaults.hostUrl;
-    	      this.knowledgeArticleConfiguration = defaults.knowledgeArticleConfiguration;
-    	      this.secretArn = defaults.secretArn;
-    	      this.serviceCatalogConfiguration = defaults.serviceCatalogConfiguration;
-    	      this.serviceNowBuildVersion = defaults.serviceNowBuildVersion;
+            $ = new DataSourceServiceNowConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder hostUrl(String hostUrl) {
-            this.hostUrl = Objects.requireNonNull(hostUrl);
+            $.hostUrl = hostUrl;
             return this;
         }
+
         public Builder knowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
-            this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
+            $.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder serviceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration) {
-            this.serviceCatalogConfiguration = serviceCatalogConfiguration;
+            $.serviceCatalogConfiguration = serviceCatalogConfiguration;
             return this;
         }
+
         public Builder serviceNowBuildVersion(DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
-            this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion);
+            $.serviceNowBuildVersion = serviceNowBuildVersion;
             return this;
-        }        public DataSourceServiceNowConfiguration build() {
-            return new DataSourceServiceNowConfiguration(authenticationType, hostUrl, knowledgeArticleConfiguration, secretArn, serviceCatalogConfiguration, serviceNowBuildVersion);
+        }
+
+        public DataSourceServiceNowConfiguration build() {
+            $.hostUrl = Objects.requireNonNull($.hostUrl, "expected parameter 'hostUrl' to be non-null");
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            $.serviceNowBuildVersion = Objects.requireNonNull($.serviceNowBuildVersion, "expected parameter 'serviceNowBuildVersion' to be non-null");
+            return $;
         }
     }
+
 }

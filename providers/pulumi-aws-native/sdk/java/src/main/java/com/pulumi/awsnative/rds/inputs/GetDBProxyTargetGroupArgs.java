@@ -17,45 +17,45 @@ public final class GetDBProxyTargetGroupArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="targetGroupArn", required=true)
-      private final String targetGroupArn;
+    private String targetGroupArn;
 
     public String targetGroupArn() {
         return this.targetGroupArn;
     }
 
-    public GetDBProxyTargetGroupArgs(String targetGroupArn) {
-        this.targetGroupArn = Objects.requireNonNull(targetGroupArn, "expected parameter 'targetGroupArn' to be non-null");
-    }
+    private GetDBProxyTargetGroupArgs() {}
 
-    private GetDBProxyTargetGroupArgs() {
-        this.targetGroupArn = null;
+    private GetDBProxyTargetGroupArgs(GetDBProxyTargetGroupArgs $) {
+        this.targetGroupArn = $.targetGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDBProxyTargetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String targetGroupArn;
+        private GetDBProxyTargetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDBProxyTargetGroupArgs();
         }
 
         public Builder(GetDBProxyTargetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetGroupArn = defaults.targetGroupArn;
+            $ = new GetDBProxyTargetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetGroupArn(String targetGroupArn) {
-            this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
+            $.targetGroupArn = targetGroupArn;
             return this;
-        }        public GetDBProxyTargetGroupArgs build() {
-            return new GetDBProxyTargetGroupArgs(targetGroupArn);
+        }
+
+        public GetDBProxyTargetGroupArgs build() {
+            $.targetGroupArn = Objects.requireNonNull($.targetGroupArn, "expected parameter 'targetGroupArn' to be non-null");
+            return $;
         }
     }
+
 }

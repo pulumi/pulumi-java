@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.enums.NodeTaintEffect;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NodeTaintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="effect")
-      private final @Nullable Output<NodeTaintEffect> effect;
+    private @Nullable Output<NodeTaintEffect> effect;
 
-    public Output<NodeTaintEffect> effect() {
-        return this.effect == null ? Codegen.empty() : this.effect;
+    public Optional<Output<NodeTaintEffect>> effect() {
+        return Optional.ofNullable(this.effect);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NodeTaintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class NodeTaintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public NodeTaintArgs(
-        @Nullable Output<NodeTaintEffect> effect,
-        @Nullable Output<String> key,
-        @Nullable Output<String> value) {
-        this.effect = effect;
-        this.key = key;
-        this.value = value;
-    }
+    private NodeTaintArgs() {}
 
-    private NodeTaintArgs() {
-        this.effect = Codegen.empty();
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private NodeTaintArgs(NodeTaintArgs $) {
+        this.effect = $.effect;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeTaintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodeTaintEffect> effect;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> value;
+        private NodeTaintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeTaintArgs();
         }
 
         public Builder(NodeTaintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effect = defaults.effect;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new NodeTaintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder effect(@Nullable Output<NodeTaintEffect> effect) {
-            this.effect = effect;
+            $.effect = effect;
             return this;
         }
-        public Builder effect(@Nullable NodeTaintEffect effect) {
-            this.effect = Codegen.ofNullable(effect);
-            return this;
+
+        public Builder effect(NodeTaintEffect effect) {
+            return effect(Output.of(effect));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public NodeTaintArgs build() {
-            return new NodeTaintArgs(effect, key, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public NodeTaintArgs build() {
+            return $;
         }
     }
+
 }

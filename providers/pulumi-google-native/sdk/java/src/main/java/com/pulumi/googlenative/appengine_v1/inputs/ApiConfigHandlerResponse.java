@@ -21,7 +21,7 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="authFailAction", required=true)
-      private final String authFailAction;
+    private String authFailAction;
 
     public String authFailAction() {
         return this.authFailAction;
@@ -32,7 +32,7 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="login", required=true)
-      private final String login;
+    private String login;
 
     public String login() {
         return this.login;
@@ -43,7 +43,7 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="script", required=true)
-      private final String script;
+    private String script;
 
     public String script() {
         return this.script;
@@ -54,7 +54,7 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="securityLevel", required=true)
-      private final String securityLevel;
+    private String securityLevel;
 
     public String securityLevel() {
         return this.securityLevel;
@@ -65,82 +65,73 @@ public final class ApiConfigHandlerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public ApiConfigHandlerResponse(
-        String authFailAction,
-        String login,
-        String script,
-        String securityLevel,
-        String url) {
-        this.authFailAction = Objects.requireNonNull(authFailAction, "expected parameter 'authFailAction' to be non-null");
-        this.login = Objects.requireNonNull(login, "expected parameter 'login' to be non-null");
-        this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
-        this.securityLevel = Objects.requireNonNull(securityLevel, "expected parameter 'securityLevel' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private ApiConfigHandlerResponse() {}
 
-    private ApiConfigHandlerResponse() {
-        this.authFailAction = null;
-        this.login = null;
-        this.script = null;
-        this.securityLevel = null;
-        this.url = null;
+    private ApiConfigHandlerResponse(ApiConfigHandlerResponse $) {
+        this.authFailAction = $.authFailAction;
+        this.login = $.login;
+        this.script = $.script;
+        this.securityLevel = $.securityLevel;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigHandlerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authFailAction;
-        private String login;
-        private String script;
-        private String securityLevel;
-        private String url;
+        private ApiConfigHandlerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigHandlerResponse();
         }
 
         public Builder(ApiConfigHandlerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authFailAction = defaults.authFailAction;
-    	      this.login = defaults.login;
-    	      this.script = defaults.script;
-    	      this.securityLevel = defaults.securityLevel;
-    	      this.url = defaults.url;
+            $ = new ApiConfigHandlerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authFailAction(String authFailAction) {
-            this.authFailAction = Objects.requireNonNull(authFailAction);
+            $.authFailAction = authFailAction;
             return this;
         }
+
         public Builder login(String login) {
-            this.login = Objects.requireNonNull(login);
+            $.login = login;
             return this;
         }
+
         public Builder script(String script) {
-            this.script = Objects.requireNonNull(script);
+            $.script = script;
             return this;
         }
+
         public Builder securityLevel(String securityLevel) {
-            this.securityLevel = Objects.requireNonNull(securityLevel);
+            $.securityLevel = securityLevel;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public ApiConfigHandlerResponse build() {
-            return new ApiConfigHandlerResponse(authFailAction, login, script, securityLevel, url);
+        }
+
+        public ApiConfigHandlerResponse build() {
+            $.authFailAction = Objects.requireNonNull($.authFailAction, "expected parameter 'authFailAction' to be non-null");
+            $.login = Objects.requireNonNull($.login, "expected parameter 'login' to be non-null");
+            $.script = Objects.requireNonNull($.script, "expected parameter 'script' to be non-null");
+            $.securityLevel = Objects.requireNonNull($.securityLevel, "expected parameter 'securityLevel' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

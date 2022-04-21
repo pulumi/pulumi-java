@@ -20,7 +20,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -31,7 +31,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
      * 
      */
     @Import(name="keyVault", required=true)
-      private final KeyVaultReference keyVault;
+    private KeyVaultReference keyVault;
 
     public KeyVaultReference keyVault() {
         return this.keyVault;
@@ -42,7 +42,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -53,73 +53,65 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
      * 
      */
     @Import(name="skipToken")
-      private final @Nullable String skipToken;
+    private @Nullable String skipToken;
 
     public Optional<String> skipToken() {
-        return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
+        return Optional.ofNullable(this.skipToken);
     }
 
-    public ListIntegrationAccountKeyVaultKeysArgs(
-        String integrationAccountName,
-        KeyVaultReference keyVault,
-        String resourceGroupName,
-        @Nullable String skipToken) {
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.keyVault = Objects.requireNonNull(keyVault, "expected parameter 'keyVault' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.skipToken = skipToken;
-    }
+    private ListIntegrationAccountKeyVaultKeysArgs() {}
 
-    private ListIntegrationAccountKeyVaultKeysArgs() {
-        this.integrationAccountName = null;
-        this.keyVault = null;
-        this.resourceGroupName = null;
-        this.skipToken = null;
+    private ListIntegrationAccountKeyVaultKeysArgs(ListIntegrationAccountKeyVaultKeysArgs $) {
+        this.integrationAccountName = $.integrationAccountName;
+        this.keyVault = $.keyVault;
+        this.resourceGroupName = $.resourceGroupName;
+        this.skipToken = $.skipToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListIntegrationAccountKeyVaultKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationAccountName;
-        private KeyVaultReference keyVault;
-        private String resourceGroupName;
-        private @Nullable String skipToken;
+        private ListIntegrationAccountKeyVaultKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListIntegrationAccountKeyVaultKeysArgs();
         }
 
         public Builder(ListIntegrationAccountKeyVaultKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.keyVault = defaults.keyVault;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.skipToken = defaults.skipToken;
+            $ = new ListIntegrationAccountKeyVaultKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder keyVault(KeyVaultReference keyVault) {
-            this.keyVault = Objects.requireNonNull(keyVault);
+            $.keyVault = keyVault;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder skipToken(@Nullable String skipToken) {
-            this.skipToken = skipToken;
+            $.skipToken = skipToken;
             return this;
-        }        public ListIntegrationAccountKeyVaultKeysArgs build() {
-            return new ListIntegrationAccountKeyVaultKeysArgs(integrationAccountName, keyVault, resourceGroupName, skipToken);
+        }
+
+        public ListIntegrationAccountKeyVaultKeysArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.keyVault = Objects.requireNonNull($.keyVault, "expected parameter 'keyVault' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

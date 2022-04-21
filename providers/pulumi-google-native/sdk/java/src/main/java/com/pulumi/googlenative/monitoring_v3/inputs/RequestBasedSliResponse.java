@@ -22,7 +22,7 @@ public final class RequestBasedSliResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="distributionCut", required=true)
-      private final DistributionCutResponse distributionCut;
+    private DistributionCutResponse distributionCut;
 
     public DistributionCutResponse distributionCut() {
         return this.distributionCut;
@@ -33,55 +33,52 @@ public final class RequestBasedSliResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="goodTotalRatio", required=true)
-      private final TimeSeriesRatioResponse goodTotalRatio;
+    private TimeSeriesRatioResponse goodTotalRatio;
 
     public TimeSeriesRatioResponse goodTotalRatio() {
         return this.goodTotalRatio;
     }
 
-    public RequestBasedSliResponse(
-        DistributionCutResponse distributionCut,
-        TimeSeriesRatioResponse goodTotalRatio) {
-        this.distributionCut = Objects.requireNonNull(distributionCut, "expected parameter 'distributionCut' to be non-null");
-        this.goodTotalRatio = Objects.requireNonNull(goodTotalRatio, "expected parameter 'goodTotalRatio' to be non-null");
-    }
+    private RequestBasedSliResponse() {}
 
-    private RequestBasedSliResponse() {
-        this.distributionCut = null;
-        this.goodTotalRatio = null;
+    private RequestBasedSliResponse(RequestBasedSliResponse $) {
+        this.distributionCut = $.distributionCut;
+        this.goodTotalRatio = $.goodTotalRatio;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestBasedSliResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DistributionCutResponse distributionCut;
-        private TimeSeriesRatioResponse goodTotalRatio;
+        private RequestBasedSliResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestBasedSliResponse();
         }
 
         public Builder(RequestBasedSliResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionCut = defaults.distributionCut;
-    	      this.goodTotalRatio = defaults.goodTotalRatio;
+            $ = new RequestBasedSliResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionCut(DistributionCutResponse distributionCut) {
-            this.distributionCut = Objects.requireNonNull(distributionCut);
+            $.distributionCut = distributionCut;
             return this;
         }
+
         public Builder goodTotalRatio(TimeSeriesRatioResponse goodTotalRatio) {
-            this.goodTotalRatio = Objects.requireNonNull(goodTotalRatio);
+            $.goodTotalRatio = goodTotalRatio;
             return this;
-        }        public RequestBasedSliResponse build() {
-            return new RequestBasedSliResponse(distributionCut, goodTotalRatio);
+        }
+
+        public RequestBasedSliResponse build() {
+            $.distributionCut = Objects.requireNonNull($.distributionCut, "expected parameter 'distributionCut' to be non-null");
+            $.goodTotalRatio = Objects.requireNonNull($.goodTotalRatio, "expected parameter 'goodTotalRatio' to be non-null");
+            return $;
         }
     }
+
 }

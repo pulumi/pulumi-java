@@ -36,10 +36,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Object bucketName;
+    private Object bucketName;
 
     public Object bucketName() {
         return this.bucketName;
@@ -58,10 +58,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compression")
-      private final @Nullable DatasetCompressionResponse compression;
+    private @Nullable DatasetCompressionResponse compression;
 
     public Optional<DatasetCompressionResponse> compression() {
-        return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
+        return Optional.ofNullable(this.compression);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="folder")
-      private final @Nullable DatasetResponseFolder folder;
+    private @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="format")
-      private final @Nullable Object format;
+    private @Nullable Object format;
 
-    public Object format() {
-        return this.format == null ? null : this.format;
+    public Optional<Object> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="key")
-      private final @Nullable Object key;
+    private @Nullable Object key;
 
     public Optional<Object> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -124,10 +124,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="modifiedDatetimeEnd")
-      private final @Nullable Object modifiedDatetimeEnd;
+    private @Nullable Object modifiedDatetimeEnd;
 
     public Optional<Object> modifiedDatetimeEnd() {
-        return this.modifiedDatetimeEnd == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeEnd);
+        return Optional.ofNullable(this.modifiedDatetimeEnd);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="modifiedDatetimeStart")
-      private final @Nullable Object modifiedDatetimeStart;
+    private @Nullable Object modifiedDatetimeStart;
 
     public Optional<Object> modifiedDatetimeStart() {
-        return this.modifiedDatetimeStart == null ? Optional.empty() : Optional.ofNullable(this.modifiedDatetimeStart);
+        return Optional.ofNullable(this.modifiedDatetimeStart);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Object prefix;
+    private @Nullable Object prefix;
 
     public Optional<Object> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="schema")
-      private final @Nullable Object schema;
+    private @Nullable Object schema;
 
     public Optional<Object> schema() {
-        return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="structure")
-      private final @Nullable Object structure;
+    private @Nullable Object structure;
 
     public Optional<Object> structure() {
-        return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -191,7 +191,7 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -202,184 +202,141 @@ public final class AmazonS3DatasetResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version")
-      private final @Nullable Object version;
+    private @Nullable Object version;
 
     public Optional<Object> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public AmazonS3DatasetResponse(
-        @Nullable List<Object> annotations,
-        Object bucketName,
-        @Nullable DatasetCompressionResponse compression,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        @Nullable Object format,
-        @Nullable Object key,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object modifiedDatetimeEnd,
-        @Nullable Object modifiedDatetimeStart,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object prefix,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type,
-        @Nullable Object version) {
-        this.annotations = annotations;
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.compression = compression;
-        this.description = description;
-        this.folder = folder;
-        this.format = format;
-        this.key = key;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.modifiedDatetimeEnd = modifiedDatetimeEnd;
-        this.modifiedDatetimeStart = modifiedDatetimeStart;
-        this.parameters = parameters;
-        this.prefix = prefix;
-        this.schema = schema;
-        this.structure = structure;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.version = version;
-    }
+    private AmazonS3DatasetResponse() {}
 
-    private AmazonS3DatasetResponse() {
-        this.annotations = List.of();
-        this.bucketName = null;
-        this.compression = null;
-        this.description = null;
-        this.folder = null;
-        this.format = null;
-        this.key = null;
-        this.linkedServiceName = null;
-        this.modifiedDatetimeEnd = null;
-        this.modifiedDatetimeStart = null;
-        this.parameters = Map.of();
-        this.prefix = null;
-        this.schema = null;
-        this.structure = null;
-        this.type = null;
-        this.version = null;
+    private AmazonS3DatasetResponse(AmazonS3DatasetResponse $) {
+        this.annotations = $.annotations;
+        this.bucketName = $.bucketName;
+        this.compression = $.compression;
+        this.description = $.description;
+        this.folder = $.folder;
+        this.format = $.format;
+        this.key = $.key;
+        this.linkedServiceName = $.linkedServiceName;
+        this.modifiedDatetimeEnd = $.modifiedDatetimeEnd;
+        this.modifiedDatetimeStart = $.modifiedDatetimeStart;
+        this.parameters = $.parameters;
+        this.prefix = $.prefix;
+        this.schema = $.schema;
+        this.structure = $.structure;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmazonS3DatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private Object bucketName;
-        private @Nullable DatasetCompressionResponse compression;
-        private @Nullable String description;
-        private @Nullable DatasetResponseFolder folder;
-        private @Nullable Object format;
-        private @Nullable Object key;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Object modifiedDatetimeEnd;
-        private @Nullable Object modifiedDatetimeStart;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object prefix;
-        private @Nullable Object schema;
-        private @Nullable Object structure;
-        private String type;
-        private @Nullable Object version;
+        private AmazonS3DatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmazonS3DatasetResponse();
         }
 
         public Builder(AmazonS3DatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.bucketName = defaults.bucketName;
-    	      this.compression = defaults.compression;
-    	      this.description = defaults.description;
-    	      this.folder = defaults.folder;
-    	      this.format = defaults.format;
-    	      this.key = defaults.key;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.modifiedDatetimeEnd = defaults.modifiedDatetimeEnd;
-    	      this.modifiedDatetimeStart = defaults.modifiedDatetimeStart;
-    	      this.parameters = defaults.parameters;
-    	      this.prefix = defaults.prefix;
-    	      this.schema = defaults.schema;
-    	      this.structure = defaults.structure;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new AmazonS3DatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder bucketName(Object bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder compression(@Nullable DatasetCompressionResponse compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder folder(@Nullable DatasetResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder format(@Nullable Object format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder key(@Nullable Object key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = modifiedDatetimeEnd;
+            $.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
+
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = modifiedDatetimeStart;
+            $.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder prefix(@Nullable Object prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder schema(@Nullable Object schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
+
         public Builder structure(@Nullable Object structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder version(@Nullable Object version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public AmazonS3DatasetResponse build() {
-            return new AmazonS3DatasetResponse(annotations, bucketName, compression, description, folder, format, key, linkedServiceName, modifiedDatetimeEnd, modifiedDatetimeStart, parameters, prefix, schema, structure, type, version);
+        }
+
+        public AmazonS3DatasetResponse build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

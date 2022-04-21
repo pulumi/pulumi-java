@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkGroupName", required=true)
-      private final Output<String> networkGroupName;
+    private Output<String> networkGroupName;
 
     public Output<String> networkGroupName() {
         return this.networkGroupName;
@@ -31,7 +31,7 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final Output<String> networkManagerName;
+    private Output<String> networkManagerName;
 
     public Output<String> networkManagerName() {
         return this.networkManagerName;
@@ -42,7 +42,7 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,10 +53,10 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -64,102 +64,91 @@ public final class StaticMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="staticMemberName")
-      private final @Nullable Output<String> staticMemberName;
+    private @Nullable Output<String> staticMemberName;
 
-    public Output<String> staticMemberName() {
-        return this.staticMemberName == null ? Codegen.empty() : this.staticMemberName;
+    public Optional<Output<String>> staticMemberName() {
+        return Optional.ofNullable(this.staticMemberName);
     }
 
-    public StaticMemberArgs(
-        Output<String> networkGroupName,
-        Output<String> networkManagerName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> staticMemberName) {
-        this.networkGroupName = Objects.requireNonNull(networkGroupName, "expected parameter 'networkGroupName' to be non-null");
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceId = resourceId;
-        this.staticMemberName = staticMemberName;
-    }
+    private StaticMemberArgs() {}
 
-    private StaticMemberArgs() {
-        this.networkGroupName = Codegen.empty();
-        this.networkManagerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.staticMemberName = Codegen.empty();
+    private StaticMemberArgs(StaticMemberArgs $) {
+        this.networkGroupName = $.networkGroupName;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceId = $.resourceId;
+        this.staticMemberName = $.staticMemberName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> networkGroupName;
-        private Output<String> networkManagerName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> staticMemberName;
+        private StaticMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticMemberArgs();
         }
 
         public Builder(StaticMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkGroupName = defaults.networkGroupName;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.staticMemberName = defaults.staticMemberName;
+            $ = new StaticMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkGroupName(Output<String> networkGroupName) {
-            this.networkGroupName = Objects.requireNonNull(networkGroupName);
+            $.networkGroupName = networkGroupName;
             return this;
         }
+
         public Builder networkGroupName(String networkGroupName) {
-            this.networkGroupName = Output.of(Objects.requireNonNull(networkGroupName));
-            return this;
+            return networkGroupName(Output.of(networkGroupName));
         }
+
         public Builder networkManagerName(Output<String> networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
-            return this;
+            return networkManagerName(Output.of(networkManagerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder staticMemberName(@Nullable Output<String> staticMemberName) {
-            this.staticMemberName = staticMemberName;
+            $.staticMemberName = staticMemberName;
             return this;
         }
-        public Builder staticMemberName(@Nullable String staticMemberName) {
-            this.staticMemberName = Codegen.ofNullable(staticMemberName);
-            return this;
-        }        public StaticMemberArgs build() {
-            return new StaticMemberArgs(networkGroupName, networkManagerName, resourceGroupName, resourceId, staticMemberName);
+
+        public Builder staticMemberName(String staticMemberName) {
+            return staticMemberName(Output.of(staticMemberName));
+        }
+
+        public StaticMemberArgs build() {
+            $.networkGroupName = Objects.requireNonNull($.networkGroupName, "expected parameter 'networkGroupName' to be non-null");
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

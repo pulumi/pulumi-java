@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs Empty = new WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs();
 
-    public WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs();
         }
         public WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs build() {
-            return new WebAclRuleStatementOrStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyArgs();
+            return $;
         }
     }
+
 }

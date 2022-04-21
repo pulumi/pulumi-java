@@ -7,8 +7,8 @@ import com.pulumi.awsnative.quicksight.inputs.ThemeTileLayoutStyleArgs;
 import com.pulumi.awsnative.quicksight.inputs.ThemeTileStyleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class ThemeSheetStyleArgs extends com.pulumi.resources.ResourceArgs
     public static final ThemeSheetStyleArgs Empty = new ThemeSheetStyleArgs();
 
     @Import(name="tile")
-      private final @Nullable Output<ThemeTileStyleArgs> tile;
+    private @Nullable Output<ThemeTileStyleArgs> tile;
 
-    public Output<ThemeTileStyleArgs> tile() {
-        return this.tile == null ? Codegen.empty() : this.tile;
+    public Optional<Output<ThemeTileStyleArgs>> tile() {
+        return Optional.ofNullable(this.tile);
     }
 
     @Import(name="tileLayout")
-      private final @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout;
+    private @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout;
 
-    public Output<ThemeTileLayoutStyleArgs> tileLayout() {
-        return this.tileLayout == null ? Codegen.empty() : this.tileLayout;
+    public Optional<Output<ThemeTileLayoutStyleArgs>> tileLayout() {
+        return Optional.ofNullable(this.tileLayout);
     }
 
-    public ThemeSheetStyleArgs(
-        @Nullable Output<ThemeTileStyleArgs> tile,
-        @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout) {
-        this.tile = tile;
-        this.tileLayout = tileLayout;
-    }
+    private ThemeSheetStyleArgs() {}
 
-    private ThemeSheetStyleArgs() {
-        this.tile = Codegen.empty();
-        this.tileLayout = Codegen.empty();
+    private ThemeSheetStyleArgs(ThemeSheetStyleArgs $) {
+        this.tile = $.tile;
+        this.tileLayout = $.tileLayout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeSheetStyleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ThemeTileStyleArgs> tile;
-        private @Nullable Output<ThemeTileLayoutStyleArgs> tileLayout;
+        private ThemeSheetStyleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeSheetStyleArgs();
         }
 
         public Builder(ThemeSheetStyleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tile = defaults.tile;
-    	      this.tileLayout = defaults.tileLayout;
+            $ = new ThemeSheetStyleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tile(@Nullable Output<ThemeTileStyleArgs> tile) {
-            this.tile = tile;
+            $.tile = tile;
             return this;
         }
-        public Builder tile(@Nullable ThemeTileStyleArgs tile) {
-            this.tile = Codegen.ofNullable(tile);
-            return this;
+
+        public Builder tile(ThemeTileStyleArgs tile) {
+            return tile(Output.of(tile));
         }
+
         public Builder tileLayout(@Nullable Output<ThemeTileLayoutStyleArgs> tileLayout) {
-            this.tileLayout = tileLayout;
+            $.tileLayout = tileLayout;
             return this;
         }
-        public Builder tileLayout(@Nullable ThemeTileLayoutStyleArgs tileLayout) {
-            this.tileLayout = Codegen.ofNullable(tileLayout);
-            return this;
-        }        public ThemeSheetStyleArgs build() {
-            return new ThemeSheetStyleArgs(tile, tileLayout);
+
+        public Builder tileLayout(ThemeTileLayoutStyleArgs tileLayout) {
+            return tileLayout(Output.of(tileLayout));
+        }
+
+        public ThemeSheetStyleArgs build() {
+            return $;
         }
     }
+
 }

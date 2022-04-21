@@ -5,9 +5,9 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TimeZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class TimeZoneArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public TimeZoneArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> version) {
-        this.id = id;
-        this.version = version;
-    }
+    private TimeZoneArgs() {}
 
-    private TimeZoneArgs() {
-        this.id = Codegen.empty();
-        this.version = Codegen.empty();
+    private TimeZoneArgs(TimeZoneArgs $) {
+        this.id = $.id;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> version;
+        private TimeZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeZoneArgs();
         }
 
         public Builder(TimeZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.version = defaults.version;
+            $ = new TimeZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public TimeZoneArgs build() {
-            return new TimeZoneArgs(id, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public TimeZoneArgs build() {
+            return $;
         }
     }
+
 }

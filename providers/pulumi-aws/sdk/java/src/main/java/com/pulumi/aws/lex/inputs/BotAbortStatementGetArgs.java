@@ -6,10 +6,10 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.BotAbortStatementMessageGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class BotAbortStatementGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="messages", required=true)
-      private final Output<List<BotAbortStatementMessageGetArgs>> messages;
+    private Output<List<BotAbortStatementMessageGetArgs>> messages;
 
     public Output<List<BotAbortStatementMessageGetArgs>> messages() {
         return this.messages;
@@ -37,66 +37,63 @@ public final class BotAbortStatementGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="responseCard")
-      private final @Nullable Output<String> responseCard;
+    private @Nullable Output<String> responseCard;
 
-    public Output<String> responseCard() {
-        return this.responseCard == null ? Codegen.empty() : this.responseCard;
+    public Optional<Output<String>> responseCard() {
+        return Optional.ofNullable(this.responseCard);
     }
 
-    public BotAbortStatementGetArgs(
-        Output<List<BotAbortStatementMessageGetArgs>> messages,
-        @Nullable Output<String> responseCard) {
-        this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
-        this.responseCard = responseCard;
-    }
+    private BotAbortStatementGetArgs() {}
 
-    private BotAbortStatementGetArgs() {
-        this.messages = Codegen.empty();
-        this.responseCard = Codegen.empty();
+    private BotAbortStatementGetArgs(BotAbortStatementGetArgs $) {
+        this.messages = $.messages;
+        this.responseCard = $.responseCard;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAbortStatementGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<BotAbortStatementMessageGetArgs>> messages;
-        private @Nullable Output<String> responseCard;
+        private BotAbortStatementGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAbortStatementGetArgs();
         }
 
         public Builder(BotAbortStatementGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messages = defaults.messages;
-    	      this.responseCard = defaults.responseCard;
+            $ = new BotAbortStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messages(Output<List<BotAbortStatementMessageGetArgs>> messages) {
-            this.messages = Objects.requireNonNull(messages);
+            $.messages = messages;
             return this;
         }
+
         public Builder messages(List<BotAbortStatementMessageGetArgs> messages) {
-            this.messages = Output.of(Objects.requireNonNull(messages));
-            return this;
+            return messages(Output.of(messages));
         }
+
         public Builder messages(BotAbortStatementMessageGetArgs... messages) {
             return messages(List.of(messages));
         }
+
         public Builder responseCard(@Nullable Output<String> responseCard) {
-            this.responseCard = responseCard;
+            $.responseCard = responseCard;
             return this;
         }
-        public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Codegen.ofNullable(responseCard);
-            return this;
-        }        public BotAbortStatementGetArgs build() {
-            return new BotAbortStatementGetArgs(messages, responseCard);
+
+        public Builder responseCard(String responseCard) {
+            return responseCard(Output.of(responseCard));
+        }
+
+        public BotAbortStatementGetArgs build() {
+            $.messages = Objects.requireNonNull($.messages, "expected parameter 'messages' to be non-null");
+            return $;
         }
     }
+
 }

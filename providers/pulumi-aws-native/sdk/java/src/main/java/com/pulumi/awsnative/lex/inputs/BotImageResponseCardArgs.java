@@ -6,10 +6,10 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotButtonArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="buttons")
-      private final @Nullable Output<List<BotButtonArgs>> buttons;
+    private @Nullable Output<List<BotButtonArgs>> buttons;
 
-    public Output<List<BotButtonArgs>> buttons() {
-        return this.buttons == null ? Codegen.empty() : this.buttons;
+    public Optional<Output<List<BotButtonArgs>>> buttons() {
+        return Optional.ofNullable(this.buttons);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="imageUrl")
-      private final @Nullable Output<String> imageUrl;
+    private @Nullable Output<String> imageUrl;
 
-    public Output<String> imageUrl() {
-        return this.imageUrl == null ? Codegen.empty() : this.imageUrl;
+    public Optional<Output<String>> imageUrl() {
+        return Optional.ofNullable(this.imageUrl);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subtitle")
-      private final @Nullable Output<String> subtitle;
+    private @Nullable Output<String> subtitle;
 
-    public Output<String> subtitle() {
-        return this.subtitle == null ? Codegen.empty() : this.subtitle;
+    public Optional<Output<String>> subtitle() {
+        return Optional.ofNullable(this.subtitle);
     }
 
     /**
@@ -59,92 +59,83 @@ public final class BotImageResponseCardArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public BotImageResponseCardArgs(
-        @Nullable Output<List<BotButtonArgs>> buttons,
-        @Nullable Output<String> imageUrl,
-        @Nullable Output<String> subtitle,
-        Output<String> title) {
-        this.buttons = buttons;
-        this.imageUrl = imageUrl;
-        this.subtitle = subtitle;
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private BotImageResponseCardArgs() {}
 
-    private BotImageResponseCardArgs() {
-        this.buttons = Codegen.empty();
-        this.imageUrl = Codegen.empty();
-        this.subtitle = Codegen.empty();
-        this.title = Codegen.empty();
+    private BotImageResponseCardArgs(BotImageResponseCardArgs $) {
+        this.buttons = $.buttons;
+        this.imageUrl = $.imageUrl;
+        this.subtitle = $.subtitle;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotImageResponseCardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BotButtonArgs>> buttons;
-        private @Nullable Output<String> imageUrl;
-        private @Nullable Output<String> subtitle;
-        private Output<String> title;
+        private BotImageResponseCardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotImageResponseCardArgs();
         }
 
         public Builder(BotImageResponseCardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buttons = defaults.buttons;
-    	      this.imageUrl = defaults.imageUrl;
-    	      this.subtitle = defaults.subtitle;
-    	      this.title = defaults.title;
+            $ = new BotImageResponseCardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buttons(@Nullable Output<List<BotButtonArgs>> buttons) {
-            this.buttons = buttons;
+            $.buttons = buttons;
             return this;
         }
-        public Builder buttons(@Nullable List<BotButtonArgs> buttons) {
-            this.buttons = Codegen.ofNullable(buttons);
-            return this;
+
+        public Builder buttons(List<BotButtonArgs> buttons) {
+            return buttons(Output.of(buttons));
         }
+
         public Builder buttons(BotButtonArgs... buttons) {
             return buttons(List.of(buttons));
         }
+
         public Builder imageUrl(@Nullable Output<String> imageUrl) {
-            this.imageUrl = imageUrl;
+            $.imageUrl = imageUrl;
             return this;
         }
-        public Builder imageUrl(@Nullable String imageUrl) {
-            this.imageUrl = Codegen.ofNullable(imageUrl);
-            return this;
+
+        public Builder imageUrl(String imageUrl) {
+            return imageUrl(Output.of(imageUrl));
         }
+
         public Builder subtitle(@Nullable Output<String> subtitle) {
-            this.subtitle = subtitle;
+            $.subtitle = subtitle;
             return this;
         }
-        public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Codegen.ofNullable(subtitle);
-            return this;
+
+        public Builder subtitle(String subtitle) {
+            return subtitle(Output.of(subtitle));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public BotImageResponseCardArgs build() {
-            return new BotImageResponseCardArgs(buttons, imageUrl, subtitle, title);
+            return title(Output.of(title));
+        }
+
+        public BotImageResponseCardArgs build() {
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

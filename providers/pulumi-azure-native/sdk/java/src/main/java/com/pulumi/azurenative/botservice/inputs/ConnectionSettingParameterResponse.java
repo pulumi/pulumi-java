@@ -23,10 +23,10 @@ public final class ConnectionSettingParameterResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ConnectionSettingParameterResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ConnectionSettingParameterResponse(
-        @Nullable String key,
-        @Nullable String value) {
-        this.key = key;
-        this.value = value;
-    }
+    private ConnectionSettingParameterResponse() {}
 
-    private ConnectionSettingParameterResponse() {
-        this.key = null;
-        this.value = null;
+    private ConnectionSettingParameterResponse(ConnectionSettingParameterResponse $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionSettingParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private @Nullable String value;
+        private ConnectionSettingParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionSettingParameterResponse();
         }
 
         public Builder(ConnectionSettingParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ConnectionSettingParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ConnectionSettingParameterResponse build() {
-            return new ConnectionSettingParameterResponse(key, value);
+        }
+
+        public ConnectionSettingParameterResponse build() {
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -30,10 +30,10 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localeCode")
-      private final @Nullable String localeCode;
+    private @Nullable String localeCode;
 
     public Optional<String> localeCode() {
-        return this.localeCode == null ? Optional.empty() : Optional.ofNullable(this.localeCode);
+        return Optional.ofNullable(this.localeCode);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -52,73 +52,65 @@ public final class GetProfileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetProfileArgs(
-        String hubName,
-        @Nullable String localeCode,
-        String profileName,
-        String resourceGroupName) {
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.localeCode = localeCode;
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetProfileArgs() {}
 
-    private GetProfileArgs() {
-        this.hubName = null;
-        this.localeCode = null;
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetProfileArgs(GetProfileArgs $) {
+        this.hubName = $.hubName;
+        this.localeCode = $.localeCode;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hubName;
-        private @Nullable String localeCode;
-        private String profileName;
-        private String resourceGroupName;
+        private GetProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProfileArgs();
         }
 
         public Builder(GetProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubName = defaults.hubName;
-    	      this.localeCode = defaults.localeCode;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder localeCode(@Nullable String localeCode) {
-            this.localeCode = localeCode;
+            $.localeCode = localeCode;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetProfileArgs build() {
-            return new GetProfileArgs(hubName, localeCode, profileName, resourceGroupName);
+        }
+
+        public GetProfileArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

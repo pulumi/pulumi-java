@@ -6,7 +6,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorCustomPluginArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ConnectorPluginArgs extends com.pulumi.resources.ResourceArgs
     public static final ConnectorPluginArgs Empty = new ConnectorPluginArgs();
 
     @Import(name="customPlugin", required=true)
-      private final Output<ConnectorCustomPluginArgs> customPlugin;
+    private Output<ConnectorCustomPluginArgs> customPlugin;
 
     public Output<ConnectorCustomPluginArgs> customPlugin() {
         return this.customPlugin;
     }
 
-    public ConnectorPluginArgs(Output<ConnectorCustomPluginArgs> customPlugin) {
-        this.customPlugin = Objects.requireNonNull(customPlugin, "expected parameter 'customPlugin' to be non-null");
-    }
+    private ConnectorPluginArgs() {}
 
-    private ConnectorPluginArgs() {
-        this.customPlugin = Codegen.empty();
+    private ConnectorPluginArgs(ConnectorPluginArgs $) {
+        this.customPlugin = $.customPlugin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorPluginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectorCustomPluginArgs> customPlugin;
+        private ConnectorPluginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorPluginArgs();
         }
 
         public Builder(ConnectorPluginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customPlugin = defaults.customPlugin;
+            $ = new ConnectorPluginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customPlugin(Output<ConnectorCustomPluginArgs> customPlugin) {
-            this.customPlugin = Objects.requireNonNull(customPlugin);
+            $.customPlugin = customPlugin;
             return this;
         }
+
         public Builder customPlugin(ConnectorCustomPluginArgs customPlugin) {
-            this.customPlugin = Output.of(Objects.requireNonNull(customPlugin));
-            return this;
-        }        public ConnectorPluginArgs build() {
-            return new ConnectorPluginArgs(customPlugin);
+            return customPlugin(Output.of(customPlugin));
+        }
+
+        public ConnectorPluginArgs build() {
+            $.customPlugin = Objects.requireNonNull($.customPlugin, "expected parameter 'customPlugin' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,78 +21,71 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="serverSideEncryption")
-      private final @Nullable GetTableServerSideEncryption serverSideEncryption;
+    private @Nullable GetTableServerSideEncryption serverSideEncryption;
 
     public Optional<GetTableServerSideEncryption> serverSideEncryption() {
-        return this.serverSideEncryption == null ? Optional.empty() : Optional.ofNullable(this.serverSideEncryption);
+        return Optional.ofNullable(this.serverSideEncryption);
     }
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetTableArgs(
-        String name,
-        @Nullable GetTableServerSideEncryption serverSideEncryption,
-        @Nullable Map<String,String> tags) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.serverSideEncryption = serverSideEncryption;
-        this.tags = tags;
-    }
+    private GetTableArgs() {}
 
-    private GetTableArgs() {
-        this.name = null;
-        this.serverSideEncryption = null;
-        this.tags = Map.of();
+    private GetTableArgs(GetTableArgs $) {
+        this.name = $.name;
+        this.serverSideEncryption = $.serverSideEncryption;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable GetTableServerSideEncryption serverSideEncryption;
-        private @Nullable Map<String,String> tags;
+        private GetTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTableArgs();
         }
 
         public Builder(GetTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.serverSideEncryption = defaults.serverSideEncryption;
-    	      this.tags = defaults.tags;
+            $ = new GetTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder serverSideEncryption(@Nullable GetTableServerSideEncryption serverSideEncryption) {
-            this.serverSideEncryption = serverSideEncryption;
+            $.serverSideEncryption = serverSideEncryption;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetTableArgs build() {
-            return new GetTableArgs(name, serverSideEncryption, tags);
+        }
+
+        public GetTableArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

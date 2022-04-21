@@ -12,6 +12,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bitLockerKey")
-      private final @Nullable Output<String> bitLockerKey;
+    private @Nullable Output<String> bitLockerKey;
 
-    public Output<String> bitLockerKey() {
-        return this.bitLockerKey == null ? Codegen.empty() : this.bitLockerKey;
+    public Optional<Output<String>> bitLockerKey() {
+        return Optional.ofNullable(this.bitLockerKey);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bytesSucceeded")
-      private final @Nullable Output<Double> bytesSucceeded;
+    private @Nullable Output<Double> bytesSucceeded;
 
-    public Output<Double> bytesSucceeded() {
-        return this.bytesSucceeded == null ? Codegen.empty() : this.bytesSucceeded;
+    public Optional<Output<Double>> bytesSucceeded() {
+        return Optional.ofNullable(this.bytesSucceeded);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="copyStatus")
-      private final @Nullable Output<String> copyStatus;
+    private @Nullable Output<String> copyStatus;
 
-    public Output<String> copyStatus() {
-        return this.copyStatus == null ? Codegen.empty() : this.copyStatus;
+    public Optional<Output<String>> copyStatus() {
+        return Optional.ofNullable(this.copyStatus);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="driveHeaderHash")
-      private final @Nullable Output<String> driveHeaderHash;
+    private @Nullable Output<String> driveHeaderHash;
 
-    public Output<String> driveHeaderHash() {
-        return this.driveHeaderHash == null ? Codegen.empty() : this.driveHeaderHash;
+    public Optional<Output<String>> driveHeaderHash() {
+        return Optional.ofNullable(this.driveHeaderHash);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="driveId")
-      private final @Nullable Output<String> driveId;
+    private @Nullable Output<String> driveId;
 
-    public Output<String> driveId() {
-        return this.driveId == null ? Codegen.empty() : this.driveId;
+    public Optional<Output<String>> driveId() {
+        return Optional.ofNullable(this.driveId);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="errorLogUri")
-      private final @Nullable Output<String> errorLogUri;
+    private @Nullable Output<String> errorLogUri;
 
-    public Output<String> errorLogUri() {
-        return this.errorLogUri == null ? Codegen.empty() : this.errorLogUri;
+    public Optional<Output<String>> errorLogUri() {
+        return Optional.ofNullable(this.errorLogUri);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manifestFile")
-      private final @Nullable Output<String> manifestFile;
+    private @Nullable Output<String> manifestFile;
 
-    public Output<String> manifestFile() {
-        return this.manifestFile == null ? Codegen.empty() : this.manifestFile;
+    public Optional<Output<String>> manifestFile() {
+        return Optional.ofNullable(this.manifestFile);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manifestHash")
-      private final @Nullable Output<String> manifestHash;
+    private @Nullable Output<String> manifestHash;
 
-    public Output<String> manifestHash() {
-        return this.manifestHash == null ? Codegen.empty() : this.manifestHash;
+    public Optional<Output<String>> manifestHash() {
+        return Optional.ofNullable(this.manifestHash);
     }
 
     /**
@@ -116,10 +117,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manifestUri")
-      private final @Nullable Output<String> manifestUri;
+    private @Nullable Output<String> manifestUri;
 
-    public Output<String> manifestUri() {
-        return this.manifestUri == null ? Codegen.empty() : this.manifestUri;
+    public Optional<Output<String>> manifestUri() {
+        return Optional.ofNullable(this.manifestUri);
     }
 
     /**
@@ -127,10 +128,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="percentComplete")
-      private final @Nullable Output<Integer> percentComplete;
+    private @Nullable Output<Integer> percentComplete;
 
-    public Output<Integer> percentComplete() {
-        return this.percentComplete == null ? Codegen.empty() : this.percentComplete;
+    public Optional<Output<Integer>> percentComplete() {
+        return Optional.ofNullable(this.percentComplete);
     }
 
     /**
@@ -138,10 +139,10 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,DriveState>> state;
+    private @Nullable Output<Either<String,DriveState>> state;
 
-    public Output<Either<String,DriveState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,DriveState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -149,193 +150,159 @@ public final class DriveStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="verboseLogUri")
-      private final @Nullable Output<String> verboseLogUri;
+    private @Nullable Output<String> verboseLogUri;
 
-    public Output<String> verboseLogUri() {
-        return this.verboseLogUri == null ? Codegen.empty() : this.verboseLogUri;
+    public Optional<Output<String>> verboseLogUri() {
+        return Optional.ofNullable(this.verboseLogUri);
     }
 
-    public DriveStatusArgs(
-        @Nullable Output<String> bitLockerKey,
-        @Nullable Output<Double> bytesSucceeded,
-        @Nullable Output<String> copyStatus,
-        @Nullable Output<String> driveHeaderHash,
-        @Nullable Output<String> driveId,
-        @Nullable Output<String> errorLogUri,
-        @Nullable Output<String> manifestFile,
-        @Nullable Output<String> manifestHash,
-        @Nullable Output<String> manifestUri,
-        @Nullable Output<Integer> percentComplete,
-        @Nullable Output<Either<String,DriveState>> state,
-        @Nullable Output<String> verboseLogUri) {
-        this.bitLockerKey = bitLockerKey;
-        this.bytesSucceeded = bytesSucceeded;
-        this.copyStatus = copyStatus;
-        this.driveHeaderHash = driveHeaderHash;
-        this.driveId = driveId;
-        this.errorLogUri = errorLogUri;
-        this.manifestFile = manifestFile;
-        this.manifestHash = manifestHash;
-        this.manifestUri = manifestUri;
-        this.percentComplete = percentComplete;
-        this.state = Codegen.stringProp("state").left(DriveState.class).output().arg(state).def("Specified").getNullable();
-        this.verboseLogUri = verboseLogUri;
-    }
+    private DriveStatusArgs() {}
 
-    private DriveStatusArgs() {
-        this.bitLockerKey = Codegen.empty();
-        this.bytesSucceeded = Codegen.empty();
-        this.copyStatus = Codegen.empty();
-        this.driveHeaderHash = Codegen.empty();
-        this.driveId = Codegen.empty();
-        this.errorLogUri = Codegen.empty();
-        this.manifestFile = Codegen.empty();
-        this.manifestHash = Codegen.empty();
-        this.manifestUri = Codegen.empty();
-        this.percentComplete = Codegen.empty();
-        this.state = Codegen.empty();
-        this.verboseLogUri = Codegen.empty();
+    private DriveStatusArgs(DriveStatusArgs $) {
+        this.bitLockerKey = $.bitLockerKey;
+        this.bytesSucceeded = $.bytesSucceeded;
+        this.copyStatus = $.copyStatus;
+        this.driveHeaderHash = $.driveHeaderHash;
+        this.driveId = $.driveId;
+        this.errorLogUri = $.errorLogUri;
+        this.manifestFile = $.manifestFile;
+        this.manifestHash = $.manifestHash;
+        this.manifestUri = $.manifestUri;
+        this.percentComplete = $.percentComplete;
+        this.state = $.state;
+        this.verboseLogUri = $.verboseLogUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DriveStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bitLockerKey;
-        private @Nullable Output<Double> bytesSucceeded;
-        private @Nullable Output<String> copyStatus;
-        private @Nullable Output<String> driveHeaderHash;
-        private @Nullable Output<String> driveId;
-        private @Nullable Output<String> errorLogUri;
-        private @Nullable Output<String> manifestFile;
-        private @Nullable Output<String> manifestHash;
-        private @Nullable Output<String> manifestUri;
-        private @Nullable Output<Integer> percentComplete;
-        private @Nullable Output<Either<String,DriveState>> state;
-        private @Nullable Output<String> verboseLogUri;
+        private DriveStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DriveStatusArgs();
         }
 
         public Builder(DriveStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitLockerKey = defaults.bitLockerKey;
-    	      this.bytesSucceeded = defaults.bytesSucceeded;
-    	      this.copyStatus = defaults.copyStatus;
-    	      this.driveHeaderHash = defaults.driveHeaderHash;
-    	      this.driveId = defaults.driveId;
-    	      this.errorLogUri = defaults.errorLogUri;
-    	      this.manifestFile = defaults.manifestFile;
-    	      this.manifestHash = defaults.manifestHash;
-    	      this.manifestUri = defaults.manifestUri;
-    	      this.percentComplete = defaults.percentComplete;
-    	      this.state = defaults.state;
-    	      this.verboseLogUri = defaults.verboseLogUri;
+            $ = new DriveStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bitLockerKey(@Nullable Output<String> bitLockerKey) {
-            this.bitLockerKey = bitLockerKey;
+            $.bitLockerKey = bitLockerKey;
             return this;
         }
-        public Builder bitLockerKey(@Nullable String bitLockerKey) {
-            this.bitLockerKey = Codegen.ofNullable(bitLockerKey);
-            return this;
+
+        public Builder bitLockerKey(String bitLockerKey) {
+            return bitLockerKey(Output.of(bitLockerKey));
         }
+
         public Builder bytesSucceeded(@Nullable Output<Double> bytesSucceeded) {
-            this.bytesSucceeded = bytesSucceeded;
+            $.bytesSucceeded = bytesSucceeded;
             return this;
         }
-        public Builder bytesSucceeded(@Nullable Double bytesSucceeded) {
-            this.bytesSucceeded = Codegen.ofNullable(bytesSucceeded);
-            return this;
+
+        public Builder bytesSucceeded(Double bytesSucceeded) {
+            return bytesSucceeded(Output.of(bytesSucceeded));
         }
+
         public Builder copyStatus(@Nullable Output<String> copyStatus) {
-            this.copyStatus = copyStatus;
+            $.copyStatus = copyStatus;
             return this;
         }
-        public Builder copyStatus(@Nullable String copyStatus) {
-            this.copyStatus = Codegen.ofNullable(copyStatus);
-            return this;
+
+        public Builder copyStatus(String copyStatus) {
+            return copyStatus(Output.of(copyStatus));
         }
+
         public Builder driveHeaderHash(@Nullable Output<String> driveHeaderHash) {
-            this.driveHeaderHash = driveHeaderHash;
+            $.driveHeaderHash = driveHeaderHash;
             return this;
         }
-        public Builder driveHeaderHash(@Nullable String driveHeaderHash) {
-            this.driveHeaderHash = Codegen.ofNullable(driveHeaderHash);
-            return this;
+
+        public Builder driveHeaderHash(String driveHeaderHash) {
+            return driveHeaderHash(Output.of(driveHeaderHash));
         }
+
         public Builder driveId(@Nullable Output<String> driveId) {
-            this.driveId = driveId;
+            $.driveId = driveId;
             return this;
         }
-        public Builder driveId(@Nullable String driveId) {
-            this.driveId = Codegen.ofNullable(driveId);
-            return this;
+
+        public Builder driveId(String driveId) {
+            return driveId(Output.of(driveId));
         }
+
         public Builder errorLogUri(@Nullable Output<String> errorLogUri) {
-            this.errorLogUri = errorLogUri;
+            $.errorLogUri = errorLogUri;
             return this;
         }
-        public Builder errorLogUri(@Nullable String errorLogUri) {
-            this.errorLogUri = Codegen.ofNullable(errorLogUri);
-            return this;
+
+        public Builder errorLogUri(String errorLogUri) {
+            return errorLogUri(Output.of(errorLogUri));
         }
+
         public Builder manifestFile(@Nullable Output<String> manifestFile) {
-            this.manifestFile = manifestFile;
+            $.manifestFile = manifestFile;
             return this;
         }
-        public Builder manifestFile(@Nullable String manifestFile) {
-            this.manifestFile = Codegen.ofNullable(manifestFile);
-            return this;
+
+        public Builder manifestFile(String manifestFile) {
+            return manifestFile(Output.of(manifestFile));
         }
+
         public Builder manifestHash(@Nullable Output<String> manifestHash) {
-            this.manifestHash = manifestHash;
+            $.manifestHash = manifestHash;
             return this;
         }
-        public Builder manifestHash(@Nullable String manifestHash) {
-            this.manifestHash = Codegen.ofNullable(manifestHash);
-            return this;
+
+        public Builder manifestHash(String manifestHash) {
+            return manifestHash(Output.of(manifestHash));
         }
+
         public Builder manifestUri(@Nullable Output<String> manifestUri) {
-            this.manifestUri = manifestUri;
+            $.manifestUri = manifestUri;
             return this;
         }
-        public Builder manifestUri(@Nullable String manifestUri) {
-            this.manifestUri = Codegen.ofNullable(manifestUri);
-            return this;
+
+        public Builder manifestUri(String manifestUri) {
+            return manifestUri(Output.of(manifestUri));
         }
+
         public Builder percentComplete(@Nullable Output<Integer> percentComplete) {
-            this.percentComplete = percentComplete;
+            $.percentComplete = percentComplete;
             return this;
         }
-        public Builder percentComplete(@Nullable Integer percentComplete) {
-            this.percentComplete = Codegen.ofNullable(percentComplete);
-            return this;
+
+        public Builder percentComplete(Integer percentComplete) {
+            return percentComplete(Output.of(percentComplete));
         }
+
         public Builder state(@Nullable Output<Either<String,DriveState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,DriveState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(Either<String,DriveState> state) {
+            return state(Output.of(state));
         }
+
         public Builder verboseLogUri(@Nullable Output<String> verboseLogUri) {
-            this.verboseLogUri = verboseLogUri;
+            $.verboseLogUri = verboseLogUri;
             return this;
         }
-        public Builder verboseLogUri(@Nullable String verboseLogUri) {
-            this.verboseLogUri = Codegen.ofNullable(verboseLogUri);
-            return this;
-        }        public DriveStatusArgs build() {
-            return new DriveStatusArgs(bitLockerKey, bytesSucceeded, copyStatus, driveHeaderHash, driveId, errorLogUri, manifestFile, manifestHash, manifestUri, percentComplete, state, verboseLogUri);
+
+        public Builder verboseLogUri(String verboseLogUri) {
+            return verboseLogUri(Output.of(verboseLogUri));
+        }
+
+        public DriveStatusArgs build() {
+            $.state = Codegen.stringProp("state").left(DriveState.class).output().arg($.state).def("Specified").getNullable();
+            return $;
         }
     }
+
 }

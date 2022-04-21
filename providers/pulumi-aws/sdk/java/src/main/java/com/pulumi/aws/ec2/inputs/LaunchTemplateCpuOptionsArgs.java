@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LaunchTemplateCpuOptionsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="coreCount")
-      private final @Nullable Output<Integer> coreCount;
+    private @Nullable Output<Integer> coreCount;
 
-    public Output<Integer> coreCount() {
-        return this.coreCount == null ? Codegen.empty() : this.coreCount;
+    public Optional<Output<Integer>> coreCount() {
+        return Optional.ofNullable(this.coreCount);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class LaunchTemplateCpuOptionsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="threadsPerCore")
-      private final @Nullable Output<Integer> threadsPerCore;
+    private @Nullable Output<Integer> threadsPerCore;
 
-    public Output<Integer> threadsPerCore() {
-        return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
+    public Optional<Output<Integer>> threadsPerCore() {
+        return Optional.ofNullable(this.threadsPerCore);
     }
 
-    public LaunchTemplateCpuOptionsArgs(
-        @Nullable Output<Integer> coreCount,
-        @Nullable Output<Integer> threadsPerCore) {
-        this.coreCount = coreCount;
-        this.threadsPerCore = threadsPerCore;
-    }
+    private LaunchTemplateCpuOptionsArgs() {}
 
-    private LaunchTemplateCpuOptionsArgs() {
-        this.coreCount = Codegen.empty();
-        this.threadsPerCore = Codegen.empty();
+    private LaunchTemplateCpuOptionsArgs(LaunchTemplateCpuOptionsArgs $) {
+        this.coreCount = $.coreCount;
+        this.threadsPerCore = $.threadsPerCore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateCpuOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> coreCount;
-        private @Nullable Output<Integer> threadsPerCore;
+        private LaunchTemplateCpuOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateCpuOptionsArgs();
         }
 
         public Builder(LaunchTemplateCpuOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coreCount = defaults.coreCount;
-    	      this.threadsPerCore = defaults.threadsPerCore;
+            $ = new LaunchTemplateCpuOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder coreCount(@Nullable Output<Integer> coreCount) {
-            this.coreCount = coreCount;
+            $.coreCount = coreCount;
             return this;
         }
-        public Builder coreCount(@Nullable Integer coreCount) {
-            this.coreCount = Codegen.ofNullable(coreCount);
-            return this;
+
+        public Builder coreCount(Integer coreCount) {
+            return coreCount(Output.of(coreCount));
         }
+
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
-            this.threadsPerCore = threadsPerCore;
+            $.threadsPerCore = threadsPerCore;
             return this;
         }
-        public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
-            this.threadsPerCore = Codegen.ofNullable(threadsPerCore);
-            return this;
-        }        public LaunchTemplateCpuOptionsArgs build() {
-            return new LaunchTemplateCpuOptionsArgs(coreCount, threadsPerCore);
+
+        public Builder threadsPerCore(Integer threadsPerCore) {
+            return threadsPerCore(Output.of(threadsPerCore));
+        }
+
+        public LaunchTemplateCpuOptionsArgs build() {
+            return $;
         }
     }
+
 }

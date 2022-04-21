@@ -17,7 +17,7 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,64 +39,59 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDatabaseArgs(
-        String clusterName,
-        String databaseName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDatabaseArgs() {}
 
-    private GetDatabaseArgs() {
-        this.clusterName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
+    private GetDatabaseArgs(GetDatabaseArgs $) {
+        this.clusterName = $.clusterName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String databaseName;
-        private String resourceGroupName;
+        private GetDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseArgs();
         }
 
         public Builder(GetDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDatabaseArgs build() {
-            return new GetDatabaseArgs(clusterName, databaseName, resourceGroupName);
+        }
+
+        public GetDatabaseArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

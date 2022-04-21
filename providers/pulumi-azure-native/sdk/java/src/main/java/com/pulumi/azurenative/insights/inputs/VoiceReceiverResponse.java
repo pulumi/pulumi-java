@@ -21,7 +21,7 @@ public final class VoiceReceiverResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="countryCode", required=true)
-      private final String countryCode;
+    private String countryCode;
 
     public String countryCode() {
         return this.countryCode;
@@ -32,7 +32,7 @@ public final class VoiceReceiverResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,64 +43,59 @@ public final class VoiceReceiverResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final String phoneNumber;
+    private String phoneNumber;
 
     public String phoneNumber() {
         return this.phoneNumber;
     }
 
-    public VoiceReceiverResponse(
-        String countryCode,
-        String name,
-        String phoneNumber) {
-        this.countryCode = Objects.requireNonNull(countryCode, "expected parameter 'countryCode' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-    }
+    private VoiceReceiverResponse() {}
 
-    private VoiceReceiverResponse() {
-        this.countryCode = null;
-        this.name = null;
-        this.phoneNumber = null;
+    private VoiceReceiverResponse(VoiceReceiverResponse $) {
+        this.countryCode = $.countryCode;
+        this.name = $.name;
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceReceiverResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String countryCode;
-        private String name;
-        private String phoneNumber;
+        private VoiceReceiverResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceReceiverResponse();
         }
 
         public Builder(VoiceReceiverResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countryCode = defaults.countryCode;
-    	      this.name = defaults.name;
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new VoiceReceiverResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder countryCode(String countryCode) {
-            this.countryCode = Objects.requireNonNull(countryCode);
+            $.countryCode = countryCode;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
-        }        public VoiceReceiverResponse build() {
-            return new VoiceReceiverResponse(countryCode, name, phoneNumber);
+        }
+
+        public VoiceReceiverResponse build() {
+            $.countryCode = Objects.requireNonNull($.countryCode, "expected parameter 'countryCode' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            return $;
         }
     }
+
 }

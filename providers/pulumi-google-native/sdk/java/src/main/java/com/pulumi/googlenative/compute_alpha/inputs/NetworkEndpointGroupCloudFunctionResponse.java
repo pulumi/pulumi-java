@@ -21,7 +21,7 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends com.pulumi.
      * 
      */
     @Import(name="function", required=true)
-      private final String function;
+    private String function;
 
     public String function() {
         return this.function;
@@ -32,55 +32,52 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends com.pulumi.
      * 
      */
     @Import(name="urlMask", required=true)
-      private final String urlMask;
+    private String urlMask;
 
     public String urlMask() {
         return this.urlMask;
     }
 
-    public NetworkEndpointGroupCloudFunctionResponse(
-        String function,
-        String urlMask) {
-        this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
-        this.urlMask = Objects.requireNonNull(urlMask, "expected parameter 'urlMask' to be non-null");
-    }
+    private NetworkEndpointGroupCloudFunctionResponse() {}
 
-    private NetworkEndpointGroupCloudFunctionResponse() {
-        this.function = null;
-        this.urlMask = null;
+    private NetworkEndpointGroupCloudFunctionResponse(NetworkEndpointGroupCloudFunctionResponse $) {
+        this.function = $.function;
+        this.urlMask = $.urlMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointGroupCloudFunctionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String function;
-        private String urlMask;
+        private NetworkEndpointGroupCloudFunctionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointGroupCloudFunctionResponse();
         }
 
         public Builder(NetworkEndpointGroupCloudFunctionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.function = defaults.function;
-    	      this.urlMask = defaults.urlMask;
+            $ = new NetworkEndpointGroupCloudFunctionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder function(String function) {
-            this.function = Objects.requireNonNull(function);
+            $.function = function;
             return this;
         }
+
         public Builder urlMask(String urlMask) {
-            this.urlMask = Objects.requireNonNull(urlMask);
+            $.urlMask = urlMask;
             return this;
-        }        public NetworkEndpointGroupCloudFunctionResponse build() {
-            return new NetworkEndpointGroupCloudFunctionResponse(function, urlMask);
+        }
+
+        public NetworkEndpointGroupCloudFunctionResponse build() {
+            $.function = Objects.requireNonNull($.function, "expected parameter 'function' to be non-null");
+            $.urlMask = Objects.requireNonNull($.urlMask, "expected parameter 'urlMask' to be non-null");
+            return $;
         }
     }
+
 }

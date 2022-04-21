@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -87,7 +88,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="servicePrincipalId", required=true)
-      private final Output<Object> servicePrincipalId;
+    private Output<Object> servicePrincipalId;
 
     public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId;
@@ -98,7 +99,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="servicePrincipalKey", required=true)
-      private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+    private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
         return this.servicePrincipalKey;
@@ -109,7 +110,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="siteUrl", required=true)
-      private final Output<Object> siteUrl;
+    private Output<Object> siteUrl;
 
     public Output<Object> siteUrl() {
         return this.siteUrl;
@@ -120,7 +121,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="tenantId", required=true)
-      private final Output<Object> tenantId;
+    private Output<Object> tenantId;
 
     public Output<Object> tenantId() {
         return this.tenantId;
@@ -132,170 +133,147 @@ public final class SharePointOnlineListLinkedServiceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SharePointOnlineListLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        Output<Object> servicePrincipalId,
-        Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey,
-        Output<Object> siteUrl,
-        Output<Object> tenantId,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId, "expected parameter 'servicePrincipalId' to be non-null");
-        this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey, "expected parameter 'servicePrincipalKey' to be non-null");
-        this.siteUrl = Objects.requireNonNull(siteUrl, "expected parameter 'siteUrl' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private SharePointOnlineListLinkedServiceArgs() {}
 
-    private SharePointOnlineListLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.servicePrincipalId = Codegen.empty();
-        this.servicePrincipalKey = Codegen.empty();
-        this.siteUrl = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.type = Codegen.empty();
+    private SharePointOnlineListLinkedServiceArgs(SharePointOnlineListLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.siteUrl = $.siteUrl;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharePointOnlineListLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private Output<Object> servicePrincipalId;
-        private Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
-        private Output<Object> siteUrl;
-        private Output<Object> tenantId;
-        private Output<String> type;
+        private SharePointOnlineListLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharePointOnlineListLinkedServiceArgs();
         }
 
         public Builder(SharePointOnlineListLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.siteUrl = defaults.siteUrl;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new SharePointOnlineListLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder servicePrincipalId(Output<Object> servicePrincipalId) {
-            this.servicePrincipalId = Objects.requireNonNull(servicePrincipalId);
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalId(Object servicePrincipalId) {
-            this.servicePrincipalId = Output.of(Objects.requireNonNull(servicePrincipalId));
-            return this;
+            return servicePrincipalId(Output.of(servicePrincipalId));
         }
+
         public Builder servicePrincipalKey(Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
-            this.servicePrincipalKey = Objects.requireNonNull(servicePrincipalKey);
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
+
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Output.of(Objects.requireNonNull(servicePrincipalKey));
-            return this;
+            return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
+
         public Builder siteUrl(Output<Object> siteUrl) {
-            this.siteUrl = Objects.requireNonNull(siteUrl);
+            $.siteUrl = siteUrl;
             return this;
         }
+
         public Builder siteUrl(Object siteUrl) {
-            this.siteUrl = Output.of(Objects.requireNonNull(siteUrl));
-            return this;
+            return siteUrl(Output.of(siteUrl));
         }
+
         public Builder tenantId(Output<Object> tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder tenantId(Object tenantId) {
-            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
-            return this;
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SharePointOnlineListLinkedServiceArgs build() {
-            return new SharePointOnlineListLinkedServiceArgs(annotations, connectVia, description, encryptedCredential, parameters, servicePrincipalId, servicePrincipalKey, siteUrl, tenantId, type);
+            return type(Output.of(type));
+        }
+
+        public SharePointOnlineListLinkedServiceArgs build() {
+            $.servicePrincipalId = Objects.requireNonNull($.servicePrincipalId, "expected parameter 'servicePrincipalId' to be non-null");
+            $.servicePrincipalKey = Objects.requireNonNull($.servicePrincipalKey, "expected parameter 'servicePrincipalKey' to be non-null");
+            $.siteUrl = Objects.requireNonNull($.siteUrl, "expected parameter 'siteUrl' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

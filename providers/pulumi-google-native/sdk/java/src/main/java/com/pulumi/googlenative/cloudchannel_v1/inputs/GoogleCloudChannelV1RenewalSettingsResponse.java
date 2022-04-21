@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends com.pulum
      * 
      */
     @Import(name="enableRenewal", required=true)
-      private final Boolean enableRenewal;
+    private Boolean enableRenewal;
 
     public Boolean enableRenewal() {
         return this.enableRenewal;
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends com.pulum
      * 
      */
     @Import(name="paymentCycle", required=true)
-      private final GoogleCloudChannelV1PeriodResponse paymentCycle;
+    private GoogleCloudChannelV1PeriodResponse paymentCycle;
 
     public GoogleCloudChannelV1PeriodResponse paymentCycle() {
         return this.paymentCycle;
@@ -45,7 +45,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends com.pulum
      * 
      */
     @Import(name="paymentPlan", required=true)
-      private final String paymentPlan;
+    private String paymentPlan;
 
     public String paymentPlan() {
         return this.paymentPlan;
@@ -56,73 +56,66 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends com.pulum
      * 
      */
     @Import(name="resizeUnitCount", required=true)
-      private final Boolean resizeUnitCount;
+    private Boolean resizeUnitCount;
 
     public Boolean resizeUnitCount() {
         return this.resizeUnitCount;
     }
 
-    public GoogleCloudChannelV1RenewalSettingsResponse(
-        Boolean enableRenewal,
-        GoogleCloudChannelV1PeriodResponse paymentCycle,
-        String paymentPlan,
-        Boolean resizeUnitCount) {
-        this.enableRenewal = Objects.requireNonNull(enableRenewal, "expected parameter 'enableRenewal' to be non-null");
-        this.paymentCycle = Objects.requireNonNull(paymentCycle, "expected parameter 'paymentCycle' to be non-null");
-        this.paymentPlan = Objects.requireNonNull(paymentPlan, "expected parameter 'paymentPlan' to be non-null");
-        this.resizeUnitCount = Objects.requireNonNull(resizeUnitCount, "expected parameter 'resizeUnitCount' to be non-null");
-    }
+    private GoogleCloudChannelV1RenewalSettingsResponse() {}
 
-    private GoogleCloudChannelV1RenewalSettingsResponse() {
-        this.enableRenewal = null;
-        this.paymentCycle = null;
-        this.paymentPlan = null;
-        this.resizeUnitCount = null;
+    private GoogleCloudChannelV1RenewalSettingsResponse(GoogleCloudChannelV1RenewalSettingsResponse $) {
+        this.enableRenewal = $.enableRenewal;
+        this.paymentCycle = $.paymentCycle;
+        this.paymentPlan = $.paymentPlan;
+        this.resizeUnitCount = $.resizeUnitCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1RenewalSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableRenewal;
-        private GoogleCloudChannelV1PeriodResponse paymentCycle;
-        private String paymentPlan;
-        private Boolean resizeUnitCount;
+        private GoogleCloudChannelV1RenewalSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1RenewalSettingsResponse();
         }
 
         public Builder(GoogleCloudChannelV1RenewalSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableRenewal = defaults.enableRenewal;
-    	      this.paymentCycle = defaults.paymentCycle;
-    	      this.paymentPlan = defaults.paymentPlan;
-    	      this.resizeUnitCount = defaults.resizeUnitCount;
+            $ = new GoogleCloudChannelV1RenewalSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableRenewal(Boolean enableRenewal) {
-            this.enableRenewal = Objects.requireNonNull(enableRenewal);
+            $.enableRenewal = enableRenewal;
             return this;
         }
+
         public Builder paymentCycle(GoogleCloudChannelV1PeriodResponse paymentCycle) {
-            this.paymentCycle = Objects.requireNonNull(paymentCycle);
+            $.paymentCycle = paymentCycle;
             return this;
         }
+
         public Builder paymentPlan(String paymentPlan) {
-            this.paymentPlan = Objects.requireNonNull(paymentPlan);
+            $.paymentPlan = paymentPlan;
             return this;
         }
+
         public Builder resizeUnitCount(Boolean resizeUnitCount) {
-            this.resizeUnitCount = Objects.requireNonNull(resizeUnitCount);
+            $.resizeUnitCount = resizeUnitCount;
             return this;
-        }        public GoogleCloudChannelV1RenewalSettingsResponse build() {
-            return new GoogleCloudChannelV1RenewalSettingsResponse(enableRenewal, paymentCycle, paymentPlan, resizeUnitCount);
+        }
+
+        public GoogleCloudChannelV1RenewalSettingsResponse build() {
+            $.enableRenewal = Objects.requireNonNull($.enableRenewal, "expected parameter 'enableRenewal' to be non-null");
+            $.paymentCycle = Objects.requireNonNull($.paymentCycle, "expected parameter 'paymentCycle' to be non-null");
+            $.paymentPlan = Objects.requireNonNull($.paymentPlan, "expected parameter 'paymentPlan' to be non-null");
+            $.resizeUnitCount = Objects.requireNonNull($.resizeUnitCount, "expected parameter 'resizeUnitCount' to be non-null");
+            return $;
         }
     }
+
 }

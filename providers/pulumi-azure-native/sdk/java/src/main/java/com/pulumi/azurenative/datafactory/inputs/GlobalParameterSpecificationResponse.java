@@ -22,7 +22,7 @@ public final class GlobalParameterSpecificationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -33,55 +33,52 @@ public final class GlobalParameterSpecificationResponse extends com.pulumi.resou
      * 
      */
     @Import(name="value", required=true)
-      private final Object value;
+    private Object value;
 
     public Object value() {
         return this.value;
     }
 
-    public GlobalParameterSpecificationResponse(
-        String type,
-        Object value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GlobalParameterSpecificationResponse() {}
 
-    private GlobalParameterSpecificationResponse() {
-        this.type = null;
-        this.value = null;
+    private GlobalParameterSpecificationResponse(GlobalParameterSpecificationResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalParameterSpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private Object value;
+        private GlobalParameterSpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalParameterSpecificationResponse();
         }
 
         public Builder(GlobalParameterSpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new GlobalParameterSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(Object value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GlobalParameterSpecificationResponse build() {
-            return new GlobalParameterSpecificationResponse(type, value);
+        }
+
+        public GlobalParameterSpecificationResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

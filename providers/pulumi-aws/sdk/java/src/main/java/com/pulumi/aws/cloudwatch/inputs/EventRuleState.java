@@ -5,11 +5,11 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventBusName")
-      private final @Nullable Output<String> eventBusName;
+    private @Nullable Output<String> eventBusName;
 
-    public Output<String> eventBusName() {
-        return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
+    public Optional<Output<String>> eventBusName() {
+        return Optional.ofNullable(this.eventBusName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventPattern")
-      private final @Nullable Output<String> eventPattern;
+    private @Nullable Output<String> eventPattern;
 
-    public Output<String> eventPattern() {
-        return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
+    public Optional<Output<String>> eventPattern() {
+        return Optional.ofNullable(this.eventPattern);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Output<Boolean> isEnabled;
+    private @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> isEnabled() {
-        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
+    public Optional<Output<Boolean>> isEnabled() {
+        return Optional.ofNullable(this.isEnabled);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleExpression")
-      private final @Nullable Output<String> scheduleExpression;
+    private @Nullable Output<String> scheduleExpression;
 
-    public Output<String> scheduleExpression() {
-        return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
+    public Optional<Output<String>> scheduleExpression() {
+        return Optional.ofNullable(this.scheduleExpression);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -132,180 +132,148 @@ public final class EventRuleState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public EventRuleState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> eventBusName,
-        @Nullable Output<String> eventPattern,
-        @Nullable Output<Boolean> isEnabled,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> scheduleExpression,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.description = description;
-        this.eventBusName = eventBusName;
-        this.eventPattern = eventPattern;
-        this.isEnabled = isEnabled;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.roleArn = roleArn;
-        this.scheduleExpression = scheduleExpression;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private EventRuleState() {}
 
-    private EventRuleState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.eventBusName = Codegen.empty();
-        this.eventPattern = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.scheduleExpression = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private EventRuleState(EventRuleState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.eventBusName = $.eventBusName;
+        this.eventPattern = $.eventPattern;
+        this.isEnabled = $.isEnabled;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.roleArn = $.roleArn;
+        this.scheduleExpression = $.scheduleExpression;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventRuleState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> eventBusName;
-        private @Nullable Output<String> eventPattern;
-        private @Nullable Output<Boolean> isEnabled;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> scheduleExpression;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private EventRuleState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventRuleState();
         }
 
         public Builder(EventRuleState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.eventBusName = defaults.eventBusName;
-    	      this.eventPattern = defaults.eventPattern;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.roleArn = defaults.roleArn;
-    	      this.scheduleExpression = defaults.scheduleExpression;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new EventRuleState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
-            this.eventBusName = eventBusName;
+            $.eventBusName = eventBusName;
             return this;
         }
-        public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Codegen.ofNullable(eventBusName);
-            return this;
+
+        public Builder eventBusName(String eventBusName) {
+            return eventBusName(Output.of(eventBusName));
         }
+
         public Builder eventPattern(@Nullable Output<String> eventPattern) {
-            this.eventPattern = eventPattern;
+            $.eventPattern = eventPattern;
             return this;
         }
-        public Builder eventPattern(@Nullable String eventPattern) {
-            this.eventPattern = Codegen.ofNullable(eventPattern);
-            return this;
+
+        public Builder eventPattern(String eventPattern) {
+            return eventPattern(Output.of(eventPattern));
         }
+
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
-        public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Codegen.ofNullable(isEnabled);
-            return this;
+
+        public Builder isEnabled(Boolean isEnabled) {
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
-            this.scheduleExpression = scheduleExpression;
+            $.scheduleExpression = scheduleExpression;
             return this;
         }
-        public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = Codegen.ofNullable(scheduleExpression);
-            return this;
+
+        public Builder scheduleExpression(String scheduleExpression) {
+            return scheduleExpression(Output.of(scheduleExpression));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public EventRuleState build() {
-            return new EventRuleState(arn, description, eventBusName, eventPattern, isEnabled, name, namePrefix, roleArn, scheduleExpression, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public EventRuleState build() {
+            return $;
         }
     }
+
 }

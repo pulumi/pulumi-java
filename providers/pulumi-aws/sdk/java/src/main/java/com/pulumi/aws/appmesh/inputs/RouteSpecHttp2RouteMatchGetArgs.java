@@ -6,10 +6,10 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchHeaderGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RouteSpecHttp2RouteMatchGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>> headers;
+    private @Nullable Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>> headers;
 
-    public Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RouteSpecHttp2RouteMatchGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="method")
-      private final @Nullable Output<String> method;
+    private @Nullable Output<String> method;
 
-    public Output<String> method() {
-        return this.method == null ? Codegen.empty() : this.method;
+    public Optional<Output<String>> method() {
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class RouteSpecHttp2RouteMatchGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="prefix", required=true)
-      private final Output<String> prefix;
+    private Output<String> prefix;
 
     public Output<String> prefix() {
         return this.prefix;
@@ -56,92 +56,83 @@ public final class RouteSpecHttp2RouteMatchGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="scheme")
-      private final @Nullable Output<String> scheme;
+    private @Nullable Output<String> scheme;
 
-    public Output<String> scheme() {
-        return this.scheme == null ? Codegen.empty() : this.scheme;
+    public Optional<Output<String>> scheme() {
+        return Optional.ofNullable(this.scheme);
     }
 
-    public RouteSpecHttp2RouteMatchGetArgs(
-        @Nullable Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>> headers,
-        @Nullable Output<String> method,
-        Output<String> prefix,
-        @Nullable Output<String> scheme) {
-        this.headers = headers;
-        this.method = method;
-        this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
-        this.scheme = scheme;
-    }
+    private RouteSpecHttp2RouteMatchGetArgs() {}
 
-    private RouteSpecHttp2RouteMatchGetArgs() {
-        this.headers = Codegen.empty();
-        this.method = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.scheme = Codegen.empty();
+    private RouteSpecHttp2RouteMatchGetArgs(RouteSpecHttp2RouteMatchGetArgs $) {
+        this.headers = $.headers;
+        this.method = $.method;
+        this.prefix = $.prefix;
+        this.scheme = $.scheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecHttp2RouteMatchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>> headers;
-        private @Nullable Output<String> method;
-        private Output<String> prefix;
-        private @Nullable Output<String> scheme;
+        private RouteSpecHttp2RouteMatchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecHttp2RouteMatchGetArgs();
         }
 
         public Builder(RouteSpecHttp2RouteMatchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headers = defaults.headers;
-    	      this.method = defaults.method;
-    	      this.prefix = defaults.prefix;
-    	      this.scheme = defaults.scheme;
+            $ = new RouteSpecHttp2RouteMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headers(@Nullable Output<List<RouteSpecHttp2RouteMatchHeaderGetArgs>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable List<RouteSpecHttp2RouteMatchHeaderGetArgs> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(List<RouteSpecHttp2RouteMatchHeaderGetArgs> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder headers(RouteSpecHttp2RouteMatchHeaderGetArgs... headers) {
             return headers(List.of(headers));
         }
+
         public Builder method(@Nullable Output<String> method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
-        public Builder method(@Nullable String method) {
-            this.method = Codegen.ofNullable(method);
-            return this;
+
+        public Builder method(String method) {
+            return method(Output.of(method));
         }
+
         public Builder prefix(Output<String> prefix) {
-            this.prefix = Objects.requireNonNull(prefix);
+            $.prefix = prefix;
             return this;
         }
+
         public Builder prefix(String prefix) {
-            this.prefix = Output.of(Objects.requireNonNull(prefix));
-            return this;
+            return prefix(Output.of(prefix));
         }
+
         public Builder scheme(@Nullable Output<String> scheme) {
-            this.scheme = scheme;
+            $.scheme = scheme;
             return this;
         }
-        public Builder scheme(@Nullable String scheme) {
-            this.scheme = Codegen.ofNullable(scheme);
-            return this;
-        }        public RouteSpecHttp2RouteMatchGetArgs build() {
-            return new RouteSpecHttp2RouteMatchGetArgs(headers, method, prefix, scheme);
+
+        public Builder scheme(String scheme) {
+            return scheme(Output.of(scheme));
+        }
+
+        public RouteSpecHttp2RouteMatchGetArgs build() {
+            $.prefix = Objects.requireNonNull($.prefix, "expected parameter 'prefix' to be non-null");
+            return $;
         }
     }
+
 }

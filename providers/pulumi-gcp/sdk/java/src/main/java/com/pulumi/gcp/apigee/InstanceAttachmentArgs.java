@@ -5,7 +5,6 @@ package com.pulumi.gcp.apigee;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class InstanceAttachmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="environment", required=true)
-      private final Output<String> environment;
+    private Output<String> environment;
 
     public Output<String> environment() {
         return this.environment;
@@ -31,63 +30,60 @@ public final class InstanceAttachmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
     }
 
-    public InstanceAttachmentArgs(
-        Output<String> environment,
-        Output<String> instanceId) {
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-    }
+    private InstanceAttachmentArgs() {}
 
-    private InstanceAttachmentArgs() {
-        this.environment = Codegen.empty();
-        this.instanceId = Codegen.empty();
+    private InstanceAttachmentArgs(InstanceAttachmentArgs $) {
+        this.environment = $.environment;
+        this.instanceId = $.instanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> environment;
-        private Output<String> instanceId;
+        private InstanceAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAttachmentArgs();
         }
 
         public Builder(InstanceAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environment = defaults.environment;
-    	      this.instanceId = defaults.instanceId;
+            $ = new InstanceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environment(Output<String> environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder environment(String environment) {
-            this.environment = Output.of(Objects.requireNonNull(environment));
-            return this;
+            return environment(Output.of(environment));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
-        }        public InstanceAttachmentArgs build() {
-            return new InstanceAttachmentArgs(environment, instanceId);
+            return instanceId(Output.of(instanceId));
+        }
+
+        public InstanceAttachmentArgs build() {
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="certificateData")
-      private final @Nullable String certificateData;
+    private @Nullable String certificateData;
 
     public Optional<String> certificateData() {
-        return this.certificateData == null ? Optional.empty() : Optional.ofNullable(this.certificateData);
+        return Optional.ofNullable(this.certificateData);
     }
 
-    public SshPublicKeyResponse(@Nullable String certificateData) {
-        this.certificateData = certificateData;
-    }
+    private SshPublicKeyResponse() {}
 
-    private SshPublicKeyResponse() {
-        this.certificateData = null;
+    private SshPublicKeyResponse(SshPublicKeyResponse $) {
+        this.certificateData = $.certificateData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshPublicKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateData;
+        private SshPublicKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshPublicKeyResponse();
         }
 
         public Builder(SshPublicKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateData = defaults.certificateData;
+            $ = new SshPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateData(@Nullable String certificateData) {
-            this.certificateData = certificateData;
+            $.certificateData = certificateData;
             return this;
-        }        public SshPublicKeyResponse build() {
-            return new SshPublicKeyResponse(certificateData);
+        }
+
+        public SshPublicKeyResponse build() {
+            return $;
         }
     }
+
 }

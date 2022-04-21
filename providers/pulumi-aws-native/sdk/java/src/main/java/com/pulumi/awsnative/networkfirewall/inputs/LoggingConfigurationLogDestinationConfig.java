@@ -19,78 +19,73 @@ public final class LoggingConfigurationLogDestinationConfig extends com.pulumi.r
      * 
      */
     @Import(name="logDestination", required=true)
-      private final Object logDestination;
+    private Object logDestination;
 
     public Object logDestination() {
         return this.logDestination;
     }
 
     @Import(name="logDestinationType", required=true)
-      private final LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
+    private LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
 
     public LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType() {
         return this.logDestinationType;
     }
 
     @Import(name="logType", required=true)
-      private final LoggingConfigurationLogDestinationConfigLogType logType;
+    private LoggingConfigurationLogDestinationConfigLogType logType;
 
     public LoggingConfigurationLogDestinationConfigLogType logType() {
         return this.logType;
     }
 
-    public LoggingConfigurationLogDestinationConfig(
-        Object logDestination,
-        LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType,
-        LoggingConfigurationLogDestinationConfigLogType logType) {
-        this.logDestination = Objects.requireNonNull(logDestination, "expected parameter 'logDestination' to be non-null");
-        this.logDestinationType = Objects.requireNonNull(logDestinationType, "expected parameter 'logDestinationType' to be non-null");
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-    }
+    private LoggingConfigurationLogDestinationConfig() {}
 
-    private LoggingConfigurationLogDestinationConfig() {
-        this.logDestination = null;
-        this.logDestinationType = null;
-        this.logType = null;
+    private LoggingConfigurationLogDestinationConfig(LoggingConfigurationLogDestinationConfig $) {
+        this.logDestination = $.logDestination;
+        this.logDestinationType = $.logDestinationType;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationLogDestinationConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object logDestination;
-        private LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
-        private LoggingConfigurationLogDestinationConfigLogType logType;
+        private LoggingConfigurationLogDestinationConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationLogDestinationConfig();
         }
 
         public Builder(LoggingConfigurationLogDestinationConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logDestination = defaults.logDestination;
-    	      this.logDestinationType = defaults.logDestinationType;
-    	      this.logType = defaults.logType;
+            $ = new LoggingConfigurationLogDestinationConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder logDestination(Object logDestination) {
-            this.logDestination = Objects.requireNonNull(logDestination);
+            $.logDestination = logDestination;
             return this;
         }
+
         public Builder logDestinationType(LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType) {
-            this.logDestinationType = Objects.requireNonNull(logDestinationType);
+            $.logDestinationType = logDestinationType;
             return this;
         }
+
         public Builder logType(LoggingConfigurationLogDestinationConfigLogType logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
-        }        public LoggingConfigurationLogDestinationConfig build() {
-            return new LoggingConfigurationLogDestinationConfig(logDestination, logDestinationType, logType);
+        }
+
+        public LoggingConfigurationLogDestinationConfig build() {
+            $.logDestination = Objects.requireNonNull($.logDestination, "expected parameter 'logDestination' to be non-null");
+            $.logDestinationType = Objects.requireNonNull($.logDestinationType, "expected parameter 'logDestinationType' to be non-null");
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            return $;
         }
     }
+
 }

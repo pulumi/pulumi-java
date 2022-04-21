@@ -13,45 +13,45 @@ public final class GetDevicePoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDevicePoolArgs Empty = new GetDevicePoolArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetDevicePoolArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetDevicePoolArgs() {}
 
-    private GetDevicePoolArgs() {
-        this.arn = null;
+    private GetDevicePoolArgs(GetDevicePoolArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDevicePoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetDevicePoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDevicePoolArgs();
         }
 
         public Builder(GetDevicePoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetDevicePoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetDevicePoolArgs build() {
-            return new GetDevicePoolArgs(arn);
+        }
+
+        public GetDevicePoolArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

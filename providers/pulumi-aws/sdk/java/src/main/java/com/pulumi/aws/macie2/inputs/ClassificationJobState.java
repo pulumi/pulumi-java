@@ -8,13 +8,13 @@ import com.pulumi.aws.macie2.inputs.ClassificationJobScheduleFrequencyGetArgs;
 import com.pulumi.aws.macie2.inputs.ClassificationJobUserPausedDetailGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="customDataIdentifierIds")
-      private final @Nullable Output<List<String>> customDataIdentifierIds;
+    private @Nullable Output<List<String>> customDataIdentifierIds;
 
-    public Output<List<String>> customDataIdentifierIds() {
-        return this.customDataIdentifierIds == null ? Codegen.empty() : this.customDataIdentifierIds;
+    public Optional<Output<List<String>>> customDataIdentifierIds() {
+        return Optional.ofNullable(this.customDataIdentifierIds);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -60,24 +60,24 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="initialRun")
-      private final @Nullable Output<Boolean> initialRun;
+    private @Nullable Output<Boolean> initialRun;
 
-    public Output<Boolean> initialRun() {
-        return this.initialRun == null ? Codegen.empty() : this.initialRun;
+    public Optional<Output<Boolean>> initialRun() {
+        return Optional.ofNullable(this.initialRun);
     }
 
     @Import(name="jobArn")
-      private final @Nullable Output<String> jobArn;
+    private @Nullable Output<String> jobArn;
 
-    public Output<String> jobArn() {
-        return this.jobArn == null ? Codegen.empty() : this.jobArn;
+    public Optional<Output<String>> jobArn() {
+        return Optional.ofNullable(this.jobArn);
     }
 
     @Import(name="jobId")
-      private final @Nullable Output<String> jobId;
+    private @Nullable Output<String> jobId;
 
-    public Output<String> jobId() {
-        return this.jobId == null ? Codegen.empty() : this.jobId;
+    public Optional<Output<String>> jobId() {
+        return Optional.ofNullable(this.jobId);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="jobStatus")
-      private final @Nullable Output<String> jobStatus;
+    private @Nullable Output<String> jobStatus;
 
-    public Output<String> jobStatus() {
-        return this.jobStatus == null ? Codegen.empty() : this.jobStatus;
+    public Optional<Output<String>> jobStatus() {
+        return Optional.ofNullable(this.jobStatus);
     }
 
     /**
@@ -96,17 +96,17 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="jobType")
-      private final @Nullable Output<String> jobType;
+    private @Nullable Output<String> jobType;
 
-    public Output<String> jobType() {
-        return this.jobType == null ? Codegen.empty() : this.jobType;
+    public Optional<Output<String>> jobType() {
+        return Optional.ofNullable(this.jobType);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="s3JobDefinition")
-      private final @Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition;
+    private @Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition;
 
-    public Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition() {
-        return this.s3JobDefinition == null ? Codegen.empty() : this.s3JobDefinition;
+    public Optional<Output<ClassificationJobS3JobDefinitionGetArgs>> s3JobDefinition() {
+        return Optional.ofNullable(this.s3JobDefinition);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="samplingPercentage")
-      private final @Nullable Output<Integer> samplingPercentage;
+    private @Nullable Output<Integer> samplingPercentage;
 
-    public Output<Integer> samplingPercentage() {
-        return this.samplingPercentage == null ? Codegen.empty() : this.samplingPercentage;
+    public Optional<Output<Integer>> samplingPercentage() {
+        return Optional.ofNullable(this.samplingPercentage);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="scheduleFrequency")
-      private final @Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency;
+    private @Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency;
 
-    public Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency() {
-        return this.scheduleFrequency == null ? Codegen.empty() : this.scheduleFrequency;
+    public Optional<Output<ClassificationJobScheduleFrequencyGetArgs>> scheduleFrequency() {
+        return Optional.ofNullable(this.scheduleFrequency);
     }
 
     /**
@@ -158,17 +158,17 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -176,251 +176,206 @@ public final class ClassificationJobState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="userPausedDetails")
-      private final @Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails;
+    private @Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails;
 
-    public Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails() {
-        return this.userPausedDetails == null ? Codegen.empty() : this.userPausedDetails;
+    public Optional<Output<List<ClassificationJobUserPausedDetailGetArgs>>> userPausedDetails() {
+        return Optional.ofNullable(this.userPausedDetails);
     }
 
-    public ClassificationJobState(
-        @Nullable Output<String> createdAt,
-        @Nullable Output<List<String>> customDataIdentifierIds,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> initialRun,
-        @Nullable Output<String> jobArn,
-        @Nullable Output<String> jobId,
-        @Nullable Output<String> jobStatus,
-        @Nullable Output<String> jobType,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition,
-        @Nullable Output<Integer> samplingPercentage,
-        @Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails) {
-        this.createdAt = createdAt;
-        this.customDataIdentifierIds = customDataIdentifierIds;
-        this.description = description;
-        this.initialRun = initialRun;
-        this.jobArn = jobArn;
-        this.jobId = jobId;
-        this.jobStatus = jobStatus;
-        this.jobType = jobType;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.s3JobDefinition = s3JobDefinition;
-        this.samplingPercentage = samplingPercentage;
-        this.scheduleFrequency = scheduleFrequency;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.userPausedDetails = userPausedDetails;
-    }
+    private ClassificationJobState() {}
 
-    private ClassificationJobState() {
-        this.createdAt = Codegen.empty();
-        this.customDataIdentifierIds = Codegen.empty();
-        this.description = Codegen.empty();
-        this.initialRun = Codegen.empty();
-        this.jobArn = Codegen.empty();
-        this.jobId = Codegen.empty();
-        this.jobStatus = Codegen.empty();
-        this.jobType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.s3JobDefinition = Codegen.empty();
-        this.samplingPercentage = Codegen.empty();
-        this.scheduleFrequency = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.userPausedDetails = Codegen.empty();
+    private ClassificationJobState(ClassificationJobState $) {
+        this.createdAt = $.createdAt;
+        this.customDataIdentifierIds = $.customDataIdentifierIds;
+        this.description = $.description;
+        this.initialRun = $.initialRun;
+        this.jobArn = $.jobArn;
+        this.jobId = $.jobId;
+        this.jobStatus = $.jobStatus;
+        this.jobType = $.jobType;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.s3JobDefinition = $.s3JobDefinition;
+        this.samplingPercentage = $.samplingPercentage;
+        this.scheduleFrequency = $.scheduleFrequency;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.userPausedDetails = $.userPausedDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClassificationJobState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<List<String>> customDataIdentifierIds;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> initialRun;
-        private @Nullable Output<String> jobArn;
-        private @Nullable Output<String> jobId;
-        private @Nullable Output<String> jobStatus;
-        private @Nullable Output<String> jobType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition;
-        private @Nullable Output<Integer> samplingPercentage;
-        private @Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails;
+        private ClassificationJobState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClassificationJobState();
         }
 
         public Builder(ClassificationJobState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.customDataIdentifierIds = defaults.customDataIdentifierIds;
-    	      this.description = defaults.description;
-    	      this.initialRun = defaults.initialRun;
-    	      this.jobArn = defaults.jobArn;
-    	      this.jobId = defaults.jobId;
-    	      this.jobStatus = defaults.jobStatus;
-    	      this.jobType = defaults.jobType;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.s3JobDefinition = defaults.s3JobDefinition;
-    	      this.samplingPercentage = defaults.samplingPercentage;
-    	      this.scheduleFrequency = defaults.scheduleFrequency;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.userPausedDetails = defaults.userPausedDetails;
+            $ = new ClassificationJobState(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder customDataIdentifierIds(@Nullable Output<List<String>> customDataIdentifierIds) {
-            this.customDataIdentifierIds = customDataIdentifierIds;
+            $.customDataIdentifierIds = customDataIdentifierIds;
             return this;
         }
-        public Builder customDataIdentifierIds(@Nullable List<String> customDataIdentifierIds) {
-            this.customDataIdentifierIds = Codegen.ofNullable(customDataIdentifierIds);
-            return this;
+
+        public Builder customDataIdentifierIds(List<String> customDataIdentifierIds) {
+            return customDataIdentifierIds(Output.of(customDataIdentifierIds));
         }
+
         public Builder customDataIdentifierIds(String... customDataIdentifierIds) {
             return customDataIdentifierIds(List.of(customDataIdentifierIds));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder initialRun(@Nullable Output<Boolean> initialRun) {
-            this.initialRun = initialRun;
+            $.initialRun = initialRun;
             return this;
         }
-        public Builder initialRun(@Nullable Boolean initialRun) {
-            this.initialRun = Codegen.ofNullable(initialRun);
-            return this;
+
+        public Builder initialRun(Boolean initialRun) {
+            return initialRun(Output.of(initialRun));
         }
+
         public Builder jobArn(@Nullable Output<String> jobArn) {
-            this.jobArn = jobArn;
+            $.jobArn = jobArn;
             return this;
         }
-        public Builder jobArn(@Nullable String jobArn) {
-            this.jobArn = Codegen.ofNullable(jobArn);
-            return this;
+
+        public Builder jobArn(String jobArn) {
+            return jobArn(Output.of(jobArn));
         }
+
         public Builder jobId(@Nullable Output<String> jobId) {
-            this.jobId = jobId;
+            $.jobId = jobId;
             return this;
         }
-        public Builder jobId(@Nullable String jobId) {
-            this.jobId = Codegen.ofNullable(jobId);
-            return this;
+
+        public Builder jobId(String jobId) {
+            return jobId(Output.of(jobId));
         }
+
         public Builder jobStatus(@Nullable Output<String> jobStatus) {
-            this.jobStatus = jobStatus;
+            $.jobStatus = jobStatus;
             return this;
         }
-        public Builder jobStatus(@Nullable String jobStatus) {
-            this.jobStatus = Codegen.ofNullable(jobStatus);
-            return this;
+
+        public Builder jobStatus(String jobStatus) {
+            return jobStatus(Output.of(jobStatus));
         }
+
         public Builder jobType(@Nullable Output<String> jobType) {
-            this.jobType = jobType;
+            $.jobType = jobType;
             return this;
         }
-        public Builder jobType(@Nullable String jobType) {
-            this.jobType = Codegen.ofNullable(jobType);
-            return this;
+
+        public Builder jobType(String jobType) {
+            return jobType(Output.of(jobType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder s3JobDefinition(@Nullable Output<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition) {
-            this.s3JobDefinition = s3JobDefinition;
+            $.s3JobDefinition = s3JobDefinition;
             return this;
         }
-        public Builder s3JobDefinition(@Nullable ClassificationJobS3JobDefinitionGetArgs s3JobDefinition) {
-            this.s3JobDefinition = Codegen.ofNullable(s3JobDefinition);
-            return this;
+
+        public Builder s3JobDefinition(ClassificationJobS3JobDefinitionGetArgs s3JobDefinition) {
+            return s3JobDefinition(Output.of(s3JobDefinition));
         }
+
         public Builder samplingPercentage(@Nullable Output<Integer> samplingPercentage) {
-            this.samplingPercentage = samplingPercentage;
+            $.samplingPercentage = samplingPercentage;
             return this;
         }
-        public Builder samplingPercentage(@Nullable Integer samplingPercentage) {
-            this.samplingPercentage = Codegen.ofNullable(samplingPercentage);
-            return this;
+
+        public Builder samplingPercentage(Integer samplingPercentage) {
+            return samplingPercentage(Output.of(samplingPercentage));
         }
+
         public Builder scheduleFrequency(@Nullable Output<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency) {
-            this.scheduleFrequency = scheduleFrequency;
+            $.scheduleFrequency = scheduleFrequency;
             return this;
         }
-        public Builder scheduleFrequency(@Nullable ClassificationJobScheduleFrequencyGetArgs scheduleFrequency) {
-            this.scheduleFrequency = Codegen.ofNullable(scheduleFrequency);
-            return this;
+
+        public Builder scheduleFrequency(ClassificationJobScheduleFrequencyGetArgs scheduleFrequency) {
+            return scheduleFrequency(Output.of(scheduleFrequency));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder userPausedDetails(@Nullable Output<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails) {
-            this.userPausedDetails = userPausedDetails;
+            $.userPausedDetails = userPausedDetails;
             return this;
         }
-        public Builder userPausedDetails(@Nullable List<ClassificationJobUserPausedDetailGetArgs> userPausedDetails) {
-            this.userPausedDetails = Codegen.ofNullable(userPausedDetails);
-            return this;
+
+        public Builder userPausedDetails(List<ClassificationJobUserPausedDetailGetArgs> userPausedDetails) {
+            return userPausedDetails(Output.of(userPausedDetails));
         }
+
         public Builder userPausedDetails(ClassificationJobUserPausedDetailGetArgs... userPausedDetails) {
             return userPausedDetails(List.of(userPausedDetails));
-        }        public ClassificationJobState build() {
-            return new ClassificationJobState(createdAt, customDataIdentifierIds, description, initialRun, jobArn, jobId, jobStatus, jobType, name, namePrefix, s3JobDefinition, samplingPercentage, scheduleFrequency, tags, tagsAll, userPausedDetails);
+        }
+
+        public ClassificationJobState build() {
+            return $;
         }
     }
+
 }

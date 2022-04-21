@@ -13,62 +13,59 @@ public final class DatasetGlueConfiguration extends com.pulumi.resources.InvokeA
     public static final DatasetGlueConfiguration Empty = new DatasetGlueConfiguration();
 
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
     }
 
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public DatasetGlueConfiguration(
-        String databaseName,
-        String tableName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private DatasetGlueConfiguration() {}
 
-    private DatasetGlueConfiguration() {
-        this.databaseName = null;
-        this.tableName = null;
+    private DatasetGlueConfiguration(DatasetGlueConfiguration $) {
+        this.databaseName = $.databaseName;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetGlueConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String tableName;
+        private DatasetGlueConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetGlueConfiguration();
         }
 
         public Builder(DatasetGlueConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.tableName = defaults.tableName;
+            $ = new DatasetGlueConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public DatasetGlueConfiguration build() {
-            return new DatasetGlueConfiguration(databaseName, tableName);
+        }
+
+        public DatasetGlueConfiguration build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

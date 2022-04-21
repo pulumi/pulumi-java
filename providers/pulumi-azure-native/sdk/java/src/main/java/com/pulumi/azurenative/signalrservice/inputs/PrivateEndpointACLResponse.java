@@ -24,10 +24,10 @@ public final class PrivateEndpointACLResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="allow")
-      private final @Nullable List<String> allow;
+    private @Nullable List<String> allow;
 
-    public List<String> allow() {
-        return this.allow == null ? List.of() : this.allow;
+    public Optional<List<String>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PrivateEndpointACLResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="deny")
-      private final @Nullable List<String> deny;
+    private @Nullable List<String> deny;
 
-    public List<String> deny() {
-        return this.deny == null ? List.of() : this.deny;
+    public Optional<List<String>> deny() {
+        return Optional.ofNullable(this.deny);
     }
 
     /**
@@ -46,70 +46,65 @@ public final class PrivateEndpointACLResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public PrivateEndpointACLResponse(
-        @Nullable List<String> allow,
-        @Nullable List<String> deny,
-        String name) {
-        this.allow = allow;
-        this.deny = deny;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PrivateEndpointACLResponse() {}
 
-    private PrivateEndpointACLResponse() {
-        this.allow = List.of();
-        this.deny = List.of();
-        this.name = null;
+    private PrivateEndpointACLResponse(PrivateEndpointACLResponse $) {
+        this.allow = $.allow;
+        this.deny = $.deny;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointACLResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allow;
-        private @Nullable List<String> deny;
-        private String name;
+        private PrivateEndpointACLResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointACLResponse();
         }
 
         public Builder(PrivateEndpointACLResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.deny = defaults.deny;
-    	      this.name = defaults.name;
+            $ = new PrivateEndpointACLResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable List<String> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
+
         public Builder allow(String... allow) {
             return allow(List.of(allow));
         }
+
         public Builder deny(@Nullable List<String> deny) {
-            this.deny = deny;
+            $.deny = deny;
             return this;
         }
+
         public Builder deny(String... deny) {
             return deny(List.of(deny));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public PrivateEndpointACLResponse build() {
-            return new PrivateEndpointACLResponse(allow, deny, name);
+        }
+
+        public PrivateEndpointACLResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class TolerationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="effect")
-      private final @Nullable Output<String> effect;
+    private @Nullable Output<String> effect;
 
-    public Output<String> effect() {
-        return this.effect == null ? Codegen.empty() : this.effect;
+    public Optional<Output<String>> effect() {
+        return Optional.ofNullable(this.effect);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class TolerationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TolerationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<String> operator;
+    private @Nullable Output<String> operator;
 
-    public Output<String> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<String>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TolerationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tolerationSeconds")
-      private final @Nullable Output<Integer> tolerationSeconds;
+    private @Nullable Output<Integer> tolerationSeconds;
 
-    public Output<Integer> tolerationSeconds() {
-        return this.tolerationSeconds == null ? Codegen.empty() : this.tolerationSeconds;
+    public Optional<Output<Integer>> tolerationSeconds() {
+        return Optional.ofNullable(this.tolerationSeconds);
     }
 
     /**
@@ -78,102 +78,88 @@ public final class TolerationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TolerationArgs(
-        @Nullable Output<String> effect,
-        @Nullable Output<String> key,
-        @Nullable Output<String> operator,
-        @Nullable Output<Integer> tolerationSeconds,
-        @Nullable Output<String> value) {
-        this.effect = effect;
-        this.key = key;
-        this.operator = operator;
-        this.tolerationSeconds = tolerationSeconds;
-        this.value = value;
-    }
+    private TolerationArgs() {}
 
-    private TolerationArgs() {
-        this.effect = Codegen.empty();
-        this.key = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.tolerationSeconds = Codegen.empty();
-        this.value = Codegen.empty();
+    private TolerationArgs(TolerationArgs $) {
+        this.effect = $.effect;
+        this.key = $.key;
+        this.operator = $.operator;
+        this.tolerationSeconds = $.tolerationSeconds;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TolerationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> effect;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> operator;
-        private @Nullable Output<Integer> tolerationSeconds;
-        private @Nullable Output<String> value;
+        private TolerationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TolerationArgs();
         }
 
         public Builder(TolerationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effect = defaults.effect;
-    	      this.key = defaults.key;
-    	      this.operator = defaults.operator;
-    	      this.tolerationSeconds = defaults.tolerationSeconds;
-    	      this.value = defaults.value;
+            $ = new TolerationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder effect(@Nullable Output<String> effect) {
-            this.effect = effect;
+            $.effect = effect;
             return this;
         }
-        public Builder effect(@Nullable String effect) {
-            this.effect = Codegen.ofNullable(effect);
-            return this;
+
+        public Builder effect(String effect) {
+            return effect(Output.of(effect));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder operator(@Nullable Output<String> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable String operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
+
+        public Builder operator(String operator) {
+            return operator(Output.of(operator));
         }
+
         public Builder tolerationSeconds(@Nullable Output<Integer> tolerationSeconds) {
-            this.tolerationSeconds = tolerationSeconds;
+            $.tolerationSeconds = tolerationSeconds;
             return this;
         }
-        public Builder tolerationSeconds(@Nullable Integer tolerationSeconds) {
-            this.tolerationSeconds = Codegen.ofNullable(tolerationSeconds);
-            return this;
+
+        public Builder tolerationSeconds(Integer tolerationSeconds) {
+            return tolerationSeconds(Output.of(tolerationSeconds));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public TolerationArgs build() {
-            return new TolerationArgs(effect, key, operator, tolerationSeconds, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public TolerationArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authorizedResources")
-      private final @Nullable List<String> authorizedResources;
+    private @Nullable List<String> authorizedResources;
 
-    public List<String> authorizedResources() {
-        return this.authorizedResources == null ? List.of() : this.authorizedResources;
+    public Optional<List<String>> authorizedResources() {
+        return Optional.ofNullable(this.authorizedResources);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataSourceId", required=true)
-      private final String dataSourceId;
+    private String dataSourceId;
 
     public String dataSourceId() {
         return this.dataSourceId;
@@ -46,10 +46,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="query")
-      private final @Nullable String query;
+    private @Nullable String query;
 
     public Optional<String> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -57,76 +57,67 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryType")
-      private final @Nullable String queryType;
+    private @Nullable String queryType;
 
     public Optional<String> queryType() {
-        return this.queryType == null ? Optional.empty() : Optional.ofNullable(this.queryType);
+        return Optional.ofNullable(this.queryType);
     }
 
-    public SourceResponse(
-        @Nullable List<String> authorizedResources,
-        String dataSourceId,
-        @Nullable String query,
-        @Nullable String queryType) {
-        this.authorizedResources = authorizedResources;
-        this.dataSourceId = Objects.requireNonNull(dataSourceId, "expected parameter 'dataSourceId' to be non-null");
-        this.query = query;
-        this.queryType = queryType;
-    }
+    private SourceResponse() {}
 
-    private SourceResponse() {
-        this.authorizedResources = List.of();
-        this.dataSourceId = null;
-        this.query = null;
-        this.queryType = null;
+    private SourceResponse(SourceResponse $) {
+        this.authorizedResources = $.authorizedResources;
+        this.dataSourceId = $.dataSourceId;
+        this.query = $.query;
+        this.queryType = $.queryType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> authorizedResources;
-        private String dataSourceId;
-        private @Nullable String query;
-        private @Nullable String queryType;
+        private SourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceResponse();
         }
 
         public Builder(SourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizedResources = defaults.authorizedResources;
-    	      this.dataSourceId = defaults.dataSourceId;
-    	      this.query = defaults.query;
-    	      this.queryType = defaults.queryType;
+            $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizedResources(@Nullable List<String> authorizedResources) {
-            this.authorizedResources = authorizedResources;
+            $.authorizedResources = authorizedResources;
             return this;
         }
+
         public Builder authorizedResources(String... authorizedResources) {
             return authorizedResources(List.of(authorizedResources));
         }
+
         public Builder dataSourceId(String dataSourceId) {
-            this.dataSourceId = Objects.requireNonNull(dataSourceId);
+            $.dataSourceId = dataSourceId;
             return this;
         }
+
         public Builder query(@Nullable String query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
+
         public Builder queryType(@Nullable String queryType) {
-            this.queryType = queryType;
+            $.queryType = queryType;
             return this;
-        }        public SourceResponse build() {
-            return new SourceResponse(authorizedResources, dataSourceId, query, queryType);
+        }
+
+        public SourceResponse build() {
+            $.dataSourceId = Objects.requireNonNull($.dataSourceId, "expected parameter 'dataSourceId' to be non-null");
+            return $;
         }
     }
+
 }

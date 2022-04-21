@@ -23,7 +23,7 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mysqlSourceConfig", required=true)
-      private final MysqlSourceConfigResponse mysqlSourceConfig;
+    private MysqlSourceConfigResponse mysqlSourceConfig;
 
     public MysqlSourceConfigResponse mysqlSourceConfig() {
         return this.mysqlSourceConfig;
@@ -34,7 +34,7 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="oracleSourceConfig", required=true)
-      private final OracleSourceConfigResponse oracleSourceConfig;
+    private OracleSourceConfigResponse oracleSourceConfig;
 
     public OracleSourceConfigResponse oracleSourceConfig() {
         return this.oracleSourceConfig;
@@ -45,64 +45,59 @@ public final class SourceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceConnectionProfileName", required=true)
-      private final String sourceConnectionProfileName;
+    private String sourceConnectionProfileName;
 
     public String sourceConnectionProfileName() {
         return this.sourceConnectionProfileName;
     }
 
-    public SourceConfigResponse(
-        MysqlSourceConfigResponse mysqlSourceConfig,
-        OracleSourceConfigResponse oracleSourceConfig,
-        String sourceConnectionProfileName) {
-        this.mysqlSourceConfig = Objects.requireNonNull(mysqlSourceConfig, "expected parameter 'mysqlSourceConfig' to be non-null");
-        this.oracleSourceConfig = Objects.requireNonNull(oracleSourceConfig, "expected parameter 'oracleSourceConfig' to be non-null");
-        this.sourceConnectionProfileName = Objects.requireNonNull(sourceConnectionProfileName, "expected parameter 'sourceConnectionProfileName' to be non-null");
-    }
+    private SourceConfigResponse() {}
 
-    private SourceConfigResponse() {
-        this.mysqlSourceConfig = null;
-        this.oracleSourceConfig = null;
-        this.sourceConnectionProfileName = null;
+    private SourceConfigResponse(SourceConfigResponse $) {
+        this.mysqlSourceConfig = $.mysqlSourceConfig;
+        this.oracleSourceConfig = $.oracleSourceConfig;
+        this.sourceConnectionProfileName = $.sourceConnectionProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MysqlSourceConfigResponse mysqlSourceConfig;
-        private OracleSourceConfigResponse oracleSourceConfig;
-        private String sourceConnectionProfileName;
+        private SourceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceConfigResponse();
         }
 
         public Builder(SourceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mysqlSourceConfig = defaults.mysqlSourceConfig;
-    	      this.oracleSourceConfig = defaults.oracleSourceConfig;
-    	      this.sourceConnectionProfileName = defaults.sourceConnectionProfileName;
+            $ = new SourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mysqlSourceConfig(MysqlSourceConfigResponse mysqlSourceConfig) {
-            this.mysqlSourceConfig = Objects.requireNonNull(mysqlSourceConfig);
+            $.mysqlSourceConfig = mysqlSourceConfig;
             return this;
         }
+
         public Builder oracleSourceConfig(OracleSourceConfigResponse oracleSourceConfig) {
-            this.oracleSourceConfig = Objects.requireNonNull(oracleSourceConfig);
+            $.oracleSourceConfig = oracleSourceConfig;
             return this;
         }
+
         public Builder sourceConnectionProfileName(String sourceConnectionProfileName) {
-            this.sourceConnectionProfileName = Objects.requireNonNull(sourceConnectionProfileName);
+            $.sourceConnectionProfileName = sourceConnectionProfileName;
             return this;
-        }        public SourceConfigResponse build() {
-            return new SourceConfigResponse(mysqlSourceConfig, oracleSourceConfig, sourceConnectionProfileName);
+        }
+
+        public SourceConfigResponse build() {
+            $.mysqlSourceConfig = Objects.requireNonNull($.mysqlSourceConfig, "expected parameter 'mysqlSourceConfig' to be non-null");
+            $.oracleSourceConfig = Objects.requireNonNull($.oracleSourceConfig, "expected parameter 'oracleSourceConfig' to be non-null");
+            $.sourceConnectionProfileName = Objects.requireNonNull($.sourceConnectionProfileName, "expected parameter 'sourceConnectionProfileName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.CertificateProviderInstanceArgs;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs exte
      * 
      */
     @Import(name="certificateProviderInstance")
-      private final @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance;
+    private @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance;
 
-    public Output<CertificateProviderInstanceArgs> certificateProviderInstance() {
-        return this.certificateProviderInstance == null ? Codegen.empty() : this.certificateProviderInstance;
+    public Optional<Output<CertificateProviderInstanceArgs>> certificateProviderInstance() {
+        return Optional.ofNullable(this.certificateProviderInstance);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs exte
      * 
      */
     @Import(name="grpcEndpoint")
-      private final @Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
+    private @Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
 
-    public Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint() {
-        return this.grpcEndpoint == null ? Codegen.empty() : this.grpcEndpoint;
+    public Optional<Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs>> grpcEndpoint() {
+        return Optional.ofNullable(this.grpcEndpoint);
     }
 
-    public GoogleCloudNetworksecurityV1beta1CertificateProviderArgs(
-        @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance,
-        @Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint) {
-        this.certificateProviderInstance = certificateProviderInstance;
-        this.grpcEndpoint = grpcEndpoint;
-    }
+    private GoogleCloudNetworksecurityV1beta1CertificateProviderArgs() {}
 
-    private GoogleCloudNetworksecurityV1beta1CertificateProviderArgs() {
-        this.certificateProviderInstance = Codegen.empty();
-        this.grpcEndpoint = Codegen.empty();
+    private GoogleCloudNetworksecurityV1beta1CertificateProviderArgs(GoogleCloudNetworksecurityV1beta1CertificateProviderArgs $) {
+        this.certificateProviderInstance = $.certificateProviderInstance;
+        this.grpcEndpoint = $.grpcEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudNetworksecurityV1beta1CertificateProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance;
-        private @Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
+        private GoogleCloudNetworksecurityV1beta1CertificateProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudNetworksecurityV1beta1CertificateProviderArgs();
         }
 
         public Builder(GoogleCloudNetworksecurityV1beta1CertificateProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateProviderInstance = defaults.certificateProviderInstance;
-    	      this.grpcEndpoint = defaults.grpcEndpoint;
+            $ = new GoogleCloudNetworksecurityV1beta1CertificateProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateProviderInstance(@Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance) {
-            this.certificateProviderInstance = certificateProviderInstance;
+            $.certificateProviderInstance = certificateProviderInstance;
             return this;
         }
-        public Builder certificateProviderInstance(@Nullable CertificateProviderInstanceArgs certificateProviderInstance) {
-            this.certificateProviderInstance = Codegen.ofNullable(certificateProviderInstance);
-            return this;
+
+        public Builder certificateProviderInstance(CertificateProviderInstanceArgs certificateProviderInstance) {
+            return certificateProviderInstance(Output.of(certificateProviderInstance));
         }
+
         public Builder grpcEndpoint(@Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint) {
-            this.grpcEndpoint = grpcEndpoint;
+            $.grpcEndpoint = grpcEndpoint;
             return this;
         }
-        public Builder grpcEndpoint(@Nullable GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs grpcEndpoint) {
-            this.grpcEndpoint = Codegen.ofNullable(grpcEndpoint);
-            return this;
-        }        public GoogleCloudNetworksecurityV1beta1CertificateProviderArgs build() {
-            return new GoogleCloudNetworksecurityV1beta1CertificateProviderArgs(certificateProviderInstance, grpcEndpoint);
+
+        public Builder grpcEndpoint(GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs grpcEndpoint) {
+            return grpcEndpoint(Output.of(grpcEndpoint));
+        }
+
+        public GoogleCloudNetworksecurityV1beta1CertificateProviderArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.retail_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.retail_v2.enums.ProductAvailability;
 import com.pulumi.googlenative.retail_v2.enums.ProductType;
 import com.pulumi.googlenative.retail_v2.inputs.GoogleCloudRetailV2AudienceArgs;
@@ -20,6 +19,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<GoogleCloudRetailV2AudienceArgs> audience;
+    private @Nullable Output<GoogleCloudRetailV2AudienceArgs> audience;
 
-    public Output<GoogleCloudRetailV2AudienceArgs> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<GoogleCloudRetailV2AudienceArgs>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availability")
-      private final @Nullable Output<ProductAvailability> availability;
+    private @Nullable Output<ProductAvailability> availability;
 
-    public Output<ProductAvailability> availability() {
-        return this.availability == null ? Codegen.empty() : this.availability;
+    public Optional<Output<ProductAvailability>> availability() {
+        return Optional.ofNullable(this.availability);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availableQuantity")
-      private final @Nullable Output<Integer> availableQuantity;
+    private @Nullable Output<Integer> availableQuantity;
 
-    public Output<Integer> availableQuantity() {
-        return this.availableQuantity == null ? Codegen.empty() : this.availableQuantity;
+    public Optional<Output<Integer>> availableQuantity() {
+        return Optional.ofNullable(this.availableQuantity);
     }
 
     /**
@@ -76,14 +76,14 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availableTime")
-      private final @Nullable Output<String> availableTime;
+    private @Nullable Output<String> availableTime;
 
-    public Output<String> availableTime() {
-        return this.availableTime == null ? Codegen.empty() : this.availableTime;
+    public Optional<Output<String>> availableTime() {
+        return Optional.ofNullable(this.availableTime);
     }
 
     @Import(name="branchId", required=true)
-      private final Output<String> branchId;
+    private Output<String> branchId;
 
     public Output<String> branchId() {
         return this.branchId;
@@ -94,14 +94,14 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="brands")
-      private final @Nullable Output<List<String>> brands;
+    private @Nullable Output<List<String>> brands;
 
-    public Output<List<String>> brands() {
-        return this.brands == null ? Codegen.empty() : this.brands;
+    public Optional<Output<List<String>>> brands() {
+        return Optional.ofNullable(this.brands);
     }
 
     @Import(name="catalogId", required=true)
-      private final Output<String> catalogId;
+    private Output<String> catalogId;
 
     public Output<String> catalogId() {
         return this.catalogId;
@@ -112,10 +112,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="categories")
-      private final @Nullable Output<List<String>> categories;
+    private @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> categories() {
-        return this.categories == null ? Codegen.empty() : this.categories;
+    public Optional<Output<List<String>>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collectionMemberIds")
-      private final @Nullable Output<List<String>> collectionMemberIds;
+    private @Nullable Output<List<String>> collectionMemberIds;
 
-    public Output<List<String>> collectionMemberIds() {
-        return this.collectionMemberIds == null ? Codegen.empty() : this.collectionMemberIds;
+    public Optional<Output<List<String>>> collectionMemberIds() {
+        return Optional.ofNullable(this.collectionMemberIds);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="colorInfo")
-      private final @Nullable Output<GoogleCloudRetailV2ColorInfoArgs> colorInfo;
+    private @Nullable Output<GoogleCloudRetailV2ColorInfoArgs> colorInfo;
 
-    public Output<GoogleCloudRetailV2ColorInfoArgs> colorInfo() {
-        return this.colorInfo == null ? Codegen.empty() : this.colorInfo;
+    public Optional<Output<GoogleCloudRetailV2ColorInfoArgs>> colorInfo() {
+        return Optional.ofNullable(this.colorInfo);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<String>> conditions;
+    private @Nullable Output<List<String>> conditions;
 
-    public Output<List<String>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<String>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fulfillmentInfo")
-      private final @Nullable Output<List<GoogleCloudRetailV2FulfillmentInfoArgs>> fulfillmentInfo;
+    private @Nullable Output<List<GoogleCloudRetailV2FulfillmentInfoArgs>> fulfillmentInfo;
 
-    public Output<List<GoogleCloudRetailV2FulfillmentInfoArgs>> fulfillmentInfo() {
-        return this.fulfillmentInfo == null ? Codegen.empty() : this.fulfillmentInfo;
+    public Optional<Output<List<GoogleCloudRetailV2FulfillmentInfoArgs>>> fulfillmentInfo() {
+        return Optional.ofNullable(this.fulfillmentInfo);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gtin")
-      private final @Nullable Output<String> gtin;
+    private @Nullable Output<String> gtin;
 
-    public Output<String> gtin() {
-        return this.gtin == null ? Codegen.empty() : this.gtin;
+    public Optional<Output<String>> gtin() {
+        return Optional.ofNullable(this.gtin);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="images")
-      private final @Nullable Output<List<GoogleCloudRetailV2ImageArgs>> images;
+    private @Nullable Output<List<GoogleCloudRetailV2ImageArgs>> images;
 
-    public Output<List<GoogleCloudRetailV2ImageArgs>> images() {
-        return this.images == null ? Codegen.empty() : this.images;
+    public Optional<Output<List<GoogleCloudRetailV2ImageArgs>>> images() {
+        return Optional.ofNullable(this.images);
     }
 
     /**
@@ -222,17 +222,17 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -240,10 +240,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="materials")
-      private final @Nullable Output<List<String>> materials;
+    private @Nullable Output<List<String>> materials;
 
-    public Output<List<String>> materials() {
-        return this.materials == null ? Codegen.empty() : this.materials;
+    public Optional<Output<List<String>>> materials() {
+        return Optional.ofNullable(this.materials);
     }
 
     /**
@@ -251,10 +251,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -262,10 +262,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="patterns")
-      private final @Nullable Output<List<String>> patterns;
+    private @Nullable Output<List<String>> patterns;
 
-    public Output<List<String>> patterns() {
-        return this.patterns == null ? Codegen.empty() : this.patterns;
+    public Optional<Output<List<String>>> patterns() {
+        return Optional.ofNullable(this.patterns);
     }
 
     /**
@@ -273,10 +273,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priceInfo")
-      private final @Nullable Output<GoogleCloudRetailV2PriceInfoArgs> priceInfo;
+    private @Nullable Output<GoogleCloudRetailV2PriceInfoArgs> priceInfo;
 
-    public Output<GoogleCloudRetailV2PriceInfoArgs> priceInfo() {
-        return this.priceInfo == null ? Codegen.empty() : this.priceInfo;
+    public Optional<Output<GoogleCloudRetailV2PriceInfoArgs>> priceInfo() {
+        return Optional.ofNullable(this.priceInfo);
     }
 
     /**
@@ -284,24 +284,24 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryProductId")
-      private final @Nullable Output<String> primaryProductId;
+    private @Nullable Output<String> primaryProductId;
 
-    public Output<String> primaryProductId() {
-        return this.primaryProductId == null ? Codegen.empty() : this.primaryProductId;
+    public Optional<Output<String>> primaryProductId() {
+        return Optional.ofNullable(this.primaryProductId);
     }
 
     @Import(name="productId", required=true)
-      private final Output<String> productId;
+    private Output<String> productId;
 
     public Output<String> productId() {
         return this.productId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -309,10 +309,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="promotions")
-      private final @Nullable Output<List<GoogleCloudRetailV2PromotionArgs>> promotions;
+    private @Nullable Output<List<GoogleCloudRetailV2PromotionArgs>> promotions;
 
-    public Output<List<GoogleCloudRetailV2PromotionArgs>> promotions() {
-        return this.promotions == null ? Codegen.empty() : this.promotions;
+    public Optional<Output<List<GoogleCloudRetailV2PromotionArgs>>> promotions() {
+        return Optional.ofNullable(this.promotions);
     }
 
     /**
@@ -320,10 +320,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishTime")
-      private final @Nullable Output<String> publishTime;
+    private @Nullable Output<String> publishTime;
 
-    public Output<String> publishTime() {
-        return this.publishTime == null ? Codegen.empty() : this.publishTime;
+    public Optional<Output<String>> publishTime() {
+        return Optional.ofNullable(this.publishTime);
     }
 
     /**
@@ -331,10 +331,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rating")
-      private final @Nullable Output<GoogleCloudRetailV2RatingArgs> rating;
+    private @Nullable Output<GoogleCloudRetailV2RatingArgs> rating;
 
-    public Output<GoogleCloudRetailV2RatingArgs> rating() {
-        return this.rating == null ? Codegen.empty() : this.rating;
+    public Optional<Output<GoogleCloudRetailV2RatingArgs>> rating() {
+        return Optional.ofNullable(this.rating);
     }
 
     /**
@@ -342,10 +342,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retrievableFields")
-      private final @Nullable Output<String> retrievableFields;
+    private @Nullable Output<String> retrievableFields;
 
-    public Output<String> retrievableFields() {
-        return this.retrievableFields == null ? Codegen.empty() : this.retrievableFields;
+    public Optional<Output<String>> retrievableFields() {
+        return Optional.ofNullable(this.retrievableFields);
     }
 
     /**
@@ -353,10 +353,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizes")
-      private final @Nullable Output<List<String>> sizes;
+    private @Nullable Output<List<String>> sizes;
 
-    public Output<List<String>> sizes() {
-        return this.sizes == null ? Codegen.empty() : this.sizes;
+    public Optional<Output<List<String>>> sizes() {
+        return Optional.ofNullable(this.sizes);
     }
 
     /**
@@ -364,10 +364,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -375,7 +375,7 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
@@ -386,10 +386,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<String> ttl;
+    private @Nullable Output<String> ttl;
 
-    public Output<String> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<String>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
     /**
@@ -397,10 +397,10 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ProductType> type;
+    private @Nullable Output<ProductType> type;
 
-    public Output<ProductType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ProductType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -408,551 +408,456 @@ public final class ProductArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public ProductArgs(
-        @Nullable Output<Map<String,String>> attributes,
-        @Nullable Output<GoogleCloudRetailV2AudienceArgs> audience,
-        @Nullable Output<ProductAvailability> availability,
-        @Nullable Output<Integer> availableQuantity,
-        @Nullable Output<String> availableTime,
-        Output<String> branchId,
-        @Nullable Output<List<String>> brands,
-        Output<String> catalogId,
-        @Nullable Output<List<String>> categories,
-        @Nullable Output<List<String>> collectionMemberIds,
-        @Nullable Output<GoogleCloudRetailV2ColorInfoArgs> colorInfo,
-        @Nullable Output<List<String>> conditions,
-        @Nullable Output<String> description,
-        @Nullable Output<String> expireTime,
-        @Nullable Output<List<GoogleCloudRetailV2FulfillmentInfoArgs>> fulfillmentInfo,
-        @Nullable Output<String> gtin,
-        @Nullable Output<String> id,
-        @Nullable Output<List<GoogleCloudRetailV2ImageArgs>> images,
-        @Nullable Output<String> languageCode,
-        @Nullable Output<String> location,
-        @Nullable Output<List<String>> materials,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> patterns,
-        @Nullable Output<GoogleCloudRetailV2PriceInfoArgs> priceInfo,
-        @Nullable Output<String> primaryProductId,
-        Output<String> productId,
-        @Nullable Output<String> project,
-        @Nullable Output<List<GoogleCloudRetailV2PromotionArgs>> promotions,
-        @Nullable Output<String> publishTime,
-        @Nullable Output<GoogleCloudRetailV2RatingArgs> rating,
-        @Nullable Output<String> retrievableFields,
-        @Nullable Output<List<String>> sizes,
-        @Nullable Output<List<String>> tags,
-        Output<String> title,
-        @Nullable Output<String> ttl,
-        @Nullable Output<ProductType> type,
-        @Nullable Output<String> uri) {
-        this.attributes = attributes;
-        this.audience = audience;
-        this.availability = availability;
-        this.availableQuantity = availableQuantity;
-        this.availableTime = availableTime;
-        this.branchId = Objects.requireNonNull(branchId, "expected parameter 'branchId' to be non-null");
-        this.brands = brands;
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.categories = categories;
-        this.collectionMemberIds = collectionMemberIds;
-        this.colorInfo = colorInfo;
-        this.conditions = conditions;
-        this.description = description;
-        this.expireTime = expireTime;
-        this.fulfillmentInfo = fulfillmentInfo;
-        this.gtin = gtin;
-        this.id = id;
-        this.images = images;
-        this.languageCode = languageCode;
-        this.location = location;
-        this.materials = materials;
-        this.name = name;
-        this.patterns = patterns;
-        this.priceInfo = priceInfo;
-        this.primaryProductId = primaryProductId;
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.project = project;
-        this.promotions = promotions;
-        this.publishTime = publishTime;
-        this.rating = rating;
-        this.retrievableFields = retrievableFields;
-        this.sizes = sizes;
-        this.tags = tags;
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.ttl = ttl;
-        this.type = type;
-        this.uri = uri;
-    }
+    private ProductArgs() {}
 
-    private ProductArgs() {
-        this.attributes = Codegen.empty();
-        this.audience = Codegen.empty();
-        this.availability = Codegen.empty();
-        this.availableQuantity = Codegen.empty();
-        this.availableTime = Codegen.empty();
-        this.branchId = Codegen.empty();
-        this.brands = Codegen.empty();
-        this.catalogId = Codegen.empty();
-        this.categories = Codegen.empty();
-        this.collectionMemberIds = Codegen.empty();
-        this.colorInfo = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.expireTime = Codegen.empty();
-        this.fulfillmentInfo = Codegen.empty();
-        this.gtin = Codegen.empty();
-        this.id = Codegen.empty();
-        this.images = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.location = Codegen.empty();
-        this.materials = Codegen.empty();
-        this.name = Codegen.empty();
-        this.patterns = Codegen.empty();
-        this.priceInfo = Codegen.empty();
-        this.primaryProductId = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.promotions = Codegen.empty();
-        this.publishTime = Codegen.empty();
-        this.rating = Codegen.empty();
-        this.retrievableFields = Codegen.empty();
-        this.sizes = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.title = Codegen.empty();
-        this.ttl = Codegen.empty();
-        this.type = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ProductArgs(ProductArgs $) {
+        this.attributes = $.attributes;
+        this.audience = $.audience;
+        this.availability = $.availability;
+        this.availableQuantity = $.availableQuantity;
+        this.availableTime = $.availableTime;
+        this.branchId = $.branchId;
+        this.brands = $.brands;
+        this.catalogId = $.catalogId;
+        this.categories = $.categories;
+        this.collectionMemberIds = $.collectionMemberIds;
+        this.colorInfo = $.colorInfo;
+        this.conditions = $.conditions;
+        this.description = $.description;
+        this.expireTime = $.expireTime;
+        this.fulfillmentInfo = $.fulfillmentInfo;
+        this.gtin = $.gtin;
+        this.id = $.id;
+        this.images = $.images;
+        this.languageCode = $.languageCode;
+        this.location = $.location;
+        this.materials = $.materials;
+        this.name = $.name;
+        this.patterns = $.patterns;
+        this.priceInfo = $.priceInfo;
+        this.primaryProductId = $.primaryProductId;
+        this.productId = $.productId;
+        this.project = $.project;
+        this.promotions = $.promotions;
+        this.publishTime = $.publishTime;
+        this.rating = $.rating;
+        this.retrievableFields = $.retrievableFields;
+        this.sizes = $.sizes;
+        this.tags = $.tags;
+        this.title = $.title;
+        this.ttl = $.ttl;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> attributes;
-        private @Nullable Output<GoogleCloudRetailV2AudienceArgs> audience;
-        private @Nullable Output<ProductAvailability> availability;
-        private @Nullable Output<Integer> availableQuantity;
-        private @Nullable Output<String> availableTime;
-        private Output<String> branchId;
-        private @Nullable Output<List<String>> brands;
-        private Output<String> catalogId;
-        private @Nullable Output<List<String>> categories;
-        private @Nullable Output<List<String>> collectionMemberIds;
-        private @Nullable Output<GoogleCloudRetailV2ColorInfoArgs> colorInfo;
-        private @Nullable Output<List<String>> conditions;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> expireTime;
-        private @Nullable Output<List<GoogleCloudRetailV2FulfillmentInfoArgs>> fulfillmentInfo;
-        private @Nullable Output<String> gtin;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<GoogleCloudRetailV2ImageArgs>> images;
-        private @Nullable Output<String> languageCode;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<String>> materials;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> patterns;
-        private @Nullable Output<GoogleCloudRetailV2PriceInfoArgs> priceInfo;
-        private @Nullable Output<String> primaryProductId;
-        private Output<String> productId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<GoogleCloudRetailV2PromotionArgs>> promotions;
-        private @Nullable Output<String> publishTime;
-        private @Nullable Output<GoogleCloudRetailV2RatingArgs> rating;
-        private @Nullable Output<String> retrievableFields;
-        private @Nullable Output<List<String>> sizes;
-        private @Nullable Output<List<String>> tags;
-        private Output<String> title;
-        private @Nullable Output<String> ttl;
-        private @Nullable Output<ProductType> type;
-        private @Nullable Output<String> uri;
+        private ProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductArgs();
         }
 
         public Builder(ProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.audience = defaults.audience;
-    	      this.availability = defaults.availability;
-    	      this.availableQuantity = defaults.availableQuantity;
-    	      this.availableTime = defaults.availableTime;
-    	      this.branchId = defaults.branchId;
-    	      this.brands = defaults.brands;
-    	      this.catalogId = defaults.catalogId;
-    	      this.categories = defaults.categories;
-    	      this.collectionMemberIds = defaults.collectionMemberIds;
-    	      this.colorInfo = defaults.colorInfo;
-    	      this.conditions = defaults.conditions;
-    	      this.description = defaults.description;
-    	      this.expireTime = defaults.expireTime;
-    	      this.fulfillmentInfo = defaults.fulfillmentInfo;
-    	      this.gtin = defaults.gtin;
-    	      this.id = defaults.id;
-    	      this.images = defaults.images;
-    	      this.languageCode = defaults.languageCode;
-    	      this.location = defaults.location;
-    	      this.materials = defaults.materials;
-    	      this.name = defaults.name;
-    	      this.patterns = defaults.patterns;
-    	      this.priceInfo = defaults.priceInfo;
-    	      this.primaryProductId = defaults.primaryProductId;
-    	      this.productId = defaults.productId;
-    	      this.project = defaults.project;
-    	      this.promotions = defaults.promotions;
-    	      this.publishTime = defaults.publishTime;
-    	      this.rating = defaults.rating;
-    	      this.retrievableFields = defaults.retrievableFields;
-    	      this.sizes = defaults.sizes;
-    	      this.tags = defaults.tags;
-    	      this.title = defaults.title;
-    	      this.ttl = defaults.ttl;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new ProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder audience(@Nullable Output<GoogleCloudRetailV2AudienceArgs> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable GoogleCloudRetailV2AudienceArgs audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(GoogleCloudRetailV2AudienceArgs audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder availability(@Nullable Output<ProductAvailability> availability) {
-            this.availability = availability;
+            $.availability = availability;
             return this;
         }
-        public Builder availability(@Nullable ProductAvailability availability) {
-            this.availability = Codegen.ofNullable(availability);
-            return this;
+
+        public Builder availability(ProductAvailability availability) {
+            return availability(Output.of(availability));
         }
+
         public Builder availableQuantity(@Nullable Output<Integer> availableQuantity) {
-            this.availableQuantity = availableQuantity;
+            $.availableQuantity = availableQuantity;
             return this;
         }
-        public Builder availableQuantity(@Nullable Integer availableQuantity) {
-            this.availableQuantity = Codegen.ofNullable(availableQuantity);
-            return this;
+
+        public Builder availableQuantity(Integer availableQuantity) {
+            return availableQuantity(Output.of(availableQuantity));
         }
+
         public Builder availableTime(@Nullable Output<String> availableTime) {
-            this.availableTime = availableTime;
+            $.availableTime = availableTime;
             return this;
         }
-        public Builder availableTime(@Nullable String availableTime) {
-            this.availableTime = Codegen.ofNullable(availableTime);
-            return this;
+
+        public Builder availableTime(String availableTime) {
+            return availableTime(Output.of(availableTime));
         }
+
         public Builder branchId(Output<String> branchId) {
-            this.branchId = Objects.requireNonNull(branchId);
+            $.branchId = branchId;
             return this;
         }
+
         public Builder branchId(String branchId) {
-            this.branchId = Output.of(Objects.requireNonNull(branchId));
-            return this;
+            return branchId(Output.of(branchId));
         }
+
         public Builder brands(@Nullable Output<List<String>> brands) {
-            this.brands = brands;
+            $.brands = brands;
             return this;
         }
-        public Builder brands(@Nullable List<String> brands) {
-            this.brands = Codegen.ofNullable(brands);
-            return this;
+
+        public Builder brands(List<String> brands) {
+            return brands(Output.of(brands));
         }
+
         public Builder brands(String... brands) {
             return brands(List.of(brands));
         }
+
         public Builder catalogId(Output<String> catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder catalogId(String catalogId) {
-            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
-            return this;
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder categories(@Nullable Output<List<String>> categories) {
-            this.categories = categories;
+            $.categories = categories;
             return this;
         }
-        public Builder categories(@Nullable List<String> categories) {
-            this.categories = Codegen.ofNullable(categories);
-            return this;
+
+        public Builder categories(List<String> categories) {
+            return categories(Output.of(categories));
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder collectionMemberIds(@Nullable Output<List<String>> collectionMemberIds) {
-            this.collectionMemberIds = collectionMemberIds;
+            $.collectionMemberIds = collectionMemberIds;
             return this;
         }
-        public Builder collectionMemberIds(@Nullable List<String> collectionMemberIds) {
-            this.collectionMemberIds = Codegen.ofNullable(collectionMemberIds);
-            return this;
+
+        public Builder collectionMemberIds(List<String> collectionMemberIds) {
+            return collectionMemberIds(Output.of(collectionMemberIds));
         }
+
         public Builder collectionMemberIds(String... collectionMemberIds) {
             return collectionMemberIds(List.of(collectionMemberIds));
         }
+
         public Builder colorInfo(@Nullable Output<GoogleCloudRetailV2ColorInfoArgs> colorInfo) {
-            this.colorInfo = colorInfo;
+            $.colorInfo = colorInfo;
             return this;
         }
-        public Builder colorInfo(@Nullable GoogleCloudRetailV2ColorInfoArgs colorInfo) {
-            this.colorInfo = Codegen.ofNullable(colorInfo);
-            return this;
+
+        public Builder colorInfo(GoogleCloudRetailV2ColorInfoArgs colorInfo) {
+            return colorInfo(Output.of(colorInfo));
         }
+
         public Builder conditions(@Nullable Output<List<String>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<String> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<String> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(String... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder fulfillmentInfo(@Nullable Output<List<GoogleCloudRetailV2FulfillmentInfoArgs>> fulfillmentInfo) {
-            this.fulfillmentInfo = fulfillmentInfo;
+            $.fulfillmentInfo = fulfillmentInfo;
             return this;
         }
-        public Builder fulfillmentInfo(@Nullable List<GoogleCloudRetailV2FulfillmentInfoArgs> fulfillmentInfo) {
-            this.fulfillmentInfo = Codegen.ofNullable(fulfillmentInfo);
-            return this;
+
+        public Builder fulfillmentInfo(List<GoogleCloudRetailV2FulfillmentInfoArgs> fulfillmentInfo) {
+            return fulfillmentInfo(Output.of(fulfillmentInfo));
         }
+
         public Builder fulfillmentInfo(GoogleCloudRetailV2FulfillmentInfoArgs... fulfillmentInfo) {
             return fulfillmentInfo(List.of(fulfillmentInfo));
         }
+
         public Builder gtin(@Nullable Output<String> gtin) {
-            this.gtin = gtin;
+            $.gtin = gtin;
             return this;
         }
-        public Builder gtin(@Nullable String gtin) {
-            this.gtin = Codegen.ofNullable(gtin);
-            return this;
+
+        public Builder gtin(String gtin) {
+            return gtin(Output.of(gtin));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder images(@Nullable Output<List<GoogleCloudRetailV2ImageArgs>> images) {
-            this.images = images;
+            $.images = images;
             return this;
         }
-        public Builder images(@Nullable List<GoogleCloudRetailV2ImageArgs> images) {
-            this.images = Codegen.ofNullable(images);
-            return this;
+
+        public Builder images(List<GoogleCloudRetailV2ImageArgs> images) {
+            return images(Output.of(images));
         }
+
         public Builder images(GoogleCloudRetailV2ImageArgs... images) {
             return images(List.of(images));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder materials(@Nullable Output<List<String>> materials) {
-            this.materials = materials;
+            $.materials = materials;
             return this;
         }
-        public Builder materials(@Nullable List<String> materials) {
-            this.materials = Codegen.ofNullable(materials);
-            return this;
+
+        public Builder materials(List<String> materials) {
+            return materials(Output.of(materials));
         }
+
         public Builder materials(String... materials) {
             return materials(List.of(materials));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder patterns(@Nullable Output<List<String>> patterns) {
-            this.patterns = patterns;
+            $.patterns = patterns;
             return this;
         }
-        public Builder patterns(@Nullable List<String> patterns) {
-            this.patterns = Codegen.ofNullable(patterns);
-            return this;
+
+        public Builder patterns(List<String> patterns) {
+            return patterns(Output.of(patterns));
         }
+
         public Builder patterns(String... patterns) {
             return patterns(List.of(patterns));
         }
+
         public Builder priceInfo(@Nullable Output<GoogleCloudRetailV2PriceInfoArgs> priceInfo) {
-            this.priceInfo = priceInfo;
+            $.priceInfo = priceInfo;
             return this;
         }
-        public Builder priceInfo(@Nullable GoogleCloudRetailV2PriceInfoArgs priceInfo) {
-            this.priceInfo = Codegen.ofNullable(priceInfo);
-            return this;
+
+        public Builder priceInfo(GoogleCloudRetailV2PriceInfoArgs priceInfo) {
+            return priceInfo(Output.of(priceInfo));
         }
+
         public Builder primaryProductId(@Nullable Output<String> primaryProductId) {
-            this.primaryProductId = primaryProductId;
+            $.primaryProductId = primaryProductId;
             return this;
         }
-        public Builder primaryProductId(@Nullable String primaryProductId) {
-            this.primaryProductId = Codegen.ofNullable(primaryProductId);
-            return this;
+
+        public Builder primaryProductId(String primaryProductId) {
+            return primaryProductId(Output.of(primaryProductId));
         }
+
         public Builder productId(Output<String> productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Output.of(Objects.requireNonNull(productId));
-            return this;
+            return productId(Output.of(productId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder promotions(@Nullable Output<List<GoogleCloudRetailV2PromotionArgs>> promotions) {
-            this.promotions = promotions;
+            $.promotions = promotions;
             return this;
         }
-        public Builder promotions(@Nullable List<GoogleCloudRetailV2PromotionArgs> promotions) {
-            this.promotions = Codegen.ofNullable(promotions);
-            return this;
+
+        public Builder promotions(List<GoogleCloudRetailV2PromotionArgs> promotions) {
+            return promotions(Output.of(promotions));
         }
+
         public Builder promotions(GoogleCloudRetailV2PromotionArgs... promotions) {
             return promotions(List.of(promotions));
         }
+
         public Builder publishTime(@Nullable Output<String> publishTime) {
-            this.publishTime = publishTime;
+            $.publishTime = publishTime;
             return this;
         }
-        public Builder publishTime(@Nullable String publishTime) {
-            this.publishTime = Codegen.ofNullable(publishTime);
-            return this;
+
+        public Builder publishTime(String publishTime) {
+            return publishTime(Output.of(publishTime));
         }
+
         public Builder rating(@Nullable Output<GoogleCloudRetailV2RatingArgs> rating) {
-            this.rating = rating;
+            $.rating = rating;
             return this;
         }
-        public Builder rating(@Nullable GoogleCloudRetailV2RatingArgs rating) {
-            this.rating = Codegen.ofNullable(rating);
-            return this;
+
+        public Builder rating(GoogleCloudRetailV2RatingArgs rating) {
+            return rating(Output.of(rating));
         }
+
         public Builder retrievableFields(@Nullable Output<String> retrievableFields) {
-            this.retrievableFields = retrievableFields;
+            $.retrievableFields = retrievableFields;
             return this;
         }
-        public Builder retrievableFields(@Nullable String retrievableFields) {
-            this.retrievableFields = Codegen.ofNullable(retrievableFields);
-            return this;
+
+        public Builder retrievableFields(String retrievableFields) {
+            return retrievableFields(Output.of(retrievableFields));
         }
+
         public Builder sizes(@Nullable Output<List<String>> sizes) {
-            this.sizes = sizes;
+            $.sizes = sizes;
             return this;
         }
-        public Builder sizes(@Nullable List<String> sizes) {
-            this.sizes = Codegen.ofNullable(sizes);
-            return this;
+
+        public Builder sizes(List<String> sizes) {
+            return sizes(Output.of(sizes));
         }
+
         public Builder sizes(String... sizes) {
             return sizes(List.of(sizes));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
+            return title(Output.of(title));
         }
+
         public Builder ttl(@Nullable Output<String> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable String ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
+
+        public Builder ttl(String ttl) {
+            return ttl(Output.of(ttl));
         }
+
         public Builder type(@Nullable Output<ProductType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ProductType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(ProductType type) {
+            return type(Output.of(type));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public ProductArgs build() {
-            return new ProductArgs(attributes, audience, availability, availableQuantity, availableTime, branchId, brands, catalogId, categories, collectionMemberIds, colorInfo, conditions, description, expireTime, fulfillmentInfo, gtin, id, images, languageCode, location, materials, name, patterns, priceInfo, primaryProductId, productId, project, promotions, publishTime, rating, retrievableFields, sizes, tags, title, ttl, type, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public ProductArgs build() {
+            $.branchId = Objects.requireNonNull($.branchId, "expected parameter 'branchId' to be non-null");
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

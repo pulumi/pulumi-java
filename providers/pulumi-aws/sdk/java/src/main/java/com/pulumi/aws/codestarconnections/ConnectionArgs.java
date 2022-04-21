@@ -5,10 +5,10 @@ package com.pulumi.aws.codestarconnections;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostArn")
-      private final @Nullable Output<String> hostArn;
+    private @Nullable Output<String> hostArn;
 
-    public Output<String> hostArn() {
-        return this.hostArn == null ? Codegen.empty() : this.hostArn;
+    public Optional<Output<String>> hostArn() {
+        return Optional.ofNullable(this.hostArn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="providerType")
-      private final @Nullable Output<String> providerType;
+    private @Nullable Output<String> providerType;
 
-    public Output<String> providerType() {
-        return this.providerType == null ? Codegen.empty() : this.providerType;
+    public Optional<Output<String>> providerType() {
+        return Optional.ofNullable(this.providerType);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ConnectionArgs(
-        @Nullable Output<String> hostArn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> providerType,
-        @Nullable Output<Map<String,String>> tags) {
-        this.hostArn = hostArn;
-        this.name = name;
-        this.providerType = providerType;
-        this.tags = tags;
-    }
+    private ConnectionArgs() {}
 
-    private ConnectionArgs() {
-        this.hostArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.providerType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ConnectionArgs(ConnectionArgs $) {
+        this.hostArn = $.hostArn;
+        this.name = $.name;
+        this.providerType = $.providerType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> providerType;
-        private @Nullable Output<Map<String,String>> tags;
+        private ConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionArgs();
         }
 
         public Builder(ConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostArn = defaults.hostArn;
-    	      this.name = defaults.name;
-    	      this.providerType = defaults.providerType;
-    	      this.tags = defaults.tags;
+            $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostArn(@Nullable Output<String> hostArn) {
-            this.hostArn = hostArn;
+            $.hostArn = hostArn;
             return this;
         }
-        public Builder hostArn(@Nullable String hostArn) {
-            this.hostArn = Codegen.ofNullable(hostArn);
-            return this;
+
+        public Builder hostArn(String hostArn) {
+            return hostArn(Output.of(hostArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder providerType(@Nullable Output<String> providerType) {
-            this.providerType = providerType;
+            $.providerType = providerType;
             return this;
         }
-        public Builder providerType(@Nullable String providerType) {
-            this.providerType = Codegen.ofNullable(providerType);
-            return this;
+
+        public Builder providerType(String providerType) {
+            return providerType(Output.of(providerType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ConnectionArgs build() {
-            return new ConnectionArgs(hostArn, name, providerType, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ConnectionArgs build() {
+            return $;
         }
     }
+
 }

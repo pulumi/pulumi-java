@@ -5,9 +5,9 @@ package com.pulumi.googlenative.iap_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,17 +20,17 @@ public final class BrandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationTitle")
-      private final @Nullable Output<String> applicationTitle;
+    private @Nullable Output<String> applicationTitle;
 
-    public Output<String> applicationTitle() {
-        return this.applicationTitle == null ? Codegen.empty() : this.applicationTitle;
+    public Optional<Output<String>> applicationTitle() {
+        return Optional.ofNullable(this.applicationTitle);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -38,76 +38,68 @@ public final class BrandArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportEmail")
-      private final @Nullable Output<String> supportEmail;
+    private @Nullable Output<String> supportEmail;
 
-    public Output<String> supportEmail() {
-        return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
+    public Optional<Output<String>> supportEmail() {
+        return Optional.ofNullable(this.supportEmail);
     }
 
-    public BrandArgs(
-        @Nullable Output<String> applicationTitle,
-        @Nullable Output<String> project,
-        @Nullable Output<String> supportEmail) {
-        this.applicationTitle = applicationTitle;
-        this.project = project;
-        this.supportEmail = supportEmail;
-    }
+    private BrandArgs() {}
 
-    private BrandArgs() {
-        this.applicationTitle = Codegen.empty();
-        this.project = Codegen.empty();
-        this.supportEmail = Codegen.empty();
+    private BrandArgs(BrandArgs $) {
+        this.applicationTitle = $.applicationTitle;
+        this.project = $.project;
+        this.supportEmail = $.supportEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BrandArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationTitle;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> supportEmail;
+        private BrandArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BrandArgs();
         }
 
         public Builder(BrandArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationTitle = defaults.applicationTitle;
-    	      this.project = defaults.project;
-    	      this.supportEmail = defaults.supportEmail;
+            $ = new BrandArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationTitle(@Nullable Output<String> applicationTitle) {
-            this.applicationTitle = applicationTitle;
+            $.applicationTitle = applicationTitle;
             return this;
         }
-        public Builder applicationTitle(@Nullable String applicationTitle) {
-            this.applicationTitle = Codegen.ofNullable(applicationTitle);
-            return this;
+
+        public Builder applicationTitle(String applicationTitle) {
+            return applicationTitle(Output.of(applicationTitle));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
-            this.supportEmail = supportEmail;
+            $.supportEmail = supportEmail;
             return this;
         }
-        public Builder supportEmail(@Nullable String supportEmail) {
-            this.supportEmail = Codegen.ofNullable(supportEmail);
-            return this;
-        }        public BrandArgs build() {
-            return new BrandArgs(applicationTitle, project, supportEmail);
+
+        public Builder supportEmail(String supportEmail) {
+            return supportEmail(Output.of(supportEmail));
+        }
+
+        public BrandArgs build() {
+            return $;
         }
     }
+
 }

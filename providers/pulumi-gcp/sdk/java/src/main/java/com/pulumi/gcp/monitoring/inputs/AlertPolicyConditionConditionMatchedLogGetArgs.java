@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class AlertPolicyConditionConditionMatchedLogGetArgs extends com.pu
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
@@ -38,63 +38,59 @@ public final class AlertPolicyConditionConditionMatchedLogGetArgs extends com.pu
      * 
      */
     @Import(name="labelExtractors")
-      private final @Nullable Output<Map<String,String>> labelExtractors;
+    private @Nullable Output<Map<String,String>> labelExtractors;
 
-    public Output<Map<String,String>> labelExtractors() {
-        return this.labelExtractors == null ? Codegen.empty() : this.labelExtractors;
+    public Optional<Output<Map<String,String>>> labelExtractors() {
+        return Optional.ofNullable(this.labelExtractors);
     }
 
-    public AlertPolicyConditionConditionMatchedLogGetArgs(
-        Output<String> filter,
-        @Nullable Output<Map<String,String>> labelExtractors) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.labelExtractors = labelExtractors;
-    }
+    private AlertPolicyConditionConditionMatchedLogGetArgs() {}
 
-    private AlertPolicyConditionConditionMatchedLogGetArgs() {
-        this.filter = Codegen.empty();
-        this.labelExtractors = Codegen.empty();
+    private AlertPolicyConditionConditionMatchedLogGetArgs(AlertPolicyConditionConditionMatchedLogGetArgs $) {
+        this.filter = $.filter;
+        this.labelExtractors = $.labelExtractors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyConditionConditionMatchedLogGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> filter;
-        private @Nullable Output<Map<String,String>> labelExtractors;
+        private AlertPolicyConditionConditionMatchedLogGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyConditionConditionMatchedLogGetArgs();
         }
 
         public Builder(AlertPolicyConditionConditionMatchedLogGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.labelExtractors = defaults.labelExtractors;
+            $ = new AlertPolicyConditionConditionMatchedLogGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder labelExtractors(@Nullable Output<Map<String,String>> labelExtractors) {
-            this.labelExtractors = labelExtractors;
+            $.labelExtractors = labelExtractors;
             return this;
         }
-        public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
-            this.labelExtractors = Codegen.ofNullable(labelExtractors);
-            return this;
-        }        public AlertPolicyConditionConditionMatchedLogGetArgs build() {
-            return new AlertPolicyConditionConditionMatchedLogGetArgs(filter, labelExtractors);
+
+        public Builder labelExtractors(Map<String,String> labelExtractors) {
+            return labelExtractors(Output.of(labelExtractors));
+        }
+
+        public AlertPolicyConditionConditionMatchedLogGetArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

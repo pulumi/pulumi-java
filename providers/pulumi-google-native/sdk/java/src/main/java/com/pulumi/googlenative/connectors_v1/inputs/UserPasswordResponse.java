@@ -22,7 +22,7 @@ public final class UserPasswordResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="password", required=true)
-      private final SecretResponse password;
+    private SecretResponse password;
 
     public SecretResponse password() {
         return this.password;
@@ -33,55 +33,52 @@ public final class UserPasswordResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public UserPasswordResponse(
-        SecretResponse password,
-        String username) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private UserPasswordResponse() {}
 
-    private UserPasswordResponse() {
-        this.password = null;
-        this.username = null;
+    private UserPasswordResponse(UserPasswordResponse $) {
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPasswordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SecretResponse password;
-        private String username;
+        private UserPasswordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPasswordResponse();
         }
 
         public Builder(UserPasswordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new UserPasswordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(SecretResponse password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public UserPasswordResponse build() {
-            return new UserPasswordResponse(password, username);
+        }
+
+        public UserPasswordResponse build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      * 
      */
     @Import(name="timeoutSec", required=true)
-      private final Integer timeoutSec;
+    private Integer timeoutSec;
 
     public Integer timeoutSec() {
         return this.timeoutSec;
     }
 
-    public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(Integer timeoutSec) {
-        this.timeoutSec = Objects.requireNonNull(timeoutSec, "expected parameter 'timeoutSec' to be non-null");
-    }
+    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse() {}
 
-    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse() {
-        this.timeoutSec = null;
+    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse $) {
+        this.timeoutSec = $.timeoutSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer timeoutSec;
+        private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse();
         }
 
         public Builder(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timeoutSec = defaults.timeoutSec;
+            $ = new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder timeoutSec(Integer timeoutSec) {
-            this.timeoutSec = Objects.requireNonNull(timeoutSec);
+            $.timeoutSec = timeoutSec;
             return this;
-        }        public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse build() {
-            return new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(timeoutSec);
+        }
+
+        public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse build() {
+            $.timeoutSec = Objects.requireNonNull($.timeoutSec, "expected parameter 'timeoutSec' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="budgetName", required=true)
-      private final String budgetName;
+    private String budgetName;
 
     public String budgetName() {
         return this.budgetName;
@@ -28,55 +28,52 @@ public final class GetBudgetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public GetBudgetArgs(
-        String budgetName,
-        String scope) {
-        this.budgetName = Objects.requireNonNull(budgetName, "expected parameter 'budgetName' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private GetBudgetArgs() {}
 
-    private GetBudgetArgs() {
-        this.budgetName = null;
-        this.scope = null;
+    private GetBudgetArgs(GetBudgetArgs $) {
+        this.budgetName = $.budgetName;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBudgetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String budgetName;
-        private String scope;
+        private GetBudgetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBudgetArgs();
         }
 
         public Builder(GetBudgetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.budgetName = defaults.budgetName;
-    	      this.scope = defaults.scope;
+            $ = new GetBudgetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder budgetName(String budgetName) {
-            this.budgetName = Objects.requireNonNull(budgetName);
+            $.budgetName = budgetName;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public GetBudgetArgs build() {
-            return new GetBudgetArgs(budgetName, scope);
+        }
+
+        public GetBudgetArgs build() {
+            $.budgetName = Objects.requireNonNull($.budgetName, "expected parameter 'budgetName' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

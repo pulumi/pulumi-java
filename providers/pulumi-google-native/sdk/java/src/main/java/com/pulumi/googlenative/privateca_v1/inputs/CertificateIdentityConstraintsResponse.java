@@ -22,7 +22,7 @@ public final class CertificateIdentityConstraintsResponse extends com.pulumi.res
      * 
      */
     @Import(name="allowSubjectAltNamesPassthrough", required=true)
-      private final Boolean allowSubjectAltNamesPassthrough;
+    private Boolean allowSubjectAltNamesPassthrough;
 
     public Boolean allowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
@@ -33,7 +33,7 @@ public final class CertificateIdentityConstraintsResponse extends com.pulumi.res
      * 
      */
     @Import(name="allowSubjectPassthrough", required=true)
-      private final Boolean allowSubjectPassthrough;
+    private Boolean allowSubjectPassthrough;
 
     public Boolean allowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
@@ -44,64 +44,59 @@ public final class CertificateIdentityConstraintsResponse extends com.pulumi.res
      * 
      */
     @Import(name="celExpression", required=true)
-      private final ExprResponse celExpression;
+    private ExprResponse celExpression;
 
     public ExprResponse celExpression() {
         return this.celExpression;
     }
 
-    public CertificateIdentityConstraintsResponse(
-        Boolean allowSubjectAltNamesPassthrough,
-        Boolean allowSubjectPassthrough,
-        ExprResponse celExpression) {
-        this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough, "expected parameter 'allowSubjectAltNamesPassthrough' to be non-null");
-        this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough, "expected parameter 'allowSubjectPassthrough' to be non-null");
-        this.celExpression = Objects.requireNonNull(celExpression, "expected parameter 'celExpression' to be non-null");
-    }
+    private CertificateIdentityConstraintsResponse() {}
 
-    private CertificateIdentityConstraintsResponse() {
-        this.allowSubjectAltNamesPassthrough = null;
-        this.allowSubjectPassthrough = null;
-        this.celExpression = null;
+    private CertificateIdentityConstraintsResponse(CertificateIdentityConstraintsResponse $) {
+        this.allowSubjectAltNamesPassthrough = $.allowSubjectAltNamesPassthrough;
+        this.allowSubjectPassthrough = $.allowSubjectPassthrough;
+        this.celExpression = $.celExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateIdentityConstraintsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowSubjectAltNamesPassthrough;
-        private Boolean allowSubjectPassthrough;
-        private ExprResponse celExpression;
+        private CertificateIdentityConstraintsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateIdentityConstraintsResponse();
         }
 
         public Builder(CertificateIdentityConstraintsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSubjectAltNamesPassthrough = defaults.allowSubjectAltNamesPassthrough;
-    	      this.allowSubjectPassthrough = defaults.allowSubjectPassthrough;
-    	      this.celExpression = defaults.celExpression;
+            $ = new CertificateIdentityConstraintsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
-            this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
+            $.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
             return this;
         }
+
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
-            this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
+            $.allowSubjectPassthrough = allowSubjectPassthrough;
             return this;
         }
+
         public Builder celExpression(ExprResponse celExpression) {
-            this.celExpression = Objects.requireNonNull(celExpression);
+            $.celExpression = celExpression;
             return this;
-        }        public CertificateIdentityConstraintsResponse build() {
-            return new CertificateIdentityConstraintsResponse(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
+        }
+
+        public CertificateIdentityConstraintsResponse build() {
+            $.allowSubjectAltNamesPassthrough = Objects.requireNonNull($.allowSubjectAltNamesPassthrough, "expected parameter 'allowSubjectAltNamesPassthrough' to be non-null");
+            $.allowSubjectPassthrough = Objects.requireNonNull($.allowSubjectPassthrough, "expected parameter 'allowSubjectPassthrough' to be non-null");
+            $.celExpression = Objects.requireNonNull($.celExpression, "expected parameter 'celExpression' to be non-null");
+            return $;
         }
     }
+
 }

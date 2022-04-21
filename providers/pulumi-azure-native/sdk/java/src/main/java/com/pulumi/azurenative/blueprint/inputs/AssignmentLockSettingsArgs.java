@@ -7,10 +7,10 @@ import com.pulumi.azurenative.blueprint.enums.AssignmentLockMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AssignmentLockSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="excludedActions")
-      private final @Nullable Output<List<String>> excludedActions;
+    private @Nullable Output<List<String>> excludedActions;
 
-    public Output<List<String>> excludedActions() {
-        return this.excludedActions == null ? Codegen.empty() : this.excludedActions;
+    public Optional<Output<List<String>>> excludedActions() {
+        return Optional.ofNullable(this.excludedActions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AssignmentLockSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="excludedPrincipals")
-      private final @Nullable Output<List<String>> excludedPrincipals;
+    private @Nullable Output<List<String>> excludedPrincipals;
 
-    public Output<List<String>> excludedPrincipals() {
-        return this.excludedPrincipals == null ? Codegen.empty() : this.excludedPrincipals;
+    public Optional<Output<List<String>>> excludedPrincipals() {
+        return Optional.ofNullable(this.excludedPrincipals);
     }
 
     /**
@@ -49,82 +49,76 @@ public final class AssignmentLockSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,AssignmentLockMode>> mode;
+    private @Nullable Output<Either<String,AssignmentLockMode>> mode;
 
-    public Output<Either<String,AssignmentLockMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,AssignmentLockMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public AssignmentLockSettingsArgs(
-        @Nullable Output<List<String>> excludedActions,
-        @Nullable Output<List<String>> excludedPrincipals,
-        @Nullable Output<Either<String,AssignmentLockMode>> mode) {
-        this.excludedActions = excludedActions;
-        this.excludedPrincipals = excludedPrincipals;
-        this.mode = mode;
-    }
+    private AssignmentLockSettingsArgs() {}
 
-    private AssignmentLockSettingsArgs() {
-        this.excludedActions = Codegen.empty();
-        this.excludedPrincipals = Codegen.empty();
-        this.mode = Codegen.empty();
+    private AssignmentLockSettingsArgs(AssignmentLockSettingsArgs $) {
+        this.excludedActions = $.excludedActions;
+        this.excludedPrincipals = $.excludedPrincipals;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentLockSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludedActions;
-        private @Nullable Output<List<String>> excludedPrincipals;
-        private @Nullable Output<Either<String,AssignmentLockMode>> mode;
+        private AssignmentLockSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentLockSettingsArgs();
         }
 
         public Builder(AssignmentLockSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedActions = defaults.excludedActions;
-    	      this.excludedPrincipals = defaults.excludedPrincipals;
-    	      this.mode = defaults.mode;
+            $ = new AssignmentLockSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedActions(@Nullable Output<List<String>> excludedActions) {
-            this.excludedActions = excludedActions;
+            $.excludedActions = excludedActions;
             return this;
         }
-        public Builder excludedActions(@Nullable List<String> excludedActions) {
-            this.excludedActions = Codegen.ofNullable(excludedActions);
-            return this;
+
+        public Builder excludedActions(List<String> excludedActions) {
+            return excludedActions(Output.of(excludedActions));
         }
+
         public Builder excludedActions(String... excludedActions) {
             return excludedActions(List.of(excludedActions));
         }
+
         public Builder excludedPrincipals(@Nullable Output<List<String>> excludedPrincipals) {
-            this.excludedPrincipals = excludedPrincipals;
+            $.excludedPrincipals = excludedPrincipals;
             return this;
         }
-        public Builder excludedPrincipals(@Nullable List<String> excludedPrincipals) {
-            this.excludedPrincipals = Codegen.ofNullable(excludedPrincipals);
-            return this;
+
+        public Builder excludedPrincipals(List<String> excludedPrincipals) {
+            return excludedPrincipals(Output.of(excludedPrincipals));
         }
+
         public Builder excludedPrincipals(String... excludedPrincipals) {
             return excludedPrincipals(List.of(excludedPrincipals));
         }
+
         public Builder mode(@Nullable Output<Either<String,AssignmentLockMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,AssignmentLockMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public AssignmentLockSettingsArgs build() {
-            return new AssignmentLockSettingsArgs(excludedActions, excludedPrincipals, mode);
+
+        public Builder mode(Either<String,AssignmentLockMode> mode) {
+            return mode(Output.of(mode));
+        }
+
+        public AssignmentLockSettingsArgs build() {
+            return $;
         }
     }
+
 }

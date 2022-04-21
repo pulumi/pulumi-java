@@ -21,7 +21,7 @@ public final class MetadataCredentialsFromPluginResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class MetadataCredentialsFromPluginResponse extends com.pulumi.reso
      * 
      */
     @Import(name="structConfig", required=true)
-      private final String structConfig;
+    private String structConfig;
 
     public String structConfig() {
         return this.structConfig;
     }
 
-    public MetadataCredentialsFromPluginResponse(
-        String name,
-        String structConfig) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.structConfig = Objects.requireNonNull(structConfig, "expected parameter 'structConfig' to be non-null");
-    }
+    private MetadataCredentialsFromPluginResponse() {}
 
-    private MetadataCredentialsFromPluginResponse() {
-        this.name = null;
-        this.structConfig = null;
+    private MetadataCredentialsFromPluginResponse(MetadataCredentialsFromPluginResponse $) {
+        this.name = $.name;
+        this.structConfig = $.structConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataCredentialsFromPluginResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String structConfig;
+        private MetadataCredentialsFromPluginResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataCredentialsFromPluginResponse();
         }
 
         public Builder(MetadataCredentialsFromPluginResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.structConfig = defaults.structConfig;
+            $ = new MetadataCredentialsFromPluginResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder structConfig(String structConfig) {
-            this.structConfig = Objects.requireNonNull(structConfig);
+            $.structConfig = structConfig;
             return this;
-        }        public MetadataCredentialsFromPluginResponse build() {
-            return new MetadataCredentialsFromPluginResponse(name, structConfig);
+        }
+
+        public MetadataCredentialsFromPluginResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.structConfig = Objects.requireNonNull($.structConfig, "expected parameter 'structConfig' to be non-null");
+            return $;
         }
     }
+
 }

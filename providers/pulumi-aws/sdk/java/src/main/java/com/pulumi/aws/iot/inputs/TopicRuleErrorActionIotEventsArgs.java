@@ -5,9 +5,9 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TopicRuleErrorActionIotEventsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="inputName", required=true)
-      private final Output<String> inputName;
+    private Output<String> inputName;
 
     public Output<String> inputName() {
         return this.inputName;
@@ -31,10 +31,10 @@ public final class TopicRuleErrorActionIotEventsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="messageId")
-      private final @Nullable Output<String> messageId;
+    private @Nullable Output<String> messageId;
 
-    public Output<String> messageId() {
-        return this.messageId == null ? Codegen.empty() : this.messageId;
+    public Optional<Output<String>> messageId() {
+        return Optional.ofNullable(this.messageId);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class TopicRuleErrorActionIotEventsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleErrorActionIotEventsArgs(
-        Output<String> inputName,
-        @Nullable Output<String> messageId,
-        Output<String> roleArn) {
-        this.inputName = Objects.requireNonNull(inputName, "expected parameter 'inputName' to be non-null");
-        this.messageId = messageId;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleErrorActionIotEventsArgs() {}
 
-    private TopicRuleErrorActionIotEventsArgs() {
-        this.inputName = Codegen.empty();
-        this.messageId = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private TopicRuleErrorActionIotEventsArgs(TopicRuleErrorActionIotEventsArgs $) {
+        this.inputName = $.inputName;
+        this.messageId = $.messageId;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleErrorActionIotEventsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> inputName;
-        private @Nullable Output<String> messageId;
-        private Output<String> roleArn;
+        private TopicRuleErrorActionIotEventsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleErrorActionIotEventsArgs();
         }
 
         public Builder(TopicRuleErrorActionIotEventsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputName = defaults.inputName;
-    	      this.messageId = defaults.messageId;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleErrorActionIotEventsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputName(Output<String> inputName) {
-            this.inputName = Objects.requireNonNull(inputName);
+            $.inputName = inputName;
             return this;
         }
+
         public Builder inputName(String inputName) {
-            this.inputName = Output.of(Objects.requireNonNull(inputName));
-            return this;
+            return inputName(Output.of(inputName));
         }
+
         public Builder messageId(@Nullable Output<String> messageId) {
-            this.messageId = messageId;
+            $.messageId = messageId;
             return this;
         }
-        public Builder messageId(@Nullable String messageId) {
-            this.messageId = Codegen.ofNullable(messageId);
-            return this;
+
+        public Builder messageId(String messageId) {
+            return messageId(Output.of(messageId));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public TopicRuleErrorActionIotEventsArgs build() {
-            return new TopicRuleErrorActionIotEventsArgs(inputName, messageId, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public TopicRuleErrorActionIotEventsArgs build() {
+            $.inputName = Objects.requireNonNull($.inputName, "expected parameter 'inputName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

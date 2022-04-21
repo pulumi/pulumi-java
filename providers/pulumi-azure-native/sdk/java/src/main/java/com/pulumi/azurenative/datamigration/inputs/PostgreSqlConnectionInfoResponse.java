@@ -25,10 +25,10 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable String databaseName;
+    private @Nullable String databaseName;
 
     public Optional<String> databaseName() {
-        return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -58,7 +58,7 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -70,7 +70,7 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -81,91 +81,77 @@ public final class PostgreSqlConnectionInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="userName")
-      private final @Nullable String userName;
+    private @Nullable String userName;
 
     public Optional<String> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public PostgreSqlConnectionInfoResponse(
-        @Nullable String databaseName,
-        @Nullable String password,
-        Integer port,
-        String serverName,
-        String type,
-        @Nullable String userName) {
-        this.databaseName = databaseName;
-        this.password = password;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userName = userName;
-    }
+    private PostgreSqlConnectionInfoResponse() {}
 
-    private PostgreSqlConnectionInfoResponse() {
-        this.databaseName = null;
-        this.password = null;
-        this.port = null;
-        this.serverName = null;
-        this.type = null;
-        this.userName = null;
+    private PostgreSqlConnectionInfoResponse(PostgreSqlConnectionInfoResponse $) {
+        this.databaseName = $.databaseName;
+        this.password = $.password;
+        this.port = $.port;
+        this.serverName = $.serverName;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PostgreSqlConnectionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String databaseName;
-        private @Nullable String password;
-        private Integer port;
-        private String serverName;
-        private String type;
-        private @Nullable String userName;
+        private PostgreSqlConnectionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PostgreSqlConnectionInfoResponse();
         }
 
         public Builder(PostgreSqlConnectionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.serverName = defaults.serverName;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new PostgreSqlConnectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userName(@Nullable String userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public PostgreSqlConnectionInfoResponse build() {
-            return new PostgreSqlConnectionInfoResponse(databaseName, password, port, serverName, type, userName);
+        }
+
+        public PostgreSqlConnectionInfoResponse build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

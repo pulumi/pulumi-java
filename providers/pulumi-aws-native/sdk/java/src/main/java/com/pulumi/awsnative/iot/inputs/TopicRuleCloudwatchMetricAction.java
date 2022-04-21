@@ -15,126 +15,114 @@ public final class TopicRuleCloudwatchMetricAction extends com.pulumi.resources.
     public static final TopicRuleCloudwatchMetricAction Empty = new TopicRuleCloudwatchMetricAction();
 
     @Import(name="metricName", required=true)
-      private final String metricName;
+    private String metricName;
 
     public String metricName() {
         return this.metricName;
     }
 
     @Import(name="metricNamespace", required=true)
-      private final String metricNamespace;
+    private String metricNamespace;
 
     public String metricNamespace() {
         return this.metricNamespace;
     }
 
     @Import(name="metricTimestamp")
-      private final @Nullable String metricTimestamp;
+    private @Nullable String metricTimestamp;
 
     public Optional<String> metricTimestamp() {
-        return this.metricTimestamp == null ? Optional.empty() : Optional.ofNullable(this.metricTimestamp);
+        return Optional.ofNullable(this.metricTimestamp);
     }
 
     @Import(name="metricUnit", required=true)
-      private final String metricUnit;
+    private String metricUnit;
 
     public String metricUnit() {
         return this.metricUnit;
     }
 
     @Import(name="metricValue", required=true)
-      private final String metricValue;
+    private String metricValue;
 
     public String metricValue() {
         return this.metricValue;
     }
 
     @Import(name="roleArn", required=true)
-      private final String roleArn;
+    private String roleArn;
 
     public String roleArn() {
         return this.roleArn;
     }
 
-    public TopicRuleCloudwatchMetricAction(
-        String metricName,
-        String metricNamespace,
-        @Nullable String metricTimestamp,
-        String metricUnit,
-        String metricValue,
-        String roleArn) {
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.metricNamespace = Objects.requireNonNull(metricNamespace, "expected parameter 'metricNamespace' to be non-null");
-        this.metricTimestamp = metricTimestamp;
-        this.metricUnit = Objects.requireNonNull(metricUnit, "expected parameter 'metricUnit' to be non-null");
-        this.metricValue = Objects.requireNonNull(metricValue, "expected parameter 'metricValue' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private TopicRuleCloudwatchMetricAction() {}
 
-    private TopicRuleCloudwatchMetricAction() {
-        this.metricName = null;
-        this.metricNamespace = null;
-        this.metricTimestamp = null;
-        this.metricUnit = null;
-        this.metricValue = null;
-        this.roleArn = null;
+    private TopicRuleCloudwatchMetricAction(TopicRuleCloudwatchMetricAction $) {
+        this.metricName = $.metricName;
+        this.metricNamespace = $.metricNamespace;
+        this.metricTimestamp = $.metricTimestamp;
+        this.metricUnit = $.metricUnit;
+        this.metricValue = $.metricValue;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleCloudwatchMetricAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metricName;
-        private String metricNamespace;
-        private @Nullable String metricTimestamp;
-        private String metricUnit;
-        private String metricValue;
-        private String roleArn;
+        private TopicRuleCloudwatchMetricAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleCloudwatchMetricAction();
         }
 
         public Builder(TopicRuleCloudwatchMetricAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricName = defaults.metricName;
-    	      this.metricNamespace = defaults.metricNamespace;
-    	      this.metricTimestamp = defaults.metricTimestamp;
-    	      this.metricUnit = defaults.metricUnit;
-    	      this.metricValue = defaults.metricValue;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TopicRuleCloudwatchMetricAction(Objects.requireNonNull(defaults));
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricNamespace(String metricNamespace) {
-            this.metricNamespace = Objects.requireNonNull(metricNamespace);
+            $.metricNamespace = metricNamespace;
             return this;
         }
+
         public Builder metricTimestamp(@Nullable String metricTimestamp) {
-            this.metricTimestamp = metricTimestamp;
+            $.metricTimestamp = metricTimestamp;
             return this;
         }
+
         public Builder metricUnit(String metricUnit) {
-            this.metricUnit = Objects.requireNonNull(metricUnit);
+            $.metricUnit = metricUnit;
             return this;
         }
+
         public Builder metricValue(String metricValue) {
-            this.metricValue = Objects.requireNonNull(metricValue);
+            $.metricValue = metricValue;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
-        }        public TopicRuleCloudwatchMetricAction build() {
-            return new TopicRuleCloudwatchMetricAction(metricName, metricNamespace, metricTimestamp, metricUnit, metricValue, roleArn);
+        }
+
+        public TopicRuleCloudwatchMetricAction build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.metricNamespace = Objects.requireNonNull($.metricNamespace, "expected parameter 'metricNamespace' to be non-null");
+            $.metricUnit = Objects.requireNonNull($.metricUnit, "expected parameter 'metricUnit' to be non-null");
+            $.metricValue = Objects.requireNonNull($.metricValue, "expected parameter 'metricValue' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

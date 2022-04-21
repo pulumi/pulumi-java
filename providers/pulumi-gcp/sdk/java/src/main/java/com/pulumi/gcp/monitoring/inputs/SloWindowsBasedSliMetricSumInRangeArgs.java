@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricSumInRangeRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class SloWindowsBasedSliMetricSumInRangeArgs extends com.pulumi.res
      * 
      */
     @Import(name="range", required=true)
-      private final Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range;
+    private Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range;
 
     public Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range() {
         return this.range;
@@ -43,63 +42,60 @@ public final class SloWindowsBasedSliMetricSumInRangeArgs extends com.pulumi.res
      * 
      */
     @Import(name="timeSeries", required=true)
-      private final Output<String> timeSeries;
+    private Output<String> timeSeries;
 
     public Output<String> timeSeries() {
         return this.timeSeries;
     }
 
-    public SloWindowsBasedSliMetricSumInRangeArgs(
-        Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range,
-        Output<String> timeSeries) {
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-        this.timeSeries = Objects.requireNonNull(timeSeries, "expected parameter 'timeSeries' to be non-null");
-    }
+    private SloWindowsBasedSliMetricSumInRangeArgs() {}
 
-    private SloWindowsBasedSliMetricSumInRangeArgs() {
-        this.range = Codegen.empty();
-        this.timeSeries = Codegen.empty();
+    private SloWindowsBasedSliMetricSumInRangeArgs(SloWindowsBasedSliMetricSumInRangeArgs $) {
+        this.range = $.range;
+        this.timeSeries = $.timeSeries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloWindowsBasedSliMetricSumInRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range;
-        private Output<String> timeSeries;
+        private SloWindowsBasedSliMetricSumInRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloWindowsBasedSliMetricSumInRangeArgs();
         }
 
         public Builder(SloWindowsBasedSliMetricSumInRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.range = defaults.range;
-    	      this.timeSeries = defaults.timeSeries;
+            $ = new SloWindowsBasedSliMetricSumInRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder range(Output<SloWindowsBasedSliMetricSumInRangeRangeArgs> range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder range(SloWindowsBasedSliMetricSumInRangeRangeArgs range) {
-            this.range = Output.of(Objects.requireNonNull(range));
-            return this;
+            return range(Output.of(range));
         }
+
         public Builder timeSeries(Output<String> timeSeries) {
-            this.timeSeries = Objects.requireNonNull(timeSeries);
+            $.timeSeries = timeSeries;
             return this;
         }
+
         public Builder timeSeries(String timeSeries) {
-            this.timeSeries = Output.of(Objects.requireNonNull(timeSeries));
-            return this;
-        }        public SloWindowsBasedSliMetricSumInRangeArgs build() {
-            return new SloWindowsBasedSliMetricSumInRangeArgs(range, timeSeries);
+            return timeSeries(Output.of(timeSeries));
+        }
+
+        public SloWindowsBasedSliMetricSumInRangeArgs build() {
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            $.timeSeries = Objects.requireNonNull($.timeSeries, "expected parameter 'timeSeries' to be non-null");
+            return $;
         }
     }
+
 }

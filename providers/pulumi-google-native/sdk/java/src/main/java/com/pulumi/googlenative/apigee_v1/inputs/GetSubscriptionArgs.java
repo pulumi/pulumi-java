@@ -13,78 +13,73 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSubscriptionArgs Empty = new GetSubscriptionArgs();
 
     @Import(name="developerId", required=true)
-      private final String developerId;
+    private String developerId;
 
     public String developerId() {
         return this.developerId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="subscriptionId", required=true)
-      private final String subscriptionId;
+    private String subscriptionId;
 
     public String subscriptionId() {
         return this.subscriptionId;
     }
 
-    public GetSubscriptionArgs(
-        String developerId,
-        String organizationId,
-        String subscriptionId) {
-        this.developerId = Objects.requireNonNull(developerId, "expected parameter 'developerId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-    }
+    private GetSubscriptionArgs() {}
 
-    private GetSubscriptionArgs() {
-        this.developerId = null;
-        this.organizationId = null;
-        this.subscriptionId = null;
+    private GetSubscriptionArgs(GetSubscriptionArgs $) {
+        this.developerId = $.developerId;
+        this.organizationId = $.organizationId;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String developerId;
-        private String organizationId;
-        private String subscriptionId;
+        private GetSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubscriptionArgs();
         }
 
         public Builder(GetSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.developerId = defaults.developerId;
-    	      this.organizationId = defaults.organizationId;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new GetSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder developerId(String developerId) {
-            this.developerId = Objects.requireNonNull(developerId);
+            $.developerId = developerId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public GetSubscriptionArgs build() {
-            return new GetSubscriptionArgs(developerId, organizationId, subscriptionId);
+        }
+
+        public GetSubscriptionArgs build() {
+            $.developerId = Objects.requireNonNull($.developerId, "expected parameter 'developerId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.monitoring_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.enums.UptimeCheckConfigCheckerType;
 import com.pulumi.googlenative.monitoring_v3.enums.UptimeCheckConfigSelectedRegionsItem;
 import com.pulumi.googlenative.monitoring_v3.inputs.ContentMatcherArgs;
@@ -18,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="checkerType")
-      private final @Nullable Output<UptimeCheckConfigCheckerType> checkerType;
+    private @Nullable Output<UptimeCheckConfigCheckerType> checkerType;
 
-    public Output<UptimeCheckConfigCheckerType> checkerType() {
-        return this.checkerType == null ? Codegen.empty() : this.checkerType;
+    public Optional<Output<UptimeCheckConfigCheckerType>> checkerType() {
+        return Optional.ofNullable(this.checkerType);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="contentMatchers")
-      private final @Nullable Output<List<ContentMatcherArgs>> contentMatchers;
+    private @Nullable Output<List<ContentMatcherArgs>> contentMatchers;
 
-    public Output<List<ContentMatcherArgs>> contentMatchers() {
-        return this.contentMatchers == null ? Codegen.empty() : this.contentMatchers;
+    public Optional<Output<List<ContentMatcherArgs>>> contentMatchers() {
+        return Optional.ofNullable(this.contentMatchers);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="httpCheck")
-      private final @Nullable Output<HttpCheckArgs> httpCheck;
+    private @Nullable Output<HttpCheckArgs> httpCheck;
 
-    public Output<HttpCheckArgs> httpCheck() {
-        return this.httpCheck == null ? Codegen.empty() : this.httpCheck;
+    public Optional<Output<HttpCheckArgs>> httpCheck() {
+        return Optional.ofNullable(this.httpCheck);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="internalCheckers")
-      private final @Nullable Output<List<InternalCheckerArgs>> internalCheckers;
+    private @Nullable Output<List<InternalCheckerArgs>> internalCheckers;
 
-    public Output<List<InternalCheckerArgs>> internalCheckers() {
-        return this.internalCheckers == null ? Codegen.empty() : this.internalCheckers;
+    public Optional<Output<List<InternalCheckerArgs>>> internalCheckers() {
+        return Optional.ofNullable(this.internalCheckers);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="isInternal")
-      private final @Nullable Output<Boolean> isInternal;
+    private @Nullable Output<Boolean> isInternal;
 
-    public Output<Boolean> isInternal() {
-        return this.isInternal == null ? Codegen.empty() : this.isInternal;
+    public Optional<Output<Boolean>> isInternal() {
+        return Optional.ofNullable(this.isInternal);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="monitoredResource")
-      private final @Nullable Output<MonitoredResourceArgs> monitoredResource;
+    private @Nullable Output<MonitoredResourceArgs> monitoredResource;
 
-    public Output<MonitoredResourceArgs> monitoredResource() {
-        return this.monitoredResource == null ? Codegen.empty() : this.monitoredResource;
+    public Optional<Output<MonitoredResourceArgs>> monitoredResource() {
+        return Optional.ofNullable(this.monitoredResource);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -118,17 +118,17 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<String> period;
+    private @Nullable Output<String> period;
 
-    public Output<String> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<String>> period() {
+        return Optional.ofNullable(this.period);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable Output<ResourceGroupArgs> resourceGroup;
+    private @Nullable Output<ResourceGroupArgs> resourceGroup;
 
-    public Output<ResourceGroupArgs> resourceGroup() {
-        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
+    public Optional<Output<ResourceGroupArgs>> resourceGroup() {
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="selectedRegions")
-      private final @Nullable Output<List<UptimeCheckConfigSelectedRegionsItem>> selectedRegions;
+    private @Nullable Output<List<UptimeCheckConfigSelectedRegionsItem>> selectedRegions;
 
-    public Output<List<UptimeCheckConfigSelectedRegionsItem>> selectedRegions() {
-        return this.selectedRegions == null ? Codegen.empty() : this.selectedRegions;
+    public Optional<Output<List<UptimeCheckConfigSelectedRegionsItem>>> selectedRegions() {
+        return Optional.ofNullable(this.selectedRegions);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tcpCheck")
-      private final @Nullable Output<TcpCheckArgs> tcpCheck;
+    private @Nullable Output<TcpCheckArgs> tcpCheck;
 
-    public Output<TcpCheckArgs> tcpCheck() {
-        return this.tcpCheck == null ? Codegen.empty() : this.tcpCheck;
+    public Optional<Output<TcpCheckArgs>> tcpCheck() {
+        return Optional.ofNullable(this.tcpCheck);
     }
 
     /**
@@ -169,228 +169,190 @@ public final class UptimeCheckConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public UptimeCheckConfigArgs(
-        @Nullable Output<UptimeCheckConfigCheckerType> checkerType,
-        @Nullable Output<List<ContentMatcherArgs>> contentMatchers,
-        @Nullable Output<String> displayName,
-        @Nullable Output<HttpCheckArgs> httpCheck,
-        @Nullable Output<List<InternalCheckerArgs>> internalCheckers,
-        @Nullable Output<Boolean> isInternal,
-        @Nullable Output<MonitoredResourceArgs> monitoredResource,
-        @Nullable Output<String> name,
-        @Nullable Output<String> period,
-        @Nullable Output<String> project,
-        @Nullable Output<ResourceGroupArgs> resourceGroup,
-        @Nullable Output<List<UptimeCheckConfigSelectedRegionsItem>> selectedRegions,
-        @Nullable Output<TcpCheckArgs> tcpCheck,
-        @Nullable Output<String> timeout) {
-        this.checkerType = checkerType;
-        this.contentMatchers = contentMatchers;
-        this.displayName = displayName;
-        this.httpCheck = httpCheck;
-        this.internalCheckers = internalCheckers;
-        this.isInternal = isInternal;
-        this.monitoredResource = monitoredResource;
-        this.name = name;
-        this.period = period;
-        this.project = project;
-        this.resourceGroup = resourceGroup;
-        this.selectedRegions = selectedRegions;
-        this.tcpCheck = tcpCheck;
-        this.timeout = timeout;
-    }
+    private UptimeCheckConfigArgs() {}
 
-    private UptimeCheckConfigArgs() {
-        this.checkerType = Codegen.empty();
-        this.contentMatchers = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.httpCheck = Codegen.empty();
-        this.internalCheckers = Codegen.empty();
-        this.isInternal = Codegen.empty();
-        this.monitoredResource = Codegen.empty();
-        this.name = Codegen.empty();
-        this.period = Codegen.empty();
-        this.project = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.selectedRegions = Codegen.empty();
-        this.tcpCheck = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private UptimeCheckConfigArgs(UptimeCheckConfigArgs $) {
+        this.checkerType = $.checkerType;
+        this.contentMatchers = $.contentMatchers;
+        this.displayName = $.displayName;
+        this.httpCheck = $.httpCheck;
+        this.internalCheckers = $.internalCheckers;
+        this.isInternal = $.isInternal;
+        this.monitoredResource = $.monitoredResource;
+        this.name = $.name;
+        this.period = $.period;
+        this.project = $.project;
+        this.resourceGroup = $.resourceGroup;
+        this.selectedRegions = $.selectedRegions;
+        this.tcpCheck = $.tcpCheck;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UptimeCheckConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<UptimeCheckConfigCheckerType> checkerType;
-        private @Nullable Output<List<ContentMatcherArgs>> contentMatchers;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<HttpCheckArgs> httpCheck;
-        private @Nullable Output<List<InternalCheckerArgs>> internalCheckers;
-        private @Nullable Output<Boolean> isInternal;
-        private @Nullable Output<MonitoredResourceArgs> monitoredResource;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> period;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ResourceGroupArgs> resourceGroup;
-        private @Nullable Output<List<UptimeCheckConfigSelectedRegionsItem>> selectedRegions;
-        private @Nullable Output<TcpCheckArgs> tcpCheck;
-        private @Nullable Output<String> timeout;
+        private UptimeCheckConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UptimeCheckConfigArgs();
         }
 
         public Builder(UptimeCheckConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkerType = defaults.checkerType;
-    	      this.contentMatchers = defaults.contentMatchers;
-    	      this.displayName = defaults.displayName;
-    	      this.httpCheck = defaults.httpCheck;
-    	      this.internalCheckers = defaults.internalCheckers;
-    	      this.isInternal = defaults.isInternal;
-    	      this.monitoredResource = defaults.monitoredResource;
-    	      this.name = defaults.name;
-    	      this.period = defaults.period;
-    	      this.project = defaults.project;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.selectedRegions = defaults.selectedRegions;
-    	      this.tcpCheck = defaults.tcpCheck;
-    	      this.timeout = defaults.timeout;
+            $ = new UptimeCheckConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checkerType(@Nullable Output<UptimeCheckConfigCheckerType> checkerType) {
-            this.checkerType = checkerType;
+            $.checkerType = checkerType;
             return this;
         }
-        public Builder checkerType(@Nullable UptimeCheckConfigCheckerType checkerType) {
-            this.checkerType = Codegen.ofNullable(checkerType);
-            return this;
+
+        public Builder checkerType(UptimeCheckConfigCheckerType checkerType) {
+            return checkerType(Output.of(checkerType));
         }
+
         public Builder contentMatchers(@Nullable Output<List<ContentMatcherArgs>> contentMatchers) {
-            this.contentMatchers = contentMatchers;
+            $.contentMatchers = contentMatchers;
             return this;
         }
-        public Builder contentMatchers(@Nullable List<ContentMatcherArgs> contentMatchers) {
-            this.contentMatchers = Codegen.ofNullable(contentMatchers);
-            return this;
+
+        public Builder contentMatchers(List<ContentMatcherArgs> contentMatchers) {
+            return contentMatchers(Output.of(contentMatchers));
         }
+
         public Builder contentMatchers(ContentMatcherArgs... contentMatchers) {
             return contentMatchers(List.of(contentMatchers));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder httpCheck(@Nullable Output<HttpCheckArgs> httpCheck) {
-            this.httpCheck = httpCheck;
+            $.httpCheck = httpCheck;
             return this;
         }
-        public Builder httpCheck(@Nullable HttpCheckArgs httpCheck) {
-            this.httpCheck = Codegen.ofNullable(httpCheck);
-            return this;
+
+        public Builder httpCheck(HttpCheckArgs httpCheck) {
+            return httpCheck(Output.of(httpCheck));
         }
+
         public Builder internalCheckers(@Nullable Output<List<InternalCheckerArgs>> internalCheckers) {
-            this.internalCheckers = internalCheckers;
+            $.internalCheckers = internalCheckers;
             return this;
         }
-        public Builder internalCheckers(@Nullable List<InternalCheckerArgs> internalCheckers) {
-            this.internalCheckers = Codegen.ofNullable(internalCheckers);
-            return this;
+
+        public Builder internalCheckers(List<InternalCheckerArgs> internalCheckers) {
+            return internalCheckers(Output.of(internalCheckers));
         }
+
         public Builder internalCheckers(InternalCheckerArgs... internalCheckers) {
             return internalCheckers(List.of(internalCheckers));
         }
+
         public Builder isInternal(@Nullable Output<Boolean> isInternal) {
-            this.isInternal = isInternal;
+            $.isInternal = isInternal;
             return this;
         }
-        public Builder isInternal(@Nullable Boolean isInternal) {
-            this.isInternal = Codegen.ofNullable(isInternal);
-            return this;
+
+        public Builder isInternal(Boolean isInternal) {
+            return isInternal(Output.of(isInternal));
         }
+
         public Builder monitoredResource(@Nullable Output<MonitoredResourceArgs> monitoredResource) {
-            this.monitoredResource = monitoredResource;
+            $.monitoredResource = monitoredResource;
             return this;
         }
-        public Builder monitoredResource(@Nullable MonitoredResourceArgs monitoredResource) {
-            this.monitoredResource = Codegen.ofNullable(monitoredResource);
-            return this;
+
+        public Builder monitoredResource(MonitoredResourceArgs monitoredResource) {
+            return monitoredResource(Output.of(monitoredResource));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder period(@Nullable Output<String> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable String period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
+
+        public Builder period(String period) {
+            return period(Output.of(period));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder resourceGroup(@Nullable Output<ResourceGroupArgs> resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
-        public Builder resourceGroup(@Nullable ResourceGroupArgs resourceGroup) {
-            this.resourceGroup = Codegen.ofNullable(resourceGroup);
-            return this;
+
+        public Builder resourceGroup(ResourceGroupArgs resourceGroup) {
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder selectedRegions(@Nullable Output<List<UptimeCheckConfigSelectedRegionsItem>> selectedRegions) {
-            this.selectedRegions = selectedRegions;
+            $.selectedRegions = selectedRegions;
             return this;
         }
-        public Builder selectedRegions(@Nullable List<UptimeCheckConfigSelectedRegionsItem> selectedRegions) {
-            this.selectedRegions = Codegen.ofNullable(selectedRegions);
-            return this;
+
+        public Builder selectedRegions(List<UptimeCheckConfigSelectedRegionsItem> selectedRegions) {
+            return selectedRegions(Output.of(selectedRegions));
         }
+
         public Builder selectedRegions(UptimeCheckConfigSelectedRegionsItem... selectedRegions) {
             return selectedRegions(List.of(selectedRegions));
         }
+
         public Builder tcpCheck(@Nullable Output<TcpCheckArgs> tcpCheck) {
-            this.tcpCheck = tcpCheck;
+            $.tcpCheck = tcpCheck;
             return this;
         }
-        public Builder tcpCheck(@Nullable TcpCheckArgs tcpCheck) {
-            this.tcpCheck = Codegen.ofNullable(tcpCheck);
-            return this;
+
+        public Builder tcpCheck(TcpCheckArgs tcpCheck) {
+            return tcpCheck(Output.of(tcpCheck));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public UptimeCheckConfigArgs build() {
-            return new UptimeCheckConfigArgs(checkerType, contentMatchers, displayName, httpCheck, internalCheckers, isInternal, monitoredResource, name, period, project, resourceGroup, selectedRegions, tcpCheck, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public UptimeCheckConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,94 +15,85 @@ public final class GetChannelIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetChannelIamPolicyArgs Empty = new GetChannelIamPolicyArgs();
 
     @Import(name="channelId", required=true)
-      private final String channelId;
+    private String channelId;
 
     public String channelId() {
         return this.channelId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetChannelIamPolicyArgs(
-        String channelId,
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetChannelIamPolicyArgs() {}
 
-    private GetChannelIamPolicyArgs() {
-        this.channelId = null;
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetChannelIamPolicyArgs(GetChannelIamPolicyArgs $) {
+        this.channelId = $.channelId;
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetChannelIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String channelId;
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetChannelIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetChannelIamPolicyArgs();
         }
 
         public Builder(GetChannelIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelId = defaults.channelId;
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetChannelIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelId(String channelId) {
-            this.channelId = Objects.requireNonNull(channelId);
+            $.channelId = channelId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetChannelIamPolicyArgs build() {
-            return new GetChannelIamPolicyArgs(channelId, location, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetChannelIamPolicyArgs build() {
+            $.channelId = Objects.requireNonNull($.channelId, "expected parameter 'channelId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

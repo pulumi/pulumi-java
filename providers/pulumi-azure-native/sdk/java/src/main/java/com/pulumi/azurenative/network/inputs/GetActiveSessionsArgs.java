@@ -17,7 +17,7 @@ public final class GetActiveSessionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="bastionHostName", required=true)
-      private final String bastionHostName;
+    private String bastionHostName;
 
     public String bastionHostName() {
         return this.bastionHostName;
@@ -28,55 +28,52 @@ public final class GetActiveSessionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetActiveSessionsArgs(
-        String bastionHostName,
-        String resourceGroupName) {
-        this.bastionHostName = Objects.requireNonNull(bastionHostName, "expected parameter 'bastionHostName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetActiveSessionsArgs() {}
 
-    private GetActiveSessionsArgs() {
-        this.bastionHostName = null;
-        this.resourceGroupName = null;
+    private GetActiveSessionsArgs(GetActiveSessionsArgs $) {
+        this.bastionHostName = $.bastionHostName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetActiveSessionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bastionHostName;
-        private String resourceGroupName;
+        private GetActiveSessionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetActiveSessionsArgs();
         }
 
         public Builder(GetActiveSessionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bastionHostName = defaults.bastionHostName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetActiveSessionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bastionHostName(String bastionHostName) {
-            this.bastionHostName = Objects.requireNonNull(bastionHostName);
+            $.bastionHostName = bastionHostName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetActiveSessionsArgs build() {
-            return new GetActiveSessionsArgs(bastionHostName, resourceGroupName);
+        }
+
+        public GetActiveSessionsArgs build() {
+            $.bastionHostName = Objects.requireNonNull($.bastionHostName, "expected parameter 'bastionHostName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

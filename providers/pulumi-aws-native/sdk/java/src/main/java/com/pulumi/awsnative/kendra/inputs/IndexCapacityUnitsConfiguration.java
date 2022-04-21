@@ -13,62 +13,59 @@ public final class IndexCapacityUnitsConfiguration extends com.pulumi.resources.
     public static final IndexCapacityUnitsConfiguration Empty = new IndexCapacityUnitsConfiguration();
 
     @Import(name="queryCapacityUnits", required=true)
-      private final Integer queryCapacityUnits;
+    private Integer queryCapacityUnits;
 
     public Integer queryCapacityUnits() {
         return this.queryCapacityUnits;
     }
 
     @Import(name="storageCapacityUnits", required=true)
-      private final Integer storageCapacityUnits;
+    private Integer storageCapacityUnits;
 
     public Integer storageCapacityUnits() {
         return this.storageCapacityUnits;
     }
 
-    public IndexCapacityUnitsConfiguration(
-        Integer queryCapacityUnits,
-        Integer storageCapacityUnits) {
-        this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits, "expected parameter 'queryCapacityUnits' to be non-null");
-        this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits, "expected parameter 'storageCapacityUnits' to be non-null");
-    }
+    private IndexCapacityUnitsConfiguration() {}
 
-    private IndexCapacityUnitsConfiguration() {
-        this.queryCapacityUnits = null;
-        this.storageCapacityUnits = null;
+    private IndexCapacityUnitsConfiguration(IndexCapacityUnitsConfiguration $) {
+        this.queryCapacityUnits = $.queryCapacityUnits;
+        this.storageCapacityUnits = $.storageCapacityUnits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexCapacityUnitsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer queryCapacityUnits;
-        private Integer storageCapacityUnits;
+        private IndexCapacityUnitsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexCapacityUnitsConfiguration();
         }
 
         public Builder(IndexCapacityUnitsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryCapacityUnits = defaults.queryCapacityUnits;
-    	      this.storageCapacityUnits = defaults.storageCapacityUnits;
+            $ = new IndexCapacityUnitsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder queryCapacityUnits(Integer queryCapacityUnits) {
-            this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits);
+            $.queryCapacityUnits = queryCapacityUnits;
             return this;
         }
+
         public Builder storageCapacityUnits(Integer storageCapacityUnits) {
-            this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
+            $.storageCapacityUnits = storageCapacityUnits;
             return this;
-        }        public IndexCapacityUnitsConfiguration build() {
-            return new IndexCapacityUnitsConfiguration(queryCapacityUnits, storageCapacityUnits);
+        }
+
+        public IndexCapacityUnitsConfiguration build() {
+            $.queryCapacityUnits = Objects.requireNonNull($.queryCapacityUnits, "expected parameter 'queryCapacityUnits' to be non-null");
+            $.storageCapacityUnits = Objects.requireNonNull($.storageCapacityUnits, "expected parameter 'storageCapacityUnits' to be non-null");
+            return $;
         }
     }
+
 }

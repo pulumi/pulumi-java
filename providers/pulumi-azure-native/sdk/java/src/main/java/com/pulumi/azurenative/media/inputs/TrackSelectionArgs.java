@@ -6,9 +6,9 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.TrackPropertyConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class TrackSelectionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="trackSelections")
-      private final @Nullable Output<List<TrackPropertyConditionArgs>> trackSelections;
+    private @Nullable Output<List<TrackPropertyConditionArgs>> trackSelections;
 
-    public Output<List<TrackPropertyConditionArgs>> trackSelections() {
-        return this.trackSelections == null ? Codegen.empty() : this.trackSelections;
+    public Optional<Output<List<TrackPropertyConditionArgs>>> trackSelections() {
+        return Optional.ofNullable(this.trackSelections);
     }
 
-    public TrackSelectionArgs(@Nullable Output<List<TrackPropertyConditionArgs>> trackSelections) {
-        this.trackSelections = trackSelections;
-    }
+    private TrackSelectionArgs() {}
 
-    private TrackSelectionArgs() {
-        this.trackSelections = Codegen.empty();
+    private TrackSelectionArgs(TrackSelectionArgs $) {
+        this.trackSelections = $.trackSelections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrackSelectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TrackPropertyConditionArgs>> trackSelections;
+        private TrackSelectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrackSelectionArgs();
         }
 
         public Builder(TrackSelectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.trackSelections = defaults.trackSelections;
+            $ = new TrackSelectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder trackSelections(@Nullable Output<List<TrackPropertyConditionArgs>> trackSelections) {
-            this.trackSelections = trackSelections;
+            $.trackSelections = trackSelections;
             return this;
         }
-        public Builder trackSelections(@Nullable List<TrackPropertyConditionArgs> trackSelections) {
-            this.trackSelections = Codegen.ofNullable(trackSelections);
-            return this;
+
+        public Builder trackSelections(List<TrackPropertyConditionArgs> trackSelections) {
+            return trackSelections(Output.of(trackSelections));
         }
+
         public Builder trackSelections(TrackPropertyConditionArgs... trackSelections) {
             return trackSelections(List.of(trackSelections));
-        }        public TrackSelectionArgs build() {
-            return new TrackSelectionArgs(trackSelections);
+        }
+
+        public TrackSelectionArgs build() {
+            return $;
         }
     }
+
 }

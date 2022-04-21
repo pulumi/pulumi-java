@@ -6,12 +6,12 @@ package com.pulumi.aws.fsx.inputs;
 import com.pulumi.aws.fsx.inputs.OntapVolumeTieringPolicyGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileSystemId")
-      private final @Nullable Output<String> fileSystemId;
+    private @Nullable Output<String> fileSystemId;
 
-    public Output<String> fileSystemId() {
-        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
+    public Optional<Output<String>> fileSystemId() {
+        return Optional.ofNullable(this.fileSystemId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flexcacheEndpointType")
-      private final @Nullable Output<String> flexcacheEndpointType;
+    private @Nullable Output<String> flexcacheEndpointType;
 
-    public Output<String> flexcacheEndpointType() {
-        return this.flexcacheEndpointType == null ? Codegen.empty() : this.flexcacheEndpointType;
+    public Optional<Output<String>> flexcacheEndpointType() {
+        return Optional.ofNullable(this.flexcacheEndpointType);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="junctionPath")
-      private final @Nullable Output<String> junctionPath;
+    private @Nullable Output<String> junctionPath;
 
-    public Output<String> junctionPath() {
-        return this.junctionPath == null ? Codegen.empty() : this.junctionPath;
+    public Optional<Output<String>> junctionPath() {
+        return Optional.ofNullable(this.junctionPath);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ontapVolumeType")
-      private final @Nullable Output<String> ontapVolumeType;
+    private @Nullable Output<String> ontapVolumeType;
 
-    public Output<String> ontapVolumeType() {
-        return this.ontapVolumeType == null ? Codegen.empty() : this.ontapVolumeType;
+    public Optional<Output<String>> ontapVolumeType() {
+        return Optional.ofNullable(this.ontapVolumeType);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityStyle")
-      private final @Nullable Output<String> securityStyle;
+    private @Nullable Output<String> securityStyle;
 
-    public Output<String> securityStyle() {
-        return this.securityStyle == null ? Codegen.empty() : this.securityStyle;
+    public Optional<Output<String>> securityStyle() {
+        return Optional.ofNullable(this.securityStyle);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeInMegabytes")
-      private final @Nullable Output<Integer> sizeInMegabytes;
+    private @Nullable Output<Integer> sizeInMegabytes;
 
-    public Output<Integer> sizeInMegabytes() {
-        return this.sizeInMegabytes == null ? Codegen.empty() : this.sizeInMegabytes;
+    public Optional<Output<Integer>> sizeInMegabytes() {
+        return Optional.ofNullable(this.sizeInMegabytes);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageEfficiencyEnabled")
-      private final @Nullable Output<Boolean> storageEfficiencyEnabled;
+    private @Nullable Output<Boolean> storageEfficiencyEnabled;
 
-    public Output<Boolean> storageEfficiencyEnabled() {
-        return this.storageEfficiencyEnabled == null ? Codegen.empty() : this.storageEfficiencyEnabled;
+    public Optional<Output<Boolean>> storageEfficiencyEnabled() {
+        return Optional.ofNullable(this.storageEfficiencyEnabled);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageVirtualMachineId")
-      private final @Nullable Output<String> storageVirtualMachineId;
+    private @Nullable Output<String> storageVirtualMachineId;
 
-    public Output<String> storageVirtualMachineId() {
-        return this.storageVirtualMachineId == null ? Codegen.empty() : this.storageVirtualMachineId;
+    public Optional<Output<String>> storageVirtualMachineId() {
+        return Optional.ofNullable(this.storageVirtualMachineId);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -145,17 +145,17 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     @Import(name="tieringPolicy")
-      private final @Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy;
+    private @Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy;
 
-    public Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy() {
-        return this.tieringPolicy == null ? Codegen.empty() : this.tieringPolicy;
+    public Optional<Output<OntapVolumeTieringPolicyGetArgs>> tieringPolicy() {
+        return Optional.ofNullable(this.tieringPolicy);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uuid")
-      private final @Nullable Output<String> uuid;
+    private @Nullable Output<String> uuid;
 
-    public Output<String> uuid() {
-        return this.uuid == null ? Codegen.empty() : this.uuid;
+    public Optional<Output<String>> uuid() {
+        return Optional.ofNullable(this.uuid);
     }
 
     /**
@@ -174,232 +174,188 @@ public final class OntapVolumeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public OntapVolumeState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> fileSystemId,
-        @Nullable Output<String> flexcacheEndpointType,
-        @Nullable Output<String> junctionPath,
-        @Nullable Output<String> name,
-        @Nullable Output<String> ontapVolumeType,
-        @Nullable Output<String> securityStyle,
-        @Nullable Output<Integer> sizeInMegabytes,
-        @Nullable Output<Boolean> storageEfficiencyEnabled,
-        @Nullable Output<String> storageVirtualMachineId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy,
-        @Nullable Output<String> uuid,
-        @Nullable Output<String> volumeType) {
-        this.arn = arn;
-        this.fileSystemId = fileSystemId;
-        this.flexcacheEndpointType = flexcacheEndpointType;
-        this.junctionPath = junctionPath;
-        this.name = name;
-        this.ontapVolumeType = ontapVolumeType;
-        this.securityStyle = securityStyle;
-        this.sizeInMegabytes = sizeInMegabytes;
-        this.storageEfficiencyEnabled = storageEfficiencyEnabled;
-        this.storageVirtualMachineId = storageVirtualMachineId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.tieringPolicy = tieringPolicy;
-        this.uuid = uuid;
-        this.volumeType = volumeType;
-    }
+    private OntapVolumeState() {}
 
-    private OntapVolumeState() {
-        this.arn = Codegen.empty();
-        this.fileSystemId = Codegen.empty();
-        this.flexcacheEndpointType = Codegen.empty();
-        this.junctionPath = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ontapVolumeType = Codegen.empty();
-        this.securityStyle = Codegen.empty();
-        this.sizeInMegabytes = Codegen.empty();
-        this.storageEfficiencyEnabled = Codegen.empty();
-        this.storageVirtualMachineId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.tieringPolicy = Codegen.empty();
-        this.uuid = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private OntapVolumeState(OntapVolumeState $) {
+        this.arn = $.arn;
+        this.fileSystemId = $.fileSystemId;
+        this.flexcacheEndpointType = $.flexcacheEndpointType;
+        this.junctionPath = $.junctionPath;
+        this.name = $.name;
+        this.ontapVolumeType = $.ontapVolumeType;
+        this.securityStyle = $.securityStyle;
+        this.sizeInMegabytes = $.sizeInMegabytes;
+        this.storageEfficiencyEnabled = $.storageEfficiencyEnabled;
+        this.storageVirtualMachineId = $.storageVirtualMachineId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.tieringPolicy = $.tieringPolicy;
+        this.uuid = $.uuid;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OntapVolumeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> fileSystemId;
-        private @Nullable Output<String> flexcacheEndpointType;
-        private @Nullable Output<String> junctionPath;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> ontapVolumeType;
-        private @Nullable Output<String> securityStyle;
-        private @Nullable Output<Integer> sizeInMegabytes;
-        private @Nullable Output<Boolean> storageEfficiencyEnabled;
-        private @Nullable Output<String> storageVirtualMachineId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy;
-        private @Nullable Output<String> uuid;
-        private @Nullable Output<String> volumeType;
+        private OntapVolumeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OntapVolumeState();
         }
 
         public Builder(OntapVolumeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.flexcacheEndpointType = defaults.flexcacheEndpointType;
-    	      this.junctionPath = defaults.junctionPath;
-    	      this.name = defaults.name;
-    	      this.ontapVolumeType = defaults.ontapVolumeType;
-    	      this.securityStyle = defaults.securityStyle;
-    	      this.sizeInMegabytes = defaults.sizeInMegabytes;
-    	      this.storageEfficiencyEnabled = defaults.storageEfficiencyEnabled;
-    	      this.storageVirtualMachineId = defaults.storageVirtualMachineId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.tieringPolicy = defaults.tieringPolicy;
-    	      this.uuid = defaults.uuid;
-    	      this.volumeType = defaults.volumeType;
+            $ = new OntapVolumeState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
-            this.fileSystemId = fileSystemId;
+            $.fileSystemId = fileSystemId;
             return this;
         }
-        public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Codegen.ofNullable(fileSystemId);
-            return this;
+
+        public Builder fileSystemId(String fileSystemId) {
+            return fileSystemId(Output.of(fileSystemId));
         }
+
         public Builder flexcacheEndpointType(@Nullable Output<String> flexcacheEndpointType) {
-            this.flexcacheEndpointType = flexcacheEndpointType;
+            $.flexcacheEndpointType = flexcacheEndpointType;
             return this;
         }
-        public Builder flexcacheEndpointType(@Nullable String flexcacheEndpointType) {
-            this.flexcacheEndpointType = Codegen.ofNullable(flexcacheEndpointType);
-            return this;
+
+        public Builder flexcacheEndpointType(String flexcacheEndpointType) {
+            return flexcacheEndpointType(Output.of(flexcacheEndpointType));
         }
+
         public Builder junctionPath(@Nullable Output<String> junctionPath) {
-            this.junctionPath = junctionPath;
+            $.junctionPath = junctionPath;
             return this;
         }
-        public Builder junctionPath(@Nullable String junctionPath) {
-            this.junctionPath = Codegen.ofNullable(junctionPath);
-            return this;
+
+        public Builder junctionPath(String junctionPath) {
+            return junctionPath(Output.of(junctionPath));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ontapVolumeType(@Nullable Output<String> ontapVolumeType) {
-            this.ontapVolumeType = ontapVolumeType;
+            $.ontapVolumeType = ontapVolumeType;
             return this;
         }
-        public Builder ontapVolumeType(@Nullable String ontapVolumeType) {
-            this.ontapVolumeType = Codegen.ofNullable(ontapVolumeType);
-            return this;
+
+        public Builder ontapVolumeType(String ontapVolumeType) {
+            return ontapVolumeType(Output.of(ontapVolumeType));
         }
+
         public Builder securityStyle(@Nullable Output<String> securityStyle) {
-            this.securityStyle = securityStyle;
+            $.securityStyle = securityStyle;
             return this;
         }
-        public Builder securityStyle(@Nullable String securityStyle) {
-            this.securityStyle = Codegen.ofNullable(securityStyle);
-            return this;
+
+        public Builder securityStyle(String securityStyle) {
+            return securityStyle(Output.of(securityStyle));
         }
+
         public Builder sizeInMegabytes(@Nullable Output<Integer> sizeInMegabytes) {
-            this.sizeInMegabytes = sizeInMegabytes;
+            $.sizeInMegabytes = sizeInMegabytes;
             return this;
         }
-        public Builder sizeInMegabytes(@Nullable Integer sizeInMegabytes) {
-            this.sizeInMegabytes = Codegen.ofNullable(sizeInMegabytes);
-            return this;
+
+        public Builder sizeInMegabytes(Integer sizeInMegabytes) {
+            return sizeInMegabytes(Output.of(sizeInMegabytes));
         }
+
         public Builder storageEfficiencyEnabled(@Nullable Output<Boolean> storageEfficiencyEnabled) {
-            this.storageEfficiencyEnabled = storageEfficiencyEnabled;
+            $.storageEfficiencyEnabled = storageEfficiencyEnabled;
             return this;
         }
-        public Builder storageEfficiencyEnabled(@Nullable Boolean storageEfficiencyEnabled) {
-            this.storageEfficiencyEnabled = Codegen.ofNullable(storageEfficiencyEnabled);
-            return this;
+
+        public Builder storageEfficiencyEnabled(Boolean storageEfficiencyEnabled) {
+            return storageEfficiencyEnabled(Output.of(storageEfficiencyEnabled));
         }
+
         public Builder storageVirtualMachineId(@Nullable Output<String> storageVirtualMachineId) {
-            this.storageVirtualMachineId = storageVirtualMachineId;
+            $.storageVirtualMachineId = storageVirtualMachineId;
             return this;
         }
-        public Builder storageVirtualMachineId(@Nullable String storageVirtualMachineId) {
-            this.storageVirtualMachineId = Codegen.ofNullable(storageVirtualMachineId);
-            return this;
+
+        public Builder storageVirtualMachineId(String storageVirtualMachineId) {
+            return storageVirtualMachineId(Output.of(storageVirtualMachineId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder tieringPolicy(@Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy) {
-            this.tieringPolicy = tieringPolicy;
+            $.tieringPolicy = tieringPolicy;
             return this;
         }
-        public Builder tieringPolicy(@Nullable OntapVolumeTieringPolicyGetArgs tieringPolicy) {
-            this.tieringPolicy = Codegen.ofNullable(tieringPolicy);
-            return this;
+
+        public Builder tieringPolicy(OntapVolumeTieringPolicyGetArgs tieringPolicy) {
+            return tieringPolicy(Output.of(tieringPolicy));
         }
+
         public Builder uuid(@Nullable Output<String> uuid) {
-            this.uuid = uuid;
+            $.uuid = uuid;
             return this;
         }
-        public Builder uuid(@Nullable String uuid) {
-            this.uuid = Codegen.ofNullable(uuid);
-            return this;
+
+        public Builder uuid(String uuid) {
+            return uuid(Output.of(uuid));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public OntapVolumeState build() {
-            return new OntapVolumeState(arn, fileSystemId, flexcacheEndpointType, junctionPath, name, ontapVolumeType, securityStyle, sizeInMegabytes, storageEfficiencyEnabled, storageVirtualMachineId, tags, tagsAll, tieringPolicy, uuid, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public OntapVolumeState build() {
+            return $;
         }
     }
+
 }

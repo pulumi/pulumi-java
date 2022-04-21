@@ -29,10 +29,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="caching")
-      private final @Nullable String caching;
+    private @Nullable String caching;
 
     public Optional<String> caching() {
-        return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="createOption", required=true)
-      private final String createOption;
+    private String createOption;
 
     public String createOption() {
         return this.createOption;
@@ -51,10 +51,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="diffDiskSettings")
-      private final @Nullable DiffDiskSettingsResponse diffDiskSettings;
+    private @Nullable DiffDiskSettingsResponse diffDiskSettings;
 
     public Optional<DiffDiskSettingsResponse> diffDiskSettings() {
-        return this.diffDiskSettings == null ? Optional.empty() : Optional.ofNullable(this.diffDiskSettings);
+        return Optional.ofNullable(this.diffDiskSettings);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="image")
-      private final @Nullable VirtualHardDiskResponse image;
+    private @Nullable VirtualHardDiskResponse image;
 
     public Optional<VirtualHardDiskResponse> image() {
-        return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
+    private @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
 
     public Optional<VirtualMachineScaleSetManagedDiskParametersResponse> managedDisk() {
-        return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="vhdContainers")
-      private final @Nullable List<String> vhdContainers;
+    private @Nullable List<String> vhdContainers;
 
-    public List<String> vhdContainers() {
-        return this.vhdContainers == null ? List.of() : this.vhdContainers;
+    public Optional<List<String>> vhdContainers() {
+        return Optional.ofNullable(this.vhdContainers);
     }
 
     /**
@@ -128,130 +128,103 @@ public final class VirtualMachineScaleSetOSDiskResponse extends com.pulumi.resou
      * 
      */
     @Import(name="writeAcceleratorEnabled")
-      private final @Nullable Boolean writeAcceleratorEnabled;
+    private @Nullable Boolean writeAcceleratorEnabled;
 
     public Optional<Boolean> writeAcceleratorEnabled() {
-        return this.writeAcceleratorEnabled == null ? Optional.empty() : Optional.ofNullable(this.writeAcceleratorEnabled);
+        return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
 
-    public VirtualMachineScaleSetOSDiskResponse(
-        @Nullable String caching,
-        String createOption,
-        @Nullable DiffDiskSettingsResponse diffDiskSettings,
-        @Nullable Integer diskSizeGB,
-        @Nullable VirtualHardDiskResponse image,
-        @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable List<String> vhdContainers,
-        @Nullable Boolean writeAcceleratorEnabled) {
-        this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption, "expected parameter 'createOption' to be non-null");
-        this.diffDiskSettings = diffDiskSettings;
-        this.diskSizeGB = diskSizeGB;
-        this.image = image;
-        this.managedDisk = managedDisk;
-        this.name = name;
-        this.osType = osType;
-        this.vhdContainers = vhdContainers;
-        this.writeAcceleratorEnabled = writeAcceleratorEnabled;
-    }
+    private VirtualMachineScaleSetOSDiskResponse() {}
 
-    private VirtualMachineScaleSetOSDiskResponse() {
-        this.caching = null;
-        this.createOption = null;
-        this.diffDiskSettings = null;
-        this.diskSizeGB = null;
-        this.image = null;
-        this.managedDisk = null;
-        this.name = null;
-        this.osType = null;
-        this.vhdContainers = List.of();
-        this.writeAcceleratorEnabled = null;
+    private VirtualMachineScaleSetOSDiskResponse(VirtualMachineScaleSetOSDiskResponse $) {
+        this.caching = $.caching;
+        this.createOption = $.createOption;
+        this.diffDiskSettings = $.diffDiskSettings;
+        this.diskSizeGB = $.diskSizeGB;
+        this.image = $.image;
+        this.managedDisk = $.managedDisk;
+        this.name = $.name;
+        this.osType = $.osType;
+        this.vhdContainers = $.vhdContainers;
+        this.writeAcceleratorEnabled = $.writeAcceleratorEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetOSDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String caching;
-        private String createOption;
-        private @Nullable DiffDiskSettingsResponse diffDiskSettings;
-        private @Nullable Integer diskSizeGB;
-        private @Nullable VirtualHardDiskResponse image;
-        private @Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk;
-        private @Nullable String name;
-        private @Nullable String osType;
-        private @Nullable List<String> vhdContainers;
-        private @Nullable Boolean writeAcceleratorEnabled;
+        private VirtualMachineScaleSetOSDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetOSDiskResponse();
         }
 
         public Builder(VirtualMachineScaleSetOSDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.createOption = defaults.createOption;
-    	      this.diffDiskSettings = defaults.diffDiskSettings;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.image = defaults.image;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.name = defaults.name;
-    	      this.osType = defaults.osType;
-    	      this.vhdContainers = defaults.vhdContainers;
-    	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
+            $ = new VirtualMachineScaleSetOSDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable String caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
+
         public Builder createOption(String createOption) {
-            this.createOption = Objects.requireNonNull(createOption);
+            $.createOption = createOption;
             return this;
         }
+
         public Builder diffDiskSettings(@Nullable DiffDiskSettingsResponse diffDiskSettings) {
-            this.diffDiskSettings = diffDiskSettings;
+            $.diffDiskSettings = diffDiskSettings;
             return this;
         }
+
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder image(@Nullable VirtualHardDiskResponse image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
+
         public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder vhdContainers(@Nullable List<String> vhdContainers) {
-            this.vhdContainers = vhdContainers;
+            $.vhdContainers = vhdContainers;
             return this;
         }
+
         public Builder vhdContainers(String... vhdContainers) {
             return vhdContainers(List.of(vhdContainers));
         }
+
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = writeAcceleratorEnabled;
+            $.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
-        }        public VirtualMachineScaleSetOSDiskResponse build() {
-            return new VirtualMachineScaleSetOSDiskResponse(caching, createOption, diffDiskSettings, diskSizeGB, image, managedDisk, name, osType, vhdContainers, writeAcceleratorEnabled);
+        }
+
+        public VirtualMachineScaleSetOSDiskResponse build() {
+            $.createOption = Objects.requireNonNull($.createOption, "expected parameter 'createOption' to be non-null");
+            return $;
         }
     }
+
 }

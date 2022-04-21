@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,52 +20,53 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      * 
      */
     @Import(name="words", required=true)
-      private final Output<List<String>> words;
+    private Output<List<String>> words;
 
     public Output<List<String>> words() {
         return this.words;
     }
 
-    public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs(Output<List<String>> words) {
-        this.words = Objects.requireNonNull(words, "expected parameter 'words' to be non-null");
-    }
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs() {}
 
-    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs() {
-        this.words = Codegen.empty();
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs $) {
+        this.words = $.words;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> words;
+        private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs();
         }
 
         public Builder(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.words = defaults.words;
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder words(Output<List<String>> words) {
-            this.words = Objects.requireNonNull(words);
+            $.words = words;
             return this;
         }
+
         public Builder words(List<String> words) {
-            this.words = Output.of(Objects.requireNonNull(words));
-            return this;
+            return words(Output.of(words));
         }
+
         public Builder words(String... words) {
             return words(List.of(words));
-        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs build() {
-            return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs(words);
+        }
+
+        public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListGetArgs build() {
+            $.words = Objects.requireNonNull($.words, "expected parameter 'words' to be non-null");
+            return $;
         }
     }
+
 }

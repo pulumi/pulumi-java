@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryT
      * 
      */
     @Import(name="nanos")
-      private final @Nullable Output<Integer> nanos;
+    private @Nullable Output<Integer> nanos;
 
-    public Output<Integer> nanos() {
-        return this.nanos == null ? Codegen.empty() : this.nanos;
+    public Optional<Output<Integer>> nanos() {
+        return Optional.ofNullable(this.nanos);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryT
      * 
      */
     @Import(name="seconds", required=true)
-      private final Output<String> seconds;
+    private Output<String> seconds;
 
     public Output<String> seconds() {
         return this.seconds;
     }
 
-    public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs(
-        @Nullable Output<Integer> nanos,
-        Output<String> seconds) {
-        this.nanos = nanos;
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs() {}
 
-    private RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs() {
-        this.nanos = Codegen.empty();
-        this.seconds = Codegen.empty();
+    private RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs(RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs $) {
+        this.nanos = $.nanos;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> nanos;
-        private Output<String> seconds;
+        private RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs();
         }
 
         public Builder(RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nanos = defaults.nanos;
-    	      this.seconds = defaults.seconds;
+            $ = new RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nanos(@Nullable Output<Integer> nanos) {
-            this.nanos = nanos;
+            $.nanos = nanos;
             return this;
         }
-        public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Codegen.ofNullable(nanos);
-            return this;
+
+        public Builder nanos(Integer nanos) {
+            return nanos(Output.of(nanos));
         }
+
         public Builder seconds(Output<String> seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
         }
+
         public Builder seconds(String seconds) {
-            this.seconds = Output.of(Objects.requireNonNull(seconds));
-            return this;
-        }        public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs build() {
-            return new RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs(nanos, seconds);
+            return seconds(Output.of(seconds));
+        }
+
+        public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs build() {
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

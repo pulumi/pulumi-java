@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ScoringConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableFreshness")
-      private final @Nullable Output<Boolean> disableFreshness;
+    private @Nullable Output<Boolean> disableFreshness;
 
-    public Output<Boolean> disableFreshness() {
-        return this.disableFreshness == null ? Codegen.empty() : this.disableFreshness;
+    public Optional<Output<Boolean>> disableFreshness() {
+        return Optional.ofNullable(this.disableFreshness);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ScoringConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disablePersonalization")
-      private final @Nullable Output<Boolean> disablePersonalization;
+    private @Nullable Output<Boolean> disablePersonalization;
 
-    public Output<Boolean> disablePersonalization() {
-        return this.disablePersonalization == null ? Codegen.empty() : this.disablePersonalization;
+    public Optional<Output<Boolean>> disablePersonalization() {
+        return Optional.ofNullable(this.disablePersonalization);
     }
 
-    public ScoringConfigArgs(
-        @Nullable Output<Boolean> disableFreshness,
-        @Nullable Output<Boolean> disablePersonalization) {
-        this.disableFreshness = disableFreshness;
-        this.disablePersonalization = disablePersonalization;
-    }
+    private ScoringConfigArgs() {}
 
-    private ScoringConfigArgs() {
-        this.disableFreshness = Codegen.empty();
-        this.disablePersonalization = Codegen.empty();
+    private ScoringConfigArgs(ScoringConfigArgs $) {
+        this.disableFreshness = $.disableFreshness;
+        this.disablePersonalization = $.disablePersonalization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScoringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableFreshness;
-        private @Nullable Output<Boolean> disablePersonalization;
+        private ScoringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScoringConfigArgs();
         }
 
         public Builder(ScoringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableFreshness = defaults.disableFreshness;
-    	      this.disablePersonalization = defaults.disablePersonalization;
+            $ = new ScoringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableFreshness(@Nullable Output<Boolean> disableFreshness) {
-            this.disableFreshness = disableFreshness;
+            $.disableFreshness = disableFreshness;
             return this;
         }
-        public Builder disableFreshness(@Nullable Boolean disableFreshness) {
-            this.disableFreshness = Codegen.ofNullable(disableFreshness);
-            return this;
+
+        public Builder disableFreshness(Boolean disableFreshness) {
+            return disableFreshness(Output.of(disableFreshness));
         }
+
         public Builder disablePersonalization(@Nullable Output<Boolean> disablePersonalization) {
-            this.disablePersonalization = disablePersonalization;
+            $.disablePersonalization = disablePersonalization;
             return this;
         }
-        public Builder disablePersonalization(@Nullable Boolean disablePersonalization) {
-            this.disablePersonalization = Codegen.ofNullable(disablePersonalization);
-            return this;
-        }        public ScoringConfigArgs build() {
-            return new ScoringConfigArgs(disableFreshness, disablePersonalization);
+
+        public Builder disablePersonalization(Boolean disablePersonalization) {
+            return disablePersonalization(Output.of(disablePersonalization));
+        }
+
+        public ScoringConfigArgs build() {
+            return $;
         }
     }
+
 }

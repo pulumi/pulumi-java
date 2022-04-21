@@ -18,62 +18,59 @@ public final class DatasetPathParameter extends com.pulumi.resources.InvokeArgs 
     public static final DatasetPathParameter Empty = new DatasetPathParameter();
 
     @Import(name="datasetParameter", required=true)
-      private final DatasetParameter datasetParameter;
+    private DatasetParameter datasetParameter;
 
     public DatasetParameter datasetParameter() {
         return this.datasetParameter;
     }
 
     @Import(name="pathParameterName", required=true)
-      private final String pathParameterName;
+    private String pathParameterName;
 
     public String pathParameterName() {
         return this.pathParameterName;
     }
 
-    public DatasetPathParameter(
-        DatasetParameter datasetParameter,
-        String pathParameterName) {
-        this.datasetParameter = Objects.requireNonNull(datasetParameter, "expected parameter 'datasetParameter' to be non-null");
-        this.pathParameterName = Objects.requireNonNull(pathParameterName, "expected parameter 'pathParameterName' to be non-null");
-    }
+    private DatasetPathParameter() {}
 
-    private DatasetPathParameter() {
-        this.datasetParameter = null;
-        this.pathParameterName = null;
+    private DatasetPathParameter(DatasetPathParameter $) {
+        this.datasetParameter = $.datasetParameter;
+        this.pathParameterName = $.pathParameterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetPathParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DatasetParameter datasetParameter;
-        private String pathParameterName;
+        private DatasetPathParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetPathParameter();
         }
 
         public Builder(DatasetPathParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetParameter = defaults.datasetParameter;
-    	      this.pathParameterName = defaults.pathParameterName;
+            $ = new DatasetPathParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetParameter(DatasetParameter datasetParameter) {
-            this.datasetParameter = Objects.requireNonNull(datasetParameter);
+            $.datasetParameter = datasetParameter;
             return this;
         }
+
         public Builder pathParameterName(String pathParameterName) {
-            this.pathParameterName = Objects.requireNonNull(pathParameterName);
+            $.pathParameterName = pathParameterName;
             return this;
-        }        public DatasetPathParameter build() {
-            return new DatasetPathParameter(datasetParameter, pathParameterName);
+        }
+
+        public DatasetPathParameter build() {
+            $.datasetParameter = Objects.requireNonNull($.datasetParameter, "expected parameter 'datasetParameter' to be non-null");
+            $.pathParameterName = Objects.requireNonNull($.pathParameterName, "expected parameter 'pathParameterName' to be non-null");
+            return $;
         }
     }
+
 }

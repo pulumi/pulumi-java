@@ -14,6 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="environmentName")
-      private final @Nullable Output<String> environmentName;
+    private @Nullable Output<String> environmentName;
 
-    public Output<String> environmentName() {
-        return this.environmentName == null ? Codegen.empty() : this.environmentName;
+    public Optional<Output<String>> environmentName() {
+        return Optional.ofNullable(this.environmentName);
     }
 
     /**
@@ -38,7 +39,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -49,10 +50,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -60,7 +61,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -71,7 +72,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -82,7 +83,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="storageConfiguration", required=true)
-      private final Output<Gen2StorageConfigurationInputArgs> storageConfiguration;
+    private Output<Gen2StorageConfigurationInputArgs> storageConfiguration;
 
     public Output<Gen2StorageConfigurationInputArgs> storageConfiguration() {
         return this.storageConfiguration;
@@ -93,10 +94,10 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -104,7 +105,7 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeSeriesIdProperties", required=true)
-      private final Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
+    private Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
 
     public Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties() {
         return this.timeSeriesIdProperties;
@@ -115,157 +116,137 @@ public final class Gen2EnvironmentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="warmStoreConfiguration")
-      private final @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
+    private @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
 
-    public Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration() {
-        return this.warmStoreConfiguration == null ? Codegen.empty() : this.warmStoreConfiguration;
+    public Optional<Output<WarmStoreConfigurationPropertiesArgs>> warmStoreConfiguration() {
+        return Optional.ofNullable(this.warmStoreConfiguration);
     }
 
-    public Gen2EnvironmentArgs(
-        @Nullable Output<String> environmentName,
-        Output<String> kind,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<SkuArgs> sku,
-        Output<Gen2StorageConfigurationInputArgs> storageConfiguration,
-        @Nullable Output<Map<String,String>> tags,
-        Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties,
-        @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
-        this.environmentName = environmentName;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.storageConfiguration = Objects.requireNonNull(storageConfiguration, "expected parameter 'storageConfiguration' to be non-null");
-        this.tags = tags;
-        this.timeSeriesIdProperties = Objects.requireNonNull(timeSeriesIdProperties, "expected parameter 'timeSeriesIdProperties' to be non-null");
-        this.warmStoreConfiguration = warmStoreConfiguration;
-    }
+    private Gen2EnvironmentArgs() {}
 
-    private Gen2EnvironmentArgs() {
-        this.environmentName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.storageConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeSeriesIdProperties = Codegen.empty();
-        this.warmStoreConfiguration = Codegen.empty();
+    private Gen2EnvironmentArgs(Gen2EnvironmentArgs $) {
+        this.environmentName = $.environmentName;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.storageConfiguration = $.storageConfiguration;
+        this.tags = $.tags;
+        this.timeSeriesIdProperties = $.timeSeriesIdProperties;
+        this.warmStoreConfiguration = $.warmStoreConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Gen2EnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> environmentName;
-        private Output<String> kind;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<SkuArgs> sku;
-        private Output<Gen2StorageConfigurationInputArgs> storageConfiguration;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
-        private @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
+        private Gen2EnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Gen2EnvironmentArgs();
         }
 
         public Builder(Gen2EnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentName = defaults.environmentName;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.storageConfiguration = defaults.storageConfiguration;
-    	      this.tags = defaults.tags;
-    	      this.timeSeriesIdProperties = defaults.timeSeriesIdProperties;
-    	      this.warmStoreConfiguration = defaults.warmStoreConfiguration;
+            $ = new Gen2EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentName(@Nullable Output<String> environmentName) {
-            this.environmentName = environmentName;
+            $.environmentName = environmentName;
             return this;
         }
-        public Builder environmentName(@Nullable String environmentName) {
-            this.environmentName = Codegen.ofNullable(environmentName);
-            return this;
+
+        public Builder environmentName(String environmentName) {
+            return environmentName(Output.of(environmentName));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder storageConfiguration(Output<Gen2StorageConfigurationInputArgs> storageConfiguration) {
-            this.storageConfiguration = Objects.requireNonNull(storageConfiguration);
+            $.storageConfiguration = storageConfiguration;
             return this;
         }
+
         public Builder storageConfiguration(Gen2StorageConfigurationInputArgs storageConfiguration) {
-            this.storageConfiguration = Output.of(Objects.requireNonNull(storageConfiguration));
-            return this;
+            return storageConfiguration(Output.of(storageConfiguration));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timeSeriesIdProperties(Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties) {
-            this.timeSeriesIdProperties = Objects.requireNonNull(timeSeriesIdProperties);
+            $.timeSeriesIdProperties = timeSeriesIdProperties;
             return this;
         }
+
         public Builder timeSeriesIdProperties(List<TimeSeriesIdPropertyArgs> timeSeriesIdProperties) {
-            this.timeSeriesIdProperties = Output.of(Objects.requireNonNull(timeSeriesIdProperties));
-            return this;
+            return timeSeriesIdProperties(Output.of(timeSeriesIdProperties));
         }
+
         public Builder timeSeriesIdProperties(TimeSeriesIdPropertyArgs... timeSeriesIdProperties) {
             return timeSeriesIdProperties(List.of(timeSeriesIdProperties));
         }
+
         public Builder warmStoreConfiguration(@Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration) {
-            this.warmStoreConfiguration = warmStoreConfiguration;
+            $.warmStoreConfiguration = warmStoreConfiguration;
             return this;
         }
-        public Builder warmStoreConfiguration(@Nullable WarmStoreConfigurationPropertiesArgs warmStoreConfiguration) {
-            this.warmStoreConfiguration = Codegen.ofNullable(warmStoreConfiguration);
-            return this;
-        }        public Gen2EnvironmentArgs build() {
-            return new Gen2EnvironmentArgs(environmentName, kind, location, resourceGroupName, sku, storageConfiguration, tags, timeSeriesIdProperties, warmStoreConfiguration);
+
+        public Builder warmStoreConfiguration(WarmStoreConfigurationPropertiesArgs warmStoreConfiguration) {
+            return warmStoreConfiguration(Output.of(warmStoreConfiguration));
+        }
+
+        public Gen2EnvironmentArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            $.storageConfiguration = Objects.requireNonNull($.storageConfiguration, "expected parameter 'storageConfiguration' to be non-null");
+            $.timeSeriesIdProperties = Objects.requireNonNull($.timeSeriesIdProperties, "expected parameter 'timeSeriesIdProperties' to be non-null");
+            return $;
         }
     }
+
 }

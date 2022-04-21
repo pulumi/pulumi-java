@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SlsaBuilderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public SlsaBuilderArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private SlsaBuilderArgs() {}
 
-    private SlsaBuilderArgs() {
-        this.id = Codegen.empty();
+    private SlsaBuilderArgs(SlsaBuilderArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlsaBuilderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private SlsaBuilderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlsaBuilderArgs();
         }
 
         public Builder(SlsaBuilderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new SlsaBuilderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public SlsaBuilderArgs build() {
-            return new SlsaBuilderArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public SlsaBuilderArgs build() {
+            return $;
         }
     }
+
 }

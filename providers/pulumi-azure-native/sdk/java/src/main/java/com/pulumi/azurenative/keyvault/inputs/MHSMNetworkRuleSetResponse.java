@@ -26,10 +26,10 @@ public final class MHSMNetworkRuleSetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="bypass")
-      private final @Nullable String bypass;
+    private @Nullable String bypass;
 
     public Optional<String> bypass() {
-        return this.bypass == null ? Optional.empty() : Optional.ofNullable(this.bypass);
+        return Optional.ofNullable(this.bypass);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MHSMNetworkRuleSetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="defaultAction")
-      private final @Nullable String defaultAction;
+    private @Nullable String defaultAction;
 
     public Optional<String> defaultAction() {
-        return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
+        return Optional.ofNullable(this.defaultAction);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MHSMNetworkRuleSetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ipRules")
-      private final @Nullable List<MHSMIPRuleResponse> ipRules;
+    private @Nullable List<MHSMIPRuleResponse> ipRules;
 
-    public List<MHSMIPRuleResponse> ipRules() {
-        return this.ipRules == null ? List.of() : this.ipRules;
+    public Optional<List<MHSMIPRuleResponse>> ipRules() {
+        return Optional.ofNullable(this.ipRules);
     }
 
     /**
@@ -59,79 +59,70 @@ public final class MHSMNetworkRuleSetResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="virtualNetworkRules")
-      private final @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
+    private @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
 
-    public List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules() {
-        return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
+    public Optional<List<MHSMVirtualNetworkRuleResponse>> virtualNetworkRules() {
+        return Optional.ofNullable(this.virtualNetworkRules);
     }
 
-    public MHSMNetworkRuleSetResponse(
-        @Nullable String bypass,
-        @Nullable String defaultAction,
-        @Nullable List<MHSMIPRuleResponse> ipRules,
-        @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
-        this.bypass = bypass;
-        this.defaultAction = defaultAction;
-        this.ipRules = ipRules;
-        this.virtualNetworkRules = virtualNetworkRules;
-    }
+    private MHSMNetworkRuleSetResponse() {}
 
-    private MHSMNetworkRuleSetResponse() {
-        this.bypass = null;
-        this.defaultAction = null;
-        this.ipRules = List.of();
-        this.virtualNetworkRules = List.of();
+    private MHSMNetworkRuleSetResponse(MHSMNetworkRuleSetResponse $) {
+        this.bypass = $.bypass;
+        this.defaultAction = $.defaultAction;
+        this.ipRules = $.ipRules;
+        this.virtualNetworkRules = $.virtualNetworkRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MHSMNetworkRuleSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bypass;
-        private @Nullable String defaultAction;
-        private @Nullable List<MHSMIPRuleResponse> ipRules;
-        private @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
+        private MHSMNetworkRuleSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MHSMNetworkRuleSetResponse();
         }
 
         public Builder(MHSMNetworkRuleSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypass = defaults.bypass;
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.ipRules = defaults.ipRules;
-    	      this.virtualNetworkRules = defaults.virtualNetworkRules;
+            $ = new MHSMNetworkRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bypass(@Nullable String bypass) {
-            this.bypass = bypass;
+            $.bypass = bypass;
             return this;
         }
+
         public Builder defaultAction(@Nullable String defaultAction) {
-            this.defaultAction = defaultAction;
+            $.defaultAction = defaultAction;
             return this;
         }
+
         public Builder ipRules(@Nullable List<MHSMIPRuleResponse> ipRules) {
-            this.ipRules = ipRules;
+            $.ipRules = ipRules;
             return this;
         }
+
         public Builder ipRules(MHSMIPRuleResponse... ipRules) {
             return ipRules(List.of(ipRules));
         }
+
         public Builder virtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
-            this.virtualNetworkRules = virtualNetworkRules;
+            $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
+
         public Builder virtualNetworkRules(MHSMVirtualNetworkRuleResponse... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
-        }        public MHSMNetworkRuleSetResponse build() {
-            return new MHSMNetworkRuleSetResponse(bypass, defaultAction, ipRules, virtualNetworkRules);
+        }
+
+        public MHSMNetworkRuleSetResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -31,10 +31,10 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notes")
-      private final @Nullable Output<String> notes;
+    private @Nullable Output<String> notes;
 
-    public Output<String> notes() {
-        return this.notes == null ? Codegen.empty() : this.notes;
+    public Optional<Output<String>> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="releaseId")
-      private final @Nullable Output<String> releaseId;
+    private @Nullable Output<String> releaseId;
 
-    public Output<String> releaseId() {
-        return this.releaseId == null ? Codegen.empty() : this.releaseId;
+    public Optional<Output<String>> releaseId() {
+        return Optional.ofNullable(this.releaseId);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,102 +64,91 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public ApiReleaseArgs(
-        Output<String> apiId,
-        @Nullable Output<String> notes,
-        @Nullable Output<String> releaseId,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.notes = notes;
-        this.releaseId = releaseId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ApiReleaseArgs() {}
 
-    private ApiReleaseArgs() {
-        this.apiId = Codegen.empty();
-        this.notes = Codegen.empty();
-        this.releaseId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private ApiReleaseArgs(ApiReleaseArgs $) {
+        this.apiId = $.apiId;
+        this.notes = $.notes;
+        this.releaseId = $.releaseId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiReleaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<String> notes;
-        private @Nullable Output<String> releaseId;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private ApiReleaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiReleaseArgs();
         }
 
         public Builder(ApiReleaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.notes = defaults.notes;
-    	      this.releaseId = defaults.releaseId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ApiReleaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder notes(@Nullable Output<String> notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
-        public Builder notes(@Nullable String notes) {
-            this.notes = Codegen.ofNullable(notes);
-            return this;
+
+        public Builder notes(String notes) {
+            return notes(Output.of(notes));
         }
+
         public Builder releaseId(@Nullable Output<String> releaseId) {
-            this.releaseId = releaseId;
+            $.releaseId = releaseId;
             return this;
         }
-        public Builder releaseId(@Nullable String releaseId) {
-            this.releaseId = Codegen.ofNullable(releaseId);
-            return this;
+
+        public Builder releaseId(String releaseId) {
+            return releaseId(Output.of(releaseId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public ApiReleaseArgs build() {
-            return new ApiReleaseArgs(apiId, notes, releaseId, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public ApiReleaseArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

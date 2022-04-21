@@ -17,62 +17,59 @@ public final class GetOrganizationRootPolicyType extends com.pulumi.resources.In
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetOrganizationRootPolicyType(
-        String status,
-        String type) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetOrganizationRootPolicyType() {}
 
-    private GetOrganizationRootPolicyType() {
-        this.status = null;
-        this.type = null;
+    private GetOrganizationRootPolicyType(GetOrganizationRootPolicyType $) {
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationRootPolicyType defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String status;
-        private String type;
+        private GetOrganizationRootPolicyType $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationRootPolicyType();
         }
 
         public Builder(GetOrganizationRootPolicyType defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new GetOrganizationRootPolicyType(Objects.requireNonNull(defaults));
         }
 
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetOrganizationRootPolicyType build() {
-            return new GetOrganizationRootPolicyType(status, type);
+        }
+
+        public GetOrganizationRootPolicyType build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

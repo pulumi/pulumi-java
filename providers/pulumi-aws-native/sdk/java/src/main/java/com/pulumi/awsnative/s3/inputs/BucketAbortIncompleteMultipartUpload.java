@@ -21,45 +21,45 @@ public final class BucketAbortIncompleteMultipartUpload extends com.pulumi.resou
      * 
      */
     @Import(name="daysAfterInitiation", required=true)
-      private final Integer daysAfterInitiation;
+    private Integer daysAfterInitiation;
 
     public Integer daysAfterInitiation() {
         return this.daysAfterInitiation;
     }
 
-    public BucketAbortIncompleteMultipartUpload(Integer daysAfterInitiation) {
-        this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation, "expected parameter 'daysAfterInitiation' to be non-null");
-    }
+    private BucketAbortIncompleteMultipartUpload() {}
 
-    private BucketAbortIncompleteMultipartUpload() {
-        this.daysAfterInitiation = null;
+    private BucketAbortIncompleteMultipartUpload(BucketAbortIncompleteMultipartUpload $) {
+        this.daysAfterInitiation = $.daysAfterInitiation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAbortIncompleteMultipartUpload defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer daysAfterInitiation;
+        private BucketAbortIncompleteMultipartUpload $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAbortIncompleteMultipartUpload();
         }
 
         public Builder(BucketAbortIncompleteMultipartUpload defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysAfterInitiation = defaults.daysAfterInitiation;
+            $ = new BucketAbortIncompleteMultipartUpload(Objects.requireNonNull(defaults));
         }
 
         public Builder daysAfterInitiation(Integer daysAfterInitiation) {
-            this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
+            $.daysAfterInitiation = daysAfterInitiation;
             return this;
-        }        public BucketAbortIncompleteMultipartUpload build() {
-            return new BucketAbortIncompleteMultipartUpload(daysAfterInitiation);
+        }
+
+        public BucketAbortIncompleteMultipartUpload build() {
+            $.daysAfterInitiation = Objects.requireNonNull($.daysAfterInitiation, "expected parameter 'daysAfterInitiation' to be non-null");
+            return $;
         }
     }
+
 }

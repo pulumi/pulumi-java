@@ -22,7 +22,7 @@ public final class SimulationApplicationRenderingEngine extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final SimulationApplicationRenderingEngineName name;
+    private SimulationApplicationRenderingEngineName name;
 
     public SimulationApplicationRenderingEngineName name() {
         return this.name;
@@ -33,55 +33,52 @@ public final class SimulationApplicationRenderingEngine extends com.pulumi.resou
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public SimulationApplicationRenderingEngine(
-        SimulationApplicationRenderingEngineName name,
-        String version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SimulationApplicationRenderingEngine() {}
 
-    private SimulationApplicationRenderingEngine() {
-        this.name = null;
-        this.version = null;
+    private SimulationApplicationRenderingEngine(SimulationApplicationRenderingEngine $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SimulationApplicationRenderingEngine defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SimulationApplicationRenderingEngineName name;
-        private String version;
+        private SimulationApplicationRenderingEngine $;
 
         public Builder() {
-    	      // Empty
+            $ = new SimulationApplicationRenderingEngine();
         }
 
         public Builder(SimulationApplicationRenderingEngine defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new SimulationApplicationRenderingEngine(Objects.requireNonNull(defaults));
         }
 
         public Builder name(SimulationApplicationRenderingEngineName name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public SimulationApplicationRenderingEngine build() {
-            return new SimulationApplicationRenderingEngine(name, version);
+        }
+
+        public SimulationApplicationRenderingEngine build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

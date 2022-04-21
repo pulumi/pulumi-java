@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends c
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends c
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,64 +43,59 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends c
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(
-        String mode,
-        String name,
-        String type) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1RoutineSpecArgumentResponse() {}
 
-    private GoogleCloudDatacatalogV1RoutineSpecArgumentResponse() {
-        this.mode = null;
-        this.name = null;
-        this.type = null;
+    private GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(GoogleCloudDatacatalogV1RoutineSpecArgumentResponse $) {
+        this.mode = $.mode;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1RoutineSpecArgumentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mode;
-        private String name;
-        private String type;
+        private GoogleCloudDatacatalogV1RoutineSpecArgumentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1RoutineSpecArgumentResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1RoutineSpecArgumentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudDatacatalogV1RoutineSpecArgumentResponse build() {
-            return new GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(mode, name, type);
+        }
+
+        public GoogleCloudDatacatalogV1RoutineSpecArgumentResponse build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class LockConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locked", required=true)
-      private final Boolean locked;
+    private Boolean locked;
 
     public Boolean locked() {
         return this.locked;
@@ -33,55 +33,52 @@ public final class LockConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
     }
 
-    public LockConfigResponse(
-        Boolean locked,
-        String reason) {
-        this.locked = Objects.requireNonNull(locked, "expected parameter 'locked' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-    }
+    private LockConfigResponse() {}
 
-    private LockConfigResponse() {
-        this.locked = null;
-        this.reason = null;
+    private LockConfigResponse(LockConfigResponse $) {
+        this.locked = $.locked;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LockConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean locked;
-        private String reason;
+        private LockConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LockConfigResponse();
         }
 
         public Builder(LockConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locked = defaults.locked;
-    	      this.reason = defaults.reason;
+            $ = new LockConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder locked(Boolean locked) {
-            this.locked = Objects.requireNonNull(locked);
+            $.locked = locked;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
-        }        public LockConfigResponse build() {
-            return new LockConfigResponse(locked, reason);
+        }
+
+        public LockConfigResponse build() {
+            $.locked = Objects.requireNonNull($.locked, "expected parameter 'locked' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            return $;
         }
     }
+
 }

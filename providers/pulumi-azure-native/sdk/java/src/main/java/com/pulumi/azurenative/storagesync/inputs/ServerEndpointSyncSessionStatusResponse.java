@@ -25,7 +25,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="filesNotSyncingErrors", required=true)
-      private final List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors;
+    private List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors;
 
     public List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors() {
         return this.filesNotSyncingErrors;
@@ -36,7 +36,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="lastSyncMode", required=true)
-      private final String lastSyncMode;
+    private String lastSyncMode;
 
     public String lastSyncMode() {
         return this.lastSyncMode;
@@ -47,7 +47,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="lastSyncPerItemErrorCount", required=true)
-      private final Double lastSyncPerItemErrorCount;
+    private Double lastSyncPerItemErrorCount;
 
     public Double lastSyncPerItemErrorCount() {
         return this.lastSyncPerItemErrorCount;
@@ -58,7 +58,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="lastSyncResult", required=true)
-      private final Integer lastSyncResult;
+    private Integer lastSyncResult;
 
     public Integer lastSyncResult() {
         return this.lastSyncResult;
@@ -69,7 +69,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="lastSyncSuccessTimestamp", required=true)
-      private final String lastSyncSuccessTimestamp;
+    private String lastSyncSuccessTimestamp;
 
     public String lastSyncSuccessTimestamp() {
         return this.lastSyncSuccessTimestamp;
@@ -80,7 +80,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="lastSyncTimestamp", required=true)
-      private final String lastSyncTimestamp;
+    private String lastSyncTimestamp;
 
     public String lastSyncTimestamp() {
         return this.lastSyncTimestamp;
@@ -91,7 +91,7 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="persistentFilesNotSyncingCount", required=true)
-      private final Double persistentFilesNotSyncingCount;
+    private Double persistentFilesNotSyncingCount;
 
     public Double persistentFilesNotSyncingCount() {
         return this.persistentFilesNotSyncingCount;
@@ -102,112 +102,98 @@ public final class ServerEndpointSyncSessionStatusResponse extends com.pulumi.re
      * 
      */
     @Import(name="transientFilesNotSyncingCount", required=true)
-      private final Double transientFilesNotSyncingCount;
+    private Double transientFilesNotSyncingCount;
 
     public Double transientFilesNotSyncingCount() {
         return this.transientFilesNotSyncingCount;
     }
 
-    public ServerEndpointSyncSessionStatusResponse(
-        List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors,
-        String lastSyncMode,
-        Double lastSyncPerItemErrorCount,
-        Integer lastSyncResult,
-        String lastSyncSuccessTimestamp,
-        String lastSyncTimestamp,
-        Double persistentFilesNotSyncingCount,
-        Double transientFilesNotSyncingCount) {
-        this.filesNotSyncingErrors = Objects.requireNonNull(filesNotSyncingErrors, "expected parameter 'filesNotSyncingErrors' to be non-null");
-        this.lastSyncMode = Objects.requireNonNull(lastSyncMode, "expected parameter 'lastSyncMode' to be non-null");
-        this.lastSyncPerItemErrorCount = Objects.requireNonNull(lastSyncPerItemErrorCount, "expected parameter 'lastSyncPerItemErrorCount' to be non-null");
-        this.lastSyncResult = Objects.requireNonNull(lastSyncResult, "expected parameter 'lastSyncResult' to be non-null");
-        this.lastSyncSuccessTimestamp = Objects.requireNonNull(lastSyncSuccessTimestamp, "expected parameter 'lastSyncSuccessTimestamp' to be non-null");
-        this.lastSyncTimestamp = Objects.requireNonNull(lastSyncTimestamp, "expected parameter 'lastSyncTimestamp' to be non-null");
-        this.persistentFilesNotSyncingCount = Objects.requireNonNull(persistentFilesNotSyncingCount, "expected parameter 'persistentFilesNotSyncingCount' to be non-null");
-        this.transientFilesNotSyncingCount = Objects.requireNonNull(transientFilesNotSyncingCount, "expected parameter 'transientFilesNotSyncingCount' to be non-null");
-    }
+    private ServerEndpointSyncSessionStatusResponse() {}
 
-    private ServerEndpointSyncSessionStatusResponse() {
-        this.filesNotSyncingErrors = List.of();
-        this.lastSyncMode = null;
-        this.lastSyncPerItemErrorCount = null;
-        this.lastSyncResult = null;
-        this.lastSyncSuccessTimestamp = null;
-        this.lastSyncTimestamp = null;
-        this.persistentFilesNotSyncingCount = null;
-        this.transientFilesNotSyncingCount = null;
+    private ServerEndpointSyncSessionStatusResponse(ServerEndpointSyncSessionStatusResponse $) {
+        this.filesNotSyncingErrors = $.filesNotSyncingErrors;
+        this.lastSyncMode = $.lastSyncMode;
+        this.lastSyncPerItemErrorCount = $.lastSyncPerItemErrorCount;
+        this.lastSyncResult = $.lastSyncResult;
+        this.lastSyncSuccessTimestamp = $.lastSyncSuccessTimestamp;
+        this.lastSyncTimestamp = $.lastSyncTimestamp;
+        this.persistentFilesNotSyncingCount = $.persistentFilesNotSyncingCount;
+        this.transientFilesNotSyncingCount = $.transientFilesNotSyncingCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerEndpointSyncSessionStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors;
-        private String lastSyncMode;
-        private Double lastSyncPerItemErrorCount;
-        private Integer lastSyncResult;
-        private String lastSyncSuccessTimestamp;
-        private String lastSyncTimestamp;
-        private Double persistentFilesNotSyncingCount;
-        private Double transientFilesNotSyncingCount;
+        private ServerEndpointSyncSessionStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerEndpointSyncSessionStatusResponse();
         }
 
         public Builder(ServerEndpointSyncSessionStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filesNotSyncingErrors = defaults.filesNotSyncingErrors;
-    	      this.lastSyncMode = defaults.lastSyncMode;
-    	      this.lastSyncPerItemErrorCount = defaults.lastSyncPerItemErrorCount;
-    	      this.lastSyncResult = defaults.lastSyncResult;
-    	      this.lastSyncSuccessTimestamp = defaults.lastSyncSuccessTimestamp;
-    	      this.lastSyncTimestamp = defaults.lastSyncTimestamp;
-    	      this.persistentFilesNotSyncingCount = defaults.persistentFilesNotSyncingCount;
-    	      this.transientFilesNotSyncingCount = defaults.transientFilesNotSyncingCount;
+            $ = new ServerEndpointSyncSessionStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filesNotSyncingErrors(List<ServerEndpointFilesNotSyncingErrorResponse> filesNotSyncingErrors) {
-            this.filesNotSyncingErrors = Objects.requireNonNull(filesNotSyncingErrors);
+            $.filesNotSyncingErrors = filesNotSyncingErrors;
             return this;
         }
+
         public Builder filesNotSyncingErrors(ServerEndpointFilesNotSyncingErrorResponse... filesNotSyncingErrors) {
             return filesNotSyncingErrors(List.of(filesNotSyncingErrors));
         }
+
         public Builder lastSyncMode(String lastSyncMode) {
-            this.lastSyncMode = Objects.requireNonNull(lastSyncMode);
+            $.lastSyncMode = lastSyncMode;
             return this;
         }
+
         public Builder lastSyncPerItemErrorCount(Double lastSyncPerItemErrorCount) {
-            this.lastSyncPerItemErrorCount = Objects.requireNonNull(lastSyncPerItemErrorCount);
+            $.lastSyncPerItemErrorCount = lastSyncPerItemErrorCount;
             return this;
         }
+
         public Builder lastSyncResult(Integer lastSyncResult) {
-            this.lastSyncResult = Objects.requireNonNull(lastSyncResult);
+            $.lastSyncResult = lastSyncResult;
             return this;
         }
+
         public Builder lastSyncSuccessTimestamp(String lastSyncSuccessTimestamp) {
-            this.lastSyncSuccessTimestamp = Objects.requireNonNull(lastSyncSuccessTimestamp);
+            $.lastSyncSuccessTimestamp = lastSyncSuccessTimestamp;
             return this;
         }
+
         public Builder lastSyncTimestamp(String lastSyncTimestamp) {
-            this.lastSyncTimestamp = Objects.requireNonNull(lastSyncTimestamp);
+            $.lastSyncTimestamp = lastSyncTimestamp;
             return this;
         }
+
         public Builder persistentFilesNotSyncingCount(Double persistentFilesNotSyncingCount) {
-            this.persistentFilesNotSyncingCount = Objects.requireNonNull(persistentFilesNotSyncingCount);
+            $.persistentFilesNotSyncingCount = persistentFilesNotSyncingCount;
             return this;
         }
+
         public Builder transientFilesNotSyncingCount(Double transientFilesNotSyncingCount) {
-            this.transientFilesNotSyncingCount = Objects.requireNonNull(transientFilesNotSyncingCount);
+            $.transientFilesNotSyncingCount = transientFilesNotSyncingCount;
             return this;
-        }        public ServerEndpointSyncSessionStatusResponse build() {
-            return new ServerEndpointSyncSessionStatusResponse(filesNotSyncingErrors, lastSyncMode, lastSyncPerItemErrorCount, lastSyncResult, lastSyncSuccessTimestamp, lastSyncTimestamp, persistentFilesNotSyncingCount, transientFilesNotSyncingCount);
+        }
+
+        public ServerEndpointSyncSessionStatusResponse build() {
+            $.filesNotSyncingErrors = Objects.requireNonNull($.filesNotSyncingErrors, "expected parameter 'filesNotSyncingErrors' to be non-null");
+            $.lastSyncMode = Objects.requireNonNull($.lastSyncMode, "expected parameter 'lastSyncMode' to be non-null");
+            $.lastSyncPerItemErrorCount = Objects.requireNonNull($.lastSyncPerItemErrorCount, "expected parameter 'lastSyncPerItemErrorCount' to be non-null");
+            $.lastSyncResult = Objects.requireNonNull($.lastSyncResult, "expected parameter 'lastSyncResult' to be non-null");
+            $.lastSyncSuccessTimestamp = Objects.requireNonNull($.lastSyncSuccessTimestamp, "expected parameter 'lastSyncSuccessTimestamp' to be non-null");
+            $.lastSyncTimestamp = Objects.requireNonNull($.lastSyncTimestamp, "expected parameter 'lastSyncTimestamp' to be non-null");
+            $.persistentFilesNotSyncingCount = Objects.requireNonNull($.persistentFilesNotSyncingCount, "expected parameter 'persistentFilesNotSyncingCount' to be non-null");
+            $.transientFilesNotSyncingCount = Objects.requireNonNull($.transientFilesNotSyncingCount, "expected parameter 'transientFilesNotSyncingCount' to be non-null");
+            return $;
         }
     }
+
 }

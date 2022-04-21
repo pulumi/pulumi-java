@@ -21,7 +21,7 @@ public final class CustomAccountResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="loginUrl", required=true)
-      private final String loginUrl;
+    private String loginUrl;
 
     public String loginUrl() {
         return this.loginUrl;
@@ -32,7 +32,7 @@ public final class CustomAccountResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -43,64 +43,59 @@ public final class CustomAccountResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public CustomAccountResponse(
-        String loginUrl,
-        String password,
-        String username) {
-        this.loginUrl = Objects.requireNonNull(loginUrl, "expected parameter 'loginUrl' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private CustomAccountResponse() {}
 
-    private CustomAccountResponse() {
-        this.loginUrl = null;
-        this.password = null;
-        this.username = null;
+    private CustomAccountResponse(CustomAccountResponse $) {
+        this.loginUrl = $.loginUrl;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String loginUrl;
-        private String password;
-        private String username;
+        private CustomAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomAccountResponse();
         }
 
         public Builder(CustomAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginUrl = defaults.loginUrl;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new CustomAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder loginUrl(String loginUrl) {
-            this.loginUrl = Objects.requireNonNull(loginUrl);
+            $.loginUrl = loginUrl;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public CustomAccountResponse build() {
-            return new CustomAccountResponse(loginUrl, password, username);
+        }
+
+        public CustomAccountResponse build() {
+            $.loginUrl = Objects.requireNonNull($.loginUrl, "expected parameter 'loginUrl' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

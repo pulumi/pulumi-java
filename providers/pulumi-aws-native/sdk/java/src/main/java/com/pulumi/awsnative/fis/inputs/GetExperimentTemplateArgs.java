@@ -13,45 +13,45 @@ public final class GetExperimentTemplateArgs extends com.pulumi.resources.Invoke
     public static final GetExperimentTemplateArgs Empty = new GetExperimentTemplateArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetExperimentTemplateArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetExperimentTemplateArgs() {}
 
-    private GetExperimentTemplateArgs() {
-        this.id = null;
+    private GetExperimentTemplateArgs(GetExperimentTemplateArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExperimentTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetExperimentTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExperimentTemplateArgs();
         }
 
         public Builder(GetExperimentTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetExperimentTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetExperimentTemplateArgs build() {
-            return new GetExperimentTemplateArgs(id);
+        }
+
+        public GetExperimentTemplateArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

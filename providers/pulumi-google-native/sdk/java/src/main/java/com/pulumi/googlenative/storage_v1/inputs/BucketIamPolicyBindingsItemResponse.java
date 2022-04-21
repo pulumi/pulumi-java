@@ -19,7 +19,7 @@ public final class BucketIamPolicyBindingsItemResponse extends com.pulumi.resour
      * 
      */
     @Import(name="condition", required=true)
-      private final ExprResponse condition;
+    private ExprResponse condition;
 
     public ExprResponse condition() {
         return this.condition;
@@ -39,7 +39,7 @@ public final class BucketIamPolicyBindingsItemResponse extends com.pulumi.resour
      * 
      */
     @Import(name="members", required=true)
-      private final List<String> members;
+    private List<String> members;
 
     public List<String> members() {
         return this.members;
@@ -60,67 +60,63 @@ public final class BucketIamPolicyBindingsItemResponse extends com.pulumi.resour
      * 
      */
     @Import(name="role", required=true)
-      private final String role;
+    private String role;
 
     public String role() {
         return this.role;
     }
 
-    public BucketIamPolicyBindingsItemResponse(
-        ExprResponse condition,
-        List<String> members,
-        String role) {
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private BucketIamPolicyBindingsItemResponse() {}
 
-    private BucketIamPolicyBindingsItemResponse() {
-        this.condition = null;
-        this.members = List.of();
-        this.role = null;
+    private BucketIamPolicyBindingsItemResponse(BucketIamPolicyBindingsItemResponse $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIamPolicyBindingsItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ExprResponse condition;
-        private List<String> members;
-        private String role;
+        private BucketIamPolicyBindingsItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIamPolicyBindingsItemResponse();
         }
 
         public Builder(BucketIamPolicyBindingsItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
+            $ = new BucketIamPolicyBindingsItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(ExprResponse condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(String role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
-        }        public BucketIamPolicyBindingsItemResponse build() {
-            return new BucketIamPolicyBindingsItemResponse(condition, members, role);
+        }
+
+        public BucketIamPolicyBindingsItemResponse build() {
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

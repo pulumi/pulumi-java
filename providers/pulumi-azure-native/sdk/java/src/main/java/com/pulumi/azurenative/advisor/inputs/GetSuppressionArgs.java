@@ -17,7 +17,7 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recommendationId", required=true)
-      private final String recommendationId;
+    private String recommendationId;
 
     public String recommendationId() {
         return this.recommendationId;
@@ -39,64 +39,59 @@ public final class GetSuppressionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public GetSuppressionArgs(
-        String name,
-        String recommendationId,
-        String resourceUri) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.recommendationId = Objects.requireNonNull(recommendationId, "expected parameter 'recommendationId' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private GetSuppressionArgs() {}
 
-    private GetSuppressionArgs() {
-        this.name = null;
-        this.recommendationId = null;
-        this.resourceUri = null;
+    private GetSuppressionArgs(GetSuppressionArgs $) {
+        this.name = $.name;
+        this.recommendationId = $.recommendationId;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSuppressionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String recommendationId;
-        private String resourceUri;
+        private GetSuppressionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSuppressionArgs();
         }
 
         public Builder(GetSuppressionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.recommendationId = defaults.recommendationId;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new GetSuppressionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder recommendationId(String recommendationId) {
-            this.recommendationId = Objects.requireNonNull(recommendationId);
+            $.recommendationId = recommendationId;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public GetSuppressionArgs build() {
-            return new GetSuppressionArgs(name, recommendationId, resourceUri);
+        }
+
+        public GetSuppressionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.recommendationId = Objects.requireNonNull($.recommendationId, "expected parameter 'recommendationId' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

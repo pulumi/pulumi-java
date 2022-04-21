@@ -25,45 +25,44 @@ public final class OpenAuthenticationAccessPoliciesResponse extends com.pulumi.r
      * 
      */
     @Import(name="policies")
-      private final @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
+    private @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
 
-    public Map<String,OpenAuthenticationAccessPolicyResponse> policies() {
-        return this.policies == null ? Map.of() : this.policies;
+    public Optional<Map<String,OpenAuthenticationAccessPolicyResponse>> policies() {
+        return Optional.ofNullable(this.policies);
     }
 
-    public OpenAuthenticationAccessPoliciesResponse(@Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
-        this.policies = policies;
-    }
+    private OpenAuthenticationAccessPoliciesResponse() {}
 
-    private OpenAuthenticationAccessPoliciesResponse() {
-        this.policies = Map.of();
+    private OpenAuthenticationAccessPoliciesResponse(OpenAuthenticationAccessPoliciesResponse $) {
+        this.policies = $.policies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenAuthenticationAccessPoliciesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
+        private OpenAuthenticationAccessPoliciesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenAuthenticationAccessPoliciesResponse();
         }
 
         public Builder(OpenAuthenticationAccessPoliciesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policies = defaults.policies;
+            $ = new OpenAuthenticationAccessPoliciesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder policies(@Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
-            this.policies = policies;
+            $.policies = policies;
             return this;
-        }        public OpenAuthenticationAccessPoliciesResponse build() {
-            return new OpenAuthenticationAccessPoliciesResponse(policies);
+        }
+
+        public OpenAuthenticationAccessPoliciesResponse build() {
+            return $;
         }
     }
+
 }

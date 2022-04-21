@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceGroupManagerAutoHealingPoliciesArgs;
 import com.pulumi.gcp.compute.inputs.InstanceGroupManagerNamedPortArgs;
 import com.pulumi.gcp.compute.inputs.InstanceGroupManagerStatefulDiskArgs;
@@ -16,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="autoHealingPolicies")
-      private final @Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
+    private @Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
 
-    public Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies() {
-        return this.autoHealingPolicies == null ? Codegen.empty() : this.autoHealingPolicies;
+    public Optional<Output<InstanceGroupManagerAutoHealingPoliciesArgs>> autoHealingPolicies() {
+        return Optional.ofNullable(this.autoHealingPolicies);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="baseInstanceName", required=true)
-      private final Output<String> baseInstanceName;
+    private Output<String> baseInstanceName;
 
     public Output<String> baseInstanceName() {
         return this.baseInstanceName;
@@ -57,10 +57,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="namedPorts")
-      private final @Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
+    private @Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
 
-    public Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts() {
-        return this.namedPorts == null ? Codegen.empty() : this.namedPorts;
+    public Optional<Output<List<InstanceGroupManagerNamedPortArgs>>> namedPorts() {
+        return Optional.ofNullable(this.namedPorts);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="statefulDisks")
-      private final @Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
+    private @Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
 
-    public Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks() {
-        return this.statefulDisks == null ? Codegen.empty() : this.statefulDisks;
+    public Optional<Output<List<InstanceGroupManagerStatefulDiskArgs>>> statefulDisks() {
+        return Optional.ofNullable(this.statefulDisks);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="targetPools")
-      private final @Nullable Output<List<String>> targetPools;
+    private @Nullable Output<List<String>> targetPools;
 
-    public Output<List<String>> targetPools() {
-        return this.targetPools == null ? Codegen.empty() : this.targetPools;
+    public Optional<Output<List<String>>> targetPools() {
+        return Optional.ofNullable(this.targetPools);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="targetSize")
-      private final @Nullable Output<Integer> targetSize;
+    private @Nullable Output<Integer> targetSize;
 
-    public Output<Integer> targetSize() {
-        return this.targetSize == null ? Codegen.empty() : this.targetSize;
+    public Optional<Output<Integer>> targetSize() {
+        return Optional.ofNullable(this.targetSize);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="updatePolicy")
-      private final @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
+    private @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
-    public Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy() {
-        return this.updatePolicy == null ? Codegen.empty() : this.updatePolicy;
+    public Optional<Output<InstanceGroupManagerUpdatePolicyArgs>> updatePolicy() {
+        return Optional.ofNullable(this.updatePolicy);
     }
 
     /**
@@ -151,7 +151,7 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="versions", required=true)
-      private final Output<List<InstanceGroupManagerVersionArgs>> versions;
+    private Output<List<InstanceGroupManagerVersionArgs>> versions;
 
     public Output<List<InstanceGroupManagerVersionArgs>> versions() {
         return this.versions;
@@ -164,10 +164,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="waitForInstances")
-      private final @Nullable Output<Boolean> waitForInstances;
+    private @Nullable Output<Boolean> waitForInstances;
 
-    public Output<Boolean> waitForInstances() {
-        return this.waitForInstances == null ? Codegen.empty() : this.waitForInstances;
+    public Optional<Output<Boolean>> waitForInstances() {
+        return Optional.ofNullable(this.waitForInstances);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="waitForInstancesStatus")
-      private final @Nullable Output<String> waitForInstancesStatus;
+    private @Nullable Output<String> waitForInstancesStatus;
 
-    public Output<String> waitForInstancesStatus() {
-        return this.waitForInstancesStatus == null ? Codegen.empty() : this.waitForInstancesStatus;
+    public Optional<Output<String>> waitForInstancesStatus() {
+        return Optional.ofNullable(this.waitForInstancesStatus);
     }
 
     /**
@@ -190,231 +190,196 @@ public final class InstanceGroupManagerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceGroupManagerArgs(
-        @Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies,
-        Output<String> baseInstanceName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts,
-        @Nullable Output<String> project,
-        @Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks,
-        @Nullable Output<List<String>> targetPools,
-        @Nullable Output<Integer> targetSize,
-        @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy,
-        Output<List<InstanceGroupManagerVersionArgs>> versions,
-        @Nullable Output<Boolean> waitForInstances,
-        @Nullable Output<String> waitForInstancesStatus,
-        @Nullable Output<String> zone) {
-        this.autoHealingPolicies = autoHealingPolicies;
-        this.baseInstanceName = Objects.requireNonNull(baseInstanceName, "expected parameter 'baseInstanceName' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.namedPorts = namedPorts;
-        this.project = project;
-        this.statefulDisks = statefulDisks;
-        this.targetPools = targetPools;
-        this.targetSize = targetSize;
-        this.updatePolicy = updatePolicy;
-        this.versions = Objects.requireNonNull(versions, "expected parameter 'versions' to be non-null");
-        this.waitForInstances = waitForInstances;
-        this.waitForInstancesStatus = waitForInstancesStatus;
-        this.zone = zone;
-    }
+    private InstanceGroupManagerArgs() {}
 
-    private InstanceGroupManagerArgs() {
-        this.autoHealingPolicies = Codegen.empty();
-        this.baseInstanceName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namedPorts = Codegen.empty();
-        this.project = Codegen.empty();
-        this.statefulDisks = Codegen.empty();
-        this.targetPools = Codegen.empty();
-        this.targetSize = Codegen.empty();
-        this.updatePolicy = Codegen.empty();
-        this.versions = Codegen.empty();
-        this.waitForInstances = Codegen.empty();
-        this.waitForInstancesStatus = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceGroupManagerArgs(InstanceGroupManagerArgs $) {
+        this.autoHealingPolicies = $.autoHealingPolicies;
+        this.baseInstanceName = $.baseInstanceName;
+        this.description = $.description;
+        this.name = $.name;
+        this.namedPorts = $.namedPorts;
+        this.project = $.project;
+        this.statefulDisks = $.statefulDisks;
+        this.targetPools = $.targetPools;
+        this.targetSize = $.targetSize;
+        this.updatePolicy = $.updatePolicy;
+        this.versions = $.versions;
+        this.waitForInstances = $.waitForInstances;
+        this.waitForInstancesStatus = $.waitForInstancesStatus;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies;
-        private Output<String> baseInstanceName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks;
-        private @Nullable Output<List<String>> targetPools;
-        private @Nullable Output<Integer> targetSize;
-        private @Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
-        private Output<List<InstanceGroupManagerVersionArgs>> versions;
-        private @Nullable Output<Boolean> waitForInstances;
-        private @Nullable Output<String> waitForInstancesStatus;
-        private @Nullable Output<String> zone;
+        private InstanceGroupManagerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerArgs();
         }
 
         public Builder(InstanceGroupManagerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoHealingPolicies = defaults.autoHealingPolicies;
-    	      this.baseInstanceName = defaults.baseInstanceName;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.namedPorts = defaults.namedPorts;
-    	      this.project = defaults.project;
-    	      this.statefulDisks = defaults.statefulDisks;
-    	      this.targetPools = defaults.targetPools;
-    	      this.targetSize = defaults.targetSize;
-    	      this.updatePolicy = defaults.updatePolicy;
-    	      this.versions = defaults.versions;
-    	      this.waitForInstances = defaults.waitForInstances;
-    	      this.waitForInstancesStatus = defaults.waitForInstancesStatus;
-    	      this.zone = defaults.zone;
+            $ = new InstanceGroupManagerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoHealingPolicies(@Nullable Output<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies) {
-            this.autoHealingPolicies = autoHealingPolicies;
+            $.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
-        public Builder autoHealingPolicies(@Nullable InstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
-            this.autoHealingPolicies = Codegen.ofNullable(autoHealingPolicies);
-            return this;
+
+        public Builder autoHealingPolicies(InstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
+            return autoHealingPolicies(Output.of(autoHealingPolicies));
         }
+
         public Builder baseInstanceName(Output<String> baseInstanceName) {
-            this.baseInstanceName = Objects.requireNonNull(baseInstanceName);
+            $.baseInstanceName = baseInstanceName;
             return this;
         }
+
         public Builder baseInstanceName(String baseInstanceName) {
-            this.baseInstanceName = Output.of(Objects.requireNonNull(baseInstanceName));
-            return this;
+            return baseInstanceName(Output.of(baseInstanceName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namedPorts(@Nullable Output<List<InstanceGroupManagerNamedPortArgs>> namedPorts) {
-            this.namedPorts = namedPorts;
+            $.namedPorts = namedPorts;
             return this;
         }
-        public Builder namedPorts(@Nullable List<InstanceGroupManagerNamedPortArgs> namedPorts) {
-            this.namedPorts = Codegen.ofNullable(namedPorts);
-            return this;
+
+        public Builder namedPorts(List<InstanceGroupManagerNamedPortArgs> namedPorts) {
+            return namedPorts(Output.of(namedPorts));
         }
+
         public Builder namedPorts(InstanceGroupManagerNamedPortArgs... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder statefulDisks(@Nullable Output<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
-            this.statefulDisks = statefulDisks;
+            $.statefulDisks = statefulDisks;
             return this;
         }
-        public Builder statefulDisks(@Nullable List<InstanceGroupManagerStatefulDiskArgs> statefulDisks) {
-            this.statefulDisks = Codegen.ofNullable(statefulDisks);
-            return this;
+
+        public Builder statefulDisks(List<InstanceGroupManagerStatefulDiskArgs> statefulDisks) {
+            return statefulDisks(Output.of(statefulDisks));
         }
+
         public Builder statefulDisks(InstanceGroupManagerStatefulDiskArgs... statefulDisks) {
             return statefulDisks(List.of(statefulDisks));
         }
+
         public Builder targetPools(@Nullable Output<List<String>> targetPools) {
-            this.targetPools = targetPools;
+            $.targetPools = targetPools;
             return this;
         }
-        public Builder targetPools(@Nullable List<String> targetPools) {
-            this.targetPools = Codegen.ofNullable(targetPools);
-            return this;
+
+        public Builder targetPools(List<String> targetPools) {
+            return targetPools(Output.of(targetPools));
         }
+
         public Builder targetPools(String... targetPools) {
             return targetPools(List.of(targetPools));
         }
+
         public Builder targetSize(@Nullable Output<Integer> targetSize) {
-            this.targetSize = targetSize;
+            $.targetSize = targetSize;
             return this;
         }
-        public Builder targetSize(@Nullable Integer targetSize) {
-            this.targetSize = Codegen.ofNullable(targetSize);
-            return this;
+
+        public Builder targetSize(Integer targetSize) {
+            return targetSize(Output.of(targetSize));
         }
+
         public Builder updatePolicy(@Nullable Output<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
-            this.updatePolicy = updatePolicy;
+            $.updatePolicy = updatePolicy;
             return this;
         }
-        public Builder updatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
-            this.updatePolicy = Codegen.ofNullable(updatePolicy);
-            return this;
+
+        public Builder updatePolicy(InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
+            return updatePolicy(Output.of(updatePolicy));
         }
+
         public Builder versions(Output<List<InstanceGroupManagerVersionArgs>> versions) {
-            this.versions = Objects.requireNonNull(versions);
+            $.versions = versions;
             return this;
         }
+
         public Builder versions(List<InstanceGroupManagerVersionArgs> versions) {
-            this.versions = Output.of(Objects.requireNonNull(versions));
-            return this;
+            return versions(Output.of(versions));
         }
+
         public Builder versions(InstanceGroupManagerVersionArgs... versions) {
             return versions(List.of(versions));
         }
+
         public Builder waitForInstances(@Nullable Output<Boolean> waitForInstances) {
-            this.waitForInstances = waitForInstances;
+            $.waitForInstances = waitForInstances;
             return this;
         }
-        public Builder waitForInstances(@Nullable Boolean waitForInstances) {
-            this.waitForInstances = Codegen.ofNullable(waitForInstances);
-            return this;
+
+        public Builder waitForInstances(Boolean waitForInstances) {
+            return waitForInstances(Output.of(waitForInstances));
         }
+
         public Builder waitForInstancesStatus(@Nullable Output<String> waitForInstancesStatus) {
-            this.waitForInstancesStatus = waitForInstancesStatus;
+            $.waitForInstancesStatus = waitForInstancesStatus;
             return this;
         }
-        public Builder waitForInstancesStatus(@Nullable String waitForInstancesStatus) {
-            this.waitForInstancesStatus = Codegen.ofNullable(waitForInstancesStatus);
-            return this;
+
+        public Builder waitForInstancesStatus(String waitForInstancesStatus) {
+            return waitForInstancesStatus(Output.of(waitForInstancesStatus));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceGroupManagerArgs build() {
-            return new InstanceGroupManagerArgs(autoHealingPolicies, baseInstanceName, description, name, namedPorts, project, statefulDisks, targetPools, targetSize, updatePolicy, versions, waitForInstances, waitForInstancesStatus, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceGroupManagerArgs build() {
+            $.baseInstanceName = Objects.requireNonNull($.baseInstanceName, "expected parameter 'baseInstanceName' to be non-null");
+            $.versions = Objects.requireNonNull($.versions, "expected parameter 'versions' to be non-null");
+            return $;
         }
     }
+
 }

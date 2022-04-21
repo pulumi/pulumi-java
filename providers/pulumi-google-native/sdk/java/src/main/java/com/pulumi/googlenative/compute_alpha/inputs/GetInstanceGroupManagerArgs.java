@@ -15,78 +15,72 @@ public final class GetInstanceGroupManagerArgs extends com.pulumi.resources.Invo
     public static final GetInstanceGroupManagerArgs Empty = new GetInstanceGroupManagerArgs();
 
     @Import(name="instanceGroupManager", required=true)
-      private final String instanceGroupManager;
+    private String instanceGroupManager;
 
     public String instanceGroupManager() {
         return this.instanceGroupManager;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetInstanceGroupManagerArgs(
-        String instanceGroupManager,
-        @Nullable String project,
-        String zone) {
-        this.instanceGroupManager = Objects.requireNonNull(instanceGroupManager, "expected parameter 'instanceGroupManager' to be non-null");
-        this.project = project;
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetInstanceGroupManagerArgs() {}
 
-    private GetInstanceGroupManagerArgs() {
-        this.instanceGroupManager = null;
-        this.project = null;
-        this.zone = null;
+    private GetInstanceGroupManagerArgs(GetInstanceGroupManagerArgs $) {
+        this.instanceGroupManager = $.instanceGroupManager;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceGroupManagerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceGroupManager;
-        private @Nullable String project;
-        private String zone;
+        private GetInstanceGroupManagerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceGroupManagerArgs();
         }
 
         public Builder(GetInstanceGroupManagerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceGroupManager = defaults.instanceGroupManager;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new GetInstanceGroupManagerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceGroupManager(String instanceGroupManager) {
-            this.instanceGroupManager = Objects.requireNonNull(instanceGroupManager);
+            $.instanceGroupManager = instanceGroupManager;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetInstanceGroupManagerArgs build() {
-            return new GetInstanceGroupManagerArgs(instanceGroupManager, project, zone);
+        }
+
+        public GetInstanceGroupManagerArgs build() {
+            $.instanceGroupManager = Objects.requireNonNull($.instanceGroupManager, "expected parameter 'instanceGroupManager' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

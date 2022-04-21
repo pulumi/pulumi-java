@@ -10,10 +10,10 @@ import com.pulumi.azurenative.machinelearningservices.inputs.LabelingJobInstruct
 import com.pulumi.azurenative.machinelearningservices.inputs.MLAssistConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="datasetConfiguration", required=true)
-      private final Output<LabelingDatasetConfigurationArgs> datasetConfiguration;
+    private Output<LabelingDatasetConfigurationArgs> datasetConfiguration;
 
     public Output<LabelingDatasetConfigurationArgs> datasetConfiguration() {
         return this.datasetConfiguration;
@@ -41,7 +41,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="jobInstructions", required=true)
-      private final Output<LabelingJobInstructionsArgs> jobInstructions;
+    private Output<LabelingJobInstructionsArgs> jobInstructions;
 
     public Output<LabelingJobInstructionsArgs> jobInstructions() {
         return this.jobInstructions;
@@ -52,7 +52,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="labelCategories", required=true)
-      private final Output<Map<String,LabelCategoryArgs>> labelCategories;
+    private Output<Map<String,LabelCategoryArgs>> labelCategories;
 
     public Output<Map<String,LabelCategoryArgs>> labelCategories() {
         return this.labelCategories;
@@ -63,7 +63,7 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="labelingJobMediaProperties", required=true)
-      private final Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
+    private Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
 
     public Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties() {
         return this.labelingJobMediaProperties;
@@ -74,10 +74,10 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="mlAssistConfiguration")
-      private final @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration;
+    private @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration;
 
-    public Output<MLAssistConfigurationArgs> mlAssistConfiguration() {
-        return this.mlAssistConfiguration == null ? Codegen.empty() : this.mlAssistConfiguration;
+    public Optional<Output<MLAssistConfigurationArgs>> mlAssistConfiguration() {
+        return Optional.ofNullable(this.mlAssistConfiguration);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -96,128 +96,112 @@ public final class LabelingJobPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LabelingJobPropertiesArgs(
-        Output<LabelingDatasetConfigurationArgs> datasetConfiguration,
-        Output<LabelingJobInstructionsArgs> jobInstructions,
-        Output<Map<String,LabelCategoryArgs>> labelCategories,
-        Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties,
-        @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<Map<String,String>> tags) {
-        this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration, "expected parameter 'datasetConfiguration' to be non-null");
-        this.jobInstructions = Objects.requireNonNull(jobInstructions, "expected parameter 'jobInstructions' to be non-null");
-        this.labelCategories = Objects.requireNonNull(labelCategories, "expected parameter 'labelCategories' to be non-null");
-        this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties, "expected parameter 'labelingJobMediaProperties' to be non-null");
-        this.mlAssistConfiguration = mlAssistConfiguration;
-        this.properties = properties;
-        this.tags = tags;
-    }
+    private LabelingJobPropertiesArgs() {}
 
-    private LabelingJobPropertiesArgs() {
-        this.datasetConfiguration = Codegen.empty();
-        this.jobInstructions = Codegen.empty();
-        this.labelCategories = Codegen.empty();
-        this.labelingJobMediaProperties = Codegen.empty();
-        this.mlAssistConfiguration = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LabelingJobPropertiesArgs(LabelingJobPropertiesArgs $) {
+        this.datasetConfiguration = $.datasetConfiguration;
+        this.jobInstructions = $.jobInstructions;
+        this.labelCategories = $.labelCategories;
+        this.labelingJobMediaProperties = $.labelingJobMediaProperties;
+        this.mlAssistConfiguration = $.mlAssistConfiguration;
+        this.properties = $.properties;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelingJobPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<LabelingDatasetConfigurationArgs> datasetConfiguration;
-        private Output<LabelingJobInstructionsArgs> jobInstructions;
-        private Output<Map<String,LabelCategoryArgs>> labelCategories;
-        private Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
-        private @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<Map<String,String>> tags;
+        private LabelingJobPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelingJobPropertiesArgs();
         }
 
         public Builder(LabelingJobPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetConfiguration = defaults.datasetConfiguration;
-    	      this.jobInstructions = defaults.jobInstructions;
-    	      this.labelCategories = defaults.labelCategories;
-    	      this.labelingJobMediaProperties = defaults.labelingJobMediaProperties;
-    	      this.mlAssistConfiguration = defaults.mlAssistConfiguration;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
+            $ = new LabelingJobPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetConfiguration(Output<LabelingDatasetConfigurationArgs> datasetConfiguration) {
-            this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration);
+            $.datasetConfiguration = datasetConfiguration;
             return this;
         }
+
         public Builder datasetConfiguration(LabelingDatasetConfigurationArgs datasetConfiguration) {
-            this.datasetConfiguration = Output.of(Objects.requireNonNull(datasetConfiguration));
-            return this;
+            return datasetConfiguration(Output.of(datasetConfiguration));
         }
+
         public Builder jobInstructions(Output<LabelingJobInstructionsArgs> jobInstructions) {
-            this.jobInstructions = Objects.requireNonNull(jobInstructions);
+            $.jobInstructions = jobInstructions;
             return this;
         }
+
         public Builder jobInstructions(LabelingJobInstructionsArgs jobInstructions) {
-            this.jobInstructions = Output.of(Objects.requireNonNull(jobInstructions));
-            return this;
+            return jobInstructions(Output.of(jobInstructions));
         }
+
         public Builder labelCategories(Output<Map<String,LabelCategoryArgs>> labelCategories) {
-            this.labelCategories = Objects.requireNonNull(labelCategories);
+            $.labelCategories = labelCategories;
             return this;
         }
+
         public Builder labelCategories(Map<String,LabelCategoryArgs> labelCategories) {
-            this.labelCategories = Output.of(Objects.requireNonNull(labelCategories));
-            return this;
+            return labelCategories(Output.of(labelCategories));
         }
+
         public Builder labelingJobMediaProperties(Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties) {
-            this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties);
+            $.labelingJobMediaProperties = labelingJobMediaProperties;
             return this;
         }
+
         public Builder labelingJobMediaProperties(LabelingJobImagePropertiesArgs labelingJobMediaProperties) {
-            this.labelingJobMediaProperties = Output.of(Objects.requireNonNull(labelingJobMediaProperties));
-            return this;
+            return labelingJobMediaProperties(Output.of(labelingJobMediaProperties));
         }
+
         public Builder mlAssistConfiguration(@Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration) {
-            this.mlAssistConfiguration = mlAssistConfiguration;
+            $.mlAssistConfiguration = mlAssistConfiguration;
             return this;
         }
-        public Builder mlAssistConfiguration(@Nullable MLAssistConfigurationArgs mlAssistConfiguration) {
-            this.mlAssistConfiguration = Codegen.ofNullable(mlAssistConfiguration);
-            return this;
+
+        public Builder mlAssistConfiguration(MLAssistConfigurationArgs mlAssistConfiguration) {
+            return mlAssistConfiguration(Output.of(mlAssistConfiguration));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LabelingJobPropertiesArgs build() {
-            return new LabelingJobPropertiesArgs(datasetConfiguration, jobInstructions, labelCategories, labelingJobMediaProperties, mlAssistConfiguration, properties, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LabelingJobPropertiesArgs build() {
+            $.datasetConfiguration = Objects.requireNonNull($.datasetConfiguration, "expected parameter 'datasetConfiguration' to be non-null");
+            $.jobInstructions = Objects.requireNonNull($.jobInstructions, "expected parameter 'jobInstructions' to be non-null");
+            $.labelCategories = Objects.requireNonNull($.labelCategories, "expected parameter 'labelCategories' to be non-null");
+            $.labelingJobMediaProperties = Objects.requireNonNull($.labelingJobMediaProperties, "expected parameter 'labelingJobMediaProperties' to be non-null");
+            return $;
         }
     }
+
 }

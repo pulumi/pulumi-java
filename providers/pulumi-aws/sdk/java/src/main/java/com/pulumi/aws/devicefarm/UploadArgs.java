@@ -5,9 +5,9 @@ package com.pulumi.aws.devicefarm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectArn", required=true)
-      private final Output<String> projectArn;
+    private Output<String> projectArn;
 
     public Output<String> projectArn() {
         return this.projectArn;
@@ -53,89 +53,80 @@ public final class UploadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public UploadArgs(
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> name,
-        Output<String> projectArn,
-        Output<String> type) {
-        this.contentType = contentType;
-        this.name = name;
-        this.projectArn = Objects.requireNonNull(projectArn, "expected parameter 'projectArn' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private UploadArgs() {}
 
-    private UploadArgs() {
-        this.contentType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.projectArn = Codegen.empty();
-        this.type = Codegen.empty();
+    private UploadArgs(UploadArgs $) {
+        this.contentType = $.contentType;
+        this.name = $.name;
+        this.projectArn = $.projectArn;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UploadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> name;
-        private Output<String> projectArn;
-        private Output<String> type;
+        private UploadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UploadArgs();
         }
 
         public Builder(UploadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.name = defaults.name;
-    	      this.projectArn = defaults.projectArn;
-    	      this.type = defaults.type;
+            $ = new UploadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder projectArn(Output<String> projectArn) {
-            this.projectArn = Objects.requireNonNull(projectArn);
+            $.projectArn = projectArn;
             return this;
         }
+
         public Builder projectArn(String projectArn) {
-            this.projectArn = Output.of(Objects.requireNonNull(projectArn));
-            return this;
+            return projectArn(Output.of(projectArn));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public UploadArgs build() {
-            return new UploadArgs(contentType, name, projectArn, type);
+            return type(Output.of(type));
+        }
+
+        public UploadArgs build() {
+            $.projectArn = Objects.requireNonNull($.projectArn, "expected parameter 'projectArn' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

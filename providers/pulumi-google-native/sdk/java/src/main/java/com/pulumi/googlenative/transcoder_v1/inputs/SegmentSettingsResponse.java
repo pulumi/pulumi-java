@@ -22,7 +22,7 @@ public final class SegmentSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="individualSegments", required=true)
-      private final Boolean individualSegments;
+    private Boolean individualSegments;
 
     public Boolean individualSegments() {
         return this.individualSegments;
@@ -33,55 +33,52 @@ public final class SegmentSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="segmentDuration", required=true)
-      private final String segmentDuration;
+    private String segmentDuration;
 
     public String segmentDuration() {
         return this.segmentDuration;
     }
 
-    public SegmentSettingsResponse(
-        Boolean individualSegments,
-        String segmentDuration) {
-        this.individualSegments = Objects.requireNonNull(individualSegments, "expected parameter 'individualSegments' to be non-null");
-        this.segmentDuration = Objects.requireNonNull(segmentDuration, "expected parameter 'segmentDuration' to be non-null");
-    }
+    private SegmentSettingsResponse() {}
 
-    private SegmentSettingsResponse() {
-        this.individualSegments = null;
-        this.segmentDuration = null;
+    private SegmentSettingsResponse(SegmentSettingsResponse $) {
+        this.individualSegments = $.individualSegments;
+        this.segmentDuration = $.segmentDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SegmentSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean individualSegments;
-        private String segmentDuration;
+        private SegmentSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SegmentSettingsResponse();
         }
 
         public Builder(SegmentSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.individualSegments = defaults.individualSegments;
-    	      this.segmentDuration = defaults.segmentDuration;
+            $ = new SegmentSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder individualSegments(Boolean individualSegments) {
-            this.individualSegments = Objects.requireNonNull(individualSegments);
+            $.individualSegments = individualSegments;
             return this;
         }
+
         public Builder segmentDuration(String segmentDuration) {
-            this.segmentDuration = Objects.requireNonNull(segmentDuration);
+            $.segmentDuration = segmentDuration;
             return this;
-        }        public SegmentSettingsResponse build() {
-            return new SegmentSettingsResponse(individualSegments, segmentDuration);
+        }
+
+        public SegmentSettingsResponse build() {
+            $.individualSegments = Objects.requireNonNull($.individualSegments, "expected parameter 'individualSegments' to be non-null");
+            $.segmentDuration = Objects.requireNonNull($.segmentDuration, "expected parameter 'segmentDuration' to be non-null");
+            return $;
         }
     }
+
 }

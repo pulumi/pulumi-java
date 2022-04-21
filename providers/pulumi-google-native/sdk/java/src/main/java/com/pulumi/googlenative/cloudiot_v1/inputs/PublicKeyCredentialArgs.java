@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudiot_v1.enums.PublicKeyCredentialFormat;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PublicKeyCredentialArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<PublicKeyCredentialFormat> format;
+    private @Nullable Output<PublicKeyCredentialFormat> format;
 
-    public Output<PublicKeyCredentialFormat> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<PublicKeyCredentialFormat>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class PublicKeyCredentialArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public PublicKeyCredentialArgs(
-        @Nullable Output<PublicKeyCredentialFormat> format,
-        @Nullable Output<String> key) {
-        this.format = format;
-        this.key = key;
-    }
+    private PublicKeyCredentialArgs() {}
 
-    private PublicKeyCredentialArgs() {
-        this.format = Codegen.empty();
-        this.key = Codegen.empty();
+    private PublicKeyCredentialArgs(PublicKeyCredentialArgs $) {
+        this.format = $.format;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PublicKeyCredentialFormat> format;
-        private @Nullable Output<String> key;
+        private PublicKeyCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyCredentialArgs();
         }
 
         public Builder(PublicKeyCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.key = defaults.key;
+            $ = new PublicKeyCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder format(@Nullable Output<PublicKeyCredentialFormat> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable PublicKeyCredentialFormat format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(PublicKeyCredentialFormat format) {
+            return format(Output.of(format));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public PublicKeyCredentialArgs build() {
-            return new PublicKeyCredentialArgs(format, key);
+
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        public PublicKeyCredentialArgs build() {
+            return $;
         }
     }
+
 }

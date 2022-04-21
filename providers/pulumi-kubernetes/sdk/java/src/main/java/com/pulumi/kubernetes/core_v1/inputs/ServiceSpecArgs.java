@@ -6,7 +6,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
 import com.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SessionAffinityConfigArgs;
@@ -16,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocateLoadBalancerNodePorts")
-      private final @Nullable Output<Boolean> allocateLoadBalancerNodePorts;
+    private @Nullable Output<Boolean> allocateLoadBalancerNodePorts;
 
-    public Output<Boolean> allocateLoadBalancerNodePorts() {
-        return this.allocateLoadBalancerNodePorts == null ? Codegen.empty() : this.allocateLoadBalancerNodePorts;
+    public Optional<Output<Boolean>> allocateLoadBalancerNodePorts() {
+        return Optional.ofNullable(this.allocateLoadBalancerNodePorts);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterIP")
-      private final @Nullable Output<String> clusterIP;
+    private @Nullable Output<String> clusterIP;
 
-    public Output<String> clusterIP() {
-        return this.clusterIP == null ? Codegen.empty() : this.clusterIP;
+    public Optional<Output<String>> clusterIP() {
+        return Optional.ofNullable(this.clusterIP);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterIPs")
-      private final @Nullable Output<List<String>> clusterIPs;
+    private @Nullable Output<List<String>> clusterIPs;
 
-    public Output<List<String>> clusterIPs() {
-        return this.clusterIPs == null ? Codegen.empty() : this.clusterIPs;
+    public Optional<Output<List<String>>> clusterIPs() {
+        return Optional.ofNullable(this.clusterIPs);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalIPs")
-      private final @Nullable Output<List<String>> externalIPs;
+    private @Nullable Output<List<String>> externalIPs;
 
-    public Output<List<String>> externalIPs() {
-        return this.externalIPs == null ? Codegen.empty() : this.externalIPs;
+    public Optional<Output<List<String>>> externalIPs() {
+        return Optional.ofNullable(this.externalIPs);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalName")
-      private final @Nullable Output<String> externalName;
+    private @Nullable Output<String> externalName;
 
-    public Output<String> externalName() {
-        return this.externalName == null ? Codegen.empty() : this.externalName;
+    public Optional<Output<String>> externalName() {
+        return Optional.ofNullable(this.externalName);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalTrafficPolicy")
-      private final @Nullable Output<String> externalTrafficPolicy;
+    private @Nullable Output<String> externalTrafficPolicy;
 
-    public Output<String> externalTrafficPolicy() {
-        return this.externalTrafficPolicy == null ? Codegen.empty() : this.externalTrafficPolicy;
+    public Optional<Output<String>> externalTrafficPolicy() {
+        return Optional.ofNullable(this.externalTrafficPolicy);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckNodePort")
-      private final @Nullable Output<Integer> healthCheckNodePort;
+    private @Nullable Output<Integer> healthCheckNodePort;
 
-    public Output<Integer> healthCheckNodePort() {
-        return this.healthCheckNodePort == null ? Codegen.empty() : this.healthCheckNodePort;
+    public Optional<Output<Integer>> healthCheckNodePort() {
+        return Optional.ofNullable(this.healthCheckNodePort);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="internalTrafficPolicy")
-      private final @Nullable Output<String> internalTrafficPolicy;
+    private @Nullable Output<String> internalTrafficPolicy;
 
-    public Output<String> internalTrafficPolicy() {
-        return this.internalTrafficPolicy == null ? Codegen.empty() : this.internalTrafficPolicy;
+    public Optional<Output<String>> internalTrafficPolicy() {
+        return Optional.ofNullable(this.internalTrafficPolicy);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipFamilies")
-      private final @Nullable Output<List<String>> ipFamilies;
+    private @Nullable Output<List<String>> ipFamilies;
 
-    public Output<List<String>> ipFamilies() {
-        return this.ipFamilies == null ? Codegen.empty() : this.ipFamilies;
+    public Optional<Output<List<String>>> ipFamilies() {
+        return Optional.ofNullable(this.ipFamilies);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipFamily")
-      private final @Nullable Output<String> ipFamily;
+    private @Nullable Output<String> ipFamily;
 
-    public Output<String> ipFamily() {
-        return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
+    public Optional<Output<String>> ipFamily() {
+        return Optional.ofNullable(this.ipFamily);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipFamilyPolicy")
-      private final @Nullable Output<String> ipFamilyPolicy;
+    private @Nullable Output<String> ipFamilyPolicy;
 
-    public Output<String> ipFamilyPolicy() {
-        return this.ipFamilyPolicy == null ? Codegen.empty() : this.ipFamilyPolicy;
+    public Optional<Output<String>> ipFamilyPolicy() {
+        return Optional.ofNullable(this.ipFamilyPolicy);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancerClass")
-      private final @Nullable Output<String> loadBalancerClass;
+    private @Nullable Output<String> loadBalancerClass;
 
-    public Output<String> loadBalancerClass() {
-        return this.loadBalancerClass == null ? Codegen.empty() : this.loadBalancerClass;
+    public Optional<Output<String>> loadBalancerClass() {
+        return Optional.ofNullable(this.loadBalancerClass);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancerIP")
-      private final @Nullable Output<String> loadBalancerIP;
+    private @Nullable Output<String> loadBalancerIP;
 
-    public Output<String> loadBalancerIP() {
-        return this.loadBalancerIP == null ? Codegen.empty() : this.loadBalancerIP;
+    public Optional<Output<String>> loadBalancerIP() {
+        return Optional.ofNullable(this.loadBalancerIP);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancerSourceRanges")
-      private final @Nullable Output<List<String>> loadBalancerSourceRanges;
+    private @Nullable Output<List<String>> loadBalancerSourceRanges;
 
-    public Output<List<String>> loadBalancerSourceRanges() {
-        return this.loadBalancerSourceRanges == null ? Codegen.empty() : this.loadBalancerSourceRanges;
+    public Optional<Output<List<String>>> loadBalancerSourceRanges() {
+        return Optional.ofNullable(this.loadBalancerSourceRanges);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<ServicePortArgs>> ports;
+    private @Nullable Output<List<ServicePortArgs>> ports;
 
-    public Output<List<ServicePortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<ServicePortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publishNotReadyAddresses")
-      private final @Nullable Output<Boolean> publishNotReadyAddresses;
+    private @Nullable Output<Boolean> publishNotReadyAddresses;
 
-    public Output<Boolean> publishNotReadyAddresses() {
-        return this.publishNotReadyAddresses == null ? Codegen.empty() : this.publishNotReadyAddresses;
+    public Optional<Output<Boolean>> publishNotReadyAddresses() {
+        return Optional.ofNullable(this.publishNotReadyAddresses);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<Map<String,String>> selector;
+    private @Nullable Output<Map<String,String>> selector;
 
-    public Output<Map<String,String>> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<Map<String,String>>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sessionAffinity")
-      private final @Nullable Output<String> sessionAffinity;
+    private @Nullable Output<String> sessionAffinity;
 
-    public Output<String> sessionAffinity() {
-        return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
+    public Optional<Output<String>> sessionAffinity() {
+        return Optional.ofNullable(this.sessionAffinity);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sessionAffinityConfig")
-      private final @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig;
+    private @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig;
 
-    public Output<SessionAffinityConfigArgs> sessionAffinityConfig() {
-        return this.sessionAffinityConfig == null ? Codegen.empty() : this.sessionAffinityConfig;
+    public Optional<Output<SessionAffinityConfigArgs>> sessionAffinityConfig() {
+        return Optional.ofNullable(this.sessionAffinityConfig);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topologyKeys")
-      private final @Nullable Output<List<String>> topologyKeys;
+    private @Nullable Output<List<String>> topologyKeys;
 
-    public Output<List<String>> topologyKeys() {
-        return this.topologyKeys == null ? Codegen.empty() : this.topologyKeys;
+    public Optional<Output<List<String>>> topologyKeys() {
+        return Optional.ofNullable(this.topologyKeys);
     }
 
     /**
@@ -270,328 +270,272 @@ public final class ServiceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ServiceSpecType>> type;
+    private @Nullable Output<Either<String,ServiceSpecType>> type;
 
-    public Output<Either<String,ServiceSpecType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ServiceSpecType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ServiceSpecArgs(
-        @Nullable Output<Boolean> allocateLoadBalancerNodePorts,
-        @Nullable Output<String> clusterIP,
-        @Nullable Output<List<String>> clusterIPs,
-        @Nullable Output<List<String>> externalIPs,
-        @Nullable Output<String> externalName,
-        @Nullable Output<String> externalTrafficPolicy,
-        @Nullable Output<Integer> healthCheckNodePort,
-        @Nullable Output<String> internalTrafficPolicy,
-        @Nullable Output<List<String>> ipFamilies,
-        @Nullable Output<String> ipFamily,
-        @Nullable Output<String> ipFamilyPolicy,
-        @Nullable Output<String> loadBalancerClass,
-        @Nullable Output<String> loadBalancerIP,
-        @Nullable Output<List<String>> loadBalancerSourceRanges,
-        @Nullable Output<List<ServicePortArgs>> ports,
-        @Nullable Output<Boolean> publishNotReadyAddresses,
-        @Nullable Output<Map<String,String>> selector,
-        @Nullable Output<String> sessionAffinity,
-        @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig,
-        @Nullable Output<List<String>> topologyKeys,
-        @Nullable Output<Either<String,ServiceSpecType>> type) {
-        this.allocateLoadBalancerNodePorts = allocateLoadBalancerNodePorts;
-        this.clusterIP = clusterIP;
-        this.clusterIPs = clusterIPs;
-        this.externalIPs = externalIPs;
-        this.externalName = externalName;
-        this.externalTrafficPolicy = externalTrafficPolicy;
-        this.healthCheckNodePort = healthCheckNodePort;
-        this.internalTrafficPolicy = internalTrafficPolicy;
-        this.ipFamilies = ipFamilies;
-        this.ipFamily = ipFamily;
-        this.ipFamilyPolicy = ipFamilyPolicy;
-        this.loadBalancerClass = loadBalancerClass;
-        this.loadBalancerIP = loadBalancerIP;
-        this.loadBalancerSourceRanges = loadBalancerSourceRanges;
-        this.ports = ports;
-        this.publishNotReadyAddresses = publishNotReadyAddresses;
-        this.selector = selector;
-        this.sessionAffinity = sessionAffinity;
-        this.sessionAffinityConfig = sessionAffinityConfig;
-        this.topologyKeys = topologyKeys;
-        this.type = type;
-    }
+    private ServiceSpecArgs() {}
 
-    private ServiceSpecArgs() {
-        this.allocateLoadBalancerNodePorts = Codegen.empty();
-        this.clusterIP = Codegen.empty();
-        this.clusterIPs = Codegen.empty();
-        this.externalIPs = Codegen.empty();
-        this.externalName = Codegen.empty();
-        this.externalTrafficPolicy = Codegen.empty();
-        this.healthCheckNodePort = Codegen.empty();
-        this.internalTrafficPolicy = Codegen.empty();
-        this.ipFamilies = Codegen.empty();
-        this.ipFamily = Codegen.empty();
-        this.ipFamilyPolicy = Codegen.empty();
-        this.loadBalancerClass = Codegen.empty();
-        this.loadBalancerIP = Codegen.empty();
-        this.loadBalancerSourceRanges = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.publishNotReadyAddresses = Codegen.empty();
-        this.selector = Codegen.empty();
-        this.sessionAffinity = Codegen.empty();
-        this.sessionAffinityConfig = Codegen.empty();
-        this.topologyKeys = Codegen.empty();
-        this.type = Codegen.empty();
+    private ServiceSpecArgs(ServiceSpecArgs $) {
+        this.allocateLoadBalancerNodePorts = $.allocateLoadBalancerNodePorts;
+        this.clusterIP = $.clusterIP;
+        this.clusterIPs = $.clusterIPs;
+        this.externalIPs = $.externalIPs;
+        this.externalName = $.externalName;
+        this.externalTrafficPolicy = $.externalTrafficPolicy;
+        this.healthCheckNodePort = $.healthCheckNodePort;
+        this.internalTrafficPolicy = $.internalTrafficPolicy;
+        this.ipFamilies = $.ipFamilies;
+        this.ipFamily = $.ipFamily;
+        this.ipFamilyPolicy = $.ipFamilyPolicy;
+        this.loadBalancerClass = $.loadBalancerClass;
+        this.loadBalancerIP = $.loadBalancerIP;
+        this.loadBalancerSourceRanges = $.loadBalancerSourceRanges;
+        this.ports = $.ports;
+        this.publishNotReadyAddresses = $.publishNotReadyAddresses;
+        this.selector = $.selector;
+        this.sessionAffinity = $.sessionAffinity;
+        this.sessionAffinityConfig = $.sessionAffinityConfig;
+        this.topologyKeys = $.topologyKeys;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allocateLoadBalancerNodePorts;
-        private @Nullable Output<String> clusterIP;
-        private @Nullable Output<List<String>> clusterIPs;
-        private @Nullable Output<List<String>> externalIPs;
-        private @Nullable Output<String> externalName;
-        private @Nullable Output<String> externalTrafficPolicy;
-        private @Nullable Output<Integer> healthCheckNodePort;
-        private @Nullable Output<String> internalTrafficPolicy;
-        private @Nullable Output<List<String>> ipFamilies;
-        private @Nullable Output<String> ipFamily;
-        private @Nullable Output<String> ipFamilyPolicy;
-        private @Nullable Output<String> loadBalancerClass;
-        private @Nullable Output<String> loadBalancerIP;
-        private @Nullable Output<List<String>> loadBalancerSourceRanges;
-        private @Nullable Output<List<ServicePortArgs>> ports;
-        private @Nullable Output<Boolean> publishNotReadyAddresses;
-        private @Nullable Output<Map<String,String>> selector;
-        private @Nullable Output<String> sessionAffinity;
-        private @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig;
-        private @Nullable Output<List<String>> topologyKeys;
-        private @Nullable Output<Either<String,ServiceSpecType>> type;
+        private ServiceSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceSpecArgs();
         }
 
         public Builder(ServiceSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocateLoadBalancerNodePorts = defaults.allocateLoadBalancerNodePorts;
-    	      this.clusterIP = defaults.clusterIP;
-    	      this.clusterIPs = defaults.clusterIPs;
-    	      this.externalIPs = defaults.externalIPs;
-    	      this.externalName = defaults.externalName;
-    	      this.externalTrafficPolicy = defaults.externalTrafficPolicy;
-    	      this.healthCheckNodePort = defaults.healthCheckNodePort;
-    	      this.internalTrafficPolicy = defaults.internalTrafficPolicy;
-    	      this.ipFamilies = defaults.ipFamilies;
-    	      this.ipFamily = defaults.ipFamily;
-    	      this.ipFamilyPolicy = defaults.ipFamilyPolicy;
-    	      this.loadBalancerClass = defaults.loadBalancerClass;
-    	      this.loadBalancerIP = defaults.loadBalancerIP;
-    	      this.loadBalancerSourceRanges = defaults.loadBalancerSourceRanges;
-    	      this.ports = defaults.ports;
-    	      this.publishNotReadyAddresses = defaults.publishNotReadyAddresses;
-    	      this.selector = defaults.selector;
-    	      this.sessionAffinity = defaults.sessionAffinity;
-    	      this.sessionAffinityConfig = defaults.sessionAffinityConfig;
-    	      this.topologyKeys = defaults.topologyKeys;
-    	      this.type = defaults.type;
+            $ = new ServiceSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocateLoadBalancerNodePorts(@Nullable Output<Boolean> allocateLoadBalancerNodePorts) {
-            this.allocateLoadBalancerNodePorts = allocateLoadBalancerNodePorts;
+            $.allocateLoadBalancerNodePorts = allocateLoadBalancerNodePorts;
             return this;
         }
-        public Builder allocateLoadBalancerNodePorts(@Nullable Boolean allocateLoadBalancerNodePorts) {
-            this.allocateLoadBalancerNodePorts = Codegen.ofNullable(allocateLoadBalancerNodePorts);
-            return this;
+
+        public Builder allocateLoadBalancerNodePorts(Boolean allocateLoadBalancerNodePorts) {
+            return allocateLoadBalancerNodePorts(Output.of(allocateLoadBalancerNodePorts));
         }
+
         public Builder clusterIP(@Nullable Output<String> clusterIP) {
-            this.clusterIP = clusterIP;
+            $.clusterIP = clusterIP;
             return this;
         }
-        public Builder clusterIP(@Nullable String clusterIP) {
-            this.clusterIP = Codegen.ofNullable(clusterIP);
-            return this;
+
+        public Builder clusterIP(String clusterIP) {
+            return clusterIP(Output.of(clusterIP));
         }
+
         public Builder clusterIPs(@Nullable Output<List<String>> clusterIPs) {
-            this.clusterIPs = clusterIPs;
+            $.clusterIPs = clusterIPs;
             return this;
         }
-        public Builder clusterIPs(@Nullable List<String> clusterIPs) {
-            this.clusterIPs = Codegen.ofNullable(clusterIPs);
-            return this;
+
+        public Builder clusterIPs(List<String> clusterIPs) {
+            return clusterIPs(Output.of(clusterIPs));
         }
+
         public Builder clusterIPs(String... clusterIPs) {
             return clusterIPs(List.of(clusterIPs));
         }
+
         public Builder externalIPs(@Nullable Output<List<String>> externalIPs) {
-            this.externalIPs = externalIPs;
+            $.externalIPs = externalIPs;
             return this;
         }
-        public Builder externalIPs(@Nullable List<String> externalIPs) {
-            this.externalIPs = Codegen.ofNullable(externalIPs);
-            return this;
+
+        public Builder externalIPs(List<String> externalIPs) {
+            return externalIPs(Output.of(externalIPs));
         }
+
         public Builder externalIPs(String... externalIPs) {
             return externalIPs(List.of(externalIPs));
         }
+
         public Builder externalName(@Nullable Output<String> externalName) {
-            this.externalName = externalName;
+            $.externalName = externalName;
             return this;
         }
-        public Builder externalName(@Nullable String externalName) {
-            this.externalName = Codegen.ofNullable(externalName);
-            return this;
+
+        public Builder externalName(String externalName) {
+            return externalName(Output.of(externalName));
         }
+
         public Builder externalTrafficPolicy(@Nullable Output<String> externalTrafficPolicy) {
-            this.externalTrafficPolicy = externalTrafficPolicy;
+            $.externalTrafficPolicy = externalTrafficPolicy;
             return this;
         }
-        public Builder externalTrafficPolicy(@Nullable String externalTrafficPolicy) {
-            this.externalTrafficPolicy = Codegen.ofNullable(externalTrafficPolicy);
-            return this;
+
+        public Builder externalTrafficPolicy(String externalTrafficPolicy) {
+            return externalTrafficPolicy(Output.of(externalTrafficPolicy));
         }
+
         public Builder healthCheckNodePort(@Nullable Output<Integer> healthCheckNodePort) {
-            this.healthCheckNodePort = healthCheckNodePort;
+            $.healthCheckNodePort = healthCheckNodePort;
             return this;
         }
-        public Builder healthCheckNodePort(@Nullable Integer healthCheckNodePort) {
-            this.healthCheckNodePort = Codegen.ofNullable(healthCheckNodePort);
-            return this;
+
+        public Builder healthCheckNodePort(Integer healthCheckNodePort) {
+            return healthCheckNodePort(Output.of(healthCheckNodePort));
         }
+
         public Builder internalTrafficPolicy(@Nullable Output<String> internalTrafficPolicy) {
-            this.internalTrafficPolicy = internalTrafficPolicy;
+            $.internalTrafficPolicy = internalTrafficPolicy;
             return this;
         }
-        public Builder internalTrafficPolicy(@Nullable String internalTrafficPolicy) {
-            this.internalTrafficPolicy = Codegen.ofNullable(internalTrafficPolicy);
-            return this;
+
+        public Builder internalTrafficPolicy(String internalTrafficPolicy) {
+            return internalTrafficPolicy(Output.of(internalTrafficPolicy));
         }
+
         public Builder ipFamilies(@Nullable Output<List<String>> ipFamilies) {
-            this.ipFamilies = ipFamilies;
+            $.ipFamilies = ipFamilies;
             return this;
         }
-        public Builder ipFamilies(@Nullable List<String> ipFamilies) {
-            this.ipFamilies = Codegen.ofNullable(ipFamilies);
-            return this;
+
+        public Builder ipFamilies(List<String> ipFamilies) {
+            return ipFamilies(Output.of(ipFamilies));
         }
+
         public Builder ipFamilies(String... ipFamilies) {
             return ipFamilies(List.of(ipFamilies));
         }
+
         public Builder ipFamily(@Nullable Output<String> ipFamily) {
-            this.ipFamily = ipFamily;
+            $.ipFamily = ipFamily;
             return this;
         }
-        public Builder ipFamily(@Nullable String ipFamily) {
-            this.ipFamily = Codegen.ofNullable(ipFamily);
-            return this;
+
+        public Builder ipFamily(String ipFamily) {
+            return ipFamily(Output.of(ipFamily));
         }
+
         public Builder ipFamilyPolicy(@Nullable Output<String> ipFamilyPolicy) {
-            this.ipFamilyPolicy = ipFamilyPolicy;
+            $.ipFamilyPolicy = ipFamilyPolicy;
             return this;
         }
-        public Builder ipFamilyPolicy(@Nullable String ipFamilyPolicy) {
-            this.ipFamilyPolicy = Codegen.ofNullable(ipFamilyPolicy);
-            return this;
+
+        public Builder ipFamilyPolicy(String ipFamilyPolicy) {
+            return ipFamilyPolicy(Output.of(ipFamilyPolicy));
         }
+
         public Builder loadBalancerClass(@Nullable Output<String> loadBalancerClass) {
-            this.loadBalancerClass = loadBalancerClass;
+            $.loadBalancerClass = loadBalancerClass;
             return this;
         }
-        public Builder loadBalancerClass(@Nullable String loadBalancerClass) {
-            this.loadBalancerClass = Codegen.ofNullable(loadBalancerClass);
-            return this;
+
+        public Builder loadBalancerClass(String loadBalancerClass) {
+            return loadBalancerClass(Output.of(loadBalancerClass));
         }
+
         public Builder loadBalancerIP(@Nullable Output<String> loadBalancerIP) {
-            this.loadBalancerIP = loadBalancerIP;
+            $.loadBalancerIP = loadBalancerIP;
             return this;
         }
-        public Builder loadBalancerIP(@Nullable String loadBalancerIP) {
-            this.loadBalancerIP = Codegen.ofNullable(loadBalancerIP);
-            return this;
+
+        public Builder loadBalancerIP(String loadBalancerIP) {
+            return loadBalancerIP(Output.of(loadBalancerIP));
         }
+
         public Builder loadBalancerSourceRanges(@Nullable Output<List<String>> loadBalancerSourceRanges) {
-            this.loadBalancerSourceRanges = loadBalancerSourceRanges;
+            $.loadBalancerSourceRanges = loadBalancerSourceRanges;
             return this;
         }
-        public Builder loadBalancerSourceRanges(@Nullable List<String> loadBalancerSourceRanges) {
-            this.loadBalancerSourceRanges = Codegen.ofNullable(loadBalancerSourceRanges);
-            return this;
+
+        public Builder loadBalancerSourceRanges(List<String> loadBalancerSourceRanges) {
+            return loadBalancerSourceRanges(Output.of(loadBalancerSourceRanges));
         }
+
         public Builder loadBalancerSourceRanges(String... loadBalancerSourceRanges) {
             return loadBalancerSourceRanges(List.of(loadBalancerSourceRanges));
         }
+
         public Builder ports(@Nullable Output<List<ServicePortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<ServicePortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<ServicePortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(ServicePortArgs... ports) {
             return ports(List.of(ports));
         }
+
         public Builder publishNotReadyAddresses(@Nullable Output<Boolean> publishNotReadyAddresses) {
-            this.publishNotReadyAddresses = publishNotReadyAddresses;
+            $.publishNotReadyAddresses = publishNotReadyAddresses;
             return this;
         }
-        public Builder publishNotReadyAddresses(@Nullable Boolean publishNotReadyAddresses) {
-            this.publishNotReadyAddresses = Codegen.ofNullable(publishNotReadyAddresses);
-            return this;
+
+        public Builder publishNotReadyAddresses(Boolean publishNotReadyAddresses) {
+            return publishNotReadyAddresses(Output.of(publishNotReadyAddresses));
         }
+
         public Builder selector(@Nullable Output<Map<String,String>> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable Map<String,String> selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
+
+        public Builder selector(Map<String,String> selector) {
+            return selector(Output.of(selector));
         }
+
         public Builder sessionAffinity(@Nullable Output<String> sessionAffinity) {
-            this.sessionAffinity = sessionAffinity;
+            $.sessionAffinity = sessionAffinity;
             return this;
         }
-        public Builder sessionAffinity(@Nullable String sessionAffinity) {
-            this.sessionAffinity = Codegen.ofNullable(sessionAffinity);
-            return this;
+
+        public Builder sessionAffinity(String sessionAffinity) {
+            return sessionAffinity(Output.of(sessionAffinity));
         }
+
         public Builder sessionAffinityConfig(@Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig) {
-            this.sessionAffinityConfig = sessionAffinityConfig;
+            $.sessionAffinityConfig = sessionAffinityConfig;
             return this;
         }
-        public Builder sessionAffinityConfig(@Nullable SessionAffinityConfigArgs sessionAffinityConfig) {
-            this.sessionAffinityConfig = Codegen.ofNullable(sessionAffinityConfig);
-            return this;
+
+        public Builder sessionAffinityConfig(SessionAffinityConfigArgs sessionAffinityConfig) {
+            return sessionAffinityConfig(Output.of(sessionAffinityConfig));
         }
+
         public Builder topologyKeys(@Nullable Output<List<String>> topologyKeys) {
-            this.topologyKeys = topologyKeys;
+            $.topologyKeys = topologyKeys;
             return this;
         }
-        public Builder topologyKeys(@Nullable List<String> topologyKeys) {
-            this.topologyKeys = Codegen.ofNullable(topologyKeys);
-            return this;
+
+        public Builder topologyKeys(List<String> topologyKeys) {
+            return topologyKeys(Output.of(topologyKeys));
         }
+
         public Builder topologyKeys(String... topologyKeys) {
             return topologyKeys(List.of(topologyKeys));
         }
+
         public Builder type(@Nullable Output<Either<String,ServiceSpecType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ServiceSpecType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ServiceSpecArgs build() {
-            return new ServiceSpecArgs(allocateLoadBalancerNodePorts, clusterIP, clusterIPs, externalIPs, externalName, externalTrafficPolicy, healthCheckNodePort, internalTrafficPolicy, ipFamilies, ipFamily, ipFamilyPolicy, loadBalancerClass, loadBalancerIP, loadBalancerSourceRanges, ports, publishNotReadyAddresses, selector, sessionAffinity, sessionAffinityConfig, topologyKeys, type);
+
+        public Builder type(Either<String,ServiceSpecType> type) {
+            return type(Output.of(type));
+        }
+
+        public ServiceSpecArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,10 +22,10 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetManagedPrefixListFilter> filters;
+    private @Nullable List<GetManagedPrefixListFilter> filters;
 
-    public List<GetManagedPrefixListFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetManagedPrefixListFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,76 +55,66 @@ public final class GetManagedPrefixListArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetManagedPrefixListArgs(
-        @Nullable List<GetManagedPrefixListFilter> filters,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.id = id;
-        this.name = name;
-        this.tags = tags;
-    }
+    private GetManagedPrefixListArgs() {}
 
-    private GetManagedPrefixListArgs() {
-        this.filters = List.of();
-        this.id = null;
-        this.name = null;
-        this.tags = Map.of();
+    private GetManagedPrefixListArgs(GetManagedPrefixListArgs $) {
+        this.filters = $.filters;
+        this.id = $.id;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedPrefixListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetManagedPrefixListFilter> filters;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable Map<String,String> tags;
+        private GetManagedPrefixListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedPrefixListArgs();
         }
 
         public Builder(GetManagedPrefixListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetManagedPrefixListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetManagedPrefixListFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetManagedPrefixListFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetManagedPrefixListArgs build() {
-            return new GetManagedPrefixListArgs(filters, id, name, tags);
+        }
+
+        public GetManagedPrefixListArgs build() {
+            return $;
         }
     }
+
 }

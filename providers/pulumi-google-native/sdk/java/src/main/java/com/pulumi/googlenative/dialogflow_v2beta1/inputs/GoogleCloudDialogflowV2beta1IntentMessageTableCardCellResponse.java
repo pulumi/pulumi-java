@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCellRespons
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse(String text) {
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse() {
-        this.text = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse(GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String text;
+        private GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse(text);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse build() {
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class MonitoringScheduleScheduleConfig extends com.pulumi.resources
      * 
      */
     @Import(name="scheduleExpression", required=true)
-      private final String scheduleExpression;
+    private String scheduleExpression;
 
     public String scheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public MonitoringScheduleScheduleConfig(String scheduleExpression) {
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
-    }
+    private MonitoringScheduleScheduleConfig() {}
 
-    private MonitoringScheduleScheduleConfig() {
-        this.scheduleExpression = null;
+    private MonitoringScheduleScheduleConfig(MonitoringScheduleScheduleConfig $) {
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleScheduleConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scheduleExpression;
+        private MonitoringScheduleScheduleConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleScheduleConfig();
         }
 
         public Builder(MonitoringScheduleScheduleConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new MonitoringScheduleScheduleConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+            $.scheduleExpression = scheduleExpression;
             return this;
-        }        public MonitoringScheduleScheduleConfig build() {
-            return new MonitoringScheduleScheduleConfig(scheduleExpression);
+        }
+
+        public MonitoringScheduleScheduleConfig build() {
+            $.scheduleExpression = Objects.requireNonNull($.scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
+            return $;
         }
     }
+
 }

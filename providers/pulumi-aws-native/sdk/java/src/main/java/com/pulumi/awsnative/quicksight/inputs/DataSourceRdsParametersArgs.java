@@ -5,7 +5,6 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class DataSourceRdsParametersArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="database", required=true)
-      private final Output<String> database;
+    private Output<String> database;
 
     public Output<String> database() {
         return this.database;
@@ -34,63 +33,60 @@ public final class DataSourceRdsParametersArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
     }
 
-    public DataSourceRdsParametersArgs(
-        Output<String> database,
-        Output<String> instanceId) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-    }
+    private DataSourceRdsParametersArgs() {}
 
-    private DataSourceRdsParametersArgs() {
-        this.database = Codegen.empty();
-        this.instanceId = Codegen.empty();
+    private DataSourceRdsParametersArgs(DataSourceRdsParametersArgs $) {
+        this.database = $.database;
+        this.instanceId = $.instanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceRdsParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> database;
-        private Output<String> instanceId;
+        private DataSourceRdsParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceRdsParametersArgs();
         }
 
         public Builder(DataSourceRdsParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.instanceId = defaults.instanceId;
+            $ = new DataSourceRdsParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder database(Output<String> database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Output.of(Objects.requireNonNull(database));
-            return this;
+            return database(Output.of(database));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
-        }        public DataSourceRdsParametersArgs build() {
-            return new DataSourceRdsParametersArgs(database, instanceId);
+            return instanceId(Output.of(instanceId));
+        }
+
+        public DataSourceRdsParametersArgs build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

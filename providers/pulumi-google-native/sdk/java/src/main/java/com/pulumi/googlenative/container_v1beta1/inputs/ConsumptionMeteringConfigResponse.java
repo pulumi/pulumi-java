@@ -21,45 +21,45 @@ public final class ConsumptionMeteringConfigResponse extends com.pulumi.resource
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public ConsumptionMeteringConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ConsumptionMeteringConfigResponse() {}
 
-    private ConsumptionMeteringConfigResponse() {
-        this.enabled = null;
+    private ConsumptionMeteringConfigResponse(ConsumptionMeteringConfigResponse $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsumptionMeteringConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private ConsumptionMeteringConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsumptionMeteringConfigResponse();
         }
 
         public Builder(ConsumptionMeteringConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new ConsumptionMeteringConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public ConsumptionMeteringConfigResponse build() {
-            return new ConsumptionMeteringConfigResponse(enabled);
+        }
+
+        public ConsumptionMeteringConfigResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

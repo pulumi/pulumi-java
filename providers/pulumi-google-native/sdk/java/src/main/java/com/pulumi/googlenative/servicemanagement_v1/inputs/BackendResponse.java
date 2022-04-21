@@ -22,48 +22,49 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rules", required=true)
-      private final List<BackendRuleResponse> rules;
+    private List<BackendRuleResponse> rules;
 
     public List<BackendRuleResponse> rules() {
         return this.rules;
     }
 
-    public BackendResponse(List<BackendRuleResponse> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private BackendResponse() {}
 
-    private BackendResponse() {
-        this.rules = List.of();
+    private BackendResponse(BackendResponse $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BackendRuleResponse> rules;
+        private BackendResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendResponse();
         }
 
         public Builder(BackendResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new BackendResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(List<BackendRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(BackendRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public BackendResponse build() {
-            return new BackendResponse(rules);
+        }
+
+        public BackendResponse build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

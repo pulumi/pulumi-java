@@ -5,9 +5,9 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class BucketLifecycleRuleNoncurrentVersionExpirationGetArgs extends
      * 
      */
     @Import(name="days")
-      private final @Nullable Output<Integer> days;
+    private @Nullable Output<Integer> days;
 
-    public Output<Integer> days() {
-        return this.days == null ? Codegen.empty() : this.days;
+    public Optional<Output<Integer>> days() {
+        return Optional.ofNullable(this.days);
     }
 
-    public BucketLifecycleRuleNoncurrentVersionExpirationGetArgs(@Nullable Output<Integer> days) {
-        this.days = days;
-    }
+    private BucketLifecycleRuleNoncurrentVersionExpirationGetArgs() {}
 
-    private BucketLifecycleRuleNoncurrentVersionExpirationGetArgs() {
-        this.days = Codegen.empty();
+    private BucketLifecycleRuleNoncurrentVersionExpirationGetArgs(BucketLifecycleRuleNoncurrentVersionExpirationGetArgs $) {
+        this.days = $.days;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleRuleNoncurrentVersionExpirationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> days;
+        private BucketLifecycleRuleNoncurrentVersionExpirationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleRuleNoncurrentVersionExpirationGetArgs();
         }
 
         public Builder(BucketLifecycleRuleNoncurrentVersionExpirationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
+            $ = new BucketLifecycleRuleNoncurrentVersionExpirationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Output<Integer> days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
-        public Builder days(@Nullable Integer days) {
-            this.days = Codegen.ofNullable(days);
-            return this;
-        }        public BucketLifecycleRuleNoncurrentVersionExpirationGetArgs build() {
-            return new BucketLifecycleRuleNoncurrentVersionExpirationGetArgs(days);
+
+        public Builder days(Integer days) {
+            return days(Output.of(days));
+        }
+
+        public BucketLifecycleRuleNoncurrentVersionExpirationGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="authority", required=true)
-      private final String authority;
+    private String authority;
 
     public String authority() {
         return this.authority;
@@ -34,7 +34,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="endpoint", required=true)
-      private final String endpoint;
+    private String endpoint;
 
     public String endpoint() {
         return this.endpoint;
@@ -45,7 +45,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="payloadName", required=true)
-      private final String payloadName;
+    private String payloadName;
 
     public String payloadName() {
         return this.payloadName;
@@ -56,7 +56,7 @@ public final class NotificationEndpointGrpcSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="resendInterval", required=true)
-      private final DurationResponse resendInterval;
+    private DurationResponse resendInterval;
 
     public DurationResponse resendInterval() {
         return this.resendInterval;
@@ -67,82 +67,73 @@ public final class NotificationEndpointGrpcSettingsResponse extends com.pulumi.r
      * 
      */
     @Import(name="retryDurationSec", required=true)
-      private final Integer retryDurationSec;
+    private Integer retryDurationSec;
 
     public Integer retryDurationSec() {
         return this.retryDurationSec;
     }
 
-    public NotificationEndpointGrpcSettingsResponse(
-        String authority,
-        String endpoint,
-        String payloadName,
-        DurationResponse resendInterval,
-        Integer retryDurationSec) {
-        this.authority = Objects.requireNonNull(authority, "expected parameter 'authority' to be non-null");
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.payloadName = Objects.requireNonNull(payloadName, "expected parameter 'payloadName' to be non-null");
-        this.resendInterval = Objects.requireNonNull(resendInterval, "expected parameter 'resendInterval' to be non-null");
-        this.retryDurationSec = Objects.requireNonNull(retryDurationSec, "expected parameter 'retryDurationSec' to be non-null");
-    }
+    private NotificationEndpointGrpcSettingsResponse() {}
 
-    private NotificationEndpointGrpcSettingsResponse() {
-        this.authority = null;
-        this.endpoint = null;
-        this.payloadName = null;
-        this.resendInterval = null;
-        this.retryDurationSec = null;
+    private NotificationEndpointGrpcSettingsResponse(NotificationEndpointGrpcSettingsResponse $) {
+        this.authority = $.authority;
+        this.endpoint = $.endpoint;
+        this.payloadName = $.payloadName;
+        this.resendInterval = $.resendInterval;
+        this.retryDurationSec = $.retryDurationSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationEndpointGrpcSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authority;
-        private String endpoint;
-        private String payloadName;
-        private DurationResponse resendInterval;
-        private Integer retryDurationSec;
+        private NotificationEndpointGrpcSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationEndpointGrpcSettingsResponse();
         }
 
         public Builder(NotificationEndpointGrpcSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authority = defaults.authority;
-    	      this.endpoint = defaults.endpoint;
-    	      this.payloadName = defaults.payloadName;
-    	      this.resendInterval = defaults.resendInterval;
-    	      this.retryDurationSec = defaults.retryDurationSec;
+            $ = new NotificationEndpointGrpcSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authority(String authority) {
-            this.authority = Objects.requireNonNull(authority);
+            $.authority = authority;
             return this;
         }
+
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder payloadName(String payloadName) {
-            this.payloadName = Objects.requireNonNull(payloadName);
+            $.payloadName = payloadName;
             return this;
         }
+
         public Builder resendInterval(DurationResponse resendInterval) {
-            this.resendInterval = Objects.requireNonNull(resendInterval);
+            $.resendInterval = resendInterval;
             return this;
         }
+
         public Builder retryDurationSec(Integer retryDurationSec) {
-            this.retryDurationSec = Objects.requireNonNull(retryDurationSec);
+            $.retryDurationSec = retryDurationSec;
             return this;
-        }        public NotificationEndpointGrpcSettingsResponse build() {
-            return new NotificationEndpointGrpcSettingsResponse(authority, endpoint, payloadName, resendInterval, retryDurationSec);
+        }
+
+        public NotificationEndpointGrpcSettingsResponse build() {
+            $.authority = Objects.requireNonNull($.authority, "expected parameter 'authority' to be non-null");
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.payloadName = Objects.requireNonNull($.payloadName, "expected parameter 'payloadName' to be non-null");
+            $.resendInterval = Objects.requireNonNull($.resendInterval, "expected parameter 'resendInterval' to be non-null");
+            $.retryDurationSec = Objects.requireNonNull($.retryDurationSec, "expected parameter 'retryDurationSec' to be non-null");
+            return $;
         }
     }
+
 }

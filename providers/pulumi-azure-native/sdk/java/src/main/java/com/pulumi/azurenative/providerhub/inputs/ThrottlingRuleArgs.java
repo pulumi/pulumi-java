@@ -6,10 +6,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.ThrottlingMetricArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,96 +18,92 @@ public final class ThrottlingRuleArgs extends com.pulumi.resources.ResourceArgs 
     public static final ThrottlingRuleArgs Empty = new ThrottlingRuleArgs();
 
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
     }
 
     @Import(name="metrics", required=true)
-      private final Output<List<ThrottlingMetricArgs>> metrics;
+    private Output<List<ThrottlingMetricArgs>> metrics;
 
     public Output<List<ThrottlingMetricArgs>> metrics() {
         return this.metrics;
     }
 
     @Import(name="requiredFeatures")
-      private final @Nullable Output<List<String>> requiredFeatures;
+    private @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> requiredFeatures() {
-        return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
+    public Optional<Output<List<String>>> requiredFeatures() {
+        return Optional.ofNullable(this.requiredFeatures);
     }
 
-    public ThrottlingRuleArgs(
-        Output<String> action,
-        Output<List<ThrottlingMetricArgs>> metrics,
-        @Nullable Output<List<String>> requiredFeatures) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
-        this.requiredFeatures = requiredFeatures;
-    }
+    private ThrottlingRuleArgs() {}
 
-    private ThrottlingRuleArgs() {
-        this.action = Codegen.empty();
-        this.metrics = Codegen.empty();
-        this.requiredFeatures = Codegen.empty();
+    private ThrottlingRuleArgs(ThrottlingRuleArgs $) {
+        this.action = $.action;
+        this.metrics = $.metrics;
+        this.requiredFeatures = $.requiredFeatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThrottlingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private Output<List<ThrottlingMetricArgs>> metrics;
-        private @Nullable Output<List<String>> requiredFeatures;
+        private ThrottlingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThrottlingRuleArgs();
         }
 
         public Builder(ThrottlingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.metrics = defaults.metrics;
-    	      this.requiredFeatures = defaults.requiredFeatures;
+            $ = new ThrottlingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder metrics(Output<List<ThrottlingMetricArgs>> metrics) {
-            this.metrics = Objects.requireNonNull(metrics);
+            $.metrics = metrics;
             return this;
         }
+
         public Builder metrics(List<ThrottlingMetricArgs> metrics) {
-            this.metrics = Output.of(Objects.requireNonNull(metrics));
-            return this;
+            return metrics(Output.of(metrics));
         }
+
         public Builder metrics(ThrottlingMetricArgs... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
-            this.requiredFeatures = requiredFeatures;
+            $.requiredFeatures = requiredFeatures;
             return this;
         }
-        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Codegen.ofNullable(requiredFeatures);
-            return this;
+
+        public Builder requiredFeatures(List<String> requiredFeatures) {
+            return requiredFeatures(Output.of(requiredFeatures));
         }
+
         public Builder requiredFeatures(String... requiredFeatures) {
             return requiredFeatures(List.of(requiredFeatures));
-        }        public ThrottlingRuleArgs build() {
-            return new ThrottlingRuleArgs(action, metrics, requiredFeatures);
+        }
+
+        public ThrottlingRuleArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.metrics = Objects.requireNonNull($.metrics, "expected parameter 'metrics' to be non-null");
+            return $;
         }
     }
+
 }

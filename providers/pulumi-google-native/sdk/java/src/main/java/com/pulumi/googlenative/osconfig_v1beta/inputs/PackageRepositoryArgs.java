@@ -5,12 +5,12 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.AptRepositoryArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.GooRepositoryArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.YumRepositoryArgs;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.ZypperRepositoryArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="apt")
-      private final @Nullable Output<AptRepositoryArgs> apt;
+    private @Nullable Output<AptRepositoryArgs> apt;
 
-    public Output<AptRepositoryArgs> apt() {
-        return this.apt == null ? Codegen.empty() : this.apt;
+    public Optional<Output<AptRepositoryArgs>> apt() {
+        return Optional.ofNullable(this.apt);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="goo")
-      private final @Nullable Output<GooRepositoryArgs> goo;
+    private @Nullable Output<GooRepositoryArgs> goo;
 
-    public Output<GooRepositoryArgs> goo() {
-        return this.goo == null ? Codegen.empty() : this.goo;
+    public Optional<Output<GooRepositoryArgs>> goo() {
+        return Optional.ofNullable(this.goo);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="yum")
-      private final @Nullable Output<YumRepositoryArgs> yum;
+    private @Nullable Output<YumRepositoryArgs> yum;
 
-    public Output<YumRepositoryArgs> yum() {
-        return this.yum == null ? Codegen.empty() : this.yum;
+    public Optional<Output<YumRepositoryArgs>> yum() {
+        return Optional.ofNullable(this.yum);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class PackageRepositoryArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="zypper")
-      private final @Nullable Output<ZypperRepositoryArgs> zypper;
+    private @Nullable Output<ZypperRepositoryArgs> zypper;
 
-    public Output<ZypperRepositoryArgs> zypper() {
-        return this.zypper == null ? Codegen.empty() : this.zypper;
+    public Optional<Output<ZypperRepositoryArgs>> zypper() {
+        return Optional.ofNullable(this.zypper);
     }
 
-    public PackageRepositoryArgs(
-        @Nullable Output<AptRepositoryArgs> apt,
-        @Nullable Output<GooRepositoryArgs> goo,
-        @Nullable Output<YumRepositoryArgs> yum,
-        @Nullable Output<ZypperRepositoryArgs> zypper) {
-        this.apt = apt;
-        this.goo = goo;
-        this.yum = yum;
-        this.zypper = zypper;
-    }
+    private PackageRepositoryArgs() {}
 
-    private PackageRepositoryArgs() {
-        this.apt = Codegen.empty();
-        this.goo = Codegen.empty();
-        this.yum = Codegen.empty();
-        this.zypper = Codegen.empty();
+    private PackageRepositoryArgs(PackageRepositoryArgs $) {
+        this.apt = $.apt;
+        this.goo = $.goo;
+        this.yum = $.yum;
+        this.zypper = $.zypper;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AptRepositoryArgs> apt;
-        private @Nullable Output<GooRepositoryArgs> goo;
-        private @Nullable Output<YumRepositoryArgs> yum;
-        private @Nullable Output<ZypperRepositoryArgs> zypper;
+        private PackageRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageRepositoryArgs();
         }
 
         public Builder(PackageRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apt = defaults.apt;
-    	      this.goo = defaults.goo;
-    	      this.yum = defaults.yum;
-    	      this.zypper = defaults.zypper;
+            $ = new PackageRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apt(@Nullable Output<AptRepositoryArgs> apt) {
-            this.apt = apt;
+            $.apt = apt;
             return this;
         }
-        public Builder apt(@Nullable AptRepositoryArgs apt) {
-            this.apt = Codegen.ofNullable(apt);
-            return this;
+
+        public Builder apt(AptRepositoryArgs apt) {
+            return apt(Output.of(apt));
         }
+
         public Builder goo(@Nullable Output<GooRepositoryArgs> goo) {
-            this.goo = goo;
+            $.goo = goo;
             return this;
         }
-        public Builder goo(@Nullable GooRepositoryArgs goo) {
-            this.goo = Codegen.ofNullable(goo);
-            return this;
+
+        public Builder goo(GooRepositoryArgs goo) {
+            return goo(Output.of(goo));
         }
+
         public Builder yum(@Nullable Output<YumRepositoryArgs> yum) {
-            this.yum = yum;
+            $.yum = yum;
             return this;
         }
-        public Builder yum(@Nullable YumRepositoryArgs yum) {
-            this.yum = Codegen.ofNullable(yum);
-            return this;
+
+        public Builder yum(YumRepositoryArgs yum) {
+            return yum(Output.of(yum));
         }
+
         public Builder zypper(@Nullable Output<ZypperRepositoryArgs> zypper) {
-            this.zypper = zypper;
+            $.zypper = zypper;
             return this;
         }
-        public Builder zypper(@Nullable ZypperRepositoryArgs zypper) {
-            this.zypper = Codegen.ofNullable(zypper);
-            return this;
-        }        public PackageRepositoryArgs build() {
-            return new PackageRepositoryArgs(apt, goo, yum, zypper);
+
+        public Builder zypper(ZypperRepositoryArgs zypper) {
+            return zypper(Output.of(zypper));
+        }
+
+        public PackageRepositoryArgs build() {
+            return $;
         }
     }
+
 }

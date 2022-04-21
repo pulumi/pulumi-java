@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs Empty = new WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs();
 
-    public WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs();
         }
         public WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs build() {
-            return new WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathGetArgs();
+            return $;
         }
     }
+
 }

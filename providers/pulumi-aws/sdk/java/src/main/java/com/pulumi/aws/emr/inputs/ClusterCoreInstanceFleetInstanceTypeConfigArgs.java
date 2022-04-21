@@ -7,12 +7,12 @@ import com.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetInstanceTypeConfigConfi
 import com.pulumi.aws.emr.inputs.ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigArgs extends com.pu
      * 
      */
     @Import(name="bidPrice")
-      private final @Nullable Output<String> bidPrice;
+    private @Nullable Output<String> bidPrice;
 
-    public Output<String> bidPrice() {
-        return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
+    public Optional<Output<String>> bidPrice() {
+        return Optional.ofNullable(this.bidPrice);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigArgs extends com.pu
      * 
      */
     @Import(name="bidPriceAsPercentageOfOnDemandPrice")
-      private final @Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice;
+    private @Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice;
 
-    public Output<Double> bidPriceAsPercentageOfOnDemandPrice() {
-        return this.bidPriceAsPercentageOfOnDemandPrice == null ? Codegen.empty() : this.bidPriceAsPercentageOfOnDemandPrice;
+    public Optional<Output<Double>> bidPriceAsPercentageOfOnDemandPrice() {
+        return Optional.ofNullable(this.bidPriceAsPercentageOfOnDemandPrice);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigArgs extends com.pu
      * 
      */
     @Import(name="configurations")
-      private final @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations;
+    private @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations;
 
-    public Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations() {
-        return this.configurations == null ? Codegen.empty() : this.configurations;
+    public Optional<Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs>>> configurations() {
+        return Optional.ofNullable(this.configurations);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigArgs extends com.pu
      * 
      */
     @Import(name="ebsConfigs")
-      private final @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs;
+    private @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs;
 
-    public Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs() {
-        return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
+    public Optional<Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs>>> ebsConfigs() {
+        return Optional.ofNullable(this.ebsConfigs);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigArgs extends com.pu
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
@@ -80,121 +80,107 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigArgs extends com.pu
      * 
      */
     @Import(name="weightedCapacity")
-      private final @Nullable Output<Integer> weightedCapacity;
+    private @Nullable Output<Integer> weightedCapacity;
 
-    public Output<Integer> weightedCapacity() {
-        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
+    public Optional<Output<Integer>> weightedCapacity() {
+        return Optional.ofNullable(this.weightedCapacity);
     }
 
-    public ClusterCoreInstanceFleetInstanceTypeConfigArgs(
-        @Nullable Output<String> bidPrice,
-        @Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice,
-        @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations,
-        @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs,
-        Output<String> instanceType,
-        @Nullable Output<Integer> weightedCapacity) {
-        this.bidPrice = bidPrice;
-        this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
-        this.configurations = configurations;
-        this.ebsConfigs = ebsConfigs;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.weightedCapacity = weightedCapacity;
-    }
+    private ClusterCoreInstanceFleetInstanceTypeConfigArgs() {}
 
-    private ClusterCoreInstanceFleetInstanceTypeConfigArgs() {
-        this.bidPrice = Codegen.empty();
-        this.bidPriceAsPercentageOfOnDemandPrice = Codegen.empty();
-        this.configurations = Codegen.empty();
-        this.ebsConfigs = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.weightedCapacity = Codegen.empty();
+    private ClusterCoreInstanceFleetInstanceTypeConfigArgs(ClusterCoreInstanceFleetInstanceTypeConfigArgs $) {
+        this.bidPrice = $.bidPrice;
+        this.bidPriceAsPercentageOfOnDemandPrice = $.bidPriceAsPercentageOfOnDemandPrice;
+        this.configurations = $.configurations;
+        this.ebsConfigs = $.ebsConfigs;
+        this.instanceType = $.instanceType;
+        this.weightedCapacity = $.weightedCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCoreInstanceFleetInstanceTypeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bidPrice;
-        private @Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice;
-        private @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations;
-        private @Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs;
-        private Output<String> instanceType;
-        private @Nullable Output<Integer> weightedCapacity;
+        private ClusterCoreInstanceFleetInstanceTypeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCoreInstanceFleetInstanceTypeConfigArgs();
         }
 
         public Builder(ClusterCoreInstanceFleetInstanceTypeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bidPrice = defaults.bidPrice;
-    	      this.bidPriceAsPercentageOfOnDemandPrice = defaults.bidPriceAsPercentageOfOnDemandPrice;
-    	      this.configurations = defaults.configurations;
-    	      this.ebsConfigs = defaults.ebsConfigs;
-    	      this.instanceType = defaults.instanceType;
-    	      this.weightedCapacity = defaults.weightedCapacity;
+            $ = new ClusterCoreInstanceFleetInstanceTypeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
-            this.bidPrice = bidPrice;
+            $.bidPrice = bidPrice;
             return this;
         }
-        public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Codegen.ofNullable(bidPrice);
-            return this;
+
+        public Builder bidPrice(String bidPrice) {
+            return bidPrice(Output.of(bidPrice));
         }
+
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice) {
-            this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
+            $.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
             return this;
         }
-        public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
-            this.bidPriceAsPercentageOfOnDemandPrice = Codegen.ofNullable(bidPriceAsPercentageOfOnDemandPrice);
-            return this;
+
+        public Builder bidPriceAsPercentageOfOnDemandPrice(Double bidPriceAsPercentageOfOnDemandPrice) {
+            return bidPriceAsPercentageOfOnDemandPrice(Output.of(bidPriceAsPercentageOfOnDemandPrice));
         }
+
         public Builder configurations(@Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations) {
-            this.configurations = configurations;
+            $.configurations = configurations;
             return this;
         }
-        public Builder configurations(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs> configurations) {
-            this.configurations = Codegen.ofNullable(configurations);
-            return this;
+
+        public Builder configurations(List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs> configurations) {
+            return configurations(Output.of(configurations));
         }
+
         public Builder configurations(ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs... configurations) {
             return configurations(List.of(configurations));
         }
+
         public Builder ebsConfigs(@Nullable Output<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs) {
-            this.ebsConfigs = ebsConfigs;
+            $.ebsConfigs = ebsConfigs;
             return this;
         }
-        public Builder ebsConfigs(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs> ebsConfigs) {
-            this.ebsConfigs = Codegen.ofNullable(ebsConfigs);
-            return this;
+
+        public Builder ebsConfigs(List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs> ebsConfigs) {
+            return ebsConfigs(Output.of(ebsConfigs));
         }
+
         public Builder ebsConfigs(ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs... ebsConfigs) {
             return ebsConfigs(List.of(ebsConfigs));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder weightedCapacity(@Nullable Output<Integer> weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
+            $.weightedCapacity = weightedCapacity;
             return this;
         }
-        public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
-            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
-            return this;
-        }        public ClusterCoreInstanceFleetInstanceTypeConfigArgs build() {
-            return new ClusterCoreInstanceFleetInstanceTypeConfigArgs(bidPrice, bidPriceAsPercentageOfOnDemandPrice, configurations, ebsConfigs, instanceType, weightedCapacity);
+
+        public Builder weightedCapacity(Integer weightedCapacity) {
+            return weightedCapacity(Output.of(weightedCapacity));
+        }
+
+        public ClusterCoreInstanceFleetInstanceTypeConfigArgs build() {
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

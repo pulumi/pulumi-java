@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentInstanceFilterArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentOneTimeScheduleArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleArgs;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentRolloutArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instanceFilter", required=true)
-      private final Output<PatchDeploymentInstanceFilterArgs> instanceFilter;
+    private Output<PatchDeploymentInstanceFilterArgs> instanceFilter;
 
     public Output<PatchDeploymentInstanceFilterArgs> instanceFilter() {
         return this.instanceFilter;
@@ -61,10 +61,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="oneTimeSchedule")
-      private final @Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule;
+    private @Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule;
 
-    public Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule() {
-        return this.oneTimeSchedule == null ? Codegen.empty() : this.oneTimeSchedule;
+    public Optional<Output<PatchDeploymentOneTimeScheduleArgs>> oneTimeSchedule() {
+        return Optional.ofNullable(this.oneTimeSchedule);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="patchConfig")
-      private final @Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig;
+    private @Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig;
 
-    public Output<PatchDeploymentPatchConfigArgs> patchConfig() {
-        return this.patchConfig == null ? Codegen.empty() : this.patchConfig;
+    public Optional<Output<PatchDeploymentPatchConfigArgs>> patchConfig() {
+        return Optional.ofNullable(this.patchConfig);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="patchDeploymentId", required=true)
-      private final Output<String> patchDeploymentId;
+    private Output<String> patchDeploymentId;
 
     public Output<String> patchDeploymentId() {
         return this.patchDeploymentId;
@@ -101,10 +101,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="recurringSchedule")
-      private final @Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule;
+    private @Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule;
 
-    public Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule() {
-        return this.recurringSchedule == null ? Codegen.empty() : this.recurringSchedule;
+    public Optional<Output<PatchDeploymentRecurringScheduleArgs>> recurringSchedule() {
+        return Optional.ofNullable(this.recurringSchedule);
     }
 
     /**
@@ -125,154 +125,130 @@ public final class PatchDeploymentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rollout")
-      private final @Nullable Output<PatchDeploymentRolloutArgs> rollout;
+    private @Nullable Output<PatchDeploymentRolloutArgs> rollout;
 
-    public Output<PatchDeploymentRolloutArgs> rollout() {
-        return this.rollout == null ? Codegen.empty() : this.rollout;
+    public Optional<Output<PatchDeploymentRolloutArgs>> rollout() {
+        return Optional.ofNullable(this.rollout);
     }
 
-    public PatchDeploymentArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> duration,
-        Output<PatchDeploymentInstanceFilterArgs> instanceFilter,
-        @Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule,
-        @Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig,
-        Output<String> patchDeploymentId,
-        @Nullable Output<String> project,
-        @Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule,
-        @Nullable Output<PatchDeploymentRolloutArgs> rollout) {
-        this.description = description;
-        this.duration = duration;
-        this.instanceFilter = Objects.requireNonNull(instanceFilter, "expected parameter 'instanceFilter' to be non-null");
-        this.oneTimeSchedule = oneTimeSchedule;
-        this.patchConfig = patchConfig;
-        this.patchDeploymentId = Objects.requireNonNull(patchDeploymentId, "expected parameter 'patchDeploymentId' to be non-null");
-        this.project = project;
-        this.recurringSchedule = recurringSchedule;
-        this.rollout = rollout;
-    }
+    private PatchDeploymentArgs() {}
 
-    private PatchDeploymentArgs() {
-        this.description = Codegen.empty();
-        this.duration = Codegen.empty();
-        this.instanceFilter = Codegen.empty();
-        this.oneTimeSchedule = Codegen.empty();
-        this.patchConfig = Codegen.empty();
-        this.patchDeploymentId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.recurringSchedule = Codegen.empty();
-        this.rollout = Codegen.empty();
+    private PatchDeploymentArgs(PatchDeploymentArgs $) {
+        this.description = $.description;
+        this.duration = $.duration;
+        this.instanceFilter = $.instanceFilter;
+        this.oneTimeSchedule = $.oneTimeSchedule;
+        this.patchConfig = $.patchConfig;
+        this.patchDeploymentId = $.patchDeploymentId;
+        this.project = $.project;
+        this.recurringSchedule = $.recurringSchedule;
+        this.rollout = $.rollout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> duration;
-        private Output<PatchDeploymentInstanceFilterArgs> instanceFilter;
-        private @Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule;
-        private @Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig;
-        private Output<String> patchDeploymentId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule;
-        private @Nullable Output<PatchDeploymentRolloutArgs> rollout;
+        private PatchDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentArgs();
         }
 
         public Builder(PatchDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.duration = defaults.duration;
-    	      this.instanceFilter = defaults.instanceFilter;
-    	      this.oneTimeSchedule = defaults.oneTimeSchedule;
-    	      this.patchConfig = defaults.patchConfig;
-    	      this.patchDeploymentId = defaults.patchDeploymentId;
-    	      this.project = defaults.project;
-    	      this.recurringSchedule = defaults.recurringSchedule;
-    	      this.rollout = defaults.rollout;
+            $ = new PatchDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder instanceFilter(Output<PatchDeploymentInstanceFilterArgs> instanceFilter) {
-            this.instanceFilter = Objects.requireNonNull(instanceFilter);
+            $.instanceFilter = instanceFilter;
             return this;
         }
+
         public Builder instanceFilter(PatchDeploymentInstanceFilterArgs instanceFilter) {
-            this.instanceFilter = Output.of(Objects.requireNonNull(instanceFilter));
-            return this;
+            return instanceFilter(Output.of(instanceFilter));
         }
+
         public Builder oneTimeSchedule(@Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule) {
-            this.oneTimeSchedule = oneTimeSchedule;
+            $.oneTimeSchedule = oneTimeSchedule;
             return this;
         }
-        public Builder oneTimeSchedule(@Nullable PatchDeploymentOneTimeScheduleArgs oneTimeSchedule) {
-            this.oneTimeSchedule = Codegen.ofNullable(oneTimeSchedule);
-            return this;
+
+        public Builder oneTimeSchedule(PatchDeploymentOneTimeScheduleArgs oneTimeSchedule) {
+            return oneTimeSchedule(Output.of(oneTimeSchedule));
         }
+
         public Builder patchConfig(@Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig) {
-            this.patchConfig = patchConfig;
+            $.patchConfig = patchConfig;
             return this;
         }
-        public Builder patchConfig(@Nullable PatchDeploymentPatchConfigArgs patchConfig) {
-            this.patchConfig = Codegen.ofNullable(patchConfig);
-            return this;
+
+        public Builder patchConfig(PatchDeploymentPatchConfigArgs patchConfig) {
+            return patchConfig(Output.of(patchConfig));
         }
+
         public Builder patchDeploymentId(Output<String> patchDeploymentId) {
-            this.patchDeploymentId = Objects.requireNonNull(patchDeploymentId);
+            $.patchDeploymentId = patchDeploymentId;
             return this;
         }
+
         public Builder patchDeploymentId(String patchDeploymentId) {
-            this.patchDeploymentId = Output.of(Objects.requireNonNull(patchDeploymentId));
-            return this;
+            return patchDeploymentId(Output.of(patchDeploymentId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder recurringSchedule(@Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule) {
-            this.recurringSchedule = recurringSchedule;
+            $.recurringSchedule = recurringSchedule;
             return this;
         }
-        public Builder recurringSchedule(@Nullable PatchDeploymentRecurringScheduleArgs recurringSchedule) {
-            this.recurringSchedule = Codegen.ofNullable(recurringSchedule);
-            return this;
+
+        public Builder recurringSchedule(PatchDeploymentRecurringScheduleArgs recurringSchedule) {
+            return recurringSchedule(Output.of(recurringSchedule));
         }
+
         public Builder rollout(@Nullable Output<PatchDeploymentRolloutArgs> rollout) {
-            this.rollout = rollout;
+            $.rollout = rollout;
             return this;
         }
-        public Builder rollout(@Nullable PatchDeploymentRolloutArgs rollout) {
-            this.rollout = Codegen.ofNullable(rollout);
-            return this;
-        }        public PatchDeploymentArgs build() {
-            return new PatchDeploymentArgs(description, duration, instanceFilter, oneTimeSchedule, patchConfig, patchDeploymentId, project, recurringSchedule, rollout);
+
+        public Builder rollout(PatchDeploymentRolloutArgs rollout) {
+            return rollout(Output.of(rollout));
+        }
+
+        public PatchDeploymentArgs build() {
+            $.instanceFilter = Objects.requireNonNull($.instanceFilter, "expected parameter 'instanceFilter' to be non-null");
+            $.patchDeploymentId = Objects.requireNonNull($.patchDeploymentId, "expected parameter 'patchDeploymentId' to be non-null");
+            return $;
         }
     }
+
 }

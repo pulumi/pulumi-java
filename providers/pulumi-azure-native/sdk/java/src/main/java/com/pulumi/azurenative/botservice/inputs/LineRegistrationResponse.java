@@ -23,10 +23,10 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="channelAccessToken")
-      private final @Nullable String channelAccessToken;
+    private @Nullable String channelAccessToken;
 
     public Optional<String> channelAccessToken() {
-        return this.channelAccessToken == null ? Optional.empty() : Optional.ofNullable(this.channelAccessToken);
+        return Optional.ofNullable(this.channelAccessToken);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="channelSecret")
-      private final @Nullable String channelSecret;
+    private @Nullable String channelSecret;
 
     public Optional<String> channelSecret() {
-        return this.channelSecret == null ? Optional.empty() : Optional.ofNullable(this.channelSecret);
+        return Optional.ofNullable(this.channelSecret);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class LineRegistrationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="generatedId", required=true)
-      private final String generatedId;
+    private String generatedId;
 
     public String generatedId() {
         return this.generatedId;
     }
 
-    public LineRegistrationResponse(
-        @Nullable String channelAccessToken,
-        @Nullable String channelSecret,
-        String generatedId) {
-        this.channelAccessToken = channelAccessToken;
-        this.channelSecret = channelSecret;
-        this.generatedId = Objects.requireNonNull(generatedId, "expected parameter 'generatedId' to be non-null");
-    }
+    private LineRegistrationResponse() {}
 
-    private LineRegistrationResponse() {
-        this.channelAccessToken = null;
-        this.channelSecret = null;
-        this.generatedId = null;
+    private LineRegistrationResponse(LineRegistrationResponse $) {
+        this.channelAccessToken = $.channelAccessToken;
+        this.channelSecret = $.channelSecret;
+        this.generatedId = $.generatedId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LineRegistrationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String channelAccessToken;
-        private @Nullable String channelSecret;
-        private String generatedId;
+        private LineRegistrationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LineRegistrationResponse();
         }
 
         public Builder(LineRegistrationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelAccessToken = defaults.channelAccessToken;
-    	      this.channelSecret = defaults.channelSecret;
-    	      this.generatedId = defaults.generatedId;
+            $ = new LineRegistrationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder channelAccessToken(@Nullable String channelAccessToken) {
-            this.channelAccessToken = channelAccessToken;
+            $.channelAccessToken = channelAccessToken;
             return this;
         }
+
         public Builder channelSecret(@Nullable String channelSecret) {
-            this.channelSecret = channelSecret;
+            $.channelSecret = channelSecret;
             return this;
         }
+
         public Builder generatedId(String generatedId) {
-            this.generatedId = Objects.requireNonNull(generatedId);
+            $.generatedId = generatedId;
             return this;
-        }        public LineRegistrationResponse build() {
-            return new LineRegistrationResponse(channelAccessToken, channelSecret, generatedId);
+        }
+
+        public LineRegistrationResponse build() {
+            $.generatedId = Objects.requireNonNull($.generatedId, "expected parameter 'generatedId' to be non-null");
+            return $;
         }
     }
+
 }

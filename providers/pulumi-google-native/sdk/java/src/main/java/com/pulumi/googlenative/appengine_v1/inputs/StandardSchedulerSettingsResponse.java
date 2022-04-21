@@ -22,7 +22,7 @@ public final class StandardSchedulerSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="maxInstances", required=true)
-      private final Integer maxInstances;
+    private Integer maxInstances;
 
     public Integer maxInstances() {
         return this.maxInstances;
@@ -33,7 +33,7 @@ public final class StandardSchedulerSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="minInstances", required=true)
-      private final Integer minInstances;
+    private Integer minInstances;
 
     public Integer minInstances() {
         return this.minInstances;
@@ -44,7 +44,7 @@ public final class StandardSchedulerSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetCpuUtilization", required=true)
-      private final Double targetCpuUtilization;
+    private Double targetCpuUtilization;
 
     public Double targetCpuUtilization() {
         return this.targetCpuUtilization;
@@ -55,73 +55,66 @@ public final class StandardSchedulerSettingsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetThroughputUtilization", required=true)
-      private final Double targetThroughputUtilization;
+    private Double targetThroughputUtilization;
 
     public Double targetThroughputUtilization() {
         return this.targetThroughputUtilization;
     }
 
-    public StandardSchedulerSettingsResponse(
-        Integer maxInstances,
-        Integer minInstances,
-        Double targetCpuUtilization,
-        Double targetThroughputUtilization) {
-        this.maxInstances = Objects.requireNonNull(maxInstances, "expected parameter 'maxInstances' to be non-null");
-        this.minInstances = Objects.requireNonNull(minInstances, "expected parameter 'minInstances' to be non-null");
-        this.targetCpuUtilization = Objects.requireNonNull(targetCpuUtilization, "expected parameter 'targetCpuUtilization' to be non-null");
-        this.targetThroughputUtilization = Objects.requireNonNull(targetThroughputUtilization, "expected parameter 'targetThroughputUtilization' to be non-null");
-    }
+    private StandardSchedulerSettingsResponse() {}
 
-    private StandardSchedulerSettingsResponse() {
-        this.maxInstances = null;
-        this.minInstances = null;
-        this.targetCpuUtilization = null;
-        this.targetThroughputUtilization = null;
+    private StandardSchedulerSettingsResponse(StandardSchedulerSettingsResponse $) {
+        this.maxInstances = $.maxInstances;
+        this.minInstances = $.minInstances;
+        this.targetCpuUtilization = $.targetCpuUtilization;
+        this.targetThroughputUtilization = $.targetThroughputUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardSchedulerSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxInstances;
-        private Integer minInstances;
-        private Double targetCpuUtilization;
-        private Double targetThroughputUtilization;
+        private StandardSchedulerSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardSchedulerSettingsResponse();
         }
 
         public Builder(StandardSchedulerSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstances = defaults.maxInstances;
-    	      this.minInstances = defaults.minInstances;
-    	      this.targetCpuUtilization = defaults.targetCpuUtilization;
-    	      this.targetThroughputUtilization = defaults.targetThroughputUtilization;
+            $ = new StandardSchedulerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstances(Integer maxInstances) {
-            this.maxInstances = Objects.requireNonNull(maxInstances);
+            $.maxInstances = maxInstances;
             return this;
         }
+
         public Builder minInstances(Integer minInstances) {
-            this.minInstances = Objects.requireNonNull(minInstances);
+            $.minInstances = minInstances;
             return this;
         }
+
         public Builder targetCpuUtilization(Double targetCpuUtilization) {
-            this.targetCpuUtilization = Objects.requireNonNull(targetCpuUtilization);
+            $.targetCpuUtilization = targetCpuUtilization;
             return this;
         }
+
         public Builder targetThroughputUtilization(Double targetThroughputUtilization) {
-            this.targetThroughputUtilization = Objects.requireNonNull(targetThroughputUtilization);
+            $.targetThroughputUtilization = targetThroughputUtilization;
             return this;
-        }        public StandardSchedulerSettingsResponse build() {
-            return new StandardSchedulerSettingsResponse(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
+        }
+
+        public StandardSchedulerSettingsResponse build() {
+            $.maxInstances = Objects.requireNonNull($.maxInstances, "expected parameter 'maxInstances' to be non-null");
+            $.minInstances = Objects.requireNonNull($.minInstances, "expected parameter 'minInstances' to be non-null");
+            $.targetCpuUtilization = Objects.requireNonNull($.targetCpuUtilization, "expected parameter 'targetCpuUtilization' to be non-null");
+            $.targetThroughputUtilization = Objects.requireNonNull($.targetThroughputUtilization, "expected parameter 'targetThroughputUtilization' to be non-null");
+            return $;
         }
     }
+
 }

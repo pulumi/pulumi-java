@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudfunctions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class FunctionSourceRepositoryArgs extends com.pulumi.resources.Res
     public static final FunctionSourceRepositoryArgs Empty = new FunctionSourceRepositoryArgs();
 
     @Import(name="deployedUrl")
-      private final @Nullable Output<String> deployedUrl;
+    private @Nullable Output<String> deployedUrl;
 
-    public Output<String> deployedUrl() {
-        return this.deployedUrl == null ? Codegen.empty() : this.deployedUrl;
+    public Optional<Output<String>> deployedUrl() {
+        return Optional.ofNullable(this.deployedUrl);
     }
 
     /**
@@ -27,63 +27,59 @@ public final class FunctionSourceRepositoryArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public FunctionSourceRepositoryArgs(
-        @Nullable Output<String> deployedUrl,
-        Output<String> url) {
-        this.deployedUrl = deployedUrl;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private FunctionSourceRepositoryArgs() {}
 
-    private FunctionSourceRepositoryArgs() {
-        this.deployedUrl = Codegen.empty();
-        this.url = Codegen.empty();
+    private FunctionSourceRepositoryArgs(FunctionSourceRepositoryArgs $) {
+        this.deployedUrl = $.deployedUrl;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionSourceRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deployedUrl;
-        private Output<String> url;
+        private FunctionSourceRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionSourceRepositoryArgs();
         }
 
         public Builder(FunctionSourceRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deployedUrl = defaults.deployedUrl;
-    	      this.url = defaults.url;
+            $ = new FunctionSourceRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deployedUrl(@Nullable Output<String> deployedUrl) {
-            this.deployedUrl = deployedUrl;
+            $.deployedUrl = deployedUrl;
             return this;
         }
-        public Builder deployedUrl(@Nullable String deployedUrl) {
-            this.deployedUrl = Codegen.ofNullable(deployedUrl);
-            return this;
+
+        public Builder deployedUrl(String deployedUrl) {
+            return deployedUrl(Output.of(deployedUrl));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public FunctionSourceRepositoryArgs build() {
-            return new FunctionSourceRepositoryArgs(deployedUrl, url);
+            return url(Output.of(url));
+        }
+
+        public FunctionSourceRepositoryArgs build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

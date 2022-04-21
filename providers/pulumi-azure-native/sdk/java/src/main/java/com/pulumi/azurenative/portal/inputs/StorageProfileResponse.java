@@ -24,10 +24,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="diskSizeInGB")
-      private final @Nullable Integer diskSizeInGB;
+    private @Nullable Integer diskSizeInGB;
 
     public Optional<Integer> diskSizeInGB() {
-        return this.diskSizeInGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeInGB);
+        return Optional.ofNullable(this.diskSizeInGB);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fileShareName")
-      private final @Nullable String fileShareName;
+    private @Nullable String fileShareName;
 
     public Optional<String> fileShareName() {
-        return this.fileShareName == null ? Optional.empty() : Optional.ofNullable(this.fileShareName);
+        return Optional.ofNullable(this.fileShareName);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="storageAccountResourceId")
-      private final @Nullable String storageAccountResourceId;
+    private @Nullable String storageAccountResourceId;
 
     public Optional<String> storageAccountResourceId() {
-        return this.storageAccountResourceId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountResourceId);
+        return Optional.ofNullable(this.storageAccountResourceId);
     }
 
-    public StorageProfileResponse(
-        @Nullable Integer diskSizeInGB,
-        @Nullable String fileShareName,
-        @Nullable String storageAccountResourceId) {
-        this.diskSizeInGB = diskSizeInGB;
-        this.fileShareName = fileShareName;
-        this.storageAccountResourceId = storageAccountResourceId;
-    }
+    private StorageProfileResponse() {}
 
-    private StorageProfileResponse() {
-        this.diskSizeInGB = null;
-        this.fileShareName = null;
-        this.storageAccountResourceId = null;
+    private StorageProfileResponse(StorageProfileResponse $) {
+        this.diskSizeInGB = $.diskSizeInGB;
+        this.fileShareName = $.fileShareName;
+        this.storageAccountResourceId = $.storageAccountResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer diskSizeInGB;
-        private @Nullable String fileShareName;
-        private @Nullable String storageAccountResourceId;
+        private StorageProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileResponse();
         }
 
         public Builder(StorageProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeInGB = defaults.diskSizeInGB;
-    	      this.fileShareName = defaults.fileShareName;
-    	      this.storageAccountResourceId = defaults.storageAccountResourceId;
+            $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeInGB(@Nullable Integer diskSizeInGB) {
-            this.diskSizeInGB = diskSizeInGB;
+            $.diskSizeInGB = diskSizeInGB;
             return this;
         }
+
         public Builder fileShareName(@Nullable String fileShareName) {
-            this.fileShareName = fileShareName;
+            $.fileShareName = fileShareName;
             return this;
         }
+
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
-            this.storageAccountResourceId = storageAccountResourceId;
+            $.storageAccountResourceId = storageAccountResourceId;
             return this;
-        }        public StorageProfileResponse build() {
-            return new StorageProfileResponse(diskSizeInGB, fileShareName, storageAccountResourceId);
+        }
+
+        public StorageProfileResponse build() {
+            return $;
         }
     }
+
 }

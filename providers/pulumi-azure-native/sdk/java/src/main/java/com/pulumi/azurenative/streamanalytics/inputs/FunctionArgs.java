@@ -6,9 +6,9 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 import com.pulumi.azurenative.streamanalytics.inputs.ScalarFunctionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ScalarFunctionPropertiesArgs> properties;
+    private @Nullable Output<ScalarFunctionPropertiesArgs> properties;
 
-    public Output<ScalarFunctionPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ScalarFunctionPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public FunctionArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<ScalarFunctionPropertiesArgs> properties) {
-        this.name = name;
-        this.properties = properties;
-    }
+    private FunctionArgs() {}
 
-    private FunctionArgs() {
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
+    private FunctionArgs(FunctionArgs $) {
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<ScalarFunctionPropertiesArgs> properties;
+        private FunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionArgs();
         }
 
         public Builder(FunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new FunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder properties(@Nullable Output<ScalarFunctionPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ScalarFunctionPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public FunctionArgs build() {
-            return new FunctionArgs(name, properties);
+
+        public Builder properties(ScalarFunctionPropertiesArgs properties) {
+            return properties(Output.of(properties));
+        }
+
+        public FunctionArgs build() {
+            return $;
         }
     }
+
 }

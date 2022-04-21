@@ -19,10 +19,10 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class GetActivityArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public GetActivityArgs(
-        @Nullable String arn,
-        @Nullable String name) {
-        this.arn = arn;
-        this.name = name;
-    }
+    private GetActivityArgs() {}
 
-    private GetActivityArgs() {
-        this.arn = null;
-        this.name = null;
+    private GetActivityArgs(GetActivityArgs $) {
+        this.arn = $.arn;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String name;
+        private GetActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetActivityArgs();
         }
 
         public Builder(GetActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
+            $ = new GetActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public GetActivityArgs build() {
-            return new GetActivityArgs(arn, name);
+        }
+
+        public GetActivityArgs build() {
+            return $;
         }
     }
+
 }

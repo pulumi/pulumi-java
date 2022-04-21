@@ -5,10 +5,10 @@ package com.pulumi.aws.networkfirewall.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @Import(name="flags", required=true)
-      private final Output<List<String>> flags;
+    private Output<List<String>> flags;
 
     public Output<List<String>> flags() {
         return this.flags;
@@ -34,69 +34,67 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * 
      */
     @Import(name="masks")
-      private final @Nullable Output<List<String>> masks;
+    private @Nullable Output<List<String>> masks;
 
-    public Output<List<String>> masks() {
-        return this.masks == null ? Codegen.empty() : this.masks;
+    public Optional<Output<List<String>>> masks() {
+        return Optional.ofNullable(this.masks);
     }
 
-    public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs(
-        Output<List<String>> flags,
-        @Nullable Output<List<String>> masks) {
-        this.flags = Objects.requireNonNull(flags, "expected parameter 'flags' to be non-null");
-        this.masks = masks;
-    }
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs() {}
 
-    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs() {
-        this.flags = Codegen.empty();
-        this.masks = Codegen.empty();
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs $) {
+        this.flags = $.flags;
+        this.masks = $.masks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> flags;
-        private @Nullable Output<List<String>> masks;
+        private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs();
         }
 
         public Builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flags = defaults.flags;
-    	      this.masks = defaults.masks;
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flags(Output<List<String>> flags) {
-            this.flags = Objects.requireNonNull(flags);
+            $.flags = flags;
             return this;
         }
+
         public Builder flags(List<String> flags) {
-            this.flags = Output.of(Objects.requireNonNull(flags));
-            return this;
+            return flags(Output.of(flags));
         }
+
         public Builder flags(String... flags) {
             return flags(List.of(flags));
         }
+
         public Builder masks(@Nullable Output<List<String>> masks) {
-            this.masks = masks;
+            $.masks = masks;
             return this;
         }
-        public Builder masks(@Nullable List<String> masks) {
-            this.masks = Codegen.ofNullable(masks);
-            return this;
+
+        public Builder masks(List<String> masks) {
+            return masks(Output.of(masks));
         }
+
         public Builder masks(String... masks) {
             return masks(List.of(masks));
-        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs build() {
-            return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs(flags, masks);
+        }
+
+        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs build() {
+            $.flags = Objects.requireNonNull($.flags, "expected parameter 'flags' to be non-null");
+            return $;
         }
     }
+
 }

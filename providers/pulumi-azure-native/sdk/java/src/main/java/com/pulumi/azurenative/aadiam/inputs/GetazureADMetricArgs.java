@@ -17,7 +17,7 @@ public final class GetazureADMetricArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="azureADMetricsName", required=true)
-      private final String azureADMetricsName;
+    private String azureADMetricsName;
 
     public String azureADMetricsName() {
         return this.azureADMetricsName;
@@ -28,55 +28,52 @@ public final class GetazureADMetricArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetazureADMetricArgs(
-        String azureADMetricsName,
-        String resourceGroupName) {
-        this.azureADMetricsName = Objects.requireNonNull(azureADMetricsName, "expected parameter 'azureADMetricsName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetazureADMetricArgs() {}
 
-    private GetazureADMetricArgs() {
-        this.azureADMetricsName = null;
-        this.resourceGroupName = null;
+    private GetazureADMetricArgs(GetazureADMetricArgs $) {
+        this.azureADMetricsName = $.azureADMetricsName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetazureADMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String azureADMetricsName;
-        private String resourceGroupName;
+        private GetazureADMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetazureADMetricArgs();
         }
 
         public Builder(GetazureADMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureADMetricsName = defaults.azureADMetricsName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetazureADMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureADMetricsName(String azureADMetricsName) {
-            this.azureADMetricsName = Objects.requireNonNull(azureADMetricsName);
+            $.azureADMetricsName = azureADMetricsName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetazureADMetricArgs build() {
-            return new GetazureADMetricArgs(azureADMetricsName, resourceGroupName);
+        }
+
+        public GetazureADMetricArgs build() {
+            $.azureADMetricsName = Objects.requireNonNull($.azureADMetricsName, "expected parameter 'azureADMetricsName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

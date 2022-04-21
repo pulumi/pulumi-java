@@ -21,7 +21,7 @@ public final class CniConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="podSubnet", required=true)
-      private final String podSubnet;
+    private String podSubnet;
 
     public String podSubnet() {
         return this.podSubnet;
@@ -32,7 +32,7 @@ public final class CniConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceSubnet", required=true)
-      private final String serviceSubnet;
+    private String serviceSubnet;
 
     public String serviceSubnet() {
         return this.serviceSubnet;
@@ -43,7 +43,7 @@ public final class CniConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -54,73 +54,66 @@ public final class CniConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public CniConfigResponse(
-        String podSubnet,
-        String serviceSubnet,
-        String type,
-        String version) {
-        this.podSubnet = Objects.requireNonNull(podSubnet, "expected parameter 'podSubnet' to be non-null");
-        this.serviceSubnet = Objects.requireNonNull(serviceSubnet, "expected parameter 'serviceSubnet' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private CniConfigResponse() {}
 
-    private CniConfigResponse() {
-        this.podSubnet = null;
-        this.serviceSubnet = null;
-        this.type = null;
-        this.version = null;
+    private CniConfigResponse(CniConfigResponse $) {
+        this.podSubnet = $.podSubnet;
+        this.serviceSubnet = $.serviceSubnet;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CniConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String podSubnet;
-        private String serviceSubnet;
-        private String type;
-        private String version;
+        private CniConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CniConfigResponse();
         }
 
         public Builder(CniConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.podSubnet = defaults.podSubnet;
-    	      this.serviceSubnet = defaults.serviceSubnet;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new CniConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder podSubnet(String podSubnet) {
-            this.podSubnet = Objects.requireNonNull(podSubnet);
+            $.podSubnet = podSubnet;
             return this;
         }
+
         public Builder serviceSubnet(String serviceSubnet) {
-            this.serviceSubnet = Objects.requireNonNull(serviceSubnet);
+            $.serviceSubnet = serviceSubnet;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public CniConfigResponse build() {
-            return new CniConfigResponse(podSubnet, serviceSubnet, type, version);
+        }
+
+        public CniConfigResponse build() {
+            $.podSubnet = Objects.requireNonNull($.podSubnet, "expected parameter 'podSubnet' to be non-null");
+            $.serviceSubnet = Objects.requireNonNull($.serviceSubnet, "expected parameter 'serviceSubnet' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

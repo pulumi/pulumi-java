@@ -7,9 +7,9 @@ import com.pulumi.azurenative.customproviders.enums.ValidationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class CustomRPValidationsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="specification", required=true)
-      private final Output<String> specification;
+    private Output<String> specification;
 
     public Output<String> specification() {
         return this.specification;
@@ -37,63 +37,59 @@ public final class CustomRPValidationsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="validationType")
-      private final @Nullable Output<Either<String,ValidationType>> validationType;
+    private @Nullable Output<Either<String,ValidationType>> validationType;
 
-    public Output<Either<String,ValidationType>> validationType() {
-        return this.validationType == null ? Codegen.empty() : this.validationType;
+    public Optional<Output<Either<String,ValidationType>>> validationType() {
+        return Optional.ofNullable(this.validationType);
     }
 
-    public CustomRPValidationsArgs(
-        Output<String> specification,
-        @Nullable Output<Either<String,ValidationType>> validationType) {
-        this.specification = Objects.requireNonNull(specification, "expected parameter 'specification' to be non-null");
-        this.validationType = validationType;
-    }
+    private CustomRPValidationsArgs() {}
 
-    private CustomRPValidationsArgs() {
-        this.specification = Codegen.empty();
-        this.validationType = Codegen.empty();
+    private CustomRPValidationsArgs(CustomRPValidationsArgs $) {
+        this.specification = $.specification;
+        this.validationType = $.validationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomRPValidationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> specification;
-        private @Nullable Output<Either<String,ValidationType>> validationType;
+        private CustomRPValidationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomRPValidationsArgs();
         }
 
         public Builder(CustomRPValidationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.specification = defaults.specification;
-    	      this.validationType = defaults.validationType;
+            $ = new CustomRPValidationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder specification(Output<String> specification) {
-            this.specification = Objects.requireNonNull(specification);
+            $.specification = specification;
             return this;
         }
+
         public Builder specification(String specification) {
-            this.specification = Output.of(Objects.requireNonNull(specification));
-            return this;
+            return specification(Output.of(specification));
         }
+
         public Builder validationType(@Nullable Output<Either<String,ValidationType>> validationType) {
-            this.validationType = validationType;
+            $.validationType = validationType;
             return this;
         }
-        public Builder validationType(@Nullable Either<String,ValidationType> validationType) {
-            this.validationType = Codegen.ofNullable(validationType);
-            return this;
-        }        public CustomRPValidationsArgs build() {
-            return new CustomRPValidationsArgs(specification, validationType);
+
+        public Builder validationType(Either<String,ValidationType> validationType) {
+            return validationType(Output.of(validationType));
+        }
+
+        public CustomRPValidationsArgs build() {
+            $.specification = Objects.requireNonNull($.specification, "expected parameter 'specification' to be non-null");
+            return $;
         }
     }
+
 }

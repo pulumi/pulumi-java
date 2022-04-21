@@ -6,9 +6,9 @@ package com.pulumi.aws.autoscaling.inputs;
 import com.pulumi.aws.autoscaling.inputs.TagTagGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingGroupName")
-      private final @Nullable Output<String> autoscalingGroupName;
+    private @Nullable Output<String> autoscalingGroupName;
 
-    public Output<String> autoscalingGroupName() {
-        return this.autoscalingGroupName == null ? Codegen.empty() : this.autoscalingGroupName;
+    public Optional<Output<String>> autoscalingGroupName() {
+        return Optional.ofNullable(this.autoscalingGroupName);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class TagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<TagTagGetArgs> tag;
+    private @Nullable Output<TagTagGetArgs> tag;
 
-    public Output<TagTagGetArgs> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<TagTagGetArgs>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public TagState(
-        @Nullable Output<String> autoscalingGroupName,
-        @Nullable Output<TagTagGetArgs> tag) {
-        this.autoscalingGroupName = autoscalingGroupName;
-        this.tag = tag;
-    }
+    private TagState() {}
 
-    private TagState() {
-        this.autoscalingGroupName = Codegen.empty();
-        this.tag = Codegen.empty();
+    private TagState(TagState $) {
+        this.autoscalingGroupName = $.autoscalingGroupName;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoscalingGroupName;
-        private @Nullable Output<TagTagGetArgs> tag;
+        private TagState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagState();
         }
 
         public Builder(TagState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingGroupName = defaults.autoscalingGroupName;
-    	      this.tag = defaults.tag;
+            $ = new TagState(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingGroupName(@Nullable Output<String> autoscalingGroupName) {
-            this.autoscalingGroupName = autoscalingGroupName;
+            $.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
-        public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
-            this.autoscalingGroupName = Codegen.ofNullable(autoscalingGroupName);
-            return this;
+
+        public Builder autoscalingGroupName(String autoscalingGroupName) {
+            return autoscalingGroupName(Output.of(autoscalingGroupName));
         }
+
         public Builder tag(@Nullable Output<TagTagGetArgs> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable TagTagGetArgs tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public TagState build() {
-            return new TagState(autoscalingGroupName, tag);
+
+        public Builder tag(TagTagGetArgs tag) {
+            return tag(Output.of(tag));
+        }
+
+        public TagState build() {
+            return $;
         }
     }
+
 }

@@ -27,10 +27,10 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="paths")
-      private final @Nullable List<String> paths;
+    private @Nullable List<String> paths;
 
-    public List<String> paths() {
-        return this.paths == null ? List.of() : this.paths;
+    public Optional<List<String>> paths() {
+        return Optional.ofNullable(this.paths);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="systemKey", required=true)
-      private final Boolean systemKey;
+    private Boolean systemKey;
 
     public Boolean systemKey() {
         return this.systemKey;
@@ -60,76 +60,68 @@ public final class ContainerPartitionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="version")
-      private final @Nullable Integer version;
+    private @Nullable Integer version;
 
     public Optional<Integer> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ContainerPartitionKeyResponse(
-        @Nullable String kind,
-        @Nullable List<String> paths,
-        Boolean systemKey,
-        @Nullable Integer version) {
-        this.kind = Codegen.stringProp("kind").arg(kind).def("Hash").getNullable();
-        this.paths = paths;
-        this.systemKey = Objects.requireNonNull(systemKey, "expected parameter 'systemKey' to be non-null");
-        this.version = version;
-    }
+    private ContainerPartitionKeyResponse() {}
 
-    private ContainerPartitionKeyResponse() {
-        this.kind = null;
-        this.paths = List.of();
-        this.systemKey = null;
-        this.version = null;
+    private ContainerPartitionKeyResponse(ContainerPartitionKeyResponse $) {
+        this.kind = $.kind;
+        this.paths = $.paths;
+        this.systemKey = $.systemKey;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPartitionKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kind;
-        private @Nullable List<String> paths;
-        private Boolean systemKey;
-        private @Nullable Integer version;
+        private ContainerPartitionKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPartitionKeyResponse();
         }
 
         public Builder(ContainerPartitionKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.paths = defaults.paths;
-    	      this.systemKey = defaults.systemKey;
-    	      this.version = defaults.version;
+            $ = new ContainerPartitionKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = paths;
+            $.paths = paths;
             return this;
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
+
         public Builder systemKey(Boolean systemKey) {
-            this.systemKey = Objects.requireNonNull(systemKey);
+            $.systemKey = systemKey;
             return this;
         }
+
         public Builder version(@Nullable Integer version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ContainerPartitionKeyResponse build() {
-            return new ContainerPartitionKeyResponse(kind, paths, systemKey, version);
+        }
+
+        public ContainerPartitionKeyResponse build() {
+            $.kind = Codegen.stringProp("kind").arg($.kind).def("Hash").getNullable();
+            $.systemKey = Objects.requireNonNull($.systemKey, "expected parameter 'systemKey' to be non-null");
+            return $;
         }
     }
+
 }

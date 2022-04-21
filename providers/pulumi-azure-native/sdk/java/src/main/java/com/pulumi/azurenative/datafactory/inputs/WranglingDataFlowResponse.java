@@ -28,10 +28,10 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="documentLocale")
-      private final @Nullable String documentLocale;
+    private @Nullable String documentLocale;
 
     public Optional<String> documentLocale() {
-        return this.documentLocale == null ? Optional.empty() : Optional.ofNullable(this.documentLocale);
+        return Optional.ofNullable(this.documentLocale);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="folder")
-      private final @Nullable DataFlowResponseFolder folder;
+    private @Nullable DataFlowResponseFolder folder;
 
     public Optional<DataFlowResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="script")
-      private final @Nullable String script;
+    private @Nullable String script;
 
     public Optional<String> script() {
-        return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sources")
-      private final @Nullable List<PowerQuerySourceResponse> sources;
+    private @Nullable List<PowerQuerySourceResponse> sources;
 
-    public List<PowerQuerySourceResponse> sources() {
-        return this.sources == null ? List.of() : this.sources;
+    public Optional<List<PowerQuerySourceResponse>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     /**
@@ -95,106 +95,89 @@ public final class WranglingDataFlowResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public WranglingDataFlowResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable String documentLocale,
-        @Nullable DataFlowResponseFolder folder,
-        @Nullable String script,
-        @Nullable List<PowerQuerySourceResponse> sources,
-        String type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.documentLocale = documentLocale;
-        this.folder = folder;
-        this.script = script;
-        this.sources = sources;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private WranglingDataFlowResponse() {}
 
-    private WranglingDataFlowResponse() {
-        this.annotations = List.of();
-        this.description = null;
-        this.documentLocale = null;
-        this.folder = null;
-        this.script = null;
-        this.sources = List.of();
-        this.type = null;
+    private WranglingDataFlowResponse(WranglingDataFlowResponse $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.documentLocale = $.documentLocale;
+        this.folder = $.folder;
+        this.script = $.script;
+        this.sources = $.sources;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WranglingDataFlowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String description;
-        private @Nullable String documentLocale;
-        private @Nullable DataFlowResponseFolder folder;
-        private @Nullable String script;
-        private @Nullable List<PowerQuerySourceResponse> sources;
-        private String type;
+        private WranglingDataFlowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WranglingDataFlowResponse();
         }
 
         public Builder(WranglingDataFlowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.documentLocale = defaults.documentLocale;
-    	      this.folder = defaults.folder;
-    	      this.script = defaults.script;
-    	      this.sources = defaults.sources;
-    	      this.type = defaults.type;
+            $ = new WranglingDataFlowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder documentLocale(@Nullable String documentLocale) {
-            this.documentLocale = documentLocale;
+            $.documentLocale = documentLocale;
             return this;
         }
+
         public Builder folder(@Nullable DataFlowResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder script(@Nullable String script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
+
         public Builder sources(@Nullable List<PowerQuerySourceResponse> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(PowerQuerySourceResponse... sources) {
             return sources(List.of(sources));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public WranglingDataFlowResponse build() {
-            return new WranglingDataFlowResponse(annotations, description, documentLocale, folder, script, sources, type);
+        }
+
+        public WranglingDataFlowResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.enums.AndroidInstrumentationTestOrchestratorOption;
 import com.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.testing_v1.inputs.ShardingOptionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="appApk")
-      private final @Nullable Output<FileReferenceArgs> appApk;
+    private @Nullable Output<FileReferenceArgs> appApk;
 
-    public Output<FileReferenceArgs> appApk() {
-        return this.appApk == null ? Codegen.empty() : this.appApk;
+    public Optional<Output<FileReferenceArgs>> appApk() {
+        return Optional.ofNullable(this.appApk);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="appBundle")
-      private final @Nullable Output<AppBundleArgs> appBundle;
+    private @Nullable Output<AppBundleArgs> appBundle;
 
-    public Output<AppBundleArgs> appBundle() {
-        return this.appBundle == null ? Codegen.empty() : this.appBundle;
+    public Optional<Output<AppBundleArgs>> appBundle() {
+        return Optional.ofNullable(this.appBundle);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="appPackageId")
-      private final @Nullable Output<String> appPackageId;
+    private @Nullable Output<String> appPackageId;
 
-    public Output<String> appPackageId() {
-        return this.appPackageId == null ? Codegen.empty() : this.appPackageId;
+    public Optional<Output<String>> appPackageId() {
+        return Optional.ofNullable(this.appPackageId);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="orchestratorOption")
-      private final @Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption;
+    private @Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption;
 
-    public Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption() {
-        return this.orchestratorOption == null ? Codegen.empty() : this.orchestratorOption;
+    public Optional<Output<AndroidInstrumentationTestOrchestratorOption>> orchestratorOption() {
+        return Optional.ofNullable(this.orchestratorOption);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="shardingOption")
-      private final @Nullable Output<ShardingOptionArgs> shardingOption;
+    private @Nullable Output<ShardingOptionArgs> shardingOption;
 
-    public Output<ShardingOptionArgs> shardingOption() {
-        return this.shardingOption == null ? Codegen.empty() : this.shardingOption;
+    public Optional<Output<ShardingOptionArgs>> shardingOption() {
+        return Optional.ofNullable(this.shardingOption);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="testApk", required=true)
-      private final Output<FileReferenceArgs> testApk;
+    private Output<FileReferenceArgs> testApk;
 
     public Output<FileReferenceArgs> testApk() {
         return this.testApk;
@@ -95,10 +95,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="testPackageId")
-      private final @Nullable Output<String> testPackageId;
+    private @Nullable Output<String> testPackageId;
 
-    public Output<String> testPackageId() {
-        return this.testPackageId == null ? Codegen.empty() : this.testPackageId;
+    public Optional<Output<String>> testPackageId() {
+        return Optional.ofNullable(this.testPackageId);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="testRunnerClass")
-      private final @Nullable Output<String> testRunnerClass;
+    private @Nullable Output<String> testRunnerClass;
 
-    public Output<String> testRunnerClass() {
-        return this.testRunnerClass == null ? Codegen.empty() : this.testRunnerClass;
+    public Optional<Output<String>> testRunnerClass() {
+        return Optional.ofNullable(this.testRunnerClass);
     }
 
     /**
@@ -117,157 +117,133 @@ public final class AndroidInstrumentationTestArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="testTargets")
-      private final @Nullable Output<List<String>> testTargets;
+    private @Nullable Output<List<String>> testTargets;
 
-    public Output<List<String>> testTargets() {
-        return this.testTargets == null ? Codegen.empty() : this.testTargets;
+    public Optional<Output<List<String>>> testTargets() {
+        return Optional.ofNullable(this.testTargets);
     }
 
-    public AndroidInstrumentationTestArgs(
-        @Nullable Output<FileReferenceArgs> appApk,
-        @Nullable Output<AppBundleArgs> appBundle,
-        @Nullable Output<String> appPackageId,
-        @Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption,
-        @Nullable Output<ShardingOptionArgs> shardingOption,
-        Output<FileReferenceArgs> testApk,
-        @Nullable Output<String> testPackageId,
-        @Nullable Output<String> testRunnerClass,
-        @Nullable Output<List<String>> testTargets) {
-        this.appApk = appApk;
-        this.appBundle = appBundle;
-        this.appPackageId = appPackageId;
-        this.orchestratorOption = orchestratorOption;
-        this.shardingOption = shardingOption;
-        this.testApk = Objects.requireNonNull(testApk, "expected parameter 'testApk' to be non-null");
-        this.testPackageId = testPackageId;
-        this.testRunnerClass = testRunnerClass;
-        this.testTargets = testTargets;
-    }
+    private AndroidInstrumentationTestArgs() {}
 
-    private AndroidInstrumentationTestArgs() {
-        this.appApk = Codegen.empty();
-        this.appBundle = Codegen.empty();
-        this.appPackageId = Codegen.empty();
-        this.orchestratorOption = Codegen.empty();
-        this.shardingOption = Codegen.empty();
-        this.testApk = Codegen.empty();
-        this.testPackageId = Codegen.empty();
-        this.testRunnerClass = Codegen.empty();
-        this.testTargets = Codegen.empty();
+    private AndroidInstrumentationTestArgs(AndroidInstrumentationTestArgs $) {
+        this.appApk = $.appApk;
+        this.appBundle = $.appBundle;
+        this.appPackageId = $.appPackageId;
+        this.orchestratorOption = $.orchestratorOption;
+        this.shardingOption = $.shardingOption;
+        this.testApk = $.testApk;
+        this.testPackageId = $.testPackageId;
+        this.testRunnerClass = $.testRunnerClass;
+        this.testTargets = $.testTargets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidInstrumentationTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FileReferenceArgs> appApk;
-        private @Nullable Output<AppBundleArgs> appBundle;
-        private @Nullable Output<String> appPackageId;
-        private @Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption;
-        private @Nullable Output<ShardingOptionArgs> shardingOption;
-        private Output<FileReferenceArgs> testApk;
-        private @Nullable Output<String> testPackageId;
-        private @Nullable Output<String> testRunnerClass;
-        private @Nullable Output<List<String>> testTargets;
+        private AndroidInstrumentationTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidInstrumentationTestArgs();
         }
 
         public Builder(AndroidInstrumentationTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appApk = defaults.appApk;
-    	      this.appBundle = defaults.appBundle;
-    	      this.appPackageId = defaults.appPackageId;
-    	      this.orchestratorOption = defaults.orchestratorOption;
-    	      this.shardingOption = defaults.shardingOption;
-    	      this.testApk = defaults.testApk;
-    	      this.testPackageId = defaults.testPackageId;
-    	      this.testRunnerClass = defaults.testRunnerClass;
-    	      this.testTargets = defaults.testTargets;
+            $ = new AndroidInstrumentationTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appApk(@Nullable Output<FileReferenceArgs> appApk) {
-            this.appApk = appApk;
+            $.appApk = appApk;
             return this;
         }
-        public Builder appApk(@Nullable FileReferenceArgs appApk) {
-            this.appApk = Codegen.ofNullable(appApk);
-            return this;
+
+        public Builder appApk(FileReferenceArgs appApk) {
+            return appApk(Output.of(appApk));
         }
+
         public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
-            this.appBundle = appBundle;
+            $.appBundle = appBundle;
             return this;
         }
-        public Builder appBundle(@Nullable AppBundleArgs appBundle) {
-            this.appBundle = Codegen.ofNullable(appBundle);
-            return this;
+
+        public Builder appBundle(AppBundleArgs appBundle) {
+            return appBundle(Output.of(appBundle));
         }
+
         public Builder appPackageId(@Nullable Output<String> appPackageId) {
-            this.appPackageId = appPackageId;
+            $.appPackageId = appPackageId;
             return this;
         }
-        public Builder appPackageId(@Nullable String appPackageId) {
-            this.appPackageId = Codegen.ofNullable(appPackageId);
-            return this;
+
+        public Builder appPackageId(String appPackageId) {
+            return appPackageId(Output.of(appPackageId));
         }
+
         public Builder orchestratorOption(@Nullable Output<AndroidInstrumentationTestOrchestratorOption> orchestratorOption) {
-            this.orchestratorOption = orchestratorOption;
+            $.orchestratorOption = orchestratorOption;
             return this;
         }
-        public Builder orchestratorOption(@Nullable AndroidInstrumentationTestOrchestratorOption orchestratorOption) {
-            this.orchestratorOption = Codegen.ofNullable(orchestratorOption);
-            return this;
+
+        public Builder orchestratorOption(AndroidInstrumentationTestOrchestratorOption orchestratorOption) {
+            return orchestratorOption(Output.of(orchestratorOption));
         }
+
         public Builder shardingOption(@Nullable Output<ShardingOptionArgs> shardingOption) {
-            this.shardingOption = shardingOption;
+            $.shardingOption = shardingOption;
             return this;
         }
-        public Builder shardingOption(@Nullable ShardingOptionArgs shardingOption) {
-            this.shardingOption = Codegen.ofNullable(shardingOption);
-            return this;
+
+        public Builder shardingOption(ShardingOptionArgs shardingOption) {
+            return shardingOption(Output.of(shardingOption));
         }
+
         public Builder testApk(Output<FileReferenceArgs> testApk) {
-            this.testApk = Objects.requireNonNull(testApk);
+            $.testApk = testApk;
             return this;
         }
+
         public Builder testApk(FileReferenceArgs testApk) {
-            this.testApk = Output.of(Objects.requireNonNull(testApk));
-            return this;
+            return testApk(Output.of(testApk));
         }
+
         public Builder testPackageId(@Nullable Output<String> testPackageId) {
-            this.testPackageId = testPackageId;
+            $.testPackageId = testPackageId;
             return this;
         }
-        public Builder testPackageId(@Nullable String testPackageId) {
-            this.testPackageId = Codegen.ofNullable(testPackageId);
-            return this;
+
+        public Builder testPackageId(String testPackageId) {
+            return testPackageId(Output.of(testPackageId));
         }
+
         public Builder testRunnerClass(@Nullable Output<String> testRunnerClass) {
-            this.testRunnerClass = testRunnerClass;
+            $.testRunnerClass = testRunnerClass;
             return this;
         }
-        public Builder testRunnerClass(@Nullable String testRunnerClass) {
-            this.testRunnerClass = Codegen.ofNullable(testRunnerClass);
-            return this;
+
+        public Builder testRunnerClass(String testRunnerClass) {
+            return testRunnerClass(Output.of(testRunnerClass));
         }
+
         public Builder testTargets(@Nullable Output<List<String>> testTargets) {
-            this.testTargets = testTargets;
+            $.testTargets = testTargets;
             return this;
         }
-        public Builder testTargets(@Nullable List<String> testTargets) {
-            this.testTargets = Codegen.ofNullable(testTargets);
-            return this;
+
+        public Builder testTargets(List<String> testTargets) {
+            return testTargets(Output.of(testTargets));
         }
+
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
-        }        public AndroidInstrumentationTestArgs build() {
-            return new AndroidInstrumentationTestArgs(appApk, appBundle, appPackageId, orchestratorOption, shardingOption, testApk, testPackageId, testRunnerClass, testTargets);
+        }
+
+        public AndroidInstrumentationTestArgs build() {
+            $.testApk = Objects.requireNonNull($.testApk, "expected parameter 'testApk' to be non-null");
+            return $;
         }
     }
+
 }

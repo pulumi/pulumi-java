@@ -22,7 +22,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="clusterIpv4CidrBlock", required=true)
-      private final String clusterIpv4CidrBlock;
+    private String clusterIpv4CidrBlock;
 
     public String clusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock;
@@ -33,7 +33,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="clusterSecondaryRangeName", required=true)
-      private final String clusterSecondaryRangeName;
+    private String clusterSecondaryRangeName;
 
     public String clusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName;
@@ -44,7 +44,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="createSubnetwork", required=true)
-      private final Boolean createSubnetwork;
+    private Boolean createSubnetwork;
 
     public Boolean createSubnetwork() {
         return this.createSubnetwork;
@@ -55,7 +55,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="nodeIpv4CidrBlock", required=true)
-      private final String nodeIpv4CidrBlock;
+    private String nodeIpv4CidrBlock;
 
     public String nodeIpv4CidrBlock() {
         return this.nodeIpv4CidrBlock;
@@ -66,7 +66,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="servicesIpv4CidrBlock", required=true)
-      private final String servicesIpv4CidrBlock;
+    private String servicesIpv4CidrBlock;
 
     public String servicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock;
@@ -77,7 +77,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="servicesSecondaryRangeName", required=true)
-      private final String servicesSecondaryRangeName;
+    private String servicesSecondaryRangeName;
 
     public String servicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName;
@@ -88,7 +88,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="subnetworkName", required=true)
-      private final String subnetworkName;
+    private String subnetworkName;
 
     public String subnetworkName() {
         return this.subnetworkName;
@@ -99,7 +99,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tpuIpv4CidrBlock", required=true)
-      private final String tpuIpv4CidrBlock;
+    private String tpuIpv4CidrBlock;
 
     public String tpuIpv4CidrBlock() {
         return this.tpuIpv4CidrBlock;
@@ -110,7 +110,7 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="useIpAliases", required=true)
-      private final Boolean useIpAliases;
+    private Boolean useIpAliases;
 
     public Boolean useIpAliases() {
         return this.useIpAliases;
@@ -121,127 +121,108 @@ public final class IPAllocationPolicyResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="useRoutes", required=true)
-      private final Boolean useRoutes;
+    private Boolean useRoutes;
 
     public Boolean useRoutes() {
         return this.useRoutes;
     }
 
-    public IPAllocationPolicyResponse(
-        String clusterIpv4CidrBlock,
-        String clusterSecondaryRangeName,
-        Boolean createSubnetwork,
-        String nodeIpv4CidrBlock,
-        String servicesIpv4CidrBlock,
-        String servicesSecondaryRangeName,
-        String subnetworkName,
-        String tpuIpv4CidrBlock,
-        Boolean useIpAliases,
-        Boolean useRoutes) {
-        this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock, "expected parameter 'clusterIpv4CidrBlock' to be non-null");
-        this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName, "expected parameter 'clusterSecondaryRangeName' to be non-null");
-        this.createSubnetwork = Objects.requireNonNull(createSubnetwork, "expected parameter 'createSubnetwork' to be non-null");
-        this.nodeIpv4CidrBlock = Objects.requireNonNull(nodeIpv4CidrBlock, "expected parameter 'nodeIpv4CidrBlock' to be non-null");
-        this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock, "expected parameter 'servicesIpv4CidrBlock' to be non-null");
-        this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName, "expected parameter 'servicesSecondaryRangeName' to be non-null");
-        this.subnetworkName = Objects.requireNonNull(subnetworkName, "expected parameter 'subnetworkName' to be non-null");
-        this.tpuIpv4CidrBlock = Objects.requireNonNull(tpuIpv4CidrBlock, "expected parameter 'tpuIpv4CidrBlock' to be non-null");
-        this.useIpAliases = Objects.requireNonNull(useIpAliases, "expected parameter 'useIpAliases' to be non-null");
-        this.useRoutes = Objects.requireNonNull(useRoutes, "expected parameter 'useRoutes' to be non-null");
-    }
+    private IPAllocationPolicyResponse() {}
 
-    private IPAllocationPolicyResponse() {
-        this.clusterIpv4CidrBlock = null;
-        this.clusterSecondaryRangeName = null;
-        this.createSubnetwork = null;
-        this.nodeIpv4CidrBlock = null;
-        this.servicesIpv4CidrBlock = null;
-        this.servicesSecondaryRangeName = null;
-        this.subnetworkName = null;
-        this.tpuIpv4CidrBlock = null;
-        this.useIpAliases = null;
-        this.useRoutes = null;
+    private IPAllocationPolicyResponse(IPAllocationPolicyResponse $) {
+        this.clusterIpv4CidrBlock = $.clusterIpv4CidrBlock;
+        this.clusterSecondaryRangeName = $.clusterSecondaryRangeName;
+        this.createSubnetwork = $.createSubnetwork;
+        this.nodeIpv4CidrBlock = $.nodeIpv4CidrBlock;
+        this.servicesIpv4CidrBlock = $.servicesIpv4CidrBlock;
+        this.servicesSecondaryRangeName = $.servicesSecondaryRangeName;
+        this.subnetworkName = $.subnetworkName;
+        this.tpuIpv4CidrBlock = $.tpuIpv4CidrBlock;
+        this.useIpAliases = $.useIpAliases;
+        this.useRoutes = $.useRoutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAllocationPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterIpv4CidrBlock;
-        private String clusterSecondaryRangeName;
-        private Boolean createSubnetwork;
-        private String nodeIpv4CidrBlock;
-        private String servicesIpv4CidrBlock;
-        private String servicesSecondaryRangeName;
-        private String subnetworkName;
-        private String tpuIpv4CidrBlock;
-        private Boolean useIpAliases;
-        private Boolean useRoutes;
+        private IPAllocationPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAllocationPolicyResponse();
         }
 
         public Builder(IPAllocationPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIpv4CidrBlock = defaults.clusterIpv4CidrBlock;
-    	      this.clusterSecondaryRangeName = defaults.clusterSecondaryRangeName;
-    	      this.createSubnetwork = defaults.createSubnetwork;
-    	      this.nodeIpv4CidrBlock = defaults.nodeIpv4CidrBlock;
-    	      this.servicesIpv4CidrBlock = defaults.servicesIpv4CidrBlock;
-    	      this.servicesSecondaryRangeName = defaults.servicesSecondaryRangeName;
-    	      this.subnetworkName = defaults.subnetworkName;
-    	      this.tpuIpv4CidrBlock = defaults.tpuIpv4CidrBlock;
-    	      this.useIpAliases = defaults.useIpAliases;
-    	      this.useRoutes = defaults.useRoutes;
+            $ = new IPAllocationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
-            this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
+            $.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
+
         public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
-            this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
+            $.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
+
         public Builder createSubnetwork(Boolean createSubnetwork) {
-            this.createSubnetwork = Objects.requireNonNull(createSubnetwork);
+            $.createSubnetwork = createSubnetwork;
             return this;
         }
+
         public Builder nodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
-            this.nodeIpv4CidrBlock = Objects.requireNonNull(nodeIpv4CidrBlock);
+            $.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
             return this;
         }
+
         public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
-            this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
+            $.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
+
         public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
-            this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
+            $.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
+
         public Builder subnetworkName(String subnetworkName) {
-            this.subnetworkName = Objects.requireNonNull(subnetworkName);
+            $.subnetworkName = subnetworkName;
             return this;
         }
+
         public Builder tpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
-            this.tpuIpv4CidrBlock = Objects.requireNonNull(tpuIpv4CidrBlock);
+            $.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
             return this;
         }
+
         public Builder useIpAliases(Boolean useIpAliases) {
-            this.useIpAliases = Objects.requireNonNull(useIpAliases);
+            $.useIpAliases = useIpAliases;
             return this;
         }
+
         public Builder useRoutes(Boolean useRoutes) {
-            this.useRoutes = Objects.requireNonNull(useRoutes);
+            $.useRoutes = useRoutes;
             return this;
-        }        public IPAllocationPolicyResponse build() {
-            return new IPAllocationPolicyResponse(clusterIpv4CidrBlock, clusterSecondaryRangeName, createSubnetwork, nodeIpv4CidrBlock, servicesIpv4CidrBlock, servicesSecondaryRangeName, subnetworkName, tpuIpv4CidrBlock, useIpAliases, useRoutes);
+        }
+
+        public IPAllocationPolicyResponse build() {
+            $.clusterIpv4CidrBlock = Objects.requireNonNull($.clusterIpv4CidrBlock, "expected parameter 'clusterIpv4CidrBlock' to be non-null");
+            $.clusterSecondaryRangeName = Objects.requireNonNull($.clusterSecondaryRangeName, "expected parameter 'clusterSecondaryRangeName' to be non-null");
+            $.createSubnetwork = Objects.requireNonNull($.createSubnetwork, "expected parameter 'createSubnetwork' to be non-null");
+            $.nodeIpv4CidrBlock = Objects.requireNonNull($.nodeIpv4CidrBlock, "expected parameter 'nodeIpv4CidrBlock' to be non-null");
+            $.servicesIpv4CidrBlock = Objects.requireNonNull($.servicesIpv4CidrBlock, "expected parameter 'servicesIpv4CidrBlock' to be non-null");
+            $.servicesSecondaryRangeName = Objects.requireNonNull($.servicesSecondaryRangeName, "expected parameter 'servicesSecondaryRangeName' to be non-null");
+            $.subnetworkName = Objects.requireNonNull($.subnetworkName, "expected parameter 'subnetworkName' to be non-null");
+            $.tpuIpv4CidrBlock = Objects.requireNonNull($.tpuIpv4CidrBlock, "expected parameter 'tpuIpv4CidrBlock' to be non-null");
+            $.useIpAliases = Objects.requireNonNull($.useIpAliases, "expected parameter 'useIpAliases' to be non-null");
+            $.useRoutes = Objects.requireNonNull($.useRoutes, "expected parameter 'useRoutes' to be non-null");
+            return $;
         }
     }
+
 }

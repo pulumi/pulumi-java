@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +25,7 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,10 +36,10 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -47,7 +48,7 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -58,89 +59,80 @@ public final class PSCredentialExecutionParameterArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public PSCredentialExecutionParameterArgs(
-        Output<String> name,
-        @Nullable Output<String> password,
-        Output<String> type,
-        @Nullable Output<String> username) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.password = password;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.username = username;
-    }
+    private PSCredentialExecutionParameterArgs() {}
 
-    private PSCredentialExecutionParameterArgs() {
-        this.name = Codegen.empty();
-        this.password = Codegen.empty();
-        this.type = Codegen.empty();
-        this.username = Codegen.empty();
+    private PSCredentialExecutionParameterArgs(PSCredentialExecutionParameterArgs $) {
+        this.name = $.name;
+        this.password = $.password;
+        this.type = $.type;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PSCredentialExecutionParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<String> password;
-        private Output<String> type;
-        private @Nullable Output<String> username;
+        private PSCredentialExecutionParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PSCredentialExecutionParameterArgs();
         }
 
         public Builder(PSCredentialExecutionParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.username = defaults.username;
+            $ = new PSCredentialExecutionParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public PSCredentialExecutionParameterArgs build() {
-            return new PSCredentialExecutionParameterArgs(name, password, type, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public PSCredentialExecutionParameterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class CaPoolIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="caPool", required=true)
-      private final Output<String> caPool;
+    private Output<String> caPool;
 
     public Output<String> caPool() {
         return this.caPool;
@@ -33,10 +33,10 @@ public final class CaPoolIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class CaPoolIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -57,89 +57,80 @@ public final class CaPoolIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public CaPoolIamPolicyArgs(
-        Output<String> caPool,
-        @Nullable Output<String> location,
-        Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.caPool = Objects.requireNonNull(caPool, "expected parameter 'caPool' to be non-null");
-        this.location = location;
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-    }
+    private CaPoolIamPolicyArgs() {}
 
-    private CaPoolIamPolicyArgs() {
-        this.caPool = Codegen.empty();
-        this.location = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private CaPoolIamPolicyArgs(CaPoolIamPolicyArgs $) {
+        this.caPool = $.caPool;
+        this.location = $.location;
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> caPool;
-        private @Nullable Output<String> location;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
+        private CaPoolIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIamPolicyArgs();
         }
 
         public Builder(CaPoolIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caPool = defaults.caPool;
-    	      this.location = defaults.location;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new CaPoolIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caPool(Output<String> caPool) {
-            this.caPool = Objects.requireNonNull(caPool);
+            $.caPool = caPool;
             return this;
         }
+
         public Builder caPool(String caPool) {
-            this.caPool = Output.of(Objects.requireNonNull(caPool));
-            return this;
+            return caPool(Output.of(caPool));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public CaPoolIamPolicyArgs build() {
-            return new CaPoolIamPolicyArgs(caPool, location, policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public CaPoolIamPolicyArgs build() {
+            $.caPool = Objects.requireNonNull($.caPool, "expected parameter 'caPool' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

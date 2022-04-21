@@ -5,9 +5,9 @@ package com.pulumi.azurenative.devtestlab.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FormulaPropertiesFromVmArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="labVmId")
-      private final @Nullable Output<String> labVmId;
+    private @Nullable Output<String> labVmId;
 
-    public Output<String> labVmId() {
-        return this.labVmId == null ? Codegen.empty() : this.labVmId;
+    public Optional<Output<String>> labVmId() {
+        return Optional.ofNullable(this.labVmId);
     }
 
-    public FormulaPropertiesFromVmArgs(@Nullable Output<String> labVmId) {
-        this.labVmId = labVmId;
-    }
+    private FormulaPropertiesFromVmArgs() {}
 
-    private FormulaPropertiesFromVmArgs() {
-        this.labVmId = Codegen.empty();
+    private FormulaPropertiesFromVmArgs(FormulaPropertiesFromVmArgs $) {
+        this.labVmId = $.labVmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FormulaPropertiesFromVmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> labVmId;
+        private FormulaPropertiesFromVmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FormulaPropertiesFromVmArgs();
         }
 
         public Builder(FormulaPropertiesFromVmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labVmId = defaults.labVmId;
+            $ = new FormulaPropertiesFromVmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labVmId(@Nullable Output<String> labVmId) {
-            this.labVmId = labVmId;
+            $.labVmId = labVmId;
             return this;
         }
-        public Builder labVmId(@Nullable String labVmId) {
-            this.labVmId = Codegen.ofNullable(labVmId);
-            return this;
-        }        public FormulaPropertiesFromVmArgs build() {
-            return new FormulaPropertiesFromVmArgs(labVmId);
+
+        public Builder labVmId(String labVmId) {
+            return labVmId(Output.of(labVmId));
+        }
+
+        public FormulaPropertiesFromVmArgs build() {
+            return $;
         }
     }
+
 }

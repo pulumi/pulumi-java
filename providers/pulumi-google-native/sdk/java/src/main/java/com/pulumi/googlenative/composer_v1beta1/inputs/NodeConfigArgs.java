@@ -5,13 +5,13 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.composer_v1beta1.inputs.IPAllocationPolicyArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableIpMasqAgent")
-      private final @Nullable Output<Boolean> enableIpMasqAgent;
+    private @Nullable Output<Boolean> enableIpMasqAgent;
 
-    public Output<Boolean> enableIpMasqAgent() {
-        return this.enableIpMasqAgent == null ? Codegen.empty() : this.enableIpMasqAgent;
+    public Optional<Output<Boolean>> enableIpMasqAgent() {
+        return Optional.ofNullable(this.enableIpMasqAgent);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAllocationPolicy")
-      private final @Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy;
+    private @Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy;
 
-    public Output<IPAllocationPolicyArgs> ipAllocationPolicy() {
-        return this.ipAllocationPolicy == null ? Codegen.empty() : this.ipAllocationPolicy;
+    public Optional<Output<IPAllocationPolicyArgs>> ipAllocationPolicy() {
+        return Optional.ofNullable(this.ipAllocationPolicy);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxPodsPerNode")
-      private final @Nullable Output<Integer> maxPodsPerNode;
+    private @Nullable Output<Integer> maxPodsPerNode;
 
-    public Output<Integer> maxPodsPerNode() {
-        return this.maxPodsPerNode == null ? Codegen.empty() : this.maxPodsPerNode;
+    public Optional<Output<Integer>> maxPodsPerNode() {
+        return Optional.ofNullable(this.maxPodsPerNode);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oauthScopes")
-      private final @Nullable Output<List<String>> oauthScopes;
+    private @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> oauthScopes() {
-        return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
+    public Optional<Output<List<String>>> oauthScopes() {
+        return Optional.ofNullable(this.oauthScopes);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
     /**
@@ -138,186 +138,156 @@ public final class NodeConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NodeConfigArgs(
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<Boolean> enableIpMasqAgent,
-        @Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy,
-        @Nullable Output<String> location,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Integer> maxPodsPerNode,
-        @Nullable Output<String> network,
-        @Nullable Output<List<String>> oauthScopes,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<String> subnetwork,
-        @Nullable Output<List<String>> tags) {
-        this.diskSizeGb = diskSizeGb;
-        this.enableIpMasqAgent = enableIpMasqAgent;
-        this.ipAllocationPolicy = ipAllocationPolicy;
-        this.location = location;
-        this.machineType = machineType;
-        this.maxPodsPerNode = maxPodsPerNode;
-        this.network = network;
-        this.oauthScopes = oauthScopes;
-        this.serviceAccount = serviceAccount;
-        this.subnetwork = subnetwork;
-        this.tags = tags;
-    }
+    private NodeConfigArgs() {}
 
-    private NodeConfigArgs() {
-        this.diskSizeGb = Codegen.empty();
-        this.enableIpMasqAgent = Codegen.empty();
-        this.ipAllocationPolicy = Codegen.empty();
-        this.location = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.maxPodsPerNode = Codegen.empty();
-        this.network = Codegen.empty();
-        this.oauthScopes = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.subnetwork = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NodeConfigArgs(NodeConfigArgs $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.enableIpMasqAgent = $.enableIpMasqAgent;
+        this.ipAllocationPolicy = $.ipAllocationPolicy;
+        this.location = $.location;
+        this.machineType = $.machineType;
+        this.maxPodsPerNode = $.maxPodsPerNode;
+        this.network = $.network;
+        this.oauthScopes = $.oauthScopes;
+        this.serviceAccount = $.serviceAccount;
+        this.subnetwork = $.subnetwork;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<Boolean> enableIpMasqAgent;
-        private @Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Integer> maxPodsPerNode;
-        private @Nullable Output<String> network;
-        private @Nullable Output<List<String>> oauthScopes;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<String> subnetwork;
-        private @Nullable Output<List<String>> tags;
+        private NodeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeConfigArgs();
         }
 
         public Builder(NodeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.enableIpMasqAgent = defaults.enableIpMasqAgent;
-    	      this.ipAllocationPolicy = defaults.ipAllocationPolicy;
-    	      this.location = defaults.location;
-    	      this.machineType = defaults.machineType;
-    	      this.maxPodsPerNode = defaults.maxPodsPerNode;
-    	      this.network = defaults.network;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.tags = defaults.tags;
+            $ = new NodeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder enableIpMasqAgent(@Nullable Output<Boolean> enableIpMasqAgent) {
-            this.enableIpMasqAgent = enableIpMasqAgent;
+            $.enableIpMasqAgent = enableIpMasqAgent;
             return this;
         }
-        public Builder enableIpMasqAgent(@Nullable Boolean enableIpMasqAgent) {
-            this.enableIpMasqAgent = Codegen.ofNullable(enableIpMasqAgent);
-            return this;
+
+        public Builder enableIpMasqAgent(Boolean enableIpMasqAgent) {
+            return enableIpMasqAgent(Output.of(enableIpMasqAgent));
         }
+
         public Builder ipAllocationPolicy(@Nullable Output<IPAllocationPolicyArgs> ipAllocationPolicy) {
-            this.ipAllocationPolicy = ipAllocationPolicy;
+            $.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
-        public Builder ipAllocationPolicy(@Nullable IPAllocationPolicyArgs ipAllocationPolicy) {
-            this.ipAllocationPolicy = Codegen.ofNullable(ipAllocationPolicy);
-            return this;
+
+        public Builder ipAllocationPolicy(IPAllocationPolicyArgs ipAllocationPolicy) {
+            return ipAllocationPolicy(Output.of(ipAllocationPolicy));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder maxPodsPerNode(@Nullable Output<Integer> maxPodsPerNode) {
-            this.maxPodsPerNode = maxPodsPerNode;
+            $.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
-        public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Codegen.ofNullable(maxPodsPerNode);
-            return this;
+
+        public Builder maxPodsPerNode(Integer maxPodsPerNode) {
+            return maxPodsPerNode(Output.of(maxPodsPerNode));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
-            this.oauthScopes = oauthScopes;
+            $.oauthScopes = oauthScopes;
             return this;
         }
-        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Codegen.ofNullable(oauthScopes);
-            return this;
+
+        public Builder oauthScopes(List<String> oauthScopes) {
+            return oauthScopes(Output.of(oauthScopes));
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
-        }        public NodeConfigArgs build() {
-            return new NodeConfigArgs(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, location, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags);
+        }
+
+        public NodeConfigArgs build() {
+            return $;
         }
     }
+
 }

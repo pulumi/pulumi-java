@@ -13,45 +13,45 @@ public final class GetSimulationApplicationArgs extends com.pulumi.resources.Inv
     public static final GetSimulationApplicationArgs Empty = new GetSimulationApplicationArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetSimulationApplicationArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetSimulationApplicationArgs() {}
 
-    private GetSimulationApplicationArgs() {
-        this.arn = null;
+    private GetSimulationApplicationArgs(GetSimulationApplicationArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSimulationApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetSimulationApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSimulationApplicationArgs();
         }
 
         public Builder(GetSimulationApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetSimulationApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetSimulationApplicationArgs build() {
-            return new GetSimulationApplicationArgs(arn);
+        }
+
+        public GetSimulationApplicationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

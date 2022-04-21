@@ -17,45 +17,45 @@ public final class InstanceGroupManagerAllInstancesConfigResponse extends com.pu
      * 
      */
     @Import(name="properties", required=true)
-      private final InstancePropertiesPatchResponse properties;
+    private InstancePropertiesPatchResponse properties;
 
     public InstancePropertiesPatchResponse properties() {
         return this.properties;
     }
 
-    public InstanceGroupManagerAllInstancesConfigResponse(InstancePropertiesPatchResponse properties) {
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private InstanceGroupManagerAllInstancesConfigResponse() {}
 
-    private InstanceGroupManagerAllInstancesConfigResponse() {
-        this.properties = null;
+    private InstanceGroupManagerAllInstancesConfigResponse(InstanceGroupManagerAllInstancesConfigResponse $) {
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerAllInstancesConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private InstancePropertiesPatchResponse properties;
+        private InstanceGroupManagerAllInstancesConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerAllInstancesConfigResponse();
         }
 
         public Builder(InstanceGroupManagerAllInstancesConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
+            $ = new InstanceGroupManagerAllInstancesConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(InstancePropertiesPatchResponse properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
-        }        public InstanceGroupManagerAllInstancesConfigResponse build() {
-            return new InstanceGroupManagerAllInstancesConfigResponse(properties);
+        }
+
+        public InstanceGroupManagerAllInstancesConfigResponse build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

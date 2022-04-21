@@ -5,10 +5,10 @@ package com.pulumi.aws.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="backupVaultArn")
-      private final @Nullable Output<String> backupVaultArn;
+    private @Nullable Output<String> backupVaultArn;
 
-    public Output<String> backupVaultArn() {
-        return this.backupVaultArn == null ? Codegen.empty() : this.backupVaultArn;
+    public Optional<Output<String>> backupVaultArn() {
+        return Optional.ofNullable(this.backupVaultArn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="backupVaultName")
-      private final @Nullable Output<String> backupVaultName;
+    private @Nullable Output<String> backupVaultName;
 
-    public Output<String> backupVaultName() {
-        return this.backupVaultName == null ? Codegen.empty() : this.backupVaultName;
+    public Optional<Output<String>> backupVaultName() {
+        return Optional.ofNullable(this.backupVaultName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="changeableForDays")
-      private final @Nullable Output<Integer> changeableForDays;
+    private @Nullable Output<Integer> changeableForDays;
 
-    public Output<Integer> changeableForDays() {
-        return this.changeableForDays == null ? Codegen.empty() : this.changeableForDays;
+    public Optional<Output<Integer>> changeableForDays() {
+        return Optional.ofNullable(this.changeableForDays);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxRetentionDays")
-      private final @Nullable Output<Integer> maxRetentionDays;
+    private @Nullable Output<Integer> maxRetentionDays;
 
-    public Output<Integer> maxRetentionDays() {
-        return this.maxRetentionDays == null ? Codegen.empty() : this.maxRetentionDays;
+    public Optional<Output<Integer>> maxRetentionDays() {
+        return Optional.ofNullable(this.maxRetentionDays);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class VaultLockConfigurationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="minRetentionDays")
-      private final @Nullable Output<Integer> minRetentionDays;
+    private @Nullable Output<Integer> minRetentionDays;
 
-    public Output<Integer> minRetentionDays() {
-        return this.minRetentionDays == null ? Codegen.empty() : this.minRetentionDays;
+    public Optional<Output<Integer>> minRetentionDays() {
+        return Optional.ofNullable(this.minRetentionDays);
     }
 
-    public VaultLockConfigurationState(
-        @Nullable Output<String> backupVaultArn,
-        @Nullable Output<String> backupVaultName,
-        @Nullable Output<Integer> changeableForDays,
-        @Nullable Output<Integer> maxRetentionDays,
-        @Nullable Output<Integer> minRetentionDays) {
-        this.backupVaultArn = backupVaultArn;
-        this.backupVaultName = backupVaultName;
-        this.changeableForDays = changeableForDays;
-        this.maxRetentionDays = maxRetentionDays;
-        this.minRetentionDays = minRetentionDays;
-    }
+    private VaultLockConfigurationState() {}
 
-    private VaultLockConfigurationState() {
-        this.backupVaultArn = Codegen.empty();
-        this.backupVaultName = Codegen.empty();
-        this.changeableForDays = Codegen.empty();
-        this.maxRetentionDays = Codegen.empty();
-        this.minRetentionDays = Codegen.empty();
+    private VaultLockConfigurationState(VaultLockConfigurationState $) {
+        this.backupVaultArn = $.backupVaultArn;
+        this.backupVaultName = $.backupVaultName;
+        this.changeableForDays = $.changeableForDays;
+        this.maxRetentionDays = $.maxRetentionDays;
+        this.minRetentionDays = $.minRetentionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultLockConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backupVaultArn;
-        private @Nullable Output<String> backupVaultName;
-        private @Nullable Output<Integer> changeableForDays;
-        private @Nullable Output<Integer> maxRetentionDays;
-        private @Nullable Output<Integer> minRetentionDays;
+        private VaultLockConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultLockConfigurationState();
         }
 
         public Builder(VaultLockConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupVaultArn = defaults.backupVaultArn;
-    	      this.backupVaultName = defaults.backupVaultName;
-    	      this.changeableForDays = defaults.changeableForDays;
-    	      this.maxRetentionDays = defaults.maxRetentionDays;
-    	      this.minRetentionDays = defaults.minRetentionDays;
+            $ = new VaultLockConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder backupVaultArn(@Nullable Output<String> backupVaultArn) {
-            this.backupVaultArn = backupVaultArn;
+            $.backupVaultArn = backupVaultArn;
             return this;
         }
-        public Builder backupVaultArn(@Nullable String backupVaultArn) {
-            this.backupVaultArn = Codegen.ofNullable(backupVaultArn);
-            return this;
+
+        public Builder backupVaultArn(String backupVaultArn) {
+            return backupVaultArn(Output.of(backupVaultArn));
         }
+
         public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
-            this.backupVaultName = backupVaultName;
+            $.backupVaultName = backupVaultName;
             return this;
         }
-        public Builder backupVaultName(@Nullable String backupVaultName) {
-            this.backupVaultName = Codegen.ofNullable(backupVaultName);
-            return this;
+
+        public Builder backupVaultName(String backupVaultName) {
+            return backupVaultName(Output.of(backupVaultName));
         }
+
         public Builder changeableForDays(@Nullable Output<Integer> changeableForDays) {
-            this.changeableForDays = changeableForDays;
+            $.changeableForDays = changeableForDays;
             return this;
         }
-        public Builder changeableForDays(@Nullable Integer changeableForDays) {
-            this.changeableForDays = Codegen.ofNullable(changeableForDays);
-            return this;
+
+        public Builder changeableForDays(Integer changeableForDays) {
+            return changeableForDays(Output.of(changeableForDays));
         }
+
         public Builder maxRetentionDays(@Nullable Output<Integer> maxRetentionDays) {
-            this.maxRetentionDays = maxRetentionDays;
+            $.maxRetentionDays = maxRetentionDays;
             return this;
         }
-        public Builder maxRetentionDays(@Nullable Integer maxRetentionDays) {
-            this.maxRetentionDays = Codegen.ofNullable(maxRetentionDays);
-            return this;
+
+        public Builder maxRetentionDays(Integer maxRetentionDays) {
+            return maxRetentionDays(Output.of(maxRetentionDays));
         }
+
         public Builder minRetentionDays(@Nullable Output<Integer> minRetentionDays) {
-            this.minRetentionDays = minRetentionDays;
+            $.minRetentionDays = minRetentionDays;
             return this;
         }
-        public Builder minRetentionDays(@Nullable Integer minRetentionDays) {
-            this.minRetentionDays = Codegen.ofNullable(minRetentionDays);
-            return this;
-        }        public VaultLockConfigurationState build() {
-            return new VaultLockConfigurationState(backupVaultArn, backupVaultName, changeableForDays, maxRetentionDays, minRetentionDays);
+
+        public Builder minRetentionDays(Integer minRetentionDays) {
+            return minRetentionDays(Output.of(minRetentionDays));
+        }
+
+        public VaultLockConfigurationState build() {
+            return $;
         }
     }
+
 }

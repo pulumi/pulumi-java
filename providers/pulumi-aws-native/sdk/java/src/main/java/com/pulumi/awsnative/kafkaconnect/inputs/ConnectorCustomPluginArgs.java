@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ConnectorCustomPluginArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="customPluginArn", required=true)
-      private final Output<String> customPluginArn;
+    private Output<String> customPluginArn;
 
     public Output<String> customPluginArn() {
         return this.customPluginArn;
@@ -35,63 +34,60 @@ public final class ConnectorCustomPluginArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="revision", required=true)
-      private final Output<Integer> revision;
+    private Output<Integer> revision;
 
     public Output<Integer> revision() {
         return this.revision;
     }
 
-    public ConnectorCustomPluginArgs(
-        Output<String> customPluginArn,
-        Output<Integer> revision) {
-        this.customPluginArn = Objects.requireNonNull(customPluginArn, "expected parameter 'customPluginArn' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-    }
+    private ConnectorCustomPluginArgs() {}
 
-    private ConnectorCustomPluginArgs() {
-        this.customPluginArn = Codegen.empty();
-        this.revision = Codegen.empty();
+    private ConnectorCustomPluginArgs(ConnectorCustomPluginArgs $) {
+        this.customPluginArn = $.customPluginArn;
+        this.revision = $.revision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorCustomPluginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> customPluginArn;
-        private Output<Integer> revision;
+        private ConnectorCustomPluginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorCustomPluginArgs();
         }
 
         public Builder(ConnectorCustomPluginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customPluginArn = defaults.customPluginArn;
-    	      this.revision = defaults.revision;
+            $ = new ConnectorCustomPluginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customPluginArn(Output<String> customPluginArn) {
-            this.customPluginArn = Objects.requireNonNull(customPluginArn);
+            $.customPluginArn = customPluginArn;
             return this;
         }
+
         public Builder customPluginArn(String customPluginArn) {
-            this.customPluginArn = Output.of(Objects.requireNonNull(customPluginArn));
-            return this;
+            return customPluginArn(Output.of(customPluginArn));
         }
+
         public Builder revision(Output<Integer> revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder revision(Integer revision) {
-            this.revision = Output.of(Objects.requireNonNull(revision));
-            return this;
-        }        public ConnectorCustomPluginArgs build() {
-            return new ConnectorCustomPluginArgs(customPluginArn, revision);
+            return revision(Output.of(revision));
+        }
+
+        public ConnectorCustomPluginArgs build() {
+            $.customPluginArn = Objects.requireNonNull($.customPluginArn, "expected parameter 'customPluginArn' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            return $;
         }
     }
+
 }

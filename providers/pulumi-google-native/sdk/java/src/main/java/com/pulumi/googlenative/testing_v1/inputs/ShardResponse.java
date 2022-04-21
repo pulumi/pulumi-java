@@ -22,7 +22,7 @@ public final class ShardResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="numShards", required=true)
-      private final Integer numShards;
+    private Integer numShards;
 
     public Integer numShards() {
         return this.numShards;
@@ -33,7 +33,7 @@ public final class ShardResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shardIndex", required=true)
-      private final Integer shardIndex;
+    private Integer shardIndex;
 
     public Integer shardIndex() {
         return this.shardIndex;
@@ -44,64 +44,59 @@ public final class ShardResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="testTargetsForShard", required=true)
-      private final TestTargetsForShardResponse testTargetsForShard;
+    private TestTargetsForShardResponse testTargetsForShard;
 
     public TestTargetsForShardResponse testTargetsForShard() {
         return this.testTargetsForShard;
     }
 
-    public ShardResponse(
-        Integer numShards,
-        Integer shardIndex,
-        TestTargetsForShardResponse testTargetsForShard) {
-        this.numShards = Objects.requireNonNull(numShards, "expected parameter 'numShards' to be non-null");
-        this.shardIndex = Objects.requireNonNull(shardIndex, "expected parameter 'shardIndex' to be non-null");
-        this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard, "expected parameter 'testTargetsForShard' to be non-null");
-    }
+    private ShardResponse() {}
 
-    private ShardResponse() {
-        this.numShards = null;
-        this.shardIndex = null;
-        this.testTargetsForShard = null;
+    private ShardResponse(ShardResponse $) {
+        this.numShards = $.numShards;
+        this.shardIndex = $.shardIndex;
+        this.testTargetsForShard = $.testTargetsForShard;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer numShards;
-        private Integer shardIndex;
-        private TestTargetsForShardResponse testTargetsForShard;
+        private ShardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShardResponse();
         }
 
         public Builder(ShardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numShards = defaults.numShards;
-    	      this.shardIndex = defaults.shardIndex;
-    	      this.testTargetsForShard = defaults.testTargetsForShard;
+            $ = new ShardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder numShards(Integer numShards) {
-            this.numShards = Objects.requireNonNull(numShards);
+            $.numShards = numShards;
             return this;
         }
+
         public Builder shardIndex(Integer shardIndex) {
-            this.shardIndex = Objects.requireNonNull(shardIndex);
+            $.shardIndex = shardIndex;
             return this;
         }
+
         public Builder testTargetsForShard(TestTargetsForShardResponse testTargetsForShard) {
-            this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
+            $.testTargetsForShard = testTargetsForShard;
             return this;
-        }        public ShardResponse build() {
-            return new ShardResponse(numShards, shardIndex, testTargetsForShard);
+        }
+
+        public ShardResponse build() {
+            $.numShards = Objects.requireNonNull($.numShards, "expected parameter 'numShards' to be non-null");
+            $.shardIndex = Objects.requireNonNull($.shardIndex, "expected parameter 'shardIndex' to be non-null");
+            $.testTargetsForShard = Objects.requireNonNull($.testTargetsForShard, "expected parameter 'testTargetsForShard' to be non-null");
+            return $;
         }
     }
+
 }

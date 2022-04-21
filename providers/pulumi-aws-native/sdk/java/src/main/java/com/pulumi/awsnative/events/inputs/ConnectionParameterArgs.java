@@ -5,10 +5,10 @@ package com.pulumi.awsnative.events.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,84 @@ public final class ConnectionParameterArgs extends com.pulumi.resources.Resource
     public static final ConnectionParameterArgs Empty = new ConnectionParameterArgs();
 
     @Import(name="isValueSecret")
-      private final @Nullable Output<Boolean> isValueSecret;
+    private @Nullable Output<Boolean> isValueSecret;
 
-    public Output<Boolean> isValueSecret() {
-        return this.isValueSecret == null ? Codegen.empty() : this.isValueSecret;
+    public Optional<Output<Boolean>> isValueSecret() {
+        return Optional.ofNullable(this.isValueSecret);
     }
 
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
     }
 
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ConnectionParameterArgs(
-        @Nullable Output<Boolean> isValueSecret,
-        Output<String> key,
-        Output<String> value) {
-        this.isValueSecret = isValueSecret;
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ConnectionParameterArgs() {}
 
-    private ConnectionParameterArgs() {
-        this.isValueSecret = Codegen.empty();
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private ConnectionParameterArgs(ConnectionParameterArgs $) {
+        this.isValueSecret = $.isValueSecret;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isValueSecret;
-        private Output<String> key;
-        private Output<String> value;
+        private ConnectionParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionParameterArgs();
         }
 
         public Builder(ConnectionParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isValueSecret = defaults.isValueSecret;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ConnectionParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isValueSecret(@Nullable Output<Boolean> isValueSecret) {
-            this.isValueSecret = isValueSecret;
+            $.isValueSecret = isValueSecret;
             return this;
         }
-        public Builder isValueSecret(@Nullable Boolean isValueSecret) {
-            this.isValueSecret = Codegen.ofNullable(isValueSecret);
-            return this;
+
+        public Builder isValueSecret(Boolean isValueSecret) {
+            return isValueSecret(Output.of(isValueSecret));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ConnectionParameterArgs build() {
-            return new ConnectionParameterArgs(isValueSecret, key, value);
+            return value(Output.of(value));
+        }
+
+        public ConnectionParameterArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

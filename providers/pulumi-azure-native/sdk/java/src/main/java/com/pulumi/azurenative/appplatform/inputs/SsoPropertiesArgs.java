@@ -5,10 +5,10 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="issuerUri")
-      private final @Nullable Output<String> issuerUri;
+    private @Nullable Output<String> issuerUri;
 
-    public Output<String> issuerUri() {
-        return this.issuerUri == null ? Codegen.empty() : this.issuerUri;
+    public Optional<Output<String>> issuerUri() {
+        return Optional.ofNullable(this.issuerUri);
     }
 
     /**
@@ -58,92 +58,82 @@ public final class SsoPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<List<String>> scope;
+    private @Nullable Output<List<String>> scope;
 
-    public Output<List<String>> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<List<String>>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public SsoPropertiesArgs(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> clientSecret,
-        @Nullable Output<String> issuerUri,
-        @Nullable Output<List<String>> scope) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.issuerUri = issuerUri;
-        this.scope = scope;
-    }
+    private SsoPropertiesArgs() {}
 
-    private SsoPropertiesArgs() {
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.issuerUri = Codegen.empty();
-        this.scope = Codegen.empty();
+    private SsoPropertiesArgs(SsoPropertiesArgs $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.issuerUri = $.issuerUri;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SsoPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> clientSecret;
-        private @Nullable Output<String> issuerUri;
-        private @Nullable Output<List<String>> scope;
+        private SsoPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SsoPropertiesArgs();
         }
 
         public Builder(SsoPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.issuerUri = defaults.issuerUri;
-    	      this.scope = defaults.scope;
+            $ = new SsoPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder issuerUri(@Nullable Output<String> issuerUri) {
-            this.issuerUri = issuerUri;
+            $.issuerUri = issuerUri;
             return this;
         }
-        public Builder issuerUri(@Nullable String issuerUri) {
-            this.issuerUri = Codegen.ofNullable(issuerUri);
-            return this;
+
+        public Builder issuerUri(String issuerUri) {
+            return issuerUri(Output.of(issuerUri));
         }
+
         public Builder scope(@Nullable Output<List<String>> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable List<String> scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(List<String> scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder scope(String... scope) {
             return scope(List.of(scope));
-        }        public SsoPropertiesArgs build() {
-            return new SsoPropertiesArgs(clientId, clientSecret, issuerUri, scope);
+        }
+
+        public SsoPropertiesArgs build() {
+            return $;
         }
     }
+
 }

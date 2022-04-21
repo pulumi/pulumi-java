@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<ConditionsArgs> conditions;
+    private @Nullable Output<ConditionsArgs> conditions;
 
-    public Output<ConditionsArgs> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<ConditionsArgs>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<ScopeArgs> scope;
+    private @Nullable Output<ScopeArgs> scope;
 
-    public Output<ScopeArgs> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<ScopeArgs>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,ActionRuleStatus>> status;
+    private @Nullable Output<Either<String,ActionRuleStatus>> status;
 
-    public Output<Either<String,ActionRuleStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,ActionRuleStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -73,7 +74,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="suppressionConfig", required=true)
-      private final Output<SuppressionConfigArgs> suppressionConfig;
+    private Output<SuppressionConfigArgs> suppressionConfig;
 
     public Output<SuppressionConfigArgs> suppressionConfig() {
         return this.suppressionConfig;
@@ -85,115 +86,100 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SuppressionArgs(
-        @Nullable Output<ConditionsArgs> conditions,
-        @Nullable Output<String> description,
-        @Nullable Output<ScopeArgs> scope,
-        @Nullable Output<Either<String,ActionRuleStatus>> status,
-        Output<SuppressionConfigArgs> suppressionConfig,
-        Output<String> type) {
-        this.conditions = conditions;
-        this.description = description;
-        this.scope = scope;
-        this.status = status;
-        this.suppressionConfig = Objects.requireNonNull(suppressionConfig, "expected parameter 'suppressionConfig' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private SuppressionArgs() {}
 
-    private SuppressionArgs() {
-        this.conditions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.status = Codegen.empty();
-        this.suppressionConfig = Codegen.empty();
-        this.type = Codegen.empty();
+    private SuppressionArgs(SuppressionArgs $) {
+        this.conditions = $.conditions;
+        this.description = $.description;
+        this.scope = $.scope;
+        this.status = $.status;
+        this.suppressionConfig = $.suppressionConfig;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuppressionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConditionsArgs> conditions;
-        private @Nullable Output<String> description;
-        private @Nullable Output<ScopeArgs> scope;
-        private @Nullable Output<Either<String,ActionRuleStatus>> status;
-        private Output<SuppressionConfigArgs> suppressionConfig;
-        private Output<String> type;
+        private SuppressionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuppressionArgs();
         }
 
         public Builder(SuppressionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.description = defaults.description;
-    	      this.scope = defaults.scope;
-    	      this.status = defaults.status;
-    	      this.suppressionConfig = defaults.suppressionConfig;
-    	      this.type = defaults.type;
+            $ = new SuppressionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<ConditionsArgs> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable ConditionsArgs conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(ConditionsArgs conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable ScopeArgs scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(ScopeArgs scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder status(@Nullable Output<Either<String,ActionRuleStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,ActionRuleStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,ActionRuleStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder suppressionConfig(Output<SuppressionConfigArgs> suppressionConfig) {
-            this.suppressionConfig = Objects.requireNonNull(suppressionConfig);
+            $.suppressionConfig = suppressionConfig;
             return this;
         }
+
         public Builder suppressionConfig(SuppressionConfigArgs suppressionConfig) {
-            this.suppressionConfig = Output.of(Objects.requireNonNull(suppressionConfig));
-            return this;
+            return suppressionConfig(Output.of(suppressionConfig));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SuppressionArgs build() {
-            return new SuppressionArgs(conditions, description, scope, status, suppressionConfig, type);
+            return type(Output.of(type));
+        }
+
+        public SuppressionArgs build() {
+            $.suppressionConfig = Objects.requireNonNull($.suppressionConfig, "expected parameter 'suppressionConfig' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class CertificateAuthorityAccessMethodArgs extends com.pulumi.resou
     public static final CertificateAuthorityAccessMethodArgs Empty = new CertificateAuthorityAccessMethodArgs();
 
     @Import(name="accessMethodType")
-      private final @Nullable Output<String> accessMethodType;
+    private @Nullable Output<String> accessMethodType;
 
-    public Output<String> accessMethodType() {
-        return this.accessMethodType == null ? Codegen.empty() : this.accessMethodType;
+    public Optional<Output<String>> accessMethodType() {
+        return Optional.ofNullable(this.accessMethodType);
     }
 
     @Import(name="customObjectIdentifier")
-      private final @Nullable Output<String> customObjectIdentifier;
+    private @Nullable Output<String> customObjectIdentifier;
 
-    public Output<String> customObjectIdentifier() {
-        return this.customObjectIdentifier == null ? Codegen.empty() : this.customObjectIdentifier;
+    public Optional<Output<String>> customObjectIdentifier() {
+        return Optional.ofNullable(this.customObjectIdentifier);
     }
 
-    public CertificateAuthorityAccessMethodArgs(
-        @Nullable Output<String> accessMethodType,
-        @Nullable Output<String> customObjectIdentifier) {
-        this.accessMethodType = accessMethodType;
-        this.customObjectIdentifier = customObjectIdentifier;
-    }
+    private CertificateAuthorityAccessMethodArgs() {}
 
-    private CertificateAuthorityAccessMethodArgs() {
-        this.accessMethodType = Codegen.empty();
-        this.customObjectIdentifier = Codegen.empty();
+    private CertificateAuthorityAccessMethodArgs(CertificateAuthorityAccessMethodArgs $) {
+        this.accessMethodType = $.accessMethodType;
+        this.customObjectIdentifier = $.customObjectIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityAccessMethodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessMethodType;
-        private @Nullable Output<String> customObjectIdentifier;
+        private CertificateAuthorityAccessMethodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityAccessMethodArgs();
         }
 
         public Builder(CertificateAuthorityAccessMethodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessMethodType = defaults.accessMethodType;
-    	      this.customObjectIdentifier = defaults.customObjectIdentifier;
+            $ = new CertificateAuthorityAccessMethodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessMethodType(@Nullable Output<String> accessMethodType) {
-            this.accessMethodType = accessMethodType;
+            $.accessMethodType = accessMethodType;
             return this;
         }
-        public Builder accessMethodType(@Nullable String accessMethodType) {
-            this.accessMethodType = Codegen.ofNullable(accessMethodType);
-            return this;
+
+        public Builder accessMethodType(String accessMethodType) {
+            return accessMethodType(Output.of(accessMethodType));
         }
+
         public Builder customObjectIdentifier(@Nullable Output<String> customObjectIdentifier) {
-            this.customObjectIdentifier = customObjectIdentifier;
+            $.customObjectIdentifier = customObjectIdentifier;
             return this;
         }
-        public Builder customObjectIdentifier(@Nullable String customObjectIdentifier) {
-            this.customObjectIdentifier = Codegen.ofNullable(customObjectIdentifier);
-            return this;
-        }        public CertificateAuthorityAccessMethodArgs build() {
-            return new CertificateAuthorityAccessMethodArgs(accessMethodType, customObjectIdentifier);
+
+        public Builder customObjectIdentifier(String customObjectIdentifier) {
+            return customObjectIdentifier(Output.of(customObjectIdentifier));
+        }
+
+        public CertificateAuthorityAccessMethodArgs build() {
+            return $;
         }
     }
+
 }

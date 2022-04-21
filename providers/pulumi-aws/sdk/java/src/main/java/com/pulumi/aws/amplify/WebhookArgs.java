@@ -5,9 +5,9 @@ package com.pulumi.aws.amplify;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -31,7 +31,7 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branchName", required=true)
-      private final Output<String> branchName;
+    private Output<String> branchName;
 
     public Output<String> branchName() {
         return this.branchName;
@@ -42,76 +42,70 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
-    public WebhookArgs(
-        Output<String> appId,
-        Output<String> branchName,
-        @Nullable Output<String> description) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.branchName = Objects.requireNonNull(branchName, "expected parameter 'branchName' to be non-null");
-        this.description = description;
-    }
+    private WebhookArgs() {}
 
-    private WebhookArgs() {
-        this.appId = Codegen.empty();
-        this.branchName = Codegen.empty();
-        this.description = Codegen.empty();
+    private WebhookArgs(WebhookArgs $) {
+        this.appId = $.appId;
+        this.branchName = $.branchName;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private Output<String> branchName;
-        private @Nullable Output<String> description;
+        private WebhookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookArgs();
         }
 
         public Builder(WebhookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.branchName = defaults.branchName;
-    	      this.description = defaults.description;
+            $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder branchName(Output<String> branchName) {
-            this.branchName = Objects.requireNonNull(branchName);
+            $.branchName = branchName;
             return this;
         }
+
         public Builder branchName(String branchName) {
-            this.branchName = Output.of(Objects.requireNonNull(branchName));
-            return this;
+            return branchName(Output.of(branchName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
-        }        public WebhookArgs build() {
-            return new WebhookArgs(appId, branchName, description);
+
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        public WebhookArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.branchName = Objects.requireNonNull($.branchName, "expected parameter 'branchName' to be non-null");
+            return $;
         }
     }
+
 }

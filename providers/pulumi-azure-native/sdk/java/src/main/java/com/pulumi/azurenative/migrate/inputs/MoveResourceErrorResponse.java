@@ -23,45 +23,44 @@ public final class MoveResourceErrorResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="properties")
-      private final @Nullable MoveResourceErrorBodyResponse properties;
+    private @Nullable MoveResourceErrorBodyResponse properties;
 
     public Optional<MoveResourceErrorBodyResponse> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
-    public MoveResourceErrorResponse(@Nullable MoveResourceErrorBodyResponse properties) {
-        this.properties = properties;
-    }
+    private MoveResourceErrorResponse() {}
 
-    private MoveResourceErrorResponse() {
-        this.properties = null;
+    private MoveResourceErrorResponse(MoveResourceErrorResponse $) {
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveResourceErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MoveResourceErrorBodyResponse properties;
+        private MoveResourceErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveResourceErrorResponse();
         }
 
         public Builder(MoveResourceErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
+            $ = new MoveResourceErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable MoveResourceErrorBodyResponse properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
-        }        public MoveResourceErrorResponse build() {
-            return new MoveResourceErrorResponse(properties);
+        }
+
+        public MoveResourceErrorResponse build() {
+            return $;
         }
     }
+
 }

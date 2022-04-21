@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="customLicenseAcquisitionUrlTemplate")
-      private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
+    private @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
-    public Output<String> customLicenseAcquisitionUrlTemplate() {
-        return this.customLicenseAcquisitionUrlTemplate == null ? Codegen.empty() : this.customLicenseAcquisitionUrlTemplate;
+    public Optional<Output<String>> customLicenseAcquisitionUrlTemplate() {
+        return Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="playReadyCustomAttributes")
-      private final @Nullable Output<String> playReadyCustomAttributes;
+    private @Nullable Output<String> playReadyCustomAttributes;
 
-    public Output<String> playReadyCustomAttributes() {
-        return this.playReadyCustomAttributes == null ? Codegen.empty() : this.playReadyCustomAttributes;
+    public Optional<Output<String>> playReadyCustomAttributes() {
+        return Optional.ofNullable(this.playReadyCustomAttributes);
     }
 
-    public StreamingPolicyPlayReadyConfigurationArgs(
-        @Nullable Output<String> customLicenseAcquisitionUrlTemplate,
-        @Nullable Output<String> playReadyCustomAttributes) {
-        this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
-        this.playReadyCustomAttributes = playReadyCustomAttributes;
-    }
+    private StreamingPolicyPlayReadyConfigurationArgs() {}
 
-    private StreamingPolicyPlayReadyConfigurationArgs() {
-        this.customLicenseAcquisitionUrlTemplate = Codegen.empty();
-        this.playReadyCustomAttributes = Codegen.empty();
+    private StreamingPolicyPlayReadyConfigurationArgs(StreamingPolicyPlayReadyConfigurationArgs $) {
+        this.customLicenseAcquisitionUrlTemplate = $.customLicenseAcquisitionUrlTemplate;
+        this.playReadyCustomAttributes = $.playReadyCustomAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyPlayReadyConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
-        private @Nullable Output<String> playReadyCustomAttributes;
+        private StreamingPolicyPlayReadyConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyPlayReadyConfigurationArgs();
         }
 
         public Builder(StreamingPolicyPlayReadyConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customLicenseAcquisitionUrlTemplate = defaults.customLicenseAcquisitionUrlTemplate;
-    	      this.playReadyCustomAttributes = defaults.playReadyCustomAttributes;
+            $ = new StreamingPolicyPlayReadyConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customLicenseAcquisitionUrlTemplate(@Nullable Output<String> customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
+            $.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-        public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
-            this.customLicenseAcquisitionUrlTemplate = Codegen.ofNullable(customLicenseAcquisitionUrlTemplate);
-            return this;
+
+        public Builder customLicenseAcquisitionUrlTemplate(String customLicenseAcquisitionUrlTemplate) {
+            return customLicenseAcquisitionUrlTemplate(Output.of(customLicenseAcquisitionUrlTemplate));
         }
+
         public Builder playReadyCustomAttributes(@Nullable Output<String> playReadyCustomAttributes) {
-            this.playReadyCustomAttributes = playReadyCustomAttributes;
+            $.playReadyCustomAttributes = playReadyCustomAttributes;
             return this;
         }
-        public Builder playReadyCustomAttributes(@Nullable String playReadyCustomAttributes) {
-            this.playReadyCustomAttributes = Codegen.ofNullable(playReadyCustomAttributes);
-            return this;
-        }        public StreamingPolicyPlayReadyConfigurationArgs build() {
-            return new StreamingPolicyPlayReadyConfigurationArgs(customLicenseAcquisitionUrlTemplate, playReadyCustomAttributes);
+
+        public Builder playReadyCustomAttributes(String playReadyCustomAttributes) {
+            return playReadyCustomAttributes(Output.of(playReadyCustomAttributes));
+        }
+
+        public StreamingPolicyPlayReadyConfigurationArgs build() {
+            return $;
         }
     }
+
 }

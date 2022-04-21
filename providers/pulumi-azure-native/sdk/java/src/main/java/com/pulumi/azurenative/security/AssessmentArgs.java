@@ -11,11 +11,11 @@ import com.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataProperti
 import com.pulumi.azurenative.security.inputs.SecurityAssessmentPartnerDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalData")
-      private final @Nullable Output<Map<String,String>> additionalData;
+    private @Nullable Output<Map<String,String>> additionalData;
 
-    public Output<Map<String,String>> additionalData() {
-        return this.additionalData == null ? Codegen.empty() : this.additionalData;
+    public Optional<Output<Map<String,String>>> additionalData() {
+        return Optional.ofNullable(this.additionalData);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assessmentName")
-      private final @Nullable Output<String> assessmentName;
+    private @Nullable Output<String> assessmentName;
 
-    public Output<String> assessmentName() {
-        return this.assessmentName == null ? Codegen.empty() : this.assessmentName;
+    public Optional<Output<String>> assessmentName() {
+        return Optional.ofNullable(this.assessmentName);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
+    private @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
 
-    public Output<SecurityAssessmentMetadataPropertiesArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<SecurityAssessmentMetadataPropertiesArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partnersData")
-      private final @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
+    private @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
 
-    public Output<SecurityAssessmentPartnerDataArgs> partnersData() {
-        return this.partnersData == null ? Codegen.empty() : this.partnersData;
+    public Optional<Output<SecurityAssessmentPartnerDataArgs>> partnersData() {
+        return Optional.ofNullable(this.partnersData);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceDetails", required=true)
-      private final Output<Object> resourceDetails;
+    private Output<Object> resourceDetails;
 
     public Output<Object> resourceDetails() {
         return this.resourceDetails;
@@ -83,7 +83,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -94,128 +94,111 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final Output<AssessmentStatusArgs> status;
+    private Output<AssessmentStatusArgs> status;
 
     public Output<AssessmentStatusArgs> status() {
         return this.status;
     }
 
-    public AssessmentArgs(
-        @Nullable Output<Map<String,String>> additionalData,
-        @Nullable Output<String> assessmentName,
-        @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata,
-        @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData,
-        Output<Object> resourceDetails,
-        Output<String> resourceId,
-        Output<AssessmentStatusArgs> status) {
-        this.additionalData = additionalData;
-        this.assessmentName = assessmentName;
-        this.metadata = metadata;
-        this.partnersData = partnersData;
-        this.resourceDetails = Objects.requireNonNull(resourceDetails, "expected parameter 'resourceDetails' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private AssessmentArgs() {}
 
-    private AssessmentArgs() {
-        this.additionalData = Codegen.empty();
-        this.assessmentName = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.partnersData = Codegen.empty();
-        this.resourceDetails = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.status = Codegen.empty();
+    private AssessmentArgs(AssessmentArgs $) {
+        this.additionalData = $.additionalData;
+        this.assessmentName = $.assessmentName;
+        this.metadata = $.metadata;
+        this.partnersData = $.partnersData;
+        this.resourceDetails = $.resourceDetails;
+        this.resourceId = $.resourceId;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> additionalData;
-        private @Nullable Output<String> assessmentName;
-        private @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
-        private @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
-        private Output<Object> resourceDetails;
-        private Output<String> resourceId;
-        private Output<AssessmentStatusArgs> status;
+        private AssessmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentArgs();
         }
 
         public Builder(AssessmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalData = defaults.additionalData;
-    	      this.assessmentName = defaults.assessmentName;
-    	      this.metadata = defaults.metadata;
-    	      this.partnersData = defaults.partnersData;
-    	      this.resourceDetails = defaults.resourceDetails;
-    	      this.resourceId = defaults.resourceId;
-    	      this.status = defaults.status;
+            $ = new AssessmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalData(@Nullable Output<Map<String,String>> additionalData) {
-            this.additionalData = additionalData;
+            $.additionalData = additionalData;
             return this;
         }
-        public Builder additionalData(@Nullable Map<String,String> additionalData) {
-            this.additionalData = Codegen.ofNullable(additionalData);
-            return this;
+
+        public Builder additionalData(Map<String,String> additionalData) {
+            return additionalData(Output.of(additionalData));
         }
+
         public Builder assessmentName(@Nullable Output<String> assessmentName) {
-            this.assessmentName = assessmentName;
+            $.assessmentName = assessmentName;
             return this;
         }
-        public Builder assessmentName(@Nullable String assessmentName) {
-            this.assessmentName = Codegen.ofNullable(assessmentName);
-            return this;
+
+        public Builder assessmentName(String assessmentName) {
+            return assessmentName(Output.of(assessmentName));
         }
+
         public Builder metadata(@Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable SecurityAssessmentMetadataPropertiesArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(SecurityAssessmentMetadataPropertiesArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder partnersData(@Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData) {
-            this.partnersData = partnersData;
+            $.partnersData = partnersData;
             return this;
         }
-        public Builder partnersData(@Nullable SecurityAssessmentPartnerDataArgs partnersData) {
-            this.partnersData = Codegen.ofNullable(partnersData);
-            return this;
+
+        public Builder partnersData(SecurityAssessmentPartnerDataArgs partnersData) {
+            return partnersData(Output.of(partnersData));
         }
+
         public Builder resourceDetails(Output<Object> resourceDetails) {
-            this.resourceDetails = Objects.requireNonNull(resourceDetails);
+            $.resourceDetails = resourceDetails;
             return this;
         }
+
         public Builder resourceDetails(Object resourceDetails) {
-            this.resourceDetails = Output.of(Objects.requireNonNull(resourceDetails));
-            return this;
+            return resourceDetails(Output.of(resourceDetails));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder status(Output<AssessmentStatusArgs> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(AssessmentStatusArgs status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public AssessmentArgs build() {
-            return new AssessmentArgs(additionalData, assessmentName, metadata, partnersData, resourceDetails, resourceId, status);
+            return status(Output.of(status));
+        }
+
+        public AssessmentArgs build() {
+            $.resourceDetails = Objects.requireNonNull($.resourceDetails, "expected parameter 'resourceDetails' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

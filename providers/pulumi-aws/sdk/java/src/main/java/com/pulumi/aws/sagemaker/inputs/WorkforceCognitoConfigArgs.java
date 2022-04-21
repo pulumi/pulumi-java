@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class WorkforceCognitoConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -30,63 +29,60 @@ public final class WorkforceCognitoConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="userPool", required=true)
-      private final Output<String> userPool;
+    private Output<String> userPool;
 
     public Output<String> userPool() {
         return this.userPool;
     }
 
-    public WorkforceCognitoConfigArgs(
-        Output<String> clientId,
-        Output<String> userPool) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.userPool = Objects.requireNonNull(userPool, "expected parameter 'userPool' to be non-null");
-    }
+    private WorkforceCognitoConfigArgs() {}
 
-    private WorkforceCognitoConfigArgs() {
-        this.clientId = Codegen.empty();
-        this.userPool = Codegen.empty();
+    private WorkforceCognitoConfigArgs(WorkforceCognitoConfigArgs $) {
+        this.clientId = $.clientId;
+        this.userPool = $.userPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkforceCognitoConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientId;
-        private Output<String> userPool;
+        private WorkforceCognitoConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkforceCognitoConfigArgs();
         }
 
         public Builder(WorkforceCognitoConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.userPool = defaults.userPool;
+            $ = new WorkforceCognitoConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder userPool(Output<String> userPool) {
-            this.userPool = Objects.requireNonNull(userPool);
+            $.userPool = userPool;
             return this;
         }
+
         public Builder userPool(String userPool) {
-            this.userPool = Output.of(Objects.requireNonNull(userPool));
-            return this;
-        }        public WorkforceCognitoConfigArgs build() {
-            return new WorkforceCognitoConfigArgs(clientId, userPool);
+            return userPool(Output.of(userPool));
+        }
+
+        public WorkforceCognitoConfigArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.userPool = Objects.requireNonNull($.userPool, "expected parameter 'userPool' to be non-null");
+            return $;
         }
     }
+
 }

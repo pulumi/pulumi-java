@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.LicenseResourceRequirementsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,31 +33,31 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     @Import(name="resourceRequirements")
-      private final @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements;
+    private @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements;
 
-    public Output<LicenseResourceRequirementsArgs> resourceRequirements() {
-        return this.resourceRequirements == null ? Codegen.empty() : this.resourceRequirements;
+    public Optional<Output<LicenseResourceRequirementsArgs>> resourceRequirements() {
+        return Optional.ofNullable(this.resourceRequirements);
     }
 
     /**
@@ -65,115 +65,98 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transferable")
-      private final @Nullable Output<Boolean> transferable;
+    private @Nullable Output<Boolean> transferable;
 
-    public Output<Boolean> transferable() {
-        return this.transferable == null ? Codegen.empty() : this.transferable;
+    public Optional<Output<Boolean>> transferable() {
+        return Optional.ofNullable(this.transferable);
     }
 
-    public LicenseArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements,
-        @Nullable Output<Boolean> transferable) {
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.resourceRequirements = resourceRequirements;
-        this.transferable = transferable;
-    }
+    private LicenseArgs() {}
 
-    private LicenseArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.resourceRequirements = Codegen.empty();
-        this.transferable = Codegen.empty();
+    private LicenseArgs(LicenseArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.resourceRequirements = $.resourceRequirements;
+        this.transferable = $.transferable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements;
-        private @Nullable Output<Boolean> transferable;
+        private LicenseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseArgs();
         }
 
         public Builder(LicenseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.resourceRequirements = defaults.resourceRequirements;
-    	      this.transferable = defaults.transferable;
+            $ = new LicenseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder resourceRequirements(@Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements) {
-            this.resourceRequirements = resourceRequirements;
+            $.resourceRequirements = resourceRequirements;
             return this;
         }
-        public Builder resourceRequirements(@Nullable LicenseResourceRequirementsArgs resourceRequirements) {
-            this.resourceRequirements = Codegen.ofNullable(resourceRequirements);
-            return this;
+
+        public Builder resourceRequirements(LicenseResourceRequirementsArgs resourceRequirements) {
+            return resourceRequirements(Output.of(resourceRequirements));
         }
+
         public Builder transferable(@Nullable Output<Boolean> transferable) {
-            this.transferable = transferable;
+            $.transferable = transferable;
             return this;
         }
-        public Builder transferable(@Nullable Boolean transferable) {
-            this.transferable = Codegen.ofNullable(transferable);
-            return this;
-        }        public LicenseArgs build() {
-            return new LicenseArgs(description, name, project, requestId, resourceRequirements, transferable);
+
+        public Builder transferable(Boolean transferable) {
+            return transferable(Output.of(transferable));
+        }
+
+        public LicenseArgs build() {
+            return $;
         }
     }
+
 }

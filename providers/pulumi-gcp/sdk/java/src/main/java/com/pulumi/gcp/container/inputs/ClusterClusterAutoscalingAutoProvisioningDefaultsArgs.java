@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
      * 
      */
     @Import(name="imageType")
-      private final @Nullable Output<String> imageType;
+    private @Nullable Output<String> imageType;
 
-    public Output<String> imageType() {
-        return this.imageType == null ? Codegen.empty() : this.imageType;
+    public Optional<Output<String>> imageType() {
+        return Optional.ofNullable(this.imageType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
      * 
      */
     @Import(name="oauthScopes")
-      private final @Nullable Output<List<String>> oauthScopes;
+    private @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> oauthScopes() {
-        return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
+    public Optional<Output<List<String>>> oauthScopes() {
+        return Optional.ofNullable(this.oauthScopes);
     }
 
     /**
@@ -62,92 +62,82 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsArgs extends
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
-    public ClusterClusterAutoscalingAutoProvisioningDefaultsArgs(
-        @Nullable Output<String> imageType,
-        @Nullable Output<String> minCpuPlatform,
-        @Nullable Output<List<String>> oauthScopes,
-        @Nullable Output<String> serviceAccount) {
-        this.imageType = imageType;
-        this.minCpuPlatform = minCpuPlatform;
-        this.oauthScopes = oauthScopes;
-        this.serviceAccount = serviceAccount;
-    }
+    private ClusterClusterAutoscalingAutoProvisioningDefaultsArgs() {}
 
-    private ClusterClusterAutoscalingAutoProvisioningDefaultsArgs() {
-        this.imageType = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
-        this.oauthScopes = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
+    private ClusterClusterAutoscalingAutoProvisioningDefaultsArgs(ClusterClusterAutoscalingAutoProvisioningDefaultsArgs $) {
+        this.imageType = $.imageType;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.oauthScopes = $.oauthScopes;
+        this.serviceAccount = $.serviceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterAutoscalingAutoProvisioningDefaultsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> imageType;
-        private @Nullable Output<String> minCpuPlatform;
-        private @Nullable Output<List<String>> oauthScopes;
-        private @Nullable Output<String> serviceAccount;
+        private ClusterClusterAutoscalingAutoProvisioningDefaultsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterAutoscalingAutoProvisioningDefaultsArgs();
         }
 
         public Builder(ClusterClusterAutoscalingAutoProvisioningDefaultsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageType = defaults.imageType;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.serviceAccount = defaults.serviceAccount;
+            $ = new ClusterClusterAutoscalingAutoProvisioningDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageType(@Nullable Output<String> imageType) {
-            this.imageType = imageType;
+            $.imageType = imageType;
             return this;
         }
-        public Builder imageType(@Nullable String imageType) {
-            this.imageType = Codegen.ofNullable(imageType);
-            return this;
+
+        public Builder imageType(String imageType) {
+            return imageType(Output.of(imageType));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
         }
+
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
-            this.oauthScopes = oauthScopes;
+            $.oauthScopes = oauthScopes;
             return this;
         }
-        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Codegen.ofNullable(oauthScopes);
-            return this;
+
+        public Builder oauthScopes(List<String> oauthScopes) {
+            return oauthScopes(Output.of(oauthScopes));
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
-        }        public ClusterClusterAutoscalingAutoProvisioningDefaultsArgs build() {
-            return new ClusterClusterAutoscalingAutoProvisioningDefaultsArgs(imageType, minCpuPlatform, oauthScopes, serviceAccount);
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
+        }
+
+        public ClusterClusterAutoscalingAutoProvisioningDefaultsArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="cmk")
-      private final @Nullable CustomerManagedKeyDetailsResponse cmk;
+    private @Nullable CustomerManagedKeyDetailsResponse cmk;
 
     public Optional<CustomerManagedKeyDetailsResponse> cmk() {
-        return this.cmk == null ? Optional.empty() : Optional.ofNullable(this.cmk);
+        return Optional.ofNullable(this.cmk);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="doubleEncryptionEnabled", required=true)
-      private final Boolean doubleEncryptionEnabled;
+    private Boolean doubleEncryptionEnabled;
 
     public Boolean doubleEncryptionEnabled() {
         return this.doubleEncryptionEnabled;
     }
 
-    public EncryptionDetailsResponse(
-        @Nullable CustomerManagedKeyDetailsResponse cmk,
-        Boolean doubleEncryptionEnabled) {
-        this.cmk = cmk;
-        this.doubleEncryptionEnabled = Objects.requireNonNull(doubleEncryptionEnabled, "expected parameter 'doubleEncryptionEnabled' to be non-null");
-    }
+    private EncryptionDetailsResponse() {}
 
-    private EncryptionDetailsResponse() {
-        this.cmk = null;
-        this.doubleEncryptionEnabled = null;
+    private EncryptionDetailsResponse(EncryptionDetailsResponse $) {
+        this.cmk = $.cmk;
+        this.doubleEncryptionEnabled = $.doubleEncryptionEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CustomerManagedKeyDetailsResponse cmk;
-        private Boolean doubleEncryptionEnabled;
+        private EncryptionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionDetailsResponse();
         }
 
         public Builder(EncryptionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cmk = defaults.cmk;
-    	      this.doubleEncryptionEnabled = defaults.doubleEncryptionEnabled;
+            $ = new EncryptionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cmk(@Nullable CustomerManagedKeyDetailsResponse cmk) {
-            this.cmk = cmk;
+            $.cmk = cmk;
             return this;
         }
+
         public Builder doubleEncryptionEnabled(Boolean doubleEncryptionEnabled) {
-            this.doubleEncryptionEnabled = Objects.requireNonNull(doubleEncryptionEnabled);
+            $.doubleEncryptionEnabled = doubleEncryptionEnabled;
             return this;
-        }        public EncryptionDetailsResponse build() {
-            return new EncryptionDetailsResponse(cmk, doubleEncryptionEnabled);
+        }
+
+        public EncryptionDetailsResponse build() {
+            $.doubleEncryptionEnabled = Objects.requireNonNull($.doubleEncryptionEnabled, "expected parameter 'doubleEncryptionEnabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AzureActiveDirectoryAppArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="appKey", required=true)
-      private final Output<String> appKey;
+    private Output<String> appKey;
 
     public Output<String> appKey() {
         return this.appKey;
@@ -34,7 +33,7 @@ public final class AzureActiveDirectoryAppArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -45,76 +44,71 @@ public final class AzureActiveDirectoryAppArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tenantId", required=true)
-      private final Output<String> tenantId;
+    private Output<String> tenantId;
 
     public Output<String> tenantId() {
         return this.tenantId;
     }
 
-    public AzureActiveDirectoryAppArgs(
-        Output<String> appKey,
-        Output<String> applicationId,
-        Output<String> tenantId) {
-        this.appKey = Objects.requireNonNull(appKey, "expected parameter 'appKey' to be non-null");
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private AzureActiveDirectoryAppArgs() {}
 
-    private AzureActiveDirectoryAppArgs() {
-        this.appKey = Codegen.empty();
-        this.applicationId = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private AzureActiveDirectoryAppArgs(AzureActiveDirectoryAppArgs $) {
+        this.appKey = $.appKey;
+        this.applicationId = $.applicationId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureActiveDirectoryAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appKey;
-        private Output<String> applicationId;
-        private Output<String> tenantId;
+        private AzureActiveDirectoryAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureActiveDirectoryAppArgs();
         }
 
         public Builder(AzureActiveDirectoryAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appKey = defaults.appKey;
-    	      this.applicationId = defaults.applicationId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AzureActiveDirectoryAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appKey(Output<String> appKey) {
-            this.appKey = Objects.requireNonNull(appKey);
+            $.appKey = appKey;
             return this;
         }
+
         public Builder appKey(String appKey) {
-            this.appKey = Output.of(Objects.requireNonNull(appKey));
-            return this;
+            return appKey(Output.of(appKey));
         }
+
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder tenantId(Output<String> tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
-            return this;
-        }        public AzureActiveDirectoryAppArgs build() {
-            return new AzureActiveDirectoryAppArgs(appKey, applicationId, tenantId);
+            return tenantId(Output.of(tenantId));
+        }
+
+        public AzureActiveDirectoryAppArgs build() {
+            $.appKey = Objects.requireNonNull($.appKey, "expected parameter 'appKey' to be non-null");
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

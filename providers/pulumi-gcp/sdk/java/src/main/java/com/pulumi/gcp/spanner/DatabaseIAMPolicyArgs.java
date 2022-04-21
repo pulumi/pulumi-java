@@ -5,9 +5,9 @@ package com.pulumi.gcp.spanner;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DatabaseIAMPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="database", required=true)
-      private final Output<String> database;
+    private Output<String> database;
 
     public Output<String> database() {
         return this.database;
@@ -31,7 +31,7 @@ public final class DatabaseIAMPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
@@ -43,7 +43,7 @@ public final class DatabaseIAMPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -55,89 +55,81 @@ public final class DatabaseIAMPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DatabaseIAMPolicyArgs(
-        Output<String> database,
-        Output<String> instance,
-        Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-    }
+    private DatabaseIAMPolicyArgs() {}
 
-    private DatabaseIAMPolicyArgs() {
-        this.database = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private DatabaseIAMPolicyArgs(DatabaseIAMPolicyArgs $) {
+        this.database = $.database;
+        this.instance = $.instance;
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseIAMPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> database;
-        private Output<String> instance;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
+        private DatabaseIAMPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseIAMPolicyArgs();
         }
 
         public Builder(DatabaseIAMPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.instance = defaults.instance;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new DatabaseIAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder database(Output<String> database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Output.of(Objects.requireNonNull(database));
-            return this;
+            return database(Output.of(database));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DatabaseIAMPolicyArgs build() {
-            return new DatabaseIAMPolicyArgs(database, instance, policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DatabaseIAMPolicyArgs build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

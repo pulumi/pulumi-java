@@ -7,12 +7,12 @@ import com.pulumi.azurenative.alertsmanagement.inputs.HealthAlertActionArgs;
 import com.pulumi.azurenative.alertsmanagement.inputs.HealthAlertCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<HealthAlertActionArgs>> actions;
+    private @Nullable Output<List<HealthAlertActionArgs>> actions;
 
-    public Output<List<HealthAlertActionArgs>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<HealthAlertActionArgs>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="criteria", required=true)
-      private final Output<HealthAlertCriteriaArgs> criteria;
+    private Output<HealthAlertCriteriaArgs> criteria;
 
     public Output<HealthAlertCriteriaArgs> criteria() {
         return this.criteria;
@@ -47,7 +47,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -58,7 +58,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -69,10 +69,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,10 +91,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopes")
-      private final @Nullable Output<List<String>> scopes;
+    private @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> scopes() {
-        return this.scopes == null ? Codegen.empty() : this.scopes;
+    public Optional<Output<List<String>>> scopes() {
+        return Optional.ofNullable(this.scopes);
     }
 
     /**
@@ -113,160 +113,140 @@ public final class HealthAlertArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public HealthAlertArgs(
-        @Nullable Output<List<HealthAlertActionArgs>> actions,
-        Output<HealthAlertCriteriaArgs> criteria,
-        Output<String> description,
-        Output<Boolean> enabled,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleName,
-        @Nullable Output<List<String>> scopes,
-        @Nullable Output<Map<String,String>> tags) {
-        this.actions = actions;
-        this.criteria = Objects.requireNonNull(criteria, "expected parameter 'criteria' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleName = ruleName;
-        this.scopes = scopes;
-        this.tags = tags;
-    }
+    private HealthAlertArgs() {}
 
-    private HealthAlertArgs() {
-        this.actions = Codegen.empty();
-        this.criteria = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.scopes = Codegen.empty();
-        this.tags = Codegen.empty();
+    private HealthAlertArgs(HealthAlertArgs $) {
+        this.actions = $.actions;
+        this.criteria = $.criteria;
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleName = $.ruleName;
+        this.scopes = $.scopes;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthAlertArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<HealthAlertActionArgs>> actions;
-        private Output<HealthAlertCriteriaArgs> criteria;
-        private Output<String> description;
-        private Output<Boolean> enabled;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleName;
-        private @Nullable Output<List<String>> scopes;
-        private @Nullable Output<Map<String,String>> tags;
+        private HealthAlertArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthAlertArgs();
         }
 
         public Builder(HealthAlertArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.criteria = defaults.criteria;
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleName = defaults.ruleName;
-    	      this.scopes = defaults.scopes;
-    	      this.tags = defaults.tags;
+            $ = new HealthAlertArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<HealthAlertActionArgs>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<HealthAlertActionArgs> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<HealthAlertActionArgs> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(HealthAlertActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder criteria(Output<HealthAlertCriteriaArgs> criteria) {
-            this.criteria = Objects.requireNonNull(criteria);
+            $.criteria = criteria;
             return this;
         }
+
         public Builder criteria(HealthAlertCriteriaArgs criteria) {
-            this.criteria = Output.of(Objects.requireNonNull(criteria));
-            return this;
+            return criteria(Output.of(criteria));
         }
+
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder scopes(@Nullable Output<List<String>> scopes) {
-            this.scopes = scopes;
+            $.scopes = scopes;
             return this;
         }
-        public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Codegen.ofNullable(scopes);
-            return this;
+
+        public Builder scopes(List<String> scopes) {
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public HealthAlertArgs build() {
-            return new HealthAlertArgs(actions, criteria, description, enabled, location, resourceGroupName, ruleName, scopes, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public HealthAlertArgs build() {
+            $.criteria = Objects.requireNonNull($.criteria, "expected parameter 'criteria' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

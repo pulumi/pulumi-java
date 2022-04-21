@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultResponse extend
      * 
      */
     @Import(name="lastUpdateTime", required=true)
-      private final String lastUpdateTime;
+    private String lastUpdateTime;
 
     public String lastUpdateTime() {
         return this.lastUpdateTime;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultResponse extend
      * 
      */
     @Import(name="versionMetrics", required=true)
-      private final List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics;
+    private List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics;
 
     public List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics() {
         return this.versionMetrics;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ExperimentResultResponse(
-        String lastUpdateTime,
-        List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics) {
-        this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime, "expected parameter 'lastUpdateTime' to be non-null");
-        this.versionMetrics = Objects.requireNonNull(versionMetrics, "expected parameter 'versionMetrics' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ExperimentResultResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ExperimentResultResponse() {
-        this.lastUpdateTime = null;
-        this.versionMetrics = List.of();
+    private GoogleCloudDialogflowCxV3beta1ExperimentResultResponse(GoogleCloudDialogflowCxV3beta1ExperimentResultResponse $) {
+        this.lastUpdateTime = $.lastUpdateTime;
+        this.versionMetrics = $.versionMetrics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ExperimentResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastUpdateTime;
-        private List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics;
+        private GoogleCloudDialogflowCxV3beta1ExperimentResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ExperimentResultResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ExperimentResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastUpdateTime = defaults.lastUpdateTime;
-    	      this.versionMetrics = defaults.versionMetrics;
+            $ = new GoogleCloudDialogflowCxV3beta1ExperimentResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastUpdateTime(String lastUpdateTime) {
-            this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
+            $.lastUpdateTime = lastUpdateTime;
             return this;
         }
+
         public Builder versionMetrics(List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics) {
-            this.versionMetrics = Objects.requireNonNull(versionMetrics);
+            $.versionMetrics = versionMetrics;
             return this;
         }
+
         public Builder versionMetrics(GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse... versionMetrics) {
             return versionMetrics(List.of(versionMetrics));
-        }        public GoogleCloudDialogflowCxV3beta1ExperimentResultResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ExperimentResultResponse(lastUpdateTime, versionMetrics);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ExperimentResultResponse build() {
+            $.lastUpdateTime = Objects.requireNonNull($.lastUpdateTime, "expected parameter 'lastUpdateTime' to be non-null");
+            $.versionMetrics = Objects.requireNonNull($.versionMetrics, "expected parameter 'versionMetrics' to be non-null");
+            return $;
         }
     }
+
 }

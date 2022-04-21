@@ -8,10 +8,10 @@ import com.pulumi.azurenative.compute.enums.WindowsVMGuestPatchMode;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assessmentMode")
-      private final @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
+    private @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
 
-    public Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode() {
-        return this.assessmentMode == null ? Codegen.empty() : this.assessmentMode;
+    public Optional<Output<Either<String,WindowsPatchAssessmentMode>>> assessmentMode() {
+        return Optional.ofNullable(this.assessmentMode);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableHotpatching")
-      private final @Nullable Output<Boolean> enableHotpatching;
+    private @Nullable Output<Boolean> enableHotpatching;
 
-    public Output<Boolean> enableHotpatching() {
-        return this.enableHotpatching == null ? Codegen.empty() : this.enableHotpatching;
+    public Optional<Output<Boolean>> enableHotpatching() {
+        return Optional.ofNullable(this.enableHotpatching);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class PatchSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="patchMode")
-      private final @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode;
+    private @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode;
 
-    public Output<Either<String,WindowsVMGuestPatchMode>> patchMode() {
-        return this.patchMode == null ? Codegen.empty() : this.patchMode;
+    public Optional<Output<Either<String,WindowsVMGuestPatchMode>>> patchMode() {
+        return Optional.ofNullable(this.patchMode);
     }
 
-    public PatchSettingsArgs(
-        @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode,
-        @Nullable Output<Boolean> enableHotpatching,
-        @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode) {
-        this.assessmentMode = assessmentMode;
-        this.enableHotpatching = enableHotpatching;
-        this.patchMode = patchMode;
-    }
+    private PatchSettingsArgs() {}
 
-    private PatchSettingsArgs() {
-        this.assessmentMode = Codegen.empty();
-        this.enableHotpatching = Codegen.empty();
-        this.patchMode = Codegen.empty();
+    private PatchSettingsArgs(PatchSettingsArgs $) {
+        this.assessmentMode = $.assessmentMode;
+        this.enableHotpatching = $.enableHotpatching;
+        this.patchMode = $.patchMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
-        private @Nullable Output<Boolean> enableHotpatching;
-        private @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode;
+        private PatchSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchSettingsArgs();
         }
 
         public Builder(PatchSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentMode = defaults.assessmentMode;
-    	      this.enableHotpatching = defaults.enableHotpatching;
-    	      this.patchMode = defaults.patchMode;
+            $ = new PatchSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentMode(@Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode) {
-            this.assessmentMode = assessmentMode;
+            $.assessmentMode = assessmentMode;
             return this;
         }
-        public Builder assessmentMode(@Nullable Either<String,WindowsPatchAssessmentMode> assessmentMode) {
-            this.assessmentMode = Codegen.ofNullable(assessmentMode);
-            return this;
+
+        public Builder assessmentMode(Either<String,WindowsPatchAssessmentMode> assessmentMode) {
+            return assessmentMode(Output.of(assessmentMode));
         }
+
         public Builder enableHotpatching(@Nullable Output<Boolean> enableHotpatching) {
-            this.enableHotpatching = enableHotpatching;
+            $.enableHotpatching = enableHotpatching;
             return this;
         }
-        public Builder enableHotpatching(@Nullable Boolean enableHotpatching) {
-            this.enableHotpatching = Codegen.ofNullable(enableHotpatching);
-            return this;
+
+        public Builder enableHotpatching(Boolean enableHotpatching) {
+            return enableHotpatching(Output.of(enableHotpatching));
         }
+
         public Builder patchMode(@Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode) {
-            this.patchMode = patchMode;
+            $.patchMode = patchMode;
             return this;
         }
-        public Builder patchMode(@Nullable Either<String,WindowsVMGuestPatchMode> patchMode) {
-            this.patchMode = Codegen.ofNullable(patchMode);
-            return this;
-        }        public PatchSettingsArgs build() {
-            return new PatchSettingsArgs(assessmentMode, enableHotpatching, patchMode);
+
+        public Builder patchMode(Either<String,WindowsVMGuestPatchMode> patchMode) {
+            return patchMode(Output.of(patchMode));
+        }
+
+        public PatchSettingsArgs build() {
+            return $;
         }
     }
+
 }

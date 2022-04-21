@@ -5,10 +5,10 @@ package com.pulumi.aws.apprunner;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionName", required=true)
-      private final Output<String> connectionName;
+    private Output<String> connectionName;
 
     public Output<String> connectionName() {
         return this.connectionName;
@@ -32,7 +32,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="providerType", required=true)
-      private final Output<String> providerType;
+    private Output<String> providerType;
 
     public Output<String> providerType() {
         return this.providerType;
@@ -43,76 +43,70 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ConnectionArgs(
-        Output<String> connectionName,
-        Output<String> providerType,
-        @Nullable Output<Map<String,String>> tags) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.providerType = Objects.requireNonNull(providerType, "expected parameter 'providerType' to be non-null");
-        this.tags = tags;
-    }
+    private ConnectionArgs() {}
 
-    private ConnectionArgs() {
-        this.connectionName = Codegen.empty();
-        this.providerType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ConnectionArgs(ConnectionArgs $) {
+        this.connectionName = $.connectionName;
+        this.providerType = $.providerType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectionName;
-        private Output<String> providerType;
-        private @Nullable Output<Map<String,String>> tags;
+        private ConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionArgs();
         }
 
         public Builder(ConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.providerType = defaults.providerType;
-    	      this.tags = defaults.tags;
+            $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(Output<String> connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder connectionName(String connectionName) {
-            this.connectionName = Output.of(Objects.requireNonNull(connectionName));
-            return this;
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder providerType(Output<String> providerType) {
-            this.providerType = Objects.requireNonNull(providerType);
+            $.providerType = providerType;
             return this;
         }
+
         public Builder providerType(String providerType) {
-            this.providerType = Output.of(Objects.requireNonNull(providerType));
-            return this;
+            return providerType(Output.of(providerType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ConnectionArgs build() {
-            return new ConnectionArgs(connectionName, providerType, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ConnectionArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.providerType = Objects.requireNonNull($.providerType, "expected parameter 'providerType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.chime.inputs;
 import com.pulumi.aws.chime.inputs.VoiceConnectorOrganizationRouteGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class VoiceConnectorOrganizationState extends com.pulumi.resources.
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VoiceConnectorOrganizationState extends com.pulumi.resources.
      * 
      */
     @Import(name="routes")
-      private final @Nullable Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes;
+    private @Nullable Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes;
 
-    public Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes() {
-        return this.routes == null ? Codegen.empty() : this.routes;
+    public Optional<Output<List<VoiceConnectorOrganizationRouteGetArgs>>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
     /**
@@ -45,79 +45,72 @@ public final class VoiceConnectorOrganizationState extends com.pulumi.resources.
      * 
      */
     @Import(name="voiceConnectorId")
-      private final @Nullable Output<String> voiceConnectorId;
+    private @Nullable Output<String> voiceConnectorId;
 
-    public Output<String> voiceConnectorId() {
-        return this.voiceConnectorId == null ? Codegen.empty() : this.voiceConnectorId;
+    public Optional<Output<String>> voiceConnectorId() {
+        return Optional.ofNullable(this.voiceConnectorId);
     }
 
-    public VoiceConnectorOrganizationState(
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes,
-        @Nullable Output<String> voiceConnectorId) {
-        this.disabled = disabled;
-        this.routes = routes;
-        this.voiceConnectorId = voiceConnectorId;
-    }
+    private VoiceConnectorOrganizationState() {}
 
-    private VoiceConnectorOrganizationState() {
-        this.disabled = Codegen.empty();
-        this.routes = Codegen.empty();
-        this.voiceConnectorId = Codegen.empty();
+    private VoiceConnectorOrganizationState(VoiceConnectorOrganizationState $) {
+        this.disabled = $.disabled;
+        this.routes = $.routes;
+        this.voiceConnectorId = $.voiceConnectorId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorOrganizationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes;
-        private @Nullable Output<String> voiceConnectorId;
+        private VoiceConnectorOrganizationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorOrganizationState();
         }
 
         public Builder(VoiceConnectorOrganizationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
-    	      this.routes = defaults.routes;
-    	      this.voiceConnectorId = defaults.voiceConnectorId;
+            $ = new VoiceConnectorOrganizationState(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder routes(@Nullable Output<List<VoiceConnectorOrganizationRouteGetArgs>> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
-        public Builder routes(@Nullable List<VoiceConnectorOrganizationRouteGetArgs> routes) {
-            this.routes = Codegen.ofNullable(routes);
-            return this;
+
+        public Builder routes(List<VoiceConnectorOrganizationRouteGetArgs> routes) {
+            return routes(Output.of(routes));
         }
+
         public Builder routes(VoiceConnectorOrganizationRouteGetArgs... routes) {
             return routes(List.of(routes));
         }
+
         public Builder voiceConnectorId(@Nullable Output<String> voiceConnectorId) {
-            this.voiceConnectorId = voiceConnectorId;
+            $.voiceConnectorId = voiceConnectorId;
             return this;
         }
-        public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
-            this.voiceConnectorId = Codegen.ofNullable(voiceConnectorId);
-            return this;
-        }        public VoiceConnectorOrganizationState build() {
-            return new VoiceConnectorOrganizationState(disabled, routes, voiceConnectorId);
+
+        public Builder voiceConnectorId(String voiceConnectorId) {
+            return voiceConnectorId(Output.of(voiceConnectorId));
+        }
+
+        public VoiceConnectorOrganizationState build() {
+            return $;
         }
     }
+
 }

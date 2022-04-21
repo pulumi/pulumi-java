@@ -24,7 +24,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends com.pulumi
      * 
      */
     @Import(name="apt", required=true)
-      private final OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
+    private OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
 
     public OSPolicyResourceRepositoryResourceAptRepositoryResponse apt() {
         return this.apt;
@@ -35,7 +35,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends com.pulumi
      * 
      */
     @Import(name="goo", required=true)
-      private final OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
+    private OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
 
     public OSPolicyResourceRepositoryResourceGooRepositoryResponse goo() {
         return this.goo;
@@ -46,7 +46,7 @@ public final class OSPolicyResourceRepositoryResourceResponse extends com.pulumi
      * 
      */
     @Import(name="yum", required=true)
-      private final OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
+    private OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
 
     public OSPolicyResourceRepositoryResourceYumRepositoryResponse yum() {
         return this.yum;
@@ -57,73 +57,66 @@ public final class OSPolicyResourceRepositoryResourceResponse extends com.pulumi
      * 
      */
     @Import(name="zypper", required=true)
-      private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
+    private OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 
     public OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper() {
         return this.zypper;
     }
 
-    public OSPolicyResourceRepositoryResourceResponse(
-        OSPolicyResourceRepositoryResourceAptRepositoryResponse apt,
-        OSPolicyResourceRepositoryResourceGooRepositoryResponse goo,
-        OSPolicyResourceRepositoryResourceYumRepositoryResponse yum,
-        OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
-        this.apt = Objects.requireNonNull(apt, "expected parameter 'apt' to be non-null");
-        this.goo = Objects.requireNonNull(goo, "expected parameter 'goo' to be non-null");
-        this.yum = Objects.requireNonNull(yum, "expected parameter 'yum' to be non-null");
-        this.zypper = Objects.requireNonNull(zypper, "expected parameter 'zypper' to be non-null");
-    }
+    private OSPolicyResourceRepositoryResourceResponse() {}
 
-    private OSPolicyResourceRepositoryResourceResponse() {
-        this.apt = null;
-        this.goo = null;
-        this.yum = null;
-        this.zypper = null;
+    private OSPolicyResourceRepositoryResourceResponse(OSPolicyResourceRepositoryResourceResponse $) {
+        this.apt = $.apt;
+        this.goo = $.goo;
+        this.yum = $.yum;
+        this.zypper = $.zypper;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceRepositoryResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private OSPolicyResourceRepositoryResourceAptRepositoryResponse apt;
-        private OSPolicyResourceRepositoryResourceGooRepositoryResponse goo;
-        private OSPolicyResourceRepositoryResourceYumRepositoryResponse yum;
-        private OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
+        private OSPolicyResourceRepositoryResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceRepositoryResourceResponse();
         }
 
         public Builder(OSPolicyResourceRepositoryResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apt = defaults.apt;
-    	      this.goo = defaults.goo;
-    	      this.yum = defaults.yum;
-    	      this.zypper = defaults.zypper;
+            $ = new OSPolicyResourceRepositoryResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apt(OSPolicyResourceRepositoryResourceAptRepositoryResponse apt) {
-            this.apt = Objects.requireNonNull(apt);
+            $.apt = apt;
             return this;
         }
+
         public Builder goo(OSPolicyResourceRepositoryResourceGooRepositoryResponse goo) {
-            this.goo = Objects.requireNonNull(goo);
+            $.goo = goo;
             return this;
         }
+
         public Builder yum(OSPolicyResourceRepositoryResourceYumRepositoryResponse yum) {
-            this.yum = Objects.requireNonNull(yum);
+            $.yum = yum;
             return this;
         }
+
         public Builder zypper(OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
-            this.zypper = Objects.requireNonNull(zypper);
+            $.zypper = zypper;
             return this;
-        }        public OSPolicyResourceRepositoryResourceResponse build() {
-            return new OSPolicyResourceRepositoryResourceResponse(apt, goo, yum, zypper);
+        }
+
+        public OSPolicyResourceRepositoryResourceResponse build() {
+            $.apt = Objects.requireNonNull($.apt, "expected parameter 'apt' to be non-null");
+            $.goo = Objects.requireNonNull($.goo, "expected parameter 'goo' to be non-null");
+            $.yum = Objects.requireNonNull($.yum, "expected parameter 'yum' to be non-null");
+            $.zypper = Objects.requireNonNull($.zypper, "expected parameter 'zypper' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<Map<String,TableSpecificationArgs>> properties;
+    private Output<Map<String,TableSpecificationArgs>> properties;
 
     public Output<Map<String,TableSpecificationArgs>> properties() {
         return this.properties;
@@ -48,10 +49,10 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -59,89 +60,80 @@ public final class ServiceInputOutputSpecificationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ServiceInputOutputSpecificationArgs(
-        @Nullable Output<String> description,
-        Output<Map<String,TableSpecificationArgs>> properties,
-        @Nullable Output<String> title,
-        Output<String> type) {
-        this.description = description;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.title = title;
-        this.type = Codegen.stringProp("type").output().arg(type).def("object").require();
-    }
+    private ServiceInputOutputSpecificationArgs() {}
 
-    private ServiceInputOutputSpecificationArgs() {
-        this.description = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.title = Codegen.empty();
-        this.type = Codegen.empty();
+    private ServiceInputOutputSpecificationArgs(ServiceInputOutputSpecificationArgs $) {
+        this.description = $.description;
+        this.properties = $.properties;
+        this.title = $.title;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceInputOutputSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<Map<String,TableSpecificationArgs>> properties;
-        private @Nullable Output<String> title;
-        private Output<String> type;
+        private ServiceInputOutputSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceInputOutputSpecificationArgs();
         }
 
         public Builder(ServiceInputOutputSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.properties = defaults.properties;
-    	      this.title = defaults.title;
-    	      this.type = defaults.type;
+            $ = new ServiceInputOutputSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder properties(Output<Map<String,TableSpecificationArgs>> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(Map<String,TableSpecificationArgs> properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ServiceInputOutputSpecificationArgs build() {
-            return new ServiceInputOutputSpecificationArgs(description, properties, title, type);
+            return type(Output.of(type));
+        }
+
+        public ServiceInputOutputSpecificationArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).def("object").require();
+            return $;
         }
     }
+
 }

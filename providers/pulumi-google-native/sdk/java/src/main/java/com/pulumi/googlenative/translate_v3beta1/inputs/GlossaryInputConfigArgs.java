@@ -5,7 +5,6 @@ package com.pulumi.googlenative.translate_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.translate_v3beta1.inputs.GcsSourceArgs;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GlossaryInputConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="gcsSource", required=true)
-      private final Output<GcsSourceArgs> gcsSource;
+    private Output<GcsSourceArgs> gcsSource;
 
     public Output<GcsSourceArgs> gcsSource() {
         return this.gcsSource;
     }
 
-    public GlossaryInputConfigArgs(Output<GcsSourceArgs> gcsSource) {
-        this.gcsSource = Objects.requireNonNull(gcsSource, "expected parameter 'gcsSource' to be non-null");
-    }
+    private GlossaryInputConfigArgs() {}
 
-    private GlossaryInputConfigArgs() {
-        this.gcsSource = Codegen.empty();
+    private GlossaryInputConfigArgs(GlossaryInputConfigArgs $) {
+        this.gcsSource = $.gcsSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlossaryInputConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GcsSourceArgs> gcsSource;
+        private GlossaryInputConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlossaryInputConfigArgs();
         }
 
         public Builder(GlossaryInputConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsSource = defaults.gcsSource;
+            $ = new GlossaryInputConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsSource(Output<GcsSourceArgs> gcsSource) {
-            this.gcsSource = Objects.requireNonNull(gcsSource);
+            $.gcsSource = gcsSource;
             return this;
         }
+
         public Builder gcsSource(GcsSourceArgs gcsSource) {
-            this.gcsSource = Output.of(Objects.requireNonNull(gcsSource));
-            return this;
-        }        public GlossaryInputConfigArgs build() {
-            return new GlossaryInputConfigArgs(gcsSource);
+            return gcsSource(Output.of(gcsSource));
+        }
+
+        public GlossaryInputConfigArgs build() {
+            $.gcsSource = Objects.requireNonNull($.gcsSource, "expected parameter 'gcsSource' to be non-null");
+            return $;
         }
     }
+
 }

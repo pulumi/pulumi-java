@@ -5,10 +5,10 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1DialogflowSourceArgs;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1GcsSourceArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
      * 
      */
     @Import(name="dialogflowSource")
-      private final @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
+    private @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
 
-    public Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource() {
-        return this.dialogflowSource == null ? Codegen.empty() : this.dialogflowSource;
+    public Optional<Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs>> dialogflowSource() {
+        return Optional.ofNullable(this.dialogflowSource);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs 
      * 
      */
     @Import(name="gcsSource")
-      private final @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
+    private @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
 
-    public Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource() {
-        return this.gcsSource == null ? Codegen.empty() : this.gcsSource;
+    public Optional<Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs>> gcsSource() {
+        return Optional.ofNullable(this.gcsSource);
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs(
-        @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource,
-        @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource) {
-        this.dialogflowSource = dialogflowSource;
-        this.gcsSource = gcsSource;
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs() {
-        this.dialogflowSource = Codegen.empty();
-        this.gcsSource = Codegen.empty();
+    private GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs(GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs $) {
+        this.dialogflowSource = $.dialogflowSource;
+        this.gcsSource = $.gcsSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource;
-        private @Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource;
+        private GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dialogflowSource = defaults.dialogflowSource;
-    	      this.gcsSource = defaults.gcsSource;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dialogflowSource(@Nullable Output<GoogleCloudContactcenterinsightsV1DialogflowSourceArgs> dialogflowSource) {
-            this.dialogflowSource = dialogflowSource;
+            $.dialogflowSource = dialogflowSource;
             return this;
         }
-        public Builder dialogflowSource(@Nullable GoogleCloudContactcenterinsightsV1DialogflowSourceArgs dialogflowSource) {
-            this.dialogflowSource = Codegen.ofNullable(dialogflowSource);
-            return this;
+
+        public Builder dialogflowSource(GoogleCloudContactcenterinsightsV1DialogflowSourceArgs dialogflowSource) {
+            return dialogflowSource(Output.of(dialogflowSource));
         }
+
         public Builder gcsSource(@Nullable Output<GoogleCloudContactcenterinsightsV1GcsSourceArgs> gcsSource) {
-            this.gcsSource = gcsSource;
+            $.gcsSource = gcsSource;
             return this;
         }
-        public Builder gcsSource(@Nullable GoogleCloudContactcenterinsightsV1GcsSourceArgs gcsSource) {
-            this.gcsSource = Codegen.ofNullable(gcsSource);
-            return this;
-        }        public GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs(dialogflowSource, gcsSource);
+
+        public Builder gcsSource(GoogleCloudContactcenterinsightsV1GcsSourceArgs gcsSource) {
+            return gcsSource(Output.of(gcsSource));
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs build() {
+            return $;
         }
     }
+
 }

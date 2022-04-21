@@ -5,10 +5,10 @@ package com.pulumi.azurenative.desktopvirtualization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ScalingHostPoolReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="hostPoolArmPath")
-      private final @Nullable Output<String> hostPoolArmPath;
+    private @Nullable Output<String> hostPoolArmPath;
 
-    public Output<String> hostPoolArmPath() {
-        return this.hostPoolArmPath == null ? Codegen.empty() : this.hostPoolArmPath;
+    public Optional<Output<String>> hostPoolArmPath() {
+        return Optional.ofNullable(this.hostPoolArmPath);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ScalingHostPoolReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="scalingPlanEnabled")
-      private final @Nullable Output<Boolean> scalingPlanEnabled;
+    private @Nullable Output<Boolean> scalingPlanEnabled;
 
-    public Output<Boolean> scalingPlanEnabled() {
-        return this.scalingPlanEnabled == null ? Codegen.empty() : this.scalingPlanEnabled;
+    public Optional<Output<Boolean>> scalingPlanEnabled() {
+        return Optional.ofNullable(this.scalingPlanEnabled);
     }
 
-    public ScalingHostPoolReferenceArgs(
-        @Nullable Output<String> hostPoolArmPath,
-        @Nullable Output<Boolean> scalingPlanEnabled) {
-        this.hostPoolArmPath = hostPoolArmPath;
-        this.scalingPlanEnabled = scalingPlanEnabled;
-    }
+    private ScalingHostPoolReferenceArgs() {}
 
-    private ScalingHostPoolReferenceArgs() {
-        this.hostPoolArmPath = Codegen.empty();
-        this.scalingPlanEnabled = Codegen.empty();
+    private ScalingHostPoolReferenceArgs(ScalingHostPoolReferenceArgs $) {
+        this.hostPoolArmPath = $.hostPoolArmPath;
+        this.scalingPlanEnabled = $.scalingPlanEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingHostPoolReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostPoolArmPath;
-        private @Nullable Output<Boolean> scalingPlanEnabled;
+        private ScalingHostPoolReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingHostPoolReferenceArgs();
         }
 
         public Builder(ScalingHostPoolReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostPoolArmPath = defaults.hostPoolArmPath;
-    	      this.scalingPlanEnabled = defaults.scalingPlanEnabled;
+            $ = new ScalingHostPoolReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostPoolArmPath(@Nullable Output<String> hostPoolArmPath) {
-            this.hostPoolArmPath = hostPoolArmPath;
+            $.hostPoolArmPath = hostPoolArmPath;
             return this;
         }
-        public Builder hostPoolArmPath(@Nullable String hostPoolArmPath) {
-            this.hostPoolArmPath = Codegen.ofNullable(hostPoolArmPath);
-            return this;
+
+        public Builder hostPoolArmPath(String hostPoolArmPath) {
+            return hostPoolArmPath(Output.of(hostPoolArmPath));
         }
+
         public Builder scalingPlanEnabled(@Nullable Output<Boolean> scalingPlanEnabled) {
-            this.scalingPlanEnabled = scalingPlanEnabled;
+            $.scalingPlanEnabled = scalingPlanEnabled;
             return this;
         }
-        public Builder scalingPlanEnabled(@Nullable Boolean scalingPlanEnabled) {
-            this.scalingPlanEnabled = Codegen.ofNullable(scalingPlanEnabled);
-            return this;
-        }        public ScalingHostPoolReferenceArgs build() {
-            return new ScalingHostPoolReferenceArgs(hostPoolArmPath, scalingPlanEnabled);
+
+        public Builder scalingPlanEnabled(Boolean scalingPlanEnabled) {
+            return scalingPlanEnabled(Output.of(scalingPlanEnabled));
+        }
+
+        public ScalingHostPoolReferenceArgs build() {
+            return $;
         }
     }
+
 }

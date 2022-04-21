@@ -15,62 +15,58 @@ public final class GetTenantArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTenantArgs Empty = new GetTenantArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
     }
 
-    public GetTenantArgs(
-        @Nullable String project,
-        String tenantId) {
-        this.project = project;
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private GetTenantArgs() {}
 
-    private GetTenantArgs() {
-        this.project = null;
-        this.tenantId = null;
+    private GetTenantArgs(GetTenantArgs $) {
+        this.project = $.project;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTenantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String tenantId;
+        private GetTenantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTenantArgs();
         }
 
         public Builder(GetTenantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.tenantId = defaults.tenantId;
+            $ = new GetTenantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
-        }        public GetTenantArgs build() {
-            return new GetTenantArgs(project, tenantId);
+        }
+
+        public GetTenantArgs build() {
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

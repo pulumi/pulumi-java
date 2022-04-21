@@ -21,45 +21,45 @@ public final class FileSourceInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="shareId", required=true)
-      private final String shareId;
+    private String shareId;
 
     public String shareId() {
         return this.shareId;
     }
 
-    public FileSourceInfoResponse(String shareId) {
-        this.shareId = Objects.requireNonNull(shareId, "expected parameter 'shareId' to be non-null");
-    }
+    private FileSourceInfoResponse() {}
 
-    private FileSourceInfoResponse() {
-        this.shareId = null;
+    private FileSourceInfoResponse(FileSourceInfoResponse $) {
+        this.shareId = $.shareId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSourceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String shareId;
+        private FileSourceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSourceInfoResponse();
         }
 
         public Builder(FileSourceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shareId = defaults.shareId;
+            $ = new FileSourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder shareId(String shareId) {
-            this.shareId = Objects.requireNonNull(shareId);
+            $.shareId = shareId;
             return this;
-        }        public FileSourceInfoResponse build() {
-            return new FileSourceInfoResponse(shareId);
+        }
+
+        public FileSourceInfoResponse build() {
+            $.shareId = Objects.requireNonNull($.shareId, "expected parameter 'shareId' to be non-null");
+            return $;
         }
     }
+
 }

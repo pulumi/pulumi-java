@@ -5,7 +5,6 @@ package com.pulumi.aws.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class WebAclVisibilityConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cloudwatchMetricsEnabled", required=true)
-      private final Output<Boolean> cloudwatchMetricsEnabled;
+    private Output<Boolean> cloudwatchMetricsEnabled;
 
     public Output<Boolean> cloudwatchMetricsEnabled() {
         return this.cloudwatchMetricsEnabled;
@@ -31,7 +30,7 @@ public final class WebAclVisibilityConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -42,76 +41,71 @@ public final class WebAclVisibilityConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sampledRequestsEnabled", required=true)
-      private final Output<Boolean> sampledRequestsEnabled;
+    private Output<Boolean> sampledRequestsEnabled;
 
     public Output<Boolean> sampledRequestsEnabled() {
         return this.sampledRequestsEnabled;
     }
 
-    public WebAclVisibilityConfigArgs(
-        Output<Boolean> cloudwatchMetricsEnabled,
-        Output<String> metricName,
-        Output<Boolean> sampledRequestsEnabled) {
-        this.cloudwatchMetricsEnabled = Objects.requireNonNull(cloudwatchMetricsEnabled, "expected parameter 'cloudwatchMetricsEnabled' to be non-null");
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled, "expected parameter 'sampledRequestsEnabled' to be non-null");
-    }
+    private WebAclVisibilityConfigArgs() {}
 
-    private WebAclVisibilityConfigArgs() {
-        this.cloudwatchMetricsEnabled = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.sampledRequestsEnabled = Codegen.empty();
+    private WebAclVisibilityConfigArgs(WebAclVisibilityConfigArgs $) {
+        this.cloudwatchMetricsEnabled = $.cloudwatchMetricsEnabled;
+        this.metricName = $.metricName;
+        this.sampledRequestsEnabled = $.sampledRequestsEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclVisibilityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> cloudwatchMetricsEnabled;
-        private Output<String> metricName;
-        private Output<Boolean> sampledRequestsEnabled;
+        private WebAclVisibilityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclVisibilityConfigArgs();
         }
 
         public Builder(WebAclVisibilityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudwatchMetricsEnabled = defaults.cloudwatchMetricsEnabled;
-    	      this.metricName = defaults.metricName;
-    	      this.sampledRequestsEnabled = defaults.sampledRequestsEnabled;
+            $ = new WebAclVisibilityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudwatchMetricsEnabled(Output<Boolean> cloudwatchMetricsEnabled) {
-            this.cloudwatchMetricsEnabled = Objects.requireNonNull(cloudwatchMetricsEnabled);
+            $.cloudwatchMetricsEnabled = cloudwatchMetricsEnabled;
             return this;
         }
+
         public Builder cloudwatchMetricsEnabled(Boolean cloudwatchMetricsEnabled) {
-            this.cloudwatchMetricsEnabled = Output.of(Objects.requireNonNull(cloudwatchMetricsEnabled));
-            return this;
+            return cloudwatchMetricsEnabled(Output.of(cloudwatchMetricsEnabled));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder sampledRequestsEnabled(Output<Boolean> sampledRequestsEnabled) {
-            this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
+            $.sampledRequestsEnabled = sampledRequestsEnabled;
             return this;
         }
+
         public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
-            this.sampledRequestsEnabled = Output.of(Objects.requireNonNull(sampledRequestsEnabled));
-            return this;
-        }        public WebAclVisibilityConfigArgs build() {
-            return new WebAclVisibilityConfigArgs(cloudwatchMetricsEnabled, metricName, sampledRequestsEnabled);
+            return sampledRequestsEnabled(Output.of(sampledRequestsEnabled));
+        }
+
+        public WebAclVisibilityConfigArgs build() {
+            $.cloudwatchMetricsEnabled = Objects.requireNonNull($.cloudwatchMetricsEnabled, "expected parameter 'cloudwatchMetricsEnabled' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.sampledRequestsEnabled = Objects.requireNonNull($.sampledRequestsEnabled, "expected parameter 'sampledRequestsEnabled' to be non-null");
+            return $;
         }
     }
+
 }

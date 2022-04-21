@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class MLTransformSchemaGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<String> dataType;
+    private @Nullable Output<String> dataType;
 
-    public Output<String> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<String>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class MLTransformSchemaGetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public MLTransformSchemaGetArgs(
-        @Nullable Output<String> dataType,
-        @Nullable Output<String> name) {
-        this.dataType = dataType;
-        this.name = name;
-    }
+    private MLTransformSchemaGetArgs() {}
 
-    private MLTransformSchemaGetArgs() {
-        this.dataType = Codegen.empty();
-        this.name = Codegen.empty();
+    private MLTransformSchemaGetArgs(MLTransformSchemaGetArgs $) {
+        this.dataType = $.dataType;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MLTransformSchemaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataType;
-        private @Nullable Output<String> name;
+        private MLTransformSchemaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MLTransformSchemaGetArgs();
         }
 
         public Builder(MLTransformSchemaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.name = defaults.name;
+            $ = new MLTransformSchemaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable Output<String> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable String dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(String dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public MLTransformSchemaGetArgs build() {
-            return new MLTransformSchemaGetArgs(dataType, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public MLTransformSchemaGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
      * 
      */
     @Import(name="baseKeyUsages")
-      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages;
+    private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages() {
-        return this.baseKeyUsages == null ? Codegen.empty() : this.baseKeyUsages;
+    public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>>> baseKeyUsages() {
+        return Optional.ofNullable(this.baseKeyUsages);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
      * 
      */
     @Import(name="extendedKeyUsages")
-      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages;
+    private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages() {
-        return this.extendedKeyUsages == null ? Codegen.empty() : this.extendedKeyUsages;
+    public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>>> extendedKeyUsages() {
+        return Optional.ofNullable(this.extendedKeyUsages);
     }
 
     /**
@@ -48,85 +48,80 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
      * 
      */
     @Import(name="unknownExtendedKeyUsages")
-      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
+    private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages() {
-        return this.unknownExtendedKeyUsages == null ? Codegen.empty() : this.unknownExtendedKeyUsages;
+    public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>>> unknownExtendedKeyUsages() {
+        return Optional.ofNullable(this.unknownExtendedKeyUsages);
     }
 
-    public CertificateCertificateDescriptionConfigValueKeyUsageGetArgs(
-        @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages,
-        @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages,
-        @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
-        this.baseKeyUsages = baseKeyUsages;
-        this.extendedKeyUsages = extendedKeyUsages;
-        this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
-    }
+    private CertificateCertificateDescriptionConfigValueKeyUsageGetArgs() {}
 
-    private CertificateCertificateDescriptionConfigValueKeyUsageGetArgs() {
-        this.baseKeyUsages = Codegen.empty();
-        this.extendedKeyUsages = Codegen.empty();
-        this.unknownExtendedKeyUsages = Codegen.empty();
+    private CertificateCertificateDescriptionConfigValueKeyUsageGetArgs(CertificateCertificateDescriptionConfigValueKeyUsageGetArgs $) {
+        this.baseKeyUsages = $.baseKeyUsages;
+        this.extendedKeyUsages = $.extendedKeyUsages;
+        this.unknownExtendedKeyUsages = $.unknownExtendedKeyUsages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionConfigValueKeyUsageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages;
-        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages;
-        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
+        private CertificateCertificateDescriptionConfigValueKeyUsageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionConfigValueKeyUsageGetArgs();
         }
 
         public Builder(CertificateCertificateDescriptionConfigValueKeyUsageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseKeyUsages = defaults.baseKeyUsages;
-    	      this.extendedKeyUsages = defaults.extendedKeyUsages;
-    	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
+            $ = new CertificateCertificateDescriptionConfigValueKeyUsageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseKeyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages) {
-            this.baseKeyUsages = baseKeyUsages;
+            $.baseKeyUsages = baseKeyUsages;
             return this;
         }
-        public Builder baseKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs> baseKeyUsages) {
-            this.baseKeyUsages = Codegen.ofNullable(baseKeyUsages);
-            return this;
+
+        public Builder baseKeyUsages(List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs> baseKeyUsages) {
+            return baseKeyUsages(Output.of(baseKeyUsages));
         }
+
         public Builder baseKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs... baseKeyUsages) {
             return baseKeyUsages(List.of(baseKeyUsages));
         }
+
         public Builder extendedKeyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages) {
-            this.extendedKeyUsages = extendedKeyUsages;
+            $.extendedKeyUsages = extendedKeyUsages;
             return this;
         }
-        public Builder extendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsages) {
-            this.extendedKeyUsages = Codegen.ofNullable(extendedKeyUsages);
-            return this;
+
+        public Builder extendedKeyUsages(List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsages) {
+            return extendedKeyUsages(Output.of(extendedKeyUsages));
         }
+
         public Builder extendedKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs... extendedKeyUsages) {
             return extendedKeyUsages(List.of(extendedKeyUsages));
         }
+
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
+            $.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
-        public Builder unknownExtendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = Codegen.ofNullable(unknownExtendedKeyUsages);
-            return this;
+
+        public Builder unknownExtendedKeyUsages(List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
+            return unknownExtendedKeyUsages(Output.of(unknownExtendedKeyUsages));
         }
+
         public Builder unknownExtendedKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs... unknownExtendedKeyUsages) {
             return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
-        }        public CertificateCertificateDescriptionConfigValueKeyUsageGetArgs build() {
-            return new CertificateCertificateDescriptionConfigValueKeyUsageGetArgs(baseKeyUsages, extendedKeyUsages, unknownExtendedKeyUsages);
+        }
+
+        public CertificateCertificateDescriptionConfigValueKeyUsageGetArgs build() {
+            return $;
         }
     }
+
 }

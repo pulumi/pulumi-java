@@ -5,9 +5,9 @@ package com.pulumi.awsnative.databrew.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,66 @@ public final class DatasetS3LocationArgs extends com.pulumi.resources.ResourceAr
     public static final DatasetS3LocationArgs Empty = new DatasetS3LocationArgs();
 
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public DatasetS3LocationArgs(
-        Output<String> bucket,
-        @Nullable Output<String> key) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.key = key;
-    }
+    private DatasetS3LocationArgs() {}
 
-    private DatasetS3LocationArgs() {
-        this.bucket = Codegen.empty();
-        this.key = Codegen.empty();
+    private DatasetS3LocationArgs(DatasetS3LocationArgs $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetS3LocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> key;
+        private DatasetS3LocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetS3LocationArgs();
         }
 
         public Builder(DatasetS3LocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
+            $ = new DatasetS3LocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public DatasetS3LocationArgs build() {
-            return new DatasetS3LocationArgs(bucket, key);
+
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        public DatasetS3LocationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

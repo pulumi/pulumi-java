@@ -15,65 +15,63 @@ public final class GetOriginRequestPolicyQueryStringsConfig extends com.pulumi.r
     public static final GetOriginRequestPolicyQueryStringsConfig Empty = new GetOriginRequestPolicyQueryStringsConfig();
 
     @Import(name="queryStringBehavior", required=true)
-      private final String queryStringBehavior;
+    private String queryStringBehavior;
 
     public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @Import(name="queryStrings", required=true)
-      private final List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings;
+    private List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings;
 
     public List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings() {
         return this.queryStrings;
     }
 
-    public GetOriginRequestPolicyQueryStringsConfig(
-        String queryStringBehavior,
-        List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings) {
-        this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");
-        this.queryStrings = Objects.requireNonNull(queryStrings, "expected parameter 'queryStrings' to be non-null");
-    }
+    private GetOriginRequestPolicyQueryStringsConfig() {}
 
-    private GetOriginRequestPolicyQueryStringsConfig() {
-        this.queryStringBehavior = null;
-        this.queryStrings = List.of();
+    private GetOriginRequestPolicyQueryStringsConfig(GetOriginRequestPolicyQueryStringsConfig $) {
+        this.queryStringBehavior = $.queryStringBehavior;
+        this.queryStrings = $.queryStrings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOriginRequestPolicyQueryStringsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String queryStringBehavior;
-        private List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings;
+        private GetOriginRequestPolicyQueryStringsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOriginRequestPolicyQueryStringsConfig();
         }
 
         public Builder(GetOriginRequestPolicyQueryStringsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryStringBehavior = defaults.queryStringBehavior;
-    	      this.queryStrings = defaults.queryStrings;
+            $ = new GetOriginRequestPolicyQueryStringsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder queryStringBehavior(String queryStringBehavior) {
-            this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
+            $.queryStringBehavior = queryStringBehavior;
             return this;
         }
+
         public Builder queryStrings(List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings) {
-            this.queryStrings = Objects.requireNonNull(queryStrings);
+            $.queryStrings = queryStrings;
             return this;
         }
+
         public Builder queryStrings(GetOriginRequestPolicyQueryStringsConfigQueryString... queryStrings) {
             return queryStrings(List.of(queryStrings));
-        }        public GetOriginRequestPolicyQueryStringsConfig build() {
-            return new GetOriginRequestPolicyQueryStringsConfig(queryStringBehavior, queryStrings);
+        }
+
+        public GetOriginRequestPolicyQueryStringsConfig build() {
+            $.queryStringBehavior = Objects.requireNonNull($.queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");
+            $.queryStrings = Objects.requireNonNull($.queryStrings, "expected parameter 'queryStrings' to be non-null");
+            return $;
         }
     }
+
 }

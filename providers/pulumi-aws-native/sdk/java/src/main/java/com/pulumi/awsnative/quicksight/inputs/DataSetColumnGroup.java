@@ -21,45 +21,44 @@ public final class DataSetColumnGroup extends com.pulumi.resources.InvokeArgs {
     public static final DataSetColumnGroup Empty = new DataSetColumnGroup();
 
     @Import(name="geoSpatialColumnGroup")
-      private final @Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup;
+    private @Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup;
 
     public Optional<DataSetGeoSpatialColumnGroup> geoSpatialColumnGroup() {
-        return this.geoSpatialColumnGroup == null ? Optional.empty() : Optional.ofNullable(this.geoSpatialColumnGroup);
+        return Optional.ofNullable(this.geoSpatialColumnGroup);
     }
 
-    public DataSetColumnGroup(@Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup) {
-        this.geoSpatialColumnGroup = geoSpatialColumnGroup;
-    }
+    private DataSetColumnGroup() {}
 
-    private DataSetColumnGroup() {
-        this.geoSpatialColumnGroup = null;
+    private DataSetColumnGroup(DataSetColumnGroup $) {
+        this.geoSpatialColumnGroup = $.geoSpatialColumnGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetColumnGroup defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup;
+        private DataSetColumnGroup $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetColumnGroup();
         }
 
         public Builder(DataSetColumnGroup defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.geoSpatialColumnGroup = defaults.geoSpatialColumnGroup;
+            $ = new DataSetColumnGroup(Objects.requireNonNull(defaults));
         }
 
         public Builder geoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup) {
-            this.geoSpatialColumnGroup = geoSpatialColumnGroup;
+            $.geoSpatialColumnGroup = geoSpatialColumnGroup;
             return this;
-        }        public DataSetColumnGroup build() {
-            return new DataSetColumnGroup(geoSpatialColumnGroup);
+        }
+
+        public DataSetColumnGroup build() {
+            return $;
         }
     }
+
 }

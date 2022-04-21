@@ -23,45 +23,44 @@ public final class ConnectionMonitorEndpointScopeItemResponse extends com.pulumi
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
-    public ConnectionMonitorEndpointScopeItemResponse(@Nullable String address) {
-        this.address = address;
-    }
+    private ConnectionMonitorEndpointScopeItemResponse() {}
 
-    private ConnectionMonitorEndpointScopeItemResponse() {
-        this.address = null;
+    private ConnectionMonitorEndpointScopeItemResponse(ConnectionMonitorEndpointScopeItemResponse $) {
+        this.address = $.address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorEndpointScopeItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
+        private ConnectionMonitorEndpointScopeItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorEndpointScopeItemResponse();
         }
 
         public Builder(ConnectionMonitorEndpointScopeItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
+            $ = new ConnectionMonitorEndpointScopeItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
-        }        public ConnectionMonitorEndpointScopeItemResponse build() {
-            return new ConnectionMonitorEndpointScopeItemResponse(address);
+        }
+
+        public ConnectionMonitorEndpointScopeItemResponse build() {
+            return $;
         }
     }
+
 }

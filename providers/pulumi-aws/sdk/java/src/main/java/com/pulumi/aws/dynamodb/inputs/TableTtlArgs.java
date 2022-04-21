@@ -5,10 +5,10 @@ package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TableTtlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributeName", required=true)
-      private final Output<String> attributeName;
+    private Output<String> attributeName;
 
     public Output<String> attributeName() {
         return this.attributeName;
@@ -32,63 +32,59 @@ public final class TableTtlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public TableTtlArgs(
-        Output<String> attributeName,
-        @Nullable Output<Boolean> enabled) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.enabled = enabled;
-    }
+    private TableTtlArgs() {}
 
-    private TableTtlArgs() {
-        this.attributeName = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private TableTtlArgs(TableTtlArgs $) {
+        this.attributeName = $.attributeName;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableTtlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attributeName;
-        private @Nullable Output<Boolean> enabled;
+        private TableTtlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableTtlArgs();
         }
 
         public Builder(TableTtlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.enabled = defaults.enabled;
+            $ = new TableTtlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(Output<String> attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder attributeName(String attributeName) {
-            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
-            return this;
+            return attributeName(Output.of(attributeName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public TableTtlArgs build() {
-            return new TableTtlArgs(attributeName, enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public TableTtlArgs build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            return $;
         }
     }
+
 }

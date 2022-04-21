@@ -17,10 +17,10 @@ public final class DetectorModelSqs extends com.pulumi.resources.InvokeArgs {
     public static final DetectorModelSqs Empty = new DetectorModelSqs();
 
     @Import(name="payload")
-      private final @Nullable DetectorModelPayload payload;
+    private @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> payload() {
-        return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
+        return Optional.ofNullable(this.payload);
     }
 
     /**
@@ -28,7 +28,7 @@ public final class DetectorModelSqs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queueUrl", required=true)
-      private final String queueUrl;
+    private String queueUrl;
 
     public String queueUrl() {
         return this.queueUrl;
@@ -39,64 +39,57 @@ public final class DetectorModelSqs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="useBase64")
-      private final @Nullable Boolean useBase64;
+    private @Nullable Boolean useBase64;
 
     public Optional<Boolean> useBase64() {
-        return this.useBase64 == null ? Optional.empty() : Optional.ofNullable(this.useBase64);
+        return Optional.ofNullable(this.useBase64);
     }
 
-    public DetectorModelSqs(
-        @Nullable DetectorModelPayload payload,
-        String queueUrl,
-        @Nullable Boolean useBase64) {
-        this.payload = payload;
-        this.queueUrl = Objects.requireNonNull(queueUrl, "expected parameter 'queueUrl' to be non-null");
-        this.useBase64 = useBase64;
-    }
+    private DetectorModelSqs() {}
 
-    private DetectorModelSqs() {
-        this.payload = null;
-        this.queueUrl = null;
-        this.useBase64 = null;
+    private DetectorModelSqs(DetectorModelSqs $) {
+        this.payload = $.payload;
+        this.queueUrl = $.queueUrl;
+        this.useBase64 = $.useBase64;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelSqs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DetectorModelPayload payload;
-        private String queueUrl;
-        private @Nullable Boolean useBase64;
+        private DetectorModelSqs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelSqs();
         }
 
         public Builder(DetectorModelSqs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.payload = defaults.payload;
-    	      this.queueUrl = defaults.queueUrl;
-    	      this.useBase64 = defaults.useBase64;
+            $ = new DetectorModelSqs(Objects.requireNonNull(defaults));
         }
 
         public Builder payload(@Nullable DetectorModelPayload payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
+
         public Builder queueUrl(String queueUrl) {
-            this.queueUrl = Objects.requireNonNull(queueUrl);
+            $.queueUrl = queueUrl;
             return this;
         }
+
         public Builder useBase64(@Nullable Boolean useBase64) {
-            this.useBase64 = useBase64;
+            $.useBase64 = useBase64;
             return this;
-        }        public DetectorModelSqs build() {
-            return new DetectorModelSqs(payload, queueUrl, useBase64);
+        }
+
+        public DetectorModelSqs build() {
+            $.queueUrl = Objects.requireNonNull($.queueUrl, "expected parameter 'queueUrl' to be non-null");
+            return $;
         }
     }
+
 }

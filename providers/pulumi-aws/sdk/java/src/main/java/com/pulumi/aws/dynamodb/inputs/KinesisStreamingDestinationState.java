@@ -5,9 +5,9 @@ package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class KinesisStreamingDestinationState extends com.pulumi.resources
      * 
      */
     @Import(name="streamArn")
-      private final @Nullable Output<String> streamArn;
+    private @Nullable Output<String> streamArn;
 
-    public Output<String> streamArn() {
-        return this.streamArn == null ? Codegen.empty() : this.streamArn;
+    public Optional<Output<String>> streamArn() {
+        return Optional.ofNullable(this.streamArn);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class KinesisStreamingDestinationState extends com.pulumi.resources
      * 
      */
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
-    public KinesisStreamingDestinationState(
-        @Nullable Output<String> streamArn,
-        @Nullable Output<String> tableName) {
-        this.streamArn = streamArn;
-        this.tableName = tableName;
-    }
+    private KinesisStreamingDestinationState() {}
 
-    private KinesisStreamingDestinationState() {
-        this.streamArn = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private KinesisStreamingDestinationState(KinesisStreamingDestinationState $) {
+        this.streamArn = $.streamArn;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KinesisStreamingDestinationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> streamArn;
-        private @Nullable Output<String> tableName;
+        private KinesisStreamingDestinationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new KinesisStreamingDestinationState();
         }
 
         public Builder(KinesisStreamingDestinationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.streamArn = defaults.streamArn;
-    	      this.tableName = defaults.tableName;
+            $ = new KinesisStreamingDestinationState(Objects.requireNonNull(defaults));
         }
 
         public Builder streamArn(@Nullable Output<String> streamArn) {
-            this.streamArn = streamArn;
+            $.streamArn = streamArn;
             return this;
         }
-        public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Codegen.ofNullable(streamArn);
-            return this;
+
+        public Builder streamArn(String streamArn) {
+            return streamArn(Output.of(streamArn));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
-        }        public KinesisStreamingDestinationState build() {
-            return new KinesisStreamingDestinationState(streamArn, tableName);
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
+        }
+
+        public KinesisStreamingDestinationState build() {
+            return $;
         }
     }
+
 }

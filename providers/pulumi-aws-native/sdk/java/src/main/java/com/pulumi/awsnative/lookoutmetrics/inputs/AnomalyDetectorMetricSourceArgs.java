@@ -10,8 +10,8 @@ import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorRedshiftSourceC
 import com.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorS3SourceConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,130 +20,116 @@ public final class AnomalyDetectorMetricSourceArgs extends com.pulumi.resources.
     public static final AnomalyDetectorMetricSourceArgs Empty = new AnomalyDetectorMetricSourceArgs();
 
     @Import(name="appFlowConfig")
-      private final @Nullable Output<AnomalyDetectorAppFlowConfigArgs> appFlowConfig;
+    private @Nullable Output<AnomalyDetectorAppFlowConfigArgs> appFlowConfig;
 
-    public Output<AnomalyDetectorAppFlowConfigArgs> appFlowConfig() {
-        return this.appFlowConfig == null ? Codegen.empty() : this.appFlowConfig;
+    public Optional<Output<AnomalyDetectorAppFlowConfigArgs>> appFlowConfig() {
+        return Optional.ofNullable(this.appFlowConfig);
     }
 
     @Import(name="cloudwatchConfig")
-      private final @Nullable Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig;
+    private @Nullable Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig;
 
-    public Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig() {
-        return this.cloudwatchConfig == null ? Codegen.empty() : this.cloudwatchConfig;
+    public Optional<Output<AnomalyDetectorCloudwatchConfigArgs>> cloudwatchConfig() {
+        return Optional.ofNullable(this.cloudwatchConfig);
     }
 
     @Import(name="rDSSourceConfig")
-      private final @Nullable Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig;
+    private @Nullable Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig;
 
-    public Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig() {
-        return this.rDSSourceConfig == null ? Codegen.empty() : this.rDSSourceConfig;
+    public Optional<Output<AnomalyDetectorRDSSourceConfigArgs>> rDSSourceConfig() {
+        return Optional.ofNullable(this.rDSSourceConfig);
     }
 
     @Import(name="redshiftSourceConfig")
-      private final @Nullable Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig;
+    private @Nullable Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig;
 
-    public Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig() {
-        return this.redshiftSourceConfig == null ? Codegen.empty() : this.redshiftSourceConfig;
+    public Optional<Output<AnomalyDetectorRedshiftSourceConfigArgs>> redshiftSourceConfig() {
+        return Optional.ofNullable(this.redshiftSourceConfig);
     }
 
     @Import(name="s3SourceConfig")
-      private final @Nullable Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig;
+    private @Nullable Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig;
 
-    public Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig() {
-        return this.s3SourceConfig == null ? Codegen.empty() : this.s3SourceConfig;
+    public Optional<Output<AnomalyDetectorS3SourceConfigArgs>> s3SourceConfig() {
+        return Optional.ofNullable(this.s3SourceConfig);
     }
 
-    public AnomalyDetectorMetricSourceArgs(
-        @Nullable Output<AnomalyDetectorAppFlowConfigArgs> appFlowConfig,
-        @Nullable Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig,
-        @Nullable Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig,
-        @Nullable Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig,
-        @Nullable Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig) {
-        this.appFlowConfig = appFlowConfig;
-        this.cloudwatchConfig = cloudwatchConfig;
-        this.rDSSourceConfig = rDSSourceConfig;
-        this.redshiftSourceConfig = redshiftSourceConfig;
-        this.s3SourceConfig = s3SourceConfig;
-    }
+    private AnomalyDetectorMetricSourceArgs() {}
 
-    private AnomalyDetectorMetricSourceArgs() {
-        this.appFlowConfig = Codegen.empty();
-        this.cloudwatchConfig = Codegen.empty();
-        this.rDSSourceConfig = Codegen.empty();
-        this.redshiftSourceConfig = Codegen.empty();
-        this.s3SourceConfig = Codegen.empty();
+    private AnomalyDetectorMetricSourceArgs(AnomalyDetectorMetricSourceArgs $) {
+        this.appFlowConfig = $.appFlowConfig;
+        this.cloudwatchConfig = $.cloudwatchConfig;
+        this.rDSSourceConfig = $.rDSSourceConfig;
+        this.redshiftSourceConfig = $.redshiftSourceConfig;
+        this.s3SourceConfig = $.s3SourceConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorMetricSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AnomalyDetectorAppFlowConfigArgs> appFlowConfig;
-        private @Nullable Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig;
-        private @Nullable Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig;
-        private @Nullable Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig;
-        private @Nullable Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig;
+        private AnomalyDetectorMetricSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorMetricSourceArgs();
         }
 
         public Builder(AnomalyDetectorMetricSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appFlowConfig = defaults.appFlowConfig;
-    	      this.cloudwatchConfig = defaults.cloudwatchConfig;
-    	      this.rDSSourceConfig = defaults.rDSSourceConfig;
-    	      this.redshiftSourceConfig = defaults.redshiftSourceConfig;
-    	      this.s3SourceConfig = defaults.s3SourceConfig;
+            $ = new AnomalyDetectorMetricSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appFlowConfig(@Nullable Output<AnomalyDetectorAppFlowConfigArgs> appFlowConfig) {
-            this.appFlowConfig = appFlowConfig;
+            $.appFlowConfig = appFlowConfig;
             return this;
         }
-        public Builder appFlowConfig(@Nullable AnomalyDetectorAppFlowConfigArgs appFlowConfig) {
-            this.appFlowConfig = Codegen.ofNullable(appFlowConfig);
-            return this;
+
+        public Builder appFlowConfig(AnomalyDetectorAppFlowConfigArgs appFlowConfig) {
+            return appFlowConfig(Output.of(appFlowConfig));
         }
+
         public Builder cloudwatchConfig(@Nullable Output<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig) {
-            this.cloudwatchConfig = cloudwatchConfig;
+            $.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
-        public Builder cloudwatchConfig(@Nullable AnomalyDetectorCloudwatchConfigArgs cloudwatchConfig) {
-            this.cloudwatchConfig = Codegen.ofNullable(cloudwatchConfig);
-            return this;
+
+        public Builder cloudwatchConfig(AnomalyDetectorCloudwatchConfigArgs cloudwatchConfig) {
+            return cloudwatchConfig(Output.of(cloudwatchConfig));
         }
+
         public Builder rDSSourceConfig(@Nullable Output<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig) {
-            this.rDSSourceConfig = rDSSourceConfig;
+            $.rDSSourceConfig = rDSSourceConfig;
             return this;
         }
-        public Builder rDSSourceConfig(@Nullable AnomalyDetectorRDSSourceConfigArgs rDSSourceConfig) {
-            this.rDSSourceConfig = Codegen.ofNullable(rDSSourceConfig);
-            return this;
+
+        public Builder rDSSourceConfig(AnomalyDetectorRDSSourceConfigArgs rDSSourceConfig) {
+            return rDSSourceConfig(Output.of(rDSSourceConfig));
         }
+
         public Builder redshiftSourceConfig(@Nullable Output<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig) {
-            this.redshiftSourceConfig = redshiftSourceConfig;
+            $.redshiftSourceConfig = redshiftSourceConfig;
             return this;
         }
-        public Builder redshiftSourceConfig(@Nullable AnomalyDetectorRedshiftSourceConfigArgs redshiftSourceConfig) {
-            this.redshiftSourceConfig = Codegen.ofNullable(redshiftSourceConfig);
-            return this;
+
+        public Builder redshiftSourceConfig(AnomalyDetectorRedshiftSourceConfigArgs redshiftSourceConfig) {
+            return redshiftSourceConfig(Output.of(redshiftSourceConfig));
         }
+
         public Builder s3SourceConfig(@Nullable Output<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig) {
-            this.s3SourceConfig = s3SourceConfig;
+            $.s3SourceConfig = s3SourceConfig;
             return this;
         }
-        public Builder s3SourceConfig(@Nullable AnomalyDetectorS3SourceConfigArgs s3SourceConfig) {
-            this.s3SourceConfig = Codegen.ofNullable(s3SourceConfig);
-            return this;
-        }        public AnomalyDetectorMetricSourceArgs build() {
-            return new AnomalyDetectorMetricSourceArgs(appFlowConfig, cloudwatchConfig, rDSSourceConfig, redshiftSourceConfig, s3SourceConfig);
+
+        public Builder s3SourceConfig(AnomalyDetectorS3SourceConfigArgs s3SourceConfig) {
+            return s3SourceConfig(Output.of(s3SourceConfig));
+        }
+
+        public AnomalyDetectorMetricSourceArgs build() {
+            return $;
         }
     }
+
 }

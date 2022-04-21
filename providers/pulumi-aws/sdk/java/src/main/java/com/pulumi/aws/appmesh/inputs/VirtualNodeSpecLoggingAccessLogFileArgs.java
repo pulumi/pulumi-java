@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualNodeSpecLoggingAccessLogFileArgs extends com.pulumi.re
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public VirtualNodeSpecLoggingAccessLogFileArgs(Output<String> path) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private VirtualNodeSpecLoggingAccessLogFileArgs() {}
 
-    private VirtualNodeSpecLoggingAccessLogFileArgs() {
-        this.path = Codegen.empty();
+    private VirtualNodeSpecLoggingAccessLogFileArgs(VirtualNodeSpecLoggingAccessLogFileArgs $) {
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecLoggingAccessLogFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> path;
+        private VirtualNodeSpecLoggingAccessLogFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecLoggingAccessLogFileArgs();
         }
 
         public Builder(VirtualNodeSpecLoggingAccessLogFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
+            $ = new VirtualNodeSpecLoggingAccessLogFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public VirtualNodeSpecLoggingAccessLogFileArgs build() {
-            return new VirtualNodeSpecLoggingAccessLogFileArgs(path);
+            return path(Output.of(path));
+        }
+
+        public VirtualNodeSpecLoggingAccessLogFileArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

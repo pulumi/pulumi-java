@@ -6,7 +6,6 @@ package com.pulumi.aws.waf.inputs;
 import com.pulumi.aws.waf.inputs.SizeConstraintSetSizeConstraintFieldToMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +22,7 @@ public final class SizeConstraintSetSizeConstraintArgs extends com.pulumi.resour
      * 
      */
     @Import(name="comparisonOperator", required=true)
-      private final Output<String> comparisonOperator;
+    private Output<String> comparisonOperator;
 
     public Output<String> comparisonOperator() {
         return this.comparisonOperator;
@@ -34,7 +33,7 @@ public final class SizeConstraintSetSizeConstraintArgs extends com.pulumi.resour
      * 
      */
     @Import(name="fieldToMatch", required=true)
-      private final Output<SizeConstraintSetSizeConstraintFieldToMatchArgs> fieldToMatch;
+    private Output<SizeConstraintSetSizeConstraintFieldToMatchArgs> fieldToMatch;
 
     public Output<SizeConstraintSetSizeConstraintFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
@@ -46,7 +45,7 @@ public final class SizeConstraintSetSizeConstraintArgs extends com.pulumi.resour
      * 
      */
     @Import(name="size", required=true)
-      private final Output<Integer> size;
+    private Output<Integer> size;
 
     public Output<Integer> size() {
         return this.size;
@@ -62,89 +61,82 @@ public final class SizeConstraintSetSizeConstraintArgs extends com.pulumi.resour
      * 
      */
     @Import(name="textTransformation", required=true)
-      private final Output<String> textTransformation;
+    private Output<String> textTransformation;
 
     public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
-    public SizeConstraintSetSizeConstraintArgs(
-        Output<String> comparisonOperator,
-        Output<SizeConstraintSetSizeConstraintFieldToMatchArgs> fieldToMatch,
-        Output<Integer> size,
-        Output<String> textTransformation) {
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-        this.textTransformation = Objects.requireNonNull(textTransformation, "expected parameter 'textTransformation' to be non-null");
-    }
+    private SizeConstraintSetSizeConstraintArgs() {}
 
-    private SizeConstraintSetSizeConstraintArgs() {
-        this.comparisonOperator = Codegen.empty();
-        this.fieldToMatch = Codegen.empty();
-        this.size = Codegen.empty();
-        this.textTransformation = Codegen.empty();
+    private SizeConstraintSetSizeConstraintArgs(SizeConstraintSetSizeConstraintArgs $) {
+        this.comparisonOperator = $.comparisonOperator;
+        this.fieldToMatch = $.fieldToMatch;
+        this.size = $.size;
+        this.textTransformation = $.textTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SizeConstraintSetSizeConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> comparisonOperator;
-        private Output<SizeConstraintSetSizeConstraintFieldToMatchArgs> fieldToMatch;
-        private Output<Integer> size;
-        private Output<String> textTransformation;
+        private SizeConstraintSetSizeConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SizeConstraintSetSizeConstraintArgs();
         }
 
         public Builder(SizeConstraintSetSizeConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparisonOperator = defaults.comparisonOperator;
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.size = defaults.size;
-    	      this.textTransformation = defaults.textTransformation;
+            $ = new SizeConstraintSetSizeConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comparisonOperator(Output<String> comparisonOperator) {
-            this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
+            $.comparisonOperator = comparisonOperator;
             return this;
         }
+
         public Builder comparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
-            return this;
+            return comparisonOperator(Output.of(comparisonOperator));
         }
+
         public Builder fieldToMatch(Output<SizeConstraintSetSizeConstraintFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder fieldToMatch(SizeConstraintSetSizeConstraintFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
-            return this;
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder size(Output<Integer> size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder size(Integer size) {
-            this.size = Output.of(Objects.requireNonNull(size));
-            return this;
+            return size(Output.of(size));
         }
+
         public Builder textTransformation(Output<String> textTransformation) {
-            this.textTransformation = Objects.requireNonNull(textTransformation);
+            $.textTransformation = textTransformation;
             return this;
         }
+
         public Builder textTransformation(String textTransformation) {
-            this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
-            return this;
-        }        public SizeConstraintSetSizeConstraintArgs build() {
-            return new SizeConstraintSetSizeConstraintArgs(comparisonOperator, fieldToMatch, size, textTransformation);
+            return textTransformation(Output.of(textTransformation));
+        }
+
+        public SizeConstraintSetSizeConstraintArgs build() {
+            $.comparisonOperator = Objects.requireNonNull($.comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            $.textTransformation = Objects.requireNonNull($.textTransformation, "expected parameter 'textTransformation' to be non-null");
+            return $;
         }
     }
+
 }

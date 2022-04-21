@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryCloudStoragePathArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryWordListArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends com.pulumi.res
      * 
      */
     @Import(name="cloudStoragePath")
-      private final @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
+    private @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
 
-    public Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath() {
-        return this.cloudStoragePath == null ? Codegen.empty() : this.cloudStoragePath;
+    public Optional<Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs>> cloudStoragePath() {
+        return Optional.ofNullable(this.cloudStoragePath);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends com.pulumi.res
      * 
      */
     @Import(name="wordList")
-      private final @Nullable Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList;
+    private @Nullable Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList;
 
-    public Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList() {
-        return this.wordList == null ? Codegen.empty() : this.wordList;
+    public Optional<Output<PreventionStoredInfoTypeDictionaryWordListArgs>> wordList() {
+        return Optional.ofNullable(this.wordList);
     }
 
-    public PreventionStoredInfoTypeDictionaryArgs(
-        @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath,
-        @Nullable Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList) {
-        this.cloudStoragePath = cloudStoragePath;
-        this.wordList = wordList;
-    }
+    private PreventionStoredInfoTypeDictionaryArgs() {}
 
-    private PreventionStoredInfoTypeDictionaryArgs() {
-        this.cloudStoragePath = Codegen.empty();
-        this.wordList = Codegen.empty();
+    private PreventionStoredInfoTypeDictionaryArgs(PreventionStoredInfoTypeDictionaryArgs $) {
+        this.cloudStoragePath = $.cloudStoragePath;
+        this.wordList = $.wordList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionStoredInfoTypeDictionaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
-        private @Nullable Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList;
+        private PreventionStoredInfoTypeDictionaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionStoredInfoTypeDictionaryArgs();
         }
 
         public Builder(PreventionStoredInfoTypeDictionaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudStoragePath = defaults.cloudStoragePath;
-    	      this.wordList = defaults.wordList;
+            $ = new PreventionStoredInfoTypeDictionaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudStoragePath(@Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath) {
-            this.cloudStoragePath = cloudStoragePath;
+            $.cloudStoragePath = cloudStoragePath;
             return this;
         }
-        public Builder cloudStoragePath(@Nullable PreventionStoredInfoTypeDictionaryCloudStoragePathArgs cloudStoragePath) {
-            this.cloudStoragePath = Codegen.ofNullable(cloudStoragePath);
-            return this;
+
+        public Builder cloudStoragePath(PreventionStoredInfoTypeDictionaryCloudStoragePathArgs cloudStoragePath) {
+            return cloudStoragePath(Output.of(cloudStoragePath));
         }
+
         public Builder wordList(@Nullable Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList) {
-            this.wordList = wordList;
+            $.wordList = wordList;
             return this;
         }
-        public Builder wordList(@Nullable PreventionStoredInfoTypeDictionaryWordListArgs wordList) {
-            this.wordList = Codegen.ofNullable(wordList);
-            return this;
-        }        public PreventionStoredInfoTypeDictionaryArgs build() {
-            return new PreventionStoredInfoTypeDictionaryArgs(cloudStoragePath, wordList);
+
+        public Builder wordList(PreventionStoredInfoTypeDictionaryWordListArgs wordList) {
+            return wordList(Output.of(wordList));
+        }
+
+        public PreventionStoredInfoTypeDictionaryArgs build() {
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="networkSecurityGroupName", required=true)
-      private final String networkSecurityGroupName;
+    private String networkSecurityGroupName;
 
     public String networkSecurityGroupName() {
         return this.networkSecurityGroupName;
@@ -41,64 +41,58 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNetworkSecurityGroupArgs(
-        @Nullable String expand,
-        String networkSecurityGroupName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.networkSecurityGroupName = Objects.requireNonNull(networkSecurityGroupName, "expected parameter 'networkSecurityGroupName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNetworkSecurityGroupArgs() {}
 
-    private GetNetworkSecurityGroupArgs() {
-        this.expand = null;
-        this.networkSecurityGroupName = null;
-        this.resourceGroupName = null;
+    private GetNetworkSecurityGroupArgs(GetNetworkSecurityGroupArgs $) {
+        this.expand = $.expand;
+        this.networkSecurityGroupName = $.networkSecurityGroupName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkSecurityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String networkSecurityGroupName;
-        private String resourceGroupName;
+        private GetNetworkSecurityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkSecurityGroupArgs();
         }
 
         public Builder(GetNetworkSecurityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.networkSecurityGroupName = defaults.networkSecurityGroupName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNetworkSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder networkSecurityGroupName(String networkSecurityGroupName) {
-            this.networkSecurityGroupName = Objects.requireNonNull(networkSecurityGroupName);
+            $.networkSecurityGroupName = networkSecurityGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNetworkSecurityGroupArgs build() {
-            return new GetNetworkSecurityGroupArgs(expand, networkSecurityGroupName, resourceGroupName);
+        }
+
+        public GetNetworkSecurityGroupArgs build() {
+            $.networkSecurityGroupName = Objects.requireNonNull($.networkSecurityGroupName, "expected parameter 'networkSecurityGroupName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

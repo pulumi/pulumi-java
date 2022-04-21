@@ -21,45 +21,45 @@ public final class DefaultSnatStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public DefaultSnatStatusResponse(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private DefaultSnatStatusResponse() {}
 
-    private DefaultSnatStatusResponse() {
-        this.disabled = null;
+    private DefaultSnatStatusResponse(DefaultSnatStatusResponse $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultSnatStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
+        private DefaultSnatStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultSnatStatusResponse();
         }
 
         public Builder(DefaultSnatStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new DefaultSnatStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public DefaultSnatStatusResponse build() {
-            return new DefaultSnatStatusResponse(disabled);
+        }
+
+        public DefaultSnatStatusResponse build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

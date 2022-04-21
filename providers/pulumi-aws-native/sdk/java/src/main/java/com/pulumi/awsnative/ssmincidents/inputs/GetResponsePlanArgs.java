@@ -17,45 +17,45 @@ public final class GetResponsePlanArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetResponsePlanArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetResponsePlanArgs() {}
 
-    private GetResponsePlanArgs() {
-        this.arn = null;
+    private GetResponsePlanArgs(GetResponsePlanArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponsePlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetResponsePlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponsePlanArgs();
         }
 
         public Builder(GetResponsePlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetResponsePlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetResponsePlanArgs build() {
-            return new GetResponsePlanArgs(arn);
+        }
+
+        public GetResponsePlanArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

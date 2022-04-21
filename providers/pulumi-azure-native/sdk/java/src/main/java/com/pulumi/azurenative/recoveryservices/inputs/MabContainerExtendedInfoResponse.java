@@ -24,10 +24,10 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="backupItemType")
-      private final @Nullable String backupItemType;
+    private @Nullable String backupItemType;
 
     public Optional<String> backupItemType() {
-        return this.backupItemType == null ? Optional.empty() : Optional.ofNullable(this.backupItemType);
+        return Optional.ofNullable(this.backupItemType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="backupItems")
-      private final @Nullable List<String> backupItems;
+    private @Nullable List<String> backupItems;
 
-    public List<String> backupItems() {
-        return this.backupItems == null ? List.of() : this.backupItems;
+    public Optional<List<String>> backupItems() {
+        return Optional.ofNullable(this.backupItems);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastBackupStatus")
-      private final @Nullable String lastBackupStatus;
+    private @Nullable String lastBackupStatus;
 
     public Optional<String> lastBackupStatus() {
-        return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
+        return Optional.ofNullable(this.lastBackupStatus);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastRefreshedAt")
-      private final @Nullable String lastRefreshedAt;
+    private @Nullable String lastRefreshedAt;
 
     public Optional<String> lastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
+        return Optional.ofNullable(this.lastRefreshedAt);
     }
 
     /**
@@ -68,85 +68,72 @@ public final class MabContainerExtendedInfoResponse extends com.pulumi.resources
      * 
      */
     @Import(name="policyName")
-      private final @Nullable String policyName;
+    private @Nullable String policyName;
 
     public Optional<String> policyName() {
-        return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
+        return Optional.ofNullable(this.policyName);
     }
 
-    public MabContainerExtendedInfoResponse(
-        @Nullable String backupItemType,
-        @Nullable List<String> backupItems,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastRefreshedAt,
-        @Nullable String policyName) {
-        this.backupItemType = backupItemType;
-        this.backupItems = backupItems;
-        this.lastBackupStatus = lastBackupStatus;
-        this.lastRefreshedAt = lastRefreshedAt;
-        this.policyName = policyName;
-    }
+    private MabContainerExtendedInfoResponse() {}
 
-    private MabContainerExtendedInfoResponse() {
-        this.backupItemType = null;
-        this.backupItems = List.of();
-        this.lastBackupStatus = null;
-        this.lastRefreshedAt = null;
-        this.policyName = null;
+    private MabContainerExtendedInfoResponse(MabContainerExtendedInfoResponse $) {
+        this.backupItemType = $.backupItemType;
+        this.backupItems = $.backupItems;
+        this.lastBackupStatus = $.lastBackupStatus;
+        this.lastRefreshedAt = $.lastRefreshedAt;
+        this.policyName = $.policyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MabContainerExtendedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupItemType;
-        private @Nullable List<String> backupItems;
-        private @Nullable String lastBackupStatus;
-        private @Nullable String lastRefreshedAt;
-        private @Nullable String policyName;
+        private MabContainerExtendedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MabContainerExtendedInfoResponse();
         }
 
         public Builder(MabContainerExtendedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupItemType = defaults.backupItemType;
-    	      this.backupItems = defaults.backupItems;
-    	      this.lastBackupStatus = defaults.lastBackupStatus;
-    	      this.lastRefreshedAt = defaults.lastRefreshedAt;
-    	      this.policyName = defaults.policyName;
+            $ = new MabContainerExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupItemType(@Nullable String backupItemType) {
-            this.backupItemType = backupItemType;
+            $.backupItemType = backupItemType;
             return this;
         }
+
         public Builder backupItems(@Nullable List<String> backupItems) {
-            this.backupItems = backupItems;
+            $.backupItems = backupItems;
             return this;
         }
+
         public Builder backupItems(String... backupItems) {
             return backupItems(List.of(backupItems));
         }
+
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
-            this.lastBackupStatus = lastBackupStatus;
+            $.lastBackupStatus = lastBackupStatus;
             return this;
         }
+
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = lastRefreshedAt;
+            $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
+
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = policyName;
+            $.policyName = policyName;
             return this;
-        }        public MabContainerExtendedInfoResponse build() {
-            return new MabContainerExtendedInfoResponse(backupItemType, backupItems, lastBackupStatus, lastRefreshedAt, policyName);
+        }
+
+        public MabContainerExtendedInfoResponse build() {
+            return $;
         }
     }
+
 }

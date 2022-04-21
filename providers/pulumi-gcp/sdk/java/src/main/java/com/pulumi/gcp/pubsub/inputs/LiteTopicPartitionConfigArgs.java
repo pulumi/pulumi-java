@@ -5,10 +5,10 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigCapacityArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LiteTopicPartitionConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity;
+    private @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity;
 
-    public Output<LiteTopicPartitionConfigCapacityArgs> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<LiteTopicPartitionConfigCapacityArgs>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -33,63 +33,59 @@ public final class LiteTopicPartitionConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
     }
 
-    public LiteTopicPartitionConfigArgs(
-        @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity,
-        Output<Integer> count) {
-        this.capacity = capacity;
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-    }
+    private LiteTopicPartitionConfigArgs() {}
 
-    private LiteTopicPartitionConfigArgs() {
-        this.capacity = Codegen.empty();
-        this.count = Codegen.empty();
+    private LiteTopicPartitionConfigArgs(LiteTopicPartitionConfigArgs $) {
+        this.capacity = $.capacity;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiteTopicPartitionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity;
-        private Output<Integer> count;
+        private LiteTopicPartitionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiteTopicPartitionConfigArgs();
         }
 
         public Builder(LiteTopicPartitionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.count = defaults.count;
+            $ = new LiteTopicPartitionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable LiteTopicPartitionConfigCapacityArgs capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(LiteTopicPartitionConfigCapacityArgs capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
-        }        public LiteTopicPartitionConfigArgs build() {
-            return new LiteTopicPartitionConfigArgs(capacity, count);
+            return count(Output.of(count));
+        }
+
+        public LiteTopicPartitionConfigArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            return $;
         }
     }
+
 }

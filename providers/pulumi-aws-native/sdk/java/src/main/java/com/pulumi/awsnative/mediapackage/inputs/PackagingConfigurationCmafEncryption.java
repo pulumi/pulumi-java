@@ -17,45 +17,45 @@ public final class PackagingConfigurationCmafEncryption extends com.pulumi.resou
     public static final PackagingConfigurationCmafEncryption Empty = new PackagingConfigurationCmafEncryption();
 
     @Import(name="spekeKeyProvider", required=true)
-      private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
+    private PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
     public PackagingConfigurationSpekeKeyProvider spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public PackagingConfigurationCmafEncryption(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private PackagingConfigurationCmafEncryption() {}
 
-    private PackagingConfigurationCmafEncryption() {
-        this.spekeKeyProvider = null;
+    private PackagingConfigurationCmafEncryption(PackagingConfigurationCmafEncryption $) {
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationCmafEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
+        private PackagingConfigurationCmafEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationCmafEncryption();
         }
 
         public Builder(PackagingConfigurationCmafEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new PackagingConfigurationCmafEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
-        }        public PackagingConfigurationCmafEncryption build() {
-            return new PackagingConfigurationCmafEncryption(spekeKeyProvider);
+        }
+
+        public PackagingConfigurationCmafEncryption build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,12 +8,12 @@ import com.pulumi.azurenative.customerinsights.inputs.PropertyDefinitionArgs;
 import com.pulumi.azurenative.customerinsights.inputs.StrongIdArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiEntitySetName")
-      private final @Nullable Output<String> apiEntitySetName;
+    private @Nullable Output<String> apiEntitySetName;
 
-    public Output<String> apiEntitySetName() {
-        return this.apiEntitySetName == null ? Codegen.empty() : this.apiEntitySetName;
+    public Optional<Output<String>> apiEntitySetName() {
+        return Optional.ofNullable(this.apiEntitySetName);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,List<String>>> attributes;
+    private @Nullable Output<Map<String,List<String>>> attributes;
 
-    public Output<Map<String,List<String>>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,List<String>>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<Map<String,String>> description;
+    private @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<Map<String,String>>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<Map<String,String>> displayName;
+    private @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<Map<String,String>>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entityType")
-      private final @Nullable Output<EntityTypes> entityType;
+    private @Nullable Output<EntityTypes> entityType;
 
-    public Output<EntityTypes> entityType() {
-        return this.entityType == null ? Codegen.empty() : this.entityType;
+    public Optional<Output<EntityTypes>> entityType() {
+        return Optional.ofNullable(this.entityType);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
+    private @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
-    public Output<List<PropertyDefinitionArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<PropertyDefinitionArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final Output<String> hubName;
+    private Output<String> hubName;
 
     public Output<String> hubName() {
         return this.hubName;
@@ -103,10 +103,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instancesCount")
-      private final @Nullable Output<Integer> instancesCount;
+    private @Nullable Output<Integer> instancesCount;
 
-    public Output<Integer> instancesCount() {
-        return this.instancesCount == null ? Codegen.empty() : this.instancesCount;
+    public Optional<Output<Integer>> instancesCount() {
+        return Optional.ofNullable(this.instancesCount);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="largeImage")
-      private final @Nullable Output<String> largeImage;
+    private @Nullable Output<String> largeImage;
 
-    public Output<String> largeImage() {
-        return this.largeImage == null ? Codegen.empty() : this.largeImage;
+    public Optional<Output<String>> largeImage() {
+        return Optional.ofNullable(this.largeImage);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="localizedAttributes")
-      private final @Nullable Output<Map<String,Map<String,String>>> localizedAttributes;
+    private @Nullable Output<Map<String,Map<String,String>>> localizedAttributes;
 
-    public Output<Map<String,Map<String,String>>> localizedAttributes() {
-        return this.localizedAttributes == null ? Codegen.empty() : this.localizedAttributes;
+    public Optional<Output<Map<String,Map<String,String>>>> localizedAttributes() {
+        return Optional.ofNullable(this.localizedAttributes);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mediumImage")
-      private final @Nullable Output<String> mediumImage;
+    private @Nullable Output<String> mediumImage;
 
-    public Output<String> mediumImage() {
-        return this.mediumImage == null ? Codegen.empty() : this.mediumImage;
+    public Optional<Output<String>> mediumImage() {
+        return Optional.ofNullable(this.mediumImage);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName")
-      private final @Nullable Output<String> profileName;
+    private @Nullable Output<String> profileName;
 
-    public Output<String> profileName() {
-        return this.profileName == null ? Codegen.empty() : this.profileName;
+    public Optional<Output<String>> profileName() {
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -158,7 +158,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -169,10 +169,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaItemTypeLink")
-      private final @Nullable Output<String> schemaItemTypeLink;
+    private @Nullable Output<String> schemaItemTypeLink;
 
-    public Output<String> schemaItemTypeLink() {
-        return this.schemaItemTypeLink == null ? Codegen.empty() : this.schemaItemTypeLink;
+    public Optional<Output<String>> schemaItemTypeLink() {
+        return Optional.ofNullable(this.schemaItemTypeLink);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smallImage")
-      private final @Nullable Output<String> smallImage;
+    private @Nullable Output<String> smallImage;
 
-    public Output<String> smallImage() {
-        return this.smallImage == null ? Codegen.empty() : this.smallImage;
+    public Optional<Output<String>> smallImage() {
+        return Optional.ofNullable(this.smallImage);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="strongIds")
-      private final @Nullable Output<List<StrongIdArgs>> strongIds;
+    private @Nullable Output<List<StrongIdArgs>> strongIds;
 
-    public Output<List<StrongIdArgs>> strongIds() {
-        return this.strongIds == null ? Codegen.empty() : this.strongIds;
+    public Optional<Output<List<StrongIdArgs>>> strongIds() {
+        return Optional.ofNullable(this.strongIds);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timestampFieldName")
-      private final @Nullable Output<String> timestampFieldName;
+    private @Nullable Output<String> timestampFieldName;
 
-    public Output<String> timestampFieldName() {
-        return this.timestampFieldName == null ? Codegen.empty() : this.timestampFieldName;
+    public Optional<Output<String>> timestampFieldName() {
+        return Optional.ofNullable(this.timestampFieldName);
     }
 
     /**
@@ -213,277 +213,228 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="typeName")
-      private final @Nullable Output<String> typeName;
+    private @Nullable Output<String> typeName;
 
-    public Output<String> typeName() {
-        return this.typeName == null ? Codegen.empty() : this.typeName;
+    public Optional<Output<String>> typeName() {
+        return Optional.ofNullable(this.typeName);
     }
 
-    public ProfileArgs(
-        @Nullable Output<String> apiEntitySetName,
-        @Nullable Output<Map<String,List<String>>> attributes,
-        @Nullable Output<Map<String,String>> description,
-        @Nullable Output<Map<String,String>> displayName,
-        @Nullable Output<EntityTypes> entityType,
-        @Nullable Output<List<PropertyDefinitionArgs>> fields,
-        Output<String> hubName,
-        @Nullable Output<Integer> instancesCount,
-        @Nullable Output<String> largeImage,
-        @Nullable Output<Map<String,Map<String,String>>> localizedAttributes,
-        @Nullable Output<String> mediumImage,
-        @Nullable Output<String> profileName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> schemaItemTypeLink,
-        @Nullable Output<String> smallImage,
-        @Nullable Output<List<StrongIdArgs>> strongIds,
-        @Nullable Output<String> timestampFieldName,
-        @Nullable Output<String> typeName) {
-        this.apiEntitySetName = apiEntitySetName;
-        this.attributes = attributes;
-        this.description = description;
-        this.displayName = displayName;
-        this.entityType = entityType;
-        this.fields = fields;
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.instancesCount = instancesCount;
-        this.largeImage = largeImage;
-        this.localizedAttributes = localizedAttributes;
-        this.mediumImage = mediumImage;
-        this.profileName = profileName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaItemTypeLink = schemaItemTypeLink;
-        this.smallImage = smallImage;
-        this.strongIds = strongIds;
-        this.timestampFieldName = timestampFieldName;
-        this.typeName = typeName;
-    }
+    private ProfileArgs() {}
 
-    private ProfileArgs() {
-        this.apiEntitySetName = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.entityType = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.hubName = Codegen.empty();
-        this.instancesCount = Codegen.empty();
-        this.largeImage = Codegen.empty();
-        this.localizedAttributes = Codegen.empty();
-        this.mediumImage = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.schemaItemTypeLink = Codegen.empty();
-        this.smallImage = Codegen.empty();
-        this.strongIds = Codegen.empty();
-        this.timestampFieldName = Codegen.empty();
-        this.typeName = Codegen.empty();
+    private ProfileArgs(ProfileArgs $) {
+        this.apiEntitySetName = $.apiEntitySetName;
+        this.attributes = $.attributes;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.entityType = $.entityType;
+        this.fields = $.fields;
+        this.hubName = $.hubName;
+        this.instancesCount = $.instancesCount;
+        this.largeImage = $.largeImage;
+        this.localizedAttributes = $.localizedAttributes;
+        this.mediumImage = $.mediumImage;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaItemTypeLink = $.schemaItemTypeLink;
+        this.smallImage = $.smallImage;
+        this.strongIds = $.strongIds;
+        this.timestampFieldName = $.timestampFieldName;
+        this.typeName = $.typeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiEntitySetName;
-        private @Nullable Output<Map<String,List<String>>> attributes;
-        private @Nullable Output<Map<String,String>> description;
-        private @Nullable Output<Map<String,String>> displayName;
-        private @Nullable Output<EntityTypes> entityType;
-        private @Nullable Output<List<PropertyDefinitionArgs>> fields;
-        private Output<String> hubName;
-        private @Nullable Output<Integer> instancesCount;
-        private @Nullable Output<String> largeImage;
-        private @Nullable Output<Map<String,Map<String,String>>> localizedAttributes;
-        private @Nullable Output<String> mediumImage;
-        private @Nullable Output<String> profileName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> schemaItemTypeLink;
-        private @Nullable Output<String> smallImage;
-        private @Nullable Output<List<StrongIdArgs>> strongIds;
-        private @Nullable Output<String> timestampFieldName;
-        private @Nullable Output<String> typeName;
+        private ProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProfileArgs();
         }
 
         public Builder(ProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiEntitySetName = defaults.apiEntitySetName;
-    	      this.attributes = defaults.attributes;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.entityType = defaults.entityType;
-    	      this.fields = defaults.fields;
-    	      this.hubName = defaults.hubName;
-    	      this.instancesCount = defaults.instancesCount;
-    	      this.largeImage = defaults.largeImage;
-    	      this.localizedAttributes = defaults.localizedAttributes;
-    	      this.mediumImage = defaults.mediumImage;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaItemTypeLink = defaults.schemaItemTypeLink;
-    	      this.smallImage = defaults.smallImage;
-    	      this.strongIds = defaults.strongIds;
-    	      this.timestampFieldName = defaults.timestampFieldName;
-    	      this.typeName = defaults.typeName;
+            $ = new ProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiEntitySetName(@Nullable Output<String> apiEntitySetName) {
-            this.apiEntitySetName = apiEntitySetName;
+            $.apiEntitySetName = apiEntitySetName;
             return this;
         }
-        public Builder apiEntitySetName(@Nullable String apiEntitySetName) {
-            this.apiEntitySetName = Codegen.ofNullable(apiEntitySetName);
-            return this;
+
+        public Builder apiEntitySetName(String apiEntitySetName) {
+            return apiEntitySetName(Output.of(apiEntitySetName));
         }
+
         public Builder attributes(@Nullable Output<Map<String,List<String>>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,List<String>> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,List<String>> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder description(@Nullable Output<Map<String,String>> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable Map<String,String> description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(Map<String,String> description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(Map<String,String> displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder entityType(@Nullable Output<EntityTypes> entityType) {
-            this.entityType = entityType;
+            $.entityType = entityType;
             return this;
         }
-        public Builder entityType(@Nullable EntityTypes entityType) {
-            this.entityType = Codegen.ofNullable(entityType);
-            return this;
+
+        public Builder entityType(EntityTypes entityType) {
+            return entityType(Output.of(entityType));
         }
+
         public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<PropertyDefinitionArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(PropertyDefinitionArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder hubName(Output<String> hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Output.of(Objects.requireNonNull(hubName));
-            return this;
+            return hubName(Output.of(hubName));
         }
+
         public Builder instancesCount(@Nullable Output<Integer> instancesCount) {
-            this.instancesCount = instancesCount;
+            $.instancesCount = instancesCount;
             return this;
         }
-        public Builder instancesCount(@Nullable Integer instancesCount) {
-            this.instancesCount = Codegen.ofNullable(instancesCount);
-            return this;
+
+        public Builder instancesCount(Integer instancesCount) {
+            return instancesCount(Output.of(instancesCount));
         }
+
         public Builder largeImage(@Nullable Output<String> largeImage) {
-            this.largeImage = largeImage;
+            $.largeImage = largeImage;
             return this;
         }
-        public Builder largeImage(@Nullable String largeImage) {
-            this.largeImage = Codegen.ofNullable(largeImage);
-            return this;
+
+        public Builder largeImage(String largeImage) {
+            return largeImage(Output.of(largeImage));
         }
+
         public Builder localizedAttributes(@Nullable Output<Map<String,Map<String,String>>> localizedAttributes) {
-            this.localizedAttributes = localizedAttributes;
+            $.localizedAttributes = localizedAttributes;
             return this;
         }
-        public Builder localizedAttributes(@Nullable Map<String,Map<String,String>> localizedAttributes) {
-            this.localizedAttributes = Codegen.ofNullable(localizedAttributes);
-            return this;
+
+        public Builder localizedAttributes(Map<String,Map<String,String>> localizedAttributes) {
+            return localizedAttributes(Output.of(localizedAttributes));
         }
+
         public Builder mediumImage(@Nullable Output<String> mediumImage) {
-            this.mediumImage = mediumImage;
+            $.mediumImage = mediumImage;
             return this;
         }
-        public Builder mediumImage(@Nullable String mediumImage) {
-            this.mediumImage = Codegen.ofNullable(mediumImage);
-            return this;
+
+        public Builder mediumImage(String mediumImage) {
+            return mediumImage(Output.of(mediumImage));
         }
+
         public Builder profileName(@Nullable Output<String> profileName) {
-            this.profileName = profileName;
+            $.profileName = profileName;
             return this;
         }
-        public Builder profileName(@Nullable String profileName) {
-            this.profileName = Codegen.ofNullable(profileName);
-            return this;
+
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder schemaItemTypeLink(@Nullable Output<String> schemaItemTypeLink) {
-            this.schemaItemTypeLink = schemaItemTypeLink;
+            $.schemaItemTypeLink = schemaItemTypeLink;
             return this;
         }
-        public Builder schemaItemTypeLink(@Nullable String schemaItemTypeLink) {
-            this.schemaItemTypeLink = Codegen.ofNullable(schemaItemTypeLink);
-            return this;
+
+        public Builder schemaItemTypeLink(String schemaItemTypeLink) {
+            return schemaItemTypeLink(Output.of(schemaItemTypeLink));
         }
+
         public Builder smallImage(@Nullable Output<String> smallImage) {
-            this.smallImage = smallImage;
+            $.smallImage = smallImage;
             return this;
         }
-        public Builder smallImage(@Nullable String smallImage) {
-            this.smallImage = Codegen.ofNullable(smallImage);
-            return this;
+
+        public Builder smallImage(String smallImage) {
+            return smallImage(Output.of(smallImage));
         }
+
         public Builder strongIds(@Nullable Output<List<StrongIdArgs>> strongIds) {
-            this.strongIds = strongIds;
+            $.strongIds = strongIds;
             return this;
         }
-        public Builder strongIds(@Nullable List<StrongIdArgs> strongIds) {
-            this.strongIds = Codegen.ofNullable(strongIds);
-            return this;
+
+        public Builder strongIds(List<StrongIdArgs> strongIds) {
+            return strongIds(Output.of(strongIds));
         }
+
         public Builder strongIds(StrongIdArgs... strongIds) {
             return strongIds(List.of(strongIds));
         }
+
         public Builder timestampFieldName(@Nullable Output<String> timestampFieldName) {
-            this.timestampFieldName = timestampFieldName;
+            $.timestampFieldName = timestampFieldName;
             return this;
         }
-        public Builder timestampFieldName(@Nullable String timestampFieldName) {
-            this.timestampFieldName = Codegen.ofNullable(timestampFieldName);
-            return this;
+
+        public Builder timestampFieldName(String timestampFieldName) {
+            return timestampFieldName(Output.of(timestampFieldName));
         }
+
         public Builder typeName(@Nullable Output<String> typeName) {
-            this.typeName = typeName;
+            $.typeName = typeName;
             return this;
         }
-        public Builder typeName(@Nullable String typeName) {
-            this.typeName = Codegen.ofNullable(typeName);
-            return this;
-        }        public ProfileArgs build() {
-            return new ProfileArgs(apiEntitySetName, attributes, description, displayName, entityType, fields, hubName, instancesCount, largeImage, localizedAttributes, mediumImage, profileName, resourceGroupName, schemaItemTypeLink, smallImage, strongIds, timestampFieldName, typeName);
+
+        public Builder typeName(String typeName) {
+            return typeName(Output.of(typeName));
+        }
+
+        public ProfileArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

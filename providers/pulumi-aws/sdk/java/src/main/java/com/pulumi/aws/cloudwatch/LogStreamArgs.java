@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class LogStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logGroupName", required=true)
-      private final Output<String> logGroupName;
+    private Output<String> logGroupName;
 
     public Output<String> logGroupName() {
         return this.logGroupName;
@@ -31,63 +31,59 @@ public final class LogStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public LogStreamArgs(
-        Output<String> logGroupName,
-        @Nullable Output<String> name) {
-        this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
-        this.name = name;
-    }
+    private LogStreamArgs() {}
 
-    private LogStreamArgs() {
-        this.logGroupName = Codegen.empty();
-        this.name = Codegen.empty();
+    private LogStreamArgs(LogStreamArgs $) {
+        this.logGroupName = $.logGroupName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> logGroupName;
-        private @Nullable Output<String> name;
+        private LogStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogStreamArgs();
         }
 
         public Builder(LogStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.name = defaults.name;
+            $ = new LogStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupName(Output<String> logGroupName) {
-            this.logGroupName = Objects.requireNonNull(logGroupName);
+            $.logGroupName = logGroupName;
             return this;
         }
+
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
-            return this;
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public LogStreamArgs build() {
-            return new LogStreamArgs(logGroupName, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public LogStreamArgs build() {
+            $.logGroupName = Objects.requireNonNull($.logGroupName, "expected parameter 'logGroupName' to be non-null");
+            return $;
         }
     }
+
 }

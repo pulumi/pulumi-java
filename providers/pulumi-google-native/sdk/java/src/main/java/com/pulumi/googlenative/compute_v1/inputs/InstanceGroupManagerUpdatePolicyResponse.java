@@ -18,7 +18,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends com.pulumi.r
      * 
      */
     @Import(name="instanceRedistributionType", required=true)
-      private final String instanceRedistributionType;
+    private String instanceRedistributionType;
 
     public String instanceRedistributionType() {
         return this.instanceRedistributionType;
@@ -29,7 +29,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends com.pulumi.r
      * 
      */
     @Import(name="maxSurge", required=true)
-      private final FixedOrPercentResponse maxSurge;
+    private FixedOrPercentResponse maxSurge;
 
     public FixedOrPercentResponse maxSurge() {
         return this.maxSurge;
@@ -40,7 +40,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends com.pulumi.r
      * 
      */
     @Import(name="maxUnavailable", required=true)
-      private final FixedOrPercentResponse maxUnavailable;
+    private FixedOrPercentResponse maxUnavailable;
 
     public FixedOrPercentResponse maxUnavailable() {
         return this.maxUnavailable;
@@ -51,7 +51,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends com.pulumi.r
      * 
      */
     @Import(name="minimalAction", required=true)
-      private final String minimalAction;
+    private String minimalAction;
 
     public String minimalAction() {
         return this.minimalAction;
@@ -62,7 +62,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends com.pulumi.r
      * 
      */
     @Import(name="mostDisruptiveAllowedAction", required=true)
-      private final String mostDisruptiveAllowedAction;
+    private String mostDisruptiveAllowedAction;
 
     public String mostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction;
@@ -73,7 +73,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends com.pulumi.r
      * 
      */
     @Import(name="replacementMethod", required=true)
-      private final String replacementMethod;
+    private String replacementMethod;
 
     public String replacementMethod() {
         return this.replacementMethod;
@@ -84,100 +84,87 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public InstanceGroupManagerUpdatePolicyResponse(
-        String instanceRedistributionType,
-        FixedOrPercentResponse maxSurge,
-        FixedOrPercentResponse maxUnavailable,
-        String minimalAction,
-        String mostDisruptiveAllowedAction,
-        String replacementMethod,
-        String type) {
-        this.instanceRedistributionType = Objects.requireNonNull(instanceRedistributionType, "expected parameter 'instanceRedistributionType' to be non-null");
-        this.maxSurge = Objects.requireNonNull(maxSurge, "expected parameter 'maxSurge' to be non-null");
-        this.maxUnavailable = Objects.requireNonNull(maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
-        this.minimalAction = Objects.requireNonNull(minimalAction, "expected parameter 'minimalAction' to be non-null");
-        this.mostDisruptiveAllowedAction = Objects.requireNonNull(mostDisruptiveAllowedAction, "expected parameter 'mostDisruptiveAllowedAction' to be non-null");
-        this.replacementMethod = Objects.requireNonNull(replacementMethod, "expected parameter 'replacementMethod' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private InstanceGroupManagerUpdatePolicyResponse() {}
 
-    private InstanceGroupManagerUpdatePolicyResponse() {
-        this.instanceRedistributionType = null;
-        this.maxSurge = null;
-        this.maxUnavailable = null;
-        this.minimalAction = null;
-        this.mostDisruptiveAllowedAction = null;
-        this.replacementMethod = null;
-        this.type = null;
+    private InstanceGroupManagerUpdatePolicyResponse(InstanceGroupManagerUpdatePolicyResponse $) {
+        this.instanceRedistributionType = $.instanceRedistributionType;
+        this.maxSurge = $.maxSurge;
+        this.maxUnavailable = $.maxUnavailable;
+        this.minimalAction = $.minimalAction;
+        this.mostDisruptiveAllowedAction = $.mostDisruptiveAllowedAction;
+        this.replacementMethod = $.replacementMethod;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerUpdatePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceRedistributionType;
-        private FixedOrPercentResponse maxSurge;
-        private FixedOrPercentResponse maxUnavailable;
-        private String minimalAction;
-        private String mostDisruptiveAllowedAction;
-        private String replacementMethod;
-        private String type;
+        private InstanceGroupManagerUpdatePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerUpdatePolicyResponse();
         }
 
         public Builder(InstanceGroupManagerUpdatePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceRedistributionType = defaults.instanceRedistributionType;
-    	      this.maxSurge = defaults.maxSurge;
-    	      this.maxUnavailable = defaults.maxUnavailable;
-    	      this.minimalAction = defaults.minimalAction;
-    	      this.mostDisruptiveAllowedAction = defaults.mostDisruptiveAllowedAction;
-    	      this.replacementMethod = defaults.replacementMethod;
-    	      this.type = defaults.type;
+            $ = new InstanceGroupManagerUpdatePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceRedistributionType(String instanceRedistributionType) {
-            this.instanceRedistributionType = Objects.requireNonNull(instanceRedistributionType);
+            $.instanceRedistributionType = instanceRedistributionType;
             return this;
         }
+
         public Builder maxSurge(FixedOrPercentResponse maxSurge) {
-            this.maxSurge = Objects.requireNonNull(maxSurge);
+            $.maxSurge = maxSurge;
             return this;
         }
+
         public Builder maxUnavailable(FixedOrPercentResponse maxUnavailable) {
-            this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
+            $.maxUnavailable = maxUnavailable;
             return this;
         }
+
         public Builder minimalAction(String minimalAction) {
-            this.minimalAction = Objects.requireNonNull(minimalAction);
+            $.minimalAction = minimalAction;
             return this;
         }
+
         public Builder mostDisruptiveAllowedAction(String mostDisruptiveAllowedAction) {
-            this.mostDisruptiveAllowedAction = Objects.requireNonNull(mostDisruptiveAllowedAction);
+            $.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
+
         public Builder replacementMethod(String replacementMethod) {
-            this.replacementMethod = Objects.requireNonNull(replacementMethod);
+            $.replacementMethod = replacementMethod;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public InstanceGroupManagerUpdatePolicyResponse build() {
-            return new InstanceGroupManagerUpdatePolicyResponse(instanceRedistributionType, maxSurge, maxUnavailable, minimalAction, mostDisruptiveAllowedAction, replacementMethod, type);
+        }
+
+        public InstanceGroupManagerUpdatePolicyResponse build() {
+            $.instanceRedistributionType = Objects.requireNonNull($.instanceRedistributionType, "expected parameter 'instanceRedistributionType' to be non-null");
+            $.maxSurge = Objects.requireNonNull($.maxSurge, "expected parameter 'maxSurge' to be non-null");
+            $.maxUnavailable = Objects.requireNonNull($.maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
+            $.minimalAction = Objects.requireNonNull($.minimalAction, "expected parameter 'minimalAction' to be non-null");
+            $.mostDisruptiveAllowedAction = Objects.requireNonNull($.mostDisruptiveAllowedAction, "expected parameter 'mostDisruptiveAllowedAction' to be non-null");
+            $.replacementMethod = Objects.requireNonNull($.replacementMethod, "expected parameter 'replacementMethod' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

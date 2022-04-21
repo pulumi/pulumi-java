@@ -8,9 +8,9 @@ import com.pulumi.azurenative.webpubsub.inputs.ManagedIdentitySettingsArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class UpstreamAuthSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="managedIdentity")
-      private final @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity;
+    private @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity;
 
-    public Output<ManagedIdentitySettingsArgs> managedIdentity() {
-        return this.managedIdentity == null ? Codegen.empty() : this.managedIdentity;
+    public Optional<Output<ManagedIdentitySettingsArgs>> managedIdentity() {
+        return Optional.ofNullable(this.managedIdentity);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class UpstreamAuthSettingsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,UpstreamAuthType>> type;
+    private @Nullable Output<Either<String,UpstreamAuthType>> type;
 
-    public Output<Either<String,UpstreamAuthType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,UpstreamAuthType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public UpstreamAuthSettingsArgs(
-        @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity,
-        @Nullable Output<Either<String,UpstreamAuthType>> type) {
-        this.managedIdentity = managedIdentity;
-        this.type = type;
-    }
+    private UpstreamAuthSettingsArgs() {}
 
-    private UpstreamAuthSettingsArgs() {
-        this.managedIdentity = Codegen.empty();
-        this.type = Codegen.empty();
+    private UpstreamAuthSettingsArgs(UpstreamAuthSettingsArgs $) {
+        this.managedIdentity = $.managedIdentity;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpstreamAuthSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity;
-        private @Nullable Output<Either<String,UpstreamAuthType>> type;
+        private UpstreamAuthSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpstreamAuthSettingsArgs();
         }
 
         public Builder(UpstreamAuthSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedIdentity = defaults.managedIdentity;
-    	      this.type = defaults.type;
+            $ = new UpstreamAuthSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managedIdentity(@Nullable Output<ManagedIdentitySettingsArgs> managedIdentity) {
-            this.managedIdentity = managedIdentity;
+            $.managedIdentity = managedIdentity;
             return this;
         }
-        public Builder managedIdentity(@Nullable ManagedIdentitySettingsArgs managedIdentity) {
-            this.managedIdentity = Codegen.ofNullable(managedIdentity);
-            return this;
+
+        public Builder managedIdentity(ManagedIdentitySettingsArgs managedIdentity) {
+            return managedIdentity(Output.of(managedIdentity));
         }
+
         public Builder type(@Nullable Output<Either<String,UpstreamAuthType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,UpstreamAuthType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public UpstreamAuthSettingsArgs build() {
-            return new UpstreamAuthSettingsArgs(managedIdentity, type);
+
+        public Builder type(Either<String,UpstreamAuthType> type) {
+            return type(Output.of(type));
+        }
+
+        public UpstreamAuthSettingsArgs build() {
+            return $;
         }
     }
+
 }

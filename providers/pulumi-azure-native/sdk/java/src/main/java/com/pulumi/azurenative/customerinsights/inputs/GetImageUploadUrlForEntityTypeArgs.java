@@ -19,10 +19,10 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="entityType")
-      private final @Nullable String entityType;
+    private @Nullable String entityType;
 
     public Optional<String> entityType() {
-        return this.entityType == null ? Optional.empty() : Optional.ofNullable(this.entityType);
+        return Optional.ofNullable(this.entityType);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="entityTypeName")
-      private final @Nullable String entityTypeName;
+    private @Nullable String entityTypeName;
 
     public Optional<String> entityTypeName() {
-        return this.entityTypeName == null ? Optional.empty() : Optional.ofNullable(this.entityTypeName);
+        return Optional.ofNullable(this.entityTypeName);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -52,10 +52,10 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="relativePath")
-      private final @Nullable String relativePath;
+    private @Nullable String relativePath;
 
     public Optional<String> relativePath() {
-        return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
+        return Optional.ofNullable(this.relativePath);
     }
 
     /**
@@ -63,82 +63,70 @@ public final class GetImageUploadUrlForEntityTypeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetImageUploadUrlForEntityTypeArgs(
-        @Nullable String entityType,
-        @Nullable String entityTypeName,
-        String hubName,
-        @Nullable String relativePath,
-        String resourceGroupName) {
-        this.entityType = entityType;
-        this.entityTypeName = entityTypeName;
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.relativePath = relativePath;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetImageUploadUrlForEntityTypeArgs() {}
 
-    private GetImageUploadUrlForEntityTypeArgs() {
-        this.entityType = null;
-        this.entityTypeName = null;
-        this.hubName = null;
-        this.relativePath = null;
-        this.resourceGroupName = null;
+    private GetImageUploadUrlForEntityTypeArgs(GetImageUploadUrlForEntityTypeArgs $) {
+        this.entityType = $.entityType;
+        this.entityTypeName = $.entityTypeName;
+        this.hubName = $.hubName;
+        this.relativePath = $.relativePath;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageUploadUrlForEntityTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String entityType;
-        private @Nullable String entityTypeName;
-        private String hubName;
-        private @Nullable String relativePath;
-        private String resourceGroupName;
+        private GetImageUploadUrlForEntityTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageUploadUrlForEntityTypeArgs();
         }
 
         public Builder(GetImageUploadUrlForEntityTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityType = defaults.entityType;
-    	      this.entityTypeName = defaults.entityTypeName;
-    	      this.hubName = defaults.hubName;
-    	      this.relativePath = defaults.relativePath;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetImageUploadUrlForEntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entityType(@Nullable String entityType) {
-            this.entityType = entityType;
+            $.entityType = entityType;
             return this;
         }
+
         public Builder entityTypeName(@Nullable String entityTypeName) {
-            this.entityTypeName = entityTypeName;
+            $.entityTypeName = entityTypeName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = relativePath;
+            $.relativePath = relativePath;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetImageUploadUrlForEntityTypeArgs build() {
-            return new GetImageUploadUrlForEntityTypeArgs(entityType, entityTypeName, hubName, relativePath, resourceGroupName);
+        }
+
+        public GetImageUploadUrlForEntityTypeArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

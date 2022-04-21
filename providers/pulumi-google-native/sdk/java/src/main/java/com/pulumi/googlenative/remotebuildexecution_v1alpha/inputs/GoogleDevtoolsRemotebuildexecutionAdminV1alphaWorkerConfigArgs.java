@@ -5,12 +5,12 @@ package com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="accelerator")
-      private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator;
+    private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator() {
-        return this.accelerator == null ? Codegen.empty() : this.accelerator;
+    public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs>> accelerator() {
+        return Optional.ofNullable(this.accelerator);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final Output<String> diskSizeGb;
+    private Output<String> diskSizeGb;
 
     public Output<String> diskSizeGb() {
         return this.diskSizeGb;
@@ -49,7 +49,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="diskType", required=true)
-      private final Output<String> diskType;
+    private Output<String> diskType;
 
     public Output<String> diskType() {
         return this.diskType;
@@ -60,10 +60,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="machineType", required=true)
-      private final Output<String> machineType;
+    private Output<String> machineType;
 
     public Output<String> machineType() {
         return this.machineType;
@@ -82,10 +82,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="maxConcurrentActions")
-      private final @Nullable Output<String> maxConcurrentActions;
+    private @Nullable Output<String> maxConcurrentActions;
 
-    public Output<String> maxConcurrentActions() {
-        return this.maxConcurrentActions == null ? Codegen.empty() : this.maxConcurrentActions;
+    public Optional<Output<String>> maxConcurrentActions() {
+        return Optional.ofNullable(this.maxConcurrentActions);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="networkAccess")
-      private final @Nullable Output<String> networkAccess;
+    private @Nullable Output<String> networkAccess;
 
-    public Output<String> networkAccess() {
-        return this.networkAccess == null ? Codegen.empty() : this.networkAccess;
+    public Optional<Output<String>> networkAccess() {
+        return Optional.ofNullable(this.networkAccess);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="reserved")
-      private final @Nullable Output<Boolean> reserved;
+    private @Nullable Output<Boolean> reserved;
 
-    public Output<Boolean> reserved() {
-        return this.reserved == null ? Codegen.empty() : this.reserved;
+    public Optional<Output<Boolean>> reserved() {
+        return Optional.ofNullable(this.reserved);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="soleTenantNodeType")
-      private final @Nullable Output<String> soleTenantNodeType;
+    private @Nullable Output<String> soleTenantNodeType;
 
-    public Output<String> soleTenantNodeType() {
-        return this.soleTenantNodeType == null ? Codegen.empty() : this.soleTenantNodeType;
+    public Optional<Output<String>> soleTenantNodeType() {
+        return Optional.ofNullable(this.soleTenantNodeType);
     }
 
     /**
@@ -137,180 +137,151 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * 
      */
     @Import(name="vmImage")
-      private final @Nullable Output<String> vmImage;
+    private @Nullable Output<String> vmImage;
 
-    public Output<String> vmImage() {
-        return this.vmImage == null ? Codegen.empty() : this.vmImage;
+    public Optional<Output<String>> vmImage() {
+        return Optional.ofNullable(this.vmImage);
     }
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs(
-        @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator,
-        Output<String> diskSizeGb,
-        Output<String> diskType,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> machineType,
-        @Nullable Output<String> maxConcurrentActions,
-        @Nullable Output<String> minCpuPlatform,
-        @Nullable Output<String> networkAccess,
-        @Nullable Output<Boolean> reserved,
-        @Nullable Output<String> soleTenantNodeType,
-        @Nullable Output<String> vmImage) {
-        this.accelerator = accelerator;
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.labels = labels;
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.maxConcurrentActions = maxConcurrentActions;
-        this.minCpuPlatform = minCpuPlatform;
-        this.networkAccess = networkAccess;
-        this.reserved = reserved;
-        this.soleTenantNodeType = soleTenantNodeType;
-        this.vmImage = vmImage;
-    }
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs() {}
 
-    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs() {
-        this.accelerator = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.maxConcurrentActions = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
-        this.networkAccess = Codegen.empty();
-        this.reserved = Codegen.empty();
-        this.soleTenantNodeType = Codegen.empty();
-        this.vmImage = Codegen.empty();
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs $) {
+        this.accelerator = $.accelerator;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.labels = $.labels;
+        this.machineType = $.machineType;
+        this.maxConcurrentActions = $.maxConcurrentActions;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.networkAccess = $.networkAccess;
+        this.reserved = $.reserved;
+        this.soleTenantNodeType = $.soleTenantNodeType;
+        this.vmImage = $.vmImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator;
-        private Output<String> diskSizeGb;
-        private Output<String> diskType;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> machineType;
-        private @Nullable Output<String> maxConcurrentActions;
-        private @Nullable Output<String> minCpuPlatform;
-        private @Nullable Output<String> networkAccess;
-        private @Nullable Output<Boolean> reserved;
-        private @Nullable Output<String> soleTenantNodeType;
-        private @Nullable Output<String> vmImage;
+        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs();
         }
 
         public Builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accelerator = defaults.accelerator;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.labels = defaults.labels;
-    	      this.machineType = defaults.machineType;
-    	      this.maxConcurrentActions = defaults.maxConcurrentActions;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.networkAccess = defaults.networkAccess;
-    	      this.reserved = defaults.reserved;
-    	      this.soleTenantNodeType = defaults.soleTenantNodeType;
-    	      this.vmImage = defaults.vmImage;
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accelerator(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator) {
-            this.accelerator = accelerator;
+            $.accelerator = accelerator;
             return this;
         }
-        public Builder accelerator(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs accelerator) {
-            this.accelerator = Codegen.ofNullable(accelerator);
-            return this;
+
+        public Builder accelerator(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs accelerator) {
+            return accelerator(Output.of(accelerator));
         }
+
         public Builder diskSizeGb(Output<String> diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskSizeGb(String diskSizeGb) {
-            this.diskSizeGb = Output.of(Objects.requireNonNull(diskSizeGb));
-            return this;
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder diskType(Output<String> diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Output.of(Objects.requireNonNull(diskType));
-            return this;
+            return diskType(Output.of(diskType));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder machineType(Output<String> machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Output.of(Objects.requireNonNull(machineType));
-            return this;
+            return machineType(Output.of(machineType));
         }
+
         public Builder maxConcurrentActions(@Nullable Output<String> maxConcurrentActions) {
-            this.maxConcurrentActions = maxConcurrentActions;
+            $.maxConcurrentActions = maxConcurrentActions;
             return this;
         }
-        public Builder maxConcurrentActions(@Nullable String maxConcurrentActions) {
-            this.maxConcurrentActions = Codegen.ofNullable(maxConcurrentActions);
-            return this;
+
+        public Builder maxConcurrentActions(String maxConcurrentActions) {
+            return maxConcurrentActions(Output.of(maxConcurrentActions));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
         }
+
         public Builder networkAccess(@Nullable Output<String> networkAccess) {
-            this.networkAccess = networkAccess;
+            $.networkAccess = networkAccess;
             return this;
         }
-        public Builder networkAccess(@Nullable String networkAccess) {
-            this.networkAccess = Codegen.ofNullable(networkAccess);
-            return this;
+
+        public Builder networkAccess(String networkAccess) {
+            return networkAccess(Output.of(networkAccess));
         }
+
         public Builder reserved(@Nullable Output<Boolean> reserved) {
-            this.reserved = reserved;
+            $.reserved = reserved;
             return this;
         }
-        public Builder reserved(@Nullable Boolean reserved) {
-            this.reserved = Codegen.ofNullable(reserved);
-            return this;
+
+        public Builder reserved(Boolean reserved) {
+            return reserved(Output.of(reserved));
         }
+
         public Builder soleTenantNodeType(@Nullable Output<String> soleTenantNodeType) {
-            this.soleTenantNodeType = soleTenantNodeType;
+            $.soleTenantNodeType = soleTenantNodeType;
             return this;
         }
-        public Builder soleTenantNodeType(@Nullable String soleTenantNodeType) {
-            this.soleTenantNodeType = Codegen.ofNullable(soleTenantNodeType);
-            return this;
+
+        public Builder soleTenantNodeType(String soleTenantNodeType) {
+            return soleTenantNodeType(Output.of(soleTenantNodeType));
         }
+
         public Builder vmImage(@Nullable Output<String> vmImage) {
-            this.vmImage = vmImage;
+            $.vmImage = vmImage;
             return this;
         }
-        public Builder vmImage(@Nullable String vmImage) {
-            this.vmImage = Codegen.ofNullable(vmImage);
-            return this;
-        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs build() {
-            return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs(accelerator, diskSizeGb, diskType, labels, machineType, maxConcurrentActions, minCpuPlatform, networkAccess, reserved, soleTenantNodeType, vmImage);
+
+        public Builder vmImage(String vmImage) {
+            return vmImage(Output.of(vmImage));
+        }
+
+        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs build() {
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            return $;
         }
     }
+
 }

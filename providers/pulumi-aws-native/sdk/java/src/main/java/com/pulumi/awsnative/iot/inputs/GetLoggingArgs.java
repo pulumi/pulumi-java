@@ -17,45 +17,45 @@ public final class GetLoggingArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
     }
 
-    public GetLoggingArgs(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-    }
+    private GetLoggingArgs() {}
 
-    private GetLoggingArgs() {
-        this.accountId = null;
+    private GetLoggingArgs(GetLoggingArgs $) {
+        this.accountId = $.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
+        private GetLoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoggingArgs();
         }
 
         public Builder(GetLoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
+            $ = new GetLoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
-        }        public GetLoggingArgs build() {
-            return new GetLoggingArgs(accountId);
+        }
+
+        public GetLoggingArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,8 +17,8 @@ import com.pulumi.awsnative.appflow.inputs.ConnectorProfileVeevaConnectorProfile
 import com.pulumi.awsnative.appflow.inputs.ConnectorProfileZendeskConnectorProfilePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,270 +31,235 @@ public final class ConnectorProfilePropertiesArgs extends com.pulumi.resources.R
     public static final ConnectorProfilePropertiesArgs Empty = new ConnectorProfilePropertiesArgs();
 
     @Import(name="datadog")
-      private final @Nullable Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog;
+    private @Nullable Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog;
 
-    public Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog() {
-        return this.datadog == null ? Codegen.empty() : this.datadog;
+    public Optional<Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs>> datadog() {
+        return Optional.ofNullable(this.datadog);
     }
 
     @Import(name="dynatrace")
-      private final @Nullable Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace;
+    private @Nullable Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace;
 
-    public Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace() {
-        return this.dynatrace == null ? Codegen.empty() : this.dynatrace;
+    public Optional<Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs>> dynatrace() {
+        return Optional.ofNullable(this.dynatrace);
     }
 
     @Import(name="inforNexus")
-      private final @Nullable Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus;
+    private @Nullable Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus;
 
-    public Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus() {
-        return this.inforNexus == null ? Codegen.empty() : this.inforNexus;
+    public Optional<Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs>> inforNexus() {
+        return Optional.ofNullable(this.inforNexus);
     }
 
     @Import(name="marketo")
-      private final @Nullable Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo;
+    private @Nullable Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo;
 
-    public Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo() {
-        return this.marketo == null ? Codegen.empty() : this.marketo;
+    public Optional<Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs>> marketo() {
+        return Optional.ofNullable(this.marketo);
     }
 
     @Import(name="redshift")
-      private final @Nullable Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift;
+    private @Nullable Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift;
 
-    public Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift() {
-        return this.redshift == null ? Codegen.empty() : this.redshift;
+    public Optional<Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs>> redshift() {
+        return Optional.ofNullable(this.redshift);
     }
 
     @Import(name="sAPOData")
-      private final @Nullable Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData;
+    private @Nullable Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData;
 
-    public Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData() {
-        return this.sAPOData == null ? Codegen.empty() : this.sAPOData;
+    public Optional<Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs>> sAPOData() {
+        return Optional.ofNullable(this.sAPOData);
     }
 
     @Import(name="salesforce")
-      private final @Nullable Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce;
+    private @Nullable Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce;
 
-    public Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce() {
-        return this.salesforce == null ? Codegen.empty() : this.salesforce;
+    public Optional<Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs>> salesforce() {
+        return Optional.ofNullable(this.salesforce);
     }
 
     @Import(name="serviceNow")
-      private final @Nullable Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow;
+    private @Nullable Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow;
 
-    public Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow() {
-        return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
+    public Optional<Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs>> serviceNow() {
+        return Optional.ofNullable(this.serviceNow);
     }
 
     @Import(name="slack")
-      private final @Nullable Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack;
+    private @Nullable Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack;
 
-    public Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack() {
-        return this.slack == null ? Codegen.empty() : this.slack;
+    public Optional<Output<ConnectorProfileSlackConnectorProfilePropertiesArgs>> slack() {
+        return Optional.ofNullable(this.slack);
     }
 
     @Import(name="snowflake")
-      private final @Nullable Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake;
+    private @Nullable Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake;
 
-    public Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake() {
-        return this.snowflake == null ? Codegen.empty() : this.snowflake;
+    public Optional<Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs>> snowflake() {
+        return Optional.ofNullable(this.snowflake);
     }
 
     @Import(name="veeva")
-      private final @Nullable Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva;
+    private @Nullable Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva;
 
-    public Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva() {
-        return this.veeva == null ? Codegen.empty() : this.veeva;
+    public Optional<Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs>> veeva() {
+        return Optional.ofNullable(this.veeva);
     }
 
     @Import(name="zendesk")
-      private final @Nullable Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk;
+    private @Nullable Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk;
 
-    public Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk() {
-        return this.zendesk == null ? Codegen.empty() : this.zendesk;
+    public Optional<Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs>> zendesk() {
+        return Optional.ofNullable(this.zendesk);
     }
 
-    public ConnectorProfilePropertiesArgs(
-        @Nullable Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog,
-        @Nullable Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace,
-        @Nullable Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus,
-        @Nullable Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo,
-        @Nullable Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift,
-        @Nullable Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData,
-        @Nullable Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce,
-        @Nullable Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow,
-        @Nullable Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack,
-        @Nullable Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake,
-        @Nullable Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva,
-        @Nullable Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk) {
-        this.datadog = datadog;
-        this.dynatrace = dynatrace;
-        this.inforNexus = inforNexus;
-        this.marketo = marketo;
-        this.redshift = redshift;
-        this.sAPOData = sAPOData;
-        this.salesforce = salesforce;
-        this.serviceNow = serviceNow;
-        this.slack = slack;
-        this.snowflake = snowflake;
-        this.veeva = veeva;
-        this.zendesk = zendesk;
-    }
+    private ConnectorProfilePropertiesArgs() {}
 
-    private ConnectorProfilePropertiesArgs() {
-        this.datadog = Codegen.empty();
-        this.dynatrace = Codegen.empty();
-        this.inforNexus = Codegen.empty();
-        this.marketo = Codegen.empty();
-        this.redshift = Codegen.empty();
-        this.sAPOData = Codegen.empty();
-        this.salesforce = Codegen.empty();
-        this.serviceNow = Codegen.empty();
-        this.slack = Codegen.empty();
-        this.snowflake = Codegen.empty();
-        this.veeva = Codegen.empty();
-        this.zendesk = Codegen.empty();
+    private ConnectorProfilePropertiesArgs(ConnectorProfilePropertiesArgs $) {
+        this.datadog = $.datadog;
+        this.dynatrace = $.dynatrace;
+        this.inforNexus = $.inforNexus;
+        this.marketo = $.marketo;
+        this.redshift = $.redshift;
+        this.sAPOData = $.sAPOData;
+        this.salesforce = $.salesforce;
+        this.serviceNow = $.serviceNow;
+        this.slack = $.slack;
+        this.snowflake = $.snowflake;
+        this.veeva = $.veeva;
+        this.zendesk = $.zendesk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfilePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog;
-        private @Nullable Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace;
-        private @Nullable Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus;
-        private @Nullable Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo;
-        private @Nullable Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift;
-        private @Nullable Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData;
-        private @Nullable Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce;
-        private @Nullable Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow;
-        private @Nullable Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack;
-        private @Nullable Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake;
-        private @Nullable Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva;
-        private @Nullable Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk;
+        private ConnectorProfilePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfilePropertiesArgs();
         }
 
         public Builder(ConnectorProfilePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datadog = defaults.datadog;
-    	      this.dynatrace = defaults.dynatrace;
-    	      this.inforNexus = defaults.inforNexus;
-    	      this.marketo = defaults.marketo;
-    	      this.redshift = defaults.redshift;
-    	      this.sAPOData = defaults.sAPOData;
-    	      this.salesforce = defaults.salesforce;
-    	      this.serviceNow = defaults.serviceNow;
-    	      this.slack = defaults.slack;
-    	      this.snowflake = defaults.snowflake;
-    	      this.veeva = defaults.veeva;
-    	      this.zendesk = defaults.zendesk;
+            $ = new ConnectorProfilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datadog(@Nullable Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog) {
-            this.datadog = datadog;
+            $.datadog = datadog;
             return this;
         }
-        public Builder datadog(@Nullable ConnectorProfileDatadogConnectorProfilePropertiesArgs datadog) {
-            this.datadog = Codegen.ofNullable(datadog);
-            return this;
+
+        public Builder datadog(ConnectorProfileDatadogConnectorProfilePropertiesArgs datadog) {
+            return datadog(Output.of(datadog));
         }
+
         public Builder dynatrace(@Nullable Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace) {
-            this.dynatrace = dynatrace;
+            $.dynatrace = dynatrace;
             return this;
         }
-        public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfilePropertiesArgs dynatrace) {
-            this.dynatrace = Codegen.ofNullable(dynatrace);
-            return this;
+
+        public Builder dynatrace(ConnectorProfileDynatraceConnectorProfilePropertiesArgs dynatrace) {
+            return dynatrace(Output.of(dynatrace));
         }
+
         public Builder inforNexus(@Nullable Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus) {
-            this.inforNexus = inforNexus;
+            $.inforNexus = inforNexus;
             return this;
         }
-        public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfilePropertiesArgs inforNexus) {
-            this.inforNexus = Codegen.ofNullable(inforNexus);
-            return this;
+
+        public Builder inforNexus(ConnectorProfileInforNexusConnectorProfilePropertiesArgs inforNexus) {
+            return inforNexus(Output.of(inforNexus));
         }
+
         public Builder marketo(@Nullable Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo) {
-            this.marketo = marketo;
+            $.marketo = marketo;
             return this;
         }
-        public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfilePropertiesArgs marketo) {
-            this.marketo = Codegen.ofNullable(marketo);
-            return this;
+
+        public Builder marketo(ConnectorProfileMarketoConnectorProfilePropertiesArgs marketo) {
+            return marketo(Output.of(marketo));
         }
+
         public Builder redshift(@Nullable Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift) {
-            this.redshift = redshift;
+            $.redshift = redshift;
             return this;
         }
-        public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfilePropertiesArgs redshift) {
-            this.redshift = Codegen.ofNullable(redshift);
-            return this;
+
+        public Builder redshift(ConnectorProfileRedshiftConnectorProfilePropertiesArgs redshift) {
+            return redshift(Output.of(redshift));
         }
+
         public Builder sAPOData(@Nullable Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData) {
-            this.sAPOData = sAPOData;
+            $.sAPOData = sAPOData;
             return this;
         }
-        public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfilePropertiesArgs sAPOData) {
-            this.sAPOData = Codegen.ofNullable(sAPOData);
-            return this;
+
+        public Builder sAPOData(ConnectorProfileSAPODataConnectorProfilePropertiesArgs sAPOData) {
+            return sAPOData(Output.of(sAPOData));
         }
+
         public Builder salesforce(@Nullable Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce) {
-            this.salesforce = salesforce;
+            $.salesforce = salesforce;
             return this;
         }
-        public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfilePropertiesArgs salesforce) {
-            this.salesforce = Codegen.ofNullable(salesforce);
-            return this;
+
+        public Builder salesforce(ConnectorProfileSalesforceConnectorProfilePropertiesArgs salesforce) {
+            return salesforce(Output.of(salesforce));
         }
+
         public Builder serviceNow(@Nullable Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow) {
-            this.serviceNow = serviceNow;
+            $.serviceNow = serviceNow;
             return this;
         }
-        public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfilePropertiesArgs serviceNow) {
-            this.serviceNow = Codegen.ofNullable(serviceNow);
-            return this;
+
+        public Builder serviceNow(ConnectorProfileServiceNowConnectorProfilePropertiesArgs serviceNow) {
+            return serviceNow(Output.of(serviceNow));
         }
+
         public Builder slack(@Nullable Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack) {
-            this.slack = slack;
+            $.slack = slack;
             return this;
         }
-        public Builder slack(@Nullable ConnectorProfileSlackConnectorProfilePropertiesArgs slack) {
-            this.slack = Codegen.ofNullable(slack);
-            return this;
+
+        public Builder slack(ConnectorProfileSlackConnectorProfilePropertiesArgs slack) {
+            return slack(Output.of(slack));
         }
+
         public Builder snowflake(@Nullable Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake) {
-            this.snowflake = snowflake;
+            $.snowflake = snowflake;
             return this;
         }
-        public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfilePropertiesArgs snowflake) {
-            this.snowflake = Codegen.ofNullable(snowflake);
-            return this;
+
+        public Builder snowflake(ConnectorProfileSnowflakeConnectorProfilePropertiesArgs snowflake) {
+            return snowflake(Output.of(snowflake));
         }
+
         public Builder veeva(@Nullable Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva) {
-            this.veeva = veeva;
+            $.veeva = veeva;
             return this;
         }
-        public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfilePropertiesArgs veeva) {
-            this.veeva = Codegen.ofNullable(veeva);
-            return this;
+
+        public Builder veeva(ConnectorProfileVeevaConnectorProfilePropertiesArgs veeva) {
+            return veeva(Output.of(veeva));
         }
+
         public Builder zendesk(@Nullable Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk) {
-            this.zendesk = zendesk;
+            $.zendesk = zendesk;
             return this;
         }
-        public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfilePropertiesArgs zendesk) {
-            this.zendesk = Codegen.ofNullable(zendesk);
-            return this;
-        }        public ConnectorProfilePropertiesArgs build() {
-            return new ConnectorProfilePropertiesArgs(datadog, dynatrace, inforNexus, marketo, redshift, sAPOData, salesforce, serviceNow, slack, snowflake, veeva, zendesk);
+
+        public Builder zendesk(ConnectorProfileZendeskConnectorProfilePropertiesArgs zendesk) {
+            return zendesk(Output.of(zendesk));
+        }
+
+        public ConnectorProfilePropertiesArgs build() {
+            return $;
         }
     }
+
 }

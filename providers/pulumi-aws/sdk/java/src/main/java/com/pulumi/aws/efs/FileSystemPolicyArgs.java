@@ -5,10 +5,10 @@ package com.pulumi.aws.efs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FileSystemPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bypassPolicyLockoutSafetyCheck")
-      private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
+    private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Optional<Output<Boolean>> bypassPolicyLockoutSafetyCheck() {
+        return Optional.ofNullable(this.bypassPolicyLockoutSafetyCheck);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class FileSystemPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fileSystemId", required=true)
-      private final Output<String> fileSystemId;
+    private Output<String> fileSystemId;
 
     public Output<String> fileSystemId() {
         return this.fileSystemId;
@@ -43,76 +43,70 @@ public final class FileSystemPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public FileSystemPolicyArgs(
-        @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck,
-        Output<String> fileSystemId,
-        Output<String> policy) {
-        this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
-        this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private FileSystemPolicyArgs() {}
 
-    private FileSystemPolicyArgs() {
-        this.bypassPolicyLockoutSafetyCheck = Codegen.empty();
-        this.fileSystemId = Codegen.empty();
-        this.policy = Codegen.empty();
+    private FileSystemPolicyArgs(FileSystemPolicyArgs $) {
+        this.bypassPolicyLockoutSafetyCheck = $.bypassPolicyLockoutSafetyCheck;
+        this.fileSystemId = $.fileSystemId;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
-        private Output<String> fileSystemId;
-        private Output<String> policy;
+        private FileSystemPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemPolicyArgs();
         }
 
         public Builder(FileSystemPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypassPolicyLockoutSafetyCheck = defaults.bypassPolicyLockoutSafetyCheck;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.policy = defaults.policy;
+            $ = new FileSystemPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
+            $.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
-        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Codegen.ofNullable(bypassPolicyLockoutSafetyCheck);
-            return this;
+
+        public Builder bypassPolicyLockoutSafetyCheck(Boolean bypassPolicyLockoutSafetyCheck) {
+            return bypassPolicyLockoutSafetyCheck(Output.of(bypassPolicyLockoutSafetyCheck));
         }
+
         public Builder fileSystemId(Output<String> fileSystemId) {
-            this.fileSystemId = Objects.requireNonNull(fileSystemId);
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
-            return this;
+            return fileSystemId(Output.of(fileSystemId));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public FileSystemPolicyArgs build() {
-            return new FileSystemPolicyArgs(bypassPolicyLockoutSafetyCheck, fileSystemId, policy);
+            return policy(Output.of(policy));
+        }
+
+        public FileSystemPolicyArgs build() {
+            $.fileSystemId = Objects.requireNonNull($.fileSystemId, "expected parameter 'fileSystemId' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class ConsistencyPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="defaultConsistencyLevel", required=true)
-      private final String defaultConsistencyLevel;
+    private String defaultConsistencyLevel;
 
     public String defaultConsistencyLevel() {
         return this.defaultConsistencyLevel;
@@ -36,10 +36,10 @@ public final class ConsistencyPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxIntervalInSeconds")
-      private final @Nullable Integer maxIntervalInSeconds;
+    private @Nullable Integer maxIntervalInSeconds;
 
     public Optional<Integer> maxIntervalInSeconds() {
-        return this.maxIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.maxIntervalInSeconds);
+        return Optional.ofNullable(this.maxIntervalInSeconds);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class ConsistencyPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxStalenessPrefix")
-      private final @Nullable Double maxStalenessPrefix;
+    private @Nullable Double maxStalenessPrefix;
 
     public Optional<Double> maxStalenessPrefix() {
-        return this.maxStalenessPrefix == null ? Optional.empty() : Optional.ofNullable(this.maxStalenessPrefix);
+        return Optional.ofNullable(this.maxStalenessPrefix);
     }
 
-    public ConsistencyPolicyResponse(
-        String defaultConsistencyLevel,
-        @Nullable Integer maxIntervalInSeconds,
-        @Nullable Double maxStalenessPrefix) {
-        this.defaultConsistencyLevel = Objects.requireNonNull(defaultConsistencyLevel, "expected parameter 'defaultConsistencyLevel' to be non-null");
-        this.maxIntervalInSeconds = maxIntervalInSeconds;
-        this.maxStalenessPrefix = maxStalenessPrefix;
-    }
+    private ConsistencyPolicyResponse() {}
 
-    private ConsistencyPolicyResponse() {
-        this.defaultConsistencyLevel = null;
-        this.maxIntervalInSeconds = null;
-        this.maxStalenessPrefix = null;
+    private ConsistencyPolicyResponse(ConsistencyPolicyResponse $) {
+        this.defaultConsistencyLevel = $.defaultConsistencyLevel;
+        this.maxIntervalInSeconds = $.maxIntervalInSeconds;
+        this.maxStalenessPrefix = $.maxStalenessPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsistencyPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String defaultConsistencyLevel;
-        private @Nullable Integer maxIntervalInSeconds;
-        private @Nullable Double maxStalenessPrefix;
+        private ConsistencyPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsistencyPolicyResponse();
         }
 
         public Builder(ConsistencyPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultConsistencyLevel = defaults.defaultConsistencyLevel;
-    	      this.maxIntervalInSeconds = defaults.maxIntervalInSeconds;
-    	      this.maxStalenessPrefix = defaults.maxStalenessPrefix;
+            $ = new ConsistencyPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultConsistencyLevel(String defaultConsistencyLevel) {
-            this.defaultConsistencyLevel = Objects.requireNonNull(defaultConsistencyLevel);
+            $.defaultConsistencyLevel = defaultConsistencyLevel;
             return this;
         }
+
         public Builder maxIntervalInSeconds(@Nullable Integer maxIntervalInSeconds) {
-            this.maxIntervalInSeconds = maxIntervalInSeconds;
+            $.maxIntervalInSeconds = maxIntervalInSeconds;
             return this;
         }
+
         public Builder maxStalenessPrefix(@Nullable Double maxStalenessPrefix) {
-            this.maxStalenessPrefix = maxStalenessPrefix;
+            $.maxStalenessPrefix = maxStalenessPrefix;
             return this;
-        }        public ConsistencyPolicyResponse build() {
-            return new ConsistencyPolicyResponse(defaultConsistencyLevel, maxIntervalInSeconds, maxStalenessPrefix);
+        }
+
+        public ConsistencyPolicyResponse build() {
+            $.defaultConsistencyLevel = Objects.requireNonNull($.defaultConsistencyLevel, "expected parameter 'defaultConsistencyLevel' to be non-null");
+            return $;
         }
     }
+
 }

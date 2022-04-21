@@ -24,48 +24,48 @@ public final class ManagedRuleSetListResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="managedRuleSets")
-      private final @Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets;
+    private @Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets;
 
-    public List<FrontDoorManagedRuleSetResponse> managedRuleSets() {
-        return this.managedRuleSets == null ? List.of() : this.managedRuleSets;
+    public Optional<List<FrontDoorManagedRuleSetResponse>> managedRuleSets() {
+        return Optional.ofNullable(this.managedRuleSets);
     }
 
-    public ManagedRuleSetListResponse(@Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets) {
-        this.managedRuleSets = managedRuleSets;
-    }
+    private ManagedRuleSetListResponse() {}
 
-    private ManagedRuleSetListResponse() {
-        this.managedRuleSets = List.of();
+    private ManagedRuleSetListResponse(ManagedRuleSetListResponse $) {
+        this.managedRuleSets = $.managedRuleSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleSetListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets;
+        private ManagedRuleSetListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleSetListResponse();
         }
 
         public Builder(ManagedRuleSetListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managedRuleSets = defaults.managedRuleSets;
+            $ = new ManagedRuleSetListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder managedRuleSets(@Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets) {
-            this.managedRuleSets = managedRuleSets;
+            $.managedRuleSets = managedRuleSets;
             return this;
         }
+
         public Builder managedRuleSets(FrontDoorManagedRuleSetResponse... managedRuleSets) {
             return managedRuleSets(List.of(managedRuleSets));
-        }        public ManagedRuleSetListResponse build() {
-            return new ManagedRuleSetListResponse(managedRuleSets);
+        }
+
+        public ManagedRuleSetListResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DataSourceParametersServiceNowGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="siteBaseUrl", required=true)
-      private final Output<String> siteBaseUrl;
+    private Output<String> siteBaseUrl;
 
     public Output<String> siteBaseUrl() {
         return this.siteBaseUrl;
     }
 
-    public DataSourceParametersServiceNowGetArgs(Output<String> siteBaseUrl) {
-        this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl, "expected parameter 'siteBaseUrl' to be non-null");
-    }
+    private DataSourceParametersServiceNowGetArgs() {}
 
-    private DataSourceParametersServiceNowGetArgs() {
-        this.siteBaseUrl = Codegen.empty();
+    private DataSourceParametersServiceNowGetArgs(DataSourceParametersServiceNowGetArgs $) {
+        this.siteBaseUrl = $.siteBaseUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersServiceNowGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> siteBaseUrl;
+        private DataSourceParametersServiceNowGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersServiceNowGetArgs();
         }
 
         public Builder(DataSourceParametersServiceNowGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.siteBaseUrl = defaults.siteBaseUrl;
+            $ = new DataSourceParametersServiceNowGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder siteBaseUrl(Output<String> siteBaseUrl) {
-            this.siteBaseUrl = Objects.requireNonNull(siteBaseUrl);
+            $.siteBaseUrl = siteBaseUrl;
             return this;
         }
+
         public Builder siteBaseUrl(String siteBaseUrl) {
-            this.siteBaseUrl = Output.of(Objects.requireNonNull(siteBaseUrl));
-            return this;
-        }        public DataSourceParametersServiceNowGetArgs build() {
-            return new DataSourceParametersServiceNowGetArgs(siteBaseUrl);
+            return siteBaseUrl(Output.of(siteBaseUrl));
+        }
+
+        public DataSourceParametersServiceNowGetArgs build() {
+            $.siteBaseUrl = Objects.requireNonNull($.siteBaseUrl, "expected parameter 'siteBaseUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.costmanagement.enums.KpiTypeType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class KpiPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,KpiTypeType>> type;
+    private @Nullable Output<Either<String,KpiTypeType>> type;
 
-    public Output<Either<String,KpiTypeType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,KpiTypeType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public KpiPropertiesArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> id,
-        @Nullable Output<Either<String,KpiTypeType>> type) {
-        this.enabled = enabled;
-        this.id = id;
-        this.type = type;
-    }
+    private KpiPropertiesArgs() {}
 
-    private KpiPropertiesArgs() {
-        this.enabled = Codegen.empty();
-        this.id = Codegen.empty();
-        this.type = Codegen.empty();
+    private KpiPropertiesArgs(KpiPropertiesArgs $) {
+        this.enabled = $.enabled;
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KpiPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Either<String,KpiTypeType>> type;
+        private KpiPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KpiPropertiesArgs();
         }
 
         public Builder(KpiPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new KpiPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder type(@Nullable Output<Either<String,KpiTypeType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,KpiTypeType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public KpiPropertiesArgs build() {
-            return new KpiPropertiesArgs(enabled, id, type);
+
+        public Builder type(Either<String,KpiTypeType> type) {
+            return type(Output.of(type));
+        }
+
+        public KpiPropertiesArgs build() {
+            return $;
         }
     }
+
 }

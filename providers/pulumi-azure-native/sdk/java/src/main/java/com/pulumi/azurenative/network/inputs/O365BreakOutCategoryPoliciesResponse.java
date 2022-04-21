@@ -23,10 +23,10 @@ public final class O365BreakOutCategoryPoliciesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="allow")
-      private final @Nullable Boolean allow;
+    private @Nullable Boolean allow;
 
     public Optional<Boolean> allow() {
-        return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class O365BreakOutCategoryPoliciesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="default")
-      private final @Nullable Boolean default_;
+    private @Nullable Boolean default_;
 
     public Optional<Boolean> default_() {
-        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class O365BreakOutCategoryPoliciesResponse extends com.pulumi.resou
      * 
      */
     @Import(name="optimize")
-      private final @Nullable Boolean optimize;
+    private @Nullable Boolean optimize;
 
     public Optional<Boolean> optimize() {
-        return this.optimize == null ? Optional.empty() : Optional.ofNullable(this.optimize);
+        return Optional.ofNullable(this.optimize);
     }
 
-    public O365BreakOutCategoryPoliciesResponse(
-        @Nullable Boolean allow,
-        @Nullable Boolean default_,
-        @Nullable Boolean optimize) {
-        this.allow = allow;
-        this.default_ = default_;
-        this.optimize = optimize;
-    }
+    private O365BreakOutCategoryPoliciesResponse() {}
 
-    private O365BreakOutCategoryPoliciesResponse() {
-        this.allow = null;
-        this.default_ = null;
-        this.optimize = null;
+    private O365BreakOutCategoryPoliciesResponse(O365BreakOutCategoryPoliciesResponse $) {
+        this.allow = $.allow;
+        this.default_ = $.default_;
+        this.optimize = $.optimize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(O365BreakOutCategoryPoliciesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allow;
-        private @Nullable Boolean default_;
-        private @Nullable Boolean optimize;
+        private O365BreakOutCategoryPoliciesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new O365BreakOutCategoryPoliciesResponse();
         }
 
         public Builder(O365BreakOutCategoryPoliciesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.default_ = defaults.default_;
-    	      this.optimize = defaults.optimize;
+            $ = new O365BreakOutCategoryPoliciesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Boolean allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
+
         public Builder default_(@Nullable Boolean default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
+
         public Builder optimize(@Nullable Boolean optimize) {
-            this.optimize = optimize;
+            $.optimize = optimize;
             return this;
-        }        public O365BreakOutCategoryPoliciesResponse build() {
-            return new O365BreakOutCategoryPoliciesResponse(allow, default_, optimize);
+        }
+
+        public O365BreakOutCategoryPoliciesResponse build() {
+            return $;
         }
     }
+
 }

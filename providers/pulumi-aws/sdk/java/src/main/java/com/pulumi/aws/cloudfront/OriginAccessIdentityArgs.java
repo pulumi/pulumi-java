@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudfront;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class OriginAccessIdentityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
-    public OriginAccessIdentityArgs(@Nullable Output<String> comment) {
-        this.comment = comment;
-    }
+    private OriginAccessIdentityArgs() {}
 
-    private OriginAccessIdentityArgs() {
-        this.comment = Codegen.empty();
+    private OriginAccessIdentityArgs(OriginAccessIdentityArgs $) {
+        this.comment = $.comment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginAccessIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
+        private OriginAccessIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginAccessIdentityArgs();
         }
 
         public Builder(OriginAccessIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
+            $ = new OriginAccessIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
-        }        public OriginAccessIdentityArgs build() {
-            return new OriginAccessIdentityArgs(comment);
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
+        }
+
+        public OriginAccessIdentityArgs build() {
+            return $;
         }
     }
+
 }

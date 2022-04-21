@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="datasetName")
-      private final @Nullable Output<String> datasetName;
+    private @Nullable Output<String> datasetName;
 
-    public Output<String> datasetName() {
-        return this.datasetName == null ? Codegen.empty() : this.datasetName;
+    public Optional<Output<String>> datasetName() {
+        return Optional.ofNullable(this.datasetName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="project", required=true)
-      private final Output<String> project;
+    private Output<String> project;
 
     public Output<String> project() {
         return this.project;
@@ -68,102 +68,89 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="tablePrefix")
-      private final @Nullable Output<String> tablePrefix;
+    private @Nullable Output<String> tablePrefix;
 
-    public Output<String> tablePrefix() {
-        return this.tablePrefix == null ? Codegen.empty() : this.tablePrefix;
+    public Optional<Output<String>> tablePrefix() {
+        return Optional.ofNullable(this.tablePrefix);
     }
 
-    public GoogleCloudApigeeV1DatastoreConfigArgs(
-        @Nullable Output<String> bucketName,
-        @Nullable Output<String> datasetName,
-        @Nullable Output<String> path,
-        Output<String> project,
-        @Nullable Output<String> tablePrefix) {
-        this.bucketName = bucketName;
-        this.datasetName = datasetName;
-        this.path = path;
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.tablePrefix = tablePrefix;
-    }
+    private GoogleCloudApigeeV1DatastoreConfigArgs() {}
 
-    private GoogleCloudApigeeV1DatastoreConfigArgs() {
-        this.bucketName = Codegen.empty();
-        this.datasetName = Codegen.empty();
-        this.path = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tablePrefix = Codegen.empty();
+    private GoogleCloudApigeeV1DatastoreConfigArgs(GoogleCloudApigeeV1DatastoreConfigArgs $) {
+        this.bucketName = $.bucketName;
+        this.datasetName = $.datasetName;
+        this.path = $.path;
+        this.project = $.project;
+        this.tablePrefix = $.tablePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1DatastoreConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketName;
-        private @Nullable Output<String> datasetName;
-        private @Nullable Output<String> path;
-        private Output<String> project;
-        private @Nullable Output<String> tablePrefix;
+        private GoogleCloudApigeeV1DatastoreConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1DatastoreConfigArgs();
         }
 
         public Builder(GoogleCloudApigeeV1DatastoreConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.datasetName = defaults.datasetName;
-    	      this.path = defaults.path;
-    	      this.project = defaults.project;
-    	      this.tablePrefix = defaults.tablePrefix;
+            $ = new GoogleCloudApigeeV1DatastoreConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder datasetName(@Nullable Output<String> datasetName) {
-            this.datasetName = datasetName;
+            $.datasetName = datasetName;
             return this;
         }
-        public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Codegen.ofNullable(datasetName);
-            return this;
+
+        public Builder datasetName(String datasetName) {
+            return datasetName(Output.of(datasetName));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder project(Output<String> project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Output.of(Objects.requireNonNull(project));
-            return this;
+            return project(Output.of(project));
         }
+
         public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
-            this.tablePrefix = tablePrefix;
+            $.tablePrefix = tablePrefix;
             return this;
         }
-        public Builder tablePrefix(@Nullable String tablePrefix) {
-            this.tablePrefix = Codegen.ofNullable(tablePrefix);
-            return this;
-        }        public GoogleCloudApigeeV1DatastoreConfigArgs build() {
-            return new GoogleCloudApigeeV1DatastoreConfigArgs(bucketName, datasetName, path, project, tablePrefix);
+
+        public Builder tablePrefix(String tablePrefix) {
+            return tablePrefix(Output.of(tablePrefix));
+        }
+
+        public GoogleCloudApigeeV1DatastoreConfigArgs build() {
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

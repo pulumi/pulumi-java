@@ -17,7 +17,7 @@ public final class GetRedisEnterpriseArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,55 +28,52 @@ public final class GetRedisEnterpriseArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetRedisEnterpriseArgs(
-        String clusterName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetRedisEnterpriseArgs() {}
 
-    private GetRedisEnterpriseArgs() {
-        this.clusterName = null;
-        this.resourceGroupName = null;
+    private GetRedisEnterpriseArgs(GetRedisEnterpriseArgs $) {
+        this.clusterName = $.clusterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRedisEnterpriseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String resourceGroupName;
+        private GetRedisEnterpriseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRedisEnterpriseArgs();
         }
 
         public Builder(GetRedisEnterpriseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetRedisEnterpriseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetRedisEnterpriseArgs build() {
-            return new GetRedisEnterpriseArgs(clusterName, resourceGroupName);
+        }
+
+        public GetRedisEnterpriseArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

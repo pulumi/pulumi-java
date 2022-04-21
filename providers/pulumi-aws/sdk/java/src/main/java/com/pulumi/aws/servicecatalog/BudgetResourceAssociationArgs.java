@@ -5,7 +5,6 @@ package com.pulumi.aws.servicecatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class BudgetResourceAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="budgetName", required=true)
-      private final Output<String> budgetName;
+    private Output<String> budgetName;
 
     public Output<String> budgetName() {
         return this.budgetName;
@@ -30,63 +29,60 @@ public final class BudgetResourceAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
     }
 
-    public BudgetResourceAssociationArgs(
-        Output<String> budgetName,
-        Output<String> resourceId) {
-        this.budgetName = Objects.requireNonNull(budgetName, "expected parameter 'budgetName' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private BudgetResourceAssociationArgs() {}
 
-    private BudgetResourceAssociationArgs() {
-        this.budgetName = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private BudgetResourceAssociationArgs(BudgetResourceAssociationArgs $) {
+        this.budgetName = $.budgetName;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetResourceAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> budgetName;
-        private Output<String> resourceId;
+        private BudgetResourceAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetResourceAssociationArgs();
         }
 
         public Builder(BudgetResourceAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.budgetName = defaults.budgetName;
-    	      this.resourceId = defaults.resourceId;
+            $ = new BudgetResourceAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder budgetName(Output<String> budgetName) {
-            this.budgetName = Objects.requireNonNull(budgetName);
+            $.budgetName = budgetName;
             return this;
         }
+
         public Builder budgetName(String budgetName) {
-            this.budgetName = Output.of(Objects.requireNonNull(budgetName));
-            return this;
+            return budgetName(Output.of(budgetName));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
-        }        public BudgetResourceAssociationArgs build() {
-            return new BudgetResourceAssociationArgs(budgetName, resourceId);
+            return resourceId(Output.of(resourceId));
+        }
+
+        public BudgetResourceAssociationArgs build() {
+            $.budgetName = Objects.requireNonNull($.budgetName, "expected parameter 'budgetName' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

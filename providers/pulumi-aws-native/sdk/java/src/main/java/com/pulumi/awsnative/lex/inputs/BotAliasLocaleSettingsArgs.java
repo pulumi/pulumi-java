@@ -6,9 +6,9 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotAliasCodeHookSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BotAliasLocaleSettingsArgs extends com.pulumi.resources.Resou
     public static final BotAliasLocaleSettingsArgs Empty = new BotAliasLocaleSettingsArgs();
 
     @Import(name="codeHookSpecification")
-      private final @Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
+    private @Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
 
-    public Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification() {
-        return this.codeHookSpecification == null ? Codegen.empty() : this.codeHookSpecification;
+    public Optional<Output<BotAliasCodeHookSpecificationArgs>> codeHookSpecification() {
+        return Optional.ofNullable(this.codeHookSpecification);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class BotAliasLocaleSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public BotAliasLocaleSettingsArgs(
-        @Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification,
-        Output<Boolean> enabled) {
-        this.codeHookSpecification = codeHookSpecification;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private BotAliasLocaleSettingsArgs() {}
 
-    private BotAliasLocaleSettingsArgs() {
-        this.codeHookSpecification = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private BotAliasLocaleSettingsArgs(BotAliasLocaleSettingsArgs $) {
+        this.codeHookSpecification = $.codeHookSpecification;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasLocaleSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification;
-        private Output<Boolean> enabled;
+        private BotAliasLocaleSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasLocaleSettingsArgs();
         }
 
         public Builder(BotAliasLocaleSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeHookSpecification = defaults.codeHookSpecification;
-    	      this.enabled = defaults.enabled;
+            $ = new BotAliasLocaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeHookSpecification(@Nullable Output<BotAliasCodeHookSpecificationArgs> codeHookSpecification) {
-            this.codeHookSpecification = codeHookSpecification;
+            $.codeHookSpecification = codeHookSpecification;
             return this;
         }
-        public Builder codeHookSpecification(@Nullable BotAliasCodeHookSpecificationArgs codeHookSpecification) {
-            this.codeHookSpecification = Codegen.ofNullable(codeHookSpecification);
-            return this;
+
+        public Builder codeHookSpecification(BotAliasCodeHookSpecificationArgs codeHookSpecification) {
+            return codeHookSpecification(Output.of(codeHookSpecification));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public BotAliasLocaleSettingsArgs build() {
-            return new BotAliasLocaleSettingsArgs(codeHookSpecification, enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public BotAliasLocaleSettingsArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

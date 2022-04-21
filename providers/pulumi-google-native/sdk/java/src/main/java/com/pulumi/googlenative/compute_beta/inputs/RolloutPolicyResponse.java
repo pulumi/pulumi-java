@@ -22,7 +22,7 @@ public final class RolloutPolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="defaultRolloutTime", required=true)
-      private final String defaultRolloutTime;
+    private String defaultRolloutTime;
 
     public String defaultRolloutTime() {
         return this.defaultRolloutTime;
@@ -33,55 +33,52 @@ public final class RolloutPolicyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="locationRolloutPolicies", required=true)
-      private final Map<String,String> locationRolloutPolicies;
+    private Map<String,String> locationRolloutPolicies;
 
     public Map<String,String> locationRolloutPolicies() {
         return this.locationRolloutPolicies;
     }
 
-    public RolloutPolicyResponse(
-        String defaultRolloutTime,
-        Map<String,String> locationRolloutPolicies) {
-        this.defaultRolloutTime = Objects.requireNonNull(defaultRolloutTime, "expected parameter 'defaultRolloutTime' to be non-null");
-        this.locationRolloutPolicies = Objects.requireNonNull(locationRolloutPolicies, "expected parameter 'locationRolloutPolicies' to be non-null");
-    }
+    private RolloutPolicyResponse() {}
 
-    private RolloutPolicyResponse() {
-        this.defaultRolloutTime = null;
-        this.locationRolloutPolicies = Map.of();
+    private RolloutPolicyResponse(RolloutPolicyResponse $) {
+        this.defaultRolloutTime = $.defaultRolloutTime;
+        this.locationRolloutPolicies = $.locationRolloutPolicies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolloutPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String defaultRolloutTime;
-        private Map<String,String> locationRolloutPolicies;
+        private RolloutPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolloutPolicyResponse();
         }
 
         public Builder(RolloutPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultRolloutTime = defaults.defaultRolloutTime;
-    	      this.locationRolloutPolicies = defaults.locationRolloutPolicies;
+            $ = new RolloutPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultRolloutTime(String defaultRolloutTime) {
-            this.defaultRolloutTime = Objects.requireNonNull(defaultRolloutTime);
+            $.defaultRolloutTime = defaultRolloutTime;
             return this;
         }
+
         public Builder locationRolloutPolicies(Map<String,String> locationRolloutPolicies) {
-            this.locationRolloutPolicies = Objects.requireNonNull(locationRolloutPolicies);
+            $.locationRolloutPolicies = locationRolloutPolicies;
             return this;
-        }        public RolloutPolicyResponse build() {
-            return new RolloutPolicyResponse(defaultRolloutTime, locationRolloutPolicies);
+        }
+
+        public RolloutPolicyResponse build() {
+            $.defaultRolloutTime = Objects.requireNonNull($.defaultRolloutTime, "expected parameter 'defaultRolloutTime' to be non-null");
+            $.locationRolloutPolicies = Objects.requireNonNull($.locationRolloutPolicies, "expected parameter 'locationRolloutPolicies' to be non-null");
+            return $;
         }
     }
+
 }

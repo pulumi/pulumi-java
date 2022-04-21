@@ -5,9 +5,9 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="pubsubTopic")
-      private final @Nullable Output<String> pubsubTopic;
+    private @Nullable Output<String> pubsubTopic;
 
-    public Output<String> pubsubTopic() {
-        return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
+    public Optional<Output<String>> pubsubTopic() {
+        return Optional.ofNullable(this.pubsubTopic);
     }
 
-    public NotificationConfigArgs(@Nullable Output<String> pubsubTopic) {
-        this.pubsubTopic = pubsubTopic;
-    }
+    private NotificationConfigArgs() {}
 
-    private NotificationConfigArgs() {
-        this.pubsubTopic = Codegen.empty();
+    private NotificationConfigArgs(NotificationConfigArgs $) {
+        this.pubsubTopic = $.pubsubTopic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pubsubTopic;
+        private NotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigArgs();
         }
 
         public Builder(NotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopic = defaults.pubsubTopic;
+            $ = new NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
-            this.pubsubTopic = pubsubTopic;
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
-        public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Codegen.ofNullable(pubsubTopic);
-            return this;
-        }        public NotificationConfigArgs build() {
-            return new NotificationConfigArgs(pubsubTopic);
+
+        public Builder pubsubTopic(String pubsubTopic) {
+            return pubsubTopic(Output.of(pubsubTopic));
+        }
+
+        public NotificationConfigArgs build() {
+            return $;
         }
     }
+
 }

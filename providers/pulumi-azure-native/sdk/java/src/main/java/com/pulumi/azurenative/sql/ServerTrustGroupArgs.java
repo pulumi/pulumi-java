@@ -6,10 +6,10 @@ package com.pulumi.azurenative.sql;
 import com.pulumi.azurenative.sql.inputs.ServerInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="groupMembers", required=true)
-      private final Output<List<ServerInfoArgs>> groupMembers;
+    private Output<List<ServerInfoArgs>> groupMembers;
 
     public Output<List<ServerInfoArgs>> groupMembers() {
         return this.groupMembers;
@@ -33,7 +33,7 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="locationName", required=true)
-      private final Output<String> locationName;
+    private Output<String> locationName;
 
     public Output<String> locationName() {
         return this.locationName;
@@ -44,7 +44,7 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,10 +55,10 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serverTrustGroupName")
-      private final @Nullable Output<String> serverTrustGroupName;
+    private @Nullable Output<String> serverTrustGroupName;
 
-    public Output<String> serverTrustGroupName() {
-        return this.serverTrustGroupName == null ? Codegen.empty() : this.serverTrustGroupName;
+    public Optional<Output<String>> serverTrustGroupName() {
+        return Optional.ofNullable(this.serverTrustGroupName);
     }
 
     /**
@@ -66,108 +66,100 @@ public final class ServerTrustGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="trustScopes", required=true)
-      private final Output<List<String>> trustScopes;
+    private Output<List<String>> trustScopes;
 
     public Output<List<String>> trustScopes() {
         return this.trustScopes;
     }
 
-    public ServerTrustGroupArgs(
-        Output<List<ServerInfoArgs>> groupMembers,
-        Output<String> locationName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> serverTrustGroupName,
-        Output<List<String>> trustScopes) {
-        this.groupMembers = Objects.requireNonNull(groupMembers, "expected parameter 'groupMembers' to be non-null");
-        this.locationName = Objects.requireNonNull(locationName, "expected parameter 'locationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverTrustGroupName = serverTrustGroupName;
-        this.trustScopes = Objects.requireNonNull(trustScopes, "expected parameter 'trustScopes' to be non-null");
-    }
+    private ServerTrustGroupArgs() {}
 
-    private ServerTrustGroupArgs() {
-        this.groupMembers = Codegen.empty();
-        this.locationName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverTrustGroupName = Codegen.empty();
-        this.trustScopes = Codegen.empty();
+    private ServerTrustGroupArgs(ServerTrustGroupArgs $) {
+        this.groupMembers = $.groupMembers;
+        this.locationName = $.locationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverTrustGroupName = $.serverTrustGroupName;
+        this.trustScopes = $.trustScopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerTrustGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ServerInfoArgs>> groupMembers;
-        private Output<String> locationName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> serverTrustGroupName;
-        private Output<List<String>> trustScopes;
+        private ServerTrustGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerTrustGroupArgs();
         }
 
         public Builder(ServerTrustGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupMembers = defaults.groupMembers;
-    	      this.locationName = defaults.locationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverTrustGroupName = defaults.serverTrustGroupName;
-    	      this.trustScopes = defaults.trustScopes;
+            $ = new ServerTrustGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupMembers(Output<List<ServerInfoArgs>> groupMembers) {
-            this.groupMembers = Objects.requireNonNull(groupMembers);
+            $.groupMembers = groupMembers;
             return this;
         }
+
         public Builder groupMembers(List<ServerInfoArgs> groupMembers) {
-            this.groupMembers = Output.of(Objects.requireNonNull(groupMembers));
-            return this;
+            return groupMembers(Output.of(groupMembers));
         }
+
         public Builder groupMembers(ServerInfoArgs... groupMembers) {
             return groupMembers(List.of(groupMembers));
         }
+
         public Builder locationName(Output<String> locationName) {
-            this.locationName = Objects.requireNonNull(locationName);
+            $.locationName = locationName;
             return this;
         }
+
         public Builder locationName(String locationName) {
-            this.locationName = Output.of(Objects.requireNonNull(locationName));
-            return this;
+            return locationName(Output.of(locationName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverTrustGroupName(@Nullable Output<String> serverTrustGroupName) {
-            this.serverTrustGroupName = serverTrustGroupName;
+            $.serverTrustGroupName = serverTrustGroupName;
             return this;
         }
-        public Builder serverTrustGroupName(@Nullable String serverTrustGroupName) {
-            this.serverTrustGroupName = Codegen.ofNullable(serverTrustGroupName);
-            return this;
+
+        public Builder serverTrustGroupName(String serverTrustGroupName) {
+            return serverTrustGroupName(Output.of(serverTrustGroupName));
         }
+
         public Builder trustScopes(Output<List<String>> trustScopes) {
-            this.trustScopes = Objects.requireNonNull(trustScopes);
+            $.trustScopes = trustScopes;
             return this;
         }
+
         public Builder trustScopes(List<String> trustScopes) {
-            this.trustScopes = Output.of(Objects.requireNonNull(trustScopes));
-            return this;
+            return trustScopes(Output.of(trustScopes));
         }
+
         public Builder trustScopes(String... trustScopes) {
             return trustScopes(List.of(trustScopes));
-        }        public ServerTrustGroupArgs build() {
-            return new ServerTrustGroupArgs(groupMembers, locationName, resourceGroupName, serverTrustGroupName, trustScopes);
+        }
+
+        public ServerTrustGroupArgs build() {
+            $.groupMembers = Objects.requireNonNull($.groupMembers, "expected parameter 'groupMembers' to be non-null");
+            $.locationName = Objects.requireNonNull($.locationName, "expected parameter 'locationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.trustScopes = Objects.requireNonNull($.trustScopes, "expected parameter 'trustScopes' to be non-null");
+            return $;
         }
     }
+
 }

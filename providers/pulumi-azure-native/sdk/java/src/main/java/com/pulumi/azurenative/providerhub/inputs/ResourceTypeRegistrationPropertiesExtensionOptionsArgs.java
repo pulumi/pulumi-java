@@ -6,8 +6,8 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionOptionsResourceCreationBeginArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
     public static final ResourceTypeRegistrationPropertiesExtensionOptionsArgs Empty = new ResourceTypeRegistrationPropertiesExtensionOptionsArgs();
 
     @Import(name="resourceCreationBegin")
-      private final @Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
+    private @Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
 
-    public Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin() {
-        return this.resourceCreationBegin == null ? Codegen.empty() : this.resourceCreationBegin;
+    public Optional<Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs>> resourceCreationBegin() {
+        return Optional.ofNullable(this.resourceCreationBegin);
     }
 
-    public ResourceTypeRegistrationPropertiesExtensionOptionsArgs(@Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin) {
-        this.resourceCreationBegin = resourceCreationBegin;
-    }
+    private ResourceTypeRegistrationPropertiesExtensionOptionsArgs() {}
 
-    private ResourceTypeRegistrationPropertiesExtensionOptionsArgs() {
-        this.resourceCreationBegin = Codegen.empty();
+    private ResourceTypeRegistrationPropertiesExtensionOptionsArgs(ResourceTypeRegistrationPropertiesExtensionOptionsArgs $) {
+        this.resourceCreationBegin = $.resourceCreationBegin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationPropertiesExtensionOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
+        private ResourceTypeRegistrationPropertiesExtensionOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationPropertiesExtensionOptionsArgs();
         }
 
         public Builder(ResourceTypeRegistrationPropertiesExtensionOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceCreationBegin = defaults.resourceCreationBegin;
+            $ = new ResourceTypeRegistrationPropertiesExtensionOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceCreationBegin(@Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin) {
-            this.resourceCreationBegin = resourceCreationBegin;
+            $.resourceCreationBegin = resourceCreationBegin;
             return this;
         }
-        public Builder resourceCreationBegin(@Nullable ResourceTypeExtensionOptionsResourceCreationBeginArgs resourceCreationBegin) {
-            this.resourceCreationBegin = Codegen.ofNullable(resourceCreationBegin);
-            return this;
-        }        public ResourceTypeRegistrationPropertiesExtensionOptionsArgs build() {
-            return new ResourceTypeRegistrationPropertiesExtensionOptionsArgs(resourceCreationBegin);
+
+        public Builder resourceCreationBegin(ResourceTypeExtensionOptionsResourceCreationBeginArgs resourceCreationBegin) {
+            return resourceCreationBegin(Output.of(resourceCreationBegin));
+        }
+
+        public ResourceTypeRegistrationPropertiesExtensionOptionsArgs build() {
+            return $;
         }
     }
+
 }

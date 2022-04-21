@@ -23,7 +23,7 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalBindings", required=true)
-      private final List<HttpRuleResponse> additionalBindings;
+    private List<HttpRuleResponse> additionalBindings;
 
     public List<HttpRuleResponse> additionalBindings() {
         return this.additionalBindings;
@@ -34,7 +34,7 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="body", required=true)
-      private final String body;
+    private String body;
 
     public String body() {
         return this.body;
@@ -45,7 +45,7 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="custom", required=true)
-      private final CustomHttpPatternResponse custom;
+    private CustomHttpPatternResponse custom;
 
     public CustomHttpPatternResponse custom() {
         return this.custom;
@@ -56,7 +56,7 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="delete", required=true)
-      private final String delete;
+    private String delete;
 
     public String delete() {
         return this.delete;
@@ -67,7 +67,7 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="get", required=true)
-      private final String get;
+    private String get;
 
     public String get() {
         return this.get;
@@ -78,7 +78,7 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="patch", required=true)
-      private final String patch;
+    private String patch;
 
     public String patch() {
         return this.patch;
@@ -89,7 +89,7 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="post", required=true)
-      private final String post;
+    private String post;
 
     public String post() {
         return this.post;
@@ -100,7 +100,7 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="put", required=true)
-      private final String put;
+    private String put;
 
     public String put() {
         return this.put;
@@ -111,7 +111,7 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="responseBody", required=true)
-      private final String responseBody;
+    private String responseBody;
 
     public String responseBody() {
         return this.responseBody;
@@ -122,130 +122,112 @@ public final class HttpRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
     }
 
-    public HttpRuleResponse(
-        List<HttpRuleResponse> additionalBindings,
-        String body,
-        CustomHttpPatternResponse custom,
-        String delete,
-        String get,
-        String patch,
-        String post,
-        String put,
-        String responseBody,
-        String selector) {
-        this.additionalBindings = Objects.requireNonNull(additionalBindings, "expected parameter 'additionalBindings' to be non-null");
-        this.body = Objects.requireNonNull(body, "expected parameter 'body' to be non-null");
-        this.custom = Objects.requireNonNull(custom, "expected parameter 'custom' to be non-null");
-        this.delete = Objects.requireNonNull(delete, "expected parameter 'delete' to be non-null");
-        this.get = Objects.requireNonNull(get, "expected parameter 'get' to be non-null");
-        this.patch = Objects.requireNonNull(patch, "expected parameter 'patch' to be non-null");
-        this.post = Objects.requireNonNull(post, "expected parameter 'post' to be non-null");
-        this.put = Objects.requireNonNull(put, "expected parameter 'put' to be non-null");
-        this.responseBody = Objects.requireNonNull(responseBody, "expected parameter 'responseBody' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-    }
+    private HttpRuleResponse() {}
 
-    private HttpRuleResponse() {
-        this.additionalBindings = List.of();
-        this.body = null;
-        this.custom = null;
-        this.delete = null;
-        this.get = null;
-        this.patch = null;
-        this.post = null;
-        this.put = null;
-        this.responseBody = null;
-        this.selector = null;
+    private HttpRuleResponse(HttpRuleResponse $) {
+        this.additionalBindings = $.additionalBindings;
+        this.body = $.body;
+        this.custom = $.custom;
+        this.delete = $.delete;
+        this.get = $.get;
+        this.patch = $.patch;
+        this.post = $.post;
+        this.put = $.put;
+        this.responseBody = $.responseBody;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<HttpRuleResponse> additionalBindings;
-        private String body;
-        private CustomHttpPatternResponse custom;
-        private String delete;
-        private String get;
-        private String patch;
-        private String post;
-        private String put;
-        private String responseBody;
-        private String selector;
+        private HttpRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRuleResponse();
         }
 
         public Builder(HttpRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalBindings = defaults.additionalBindings;
-    	      this.body = defaults.body;
-    	      this.custom = defaults.custom;
-    	      this.delete = defaults.delete;
-    	      this.get = defaults.get;
-    	      this.patch = defaults.patch;
-    	      this.post = defaults.post;
-    	      this.put = defaults.put;
-    	      this.responseBody = defaults.responseBody;
-    	      this.selector = defaults.selector;
+            $ = new HttpRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalBindings(List<HttpRuleResponse> additionalBindings) {
-            this.additionalBindings = Objects.requireNonNull(additionalBindings);
+            $.additionalBindings = additionalBindings;
             return this;
         }
+
         public Builder additionalBindings(HttpRuleResponse... additionalBindings) {
             return additionalBindings(List.of(additionalBindings));
         }
+
         public Builder body(String body) {
-            this.body = Objects.requireNonNull(body);
+            $.body = body;
             return this;
         }
+
         public Builder custom(CustomHttpPatternResponse custom) {
-            this.custom = Objects.requireNonNull(custom);
+            $.custom = custom;
             return this;
         }
+
         public Builder delete(String delete) {
-            this.delete = Objects.requireNonNull(delete);
+            $.delete = delete;
             return this;
         }
+
         public Builder get(String get) {
-            this.get = Objects.requireNonNull(get);
+            $.get = get;
             return this;
         }
+
         public Builder patch(String patch) {
-            this.patch = Objects.requireNonNull(patch);
+            $.patch = patch;
             return this;
         }
+
         public Builder post(String post) {
-            this.post = Objects.requireNonNull(post);
+            $.post = post;
             return this;
         }
+
         public Builder put(String put) {
-            this.put = Objects.requireNonNull(put);
+            $.put = put;
             return this;
         }
+
         public Builder responseBody(String responseBody) {
-            this.responseBody = Objects.requireNonNull(responseBody);
+            $.responseBody = responseBody;
             return this;
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
-        }        public HttpRuleResponse build() {
-            return new HttpRuleResponse(additionalBindings, body, custom, delete, get, patch, post, put, responseBody, selector);
+        }
+
+        public HttpRuleResponse build() {
+            $.additionalBindings = Objects.requireNonNull($.additionalBindings, "expected parameter 'additionalBindings' to be non-null");
+            $.body = Objects.requireNonNull($.body, "expected parameter 'body' to be non-null");
+            $.custom = Objects.requireNonNull($.custom, "expected parameter 'custom' to be non-null");
+            $.delete = Objects.requireNonNull($.delete, "expected parameter 'delete' to be non-null");
+            $.get = Objects.requireNonNull($.get, "expected parameter 'get' to be non-null");
+            $.patch = Objects.requireNonNull($.patch, "expected parameter 'patch' to be non-null");
+            $.post = Objects.requireNonNull($.post, "expected parameter 'post' to be non-null");
+            $.put = Objects.requireNonNull($.put, "expected parameter 'put' to be non-null");
+            $.responseBody = Objects.requireNonNull($.responseBody, "expected parameter 'responseBody' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            return $;
         }
     }
+
 }

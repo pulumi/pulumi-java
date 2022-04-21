@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -46,76 +46,69 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public FileShareArgs(
-        @Nullable Output<String> password,
-        Output<String> path,
-        @Nullable Output<String> userName) {
-        this.password = password;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.userName = userName;
-    }
+    private FileShareArgs() {}
 
-    private FileShareArgs() {
-        this.password = Codegen.empty();
-        this.path = Codegen.empty();
-        this.userName = Codegen.empty();
+    private FileShareArgs(FileShareArgs $) {
+        this.password = $.password;
+        this.path = $.path;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> password;
-        private Output<String> path;
-        private @Nullable Output<String> userName;
+        private FileShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileShareArgs();
         }
 
         public Builder(FileShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.path = defaults.path;
-    	      this.userName = defaults.userName;
+            $ = new FileShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public FileShareArgs build() {
-            return new FileShareArgs(password, path, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public FileShareArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

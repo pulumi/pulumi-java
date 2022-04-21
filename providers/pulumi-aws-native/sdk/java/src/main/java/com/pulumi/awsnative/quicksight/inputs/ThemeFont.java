@@ -15,45 +15,44 @@ public final class ThemeFont extends com.pulumi.resources.InvokeArgs {
     public static final ThemeFont Empty = new ThemeFont();
 
     @Import(name="fontFamily")
-      private final @Nullable String fontFamily;
+    private @Nullable String fontFamily;
 
     public Optional<String> fontFamily() {
-        return this.fontFamily == null ? Optional.empty() : Optional.ofNullable(this.fontFamily);
+        return Optional.ofNullable(this.fontFamily);
     }
 
-    public ThemeFont(@Nullable String fontFamily) {
-        this.fontFamily = fontFamily;
-    }
+    private ThemeFont() {}
 
-    private ThemeFont() {
-        this.fontFamily = null;
+    private ThemeFont(ThemeFont $) {
+        this.fontFamily = $.fontFamily;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeFont defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String fontFamily;
+        private ThemeFont $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeFont();
         }
 
         public Builder(ThemeFont defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fontFamily = defaults.fontFamily;
+            $ = new ThemeFont(Objects.requireNonNull(defaults));
         }
 
         public Builder fontFamily(@Nullable String fontFamily) {
-            this.fontFamily = fontFamily;
+            $.fontFamily = fontFamily;
             return this;
-        }        public ThemeFont build() {
-            return new ThemeFont(fontFamily);
+        }
+
+        public ThemeFont build() {
+            return $;
         }
     }
+
 }

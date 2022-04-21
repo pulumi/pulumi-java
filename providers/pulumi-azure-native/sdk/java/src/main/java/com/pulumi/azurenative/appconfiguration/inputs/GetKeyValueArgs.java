@@ -17,7 +17,7 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="configStoreName", required=true)
-      private final String configStoreName;
+    private String configStoreName;
 
     public String configStoreName() {
         return this.configStoreName;
@@ -28,7 +28,7 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyValueName", required=true)
-      private final String keyValueName;
+    private String keyValueName;
 
     public String keyValueName() {
         return this.keyValueName;
@@ -39,64 +39,59 @@ public final class GetKeyValueArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetKeyValueArgs(
-        String configStoreName,
-        String keyValueName,
-        String resourceGroupName) {
-        this.configStoreName = Objects.requireNonNull(configStoreName, "expected parameter 'configStoreName' to be non-null");
-        this.keyValueName = Objects.requireNonNull(keyValueName, "expected parameter 'keyValueName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetKeyValueArgs() {}
 
-    private GetKeyValueArgs() {
-        this.configStoreName = null;
-        this.keyValueName = null;
-        this.resourceGroupName = null;
+    private GetKeyValueArgs(GetKeyValueArgs $) {
+        this.configStoreName = $.configStoreName;
+        this.keyValueName = $.keyValueName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configStoreName;
-        private String keyValueName;
-        private String resourceGroupName;
+        private GetKeyValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyValueArgs();
         }
 
         public Builder(GetKeyValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configStoreName = defaults.configStoreName;
-    	      this.keyValueName = defaults.keyValueName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetKeyValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configStoreName(String configStoreName) {
-            this.configStoreName = Objects.requireNonNull(configStoreName);
+            $.configStoreName = configStoreName;
             return this;
         }
+
         public Builder keyValueName(String keyValueName) {
-            this.keyValueName = Objects.requireNonNull(keyValueName);
+            $.keyValueName = keyValueName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetKeyValueArgs build() {
-            return new GetKeyValueArgs(configStoreName, keyValueName, resourceGroupName);
+        }
+
+        public GetKeyValueArgs build() {
+            $.configStoreName = Objects.requireNonNull($.configStoreName, "expected parameter 'configStoreName' to be non-null");
+            $.keyValueName = Objects.requireNonNull($.keyValueName, "expected parameter 'keyValueName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

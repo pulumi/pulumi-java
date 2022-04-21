@@ -19,65 +19,63 @@ public final class AccessPointTransformationConfiguration extends com.pulumi.res
     public static final AccessPointTransformationConfiguration Empty = new AccessPointTransformationConfiguration();
 
     @Import(name="actions", required=true)
-      private final List<String> actions;
+    private List<String> actions;
 
     public List<String> actions() {
         return this.actions;
     }
 
     @Import(name="contentTransformation", required=true)
-      private final Object contentTransformation;
+    private Object contentTransformation;
 
     public Object contentTransformation() {
         return this.contentTransformation;
     }
 
-    public AccessPointTransformationConfiguration(
-        List<String> actions,
-        Object contentTransformation) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.contentTransformation = Objects.requireNonNull(contentTransformation, "expected parameter 'contentTransformation' to be non-null");
-    }
+    private AccessPointTransformationConfiguration() {}
 
-    private AccessPointTransformationConfiguration() {
-        this.actions = List.of();
-        this.contentTransformation = null;
+    private AccessPointTransformationConfiguration(AccessPointTransformationConfiguration $) {
+        this.actions = $.actions;
+        this.contentTransformation = $.contentTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointTransformationConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> actions;
-        private Object contentTransformation;
+        private AccessPointTransformationConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointTransformationConfiguration();
         }
 
         public Builder(AccessPointTransformationConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.contentTransformation = defaults.contentTransformation;
+            $ = new AccessPointTransformationConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
+
         public Builder contentTransformation(Object contentTransformation) {
-            this.contentTransformation = Objects.requireNonNull(contentTransformation);
+            $.contentTransformation = contentTransformation;
             return this;
-        }        public AccessPointTransformationConfiguration build() {
-            return new AccessPointTransformationConfiguration(actions, contentTransformation);
+        }
+
+        public AccessPointTransformationConfiguration build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.contentTransformation = Objects.requireNonNull($.contentTransformation, "expected parameter 'contentTransformation' to be non-null");
+            return $;
         }
     }
+
 }

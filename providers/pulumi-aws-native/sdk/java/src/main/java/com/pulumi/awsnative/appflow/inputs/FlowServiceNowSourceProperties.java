@@ -13,45 +13,45 @@ public final class FlowServiceNowSourceProperties extends com.pulumi.resources.I
     public static final FlowServiceNowSourceProperties Empty = new FlowServiceNowSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowServiceNowSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowServiceNowSourceProperties() {}
 
-    private FlowServiceNowSourceProperties() {
-        this.object = null;
+    private FlowServiceNowSourceProperties(FlowServiceNowSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowServiceNowSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowServiceNowSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowServiceNowSourceProperties();
         }
 
         public Builder(FlowServiceNowSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowServiceNowSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowServiceNowSourceProperties build() {
-            return new FlowServiceNowSourceProperties(object);
+        }
+
+        public FlowServiceNowSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

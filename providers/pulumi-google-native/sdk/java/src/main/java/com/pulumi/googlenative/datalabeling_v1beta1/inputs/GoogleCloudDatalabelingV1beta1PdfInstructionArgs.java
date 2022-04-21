@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends com.
      * 
      */
     @Import(name="gcsFileUri")
-      private final @Nullable Output<String> gcsFileUri;
+    private @Nullable Output<String> gcsFileUri;
 
-    public Output<String> gcsFileUri() {
-        return this.gcsFileUri == null ? Codegen.empty() : this.gcsFileUri;
+    public Optional<Output<String>> gcsFileUri() {
+        return Optional.ofNullable(this.gcsFileUri);
     }
 
-    public GoogleCloudDatalabelingV1beta1PdfInstructionArgs(@Nullable Output<String> gcsFileUri) {
-        this.gcsFileUri = gcsFileUri;
-    }
+    private GoogleCloudDatalabelingV1beta1PdfInstructionArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1PdfInstructionArgs() {
-        this.gcsFileUri = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1PdfInstructionArgs(GoogleCloudDatalabelingV1beta1PdfInstructionArgs $) {
+        this.gcsFileUri = $.gcsFileUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1PdfInstructionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gcsFileUri;
+        private GoogleCloudDatalabelingV1beta1PdfInstructionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1PdfInstructionArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1PdfInstructionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsFileUri = defaults.gcsFileUri;
+            $ = new GoogleCloudDatalabelingV1beta1PdfInstructionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsFileUri(@Nullable Output<String> gcsFileUri) {
-            this.gcsFileUri = gcsFileUri;
+            $.gcsFileUri = gcsFileUri;
             return this;
         }
-        public Builder gcsFileUri(@Nullable String gcsFileUri) {
-            this.gcsFileUri = Codegen.ofNullable(gcsFileUri);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1PdfInstructionArgs build() {
-            return new GoogleCloudDatalabelingV1beta1PdfInstructionArgs(gcsFileUri);
+
+        public Builder gcsFileUri(String gcsFileUri) {
+            return gcsFileUri(Output.of(gcsFileUri));
+        }
+
+        public GoogleCloudDatalabelingV1beta1PdfInstructionArgs build() {
+            return $;
         }
     }
+
 }

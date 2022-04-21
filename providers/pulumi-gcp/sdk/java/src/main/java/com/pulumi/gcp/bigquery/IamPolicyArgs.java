@@ -5,9 +5,9 @@ package com.pulumi.gcp.bigquery;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class IamPolicyArgs extends com.pulumi.resources.ResourceArgs {
     public static final IamPolicyArgs Empty = new IamPolicyArgs();
 
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
@@ -28,7 +28,7 @@ public final class IamPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -40,96 +40,88 @@ public final class IamPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="tableId", required=true)
-      private final Output<String> tableId;
+    private Output<String> tableId;
 
     public Output<String> tableId() {
         return this.tableId;
     }
 
-    public IamPolicyArgs(
-        Output<String> datasetId,
-        Output<String> policyData,
-        @Nullable Output<String> project,
-        Output<String> tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-        this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
-    }
+    private IamPolicyArgs() {}
 
-    private IamPolicyArgs() {
-        this.datasetId = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tableId = Codegen.empty();
+    private IamPolicyArgs(IamPolicyArgs $) {
+        this.datasetId = $.datasetId;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> datasetId;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
-        private Output<String> tableId;
+        private IamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IamPolicyArgs();
         }
 
         public Builder(IamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.tableId = defaults.tableId;
+            $ = new IamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tableId(Output<String> tableId) {
-            this.tableId = Objects.requireNonNull(tableId);
+            $.tableId = tableId;
             return this;
         }
+
         public Builder tableId(String tableId) {
-            this.tableId = Output.of(Objects.requireNonNull(tableId));
-            return this;
-        }        public IamPolicyArgs build() {
-            return new IamPolicyArgs(datasetId, policyData, project, tableId);
+            return tableId(Output.of(tableId));
+        }
+
+        public IamPolicyArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.tableId = Objects.requireNonNull($.tableId, "expected parameter 'tableId' to be non-null");
+            return $;
         }
     }
+
 }

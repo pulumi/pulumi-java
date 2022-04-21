@@ -6,11 +6,11 @@ package com.pulumi.azurenative.operationsmanagement.inputs;
 import com.pulumi.azurenative.operationsmanagement.inputs.ArmTemplateParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ManagementConfigurationPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ManagementConfigurationPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<List<ArmTemplateParameterArgs>> parameters;
+    private Output<List<ArmTemplateParameterArgs>> parameters;
 
     public Output<List<ArmTemplateParameterArgs>> parameters() {
         return this.parameters;
@@ -49,7 +49,7 @@ public final class ManagementConfigurationPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="parentResourceType", required=true)
-      private final Output<String> parentResourceType;
+    private Output<String> parentResourceType;
 
     public Output<String> parentResourceType() {
         return this.parentResourceType;
@@ -60,92 +60,85 @@ public final class ManagementConfigurationPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="template", required=true)
-      private final Output<Object> template;
+    private Output<Object> template;
 
     public Output<Object> template() {
         return this.template;
     }
 
-    public ManagementConfigurationPropertiesArgs(
-        @Nullable Output<String> applicationId,
-        Output<List<ArmTemplateParameterArgs>> parameters,
-        Output<String> parentResourceType,
-        Output<Object> template) {
-        this.applicationId = applicationId;
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.parentResourceType = Objects.requireNonNull(parentResourceType, "expected parameter 'parentResourceType' to be non-null");
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-    }
+    private ManagementConfigurationPropertiesArgs() {}
 
-    private ManagementConfigurationPropertiesArgs() {
-        this.applicationId = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.parentResourceType = Codegen.empty();
-        this.template = Codegen.empty();
+    private ManagementConfigurationPropertiesArgs(ManagementConfigurationPropertiesArgs $) {
+        this.applicationId = $.applicationId;
+        this.parameters = $.parameters;
+        this.parentResourceType = $.parentResourceType;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private Output<List<ArmTemplateParameterArgs>> parameters;
-        private Output<String> parentResourceType;
-        private Output<Object> template;
+        private ManagementConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementConfigurationPropertiesArgs();
         }
 
         public Builder(ManagementConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.parameters = defaults.parameters;
-    	      this.parentResourceType = defaults.parentResourceType;
-    	      this.template = defaults.template;
+            $ = new ManagementConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder parameters(Output<List<ArmTemplateParameterArgs>> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(List<ArmTemplateParameterArgs> parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ArmTemplateParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder parentResourceType(Output<String> parentResourceType) {
-            this.parentResourceType = Objects.requireNonNull(parentResourceType);
+            $.parentResourceType = parentResourceType;
             return this;
         }
+
         public Builder parentResourceType(String parentResourceType) {
-            this.parentResourceType = Output.of(Objects.requireNonNull(parentResourceType));
-            return this;
+            return parentResourceType(Output.of(parentResourceType));
         }
+
         public Builder template(Output<Object> template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
         }
+
         public Builder template(Object template) {
-            this.template = Output.of(Objects.requireNonNull(template));
-            return this;
-        }        public ManagementConfigurationPropertiesArgs build() {
-            return new ManagementConfigurationPropertiesArgs(applicationId, parameters, parentResourceType, template);
+            return template(Output.of(template));
+        }
+
+        public ManagementConfigurationPropertiesArgs build() {
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.parentResourceType = Objects.requireNonNull($.parentResourceType, "expected parameter 'parentResourceType' to be non-null");
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

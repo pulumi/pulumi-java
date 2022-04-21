@@ -22,48 +22,49 @@ public final class AgentPermissionsProperties extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="principals", required=true)
-      private final List<String> principals;
+    private List<String> principals;
 
     public List<String> principals() {
         return this.principals;
     }
 
-    public AgentPermissionsProperties(List<String> principals) {
-        this.principals = Objects.requireNonNull(principals, "expected parameter 'principals' to be non-null");
-    }
+    private AgentPermissionsProperties() {}
 
-    private AgentPermissionsProperties() {
-        this.principals = List.of();
+    private AgentPermissionsProperties(AgentPermissionsProperties $) {
+        this.principals = $.principals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentPermissionsProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> principals;
+        private AgentPermissionsProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentPermissionsProperties();
         }
 
         public Builder(AgentPermissionsProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principals = defaults.principals;
+            $ = new AgentPermissionsProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder principals(List<String> principals) {
-            this.principals = Objects.requireNonNull(principals);
+            $.principals = principals;
             return this;
         }
+
         public Builder principals(String... principals) {
             return principals(List.of(principals));
-        }        public AgentPermissionsProperties build() {
-            return new AgentPermissionsProperties(principals);
+        }
+
+        public AgentPermissionsProperties build() {
+            $.principals = Objects.requireNonNull($.principals, "expected parameter 'principals' to be non-null");
+            return $;
         }
     }
+
 }

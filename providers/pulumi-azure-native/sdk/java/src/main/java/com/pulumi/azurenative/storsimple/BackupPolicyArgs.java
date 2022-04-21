@@ -6,10 +6,10 @@ package com.pulumi.azurenative.storsimple;
 import com.pulumi.azurenative.storsimple.enums.Kind;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupPolicyName")
-      private final @Nullable Output<String> backupPolicyName;
+    private @Nullable Output<String> backupPolicyName;
 
-    public Output<String> backupPolicyName() {
-        return this.backupPolicyName == null ? Codegen.empty() : this.backupPolicyName;
+    public Optional<Output<String>> backupPolicyName() {
+        return Optional.ofNullable(this.backupPolicyName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -44,10 +44,10 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Kind> kind;
+    private @Nullable Output<Kind> kind;
 
-    public Output<Kind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Kind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managerName", required=true)
-      private final Output<String> managerName;
+    private Output<String> managerName;
 
     public Output<String> managerName() {
         return this.managerName;
@@ -66,7 +66,7 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,118 +77,106 @@ public final class BackupPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeIds", required=true)
-      private final Output<List<String>> volumeIds;
+    private Output<List<String>> volumeIds;
 
     public Output<List<String>> volumeIds() {
         return this.volumeIds;
     }
 
-    public BackupPolicyArgs(
-        @Nullable Output<String> backupPolicyName,
-        Output<String> deviceName,
-        @Nullable Output<Kind> kind,
-        Output<String> managerName,
-        Output<String> resourceGroupName,
-        Output<List<String>> volumeIds) {
-        this.backupPolicyName = backupPolicyName;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.kind = kind;
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.volumeIds = Objects.requireNonNull(volumeIds, "expected parameter 'volumeIds' to be non-null");
-    }
+    private BackupPolicyArgs() {}
 
-    private BackupPolicyArgs() {
-        this.backupPolicyName = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.managerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.volumeIds = Codegen.empty();
+    private BackupPolicyArgs(BackupPolicyArgs $) {
+        this.backupPolicyName = $.backupPolicyName;
+        this.deviceName = $.deviceName;
+        this.kind = $.kind;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.volumeIds = $.volumeIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backupPolicyName;
-        private Output<String> deviceName;
-        private @Nullable Output<Kind> kind;
-        private Output<String> managerName;
-        private Output<String> resourceGroupName;
-        private Output<List<String>> volumeIds;
+        private BackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPolicyArgs();
         }
 
         public Builder(BackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupPolicyName = defaults.backupPolicyName;
-    	      this.deviceName = defaults.deviceName;
-    	      this.kind = defaults.kind;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.volumeIds = defaults.volumeIds;
+            $ = new BackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupPolicyName(@Nullable Output<String> backupPolicyName) {
-            this.backupPolicyName = backupPolicyName;
+            $.backupPolicyName = backupPolicyName;
             return this;
         }
-        public Builder backupPolicyName(@Nullable String backupPolicyName) {
-            this.backupPolicyName = Codegen.ofNullable(backupPolicyName);
-            return this;
+
+        public Builder backupPolicyName(String backupPolicyName) {
+            return backupPolicyName(Output.of(backupPolicyName));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder kind(@Nullable Output<Kind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Kind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Kind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder managerName(Output<String> managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Output.of(Objects.requireNonNull(managerName));
-            return this;
+            return managerName(Output.of(managerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder volumeIds(Output<List<String>> volumeIds) {
-            this.volumeIds = Objects.requireNonNull(volumeIds);
+            $.volumeIds = volumeIds;
             return this;
         }
+
         public Builder volumeIds(List<String> volumeIds) {
-            this.volumeIds = Output.of(Objects.requireNonNull(volumeIds));
-            return this;
+            return volumeIds(Output.of(volumeIds));
         }
+
         public Builder volumeIds(String... volumeIds) {
             return volumeIds(List.of(volumeIds));
-        }        public BackupPolicyArgs build() {
-            return new BackupPolicyArgs(backupPolicyName, deviceName, kind, managerName, resourceGroupName, volumeIds);
+        }
+
+        public BackupPolicyArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.volumeIds = Objects.requireNonNull($.volumeIds, "expected parameter 'volumeIds' to be non-null");
+            return $;
         }
     }
+
 }

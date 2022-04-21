@@ -5,12 +5,12 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class TestSuiteOverviewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="elapsedTime")
-      private final @Nullable Output<DurationArgs> elapsedTime;
+    private @Nullable Output<DurationArgs> elapsedTime;
 
-    public Output<DurationArgs> elapsedTime() {
-        return this.elapsedTime == null ? Codegen.empty() : this.elapsedTime;
+    public Optional<Output<DurationArgs>> elapsedTime() {
+        return Optional.ofNullable(this.elapsedTime);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class TestSuiteOverviewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="errorCount")
-      private final @Nullable Output<Integer> errorCount;
+    private @Nullable Output<Integer> errorCount;
 
-    public Output<Integer> errorCount() {
-        return this.errorCount == null ? Codegen.empty() : this.errorCount;
+    public Optional<Output<Integer>> errorCount() {
+        return Optional.ofNullable(this.errorCount);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class TestSuiteOverviewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="failureCount")
-      private final @Nullable Output<Integer> failureCount;
+    private @Nullable Output<Integer> failureCount;
 
-    public Output<Integer> failureCount() {
-        return this.failureCount == null ? Codegen.empty() : this.failureCount;
+    public Optional<Output<Integer>> failureCount() {
+        return Optional.ofNullable(this.failureCount);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class TestSuiteOverviewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="flakyCount")
-      private final @Nullable Output<Integer> flakyCount;
+    private @Nullable Output<Integer> flakyCount;
 
-    public Output<Integer> flakyCount() {
-        return this.flakyCount == null ? Codegen.empty() : this.flakyCount;
+    public Optional<Output<Integer>> flakyCount() {
+        return Optional.ofNullable(this.flakyCount);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class TestSuiteOverviewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class TestSuiteOverviewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="skippedCount")
-      private final @Nullable Output<Integer> skippedCount;
+    private @Nullable Output<Integer> skippedCount;
 
-    public Output<Integer> skippedCount() {
-        return this.skippedCount == null ? Codegen.empty() : this.skippedCount;
+    public Optional<Output<Integer>> skippedCount() {
+        return Optional.ofNullable(this.skippedCount);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class TestSuiteOverviewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="totalCount")
-      private final @Nullable Output<Integer> totalCount;
+    private @Nullable Output<Integer> totalCount;
 
-    public Output<Integer> totalCount() {
-        return this.totalCount == null ? Codegen.empty() : this.totalCount;
+    public Optional<Output<Integer>> totalCount() {
+        return Optional.ofNullable(this.totalCount);
     }
 
     /**
@@ -104,141 +104,118 @@ public final class TestSuiteOverviewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="xmlSource")
-      private final @Nullable Output<FileReferenceArgs> xmlSource;
+    private @Nullable Output<FileReferenceArgs> xmlSource;
 
-    public Output<FileReferenceArgs> xmlSource() {
-        return this.xmlSource == null ? Codegen.empty() : this.xmlSource;
+    public Optional<Output<FileReferenceArgs>> xmlSource() {
+        return Optional.ofNullable(this.xmlSource);
     }
 
-    public TestSuiteOverviewArgs(
-        @Nullable Output<DurationArgs> elapsedTime,
-        @Nullable Output<Integer> errorCount,
-        @Nullable Output<Integer> failureCount,
-        @Nullable Output<Integer> flakyCount,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> skippedCount,
-        @Nullable Output<Integer> totalCount,
-        @Nullable Output<FileReferenceArgs> xmlSource) {
-        this.elapsedTime = elapsedTime;
-        this.errorCount = errorCount;
-        this.failureCount = failureCount;
-        this.flakyCount = flakyCount;
-        this.name = name;
-        this.skippedCount = skippedCount;
-        this.totalCount = totalCount;
-        this.xmlSource = xmlSource;
-    }
+    private TestSuiteOverviewArgs() {}
 
-    private TestSuiteOverviewArgs() {
-        this.elapsedTime = Codegen.empty();
-        this.errorCount = Codegen.empty();
-        this.failureCount = Codegen.empty();
-        this.flakyCount = Codegen.empty();
-        this.name = Codegen.empty();
-        this.skippedCount = Codegen.empty();
-        this.totalCount = Codegen.empty();
-        this.xmlSource = Codegen.empty();
+    private TestSuiteOverviewArgs(TestSuiteOverviewArgs $) {
+        this.elapsedTime = $.elapsedTime;
+        this.errorCount = $.errorCount;
+        this.failureCount = $.failureCount;
+        this.flakyCount = $.flakyCount;
+        this.name = $.name;
+        this.skippedCount = $.skippedCount;
+        this.totalCount = $.totalCount;
+        this.xmlSource = $.xmlSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestSuiteOverviewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DurationArgs> elapsedTime;
-        private @Nullable Output<Integer> errorCount;
-        private @Nullable Output<Integer> failureCount;
-        private @Nullable Output<Integer> flakyCount;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> skippedCount;
-        private @Nullable Output<Integer> totalCount;
-        private @Nullable Output<FileReferenceArgs> xmlSource;
+        private TestSuiteOverviewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestSuiteOverviewArgs();
         }
 
         public Builder(TestSuiteOverviewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elapsedTime = defaults.elapsedTime;
-    	      this.errorCount = defaults.errorCount;
-    	      this.failureCount = defaults.failureCount;
-    	      this.flakyCount = defaults.flakyCount;
-    	      this.name = defaults.name;
-    	      this.skippedCount = defaults.skippedCount;
-    	      this.totalCount = defaults.totalCount;
-    	      this.xmlSource = defaults.xmlSource;
+            $ = new TestSuiteOverviewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder elapsedTime(@Nullable Output<DurationArgs> elapsedTime) {
-            this.elapsedTime = elapsedTime;
+            $.elapsedTime = elapsedTime;
             return this;
         }
-        public Builder elapsedTime(@Nullable DurationArgs elapsedTime) {
-            this.elapsedTime = Codegen.ofNullable(elapsedTime);
-            return this;
+
+        public Builder elapsedTime(DurationArgs elapsedTime) {
+            return elapsedTime(Output.of(elapsedTime));
         }
+
         public Builder errorCount(@Nullable Output<Integer> errorCount) {
-            this.errorCount = errorCount;
+            $.errorCount = errorCount;
             return this;
         }
-        public Builder errorCount(@Nullable Integer errorCount) {
-            this.errorCount = Codegen.ofNullable(errorCount);
-            return this;
+
+        public Builder errorCount(Integer errorCount) {
+            return errorCount(Output.of(errorCount));
         }
+
         public Builder failureCount(@Nullable Output<Integer> failureCount) {
-            this.failureCount = failureCount;
+            $.failureCount = failureCount;
             return this;
         }
-        public Builder failureCount(@Nullable Integer failureCount) {
-            this.failureCount = Codegen.ofNullable(failureCount);
-            return this;
+
+        public Builder failureCount(Integer failureCount) {
+            return failureCount(Output.of(failureCount));
         }
+
         public Builder flakyCount(@Nullable Output<Integer> flakyCount) {
-            this.flakyCount = flakyCount;
+            $.flakyCount = flakyCount;
             return this;
         }
-        public Builder flakyCount(@Nullable Integer flakyCount) {
-            this.flakyCount = Codegen.ofNullable(flakyCount);
-            return this;
+
+        public Builder flakyCount(Integer flakyCount) {
+            return flakyCount(Output.of(flakyCount));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder skippedCount(@Nullable Output<Integer> skippedCount) {
-            this.skippedCount = skippedCount;
+            $.skippedCount = skippedCount;
             return this;
         }
-        public Builder skippedCount(@Nullable Integer skippedCount) {
-            this.skippedCount = Codegen.ofNullable(skippedCount);
-            return this;
+
+        public Builder skippedCount(Integer skippedCount) {
+            return skippedCount(Output.of(skippedCount));
         }
+
         public Builder totalCount(@Nullable Output<Integer> totalCount) {
-            this.totalCount = totalCount;
+            $.totalCount = totalCount;
             return this;
         }
-        public Builder totalCount(@Nullable Integer totalCount) {
-            this.totalCount = Codegen.ofNullable(totalCount);
-            return this;
+
+        public Builder totalCount(Integer totalCount) {
+            return totalCount(Output.of(totalCount));
         }
+
         public Builder xmlSource(@Nullable Output<FileReferenceArgs> xmlSource) {
-            this.xmlSource = xmlSource;
+            $.xmlSource = xmlSource;
             return this;
         }
-        public Builder xmlSource(@Nullable FileReferenceArgs xmlSource) {
-            this.xmlSource = Codegen.ofNullable(xmlSource);
-            return this;
-        }        public TestSuiteOverviewArgs build() {
-            return new TestSuiteOverviewArgs(elapsedTime, errorCount, failureCount, flakyCount, name, skippedCount, totalCount, xmlSource);
+
+        public Builder xmlSource(FileReferenceArgs xmlSource) {
+            return xmlSource(Output.of(xmlSource));
+        }
+
+        public TestSuiteOverviewArgs build() {
+            return $;
         }
     }
+
 }

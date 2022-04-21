@@ -22,48 +22,49 @@ public final class StackTraceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="elements", required=true)
-      private final List<StackTraceElementResponse> elements;
+    private List<StackTraceElementResponse> elements;
 
     public List<StackTraceElementResponse> elements() {
         return this.elements;
     }
 
-    public StackTraceResponse(List<StackTraceElementResponse> elements) {
-        this.elements = Objects.requireNonNull(elements, "expected parameter 'elements' to be non-null");
-    }
+    private StackTraceResponse() {}
 
-    private StackTraceResponse() {
-        this.elements = List.of();
+    private StackTraceResponse(StackTraceResponse $) {
+        this.elements = $.elements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackTraceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<StackTraceElementResponse> elements;
+        private StackTraceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackTraceResponse();
         }
 
         public Builder(StackTraceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elements = defaults.elements;
+            $ = new StackTraceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder elements(List<StackTraceElementResponse> elements) {
-            this.elements = Objects.requireNonNull(elements);
+            $.elements = elements;
             return this;
         }
+
         public Builder elements(StackTraceElementResponse... elements) {
             return elements(List.of(elements));
-        }        public StackTraceResponse build() {
-            return new StackTraceResponse(elements);
+        }
+
+        public StackTraceResponse build() {
+            $.elements = Objects.requireNonNull($.elements, "expected parameter 'elements' to be non-null");
+            return $;
         }
     }
+
 }

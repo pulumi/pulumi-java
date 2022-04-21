@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends com.pulumi.
      * 
      */
     @Import(name="interconnectName")
-      private final @Nullable Output<String> interconnectName;
+    private @Nullable Output<String> interconnectName;
 
-    public Output<String> interconnectName() {
-        return this.interconnectName == null ? Codegen.empty() : this.interconnectName;
+    public Optional<Output<String>> interconnectName() {
+        return Optional.ofNullable(this.interconnectName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends com.pulumi.
      * 
      */
     @Import(name="partnerName")
-      private final @Nullable Output<String> partnerName;
+    private @Nullable Output<String> partnerName;
 
-    public Output<String> partnerName() {
-        return this.partnerName == null ? Codegen.empty() : this.partnerName;
+    public Optional<Output<String>> partnerName() {
+        return Optional.ofNullable(this.partnerName);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class InterconnectAttachmentPartnerMetadataArgs extends com.pulumi.
      * 
      */
     @Import(name="portalUrl")
-      private final @Nullable Output<String> portalUrl;
+    private @Nullable Output<String> portalUrl;
 
-    public Output<String> portalUrl() {
-        return this.portalUrl == null ? Codegen.empty() : this.portalUrl;
+    public Optional<Output<String>> portalUrl() {
+        return Optional.ofNullable(this.portalUrl);
     }
 
-    public InterconnectAttachmentPartnerMetadataArgs(
-        @Nullable Output<String> interconnectName,
-        @Nullable Output<String> partnerName,
-        @Nullable Output<String> portalUrl) {
-        this.interconnectName = interconnectName;
-        this.partnerName = partnerName;
-        this.portalUrl = portalUrl;
-    }
+    private InterconnectAttachmentPartnerMetadataArgs() {}
 
-    private InterconnectAttachmentPartnerMetadataArgs() {
-        this.interconnectName = Codegen.empty();
-        this.partnerName = Codegen.empty();
-        this.portalUrl = Codegen.empty();
+    private InterconnectAttachmentPartnerMetadataArgs(InterconnectAttachmentPartnerMetadataArgs $) {
+        this.interconnectName = $.interconnectName;
+        this.partnerName = $.partnerName;
+        this.portalUrl = $.portalUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectAttachmentPartnerMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> interconnectName;
-        private @Nullable Output<String> partnerName;
-        private @Nullable Output<String> portalUrl;
+        private InterconnectAttachmentPartnerMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectAttachmentPartnerMetadataArgs();
         }
 
         public Builder(InterconnectAttachmentPartnerMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interconnectName = defaults.interconnectName;
-    	      this.partnerName = defaults.partnerName;
-    	      this.portalUrl = defaults.portalUrl;
+            $ = new InterconnectAttachmentPartnerMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interconnectName(@Nullable Output<String> interconnectName) {
-            this.interconnectName = interconnectName;
+            $.interconnectName = interconnectName;
             return this;
         }
-        public Builder interconnectName(@Nullable String interconnectName) {
-            this.interconnectName = Codegen.ofNullable(interconnectName);
-            return this;
+
+        public Builder interconnectName(String interconnectName) {
+            return interconnectName(Output.of(interconnectName));
         }
+
         public Builder partnerName(@Nullable Output<String> partnerName) {
-            this.partnerName = partnerName;
+            $.partnerName = partnerName;
             return this;
         }
-        public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Codegen.ofNullable(partnerName);
-            return this;
+
+        public Builder partnerName(String partnerName) {
+            return partnerName(Output.of(partnerName));
         }
+
         public Builder portalUrl(@Nullable Output<String> portalUrl) {
-            this.portalUrl = portalUrl;
+            $.portalUrl = portalUrl;
             return this;
         }
-        public Builder portalUrl(@Nullable String portalUrl) {
-            this.portalUrl = Codegen.ofNullable(portalUrl);
-            return this;
-        }        public InterconnectAttachmentPartnerMetadataArgs build() {
-            return new InterconnectAttachmentPartnerMetadataArgs(interconnectName, partnerName, portalUrl);
+
+        public Builder portalUrl(String portalUrl) {
+            return portalUrl(Output.of(portalUrl));
+        }
+
+        public InterconnectAttachmentPartnerMetadataArgs build() {
+            return $;
         }
     }
+
 }

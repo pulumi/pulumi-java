@@ -24,7 +24,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="latLng", required=true)
-      private final LatLngResponse latLng;
+    private LatLngResponse latLng;
 
     public LatLngResponse latLng() {
         return this.latLng;
@@ -35,7 +35,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationType", required=true)
-      private final String locationType;
+    private String locationType;
 
     public String locationType() {
         return this.locationType;
@@ -46,7 +46,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="postalAddress", required=true)
-      private final PostalAddressResponse postalAddress;
+    private PostalAddressResponse postalAddress;
 
     public PostalAddressResponse postalAddress() {
         return this.postalAddress;
@@ -57,73 +57,66 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="radiusMiles", required=true)
-      private final Double radiusMiles;
+    private Double radiusMiles;
 
     public Double radiusMiles() {
         return this.radiusMiles;
     }
 
-    public LocationResponse(
-        LatLngResponse latLng,
-        String locationType,
-        PostalAddressResponse postalAddress,
-        Double radiusMiles) {
-        this.latLng = Objects.requireNonNull(latLng, "expected parameter 'latLng' to be non-null");
-        this.locationType = Objects.requireNonNull(locationType, "expected parameter 'locationType' to be non-null");
-        this.postalAddress = Objects.requireNonNull(postalAddress, "expected parameter 'postalAddress' to be non-null");
-        this.radiusMiles = Objects.requireNonNull(radiusMiles, "expected parameter 'radiusMiles' to be non-null");
-    }
+    private LocationResponse() {}
 
-    private LocationResponse() {
-        this.latLng = null;
-        this.locationType = null;
-        this.postalAddress = null;
-        this.radiusMiles = null;
+    private LocationResponse(LocationResponse $) {
+        this.latLng = $.latLng;
+        this.locationType = $.locationType;
+        this.postalAddress = $.postalAddress;
+        this.radiusMiles = $.radiusMiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private LatLngResponse latLng;
-        private String locationType;
-        private PostalAddressResponse postalAddress;
-        private Double radiusMiles;
+        private LocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationResponse();
         }
 
         public Builder(LocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.latLng = defaults.latLng;
-    	      this.locationType = defaults.locationType;
-    	      this.postalAddress = defaults.postalAddress;
-    	      this.radiusMiles = defaults.radiusMiles;
+            $ = new LocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder latLng(LatLngResponse latLng) {
-            this.latLng = Objects.requireNonNull(latLng);
+            $.latLng = latLng;
             return this;
         }
+
         public Builder locationType(String locationType) {
-            this.locationType = Objects.requireNonNull(locationType);
+            $.locationType = locationType;
             return this;
         }
+
         public Builder postalAddress(PostalAddressResponse postalAddress) {
-            this.postalAddress = Objects.requireNonNull(postalAddress);
+            $.postalAddress = postalAddress;
             return this;
         }
+
         public Builder radiusMiles(Double radiusMiles) {
-            this.radiusMiles = Objects.requireNonNull(radiusMiles);
+            $.radiusMiles = radiusMiles;
             return this;
-        }        public LocationResponse build() {
-            return new LocationResponse(latLng, locationType, postalAddress, radiusMiles);
+        }
+
+        public LocationResponse build() {
+            $.latLng = Objects.requireNonNull($.latLng, "expected parameter 'latLng' to be non-null");
+            $.locationType = Objects.requireNonNull($.locationType, "expected parameter 'locationType' to be non-null");
+            $.postalAddress = Objects.requireNonNull($.postalAddress, "expected parameter 'postalAddress' to be non-null");
+            $.radiusMiles = Objects.requireNonNull($.radiusMiles, "expected parameter 'radiusMiles' to be non-null");
+            return $;
         }
     }
+
 }

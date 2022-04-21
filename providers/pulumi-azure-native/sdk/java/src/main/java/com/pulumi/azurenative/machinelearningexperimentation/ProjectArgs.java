@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearningexperimentation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -32,10 +32,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName", required=true)
-      private final Output<String> friendlyName;
+    private Output<String> friendlyName;
 
     public Output<String> friendlyName() {
         return this.friendlyName;
@@ -54,10 +54,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gitrepo")
-      private final @Nullable Output<String> gitrepo;
+    private @Nullable Output<String> gitrepo;
 
-    public Output<String> gitrepo() {
-        return this.gitrepo == null ? Codegen.empty() : this.gitrepo;
+    public Optional<Output<String>> gitrepo() {
+        return Optional.ofNullable(this.gitrepo);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName")
-      private final @Nullable Output<String> projectName;
+    private @Nullable Output<String> projectName;
 
-    public Output<String> projectName() {
-        return this.projectName == null ? Codegen.empty() : this.projectName;
+    public Optional<Output<String>> projectName() {
+        return Optional.ofNullable(this.projectName);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -98,10 +98,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -109,154 +109,132 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public ProjectArgs(
-        Output<String> accountName,
-        @Nullable Output<String> description,
-        Output<String> friendlyName,
-        @Nullable Output<String> gitrepo,
-        @Nullable Output<String> location,
-        @Nullable Output<String> projectName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> workspaceName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.description = description;
-        this.friendlyName = Objects.requireNonNull(friendlyName, "expected parameter 'friendlyName' to be non-null");
-        this.gitrepo = gitrepo;
-        this.location = location;
-        this.projectName = projectName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private ProjectArgs() {}
 
-    private ProjectArgs() {
-        this.accountName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.gitrepo = Codegen.empty();
-        this.location = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private ProjectArgs(ProjectArgs $) {
+        this.accountName = $.accountName;
+        this.description = $.description;
+        this.friendlyName = $.friendlyName;
+        this.gitrepo = $.gitrepo;
+        this.location = $.location;
+        this.projectName = $.projectName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> description;
-        private Output<String> friendlyName;
-        private @Nullable Output<String> gitrepo;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> projectName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> workspaceName;
+        private ProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectArgs();
         }
 
         public Builder(ProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.description = defaults.description;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.gitrepo = defaults.gitrepo;
-    	      this.location = defaults.location;
-    	      this.projectName = defaults.projectName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder friendlyName(Output<String> friendlyName) {
-            this.friendlyName = Objects.requireNonNull(friendlyName);
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder friendlyName(String friendlyName) {
-            this.friendlyName = Output.of(Objects.requireNonNull(friendlyName));
-            return this;
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder gitrepo(@Nullable Output<String> gitrepo) {
-            this.gitrepo = gitrepo;
+            $.gitrepo = gitrepo;
             return this;
         }
-        public Builder gitrepo(@Nullable String gitrepo) {
-            this.gitrepo = Codegen.ofNullable(gitrepo);
-            return this;
+
+        public Builder gitrepo(String gitrepo) {
+            return gitrepo(Output.of(gitrepo));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder projectName(@Nullable Output<String> projectName) {
-            this.projectName = projectName;
+            $.projectName = projectName;
             return this;
         }
-        public Builder projectName(@Nullable String projectName) {
-            this.projectName = Codegen.ofNullable(projectName);
-            return this;
+
+        public Builder projectName(String projectName) {
+            return projectName(Output.of(projectName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public ProjectArgs build() {
-            return new ProjectArgs(accountName, description, friendlyName, gitrepo, location, projectName, resourceGroupName, tags, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public ProjectArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.friendlyName = Objects.requireNonNull($.friendlyName, "expected parameter 'friendlyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

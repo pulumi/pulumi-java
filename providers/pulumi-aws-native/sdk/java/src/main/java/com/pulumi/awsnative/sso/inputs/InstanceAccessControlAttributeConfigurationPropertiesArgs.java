@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sso.inputs;
 import com.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class InstanceAccessControlAttributeConfigurationPropertiesArgs ext
     public static final InstanceAccessControlAttributeConfigurationPropertiesArgs Empty = new InstanceAccessControlAttributeConfigurationPropertiesArgs();
 
     @Import(name="accessControlAttributes", required=true)
-      private final Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
+    private Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
     public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes() {
         return this.accessControlAttributes;
     }
 
-    public InstanceAccessControlAttributeConfigurationPropertiesArgs(Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
-        this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes, "expected parameter 'accessControlAttributes' to be non-null");
-    }
+    private InstanceAccessControlAttributeConfigurationPropertiesArgs() {}
 
-    private InstanceAccessControlAttributeConfigurationPropertiesArgs() {
-        this.accessControlAttributes = Codegen.empty();
+    private InstanceAccessControlAttributeConfigurationPropertiesArgs(InstanceAccessControlAttributeConfigurationPropertiesArgs $) {
+        this.accessControlAttributes = $.accessControlAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAccessControlAttributeConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
+        private InstanceAccessControlAttributeConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAccessControlAttributeConfigurationPropertiesArgs();
         }
 
         public Builder(InstanceAccessControlAttributeConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlAttributes = defaults.accessControlAttributes;
+            $ = new InstanceAccessControlAttributeConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlAttributes(Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
-            this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
+            $.accessControlAttributes = accessControlAttributes;
             return this;
         }
+
         public Builder accessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
-            this.accessControlAttributes = Output.of(Objects.requireNonNull(accessControlAttributes));
-            return this;
+            return accessControlAttributes(Output.of(accessControlAttributes));
         }
+
         public Builder accessControlAttributes(InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs... accessControlAttributes) {
             return accessControlAttributes(List.of(accessControlAttributes));
-        }        public InstanceAccessControlAttributeConfigurationPropertiesArgs build() {
-            return new InstanceAccessControlAttributeConfigurationPropertiesArgs(accessControlAttributes);
+        }
+
+        public InstanceAccessControlAttributeConfigurationPropertiesArgs build() {
+            $.accessControlAttributes = Objects.requireNonNull($.accessControlAttributes, "expected parameter 'accessControlAttributes' to be non-null");
+            return $;
         }
     }
+
 }

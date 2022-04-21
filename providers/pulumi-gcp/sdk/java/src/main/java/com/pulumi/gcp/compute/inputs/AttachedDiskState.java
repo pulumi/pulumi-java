@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AttachedDiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AttachedDiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disk")
-      private final @Nullable Output<String> disk;
+    private @Nullable Output<String> disk;
 
-    public Output<String> disk() {
-        return this.disk == null ? Codegen.empty() : this.disk;
+    public Optional<Output<String>> disk() {
+        return Optional.ofNullable(this.disk);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AttachedDiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AttachedDiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AttachedDiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -86,115 +86,98 @@ public final class AttachedDiskState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public AttachedDiskState(
-        @Nullable Output<String> deviceName,
-        @Nullable Output<String> disk,
-        @Nullable Output<String> instance,
-        @Nullable Output<String> mode,
-        @Nullable Output<String> project,
-        @Nullable Output<String> zone) {
-        this.deviceName = deviceName;
-        this.disk = disk;
-        this.instance = instance;
-        this.mode = mode;
-        this.project = project;
-        this.zone = zone;
-    }
+    private AttachedDiskState() {}
 
-    private AttachedDiskState() {
-        this.deviceName = Codegen.empty();
-        this.disk = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.project = Codegen.empty();
-        this.zone = Codegen.empty();
+    private AttachedDiskState(AttachedDiskState $) {
+        this.deviceName = $.deviceName;
+        this.disk = $.disk;
+        this.instance = $.instance;
+        this.mode = $.mode;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachedDiskState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<String> disk;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> zone;
+        private AttachedDiskState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachedDiskState();
         }
 
         public Builder(AttachedDiskState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.disk = defaults.disk;
-    	      this.instance = defaults.instance;
-    	      this.mode = defaults.mode;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new AttachedDiskState(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder disk(@Nullable Output<String> disk) {
-            this.disk = disk;
+            $.disk = disk;
             return this;
         }
-        public Builder disk(@Nullable String disk) {
-            this.disk = Codegen.ofNullable(disk);
-            return this;
+
+        public Builder disk(String disk) {
+            return disk(Output.of(disk));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public AttachedDiskState build() {
-            return new AttachedDiskState(deviceName, disk, instance, mode, project, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public AttachedDiskState build() {
+            return $;
         }
     }
+
 }

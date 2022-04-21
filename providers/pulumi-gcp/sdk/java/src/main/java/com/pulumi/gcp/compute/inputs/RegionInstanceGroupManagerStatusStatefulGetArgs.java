@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegionInstanceGroupManagerStatusStatefulGetArgs extends com.p
      * 
      */
     @Import(name="hasStatefulConfig")
-      private final @Nullable Output<Boolean> hasStatefulConfig;
+    private @Nullable Output<Boolean> hasStatefulConfig;
 
-    public Output<Boolean> hasStatefulConfig() {
-        return this.hasStatefulConfig == null ? Codegen.empty() : this.hasStatefulConfig;
+    public Optional<Output<Boolean>> hasStatefulConfig() {
+        return Optional.ofNullable(this.hasStatefulConfig);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class RegionInstanceGroupManagerStatusStatefulGetArgs extends com.p
      * 
      */
     @Import(name="perInstanceConfigs")
-      private final @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs;
+    private @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs;
 
-    public Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs() {
-        return this.perInstanceConfigs == null ? Codegen.empty() : this.perInstanceConfigs;
+    public Optional<Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>>> perInstanceConfigs() {
+        return Optional.ofNullable(this.perInstanceConfigs);
     }
 
-    public RegionInstanceGroupManagerStatusStatefulGetArgs(
-        @Nullable Output<Boolean> hasStatefulConfig,
-        @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs) {
-        this.hasStatefulConfig = hasStatefulConfig;
-        this.perInstanceConfigs = perInstanceConfigs;
-    }
+    private RegionInstanceGroupManagerStatusStatefulGetArgs() {}
 
-    private RegionInstanceGroupManagerStatusStatefulGetArgs() {
-        this.hasStatefulConfig = Codegen.empty();
-        this.perInstanceConfigs = Codegen.empty();
+    private RegionInstanceGroupManagerStatusStatefulGetArgs(RegionInstanceGroupManagerStatusStatefulGetArgs $) {
+        this.hasStatefulConfig = $.hasStatefulConfig;
+        this.perInstanceConfigs = $.perInstanceConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionInstanceGroupManagerStatusStatefulGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> hasStatefulConfig;
-        private @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs;
+        private RegionInstanceGroupManagerStatusStatefulGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionInstanceGroupManagerStatusStatefulGetArgs();
         }
 
         public Builder(RegionInstanceGroupManagerStatusStatefulGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hasStatefulConfig = defaults.hasStatefulConfig;
-    	      this.perInstanceConfigs = defaults.perInstanceConfigs;
+            $ = new RegionInstanceGroupManagerStatusStatefulGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hasStatefulConfig(@Nullable Output<Boolean> hasStatefulConfig) {
-            this.hasStatefulConfig = hasStatefulConfig;
+            $.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
-        public Builder hasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
-            this.hasStatefulConfig = Codegen.ofNullable(hasStatefulConfig);
-            return this;
+
+        public Builder hasStatefulConfig(Boolean hasStatefulConfig) {
+            return hasStatefulConfig(Output.of(hasStatefulConfig));
         }
+
         public Builder perInstanceConfigs(@Nullable Output<List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs>> perInstanceConfigs) {
-            this.perInstanceConfigs = perInstanceConfigs;
+            $.perInstanceConfigs = perInstanceConfigs;
             return this;
         }
-        public Builder perInstanceConfigs(@Nullable List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs> perInstanceConfigs) {
-            this.perInstanceConfigs = Codegen.ofNullable(perInstanceConfigs);
-            return this;
+
+        public Builder perInstanceConfigs(List<RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs> perInstanceConfigs) {
+            return perInstanceConfigs(Output.of(perInstanceConfigs));
         }
+
         public Builder perInstanceConfigs(RegionInstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs... perInstanceConfigs) {
             return perInstanceConfigs(List.of(perInstanceConfigs));
-        }        public RegionInstanceGroupManagerStatusStatefulGetArgs build() {
-            return new RegionInstanceGroupManagerStatusStatefulGetArgs(hasStatefulConfig, perInstanceConfigs);
+        }
+
+        public RegionInstanceGroupManagerStatusStatefulGetArgs build() {
+            return $;
         }
     }
+
 }

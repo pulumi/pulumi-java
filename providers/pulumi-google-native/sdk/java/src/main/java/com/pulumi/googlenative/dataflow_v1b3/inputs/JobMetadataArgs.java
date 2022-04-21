@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.BigQueryIODetailsArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.BigTableIODetailsArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.DatastoreIODetailsArgs;
@@ -15,6 +14,7 @@ import com.pulumi.googlenative.dataflow_v1b3.inputs.SdkVersionArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.SpannerIODetailsArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigTableDetails")
-      private final @Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails;
+    private @Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails;
 
-    public Output<List<BigTableIODetailsArgs>> bigTableDetails() {
-        return this.bigTableDetails == null ? Codegen.empty() : this.bigTableDetails;
+    public Optional<Output<List<BigTableIODetailsArgs>>> bigTableDetails() {
+        return Optional.ofNullable(this.bigTableDetails);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigqueryDetails")
-      private final @Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails;
+    private @Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails;
 
-    public Output<List<BigQueryIODetailsArgs>> bigqueryDetails() {
-        return this.bigqueryDetails == null ? Codegen.empty() : this.bigqueryDetails;
+    public Optional<Output<List<BigQueryIODetailsArgs>>> bigqueryDetails() {
+        return Optional.ofNullable(this.bigqueryDetails);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datastoreDetails")
-      private final @Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails;
+    private @Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails;
 
-    public Output<List<DatastoreIODetailsArgs>> datastoreDetails() {
-        return this.datastoreDetails == null ? Codegen.empty() : this.datastoreDetails;
+    public Optional<Output<List<DatastoreIODetailsArgs>>> datastoreDetails() {
+        return Optional.ofNullable(this.datastoreDetails);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileDetails")
-      private final @Nullable Output<List<FileIODetailsArgs>> fileDetails;
+    private @Nullable Output<List<FileIODetailsArgs>> fileDetails;
 
-    public Output<List<FileIODetailsArgs>> fileDetails() {
-        return this.fileDetails == null ? Codegen.empty() : this.fileDetails;
+    public Optional<Output<List<FileIODetailsArgs>>> fileDetails() {
+        return Optional.ofNullable(this.fileDetails);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pubsubDetails")
-      private final @Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails;
+    private @Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails;
 
-    public Output<List<PubSubIODetailsArgs>> pubsubDetails() {
-        return this.pubsubDetails == null ? Codegen.empty() : this.pubsubDetails;
+    public Optional<Output<List<PubSubIODetailsArgs>>> pubsubDetails() {
+        return Optional.ofNullable(this.pubsubDetails);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sdkVersion")
-      private final @Nullable Output<SdkVersionArgs> sdkVersion;
+    private @Nullable Output<SdkVersionArgs> sdkVersion;
 
-    public Output<SdkVersionArgs> sdkVersion() {
-        return this.sdkVersion == null ? Codegen.empty() : this.sdkVersion;
+    public Optional<Output<SdkVersionArgs>> sdkVersion() {
+        return Optional.ofNullable(this.sdkVersion);
     }
 
     /**
@@ -97,146 +97,132 @@ public final class JobMetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spannerDetails")
-      private final @Nullable Output<List<SpannerIODetailsArgs>> spannerDetails;
+    private @Nullable Output<List<SpannerIODetailsArgs>> spannerDetails;
 
-    public Output<List<SpannerIODetailsArgs>> spannerDetails() {
-        return this.spannerDetails == null ? Codegen.empty() : this.spannerDetails;
+    public Optional<Output<List<SpannerIODetailsArgs>>> spannerDetails() {
+        return Optional.ofNullable(this.spannerDetails);
     }
 
-    public JobMetadataArgs(
-        @Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails,
-        @Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails,
-        @Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails,
-        @Nullable Output<List<FileIODetailsArgs>> fileDetails,
-        @Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails,
-        @Nullable Output<SdkVersionArgs> sdkVersion,
-        @Nullable Output<List<SpannerIODetailsArgs>> spannerDetails) {
-        this.bigTableDetails = bigTableDetails;
-        this.bigqueryDetails = bigqueryDetails;
-        this.datastoreDetails = datastoreDetails;
-        this.fileDetails = fileDetails;
-        this.pubsubDetails = pubsubDetails;
-        this.sdkVersion = sdkVersion;
-        this.spannerDetails = spannerDetails;
-    }
+    private JobMetadataArgs() {}
 
-    private JobMetadataArgs() {
-        this.bigTableDetails = Codegen.empty();
-        this.bigqueryDetails = Codegen.empty();
-        this.datastoreDetails = Codegen.empty();
-        this.fileDetails = Codegen.empty();
-        this.pubsubDetails = Codegen.empty();
-        this.sdkVersion = Codegen.empty();
-        this.spannerDetails = Codegen.empty();
+    private JobMetadataArgs(JobMetadataArgs $) {
+        this.bigTableDetails = $.bigTableDetails;
+        this.bigqueryDetails = $.bigqueryDetails;
+        this.datastoreDetails = $.datastoreDetails;
+        this.fileDetails = $.fileDetails;
+        this.pubsubDetails = $.pubsubDetails;
+        this.sdkVersion = $.sdkVersion;
+        this.spannerDetails = $.spannerDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails;
-        private @Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails;
-        private @Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails;
-        private @Nullable Output<List<FileIODetailsArgs>> fileDetails;
-        private @Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails;
-        private @Nullable Output<SdkVersionArgs> sdkVersion;
-        private @Nullable Output<List<SpannerIODetailsArgs>> spannerDetails;
+        private JobMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobMetadataArgs();
         }
 
         public Builder(JobMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigTableDetails = defaults.bigTableDetails;
-    	      this.bigqueryDetails = defaults.bigqueryDetails;
-    	      this.datastoreDetails = defaults.datastoreDetails;
-    	      this.fileDetails = defaults.fileDetails;
-    	      this.pubsubDetails = defaults.pubsubDetails;
-    	      this.sdkVersion = defaults.sdkVersion;
-    	      this.spannerDetails = defaults.spannerDetails;
+            $ = new JobMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigTableDetails(@Nullable Output<List<BigTableIODetailsArgs>> bigTableDetails) {
-            this.bigTableDetails = bigTableDetails;
+            $.bigTableDetails = bigTableDetails;
             return this;
         }
-        public Builder bigTableDetails(@Nullable List<BigTableIODetailsArgs> bigTableDetails) {
-            this.bigTableDetails = Codegen.ofNullable(bigTableDetails);
-            return this;
+
+        public Builder bigTableDetails(List<BigTableIODetailsArgs> bigTableDetails) {
+            return bigTableDetails(Output.of(bigTableDetails));
         }
+
         public Builder bigTableDetails(BigTableIODetailsArgs... bigTableDetails) {
             return bigTableDetails(List.of(bigTableDetails));
         }
+
         public Builder bigqueryDetails(@Nullable Output<List<BigQueryIODetailsArgs>> bigqueryDetails) {
-            this.bigqueryDetails = bigqueryDetails;
+            $.bigqueryDetails = bigqueryDetails;
             return this;
         }
-        public Builder bigqueryDetails(@Nullable List<BigQueryIODetailsArgs> bigqueryDetails) {
-            this.bigqueryDetails = Codegen.ofNullable(bigqueryDetails);
-            return this;
+
+        public Builder bigqueryDetails(List<BigQueryIODetailsArgs> bigqueryDetails) {
+            return bigqueryDetails(Output.of(bigqueryDetails));
         }
+
         public Builder bigqueryDetails(BigQueryIODetailsArgs... bigqueryDetails) {
             return bigqueryDetails(List.of(bigqueryDetails));
         }
+
         public Builder datastoreDetails(@Nullable Output<List<DatastoreIODetailsArgs>> datastoreDetails) {
-            this.datastoreDetails = datastoreDetails;
+            $.datastoreDetails = datastoreDetails;
             return this;
         }
-        public Builder datastoreDetails(@Nullable List<DatastoreIODetailsArgs> datastoreDetails) {
-            this.datastoreDetails = Codegen.ofNullable(datastoreDetails);
-            return this;
+
+        public Builder datastoreDetails(List<DatastoreIODetailsArgs> datastoreDetails) {
+            return datastoreDetails(Output.of(datastoreDetails));
         }
+
         public Builder datastoreDetails(DatastoreIODetailsArgs... datastoreDetails) {
             return datastoreDetails(List.of(datastoreDetails));
         }
+
         public Builder fileDetails(@Nullable Output<List<FileIODetailsArgs>> fileDetails) {
-            this.fileDetails = fileDetails;
+            $.fileDetails = fileDetails;
             return this;
         }
-        public Builder fileDetails(@Nullable List<FileIODetailsArgs> fileDetails) {
-            this.fileDetails = Codegen.ofNullable(fileDetails);
-            return this;
+
+        public Builder fileDetails(List<FileIODetailsArgs> fileDetails) {
+            return fileDetails(Output.of(fileDetails));
         }
+
         public Builder fileDetails(FileIODetailsArgs... fileDetails) {
             return fileDetails(List.of(fileDetails));
         }
+
         public Builder pubsubDetails(@Nullable Output<List<PubSubIODetailsArgs>> pubsubDetails) {
-            this.pubsubDetails = pubsubDetails;
+            $.pubsubDetails = pubsubDetails;
             return this;
         }
-        public Builder pubsubDetails(@Nullable List<PubSubIODetailsArgs> pubsubDetails) {
-            this.pubsubDetails = Codegen.ofNullable(pubsubDetails);
-            return this;
+
+        public Builder pubsubDetails(List<PubSubIODetailsArgs> pubsubDetails) {
+            return pubsubDetails(Output.of(pubsubDetails));
         }
+
         public Builder pubsubDetails(PubSubIODetailsArgs... pubsubDetails) {
             return pubsubDetails(List.of(pubsubDetails));
         }
+
         public Builder sdkVersion(@Nullable Output<SdkVersionArgs> sdkVersion) {
-            this.sdkVersion = sdkVersion;
+            $.sdkVersion = sdkVersion;
             return this;
         }
-        public Builder sdkVersion(@Nullable SdkVersionArgs sdkVersion) {
-            this.sdkVersion = Codegen.ofNullable(sdkVersion);
-            return this;
+
+        public Builder sdkVersion(SdkVersionArgs sdkVersion) {
+            return sdkVersion(Output.of(sdkVersion));
         }
+
         public Builder spannerDetails(@Nullable Output<List<SpannerIODetailsArgs>> spannerDetails) {
-            this.spannerDetails = spannerDetails;
+            $.spannerDetails = spannerDetails;
             return this;
         }
-        public Builder spannerDetails(@Nullable List<SpannerIODetailsArgs> spannerDetails) {
-            this.spannerDetails = Codegen.ofNullable(spannerDetails);
-            return this;
+
+        public Builder spannerDetails(List<SpannerIODetailsArgs> spannerDetails) {
+            return spannerDetails(Output.of(spannerDetails));
         }
+
         public Builder spannerDetails(SpannerIODetailsArgs... spannerDetails) {
             return spannerDetails(List.of(spannerDetails));
-        }        public JobMetadataArgs build() {
-            return new JobMetadataArgs(bigTableDetails, bigqueryDetails, datastoreDetails, fileDetails, pubsubDetails, sdkVersion, spannerDetails);
+        }
+
+        public JobMetadataArgs build() {
+            return $;
         }
     }
+
 }

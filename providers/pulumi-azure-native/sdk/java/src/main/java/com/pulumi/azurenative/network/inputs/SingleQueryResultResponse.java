@@ -22,10 +22,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="destinationPorts")
-      private final @Nullable List<String> destinationPorts;
+    private @Nullable List<String> destinationPorts;
 
-    public List<String> destinationPorts() {
-        return this.destinationPorts == null ? List.of() : this.destinationPorts;
+    public Optional<List<String>> destinationPorts() {
+        return Optional.ofNullable(this.destinationPorts);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="direction")
-      private final @Nullable Integer direction;
+    private @Nullable Integer direction;
 
     public Optional<Integer> direction() {
-        return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="group")
-      private final @Nullable String group;
+    private @Nullable String group;
 
     public Optional<String> group() {
-        return this.group == null ? Optional.empty() : Optional.ofNullable(this.group);
+        return Optional.ofNullable(this.group);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="inheritedFromParentPolicy")
-      private final @Nullable Boolean inheritedFromParentPolicy;
+    private @Nullable Boolean inheritedFromParentPolicy;
 
     public Optional<Boolean> inheritedFromParentPolicy() {
-        return this.inheritedFromParentPolicy == null ? Optional.empty() : Optional.ofNullable(this.inheritedFromParentPolicy);
+        return Optional.ofNullable(this.inheritedFromParentPolicy);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lastUpdated")
-      private final @Nullable String lastUpdated;
+    private @Nullable String lastUpdated;
 
     public Optional<String> lastUpdated() {
-        return this.lastUpdated == null ? Optional.empty() : Optional.ofNullable(this.lastUpdated);
+        return Optional.ofNullable(this.lastUpdated);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="mode")
-      private final @Nullable Integer mode;
+    private @Nullable Integer mode;
 
     public Optional<Integer> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="severity")
-      private final @Nullable Integer severity;
+    private @Nullable Integer severity;
 
     public Optional<Integer> severity() {
-        return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="signatureId")
-      private final @Nullable Integer signatureId;
+    private @Nullable Integer signatureId;
 
     public Optional<Integer> signatureId() {
-        return this.signatureId == null ? Optional.empty() : Optional.ofNullable(this.signatureId);
+        return Optional.ofNullable(this.signatureId);
     }
 
     /**
@@ -132,142 +132,112 @@ public final class SingleQueryResultResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sourcePorts")
-      private final @Nullable List<String> sourcePorts;
+    private @Nullable List<String> sourcePorts;
 
-    public List<String> sourcePorts() {
-        return this.sourcePorts == null ? List.of() : this.sourcePorts;
+    public Optional<List<String>> sourcePorts() {
+        return Optional.ofNullable(this.sourcePorts);
     }
 
-    public SingleQueryResultResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationPorts,
-        @Nullable Integer direction,
-        @Nullable String group,
-        @Nullable Boolean inheritedFromParentPolicy,
-        @Nullable String lastUpdated,
-        @Nullable Integer mode,
-        @Nullable String protocol,
-        @Nullable Integer severity,
-        @Nullable Integer signatureId,
-        @Nullable List<String> sourcePorts) {
-        this.description = description;
-        this.destinationPorts = destinationPorts;
-        this.direction = direction;
-        this.group = group;
-        this.inheritedFromParentPolicy = inheritedFromParentPolicy;
-        this.lastUpdated = lastUpdated;
-        this.mode = mode;
-        this.protocol = protocol;
-        this.severity = severity;
-        this.signatureId = signatureId;
-        this.sourcePorts = sourcePorts;
-    }
+    private SingleQueryResultResponse() {}
 
-    private SingleQueryResultResponse() {
-        this.description = null;
-        this.destinationPorts = List.of();
-        this.direction = null;
-        this.group = null;
-        this.inheritedFromParentPolicy = null;
-        this.lastUpdated = null;
-        this.mode = null;
-        this.protocol = null;
-        this.severity = null;
-        this.signatureId = null;
-        this.sourcePorts = List.of();
+    private SingleQueryResultResponse(SingleQueryResultResponse $) {
+        this.description = $.description;
+        this.destinationPorts = $.destinationPorts;
+        this.direction = $.direction;
+        this.group = $.group;
+        this.inheritedFromParentPolicy = $.inheritedFromParentPolicy;
+        this.lastUpdated = $.lastUpdated;
+        this.mode = $.mode;
+        this.protocol = $.protocol;
+        this.severity = $.severity;
+        this.signatureId = $.signatureId;
+        this.sourcePorts = $.sourcePorts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SingleQueryResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable List<String> destinationPorts;
-        private @Nullable Integer direction;
-        private @Nullable String group;
-        private @Nullable Boolean inheritedFromParentPolicy;
-        private @Nullable String lastUpdated;
-        private @Nullable Integer mode;
-        private @Nullable String protocol;
-        private @Nullable Integer severity;
-        private @Nullable Integer signatureId;
-        private @Nullable List<String> sourcePorts;
+        private SingleQueryResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SingleQueryResultResponse();
         }
 
         public Builder(SingleQueryResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.destinationPorts = defaults.destinationPorts;
-    	      this.direction = defaults.direction;
-    	      this.group = defaults.group;
-    	      this.inheritedFromParentPolicy = defaults.inheritedFromParentPolicy;
-    	      this.lastUpdated = defaults.lastUpdated;
-    	      this.mode = defaults.mode;
-    	      this.protocol = defaults.protocol;
-    	      this.severity = defaults.severity;
-    	      this.signatureId = defaults.signatureId;
-    	      this.sourcePorts = defaults.sourcePorts;
+            $ = new SingleQueryResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = destinationPorts;
+            $.destinationPorts = destinationPorts;
             return this;
         }
+
         public Builder destinationPorts(String... destinationPorts) {
             return destinationPorts(List.of(destinationPorts));
         }
+
         public Builder direction(@Nullable Integer direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
+
         public Builder group(@Nullable String group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
+
         public Builder inheritedFromParentPolicy(@Nullable Boolean inheritedFromParentPolicy) {
-            this.inheritedFromParentPolicy = inheritedFromParentPolicy;
+            $.inheritedFromParentPolicy = inheritedFromParentPolicy;
             return this;
         }
+
         public Builder lastUpdated(@Nullable String lastUpdated) {
-            this.lastUpdated = lastUpdated;
+            $.lastUpdated = lastUpdated;
             return this;
         }
+
         public Builder mode(@Nullable Integer mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder severity(@Nullable Integer severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
+
         public Builder signatureId(@Nullable Integer signatureId) {
-            this.signatureId = signatureId;
+            $.signatureId = signatureId;
             return this;
         }
+
         public Builder sourcePorts(@Nullable List<String> sourcePorts) {
-            this.sourcePorts = sourcePorts;
+            $.sourcePorts = sourcePorts;
             return this;
         }
+
         public Builder sourcePorts(String... sourcePorts) {
             return sourcePorts(List.of(sourcePorts));
-        }        public SingleQueryResultResponse build() {
-            return new SingleQueryResultResponse(description, destinationPorts, direction, group, inheritedFromParentPolicy, lastUpdated, mode, protocol, severity, signatureId, sourcePorts);
+        }
+
+        public SingleQueryResultResponse build() {
+            return $;
         }
     }
+
 }

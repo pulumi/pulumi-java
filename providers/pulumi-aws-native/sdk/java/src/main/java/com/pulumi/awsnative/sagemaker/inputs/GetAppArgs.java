@@ -18,7 +18,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appName", required=true)
-      private final String appName;
+    private String appName;
 
     public String appName() {
         return this.appName;
@@ -29,7 +29,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appType", required=true)
-      private final AppType appType;
+    private AppType appType;
 
     public AppType appType() {
         return this.appType;
@@ -40,7 +40,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainId", required=true)
-      private final String domainId;
+    private String domainId;
 
     public String domainId() {
         return this.domainId;
@@ -51,73 +51,66 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userProfileName", required=true)
-      private final String userProfileName;
+    private String userProfileName;
 
     public String userProfileName() {
         return this.userProfileName;
     }
 
-    public GetAppArgs(
-        String appName,
-        AppType appType,
-        String domainId,
-        String userProfileName) {
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.appType = Objects.requireNonNull(appType, "expected parameter 'appType' to be non-null");
-        this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
-        this.userProfileName = Objects.requireNonNull(userProfileName, "expected parameter 'userProfileName' to be non-null");
-    }
+    private GetAppArgs() {}
 
-    private GetAppArgs() {
-        this.appName = null;
-        this.appType = null;
-        this.domainId = null;
-        this.userProfileName = null;
+    private GetAppArgs(GetAppArgs $) {
+        this.appName = $.appName;
+        this.appType = $.appType;
+        this.domainId = $.domainId;
+        this.userProfileName = $.userProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appName;
-        private AppType appType;
-        private String domainId;
-        private String userProfileName;
+        private GetAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppArgs();
         }
 
         public Builder(GetAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.appType = defaults.appType;
-    	      this.domainId = defaults.domainId;
-    	      this.userProfileName = defaults.userProfileName;
+            $ = new GetAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(String appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder appType(AppType appType) {
-            this.appType = Objects.requireNonNull(appType);
+            $.appType = appType;
             return this;
         }
+
         public Builder domainId(String domainId) {
-            this.domainId = Objects.requireNonNull(domainId);
+            $.domainId = domainId;
             return this;
         }
+
         public Builder userProfileName(String userProfileName) {
-            this.userProfileName = Objects.requireNonNull(userProfileName);
+            $.userProfileName = userProfileName;
             return this;
-        }        public GetAppArgs build() {
-            return new GetAppArgs(appName, appType, domainId, userProfileName);
+        }
+
+        public GetAppArgs build() {
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            $.appType = Objects.requireNonNull($.appType, "expected parameter 'appType' to be non-null");
+            $.domainId = Objects.requireNonNull($.domainId, "expected parameter 'domainId' to be non-null");
+            $.userProfileName = Objects.requireNonNull($.userProfileName, "expected parameter 'userProfileName' to be non-null");
+            return $;
         }
     }
+
 }

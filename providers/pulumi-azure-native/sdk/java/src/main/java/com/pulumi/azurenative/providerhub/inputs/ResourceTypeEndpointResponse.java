@@ -19,154 +19,138 @@ public final class ResourceTypeEndpointResponse extends com.pulumi.resources.Inv
     public static final ResourceTypeEndpointResponse Empty = new ResourceTypeEndpointResponse();
 
     @Import(name="apiVersions")
-      private final @Nullable List<String> apiVersions;
+    private @Nullable List<String> apiVersions;
 
-    public List<String> apiVersions() {
-        return this.apiVersions == null ? List.of() : this.apiVersions;
+    public Optional<List<String>> apiVersions() {
+        return Optional.ofNullable(this.apiVersions);
     }
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="extensions")
-      private final @Nullable List<ResourceTypeExtensionResponse> extensions;
+    private @Nullable List<ResourceTypeExtensionResponse> extensions;
 
-    public List<ResourceTypeExtensionResponse> extensions() {
-        return this.extensions == null ? List.of() : this.extensions;
+    public Optional<List<ResourceTypeExtensionResponse>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     @Import(name="featuresRule")
-      private final @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule;
+    private @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule;
 
     public Optional<ResourceTypeEndpointResponseFeaturesRule> featuresRule() {
-        return this.featuresRule == null ? Optional.empty() : Optional.ofNullable(this.featuresRule);
+        return Optional.ofNullable(this.featuresRule);
     }
 
     @Import(name="locations")
-      private final @Nullable List<String> locations;
+    private @Nullable List<String> locations;
 
-    public List<String> locations() {
-        return this.locations == null ? List.of() : this.locations;
+    public Optional<List<String>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     @Import(name="requiredFeatures")
-      private final @Nullable List<String> requiredFeatures;
+    private @Nullable List<String> requiredFeatures;
 
-    public List<String> requiredFeatures() {
-        return this.requiredFeatures == null ? List.of() : this.requiredFeatures;
+    public Optional<List<String>> requiredFeatures() {
+        return Optional.ofNullable(this.requiredFeatures);
     }
 
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ResourceTypeEndpointResponse(
-        @Nullable List<String> apiVersions,
-        @Nullable Boolean enabled,
-        @Nullable List<ResourceTypeExtensionResponse> extensions,
-        @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule,
-        @Nullable List<String> locations,
-        @Nullable List<String> requiredFeatures,
-        @Nullable String timeout) {
-        this.apiVersions = apiVersions;
-        this.enabled = enabled;
-        this.extensions = extensions;
-        this.featuresRule = featuresRule;
-        this.locations = locations;
-        this.requiredFeatures = requiredFeatures;
-        this.timeout = timeout;
-    }
+    private ResourceTypeEndpointResponse() {}
 
-    private ResourceTypeEndpointResponse() {
-        this.apiVersions = List.of();
-        this.enabled = null;
-        this.extensions = List.of();
-        this.featuresRule = null;
-        this.locations = List.of();
-        this.requiredFeatures = List.of();
-        this.timeout = null;
+    private ResourceTypeEndpointResponse(ResourceTypeEndpointResponse $) {
+        this.apiVersions = $.apiVersions;
+        this.enabled = $.enabled;
+        this.extensions = $.extensions;
+        this.featuresRule = $.featuresRule;
+        this.locations = $.locations;
+        this.requiredFeatures = $.requiredFeatures;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> apiVersions;
-        private @Nullable Boolean enabled;
-        private @Nullable List<ResourceTypeExtensionResponse> extensions;
-        private @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule;
-        private @Nullable List<String> locations;
-        private @Nullable List<String> requiredFeatures;
-        private @Nullable String timeout;
+        private ResourceTypeEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeEndpointResponse();
         }
 
         public Builder(ResourceTypeEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersions = defaults.apiVersions;
-    	      this.enabled = defaults.enabled;
-    	      this.extensions = defaults.extensions;
-    	      this.featuresRule = defaults.featuresRule;
-    	      this.locations = defaults.locations;
-    	      this.requiredFeatures = defaults.requiredFeatures;
-    	      this.timeout = defaults.timeout;
+            $ = new ResourceTypeEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = apiVersions;
+            $.apiVersions = apiVersions;
             return this;
         }
+
         public Builder apiVersions(String... apiVersions) {
             return apiVersions(List.of(apiVersions));
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder extensions(@Nullable List<ResourceTypeExtensionResponse> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
+
         public Builder extensions(ResourceTypeExtensionResponse... extensions) {
             return extensions(List.of(extensions));
         }
+
         public Builder featuresRule(@Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule) {
-            this.featuresRule = featuresRule;
+            $.featuresRule = featuresRule;
             return this;
         }
+
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = requiredFeatures;
+            $.requiredFeatures = requiredFeatures;
             return this;
         }
+
         public Builder requiredFeatures(String... requiredFeatures) {
             return requiredFeatures(List.of(requiredFeatures));
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public ResourceTypeEndpointResponse build() {
-            return new ResourceTypeEndpointResponse(apiVersions, enabled, extensions, featuresRule, locations, requiredFeatures, timeout);
+        }
+
+        public ResourceTypeEndpointResponse build() {
+            return $;
         }
     }
+
 }

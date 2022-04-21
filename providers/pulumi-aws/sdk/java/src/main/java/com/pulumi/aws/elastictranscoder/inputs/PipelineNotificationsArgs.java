@@ -5,9 +5,9 @@ package com.pulumi.aws.elastictranscoder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PipelineNotificationsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="completed")
-      private final @Nullable Output<String> completed;
+    private @Nullable Output<String> completed;
 
-    public Output<String> completed() {
-        return this.completed == null ? Codegen.empty() : this.completed;
+    public Optional<Output<String>> completed() {
+        return Optional.ofNullable(this.completed);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PipelineNotificationsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="error")
-      private final @Nullable Output<String> error;
+    private @Nullable Output<String> error;
 
-    public Output<String> error() {
-        return this.error == null ? Codegen.empty() : this.error;
+    public Optional<Output<String>> error() {
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PipelineNotificationsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="progressing")
-      private final @Nullable Output<String> progressing;
+    private @Nullable Output<String> progressing;
 
-    public Output<String> progressing() {
-        return this.progressing == null ? Codegen.empty() : this.progressing;
+    public Optional<Output<String>> progressing() {
+        return Optional.ofNullable(this.progressing);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class PipelineNotificationsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="warning")
-      private final @Nullable Output<String> warning;
+    private @Nullable Output<String> warning;
 
-    public Output<String> warning() {
-        return this.warning == null ? Codegen.empty() : this.warning;
+    public Optional<Output<String>> warning() {
+        return Optional.ofNullable(this.warning);
     }
 
-    public PipelineNotificationsArgs(
-        @Nullable Output<String> completed,
-        @Nullable Output<String> error,
-        @Nullable Output<String> progressing,
-        @Nullable Output<String> warning) {
-        this.completed = completed;
-        this.error = error;
-        this.progressing = progressing;
-        this.warning = warning;
-    }
+    private PipelineNotificationsArgs() {}
 
-    private PipelineNotificationsArgs() {
-        this.completed = Codegen.empty();
-        this.error = Codegen.empty();
-        this.progressing = Codegen.empty();
-        this.warning = Codegen.empty();
+    private PipelineNotificationsArgs(PipelineNotificationsArgs $) {
+        this.completed = $.completed;
+        this.error = $.error;
+        this.progressing = $.progressing;
+        this.warning = $.warning;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineNotificationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> completed;
-        private @Nullable Output<String> error;
-        private @Nullable Output<String> progressing;
-        private @Nullable Output<String> warning;
+        private PipelineNotificationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineNotificationsArgs();
         }
 
         public Builder(PipelineNotificationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completed = defaults.completed;
-    	      this.error = defaults.error;
-    	      this.progressing = defaults.progressing;
-    	      this.warning = defaults.warning;
+            $ = new PipelineNotificationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder completed(@Nullable Output<String> completed) {
-            this.completed = completed;
+            $.completed = completed;
             return this;
         }
-        public Builder completed(@Nullable String completed) {
-            this.completed = Codegen.ofNullable(completed);
-            return this;
+
+        public Builder completed(String completed) {
+            return completed(Output.of(completed));
         }
+
         public Builder error(@Nullable Output<String> error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
-        public Builder error(@Nullable String error) {
-            this.error = Codegen.ofNullable(error);
-            return this;
+
+        public Builder error(String error) {
+            return error(Output.of(error));
         }
+
         public Builder progressing(@Nullable Output<String> progressing) {
-            this.progressing = progressing;
+            $.progressing = progressing;
             return this;
         }
-        public Builder progressing(@Nullable String progressing) {
-            this.progressing = Codegen.ofNullable(progressing);
-            return this;
+
+        public Builder progressing(String progressing) {
+            return progressing(Output.of(progressing));
         }
+
         public Builder warning(@Nullable Output<String> warning) {
-            this.warning = warning;
+            $.warning = warning;
             return this;
         }
-        public Builder warning(@Nullable String warning) {
-            this.warning = Codegen.ofNullable(warning);
-            return this;
-        }        public PipelineNotificationsArgs build() {
-            return new PipelineNotificationsArgs(completed, error, progressing, warning);
+
+        public Builder warning(String warning) {
+            return warning(Output.of(warning));
+        }
+
+        public PipelineNotificationsArgs build() {
+            return $;
         }
     }
+
 }

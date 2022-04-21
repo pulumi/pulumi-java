@@ -7,9 +7,9 @@ import com.pulumi.azurenative.subscription.enums.Workload;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="billingScope")
-      private final @Nullable Output<String> billingScope;
+    private @Nullable Output<String> billingScope;
 
-    public Output<String> billingScope() {
-        return this.billingScope == null ? Codegen.empty() : this.billingScope;
+    public Optional<Output<String>> billingScope() {
+        return Optional.ofNullable(this.billingScope);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resellerId")
-      private final @Nullable Output<String> resellerId;
+    private @Nullable Output<String> resellerId;
 
-    public Output<String> resellerId() {
-        return this.resellerId == null ? Codegen.empty() : this.resellerId;
+    public Optional<Output<String>> resellerId() {
+        return Optional.ofNullable(this.resellerId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
-    public Output<String> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class PutAliasRequestPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="workload")
-      private final @Nullable Output<Either<String,Workload>> workload;
+    private @Nullable Output<Either<String,Workload>> workload;
 
-    public Output<Either<String,Workload>> workload() {
-        return this.workload == null ? Codegen.empty() : this.workload;
+    public Optional<Output<Either<String,Workload>>> workload() {
+        return Optional.ofNullable(this.workload);
     }
 
-    public PutAliasRequestPropertiesArgs(
-        @Nullable Output<String> billingScope,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> resellerId,
-        @Nullable Output<String> subscriptionId,
-        @Nullable Output<Either<String,Workload>> workload) {
-        this.billingScope = billingScope;
-        this.displayName = displayName;
-        this.resellerId = resellerId;
-        this.subscriptionId = subscriptionId;
-        this.workload = workload;
-    }
+    private PutAliasRequestPropertiesArgs() {}
 
-    private PutAliasRequestPropertiesArgs() {
-        this.billingScope = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.resellerId = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
-        this.workload = Codegen.empty();
+    private PutAliasRequestPropertiesArgs(PutAliasRequestPropertiesArgs $) {
+        this.billingScope = $.billingScope;
+        this.displayName = $.displayName;
+        this.resellerId = $.resellerId;
+        this.subscriptionId = $.subscriptionId;
+        this.workload = $.workload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PutAliasRequestPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> billingScope;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> resellerId;
-        private @Nullable Output<String> subscriptionId;
-        private @Nullable Output<Either<String,Workload>> workload;
+        private PutAliasRequestPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PutAliasRequestPropertiesArgs();
         }
 
         public Builder(PutAliasRequestPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingScope = defaults.billingScope;
-    	      this.displayName = defaults.displayName;
-    	      this.resellerId = defaults.resellerId;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.workload = defaults.workload;
+            $ = new PutAliasRequestPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingScope(@Nullable Output<String> billingScope) {
-            this.billingScope = billingScope;
+            $.billingScope = billingScope;
             return this;
         }
-        public Builder billingScope(@Nullable String billingScope) {
-            this.billingScope = Codegen.ofNullable(billingScope);
-            return this;
+
+        public Builder billingScope(String billingScope) {
+            return billingScope(Output.of(billingScope));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder resellerId(@Nullable Output<String> resellerId) {
-            this.resellerId = resellerId;
+            $.resellerId = resellerId;
             return this;
         }
-        public Builder resellerId(@Nullable String resellerId) {
-            this.resellerId = Codegen.ofNullable(resellerId);
-            return this;
+
+        public Builder resellerId(String resellerId) {
+            return resellerId(Output.of(resellerId));
         }
+
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
+
         public Builder workload(@Nullable Output<Either<String,Workload>> workload) {
-            this.workload = workload;
+            $.workload = workload;
             return this;
         }
-        public Builder workload(@Nullable Either<String,Workload> workload) {
-            this.workload = Codegen.ofNullable(workload);
-            return this;
-        }        public PutAliasRequestPropertiesArgs build() {
-            return new PutAliasRequestPropertiesArgs(billingScope, displayName, resellerId, subscriptionId, workload);
+
+        public Builder workload(Either<String,Workload> workload) {
+            return workload(Output.of(workload));
+        }
+
+        public PutAliasRequestPropertiesArgs build() {
+            return $;
         }
     }
+
 }

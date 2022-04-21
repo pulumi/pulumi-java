@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends com.pulumi.r
      * 
      */
     @Import(name="certificateArn", required=true)
-      private final Output<String> certificateArn;
+    private Output<String> certificateArn;
 
     public Output<String> certificateArn() {
         return this.certificateArn;
@@ -30,63 +29,60 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends com.pulumi.r
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public EnclaveCertificateIamRoleAssociationArgs(
-        Output<String> certificateArn,
-        Output<String> roleArn) {
-        this.certificateArn = Objects.requireNonNull(certificateArn, "expected parameter 'certificateArn' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private EnclaveCertificateIamRoleAssociationArgs() {}
 
-    private EnclaveCertificateIamRoleAssociationArgs() {
-        this.certificateArn = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private EnclaveCertificateIamRoleAssociationArgs(EnclaveCertificateIamRoleAssociationArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnclaveCertificateIamRoleAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateArn;
-        private Output<String> roleArn;
+        private EnclaveCertificateIamRoleAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnclaveCertificateIamRoleAssociationArgs();
         }
 
         public Builder(EnclaveCertificateIamRoleAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.roleArn = defaults.roleArn;
+            $ = new EnclaveCertificateIamRoleAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(Output<String> certificateArn) {
-            this.certificateArn = Objects.requireNonNull(certificateArn);
+            $.certificateArn = certificateArn;
             return this;
         }
+
         public Builder certificateArn(String certificateArn) {
-            this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
-            return this;
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public EnclaveCertificateIamRoleAssociationArgs build() {
-            return new EnclaveCertificateIamRoleAssociationArgs(certificateArn, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public EnclaveCertificateIamRoleAssociationArgs build() {
+            $.certificateArn = Objects.requireNonNull($.certificateArn, "expected parameter 'certificateArn' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="first")
-      private final @Nullable Output<String> first;
+    private @Nullable Output<String> first;
 
-    public Output<String> first() {
-        return this.first == null ? Codegen.empty() : this.first;
+    public Optional<Output<String>> first() {
+        return Optional.ofNullable(this.first);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="last")
-      private final @Nullable Output<String> last;
+    private @Nullable Output<String> last;
 
-    public Output<String> last() {
-        return this.last == null ? Codegen.empty() : this.last;
+    public Optional<Output<String>> last() {
+        return Optional.ofNullable(this.last);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class EndpointPropertiesSubnetsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<Integer> scope;
+    private @Nullable Output<Integer> scope;
 
-    public Output<Integer> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<Integer>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public EndpointPropertiesSubnetsArgs(
-        @Nullable Output<String> first,
-        @Nullable Output<String> last,
-        @Nullable Output<Integer> scope) {
-        this.first = first;
-        this.last = last;
-        this.scope = scope;
-    }
+    private EndpointPropertiesSubnetsArgs() {}
 
-    private EndpointPropertiesSubnetsArgs() {
-        this.first = Codegen.empty();
-        this.last = Codegen.empty();
-        this.scope = Codegen.empty();
+    private EndpointPropertiesSubnetsArgs(EndpointPropertiesSubnetsArgs $) {
+        this.first = $.first;
+        this.last = $.last;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointPropertiesSubnetsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> first;
-        private @Nullable Output<String> last;
-        private @Nullable Output<Integer> scope;
+        private EndpointPropertiesSubnetsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointPropertiesSubnetsArgs();
         }
 
         public Builder(EndpointPropertiesSubnetsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.first = defaults.first;
-    	      this.last = defaults.last;
-    	      this.scope = defaults.scope;
+            $ = new EndpointPropertiesSubnetsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder first(@Nullable Output<String> first) {
-            this.first = first;
+            $.first = first;
             return this;
         }
-        public Builder first(@Nullable String first) {
-            this.first = Codegen.ofNullable(first);
-            return this;
+
+        public Builder first(String first) {
+            return first(Output.of(first));
         }
+
         public Builder last(@Nullable Output<String> last) {
-            this.last = last;
+            $.last = last;
             return this;
         }
-        public Builder last(@Nullable String last) {
-            this.last = Codegen.ofNullable(last);
-            return this;
+
+        public Builder last(String last) {
+            return last(Output.of(last));
         }
+
         public Builder scope(@Nullable Output<Integer> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable Integer scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
-        }        public EndpointPropertiesSubnetsArgs build() {
-            return new EndpointPropertiesSubnetsArgs(first, last, scope);
+
+        public Builder scope(Integer scope) {
+            return scope(Output.of(scope));
+        }
+
+        public EndpointPropertiesSubnetsArgs build() {
+            return $;
         }
     }
+
 }

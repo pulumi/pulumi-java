@@ -23,10 +23,10 @@ public final class StorageSettingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="datastoreType")
-      private final @Nullable String datastoreType;
+    private @Nullable String datastoreType;
 
     public Optional<String> datastoreType() {
-        return this.datastoreType == null ? Optional.empty() : Optional.ofNullable(this.datastoreType);
+        return Optional.ofNullable(this.datastoreType);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class StorageSettingResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public StorageSettingResponse(
-        @Nullable String datastoreType,
-        @Nullable String type) {
-        this.datastoreType = datastoreType;
-        this.type = type;
-    }
+    private StorageSettingResponse() {}
 
-    private StorageSettingResponse() {
-        this.datastoreType = null;
-        this.type = null;
+    private StorageSettingResponse(StorageSettingResponse $) {
+        this.datastoreType = $.datastoreType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageSettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String datastoreType;
-        private @Nullable String type;
+        private StorageSettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageSettingResponse();
         }
 
         public Builder(StorageSettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreType = defaults.datastoreType;
-    	      this.type = defaults.type;
+            $ = new StorageSettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreType(@Nullable String datastoreType) {
-            this.datastoreType = datastoreType;
+            $.datastoreType = datastoreType;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public StorageSettingResponse build() {
-            return new StorageSettingResponse(datastoreType, type);
+        }
+
+        public StorageSettingResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class StoredProcedureParameterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class StoredProcedureParameterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="value")
-      private final @Nullable Object value;
+    private @Nullable Object value;
 
     public Optional<Object> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public StoredProcedureParameterResponse(
-        @Nullable String type,
-        @Nullable Object value) {
-        this.type = type;
-        this.value = value;
-    }
+    private StoredProcedureParameterResponse() {}
 
-    private StoredProcedureParameterResponse() {
-        this.type = null;
-        this.value = null;
+    private StoredProcedureParameterResponse(StoredProcedureParameterResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StoredProcedureParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
-        private @Nullable Object value;
+        private StoredProcedureParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StoredProcedureParameterResponse();
         }
 
         public Builder(StoredProcedureParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new StoredProcedureParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable Object value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public StoredProcedureParameterResponse build() {
-            return new StoredProcedureParameterResponse(type, value);
+        }
+
+        public StoredProcedureParameterResponse build() {
+            return $;
         }
     }
+
 }

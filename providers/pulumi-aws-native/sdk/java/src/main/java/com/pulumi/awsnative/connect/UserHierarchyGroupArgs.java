@@ -5,9 +5,9 @@ package com.pulumi.awsnative.connect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="instanceArn", required=true)
-      private final Output<String> instanceArn;
+    private Output<String> instanceArn;
 
     public Output<String> instanceArn() {
         return this.instanceArn;
@@ -31,10 +31,10 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class UserHierarchyGroupArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="parentGroupArn")
-      private final @Nullable Output<String> parentGroupArn;
+    private @Nullable Output<String> parentGroupArn;
 
-    public Output<String> parentGroupArn() {
-        return this.parentGroupArn == null ? Codegen.empty() : this.parentGroupArn;
+    public Optional<Output<String>> parentGroupArn() {
+        return Optional.ofNullable(this.parentGroupArn);
     }
 
-    public UserHierarchyGroupArgs(
-        Output<String> instanceArn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentGroupArn) {
-        this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
-        this.name = name;
-        this.parentGroupArn = parentGroupArn;
-    }
+    private UserHierarchyGroupArgs() {}
 
-    private UserHierarchyGroupArgs() {
-        this.instanceArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentGroupArn = Codegen.empty();
+    private UserHierarchyGroupArgs(UserHierarchyGroupArgs $) {
+        this.instanceArn = $.instanceArn;
+        this.name = $.name;
+        this.parentGroupArn = $.parentGroupArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserHierarchyGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentGroupArn;
+        private UserHierarchyGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserHierarchyGroupArgs();
         }
 
         public Builder(UserHierarchyGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.name = defaults.name;
-    	      this.parentGroupArn = defaults.parentGroupArn;
+            $ = new UserHierarchyGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceArn(Output<String> instanceArn) {
-            this.instanceArn = Objects.requireNonNull(instanceArn);
+            $.instanceArn = instanceArn;
             return this;
         }
+
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
-            return this;
+            return instanceArn(Output.of(instanceArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentGroupArn(@Nullable Output<String> parentGroupArn) {
-            this.parentGroupArn = parentGroupArn;
+            $.parentGroupArn = parentGroupArn;
             return this;
         }
-        public Builder parentGroupArn(@Nullable String parentGroupArn) {
-            this.parentGroupArn = Codegen.ofNullable(parentGroupArn);
-            return this;
-        }        public UserHierarchyGroupArgs build() {
-            return new UserHierarchyGroupArgs(instanceArn, name, parentGroupArn);
+
+        public Builder parentGroupArn(String parentGroupArn) {
+            return parentGroupArn(Output.of(parentGroupArn));
+        }
+
+        public UserHierarchyGroupArgs build() {
+            $.instanceArn = Objects.requireNonNull($.instanceArn, "expected parameter 'instanceArn' to be non-null");
+            return $;
         }
     }
+
 }

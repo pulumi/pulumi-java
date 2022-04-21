@@ -17,7 +17,7 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
      * 
      */
     @Import(name="billingAccountName", required=true)
-      private final String billingAccountName;
+    private String billingAccountName;
 
     public String billingAccountName() {
         return this.billingAccountName;
@@ -28,7 +28,7 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
      * 
      */
     @Import(name="billingRoleAssignmentName", required=true)
-      private final String billingRoleAssignmentName;
+    private String billingRoleAssignmentName;
 
     public String billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
@@ -39,64 +39,59 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends com.pulumi.r
      * 
      */
     @Import(name="departmentName", required=true)
-      private final String departmentName;
+    private String departmentName;
 
     public String departmentName() {
         return this.departmentName;
     }
 
-    public GetBillingRoleAssignmentByDepartmentArgs(
-        String billingAccountName,
-        String billingRoleAssignmentName,
-        String departmentName) {
-        this.billingAccountName = Objects.requireNonNull(billingAccountName, "expected parameter 'billingAccountName' to be non-null");
-        this.billingRoleAssignmentName = Objects.requireNonNull(billingRoleAssignmentName, "expected parameter 'billingRoleAssignmentName' to be non-null");
-        this.departmentName = Objects.requireNonNull(departmentName, "expected parameter 'departmentName' to be non-null");
-    }
+    private GetBillingRoleAssignmentByDepartmentArgs() {}
 
-    private GetBillingRoleAssignmentByDepartmentArgs() {
-        this.billingAccountName = null;
-        this.billingRoleAssignmentName = null;
-        this.departmentName = null;
+    private GetBillingRoleAssignmentByDepartmentArgs(GetBillingRoleAssignmentByDepartmentArgs $) {
+        this.billingAccountName = $.billingAccountName;
+        this.billingRoleAssignmentName = $.billingRoleAssignmentName;
+        this.departmentName = $.departmentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBillingRoleAssignmentByDepartmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountName;
-        private String billingRoleAssignmentName;
-        private String departmentName;
+        private GetBillingRoleAssignmentByDepartmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBillingRoleAssignmentByDepartmentArgs();
         }
 
         public Builder(GetBillingRoleAssignmentByDepartmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountName = defaults.billingAccountName;
-    	      this.billingRoleAssignmentName = defaults.billingRoleAssignmentName;
-    	      this.departmentName = defaults.departmentName;
+            $ = new GetBillingRoleAssignmentByDepartmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountName(String billingAccountName) {
-            this.billingAccountName = Objects.requireNonNull(billingAccountName);
+            $.billingAccountName = billingAccountName;
             return this;
         }
+
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
-            this.billingRoleAssignmentName = Objects.requireNonNull(billingRoleAssignmentName);
+            $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
+
         public Builder departmentName(String departmentName) {
-            this.departmentName = Objects.requireNonNull(departmentName);
+            $.departmentName = departmentName;
             return this;
-        }        public GetBillingRoleAssignmentByDepartmentArgs build() {
-            return new GetBillingRoleAssignmentByDepartmentArgs(billingAccountName, billingRoleAssignmentName, departmentName);
+        }
+
+        public GetBillingRoleAssignmentByDepartmentArgs build() {
+            $.billingAccountName = Objects.requireNonNull($.billingAccountName, "expected parameter 'billingAccountName' to be non-null");
+            $.billingRoleAssignmentName = Objects.requireNonNull($.billingRoleAssignmentName, "expected parameter 'billingRoleAssignmentName' to be non-null");
+            $.departmentName = Objects.requireNonNull($.departmentName, "expected parameter 'departmentName' to be non-null");
+            return $;
         }
     }
+
 }

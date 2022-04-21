@@ -12,10 +12,10 @@ import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobUri")
-      private final @Nullable Output<String> blobUri;
+    private @Nullable Output<String> blobUri;
 
-    public Output<String> blobUri() {
-        return this.blobUri == null ? Codegen.empty() : this.blobUri;
+    public Optional<Output<String>> blobUri() {
+        return Optional.ofNullable(this.blobUri);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caching")
-      private final @Nullable Output<CachingTypes> caching;
+    private @Nullable Output<CachingTypes> caching;
 
-    public Output<CachingTypes> caching() {
-        return this.caching == null ? Codegen.empty() : this.caching;
+    public Optional<Output<CachingTypes>> caching() {
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionSet")
-      private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
+    private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
-    public Output<DiskEncryptionSetParametersArgs> diskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
+    public Optional<Output<DiskEncryptionSetParametersArgs>> diskEncryptionSet() {
+        return Optional.ofNullable(this.diskEncryptionSet);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable Output<SubResourceArgs> managedDisk;
+    private @Nullable Output<SubResourceArgs> managedDisk;
 
-    public Output<SubResourceArgs> managedDisk() {
-        return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
+    public Optional<Output<SubResourceArgs>> managedDisk() {
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osState", required=true)
-      private final Output<OperatingSystemStateTypes> osState;
+    private Output<OperatingSystemStateTypes> osState;
 
     public Output<OperatingSystemStateTypes> osState() {
         return this.osState;
@@ -98,7 +98,7 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osType", required=true)
-      private final Output<OperatingSystemTypes> osType;
+    private Output<OperatingSystemTypes> osType;
 
     public Output<OperatingSystemTypes> osType() {
         return this.osType;
@@ -109,10 +109,10 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable Output<SubResourceArgs> snapshot;
+    private @Nullable Output<SubResourceArgs> snapshot;
 
-    public Output<SubResourceArgs> snapshot() {
-        return this.snapshot == null ? Codegen.empty() : this.snapshot;
+    public Optional<Output<SubResourceArgs>> snapshot() {
+        return Optional.ofNullable(this.snapshot);
     }
 
     /**
@@ -120,154 +120,130 @@ public final class ImageOSDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
+    private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
-    public Output<Either<String,StorageAccountTypes>> storageAccountType() {
-        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
+    public Optional<Output<Either<String,StorageAccountTypes>>> storageAccountType() {
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public ImageOSDiskArgs(
-        @Nullable Output<String> blobUri,
-        @Nullable Output<CachingTypes> caching,
-        @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet,
-        @Nullable Output<Integer> diskSizeGB,
-        @Nullable Output<SubResourceArgs> managedDisk,
-        Output<OperatingSystemStateTypes> osState,
-        Output<OperatingSystemTypes> osType,
-        @Nullable Output<SubResourceArgs> snapshot,
-        @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
-        this.blobUri = blobUri;
-        this.caching = caching;
-        this.diskEncryptionSet = diskEncryptionSet;
-        this.diskSizeGB = diskSizeGB;
-        this.managedDisk = managedDisk;
-        this.osState = Objects.requireNonNull(osState, "expected parameter 'osState' to be non-null");
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.snapshot = snapshot;
-        this.storageAccountType = storageAccountType;
-    }
+    private ImageOSDiskArgs() {}
 
-    private ImageOSDiskArgs() {
-        this.blobUri = Codegen.empty();
-        this.caching = Codegen.empty();
-        this.diskEncryptionSet = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.managedDisk = Codegen.empty();
-        this.osState = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.snapshot = Codegen.empty();
-        this.storageAccountType = Codegen.empty();
+    private ImageOSDiskArgs(ImageOSDiskArgs $) {
+        this.blobUri = $.blobUri;
+        this.caching = $.caching;
+        this.diskEncryptionSet = $.diskEncryptionSet;
+        this.diskSizeGB = $.diskSizeGB;
+        this.managedDisk = $.managedDisk;
+        this.osState = $.osState;
+        this.osType = $.osType;
+        this.snapshot = $.snapshot;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageOSDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> blobUri;
-        private @Nullable Output<CachingTypes> caching;
-        private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
-        private @Nullable Output<Integer> diskSizeGB;
-        private @Nullable Output<SubResourceArgs> managedDisk;
-        private Output<OperatingSystemStateTypes> osState;
-        private Output<OperatingSystemTypes> osType;
-        private @Nullable Output<SubResourceArgs> snapshot;
-        private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
+        private ImageOSDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageOSDiskArgs();
         }
 
         public Builder(ImageOSDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobUri = defaults.blobUri;
-    	      this.caching = defaults.caching;
-    	      this.diskEncryptionSet = defaults.diskEncryptionSet;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.osState = defaults.osState;
-    	      this.osType = defaults.osType;
-    	      this.snapshot = defaults.snapshot;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new ImageOSDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobUri(@Nullable Output<String> blobUri) {
-            this.blobUri = blobUri;
+            $.blobUri = blobUri;
             return this;
         }
-        public Builder blobUri(@Nullable String blobUri) {
-            this.blobUri = Codegen.ofNullable(blobUri);
-            return this;
+
+        public Builder blobUri(String blobUri) {
+            return blobUri(Output.of(blobUri));
         }
+
         public Builder caching(@Nullable Output<CachingTypes> caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
-        public Builder caching(@Nullable CachingTypes caching) {
-            this.caching = Codegen.ofNullable(caching);
-            return this;
+
+        public Builder caching(CachingTypes caching) {
+            return caching(Output.of(caching));
         }
+
         public Builder diskEncryptionSet(@Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
-            this.diskEncryptionSet = diskEncryptionSet;
+            $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-        public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
-            this.diskEncryptionSet = Codegen.ofNullable(diskEncryptionSet);
-            return this;
+
+        public Builder diskEncryptionSet(DiskEncryptionSetParametersArgs diskEncryptionSet) {
+            return diskEncryptionSet(Output.of(diskEncryptionSet));
         }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder managedDisk(@Nullable Output<SubResourceArgs> managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
-        public Builder managedDisk(@Nullable SubResourceArgs managedDisk) {
-            this.managedDisk = Codegen.ofNullable(managedDisk);
-            return this;
+
+        public Builder managedDisk(SubResourceArgs managedDisk) {
+            return managedDisk(Output.of(managedDisk));
         }
+
         public Builder osState(Output<OperatingSystemStateTypes> osState) {
-            this.osState = Objects.requireNonNull(osState);
+            $.osState = osState;
             return this;
         }
+
         public Builder osState(OperatingSystemStateTypes osState) {
-            this.osState = Output.of(Objects.requireNonNull(osState));
-            return this;
+            return osState(Output.of(osState));
         }
+
         public Builder osType(Output<OperatingSystemTypes> osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder osType(OperatingSystemTypes osType) {
-            this.osType = Output.of(Objects.requireNonNull(osType));
-            return this;
+            return osType(Output.of(osType));
         }
+
         public Builder snapshot(@Nullable Output<SubResourceArgs> snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
         }
-        public Builder snapshot(@Nullable SubResourceArgs snapshot) {
-            this.snapshot = Codegen.ofNullable(snapshot);
-            return this;
+
+        public Builder snapshot(SubResourceArgs snapshot) {
+            return snapshot(Output.of(snapshot));
         }
+
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
-        public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
-            this.storageAccountType = Codegen.ofNullable(storageAccountType);
-            return this;
-        }        public ImageOSDiskArgs build() {
-            return new ImageOSDiskArgs(blobUri, caching, diskEncryptionSet, diskSizeGB, managedDisk, osState, osType, snapshot, storageAccountType);
+
+        public Builder storageAccountType(Either<String,StorageAccountTypes> storageAccountType) {
+            return storageAccountType(Output.of(storageAccountType));
+        }
+
+        public ImageOSDiskArgs build() {
+            $.osState = Objects.requireNonNull($.osState, "expected parameter 'osState' to be non-null");
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            return $;
         }
     }
+
 }

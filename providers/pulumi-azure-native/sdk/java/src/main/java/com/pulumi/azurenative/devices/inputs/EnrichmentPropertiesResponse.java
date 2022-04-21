@@ -22,7 +22,7 @@ public final class EnrichmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="endpointNames", required=true)
-      private final List<String> endpointNames;
+    private List<String> endpointNames;
 
     public List<String> endpointNames() {
         return this.endpointNames;
@@ -33,7 +33,7 @@ public final class EnrichmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -44,67 +44,63 @@ public final class EnrichmentPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public EnrichmentPropertiesResponse(
-        List<String> endpointNames,
-        String key,
-        String value) {
-        this.endpointNames = Objects.requireNonNull(endpointNames, "expected parameter 'endpointNames' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private EnrichmentPropertiesResponse() {}
 
-    private EnrichmentPropertiesResponse() {
-        this.endpointNames = List.of();
-        this.key = null;
-        this.value = null;
+    private EnrichmentPropertiesResponse(EnrichmentPropertiesResponse $) {
+        this.endpointNames = $.endpointNames;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnrichmentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> endpointNames;
-        private String key;
-        private String value;
+        private EnrichmentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnrichmentPropertiesResponse();
         }
 
         public Builder(EnrichmentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointNames = defaults.endpointNames;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new EnrichmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointNames(List<String> endpointNames) {
-            this.endpointNames = Objects.requireNonNull(endpointNames);
+            $.endpointNames = endpointNames;
             return this;
         }
+
         public Builder endpointNames(String... endpointNames) {
             return endpointNames(List.of(endpointNames));
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public EnrichmentPropertiesResponse build() {
-            return new EnrichmentPropertiesResponse(endpointNames, key, value);
+        }
+
+        public EnrichmentPropertiesResponse build() {
+            $.endpointNames = Objects.requireNonNull($.endpointNames, "expected parameter 'endpointNames' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

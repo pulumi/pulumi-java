@@ -15,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inboundIpRules")
-      private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
+    private @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
-    public Output<List<InboundIpRuleArgs>> inboundIpRules() {
-        return this.inboundIpRules == null ? Codegen.empty() : this.inboundIpRules;
+    public Optional<Output<List<InboundIpRuleArgs>>> inboundIpRules() {
+        return Optional.ofNullable(this.inboundIpRules);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputSchema")
-      private final @Nullable Output<Either<String,InputSchema>> inputSchema;
+    private @Nullable Output<Either<String,InputSchema>> inputSchema;
 
-    public Output<Either<String,InputSchema>> inputSchema() {
-        return this.inputSchema == null ? Codegen.empty() : this.inputSchema;
+    public Optional<Output<Either<String,InputSchema>>> inputSchema() {
+        return Optional.ofNullable(this.inputSchema);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputSchemaMapping")
-      private final @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
+    private @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
 
-    public Output<JsonInputSchemaMappingArgs> inputSchemaMapping() {
-        return this.inputSchemaMapping == null ? Codegen.empty() : this.inputSchemaMapping;
+    public Optional<Output<JsonInputSchemaMappingArgs>> inputSchemaMapping() {
+        return Optional.ofNullable(this.inputSchemaMapping);
     }
 
     /**
@@ -60,10 +61,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -83,7 +84,7 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -94,10 +95,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -105,144 +106,125 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topicName")
-      private final @Nullable Output<String> topicName;
+    private @Nullable Output<String> topicName;
 
-    public Output<String> topicName() {
-        return this.topicName == null ? Codegen.empty() : this.topicName;
+    public Optional<Output<String>> topicName() {
+        return Optional.ofNullable(this.topicName);
     }
 
-    public TopicArgs(
-        @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules,
-        @Nullable Output<Either<String,InputSchema>> inputSchema,
-        @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> topicName) {
-        this.inboundIpRules = inboundIpRules;
-        this.inputSchema = Codegen.stringProp("inputSchema").left(InputSchema.class).output().arg(inputSchema).def("EventGridSchema").getNullable();
-        this.inputSchemaMapping = inputSchemaMapping;
-        this.location = location;
-        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg(publicNetworkAccess).def("Enabled").getNullable();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.topicName = topicName;
-    }
+    private TopicArgs() {}
 
-    private TopicArgs() {
-        this.inboundIpRules = Codegen.empty();
-        this.inputSchema = Codegen.empty();
-        this.inputSchemaMapping = Codegen.empty();
-        this.location = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.topicName = Codegen.empty();
+    private TopicArgs(TopicArgs $) {
+        this.inboundIpRules = $.inboundIpRules;
+        this.inputSchema = $.inputSchema;
+        this.inputSchemaMapping = $.inputSchemaMapping;
+        this.location = $.location;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
-        private @Nullable Output<Either<String,InputSchema>> inputSchema;
-        private @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> topicName;
+        private TopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicArgs();
         }
 
         public Builder(TopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inboundIpRules = defaults.inboundIpRules;
-    	      this.inputSchema = defaults.inputSchema;
-    	      this.inputSchemaMapping = defaults.inputSchemaMapping;
-    	      this.location = defaults.location;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.topicName = defaults.topicName;
+            $ = new TopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inboundIpRules(@Nullable Output<List<InboundIpRuleArgs>> inboundIpRules) {
-            this.inboundIpRules = inboundIpRules;
+            $.inboundIpRules = inboundIpRules;
             return this;
         }
-        public Builder inboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
-            this.inboundIpRules = Codegen.ofNullable(inboundIpRules);
-            return this;
+
+        public Builder inboundIpRules(List<InboundIpRuleArgs> inboundIpRules) {
+            return inboundIpRules(Output.of(inboundIpRules));
         }
+
         public Builder inboundIpRules(InboundIpRuleArgs... inboundIpRules) {
             return inboundIpRules(List.of(inboundIpRules));
         }
+
         public Builder inputSchema(@Nullable Output<Either<String,InputSchema>> inputSchema) {
-            this.inputSchema = inputSchema;
+            $.inputSchema = inputSchema;
             return this;
         }
-        public Builder inputSchema(@Nullable Either<String,InputSchema> inputSchema) {
-            this.inputSchema = Codegen.ofNullable(inputSchema);
-            return this;
+
+        public Builder inputSchema(Either<String,InputSchema> inputSchema) {
+            return inputSchema(Output.of(inputSchema));
         }
+
         public Builder inputSchemaMapping(@Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping) {
-            this.inputSchemaMapping = inputSchemaMapping;
+            $.inputSchemaMapping = inputSchemaMapping;
             return this;
         }
-        public Builder inputSchemaMapping(@Nullable JsonInputSchemaMappingArgs inputSchemaMapping) {
-            this.inputSchemaMapping = Codegen.ofNullable(inputSchemaMapping);
-            return this;
+
+        public Builder inputSchemaMapping(JsonInputSchemaMappingArgs inputSchemaMapping) {
+            return inputSchemaMapping(Output.of(inputSchemaMapping));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder topicName(@Nullable Output<String> topicName) {
-            this.topicName = topicName;
+            $.topicName = topicName;
             return this;
         }
-        public Builder topicName(@Nullable String topicName) {
-            this.topicName = Codegen.ofNullable(topicName);
-            return this;
-        }        public TopicArgs build() {
-            return new TopicArgs(inboundIpRules, inputSchema, inputSchemaMapping, location, publicNetworkAccess, resourceGroupName, tags, topicName);
+
+        public Builder topicName(String topicName) {
+            return topicName(Output.of(topicName));
+        }
+
+        public TopicArgs build() {
+            $.inputSchema = Codegen.stringProp("inputSchema").left(InputSchema.class).output().arg($.inputSchema).def("EventGridSchema").getNullable();
+            $.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").left(PublicNetworkAccess.class).output().arg($.publicNetworkAccess).def("Enabled").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

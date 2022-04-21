@@ -10,6 +10,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="additionalHeaders")
-      private final @Nullable Output<Object> additionalHeaders;
+    private @Nullable Output<Object> additionalHeaders;
 
-    public Output<Object> additionalHeaders() {
-        return this.additionalHeaders == null ? Codegen.empty() : this.additionalHeaders;
+    public Optional<Output<Object>> additionalHeaders() {
+        return Optional.ofNullable(this.additionalHeaders);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enablePartitionDiscovery")
-      private final @Nullable Output<Boolean> enablePartitionDiscovery;
+    private @Nullable Output<Boolean> enablePartitionDiscovery;
 
-    public Output<Boolean> enablePartitionDiscovery() {
-        return this.enablePartitionDiscovery == null ? Codegen.empty() : this.enablePartitionDiscovery;
+    public Optional<Output<Boolean>> enablePartitionDiscovery() {
+        return Optional.ofNullable(this.enablePartitionDiscovery);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="partitionRootPath")
-      private final @Nullable Output<Object> partitionRootPath;
+    private @Nullable Output<Object> partitionRootPath;
 
-    public Output<Object> partitionRootPath() {
-        return this.partitionRootPath == null ? Codegen.empty() : this.partitionRootPath;
+    public Optional<Output<Object>> partitionRootPath() {
+        return Optional.ofNullable(this.partitionRootPath);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="requestBody")
-      private final @Nullable Output<Object> requestBody;
+    private @Nullable Output<Object> requestBody;
 
-    public Output<Object> requestBody() {
-        return this.requestBody == null ? Codegen.empty() : this.requestBody;
+    public Optional<Output<Object>> requestBody() {
+        return Optional.ofNullable(this.requestBody);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="requestMethod")
-      private final @Nullable Output<Object> requestMethod;
+    private @Nullable Output<Object> requestMethod;
 
-    public Output<Object> requestMethod() {
-        return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
+    public Optional<Output<Object>> requestMethod() {
+        return Optional.ofNullable(this.requestMethod);
     }
 
     /**
@@ -103,10 +104,10 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="requestTimeout")
-      private final @Nullable Output<Object> requestTimeout;
+    private @Nullable Output<Object> requestTimeout;
 
-    public Output<Object> requestTimeout() {
-        return this.requestTimeout == null ? Codegen.empty() : this.requestTimeout;
+    public Optional<Output<Object>> requestTimeout() {
+        return Optional.ofNullable(this.requestTimeout);
     }
 
     /**
@@ -115,154 +116,129 @@ public final class HttpReadSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public HttpReadSettingsArgs(
-        @Nullable Output<Object> additionalHeaders,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Boolean> enablePartitionDiscovery,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> partitionRootPath,
-        @Nullable Output<Object> requestBody,
-        @Nullable Output<Object> requestMethod,
-        @Nullable Output<Object> requestTimeout,
-        Output<String> type) {
-        this.additionalHeaders = additionalHeaders;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.enablePartitionDiscovery = enablePartitionDiscovery;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.partitionRootPath = partitionRootPath;
-        this.requestBody = requestBody;
-        this.requestMethod = requestMethod;
-        this.requestTimeout = requestTimeout;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private HttpReadSettingsArgs() {}
 
-    private HttpReadSettingsArgs() {
-        this.additionalHeaders = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.enablePartitionDiscovery = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.partitionRootPath = Codegen.empty();
-        this.requestBody = Codegen.empty();
-        this.requestMethod = Codegen.empty();
-        this.requestTimeout = Codegen.empty();
-        this.type = Codegen.empty();
+    private HttpReadSettingsArgs(HttpReadSettingsArgs $) {
+        this.additionalHeaders = $.additionalHeaders;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.enablePartitionDiscovery = $.enablePartitionDiscovery;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.partitionRootPath = $.partitionRootPath;
+        this.requestBody = $.requestBody;
+        this.requestMethod = $.requestMethod;
+        this.requestTimeout = $.requestTimeout;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpReadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> additionalHeaders;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Boolean> enablePartitionDiscovery;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> partitionRootPath;
-        private @Nullable Output<Object> requestBody;
-        private @Nullable Output<Object> requestMethod;
-        private @Nullable Output<Object> requestTimeout;
-        private Output<String> type;
+        private HttpReadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpReadSettingsArgs();
         }
 
         public Builder(HttpReadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalHeaders = defaults.additionalHeaders;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.enablePartitionDiscovery = defaults.enablePartitionDiscovery;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.partitionRootPath = defaults.partitionRootPath;
-    	      this.requestBody = defaults.requestBody;
-    	      this.requestMethod = defaults.requestMethod;
-    	      this.requestTimeout = defaults.requestTimeout;
-    	      this.type = defaults.type;
+            $ = new HttpReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalHeaders(@Nullable Output<Object> additionalHeaders) {
-            this.additionalHeaders = additionalHeaders;
+            $.additionalHeaders = additionalHeaders;
             return this;
         }
-        public Builder additionalHeaders(@Nullable Object additionalHeaders) {
-            this.additionalHeaders = Codegen.ofNullable(additionalHeaders);
-            return this;
+
+        public Builder additionalHeaders(Object additionalHeaders) {
+            return additionalHeaders(Output.of(additionalHeaders));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = enablePartitionDiscovery;
+            $.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
-        public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = Codegen.ofNullable(enablePartitionDiscovery);
-            return this;
+
+        public Builder enablePartitionDiscovery(Boolean enablePartitionDiscovery) {
+            return enablePartitionDiscovery(Output.of(enablePartitionDiscovery));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
-            this.partitionRootPath = partitionRootPath;
+            $.partitionRootPath = partitionRootPath;
             return this;
         }
-        public Builder partitionRootPath(@Nullable Object partitionRootPath) {
-            this.partitionRootPath = Codegen.ofNullable(partitionRootPath);
-            return this;
+
+        public Builder partitionRootPath(Object partitionRootPath) {
+            return partitionRootPath(Output.of(partitionRootPath));
         }
+
         public Builder requestBody(@Nullable Output<Object> requestBody) {
-            this.requestBody = requestBody;
+            $.requestBody = requestBody;
             return this;
         }
-        public Builder requestBody(@Nullable Object requestBody) {
-            this.requestBody = Codegen.ofNullable(requestBody);
-            return this;
+
+        public Builder requestBody(Object requestBody) {
+            return requestBody(Output.of(requestBody));
         }
+
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
-            this.requestMethod = requestMethod;
+            $.requestMethod = requestMethod;
             return this;
         }
-        public Builder requestMethod(@Nullable Object requestMethod) {
-            this.requestMethod = Codegen.ofNullable(requestMethod);
-            return this;
+
+        public Builder requestMethod(Object requestMethod) {
+            return requestMethod(Output.of(requestMethod));
         }
+
         public Builder requestTimeout(@Nullable Output<Object> requestTimeout) {
-            this.requestTimeout = requestTimeout;
+            $.requestTimeout = requestTimeout;
             return this;
         }
-        public Builder requestTimeout(@Nullable Object requestTimeout) {
-            this.requestTimeout = Codegen.ofNullable(requestTimeout);
-            return this;
+
+        public Builder requestTimeout(Object requestTimeout) {
+            return requestTimeout(Output.of(requestTimeout));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public HttpReadSettingsArgs build() {
-            return new HttpReadSettingsArgs(additionalHeaders, disableMetricsCollection, enablePartitionDiscovery, maxConcurrentConnections, partitionRootPath, requestBody, requestMethod, requestTimeout, type);
+            return type(Output.of(type));
+        }
+
+        public HttpReadSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

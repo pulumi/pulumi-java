@@ -23,7 +23,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -34,55 +34,51 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable String privateIpAddress;
+    private @Nullable String privateIpAddress;
 
     public Optional<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
-    public NetworkInterfaceResponse(
-        String id,
-        @Nullable String privateIpAddress) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.privateIpAddress = privateIpAddress;
-    }
+    private NetworkInterfaceResponse() {}
 
-    private NetworkInterfaceResponse() {
-        this.id = null;
-        this.privateIpAddress = null;
+    private NetworkInterfaceResponse(NetworkInterfaceResponse $) {
+        this.id = $.id;
+        this.privateIpAddress = $.privateIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable String privateIpAddress;
+        private NetworkInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceResponse();
         }
 
         public Builder(NetworkInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.privateIpAddress = defaults.privateIpAddress;
+            $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
-        }        public NetworkInterfaceResponse build() {
-            return new NetworkInterfaceResponse(id, privateIpAddress);
+        }
+
+        public NetworkInterfaceResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class GetAccessPointPosixUser extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="gid", required=true)
-      private final Integer gid;
+    private Integer gid;
 
     public Integer gid() {
         return this.gid;
@@ -29,7 +29,7 @@ public final class GetAccessPointPosixUser extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="secondaryGids", required=true)
-      private final List<Integer> secondaryGids;
+    private List<Integer> secondaryGids;
 
     public List<Integer> secondaryGids() {
         return this.secondaryGids;
@@ -41,67 +41,63 @@ public final class GetAccessPointPosixUser extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="uid", required=true)
-      private final Integer uid;
+    private Integer uid;
 
     public Integer uid() {
         return this.uid;
     }
 
-    public GetAccessPointPosixUser(
-        Integer gid,
-        List<Integer> secondaryGids,
-        Integer uid) {
-        this.gid = Objects.requireNonNull(gid, "expected parameter 'gid' to be non-null");
-        this.secondaryGids = Objects.requireNonNull(secondaryGids, "expected parameter 'secondaryGids' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-    }
+    private GetAccessPointPosixUser() {}
 
-    private GetAccessPointPosixUser() {
-        this.gid = null;
-        this.secondaryGids = List.of();
-        this.uid = null;
+    private GetAccessPointPosixUser(GetAccessPointPosixUser $) {
+        this.gid = $.gid;
+        this.secondaryGids = $.secondaryGids;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessPointPosixUser defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer gid;
-        private List<Integer> secondaryGids;
-        private Integer uid;
+        private GetAccessPointPosixUser $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessPointPosixUser();
         }
 
         public Builder(GetAccessPointPosixUser defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gid = defaults.gid;
-    	      this.secondaryGids = defaults.secondaryGids;
-    	      this.uid = defaults.uid;
+            $ = new GetAccessPointPosixUser(Objects.requireNonNull(defaults));
         }
 
         public Builder gid(Integer gid) {
-            this.gid = Objects.requireNonNull(gid);
+            $.gid = gid;
             return this;
         }
+
         public Builder secondaryGids(List<Integer> secondaryGids) {
-            this.secondaryGids = Objects.requireNonNull(secondaryGids);
+            $.secondaryGids = secondaryGids;
             return this;
         }
+
         public Builder secondaryGids(Integer... secondaryGids) {
             return secondaryGids(List.of(secondaryGids));
         }
+
         public Builder uid(Integer uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
-        }        public GetAccessPointPosixUser build() {
-            return new GetAccessPointPosixUser(gid, secondaryGids, uid);
+        }
+
+        public GetAccessPointPosixUser build() {
+            $.gid = Objects.requireNonNull($.gid, "expected parameter 'gid' to be non-null");
+            $.secondaryGids = Objects.requireNonNull($.secondaryGids, "expected parameter 'secondaryGids' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            return $;
         }
     }
+
 }

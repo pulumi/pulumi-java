@@ -22,7 +22,7 @@ public final class MaintenancePolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceVersion", required=true)
-      private final String resourceVersion;
+    private String resourceVersion;
 
     public String resourceVersion() {
         return this.resourceVersion;
@@ -33,55 +33,52 @@ public final class MaintenancePolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="window", required=true)
-      private final MaintenanceWindowResponse window;
+    private MaintenanceWindowResponse window;
 
     public MaintenanceWindowResponse window() {
         return this.window;
     }
 
-    public MaintenancePolicyResponse(
-        String resourceVersion,
-        MaintenanceWindowResponse window) {
-        this.resourceVersion = Objects.requireNonNull(resourceVersion, "expected parameter 'resourceVersion' to be non-null");
-        this.window = Objects.requireNonNull(window, "expected parameter 'window' to be non-null");
-    }
+    private MaintenancePolicyResponse() {}
 
-    private MaintenancePolicyResponse() {
-        this.resourceVersion = null;
-        this.window = null;
+    private MaintenancePolicyResponse(MaintenancePolicyResponse $) {
+        this.resourceVersion = $.resourceVersion;
+        this.window = $.window;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenancePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceVersion;
-        private MaintenanceWindowResponse window;
+        private MaintenancePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenancePolicyResponse();
         }
 
         public Builder(MaintenancePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceVersion = defaults.resourceVersion;
-    	      this.window = defaults.window;
+            $ = new MaintenancePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceVersion(String resourceVersion) {
-            this.resourceVersion = Objects.requireNonNull(resourceVersion);
+            $.resourceVersion = resourceVersion;
             return this;
         }
+
         public Builder window(MaintenanceWindowResponse window) {
-            this.window = Objects.requireNonNull(window);
+            $.window = window;
             return this;
-        }        public MaintenancePolicyResponse build() {
-            return new MaintenancePolicyResponse(resourceVersion, window);
+        }
+
+        public MaintenancePolicyResponse build() {
+            $.resourceVersion = Objects.requireNonNull($.resourceVersion, "expected parameter 'resourceVersion' to be non-null");
+            $.window = Objects.requireNonNull($.window, "expected parameter 'window' to be non-null");
+            return $;
         }
     }
+
 }

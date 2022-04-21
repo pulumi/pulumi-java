@@ -6,7 +6,6 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class JobS3TableOutputOptionsArgs extends com.pulumi.resources.Reso
     public static final JobS3TableOutputOptionsArgs Empty = new JobS3TableOutputOptionsArgs();
 
     @Import(name="location", required=true)
-      private final Output<JobS3LocationArgs> location;
+    private Output<JobS3LocationArgs> location;
 
     public Output<JobS3LocationArgs> location() {
         return this.location;
     }
 
-    public JobS3TableOutputOptionsArgs(Output<JobS3LocationArgs> location) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private JobS3TableOutputOptionsArgs() {}
 
-    private JobS3TableOutputOptionsArgs() {
-        this.location = Codegen.empty();
+    private JobS3TableOutputOptionsArgs(JobS3TableOutputOptionsArgs $) {
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobS3TableOutputOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<JobS3LocationArgs> location;
+        private JobS3TableOutputOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobS3TableOutputOptionsArgs();
         }
 
         public Builder(JobS3TableOutputOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
+            $ = new JobS3TableOutputOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(Output<JobS3LocationArgs> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(JobS3LocationArgs location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
-        }        public JobS3TableOutputOptionsArgs build() {
-            return new JobS3TableOutputOptionsArgs(location);
+            return location(Output.of(location));
+        }
+
+        public JobS3TableOutputOptionsArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

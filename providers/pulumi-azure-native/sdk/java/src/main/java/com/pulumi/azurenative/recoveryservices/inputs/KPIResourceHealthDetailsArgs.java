@@ -7,9 +7,9 @@ import com.pulumi.azurenative.recoveryservices.enums.ResourceHealthStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class KPIResourceHealthDetailsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceHealthStatus")
-      private final @Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus;
+    private @Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus;
 
-    public Output<Either<String,ResourceHealthStatus>> resourceHealthStatus() {
-        return this.resourceHealthStatus == null ? Codegen.empty() : this.resourceHealthStatus;
+    public Optional<Output<Either<String,ResourceHealthStatus>>> resourceHealthStatus() {
+        return Optional.ofNullable(this.resourceHealthStatus);
     }
 
-    public KPIResourceHealthDetailsArgs(@Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
-        this.resourceHealthStatus = resourceHealthStatus;
-    }
+    private KPIResourceHealthDetailsArgs() {}
 
-    private KPIResourceHealthDetailsArgs() {
-        this.resourceHealthStatus = Codegen.empty();
+    private KPIResourceHealthDetailsArgs(KPIResourceHealthDetailsArgs $) {
+        this.resourceHealthStatus = $.resourceHealthStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KPIResourceHealthDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus;
+        private KPIResourceHealthDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KPIResourceHealthDetailsArgs();
         }
 
         public Builder(KPIResourceHealthDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceHealthStatus = defaults.resourceHealthStatus;
+            $ = new KPIResourceHealthDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceHealthStatus(@Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
-            this.resourceHealthStatus = resourceHealthStatus;
+            $.resourceHealthStatus = resourceHealthStatus;
             return this;
         }
-        public Builder resourceHealthStatus(@Nullable Either<String,ResourceHealthStatus> resourceHealthStatus) {
-            this.resourceHealthStatus = Codegen.ofNullable(resourceHealthStatus);
-            return this;
-        }        public KPIResourceHealthDetailsArgs build() {
-            return new KPIResourceHealthDetailsArgs(resourceHealthStatus);
+
+        public Builder resourceHealthStatus(Either<String,ResourceHealthStatus> resourceHealthStatus) {
+            return resourceHealthStatus(Output.of(resourceHealthStatus));
+        }
+
+        public KPIResourceHealthDetailsArgs build() {
+            return $;
         }
     }
+
 }

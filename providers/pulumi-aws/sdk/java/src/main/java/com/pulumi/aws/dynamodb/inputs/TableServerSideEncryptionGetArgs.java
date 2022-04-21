@@ -5,10 +5,10 @@ package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TableServerSideEncryptionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -33,63 +33,59 @@ public final class TableServerSideEncryptionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
-    public TableServerSideEncryptionGetArgs(
-        Output<Boolean> enabled,
-        @Nullable Output<String> kmsKeyArn) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kmsKeyArn = kmsKeyArn;
-    }
+    private TableServerSideEncryptionGetArgs() {}
 
-    private TableServerSideEncryptionGetArgs() {
-        this.enabled = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
+    private TableServerSideEncryptionGetArgs(TableServerSideEncryptionGetArgs $) {
+        this.enabled = $.enabled;
+        this.kmsKeyArn = $.kmsKeyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableServerSideEncryptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
-        private @Nullable Output<String> kmsKeyArn;
+        private TableServerSideEncryptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableServerSideEncryptionGetArgs();
         }
 
         public Builder(TableServerSideEncryptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
+            $ = new TableServerSideEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
-        }        public TableServerSideEncryptionGetArgs build() {
-            return new TableServerSideEncryptionGetArgs(enabled, kmsKeyArn);
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
+        }
+
+        public TableServerSideEncryptionGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="attachmentTarget", required=true)
-      private final String attachmentTarget;
+    private String attachmentTarget;
 
     public String attachmentTarget() {
         return this.attachmentTarget;
@@ -28,7 +28,7 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -39,7 +39,7 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="firewallPolicyId", required=true)
-      private final String firewallPolicyId;
+    private String firewallPolicyId;
 
     public String firewallPolicyId() {
         return this.firewallPolicyId;
@@ -50,7 +50,7 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -61,82 +61,73 @@ public final class FirewallPolicyAssociationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="shortName", required=true)
-      private final String shortName;
+    private String shortName;
 
     public String shortName() {
         return this.shortName;
     }
 
-    public FirewallPolicyAssociationResponse(
-        String attachmentTarget,
-        String displayName,
-        String firewallPolicyId,
-        String name,
-        String shortName) {
-        this.attachmentTarget = Objects.requireNonNull(attachmentTarget, "expected parameter 'attachmentTarget' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.firewallPolicyId = Objects.requireNonNull(firewallPolicyId, "expected parameter 'firewallPolicyId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.shortName = Objects.requireNonNull(shortName, "expected parameter 'shortName' to be non-null");
-    }
+    private FirewallPolicyAssociationResponse() {}
 
-    private FirewallPolicyAssociationResponse() {
-        this.attachmentTarget = null;
-        this.displayName = null;
-        this.firewallPolicyId = null;
-        this.name = null;
-        this.shortName = null;
+    private FirewallPolicyAssociationResponse(FirewallPolicyAssociationResponse $) {
+        this.attachmentTarget = $.attachmentTarget;
+        this.displayName = $.displayName;
+        this.firewallPolicyId = $.firewallPolicyId;
+        this.name = $.name;
+        this.shortName = $.shortName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyAssociationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attachmentTarget;
-        private String displayName;
-        private String firewallPolicyId;
-        private String name;
-        private String shortName;
+        private FirewallPolicyAssociationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyAssociationResponse();
         }
 
         public Builder(FirewallPolicyAssociationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentTarget = defaults.attachmentTarget;
-    	      this.displayName = defaults.displayName;
-    	      this.firewallPolicyId = defaults.firewallPolicyId;
-    	      this.name = defaults.name;
-    	      this.shortName = defaults.shortName;
+            $ = new FirewallPolicyAssociationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentTarget(String attachmentTarget) {
-            this.attachmentTarget = Objects.requireNonNull(attachmentTarget);
+            $.attachmentTarget = attachmentTarget;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder firewallPolicyId(String firewallPolicyId) {
-            this.firewallPolicyId = Objects.requireNonNull(firewallPolicyId);
+            $.firewallPolicyId = firewallPolicyId;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder shortName(String shortName) {
-            this.shortName = Objects.requireNonNull(shortName);
+            $.shortName = shortName;
             return this;
-        }        public FirewallPolicyAssociationResponse build() {
-            return new FirewallPolicyAssociationResponse(attachmentTarget, displayName, firewallPolicyId, name, shortName);
+        }
+
+        public FirewallPolicyAssociationResponse build() {
+            $.attachmentTarget = Objects.requireNonNull($.attachmentTarget, "expected parameter 'attachmentTarget' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.firewallPolicyId = Objects.requireNonNull($.firewallPolicyId, "expected parameter 'firewallPolicyId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.shortName = Objects.requireNonNull($.shortName, "expected parameter 'shortName' to be non-null");
+            return $;
         }
     }
+
 }

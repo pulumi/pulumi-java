@@ -7,9 +7,9 @@ import com.pulumi.azurenative.securityinsights.enums.ContentType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ContentPathMapArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<Either<String,ContentType>> contentType;
+    private @Nullable Output<Either<String,ContentType>> contentType;
 
-    public Output<Either<String,ContentType>> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<Either<String,ContentType>>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class ContentPathMapArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public ContentPathMapArgs(
-        @Nullable Output<Either<String,ContentType>> contentType,
-        @Nullable Output<String> path) {
-        this.contentType = contentType;
-        this.path = path;
-    }
+    private ContentPathMapArgs() {}
 
-    private ContentPathMapArgs() {
-        this.contentType = Codegen.empty();
-        this.path = Codegen.empty();
+    private ContentPathMapArgs(ContentPathMapArgs $) {
+        this.contentType = $.contentType;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentPathMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ContentType>> contentType;
-        private @Nullable Output<String> path;
+        private ContentPathMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentPathMapArgs();
         }
 
         public Builder(ContentPathMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.path = defaults.path;
+            $ = new ContentPathMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable Output<Either<String,ContentType>> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable Either<String,ContentType> contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(Either<String,ContentType> contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public ContentPathMapArgs build() {
-            return new ContentPathMapArgs(contentType, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public ContentPathMapArgs build() {
+            return $;
         }
     }
+
 }

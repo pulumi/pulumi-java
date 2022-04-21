@@ -5,11 +5,11 @@ package com.pulumi.gcp.appengine;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsArgs;
 import com.pulumi.gcp.appengine.inputs.ApplicationIapArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authDomain")
-      private final @Nullable Output<String> authDomain;
+    private @Nullable Output<String> authDomain;
 
-    public Output<String> authDomain() {
-        return this.authDomain == null ? Codegen.empty() : this.authDomain;
+    public Optional<Output<String>> authDomain() {
+        return Optional.ofNullable(this.authDomain);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseType")
-      private final @Nullable Output<String> databaseType;
+    private @Nullable Output<String> databaseType;
 
-    public Output<String> databaseType() {
-        return this.databaseType == null ? Codegen.empty() : this.databaseType;
+    public Optional<Output<String>> databaseType() {
+        return Optional.ofNullable(this.databaseType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featureSettings")
-      private final @Nullable Output<ApplicationFeatureSettingsArgs> featureSettings;
+    private @Nullable Output<ApplicationFeatureSettingsArgs> featureSettings;
 
-    public Output<ApplicationFeatureSettingsArgs> featureSettings() {
-        return this.featureSettings == null ? Codegen.empty() : this.featureSettings;
+    public Optional<Output<ApplicationFeatureSettingsArgs>> featureSettings() {
+        return Optional.ofNullable(this.featureSettings);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iap")
-      private final @Nullable Output<ApplicationIapArgs> iap;
+    private @Nullable Output<ApplicationIapArgs> iap;
 
-    public Output<ApplicationIapArgs> iap() {
-        return this.iap == null ? Codegen.empty() : this.iap;
+    public Optional<Output<ApplicationIapArgs>> iap() {
+        return Optional.ofNullable(this.iap);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationId", required=true)
-      private final Output<String> locationId;
+    private Output<String> locationId;
 
     public Output<String> locationId() {
         return this.locationId;
@@ -83,10 +83,10 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -94,128 +94,109 @@ public final class ApplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="servingStatus")
-      private final @Nullable Output<String> servingStatus;
+    private @Nullable Output<String> servingStatus;
 
-    public Output<String> servingStatus() {
-        return this.servingStatus == null ? Codegen.empty() : this.servingStatus;
+    public Optional<Output<String>> servingStatus() {
+        return Optional.ofNullable(this.servingStatus);
     }
 
-    public ApplicationArgs(
-        @Nullable Output<String> authDomain,
-        @Nullable Output<String> databaseType,
-        @Nullable Output<ApplicationFeatureSettingsArgs> featureSettings,
-        @Nullable Output<ApplicationIapArgs> iap,
-        Output<String> locationId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> servingStatus) {
-        this.authDomain = authDomain;
-        this.databaseType = databaseType;
-        this.featureSettings = featureSettings;
-        this.iap = iap;
-        this.locationId = Objects.requireNonNull(locationId, "expected parameter 'locationId' to be non-null");
-        this.project = project;
-        this.servingStatus = servingStatus;
-    }
+    private ApplicationArgs() {}
 
-    private ApplicationArgs() {
-        this.authDomain = Codegen.empty();
-        this.databaseType = Codegen.empty();
-        this.featureSettings = Codegen.empty();
-        this.iap = Codegen.empty();
-        this.locationId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.servingStatus = Codegen.empty();
+    private ApplicationArgs(ApplicationArgs $) {
+        this.authDomain = $.authDomain;
+        this.databaseType = $.databaseType;
+        this.featureSettings = $.featureSettings;
+        this.iap = $.iap;
+        this.locationId = $.locationId;
+        this.project = $.project;
+        this.servingStatus = $.servingStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authDomain;
-        private @Nullable Output<String> databaseType;
-        private @Nullable Output<ApplicationFeatureSettingsArgs> featureSettings;
-        private @Nullable Output<ApplicationIapArgs> iap;
-        private Output<String> locationId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> servingStatus;
+        private ApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationArgs();
         }
 
         public Builder(ApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authDomain = defaults.authDomain;
-    	      this.databaseType = defaults.databaseType;
-    	      this.featureSettings = defaults.featureSettings;
-    	      this.iap = defaults.iap;
-    	      this.locationId = defaults.locationId;
-    	      this.project = defaults.project;
-    	      this.servingStatus = defaults.servingStatus;
+            $ = new ApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authDomain(@Nullable Output<String> authDomain) {
-            this.authDomain = authDomain;
+            $.authDomain = authDomain;
             return this;
         }
-        public Builder authDomain(@Nullable String authDomain) {
-            this.authDomain = Codegen.ofNullable(authDomain);
-            return this;
+
+        public Builder authDomain(String authDomain) {
+            return authDomain(Output.of(authDomain));
         }
+
         public Builder databaseType(@Nullable Output<String> databaseType) {
-            this.databaseType = databaseType;
+            $.databaseType = databaseType;
             return this;
         }
-        public Builder databaseType(@Nullable String databaseType) {
-            this.databaseType = Codegen.ofNullable(databaseType);
-            return this;
+
+        public Builder databaseType(String databaseType) {
+            return databaseType(Output.of(databaseType));
         }
+
         public Builder featureSettings(@Nullable Output<ApplicationFeatureSettingsArgs> featureSettings) {
-            this.featureSettings = featureSettings;
+            $.featureSettings = featureSettings;
             return this;
         }
-        public Builder featureSettings(@Nullable ApplicationFeatureSettingsArgs featureSettings) {
-            this.featureSettings = Codegen.ofNullable(featureSettings);
-            return this;
+
+        public Builder featureSettings(ApplicationFeatureSettingsArgs featureSettings) {
+            return featureSettings(Output.of(featureSettings));
         }
+
         public Builder iap(@Nullable Output<ApplicationIapArgs> iap) {
-            this.iap = iap;
+            $.iap = iap;
             return this;
         }
-        public Builder iap(@Nullable ApplicationIapArgs iap) {
-            this.iap = Codegen.ofNullable(iap);
-            return this;
+
+        public Builder iap(ApplicationIapArgs iap) {
+            return iap(Output.of(iap));
         }
+
         public Builder locationId(Output<String> locationId) {
-            this.locationId = Objects.requireNonNull(locationId);
+            $.locationId = locationId;
             return this;
         }
+
         public Builder locationId(String locationId) {
-            this.locationId = Output.of(Objects.requireNonNull(locationId));
-            return this;
+            return locationId(Output.of(locationId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder servingStatus(@Nullable Output<String> servingStatus) {
-            this.servingStatus = servingStatus;
+            $.servingStatus = servingStatus;
             return this;
         }
-        public Builder servingStatus(@Nullable String servingStatus) {
-            this.servingStatus = Codegen.ofNullable(servingStatus);
-            return this;
-        }        public ApplicationArgs build() {
-            return new ApplicationArgs(authDomain, databaseType, featureSettings, iap, locationId, project, servingStatus);
+
+        public Builder servingStatus(String servingStatus) {
+            return servingStatus(Output.of(servingStatus));
+        }
+
+        public ApplicationArgs build() {
+            $.locationId = Objects.requireNonNull($.locationId, "expected parameter 'locationId' to be non-null");
+            return $;
         }
     }
+
 }

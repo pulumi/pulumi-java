@@ -21,45 +21,45 @@ public final class ConditionContextResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accessTime", required=true)
-      private final String accessTime;
+    private String accessTime;
 
     public String accessTime() {
         return this.accessTime;
     }
 
-    public ConditionContextResponse(String accessTime) {
-        this.accessTime = Objects.requireNonNull(accessTime, "expected parameter 'accessTime' to be non-null");
-    }
+    private ConditionContextResponse() {}
 
-    private ConditionContextResponse() {
-        this.accessTime = null;
+    private ConditionContextResponse(ConditionContextResponse $) {
+        this.accessTime = $.accessTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessTime;
+        private ConditionContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionContextResponse();
         }
 
         public Builder(ConditionContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTime = defaults.accessTime;
+            $ = new ConditionContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessTime(String accessTime) {
-            this.accessTime = Objects.requireNonNull(accessTime);
+            $.accessTime = accessTime;
             return this;
-        }        public ConditionContextResponse build() {
-            return new ConditionContextResponse(accessTime);
+        }
+
+        public ConditionContextResponse build() {
+            $.accessTime = Objects.requireNonNull($.accessTime, "expected parameter 'accessTime' to be non-null");
+            return $;
         }
     }
+
 }

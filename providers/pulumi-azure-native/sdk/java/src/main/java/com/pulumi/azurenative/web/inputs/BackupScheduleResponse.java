@@ -26,7 +26,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="frequencyInterval", required=true)
-      private final Integer frequencyInterval;
+    private Integer frequencyInterval;
 
     public Integer frequencyInterval() {
         return this.frequencyInterval;
@@ -37,7 +37,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="frequencyUnit", required=true)
-      private final String frequencyUnit;
+    private String frequencyUnit;
 
     public String frequencyUnit() {
         return this.frequencyUnit;
@@ -48,7 +48,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keepAtLeastOneBackup", required=true)
-      private final Boolean keepAtLeastOneBackup;
+    private Boolean keepAtLeastOneBackup;
 
     public Boolean keepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
@@ -59,7 +59,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastExecutionTime", required=true)
-      private final String lastExecutionTime;
+    private String lastExecutionTime;
 
     public String lastExecutionTime() {
         return this.lastExecutionTime;
@@ -70,7 +70,7 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="retentionPeriodInDays", required=true)
-      private final Integer retentionPeriodInDays;
+    private Integer retentionPeriodInDays;
 
     public Integer retentionPeriodInDays() {
         return this.retentionPeriodInDays;
@@ -81,91 +81,79 @@ public final class BackupScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
-    public BackupScheduleResponse(
-        Integer frequencyInterval,
-        String frequencyUnit,
-        Boolean keepAtLeastOneBackup,
-        String lastExecutionTime,
-        Integer retentionPeriodInDays,
-        @Nullable String startTime) {
-        this.frequencyInterval = Codegen.integerProp("frequencyInterval").arg(frequencyInterval).def(7).require();
-        this.frequencyUnit = Codegen.stringProp("frequencyUnit").arg(frequencyUnit).def("Day").require();
-        this.keepAtLeastOneBackup = Codegen.booleanProp("keepAtLeastOneBackup").arg(keepAtLeastOneBackup).def(true).require();
-        this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime, "expected parameter 'lastExecutionTime' to be non-null");
-        this.retentionPeriodInDays = Codegen.integerProp("retentionPeriodInDays").arg(retentionPeriodInDays).def(30).require();
-        this.startTime = startTime;
-    }
+    private BackupScheduleResponse() {}
 
-    private BackupScheduleResponse() {
-        this.frequencyInterval = null;
-        this.frequencyUnit = null;
-        this.keepAtLeastOneBackup = null;
-        this.lastExecutionTime = null;
-        this.retentionPeriodInDays = null;
-        this.startTime = null;
+    private BackupScheduleResponse(BackupScheduleResponse $) {
+        this.frequencyInterval = $.frequencyInterval;
+        this.frequencyUnit = $.frequencyUnit;
+        this.keepAtLeastOneBackup = $.keepAtLeastOneBackup;
+        this.lastExecutionTime = $.lastExecutionTime;
+        this.retentionPeriodInDays = $.retentionPeriodInDays;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer frequencyInterval;
-        private String frequencyUnit;
-        private Boolean keepAtLeastOneBackup;
-        private String lastExecutionTime;
-        private Integer retentionPeriodInDays;
-        private @Nullable String startTime;
+        private BackupScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupScheduleResponse();
         }
 
         public Builder(BackupScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frequencyInterval = defaults.frequencyInterval;
-    	      this.frequencyUnit = defaults.frequencyUnit;
-    	      this.keepAtLeastOneBackup = defaults.keepAtLeastOneBackup;
-    	      this.lastExecutionTime = defaults.lastExecutionTime;
-    	      this.retentionPeriodInDays = defaults.retentionPeriodInDays;
-    	      this.startTime = defaults.startTime;
+            $ = new BackupScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder frequencyInterval(Integer frequencyInterval) {
-            this.frequencyInterval = Objects.requireNonNull(frequencyInterval);
+            $.frequencyInterval = frequencyInterval;
             return this;
         }
+
         public Builder frequencyUnit(String frequencyUnit) {
-            this.frequencyUnit = Objects.requireNonNull(frequencyUnit);
+            $.frequencyUnit = frequencyUnit;
             return this;
         }
+
         public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
-            this.keepAtLeastOneBackup = Objects.requireNonNull(keepAtLeastOneBackup);
+            $.keepAtLeastOneBackup = keepAtLeastOneBackup;
             return this;
         }
+
         public Builder lastExecutionTime(String lastExecutionTime) {
-            this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime);
+            $.lastExecutionTime = lastExecutionTime;
             return this;
         }
+
         public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
-            this.retentionPeriodInDays = Objects.requireNonNull(retentionPeriodInDays);
+            $.retentionPeriodInDays = retentionPeriodInDays;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
-        }        public BackupScheduleResponse build() {
-            return new BackupScheduleResponse(frequencyInterval, frequencyUnit, keepAtLeastOneBackup, lastExecutionTime, retentionPeriodInDays, startTime);
+        }
+
+        public BackupScheduleResponse build() {
+            $.frequencyInterval = Codegen.integerProp("frequencyInterval").arg($.frequencyInterval).def(7).require();
+            $.frequencyUnit = Codegen.stringProp("frequencyUnit").arg($.frequencyUnit).def("Day").require();
+            $.keepAtLeastOneBackup = Codegen.booleanProp("keepAtLeastOneBackup").arg($.keepAtLeastOneBackup).def(true).require();
+            $.lastExecutionTime = Objects.requireNonNull($.lastExecutionTime, "expected parameter 'lastExecutionTime' to be non-null");
+            $.retentionPeriodInDays = Codegen.integerProp("retentionPeriodInDays").arg($.retentionPeriodInDays).def(30).require();
+            return $;
         }
     }
+
 }

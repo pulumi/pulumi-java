@@ -21,7 +21,7 @@ public final class CapacityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publishMibPerSec", required=true)
-      private final Integer publishMibPerSec;
+    private Integer publishMibPerSec;
 
     public Integer publishMibPerSec() {
         return this.publishMibPerSec;
@@ -32,55 +32,52 @@ public final class CapacityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subscribeMibPerSec", required=true)
-      private final Integer subscribeMibPerSec;
+    private Integer subscribeMibPerSec;
 
     public Integer subscribeMibPerSec() {
         return this.subscribeMibPerSec;
     }
 
-    public CapacityResponse(
-        Integer publishMibPerSec,
-        Integer subscribeMibPerSec) {
-        this.publishMibPerSec = Objects.requireNonNull(publishMibPerSec, "expected parameter 'publishMibPerSec' to be non-null");
-        this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec, "expected parameter 'subscribeMibPerSec' to be non-null");
-    }
+    private CapacityResponse() {}
 
-    private CapacityResponse() {
-        this.publishMibPerSec = null;
-        this.subscribeMibPerSec = null;
+    private CapacityResponse(CapacityResponse $) {
+        this.publishMibPerSec = $.publishMibPerSec;
+        this.subscribeMibPerSec = $.subscribeMibPerSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer publishMibPerSec;
-        private Integer subscribeMibPerSec;
+        private CapacityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityResponse();
         }
 
         public Builder(CapacityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishMibPerSec = defaults.publishMibPerSec;
-    	      this.subscribeMibPerSec = defaults.subscribeMibPerSec;
+            $ = new CapacityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publishMibPerSec(Integer publishMibPerSec) {
-            this.publishMibPerSec = Objects.requireNonNull(publishMibPerSec);
+            $.publishMibPerSec = publishMibPerSec;
             return this;
         }
+
         public Builder subscribeMibPerSec(Integer subscribeMibPerSec) {
-            this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
+            $.subscribeMibPerSec = subscribeMibPerSec;
             return this;
-        }        public CapacityResponse build() {
-            return new CapacityResponse(publishMibPerSec, subscribeMibPerSec);
+        }
+
+        public CapacityResponse build() {
+            $.publishMibPerSec = Objects.requireNonNull($.publishMibPerSec, "expected parameter 'publishMibPerSec' to be non-null");
+            $.subscribeMibPerSec = Objects.requireNonNull($.subscribeMibPerSec, "expected parameter 'subscribeMibPerSec' to be non-null");
+            return $;
         }
     }
+
 }

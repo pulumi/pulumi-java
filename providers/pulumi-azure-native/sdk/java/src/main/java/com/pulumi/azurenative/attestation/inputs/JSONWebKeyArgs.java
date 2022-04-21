@@ -5,10 +5,10 @@ package com.pulumi.azurenative.attestation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alg")
-      private final @Nullable Output<String> alg;
+    private @Nullable Output<String> alg;
 
-    public Output<String> alg() {
-        return this.alg == null ? Codegen.empty() : this.alg;
+    public Optional<Output<String>> alg() {
+        return Optional.ofNullable(this.alg);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="crv")
-      private final @Nullable Output<String> crv;
+    private @Nullable Output<String> crv;
 
-    public Output<String> crv() {
-        return this.crv == null ? Codegen.empty() : this.crv;
+    public Optional<Output<String>> crv() {
+        return Optional.ofNullable(this.crv);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="d")
-      private final @Nullable Output<String> d;
+    private @Nullable Output<String> d;
 
-    public Output<String> d() {
-        return this.d == null ? Codegen.empty() : this.d;
+    public Optional<Output<String>> d() {
+        return Optional.ofNullable(this.d);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dp")
-      private final @Nullable Output<String> dp;
+    private @Nullable Output<String> dp;
 
-    public Output<String> dp() {
-        return this.dp == null ? Codegen.empty() : this.dp;
+    public Optional<Output<String>> dp() {
+        return Optional.ofNullable(this.dp);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dq")
-      private final @Nullable Output<String> dq;
+    private @Nullable Output<String> dq;
 
-    public Output<String> dq() {
-        return this.dq == null ? Codegen.empty() : this.dq;
+    public Optional<Output<String>> dq() {
+        return Optional.ofNullable(this.dq);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="e")
-      private final @Nullable Output<String> e;
+    private @Nullable Output<String> e;
 
-    public Output<String> e() {
-        return this.e == null ? Codegen.empty() : this.e;
+    public Optional<Output<String>> e() {
+        return Optional.ofNullable(this.e);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="k")
-      private final @Nullable Output<String> k;
+    private @Nullable Output<String> k;
 
-    public Output<String> k() {
-        return this.k == null ? Codegen.empty() : this.k;
+    public Optional<Output<String>> k() {
+        return Optional.ofNullable(this.k);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kid")
-      private final @Nullable Output<String> kid;
+    private @Nullable Output<String> kid;
 
-    public Output<String> kid() {
-        return this.kid == null ? Codegen.empty() : this.kid;
+    public Optional<Output<String>> kid() {
+        return Optional.ofNullable(this.kid);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kty", required=true)
-      private final Output<String> kty;
+    private Output<String> kty;
 
     public Output<String> kty() {
         return this.kty;
@@ -136,10 +136,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="n")
-      private final @Nullable Output<String> n;
+    private @Nullable Output<String> n;
 
-    public Output<String> n() {
-        return this.n == null ? Codegen.empty() : this.n;
+    public Optional<Output<String>> n() {
+        return Optional.ofNullable(this.n);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="p")
-      private final @Nullable Output<String> p;
+    private @Nullable Output<String> p;
 
-    public Output<String> p() {
-        return this.p == null ? Codegen.empty() : this.p;
+    public Optional<Output<String>> p() {
+        return Optional.ofNullable(this.p);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="q")
-      private final @Nullable Output<String> q;
+    private @Nullable Output<String> q;
 
-    public Output<String> q() {
-        return this.q == null ? Codegen.empty() : this.q;
+    public Optional<Output<String>> q() {
+        return Optional.ofNullable(this.q);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="qi")
-      private final @Nullable Output<String> qi;
+    private @Nullable Output<String> qi;
 
-    public Output<String> qi() {
-        return this.qi == null ? Codegen.empty() : this.qi;
+    public Optional<Output<String>> qi() {
+        return Optional.ofNullable(this.qi);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="use")
-      private final @Nullable Output<String> use;
+    private @Nullable Output<String> use;
 
-    public Output<String> use() {
-        return this.use == null ? Codegen.empty() : this.use;
+    public Optional<Output<String>> use() {
+        return Optional.ofNullable(this.use);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="x")
-      private final @Nullable Output<String> x;
+    private @Nullable Output<String> x;
 
-    public Output<String> x() {
-        return this.x == null ? Codegen.empty() : this.x;
+    public Optional<Output<String>> x() {
+        return Optional.ofNullable(this.x);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="x5c")
-      private final @Nullable Output<List<String>> x5c;
+    private @Nullable Output<List<String>> x5c;
 
-    public Output<List<String>> x5c() {
-        return this.x5c == null ? Codegen.empty() : this.x5c;
+    public Optional<Output<List<String>>> x5c() {
+        return Optional.ofNullable(this.x5c);
     }
 
     /**
@@ -222,261 +222,213 @@ public final class JSONWebKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="y")
-      private final @Nullable Output<String> y;
+    private @Nullable Output<String> y;
 
-    public Output<String> y() {
-        return this.y == null ? Codegen.empty() : this.y;
+    public Optional<Output<String>> y() {
+        return Optional.ofNullable(this.y);
     }
 
-    public JSONWebKeyArgs(
-        @Nullable Output<String> alg,
-        @Nullable Output<String> crv,
-        @Nullable Output<String> d,
-        @Nullable Output<String> dp,
-        @Nullable Output<String> dq,
-        @Nullable Output<String> e,
-        @Nullable Output<String> k,
-        @Nullable Output<String> kid,
-        Output<String> kty,
-        @Nullable Output<String> n,
-        @Nullable Output<String> p,
-        @Nullable Output<String> q,
-        @Nullable Output<String> qi,
-        @Nullable Output<String> use,
-        @Nullable Output<String> x,
-        @Nullable Output<List<String>> x5c,
-        @Nullable Output<String> y) {
-        this.alg = alg;
-        this.crv = crv;
-        this.d = d;
-        this.dp = dp;
-        this.dq = dq;
-        this.e = e;
-        this.k = k;
-        this.kid = kid;
-        this.kty = Objects.requireNonNull(kty, "expected parameter 'kty' to be non-null");
-        this.n = n;
-        this.p = p;
-        this.q = q;
-        this.qi = qi;
-        this.use = use;
-        this.x = x;
-        this.x5c = x5c;
-        this.y = y;
-    }
+    private JSONWebKeyArgs() {}
 
-    private JSONWebKeyArgs() {
-        this.alg = Codegen.empty();
-        this.crv = Codegen.empty();
-        this.d = Codegen.empty();
-        this.dp = Codegen.empty();
-        this.dq = Codegen.empty();
-        this.e = Codegen.empty();
-        this.k = Codegen.empty();
-        this.kid = Codegen.empty();
-        this.kty = Codegen.empty();
-        this.n = Codegen.empty();
-        this.p = Codegen.empty();
-        this.q = Codegen.empty();
-        this.qi = Codegen.empty();
-        this.use = Codegen.empty();
-        this.x = Codegen.empty();
-        this.x5c = Codegen.empty();
-        this.y = Codegen.empty();
+    private JSONWebKeyArgs(JSONWebKeyArgs $) {
+        this.alg = $.alg;
+        this.crv = $.crv;
+        this.d = $.d;
+        this.dp = $.dp;
+        this.dq = $.dq;
+        this.e = $.e;
+        this.k = $.k;
+        this.kid = $.kid;
+        this.kty = $.kty;
+        this.n = $.n;
+        this.p = $.p;
+        this.q = $.q;
+        this.qi = $.qi;
+        this.use = $.use;
+        this.x = $.x;
+        this.x5c = $.x5c;
+        this.y = $.y;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JSONWebKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alg;
-        private @Nullable Output<String> crv;
-        private @Nullable Output<String> d;
-        private @Nullable Output<String> dp;
-        private @Nullable Output<String> dq;
-        private @Nullable Output<String> e;
-        private @Nullable Output<String> k;
-        private @Nullable Output<String> kid;
-        private Output<String> kty;
-        private @Nullable Output<String> n;
-        private @Nullable Output<String> p;
-        private @Nullable Output<String> q;
-        private @Nullable Output<String> qi;
-        private @Nullable Output<String> use;
-        private @Nullable Output<String> x;
-        private @Nullable Output<List<String>> x5c;
-        private @Nullable Output<String> y;
+        private JSONWebKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JSONWebKeyArgs();
         }
 
         public Builder(JSONWebKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alg = defaults.alg;
-    	      this.crv = defaults.crv;
-    	      this.d = defaults.d;
-    	      this.dp = defaults.dp;
-    	      this.dq = defaults.dq;
-    	      this.e = defaults.e;
-    	      this.k = defaults.k;
-    	      this.kid = defaults.kid;
-    	      this.kty = defaults.kty;
-    	      this.n = defaults.n;
-    	      this.p = defaults.p;
-    	      this.q = defaults.q;
-    	      this.qi = defaults.qi;
-    	      this.use = defaults.use;
-    	      this.x = defaults.x;
-    	      this.x5c = defaults.x5c;
-    	      this.y = defaults.y;
+            $ = new JSONWebKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alg(@Nullable Output<String> alg) {
-            this.alg = alg;
+            $.alg = alg;
             return this;
         }
-        public Builder alg(@Nullable String alg) {
-            this.alg = Codegen.ofNullable(alg);
-            return this;
+
+        public Builder alg(String alg) {
+            return alg(Output.of(alg));
         }
+
         public Builder crv(@Nullable Output<String> crv) {
-            this.crv = crv;
+            $.crv = crv;
             return this;
         }
-        public Builder crv(@Nullable String crv) {
-            this.crv = Codegen.ofNullable(crv);
-            return this;
+
+        public Builder crv(String crv) {
+            return crv(Output.of(crv));
         }
+
         public Builder d(@Nullable Output<String> d) {
-            this.d = d;
+            $.d = d;
             return this;
         }
-        public Builder d(@Nullable String d) {
-            this.d = Codegen.ofNullable(d);
-            return this;
+
+        public Builder d(String d) {
+            return d(Output.of(d));
         }
+
         public Builder dp(@Nullable Output<String> dp) {
-            this.dp = dp;
+            $.dp = dp;
             return this;
         }
-        public Builder dp(@Nullable String dp) {
-            this.dp = Codegen.ofNullable(dp);
-            return this;
+
+        public Builder dp(String dp) {
+            return dp(Output.of(dp));
         }
+
         public Builder dq(@Nullable Output<String> dq) {
-            this.dq = dq;
+            $.dq = dq;
             return this;
         }
-        public Builder dq(@Nullable String dq) {
-            this.dq = Codegen.ofNullable(dq);
-            return this;
+
+        public Builder dq(String dq) {
+            return dq(Output.of(dq));
         }
+
         public Builder e(@Nullable Output<String> e) {
-            this.e = e;
+            $.e = e;
             return this;
         }
-        public Builder e(@Nullable String e) {
-            this.e = Codegen.ofNullable(e);
-            return this;
+
+        public Builder e(String e) {
+            return e(Output.of(e));
         }
+
         public Builder k(@Nullable Output<String> k) {
-            this.k = k;
+            $.k = k;
             return this;
         }
-        public Builder k(@Nullable String k) {
-            this.k = Codegen.ofNullable(k);
-            return this;
+
+        public Builder k(String k) {
+            return k(Output.of(k));
         }
+
         public Builder kid(@Nullable Output<String> kid) {
-            this.kid = kid;
+            $.kid = kid;
             return this;
         }
-        public Builder kid(@Nullable String kid) {
-            this.kid = Codegen.ofNullable(kid);
-            return this;
+
+        public Builder kid(String kid) {
+            return kid(Output.of(kid));
         }
+
         public Builder kty(Output<String> kty) {
-            this.kty = Objects.requireNonNull(kty);
+            $.kty = kty;
             return this;
         }
+
         public Builder kty(String kty) {
-            this.kty = Output.of(Objects.requireNonNull(kty));
-            return this;
+            return kty(Output.of(kty));
         }
+
         public Builder n(@Nullable Output<String> n) {
-            this.n = n;
+            $.n = n;
             return this;
         }
-        public Builder n(@Nullable String n) {
-            this.n = Codegen.ofNullable(n);
-            return this;
+
+        public Builder n(String n) {
+            return n(Output.of(n));
         }
+
         public Builder p(@Nullable Output<String> p) {
-            this.p = p;
+            $.p = p;
             return this;
         }
-        public Builder p(@Nullable String p) {
-            this.p = Codegen.ofNullable(p);
-            return this;
+
+        public Builder p(String p) {
+            return p(Output.of(p));
         }
+
         public Builder q(@Nullable Output<String> q) {
-            this.q = q;
+            $.q = q;
             return this;
         }
-        public Builder q(@Nullable String q) {
-            this.q = Codegen.ofNullable(q);
-            return this;
+
+        public Builder q(String q) {
+            return q(Output.of(q));
         }
+
         public Builder qi(@Nullable Output<String> qi) {
-            this.qi = qi;
+            $.qi = qi;
             return this;
         }
-        public Builder qi(@Nullable String qi) {
-            this.qi = Codegen.ofNullable(qi);
-            return this;
+
+        public Builder qi(String qi) {
+            return qi(Output.of(qi));
         }
+
         public Builder use(@Nullable Output<String> use) {
-            this.use = use;
+            $.use = use;
             return this;
         }
-        public Builder use(@Nullable String use) {
-            this.use = Codegen.ofNullable(use);
-            return this;
+
+        public Builder use(String use) {
+            return use(Output.of(use));
         }
+
         public Builder x(@Nullable Output<String> x) {
-            this.x = x;
+            $.x = x;
             return this;
         }
-        public Builder x(@Nullable String x) {
-            this.x = Codegen.ofNullable(x);
-            return this;
+
+        public Builder x(String x) {
+            return x(Output.of(x));
         }
+
         public Builder x5c(@Nullable Output<List<String>> x5c) {
-            this.x5c = x5c;
+            $.x5c = x5c;
             return this;
         }
-        public Builder x5c(@Nullable List<String> x5c) {
-            this.x5c = Codegen.ofNullable(x5c);
-            return this;
+
+        public Builder x5c(List<String> x5c) {
+            return x5c(Output.of(x5c));
         }
+
         public Builder x5c(String... x5c) {
             return x5c(List.of(x5c));
         }
+
         public Builder y(@Nullable Output<String> y) {
-            this.y = y;
+            $.y = y;
             return this;
         }
-        public Builder y(@Nullable String y) {
-            this.y = Codegen.ofNullable(y);
-            return this;
-        }        public JSONWebKeyArgs build() {
-            return new JSONWebKeyArgs(alg, crv, d, dp, dq, e, k, kid, kty, n, p, q, qi, use, x, x5c, y);
+
+        public Builder y(String y) {
+            return y(Output.of(y));
+        }
+
+        public JSONWebKeyArgs build() {
+            $.kty = Objects.requireNonNull($.kty, "expected parameter 'kty' to be non-null");
+            return $;
         }
     }
+
 }

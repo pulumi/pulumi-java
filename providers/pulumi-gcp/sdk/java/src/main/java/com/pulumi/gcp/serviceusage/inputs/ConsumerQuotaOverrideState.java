@@ -5,11 +5,11 @@ package com.pulumi.gcp.serviceusage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConsumerQuotaOverrideState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<Map<String,String>> dimensions;
+    private @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<Map<String,String>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConsumerQuotaOverrideState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="force")
-      private final @Nullable Output<Boolean> force;
+    private @Nullable Output<Boolean> force;
 
-    public Output<Boolean> force() {
-        return this.force == null ? Codegen.empty() : this.force;
+    public Optional<Output<Boolean>> force() {
+        return Optional.ofNullable(this.force);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConsumerQuotaOverrideState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="limit")
-      private final @Nullable Output<String> limit;
+    private @Nullable Output<String> limit;
 
-    public Output<String> limit() {
-        return this.limit == null ? Codegen.empty() : this.limit;
+    public Optional<Output<String>> limit() {
+        return Optional.ofNullable(this.limit);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ConsumerQuotaOverrideState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="metric")
-      private final @Nullable Output<String> metric;
+    private @Nullable Output<String> metric;
 
-    public Output<String> metric() {
-        return this.metric == null ? Codegen.empty() : this.metric;
+    public Optional<Output<String>> metric() {
+        return Optional.ofNullable(this.metric);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ConsumerQuotaOverrideState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ConsumerQuotaOverrideState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="overrideValue")
-      private final @Nullable Output<String> overrideValue;
+    private @Nullable Output<String> overrideValue;
 
-    public Output<String> overrideValue() {
-        return this.overrideValue == null ? Codegen.empty() : this.overrideValue;
+    public Optional<Output<String>> overrideValue() {
+        return Optional.ofNullable(this.overrideValue);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ConsumerQuotaOverrideState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -101,141 +101,118 @@ public final class ConsumerQuotaOverrideState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public ConsumerQuotaOverrideState(
-        @Nullable Output<Map<String,String>> dimensions,
-        @Nullable Output<Boolean> force,
-        @Nullable Output<String> limit,
-        @Nullable Output<String> metric,
-        @Nullable Output<String> name,
-        @Nullable Output<String> overrideValue,
-        @Nullable Output<String> project,
-        @Nullable Output<String> service) {
-        this.dimensions = dimensions;
-        this.force = force;
-        this.limit = limit;
-        this.metric = metric;
-        this.name = name;
-        this.overrideValue = overrideValue;
-        this.project = project;
-        this.service = service;
-    }
+    private ConsumerQuotaOverrideState() {}
 
-    private ConsumerQuotaOverrideState() {
-        this.dimensions = Codegen.empty();
-        this.force = Codegen.empty();
-        this.limit = Codegen.empty();
-        this.metric = Codegen.empty();
-        this.name = Codegen.empty();
-        this.overrideValue = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
+    private ConsumerQuotaOverrideState(ConsumerQuotaOverrideState $) {
+        this.dimensions = $.dimensions;
+        this.force = $.force;
+        this.limit = $.limit;
+        this.metric = $.metric;
+        this.name = $.name;
+        this.overrideValue = $.overrideValue;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsumerQuotaOverrideState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> dimensions;
-        private @Nullable Output<Boolean> force;
-        private @Nullable Output<String> limit;
-        private @Nullable Output<String> metric;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> overrideValue;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> service;
+        private ConsumerQuotaOverrideState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsumerQuotaOverrideState();
         }
 
         public Builder(ConsumerQuotaOverrideState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.force = defaults.force;
-    	      this.limit = defaults.limit;
-    	      this.metric = defaults.metric;
-    	      this.name = defaults.name;
-    	      this.overrideValue = defaults.overrideValue;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new ConsumerQuotaOverrideState(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(Map<String,String> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder force(@Nullable Output<Boolean> force) {
-            this.force = force;
+            $.force = force;
             return this;
         }
-        public Builder force(@Nullable Boolean force) {
-            this.force = Codegen.ofNullable(force);
-            return this;
+
+        public Builder force(Boolean force) {
+            return force(Output.of(force));
         }
+
         public Builder limit(@Nullable Output<String> limit) {
-            this.limit = limit;
+            $.limit = limit;
             return this;
         }
-        public Builder limit(@Nullable String limit) {
-            this.limit = Codegen.ofNullable(limit);
-            return this;
+
+        public Builder limit(String limit) {
+            return limit(Output.of(limit));
         }
+
         public Builder metric(@Nullable Output<String> metric) {
-            this.metric = metric;
+            $.metric = metric;
             return this;
         }
-        public Builder metric(@Nullable String metric) {
-            this.metric = Codegen.ofNullable(metric);
-            return this;
+
+        public Builder metric(String metric) {
+            return metric(Output.of(metric));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder overrideValue(@Nullable Output<String> overrideValue) {
-            this.overrideValue = overrideValue;
+            $.overrideValue = overrideValue;
             return this;
         }
-        public Builder overrideValue(@Nullable String overrideValue) {
-            this.overrideValue = Codegen.ofNullable(overrideValue);
-            return this;
+
+        public Builder overrideValue(String overrideValue) {
+            return overrideValue(Output.of(overrideValue));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public ConsumerQuotaOverrideState build() {
-            return new ConsumerQuotaOverrideState(dimensions, force, limit, metric, name, overrideValue, project, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public ConsumerQuotaOverrideState build() {
+            return $;
         }
     }
+
 }

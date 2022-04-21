@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudchannel_v1.enums.GoogleCloudChannelV1PeriodPeriodType;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudChannelV1PeriodArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<Integer> duration;
+    private @Nullable Output<Integer> duration;
 
-    public Output<Integer> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<Integer>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudChannelV1PeriodArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="periodType")
-      private final @Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType;
+    private @Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType;
 
-    public Output<GoogleCloudChannelV1PeriodPeriodType> periodType() {
-        return this.periodType == null ? Codegen.empty() : this.periodType;
+    public Optional<Output<GoogleCloudChannelV1PeriodPeriodType>> periodType() {
+        return Optional.ofNullable(this.periodType);
     }
 
-    public GoogleCloudChannelV1PeriodArgs(
-        @Nullable Output<Integer> duration,
-        @Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType) {
-        this.duration = duration;
-        this.periodType = periodType;
-    }
+    private GoogleCloudChannelV1PeriodArgs() {}
 
-    private GoogleCloudChannelV1PeriodArgs() {
-        this.duration = Codegen.empty();
-        this.periodType = Codegen.empty();
+    private GoogleCloudChannelV1PeriodArgs(GoogleCloudChannelV1PeriodArgs $) {
+        this.duration = $.duration;
+        this.periodType = $.periodType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1PeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> duration;
-        private @Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType;
+        private GoogleCloudChannelV1PeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1PeriodArgs();
         }
 
         public Builder(GoogleCloudChannelV1PeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.periodType = defaults.periodType;
+            $ = new GoogleCloudChannelV1PeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable Output<Integer> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable Integer duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(Integer duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder periodType(@Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType) {
-            this.periodType = periodType;
+            $.periodType = periodType;
             return this;
         }
-        public Builder periodType(@Nullable GoogleCloudChannelV1PeriodPeriodType periodType) {
-            this.periodType = Codegen.ofNullable(periodType);
-            return this;
-        }        public GoogleCloudChannelV1PeriodArgs build() {
-            return new GoogleCloudChannelV1PeriodArgs(duration, periodType);
+
+        public Builder periodType(GoogleCloudChannelV1PeriodPeriodType periodType) {
+            return periodType(Output.of(periodType));
+        }
+
+        public GoogleCloudChannelV1PeriodArgs build() {
+            return $;
         }
     }
+
 }

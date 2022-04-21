@@ -21,7 +21,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cpuCount", required=true)
-      private final Integer cpuCount;
+    private Integer cpuCount;
 
     public Integer cpuCount() {
         return this.cpuCount;
@@ -32,55 +32,52 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="memorySizeMb", required=true)
-      private final Integer memorySizeMb;
+    private Integer memorySizeMb;
 
     public Integer memorySizeMb() {
         return this.memorySizeMb;
     }
 
-    public NodeConfigResponse(
-        Integer cpuCount,
-        Integer memorySizeMb) {
-        this.cpuCount = Objects.requireNonNull(cpuCount, "expected parameter 'cpuCount' to be non-null");
-        this.memorySizeMb = Objects.requireNonNull(memorySizeMb, "expected parameter 'memorySizeMb' to be non-null");
-    }
+    private NodeConfigResponse() {}
 
-    private NodeConfigResponse() {
-        this.cpuCount = null;
-        this.memorySizeMb = null;
+    private NodeConfigResponse(NodeConfigResponse $) {
+        this.cpuCount = $.cpuCount;
+        this.memorySizeMb = $.memorySizeMb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer cpuCount;
-        private Integer memorySizeMb;
+        private NodeConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeConfigResponse();
         }
 
         public Builder(NodeConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuCount = defaults.cpuCount;
-    	      this.memorySizeMb = defaults.memorySizeMb;
+            $ = new NodeConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuCount(Integer cpuCount) {
-            this.cpuCount = Objects.requireNonNull(cpuCount);
+            $.cpuCount = cpuCount;
             return this;
         }
+
         public Builder memorySizeMb(Integer memorySizeMb) {
-            this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
+            $.memorySizeMb = memorySizeMb;
             return this;
-        }        public NodeConfigResponse build() {
-            return new NodeConfigResponse(cpuCount, memorySizeMb);
+        }
+
+        public NodeConfigResponse build() {
+            $.cpuCount = Objects.requireNonNull($.cpuCount, "expected parameter 'cpuCount' to be non-null");
+            $.memorySizeMb = Objects.requireNonNull($.memorySizeMb, "expected parameter 'memorySizeMb' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetVirtualMachineArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vmName", required=true)
-      private final String vmName;
+    private String vmName;
 
     public String vmName() {
         return this.vmName;
     }
 
-    public GetVirtualMachineArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String vmName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vmName = Objects.requireNonNull(vmName, "expected parameter 'vmName' to be non-null");
-    }
+    private GetVirtualMachineArgs() {}
 
-    private GetVirtualMachineArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.vmName = null;
+    private GetVirtualMachineArgs(GetVirtualMachineArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vmName = $.vmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String vmName;
+        private GetVirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualMachineArgs();
         }
 
         public Builder(GetVirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vmName = defaults.vmName;
+            $ = new GetVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vmName(String vmName) {
-            this.vmName = Objects.requireNonNull(vmName);
+            $.vmName = vmName;
             return this;
-        }        public GetVirtualMachineArgs build() {
-            return new GetVirtualMachineArgs(expand, resourceGroupName, vmName);
+        }
+
+        public GetVirtualMachineArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmName = Objects.requireNonNull($.vmName, "expected parameter 'vmName' to be non-null");
+            return $;
         }
     }
+
 }

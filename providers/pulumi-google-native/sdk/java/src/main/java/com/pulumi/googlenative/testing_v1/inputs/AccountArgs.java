@@ -5,9 +5,9 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.GoogleAutoArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="googleAuto")
-      private final @Nullable Output<GoogleAutoArgs> googleAuto;
+    private @Nullable Output<GoogleAutoArgs> googleAuto;
 
-    public Output<GoogleAutoArgs> googleAuto() {
-        return this.googleAuto == null ? Codegen.empty() : this.googleAuto;
+    public Optional<Output<GoogleAutoArgs>> googleAuto() {
+        return Optional.ofNullable(this.googleAuto);
     }
 
-    public AccountArgs(@Nullable Output<GoogleAutoArgs> googleAuto) {
-        this.googleAuto = googleAuto;
-    }
+    private AccountArgs() {}
 
-    private AccountArgs() {
-        this.googleAuto = Codegen.empty();
+    private AccountArgs(AccountArgs $) {
+        this.googleAuto = $.googleAuto;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleAutoArgs> googleAuto;
+        private AccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountArgs();
         }
 
         public Builder(AccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.googleAuto = defaults.googleAuto;
+            $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder googleAuto(@Nullable Output<GoogleAutoArgs> googleAuto) {
-            this.googleAuto = googleAuto;
+            $.googleAuto = googleAuto;
             return this;
         }
-        public Builder googleAuto(@Nullable GoogleAutoArgs googleAuto) {
-            this.googleAuto = Codegen.ofNullable(googleAuto);
-            return this;
-        }        public AccountArgs build() {
-            return new AccountArgs(googleAuto);
+
+        public Builder googleAuto(GoogleAutoArgs googleAuto) {
+            return googleAuto(Output.of(googleAuto));
+        }
+
+        public AccountArgs build() {
+            return $;
         }
     }
+
 }

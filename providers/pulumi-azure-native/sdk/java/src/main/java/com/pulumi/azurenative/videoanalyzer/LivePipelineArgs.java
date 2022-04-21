@@ -6,11 +6,11 @@ package com.pulumi.azurenative.videoanalyzer;
 import com.pulumi.azurenative.videoanalyzer.inputs.ParameterDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bitrateKbps", required=true)
-      private final Output<Integer> bitrateKbps;
+    private Output<Integer> bitrateKbps;
 
     public Output<Integer> bitrateKbps() {
         return this.bitrateKbps;
@@ -45,10 +45,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="livePipelineName")
-      private final @Nullable Output<String> livePipelineName;
+    private @Nullable Output<String> livePipelineName;
 
-    public Output<String> livePipelineName() {
-        return this.livePipelineName == null ? Codegen.empty() : this.livePipelineName;
+    public Optional<Output<String>> livePipelineName() {
+        return Optional.ofNullable(this.livePipelineName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ParameterDefinitionArgs>> parameters;
+    private @Nullable Output<List<ParameterDefinitionArgs>> parameters;
 
-    public Output<List<ParameterDefinitionArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ParameterDefinitionArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,131 +89,116 @@ public final class LivePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topologyName", required=true)
-      private final Output<String> topologyName;
+    private Output<String> topologyName;
 
     public Output<String> topologyName() {
         return this.topologyName;
     }
 
-    public LivePipelineArgs(
-        Output<String> accountName,
-        Output<Integer> bitrateKbps,
-        @Nullable Output<String> description,
-        @Nullable Output<String> livePipelineName,
-        @Nullable Output<List<ParameterDefinitionArgs>> parameters,
-        Output<String> resourceGroupName,
-        Output<String> topologyName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.bitrateKbps = Objects.requireNonNull(bitrateKbps, "expected parameter 'bitrateKbps' to be non-null");
-        this.description = description;
-        this.livePipelineName = livePipelineName;
-        this.parameters = parameters;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.topologyName = Objects.requireNonNull(topologyName, "expected parameter 'topologyName' to be non-null");
-    }
+    private LivePipelineArgs() {}
 
-    private LivePipelineArgs() {
-        this.accountName = Codegen.empty();
-        this.bitrateKbps = Codegen.empty();
-        this.description = Codegen.empty();
-        this.livePipelineName = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.topologyName = Codegen.empty();
+    private LivePipelineArgs(LivePipelineArgs $) {
+        this.accountName = $.accountName;
+        this.bitrateKbps = $.bitrateKbps;
+        this.description = $.description;
+        this.livePipelineName = $.livePipelineName;
+        this.parameters = $.parameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.topologyName = $.topologyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LivePipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<Integer> bitrateKbps;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> livePipelineName;
-        private @Nullable Output<List<ParameterDefinitionArgs>> parameters;
-        private Output<String> resourceGroupName;
-        private Output<String> topologyName;
+        private LivePipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LivePipelineArgs();
         }
 
         public Builder(LivePipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.bitrateKbps = defaults.bitrateKbps;
-    	      this.description = defaults.description;
-    	      this.livePipelineName = defaults.livePipelineName;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.topologyName = defaults.topologyName;
+            $ = new LivePipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder bitrateKbps(Output<Integer> bitrateKbps) {
-            this.bitrateKbps = Objects.requireNonNull(bitrateKbps);
+            $.bitrateKbps = bitrateKbps;
             return this;
         }
+
         public Builder bitrateKbps(Integer bitrateKbps) {
-            this.bitrateKbps = Output.of(Objects.requireNonNull(bitrateKbps));
-            return this;
+            return bitrateKbps(Output.of(bitrateKbps));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder livePipelineName(@Nullable Output<String> livePipelineName) {
-            this.livePipelineName = livePipelineName;
+            $.livePipelineName = livePipelineName;
             return this;
         }
-        public Builder livePipelineName(@Nullable String livePipelineName) {
-            this.livePipelineName = Codegen.ofNullable(livePipelineName);
-            return this;
+
+        public Builder livePipelineName(String livePipelineName) {
+            return livePipelineName(Output.of(livePipelineName));
         }
+
         public Builder parameters(@Nullable Output<List<ParameterDefinitionArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ParameterDefinitionArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ParameterDefinitionArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ParameterDefinitionArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder topologyName(Output<String> topologyName) {
-            this.topologyName = Objects.requireNonNull(topologyName);
+            $.topologyName = topologyName;
             return this;
         }
+
         public Builder topologyName(String topologyName) {
-            this.topologyName = Output.of(Objects.requireNonNull(topologyName));
-            return this;
-        }        public LivePipelineArgs build() {
-            return new LivePipelineArgs(accountName, bitrateKbps, description, livePipelineName, parameters, resourceGroupName, topologyName);
+            return topologyName(Output.of(topologyName));
+        }
+
+        public LivePipelineArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.bitrateKbps = Objects.requireNonNull($.bitrateKbps, "expected parameter 'bitrateKbps' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.topologyName = Objects.requireNonNull($.topologyName, "expected parameter 'topologyName' to be non-null");
+            return $;
         }
     }
+
 }

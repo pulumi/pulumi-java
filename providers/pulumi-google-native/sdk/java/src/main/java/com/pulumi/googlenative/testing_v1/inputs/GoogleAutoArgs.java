@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.testing_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GoogleAutoArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final GoogleAutoArgs Empty = new GoogleAutoArgs();
 
-    public GoogleAutoArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GoogleAutoArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GoogleAutoArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GoogleAutoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GoogleAutoArgs();
         }
         public GoogleAutoArgs build() {
-            return new GoogleAutoArgs();
+            return $;
         }
     }
+
 }

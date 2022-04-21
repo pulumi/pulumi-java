@@ -33,10 +33,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="azureASN")
-      private final @Nullable Integer azureASN;
+    private @Nullable Integer azureASN;
 
     public Optional<Integer> azureASN() {
-        return this.azureASN == null ? Optional.empty() : Optional.ofNullable(this.azureASN);
+        return Optional.ofNullable(this.azureASN);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="connections")
-      private final @Nullable List<ExpressRouteCircuitConnectionResponse> connections;
+    private @Nullable List<ExpressRouteCircuitConnectionResponse> connections;
 
-    public List<ExpressRouteCircuitConnectionResponse> connections() {
-        return this.connections == null ? List.of() : this.connections;
+    public Optional<List<ExpressRouteCircuitConnectionResponse>> connections() {
+        return Optional.ofNullable(this.connections);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -66,10 +66,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="expressRouteConnection")
-      private final @Nullable ExpressRouteConnectionIdResponse expressRouteConnection;
+    private @Nullable ExpressRouteConnectionIdResponse expressRouteConnection;
 
     public Optional<ExpressRouteConnectionIdResponse> expressRouteConnection() {
-        return this.expressRouteConnection == null ? Optional.empty() : Optional.ofNullable(this.expressRouteConnection);
+        return Optional.ofNullable(this.expressRouteConnection);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="gatewayManagerEtag")
-      private final @Nullable String gatewayManagerEtag;
+    private @Nullable String gatewayManagerEtag;
 
     public Optional<String> gatewayManagerEtag() {
-        return this.gatewayManagerEtag == null ? Optional.empty() : Optional.ofNullable(this.gatewayManagerEtag);
+        return Optional.ofNullable(this.gatewayManagerEtag);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="ipv6PeeringConfig")
-      private final @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig;
+    private @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig;
 
     public Optional<Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig() {
-        return this.ipv6PeeringConfig == null ? Optional.empty() : Optional.ofNullable(this.ipv6PeeringConfig);
+        return Optional.ofNullable(this.ipv6PeeringConfig);
     }
 
     /**
@@ -110,7 +110,7 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="lastModifiedBy", required=true)
-      private final String lastModifiedBy;
+    private String lastModifiedBy;
 
     public String lastModifiedBy() {
         return this.lastModifiedBy;
@@ -121,10 +121,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="microsoftPeeringConfig")
-      private final @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
+    private @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
 
     public Optional<ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
-        return this.microsoftPeeringConfig == null ? Optional.empty() : Optional.ofNullable(this.microsoftPeeringConfig);
+        return Optional.ofNullable(this.microsoftPeeringConfig);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="peerASN")
-      private final @Nullable Double peerASN;
+    private @Nullable Double peerASN;
 
     public Optional<Double> peerASN() {
-        return this.peerASN == null ? Optional.empty() : Optional.ofNullable(this.peerASN);
+        return Optional.ofNullable(this.peerASN);
     }
 
     /**
@@ -154,7 +154,7 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="peeredConnections", required=true)
-      private final List<PeerExpressRouteCircuitConnectionResponse> peeredConnections;
+    private List<PeerExpressRouteCircuitConnectionResponse> peeredConnections;
 
     public List<PeerExpressRouteCircuitConnectionResponse> peeredConnections() {
         return this.peeredConnections;
@@ -165,10 +165,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="peeringType")
-      private final @Nullable String peeringType;
+    private @Nullable String peeringType;
 
     public Optional<String> peeringType() {
-        return this.peeringType == null ? Optional.empty() : Optional.ofNullable(this.peeringType);
+        return Optional.ofNullable(this.peeringType);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="primaryAzurePort")
-      private final @Nullable String primaryAzurePort;
+    private @Nullable String primaryAzurePort;
 
     public Optional<String> primaryAzurePort() {
-        return this.primaryAzurePort == null ? Optional.empty() : Optional.ofNullable(this.primaryAzurePort);
+        return Optional.ofNullable(this.primaryAzurePort);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="primaryPeerAddressPrefix")
-      private final @Nullable String primaryPeerAddressPrefix;
+    private @Nullable String primaryPeerAddressPrefix;
 
     public Optional<String> primaryPeerAddressPrefix() {
-        return this.primaryPeerAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.primaryPeerAddressPrefix);
+        return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
 
     /**
@@ -198,7 +198,7 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -209,10 +209,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="routeFilter")
-      private final @Nullable SubResourceResponse routeFilter;
+    private @Nullable SubResourceResponse routeFilter;
 
     public Optional<SubResourceResponse> routeFilter() {
-        return this.routeFilter == null ? Optional.empty() : Optional.ofNullable(this.routeFilter);
+        return Optional.ofNullable(this.routeFilter);
     }
 
     /**
@@ -220,10 +220,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="secondaryAzurePort")
-      private final @Nullable String secondaryAzurePort;
+    private @Nullable String secondaryAzurePort;
 
     public Optional<String> secondaryAzurePort() {
-        return this.secondaryAzurePort == null ? Optional.empty() : Optional.ofNullable(this.secondaryAzurePort);
+        return Optional.ofNullable(this.secondaryAzurePort);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="secondaryPeerAddressPrefix")
-      private final @Nullable String secondaryPeerAddressPrefix;
+    private @Nullable String secondaryPeerAddressPrefix;
 
     public Optional<String> secondaryPeerAddressPrefix() {
-        return this.secondaryPeerAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.secondaryPeerAddressPrefix);
+        return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="sharedKey")
-      private final @Nullable String sharedKey;
+    private @Nullable String sharedKey;
 
     public Optional<String> sharedKey() {
-        return this.sharedKey == null ? Optional.empty() : Optional.ofNullable(this.sharedKey);
+        return Optional.ofNullable(this.sharedKey);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="stats")
-      private final @Nullable ExpressRouteCircuitStatsResponse stats;
+    private @Nullable ExpressRouteCircuitStatsResponse stats;
 
     public Optional<ExpressRouteCircuitStatsResponse> stats() {
-        return this.stats == null ? Optional.empty() : Optional.ofNullable(this.stats);
+        return Optional.ofNullable(this.stats);
     }
 
     /**
@@ -275,7 +275,7 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -286,259 +286,195 @@ public final class ExpressRouteCircuitPeeringResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="vlanId")
-      private final @Nullable Integer vlanId;
+    private @Nullable Integer vlanId;
 
     public Optional<Integer> vlanId() {
-        return this.vlanId == null ? Optional.empty() : Optional.ofNullable(this.vlanId);
+        return Optional.ofNullable(this.vlanId);
     }
 
-    public ExpressRouteCircuitPeeringResponse(
-        @Nullable Integer azureASN,
-        @Nullable List<ExpressRouteCircuitConnectionResponse> connections,
-        String etag,
-        @Nullable ExpressRouteConnectionIdResponse expressRouteConnection,
-        @Nullable String gatewayManagerEtag,
-        @Nullable String id,
-        @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig,
-        String lastModifiedBy,
-        @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
-        @Nullable String name,
-        @Nullable Double peerASN,
-        List<PeerExpressRouteCircuitConnectionResponse> peeredConnections,
-        @Nullable String peeringType,
-        @Nullable String primaryAzurePort,
-        @Nullable String primaryPeerAddressPrefix,
-        String provisioningState,
-        @Nullable SubResourceResponse routeFilter,
-        @Nullable String secondaryAzurePort,
-        @Nullable String secondaryPeerAddressPrefix,
-        @Nullable String sharedKey,
-        @Nullable String state,
-        @Nullable ExpressRouteCircuitStatsResponse stats,
-        String type,
-        @Nullable Integer vlanId) {
-        this.azureASN = azureASN;
-        this.connections = connections;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.expressRouteConnection = expressRouteConnection;
-        this.gatewayManagerEtag = gatewayManagerEtag;
-        this.id = id;
-        this.ipv6PeeringConfig = ipv6PeeringConfig;
-        this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy, "expected parameter 'lastModifiedBy' to be non-null");
-        this.microsoftPeeringConfig = microsoftPeeringConfig;
-        this.name = name;
-        this.peerASN = peerASN;
-        this.peeredConnections = Objects.requireNonNull(peeredConnections, "expected parameter 'peeredConnections' to be non-null");
-        this.peeringType = peeringType;
-        this.primaryAzurePort = primaryAzurePort;
-        this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.routeFilter = routeFilter;
-        this.secondaryAzurePort = secondaryAzurePort;
-        this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
-        this.sharedKey = sharedKey;
-        this.state = state;
-        this.stats = stats;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.vlanId = vlanId;
-    }
+    private ExpressRouteCircuitPeeringResponse() {}
 
-    private ExpressRouteCircuitPeeringResponse() {
-        this.azureASN = null;
-        this.connections = List.of();
-        this.etag = null;
-        this.expressRouteConnection = null;
-        this.gatewayManagerEtag = null;
-        this.id = null;
-        this.ipv6PeeringConfig = null;
-        this.lastModifiedBy = null;
-        this.microsoftPeeringConfig = null;
-        this.name = null;
-        this.peerASN = null;
-        this.peeredConnections = List.of();
-        this.peeringType = null;
-        this.primaryAzurePort = null;
-        this.primaryPeerAddressPrefix = null;
-        this.provisioningState = null;
-        this.routeFilter = null;
-        this.secondaryAzurePort = null;
-        this.secondaryPeerAddressPrefix = null;
-        this.sharedKey = null;
-        this.state = null;
-        this.stats = null;
-        this.type = null;
-        this.vlanId = null;
+    private ExpressRouteCircuitPeeringResponse(ExpressRouteCircuitPeeringResponse $) {
+        this.azureASN = $.azureASN;
+        this.connections = $.connections;
+        this.etag = $.etag;
+        this.expressRouteConnection = $.expressRouteConnection;
+        this.gatewayManagerEtag = $.gatewayManagerEtag;
+        this.id = $.id;
+        this.ipv6PeeringConfig = $.ipv6PeeringConfig;
+        this.lastModifiedBy = $.lastModifiedBy;
+        this.microsoftPeeringConfig = $.microsoftPeeringConfig;
+        this.name = $.name;
+        this.peerASN = $.peerASN;
+        this.peeredConnections = $.peeredConnections;
+        this.peeringType = $.peeringType;
+        this.primaryAzurePort = $.primaryAzurePort;
+        this.primaryPeerAddressPrefix = $.primaryPeerAddressPrefix;
+        this.provisioningState = $.provisioningState;
+        this.routeFilter = $.routeFilter;
+        this.secondaryAzurePort = $.secondaryAzurePort;
+        this.secondaryPeerAddressPrefix = $.secondaryPeerAddressPrefix;
+        this.sharedKey = $.sharedKey;
+        this.state = $.state;
+        this.stats = $.stats;
+        this.type = $.type;
+        this.vlanId = $.vlanId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitPeeringResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer azureASN;
-        private @Nullable List<ExpressRouteCircuitConnectionResponse> connections;
-        private String etag;
-        private @Nullable ExpressRouteConnectionIdResponse expressRouteConnection;
-        private @Nullable String gatewayManagerEtag;
-        private @Nullable String id;
-        private @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig;
-        private String lastModifiedBy;
-        private @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
-        private @Nullable String name;
-        private @Nullable Double peerASN;
-        private List<PeerExpressRouteCircuitConnectionResponse> peeredConnections;
-        private @Nullable String peeringType;
-        private @Nullable String primaryAzurePort;
-        private @Nullable String primaryPeerAddressPrefix;
-        private String provisioningState;
-        private @Nullable SubResourceResponse routeFilter;
-        private @Nullable String secondaryAzurePort;
-        private @Nullable String secondaryPeerAddressPrefix;
-        private @Nullable String sharedKey;
-        private @Nullable String state;
-        private @Nullable ExpressRouteCircuitStatsResponse stats;
-        private String type;
-        private @Nullable Integer vlanId;
+        private ExpressRouteCircuitPeeringResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitPeeringResponse();
         }
 
         public Builder(ExpressRouteCircuitPeeringResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureASN = defaults.azureASN;
-    	      this.connections = defaults.connections;
-    	      this.etag = defaults.etag;
-    	      this.expressRouteConnection = defaults.expressRouteConnection;
-    	      this.gatewayManagerEtag = defaults.gatewayManagerEtag;
-    	      this.id = defaults.id;
-    	      this.ipv6PeeringConfig = defaults.ipv6PeeringConfig;
-    	      this.lastModifiedBy = defaults.lastModifiedBy;
-    	      this.microsoftPeeringConfig = defaults.microsoftPeeringConfig;
-    	      this.name = defaults.name;
-    	      this.peerASN = defaults.peerASN;
-    	      this.peeredConnections = defaults.peeredConnections;
-    	      this.peeringType = defaults.peeringType;
-    	      this.primaryAzurePort = defaults.primaryAzurePort;
-    	      this.primaryPeerAddressPrefix = defaults.primaryPeerAddressPrefix;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.routeFilter = defaults.routeFilter;
-    	      this.secondaryAzurePort = defaults.secondaryAzurePort;
-    	      this.secondaryPeerAddressPrefix = defaults.secondaryPeerAddressPrefix;
-    	      this.sharedKey = defaults.sharedKey;
-    	      this.state = defaults.state;
-    	      this.stats = defaults.stats;
-    	      this.type = defaults.type;
-    	      this.vlanId = defaults.vlanId;
+            $ = new ExpressRouteCircuitPeeringResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureASN(@Nullable Integer azureASN) {
-            this.azureASN = azureASN;
+            $.azureASN = azureASN;
             return this;
         }
+
         public Builder connections(@Nullable List<ExpressRouteCircuitConnectionResponse> connections) {
-            this.connections = connections;
+            $.connections = connections;
             return this;
         }
+
         public Builder connections(ExpressRouteCircuitConnectionResponse... connections) {
             return connections(List.of(connections));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder expressRouteConnection(@Nullable ExpressRouteConnectionIdResponse expressRouteConnection) {
-            this.expressRouteConnection = expressRouteConnection;
+            $.expressRouteConnection = expressRouteConnection;
             return this;
         }
+
         public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
-            this.gatewayManagerEtag = gatewayManagerEtag;
+            $.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig) {
-            this.ipv6PeeringConfig = ipv6PeeringConfig;
+            $.ipv6PeeringConfig = ipv6PeeringConfig;
             return this;
         }
+
         public Builder lastModifiedBy(String lastModifiedBy) {
-            this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
+            $.lastModifiedBy = lastModifiedBy;
             return this;
         }
+
         public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
-            this.microsoftPeeringConfig = microsoftPeeringConfig;
+            $.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder peerASN(@Nullable Double peerASN) {
-            this.peerASN = peerASN;
+            $.peerASN = peerASN;
             return this;
         }
+
         public Builder peeredConnections(List<PeerExpressRouteCircuitConnectionResponse> peeredConnections) {
-            this.peeredConnections = Objects.requireNonNull(peeredConnections);
+            $.peeredConnections = peeredConnections;
             return this;
         }
+
         public Builder peeredConnections(PeerExpressRouteCircuitConnectionResponse... peeredConnections) {
             return peeredConnections(List.of(peeredConnections));
         }
+
         public Builder peeringType(@Nullable String peeringType) {
-            this.peeringType = peeringType;
+            $.peeringType = peeringType;
             return this;
         }
+
         public Builder primaryAzurePort(@Nullable String primaryAzurePort) {
-            this.primaryAzurePort = primaryAzurePort;
+            $.primaryAzurePort = primaryAzurePort;
             return this;
         }
+
         public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
-            this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
+            $.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder routeFilter(@Nullable SubResourceResponse routeFilter) {
-            this.routeFilter = routeFilter;
+            $.routeFilter = routeFilter;
             return this;
         }
+
         public Builder secondaryAzurePort(@Nullable String secondaryAzurePort) {
-            this.secondaryAzurePort = secondaryAzurePort;
+            $.secondaryAzurePort = secondaryAzurePort;
             return this;
         }
+
         public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
-            this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
+            $.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
+
         public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = sharedKey;
+            $.sharedKey = sharedKey;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder stats(@Nullable ExpressRouteCircuitStatsResponse stats) {
-            this.stats = stats;
+            $.stats = stats;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder vlanId(@Nullable Integer vlanId) {
-            this.vlanId = vlanId;
+            $.vlanId = vlanId;
             return this;
-        }        public ExpressRouteCircuitPeeringResponse build() {
-            return new ExpressRouteCircuitPeeringResponse(azureASN, connections, etag, expressRouteConnection, gatewayManagerEtag, id, ipv6PeeringConfig, lastModifiedBy, microsoftPeeringConfig, name, peerASN, peeredConnections, peeringType, primaryAzurePort, primaryPeerAddressPrefix, provisioningState, routeFilter, secondaryAzurePort, secondaryPeerAddressPrefix, sharedKey, state, stats, type, vlanId);
+        }
+
+        public ExpressRouteCircuitPeeringResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.lastModifiedBy = Objects.requireNonNull($.lastModifiedBy, "expected parameter 'lastModifiedBy' to be non-null");
+            $.peeredConnections = Objects.requireNonNull($.peeredConnections, "expected parameter 'peeredConnections' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

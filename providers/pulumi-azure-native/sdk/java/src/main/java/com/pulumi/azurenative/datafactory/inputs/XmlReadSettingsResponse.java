@@ -28,10 +28,10 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="compressionProperties")
-      private final @Nullable Object compressionProperties;
+    private @Nullable Object compressionProperties;
 
-    public Object compressionProperties() {
-        return this.compressionProperties == null ? null : this.compressionProperties;
+    public Optional<Object> compressionProperties() {
+        return Optional.ofNullable(this.compressionProperties);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="detectDataType")
-      private final @Nullable Object detectDataType;
+    private @Nullable Object detectDataType;
 
     public Optional<Object> detectDataType() {
-        return this.detectDataType == null ? Optional.empty() : Optional.ofNullable(this.detectDataType);
+        return Optional.ofNullable(this.detectDataType);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="namespacePrefixes")
-      private final @Nullable Object namespacePrefixes;
+    private @Nullable Object namespacePrefixes;
 
     public Optional<Object> namespacePrefixes() {
-        return this.namespacePrefixes == null ? Optional.empty() : Optional.ofNullable(this.namespacePrefixes);
+        return Optional.ofNullable(this.namespacePrefixes);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="namespaces")
-      private final @Nullable Object namespaces;
+    private @Nullable Object namespaces;
 
     public Optional<Object> namespaces() {
-        return this.namespaces == null ? Optional.empty() : Optional.ofNullable(this.namespaces);
+        return Optional.ofNullable(this.namespaces);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -84,91 +84,75 @@ public final class XmlReadSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="validationMode")
-      private final @Nullable Object validationMode;
+    private @Nullable Object validationMode;
 
     public Optional<Object> validationMode() {
-        return this.validationMode == null ? Optional.empty() : Optional.ofNullable(this.validationMode);
+        return Optional.ofNullable(this.validationMode);
     }
 
-    public XmlReadSettingsResponse(
-        @Nullable Object compressionProperties,
-        @Nullable Object detectDataType,
-        @Nullable Object namespacePrefixes,
-        @Nullable Object namespaces,
-        String type,
-        @Nullable Object validationMode) {
-        this.compressionProperties = compressionProperties;
-        this.detectDataType = detectDataType;
-        this.namespacePrefixes = namespacePrefixes;
-        this.namespaces = namespaces;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.validationMode = validationMode;
-    }
+    private XmlReadSettingsResponse() {}
 
-    private XmlReadSettingsResponse() {
-        this.compressionProperties = null;
-        this.detectDataType = null;
-        this.namespacePrefixes = null;
-        this.namespaces = null;
-        this.type = null;
-        this.validationMode = null;
+    private XmlReadSettingsResponse(XmlReadSettingsResponse $) {
+        this.compressionProperties = $.compressionProperties;
+        this.detectDataType = $.detectDataType;
+        this.namespacePrefixes = $.namespacePrefixes;
+        this.namespaces = $.namespaces;
+        this.type = $.type;
+        this.validationMode = $.validationMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(XmlReadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object compressionProperties;
-        private @Nullable Object detectDataType;
-        private @Nullable Object namespacePrefixes;
-        private @Nullable Object namespaces;
-        private String type;
-        private @Nullable Object validationMode;
+        private XmlReadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new XmlReadSettingsResponse();
         }
 
         public Builder(XmlReadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressionProperties = defaults.compressionProperties;
-    	      this.detectDataType = defaults.detectDataType;
-    	      this.namespacePrefixes = defaults.namespacePrefixes;
-    	      this.namespaces = defaults.namespaces;
-    	      this.type = defaults.type;
-    	      this.validationMode = defaults.validationMode;
+            $ = new XmlReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = compressionProperties;
+            $.compressionProperties = compressionProperties;
             return this;
         }
+
         public Builder detectDataType(@Nullable Object detectDataType) {
-            this.detectDataType = detectDataType;
+            $.detectDataType = detectDataType;
             return this;
         }
+
         public Builder namespacePrefixes(@Nullable Object namespacePrefixes) {
-            this.namespacePrefixes = namespacePrefixes;
+            $.namespacePrefixes = namespacePrefixes;
             return this;
         }
+
         public Builder namespaces(@Nullable Object namespaces) {
-            this.namespaces = namespaces;
+            $.namespaces = namespaces;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder validationMode(@Nullable Object validationMode) {
-            this.validationMode = validationMode;
+            $.validationMode = validationMode;
             return this;
-        }        public XmlReadSettingsResponse build() {
-            return new XmlReadSettingsResponse(compressionProperties, detectDataType, namespacePrefixes, namespaces, type, validationMode);
+        }
+
+        public XmlReadSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

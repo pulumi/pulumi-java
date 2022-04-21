@@ -22,7 +22,7 @@ public final class UsageRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowUnregisteredCalls", required=true)
-      private final Boolean allowUnregisteredCalls;
+    private Boolean allowUnregisteredCalls;
 
     public Boolean allowUnregisteredCalls() {
         return this.allowUnregisteredCalls;
@@ -33,7 +33,7 @@ public final class UsageRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
@@ -44,64 +44,59 @@ public final class UsageRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skipServiceControl", required=true)
-      private final Boolean skipServiceControl;
+    private Boolean skipServiceControl;
 
     public Boolean skipServiceControl() {
         return this.skipServiceControl;
     }
 
-    public UsageRuleResponse(
-        Boolean allowUnregisteredCalls,
-        String selector,
-        Boolean skipServiceControl) {
-        this.allowUnregisteredCalls = Objects.requireNonNull(allowUnregisteredCalls, "expected parameter 'allowUnregisteredCalls' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-        this.skipServiceControl = Objects.requireNonNull(skipServiceControl, "expected parameter 'skipServiceControl' to be non-null");
-    }
+    private UsageRuleResponse() {}
 
-    private UsageRuleResponse() {
-        this.allowUnregisteredCalls = null;
-        this.selector = null;
-        this.skipServiceControl = null;
+    private UsageRuleResponse(UsageRuleResponse $) {
+        this.allowUnregisteredCalls = $.allowUnregisteredCalls;
+        this.selector = $.selector;
+        this.skipServiceControl = $.skipServiceControl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsageRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowUnregisteredCalls;
-        private String selector;
-        private Boolean skipServiceControl;
+        private UsageRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsageRuleResponse();
         }
 
         public Builder(UsageRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowUnregisteredCalls = defaults.allowUnregisteredCalls;
-    	      this.selector = defaults.selector;
-    	      this.skipServiceControl = defaults.skipServiceControl;
+            $ = new UsageRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowUnregisteredCalls(Boolean allowUnregisteredCalls) {
-            this.allowUnregisteredCalls = Objects.requireNonNull(allowUnregisteredCalls);
+            $.allowUnregisteredCalls = allowUnregisteredCalls;
             return this;
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
         }
+
         public Builder skipServiceControl(Boolean skipServiceControl) {
-            this.skipServiceControl = Objects.requireNonNull(skipServiceControl);
+            $.skipServiceControl = skipServiceControl;
             return this;
-        }        public UsageRuleResponse build() {
-            return new UsageRuleResponse(allowUnregisteredCalls, selector, skipServiceControl);
+        }
+
+        public UsageRuleResponse build() {
+            $.allowUnregisteredCalls = Objects.requireNonNull($.allowUnregisteredCalls, "expected parameter 'allowUnregisteredCalls' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            $.skipServiceControl = Objects.requireNonNull($.skipServiceControl, "expected parameter 'skipServiceControl' to be non-null");
+            return $;
         }
     }
+
 }

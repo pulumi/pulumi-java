@@ -25,7 +25,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automaticRestart", required=true)
-      private final Boolean automaticRestart;
+    private Boolean automaticRestart;
 
     public Boolean automaticRestart() {
         return this.automaticRestart;
@@ -36,7 +36,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostErrorTimeoutSeconds", required=true)
-      private final Integer hostErrorTimeoutSeconds;
+    private Integer hostErrorTimeoutSeconds;
 
     public Integer hostErrorTimeoutSeconds() {
         return this.hostErrorTimeoutSeconds;
@@ -47,7 +47,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceTerminationAction", required=true)
-      private final String instanceTerminationAction;
+    private String instanceTerminationAction;
 
     public String instanceTerminationAction() {
         return this.instanceTerminationAction;
@@ -58,7 +58,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationHint", required=true)
-      private final String locationHint;
+    private String locationHint;
 
     public String locationHint() {
         return this.locationHint;
@@ -69,7 +69,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maintenanceFreezeDurationHours", required=true)
-      private final Integer maintenanceFreezeDurationHours;
+    private Integer maintenanceFreezeDurationHours;
 
     public Integer maintenanceFreezeDurationHours() {
         return this.maintenanceFreezeDurationHours;
@@ -80,7 +80,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maintenanceInterval", required=true)
-      private final String maintenanceInterval;
+    private String maintenanceInterval;
 
     public String maintenanceInterval() {
         return this.maintenanceInterval;
@@ -91,7 +91,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minNodeCpus", required=true)
-      private final Integer minNodeCpus;
+    private Integer minNodeCpus;
 
     public Integer minNodeCpus() {
         return this.minNodeCpus;
@@ -102,7 +102,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nodeAffinities", required=true)
-      private final List<SchedulingNodeAffinityResponse> nodeAffinities;
+    private List<SchedulingNodeAffinityResponse> nodeAffinities;
 
     public List<SchedulingNodeAffinityResponse> nodeAffinities() {
         return this.nodeAffinities;
@@ -113,7 +113,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onHostMaintenance", required=true)
-      private final String onHostMaintenance;
+    private String onHostMaintenance;
 
     public String onHostMaintenance() {
         return this.onHostMaintenance;
@@ -124,7 +124,7 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="preemptible", required=true)
-      private final Boolean preemptible;
+    private Boolean preemptible;
 
     public Boolean preemptible() {
         return this.preemptible;
@@ -135,139 +135,119 @@ public final class SchedulingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningModel", required=true)
-      private final String provisioningModel;
+    private String provisioningModel;
 
     public String provisioningModel() {
         return this.provisioningModel;
     }
 
-    public SchedulingResponse(
-        Boolean automaticRestart,
-        Integer hostErrorTimeoutSeconds,
-        String instanceTerminationAction,
-        String locationHint,
-        Integer maintenanceFreezeDurationHours,
-        String maintenanceInterval,
-        Integer minNodeCpus,
-        List<SchedulingNodeAffinityResponse> nodeAffinities,
-        String onHostMaintenance,
-        Boolean preemptible,
-        String provisioningModel) {
-        this.automaticRestart = Objects.requireNonNull(automaticRestart, "expected parameter 'automaticRestart' to be non-null");
-        this.hostErrorTimeoutSeconds = Objects.requireNonNull(hostErrorTimeoutSeconds, "expected parameter 'hostErrorTimeoutSeconds' to be non-null");
-        this.instanceTerminationAction = Objects.requireNonNull(instanceTerminationAction, "expected parameter 'instanceTerminationAction' to be non-null");
-        this.locationHint = Objects.requireNonNull(locationHint, "expected parameter 'locationHint' to be non-null");
-        this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours, "expected parameter 'maintenanceFreezeDurationHours' to be non-null");
-        this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval, "expected parameter 'maintenanceInterval' to be non-null");
-        this.minNodeCpus = Objects.requireNonNull(minNodeCpus, "expected parameter 'minNodeCpus' to be non-null");
-        this.nodeAffinities = Objects.requireNonNull(nodeAffinities, "expected parameter 'nodeAffinities' to be non-null");
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance, "expected parameter 'onHostMaintenance' to be non-null");
-        this.preemptible = Objects.requireNonNull(preemptible, "expected parameter 'preemptible' to be non-null");
-        this.provisioningModel = Objects.requireNonNull(provisioningModel, "expected parameter 'provisioningModel' to be non-null");
-    }
+    private SchedulingResponse() {}
 
-    private SchedulingResponse() {
-        this.automaticRestart = null;
-        this.hostErrorTimeoutSeconds = null;
-        this.instanceTerminationAction = null;
-        this.locationHint = null;
-        this.maintenanceFreezeDurationHours = null;
-        this.maintenanceInterval = null;
-        this.minNodeCpus = null;
-        this.nodeAffinities = List.of();
-        this.onHostMaintenance = null;
-        this.preemptible = null;
-        this.provisioningModel = null;
+    private SchedulingResponse(SchedulingResponse $) {
+        this.automaticRestart = $.automaticRestart;
+        this.hostErrorTimeoutSeconds = $.hostErrorTimeoutSeconds;
+        this.instanceTerminationAction = $.instanceTerminationAction;
+        this.locationHint = $.locationHint;
+        this.maintenanceFreezeDurationHours = $.maintenanceFreezeDurationHours;
+        this.maintenanceInterval = $.maintenanceInterval;
+        this.minNodeCpus = $.minNodeCpus;
+        this.nodeAffinities = $.nodeAffinities;
+        this.onHostMaintenance = $.onHostMaintenance;
+        this.preemptible = $.preemptible;
+        this.provisioningModel = $.provisioningModel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean automaticRestart;
-        private Integer hostErrorTimeoutSeconds;
-        private String instanceTerminationAction;
-        private String locationHint;
-        private Integer maintenanceFreezeDurationHours;
-        private String maintenanceInterval;
-        private Integer minNodeCpus;
-        private List<SchedulingNodeAffinityResponse> nodeAffinities;
-        private String onHostMaintenance;
-        private Boolean preemptible;
-        private String provisioningModel;
+        private SchedulingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingResponse();
         }
 
         public Builder(SchedulingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticRestart = defaults.automaticRestart;
-    	      this.hostErrorTimeoutSeconds = defaults.hostErrorTimeoutSeconds;
-    	      this.instanceTerminationAction = defaults.instanceTerminationAction;
-    	      this.locationHint = defaults.locationHint;
-    	      this.maintenanceFreezeDurationHours = defaults.maintenanceFreezeDurationHours;
-    	      this.maintenanceInterval = defaults.maintenanceInterval;
-    	      this.minNodeCpus = defaults.minNodeCpus;
-    	      this.nodeAffinities = defaults.nodeAffinities;
-    	      this.onHostMaintenance = defaults.onHostMaintenance;
-    	      this.preemptible = defaults.preemptible;
-    	      this.provisioningModel = defaults.provisioningModel;
+            $ = new SchedulingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticRestart(Boolean automaticRestart) {
-            this.automaticRestart = Objects.requireNonNull(automaticRestart);
+            $.automaticRestart = automaticRestart;
             return this;
         }
+
         public Builder hostErrorTimeoutSeconds(Integer hostErrorTimeoutSeconds) {
-            this.hostErrorTimeoutSeconds = Objects.requireNonNull(hostErrorTimeoutSeconds);
+            $.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
             return this;
         }
+
         public Builder instanceTerminationAction(String instanceTerminationAction) {
-            this.instanceTerminationAction = Objects.requireNonNull(instanceTerminationAction);
+            $.instanceTerminationAction = instanceTerminationAction;
             return this;
         }
+
         public Builder locationHint(String locationHint) {
-            this.locationHint = Objects.requireNonNull(locationHint);
+            $.locationHint = locationHint;
             return this;
         }
+
         public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
-            this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours);
+            $.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
             return this;
         }
+
         public Builder maintenanceInterval(String maintenanceInterval) {
-            this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval);
+            $.maintenanceInterval = maintenanceInterval;
             return this;
         }
+
         public Builder minNodeCpus(Integer minNodeCpus) {
-            this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
+            $.minNodeCpus = minNodeCpus;
             return this;
         }
+
         public Builder nodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
-            this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
+            $.nodeAffinities = nodeAffinities;
             return this;
         }
+
         public Builder nodeAffinities(SchedulingNodeAffinityResponse... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
+
         public Builder onHostMaintenance(String onHostMaintenance) {
-            this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
+            $.onHostMaintenance = onHostMaintenance;
             return this;
         }
+
         public Builder preemptible(Boolean preemptible) {
-            this.preemptible = Objects.requireNonNull(preemptible);
+            $.preemptible = preemptible;
             return this;
         }
+
         public Builder provisioningModel(String provisioningModel) {
-            this.provisioningModel = Objects.requireNonNull(provisioningModel);
+            $.provisioningModel = provisioningModel;
             return this;
-        }        public SchedulingResponse build() {
-            return new SchedulingResponse(automaticRestart, hostErrorTimeoutSeconds, instanceTerminationAction, locationHint, maintenanceFreezeDurationHours, maintenanceInterval, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);
+        }
+
+        public SchedulingResponse build() {
+            $.automaticRestart = Objects.requireNonNull($.automaticRestart, "expected parameter 'automaticRestart' to be non-null");
+            $.hostErrorTimeoutSeconds = Objects.requireNonNull($.hostErrorTimeoutSeconds, "expected parameter 'hostErrorTimeoutSeconds' to be non-null");
+            $.instanceTerminationAction = Objects.requireNonNull($.instanceTerminationAction, "expected parameter 'instanceTerminationAction' to be non-null");
+            $.locationHint = Objects.requireNonNull($.locationHint, "expected parameter 'locationHint' to be non-null");
+            $.maintenanceFreezeDurationHours = Objects.requireNonNull($.maintenanceFreezeDurationHours, "expected parameter 'maintenanceFreezeDurationHours' to be non-null");
+            $.maintenanceInterval = Objects.requireNonNull($.maintenanceInterval, "expected parameter 'maintenanceInterval' to be non-null");
+            $.minNodeCpus = Objects.requireNonNull($.minNodeCpus, "expected parameter 'minNodeCpus' to be non-null");
+            $.nodeAffinities = Objects.requireNonNull($.nodeAffinities, "expected parameter 'nodeAffinities' to be non-null");
+            $.onHostMaintenance = Objects.requireNonNull($.onHostMaintenance, "expected parameter 'onHostMaintenance' to be non-null");
+            $.preemptible = Objects.requireNonNull($.preemptible, "expected parameter 'preemptible' to be non-null");
+            $.provisioningModel = Objects.requireNonNull($.provisioningModel, "expected parameter 'provisioningModel' to be non-null");
+            return $;
         }
     }
+
 }

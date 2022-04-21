@@ -21,45 +21,45 @@ public final class ConfigConnectorConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public ConfigConnectorConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ConfigConnectorConfigResponse() {}
 
-    private ConfigConnectorConfigResponse() {
-        this.enabled = null;
+    private ConfigConnectorConfigResponse(ConfigConnectorConfigResponse $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigConnectorConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private ConfigConnectorConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigConnectorConfigResponse();
         }
 
         public Builder(ConfigConnectorConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new ConfigConnectorConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public ConfigConnectorConfigResponse build() {
-            return new ConfigConnectorConfigResponse(enabled);
+        }
+
+        public ConfigConnectorConfigResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

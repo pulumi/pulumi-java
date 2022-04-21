@@ -17,7 +17,7 @@ public final class GetHoursOfOperationConfigStartTime extends com.pulumi.resourc
      * 
      */
     @Import(name="hours", required=true)
-      private final Integer hours;
+    private Integer hours;
 
     public Integer hours() {
         return this.hours;
@@ -28,55 +28,52 @@ public final class GetHoursOfOperationConfigStartTime extends com.pulumi.resourc
      * 
      */
     @Import(name="minutes", required=true)
-      private final Integer minutes;
+    private Integer minutes;
 
     public Integer minutes() {
         return this.minutes;
     }
 
-    public GetHoursOfOperationConfigStartTime(
-        Integer hours,
-        Integer minutes) {
-        this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-    }
+    private GetHoursOfOperationConfigStartTime() {}
 
-    private GetHoursOfOperationConfigStartTime() {
-        this.hours = null;
-        this.minutes = null;
+    private GetHoursOfOperationConfigStartTime(GetHoursOfOperationConfigStartTime $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHoursOfOperationConfigStartTime defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer hours;
-        private Integer minutes;
+        private GetHoursOfOperationConfigStartTime $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHoursOfOperationConfigStartTime();
         }
 
         public Builder(GetHoursOfOperationConfigStartTime defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
+            $ = new GetHoursOfOperationConfigStartTime(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(Integer hours) {
-            this.hours = Objects.requireNonNull(hours);
+            $.hours = hours;
             return this;
         }
+
         public Builder minutes(Integer minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
-        }        public GetHoursOfOperationConfigStartTime build() {
-            return new GetHoursOfOperationConfigStartTime(hours, minutes);
+        }
+
+        public GetHoursOfOperationConfigStartTime build() {
+            $.hours = Objects.requireNonNull($.hours, "expected parameter 'hours' to be non-null");
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            return $;
         }
     }
+
 }

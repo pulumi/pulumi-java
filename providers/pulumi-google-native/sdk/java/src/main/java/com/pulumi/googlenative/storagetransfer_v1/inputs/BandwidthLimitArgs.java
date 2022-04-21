@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BandwidthLimitArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="limitMbps")
-      private final @Nullable Output<String> limitMbps;
+    private @Nullable Output<String> limitMbps;
 
-    public Output<String> limitMbps() {
-        return this.limitMbps == null ? Codegen.empty() : this.limitMbps;
+    public Optional<Output<String>> limitMbps() {
+        return Optional.ofNullable(this.limitMbps);
     }
 
-    public BandwidthLimitArgs(@Nullable Output<String> limitMbps) {
-        this.limitMbps = limitMbps;
-    }
+    private BandwidthLimitArgs() {}
 
-    private BandwidthLimitArgs() {
-        this.limitMbps = Codegen.empty();
+    private BandwidthLimitArgs(BandwidthLimitArgs $) {
+        this.limitMbps = $.limitMbps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BandwidthLimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> limitMbps;
+        private BandwidthLimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BandwidthLimitArgs();
         }
 
         public Builder(BandwidthLimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limitMbps = defaults.limitMbps;
+            $ = new BandwidthLimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limitMbps(@Nullable Output<String> limitMbps) {
-            this.limitMbps = limitMbps;
+            $.limitMbps = limitMbps;
             return this;
         }
-        public Builder limitMbps(@Nullable String limitMbps) {
-            this.limitMbps = Codegen.ofNullable(limitMbps);
-            return this;
-        }        public BandwidthLimitArgs build() {
-            return new BandwidthLimitArgs(limitMbps);
+
+        public Builder limitMbps(String limitMbps) {
+            return limitMbps(Output.of(limitMbps));
+        }
+
+        public BandwidthLimitArgs build() {
+            return $;
         }
     }
+
 }

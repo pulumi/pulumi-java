@@ -20,10 +20,10 @@ public final class ListTopLevelDomainAgreementsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="forTransfer")
-      private final @Nullable Boolean forTransfer;
+    private @Nullable Boolean forTransfer;
 
     public Optional<Boolean> forTransfer() {
-        return this.forTransfer == null ? Optional.empty() : Optional.ofNullable(this.forTransfer);
+        return Optional.ofNullable(this.forTransfer);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ListTopLevelDomainAgreementsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="includePrivacy")
-      private final @Nullable Boolean includePrivacy;
+    private @Nullable Boolean includePrivacy;
 
     public Optional<Boolean> includePrivacy() {
-        return this.includePrivacy == null ? Optional.empty() : Optional.ofNullable(this.includePrivacy);
+        return Optional.ofNullable(this.includePrivacy);
     }
 
     /**
@@ -42,64 +42,57 @@ public final class ListTopLevelDomainAgreementsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ListTopLevelDomainAgreementsArgs(
-        @Nullable Boolean forTransfer,
-        @Nullable Boolean includePrivacy,
-        String name) {
-        this.forTransfer = forTransfer;
-        this.includePrivacy = includePrivacy;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ListTopLevelDomainAgreementsArgs() {}
 
-    private ListTopLevelDomainAgreementsArgs() {
-        this.forTransfer = null;
-        this.includePrivacy = null;
-        this.name = null;
+    private ListTopLevelDomainAgreementsArgs(ListTopLevelDomainAgreementsArgs $) {
+        this.forTransfer = $.forTransfer;
+        this.includePrivacy = $.includePrivacy;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListTopLevelDomainAgreementsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean forTransfer;
-        private @Nullable Boolean includePrivacy;
-        private String name;
+        private ListTopLevelDomainAgreementsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListTopLevelDomainAgreementsArgs();
         }
 
         public Builder(ListTopLevelDomainAgreementsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forTransfer = defaults.forTransfer;
-    	      this.includePrivacy = defaults.includePrivacy;
-    	      this.name = defaults.name;
+            $ = new ListTopLevelDomainAgreementsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forTransfer(@Nullable Boolean forTransfer) {
-            this.forTransfer = forTransfer;
+            $.forTransfer = forTransfer;
             return this;
         }
+
         public Builder includePrivacy(@Nullable Boolean includePrivacy) {
-            this.includePrivacy = includePrivacy;
+            $.includePrivacy = includePrivacy;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ListTopLevelDomainAgreementsArgs build() {
-            return new ListTopLevelDomainAgreementsArgs(forTransfer, includePrivacy, name);
+        }
+
+        public ListTopLevelDomainAgreementsArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

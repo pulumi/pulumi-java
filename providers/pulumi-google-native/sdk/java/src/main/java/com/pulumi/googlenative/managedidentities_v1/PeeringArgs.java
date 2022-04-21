@@ -5,10 +5,10 @@ package com.pulumi.googlenative.managedidentities_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizedNetwork", required=true)
-      private final Output<String> authorizedNetwork;
+    private Output<String> authorizedNetwork;
 
     public Output<String> authorizedNetwork() {
         return this.authorizedNetwork;
@@ -32,7 +32,7 @@ public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainResource", required=true)
-      private final Output<String> domainResource;
+    private Output<String> domainResource;
 
     public Output<String> domainResource() {
         return this.domainResource;
@@ -43,116 +43,105 @@ public final class PeeringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="peeringId", required=true)
-      private final Output<String> peeringId;
+    private Output<String> peeringId;
 
     public Output<String> peeringId() {
         return this.peeringId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public PeeringArgs(
-        Output<String> authorizedNetwork,
-        Output<String> domainResource,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> peeringId,
-        @Nullable Output<String> project) {
-        this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork, "expected parameter 'authorizedNetwork' to be non-null");
-        this.domainResource = Objects.requireNonNull(domainResource, "expected parameter 'domainResource' to be non-null");
-        this.labels = labels;
-        this.peeringId = Objects.requireNonNull(peeringId, "expected parameter 'peeringId' to be non-null");
-        this.project = project;
-    }
+    private PeeringArgs() {}
 
-    private PeeringArgs() {
-        this.authorizedNetwork = Codegen.empty();
-        this.domainResource = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.peeringId = Codegen.empty();
-        this.project = Codegen.empty();
+    private PeeringArgs(PeeringArgs $) {
+        this.authorizedNetwork = $.authorizedNetwork;
+        this.domainResource = $.domainResource;
+        this.labels = $.labels;
+        this.peeringId = $.peeringId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authorizedNetwork;
-        private Output<String> domainResource;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> peeringId;
-        private @Nullable Output<String> project;
+        private PeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringArgs();
         }
 
         public Builder(PeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizedNetwork = defaults.authorizedNetwork;
-    	      this.domainResource = defaults.domainResource;
-    	      this.labels = defaults.labels;
-    	      this.peeringId = defaults.peeringId;
-    	      this.project = defaults.project;
+            $ = new PeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizedNetwork(Output<String> authorizedNetwork) {
-            this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
+            $.authorizedNetwork = authorizedNetwork;
             return this;
         }
+
         public Builder authorizedNetwork(String authorizedNetwork) {
-            this.authorizedNetwork = Output.of(Objects.requireNonNull(authorizedNetwork));
-            return this;
+            return authorizedNetwork(Output.of(authorizedNetwork));
         }
+
         public Builder domainResource(Output<String> domainResource) {
-            this.domainResource = Objects.requireNonNull(domainResource);
+            $.domainResource = domainResource;
             return this;
         }
+
         public Builder domainResource(String domainResource) {
-            this.domainResource = Output.of(Objects.requireNonNull(domainResource));
-            return this;
+            return domainResource(Output.of(domainResource));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder peeringId(Output<String> peeringId) {
-            this.peeringId = Objects.requireNonNull(peeringId);
+            $.peeringId = peeringId;
             return this;
         }
+
         public Builder peeringId(String peeringId) {
-            this.peeringId = Output.of(Objects.requireNonNull(peeringId));
-            return this;
+            return peeringId(Output.of(peeringId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public PeeringArgs build() {
-            return new PeeringArgs(authorizedNetwork, domainResource, labels, peeringId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public PeeringArgs build() {
+            $.authorizedNetwork = Objects.requireNonNull($.authorizedNetwork, "expected parameter 'authorizedNetwork' to be non-null");
+            $.domainResource = Objects.requireNonNull($.domainResource, "expected parameter 'domainResource' to be non-null");
+            $.peeringId = Objects.requireNonNull($.peeringId, "expected parameter 'peeringId' to be non-null");
+            return $;
         }
     }
+
 }

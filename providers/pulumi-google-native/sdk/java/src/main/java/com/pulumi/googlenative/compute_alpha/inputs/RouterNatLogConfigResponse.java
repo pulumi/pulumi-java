@@ -22,7 +22,7 @@ public final class RouterNatLogConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enable", required=true)
-      private final Boolean enable;
+    private Boolean enable;
 
     public Boolean enable() {
         return this.enable;
@@ -33,55 +33,52 @@ public final class RouterNatLogConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
     }
 
-    public RouterNatLogConfigResponse(
-        Boolean enable,
-        String filter) {
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-    }
+    private RouterNatLogConfigResponse() {}
 
-    private RouterNatLogConfigResponse() {
-        this.enable = null;
-        this.filter = null;
+    private RouterNatLogConfigResponse(RouterNatLogConfigResponse $) {
+        this.enable = $.enable;
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatLogConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enable;
-        private String filter;
+        private RouterNatLogConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatLogConfigResponse();
         }
 
         public Builder(RouterNatLogConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.filter = defaults.filter;
+            $ = new RouterNatLogConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
-        }        public RouterNatLogConfigResponse build() {
-            return new RouterNatLogConfigResponse(enable, filter);
+        }
+
+        public RouterNatLogConfigResponse build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

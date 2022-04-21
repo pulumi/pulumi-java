@@ -24,10 +24,10 @@ public final class ManagementPolicyBaseBlobResponse extends com.pulumi.resources
      * 
      */
     @Import(name="delete")
-      private final @Nullable DateAfterModificationResponse delete;
+    private @Nullable DateAfterModificationResponse delete;
 
     public Optional<DateAfterModificationResponse> delete() {
-        return this.delete == null ? Optional.empty() : Optional.ofNullable(this.delete);
+        return Optional.ofNullable(this.delete);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ManagementPolicyBaseBlobResponse extends com.pulumi.resources
      * 
      */
     @Import(name="enableAutoTierToHotFromCool")
-      private final @Nullable Boolean enableAutoTierToHotFromCool;
+    private @Nullable Boolean enableAutoTierToHotFromCool;
 
     public Optional<Boolean> enableAutoTierToHotFromCool() {
-        return this.enableAutoTierToHotFromCool == null ? Optional.empty() : Optional.ofNullable(this.enableAutoTierToHotFromCool);
+        return Optional.ofNullable(this.enableAutoTierToHotFromCool);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ManagementPolicyBaseBlobResponse extends com.pulumi.resources
      * 
      */
     @Import(name="tierToArchive")
-      private final @Nullable DateAfterModificationResponse tierToArchive;
+    private @Nullable DateAfterModificationResponse tierToArchive;
 
     public Optional<DateAfterModificationResponse> tierToArchive() {
-        return this.tierToArchive == null ? Optional.empty() : Optional.ofNullable(this.tierToArchive);
+        return Optional.ofNullable(this.tierToArchive);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class ManagementPolicyBaseBlobResponse extends com.pulumi.resources
      * 
      */
     @Import(name="tierToCool")
-      private final @Nullable DateAfterModificationResponse tierToCool;
+    private @Nullable DateAfterModificationResponse tierToCool;
 
     public Optional<DateAfterModificationResponse> tierToCool() {
-        return this.tierToCool == null ? Optional.empty() : Optional.ofNullable(this.tierToCool);
+        return Optional.ofNullable(this.tierToCool);
     }
 
-    public ManagementPolicyBaseBlobResponse(
-        @Nullable DateAfterModificationResponse delete,
-        @Nullable Boolean enableAutoTierToHotFromCool,
-        @Nullable DateAfterModificationResponse tierToArchive,
-        @Nullable DateAfterModificationResponse tierToCool) {
-        this.delete = delete;
-        this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
-        this.tierToArchive = tierToArchive;
-        this.tierToCool = tierToCool;
-    }
+    private ManagementPolicyBaseBlobResponse() {}
 
-    private ManagementPolicyBaseBlobResponse() {
-        this.delete = null;
-        this.enableAutoTierToHotFromCool = null;
-        this.tierToArchive = null;
-        this.tierToCool = null;
+    private ManagementPolicyBaseBlobResponse(ManagementPolicyBaseBlobResponse $) {
+        this.delete = $.delete;
+        this.enableAutoTierToHotFromCool = $.enableAutoTierToHotFromCool;
+        this.tierToArchive = $.tierToArchive;
+        this.tierToCool = $.tierToCool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyBaseBlobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DateAfterModificationResponse delete;
-        private @Nullable Boolean enableAutoTierToHotFromCool;
-        private @Nullable DateAfterModificationResponse tierToArchive;
-        private @Nullable DateAfterModificationResponse tierToCool;
+        private ManagementPolicyBaseBlobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyBaseBlobResponse();
         }
 
         public Builder(ManagementPolicyBaseBlobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delete = defaults.delete;
-    	      this.enableAutoTierToHotFromCool = defaults.enableAutoTierToHotFromCool;
-    	      this.tierToArchive = defaults.tierToArchive;
-    	      this.tierToCool = defaults.tierToCool;
+            $ = new ManagementPolicyBaseBlobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder delete(@Nullable DateAfterModificationResponse delete) {
-            this.delete = delete;
+            $.delete = delete;
             return this;
         }
+
         public Builder enableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
-            this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
+            $.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
             return this;
         }
+
         public Builder tierToArchive(@Nullable DateAfterModificationResponse tierToArchive) {
-            this.tierToArchive = tierToArchive;
+            $.tierToArchive = tierToArchive;
             return this;
         }
+
         public Builder tierToCool(@Nullable DateAfterModificationResponse tierToCool) {
-            this.tierToCool = tierToCool;
+            $.tierToCool = tierToCool;
             return this;
-        }        public ManagementPolicyBaseBlobResponse build() {
-            return new ManagementPolicyBaseBlobResponse(delete, enableAutoTierToHotFromCool, tierToArchive, tierToCool);
+        }
+
+        public ManagementPolicyBaseBlobResponse build() {
+            return $;
         }
     }
+
 }

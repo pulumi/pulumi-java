@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.BasicSliArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.RequestBasedSliArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.WindowsBasedSliArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ServiceLevelIndicatorArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="basicSli")
-      private final @Nullable Output<BasicSliArgs> basicSli;
+    private @Nullable Output<BasicSliArgs> basicSli;
 
-    public Output<BasicSliArgs> basicSli() {
-        return this.basicSli == null ? Codegen.empty() : this.basicSli;
+    public Optional<Output<BasicSliArgs>> basicSli() {
+        return Optional.ofNullable(this.basicSli);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServiceLevelIndicatorArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="requestBased")
-      private final @Nullable Output<RequestBasedSliArgs> requestBased;
+    private @Nullable Output<RequestBasedSliArgs> requestBased;
 
-    public Output<RequestBasedSliArgs> requestBased() {
-        return this.requestBased == null ? Codegen.empty() : this.requestBased;
+    public Optional<Output<RequestBasedSliArgs>> requestBased() {
+        return Optional.ofNullable(this.requestBased);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ServiceLevelIndicatorArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="windowsBased")
-      private final @Nullable Output<WindowsBasedSliArgs> windowsBased;
+    private @Nullable Output<WindowsBasedSliArgs> windowsBased;
 
-    public Output<WindowsBasedSliArgs> windowsBased() {
-        return this.windowsBased == null ? Codegen.empty() : this.windowsBased;
+    public Optional<Output<WindowsBasedSliArgs>> windowsBased() {
+        return Optional.ofNullable(this.windowsBased);
     }
 
-    public ServiceLevelIndicatorArgs(
-        @Nullable Output<BasicSliArgs> basicSli,
-        @Nullable Output<RequestBasedSliArgs> requestBased,
-        @Nullable Output<WindowsBasedSliArgs> windowsBased) {
-        this.basicSli = basicSli;
-        this.requestBased = requestBased;
-        this.windowsBased = windowsBased;
-    }
+    private ServiceLevelIndicatorArgs() {}
 
-    private ServiceLevelIndicatorArgs() {
-        this.basicSli = Codegen.empty();
-        this.requestBased = Codegen.empty();
-        this.windowsBased = Codegen.empty();
+    private ServiceLevelIndicatorArgs(ServiceLevelIndicatorArgs $) {
+        this.basicSli = $.basicSli;
+        this.requestBased = $.requestBased;
+        this.windowsBased = $.windowsBased;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceLevelIndicatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BasicSliArgs> basicSli;
-        private @Nullable Output<RequestBasedSliArgs> requestBased;
-        private @Nullable Output<WindowsBasedSliArgs> windowsBased;
+        private ServiceLevelIndicatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceLevelIndicatorArgs();
         }
 
         public Builder(ServiceLevelIndicatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicSli = defaults.basicSli;
-    	      this.requestBased = defaults.requestBased;
-    	      this.windowsBased = defaults.windowsBased;
+            $ = new ServiceLevelIndicatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicSli(@Nullable Output<BasicSliArgs> basicSli) {
-            this.basicSli = basicSli;
+            $.basicSli = basicSli;
             return this;
         }
-        public Builder basicSli(@Nullable BasicSliArgs basicSli) {
-            this.basicSli = Codegen.ofNullable(basicSli);
-            return this;
+
+        public Builder basicSli(BasicSliArgs basicSli) {
+            return basicSli(Output.of(basicSli));
         }
+
         public Builder requestBased(@Nullable Output<RequestBasedSliArgs> requestBased) {
-            this.requestBased = requestBased;
+            $.requestBased = requestBased;
             return this;
         }
-        public Builder requestBased(@Nullable RequestBasedSliArgs requestBased) {
-            this.requestBased = Codegen.ofNullable(requestBased);
-            return this;
+
+        public Builder requestBased(RequestBasedSliArgs requestBased) {
+            return requestBased(Output.of(requestBased));
         }
+
         public Builder windowsBased(@Nullable Output<WindowsBasedSliArgs> windowsBased) {
-            this.windowsBased = windowsBased;
+            $.windowsBased = windowsBased;
             return this;
         }
-        public Builder windowsBased(@Nullable WindowsBasedSliArgs windowsBased) {
-            this.windowsBased = Codegen.ofNullable(windowsBased);
-            return this;
-        }        public ServiceLevelIndicatorArgs build() {
-            return new ServiceLevelIndicatorArgs(basicSli, requestBased, windowsBased);
+
+        public Builder windowsBased(WindowsBasedSliArgs windowsBased) {
+            return windowsBased(Output.of(windowsBased));
+        }
+
+        public ServiceLevelIndicatorArgs build() {
+            return $;
         }
     }
+
 }

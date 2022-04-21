@@ -25,10 +25,10 @@ public final class OpenAuthenticationAccessPolicyResponse extends com.pulumi.res
      * 
      */
     @Import(name="claims")
-      private final @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
+    private @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
 
-    public List<OpenAuthenticationPolicyClaimResponse> claims() {
-        return this.claims == null ? List.of() : this.claims;
+    public Optional<List<OpenAuthenticationPolicyClaimResponse>> claims() {
+        return Optional.ofNullable(this.claims);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class OpenAuthenticationAccessPolicyResponse extends com.pulumi.res
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public OpenAuthenticationAccessPolicyResponse(
-        @Nullable List<OpenAuthenticationPolicyClaimResponse> claims,
-        @Nullable String type) {
-        this.claims = claims;
-        this.type = type;
-    }
+    private OpenAuthenticationAccessPolicyResponse() {}
 
-    private OpenAuthenticationAccessPolicyResponse() {
-        this.claims = List.of();
-        this.type = null;
+    private OpenAuthenticationAccessPolicyResponse(OpenAuthenticationAccessPolicyResponse $) {
+        this.claims = $.claims;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenAuthenticationAccessPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<OpenAuthenticationPolicyClaimResponse> claims;
-        private @Nullable String type;
+        private OpenAuthenticationAccessPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenAuthenticationAccessPolicyResponse();
         }
 
         public Builder(OpenAuthenticationAccessPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claims = defaults.claims;
-    	      this.type = defaults.type;
+            $ = new OpenAuthenticationAccessPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder claims(@Nullable List<OpenAuthenticationPolicyClaimResponse> claims) {
-            this.claims = claims;
+            $.claims = claims;
             return this;
         }
+
         public Builder claims(OpenAuthenticationPolicyClaimResponse... claims) {
             return claims(List.of(claims));
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public OpenAuthenticationAccessPolicyResponse build() {
-            return new OpenAuthenticationAccessPolicyResponse(claims, type);
+        }
+
+        public OpenAuthenticationAccessPolicyResponse build() {
+            return $;
         }
     }
+
 }

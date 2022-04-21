@@ -14,78 +14,73 @@ public final class GetClusterClusterAutoscalingResourceLimit extends com.pulumi.
     public static final GetClusterClusterAutoscalingResourceLimit Empty = new GetClusterClusterAutoscalingResourceLimit();
 
     @Import(name="maximum", required=true)
-      private final Integer maximum;
+    private Integer maximum;
 
     public Integer maximum() {
         return this.maximum;
     }
 
     @Import(name="minimum", required=true)
-      private final Integer minimum;
+    private Integer minimum;
 
     public Integer minimum() {
         return this.minimum;
     }
 
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public GetClusterClusterAutoscalingResourceLimit(
-        Integer maximum,
-        Integer minimum,
-        String resourceType) {
-        this.maximum = Objects.requireNonNull(maximum, "expected parameter 'maximum' to be non-null");
-        this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private GetClusterClusterAutoscalingResourceLimit() {}
 
-    private GetClusterClusterAutoscalingResourceLimit() {
-        this.maximum = null;
-        this.minimum = null;
-        this.resourceType = null;
+    private GetClusterClusterAutoscalingResourceLimit(GetClusterClusterAutoscalingResourceLimit $) {
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterClusterAutoscalingResourceLimit defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maximum;
-        private Integer minimum;
-        private String resourceType;
+        private GetClusterClusterAutoscalingResourceLimit $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterClusterAutoscalingResourceLimit();
         }
 
         public Builder(GetClusterClusterAutoscalingResourceLimit defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
-    	      this.resourceType = defaults.resourceType;
+            $ = new GetClusterClusterAutoscalingResourceLimit(Objects.requireNonNull(defaults));
         }
 
         public Builder maximum(Integer maximum) {
-            this.maximum = Objects.requireNonNull(maximum);
+            $.maximum = maximum;
             return this;
         }
+
         public Builder minimum(Integer minimum) {
-            this.minimum = Objects.requireNonNull(minimum);
+            $.minimum = minimum;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public GetClusterClusterAutoscalingResourceLimit build() {
-            return new GetClusterClusterAutoscalingResourceLimit(maximum, minimum, resourceType);
+        }
+
+        public GetClusterClusterAutoscalingResourceLimit build() {
+            $.maximum = Objects.requireNonNull($.maximum, "expected parameter 'maximum' to be non-null");
+            $.minimum = Objects.requireNonNull($.minimum, "expected parameter 'minimum' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

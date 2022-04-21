@@ -24,7 +24,7 @@ public final class KeyForDiskEncryptionSetResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="keyUrl", required=true)
-      private final String keyUrl;
+    private String keyUrl;
 
     public String keyUrl() {
         return this.keyUrl;
@@ -35,55 +35,51 @@ public final class KeyForDiskEncryptionSetResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceVault")
-      private final @Nullable SourceVaultResponse sourceVault;
+    private @Nullable SourceVaultResponse sourceVault;
 
     public Optional<SourceVaultResponse> sourceVault() {
-        return this.sourceVault == null ? Optional.empty() : Optional.ofNullable(this.sourceVault);
+        return Optional.ofNullable(this.sourceVault);
     }
 
-    public KeyForDiskEncryptionSetResponse(
-        String keyUrl,
-        @Nullable SourceVaultResponse sourceVault) {
-        this.keyUrl = Objects.requireNonNull(keyUrl, "expected parameter 'keyUrl' to be non-null");
-        this.sourceVault = sourceVault;
-    }
+    private KeyForDiskEncryptionSetResponse() {}
 
-    private KeyForDiskEncryptionSetResponse() {
-        this.keyUrl = null;
-        this.sourceVault = null;
+    private KeyForDiskEncryptionSetResponse(KeyForDiskEncryptionSetResponse $) {
+        this.keyUrl = $.keyUrl;
+        this.sourceVault = $.sourceVault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyForDiskEncryptionSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyUrl;
-        private @Nullable SourceVaultResponse sourceVault;
+        private KeyForDiskEncryptionSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyForDiskEncryptionSetResponse();
         }
 
         public Builder(KeyForDiskEncryptionSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyUrl = defaults.keyUrl;
-    	      this.sourceVault = defaults.sourceVault;
+            $ = new KeyForDiskEncryptionSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyUrl(String keyUrl) {
-            this.keyUrl = Objects.requireNonNull(keyUrl);
+            $.keyUrl = keyUrl;
             return this;
         }
+
         public Builder sourceVault(@Nullable SourceVaultResponse sourceVault) {
-            this.sourceVault = sourceVault;
+            $.sourceVault = sourceVault;
             return this;
-        }        public KeyForDiskEncryptionSetResponse build() {
-            return new KeyForDiskEncryptionSetResponse(keyUrl, sourceVault);
+        }
+
+        public KeyForDiskEncryptionSetResponse build() {
+            $.keyUrl = Objects.requireNonNull($.keyUrl, "expected parameter 'keyUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oSMajorVersion")
-      private final @Nullable String oSMajorVersion;
+    private @Nullable String oSMajorVersion;
 
     public Optional<String> oSMajorVersion() {
-        return this.oSMajorVersion == null ? Optional.empty() : Optional.ofNullable(this.oSMajorVersion);
+        return Optional.ofNullable(this.oSMajorVersion);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oSMinorVersion")
-      private final @Nullable String oSMinorVersion;
+    private @Nullable String oSMinorVersion;
 
     public Optional<String> oSMinorVersion() {
-        return this.oSMinorVersion == null ? Optional.empty() : Optional.ofNullable(this.oSMinorVersion);
+        return Optional.ofNullable(this.oSMinorVersion);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oSVersion")
-      private final @Nullable String oSVersion;
+    private @Nullable String oSVersion;
 
     public Optional<String> oSVersion() {
-        return this.oSVersion == null ? Optional.empty() : Optional.ofNullable(this.oSVersion);
+        return Optional.ofNullable(this.oSVersion);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osEdition")
-      private final @Nullable String osEdition;
+    private @Nullable String osEdition;
 
     public Optional<String> osEdition() {
-        return this.osEdition == null ? Optional.empty() : Optional.ofNullable(this.osEdition);
+        return Optional.ofNullable(this.osEdition);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -78,91 +78,74 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="productType")
-      private final @Nullable String productType;
+    private @Nullable String productType;
 
     public Optional<String> productType() {
-        return this.productType == null ? Optional.empty() : Optional.ofNullable(this.productType);
+        return Optional.ofNullable(this.productType);
     }
 
-    public OSDetailsResponse(
-        @Nullable String oSMajorVersion,
-        @Nullable String oSMinorVersion,
-        @Nullable String oSVersion,
-        @Nullable String osEdition,
-        @Nullable String osType,
-        @Nullable String productType) {
-        this.oSMajorVersion = oSMajorVersion;
-        this.oSMinorVersion = oSMinorVersion;
-        this.oSVersion = oSVersion;
-        this.osEdition = osEdition;
-        this.osType = osType;
-        this.productType = productType;
-    }
+    private OSDetailsResponse() {}
 
-    private OSDetailsResponse() {
-        this.oSMajorVersion = null;
-        this.oSMinorVersion = null;
-        this.oSVersion = null;
-        this.osEdition = null;
-        this.osType = null;
-        this.productType = null;
+    private OSDetailsResponse(OSDetailsResponse $) {
+        this.oSMajorVersion = $.oSMajorVersion;
+        this.oSMinorVersion = $.oSMinorVersion;
+        this.oSVersion = $.oSVersion;
+        this.osEdition = $.osEdition;
+        this.osType = $.osType;
+        this.productType = $.productType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String oSMajorVersion;
-        private @Nullable String oSMinorVersion;
-        private @Nullable String oSVersion;
-        private @Nullable String osEdition;
-        private @Nullable String osType;
-        private @Nullable String productType;
+        private OSDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSDetailsResponse();
         }
 
         public Builder(OSDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oSMajorVersion = defaults.oSMajorVersion;
-    	      this.oSMinorVersion = defaults.oSMinorVersion;
-    	      this.oSVersion = defaults.oSVersion;
-    	      this.osEdition = defaults.osEdition;
-    	      this.osType = defaults.osType;
-    	      this.productType = defaults.productType;
+            $ = new OSDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oSMajorVersion(@Nullable String oSMajorVersion) {
-            this.oSMajorVersion = oSMajorVersion;
+            $.oSMajorVersion = oSMajorVersion;
             return this;
         }
+
         public Builder oSMinorVersion(@Nullable String oSMinorVersion) {
-            this.oSMinorVersion = oSMinorVersion;
+            $.oSMinorVersion = oSMinorVersion;
             return this;
         }
+
         public Builder oSVersion(@Nullable String oSVersion) {
-            this.oSVersion = oSVersion;
+            $.oSVersion = oSVersion;
             return this;
         }
+
         public Builder osEdition(@Nullable String osEdition) {
-            this.osEdition = osEdition;
+            $.osEdition = osEdition;
             return this;
         }
+
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder productType(@Nullable String productType) {
-            this.productType = productType;
+            $.productType = productType;
             return this;
-        }        public OSDetailsResponse build() {
-            return new OSDetailsResponse(oSMajorVersion, oSMinorVersion, oSVersion, osEdition, osType, productType);
+        }
+
+        public OSDetailsResponse build() {
+            return $;
         }
     }
+
 }

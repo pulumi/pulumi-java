@@ -15,78 +15,71 @@ public final class BackupVaultLockConfigurationType extends com.pulumi.resources
     public static final BackupVaultLockConfigurationType Empty = new BackupVaultLockConfigurationType();
 
     @Import(name="changeableForDays")
-      private final @Nullable Double changeableForDays;
+    private @Nullable Double changeableForDays;
 
     public Optional<Double> changeableForDays() {
-        return this.changeableForDays == null ? Optional.empty() : Optional.ofNullable(this.changeableForDays);
+        return Optional.ofNullable(this.changeableForDays);
     }
 
     @Import(name="maxRetentionDays")
-      private final @Nullable Double maxRetentionDays;
+    private @Nullable Double maxRetentionDays;
 
     public Optional<Double> maxRetentionDays() {
-        return this.maxRetentionDays == null ? Optional.empty() : Optional.ofNullable(this.maxRetentionDays);
+        return Optional.ofNullable(this.maxRetentionDays);
     }
 
     @Import(name="minRetentionDays", required=true)
-      private final Double minRetentionDays;
+    private Double minRetentionDays;
 
     public Double minRetentionDays() {
         return this.minRetentionDays;
     }
 
-    public BackupVaultLockConfigurationType(
-        @Nullable Double changeableForDays,
-        @Nullable Double maxRetentionDays,
-        Double minRetentionDays) {
-        this.changeableForDays = changeableForDays;
-        this.maxRetentionDays = maxRetentionDays;
-        this.minRetentionDays = Objects.requireNonNull(minRetentionDays, "expected parameter 'minRetentionDays' to be non-null");
-    }
+    private BackupVaultLockConfigurationType() {}
 
-    private BackupVaultLockConfigurationType() {
-        this.changeableForDays = null;
-        this.maxRetentionDays = null;
-        this.minRetentionDays = null;
+    private BackupVaultLockConfigurationType(BackupVaultLockConfigurationType $) {
+        this.changeableForDays = $.changeableForDays;
+        this.maxRetentionDays = $.maxRetentionDays;
+        this.minRetentionDays = $.minRetentionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupVaultLockConfigurationType defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double changeableForDays;
-        private @Nullable Double maxRetentionDays;
-        private Double minRetentionDays;
+        private BackupVaultLockConfigurationType $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupVaultLockConfigurationType();
         }
 
         public Builder(BackupVaultLockConfigurationType defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.changeableForDays = defaults.changeableForDays;
-    	      this.maxRetentionDays = defaults.maxRetentionDays;
-    	      this.minRetentionDays = defaults.minRetentionDays;
+            $ = new BackupVaultLockConfigurationType(Objects.requireNonNull(defaults));
         }
 
         public Builder changeableForDays(@Nullable Double changeableForDays) {
-            this.changeableForDays = changeableForDays;
+            $.changeableForDays = changeableForDays;
             return this;
         }
+
         public Builder maxRetentionDays(@Nullable Double maxRetentionDays) {
-            this.maxRetentionDays = maxRetentionDays;
+            $.maxRetentionDays = maxRetentionDays;
             return this;
         }
+
         public Builder minRetentionDays(Double minRetentionDays) {
-            this.minRetentionDays = Objects.requireNonNull(minRetentionDays);
+            $.minRetentionDays = minRetentionDays;
             return this;
-        }        public BackupVaultLockConfigurationType build() {
-            return new BackupVaultLockConfigurationType(changeableForDays, maxRetentionDays, minRetentionDays);
+        }
+
+        public BackupVaultLockConfigurationType build() {
+            $.minRetentionDays = Objects.requireNonNull($.minRetentionDays, "expected parameter 'minRetentionDays' to be non-null");
+            return $;
         }
     }
+
 }

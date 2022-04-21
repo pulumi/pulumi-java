@@ -26,10 +26,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="loadBalancerResourceId")
-      private final @Nullable String loadBalancerResourceId;
+    private @Nullable String loadBalancerResourceId;
 
     public Optional<String> loadBalancerResourceId() {
-        return this.loadBalancerResourceId == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerResourceId);
+        return Optional.ofNullable(this.loadBalancerResourceId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable PrivateIPAddressResponse privateIpAddress;
+    private @Nullable PrivateIPAddressResponse privateIpAddress;
 
     public Optional<PrivateIPAddressResponse> privateIpAddress() {
-        return this.privateIpAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIpAddress);
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="probePort")
-      private final @Nullable Integer probePort;
+    private @Nullable Integer probePort;
 
     public Optional<Integer> probePort() {
-        return this.probePort == null ? Optional.empty() : Optional.ofNullable(this.probePort);
+        return Optional.ofNullable(this.probePort);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="publicIpAddressResourceId")
-      private final @Nullable String publicIpAddressResourceId;
+    private @Nullable String publicIpAddressResourceId;
 
     public Optional<String> publicIpAddressResourceId() {
-        return this.publicIpAddressResourceId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressResourceId);
+        return Optional.ofNullable(this.publicIpAddressResourceId);
     }
 
     /**
@@ -70,85 +70,72 @@ public final class LoadBalancerConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sqlVirtualMachineInstances")
-      private final @Nullable List<String> sqlVirtualMachineInstances;
+    private @Nullable List<String> sqlVirtualMachineInstances;
 
-    public List<String> sqlVirtualMachineInstances() {
-        return this.sqlVirtualMachineInstances == null ? List.of() : this.sqlVirtualMachineInstances;
+    public Optional<List<String>> sqlVirtualMachineInstances() {
+        return Optional.ofNullable(this.sqlVirtualMachineInstances);
     }
 
-    public LoadBalancerConfigurationResponse(
-        @Nullable String loadBalancerResourceId,
-        @Nullable PrivateIPAddressResponse privateIpAddress,
-        @Nullable Integer probePort,
-        @Nullable String publicIpAddressResourceId,
-        @Nullable List<String> sqlVirtualMachineInstances) {
-        this.loadBalancerResourceId = loadBalancerResourceId;
-        this.privateIpAddress = privateIpAddress;
-        this.probePort = probePort;
-        this.publicIpAddressResourceId = publicIpAddressResourceId;
-        this.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
-    }
+    private LoadBalancerConfigurationResponse() {}
 
-    private LoadBalancerConfigurationResponse() {
-        this.loadBalancerResourceId = null;
-        this.privateIpAddress = null;
-        this.probePort = null;
-        this.publicIpAddressResourceId = null;
-        this.sqlVirtualMachineInstances = List.of();
+    private LoadBalancerConfigurationResponse(LoadBalancerConfigurationResponse $) {
+        this.loadBalancerResourceId = $.loadBalancerResourceId;
+        this.privateIpAddress = $.privateIpAddress;
+        this.probePort = $.probePort;
+        this.publicIpAddressResourceId = $.publicIpAddressResourceId;
+        this.sqlVirtualMachineInstances = $.sqlVirtualMachineInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String loadBalancerResourceId;
-        private @Nullable PrivateIPAddressResponse privateIpAddress;
-        private @Nullable Integer probePort;
-        private @Nullable String publicIpAddressResourceId;
-        private @Nullable List<String> sqlVirtualMachineInstances;
+        private LoadBalancerConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerConfigurationResponse();
         }
 
         public Builder(LoadBalancerConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loadBalancerResourceId = defaults.loadBalancerResourceId;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.probePort = defaults.probePort;
-    	      this.publicIpAddressResourceId = defaults.publicIpAddressResourceId;
-    	      this.sqlVirtualMachineInstances = defaults.sqlVirtualMachineInstances;
+            $ = new LoadBalancerConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder loadBalancerResourceId(@Nullable String loadBalancerResourceId) {
-            this.loadBalancerResourceId = loadBalancerResourceId;
+            $.loadBalancerResourceId = loadBalancerResourceId;
             return this;
         }
+
         public Builder privateIpAddress(@Nullable PrivateIPAddressResponse privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder probePort(@Nullable Integer probePort) {
-            this.probePort = probePort;
+            $.probePort = probePort;
             return this;
         }
+
         public Builder publicIpAddressResourceId(@Nullable String publicIpAddressResourceId) {
-            this.publicIpAddressResourceId = publicIpAddressResourceId;
+            $.publicIpAddressResourceId = publicIpAddressResourceId;
             return this;
         }
+
         public Builder sqlVirtualMachineInstances(@Nullable List<String> sqlVirtualMachineInstances) {
-            this.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
+            $.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }
+
         public Builder sqlVirtualMachineInstances(String... sqlVirtualMachineInstances) {
             return sqlVirtualMachineInstances(List.of(sqlVirtualMachineInstances));
-        }        public LoadBalancerConfigurationResponse build() {
-            return new LoadBalancerConfigurationResponse(loadBalancerResourceId, privateIpAddress, probePort, publicIpAddressResourceId, sqlVirtualMachineInstances);
+        }
+
+        public LoadBalancerConfigurationResponse build() {
+            return $;
         }
     }
+
 }

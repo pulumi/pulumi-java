@@ -5,11 +5,11 @@ package com.pulumi.aws.mq.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BrokerUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="consoleAccess")
-      private final @Nullable Output<Boolean> consoleAccess;
+    private @Nullable Output<Boolean> consoleAccess;
 
-    public Output<Boolean> consoleAccess() {
-        return this.consoleAccess == null ? Codegen.empty() : this.consoleAccess;
+    public Optional<Output<Boolean>> consoleAccess() {
+        return Optional.ofNullable(this.consoleAccess);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BrokerUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groups")
-      private final @Nullable Output<List<String>> groups;
+    private @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> groups() {
-        return this.groups == null ? Codegen.empty() : this.groups;
+    public Optional<Output<List<String>>> groups() {
+        return Optional.ofNullable(this.groups);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class BrokerUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -55,92 +55,84 @@ public final class BrokerUserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public BrokerUserArgs(
-        @Nullable Output<Boolean> consoleAccess,
-        @Nullable Output<List<String>> groups,
-        Output<String> password,
-        Output<String> username) {
-        this.consoleAccess = consoleAccess;
-        this.groups = groups;
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private BrokerUserArgs() {}
 
-    private BrokerUserArgs() {
-        this.consoleAccess = Codegen.empty();
-        this.groups = Codegen.empty();
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private BrokerUserArgs(BrokerUserArgs $) {
+        this.consoleAccess = $.consoleAccess;
+        this.groups = $.groups;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BrokerUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> consoleAccess;
-        private @Nullable Output<List<String>> groups;
-        private Output<String> password;
-        private Output<String> username;
+        private BrokerUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BrokerUserArgs();
         }
 
         public Builder(BrokerUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consoleAccess = defaults.consoleAccess;
-    	      this.groups = defaults.groups;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new BrokerUserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consoleAccess(@Nullable Output<Boolean> consoleAccess) {
-            this.consoleAccess = consoleAccess;
+            $.consoleAccess = consoleAccess;
             return this;
         }
-        public Builder consoleAccess(@Nullable Boolean consoleAccess) {
-            this.consoleAccess = Codegen.ofNullable(consoleAccess);
-            return this;
+
+        public Builder consoleAccess(Boolean consoleAccess) {
+            return consoleAccess(Output.of(consoleAccess));
         }
+
         public Builder groups(@Nullable Output<List<String>> groups) {
-            this.groups = groups;
+            $.groups = groups;
             return this;
         }
-        public Builder groups(@Nullable List<String> groups) {
-            this.groups = Codegen.ofNullable(groups);
-            return this;
+
+        public Builder groups(List<String> groups) {
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public BrokerUserArgs build() {
-            return new BrokerUserArgs(consoleAccess, groups, password, username);
+            return username(Output.of(username));
+        }
+
+        public BrokerUserArgs build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

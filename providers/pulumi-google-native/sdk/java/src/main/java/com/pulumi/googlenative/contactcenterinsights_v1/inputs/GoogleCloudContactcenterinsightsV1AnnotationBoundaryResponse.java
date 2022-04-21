@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      * 
      */
     @Import(name="transcriptIndex", required=true)
-      private final Integer transcriptIndex;
+    private Integer transcriptIndex;
 
     public Integer transcriptIndex() {
         return this.transcriptIndex;
@@ -32,55 +32,52 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      * 
      */
     @Import(name="wordIndex", required=true)
-      private final Integer wordIndex;
+    private Integer wordIndex;
 
     public Integer wordIndex() {
         return this.wordIndex;
     }
 
-    public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(
-        Integer transcriptIndex,
-        Integer wordIndex) {
-        this.transcriptIndex = Objects.requireNonNull(transcriptIndex, "expected parameter 'transcriptIndex' to be non-null");
-        this.wordIndex = Objects.requireNonNull(wordIndex, "expected parameter 'wordIndex' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse() {
-        this.transcriptIndex = null;
-        this.wordIndex = null;
+    private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse $) {
+        this.transcriptIndex = $.transcriptIndex;
+        this.wordIndex = $.wordIndex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer transcriptIndex;
-        private Integer wordIndex;
+        private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transcriptIndex = defaults.transcriptIndex;
-    	      this.wordIndex = defaults.wordIndex;
+            $ = new GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder transcriptIndex(Integer transcriptIndex) {
-            this.transcriptIndex = Objects.requireNonNull(transcriptIndex);
+            $.transcriptIndex = transcriptIndex;
             return this;
         }
+
         public Builder wordIndex(Integer wordIndex) {
-            this.wordIndex = Objects.requireNonNull(wordIndex);
+            $.wordIndex = wordIndex;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse build() {
-            return new GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(transcriptIndex, wordIndex);
+        }
+
+        public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse build() {
+            $.transcriptIndex = Objects.requireNonNull($.transcriptIndex, "expected parameter 'transcriptIndex' to be non-null");
+            $.wordIndex = Objects.requireNonNull($.wordIndex, "expected parameter 'wordIndex' to be non-null");
+            return $;
         }
     }
+
 }

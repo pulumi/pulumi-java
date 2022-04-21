@@ -17,7 +17,7 @@ public final class GetPolicyDefinitionAtManagementGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="managementGroupId", required=true)
-      private final String managementGroupId;
+    private String managementGroupId;
 
     public String managementGroupId() {
         return this.managementGroupId;
@@ -28,55 +28,52 @@ public final class GetPolicyDefinitionAtManagementGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="policyDefinitionName", required=true)
-      private final String policyDefinitionName;
+    private String policyDefinitionName;
 
     public String policyDefinitionName() {
         return this.policyDefinitionName;
     }
 
-    public GetPolicyDefinitionAtManagementGroupArgs(
-        String managementGroupId,
-        String policyDefinitionName) {
-        this.managementGroupId = Objects.requireNonNull(managementGroupId, "expected parameter 'managementGroupId' to be non-null");
-        this.policyDefinitionName = Objects.requireNonNull(policyDefinitionName, "expected parameter 'policyDefinitionName' to be non-null");
-    }
+    private GetPolicyDefinitionAtManagementGroupArgs() {}
 
-    private GetPolicyDefinitionAtManagementGroupArgs() {
-        this.managementGroupId = null;
-        this.policyDefinitionName = null;
+    private GetPolicyDefinitionAtManagementGroupArgs(GetPolicyDefinitionAtManagementGroupArgs $) {
+        this.managementGroupId = $.managementGroupId;
+        this.policyDefinitionName = $.policyDefinitionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyDefinitionAtManagementGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managementGroupId;
-        private String policyDefinitionName;
+        private GetPolicyDefinitionAtManagementGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyDefinitionAtManagementGroupArgs();
         }
 
         public Builder(GetPolicyDefinitionAtManagementGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementGroupId = defaults.managementGroupId;
-    	      this.policyDefinitionName = defaults.policyDefinitionName;
+            $ = new GetPolicyDefinitionAtManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managementGroupId(String managementGroupId) {
-            this.managementGroupId = Objects.requireNonNull(managementGroupId);
+            $.managementGroupId = managementGroupId;
             return this;
         }
+
         public Builder policyDefinitionName(String policyDefinitionName) {
-            this.policyDefinitionName = Objects.requireNonNull(policyDefinitionName);
+            $.policyDefinitionName = policyDefinitionName;
             return this;
-        }        public GetPolicyDefinitionAtManagementGroupArgs build() {
-            return new GetPolicyDefinitionAtManagementGroupArgs(managementGroupId, policyDefinitionName);
+        }
+
+        public GetPolicyDefinitionAtManagementGroupArgs build() {
+            $.managementGroupId = Objects.requireNonNull($.managementGroupId, "expected parameter 'managementGroupId' to be non-null");
+            $.policyDefinitionName = Objects.requireNonNull($.policyDefinitionName, "expected parameter 'policyDefinitionName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class RectangleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="height")
-      private final @Nullable String height;
+    private @Nullable String height;
 
     public Optional<String> height() {
-        return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RectangleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="left")
-      private final @Nullable String left;
+    private @Nullable String left;
 
     public Optional<String> left() {
-        return this.left == null ? Optional.empty() : Optional.ofNullable(this.left);
+        return Optional.ofNullable(this.left);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RectangleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="top")
-      private final @Nullable String top;
+    private @Nullable String top;
 
     public Optional<String> top() {
-        return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
+        return Optional.ofNullable(this.top);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class RectangleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="width")
-      private final @Nullable String width;
+    private @Nullable String width;
 
     public Optional<String> width() {
-        return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
+        return Optional.ofNullable(this.width);
     }
 
-    public RectangleResponse(
-        @Nullable String height,
-        @Nullable String left,
-        @Nullable String top,
-        @Nullable String width) {
-        this.height = height;
-        this.left = left;
-        this.top = top;
-        this.width = width;
-    }
+    private RectangleResponse() {}
 
-    private RectangleResponse() {
-        this.height = null;
-        this.left = null;
-        this.top = null;
-        this.width = null;
+    private RectangleResponse(RectangleResponse $) {
+        this.height = $.height;
+        this.left = $.left;
+        this.top = $.top;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RectangleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String height;
-        private @Nullable String left;
-        private @Nullable String top;
-        private @Nullable String width;
+        private RectangleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RectangleResponse();
         }
 
         public Builder(RectangleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.left = defaults.left;
-    	      this.top = defaults.top;
-    	      this.width = defaults.width;
+            $ = new RectangleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder height(@Nullable String height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
+
         public Builder left(@Nullable String left) {
-            this.left = left;
+            $.left = left;
             return this;
         }
+
         public Builder top(@Nullable String top) {
-            this.top = top;
+            $.top = top;
             return this;
         }
+
         public Builder width(@Nullable String width) {
-            this.width = width;
+            $.width = width;
             return this;
-        }        public RectangleResponse build() {
-            return new RectangleResponse(height, left, top, width);
+        }
+
+        public RectangleResponse build() {
+            return $;
         }
     }
+
 }

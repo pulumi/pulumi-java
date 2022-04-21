@@ -5,9 +5,9 @@ package com.pulumi.awsnative.nimblestudio.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class StudioComponentComputeFarmConfigurationArgs extends com.pulum
      * 
      */
     @Import(name="activeDirectoryUser")
-      private final @Nullable Output<String> activeDirectoryUser;
+    private @Nullable Output<String> activeDirectoryUser;
 
-    public Output<String> activeDirectoryUser() {
-        return this.activeDirectoryUser == null ? Codegen.empty() : this.activeDirectoryUser;
+    public Optional<Output<String>> activeDirectoryUser() {
+        return Optional.ofNullable(this.activeDirectoryUser);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class StudioComponentComputeFarmConfigurationArgs extends com.pulum
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
-    public StudioComponentComputeFarmConfigurationArgs(
-        @Nullable Output<String> activeDirectoryUser,
-        @Nullable Output<String> endpoint) {
-        this.activeDirectoryUser = activeDirectoryUser;
-        this.endpoint = endpoint;
-    }
+    private StudioComponentComputeFarmConfigurationArgs() {}
 
-    private StudioComponentComputeFarmConfigurationArgs() {
-        this.activeDirectoryUser = Codegen.empty();
-        this.endpoint = Codegen.empty();
+    private StudioComponentComputeFarmConfigurationArgs(StudioComponentComputeFarmConfigurationArgs $) {
+        this.activeDirectoryUser = $.activeDirectoryUser;
+        this.endpoint = $.endpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentComputeFarmConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activeDirectoryUser;
-        private @Nullable Output<String> endpoint;
+        private StudioComponentComputeFarmConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentComputeFarmConfigurationArgs();
         }
 
         public Builder(StudioComponentComputeFarmConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryUser = defaults.activeDirectoryUser;
-    	      this.endpoint = defaults.endpoint;
+            $ = new StudioComponentComputeFarmConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryUser(@Nullable Output<String> activeDirectoryUser) {
-            this.activeDirectoryUser = activeDirectoryUser;
+            $.activeDirectoryUser = activeDirectoryUser;
             return this;
         }
-        public Builder activeDirectoryUser(@Nullable String activeDirectoryUser) {
-            this.activeDirectoryUser = Codegen.ofNullable(activeDirectoryUser);
-            return this;
+
+        public Builder activeDirectoryUser(String activeDirectoryUser) {
+            return activeDirectoryUser(Output.of(activeDirectoryUser));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
-        }        public StudioComponentComputeFarmConfigurationArgs build() {
-            return new StudioComponentComputeFarmConfigurationArgs(activeDirectoryUser, endpoint);
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
+        }
+
+        public StudioComponentComputeFarmConfigurationArgs build() {
+            return $;
         }
     }
+
 }

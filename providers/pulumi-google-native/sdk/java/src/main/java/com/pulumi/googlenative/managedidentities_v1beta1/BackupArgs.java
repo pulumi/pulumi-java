@@ -5,10 +5,10 @@ package com.pulumi.googlenative.managedidentities_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,14 +17,14 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @Import(name="backupId", required=true)
-      private final Output<String> backupId;
+    private Output<String> backupId;
 
     public Output<String> backupId() {
         return this.backupId;
     }
 
     @Import(name="domainId", required=true)
-      private final Output<String> domainId;
+    private Output<String> domainId;
 
     public Output<String> domainId() {
         return this.domainId;
@@ -35,96 +35,87 @@ public final class BackupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public BackupArgs(
-        Output<String> backupId,
-        Output<String> domainId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> project) {
-        this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
-        this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
-        this.labels = labels;
-        this.project = project;
-    }
+    private BackupArgs() {}
 
-    private BackupArgs() {
-        this.backupId = Codegen.empty();
-        this.domainId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.project = Codegen.empty();
+    private BackupArgs(BackupArgs $) {
+        this.backupId = $.backupId;
+        this.domainId = $.domainId;
+        this.labels = $.labels;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backupId;
-        private Output<String> domainId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> project;
+        private BackupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupArgs();
         }
 
         public Builder(BackupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupId = defaults.backupId;
-    	      this.domainId = defaults.domainId;
-    	      this.labels = defaults.labels;
-    	      this.project = defaults.project;
+            $ = new BackupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupId(Output<String> backupId) {
-            this.backupId = Objects.requireNonNull(backupId);
+            $.backupId = backupId;
             return this;
         }
+
         public Builder backupId(String backupId) {
-            this.backupId = Output.of(Objects.requireNonNull(backupId));
-            return this;
+            return backupId(Output.of(backupId));
         }
+
         public Builder domainId(Output<String> domainId) {
-            this.domainId = Objects.requireNonNull(domainId);
+            $.domainId = domainId;
             return this;
         }
+
         public Builder domainId(String domainId) {
-            this.domainId = Output.of(Objects.requireNonNull(domainId));
-            return this;
+            return domainId(Output.of(domainId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public BackupArgs build() {
-            return new BackupArgs(backupId, domainId, labels, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public BackupArgs build() {
+            $.backupId = Objects.requireNonNull($.backupId, "expected parameter 'backupId' to be non-null");
+            $.domainId = Objects.requireNonNull($.domainId, "expected parameter 'domainId' to be non-null");
+            return $;
         }
     }
+
 }

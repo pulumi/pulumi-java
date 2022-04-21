@@ -6,12 +6,12 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.inputs.MongoIndexArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="analyticalStorageTtl")
-      private final @Nullable Output<Integer> analyticalStorageTtl;
+    private @Nullable Output<Integer> analyticalStorageTtl;
 
-    public Output<Integer> analyticalStorageTtl() {
-        return this.analyticalStorageTtl == null ? Codegen.empty() : this.analyticalStorageTtl;
+    public Optional<Output<Integer>> analyticalStorageTtl() {
+        return Optional.ofNullable(this.analyticalStorageTtl);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -50,10 +50,10 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="indexes")
-      private final @Nullable Output<List<MongoIndexArgs>> indexes;
+    private @Nullable Output<List<MongoIndexArgs>> indexes;
 
-    public Output<List<MongoIndexArgs>> indexes() {
-        return this.indexes == null ? Codegen.empty() : this.indexes;
+    public Optional<Output<List<MongoIndexArgs>>> indexes() {
+        return Optional.ofNullable(this.indexes);
     }
 
     /**
@@ -61,92 +61,83 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="shardKey")
-      private final @Nullable Output<Map<String,String>> shardKey;
+    private @Nullable Output<Map<String,String>> shardKey;
 
-    public Output<Map<String,String>> shardKey() {
-        return this.shardKey == null ? Codegen.empty() : this.shardKey;
+    public Optional<Output<Map<String,String>>> shardKey() {
+        return Optional.ofNullable(this.shardKey);
     }
 
-    public MongoDBCollectionResourceArgs(
-        @Nullable Output<Integer> analyticalStorageTtl,
-        Output<String> id,
-        @Nullable Output<List<MongoIndexArgs>> indexes,
-        @Nullable Output<Map<String,String>> shardKey) {
-        this.analyticalStorageTtl = analyticalStorageTtl;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.indexes = indexes;
-        this.shardKey = shardKey;
-    }
+    private MongoDBCollectionResourceArgs() {}
 
-    private MongoDBCollectionResourceArgs() {
-        this.analyticalStorageTtl = Codegen.empty();
-        this.id = Codegen.empty();
-        this.indexes = Codegen.empty();
-        this.shardKey = Codegen.empty();
+    private MongoDBCollectionResourceArgs(MongoDBCollectionResourceArgs $) {
+        this.analyticalStorageTtl = $.analyticalStorageTtl;
+        this.id = $.id;
+        this.indexes = $.indexes;
+        this.shardKey = $.shardKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MongoDBCollectionResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> analyticalStorageTtl;
-        private Output<String> id;
-        private @Nullable Output<List<MongoIndexArgs>> indexes;
-        private @Nullable Output<Map<String,String>> shardKey;
+        private MongoDBCollectionResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MongoDBCollectionResourceArgs();
         }
 
         public Builder(MongoDBCollectionResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyticalStorageTtl = defaults.analyticalStorageTtl;
-    	      this.id = defaults.id;
-    	      this.indexes = defaults.indexes;
-    	      this.shardKey = defaults.shardKey;
+            $ = new MongoDBCollectionResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analyticalStorageTtl(@Nullable Output<Integer> analyticalStorageTtl) {
-            this.analyticalStorageTtl = analyticalStorageTtl;
+            $.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
-        public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
-            this.analyticalStorageTtl = Codegen.ofNullable(analyticalStorageTtl);
-            return this;
+
+        public Builder analyticalStorageTtl(Integer analyticalStorageTtl) {
+            return analyticalStorageTtl(Output.of(analyticalStorageTtl));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder indexes(@Nullable Output<List<MongoIndexArgs>> indexes) {
-            this.indexes = indexes;
+            $.indexes = indexes;
             return this;
         }
-        public Builder indexes(@Nullable List<MongoIndexArgs> indexes) {
-            this.indexes = Codegen.ofNullable(indexes);
-            return this;
+
+        public Builder indexes(List<MongoIndexArgs> indexes) {
+            return indexes(Output.of(indexes));
         }
+
         public Builder indexes(MongoIndexArgs... indexes) {
             return indexes(List.of(indexes));
         }
+
         public Builder shardKey(@Nullable Output<Map<String,String>> shardKey) {
-            this.shardKey = shardKey;
+            $.shardKey = shardKey;
             return this;
         }
-        public Builder shardKey(@Nullable Map<String,String> shardKey) {
-            this.shardKey = Codegen.ofNullable(shardKey);
-            return this;
-        }        public MongoDBCollectionResourceArgs build() {
-            return new MongoDBCollectionResourceArgs(analyticalStorageTtl, id, indexes, shardKey);
+
+        public Builder shardKey(Map<String,String> shardKey) {
+            return shardKey(Output.of(shardKey));
+        }
+
+        public MongoDBCollectionResourceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.FlowAccessControlConfigurationPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions;
+    private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions;
 
-    public Output<FlowAccessControlConfigurationPolicyArgs> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<FlowAccessControlConfigurationPolicyArgs>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="contents")
-      private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents;
+    private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents;
 
-    public Output<FlowAccessControlConfigurationPolicyArgs> contents() {
-        return this.contents == null ? Codegen.empty() : this.contents;
+    public Optional<Output<FlowAccessControlConfigurationPolicyArgs>> contents() {
+        return Optional.ofNullable(this.contents);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="triggers")
-      private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers;
+    private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers;
 
-    public Output<FlowAccessControlConfigurationPolicyArgs> triggers() {
-        return this.triggers == null ? Codegen.empty() : this.triggers;
+    public Optional<Output<FlowAccessControlConfigurationPolicyArgs>> triggers() {
+        return Optional.ofNullable(this.triggers);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class FlowAccessControlConfigurationArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workflowManagement")
-      private final @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
+    private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
 
-    public Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement() {
-        return this.workflowManagement == null ? Codegen.empty() : this.workflowManagement;
+    public Optional<Output<FlowAccessControlConfigurationPolicyArgs>> workflowManagement() {
+        return Optional.ofNullable(this.workflowManagement);
     }
 
-    public FlowAccessControlConfigurationArgs(
-        @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions,
-        @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents,
-        @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers,
-        @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
-        this.actions = actions;
-        this.contents = contents;
-        this.triggers = triggers;
-        this.workflowManagement = workflowManagement;
-    }
+    private FlowAccessControlConfigurationArgs() {}
 
-    private FlowAccessControlConfigurationArgs() {
-        this.actions = Codegen.empty();
-        this.contents = Codegen.empty();
-        this.triggers = Codegen.empty();
-        this.workflowManagement = Codegen.empty();
+    private FlowAccessControlConfigurationArgs(FlowAccessControlConfigurationArgs $) {
+        this.actions = $.actions;
+        this.contents = $.contents;
+        this.triggers = $.triggers;
+        this.workflowManagement = $.workflowManagement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowAccessControlConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions;
-        private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents;
-        private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers;
-        private @Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement;
+        private FlowAccessControlConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowAccessControlConfigurationArgs();
         }
 
         public Builder(FlowAccessControlConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.contents = defaults.contents;
-    	      this.triggers = defaults.triggers;
-    	      this.workflowManagement = defaults.workflowManagement;
+            $ = new FlowAccessControlConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable FlowAccessControlConfigurationPolicyArgs actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(FlowAccessControlConfigurationPolicyArgs actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder contents(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> contents) {
-            this.contents = contents;
+            $.contents = contents;
             return this;
         }
-        public Builder contents(@Nullable FlowAccessControlConfigurationPolicyArgs contents) {
-            this.contents = Codegen.ofNullable(contents);
-            return this;
+
+        public Builder contents(FlowAccessControlConfigurationPolicyArgs contents) {
+            return contents(Output.of(contents));
         }
+
         public Builder triggers(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> triggers) {
-            this.triggers = triggers;
+            $.triggers = triggers;
             return this;
         }
-        public Builder triggers(@Nullable FlowAccessControlConfigurationPolicyArgs triggers) {
-            this.triggers = Codegen.ofNullable(triggers);
-            return this;
+
+        public Builder triggers(FlowAccessControlConfigurationPolicyArgs triggers) {
+            return triggers(Output.of(triggers));
         }
+
         public Builder workflowManagement(@Nullable Output<FlowAccessControlConfigurationPolicyArgs> workflowManagement) {
-            this.workflowManagement = workflowManagement;
+            $.workflowManagement = workflowManagement;
             return this;
         }
-        public Builder workflowManagement(@Nullable FlowAccessControlConfigurationPolicyArgs workflowManagement) {
-            this.workflowManagement = Codegen.ofNullable(workflowManagement);
-            return this;
-        }        public FlowAccessControlConfigurationArgs build() {
-            return new FlowAccessControlConfigurationArgs(actions, contents, triggers, workflowManagement);
+
+        public Builder workflowManagement(FlowAccessControlConfigurationPolicyArgs workflowManagement) {
+            return workflowManagement(Output.of(workflowManagement));
+        }
+
+        public FlowAccessControlConfigurationArgs build() {
+            return $;
         }
     }
+
 }

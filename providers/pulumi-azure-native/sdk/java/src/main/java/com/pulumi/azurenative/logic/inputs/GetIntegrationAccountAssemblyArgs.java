@@ -17,7 +17,7 @@ public final class GetIntegrationAccountAssemblyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="assemblyArtifactName", required=true)
-      private final String assemblyArtifactName;
+    private String assemblyArtifactName;
 
     public String assemblyArtifactName() {
         return this.assemblyArtifactName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountAssemblyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -39,64 +39,59 @@ public final class GetIntegrationAccountAssemblyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIntegrationAccountAssemblyArgs(
-        String assemblyArtifactName,
-        String integrationAccountName,
-        String resourceGroupName) {
-        this.assemblyArtifactName = Objects.requireNonNull(assemblyArtifactName, "expected parameter 'assemblyArtifactName' to be non-null");
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIntegrationAccountAssemblyArgs() {}
 
-    private GetIntegrationAccountAssemblyArgs() {
-        this.assemblyArtifactName = null;
-        this.integrationAccountName = null;
-        this.resourceGroupName = null;
+    private GetIntegrationAccountAssemblyArgs(GetIntegrationAccountAssemblyArgs $) {
+        this.assemblyArtifactName = $.assemblyArtifactName;
+        this.integrationAccountName = $.integrationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationAccountAssemblyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assemblyArtifactName;
-        private String integrationAccountName;
-        private String resourceGroupName;
+        private GetIntegrationAccountAssemblyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationAccountAssemblyArgs();
         }
 
         public Builder(GetIntegrationAccountAssemblyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assemblyArtifactName = defaults.assemblyArtifactName;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIntegrationAccountAssemblyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assemblyArtifactName(String assemblyArtifactName) {
-            this.assemblyArtifactName = Objects.requireNonNull(assemblyArtifactName);
+            $.assemblyArtifactName = assemblyArtifactName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIntegrationAccountAssemblyArgs build() {
-            return new GetIntegrationAccountAssemblyArgs(assemblyArtifactName, integrationAccountName, resourceGroupName);
+        }
+
+        public GetIntegrationAccountAssemblyArgs build() {
+            $.assemblyArtifactName = Objects.requireNonNull($.assemblyArtifactName, "expected parameter 'assemblyArtifactName' to be non-null");
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

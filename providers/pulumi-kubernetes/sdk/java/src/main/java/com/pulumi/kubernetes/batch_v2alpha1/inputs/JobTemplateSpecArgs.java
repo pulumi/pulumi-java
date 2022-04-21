@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.batch_v2alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.batch_v1.inputs.JobSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class JobTemplateSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class JobTemplateSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<JobSpecArgs> spec;
+    private @Nullable Output<JobSpecArgs> spec;
 
-    public Output<JobSpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<JobSpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
-    public JobTemplateSpecArgs(
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<JobSpecArgs> spec) {
-        this.metadata = metadata;
-        this.spec = spec;
-    }
+    private JobTemplateSpecArgs() {}
 
-    private JobTemplateSpecArgs() {
-        this.metadata = Codegen.empty();
-        this.spec = Codegen.empty();
+    private JobTemplateSpecArgs(JobTemplateSpecArgs $) {
+        this.metadata = $.metadata;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTemplateSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<JobSpecArgs> spec;
+        private JobTemplateSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTemplateSpecArgs();
         }
 
         public Builder(JobTemplateSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.spec = defaults.spec;
+            $ = new JobTemplateSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder spec(@Nullable Output<JobSpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable JobSpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
-        }        public JobTemplateSpecArgs build() {
-            return new JobTemplateSpecArgs(metadata, spec);
+
+        public Builder spec(JobSpecArgs spec) {
+            return spec(Output.of(spec));
+        }
+
+        public JobTemplateSpecArgs build() {
+            return $;
         }
     }
+
 }

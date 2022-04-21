@@ -6,8 +6,8 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotGrammarSlotTypeSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class BotGrammarSlotTypeSettingArgs extends com.pulumi.resources.Re
     public static final BotGrammarSlotTypeSettingArgs Empty = new BotGrammarSlotTypeSettingArgs();
 
     @Import(name="source")
-      private final @Nullable Output<BotGrammarSlotTypeSourceArgs> source;
+    private @Nullable Output<BotGrammarSlotTypeSourceArgs> source;
 
-    public Output<BotGrammarSlotTypeSourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<BotGrammarSlotTypeSourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public BotGrammarSlotTypeSettingArgs(@Nullable Output<BotGrammarSlotTypeSourceArgs> source) {
-        this.source = source;
-    }
+    private BotGrammarSlotTypeSettingArgs() {}
 
-    private BotGrammarSlotTypeSettingArgs() {
-        this.source = Codegen.empty();
+    private BotGrammarSlotTypeSettingArgs(BotGrammarSlotTypeSettingArgs $) {
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotGrammarSlotTypeSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BotGrammarSlotTypeSourceArgs> source;
+        private BotGrammarSlotTypeSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotGrammarSlotTypeSettingArgs();
         }
 
         public Builder(BotGrammarSlotTypeSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
+            $ = new BotGrammarSlotTypeSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder source(@Nullable Output<BotGrammarSlotTypeSourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable BotGrammarSlotTypeSourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public BotGrammarSlotTypeSettingArgs build() {
-            return new BotGrammarSlotTypeSettingArgs(source);
+
+        public Builder source(BotGrammarSlotTypeSourceArgs source) {
+            return source(Output.of(source));
+        }
+
+        public BotGrammarSlotTypeSettingArgs build() {
+            return $;
         }
     }
+
 }

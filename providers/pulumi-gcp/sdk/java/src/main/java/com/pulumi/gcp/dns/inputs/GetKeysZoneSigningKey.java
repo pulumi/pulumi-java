@@ -21,7 +21,7 @@ public final class GetKeysZoneSigningKey extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -32,7 +32,7 @@ public final class GetKeysZoneSigningKey extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="creationTime", required=true)
-      private final String creationTime;
+    private String creationTime;
 
     public String creationTime() {
         return this.creationTime;
@@ -43,7 +43,7 @@ public final class GetKeysZoneSigningKey extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -54,7 +54,7 @@ public final class GetKeysZoneSigningKey extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="digests", required=true)
-      private final List<GetKeysZoneSigningKeyDigest> digests;
+    private List<GetKeysZoneSigningKeyDigest> digests;
 
     public List<GetKeysZoneSigningKeyDigest> digests() {
         return this.digests;
@@ -65,7 +65,7 @@ public final class GetKeysZoneSigningKey extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -76,7 +76,7 @@ public final class GetKeysZoneSigningKey extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isActive", required=true)
-      private final Boolean isActive;
+    private Boolean isActive;
 
     public Boolean isActive() {
         return this.isActive;
@@ -87,7 +87,7 @@ public final class GetKeysZoneSigningKey extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="keyLength", required=true)
-      private final Integer keyLength;
+    private Integer keyLength;
 
     public Integer keyLength() {
         return this.keyLength;
@@ -98,7 +98,7 @@ public final class GetKeysZoneSigningKey extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="keyTag", required=true)
-      private final Integer keyTag;
+    private Integer keyTag;
 
     public Integer keyTag() {
         return this.keyTag;
@@ -109,121 +109,105 @@ public final class GetKeysZoneSigningKey extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="publicKey", required=true)
-      private final String publicKey;
+    private String publicKey;
 
     public String publicKey() {
         return this.publicKey;
     }
 
-    public GetKeysZoneSigningKey(
-        String algorithm,
-        String creationTime,
-        String description,
-        List<GetKeysZoneSigningKeyDigest> digests,
-        String id,
-        Boolean isActive,
-        Integer keyLength,
-        Integer keyTag,
-        String publicKey) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.creationTime = Objects.requireNonNull(creationTime, "expected parameter 'creationTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.digests = Objects.requireNonNull(digests, "expected parameter 'digests' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.isActive = Objects.requireNonNull(isActive, "expected parameter 'isActive' to be non-null");
-        this.keyLength = Objects.requireNonNull(keyLength, "expected parameter 'keyLength' to be non-null");
-        this.keyTag = Objects.requireNonNull(keyTag, "expected parameter 'keyTag' to be non-null");
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-    }
+    private GetKeysZoneSigningKey() {}
 
-    private GetKeysZoneSigningKey() {
-        this.algorithm = null;
-        this.creationTime = null;
-        this.description = null;
-        this.digests = List.of();
-        this.id = null;
-        this.isActive = null;
-        this.keyLength = null;
-        this.keyTag = null;
-        this.publicKey = null;
+    private GetKeysZoneSigningKey(GetKeysZoneSigningKey $) {
+        this.algorithm = $.algorithm;
+        this.creationTime = $.creationTime;
+        this.description = $.description;
+        this.digests = $.digests;
+        this.id = $.id;
+        this.isActive = $.isActive;
+        this.keyLength = $.keyLength;
+        this.keyTag = $.keyTag;
+        this.publicKey = $.publicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeysZoneSigningKey defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private String creationTime;
-        private String description;
-        private List<GetKeysZoneSigningKeyDigest> digests;
-        private String id;
-        private Boolean isActive;
-        private Integer keyLength;
-        private Integer keyTag;
-        private String publicKey;
+        private GetKeysZoneSigningKey $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeysZoneSigningKey();
         }
 
         public Builder(GetKeysZoneSigningKey defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.creationTime = defaults.creationTime;
-    	      this.description = defaults.description;
-    	      this.digests = defaults.digests;
-    	      this.id = defaults.id;
-    	      this.isActive = defaults.isActive;
-    	      this.keyLength = defaults.keyLength;
-    	      this.keyTag = defaults.keyTag;
-    	      this.publicKey = defaults.publicKey;
+            $ = new GetKeysZoneSigningKey(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder creationTime(String creationTime) {
-            this.creationTime = Objects.requireNonNull(creationTime);
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder digests(List<GetKeysZoneSigningKeyDigest> digests) {
-            this.digests = Objects.requireNonNull(digests);
+            $.digests = digests;
             return this;
         }
+
         public Builder digests(GetKeysZoneSigningKeyDigest... digests) {
             return digests(List.of(digests));
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder isActive(Boolean isActive) {
-            this.isActive = Objects.requireNonNull(isActive);
+            $.isActive = isActive;
             return this;
         }
+
         public Builder keyLength(Integer keyLength) {
-            this.keyLength = Objects.requireNonNull(keyLength);
+            $.keyLength = keyLength;
             return this;
         }
+
         public Builder keyTag(Integer keyTag) {
-            this.keyTag = Objects.requireNonNull(keyTag);
+            $.keyTag = keyTag;
             return this;
         }
+
         public Builder publicKey(String publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
-        }        public GetKeysZoneSigningKey build() {
-            return new GetKeysZoneSigningKey(algorithm, creationTime, description, digests, id, isActive, keyLength, keyTag, publicKey);
+        }
+
+        public GetKeysZoneSigningKey build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.creationTime = Objects.requireNonNull($.creationTime, "expected parameter 'creationTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.digests = Objects.requireNonNull($.digests, "expected parameter 'digests' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.isActive = Objects.requireNonNull($.isActive, "expected parameter 'isActive' to be non-null");
+            $.keyLength = Objects.requireNonNull($.keyLength, "expected parameter 'keyLength' to be non-null");
+            $.keyTag = Objects.requireNonNull($.keyTag, "expected parameter 'keyTag' to be non-null");
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            return $;
         }
     }
+
 }

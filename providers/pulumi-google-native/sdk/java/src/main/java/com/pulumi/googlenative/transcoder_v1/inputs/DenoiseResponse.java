@@ -22,7 +22,7 @@ public final class DenoiseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="strength", required=true)
-      private final Double strength;
+    private Double strength;
 
     public Double strength() {
         return this.strength;
@@ -33,55 +33,52 @@ public final class DenoiseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tune", required=true)
-      private final String tune;
+    private String tune;
 
     public String tune() {
         return this.tune;
     }
 
-    public DenoiseResponse(
-        Double strength,
-        String tune) {
-        this.strength = Objects.requireNonNull(strength, "expected parameter 'strength' to be non-null");
-        this.tune = Objects.requireNonNull(tune, "expected parameter 'tune' to be non-null");
-    }
+    private DenoiseResponse() {}
 
-    private DenoiseResponse() {
-        this.strength = null;
-        this.tune = null;
+    private DenoiseResponse(DenoiseResponse $) {
+        this.strength = $.strength;
+        this.tune = $.tune;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DenoiseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double strength;
-        private String tune;
+        private DenoiseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DenoiseResponse();
         }
 
         public Builder(DenoiseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.strength = defaults.strength;
-    	      this.tune = defaults.tune;
+            $ = new DenoiseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder strength(Double strength) {
-            this.strength = Objects.requireNonNull(strength);
+            $.strength = strength;
             return this;
         }
+
         public Builder tune(String tune) {
-            this.tune = Objects.requireNonNull(tune);
+            $.tune = tune;
             return this;
-        }        public DenoiseResponse build() {
-            return new DenoiseResponse(strength, tune);
+        }
+
+        public DenoiseResponse build() {
+            $.strength = Objects.requireNonNull($.strength, "expected parameter 'strength' to be non-null");
+            $.tune = Objects.requireNonNull($.tune, "expected parameter 'tune' to be non-null");
+            return $;
         }
     }
+
 }

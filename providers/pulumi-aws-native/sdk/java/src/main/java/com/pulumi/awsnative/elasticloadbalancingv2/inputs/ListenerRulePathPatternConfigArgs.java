@@ -5,10 +5,10 @@ package com.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class ListenerRulePathPatternConfigArgs extends com.pulumi.resource
     public static final ListenerRulePathPatternConfigArgs Empty = new ListenerRulePathPatternConfigArgs();
 
     @Import(name="values")
-      private final @Nullable Output<List<String>> values;
+    private @Nullable Output<List<String>> values;
 
-    public Output<List<String>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<String>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ListenerRulePathPatternConfigArgs(@Nullable Output<List<String>> values) {
-        this.values = values;
-    }
+    private ListenerRulePathPatternConfigArgs() {}
 
-    private ListenerRulePathPatternConfigArgs() {
-        this.values = Codegen.empty();
+    private ListenerRulePathPatternConfigArgs(ListenerRulePathPatternConfigArgs $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRulePathPatternConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> values;
+        private ListenerRulePathPatternConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRulePathPatternConfigArgs();
         }
 
         public Builder(ListenerRulePathPatternConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ListenerRulePathPatternConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder values(@Nullable Output<List<String>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<String> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<String> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ListenerRulePathPatternConfigArgs build() {
-            return new ListenerRulePathPatternConfigArgs(values);
+        }
+
+        public ListenerRulePathPatternConfigArgs build() {
+            return $;
         }
     }
+
 }

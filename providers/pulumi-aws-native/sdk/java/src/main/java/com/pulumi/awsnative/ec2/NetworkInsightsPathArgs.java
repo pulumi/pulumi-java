@@ -7,11 +7,11 @@ import com.pulumi.awsnative.ec2.enums.NetworkInsightsPathProtocol;
 import com.pulumi.awsnative.ec2.inputs.NetworkInsightsPathTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,173 +20,157 @@ public final class NetworkInsightsPathArgs extends com.pulumi.resources.Resource
     public static final NetworkInsightsPathArgs Empty = new NetworkInsightsPathArgs();
 
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
     }
 
     @Import(name="destinationIp")
-      private final @Nullable Output<String> destinationIp;
+    private @Nullable Output<String> destinationIp;
 
-    public Output<String> destinationIp() {
-        return this.destinationIp == null ? Codegen.empty() : this.destinationIp;
+    public Optional<Output<String>> destinationIp() {
+        return Optional.ofNullable(this.destinationIp);
     }
 
     @Import(name="destinationPort")
-      private final @Nullable Output<Integer> destinationPort;
+    private @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> destinationPort() {
-        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
+    public Optional<Output<Integer>> destinationPort() {
+        return Optional.ofNullable(this.destinationPort);
     }
 
     @Import(name="protocol", required=true)
-      private final Output<NetworkInsightsPathProtocol> protocol;
+    private Output<NetworkInsightsPathProtocol> protocol;
 
     public Output<NetworkInsightsPathProtocol> protocol() {
         return this.protocol;
     }
 
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
     }
 
     @Import(name="sourceIp")
-      private final @Nullable Output<String> sourceIp;
+    private @Nullable Output<String> sourceIp;
 
-    public Output<String> sourceIp() {
-        return this.sourceIp == null ? Codegen.empty() : this.sourceIp;
+    public Optional<Output<String>> sourceIp() {
+        return Optional.ofNullable(this.sourceIp);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<NetworkInsightsPathTagArgs>> tags;
+    private @Nullable Output<List<NetworkInsightsPathTagArgs>> tags;
 
-    public Output<List<NetworkInsightsPathTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<NetworkInsightsPathTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NetworkInsightsPathArgs(
-        Output<String> destination,
-        @Nullable Output<String> destinationIp,
-        @Nullable Output<Integer> destinationPort,
-        Output<NetworkInsightsPathProtocol> protocol,
-        Output<String> source,
-        @Nullable Output<String> sourceIp,
-        @Nullable Output<List<NetworkInsightsPathTagArgs>> tags) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.destinationIp = destinationIp;
-        this.destinationPort = destinationPort;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.sourceIp = sourceIp;
-        this.tags = tags;
-    }
+    private NetworkInsightsPathArgs() {}
 
-    private NetworkInsightsPathArgs() {
-        this.destination = Codegen.empty();
-        this.destinationIp = Codegen.empty();
-        this.destinationPort = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourceIp = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NetworkInsightsPathArgs(NetworkInsightsPathArgs $) {
+        this.destination = $.destination;
+        this.destinationIp = $.destinationIp;
+        this.destinationPort = $.destinationPort;
+        this.protocol = $.protocol;
+        this.source = $.source;
+        this.sourceIp = $.sourceIp;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destination;
-        private @Nullable Output<String> destinationIp;
-        private @Nullable Output<Integer> destinationPort;
-        private Output<NetworkInsightsPathProtocol> protocol;
-        private Output<String> source;
-        private @Nullable Output<String> sourceIp;
-        private @Nullable Output<List<NetworkInsightsPathTagArgs>> tags;
+        private NetworkInsightsPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsPathArgs();
         }
 
         public Builder(NetworkInsightsPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.destinationIp = defaults.destinationIp;
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.protocol = defaults.protocol;
-    	      this.source = defaults.source;
-    	      this.sourceIp = defaults.sourceIp;
-    	      this.tags = defaults.tags;
+            $ = new NetworkInsightsPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder destinationIp(@Nullable Output<String> destinationIp) {
-            this.destinationIp = destinationIp;
+            $.destinationIp = destinationIp;
             return this;
         }
-        public Builder destinationIp(@Nullable String destinationIp) {
-            this.destinationIp = Codegen.ofNullable(destinationIp);
-            return this;
+
+        public Builder destinationIp(String destinationIp) {
+            return destinationIp(Output.of(destinationIp));
         }
+
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
-            this.destinationPort = destinationPort;
+            $.destinationPort = destinationPort;
             return this;
         }
-        public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Codegen.ofNullable(destinationPort);
-            return this;
+
+        public Builder destinationPort(Integer destinationPort) {
+            return destinationPort(Output.of(destinationPort));
         }
+
         public Builder protocol(Output<NetworkInsightsPathProtocol> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(NetworkInsightsPathProtocol protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder sourceIp(@Nullable Output<String> sourceIp) {
-            this.sourceIp = sourceIp;
+            $.sourceIp = sourceIp;
             return this;
         }
-        public Builder sourceIp(@Nullable String sourceIp) {
-            this.sourceIp = Codegen.ofNullable(sourceIp);
-            return this;
+
+        public Builder sourceIp(String sourceIp) {
+            return sourceIp(Output.of(sourceIp));
         }
+
         public Builder tags(@Nullable Output<List<NetworkInsightsPathTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<NetworkInsightsPathTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<NetworkInsightsPathTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(NetworkInsightsPathTagArgs... tags) {
             return tags(List.of(tags));
-        }        public NetworkInsightsPathArgs build() {
-            return new NetworkInsightsPathArgs(destination, destinationIp, destinationPort, protocol, source, sourceIp, tags);
+        }
+
+        public NetworkInsightsPathArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

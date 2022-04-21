@@ -17,7 +17,7 @@ public final class GetCassandraResourceCassandraViewArgs extends com.pulumi.reso
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetCassandraResourceCassandraViewArgs extends com.pulumi.reso
      * 
      */
     @Import(name="keyspaceName", required=true)
-      private final String keyspaceName;
+    private String keyspaceName;
 
     public String keyspaceName() {
         return this.keyspaceName;
@@ -39,7 +39,7 @@ public final class GetCassandraResourceCassandraViewArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetCassandraResourceCassandraViewArgs extends com.pulumi.reso
      * 
      */
     @Import(name="viewName", required=true)
-      private final String viewName;
+    private String viewName;
 
     public String viewName() {
         return this.viewName;
     }
 
-    public GetCassandraResourceCassandraViewArgs(
-        String accountName,
-        String keyspaceName,
-        String resourceGroupName,
-        String viewName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.keyspaceName = Objects.requireNonNull(keyspaceName, "expected parameter 'keyspaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.viewName = Objects.requireNonNull(viewName, "expected parameter 'viewName' to be non-null");
-    }
+    private GetCassandraResourceCassandraViewArgs() {}
 
-    private GetCassandraResourceCassandraViewArgs() {
-        this.accountName = null;
-        this.keyspaceName = null;
-        this.resourceGroupName = null;
-        this.viewName = null;
+    private GetCassandraResourceCassandraViewArgs(GetCassandraResourceCassandraViewArgs $) {
+        this.accountName = $.accountName;
+        this.keyspaceName = $.keyspaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.viewName = $.viewName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCassandraResourceCassandraViewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String keyspaceName;
-        private String resourceGroupName;
-        private String viewName;
+        private GetCassandraResourceCassandraViewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCassandraResourceCassandraViewArgs();
         }
 
         public Builder(GetCassandraResourceCassandraViewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.keyspaceName = defaults.keyspaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.viewName = defaults.viewName;
+            $ = new GetCassandraResourceCassandraViewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder keyspaceName(String keyspaceName) {
-            this.keyspaceName = Objects.requireNonNull(keyspaceName);
+            $.keyspaceName = keyspaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder viewName(String viewName) {
-            this.viewName = Objects.requireNonNull(viewName);
+            $.viewName = viewName;
             return this;
-        }        public GetCassandraResourceCassandraViewArgs build() {
-            return new GetCassandraResourceCassandraViewArgs(accountName, keyspaceName, resourceGroupName, viewName);
+        }
+
+        public GetCassandraResourceCassandraViewArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.keyspaceName = Objects.requireNonNull($.keyspaceName, "expected parameter 'keyspaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.viewName = Objects.requireNonNull($.viewName, "expected parameter 'viewName' to be non-null");
+            return $;
         }
     }
+
 }

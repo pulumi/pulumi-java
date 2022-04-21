@@ -6,9 +6,9 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceConfluencePageToIndexFieldMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class DataSourceConfluencePageConfigurationArgs extends com.pulumi.
     public static final DataSourceConfluencePageConfigurationArgs Empty = new DataSourceConfluencePageConfigurationArgs();
 
     @Import(name="pageFieldMappings")
-      private final @Nullable Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings;
+    private @Nullable Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings;
 
-    public Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings() {
-        return this.pageFieldMappings == null ? Codegen.empty() : this.pageFieldMappings;
+    public Optional<Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>>> pageFieldMappings() {
+        return Optional.ofNullable(this.pageFieldMappings);
     }
 
-    public DataSourceConfluencePageConfigurationArgs(@Nullable Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings) {
-        this.pageFieldMappings = pageFieldMappings;
-    }
+    private DataSourceConfluencePageConfigurationArgs() {}
 
-    private DataSourceConfluencePageConfigurationArgs() {
-        this.pageFieldMappings = Codegen.empty();
+    private DataSourceConfluencePageConfigurationArgs(DataSourceConfluencePageConfigurationArgs $) {
+        this.pageFieldMappings = $.pageFieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluencePageConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings;
+        private DataSourceConfluencePageConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluencePageConfigurationArgs();
         }
 
         public Builder(DataSourceConfluencePageConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pageFieldMappings = defaults.pageFieldMappings;
+            $ = new DataSourceConfluencePageConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pageFieldMappings(@Nullable Output<List<DataSourceConfluencePageToIndexFieldMappingArgs>> pageFieldMappings) {
-            this.pageFieldMappings = pageFieldMappings;
+            $.pageFieldMappings = pageFieldMappings;
             return this;
         }
-        public Builder pageFieldMappings(@Nullable List<DataSourceConfluencePageToIndexFieldMappingArgs> pageFieldMappings) {
-            this.pageFieldMappings = Codegen.ofNullable(pageFieldMappings);
-            return this;
+
+        public Builder pageFieldMappings(List<DataSourceConfluencePageToIndexFieldMappingArgs> pageFieldMappings) {
+            return pageFieldMappings(Output.of(pageFieldMappings));
         }
+
         public Builder pageFieldMappings(DataSourceConfluencePageToIndexFieldMappingArgs... pageFieldMappings) {
             return pageFieldMappings(List.of(pageFieldMappings));
-        }        public DataSourceConfluencePageConfigurationArgs build() {
-            return new DataSourceConfluencePageConfigurationArgs(pageFieldMappings);
+        }
+
+        public DataSourceConfluencePageConfigurationArgs build() {
+            return $;
         }
     }
+
 }

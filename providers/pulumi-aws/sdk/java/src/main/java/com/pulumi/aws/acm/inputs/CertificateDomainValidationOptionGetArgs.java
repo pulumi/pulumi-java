@@ -5,9 +5,9 @@ package com.pulumi.aws.acm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CertificateDomainValidationOptionGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CertificateDomainValidationOptionGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceRecordName")
-      private final @Nullable Output<String> resourceRecordName;
+    private @Nullable Output<String> resourceRecordName;
 
-    public Output<String> resourceRecordName() {
-        return this.resourceRecordName == null ? Codegen.empty() : this.resourceRecordName;
+    public Optional<Output<String>> resourceRecordName() {
+        return Optional.ofNullable(this.resourceRecordName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CertificateDomainValidationOptionGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceRecordType")
-      private final @Nullable Output<String> resourceRecordType;
+    private @Nullable Output<String> resourceRecordType;
 
-    public Output<String> resourceRecordType() {
-        return this.resourceRecordType == null ? Codegen.empty() : this.resourceRecordType;
+    public Optional<Output<String>> resourceRecordType() {
+        return Optional.ofNullable(this.resourceRecordType);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class CertificateDomainValidationOptionGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceRecordValue")
-      private final @Nullable Output<String> resourceRecordValue;
+    private @Nullable Output<String> resourceRecordValue;
 
-    public Output<String> resourceRecordValue() {
-        return this.resourceRecordValue == null ? Codegen.empty() : this.resourceRecordValue;
+    public Optional<Output<String>> resourceRecordValue() {
+        return Optional.ofNullable(this.resourceRecordValue);
     }
 
-    public CertificateDomainValidationOptionGetArgs(
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> resourceRecordName,
-        @Nullable Output<String> resourceRecordType,
-        @Nullable Output<String> resourceRecordValue) {
-        this.domainName = domainName;
-        this.resourceRecordName = resourceRecordName;
-        this.resourceRecordType = resourceRecordType;
-        this.resourceRecordValue = resourceRecordValue;
-    }
+    private CertificateDomainValidationOptionGetArgs() {}
 
-    private CertificateDomainValidationOptionGetArgs() {
-        this.domainName = Codegen.empty();
-        this.resourceRecordName = Codegen.empty();
-        this.resourceRecordType = Codegen.empty();
-        this.resourceRecordValue = Codegen.empty();
+    private CertificateDomainValidationOptionGetArgs(CertificateDomainValidationOptionGetArgs $) {
+        this.domainName = $.domainName;
+        this.resourceRecordName = $.resourceRecordName;
+        this.resourceRecordType = $.resourceRecordType;
+        this.resourceRecordValue = $.resourceRecordValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateDomainValidationOptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> resourceRecordName;
-        private @Nullable Output<String> resourceRecordType;
-        private @Nullable Output<String> resourceRecordValue;
+        private CertificateDomainValidationOptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateDomainValidationOptionGetArgs();
         }
 
         public Builder(CertificateDomainValidationOptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.resourceRecordName = defaults.resourceRecordName;
-    	      this.resourceRecordType = defaults.resourceRecordType;
-    	      this.resourceRecordValue = defaults.resourceRecordValue;
+            $ = new CertificateDomainValidationOptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder resourceRecordName(@Nullable Output<String> resourceRecordName) {
-            this.resourceRecordName = resourceRecordName;
+            $.resourceRecordName = resourceRecordName;
             return this;
         }
-        public Builder resourceRecordName(@Nullable String resourceRecordName) {
-            this.resourceRecordName = Codegen.ofNullable(resourceRecordName);
-            return this;
+
+        public Builder resourceRecordName(String resourceRecordName) {
+            return resourceRecordName(Output.of(resourceRecordName));
         }
+
         public Builder resourceRecordType(@Nullable Output<String> resourceRecordType) {
-            this.resourceRecordType = resourceRecordType;
+            $.resourceRecordType = resourceRecordType;
             return this;
         }
-        public Builder resourceRecordType(@Nullable String resourceRecordType) {
-            this.resourceRecordType = Codegen.ofNullable(resourceRecordType);
-            return this;
+
+        public Builder resourceRecordType(String resourceRecordType) {
+            return resourceRecordType(Output.of(resourceRecordType));
         }
+
         public Builder resourceRecordValue(@Nullable Output<String> resourceRecordValue) {
-            this.resourceRecordValue = resourceRecordValue;
+            $.resourceRecordValue = resourceRecordValue;
             return this;
         }
-        public Builder resourceRecordValue(@Nullable String resourceRecordValue) {
-            this.resourceRecordValue = Codegen.ofNullable(resourceRecordValue);
-            return this;
-        }        public CertificateDomainValidationOptionGetArgs build() {
-            return new CertificateDomainValidationOptionGetArgs(domainName, resourceRecordName, resourceRecordType, resourceRecordValue);
+
+        public Builder resourceRecordValue(String resourceRecordValue) {
+            return resourceRecordValue(Output.of(resourceRecordValue));
+        }
+
+        public CertificateDomainValidationOptionGetArgs build() {
+            return $;
         }
     }
+
 }

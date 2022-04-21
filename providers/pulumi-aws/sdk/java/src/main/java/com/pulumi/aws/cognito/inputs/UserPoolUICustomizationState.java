@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolUICustomizationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserPoolUICustomizationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="creationDate")
-      private final @Nullable Output<String> creationDate;
+    private @Nullable Output<String> creationDate;
 
-    public Output<String> creationDate() {
-        return this.creationDate == null ? Codegen.empty() : this.creationDate;
+    public Optional<Output<String>> creationDate() {
+        return Optional.ofNullable(this.creationDate);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UserPoolUICustomizationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="css")
-      private final @Nullable Output<String> css;
+    private @Nullable Output<String> css;
 
-    public Output<String> css() {
-        return this.css == null ? Codegen.empty() : this.css;
+    public Optional<Output<String>> css() {
+        return Optional.ofNullable(this.css);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UserPoolUICustomizationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="cssVersion")
-      private final @Nullable Output<String> cssVersion;
+    private @Nullable Output<String> cssVersion;
 
-    public Output<String> cssVersion() {
-        return this.cssVersion == null ? Codegen.empty() : this.cssVersion;
+    public Optional<Output<String>> cssVersion() {
+        return Optional.ofNullable(this.cssVersion);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class UserPoolUICustomizationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="imageFile")
-      private final @Nullable Output<String> imageFile;
+    private @Nullable Output<String> imageFile;
 
-    public Output<String> imageFile() {
-        return this.imageFile == null ? Codegen.empty() : this.imageFile;
+    public Optional<Output<String>> imageFile() {
+        return Optional.ofNullable(this.imageFile);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class UserPoolUICustomizationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="imageUrl")
-      private final @Nullable Output<String> imageUrl;
+    private @Nullable Output<String> imageUrl;
 
-    public Output<String> imageUrl() {
-        return this.imageUrl == null ? Codegen.empty() : this.imageUrl;
+    public Optional<Output<String>> imageUrl() {
+        return Optional.ofNullable(this.imageUrl);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class UserPoolUICustomizationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="lastModifiedDate")
-      private final @Nullable Output<String> lastModifiedDate;
+    private @Nullable Output<String> lastModifiedDate;
 
-    public Output<String> lastModifiedDate() {
-        return this.lastModifiedDate == null ? Codegen.empty() : this.lastModifiedDate;
+    public Optional<Output<String>> lastModifiedDate() {
+        return Optional.ofNullable(this.lastModifiedDate);
     }
 
     /**
@@ -97,141 +97,118 @@ public final class UserPoolUICustomizationState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userPoolId")
-      private final @Nullable Output<String> userPoolId;
+    private @Nullable Output<String> userPoolId;
 
-    public Output<String> userPoolId() {
-        return this.userPoolId == null ? Codegen.empty() : this.userPoolId;
+    public Optional<Output<String>> userPoolId() {
+        return Optional.ofNullable(this.userPoolId);
     }
 
-    public UserPoolUICustomizationState(
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> creationDate,
-        @Nullable Output<String> css,
-        @Nullable Output<String> cssVersion,
-        @Nullable Output<String> imageFile,
-        @Nullable Output<String> imageUrl,
-        @Nullable Output<String> lastModifiedDate,
-        @Nullable Output<String> userPoolId) {
-        this.clientId = clientId;
-        this.creationDate = creationDate;
-        this.css = css;
-        this.cssVersion = cssVersion;
-        this.imageFile = imageFile;
-        this.imageUrl = imageUrl;
-        this.lastModifiedDate = lastModifiedDate;
-        this.userPoolId = userPoolId;
-    }
+    private UserPoolUICustomizationState() {}
 
-    private UserPoolUICustomizationState() {
-        this.clientId = Codegen.empty();
-        this.creationDate = Codegen.empty();
-        this.css = Codegen.empty();
-        this.cssVersion = Codegen.empty();
-        this.imageFile = Codegen.empty();
-        this.imageUrl = Codegen.empty();
-        this.lastModifiedDate = Codegen.empty();
-        this.userPoolId = Codegen.empty();
+    private UserPoolUICustomizationState(UserPoolUICustomizationState $) {
+        this.clientId = $.clientId;
+        this.creationDate = $.creationDate;
+        this.css = $.css;
+        this.cssVersion = $.cssVersion;
+        this.imageFile = $.imageFile;
+        this.imageUrl = $.imageUrl;
+        this.lastModifiedDate = $.lastModifiedDate;
+        this.userPoolId = $.userPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolUICustomizationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> creationDate;
-        private @Nullable Output<String> css;
-        private @Nullable Output<String> cssVersion;
-        private @Nullable Output<String> imageFile;
-        private @Nullable Output<String> imageUrl;
-        private @Nullable Output<String> lastModifiedDate;
-        private @Nullable Output<String> userPoolId;
+        private UserPoolUICustomizationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolUICustomizationState();
         }
 
         public Builder(UserPoolUICustomizationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.creationDate = defaults.creationDate;
-    	      this.css = defaults.css;
-    	      this.cssVersion = defaults.cssVersion;
-    	      this.imageFile = defaults.imageFile;
-    	      this.imageUrl = defaults.imageUrl;
-    	      this.lastModifiedDate = defaults.lastModifiedDate;
-    	      this.userPoolId = defaults.userPoolId;
+            $ = new UserPoolUICustomizationState(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder creationDate(@Nullable Output<String> creationDate) {
-            this.creationDate = creationDate;
+            $.creationDate = creationDate;
             return this;
         }
-        public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Codegen.ofNullable(creationDate);
-            return this;
+
+        public Builder creationDate(String creationDate) {
+            return creationDate(Output.of(creationDate));
         }
+
         public Builder css(@Nullable Output<String> css) {
-            this.css = css;
+            $.css = css;
             return this;
         }
-        public Builder css(@Nullable String css) {
-            this.css = Codegen.ofNullable(css);
-            return this;
+
+        public Builder css(String css) {
+            return css(Output.of(css));
         }
+
         public Builder cssVersion(@Nullable Output<String> cssVersion) {
-            this.cssVersion = cssVersion;
+            $.cssVersion = cssVersion;
             return this;
         }
-        public Builder cssVersion(@Nullable String cssVersion) {
-            this.cssVersion = Codegen.ofNullable(cssVersion);
-            return this;
+
+        public Builder cssVersion(String cssVersion) {
+            return cssVersion(Output.of(cssVersion));
         }
+
         public Builder imageFile(@Nullable Output<String> imageFile) {
-            this.imageFile = imageFile;
+            $.imageFile = imageFile;
             return this;
         }
-        public Builder imageFile(@Nullable String imageFile) {
-            this.imageFile = Codegen.ofNullable(imageFile);
-            return this;
+
+        public Builder imageFile(String imageFile) {
+            return imageFile(Output.of(imageFile));
         }
+
         public Builder imageUrl(@Nullable Output<String> imageUrl) {
-            this.imageUrl = imageUrl;
+            $.imageUrl = imageUrl;
             return this;
         }
-        public Builder imageUrl(@Nullable String imageUrl) {
-            this.imageUrl = Codegen.ofNullable(imageUrl);
-            return this;
+
+        public Builder imageUrl(String imageUrl) {
+            return imageUrl(Output.of(imageUrl));
         }
+
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
-            this.lastModifiedDate = lastModifiedDate;
+            $.lastModifiedDate = lastModifiedDate;
             return this;
         }
-        public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
-            this.lastModifiedDate = Codegen.ofNullable(lastModifiedDate);
-            return this;
+
+        public Builder lastModifiedDate(String lastModifiedDate) {
+            return lastModifiedDate(Output.of(lastModifiedDate));
         }
+
         public Builder userPoolId(@Nullable Output<String> userPoolId) {
-            this.userPoolId = userPoolId;
+            $.userPoolId = userPoolId;
             return this;
         }
-        public Builder userPoolId(@Nullable String userPoolId) {
-            this.userPoolId = Codegen.ofNullable(userPoolId);
-            return this;
-        }        public UserPoolUICustomizationState build() {
-            return new UserPoolUICustomizationState(clientId, creationDate, css, cssVersion, imageFile, imageUrl, lastModifiedDate, userPoolId);
+
+        public Builder userPoolId(String userPoolId) {
+            return userPoolId(Output.of(userPoolId));
+        }
+
+        public UserPoolUICustomizationState build() {
+            return $;
         }
     }
+
 }

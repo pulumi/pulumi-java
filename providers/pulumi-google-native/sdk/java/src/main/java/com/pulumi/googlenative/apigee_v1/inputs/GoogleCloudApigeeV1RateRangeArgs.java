@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleTypeMoneyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<String> end;
+    private @Nullable Output<String> end;
 
-    public Output<String> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<String>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="fee")
-      private final @Nullable Output<GoogleTypeMoneyArgs> fee;
+    private @Nullable Output<GoogleTypeMoneyArgs> fee;
 
-    public Output<GoogleTypeMoneyArgs> fee() {
-        return this.fee == null ? Codegen.empty() : this.fee;
+    public Optional<Output<GoogleTypeMoneyArgs>> fee() {
+        return Optional.ofNullable(this.fee);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<String> start;
+    private @Nullable Output<String> start;
 
-    public Output<String> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<String>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public GoogleCloudApigeeV1RateRangeArgs(
-        @Nullable Output<String> end,
-        @Nullable Output<GoogleTypeMoneyArgs> fee,
-        @Nullable Output<String> start) {
-        this.end = end;
-        this.fee = fee;
-        this.start = start;
-    }
+    private GoogleCloudApigeeV1RateRangeArgs() {}
 
-    private GoogleCloudApigeeV1RateRangeArgs() {
-        this.end = Codegen.empty();
-        this.fee = Codegen.empty();
-        this.start = Codegen.empty();
+    private GoogleCloudApigeeV1RateRangeArgs(GoogleCloudApigeeV1RateRangeArgs $) {
+        this.end = $.end;
+        this.fee = $.fee;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1RateRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> end;
-        private @Nullable Output<GoogleTypeMoneyArgs> fee;
-        private @Nullable Output<String> start;
+        private GoogleCloudApigeeV1RateRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1RateRangeArgs();
         }
 
         public Builder(GoogleCloudApigeeV1RateRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.fee = defaults.fee;
-    	      this.start = defaults.start;
+            $ = new GoogleCloudApigeeV1RateRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(@Nullable Output<String> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable String end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
+
+        public Builder end(String end) {
+            return end(Output.of(end));
         }
+
         public Builder fee(@Nullable Output<GoogleTypeMoneyArgs> fee) {
-            this.fee = fee;
+            $.fee = fee;
             return this;
         }
-        public Builder fee(@Nullable GoogleTypeMoneyArgs fee) {
-            this.fee = Codegen.ofNullable(fee);
-            return this;
+
+        public Builder fee(GoogleTypeMoneyArgs fee) {
+            return fee(Output.of(fee));
         }
+
         public Builder start(@Nullable Output<String> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable String start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
-        }        public GoogleCloudApigeeV1RateRangeArgs build() {
-            return new GoogleCloudApigeeV1RateRangeArgs(end, fee, start);
+
+        public Builder start(String start) {
+            return start(Output.of(start));
+        }
+
+        public GoogleCloudApigeeV1RateRangeArgs build() {
+            return $;
         }
     }
+
 }

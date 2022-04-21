@@ -7,10 +7,10 @@ import com.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurati
 import com.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,10 +19,10 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends com.p
     public static final InstanceAccessControlAttributeConfigurationArgs Empty = new InstanceAccessControlAttributeConfigurationArgs();
 
     @Import(name="accessControlAttributes")
-      private final @Nullable Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
+    private @Nullable Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
-    public Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes() {
-        return this.accessControlAttributes == null ? Codegen.empty() : this.accessControlAttributes;
+    public Optional<Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>>> accessControlAttributes() {
+        return Optional.ofNullable(this.accessControlAttributes);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends com.p
      * 
      */
     @Import(name="instanceAccessControlAttributeConfiguration")
-      private final @Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
+    private @Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
 
-    public Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration() {
-        return this.instanceAccessControlAttributeConfiguration == null ? Codegen.empty() : this.instanceAccessControlAttributeConfiguration;
+    public Optional<Output<InstanceAccessControlAttributeConfigurationPropertiesArgs>> instanceAccessControlAttributeConfiguration() {
+        return Optional.ofNullable(this.instanceAccessControlAttributeConfiguration);
     }
 
     /**
@@ -41,79 +41,73 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends com.p
      * 
      */
     @Import(name="instanceArn", required=true)
-      private final Output<String> instanceArn;
+    private Output<String> instanceArn;
 
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
-    public InstanceAccessControlAttributeConfigurationArgs(
-        @Nullable Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes,
-        @Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration,
-        Output<String> instanceArn) {
-        this.accessControlAttributes = accessControlAttributes;
-        this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
-        this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
-    }
+    private InstanceAccessControlAttributeConfigurationArgs() {}
 
-    private InstanceAccessControlAttributeConfigurationArgs() {
-        this.accessControlAttributes = Codegen.empty();
-        this.instanceAccessControlAttributeConfiguration = Codegen.empty();
-        this.instanceArn = Codegen.empty();
+    private InstanceAccessControlAttributeConfigurationArgs(InstanceAccessControlAttributeConfigurationArgs $) {
+        this.accessControlAttributes = $.accessControlAttributes;
+        this.instanceAccessControlAttributeConfiguration = $.instanceAccessControlAttributeConfiguration;
+        this.instanceArn = $.instanceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAccessControlAttributeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
-        private @Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
-        private Output<String> instanceArn;
+        private InstanceAccessControlAttributeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAccessControlAttributeConfigurationArgs();
         }
 
         public Builder(InstanceAccessControlAttributeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlAttributes = defaults.accessControlAttributes;
-    	      this.instanceAccessControlAttributeConfiguration = defaults.instanceAccessControlAttributeConfiguration;
-    	      this.instanceArn = defaults.instanceArn;
+            $ = new InstanceAccessControlAttributeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlAttributes(@Nullable Output<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
-            this.accessControlAttributes = accessControlAttributes;
+            $.accessControlAttributes = accessControlAttributes;
             return this;
         }
-        public Builder accessControlAttributes(@Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
-            this.accessControlAttributes = Codegen.ofNullable(accessControlAttributes);
-            return this;
+
+        public Builder accessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
+            return accessControlAttributes(Output.of(accessControlAttributes));
         }
+
         public Builder accessControlAttributes(InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs... accessControlAttributes) {
             return accessControlAttributes(List.of(accessControlAttributes));
         }
+
         public Builder instanceAccessControlAttributeConfiguration(@Nullable Output<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration) {
-            this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
+            $.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
             return this;
         }
-        public Builder instanceAccessControlAttributeConfiguration(@Nullable InstanceAccessControlAttributeConfigurationPropertiesArgs instanceAccessControlAttributeConfiguration) {
-            this.instanceAccessControlAttributeConfiguration = Codegen.ofNullable(instanceAccessControlAttributeConfiguration);
-            return this;
+
+        public Builder instanceAccessControlAttributeConfiguration(InstanceAccessControlAttributeConfigurationPropertiesArgs instanceAccessControlAttributeConfiguration) {
+            return instanceAccessControlAttributeConfiguration(Output.of(instanceAccessControlAttributeConfiguration));
         }
+
         public Builder instanceArn(Output<String> instanceArn) {
-            this.instanceArn = Objects.requireNonNull(instanceArn);
+            $.instanceArn = instanceArn;
             return this;
         }
+
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
-            return this;
-        }        public InstanceAccessControlAttributeConfigurationArgs build() {
-            return new InstanceAccessControlAttributeConfigurationArgs(accessControlAttributes, instanceAccessControlAttributeConfiguration, instanceArn);
+            return instanceArn(Output.of(instanceArn));
+        }
+
+        public InstanceAccessControlAttributeConfigurationArgs build() {
+            $.instanceArn = Objects.requireNonNull($.instanceArn, "expected parameter 'instanceArn' to be non-null");
+            return $;
         }
     }
+
 }

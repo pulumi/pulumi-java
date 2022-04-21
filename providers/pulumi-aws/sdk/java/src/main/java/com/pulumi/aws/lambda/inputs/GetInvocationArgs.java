@@ -19,7 +19,7 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="functionName", required=true)
-      private final String functionName;
+    private String functionName;
 
     public String functionName() {
         return this.functionName;
@@ -30,7 +30,7 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="input", required=true)
-      private final String input;
+    private String input;
 
     public String input() {
         return this.input;
@@ -42,64 +42,58 @@ public final class GetInvocationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="qualifier")
-      private final @Nullable String qualifier;
+    private @Nullable String qualifier;
 
     public Optional<String> qualifier() {
-        return this.qualifier == null ? Optional.empty() : Optional.ofNullable(this.qualifier);
+        return Optional.ofNullable(this.qualifier);
     }
 
-    public GetInvocationArgs(
-        String functionName,
-        String input,
-        @Nullable String qualifier) {
-        this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
-        this.input = Objects.requireNonNull(input, "expected parameter 'input' to be non-null");
-        this.qualifier = qualifier;
-    }
+    private GetInvocationArgs() {}
 
-    private GetInvocationArgs() {
-        this.functionName = null;
-        this.input = null;
-        this.qualifier = null;
+    private GetInvocationArgs(GetInvocationArgs $) {
+        this.functionName = $.functionName;
+        this.input = $.input;
+        this.qualifier = $.qualifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInvocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionName;
-        private String input;
-        private @Nullable String qualifier;
+        private GetInvocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInvocationArgs();
         }
 
         public Builder(GetInvocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionName = defaults.functionName;
-    	      this.input = defaults.input;
-    	      this.qualifier = defaults.qualifier;
+            $ = new GetInvocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionName(String functionName) {
-            this.functionName = Objects.requireNonNull(functionName);
+            $.functionName = functionName;
             return this;
         }
+
         public Builder input(String input) {
-            this.input = Objects.requireNonNull(input);
+            $.input = input;
             return this;
         }
+
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = qualifier;
+            $.qualifier = qualifier;
             return this;
-        }        public GetInvocationArgs build() {
-            return new GetInvocationArgs(functionName, input, qualifier);
+        }
+
+        public GetInvocationArgs build() {
+            $.functionName = Objects.requireNonNull($.functionName, "expected parameter 'functionName' to be non-null");
+            $.input = Objects.requireNonNull($.input, "expected parameter 'input' to be non-null");
+            return $;
         }
     }
+
 }

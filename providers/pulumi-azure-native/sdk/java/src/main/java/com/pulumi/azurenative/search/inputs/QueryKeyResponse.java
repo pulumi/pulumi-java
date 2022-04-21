@@ -21,7 +21,7 @@ public final class QueryKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -32,55 +32,52 @@ public final class QueryKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public QueryKeyResponse(
-        String key,
-        String name) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private QueryKeyResponse() {}
 
-    private QueryKeyResponse() {
-        this.key = null;
-        this.name = null;
+    private QueryKeyResponse(QueryKeyResponse $) {
+        this.key = $.key;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String name;
+        private QueryKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryKeyResponse();
         }
 
         public Builder(QueryKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.name = defaults.name;
+            $ = new QueryKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public QueryKeyResponse build() {
-            return new QueryKeyResponse(key, name);
+        }
+
+        public QueryKeyResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

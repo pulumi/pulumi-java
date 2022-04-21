@@ -8,10 +8,10 @@ import com.pulumi.awsnative.connect.inputs.UserPhoneConfigArgs;
 import com.pulumi.awsnative.connect.inputs.UserTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="directoryUserId")
-      private final @Nullable Output<String> directoryUserId;
+    private @Nullable Output<String> directoryUserId;
 
-    public Output<String> directoryUserId() {
-        return this.directoryUserId == null ? Codegen.empty() : this.directoryUserId;
+    public Optional<Output<String>> directoryUserId() {
+        return Optional.ofNullable(this.directoryUserId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hierarchyGroupArn")
-      private final @Nullable Output<String> hierarchyGroupArn;
+    private @Nullable Output<String> hierarchyGroupArn;
 
-    public Output<String> hierarchyGroupArn() {
-        return this.hierarchyGroupArn == null ? Codegen.empty() : this.hierarchyGroupArn;
+    public Optional<Output<String>> hierarchyGroupArn() {
+        return Optional.ofNullable(this.hierarchyGroupArn);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityInfo")
-      private final @Nullable Output<UserIdentityInfoArgs> identityInfo;
+    private @Nullable Output<UserIdentityInfoArgs> identityInfo;
 
-    public Output<UserIdentityInfoArgs> identityInfo() {
-        return this.identityInfo == null ? Codegen.empty() : this.identityInfo;
+    public Optional<Output<UserIdentityInfoArgs>> identityInfo() {
+        return Optional.ofNullable(this.identityInfo);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceArn", required=true)
-      private final Output<String> instanceArn;
+    private Output<String> instanceArn;
 
     public Output<String> instanceArn() {
         return this.instanceArn;
@@ -68,10 +68,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phoneConfig", required=true)
-      private final Output<UserPhoneConfigArgs> phoneConfig;
+    private Output<UserPhoneConfigArgs> phoneConfig;
 
     public Output<UserPhoneConfigArgs> phoneConfig() {
         return this.phoneConfig;
@@ -90,7 +90,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingProfileArn", required=true)
-      private final Output<String> routingProfileArn;
+    private Output<String> routingProfileArn;
 
     public Output<String> routingProfileArn() {
         return this.routingProfileArn;
@@ -101,7 +101,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityProfileArns", required=true)
-      private final Output<List<String>> securityProfileArns;
+    private Output<List<String>> securityProfileArns;
 
     public Output<List<String>> securityProfileArns() {
         return this.securityProfileArns;
@@ -112,10 +112,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<UserTagArgs>> tags;
+    private @Nullable Output<List<UserTagArgs>> tags;
 
-    public Output<List<UserTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<UserTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -123,173 +123,151 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public UserArgs(
-        @Nullable Output<String> directoryUserId,
-        @Nullable Output<String> hierarchyGroupArn,
-        @Nullable Output<UserIdentityInfoArgs> identityInfo,
-        Output<String> instanceArn,
-        @Nullable Output<String> password,
-        Output<UserPhoneConfigArgs> phoneConfig,
-        Output<String> routingProfileArn,
-        Output<List<String>> securityProfileArns,
-        @Nullable Output<List<UserTagArgs>> tags,
-        Output<String> username) {
-        this.directoryUserId = directoryUserId;
-        this.hierarchyGroupArn = hierarchyGroupArn;
-        this.identityInfo = identityInfo;
-        this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
-        this.password = password;
-        this.phoneConfig = Objects.requireNonNull(phoneConfig, "expected parameter 'phoneConfig' to be non-null");
-        this.routingProfileArn = Objects.requireNonNull(routingProfileArn, "expected parameter 'routingProfileArn' to be non-null");
-        this.securityProfileArns = Objects.requireNonNull(securityProfileArns, "expected parameter 'securityProfileArns' to be non-null");
-        this.tags = tags;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private UserArgs() {}
 
-    private UserArgs() {
-        this.directoryUserId = Codegen.empty();
-        this.hierarchyGroupArn = Codegen.empty();
-        this.identityInfo = Codegen.empty();
-        this.instanceArn = Codegen.empty();
-        this.password = Codegen.empty();
-        this.phoneConfig = Codegen.empty();
-        this.routingProfileArn = Codegen.empty();
-        this.securityProfileArns = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.username = Codegen.empty();
+    private UserArgs(UserArgs $) {
+        this.directoryUserId = $.directoryUserId;
+        this.hierarchyGroupArn = $.hierarchyGroupArn;
+        this.identityInfo = $.identityInfo;
+        this.instanceArn = $.instanceArn;
+        this.password = $.password;
+        this.phoneConfig = $.phoneConfig;
+        this.routingProfileArn = $.routingProfileArn;
+        this.securityProfileArns = $.securityProfileArns;
+        this.tags = $.tags;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> directoryUserId;
-        private @Nullable Output<String> hierarchyGroupArn;
-        private @Nullable Output<UserIdentityInfoArgs> identityInfo;
-        private Output<String> instanceArn;
-        private @Nullable Output<String> password;
-        private Output<UserPhoneConfigArgs> phoneConfig;
-        private Output<String> routingProfileArn;
-        private Output<List<String>> securityProfileArns;
-        private @Nullable Output<List<UserTagArgs>> tags;
-        private Output<String> username;
+        private UserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArgs();
         }
 
         public Builder(UserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.directoryUserId = defaults.directoryUserId;
-    	      this.hierarchyGroupArn = defaults.hierarchyGroupArn;
-    	      this.identityInfo = defaults.identityInfo;
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.password = defaults.password;
-    	      this.phoneConfig = defaults.phoneConfig;
-    	      this.routingProfileArn = defaults.routingProfileArn;
-    	      this.securityProfileArns = defaults.securityProfileArns;
-    	      this.tags = defaults.tags;
-    	      this.username = defaults.username;
+            $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder directoryUserId(@Nullable Output<String> directoryUserId) {
-            this.directoryUserId = directoryUserId;
+            $.directoryUserId = directoryUserId;
             return this;
         }
-        public Builder directoryUserId(@Nullable String directoryUserId) {
-            this.directoryUserId = Codegen.ofNullable(directoryUserId);
-            return this;
+
+        public Builder directoryUserId(String directoryUserId) {
+            return directoryUserId(Output.of(directoryUserId));
         }
+
         public Builder hierarchyGroupArn(@Nullable Output<String> hierarchyGroupArn) {
-            this.hierarchyGroupArn = hierarchyGroupArn;
+            $.hierarchyGroupArn = hierarchyGroupArn;
             return this;
         }
-        public Builder hierarchyGroupArn(@Nullable String hierarchyGroupArn) {
-            this.hierarchyGroupArn = Codegen.ofNullable(hierarchyGroupArn);
-            return this;
+
+        public Builder hierarchyGroupArn(String hierarchyGroupArn) {
+            return hierarchyGroupArn(Output.of(hierarchyGroupArn));
         }
+
         public Builder identityInfo(@Nullable Output<UserIdentityInfoArgs> identityInfo) {
-            this.identityInfo = identityInfo;
+            $.identityInfo = identityInfo;
             return this;
         }
-        public Builder identityInfo(@Nullable UserIdentityInfoArgs identityInfo) {
-            this.identityInfo = Codegen.ofNullable(identityInfo);
-            return this;
+
+        public Builder identityInfo(UserIdentityInfoArgs identityInfo) {
+            return identityInfo(Output.of(identityInfo));
         }
+
         public Builder instanceArn(Output<String> instanceArn) {
-            this.instanceArn = Objects.requireNonNull(instanceArn);
+            $.instanceArn = instanceArn;
             return this;
         }
+
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
-            return this;
+            return instanceArn(Output.of(instanceArn));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder phoneConfig(Output<UserPhoneConfigArgs> phoneConfig) {
-            this.phoneConfig = Objects.requireNonNull(phoneConfig);
+            $.phoneConfig = phoneConfig;
             return this;
         }
+
         public Builder phoneConfig(UserPhoneConfigArgs phoneConfig) {
-            this.phoneConfig = Output.of(Objects.requireNonNull(phoneConfig));
-            return this;
+            return phoneConfig(Output.of(phoneConfig));
         }
+
         public Builder routingProfileArn(Output<String> routingProfileArn) {
-            this.routingProfileArn = Objects.requireNonNull(routingProfileArn);
+            $.routingProfileArn = routingProfileArn;
             return this;
         }
+
         public Builder routingProfileArn(String routingProfileArn) {
-            this.routingProfileArn = Output.of(Objects.requireNonNull(routingProfileArn));
-            return this;
+            return routingProfileArn(Output.of(routingProfileArn));
         }
+
         public Builder securityProfileArns(Output<List<String>> securityProfileArns) {
-            this.securityProfileArns = Objects.requireNonNull(securityProfileArns);
+            $.securityProfileArns = securityProfileArns;
             return this;
         }
+
         public Builder securityProfileArns(List<String> securityProfileArns) {
-            this.securityProfileArns = Output.of(Objects.requireNonNull(securityProfileArns));
-            return this;
+            return securityProfileArns(Output.of(securityProfileArns));
         }
+
         public Builder securityProfileArns(String... securityProfileArns) {
             return securityProfileArns(List.of(securityProfileArns));
         }
+
         public Builder tags(@Nullable Output<List<UserTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<UserTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<UserTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(UserTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public UserArgs build() {
-            return new UserArgs(directoryUserId, hierarchyGroupArn, identityInfo, instanceArn, password, phoneConfig, routingProfileArn, securityProfileArns, tags, username);
+            return username(Output.of(username));
+        }
+
+        public UserArgs build() {
+            $.instanceArn = Objects.requireNonNull($.instanceArn, "expected parameter 'instanceArn' to be non-null");
+            $.phoneConfig = Objects.requireNonNull($.phoneConfig, "expected parameter 'phoneConfig' to be non-null");
+            $.routingProfileArn = Objects.requireNonNull($.routingProfileArn, "expected parameter 'routingProfileArn' to be non-null");
+            $.securityProfileArns = Objects.requireNonNull($.securityProfileArns, "expected parameter 'securityProfileArns' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

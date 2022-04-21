@@ -7,12 +7,12 @@ import com.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConf
 import com.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="certificateAuthorityConfiguration", required=true)
-      private final Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration;
+    private Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration;
 
     public Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration() {
         return this.certificateAuthorityConfiguration;
@@ -36,10 +36,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="permanentDeletionTimeInDays")
-      private final @Nullable Output<Integer> permanentDeletionTimeInDays;
+    private @Nullable Output<Integer> permanentDeletionTimeInDays;
 
-    public Output<Integer> permanentDeletionTimeInDays() {
-        return this.permanentDeletionTimeInDays == null ? Codegen.empty() : this.permanentDeletionTimeInDays;
+    public Optional<Output<Integer>> permanentDeletionTimeInDays() {
+        return Optional.ofNullable(this.permanentDeletionTimeInDays);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="revocationConfiguration")
-      private final @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
+    private @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
-    public Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration() {
-        return this.revocationConfiguration == null ? Codegen.empty() : this.revocationConfiguration;
+    public Optional<Output<CertificateAuthorityRevocationConfigurationArgs>> revocationConfiguration() {
+        return Optional.ofNullable(this.revocationConfiguration);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -80,115 +80,99 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public CertificateAuthorityArgs(
-        Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Integer> permanentDeletionTimeInDays,
-        @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> type) {
-        this.certificateAuthorityConfiguration = Objects.requireNonNull(certificateAuthorityConfiguration, "expected parameter 'certificateAuthorityConfiguration' to be non-null");
-        this.enabled = enabled;
-        this.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
-        this.revocationConfiguration = revocationConfiguration;
-        this.tags = tags;
-        this.type = type;
-    }
+    private CertificateAuthorityArgs() {}
 
-    private CertificateAuthorityArgs() {
-        this.certificateAuthorityConfiguration = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.permanentDeletionTimeInDays = Codegen.empty();
-        this.revocationConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private CertificateAuthorityArgs(CertificateAuthorityArgs $) {
+        this.certificateAuthorityConfiguration = $.certificateAuthorityConfiguration;
+        this.enabled = $.enabled;
+        this.permanentDeletionTimeInDays = $.permanentDeletionTimeInDays;
+        this.revocationConfiguration = $.revocationConfiguration;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Integer> permanentDeletionTimeInDays;
-        private @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> type;
+        private CertificateAuthorityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityArgs();
         }
 
         public Builder(CertificateAuthorityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthorityConfiguration = defaults.certificateAuthorityConfiguration;
-    	      this.enabled = defaults.enabled;
-    	      this.permanentDeletionTimeInDays = defaults.permanentDeletionTimeInDays;
-    	      this.revocationConfiguration = defaults.revocationConfiguration;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new CertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthorityConfiguration(Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration) {
-            this.certificateAuthorityConfiguration = Objects.requireNonNull(certificateAuthorityConfiguration);
+            $.certificateAuthorityConfiguration = certificateAuthorityConfiguration;
             return this;
         }
+
         public Builder certificateAuthorityConfiguration(CertificateAuthorityCertificateAuthorityConfigurationArgs certificateAuthorityConfiguration) {
-            this.certificateAuthorityConfiguration = Output.of(Objects.requireNonNull(certificateAuthorityConfiguration));
-            return this;
+            return certificateAuthorityConfiguration(Output.of(certificateAuthorityConfiguration));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder permanentDeletionTimeInDays(@Nullable Output<Integer> permanentDeletionTimeInDays) {
-            this.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
+            $.permanentDeletionTimeInDays = permanentDeletionTimeInDays;
             return this;
         }
-        public Builder permanentDeletionTimeInDays(@Nullable Integer permanentDeletionTimeInDays) {
-            this.permanentDeletionTimeInDays = Codegen.ofNullable(permanentDeletionTimeInDays);
-            return this;
+
+        public Builder permanentDeletionTimeInDays(Integer permanentDeletionTimeInDays) {
+            return permanentDeletionTimeInDays(Output.of(permanentDeletionTimeInDays));
         }
+
         public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
-            this.revocationConfiguration = revocationConfiguration;
+            $.revocationConfiguration = revocationConfiguration;
             return this;
         }
-        public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
-            this.revocationConfiguration = Codegen.ofNullable(revocationConfiguration);
-            return this;
+
+        public Builder revocationConfiguration(CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
+            return revocationConfiguration(Output.of(revocationConfiguration));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public CertificateAuthorityArgs build() {
-            return new CertificateAuthorityArgs(certificateAuthorityConfiguration, enabled, permanentDeletionTimeInDays, revocationConfiguration, tags, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public CertificateAuthorityArgs build() {
+            $.certificateAuthorityConfiguration = Objects.requireNonNull($.certificateAuthorityConfiguration, "expected parameter 'certificateAuthorityConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

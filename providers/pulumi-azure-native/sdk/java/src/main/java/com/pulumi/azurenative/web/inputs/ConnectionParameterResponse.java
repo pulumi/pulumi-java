@@ -24,10 +24,10 @@ public final class ConnectionParameterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="oAuthSettings")
-      private final @Nullable ApiOAuthSettingsResponse oAuthSettings;
+    private @Nullable ApiOAuthSettingsResponse oAuthSettings;
 
     public Optional<ApiOAuthSettingsResponse> oAuthSettings() {
-        return this.oAuthSettings == null ? Optional.empty() : Optional.ofNullable(this.oAuthSettings);
+        return Optional.ofNullable(this.oAuthSettings);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ConnectionParameterResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnectionParameterResponse(
-        @Nullable ApiOAuthSettingsResponse oAuthSettings,
-        @Nullable String type) {
-        this.oAuthSettings = oAuthSettings;
-        this.type = type;
-    }
+    private ConnectionParameterResponse() {}
 
-    private ConnectionParameterResponse() {
-        this.oAuthSettings = null;
-        this.type = null;
+    private ConnectionParameterResponse(ConnectionParameterResponse $) {
+        this.oAuthSettings = $.oAuthSettings;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ApiOAuthSettingsResponse oAuthSettings;
-        private @Nullable String type;
+        private ConnectionParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionParameterResponse();
         }
 
         public Builder(ConnectionParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oAuthSettings = defaults.oAuthSettings;
-    	      this.type = defaults.type;
+            $ = new ConnectionParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oAuthSettings(@Nullable ApiOAuthSettingsResponse oAuthSettings) {
-            this.oAuthSettings = oAuthSettings;
+            $.oAuthSettings = oAuthSettings;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ConnectionParameterResponse build() {
-            return new ConnectionParameterResponse(oAuthSettings, type);
+        }
+
+        public ConnectionParameterResponse build() {
+            return $;
         }
     }
+
 }

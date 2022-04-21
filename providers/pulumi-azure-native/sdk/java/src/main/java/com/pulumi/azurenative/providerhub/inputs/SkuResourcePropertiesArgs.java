@@ -8,10 +8,10 @@ import com.pulumi.azurenative.providerhub.inputs.SkuSettingArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,73 +20,70 @@ public final class SkuResourcePropertiesArgs extends com.pulumi.resources.Resour
     public static final SkuResourcePropertiesArgs Empty = new SkuResourcePropertiesArgs();
 
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     @Import(name="skuSettings", required=true)
-      private final Output<List<SkuSettingArgs>> skuSettings;
+    private Output<List<SkuSettingArgs>> skuSettings;
 
     public Output<List<SkuSettingArgs>> skuSettings() {
         return this.skuSettings;
     }
 
-    public SkuResourcePropertiesArgs(
-        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
-        Output<List<SkuSettingArgs>> skuSettings) {
-        this.provisioningState = provisioningState;
-        this.skuSettings = Objects.requireNonNull(skuSettings, "expected parameter 'skuSettings' to be non-null");
-    }
+    private SkuResourcePropertiesArgs() {}
 
-    private SkuResourcePropertiesArgs() {
-        this.provisioningState = Codegen.empty();
-        this.skuSettings = Codegen.empty();
+    private SkuResourcePropertiesArgs(SkuResourcePropertiesArgs $) {
+        this.provisioningState = $.provisioningState;
+        this.skuSettings = $.skuSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
-        private Output<List<SkuSettingArgs>> skuSettings;
+        private SkuResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuResourcePropertiesArgs();
         }
 
         public Builder(SkuResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.skuSettings = defaults.skuSettings;
+            $ = new SkuResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder skuSettings(Output<List<SkuSettingArgs>> skuSettings) {
-            this.skuSettings = Objects.requireNonNull(skuSettings);
+            $.skuSettings = skuSettings;
             return this;
         }
+
         public Builder skuSettings(List<SkuSettingArgs> skuSettings) {
-            this.skuSettings = Output.of(Objects.requireNonNull(skuSettings));
-            return this;
+            return skuSettings(Output.of(skuSettings));
         }
+
         public Builder skuSettings(SkuSettingArgs... skuSettings) {
             return skuSettings(List.of(skuSettings));
-        }        public SkuResourcePropertiesArgs build() {
-            return new SkuResourcePropertiesArgs(provisioningState, skuSettings);
+        }
+
+        public SkuResourcePropertiesArgs build() {
+            $.skuSettings = Objects.requireNonNull($.skuSettings, "expected parameter 'skuSettings' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.iotsecurity;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DeviceGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceGroupName")
-      private final @Nullable Output<String> deviceGroupName;
+    private @Nullable Output<String> deviceGroupName;
 
-    public Output<String> deviceGroupName() {
-        return this.deviceGroupName == null ? Codegen.empty() : this.deviceGroupName;
+    public Optional<Output<String>> deviceGroupName() {
+        return Optional.ofNullable(this.deviceGroupName);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class DeviceGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iotDefenderLocation", required=true)
-      private final Output<String> iotDefenderLocation;
+    private Output<String> iotDefenderLocation;
 
     public Output<String> iotDefenderLocation() {
         return this.iotDefenderLocation;
     }
 
-    public DeviceGroupArgs(
-        @Nullable Output<String> deviceGroupName,
-        Output<String> iotDefenderLocation) {
-        this.deviceGroupName = deviceGroupName;
-        this.iotDefenderLocation = Objects.requireNonNull(iotDefenderLocation, "expected parameter 'iotDefenderLocation' to be non-null");
-    }
+    private DeviceGroupArgs() {}
 
-    private DeviceGroupArgs() {
-        this.deviceGroupName = Codegen.empty();
-        this.iotDefenderLocation = Codegen.empty();
+    private DeviceGroupArgs(DeviceGroupArgs $) {
+        this.deviceGroupName = $.deviceGroupName;
+        this.iotDefenderLocation = $.iotDefenderLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deviceGroupName;
-        private Output<String> iotDefenderLocation;
+        private DeviceGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceGroupArgs();
         }
 
         public Builder(DeviceGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceGroupName = defaults.deviceGroupName;
-    	      this.iotDefenderLocation = defaults.iotDefenderLocation;
+            $ = new DeviceGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceGroupName(@Nullable Output<String> deviceGroupName) {
-            this.deviceGroupName = deviceGroupName;
+            $.deviceGroupName = deviceGroupName;
             return this;
         }
-        public Builder deviceGroupName(@Nullable String deviceGroupName) {
-            this.deviceGroupName = Codegen.ofNullable(deviceGroupName);
-            return this;
+
+        public Builder deviceGroupName(String deviceGroupName) {
+            return deviceGroupName(Output.of(deviceGroupName));
         }
+
         public Builder iotDefenderLocation(Output<String> iotDefenderLocation) {
-            this.iotDefenderLocation = Objects.requireNonNull(iotDefenderLocation);
+            $.iotDefenderLocation = iotDefenderLocation;
             return this;
         }
+
         public Builder iotDefenderLocation(String iotDefenderLocation) {
-            this.iotDefenderLocation = Output.of(Objects.requireNonNull(iotDefenderLocation));
-            return this;
-        }        public DeviceGroupArgs build() {
-            return new DeviceGroupArgs(deviceGroupName, iotDefenderLocation);
+            return iotDefenderLocation(Output.of(iotDefenderLocation));
+        }
+
+        public DeviceGroupArgs build() {
+            $.iotDefenderLocation = Objects.requireNonNull($.iotDefenderLocation, "expected parameter 'iotDefenderLocation' to be non-null");
+            return $;
         }
     }
+
 }

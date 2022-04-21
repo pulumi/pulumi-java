@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,130 +16,120 @@ public final class PipelineDeviceRegistryEnrichArgs extends com.pulumi.resources
     public static final PipelineDeviceRegistryEnrichArgs Empty = new PipelineDeviceRegistryEnrichArgs();
 
     @Import(name="attribute", required=true)
-      private final Output<String> attribute;
+    private Output<String> attribute;
 
     public Output<String> attribute() {
         return this.attribute;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable Output<String> next;
+    private @Nullable Output<String> next;
 
-    public Output<String> next() {
-        return this.next == null ? Codegen.empty() : this.next;
+    public Optional<Output<String>> next() {
+        return Optional.ofNullable(this.next);
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="thingName", required=true)
-      private final Output<String> thingName;
+    private Output<String> thingName;
 
     public Output<String> thingName() {
         return this.thingName;
     }
 
-    public PipelineDeviceRegistryEnrichArgs(
-        Output<String> attribute,
-        Output<String> name,
-        @Nullable Output<String> next,
-        Output<String> roleArn,
-        Output<String> thingName) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.thingName = Objects.requireNonNull(thingName, "expected parameter 'thingName' to be non-null");
-    }
+    private PipelineDeviceRegistryEnrichArgs() {}
 
-    private PipelineDeviceRegistryEnrichArgs() {
-        this.attribute = Codegen.empty();
-        this.name = Codegen.empty();
-        this.next = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.thingName = Codegen.empty();
+    private PipelineDeviceRegistryEnrichArgs(PipelineDeviceRegistryEnrichArgs $) {
+        this.attribute = $.attribute;
+        this.name = $.name;
+        this.next = $.next;
+        this.roleArn = $.roleArn;
+        this.thingName = $.thingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDeviceRegistryEnrichArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attribute;
-        private Output<String> name;
-        private @Nullable Output<String> next;
-        private Output<String> roleArn;
-        private Output<String> thingName;
+        private PipelineDeviceRegistryEnrichArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDeviceRegistryEnrichArgs();
         }
 
         public Builder(PipelineDeviceRegistryEnrichArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
-    	      this.roleArn = defaults.roleArn;
-    	      this.thingName = defaults.thingName;
+            $ = new PipelineDeviceRegistryEnrichArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(Output<String> attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder attribute(String attribute) {
-            this.attribute = Output.of(Objects.requireNonNull(attribute));
-            return this;
+            return attribute(Output.of(attribute));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder next(@Nullable Output<String> next) {
-            this.next = next;
+            $.next = next;
             return this;
         }
-        public Builder next(@Nullable String next) {
-            this.next = Codegen.ofNullable(next);
-            return this;
+
+        public Builder next(String next) {
+            return next(Output.of(next));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder thingName(Output<String> thingName) {
-            this.thingName = Objects.requireNonNull(thingName);
+            $.thingName = thingName;
             return this;
         }
+
         public Builder thingName(String thingName) {
-            this.thingName = Output.of(Objects.requireNonNull(thingName));
-            return this;
-        }        public PipelineDeviceRegistryEnrichArgs build() {
-            return new PipelineDeviceRegistryEnrichArgs(attribute, name, next, roleArn, thingName);
+            return thingName(Output.of(thingName));
+        }
+
+        public PipelineDeviceRegistryEnrichArgs build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.thingName = Objects.requireNonNull($.thingName, "expected parameter 'thingName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReceiptRuleWorkmailActionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="organizationArn", required=true)
-      private final Output<String> organizationArn;
+    private Output<String> organizationArn;
 
     public Output<String> organizationArn() {
         return this.organizationArn;
@@ -32,7 +32,7 @@ public final class ReceiptRuleWorkmailActionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="position", required=true)
-      private final Output<Integer> position;
+    private Output<Integer> position;
 
     public Output<Integer> position() {
         return this.position;
@@ -43,76 +43,70 @@ public final class ReceiptRuleWorkmailActionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
-    public ReceiptRuleWorkmailActionArgs(
-        Output<String> organizationArn,
-        Output<Integer> position,
-        @Nullable Output<String> topicArn) {
-        this.organizationArn = Objects.requireNonNull(organizationArn, "expected parameter 'organizationArn' to be non-null");
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-        this.topicArn = topicArn;
-    }
+    private ReceiptRuleWorkmailActionArgs() {}
 
-    private ReceiptRuleWorkmailActionArgs() {
-        this.organizationArn = Codegen.empty();
-        this.position = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private ReceiptRuleWorkmailActionArgs(ReceiptRuleWorkmailActionArgs $) {
+        this.organizationArn = $.organizationArn;
+        this.position = $.position;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReceiptRuleWorkmailActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> organizationArn;
-        private Output<Integer> position;
-        private @Nullable Output<String> topicArn;
+        private ReceiptRuleWorkmailActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReceiptRuleWorkmailActionArgs();
         }
 
         public Builder(ReceiptRuleWorkmailActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationArn = defaults.organizationArn;
-    	      this.position = defaults.position;
-    	      this.topicArn = defaults.topicArn;
+            $ = new ReceiptRuleWorkmailActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationArn(Output<String> organizationArn) {
-            this.organizationArn = Objects.requireNonNull(organizationArn);
+            $.organizationArn = organizationArn;
             return this;
         }
+
         public Builder organizationArn(String organizationArn) {
-            this.organizationArn = Output.of(Objects.requireNonNull(organizationArn));
-            return this;
+            return organizationArn(Output.of(organizationArn));
         }
+
         public Builder position(Output<Integer> position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
         }
+
         public Builder position(Integer position) {
-            this.position = Output.of(Objects.requireNonNull(position));
-            return this;
+            return position(Output.of(position));
         }
+
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
-        }        public ReceiptRuleWorkmailActionArgs build() {
-            return new ReceiptRuleWorkmailActionArgs(organizationArn, position, topicArn);
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
+        }
+
+        public ReceiptRuleWorkmailActionArgs build() {
+            $.organizationArn = Objects.requireNonNull($.organizationArn, "expected parameter 'organizationArn' to be non-null");
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            return $;
         }
     }
+
 }

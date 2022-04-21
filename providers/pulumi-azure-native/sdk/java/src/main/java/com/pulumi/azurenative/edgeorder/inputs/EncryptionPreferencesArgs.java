@@ -7,9 +7,9 @@ import com.pulumi.azurenative.edgeorder.enums.DoubleEncryptionStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="doubleEncryptionStatus")
-      private final @Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
+    private @Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
 
-    public Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus() {
-        return this.doubleEncryptionStatus == null ? Codegen.empty() : this.doubleEncryptionStatus;
+    public Optional<Output<Either<String,DoubleEncryptionStatus>>> doubleEncryptionStatus() {
+        return Optional.ofNullable(this.doubleEncryptionStatus);
     }
 
-    public EncryptionPreferencesArgs(@Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus) {
-        this.doubleEncryptionStatus = doubleEncryptionStatus;
-    }
+    private EncryptionPreferencesArgs() {}
 
-    private EncryptionPreferencesArgs() {
-        this.doubleEncryptionStatus = Codegen.empty();
+    private EncryptionPreferencesArgs(EncryptionPreferencesArgs $) {
+        this.doubleEncryptionStatus = $.doubleEncryptionStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
+        private EncryptionPreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPreferencesArgs();
         }
 
         public Builder(EncryptionPreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.doubleEncryptionStatus = defaults.doubleEncryptionStatus;
+            $ = new EncryptionPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder doubleEncryptionStatus(@Nullable Output<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus) {
-            this.doubleEncryptionStatus = doubleEncryptionStatus;
+            $.doubleEncryptionStatus = doubleEncryptionStatus;
             return this;
         }
-        public Builder doubleEncryptionStatus(@Nullable Either<String,DoubleEncryptionStatus> doubleEncryptionStatus) {
-            this.doubleEncryptionStatus = Codegen.ofNullable(doubleEncryptionStatus);
-            return this;
-        }        public EncryptionPreferencesArgs build() {
-            return new EncryptionPreferencesArgs(doubleEncryptionStatus);
+
+        public Builder doubleEncryptionStatus(Either<String,DoubleEncryptionStatus> doubleEncryptionStatus) {
+            return doubleEncryptionStatus(Output.of(doubleEncryptionStatus));
+        }
+
+        public EncryptionPreferencesArgs build() {
+            return $;
         }
     }
+
 }

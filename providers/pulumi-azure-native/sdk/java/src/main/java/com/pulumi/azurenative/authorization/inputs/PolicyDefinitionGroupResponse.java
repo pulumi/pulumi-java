@@ -23,10 +23,10 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="additionalMetadataId")
-      private final @Nullable String additionalMetadataId;
+    private @Nullable String additionalMetadataId;
 
     public Optional<String> additionalMetadataId() {
-        return this.additionalMetadataId == null ? Optional.empty() : Optional.ofNullable(this.additionalMetadataId);
+        return Optional.ofNullable(this.additionalMetadataId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="category")
-      private final @Nullable String category;
+    private @Nullable String category;
 
     public Optional<String> category() {
-        return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -67,82 +67,69 @@ public final class PolicyDefinitionGroupResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public PolicyDefinitionGroupResponse(
-        @Nullable String additionalMetadataId,
-        @Nullable String category,
-        @Nullable String description,
-        @Nullable String displayName,
-        String name) {
-        this.additionalMetadataId = additionalMetadataId;
-        this.category = category;
-        this.description = description;
-        this.displayName = displayName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PolicyDefinitionGroupResponse() {}
 
-    private PolicyDefinitionGroupResponse() {
-        this.additionalMetadataId = null;
-        this.category = null;
-        this.description = null;
-        this.displayName = null;
-        this.name = null;
+    private PolicyDefinitionGroupResponse(PolicyDefinitionGroupResponse $) {
+        this.additionalMetadataId = $.additionalMetadataId;
+        this.category = $.category;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyDefinitionGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String additionalMetadataId;
-        private @Nullable String category;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private String name;
+        private PolicyDefinitionGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyDefinitionGroupResponse();
         }
 
         public Builder(PolicyDefinitionGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalMetadataId = defaults.additionalMetadataId;
-    	      this.category = defaults.category;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
+            $ = new PolicyDefinitionGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalMetadataId(@Nullable String additionalMetadataId) {
-            this.additionalMetadataId = additionalMetadataId;
+            $.additionalMetadataId = additionalMetadataId;
             return this;
         }
+
         public Builder category(@Nullable String category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public PolicyDefinitionGroupResponse build() {
-            return new PolicyDefinitionGroupResponse(additionalMetadataId, category, description, displayName, name);
+        }
+
+        public PolicyDefinitionGroupResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

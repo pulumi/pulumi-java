@@ -5,12 +5,12 @@ package com.pulumi.random;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RandomPetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepers")
-      private final @Nullable Output<Map<String,Object>> keepers;
+    private @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> keepers() {
-        return this.keepers == null ? Codegen.empty() : this.keepers;
+    public Optional<Output<Map<String,Object>>> keepers() {
+        return Optional.ofNullable(this.keepers);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RandomPetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="length")
-      private final @Nullable Output<Integer> length;
+    private @Nullable Output<Integer> length;
 
-    public Output<Integer> length() {
-        return this.length == null ? Codegen.empty() : this.length;
+    public Optional<Output<Integer>> length() {
+        return Optional.ofNullable(this.length);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RandomPetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class RandomPetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="separator")
-      private final @Nullable Output<String> separator;
+    private @Nullable Output<String> separator;
 
-    public Output<String> separator() {
-        return this.separator == null ? Codegen.empty() : this.separator;
+    public Optional<Output<String>> separator() {
+        return Optional.ofNullable(this.separator);
     }
 
-    public RandomPetArgs(
-        @Nullable Output<Map<String,Object>> keepers,
-        @Nullable Output<Integer> length,
-        @Nullable Output<String> prefix,
-        @Nullable Output<String> separator) {
-        this.keepers = keepers;
-        this.length = length;
-        this.prefix = prefix;
-        this.separator = separator;
-    }
+    private RandomPetArgs() {}
 
-    private RandomPetArgs() {
-        this.keepers = Codegen.empty();
-        this.length = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.separator = Codegen.empty();
+    private RandomPetArgs(RandomPetArgs $) {
+        this.keepers = $.keepers;
+        this.length = $.length;
+        this.prefix = $.prefix;
+        this.separator = $.separator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RandomPetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> keepers;
-        private @Nullable Output<Integer> length;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<String> separator;
+        private RandomPetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RandomPetArgs();
         }
 
         public Builder(RandomPetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keepers = defaults.keepers;
-    	      this.length = defaults.length;
-    	      this.prefix = defaults.prefix;
-    	      this.separator = defaults.separator;
+            $ = new RandomPetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
-            this.keepers = keepers;
+            $.keepers = keepers;
             return this;
         }
-        public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Codegen.ofNullable(keepers);
-            return this;
+
+        public Builder keepers(Map<String,Object> keepers) {
+            return keepers(Output.of(keepers));
         }
+
         public Builder length(@Nullable Output<Integer> length) {
-            this.length = length;
+            $.length = length;
             return this;
         }
-        public Builder length(@Nullable Integer length) {
-            this.length = Codegen.ofNullable(length);
-            return this;
+
+        public Builder length(Integer length) {
+            return length(Output.of(length));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder separator(@Nullable Output<String> separator) {
-            this.separator = separator;
+            $.separator = separator;
             return this;
         }
-        public Builder separator(@Nullable String separator) {
-            this.separator = Codegen.ofNullable(separator);
-            return this;
-        }        public RandomPetArgs build() {
-            return new RandomPetArgs(keepers, length, prefix, separator);
+
+        public Builder separator(String separator) {
+            return separator(Output.of(separator));
+        }
+
+        public RandomPetArgs build() {
+            return $;
         }
     }
+
 }

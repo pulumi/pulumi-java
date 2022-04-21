@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstanceIAMMemberState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<InstanceIAMMemberConditionGetArgs> condition;
+    private @Nullable Output<InstanceIAMMemberConditionGetArgs> condition;
 
-    public Output<InstanceIAMMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<InstanceIAMMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class InstanceIAMMemberState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -44,17 +44,17 @@ public final class InstanceIAMMemberState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class InstanceIAMMemberState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class InstanceIAMMemberState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -89,128 +89,108 @@ public final class InstanceIAMMemberState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceIAMMemberState(
-        @Nullable Output<InstanceIAMMemberConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> instanceName,
-        @Nullable Output<String> member,
-        @Nullable Output<String> project,
-        @Nullable Output<String> role,
-        @Nullable Output<String> zone) {
-        this.condition = condition;
-        this.etag = etag;
-        this.instanceName = instanceName;
-        this.member = member;
-        this.project = project;
-        this.role = role;
-        this.zone = zone;
-    }
+    private InstanceIAMMemberState() {}
 
-    private InstanceIAMMemberState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.instanceName = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceIAMMemberState(InstanceIAMMemberState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.instanceName = $.instanceName;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceIAMMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceIAMMemberConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> zone;
+        private InstanceIAMMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceIAMMemberState();
         }
 
         public Builder(InstanceIAMMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.instanceName = defaults.instanceName;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.zone = defaults.zone;
+            $ = new InstanceIAMMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<InstanceIAMMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable InstanceIAMMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(InstanceIAMMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceIAMMemberState build() {
-            return new InstanceIAMMemberState(condition, etag, instanceName, member, project, role, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceIAMMemberState build() {
+            return $;
         }
     }
+
 }

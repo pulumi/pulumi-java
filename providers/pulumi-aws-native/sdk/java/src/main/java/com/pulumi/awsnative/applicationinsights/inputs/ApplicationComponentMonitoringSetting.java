@@ -25,10 +25,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
      * 
      */
     @Import(name="componentARN")
-      private final @Nullable String componentARN;
+    private @Nullable String componentARN;
 
     public Optional<String> componentARN() {
-        return this.componentARN == null ? Optional.empty() : Optional.ofNullable(this.componentARN);
+        return Optional.ofNullable(this.componentARN);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
      * 
      */
     @Import(name="componentConfigurationMode", required=true)
-      private final ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode;
+    private ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode;
 
     public ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode() {
         return this.componentConfigurationMode;
@@ -47,10 +47,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
      * 
      */
     @Import(name="componentName")
-      private final @Nullable String componentName;
+    private @Nullable String componentName;
 
     public Optional<String> componentName() {
-        return this.componentName == null ? Optional.empty() : Optional.ofNullable(this.componentName);
+        return Optional.ofNullable(this.componentName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
      * 
      */
     @Import(name="customComponentConfiguration")
-      private final @Nullable ApplicationComponentConfiguration customComponentConfiguration;
+    private @Nullable ApplicationComponentConfiguration customComponentConfiguration;
 
     public Optional<ApplicationComponentConfiguration> customComponentConfiguration() {
-        return this.customComponentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.customComponentConfiguration);
+        return Optional.ofNullable(this.customComponentConfiguration);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
      * 
      */
     @Import(name="defaultOverwriteComponentConfiguration")
-      private final @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration;
+    private @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration;
 
     public Optional<ApplicationComponentConfiguration> defaultOverwriteComponentConfiguration() {
-        return this.defaultOverwriteComponentConfiguration == null ? Optional.empty() : Optional.ofNullable(this.defaultOverwriteComponentConfiguration);
+        return Optional.ofNullable(this.defaultOverwriteComponentConfiguration);
     }
 
     /**
@@ -80,91 +80,76 @@ public final class ApplicationComponentMonitoringSetting extends com.pulumi.reso
      * 
      */
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
     }
 
-    public ApplicationComponentMonitoringSetting(
-        @Nullable String componentARN,
-        ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode,
-        @Nullable String componentName,
-        @Nullable ApplicationComponentConfiguration customComponentConfiguration,
-        @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration,
-        String tier) {
-        this.componentARN = componentARN;
-        this.componentConfigurationMode = Objects.requireNonNull(componentConfigurationMode, "expected parameter 'componentConfigurationMode' to be non-null");
-        this.componentName = componentName;
-        this.customComponentConfiguration = customComponentConfiguration;
-        this.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private ApplicationComponentMonitoringSetting() {}
 
-    private ApplicationComponentMonitoringSetting() {
-        this.componentARN = null;
-        this.componentConfigurationMode = null;
-        this.componentName = null;
-        this.customComponentConfiguration = null;
-        this.defaultOverwriteComponentConfiguration = null;
-        this.tier = null;
+    private ApplicationComponentMonitoringSetting(ApplicationComponentMonitoringSetting $) {
+        this.componentARN = $.componentARN;
+        this.componentConfigurationMode = $.componentConfigurationMode;
+        this.componentName = $.componentName;
+        this.customComponentConfiguration = $.customComponentConfiguration;
+        this.defaultOverwriteComponentConfiguration = $.defaultOverwriteComponentConfiguration;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationComponentMonitoringSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String componentARN;
-        private ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode;
-        private @Nullable String componentName;
-        private @Nullable ApplicationComponentConfiguration customComponentConfiguration;
-        private @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration;
-        private String tier;
+        private ApplicationComponentMonitoringSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationComponentMonitoringSetting();
         }
 
         public Builder(ApplicationComponentMonitoringSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentARN = defaults.componentARN;
-    	      this.componentConfigurationMode = defaults.componentConfigurationMode;
-    	      this.componentName = defaults.componentName;
-    	      this.customComponentConfiguration = defaults.customComponentConfiguration;
-    	      this.defaultOverwriteComponentConfiguration = defaults.defaultOverwriteComponentConfiguration;
-    	      this.tier = defaults.tier;
+            $ = new ApplicationComponentMonitoringSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder componentARN(@Nullable String componentARN) {
-            this.componentARN = componentARN;
+            $.componentARN = componentARN;
             return this;
         }
+
         public Builder componentConfigurationMode(ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode) {
-            this.componentConfigurationMode = Objects.requireNonNull(componentConfigurationMode);
+            $.componentConfigurationMode = componentConfigurationMode;
             return this;
         }
+
         public Builder componentName(@Nullable String componentName) {
-            this.componentName = componentName;
+            $.componentName = componentName;
             return this;
         }
+
         public Builder customComponentConfiguration(@Nullable ApplicationComponentConfiguration customComponentConfiguration) {
-            this.customComponentConfiguration = customComponentConfiguration;
+            $.customComponentConfiguration = customComponentConfiguration;
             return this;
         }
+
         public Builder defaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration) {
-            this.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
+            $.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
-        }        public ApplicationComponentMonitoringSetting build() {
-            return new ApplicationComponentMonitoringSetting(componentARN, componentConfigurationMode, componentName, customComponentConfiguration, defaultOverwriteComponentConfiguration, tier);
+        }
+
+        public ApplicationComponentMonitoringSetting build() {
+            $.componentConfigurationMode = Objects.requireNonNull($.componentConfigurationMode, "expected parameter 'componentConfigurationMode' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

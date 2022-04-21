@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.NetworkPerformanceConfigExternalIpEgressBandwidthTier;
 import com.pulumi.googlenative.compute_alpha.enums.NetworkPerformanceConfigTotalEgressBandwidthTier;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class NetworkPerformanceConfigArgs extends com.pulumi.resources.Res
     public static final NetworkPerformanceConfigArgs Empty = new NetworkPerformanceConfigArgs();
 
     @Import(name="externalIpEgressBandwidthTier")
-      private final @Nullable Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier;
+    private @Nullable Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier;
 
-    public Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier() {
-        return this.externalIpEgressBandwidthTier == null ? Codegen.empty() : this.externalIpEgressBandwidthTier;
+    public Optional<Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier>> externalIpEgressBandwidthTier() {
+        return Optional.ofNullable(this.externalIpEgressBandwidthTier);
     }
 
     @Import(name="totalEgressBandwidthTier")
-      private final @Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier;
+    private @Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier;
 
-    public Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier() {
-        return this.totalEgressBandwidthTier == null ? Codegen.empty() : this.totalEgressBandwidthTier;
+    public Optional<Output<NetworkPerformanceConfigTotalEgressBandwidthTier>> totalEgressBandwidthTier() {
+        return Optional.ofNullable(this.totalEgressBandwidthTier);
     }
 
-    public NetworkPerformanceConfigArgs(
-        @Nullable Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier,
-        @Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier) {
-        this.externalIpEgressBandwidthTier = externalIpEgressBandwidthTier;
-        this.totalEgressBandwidthTier = totalEgressBandwidthTier;
-    }
+    private NetworkPerformanceConfigArgs() {}
 
-    private NetworkPerformanceConfigArgs() {
-        this.externalIpEgressBandwidthTier = Codegen.empty();
-        this.totalEgressBandwidthTier = Codegen.empty();
+    private NetworkPerformanceConfigArgs(NetworkPerformanceConfigArgs $) {
+        this.externalIpEgressBandwidthTier = $.externalIpEgressBandwidthTier;
+        this.totalEgressBandwidthTier = $.totalEgressBandwidthTier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPerformanceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier;
-        private @Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier;
+        private NetworkPerformanceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPerformanceConfigArgs();
         }
 
         public Builder(NetworkPerformanceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalIpEgressBandwidthTier = defaults.externalIpEgressBandwidthTier;
-    	      this.totalEgressBandwidthTier = defaults.totalEgressBandwidthTier;
+            $ = new NetworkPerformanceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalIpEgressBandwidthTier(@Nullable Output<NetworkPerformanceConfigExternalIpEgressBandwidthTier> externalIpEgressBandwidthTier) {
-            this.externalIpEgressBandwidthTier = externalIpEgressBandwidthTier;
+            $.externalIpEgressBandwidthTier = externalIpEgressBandwidthTier;
             return this;
         }
-        public Builder externalIpEgressBandwidthTier(@Nullable NetworkPerformanceConfigExternalIpEgressBandwidthTier externalIpEgressBandwidthTier) {
-            this.externalIpEgressBandwidthTier = Codegen.ofNullable(externalIpEgressBandwidthTier);
-            return this;
+
+        public Builder externalIpEgressBandwidthTier(NetworkPerformanceConfigExternalIpEgressBandwidthTier externalIpEgressBandwidthTier) {
+            return externalIpEgressBandwidthTier(Output.of(externalIpEgressBandwidthTier));
         }
+
         public Builder totalEgressBandwidthTier(@Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier) {
-            this.totalEgressBandwidthTier = totalEgressBandwidthTier;
+            $.totalEgressBandwidthTier = totalEgressBandwidthTier;
             return this;
         }
-        public Builder totalEgressBandwidthTier(@Nullable NetworkPerformanceConfigTotalEgressBandwidthTier totalEgressBandwidthTier) {
-            this.totalEgressBandwidthTier = Codegen.ofNullable(totalEgressBandwidthTier);
-            return this;
-        }        public NetworkPerformanceConfigArgs build() {
-            return new NetworkPerformanceConfigArgs(externalIpEgressBandwidthTier, totalEgressBandwidthTier);
+
+        public Builder totalEgressBandwidthTier(NetworkPerformanceConfigTotalEgressBandwidthTier totalEgressBandwidthTier) {
+            return totalEgressBandwidthTier(Output.of(totalEgressBandwidthTier));
+        }
+
+        public NetworkPerformanceConfigArgs build() {
+            return $;
         }
     }
+
 }

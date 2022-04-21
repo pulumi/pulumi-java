@@ -5,7 +5,6 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class StandardsSubscriptionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="standardsArn", required=true)
-      private final Output<String> standardsArn;
+    private Output<String> standardsArn;
 
     public Output<String> standardsArn() {
         return this.standardsArn;
     }
 
-    public StandardsSubscriptionArgs(Output<String> standardsArn) {
-        this.standardsArn = Objects.requireNonNull(standardsArn, "expected parameter 'standardsArn' to be non-null");
-    }
+    private StandardsSubscriptionArgs() {}
 
-    private StandardsSubscriptionArgs() {
-        this.standardsArn = Codegen.empty();
+    private StandardsSubscriptionArgs(StandardsSubscriptionArgs $) {
+        this.standardsArn = $.standardsArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardsSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> standardsArn;
+        private StandardsSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardsSubscriptionArgs();
         }
 
         public Builder(StandardsSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.standardsArn = defaults.standardsArn;
+            $ = new StandardsSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder standardsArn(Output<String> standardsArn) {
-            this.standardsArn = Objects.requireNonNull(standardsArn);
+            $.standardsArn = standardsArn;
             return this;
         }
+
         public Builder standardsArn(String standardsArn) {
-            this.standardsArn = Output.of(Objects.requireNonNull(standardsArn));
-            return this;
-        }        public StandardsSubscriptionArgs build() {
-            return new StandardsSubscriptionArgs(standardsArn);
+            return standardsArn(Output.of(standardsArn));
+        }
+
+        public StandardsSubscriptionArgs build() {
+            $.standardsArn = Objects.requireNonNull($.standardsArn, "expected parameter 'standardsArn' to be non-null");
+            return $;
         }
     }
+
 }

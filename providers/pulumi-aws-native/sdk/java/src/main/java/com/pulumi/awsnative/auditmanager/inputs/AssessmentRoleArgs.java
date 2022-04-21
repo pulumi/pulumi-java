@@ -6,9 +6,9 @@ package com.pulumi.awsnative.auditmanager.inputs;
 import com.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class AssessmentRoleArgs extends com.pulumi.resources.ResourceArgs 
     public static final AssessmentRoleArgs Empty = new AssessmentRoleArgs();
 
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="roleType")
-      private final @Nullable Output<AssessmentRoleType> roleType;
+    private @Nullable Output<AssessmentRoleType> roleType;
 
-    public Output<AssessmentRoleType> roleType() {
-        return this.roleType == null ? Codegen.empty() : this.roleType;
+    public Optional<Output<AssessmentRoleType>> roleType() {
+        return Optional.ofNullable(this.roleType);
     }
 
-    public AssessmentRoleArgs(
-        @Nullable Output<String> roleArn,
-        @Nullable Output<AssessmentRoleType> roleType) {
-        this.roleArn = roleArn;
-        this.roleType = roleType;
-    }
+    private AssessmentRoleArgs() {}
 
-    private AssessmentRoleArgs() {
-        this.roleArn = Codegen.empty();
-        this.roleType = Codegen.empty();
+    private AssessmentRoleArgs(AssessmentRoleArgs $) {
+        this.roleArn = $.roleArn;
+        this.roleType = $.roleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<AssessmentRoleType> roleType;
+        private AssessmentRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentRoleArgs();
         }
 
         public Builder(AssessmentRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.roleType = defaults.roleType;
+            $ = new AssessmentRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder roleType(@Nullable Output<AssessmentRoleType> roleType) {
-            this.roleType = roleType;
+            $.roleType = roleType;
             return this;
         }
-        public Builder roleType(@Nullable AssessmentRoleType roleType) {
-            this.roleType = Codegen.ofNullable(roleType);
-            return this;
-        }        public AssessmentRoleArgs build() {
-            return new AssessmentRoleArgs(roleArn, roleType);
+
+        public Builder roleType(AssessmentRoleType roleType) {
+            return roleType(Output.of(roleType));
+        }
+
+        public AssessmentRoleArgs build() {
+            return $;
         }
     }
+
 }

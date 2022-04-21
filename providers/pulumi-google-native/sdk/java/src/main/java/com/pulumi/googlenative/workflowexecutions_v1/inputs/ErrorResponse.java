@@ -22,7 +22,7 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="context", required=true)
-      private final String context;
+    private String context;
 
     public String context() {
         return this.context;
@@ -33,7 +33,7 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="payload", required=true)
-      private final String payload;
+    private String payload;
 
     public String payload() {
         return this.payload;
@@ -44,64 +44,59 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stackTrace", required=true)
-      private final StackTraceResponse stackTrace;
+    private StackTraceResponse stackTrace;
 
     public StackTraceResponse stackTrace() {
         return this.stackTrace;
     }
 
-    public ErrorResponse(
-        String context,
-        String payload,
-        StackTraceResponse stackTrace) {
-        this.context = Objects.requireNonNull(context, "expected parameter 'context' to be non-null");
-        this.payload = Objects.requireNonNull(payload, "expected parameter 'payload' to be non-null");
-        this.stackTrace = Objects.requireNonNull(stackTrace, "expected parameter 'stackTrace' to be non-null");
-    }
+    private ErrorResponse() {}
 
-    private ErrorResponse() {
-        this.context = null;
-        this.payload = null;
-        this.stackTrace = null;
+    private ErrorResponse(ErrorResponse $) {
+        this.context = $.context;
+        this.payload = $.payload;
+        this.stackTrace = $.stackTrace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String context;
-        private String payload;
-        private StackTraceResponse stackTrace;
+        private ErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorResponse();
         }
 
         public Builder(ErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.payload = defaults.payload;
-    	      this.stackTrace = defaults.stackTrace;
+            $ = new ErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder context(String context) {
-            this.context = Objects.requireNonNull(context);
+            $.context = context;
             return this;
         }
+
         public Builder payload(String payload) {
-            this.payload = Objects.requireNonNull(payload);
+            $.payload = payload;
             return this;
         }
+
         public Builder stackTrace(StackTraceResponse stackTrace) {
-            this.stackTrace = Objects.requireNonNull(stackTrace);
+            $.stackTrace = stackTrace;
             return this;
-        }        public ErrorResponse build() {
-            return new ErrorResponse(context, payload, stackTrace);
+        }
+
+        public ErrorResponse build() {
+            $.context = Objects.requireNonNull($.context, "expected parameter 'context' to be non-null");
+            $.payload = Objects.requireNonNull($.payload, "expected parameter 'payload' to be non-null");
+            $.stackTrace = Objects.requireNonNull($.stackTrace, "expected parameter 'stackTrace' to be non-null");
+            return $;
         }
     }
+
 }

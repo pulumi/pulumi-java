@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
      * 
      */
     @Import(name="medium", required=true)
-      private final String medium;
+    private String medium;
 
     public String medium() {
         return this.medium;
@@ -43,64 +43,59 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
      * 
      */
     @Import(name="trainingConversationsCount", required=true)
-      private final String trainingConversationsCount;
+    private String trainingConversationsCount;
 
     public String trainingConversationsCount() {
         return this.trainingConversationsCount;
     }
 
-    public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(
-        String filter,
-        String medium,
-        String trainingConversationsCount) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.medium = Objects.requireNonNull(medium, "expected parameter 'medium' to be non-null");
-        this.trainingConversationsCount = Objects.requireNonNull(trainingConversationsCount, "expected parameter 'trainingConversationsCount' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse() {
-        this.filter = null;
-        this.medium = null;
-        this.trainingConversationsCount = null;
+    private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse $) {
+        this.filter = $.filter;
+        this.medium = $.medium;
+        this.trainingConversationsCount = $.trainingConversationsCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
-        private String medium;
-        private String trainingConversationsCount;
+        private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.medium = defaults.medium;
-    	      this.trainingConversationsCount = defaults.trainingConversationsCount;
+            $ = new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder medium(String medium) {
-            this.medium = Objects.requireNonNull(medium);
+            $.medium = medium;
             return this;
         }
+
         public Builder trainingConversationsCount(String trainingConversationsCount) {
-            this.trainingConversationsCount = Objects.requireNonNull(trainingConversationsCount);
+            $.trainingConversationsCount = trainingConversationsCount;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse build() {
-            return new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(filter, medium, trainingConversationsCount);
+        }
+
+        public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.medium = Objects.requireNonNull($.medium, "expected parameter 'medium' to be non-null");
+            $.trainingConversationsCount = Objects.requireNonNull($.trainingConversationsCount, "expected parameter 'trainingConversationsCount' to be non-null");
+            return $;
         }
     }
+
 }

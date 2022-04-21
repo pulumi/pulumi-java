@@ -17,45 +17,45 @@ public final class GetSlackChannelConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetSlackChannelConfigurationArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetSlackChannelConfigurationArgs() {}
 
-    private GetSlackChannelConfigurationArgs() {
-        this.arn = null;
+    private GetSlackChannelConfigurationArgs(GetSlackChannelConfigurationArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSlackChannelConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetSlackChannelConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSlackChannelConfigurationArgs();
         }
 
         public Builder(GetSlackChannelConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetSlackChannelConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetSlackChannelConfigurationArgs build() {
-            return new GetSlackChannelConfigurationArgs(arn);
+        }
+
+        public GetSlackChannelConfigurationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

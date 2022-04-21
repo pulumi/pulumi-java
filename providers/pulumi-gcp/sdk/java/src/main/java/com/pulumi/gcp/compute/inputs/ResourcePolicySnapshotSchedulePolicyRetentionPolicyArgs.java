@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
      * 
      */
     @Import(name="maxRetentionDays", required=true)
-      private final Output<Integer> maxRetentionDays;
+    private Output<Integer> maxRetentionDays;
 
     public Output<Integer> maxRetentionDays() {
         return this.maxRetentionDays;
@@ -35,63 +35,59 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
      * 
      */
     @Import(name="onSourceDiskDelete")
-      private final @Nullable Output<String> onSourceDiskDelete;
+    private @Nullable Output<String> onSourceDiskDelete;
 
-    public Output<String> onSourceDiskDelete() {
-        return this.onSourceDiskDelete == null ? Codegen.empty() : this.onSourceDiskDelete;
+    public Optional<Output<String>> onSourceDiskDelete() {
+        return Optional.ofNullable(this.onSourceDiskDelete);
     }
 
-    public ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(
-        Output<Integer> maxRetentionDays,
-        @Nullable Output<String> onSourceDiskDelete) {
-        this.maxRetentionDays = Objects.requireNonNull(maxRetentionDays, "expected parameter 'maxRetentionDays' to be non-null");
-        this.onSourceDiskDelete = onSourceDiskDelete;
-    }
+    private ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs() {}
 
-    private ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs() {
-        this.maxRetentionDays = Codegen.empty();
-        this.onSourceDiskDelete = Codegen.empty();
+    private ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs $) {
+        this.maxRetentionDays = $.maxRetentionDays;
+        this.onSourceDiskDelete = $.onSourceDiskDelete;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxRetentionDays;
-        private @Nullable Output<String> onSourceDiskDelete;
+        private ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRetentionDays = defaults.maxRetentionDays;
-    	      this.onSourceDiskDelete = defaults.onSourceDiskDelete;
+            $ = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRetentionDays(Output<Integer> maxRetentionDays) {
-            this.maxRetentionDays = Objects.requireNonNull(maxRetentionDays);
+            $.maxRetentionDays = maxRetentionDays;
             return this;
         }
+
         public Builder maxRetentionDays(Integer maxRetentionDays) {
-            this.maxRetentionDays = Output.of(Objects.requireNonNull(maxRetentionDays));
-            return this;
+            return maxRetentionDays(Output.of(maxRetentionDays));
         }
+
         public Builder onSourceDiskDelete(@Nullable Output<String> onSourceDiskDelete) {
-            this.onSourceDiskDelete = onSourceDiskDelete;
+            $.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }
-        public Builder onSourceDiskDelete(@Nullable String onSourceDiskDelete) {
-            this.onSourceDiskDelete = Codegen.ofNullable(onSourceDiskDelete);
-            return this;
-        }        public ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs build() {
-            return new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(maxRetentionDays, onSourceDiskDelete);
+
+        public Builder onSourceDiskDelete(String onSourceDiskDelete) {
+            return onSourceDiskDelete(Output.of(onSourceDiskDelete));
+        }
+
+        public ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs build() {
+            $.maxRetentionDays = Objects.requireNonNull($.maxRetentionDays, "expected parameter 'maxRetentionDays' to be non-null");
+            return $;
         }
     }
+
 }

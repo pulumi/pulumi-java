@@ -15,45 +15,44 @@ public final class WarmPoolInstanceReusePolicy extends com.pulumi.resources.Invo
     public static final WarmPoolInstanceReusePolicy Empty = new WarmPoolInstanceReusePolicy();
 
     @Import(name="reuseOnScaleIn")
-      private final @Nullable Boolean reuseOnScaleIn;
+    private @Nullable Boolean reuseOnScaleIn;
 
     public Optional<Boolean> reuseOnScaleIn() {
-        return this.reuseOnScaleIn == null ? Optional.empty() : Optional.ofNullable(this.reuseOnScaleIn);
+        return Optional.ofNullable(this.reuseOnScaleIn);
     }
 
-    public WarmPoolInstanceReusePolicy(@Nullable Boolean reuseOnScaleIn) {
-        this.reuseOnScaleIn = reuseOnScaleIn;
-    }
+    private WarmPoolInstanceReusePolicy() {}
 
-    private WarmPoolInstanceReusePolicy() {
-        this.reuseOnScaleIn = null;
+    private WarmPoolInstanceReusePolicy(WarmPoolInstanceReusePolicy $) {
+        this.reuseOnScaleIn = $.reuseOnScaleIn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WarmPoolInstanceReusePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean reuseOnScaleIn;
+        private WarmPoolInstanceReusePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new WarmPoolInstanceReusePolicy();
         }
 
         public Builder(WarmPoolInstanceReusePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reuseOnScaleIn = defaults.reuseOnScaleIn;
+            $ = new WarmPoolInstanceReusePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder reuseOnScaleIn(@Nullable Boolean reuseOnScaleIn) {
-            this.reuseOnScaleIn = reuseOnScaleIn;
+            $.reuseOnScaleIn = reuseOnScaleIn;
             return this;
-        }        public WarmPoolInstanceReusePolicy build() {
-            return new WarmPoolInstanceReusePolicy(reuseOnScaleIn);
+        }
+
+        public WarmPoolInstanceReusePolicy build() {
+            return $;
         }
     }
+
 }

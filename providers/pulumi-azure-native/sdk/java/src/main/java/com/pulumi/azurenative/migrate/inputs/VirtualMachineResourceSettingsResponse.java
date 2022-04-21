@@ -25,7 +25,7 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -36,10 +36,10 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetAvailabilitySetId")
-      private final @Nullable String targetAvailabilitySetId;
+    private @Nullable String targetAvailabilitySetId;
 
     public Optional<String> targetAvailabilitySetId() {
-        return this.targetAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilitySetId);
+        return Optional.ofNullable(this.targetAvailabilitySetId);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetAvailabilityZone")
-      private final @Nullable String targetAvailabilityZone;
+    private @Nullable String targetAvailabilityZone;
 
     public Optional<String> targetAvailabilityZone() {
-        return this.targetAvailabilityZone == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilityZone);
+        return Optional.ofNullable(this.targetAvailabilityZone);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final String targetResourceName;
+    private String targetResourceName;
 
     public String targetResourceName() {
         return this.targetResourceName;
@@ -69,82 +69,70 @@ public final class VirtualMachineResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetVmSize")
-      private final @Nullable String targetVmSize;
+    private @Nullable String targetVmSize;
 
     public Optional<String> targetVmSize() {
-        return this.targetVmSize == null ? Optional.empty() : Optional.ofNullable(this.targetVmSize);
+        return Optional.ofNullable(this.targetVmSize);
     }
 
-    public VirtualMachineResourceSettingsResponse(
-        String resourceType,
-        @Nullable String targetAvailabilitySetId,
-        @Nullable String targetAvailabilityZone,
-        String targetResourceName,
-        @Nullable String targetVmSize) {
-        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
-        this.targetAvailabilitySetId = targetAvailabilitySetId;
-        this.targetAvailabilityZone = targetAvailabilityZone;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-        this.targetVmSize = targetVmSize;
-    }
+    private VirtualMachineResourceSettingsResponse() {}
 
-    private VirtualMachineResourceSettingsResponse() {
-        this.resourceType = null;
-        this.targetAvailabilitySetId = null;
-        this.targetAvailabilityZone = null;
-        this.targetResourceName = null;
-        this.targetVmSize = null;
+    private VirtualMachineResourceSettingsResponse(VirtualMachineResourceSettingsResponse $) {
+        this.resourceType = $.resourceType;
+        this.targetAvailabilitySetId = $.targetAvailabilitySetId;
+        this.targetAvailabilityZone = $.targetAvailabilityZone;
+        this.targetResourceName = $.targetResourceName;
+        this.targetVmSize = $.targetVmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceType;
-        private @Nullable String targetAvailabilitySetId;
-        private @Nullable String targetAvailabilityZone;
-        private String targetResourceName;
-        private @Nullable String targetVmSize;
+        private VirtualMachineResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineResourceSettingsResponse();
         }
 
         public Builder(VirtualMachineResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetAvailabilitySetId = defaults.targetAvailabilitySetId;
-    	      this.targetAvailabilityZone = defaults.targetAvailabilityZone;
-    	      this.targetResourceName = defaults.targetResourceName;
-    	      this.targetVmSize = defaults.targetVmSize;
+            $ = new VirtualMachineResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = targetAvailabilitySetId;
+            $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
+
         public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
-            this.targetAvailabilityZone = targetAvailabilityZone;
+            $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder targetVmSize(@Nullable String targetVmSize) {
-            this.targetVmSize = targetVmSize;
+            $.targetVmSize = targetVmSize;
             return this;
-        }        public VirtualMachineResourceSettingsResponse build() {
-            return new VirtualMachineResourceSettingsResponse(resourceType, targetAvailabilitySetId, targetAvailabilityZone, targetResourceName, targetVmSize);
+        }
+
+        public VirtualMachineResourceSettingsResponse build() {
+            $.resourceType = Codegen.stringProp("resourceType").arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.datasync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LocationHdfsQopConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dataTransferProtection")
-      private final @Nullable Output<String> dataTransferProtection;
+    private @Nullable Output<String> dataTransferProtection;
 
-    public Output<String> dataTransferProtection() {
-        return this.dataTransferProtection == null ? Codegen.empty() : this.dataTransferProtection;
+    public Optional<Output<String>> dataTransferProtection() {
+        return Optional.ofNullable(this.dataTransferProtection);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class LocationHdfsQopConfigurationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rpcProtection")
-      private final @Nullable Output<String> rpcProtection;
+    private @Nullable Output<String> rpcProtection;
 
-    public Output<String> rpcProtection() {
-        return this.rpcProtection == null ? Codegen.empty() : this.rpcProtection;
+    public Optional<Output<String>> rpcProtection() {
+        return Optional.ofNullable(this.rpcProtection);
     }
 
-    public LocationHdfsQopConfigurationArgs(
-        @Nullable Output<String> dataTransferProtection,
-        @Nullable Output<String> rpcProtection) {
-        this.dataTransferProtection = dataTransferProtection;
-        this.rpcProtection = rpcProtection;
-    }
+    private LocationHdfsQopConfigurationArgs() {}
 
-    private LocationHdfsQopConfigurationArgs() {
-        this.dataTransferProtection = Codegen.empty();
-        this.rpcProtection = Codegen.empty();
+    private LocationHdfsQopConfigurationArgs(LocationHdfsQopConfigurationArgs $) {
+        this.dataTransferProtection = $.dataTransferProtection;
+        this.rpcProtection = $.rpcProtection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationHdfsQopConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataTransferProtection;
-        private @Nullable Output<String> rpcProtection;
+        private LocationHdfsQopConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationHdfsQopConfigurationArgs();
         }
 
         public Builder(LocationHdfsQopConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataTransferProtection = defaults.dataTransferProtection;
-    	      this.rpcProtection = defaults.rpcProtection;
+            $ = new LocationHdfsQopConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataTransferProtection(@Nullable Output<String> dataTransferProtection) {
-            this.dataTransferProtection = dataTransferProtection;
+            $.dataTransferProtection = dataTransferProtection;
             return this;
         }
-        public Builder dataTransferProtection(@Nullable String dataTransferProtection) {
-            this.dataTransferProtection = Codegen.ofNullable(dataTransferProtection);
-            return this;
+
+        public Builder dataTransferProtection(String dataTransferProtection) {
+            return dataTransferProtection(Output.of(dataTransferProtection));
         }
+
         public Builder rpcProtection(@Nullable Output<String> rpcProtection) {
-            this.rpcProtection = rpcProtection;
+            $.rpcProtection = rpcProtection;
             return this;
         }
-        public Builder rpcProtection(@Nullable String rpcProtection) {
-            this.rpcProtection = Codegen.ofNullable(rpcProtection);
-            return this;
-        }        public LocationHdfsQopConfigurationArgs build() {
-            return new LocationHdfsQopConfigurationArgs(dataTransferProtection, rpcProtection);
+
+        public Builder rpcProtection(String rpcProtection) {
+            return rpcProtection(Output.of(rpcProtection));
+        }
+
+        public LocationHdfsQopConfigurationArgs build() {
+            return $;
         }
     }
+
 }

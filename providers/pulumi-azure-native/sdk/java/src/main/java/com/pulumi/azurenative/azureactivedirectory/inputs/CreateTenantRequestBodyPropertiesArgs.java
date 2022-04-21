@@ -5,9 +5,9 @@ package com.pulumi.azurenative.azureactivedirectory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CreateTenantRequestBodyPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="countryCode")
-      private final @Nullable Output<String> countryCode;
+    private @Nullable Output<String> countryCode;
 
-    public Output<String> countryCode() {
-        return this.countryCode == null ? Codegen.empty() : this.countryCode;
+    public Optional<Output<String>> countryCode() {
+        return Optional.ofNullable(this.countryCode);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class CreateTenantRequestBodyPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
-    public CreateTenantRequestBodyPropertiesArgs(
-        @Nullable Output<String> countryCode,
-        @Nullable Output<String> displayName) {
-        this.countryCode = countryCode;
-        this.displayName = displayName;
-    }
+    private CreateTenantRequestBodyPropertiesArgs() {}
 
-    private CreateTenantRequestBodyPropertiesArgs() {
-        this.countryCode = Codegen.empty();
-        this.displayName = Codegen.empty();
+    private CreateTenantRequestBodyPropertiesArgs(CreateTenantRequestBodyPropertiesArgs $) {
+        this.countryCode = $.countryCode;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreateTenantRequestBodyPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> countryCode;
-        private @Nullable Output<String> displayName;
+        private CreateTenantRequestBodyPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreateTenantRequestBodyPropertiesArgs();
         }
 
         public Builder(CreateTenantRequestBodyPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countryCode = defaults.countryCode;
-    	      this.displayName = defaults.displayName;
+            $ = new CreateTenantRequestBodyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder countryCode(@Nullable Output<String> countryCode) {
-            this.countryCode = countryCode;
+            $.countryCode = countryCode;
             return this;
         }
-        public Builder countryCode(@Nullable String countryCode) {
-            this.countryCode = Codegen.ofNullable(countryCode);
-            return this;
+
+        public Builder countryCode(String countryCode) {
+            return countryCode(Output.of(countryCode));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
-        }        public CreateTenantRequestBodyPropertiesArgs build() {
-            return new CreateTenantRequestBodyPropertiesArgs(countryCode, displayName);
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public CreateTenantRequestBodyPropertiesArgs build() {
+            return $;
         }
     }
+
 }

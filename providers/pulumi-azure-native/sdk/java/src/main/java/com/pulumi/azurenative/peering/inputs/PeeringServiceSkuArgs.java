@@ -5,9 +5,9 @@ package com.pulumi.azurenative.peering.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PeeringServiceSkuArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public PeeringServiceSkuArgs(@Nullable Output<String> name) {
-        this.name = name;
-    }
+    private PeeringServiceSkuArgs() {}
 
-    private PeeringServiceSkuArgs() {
-        this.name = Codegen.empty();
+    private PeeringServiceSkuArgs(PeeringServiceSkuArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringServiceSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
+        private PeeringServiceSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringServiceSkuArgs();
         }
 
         public Builder(PeeringServiceSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new PeeringServiceSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public PeeringServiceSkuArgs build() {
-            return new PeeringServiceSkuArgs(name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public PeeringServiceSkuArgs build() {
+            return $;
         }
     }
+
 }

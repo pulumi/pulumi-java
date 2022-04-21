@@ -23,7 +23,7 @@ public final class SafetyRuleAssertionRule extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="assertedControls", required=true)
-      private final List<String> assertedControls;
+    private List<String> assertedControls;
 
     public List<String> assertedControls() {
         return this.assertedControls;
@@ -34,58 +34,56 @@ public final class SafetyRuleAssertionRule extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="waitPeriodMs", required=true)
-      private final Integer waitPeriodMs;
+    private Integer waitPeriodMs;
 
     public Integer waitPeriodMs() {
         return this.waitPeriodMs;
     }
 
-    public SafetyRuleAssertionRule(
-        List<String> assertedControls,
-        Integer waitPeriodMs) {
-        this.assertedControls = Objects.requireNonNull(assertedControls, "expected parameter 'assertedControls' to be non-null");
-        this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
-    }
+    private SafetyRuleAssertionRule() {}
 
-    private SafetyRuleAssertionRule() {
-        this.assertedControls = List.of();
-        this.waitPeriodMs = null;
+    private SafetyRuleAssertionRule(SafetyRuleAssertionRule $) {
+        this.assertedControls = $.assertedControls;
+        this.waitPeriodMs = $.waitPeriodMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SafetyRuleAssertionRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> assertedControls;
-        private Integer waitPeriodMs;
+        private SafetyRuleAssertionRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new SafetyRuleAssertionRule();
         }
 
         public Builder(SafetyRuleAssertionRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assertedControls = defaults.assertedControls;
-    	      this.waitPeriodMs = defaults.waitPeriodMs;
+            $ = new SafetyRuleAssertionRule(Objects.requireNonNull(defaults));
         }
 
         public Builder assertedControls(List<String> assertedControls) {
-            this.assertedControls = Objects.requireNonNull(assertedControls);
+            $.assertedControls = assertedControls;
             return this;
         }
+
         public Builder assertedControls(String... assertedControls) {
             return assertedControls(List.of(assertedControls));
         }
+
         public Builder waitPeriodMs(Integer waitPeriodMs) {
-            this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
+            $.waitPeriodMs = waitPeriodMs;
             return this;
-        }        public SafetyRuleAssertionRule build() {
-            return new SafetyRuleAssertionRule(assertedControls, waitPeriodMs);
+        }
+
+        public SafetyRuleAssertionRule build() {
+            $.assertedControls = Objects.requireNonNull($.assertedControls, "expected parameter 'assertedControls' to be non-null");
+            $.waitPeriodMs = Objects.requireNonNull($.waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
+            return $;
         }
     }
+
 }

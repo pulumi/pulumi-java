@@ -5,10 +5,10 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PersistentDiskArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mountPath")
-      private final @Nullable Output<String> mountPath;
+    private @Nullable Output<String> mountPath;
 
-    public Output<String> mountPath() {
-        return this.mountPath == null ? Codegen.empty() : this.mountPath;
+    public Optional<Output<String>> mountPath() {
+        return Optional.ofNullable(this.mountPath);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class PersistentDiskArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sizeInGB")
-      private final @Nullable Output<Integer> sizeInGB;
+    private @Nullable Output<Integer> sizeInGB;
 
-    public Output<Integer> sizeInGB() {
-        return this.sizeInGB == null ? Codegen.empty() : this.sizeInGB;
+    public Optional<Output<Integer>> sizeInGB() {
+        return Optional.ofNullable(this.sizeInGB);
     }
 
-    public PersistentDiskArgs(
-        @Nullable Output<String> mountPath,
-        @Nullable Output<Integer> sizeInGB) {
-        this.mountPath = mountPath;
-        this.sizeInGB = sizeInGB;
-    }
+    private PersistentDiskArgs() {}
 
-    private PersistentDiskArgs() {
-        this.mountPath = Codegen.empty();
-        this.sizeInGB = Codegen.empty();
+    private PersistentDiskArgs(PersistentDiskArgs $) {
+        this.mountPath = $.mountPath;
+        this.sizeInGB = $.sizeInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistentDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mountPath;
-        private @Nullable Output<Integer> sizeInGB;
+        private PersistentDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistentDiskArgs();
         }
 
         public Builder(PersistentDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.sizeInGB = defaults.sizeInGB;
+            $ = new PersistentDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(@Nullable Output<String> mountPath) {
-            this.mountPath = mountPath;
+            $.mountPath = mountPath;
             return this;
         }
-        public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Codegen.ofNullable(mountPath);
-            return this;
+
+        public Builder mountPath(String mountPath) {
+            return mountPath(Output.of(mountPath));
         }
+
         public Builder sizeInGB(@Nullable Output<Integer> sizeInGB) {
-            this.sizeInGB = sizeInGB;
+            $.sizeInGB = sizeInGB;
             return this;
         }
-        public Builder sizeInGB(@Nullable Integer sizeInGB) {
-            this.sizeInGB = Codegen.ofNullable(sizeInGB);
-            return this;
-        }        public PersistentDiskArgs build() {
-            return new PersistentDiskArgs(mountPath, sizeInGB);
+
+        public Builder sizeInGB(Integer sizeInGB) {
+            return sizeInGB(Output.of(sizeInGB));
+        }
+
+        public PersistentDiskArgs build() {
+            return $;
         }
     }
+
 }

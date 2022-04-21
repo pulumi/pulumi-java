@@ -17,7 +17,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends com.pulumi.resour
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends com.pulumi.resour
      * 
      */
     @Import(name="edgeModuleName", required=true)
-      private final String edgeModuleName;
+    private String edgeModuleName;
 
     public String edgeModuleName() {
         return this.edgeModuleName;
@@ -39,7 +39,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends com.pulumi.resour
      * 
      */
     @Import(name="expirationDate", required=true)
-      private final String expirationDate;
+    private String expirationDate;
 
     public String expirationDate() {
         return this.expirationDate;
@@ -50,73 +50,66 @@ public final class ListEdgeModuleProvisioningTokenArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListEdgeModuleProvisioningTokenArgs(
-        String accountName,
-        String edgeModuleName,
-        String expirationDate,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.edgeModuleName = Objects.requireNonNull(edgeModuleName, "expected parameter 'edgeModuleName' to be non-null");
-        this.expirationDate = Objects.requireNonNull(expirationDate, "expected parameter 'expirationDate' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListEdgeModuleProvisioningTokenArgs() {}
 
-    private ListEdgeModuleProvisioningTokenArgs() {
-        this.accountName = null;
-        this.edgeModuleName = null;
-        this.expirationDate = null;
-        this.resourceGroupName = null;
+    private ListEdgeModuleProvisioningTokenArgs(ListEdgeModuleProvisioningTokenArgs $) {
+        this.accountName = $.accountName;
+        this.edgeModuleName = $.edgeModuleName;
+        this.expirationDate = $.expirationDate;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListEdgeModuleProvisioningTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String edgeModuleName;
-        private String expirationDate;
-        private String resourceGroupName;
+        private ListEdgeModuleProvisioningTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListEdgeModuleProvisioningTokenArgs();
         }
 
         public Builder(ListEdgeModuleProvisioningTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.edgeModuleName = defaults.edgeModuleName;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListEdgeModuleProvisioningTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder edgeModuleName(String edgeModuleName) {
-            this.edgeModuleName = Objects.requireNonNull(edgeModuleName);
+            $.edgeModuleName = edgeModuleName;
             return this;
         }
+
         public Builder expirationDate(String expirationDate) {
-            this.expirationDate = Objects.requireNonNull(expirationDate);
+            $.expirationDate = expirationDate;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListEdgeModuleProvisioningTokenArgs build() {
-            return new ListEdgeModuleProvisioningTokenArgs(accountName, edgeModuleName, expirationDate, resourceGroupName);
+        }
+
+        public ListEdgeModuleProvisioningTokenArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.edgeModuleName = Objects.requireNonNull($.edgeModuleName, "expected parameter 'edgeModuleName' to be non-null");
+            $.expirationDate = Objects.requireNonNull($.expirationDate, "expected parameter 'expirationDate' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

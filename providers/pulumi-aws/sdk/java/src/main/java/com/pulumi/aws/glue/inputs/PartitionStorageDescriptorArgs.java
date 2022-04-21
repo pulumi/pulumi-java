@@ -9,13 +9,13 @@ import com.pulumi.aws.glue.inputs.PartitionStorageDescriptorSkewedInfoArgs;
 import com.pulumi.aws.glue.inputs.PartitionStorageDescriptorSortColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="bucketColumns")
-      private final @Nullable Output<List<String>> bucketColumns;
+    private @Nullable Output<List<String>> bucketColumns;
 
-    public Output<List<String>> bucketColumns() {
-        return this.bucketColumns == null ? Codegen.empty() : this.bucketColumns;
+    public Optional<Output<List<String>>> bucketColumns() {
+        return Optional.ofNullable(this.bucketColumns);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns;
+    private @Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns;
 
-    public Output<List<PartitionStorageDescriptorColumnArgs>> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<List<PartitionStorageDescriptorColumnArgs>>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="compressed")
-      private final @Nullable Output<Boolean> compressed;
+    private @Nullable Output<Boolean> compressed;
 
-    public Output<Boolean> compressed() {
-        return this.compressed == null ? Codegen.empty() : this.compressed;
+    public Optional<Output<Boolean>> compressed() {
+        return Optional.ofNullable(this.compressed);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="inputFormat")
-      private final @Nullable Output<String> inputFormat;
+    private @Nullable Output<String> inputFormat;
 
-    public Output<String> inputFormat() {
-        return this.inputFormat == null ? Codegen.empty() : this.inputFormat;
+    public Optional<Output<String>> inputFormat() {
+        return Optional.ofNullable(this.inputFormat);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="numberOfBuckets")
-      private final @Nullable Output<Integer> numberOfBuckets;
+    private @Nullable Output<Integer> numberOfBuckets;
 
-    public Output<Integer> numberOfBuckets() {
-        return this.numberOfBuckets == null ? Codegen.empty() : this.numberOfBuckets;
+    public Optional<Output<Integer>> numberOfBuckets() {
+        return Optional.ofNullable(this.numberOfBuckets);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="outputFormat")
-      private final @Nullable Output<String> outputFormat;
+    private @Nullable Output<String> outputFormat;
 
-    public Output<String> outputFormat() {
-        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
+    public Optional<Output<String>> outputFormat() {
+        return Optional.ofNullable(this.outputFormat);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="serDeInfo")
-      private final @Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo;
+    private @Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo;
 
-    public Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo() {
-        return this.serDeInfo == null ? Codegen.empty() : this.serDeInfo;
+    public Optional<Output<PartitionStorageDescriptorSerDeInfoArgs>> serDeInfo() {
+        return Optional.ofNullable(this.serDeInfo);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="skewedInfo")
-      private final @Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo;
+    private @Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo;
 
-    public Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo() {
-        return this.skewedInfo == null ? Codegen.empty() : this.skewedInfo;
+    public Optional<Output<PartitionStorageDescriptorSkewedInfoArgs>> skewedInfo() {
+        return Optional.ofNullable(this.skewedInfo);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="sortColumns")
-      private final @Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns;
+    private @Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns;
 
-    public Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns() {
-        return this.sortColumns == null ? Codegen.empty() : this.sortColumns;
+    public Optional<Output<List<PartitionStorageDescriptorSortColumnArgs>>> sortColumns() {
+        return Optional.ofNullable(this.sortColumns);
     }
 
     /**
@@ -149,202 +149,170 @@ public final class PartitionStorageDescriptorArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="storedAsSubDirectories")
-      private final @Nullable Output<Boolean> storedAsSubDirectories;
+    private @Nullable Output<Boolean> storedAsSubDirectories;
 
-    public Output<Boolean> storedAsSubDirectories() {
-        return this.storedAsSubDirectories == null ? Codegen.empty() : this.storedAsSubDirectories;
+    public Optional<Output<Boolean>> storedAsSubDirectories() {
+        return Optional.ofNullable(this.storedAsSubDirectories);
     }
 
-    public PartitionStorageDescriptorArgs(
-        @Nullable Output<List<String>> bucketColumns,
-        @Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns,
-        @Nullable Output<Boolean> compressed,
-        @Nullable Output<String> inputFormat,
-        @Nullable Output<String> location,
-        @Nullable Output<Integer> numberOfBuckets,
-        @Nullable Output<String> outputFormat,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo,
-        @Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo,
-        @Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns,
-        @Nullable Output<Boolean> storedAsSubDirectories) {
-        this.bucketColumns = bucketColumns;
-        this.columns = columns;
-        this.compressed = compressed;
-        this.inputFormat = inputFormat;
-        this.location = location;
-        this.numberOfBuckets = numberOfBuckets;
-        this.outputFormat = outputFormat;
-        this.parameters = parameters;
-        this.serDeInfo = serDeInfo;
-        this.skewedInfo = skewedInfo;
-        this.sortColumns = sortColumns;
-        this.storedAsSubDirectories = storedAsSubDirectories;
-    }
+    private PartitionStorageDescriptorArgs() {}
 
-    private PartitionStorageDescriptorArgs() {
-        this.bucketColumns = Codegen.empty();
-        this.columns = Codegen.empty();
-        this.compressed = Codegen.empty();
-        this.inputFormat = Codegen.empty();
-        this.location = Codegen.empty();
-        this.numberOfBuckets = Codegen.empty();
-        this.outputFormat = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.serDeInfo = Codegen.empty();
-        this.skewedInfo = Codegen.empty();
-        this.sortColumns = Codegen.empty();
-        this.storedAsSubDirectories = Codegen.empty();
+    private PartitionStorageDescriptorArgs(PartitionStorageDescriptorArgs $) {
+        this.bucketColumns = $.bucketColumns;
+        this.columns = $.columns;
+        this.compressed = $.compressed;
+        this.inputFormat = $.inputFormat;
+        this.location = $.location;
+        this.numberOfBuckets = $.numberOfBuckets;
+        this.outputFormat = $.outputFormat;
+        this.parameters = $.parameters;
+        this.serDeInfo = $.serDeInfo;
+        this.skewedInfo = $.skewedInfo;
+        this.sortColumns = $.sortColumns;
+        this.storedAsSubDirectories = $.storedAsSubDirectories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartitionStorageDescriptorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> bucketColumns;
-        private @Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns;
-        private @Nullable Output<Boolean> compressed;
-        private @Nullable Output<String> inputFormat;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Integer> numberOfBuckets;
-        private @Nullable Output<String> outputFormat;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo;
-        private @Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo;
-        private @Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns;
-        private @Nullable Output<Boolean> storedAsSubDirectories;
+        private PartitionStorageDescriptorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartitionStorageDescriptorArgs();
         }
 
         public Builder(PartitionStorageDescriptorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketColumns = defaults.bucketColumns;
-    	      this.columns = defaults.columns;
-    	      this.compressed = defaults.compressed;
-    	      this.inputFormat = defaults.inputFormat;
-    	      this.location = defaults.location;
-    	      this.numberOfBuckets = defaults.numberOfBuckets;
-    	      this.outputFormat = defaults.outputFormat;
-    	      this.parameters = defaults.parameters;
-    	      this.serDeInfo = defaults.serDeInfo;
-    	      this.skewedInfo = defaults.skewedInfo;
-    	      this.sortColumns = defaults.sortColumns;
-    	      this.storedAsSubDirectories = defaults.storedAsSubDirectories;
+            $ = new PartitionStorageDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketColumns(@Nullable Output<List<String>> bucketColumns) {
-            this.bucketColumns = bucketColumns;
+            $.bucketColumns = bucketColumns;
             return this;
         }
-        public Builder bucketColumns(@Nullable List<String> bucketColumns) {
-            this.bucketColumns = Codegen.ofNullable(bucketColumns);
-            return this;
+
+        public Builder bucketColumns(List<String> bucketColumns) {
+            return bucketColumns(Output.of(bucketColumns));
         }
+
         public Builder bucketColumns(String... bucketColumns) {
             return bucketColumns(List.of(bucketColumns));
         }
+
         public Builder columns(@Nullable Output<List<PartitionStorageDescriptorColumnArgs>> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable List<PartitionStorageDescriptorColumnArgs> columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(List<PartitionStorageDescriptorColumnArgs> columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder columns(PartitionStorageDescriptorColumnArgs... columns) {
             return columns(List.of(columns));
         }
+
         public Builder compressed(@Nullable Output<Boolean> compressed) {
-            this.compressed = compressed;
+            $.compressed = compressed;
             return this;
         }
-        public Builder compressed(@Nullable Boolean compressed) {
-            this.compressed = Codegen.ofNullable(compressed);
-            return this;
+
+        public Builder compressed(Boolean compressed) {
+            return compressed(Output.of(compressed));
         }
+
         public Builder inputFormat(@Nullable Output<String> inputFormat) {
-            this.inputFormat = inputFormat;
+            $.inputFormat = inputFormat;
             return this;
         }
-        public Builder inputFormat(@Nullable String inputFormat) {
-            this.inputFormat = Codegen.ofNullable(inputFormat);
-            return this;
+
+        public Builder inputFormat(String inputFormat) {
+            return inputFormat(Output.of(inputFormat));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder numberOfBuckets(@Nullable Output<Integer> numberOfBuckets) {
-            this.numberOfBuckets = numberOfBuckets;
+            $.numberOfBuckets = numberOfBuckets;
             return this;
         }
-        public Builder numberOfBuckets(@Nullable Integer numberOfBuckets) {
-            this.numberOfBuckets = Codegen.ofNullable(numberOfBuckets);
-            return this;
+
+        public Builder numberOfBuckets(Integer numberOfBuckets) {
+            return numberOfBuckets(Output.of(numberOfBuckets));
         }
+
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
-            this.outputFormat = outputFormat;
+            $.outputFormat = outputFormat;
             return this;
         }
-        public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Codegen.ofNullable(outputFormat);
-            return this;
+
+        public Builder outputFormat(String outputFormat) {
+            return outputFormat(Output.of(outputFormat));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder serDeInfo(@Nullable Output<PartitionStorageDescriptorSerDeInfoArgs> serDeInfo) {
-            this.serDeInfo = serDeInfo;
+            $.serDeInfo = serDeInfo;
             return this;
         }
-        public Builder serDeInfo(@Nullable PartitionStorageDescriptorSerDeInfoArgs serDeInfo) {
-            this.serDeInfo = Codegen.ofNullable(serDeInfo);
-            return this;
+
+        public Builder serDeInfo(PartitionStorageDescriptorSerDeInfoArgs serDeInfo) {
+            return serDeInfo(Output.of(serDeInfo));
         }
+
         public Builder skewedInfo(@Nullable Output<PartitionStorageDescriptorSkewedInfoArgs> skewedInfo) {
-            this.skewedInfo = skewedInfo;
+            $.skewedInfo = skewedInfo;
             return this;
         }
-        public Builder skewedInfo(@Nullable PartitionStorageDescriptorSkewedInfoArgs skewedInfo) {
-            this.skewedInfo = Codegen.ofNullable(skewedInfo);
-            return this;
+
+        public Builder skewedInfo(PartitionStorageDescriptorSkewedInfoArgs skewedInfo) {
+            return skewedInfo(Output.of(skewedInfo));
         }
+
         public Builder sortColumns(@Nullable Output<List<PartitionStorageDescriptorSortColumnArgs>> sortColumns) {
-            this.sortColumns = sortColumns;
+            $.sortColumns = sortColumns;
             return this;
         }
-        public Builder sortColumns(@Nullable List<PartitionStorageDescriptorSortColumnArgs> sortColumns) {
-            this.sortColumns = Codegen.ofNullable(sortColumns);
-            return this;
+
+        public Builder sortColumns(List<PartitionStorageDescriptorSortColumnArgs> sortColumns) {
+            return sortColumns(Output.of(sortColumns));
         }
+
         public Builder sortColumns(PartitionStorageDescriptorSortColumnArgs... sortColumns) {
             return sortColumns(List.of(sortColumns));
         }
+
         public Builder storedAsSubDirectories(@Nullable Output<Boolean> storedAsSubDirectories) {
-            this.storedAsSubDirectories = storedAsSubDirectories;
+            $.storedAsSubDirectories = storedAsSubDirectories;
             return this;
         }
-        public Builder storedAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
-            this.storedAsSubDirectories = Codegen.ofNullable(storedAsSubDirectories);
-            return this;
-        }        public PartitionStorageDescriptorArgs build() {
-            return new PartitionStorageDescriptorArgs(bucketColumns, columns, compressed, inputFormat, location, numberOfBuckets, outputFormat, parameters, serDeInfo, skewedInfo, sortColumns, storedAsSubDirectories);
+
+        public Builder storedAsSubDirectories(Boolean storedAsSubDirectories) {
+            return storedAsSubDirectories(Output.of(storedAsSubDirectories));
+        }
+
+        public PartitionStorageDescriptorArgs build() {
+            return $;
         }
     }
+
 }

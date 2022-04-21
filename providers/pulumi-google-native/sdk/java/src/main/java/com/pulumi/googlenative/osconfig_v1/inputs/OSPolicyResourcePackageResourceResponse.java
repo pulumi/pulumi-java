@@ -28,7 +28,7 @@ public final class OSPolicyResourcePackageResourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="apt", required=true)
-      private final OSPolicyResourcePackageResourceAPTResponse apt;
+    private OSPolicyResourcePackageResourceAPTResponse apt;
 
     public OSPolicyResourcePackageResourceAPTResponse apt() {
         return this.apt;
@@ -39,7 +39,7 @@ public final class OSPolicyResourcePackageResourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="deb", required=true)
-      private final OSPolicyResourcePackageResourceDebResponse deb;
+    private OSPolicyResourcePackageResourceDebResponse deb;
 
     public OSPolicyResourcePackageResourceDebResponse deb() {
         return this.deb;
@@ -50,7 +50,7 @@ public final class OSPolicyResourcePackageResourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="desiredState", required=true)
-      private final String desiredState;
+    private String desiredState;
 
     public String desiredState() {
         return this.desiredState;
@@ -61,7 +61,7 @@ public final class OSPolicyResourcePackageResourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="googet", required=true)
-      private final OSPolicyResourcePackageResourceGooGetResponse googet;
+    private OSPolicyResourcePackageResourceGooGetResponse googet;
 
     public OSPolicyResourcePackageResourceGooGetResponse googet() {
         return this.googet;
@@ -72,7 +72,7 @@ public final class OSPolicyResourcePackageResourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="msi", required=true)
-      private final OSPolicyResourcePackageResourceMSIResponse msi;
+    private OSPolicyResourcePackageResourceMSIResponse msi;
 
     public OSPolicyResourcePackageResourceMSIResponse msi() {
         return this.msi;
@@ -83,7 +83,7 @@ public final class OSPolicyResourcePackageResourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="rpm", required=true)
-      private final OSPolicyResourcePackageResourceRPMResponse rpm;
+    private OSPolicyResourcePackageResourceRPMResponse rpm;
 
     public OSPolicyResourcePackageResourceRPMResponse rpm() {
         return this.rpm;
@@ -94,7 +94,7 @@ public final class OSPolicyResourcePackageResourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="yum", required=true)
-      private final OSPolicyResourcePackageResourceYUMResponse yum;
+    private OSPolicyResourcePackageResourceYUMResponse yum;
 
     public OSPolicyResourcePackageResourceYUMResponse yum() {
         return this.yum;
@@ -105,109 +105,94 @@ public final class OSPolicyResourcePackageResourceResponse extends com.pulumi.re
      * 
      */
     @Import(name="zypper", required=true)
-      private final OSPolicyResourcePackageResourceZypperResponse zypper;
+    private OSPolicyResourcePackageResourceZypperResponse zypper;
 
     public OSPolicyResourcePackageResourceZypperResponse zypper() {
         return this.zypper;
     }
 
-    public OSPolicyResourcePackageResourceResponse(
-        OSPolicyResourcePackageResourceAPTResponse apt,
-        OSPolicyResourcePackageResourceDebResponse deb,
-        String desiredState,
-        OSPolicyResourcePackageResourceGooGetResponse googet,
-        OSPolicyResourcePackageResourceMSIResponse msi,
-        OSPolicyResourcePackageResourceRPMResponse rpm,
-        OSPolicyResourcePackageResourceYUMResponse yum,
-        OSPolicyResourcePackageResourceZypperResponse zypper) {
-        this.apt = Objects.requireNonNull(apt, "expected parameter 'apt' to be non-null");
-        this.deb = Objects.requireNonNull(deb, "expected parameter 'deb' to be non-null");
-        this.desiredState = Objects.requireNonNull(desiredState, "expected parameter 'desiredState' to be non-null");
-        this.googet = Objects.requireNonNull(googet, "expected parameter 'googet' to be non-null");
-        this.msi = Objects.requireNonNull(msi, "expected parameter 'msi' to be non-null");
-        this.rpm = Objects.requireNonNull(rpm, "expected parameter 'rpm' to be non-null");
-        this.yum = Objects.requireNonNull(yum, "expected parameter 'yum' to be non-null");
-        this.zypper = Objects.requireNonNull(zypper, "expected parameter 'zypper' to be non-null");
-    }
+    private OSPolicyResourcePackageResourceResponse() {}
 
-    private OSPolicyResourcePackageResourceResponse() {
-        this.apt = null;
-        this.deb = null;
-        this.desiredState = null;
-        this.googet = null;
-        this.msi = null;
-        this.rpm = null;
-        this.yum = null;
-        this.zypper = null;
+    private OSPolicyResourcePackageResourceResponse(OSPolicyResourcePackageResourceResponse $) {
+        this.apt = $.apt;
+        this.deb = $.deb;
+        this.desiredState = $.desiredState;
+        this.googet = $.googet;
+        this.msi = $.msi;
+        this.rpm = $.rpm;
+        this.yum = $.yum;
+        this.zypper = $.zypper;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourcePackageResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private OSPolicyResourcePackageResourceAPTResponse apt;
-        private OSPolicyResourcePackageResourceDebResponse deb;
-        private String desiredState;
-        private OSPolicyResourcePackageResourceGooGetResponse googet;
-        private OSPolicyResourcePackageResourceMSIResponse msi;
-        private OSPolicyResourcePackageResourceRPMResponse rpm;
-        private OSPolicyResourcePackageResourceYUMResponse yum;
-        private OSPolicyResourcePackageResourceZypperResponse zypper;
+        private OSPolicyResourcePackageResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourcePackageResourceResponse();
         }
 
         public Builder(OSPolicyResourcePackageResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apt = defaults.apt;
-    	      this.deb = defaults.deb;
-    	      this.desiredState = defaults.desiredState;
-    	      this.googet = defaults.googet;
-    	      this.msi = defaults.msi;
-    	      this.rpm = defaults.rpm;
-    	      this.yum = defaults.yum;
-    	      this.zypper = defaults.zypper;
+            $ = new OSPolicyResourcePackageResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apt(OSPolicyResourcePackageResourceAPTResponse apt) {
-            this.apt = Objects.requireNonNull(apt);
+            $.apt = apt;
             return this;
         }
+
         public Builder deb(OSPolicyResourcePackageResourceDebResponse deb) {
-            this.deb = Objects.requireNonNull(deb);
+            $.deb = deb;
             return this;
         }
+
         public Builder desiredState(String desiredState) {
-            this.desiredState = Objects.requireNonNull(desiredState);
+            $.desiredState = desiredState;
             return this;
         }
+
         public Builder googet(OSPolicyResourcePackageResourceGooGetResponse googet) {
-            this.googet = Objects.requireNonNull(googet);
+            $.googet = googet;
             return this;
         }
+
         public Builder msi(OSPolicyResourcePackageResourceMSIResponse msi) {
-            this.msi = Objects.requireNonNull(msi);
+            $.msi = msi;
             return this;
         }
+
         public Builder rpm(OSPolicyResourcePackageResourceRPMResponse rpm) {
-            this.rpm = Objects.requireNonNull(rpm);
+            $.rpm = rpm;
             return this;
         }
+
         public Builder yum(OSPolicyResourcePackageResourceYUMResponse yum) {
-            this.yum = Objects.requireNonNull(yum);
+            $.yum = yum;
             return this;
         }
+
         public Builder zypper(OSPolicyResourcePackageResourceZypperResponse zypper) {
-            this.zypper = Objects.requireNonNull(zypper);
+            $.zypper = zypper;
             return this;
-        }        public OSPolicyResourcePackageResourceResponse build() {
-            return new OSPolicyResourcePackageResourceResponse(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
+        }
+
+        public OSPolicyResourcePackageResourceResponse build() {
+            $.apt = Objects.requireNonNull($.apt, "expected parameter 'apt' to be non-null");
+            $.deb = Objects.requireNonNull($.deb, "expected parameter 'deb' to be non-null");
+            $.desiredState = Objects.requireNonNull($.desiredState, "expected parameter 'desiredState' to be non-null");
+            $.googet = Objects.requireNonNull($.googet, "expected parameter 'googet' to be non-null");
+            $.msi = Objects.requireNonNull($.msi, "expected parameter 'msi' to be non-null");
+            $.rpm = Objects.requireNonNull($.rpm, "expected parameter 'rpm' to be non-null");
+            $.yum = Objects.requireNonNull($.yum, "expected parameter 'yum' to be non-null");
+            $.zypper = Objects.requireNonNull($.zypper, "expected parameter 'zypper' to be non-null");
+            return $;
         }
     }
+
 }

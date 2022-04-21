@@ -9,10 +9,10 @@ import com.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProdu
 import com.pulumi.awsnative.servicecatalog.inputs.CloudFormationProvisionedProductTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,279 +21,247 @@ public final class CloudFormationProvisionedProductArgs extends com.pulumi.resou
     public static final CloudFormationProvisionedProductArgs Empty = new CloudFormationProvisionedProductArgs();
 
     @Import(name="acceptLanguage")
-      private final @Nullable Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
+    private @Nullable Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
 
-    public Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<CloudFormationProvisionedProductAcceptLanguage>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     @Import(name="notificationArns")
-      private final @Nullable Output<List<String>> notificationArns;
+    private @Nullable Output<List<String>> notificationArns;
 
-    public Output<List<String>> notificationArns() {
-        return this.notificationArns == null ? Codegen.empty() : this.notificationArns;
+    public Optional<Output<List<String>>> notificationArns() {
+        return Optional.ofNullable(this.notificationArns);
     }
 
     @Import(name="pathId")
-      private final @Nullable Output<String> pathId;
+    private @Nullable Output<String> pathId;
 
-    public Output<String> pathId() {
-        return this.pathId == null ? Codegen.empty() : this.pathId;
+    public Optional<Output<String>> pathId() {
+        return Optional.ofNullable(this.pathId);
     }
 
     @Import(name="pathName")
-      private final @Nullable Output<String> pathName;
+    private @Nullable Output<String> pathName;
 
-    public Output<String> pathName() {
-        return this.pathName == null ? Codegen.empty() : this.pathName;
+    public Optional<Output<String>> pathName() {
+        return Optional.ofNullable(this.pathName);
     }
 
     @Import(name="productId")
-      private final @Nullable Output<String> productId;
+    private @Nullable Output<String> productId;
 
-    public Output<String> productId() {
-        return this.productId == null ? Codegen.empty() : this.productId;
+    public Optional<Output<String>> productId() {
+        return Optional.ofNullable(this.productId);
     }
 
     @Import(name="productName")
-      private final @Nullable Output<String> productName;
+    private @Nullable Output<String> productName;
 
-    public Output<String> productName() {
-        return this.productName == null ? Codegen.empty() : this.productName;
+    public Optional<Output<String>> productName() {
+        return Optional.ofNullable(this.productName);
     }
 
     @Import(name="provisionedProductName")
-      private final @Nullable Output<String> provisionedProductName;
+    private @Nullable Output<String> provisionedProductName;
 
-    public Output<String> provisionedProductName() {
-        return this.provisionedProductName == null ? Codegen.empty() : this.provisionedProductName;
+    public Optional<Output<String>> provisionedProductName() {
+        return Optional.ofNullable(this.provisionedProductName);
     }
 
     @Import(name="provisioningArtifactId")
-      private final @Nullable Output<String> provisioningArtifactId;
+    private @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> provisioningArtifactId() {
-        return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
+    public Optional<Output<String>> provisioningArtifactId() {
+        return Optional.ofNullable(this.provisioningArtifactId);
     }
 
     @Import(name="provisioningArtifactName")
-      private final @Nullable Output<String> provisioningArtifactName;
+    private @Nullable Output<String> provisioningArtifactName;
 
-    public Output<String> provisioningArtifactName() {
-        return this.provisioningArtifactName == null ? Codegen.empty() : this.provisioningArtifactName;
+    public Optional<Output<String>> provisioningArtifactName() {
+        return Optional.ofNullable(this.provisioningArtifactName);
     }
 
     @Import(name="provisioningParameters")
-      private final @Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters;
+    private @Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters;
 
-    public Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters() {
-        return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
+    public Optional<Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>>> provisioningParameters() {
+        return Optional.ofNullable(this.provisioningParameters);
     }
 
     @Import(name="provisioningPreferences")
-      private final @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences;
+    private @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences;
 
-    public Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences() {
-        return this.provisioningPreferences == null ? Codegen.empty() : this.provisioningPreferences;
+    public Optional<Output<CloudFormationProvisionedProductProvisioningPreferencesArgs>> provisioningPreferences() {
+        return Optional.ofNullable(this.provisioningPreferences);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags;
+    private @Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags;
 
-    public Output<List<CloudFormationProvisionedProductTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<CloudFormationProvisionedProductTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CloudFormationProvisionedProductArgs(
-        @Nullable Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage,
-        @Nullable Output<List<String>> notificationArns,
-        @Nullable Output<String> pathId,
-        @Nullable Output<String> pathName,
-        @Nullable Output<String> productId,
-        @Nullable Output<String> productName,
-        @Nullable Output<String> provisionedProductName,
-        @Nullable Output<String> provisioningArtifactId,
-        @Nullable Output<String> provisioningArtifactName,
-        @Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters,
-        @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences,
-        @Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags) {
-        this.acceptLanguage = acceptLanguage;
-        this.notificationArns = notificationArns;
-        this.pathId = pathId;
-        this.pathName = pathName;
-        this.productId = productId;
-        this.productName = productName;
-        this.provisionedProductName = provisionedProductName;
-        this.provisioningArtifactId = provisioningArtifactId;
-        this.provisioningArtifactName = provisioningArtifactName;
-        this.provisioningParameters = provisioningParameters;
-        this.provisioningPreferences = provisioningPreferences;
-        this.tags = tags;
-    }
+    private CloudFormationProvisionedProductArgs() {}
 
-    private CloudFormationProvisionedProductArgs() {
-        this.acceptLanguage = Codegen.empty();
-        this.notificationArns = Codegen.empty();
-        this.pathId = Codegen.empty();
-        this.pathName = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.productName = Codegen.empty();
-        this.provisionedProductName = Codegen.empty();
-        this.provisioningArtifactId = Codegen.empty();
-        this.provisioningArtifactName = Codegen.empty();
-        this.provisioningParameters = Codegen.empty();
-        this.provisioningPreferences = Codegen.empty();
-        this.tags = Codegen.empty();
+    private CloudFormationProvisionedProductArgs(CloudFormationProvisionedProductArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.notificationArns = $.notificationArns;
+        this.pathId = $.pathId;
+        this.pathName = $.pathName;
+        this.productId = $.productId;
+        this.productName = $.productName;
+        this.provisionedProductName = $.provisionedProductName;
+        this.provisioningArtifactId = $.provisioningArtifactId;
+        this.provisioningArtifactName = $.provisioningArtifactName;
+        this.provisioningParameters = $.provisioningParameters;
+        this.provisioningPreferences = $.provisioningPreferences;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFormationProvisionedProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
-        private @Nullable Output<List<String>> notificationArns;
-        private @Nullable Output<String> pathId;
-        private @Nullable Output<String> pathName;
-        private @Nullable Output<String> productId;
-        private @Nullable Output<String> productName;
-        private @Nullable Output<String> provisionedProductName;
-        private @Nullable Output<String> provisioningArtifactId;
-        private @Nullable Output<String> provisioningArtifactName;
-        private @Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters;
-        private @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences;
-        private @Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags;
+        private CloudFormationProvisionedProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFormationProvisionedProductArgs();
         }
 
         public Builder(CloudFormationProvisionedProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.notificationArns = defaults.notificationArns;
-    	      this.pathId = defaults.pathId;
-    	      this.pathName = defaults.pathName;
-    	      this.productId = defaults.productId;
-    	      this.productName = defaults.productName;
-    	      this.provisionedProductName = defaults.provisionedProductName;
-    	      this.provisioningArtifactId = defaults.provisioningArtifactId;
-    	      this.provisioningArtifactName = defaults.provisioningArtifactName;
-    	      this.provisioningParameters = defaults.provisioningParameters;
-    	      this.provisioningPreferences = defaults.provisioningPreferences;
-    	      this.tags = defaults.tags;
+            $ = new CloudFormationProvisionedProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(CloudFormationProvisionedProductAcceptLanguage acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
-            this.notificationArns = notificationArns;
+            $.notificationArns = notificationArns;
             return this;
         }
-        public Builder notificationArns(@Nullable List<String> notificationArns) {
-            this.notificationArns = Codegen.ofNullable(notificationArns);
-            return this;
+
+        public Builder notificationArns(List<String> notificationArns) {
+            return notificationArns(Output.of(notificationArns));
         }
+
         public Builder notificationArns(String... notificationArns) {
             return notificationArns(List.of(notificationArns));
         }
+
         public Builder pathId(@Nullable Output<String> pathId) {
-            this.pathId = pathId;
+            $.pathId = pathId;
             return this;
         }
-        public Builder pathId(@Nullable String pathId) {
-            this.pathId = Codegen.ofNullable(pathId);
-            return this;
+
+        public Builder pathId(String pathId) {
+            return pathId(Output.of(pathId));
         }
+
         public Builder pathName(@Nullable Output<String> pathName) {
-            this.pathName = pathName;
+            $.pathName = pathName;
             return this;
         }
-        public Builder pathName(@Nullable String pathName) {
-            this.pathName = Codegen.ofNullable(pathName);
-            return this;
+
+        public Builder pathName(String pathName) {
+            return pathName(Output.of(pathName));
         }
+
         public Builder productId(@Nullable Output<String> productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
         }
-        public Builder productId(@Nullable String productId) {
-            this.productId = Codegen.ofNullable(productId);
-            return this;
+
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
         }
+
         public Builder productName(@Nullable Output<String> productName) {
-            this.productName = productName;
+            $.productName = productName;
             return this;
         }
-        public Builder productName(@Nullable String productName) {
-            this.productName = Codegen.ofNullable(productName);
-            return this;
+
+        public Builder productName(String productName) {
+            return productName(Output.of(productName));
         }
+
         public Builder provisionedProductName(@Nullable Output<String> provisionedProductName) {
-            this.provisionedProductName = provisionedProductName;
+            $.provisionedProductName = provisionedProductName;
             return this;
         }
-        public Builder provisionedProductName(@Nullable String provisionedProductName) {
-            this.provisionedProductName = Codegen.ofNullable(provisionedProductName);
-            return this;
+
+        public Builder provisionedProductName(String provisionedProductName) {
+            return provisionedProductName(Output.of(provisionedProductName));
         }
+
         public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
-            this.provisioningArtifactId = provisioningArtifactId;
+            $.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
-        public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
-            this.provisioningArtifactId = Codegen.ofNullable(provisioningArtifactId);
-            return this;
+
+        public Builder provisioningArtifactId(String provisioningArtifactId) {
+            return provisioningArtifactId(Output.of(provisioningArtifactId));
         }
+
         public Builder provisioningArtifactName(@Nullable Output<String> provisioningArtifactName) {
-            this.provisioningArtifactName = provisioningArtifactName;
+            $.provisioningArtifactName = provisioningArtifactName;
             return this;
         }
-        public Builder provisioningArtifactName(@Nullable String provisioningArtifactName) {
-            this.provisioningArtifactName = Codegen.ofNullable(provisioningArtifactName);
-            return this;
+
+        public Builder provisioningArtifactName(String provisioningArtifactName) {
+            return provisioningArtifactName(Output.of(provisioningArtifactName));
         }
+
         public Builder provisioningParameters(@Nullable Output<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
-            this.provisioningParameters = provisioningParameters;
+            $.provisioningParameters = provisioningParameters;
             return this;
         }
-        public Builder provisioningParameters(@Nullable List<CloudFormationProvisionedProductProvisioningParameterArgs> provisioningParameters) {
-            this.provisioningParameters = Codegen.ofNullable(provisioningParameters);
-            return this;
+
+        public Builder provisioningParameters(List<CloudFormationProvisionedProductProvisioningParameterArgs> provisioningParameters) {
+            return provisioningParameters(Output.of(provisioningParameters));
         }
+
         public Builder provisioningParameters(CloudFormationProvisionedProductProvisioningParameterArgs... provisioningParameters) {
             return provisioningParameters(List.of(provisioningParameters));
         }
+
         public Builder provisioningPreferences(@Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences) {
-            this.provisioningPreferences = provisioningPreferences;
+            $.provisioningPreferences = provisioningPreferences;
             return this;
         }
-        public Builder provisioningPreferences(@Nullable CloudFormationProvisionedProductProvisioningPreferencesArgs provisioningPreferences) {
-            this.provisioningPreferences = Codegen.ofNullable(provisioningPreferences);
-            return this;
+
+        public Builder provisioningPreferences(CloudFormationProvisionedProductProvisioningPreferencesArgs provisioningPreferences) {
+            return provisioningPreferences(Output.of(provisioningPreferences));
         }
+
         public Builder tags(@Nullable Output<List<CloudFormationProvisionedProductTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<CloudFormationProvisionedProductTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<CloudFormationProvisionedProductTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(CloudFormationProvisionedProductTagArgs... tags) {
             return tags(List.of(tags));
-        }        public CloudFormationProvisionedProductArgs build() {
-            return new CloudFormationProvisionedProductArgs(acceptLanguage, notificationArns, pathId, pathName, productId, productName, provisionedProductName, provisioningArtifactId, provisioningArtifactName, provisioningParameters, provisioningPreferences, tags);
+        }
+
+        public CloudFormationProvisionedProductArgs build() {
+            return $;
         }
     }
+
 }

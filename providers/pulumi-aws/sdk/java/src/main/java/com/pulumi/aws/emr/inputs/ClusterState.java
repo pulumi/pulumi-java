@@ -14,13 +14,13 @@ import com.pulumi.aws.emr.inputs.ClusterMasterInstanceGroupGetArgs;
 import com.pulumi.aws.emr.inputs.ClusterStepGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalInfo")
-      private final @Nullable Output<String> additionalInfo;
+    private @Nullable Output<String> additionalInfo;
 
-    public Output<String> additionalInfo() {
-        return this.additionalInfo == null ? Codegen.empty() : this.additionalInfo;
+    public Optional<Output<String>> additionalInfo() {
+        return Optional.ofNullable(this.additionalInfo);
     }
 
     /**
@@ -44,17 +44,17 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applications")
-      private final @Nullable Output<List<String>> applications;
+    private @Nullable Output<List<String>> applications;
 
-    public Output<List<String>> applications() {
-        return this.applications == null ? Codegen.empty() : this.applications;
+    public Optional<Output<List<String>>> applications() {
+        return Optional.ofNullable(this.applications);
     }
 
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoTerminationPolicy")
-      private final @Nullable Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy;
+    private @Nullable Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy;
 
-    public Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy() {
-        return this.autoTerminationPolicy == null ? Codegen.empty() : this.autoTerminationPolicy;
+    public Optional<Output<ClusterAutoTerminationPolicyGetArgs>> autoTerminationPolicy() {
+        return Optional.ofNullable(this.autoTerminationPolicy);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingRole")
-      private final @Nullable Output<String> autoscalingRole;
+    private @Nullable Output<String> autoscalingRole;
 
-    public Output<String> autoscalingRole() {
-        return this.autoscalingRole == null ? Codegen.empty() : this.autoscalingRole;
+    public Optional<Output<String>> autoscalingRole() {
+        return Optional.ofNullable(this.autoscalingRole);
     }
 
     /**
@@ -84,17 +84,17 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bootstrapActions")
-      private final @Nullable Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions;
+    private @Nullable Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions;
 
-    public Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions() {
-        return this.bootstrapActions == null ? Codegen.empty() : this.bootstrapActions;
+    public Optional<Output<List<ClusterBootstrapActionGetArgs>>> bootstrapActions() {
+        return Optional.ofNullable(this.bootstrapActions);
     }
 
     @Import(name="clusterState")
-      private final @Nullable Output<String> clusterState;
+    private @Nullable Output<String> clusterState;
 
-    public Output<String> clusterState() {
-        return this.clusterState == null ? Codegen.empty() : this.clusterState;
+    public Optional<Output<String>> clusterState() {
+        return Optional.ofNullable(this.clusterState);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurations")
-      private final @Nullable Output<String> configurations;
+    private @Nullable Output<String> configurations;
 
-    public Output<String> configurations() {
-        return this.configurations == null ? Codegen.empty() : this.configurations;
+    public Optional<Output<String>> configurations() {
+        return Optional.ofNullable(this.configurations);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationsJson")
-      private final @Nullable Output<String> configurationsJson;
+    private @Nullable Output<String> configurationsJson;
 
-    public Output<String> configurationsJson() {
-        return this.configurationsJson == null ? Codegen.empty() : this.configurationsJson;
+    public Optional<Output<String>> configurationsJson() {
+        return Optional.ofNullable(this.configurationsJson);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="coreInstanceFleet")
-      private final @Nullable Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet;
+    private @Nullable Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet;
 
-    public Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet() {
-        return this.coreInstanceFleet == null ? Codegen.empty() : this.coreInstanceFleet;
+    public Optional<Output<ClusterCoreInstanceFleetGetArgs>> coreInstanceFleet() {
+        return Optional.ofNullable(this.coreInstanceFleet);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="coreInstanceGroup")
-      private final @Nullable Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup;
+    private @Nullable Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup;
 
-    public Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup() {
-        return this.coreInstanceGroup == null ? Codegen.empty() : this.coreInstanceGroup;
+    public Optional<Output<ClusterCoreInstanceGroupGetArgs>> coreInstanceGroup() {
+        return Optional.ofNullable(this.coreInstanceGroup);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customAmiId")
-      private final @Nullable Output<String> customAmiId;
+    private @Nullable Output<String> customAmiId;
 
-    public Output<String> customAmiId() {
-        return this.customAmiId == null ? Codegen.empty() : this.customAmiId;
+    public Optional<Output<String>> customAmiId() {
+        return Optional.ofNullable(this.customAmiId);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsRootVolumeSize")
-      private final @Nullable Output<Integer> ebsRootVolumeSize;
+    private @Nullable Output<Integer> ebsRootVolumeSize;
 
-    public Output<Integer> ebsRootVolumeSize() {
-        return this.ebsRootVolumeSize == null ? Codegen.empty() : this.ebsRootVolumeSize;
+    public Optional<Output<Integer>> ebsRootVolumeSize() {
+        return Optional.ofNullable(this.ebsRootVolumeSize);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2Attributes")
-      private final @Nullable Output<ClusterEc2AttributesGetArgs> ec2Attributes;
+    private @Nullable Output<ClusterEc2AttributesGetArgs> ec2Attributes;
 
-    public Output<ClusterEc2AttributesGetArgs> ec2Attributes() {
-        return this.ec2Attributes == null ? Codegen.empty() : this.ec2Attributes;
+    public Optional<Output<ClusterEc2AttributesGetArgs>> ec2Attributes() {
+        return Optional.ofNullable(this.ec2Attributes);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepJobFlowAliveWhenNoSteps")
-      private final @Nullable Output<Boolean> keepJobFlowAliveWhenNoSteps;
+    private @Nullable Output<Boolean> keepJobFlowAliveWhenNoSteps;
 
-    public Output<Boolean> keepJobFlowAliveWhenNoSteps() {
-        return this.keepJobFlowAliveWhenNoSteps == null ? Codegen.empty() : this.keepJobFlowAliveWhenNoSteps;
+    public Optional<Output<Boolean>> keepJobFlowAliveWhenNoSteps() {
+        return Optional.ofNullable(this.keepJobFlowAliveWhenNoSteps);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kerberosAttributes")
-      private final @Nullable Output<ClusterKerberosAttributesGetArgs> kerberosAttributes;
+    private @Nullable Output<ClusterKerberosAttributesGetArgs> kerberosAttributes;
 
-    public Output<ClusterKerberosAttributesGetArgs> kerberosAttributes() {
-        return this.kerberosAttributes == null ? Codegen.empty() : this.kerberosAttributes;
+    public Optional<Output<ClusterKerberosAttributesGetArgs>> kerberosAttributes() {
+        return Optional.ofNullable(this.kerberosAttributes);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logEncryptionKmsKeyId")
-      private final @Nullable Output<String> logEncryptionKmsKeyId;
+    private @Nullable Output<String> logEncryptionKmsKeyId;
 
-    public Output<String> logEncryptionKmsKeyId() {
-        return this.logEncryptionKmsKeyId == null ? Codegen.empty() : this.logEncryptionKmsKeyId;
+    public Optional<Output<String>> logEncryptionKmsKeyId() {
+        return Optional.ofNullable(this.logEncryptionKmsKeyId);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logUri")
-      private final @Nullable Output<String> logUri;
+    private @Nullable Output<String> logUri;
 
-    public Output<String> logUri() {
-        return this.logUri == null ? Codegen.empty() : this.logUri;
+    public Optional<Output<String>> logUri() {
+        return Optional.ofNullable(this.logUri);
     }
 
     /**
@@ -223,10 +223,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterInstanceFleet")
-      private final @Nullable Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet;
+    private @Nullable Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet;
 
-    public Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet() {
-        return this.masterInstanceFleet == null ? Codegen.empty() : this.masterInstanceFleet;
+    public Optional<Output<ClusterMasterInstanceFleetGetArgs>> masterInstanceFleet() {
+        return Optional.ofNullable(this.masterInstanceFleet);
     }
 
     /**
@@ -234,10 +234,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterInstanceGroup")
-      private final @Nullable Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup;
+    private @Nullable Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup;
 
-    public Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup() {
-        return this.masterInstanceGroup == null ? Codegen.empty() : this.masterInstanceGroup;
+    public Optional<Output<ClusterMasterInstanceGroupGetArgs>> masterInstanceGroup() {
+        return Optional.ofNullable(this.masterInstanceGroup);
     }
 
     /**
@@ -245,10 +245,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterPublicDns")
-      private final @Nullable Output<String> masterPublicDns;
+    private @Nullable Output<String> masterPublicDns;
 
-    public Output<String> masterPublicDns() {
-        return this.masterPublicDns == null ? Codegen.empty() : this.masterPublicDns;
+    public Optional<Output<String>> masterPublicDns() {
+        return Optional.ofNullable(this.masterPublicDns);
     }
 
     /**
@@ -256,10 +256,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -267,10 +267,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="releaseLabel")
-      private final @Nullable Output<String> releaseLabel;
+    private @Nullable Output<String> releaseLabel;
 
-    public Output<String> releaseLabel() {
-        return this.releaseLabel == null ? Codegen.empty() : this.releaseLabel;
+    public Optional<Output<String>> releaseLabel() {
+        return Optional.ofNullable(this.releaseLabel);
     }
 
     /**
@@ -278,10 +278,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scaleDownBehavior")
-      private final @Nullable Output<String> scaleDownBehavior;
+    private @Nullable Output<String> scaleDownBehavior;
 
-    public Output<String> scaleDownBehavior() {
-        return this.scaleDownBehavior == null ? Codegen.empty() : this.scaleDownBehavior;
+    public Optional<Output<String>> scaleDownBehavior() {
+        return Optional.ofNullable(this.scaleDownBehavior);
     }
 
     /**
@@ -289,10 +289,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityConfiguration")
-      private final @Nullable Output<String> securityConfiguration;
+    private @Nullable Output<String> securityConfiguration;
 
-    public Output<String> securityConfiguration() {
-        return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
+    public Optional<Output<String>> securityConfiguration() {
+        return Optional.ofNullable(this.securityConfiguration);
     }
 
     /**
@@ -300,10 +300,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRole")
-      private final @Nullable Output<String> serviceRole;
+    private @Nullable Output<String> serviceRole;
 
-    public Output<String> serviceRole() {
-        return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
+    public Optional<Output<String>> serviceRole() {
+        return Optional.ofNullable(this.serviceRole);
     }
 
     /**
@@ -311,10 +311,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stepConcurrencyLevel")
-      private final @Nullable Output<Integer> stepConcurrencyLevel;
+    private @Nullable Output<Integer> stepConcurrencyLevel;
 
-    public Output<Integer> stepConcurrencyLevel() {
-        return this.stepConcurrencyLevel == null ? Codegen.empty() : this.stepConcurrencyLevel;
+    public Optional<Output<Integer>> stepConcurrencyLevel() {
+        return Optional.ofNullable(this.stepConcurrencyLevel);
     }
 
     /**
@@ -322,10 +322,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="steps")
-      private final @Nullable Output<List<ClusterStepGetArgs>> steps;
+    private @Nullable Output<List<ClusterStepGetArgs>> steps;
 
-    public Output<List<ClusterStepGetArgs>> steps() {
-        return this.steps == null ? Codegen.empty() : this.steps;
+    public Optional<Output<List<ClusterStepGetArgs>>> steps() {
+        return Optional.ofNullable(this.steps);
     }
 
     /**
@@ -333,10 +333,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -344,10 +344,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -355,10 +355,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terminationProtection")
-      private final @Nullable Output<Boolean> terminationProtection;
+    private @Nullable Output<Boolean> terminationProtection;
 
-    public Output<Boolean> terminationProtection() {
-        return this.terminationProtection == null ? Codegen.empty() : this.terminationProtection;
+    public Optional<Output<Boolean>> terminationProtection() {
+        return Optional.ofNullable(this.terminationProtection);
     }
 
     /**
@@ -366,462 +366,370 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="visibleToAllUsers")
-      private final @Nullable Output<Boolean> visibleToAllUsers;
+    private @Nullable Output<Boolean> visibleToAllUsers;
 
-    public Output<Boolean> visibleToAllUsers() {
-        return this.visibleToAllUsers == null ? Codegen.empty() : this.visibleToAllUsers;
+    public Optional<Output<Boolean>> visibleToAllUsers() {
+        return Optional.ofNullable(this.visibleToAllUsers);
     }
 
-    public ClusterState(
-        @Nullable Output<String> additionalInfo,
-        @Nullable Output<List<String>> applications,
-        @Nullable Output<String> arn,
-        @Nullable Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy,
-        @Nullable Output<String> autoscalingRole,
-        @Nullable Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions,
-        @Nullable Output<String> clusterState,
-        @Nullable Output<String> configurations,
-        @Nullable Output<String> configurationsJson,
-        @Nullable Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet,
-        @Nullable Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup,
-        @Nullable Output<String> customAmiId,
-        @Nullable Output<Integer> ebsRootVolumeSize,
-        @Nullable Output<ClusterEc2AttributesGetArgs> ec2Attributes,
-        @Nullable Output<Boolean> keepJobFlowAliveWhenNoSteps,
-        @Nullable Output<ClusterKerberosAttributesGetArgs> kerberosAttributes,
-        @Nullable Output<String> logEncryptionKmsKeyId,
-        @Nullable Output<String> logUri,
-        @Nullable Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet,
-        @Nullable Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup,
-        @Nullable Output<String> masterPublicDns,
-        @Nullable Output<String> name,
-        @Nullable Output<String> releaseLabel,
-        @Nullable Output<String> scaleDownBehavior,
-        @Nullable Output<String> securityConfiguration,
-        @Nullable Output<String> serviceRole,
-        @Nullable Output<Integer> stepConcurrencyLevel,
-        @Nullable Output<List<ClusterStepGetArgs>> steps,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Boolean> terminationProtection,
-        @Nullable Output<Boolean> visibleToAllUsers) {
-        this.additionalInfo = additionalInfo;
-        this.applications = applications;
-        this.arn = arn;
-        this.autoTerminationPolicy = autoTerminationPolicy;
-        this.autoscalingRole = autoscalingRole;
-        this.bootstrapActions = bootstrapActions;
-        this.clusterState = clusterState;
-        this.configurations = configurations;
-        this.configurationsJson = configurationsJson;
-        this.coreInstanceFleet = coreInstanceFleet;
-        this.coreInstanceGroup = coreInstanceGroup;
-        this.customAmiId = customAmiId;
-        this.ebsRootVolumeSize = ebsRootVolumeSize;
-        this.ec2Attributes = ec2Attributes;
-        this.keepJobFlowAliveWhenNoSteps = keepJobFlowAliveWhenNoSteps;
-        this.kerberosAttributes = kerberosAttributes;
-        this.logEncryptionKmsKeyId = logEncryptionKmsKeyId;
-        this.logUri = logUri;
-        this.masterInstanceFleet = masterInstanceFleet;
-        this.masterInstanceGroup = masterInstanceGroup;
-        this.masterPublicDns = masterPublicDns;
-        this.name = name;
-        this.releaseLabel = releaseLabel;
-        this.scaleDownBehavior = scaleDownBehavior;
-        this.securityConfiguration = securityConfiguration;
-        this.serviceRole = serviceRole;
-        this.stepConcurrencyLevel = stepConcurrencyLevel;
-        this.steps = steps;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.terminationProtection = terminationProtection;
-        this.visibleToAllUsers = visibleToAllUsers;
-    }
+    private ClusterState() {}
 
-    private ClusterState() {
-        this.additionalInfo = Codegen.empty();
-        this.applications = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.autoTerminationPolicy = Codegen.empty();
-        this.autoscalingRole = Codegen.empty();
-        this.bootstrapActions = Codegen.empty();
-        this.clusterState = Codegen.empty();
-        this.configurations = Codegen.empty();
-        this.configurationsJson = Codegen.empty();
-        this.coreInstanceFleet = Codegen.empty();
-        this.coreInstanceGroup = Codegen.empty();
-        this.customAmiId = Codegen.empty();
-        this.ebsRootVolumeSize = Codegen.empty();
-        this.ec2Attributes = Codegen.empty();
-        this.keepJobFlowAliveWhenNoSteps = Codegen.empty();
-        this.kerberosAttributes = Codegen.empty();
-        this.logEncryptionKmsKeyId = Codegen.empty();
-        this.logUri = Codegen.empty();
-        this.masterInstanceFleet = Codegen.empty();
-        this.masterInstanceGroup = Codegen.empty();
-        this.masterPublicDns = Codegen.empty();
-        this.name = Codegen.empty();
-        this.releaseLabel = Codegen.empty();
-        this.scaleDownBehavior = Codegen.empty();
-        this.securityConfiguration = Codegen.empty();
-        this.serviceRole = Codegen.empty();
-        this.stepConcurrencyLevel = Codegen.empty();
-        this.steps = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.terminationProtection = Codegen.empty();
-        this.visibleToAllUsers = Codegen.empty();
+    private ClusterState(ClusterState $) {
+        this.additionalInfo = $.additionalInfo;
+        this.applications = $.applications;
+        this.arn = $.arn;
+        this.autoTerminationPolicy = $.autoTerminationPolicy;
+        this.autoscalingRole = $.autoscalingRole;
+        this.bootstrapActions = $.bootstrapActions;
+        this.clusterState = $.clusterState;
+        this.configurations = $.configurations;
+        this.configurationsJson = $.configurationsJson;
+        this.coreInstanceFleet = $.coreInstanceFleet;
+        this.coreInstanceGroup = $.coreInstanceGroup;
+        this.customAmiId = $.customAmiId;
+        this.ebsRootVolumeSize = $.ebsRootVolumeSize;
+        this.ec2Attributes = $.ec2Attributes;
+        this.keepJobFlowAliveWhenNoSteps = $.keepJobFlowAliveWhenNoSteps;
+        this.kerberosAttributes = $.kerberosAttributes;
+        this.logEncryptionKmsKeyId = $.logEncryptionKmsKeyId;
+        this.logUri = $.logUri;
+        this.masterInstanceFleet = $.masterInstanceFleet;
+        this.masterInstanceGroup = $.masterInstanceGroup;
+        this.masterPublicDns = $.masterPublicDns;
+        this.name = $.name;
+        this.releaseLabel = $.releaseLabel;
+        this.scaleDownBehavior = $.scaleDownBehavior;
+        this.securityConfiguration = $.securityConfiguration;
+        this.serviceRole = $.serviceRole;
+        this.stepConcurrencyLevel = $.stepConcurrencyLevel;
+        this.steps = $.steps;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.terminationProtection = $.terminationProtection;
+        this.visibleToAllUsers = $.visibleToAllUsers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> additionalInfo;
-        private @Nullable Output<List<String>> applications;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy;
-        private @Nullable Output<String> autoscalingRole;
-        private @Nullable Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions;
-        private @Nullable Output<String> clusterState;
-        private @Nullable Output<String> configurations;
-        private @Nullable Output<String> configurationsJson;
-        private @Nullable Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet;
-        private @Nullable Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup;
-        private @Nullable Output<String> customAmiId;
-        private @Nullable Output<Integer> ebsRootVolumeSize;
-        private @Nullable Output<ClusterEc2AttributesGetArgs> ec2Attributes;
-        private @Nullable Output<Boolean> keepJobFlowAliveWhenNoSteps;
-        private @Nullable Output<ClusterKerberosAttributesGetArgs> kerberosAttributes;
-        private @Nullable Output<String> logEncryptionKmsKeyId;
-        private @Nullable Output<String> logUri;
-        private @Nullable Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet;
-        private @Nullable Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup;
-        private @Nullable Output<String> masterPublicDns;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> releaseLabel;
-        private @Nullable Output<String> scaleDownBehavior;
-        private @Nullable Output<String> securityConfiguration;
-        private @Nullable Output<String> serviceRole;
-        private @Nullable Output<Integer> stepConcurrencyLevel;
-        private @Nullable Output<List<ClusterStepGetArgs>> steps;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Boolean> terminationProtection;
-        private @Nullable Output<Boolean> visibleToAllUsers;
+        private ClusterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterState();
         }
 
         public Builder(ClusterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalInfo = defaults.additionalInfo;
-    	      this.applications = defaults.applications;
-    	      this.arn = defaults.arn;
-    	      this.autoTerminationPolicy = defaults.autoTerminationPolicy;
-    	      this.autoscalingRole = defaults.autoscalingRole;
-    	      this.bootstrapActions = defaults.bootstrapActions;
-    	      this.clusterState = defaults.clusterState;
-    	      this.configurations = defaults.configurations;
-    	      this.configurationsJson = defaults.configurationsJson;
-    	      this.coreInstanceFleet = defaults.coreInstanceFleet;
-    	      this.coreInstanceGroup = defaults.coreInstanceGroup;
-    	      this.customAmiId = defaults.customAmiId;
-    	      this.ebsRootVolumeSize = defaults.ebsRootVolumeSize;
-    	      this.ec2Attributes = defaults.ec2Attributes;
-    	      this.keepJobFlowAliveWhenNoSteps = defaults.keepJobFlowAliveWhenNoSteps;
-    	      this.kerberosAttributes = defaults.kerberosAttributes;
-    	      this.logEncryptionKmsKeyId = defaults.logEncryptionKmsKeyId;
-    	      this.logUri = defaults.logUri;
-    	      this.masterInstanceFleet = defaults.masterInstanceFleet;
-    	      this.masterInstanceGroup = defaults.masterInstanceGroup;
-    	      this.masterPublicDns = defaults.masterPublicDns;
-    	      this.name = defaults.name;
-    	      this.releaseLabel = defaults.releaseLabel;
-    	      this.scaleDownBehavior = defaults.scaleDownBehavior;
-    	      this.securityConfiguration = defaults.securityConfiguration;
-    	      this.serviceRole = defaults.serviceRole;
-    	      this.stepConcurrencyLevel = defaults.stepConcurrencyLevel;
-    	      this.steps = defaults.steps;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.terminationProtection = defaults.terminationProtection;
-    	      this.visibleToAllUsers = defaults.visibleToAllUsers;
+            $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalInfo(@Nullable Output<String> additionalInfo) {
-            this.additionalInfo = additionalInfo;
+            $.additionalInfo = additionalInfo;
             return this;
         }
-        public Builder additionalInfo(@Nullable String additionalInfo) {
-            this.additionalInfo = Codegen.ofNullable(additionalInfo);
-            return this;
+
+        public Builder additionalInfo(String additionalInfo) {
+            return additionalInfo(Output.of(additionalInfo));
         }
+
         public Builder applications(@Nullable Output<List<String>> applications) {
-            this.applications = applications;
+            $.applications = applications;
             return this;
         }
-        public Builder applications(@Nullable List<String> applications) {
-            this.applications = Codegen.ofNullable(applications);
-            return this;
+
+        public Builder applications(List<String> applications) {
+            return applications(Output.of(applications));
         }
+
         public Builder applications(String... applications) {
             return applications(List.of(applications));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder autoTerminationPolicy(@Nullable Output<ClusterAutoTerminationPolicyGetArgs> autoTerminationPolicy) {
-            this.autoTerminationPolicy = autoTerminationPolicy;
+            $.autoTerminationPolicy = autoTerminationPolicy;
             return this;
         }
-        public Builder autoTerminationPolicy(@Nullable ClusterAutoTerminationPolicyGetArgs autoTerminationPolicy) {
-            this.autoTerminationPolicy = Codegen.ofNullable(autoTerminationPolicy);
-            return this;
+
+        public Builder autoTerminationPolicy(ClusterAutoTerminationPolicyGetArgs autoTerminationPolicy) {
+            return autoTerminationPolicy(Output.of(autoTerminationPolicy));
         }
+
         public Builder autoscalingRole(@Nullable Output<String> autoscalingRole) {
-            this.autoscalingRole = autoscalingRole;
+            $.autoscalingRole = autoscalingRole;
             return this;
         }
-        public Builder autoscalingRole(@Nullable String autoscalingRole) {
-            this.autoscalingRole = Codegen.ofNullable(autoscalingRole);
-            return this;
+
+        public Builder autoscalingRole(String autoscalingRole) {
+            return autoscalingRole(Output.of(autoscalingRole));
         }
+
         public Builder bootstrapActions(@Nullable Output<List<ClusterBootstrapActionGetArgs>> bootstrapActions) {
-            this.bootstrapActions = bootstrapActions;
+            $.bootstrapActions = bootstrapActions;
             return this;
         }
-        public Builder bootstrapActions(@Nullable List<ClusterBootstrapActionGetArgs> bootstrapActions) {
-            this.bootstrapActions = Codegen.ofNullable(bootstrapActions);
-            return this;
+
+        public Builder bootstrapActions(List<ClusterBootstrapActionGetArgs> bootstrapActions) {
+            return bootstrapActions(Output.of(bootstrapActions));
         }
+
         public Builder bootstrapActions(ClusterBootstrapActionGetArgs... bootstrapActions) {
             return bootstrapActions(List.of(bootstrapActions));
         }
+
         public Builder clusterState(@Nullable Output<String> clusterState) {
-            this.clusterState = clusterState;
+            $.clusterState = clusterState;
             return this;
         }
-        public Builder clusterState(@Nullable String clusterState) {
-            this.clusterState = Codegen.ofNullable(clusterState);
-            return this;
+
+        public Builder clusterState(String clusterState) {
+            return clusterState(Output.of(clusterState));
         }
+
         public Builder configurations(@Nullable Output<String> configurations) {
-            this.configurations = configurations;
+            $.configurations = configurations;
             return this;
         }
-        public Builder configurations(@Nullable String configurations) {
-            this.configurations = Codegen.ofNullable(configurations);
-            return this;
+
+        public Builder configurations(String configurations) {
+            return configurations(Output.of(configurations));
         }
+
         public Builder configurationsJson(@Nullable Output<String> configurationsJson) {
-            this.configurationsJson = configurationsJson;
+            $.configurationsJson = configurationsJson;
             return this;
         }
-        public Builder configurationsJson(@Nullable String configurationsJson) {
-            this.configurationsJson = Codegen.ofNullable(configurationsJson);
-            return this;
+
+        public Builder configurationsJson(String configurationsJson) {
+            return configurationsJson(Output.of(configurationsJson));
         }
+
         public Builder coreInstanceFleet(@Nullable Output<ClusterCoreInstanceFleetGetArgs> coreInstanceFleet) {
-            this.coreInstanceFleet = coreInstanceFleet;
+            $.coreInstanceFleet = coreInstanceFleet;
             return this;
         }
-        public Builder coreInstanceFleet(@Nullable ClusterCoreInstanceFleetGetArgs coreInstanceFleet) {
-            this.coreInstanceFleet = Codegen.ofNullable(coreInstanceFleet);
-            return this;
+
+        public Builder coreInstanceFleet(ClusterCoreInstanceFleetGetArgs coreInstanceFleet) {
+            return coreInstanceFleet(Output.of(coreInstanceFleet));
         }
+
         public Builder coreInstanceGroup(@Nullable Output<ClusterCoreInstanceGroupGetArgs> coreInstanceGroup) {
-            this.coreInstanceGroup = coreInstanceGroup;
+            $.coreInstanceGroup = coreInstanceGroup;
             return this;
         }
-        public Builder coreInstanceGroup(@Nullable ClusterCoreInstanceGroupGetArgs coreInstanceGroup) {
-            this.coreInstanceGroup = Codegen.ofNullable(coreInstanceGroup);
-            return this;
+
+        public Builder coreInstanceGroup(ClusterCoreInstanceGroupGetArgs coreInstanceGroup) {
+            return coreInstanceGroup(Output.of(coreInstanceGroup));
         }
+
         public Builder customAmiId(@Nullable Output<String> customAmiId) {
-            this.customAmiId = customAmiId;
+            $.customAmiId = customAmiId;
             return this;
         }
-        public Builder customAmiId(@Nullable String customAmiId) {
-            this.customAmiId = Codegen.ofNullable(customAmiId);
-            return this;
+
+        public Builder customAmiId(String customAmiId) {
+            return customAmiId(Output.of(customAmiId));
         }
+
         public Builder ebsRootVolumeSize(@Nullable Output<Integer> ebsRootVolumeSize) {
-            this.ebsRootVolumeSize = ebsRootVolumeSize;
+            $.ebsRootVolumeSize = ebsRootVolumeSize;
             return this;
         }
-        public Builder ebsRootVolumeSize(@Nullable Integer ebsRootVolumeSize) {
-            this.ebsRootVolumeSize = Codegen.ofNullable(ebsRootVolumeSize);
-            return this;
+
+        public Builder ebsRootVolumeSize(Integer ebsRootVolumeSize) {
+            return ebsRootVolumeSize(Output.of(ebsRootVolumeSize));
         }
+
         public Builder ec2Attributes(@Nullable Output<ClusterEc2AttributesGetArgs> ec2Attributes) {
-            this.ec2Attributes = ec2Attributes;
+            $.ec2Attributes = ec2Attributes;
             return this;
         }
-        public Builder ec2Attributes(@Nullable ClusterEc2AttributesGetArgs ec2Attributes) {
-            this.ec2Attributes = Codegen.ofNullable(ec2Attributes);
-            return this;
+
+        public Builder ec2Attributes(ClusterEc2AttributesGetArgs ec2Attributes) {
+            return ec2Attributes(Output.of(ec2Attributes));
         }
+
         public Builder keepJobFlowAliveWhenNoSteps(@Nullable Output<Boolean> keepJobFlowAliveWhenNoSteps) {
-            this.keepJobFlowAliveWhenNoSteps = keepJobFlowAliveWhenNoSteps;
+            $.keepJobFlowAliveWhenNoSteps = keepJobFlowAliveWhenNoSteps;
             return this;
         }
-        public Builder keepJobFlowAliveWhenNoSteps(@Nullable Boolean keepJobFlowAliveWhenNoSteps) {
-            this.keepJobFlowAliveWhenNoSteps = Codegen.ofNullable(keepJobFlowAliveWhenNoSteps);
-            return this;
+
+        public Builder keepJobFlowAliveWhenNoSteps(Boolean keepJobFlowAliveWhenNoSteps) {
+            return keepJobFlowAliveWhenNoSteps(Output.of(keepJobFlowAliveWhenNoSteps));
         }
+
         public Builder kerberosAttributes(@Nullable Output<ClusterKerberosAttributesGetArgs> kerberosAttributes) {
-            this.kerberosAttributes = kerberosAttributes;
+            $.kerberosAttributes = kerberosAttributes;
             return this;
         }
-        public Builder kerberosAttributes(@Nullable ClusterKerberosAttributesGetArgs kerberosAttributes) {
-            this.kerberosAttributes = Codegen.ofNullable(kerberosAttributes);
-            return this;
+
+        public Builder kerberosAttributes(ClusterKerberosAttributesGetArgs kerberosAttributes) {
+            return kerberosAttributes(Output.of(kerberosAttributes));
         }
+
         public Builder logEncryptionKmsKeyId(@Nullable Output<String> logEncryptionKmsKeyId) {
-            this.logEncryptionKmsKeyId = logEncryptionKmsKeyId;
+            $.logEncryptionKmsKeyId = logEncryptionKmsKeyId;
             return this;
         }
-        public Builder logEncryptionKmsKeyId(@Nullable String logEncryptionKmsKeyId) {
-            this.logEncryptionKmsKeyId = Codegen.ofNullable(logEncryptionKmsKeyId);
-            return this;
+
+        public Builder logEncryptionKmsKeyId(String logEncryptionKmsKeyId) {
+            return logEncryptionKmsKeyId(Output.of(logEncryptionKmsKeyId));
         }
+
         public Builder logUri(@Nullable Output<String> logUri) {
-            this.logUri = logUri;
+            $.logUri = logUri;
             return this;
         }
-        public Builder logUri(@Nullable String logUri) {
-            this.logUri = Codegen.ofNullable(logUri);
-            return this;
+
+        public Builder logUri(String logUri) {
+            return logUri(Output.of(logUri));
         }
+
         public Builder masterInstanceFleet(@Nullable Output<ClusterMasterInstanceFleetGetArgs> masterInstanceFleet) {
-            this.masterInstanceFleet = masterInstanceFleet;
+            $.masterInstanceFleet = masterInstanceFleet;
             return this;
         }
-        public Builder masterInstanceFleet(@Nullable ClusterMasterInstanceFleetGetArgs masterInstanceFleet) {
-            this.masterInstanceFleet = Codegen.ofNullable(masterInstanceFleet);
-            return this;
+
+        public Builder masterInstanceFleet(ClusterMasterInstanceFleetGetArgs masterInstanceFleet) {
+            return masterInstanceFleet(Output.of(masterInstanceFleet));
         }
+
         public Builder masterInstanceGroup(@Nullable Output<ClusterMasterInstanceGroupGetArgs> masterInstanceGroup) {
-            this.masterInstanceGroup = masterInstanceGroup;
+            $.masterInstanceGroup = masterInstanceGroup;
             return this;
         }
-        public Builder masterInstanceGroup(@Nullable ClusterMasterInstanceGroupGetArgs masterInstanceGroup) {
-            this.masterInstanceGroup = Codegen.ofNullable(masterInstanceGroup);
-            return this;
+
+        public Builder masterInstanceGroup(ClusterMasterInstanceGroupGetArgs masterInstanceGroup) {
+            return masterInstanceGroup(Output.of(masterInstanceGroup));
         }
+
         public Builder masterPublicDns(@Nullable Output<String> masterPublicDns) {
-            this.masterPublicDns = masterPublicDns;
+            $.masterPublicDns = masterPublicDns;
             return this;
         }
-        public Builder masterPublicDns(@Nullable String masterPublicDns) {
-            this.masterPublicDns = Codegen.ofNullable(masterPublicDns);
-            return this;
+
+        public Builder masterPublicDns(String masterPublicDns) {
+            return masterPublicDns(Output.of(masterPublicDns));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder releaseLabel(@Nullable Output<String> releaseLabel) {
-            this.releaseLabel = releaseLabel;
+            $.releaseLabel = releaseLabel;
             return this;
         }
-        public Builder releaseLabel(@Nullable String releaseLabel) {
-            this.releaseLabel = Codegen.ofNullable(releaseLabel);
-            return this;
+
+        public Builder releaseLabel(String releaseLabel) {
+            return releaseLabel(Output.of(releaseLabel));
         }
+
         public Builder scaleDownBehavior(@Nullable Output<String> scaleDownBehavior) {
-            this.scaleDownBehavior = scaleDownBehavior;
+            $.scaleDownBehavior = scaleDownBehavior;
             return this;
         }
-        public Builder scaleDownBehavior(@Nullable String scaleDownBehavior) {
-            this.scaleDownBehavior = Codegen.ofNullable(scaleDownBehavior);
-            return this;
+
+        public Builder scaleDownBehavior(String scaleDownBehavior) {
+            return scaleDownBehavior(Output.of(scaleDownBehavior));
         }
+
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
-            this.securityConfiguration = securityConfiguration;
+            $.securityConfiguration = securityConfiguration;
             return this;
         }
-        public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Codegen.ofNullable(securityConfiguration);
-            return this;
+
+        public Builder securityConfiguration(String securityConfiguration) {
+            return securityConfiguration(Output.of(securityConfiguration));
         }
+
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
-            this.serviceRole = serviceRole;
+            $.serviceRole = serviceRole;
             return this;
         }
-        public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Codegen.ofNullable(serviceRole);
-            return this;
+
+        public Builder serviceRole(String serviceRole) {
+            return serviceRole(Output.of(serviceRole));
         }
+
         public Builder stepConcurrencyLevel(@Nullable Output<Integer> stepConcurrencyLevel) {
-            this.stepConcurrencyLevel = stepConcurrencyLevel;
+            $.stepConcurrencyLevel = stepConcurrencyLevel;
             return this;
         }
-        public Builder stepConcurrencyLevel(@Nullable Integer stepConcurrencyLevel) {
-            this.stepConcurrencyLevel = Codegen.ofNullable(stepConcurrencyLevel);
-            return this;
+
+        public Builder stepConcurrencyLevel(Integer stepConcurrencyLevel) {
+            return stepConcurrencyLevel(Output.of(stepConcurrencyLevel));
         }
+
         public Builder steps(@Nullable Output<List<ClusterStepGetArgs>> steps) {
-            this.steps = steps;
+            $.steps = steps;
             return this;
         }
-        public Builder steps(@Nullable List<ClusterStepGetArgs> steps) {
-            this.steps = Codegen.ofNullable(steps);
-            return this;
+
+        public Builder steps(List<ClusterStepGetArgs> steps) {
+            return steps(Output.of(steps));
         }
+
         public Builder steps(ClusterStepGetArgs... steps) {
             return steps(List.of(steps));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder terminationProtection(@Nullable Output<Boolean> terminationProtection) {
-            this.terminationProtection = terminationProtection;
+            $.terminationProtection = terminationProtection;
             return this;
         }
-        public Builder terminationProtection(@Nullable Boolean terminationProtection) {
-            this.terminationProtection = Codegen.ofNullable(terminationProtection);
-            return this;
+
+        public Builder terminationProtection(Boolean terminationProtection) {
+            return terminationProtection(Output.of(terminationProtection));
         }
+
         public Builder visibleToAllUsers(@Nullable Output<Boolean> visibleToAllUsers) {
-            this.visibleToAllUsers = visibleToAllUsers;
+            $.visibleToAllUsers = visibleToAllUsers;
             return this;
         }
-        public Builder visibleToAllUsers(@Nullable Boolean visibleToAllUsers) {
-            this.visibleToAllUsers = Codegen.ofNullable(visibleToAllUsers);
-            return this;
-        }        public ClusterState build() {
-            return new ClusterState(additionalInfo, applications, arn, autoTerminationPolicy, autoscalingRole, bootstrapActions, clusterState, configurations, configurationsJson, coreInstanceFleet, coreInstanceGroup, customAmiId, ebsRootVolumeSize, ec2Attributes, keepJobFlowAliveWhenNoSteps, kerberosAttributes, logEncryptionKmsKeyId, logUri, masterInstanceFleet, masterInstanceGroup, masterPublicDns, name, releaseLabel, scaleDownBehavior, securityConfiguration, serviceRole, stepConcurrencyLevel, steps, tags, tagsAll, terminationProtection, visibleToAllUsers);
+
+        public Builder visibleToAllUsers(Boolean visibleToAllUsers) {
+            return visibleToAllUsers(Output.of(visibleToAllUsers));
+        }
+
+        public ClusterState build() {
+            return $;
         }
     }
+
 }

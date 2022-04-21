@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class CertificateRevocationDetailArgs extends com.pulumi.resources.
     public static final CertificateRevocationDetailArgs Empty = new CertificateRevocationDetailArgs();
 
     @Import(name="revocationState")
-      private final @Nullable Output<String> revocationState;
+    private @Nullable Output<String> revocationState;
 
-    public Output<String> revocationState() {
-        return this.revocationState == null ? Codegen.empty() : this.revocationState;
+    public Optional<Output<String>> revocationState() {
+        return Optional.ofNullable(this.revocationState);
     }
 
     @Import(name="revocationTime")
-      private final @Nullable Output<String> revocationTime;
+    private @Nullable Output<String> revocationTime;
 
-    public Output<String> revocationTime() {
-        return this.revocationTime == null ? Codegen.empty() : this.revocationTime;
+    public Optional<Output<String>> revocationTime() {
+        return Optional.ofNullable(this.revocationTime);
     }
 
-    public CertificateRevocationDetailArgs(
-        @Nullable Output<String> revocationState,
-        @Nullable Output<String> revocationTime) {
-        this.revocationState = revocationState;
-        this.revocationTime = revocationTime;
-    }
+    private CertificateRevocationDetailArgs() {}
 
-    private CertificateRevocationDetailArgs() {
-        this.revocationState = Codegen.empty();
-        this.revocationTime = Codegen.empty();
+    private CertificateRevocationDetailArgs(CertificateRevocationDetailArgs $) {
+        this.revocationState = $.revocationState;
+        this.revocationTime = $.revocationTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateRevocationDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> revocationState;
-        private @Nullable Output<String> revocationTime;
+        private CertificateRevocationDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateRevocationDetailArgs();
         }
 
         public Builder(CertificateRevocationDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revocationState = defaults.revocationState;
-    	      this.revocationTime = defaults.revocationTime;
+            $ = new CertificateRevocationDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder revocationState(@Nullable Output<String> revocationState) {
-            this.revocationState = revocationState;
+            $.revocationState = revocationState;
             return this;
         }
-        public Builder revocationState(@Nullable String revocationState) {
-            this.revocationState = Codegen.ofNullable(revocationState);
-            return this;
+
+        public Builder revocationState(String revocationState) {
+            return revocationState(Output.of(revocationState));
         }
+
         public Builder revocationTime(@Nullable Output<String> revocationTime) {
-            this.revocationTime = revocationTime;
+            $.revocationTime = revocationTime;
             return this;
         }
-        public Builder revocationTime(@Nullable String revocationTime) {
-            this.revocationTime = Codegen.ofNullable(revocationTime);
-            return this;
-        }        public CertificateRevocationDetailArgs build() {
-            return new CertificateRevocationDetailArgs(revocationState, revocationTime);
+
+        public Builder revocationTime(String revocationTime) {
+            return revocationTime(Output.of(revocationTime));
+        }
+
+        public CertificateRevocationDetailArgs build() {
+            return $;
         }
     }
+
 }

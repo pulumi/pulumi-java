@@ -5,11 +5,11 @@ package com.pulumi.gcp.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.apigateway.inputs.ApiIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,21 +18,21 @@ public final class ApiIamBindingArgs extends com.pulumi.resources.ResourceArgs {
     public static final ApiIamBindingArgs Empty = new ApiIamBindingArgs();
 
     @Import(name="api", required=true)
-      private final Output<String> api;
+    private Output<String> api;
 
     public Output<String> api() {
         return this.api;
     }
 
     @Import(name="condition")
-      private final @Nullable Output<ApiIamBindingConditionArgs> condition;
+    private @Nullable Output<ApiIamBindingConditionArgs> condition;
 
-    public Output<ApiIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ApiIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -44,10 +44,10 @@ public final class ApiIamBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -57,105 +57,95 @@ public final class ApiIamBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public ApiIamBindingArgs(
-        Output<String> api,
-        @Nullable Output<ApiIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        Output<String> role) {
-        this.api = Objects.requireNonNull(api, "expected parameter 'api' to be non-null");
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private ApiIamBindingArgs() {}
 
-    private ApiIamBindingArgs() {
-        this.api = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
+    private ApiIamBindingArgs(ApiIamBindingArgs $) {
+        this.api = $.api;
+        this.condition = $.condition;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> api;
-        private @Nullable Output<ApiIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private Output<String> role;
+        private ApiIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiIamBindingArgs();
         }
 
         public Builder(ApiIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.api = defaults.api;
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
+            $ = new ApiIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder api(Output<String> api) {
-            this.api = Objects.requireNonNull(api);
+            $.api = api;
             return this;
         }
+
         public Builder api(String api) {
-            this.api = Output.of(Objects.requireNonNull(api));
-            return this;
+            return api(Output.of(api));
         }
+
         public Builder condition(@Nullable Output<ApiIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ApiIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ApiIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public ApiIamBindingArgs build() {
-            return new ApiIamBindingArgs(api, condition, members, project, role);
+            return role(Output.of(role));
+        }
+
+        public ApiIamBindingArgs build() {
+            $.api = Objects.requireNonNull($.api, "expected parameter 'api' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

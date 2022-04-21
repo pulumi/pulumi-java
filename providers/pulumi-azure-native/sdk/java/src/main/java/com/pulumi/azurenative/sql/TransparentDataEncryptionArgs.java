@@ -7,9 +7,9 @@ import com.pulumi.azurenative.sql.enums.TransparentDataEncryptionStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class TransparentDataEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -33,7 +33,7 @@ public final class TransparentDataEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -44,7 +44,7 @@ public final class TransparentDataEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -55,10 +55,10 @@ public final class TransparentDataEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
+    private @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
-    public Output<Either<String,TransparentDataEncryptionStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,TransparentDataEncryptionStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -66,102 +66,91 @@ public final class TransparentDataEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="transparentDataEncryptionName")
-      private final @Nullable Output<String> transparentDataEncryptionName;
+    private @Nullable Output<String> transparentDataEncryptionName;
 
-    public Output<String> transparentDataEncryptionName() {
-        return this.transparentDataEncryptionName == null ? Codegen.empty() : this.transparentDataEncryptionName;
+    public Optional<Output<String>> transparentDataEncryptionName() {
+        return Optional.ofNullable(this.transparentDataEncryptionName);
     }
 
-    public TransparentDataEncryptionArgs(
-        Output<String> databaseName,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status,
-        @Nullable Output<String> transparentDataEncryptionName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.status = status;
-        this.transparentDataEncryptionName = transparentDataEncryptionName;
-    }
+    private TransparentDataEncryptionArgs() {}
 
-    private TransparentDataEncryptionArgs() {
-        this.databaseName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.status = Codegen.empty();
-        this.transparentDataEncryptionName = Codegen.empty();
+    private TransparentDataEncryptionArgs(TransparentDataEncryptionArgs $) {
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.status = $.status;
+        this.transparentDataEncryptionName = $.transparentDataEncryptionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransparentDataEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseName;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
-        private @Nullable Output<String> transparentDataEncryptionName;
+        private TransparentDataEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransparentDataEncryptionArgs();
         }
 
         public Builder(TransparentDataEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.status = defaults.status;
-    	      this.transparentDataEncryptionName = defaults.transparentDataEncryptionName;
+            $ = new TransparentDataEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder status(@Nullable Output<Either<String,TransparentDataEncryptionStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,TransparentDataEncryptionStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
-            this.transparentDataEncryptionName = transparentDataEncryptionName;
+            $.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;
         }
-        public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
-            this.transparentDataEncryptionName = Codegen.ofNullable(transparentDataEncryptionName);
-            return this;
-        }        public TransparentDataEncryptionArgs build() {
-            return new TransparentDataEncryptionArgs(databaseName, resourceGroupName, serverName, status, transparentDataEncryptionName);
+
+        public Builder transparentDataEncryptionName(String transparentDataEncryptionName) {
+            return transparentDataEncryptionName(Output.of(transparentDataEncryptionName));
+        }
+
+        public TransparentDataEncryptionArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

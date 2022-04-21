@@ -25,10 +25,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="interval")
-      private final @Nullable String interval;
+    private @Nullable String interval;
 
     public Optional<String> interval() {
-        return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -69,82 +69,71 @@ public final class JobScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public JobScheduleResponse(
-        @Nullable Boolean enabled,
-        @Nullable String endTime,
-        @Nullable String interval,
-        @Nullable String startTime,
-        @Nullable String type) {
-        this.enabled = enabled;
-        this.endTime = Codegen.stringProp("endTime").arg(endTime).def("9999-12-31T11:59:59+00:00").getNullable();
-        this.interval = interval;
-        this.startTime = Codegen.stringProp("startTime").arg(startTime).def("0001-01-01T00:00:00+00:00").getNullable();
-        this.type = Codegen.stringProp("type").arg(type).def("Once").getNullable();
-    }
+    private JobScheduleResponse() {}
 
-    private JobScheduleResponse() {
-        this.enabled = null;
-        this.endTime = null;
-        this.interval = null;
-        this.startTime = null;
-        this.type = null;
+    private JobScheduleResponse(JobScheduleResponse $) {
+        this.enabled = $.enabled;
+        this.endTime = $.endTime;
+        this.interval = $.interval;
+        this.startTime = $.startTime;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String endTime;
-        private @Nullable String interval;
-        private @Nullable String startTime;
-        private @Nullable String type;
+        private JobScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobScheduleResponse();
         }
 
         public Builder(JobScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.endTime = defaults.endTime;
-    	      this.interval = defaults.interval;
-    	      this.startTime = defaults.startTime;
-    	      this.type = defaults.type;
+            $ = new JobScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder interval(@Nullable String interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public JobScheduleResponse build() {
-            return new JobScheduleResponse(enabled, endTime, interval, startTime, type);
+        }
+
+        public JobScheduleResponse build() {
+            $.endTime = Codegen.stringProp("endTime").arg($.endTime).def("9999-12-31T11:59:59+00:00").getNullable();
+            $.startTime = Codegen.stringProp("startTime").arg($.startTime).def("0001-01-01T00:00:00+00:00").getNullable();
+            $.type = Codegen.stringProp("type").arg($.type).def("Once").getNullable();
+            return $;
         }
     }
+
 }

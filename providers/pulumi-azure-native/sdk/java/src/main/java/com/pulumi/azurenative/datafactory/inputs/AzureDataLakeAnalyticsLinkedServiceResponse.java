@@ -32,7 +32,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="accountName", required=true)
-      private final Object accountName;
+    private Object accountName;
 
     public Object accountName() {
         return this.accountName;
@@ -43,10 +43,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="dataLakeAnalyticsUri")
-      private final @Nullable Object dataLakeAnalyticsUri;
+    private @Nullable Object dataLakeAnalyticsUri;
 
     public Optional<Object> dataLakeAnalyticsUri() {
-        return this.dataLakeAnalyticsUri == null ? Optional.empty() : Optional.ofNullable(this.dataLakeAnalyticsUri);
+        return Optional.ofNullable(this.dataLakeAnalyticsUri);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="resourceGroupName")
-      private final @Nullable Object resourceGroupName;
+    private @Nullable Object resourceGroupName;
 
     public Optional<Object> resourceGroupName() {
-        return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Object subscriptionId;
+    private @Nullable Object subscriptionId;
 
     public Optional<Object> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -153,7 +153,7 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="tenant", required=true)
-      private final Object tenant;
+    private Object tenant;
 
     public Object tenant() {
         return this.tenant;
@@ -165,157 +165,123 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureDataLakeAnalyticsLinkedServiceResponse(
-        Object accountName,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object dataLakeAnalyticsUri,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object resourceGroupName,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object subscriptionId,
-        Object tenant,
-        String type) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.resourceGroupName = resourceGroupName;
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-        this.subscriptionId = subscriptionId;
-        this.tenant = Objects.requireNonNull(tenant, "expected parameter 'tenant' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureDataLakeAnalyticsLinkedServiceResponse() {}
 
-    private AzureDataLakeAnalyticsLinkedServiceResponse() {
-        this.accountName = null;
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.dataLakeAnalyticsUri = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.resourceGroupName = null;
-        this.servicePrincipalId = null;
-        this.servicePrincipalKey = null;
-        this.subscriptionId = null;
-        this.tenant = null;
-        this.type = null;
+    private AzureDataLakeAnalyticsLinkedServiceResponse(AzureDataLakeAnalyticsLinkedServiceResponse $) {
+        this.accountName = $.accountName;
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.dataLakeAnalyticsUri = $.dataLakeAnalyticsUri;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.subscriptionId = $.subscriptionId;
+        this.tenant = $.tenant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureDataLakeAnalyticsLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object accountName;
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable Object dataLakeAnalyticsUri;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object resourceGroupName;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-        private @Nullable Object subscriptionId;
-        private Object tenant;
-        private String type;
+        private AzureDataLakeAnalyticsLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureDataLakeAnalyticsLinkedServiceResponse();
         }
 
         public Builder(AzureDataLakeAnalyticsLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.dataLakeAnalyticsUri = defaults.dataLakeAnalyticsUri;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
+            $ = new AzureDataLakeAnalyticsLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Object accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder dataLakeAnalyticsUri(@Nullable Object dataLakeAnalyticsUri) {
-            this.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
+            $.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder resourceGroupName(@Nullable Object resourceGroupName) {
-            this.resourceGroupName = resourceGroupName;
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
+
         public Builder subscriptionId(@Nullable Object subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder tenant(Object tenant) {
-            this.tenant = Objects.requireNonNull(tenant);
+            $.tenant = tenant;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureDataLakeAnalyticsLinkedServiceResponse build() {
-            return new AzureDataLakeAnalyticsLinkedServiceResponse(accountName, annotations, connectVia, dataLakeAnalyticsUri, description, encryptedCredential, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
+        }
+
+        public AzureDataLakeAnalyticsLinkedServiceResponse build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.tenant = Objects.requireNonNull($.tenant, "expected parameter 'tenant' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FirewallAllowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<String>> ports;
+    private @Nullable Output<List<String>> ports;
 
-    public Output<List<String>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<String>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -40,66 +40,63 @@ public final class FirewallAllowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<String> protocol;
+    private Output<String> protocol;
 
     public Output<String> protocol() {
         return this.protocol;
     }
 
-    public FirewallAllowArgs(
-        @Nullable Output<List<String>> ports,
-        Output<String> protocol) {
-        this.ports = ports;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private FirewallAllowArgs() {}
 
-    private FirewallAllowArgs() {
-        this.ports = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private FirewallAllowArgs(FirewallAllowArgs $) {
+        this.ports = $.ports;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallAllowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> ports;
-        private Output<String> protocol;
+        private FirewallAllowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallAllowArgs();
         }
 
         public Builder(FirewallAllowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ports = defaults.ports;
-    	      this.protocol = defaults.protocol;
+            $ = new FirewallAllowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ports(@Nullable Output<List<String>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<String> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<String> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(String... ports) {
             return ports(List.of(ports));
         }
+
         public Builder protocol(Output<String> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
-        }        public FirewallAllowArgs build() {
-            return new FirewallAllowArgs(ports, protocol);
+            return protocol(Output.of(protocol));
+        }
+
+        public FirewallAllowArgs build() {
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RolePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RolePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class RolePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
@@ -55,81 +55,80 @@ public final class RolePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public RolePolicyArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        Output<String> policy,
-        Output<String> role) {
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private RolePolicyArgs() {}
 
-    private RolePolicyArgs() {
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.role = Codegen.empty();
+    private RolePolicyArgs(RolePolicyArgs $) {
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.policy = $.policy;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private Output<String> policy;
-        private Output<String> role;
+        private RolePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolePolicyArgs();
         }
 
         public Builder(RolePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.policy = defaults.policy;
-    	      this.role = defaults.role;
+            $ = new RolePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
-        }        public RolePolicyArgs build() {
-            return new RolePolicyArgs(name, namePrefix, policy, role);
+        }
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public RolePolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

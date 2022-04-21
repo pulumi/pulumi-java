@@ -6,9 +6,9 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 import com.pulumi.azurenative.streamanalytics.inputs.PrivateLinkServiceConnectionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class PrivateEndpointPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
-      private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+    private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? Codegen.empty() : this.manualPrivateLinkServiceConnections;
+    public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> manualPrivateLinkServiceConnections() {
+        return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
 
-    public PrivateEndpointPropertiesArgs(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
-        this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
-    }
+    private PrivateEndpointPropertiesArgs() {}
 
-    private PrivateEndpointPropertiesArgs() {
-        this.manualPrivateLinkServiceConnections = Codegen.empty();
+    private PrivateEndpointPropertiesArgs(PrivateEndpointPropertiesArgs $) {
+        this.manualPrivateLinkServiceConnections = $.manualPrivateLinkServiceConnections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+        private PrivateEndpointPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointPropertiesArgs();
         }
 
         public Builder(PrivateEndpointPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manualPrivateLinkServiceConnections = defaults.manualPrivateLinkServiceConnections;
+            $ = new PrivateEndpointPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
+            $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-        public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = Codegen.ofNullable(manualPrivateLinkServiceConnections);
-            return this;
+
+        public Builder manualPrivateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
+            return manualPrivateLinkServiceConnections(Output.of(manualPrivateLinkServiceConnections));
         }
+
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
-        }        public PrivateEndpointPropertiesArgs build() {
-            return new PrivateEndpointPropertiesArgs(manualPrivateLinkServiceConnections);
+        }
+
+        public PrivateEndpointPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.avs.enums.AddonType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addonName")
-      private final @Nullable Output<String> addonName;
+    private @Nullable Output<String> addonName;
 
-    public Output<String> addonName() {
-        return this.addonName == null ? Codegen.empty() : this.addonName;
+    public Optional<Output<String>> addonName() {
+        return Optional.ofNullable(this.addonName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addonType")
-      private final @Nullable Output<Either<String,AddonType>> addonType;
+    private @Nullable Output<Either<String,AddonType>> addonType;
 
-    public Output<Either<String,AddonType>> addonType() {
-        return this.addonType == null ? Codegen.empty() : this.addonType;
+    public Optional<Output<Either<String,AddonType>>> addonType() {
+        return Optional.ofNullable(this.addonType);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseKey")
-      private final @Nullable Output<String> licenseKey;
+    private @Nullable Output<String> licenseKey;
 
-    public Output<String> licenseKey() {
-        return this.licenseKey == null ? Codegen.empty() : this.licenseKey;
+    public Optional<Output<String>> licenseKey() {
+        return Optional.ofNullable(this.licenseKey);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -66,102 +66,90 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public AddonArgs(
-        @Nullable Output<String> addonName,
-        @Nullable Output<Either<String,AddonType>> addonType,
-        @Nullable Output<String> licenseKey,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName) {
-        this.addonName = addonName;
-        this.addonType = addonType;
-        this.licenseKey = licenseKey;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private AddonArgs() {}
 
-    private AddonArgs() {
-        this.addonName = Codegen.empty();
-        this.addonType = Codegen.empty();
-        this.licenseKey = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private AddonArgs(AddonArgs $) {
+        this.addonName = $.addonName;
+        this.addonType = $.addonType;
+        this.licenseKey = $.licenseKey;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddonArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addonName;
-        private @Nullable Output<Either<String,AddonType>> addonType;
-        private @Nullable Output<String> licenseKey;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
+        private AddonArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddonArgs();
         }
 
         public Builder(AddonArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addonName = defaults.addonName;
-    	      this.addonType = defaults.addonType;
-    	      this.licenseKey = defaults.licenseKey;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new AddonArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addonName(@Nullable Output<String> addonName) {
-            this.addonName = addonName;
+            $.addonName = addonName;
             return this;
         }
-        public Builder addonName(@Nullable String addonName) {
-            this.addonName = Codegen.ofNullable(addonName);
-            return this;
+
+        public Builder addonName(String addonName) {
+            return addonName(Output.of(addonName));
         }
+
         public Builder addonType(@Nullable Output<Either<String,AddonType>> addonType) {
-            this.addonType = addonType;
+            $.addonType = addonType;
             return this;
         }
-        public Builder addonType(@Nullable Either<String,AddonType> addonType) {
-            this.addonType = Codegen.ofNullable(addonType);
-            return this;
+
+        public Builder addonType(Either<String,AddonType> addonType) {
+            return addonType(Output.of(addonType));
         }
+
         public Builder licenseKey(@Nullable Output<String> licenseKey) {
-            this.licenseKey = licenseKey;
+            $.licenseKey = licenseKey;
             return this;
         }
-        public Builder licenseKey(@Nullable String licenseKey) {
-            this.licenseKey = Codegen.ofNullable(licenseKey);
-            return this;
+
+        public Builder licenseKey(String licenseKey) {
+            return licenseKey(Output.of(licenseKey));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public AddonArgs build() {
-            return new AddonArgs(addonName, addonType, licenseKey, privateCloudName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public AddonArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

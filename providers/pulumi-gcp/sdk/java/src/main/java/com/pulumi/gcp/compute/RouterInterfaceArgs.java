@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RouterInterfaceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="interconnectAttachment")
-      private final @Nullable Output<String> interconnectAttachment;
+    private @Nullable Output<String> interconnectAttachment;
 
-    public Output<String> interconnectAttachment() {
-        return this.interconnectAttachment == null ? Codegen.empty() : this.interconnectAttachment;
+    public Optional<Output<String>> interconnectAttachment() {
+        return Optional.ofNullable(this.interconnectAttachment);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RouterInterfaceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ipRange")
-      private final @Nullable Output<String> ipRange;
+    private @Nullable Output<String> ipRange;
 
-    public Output<String> ipRange() {
-        return this.ipRange == null ? Codegen.empty() : this.ipRange;
+    public Optional<Output<String>> ipRange() {
+        return Optional.ofNullable(this.ipRange);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RouterInterfaceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RouterInterfaceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class RouterInterfaceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class RouterInterfaceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="router", required=true)
-      private final Output<String> router;
+    private Output<String> router;
 
     public Output<String> router() {
         return this.router;
@@ -97,128 +97,109 @@ public final class RouterInterfaceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vpnTunnel")
-      private final @Nullable Output<String> vpnTunnel;
+    private @Nullable Output<String> vpnTunnel;
 
-    public Output<String> vpnTunnel() {
-        return this.vpnTunnel == null ? Codegen.empty() : this.vpnTunnel;
+    public Optional<Output<String>> vpnTunnel() {
+        return Optional.ofNullable(this.vpnTunnel);
     }
 
-    public RouterInterfaceArgs(
-        @Nullable Output<String> interconnectAttachment,
-        @Nullable Output<String> ipRange,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> router,
-        @Nullable Output<String> vpnTunnel) {
-        this.interconnectAttachment = interconnectAttachment;
-        this.ipRange = ipRange;
-        this.name = name;
-        this.project = project;
-        this.region = region;
-        this.router = Objects.requireNonNull(router, "expected parameter 'router' to be non-null");
-        this.vpnTunnel = vpnTunnel;
-    }
+    private RouterInterfaceArgs() {}
 
-    private RouterInterfaceArgs() {
-        this.interconnectAttachment = Codegen.empty();
-        this.ipRange = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.router = Codegen.empty();
-        this.vpnTunnel = Codegen.empty();
+    private RouterInterfaceArgs(RouterInterfaceArgs $) {
+        this.interconnectAttachment = $.interconnectAttachment;
+        this.ipRange = $.ipRange;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.router = $.router;
+        this.vpnTunnel = $.vpnTunnel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> interconnectAttachment;
-        private @Nullable Output<String> ipRange;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> router;
-        private @Nullable Output<String> vpnTunnel;
+        private RouterInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterInterfaceArgs();
         }
 
         public Builder(RouterInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interconnectAttachment = defaults.interconnectAttachment;
-    	      this.ipRange = defaults.ipRange;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.router = defaults.router;
-    	      this.vpnTunnel = defaults.vpnTunnel;
+            $ = new RouterInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interconnectAttachment(@Nullable Output<String> interconnectAttachment) {
-            this.interconnectAttachment = interconnectAttachment;
+            $.interconnectAttachment = interconnectAttachment;
             return this;
         }
-        public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
-            this.interconnectAttachment = Codegen.ofNullable(interconnectAttachment);
-            return this;
+
+        public Builder interconnectAttachment(String interconnectAttachment) {
+            return interconnectAttachment(Output.of(interconnectAttachment));
         }
+
         public Builder ipRange(@Nullable Output<String> ipRange) {
-            this.ipRange = ipRange;
+            $.ipRange = ipRange;
             return this;
         }
-        public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Codegen.ofNullable(ipRange);
-            return this;
+
+        public Builder ipRange(String ipRange) {
+            return ipRange(Output.of(ipRange));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder router(Output<String> router) {
-            this.router = Objects.requireNonNull(router);
+            $.router = router;
             return this;
         }
+
         public Builder router(String router) {
-            this.router = Output.of(Objects.requireNonNull(router));
-            return this;
+            return router(Output.of(router));
         }
+
         public Builder vpnTunnel(@Nullable Output<String> vpnTunnel) {
-            this.vpnTunnel = vpnTunnel;
+            $.vpnTunnel = vpnTunnel;
             return this;
         }
-        public Builder vpnTunnel(@Nullable String vpnTunnel) {
-            this.vpnTunnel = Codegen.ofNullable(vpnTunnel);
-            return this;
-        }        public RouterInterfaceArgs build() {
-            return new RouterInterfaceArgs(interconnectAttachment, ipRange, name, project, region, router, vpnTunnel);
+
+        public Builder vpnTunnel(String vpnTunnel) {
+            return vpnTunnel(Output.of(vpnTunnel));
+        }
+
+        public RouterInterfaceArgs build() {
+            $.router = Objects.requireNonNull($.router, "expected parameter 'router' to be non-null");
+            return $;
         }
     }
+
 }

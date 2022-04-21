@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class NoConnectivitySettingsResponse extends com.pulumi.resources.I
 
     public static final NoConnectivitySettingsResponse Empty = new NoConnectivitySettingsResponse();
 
-    public NoConnectivitySettingsResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(NoConnectivitySettingsResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private NoConnectivitySettingsResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(NoConnectivitySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new NoConnectivitySettingsResponse();
         }
         public NoConnectivitySettingsResponse build() {
-            return new NoConnectivitySettingsResponse();
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetScheduledAuditArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="scheduledAuditName", required=true)
-      private final String scheduledAuditName;
+    private String scheduledAuditName;
 
     public String scheduledAuditName() {
         return this.scheduledAuditName;
     }
 
-    public GetScheduledAuditArgs(String scheduledAuditName) {
-        this.scheduledAuditName = Objects.requireNonNull(scheduledAuditName, "expected parameter 'scheduledAuditName' to be non-null");
-    }
+    private GetScheduledAuditArgs() {}
 
-    private GetScheduledAuditArgs() {
-        this.scheduledAuditName = null;
+    private GetScheduledAuditArgs(GetScheduledAuditArgs $) {
+        this.scheduledAuditName = $.scheduledAuditName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScheduledAuditArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scheduledAuditName;
+        private GetScheduledAuditArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScheduledAuditArgs();
         }
 
         public Builder(GetScheduledAuditArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduledAuditName = defaults.scheduledAuditName;
+            $ = new GetScheduledAuditArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduledAuditName(String scheduledAuditName) {
-            this.scheduledAuditName = Objects.requireNonNull(scheduledAuditName);
+            $.scheduledAuditName = scheduledAuditName;
             return this;
-        }        public GetScheduledAuditArgs build() {
-            return new GetScheduledAuditArgs(scheduledAuditName);
+        }
+
+        public GetScheduledAuditArgs build() {
+            $.scheduledAuditName = Objects.requireNonNull($.scheduledAuditName, "expected parameter 'scheduledAuditName' to be non-null");
+            return $;
         }
     }
+
 }

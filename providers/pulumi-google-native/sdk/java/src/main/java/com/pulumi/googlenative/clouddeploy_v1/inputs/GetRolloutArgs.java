@@ -15,110 +15,100 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRolloutArgs Empty = new GetRolloutArgs();
 
     @Import(name="deliveryPipelineId", required=true)
-      private final String deliveryPipelineId;
+    private String deliveryPipelineId;
 
     public String deliveryPipelineId() {
         return this.deliveryPipelineId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="releaseId", required=true)
-      private final String releaseId;
+    private String releaseId;
 
     public String releaseId() {
         return this.releaseId;
     }
 
     @Import(name="rolloutId", required=true)
-      private final String rolloutId;
+    private String rolloutId;
 
     public String rolloutId() {
         return this.rolloutId;
     }
 
-    public GetRolloutArgs(
-        String deliveryPipelineId,
-        String location,
-        @Nullable String project,
-        String releaseId,
-        String rolloutId) {
-        this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId, "expected parameter 'deliveryPipelineId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.releaseId = Objects.requireNonNull(releaseId, "expected parameter 'releaseId' to be non-null");
-        this.rolloutId = Objects.requireNonNull(rolloutId, "expected parameter 'rolloutId' to be non-null");
-    }
+    private GetRolloutArgs() {}
 
-    private GetRolloutArgs() {
-        this.deliveryPipelineId = null;
-        this.location = null;
-        this.project = null;
-        this.releaseId = null;
-        this.rolloutId = null;
+    private GetRolloutArgs(GetRolloutArgs $) {
+        this.deliveryPipelineId = $.deliveryPipelineId;
+        this.location = $.location;
+        this.project = $.project;
+        this.releaseId = $.releaseId;
+        this.rolloutId = $.rolloutId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deliveryPipelineId;
-        private String location;
-        private @Nullable String project;
-        private String releaseId;
-        private String rolloutId;
+        private GetRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRolloutArgs();
         }
 
         public Builder(GetRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryPipelineId = defaults.deliveryPipelineId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.releaseId = defaults.releaseId;
-    	      this.rolloutId = defaults.rolloutId;
+            $ = new GetRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryPipelineId(String deliveryPipelineId) {
-            this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId);
+            $.deliveryPipelineId = deliveryPipelineId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder releaseId(String releaseId) {
-            this.releaseId = Objects.requireNonNull(releaseId);
+            $.releaseId = releaseId;
             return this;
         }
+
         public Builder rolloutId(String rolloutId) {
-            this.rolloutId = Objects.requireNonNull(rolloutId);
+            $.rolloutId = rolloutId;
             return this;
-        }        public GetRolloutArgs build() {
-            return new GetRolloutArgs(deliveryPipelineId, location, project, releaseId, rolloutId);
+        }
+
+        public GetRolloutArgs build() {
+            $.deliveryPipelineId = Objects.requireNonNull($.deliveryPipelineId, "expected parameter 'deliveryPipelineId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.releaseId = Objects.requireNonNull($.releaseId, "expected parameter 'releaseId' to be non-null");
+            $.rolloutId = Objects.requireNonNull($.rolloutId, "expected parameter 'rolloutId' to be non-null");
+            return $;
         }
     }
+
 }

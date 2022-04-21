@@ -6,10 +6,10 @@ package com.pulumi.aws.chime.inputs;
 import com.pulumi.aws.chime.inputs.VoiceConnectorGroupConnectorGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VoiceConnectorGroupState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="connectors")
-      private final @Nullable Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors;
+    private @Nullable Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors;
 
-    public Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors() {
-        return this.connectors == null ? Codegen.empty() : this.connectors;
+    public Optional<Output<List<VoiceConnectorGroupConnectorGetArgs>>> connectors() {
+        return Optional.ofNullable(this.connectors);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class VoiceConnectorGroupState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public VoiceConnectorGroupState(
-        @Nullable Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors,
-        @Nullable Output<String> name) {
-        this.connectors = connectors;
-        this.name = name;
-    }
+    private VoiceConnectorGroupState() {}
 
-    private VoiceConnectorGroupState() {
-        this.connectors = Codegen.empty();
-        this.name = Codegen.empty();
+    private VoiceConnectorGroupState(VoiceConnectorGroupState $) {
+        this.connectors = $.connectors;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors;
-        private @Nullable Output<String> name;
+        private VoiceConnectorGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorGroupState();
         }
 
         public Builder(VoiceConnectorGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectors = defaults.connectors;
-    	      this.name = defaults.name;
+            $ = new VoiceConnectorGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder connectors(@Nullable Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors) {
-            this.connectors = connectors;
+            $.connectors = connectors;
             return this;
         }
-        public Builder connectors(@Nullable List<VoiceConnectorGroupConnectorGetArgs> connectors) {
-            this.connectors = Codegen.ofNullable(connectors);
-            return this;
+
+        public Builder connectors(List<VoiceConnectorGroupConnectorGetArgs> connectors) {
+            return connectors(Output.of(connectors));
         }
+
         public Builder connectors(VoiceConnectorGroupConnectorGetArgs... connectors) {
             return connectors(List.of(connectors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public VoiceConnectorGroupState build() {
-            return new VoiceConnectorGroupState(connectors, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public VoiceConnectorGroupState build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
      * 
      */
     @Import(name="endDate", required=true)
-      private final GoogleTypeDateResponse endDate;
+    private GoogleTypeDateResponse endDate;
 
     public GoogleTypeDateResponse endDate() {
         return this.endDate;
@@ -32,55 +32,52 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse extends 
      * 
      */
     @Import(name="startDate", required=true)
-      private final GoogleTypeDateResponse startDate;
+    private GoogleTypeDateResponse startDate;
 
     public GoogleTypeDateResponse startDate() {
         return this.startDate;
     }
 
-    public GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse(
-        GoogleTypeDateResponse endDate,
-        GoogleTypeDateResponse startDate) {
-        this.endDate = Objects.requireNonNull(endDate, "expected parameter 'endDate' to be non-null");
-        this.startDate = Objects.requireNonNull(startDate, "expected parameter 'startDate' to be non-null");
-    }
+    private GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse() {}
 
-    private GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse() {
-        this.endDate = null;
-        this.startDate = null;
+    private GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse(GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse $) {
+        this.endDate = $.endDate;
+        this.startDate = $.startDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleTypeDateResponse endDate;
-        private GoogleTypeDateResponse startDate;
+        private GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.startDate = defaults.startDate;
+            $ = new GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(GoogleTypeDateResponse endDate) {
-            this.endDate = Objects.requireNonNull(endDate);
+            $.endDate = endDate;
             return this;
         }
+
         public Builder startDate(GoogleTypeDateResponse startDate) {
-            this.startDate = Objects.requireNonNull(startDate);
+            $.startDate = startDate;
             return this;
-        }        public GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse build() {
-            return new GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse(endDate, startDate);
+        }
+
+        public GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse build() {
+            $.endDate = Objects.requireNonNull($.endDate, "expected parameter 'endDate' to be non-null");
+            $.startDate = Objects.requireNonNull($.startDate, "expected parameter 'startDate' to be non-null");
+            return $;
         }
     }
+
 }

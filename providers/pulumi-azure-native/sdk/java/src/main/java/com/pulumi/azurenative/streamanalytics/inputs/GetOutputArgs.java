@@ -17,7 +17,7 @@ public final class GetOutputArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobName", required=true)
-      private final String jobName;
+    private String jobName;
 
     public String jobName() {
         return this.jobName;
@@ -28,7 +28,7 @@ public final class GetOutputArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputName", required=true)
-      private final String outputName;
+    private String outputName;
 
     public String outputName() {
         return this.outputName;
@@ -39,64 +39,59 @@ public final class GetOutputArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetOutputArgs(
-        String jobName,
-        String outputName,
-        String resourceGroupName) {
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.outputName = Objects.requireNonNull(outputName, "expected parameter 'outputName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetOutputArgs() {}
 
-    private GetOutputArgs() {
-        this.jobName = null;
-        this.outputName = null;
-        this.resourceGroupName = null;
+    private GetOutputArgs(GetOutputArgs $) {
+        this.jobName = $.jobName;
+        this.outputName = $.outputName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOutputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobName;
-        private String outputName;
-        private String resourceGroupName;
+        private GetOutputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOutputArgs();
         }
 
         public Builder(GetOutputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobName = defaults.jobName;
-    	      this.outputName = defaults.outputName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetOutputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder outputName(String outputName) {
-            this.outputName = Objects.requireNonNull(outputName);
+            $.outputName = outputName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetOutputArgs build() {
-            return new GetOutputArgs(jobName, outputName, resourceGroupName);
+        }
+
+        public GetOutputArgs build() {
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.outputName = Objects.requireNonNull($.outputName, "expected parameter 'outputName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

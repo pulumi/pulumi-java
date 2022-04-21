@@ -5,11 +5,11 @@ package com.pulumi.googlenative.appengine_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1beta.enums.IngressRuleAction;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<IngressRuleAction> action;
+    private @Nullable Output<IngressRuleAction> action;
 
-    public Output<IngressRuleAction> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<IngressRuleAction>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -40,10 +40,10 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -62,102 +62,89 @@ public final class IngressRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRange")
-      private final @Nullable Output<String> sourceRange;
+    private @Nullable Output<String> sourceRange;
 
-    public Output<String> sourceRange() {
-        return this.sourceRange == null ? Codegen.empty() : this.sourceRange;
+    public Optional<Output<String>> sourceRange() {
+        return Optional.ofNullable(this.sourceRange);
     }
 
-    public IngressRuleArgs(
-        @Nullable Output<IngressRuleAction> action,
-        Output<String> appId,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> sourceRange) {
-        this.action = action;
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.description = description;
-        this.priority = priority;
-        this.sourceRange = sourceRange;
-    }
+    private IngressRuleArgs() {}
 
-    private IngressRuleArgs() {
-        this.action = Codegen.empty();
-        this.appId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.sourceRange = Codegen.empty();
+    private IngressRuleArgs(IngressRuleArgs $) {
+        this.action = $.action;
+        this.appId = $.appId;
+        this.description = $.description;
+        this.priority = $.priority;
+        this.sourceRange = $.sourceRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IngressRuleAction> action;
-        private Output<String> appId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> sourceRange;
+        private IngressRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressRuleArgs();
         }
 
         public Builder(IngressRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.appId = defaults.appId;
-    	      this.description = defaults.description;
-    	      this.priority = defaults.priority;
-    	      this.sourceRange = defaults.sourceRange;
+            $ = new IngressRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<IngressRuleAction> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable IngressRuleAction action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(IngressRuleAction action) {
+            return action(Output.of(action));
         }
+
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder sourceRange(@Nullable Output<String> sourceRange) {
-            this.sourceRange = sourceRange;
+            $.sourceRange = sourceRange;
             return this;
         }
-        public Builder sourceRange(@Nullable String sourceRange) {
-            this.sourceRange = Codegen.ofNullable(sourceRange);
-            return this;
-        }        public IngressRuleArgs build() {
-            return new IngressRuleArgs(action, appId, description, priority, sourceRange);
+
+        public Builder sourceRange(String sourceRange) {
+            return sourceRange(Output.of(sourceRange));
+        }
+
+        public IngressRuleArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            return $;
         }
     }
+
 }

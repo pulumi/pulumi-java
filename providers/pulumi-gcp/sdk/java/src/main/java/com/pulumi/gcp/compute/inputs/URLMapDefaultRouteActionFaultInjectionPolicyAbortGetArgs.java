@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs exte
      * 
      */
     @Import(name="httpStatus")
-      private final @Nullable Output<Integer> httpStatus;
+    private @Nullable Output<Integer> httpStatus;
 
-    public Output<Integer> httpStatus() {
-        return this.httpStatus == null ? Codegen.empty() : this.httpStatus;
+    public Optional<Output<Integer>> httpStatus() {
+        return Optional.ofNullable(this.httpStatus);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs exte
      * 
      */
     @Import(name="percentage")
-      private final @Nullable Output<Double> percentage;
+    private @Nullable Output<Double> percentage;
 
-    public Output<Double> percentage() {
-        return this.percentage == null ? Codegen.empty() : this.percentage;
+    public Optional<Output<Double>> percentage() {
+        return Optional.ofNullable(this.percentage);
     }
 
-    public URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs(
-        @Nullable Output<Integer> httpStatus,
-        @Nullable Output<Double> percentage) {
-        this.httpStatus = httpStatus;
-        this.percentage = percentage;
-    }
+    private URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs() {}
 
-    private URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs() {
-        this.httpStatus = Codegen.empty();
-        this.percentage = Codegen.empty();
+    private URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs(URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs $) {
+        this.httpStatus = $.httpStatus;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> httpStatus;
-        private @Nullable Output<Double> percentage;
+        private URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs();
         }
 
         public Builder(URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpStatus = defaults.httpStatus;
-    	      this.percentage = defaults.percentage;
+            $ = new URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpStatus(@Nullable Output<Integer> httpStatus) {
-            this.httpStatus = httpStatus;
+            $.httpStatus = httpStatus;
             return this;
         }
-        public Builder httpStatus(@Nullable Integer httpStatus) {
-            this.httpStatus = Codegen.ofNullable(httpStatus);
-            return this;
+
+        public Builder httpStatus(Integer httpStatus) {
+            return httpStatus(Output.of(httpStatus));
         }
+
         public Builder percentage(@Nullable Output<Double> percentage) {
-            this.percentage = percentage;
+            $.percentage = percentage;
             return this;
         }
-        public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Codegen.ofNullable(percentage);
-            return this;
-        }        public URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs build() {
-            return new URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs(httpStatus, percentage);
+
+        public Builder percentage(Double percentage) {
+            return percentage(Output.of(percentage));
+        }
+
+        public URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs build() {
+            return $;
         }
     }
+
 }

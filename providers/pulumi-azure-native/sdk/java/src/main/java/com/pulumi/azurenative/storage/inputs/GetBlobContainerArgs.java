@@ -17,7 +17,7 @@ public final class GetBlobContainerArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetBlobContainerArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -39,64 +39,59 @@ public final class GetBlobContainerArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBlobContainerArgs(
-        String accountName,
-        String containerName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBlobContainerArgs() {}
 
-    private GetBlobContainerArgs() {
-        this.accountName = null;
-        this.containerName = null;
-        this.resourceGroupName = null;
+    private GetBlobContainerArgs(GetBlobContainerArgs $) {
+        this.accountName = $.accountName;
+        this.containerName = $.containerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBlobContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String containerName;
-        private String resourceGroupName;
+        private GetBlobContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBlobContainerArgs();
         }
 
         public Builder(GetBlobContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.containerName = defaults.containerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBlobContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBlobContainerArgs build() {
-            return new GetBlobContainerArgs(accountName, containerName, resourceGroupName);
+        }
+
+        public GetBlobContainerArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class LoggingDestinationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="logs", required=true)
-      private final List<String> logs;
+    private List<String> logs;
 
     public List<String> logs() {
         return this.logs;
@@ -33,58 +33,56 @@ public final class LoggingDestinationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="monitoredResource", required=true)
-      private final String monitoredResource;
+    private String monitoredResource;
 
     public String monitoredResource() {
         return this.monitoredResource;
     }
 
-    public LoggingDestinationResponse(
-        List<String> logs,
-        String monitoredResource) {
-        this.logs = Objects.requireNonNull(logs, "expected parameter 'logs' to be non-null");
-        this.monitoredResource = Objects.requireNonNull(monitoredResource, "expected parameter 'monitoredResource' to be non-null");
-    }
+    private LoggingDestinationResponse() {}
 
-    private LoggingDestinationResponse() {
-        this.logs = List.of();
-        this.monitoredResource = null;
+    private LoggingDestinationResponse(LoggingDestinationResponse $) {
+        this.logs = $.logs;
+        this.monitoredResource = $.monitoredResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> logs;
-        private String monitoredResource;
+        private LoggingDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingDestinationResponse();
         }
 
         public Builder(LoggingDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logs = defaults.logs;
-    	      this.monitoredResource = defaults.monitoredResource;
+            $ = new LoggingDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logs(List<String> logs) {
-            this.logs = Objects.requireNonNull(logs);
+            $.logs = logs;
             return this;
         }
+
         public Builder logs(String... logs) {
             return logs(List.of(logs));
         }
+
         public Builder monitoredResource(String monitoredResource) {
-            this.monitoredResource = Objects.requireNonNull(monitoredResource);
+            $.monitoredResource = monitoredResource;
             return this;
-        }        public LoggingDestinationResponse build() {
-            return new LoggingDestinationResponse(logs, monitoredResource);
+        }
+
+        public LoggingDestinationResponse build() {
+            $.logs = Objects.requireNonNull($.logs, "expected parameter 'logs' to be non-null");
+            $.monitoredResource = Objects.requireNonNull($.monitoredResource, "expected parameter 'monitoredResource' to be non-null");
+            return $;
         }
     }
+
 }

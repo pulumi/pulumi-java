@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs 
      * 
      */
     @Import(name="caseContent")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent;
 
-    public Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent() {
-        return this.caseContent == null ? Codegen.empty() : this.caseContent;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>>> caseContent() {
+        return Optional.ofNullable(this.caseContent);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs 
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<String> condition;
+    private @Nullable Output<String> condition;
 
-    public Output<String> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<String>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
-    public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs(
-        @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent,
-        @Nullable Output<String> condition) {
-        this.caseContent = caseContent;
-        this.condition = condition;
-    }
+    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs() {}
 
-    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs() {
-        this.caseContent = Codegen.empty();
-        this.condition = Codegen.empty();
+    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs $) {
+        this.caseContent = $.caseContent;
+        this.condition = $.condition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent;
-        private @Nullable Output<String> condition;
+        private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caseContent = defaults.caseContent;
-    	      this.condition = defaults.condition;
+            $ = new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caseContent(@Nullable Output<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs>> caseContent) {
-            this.caseContent = caseContent;
+            $.caseContent = caseContent;
             return this;
         }
-        public Builder caseContent(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs> caseContent) {
-            this.caseContent = Codegen.ofNullable(caseContent);
-            return this;
+
+        public Builder caseContent(List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs> caseContent) {
+            return caseContent(Output.of(caseContent));
         }
+
         public Builder caseContent(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContentArgs... caseContent) {
             return caseContent(List.of(caseContent));
         }
+
         public Builder condition(@Nullable Output<String> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable String condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
-        }        public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs build() {
-            return new GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs(caseContent, condition);
+
+        public Builder condition(String condition) {
+            return condition(Output.of(condition));
+        }
+
+        public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs build() {
+            return $;
         }
     }
+
 }

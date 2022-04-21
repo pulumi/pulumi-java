@@ -26,10 +26,10 @@ public final class TriggerPipelineReferenceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,Object> parameters;
+    private @Nullable Map<String,Object> parameters;
 
-    public Map<String,Object> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -37,55 +37,50 @@ public final class TriggerPipelineReferenceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="pipelineReference")
-      private final @Nullable PipelineReferenceResponse pipelineReference;
+    private @Nullable PipelineReferenceResponse pipelineReference;
 
     public Optional<PipelineReferenceResponse> pipelineReference() {
-        return this.pipelineReference == null ? Optional.empty() : Optional.ofNullable(this.pipelineReference);
+        return Optional.ofNullable(this.pipelineReference);
     }
 
-    public TriggerPipelineReferenceResponse(
-        @Nullable Map<String,Object> parameters,
-        @Nullable PipelineReferenceResponse pipelineReference) {
-        this.parameters = parameters;
-        this.pipelineReference = pipelineReference;
-    }
+    private TriggerPipelineReferenceResponse() {}
 
-    private TriggerPipelineReferenceResponse() {
-        this.parameters = Map.of();
-        this.pipelineReference = null;
+    private TriggerPipelineReferenceResponse(TriggerPipelineReferenceResponse $) {
+        this.parameters = $.parameters;
+        this.pipelineReference = $.pipelineReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerPipelineReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,Object> parameters;
-        private @Nullable PipelineReferenceResponse pipelineReference;
+        private TriggerPipelineReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerPipelineReferenceResponse();
         }
 
         public Builder(TriggerPipelineReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.pipelineReference = defaults.pipelineReference;
+            $ = new TriggerPipelineReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder pipelineReference(@Nullable PipelineReferenceResponse pipelineReference) {
-            this.pipelineReference = pipelineReference;
+            $.pipelineReference = pipelineReference;
             return this;
-        }        public TriggerPipelineReferenceResponse build() {
-            return new TriggerPipelineReferenceResponse(parameters, pipelineReference);
+        }
+
+        public TriggerPipelineReferenceResponse build() {
+            return $;
         }
     }
+
 }

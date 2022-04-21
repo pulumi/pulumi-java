@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apikeys_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class V2AndroidApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="packageName")
-      private final @Nullable Output<String> packageName;
+    private @Nullable Output<String> packageName;
 
-    public Output<String> packageName() {
-        return this.packageName == null ? Codegen.empty() : this.packageName;
+    public Optional<Output<String>> packageName() {
+        return Optional.ofNullable(this.packageName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class V2AndroidApplicationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sha1Fingerprint")
-      private final @Nullable Output<String> sha1Fingerprint;
+    private @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> sha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
+    public Optional<Output<String>> sha1Fingerprint() {
+        return Optional.ofNullable(this.sha1Fingerprint);
     }
 
-    public V2AndroidApplicationArgs(
-        @Nullable Output<String> packageName,
-        @Nullable Output<String> sha1Fingerprint) {
-        this.packageName = packageName;
-        this.sha1Fingerprint = sha1Fingerprint;
-    }
+    private V2AndroidApplicationArgs() {}
 
-    private V2AndroidApplicationArgs() {
-        this.packageName = Codegen.empty();
-        this.sha1Fingerprint = Codegen.empty();
+    private V2AndroidApplicationArgs(V2AndroidApplicationArgs $) {
+        this.packageName = $.packageName;
+        this.sha1Fingerprint = $.sha1Fingerprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2AndroidApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> packageName;
-        private @Nullable Output<String> sha1Fingerprint;
+        private V2AndroidApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2AndroidApplicationArgs();
         }
 
         public Builder(V2AndroidApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packageName = defaults.packageName;
-    	      this.sha1Fingerprint = defaults.sha1Fingerprint;
+            $ = new V2AndroidApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packageName(@Nullable Output<String> packageName) {
-            this.packageName = packageName;
+            $.packageName = packageName;
             return this;
         }
-        public Builder packageName(@Nullable String packageName) {
-            this.packageName = Codegen.ofNullable(packageName);
-            return this;
+
+        public Builder packageName(String packageName) {
+            return packageName(Output.of(packageName));
         }
+
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
-            this.sha1Fingerprint = sha1Fingerprint;
+            $.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-        public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Codegen.ofNullable(sha1Fingerprint);
-            return this;
-        }        public V2AndroidApplicationArgs build() {
-            return new V2AndroidApplicationArgs(packageName, sha1Fingerprint);
+
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
+            return sha1Fingerprint(Output.of(sha1Fingerprint));
+        }
+
+        public V2AndroidApplicationArgs build() {
+            return $;
         }
     }
+
 }

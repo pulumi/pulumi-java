@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WebhookThrottleConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="burst")
-      private final @Nullable Output<Integer> burst;
+    private @Nullable Output<Integer> burst;
 
-    public Output<Integer> burst() {
-        return this.burst == null ? Codegen.empty() : this.burst;
+    public Optional<Output<Integer>> burst() {
+        return Optional.ofNullable(this.burst);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class WebhookThrottleConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="qps")
-      private final @Nullable Output<Integer> qps;
+    private @Nullable Output<Integer> qps;
 
-    public Output<Integer> qps() {
-        return this.qps == null ? Codegen.empty() : this.qps;
+    public Optional<Output<Integer>> qps() {
+        return Optional.ofNullable(this.qps);
     }
 
-    public WebhookThrottleConfigArgs(
-        @Nullable Output<Integer> burst,
-        @Nullable Output<Integer> qps) {
-        this.burst = burst;
-        this.qps = qps;
-    }
+    private WebhookThrottleConfigArgs() {}
 
-    private WebhookThrottleConfigArgs() {
-        this.burst = Codegen.empty();
-        this.qps = Codegen.empty();
+    private WebhookThrottleConfigArgs(WebhookThrottleConfigArgs $) {
+        this.burst = $.burst;
+        this.qps = $.qps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookThrottleConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> burst;
-        private @Nullable Output<Integer> qps;
+        private WebhookThrottleConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookThrottleConfigArgs();
         }
 
         public Builder(WebhookThrottleConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.burst = defaults.burst;
-    	      this.qps = defaults.qps;
+            $ = new WebhookThrottleConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder burst(@Nullable Output<Integer> burst) {
-            this.burst = burst;
+            $.burst = burst;
             return this;
         }
-        public Builder burst(@Nullable Integer burst) {
-            this.burst = Codegen.ofNullable(burst);
-            return this;
+
+        public Builder burst(Integer burst) {
+            return burst(Output.of(burst));
         }
+
         public Builder qps(@Nullable Output<Integer> qps) {
-            this.qps = qps;
+            $.qps = qps;
             return this;
         }
-        public Builder qps(@Nullable Integer qps) {
-            this.qps = Codegen.ofNullable(qps);
-            return this;
-        }        public WebhookThrottleConfigArgs build() {
-            return new WebhookThrottleConfigArgs(burst, qps);
+
+        public Builder qps(Integer qps) {
+            return qps(Output.of(qps));
+        }
+
+        public WebhookThrottleConfigArgs build() {
+            return $;
         }
     }
+
 }

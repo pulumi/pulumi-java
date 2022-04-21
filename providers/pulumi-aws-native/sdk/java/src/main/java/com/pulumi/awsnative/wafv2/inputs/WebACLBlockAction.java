@@ -19,45 +19,44 @@ public final class WebACLBlockAction extends com.pulumi.resources.InvokeArgs {
     public static final WebACLBlockAction Empty = new WebACLBlockAction();
 
     @Import(name="customResponse")
-      private final @Nullable WebACLCustomResponse customResponse;
+    private @Nullable WebACLCustomResponse customResponse;
 
     public Optional<WebACLCustomResponse> customResponse() {
-        return this.customResponse == null ? Optional.empty() : Optional.ofNullable(this.customResponse);
+        return Optional.ofNullable(this.customResponse);
     }
 
-    public WebACLBlockAction(@Nullable WebACLCustomResponse customResponse) {
-        this.customResponse = customResponse;
-    }
+    private WebACLBlockAction() {}
 
-    private WebACLBlockAction() {
-        this.customResponse = null;
+    private WebACLBlockAction(WebACLBlockAction $) {
+        this.customResponse = $.customResponse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLBlockAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebACLCustomResponse customResponse;
+        private WebACLBlockAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLBlockAction();
         }
 
         public Builder(WebACLBlockAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customResponse = defaults.customResponse;
+            $ = new WebACLBlockAction(Objects.requireNonNull(defaults));
         }
 
         public Builder customResponse(@Nullable WebACLCustomResponse customResponse) {
-            this.customResponse = customResponse;
+            $.customResponse = customResponse;
             return this;
-        }        public WebACLBlockAction build() {
-            return new WebACLBlockAction(customResponse);
+        }
+
+        public WebACLBlockAction build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.awsnative.ec2.inputs.IPAMIpamOperatingRegionArgs;
 import com.pulumi.awsnative.ec2.inputs.IPAMTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,10 +19,10 @@ public final class IPAMArgs extends com.pulumi.resources.ResourceArgs {
     public static final IPAMArgs Empty = new IPAMArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class IPAMArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operatingRegions")
-      private final @Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
+    private @Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
 
-    public Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions() {
-        return this.operatingRegions == null ? Codegen.empty() : this.operatingRegions;
+    public Optional<Output<List<IPAMIpamOperatingRegionArgs>>> operatingRegions() {
+        return Optional.ofNullable(this.operatingRegions);
     }
 
     /**
@@ -41,82 +41,76 @@ public final class IPAMArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<IPAMTagArgs>> tags;
+    private @Nullable Output<List<IPAMTagArgs>> tags;
 
-    public Output<List<IPAMTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<IPAMTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IPAMArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions,
-        @Nullable Output<List<IPAMTagArgs>> tags) {
-        this.description = description;
-        this.operatingRegions = operatingRegions;
-        this.tags = tags;
-    }
+    private IPAMArgs() {}
 
-    private IPAMArgs() {
-        this.description = Codegen.empty();
-        this.operatingRegions = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IPAMArgs(IPAMArgs $) {
+        this.description = $.description;
+        this.operatingRegions = $.operatingRegions;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAMArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions;
-        private @Nullable Output<List<IPAMTagArgs>> tags;
+        private IPAMArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAMArgs();
         }
 
         public Builder(IPAMArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.operatingRegions = defaults.operatingRegions;
-    	      this.tags = defaults.tags;
+            $ = new IPAMArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder operatingRegions(@Nullable Output<List<IPAMIpamOperatingRegionArgs>> operatingRegions) {
-            this.operatingRegions = operatingRegions;
+            $.operatingRegions = operatingRegions;
             return this;
         }
-        public Builder operatingRegions(@Nullable List<IPAMIpamOperatingRegionArgs> operatingRegions) {
-            this.operatingRegions = Codegen.ofNullable(operatingRegions);
-            return this;
+
+        public Builder operatingRegions(List<IPAMIpamOperatingRegionArgs> operatingRegions) {
+            return operatingRegions(Output.of(operatingRegions));
         }
+
         public Builder operatingRegions(IPAMIpamOperatingRegionArgs... operatingRegions) {
             return operatingRegions(List.of(operatingRegions));
         }
+
         public Builder tags(@Nullable Output<List<IPAMTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<IPAMTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<IPAMTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(IPAMTagArgs... tags) {
             return tags(List.of(tags));
-        }        public IPAMArgs build() {
-            return new IPAMArgs(description, operatingRegions, tags);
+        }
+
+        public IPAMArgs build() {
+            return $;
         }
     }
+
 }

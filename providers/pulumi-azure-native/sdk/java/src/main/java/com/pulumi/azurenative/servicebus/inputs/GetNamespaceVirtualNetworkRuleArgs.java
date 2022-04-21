@@ -17,7 +17,7 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetNamespaceVirtualNetworkRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="virtualNetworkRuleName", required=true)
-      private final String virtualNetworkRuleName;
+    private String virtualNetworkRuleName;
 
     public String virtualNetworkRuleName() {
         return this.virtualNetworkRuleName;
     }
 
-    public GetNamespaceVirtualNetworkRuleArgs(
-        String namespaceName,
-        String resourceGroupName,
-        String virtualNetworkRuleName) {
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkRuleName = Objects.requireNonNull(virtualNetworkRuleName, "expected parameter 'virtualNetworkRuleName' to be non-null");
-    }
+    private GetNamespaceVirtualNetworkRuleArgs() {}
 
-    private GetNamespaceVirtualNetworkRuleArgs() {
-        this.namespaceName = null;
-        this.resourceGroupName = null;
-        this.virtualNetworkRuleName = null;
+    private GetNamespaceVirtualNetworkRuleArgs(GetNamespaceVirtualNetworkRuleArgs $) {
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkRuleName = $.virtualNetworkRuleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNamespaceVirtualNetworkRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespaceName;
-        private String resourceGroupName;
-        private String virtualNetworkRuleName;
+        private GetNamespaceVirtualNetworkRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNamespaceVirtualNetworkRuleArgs();
         }
 
         public Builder(GetNamespaceVirtualNetworkRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkRuleName = defaults.virtualNetworkRuleName;
+            $ = new GetNamespaceVirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
-            this.virtualNetworkRuleName = Objects.requireNonNull(virtualNetworkRuleName);
+            $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
-        }        public GetNamespaceVirtualNetworkRuleArgs build() {
-            return new GetNamespaceVirtualNetworkRuleArgs(namespaceName, resourceGroupName, virtualNetworkRuleName);
+        }
+
+        public GetNamespaceVirtualNetworkRuleArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkRuleName = Objects.requireNonNull($.virtualNetworkRuleName, "expected parameter 'virtualNetworkRuleName' to be non-null");
+            return $;
         }
     }
+
 }

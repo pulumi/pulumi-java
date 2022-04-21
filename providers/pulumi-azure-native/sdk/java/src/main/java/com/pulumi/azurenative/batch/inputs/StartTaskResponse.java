@@ -30,10 +30,10 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="commandLine")
-      private final @Nullable String commandLine;
+    private @Nullable String commandLine;
 
     public Optional<String> commandLine() {
-        return this.commandLine == null ? Optional.empty() : Optional.ofNullable(this.commandLine);
+        return Optional.ofNullable(this.commandLine);
     }
 
     /**
@@ -41,17 +41,17 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="containerSettings")
-      private final @Nullable TaskContainerSettingsResponse containerSettings;
+    private @Nullable TaskContainerSettingsResponse containerSettings;
 
     public Optional<TaskContainerSettingsResponse> containerSettings() {
-        return this.containerSettings == null ? Optional.empty() : Optional.ofNullable(this.containerSettings);
+        return Optional.ofNullable(this.containerSettings);
     }
 
     @Import(name="environmentSettings")
-      private final @Nullable List<EnvironmentSettingResponse> environmentSettings;
+    private @Nullable List<EnvironmentSettingResponse> environmentSettings;
 
-    public List<EnvironmentSettingResponse> environmentSettings() {
-        return this.environmentSettings == null ? List.of() : this.environmentSettings;
+    public Optional<List<EnvironmentSettingResponse>> environmentSettings() {
+        return Optional.ofNullable(this.environmentSettings);
     }
 
     /**
@@ -59,17 +59,17 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxTaskRetryCount")
-      private final @Nullable Integer maxTaskRetryCount;
+    private @Nullable Integer maxTaskRetryCount;
 
     public Optional<Integer> maxTaskRetryCount() {
-        return this.maxTaskRetryCount == null ? Optional.empty() : Optional.ofNullable(this.maxTaskRetryCount);
+        return Optional.ofNullable(this.maxTaskRetryCount);
     }
 
     @Import(name="resourceFiles")
-      private final @Nullable List<ResourceFileResponse> resourceFiles;
+    private @Nullable List<ResourceFileResponse> resourceFiles;
 
-    public List<ResourceFileResponse> resourceFiles() {
-        return this.resourceFiles == null ? List.of() : this.resourceFiles;
+    public Optional<List<ResourceFileResponse>> resourceFiles() {
+        return Optional.ofNullable(this.resourceFiles);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userIdentity")
-      private final @Nullable UserIdentityResponse userIdentity;
+    private @Nullable UserIdentityResponse userIdentity;
 
     public Optional<UserIdentityResponse> userIdentity() {
-        return this.userIdentity == null ? Optional.empty() : Optional.ofNullable(this.userIdentity);
+        return Optional.ofNullable(this.userIdentity);
     }
 
     /**
@@ -88,106 +88,88 @@ public final class StartTaskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="waitForSuccess")
-      private final @Nullable Boolean waitForSuccess;
+    private @Nullable Boolean waitForSuccess;
 
     public Optional<Boolean> waitForSuccess() {
-        return this.waitForSuccess == null ? Optional.empty() : Optional.ofNullable(this.waitForSuccess);
+        return Optional.ofNullable(this.waitForSuccess);
     }
 
-    public StartTaskResponse(
-        @Nullable String commandLine,
-        @Nullable TaskContainerSettingsResponse containerSettings,
-        @Nullable List<EnvironmentSettingResponse> environmentSettings,
-        @Nullable Integer maxTaskRetryCount,
-        @Nullable List<ResourceFileResponse> resourceFiles,
-        @Nullable UserIdentityResponse userIdentity,
-        @Nullable Boolean waitForSuccess) {
-        this.commandLine = commandLine;
-        this.containerSettings = containerSettings;
-        this.environmentSettings = environmentSettings;
-        this.maxTaskRetryCount = maxTaskRetryCount;
-        this.resourceFiles = resourceFiles;
-        this.userIdentity = userIdentity;
-        this.waitForSuccess = waitForSuccess;
-    }
+    private StartTaskResponse() {}
 
-    private StartTaskResponse() {
-        this.commandLine = null;
-        this.containerSettings = null;
-        this.environmentSettings = List.of();
-        this.maxTaskRetryCount = null;
-        this.resourceFiles = List.of();
-        this.userIdentity = null;
-        this.waitForSuccess = null;
+    private StartTaskResponse(StartTaskResponse $) {
+        this.commandLine = $.commandLine;
+        this.containerSettings = $.containerSettings;
+        this.environmentSettings = $.environmentSettings;
+        this.maxTaskRetryCount = $.maxTaskRetryCount;
+        this.resourceFiles = $.resourceFiles;
+        this.userIdentity = $.userIdentity;
+        this.waitForSuccess = $.waitForSuccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StartTaskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String commandLine;
-        private @Nullable TaskContainerSettingsResponse containerSettings;
-        private @Nullable List<EnvironmentSettingResponse> environmentSettings;
-        private @Nullable Integer maxTaskRetryCount;
-        private @Nullable List<ResourceFileResponse> resourceFiles;
-        private @Nullable UserIdentityResponse userIdentity;
-        private @Nullable Boolean waitForSuccess;
+        private StartTaskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StartTaskResponse();
         }
 
         public Builder(StartTaskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commandLine = defaults.commandLine;
-    	      this.containerSettings = defaults.containerSettings;
-    	      this.environmentSettings = defaults.environmentSettings;
-    	      this.maxTaskRetryCount = defaults.maxTaskRetryCount;
-    	      this.resourceFiles = defaults.resourceFiles;
-    	      this.userIdentity = defaults.userIdentity;
-    	      this.waitForSuccess = defaults.waitForSuccess;
+            $ = new StartTaskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commandLine(@Nullable String commandLine) {
-            this.commandLine = commandLine;
+            $.commandLine = commandLine;
             return this;
         }
+
         public Builder containerSettings(@Nullable TaskContainerSettingsResponse containerSettings) {
-            this.containerSettings = containerSettings;
+            $.containerSettings = containerSettings;
             return this;
         }
+
         public Builder environmentSettings(@Nullable List<EnvironmentSettingResponse> environmentSettings) {
-            this.environmentSettings = environmentSettings;
+            $.environmentSettings = environmentSettings;
             return this;
         }
+
         public Builder environmentSettings(EnvironmentSettingResponse... environmentSettings) {
             return environmentSettings(List.of(environmentSettings));
         }
+
         public Builder maxTaskRetryCount(@Nullable Integer maxTaskRetryCount) {
-            this.maxTaskRetryCount = maxTaskRetryCount;
+            $.maxTaskRetryCount = maxTaskRetryCount;
             return this;
         }
+
         public Builder resourceFiles(@Nullable List<ResourceFileResponse> resourceFiles) {
-            this.resourceFiles = resourceFiles;
+            $.resourceFiles = resourceFiles;
             return this;
         }
+
         public Builder resourceFiles(ResourceFileResponse... resourceFiles) {
             return resourceFiles(List.of(resourceFiles));
         }
+
         public Builder userIdentity(@Nullable UserIdentityResponse userIdentity) {
-            this.userIdentity = userIdentity;
+            $.userIdentity = userIdentity;
             return this;
         }
+
         public Builder waitForSuccess(@Nullable Boolean waitForSuccess) {
-            this.waitForSuccess = waitForSuccess;
+            $.waitForSuccess = waitForSuccess;
             return this;
-        }        public StartTaskResponse build() {
-            return new StartTaskResponse(commandLine, containerSettings, environmentSettings, maxTaskRetryCount, resourceFiles, userIdentity, waitForSuccess);
+        }
+
+        public StartTaskResponse build() {
+            return $;
         }
     }
+
 }

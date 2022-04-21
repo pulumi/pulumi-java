@@ -25,7 +25,7 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authInfo", required=true)
-      private final BasicAuthenticationResponse authInfo;
+    private BasicAuthenticationResponse authInfo;
 
     public BasicAuthenticationResponse authInfo() {
         return this.authInfo;
@@ -36,7 +36,7 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="body", required=true)
-      private final String body;
+    private String body;
 
     public String body() {
         return this.body;
@@ -47,7 +47,7 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contentType", required=true)
-      private final String contentType;
+    private String contentType;
 
     public String contentType() {
         return this.contentType;
@@ -58,7 +58,7 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="headers", required=true)
-      private final Map<String,String> headers;
+    private Map<String,String> headers;
 
     public Map<String,String> headers() {
         return this.headers;
@@ -69,7 +69,7 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maskHeaders", required=true)
-      private final Boolean maskHeaders;
+    private Boolean maskHeaders;
 
     public Boolean maskHeaders() {
         return this.maskHeaders;
@@ -80,7 +80,7 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -91,7 +91,7 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -102,7 +102,7 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requestMethod", required=true)
-      private final String requestMethod;
+    private String requestMethod;
 
     public String requestMethod() {
         return this.requestMethod;
@@ -113,7 +113,7 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="useSsl", required=true)
-      private final Boolean useSsl;
+    private Boolean useSsl;
 
     public Boolean useSsl() {
         return this.useSsl;
@@ -124,127 +124,108 @@ public final class HttpCheckResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="validateSsl", required=true)
-      private final Boolean validateSsl;
+    private Boolean validateSsl;
 
     public Boolean validateSsl() {
         return this.validateSsl;
     }
 
-    public HttpCheckResponse(
-        BasicAuthenticationResponse authInfo,
-        String body,
-        String contentType,
-        Map<String,String> headers,
-        Boolean maskHeaders,
-        String path,
-        Integer port,
-        String requestMethod,
-        Boolean useSsl,
-        Boolean validateSsl) {
-        this.authInfo = Objects.requireNonNull(authInfo, "expected parameter 'authInfo' to be non-null");
-        this.body = Objects.requireNonNull(body, "expected parameter 'body' to be non-null");
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.headers = Objects.requireNonNull(headers, "expected parameter 'headers' to be non-null");
-        this.maskHeaders = Objects.requireNonNull(maskHeaders, "expected parameter 'maskHeaders' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.requestMethod = Objects.requireNonNull(requestMethod, "expected parameter 'requestMethod' to be non-null");
-        this.useSsl = Objects.requireNonNull(useSsl, "expected parameter 'useSsl' to be non-null");
-        this.validateSsl = Objects.requireNonNull(validateSsl, "expected parameter 'validateSsl' to be non-null");
-    }
+    private HttpCheckResponse() {}
 
-    private HttpCheckResponse() {
-        this.authInfo = null;
-        this.body = null;
-        this.contentType = null;
-        this.headers = Map.of();
-        this.maskHeaders = null;
-        this.path = null;
-        this.port = null;
-        this.requestMethod = null;
-        this.useSsl = null;
-        this.validateSsl = null;
+    private HttpCheckResponse(HttpCheckResponse $) {
+        this.authInfo = $.authInfo;
+        this.body = $.body;
+        this.contentType = $.contentType;
+        this.headers = $.headers;
+        this.maskHeaders = $.maskHeaders;
+        this.path = $.path;
+        this.port = $.port;
+        this.requestMethod = $.requestMethod;
+        this.useSsl = $.useSsl;
+        this.validateSsl = $.validateSsl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpCheckResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BasicAuthenticationResponse authInfo;
-        private String body;
-        private String contentType;
-        private Map<String,String> headers;
-        private Boolean maskHeaders;
-        private String path;
-        private Integer port;
-        private String requestMethod;
-        private Boolean useSsl;
-        private Boolean validateSsl;
+        private HttpCheckResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpCheckResponse();
         }
 
         public Builder(HttpCheckResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authInfo = defaults.authInfo;
-    	      this.body = defaults.body;
-    	      this.contentType = defaults.contentType;
-    	      this.headers = defaults.headers;
-    	      this.maskHeaders = defaults.maskHeaders;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.requestMethod = defaults.requestMethod;
-    	      this.useSsl = defaults.useSsl;
-    	      this.validateSsl = defaults.validateSsl;
+            $ = new HttpCheckResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authInfo(BasicAuthenticationResponse authInfo) {
-            this.authInfo = Objects.requireNonNull(authInfo);
+            $.authInfo = authInfo;
             return this;
         }
+
         public Builder body(String body) {
-            this.body = Objects.requireNonNull(body);
+            $.body = body;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder headers(Map<String,String> headers) {
-            this.headers = Objects.requireNonNull(headers);
+            $.headers = headers;
             return this;
         }
+
         public Builder maskHeaders(Boolean maskHeaders) {
-            this.maskHeaders = Objects.requireNonNull(maskHeaders);
+            $.maskHeaders = maskHeaders;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder requestMethod(String requestMethod) {
-            this.requestMethod = Objects.requireNonNull(requestMethod);
+            $.requestMethod = requestMethod;
             return this;
         }
+
         public Builder useSsl(Boolean useSsl) {
-            this.useSsl = Objects.requireNonNull(useSsl);
+            $.useSsl = useSsl;
             return this;
         }
+
         public Builder validateSsl(Boolean validateSsl) {
-            this.validateSsl = Objects.requireNonNull(validateSsl);
+            $.validateSsl = validateSsl;
             return this;
-        }        public HttpCheckResponse build() {
-            return new HttpCheckResponse(authInfo, body, contentType, headers, maskHeaders, path, port, requestMethod, useSsl, validateSsl);
+        }
+
+        public HttpCheckResponse build() {
+            $.authInfo = Objects.requireNonNull($.authInfo, "expected parameter 'authInfo' to be non-null");
+            $.body = Objects.requireNonNull($.body, "expected parameter 'body' to be non-null");
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.headers = Objects.requireNonNull($.headers, "expected parameter 'headers' to be non-null");
+            $.maskHeaders = Objects.requireNonNull($.maskHeaders, "expected parameter 'maskHeaders' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.requestMethod = Objects.requireNonNull($.requestMethod, "expected parameter 'requestMethod' to be non-null");
+            $.useSsl = Objects.requireNonNull($.useSsl, "expected parameter 'useSsl' to be non-null");
+            $.validateSsl = Objects.requireNonNull($.validateSsl, "expected parameter 'validateSsl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -10,9 +10,9 @@ import com.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointScopeArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="coverageLevel")
-      private final @Nullable Output<Either<String,CoverageLevel>> coverageLevel;
+    private @Nullable Output<Either<String,CoverageLevel>> coverageLevel;
 
-    public Output<Either<String,CoverageLevel>> coverageLevel() {
-        return this.coverageLevel == null ? Codegen.empty() : this.coverageLevel;
+    public Optional<Output<Either<String,CoverageLevel>>> coverageLevel() {
+        return Optional.ofNullable(this.coverageLevel);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<ConnectionMonitorEndpointFilterArgs> filter;
+    private @Nullable Output<ConnectionMonitorEndpointFilterArgs> filter;
 
-    public Output<ConnectionMonitorEndpointFilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<ConnectionMonitorEndpointFilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -73,10 +73,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<ConnectionMonitorEndpointScopeArgs> scope;
+    private @Nullable Output<ConnectionMonitorEndpointScopeArgs> scope;
 
-    public Output<ConnectionMonitorEndpointScopeArgs> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<ConnectionMonitorEndpointScopeArgs>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -95,128 +95,109 @@ public final class ConnectionMonitorEndpointArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,EndpointType>> type;
+    private @Nullable Output<Either<String,EndpointType>> type;
 
-    public Output<Either<String,EndpointType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,EndpointType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnectionMonitorEndpointArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<Either<String,CoverageLevel>> coverageLevel,
-        @Nullable Output<ConnectionMonitorEndpointFilterArgs> filter,
-        Output<String> name,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<ConnectionMonitorEndpointScopeArgs> scope,
-        @Nullable Output<Either<String,EndpointType>> type) {
-        this.address = address;
-        this.coverageLevel = coverageLevel;
-        this.filter = filter;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceId = resourceId;
-        this.scope = scope;
-        this.type = type;
-    }
+    private ConnectionMonitorEndpointArgs() {}
 
-    private ConnectionMonitorEndpointArgs() {
-        this.address = Codegen.empty();
-        this.coverageLevel = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.type = Codegen.empty();
+    private ConnectionMonitorEndpointArgs(ConnectionMonitorEndpointArgs $) {
+        this.address = $.address;
+        this.coverageLevel = $.coverageLevel;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.resourceId = $.resourceId;
+        this.scope = $.scope;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<Either<String,CoverageLevel>> coverageLevel;
-        private @Nullable Output<ConnectionMonitorEndpointFilterArgs> filter;
-        private Output<String> name;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<ConnectionMonitorEndpointScopeArgs> scope;
-        private @Nullable Output<Either<String,EndpointType>> type;
+        private ConnectionMonitorEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorEndpointArgs();
         }
 
         public Builder(ConnectionMonitorEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.coverageLevel = defaults.coverageLevel;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.resourceId = defaults.resourceId;
-    	      this.scope = defaults.scope;
-    	      this.type = defaults.type;
+            $ = new ConnectionMonitorEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder coverageLevel(@Nullable Output<Either<String,CoverageLevel>> coverageLevel) {
-            this.coverageLevel = coverageLevel;
+            $.coverageLevel = coverageLevel;
             return this;
         }
-        public Builder coverageLevel(@Nullable Either<String,CoverageLevel> coverageLevel) {
-            this.coverageLevel = Codegen.ofNullable(coverageLevel);
-            return this;
+
+        public Builder coverageLevel(Either<String,CoverageLevel> coverageLevel) {
+            return coverageLevel(Output.of(coverageLevel));
         }
+
         public Builder filter(@Nullable Output<ConnectionMonitorEndpointFilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable ConnectionMonitorEndpointFilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(ConnectionMonitorEndpointFilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder scope(@Nullable Output<ConnectionMonitorEndpointScopeArgs> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable ConnectionMonitorEndpointScopeArgs scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(ConnectionMonitorEndpointScopeArgs scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder type(@Nullable Output<Either<String,EndpointType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,EndpointType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ConnectionMonitorEndpointArgs build() {
-            return new ConnectionMonitorEndpointArgs(address, coverageLevel, filter, name, resourceId, scope, type);
+
+        public Builder type(Either<String,EndpointType> type) {
+            return type(Output.of(type));
+        }
+
+        public ConnectionMonitorEndpointArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

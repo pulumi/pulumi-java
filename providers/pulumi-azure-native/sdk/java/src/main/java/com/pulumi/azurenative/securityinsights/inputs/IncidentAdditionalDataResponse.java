@@ -23,7 +23,7 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="alertProductNames", required=true)
-      private final List<String> alertProductNames;
+    private List<String> alertProductNames;
 
     public List<String> alertProductNames() {
         return this.alertProductNames;
@@ -34,7 +34,7 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="alertsCount", required=true)
-      private final Integer alertsCount;
+    private Integer alertsCount;
 
     public Integer alertsCount() {
         return this.alertsCount;
@@ -45,7 +45,7 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="bookmarksCount", required=true)
-      private final Integer bookmarksCount;
+    private Integer bookmarksCount;
 
     public Integer bookmarksCount() {
         return this.bookmarksCount;
@@ -56,7 +56,7 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="commentsCount", required=true)
-      private final Integer commentsCount;
+    private Integer commentsCount;
 
     public Integer commentsCount() {
         return this.commentsCount;
@@ -67,88 +67,81 @@ public final class IncidentAdditionalDataResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="tactics", required=true)
-      private final List<String> tactics;
+    private List<String> tactics;
 
     public List<String> tactics() {
         return this.tactics;
     }
 
-    public IncidentAdditionalDataResponse(
-        List<String> alertProductNames,
-        Integer alertsCount,
-        Integer bookmarksCount,
-        Integer commentsCount,
-        List<String> tactics) {
-        this.alertProductNames = Objects.requireNonNull(alertProductNames, "expected parameter 'alertProductNames' to be non-null");
-        this.alertsCount = Objects.requireNonNull(alertsCount, "expected parameter 'alertsCount' to be non-null");
-        this.bookmarksCount = Objects.requireNonNull(bookmarksCount, "expected parameter 'bookmarksCount' to be non-null");
-        this.commentsCount = Objects.requireNonNull(commentsCount, "expected parameter 'commentsCount' to be non-null");
-        this.tactics = Objects.requireNonNull(tactics, "expected parameter 'tactics' to be non-null");
-    }
+    private IncidentAdditionalDataResponse() {}
 
-    private IncidentAdditionalDataResponse() {
-        this.alertProductNames = List.of();
-        this.alertsCount = null;
-        this.bookmarksCount = null;
-        this.commentsCount = null;
-        this.tactics = List.of();
+    private IncidentAdditionalDataResponse(IncidentAdditionalDataResponse $) {
+        this.alertProductNames = $.alertProductNames;
+        this.alertsCount = $.alertsCount;
+        this.bookmarksCount = $.bookmarksCount;
+        this.commentsCount = $.commentsCount;
+        this.tactics = $.tactics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncidentAdditionalDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> alertProductNames;
-        private Integer alertsCount;
-        private Integer bookmarksCount;
-        private Integer commentsCount;
-        private List<String> tactics;
+        private IncidentAdditionalDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncidentAdditionalDataResponse();
         }
 
         public Builder(IncidentAdditionalDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertProductNames = defaults.alertProductNames;
-    	      this.alertsCount = defaults.alertsCount;
-    	      this.bookmarksCount = defaults.bookmarksCount;
-    	      this.commentsCount = defaults.commentsCount;
-    	      this.tactics = defaults.tactics;
+            $ = new IncidentAdditionalDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alertProductNames(List<String> alertProductNames) {
-            this.alertProductNames = Objects.requireNonNull(alertProductNames);
+            $.alertProductNames = alertProductNames;
             return this;
         }
+
         public Builder alertProductNames(String... alertProductNames) {
             return alertProductNames(List.of(alertProductNames));
         }
+
         public Builder alertsCount(Integer alertsCount) {
-            this.alertsCount = Objects.requireNonNull(alertsCount);
+            $.alertsCount = alertsCount;
             return this;
         }
+
         public Builder bookmarksCount(Integer bookmarksCount) {
-            this.bookmarksCount = Objects.requireNonNull(bookmarksCount);
+            $.bookmarksCount = bookmarksCount;
             return this;
         }
+
         public Builder commentsCount(Integer commentsCount) {
-            this.commentsCount = Objects.requireNonNull(commentsCount);
+            $.commentsCount = commentsCount;
             return this;
         }
+
         public Builder tactics(List<String> tactics) {
-            this.tactics = Objects.requireNonNull(tactics);
+            $.tactics = tactics;
             return this;
         }
+
         public Builder tactics(String... tactics) {
             return tactics(List.of(tactics));
-        }        public IncidentAdditionalDataResponse build() {
-            return new IncidentAdditionalDataResponse(alertProductNames, alertsCount, bookmarksCount, commentsCount, tactics);
+        }
+
+        public IncidentAdditionalDataResponse build() {
+            $.alertProductNames = Objects.requireNonNull($.alertProductNames, "expected parameter 'alertProductNames' to be non-null");
+            $.alertsCount = Objects.requireNonNull($.alertsCount, "expected parameter 'alertsCount' to be non-null");
+            $.bookmarksCount = Objects.requireNonNull($.bookmarksCount, "expected parameter 'bookmarksCount' to be non-null");
+            $.commentsCount = Objects.requireNonNull($.commentsCount, "expected parameter 'commentsCount' to be non-null");
+            $.tactics = Objects.requireNonNull($.tactics, "expected parameter 'tactics' to be non-null");
+            return $;
         }
     }
+
 }

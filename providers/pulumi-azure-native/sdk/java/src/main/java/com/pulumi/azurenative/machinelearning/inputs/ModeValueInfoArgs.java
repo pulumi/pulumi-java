@@ -6,10 +6,10 @@ package com.pulumi.azurenative.machinelearning.inputs;
 import com.pulumi.azurenative.machinelearning.inputs.ModuleAssetParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ModeValueInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interfaceString")
-      private final @Nullable Output<String> interfaceString;
+    private @Nullable Output<String> interfaceString;
 
-    public Output<String> interfaceString() {
-        return this.interfaceString == null ? Codegen.empty() : this.interfaceString;
+    public Optional<Output<String>> interfaceString() {
+        return Optional.ofNullable(this.interfaceString);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ModeValueInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
+    private @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
-    public Output<List<ModuleAssetParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ModuleAssetParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public ModeValueInfoArgs(
-        @Nullable Output<String> interfaceString,
-        @Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
-        this.interfaceString = interfaceString;
-        this.parameters = parameters;
-    }
+    private ModeValueInfoArgs() {}
 
-    private ModeValueInfoArgs() {
-        this.interfaceString = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private ModeValueInfoArgs(ModeValueInfoArgs $) {
+        this.interfaceString = $.interfaceString;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModeValueInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> interfaceString;
-        private @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
+        private ModeValueInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModeValueInfoArgs();
         }
 
         public Builder(ModeValueInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interfaceString = defaults.interfaceString;
-    	      this.parameters = defaults.parameters;
+            $ = new ModeValueInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interfaceString(@Nullable Output<String> interfaceString) {
-            this.interfaceString = interfaceString;
+            $.interfaceString = interfaceString;
             return this;
         }
-        public Builder interfaceString(@Nullable String interfaceString) {
-            this.interfaceString = Codegen.ofNullable(interfaceString);
-            return this;
+
+        public Builder interfaceString(String interfaceString) {
+            return interfaceString(Output.of(interfaceString));
         }
+
         public Builder parameters(@Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ModuleAssetParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ModuleAssetParameterArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public ModeValueInfoArgs build() {
-            return new ModeValueInfoArgs(interfaceString, parameters);
+        }
+
+        public ModeValueInfoArgs build() {
+            return $;
         }
     }
+
 }

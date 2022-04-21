@@ -13,62 +13,59 @@ public final class ConnectionBasicAuthParameters extends com.pulumi.resources.In
     public static final ConnectionBasicAuthParameters Empty = new ConnectionBasicAuthParameters();
 
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
     }
 
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public ConnectionBasicAuthParameters(
-        String password,
-        String username) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private ConnectionBasicAuthParameters() {}
 
-    private ConnectionBasicAuthParameters() {
-        this.password = null;
-        this.username = null;
+    private ConnectionBasicAuthParameters(ConnectionBasicAuthParameters $) {
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionBasicAuthParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String password;
-        private String username;
+        private ConnectionBasicAuthParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionBasicAuthParameters();
         }
 
         public Builder(ConnectionBasicAuthParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new ConnectionBasicAuthParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public ConnectionBasicAuthParameters build() {
-            return new ConnectionBasicAuthParameters(password, username);
+        }
+
+        public ConnectionBasicAuthParameters build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customDns", required=true)
-      private final CustomDnsResponse customDns;
+    private CustomDnsResponse customDns;
 
     public CustomDnsResponse customDns() {
         return this.customDns;
@@ -35,7 +35,7 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="glueRecords", required=true)
-      private final List<GlueRecordResponse> glueRecords;
+    private List<GlueRecordResponse> glueRecords;
 
     public List<GlueRecordResponse> glueRecords() {
         return this.glueRecords;
@@ -46,67 +46,63 @@ public final class DnsSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="googleDomainsDns", required=true)
-      private final GoogleDomainsDnsResponse googleDomainsDns;
+    private GoogleDomainsDnsResponse googleDomainsDns;
 
     public GoogleDomainsDnsResponse googleDomainsDns() {
         return this.googleDomainsDns;
     }
 
-    public DnsSettingsResponse(
-        CustomDnsResponse customDns,
-        List<GlueRecordResponse> glueRecords,
-        GoogleDomainsDnsResponse googleDomainsDns) {
-        this.customDns = Objects.requireNonNull(customDns, "expected parameter 'customDns' to be non-null");
-        this.glueRecords = Objects.requireNonNull(glueRecords, "expected parameter 'glueRecords' to be non-null");
-        this.googleDomainsDns = Objects.requireNonNull(googleDomainsDns, "expected parameter 'googleDomainsDns' to be non-null");
-    }
+    private DnsSettingsResponse() {}
 
-    private DnsSettingsResponse() {
-        this.customDns = null;
-        this.glueRecords = List.of();
-        this.googleDomainsDns = null;
+    private DnsSettingsResponse(DnsSettingsResponse $) {
+        this.customDns = $.customDns;
+        this.glueRecords = $.glueRecords;
+        this.googleDomainsDns = $.googleDomainsDns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CustomDnsResponse customDns;
-        private List<GlueRecordResponse> glueRecords;
-        private GoogleDomainsDnsResponse googleDomainsDns;
+        private DnsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsSettingsResponse();
         }
 
         public Builder(DnsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customDns = defaults.customDns;
-    	      this.glueRecords = defaults.glueRecords;
-    	      this.googleDomainsDns = defaults.googleDomainsDns;
+            $ = new DnsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customDns(CustomDnsResponse customDns) {
-            this.customDns = Objects.requireNonNull(customDns);
+            $.customDns = customDns;
             return this;
         }
+
         public Builder glueRecords(List<GlueRecordResponse> glueRecords) {
-            this.glueRecords = Objects.requireNonNull(glueRecords);
+            $.glueRecords = glueRecords;
             return this;
         }
+
         public Builder glueRecords(GlueRecordResponse... glueRecords) {
             return glueRecords(List.of(glueRecords));
         }
+
         public Builder googleDomainsDns(GoogleDomainsDnsResponse googleDomainsDns) {
-            this.googleDomainsDns = Objects.requireNonNull(googleDomainsDns);
+            $.googleDomainsDns = googleDomainsDns;
             return this;
-        }        public DnsSettingsResponse build() {
-            return new DnsSettingsResponse(customDns, glueRecords, googleDomainsDns);
+        }
+
+        public DnsSettingsResponse build() {
+            $.customDns = Objects.requireNonNull($.customDns, "expected parameter 'customDns' to be non-null");
+            $.glueRecords = Objects.requireNonNull($.glueRecords, "expected parameter 'glueRecords' to be non-null");
+            $.googleDomainsDns = Objects.requireNonNull($.googleDomainsDns, "expected parameter 'googleDomainsDns' to be non-null");
+            return $;
         }
     }
+
 }

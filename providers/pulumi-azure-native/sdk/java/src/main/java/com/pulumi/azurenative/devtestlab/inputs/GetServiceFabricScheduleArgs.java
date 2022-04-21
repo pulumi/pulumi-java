@@ -19,10 +19,10 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="labName", required=true)
-      private final String labName;
+    private String labName;
 
     public String labName() {
         return this.labName;
@@ -41,7 +41,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -52,7 +52,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="serviceFabricName", required=true)
-      private final String serviceFabricName;
+    private String serviceFabricName;
 
     public String serviceFabricName() {
         return this.serviceFabricName;
@@ -74,91 +74,79 @@ public final class GetServiceFabricScheduleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public GetServiceFabricScheduleArgs(
-        @Nullable String expand,
-        String labName,
-        String name,
-        String resourceGroupName,
-        String serviceFabricName,
-        String userName) {
-        this.expand = expand;
-        this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceFabricName = Objects.requireNonNull(serviceFabricName, "expected parameter 'serviceFabricName' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private GetServiceFabricScheduleArgs() {}
 
-    private GetServiceFabricScheduleArgs() {
-        this.expand = null;
-        this.labName = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.serviceFabricName = null;
-        this.userName = null;
+    private GetServiceFabricScheduleArgs(GetServiceFabricScheduleArgs $) {
+        this.expand = $.expand;
+        this.labName = $.labName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceFabricName = $.serviceFabricName;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceFabricScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String labName;
-        private String name;
-        private String resourceGroupName;
-        private String serviceFabricName;
-        private String userName;
+        private GetServiceFabricScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceFabricScheduleArgs();
         }
 
         public Builder(GetServiceFabricScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.labName = defaults.labName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceFabricName = defaults.serviceFabricName;
-    	      this.userName = defaults.userName;
+            $ = new GetServiceFabricScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder labName(String labName) {
-            this.labName = Objects.requireNonNull(labName);
+            $.labName = labName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceFabricName(String serviceFabricName) {
-            this.serviceFabricName = Objects.requireNonNull(serviceFabricName);
+            $.serviceFabricName = serviceFabricName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public GetServiceFabricScheduleArgs build() {
-            return new GetServiceFabricScheduleArgs(expand, labName, name, resourceGroupName, serviceFabricName, userName);
+        }
+
+        public GetServiceFabricScheduleArgs build() {
+            $.labName = Objects.requireNonNull($.labName, "expected parameter 'labName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceFabricName = Objects.requireNonNull($.serviceFabricName, "expected parameter 'serviceFabricName' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

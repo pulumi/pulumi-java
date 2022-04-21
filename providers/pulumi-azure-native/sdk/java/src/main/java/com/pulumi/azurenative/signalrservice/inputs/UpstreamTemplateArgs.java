@@ -5,9 +5,9 @@ package com.pulumi.azurenative.signalrservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class UpstreamTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="categoryPattern")
-      private final @Nullable Output<String> categoryPattern;
+    private @Nullable Output<String> categoryPattern;
 
-    public Output<String> categoryPattern() {
-        return this.categoryPattern == null ? Codegen.empty() : this.categoryPattern;
+    public Optional<Output<String>> categoryPattern() {
+        return Optional.ofNullable(this.categoryPattern);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class UpstreamTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="eventPattern")
-      private final @Nullable Output<String> eventPattern;
+    private @Nullable Output<String> eventPattern;
 
-    public Output<String> eventPattern() {
-        return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
+    public Optional<Output<String>> eventPattern() {
+        return Optional.ofNullable(this.eventPattern);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class UpstreamTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="hubPattern")
-      private final @Nullable Output<String> hubPattern;
+    private @Nullable Output<String> hubPattern;
 
-    public Output<String> hubPattern() {
-        return this.hubPattern == null ? Codegen.empty() : this.hubPattern;
+    public Optional<Output<String>> hubPattern() {
+        return Optional.ofNullable(this.hubPattern);
     }
 
     /**
@@ -71,89 +71,79 @@ public final class UpstreamTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="urlTemplate", required=true)
-      private final Output<String> urlTemplate;
+    private Output<String> urlTemplate;
 
     public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
 
-    public UpstreamTemplateArgs(
-        @Nullable Output<String> categoryPattern,
-        @Nullable Output<String> eventPattern,
-        @Nullable Output<String> hubPattern,
-        Output<String> urlTemplate) {
-        this.categoryPattern = categoryPattern;
-        this.eventPattern = eventPattern;
-        this.hubPattern = hubPattern;
-        this.urlTemplate = Objects.requireNonNull(urlTemplate, "expected parameter 'urlTemplate' to be non-null");
-    }
+    private UpstreamTemplateArgs() {}
 
-    private UpstreamTemplateArgs() {
-        this.categoryPattern = Codegen.empty();
-        this.eventPattern = Codegen.empty();
-        this.hubPattern = Codegen.empty();
-        this.urlTemplate = Codegen.empty();
+    private UpstreamTemplateArgs(UpstreamTemplateArgs $) {
+        this.categoryPattern = $.categoryPattern;
+        this.eventPattern = $.eventPattern;
+        this.hubPattern = $.hubPattern;
+        this.urlTemplate = $.urlTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpstreamTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> categoryPattern;
-        private @Nullable Output<String> eventPattern;
-        private @Nullable Output<String> hubPattern;
-        private Output<String> urlTemplate;
+        private UpstreamTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpstreamTemplateArgs();
         }
 
         public Builder(UpstreamTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categoryPattern = defaults.categoryPattern;
-    	      this.eventPattern = defaults.eventPattern;
-    	      this.hubPattern = defaults.hubPattern;
-    	      this.urlTemplate = defaults.urlTemplate;
+            $ = new UpstreamTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder categoryPattern(@Nullable Output<String> categoryPattern) {
-            this.categoryPattern = categoryPattern;
+            $.categoryPattern = categoryPattern;
             return this;
         }
-        public Builder categoryPattern(@Nullable String categoryPattern) {
-            this.categoryPattern = Codegen.ofNullable(categoryPattern);
-            return this;
+
+        public Builder categoryPattern(String categoryPattern) {
+            return categoryPattern(Output.of(categoryPattern));
         }
+
         public Builder eventPattern(@Nullable Output<String> eventPattern) {
-            this.eventPattern = eventPattern;
+            $.eventPattern = eventPattern;
             return this;
         }
-        public Builder eventPattern(@Nullable String eventPattern) {
-            this.eventPattern = Codegen.ofNullable(eventPattern);
-            return this;
+
+        public Builder eventPattern(String eventPattern) {
+            return eventPattern(Output.of(eventPattern));
         }
+
         public Builder hubPattern(@Nullable Output<String> hubPattern) {
-            this.hubPattern = hubPattern;
+            $.hubPattern = hubPattern;
             return this;
         }
-        public Builder hubPattern(@Nullable String hubPattern) {
-            this.hubPattern = Codegen.ofNullable(hubPattern);
-            return this;
+
+        public Builder hubPattern(String hubPattern) {
+            return hubPattern(Output.of(hubPattern));
         }
+
         public Builder urlTemplate(Output<String> urlTemplate) {
-            this.urlTemplate = Objects.requireNonNull(urlTemplate);
+            $.urlTemplate = urlTemplate;
             return this;
         }
+
         public Builder urlTemplate(String urlTemplate) {
-            this.urlTemplate = Output.of(Objects.requireNonNull(urlTemplate));
-            return this;
-        }        public UpstreamTemplateArgs build() {
-            return new UpstreamTemplateArgs(categoryPattern, eventPattern, hubPattern, urlTemplate);
+            return urlTemplate(Output.of(urlTemplate));
+        }
+
+        public UpstreamTemplateArgs build() {
+            $.urlTemplate = Objects.requireNonNull($.urlTemplate, "expected parameter 'urlTemplate' to be non-null");
+            return $;
         }
     }
+
 }

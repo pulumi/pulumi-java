@@ -17,7 +17,7 @@ public final class PacketMirroringNetworkInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="canonicalUrl", required=true)
-      private final String canonicalUrl;
+    private String canonicalUrl;
 
     public String canonicalUrl() {
         return this.canonicalUrl;
@@ -28,55 +28,52 @@ public final class PacketMirroringNetworkInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public PacketMirroringNetworkInfoResponse(
-        String canonicalUrl,
-        String url) {
-        this.canonicalUrl = Objects.requireNonNull(canonicalUrl, "expected parameter 'canonicalUrl' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private PacketMirroringNetworkInfoResponse() {}
 
-    private PacketMirroringNetworkInfoResponse() {
-        this.canonicalUrl = null;
-        this.url = null;
+    private PacketMirroringNetworkInfoResponse(PacketMirroringNetworkInfoResponse $) {
+        this.canonicalUrl = $.canonicalUrl;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketMirroringNetworkInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String canonicalUrl;
-        private String url;
+        private PacketMirroringNetworkInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketMirroringNetworkInfoResponse();
         }
 
         public Builder(PacketMirroringNetworkInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalUrl = defaults.canonicalUrl;
-    	      this.url = defaults.url;
+            $ = new PacketMirroringNetworkInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalUrl(String canonicalUrl) {
-            this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
+            $.canonicalUrl = canonicalUrl;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public PacketMirroringNetworkInfoResponse build() {
-            return new PacketMirroringNetworkInfoResponse(canonicalUrl, url);
+        }
+
+        public PacketMirroringNetworkInfoResponse build() {
+            $.canonicalUrl = Objects.requireNonNull($.canonicalUrl, "expected parameter 'canonicalUrl' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetInstanceProfileArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetInstanceProfileArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetInstanceProfileArgs() {}
 
-    private GetInstanceProfileArgs() {
-        this.name = null;
+    private GetInstanceProfileArgs(GetInstanceProfileArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetInstanceProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceProfileArgs();
         }
 
         public Builder(GetInstanceProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetInstanceProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetInstanceProfileArgs build() {
-            return new GetInstanceProfileArgs(name);
+        }
+
+        public GetInstanceProfileArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

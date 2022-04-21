@@ -5,10 +5,10 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.notebooks_v1.enums.SchedulerAcceleratorConfigType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SchedulerAcceleratorConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="coreCount")
-      private final @Nullable Output<String> coreCount;
+    private @Nullable Output<String> coreCount;
 
-    public Output<String> coreCount() {
-        return this.coreCount == null ? Codegen.empty() : this.coreCount;
+    public Optional<Output<String>> coreCount() {
+        return Optional.ofNullable(this.coreCount);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SchedulerAcceleratorConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<SchedulerAcceleratorConfigType> type;
+    private @Nullable Output<SchedulerAcceleratorConfigType> type;
 
-    public Output<SchedulerAcceleratorConfigType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<SchedulerAcceleratorConfigType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SchedulerAcceleratorConfigArgs(
-        @Nullable Output<String> coreCount,
-        @Nullable Output<SchedulerAcceleratorConfigType> type) {
-        this.coreCount = coreCount;
-        this.type = type;
-    }
+    private SchedulerAcceleratorConfigArgs() {}
 
-    private SchedulerAcceleratorConfigArgs() {
-        this.coreCount = Codegen.empty();
-        this.type = Codegen.empty();
+    private SchedulerAcceleratorConfigArgs(SchedulerAcceleratorConfigArgs $) {
+        this.coreCount = $.coreCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulerAcceleratorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> coreCount;
-        private @Nullable Output<SchedulerAcceleratorConfigType> type;
+        private SchedulerAcceleratorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulerAcceleratorConfigArgs();
         }
 
         public Builder(SchedulerAcceleratorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coreCount = defaults.coreCount;
-    	      this.type = defaults.type;
+            $ = new SchedulerAcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder coreCount(@Nullable Output<String> coreCount) {
-            this.coreCount = coreCount;
+            $.coreCount = coreCount;
             return this;
         }
-        public Builder coreCount(@Nullable String coreCount) {
-            this.coreCount = Codegen.ofNullable(coreCount);
-            return this;
+
+        public Builder coreCount(String coreCount) {
+            return coreCount(Output.of(coreCount));
         }
+
         public Builder type(@Nullable Output<SchedulerAcceleratorConfigType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable SchedulerAcceleratorConfigType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SchedulerAcceleratorConfigArgs build() {
-            return new SchedulerAcceleratorConfigArgs(coreCount, type);
+
+        public Builder type(SchedulerAcceleratorConfigType type) {
+            return type(Output.of(type));
+        }
+
+        public SchedulerAcceleratorConfigArgs build() {
+            return $;
         }
     }
+
 }

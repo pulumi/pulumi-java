@@ -5,11 +5,11 @@ package com.pulumi.aws.ram;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowExternalPrincipals")
-      private final @Nullable Output<Boolean> allowExternalPrincipals;
+    private @Nullable Output<Boolean> allowExternalPrincipals;
 
-    public Output<Boolean> allowExternalPrincipals() {
-        return this.allowExternalPrincipals == null ? Codegen.empty() : this.allowExternalPrincipals;
+    public Optional<Output<Boolean>> allowExternalPrincipals() {
+        return Optional.ofNullable(this.allowExternalPrincipals);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class ResourceShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ResourceShareArgs(
-        @Nullable Output<Boolean> allowExternalPrincipals,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags) {
-        this.allowExternalPrincipals = allowExternalPrincipals;
-        this.name = name;
-        this.tags = tags;
-    }
+    private ResourceShareArgs() {}
 
-    private ResourceShareArgs() {
-        this.allowExternalPrincipals = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ResourceShareArgs(ResourceShareArgs $) {
+        this.allowExternalPrincipals = $.allowExternalPrincipals;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowExternalPrincipals;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
+        private ResourceShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceShareArgs();
         }
 
         public Builder(ResourceShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowExternalPrincipals = defaults.allowExternalPrincipals;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ResourceShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowExternalPrincipals(@Nullable Output<Boolean> allowExternalPrincipals) {
-            this.allowExternalPrincipals = allowExternalPrincipals;
+            $.allowExternalPrincipals = allowExternalPrincipals;
             return this;
         }
-        public Builder allowExternalPrincipals(@Nullable Boolean allowExternalPrincipals) {
-            this.allowExternalPrincipals = Codegen.ofNullable(allowExternalPrincipals);
-            return this;
+
+        public Builder allowExternalPrincipals(Boolean allowExternalPrincipals) {
+            return allowExternalPrincipals(Output.of(allowExternalPrincipals));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ResourceShareArgs build() {
-            return new ResourceShareArgs(allowExternalPrincipals, name, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ResourceShareArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable String defaultValue;
+    private @Nullable String defaultValue;
 
     public Optional<String> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -58,10 +58,10 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="required")
-      private final @Nullable Boolean required;
+    private @Nullable Boolean required;
 
     public Optional<Boolean> required() {
-        return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
+        return Optional.ofNullable(this.required);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -80,94 +80,80 @@ public final class ParameterContractResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ParameterContractResponse(
-        @Nullable String defaultValue,
-        @Nullable String description,
-        String name,
-        @Nullable Boolean required,
-        String type,
-        @Nullable List<String> values) {
-        this.defaultValue = defaultValue;
-        this.description = description;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.required = required;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.values = values;
-    }
+    private ParameterContractResponse() {}
 
-    private ParameterContractResponse() {
-        this.defaultValue = null;
-        this.description = null;
-        this.name = null;
-        this.required = null;
-        this.type = null;
-        this.values = List.of();
+    private ParameterContractResponse(ParameterContractResponse $) {
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.name = $.name;
+        this.required = $.required;
+        this.type = $.type;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultValue;
-        private @Nullable String description;
-        private String name;
-        private @Nullable Boolean required;
-        private String type;
-        private @Nullable List<String> values;
+        private ParameterContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterContractResponse();
         }
 
         public Builder(ParameterContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.required = defaults.required;
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
+            $ = new ParameterContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder required(@Nullable Boolean required) {
-            this.required = required;
+            $.required = required;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ParameterContractResponse build() {
-            return new ParameterContractResponse(defaultValue, description, name, required, type, values);
+        }
+
+        public ParameterContractResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

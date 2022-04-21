@@ -24,10 +24,10 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
      * 
      */
     @Import(name="currentCount")
-      private final @Nullable Integer currentCount;
+    private @Nullable Integer currentCount;
 
     public Optional<Integer> currentCount() {
-        return this.currentCount == null ? Optional.empty() : Optional.ofNullable(this.currentCount);
+        return Optional.ofNullable(this.currentCount);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
      * 
      */
     @Import(name="maxCount")
-      private final @Nullable Integer maxCount;
+    private @Nullable Integer maxCount;
 
     public Optional<Integer> maxCount() {
-        return this.maxCount == null ? Optional.empty() : Optional.ofNullable(this.maxCount);
+        return Optional.ofNullable(this.maxCount);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class WarmStorageEnvironmentStatusResponse extends com.pulumi.resou
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public WarmStorageEnvironmentStatusResponse(
-        @Nullable Integer currentCount,
-        @Nullable Integer maxCount,
-        @Nullable String state) {
-        this.currentCount = currentCount;
-        this.maxCount = maxCount;
-        this.state = state;
-    }
+    private WarmStorageEnvironmentStatusResponse() {}
 
-    private WarmStorageEnvironmentStatusResponse() {
-        this.currentCount = null;
-        this.maxCount = null;
-        this.state = null;
+    private WarmStorageEnvironmentStatusResponse(WarmStorageEnvironmentStatusResponse $) {
+        this.currentCount = $.currentCount;
+        this.maxCount = $.maxCount;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WarmStorageEnvironmentStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer currentCount;
-        private @Nullable Integer maxCount;
-        private @Nullable String state;
+        private WarmStorageEnvironmentStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WarmStorageEnvironmentStatusResponse();
         }
 
         public Builder(WarmStorageEnvironmentStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentCount = defaults.currentCount;
-    	      this.maxCount = defaults.maxCount;
-    	      this.state = defaults.state;
+            $ = new WarmStorageEnvironmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentCount(@Nullable Integer currentCount) {
-            this.currentCount = currentCount;
+            $.currentCount = currentCount;
             return this;
         }
+
         public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = maxCount;
+            $.maxCount = maxCount;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public WarmStorageEnvironmentStatusResponse build() {
-            return new WarmStorageEnvironmentStatusResponse(currentCount, maxCount, state);
+        }
+
+        public WarmStorageEnvironmentStatusResponse build() {
+            return $;
         }
     }
+
 }

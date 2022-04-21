@@ -21,7 +21,7 @@ public final class DeviceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="binaryData", required=true)
-      private final String binaryData;
+    private String binaryData;
 
     public String binaryData() {
         return this.binaryData;
@@ -32,7 +32,7 @@ public final class DeviceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cloudUpdateTime", required=true)
-      private final String cloudUpdateTime;
+    private String cloudUpdateTime;
 
     public String cloudUpdateTime() {
         return this.cloudUpdateTime;
@@ -43,7 +43,7 @@ public final class DeviceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="deviceAckTime", required=true)
-      private final String deviceAckTime;
+    private String deviceAckTime;
 
     public String deviceAckTime() {
         return this.deviceAckTime;
@@ -54,73 +54,66 @@ public final class DeviceConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public DeviceConfigResponse(
-        String binaryData,
-        String cloudUpdateTime,
-        String deviceAckTime,
-        String version) {
-        this.binaryData = Objects.requireNonNull(binaryData, "expected parameter 'binaryData' to be non-null");
-        this.cloudUpdateTime = Objects.requireNonNull(cloudUpdateTime, "expected parameter 'cloudUpdateTime' to be non-null");
-        this.deviceAckTime = Objects.requireNonNull(deviceAckTime, "expected parameter 'deviceAckTime' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private DeviceConfigResponse() {}
 
-    private DeviceConfigResponse() {
-        this.binaryData = null;
-        this.cloudUpdateTime = null;
-        this.deviceAckTime = null;
-        this.version = null;
+    private DeviceConfigResponse(DeviceConfigResponse $) {
+        this.binaryData = $.binaryData;
+        this.cloudUpdateTime = $.cloudUpdateTime;
+        this.deviceAckTime = $.deviceAckTime;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String binaryData;
-        private String cloudUpdateTime;
-        private String deviceAckTime;
-        private String version;
+        private DeviceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceConfigResponse();
         }
 
         public Builder(DeviceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.binaryData = defaults.binaryData;
-    	      this.cloudUpdateTime = defaults.cloudUpdateTime;
-    	      this.deviceAckTime = defaults.deviceAckTime;
-    	      this.version = defaults.version;
+            $ = new DeviceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder binaryData(String binaryData) {
-            this.binaryData = Objects.requireNonNull(binaryData);
+            $.binaryData = binaryData;
             return this;
         }
+
         public Builder cloudUpdateTime(String cloudUpdateTime) {
-            this.cloudUpdateTime = Objects.requireNonNull(cloudUpdateTime);
+            $.cloudUpdateTime = cloudUpdateTime;
             return this;
         }
+
         public Builder deviceAckTime(String deviceAckTime) {
-            this.deviceAckTime = Objects.requireNonNull(deviceAckTime);
+            $.deviceAckTime = deviceAckTime;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public DeviceConfigResponse build() {
-            return new DeviceConfigResponse(binaryData, cloudUpdateTime, deviceAckTime, version);
+        }
+
+        public DeviceConfigResponse build() {
+            $.binaryData = Objects.requireNonNull($.binaryData, "expected parameter 'binaryData' to be non-null");
+            $.cloudUpdateTime = Objects.requireNonNull($.cloudUpdateTime, "expected parameter 'cloudUpdateTime' to be non-null");
+            $.deviceAckTime = Objects.requireNonNull($.deviceAckTime, "expected parameter 'deviceAckTime' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SourceArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SourceCrowdingConfigArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.SourceScoringConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="crowdingConfig")
-      private final @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig;
+    private @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig;
 
-    public Output<SourceCrowdingConfigArgs> crowdingConfig() {
-        return this.crowdingConfig == null ? Codegen.empty() : this.crowdingConfig;
+    public Optional<Output<SourceCrowdingConfigArgs>> crowdingConfig() {
+        return Optional.ofNullable(this.crowdingConfig);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scoringConfig")
-      private final @Nullable Output<SourceScoringConfigArgs> scoringConfig;
+    private @Nullable Output<SourceScoringConfigArgs> scoringConfig;
 
-    public Output<SourceScoringConfigArgs> scoringConfig() {
-        return this.scoringConfig == null ? Codegen.empty() : this.scoringConfig;
+    public Optional<Output<SourceScoringConfigArgs>> scoringConfig() {
+        return Optional.ofNullable(this.scoringConfig);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<SourceArgs> source;
+    private @Nullable Output<SourceArgs> source;
 
-    public Output<SourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<SourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public SourceConfigArgs(
-        @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig,
-        @Nullable Output<SourceScoringConfigArgs> scoringConfig,
-        @Nullable Output<SourceArgs> source) {
-        this.crowdingConfig = crowdingConfig;
-        this.scoringConfig = scoringConfig;
-        this.source = source;
-    }
+    private SourceConfigArgs() {}
 
-    private SourceConfigArgs() {
-        this.crowdingConfig = Codegen.empty();
-        this.scoringConfig = Codegen.empty();
-        this.source = Codegen.empty();
+    private SourceConfigArgs(SourceConfigArgs $) {
+        this.crowdingConfig = $.crowdingConfig;
+        this.scoringConfig = $.scoringConfig;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig;
-        private @Nullable Output<SourceScoringConfigArgs> scoringConfig;
-        private @Nullable Output<SourceArgs> source;
+        private SourceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceConfigArgs();
         }
 
         public Builder(SourceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crowdingConfig = defaults.crowdingConfig;
-    	      this.scoringConfig = defaults.scoringConfig;
-    	      this.source = defaults.source;
+            $ = new SourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crowdingConfig(@Nullable Output<SourceCrowdingConfigArgs> crowdingConfig) {
-            this.crowdingConfig = crowdingConfig;
+            $.crowdingConfig = crowdingConfig;
             return this;
         }
-        public Builder crowdingConfig(@Nullable SourceCrowdingConfigArgs crowdingConfig) {
-            this.crowdingConfig = Codegen.ofNullable(crowdingConfig);
-            return this;
+
+        public Builder crowdingConfig(SourceCrowdingConfigArgs crowdingConfig) {
+            return crowdingConfig(Output.of(crowdingConfig));
         }
+
         public Builder scoringConfig(@Nullable Output<SourceScoringConfigArgs> scoringConfig) {
-            this.scoringConfig = scoringConfig;
+            $.scoringConfig = scoringConfig;
             return this;
         }
-        public Builder scoringConfig(@Nullable SourceScoringConfigArgs scoringConfig) {
-            this.scoringConfig = Codegen.ofNullable(scoringConfig);
-            return this;
+
+        public Builder scoringConfig(SourceScoringConfigArgs scoringConfig) {
+            return scoringConfig(Output.of(scoringConfig));
         }
+
         public Builder source(@Nullable Output<SourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable SourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public SourceConfigArgs build() {
-            return new SourceConfigArgs(crowdingConfig, scoringConfig, source);
+
+        public Builder source(SourceArgs source) {
+            return source(Output.of(source));
+        }
+
+        public SourceConfigArgs build() {
+            return $;
         }
     }
+
 }

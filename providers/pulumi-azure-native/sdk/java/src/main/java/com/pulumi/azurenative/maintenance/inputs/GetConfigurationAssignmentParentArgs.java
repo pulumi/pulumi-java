@@ -17,7 +17,7 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="configurationAssignmentName", required=true)
-      private final String configurationAssignmentName;
+    private String configurationAssignmentName;
 
     public String configurationAssignmentName() {
         return this.configurationAssignmentName;
@@ -28,7 +28,7 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="providerName", required=true)
-      private final String providerName;
+    private String providerName;
 
     public String providerName() {
         return this.providerName;
@@ -39,7 +39,7 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -61,7 +61,7 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceParentName", required=true)
-      private final String resourceParentName;
+    private String resourceParentName;
 
     public String resourceParentName() {
         return this.resourceParentName;
@@ -72,7 +72,7 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceParentType", required=true)
-      private final String resourceParentType;
+    private String resourceParentType;
 
     public String resourceParentType() {
         return this.resourceParentType;
@@ -83,100 +83,87 @@ public final class GetConfigurationAssignmentParentArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public GetConfigurationAssignmentParentArgs(
-        String configurationAssignmentName,
-        String providerName,
-        String resourceGroupName,
-        String resourceName,
-        String resourceParentName,
-        String resourceParentType,
-        String resourceType) {
-        this.configurationAssignmentName = Objects.requireNonNull(configurationAssignmentName, "expected parameter 'configurationAssignmentName' to be non-null");
-        this.providerName = Objects.requireNonNull(providerName, "expected parameter 'providerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.resourceParentName = Objects.requireNonNull(resourceParentName, "expected parameter 'resourceParentName' to be non-null");
-        this.resourceParentType = Objects.requireNonNull(resourceParentType, "expected parameter 'resourceParentType' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private GetConfigurationAssignmentParentArgs() {}
 
-    private GetConfigurationAssignmentParentArgs() {
-        this.configurationAssignmentName = null;
-        this.providerName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.resourceParentName = null;
-        this.resourceParentType = null;
-        this.resourceType = null;
+    private GetConfigurationAssignmentParentArgs(GetConfigurationAssignmentParentArgs $) {
+        this.configurationAssignmentName = $.configurationAssignmentName;
+        this.providerName = $.providerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.resourceParentName = $.resourceParentName;
+        this.resourceParentType = $.resourceParentType;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigurationAssignmentParentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationAssignmentName;
-        private String providerName;
-        private String resourceGroupName;
-        private String resourceName;
-        private String resourceParentName;
-        private String resourceParentType;
-        private String resourceType;
+        private GetConfigurationAssignmentParentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigurationAssignmentParentArgs();
         }
 
         public Builder(GetConfigurationAssignmentParentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationAssignmentName = defaults.configurationAssignmentName;
-    	      this.providerName = defaults.providerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.resourceParentName = defaults.resourceParentName;
-    	      this.resourceParentType = defaults.resourceParentType;
-    	      this.resourceType = defaults.resourceType;
+            $ = new GetConfigurationAssignmentParentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationAssignmentName(String configurationAssignmentName) {
-            this.configurationAssignmentName = Objects.requireNonNull(configurationAssignmentName);
+            $.configurationAssignmentName = configurationAssignmentName;
             return this;
         }
+
         public Builder providerName(String providerName) {
-            this.providerName = Objects.requireNonNull(providerName);
+            $.providerName = providerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceParentName(String resourceParentName) {
-            this.resourceParentName = Objects.requireNonNull(resourceParentName);
+            $.resourceParentName = resourceParentName;
             return this;
         }
+
         public Builder resourceParentType(String resourceParentType) {
-            this.resourceParentType = Objects.requireNonNull(resourceParentType);
+            $.resourceParentType = resourceParentType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public GetConfigurationAssignmentParentArgs build() {
-            return new GetConfigurationAssignmentParentArgs(configurationAssignmentName, providerName, resourceGroupName, resourceName, resourceParentName, resourceParentType, resourceType);
+        }
+
+        public GetConfigurationAssignmentParentArgs build() {
+            $.configurationAssignmentName = Objects.requireNonNull($.configurationAssignmentName, "expected parameter 'configurationAssignmentName' to be non-null");
+            $.providerName = Objects.requireNonNull($.providerName, "expected parameter 'providerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.resourceParentName = Objects.requireNonNull($.resourceParentName, "expected parameter 'resourceParentName' to be non-null");
+            $.resourceParentType = Objects.requireNonNull($.resourceParentType, "expected parameter 'resourceParentType' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

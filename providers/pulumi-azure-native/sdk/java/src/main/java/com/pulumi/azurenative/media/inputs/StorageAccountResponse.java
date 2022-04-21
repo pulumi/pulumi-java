@@ -23,10 +23,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public StorageAccountResponse(
-        @Nullable String id,
-        String type) {
-        this.id = id;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private StorageAccountResponse() {}
 
-    private StorageAccountResponse() {
-        this.id = null;
-        this.type = null;
+    private StorageAccountResponse(StorageAccountResponse $) {
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private String type;
+        private StorageAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountResponse();
         }
 
         public Builder(StorageAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public StorageAccountResponse build() {
-            return new StorageAccountResponse(id, type);
+        }
+
+        public StorageAccountResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

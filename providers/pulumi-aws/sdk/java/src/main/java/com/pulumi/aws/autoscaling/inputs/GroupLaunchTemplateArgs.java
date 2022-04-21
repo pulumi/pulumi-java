@@ -5,9 +5,9 @@ package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GroupLaunchTemplateArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GroupLaunchTemplateArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class GroupLaunchTemplateArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public GroupLaunchTemplateArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<String> version) {
-        this.id = id;
-        this.name = name;
-        this.version = version;
-    }
+    private GroupLaunchTemplateArgs() {}
 
-    private GroupLaunchTemplateArgs() {
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.version = Codegen.empty();
+    private GroupLaunchTemplateArgs(GroupLaunchTemplateArgs $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupLaunchTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> version;
+        private GroupLaunchTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupLaunchTemplateArgs();
         }
 
         public Builder(GroupLaunchTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new GroupLaunchTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public GroupLaunchTemplateArgs build() {
-            return new GroupLaunchTemplateArgs(id, name, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public GroupLaunchTemplateArgs build() {
+            return $;
         }
     }
+
 }

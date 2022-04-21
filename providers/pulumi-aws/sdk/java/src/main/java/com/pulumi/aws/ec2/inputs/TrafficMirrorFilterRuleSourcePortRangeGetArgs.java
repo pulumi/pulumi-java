@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TrafficMirrorFilterRuleSourcePortRangeGetArgs extends com.pul
      * 
      */
     @Import(name="fromPort")
-      private final @Nullable Output<Integer> fromPort;
+    private @Nullable Output<Integer> fromPort;
 
-    public Output<Integer> fromPort() {
-        return this.fromPort == null ? Codegen.empty() : this.fromPort;
+    public Optional<Output<Integer>> fromPort() {
+        return Optional.ofNullable(this.fromPort);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class TrafficMirrorFilterRuleSourcePortRangeGetArgs extends com.pul
      * 
      */
     @Import(name="toPort")
-      private final @Nullable Output<Integer> toPort;
+    private @Nullable Output<Integer> toPort;
 
-    public Output<Integer> toPort() {
-        return this.toPort == null ? Codegen.empty() : this.toPort;
+    public Optional<Output<Integer>> toPort() {
+        return Optional.ofNullable(this.toPort);
     }
 
-    public TrafficMirrorFilterRuleSourcePortRangeGetArgs(
-        @Nullable Output<Integer> fromPort,
-        @Nullable Output<Integer> toPort) {
-        this.fromPort = fromPort;
-        this.toPort = toPort;
-    }
+    private TrafficMirrorFilterRuleSourcePortRangeGetArgs() {}
 
-    private TrafficMirrorFilterRuleSourcePortRangeGetArgs() {
-        this.fromPort = Codegen.empty();
-        this.toPort = Codegen.empty();
+    private TrafficMirrorFilterRuleSourcePortRangeGetArgs(TrafficMirrorFilterRuleSourcePortRangeGetArgs $) {
+        this.fromPort = $.fromPort;
+        this.toPort = $.toPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficMirrorFilterRuleSourcePortRangeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> fromPort;
-        private @Nullable Output<Integer> toPort;
+        private TrafficMirrorFilterRuleSourcePortRangeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficMirrorFilterRuleSourcePortRangeGetArgs();
         }
 
         public Builder(TrafficMirrorFilterRuleSourcePortRangeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fromPort = defaults.fromPort;
-    	      this.toPort = defaults.toPort;
+            $ = new TrafficMirrorFilterRuleSourcePortRangeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fromPort(@Nullable Output<Integer> fromPort) {
-            this.fromPort = fromPort;
+            $.fromPort = fromPort;
             return this;
         }
-        public Builder fromPort(@Nullable Integer fromPort) {
-            this.fromPort = Codegen.ofNullable(fromPort);
-            return this;
+
+        public Builder fromPort(Integer fromPort) {
+            return fromPort(Output.of(fromPort));
         }
+
         public Builder toPort(@Nullable Output<Integer> toPort) {
-            this.toPort = toPort;
+            $.toPort = toPort;
             return this;
         }
-        public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Codegen.ofNullable(toPort);
-            return this;
-        }        public TrafficMirrorFilterRuleSourcePortRangeGetArgs build() {
-            return new TrafficMirrorFilterRuleSourcePortRangeGetArgs(fromPort, toPort);
+
+        public Builder toPort(Integer toPort) {
+            return toPort(Output.of(toPort));
+        }
+
+        public TrafficMirrorFilterRuleSourcePortRangeGetArgs build() {
+            return $;
         }
     }
+
 }

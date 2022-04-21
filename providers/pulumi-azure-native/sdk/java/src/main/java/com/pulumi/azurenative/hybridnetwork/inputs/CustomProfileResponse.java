@@ -23,45 +23,44 @@ public final class CustomProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="metadataConfigurationPath")
-      private final @Nullable String metadataConfigurationPath;
+    private @Nullable String metadataConfigurationPath;
 
     public Optional<String> metadataConfigurationPath() {
-        return this.metadataConfigurationPath == null ? Optional.empty() : Optional.ofNullable(this.metadataConfigurationPath);
+        return Optional.ofNullable(this.metadataConfigurationPath);
     }
 
-    public CustomProfileResponse(@Nullable String metadataConfigurationPath) {
-        this.metadataConfigurationPath = metadataConfigurationPath;
-    }
+    private CustomProfileResponse() {}
 
-    private CustomProfileResponse() {
-        this.metadataConfigurationPath = null;
+    private CustomProfileResponse(CustomProfileResponse $) {
+        this.metadataConfigurationPath = $.metadataConfigurationPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String metadataConfigurationPath;
+        private CustomProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomProfileResponse();
         }
 
         public Builder(CustomProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataConfigurationPath = defaults.metadataConfigurationPath;
+            $ = new CustomProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
-            this.metadataConfigurationPath = metadataConfigurationPath;
+            $.metadataConfigurationPath = metadataConfigurationPath;
             return this;
-        }        public CustomProfileResponse build() {
-            return new CustomProfileResponse(metadataConfigurationPath);
+        }
+
+        public CustomProfileResponse build() {
+            return $;
         }
     }
+
 }

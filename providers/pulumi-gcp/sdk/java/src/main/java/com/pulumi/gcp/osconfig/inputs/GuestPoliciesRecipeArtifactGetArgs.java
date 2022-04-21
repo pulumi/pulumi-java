@@ -5,12 +5,12 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactGcsGetArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactRemoteGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="allowInsecure")
-      private final @Nullable Output<Boolean> allowInsecure;
+    private @Nullable Output<Boolean> allowInsecure;
 
-    public Output<Boolean> allowInsecure() {
-        return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
+    public Optional<Output<Boolean>> allowInsecure() {
+        return Optional.ofNullable(this.allowInsecure);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="gcs")
-      private final @Nullable Output<GuestPoliciesRecipeArtifactGcsGetArgs> gcs;
+    private @Nullable Output<GuestPoliciesRecipeArtifactGcsGetArgs> gcs;
 
-    public Output<GuestPoliciesRecipeArtifactGcsGetArgs> gcs() {
-        return this.gcs == null ? Codegen.empty() : this.gcs;
+    public Optional<Output<GuestPoliciesRecipeArtifactGcsGetArgs>> gcs() {
+        return Optional.ofNullable(this.gcs);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -61,89 +61,79 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="remote")
-      private final @Nullable Output<GuestPoliciesRecipeArtifactRemoteGetArgs> remote;
+    private @Nullable Output<GuestPoliciesRecipeArtifactRemoteGetArgs> remote;
 
-    public Output<GuestPoliciesRecipeArtifactRemoteGetArgs> remote() {
-        return this.remote == null ? Codegen.empty() : this.remote;
+    public Optional<Output<GuestPoliciesRecipeArtifactRemoteGetArgs>> remote() {
+        return Optional.ofNullable(this.remote);
     }
 
-    public GuestPoliciesRecipeArtifactGetArgs(
-        @Nullable Output<Boolean> allowInsecure,
-        @Nullable Output<GuestPoliciesRecipeArtifactGcsGetArgs> gcs,
-        Output<String> id,
-        @Nullable Output<GuestPoliciesRecipeArtifactRemoteGetArgs> remote) {
-        this.allowInsecure = allowInsecure;
-        this.gcs = gcs;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.remote = remote;
-    }
+    private GuestPoliciesRecipeArtifactGetArgs() {}
 
-    private GuestPoliciesRecipeArtifactGetArgs() {
-        this.allowInsecure = Codegen.empty();
-        this.gcs = Codegen.empty();
-        this.id = Codegen.empty();
-        this.remote = Codegen.empty();
+    private GuestPoliciesRecipeArtifactGetArgs(GuestPoliciesRecipeArtifactGetArgs $) {
+        this.allowInsecure = $.allowInsecure;
+        this.gcs = $.gcs;
+        this.id = $.id;
+        this.remote = $.remote;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesRecipeArtifactGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowInsecure;
-        private @Nullable Output<GuestPoliciesRecipeArtifactGcsGetArgs> gcs;
-        private Output<String> id;
-        private @Nullable Output<GuestPoliciesRecipeArtifactRemoteGetArgs> remote;
+        private GuestPoliciesRecipeArtifactGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesRecipeArtifactGetArgs();
         }
 
         public Builder(GuestPoliciesRecipeArtifactGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowInsecure = defaults.allowInsecure;
-    	      this.gcs = defaults.gcs;
-    	      this.id = defaults.id;
-    	      this.remote = defaults.remote;
+            $ = new GuestPoliciesRecipeArtifactGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowInsecure(@Nullable Output<Boolean> allowInsecure) {
-            this.allowInsecure = allowInsecure;
+            $.allowInsecure = allowInsecure;
             return this;
         }
-        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Codegen.ofNullable(allowInsecure);
-            return this;
+
+        public Builder allowInsecure(Boolean allowInsecure) {
+            return allowInsecure(Output.of(allowInsecure));
         }
+
         public Builder gcs(@Nullable Output<GuestPoliciesRecipeArtifactGcsGetArgs> gcs) {
-            this.gcs = gcs;
+            $.gcs = gcs;
             return this;
         }
-        public Builder gcs(@Nullable GuestPoliciesRecipeArtifactGcsGetArgs gcs) {
-            this.gcs = Codegen.ofNullable(gcs);
-            return this;
+
+        public Builder gcs(GuestPoliciesRecipeArtifactGcsGetArgs gcs) {
+            return gcs(Output.of(gcs));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder remote(@Nullable Output<GuestPoliciesRecipeArtifactRemoteGetArgs> remote) {
-            this.remote = remote;
+            $.remote = remote;
             return this;
         }
-        public Builder remote(@Nullable GuestPoliciesRecipeArtifactRemoteGetArgs remote) {
-            this.remote = Codegen.ofNullable(remote);
-            return this;
-        }        public GuestPoliciesRecipeArtifactGetArgs build() {
-            return new GuestPoliciesRecipeArtifactGetArgs(allowInsecure, gcs, id, remote);
+
+        public Builder remote(GuestPoliciesRecipeArtifactRemoteGetArgs remote) {
+            return remote(Output.of(remote));
+        }
+
+        public GuestPoliciesRecipeArtifactGetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

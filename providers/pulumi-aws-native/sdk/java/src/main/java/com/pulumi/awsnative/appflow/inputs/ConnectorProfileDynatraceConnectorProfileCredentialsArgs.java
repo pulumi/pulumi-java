@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
      * 
      */
     @Import(name="apiToken", required=true)
-      private final Output<String> apiToken;
+    private Output<String> apiToken;
 
     public Output<String> apiToken() {
         return this.apiToken;
     }
 
-    public ConnectorProfileDynatraceConnectorProfileCredentialsArgs(Output<String> apiToken) {
-        this.apiToken = Objects.requireNonNull(apiToken, "expected parameter 'apiToken' to be non-null");
-    }
+    private ConnectorProfileDynatraceConnectorProfileCredentialsArgs() {}
 
-    private ConnectorProfileDynatraceConnectorProfileCredentialsArgs() {
-        this.apiToken = Codegen.empty();
+    private ConnectorProfileDynatraceConnectorProfileCredentialsArgs(ConnectorProfileDynatraceConnectorProfileCredentialsArgs $) {
+        this.apiToken = $.apiToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileDynatraceConnectorProfileCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiToken;
+        private ConnectorProfileDynatraceConnectorProfileCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileDynatraceConnectorProfileCredentialsArgs();
         }
 
         public Builder(ConnectorProfileDynatraceConnectorProfileCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiToken = defaults.apiToken;
+            $ = new ConnectorProfileDynatraceConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiToken(Output<String> apiToken) {
-            this.apiToken = Objects.requireNonNull(apiToken);
+            $.apiToken = apiToken;
             return this;
         }
+
         public Builder apiToken(String apiToken) {
-            this.apiToken = Output.of(Objects.requireNonNull(apiToken));
-            return this;
-        }        public ConnectorProfileDynatraceConnectorProfileCredentialsArgs build() {
-            return new ConnectorProfileDynatraceConnectorProfileCredentialsArgs(apiToken);
+            return apiToken(Output.of(apiToken));
+        }
+
+        public ConnectorProfileDynatraceConnectorProfileCredentialsArgs build() {
+            $.apiToken = Objects.requireNonNull($.apiToken, "expected parameter 'apiToken' to be non-null");
+            return $;
         }
     }
+
 }

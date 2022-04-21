@@ -6,10 +6,10 @@ package com.pulumi.awsnative.route53recoverycontrol;
 import com.pulumi.awsnative.route53recoverycontrol.inputs.ClusterTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ClusterTagArgs>> tags;
+    private @Nullable Output<List<ClusterTagArgs>> tags;
 
-    public Output<List<ClusterTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ClusterTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ClusterArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<ClusterTagArgs>> tags) {
-        this.name = name;
-        this.tags = tags;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ClusterTagArgs>> tags;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<ClusterTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ClusterTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ClusterTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ClusterTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ClusterArgs build() {
-            return new ClusterArgs(name, tags);
+        }
+
+        public ClusterArgs build() {
+            return $;
         }
     }
+
 }

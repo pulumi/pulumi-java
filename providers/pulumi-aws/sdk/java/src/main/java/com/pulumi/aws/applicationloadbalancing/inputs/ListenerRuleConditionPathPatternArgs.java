@@ -5,7 +5,6 @@ package com.pulumi.aws.applicationloadbalancing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class ListenerRuleConditionPathPatternArgs extends com.pulumi.resou
      * 
      */
     @Import(name="values", required=true)
-      private final Output<List<String>> values;
+    private Output<List<String>> values;
 
     public Output<List<String>> values() {
         return this.values;
     }
 
-    public ListenerRuleConditionPathPatternArgs(Output<List<String>> values) {
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private ListenerRuleConditionPathPatternArgs() {}
 
-    private ListenerRuleConditionPathPatternArgs() {
-        this.values = Codegen.empty();
+    private ListenerRuleConditionPathPatternArgs(ListenerRuleConditionPathPatternArgs $) {
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleConditionPathPatternArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> values;
+        private ListenerRuleConditionPathPatternArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleConditionPathPatternArgs();
         }
 
         public Builder(ListenerRuleConditionPathPatternArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.values = defaults.values;
+            $ = new ListenerRuleConditionPathPatternArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder values(Output<List<String>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ListenerRuleConditionPathPatternArgs build() {
-            return new ListenerRuleConditionPathPatternArgs(values);
+        }
+
+        public ListenerRuleConditionPathPatternArgs build() {
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

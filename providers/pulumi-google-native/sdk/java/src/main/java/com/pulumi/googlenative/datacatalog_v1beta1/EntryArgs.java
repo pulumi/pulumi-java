@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datacatalog_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datacatalog_v1beta1.enums.EntryType;
 import com.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs;
 import com.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalog
 import com.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1SchemaArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigqueryDateShardedSpec")
-      private final @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec;
+    private @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec;
 
-    public Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec() {
-        return this.bigqueryDateShardedSpec == null ? Codegen.empty() : this.bigqueryDateShardedSpec;
+    public Optional<Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs>> bigqueryDateShardedSpec() {
+        return Optional.ofNullable(this.bigqueryDateShardedSpec);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigqueryTableSpec")
-      private final @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec;
+    private @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec;
 
-    public Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec() {
-        return this.bigqueryTableSpec == null ? Codegen.empty() : this.bigqueryTableSpec;
+    public Optional<Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs>> bigqueryTableSpec() {
+        return Optional.ofNullable(this.bigqueryTableSpec);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,21 +58,21 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="entryGroupId", required=true)
-      private final Output<String> entryGroupId;
+    private Output<String> entryGroupId;
 
     public Output<String> entryGroupId() {
         return this.entryGroupId;
     }
 
     @Import(name="entryId", required=true)
-      private final Output<String> entryId;
+    private Output<String> entryId;
 
     public Output<String> entryId() {
         return this.entryId;
@@ -83,10 +83,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsFilesetSpec")
-      private final @Nullable Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec;
+    private @Nullable Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec;
 
-    public Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec() {
-        return this.gcsFilesetSpec == null ? Codegen.empty() : this.gcsFilesetSpec;
+    public Optional<Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs>> gcsFilesetSpec() {
+        return Optional.ofNullable(this.gcsFilesetSpec);
     }
 
     /**
@@ -94,24 +94,24 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkedResource")
-      private final @Nullable Output<String> linkedResource;
+    private @Nullable Output<String> linkedResource;
 
-    public Output<String> linkedResource() {
-        return this.linkedResource == null ? Codegen.empty() : this.linkedResource;
+    public Optional<Output<String>> linkedResource() {
+        return Optional.ofNullable(this.linkedResource);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<GoogleCloudDatacatalogV1beta1SchemaArgs> schema;
+    private @Nullable Output<GoogleCloudDatacatalogV1beta1SchemaArgs> schema;
 
-    public Output<GoogleCloudDatacatalogV1beta1SchemaArgs> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<GoogleCloudDatacatalogV1beta1SchemaArgs>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<EntryType> type;
+    private @Nullable Output<EntryType> type;
 
-    public Output<EntryType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<EntryType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userSpecifiedSystem")
-      private final @Nullable Output<String> userSpecifiedSystem;
+    private @Nullable Output<String> userSpecifiedSystem;
 
-    public Output<String> userSpecifiedSystem() {
-        return this.userSpecifiedSystem == null ? Codegen.empty() : this.userSpecifiedSystem;
+    public Optional<Output<String>> userSpecifiedSystem() {
+        return Optional.ofNullable(this.userSpecifiedSystem);
     }
 
     /**
@@ -152,219 +152,180 @@ public final class EntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userSpecifiedType")
-      private final @Nullable Output<String> userSpecifiedType;
+    private @Nullable Output<String> userSpecifiedType;
 
-    public Output<String> userSpecifiedType() {
-        return this.userSpecifiedType == null ? Codegen.empty() : this.userSpecifiedType;
+    public Optional<Output<String>> userSpecifiedType() {
+        return Optional.ofNullable(this.userSpecifiedType);
     }
 
-    public EntryArgs(
-        @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec,
-        @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> entryGroupId,
-        Output<String> entryId,
-        @Nullable Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec,
-        @Nullable Output<String> linkedResource,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<GoogleCloudDatacatalogV1beta1SchemaArgs> schema,
-        @Nullable Output<EntryType> type,
-        @Nullable Output<String> userSpecifiedSystem,
-        @Nullable Output<String> userSpecifiedType) {
-        this.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
-        this.bigqueryTableSpec = bigqueryTableSpec;
-        this.description = description;
-        this.displayName = displayName;
-        this.entryGroupId = Objects.requireNonNull(entryGroupId, "expected parameter 'entryGroupId' to be non-null");
-        this.entryId = Objects.requireNonNull(entryId, "expected parameter 'entryId' to be non-null");
-        this.gcsFilesetSpec = gcsFilesetSpec;
-        this.linkedResource = linkedResource;
-        this.location = location;
-        this.project = project;
-        this.schema = schema;
-        this.type = type;
-        this.userSpecifiedSystem = userSpecifiedSystem;
-        this.userSpecifiedType = userSpecifiedType;
-    }
+    private EntryArgs() {}
 
-    private EntryArgs() {
-        this.bigqueryDateShardedSpec = Codegen.empty();
-        this.bigqueryTableSpec = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.entryGroupId = Codegen.empty();
-        this.entryId = Codegen.empty();
-        this.gcsFilesetSpec = Codegen.empty();
-        this.linkedResource = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userSpecifiedSystem = Codegen.empty();
-        this.userSpecifiedType = Codegen.empty();
+    private EntryArgs(EntryArgs $) {
+        this.bigqueryDateShardedSpec = $.bigqueryDateShardedSpec;
+        this.bigqueryTableSpec = $.bigqueryTableSpec;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.entryGroupId = $.entryGroupId;
+        this.entryId = $.entryId;
+        this.gcsFilesetSpec = $.gcsFilesetSpec;
+        this.linkedResource = $.linkedResource;
+        this.location = $.location;
+        this.project = $.project;
+        this.schema = $.schema;
+        this.type = $.type;
+        this.userSpecifiedSystem = $.userSpecifiedSystem;
+        this.userSpecifiedType = $.userSpecifiedType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec;
-        private @Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> entryGroupId;
-        private Output<String> entryId;
-        private @Nullable Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec;
-        private @Nullable Output<String> linkedResource;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GoogleCloudDatacatalogV1beta1SchemaArgs> schema;
-        private @Nullable Output<EntryType> type;
-        private @Nullable Output<String> userSpecifiedSystem;
-        private @Nullable Output<String> userSpecifiedType;
+        private EntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntryArgs();
         }
 
         public Builder(EntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDateShardedSpec = defaults.bigqueryDateShardedSpec;
-    	      this.bigqueryTableSpec = defaults.bigqueryTableSpec;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.entryGroupId = defaults.entryGroupId;
-    	      this.entryId = defaults.entryId;
-    	      this.gcsFilesetSpec = defaults.gcsFilesetSpec;
-    	      this.linkedResource = defaults.linkedResource;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.schema = defaults.schema;
-    	      this.type = defaults.type;
-    	      this.userSpecifiedSystem = defaults.userSpecifiedSystem;
-    	      this.userSpecifiedType = defaults.userSpecifiedType;
+            $ = new EntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDateShardedSpec(@Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec) {
-            this.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
+            $.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
             return this;
         }
-        public Builder bigqueryDateShardedSpec(@Nullable GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs bigqueryDateShardedSpec) {
-            this.bigqueryDateShardedSpec = Codegen.ofNullable(bigqueryDateShardedSpec);
-            return this;
+
+        public Builder bigqueryDateShardedSpec(GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs bigqueryDateShardedSpec) {
+            return bigqueryDateShardedSpec(Output.of(bigqueryDateShardedSpec));
         }
+
         public Builder bigqueryTableSpec(@Nullable Output<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec) {
-            this.bigqueryTableSpec = bigqueryTableSpec;
+            $.bigqueryTableSpec = bigqueryTableSpec;
             return this;
         }
-        public Builder bigqueryTableSpec(@Nullable GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs bigqueryTableSpec) {
-            this.bigqueryTableSpec = Codegen.ofNullable(bigqueryTableSpec);
-            return this;
+
+        public Builder bigqueryTableSpec(GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs bigqueryTableSpec) {
+            return bigqueryTableSpec(Output.of(bigqueryTableSpec));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder entryGroupId(Output<String> entryGroupId) {
-            this.entryGroupId = Objects.requireNonNull(entryGroupId);
+            $.entryGroupId = entryGroupId;
             return this;
         }
+
         public Builder entryGroupId(String entryGroupId) {
-            this.entryGroupId = Output.of(Objects.requireNonNull(entryGroupId));
-            return this;
+            return entryGroupId(Output.of(entryGroupId));
         }
+
         public Builder entryId(Output<String> entryId) {
-            this.entryId = Objects.requireNonNull(entryId);
+            $.entryId = entryId;
             return this;
         }
+
         public Builder entryId(String entryId) {
-            this.entryId = Output.of(Objects.requireNonNull(entryId));
-            return this;
+            return entryId(Output.of(entryId));
         }
+
         public Builder gcsFilesetSpec(@Nullable Output<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec) {
-            this.gcsFilesetSpec = gcsFilesetSpec;
+            $.gcsFilesetSpec = gcsFilesetSpec;
             return this;
         }
-        public Builder gcsFilesetSpec(@Nullable GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs gcsFilesetSpec) {
-            this.gcsFilesetSpec = Codegen.ofNullable(gcsFilesetSpec);
-            return this;
+
+        public Builder gcsFilesetSpec(GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs gcsFilesetSpec) {
+            return gcsFilesetSpec(Output.of(gcsFilesetSpec));
         }
+
         public Builder linkedResource(@Nullable Output<String> linkedResource) {
-            this.linkedResource = linkedResource;
+            $.linkedResource = linkedResource;
             return this;
         }
-        public Builder linkedResource(@Nullable String linkedResource) {
-            this.linkedResource = Codegen.ofNullable(linkedResource);
-            return this;
+
+        public Builder linkedResource(String linkedResource) {
+            return linkedResource(Output.of(linkedResource));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schema(@Nullable Output<GoogleCloudDatacatalogV1beta1SchemaArgs> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable GoogleCloudDatacatalogV1beta1SchemaArgs schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(GoogleCloudDatacatalogV1beta1SchemaArgs schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder type(@Nullable Output<EntryType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable EntryType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(EntryType type) {
+            return type(Output.of(type));
         }
+
         public Builder userSpecifiedSystem(@Nullable Output<String> userSpecifiedSystem) {
-            this.userSpecifiedSystem = userSpecifiedSystem;
+            $.userSpecifiedSystem = userSpecifiedSystem;
             return this;
         }
-        public Builder userSpecifiedSystem(@Nullable String userSpecifiedSystem) {
-            this.userSpecifiedSystem = Codegen.ofNullable(userSpecifiedSystem);
-            return this;
+
+        public Builder userSpecifiedSystem(String userSpecifiedSystem) {
+            return userSpecifiedSystem(Output.of(userSpecifiedSystem));
         }
+
         public Builder userSpecifiedType(@Nullable Output<String> userSpecifiedType) {
-            this.userSpecifiedType = userSpecifiedType;
+            $.userSpecifiedType = userSpecifiedType;
             return this;
         }
-        public Builder userSpecifiedType(@Nullable String userSpecifiedType) {
-            this.userSpecifiedType = Codegen.ofNullable(userSpecifiedType);
-            return this;
-        }        public EntryArgs build() {
-            return new EntryArgs(bigqueryDateShardedSpec, bigqueryTableSpec, description, displayName, entryGroupId, entryId, gcsFilesetSpec, linkedResource, location, project, schema, type, userSpecifiedSystem, userSpecifiedType);
+
+        public Builder userSpecifiedType(String userSpecifiedType) {
+            return userSpecifiedType(Output.of(userSpecifiedType));
+        }
+
+        public EntryArgs build() {
+            $.entryGroupId = Objects.requireNonNull($.entryGroupId, "expected parameter 'entryGroupId' to be non-null");
+            $.entryId = Objects.requireNonNull($.entryId, "expected parameter 'entryId' to be non-null");
+            return $;
         }
     }
+
 }

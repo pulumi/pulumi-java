@@ -17,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey;
+    private @Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey;
 
-    public Output<AzureKeyVaultSecretReferenceArgs> accountKey() {
-        return this.accountKey == null ? Codegen.empty() : this.accountKey;
+    public Optional<Output<AzureKeyVaultSecretReferenceArgs>> accountKey() {
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="accountKind")
-      private final @Nullable Output<String> accountKind;
+    private @Nullable Output<String> accountKind;
 
-    public Output<String> accountKind() {
-        return this.accountKind == null ? Codegen.empty() : this.accountKind;
+    public Optional<Output<String>> accountKind() {
+        return Optional.ofNullable(this.accountKind);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="azureCloudType")
-      private final @Nullable Output<Object> azureCloudType;
+    private @Nullable Output<Object> azureCloudType;
 
-    public Output<Object> azureCloudType() {
-        return this.azureCloudType == null ? Codegen.empty() : this.azureCloudType;
+    public Optional<Output<Object>> azureCloudType() {
+        return Optional.ofNullable(this.azureCloudType);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Output<Object> connectionString;
+    private @Nullable Output<Object> connectionString;
 
-    public Output<Object> connectionString() {
-        return this.connectionString == null ? Codegen.empty() : this.connectionString;
+    public Optional<Output<Object>> connectionString() {
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -99,10 +100,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="credential")
-      private final @Nullable Output<CredentialReferenceArgs> credential;
+    private @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> credential() {
-        return this.credential == null ? Codegen.empty() : this.credential;
+    public Optional<Output<CredentialReferenceArgs>> credential() {
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -110,10 +111,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -121,10 +122,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<String> encryptedCredential;
+    private @Nullable Output<String> encryptedCredential;
 
-    public Output<String> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<String>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -132,10 +133,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -143,10 +144,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sasToken")
-      private final @Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken;
+    private @Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken;
 
-    public Output<AzureKeyVaultSecretReferenceArgs> sasToken() {
-        return this.sasToken == null ? Codegen.empty() : this.sasToken;
+    public Optional<Output<AzureKeyVaultSecretReferenceArgs>> sasToken() {
+        return Optional.ofNullable(this.sasToken);
     }
 
     /**
@@ -154,10 +155,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="sasUri")
-      private final @Nullable Output<Object> sasUri;
+    private @Nullable Output<Object> sasUri;
 
-    public Output<Object> sasUri() {
-        return this.sasUri == null ? Codegen.empty() : this.sasUri;
+    public Optional<Output<Object>> sasUri() {
+        return Optional.ofNullable(this.sasUri);
     }
 
     /**
@@ -165,10 +166,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="serviceEndpoint")
-      private final @Nullable Output<String> serviceEndpoint;
+    private @Nullable Output<String> serviceEndpoint;
 
-    public Output<String> serviceEndpoint() {
-        return this.serviceEndpoint == null ? Codegen.empty() : this.serviceEndpoint;
+    public Optional<Output<String>> serviceEndpoint() {
+        return Optional.ofNullable(this.serviceEndpoint);
     }
 
     /**
@@ -176,10 +177,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Output<Object> servicePrincipalId;
+    private @Nullable Output<Object> servicePrincipalId;
 
-    public Output<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
+    public Optional<Output<Object>> servicePrincipalId() {
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -187,10 +188,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
     /**
@@ -198,10 +199,10 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Output<Object> tenant;
+    private @Nullable Output<Object> tenant;
 
-    public Output<Object> tenant() {
-        return this.tenant == null ? Codegen.empty() : this.tenant;
+    public Optional<Output<Object>> tenant() {
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -210,261 +211,213 @@ public final class AzureBlobStorageLinkedServiceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AzureBlobStorageLinkedServiceArgs(
-        @Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey,
-        @Nullable Output<String> accountKind,
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<Object> azureCloudType,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<Object> connectionString,
-        @Nullable Output<CredentialReferenceArgs> credential,
-        @Nullable Output<String> description,
-        @Nullable Output<String> encryptedCredential,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken,
-        @Nullable Output<Object> sasUri,
-        @Nullable Output<String> serviceEndpoint,
-        @Nullable Output<Object> servicePrincipalId,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey,
-        @Nullable Output<Object> tenant,
-        Output<String> type) {
-        this.accountKey = accountKey;
-        this.accountKind = accountKind;
-        this.annotations = annotations;
-        this.azureCloudType = azureCloudType;
-        this.connectVia = connectVia;
-        this.connectionString = connectionString;
-        this.credential = credential;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.sasToken = sasToken;
-        this.sasUri = sasUri;
-        this.serviceEndpoint = serviceEndpoint;
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-        this.tenant = tenant;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AzureBlobStorageLinkedServiceArgs() {}
 
-    private AzureBlobStorageLinkedServiceArgs() {
-        this.accountKey = Codegen.empty();
-        this.accountKind = Codegen.empty();
-        this.annotations = Codegen.empty();
-        this.azureCloudType = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.connectionString = Codegen.empty();
-        this.credential = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.sasToken = Codegen.empty();
-        this.sasUri = Codegen.empty();
-        this.serviceEndpoint = Codegen.empty();
-        this.servicePrincipalId = Codegen.empty();
-        this.servicePrincipalKey = Codegen.empty();
-        this.tenant = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzureBlobStorageLinkedServiceArgs(AzureBlobStorageLinkedServiceArgs $) {
+        this.accountKey = $.accountKey;
+        this.accountKind = $.accountKind;
+        this.annotations = $.annotations;
+        this.azureCloudType = $.azureCloudType;
+        this.connectVia = $.connectVia;
+        this.connectionString = $.connectionString;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.sasToken = $.sasToken;
+        this.sasUri = $.sasUri;
+        this.serviceEndpoint = $.serviceEndpoint;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.tenant = $.tenant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobStorageLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey;
-        private @Nullable Output<String> accountKind;
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<Object> azureCloudType;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<Object> connectionString;
-        private @Nullable Output<CredentialReferenceArgs> credential;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> encryptedCredential;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken;
-        private @Nullable Output<Object> sasUri;
-        private @Nullable Output<String> serviceEndpoint;
-        private @Nullable Output<Object> servicePrincipalId;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
-        private @Nullable Output<Object> tenant;
-        private Output<String> type;
+        private AzureBlobStorageLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobStorageLinkedServiceArgs();
         }
 
         public Builder(AzureBlobStorageLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountKind = defaults.accountKind;
-    	      this.annotations = defaults.annotations;
-    	      this.azureCloudType = defaults.azureCloudType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionString = defaults.connectionString;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.sasToken = defaults.sasToken;
-    	      this.sasUri = defaults.sasUri;
-    	      this.serviceEndpoint = defaults.serviceEndpoint;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
+            $ = new AzureBlobStorageLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
-        public Builder accountKey(@Nullable AzureKeyVaultSecretReferenceArgs accountKey) {
-            this.accountKey = Codegen.ofNullable(accountKey);
-            return this;
+
+        public Builder accountKey(AzureKeyVaultSecretReferenceArgs accountKey) {
+            return accountKey(Output.of(accountKey));
         }
+
         public Builder accountKind(@Nullable Output<String> accountKind) {
-            this.accountKind = accountKind;
+            $.accountKind = accountKind;
             return this;
         }
-        public Builder accountKind(@Nullable String accountKind) {
-            this.accountKind = Codegen.ofNullable(accountKind);
-            return this;
+
+        public Builder accountKind(String accountKind) {
+            return accountKind(Output.of(accountKind));
         }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder azureCloudType(@Nullable Output<Object> azureCloudType) {
-            this.azureCloudType = azureCloudType;
+            $.azureCloudType = azureCloudType;
             return this;
         }
-        public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = Codegen.ofNullable(azureCloudType);
-            return this;
+
+        public Builder azureCloudType(Object azureCloudType) {
+            return azureCloudType(Output.of(azureCloudType));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder connectionString(@Nullable Output<Object> connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
-        public Builder connectionString(@Nullable Object connectionString) {
-            this.connectionString = Codegen.ofNullable(connectionString);
-            return this;
+
+        public Builder connectionString(Object connectionString) {
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
-        public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Codegen.ofNullable(credential);
-            return this;
+
+        public Builder credential(CredentialReferenceArgs credential) {
+            return credential(Output.of(credential));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<String> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable String encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(String encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder sasToken(@Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken) {
-            this.sasToken = sasToken;
+            $.sasToken = sasToken;
             return this;
         }
-        public Builder sasToken(@Nullable AzureKeyVaultSecretReferenceArgs sasToken) {
-            this.sasToken = Codegen.ofNullable(sasToken);
-            return this;
+
+        public Builder sasToken(AzureKeyVaultSecretReferenceArgs sasToken) {
+            return sasToken(Output.of(sasToken));
         }
+
         public Builder sasUri(@Nullable Output<Object> sasUri) {
-            this.sasUri = sasUri;
+            $.sasUri = sasUri;
             return this;
         }
-        public Builder sasUri(@Nullable Object sasUri) {
-            this.sasUri = Codegen.ofNullable(sasUri);
-            return this;
+
+        public Builder sasUri(Object sasUri) {
+            return sasUri(Output.of(sasUri));
         }
+
         public Builder serviceEndpoint(@Nullable Output<String> serviceEndpoint) {
-            this.serviceEndpoint = serviceEndpoint;
+            $.serviceEndpoint = serviceEndpoint;
             return this;
         }
-        public Builder serviceEndpoint(@Nullable String serviceEndpoint) {
-            this.serviceEndpoint = Codegen.ofNullable(serviceEndpoint);
-            return this;
+
+        public Builder serviceEndpoint(String serviceEndpoint) {
+            return serviceEndpoint(Output.of(serviceEndpoint));
         }
+
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
-        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
-            return this;
+
+        public Builder servicePrincipalId(Object servicePrincipalId) {
+            return servicePrincipalId(Output.of(servicePrincipalId));
         }
+
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Codegen.ofNullable(servicePrincipalKey);
-            return this;
+
+        public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
+            return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
+
         public Builder tenant(@Nullable Output<Object> tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
-        public Builder tenant(@Nullable Object tenant) {
-            this.tenant = Codegen.ofNullable(tenant);
-            return this;
+
+        public Builder tenant(Object tenant) {
+            return tenant(Output.of(tenant));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AzureBlobStorageLinkedServiceArgs build() {
-            return new AzureBlobStorageLinkedServiceArgs(accountKey, accountKind, annotations, azureCloudType, connectVia, connectionString, credential, description, encryptedCredential, parameters, sasToken, sasUri, serviceEndpoint, servicePrincipalId, servicePrincipalKey, tenant, type);
+            return type(Output.of(type));
+        }
+
+        public AzureBlobStorageLinkedServiceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

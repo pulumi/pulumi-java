@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="filePath")
-      private final @Nullable Output<String> filePath;
+    private @Nullable Output<String> filePath;
 
-    public Output<String> filePath() {
-        return this.filePath == null ? Codegen.empty() : this.filePath;
+    public Optional<Output<String>> filePath() {
+        return Optional.ofNullable(this.filePath);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="storageId")
-      private final @Nullable Output<String> storageId;
+    private @Nullable Output<String> storageId;
 
-    public Output<String> storageId() {
-        return this.storageId == null ? Codegen.empty() : this.storageId;
+    public Optional<Output<String>> storageId() {
+        return Optional.ofNullable(this.storageId);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class PacketCaptureStorageLocationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="storagePath")
-      private final @Nullable Output<String> storagePath;
+    private @Nullable Output<String> storagePath;
 
-    public Output<String> storagePath() {
-        return this.storagePath == null ? Codegen.empty() : this.storagePath;
+    public Optional<Output<String>> storagePath() {
+        return Optional.ofNullable(this.storagePath);
     }
 
-    public PacketCaptureStorageLocationArgs(
-        @Nullable Output<String> filePath,
-        @Nullable Output<String> storageId,
-        @Nullable Output<String> storagePath) {
-        this.filePath = filePath;
-        this.storageId = storageId;
-        this.storagePath = storagePath;
-    }
+    private PacketCaptureStorageLocationArgs() {}
 
-    private PacketCaptureStorageLocationArgs() {
-        this.filePath = Codegen.empty();
-        this.storageId = Codegen.empty();
-        this.storagePath = Codegen.empty();
+    private PacketCaptureStorageLocationArgs(PacketCaptureStorageLocationArgs $) {
+        this.filePath = $.filePath;
+        this.storageId = $.storageId;
+        this.storagePath = $.storagePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketCaptureStorageLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filePath;
-        private @Nullable Output<String> storageId;
-        private @Nullable Output<String> storagePath;
+        private PacketCaptureStorageLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketCaptureStorageLocationArgs();
         }
 
         public Builder(PacketCaptureStorageLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePath = defaults.filePath;
-    	      this.storageId = defaults.storageId;
-    	      this.storagePath = defaults.storagePath;
+            $ = new PacketCaptureStorageLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filePath(@Nullable Output<String> filePath) {
-            this.filePath = filePath;
+            $.filePath = filePath;
             return this;
         }
-        public Builder filePath(@Nullable String filePath) {
-            this.filePath = Codegen.ofNullable(filePath);
-            return this;
+
+        public Builder filePath(String filePath) {
+            return filePath(Output.of(filePath));
         }
+
         public Builder storageId(@Nullable Output<String> storageId) {
-            this.storageId = storageId;
+            $.storageId = storageId;
             return this;
         }
-        public Builder storageId(@Nullable String storageId) {
-            this.storageId = Codegen.ofNullable(storageId);
-            return this;
+
+        public Builder storageId(String storageId) {
+            return storageId(Output.of(storageId));
         }
+
         public Builder storagePath(@Nullable Output<String> storagePath) {
-            this.storagePath = storagePath;
+            $.storagePath = storagePath;
             return this;
         }
-        public Builder storagePath(@Nullable String storagePath) {
-            this.storagePath = Codegen.ofNullable(storagePath);
-            return this;
-        }        public PacketCaptureStorageLocationArgs build() {
-            return new PacketCaptureStorageLocationArgs(filePath, storageId, storagePath);
+
+        public Builder storagePath(String storagePath) {
+            return storagePath(Output.of(storagePath));
+        }
+
+        public PacketCaptureStorageLocationArgs build() {
+            return $;
         }
     }
+
 }

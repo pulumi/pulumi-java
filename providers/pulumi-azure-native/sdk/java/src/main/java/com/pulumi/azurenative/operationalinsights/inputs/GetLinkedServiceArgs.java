@@ -17,7 +17,7 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final String linkedServiceName;
+    private String linkedServiceName;
 
     public String linkedServiceName() {
         return this.linkedServiceName;
@@ -28,7 +28,7 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetLinkedServiceArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetLinkedServiceArgs(
-        String linkedServiceName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetLinkedServiceArgs() {}
 
-    private GetLinkedServiceArgs() {
-        this.linkedServiceName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetLinkedServiceArgs(GetLinkedServiceArgs $) {
+        this.linkedServiceName = $.linkedServiceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String linkedServiceName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLinkedServiceArgs();
         }
 
         public Builder(GetLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedServiceName(String linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetLinkedServiceArgs build() {
-            return new GetLinkedServiceArgs(linkedServiceName, resourceGroupName, workspaceName);
+        }
+
+        public GetLinkedServiceArgs build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

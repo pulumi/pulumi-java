@@ -24,10 +24,10 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="and")
-      private final @Nullable List<ReportFilterResponse> and;
+    private @Nullable List<ReportFilterResponse> and;
 
-    public List<ReportFilterResponse> and() {
-        return this.and == null ? List.of() : this.and;
+    public Optional<List<ReportFilterResponse>> and() {
+        return Optional.ofNullable(this.and);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="dimension")
-      private final @Nullable ReportComparisonExpressionResponse dimension;
+    private @Nullable ReportComparisonExpressionResponse dimension;
 
     public Optional<ReportComparisonExpressionResponse> dimension() {
-        return this.dimension == null ? Optional.empty() : Optional.ofNullable(this.dimension);
+        return Optional.ofNullable(this.dimension);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="not")
-      private final @Nullable ReportFilterResponse not;
+    private @Nullable ReportFilterResponse not;
 
     public Optional<ReportFilterResponse> not() {
-        return this.not == null ? Optional.empty() : Optional.ofNullable(this.not);
+        return Optional.ofNullable(this.not);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="or")
-      private final @Nullable List<ReportFilterResponse> or;
+    private @Nullable List<ReportFilterResponse> or;
 
-    public List<ReportFilterResponse> or() {
-        return this.or == null ? List.of() : this.or;
+    public Optional<List<ReportFilterResponse>> or() {
+        return Optional.ofNullable(this.or);
     }
 
     /**
@@ -68,88 +68,76 @@ public final class ReportFilterResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tag")
-      private final @Nullable ReportComparisonExpressionResponse tag;
+    private @Nullable ReportComparisonExpressionResponse tag;
 
     public Optional<ReportComparisonExpressionResponse> tag() {
-        return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
+        return Optional.ofNullable(this.tag);
     }
 
-    public ReportFilterResponse(
-        @Nullable List<ReportFilterResponse> and,
-        @Nullable ReportComparisonExpressionResponse dimension,
-        @Nullable ReportFilterResponse not,
-        @Nullable List<ReportFilterResponse> or,
-        @Nullable ReportComparisonExpressionResponse tag) {
-        this.and = and;
-        this.dimension = dimension;
-        this.not = not;
-        this.or = or;
-        this.tag = tag;
-    }
+    private ReportFilterResponse() {}
 
-    private ReportFilterResponse() {
-        this.and = List.of();
-        this.dimension = null;
-        this.not = null;
-        this.or = List.of();
-        this.tag = null;
+    private ReportFilterResponse(ReportFilterResponse $) {
+        this.and = $.and;
+        this.dimension = $.dimension;
+        this.not = $.not;
+        this.or = $.or;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ReportFilterResponse> and;
-        private @Nullable ReportComparisonExpressionResponse dimension;
-        private @Nullable ReportFilterResponse not;
-        private @Nullable List<ReportFilterResponse> or;
-        private @Nullable ReportComparisonExpressionResponse tag;
+        private ReportFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportFilterResponse();
         }
 
         public Builder(ReportFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.and = defaults.and;
-    	      this.dimension = defaults.dimension;
-    	      this.not = defaults.not;
-    	      this.or = defaults.or;
-    	      this.tag = defaults.tag;
+            $ = new ReportFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder and(@Nullable List<ReportFilterResponse> and) {
-            this.and = and;
+            $.and = and;
             return this;
         }
+
         public Builder and(ReportFilterResponse... and) {
             return and(List.of(and));
         }
+
         public Builder dimension(@Nullable ReportComparisonExpressionResponse dimension) {
-            this.dimension = dimension;
+            $.dimension = dimension;
             return this;
         }
+
         public Builder not(@Nullable ReportFilterResponse not) {
-            this.not = not;
+            $.not = not;
             return this;
         }
+
         public Builder or(@Nullable List<ReportFilterResponse> or) {
-            this.or = or;
+            $.or = or;
             return this;
         }
+
         public Builder or(ReportFilterResponse... or) {
             return or(List.of(or));
         }
+
         public Builder tag(@Nullable ReportComparisonExpressionResponse tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
-        }        public ReportFilterResponse build() {
-            return new ReportFilterResponse(and, dimension, not, or, tag);
+        }
+
+        public ReportFilterResponse build() {
+            return $;
         }
     }
+
 }

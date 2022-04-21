@@ -7,8 +7,8 @@ import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleConstraintsResour
 import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStatisticsResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class MonitoringScheduleBaselineConfigArgs extends com.pulumi.resou
     public static final MonitoringScheduleBaselineConfigArgs Empty = new MonitoringScheduleBaselineConfigArgs();
 
     @Import(name="constraintsResource")
-      private final @Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource;
+    private @Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource;
 
-    public Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource() {
-        return this.constraintsResource == null ? Codegen.empty() : this.constraintsResource;
+    public Optional<Output<MonitoringScheduleConstraintsResourceArgs>> constraintsResource() {
+        return Optional.ofNullable(this.constraintsResource);
     }
 
     @Import(name="statisticsResource")
-      private final @Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource;
+    private @Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource;
 
-    public Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource() {
-        return this.statisticsResource == null ? Codegen.empty() : this.statisticsResource;
+    public Optional<Output<MonitoringScheduleStatisticsResourceArgs>> statisticsResource() {
+        return Optional.ofNullable(this.statisticsResource);
     }
 
-    public MonitoringScheduleBaselineConfigArgs(
-        @Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource,
-        @Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource) {
-        this.constraintsResource = constraintsResource;
-        this.statisticsResource = statisticsResource;
-    }
+    private MonitoringScheduleBaselineConfigArgs() {}
 
-    private MonitoringScheduleBaselineConfigArgs() {
-        this.constraintsResource = Codegen.empty();
-        this.statisticsResource = Codegen.empty();
+    private MonitoringScheduleBaselineConfigArgs(MonitoringScheduleBaselineConfigArgs $) {
+        this.constraintsResource = $.constraintsResource;
+        this.statisticsResource = $.statisticsResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleBaselineConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource;
-        private @Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource;
+        private MonitoringScheduleBaselineConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleBaselineConfigArgs();
         }
 
         public Builder(MonitoringScheduleBaselineConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constraintsResource = defaults.constraintsResource;
-    	      this.statisticsResource = defaults.statisticsResource;
+            $ = new MonitoringScheduleBaselineConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder constraintsResource(@Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource) {
-            this.constraintsResource = constraintsResource;
+            $.constraintsResource = constraintsResource;
             return this;
         }
-        public Builder constraintsResource(@Nullable MonitoringScheduleConstraintsResourceArgs constraintsResource) {
-            this.constraintsResource = Codegen.ofNullable(constraintsResource);
-            return this;
+
+        public Builder constraintsResource(MonitoringScheduleConstraintsResourceArgs constraintsResource) {
+            return constraintsResource(Output.of(constraintsResource));
         }
+
         public Builder statisticsResource(@Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource) {
-            this.statisticsResource = statisticsResource;
+            $.statisticsResource = statisticsResource;
             return this;
         }
-        public Builder statisticsResource(@Nullable MonitoringScheduleStatisticsResourceArgs statisticsResource) {
-            this.statisticsResource = Codegen.ofNullable(statisticsResource);
-            return this;
-        }        public MonitoringScheduleBaselineConfigArgs build() {
-            return new MonitoringScheduleBaselineConfigArgs(constraintsResource, statisticsResource);
+
+        public Builder statisticsResource(MonitoringScheduleStatisticsResourceArgs statisticsResource) {
+            return statisticsResource(Output.of(statisticsResource));
+        }
+
+        public MonitoringScheduleBaselineConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="cabinetPodSecrets", required=true)
-      private final List<DataBoxHeavySecretResponse> cabinetPodSecrets;
+    private List<DataBoxHeavySecretResponse> cabinetPodSecrets;
 
     public List<DataBoxHeavySecretResponse> cabinetPodSecrets() {
         return this.cabinetPodSecrets;
@@ -37,7 +37,7 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="dcAccessSecurityCode", required=true)
-      private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
+    private DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
     public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
@@ -48,7 +48,7 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="error", required=true)
-      private final CloudErrorResponse error;
+    private CloudErrorResponse error;
 
     public CloudErrorResponse error() {
         return this.error;
@@ -60,76 +60,70 @@ public final class DataBoxHeavyJobSecretsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="jobSecretsType", required=true)
-      private final String jobSecretsType;
+    private String jobSecretsType;
 
     public String jobSecretsType() {
         return this.jobSecretsType;
     }
 
-    public DataBoxHeavyJobSecretsResponse(
-        List<DataBoxHeavySecretResponse> cabinetPodSecrets,
-        DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        CloudErrorResponse error,
-        String jobSecretsType) {
-        this.cabinetPodSecrets = Objects.requireNonNull(cabinetPodSecrets, "expected parameter 'cabinetPodSecrets' to be non-null");
-        this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode, "expected parameter 'dcAccessSecurityCode' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.jobSecretsType = Codegen.stringProp("jobSecretsType").arg(jobSecretsType).require();
-    }
+    private DataBoxHeavyJobSecretsResponse() {}
 
-    private DataBoxHeavyJobSecretsResponse() {
-        this.cabinetPodSecrets = List.of();
-        this.dcAccessSecurityCode = null;
-        this.error = null;
-        this.jobSecretsType = null;
+    private DataBoxHeavyJobSecretsResponse(DataBoxHeavyJobSecretsResponse $) {
+        this.cabinetPodSecrets = $.cabinetPodSecrets;
+        this.dcAccessSecurityCode = $.dcAccessSecurityCode;
+        this.error = $.error;
+        this.jobSecretsType = $.jobSecretsType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataBoxHeavyJobSecretsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DataBoxHeavySecretResponse> cabinetPodSecrets;
-        private DcAccessSecurityCodeResponse dcAccessSecurityCode;
-        private CloudErrorResponse error;
-        private String jobSecretsType;
+        private DataBoxHeavyJobSecretsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataBoxHeavyJobSecretsResponse();
         }
 
         public Builder(DataBoxHeavyJobSecretsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cabinetPodSecrets = defaults.cabinetPodSecrets;
-    	      this.dcAccessSecurityCode = defaults.dcAccessSecurityCode;
-    	      this.error = defaults.error;
-    	      this.jobSecretsType = defaults.jobSecretsType;
+            $ = new DataBoxHeavyJobSecretsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cabinetPodSecrets(List<DataBoxHeavySecretResponse> cabinetPodSecrets) {
-            this.cabinetPodSecrets = Objects.requireNonNull(cabinetPodSecrets);
+            $.cabinetPodSecrets = cabinetPodSecrets;
             return this;
         }
+
         public Builder cabinetPodSecrets(DataBoxHeavySecretResponse... cabinetPodSecrets) {
             return cabinetPodSecrets(List.of(cabinetPodSecrets));
         }
+
         public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
-            this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
+            $.dcAccessSecurityCode = dcAccessSecurityCode;
             return this;
         }
+
         public Builder error(CloudErrorResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder jobSecretsType(String jobSecretsType) {
-            this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
+            $.jobSecretsType = jobSecretsType;
             return this;
-        }        public DataBoxHeavyJobSecretsResponse build() {
-            return new DataBoxHeavyJobSecretsResponse(cabinetPodSecrets, dcAccessSecurityCode, error, jobSecretsType);
+        }
+
+        public DataBoxHeavyJobSecretsResponse build() {
+            $.cabinetPodSecrets = Objects.requireNonNull($.cabinetPodSecrets, "expected parameter 'cabinetPodSecrets' to be non-null");
+            $.dcAccessSecurityCode = Objects.requireNonNull($.dcAccessSecurityCode, "expected parameter 'dcAccessSecurityCode' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.jobSecretsType = Codegen.stringProp("jobSecretsType").arg($.jobSecretsType).require();
+            return $;
         }
     }
+
 }

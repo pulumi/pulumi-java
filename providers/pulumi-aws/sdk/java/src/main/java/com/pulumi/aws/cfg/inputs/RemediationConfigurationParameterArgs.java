@@ -5,9 +5,9 @@ package com.pulumi.aws.cfg.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class RemediationConfigurationParameterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -31,10 +31,10 @@ public final class RemediationConfigurationParameterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceValue")
-      private final @Nullable Output<String> resourceValue;
+    private @Nullable Output<String> resourceValue;
 
-    public Output<String> resourceValue() {
-        return this.resourceValue == null ? Codegen.empty() : this.resourceValue;
+    public Optional<Output<String>> resourceValue() {
+        return Optional.ofNullable(this.resourceValue);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class RemediationConfigurationParameterArgs extends com.pulumi.reso
      * 
      */
     @Import(name="staticValue")
-      private final @Nullable Output<String> staticValue;
+    private @Nullable Output<String> staticValue;
 
-    public Output<String> staticValue() {
-        return this.staticValue == null ? Codegen.empty() : this.staticValue;
+    public Optional<Output<String>> staticValue() {
+        return Optional.ofNullable(this.staticValue);
     }
 
-    public RemediationConfigurationParameterArgs(
-        Output<String> name,
-        @Nullable Output<String> resourceValue,
-        @Nullable Output<String> staticValue) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceValue = resourceValue;
-        this.staticValue = staticValue;
-    }
+    private RemediationConfigurationParameterArgs() {}
 
-    private RemediationConfigurationParameterArgs() {
-        this.name = Codegen.empty();
-        this.resourceValue = Codegen.empty();
-        this.staticValue = Codegen.empty();
+    private RemediationConfigurationParameterArgs(RemediationConfigurationParameterArgs $) {
+        this.name = $.name;
+        this.resourceValue = $.resourceValue;
+        this.staticValue = $.staticValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationConfigurationParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<String> resourceValue;
-        private @Nullable Output<String> staticValue;
+        private RemediationConfigurationParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationConfigurationParameterArgs();
         }
 
         public Builder(RemediationConfigurationParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceValue = defaults.resourceValue;
-    	      this.staticValue = defaults.staticValue;
+            $ = new RemediationConfigurationParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceValue(@Nullable Output<String> resourceValue) {
-            this.resourceValue = resourceValue;
+            $.resourceValue = resourceValue;
             return this;
         }
-        public Builder resourceValue(@Nullable String resourceValue) {
-            this.resourceValue = Codegen.ofNullable(resourceValue);
-            return this;
+
+        public Builder resourceValue(String resourceValue) {
+            return resourceValue(Output.of(resourceValue));
         }
+
         public Builder staticValue(@Nullable Output<String> staticValue) {
-            this.staticValue = staticValue;
+            $.staticValue = staticValue;
             return this;
         }
-        public Builder staticValue(@Nullable String staticValue) {
-            this.staticValue = Codegen.ofNullable(staticValue);
-            return this;
-        }        public RemediationConfigurationParameterArgs build() {
-            return new RemediationConfigurationParameterArgs(name, resourceValue, staticValue);
+
+        public Builder staticValue(String staticValue) {
+            return staticValue(Output.of(staticValue));
+        }
+
+        public RemediationConfigurationParameterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

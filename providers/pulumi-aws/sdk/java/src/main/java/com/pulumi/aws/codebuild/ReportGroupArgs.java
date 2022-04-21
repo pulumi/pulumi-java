@@ -6,11 +6,11 @@ package com.pulumi.aws.codebuild;
 import com.pulumi.aws.codebuild.inputs.ReportGroupExportConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteReports")
-      private final @Nullable Output<Boolean> deleteReports;
+    private @Nullable Output<Boolean> deleteReports;
 
-    public Output<Boolean> deleteReports() {
-        return this.deleteReports == null ? Codegen.empty() : this.deleteReports;
+    public Optional<Output<Boolean>> deleteReports() {
+        return Optional.ofNullable(this.deleteReports);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exportConfig", required=true)
-      private final Output<ReportGroupExportConfigArgs> exportConfig;
+    private Output<ReportGroupExportConfigArgs> exportConfig;
 
     public Output<ReportGroupExportConfigArgs> exportConfig() {
         return this.exportConfig;
@@ -45,10 +45,10 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -67,102 +67,90 @@ public final class ReportGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ReportGroupArgs(
-        @Nullable Output<Boolean> deleteReports,
-        Output<ReportGroupExportConfigArgs> exportConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> type) {
-        this.deleteReports = deleteReports;
-        this.exportConfig = Objects.requireNonNull(exportConfig, "expected parameter 'exportConfig' to be non-null");
-        this.name = name;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ReportGroupArgs() {}
 
-    private ReportGroupArgs() {
-        this.deleteReports = Codegen.empty();
-        this.exportConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private ReportGroupArgs(ReportGroupArgs $) {
+        this.deleteReports = $.deleteReports;
+        this.exportConfig = $.exportConfig;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleteReports;
-        private Output<ReportGroupExportConfigArgs> exportConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> type;
+        private ReportGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportGroupArgs();
         }
 
         public Builder(ReportGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteReports = defaults.deleteReports;
-    	      this.exportConfig = defaults.exportConfig;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new ReportGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteReports(@Nullable Output<Boolean> deleteReports) {
-            this.deleteReports = deleteReports;
+            $.deleteReports = deleteReports;
             return this;
         }
-        public Builder deleteReports(@Nullable Boolean deleteReports) {
-            this.deleteReports = Codegen.ofNullable(deleteReports);
-            return this;
+
+        public Builder deleteReports(Boolean deleteReports) {
+            return deleteReports(Output.of(deleteReports));
         }
+
         public Builder exportConfig(Output<ReportGroupExportConfigArgs> exportConfig) {
-            this.exportConfig = Objects.requireNonNull(exportConfig);
+            $.exportConfig = exportConfig;
             return this;
         }
+
         public Builder exportConfig(ReportGroupExportConfigArgs exportConfig) {
-            this.exportConfig = Output.of(Objects.requireNonNull(exportConfig));
-            return this;
+            return exportConfig(Output.of(exportConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ReportGroupArgs build() {
-            return new ReportGroupArgs(deleteReports, exportConfig, name, tags, type);
+            return type(Output.of(type));
+        }
+
+        public ReportGroupArgs build() {
+            $.exportConfig = Objects.requireNonNull($.exportConfig, "expected parameter 'exportConfig' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

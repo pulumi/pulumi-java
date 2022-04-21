@@ -24,10 +24,10 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="destinationType")
-      private final @Nullable String destinationType;
+    private @Nullable String destinationType;
 
     public Optional<String> destinationType() {
-        return this.destinationType == null ? Optional.empty() : Optional.ofNullable(this.destinationType);
+        return Optional.ofNullable(this.destinationType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="destinations")
-      private final @Nullable List<String> destinations;
+    private @Nullable List<String> destinations;
 
-    public List<String> destinations() {
-        return this.destinations == null ? List.of() : this.destinations;
+    public Optional<List<String>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="nextHopType")
-      private final @Nullable String nextHopType;
+    private @Nullable String nextHopType;
 
     public Optional<String> nextHopType() {
-        return this.nextHopType == null ? Optional.empty() : Optional.ofNullable(this.nextHopType);
+        return Optional.ofNullable(this.nextHopType);
     }
 
     /**
@@ -57,79 +57,70 @@ public final class VirtualHubRouteV2Response extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="nextHops")
-      private final @Nullable List<String> nextHops;
+    private @Nullable List<String> nextHops;
 
-    public List<String> nextHops() {
-        return this.nextHops == null ? List.of() : this.nextHops;
+    public Optional<List<String>> nextHops() {
+        return Optional.ofNullable(this.nextHops);
     }
 
-    public VirtualHubRouteV2Response(
-        @Nullable String destinationType,
-        @Nullable List<String> destinations,
-        @Nullable String nextHopType,
-        @Nullable List<String> nextHops) {
-        this.destinationType = destinationType;
-        this.destinations = destinations;
-        this.nextHopType = nextHopType;
-        this.nextHops = nextHops;
-    }
+    private VirtualHubRouteV2Response() {}
 
-    private VirtualHubRouteV2Response() {
-        this.destinationType = null;
-        this.destinations = List.of();
-        this.nextHopType = null;
-        this.nextHops = List.of();
+    private VirtualHubRouteV2Response(VirtualHubRouteV2Response $) {
+        this.destinationType = $.destinationType;
+        this.destinations = $.destinations;
+        this.nextHopType = $.nextHopType;
+        this.nextHops = $.nextHops;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubRouteV2Response defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String destinationType;
-        private @Nullable List<String> destinations;
-        private @Nullable String nextHopType;
-        private @Nullable List<String> nextHops;
+        private VirtualHubRouteV2Response $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubRouteV2Response();
         }
 
         public Builder(VirtualHubRouteV2Response defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationType = defaults.destinationType;
-    	      this.destinations = defaults.destinations;
-    	      this.nextHopType = defaults.nextHopType;
-    	      this.nextHops = defaults.nextHops;
+            $ = new VirtualHubRouteV2Response(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationType(@Nullable String destinationType) {
-            this.destinationType = destinationType;
+            $.destinationType = destinationType;
             return this;
         }
+
         public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder nextHopType(@Nullable String nextHopType) {
-            this.nextHopType = nextHopType;
+            $.nextHopType = nextHopType;
             return this;
         }
+
         public Builder nextHops(@Nullable List<String> nextHops) {
-            this.nextHops = nextHops;
+            $.nextHops = nextHops;
             return this;
         }
+
         public Builder nextHops(String... nextHops) {
             return nextHops(List.of(nextHops));
-        }        public VirtualHubRouteV2Response build() {
-            return new VirtualHubRouteV2Response(destinationType, destinations, nextHopType, nextHops);
+        }
+
+        public VirtualHubRouteV2Response build() {
+            return $;
         }
     }
+
 }

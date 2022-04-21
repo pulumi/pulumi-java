@@ -6,9 +6,9 @@ package com.pulumi.azurenative.cognitiveservices.inputs;
 import com.pulumi.azurenative.cognitiveservices.inputs.PrivateEndpointConnectionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
+    private @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
-    public Output<PrivateEndpointConnectionPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<PrivateEndpointConnectionPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public PrivateEndpointConnectionArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties) {
-        this.location = location;
-        this.properties = properties;
-    }
+    private PrivateEndpointConnectionArgs() {}
 
-    private PrivateEndpointConnectionArgs() {
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
+    private PrivateEndpointConnectionArgs(PrivateEndpointConnectionArgs $) {
+        this.location = $.location;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
+        private PrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionArgs();
         }
 
         public Builder(PrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
+            $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable PrivateEndpointConnectionPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public PrivateEndpointConnectionArgs build() {
-            return new PrivateEndpointConnectionArgs(location, properties);
+
+        public Builder properties(PrivateEndpointConnectionPropertiesArgs properties) {
+            return properties(Output.of(properties));
+        }
+
+        public PrivateEndpointConnectionArgs build() {
+            return $;
         }
     }
+
 }

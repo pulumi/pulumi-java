@@ -13,45 +13,45 @@ public final class GetResponseHeadersPolicyArgs extends com.pulumi.resources.Inv
     public static final GetResponseHeadersPolicyArgs Empty = new GetResponseHeadersPolicyArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetResponseHeadersPolicyArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetResponseHeadersPolicyArgs() {}
 
-    private GetResponseHeadersPolicyArgs() {
-        this.id = null;
+    private GetResponseHeadersPolicyArgs(GetResponseHeadersPolicyArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponseHeadersPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetResponseHeadersPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponseHeadersPolicyArgs();
         }
 
         public Builder(GetResponseHeadersPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetResponseHeadersPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetResponseHeadersPolicyArgs build() {
-            return new GetResponseHeadersPolicyArgs(id);
+        }
+
+        public GetResponseHeadersPolicyArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

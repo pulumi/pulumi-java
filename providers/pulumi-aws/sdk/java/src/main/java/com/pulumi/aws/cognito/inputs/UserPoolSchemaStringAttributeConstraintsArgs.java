@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends com.pulu
      * 
      */
     @Import(name="maxLength")
-      private final @Nullable Output<String> maxLength;
+    private @Nullable Output<String> maxLength;
 
-    public Output<String> maxLength() {
-        return this.maxLength == null ? Codegen.empty() : this.maxLength;
+    public Optional<Output<String>> maxLength() {
+        return Optional.ofNullable(this.maxLength);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends com.pulu
      * 
      */
     @Import(name="minLength")
-      private final @Nullable Output<String> minLength;
+    private @Nullable Output<String> minLength;
 
-    public Output<String> minLength() {
-        return this.minLength == null ? Codegen.empty() : this.minLength;
+    public Optional<Output<String>> minLength() {
+        return Optional.ofNullable(this.minLength);
     }
 
-    public UserPoolSchemaStringAttributeConstraintsArgs(
-        @Nullable Output<String> maxLength,
-        @Nullable Output<String> minLength) {
-        this.maxLength = maxLength;
-        this.minLength = minLength;
-    }
+    private UserPoolSchemaStringAttributeConstraintsArgs() {}
 
-    private UserPoolSchemaStringAttributeConstraintsArgs() {
-        this.maxLength = Codegen.empty();
-        this.minLength = Codegen.empty();
+    private UserPoolSchemaStringAttributeConstraintsArgs(UserPoolSchemaStringAttributeConstraintsArgs $) {
+        this.maxLength = $.maxLength;
+        this.minLength = $.minLength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolSchemaStringAttributeConstraintsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> maxLength;
-        private @Nullable Output<String> minLength;
+        private UserPoolSchemaStringAttributeConstraintsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolSchemaStringAttributeConstraintsArgs();
         }
 
         public Builder(UserPoolSchemaStringAttributeConstraintsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxLength = defaults.maxLength;
-    	      this.minLength = defaults.minLength;
+            $ = new UserPoolSchemaStringAttributeConstraintsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxLength(@Nullable Output<String> maxLength) {
-            this.maxLength = maxLength;
+            $.maxLength = maxLength;
             return this;
         }
-        public Builder maxLength(@Nullable String maxLength) {
-            this.maxLength = Codegen.ofNullable(maxLength);
-            return this;
+
+        public Builder maxLength(String maxLength) {
+            return maxLength(Output.of(maxLength));
         }
+
         public Builder minLength(@Nullable Output<String> minLength) {
-            this.minLength = minLength;
+            $.minLength = minLength;
             return this;
         }
-        public Builder minLength(@Nullable String minLength) {
-            this.minLength = Codegen.ofNullable(minLength);
-            return this;
-        }        public UserPoolSchemaStringAttributeConstraintsArgs build() {
-            return new UserPoolSchemaStringAttributeConstraintsArgs(maxLength, minLength);
+
+        public Builder minLength(String minLength) {
+            return minLength(Output.of(minLength));
+        }
+
+        public UserPoolSchemaStringAttributeConstraintsArgs build() {
+            return $;
         }
     }
+
 }

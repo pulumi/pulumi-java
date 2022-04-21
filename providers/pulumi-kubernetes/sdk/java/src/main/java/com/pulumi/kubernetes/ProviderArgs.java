@@ -11,6 +11,7 @@ import com.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cluster")
-      private final @Nullable Output<String> cluster;
+    private @Nullable Output<String> cluster;
 
-    public Output<String> cluster() {
-        return this.cluster == null ? Codegen.empty() : this.cluster;
+    public Optional<Output<String>> cluster() {
+        return Optional.ofNullable(this.cluster);
     }
 
     /**
@@ -34,10 +35,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<String> context;
+    private @Nullable Output<String> context;
 
-    public Output<String> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<String>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDryRun", json=true)
-      private final @Nullable Output<Boolean> enableDryRun;
+    private @Nullable Output<Boolean> enableDryRun;
 
-    public Output<Boolean> enableDryRun() {
-        return this.enableDryRun == null ? Codegen.empty() : this.enableDryRun;
+    public Optional<Output<Boolean>> enableDryRun() {
+        return Optional.ofNullable(this.enableDryRun);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableReplaceCRD", json=true)
-      private final @Nullable Output<Boolean> enableReplaceCRD;
+    private @Nullable Output<Boolean> enableReplaceCRD;
 
-    public Output<Boolean> enableReplaceCRD() {
-        return this.enableReplaceCRD == null ? Codegen.empty() : this.enableReplaceCRD;
+    public Optional<Output<Boolean>> enableReplaceCRD() {
+        return Optional.ofNullable(this.enableReplaceCRD);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="helmReleaseSettings", json=true)
-      private final @Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings;
+    private @Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings;
 
-    public Output<HelmReleaseSettingsArgs> helmReleaseSettings() {
-        return this.helmReleaseSettings == null ? Codegen.empty() : this.helmReleaseSettings;
+    public Optional<Output<HelmReleaseSettingsArgs>> helmReleaseSettings() {
+        return Optional.ofNullable(this.helmReleaseSettings);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubeClientSettings", json=true)
-      private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
+    private @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
-    public Output<KubeClientSettingsArgs> kubeClientSettings() {
-        return this.kubeClientSettings == null ? Codegen.empty() : this.kubeClientSettings;
+    public Optional<Output<KubeClientSettingsArgs>> kubeClientSettings() {
+        return Optional.ofNullable(this.kubeClientSettings);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubeconfig")
-      private final @Nullable Output<String> kubeconfig;
+    private @Nullable Output<String> kubeconfig;
 
-    public Output<String> kubeconfig() {
-        return this.kubeconfig == null ? Codegen.empty() : this.kubeconfig;
+    public Optional<Output<String>> kubeconfig() {
+        return Optional.ofNullable(this.kubeconfig);
     }
 
     /**
@@ -107,10 +108,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -125,10 +126,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="renderYamlToDirectory")
-      private final @Nullable Output<String> renderYamlToDirectory;
+    private @Nullable Output<String> renderYamlToDirectory;
 
-    public Output<String> renderYamlToDirectory() {
-        return this.renderYamlToDirectory == null ? Codegen.empty() : this.renderYamlToDirectory;
+    public Optional<Output<String>> renderYamlToDirectory() {
+        return Optional.ofNullable(this.renderYamlToDirectory);
     }
 
     /**
@@ -136,10 +137,10 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="suppressDeprecationWarnings", json=true)
-      private final @Nullable Output<Boolean> suppressDeprecationWarnings;
+    private @Nullable Output<Boolean> suppressDeprecationWarnings;
 
-    public Output<Boolean> suppressDeprecationWarnings() {
-        return this.suppressDeprecationWarnings == null ? Codegen.empty() : this.suppressDeprecationWarnings;
+    public Optional<Output<Boolean>> suppressDeprecationWarnings() {
+        return Optional.ofNullable(this.suppressDeprecationWarnings);
     }
 
     /**
@@ -147,180 +148,153 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="suppressHelmHookWarnings", json=true)
-      private final @Nullable Output<Boolean> suppressHelmHookWarnings;
+    private @Nullable Output<Boolean> suppressHelmHookWarnings;
 
-    public Output<Boolean> suppressHelmHookWarnings() {
-        return this.suppressHelmHookWarnings == null ? Codegen.empty() : this.suppressHelmHookWarnings;
+    public Optional<Output<Boolean>> suppressHelmHookWarnings() {
+        return Optional.ofNullable(this.suppressHelmHookWarnings);
     }
 
-    public ProviderArgs(
-        @Nullable Output<String> cluster,
-        @Nullable Output<String> context,
-        @Nullable Output<Boolean> enableDryRun,
-        @Nullable Output<Boolean> enableReplaceCRD,
-        @Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings,
-        @Nullable Output<KubeClientSettingsArgs> kubeClientSettings,
-        @Nullable Output<String> kubeconfig,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> renderYamlToDirectory,
-        @Nullable Output<Boolean> suppressDeprecationWarnings,
-        @Nullable Output<Boolean> suppressHelmHookWarnings) {
-        this.cluster = cluster;
-        this.context = context;
-        this.enableDryRun = Codegen.booleanProp("enableDryRun").output().arg(enableDryRun).env("PULUMI_K8S_ENABLE_DRY_RUN").getNullable();
-        this.enableReplaceCRD = Codegen.booleanProp("enableReplaceCRD").output().arg(enableReplaceCRD).env("PULUMI_K8S_ENABLE_REPLACE_CRD").getNullable();
-        this.helmReleaseSettings = helmReleaseSettings;
-        this.kubeClientSettings = kubeClientSettings;
-        this.kubeconfig = Codegen.stringProp("kubeconfig").output().arg(kubeconfig).env("KUBECONFIG").getNullable();
-        this.namespace = namespace;
-        this.renderYamlToDirectory = renderYamlToDirectory;
-        this.suppressDeprecationWarnings = Codegen.booleanProp("suppressDeprecationWarnings").output().arg(suppressDeprecationWarnings).env("PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS").getNullable();
-        this.suppressHelmHookWarnings = Codegen.booleanProp("suppressHelmHookWarnings").output().arg(suppressHelmHookWarnings).env("PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS").getNullable();
-    }
+    private ProviderArgs() {}
 
-    private ProviderArgs() {
-        this.cluster = Codegen.empty();
-        this.context = Codegen.empty();
-        this.enableDryRun = Codegen.empty();
-        this.enableReplaceCRD = Codegen.empty();
-        this.helmReleaseSettings = Codegen.empty();
-        this.kubeClientSettings = Codegen.empty();
-        this.kubeconfig = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.renderYamlToDirectory = Codegen.empty();
-        this.suppressDeprecationWarnings = Codegen.empty();
-        this.suppressHelmHookWarnings = Codegen.empty();
+    private ProviderArgs(ProviderArgs $) {
+        this.cluster = $.cluster;
+        this.context = $.context;
+        this.enableDryRun = $.enableDryRun;
+        this.enableReplaceCRD = $.enableReplaceCRD;
+        this.helmReleaseSettings = $.helmReleaseSettings;
+        this.kubeClientSettings = $.kubeClientSettings;
+        this.kubeconfig = $.kubeconfig;
+        this.namespace = $.namespace;
+        this.renderYamlToDirectory = $.renderYamlToDirectory;
+        this.suppressDeprecationWarnings = $.suppressDeprecationWarnings;
+        this.suppressHelmHookWarnings = $.suppressHelmHookWarnings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cluster;
-        private @Nullable Output<String> context;
-        private @Nullable Output<Boolean> enableDryRun;
-        private @Nullable Output<Boolean> enableReplaceCRD;
-        private @Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings;
-        private @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
-        private @Nullable Output<String> kubeconfig;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> renderYamlToDirectory;
-        private @Nullable Output<Boolean> suppressDeprecationWarnings;
-        private @Nullable Output<Boolean> suppressHelmHookWarnings;
+        private ProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderArgs();
         }
 
         public Builder(ProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.context = defaults.context;
-    	      this.enableDryRun = defaults.enableDryRun;
-    	      this.enableReplaceCRD = defaults.enableReplaceCRD;
-    	      this.helmReleaseSettings = defaults.helmReleaseSettings;
-    	      this.kubeClientSettings = defaults.kubeClientSettings;
-    	      this.kubeconfig = defaults.kubeconfig;
-    	      this.namespace = defaults.namespace;
-    	      this.renderYamlToDirectory = defaults.renderYamlToDirectory;
-    	      this.suppressDeprecationWarnings = defaults.suppressDeprecationWarnings;
-    	      this.suppressHelmHookWarnings = defaults.suppressHelmHookWarnings;
+            $ = new ProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(@Nullable Output<String> cluster) {
-            this.cluster = cluster;
+            $.cluster = cluster;
             return this;
         }
-        public Builder cluster(@Nullable String cluster) {
-            this.cluster = Codegen.ofNullable(cluster);
-            return this;
+
+        public Builder cluster(String cluster) {
+            return cluster(Output.of(cluster));
         }
+
         public Builder context(@Nullable Output<String> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable String context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(String context) {
+            return context(Output.of(context));
         }
+
         public Builder enableDryRun(@Nullable Output<Boolean> enableDryRun) {
-            this.enableDryRun = enableDryRun;
+            $.enableDryRun = enableDryRun;
             return this;
         }
-        public Builder enableDryRun(@Nullable Boolean enableDryRun) {
-            this.enableDryRun = Codegen.ofNullable(enableDryRun);
-            return this;
+
+        public Builder enableDryRun(Boolean enableDryRun) {
+            return enableDryRun(Output.of(enableDryRun));
         }
+
         public Builder enableReplaceCRD(@Nullable Output<Boolean> enableReplaceCRD) {
-            this.enableReplaceCRD = enableReplaceCRD;
+            $.enableReplaceCRD = enableReplaceCRD;
             return this;
         }
-        public Builder enableReplaceCRD(@Nullable Boolean enableReplaceCRD) {
-            this.enableReplaceCRD = Codegen.ofNullable(enableReplaceCRD);
-            return this;
+
+        public Builder enableReplaceCRD(Boolean enableReplaceCRD) {
+            return enableReplaceCRD(Output.of(enableReplaceCRD));
         }
+
         public Builder helmReleaseSettings(@Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings) {
-            this.helmReleaseSettings = helmReleaseSettings;
+            $.helmReleaseSettings = helmReleaseSettings;
             return this;
         }
-        public Builder helmReleaseSettings(@Nullable HelmReleaseSettingsArgs helmReleaseSettings) {
-            this.helmReleaseSettings = Codegen.ofNullable(helmReleaseSettings);
-            return this;
+
+        public Builder helmReleaseSettings(HelmReleaseSettingsArgs helmReleaseSettings) {
+            return helmReleaseSettings(Output.of(helmReleaseSettings));
         }
+
         public Builder kubeClientSettings(@Nullable Output<KubeClientSettingsArgs> kubeClientSettings) {
-            this.kubeClientSettings = kubeClientSettings;
+            $.kubeClientSettings = kubeClientSettings;
             return this;
         }
-        public Builder kubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
-            this.kubeClientSettings = Codegen.ofNullable(kubeClientSettings);
-            return this;
+
+        public Builder kubeClientSettings(KubeClientSettingsArgs kubeClientSettings) {
+            return kubeClientSettings(Output.of(kubeClientSettings));
         }
+
         public Builder kubeconfig(@Nullable Output<String> kubeconfig) {
-            this.kubeconfig = kubeconfig;
+            $.kubeconfig = kubeconfig;
             return this;
         }
-        public Builder kubeconfig(@Nullable String kubeconfig) {
-            this.kubeconfig = Codegen.ofNullable(kubeconfig);
-            return this;
+
+        public Builder kubeconfig(String kubeconfig) {
+            return kubeconfig(Output.of(kubeconfig));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder renderYamlToDirectory(@Nullable Output<String> renderYamlToDirectory) {
-            this.renderYamlToDirectory = renderYamlToDirectory;
+            $.renderYamlToDirectory = renderYamlToDirectory;
             return this;
         }
-        public Builder renderYamlToDirectory(@Nullable String renderYamlToDirectory) {
-            this.renderYamlToDirectory = Codegen.ofNullable(renderYamlToDirectory);
-            return this;
+
+        public Builder renderYamlToDirectory(String renderYamlToDirectory) {
+            return renderYamlToDirectory(Output.of(renderYamlToDirectory));
         }
+
         public Builder suppressDeprecationWarnings(@Nullable Output<Boolean> suppressDeprecationWarnings) {
-            this.suppressDeprecationWarnings = suppressDeprecationWarnings;
+            $.suppressDeprecationWarnings = suppressDeprecationWarnings;
             return this;
         }
-        public Builder suppressDeprecationWarnings(@Nullable Boolean suppressDeprecationWarnings) {
-            this.suppressDeprecationWarnings = Codegen.ofNullable(suppressDeprecationWarnings);
-            return this;
+
+        public Builder suppressDeprecationWarnings(Boolean suppressDeprecationWarnings) {
+            return suppressDeprecationWarnings(Output.of(suppressDeprecationWarnings));
         }
+
         public Builder suppressHelmHookWarnings(@Nullable Output<Boolean> suppressHelmHookWarnings) {
-            this.suppressHelmHookWarnings = suppressHelmHookWarnings;
+            $.suppressHelmHookWarnings = suppressHelmHookWarnings;
             return this;
         }
-        public Builder suppressHelmHookWarnings(@Nullable Boolean suppressHelmHookWarnings) {
-            this.suppressHelmHookWarnings = Codegen.ofNullable(suppressHelmHookWarnings);
-            return this;
-        }        public ProviderArgs build() {
-            return new ProviderArgs(cluster, context, enableDryRun, enableReplaceCRD, helmReleaseSettings, kubeClientSettings, kubeconfig, namespace, renderYamlToDirectory, suppressDeprecationWarnings, suppressHelmHookWarnings);
+
+        public Builder suppressHelmHookWarnings(Boolean suppressHelmHookWarnings) {
+            return suppressHelmHookWarnings(Output.of(suppressHelmHookWarnings));
+        }
+
+        public ProviderArgs build() {
+            $.enableDryRun = Codegen.booleanProp("enableDryRun").output().arg($.enableDryRun).env("PULUMI_K8S_ENABLE_DRY_RUN").getNullable();
+            $.enableReplaceCRD = Codegen.booleanProp("enableReplaceCRD").output().arg($.enableReplaceCRD).env("PULUMI_K8S_ENABLE_REPLACE_CRD").getNullable();
+            $.kubeconfig = Codegen.stringProp("kubeconfig").output().arg($.kubeconfig).env("KUBECONFIG").getNullable();
+            $.suppressDeprecationWarnings = Codegen.booleanProp("suppressDeprecationWarnings").output().arg($.suppressDeprecationWarnings).env("PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS").getNullable();
+            $.suppressHelmHookWarnings = Codegen.booleanProp("suppressHelmHookWarnings").output().arg($.suppressHelmHookWarnings).env("PULUMI_K8S_SUPPRESS_HELM_HOOK_WARNINGS").getNullable();
+            return $;
         }
     }
+
 }

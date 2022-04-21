@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends com.pulumi.re
     public static final TaskDefinitionRepositoryCredentialsArgs Empty = new TaskDefinitionRepositoryCredentialsArgs();
 
     @Import(name="credentialsParameter")
-      private final @Nullable Output<String> credentialsParameter;
+    private @Nullable Output<String> credentialsParameter;
 
-    public Output<String> credentialsParameter() {
-        return this.credentialsParameter == null ? Codegen.empty() : this.credentialsParameter;
+    public Optional<Output<String>> credentialsParameter() {
+        return Optional.ofNullable(this.credentialsParameter);
     }
 
-    public TaskDefinitionRepositoryCredentialsArgs(@Nullable Output<String> credentialsParameter) {
-        this.credentialsParameter = credentialsParameter;
-    }
+    private TaskDefinitionRepositoryCredentialsArgs() {}
 
-    private TaskDefinitionRepositoryCredentialsArgs() {
-        this.credentialsParameter = Codegen.empty();
+    private TaskDefinitionRepositoryCredentialsArgs(TaskDefinitionRepositoryCredentialsArgs $) {
+        this.credentialsParameter = $.credentialsParameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionRepositoryCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> credentialsParameter;
+        private TaskDefinitionRepositoryCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionRepositoryCredentialsArgs();
         }
 
         public Builder(TaskDefinitionRepositoryCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentialsParameter = defaults.credentialsParameter;
+            $ = new TaskDefinitionRepositoryCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentialsParameter(@Nullable Output<String> credentialsParameter) {
-            this.credentialsParameter = credentialsParameter;
+            $.credentialsParameter = credentialsParameter;
             return this;
         }
-        public Builder credentialsParameter(@Nullable String credentialsParameter) {
-            this.credentialsParameter = Codegen.ofNullable(credentialsParameter);
-            return this;
-        }        public TaskDefinitionRepositoryCredentialsArgs build() {
-            return new TaskDefinitionRepositoryCredentialsArgs(credentialsParameter);
+
+        public Builder credentialsParameter(String credentialsParameter) {
+            return credentialsParameter(Output.of(credentialsParameter));
+        }
+
+        public TaskDefinitionRepositoryCredentialsArgs build() {
+            return $;
         }
     }
+
 }

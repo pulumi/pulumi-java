@@ -25,7 +25,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="active", required=true)
-      private final Integer active;
+    private Integer active;
 
     public Integer active() {
         return this.active;
@@ -36,7 +36,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="completionTime", required=true)
-      private final String completionTime;
+    private String completionTime;
 
     public String completionTime() {
         return this.completionTime;
@@ -47,7 +47,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<JobConditionResponse> conditions;
+    private List<JobConditionResponse> conditions;
 
     public List<JobConditionResponse> conditions() {
         return this.conditions;
@@ -58,7 +58,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="failed", required=true)
-      private final Integer failed;
+    private Integer failed;
 
     public Integer failed() {
         return this.failed;
@@ -69,7 +69,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageDigest", required=true)
-      private final String imageDigest;
+    private String imageDigest;
 
     public String imageDigest() {
         return this.imageDigest;
@@ -80,7 +80,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instances", required=true)
-      private final List<InstanceStatusResponse> instances;
+    private List<InstanceStatusResponse> instances;
 
     public List<InstanceStatusResponse> instances() {
         return this.instances;
@@ -91,7 +91,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="observedGeneration", required=true)
-      private final Integer observedGeneration;
+    private Integer observedGeneration;
 
     public Integer observedGeneration() {
         return this.observedGeneration;
@@ -102,7 +102,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -113,124 +113,109 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="succeeded", required=true)
-      private final Integer succeeded;
+    private Integer succeeded;
 
     public Integer succeeded() {
         return this.succeeded;
     }
 
-    public JobStatusResponse(
-        Integer active,
-        String completionTime,
-        List<JobConditionResponse> conditions,
-        Integer failed,
-        String imageDigest,
-        List<InstanceStatusResponse> instances,
-        Integer observedGeneration,
-        String startTime,
-        Integer succeeded) {
-        this.active = Objects.requireNonNull(active, "expected parameter 'active' to be non-null");
-        this.completionTime = Objects.requireNonNull(completionTime, "expected parameter 'completionTime' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.failed = Objects.requireNonNull(failed, "expected parameter 'failed' to be non-null");
-        this.imageDigest = Objects.requireNonNull(imageDigest, "expected parameter 'imageDigest' to be non-null");
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.observedGeneration = Objects.requireNonNull(observedGeneration, "expected parameter 'observedGeneration' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.succeeded = Objects.requireNonNull(succeeded, "expected parameter 'succeeded' to be non-null");
-    }
+    private JobStatusResponse() {}
 
-    private JobStatusResponse() {
-        this.active = null;
-        this.completionTime = null;
-        this.conditions = List.of();
-        this.failed = null;
-        this.imageDigest = null;
-        this.instances = List.of();
-        this.observedGeneration = null;
-        this.startTime = null;
-        this.succeeded = null;
+    private JobStatusResponse(JobStatusResponse $) {
+        this.active = $.active;
+        this.completionTime = $.completionTime;
+        this.conditions = $.conditions;
+        this.failed = $.failed;
+        this.imageDigest = $.imageDigest;
+        this.instances = $.instances;
+        this.observedGeneration = $.observedGeneration;
+        this.startTime = $.startTime;
+        this.succeeded = $.succeeded;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer active;
-        private String completionTime;
-        private List<JobConditionResponse> conditions;
-        private Integer failed;
-        private String imageDigest;
-        private List<InstanceStatusResponse> instances;
-        private Integer observedGeneration;
-        private String startTime;
-        private Integer succeeded;
+        private JobStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatusResponse();
         }
 
         public Builder(JobStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
-    	      this.completionTime = defaults.completionTime;
-    	      this.conditions = defaults.conditions;
-    	      this.failed = defaults.failed;
-    	      this.imageDigest = defaults.imageDigest;
-    	      this.instances = defaults.instances;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.startTime = defaults.startTime;
-    	      this.succeeded = defaults.succeeded;
+            $ = new JobStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder active(Integer active) {
-            this.active = Objects.requireNonNull(active);
+            $.active = active;
             return this;
         }
+
         public Builder completionTime(String completionTime) {
-            this.completionTime = Objects.requireNonNull(completionTime);
+            $.completionTime = completionTime;
             return this;
         }
+
         public Builder conditions(List<JobConditionResponse> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(JobConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder failed(Integer failed) {
-            this.failed = Objects.requireNonNull(failed);
+            $.failed = failed;
             return this;
         }
+
         public Builder imageDigest(String imageDigest) {
-            this.imageDigest = Objects.requireNonNull(imageDigest);
+            $.imageDigest = imageDigest;
             return this;
         }
+
         public Builder instances(List<InstanceStatusResponse> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(InstanceStatusResponse... instances) {
             return instances(List.of(instances));
         }
+
         public Builder observedGeneration(Integer observedGeneration) {
-            this.observedGeneration = Objects.requireNonNull(observedGeneration);
+            $.observedGeneration = observedGeneration;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder succeeded(Integer succeeded) {
-            this.succeeded = Objects.requireNonNull(succeeded);
+            $.succeeded = succeeded;
             return this;
-        }        public JobStatusResponse build() {
-            return new JobStatusResponse(active, completionTime, conditions, failed, imageDigest, instances, observedGeneration, startTime, succeeded);
+        }
+
+        public JobStatusResponse build() {
+            $.active = Objects.requireNonNull($.active, "expected parameter 'active' to be non-null");
+            $.completionTime = Objects.requireNonNull($.completionTime, "expected parameter 'completionTime' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.failed = Objects.requireNonNull($.failed, "expected parameter 'failed' to be non-null");
+            $.imageDigest = Objects.requireNonNull($.imageDigest, "expected parameter 'imageDigest' to be non-null");
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.observedGeneration = Objects.requireNonNull($.observedGeneration, "expected parameter 'observedGeneration' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.succeeded = Objects.requireNonNull($.succeeded, "expected parameter 'succeeded' to be non-null");
+            return $;
         }
     }
+
 }

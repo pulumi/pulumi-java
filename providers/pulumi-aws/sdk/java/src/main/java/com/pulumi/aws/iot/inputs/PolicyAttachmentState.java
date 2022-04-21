@@ -5,9 +5,9 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PolicyAttachmentState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -31,59 +31,58 @@ public final class PolicyAttachmentState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public PolicyAttachmentState(
-        @Nullable Output<String> policy,
-        @Nullable Output<String> target) {
-        this.policy = policy;
-        this.target = target;
-    }
+    private PolicyAttachmentState() {}
 
-    private PolicyAttachmentState() {
-        this.policy = Codegen.empty();
-        this.target = Codegen.empty();
+    private PolicyAttachmentState(PolicyAttachmentState $) {
+        this.policy = $.policy;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> target;
+        private PolicyAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAttachmentState();
         }
 
         public Builder(PolicyAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.target = defaults.target;
+            $ = new PolicyAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public PolicyAttachmentState build() {
-            return new PolicyAttachmentState(policy, target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public PolicyAttachmentState build() {
+            return $;
         }
     }
+
 }

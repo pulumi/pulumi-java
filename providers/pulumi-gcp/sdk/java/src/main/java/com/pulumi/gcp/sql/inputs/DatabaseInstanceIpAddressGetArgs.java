@@ -5,9 +5,9 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class DatabaseInstanceIpAddressGetArgs extends com.pulumi.resources
     public static final DatabaseInstanceIpAddressGetArgs Empty = new DatabaseInstanceIpAddressGetArgs();
 
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     @Import(name="timeToRetire")
-      private final @Nullable Output<String> timeToRetire;
+    private @Nullable Output<String> timeToRetire;
 
-    public Output<String> timeToRetire() {
-        return this.timeToRetire == null ? Codegen.empty() : this.timeToRetire;
+    public Optional<Output<String>> timeToRetire() {
+        return Optional.ofNullable(this.timeToRetire);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public DatabaseInstanceIpAddressGetArgs(
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> timeToRetire,
-        @Nullable Output<String> type) {
-        this.ipAddress = ipAddress;
-        this.timeToRetire = timeToRetire;
-        this.type = type;
-    }
+    private DatabaseInstanceIpAddressGetArgs() {}
 
-    private DatabaseInstanceIpAddressGetArgs() {
-        this.ipAddress = Codegen.empty();
-        this.timeToRetire = Codegen.empty();
-        this.type = Codegen.empty();
+    private DatabaseInstanceIpAddressGetArgs(DatabaseInstanceIpAddressGetArgs $) {
+        this.ipAddress = $.ipAddress;
+        this.timeToRetire = $.timeToRetire;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceIpAddressGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> timeToRetire;
-        private @Nullable Output<String> type;
+        private DatabaseInstanceIpAddressGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceIpAddressGetArgs();
         }
 
         public Builder(DatabaseInstanceIpAddressGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.timeToRetire = defaults.timeToRetire;
-    	      this.type = defaults.type;
+            $ = new DatabaseInstanceIpAddressGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder timeToRetire(@Nullable Output<String> timeToRetire) {
-            this.timeToRetire = timeToRetire;
+            $.timeToRetire = timeToRetire;
             return this;
         }
-        public Builder timeToRetire(@Nullable String timeToRetire) {
-            this.timeToRetire = Codegen.ofNullable(timeToRetire);
-            return this;
+
+        public Builder timeToRetire(String timeToRetire) {
+            return timeToRetire(Output.of(timeToRetire));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public DatabaseInstanceIpAddressGetArgs build() {
-            return new DatabaseInstanceIpAddressGetArgs(ipAddress, timeToRetire, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public DatabaseInstanceIpAddressGetArgs build() {
+            return $;
         }
     }
+
 }

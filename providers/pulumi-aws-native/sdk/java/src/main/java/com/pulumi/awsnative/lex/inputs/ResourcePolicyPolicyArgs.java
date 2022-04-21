@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.lex.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class ResourcePolicyPolicyArgs extends com.pulumi.resources.Resourc
 
     public static final ResourcePolicyPolicyArgs Empty = new ResourcePolicyPolicyArgs();
 
-    public ResourcePolicyPolicyArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(ResourcePolicyPolicyArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private ResourcePolicyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(ResourcePolicyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new ResourcePolicyPolicyArgs();
         }
         public ResourcePolicyPolicyArgs build() {
-            return new ResourcePolicyPolicyArgs();
+            return $;
         }
     }
+
 }

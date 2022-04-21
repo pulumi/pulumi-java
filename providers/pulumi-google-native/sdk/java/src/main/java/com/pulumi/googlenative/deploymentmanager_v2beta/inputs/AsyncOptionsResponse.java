@@ -22,7 +22,7 @@ public final class AsyncOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="methodMatch", required=true)
-      private final String methodMatch;
+    private String methodMatch;
 
     public String methodMatch() {
         return this.methodMatch;
@@ -33,55 +33,52 @@ public final class AsyncOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="pollingOptions", required=true)
-      private final PollingOptionsResponse pollingOptions;
+    private PollingOptionsResponse pollingOptions;
 
     public PollingOptionsResponse pollingOptions() {
         return this.pollingOptions;
     }
 
-    public AsyncOptionsResponse(
-        String methodMatch,
-        PollingOptionsResponse pollingOptions) {
-        this.methodMatch = Objects.requireNonNull(methodMatch, "expected parameter 'methodMatch' to be non-null");
-        this.pollingOptions = Objects.requireNonNull(pollingOptions, "expected parameter 'pollingOptions' to be non-null");
-    }
+    private AsyncOptionsResponse() {}
 
-    private AsyncOptionsResponse() {
-        this.methodMatch = null;
-        this.pollingOptions = null;
+    private AsyncOptionsResponse(AsyncOptionsResponse $) {
+        this.methodMatch = $.methodMatch;
+        this.pollingOptions = $.pollingOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AsyncOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String methodMatch;
-        private PollingOptionsResponse pollingOptions;
+        private AsyncOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AsyncOptionsResponse();
         }
 
         public Builder(AsyncOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methodMatch = defaults.methodMatch;
-    	      this.pollingOptions = defaults.pollingOptions;
+            $ = new AsyncOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder methodMatch(String methodMatch) {
-            this.methodMatch = Objects.requireNonNull(methodMatch);
+            $.methodMatch = methodMatch;
             return this;
         }
+
         public Builder pollingOptions(PollingOptionsResponse pollingOptions) {
-            this.pollingOptions = Objects.requireNonNull(pollingOptions);
+            $.pollingOptions = pollingOptions;
             return this;
-        }        public AsyncOptionsResponse build() {
-            return new AsyncOptionsResponse(methodMatch, pollingOptions);
+        }
+
+        public AsyncOptionsResponse build() {
+            $.methodMatch = Objects.requireNonNull($.methodMatch, "expected parameter 'methodMatch' to be non-null");
+            $.pollingOptions = Objects.requireNonNull($.pollingOptions, "expected parameter 'pollingOptions' to be non-null");
+            return $;
         }
     }
+
 }

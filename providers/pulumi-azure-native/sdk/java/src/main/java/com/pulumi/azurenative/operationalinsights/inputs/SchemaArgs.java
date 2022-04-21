@@ -6,10 +6,10 @@ package com.pulumi.azurenative.operationalinsights.inputs;
 import com.pulumi.azurenative.operationalinsights.inputs.ColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<List<ColumnArgs>> columns;
+    private @Nullable Output<List<ColumnArgs>> columns;
 
-    public Output<List<ColumnArgs>> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<List<ColumnArgs>>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SchemaArgs(
-        @Nullable Output<List<ColumnArgs>> columns,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name) {
-        this.columns = columns;
-        this.description = description;
-        this.displayName = displayName;
-        this.name = name;
-    }
+    private SchemaArgs() {}
 
-    private SchemaArgs() {
-        this.columns = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
+    private SchemaArgs(SchemaArgs $) {
+        this.columns = $.columns;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ColumnArgs>> columns;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
+        private SchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaArgs();
         }
 
         public Builder(SchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
+            $ = new SchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable Output<List<ColumnArgs>> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable List<ColumnArgs> columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(List<ColumnArgs> columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder columns(ColumnArgs... columns) {
             return columns(List.of(columns));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SchemaArgs build() {
-            return new SchemaArgs(columns, description, displayName, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public SchemaArgs build() {
+            return $;
         }
     }
+
 }

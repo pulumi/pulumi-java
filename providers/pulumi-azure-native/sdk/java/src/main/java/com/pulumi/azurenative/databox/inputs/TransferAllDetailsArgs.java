@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +28,7 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataAccountType", required=true)
-      private final Output<Either<String,DataAccountType>> dataAccountType;
+    private Output<Either<String,DataAccountType>> dataAccountType;
 
     public Output<Either<String,DataAccountType>> dataAccountType() {
         return this.dataAccountType;
@@ -38,10 +39,10 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="transferAllBlobs")
-      private final @Nullable Output<Boolean> transferAllBlobs;
+    private @Nullable Output<Boolean> transferAllBlobs;
 
-    public Output<Boolean> transferAllBlobs() {
-        return this.transferAllBlobs == null ? Codegen.empty() : this.transferAllBlobs;
+    public Optional<Output<Boolean>> transferAllBlobs() {
+        return Optional.ofNullable(this.transferAllBlobs);
     }
 
     /**
@@ -49,76 +50,69 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="transferAllFiles")
-      private final @Nullable Output<Boolean> transferAllFiles;
+    private @Nullable Output<Boolean> transferAllFiles;
 
-    public Output<Boolean> transferAllFiles() {
-        return this.transferAllFiles == null ? Codegen.empty() : this.transferAllFiles;
+    public Optional<Output<Boolean>> transferAllFiles() {
+        return Optional.ofNullable(this.transferAllFiles);
     }
 
-    public TransferAllDetailsArgs(
-        Output<Either<String,DataAccountType>> dataAccountType,
-        @Nullable Output<Boolean> transferAllBlobs,
-        @Nullable Output<Boolean> transferAllFiles) {
-        this.dataAccountType = Codegen.stringProp("dataAccountType").left(DataAccountType.class).output().arg(dataAccountType).def("StorageAccount").require();
-        this.transferAllBlobs = transferAllBlobs;
-        this.transferAllFiles = transferAllFiles;
-    }
+    private TransferAllDetailsArgs() {}
 
-    private TransferAllDetailsArgs() {
-        this.dataAccountType = Codegen.empty();
-        this.transferAllBlobs = Codegen.empty();
-        this.transferAllFiles = Codegen.empty();
+    private TransferAllDetailsArgs(TransferAllDetailsArgs $) {
+        this.dataAccountType = $.dataAccountType;
+        this.transferAllBlobs = $.transferAllBlobs;
+        this.transferAllFiles = $.transferAllFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferAllDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,DataAccountType>> dataAccountType;
-        private @Nullable Output<Boolean> transferAllBlobs;
-        private @Nullable Output<Boolean> transferAllFiles;
+        private TransferAllDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferAllDetailsArgs();
         }
 
         public Builder(TransferAllDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataAccountType = defaults.dataAccountType;
-    	      this.transferAllBlobs = defaults.transferAllBlobs;
-    	      this.transferAllFiles = defaults.transferAllFiles;
+            $ = new TransferAllDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataAccountType(Output<Either<String,DataAccountType>> dataAccountType) {
-            this.dataAccountType = Objects.requireNonNull(dataAccountType);
+            $.dataAccountType = dataAccountType;
             return this;
         }
+
         public Builder dataAccountType(Either<String,DataAccountType> dataAccountType) {
-            this.dataAccountType = Output.of(Objects.requireNonNull(dataAccountType));
-            return this;
+            return dataAccountType(Output.of(dataAccountType));
         }
+
         public Builder transferAllBlobs(@Nullable Output<Boolean> transferAllBlobs) {
-            this.transferAllBlobs = transferAllBlobs;
+            $.transferAllBlobs = transferAllBlobs;
             return this;
         }
-        public Builder transferAllBlobs(@Nullable Boolean transferAllBlobs) {
-            this.transferAllBlobs = Codegen.ofNullable(transferAllBlobs);
-            return this;
+
+        public Builder transferAllBlobs(Boolean transferAllBlobs) {
+            return transferAllBlobs(Output.of(transferAllBlobs));
         }
+
         public Builder transferAllFiles(@Nullable Output<Boolean> transferAllFiles) {
-            this.transferAllFiles = transferAllFiles;
+            $.transferAllFiles = transferAllFiles;
             return this;
         }
-        public Builder transferAllFiles(@Nullable Boolean transferAllFiles) {
-            this.transferAllFiles = Codegen.ofNullable(transferAllFiles);
-            return this;
-        }        public TransferAllDetailsArgs build() {
-            return new TransferAllDetailsArgs(dataAccountType, transferAllBlobs, transferAllFiles);
+
+        public Builder transferAllFiles(Boolean transferAllFiles) {
+            return transferAllFiles(Output.of(transferAllFiles));
+        }
+
+        public TransferAllDetailsArgs build() {
+            $.dataAccountType = Codegen.stringProp("dataAccountType").left(DataAccountType.class).output().arg($.dataAccountType).def("StorageAccount").require();
+            return $;
         }
     }
+
 }

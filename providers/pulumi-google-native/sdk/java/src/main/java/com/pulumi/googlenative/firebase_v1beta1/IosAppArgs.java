@@ -5,9 +5,9 @@ package com.pulumi.googlenative.firebase_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appStoreId")
-      private final @Nullable Output<String> appStoreId;
+    private @Nullable Output<String> appStoreId;
 
-    public Output<String> appStoreId() {
-        return this.appStoreId == null ? Codegen.empty() : this.appStoreId;
+    public Optional<Output<String>> appStoreId() {
+        return Optional.ofNullable(this.appStoreId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bundleId")
-      private final @Nullable Output<String> bundleId;
+    private @Nullable Output<String> bundleId;
 
-    public Output<String> bundleId() {
-        return this.bundleId == null ? Codegen.empty() : this.bundleId;
+    public Optional<Output<String>> bundleId() {
+        return Optional.ofNullable(this.bundleId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -86,128 +86,108 @@ public final class IosAppArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="teamId")
-      private final @Nullable Output<String> teamId;
+    private @Nullable Output<String> teamId;
 
-    public Output<String> teamId() {
-        return this.teamId == null ? Codegen.empty() : this.teamId;
+    public Optional<Output<String>> teamId() {
+        return Optional.ofNullable(this.teamId);
     }
 
-    public IosAppArgs(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> appStoreId,
-        @Nullable Output<String> bundleId,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> teamId) {
-        this.appId = appId;
-        this.appStoreId = appStoreId;
-        this.bundleId = bundleId;
-        this.displayName = displayName;
-        this.name = name;
-        this.project = project;
-        this.teamId = teamId;
-    }
+    private IosAppArgs() {}
 
-    private IosAppArgs() {
-        this.appId = Codegen.empty();
-        this.appStoreId = Codegen.empty();
-        this.bundleId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.teamId = Codegen.empty();
+    private IosAppArgs(IosAppArgs $) {
+        this.appId = $.appId;
+        this.appStoreId = $.appStoreId;
+        this.bundleId = $.bundleId;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.project = $.project;
+        this.teamId = $.teamId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> appStoreId;
-        private @Nullable Output<String> bundleId;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> teamId;
+        private IosAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosAppArgs();
         }
 
         public Builder(IosAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.appStoreId = defaults.appStoreId;
-    	      this.bundleId = defaults.bundleId;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.teamId = defaults.teamId;
+            $ = new IosAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder appStoreId(@Nullable Output<String> appStoreId) {
-            this.appStoreId = appStoreId;
+            $.appStoreId = appStoreId;
             return this;
         }
-        public Builder appStoreId(@Nullable String appStoreId) {
-            this.appStoreId = Codegen.ofNullable(appStoreId);
-            return this;
+
+        public Builder appStoreId(String appStoreId) {
+            return appStoreId(Output.of(appStoreId));
         }
+
         public Builder bundleId(@Nullable Output<String> bundleId) {
-            this.bundleId = bundleId;
+            $.bundleId = bundleId;
             return this;
         }
-        public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Codegen.ofNullable(bundleId);
-            return this;
+
+        public Builder bundleId(String bundleId) {
+            return bundleId(Output.of(bundleId));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder teamId(@Nullable Output<String> teamId) {
-            this.teamId = teamId;
+            $.teamId = teamId;
             return this;
         }
-        public Builder teamId(@Nullable String teamId) {
-            this.teamId = Codegen.ofNullable(teamId);
-            return this;
-        }        public IosAppArgs build() {
-            return new IosAppArgs(appId, appStoreId, bundleId, displayName, name, project, teamId);
+
+        public Builder teamId(String teamId) {
+            return teamId(Output.of(teamId));
+        }
+
+        public IosAppArgs build() {
+            return $;
         }
     }
+
 }

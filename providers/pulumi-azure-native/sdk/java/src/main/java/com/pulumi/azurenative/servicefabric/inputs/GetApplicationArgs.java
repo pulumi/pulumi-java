@@ -17,7 +17,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="applicationName", required=true)
-      private final String applicationName;
+    private String applicationName;
 
     public String applicationName() {
         return this.applicationName;
@@ -28,7 +28,7 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -39,64 +39,59 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetApplicationArgs(
-        String applicationName,
-        String clusterName,
-        String resourceGroupName) {
-        this.applicationName = Objects.requireNonNull(applicationName, "expected parameter 'applicationName' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetApplicationArgs() {}
 
-    private GetApplicationArgs() {
-        this.applicationName = null;
-        this.clusterName = null;
-        this.resourceGroupName = null;
+    private GetApplicationArgs(GetApplicationArgs $) {
+        this.applicationName = $.applicationName;
+        this.clusterName = $.clusterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String applicationName;
-        private String clusterName;
-        private String resourceGroupName;
+        private GetApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApplicationArgs();
         }
 
         public Builder(GetApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.clusterName = defaults.clusterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(String applicationName) {
-            this.applicationName = Objects.requireNonNull(applicationName);
+            $.applicationName = applicationName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetApplicationArgs build() {
-            return new GetApplicationArgs(applicationName, clusterName, resourceGroupName);
+        }
+
+        public GetApplicationArgs build() {
+            $.applicationName = Objects.requireNonNull($.applicationName, "expected parameter 'applicationName' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

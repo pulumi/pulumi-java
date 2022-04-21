@@ -18,7 +18,7 @@ public final class SubsettingResponse extends com.pulumi.resources.InvokeArgs {
     public static final SubsettingResponse Empty = new SubsettingResponse();
 
     @Import(name="policy", required=true)
-      private final String policy;
+    private String policy;
 
     public String policy() {
         return this.policy;
@@ -29,55 +29,52 @@ public final class SubsettingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subsetSize", required=true)
-      private final Integer subsetSize;
+    private Integer subsetSize;
 
     public Integer subsetSize() {
         return this.subsetSize;
     }
 
-    public SubsettingResponse(
-        String policy,
-        Integer subsetSize) {
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.subsetSize = Objects.requireNonNull(subsetSize, "expected parameter 'subsetSize' to be non-null");
-    }
+    private SubsettingResponse() {}
 
-    private SubsettingResponse() {
-        this.policy = null;
-        this.subsetSize = null;
+    private SubsettingResponse(SubsettingResponse $) {
+        this.policy = $.policy;
+        this.subsetSize = $.subsetSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubsettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policy;
-        private Integer subsetSize;
+        private SubsettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubsettingResponse();
         }
 
         public Builder(SubsettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.subsetSize = defaults.subsetSize;
+            $ = new SubsettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(String policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder subsetSize(Integer subsetSize) {
-            this.subsetSize = Objects.requireNonNull(subsetSize);
+            $.subsetSize = subsetSize;
             return this;
-        }        public SubsettingResponse build() {
-            return new SubsettingResponse(policy, subsetSize);
+        }
+
+        public SubsettingResponse build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.subsetSize = Objects.requireNonNull($.subsetSize, "expected parameter 'subsetSize' to be non-null");
+            return $;
         }
     }
+
 }

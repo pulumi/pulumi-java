@@ -24,7 +24,7 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="annotations", required=true)
-      private final Map<String,String> annotations;
+    private Map<String,String> annotations;
 
     public Map<String,String> annotations() {
         return this.annotations;
@@ -35,7 +35,7 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="condition", required=true)
-      private final PipelineConditionResponse condition;
+    private PipelineConditionResponse condition;
 
     public PipelineConditionResponse condition() {
         return this.condition;
@@ -46,7 +46,7 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -57,7 +57,7 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -68,7 +68,7 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -79,7 +79,7 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -90,7 +90,7 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -101,7 +101,7 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="serialPipeline", required=true)
-      private final SerialPipelineResponse serialPipeline;
+    private SerialPipelineResponse serialPipeline;
 
     public SerialPipelineResponse serialPipeline() {
         return this.serialPipeline;
@@ -112,7 +112,7 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="uid", required=true)
-      private final String uid;
+    private String uid;
 
     public String uid() {
         return this.uid;
@@ -123,127 +123,108 @@ public final class DeliveryPipelineResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public DeliveryPipelineResponse(
-        Map<String,String> annotations,
-        PipelineConditionResponse condition,
-        String createTime,
-        String description,
-        String etag,
-        Map<String,String> labels,
-        String name,
-        SerialPipelineResponse serialPipeline,
-        String uid,
-        String updateTime) {
-        this.annotations = Objects.requireNonNull(annotations, "expected parameter 'annotations' to be non-null");
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.serialPipeline = Objects.requireNonNull(serialPipeline, "expected parameter 'serialPipeline' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private DeliveryPipelineResponse() {}
 
-    private DeliveryPipelineResponse() {
-        this.annotations = Map.of();
-        this.condition = null;
-        this.createTime = null;
-        this.description = null;
-        this.etag = null;
-        this.labels = Map.of();
-        this.name = null;
-        this.serialPipeline = null;
-        this.uid = null;
-        this.updateTime = null;
+    private DeliveryPipelineResponse(DeliveryPipelineResponse $) {
+        this.annotations = $.annotations;
+        this.condition = $.condition;
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.serialPipeline = $.serialPipeline;
+        this.uid = $.uid;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryPipelineResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> annotations;
-        private PipelineConditionResponse condition;
-        private String createTime;
-        private String description;
-        private String etag;
-        private Map<String,String> labels;
-        private String name;
-        private SerialPipelineResponse serialPipeline;
-        private String uid;
-        private String updateTime;
+        private DeliveryPipelineResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryPipelineResponse();
         }
 
         public Builder(DeliveryPipelineResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.condition = defaults.condition;
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.serialPipeline = defaults.serialPipeline;
-    	      this.uid = defaults.uid;
-    	      this.updateTime = defaults.updateTime;
+            $ = new DeliveryPipelineResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(Map<String,String> annotations) {
-            this.annotations = Objects.requireNonNull(annotations);
+            $.annotations = annotations;
             return this;
         }
+
         public Builder condition(PipelineConditionResponse condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder serialPipeline(SerialPipelineResponse serialPipeline) {
-            this.serialPipeline = Objects.requireNonNull(serialPipeline);
+            $.serialPipeline = serialPipeline;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public DeliveryPipelineResponse build() {
-            return new DeliveryPipelineResponse(annotations, condition, createTime, description, etag, labels, name, serialPipeline, uid, updateTime);
+        }
+
+        public DeliveryPipelineResponse build() {
+            $.annotations = Objects.requireNonNull($.annotations, "expected parameter 'annotations' to be non-null");
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.serialPipeline = Objects.requireNonNull($.serialPipeline, "expected parameter 'serialPipeline' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends com.p
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<Object> defaultValue;
+    private @Nullable Output<Object> defaultValue;
 
-    public Output<Object> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<Object>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends com.p
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends com.p
      * 
      */
     @Import(name="entityType", required=true)
-      private final Output<String> entityType;
+    private Output<String> entityType;
 
     public Output<String> entityType() {
         return this.entityType;
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends com.p
      * 
      */
     @Import(name="fillBehavior", required=true)
-      private final Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> fillBehavior;
+    private Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> fillBehavior;
 
     public Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> fillBehavior() {
         return this.fillBehavior;
@@ -71,10 +71,10 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends com.p
      * 
      */
     @Import(name="isList")
-      private final @Nullable Output<Boolean> isList;
+    private @Nullable Output<Boolean> isList;
 
-    public Output<Boolean> isList() {
-        return this.isList == null ? Codegen.empty() : this.isList;
+    public Optional<Output<Boolean>> isList() {
+        return Optional.ofNullable(this.isList);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends com.p
      * 
      */
     @Import(name="redact")
-      private final @Nullable Output<Boolean> redact;
+    private @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> redact() {
-        return this.redact == null ? Codegen.empty() : this.redact;
+    public Optional<Output<Boolean>> redact() {
+        return Optional.ofNullable(this.redact);
     }
 
     /**
@@ -93,128 +93,111 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterArgs extends com.p
      * 
      */
     @Import(name="required")
-      private final @Nullable Output<Boolean> required;
+    private @Nullable Output<Boolean> required;
 
-    public Output<Boolean> required() {
-        return this.required == null ? Codegen.empty() : this.required;
+    public Optional<Output<Boolean>> required() {
+        return Optional.ofNullable(this.required);
     }
 
-    public GoogleCloudDialogflowCxV3beta1FormParameterArgs(
-        @Nullable Output<Object> defaultValue,
-        Output<String> displayName,
-        Output<String> entityType,
-        Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> fillBehavior,
-        @Nullable Output<Boolean> isList,
-        @Nullable Output<Boolean> redact,
-        @Nullable Output<Boolean> required) {
-        this.defaultValue = defaultValue;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.entityType = Objects.requireNonNull(entityType, "expected parameter 'entityType' to be non-null");
-        this.fillBehavior = Objects.requireNonNull(fillBehavior, "expected parameter 'fillBehavior' to be non-null");
-        this.isList = isList;
-        this.redact = redact;
-        this.required = required;
-    }
+    private GoogleCloudDialogflowCxV3beta1FormParameterArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1FormParameterArgs() {
-        this.defaultValue = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.entityType = Codegen.empty();
-        this.fillBehavior = Codegen.empty();
-        this.isList = Codegen.empty();
-        this.redact = Codegen.empty();
-        this.required = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1FormParameterArgs(GoogleCloudDialogflowCxV3beta1FormParameterArgs $) {
+        this.defaultValue = $.defaultValue;
+        this.displayName = $.displayName;
+        this.entityType = $.entityType;
+        this.fillBehavior = $.fillBehavior;
+        this.isList = $.isList;
+        this.redact = $.redact;
+        this.required = $.required;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1FormParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> defaultValue;
-        private Output<String> displayName;
-        private Output<String> entityType;
-        private Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> fillBehavior;
-        private @Nullable Output<Boolean> isList;
-        private @Nullable Output<Boolean> redact;
-        private @Nullable Output<Boolean> required;
+        private GoogleCloudDialogflowCxV3beta1FormParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1FormParameterArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1FormParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.displayName = defaults.displayName;
-    	      this.entityType = defaults.entityType;
-    	      this.fillBehavior = defaults.fillBehavior;
-    	      this.isList = defaults.isList;
-    	      this.redact = defaults.redact;
-    	      this.required = defaults.required;
+            $ = new GoogleCloudDialogflowCxV3beta1FormParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(Object defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder entityType(Output<String> entityType) {
-            this.entityType = Objects.requireNonNull(entityType);
+            $.entityType = entityType;
             return this;
         }
+
         public Builder entityType(String entityType) {
-            this.entityType = Output.of(Objects.requireNonNull(entityType));
-            return this;
+            return entityType(Output.of(entityType));
         }
+
         public Builder fillBehavior(Output<GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs> fillBehavior) {
-            this.fillBehavior = Objects.requireNonNull(fillBehavior);
+            $.fillBehavior = fillBehavior;
             return this;
         }
+
         public Builder fillBehavior(GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs fillBehavior) {
-            this.fillBehavior = Output.of(Objects.requireNonNull(fillBehavior));
-            return this;
+            return fillBehavior(Output.of(fillBehavior));
         }
+
         public Builder isList(@Nullable Output<Boolean> isList) {
-            this.isList = isList;
+            $.isList = isList;
             return this;
         }
-        public Builder isList(@Nullable Boolean isList) {
-            this.isList = Codegen.ofNullable(isList);
-            return this;
+
+        public Builder isList(Boolean isList) {
+            return isList(Output.of(isList));
         }
+
         public Builder redact(@Nullable Output<Boolean> redact) {
-            this.redact = redact;
+            $.redact = redact;
             return this;
         }
-        public Builder redact(@Nullable Boolean redact) {
-            this.redact = Codegen.ofNullable(redact);
-            return this;
+
+        public Builder redact(Boolean redact) {
+            return redact(Output.of(redact));
         }
+
         public Builder required(@Nullable Output<Boolean> required) {
-            this.required = required;
+            $.required = required;
             return this;
         }
-        public Builder required(@Nullable Boolean required) {
-            this.required = Codegen.ofNullable(required);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1FormParameterArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1FormParameterArgs(defaultValue, displayName, entityType, fillBehavior, isList, redact, required);
+
+        public Builder required(Boolean required) {
+            return required(Output.of(required));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1FormParameterArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.entityType = Objects.requireNonNull($.entityType, "expected parameter 'entityType' to be non-null");
+            $.fillBehavior = Objects.requireNonNull($.fillBehavior, "expected parameter 'fillBehavior' to be non-null");
+            return $;
         }
     }
+
 }

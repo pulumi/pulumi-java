@@ -22,7 +22,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends com.pulumi
      * 
      */
     @Import(name="dataflowFlexTemplateRequest", required=true)
-      private final GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
+    private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
 
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest() {
         return this.dataflowFlexTemplateRequest;
@@ -33,55 +33,52 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends com.pulumi
      * 
      */
     @Import(name="dataflowLaunchTemplateRequest", required=true)
-      private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
+    private GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
 
     public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest() {
         return this.dataflowLaunchTemplateRequest;
     }
 
-    public GoogleCloudDatapipelinesV1WorkloadResponse(
-        GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest,
-        GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
-        this.dataflowFlexTemplateRequest = Objects.requireNonNull(dataflowFlexTemplateRequest, "expected parameter 'dataflowFlexTemplateRequest' to be non-null");
-        this.dataflowLaunchTemplateRequest = Objects.requireNonNull(dataflowLaunchTemplateRequest, "expected parameter 'dataflowLaunchTemplateRequest' to be non-null");
-    }
+    private GoogleCloudDatapipelinesV1WorkloadResponse() {}
 
-    private GoogleCloudDatapipelinesV1WorkloadResponse() {
-        this.dataflowFlexTemplateRequest = null;
-        this.dataflowLaunchTemplateRequest = null;
+    private GoogleCloudDatapipelinesV1WorkloadResponse(GoogleCloudDatapipelinesV1WorkloadResponse $) {
+        this.dataflowFlexTemplateRequest = $.dataflowFlexTemplateRequest;
+        this.dataflowLaunchTemplateRequest = $.dataflowLaunchTemplateRequest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1WorkloadResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
-        private GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
+        private GoogleCloudDatapipelinesV1WorkloadResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1WorkloadResponse();
         }
 
         public Builder(GoogleCloudDatapipelinesV1WorkloadResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataflowFlexTemplateRequest = defaults.dataflowFlexTemplateRequest;
-    	      this.dataflowLaunchTemplateRequest = defaults.dataflowLaunchTemplateRequest;
+            $ = new GoogleCloudDatapipelinesV1WorkloadResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataflowFlexTemplateRequest(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest) {
-            this.dataflowFlexTemplateRequest = Objects.requireNonNull(dataflowFlexTemplateRequest);
+            $.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
             return this;
         }
+
         public Builder dataflowLaunchTemplateRequest(GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
-            this.dataflowLaunchTemplateRequest = Objects.requireNonNull(dataflowLaunchTemplateRequest);
+            $.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
             return this;
-        }        public GoogleCloudDatapipelinesV1WorkloadResponse build() {
-            return new GoogleCloudDatapipelinesV1WorkloadResponse(dataflowFlexTemplateRequest, dataflowLaunchTemplateRequest);
+        }
+
+        public GoogleCloudDatapipelinesV1WorkloadResponse build() {
+            $.dataflowFlexTemplateRequest = Objects.requireNonNull($.dataflowFlexTemplateRequest, "expected parameter 'dataflowFlexTemplateRequest' to be non-null");
+            $.dataflowLaunchTemplateRequest = Objects.requireNonNull($.dataflowLaunchTemplateRequest, "expected parameter 'dataflowLaunchTemplateRequest' to be non-null");
+            return $;
         }
     }
+
 }

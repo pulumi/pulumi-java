@@ -5,9 +5,9 @@ package com.pulumi.gcp.networkconnectivity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class HubRoutingVpcArgs extends com.pulumi.resources.ResourceArgs {
     public static final HubRoutingVpcArgs Empty = new HubRoutingVpcArgs();
 
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public HubRoutingVpcArgs(@Nullable Output<String> uri) {
-        this.uri = uri;
-    }
+    private HubRoutingVpcArgs() {}
 
-    private HubRoutingVpcArgs() {
-        this.uri = Codegen.empty();
+    private HubRoutingVpcArgs(HubRoutingVpcArgs $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubRoutingVpcArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> uri;
+        private HubRoutingVpcArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubRoutingVpcArgs();
         }
 
         public Builder(HubRoutingVpcArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new HubRoutingVpcArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public HubRoutingVpcArgs build() {
-            return new HubRoutingVpcArgs(uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public HubRoutingVpcArgs build() {
+            return $;
         }
     }
+
 }

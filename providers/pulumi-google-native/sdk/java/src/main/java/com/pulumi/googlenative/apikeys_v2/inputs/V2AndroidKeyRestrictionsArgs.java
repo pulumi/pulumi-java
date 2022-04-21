@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apikeys_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apikeys_v2.inputs.V2AndroidApplicationArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class V2AndroidKeyRestrictionsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="allowedApplications")
-      private final @Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications;
+    private @Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications;
 
-    public Output<List<V2AndroidApplicationArgs>> allowedApplications() {
-        return this.allowedApplications == null ? Codegen.empty() : this.allowedApplications;
+    public Optional<Output<List<V2AndroidApplicationArgs>>> allowedApplications() {
+        return Optional.ofNullable(this.allowedApplications);
     }
 
-    public V2AndroidKeyRestrictionsArgs(@Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications) {
-        this.allowedApplications = allowedApplications;
-    }
+    private V2AndroidKeyRestrictionsArgs() {}
 
-    private V2AndroidKeyRestrictionsArgs() {
-        this.allowedApplications = Codegen.empty();
+    private V2AndroidKeyRestrictionsArgs(V2AndroidKeyRestrictionsArgs $) {
+        this.allowedApplications = $.allowedApplications;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2AndroidKeyRestrictionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications;
+        private V2AndroidKeyRestrictionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2AndroidKeyRestrictionsArgs();
         }
 
         public Builder(V2AndroidKeyRestrictionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedApplications = defaults.allowedApplications;
+            $ = new V2AndroidKeyRestrictionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedApplications(@Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications) {
-            this.allowedApplications = allowedApplications;
+            $.allowedApplications = allowedApplications;
             return this;
         }
-        public Builder allowedApplications(@Nullable List<V2AndroidApplicationArgs> allowedApplications) {
-            this.allowedApplications = Codegen.ofNullable(allowedApplications);
-            return this;
+
+        public Builder allowedApplications(List<V2AndroidApplicationArgs> allowedApplications) {
+            return allowedApplications(Output.of(allowedApplications));
         }
+
         public Builder allowedApplications(V2AndroidApplicationArgs... allowedApplications) {
             return allowedApplications(List.of(allowedApplications));
-        }        public V2AndroidKeyRestrictionsArgs build() {
-            return new V2AndroidKeyRestrictionsArgs(allowedApplications);
+        }
+
+        public V2AndroidKeyRestrictionsArgs build() {
+            return $;
         }
     }
+
 }

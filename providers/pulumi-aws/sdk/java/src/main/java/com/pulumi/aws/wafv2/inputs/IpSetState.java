@@ -5,11 +5,11 @@ package com.pulumi.aws.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addresses")
-      private final @Nullable Output<List<String>> addresses;
+    private @Nullable Output<List<String>> addresses;
 
-    public Output<List<String>> addresses() {
-        return this.addresses == null ? Codegen.empty() : this.addresses;
+    public Optional<Output<List<String>>> addresses() {
+        return Optional.ofNullable(this.addresses);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,17 +55,17 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddressVersion")
-      private final @Nullable Output<String> ipAddressVersion;
+    private @Nullable Output<String> ipAddressVersion;
 
-    public Output<String> ipAddressVersion() {
-        return this.ipAddressVersion == null ? Codegen.empty() : this.ipAddressVersion;
+    public Optional<Output<String>> ipAddressVersion() {
+        return Optional.ofNullable(this.ipAddressVersion);
     }
 
     @Import(name="lockToken")
-      private final @Nullable Output<String> lockToken;
+    private @Nullable Output<String> lockToken;
 
-    public Output<String> lockToken() {
-        return this.lockToken == null ? Codegen.empty() : this.lockToken;
+    public Optional<Output<String>> lockToken() {
+        return Optional.ofNullable(this.lockToken);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -106,157 +106,132 @@ public final class IpSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public IpSetState(
-        @Nullable Output<List<String>> addresses,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> ipAddressVersion,
-        @Nullable Output<String> lockToken,
-        @Nullable Output<String> name,
-        @Nullable Output<String> scope,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.addresses = addresses;
-        this.arn = arn;
-        this.description = description;
-        this.ipAddressVersion = ipAddressVersion;
-        this.lockToken = lockToken;
-        this.name = name;
-        this.scope = scope;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private IpSetState() {}
 
-    private IpSetState() {
-        this.addresses = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ipAddressVersion = Codegen.empty();
-        this.lockToken = Codegen.empty();
-        this.name = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private IpSetState(IpSetState $) {
+        this.addresses = $.addresses;
+        this.arn = $.arn;
+        this.description = $.description;
+        this.ipAddressVersion = $.ipAddressVersion;
+        this.lockToken = $.lockToken;
+        this.name = $.name;
+        this.scope = $.scope;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addresses;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> ipAddressVersion;
-        private @Nullable Output<String> lockToken;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> scope;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private IpSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpSetState();
         }
 
         public Builder(IpSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addresses = defaults.addresses;
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.ipAddressVersion = defaults.ipAddressVersion;
-    	      this.lockToken = defaults.lockToken;
-    	      this.name = defaults.name;
-    	      this.scope = defaults.scope;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new IpSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder addresses(@Nullable Output<List<String>> addresses) {
-            this.addresses = addresses;
+            $.addresses = addresses;
             return this;
         }
-        public Builder addresses(@Nullable List<String> addresses) {
-            this.addresses = Codegen.ofNullable(addresses);
-            return this;
+
+        public Builder addresses(List<String> addresses) {
+            return addresses(Output.of(addresses));
         }
+
         public Builder addresses(String... addresses) {
             return addresses(List.of(addresses));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ipAddressVersion(@Nullable Output<String> ipAddressVersion) {
-            this.ipAddressVersion = ipAddressVersion;
+            $.ipAddressVersion = ipAddressVersion;
             return this;
         }
-        public Builder ipAddressVersion(@Nullable String ipAddressVersion) {
-            this.ipAddressVersion = Codegen.ofNullable(ipAddressVersion);
-            return this;
+
+        public Builder ipAddressVersion(String ipAddressVersion) {
+            return ipAddressVersion(Output.of(ipAddressVersion));
         }
+
         public Builder lockToken(@Nullable Output<String> lockToken) {
-            this.lockToken = lockToken;
+            $.lockToken = lockToken;
             return this;
         }
-        public Builder lockToken(@Nullable String lockToken) {
-            this.lockToken = Codegen.ofNullable(lockToken);
-            return this;
+
+        public Builder lockToken(String lockToken) {
+            return lockToken(Output.of(lockToken));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public IpSetState build() {
-            return new IpSetState(addresses, arn, description, ipAddressVersion, lockToken, name, scope, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public IpSetState build() {
+            return $;
         }
     }
+
 }

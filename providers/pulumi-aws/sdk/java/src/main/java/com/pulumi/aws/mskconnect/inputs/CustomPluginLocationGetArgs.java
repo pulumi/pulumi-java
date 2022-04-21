@@ -6,7 +6,6 @@ package com.pulumi.aws.mskconnect.inputs;
 import com.pulumi.aws.mskconnect.inputs.CustomPluginLocationS3GetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class CustomPluginLocationGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="s3", required=true)
-      private final Output<CustomPluginLocationS3GetArgs> s3;
+    private Output<CustomPluginLocationS3GetArgs> s3;
 
     public Output<CustomPluginLocationS3GetArgs> s3() {
         return this.s3;
     }
 
-    public CustomPluginLocationGetArgs(Output<CustomPluginLocationS3GetArgs> s3) {
-        this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
-    }
+    private CustomPluginLocationGetArgs() {}
 
-    private CustomPluginLocationGetArgs() {
-        this.s3 = Codegen.empty();
+    private CustomPluginLocationGetArgs(CustomPluginLocationGetArgs $) {
+        this.s3 = $.s3;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomPluginLocationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CustomPluginLocationS3GetArgs> s3;
+        private CustomPluginLocationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomPluginLocationGetArgs();
         }
 
         public Builder(CustomPluginLocationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3 = defaults.s3;
+            $ = new CustomPluginLocationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3(Output<CustomPluginLocationS3GetArgs> s3) {
-            this.s3 = Objects.requireNonNull(s3);
+            $.s3 = s3;
             return this;
         }
+
         public Builder s3(CustomPluginLocationS3GetArgs s3) {
-            this.s3 = Output.of(Objects.requireNonNull(s3));
-            return this;
-        }        public CustomPluginLocationGetArgs build() {
-            return new CustomPluginLocationGetArgs(s3);
+            return s3(Output.of(s3));
+        }
+
+        public CustomPluginLocationGetArgs build() {
+            $.s3 = Objects.requireNonNull($.s3, "expected parameter 's3' to be non-null");
+            return $;
         }
     }
+
 }

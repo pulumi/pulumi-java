@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DistributionCutArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="distributionFilter")
-      private final @Nullable Output<String> distributionFilter;
+    private @Nullable Output<String> distributionFilter;
 
-    public Output<String> distributionFilter() {
-        return this.distributionFilter == null ? Codegen.empty() : this.distributionFilter;
+    public Optional<Output<String>> distributionFilter() {
+        return Optional.ofNullable(this.distributionFilter);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DistributionCutArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="range")
-      private final @Nullable Output<GoogleMonitoringV3RangeArgs> range;
+    private @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
-    public Output<GoogleMonitoringV3RangeArgs> range() {
-        return this.range == null ? Codegen.empty() : this.range;
+    public Optional<Output<GoogleMonitoringV3RangeArgs>> range() {
+        return Optional.ofNullable(this.range);
     }
 
-    public DistributionCutArgs(
-        @Nullable Output<String> distributionFilter,
-        @Nullable Output<GoogleMonitoringV3RangeArgs> range) {
-        this.distributionFilter = distributionFilter;
-        this.range = range;
-    }
+    private DistributionCutArgs() {}
 
-    private DistributionCutArgs() {
-        this.distributionFilter = Codegen.empty();
-        this.range = Codegen.empty();
+    private DistributionCutArgs(DistributionCutArgs $) {
+        this.distributionFilter = $.distributionFilter;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionCutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> distributionFilter;
-        private @Nullable Output<GoogleMonitoringV3RangeArgs> range;
+        private DistributionCutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionCutArgs();
         }
 
         public Builder(DistributionCutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionFilter = defaults.distributionFilter;
-    	      this.range = defaults.range;
+            $ = new DistributionCutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionFilter(@Nullable Output<String> distributionFilter) {
-            this.distributionFilter = distributionFilter;
+            $.distributionFilter = distributionFilter;
             return this;
         }
-        public Builder distributionFilter(@Nullable String distributionFilter) {
-            this.distributionFilter = Codegen.ofNullable(distributionFilter);
-            return this;
+
+        public Builder distributionFilter(String distributionFilter) {
+            return distributionFilter(Output.of(distributionFilter));
         }
+
         public Builder range(@Nullable Output<GoogleMonitoringV3RangeArgs> range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
-        public Builder range(@Nullable GoogleMonitoringV3RangeArgs range) {
-            this.range = Codegen.ofNullable(range);
-            return this;
-        }        public DistributionCutArgs build() {
-            return new DistributionCutArgs(distributionFilter, range);
+
+        public Builder range(GoogleMonitoringV3RangeArgs range) {
+            return range(Output.of(range));
+        }
+
+        public DistributionCutArgs build() {
+            return $;
         }
     }
+
 }

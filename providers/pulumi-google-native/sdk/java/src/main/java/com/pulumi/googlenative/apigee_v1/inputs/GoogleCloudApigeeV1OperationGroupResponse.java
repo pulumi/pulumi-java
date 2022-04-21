@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1OperationGroupResponse extends com.pulumi.
      * 
      */
     @Import(name="operationConfigType", required=true)
-      private final String operationConfigType;
+    private String operationConfigType;
 
     public String operationConfigType() {
         return this.operationConfigType;
@@ -34,58 +34,56 @@ public final class GoogleCloudApigeeV1OperationGroupResponse extends com.pulumi.
      * 
      */
     @Import(name="operationConfigs", required=true)
-      private final List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
+    private List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
 
     public List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs() {
         return this.operationConfigs;
     }
 
-    public GoogleCloudApigeeV1OperationGroupResponse(
-        String operationConfigType,
-        List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
-        this.operationConfigType = Objects.requireNonNull(operationConfigType, "expected parameter 'operationConfigType' to be non-null");
-        this.operationConfigs = Objects.requireNonNull(operationConfigs, "expected parameter 'operationConfigs' to be non-null");
-    }
+    private GoogleCloudApigeeV1OperationGroupResponse() {}
 
-    private GoogleCloudApigeeV1OperationGroupResponse() {
-        this.operationConfigType = null;
-        this.operationConfigs = List.of();
+    private GoogleCloudApigeeV1OperationGroupResponse(GoogleCloudApigeeV1OperationGroupResponse $) {
+        this.operationConfigType = $.operationConfigType;
+        this.operationConfigs = $.operationConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1OperationGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationConfigType;
-        private List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
+        private GoogleCloudApigeeV1OperationGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1OperationGroupResponse();
         }
 
         public Builder(GoogleCloudApigeeV1OperationGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationConfigType = defaults.operationConfigType;
-    	      this.operationConfigs = defaults.operationConfigs;
+            $ = new GoogleCloudApigeeV1OperationGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operationConfigType(String operationConfigType) {
-            this.operationConfigType = Objects.requireNonNull(operationConfigType);
+            $.operationConfigType = operationConfigType;
             return this;
         }
+
         public Builder operationConfigs(List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
-            this.operationConfigs = Objects.requireNonNull(operationConfigs);
+            $.operationConfigs = operationConfigs;
             return this;
         }
+
         public Builder operationConfigs(GoogleCloudApigeeV1OperationConfigResponse... operationConfigs) {
             return operationConfigs(List.of(operationConfigs));
-        }        public GoogleCloudApigeeV1OperationGroupResponse build() {
-            return new GoogleCloudApigeeV1OperationGroupResponse(operationConfigType, operationConfigs);
+        }
+
+        public GoogleCloudApigeeV1OperationGroupResponse build() {
+            $.operationConfigType = Objects.requireNonNull($.operationConfigType, "expected parameter 'operationConfigType' to be non-null");
+            $.operationConfigs = Objects.requireNonNull($.operationConfigs, "expected parameter 'operationConfigs' to be non-null");
+            return $;
         }
     }
+
 }

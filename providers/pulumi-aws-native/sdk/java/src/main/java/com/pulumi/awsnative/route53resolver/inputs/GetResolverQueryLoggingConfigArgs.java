@@ -17,45 +17,45 @@ public final class GetResolverQueryLoggingConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetResolverQueryLoggingConfigArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetResolverQueryLoggingConfigArgs() {}
 
-    private GetResolverQueryLoggingConfigArgs() {
-        this.id = null;
+    private GetResolverQueryLoggingConfigArgs(GetResolverQueryLoggingConfigArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResolverQueryLoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetResolverQueryLoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResolverQueryLoggingConfigArgs();
         }
 
         public Builder(GetResolverQueryLoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetResolverQueryLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetResolverQueryLoggingConfigArgs build() {
-            return new GetResolverQueryLoggingConfigArgs(id);
+        }
+
+        public GetResolverQueryLoggingConfigArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

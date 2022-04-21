@@ -17,45 +17,45 @@ public final class BucketAccessControlTranslation extends com.pulumi.resources.I
     public static final BucketAccessControlTranslation Empty = new BucketAccessControlTranslation();
 
     @Import(name="owner", required=true)
-      private final String owner;
+    private String owner;
 
     public String owner() {
         return this.owner;
     }
 
-    public BucketAccessControlTranslation(String owner) {
-        this.owner = Objects.requireNonNull(owner, "expected parameter 'owner' to be non-null");
-    }
+    private BucketAccessControlTranslation() {}
 
-    private BucketAccessControlTranslation() {
-        this.owner = null;
+    private BucketAccessControlTranslation(BucketAccessControlTranslation $) {
+        this.owner = $.owner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAccessControlTranslation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String owner;
+        private BucketAccessControlTranslation $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAccessControlTranslation();
         }
 
         public Builder(BucketAccessControlTranslation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.owner = defaults.owner;
+            $ = new BucketAccessControlTranslation(Objects.requireNonNull(defaults));
         }
 
         public Builder owner(String owner) {
-            this.owner = Objects.requireNonNull(owner);
+            $.owner = owner;
             return this;
-        }        public BucketAccessControlTranslation build() {
-            return new BucketAccessControlTranslation(owner);
+        }
+
+        public BucketAccessControlTranslation build() {
+            $.owner = Objects.requireNonNull($.owner, "expected parameter 'owner' to be non-null");
+            return $;
         }
     }
+
 }

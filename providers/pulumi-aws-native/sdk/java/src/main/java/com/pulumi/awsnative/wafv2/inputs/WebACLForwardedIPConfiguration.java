@@ -14,62 +14,59 @@ public final class WebACLForwardedIPConfiguration extends com.pulumi.resources.I
     public static final WebACLForwardedIPConfiguration Empty = new WebACLForwardedIPConfiguration();
 
     @Import(name="fallbackBehavior", required=true)
-      private final WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
+    private WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
 
     public WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
     }
 
-    public WebACLForwardedIPConfiguration(
-        WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        String headerName) {
-        this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-    }
+    private WebACLForwardedIPConfiguration() {}
 
-    private WebACLForwardedIPConfiguration() {
-        this.fallbackBehavior = null;
-        this.headerName = null;
+    private WebACLForwardedIPConfiguration(WebACLForwardedIPConfiguration $) {
+        this.fallbackBehavior = $.fallbackBehavior;
+        this.headerName = $.headerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLForwardedIPConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
-        private String headerName;
+        private WebACLForwardedIPConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLForwardedIPConfiguration();
         }
 
         public Builder(WebACLForwardedIPConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fallbackBehavior = defaults.fallbackBehavior;
-    	      this.headerName = defaults.headerName;
+            $ = new WebACLForwardedIPConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder fallbackBehavior(WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
-            this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
+            $.fallbackBehavior = fallbackBehavior;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
-        }        public WebACLForwardedIPConfiguration build() {
-            return new WebACLForwardedIPConfiguration(fallbackBehavior, headerName);
+        }
+
+        public WebACLForwardedIPConfiguration build() {
+            $.fallbackBehavior = Objects.requireNonNull($.fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            return $;
         }
     }
+
 }

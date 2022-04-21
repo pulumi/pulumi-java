@@ -5,9 +5,9 @@ package com.pulumi.gcp.sourcerepo;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class RepositoryIamPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -33,83 +33,77 @@ public final class RepositoryIamPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="repository", required=true)
-      private final Output<String> repository;
+    private Output<String> repository;
 
     public Output<String> repository() {
         return this.repository;
     }
 
-    public RepositoryIamPolicyArgs(
-        Output<String> policyData,
-        @Nullable Output<String> project,
-        Output<String> repository) {
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-    }
+    private RepositoryIamPolicyArgs() {}
 
-    private RepositoryIamPolicyArgs() {
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.repository = Codegen.empty();
+    private RepositoryIamPolicyArgs(RepositoryIamPolicyArgs $) {
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
-        private Output<String> repository;
+        private RepositoryIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryIamPolicyArgs();
         }
 
         public Builder(RepositoryIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.repository = defaults.repository;
+            $ = new RepositoryIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder repository(Output<String> repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
         }
+
         public Builder repository(String repository) {
-            this.repository = Output.of(Objects.requireNonNull(repository));
-            return this;
-        }        public RepositoryIamPolicyArgs build() {
-            return new RepositoryIamPolicyArgs(policyData, project, repository);
+            return repository(Output.of(repository));
+        }
+
+        public RepositoryIamPolicyArgs build() {
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            return $;
         }
     }
+
 }

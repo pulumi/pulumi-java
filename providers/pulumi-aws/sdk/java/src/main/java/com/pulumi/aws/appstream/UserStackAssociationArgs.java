@@ -5,10 +5,10 @@ package com.pulumi.aws.appstream;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class UserStackAssociationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Output<String> authenticationType;
+    private Output<String> authenticationType;
 
     public Output<String> authenticationType() {
         return this.authenticationType;
@@ -32,10 +32,10 @@ public final class UserStackAssociationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sendEmailNotification")
-      private final @Nullable Output<Boolean> sendEmailNotification;
+    private @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> sendEmailNotification() {
-        return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
+    public Optional<Output<Boolean>> sendEmailNotification() {
+        return Optional.ofNullable(this.sendEmailNotification);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class UserStackAssociationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="stackName", required=true)
-      private final Output<String> stackName;
+    private Output<String> stackName;
 
     public Output<String> stackName() {
         return this.stackName;
@@ -54,89 +54,81 @@ public final class UserStackAssociationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="userName", required=true)
-      private final Output<String> userName;
+    private Output<String> userName;
 
     public Output<String> userName() {
         return this.userName;
     }
 
-    public UserStackAssociationArgs(
-        Output<String> authenticationType,
-        @Nullable Output<Boolean> sendEmailNotification,
-        Output<String> stackName,
-        Output<String> userName) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.sendEmailNotification = sendEmailNotification;
-        this.stackName = Objects.requireNonNull(stackName, "expected parameter 'stackName' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private UserStackAssociationArgs() {}
 
-    private UserStackAssociationArgs() {
-        this.authenticationType = Codegen.empty();
-        this.sendEmailNotification = Codegen.empty();
-        this.stackName = Codegen.empty();
-        this.userName = Codegen.empty();
+    private UserStackAssociationArgs(UserStackAssociationArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.sendEmailNotification = $.sendEmailNotification;
+        this.stackName = $.stackName;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserStackAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authenticationType;
-        private @Nullable Output<Boolean> sendEmailNotification;
-        private Output<String> stackName;
-        private Output<String> userName;
+        private UserStackAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserStackAssociationArgs();
         }
 
         public Builder(UserStackAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.sendEmailNotification = defaults.sendEmailNotification;
-    	      this.stackName = defaults.stackName;
-    	      this.userName = defaults.userName;
+            $ = new UserStackAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(Output<String> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
-            this.sendEmailNotification = sendEmailNotification;
+            $.sendEmailNotification = sendEmailNotification;
             return this;
         }
-        public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Codegen.ofNullable(sendEmailNotification);
-            return this;
+
+        public Builder sendEmailNotification(Boolean sendEmailNotification) {
+            return sendEmailNotification(Output.of(sendEmailNotification));
         }
+
         public Builder stackName(Output<String> stackName) {
-            this.stackName = Objects.requireNonNull(stackName);
+            $.stackName = stackName;
             return this;
         }
+
         public Builder stackName(String stackName) {
-            this.stackName = Output.of(Objects.requireNonNull(stackName));
-            return this;
+            return stackName(Output.of(stackName));
         }
+
         public Builder userName(Output<String> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
-        }        public UserStackAssociationArgs build() {
-            return new UserStackAssociationArgs(authenticationType, sendEmailNotification, stackName, userName);
+            return userName(Output.of(userName));
+        }
+
+        public UserStackAssociationArgs build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            $.stackName = Objects.requireNonNull($.stackName, "expected parameter 'stackName' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class AssignmentOsTypeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="osArchitecture", required=true)
-      private final String osArchitecture;
+    private String osArchitecture;
 
     public String osArchitecture() {
         return this.osArchitecture;
@@ -32,7 +32,7 @@ public final class AssignmentOsTypeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="osShortName", required=true)
-      private final String osShortName;
+    private String osShortName;
 
     public String osShortName() {
         return this.osShortName;
@@ -43,64 +43,59 @@ public final class AssignmentOsTypeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="osVersion", required=true)
-      private final String osVersion;
+    private String osVersion;
 
     public String osVersion() {
         return this.osVersion;
     }
 
-    public AssignmentOsTypeResponse(
-        String osArchitecture,
-        String osShortName,
-        String osVersion) {
-        this.osArchitecture = Objects.requireNonNull(osArchitecture, "expected parameter 'osArchitecture' to be non-null");
-        this.osShortName = Objects.requireNonNull(osShortName, "expected parameter 'osShortName' to be non-null");
-        this.osVersion = Objects.requireNonNull(osVersion, "expected parameter 'osVersion' to be non-null");
-    }
+    private AssignmentOsTypeResponse() {}
 
-    private AssignmentOsTypeResponse() {
-        this.osArchitecture = null;
-        this.osShortName = null;
-        this.osVersion = null;
+    private AssignmentOsTypeResponse(AssignmentOsTypeResponse $) {
+        this.osArchitecture = $.osArchitecture;
+        this.osShortName = $.osShortName;
+        this.osVersion = $.osVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentOsTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String osArchitecture;
-        private String osShortName;
-        private String osVersion;
+        private AssignmentOsTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentOsTypeResponse();
         }
 
         public Builder(AssignmentOsTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osArchitecture = defaults.osArchitecture;
-    	      this.osShortName = defaults.osShortName;
-    	      this.osVersion = defaults.osVersion;
+            $ = new AssignmentOsTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder osArchitecture(String osArchitecture) {
-            this.osArchitecture = Objects.requireNonNull(osArchitecture);
+            $.osArchitecture = osArchitecture;
             return this;
         }
+
         public Builder osShortName(String osShortName) {
-            this.osShortName = Objects.requireNonNull(osShortName);
+            $.osShortName = osShortName;
             return this;
         }
+
         public Builder osVersion(String osVersion) {
-            this.osVersion = Objects.requireNonNull(osVersion);
+            $.osVersion = osVersion;
             return this;
-        }        public AssignmentOsTypeResponse build() {
-            return new AssignmentOsTypeResponse(osArchitecture, osShortName, osVersion);
+        }
+
+        public AssignmentOsTypeResponse build() {
+            $.osArchitecture = Objects.requireNonNull($.osArchitecture, "expected parameter 'osArchitecture' to be non-null");
+            $.osShortName = Objects.requireNonNull($.osShortName, "expected parameter 'osShortName' to be non-null");
+            $.osVersion = Objects.requireNonNull($.osVersion, "expected parameter 'osVersion' to be non-null");
+            return $;
         }
     }
+
 }

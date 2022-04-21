@@ -7,9 +7,9 @@ import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementOrS
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
      * 
      */
     @Import(name="fieldToMatch")
-      private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch;
+    private @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch() {
-        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
+    public Optional<Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs>> fieldToMatch() {
+        return Optional.ofNullable(this.fieldToMatch);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
      * 
      */
     @Import(name="textTransformations", required=true)
-      private final Output<List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations;
+    private Output<List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations;
 
     public Output<List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations() {
         return this.textTransformations;
     }
 
-    public RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs(
-        @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch,
-        Output<List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations) {
-        this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs() {}
 
-    private RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.textTransformations = Codegen.empty();
+    private RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs(RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch;
-        private Output<List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations;
+        private RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs();
         }
 
         public Builder(RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(@Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch) {
-            this.fieldToMatch = fieldToMatch;
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
-        public Builder fieldToMatch(@Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
-            return this;
+
+        public Builder fieldToMatch(RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementFieldToMatchGetArgs fieldToMatch) {
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder textTransformations(Output<List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(List<RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs> textTransformations) {
-            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
-            return this;
+            return textTransformations(Output.of(textTransformations));
         }
+
         public Builder textTransformations(RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementTextTransformationGetArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs build() {
-            return new RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs(fieldToMatch, textTransformations);
+        }
+
+        public RuleGroupRuleStatementOrStatementStatementOrStatementStatementXssMatchStatementGetArgs build() {
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

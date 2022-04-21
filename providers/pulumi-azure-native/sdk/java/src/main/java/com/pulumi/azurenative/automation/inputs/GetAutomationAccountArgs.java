@@ -17,7 +17,7 @@ public final class GetAutomationAccountArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,55 +28,52 @@ public final class GetAutomationAccountArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAutomationAccountArgs(
-        String automationAccountName,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAutomationAccountArgs() {}
 
-    private GetAutomationAccountArgs() {
-        this.automationAccountName = null;
-        this.resourceGroupName = null;
+    private GetAutomationAccountArgs(GetAutomationAccountArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAutomationAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String resourceGroupName;
+        private GetAutomationAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAutomationAccountArgs();
         }
 
         public Builder(GetAutomationAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAutomationAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAutomationAccountArgs build() {
-            return new GetAutomationAccountArgs(automationAccountName, resourceGroupName);
+        }
+
+        public GetAutomationAccountArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

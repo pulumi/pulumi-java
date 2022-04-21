@@ -27,10 +27,10 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="clientAuthConfiguration")
-      private final @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration;
+    private @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration;
 
     public Optional<ApplicationGatewayClientAuthConfigurationResponse> clientAuthConfiguration() {
-        return this.clientAuthConfiguration == null ? Optional.empty() : Optional.ofNullable(this.clientAuthConfiguration);
+        return Optional.ofNullable(this.clientAuthConfiguration);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -49,10 +49,10 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -82,10 +82,10 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sslPolicy")
-      private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
+    private @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
 
     public Optional<ApplicationGatewaySslPolicyResponse> sslPolicy() {
-        return this.sslPolicy == null ? Optional.empty() : Optional.ofNullable(this.sslPolicy);
+        return Optional.ofNullable(this.sslPolicy);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="trustedClientCertificates")
-      private final @Nullable List<SubResourceResponse> trustedClientCertificates;
+    private @Nullable List<SubResourceResponse> trustedClientCertificates;
 
-    public List<SubResourceResponse> trustedClientCertificates() {
-        return this.trustedClientCertificates == null ? List.of() : this.trustedClientCertificates;
+    public Optional<List<SubResourceResponse>> trustedClientCertificates() {
+        return Optional.ofNullable(this.trustedClientCertificates);
     }
 
     /**
@@ -104,112 +104,93 @@ public final class ApplicationGatewaySslProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewaySslProfileResponse(
-        @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
-        @Nullable List<SubResourceResponse> trustedClientCertificates,
-        String type) {
-        this.clientAuthConfiguration = clientAuthConfiguration;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.sslPolicy = sslPolicy;
-        this.trustedClientCertificates = trustedClientCertificates;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewaySslProfileResponse() {}
 
-    private ApplicationGatewaySslProfileResponse() {
-        this.clientAuthConfiguration = null;
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.sslPolicy = null;
-        this.trustedClientCertificates = List.of();
-        this.type = null;
+    private ApplicationGatewaySslProfileResponse(ApplicationGatewaySslProfileResponse $) {
+        this.clientAuthConfiguration = $.clientAuthConfiguration;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.sslPolicy = $.sslPolicy;
+        this.trustedClientCertificates = $.trustedClientCertificates;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewaySslProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String provisioningState;
-        private @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
-        private @Nullable List<SubResourceResponse> trustedClientCertificates;
-        private String type;
+        private ApplicationGatewaySslProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewaySslProfileResponse();
         }
 
         public Builder(ApplicationGatewaySslProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientAuthConfiguration = defaults.clientAuthConfiguration;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.sslPolicy = defaults.sslPolicy;
-    	      this.trustedClientCertificates = defaults.trustedClientCertificates;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewaySslProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientAuthConfiguration(@Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration) {
-            this.clientAuthConfiguration = clientAuthConfiguration;
+            $.clientAuthConfiguration = clientAuthConfiguration;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyResponse sslPolicy) {
-            this.sslPolicy = sslPolicy;
+            $.sslPolicy = sslPolicy;
             return this;
         }
+
         public Builder trustedClientCertificates(@Nullable List<SubResourceResponse> trustedClientCertificates) {
-            this.trustedClientCertificates = trustedClientCertificates;
+            $.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
+
         public Builder trustedClientCertificates(SubResourceResponse... trustedClientCertificates) {
             return trustedClientCertificates(List.of(trustedClientCertificates));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewaySslProfileResponse build() {
-            return new ApplicationGatewaySslProfileResponse(clientAuthConfiguration, etag, id, name, provisioningState, sslPolicy, trustedClientCertificates, type);
+        }
+
+        public ApplicationGatewaySslProfileResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

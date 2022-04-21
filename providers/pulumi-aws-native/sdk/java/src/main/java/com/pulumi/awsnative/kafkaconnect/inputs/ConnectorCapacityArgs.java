@@ -7,8 +7,8 @@ import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorAutoScalingArgs;
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorProvisionedCapacityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class ConnectorCapacityArgs extends com.pulumi.resources.ResourceAr
     public static final ConnectorCapacityArgs Empty = new ConnectorCapacityArgs();
 
     @Import(name="autoScaling")
-      private final @Nullable Output<ConnectorAutoScalingArgs> autoScaling;
+    private @Nullable Output<ConnectorAutoScalingArgs> autoScaling;
 
-    public Output<ConnectorAutoScalingArgs> autoScaling() {
-        return this.autoScaling == null ? Codegen.empty() : this.autoScaling;
+    public Optional<Output<ConnectorAutoScalingArgs>> autoScaling() {
+        return Optional.ofNullable(this.autoScaling);
     }
 
     @Import(name="provisionedCapacity")
-      private final @Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity;
+    private @Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity;
 
-    public Output<ConnectorProvisionedCapacityArgs> provisionedCapacity() {
-        return this.provisionedCapacity == null ? Codegen.empty() : this.provisionedCapacity;
+    public Optional<Output<ConnectorProvisionedCapacityArgs>> provisionedCapacity() {
+        return Optional.ofNullable(this.provisionedCapacity);
     }
 
-    public ConnectorCapacityArgs(
-        @Nullable Output<ConnectorAutoScalingArgs> autoScaling,
-        @Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity) {
-        this.autoScaling = autoScaling;
-        this.provisionedCapacity = provisionedCapacity;
-    }
+    private ConnectorCapacityArgs() {}
 
-    private ConnectorCapacityArgs() {
-        this.autoScaling = Codegen.empty();
-        this.provisionedCapacity = Codegen.empty();
+    private ConnectorCapacityArgs(ConnectorCapacityArgs $) {
+        this.autoScaling = $.autoScaling;
+        this.provisionedCapacity = $.provisionedCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorCapacityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectorAutoScalingArgs> autoScaling;
-        private @Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity;
+        private ConnectorCapacityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorCapacityArgs();
         }
 
         public Builder(ConnectorCapacityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScaling = defaults.autoScaling;
-    	      this.provisionedCapacity = defaults.provisionedCapacity;
+            $ = new ConnectorCapacityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScaling(@Nullable Output<ConnectorAutoScalingArgs> autoScaling) {
-            this.autoScaling = autoScaling;
+            $.autoScaling = autoScaling;
             return this;
         }
-        public Builder autoScaling(@Nullable ConnectorAutoScalingArgs autoScaling) {
-            this.autoScaling = Codegen.ofNullable(autoScaling);
-            return this;
+
+        public Builder autoScaling(ConnectorAutoScalingArgs autoScaling) {
+            return autoScaling(Output.of(autoScaling));
         }
+
         public Builder provisionedCapacity(@Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity) {
-            this.provisionedCapacity = provisionedCapacity;
+            $.provisionedCapacity = provisionedCapacity;
             return this;
         }
-        public Builder provisionedCapacity(@Nullable ConnectorProvisionedCapacityArgs provisionedCapacity) {
-            this.provisionedCapacity = Codegen.ofNullable(provisionedCapacity);
-            return this;
-        }        public ConnectorCapacityArgs build() {
-            return new ConnectorCapacityArgs(autoScaling, provisionedCapacity);
+
+        public Builder provisionedCapacity(ConnectorProvisionedCapacityArgs provisionedCapacity) {
+            return provisionedCapacity(Output.of(provisionedCapacity));
+        }
+
+        public ConnectorCapacityArgs build() {
+            return $;
         }
     }
+
 }

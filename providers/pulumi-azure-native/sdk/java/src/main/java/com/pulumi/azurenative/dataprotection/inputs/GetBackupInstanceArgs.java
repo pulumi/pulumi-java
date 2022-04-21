@@ -17,7 +17,7 @@ public final class GetBackupInstanceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="backupInstanceName", required=true)
-      private final String backupInstanceName;
+    private String backupInstanceName;
 
     public String backupInstanceName() {
         return this.backupInstanceName;
@@ -28,7 +28,7 @@ public final class GetBackupInstanceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetBackupInstanceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vaultName", required=true)
-      private final String vaultName;
+    private String vaultName;
 
     public String vaultName() {
         return this.vaultName;
     }
 
-    public GetBackupInstanceArgs(
-        String backupInstanceName,
-        String resourceGroupName,
-        String vaultName) {
-        this.backupInstanceName = Objects.requireNonNull(backupInstanceName, "expected parameter 'backupInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private GetBackupInstanceArgs() {}
 
-    private GetBackupInstanceArgs() {
-        this.backupInstanceName = null;
-        this.resourceGroupName = null;
-        this.vaultName = null;
+    private GetBackupInstanceArgs(GetBackupInstanceArgs $) {
+        this.backupInstanceName = $.backupInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupInstanceName;
-        private String resourceGroupName;
-        private String vaultName;
+        private GetBackupInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupInstanceArgs();
         }
 
         public Builder(GetBackupInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupInstanceName = defaults.backupInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vaultName = defaults.vaultName;
+            $ = new GetBackupInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupInstanceName(String backupInstanceName) {
-            this.backupInstanceName = Objects.requireNonNull(backupInstanceName);
+            $.backupInstanceName = backupInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
-        }        public GetBackupInstanceArgs build() {
-            return new GetBackupInstanceArgs(backupInstanceName, resourceGroupName, vaultName);
+        }
+
+        public GetBackupInstanceArgs build() {
+            $.backupInstanceName = Objects.requireNonNull($.backupInstanceName, "expected parameter 'backupInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

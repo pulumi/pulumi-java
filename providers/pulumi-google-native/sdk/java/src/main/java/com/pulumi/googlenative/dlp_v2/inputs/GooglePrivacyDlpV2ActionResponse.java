@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="jobNotificationEmails", required=true)
-      private final GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
+    private GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
 
     public GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails() {
         return this.jobNotificationEmails;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="pubSub", required=true)
-      private final GooglePrivacyDlpV2PublishToPubSubResponse pubSub;
+    private GooglePrivacyDlpV2PublishToPubSubResponse pubSub;
 
     public GooglePrivacyDlpV2PublishToPubSubResponse pubSub() {
         return this.pubSub;
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="publishFindingsToCloudDataCatalog", required=true)
-      private final GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog;
+    private GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog;
 
     public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog() {
         return this.publishFindingsToCloudDataCatalog;
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="publishSummaryToCscc", required=true)
-      private final GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc;
+    private GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc;
 
     public GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc() {
         return this.publishSummaryToCscc;
@@ -70,7 +70,7 @@ public final class GooglePrivacyDlpV2ActionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="publishToStackdriver", required=true)
-      private final GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver;
+    private GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver;
 
     public GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver() {
         return this.publishToStackdriver;
@@ -81,91 +81,80 @@ public final class GooglePrivacyDlpV2ActionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="saveFindings", required=true)
-      private final GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
+    private GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
 
     public GooglePrivacyDlpV2SaveFindingsResponse saveFindings() {
         return this.saveFindings;
     }
 
-    public GooglePrivacyDlpV2ActionResponse(
-        GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails,
-        GooglePrivacyDlpV2PublishToPubSubResponse pubSub,
-        GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog,
-        GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc,
-        GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver,
-        GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
-        this.jobNotificationEmails = Objects.requireNonNull(jobNotificationEmails, "expected parameter 'jobNotificationEmails' to be non-null");
-        this.pubSub = Objects.requireNonNull(pubSub, "expected parameter 'pubSub' to be non-null");
-        this.publishFindingsToCloudDataCatalog = Objects.requireNonNull(publishFindingsToCloudDataCatalog, "expected parameter 'publishFindingsToCloudDataCatalog' to be non-null");
-        this.publishSummaryToCscc = Objects.requireNonNull(publishSummaryToCscc, "expected parameter 'publishSummaryToCscc' to be non-null");
-        this.publishToStackdriver = Objects.requireNonNull(publishToStackdriver, "expected parameter 'publishToStackdriver' to be non-null");
-        this.saveFindings = Objects.requireNonNull(saveFindings, "expected parameter 'saveFindings' to be non-null");
-    }
+    private GooglePrivacyDlpV2ActionResponse() {}
 
-    private GooglePrivacyDlpV2ActionResponse() {
-        this.jobNotificationEmails = null;
-        this.pubSub = null;
-        this.publishFindingsToCloudDataCatalog = null;
-        this.publishSummaryToCscc = null;
-        this.publishToStackdriver = null;
-        this.saveFindings = null;
+    private GooglePrivacyDlpV2ActionResponse(GooglePrivacyDlpV2ActionResponse $) {
+        this.jobNotificationEmails = $.jobNotificationEmails;
+        this.pubSub = $.pubSub;
+        this.publishFindingsToCloudDataCatalog = $.publishFindingsToCloudDataCatalog;
+        this.publishSummaryToCscc = $.publishSummaryToCscc;
+        this.publishToStackdriver = $.publishToStackdriver;
+        this.saveFindings = $.saveFindings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails;
-        private GooglePrivacyDlpV2PublishToPubSubResponse pubSub;
-        private GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog;
-        private GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc;
-        private GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver;
-        private GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
+        private GooglePrivacyDlpV2ActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ActionResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobNotificationEmails = defaults.jobNotificationEmails;
-    	      this.pubSub = defaults.pubSub;
-    	      this.publishFindingsToCloudDataCatalog = defaults.publishFindingsToCloudDataCatalog;
-    	      this.publishSummaryToCscc = defaults.publishSummaryToCscc;
-    	      this.publishToStackdriver = defaults.publishToStackdriver;
-    	      this.saveFindings = defaults.saveFindings;
+            $ = new GooglePrivacyDlpV2ActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jobNotificationEmails(GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails) {
-            this.jobNotificationEmails = Objects.requireNonNull(jobNotificationEmails);
+            $.jobNotificationEmails = jobNotificationEmails;
             return this;
         }
+
         public Builder pubSub(GooglePrivacyDlpV2PublishToPubSubResponse pubSub) {
-            this.pubSub = Objects.requireNonNull(pubSub);
+            $.pubSub = pubSub;
             return this;
         }
+
         public Builder publishFindingsToCloudDataCatalog(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog) {
-            this.publishFindingsToCloudDataCatalog = Objects.requireNonNull(publishFindingsToCloudDataCatalog);
+            $.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;
             return this;
         }
+
         public Builder publishSummaryToCscc(GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc) {
-            this.publishSummaryToCscc = Objects.requireNonNull(publishSummaryToCscc);
+            $.publishSummaryToCscc = publishSummaryToCscc;
             return this;
         }
+
         public Builder publishToStackdriver(GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver) {
-            this.publishToStackdriver = Objects.requireNonNull(publishToStackdriver);
+            $.publishToStackdriver = publishToStackdriver;
             return this;
         }
+
         public Builder saveFindings(GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
-            this.saveFindings = Objects.requireNonNull(saveFindings);
+            $.saveFindings = saveFindings;
             return this;
-        }        public GooglePrivacyDlpV2ActionResponse build() {
-            return new GooglePrivacyDlpV2ActionResponse(jobNotificationEmails, pubSub, publishFindingsToCloudDataCatalog, publishSummaryToCscc, publishToStackdriver, saveFindings);
+        }
+
+        public GooglePrivacyDlpV2ActionResponse build() {
+            $.jobNotificationEmails = Objects.requireNonNull($.jobNotificationEmails, "expected parameter 'jobNotificationEmails' to be non-null");
+            $.pubSub = Objects.requireNonNull($.pubSub, "expected parameter 'pubSub' to be non-null");
+            $.publishFindingsToCloudDataCatalog = Objects.requireNonNull($.publishFindingsToCloudDataCatalog, "expected parameter 'publishFindingsToCloudDataCatalog' to be non-null");
+            $.publishSummaryToCscc = Objects.requireNonNull($.publishSummaryToCscc, "expected parameter 'publishSummaryToCscc' to be non-null");
+            $.publishToStackdriver = Objects.requireNonNull($.publishToStackdriver, "expected parameter 'publishToStackdriver' to be non-null");
+            $.saveFindings = Objects.requireNonNull($.saveFindings, "expected parameter 'saveFindings' to be non-null");
+            return $;
         }
     }
+
 }

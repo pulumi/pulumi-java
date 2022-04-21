@@ -24,10 +24,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable String clientSecret;
+    private @Nullable String clientSecret;
 
     public Optional<String> clientSecret() {
-        return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Boolean isEnabled;
+    private Boolean isEnabled;
 
     public Boolean isEnabled() {
         return this.isEnabled;
@@ -57,7 +57,7 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="isValidated", required=true)
-      private final Boolean isValidated;
+    private Boolean isValidated;
 
     public Boolean isValidated() {
         return this.isValidated;
@@ -68,10 +68,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="landingPageUrl")
-      private final @Nullable String landingPageUrl;
+    private @Nullable String landingPageUrl;
 
     public Optional<String> landingPageUrl() {
-        return this.landingPageUrl == null ? Optional.empty() : Optional.ofNullable(this.landingPageUrl);
+        return Optional.ofNullable(this.landingPageUrl);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="lastSubmissionId", required=true)
-      private final String lastSubmissionId;
+    private String lastSubmissionId;
 
     public String lastSubmissionId() {
         return this.lastSubmissionId;
@@ -90,7 +90,7 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="redirectAction", required=true)
-      private final String redirectAction;
+    private String redirectAction;
 
     public String redirectAction() {
         return this.redirectAction;
@@ -101,7 +101,7 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="registerBeforeOAuthFlow", required=true)
-      private final Boolean registerBeforeOAuthFlow;
+    private Boolean registerBeforeOAuthFlow;
 
     public Boolean registerBeforeOAuthFlow() {
         return this.registerBeforeOAuthFlow;
@@ -112,10 +112,10 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="signingSecret")
-      private final @Nullable String signingSecret;
+    private @Nullable String signingSecret;
 
     public Optional<String> signingSecret() {
-        return this.signingSecret == null ? Optional.empty() : Optional.ofNullable(this.signingSecret);
+        return Optional.ofNullable(this.signingSecret);
     }
 
     /**
@@ -123,127 +123,103 @@ public final class SlackChannelPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="verificationToken")
-      private final @Nullable String verificationToken;
+    private @Nullable String verificationToken;
 
     public Optional<String> verificationToken() {
-        return this.verificationToken == null ? Optional.empty() : Optional.ofNullable(this.verificationToken);
+        return Optional.ofNullable(this.verificationToken);
     }
 
-    public SlackChannelPropertiesResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        Boolean isEnabled,
-        Boolean isValidated,
-        @Nullable String landingPageUrl,
-        String lastSubmissionId,
-        String redirectAction,
-        Boolean registerBeforeOAuthFlow,
-        @Nullable String signingSecret,
-        @Nullable String verificationToken) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isValidated = Objects.requireNonNull(isValidated, "expected parameter 'isValidated' to be non-null");
-        this.landingPageUrl = landingPageUrl;
-        this.lastSubmissionId = Objects.requireNonNull(lastSubmissionId, "expected parameter 'lastSubmissionId' to be non-null");
-        this.redirectAction = Objects.requireNonNull(redirectAction, "expected parameter 'redirectAction' to be non-null");
-        this.registerBeforeOAuthFlow = Objects.requireNonNull(registerBeforeOAuthFlow, "expected parameter 'registerBeforeOAuthFlow' to be non-null");
-        this.signingSecret = signingSecret;
-        this.verificationToken = verificationToken;
-    }
+    private SlackChannelPropertiesResponse() {}
 
-    private SlackChannelPropertiesResponse() {
-        this.clientId = null;
-        this.clientSecret = null;
-        this.isEnabled = null;
-        this.isValidated = null;
-        this.landingPageUrl = null;
-        this.lastSubmissionId = null;
-        this.redirectAction = null;
-        this.registerBeforeOAuthFlow = null;
-        this.signingSecret = null;
-        this.verificationToken = null;
+    private SlackChannelPropertiesResponse(SlackChannelPropertiesResponse $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.isEnabled = $.isEnabled;
+        this.isValidated = $.isValidated;
+        this.landingPageUrl = $.landingPageUrl;
+        this.lastSubmissionId = $.lastSubmissionId;
+        this.redirectAction = $.redirectAction;
+        this.registerBeforeOAuthFlow = $.registerBeforeOAuthFlow;
+        this.signingSecret = $.signingSecret;
+        this.verificationToken = $.verificationToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlackChannelPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientId;
-        private @Nullable String clientSecret;
-        private Boolean isEnabled;
-        private Boolean isValidated;
-        private @Nullable String landingPageUrl;
-        private String lastSubmissionId;
-        private String redirectAction;
-        private Boolean registerBeforeOAuthFlow;
-        private @Nullable String signingSecret;
-        private @Nullable String verificationToken;
+        private SlackChannelPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlackChannelPropertiesResponse();
         }
 
         public Builder(SlackChannelPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.isValidated = defaults.isValidated;
-    	      this.landingPageUrl = defaults.landingPageUrl;
-    	      this.lastSubmissionId = defaults.lastSubmissionId;
-    	      this.redirectAction = defaults.redirectAction;
-    	      this.registerBeforeOAuthFlow = defaults.registerBeforeOAuthFlow;
-    	      this.signingSecret = defaults.signingSecret;
-    	      this.verificationToken = defaults.verificationToken;
+            $ = new SlackChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isValidated(Boolean isValidated) {
-            this.isValidated = Objects.requireNonNull(isValidated);
+            $.isValidated = isValidated;
             return this;
         }
+
         public Builder landingPageUrl(@Nullable String landingPageUrl) {
-            this.landingPageUrl = landingPageUrl;
+            $.landingPageUrl = landingPageUrl;
             return this;
         }
+
         public Builder lastSubmissionId(String lastSubmissionId) {
-            this.lastSubmissionId = Objects.requireNonNull(lastSubmissionId);
+            $.lastSubmissionId = lastSubmissionId;
             return this;
         }
+
         public Builder redirectAction(String redirectAction) {
-            this.redirectAction = Objects.requireNonNull(redirectAction);
+            $.redirectAction = redirectAction;
             return this;
         }
+
         public Builder registerBeforeOAuthFlow(Boolean registerBeforeOAuthFlow) {
-            this.registerBeforeOAuthFlow = Objects.requireNonNull(registerBeforeOAuthFlow);
+            $.registerBeforeOAuthFlow = registerBeforeOAuthFlow;
             return this;
         }
+
         public Builder signingSecret(@Nullable String signingSecret) {
-            this.signingSecret = signingSecret;
+            $.signingSecret = signingSecret;
             return this;
         }
+
         public Builder verificationToken(@Nullable String verificationToken) {
-            this.verificationToken = verificationToken;
+            $.verificationToken = verificationToken;
             return this;
-        }        public SlackChannelPropertiesResponse build() {
-            return new SlackChannelPropertiesResponse(clientId, clientSecret, isEnabled, isValidated, landingPageUrl, lastSubmissionId, redirectAction, registerBeforeOAuthFlow, signingSecret, verificationToken);
+        }
+
+        public SlackChannelPropertiesResponse build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.isValidated = Objects.requireNonNull($.isValidated, "expected parameter 'isValidated' to be non-null");
+            $.lastSubmissionId = Objects.requireNonNull($.lastSubmissionId, "expected parameter 'lastSubmissionId' to be non-null");
+            $.redirectAction = Objects.requireNonNull($.redirectAction, "expected parameter 'redirectAction' to be non-null");
+            $.registerBeforeOAuthFlow = Objects.requireNonNull($.registerBeforeOAuthFlow, "expected parameter 'registerBeforeOAuthFlow' to be non-null");
+            return $;
         }
     }
+
 }

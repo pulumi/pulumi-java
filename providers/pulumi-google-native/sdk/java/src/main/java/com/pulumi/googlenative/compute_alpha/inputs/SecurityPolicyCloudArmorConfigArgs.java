@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SecurityPolicyCloudArmorConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enableMl")
-      private final @Nullable Output<Boolean> enableMl;
+    private @Nullable Output<Boolean> enableMl;
 
-    public Output<Boolean> enableMl() {
-        return this.enableMl == null ? Codegen.empty() : this.enableMl;
+    public Optional<Output<Boolean>> enableMl() {
+        return Optional.ofNullable(this.enableMl);
     }
 
-    public SecurityPolicyCloudArmorConfigArgs(@Nullable Output<Boolean> enableMl) {
-        this.enableMl = enableMl;
-    }
+    private SecurityPolicyCloudArmorConfigArgs() {}
 
-    private SecurityPolicyCloudArmorConfigArgs() {
-        this.enableMl = Codegen.empty();
+    private SecurityPolicyCloudArmorConfigArgs(SecurityPolicyCloudArmorConfigArgs $) {
+        this.enableMl = $.enableMl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyCloudArmorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableMl;
+        private SecurityPolicyCloudArmorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyCloudArmorConfigArgs();
         }
 
         public Builder(SecurityPolicyCloudArmorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableMl = defaults.enableMl;
+            $ = new SecurityPolicyCloudArmorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableMl(@Nullable Output<Boolean> enableMl) {
-            this.enableMl = enableMl;
+            $.enableMl = enableMl;
             return this;
         }
-        public Builder enableMl(@Nullable Boolean enableMl) {
-            this.enableMl = Codegen.ofNullable(enableMl);
-            return this;
-        }        public SecurityPolicyCloudArmorConfigArgs build() {
-            return new SecurityPolicyCloudArmorConfigArgs(enableMl);
+
+        public Builder enableMl(Boolean enableMl) {
+            return enableMl(Output.of(enableMl));
+        }
+
+        public SecurityPolicyCloudArmorConfigArgs build() {
+            return $;
         }
     }
+
 }

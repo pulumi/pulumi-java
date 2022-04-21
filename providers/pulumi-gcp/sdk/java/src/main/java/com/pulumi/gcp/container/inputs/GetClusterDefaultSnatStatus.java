@@ -13,45 +13,45 @@ public final class GetClusterDefaultSnatStatus extends com.pulumi.resources.Invo
     public static final GetClusterDefaultSnatStatus Empty = new GetClusterDefaultSnatStatus();
 
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public GetClusterDefaultSnatStatus(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private GetClusterDefaultSnatStatus() {}
 
-    private GetClusterDefaultSnatStatus() {
-        this.disabled = null;
+    private GetClusterDefaultSnatStatus(GetClusterDefaultSnatStatus $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterDefaultSnatStatus defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
+        private GetClusterDefaultSnatStatus $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterDefaultSnatStatus();
         }
 
         public Builder(GetClusterDefaultSnatStatus defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new GetClusterDefaultSnatStatus(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public GetClusterDefaultSnatStatus build() {
-            return new GetClusterDefaultSnatStatus(disabled);
+        }
+
+        public GetClusterDefaultSnatStatus build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ConfigMapEnvSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SecretEnvSourceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EnvFromSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configMapRef")
-      private final @Nullable Output<ConfigMapEnvSourceArgs> configMapRef;
+    private @Nullable Output<ConfigMapEnvSourceArgs> configMapRef;
 
-    public Output<ConfigMapEnvSourceArgs> configMapRef() {
-        return this.configMapRef == null ? Codegen.empty() : this.configMapRef;
+    public Optional<Output<ConfigMapEnvSourceArgs>> configMapRef() {
+        return Optional.ofNullable(this.configMapRef);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EnvFromSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class EnvFromSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable Output<SecretEnvSourceArgs> secretRef;
+    private @Nullable Output<SecretEnvSourceArgs> secretRef;
 
-    public Output<SecretEnvSourceArgs> secretRef() {
-        return this.secretRef == null ? Codegen.empty() : this.secretRef;
+    public Optional<Output<SecretEnvSourceArgs>> secretRef() {
+        return Optional.ofNullable(this.secretRef);
     }
 
-    public EnvFromSourceArgs(
-        @Nullable Output<ConfigMapEnvSourceArgs> configMapRef,
-        @Nullable Output<String> prefix,
-        @Nullable Output<SecretEnvSourceArgs> secretRef) {
-        this.configMapRef = configMapRef;
-        this.prefix = prefix;
-        this.secretRef = secretRef;
-    }
+    private EnvFromSourceArgs() {}
 
-    private EnvFromSourceArgs() {
-        this.configMapRef = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.secretRef = Codegen.empty();
+    private EnvFromSourceArgs(EnvFromSourceArgs $) {
+        this.configMapRef = $.configMapRef;
+        this.prefix = $.prefix;
+        this.secretRef = $.secretRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvFromSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigMapEnvSourceArgs> configMapRef;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<SecretEnvSourceArgs> secretRef;
+        private EnvFromSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvFromSourceArgs();
         }
 
         public Builder(EnvFromSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMapRef = defaults.configMapRef;
-    	      this.prefix = defaults.prefix;
-    	      this.secretRef = defaults.secretRef;
+            $ = new EnvFromSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configMapRef(@Nullable Output<ConfigMapEnvSourceArgs> configMapRef) {
-            this.configMapRef = configMapRef;
+            $.configMapRef = configMapRef;
             return this;
         }
-        public Builder configMapRef(@Nullable ConfigMapEnvSourceArgs configMapRef) {
-            this.configMapRef = Codegen.ofNullable(configMapRef);
-            return this;
+
+        public Builder configMapRef(ConfigMapEnvSourceArgs configMapRef) {
+            return configMapRef(Output.of(configMapRef));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder secretRef(@Nullable Output<SecretEnvSourceArgs> secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
-        public Builder secretRef(@Nullable SecretEnvSourceArgs secretRef) {
-            this.secretRef = Codegen.ofNullable(secretRef);
-            return this;
-        }        public EnvFromSourceArgs build() {
-            return new EnvFromSourceArgs(configMapRef, prefix, secretRef);
+
+        public Builder secretRef(SecretEnvSourceArgs secretRef) {
+            return secretRef(Output.of(secretRef));
+        }
+
+        public EnvFromSourceArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetIntegrationRuntimeStatusArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="integrationRuntimeName", required=true)
-      private final String integrationRuntimeName;
+    private String integrationRuntimeName;
 
     public String integrationRuntimeName() {
         return this.integrationRuntimeName;
@@ -28,7 +28,7 @@ public final class GetIntegrationRuntimeStatusArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetIntegrationRuntimeStatusArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetIntegrationRuntimeStatusArgs(
-        String integrationRuntimeName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName, "expected parameter 'integrationRuntimeName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetIntegrationRuntimeStatusArgs() {}
 
-    private GetIntegrationRuntimeStatusArgs() {
-        this.integrationRuntimeName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetIntegrationRuntimeStatusArgs(GetIntegrationRuntimeStatusArgs $) {
+        this.integrationRuntimeName = $.integrationRuntimeName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationRuntimeStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationRuntimeName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetIntegrationRuntimeStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationRuntimeStatusArgs();
         }
 
         public Builder(GetIntegrationRuntimeStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationRuntimeName = defaults.integrationRuntimeName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetIntegrationRuntimeStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationRuntimeName(String integrationRuntimeName) {
-            this.integrationRuntimeName = Objects.requireNonNull(integrationRuntimeName);
+            $.integrationRuntimeName = integrationRuntimeName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetIntegrationRuntimeStatusArgs build() {
-            return new GetIntegrationRuntimeStatusArgs(integrationRuntimeName, resourceGroupName, workspaceName);
+        }
+
+        public GetIntegrationRuntimeStatusArgs build() {
+            $.integrationRuntimeName = Objects.requireNonNull($.integrationRuntimeName, "expected parameter 'integrationRuntimeName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

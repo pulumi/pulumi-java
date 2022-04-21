@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +33,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +44,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<Object> clientId;
+    private @Nullable Output<Object> clientId;
 
-    public Output<Object> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<Object>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -54,10 +55,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
+    private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -65,10 +66,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+    private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
-        return this.connectVia == null ? Codegen.empty() : this.connectVia;
+    public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="connectionProperties")
-      private final @Nullable Output<Object> connectionProperties;
+    private @Nullable Output<Object> connectionProperties;
 
-    public Output<Object> connectionProperties() {
-        return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
+    public Optional<Output<Object>> connectionProperties() {
+        return Optional.ofNullable(this.connectionProperties);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Output<Object> encryptedCredential;
+    private @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
+    public Optional<Output<Object>> encryptedCredential() {
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<Object> host;
+    private @Nullable Output<Object> host;
 
-    public Output<Object> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<Object>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -131,10 +132,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="redirectUri")
-      private final @Nullable Output<Object> redirectUri;
+    private @Nullable Output<Object> redirectUri;
 
-    public Output<Object> redirectUri() {
-        return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
+    public Optional<Output<Object>> redirectUri() {
+        return Optional.ofNullable(this.redirectUri);
     }
 
     /**
@@ -143,7 +144,7 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -154,10 +155,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="useEncryptedEndpoints")
-      private final @Nullable Output<Object> useEncryptedEndpoints;
+    private @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Output<Object> useEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Codegen.empty() : this.useEncryptedEndpoints;
+    public Optional<Output<Object>> useEncryptedEndpoints() {
+        return Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
     /**
@@ -165,10 +166,10 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="useHostVerification")
-      private final @Nullable Output<Object> useHostVerification;
+    private @Nullable Output<Object> useHostVerification;
 
-    public Output<Object> useHostVerification() {
-        return this.useHostVerification == null ? Codegen.empty() : this.useHostVerification;
+    public Optional<Output<Object>> useHostVerification() {
+        return Optional.ofNullable(this.useHostVerification);
     }
 
     /**
@@ -176,222 +177,183 @@ public final class SquareLinkedServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="usePeerVerification")
-      private final @Nullable Output<Object> usePeerVerification;
+    private @Nullable Output<Object> usePeerVerification;
 
-    public Output<Object> usePeerVerification() {
-        return this.usePeerVerification == null ? Codegen.empty() : this.usePeerVerification;
+    public Optional<Output<Object>> usePeerVerification() {
+        return Optional.ofNullable(this.usePeerVerification);
     }
 
-    public SquareLinkedServiceArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<Object> clientId,
-        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret,
-        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Output<Object> connectionProperties,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> encryptedCredential,
-        @Nullable Output<Object> host,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<Object> redirectUri,
-        Output<String> type,
-        @Nullable Output<Object> useEncryptedEndpoints,
-        @Nullable Output<Object> useHostVerification,
-        @Nullable Output<Object> usePeerVerification) {
-        this.annotations = annotations;
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.connectVia = connectVia;
-        this.connectionProperties = connectionProperties;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.host = host;
-        this.parameters = parameters;
-        this.redirectUri = redirectUri;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.useEncryptedEndpoints = useEncryptedEndpoints;
-        this.useHostVerification = useHostVerification;
-        this.usePeerVerification = usePeerVerification;
-    }
+    private SquareLinkedServiceArgs() {}
 
-    private SquareLinkedServiceArgs() {
-        this.annotations = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.connectVia = Codegen.empty();
-        this.connectionProperties = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encryptedCredential = Codegen.empty();
-        this.host = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.redirectUri = Codegen.empty();
-        this.type = Codegen.empty();
-        this.useEncryptedEndpoints = Codegen.empty();
-        this.useHostVerification = Codegen.empty();
-        this.usePeerVerification = Codegen.empty();
+    private SquareLinkedServiceArgs(SquareLinkedServiceArgs $) {
+        this.annotations = $.annotations;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.connectVia = $.connectVia;
+        this.connectionProperties = $.connectionProperties;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.host = $.host;
+        this.parameters = $.parameters;
+        this.redirectUri = $.redirectUri;
+        this.type = $.type;
+        this.useEncryptedEndpoints = $.useEncryptedEndpoints;
+        this.useHostVerification = $.useHostVerification;
+        this.usePeerVerification = $.usePeerVerification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SquareLinkedServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<Object> clientId;
-        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
-        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Output<Object> connectionProperties;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> encryptedCredential;
-        private @Nullable Output<Object> host;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<Object> redirectUri;
-        private Output<String> type;
-        private @Nullable Output<Object> useEncryptedEndpoints;
-        private @Nullable Output<Object> useHostVerification;
-        private @Nullable Output<Object> usePeerVerification;
+        private SquareLinkedServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SquareLinkedServiceArgs();
         }
 
         public Builder(SquareLinkedServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionProperties = defaults.connectionProperties;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.host = defaults.host;
-    	      this.parameters = defaults.parameters;
-    	      this.redirectUri = defaults.redirectUri;
-    	      this.type = defaults.type;
-    	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
-    	      this.useHostVerification = defaults.useHostVerification;
-    	      this.usePeerVerification = defaults.usePeerVerification;
+            $ = new SquareLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder clientId(@Nullable Output<Object> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable Object clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(Object clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        public Builder clientSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
-        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Codegen.ofNullable(connectVia);
-            return this;
+
+        public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
+            return connectVia(Output.of(connectVia));
         }
+
         public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
-            this.connectionProperties = connectionProperties;
+            $.connectionProperties = connectionProperties;
             return this;
         }
-        public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = Codegen.ofNullable(connectionProperties);
-            return this;
+
+        public Builder connectionProperties(Object connectionProperties) {
+            return connectionProperties(Output.of(connectionProperties));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
-        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
-            return this;
+
+        public Builder encryptedCredential(Object encryptedCredential) {
+            return encryptedCredential(Output.of(encryptedCredential));
         }
+
         public Builder host(@Nullable Output<Object> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable Object host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(Object host) {
+            return host(Output.of(host));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder redirectUri(@Nullable Output<Object> redirectUri) {
-            this.redirectUri = redirectUri;
+            $.redirectUri = redirectUri;
             return this;
         }
-        public Builder redirectUri(@Nullable Object redirectUri) {
-            this.redirectUri = Codegen.ofNullable(redirectUri);
-            return this;
+
+        public Builder redirectUri(Object redirectUri) {
+            return redirectUri(Output.of(redirectUri));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder useEncryptedEndpoints(@Nullable Output<Object> useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = useEncryptedEndpoints;
+            $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
-        public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = Codegen.ofNullable(useEncryptedEndpoints);
-            return this;
+
+        public Builder useEncryptedEndpoints(Object useEncryptedEndpoints) {
+            return useEncryptedEndpoints(Output.of(useEncryptedEndpoints));
         }
+
         public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
-            this.useHostVerification = useHostVerification;
+            $.useHostVerification = useHostVerification;
             return this;
         }
-        public Builder useHostVerification(@Nullable Object useHostVerification) {
-            this.useHostVerification = Codegen.ofNullable(useHostVerification);
-            return this;
+
+        public Builder useHostVerification(Object useHostVerification) {
+            return useHostVerification(Output.of(useHostVerification));
         }
+
         public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
-            this.usePeerVerification = usePeerVerification;
+            $.usePeerVerification = usePeerVerification;
             return this;
         }
-        public Builder usePeerVerification(@Nullable Object usePeerVerification) {
-            this.usePeerVerification = Codegen.ofNullable(usePeerVerification);
-            return this;
-        }        public SquareLinkedServiceArgs build() {
-            return new SquareLinkedServiceArgs(annotations, clientId, clientSecret, connectVia, connectionProperties, description, encryptedCredential, host, parameters, redirectUri, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
+
+        public Builder usePeerVerification(Object usePeerVerification) {
+            return usePeerVerification(Output.of(usePeerVerification));
+        }
+
+        public SquareLinkedServiceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetSchemaVersionArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="versionId", required=true)
-      private final String versionId;
+    private String versionId;
 
     public String versionId() {
         return this.versionId;
     }
 
-    public GetSchemaVersionArgs(String versionId) {
-        this.versionId = Objects.requireNonNull(versionId, "expected parameter 'versionId' to be non-null");
-    }
+    private GetSchemaVersionArgs() {}
 
-    private GetSchemaVersionArgs() {
-        this.versionId = null;
+    private GetSchemaVersionArgs(GetSchemaVersionArgs $) {
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSchemaVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String versionId;
+        private GetSchemaVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSchemaVersionArgs();
         }
 
         public Builder(GetSchemaVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.versionId = defaults.versionId;
+            $ = new GetSchemaVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder versionId(String versionId) {
-            this.versionId = Objects.requireNonNull(versionId);
+            $.versionId = versionId;
             return this;
-        }        public GetSchemaVersionArgs build() {
-            return new GetSchemaVersionArgs(versionId);
+        }
+
+        public GetSchemaVersionArgs build() {
+            $.versionId = Objects.requireNonNull($.versionId, "expected parameter 'versionId' to be non-null");
+            return $;
         }
     }
+
 }

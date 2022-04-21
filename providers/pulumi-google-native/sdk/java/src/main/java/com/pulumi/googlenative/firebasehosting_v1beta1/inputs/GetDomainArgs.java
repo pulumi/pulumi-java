@@ -15,78 +15,72 @@ public final class GetDomainArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDomainArgs Empty = new GetDomainArgs();
 
     @Import(name="domainId", required=true)
-      private final String domainId;
+    private String domainId;
 
     public String domainId() {
         return this.domainId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="siteId", required=true)
-      private final String siteId;
+    private String siteId;
 
     public String siteId() {
         return this.siteId;
     }
 
-    public GetDomainArgs(
-        String domainId,
-        @Nullable String project,
-        String siteId) {
-        this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
-        this.project = project;
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-    }
+    private GetDomainArgs() {}
 
-    private GetDomainArgs() {
-        this.domainId = null;
-        this.project = null;
-        this.siteId = null;
+    private GetDomainArgs(GetDomainArgs $) {
+        this.domainId = $.domainId;
+        this.project = $.project;
+        this.siteId = $.siteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainId;
-        private @Nullable String project;
-        private String siteId;
+        private GetDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainArgs();
         }
 
         public Builder(GetDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainId = defaults.domainId;
-    	      this.project = defaults.project;
-    	      this.siteId = defaults.siteId;
+            $ = new GetDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainId(String domainId) {
-            this.domainId = Objects.requireNonNull(domainId);
+            $.domainId = domainId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
-        }        public GetDomainArgs build() {
-            return new GetDomainArgs(domainId, project, siteId);
+        }
+
+        public GetDomainArgs build() {
+            $.domainId = Objects.requireNonNull($.domainId, "expected parameter 'domainId' to be non-null");
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            return $;
         }
     }
+
 }

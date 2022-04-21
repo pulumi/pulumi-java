@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs Empty = new WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs();
 
-    public WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs();
         }
         public WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs build() {
-            return new WebAclRuleStatementNotStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs();
+            return $;
         }
     }
+
 }

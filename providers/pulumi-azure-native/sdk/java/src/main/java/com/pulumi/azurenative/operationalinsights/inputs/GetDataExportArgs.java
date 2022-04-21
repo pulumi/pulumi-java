@@ -17,7 +17,7 @@ public final class GetDataExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataExportName", required=true)
-      private final String dataExportName;
+    private String dataExportName;
 
     public String dataExportName() {
         return this.dataExportName;
@@ -28,7 +28,7 @@ public final class GetDataExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetDataExportArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetDataExportArgs(
-        String dataExportName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.dataExportName = Objects.requireNonNull(dataExportName, "expected parameter 'dataExportName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetDataExportArgs() {}
 
-    private GetDataExportArgs() {
-        this.dataExportName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetDataExportArgs(GetDataExportArgs $) {
+        this.dataExportName = $.dataExportName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataExportName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetDataExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataExportArgs();
         }
 
         public Builder(GetDataExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataExportName = defaults.dataExportName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetDataExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataExportName(String dataExportName) {
-            this.dataExportName = Objects.requireNonNull(dataExportName);
+            $.dataExportName = dataExportName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetDataExportArgs build() {
-            return new GetDataExportArgs(dataExportName, resourceGroupName, workspaceName);
+        }
+
+        public GetDataExportArgs build() {
+            $.dataExportName = Objects.requireNonNull($.dataExportName, "expected parameter 'dataExportName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

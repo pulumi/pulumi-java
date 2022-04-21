@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.WebhookClientConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CustomResourceConversionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="conversionReviewVersions")
-      private final @Nullable Output<List<String>> conversionReviewVersions;
+    private @Nullable Output<List<String>> conversionReviewVersions;
 
-    public Output<List<String>> conversionReviewVersions() {
-        return this.conversionReviewVersions == null ? Codegen.empty() : this.conversionReviewVersions;
+    public Optional<Output<List<String>>> conversionReviewVersions() {
+        return Optional.ofNullable(this.conversionReviewVersions);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class CustomResourceConversionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="strategy", required=true)
-      private final Output<String> strategy;
+    private Output<String> strategy;
 
     public Output<String> strategy() {
         return this.strategy;
@@ -49,79 +49,73 @@ public final class CustomResourceConversionArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="webhookClientConfig")
-      private final @Nullable Output<WebhookClientConfigArgs> webhookClientConfig;
+    private @Nullable Output<WebhookClientConfigArgs> webhookClientConfig;
 
-    public Output<WebhookClientConfigArgs> webhookClientConfig() {
-        return this.webhookClientConfig == null ? Codegen.empty() : this.webhookClientConfig;
+    public Optional<Output<WebhookClientConfigArgs>> webhookClientConfig() {
+        return Optional.ofNullable(this.webhookClientConfig);
     }
 
-    public CustomResourceConversionArgs(
-        @Nullable Output<List<String>> conversionReviewVersions,
-        Output<String> strategy,
-        @Nullable Output<WebhookClientConfigArgs> webhookClientConfig) {
-        this.conversionReviewVersions = conversionReviewVersions;
-        this.strategy = Objects.requireNonNull(strategy, "expected parameter 'strategy' to be non-null");
-        this.webhookClientConfig = webhookClientConfig;
-    }
+    private CustomResourceConversionArgs() {}
 
-    private CustomResourceConversionArgs() {
-        this.conversionReviewVersions = Codegen.empty();
-        this.strategy = Codegen.empty();
-        this.webhookClientConfig = Codegen.empty();
+    private CustomResourceConversionArgs(CustomResourceConversionArgs $) {
+        this.conversionReviewVersions = $.conversionReviewVersions;
+        this.strategy = $.strategy;
+        this.webhookClientConfig = $.webhookClientConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceConversionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> conversionReviewVersions;
-        private Output<String> strategy;
-        private @Nullable Output<WebhookClientConfigArgs> webhookClientConfig;
+        private CustomResourceConversionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceConversionArgs();
         }
 
         public Builder(CustomResourceConversionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversionReviewVersions = defaults.conversionReviewVersions;
-    	      this.strategy = defaults.strategy;
-    	      this.webhookClientConfig = defaults.webhookClientConfig;
+            $ = new CustomResourceConversionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conversionReviewVersions(@Nullable Output<List<String>> conversionReviewVersions) {
-            this.conversionReviewVersions = conversionReviewVersions;
+            $.conversionReviewVersions = conversionReviewVersions;
             return this;
         }
-        public Builder conversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
-            this.conversionReviewVersions = Codegen.ofNullable(conversionReviewVersions);
-            return this;
+
+        public Builder conversionReviewVersions(List<String> conversionReviewVersions) {
+            return conversionReviewVersions(Output.of(conversionReviewVersions));
         }
+
         public Builder conversionReviewVersions(String... conversionReviewVersions) {
             return conversionReviewVersions(List.of(conversionReviewVersions));
         }
+
         public Builder strategy(Output<String> strategy) {
-            this.strategy = Objects.requireNonNull(strategy);
+            $.strategy = strategy;
             return this;
         }
+
         public Builder strategy(String strategy) {
-            this.strategy = Output.of(Objects.requireNonNull(strategy));
-            return this;
+            return strategy(Output.of(strategy));
         }
+
         public Builder webhookClientConfig(@Nullable Output<WebhookClientConfigArgs> webhookClientConfig) {
-            this.webhookClientConfig = webhookClientConfig;
+            $.webhookClientConfig = webhookClientConfig;
             return this;
         }
-        public Builder webhookClientConfig(@Nullable WebhookClientConfigArgs webhookClientConfig) {
-            this.webhookClientConfig = Codegen.ofNullable(webhookClientConfig);
-            return this;
-        }        public CustomResourceConversionArgs build() {
-            return new CustomResourceConversionArgs(conversionReviewVersions, strategy, webhookClientConfig);
+
+        public Builder webhookClientConfig(WebhookClientConfigArgs webhookClientConfig) {
+            return webhookClientConfig(Output.of(webhookClientConfig));
+        }
+
+        public CustomResourceConversionArgs build() {
+            $.strategy = Objects.requireNonNull($.strategy, "expected parameter 'strategy' to be non-null");
+            return $;
         }
     }
+
 }

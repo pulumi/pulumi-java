@@ -21,7 +21,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="externalIp", required=true)
-      private final String externalIp;
+    private String externalIp;
 
     public String externalIp() {
         return this.externalIp;
@@ -32,7 +32,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="internalIp", required=true)
-      private final String internalIp;
+    private String internalIp;
 
     public String internalIp() {
         return this.internalIp;
@@ -43,7 +43,7 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -54,73 +54,66 @@ public final class NetworkInterfaceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
     }
 
-    public NetworkInterfaceResponse(
-        String externalIp,
-        String internalIp,
-        String network,
-        String subnetwork) {
-        this.externalIp = Objects.requireNonNull(externalIp, "expected parameter 'externalIp' to be non-null");
-        this.internalIp = Objects.requireNonNull(internalIp, "expected parameter 'internalIp' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-    }
+    private NetworkInterfaceResponse() {}
 
-    private NetworkInterfaceResponse() {
-        this.externalIp = null;
-        this.internalIp = null;
-        this.network = null;
-        this.subnetwork = null;
+    private NetworkInterfaceResponse(NetworkInterfaceResponse $) {
+        this.externalIp = $.externalIp;
+        this.internalIp = $.internalIp;
+        this.network = $.network;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String externalIp;
-        private String internalIp;
-        private String network;
-        private String subnetwork;
+        private NetworkInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceResponse();
         }
 
         public Builder(NetworkInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalIp = defaults.externalIp;
-    	      this.internalIp = defaults.internalIp;
-    	      this.network = defaults.network;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new NetworkInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder externalIp(String externalIp) {
-            this.externalIp = Objects.requireNonNull(externalIp);
+            $.externalIp = externalIp;
             return this;
         }
+
         public Builder internalIp(String internalIp) {
-            this.internalIp = Objects.requireNonNull(internalIp);
+            $.internalIp = internalIp;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
-        }        public NetworkInterfaceResponse build() {
-            return new NetworkInterfaceResponse(externalIp, internalIp, network, subnetwork);
+        }
+
+        public NetworkInterfaceResponse build() {
+            $.externalIp = Objects.requireNonNull($.externalIp, "expected parameter 'externalIp' to be non-null");
+            $.internalIp = Objects.requireNonNull($.internalIp, "expected parameter 'internalIp' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            return $;
         }
     }
+
 }

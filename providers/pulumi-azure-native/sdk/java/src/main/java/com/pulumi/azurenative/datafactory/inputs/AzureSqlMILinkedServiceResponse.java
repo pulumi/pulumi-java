@@ -34,10 +34,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="alwaysEncryptedSettings")
-      private final @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
+    private @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
 
     public Optional<SqlAlwaysEncryptedPropertiesResponse> alwaysEncryptedSettings() {
-        return this.alwaysEncryptedSettings == null ? Optional.empty() : Optional.ofNullable(this.alwaysEncryptedSettings);
+        return Optional.ofNullable(this.alwaysEncryptedSettings);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="azureCloudType")
-      private final @Nullable Object azureCloudType;
+    private @Nullable Object azureCloudType;
 
     public Optional<Object> azureCloudType() {
-        return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
+        return Optional.ofNullable(this.azureCloudType);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="connectionString", required=true)
-      private final Object connectionString;
+    private Object connectionString;
 
     public Object connectionString() {
         return this.connectionString;
@@ -89,10 +89,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="password")
-      private final @Nullable AzureKeyVaultSecretReferenceResponse password;
+    private @Nullable AzureKeyVaultSecretReferenceResponse password;
 
     public Optional<AzureKeyVaultSecretReferenceResponse> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="servicePrincipalKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
-        return this.servicePrincipalKey == null ? null : this.servicePrincipalKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
+        return Optional.ofNullable(this.servicePrincipalKey);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Object tenant;
+    private @Nullable Object tenant;
 
     public Optional<Object> tenant() {
-        return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -178,166 +178,128 @@ public final class AzureSqlMILinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureSqlMILinkedServiceResponse(
-        @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings,
-        @Nullable List<Object> annotations,
-        @Nullable Object azureCloudType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object connectionString,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable AzureKeyVaultSecretReferenceResponse password,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object tenant,
-        String type) {
-        this.alwaysEncryptedSettings = alwaysEncryptedSettings;
-        this.annotations = annotations;
-        this.azureCloudType = azureCloudType;
-        this.connectVia = connectVia;
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.credential = credential;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.password = password;
-        this.servicePrincipalId = servicePrincipalId;
-        this.servicePrincipalKey = servicePrincipalKey;
-        this.tenant = tenant;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureSqlMILinkedServiceResponse() {}
 
-    private AzureSqlMILinkedServiceResponse() {
-        this.alwaysEncryptedSettings = null;
-        this.annotations = List.of();
-        this.azureCloudType = null;
-        this.connectVia = null;
-        this.connectionString = null;
-        this.credential = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.servicePrincipalId = null;
-        this.servicePrincipalKey = null;
-        this.tenant = null;
-        this.type = null;
+    private AzureSqlMILinkedServiceResponse(AzureSqlMILinkedServiceResponse $) {
+        this.alwaysEncryptedSettings = $.alwaysEncryptedSettings;
+        this.annotations = $.annotations;
+        this.azureCloudType = $.azureCloudType;
+        this.connectVia = $.connectVia;
+        this.connectionString = $.connectionString;
+        this.credential = $.credential;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.servicePrincipalKey = $.servicePrincipalKey;
+        this.tenant = $.tenant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlMILinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object azureCloudType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private Object connectionString;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable AzureKeyVaultSecretReferenceResponse password;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
-        private @Nullable Object tenant;
-        private String type;
+        private AzureSqlMILinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlMILinkedServiceResponse();
         }
 
         public Builder(AzureSqlMILinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alwaysEncryptedSettings = defaults.alwaysEncryptedSettings;
-    	      this.annotations = defaults.annotations;
-    	      this.azureCloudType = defaults.azureCloudType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionString = defaults.connectionString;
-    	      this.credential = defaults.credential;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.servicePrincipalKey = defaults.servicePrincipalKey;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
+            $ = new AzureSqlMILinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alwaysEncryptedSettings(@Nullable SqlAlwaysEncryptedPropertiesResponse alwaysEncryptedSettings) {
-            this.alwaysEncryptedSettings = alwaysEncryptedSettings;
+            $.alwaysEncryptedSettings = alwaysEncryptedSettings;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = azureCloudType;
+            $.azureCloudType = azureCloudType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder connectionString(Object connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable AzureKeyVaultSecretReferenceResponse password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
-            this.servicePrincipalKey = servicePrincipalKey;
+            $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
+
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureSqlMILinkedServiceResponse build() {
-            return new AzureSqlMILinkedServiceResponse(alwaysEncryptedSettings, annotations, azureCloudType, connectVia, connectionString, credential, description, encryptedCredential, parameters, password, servicePrincipalId, servicePrincipalKey, tenant, type);
+        }
+
+        public AzureSqlMILinkedServiceResponse build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

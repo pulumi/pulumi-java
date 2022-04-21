@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends com.pulumi.re
      * 
      */
     @Import(name="floatValue", required=true)
-      private final Double floatValue;
+    private Double floatValue;
 
     public Double floatValue() {
         return this.floatValue;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends com.pulumi.re
      * 
      */
     @Import(name="intValue", required=true)
-      private final String intValue;
+    private String intValue;
 
     public String intValue() {
         return this.intValue;
@@ -44,7 +44,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends com.pulumi.re
      * 
      */
     @Import(name="parameter", required=true)
-      private final String parameter;
+    private String parameter;
 
     public String parameter() {
         return this.parameter;
@@ -55,73 +55,66 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends com.pulumi.re
      * 
      */
     @Import(name="stringValue", required=true)
-      private final String stringValue;
+    private String stringValue;
 
     public String stringValue() {
         return this.stringValue;
     }
 
-    public GoogleCloudMlV1_Trial_ParameterResponse(
-        Double floatValue,
-        String intValue,
-        String parameter,
-        String stringValue) {
-        this.floatValue = Objects.requireNonNull(floatValue, "expected parameter 'floatValue' to be non-null");
-        this.intValue = Objects.requireNonNull(intValue, "expected parameter 'intValue' to be non-null");
-        this.parameter = Objects.requireNonNull(parameter, "expected parameter 'parameter' to be non-null");
-        this.stringValue = Objects.requireNonNull(stringValue, "expected parameter 'stringValue' to be non-null");
-    }
+    private GoogleCloudMlV1_Trial_ParameterResponse() {}
 
-    private GoogleCloudMlV1_Trial_ParameterResponse() {
-        this.floatValue = null;
-        this.intValue = null;
-        this.parameter = null;
-        this.stringValue = null;
+    private GoogleCloudMlV1_Trial_ParameterResponse(GoogleCloudMlV1_Trial_ParameterResponse $) {
+        this.floatValue = $.floatValue;
+        this.intValue = $.intValue;
+        this.parameter = $.parameter;
+        this.stringValue = $.stringValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_Trial_ParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double floatValue;
-        private String intValue;
-        private String parameter;
-        private String stringValue;
+        private GoogleCloudMlV1_Trial_ParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_Trial_ParameterResponse();
         }
 
         public Builder(GoogleCloudMlV1_Trial_ParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.floatValue = defaults.floatValue;
-    	      this.intValue = defaults.intValue;
-    	      this.parameter = defaults.parameter;
-    	      this.stringValue = defaults.stringValue;
+            $ = new GoogleCloudMlV1_Trial_ParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder floatValue(Double floatValue) {
-            this.floatValue = Objects.requireNonNull(floatValue);
+            $.floatValue = floatValue;
             return this;
         }
+
         public Builder intValue(String intValue) {
-            this.intValue = Objects.requireNonNull(intValue);
+            $.intValue = intValue;
             return this;
         }
+
         public Builder parameter(String parameter) {
-            this.parameter = Objects.requireNonNull(parameter);
+            $.parameter = parameter;
             return this;
         }
+
         public Builder stringValue(String stringValue) {
-            this.stringValue = Objects.requireNonNull(stringValue);
+            $.stringValue = stringValue;
             return this;
-        }        public GoogleCloudMlV1_Trial_ParameterResponse build() {
-            return new GoogleCloudMlV1_Trial_ParameterResponse(floatValue, intValue, parameter, stringValue);
+        }
+
+        public GoogleCloudMlV1_Trial_ParameterResponse build() {
+            $.floatValue = Objects.requireNonNull($.floatValue, "expected parameter 'floatValue' to be non-null");
+            $.intValue = Objects.requireNonNull($.intValue, "expected parameter 'intValue' to be non-null");
+            $.parameter = Objects.requireNonNull($.parameter, "expected parameter 'parameter' to be non-null");
+            $.stringValue = Objects.requireNonNull($.stringValue, "expected parameter 'stringValue' to be non-null");
+            return $;
         }
     }
+
 }

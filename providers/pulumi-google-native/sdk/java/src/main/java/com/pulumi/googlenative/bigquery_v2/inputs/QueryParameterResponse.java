@@ -19,7 +19,7 @@ public final class QueryParameterResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -30,7 +30,7 @@ public final class QueryParameterResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="parameterType", required=true)
-      private final QueryParameterTypeResponse parameterType;
+    private QueryParameterTypeResponse parameterType;
 
     public QueryParameterTypeResponse parameterType() {
         return this.parameterType;
@@ -41,64 +41,59 @@ public final class QueryParameterResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="parameterValue", required=true)
-      private final QueryParameterValueResponse parameterValue;
+    private QueryParameterValueResponse parameterValue;
 
     public QueryParameterValueResponse parameterValue() {
         return this.parameterValue;
     }
 
-    public QueryParameterResponse(
-        String name,
-        QueryParameterTypeResponse parameterType,
-        QueryParameterValueResponse parameterValue) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameterType = Objects.requireNonNull(parameterType, "expected parameter 'parameterType' to be non-null");
-        this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
-    }
+    private QueryParameterResponse() {}
 
-    private QueryParameterResponse() {
-        this.name = null;
-        this.parameterType = null;
-        this.parameterValue = null;
+    private QueryParameterResponse(QueryParameterResponse $) {
+        this.name = $.name;
+        this.parameterType = $.parameterType;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private QueryParameterTypeResponse parameterType;
-        private QueryParameterValueResponse parameterValue;
+        private QueryParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryParameterResponse();
         }
 
         public Builder(QueryParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameterType = defaults.parameterType;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new QueryParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameterType(QueryParameterTypeResponse parameterType) {
-            this.parameterType = Objects.requireNonNull(parameterType);
+            $.parameterType = parameterType;
             return this;
         }
+
         public Builder parameterValue(QueryParameterValueResponse parameterValue) {
-            this.parameterValue = Objects.requireNonNull(parameterValue);
+            $.parameterValue = parameterValue;
             return this;
-        }        public QueryParameterResponse build() {
-            return new QueryParameterResponse(name, parameterType, parameterValue);
+        }
+
+        public QueryParameterResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parameterType = Objects.requireNonNull($.parameterType, "expected parameter 'parameterType' to be non-null");
+            $.parameterValue = Objects.requireNonNull($.parameterValue, "expected parameter 'parameterValue' to be non-null");
+            return $;
         }
     }
+
 }

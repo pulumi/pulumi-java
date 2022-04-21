@@ -17,7 +17,7 @@ public final class GetStorageSyncServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetStorageSyncServiceArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="storageSyncServiceName", required=true)
-      private final String storageSyncServiceName;
+    private String storageSyncServiceName;
 
     public String storageSyncServiceName() {
         return this.storageSyncServiceName;
     }
 
-    public GetStorageSyncServiceArgs(
-        String resourceGroupName,
-        String storageSyncServiceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
-    }
+    private GetStorageSyncServiceArgs() {}
 
-    private GetStorageSyncServiceArgs() {
-        this.resourceGroupName = null;
-        this.storageSyncServiceName = null;
+    private GetStorageSyncServiceArgs(GetStorageSyncServiceArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageSyncServiceName = $.storageSyncServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStorageSyncServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String storageSyncServiceName;
+        private GetStorageSyncServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStorageSyncServiceArgs();
         }
 
         public Builder(GetStorageSyncServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageSyncServiceName = defaults.storageSyncServiceName;
+            $ = new GetStorageSyncServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storageSyncServiceName(String storageSyncServiceName) {
-            this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
+            $.storageSyncServiceName = storageSyncServiceName;
             return this;
-        }        public GetStorageSyncServiceArgs build() {
-            return new GetStorageSyncServiceArgs(resourceGroupName, storageSyncServiceName);
+        }
+
+        public GetStorageSyncServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageSyncServiceName = Objects.requireNonNull($.storageSyncServiceName, "expected parameter 'storageSyncServiceName' to be non-null");
+            return $;
         }
     }
+
 }

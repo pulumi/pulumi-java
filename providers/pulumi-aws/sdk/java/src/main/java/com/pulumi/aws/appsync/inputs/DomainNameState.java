@@ -5,9 +5,9 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appsyncDomainName")
-      private final @Nullable Output<String> appsyncDomainName;
+    private @Nullable Output<String> appsyncDomainName;
 
-    public Output<String> appsyncDomainName() {
-        return this.appsyncDomainName == null ? Codegen.empty() : this.appsyncDomainName;
+    public Optional<Output<String>> appsyncDomainName() {
+        return Optional.ofNullable(this.appsyncDomainName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class DomainNameState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostedZoneId")
-      private final @Nullable Output<String> hostedZoneId;
+    private @Nullable Output<String> hostedZoneId;
 
-    public Output<String> hostedZoneId() {
-        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
+    public Optional<Output<String>> hostedZoneId() {
+        return Optional.ofNullable(this.hostedZoneId);
     }
 
-    public DomainNameState(
-        @Nullable Output<String> appsyncDomainName,
-        @Nullable Output<String> certificateArn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> hostedZoneId) {
-        this.appsyncDomainName = appsyncDomainName;
-        this.certificateArn = certificateArn;
-        this.description = description;
-        this.domainName = domainName;
-        this.hostedZoneId = hostedZoneId;
-    }
+    private DomainNameState() {}
 
-    private DomainNameState() {
-        this.appsyncDomainName = Codegen.empty();
-        this.certificateArn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.hostedZoneId = Codegen.empty();
+    private DomainNameState(DomainNameState $) {
+        this.appsyncDomainName = $.appsyncDomainName;
+        this.certificateArn = $.certificateArn;
+        this.description = $.description;
+        this.domainName = $.domainName;
+        this.hostedZoneId = $.hostedZoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appsyncDomainName;
-        private @Nullable Output<String> certificateArn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> hostedZoneId;
+        private DomainNameState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameState();
         }
 
         public Builder(DomainNameState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appsyncDomainName = defaults.appsyncDomainName;
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.description = defaults.description;
-    	      this.domainName = defaults.domainName;
-    	      this.hostedZoneId = defaults.hostedZoneId;
+            $ = new DomainNameState(Objects.requireNonNull(defaults));
         }
 
         public Builder appsyncDomainName(@Nullable Output<String> appsyncDomainName) {
-            this.appsyncDomainName = appsyncDomainName;
+            $.appsyncDomainName = appsyncDomainName;
             return this;
         }
-        public Builder appsyncDomainName(@Nullable String appsyncDomainName) {
-            this.appsyncDomainName = Codegen.ofNullable(appsyncDomainName);
-            return this;
+
+        public Builder appsyncDomainName(String appsyncDomainName) {
+            return appsyncDomainName(Output.of(appsyncDomainName));
         }
+
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
-            this.hostedZoneId = hostedZoneId;
+            $.hostedZoneId = hostedZoneId;
             return this;
         }
-        public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
-            return this;
-        }        public DomainNameState build() {
-            return new DomainNameState(appsyncDomainName, certificateArn, description, domainName, hostedZoneId);
+
+        public Builder hostedZoneId(String hostedZoneId) {
+            return hostedZoneId(Output.of(hostedZoneId));
+        }
+
+        public DomainNameState build() {
+            return $;
         }
     }
+
 }

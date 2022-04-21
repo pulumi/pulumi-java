@@ -16,62 +16,58 @@ public final class FlowEventBridgeDestinationProperties extends com.pulumi.resou
     public static final FlowEventBridgeDestinationProperties Empty = new FlowEventBridgeDestinationProperties();
 
     @Import(name="errorHandlingConfig")
-      private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
+    private @Nullable FlowErrorHandlingConfig errorHandlingConfig;
 
     public Optional<FlowErrorHandlingConfig> errorHandlingConfig() {
-        return this.errorHandlingConfig == null ? Optional.empty() : Optional.ofNullable(this.errorHandlingConfig);
+        return Optional.ofNullable(this.errorHandlingConfig);
     }
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowEventBridgeDestinationProperties(
-        @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        String object) {
-        this.errorHandlingConfig = errorHandlingConfig;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowEventBridgeDestinationProperties() {}
 
-    private FlowEventBridgeDestinationProperties() {
-        this.errorHandlingConfig = null;
-        this.object = null;
+    private FlowEventBridgeDestinationProperties(FlowEventBridgeDestinationProperties $) {
+        this.errorHandlingConfig = $.errorHandlingConfig;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowEventBridgeDestinationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FlowErrorHandlingConfig errorHandlingConfig;
-        private String object;
+        private FlowEventBridgeDestinationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowEventBridgeDestinationProperties();
         }
 
         public Builder(FlowEventBridgeDestinationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorHandlingConfig = defaults.errorHandlingConfig;
-    	      this.object = defaults.object;
+            $ = new FlowEventBridgeDestinationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
-            this.errorHandlingConfig = errorHandlingConfig;
+            $.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowEventBridgeDestinationProperties build() {
-            return new FlowEventBridgeDestinationProperties(errorHandlingConfig, object);
+        }
+
+        public FlowEventBridgeDestinationProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

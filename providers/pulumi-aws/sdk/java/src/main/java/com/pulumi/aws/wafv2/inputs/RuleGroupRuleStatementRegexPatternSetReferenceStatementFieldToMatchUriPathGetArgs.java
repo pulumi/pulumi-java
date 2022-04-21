@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs Empty = new RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs();
 
-    public RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs();
         }
         public RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs build() {
-            return new RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.securityinsights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class BookmarkRelationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bookmarkId", required=true)
-      private final Output<String> bookmarkId;
+    private Output<String> bookmarkId;
 
     public Output<String> bookmarkId() {
         return this.bookmarkId;
@@ -31,7 +31,7 @@ public final class BookmarkRelationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final Output<String> operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -42,7 +42,7 @@ public final class BookmarkRelationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="relatedResourceId", required=true)
-      private final Output<String> relatedResourceId;
+    private Output<String> relatedResourceId;
 
     public Output<String> relatedResourceId() {
         return this.relatedResourceId;
@@ -53,10 +53,10 @@ public final class BookmarkRelationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="relationName")
-      private final @Nullable Output<String> relationName;
+    private @Nullable Output<String> relationName;
 
-    public Output<String> relationName() {
-        return this.relationName == null ? Codegen.empty() : this.relationName;
+    public Optional<Output<String>> relationName() {
+        return Optional.ofNullable(this.relationName);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class BookmarkRelationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -75,115 +75,103 @@ public final class BookmarkRelationArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public BookmarkRelationArgs(
-        Output<String> bookmarkId,
-        Output<String> operationalInsightsResourceProvider,
-        Output<String> relatedResourceId,
-        @Nullable Output<String> relationName,
-        Output<String> resourceGroupName,
-        Output<String> workspaceName) {
-        this.bookmarkId = Objects.requireNonNull(bookmarkId, "expected parameter 'bookmarkId' to be non-null");
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.relatedResourceId = Objects.requireNonNull(relatedResourceId, "expected parameter 'relatedResourceId' to be non-null");
-        this.relationName = relationName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private BookmarkRelationArgs() {}
 
-    private BookmarkRelationArgs() {
-        this.bookmarkId = Codegen.empty();
-        this.operationalInsightsResourceProvider = Codegen.empty();
-        this.relatedResourceId = Codegen.empty();
-        this.relationName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private BookmarkRelationArgs(BookmarkRelationArgs $) {
+        this.bookmarkId = $.bookmarkId;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.relatedResourceId = $.relatedResourceId;
+        this.relationName = $.relationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BookmarkRelationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bookmarkId;
-        private Output<String> operationalInsightsResourceProvider;
-        private Output<String> relatedResourceId;
-        private @Nullable Output<String> relationName;
-        private Output<String> resourceGroupName;
-        private Output<String> workspaceName;
+        private BookmarkRelationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BookmarkRelationArgs();
         }
 
         public Builder(BookmarkRelationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bookmarkId = defaults.bookmarkId;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.relatedResourceId = defaults.relatedResourceId;
-    	      this.relationName = defaults.relationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new BookmarkRelationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bookmarkId(Output<String> bookmarkId) {
-            this.bookmarkId = Objects.requireNonNull(bookmarkId);
+            $.bookmarkId = bookmarkId;
             return this;
         }
+
         public Builder bookmarkId(String bookmarkId) {
-            this.bookmarkId = Output.of(Objects.requireNonNull(bookmarkId));
-            return this;
+            return bookmarkId(Output.of(bookmarkId));
         }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
-            return this;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
+
         public Builder relatedResourceId(Output<String> relatedResourceId) {
-            this.relatedResourceId = Objects.requireNonNull(relatedResourceId);
+            $.relatedResourceId = relatedResourceId;
             return this;
         }
+
         public Builder relatedResourceId(String relatedResourceId) {
-            this.relatedResourceId = Output.of(Objects.requireNonNull(relatedResourceId));
-            return this;
+            return relatedResourceId(Output.of(relatedResourceId));
         }
+
         public Builder relationName(@Nullable Output<String> relationName) {
-            this.relationName = relationName;
+            $.relationName = relationName;
             return this;
         }
-        public Builder relationName(@Nullable String relationName) {
-            this.relationName = Codegen.ofNullable(relationName);
-            return this;
+
+        public Builder relationName(String relationName) {
+            return relationName(Output.of(relationName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public BookmarkRelationArgs build() {
-            return new BookmarkRelationArgs(bookmarkId, operationalInsightsResourceProvider, relatedResourceId, relationName, resourceGroupName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public BookmarkRelationArgs build() {
+            $.bookmarkId = Objects.requireNonNull($.bookmarkId, "expected parameter 'bookmarkId' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.relatedResourceId = Objects.requireNonNull($.relatedResourceId, "expected parameter 'relatedResourceId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

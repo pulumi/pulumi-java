@@ -5,9 +5,9 @@ package com.pulumi.aws.amplify.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AppProductionBranchGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="branchName")
-      private final @Nullable Output<String> branchName;
+    private @Nullable Output<String> branchName;
 
-    public Output<String> branchName() {
-        return this.branchName == null ? Codegen.empty() : this.branchName;
+    public Optional<Output<String>> branchName() {
+        return Optional.ofNullable(this.branchName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AppProductionBranchGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="lastDeployTime")
-      private final @Nullable Output<String> lastDeployTime;
+    private @Nullable Output<String> lastDeployTime;
 
-    public Output<String> lastDeployTime() {
-        return this.lastDeployTime == null ? Codegen.empty() : this.lastDeployTime;
+    public Optional<Output<String>> lastDeployTime() {
+        return Optional.ofNullable(this.lastDeployTime);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AppProductionBranchGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class AppProductionBranchGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="thumbnailUrl")
-      private final @Nullable Output<String> thumbnailUrl;
+    private @Nullable Output<String> thumbnailUrl;
 
-    public Output<String> thumbnailUrl() {
-        return this.thumbnailUrl == null ? Codegen.empty() : this.thumbnailUrl;
+    public Optional<Output<String>> thumbnailUrl() {
+        return Optional.ofNullable(this.thumbnailUrl);
     }
 
-    public AppProductionBranchGetArgs(
-        @Nullable Output<String> branchName,
-        @Nullable Output<String> lastDeployTime,
-        @Nullable Output<String> status,
-        @Nullable Output<String> thumbnailUrl) {
-        this.branchName = branchName;
-        this.lastDeployTime = lastDeployTime;
-        this.status = status;
-        this.thumbnailUrl = thumbnailUrl;
-    }
+    private AppProductionBranchGetArgs() {}
 
-    private AppProductionBranchGetArgs() {
-        this.branchName = Codegen.empty();
-        this.lastDeployTime = Codegen.empty();
-        this.status = Codegen.empty();
-        this.thumbnailUrl = Codegen.empty();
+    private AppProductionBranchGetArgs(AppProductionBranchGetArgs $) {
+        this.branchName = $.branchName;
+        this.lastDeployTime = $.lastDeployTime;
+        this.status = $.status;
+        this.thumbnailUrl = $.thumbnailUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppProductionBranchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branchName;
-        private @Nullable Output<String> lastDeployTime;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> thumbnailUrl;
+        private AppProductionBranchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppProductionBranchGetArgs();
         }
 
         public Builder(AppProductionBranchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchName = defaults.branchName;
-    	      this.lastDeployTime = defaults.lastDeployTime;
-    	      this.status = defaults.status;
-    	      this.thumbnailUrl = defaults.thumbnailUrl;
+            $ = new AppProductionBranchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branchName(@Nullable Output<String> branchName) {
-            this.branchName = branchName;
+            $.branchName = branchName;
             return this;
         }
-        public Builder branchName(@Nullable String branchName) {
-            this.branchName = Codegen.ofNullable(branchName);
-            return this;
+
+        public Builder branchName(String branchName) {
+            return branchName(Output.of(branchName));
         }
+
         public Builder lastDeployTime(@Nullable Output<String> lastDeployTime) {
-            this.lastDeployTime = lastDeployTime;
+            $.lastDeployTime = lastDeployTime;
             return this;
         }
-        public Builder lastDeployTime(@Nullable String lastDeployTime) {
-            this.lastDeployTime = Codegen.ofNullable(lastDeployTime);
-            return this;
+
+        public Builder lastDeployTime(String lastDeployTime) {
+            return lastDeployTime(Output.of(lastDeployTime));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder thumbnailUrl(@Nullable Output<String> thumbnailUrl) {
-            this.thumbnailUrl = thumbnailUrl;
+            $.thumbnailUrl = thumbnailUrl;
             return this;
         }
-        public Builder thumbnailUrl(@Nullable String thumbnailUrl) {
-            this.thumbnailUrl = Codegen.ofNullable(thumbnailUrl);
-            return this;
-        }        public AppProductionBranchGetArgs build() {
-            return new AppProductionBranchGetArgs(branchName, lastDeployTime, status, thumbnailUrl);
+
+        public Builder thumbnailUrl(String thumbnailUrl) {
+            return thumbnailUrl(Output.of(thumbnailUrl));
+        }
+
+        public AppProductionBranchGetArgs build() {
+            return $;
         }
     }
+
 }

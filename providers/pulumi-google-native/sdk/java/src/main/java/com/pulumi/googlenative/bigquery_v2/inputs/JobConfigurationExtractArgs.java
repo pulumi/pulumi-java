@@ -5,13 +5,13 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.ModelReferenceArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class JobConfigurationExtractArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="compression")
-      private final @Nullable Output<String> compression;
+    private @Nullable Output<String> compression;
 
-    public Output<String> compression() {
-        return this.compression == null ? Codegen.empty() : this.compression;
+    public Optional<Output<String>> compression() {
+        return Optional.ofNullable(this.compression);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JobConfigurationExtractArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="destinationFormat")
-      private final @Nullable Output<String> destinationFormat;
+    private @Nullable Output<String> destinationFormat;
 
-    public Output<String> destinationFormat() {
-        return this.destinationFormat == null ? Codegen.empty() : this.destinationFormat;
+    public Optional<Output<String>> destinationFormat() {
+        return Optional.ofNullable(this.destinationFormat);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class JobConfigurationExtractArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="destinationUri")
-      private final @Nullable Output<String> destinationUri;
+    private @Nullable Output<String> destinationUri;
 
-    public Output<String> destinationUri() {
-        return this.destinationUri == null ? Codegen.empty() : this.destinationUri;
+    public Optional<Output<String>> destinationUri() {
+        return Optional.ofNullable(this.destinationUri);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JobConfigurationExtractArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="destinationUris")
-      private final @Nullable Output<List<String>> destinationUris;
+    private @Nullable Output<List<String>> destinationUris;
 
-    public Output<List<String>> destinationUris() {
-        return this.destinationUris == null ? Codegen.empty() : this.destinationUris;
+    public Optional<Output<List<String>>> destinationUris() {
+        return Optional.ofNullable(this.destinationUris);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class JobConfigurationExtractArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="fieldDelimiter")
-      private final @Nullable Output<String> fieldDelimiter;
+    private @Nullable Output<String> fieldDelimiter;
 
-    public Output<String> fieldDelimiter() {
-        return this.fieldDelimiter == null ? Codegen.empty() : this.fieldDelimiter;
+    public Optional<Output<String>> fieldDelimiter() {
+        return Optional.ofNullable(this.fieldDelimiter);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class JobConfigurationExtractArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="printHeader")
-      private final @Nullable Output<Boolean> printHeader;
+    private @Nullable Output<Boolean> printHeader;
 
-    public Output<Boolean> printHeader() {
-        return this.printHeader == null ? Codegen.empty() : this.printHeader;
+    public Optional<Output<Boolean>> printHeader() {
+        return Optional.ofNullable(this.printHeader);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class JobConfigurationExtractArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sourceModel")
-      private final @Nullable Output<ModelReferenceArgs> sourceModel;
+    private @Nullable Output<ModelReferenceArgs> sourceModel;
 
-    public Output<ModelReferenceArgs> sourceModel() {
-        return this.sourceModel == null ? Codegen.empty() : this.sourceModel;
+    public Optional<Output<ModelReferenceArgs>> sourceModel() {
+        return Optional.ofNullable(this.sourceModel);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class JobConfigurationExtractArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sourceTable")
-      private final @Nullable Output<TableReferenceArgs> sourceTable;
+    private @Nullable Output<TableReferenceArgs> sourceTable;
 
-    public Output<TableReferenceArgs> sourceTable() {
-        return this.sourceTable == null ? Codegen.empty() : this.sourceTable;
+    public Optional<Output<TableReferenceArgs>> sourceTable() {
+        return Optional.ofNullable(this.sourceTable);
     }
 
     /**
@@ -112,157 +112,132 @@ public final class JobConfigurationExtractArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="useAvroLogicalTypes")
-      private final @Nullable Output<Boolean> useAvroLogicalTypes;
+    private @Nullable Output<Boolean> useAvroLogicalTypes;
 
-    public Output<Boolean> useAvroLogicalTypes() {
-        return this.useAvroLogicalTypes == null ? Codegen.empty() : this.useAvroLogicalTypes;
+    public Optional<Output<Boolean>> useAvroLogicalTypes() {
+        return Optional.ofNullable(this.useAvroLogicalTypes);
     }
 
-    public JobConfigurationExtractArgs(
-        @Nullable Output<String> compression,
-        @Nullable Output<String> destinationFormat,
-        @Nullable Output<String> destinationUri,
-        @Nullable Output<List<String>> destinationUris,
-        @Nullable Output<String> fieldDelimiter,
-        @Nullable Output<Boolean> printHeader,
-        @Nullable Output<ModelReferenceArgs> sourceModel,
-        @Nullable Output<TableReferenceArgs> sourceTable,
-        @Nullable Output<Boolean> useAvroLogicalTypes) {
-        this.compression = compression;
-        this.destinationFormat = destinationFormat;
-        this.destinationUri = destinationUri;
-        this.destinationUris = destinationUris;
-        this.fieldDelimiter = fieldDelimiter;
-        this.printHeader = printHeader;
-        this.sourceModel = sourceModel;
-        this.sourceTable = sourceTable;
-        this.useAvroLogicalTypes = useAvroLogicalTypes;
-    }
+    private JobConfigurationExtractArgs() {}
 
-    private JobConfigurationExtractArgs() {
-        this.compression = Codegen.empty();
-        this.destinationFormat = Codegen.empty();
-        this.destinationUri = Codegen.empty();
-        this.destinationUris = Codegen.empty();
-        this.fieldDelimiter = Codegen.empty();
-        this.printHeader = Codegen.empty();
-        this.sourceModel = Codegen.empty();
-        this.sourceTable = Codegen.empty();
-        this.useAvroLogicalTypes = Codegen.empty();
+    private JobConfigurationExtractArgs(JobConfigurationExtractArgs $) {
+        this.compression = $.compression;
+        this.destinationFormat = $.destinationFormat;
+        this.destinationUri = $.destinationUri;
+        this.destinationUris = $.destinationUris;
+        this.fieldDelimiter = $.fieldDelimiter;
+        this.printHeader = $.printHeader;
+        this.sourceModel = $.sourceModel;
+        this.sourceTable = $.sourceTable;
+        this.useAvroLogicalTypes = $.useAvroLogicalTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigurationExtractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> compression;
-        private @Nullable Output<String> destinationFormat;
-        private @Nullable Output<String> destinationUri;
-        private @Nullable Output<List<String>> destinationUris;
-        private @Nullable Output<String> fieldDelimiter;
-        private @Nullable Output<Boolean> printHeader;
-        private @Nullable Output<ModelReferenceArgs> sourceModel;
-        private @Nullable Output<TableReferenceArgs> sourceTable;
-        private @Nullable Output<Boolean> useAvroLogicalTypes;
+        private JobConfigurationExtractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigurationExtractArgs();
         }
 
         public Builder(JobConfigurationExtractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compression = defaults.compression;
-    	      this.destinationFormat = defaults.destinationFormat;
-    	      this.destinationUri = defaults.destinationUri;
-    	      this.destinationUris = defaults.destinationUris;
-    	      this.fieldDelimiter = defaults.fieldDelimiter;
-    	      this.printHeader = defaults.printHeader;
-    	      this.sourceModel = defaults.sourceModel;
-    	      this.sourceTable = defaults.sourceTable;
-    	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
+            $ = new JobConfigurationExtractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compression(@Nullable Output<String> compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
-        public Builder compression(@Nullable String compression) {
-            this.compression = Codegen.ofNullable(compression);
-            return this;
+
+        public Builder compression(String compression) {
+            return compression(Output.of(compression));
         }
+
         public Builder destinationFormat(@Nullable Output<String> destinationFormat) {
-            this.destinationFormat = destinationFormat;
+            $.destinationFormat = destinationFormat;
             return this;
         }
-        public Builder destinationFormat(@Nullable String destinationFormat) {
-            this.destinationFormat = Codegen.ofNullable(destinationFormat);
-            return this;
+
+        public Builder destinationFormat(String destinationFormat) {
+            return destinationFormat(Output.of(destinationFormat));
         }
+
         public Builder destinationUri(@Nullable Output<String> destinationUri) {
-            this.destinationUri = destinationUri;
+            $.destinationUri = destinationUri;
             return this;
         }
-        public Builder destinationUri(@Nullable String destinationUri) {
-            this.destinationUri = Codegen.ofNullable(destinationUri);
-            return this;
+
+        public Builder destinationUri(String destinationUri) {
+            return destinationUri(Output.of(destinationUri));
         }
+
         public Builder destinationUris(@Nullable Output<List<String>> destinationUris) {
-            this.destinationUris = destinationUris;
+            $.destinationUris = destinationUris;
             return this;
         }
-        public Builder destinationUris(@Nullable List<String> destinationUris) {
-            this.destinationUris = Codegen.ofNullable(destinationUris);
-            return this;
+
+        public Builder destinationUris(List<String> destinationUris) {
+            return destinationUris(Output.of(destinationUris));
         }
+
         public Builder destinationUris(String... destinationUris) {
             return destinationUris(List.of(destinationUris));
         }
+
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
-            this.fieldDelimiter = fieldDelimiter;
+            $.fieldDelimiter = fieldDelimiter;
             return this;
         }
-        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
-            this.fieldDelimiter = Codegen.ofNullable(fieldDelimiter);
-            return this;
+
+        public Builder fieldDelimiter(String fieldDelimiter) {
+            return fieldDelimiter(Output.of(fieldDelimiter));
         }
+
         public Builder printHeader(@Nullable Output<Boolean> printHeader) {
-            this.printHeader = printHeader;
+            $.printHeader = printHeader;
             return this;
         }
-        public Builder printHeader(@Nullable Boolean printHeader) {
-            this.printHeader = Codegen.ofNullable(printHeader);
-            return this;
+
+        public Builder printHeader(Boolean printHeader) {
+            return printHeader(Output.of(printHeader));
         }
+
         public Builder sourceModel(@Nullable Output<ModelReferenceArgs> sourceModel) {
-            this.sourceModel = sourceModel;
+            $.sourceModel = sourceModel;
             return this;
         }
-        public Builder sourceModel(@Nullable ModelReferenceArgs sourceModel) {
-            this.sourceModel = Codegen.ofNullable(sourceModel);
-            return this;
+
+        public Builder sourceModel(ModelReferenceArgs sourceModel) {
+            return sourceModel(Output.of(sourceModel));
         }
+
         public Builder sourceTable(@Nullable Output<TableReferenceArgs> sourceTable) {
-            this.sourceTable = sourceTable;
+            $.sourceTable = sourceTable;
             return this;
         }
-        public Builder sourceTable(@Nullable TableReferenceArgs sourceTable) {
-            this.sourceTable = Codegen.ofNullable(sourceTable);
-            return this;
+
+        public Builder sourceTable(TableReferenceArgs sourceTable) {
+            return sourceTable(Output.of(sourceTable));
         }
+
         public Builder useAvroLogicalTypes(@Nullable Output<Boolean> useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = useAvroLogicalTypes;
+            $.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
-        public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = Codegen.ofNullable(useAvroLogicalTypes);
-            return this;
-        }        public JobConfigurationExtractArgs build() {
-            return new JobConfigurationExtractArgs(compression, destinationFormat, destinationUri, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
+
+        public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
+            return useAvroLogicalTypes(Output.of(useAvroLogicalTypes));
+        }
+
+        public JobConfigurationExtractArgs build() {
+            return $;
         }
     }
+
 }

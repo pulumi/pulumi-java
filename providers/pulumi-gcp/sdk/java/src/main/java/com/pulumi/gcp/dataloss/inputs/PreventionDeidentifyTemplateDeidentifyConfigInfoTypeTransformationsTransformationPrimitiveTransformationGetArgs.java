@@ -5,13 +5,13 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="characterMaskConfig")
-      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs> characterMaskConfig;
+    private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs> characterMaskConfig;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs> characterMaskConfig() {
-        return this.characterMaskConfig == null ? Codegen.empty() : this.characterMaskConfig;
+    public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs>> characterMaskConfig() {
+        return Optional.ofNullable(this.characterMaskConfig);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="cryptoDeterministicConfig")
-      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs> cryptoDeterministicConfig;
+    private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs> cryptoDeterministicConfig;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs> cryptoDeterministicConfig() {
-        return this.cryptoDeterministicConfig == null ? Codegen.empty() : this.cryptoDeterministicConfig;
+    public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs>> cryptoDeterministicConfig() {
+        return Optional.ofNullable(this.cryptoDeterministicConfig);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="cryptoReplaceFfxFpeConfig")
-      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs> cryptoReplaceFfxFpeConfig;
+    private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs> cryptoReplaceFfxFpeConfig;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs> cryptoReplaceFfxFpeConfig() {
-        return this.cryptoReplaceFfxFpeConfig == null ? Codegen.empty() : this.cryptoReplaceFfxFpeConfig;
+    public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs>> cryptoReplaceFfxFpeConfig() {
+        return Optional.ofNullable(this.cryptoReplaceFfxFpeConfig);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="replaceConfig")
-      private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs> replaceConfig;
+    private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs> replaceConfig;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs> replaceConfig() {
-        return this.replaceConfig == null ? Codegen.empty() : this.replaceConfig;
+    public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs>> replaceConfig() {
+        return Optional.ofNullable(this.replaceConfig);
     }
 
     /**
@@ -74,102 +74,88 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="replaceWithInfoTypeConfig")
-      private final @Nullable Output<Boolean> replaceWithInfoTypeConfig;
+    private @Nullable Output<Boolean> replaceWithInfoTypeConfig;
 
-    public Output<Boolean> replaceWithInfoTypeConfig() {
-        return this.replaceWithInfoTypeConfig == null ? Codegen.empty() : this.replaceWithInfoTypeConfig;
+    public Optional<Output<Boolean>> replaceWithInfoTypeConfig() {
+        return Optional.ofNullable(this.replaceWithInfoTypeConfig);
     }
 
-    public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs(
-        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs> characterMaskConfig,
-        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs> cryptoDeterministicConfig,
-        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs> cryptoReplaceFfxFpeConfig,
-        @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs> replaceConfig,
-        @Nullable Output<Boolean> replaceWithInfoTypeConfig) {
-        this.characterMaskConfig = characterMaskConfig;
-        this.cryptoDeterministicConfig = cryptoDeterministicConfig;
-        this.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
-        this.replaceConfig = replaceConfig;
-        this.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
-    }
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs() {}
 
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs() {
-        this.characterMaskConfig = Codegen.empty();
-        this.cryptoDeterministicConfig = Codegen.empty();
-        this.cryptoReplaceFfxFpeConfig = Codegen.empty();
-        this.replaceConfig = Codegen.empty();
-        this.replaceWithInfoTypeConfig = Codegen.empty();
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs $) {
+        this.characterMaskConfig = $.characterMaskConfig;
+        this.cryptoDeterministicConfig = $.cryptoDeterministicConfig;
+        this.cryptoReplaceFfxFpeConfig = $.cryptoReplaceFfxFpeConfig;
+        this.replaceConfig = $.replaceConfig;
+        this.replaceWithInfoTypeConfig = $.replaceWithInfoTypeConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs> characterMaskConfig;
-        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs> cryptoDeterministicConfig;
-        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs> cryptoReplaceFfxFpeConfig;
-        private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs> replaceConfig;
-        private @Nullable Output<Boolean> replaceWithInfoTypeConfig;
+        private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs();
         }
 
         public Builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.characterMaskConfig = defaults.characterMaskConfig;
-    	      this.cryptoDeterministicConfig = defaults.cryptoDeterministicConfig;
-    	      this.cryptoReplaceFfxFpeConfig = defaults.cryptoReplaceFfxFpeConfig;
-    	      this.replaceConfig = defaults.replaceConfig;
-    	      this.replaceWithInfoTypeConfig = defaults.replaceWithInfoTypeConfig;
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder characterMaskConfig(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs> characterMaskConfig) {
-            this.characterMaskConfig = characterMaskConfig;
+            $.characterMaskConfig = characterMaskConfig;
             return this;
         }
-        public Builder characterMaskConfig(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs characterMaskConfig) {
-            this.characterMaskConfig = Codegen.ofNullable(characterMaskConfig);
-            return this;
+
+        public Builder characterMaskConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigGetArgs characterMaskConfig) {
+            return characterMaskConfig(Output.of(characterMaskConfig));
         }
+
         public Builder cryptoDeterministicConfig(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs> cryptoDeterministicConfig) {
-            this.cryptoDeterministicConfig = cryptoDeterministicConfig;
+            $.cryptoDeterministicConfig = cryptoDeterministicConfig;
             return this;
         }
-        public Builder cryptoDeterministicConfig(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs cryptoDeterministicConfig) {
-            this.cryptoDeterministicConfig = Codegen.ofNullable(cryptoDeterministicConfig);
-            return this;
+
+        public Builder cryptoDeterministicConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigGetArgs cryptoDeterministicConfig) {
+            return cryptoDeterministicConfig(Output.of(cryptoDeterministicConfig));
         }
+
         public Builder cryptoReplaceFfxFpeConfig(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs> cryptoReplaceFfxFpeConfig) {
-            this.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
+            $.cryptoReplaceFfxFpeConfig = cryptoReplaceFfxFpeConfig;
             return this;
         }
-        public Builder cryptoReplaceFfxFpeConfig(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs cryptoReplaceFfxFpeConfig) {
-            this.cryptoReplaceFfxFpeConfig = Codegen.ofNullable(cryptoReplaceFfxFpeConfig);
-            return this;
+
+        public Builder cryptoReplaceFfxFpeConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigGetArgs cryptoReplaceFfxFpeConfig) {
+            return cryptoReplaceFfxFpeConfig(Output.of(cryptoReplaceFfxFpeConfig));
         }
+
         public Builder replaceConfig(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs> replaceConfig) {
-            this.replaceConfig = replaceConfig;
+            $.replaceConfig = replaceConfig;
             return this;
         }
-        public Builder replaceConfig(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs replaceConfig) {
-            this.replaceConfig = Codegen.ofNullable(replaceConfig);
-            return this;
+
+        public Builder replaceConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigGetArgs replaceConfig) {
+            return replaceConfig(Output.of(replaceConfig));
         }
+
         public Builder replaceWithInfoTypeConfig(@Nullable Output<Boolean> replaceWithInfoTypeConfig) {
-            this.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
+            $.replaceWithInfoTypeConfig = replaceWithInfoTypeConfig;
             return this;
         }
-        public Builder replaceWithInfoTypeConfig(@Nullable Boolean replaceWithInfoTypeConfig) {
-            this.replaceWithInfoTypeConfig = Codegen.ofNullable(replaceWithInfoTypeConfig);
-            return this;
-        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs build() {
-            return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs(characterMaskConfig, cryptoDeterministicConfig, cryptoReplaceFfxFpeConfig, replaceConfig, replaceWithInfoTypeConfig);
+
+        public Builder replaceWithInfoTypeConfig(Boolean replaceWithInfoTypeConfig) {
+            return replaceWithInfoTypeConfig(Output.of(replaceWithInfoTypeConfig));
+        }
+
+        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationGetArgs build() {
+            return $;
         }
     }
+
 }

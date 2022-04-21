@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.WinRMListenerArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class WinRMConfigurationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="listeners")
-      private final @Nullable Output<List<WinRMListenerArgs>> listeners;
+    private @Nullable Output<List<WinRMListenerArgs>> listeners;
 
-    public Output<List<WinRMListenerArgs>> listeners() {
-        return this.listeners == null ? Codegen.empty() : this.listeners;
+    public Optional<Output<List<WinRMListenerArgs>>> listeners() {
+        return Optional.ofNullable(this.listeners);
     }
 
-    public WinRMConfigurationArgs(@Nullable Output<List<WinRMListenerArgs>> listeners) {
-        this.listeners = listeners;
-    }
+    private WinRMConfigurationArgs() {}
 
-    private WinRMConfigurationArgs() {
-        this.listeners = Codegen.empty();
+    private WinRMConfigurationArgs(WinRMConfigurationArgs $) {
+        this.listeners = $.listeners;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WinRMConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<WinRMListenerArgs>> listeners;
+        private WinRMConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WinRMConfigurationArgs();
         }
 
         public Builder(WinRMConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.listeners = defaults.listeners;
+            $ = new WinRMConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder listeners(@Nullable Output<List<WinRMListenerArgs>> listeners) {
-            this.listeners = listeners;
+            $.listeners = listeners;
             return this;
         }
-        public Builder listeners(@Nullable List<WinRMListenerArgs> listeners) {
-            this.listeners = Codegen.ofNullable(listeners);
-            return this;
+
+        public Builder listeners(List<WinRMListenerArgs> listeners) {
+            return listeners(Output.of(listeners));
         }
+
         public Builder listeners(WinRMListenerArgs... listeners) {
             return listeners(List.of(listeners));
-        }        public WinRMConfigurationArgs build() {
-            return new WinRMConfigurationArgs(listeners);
+        }
+
+        public WinRMConfigurationArgs build() {
+            return $;
         }
     }
+
 }

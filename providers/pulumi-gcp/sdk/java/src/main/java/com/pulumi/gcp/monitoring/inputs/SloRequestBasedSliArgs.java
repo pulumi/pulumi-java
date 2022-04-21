@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloRequestBasedSliDistributionCutArgs;
 import com.pulumi.gcp.monitoring.inputs.SloRequestBasedSliGoodTotalRatioArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SloRequestBasedSliArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="distributionCut")
-      private final @Nullable Output<SloRequestBasedSliDistributionCutArgs> distributionCut;
+    private @Nullable Output<SloRequestBasedSliDistributionCutArgs> distributionCut;
 
-    public Output<SloRequestBasedSliDistributionCutArgs> distributionCut() {
-        return this.distributionCut == null ? Codegen.empty() : this.distributionCut;
+    public Optional<Output<SloRequestBasedSliDistributionCutArgs>> distributionCut() {
+        return Optional.ofNullable(this.distributionCut);
     }
 
     /**
@@ -42,63 +42,58 @@ public final class SloRequestBasedSliArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="goodTotalRatio")
-      private final @Nullable Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio;
+    private @Nullable Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio;
 
-    public Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio() {
-        return this.goodTotalRatio == null ? Codegen.empty() : this.goodTotalRatio;
+    public Optional<Output<SloRequestBasedSliGoodTotalRatioArgs>> goodTotalRatio() {
+        return Optional.ofNullable(this.goodTotalRatio);
     }
 
-    public SloRequestBasedSliArgs(
-        @Nullable Output<SloRequestBasedSliDistributionCutArgs> distributionCut,
-        @Nullable Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio) {
-        this.distributionCut = distributionCut;
-        this.goodTotalRatio = goodTotalRatio;
-    }
+    private SloRequestBasedSliArgs() {}
 
-    private SloRequestBasedSliArgs() {
-        this.distributionCut = Codegen.empty();
-        this.goodTotalRatio = Codegen.empty();
+    private SloRequestBasedSliArgs(SloRequestBasedSliArgs $) {
+        this.distributionCut = $.distributionCut;
+        this.goodTotalRatio = $.goodTotalRatio;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloRequestBasedSliArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SloRequestBasedSliDistributionCutArgs> distributionCut;
-        private @Nullable Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio;
+        private SloRequestBasedSliArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloRequestBasedSliArgs();
         }
 
         public Builder(SloRequestBasedSliArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionCut = defaults.distributionCut;
-    	      this.goodTotalRatio = defaults.goodTotalRatio;
+            $ = new SloRequestBasedSliArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionCut(@Nullable Output<SloRequestBasedSliDistributionCutArgs> distributionCut) {
-            this.distributionCut = distributionCut;
+            $.distributionCut = distributionCut;
             return this;
         }
-        public Builder distributionCut(@Nullable SloRequestBasedSliDistributionCutArgs distributionCut) {
-            this.distributionCut = Codegen.ofNullable(distributionCut);
-            return this;
+
+        public Builder distributionCut(SloRequestBasedSliDistributionCutArgs distributionCut) {
+            return distributionCut(Output.of(distributionCut));
         }
+
         public Builder goodTotalRatio(@Nullable Output<SloRequestBasedSliGoodTotalRatioArgs> goodTotalRatio) {
-            this.goodTotalRatio = goodTotalRatio;
+            $.goodTotalRatio = goodTotalRatio;
             return this;
         }
-        public Builder goodTotalRatio(@Nullable SloRequestBasedSliGoodTotalRatioArgs goodTotalRatio) {
-            this.goodTotalRatio = Codegen.ofNullable(goodTotalRatio);
-            return this;
-        }        public SloRequestBasedSliArgs build() {
-            return new SloRequestBasedSliArgs(distributionCut, goodTotalRatio);
+
+        public Builder goodTotalRatio(SloRequestBasedSliGoodTotalRatioArgs goodTotalRatio) {
+            return goodTotalRatio(Output.of(goodTotalRatio));
+        }
+
+        public SloRequestBasedSliArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends com.pu
      * 
      */
     @Import(name="managementGroupId", required=true)
-      private final String managementGroupId;
+    private String managementGroupId;
 
     public String managementGroupId() {
         return this.managementGroupId;
@@ -28,55 +28,52 @@ public final class GetManagementGroupNetworkManagerConnectionArgs extends com.pu
      * 
      */
     @Import(name="networkManagerConnectionName", required=true)
-      private final String networkManagerConnectionName;
+    private String networkManagerConnectionName;
 
     public String networkManagerConnectionName() {
         return this.networkManagerConnectionName;
     }
 
-    public GetManagementGroupNetworkManagerConnectionArgs(
-        String managementGroupId,
-        String networkManagerConnectionName) {
-        this.managementGroupId = Objects.requireNonNull(managementGroupId, "expected parameter 'managementGroupId' to be non-null");
-        this.networkManagerConnectionName = Objects.requireNonNull(networkManagerConnectionName, "expected parameter 'networkManagerConnectionName' to be non-null");
-    }
+    private GetManagementGroupNetworkManagerConnectionArgs() {}
 
-    private GetManagementGroupNetworkManagerConnectionArgs() {
-        this.managementGroupId = null;
-        this.networkManagerConnectionName = null;
+    private GetManagementGroupNetworkManagerConnectionArgs(GetManagementGroupNetworkManagerConnectionArgs $) {
+        this.managementGroupId = $.managementGroupId;
+        this.networkManagerConnectionName = $.networkManagerConnectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementGroupNetworkManagerConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managementGroupId;
-        private String networkManagerConnectionName;
+        private GetManagementGroupNetworkManagerConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementGroupNetworkManagerConnectionArgs();
         }
 
         public Builder(GetManagementGroupNetworkManagerConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementGroupId = defaults.managementGroupId;
-    	      this.networkManagerConnectionName = defaults.networkManagerConnectionName;
+            $ = new GetManagementGroupNetworkManagerConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managementGroupId(String managementGroupId) {
-            this.managementGroupId = Objects.requireNonNull(managementGroupId);
+            $.managementGroupId = managementGroupId;
             return this;
         }
+
         public Builder networkManagerConnectionName(String networkManagerConnectionName) {
-            this.networkManagerConnectionName = Objects.requireNonNull(networkManagerConnectionName);
+            $.networkManagerConnectionName = networkManagerConnectionName;
             return this;
-        }        public GetManagementGroupNetworkManagerConnectionArgs build() {
-            return new GetManagementGroupNetworkManagerConnectionArgs(managementGroupId, networkManagerConnectionName);
+        }
+
+        public GetManagementGroupNetworkManagerConnectionArgs build() {
+            $.managementGroupId = Objects.requireNonNull($.managementGroupId, "expected parameter 'managementGroupId' to be non-null");
+            $.networkManagerConnectionName = Objects.requireNonNull($.networkManagerConnectionName, "expected parameter 'networkManagerConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

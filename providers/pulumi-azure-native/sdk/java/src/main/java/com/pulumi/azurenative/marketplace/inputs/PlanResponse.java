@@ -19,10 +19,10 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accessibility")
-      private final @Nullable String accessibility;
+    private @Nullable String accessibility;
 
     public Optional<String> accessibility() {
-        return this.accessibility == null ? Optional.empty() : Optional.ofNullable(this.accessibility);
+        return Optional.ofNullable(this.accessibility);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="altStackReference", required=true)
-      private final String altStackReference;
+    private String altStackReference;
 
     public String altStackReference() {
         return this.altStackReference;
@@ -41,7 +41,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="planDisplayName", required=true)
-      private final String planDisplayName;
+    private String planDisplayName;
 
     public String planDisplayName() {
         return this.planDisplayName;
@@ -52,7 +52,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="planId", required=true)
-      private final String planId;
+    private String planId;
 
     public String planId() {
         return this.planId;
@@ -63,7 +63,7 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skuId", required=true)
-      private final String skuId;
+    private String skuId;
 
     public String skuId() {
         return this.skuId;
@@ -74,91 +74,79 @@ public final class PlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stackType", required=true)
-      private final String stackType;
+    private String stackType;
 
     public String stackType() {
         return this.stackType;
     }
 
-    public PlanResponse(
-        @Nullable String accessibility,
-        String altStackReference,
-        String planDisplayName,
-        String planId,
-        String skuId,
-        String stackType) {
-        this.accessibility = accessibility;
-        this.altStackReference = Objects.requireNonNull(altStackReference, "expected parameter 'altStackReference' to be non-null");
-        this.planDisplayName = Objects.requireNonNull(planDisplayName, "expected parameter 'planDisplayName' to be non-null");
-        this.planId = Objects.requireNonNull(planId, "expected parameter 'planId' to be non-null");
-        this.skuId = Objects.requireNonNull(skuId, "expected parameter 'skuId' to be non-null");
-        this.stackType = Objects.requireNonNull(stackType, "expected parameter 'stackType' to be non-null");
-    }
+    private PlanResponse() {}
 
-    private PlanResponse() {
-        this.accessibility = null;
-        this.altStackReference = null;
-        this.planDisplayName = null;
-        this.planId = null;
-        this.skuId = null;
-        this.stackType = null;
+    private PlanResponse(PlanResponse $) {
+        this.accessibility = $.accessibility;
+        this.altStackReference = $.altStackReference;
+        this.planDisplayName = $.planDisplayName;
+        this.planId = $.planId;
+        this.skuId = $.skuId;
+        this.stackType = $.stackType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessibility;
-        private String altStackReference;
-        private String planDisplayName;
-        private String planId;
-        private String skuId;
-        private String stackType;
+        private PlanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanResponse();
         }
 
         public Builder(PlanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessibility = defaults.accessibility;
-    	      this.altStackReference = defaults.altStackReference;
-    	      this.planDisplayName = defaults.planDisplayName;
-    	      this.planId = defaults.planId;
-    	      this.skuId = defaults.skuId;
-    	      this.stackType = defaults.stackType;
+            $ = new PlanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessibility(@Nullable String accessibility) {
-            this.accessibility = accessibility;
+            $.accessibility = accessibility;
             return this;
         }
+
         public Builder altStackReference(String altStackReference) {
-            this.altStackReference = Objects.requireNonNull(altStackReference);
+            $.altStackReference = altStackReference;
             return this;
         }
+
         public Builder planDisplayName(String planDisplayName) {
-            this.planDisplayName = Objects.requireNonNull(planDisplayName);
+            $.planDisplayName = planDisplayName;
             return this;
         }
+
         public Builder planId(String planId) {
-            this.planId = Objects.requireNonNull(planId);
+            $.planId = planId;
             return this;
         }
+
         public Builder skuId(String skuId) {
-            this.skuId = Objects.requireNonNull(skuId);
+            $.skuId = skuId;
             return this;
         }
+
         public Builder stackType(String stackType) {
-            this.stackType = Objects.requireNonNull(stackType);
+            $.stackType = stackType;
             return this;
-        }        public PlanResponse build() {
-            return new PlanResponse(accessibility, altStackReference, planDisplayName, planId, skuId, stackType);
+        }
+
+        public PlanResponse build() {
+            $.altStackReference = Objects.requireNonNull($.altStackReference, "expected parameter 'altStackReference' to be non-null");
+            $.planDisplayName = Objects.requireNonNull($.planDisplayName, "expected parameter 'planDisplayName' to be non-null");
+            $.planId = Objects.requireNonNull($.planId, "expected parameter 'planId' to be non-null");
+            $.skuId = Objects.requireNonNull($.skuId, "expected parameter 'skuId' to be non-null");
+            $.stackType = Objects.requireNonNull($.stackType, "expected parameter 'stackType' to be non-null");
+            return $;
         }
     }
+
 }

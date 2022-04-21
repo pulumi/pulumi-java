@@ -21,7 +21,7 @@ public final class ReportConfigGroupingResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class ReportConfigGroupingResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ReportConfigGroupingResponse(
-        String name,
-        String type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ReportConfigGroupingResponse() {}
 
-    private ReportConfigGroupingResponse() {
-        this.name = null;
-        this.type = null;
+    private ReportConfigGroupingResponse(ReportConfigGroupingResponse $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportConfigGroupingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String type;
+        private ReportConfigGroupingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportConfigGroupingResponse();
         }
 
         public Builder(ReportConfigGroupingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ReportConfigGroupingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ReportConfigGroupingResponse build() {
-            return new ReportConfigGroupingResponse(name, type);
+        }
+
+        public ReportConfigGroupingResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

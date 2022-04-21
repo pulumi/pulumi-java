@@ -6,12 +6,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.HTTPHeaderArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpHeaders")
-      private final @Nullable Output<List<HTTPHeaderArgs>> httpHeaders;
+    private @Nullable Output<List<HTTPHeaderArgs>> httpHeaders;
 
-    public Output<List<HTTPHeaderArgs>> httpHeaders() {
-        return this.httpHeaders == null ? Codegen.empty() : this.httpHeaders;
+    public Optional<Output<List<HTTPHeaderArgs>>> httpHeaders() {
+        return Optional.ofNullable(this.httpHeaders);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Either<Integer,String>> port;
+    private Output<Either<Integer,String>> port;
 
     public Output<Either<Integer,String>> port() {
         return this.port;
@@ -76,105 +76,93 @@ public final class HTTPGetActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheme")
-      private final @Nullable Output<String> scheme;
+    private @Nullable Output<String> scheme;
 
-    public Output<String> scheme() {
-        return this.scheme == null ? Codegen.empty() : this.scheme;
+    public Optional<Output<String>> scheme() {
+        return Optional.ofNullable(this.scheme);
     }
 
-    public HTTPGetActionArgs(
-        @Nullable Output<String> host,
-        @Nullable Output<List<HTTPHeaderArgs>> httpHeaders,
-        @Nullable Output<String> path,
-        Output<Either<Integer,String>> port,
-        @Nullable Output<String> scheme) {
-        this.host = host;
-        this.httpHeaders = httpHeaders;
-        this.path = path;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.scheme = scheme;
-    }
+    private HTTPGetActionArgs() {}
 
-    private HTTPGetActionArgs() {
-        this.host = Codegen.empty();
-        this.httpHeaders = Codegen.empty();
-        this.path = Codegen.empty();
-        this.port = Codegen.empty();
-        this.scheme = Codegen.empty();
+    private HTTPGetActionArgs(HTTPGetActionArgs $) {
+        this.host = $.host;
+        this.httpHeaders = $.httpHeaders;
+        this.path = $.path;
+        this.port = $.port;
+        this.scheme = $.scheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HTTPGetActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> host;
-        private @Nullable Output<List<HTTPHeaderArgs>> httpHeaders;
-        private @Nullable Output<String> path;
-        private Output<Either<Integer,String>> port;
-        private @Nullable Output<String> scheme;
+        private HTTPGetActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HTTPGetActionArgs();
         }
 
         public Builder(HTTPGetActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.httpHeaders = defaults.httpHeaders;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.scheme = defaults.scheme;
+            $ = new HTTPGetActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder httpHeaders(@Nullable Output<List<HTTPHeaderArgs>> httpHeaders) {
-            this.httpHeaders = httpHeaders;
+            $.httpHeaders = httpHeaders;
             return this;
         }
-        public Builder httpHeaders(@Nullable List<HTTPHeaderArgs> httpHeaders) {
-            this.httpHeaders = Codegen.ofNullable(httpHeaders);
-            return this;
+
+        public Builder httpHeaders(List<HTTPHeaderArgs> httpHeaders) {
+            return httpHeaders(Output.of(httpHeaders));
         }
+
         public Builder httpHeaders(HTTPHeaderArgs... httpHeaders) {
             return httpHeaders(List.of(httpHeaders));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder port(Output<Either<Integer,String>> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Either<Integer,String> port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder scheme(@Nullable Output<String> scheme) {
-            this.scheme = scheme;
+            $.scheme = scheme;
             return this;
         }
-        public Builder scheme(@Nullable String scheme) {
-            this.scheme = Codegen.ofNullable(scheme);
-            return this;
-        }        public HTTPGetActionArgs build() {
-            return new HTTPGetActionArgs(host, httpHeaders, path, port, scheme);
+
+        public Builder scheme(String scheme) {
+            return scheme(Output.of(scheme));
+        }
+
+        public HTTPGetActionArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

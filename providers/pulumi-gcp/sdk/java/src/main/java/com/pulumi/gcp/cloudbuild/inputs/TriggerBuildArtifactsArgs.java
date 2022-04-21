@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TriggerBuildArtifactsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="images")
-      private final @Nullable Output<List<String>> images;
+    private @Nullable Output<List<String>> images;
 
-    public Output<List<String>> images() {
-        return this.images == null ? Codegen.empty() : this.images;
+    public Optional<Output<List<String>>> images() {
+        return Optional.ofNullable(this.images);
     }
 
     /**
@@ -41,66 +41,62 @@ public final class TriggerBuildArtifactsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="objects")
-      private final @Nullable Output<TriggerBuildArtifactsObjectsArgs> objects;
+    private @Nullable Output<TriggerBuildArtifactsObjectsArgs> objects;
 
-    public Output<TriggerBuildArtifactsObjectsArgs> objects() {
-        return this.objects == null ? Codegen.empty() : this.objects;
+    public Optional<Output<TriggerBuildArtifactsObjectsArgs>> objects() {
+        return Optional.ofNullable(this.objects);
     }
 
-    public TriggerBuildArtifactsArgs(
-        @Nullable Output<List<String>> images,
-        @Nullable Output<TriggerBuildArtifactsObjectsArgs> objects) {
-        this.images = images;
-        this.objects = objects;
-    }
+    private TriggerBuildArtifactsArgs() {}
 
-    private TriggerBuildArtifactsArgs() {
-        this.images = Codegen.empty();
-        this.objects = Codegen.empty();
+    private TriggerBuildArtifactsArgs(TriggerBuildArtifactsArgs $) {
+        this.images = $.images;
+        this.objects = $.objects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildArtifactsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> images;
-        private @Nullable Output<TriggerBuildArtifactsObjectsArgs> objects;
+        private TriggerBuildArtifactsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildArtifactsArgs();
         }
 
         public Builder(TriggerBuildArtifactsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.images = defaults.images;
-    	      this.objects = defaults.objects;
+            $ = new TriggerBuildArtifactsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder images(@Nullable Output<List<String>> images) {
-            this.images = images;
+            $.images = images;
             return this;
         }
-        public Builder images(@Nullable List<String> images) {
-            this.images = Codegen.ofNullable(images);
-            return this;
+
+        public Builder images(List<String> images) {
+            return images(Output.of(images));
         }
+
         public Builder images(String... images) {
             return images(List.of(images));
         }
+
         public Builder objects(@Nullable Output<TriggerBuildArtifactsObjectsArgs> objects) {
-            this.objects = objects;
+            $.objects = objects;
             return this;
         }
-        public Builder objects(@Nullable TriggerBuildArtifactsObjectsArgs objects) {
-            this.objects = Codegen.ofNullable(objects);
-            return this;
-        }        public TriggerBuildArtifactsArgs build() {
-            return new TriggerBuildArtifactsArgs(images, objects);
+
+        public Builder objects(TriggerBuildArtifactsObjectsArgs objects) {
+            return objects(Output.of(objects));
+        }
+
+        public TriggerBuildArtifactsArgs build() {
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="networkInterfaceName", required=true)
-      private final String networkInterfaceName;
+    private String networkInterfaceName;
 
     public String networkInterfaceName() {
         return this.networkInterfaceName;
@@ -41,64 +41,58 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNetworkInterfaceArgs(
-        @Nullable String expand,
-        String networkInterfaceName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName, "expected parameter 'networkInterfaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNetworkInterfaceArgs() {}
 
-    private GetNetworkInterfaceArgs() {
-        this.expand = null;
-        this.networkInterfaceName = null;
-        this.resourceGroupName = null;
+    private GetNetworkInterfaceArgs(GetNetworkInterfaceArgs $) {
+        this.expand = $.expand;
+        this.networkInterfaceName = $.networkInterfaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String networkInterfaceName;
-        private String resourceGroupName;
+        private GetNetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkInterfaceArgs();
         }
 
         public Builder(GetNetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.networkInterfaceName = defaults.networkInterfaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder networkInterfaceName(String networkInterfaceName) {
-            this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName);
+            $.networkInterfaceName = networkInterfaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNetworkInterfaceArgs build() {
-            return new GetNetworkInterfaceArgs(expand, networkInterfaceName, resourceGroupName);
+        }
+
+        public GetNetworkInterfaceArgs build() {
+            $.networkInterfaceName = Objects.requireNonNull($.networkInterfaceName, "expected parameter 'networkInterfaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

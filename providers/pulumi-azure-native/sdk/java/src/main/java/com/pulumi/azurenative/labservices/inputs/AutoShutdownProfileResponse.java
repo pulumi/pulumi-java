@@ -24,10 +24,10 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="disconnectDelay")
-      private final @Nullable String disconnectDelay;
+    private @Nullable String disconnectDelay;
 
     public Optional<String> disconnectDelay() {
-        return this.disconnectDelay == null ? Optional.empty() : Optional.ofNullable(this.disconnectDelay);
+        return Optional.ofNullable(this.disconnectDelay);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="idleDelay")
-      private final @Nullable String idleDelay;
+    private @Nullable String idleDelay;
 
     public Optional<String> idleDelay() {
-        return this.idleDelay == null ? Optional.empty() : Optional.ofNullable(this.idleDelay);
+        return Optional.ofNullable(this.idleDelay);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="noConnectDelay")
-      private final @Nullable String noConnectDelay;
+    private @Nullable String noConnectDelay;
 
     public Optional<String> noConnectDelay() {
-        return this.noConnectDelay == null ? Optional.empty() : Optional.ofNullable(this.noConnectDelay);
+        return Optional.ofNullable(this.noConnectDelay);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="shutdownOnDisconnect")
-      private final @Nullable String shutdownOnDisconnect;
+    private @Nullable String shutdownOnDisconnect;
 
     public Optional<String> shutdownOnDisconnect() {
-        return this.shutdownOnDisconnect == null ? Optional.empty() : Optional.ofNullable(this.shutdownOnDisconnect);
+        return Optional.ofNullable(this.shutdownOnDisconnect);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="shutdownOnIdle")
-      private final @Nullable String shutdownOnIdle;
+    private @Nullable String shutdownOnIdle;
 
     public Optional<String> shutdownOnIdle() {
-        return this.shutdownOnIdle == null ? Optional.empty() : Optional.ofNullable(this.shutdownOnIdle);
+        return Optional.ofNullable(this.shutdownOnIdle);
     }
 
     /**
@@ -79,91 +79,77 @@ public final class AutoShutdownProfileResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="shutdownWhenNotConnected")
-      private final @Nullable String shutdownWhenNotConnected;
+    private @Nullable String shutdownWhenNotConnected;
 
     public Optional<String> shutdownWhenNotConnected() {
-        return this.shutdownWhenNotConnected == null ? Optional.empty() : Optional.ofNullable(this.shutdownWhenNotConnected);
+        return Optional.ofNullable(this.shutdownWhenNotConnected);
     }
 
-    public AutoShutdownProfileResponse(
-        @Nullable String disconnectDelay,
-        @Nullable String idleDelay,
-        @Nullable String noConnectDelay,
-        @Nullable String shutdownOnDisconnect,
-        @Nullable String shutdownOnIdle,
-        @Nullable String shutdownWhenNotConnected) {
-        this.disconnectDelay = disconnectDelay;
-        this.idleDelay = idleDelay;
-        this.noConnectDelay = noConnectDelay;
-        this.shutdownOnDisconnect = Codegen.stringProp("shutdownOnDisconnect").arg(shutdownOnDisconnect).def("Disabled").getNullable();
-        this.shutdownOnIdle = Codegen.stringProp("shutdownOnIdle").arg(shutdownOnIdle).def("None").getNullable();
-        this.shutdownWhenNotConnected = Codegen.stringProp("shutdownWhenNotConnected").arg(shutdownWhenNotConnected).def("Disabled").getNullable();
-    }
+    private AutoShutdownProfileResponse() {}
 
-    private AutoShutdownProfileResponse() {
-        this.disconnectDelay = null;
-        this.idleDelay = null;
-        this.noConnectDelay = null;
-        this.shutdownOnDisconnect = null;
-        this.shutdownOnIdle = null;
-        this.shutdownWhenNotConnected = null;
+    private AutoShutdownProfileResponse(AutoShutdownProfileResponse $) {
+        this.disconnectDelay = $.disconnectDelay;
+        this.idleDelay = $.idleDelay;
+        this.noConnectDelay = $.noConnectDelay;
+        this.shutdownOnDisconnect = $.shutdownOnDisconnect;
+        this.shutdownOnIdle = $.shutdownOnIdle;
+        this.shutdownWhenNotConnected = $.shutdownWhenNotConnected;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoShutdownProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String disconnectDelay;
-        private @Nullable String idleDelay;
-        private @Nullable String noConnectDelay;
-        private @Nullable String shutdownOnDisconnect;
-        private @Nullable String shutdownOnIdle;
-        private @Nullable String shutdownWhenNotConnected;
+        private AutoShutdownProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoShutdownProfileResponse();
         }
 
         public Builder(AutoShutdownProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disconnectDelay = defaults.disconnectDelay;
-    	      this.idleDelay = defaults.idleDelay;
-    	      this.noConnectDelay = defaults.noConnectDelay;
-    	      this.shutdownOnDisconnect = defaults.shutdownOnDisconnect;
-    	      this.shutdownOnIdle = defaults.shutdownOnIdle;
-    	      this.shutdownWhenNotConnected = defaults.shutdownWhenNotConnected;
+            $ = new AutoShutdownProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disconnectDelay(@Nullable String disconnectDelay) {
-            this.disconnectDelay = disconnectDelay;
+            $.disconnectDelay = disconnectDelay;
             return this;
         }
+
         public Builder idleDelay(@Nullable String idleDelay) {
-            this.idleDelay = idleDelay;
+            $.idleDelay = idleDelay;
             return this;
         }
+
         public Builder noConnectDelay(@Nullable String noConnectDelay) {
-            this.noConnectDelay = noConnectDelay;
+            $.noConnectDelay = noConnectDelay;
             return this;
         }
+
         public Builder shutdownOnDisconnect(@Nullable String shutdownOnDisconnect) {
-            this.shutdownOnDisconnect = shutdownOnDisconnect;
+            $.shutdownOnDisconnect = shutdownOnDisconnect;
             return this;
         }
+
         public Builder shutdownOnIdle(@Nullable String shutdownOnIdle) {
-            this.shutdownOnIdle = shutdownOnIdle;
+            $.shutdownOnIdle = shutdownOnIdle;
             return this;
         }
+
         public Builder shutdownWhenNotConnected(@Nullable String shutdownWhenNotConnected) {
-            this.shutdownWhenNotConnected = shutdownWhenNotConnected;
+            $.shutdownWhenNotConnected = shutdownWhenNotConnected;
             return this;
-        }        public AutoShutdownProfileResponse build() {
-            return new AutoShutdownProfileResponse(disconnectDelay, idleDelay, noConnectDelay, shutdownOnDisconnect, shutdownOnIdle, shutdownWhenNotConnected);
+        }
+
+        public AutoShutdownProfileResponse build() {
+            $.shutdownOnDisconnect = Codegen.stringProp("shutdownOnDisconnect").arg($.shutdownOnDisconnect).def("Disabled").getNullable();
+            $.shutdownOnIdle = Codegen.stringProp("shutdownOnIdle").arg($.shutdownOnIdle).def("None").getNullable();
+            $.shutdownWhenNotConnected = Codegen.stringProp("shutdownWhenNotConnected").arg($.shutdownWhenNotConnected).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

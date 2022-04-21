@@ -5,9 +5,9 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VersionSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mshField")
-      private final @Nullable Output<String> mshField;
+    private @Nullable Output<String> mshField;
 
-    public Output<String> mshField() {
-        return this.mshField == null ? Codegen.empty() : this.mshField;
+    public Optional<Output<String>> mshField() {
+        return Optional.ofNullable(this.mshField);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class VersionSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public VersionSourceArgs(
-        @Nullable Output<String> mshField,
-        @Nullable Output<String> value) {
-        this.mshField = mshField;
-        this.value = value;
-    }
+    private VersionSourceArgs() {}
 
-    private VersionSourceArgs() {
-        this.mshField = Codegen.empty();
-        this.value = Codegen.empty();
+    private VersionSourceArgs(VersionSourceArgs $) {
+        this.mshField = $.mshField;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VersionSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mshField;
-        private @Nullable Output<String> value;
+        private VersionSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VersionSourceArgs();
         }
 
         public Builder(VersionSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mshField = defaults.mshField;
-    	      this.value = defaults.value;
+            $ = new VersionSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mshField(@Nullable Output<String> mshField) {
-            this.mshField = mshField;
+            $.mshField = mshField;
             return this;
         }
-        public Builder mshField(@Nullable String mshField) {
-            this.mshField = Codegen.ofNullable(mshField);
-            return this;
+
+        public Builder mshField(String mshField) {
+            return mshField(Output.of(mshField));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public VersionSourceArgs build() {
-            return new VersionSourceArgs(mshField, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public VersionSourceArgs build() {
+            return $;
         }
     }
+
 }

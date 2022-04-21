@@ -22,48 +22,49 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="consumers", required=true)
-      private final List<ConsumerResponse> consumers;
+    private List<ConsumerResponse> consumers;
 
     public List<ConsumerResponse> consumers() {
         return this.consumers;
     }
 
-    public NetworkConfigResponse(List<ConsumerResponse> consumers) {
-        this.consumers = Objects.requireNonNull(consumers, "expected parameter 'consumers' to be non-null");
-    }
+    private NetworkConfigResponse() {}
 
-    private NetworkConfigResponse() {
-        this.consumers = List.of();
+    private NetworkConfigResponse(NetworkConfigResponse $) {
+        this.consumers = $.consumers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ConsumerResponse> consumers;
+        private NetworkConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigResponse();
         }
 
         public Builder(NetworkConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumers = defaults.consumers;
+            $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder consumers(List<ConsumerResponse> consumers) {
-            this.consumers = Objects.requireNonNull(consumers);
+            $.consumers = consumers;
             return this;
         }
+
         public Builder consumers(ConsumerResponse... consumers) {
             return consumers(List.of(consumers));
-        }        public NetworkConfigResponse build() {
-            return new NetworkConfigResponse(consumers);
+        }
+
+        public NetworkConfigResponse build() {
+            $.consumers = Objects.requireNonNull($.consumers, "expected parameter 'consumers' to be non-null");
+            return $;
         }
     }
+
 }

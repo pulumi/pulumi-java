@@ -15,78 +15,72 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSubnetworkArgs Empty = new GetSubnetworkArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
     }
 
-    public GetSubnetworkArgs(
-        @Nullable String project,
-        String region,
-        String subnetwork) {
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-    }
+    private GetSubnetworkArgs() {}
 
-    private GetSubnetworkArgs() {
-        this.project = null;
-        this.region = null;
-        this.subnetwork = null;
+    private GetSubnetworkArgs(GetSubnetworkArgs $) {
+        this.project = $.project;
+        this.region = $.region;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubnetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String region;
-        private String subnetwork;
+        private GetSubnetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubnetworkArgs();
         }
 
         public Builder(GetSubnetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new GetSubnetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
-        }        public GetSubnetworkArgs build() {
-            return new GetSubnetworkArgs(project, region, subnetwork);
+        }
+
+        public GetSubnetworkArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            return $;
         }
     }
+
 }

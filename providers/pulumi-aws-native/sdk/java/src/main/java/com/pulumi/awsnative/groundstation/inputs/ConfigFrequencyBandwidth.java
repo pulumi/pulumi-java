@@ -16,62 +16,57 @@ public final class ConfigFrequencyBandwidth extends com.pulumi.resources.InvokeA
     public static final ConfigFrequencyBandwidth Empty = new ConfigFrequencyBandwidth();
 
     @Import(name="units")
-      private final @Nullable ConfigBandwidthUnits units;
+    private @Nullable ConfigBandwidthUnits units;
 
     public Optional<ConfigBandwidthUnits> units() {
-        return this.units == null ? Optional.empty() : Optional.ofNullable(this.units);
+        return Optional.ofNullable(this.units);
     }
 
     @Import(name="value")
-      private final @Nullable Double value;
+    private @Nullable Double value;
 
     public Optional<Double> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ConfigFrequencyBandwidth(
-        @Nullable ConfigBandwidthUnits units,
-        @Nullable Double value) {
-        this.units = units;
-        this.value = value;
-    }
+    private ConfigFrequencyBandwidth() {}
 
-    private ConfigFrequencyBandwidth() {
-        this.units = null;
-        this.value = null;
+    private ConfigFrequencyBandwidth(ConfigFrequencyBandwidth $) {
+        this.units = $.units;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigFrequencyBandwidth defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigBandwidthUnits units;
-        private @Nullable Double value;
+        private ConfigFrequencyBandwidth $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigFrequencyBandwidth();
         }
 
         public Builder(ConfigFrequencyBandwidth defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.units = defaults.units;
-    	      this.value = defaults.value;
+            $ = new ConfigFrequencyBandwidth(Objects.requireNonNull(defaults));
         }
 
         public Builder units(@Nullable ConfigBandwidthUnits units) {
-            this.units = units;
+            $.units = units;
             return this;
         }
+
         public Builder value(@Nullable Double value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ConfigFrequencyBandwidth build() {
-            return new ConfigFrequencyBandwidth(units, value);
+        }
+
+        public ConfigFrequencyBandwidth build() {
+            return $;
         }
     }
+
 }

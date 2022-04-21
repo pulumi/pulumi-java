@@ -5,10 +5,10 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ignoreMissingVnetServiceEndpoint")
-      private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
+    private @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
-    public Output<Boolean> ignoreMissingVnetServiceEndpoint() {
-        return this.ignoreMissingVnetServiceEndpoint == null ? Codegen.empty() : this.ignoreMissingVnetServiceEndpoint;
+    public Optional<Output<Boolean>> ignoreMissingVnetServiceEndpoint() {
+        return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
@@ -54,10 +54,10 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualNetworkRuleName")
-      private final @Nullable Output<String> virtualNetworkRuleName;
+    private @Nullable Output<String> virtualNetworkRuleName;
 
-    public Output<String> virtualNetworkRuleName() {
-        return this.virtualNetworkRuleName == null ? Codegen.empty() : this.virtualNetworkRuleName;
+    public Optional<Output<String>> virtualNetworkRuleName() {
+        return Optional.ofNullable(this.virtualNetworkRuleName);
     }
 
     /**
@@ -65,102 +65,91 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualNetworkSubnetId", required=true)
-      private final Output<String> virtualNetworkSubnetId;
+    private Output<String> virtualNetworkSubnetId;
 
     public Output<String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 
-    public VirtualNetworkRuleArgs(
-        @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint,
-        Output<String> resourceGroupName,
-        Output<String> serverName,
-        @Nullable Output<String> virtualNetworkRuleName,
-        Output<String> virtualNetworkSubnetId) {
-        this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.virtualNetworkRuleName = virtualNetworkRuleName;
-        this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId, "expected parameter 'virtualNetworkSubnetId' to be non-null");
-    }
+    private VirtualNetworkRuleArgs() {}
 
-    private VirtualNetworkRuleArgs() {
-        this.ignoreMissingVnetServiceEndpoint = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.virtualNetworkRuleName = Codegen.empty();
-        this.virtualNetworkSubnetId = Codegen.empty();
+    private VirtualNetworkRuleArgs(VirtualNetworkRuleArgs $) {
+        this.ignoreMissingVnetServiceEndpoint = $.ignoreMissingVnetServiceEndpoint;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.virtualNetworkRuleName = $.virtualNetworkRuleName;
+        this.virtualNetworkSubnetId = $.virtualNetworkSubnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
-        private @Nullable Output<String> virtualNetworkRuleName;
-        private Output<String> virtualNetworkSubnetId;
+        private VirtualNetworkRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkRuleArgs();
         }
 
         public Builder(VirtualNetworkRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreMissingVnetServiceEndpoint = defaults.ignoreMissingVnetServiceEndpoint;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.virtualNetworkRuleName = defaults.virtualNetworkRuleName;
-    	      this.virtualNetworkSubnetId = defaults.virtualNetworkSubnetId;
+            $ = new VirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
+            $.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;
         }
-        public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = Codegen.ofNullable(ignoreMissingVnetServiceEndpoint);
-            return this;
+
+        public Builder ignoreMissingVnetServiceEndpoint(Boolean ignoreMissingVnetServiceEndpoint) {
+            return ignoreMissingVnetServiceEndpoint(Output.of(ignoreMissingVnetServiceEndpoint));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
+            return serverName(Output.of(serverName));
         }
+
         public Builder virtualNetworkRuleName(@Nullable Output<String> virtualNetworkRuleName) {
-            this.virtualNetworkRuleName = virtualNetworkRuleName;
+            $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
-        public Builder virtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
-            this.virtualNetworkRuleName = Codegen.ofNullable(virtualNetworkRuleName);
-            return this;
+
+        public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
+            return virtualNetworkRuleName(Output.of(virtualNetworkRuleName));
         }
+
         public Builder virtualNetworkSubnetId(Output<String> virtualNetworkSubnetId) {
-            this.virtualNetworkSubnetId = Objects.requireNonNull(virtualNetworkSubnetId);
+            $.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
+
         public Builder virtualNetworkSubnetId(String virtualNetworkSubnetId) {
-            this.virtualNetworkSubnetId = Output.of(Objects.requireNonNull(virtualNetworkSubnetId));
-            return this;
-        }        public VirtualNetworkRuleArgs build() {
-            return new VirtualNetworkRuleArgs(ignoreMissingVnetServiceEndpoint, resourceGroupName, serverName, virtualNetworkRuleName, virtualNetworkSubnetId);
+            return virtualNetworkSubnetId(Output.of(virtualNetworkSubnetId));
+        }
+
+        public VirtualNetworkRuleArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.virtualNetworkSubnetId = Objects.requireNonNull($.virtualNetworkSubnetId, "expected parameter 'virtualNetworkSubnetId' to be non-null");
+            return $;
         }
     }
+
 }

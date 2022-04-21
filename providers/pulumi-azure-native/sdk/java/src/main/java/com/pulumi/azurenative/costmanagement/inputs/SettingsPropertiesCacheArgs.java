@@ -5,9 +5,9 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="channel", required=true)
-      private final Output<String> channel;
+    private Output<String> channel;
 
     public Output<String> channel() {
         return this.channel;
@@ -31,7 +31,7 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -42,7 +42,7 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -53,10 +53,10 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -75,115 +75,102 @@ public final class SettingsPropertiesCacheArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subchannel", required=true)
-      private final Output<String> subchannel;
+    private Output<String> subchannel;
 
     public Output<String> subchannel() {
         return this.subchannel;
     }
 
-    public SettingsPropertiesCacheArgs(
-        Output<String> channel,
-        Output<String> id,
-        Output<String> name,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> status,
-        Output<String> subchannel) {
-        this.channel = Objects.requireNonNull(channel, "expected parameter 'channel' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parent = parent;
-        this.status = status;
-        this.subchannel = Objects.requireNonNull(subchannel, "expected parameter 'subchannel' to be non-null");
-    }
+    private SettingsPropertiesCacheArgs() {}
 
-    private SettingsPropertiesCacheArgs() {
-        this.channel = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.status = Codegen.empty();
-        this.subchannel = Codegen.empty();
+    private SettingsPropertiesCacheArgs(SettingsPropertiesCacheArgs $) {
+        this.channel = $.channel;
+        this.id = $.id;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.status = $.status;
+        this.subchannel = $.subchannel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SettingsPropertiesCacheArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> channel;
-        private Output<String> id;
-        private Output<String> name;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> status;
-        private Output<String> subchannel;
+        private SettingsPropertiesCacheArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SettingsPropertiesCacheArgs();
         }
 
         public Builder(SettingsPropertiesCacheArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channel = defaults.channel;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.status = defaults.status;
-    	      this.subchannel = defaults.subchannel;
+            $ = new SettingsPropertiesCacheArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channel(Output<String> channel) {
-            this.channel = Objects.requireNonNull(channel);
+            $.channel = channel;
             return this;
         }
+
         public Builder channel(String channel) {
-            this.channel = Output.of(Objects.requireNonNull(channel));
-            return this;
+            return channel(Output.of(channel));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder subchannel(Output<String> subchannel) {
-            this.subchannel = Objects.requireNonNull(subchannel);
+            $.subchannel = subchannel;
             return this;
         }
+
         public Builder subchannel(String subchannel) {
-            this.subchannel = Output.of(Objects.requireNonNull(subchannel));
-            return this;
-        }        public SettingsPropertiesCacheArgs build() {
-            return new SettingsPropertiesCacheArgs(channel, id, name, parent, status, subchannel);
+            return subchannel(Output.of(subchannel));
+        }
+
+        public SettingsPropertiesCacheArgs build() {
+            $.channel = Objects.requireNonNull($.channel, "expected parameter 'channel' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.subchannel = Objects.requireNonNull($.subchannel, "expected parameter 'subchannel' to be non-null");
+            return $;
         }
     }
+
 }

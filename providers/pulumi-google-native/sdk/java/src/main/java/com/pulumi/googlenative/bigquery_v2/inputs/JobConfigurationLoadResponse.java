@@ -29,7 +29,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="allowJaggedRows", required=true)
-      private final Boolean allowJaggedRows;
+    private Boolean allowJaggedRows;
 
     public Boolean allowJaggedRows() {
         return this.allowJaggedRows;
@@ -40,7 +40,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="allowQuotedNewlines", required=true)
-      private final Boolean allowQuotedNewlines;
+    private Boolean allowQuotedNewlines;
 
     public Boolean allowQuotedNewlines() {
         return this.allowQuotedNewlines;
@@ -51,7 +51,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="autodetect", required=true)
-      private final Boolean autodetect;
+    private Boolean autodetect;
 
     public Boolean autodetect() {
         return this.autodetect;
@@ -62,7 +62,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clustering", required=true)
-      private final ClusteringResponse clustering;
+    private ClusteringResponse clustering;
 
     public ClusteringResponse clustering() {
         return this.clustering;
@@ -73,7 +73,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="createDisposition", required=true)
-      private final String createDisposition;
+    private String createDisposition;
 
     public String createDisposition() {
         return this.createDisposition;
@@ -84,7 +84,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="decimalTargetTypes", required=true)
-      private final List<String> decimalTargetTypes;
+    private List<String> decimalTargetTypes;
 
     public List<String> decimalTargetTypes() {
         return this.decimalTargetTypes;
@@ -95,7 +95,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="destinationEncryptionConfiguration", required=true)
-      private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
+    private EncryptionConfigurationResponse destinationEncryptionConfiguration;
 
     public EncryptionConfigurationResponse destinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration;
@@ -106,7 +106,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="destinationTable", required=true)
-      private final TableReferenceResponse destinationTable;
+    private TableReferenceResponse destinationTable;
 
     public TableReferenceResponse destinationTable() {
         return this.destinationTable;
@@ -117,7 +117,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="destinationTableProperties", required=true)
-      private final DestinationTablePropertiesResponse destinationTableProperties;
+    private DestinationTablePropertiesResponse destinationTableProperties;
 
     public DestinationTablePropertiesResponse destinationTableProperties() {
         return this.destinationTableProperties;
@@ -128,7 +128,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="encoding", required=true)
-      private final String encoding;
+    private String encoding;
 
     public String encoding() {
         return this.encoding;
@@ -139,7 +139,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="fieldDelimiter", required=true)
-      private final String fieldDelimiter;
+    private String fieldDelimiter;
 
     public String fieldDelimiter() {
         return this.fieldDelimiter;
@@ -150,7 +150,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="hivePartitioningOptions", required=true)
-      private final HivePartitioningOptionsResponse hivePartitioningOptions;
+    private HivePartitioningOptionsResponse hivePartitioningOptions;
 
     public HivePartitioningOptionsResponse hivePartitioningOptions() {
         return this.hivePartitioningOptions;
@@ -161,7 +161,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="ignoreUnknownValues", required=true)
-      private final Boolean ignoreUnknownValues;
+    private Boolean ignoreUnknownValues;
 
     public Boolean ignoreUnknownValues() {
         return this.ignoreUnknownValues;
@@ -172,7 +172,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="jsonExtension", required=true)
-      private final String jsonExtension;
+    private String jsonExtension;
 
     public String jsonExtension() {
         return this.jsonExtension;
@@ -183,7 +183,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="maxBadRecords", required=true)
-      private final Integer maxBadRecords;
+    private Integer maxBadRecords;
 
     public Integer maxBadRecords() {
         return this.maxBadRecords;
@@ -194,7 +194,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="nullMarker", required=true)
-      private final String nullMarker;
+    private String nullMarker;
 
     public String nullMarker() {
         return this.nullMarker;
@@ -205,7 +205,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parquetOptions", required=true)
-      private final ParquetOptionsResponse parquetOptions;
+    private ParquetOptionsResponse parquetOptions;
 
     public ParquetOptionsResponse parquetOptions() {
         return this.parquetOptions;
@@ -216,7 +216,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="projectionFields", required=true)
-      private final List<String> projectionFields;
+    private List<String> projectionFields;
 
     public List<String> projectionFields() {
         return this.projectionFields;
@@ -227,7 +227,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="quote", required=true)
-      private final String quote;
+    private String quote;
 
     public String quote() {
         return this.quote;
@@ -238,7 +238,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="rangePartitioning", required=true)
-      private final RangePartitioningResponse rangePartitioning;
+    private RangePartitioningResponse rangePartitioning;
 
     public RangePartitioningResponse rangePartitioning() {
         return this.rangePartitioning;
@@ -249,7 +249,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="schema", required=true)
-      private final TableSchemaResponse schema;
+    private TableSchemaResponse schema;
 
     public TableSchemaResponse schema() {
         return this.schema;
@@ -260,7 +260,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="schemaUpdateOptions", required=true)
-      private final List<String> schemaUpdateOptions;
+    private List<String> schemaUpdateOptions;
 
     public List<String> schemaUpdateOptions() {
         return this.schemaUpdateOptions;
@@ -271,7 +271,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="skipLeadingRows", required=true)
-      private final Integer skipLeadingRows;
+    private Integer skipLeadingRows;
 
     public Integer skipLeadingRows() {
         return this.skipLeadingRows;
@@ -282,7 +282,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sourceFormat", required=true)
-      private final String sourceFormat;
+    private String sourceFormat;
 
     public String sourceFormat() {
         return this.sourceFormat;
@@ -293,7 +293,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sourceUris", required=true)
-      private final List<String> sourceUris;
+    private List<String> sourceUris;
 
     public List<String> sourceUris() {
         return this.sourceUris;
@@ -304,7 +304,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="timePartitioning", required=true)
-      private final TimePartitioningResponse timePartitioning;
+    private TimePartitioningResponse timePartitioning;
 
     public TimePartitioningResponse timePartitioning() {
         return this.timePartitioning;
@@ -315,7 +315,7 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="useAvroLogicalTypes", required=true)
-      private final Boolean useAvroLogicalTypes;
+    private Boolean useAvroLogicalTypes;
 
     public Boolean useAvroLogicalTypes() {
         return this.useAvroLogicalTypes;
@@ -326,301 +326,250 @@ public final class JobConfigurationLoadResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="writeDisposition", required=true)
-      private final String writeDisposition;
+    private String writeDisposition;
 
     public String writeDisposition() {
         return this.writeDisposition;
     }
 
-    public JobConfigurationLoadResponse(
-        Boolean allowJaggedRows,
-        Boolean allowQuotedNewlines,
-        Boolean autodetect,
-        ClusteringResponse clustering,
-        String createDisposition,
-        List<String> decimalTargetTypes,
-        EncryptionConfigurationResponse destinationEncryptionConfiguration,
-        TableReferenceResponse destinationTable,
-        DestinationTablePropertiesResponse destinationTableProperties,
-        String encoding,
-        String fieldDelimiter,
-        HivePartitioningOptionsResponse hivePartitioningOptions,
-        Boolean ignoreUnknownValues,
-        String jsonExtension,
-        Integer maxBadRecords,
-        String nullMarker,
-        ParquetOptionsResponse parquetOptions,
-        List<String> projectionFields,
-        String quote,
-        RangePartitioningResponse rangePartitioning,
-        TableSchemaResponse schema,
-        List<String> schemaUpdateOptions,
-        Integer skipLeadingRows,
-        String sourceFormat,
-        List<String> sourceUris,
-        TimePartitioningResponse timePartitioning,
-        Boolean useAvroLogicalTypes,
-        String writeDisposition) {
-        this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows, "expected parameter 'allowJaggedRows' to be non-null");
-        this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines, "expected parameter 'allowQuotedNewlines' to be non-null");
-        this.autodetect = Objects.requireNonNull(autodetect, "expected parameter 'autodetect' to be non-null");
-        this.clustering = Objects.requireNonNull(clustering, "expected parameter 'clustering' to be non-null");
-        this.createDisposition = Objects.requireNonNull(createDisposition, "expected parameter 'createDisposition' to be non-null");
-        this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes, "expected parameter 'decimalTargetTypes' to be non-null");
-        this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration, "expected parameter 'destinationEncryptionConfiguration' to be non-null");
-        this.destinationTable = Objects.requireNonNull(destinationTable, "expected parameter 'destinationTable' to be non-null");
-        this.destinationTableProperties = Objects.requireNonNull(destinationTableProperties, "expected parameter 'destinationTableProperties' to be non-null");
-        this.encoding = Objects.requireNonNull(encoding, "expected parameter 'encoding' to be non-null");
-        this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter, "expected parameter 'fieldDelimiter' to be non-null");
-        this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions, "expected parameter 'hivePartitioningOptions' to be non-null");
-        this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues, "expected parameter 'ignoreUnknownValues' to be non-null");
-        this.jsonExtension = Objects.requireNonNull(jsonExtension, "expected parameter 'jsonExtension' to be non-null");
-        this.maxBadRecords = Objects.requireNonNull(maxBadRecords, "expected parameter 'maxBadRecords' to be non-null");
-        this.nullMarker = Objects.requireNonNull(nullMarker, "expected parameter 'nullMarker' to be non-null");
-        this.parquetOptions = Objects.requireNonNull(parquetOptions, "expected parameter 'parquetOptions' to be non-null");
-        this.projectionFields = Objects.requireNonNull(projectionFields, "expected parameter 'projectionFields' to be non-null");
-        this.quote = Objects.requireNonNull(quote, "expected parameter 'quote' to be non-null");
-        this.rangePartitioning = Objects.requireNonNull(rangePartitioning, "expected parameter 'rangePartitioning' to be non-null");
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-        this.schemaUpdateOptions = Objects.requireNonNull(schemaUpdateOptions, "expected parameter 'schemaUpdateOptions' to be non-null");
-        this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows, "expected parameter 'skipLeadingRows' to be non-null");
-        this.sourceFormat = Objects.requireNonNull(sourceFormat, "expected parameter 'sourceFormat' to be non-null");
-        this.sourceUris = Objects.requireNonNull(sourceUris, "expected parameter 'sourceUris' to be non-null");
-        this.timePartitioning = Objects.requireNonNull(timePartitioning, "expected parameter 'timePartitioning' to be non-null");
-        this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes, "expected parameter 'useAvroLogicalTypes' to be non-null");
-        this.writeDisposition = Objects.requireNonNull(writeDisposition, "expected parameter 'writeDisposition' to be non-null");
-    }
+    private JobConfigurationLoadResponse() {}
 
-    private JobConfigurationLoadResponse() {
-        this.allowJaggedRows = null;
-        this.allowQuotedNewlines = null;
-        this.autodetect = null;
-        this.clustering = null;
-        this.createDisposition = null;
-        this.decimalTargetTypes = List.of();
-        this.destinationEncryptionConfiguration = null;
-        this.destinationTable = null;
-        this.destinationTableProperties = null;
-        this.encoding = null;
-        this.fieldDelimiter = null;
-        this.hivePartitioningOptions = null;
-        this.ignoreUnknownValues = null;
-        this.jsonExtension = null;
-        this.maxBadRecords = null;
-        this.nullMarker = null;
-        this.parquetOptions = null;
-        this.projectionFields = List.of();
-        this.quote = null;
-        this.rangePartitioning = null;
-        this.schema = null;
-        this.schemaUpdateOptions = List.of();
-        this.skipLeadingRows = null;
-        this.sourceFormat = null;
-        this.sourceUris = List.of();
-        this.timePartitioning = null;
-        this.useAvroLogicalTypes = null;
-        this.writeDisposition = null;
+    private JobConfigurationLoadResponse(JobConfigurationLoadResponse $) {
+        this.allowJaggedRows = $.allowJaggedRows;
+        this.allowQuotedNewlines = $.allowQuotedNewlines;
+        this.autodetect = $.autodetect;
+        this.clustering = $.clustering;
+        this.createDisposition = $.createDisposition;
+        this.decimalTargetTypes = $.decimalTargetTypes;
+        this.destinationEncryptionConfiguration = $.destinationEncryptionConfiguration;
+        this.destinationTable = $.destinationTable;
+        this.destinationTableProperties = $.destinationTableProperties;
+        this.encoding = $.encoding;
+        this.fieldDelimiter = $.fieldDelimiter;
+        this.hivePartitioningOptions = $.hivePartitioningOptions;
+        this.ignoreUnknownValues = $.ignoreUnknownValues;
+        this.jsonExtension = $.jsonExtension;
+        this.maxBadRecords = $.maxBadRecords;
+        this.nullMarker = $.nullMarker;
+        this.parquetOptions = $.parquetOptions;
+        this.projectionFields = $.projectionFields;
+        this.quote = $.quote;
+        this.rangePartitioning = $.rangePartitioning;
+        this.schema = $.schema;
+        this.schemaUpdateOptions = $.schemaUpdateOptions;
+        this.skipLeadingRows = $.skipLeadingRows;
+        this.sourceFormat = $.sourceFormat;
+        this.sourceUris = $.sourceUris;
+        this.timePartitioning = $.timePartitioning;
+        this.useAvroLogicalTypes = $.useAvroLogicalTypes;
+        this.writeDisposition = $.writeDisposition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigurationLoadResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowJaggedRows;
-        private Boolean allowQuotedNewlines;
-        private Boolean autodetect;
-        private ClusteringResponse clustering;
-        private String createDisposition;
-        private List<String> decimalTargetTypes;
-        private EncryptionConfigurationResponse destinationEncryptionConfiguration;
-        private TableReferenceResponse destinationTable;
-        private DestinationTablePropertiesResponse destinationTableProperties;
-        private String encoding;
-        private String fieldDelimiter;
-        private HivePartitioningOptionsResponse hivePartitioningOptions;
-        private Boolean ignoreUnknownValues;
-        private String jsonExtension;
-        private Integer maxBadRecords;
-        private String nullMarker;
-        private ParquetOptionsResponse parquetOptions;
-        private List<String> projectionFields;
-        private String quote;
-        private RangePartitioningResponse rangePartitioning;
-        private TableSchemaResponse schema;
-        private List<String> schemaUpdateOptions;
-        private Integer skipLeadingRows;
-        private String sourceFormat;
-        private List<String> sourceUris;
-        private TimePartitioningResponse timePartitioning;
-        private Boolean useAvroLogicalTypes;
-        private String writeDisposition;
+        private JobConfigurationLoadResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigurationLoadResponse();
         }
 
         public Builder(JobConfigurationLoadResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowJaggedRows = defaults.allowJaggedRows;
-    	      this.allowQuotedNewlines = defaults.allowQuotedNewlines;
-    	      this.autodetect = defaults.autodetect;
-    	      this.clustering = defaults.clustering;
-    	      this.createDisposition = defaults.createDisposition;
-    	      this.decimalTargetTypes = defaults.decimalTargetTypes;
-    	      this.destinationEncryptionConfiguration = defaults.destinationEncryptionConfiguration;
-    	      this.destinationTable = defaults.destinationTable;
-    	      this.destinationTableProperties = defaults.destinationTableProperties;
-    	      this.encoding = defaults.encoding;
-    	      this.fieldDelimiter = defaults.fieldDelimiter;
-    	      this.hivePartitioningOptions = defaults.hivePartitioningOptions;
-    	      this.ignoreUnknownValues = defaults.ignoreUnknownValues;
-    	      this.jsonExtension = defaults.jsonExtension;
-    	      this.maxBadRecords = defaults.maxBadRecords;
-    	      this.nullMarker = defaults.nullMarker;
-    	      this.parquetOptions = defaults.parquetOptions;
-    	      this.projectionFields = defaults.projectionFields;
-    	      this.quote = defaults.quote;
-    	      this.rangePartitioning = defaults.rangePartitioning;
-    	      this.schema = defaults.schema;
-    	      this.schemaUpdateOptions = defaults.schemaUpdateOptions;
-    	      this.skipLeadingRows = defaults.skipLeadingRows;
-    	      this.sourceFormat = defaults.sourceFormat;
-    	      this.sourceUris = defaults.sourceUris;
-    	      this.timePartitioning = defaults.timePartitioning;
-    	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
-    	      this.writeDisposition = defaults.writeDisposition;
+            $ = new JobConfigurationLoadResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowJaggedRows(Boolean allowJaggedRows) {
-            this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows);
+            $.allowJaggedRows = allowJaggedRows;
             return this;
         }
+
         public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
-            this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines);
+            $.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
+
         public Builder autodetect(Boolean autodetect) {
-            this.autodetect = Objects.requireNonNull(autodetect);
+            $.autodetect = autodetect;
             return this;
         }
+
         public Builder clustering(ClusteringResponse clustering) {
-            this.clustering = Objects.requireNonNull(clustering);
+            $.clustering = clustering;
             return this;
         }
+
         public Builder createDisposition(String createDisposition) {
-            this.createDisposition = Objects.requireNonNull(createDisposition);
+            $.createDisposition = createDisposition;
             return this;
         }
+
         public Builder decimalTargetTypes(List<String> decimalTargetTypes) {
-            this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes);
+            $.decimalTargetTypes = decimalTargetTypes;
             return this;
         }
+
         public Builder decimalTargetTypes(String... decimalTargetTypes) {
             return decimalTargetTypes(List.of(decimalTargetTypes));
         }
+
         public Builder destinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
+            $.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
+
         public Builder destinationTable(TableReferenceResponse destinationTable) {
-            this.destinationTable = Objects.requireNonNull(destinationTable);
+            $.destinationTable = destinationTable;
             return this;
         }
+
         public Builder destinationTableProperties(DestinationTablePropertiesResponse destinationTableProperties) {
-            this.destinationTableProperties = Objects.requireNonNull(destinationTableProperties);
+            $.destinationTableProperties = destinationTableProperties;
             return this;
         }
+
         public Builder encoding(String encoding) {
-            this.encoding = Objects.requireNonNull(encoding);
+            $.encoding = encoding;
             return this;
         }
+
         public Builder fieldDelimiter(String fieldDelimiter) {
-            this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
+            $.fieldDelimiter = fieldDelimiter;
             return this;
         }
+
         public Builder hivePartitioningOptions(HivePartitioningOptionsResponse hivePartitioningOptions) {
-            this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions);
+            $.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
+
         public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
-            this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues);
+            $.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
+
         public Builder jsonExtension(String jsonExtension) {
-            this.jsonExtension = Objects.requireNonNull(jsonExtension);
+            $.jsonExtension = jsonExtension;
             return this;
         }
+
         public Builder maxBadRecords(Integer maxBadRecords) {
-            this.maxBadRecords = Objects.requireNonNull(maxBadRecords);
+            $.maxBadRecords = maxBadRecords;
             return this;
         }
+
         public Builder nullMarker(String nullMarker) {
-            this.nullMarker = Objects.requireNonNull(nullMarker);
+            $.nullMarker = nullMarker;
             return this;
         }
+
         public Builder parquetOptions(ParquetOptionsResponse parquetOptions) {
-            this.parquetOptions = Objects.requireNonNull(parquetOptions);
+            $.parquetOptions = parquetOptions;
             return this;
         }
+
         public Builder projectionFields(List<String> projectionFields) {
-            this.projectionFields = Objects.requireNonNull(projectionFields);
+            $.projectionFields = projectionFields;
             return this;
         }
+
         public Builder projectionFields(String... projectionFields) {
             return projectionFields(List.of(projectionFields));
         }
+
         public Builder quote(String quote) {
-            this.quote = Objects.requireNonNull(quote);
+            $.quote = quote;
             return this;
         }
+
         public Builder rangePartitioning(RangePartitioningResponse rangePartitioning) {
-            this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
+            $.rangePartitioning = rangePartitioning;
             return this;
         }
+
         public Builder schema(TableSchemaResponse schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder schemaUpdateOptions(List<String> schemaUpdateOptions) {
-            this.schemaUpdateOptions = Objects.requireNonNull(schemaUpdateOptions);
+            $.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
+
         public Builder schemaUpdateOptions(String... schemaUpdateOptions) {
             return schemaUpdateOptions(List.of(schemaUpdateOptions));
         }
+
         public Builder skipLeadingRows(Integer skipLeadingRows) {
-            this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
+            $.skipLeadingRows = skipLeadingRows;
             return this;
         }
+
         public Builder sourceFormat(String sourceFormat) {
-            this.sourceFormat = Objects.requireNonNull(sourceFormat);
+            $.sourceFormat = sourceFormat;
             return this;
         }
+
         public Builder sourceUris(List<String> sourceUris) {
-            this.sourceUris = Objects.requireNonNull(sourceUris);
+            $.sourceUris = sourceUris;
             return this;
         }
+
         public Builder sourceUris(String... sourceUris) {
             return sourceUris(List.of(sourceUris));
         }
+
         public Builder timePartitioning(TimePartitioningResponse timePartitioning) {
-            this.timePartitioning = Objects.requireNonNull(timePartitioning);
+            $.timePartitioning = timePartitioning;
             return this;
         }
+
         public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
+            $.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
+
         public Builder writeDisposition(String writeDisposition) {
-            this.writeDisposition = Objects.requireNonNull(writeDisposition);
+            $.writeDisposition = writeDisposition;
             return this;
-        }        public JobConfigurationLoadResponse build() {
-            return new JobConfigurationLoadResponse(allowJaggedRows, allowQuotedNewlines, autodetect, clustering, createDisposition, decimalTargetTypes, destinationEncryptionConfiguration, destinationTable, destinationTableProperties, encoding, fieldDelimiter, hivePartitioningOptions, ignoreUnknownValues, jsonExtension, maxBadRecords, nullMarker, parquetOptions, projectionFields, quote, rangePartitioning, schema, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, useAvroLogicalTypes, writeDisposition);
+        }
+
+        public JobConfigurationLoadResponse build() {
+            $.allowJaggedRows = Objects.requireNonNull($.allowJaggedRows, "expected parameter 'allowJaggedRows' to be non-null");
+            $.allowQuotedNewlines = Objects.requireNonNull($.allowQuotedNewlines, "expected parameter 'allowQuotedNewlines' to be non-null");
+            $.autodetect = Objects.requireNonNull($.autodetect, "expected parameter 'autodetect' to be non-null");
+            $.clustering = Objects.requireNonNull($.clustering, "expected parameter 'clustering' to be non-null");
+            $.createDisposition = Objects.requireNonNull($.createDisposition, "expected parameter 'createDisposition' to be non-null");
+            $.decimalTargetTypes = Objects.requireNonNull($.decimalTargetTypes, "expected parameter 'decimalTargetTypes' to be non-null");
+            $.destinationEncryptionConfiguration = Objects.requireNonNull($.destinationEncryptionConfiguration, "expected parameter 'destinationEncryptionConfiguration' to be non-null");
+            $.destinationTable = Objects.requireNonNull($.destinationTable, "expected parameter 'destinationTable' to be non-null");
+            $.destinationTableProperties = Objects.requireNonNull($.destinationTableProperties, "expected parameter 'destinationTableProperties' to be non-null");
+            $.encoding = Objects.requireNonNull($.encoding, "expected parameter 'encoding' to be non-null");
+            $.fieldDelimiter = Objects.requireNonNull($.fieldDelimiter, "expected parameter 'fieldDelimiter' to be non-null");
+            $.hivePartitioningOptions = Objects.requireNonNull($.hivePartitioningOptions, "expected parameter 'hivePartitioningOptions' to be non-null");
+            $.ignoreUnknownValues = Objects.requireNonNull($.ignoreUnknownValues, "expected parameter 'ignoreUnknownValues' to be non-null");
+            $.jsonExtension = Objects.requireNonNull($.jsonExtension, "expected parameter 'jsonExtension' to be non-null");
+            $.maxBadRecords = Objects.requireNonNull($.maxBadRecords, "expected parameter 'maxBadRecords' to be non-null");
+            $.nullMarker = Objects.requireNonNull($.nullMarker, "expected parameter 'nullMarker' to be non-null");
+            $.parquetOptions = Objects.requireNonNull($.parquetOptions, "expected parameter 'parquetOptions' to be non-null");
+            $.projectionFields = Objects.requireNonNull($.projectionFields, "expected parameter 'projectionFields' to be non-null");
+            $.quote = Objects.requireNonNull($.quote, "expected parameter 'quote' to be non-null");
+            $.rangePartitioning = Objects.requireNonNull($.rangePartitioning, "expected parameter 'rangePartitioning' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            $.schemaUpdateOptions = Objects.requireNonNull($.schemaUpdateOptions, "expected parameter 'schemaUpdateOptions' to be non-null");
+            $.skipLeadingRows = Objects.requireNonNull($.skipLeadingRows, "expected parameter 'skipLeadingRows' to be non-null");
+            $.sourceFormat = Objects.requireNonNull($.sourceFormat, "expected parameter 'sourceFormat' to be non-null");
+            $.sourceUris = Objects.requireNonNull($.sourceUris, "expected parameter 'sourceUris' to be non-null");
+            $.timePartitioning = Objects.requireNonNull($.timePartitioning, "expected parameter 'timePartitioning' to be non-null");
+            $.useAvroLogicalTypes = Objects.requireNonNull($.useAvroLogicalTypes, "expected parameter 'useAvroLogicalTypes' to be non-null");
+            $.writeDisposition = Objects.requireNonNull($.writeDisposition, "expected parameter 'writeDisposition' to be non-null");
+            return $;
         }
     }
+
 }

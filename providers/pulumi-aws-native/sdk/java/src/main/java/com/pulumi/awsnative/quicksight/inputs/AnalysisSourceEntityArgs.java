@@ -6,8 +6,8 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.inputs.AnalysisSourceTemplateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AnalysisSourceEntityArgs extends com.pulumi.resources.Resourc
     public static final AnalysisSourceEntityArgs Empty = new AnalysisSourceEntityArgs();
 
     @Import(name="sourceTemplate")
-      private final @Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate;
+    private @Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate;
 
-    public Output<AnalysisSourceTemplateArgs> sourceTemplate() {
-        return this.sourceTemplate == null ? Codegen.empty() : this.sourceTemplate;
+    public Optional<Output<AnalysisSourceTemplateArgs>> sourceTemplate() {
+        return Optional.ofNullable(this.sourceTemplate);
     }
 
-    public AnalysisSourceEntityArgs(@Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate) {
-        this.sourceTemplate = sourceTemplate;
-    }
+    private AnalysisSourceEntityArgs() {}
 
-    private AnalysisSourceEntityArgs() {
-        this.sourceTemplate = Codegen.empty();
+    private AnalysisSourceEntityArgs(AnalysisSourceEntityArgs $) {
+        this.sourceTemplate = $.sourceTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalysisSourceEntityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate;
+        private AnalysisSourceEntityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalysisSourceEntityArgs();
         }
 
         public Builder(AnalysisSourceEntityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceTemplate = defaults.sourceTemplate;
+            $ = new AnalysisSourceEntityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceTemplate(@Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate) {
-            this.sourceTemplate = sourceTemplate;
+            $.sourceTemplate = sourceTemplate;
             return this;
         }
-        public Builder sourceTemplate(@Nullable AnalysisSourceTemplateArgs sourceTemplate) {
-            this.sourceTemplate = Codegen.ofNullable(sourceTemplate);
-            return this;
-        }        public AnalysisSourceEntityArgs build() {
-            return new AnalysisSourceEntityArgs(sourceTemplate);
+
+        public Builder sourceTemplate(AnalysisSourceTemplateArgs sourceTemplate) {
+            return sourceTemplate(Output.of(sourceTemplate));
+        }
+
+        public AnalysisSourceEntityArgs build() {
+            return $;
         }
     }
+
 }

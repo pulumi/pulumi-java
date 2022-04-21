@@ -13,62 +13,59 @@ public final class GetDatabaseInstanceClone extends com.pulumi.resources.InvokeA
     public static final GetDatabaseInstanceClone Empty = new GetDatabaseInstanceClone();
 
     @Import(name="pointInTime", required=true)
-      private final String pointInTime;
+    private String pointInTime;
 
     public String pointInTime() {
         return this.pointInTime;
     }
 
     @Import(name="sourceInstanceName", required=true)
-      private final String sourceInstanceName;
+    private String sourceInstanceName;
 
     public String sourceInstanceName() {
         return this.sourceInstanceName;
     }
 
-    public GetDatabaseInstanceClone(
-        String pointInTime,
-        String sourceInstanceName) {
-        this.pointInTime = Objects.requireNonNull(pointInTime, "expected parameter 'pointInTime' to be non-null");
-        this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName, "expected parameter 'sourceInstanceName' to be non-null");
-    }
+    private GetDatabaseInstanceClone() {}
 
-    private GetDatabaseInstanceClone() {
-        this.pointInTime = null;
-        this.sourceInstanceName = null;
+    private GetDatabaseInstanceClone(GetDatabaseInstanceClone $) {
+        this.pointInTime = $.pointInTime;
+        this.sourceInstanceName = $.sourceInstanceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceClone defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pointInTime;
-        private String sourceInstanceName;
+        private GetDatabaseInstanceClone $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceClone();
         }
 
         public Builder(GetDatabaseInstanceClone defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pointInTime = defaults.pointInTime;
-    	      this.sourceInstanceName = defaults.sourceInstanceName;
+            $ = new GetDatabaseInstanceClone(Objects.requireNonNull(defaults));
         }
 
         public Builder pointInTime(String pointInTime) {
-            this.pointInTime = Objects.requireNonNull(pointInTime);
+            $.pointInTime = pointInTime;
             return this;
         }
+
         public Builder sourceInstanceName(String sourceInstanceName) {
-            this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
+            $.sourceInstanceName = sourceInstanceName;
             return this;
-        }        public GetDatabaseInstanceClone build() {
-            return new GetDatabaseInstanceClone(pointInTime, sourceInstanceName);
+        }
+
+        public GetDatabaseInstanceClone build() {
+            $.pointInTime = Objects.requireNonNull($.pointInTime, "expected parameter 'pointInTime' to be non-null");
+            $.sourceInstanceName = Objects.requireNonNull($.sourceInstanceName, "expected parameter 'sourceInstanceName' to be non-null");
+            return $;
         }
     }
+
 }

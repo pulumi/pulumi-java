@@ -7,8 +7,8 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryAwsCloudMapG
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryDnsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VirtualNodeSpecServiceDiscoveryGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="awsCloudMap")
-      private final @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap;
+    private @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap;
 
-    public Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap() {
-        return this.awsCloudMap == null ? Codegen.empty() : this.awsCloudMap;
+    public Optional<Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs>> awsCloudMap() {
+        return Optional.ofNullable(this.awsCloudMap);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class VirtualNodeSpecServiceDiscoveryGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="dns")
-      private final @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns;
+    private @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns;
 
-    public Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns() {
-        return this.dns == null ? Codegen.empty() : this.dns;
+    public Optional<Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs>> dns() {
+        return Optional.ofNullable(this.dns);
     }
 
-    public VirtualNodeSpecServiceDiscoveryGetArgs(
-        @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap,
-        @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns) {
-        this.awsCloudMap = awsCloudMap;
-        this.dns = dns;
-    }
+    private VirtualNodeSpecServiceDiscoveryGetArgs() {}
 
-    private VirtualNodeSpecServiceDiscoveryGetArgs() {
-        this.awsCloudMap = Codegen.empty();
-        this.dns = Codegen.empty();
+    private VirtualNodeSpecServiceDiscoveryGetArgs(VirtualNodeSpecServiceDiscoveryGetArgs $) {
+        this.awsCloudMap = $.awsCloudMap;
+        this.dns = $.dns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecServiceDiscoveryGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap;
-        private @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns;
+        private VirtualNodeSpecServiceDiscoveryGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecServiceDiscoveryGetArgs();
         }
 
         public Builder(VirtualNodeSpecServiceDiscoveryGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsCloudMap = defaults.awsCloudMap;
-    	      this.dns = defaults.dns;
+            $ = new VirtualNodeSpecServiceDiscoveryGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsCloudMap(@Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs> awsCloudMap) {
-            this.awsCloudMap = awsCloudMap;
+            $.awsCloudMap = awsCloudMap;
             return this;
         }
-        public Builder awsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs awsCloudMap) {
-            this.awsCloudMap = Codegen.ofNullable(awsCloudMap);
-            return this;
+
+        public Builder awsCloudMap(VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs awsCloudMap) {
+            return awsCloudMap(Output.of(awsCloudMap));
         }
+
         public Builder dns(@Nullable Output<VirtualNodeSpecServiceDiscoveryDnsGetArgs> dns) {
-            this.dns = dns;
+            $.dns = dns;
             return this;
         }
-        public Builder dns(@Nullable VirtualNodeSpecServiceDiscoveryDnsGetArgs dns) {
-            this.dns = Codegen.ofNullable(dns);
-            return this;
-        }        public VirtualNodeSpecServiceDiscoveryGetArgs build() {
-            return new VirtualNodeSpecServiceDiscoveryGetArgs(awsCloudMap, dns);
+
+        public Builder dns(VirtualNodeSpecServiceDiscoveryDnsGetArgs dns) {
+            return dns(Output.of(dns));
+        }
+
+        public VirtualNodeSpecServiceDiscoveryGetArgs build() {
+            return $;
         }
     }
+
 }

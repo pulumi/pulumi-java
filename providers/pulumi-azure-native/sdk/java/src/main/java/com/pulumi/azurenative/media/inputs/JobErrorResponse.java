@@ -23,7 +23,7 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="category", required=true)
-      private final String category;
+    private String category;
 
     public String category() {
         return this.category;
@@ -34,7 +34,7 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -45,7 +45,7 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="details", required=true)
-      private final List<JobErrorDetailResponse> details;
+    private List<JobErrorDetailResponse> details;
 
     public List<JobErrorDetailResponse> details() {
         return this.details;
@@ -56,7 +56,7 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -67,85 +67,77 @@ public final class JobErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retry", required=true)
-      private final String retry;
+    private String retry;
 
     public String retry() {
         return this.retry;
     }
 
-    public JobErrorResponse(
-        String category,
-        String code,
-        List<JobErrorDetailResponse> details,
-        String message,
-        String retry) {
-        this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.retry = Objects.requireNonNull(retry, "expected parameter 'retry' to be non-null");
-    }
+    private JobErrorResponse() {}
 
-    private JobErrorResponse() {
-        this.category = null;
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
-        this.retry = null;
+    private JobErrorResponse(JobErrorResponse $) {
+        this.category = $.category;
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
+        this.retry = $.retry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String category;
-        private String code;
-        private List<JobErrorDetailResponse> details;
-        private String message;
-        private String retry;
+        private JobErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobErrorResponse();
         }
 
         public Builder(JobErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
-    	      this.retry = defaults.retry;
+            $ = new JobErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder category(String category) {
-            this.category = Objects.requireNonNull(category);
+            $.category = category;
             return this;
         }
+
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(List<JobErrorDetailResponse> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder details(JobErrorDetailResponse... details) {
             return details(List.of(details));
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder retry(String retry) {
-            this.retry = Objects.requireNonNull(retry);
+            $.retry = retry;
             return this;
-        }        public JobErrorResponse build() {
-            return new JobErrorResponse(category, code, details, message, retry);
+        }
+
+        public JobErrorResponse build() {
+            $.category = Objects.requireNonNull($.category, "expected parameter 'category' to be non-null");
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.retry = Objects.requireNonNull($.retry, "expected parameter 'retry' to be non-null");
+            return $;
         }
     }
+
 }

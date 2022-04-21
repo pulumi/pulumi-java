@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datamigration_v1beta1.enums.DatabaseTypeEngine;
 import com.pulumi.googlenative.datamigration_v1beta1.enums.DatabaseTypeProvider;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DatabaseTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engine")
-      private final @Nullable Output<DatabaseTypeEngine> engine;
+    private @Nullable Output<DatabaseTypeEngine> engine;
 
-    public Output<DatabaseTypeEngine> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<DatabaseTypeEngine>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DatabaseTypeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provider")
-      private final @Nullable Output<DatabaseTypeProvider> provider;
+    private @Nullable Output<DatabaseTypeProvider> provider;
 
-    public Output<DatabaseTypeProvider> provider() {
-        return this.provider == null ? Codegen.empty() : this.provider;
+    public Optional<Output<DatabaseTypeProvider>> provider() {
+        return Optional.ofNullable(this.provider);
     }
 
-    public DatabaseTypeArgs(
-        @Nullable Output<DatabaseTypeEngine> engine,
-        @Nullable Output<DatabaseTypeProvider> provider) {
-        this.engine = engine;
-        this.provider = provider;
-    }
+    private DatabaseTypeArgs() {}
 
-    private DatabaseTypeArgs() {
-        this.engine = Codegen.empty();
-        this.provider = Codegen.empty();
+    private DatabaseTypeArgs(DatabaseTypeArgs $) {
+        this.engine = $.engine;
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatabaseTypeEngine> engine;
-        private @Nullable Output<DatabaseTypeProvider> provider;
+        private DatabaseTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseTypeArgs();
         }
 
         public Builder(DatabaseTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.engine = defaults.engine;
-    	      this.provider = defaults.provider;
+            $ = new DatabaseTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder engine(@Nullable Output<DatabaseTypeEngine> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable DatabaseTypeEngine engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(DatabaseTypeEngine engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder provider(@Nullable Output<DatabaseTypeProvider> provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
         }
-        public Builder provider(@Nullable DatabaseTypeProvider provider) {
-            this.provider = Codegen.ofNullable(provider);
-            return this;
-        }        public DatabaseTypeArgs build() {
-            return new DatabaseTypeArgs(engine, provider);
+
+        public Builder provider(DatabaseTypeProvider provider) {
+            return provider(Output.of(provider));
+        }
+
+        public DatabaseTypeArgs build() {
+            return $;
         }
     }
+
 }

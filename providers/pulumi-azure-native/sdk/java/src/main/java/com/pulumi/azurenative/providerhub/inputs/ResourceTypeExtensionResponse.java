@@ -16,81 +16,74 @@ public final class ResourceTypeExtensionResponse extends com.pulumi.resources.In
     public static final ResourceTypeExtensionResponse Empty = new ResourceTypeExtensionResponse();
 
     @Import(name="endpointUri")
-      private final @Nullable String endpointUri;
+    private @Nullable String endpointUri;
 
     public Optional<String> endpointUri() {
-        return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
+        return Optional.ofNullable(this.endpointUri);
     }
 
     @Import(name="extensionCategories")
-      private final @Nullable List<String> extensionCategories;
+    private @Nullable List<String> extensionCategories;
 
-    public List<String> extensionCategories() {
-        return this.extensionCategories == null ? List.of() : this.extensionCategories;
+    public Optional<List<String>> extensionCategories() {
+        return Optional.ofNullable(this.extensionCategories);
     }
 
     @Import(name="timeout")
-      private final @Nullable String timeout;
+    private @Nullable String timeout;
 
     public Optional<String> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ResourceTypeExtensionResponse(
-        @Nullable String endpointUri,
-        @Nullable List<String> extensionCategories,
-        @Nullable String timeout) {
-        this.endpointUri = endpointUri;
-        this.extensionCategories = extensionCategories;
-        this.timeout = timeout;
-    }
+    private ResourceTypeExtensionResponse() {}
 
-    private ResourceTypeExtensionResponse() {
-        this.endpointUri = null;
-        this.extensionCategories = List.of();
-        this.timeout = null;
+    private ResourceTypeExtensionResponse(ResourceTypeExtensionResponse $) {
+        this.endpointUri = $.endpointUri;
+        this.extensionCategories = $.extensionCategories;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeExtensionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpointUri;
-        private @Nullable List<String> extensionCategories;
-        private @Nullable String timeout;
+        private ResourceTypeExtensionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeExtensionResponse();
         }
 
         public Builder(ResourceTypeExtensionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.extensionCategories = defaults.extensionCategories;
-    	      this.timeout = defaults.timeout;
+            $ = new ResourceTypeExtensionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
         }
+
         public Builder extensionCategories(@Nullable List<String> extensionCategories) {
-            this.extensionCategories = extensionCategories;
+            $.extensionCategories = extensionCategories;
             return this;
         }
+
         public Builder extensionCategories(String... extensionCategories) {
             return extensionCategories(List.of(extensionCategories));
         }
+
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
-        }        public ResourceTypeExtensionResponse build() {
-            return new ResourceTypeExtensionResponse(endpointUri, extensionCategories, timeout);
+        }
+
+        public ResourceTypeExtensionResponse build() {
+            return $;
         }
     }
+
 }

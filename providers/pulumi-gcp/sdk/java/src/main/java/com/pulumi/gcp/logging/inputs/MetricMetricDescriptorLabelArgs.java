@@ -5,9 +5,9 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MetricMetricDescriptorLabelArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class MetricMetricDescriptorLabelArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -45,76 +45,69 @@ public final class MetricMetricDescriptorLabelArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="valueType")
-      private final @Nullable Output<String> valueType;
+    private @Nullable Output<String> valueType;
 
-    public Output<String> valueType() {
-        return this.valueType == null ? Codegen.empty() : this.valueType;
+    public Optional<Output<String>> valueType() {
+        return Optional.ofNullable(this.valueType);
     }
 
-    public MetricMetricDescriptorLabelArgs(
-        @Nullable Output<String> description,
-        Output<String> key,
-        @Nullable Output<String> valueType) {
-        this.description = description;
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.valueType = valueType;
-    }
+    private MetricMetricDescriptorLabelArgs() {}
 
-    private MetricMetricDescriptorLabelArgs() {
-        this.description = Codegen.empty();
-        this.key = Codegen.empty();
-        this.valueType = Codegen.empty();
+    private MetricMetricDescriptorLabelArgs(MetricMetricDescriptorLabelArgs $) {
+        this.description = $.description;
+        this.key = $.key;
+        this.valueType = $.valueType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricMetricDescriptorLabelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> key;
-        private @Nullable Output<String> valueType;
+        private MetricMetricDescriptorLabelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricMetricDescriptorLabelArgs();
         }
 
         public Builder(MetricMetricDescriptorLabelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.key = defaults.key;
-    	      this.valueType = defaults.valueType;
+            $ = new MetricMetricDescriptorLabelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder valueType(@Nullable Output<String> valueType) {
-            this.valueType = valueType;
+            $.valueType = valueType;
             return this;
         }
-        public Builder valueType(@Nullable String valueType) {
-            this.valueType = Codegen.ofNullable(valueType);
-            return this;
-        }        public MetricMetricDescriptorLabelArgs build() {
-            return new MetricMetricDescriptorLabelArgs(description, key, valueType);
+
+        public Builder valueType(String valueType) {
+            return valueType(Output.of(valueType));
+        }
+
+        public MetricMetricDescriptorLabelArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

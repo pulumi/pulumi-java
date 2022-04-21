@@ -24,10 +24,10 @@ public final class LoggingPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="auditLogStatus")
-      private final @Nullable String auditLogStatus;
+    private @Nullable String auditLogStatus;
 
     public Optional<String> auditLogStatus() {
-        return this.auditLogStatus == null ? Optional.empty() : Optional.ofNullable(this.auditLogStatus);
+        return Optional.ofNullable(this.auditLogStatus);
     }
 
     /**
@@ -35,55 +35,52 @@ public final class LoggingPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable String logLevel;
+    private @Nullable String logLevel;
 
     public Optional<String> logLevel() {
-        return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
+        return Optional.ofNullable(this.logLevel);
     }
 
-    public LoggingPropertiesResponse(
-        @Nullable String auditLogStatus,
-        @Nullable String logLevel) {
-        this.auditLogStatus = Codegen.stringProp("auditLogStatus").arg(auditLogStatus).def("Disabled").getNullable();
-        this.logLevel = Codegen.stringProp("logLevel").arg(logLevel).def("Information").getNullable();
-    }
+    private LoggingPropertiesResponse() {}
 
-    private LoggingPropertiesResponse() {
-        this.auditLogStatus = null;
-        this.logLevel = null;
+    private LoggingPropertiesResponse(LoggingPropertiesResponse $) {
+        this.auditLogStatus = $.auditLogStatus;
+        this.logLevel = $.logLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String auditLogStatus;
-        private @Nullable String logLevel;
+        private LoggingPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingPropertiesResponse();
         }
 
         public Builder(LoggingPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogStatus = defaults.auditLogStatus;
-    	      this.logLevel = defaults.logLevel;
+            $ = new LoggingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogStatus(@Nullable String auditLogStatus) {
-            this.auditLogStatus = auditLogStatus;
+            $.auditLogStatus = auditLogStatus;
             return this;
         }
+
         public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
-        }        public LoggingPropertiesResponse build() {
-            return new LoggingPropertiesResponse(auditLogStatus, logLevel);
+        }
+
+        public LoggingPropertiesResponse build() {
+            $.auditLogStatus = Codegen.stringProp("auditLogStatus").arg($.auditLogStatus).def("Disabled").getNullable();
+            $.logLevel = Codegen.stringProp("logLevel").arg($.logLevel).def("Information").getNullable();
+            return $;
         }
     }
+
 }

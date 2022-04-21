@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CnameRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cname")
-      private final @Nullable Output<String> cname;
+    private @Nullable Output<String> cname;
 
-    public Output<String> cname() {
-        return this.cname == null ? Codegen.empty() : this.cname;
+    public Optional<Output<String>> cname() {
+        return Optional.ofNullable(this.cname);
     }
 
-    public CnameRecordArgs(@Nullable Output<String> cname) {
-        this.cname = cname;
-    }
+    private CnameRecordArgs() {}
 
-    private CnameRecordArgs() {
-        this.cname = Codegen.empty();
+    private CnameRecordArgs(CnameRecordArgs $) {
+        this.cname = $.cname;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CnameRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cname;
+        private CnameRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CnameRecordArgs();
         }
 
         public Builder(CnameRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cname = defaults.cname;
+            $ = new CnameRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cname(@Nullable Output<String> cname) {
-            this.cname = cname;
+            $.cname = cname;
             return this;
         }
-        public Builder cname(@Nullable String cname) {
-            this.cname = Codegen.ofNullable(cname);
-            return this;
-        }        public CnameRecordArgs build() {
-            return new CnameRecordArgs(cname);
+
+        public Builder cname(String cname) {
+            return cname(Output.of(cname));
+        }
+
+        public CnameRecordArgs build() {
+            return $;
         }
     }
+
 }

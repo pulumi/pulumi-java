@@ -7,9 +7,9 @@ import com.pulumi.azurenative.peering.inputs.ExchangeConnectionArgs;
 import com.pulumi.azurenative.peering.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PeeringPropertiesExchangeArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="connections")
-      private final @Nullable Output<List<ExchangeConnectionArgs>> connections;
+    private @Nullable Output<List<ExchangeConnectionArgs>> connections;
 
-    public Output<List<ExchangeConnectionArgs>> connections() {
-        return this.connections == null ? Codegen.empty() : this.connections;
+    public Optional<Output<List<ExchangeConnectionArgs>>> connections() {
+        return Optional.ofNullable(this.connections);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class PeeringPropertiesExchangeArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="peerAsn")
-      private final @Nullable Output<SubResourceArgs> peerAsn;
+    private @Nullable Output<SubResourceArgs> peerAsn;
 
-    public Output<SubResourceArgs> peerAsn() {
-        return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
+    public Optional<Output<SubResourceArgs>> peerAsn() {
+        return Optional.ofNullable(this.peerAsn);
     }
 
-    public PeeringPropertiesExchangeArgs(
-        @Nullable Output<List<ExchangeConnectionArgs>> connections,
-        @Nullable Output<SubResourceArgs> peerAsn) {
-        this.connections = connections;
-        this.peerAsn = peerAsn;
-    }
+    private PeeringPropertiesExchangeArgs() {}
 
-    private PeeringPropertiesExchangeArgs() {
-        this.connections = Codegen.empty();
-        this.peerAsn = Codegen.empty();
+    private PeeringPropertiesExchangeArgs(PeeringPropertiesExchangeArgs $) {
+        this.connections = $.connections;
+        this.peerAsn = $.peerAsn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringPropertiesExchangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ExchangeConnectionArgs>> connections;
-        private @Nullable Output<SubResourceArgs> peerAsn;
+        private PeeringPropertiesExchangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringPropertiesExchangeArgs();
         }
 
         public Builder(PeeringPropertiesExchangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connections = defaults.connections;
-    	      this.peerAsn = defaults.peerAsn;
+            $ = new PeeringPropertiesExchangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connections(@Nullable Output<List<ExchangeConnectionArgs>> connections) {
-            this.connections = connections;
+            $.connections = connections;
             return this;
         }
-        public Builder connections(@Nullable List<ExchangeConnectionArgs> connections) {
-            this.connections = Codegen.ofNullable(connections);
-            return this;
+
+        public Builder connections(List<ExchangeConnectionArgs> connections) {
+            return connections(Output.of(connections));
         }
+
         public Builder connections(ExchangeConnectionArgs... connections) {
             return connections(List.of(connections));
         }
+
         public Builder peerAsn(@Nullable Output<SubResourceArgs> peerAsn) {
-            this.peerAsn = peerAsn;
+            $.peerAsn = peerAsn;
             return this;
         }
-        public Builder peerAsn(@Nullable SubResourceArgs peerAsn) {
-            this.peerAsn = Codegen.ofNullable(peerAsn);
-            return this;
-        }        public PeeringPropertiesExchangeArgs build() {
-            return new PeeringPropertiesExchangeArgs(connections, peerAsn);
+
+        public Builder peerAsn(SubResourceArgs peerAsn) {
+            return peerAsn(Output.of(peerAsn));
+        }
+
+        public PeeringPropertiesExchangeArgs build() {
+            return $;
         }
     }
+
 }

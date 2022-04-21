@@ -10,9 +10,9 @@ import com.pulumi.awsnative.lex.inputs.BotSlotDefaultValueSpecificationArgs;
 import com.pulumi.awsnative.lex.inputs.BotWaitAndContinueSpecificationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="defaultValueSpecification")
-      private final @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
+    private @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
 
-    public Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification() {
-        return this.defaultValueSpecification == null ? Codegen.empty() : this.defaultValueSpecification;
+    public Optional<Output<BotSlotDefaultValueSpecificationArgs>> defaultValueSpecification() {
+        return Optional.ofNullable(this.defaultValueSpecification);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="promptSpecification")
-      private final @Nullable Output<BotPromptSpecificationArgs> promptSpecification;
+    private @Nullable Output<BotPromptSpecificationArgs> promptSpecification;
 
-    public Output<BotPromptSpecificationArgs> promptSpecification() {
-        return this.promptSpecification == null ? Codegen.empty() : this.promptSpecification;
+    public Optional<Output<BotPromptSpecificationArgs>> promptSpecification() {
+        return Optional.ofNullable(this.promptSpecification);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="sampleUtterances")
-      private final @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
+    private @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
 
-    public Output<List<BotSampleUtteranceArgs>> sampleUtterances() {
-        return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
+    public Optional<Output<List<BotSampleUtteranceArgs>>> sampleUtterances() {
+        return Optional.ofNullable(this.sampleUtterances);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="slotConstraint", required=true)
-      private final Output<BotSlotConstraint> slotConstraint;
+    private Output<BotSlotConstraint> slotConstraint;
 
     public Output<BotSlotConstraint> slotConstraint() {
         return this.slotConstraint;
@@ -73,105 +73,93 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="waitAndContinueSpecification")
-      private final @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
+    private @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
 
-    public Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification() {
-        return this.waitAndContinueSpecification == null ? Codegen.empty() : this.waitAndContinueSpecification;
+    public Optional<Output<BotWaitAndContinueSpecificationArgs>> waitAndContinueSpecification() {
+        return Optional.ofNullable(this.waitAndContinueSpecification);
     }
 
-    public BotSlotValueElicitationSettingArgs(
-        @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification,
-        @Nullable Output<BotPromptSpecificationArgs> promptSpecification,
-        @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances,
-        Output<BotSlotConstraint> slotConstraint,
-        @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
-        this.defaultValueSpecification = defaultValueSpecification;
-        this.promptSpecification = promptSpecification;
-        this.sampleUtterances = sampleUtterances;
-        this.slotConstraint = Objects.requireNonNull(slotConstraint, "expected parameter 'slotConstraint' to be non-null");
-        this.waitAndContinueSpecification = waitAndContinueSpecification;
-    }
+    private BotSlotValueElicitationSettingArgs() {}
 
-    private BotSlotValueElicitationSettingArgs() {
-        this.defaultValueSpecification = Codegen.empty();
-        this.promptSpecification = Codegen.empty();
-        this.sampleUtterances = Codegen.empty();
-        this.slotConstraint = Codegen.empty();
-        this.waitAndContinueSpecification = Codegen.empty();
+    private BotSlotValueElicitationSettingArgs(BotSlotValueElicitationSettingArgs $) {
+        this.defaultValueSpecification = $.defaultValueSpecification;
+        this.promptSpecification = $.promptSpecification;
+        this.sampleUtterances = $.sampleUtterances;
+        this.slotConstraint = $.slotConstraint;
+        this.waitAndContinueSpecification = $.waitAndContinueSpecification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSlotValueElicitationSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
-        private @Nullable Output<BotPromptSpecificationArgs> promptSpecification;
-        private @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
-        private Output<BotSlotConstraint> slotConstraint;
-        private @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
+        private BotSlotValueElicitationSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSlotValueElicitationSettingArgs();
         }
 
         public Builder(BotSlotValueElicitationSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValueSpecification = defaults.defaultValueSpecification;
-    	      this.promptSpecification = defaults.promptSpecification;
-    	      this.sampleUtterances = defaults.sampleUtterances;
-    	      this.slotConstraint = defaults.slotConstraint;
-    	      this.waitAndContinueSpecification = defaults.waitAndContinueSpecification;
+            $ = new BotSlotValueElicitationSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValueSpecification(@Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification) {
-            this.defaultValueSpecification = defaultValueSpecification;
+            $.defaultValueSpecification = defaultValueSpecification;
             return this;
         }
-        public Builder defaultValueSpecification(@Nullable BotSlotDefaultValueSpecificationArgs defaultValueSpecification) {
-            this.defaultValueSpecification = Codegen.ofNullable(defaultValueSpecification);
-            return this;
+
+        public Builder defaultValueSpecification(BotSlotDefaultValueSpecificationArgs defaultValueSpecification) {
+            return defaultValueSpecification(Output.of(defaultValueSpecification));
         }
+
         public Builder promptSpecification(@Nullable Output<BotPromptSpecificationArgs> promptSpecification) {
-            this.promptSpecification = promptSpecification;
+            $.promptSpecification = promptSpecification;
             return this;
         }
-        public Builder promptSpecification(@Nullable BotPromptSpecificationArgs promptSpecification) {
-            this.promptSpecification = Codegen.ofNullable(promptSpecification);
-            return this;
+
+        public Builder promptSpecification(BotPromptSpecificationArgs promptSpecification) {
+            return promptSpecification(Output.of(promptSpecification));
         }
+
         public Builder sampleUtterances(@Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances) {
-            this.sampleUtterances = sampleUtterances;
+            $.sampleUtterances = sampleUtterances;
             return this;
         }
-        public Builder sampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
-            this.sampleUtterances = Codegen.ofNullable(sampleUtterances);
-            return this;
+
+        public Builder sampleUtterances(List<BotSampleUtteranceArgs> sampleUtterances) {
+            return sampleUtterances(Output.of(sampleUtterances));
         }
+
         public Builder sampleUtterances(BotSampleUtteranceArgs... sampleUtterances) {
             return sampleUtterances(List.of(sampleUtterances));
         }
+
         public Builder slotConstraint(Output<BotSlotConstraint> slotConstraint) {
-            this.slotConstraint = Objects.requireNonNull(slotConstraint);
+            $.slotConstraint = slotConstraint;
             return this;
         }
+
         public Builder slotConstraint(BotSlotConstraint slotConstraint) {
-            this.slotConstraint = Output.of(Objects.requireNonNull(slotConstraint));
-            return this;
+            return slotConstraint(Output.of(slotConstraint));
         }
+
         public Builder waitAndContinueSpecification(@Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
-            this.waitAndContinueSpecification = waitAndContinueSpecification;
+            $.waitAndContinueSpecification = waitAndContinueSpecification;
             return this;
         }
-        public Builder waitAndContinueSpecification(@Nullable BotWaitAndContinueSpecificationArgs waitAndContinueSpecification) {
-            this.waitAndContinueSpecification = Codegen.ofNullable(waitAndContinueSpecification);
-            return this;
-        }        public BotSlotValueElicitationSettingArgs build() {
-            return new BotSlotValueElicitationSettingArgs(defaultValueSpecification, promptSpecification, sampleUtterances, slotConstraint, waitAndContinueSpecification);
+
+        public Builder waitAndContinueSpecification(BotWaitAndContinueSpecificationArgs waitAndContinueSpecification) {
+            return waitAndContinueSpecification(Output.of(waitAndContinueSpecification));
+        }
+
+        public BotSlotValueElicitationSettingArgs build() {
+            $.slotConstraint = Objects.requireNonNull($.slotConstraint, "expected parameter 'slotConstraint' to be non-null");
+            return $;
         }
     }
+
 }

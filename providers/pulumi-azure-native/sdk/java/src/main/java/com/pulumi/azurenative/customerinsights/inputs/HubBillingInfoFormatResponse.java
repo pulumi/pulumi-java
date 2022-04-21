@@ -24,10 +24,10 @@ public final class HubBillingInfoFormatResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="maxUnits")
-      private final @Nullable Integer maxUnits;
+    private @Nullable Integer maxUnits;
 
     public Optional<Integer> maxUnits() {
-        return this.maxUnits == null ? Optional.empty() : Optional.ofNullable(this.maxUnits);
+        return Optional.ofNullable(this.maxUnits);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HubBillingInfoFormatResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="minUnits")
-      private final @Nullable Integer minUnits;
+    private @Nullable Integer minUnits;
 
     public Optional<Integer> minUnits() {
-        return this.minUnits == null ? Optional.empty() : Optional.ofNullable(this.minUnits);
+        return Optional.ofNullable(this.minUnits);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class HubBillingInfoFormatResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="skuName")
-      private final @Nullable String skuName;
+    private @Nullable String skuName;
 
     public Optional<String> skuName() {
-        return this.skuName == null ? Optional.empty() : Optional.ofNullable(this.skuName);
+        return Optional.ofNullable(this.skuName);
     }
 
-    public HubBillingInfoFormatResponse(
-        @Nullable Integer maxUnits,
-        @Nullable Integer minUnits,
-        @Nullable String skuName) {
-        this.maxUnits = maxUnits;
-        this.minUnits = minUnits;
-        this.skuName = skuName;
-    }
+    private HubBillingInfoFormatResponse() {}
 
-    private HubBillingInfoFormatResponse() {
-        this.maxUnits = null;
-        this.minUnits = null;
-        this.skuName = null;
+    private HubBillingInfoFormatResponse(HubBillingInfoFormatResponse $) {
+        this.maxUnits = $.maxUnits;
+        this.minUnits = $.minUnits;
+        this.skuName = $.skuName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubBillingInfoFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxUnits;
-        private @Nullable Integer minUnits;
-        private @Nullable String skuName;
+        private HubBillingInfoFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubBillingInfoFormatResponse();
         }
 
         public Builder(HubBillingInfoFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxUnits = defaults.maxUnits;
-    	      this.minUnits = defaults.minUnits;
-    	      this.skuName = defaults.skuName;
+            $ = new HubBillingInfoFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxUnits(@Nullable Integer maxUnits) {
-            this.maxUnits = maxUnits;
+            $.maxUnits = maxUnits;
             return this;
         }
+
         public Builder minUnits(@Nullable Integer minUnits) {
-            this.minUnits = minUnits;
+            $.minUnits = minUnits;
             return this;
         }
+
         public Builder skuName(@Nullable String skuName) {
-            this.skuName = skuName;
+            $.skuName = skuName;
             return this;
-        }        public HubBillingInfoFormatResponse build() {
-            return new HubBillingInfoFormatResponse(maxUnits, minUnits, skuName);
+        }
+
+        public HubBillingInfoFormatResponse build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class FormulaPropertiesFromVmResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="labVmId")
-      private final @Nullable String labVmId;
+    private @Nullable String labVmId;
 
     public Optional<String> labVmId() {
-        return this.labVmId == null ? Optional.empty() : Optional.ofNullable(this.labVmId);
+        return Optional.ofNullable(this.labVmId);
     }
 
-    public FormulaPropertiesFromVmResponse(@Nullable String labVmId) {
-        this.labVmId = labVmId;
-    }
+    private FormulaPropertiesFromVmResponse() {}
 
-    private FormulaPropertiesFromVmResponse() {
-        this.labVmId = null;
+    private FormulaPropertiesFromVmResponse(FormulaPropertiesFromVmResponse $) {
+        this.labVmId = $.labVmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FormulaPropertiesFromVmResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String labVmId;
+        private FormulaPropertiesFromVmResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FormulaPropertiesFromVmResponse();
         }
 
         public Builder(FormulaPropertiesFromVmResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labVmId = defaults.labVmId;
+            $ = new FormulaPropertiesFromVmResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labVmId(@Nullable String labVmId) {
-            this.labVmId = labVmId;
+            $.labVmId = labVmId;
             return this;
-        }        public FormulaPropertiesFromVmResponse build() {
-            return new FormulaPropertiesFromVmResponse(labVmId);
+        }
+
+        public FormulaPropertiesFromVmResponse build() {
+            return $;
         }
     }
+
 }

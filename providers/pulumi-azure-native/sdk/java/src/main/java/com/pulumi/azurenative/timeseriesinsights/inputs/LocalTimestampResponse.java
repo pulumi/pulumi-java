@@ -24,10 +24,10 @@ public final class LocalTimestampResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="format")
-      private final @Nullable String format;
+    private @Nullable String format;
 
     public Optional<String> format() {
-        return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class LocalTimestampResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="timeZoneOffset")
-      private final @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
+    private @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
 
     public Optional<LocalTimestampResponseTimeZoneOffset> timeZoneOffset() {
-        return this.timeZoneOffset == null ? Optional.empty() : Optional.ofNullable(this.timeZoneOffset);
+        return Optional.ofNullable(this.timeZoneOffset);
     }
 
-    public LocalTimestampResponse(
-        @Nullable String format,
-        @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
-        this.format = format;
-        this.timeZoneOffset = timeZoneOffset;
-    }
+    private LocalTimestampResponse() {}
 
-    private LocalTimestampResponse() {
-        this.format = null;
-        this.timeZoneOffset = null;
+    private LocalTimestampResponse(LocalTimestampResponse $) {
+        this.format = $.format;
+        this.timeZoneOffset = $.timeZoneOffset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalTimestampResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String format;
-        private @Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset;
+        private LocalTimestampResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalTimestampResponse();
         }
 
         public Builder(LocalTimestampResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.timeZoneOffset = defaults.timeZoneOffset;
+            $ = new LocalTimestampResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder format(@Nullable String format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder timeZoneOffset(@Nullable LocalTimestampResponseTimeZoneOffset timeZoneOffset) {
-            this.timeZoneOffset = timeZoneOffset;
+            $.timeZoneOffset = timeZoneOffset;
             return this;
-        }        public LocalTimestampResponse build() {
-            return new LocalTimestampResponse(format, timeZoneOffset);
+        }
+
+        public LocalTimestampResponse build() {
+            return $;
         }
     }
+
 }

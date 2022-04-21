@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.container_v1beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class MasterArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final MasterArgs Empty = new MasterArgs();
 
-    public MasterArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(MasterArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private MasterArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(MasterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new MasterArgs();
         }
         public MasterArgs build() {
-            return new MasterArgs();
+            return $;
         }
     }
+
 }

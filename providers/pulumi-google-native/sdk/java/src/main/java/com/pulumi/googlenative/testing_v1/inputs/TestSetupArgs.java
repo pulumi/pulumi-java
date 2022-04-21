@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.AccountArgs;
 import com.pulumi.googlenative.testing_v1.inputs.ApkArgs;
 import com.pulumi.googlenative.testing_v1.inputs.DeviceFileArgs;
@@ -14,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="account")
-      private final @Nullable Output<AccountArgs> account;
+    private @Nullable Output<AccountArgs> account;
 
-    public Output<AccountArgs> account() {
-        return this.account == null ? Codegen.empty() : this.account;
+    public Optional<Output<AccountArgs>> account() {
+        return Optional.ofNullable(this.account);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalApks")
-      private final @Nullable Output<List<ApkArgs>> additionalApks;
+    private @Nullable Output<List<ApkArgs>> additionalApks;
 
-    public Output<List<ApkArgs>> additionalApks() {
-        return this.additionalApks == null ? Codegen.empty() : this.additionalApks;
+    public Optional<Output<List<ApkArgs>>> additionalApks() {
+        return Optional.ofNullable(this.additionalApks);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="directoriesToPull")
-      private final @Nullable Output<List<String>> directoriesToPull;
+    private @Nullable Output<List<String>> directoriesToPull;
 
-    public Output<List<String>> directoriesToPull() {
-        return this.directoriesToPull == null ? Codegen.empty() : this.directoriesToPull;
+    public Optional<Output<List<String>>> directoriesToPull() {
+        return Optional.ofNullable(this.directoriesToPull);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dontAutograntPermissions")
-      private final @Nullable Output<Boolean> dontAutograntPermissions;
+    private @Nullable Output<Boolean> dontAutograntPermissions;
 
-    public Output<Boolean> dontAutograntPermissions() {
-        return this.dontAutograntPermissions == null ? Codegen.empty() : this.dontAutograntPermissions;
+    public Optional<Output<Boolean>> dontAutograntPermissions() {
+        return Optional.ofNullable(this.dontAutograntPermissions);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentVariables")
-      private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
+    private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
-    public Output<List<EnvironmentVariableArgs>> environmentVariables() {
-        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
+    public Optional<Output<List<EnvironmentVariableArgs>>> environmentVariables() {
+        return Optional.ofNullable(this.environmentVariables);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filesToPush")
-      private final @Nullable Output<List<DeviceFileArgs>> filesToPush;
+    private @Nullable Output<List<DeviceFileArgs>> filesToPush;
 
-    public Output<List<DeviceFileArgs>> filesToPush() {
-        return this.filesToPush == null ? Codegen.empty() : this.filesToPush;
+    public Optional<Output<List<DeviceFileArgs>>> filesToPush() {
+        return Optional.ofNullable(this.filesToPush);
     }
 
     /**
@@ -96,140 +96,124 @@ public final class TestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<String> networkProfile;
+    private @Nullable Output<String> networkProfile;
 
-    public Output<String> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<String>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
-    public TestSetupArgs(
-        @Nullable Output<AccountArgs> account,
-        @Nullable Output<List<ApkArgs>> additionalApks,
-        @Nullable Output<List<String>> directoriesToPull,
-        @Nullable Output<Boolean> dontAutograntPermissions,
-        @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables,
-        @Nullable Output<List<DeviceFileArgs>> filesToPush,
-        @Nullable Output<String> networkProfile) {
-        this.account = account;
-        this.additionalApks = additionalApks;
-        this.directoriesToPull = directoriesToPull;
-        this.dontAutograntPermissions = dontAutograntPermissions;
-        this.environmentVariables = environmentVariables;
-        this.filesToPush = filesToPush;
-        this.networkProfile = networkProfile;
-    }
+    private TestSetupArgs() {}
 
-    private TestSetupArgs() {
-        this.account = Codegen.empty();
-        this.additionalApks = Codegen.empty();
-        this.directoriesToPull = Codegen.empty();
-        this.dontAutograntPermissions = Codegen.empty();
-        this.environmentVariables = Codegen.empty();
-        this.filesToPush = Codegen.empty();
-        this.networkProfile = Codegen.empty();
+    private TestSetupArgs(TestSetupArgs $) {
+        this.account = $.account;
+        this.additionalApks = $.additionalApks;
+        this.directoriesToPull = $.directoriesToPull;
+        this.dontAutograntPermissions = $.dontAutograntPermissions;
+        this.environmentVariables = $.environmentVariables;
+        this.filesToPush = $.filesToPush;
+        this.networkProfile = $.networkProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestSetupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AccountArgs> account;
-        private @Nullable Output<List<ApkArgs>> additionalApks;
-        private @Nullable Output<List<String>> directoriesToPull;
-        private @Nullable Output<Boolean> dontAutograntPermissions;
-        private @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
-        private @Nullable Output<List<DeviceFileArgs>> filesToPush;
-        private @Nullable Output<String> networkProfile;
+        private TestSetupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestSetupArgs();
         }
 
         public Builder(TestSetupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.account = defaults.account;
-    	      this.additionalApks = defaults.additionalApks;
-    	      this.directoriesToPull = defaults.directoriesToPull;
-    	      this.dontAutograntPermissions = defaults.dontAutograntPermissions;
-    	      this.environmentVariables = defaults.environmentVariables;
-    	      this.filesToPush = defaults.filesToPush;
-    	      this.networkProfile = defaults.networkProfile;
+            $ = new TestSetupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder account(@Nullable Output<AccountArgs> account) {
-            this.account = account;
+            $.account = account;
             return this;
         }
-        public Builder account(@Nullable AccountArgs account) {
-            this.account = Codegen.ofNullable(account);
-            return this;
+
+        public Builder account(AccountArgs account) {
+            return account(Output.of(account));
         }
+
         public Builder additionalApks(@Nullable Output<List<ApkArgs>> additionalApks) {
-            this.additionalApks = additionalApks;
+            $.additionalApks = additionalApks;
             return this;
         }
-        public Builder additionalApks(@Nullable List<ApkArgs> additionalApks) {
-            this.additionalApks = Codegen.ofNullable(additionalApks);
-            return this;
+
+        public Builder additionalApks(List<ApkArgs> additionalApks) {
+            return additionalApks(Output.of(additionalApks));
         }
+
         public Builder additionalApks(ApkArgs... additionalApks) {
             return additionalApks(List.of(additionalApks));
         }
+
         public Builder directoriesToPull(@Nullable Output<List<String>> directoriesToPull) {
-            this.directoriesToPull = directoriesToPull;
+            $.directoriesToPull = directoriesToPull;
             return this;
         }
-        public Builder directoriesToPull(@Nullable List<String> directoriesToPull) {
-            this.directoriesToPull = Codegen.ofNullable(directoriesToPull);
-            return this;
+
+        public Builder directoriesToPull(List<String> directoriesToPull) {
+            return directoriesToPull(Output.of(directoriesToPull));
         }
+
         public Builder directoriesToPull(String... directoriesToPull) {
             return directoriesToPull(List.of(directoriesToPull));
         }
+
         public Builder dontAutograntPermissions(@Nullable Output<Boolean> dontAutograntPermissions) {
-            this.dontAutograntPermissions = dontAutograntPermissions;
+            $.dontAutograntPermissions = dontAutograntPermissions;
             return this;
         }
-        public Builder dontAutograntPermissions(@Nullable Boolean dontAutograntPermissions) {
-            this.dontAutograntPermissions = Codegen.ofNullable(dontAutograntPermissions);
-            return this;
+
+        public Builder dontAutograntPermissions(Boolean dontAutograntPermissions) {
+            return dontAutograntPermissions(Output.of(dontAutograntPermissions));
         }
+
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
-            this.environmentVariables = environmentVariables;
+            $.environmentVariables = environmentVariables;
             return this;
         }
-        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Codegen.ofNullable(environmentVariables);
-            return this;
+
+        public Builder environmentVariables(List<EnvironmentVariableArgs> environmentVariables) {
+            return environmentVariables(Output.of(environmentVariables));
         }
+
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
             return environmentVariables(List.of(environmentVariables));
         }
+
         public Builder filesToPush(@Nullable Output<List<DeviceFileArgs>> filesToPush) {
-            this.filesToPush = filesToPush;
+            $.filesToPush = filesToPush;
             return this;
         }
-        public Builder filesToPush(@Nullable List<DeviceFileArgs> filesToPush) {
-            this.filesToPush = Codegen.ofNullable(filesToPush);
-            return this;
+
+        public Builder filesToPush(List<DeviceFileArgs> filesToPush) {
+            return filesToPush(Output.of(filesToPush));
         }
+
         public Builder filesToPush(DeviceFileArgs... filesToPush) {
             return filesToPush(List.of(filesToPush));
         }
+
         public Builder networkProfile(@Nullable Output<String> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable String networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
-        }        public TestSetupArgs build() {
-            return new TestSetupArgs(account, additionalApks, directoriesToPull, dontAutograntPermissions, environmentVariables, filesToPush, networkProfile);
+
+        public Builder networkProfile(String networkProfile) {
+            return networkProfile(Output.of(networkProfile));
+        }
+
+        public TestSetupArgs build() {
+            return $;
         }
     }
+
 }

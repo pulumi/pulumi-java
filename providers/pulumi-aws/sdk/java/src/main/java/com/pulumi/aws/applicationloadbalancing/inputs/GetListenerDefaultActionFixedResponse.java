@@ -13,78 +13,73 @@ public final class GetListenerDefaultActionFixedResponse extends com.pulumi.reso
     public static final GetListenerDefaultActionFixedResponse Empty = new GetListenerDefaultActionFixedResponse();
 
     @Import(name="contentType", required=true)
-      private final String contentType;
+    private String contentType;
 
     public String contentType() {
         return this.contentType;
     }
 
     @Import(name="messageBody", required=true)
-      private final String messageBody;
+    private String messageBody;
 
     public String messageBody() {
         return this.messageBody;
     }
 
     @Import(name="statusCode", required=true)
-      private final String statusCode;
+    private String statusCode;
 
     public String statusCode() {
         return this.statusCode;
     }
 
-    public GetListenerDefaultActionFixedResponse(
-        String contentType,
-        String messageBody,
-        String statusCode) {
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.messageBody = Objects.requireNonNull(messageBody, "expected parameter 'messageBody' to be non-null");
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private GetListenerDefaultActionFixedResponse() {}
 
-    private GetListenerDefaultActionFixedResponse() {
-        this.contentType = null;
-        this.messageBody = null;
-        this.statusCode = null;
+    private GetListenerDefaultActionFixedResponse(GetListenerDefaultActionFixedResponse $) {
+        this.contentType = $.contentType;
+        this.messageBody = $.messageBody;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetListenerDefaultActionFixedResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contentType;
-        private String messageBody;
-        private String statusCode;
+        private GetListenerDefaultActionFixedResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetListenerDefaultActionFixedResponse();
         }
 
         public Builder(GetListenerDefaultActionFixedResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.messageBody = defaults.messageBody;
-    	      this.statusCode = defaults.statusCode;
+            $ = new GetListenerDefaultActionFixedResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(String contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder messageBody(String messageBody) {
-            this.messageBody = Objects.requireNonNull(messageBody);
+            $.messageBody = messageBody;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
-        }        public GetListenerDefaultActionFixedResponse build() {
-            return new GetListenerDefaultActionFixedResponse(contentType, messageBody, statusCode);
+        }
+
+        public GetListenerDefaultActionFixedResponse build() {
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.messageBody = Objects.requireNonNull($.messageBody, "expected parameter 'messageBody' to be non-null");
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

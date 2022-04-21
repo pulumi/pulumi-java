@@ -5,9 +5,9 @@ package com.pulumi.aws.codeartifact.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,83 @@ public final class RepositoryExternalConnectionsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="externalConnectionName", required=true)
-      private final Output<String> externalConnectionName;
+    private Output<String> externalConnectionName;
 
     public Output<String> externalConnectionName() {
         return this.externalConnectionName;
     }
 
     @Import(name="packageFormat")
-      private final @Nullable Output<String> packageFormat;
+    private @Nullable Output<String> packageFormat;
 
-    public Output<String> packageFormat() {
-        return this.packageFormat == null ? Codegen.empty() : this.packageFormat;
+    public Optional<Output<String>> packageFormat() {
+        return Optional.ofNullable(this.packageFormat);
     }
 
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public RepositoryExternalConnectionsArgs(
-        Output<String> externalConnectionName,
-        @Nullable Output<String> packageFormat,
-        @Nullable Output<String> status) {
-        this.externalConnectionName = Objects.requireNonNull(externalConnectionName, "expected parameter 'externalConnectionName' to be non-null");
-        this.packageFormat = packageFormat;
-        this.status = status;
-    }
+    private RepositoryExternalConnectionsArgs() {}
 
-    private RepositoryExternalConnectionsArgs() {
-        this.externalConnectionName = Codegen.empty();
-        this.packageFormat = Codegen.empty();
-        this.status = Codegen.empty();
+    private RepositoryExternalConnectionsArgs(RepositoryExternalConnectionsArgs $) {
+        this.externalConnectionName = $.externalConnectionName;
+        this.packageFormat = $.packageFormat;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryExternalConnectionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> externalConnectionName;
-        private @Nullable Output<String> packageFormat;
-        private @Nullable Output<String> status;
+        private RepositoryExternalConnectionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryExternalConnectionsArgs();
         }
 
         public Builder(RepositoryExternalConnectionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalConnectionName = defaults.externalConnectionName;
-    	      this.packageFormat = defaults.packageFormat;
-    	      this.status = defaults.status;
+            $ = new RepositoryExternalConnectionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalConnectionName(Output<String> externalConnectionName) {
-            this.externalConnectionName = Objects.requireNonNull(externalConnectionName);
+            $.externalConnectionName = externalConnectionName;
             return this;
         }
+
         public Builder externalConnectionName(String externalConnectionName) {
-            this.externalConnectionName = Output.of(Objects.requireNonNull(externalConnectionName));
-            return this;
+            return externalConnectionName(Output.of(externalConnectionName));
         }
+
         public Builder packageFormat(@Nullable Output<String> packageFormat) {
-            this.packageFormat = packageFormat;
+            $.packageFormat = packageFormat;
             return this;
         }
-        public Builder packageFormat(@Nullable String packageFormat) {
-            this.packageFormat = Codegen.ofNullable(packageFormat);
-            return this;
+
+        public Builder packageFormat(String packageFormat) {
+            return packageFormat(Output.of(packageFormat));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public RepositoryExternalConnectionsArgs build() {
-            return new RepositoryExternalConnectionsArgs(externalConnectionName, packageFormat, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public RepositoryExternalConnectionsArgs build() {
+            $.externalConnectionName = Objects.requireNonNull($.externalConnectionName, "expected parameter 'externalConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

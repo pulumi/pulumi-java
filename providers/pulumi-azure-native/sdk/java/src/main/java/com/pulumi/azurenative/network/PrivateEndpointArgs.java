@@ -9,11 +9,11 @@ import com.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionArgs;
 import com.pulumi.azurenative.network.inputs.SubnetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="customDnsConfigs")
-      private final @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
+    private @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
 
-    public Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs() {
-        return this.customDnsConfigs == null ? Codegen.empty() : this.customDnsConfigs;
+    public Optional<Output<List<CustomDnsConfigPropertiesFormatArgs>>> customDnsConfigs() {
+        return Optional.ofNullable(this.customDnsConfigs);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="manualPrivateLinkServiceConnections")
-      private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
+    private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections() {
-        return this.manualPrivateLinkServiceConnections == null ? Codegen.empty() : this.manualPrivateLinkServiceConnections;
+    public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> manualPrivateLinkServiceConnections() {
+        return Optional.ofNullable(this.manualPrivateLinkServiceConnections);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="privateEndpointName")
-      private final @Nullable Output<String> privateEndpointName;
+    private @Nullable Output<String> privateEndpointName;
 
-    public Output<String> privateEndpointName() {
-        return this.privateEndpointName == null ? Codegen.empty() : this.privateEndpointName;
+    public Optional<Output<String>> privateEndpointName() {
+        return Optional.ofNullable(this.privateEndpointName);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="privateLinkServiceConnections")
-      private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
+    private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
-    public Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections() {
-        return this.privateLinkServiceConnections == null ? Codegen.empty() : this.privateLinkServiceConnections;
+    public Optional<Output<List<PrivateLinkServiceConnectionArgs>>> privateLinkServiceConnections() {
+        return Optional.ofNullable(this.privateLinkServiceConnections);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -114,10 +114,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<SubnetArgs> subnet;
+    private @Nullable Output<SubnetArgs> subnet;
 
-    public Output<SubnetArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<SubnetArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -125,176 +125,151 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PrivateEndpointArgs(
-        @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections,
-        @Nullable Output<String> privateEndpointName,
-        @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections,
-        Output<String> resourceGroupName,
-        @Nullable Output<SubnetArgs> subnet,
-        @Nullable Output<Map<String,String>> tags) {
-        this.customDnsConfigs = customDnsConfigs;
-        this.extendedLocation = extendedLocation;
-        this.id = id;
-        this.location = location;
-        this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
-        this.privateEndpointName = privateEndpointName;
-        this.privateLinkServiceConnections = privateLinkServiceConnections;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subnet = subnet;
-        this.tags = tags;
-    }
+    private PrivateEndpointArgs() {}
 
-    private PrivateEndpointArgs() {
-        this.customDnsConfigs = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.manualPrivateLinkServiceConnections = Codegen.empty();
-        this.privateEndpointName = Codegen.empty();
-        this.privateLinkServiceConnections = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.subnet = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PrivateEndpointArgs(PrivateEndpointArgs $) {
+        this.customDnsConfigs = $.customDnsConfigs;
+        this.extendedLocation = $.extendedLocation;
+        this.id = $.id;
+        this.location = $.location;
+        this.manualPrivateLinkServiceConnections = $.manualPrivateLinkServiceConnections;
+        this.privateEndpointName = $.privateEndpointName;
+        this.privateLinkServiceConnections = $.privateLinkServiceConnections;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subnet = $.subnet;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
-        private @Nullable Output<String> privateEndpointName;
-        private @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SubnetArgs> subnet;
-        private @Nullable Output<Map<String,String>> tags;
+        private PrivateEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointArgs();
         }
 
         public Builder(PrivateEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customDnsConfigs = defaults.customDnsConfigs;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.manualPrivateLinkServiceConnections = defaults.manualPrivateLinkServiceConnections;
-    	      this.privateEndpointName = defaults.privateEndpointName;
-    	      this.privateLinkServiceConnections = defaults.privateLinkServiceConnections;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subnet = defaults.subnet;
-    	      this.tags = defaults.tags;
+            $ = new PrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customDnsConfigs(@Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs) {
-            this.customDnsConfigs = customDnsConfigs;
+            $.customDnsConfigs = customDnsConfigs;
             return this;
         }
-        public Builder customDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatArgs> customDnsConfigs) {
-            this.customDnsConfigs = Codegen.ofNullable(customDnsConfigs);
-            return this;
+
+        public Builder customDnsConfigs(List<CustomDnsConfigPropertiesFormatArgs> customDnsConfigs) {
+            return customDnsConfigs(Output.of(customDnsConfigs));
         }
+
         public Builder customDnsConfigs(CustomDnsConfigPropertiesFormatArgs... customDnsConfigs) {
             return customDnsConfigs(List.of(customDnsConfigs));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder manualPrivateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
+            $.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
-        public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
-            this.manualPrivateLinkServiceConnections = Codegen.ofNullable(manualPrivateLinkServiceConnections);
-            return this;
+
+        public Builder manualPrivateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
+            return manualPrivateLinkServiceConnections(Output.of(manualPrivateLinkServiceConnections));
         }
+
         public Builder manualPrivateLinkServiceConnections(PrivateLinkServiceConnectionArgs... manualPrivateLinkServiceConnections) {
             return manualPrivateLinkServiceConnections(List.of(manualPrivateLinkServiceConnections));
         }
+
         public Builder privateEndpointName(@Nullable Output<String> privateEndpointName) {
-            this.privateEndpointName = privateEndpointName;
+            $.privateEndpointName = privateEndpointName;
             return this;
         }
-        public Builder privateEndpointName(@Nullable String privateEndpointName) {
-            this.privateEndpointName = Codegen.ofNullable(privateEndpointName);
-            return this;
+
+        public Builder privateEndpointName(String privateEndpointName) {
+            return privateEndpointName(Output.of(privateEndpointName));
         }
+
         public Builder privateLinkServiceConnections(@Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
-            this.privateLinkServiceConnections = privateLinkServiceConnections;
+            $.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
-        public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
-            this.privateLinkServiceConnections = Codegen.ofNullable(privateLinkServiceConnections);
-            return this;
+
+        public Builder privateLinkServiceConnections(List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
+            return privateLinkServiceConnections(Output.of(privateLinkServiceConnections));
         }
+
         public Builder privateLinkServiceConnections(PrivateLinkServiceConnectionArgs... privateLinkServiceConnections) {
             return privateLinkServiceConnections(List.of(privateLinkServiceConnections));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
+
+        public Builder subnet(SubnetArgs subnet) {
+            return subnet(Output.of(subnet));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PrivateEndpointArgs build() {
-            return new PrivateEndpointArgs(customDnsConfigs, extendedLocation, id, location, manualPrivateLinkServiceConnections, privateEndpointName, privateLinkServiceConnections, resourceGroupName, subnet, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PrivateEndpointArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

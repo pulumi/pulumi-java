@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,130 +17,116 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs exte
     public static final ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs Empty = new ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs();
 
     @Import(name="disable")
-      private final @Nullable Output<Boolean> disable;
+    private @Nullable Output<Boolean> disable;
 
-    public Output<Boolean> disable() {
-        return this.disable == null ? Codegen.empty() : this.disable;
+    public Optional<Output<Boolean>> disable() {
+        return Optional.ofNullable(this.disable);
     }
 
     @Import(name="level")
-      private final @Nullable Output<String> level;
+    private @Nullable Output<String> level;
 
-    public Output<String> level() {
-        return this.level == null ? Codegen.empty() : this.level;
+    public Optional<Output<String>> level() {
+        return Optional.ofNullable(this.level);
     }
 
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs(
-        @Nullable Output<Boolean> disable,
-        @Nullable Output<String> level,
-        @Nullable Output<String> role,
-        @Nullable Output<String> type,
-        @Nullable Output<String> user) {
-        this.disable = disable;
-        this.level = level;
-        this.role = role;
-        this.type = type;
-        this.user = user;
-    }
+    private ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs() {}
 
-    private ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs() {
-        this.disable = Codegen.empty();
-        this.level = Codegen.empty();
-        this.role = Codegen.empty();
-        this.type = Codegen.empty();
-        this.user = Codegen.empty();
+    private ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs(ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs $) {
+        this.disable = $.disable;
+        this.level = $.level;
+        this.role = $.role;
+        this.type = $.type;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disable;
-        private @Nullable Output<String> level;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> user;
+        private ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disable = defaults.disable;
-    	      this.level = defaults.level;
-    	      this.role = defaults.role;
-    	      this.type = defaults.type;
-    	      this.user = defaults.user;
+            $ = new ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disable(@Nullable Output<Boolean> disable) {
-            this.disable = disable;
+            $.disable = disable;
             return this;
         }
-        public Builder disable(@Nullable Boolean disable) {
-            this.disable = Codegen.ofNullable(disable);
-            return this;
+
+        public Builder disable(Boolean disable) {
+            return disable(Output.of(disable));
         }
+
         public Builder level(@Nullable Output<String> level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
-        public Builder level(@Nullable String level) {
-            this.level = Codegen.ofNullable(level);
-            return this;
+
+        public Builder level(String level) {
+            return level(Output.of(level));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs build() {
-            return new ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs(disable, level, role, type, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextArgs build() {
+            return $;
         }
     }
+
 }

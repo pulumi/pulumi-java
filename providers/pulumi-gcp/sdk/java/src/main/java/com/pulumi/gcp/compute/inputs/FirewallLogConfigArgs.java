@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class FirewallLogConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="metadata", required=true)
-      private final Output<String> metadata;
+    private Output<String> metadata;
 
     public Output<String> metadata() {
         return this.metadata;
     }
 
-    public FirewallLogConfigArgs(Output<String> metadata) {
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-    }
+    private FirewallLogConfigArgs() {}
 
-    private FirewallLogConfigArgs() {
-        this.metadata = Codegen.empty();
+    private FirewallLogConfigArgs(FirewallLogConfigArgs $) {
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallLogConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> metadata;
+        private FirewallLogConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallLogConfigArgs();
         }
 
         public Builder(FirewallLogConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
+            $ = new FirewallLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(Output<String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder metadata(String metadata) {
-            this.metadata = Output.of(Objects.requireNonNull(metadata));
-            return this;
-        }        public FirewallLogConfigArgs build() {
-            return new FirewallLogConfigArgs(metadata);
+            return metadata(Output.of(metadata));
+        }
+
+        public FirewallLogConfigArgs build() {
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            return $;
         }
     }
+
 }

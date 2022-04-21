@@ -13,45 +13,45 @@ public final class GetKnowledgeBaseArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetKnowledgeBaseArgs Empty = new GetKnowledgeBaseArgs();
 
     @Import(name="knowledgeBaseId", required=true)
-      private final String knowledgeBaseId;
+    private String knowledgeBaseId;
 
     public String knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
-    public GetKnowledgeBaseArgs(String knowledgeBaseId) {
-        this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
-    }
+    private GetKnowledgeBaseArgs() {}
 
-    private GetKnowledgeBaseArgs() {
-        this.knowledgeBaseId = null;
+    private GetKnowledgeBaseArgs(GetKnowledgeBaseArgs $) {
+        this.knowledgeBaseId = $.knowledgeBaseId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKnowledgeBaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String knowledgeBaseId;
+        private GetKnowledgeBaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKnowledgeBaseArgs();
         }
 
         public Builder(GetKnowledgeBaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.knowledgeBaseId = defaults.knowledgeBaseId;
+            $ = new GetKnowledgeBaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder knowledgeBaseId(String knowledgeBaseId) {
-            this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
+            $.knowledgeBaseId = knowledgeBaseId;
             return this;
-        }        public GetKnowledgeBaseArgs build() {
-            return new GetKnowledgeBaseArgs(knowledgeBaseId);
+        }
+
+        public GetKnowledgeBaseArgs build() {
+            $.knowledgeBaseId = Objects.requireNonNull($.knowledgeBaseId, "expected parameter 'knowledgeBaseId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.UrlMapTestHeaderArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expectedOutputUrl")
-      private final @Nullable Output<String> expectedOutputUrl;
+    private @Nullable Output<String> expectedOutputUrl;
 
-    public Output<String> expectedOutputUrl() {
-        return this.expectedOutputUrl == null ? Codegen.empty() : this.expectedOutputUrl;
+    public Optional<Output<String>> expectedOutputUrl() {
+        return Optional.ofNullable(this.expectedOutputUrl);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expectedRedirectResponseCode")
-      private final @Nullable Output<Integer> expectedRedirectResponseCode;
+    private @Nullable Output<Integer> expectedRedirectResponseCode;
 
-    public Output<Integer> expectedRedirectResponseCode() {
-        return this.expectedRedirectResponseCode == null ? Codegen.empty() : this.expectedRedirectResponseCode;
+    public Optional<Output<Integer>> expectedRedirectResponseCode() {
+        return Optional.ofNullable(this.expectedRedirectResponseCode);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<List<UrlMapTestHeaderArgs>> headers;
+    private @Nullable Output<List<UrlMapTestHeaderArgs>> headers;
 
-    public Output<List<UrlMapTestHeaderArgs>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<List<UrlMapTestHeaderArgs>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -93,131 +93,112 @@ public final class UrlMapTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public UrlMapTestArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> expectedOutputUrl,
-        @Nullable Output<Integer> expectedRedirectResponseCode,
-        @Nullable Output<List<UrlMapTestHeaderArgs>> headers,
-        @Nullable Output<String> host,
-        @Nullable Output<String> path,
-        @Nullable Output<String> service) {
-        this.description = description;
-        this.expectedOutputUrl = expectedOutputUrl;
-        this.expectedRedirectResponseCode = expectedRedirectResponseCode;
-        this.headers = headers;
-        this.host = host;
-        this.path = path;
-        this.service = service;
-    }
+    private UrlMapTestArgs() {}
 
-    private UrlMapTestArgs() {
-        this.description = Codegen.empty();
-        this.expectedOutputUrl = Codegen.empty();
-        this.expectedRedirectResponseCode = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.host = Codegen.empty();
-        this.path = Codegen.empty();
-        this.service = Codegen.empty();
+    private UrlMapTestArgs(UrlMapTestArgs $) {
+        this.description = $.description;
+        this.expectedOutputUrl = $.expectedOutputUrl;
+        this.expectedRedirectResponseCode = $.expectedRedirectResponseCode;
+        this.headers = $.headers;
+        this.host = $.host;
+        this.path = $.path;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlMapTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> expectedOutputUrl;
-        private @Nullable Output<Integer> expectedRedirectResponseCode;
-        private @Nullable Output<List<UrlMapTestHeaderArgs>> headers;
-        private @Nullable Output<String> host;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> service;
+        private UrlMapTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlMapTestArgs();
         }
 
         public Builder(UrlMapTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.expectedOutputUrl = defaults.expectedOutputUrl;
-    	      this.expectedRedirectResponseCode = defaults.expectedRedirectResponseCode;
-    	      this.headers = defaults.headers;
-    	      this.host = defaults.host;
-    	      this.path = defaults.path;
-    	      this.service = defaults.service;
+            $ = new UrlMapTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expectedOutputUrl(@Nullable Output<String> expectedOutputUrl) {
-            this.expectedOutputUrl = expectedOutputUrl;
+            $.expectedOutputUrl = expectedOutputUrl;
             return this;
         }
-        public Builder expectedOutputUrl(@Nullable String expectedOutputUrl) {
-            this.expectedOutputUrl = Codegen.ofNullable(expectedOutputUrl);
-            return this;
+
+        public Builder expectedOutputUrl(String expectedOutputUrl) {
+            return expectedOutputUrl(Output.of(expectedOutputUrl));
         }
+
         public Builder expectedRedirectResponseCode(@Nullable Output<Integer> expectedRedirectResponseCode) {
-            this.expectedRedirectResponseCode = expectedRedirectResponseCode;
+            $.expectedRedirectResponseCode = expectedRedirectResponseCode;
             return this;
         }
-        public Builder expectedRedirectResponseCode(@Nullable Integer expectedRedirectResponseCode) {
-            this.expectedRedirectResponseCode = Codegen.ofNullable(expectedRedirectResponseCode);
-            return this;
+
+        public Builder expectedRedirectResponseCode(Integer expectedRedirectResponseCode) {
+            return expectedRedirectResponseCode(Output.of(expectedRedirectResponseCode));
         }
+
         public Builder headers(@Nullable Output<List<UrlMapTestHeaderArgs>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable List<UrlMapTestHeaderArgs> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(List<UrlMapTestHeaderArgs> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder headers(UrlMapTestHeaderArgs... headers) {
             return headers(List.of(headers));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public UrlMapTestArgs build() {
-            return new UrlMapTestArgs(description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public UrlMapTestArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetFunctionDeadLetterConfig extends com.pulumi.resources.Invo
     public static final GetFunctionDeadLetterConfig Empty = new GetFunctionDeadLetterConfig();
 
     @Import(name="targetArn", required=true)
-      private final String targetArn;
+    private String targetArn;
 
     public String targetArn() {
         return this.targetArn;
     }
 
-    public GetFunctionDeadLetterConfig(String targetArn) {
-        this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
-    }
+    private GetFunctionDeadLetterConfig() {}
 
-    private GetFunctionDeadLetterConfig() {
-        this.targetArn = null;
+    private GetFunctionDeadLetterConfig(GetFunctionDeadLetterConfig $) {
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionDeadLetterConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String targetArn;
+        private GetFunctionDeadLetterConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionDeadLetterConfig();
         }
 
         public Builder(GetFunctionDeadLetterConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetArn = defaults.targetArn;
+            $ = new GetFunctionDeadLetterConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder targetArn(String targetArn) {
-            this.targetArn = Objects.requireNonNull(targetArn);
+            $.targetArn = targetArn;
             return this;
-        }        public GetFunctionDeadLetterConfig build() {
-            return new GetFunctionDeadLetterConfig(targetArn);
+        }
+
+        public GetFunctionDeadLetterConfig build() {
+            $.targetArn = Objects.requireNonNull($.targetArn, "expected parameter 'targetArn' to be non-null");
+            return $;
         }
     }
+
 }

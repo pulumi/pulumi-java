@@ -22,48 +22,49 @@ public final class SystemParametersResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rules", required=true)
-      private final List<SystemParameterRuleResponse> rules;
+    private List<SystemParameterRuleResponse> rules;
 
     public List<SystemParameterRuleResponse> rules() {
         return this.rules;
     }
 
-    public SystemParametersResponse(List<SystemParameterRuleResponse> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private SystemParametersResponse() {}
 
-    private SystemParametersResponse() {
-        this.rules = List.of();
+    private SystemParametersResponse(SystemParametersResponse $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SystemParameterRuleResponse> rules;
+        private SystemParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemParametersResponse();
         }
 
         public Builder(SystemParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new SystemParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(List<SystemParameterRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(SystemParameterRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public SystemParametersResponse build() {
-            return new SystemParametersResponse(rules);
+        }
+
+        public SystemParametersResponse build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

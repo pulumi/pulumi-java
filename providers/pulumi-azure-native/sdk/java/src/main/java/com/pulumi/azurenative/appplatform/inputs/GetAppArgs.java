@@ -19,7 +19,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="appName", required=true)
-      private final String appName;
+    private String appName;
 
     public String appName() {
         return this.appName;
@@ -30,7 +30,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -52,73 +52,65 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncStatus")
-      private final @Nullable String syncStatus;
+    private @Nullable String syncStatus;
 
     public Optional<String> syncStatus() {
-        return this.syncStatus == null ? Optional.empty() : Optional.ofNullable(this.syncStatus);
+        return Optional.ofNullable(this.syncStatus);
     }
 
-    public GetAppArgs(
-        String appName,
-        String resourceGroupName,
-        String serviceName,
-        @Nullable String syncStatus) {
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.syncStatus = syncStatus;
-    }
+    private GetAppArgs() {}
 
-    private GetAppArgs() {
-        this.appName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.syncStatus = null;
+    private GetAppArgs(GetAppArgs $) {
+        this.appName = $.appName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.syncStatus = $.syncStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appName;
-        private String resourceGroupName;
-        private String serviceName;
-        private @Nullable String syncStatus;
+        private GetAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppArgs();
         }
 
         public Builder(GetAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.syncStatus = defaults.syncStatus;
+            $ = new GetAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(String appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder syncStatus(@Nullable String syncStatus) {
-            this.syncStatus = syncStatus;
+            $.syncStatus = syncStatus;
             return this;
-        }        public GetAppArgs build() {
-            return new GetAppArgs(appName, resourceGroupName, serviceName, syncStatus);
+        }
+
+        public GetAppArgs build() {
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

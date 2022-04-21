@@ -5,9 +5,9 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class OSPolicyInventoryFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="osShortName", required=true)
-      private final Output<String> osShortName;
+    private Output<String> osShortName;
 
     public Output<String> osShortName() {
         return this.osShortName;
@@ -35,63 +35,59 @@ public final class OSPolicyInventoryFilterArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="osVersion")
-      private final @Nullable Output<String> osVersion;
+    private @Nullable Output<String> osVersion;
 
-    public Output<String> osVersion() {
-        return this.osVersion == null ? Codegen.empty() : this.osVersion;
+    public Optional<Output<String>> osVersion() {
+        return Optional.ofNullable(this.osVersion);
     }
 
-    public OSPolicyInventoryFilterArgs(
-        Output<String> osShortName,
-        @Nullable Output<String> osVersion) {
-        this.osShortName = Objects.requireNonNull(osShortName, "expected parameter 'osShortName' to be non-null");
-        this.osVersion = osVersion;
-    }
+    private OSPolicyInventoryFilterArgs() {}
 
-    private OSPolicyInventoryFilterArgs() {
-        this.osShortName = Codegen.empty();
-        this.osVersion = Codegen.empty();
+    private OSPolicyInventoryFilterArgs(OSPolicyInventoryFilterArgs $) {
+        this.osShortName = $.osShortName;
+        this.osVersion = $.osVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyInventoryFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> osShortName;
-        private @Nullable Output<String> osVersion;
+        private OSPolicyInventoryFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyInventoryFilterArgs();
         }
 
         public Builder(OSPolicyInventoryFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osShortName = defaults.osShortName;
-    	      this.osVersion = defaults.osVersion;
+            $ = new OSPolicyInventoryFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder osShortName(Output<String> osShortName) {
-            this.osShortName = Objects.requireNonNull(osShortName);
+            $.osShortName = osShortName;
             return this;
         }
+
         public Builder osShortName(String osShortName) {
-            this.osShortName = Output.of(Objects.requireNonNull(osShortName));
-            return this;
+            return osShortName(Output.of(osShortName));
         }
+
         public Builder osVersion(@Nullable Output<String> osVersion) {
-            this.osVersion = osVersion;
+            $.osVersion = osVersion;
             return this;
         }
-        public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Codegen.ofNullable(osVersion);
-            return this;
-        }        public OSPolicyInventoryFilterArgs build() {
-            return new OSPolicyInventoryFilterArgs(osShortName, osVersion);
+
+        public Builder osVersion(String osVersion) {
+            return osVersion(Output.of(osVersion));
+        }
+
+        public OSPolicyInventoryFilterArgs build() {
+            $.osShortName = Objects.requireNonNull($.osShortName, "expected parameter 'osShortName' to be non-null");
+            return $;
         }
     }
+
 }

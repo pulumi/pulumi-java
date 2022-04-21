@@ -6,9 +6,9 @@ package com.pulumi.awsnative.appflow.inputs;
 import com.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,101 @@ public final class FlowSnowflakeDestinationPropertiesArgs extends com.pulumi.res
     public static final FlowSnowflakeDestinationPropertiesArgs Empty = new FlowSnowflakeDestinationPropertiesArgs();
 
     @Import(name="bucketPrefix")
-      private final @Nullable Output<String> bucketPrefix;
+    private @Nullable Output<String> bucketPrefix;
 
-    public Output<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
+    public Optional<Output<String>> bucketPrefix() {
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="errorHandlingConfig")
-      private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
+    private @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
-    public Output<FlowErrorHandlingConfigArgs> errorHandlingConfig() {
-        return this.errorHandlingConfig == null ? Codegen.empty() : this.errorHandlingConfig;
+    public Optional<Output<FlowErrorHandlingConfigArgs>> errorHandlingConfig() {
+        return Optional.ofNullable(this.errorHandlingConfig);
     }
 
     @Import(name="intermediateBucketName", required=true)
-      private final Output<String> intermediateBucketName;
+    private Output<String> intermediateBucketName;
 
     public Output<String> intermediateBucketName() {
         return this.intermediateBucketName;
     }
 
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
     }
 
-    public FlowSnowflakeDestinationPropertiesArgs(
-        @Nullable Output<String> bucketPrefix,
-        @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig,
-        Output<String> intermediateBucketName,
-        Output<String> object) {
-        this.bucketPrefix = bucketPrefix;
-        this.errorHandlingConfig = errorHandlingConfig;
-        this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName, "expected parameter 'intermediateBucketName' to be non-null");
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowSnowflakeDestinationPropertiesArgs() {}
 
-    private FlowSnowflakeDestinationPropertiesArgs() {
-        this.bucketPrefix = Codegen.empty();
-        this.errorHandlingConfig = Codegen.empty();
-        this.intermediateBucketName = Codegen.empty();
-        this.object = Codegen.empty();
+    private FlowSnowflakeDestinationPropertiesArgs(FlowSnowflakeDestinationPropertiesArgs $) {
+        this.bucketPrefix = $.bucketPrefix;
+        this.errorHandlingConfig = $.errorHandlingConfig;
+        this.intermediateBucketName = $.intermediateBucketName;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSnowflakeDestinationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketPrefix;
-        private @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
-        private Output<String> intermediateBucketName;
-        private Output<String> object;
+        private FlowSnowflakeDestinationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSnowflakeDestinationPropertiesArgs();
         }
 
         public Builder(FlowSnowflakeDestinationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.errorHandlingConfig = defaults.errorHandlingConfig;
-    	      this.intermediateBucketName = defaults.intermediateBucketName;
-    	      this.object = defaults.object;
+            $ = new FlowSnowflakeDestinationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
-        public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
-            return this;
+
+        public Builder bucketPrefix(String bucketPrefix) {
+            return bucketPrefix(Output.of(bucketPrefix));
         }
+
         public Builder errorHandlingConfig(@Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
-            this.errorHandlingConfig = errorHandlingConfig;
+            $.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
-        public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
-            this.errorHandlingConfig = Codegen.ofNullable(errorHandlingConfig);
-            return this;
+
+        public Builder errorHandlingConfig(FlowErrorHandlingConfigArgs errorHandlingConfig) {
+            return errorHandlingConfig(Output.of(errorHandlingConfig));
         }
+
         public Builder intermediateBucketName(Output<String> intermediateBucketName) {
-            this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName);
+            $.intermediateBucketName = intermediateBucketName;
             return this;
         }
+
         public Builder intermediateBucketName(String intermediateBucketName) {
-            this.intermediateBucketName = Output.of(Objects.requireNonNull(intermediateBucketName));
-            return this;
+            return intermediateBucketName(Output.of(intermediateBucketName));
         }
+
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
-        }        public FlowSnowflakeDestinationPropertiesArgs build() {
-            return new FlowSnowflakeDestinationPropertiesArgs(bucketPrefix, errorHandlingConfig, intermediateBucketName, object);
+            return object(Output.of(object));
+        }
+
+        public FlowSnowflakeDestinationPropertiesArgs build() {
+            $.intermediateBucketName = Objects.requireNonNull($.intermediateBucketName, "expected parameter 'intermediateBucketName' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

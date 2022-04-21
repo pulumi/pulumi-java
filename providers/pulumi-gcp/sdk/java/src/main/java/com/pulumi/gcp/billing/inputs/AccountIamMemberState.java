@@ -5,10 +5,10 @@ package com.pulumi.gcp.billing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.billing.inputs.AccountIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,130 +17,116 @@ public final class AccountIamMemberState extends com.pulumi.resources.ResourceAr
     public static final AccountIamMemberState Empty = new AccountIamMemberState();
 
     @Import(name="billingAccountId")
-      private final @Nullable Output<String> billingAccountId;
+    private @Nullable Output<String> billingAccountId;
 
-    public Output<String> billingAccountId() {
-        return this.billingAccountId == null ? Codegen.empty() : this.billingAccountId;
+    public Optional<Output<String>> billingAccountId() {
+        return Optional.ofNullable(this.billingAccountId);
     }
 
     @Import(name="condition")
-      private final @Nullable Output<AccountIamMemberConditionGetArgs> condition;
+    private @Nullable Output<AccountIamMemberConditionGetArgs> condition;
 
-    public Output<AccountIamMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<AccountIamMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public AccountIamMemberState(
-        @Nullable Output<String> billingAccountId,
-        @Nullable Output<AccountIamMemberConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> member,
-        @Nullable Output<String> role) {
-        this.billingAccountId = billingAccountId;
-        this.condition = condition;
-        this.etag = etag;
-        this.member = member;
-        this.role = role;
-    }
+    private AccountIamMemberState() {}
 
-    private AccountIamMemberState() {
-        this.billingAccountId = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private AccountIamMemberState(AccountIamMemberState $) {
+        this.billingAccountId = $.billingAccountId;
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountIamMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> billingAccountId;
-        private @Nullable Output<AccountIamMemberConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> role;
+        private AccountIamMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountIamMemberState();
         }
 
         public Builder(AccountIamMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new AccountIamMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(@Nullable Output<String> billingAccountId) {
-            this.billingAccountId = billingAccountId;
+            $.billingAccountId = billingAccountId;
             return this;
         }
-        public Builder billingAccountId(@Nullable String billingAccountId) {
-            this.billingAccountId = Codegen.ofNullable(billingAccountId);
-            return this;
+
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
         }
+
         public Builder condition(@Nullable Output<AccountIamMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable AccountIamMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(AccountIamMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public AccountIamMemberState build() {
-            return new AccountIamMemberState(billingAccountId, condition, etag, member, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public AccountIamMemberState build() {
+            return $;
         }
     }
+
 }

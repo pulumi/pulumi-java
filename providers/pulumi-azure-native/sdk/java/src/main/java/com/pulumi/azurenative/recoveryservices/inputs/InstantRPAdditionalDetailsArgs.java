@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class InstantRPAdditionalDetailsArgs extends com.pulumi.resources.R
     public static final InstantRPAdditionalDetailsArgs Empty = new InstantRPAdditionalDetailsArgs();
 
     @Import(name="azureBackupRGNamePrefix")
-      private final @Nullable Output<String> azureBackupRGNamePrefix;
+    private @Nullable Output<String> azureBackupRGNamePrefix;
 
-    public Output<String> azureBackupRGNamePrefix() {
-        return this.azureBackupRGNamePrefix == null ? Codegen.empty() : this.azureBackupRGNamePrefix;
+    public Optional<Output<String>> azureBackupRGNamePrefix() {
+        return Optional.ofNullable(this.azureBackupRGNamePrefix);
     }
 
     @Import(name="azureBackupRGNameSuffix")
-      private final @Nullable Output<String> azureBackupRGNameSuffix;
+    private @Nullable Output<String> azureBackupRGNameSuffix;
 
-    public Output<String> azureBackupRGNameSuffix() {
-        return this.azureBackupRGNameSuffix == null ? Codegen.empty() : this.azureBackupRGNameSuffix;
+    public Optional<Output<String>> azureBackupRGNameSuffix() {
+        return Optional.ofNullable(this.azureBackupRGNameSuffix);
     }
 
-    public InstantRPAdditionalDetailsArgs(
-        @Nullable Output<String> azureBackupRGNamePrefix,
-        @Nullable Output<String> azureBackupRGNameSuffix) {
-        this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
-        this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
-    }
+    private InstantRPAdditionalDetailsArgs() {}
 
-    private InstantRPAdditionalDetailsArgs() {
-        this.azureBackupRGNamePrefix = Codegen.empty();
-        this.azureBackupRGNameSuffix = Codegen.empty();
+    private InstantRPAdditionalDetailsArgs(InstantRPAdditionalDetailsArgs $) {
+        this.azureBackupRGNamePrefix = $.azureBackupRGNamePrefix;
+        this.azureBackupRGNameSuffix = $.azureBackupRGNameSuffix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstantRPAdditionalDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> azureBackupRGNamePrefix;
-        private @Nullable Output<String> azureBackupRGNameSuffix;
+        private InstantRPAdditionalDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstantRPAdditionalDetailsArgs();
         }
 
         public Builder(InstantRPAdditionalDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureBackupRGNamePrefix = defaults.azureBackupRGNamePrefix;
-    	      this.azureBackupRGNameSuffix = defaults.azureBackupRGNameSuffix;
+            $ = new InstantRPAdditionalDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureBackupRGNamePrefix(@Nullable Output<String> azureBackupRGNamePrefix) {
-            this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
+            $.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
             return this;
         }
-        public Builder azureBackupRGNamePrefix(@Nullable String azureBackupRGNamePrefix) {
-            this.azureBackupRGNamePrefix = Codegen.ofNullable(azureBackupRGNamePrefix);
-            return this;
+
+        public Builder azureBackupRGNamePrefix(String azureBackupRGNamePrefix) {
+            return azureBackupRGNamePrefix(Output.of(azureBackupRGNamePrefix));
         }
+
         public Builder azureBackupRGNameSuffix(@Nullable Output<String> azureBackupRGNameSuffix) {
-            this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
+            $.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
             return this;
         }
-        public Builder azureBackupRGNameSuffix(@Nullable String azureBackupRGNameSuffix) {
-            this.azureBackupRGNameSuffix = Codegen.ofNullable(azureBackupRGNameSuffix);
-            return this;
-        }        public InstantRPAdditionalDetailsArgs build() {
-            return new InstantRPAdditionalDetailsArgs(azureBackupRGNamePrefix, azureBackupRGNameSuffix);
+
+        public Builder azureBackupRGNameSuffix(String azureBackupRGNameSuffix) {
+            return azureBackupRGNameSuffix(Output.of(azureBackupRGNameSuffix));
+        }
+
+        public InstantRPAdditionalDetailsArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobName", required=true)
-      private final String jobName;
+    private String jobName;
 
     public String jobName() {
         return this.jobName;
@@ -39,7 +39,7 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transformName", required=true)
-      private final String transformName;
+    private String transformName;
 
     public String transformName() {
         return this.transformName;
     }
 
-    public GetJobArgs(
-        String accountName,
-        String jobName,
-        String resourceGroupName,
-        String transformName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.transformName = Objects.requireNonNull(transformName, "expected parameter 'transformName' to be non-null");
-    }
+    private GetJobArgs() {}
 
-    private GetJobArgs() {
-        this.accountName = null;
-        this.jobName = null;
-        this.resourceGroupName = null;
-        this.transformName = null;
+    private GetJobArgs(GetJobArgs $) {
+        this.accountName = $.accountName;
+        this.jobName = $.jobName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.transformName = $.transformName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String jobName;
-        private String resourceGroupName;
-        private String transformName;
+        private GetJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobArgs();
         }
 
         public Builder(GetJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.jobName = defaults.jobName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.transformName = defaults.transformName;
+            $ = new GetJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder jobName(String jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder transformName(String transformName) {
-            this.transformName = Objects.requireNonNull(transformName);
+            $.transformName = transformName;
             return this;
-        }        public GetJobArgs build() {
-            return new GetJobArgs(accountName, jobName, resourceGroupName, transformName);
+        }
+
+        public GetJobArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.transformName = Objects.requireNonNull($.transformName, "expected parameter 'transformName' to be non-null");
+            return $;
         }
     }
+
 }

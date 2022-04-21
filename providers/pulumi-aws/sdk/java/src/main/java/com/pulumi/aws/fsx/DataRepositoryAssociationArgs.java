@@ -6,12 +6,12 @@ package com.pulumi.aws.fsx;
 import com.pulumi.aws.fsx.inputs.DataRepositoryAssociationS3Args;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DataRepositoryAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="batchImportMetaDataOnCreate")
-      private final @Nullable Output<Boolean> batchImportMetaDataOnCreate;
+    private @Nullable Output<Boolean> batchImportMetaDataOnCreate;
 
-    public Output<Boolean> batchImportMetaDataOnCreate() {
-        return this.batchImportMetaDataOnCreate == null ? Codegen.empty() : this.batchImportMetaDataOnCreate;
+    public Optional<Output<Boolean>> batchImportMetaDataOnCreate() {
+        return Optional.ofNullable(this.batchImportMetaDataOnCreate);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class DataRepositoryAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="dataRepositoryPath", required=true)
-      private final Output<String> dataRepositoryPath;
+    private Output<String> dataRepositoryPath;
 
     public Output<String> dataRepositoryPath() {
         return this.dataRepositoryPath;
@@ -46,10 +46,10 @@ public final class DataRepositoryAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="deleteDataInFilesystem")
-      private final @Nullable Output<Boolean> deleteDataInFilesystem;
+    private @Nullable Output<Boolean> deleteDataInFilesystem;
 
-    public Output<Boolean> deleteDataInFilesystem() {
-        return this.deleteDataInFilesystem == null ? Codegen.empty() : this.deleteDataInFilesystem;
+    public Optional<Output<Boolean>> deleteDataInFilesystem() {
+        return Optional.ofNullable(this.deleteDataInFilesystem);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class DataRepositoryAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="fileSystemId", required=true)
-      private final Output<String> fileSystemId;
+    private Output<String> fileSystemId;
 
     public Output<String> fileSystemId() {
         return this.fileSystemId;
@@ -68,7 +68,7 @@ public final class DataRepositoryAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="fileSystemPath", required=true)
-      private final Output<String> fileSystemPath;
+    private Output<String> fileSystemPath;
 
     public Output<String> fileSystemPath() {
         return this.fileSystemPath;
@@ -79,10 +79,10 @@ public final class DataRepositoryAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="importedFileChunkSize")
-      private final @Nullable Output<Integer> importedFileChunkSize;
+    private @Nullable Output<Integer> importedFileChunkSize;
 
-    public Output<Integer> importedFileChunkSize() {
-        return this.importedFileChunkSize == null ? Codegen.empty() : this.importedFileChunkSize;
+    public Optional<Output<Integer>> importedFileChunkSize() {
+        return Optional.ofNullable(this.importedFileChunkSize);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DataRepositoryAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="s3")
-      private final @Nullable Output<DataRepositoryAssociationS3Args> s3;
+    private @Nullable Output<DataRepositoryAssociationS3Args> s3;
 
-    public Output<DataRepositoryAssociationS3Args> s3() {
-        return this.s3 == null ? Codegen.empty() : this.s3;
+    public Optional<Output<DataRepositoryAssociationS3Args>> s3() {
+        return Optional.ofNullable(this.s3);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DataRepositoryAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,154 +113,131 @@ public final class DataRepositoryAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public DataRepositoryAssociationArgs(
-        @Nullable Output<Boolean> batchImportMetaDataOnCreate,
-        Output<String> dataRepositoryPath,
-        @Nullable Output<Boolean> deleteDataInFilesystem,
-        Output<String> fileSystemId,
-        Output<String> fileSystemPath,
-        @Nullable Output<Integer> importedFileChunkSize,
-        @Nullable Output<DataRepositoryAssociationS3Args> s3,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
-        this.dataRepositoryPath = Objects.requireNonNull(dataRepositoryPath, "expected parameter 'dataRepositoryPath' to be non-null");
-        this.deleteDataInFilesystem = deleteDataInFilesystem;
-        this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
-        this.fileSystemPath = Objects.requireNonNull(fileSystemPath, "expected parameter 'fileSystemPath' to be non-null");
-        this.importedFileChunkSize = importedFileChunkSize;
-        this.s3 = s3;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private DataRepositoryAssociationArgs() {}
 
-    private DataRepositoryAssociationArgs() {
-        this.batchImportMetaDataOnCreate = Codegen.empty();
-        this.dataRepositoryPath = Codegen.empty();
-        this.deleteDataInFilesystem = Codegen.empty();
-        this.fileSystemId = Codegen.empty();
-        this.fileSystemPath = Codegen.empty();
-        this.importedFileChunkSize = Codegen.empty();
-        this.s3 = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private DataRepositoryAssociationArgs(DataRepositoryAssociationArgs $) {
+        this.batchImportMetaDataOnCreate = $.batchImportMetaDataOnCreate;
+        this.dataRepositoryPath = $.dataRepositoryPath;
+        this.deleteDataInFilesystem = $.deleteDataInFilesystem;
+        this.fileSystemId = $.fileSystemId;
+        this.fileSystemPath = $.fileSystemPath;
+        this.importedFileChunkSize = $.importedFileChunkSize;
+        this.s3 = $.s3;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataRepositoryAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> batchImportMetaDataOnCreate;
-        private Output<String> dataRepositoryPath;
-        private @Nullable Output<Boolean> deleteDataInFilesystem;
-        private Output<String> fileSystemId;
-        private Output<String> fileSystemPath;
-        private @Nullable Output<Integer> importedFileChunkSize;
-        private @Nullable Output<DataRepositoryAssociationS3Args> s3;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private DataRepositoryAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataRepositoryAssociationArgs();
         }
 
         public Builder(DataRepositoryAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchImportMetaDataOnCreate = defaults.batchImportMetaDataOnCreate;
-    	      this.dataRepositoryPath = defaults.dataRepositoryPath;
-    	      this.deleteDataInFilesystem = defaults.deleteDataInFilesystem;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.fileSystemPath = defaults.fileSystemPath;
-    	      this.importedFileChunkSize = defaults.importedFileChunkSize;
-    	      this.s3 = defaults.s3;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new DataRepositoryAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchImportMetaDataOnCreate(@Nullable Output<Boolean> batchImportMetaDataOnCreate) {
-            this.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
+            $.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
             return this;
         }
-        public Builder batchImportMetaDataOnCreate(@Nullable Boolean batchImportMetaDataOnCreate) {
-            this.batchImportMetaDataOnCreate = Codegen.ofNullable(batchImportMetaDataOnCreate);
-            return this;
+
+        public Builder batchImportMetaDataOnCreate(Boolean batchImportMetaDataOnCreate) {
+            return batchImportMetaDataOnCreate(Output.of(batchImportMetaDataOnCreate));
         }
+
         public Builder dataRepositoryPath(Output<String> dataRepositoryPath) {
-            this.dataRepositoryPath = Objects.requireNonNull(dataRepositoryPath);
+            $.dataRepositoryPath = dataRepositoryPath;
             return this;
         }
+
         public Builder dataRepositoryPath(String dataRepositoryPath) {
-            this.dataRepositoryPath = Output.of(Objects.requireNonNull(dataRepositoryPath));
-            return this;
+            return dataRepositoryPath(Output.of(dataRepositoryPath));
         }
+
         public Builder deleteDataInFilesystem(@Nullable Output<Boolean> deleteDataInFilesystem) {
-            this.deleteDataInFilesystem = deleteDataInFilesystem;
+            $.deleteDataInFilesystem = deleteDataInFilesystem;
             return this;
         }
-        public Builder deleteDataInFilesystem(@Nullable Boolean deleteDataInFilesystem) {
-            this.deleteDataInFilesystem = Codegen.ofNullable(deleteDataInFilesystem);
-            return this;
+
+        public Builder deleteDataInFilesystem(Boolean deleteDataInFilesystem) {
+            return deleteDataInFilesystem(Output.of(deleteDataInFilesystem));
         }
+
         public Builder fileSystemId(Output<String> fileSystemId) {
-            this.fileSystemId = Objects.requireNonNull(fileSystemId);
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Output.of(Objects.requireNonNull(fileSystemId));
-            return this;
+            return fileSystemId(Output.of(fileSystemId));
         }
+
         public Builder fileSystemPath(Output<String> fileSystemPath) {
-            this.fileSystemPath = Objects.requireNonNull(fileSystemPath);
+            $.fileSystemPath = fileSystemPath;
             return this;
         }
+
         public Builder fileSystemPath(String fileSystemPath) {
-            this.fileSystemPath = Output.of(Objects.requireNonNull(fileSystemPath));
-            return this;
+            return fileSystemPath(Output.of(fileSystemPath));
         }
+
         public Builder importedFileChunkSize(@Nullable Output<Integer> importedFileChunkSize) {
-            this.importedFileChunkSize = importedFileChunkSize;
+            $.importedFileChunkSize = importedFileChunkSize;
             return this;
         }
-        public Builder importedFileChunkSize(@Nullable Integer importedFileChunkSize) {
-            this.importedFileChunkSize = Codegen.ofNullable(importedFileChunkSize);
-            return this;
+
+        public Builder importedFileChunkSize(Integer importedFileChunkSize) {
+            return importedFileChunkSize(Output.of(importedFileChunkSize));
         }
+
         public Builder s3(@Nullable Output<DataRepositoryAssociationS3Args> s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
-        public Builder s3(@Nullable DataRepositoryAssociationS3Args s3) {
-            this.s3 = Codegen.ofNullable(s3);
-            return this;
+
+        public Builder s3(DataRepositoryAssociationS3Args s3) {
+            return s3(Output.of(s3));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public DataRepositoryAssociationArgs build() {
-            return new DataRepositoryAssociationArgs(batchImportMetaDataOnCreate, dataRepositoryPath, deleteDataInFilesystem, fileSystemId, fileSystemPath, importedFileChunkSize, s3, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public DataRepositoryAssociationArgs build() {
+            $.dataRepositoryPath = Objects.requireNonNull($.dataRepositoryPath, "expected parameter 'dataRepositoryPath' to be non-null");
+            $.fileSystemId = Objects.requireNonNull($.fileSystemId, "expected parameter 'fileSystemId' to be non-null");
+            $.fileSystemPath = Objects.requireNonNull($.fileSystemPath, "expected parameter 'fileSystemPath' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends com.pu
      * 
      */
     @Import(name="allowSubjectAltNamesPassthrough", required=true)
-      private final Output<Boolean> allowSubjectAltNamesPassthrough;
+    private Output<Boolean> allowSubjectAltNamesPassthrough;
 
     public Output<Boolean> allowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
@@ -34,7 +34,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends com.pu
      * 
      */
     @Import(name="allowSubjectPassthrough", required=true)
-      private final Output<Boolean> allowSubjectPassthrough;
+    private Output<Boolean> allowSubjectPassthrough;
 
     public Output<Boolean> allowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
@@ -48,76 +48,70 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends com.pu
      * 
      */
     @Import(name="celExpression")
-      private final @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression;
+    private @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression;
 
-    public Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression() {
-        return this.celExpression == null ? Codegen.empty() : this.celExpression;
+    public Optional<Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs>> celExpression() {
+        return Optional.ofNullable(this.celExpression);
     }
 
-    public CaPoolIssuancePolicyIdentityConstraintsGetArgs(
-        Output<Boolean> allowSubjectAltNamesPassthrough,
-        Output<Boolean> allowSubjectPassthrough,
-        @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression) {
-        this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough, "expected parameter 'allowSubjectAltNamesPassthrough' to be non-null");
-        this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough, "expected parameter 'allowSubjectPassthrough' to be non-null");
-        this.celExpression = celExpression;
-    }
+    private CaPoolIssuancePolicyIdentityConstraintsGetArgs() {}
 
-    private CaPoolIssuancePolicyIdentityConstraintsGetArgs() {
-        this.allowSubjectAltNamesPassthrough = Codegen.empty();
-        this.allowSubjectPassthrough = Codegen.empty();
-        this.celExpression = Codegen.empty();
+    private CaPoolIssuancePolicyIdentityConstraintsGetArgs(CaPoolIssuancePolicyIdentityConstraintsGetArgs $) {
+        this.allowSubjectAltNamesPassthrough = $.allowSubjectAltNamesPassthrough;
+        this.allowSubjectPassthrough = $.allowSubjectPassthrough;
+        this.celExpression = $.celExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIssuancePolicyIdentityConstraintsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> allowSubjectAltNamesPassthrough;
-        private Output<Boolean> allowSubjectPassthrough;
-        private @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression;
+        private CaPoolIssuancePolicyIdentityConstraintsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIssuancePolicyIdentityConstraintsGetArgs();
         }
 
         public Builder(CaPoolIssuancePolicyIdentityConstraintsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowSubjectAltNamesPassthrough = defaults.allowSubjectAltNamesPassthrough;
-    	      this.allowSubjectPassthrough = defaults.allowSubjectPassthrough;
-    	      this.celExpression = defaults.celExpression;
+            $ = new CaPoolIssuancePolicyIdentityConstraintsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowSubjectAltNamesPassthrough(Output<Boolean> allowSubjectAltNamesPassthrough) {
-            this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
+            $.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
             return this;
         }
+
         public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
-            this.allowSubjectAltNamesPassthrough = Output.of(Objects.requireNonNull(allowSubjectAltNamesPassthrough));
-            return this;
+            return allowSubjectAltNamesPassthrough(Output.of(allowSubjectAltNamesPassthrough));
         }
+
         public Builder allowSubjectPassthrough(Output<Boolean> allowSubjectPassthrough) {
-            this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
+            $.allowSubjectPassthrough = allowSubjectPassthrough;
             return this;
         }
+
         public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
-            this.allowSubjectPassthrough = Output.of(Objects.requireNonNull(allowSubjectPassthrough));
-            return this;
+            return allowSubjectPassthrough(Output.of(allowSubjectPassthrough));
         }
+
         public Builder celExpression(@Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression) {
-            this.celExpression = celExpression;
+            $.celExpression = celExpression;
             return this;
         }
-        public Builder celExpression(@Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs celExpression) {
-            this.celExpression = Codegen.ofNullable(celExpression);
-            return this;
-        }        public CaPoolIssuancePolicyIdentityConstraintsGetArgs build() {
-            return new CaPoolIssuancePolicyIdentityConstraintsGetArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
+
+        public Builder celExpression(CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs celExpression) {
+            return celExpression(Output.of(celExpression));
+        }
+
+        public CaPoolIssuancePolicyIdentityConstraintsGetArgs build() {
+            $.allowSubjectAltNamesPassthrough = Objects.requireNonNull($.allowSubjectAltNamesPassthrough, "expected parameter 'allowSubjectAltNamesPassthrough' to be non-null");
+            $.allowSubjectPassthrough = Objects.requireNonNull($.allowSubjectPassthrough, "expected parameter 'allowSubjectPassthrough' to be non-null");
+            return $;
         }
     }
+
 }

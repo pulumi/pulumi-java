@@ -21,45 +21,45 @@ public final class FeedOutputConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pubsubDestination", required=true)
-      private final PubsubDestinationResponse pubsubDestination;
+    private PubsubDestinationResponse pubsubDestination;
 
     public PubsubDestinationResponse pubsubDestination() {
         return this.pubsubDestination;
     }
 
-    public FeedOutputConfigResponse(PubsubDestinationResponse pubsubDestination) {
-        this.pubsubDestination = Objects.requireNonNull(pubsubDestination, "expected parameter 'pubsubDestination' to be non-null");
-    }
+    private FeedOutputConfigResponse() {}
 
-    private FeedOutputConfigResponse() {
-        this.pubsubDestination = null;
+    private FeedOutputConfigResponse(FeedOutputConfigResponse $) {
+        this.pubsubDestination = $.pubsubDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeedOutputConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PubsubDestinationResponse pubsubDestination;
+        private FeedOutputConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeedOutputConfigResponse();
         }
 
         public Builder(FeedOutputConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubDestination = defaults.pubsubDestination;
+            $ = new FeedOutputConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
-            this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
+            $.pubsubDestination = pubsubDestination;
             return this;
-        }        public FeedOutputConfigResponse build() {
-            return new FeedOutputConfigResponse(pubsubDestination);
+        }
+
+        public FeedOutputConfigResponse build() {
+            $.pubsubDestination = Objects.requireNonNull($.pubsubDestination, "expected parameter 'pubsubDestination' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,48 +24,48 @@ public final class PrivateLinkServicePropertiesResponseVisibility extends com.pu
      * 
      */
     @Import(name="subscriptions")
-      private final @Nullable List<String> subscriptions;
+    private @Nullable List<String> subscriptions;
 
-    public List<String> subscriptions() {
-        return this.subscriptions == null ? List.of() : this.subscriptions;
+    public Optional<List<String>> subscriptions() {
+        return Optional.ofNullable(this.subscriptions);
     }
 
-    public PrivateLinkServicePropertiesResponseVisibility(@Nullable List<String> subscriptions) {
-        this.subscriptions = subscriptions;
-    }
+    private PrivateLinkServicePropertiesResponseVisibility() {}
 
-    private PrivateLinkServicePropertiesResponseVisibility() {
-        this.subscriptions = List.of();
+    private PrivateLinkServicePropertiesResponseVisibility(PrivateLinkServicePropertiesResponseVisibility $) {
+        this.subscriptions = $.subscriptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServicePropertiesResponseVisibility defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> subscriptions;
+        private PrivateLinkServicePropertiesResponseVisibility $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServicePropertiesResponseVisibility();
         }
 
         public Builder(PrivateLinkServicePropertiesResponseVisibility defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subscriptions = defaults.subscriptions;
+            $ = new PrivateLinkServicePropertiesResponseVisibility(Objects.requireNonNull(defaults));
         }
 
         public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = subscriptions;
+            $.subscriptions = subscriptions;
             return this;
         }
+
         public Builder subscriptions(String... subscriptions) {
             return subscriptions(List.of(subscriptions));
-        }        public PrivateLinkServicePropertiesResponseVisibility build() {
-            return new PrivateLinkServicePropertiesResponseVisibility(subscriptions);
+        }
+
+        public PrivateLinkServicePropertiesResponseVisibility build() {
+            return $;
         }
     }
+
 }

@@ -17,68 +17,65 @@ public final class SkuZoneDetailResponse extends com.pulumi.resources.InvokeArgs
     public static final SkuZoneDetailResponse Empty = new SkuZoneDetailResponse();
 
     @Import(name="capabilities")
-      private final @Nullable List<SkuCapabilityResponse> capabilities;
+    private @Nullable List<SkuCapabilityResponse> capabilities;
 
-    public List<SkuCapabilityResponse> capabilities() {
-        return this.capabilities == null ? List.of() : this.capabilities;
+    public Optional<List<SkuCapabilityResponse>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     @Import(name="name")
-      private final @Nullable List<String> name;
+    private @Nullable List<String> name;
 
-    public List<String> name() {
-        return this.name == null ? List.of() : this.name;
+    public Optional<List<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SkuZoneDetailResponse(
-        @Nullable List<SkuCapabilityResponse> capabilities,
-        @Nullable List<String> name) {
-        this.capabilities = capabilities;
-        this.name = name;
-    }
+    private SkuZoneDetailResponse() {}
 
-    private SkuZoneDetailResponse() {
-        this.capabilities = List.of();
-        this.name = List.of();
+    private SkuZoneDetailResponse(SkuZoneDetailResponse $) {
+        this.capabilities = $.capabilities;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuZoneDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SkuCapabilityResponse> capabilities;
-        private @Nullable List<String> name;
+        private SkuZoneDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuZoneDetailResponse();
         }
 
         public Builder(SkuZoneDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capabilities = defaults.capabilities;
-    	      this.name = defaults.name;
+            $ = new SkuZoneDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capabilities(@Nullable List<SkuCapabilityResponse> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
+
         public Builder capabilities(SkuCapabilityResponse... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder name(@Nullable List<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder name(String... name) {
             return name(List.of(name));
-        }        public SkuZoneDetailResponse build() {
-            return new SkuZoneDetailResponse(capabilities, name);
+        }
+
+        public SkuZoneDetailResponse build() {
+            return $;
         }
     }
+
 }

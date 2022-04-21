@@ -13,45 +13,45 @@ public final class GetSamplingRuleArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSamplingRuleArgs Empty = new GetSamplingRuleArgs();
 
     @Import(name="ruleARN", required=true)
-      private final String ruleARN;
+    private String ruleARN;
 
     public String ruleARN() {
         return this.ruleARN;
     }
 
-    public GetSamplingRuleArgs(String ruleARN) {
-        this.ruleARN = Objects.requireNonNull(ruleARN, "expected parameter 'ruleARN' to be non-null");
-    }
+    private GetSamplingRuleArgs() {}
 
-    private GetSamplingRuleArgs() {
-        this.ruleARN = null;
+    private GetSamplingRuleArgs(GetSamplingRuleArgs $) {
+        this.ruleARN = $.ruleARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSamplingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ruleARN;
+        private GetSamplingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSamplingRuleArgs();
         }
 
         public Builder(GetSamplingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleARN = defaults.ruleARN;
+            $ = new GetSamplingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleARN(String ruleARN) {
-            this.ruleARN = Objects.requireNonNull(ruleARN);
+            $.ruleARN = ruleARN;
             return this;
-        }        public GetSamplingRuleArgs build() {
-            return new GetSamplingRuleArgs(ruleARN);
+        }
+
+        public GetSamplingRuleArgs build() {
+            $.ruleARN = Objects.requireNonNull($.ruleARN, "expected parameter 'ruleARN' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class SpatialSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -31,58 +31,54 @@ public final class SpatialSpecResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="types")
-      private final @Nullable List<String> types;
+    private @Nullable List<String> types;
 
-    public List<String> types() {
-        return this.types == null ? List.of() : this.types;
+    public Optional<List<String>> types() {
+        return Optional.ofNullable(this.types);
     }
 
-    public SpatialSpecResponse(
-        @Nullable String path,
-        @Nullable List<String> types) {
-        this.path = path;
-        this.types = types;
-    }
+    private SpatialSpecResponse() {}
 
-    private SpatialSpecResponse() {
-        this.path = null;
-        this.types = List.of();
+    private SpatialSpecResponse(SpatialSpecResponse $) {
+        this.path = $.path;
+        this.types = $.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpatialSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String path;
-        private @Nullable List<String> types;
+        private SpatialSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpatialSpecResponse();
         }
 
         public Builder(SpatialSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.types = defaults.types;
+            $ = new SpatialSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder types(@Nullable List<String> types) {
-            this.types = types;
+            $.types = types;
             return this;
         }
+
         public Builder types(String... types) {
             return types(List.of(types));
-        }        public SpatialSpecResponse build() {
-            return new SpatialSpecResponse(path, types);
+        }
+
+        public SpatialSpecResponse build() {
+            return $;
         }
     }
+
 }

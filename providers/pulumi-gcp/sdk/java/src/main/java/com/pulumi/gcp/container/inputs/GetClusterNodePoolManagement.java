@@ -13,62 +13,59 @@ public final class GetClusterNodePoolManagement extends com.pulumi.resources.Inv
     public static final GetClusterNodePoolManagement Empty = new GetClusterNodePoolManagement();
 
     @Import(name="autoRepair", required=true)
-      private final Boolean autoRepair;
+    private Boolean autoRepair;
 
     public Boolean autoRepair() {
         return this.autoRepair;
     }
 
     @Import(name="autoUpgrade", required=true)
-      private final Boolean autoUpgrade;
+    private Boolean autoUpgrade;
 
     public Boolean autoUpgrade() {
         return this.autoUpgrade;
     }
 
-    public GetClusterNodePoolManagement(
-        Boolean autoRepair,
-        Boolean autoUpgrade) {
-        this.autoRepair = Objects.requireNonNull(autoRepair, "expected parameter 'autoRepair' to be non-null");
-        this.autoUpgrade = Objects.requireNonNull(autoUpgrade, "expected parameter 'autoUpgrade' to be non-null");
-    }
+    private GetClusterNodePoolManagement() {}
 
-    private GetClusterNodePoolManagement() {
-        this.autoRepair = null;
-        this.autoUpgrade = null;
+    private GetClusterNodePoolManagement(GetClusterNodePoolManagement $) {
+        this.autoRepair = $.autoRepair;
+        this.autoUpgrade = $.autoUpgrade;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolManagement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autoRepair;
-        private Boolean autoUpgrade;
+        private GetClusterNodePoolManagement $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolManagement();
         }
 
         public Builder(GetClusterNodePoolManagement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoRepair = defaults.autoRepair;
-    	      this.autoUpgrade = defaults.autoUpgrade;
+            $ = new GetClusterNodePoolManagement(Objects.requireNonNull(defaults));
         }
 
         public Builder autoRepair(Boolean autoRepair) {
-            this.autoRepair = Objects.requireNonNull(autoRepair);
+            $.autoRepair = autoRepair;
             return this;
         }
+
         public Builder autoUpgrade(Boolean autoUpgrade) {
-            this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
+            $.autoUpgrade = autoUpgrade;
             return this;
-        }        public GetClusterNodePoolManagement build() {
-            return new GetClusterNodePoolManagement(autoRepair, autoUpgrade);
+        }
+
+        public GetClusterNodePoolManagement build() {
+            $.autoRepair = Objects.requireNonNull($.autoRepair, "expected parameter 'autoRepair' to be non-null");
+            $.autoUpgrade = Objects.requireNonNull($.autoUpgrade, "expected parameter 'autoUpgrade' to be non-null");
+            return $;
         }
     }
+
 }

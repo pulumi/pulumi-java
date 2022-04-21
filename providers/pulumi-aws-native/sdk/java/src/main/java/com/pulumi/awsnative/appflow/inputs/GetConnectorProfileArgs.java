@@ -17,45 +17,45 @@ public final class GetConnectorProfileArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="connectorProfileName", required=true)
-      private final String connectorProfileName;
+    private String connectorProfileName;
 
     public String connectorProfileName() {
         return this.connectorProfileName;
     }
 
-    public GetConnectorProfileArgs(String connectorProfileName) {
-        this.connectorProfileName = Objects.requireNonNull(connectorProfileName, "expected parameter 'connectorProfileName' to be non-null");
-    }
+    private GetConnectorProfileArgs() {}
 
-    private GetConnectorProfileArgs() {
-        this.connectorProfileName = null;
+    private GetConnectorProfileArgs(GetConnectorProfileArgs $) {
+        this.connectorProfileName = $.connectorProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectorProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectorProfileName;
+        private GetConnectorProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectorProfileArgs();
         }
 
         public Builder(GetConnectorProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorProfileName = defaults.connectorProfileName;
+            $ = new GetConnectorProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorProfileName(String connectorProfileName) {
-            this.connectorProfileName = Objects.requireNonNull(connectorProfileName);
+            $.connectorProfileName = connectorProfileName;
             return this;
-        }        public GetConnectorProfileArgs build() {
-            return new GetConnectorProfileArgs(connectorProfileName);
+        }
+
+        public GetConnectorProfileArgs build() {
+            $.connectorProfileName = Objects.requireNonNull($.connectorProfileName, "expected parameter 'connectorProfileName' to be non-null");
+            return $;
         }
     }
+
 }

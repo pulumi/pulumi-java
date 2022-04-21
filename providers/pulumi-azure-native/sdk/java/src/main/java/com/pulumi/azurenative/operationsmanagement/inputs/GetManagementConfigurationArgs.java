@@ -17,7 +17,7 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="managementConfigurationName", required=true)
-      private final String managementConfigurationName;
+    private String managementConfigurationName;
 
     public String managementConfigurationName() {
         return this.managementConfigurationName;
@@ -28,55 +28,52 @@ public final class GetManagementConfigurationArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagementConfigurationArgs(
-        String managementConfigurationName,
-        String resourceGroupName) {
-        this.managementConfigurationName = Objects.requireNonNull(managementConfigurationName, "expected parameter 'managementConfigurationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagementConfigurationArgs() {}
 
-    private GetManagementConfigurationArgs() {
-        this.managementConfigurationName = null;
-        this.resourceGroupName = null;
+    private GetManagementConfigurationArgs(GetManagementConfigurationArgs $) {
+        this.managementConfigurationName = $.managementConfigurationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagementConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managementConfigurationName;
-        private String resourceGroupName;
+        private GetManagementConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagementConfigurationArgs();
         }
 
         public Builder(GetManagementConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managementConfigurationName = defaults.managementConfigurationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagementConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managementConfigurationName(String managementConfigurationName) {
-            this.managementConfigurationName = Objects.requireNonNull(managementConfigurationName);
+            $.managementConfigurationName = managementConfigurationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagementConfigurationArgs build() {
-            return new GetManagementConfigurationArgs(managementConfigurationName, resourceGroupName);
+        }
+
+        public GetManagementConfigurationArgs build() {
+            $.managementConfigurationName = Objects.requireNonNull($.managementConfigurationName, "expected parameter 'managementConfigurationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class FeatureStateStateGetArgs extends com.pulumi.resources.Resourc
     public static final FeatureStateStateGetArgs Empty = new FeatureStateStateGetArgs();
 
     @Import(name="code")
-      private final @Nullable Output<String> code;
+    private @Nullable Output<String> code;
 
-    public Output<String> code() {
-        return this.code == null ? Codegen.empty() : this.code;
+    public Optional<Output<String>> code() {
+        return Optional.ofNullable(this.code);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public FeatureStateStateGetArgs(
-        @Nullable Output<String> code,
-        @Nullable Output<String> description,
-        @Nullable Output<String> updateTime) {
-        this.code = code;
-        this.description = description;
-        this.updateTime = updateTime;
-    }
+    private FeatureStateStateGetArgs() {}
 
-    private FeatureStateStateGetArgs() {
-        this.code = Codegen.empty();
-        this.description = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private FeatureStateStateGetArgs(FeatureStateStateGetArgs $) {
+        this.code = $.code;
+        this.description = $.description;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureStateStateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> code;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> updateTime;
+        private FeatureStateStateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureStateStateGetArgs();
         }
 
         public Builder(FeatureStateStateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.description = defaults.description;
-    	      this.updateTime = defaults.updateTime;
+            $ = new FeatureStateStateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable Output<String> code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
-        public Builder code(@Nullable String code) {
-            this.code = Codegen.ofNullable(code);
-            return this;
+
+        public Builder code(String code) {
+            return code(Output.of(code));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public FeatureStateStateGetArgs build() {
-            return new FeatureStateStateGetArgs(code, description, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public FeatureStateStateGetArgs build() {
+            return $;
         }
     }
+
 }

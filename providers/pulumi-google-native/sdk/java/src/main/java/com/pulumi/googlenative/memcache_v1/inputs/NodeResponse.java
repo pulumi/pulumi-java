@@ -19,7 +19,7 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -30,7 +30,7 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nodeId", required=true)
-      private final String nodeId;
+    private String nodeId;
 
     public String nodeId() {
         return this.nodeId;
@@ -41,7 +41,7 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters", required=true)
-      private final MemcacheParametersResponse parameters;
+    private MemcacheParametersResponse parameters;
 
     public MemcacheParametersResponse parameters() {
         return this.parameters;
@@ -52,7 +52,7 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -63,7 +63,7 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -74,91 +74,80 @@ public final class NodeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public NodeResponse(
-        String host,
-        String nodeId,
-        MemcacheParametersResponse parameters,
-        Integer port,
-        String state,
-        String zone) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.nodeId = Objects.requireNonNull(nodeId, "expected parameter 'nodeId' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private NodeResponse() {}
 
-    private NodeResponse() {
-        this.host = null;
-        this.nodeId = null;
-        this.parameters = null;
-        this.port = null;
-        this.state = null;
-        this.zone = null;
+    private NodeResponse(NodeResponse $) {
+        this.host = $.host;
+        this.nodeId = $.nodeId;
+        this.parameters = $.parameters;
+        this.port = $.port;
+        this.state = $.state;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String host;
-        private String nodeId;
-        private MemcacheParametersResponse parameters;
-        private Integer port;
-        private String state;
-        private String zone;
+        private NodeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeResponse();
         }
 
         public Builder(NodeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.nodeId = defaults.nodeId;
-    	      this.parameters = defaults.parameters;
-    	      this.port = defaults.port;
-    	      this.state = defaults.state;
-    	      this.zone = defaults.zone;
+            $ = new NodeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder nodeId(String nodeId) {
-            this.nodeId = Objects.requireNonNull(nodeId);
+            $.nodeId = nodeId;
             return this;
         }
+
         public Builder parameters(MemcacheParametersResponse parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public NodeResponse build() {
-            return new NodeResponse(host, nodeId, parameters, port, state, zone);
+        }
+
+        public NodeResponse build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.nodeId = Objects.requireNonNull($.nodeId, "expected parameter 'nodeId' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

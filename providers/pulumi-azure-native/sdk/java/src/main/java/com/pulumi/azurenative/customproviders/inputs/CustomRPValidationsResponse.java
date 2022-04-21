@@ -23,7 +23,7 @@ public final class CustomRPValidationsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="specification", required=true)
-      private final String specification;
+    private String specification;
 
     public String specification() {
         return this.specification;
@@ -34,55 +34,51 @@ public final class CustomRPValidationsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="validationType")
-      private final @Nullable String validationType;
+    private @Nullable String validationType;
 
     public Optional<String> validationType() {
-        return this.validationType == null ? Optional.empty() : Optional.ofNullable(this.validationType);
+        return Optional.ofNullable(this.validationType);
     }
 
-    public CustomRPValidationsResponse(
-        String specification,
-        @Nullable String validationType) {
-        this.specification = Objects.requireNonNull(specification, "expected parameter 'specification' to be non-null");
-        this.validationType = validationType;
-    }
+    private CustomRPValidationsResponse() {}
 
-    private CustomRPValidationsResponse() {
-        this.specification = null;
-        this.validationType = null;
+    private CustomRPValidationsResponse(CustomRPValidationsResponse $) {
+        this.specification = $.specification;
+        this.validationType = $.validationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomRPValidationsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String specification;
-        private @Nullable String validationType;
+        private CustomRPValidationsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomRPValidationsResponse();
         }
 
         public Builder(CustomRPValidationsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.specification = defaults.specification;
-    	      this.validationType = defaults.validationType;
+            $ = new CustomRPValidationsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder specification(String specification) {
-            this.specification = Objects.requireNonNull(specification);
+            $.specification = specification;
             return this;
         }
+
         public Builder validationType(@Nullable String validationType) {
-            this.validationType = validationType;
+            $.validationType = validationType;
             return this;
-        }        public CustomRPValidationsResponse build() {
-            return new CustomRPValidationsResponse(specification, validationType);
+        }
+
+        public CustomRPValidationsResponse build() {
+            $.specification = Objects.requireNonNull($.specification, "expected parameter 'specification' to be non-null");
+            return $;
         }
     }
+
 }

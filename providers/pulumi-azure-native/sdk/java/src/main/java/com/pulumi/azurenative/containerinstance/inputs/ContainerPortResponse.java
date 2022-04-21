@@ -24,7 +24,7 @@ public final class ContainerPortResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -35,55 +35,51 @@ public final class ContainerPortResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
-    public ContainerPortResponse(
-        Integer port,
-        @Nullable String protocol) {
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = protocol;
-    }
+    private ContainerPortResponse() {}
 
-    private ContainerPortResponse() {
-        this.port = null;
-        this.protocol = null;
+    private ContainerPortResponse(ContainerPortResponse $) {
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPortResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer port;
-        private @Nullable String protocol;
+        private ContainerPortResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPortResponse();
         }
 
         public Builder(ContainerPortResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new ContainerPortResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
-        }        public ContainerPortResponse build() {
-            return new ContainerPortResponse(port, protocol);
+        }
+
+        public ContainerPortResponse build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

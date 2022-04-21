@@ -24,7 +24,7 @@ public final class ImageRepositoryCredentialResponse extends com.pulumi.resource
      * 
      */
     @Import(name="imageRepositoryUrl", required=true)
-      private final String imageRepositoryUrl;
+    private String imageRepositoryUrl;
 
     public String imageRepositoryUrl() {
         return this.imageRepositoryUrl;
@@ -35,10 +35,10 @@ public final class ImageRepositoryCredentialResponse extends com.pulumi.resource
      * 
      */
     @Import(name="password")
-      private final @Nullable AsymmetricEncryptedSecretResponse password;
+    private @Nullable AsymmetricEncryptedSecretResponse password;
 
     public Optional<AsymmetricEncryptedSecretResponse> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -46,64 +46,58 @@ public final class ImageRepositoryCredentialResponse extends com.pulumi.resource
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public ImageRepositoryCredentialResponse(
-        String imageRepositoryUrl,
-        @Nullable AsymmetricEncryptedSecretResponse password,
-        String userName) {
-        this.imageRepositoryUrl = Objects.requireNonNull(imageRepositoryUrl, "expected parameter 'imageRepositoryUrl' to be non-null");
-        this.password = password;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private ImageRepositoryCredentialResponse() {}
 
-    private ImageRepositoryCredentialResponse() {
-        this.imageRepositoryUrl = null;
-        this.password = null;
-        this.userName = null;
+    private ImageRepositoryCredentialResponse(ImageRepositoryCredentialResponse $) {
+        this.imageRepositoryUrl = $.imageRepositoryUrl;
+        this.password = $.password;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRepositoryCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageRepositoryUrl;
-        private @Nullable AsymmetricEncryptedSecretResponse password;
-        private String userName;
+        private ImageRepositoryCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRepositoryCredentialResponse();
         }
 
         public Builder(ImageRepositoryCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageRepositoryUrl = defaults.imageRepositoryUrl;
-    	      this.password = defaults.password;
-    	      this.userName = defaults.userName;
+            $ = new ImageRepositoryCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imageRepositoryUrl(String imageRepositoryUrl) {
-            this.imageRepositoryUrl = Objects.requireNonNull(imageRepositoryUrl);
+            $.imageRepositoryUrl = imageRepositoryUrl;
             return this;
         }
+
         public Builder password(@Nullable AsymmetricEncryptedSecretResponse password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public ImageRepositoryCredentialResponse build() {
-            return new ImageRepositoryCredentialResponse(imageRepositoryUrl, password, userName);
+        }
+
+        public ImageRepositoryCredentialResponse build() {
+            $.imageRepositoryUrl = Objects.requireNonNull($.imageRepositoryUrl, "expected parameter 'imageRepositoryUrl' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

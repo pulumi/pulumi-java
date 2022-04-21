@@ -26,10 +26,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectionState")
-      private final @Nullable ConnectionStatePropertiesResponse connectionState;
+    private @Nullable ConnectionStatePropertiesResponse connectionState;
 
     public Optional<ConnectionStatePropertiesResponse> connectionState() {
-        return this.connectionState == null ? Optional.empty() : Optional.ofNullable(this.connectionState);
+        return Optional.ofNullable(this.connectionState);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="fqdns")
-      private final @Nullable List<String> fqdns;
+    private @Nullable List<String> fqdns;
 
-    public List<String> fqdns() {
-        return this.fqdns == null ? List.of() : this.fqdns;
+    public Optional<List<String>> fqdns() {
+        return Optional.ofNullable(this.fqdns);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="groupId")
-      private final @Nullable String groupId;
+    private @Nullable String groupId;
 
     public Optional<String> groupId() {
-        return this.groupId == null ? Optional.empty() : Optional.ofNullable(this.groupId);
+        return Optional.ofNullable(this.groupId);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="isReserved", required=true)
-      private final Boolean isReserved;
+    private Boolean isReserved;
 
     public Boolean isReserved() {
         return this.isReserved;
@@ -70,10 +70,10 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable String privateLinkResourceId;
+    private @Nullable String privateLinkResourceId;
 
     public Optional<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
     /**
@@ -81,94 +81,80 @@ public final class ManagedPrivateEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public ManagedPrivateEndpointResponse(
-        @Nullable ConnectionStatePropertiesResponse connectionState,
-        @Nullable List<String> fqdns,
-        @Nullable String groupId,
-        Boolean isReserved,
-        @Nullable String privateLinkResourceId,
-        String provisioningState) {
-        this.connectionState = connectionState;
-        this.fqdns = fqdns;
-        this.groupId = groupId;
-        this.isReserved = Objects.requireNonNull(isReserved, "expected parameter 'isReserved' to be non-null");
-        this.privateLinkResourceId = privateLinkResourceId;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private ManagedPrivateEndpointResponse() {}
 
-    private ManagedPrivateEndpointResponse() {
-        this.connectionState = null;
-        this.fqdns = List.of();
-        this.groupId = null;
-        this.isReserved = null;
-        this.privateLinkResourceId = null;
-        this.provisioningState = null;
+    private ManagedPrivateEndpointResponse(ManagedPrivateEndpointResponse $) {
+        this.connectionState = $.connectionState;
+        this.fqdns = $.fqdns;
+        this.groupId = $.groupId;
+        this.isReserved = $.isReserved;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedPrivateEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConnectionStatePropertiesResponse connectionState;
-        private @Nullable List<String> fqdns;
-        private @Nullable String groupId;
-        private Boolean isReserved;
-        private @Nullable String privateLinkResourceId;
-        private String provisioningState;
+        private ManagedPrivateEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedPrivateEndpointResponse();
         }
 
         public Builder(ManagedPrivateEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionState = defaults.connectionState;
-    	      this.fqdns = defaults.fqdns;
-    	      this.groupId = defaults.groupId;
-    	      this.isReserved = defaults.isReserved;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new ManagedPrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionState(@Nullable ConnectionStatePropertiesResponse connectionState) {
-            this.connectionState = connectionState;
+            $.connectionState = connectionState;
             return this;
         }
+
         public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = fqdns;
+            $.fqdns = fqdns;
             return this;
         }
+
         public Builder fqdns(String... fqdns) {
             return fqdns(List.of(fqdns));
         }
+
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = groupId;
+            $.groupId = groupId;
             return this;
         }
+
         public Builder isReserved(Boolean isReserved) {
-            this.isReserved = Objects.requireNonNull(isReserved);
+            $.isReserved = isReserved;
             return this;
         }
+
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public ManagedPrivateEndpointResponse build() {
-            return new ManagedPrivateEndpointResponse(connectionState, fqdns, groupId, isReserved, privateLinkResourceId, provisioningState);
+        }
+
+        public ManagedPrivateEndpointResponse build() {
+            $.isReserved = Objects.requireNonNull($.isReserved, "expected parameter 'isReserved' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

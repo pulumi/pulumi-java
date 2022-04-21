@@ -5,7 +5,6 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="increasingKpi", required=true)
-      private final Output<Boolean> increasingKpi;
+    private Output<Boolean> increasingKpi;
 
     public Output<Boolean> increasingKpi() {
         return this.increasingKpi;
@@ -35,7 +34,7 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lowerLimit", required=true)
-      private final Output<Double> lowerLimit;
+    private Output<Double> lowerLimit;
 
     public Output<Double> lowerLimit() {
         return this.lowerLimit;
@@ -46,76 +45,71 @@ public final class KpiThresholdsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upperLimit", required=true)
-      private final Output<Double> upperLimit;
+    private Output<Double> upperLimit;
 
     public Output<Double> upperLimit() {
         return this.upperLimit;
     }
 
-    public KpiThresholdsArgs(
-        Output<Boolean> increasingKpi,
-        Output<Double> lowerLimit,
-        Output<Double> upperLimit) {
-        this.increasingKpi = Objects.requireNonNull(increasingKpi, "expected parameter 'increasingKpi' to be non-null");
-        this.lowerLimit = Objects.requireNonNull(lowerLimit, "expected parameter 'lowerLimit' to be non-null");
-        this.upperLimit = Objects.requireNonNull(upperLimit, "expected parameter 'upperLimit' to be non-null");
-    }
+    private KpiThresholdsArgs() {}
 
-    private KpiThresholdsArgs() {
-        this.increasingKpi = Codegen.empty();
-        this.lowerLimit = Codegen.empty();
-        this.upperLimit = Codegen.empty();
+    private KpiThresholdsArgs(KpiThresholdsArgs $) {
+        this.increasingKpi = $.increasingKpi;
+        this.lowerLimit = $.lowerLimit;
+        this.upperLimit = $.upperLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KpiThresholdsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> increasingKpi;
-        private Output<Double> lowerLimit;
-        private Output<Double> upperLimit;
+        private KpiThresholdsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KpiThresholdsArgs();
         }
 
         public Builder(KpiThresholdsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.increasingKpi = defaults.increasingKpi;
-    	      this.lowerLimit = defaults.lowerLimit;
-    	      this.upperLimit = defaults.upperLimit;
+            $ = new KpiThresholdsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder increasingKpi(Output<Boolean> increasingKpi) {
-            this.increasingKpi = Objects.requireNonNull(increasingKpi);
+            $.increasingKpi = increasingKpi;
             return this;
         }
+
         public Builder increasingKpi(Boolean increasingKpi) {
-            this.increasingKpi = Output.of(Objects.requireNonNull(increasingKpi));
-            return this;
+            return increasingKpi(Output.of(increasingKpi));
         }
+
         public Builder lowerLimit(Output<Double> lowerLimit) {
-            this.lowerLimit = Objects.requireNonNull(lowerLimit);
+            $.lowerLimit = lowerLimit;
             return this;
         }
+
         public Builder lowerLimit(Double lowerLimit) {
-            this.lowerLimit = Output.of(Objects.requireNonNull(lowerLimit));
-            return this;
+            return lowerLimit(Output.of(lowerLimit));
         }
+
         public Builder upperLimit(Output<Double> upperLimit) {
-            this.upperLimit = Objects.requireNonNull(upperLimit);
+            $.upperLimit = upperLimit;
             return this;
         }
+
         public Builder upperLimit(Double upperLimit) {
-            this.upperLimit = Output.of(Objects.requireNonNull(upperLimit));
-            return this;
-        }        public KpiThresholdsArgs build() {
-            return new KpiThresholdsArgs(increasingKpi, lowerLimit, upperLimit);
+            return upperLimit(Output.of(upperLimit));
+        }
+
+        public KpiThresholdsArgs build() {
+            $.increasingKpi = Objects.requireNonNull($.increasingKpi, "expected parameter 'increasingKpi' to be non-null");
+            $.lowerLimit = Objects.requireNonNull($.lowerLimit, "expected parameter 'lowerLimit' to be non-null");
+            $.upperLimit = Objects.requireNonNull($.upperLimit, "expected parameter 'upperLimit' to be non-null");
+            return $;
         }
     }
+
 }

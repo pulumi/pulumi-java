@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputArgs extends com.pulu
      * 
      */
     @Import(name="audio")
-      private final @Nullable Output<String> audio;
+    private @Nullable Output<String> audio;
 
-    public Output<String> audio() {
-        return this.audio == null ? Codegen.empty() : this.audio;
+    public Optional<Output<String>> audio() {
+        return Optional.ofNullable(this.audio);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputArgs extends com.pulu
      * 
      */
     @Import(name="config", required=true)
-      private final Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> config;
+    private Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> config;
 
     public Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> config() {
         return this.config;
     }
 
-    public GoogleCloudDialogflowCxV3beta1AudioInputArgs(
-        @Nullable Output<String> audio,
-        Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> config) {
-        this.audio = audio;
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1AudioInputArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1AudioInputArgs() {
-        this.audio = Codegen.empty();
-        this.config = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1AudioInputArgs(GoogleCloudDialogflowCxV3beta1AudioInputArgs $) {
+        this.audio = $.audio;
+        this.config = $.config;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1AudioInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audio;
-        private Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> config;
+        private GoogleCloudDialogflowCxV3beta1AudioInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1AudioInputArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1AudioInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audio = defaults.audio;
-    	      this.config = defaults.config;
+            $ = new GoogleCloudDialogflowCxV3beta1AudioInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audio(@Nullable Output<String> audio) {
-            this.audio = audio;
+            $.audio = audio;
             return this;
         }
-        public Builder audio(@Nullable String audio) {
-            this.audio = Codegen.ofNullable(audio);
-            return this;
+
+        public Builder audio(String audio) {
+            return audio(Output.of(audio));
         }
+
         public Builder config(Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1AudioInputArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1AudioInputArgs(audio, config);
+            return config(Output.of(config));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1AudioInputArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            return $;
         }
     }
+
 }

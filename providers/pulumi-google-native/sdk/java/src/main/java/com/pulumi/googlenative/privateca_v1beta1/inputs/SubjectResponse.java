@@ -21,7 +21,7 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="countryCode", required=true)
-      private final String countryCode;
+    private String countryCode;
 
     public String countryCode() {
         return this.countryCode;
@@ -32,7 +32,7 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locality", required=true)
-      private final String locality;
+    private String locality;
 
     public String locality() {
         return this.locality;
@@ -43,7 +43,7 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="organization", required=true)
-      private final String organization;
+    private String organization;
 
     public String organization() {
         return this.organization;
@@ -54,7 +54,7 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="organizationalUnit", required=true)
-      private final String organizationalUnit;
+    private String organizationalUnit;
 
     public String organizationalUnit() {
         return this.organizationalUnit;
@@ -65,7 +65,7 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="postalCode", required=true)
-      private final String postalCode;
+    private String postalCode;
 
     public String postalCode() {
         return this.postalCode;
@@ -76,7 +76,7 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="province", required=true)
-      private final String province;
+    private String province;
 
     public String province() {
         return this.province;
@@ -87,100 +87,87 @@ public final class SubjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="streetAddress", required=true)
-      private final String streetAddress;
+    private String streetAddress;
 
     public String streetAddress() {
         return this.streetAddress;
     }
 
-    public SubjectResponse(
-        String countryCode,
-        String locality,
-        String organization,
-        String organizationalUnit,
-        String postalCode,
-        String province,
-        String streetAddress) {
-        this.countryCode = Objects.requireNonNull(countryCode, "expected parameter 'countryCode' to be non-null");
-        this.locality = Objects.requireNonNull(locality, "expected parameter 'locality' to be non-null");
-        this.organization = Objects.requireNonNull(organization, "expected parameter 'organization' to be non-null");
-        this.organizationalUnit = Objects.requireNonNull(organizationalUnit, "expected parameter 'organizationalUnit' to be non-null");
-        this.postalCode = Objects.requireNonNull(postalCode, "expected parameter 'postalCode' to be non-null");
-        this.province = Objects.requireNonNull(province, "expected parameter 'province' to be non-null");
-        this.streetAddress = Objects.requireNonNull(streetAddress, "expected parameter 'streetAddress' to be non-null");
-    }
+    private SubjectResponse() {}
 
-    private SubjectResponse() {
-        this.countryCode = null;
-        this.locality = null;
-        this.organization = null;
-        this.organizationalUnit = null;
-        this.postalCode = null;
-        this.province = null;
-        this.streetAddress = null;
+    private SubjectResponse(SubjectResponse $) {
+        this.countryCode = $.countryCode;
+        this.locality = $.locality;
+        this.organization = $.organization;
+        this.organizationalUnit = $.organizationalUnit;
+        this.postalCode = $.postalCode;
+        this.province = $.province;
+        this.streetAddress = $.streetAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubjectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String countryCode;
-        private String locality;
-        private String organization;
-        private String organizationalUnit;
-        private String postalCode;
-        private String province;
-        private String streetAddress;
+        private SubjectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubjectResponse();
         }
 
         public Builder(SubjectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countryCode = defaults.countryCode;
-    	      this.locality = defaults.locality;
-    	      this.organization = defaults.organization;
-    	      this.organizationalUnit = defaults.organizationalUnit;
-    	      this.postalCode = defaults.postalCode;
-    	      this.province = defaults.province;
-    	      this.streetAddress = defaults.streetAddress;
+            $ = new SubjectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder countryCode(String countryCode) {
-            this.countryCode = Objects.requireNonNull(countryCode);
+            $.countryCode = countryCode;
             return this;
         }
+
         public Builder locality(String locality) {
-            this.locality = Objects.requireNonNull(locality);
+            $.locality = locality;
             return this;
         }
+
         public Builder organization(String organization) {
-            this.organization = Objects.requireNonNull(organization);
+            $.organization = organization;
             return this;
         }
+
         public Builder organizationalUnit(String organizationalUnit) {
-            this.organizationalUnit = Objects.requireNonNull(organizationalUnit);
+            $.organizationalUnit = organizationalUnit;
             return this;
         }
+
         public Builder postalCode(String postalCode) {
-            this.postalCode = Objects.requireNonNull(postalCode);
+            $.postalCode = postalCode;
             return this;
         }
+
         public Builder province(String province) {
-            this.province = Objects.requireNonNull(province);
+            $.province = province;
             return this;
         }
+
         public Builder streetAddress(String streetAddress) {
-            this.streetAddress = Objects.requireNonNull(streetAddress);
+            $.streetAddress = streetAddress;
             return this;
-        }        public SubjectResponse build() {
-            return new SubjectResponse(countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
+        }
+
+        public SubjectResponse build() {
+            $.countryCode = Objects.requireNonNull($.countryCode, "expected parameter 'countryCode' to be non-null");
+            $.locality = Objects.requireNonNull($.locality, "expected parameter 'locality' to be non-null");
+            $.organization = Objects.requireNonNull($.organization, "expected parameter 'organization' to be non-null");
+            $.organizationalUnit = Objects.requireNonNull($.organizationalUnit, "expected parameter 'organizationalUnit' to be non-null");
+            $.postalCode = Objects.requireNonNull($.postalCode, "expected parameter 'postalCode' to be non-null");
+            $.province = Objects.requireNonNull($.province, "expected parameter 'province' to be non-null");
+            $.streetAddress = Objects.requireNonNull($.streetAddress, "expected parameter 'streetAddress' to be non-null");
+            return $;
         }
     }
+
 }

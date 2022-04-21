@@ -23,7 +23,7 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="additionalInformation", required=true)
-      private final String additionalInformation;
+    private String additionalInformation;
 
     public String additionalInformation() {
         return this.additionalInformation;
@@ -34,10 +34,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="city")
-      private final @Nullable String city;
+    private @Nullable String city;
 
     public Optional<String> city() {
-        return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
+        return Optional.ofNullable(this.city);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="countryOrRegion")
-      private final @Nullable String countryOrRegion;
+    private @Nullable String countryOrRegion;
 
     public Optional<String> countryOrRegion() {
-        return this.countryOrRegion == null ? Optional.empty() : Optional.ofNullable(this.countryOrRegion);
+        return Optional.ofNullable(this.countryOrRegion);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="phone")
-      private final @Nullable String phone;
+    private @Nullable String phone;
 
     public Optional<String> phone() {
-        return this.phone == null ? Optional.empty() : Optional.ofNullable(this.phone);
+        return Optional.ofNullable(this.phone);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="postalCode")
-      private final @Nullable String postalCode;
+    private @Nullable String postalCode;
 
     public Optional<String> postalCode() {
-        return this.postalCode == null ? Optional.empty() : Optional.ofNullable(this.postalCode);
+        return Optional.ofNullable(this.postalCode);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="recipientName")
-      private final @Nullable String recipientName;
+    private @Nullable String recipientName;
 
     public Optional<String> recipientName() {
-        return this.recipientName == null ? Optional.empty() : Optional.ofNullable(this.recipientName);
+        return Optional.ofNullable(this.recipientName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="stateOrProvince")
-      private final @Nullable String stateOrProvince;
+    private @Nullable String stateOrProvince;
 
     public Optional<String> stateOrProvince() {
-        return this.stateOrProvince == null ? Optional.empty() : Optional.ofNullable(this.stateOrProvince);
+        return Optional.ofNullable(this.stateOrProvince);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="streetAddress1")
-      private final @Nullable String streetAddress1;
+    private @Nullable String streetAddress1;
 
     public Optional<String> streetAddress1() {
-        return this.streetAddress1 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress1);
+        return Optional.ofNullable(this.streetAddress1);
     }
 
     /**
@@ -111,118 +111,93 @@ public final class ShippingInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="streetAddress2")
-      private final @Nullable String streetAddress2;
+    private @Nullable String streetAddress2;
 
     public Optional<String> streetAddress2() {
-        return this.streetAddress2 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress2);
+        return Optional.ofNullable(this.streetAddress2);
     }
 
-    public ShippingInformationResponse(
-        String additionalInformation,
-        @Nullable String city,
-        @Nullable String countryOrRegion,
-        @Nullable String phone,
-        @Nullable String postalCode,
-        @Nullable String recipientName,
-        @Nullable String stateOrProvince,
-        @Nullable String streetAddress1,
-        @Nullable String streetAddress2) {
-        this.additionalInformation = Objects.requireNonNull(additionalInformation, "expected parameter 'additionalInformation' to be non-null");
-        this.city = city;
-        this.countryOrRegion = countryOrRegion;
-        this.phone = phone;
-        this.postalCode = postalCode;
-        this.recipientName = recipientName;
-        this.stateOrProvince = stateOrProvince;
-        this.streetAddress1 = streetAddress1;
-        this.streetAddress2 = streetAddress2;
-    }
+    private ShippingInformationResponse() {}
 
-    private ShippingInformationResponse() {
-        this.additionalInformation = null;
-        this.city = null;
-        this.countryOrRegion = null;
-        this.phone = null;
-        this.postalCode = null;
-        this.recipientName = null;
-        this.stateOrProvince = null;
-        this.streetAddress1 = null;
-        this.streetAddress2 = null;
+    private ShippingInformationResponse(ShippingInformationResponse $) {
+        this.additionalInformation = $.additionalInformation;
+        this.city = $.city;
+        this.countryOrRegion = $.countryOrRegion;
+        this.phone = $.phone;
+        this.postalCode = $.postalCode;
+        this.recipientName = $.recipientName;
+        this.stateOrProvince = $.stateOrProvince;
+        this.streetAddress1 = $.streetAddress1;
+        this.streetAddress2 = $.streetAddress2;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShippingInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String additionalInformation;
-        private @Nullable String city;
-        private @Nullable String countryOrRegion;
-        private @Nullable String phone;
-        private @Nullable String postalCode;
-        private @Nullable String recipientName;
-        private @Nullable String stateOrProvince;
-        private @Nullable String streetAddress1;
-        private @Nullable String streetAddress2;
+        private ShippingInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShippingInformationResponse();
         }
 
         public Builder(ShippingInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalInformation = defaults.additionalInformation;
-    	      this.city = defaults.city;
-    	      this.countryOrRegion = defaults.countryOrRegion;
-    	      this.phone = defaults.phone;
-    	      this.postalCode = defaults.postalCode;
-    	      this.recipientName = defaults.recipientName;
-    	      this.stateOrProvince = defaults.stateOrProvince;
-    	      this.streetAddress1 = defaults.streetAddress1;
-    	      this.streetAddress2 = defaults.streetAddress2;
+            $ = new ShippingInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalInformation(String additionalInformation) {
-            this.additionalInformation = Objects.requireNonNull(additionalInformation);
+            $.additionalInformation = additionalInformation;
             return this;
         }
+
         public Builder city(@Nullable String city) {
-            this.city = city;
+            $.city = city;
             return this;
         }
+
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
-            this.countryOrRegion = countryOrRegion;
+            $.countryOrRegion = countryOrRegion;
             return this;
         }
+
         public Builder phone(@Nullable String phone) {
-            this.phone = phone;
+            $.phone = phone;
             return this;
         }
+
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = postalCode;
+            $.postalCode = postalCode;
             return this;
         }
+
         public Builder recipientName(@Nullable String recipientName) {
-            this.recipientName = recipientName;
+            $.recipientName = recipientName;
             return this;
         }
+
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
-            this.stateOrProvince = stateOrProvince;
+            $.stateOrProvince = stateOrProvince;
             return this;
         }
+
         public Builder streetAddress1(@Nullable String streetAddress1) {
-            this.streetAddress1 = streetAddress1;
+            $.streetAddress1 = streetAddress1;
             return this;
         }
+
         public Builder streetAddress2(@Nullable String streetAddress2) {
-            this.streetAddress2 = streetAddress2;
+            $.streetAddress2 = streetAddress2;
             return this;
-        }        public ShippingInformationResponse build() {
-            return new ShippingInformationResponse(additionalInformation, city, countryOrRegion, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);
+        }
+
+        public ShippingInformationResponse build() {
+            $.additionalInformation = Objects.requireNonNull($.additionalInformation, "expected parameter 'additionalInformation' to be non-null");
+            return $;
         }
     }
+
 }

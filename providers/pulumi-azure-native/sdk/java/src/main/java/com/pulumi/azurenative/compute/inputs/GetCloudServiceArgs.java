@@ -17,7 +17,7 @@ public final class GetCloudServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudServiceName", required=true)
-      private final String cloudServiceName;
+    private String cloudServiceName;
 
     public String cloudServiceName() {
         return this.cloudServiceName;
@@ -28,55 +28,52 @@ public final class GetCloudServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCloudServiceArgs(
-        String cloudServiceName,
-        String resourceGroupName) {
-        this.cloudServiceName = Objects.requireNonNull(cloudServiceName, "expected parameter 'cloudServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCloudServiceArgs() {}
 
-    private GetCloudServiceArgs() {
-        this.cloudServiceName = null;
-        this.resourceGroupName = null;
+    private GetCloudServiceArgs(GetCloudServiceArgs $) {
+        this.cloudServiceName = $.cloudServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCloudServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudServiceName;
-        private String resourceGroupName;
+        private GetCloudServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCloudServiceArgs();
         }
 
         public Builder(GetCloudServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudServiceName = defaults.cloudServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCloudServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudServiceName(String cloudServiceName) {
-            this.cloudServiceName = Objects.requireNonNull(cloudServiceName);
+            $.cloudServiceName = cloudServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCloudServiceArgs build() {
-            return new GetCloudServiceArgs(cloudServiceName, resourceGroupName);
+        }
+
+        public GetCloudServiceArgs build() {
+            $.cloudServiceName = Objects.requireNonNull($.cloudServiceName, "expected parameter 'cloudServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

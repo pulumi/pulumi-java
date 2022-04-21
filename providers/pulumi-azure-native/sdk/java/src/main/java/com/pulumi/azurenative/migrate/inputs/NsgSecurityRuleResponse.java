@@ -25,10 +25,10 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="access")
-      private final @Nullable String access;
+    private @Nullable String access;
 
     public Optional<String> access() {
-        return this.access == null ? Optional.empty() : Optional.ofNullable(this.access);
+        return Optional.ofNullable(this.access);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="destinationAddressPrefix")
-      private final @Nullable String destinationAddressPrefix;
+    private @Nullable String destinationAddressPrefix;
 
     public Optional<String> destinationAddressPrefix() {
-        return this.destinationAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.destinationAddressPrefix);
+        return Optional.ofNullable(this.destinationAddressPrefix);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="destinationPortRange")
-      private final @Nullable String destinationPortRange;
+    private @Nullable String destinationPortRange;
 
     public Optional<String> destinationPortRange() {
-        return this.destinationPortRange == null ? Optional.empty() : Optional.ofNullable(this.destinationPortRange);
+        return Optional.ofNullable(this.destinationPortRange);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="direction")
-      private final @Nullable String direction;
+    private @Nullable String direction;
 
     public Optional<String> direction() {
-        return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourceAddressPrefix")
-      private final @Nullable String sourceAddressPrefix;
+    private @Nullable String sourceAddressPrefix;
 
     public Optional<String> sourceAddressPrefix() {
-        return this.sourceAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.sourceAddressPrefix);
+        return Optional.ofNullable(this.sourceAddressPrefix);
     }
 
     /**
@@ -134,127 +134,98 @@ public final class NsgSecurityRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourcePortRange")
-      private final @Nullable String sourcePortRange;
+    private @Nullable String sourcePortRange;
 
     public Optional<String> sourcePortRange() {
-        return this.sourcePortRange == null ? Optional.empty() : Optional.ofNullable(this.sourcePortRange);
+        return Optional.ofNullable(this.sourcePortRange);
     }
 
-    public NsgSecurityRuleResponse(
-        @Nullable String access,
-        @Nullable String description,
-        @Nullable String destinationAddressPrefix,
-        @Nullable String destinationPortRange,
-        @Nullable String direction,
-        @Nullable String name,
-        @Nullable Integer priority,
-        @Nullable String protocol,
-        @Nullable String sourceAddressPrefix,
-        @Nullable String sourcePortRange) {
-        this.access = access;
-        this.description = description;
-        this.destinationAddressPrefix = destinationAddressPrefix;
-        this.destinationPortRange = destinationPortRange;
-        this.direction = direction;
-        this.name = name;
-        this.priority = priority;
-        this.protocol = protocol;
-        this.sourceAddressPrefix = sourceAddressPrefix;
-        this.sourcePortRange = sourcePortRange;
-    }
+    private NsgSecurityRuleResponse() {}
 
-    private NsgSecurityRuleResponse() {
-        this.access = null;
-        this.description = null;
-        this.destinationAddressPrefix = null;
-        this.destinationPortRange = null;
-        this.direction = null;
-        this.name = null;
-        this.priority = null;
-        this.protocol = null;
-        this.sourceAddressPrefix = null;
-        this.sourcePortRange = null;
+    private NsgSecurityRuleResponse(NsgSecurityRuleResponse $) {
+        this.access = $.access;
+        this.description = $.description;
+        this.destinationAddressPrefix = $.destinationAddressPrefix;
+        this.destinationPortRange = $.destinationPortRange;
+        this.direction = $.direction;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.protocol = $.protocol;
+        this.sourceAddressPrefix = $.sourceAddressPrefix;
+        this.sourcePortRange = $.sourcePortRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NsgSecurityRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String access;
-        private @Nullable String description;
-        private @Nullable String destinationAddressPrefix;
-        private @Nullable String destinationPortRange;
-        private @Nullable String direction;
-        private @Nullable String name;
-        private @Nullable Integer priority;
-        private @Nullable String protocol;
-        private @Nullable String sourceAddressPrefix;
-        private @Nullable String sourcePortRange;
+        private NsgSecurityRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NsgSecurityRuleResponse();
         }
 
         public Builder(NsgSecurityRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.access = defaults.access;
-    	      this.description = defaults.description;
-    	      this.destinationAddressPrefix = defaults.destinationAddressPrefix;
-    	      this.destinationPortRange = defaults.destinationPortRange;
-    	      this.direction = defaults.direction;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.protocol = defaults.protocol;
-    	      this.sourceAddressPrefix = defaults.sourceAddressPrefix;
-    	      this.sourcePortRange = defaults.sourcePortRange;
+            $ = new NsgSecurityRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder access(@Nullable String access) {
-            this.access = access;
+            $.access = access;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
-            this.destinationAddressPrefix = destinationAddressPrefix;
+            $.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
+
         public Builder destinationPortRange(@Nullable String destinationPortRange) {
-            this.destinationPortRange = destinationPortRange;
+            $.destinationPortRange = destinationPortRange;
             return this;
         }
+
         public Builder direction(@Nullable String direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
-            this.sourceAddressPrefix = sourceAddressPrefix;
+            $.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
+
         public Builder sourcePortRange(@Nullable String sourcePortRange) {
-            this.sourcePortRange = sourcePortRange;
+            $.sourcePortRange = sourcePortRange;
             return this;
-        }        public NsgSecurityRuleResponse build() {
-            return new NsgSecurityRuleResponse(access, description, destinationAddressPrefix, destinationPortRange, direction, name, priority, protocol, sourceAddressPrefix, sourcePortRange);
+        }
+
+        public NsgSecurityRuleResponse build() {
+            return $;
         }
     }
+
 }

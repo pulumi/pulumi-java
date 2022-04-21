@@ -21,45 +21,45 @@ public final class ServiceResponseBaseResponseError extends com.pulumi.resources
      * 
      */
     @Import(name="error", required=true)
-      private final ErrorResponseResponse error;
+    private ErrorResponseResponse error;
 
     public ErrorResponseResponse error() {
         return this.error;
     }
 
-    public ServiceResponseBaseResponseError(ErrorResponseResponse error) {
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-    }
+    private ServiceResponseBaseResponseError() {}
 
-    private ServiceResponseBaseResponseError() {
-        this.error = null;
+    private ServiceResponseBaseResponseError(ServiceResponseBaseResponseError $) {
+        this.error = $.error;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceResponseBaseResponseError defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ErrorResponseResponse error;
+        private ServiceResponseBaseResponseError $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceResponseBaseResponseError();
         }
 
         public Builder(ServiceResponseBaseResponseError defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
+            $ = new ServiceResponseBaseResponseError(Objects.requireNonNull(defaults));
         }
 
         public Builder error(ErrorResponseResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
-        }        public ServiceResponseBaseResponseError build() {
-            return new ServiceResponseBaseResponseError(error);
+        }
+
+        public ServiceResponseBaseResponseError build() {
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            return $;
         }
     }
+
 }

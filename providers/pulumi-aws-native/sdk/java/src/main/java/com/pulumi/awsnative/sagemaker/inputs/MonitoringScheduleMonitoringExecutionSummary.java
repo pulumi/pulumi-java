@@ -24,17 +24,17 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
      * 
      */
     @Import(name="creationTime", required=true)
-      private final String creationTime;
+    private String creationTime;
 
     public String creationTime() {
         return this.creationTime;
     }
 
     @Import(name="endpointName")
-      private final @Nullable String endpointName;
+    private @Nullable String endpointName;
 
     public Optional<String> endpointName() {
-        return this.endpointName == null ? Optional.empty() : Optional.ofNullable(this.endpointName);
+        return Optional.ofNullable(this.endpointName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
      * 
      */
     @Import(name="failureReason")
-      private final @Nullable String failureReason;
+    private @Nullable String failureReason;
 
     public Optional<String> failureReason() {
-        return this.failureReason == null ? Optional.empty() : Optional.ofNullable(this.failureReason);
+        return Optional.ofNullable(this.failureReason);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
      * 
      */
     @Import(name="lastModifiedTime", required=true)
-      private final String lastModifiedTime;
+    private String lastModifiedTime;
 
     public String lastModifiedTime() {
         return this.lastModifiedTime;
@@ -64,14 +64,14 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
      * 
      */
     @Import(name="monitoringExecutionStatus", required=true)
-      private final MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
+    private MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
 
     public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
 
     @Import(name="monitoringScheduleName", required=true)
-      private final String monitoringScheduleName;
+    private String monitoringScheduleName;
 
     public String monitoringScheduleName() {
         return this.monitoringScheduleName;
@@ -82,10 +82,10 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
      * 
      */
     @Import(name="processingJobArn")
-      private final @Nullable String processingJobArn;
+    private @Nullable String processingJobArn;
 
     public Optional<String> processingJobArn() {
-        return this.processingJobArn == null ? Optional.empty() : Optional.ofNullable(this.processingJobArn);
+        return Optional.ofNullable(this.processingJobArn);
     }
 
     /**
@@ -93,109 +93,91 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends com.pulu
      * 
      */
     @Import(name="scheduledTime", required=true)
-      private final String scheduledTime;
+    private String scheduledTime;
 
     public String scheduledTime() {
         return this.scheduledTime;
     }
 
-    public MonitoringScheduleMonitoringExecutionSummary(
-        String creationTime,
-        @Nullable String endpointName,
-        @Nullable String failureReason,
-        String lastModifiedTime,
-        MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus,
-        String monitoringScheduleName,
-        @Nullable String processingJobArn,
-        String scheduledTime) {
-        this.creationTime = Objects.requireNonNull(creationTime, "expected parameter 'creationTime' to be non-null");
-        this.endpointName = endpointName;
-        this.failureReason = failureReason;
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
-        this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus, "expected parameter 'monitoringExecutionStatus' to be non-null");
-        this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName, "expected parameter 'monitoringScheduleName' to be non-null");
-        this.processingJobArn = processingJobArn;
-        this.scheduledTime = Objects.requireNonNull(scheduledTime, "expected parameter 'scheduledTime' to be non-null");
-    }
+    private MonitoringScheduleMonitoringExecutionSummary() {}
 
-    private MonitoringScheduleMonitoringExecutionSummary() {
-        this.creationTime = null;
-        this.endpointName = null;
-        this.failureReason = null;
-        this.lastModifiedTime = null;
-        this.monitoringExecutionStatus = null;
-        this.monitoringScheduleName = null;
-        this.processingJobArn = null;
-        this.scheduledTime = null;
+    private MonitoringScheduleMonitoringExecutionSummary(MonitoringScheduleMonitoringExecutionSummary $) {
+        this.creationTime = $.creationTime;
+        this.endpointName = $.endpointName;
+        this.failureReason = $.failureReason;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.monitoringExecutionStatus = $.monitoringExecutionStatus;
+        this.monitoringScheduleName = $.monitoringScheduleName;
+        this.processingJobArn = $.processingJobArn;
+        this.scheduledTime = $.scheduledTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleMonitoringExecutionSummary defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String creationTime;
-        private @Nullable String endpointName;
-        private @Nullable String failureReason;
-        private String lastModifiedTime;
-        private MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
-        private String monitoringScheduleName;
-        private @Nullable String processingJobArn;
-        private String scheduledTime;
+        private MonitoringScheduleMonitoringExecutionSummary $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleMonitoringExecutionSummary();
         }
 
         public Builder(MonitoringScheduleMonitoringExecutionSummary defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.endpointName = defaults.endpointName;
-    	      this.failureReason = defaults.failureReason;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.monitoringExecutionStatus = defaults.monitoringExecutionStatus;
-    	      this.monitoringScheduleName = defaults.monitoringScheduleName;
-    	      this.processingJobArn = defaults.processingJobArn;
-    	      this.scheduledTime = defaults.scheduledTime;
+            $ = new MonitoringScheduleMonitoringExecutionSummary(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(String creationTime) {
-            this.creationTime = Objects.requireNonNull(creationTime);
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = endpointName;
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = failureReason;
+            $.failureReason = failureReason;
             return this;
         }
+
         public Builder lastModifiedTime(String lastModifiedTime) {
-            this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
+
         public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
-            this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus);
+            $.monitoringExecutionStatus = monitoringExecutionStatus;
             return this;
         }
+
         public Builder monitoringScheduleName(String monitoringScheduleName) {
-            this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName);
+            $.monitoringScheduleName = monitoringScheduleName;
             return this;
         }
+
         public Builder processingJobArn(@Nullable String processingJobArn) {
-            this.processingJobArn = processingJobArn;
+            $.processingJobArn = processingJobArn;
             return this;
         }
+
         public Builder scheduledTime(String scheduledTime) {
-            this.scheduledTime = Objects.requireNonNull(scheduledTime);
+            $.scheduledTime = scheduledTime;
             return this;
-        }        public MonitoringScheduleMonitoringExecutionSummary build() {
-            return new MonitoringScheduleMonitoringExecutionSummary(creationTime, endpointName, failureReason, lastModifiedTime, monitoringExecutionStatus, monitoringScheduleName, processingJobArn, scheduledTime);
+        }
+
+        public MonitoringScheduleMonitoringExecutionSummary build() {
+            $.creationTime = Objects.requireNonNull($.creationTime, "expected parameter 'creationTime' to be non-null");
+            $.lastModifiedTime = Objects.requireNonNull($.lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
+            $.monitoringExecutionStatus = Objects.requireNonNull($.monitoringExecutionStatus, "expected parameter 'monitoringExecutionStatus' to be non-null");
+            $.monitoringScheduleName = Objects.requireNonNull($.monitoringScheduleName, "expected parameter 'monitoringScheduleName' to be non-null");
+            $.scheduledTime = Objects.requireNonNull($.scheduledTime, "expected parameter 'scheduledTime' to be non-null");
+            return $;
         }
     }
+
 }

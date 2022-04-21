@@ -20,10 +20,10 @@ public final class FixedScaleSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="nodeDeallocationOption")
-      private final @Nullable String nodeDeallocationOption;
+    private @Nullable String nodeDeallocationOption;
 
     public Optional<String> nodeDeallocationOption() {
-        return this.nodeDeallocationOption == null ? Optional.empty() : Optional.ofNullable(this.nodeDeallocationOption);
+        return Optional.ofNullable(this.nodeDeallocationOption);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FixedScaleSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resizeTimeout")
-      private final @Nullable String resizeTimeout;
+    private @Nullable String resizeTimeout;
 
     public Optional<String> resizeTimeout() {
-        return this.resizeTimeout == null ? Optional.empty() : Optional.ofNullable(this.resizeTimeout);
+        return Optional.ofNullable(this.resizeTimeout);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FixedScaleSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetDedicatedNodes")
-      private final @Nullable Integer targetDedicatedNodes;
+    private @Nullable Integer targetDedicatedNodes;
 
     public Optional<Integer> targetDedicatedNodes() {
-        return this.targetDedicatedNodes == null ? Optional.empty() : Optional.ofNullable(this.targetDedicatedNodes);
+        return Optional.ofNullable(this.targetDedicatedNodes);
     }
 
     /**
@@ -53,73 +53,62 @@ public final class FixedScaleSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetLowPriorityNodes")
-      private final @Nullable Integer targetLowPriorityNodes;
+    private @Nullable Integer targetLowPriorityNodes;
 
     public Optional<Integer> targetLowPriorityNodes() {
-        return this.targetLowPriorityNodes == null ? Optional.empty() : Optional.ofNullable(this.targetLowPriorityNodes);
+        return Optional.ofNullable(this.targetLowPriorityNodes);
     }
 
-    public FixedScaleSettingsResponse(
-        @Nullable String nodeDeallocationOption,
-        @Nullable String resizeTimeout,
-        @Nullable Integer targetDedicatedNodes,
-        @Nullable Integer targetLowPriorityNodes) {
-        this.nodeDeallocationOption = nodeDeallocationOption;
-        this.resizeTimeout = resizeTimeout;
-        this.targetDedicatedNodes = targetDedicatedNodes;
-        this.targetLowPriorityNodes = targetLowPriorityNodes;
-    }
+    private FixedScaleSettingsResponse() {}
 
-    private FixedScaleSettingsResponse() {
-        this.nodeDeallocationOption = null;
-        this.resizeTimeout = null;
-        this.targetDedicatedNodes = null;
-        this.targetLowPriorityNodes = null;
+    private FixedScaleSettingsResponse(FixedScaleSettingsResponse $) {
+        this.nodeDeallocationOption = $.nodeDeallocationOption;
+        this.resizeTimeout = $.resizeTimeout;
+        this.targetDedicatedNodes = $.targetDedicatedNodes;
+        this.targetLowPriorityNodes = $.targetLowPriorityNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FixedScaleSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String nodeDeallocationOption;
-        private @Nullable String resizeTimeout;
-        private @Nullable Integer targetDedicatedNodes;
-        private @Nullable Integer targetLowPriorityNodes;
+        private FixedScaleSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FixedScaleSettingsResponse();
         }
 
         public Builder(FixedScaleSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeDeallocationOption = defaults.nodeDeallocationOption;
-    	      this.resizeTimeout = defaults.resizeTimeout;
-    	      this.targetDedicatedNodes = defaults.targetDedicatedNodes;
-    	      this.targetLowPriorityNodes = defaults.targetLowPriorityNodes;
+            $ = new FixedScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeDeallocationOption(@Nullable String nodeDeallocationOption) {
-            this.nodeDeallocationOption = nodeDeallocationOption;
+            $.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
+
         public Builder resizeTimeout(@Nullable String resizeTimeout) {
-            this.resizeTimeout = resizeTimeout;
+            $.resizeTimeout = resizeTimeout;
             return this;
         }
+
         public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
-            this.targetDedicatedNodes = targetDedicatedNodes;
+            $.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
+
         public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
-            this.targetLowPriorityNodes = targetLowPriorityNodes;
+            $.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
-        }        public FixedScaleSettingsResponse build() {
-            return new FixedScaleSettingsResponse(nodeDeallocationOption, resizeTimeout, targetDedicatedNodes, targetLowPriorityNodes);
+        }
+
+        public FixedScaleSettingsResponse build() {
+            return $;
         }
     }
+
 }

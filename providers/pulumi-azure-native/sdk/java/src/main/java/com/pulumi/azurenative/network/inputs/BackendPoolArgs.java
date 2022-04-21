@@ -7,10 +7,10 @@ import com.pulumi.azurenative.network.inputs.BackendArgs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backends")
-      private final @Nullable Output<List<BackendArgs>> backends;
+    private @Nullable Output<List<BackendArgs>> backends;
 
-    public Output<List<BackendArgs>> backends() {
-        return this.backends == null ? Codegen.empty() : this.backends;
+    public Optional<Output<List<BackendArgs>>> backends() {
+        return Optional.ofNullable(this.backends);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthProbeSettings")
-      private final @Nullable Output<SubResourceArgs> healthProbeSettings;
+    private @Nullable Output<SubResourceArgs> healthProbeSettings;
 
-    public Output<SubResourceArgs> healthProbeSettings() {
-        return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
+    public Optional<Output<SubResourceArgs>> healthProbeSettings() {
+        return Optional.ofNullable(this.healthProbeSettings);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancingSettings")
-      private final @Nullable Output<SubResourceArgs> loadBalancingSettings;
+    private @Nullable Output<SubResourceArgs> loadBalancingSettings;
 
-    public Output<SubResourceArgs> loadBalancingSettings() {
-        return this.loadBalancingSettings == null ? Codegen.empty() : this.loadBalancingSettings;
+    public Optional<Output<SubResourceArgs>> loadBalancingSettings() {
+        return Optional.ofNullable(this.loadBalancingSettings);
     }
 
     /**
@@ -71,105 +71,92 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public BackendPoolArgs(
-        @Nullable Output<List<BackendArgs>> backends,
-        @Nullable Output<SubResourceArgs> healthProbeSettings,
-        @Nullable Output<String> id,
-        @Nullable Output<SubResourceArgs> loadBalancingSettings,
-        @Nullable Output<String> name) {
-        this.backends = backends;
-        this.healthProbeSettings = healthProbeSettings;
-        this.id = id;
-        this.loadBalancingSettings = loadBalancingSettings;
-        this.name = name;
-    }
+    private BackendPoolArgs() {}
 
-    private BackendPoolArgs() {
-        this.backends = Codegen.empty();
-        this.healthProbeSettings = Codegen.empty();
-        this.id = Codegen.empty();
-        this.loadBalancingSettings = Codegen.empty();
-        this.name = Codegen.empty();
+    private BackendPoolArgs(BackendPoolArgs $) {
+        this.backends = $.backends;
+        this.healthProbeSettings = $.healthProbeSettings;
+        this.id = $.id;
+        this.loadBalancingSettings = $.loadBalancingSettings;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BackendArgs>> backends;
-        private @Nullable Output<SubResourceArgs> healthProbeSettings;
-        private @Nullable Output<String> id;
-        private @Nullable Output<SubResourceArgs> loadBalancingSettings;
-        private @Nullable Output<String> name;
+        private BackendPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendPoolArgs();
         }
 
         public Builder(BackendPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backends = defaults.backends;
-    	      this.healthProbeSettings = defaults.healthProbeSettings;
-    	      this.id = defaults.id;
-    	      this.loadBalancingSettings = defaults.loadBalancingSettings;
-    	      this.name = defaults.name;
+            $ = new BackendPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backends(@Nullable Output<List<BackendArgs>> backends) {
-            this.backends = backends;
+            $.backends = backends;
             return this;
         }
-        public Builder backends(@Nullable List<BackendArgs> backends) {
-            this.backends = Codegen.ofNullable(backends);
-            return this;
+
+        public Builder backends(List<BackendArgs> backends) {
+            return backends(Output.of(backends));
         }
+
         public Builder backends(BackendArgs... backends) {
             return backends(List.of(backends));
         }
+
         public Builder healthProbeSettings(@Nullable Output<SubResourceArgs> healthProbeSettings) {
-            this.healthProbeSettings = healthProbeSettings;
+            $.healthProbeSettings = healthProbeSettings;
             return this;
         }
-        public Builder healthProbeSettings(@Nullable SubResourceArgs healthProbeSettings) {
-            this.healthProbeSettings = Codegen.ofNullable(healthProbeSettings);
-            return this;
+
+        public Builder healthProbeSettings(SubResourceArgs healthProbeSettings) {
+            return healthProbeSettings(Output.of(healthProbeSettings));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder loadBalancingSettings(@Nullable Output<SubResourceArgs> loadBalancingSettings) {
-            this.loadBalancingSettings = loadBalancingSettings;
+            $.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
-        public Builder loadBalancingSettings(@Nullable SubResourceArgs loadBalancingSettings) {
-            this.loadBalancingSettings = Codegen.ofNullable(loadBalancingSettings);
-            return this;
+
+        public Builder loadBalancingSettings(SubResourceArgs loadBalancingSettings) {
+            return loadBalancingSettings(Output.of(loadBalancingSettings));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public BackendPoolArgs build() {
-            return new BackendPoolArgs(backends, healthProbeSettings, id, loadBalancingSettings, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public BackendPoolArgs build() {
+            return $;
         }
     }
+
 }

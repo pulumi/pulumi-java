@@ -6,9 +6,9 @@ package com.pulumi.azurenative.containerservice.inputs;
 import com.pulumi.azurenative.containerservice.inputs.UserAssignedIdentityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bindingSelector")
-      private final @Nullable Output<String> bindingSelector;
+    private @Nullable Output<String> bindingSelector;
 
-    public Output<String> bindingSelector() {
-        return this.bindingSelector == null ? Codegen.empty() : this.bindingSelector;
+    public Optional<Output<String>> bindingSelector() {
+        return Optional.ofNullable(this.bindingSelector);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="identity", required=true)
-      private final Output<UserAssignedIdentityArgs> identity;
+    private Output<UserAssignedIdentityArgs> identity;
 
     public Output<UserAssignedIdentityArgs> identity() {
         return this.identity;
@@ -43,7 +43,7 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -54,89 +54,81 @@ public final class ManagedClusterPodIdentityArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="namespace", required=true)
-      private final Output<String> namespace;
+    private Output<String> namespace;
 
     public Output<String> namespace() {
         return this.namespace;
     }
 
-    public ManagedClusterPodIdentityArgs(
-        @Nullable Output<String> bindingSelector,
-        Output<UserAssignedIdentityArgs> identity,
-        Output<String> name,
-        Output<String> namespace) {
-        this.bindingSelector = bindingSelector;
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private ManagedClusterPodIdentityArgs() {}
 
-    private ManagedClusterPodIdentityArgs() {
-        this.bindingSelector = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private ManagedClusterPodIdentityArgs(ManagedClusterPodIdentityArgs $) {
+        this.bindingSelector = $.bindingSelector;
+        this.identity = $.identity;
+        this.name = $.name;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterPodIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bindingSelector;
-        private Output<UserAssignedIdentityArgs> identity;
-        private Output<String> name;
-        private Output<String> namespace;
+        private ManagedClusterPodIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterPodIdentityArgs();
         }
 
         public Builder(ManagedClusterPodIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindingSelector = defaults.bindingSelector;
-    	      this.identity = defaults.identity;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
+            $ = new ManagedClusterPodIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindingSelector(@Nullable Output<String> bindingSelector) {
-            this.bindingSelector = bindingSelector;
+            $.bindingSelector = bindingSelector;
             return this;
         }
-        public Builder bindingSelector(@Nullable String bindingSelector) {
-            this.bindingSelector = Codegen.ofNullable(bindingSelector);
-            return this;
+
+        public Builder bindingSelector(String bindingSelector) {
+            return bindingSelector(Output.of(bindingSelector));
         }
+
         public Builder identity(Output<UserAssignedIdentityArgs> identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder identity(UserAssignedIdentityArgs identity) {
-            this.identity = Output.of(Objects.requireNonNull(identity));
-            return this;
+            return identity(Output.of(identity));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder namespace(Output<String> namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Output.of(Objects.requireNonNull(namespace));
-            return this;
-        }        public ManagedClusterPodIdentityArgs build() {
-            return new ManagedClusterPodIdentityArgs(bindingSelector, identity, name, namespace);
+            return namespace(Output.of(namespace));
+        }
+
+        public ManagedClusterPodIdentityArgs build() {
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

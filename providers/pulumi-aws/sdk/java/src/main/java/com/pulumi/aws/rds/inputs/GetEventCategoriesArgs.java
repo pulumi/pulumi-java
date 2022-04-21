@@ -19,45 +19,44 @@ public final class GetEventCategoriesArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sourceType")
-      private final @Nullable String sourceType;
+    private @Nullable String sourceType;
 
     public Optional<String> sourceType() {
-        return this.sourceType == null ? Optional.empty() : Optional.ofNullable(this.sourceType);
+        return Optional.ofNullable(this.sourceType);
     }
 
-    public GetEventCategoriesArgs(@Nullable String sourceType) {
-        this.sourceType = sourceType;
-    }
+    private GetEventCategoriesArgs() {}
 
-    private GetEventCategoriesArgs() {
-        this.sourceType = null;
+    private GetEventCategoriesArgs(GetEventCategoriesArgs $) {
+        this.sourceType = $.sourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventCategoriesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String sourceType;
+        private GetEventCategoriesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventCategoriesArgs();
         }
 
         public Builder(GetEventCategoriesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceType = defaults.sourceType;
+            $ = new GetEventCategoriesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceType(@Nullable String sourceType) {
-            this.sourceType = sourceType;
+            $.sourceType = sourceType;
             return this;
-        }        public GetEventCategoriesArgs build() {
-            return new GetEventCategoriesArgs(sourceType);
+        }
+
+        public GetEventCategoriesArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.elasticbeanstalk.inputs;
 import com.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateSettingGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="application")
-      private final @Nullable Output<String> application;
+    private @Nullable Output<String> application;
 
-    public Output<String> application() {
-        return this.application == null ? Codegen.empty() : this.application;
+    public Optional<Output<String>> application() {
+        return Optional.ofNullable(this.application);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="environmentId")
-      private final @Nullable Output<String> environmentId;
+    private @Nullable Output<String> environmentId;
 
-    public Output<String> environmentId() {
-        return this.environmentId == null ? Codegen.empty() : this.environmentId;
+    public Optional<Output<String>> environmentId() {
+        return Optional.ofNullable(this.environmentId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings;
+    private @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings;
 
-    public Output<List<ConfigurationTemplateSettingGetArgs>> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<List<ConfigurationTemplateSettingGetArgs>>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -80,118 +80,102 @@ public final class ConfigurationTemplateState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="solutionStackName")
-      private final @Nullable Output<String> solutionStackName;
+    private @Nullable Output<String> solutionStackName;
 
-    public Output<String> solutionStackName() {
-        return this.solutionStackName == null ? Codegen.empty() : this.solutionStackName;
+    public Optional<Output<String>> solutionStackName() {
+        return Optional.ofNullable(this.solutionStackName);
     }
 
-    public ConfigurationTemplateState(
-        @Nullable Output<String> application,
-        @Nullable Output<String> description,
-        @Nullable Output<String> environmentId,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings,
-        @Nullable Output<String> solutionStackName) {
-        this.application = application;
-        this.description = description;
-        this.environmentId = environmentId;
-        this.name = name;
-        this.settings = settings;
-        this.solutionStackName = solutionStackName;
-    }
+    private ConfigurationTemplateState() {}
 
-    private ConfigurationTemplateState() {
-        this.application = Codegen.empty();
-        this.description = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.solutionStackName = Codegen.empty();
+    private ConfigurationTemplateState(ConfigurationTemplateState $) {
+        this.application = $.application;
+        this.description = $.description;
+        this.environmentId = $.environmentId;
+        this.name = $.name;
+        this.settings = $.settings;
+        this.solutionStackName = $.solutionStackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationTemplateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> application;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> environmentId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings;
-        private @Nullable Output<String> solutionStackName;
+        private ConfigurationTemplateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationTemplateState();
         }
 
         public Builder(ConfigurationTemplateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.application = defaults.application;
-    	      this.description = defaults.description;
-    	      this.environmentId = defaults.environmentId;
-    	      this.name = defaults.name;
-    	      this.settings = defaults.settings;
-    	      this.solutionStackName = defaults.solutionStackName;
+            $ = new ConfigurationTemplateState(Objects.requireNonNull(defaults));
         }
 
         public Builder application(@Nullable Output<String> application) {
-            this.application = application;
+            $.application = application;
             return this;
         }
-        public Builder application(@Nullable String application) {
-            this.application = Codegen.ofNullable(application);
-            return this;
+
+        public Builder application(String application) {
+            return application(Output.of(application));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentId(@Nullable Output<String> environmentId) {
-            this.environmentId = environmentId;
+            $.environmentId = environmentId;
             return this;
         }
-        public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Codegen.ofNullable(environmentId);
-            return this;
+
+        public Builder environmentId(String environmentId) {
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder settings(@Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable List<ConfigurationTemplateSettingGetArgs> settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(List<ConfigurationTemplateSettingGetArgs> settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder settings(ConfigurationTemplateSettingGetArgs... settings) {
             return settings(List.of(settings));
         }
+
         public Builder solutionStackName(@Nullable Output<String> solutionStackName) {
-            this.solutionStackName = solutionStackName;
+            $.solutionStackName = solutionStackName;
             return this;
         }
-        public Builder solutionStackName(@Nullable String solutionStackName) {
-            this.solutionStackName = Codegen.ofNullable(solutionStackName);
-            return this;
-        }        public ConfigurationTemplateState build() {
-            return new ConfigurationTemplateState(application, description, environmentId, name, settings, solutionStackName);
+
+        public Builder solutionStackName(String solutionStackName) {
+            return solutionStackName(Output.of(solutionStackName));
+        }
+
+        public ConfigurationTemplateState build() {
+            return $;
         }
     }
+
 }

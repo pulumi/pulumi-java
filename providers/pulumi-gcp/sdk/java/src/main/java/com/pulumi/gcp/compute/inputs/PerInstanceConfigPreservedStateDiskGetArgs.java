@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends com.pulumi
      * 
      */
     @Import(name="deleteRule")
-      private final @Nullable Output<String> deleteRule;
+    private @Nullable Output<String> deleteRule;
 
-    public Output<String> deleteRule() {
-        return this.deleteRule == null ? Codegen.empty() : this.deleteRule;
+    public Optional<Output<String>> deleteRule() {
+        return Optional.ofNullable(this.deleteRule);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends com.pulumi
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -50,10 +50,10 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends com.pulumi
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -62,89 +62,80 @@ public final class PerInstanceConfigPreservedStateDiskGetArgs extends com.pulumi
      * 
      */
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
     }
 
-    public PerInstanceConfigPreservedStateDiskGetArgs(
-        @Nullable Output<String> deleteRule,
-        Output<String> deviceName,
-        @Nullable Output<String> mode,
-        Output<String> source) {
-        this.deleteRule = deleteRule;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.mode = mode;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private PerInstanceConfigPreservedStateDiskGetArgs() {}
 
-    private PerInstanceConfigPreservedStateDiskGetArgs() {
-        this.deleteRule = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.source = Codegen.empty();
+    private PerInstanceConfigPreservedStateDiskGetArgs(PerInstanceConfigPreservedStateDiskGetArgs $) {
+        this.deleteRule = $.deleteRule;
+        this.deviceName = $.deviceName;
+        this.mode = $.mode;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerInstanceConfigPreservedStateDiskGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deleteRule;
-        private Output<String> deviceName;
-        private @Nullable Output<String> mode;
-        private Output<String> source;
+        private PerInstanceConfigPreservedStateDiskGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerInstanceConfigPreservedStateDiskGetArgs();
         }
 
         public Builder(PerInstanceConfigPreservedStateDiskGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteRule = defaults.deleteRule;
-    	      this.deviceName = defaults.deviceName;
-    	      this.mode = defaults.mode;
-    	      this.source = defaults.source;
+            $ = new PerInstanceConfigPreservedStateDiskGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteRule(@Nullable Output<String> deleteRule) {
-            this.deleteRule = deleteRule;
+            $.deleteRule = deleteRule;
             return this;
         }
-        public Builder deleteRule(@Nullable String deleteRule) {
-            this.deleteRule = Codegen.ofNullable(deleteRule);
-            return this;
+
+        public Builder deleteRule(String deleteRule) {
+            return deleteRule(Output.of(deleteRule));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public PerInstanceConfigPreservedStateDiskGetArgs build() {
-            return new PerInstanceConfigPreservedStateDiskGetArgs(deleteRule, deviceName, mode, source);
+            return source(Output.of(source));
+        }
+
+        public PerInstanceConfigPreservedStateDiskGetArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

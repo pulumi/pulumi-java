@@ -6,9 +6,9 @@ package com.pulumi.awsnative.forecast.inputs;
 import com.pulumi.awsnative.forecast.inputs.AttributesItemPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class SchemaPropertiesArgs extends com.pulumi.resources.ResourceArg
     public static final SchemaPropertiesArgs Empty = new SchemaPropertiesArgs();
 
     @Import(name="attributes")
-      private final @Nullable Output<List<AttributesItemPropertiesArgs>> attributes;
+    private @Nullable Output<List<AttributesItemPropertiesArgs>> attributes;
 
-    public Output<List<AttributesItemPropertiesArgs>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<List<AttributesItemPropertiesArgs>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
-    public SchemaPropertiesArgs(@Nullable Output<List<AttributesItemPropertiesArgs>> attributes) {
-        this.attributes = attributes;
-    }
+    private SchemaPropertiesArgs() {}
 
-    private SchemaPropertiesArgs() {
-        this.attributes = Codegen.empty();
+    private SchemaPropertiesArgs(SchemaPropertiesArgs $) {
+        this.attributes = $.attributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AttributesItemPropertiesArgs>> attributes;
+        private SchemaPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaPropertiesArgs();
         }
 
         public Builder(SchemaPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
+            $ = new SchemaPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<List<AttributesItemPropertiesArgs>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable List<AttributesItemPropertiesArgs> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(List<AttributesItemPropertiesArgs> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(AttributesItemPropertiesArgs... attributes) {
             return attributes(List.of(attributes));
-        }        public SchemaPropertiesArgs build() {
-            return new SchemaPropertiesArgs(attributes);
+        }
+
+        public SchemaPropertiesArgs build() {
+            return $;
         }
     }
+
 }

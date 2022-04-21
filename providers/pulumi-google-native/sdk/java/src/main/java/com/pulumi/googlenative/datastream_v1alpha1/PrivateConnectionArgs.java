@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.VpcPeeringConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class PrivateConnectionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -33,38 +33,38 @@ public final class PrivateConnectionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="privateConnectionId", required=true)
-      private final Output<String> privateConnectionId;
+    private Output<String> privateConnectionId;
 
     public Output<String> privateConnectionId() {
         return this.privateConnectionId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -72,128 +72,110 @@ public final class PrivateConnectionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="vpcPeeringConfig")
-      private final @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig;
+    private @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig;
 
-    public Output<VpcPeeringConfigArgs> vpcPeeringConfig() {
-        return this.vpcPeeringConfig == null ? Codegen.empty() : this.vpcPeeringConfig;
+    public Optional<Output<VpcPeeringConfigArgs>> vpcPeeringConfig() {
+        return Optional.ofNullable(this.vpcPeeringConfig);
     }
 
-    public PrivateConnectionArgs(
-        Output<String> displayName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        Output<String> privateConnectionId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.labels = labels;
-        this.location = location;
-        this.privateConnectionId = Objects.requireNonNull(privateConnectionId, "expected parameter 'privateConnectionId' to be non-null");
-        this.project = project;
-        this.requestId = requestId;
-        this.vpcPeeringConfig = vpcPeeringConfig;
-    }
+    private PrivateConnectionArgs() {}
 
-    private PrivateConnectionArgs() {
-        this.displayName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.privateConnectionId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.vpcPeeringConfig = Codegen.empty();
+    private PrivateConnectionArgs(PrivateConnectionArgs $) {
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.privateConnectionId = $.privateConnectionId;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.vpcPeeringConfig = $.vpcPeeringConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private Output<String> privateConnectionId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig;
+        private PrivateConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateConnectionArgs();
         }
 
         public Builder(PrivateConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.privateConnectionId = defaults.privateConnectionId;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.vpcPeeringConfig = defaults.vpcPeeringConfig;
+            $ = new PrivateConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder privateConnectionId(Output<String> privateConnectionId) {
-            this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
+            $.privateConnectionId = privateConnectionId;
             return this;
         }
+
         public Builder privateConnectionId(String privateConnectionId) {
-            this.privateConnectionId = Output.of(Objects.requireNonNull(privateConnectionId));
-            return this;
+            return privateConnectionId(Output.of(privateConnectionId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder vpcPeeringConfig(@Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig) {
-            this.vpcPeeringConfig = vpcPeeringConfig;
+            $.vpcPeeringConfig = vpcPeeringConfig;
             return this;
         }
-        public Builder vpcPeeringConfig(@Nullable VpcPeeringConfigArgs vpcPeeringConfig) {
-            this.vpcPeeringConfig = Codegen.ofNullable(vpcPeeringConfig);
-            return this;
-        }        public PrivateConnectionArgs build() {
-            return new PrivateConnectionArgs(displayName, labels, location, privateConnectionId, project, requestId, vpcPeeringConfig);
+
+        public Builder vpcPeeringConfig(VpcPeeringConfigArgs vpcPeeringConfig) {
+            return vpcPeeringConfig(Output.of(vpcPeeringConfig));
+        }
+
+        public PrivateConnectionArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.privateConnectionId = Objects.requireNonNull($.privateConnectionId, "expected parameter 'privateConnectionId' to be non-null");
+            return $;
         }
     }
+
 }

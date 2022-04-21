@@ -17,7 +17,7 @@ public final class GetReplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class GetReplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="replicationName", required=true)
-      private final String replicationName;
+    private String replicationName;
 
     public String replicationName() {
         return this.replicationName;
@@ -39,64 +39,59 @@ public final class GetReplicationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetReplicationArgs(
-        String registryName,
-        String replicationName,
-        String resourceGroupName) {
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.replicationName = Objects.requireNonNull(replicationName, "expected parameter 'replicationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetReplicationArgs() {}
 
-    private GetReplicationArgs() {
-        this.registryName = null;
-        this.replicationName = null;
-        this.resourceGroupName = null;
+    private GetReplicationArgs(GetReplicationArgs $) {
+        this.registryName = $.registryName;
+        this.replicationName = $.replicationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registryName;
-        private String replicationName;
-        private String resourceGroupName;
+        private GetReplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationArgs();
         }
 
         public Builder(GetReplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryName = defaults.registryName;
-    	      this.replicationName = defaults.replicationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetReplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder replicationName(String replicationName) {
-            this.replicationName = Objects.requireNonNull(replicationName);
+            $.replicationName = replicationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetReplicationArgs build() {
-            return new GetReplicationArgs(registryName, replicationName, resourceGroupName);
+        }
+
+        public GetReplicationArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.replicationName = Objects.requireNonNull($.replicationName, "expected parameter 'replicationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

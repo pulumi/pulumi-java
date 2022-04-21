@@ -23,45 +23,45 @@ public final class VmmDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
     }
 
-    public VmmDetailsResponse(String instanceType) {
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-    }
+    private VmmDetailsResponse() {}
 
-    private VmmDetailsResponse() {
-        this.instanceType = null;
+    private VmmDetailsResponse(VmmDetailsResponse $) {
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmmDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceType;
+        private VmmDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmmDetailsResponse();
         }
 
         public Builder(VmmDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
+            $ = new VmmDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
-        }        public VmmDetailsResponse build() {
-            return new VmmDetailsResponse(instanceType);
+        }
+
+        public VmmDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

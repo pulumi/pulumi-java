@@ -24,48 +24,48 @@ public final class ResourceCollectionCloudFormationCollectionFilter extends com.
      * 
      */
     @Import(name="stackNames")
-      private final @Nullable List<String> stackNames;
+    private @Nullable List<String> stackNames;
 
-    public List<String> stackNames() {
-        return this.stackNames == null ? List.of() : this.stackNames;
+    public Optional<List<String>> stackNames() {
+        return Optional.ofNullable(this.stackNames);
     }
 
-    public ResourceCollectionCloudFormationCollectionFilter(@Nullable List<String> stackNames) {
-        this.stackNames = stackNames;
-    }
+    private ResourceCollectionCloudFormationCollectionFilter() {}
 
-    private ResourceCollectionCloudFormationCollectionFilter() {
-        this.stackNames = List.of();
+    private ResourceCollectionCloudFormationCollectionFilter(ResourceCollectionCloudFormationCollectionFilter $) {
+        this.stackNames = $.stackNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceCollectionCloudFormationCollectionFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> stackNames;
+        private ResourceCollectionCloudFormationCollectionFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceCollectionCloudFormationCollectionFilter();
         }
 
         public Builder(ResourceCollectionCloudFormationCollectionFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.stackNames = defaults.stackNames;
+            $ = new ResourceCollectionCloudFormationCollectionFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder stackNames(@Nullable List<String> stackNames) {
-            this.stackNames = stackNames;
+            $.stackNames = stackNames;
             return this;
         }
+
         public Builder stackNames(String... stackNames) {
             return stackNames(List.of(stackNames));
-        }        public ResourceCollectionCloudFormationCollectionFilter build() {
-            return new ResourceCollectionCloudFormationCollectionFilter(stackNames);
+        }
+
+        public ResourceCollectionCloudFormationCollectionFilter build() {
+            return $;
         }
     }
+
 }

@@ -8,8 +8,8 @@ import com.pulumi.azurenative.logic.inputs.EdifactAgreementContentArgs;
 import com.pulumi.azurenative.logic.inputs.X12AgreementContentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AgreementContentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="aS2")
-      private final @Nullable Output<AS2AgreementContentArgs> aS2;
+    private @Nullable Output<AS2AgreementContentArgs> aS2;
 
-    public Output<AS2AgreementContentArgs> aS2() {
-        return this.aS2 == null ? Codegen.empty() : this.aS2;
+    public Optional<Output<AS2AgreementContentArgs>> aS2() {
+        return Optional.ofNullable(this.aS2);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AgreementContentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="edifact")
-      private final @Nullable Output<EdifactAgreementContentArgs> edifact;
+    private @Nullable Output<EdifactAgreementContentArgs> edifact;
 
-    public Output<EdifactAgreementContentArgs> edifact() {
-        return this.edifact == null ? Codegen.empty() : this.edifact;
+    public Optional<Output<EdifactAgreementContentArgs>> edifact() {
+        return Optional.ofNullable(this.edifact);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class AgreementContentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="x12")
-      private final @Nullable Output<X12AgreementContentArgs> x12;
+    private @Nullable Output<X12AgreementContentArgs> x12;
 
-    public Output<X12AgreementContentArgs> x12() {
-        return this.x12 == null ? Codegen.empty() : this.x12;
+    public Optional<Output<X12AgreementContentArgs>> x12() {
+        return Optional.ofNullable(this.x12);
     }
 
-    public AgreementContentArgs(
-        @Nullable Output<AS2AgreementContentArgs> aS2,
-        @Nullable Output<EdifactAgreementContentArgs> edifact,
-        @Nullable Output<X12AgreementContentArgs> x12) {
-        this.aS2 = aS2;
-        this.edifact = edifact;
-        this.x12 = x12;
-    }
+    private AgreementContentArgs() {}
 
-    private AgreementContentArgs() {
-        this.aS2 = Codegen.empty();
-        this.edifact = Codegen.empty();
-        this.x12 = Codegen.empty();
+    private AgreementContentArgs(AgreementContentArgs $) {
+        this.aS2 = $.aS2;
+        this.edifact = $.edifact;
+        this.x12 = $.x12;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgreementContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AS2AgreementContentArgs> aS2;
-        private @Nullable Output<EdifactAgreementContentArgs> edifact;
-        private @Nullable Output<X12AgreementContentArgs> x12;
+        private AgreementContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgreementContentArgs();
         }
 
         public Builder(AgreementContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aS2 = defaults.aS2;
-    	      this.edifact = defaults.edifact;
-    	      this.x12 = defaults.x12;
+            $ = new AgreementContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aS2(@Nullable Output<AS2AgreementContentArgs> aS2) {
-            this.aS2 = aS2;
+            $.aS2 = aS2;
             return this;
         }
-        public Builder aS2(@Nullable AS2AgreementContentArgs aS2) {
-            this.aS2 = Codegen.ofNullable(aS2);
-            return this;
+
+        public Builder aS2(AS2AgreementContentArgs aS2) {
+            return aS2(Output.of(aS2));
         }
+
         public Builder edifact(@Nullable Output<EdifactAgreementContentArgs> edifact) {
-            this.edifact = edifact;
+            $.edifact = edifact;
             return this;
         }
-        public Builder edifact(@Nullable EdifactAgreementContentArgs edifact) {
-            this.edifact = Codegen.ofNullable(edifact);
-            return this;
+
+        public Builder edifact(EdifactAgreementContentArgs edifact) {
+            return edifact(Output.of(edifact));
         }
+
         public Builder x12(@Nullable Output<X12AgreementContentArgs> x12) {
-            this.x12 = x12;
+            $.x12 = x12;
             return this;
         }
-        public Builder x12(@Nullable X12AgreementContentArgs x12) {
-            this.x12 = Codegen.ofNullable(x12);
-            return this;
-        }        public AgreementContentArgs build() {
-            return new AgreementContentArgs(aS2, edifact, x12);
+
+        public Builder x12(X12AgreementContentArgs x12) {
+            return x12(Output.of(x12));
+        }
+
+        public AgreementContentArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="authorizationEndpoint", required=true)
-      private final Output<String> authorizationEndpoint;
+    private Output<String> authorizationEndpoint;
 
     public Output<String> authorizationEndpoint() {
         return this.authorizationEndpoint;
@@ -30,7 +29,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -41,7 +40,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="clientSecret", required=true)
-      private final Output<String> clientSecret;
+    private Output<String> clientSecret;
 
     public Output<String> clientSecret() {
         return this.clientSecret;
@@ -52,7 +51,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="issuer", required=true)
-      private final Output<String> issuer;
+    private Output<String> issuer;
 
     public Output<String> issuer() {
         return this.issuer;
@@ -63,7 +62,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="jwksUri", required=true)
-      private final Output<String> jwksUri;
+    private Output<String> jwksUri;
 
     public Output<String> jwksUri() {
         return this.jwksUri;
@@ -74,7 +73,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="logoutEndpoint", required=true)
-      private final Output<String> logoutEndpoint;
+    private Output<String> logoutEndpoint;
 
     public Output<String> logoutEndpoint() {
         return this.logoutEndpoint;
@@ -85,7 +84,7 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tokenEndpoint", required=true)
-      private final Output<String> tokenEndpoint;
+    private Output<String> tokenEndpoint;
 
     public Output<String> tokenEndpoint() {
         return this.tokenEndpoint;
@@ -96,141 +95,126 @@ public final class WorkforceOidcConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="userInfoEndpoint", required=true)
-      private final Output<String> userInfoEndpoint;
+    private Output<String> userInfoEndpoint;
 
     public Output<String> userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 
-    public WorkforceOidcConfigArgs(
-        Output<String> authorizationEndpoint,
-        Output<String> clientId,
-        Output<String> clientSecret,
-        Output<String> issuer,
-        Output<String> jwksUri,
-        Output<String> logoutEndpoint,
-        Output<String> tokenEndpoint,
-        Output<String> userInfoEndpoint) {
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.jwksUri = Objects.requireNonNull(jwksUri, "expected parameter 'jwksUri' to be non-null");
-        this.logoutEndpoint = Objects.requireNonNull(logoutEndpoint, "expected parameter 'logoutEndpoint' to be non-null");
-        this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint, "expected parameter 'tokenEndpoint' to be non-null");
-        this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint, "expected parameter 'userInfoEndpoint' to be non-null");
-    }
+    private WorkforceOidcConfigArgs() {}
 
-    private WorkforceOidcConfigArgs() {
-        this.authorizationEndpoint = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.issuer = Codegen.empty();
-        this.jwksUri = Codegen.empty();
-        this.logoutEndpoint = Codegen.empty();
-        this.tokenEndpoint = Codegen.empty();
-        this.userInfoEndpoint = Codegen.empty();
+    private WorkforceOidcConfigArgs(WorkforceOidcConfigArgs $) {
+        this.authorizationEndpoint = $.authorizationEndpoint;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.issuer = $.issuer;
+        this.jwksUri = $.jwksUri;
+        this.logoutEndpoint = $.logoutEndpoint;
+        this.tokenEndpoint = $.tokenEndpoint;
+        this.userInfoEndpoint = $.userInfoEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkforceOidcConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authorizationEndpoint;
-        private Output<String> clientId;
-        private Output<String> clientSecret;
-        private Output<String> issuer;
-        private Output<String> jwksUri;
-        private Output<String> logoutEndpoint;
-        private Output<String> tokenEndpoint;
-        private Output<String> userInfoEndpoint;
+        private WorkforceOidcConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkforceOidcConfigArgs();
         }
 
         public Builder(WorkforceOidcConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationEndpoint = defaults.authorizationEndpoint;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.issuer = defaults.issuer;
-    	      this.jwksUri = defaults.jwksUri;
-    	      this.logoutEndpoint = defaults.logoutEndpoint;
-    	      this.tokenEndpoint = defaults.tokenEndpoint;
-    	      this.userInfoEndpoint = defaults.userInfoEndpoint;
+            $ = new WorkforceOidcConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationEndpoint(Output<String> authorizationEndpoint) {
-            this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
+            $.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
+
         public Builder authorizationEndpoint(String authorizationEndpoint) {
-            this.authorizationEndpoint = Output.of(Objects.requireNonNull(authorizationEndpoint));
-            return this;
+            return authorizationEndpoint(Output.of(authorizationEndpoint));
         }
+
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(Output<String> clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
-            return this;
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder issuer(Output<String> issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Output.of(Objects.requireNonNull(issuer));
-            return this;
+            return issuer(Output.of(issuer));
         }
+
         public Builder jwksUri(Output<String> jwksUri) {
-            this.jwksUri = Objects.requireNonNull(jwksUri);
+            $.jwksUri = jwksUri;
             return this;
         }
+
         public Builder jwksUri(String jwksUri) {
-            this.jwksUri = Output.of(Objects.requireNonNull(jwksUri));
-            return this;
+            return jwksUri(Output.of(jwksUri));
         }
+
         public Builder logoutEndpoint(Output<String> logoutEndpoint) {
-            this.logoutEndpoint = Objects.requireNonNull(logoutEndpoint);
+            $.logoutEndpoint = logoutEndpoint;
             return this;
         }
+
         public Builder logoutEndpoint(String logoutEndpoint) {
-            this.logoutEndpoint = Output.of(Objects.requireNonNull(logoutEndpoint));
-            return this;
+            return logoutEndpoint(Output.of(logoutEndpoint));
         }
+
         public Builder tokenEndpoint(Output<String> tokenEndpoint) {
-            this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
+            $.tokenEndpoint = tokenEndpoint;
             return this;
         }
+
         public Builder tokenEndpoint(String tokenEndpoint) {
-            this.tokenEndpoint = Output.of(Objects.requireNonNull(tokenEndpoint));
-            return this;
+            return tokenEndpoint(Output.of(tokenEndpoint));
         }
+
         public Builder userInfoEndpoint(Output<String> userInfoEndpoint) {
-            this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
+            $.userInfoEndpoint = userInfoEndpoint;
             return this;
         }
+
         public Builder userInfoEndpoint(String userInfoEndpoint) {
-            this.userInfoEndpoint = Output.of(Objects.requireNonNull(userInfoEndpoint));
-            return this;
-        }        public WorkforceOidcConfigArgs build() {
-            return new WorkforceOidcConfigArgs(authorizationEndpoint, clientId, clientSecret, issuer, jwksUri, logoutEndpoint, tokenEndpoint, userInfoEndpoint);
+            return userInfoEndpoint(Output.of(userInfoEndpoint));
+        }
+
+        public WorkforceOidcConfigArgs build() {
+            $.authorizationEndpoint = Objects.requireNonNull($.authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.jwksUri = Objects.requireNonNull($.jwksUri, "expected parameter 'jwksUri' to be non-null");
+            $.logoutEndpoint = Objects.requireNonNull($.logoutEndpoint, "expected parameter 'logoutEndpoint' to be non-null");
+            $.tokenEndpoint = Objects.requireNonNull($.tokenEndpoint, "expected parameter 'tokenEndpoint' to be non-null");
+            $.userInfoEndpoint = Objects.requireNonNull($.userInfoEndpoint, "expected parameter 'userInfoEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datamigration_v1beta1.inputs.SslConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MySqlConnectionProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cloudSqlId")
-      private final @Nullable Output<String> cloudSqlId;
+    private @Nullable Output<String> cloudSqlId;
 
-    public Output<String> cloudSqlId() {
-        return this.cloudSqlId == null ? Codegen.empty() : this.cloudSqlId;
+    public Optional<Output<String>> cloudSqlId() {
+        return Optional.ofNullable(this.cloudSqlId);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class MySqlConnectionProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
@@ -48,7 +48,7 @@ public final class MySqlConnectionProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -59,7 +59,7 @@ public final class MySqlConnectionProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -70,10 +70,10 @@ public final class MySqlConnectionProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="ssl")
-      private final @Nullable Output<SslConfigArgs> ssl;
+    private @Nullable Output<SslConfigArgs> ssl;
 
-    public Output<SslConfigArgs> ssl() {
-        return this.ssl == null ? Codegen.empty() : this.ssl;
+    public Optional<Output<SslConfigArgs>> ssl() {
+        return Optional.ofNullable(this.ssl);
     }
 
     /**
@@ -81,115 +81,102 @@ public final class MySqlConnectionProfileArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public MySqlConnectionProfileArgs(
-        @Nullable Output<String> cloudSqlId,
-        Output<String> host,
-        Output<String> password,
-        Output<Integer> port,
-        @Nullable Output<SslConfigArgs> ssl,
-        Output<String> username) {
-        this.cloudSqlId = cloudSqlId;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.ssl = ssl;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private MySqlConnectionProfileArgs() {}
 
-    private MySqlConnectionProfileArgs() {
-        this.cloudSqlId = Codegen.empty();
-        this.host = Codegen.empty();
-        this.password = Codegen.empty();
-        this.port = Codegen.empty();
-        this.ssl = Codegen.empty();
-        this.username = Codegen.empty();
+    private MySqlConnectionProfileArgs(MySqlConnectionProfileArgs $) {
+        this.cloudSqlId = $.cloudSqlId;
+        this.host = $.host;
+        this.password = $.password;
+        this.port = $.port;
+        this.ssl = $.ssl;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MySqlConnectionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudSqlId;
-        private Output<String> host;
-        private Output<String> password;
-        private Output<Integer> port;
-        private @Nullable Output<SslConfigArgs> ssl;
-        private Output<String> username;
+        private MySqlConnectionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MySqlConnectionProfileArgs();
         }
 
         public Builder(MySqlConnectionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSqlId = defaults.cloudSqlId;
-    	      this.host = defaults.host;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.ssl = defaults.ssl;
-    	      this.username = defaults.username;
+            $ = new MySqlConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSqlId(@Nullable Output<String> cloudSqlId) {
-            this.cloudSqlId = cloudSqlId;
+            $.cloudSqlId = cloudSqlId;
             return this;
         }
-        public Builder cloudSqlId(@Nullable String cloudSqlId) {
-            this.cloudSqlId = Codegen.ofNullable(cloudSqlId);
-            return this;
+
+        public Builder cloudSqlId(String cloudSqlId) {
+            return cloudSqlId(Output.of(cloudSqlId));
         }
+
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder ssl(@Nullable Output<SslConfigArgs> ssl) {
-            this.ssl = ssl;
+            $.ssl = ssl;
             return this;
         }
-        public Builder ssl(@Nullable SslConfigArgs ssl) {
-            this.ssl = Codegen.ofNullable(ssl);
-            return this;
+
+        public Builder ssl(SslConfigArgs ssl) {
+            return ssl(Output.of(ssl));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public MySqlConnectionProfileArgs build() {
-            return new MySqlConnectionProfileArgs(cloudSqlId, host, password, port, ssl, username);
+            return username(Output.of(username));
+        }
+
+        public MySqlConnectionProfileArgs build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

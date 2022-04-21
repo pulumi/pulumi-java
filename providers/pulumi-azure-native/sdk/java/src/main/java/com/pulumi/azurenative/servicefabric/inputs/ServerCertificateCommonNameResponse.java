@@ -21,7 +21,7 @@ public final class ServerCertificateCommonNameResponse extends com.pulumi.resour
      * 
      */
     @Import(name="certificateCommonName", required=true)
-      private final String certificateCommonName;
+    private String certificateCommonName;
 
     public String certificateCommonName() {
         return this.certificateCommonName;
@@ -32,55 +32,52 @@ public final class ServerCertificateCommonNameResponse extends com.pulumi.resour
      * 
      */
     @Import(name="certificateIssuerThumbprint", required=true)
-      private final String certificateIssuerThumbprint;
+    private String certificateIssuerThumbprint;
 
     public String certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
 
-    public ServerCertificateCommonNameResponse(
-        String certificateCommonName,
-        String certificateIssuerThumbprint) {
-        this.certificateCommonName = Objects.requireNonNull(certificateCommonName, "expected parameter 'certificateCommonName' to be non-null");
-        this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint, "expected parameter 'certificateIssuerThumbprint' to be non-null");
-    }
+    private ServerCertificateCommonNameResponse() {}
 
-    private ServerCertificateCommonNameResponse() {
-        this.certificateCommonName = null;
-        this.certificateIssuerThumbprint = null;
+    private ServerCertificateCommonNameResponse(ServerCertificateCommonNameResponse $) {
+        this.certificateCommonName = $.certificateCommonName;
+        this.certificateIssuerThumbprint = $.certificateIssuerThumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerCertificateCommonNameResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateCommonName;
-        private String certificateIssuerThumbprint;
+        private ServerCertificateCommonNameResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerCertificateCommonNameResponse();
         }
 
         public Builder(ServerCertificateCommonNameResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateCommonName = defaults.certificateCommonName;
-    	      this.certificateIssuerThumbprint = defaults.certificateIssuerThumbprint;
+            $ = new ServerCertificateCommonNameResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateCommonName(String certificateCommonName) {
-            this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
+            $.certificateCommonName = certificateCommonName;
             return this;
         }
+
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
-            this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
+            $.certificateIssuerThumbprint = certificateIssuerThumbprint;
             return this;
-        }        public ServerCertificateCommonNameResponse build() {
-            return new ServerCertificateCommonNameResponse(certificateCommonName, certificateIssuerThumbprint);
+        }
+
+        public ServerCertificateCommonNameResponse build() {
+            $.certificateCommonName = Objects.requireNonNull($.certificateCommonName, "expected parameter 'certificateCommonName' to be non-null");
+            $.certificateIssuerThumbprint = Objects.requireNonNull($.certificateIssuerThumbprint, "expected parameter 'certificateIssuerThumbprint' to be non-null");
+            return $;
         }
     }
+
 }

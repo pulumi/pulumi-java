@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DomainRetentionPolicyGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="homeEfsFileSystem")
-      private final @Nullable Output<String> homeEfsFileSystem;
+    private @Nullable Output<String> homeEfsFileSystem;
 
-    public Output<String> homeEfsFileSystem() {
-        return this.homeEfsFileSystem == null ? Codegen.empty() : this.homeEfsFileSystem;
+    public Optional<Output<String>> homeEfsFileSystem() {
+        return Optional.ofNullable(this.homeEfsFileSystem);
     }
 
-    public DomainRetentionPolicyGetArgs(@Nullable Output<String> homeEfsFileSystem) {
-        this.homeEfsFileSystem = homeEfsFileSystem;
-    }
+    private DomainRetentionPolicyGetArgs() {}
 
-    private DomainRetentionPolicyGetArgs() {
-        this.homeEfsFileSystem = Codegen.empty();
+    private DomainRetentionPolicyGetArgs(DomainRetentionPolicyGetArgs $) {
+        this.homeEfsFileSystem = $.homeEfsFileSystem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainRetentionPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> homeEfsFileSystem;
+        private DomainRetentionPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainRetentionPolicyGetArgs();
         }
 
         public Builder(DomainRetentionPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.homeEfsFileSystem = defaults.homeEfsFileSystem;
+            $ = new DomainRetentionPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder homeEfsFileSystem(@Nullable Output<String> homeEfsFileSystem) {
-            this.homeEfsFileSystem = homeEfsFileSystem;
+            $.homeEfsFileSystem = homeEfsFileSystem;
             return this;
         }
-        public Builder homeEfsFileSystem(@Nullable String homeEfsFileSystem) {
-            this.homeEfsFileSystem = Codegen.ofNullable(homeEfsFileSystem);
-            return this;
-        }        public DomainRetentionPolicyGetArgs build() {
-            return new DomainRetentionPolicyGetArgs(homeEfsFileSystem);
+
+        public Builder homeEfsFileSystem(String homeEfsFileSystem) {
+            return homeEfsFileSystem(Output.of(homeEfsFileSystem));
+        }
+
+        public DomainRetentionPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

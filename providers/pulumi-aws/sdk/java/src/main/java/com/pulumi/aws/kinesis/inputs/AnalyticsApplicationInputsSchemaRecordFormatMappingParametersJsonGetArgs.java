@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * 
      */
     @Import(name="recordRowPath", required=true)
-      private final Output<String> recordRowPath;
+    private Output<String> recordRowPath;
 
     public Output<String> recordRowPath() {
         return this.recordRowPath;
     }
 
-    public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs(Output<String> recordRowPath) {
-        this.recordRowPath = Objects.requireNonNull(recordRowPath, "expected parameter 'recordRowPath' to be non-null");
-    }
+    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs() {}
 
-    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs() {
-        this.recordRowPath = Codegen.empty();
+    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs $) {
+        this.recordRowPath = $.recordRowPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> recordRowPath;
+        private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs();
         }
 
         public Builder(AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recordRowPath = defaults.recordRowPath;
+            $ = new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recordRowPath(Output<String> recordRowPath) {
-            this.recordRowPath = Objects.requireNonNull(recordRowPath);
+            $.recordRowPath = recordRowPath;
             return this;
         }
+
         public Builder recordRowPath(String recordRowPath) {
-            this.recordRowPath = Output.of(Objects.requireNonNull(recordRowPath));
-            return this;
-        }        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs build() {
-            return new AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs(recordRowPath);
+            return recordRowPath(Output.of(recordRowPath));
+        }
+
+        public AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonGetArgs build() {
+            $.recordRowPath = Objects.requireNonNull($.recordRowPath, "expected parameter 'recordRowPath' to be non-null");
+            return $;
         }
     }
+
 }

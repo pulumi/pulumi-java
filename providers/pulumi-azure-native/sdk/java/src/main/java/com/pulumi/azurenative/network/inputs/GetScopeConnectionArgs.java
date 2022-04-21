@@ -17,7 +17,7 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final String networkManagerName;
+    private String networkManagerName;
 
     public String networkManagerName() {
         return this.networkManagerName;
@@ -28,7 +28,7 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetScopeConnectionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scopeConnectionName", required=true)
-      private final String scopeConnectionName;
+    private String scopeConnectionName;
 
     public String scopeConnectionName() {
         return this.scopeConnectionName;
     }
 
-    public GetScopeConnectionArgs(
-        String networkManagerName,
-        String resourceGroupName,
-        String scopeConnectionName) {
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scopeConnectionName = Objects.requireNonNull(scopeConnectionName, "expected parameter 'scopeConnectionName' to be non-null");
-    }
+    private GetScopeConnectionArgs() {}
 
-    private GetScopeConnectionArgs() {
-        this.networkManagerName = null;
-        this.resourceGroupName = null;
-        this.scopeConnectionName = null;
+    private GetScopeConnectionArgs(GetScopeConnectionArgs $) {
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scopeConnectionName = $.scopeConnectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScopeConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkManagerName;
-        private String resourceGroupName;
-        private String scopeConnectionName;
+        private GetScopeConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScopeConnectionArgs();
         }
 
         public Builder(GetScopeConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scopeConnectionName = defaults.scopeConnectionName;
+            $ = new GetScopeConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder scopeConnectionName(String scopeConnectionName) {
-            this.scopeConnectionName = Objects.requireNonNull(scopeConnectionName);
+            $.scopeConnectionName = scopeConnectionName;
             return this;
-        }        public GetScopeConnectionArgs build() {
-            return new GetScopeConnectionArgs(networkManagerName, resourceGroupName, scopeConnectionName);
+        }
+
+        public GetScopeConnectionArgs build() {
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scopeConnectionName = Objects.requireNonNull($.scopeConnectionName, "expected parameter 'scopeConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

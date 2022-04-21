@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<String> dataset;
+    private @Nullable Output<String> dataset;
 
-    public Output<String> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<String>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class BigQueryIODetailsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="table")
-      private final @Nullable Output<String> table;
+    private @Nullable Output<String> table;
 
-    public Output<String> table() {
-        return this.table == null ? Codegen.empty() : this.table;
+    public Optional<Output<String>> table() {
+        return Optional.ofNullable(this.table);
     }
 
-    public BigQueryIODetailsArgs(
-        @Nullable Output<String> dataset,
-        @Nullable Output<String> project,
-        @Nullable Output<String> query,
-        @Nullable Output<String> table) {
-        this.dataset = dataset;
-        this.project = project;
-        this.query = query;
-        this.table = table;
-    }
+    private BigQueryIODetailsArgs() {}
 
-    private BigQueryIODetailsArgs() {
-        this.dataset = Codegen.empty();
-        this.project = Codegen.empty();
-        this.query = Codegen.empty();
-        this.table = Codegen.empty();
+    private BigQueryIODetailsArgs(BigQueryIODetailsArgs $) {
+        this.dataset = $.dataset;
+        this.project = $.project;
+        this.query = $.query;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigQueryIODetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataset;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> query;
-        private @Nullable Output<String> table;
+        private BigQueryIODetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigQueryIODetailsArgs();
         }
 
         public Builder(BigQueryIODetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.project = defaults.project;
-    	      this.query = defaults.query;
-    	      this.table = defaults.table;
+            $ = new BigQueryIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable Output<String> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable String dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(String dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(String query) {
+            return query(Output.of(query));
         }
+
         public Builder table(@Nullable Output<String> table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
-        public Builder table(@Nullable String table) {
-            this.table = Codegen.ofNullable(table);
-            return this;
-        }        public BigQueryIODetailsArgs build() {
-            return new BigQueryIODetailsArgs(dataset, project, query, table);
+
+        public Builder table(String table) {
+            return table(Output.of(table));
+        }
+
+        public BigQueryIODetailsArgs build() {
+            return $;
         }
     }
+
 }

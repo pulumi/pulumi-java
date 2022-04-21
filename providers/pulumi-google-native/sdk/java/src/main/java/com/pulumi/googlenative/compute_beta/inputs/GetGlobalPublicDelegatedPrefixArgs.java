@@ -15,62 +15,58 @@ public final class GetGlobalPublicDelegatedPrefixArgs extends com.pulumi.resourc
     public static final GetGlobalPublicDelegatedPrefixArgs Empty = new GetGlobalPublicDelegatedPrefixArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="publicDelegatedPrefix", required=true)
-      private final String publicDelegatedPrefix;
+    private String publicDelegatedPrefix;
 
     public String publicDelegatedPrefix() {
         return this.publicDelegatedPrefix;
     }
 
-    public GetGlobalPublicDelegatedPrefixArgs(
-        @Nullable String project,
-        String publicDelegatedPrefix) {
-        this.project = project;
-        this.publicDelegatedPrefix = Objects.requireNonNull(publicDelegatedPrefix, "expected parameter 'publicDelegatedPrefix' to be non-null");
-    }
+    private GetGlobalPublicDelegatedPrefixArgs() {}
 
-    private GetGlobalPublicDelegatedPrefixArgs() {
-        this.project = null;
-        this.publicDelegatedPrefix = null;
+    private GetGlobalPublicDelegatedPrefixArgs(GetGlobalPublicDelegatedPrefixArgs $) {
+        this.project = $.project;
+        this.publicDelegatedPrefix = $.publicDelegatedPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalPublicDelegatedPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String publicDelegatedPrefix;
+        private GetGlobalPublicDelegatedPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalPublicDelegatedPrefixArgs();
         }
 
         public Builder(GetGlobalPublicDelegatedPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.publicDelegatedPrefix = defaults.publicDelegatedPrefix;
+            $ = new GetGlobalPublicDelegatedPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder publicDelegatedPrefix(String publicDelegatedPrefix) {
-            this.publicDelegatedPrefix = Objects.requireNonNull(publicDelegatedPrefix);
+            $.publicDelegatedPrefix = publicDelegatedPrefix;
             return this;
-        }        public GetGlobalPublicDelegatedPrefixArgs build() {
-            return new GetGlobalPublicDelegatedPrefixArgs(project, publicDelegatedPrefix);
+        }
+
+        public GetGlobalPublicDelegatedPrefixArgs build() {
+            $.publicDelegatedPrefix = Objects.requireNonNull($.publicDelegatedPrefix, "expected parameter 'publicDelegatedPrefix' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="acceleratorCount", required=true)
-      private final Integer acceleratorCount;
+    private Integer acceleratorCount;
 
     public Integer acceleratorCount() {
         return this.acceleratorCount;
@@ -33,55 +33,52 @@ public final class AcceleratorConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="acceleratorTypeUri", required=true)
-      private final String acceleratorTypeUri;
+    private String acceleratorTypeUri;
 
     public String acceleratorTypeUri() {
         return this.acceleratorTypeUri;
     }
 
-    public AcceleratorConfigResponse(
-        Integer acceleratorCount,
-        String acceleratorTypeUri) {
-        this.acceleratorCount = Objects.requireNonNull(acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
-        this.acceleratorTypeUri = Objects.requireNonNull(acceleratorTypeUri, "expected parameter 'acceleratorTypeUri' to be non-null");
-    }
+    private AcceleratorConfigResponse() {}
 
-    private AcceleratorConfigResponse() {
-        this.acceleratorCount = null;
-        this.acceleratorTypeUri = null;
+    private AcceleratorConfigResponse(AcceleratorConfigResponse $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorTypeUri = $.acceleratorTypeUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer acceleratorCount;
-        private String acceleratorTypeUri;
+        private AcceleratorConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorConfigResponse();
         }
 
         public Builder(AcceleratorConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorTypeUri = defaults.acceleratorTypeUri;
+            $ = new AcceleratorConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(Integer acceleratorCount) {
-            this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
+
         public Builder acceleratorTypeUri(String acceleratorTypeUri) {
-            this.acceleratorTypeUri = Objects.requireNonNull(acceleratorTypeUri);
+            $.acceleratorTypeUri = acceleratorTypeUri;
             return this;
-        }        public AcceleratorConfigResponse build() {
-            return new AcceleratorConfigResponse(acceleratorCount, acceleratorTypeUri);
+        }
+
+        public AcceleratorConfigResponse build() {
+            $.acceleratorCount = Objects.requireNonNull($.acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
+            $.acceleratorTypeUri = Objects.requireNonNull($.acceleratorTypeUri, "expected parameter 'acceleratorTypeUri' to be non-null");
+            return $;
         }
     }
+
 }

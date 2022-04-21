@@ -5,13 +5,13 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TestIssueArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TestSuiteOverviewArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.TestTimingArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="testIssues")
-      private final @Nullable Output<List<TestIssueArgs>> testIssues;
+    private @Nullable Output<List<TestIssueArgs>> testIssues;
 
-    public Output<List<TestIssueArgs>> testIssues() {
-        return this.testIssues == null ? Codegen.empty() : this.testIssues;
+    public Optional<Output<List<TestIssueArgs>>> testIssues() {
+        return Optional.ofNullable(this.testIssues);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="testSuiteOverviews")
-      private final @Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews;
+    private @Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews;
 
-    public Output<List<TestSuiteOverviewArgs>> testSuiteOverviews() {
-        return this.testSuiteOverviews == null ? Codegen.empty() : this.testSuiteOverviews;
+    public Optional<Output<List<TestSuiteOverviewArgs>>> testSuiteOverviews() {
+        return Optional.ofNullable(this.testSuiteOverviews);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="testTiming")
-      private final @Nullable Output<TestTimingArgs> testTiming;
+    private @Nullable Output<TestTimingArgs> testTiming;
 
-    public Output<TestTimingArgs> testTiming() {
-        return this.testTiming == null ? Codegen.empty() : this.testTiming;
+    public Optional<Output<TestTimingArgs>> testTiming() {
+        return Optional.ofNullable(this.testTiming);
     }
 
     /**
@@ -61,95 +61,86 @@ public final class TestExecutionStepArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="toolExecution")
-      private final @Nullable Output<ToolExecutionArgs> toolExecution;
+    private @Nullable Output<ToolExecutionArgs> toolExecution;
 
-    public Output<ToolExecutionArgs> toolExecution() {
-        return this.toolExecution == null ? Codegen.empty() : this.toolExecution;
+    public Optional<Output<ToolExecutionArgs>> toolExecution() {
+        return Optional.ofNullable(this.toolExecution);
     }
 
-    public TestExecutionStepArgs(
-        @Nullable Output<List<TestIssueArgs>> testIssues,
-        @Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews,
-        @Nullable Output<TestTimingArgs> testTiming,
-        @Nullable Output<ToolExecutionArgs> toolExecution) {
-        this.testIssues = testIssues;
-        this.testSuiteOverviews = testSuiteOverviews;
-        this.testTiming = testTiming;
-        this.toolExecution = toolExecution;
-    }
+    private TestExecutionStepArgs() {}
 
-    private TestExecutionStepArgs() {
-        this.testIssues = Codegen.empty();
-        this.testSuiteOverviews = Codegen.empty();
-        this.testTiming = Codegen.empty();
-        this.toolExecution = Codegen.empty();
+    private TestExecutionStepArgs(TestExecutionStepArgs $) {
+        this.testIssues = $.testIssues;
+        this.testSuiteOverviews = $.testSuiteOverviews;
+        this.testTiming = $.testTiming;
+        this.toolExecution = $.toolExecution;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestExecutionStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TestIssueArgs>> testIssues;
-        private @Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews;
-        private @Nullable Output<TestTimingArgs> testTiming;
-        private @Nullable Output<ToolExecutionArgs> toolExecution;
+        private TestExecutionStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestExecutionStepArgs();
         }
 
         public Builder(TestExecutionStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testIssues = defaults.testIssues;
-    	      this.testSuiteOverviews = defaults.testSuiteOverviews;
-    	      this.testTiming = defaults.testTiming;
-    	      this.toolExecution = defaults.toolExecution;
+            $ = new TestExecutionStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder testIssues(@Nullable Output<List<TestIssueArgs>> testIssues) {
-            this.testIssues = testIssues;
+            $.testIssues = testIssues;
             return this;
         }
-        public Builder testIssues(@Nullable List<TestIssueArgs> testIssues) {
-            this.testIssues = Codegen.ofNullable(testIssues);
-            return this;
+
+        public Builder testIssues(List<TestIssueArgs> testIssues) {
+            return testIssues(Output.of(testIssues));
         }
+
         public Builder testIssues(TestIssueArgs... testIssues) {
             return testIssues(List.of(testIssues));
         }
+
         public Builder testSuiteOverviews(@Nullable Output<List<TestSuiteOverviewArgs>> testSuiteOverviews) {
-            this.testSuiteOverviews = testSuiteOverviews;
+            $.testSuiteOverviews = testSuiteOverviews;
             return this;
         }
-        public Builder testSuiteOverviews(@Nullable List<TestSuiteOverviewArgs> testSuiteOverviews) {
-            this.testSuiteOverviews = Codegen.ofNullable(testSuiteOverviews);
-            return this;
+
+        public Builder testSuiteOverviews(List<TestSuiteOverviewArgs> testSuiteOverviews) {
+            return testSuiteOverviews(Output.of(testSuiteOverviews));
         }
+
         public Builder testSuiteOverviews(TestSuiteOverviewArgs... testSuiteOverviews) {
             return testSuiteOverviews(List.of(testSuiteOverviews));
         }
+
         public Builder testTiming(@Nullable Output<TestTimingArgs> testTiming) {
-            this.testTiming = testTiming;
+            $.testTiming = testTiming;
             return this;
         }
-        public Builder testTiming(@Nullable TestTimingArgs testTiming) {
-            this.testTiming = Codegen.ofNullable(testTiming);
-            return this;
+
+        public Builder testTiming(TestTimingArgs testTiming) {
+            return testTiming(Output.of(testTiming));
         }
+
         public Builder toolExecution(@Nullable Output<ToolExecutionArgs> toolExecution) {
-            this.toolExecution = toolExecution;
+            $.toolExecution = toolExecution;
             return this;
         }
-        public Builder toolExecution(@Nullable ToolExecutionArgs toolExecution) {
-            this.toolExecution = Codegen.ofNullable(toolExecution);
-            return this;
-        }        public TestExecutionStepArgs build() {
-            return new TestExecutionStepArgs(testIssues, testSuiteOverviews, testTiming, toolExecution);
+
+        public Builder toolExecution(ToolExecutionArgs toolExecution) {
+            return toolExecution(Output.of(toolExecution));
+        }
+
+        public TestExecutionStepArgs build() {
+            return $;
         }
     }
+
 }

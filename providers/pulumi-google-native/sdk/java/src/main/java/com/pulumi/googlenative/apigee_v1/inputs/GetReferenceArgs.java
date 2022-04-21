@@ -13,78 +13,73 @@ public final class GetReferenceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetReferenceArgs Empty = new GetReferenceArgs();
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="referenceId", required=true)
-      private final String referenceId;
+    private String referenceId;
 
     public String referenceId() {
         return this.referenceId;
     }
 
-    public GetReferenceArgs(
-        String environmentId,
-        String organizationId,
-        String referenceId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.referenceId = Objects.requireNonNull(referenceId, "expected parameter 'referenceId' to be non-null");
-    }
+    private GetReferenceArgs() {}
 
-    private GetReferenceArgs() {
-        this.environmentId = null;
-        this.organizationId = null;
-        this.referenceId = null;
+    private GetReferenceArgs(GetReferenceArgs $) {
+        this.environmentId = $.environmentId;
+        this.organizationId = $.organizationId;
+        this.referenceId = $.referenceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private String organizationId;
-        private String referenceId;
+        private GetReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReferenceArgs();
         }
 
         public Builder(GetReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.organizationId = defaults.organizationId;
-    	      this.referenceId = defaults.referenceId;
+            $ = new GetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder referenceId(String referenceId) {
-            this.referenceId = Objects.requireNonNull(referenceId);
+            $.referenceId = referenceId;
             return this;
-        }        public GetReferenceArgs build() {
-            return new GetReferenceArgs(environmentId, organizationId, referenceId);
+        }
+
+        public GetReferenceArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.referenceId = Objects.requireNonNull($.referenceId, "expected parameter 'referenceId' to be non-null");
+            return $;
         }
     }
+
 }

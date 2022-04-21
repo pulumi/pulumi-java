@@ -5,9 +5,9 @@ package com.pulumi.azurenative.redhatopenshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class APIServerProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<String> ip;
+    private @Nullable Output<String> ip;
 
-    public Output<String> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class APIServerProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class APIServerProfileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="visibility")
-      private final @Nullable Output<String> visibility;
+    private @Nullable Output<String> visibility;
 
-    public Output<String> visibility() {
-        return this.visibility == null ? Codegen.empty() : this.visibility;
+    public Optional<Output<String>> visibility() {
+        return Optional.ofNullable(this.visibility);
     }
 
-    public APIServerProfileArgs(
-        @Nullable Output<String> ip,
-        @Nullable Output<String> url,
-        @Nullable Output<String> visibility) {
-        this.ip = ip;
-        this.url = url;
-        this.visibility = visibility;
-    }
+    private APIServerProfileArgs() {}
 
-    private APIServerProfileArgs() {
-        this.ip = Codegen.empty();
-        this.url = Codegen.empty();
-        this.visibility = Codegen.empty();
+    private APIServerProfileArgs(APIServerProfileArgs $) {
+        this.ip = $.ip;
+        this.url = $.url;
+        this.visibility = $.visibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(APIServerProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ip;
-        private @Nullable Output<String> url;
-        private @Nullable Output<String> visibility;
+        private APIServerProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new APIServerProfileArgs();
         }
 
         public Builder(APIServerProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
-    	      this.url = defaults.url;
-    	      this.visibility = defaults.visibility;
+            $ = new APIServerProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable Output<String> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable String ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
+
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
+
+        public Builder url(String url) {
+            return url(Output.of(url));
         }
+
         public Builder visibility(@Nullable Output<String> visibility) {
-            this.visibility = visibility;
+            $.visibility = visibility;
             return this;
         }
-        public Builder visibility(@Nullable String visibility) {
-            this.visibility = Codegen.ofNullable(visibility);
-            return this;
-        }        public APIServerProfileArgs build() {
-            return new APIServerProfileArgs(ip, url, visibility);
+
+        public Builder visibility(String visibility) {
+            return visibility(Output.of(visibility));
+        }
+
+        public APIServerProfileArgs build() {
+            return $;
         }
     }
+
 }

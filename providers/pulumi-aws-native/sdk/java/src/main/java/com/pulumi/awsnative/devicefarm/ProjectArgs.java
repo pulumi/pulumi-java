@@ -6,11 +6,11 @@ package com.pulumi.awsnative.devicefarm;
 import com.pulumi.awsnative.devicefarm.inputs.ProjectTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,93 +19,86 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProjectArgs Empty = new ProjectArgs();
 
     @Import(name="defaultJobTimeoutMinutes")
-      private final @Nullable Output<Integer> defaultJobTimeoutMinutes;
+    private @Nullable Output<Integer> defaultJobTimeoutMinutes;
 
-    public Output<Integer> defaultJobTimeoutMinutes() {
-        return this.defaultJobTimeoutMinutes == null ? Codegen.empty() : this.defaultJobTimeoutMinutes;
+    public Optional<Output<Integer>> defaultJobTimeoutMinutes() {
+        return Optional.ofNullable(this.defaultJobTimeoutMinutes);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ProjectTagArgs>> tags;
+    private @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Output<List<ProjectTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ProjectTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ProjectArgs(
-        @Nullable Output<Integer> defaultJobTimeoutMinutes,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ProjectTagArgs>> tags) {
-        this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
-        this.name = name;
-        this.tags = tags;
-    }
+    private ProjectArgs() {}
 
-    private ProjectArgs() {
-        this.defaultJobTimeoutMinutes = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ProjectArgs(ProjectArgs $) {
+        this.defaultJobTimeoutMinutes = $.defaultJobTimeoutMinutes;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> defaultJobTimeoutMinutes;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ProjectTagArgs>> tags;
+        private ProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectArgs();
         }
 
         public Builder(ProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultJobTimeoutMinutes = defaults.defaultJobTimeoutMinutes;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultJobTimeoutMinutes(@Nullable Output<Integer> defaultJobTimeoutMinutes) {
-            this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
+            $.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
             return this;
         }
-        public Builder defaultJobTimeoutMinutes(@Nullable Integer defaultJobTimeoutMinutes) {
-            this.defaultJobTimeoutMinutes = Codegen.ofNullable(defaultJobTimeoutMinutes);
-            return this;
+
+        public Builder defaultJobTimeoutMinutes(Integer defaultJobTimeoutMinutes) {
+            return defaultJobTimeoutMinutes(Output.of(defaultJobTimeoutMinutes));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ProjectTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ProjectTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ProjectArgs build() {
-            return new ProjectArgs(defaultJobTimeoutMinutes, name, tags);
+        }
+
+        public ProjectArgs build() {
+            return $;
         }
     }
+
 }

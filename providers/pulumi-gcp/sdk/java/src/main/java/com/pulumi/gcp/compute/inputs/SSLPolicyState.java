@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customFeatures")
-      private final @Nullable Output<List<String>> customFeatures;
+    private @Nullable Output<List<String>> customFeatures;
 
-    public Output<List<String>> customFeatures() {
-        return this.customFeatures == null ? Codegen.empty() : this.customFeatures;
+    public Optional<Output<List<String>>> customFeatures() {
+        return Optional.ofNullable(this.customFeatures);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledFeatures")
-      private final @Nullable Output<List<String>> enabledFeatures;
+    private @Nullable Output<List<String>> enabledFeatures;
 
-    public Output<List<String>> enabledFeatures() {
-        return this.enabledFeatures == null ? Codegen.empty() : this.enabledFeatures;
+    public Optional<Output<List<String>>> enabledFeatures() {
+        return Optional.ofNullable(this.enabledFeatures);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<String> fingerprint;
+    private @Nullable Output<String> fingerprint;
 
-    public Output<String> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<String>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minTlsVersion")
-      private final @Nullable Output<String> minTlsVersion;
+    private @Nullable Output<String> minTlsVersion;
 
-    public Output<String> minTlsVersion() {
-        return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
+    public Optional<Output<String>> minTlsVersion() {
+        return Optional.ofNullable(this.minTlsVersion);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profile")
-      private final @Nullable Output<String> profile;
+    private @Nullable Output<String> profile;
 
-    public Output<String> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<String>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -146,173 +146,146 @@ public final class SSLPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public SSLPolicyState(
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<List<String>> customFeatures,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> enabledFeatures,
-        @Nullable Output<String> fingerprint,
-        @Nullable Output<String> minTlsVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<String> profile,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink) {
-        this.creationTimestamp = creationTimestamp;
-        this.customFeatures = customFeatures;
-        this.description = description;
-        this.enabledFeatures = enabledFeatures;
-        this.fingerprint = fingerprint;
-        this.minTlsVersion = minTlsVersion;
-        this.name = name;
-        this.profile = profile;
-        this.project = project;
-        this.selfLink = selfLink;
-    }
+    private SSLPolicyState() {}
 
-    private SSLPolicyState() {
-        this.creationTimestamp = Codegen.empty();
-        this.customFeatures = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enabledFeatures = Codegen.empty();
-        this.fingerprint = Codegen.empty();
-        this.minTlsVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.profile = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private SSLPolicyState(SSLPolicyState $) {
+        this.creationTimestamp = $.creationTimestamp;
+        this.customFeatures = $.customFeatures;
+        this.description = $.description;
+        this.enabledFeatures = $.enabledFeatures;
+        this.fingerprint = $.fingerprint;
+        this.minTlsVersion = $.minTlsVersion;
+        this.name = $.name;
+        this.profile = $.profile;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSLPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<List<String>> customFeatures;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> enabledFeatures;
-        private @Nullable Output<String> fingerprint;
-        private @Nullable Output<String> minTlsVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> profile;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
+        private SSLPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSLPolicyState();
         }
 
         public Builder(SSLPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.customFeatures = defaults.customFeatures;
-    	      this.description = defaults.description;
-    	      this.enabledFeatures = defaults.enabledFeatures;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.minTlsVersion = defaults.minTlsVersion;
-    	      this.name = defaults.name;
-    	      this.profile = defaults.profile;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
+            $ = new SSLPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder customFeatures(@Nullable Output<List<String>> customFeatures) {
-            this.customFeatures = customFeatures;
+            $.customFeatures = customFeatures;
             return this;
         }
-        public Builder customFeatures(@Nullable List<String> customFeatures) {
-            this.customFeatures = Codegen.ofNullable(customFeatures);
-            return this;
+
+        public Builder customFeatures(List<String> customFeatures) {
+            return customFeatures(Output.of(customFeatures));
         }
+
         public Builder customFeatures(String... customFeatures) {
             return customFeatures(List.of(customFeatures));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabledFeatures(@Nullable Output<List<String>> enabledFeatures) {
-            this.enabledFeatures = enabledFeatures;
+            $.enabledFeatures = enabledFeatures;
             return this;
         }
-        public Builder enabledFeatures(@Nullable List<String> enabledFeatures) {
-            this.enabledFeatures = Codegen.ofNullable(enabledFeatures);
-            return this;
+
+        public Builder enabledFeatures(List<String> enabledFeatures) {
+            return enabledFeatures(Output.of(enabledFeatures));
         }
+
         public Builder enabledFeatures(String... enabledFeatures) {
             return enabledFeatures(List.of(enabledFeatures));
         }
+
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(String fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder minTlsVersion(@Nullable Output<String> minTlsVersion) {
-            this.minTlsVersion = minTlsVersion;
+            $.minTlsVersion = minTlsVersion;
             return this;
         }
-        public Builder minTlsVersion(@Nullable String minTlsVersion) {
-            this.minTlsVersion = Codegen.ofNullable(minTlsVersion);
-            return this;
+
+        public Builder minTlsVersion(String minTlsVersion) {
+            return minTlsVersion(Output.of(minTlsVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder profile(@Nullable Output<String> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable String profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(String profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public SSLPolicyState build() {
-            return new SSLPolicyState(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, minTlsVersion, name, profile, project, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public SSLPolicyState build() {
+            return $;
         }
     }
+
 }

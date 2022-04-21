@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LeaveUntransformedArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ThrowErrorArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends com
      * 
      */
     @Import(name="leaveUntransformed")
-      private final @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
+    private @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
 
-    public Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed() {
-        return this.leaveUntransformed == null ? Codegen.empty() : this.leaveUntransformed;
+    public Optional<Output<GooglePrivacyDlpV2LeaveUntransformedArgs>> leaveUntransformed() {
+        return Optional.ofNullable(this.leaveUntransformed);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends com
      * 
      */
     @Import(name="throwError")
-      private final @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
+    private @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
 
-    public Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError() {
-        return this.throwError == null ? Codegen.empty() : this.throwError;
+    public Optional<Output<GooglePrivacyDlpV2ThrowErrorArgs>> throwError() {
+        return Optional.ofNullable(this.throwError);
     }
 
-    public GooglePrivacyDlpV2TransformationErrorHandlingArgs(
-        @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed,
-        @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError) {
-        this.leaveUntransformed = leaveUntransformed;
-        this.throwError = throwError;
-    }
+    private GooglePrivacyDlpV2TransformationErrorHandlingArgs() {}
 
-    private GooglePrivacyDlpV2TransformationErrorHandlingArgs() {
-        this.leaveUntransformed = Codegen.empty();
-        this.throwError = Codegen.empty();
+    private GooglePrivacyDlpV2TransformationErrorHandlingArgs(GooglePrivacyDlpV2TransformationErrorHandlingArgs $) {
+        this.leaveUntransformed = $.leaveUntransformed;
+        this.throwError = $.throwError;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TransformationErrorHandlingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
-        private @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
+        private GooglePrivacyDlpV2TransformationErrorHandlingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TransformationErrorHandlingArgs();
         }
 
         public Builder(GooglePrivacyDlpV2TransformationErrorHandlingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.leaveUntransformed = defaults.leaveUntransformed;
-    	      this.throwError = defaults.throwError;
+            $ = new GooglePrivacyDlpV2TransformationErrorHandlingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder leaveUntransformed(@Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed) {
-            this.leaveUntransformed = leaveUntransformed;
+            $.leaveUntransformed = leaveUntransformed;
             return this;
         }
-        public Builder leaveUntransformed(@Nullable GooglePrivacyDlpV2LeaveUntransformedArgs leaveUntransformed) {
-            this.leaveUntransformed = Codegen.ofNullable(leaveUntransformed);
-            return this;
+
+        public Builder leaveUntransformed(GooglePrivacyDlpV2LeaveUntransformedArgs leaveUntransformed) {
+            return leaveUntransformed(Output.of(leaveUntransformed));
         }
+
         public Builder throwError(@Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError) {
-            this.throwError = throwError;
+            $.throwError = throwError;
             return this;
         }
-        public Builder throwError(@Nullable GooglePrivacyDlpV2ThrowErrorArgs throwError) {
-            this.throwError = Codegen.ofNullable(throwError);
-            return this;
-        }        public GooglePrivacyDlpV2TransformationErrorHandlingArgs build() {
-            return new GooglePrivacyDlpV2TransformationErrorHandlingArgs(leaveUntransformed, throwError);
+
+        public Builder throwError(GooglePrivacyDlpV2ThrowErrorArgs throwError) {
+            return throwError(Output.of(throwError));
+        }
+
+        public GooglePrivacyDlpV2TransformationErrorHandlingArgs build() {
+            return $;
         }
     }
+
 }

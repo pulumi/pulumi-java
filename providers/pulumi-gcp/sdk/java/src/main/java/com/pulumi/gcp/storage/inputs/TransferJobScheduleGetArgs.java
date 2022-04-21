@@ -5,11 +5,11 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleEndDateGetArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleStartDateGetArgs;
 import com.pulumi.gcp.storage.inputs.TransferJobScheduleStartTimeOfDayGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TransferJobScheduleGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="scheduleEndDate")
-      private final @Nullable Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate;
+    private @Nullable Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate;
 
-    public Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate() {
-        return this.scheduleEndDate == null ? Codegen.empty() : this.scheduleEndDate;
+    public Optional<Output<TransferJobScheduleScheduleEndDateGetArgs>> scheduleEndDate() {
+        return Optional.ofNullable(this.scheduleEndDate);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class TransferJobScheduleGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="scheduleStartDate", required=true)
-      private final Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate;
+    private Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate;
 
     public Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate() {
         return this.scheduleStartDate;
@@ -44,76 +44,69 @@ public final class TransferJobScheduleGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="startTimeOfDay")
-      private final @Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay;
+    private @Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay;
 
-    public Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay() {
-        return this.startTimeOfDay == null ? Codegen.empty() : this.startTimeOfDay;
+    public Optional<Output<TransferJobScheduleStartTimeOfDayGetArgs>> startTimeOfDay() {
+        return Optional.ofNullable(this.startTimeOfDay);
     }
 
-    public TransferJobScheduleGetArgs(
-        @Nullable Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate,
-        Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate,
-        @Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay) {
-        this.scheduleEndDate = scheduleEndDate;
-        this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate, "expected parameter 'scheduleStartDate' to be non-null");
-        this.startTimeOfDay = startTimeOfDay;
-    }
+    private TransferJobScheduleGetArgs() {}
 
-    private TransferJobScheduleGetArgs() {
-        this.scheduleEndDate = Codegen.empty();
-        this.scheduleStartDate = Codegen.empty();
-        this.startTimeOfDay = Codegen.empty();
+    private TransferJobScheduleGetArgs(TransferJobScheduleGetArgs $) {
+        this.scheduleEndDate = $.scheduleEndDate;
+        this.scheduleStartDate = $.scheduleStartDate;
+        this.startTimeOfDay = $.startTimeOfDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferJobScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate;
-        private Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate;
-        private @Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay;
+        private TransferJobScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferJobScheduleGetArgs();
         }
 
         public Builder(TransferJobScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduleEndDate = defaults.scheduleEndDate;
-    	      this.scheduleStartDate = defaults.scheduleStartDate;
-    	      this.startTimeOfDay = defaults.startTimeOfDay;
+            $ = new TransferJobScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduleEndDate(@Nullable Output<TransferJobScheduleScheduleEndDateGetArgs> scheduleEndDate) {
-            this.scheduleEndDate = scheduleEndDate;
+            $.scheduleEndDate = scheduleEndDate;
             return this;
         }
-        public Builder scheduleEndDate(@Nullable TransferJobScheduleScheduleEndDateGetArgs scheduleEndDate) {
-            this.scheduleEndDate = Codegen.ofNullable(scheduleEndDate);
-            return this;
+
+        public Builder scheduleEndDate(TransferJobScheduleScheduleEndDateGetArgs scheduleEndDate) {
+            return scheduleEndDate(Output.of(scheduleEndDate));
         }
+
         public Builder scheduleStartDate(Output<TransferJobScheduleScheduleStartDateGetArgs> scheduleStartDate) {
-            this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
+            $.scheduleStartDate = scheduleStartDate;
             return this;
         }
+
         public Builder scheduleStartDate(TransferJobScheduleScheduleStartDateGetArgs scheduleStartDate) {
-            this.scheduleStartDate = Output.of(Objects.requireNonNull(scheduleStartDate));
-            return this;
+            return scheduleStartDate(Output.of(scheduleStartDate));
         }
+
         public Builder startTimeOfDay(@Nullable Output<TransferJobScheduleStartTimeOfDayGetArgs> startTimeOfDay) {
-            this.startTimeOfDay = startTimeOfDay;
+            $.startTimeOfDay = startTimeOfDay;
             return this;
         }
-        public Builder startTimeOfDay(@Nullable TransferJobScheduleStartTimeOfDayGetArgs startTimeOfDay) {
-            this.startTimeOfDay = Codegen.ofNullable(startTimeOfDay);
-            return this;
-        }        public TransferJobScheduleGetArgs build() {
-            return new TransferJobScheduleGetArgs(scheduleEndDate, scheduleStartDate, startTimeOfDay);
+
+        public Builder startTimeOfDay(TransferJobScheduleStartTimeOfDayGetArgs startTimeOfDay) {
+            return startTimeOfDay(Output.of(startTimeOfDay));
+        }
+
+        public TransferJobScheduleGetArgs build() {
+            $.scheduleStartDate = Objects.requireNonNull($.scheduleStartDate, "expected parameter 'scheduleStartDate' to be non-null");
+            return $;
         }
     }
+
 }

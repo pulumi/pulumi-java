@@ -7,10 +7,10 @@ import com.pulumi.azurenative.deviceupdate.inputs.GroupConnectivityInformationAr
 import com.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="groupConnectivityInformation")
-      private final @Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
+    private @Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
 
-    public Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation() {
-        return this.groupConnectivityInformation == null ? Codegen.empty() : this.groupConnectivityInformation;
+    public Optional<Output<List<GroupConnectivityInformationArgs>>> groupConnectivityInformation() {
+        return Optional.ofNullable(this.groupConnectivityInformation);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class PrivateLinkServiceProxyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="remotePrivateLinkServiceConnectionState")
-      private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
+    private @Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState() {
-        return this.remotePrivateLinkServiceConnectionState == null ? Codegen.empty() : this.remotePrivateLinkServiceConnectionState;
+    public Optional<Output<PrivateLinkServiceConnectionStateArgs>> remotePrivateLinkServiceConnectionState() {
+        return Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
     }
 
-    public PrivateLinkServiceProxyArgs(
-        @Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation,
-        @Nullable Output<String> id,
-        @Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState) {
-        this.groupConnectivityInformation = groupConnectivityInformation;
-        this.id = id;
-        this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
-    }
+    private PrivateLinkServiceProxyArgs() {}
 
-    private PrivateLinkServiceProxyArgs() {
-        this.groupConnectivityInformation = Codegen.empty();
-        this.id = Codegen.empty();
-        this.remotePrivateLinkServiceConnectionState = Codegen.empty();
+    private PrivateLinkServiceProxyArgs(PrivateLinkServiceProxyArgs $) {
+        this.groupConnectivityInformation = $.groupConnectivityInformation;
+        this.id = $.id;
+        this.remotePrivateLinkServiceConnectionState = $.remotePrivateLinkServiceConnectionState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
-        private @Nullable Output<String> id;
-        private @Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
+        private PrivateLinkServiceProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceProxyArgs();
         }
 
         public Builder(PrivateLinkServiceProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupConnectivityInformation = defaults.groupConnectivityInformation;
-    	      this.id = defaults.id;
-    	      this.remotePrivateLinkServiceConnectionState = defaults.remotePrivateLinkServiceConnectionState;
+            $ = new PrivateLinkServiceProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupConnectivityInformation(@Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation) {
-            this.groupConnectivityInformation = groupConnectivityInformation;
+            $.groupConnectivityInformation = groupConnectivityInformation;
             return this;
         }
-        public Builder groupConnectivityInformation(@Nullable List<GroupConnectivityInformationArgs> groupConnectivityInformation) {
-            this.groupConnectivityInformation = Codegen.ofNullable(groupConnectivityInformation);
-            return this;
+
+        public Builder groupConnectivityInformation(List<GroupConnectivityInformationArgs> groupConnectivityInformation) {
+            return groupConnectivityInformation(Output.of(groupConnectivityInformation));
         }
+
         public Builder groupConnectivityInformation(GroupConnectivityInformationArgs... groupConnectivityInformation) {
             return groupConnectivityInformation(List.of(groupConnectivityInformation));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder remotePrivateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState) {
-            this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
+            $.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
         }
-        public Builder remotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs remotePrivateLinkServiceConnectionState) {
-            this.remotePrivateLinkServiceConnectionState = Codegen.ofNullable(remotePrivateLinkServiceConnectionState);
-            return this;
-        }        public PrivateLinkServiceProxyArgs build() {
-            return new PrivateLinkServiceProxyArgs(groupConnectivityInformation, id, remotePrivateLinkServiceConnectionState);
+
+        public Builder remotePrivateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs remotePrivateLinkServiceConnectionState) {
+            return remotePrivateLinkServiceConnectionState(Output.of(remotePrivateLinkServiceConnectionState));
+        }
+
+        public PrivateLinkServiceProxyArgs build() {
+            return $;
         }
     }
+
 }

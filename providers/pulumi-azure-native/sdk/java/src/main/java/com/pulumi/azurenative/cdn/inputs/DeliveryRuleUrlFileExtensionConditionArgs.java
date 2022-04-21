@@ -25,7 +25,7 @@ public final class DeliveryRuleUrlFileExtensionConditionArgs extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,60 @@ public final class DeliveryRuleUrlFileExtensionConditionArgs extends com.pulumi.
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<UrlFileExtensionMatchConditionParametersArgs> parameters;
+    private Output<UrlFileExtensionMatchConditionParametersArgs> parameters;
 
     public Output<UrlFileExtensionMatchConditionParametersArgs> parameters() {
         return this.parameters;
     }
 
-    public DeliveryRuleUrlFileExtensionConditionArgs(
-        Output<String> name,
-        Output<UrlFileExtensionMatchConditionParametersArgs> parameters) {
-        this.name = Codegen.stringProp("name").output().arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private DeliveryRuleUrlFileExtensionConditionArgs() {}
 
-    private DeliveryRuleUrlFileExtensionConditionArgs() {
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private DeliveryRuleUrlFileExtensionConditionArgs(DeliveryRuleUrlFileExtensionConditionArgs $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleUrlFileExtensionConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<UrlFileExtensionMatchConditionParametersArgs> parameters;
+        private DeliveryRuleUrlFileExtensionConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleUrlFileExtensionConditionArgs();
         }
 
         public Builder(DeliveryRuleUrlFileExtensionConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new DeliveryRuleUrlFileExtensionConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(Output<UrlFileExtensionMatchConditionParametersArgs> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(UrlFileExtensionMatchConditionParametersArgs parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
-        }        public DeliveryRuleUrlFileExtensionConditionArgs build() {
-            return new DeliveryRuleUrlFileExtensionConditionArgs(name, parameters);
+            return parameters(Output.of(parameters));
+        }
+
+        public DeliveryRuleUrlFileExtensionConditionArgs build() {
+            $.name = Codegen.stringProp("name").output().arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

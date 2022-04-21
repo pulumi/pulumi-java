@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,17 +20,17 @@ public final class ResourceGuardProxyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="resourceGuardProxyName")
-      private final @Nullable Output<String> resourceGuardProxyName;
+    private @Nullable Output<String> resourceGuardProxyName;
 
-    public Output<String> resourceGuardProxyName() {
-        return this.resourceGuardProxyName == null ? Codegen.empty() : this.resourceGuardProxyName;
+    public Optional<Output<String>> resourceGuardProxyName() {
+        return Optional.ofNullable(this.resourceGuardProxyName);
     }
 
     /**
@@ -38,76 +38,70 @@ public final class ResourceGuardProxyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="vaultName", required=true)
-      private final Output<String> vaultName;
+    private Output<String> vaultName;
 
     public Output<String> vaultName() {
         return this.vaultName;
     }
 
-    public ResourceGuardProxyArgs(
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceGuardProxyName,
-        Output<String> vaultName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceGuardProxyName = resourceGuardProxyName;
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private ResourceGuardProxyArgs() {}
 
-    private ResourceGuardProxyArgs() {
-        this.resourceGroupName = Codegen.empty();
-        this.resourceGuardProxyName = Codegen.empty();
-        this.vaultName = Codegen.empty();
+    private ResourceGuardProxyArgs(ResourceGuardProxyArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceGuardProxyName = $.resourceGuardProxyName;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGuardProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceGuardProxyName;
-        private Output<String> vaultName;
+        private ResourceGuardProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGuardProxyArgs();
         }
 
         public Builder(ResourceGuardProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceGuardProxyName = defaults.resourceGuardProxyName;
-    	      this.vaultName = defaults.vaultName;
+            $ = new ResourceGuardProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceGuardProxyName(@Nullable Output<String> resourceGuardProxyName) {
-            this.resourceGuardProxyName = resourceGuardProxyName;
+            $.resourceGuardProxyName = resourceGuardProxyName;
             return this;
         }
-        public Builder resourceGuardProxyName(@Nullable String resourceGuardProxyName) {
-            this.resourceGuardProxyName = Codegen.ofNullable(resourceGuardProxyName);
-            return this;
+
+        public Builder resourceGuardProxyName(String resourceGuardProxyName) {
+            return resourceGuardProxyName(Output.of(resourceGuardProxyName));
         }
+
         public Builder vaultName(Output<String> vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
-            return this;
-        }        public ResourceGuardProxyArgs build() {
-            return new ResourceGuardProxyArgs(resourceGroupName, resourceGuardProxyName, vaultName);
+            return vaultName(Output.of(vaultName));
+        }
+
+        public ResourceGuardProxyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

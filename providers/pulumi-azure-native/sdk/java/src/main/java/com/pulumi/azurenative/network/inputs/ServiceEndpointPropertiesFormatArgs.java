@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceEndpointPropertiesFormatArgs extends com.pulumi.resour
      * 
      */
     @Import(name="locations")
-      private final @Nullable Output<List<String>> locations;
+    private @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<String>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class ServiceEndpointPropertiesFormatArgs extends com.pulumi.resour
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public ServiceEndpointPropertiesFormatArgs(
-        @Nullable Output<List<String>> locations,
-        @Nullable Output<String> service) {
-        this.locations = locations;
-        this.service = service;
-    }
+    private ServiceEndpointPropertiesFormatArgs() {}
 
-    private ServiceEndpointPropertiesFormatArgs() {
-        this.locations = Codegen.empty();
-        this.service = Codegen.empty();
+    private ServiceEndpointPropertiesFormatArgs(ServiceEndpointPropertiesFormatArgs $) {
+        this.locations = $.locations;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceEndpointPropertiesFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> locations;
-        private @Nullable Output<String> service;
+        private ServiceEndpointPropertiesFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceEndpointPropertiesFormatArgs();
         }
 
         public Builder(ServiceEndpointPropertiesFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
-    	      this.service = defaults.service;
+            $ = new ServiceEndpointPropertiesFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable Output<List<String>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<String> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public ServiceEndpointPropertiesFormatArgs build() {
-            return new ServiceEndpointPropertiesFormatArgs(locations, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public ServiceEndpointPropertiesFormatArgs build() {
+            return $;
         }
     }
+
 }

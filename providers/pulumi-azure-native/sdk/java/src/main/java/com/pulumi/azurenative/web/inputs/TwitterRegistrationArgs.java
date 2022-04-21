@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TwitterRegistrationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="consumerKey")
-      private final @Nullable Output<String> consumerKey;
+    private @Nullable Output<String> consumerKey;
 
-    public Output<String> consumerKey() {
-        return this.consumerKey == null ? Codegen.empty() : this.consumerKey;
+    public Optional<Output<String>> consumerKey() {
+        return Optional.ofNullable(this.consumerKey);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class TwitterRegistrationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="consumerSecretSettingName")
-      private final @Nullable Output<String> consumerSecretSettingName;
+    private @Nullable Output<String> consumerSecretSettingName;
 
-    public Output<String> consumerSecretSettingName() {
-        return this.consumerSecretSettingName == null ? Codegen.empty() : this.consumerSecretSettingName;
+    public Optional<Output<String>> consumerSecretSettingName() {
+        return Optional.ofNullable(this.consumerSecretSettingName);
     }
 
-    public TwitterRegistrationArgs(
-        @Nullable Output<String> consumerKey,
-        @Nullable Output<String> consumerSecretSettingName) {
-        this.consumerKey = consumerKey;
-        this.consumerSecretSettingName = consumerSecretSettingName;
-    }
+    private TwitterRegistrationArgs() {}
 
-    private TwitterRegistrationArgs() {
-        this.consumerKey = Codegen.empty();
-        this.consumerSecretSettingName = Codegen.empty();
+    private TwitterRegistrationArgs(TwitterRegistrationArgs $) {
+        this.consumerKey = $.consumerKey;
+        this.consumerSecretSettingName = $.consumerSecretSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TwitterRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> consumerKey;
-        private @Nullable Output<String> consumerSecretSettingName;
+        private TwitterRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TwitterRegistrationArgs();
         }
 
         public Builder(TwitterRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerKey = defaults.consumerKey;
-    	      this.consumerSecretSettingName = defaults.consumerSecretSettingName;
+            $ = new TwitterRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerKey(@Nullable Output<String> consumerKey) {
-            this.consumerKey = consumerKey;
+            $.consumerKey = consumerKey;
             return this;
         }
-        public Builder consumerKey(@Nullable String consumerKey) {
-            this.consumerKey = Codegen.ofNullable(consumerKey);
-            return this;
+
+        public Builder consumerKey(String consumerKey) {
+            return consumerKey(Output.of(consumerKey));
         }
+
         public Builder consumerSecretSettingName(@Nullable Output<String> consumerSecretSettingName) {
-            this.consumerSecretSettingName = consumerSecretSettingName;
+            $.consumerSecretSettingName = consumerSecretSettingName;
             return this;
         }
-        public Builder consumerSecretSettingName(@Nullable String consumerSecretSettingName) {
-            this.consumerSecretSettingName = Codegen.ofNullable(consumerSecretSettingName);
-            return this;
-        }        public TwitterRegistrationArgs build() {
-            return new TwitterRegistrationArgs(consumerKey, consumerSecretSettingName);
+
+        public Builder consumerSecretSettingName(String consumerSecretSettingName) {
+            return consumerSecretSettingName(Output.of(consumerSecretSettingName));
+        }
+
+        public TwitterRegistrationArgs build() {
+            return $;
         }
     }
+
 }

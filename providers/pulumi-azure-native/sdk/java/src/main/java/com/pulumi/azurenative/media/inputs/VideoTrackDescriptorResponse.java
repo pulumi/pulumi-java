@@ -23,45 +23,45 @@ public final class VideoTrackDescriptorResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public VideoTrackDescriptorResponse(String odataType) {
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private VideoTrackDescriptorResponse() {}
 
-    private VideoTrackDescriptorResponse() {
-        this.odataType = null;
+    private VideoTrackDescriptorResponse(VideoTrackDescriptorResponse $) {
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoTrackDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
+        private VideoTrackDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoTrackDescriptorResponse();
         }
 
         public Builder(VideoTrackDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
+            $ = new VideoTrackDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public VideoTrackDescriptorResponse build() {
-            return new VideoTrackDescriptorResponse(odataType);
+        }
+
+        public VideoTrackDescriptorResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

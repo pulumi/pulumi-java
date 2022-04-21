@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IngressClassSpecArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="controller")
-      private final @Nullable Output<String> controller;
+    private @Nullable Output<String> controller;
 
-    public Output<String> controller() {
-        return this.controller == null ? Codegen.empty() : this.controller;
+    public Optional<Output<String>> controller() {
+        return Optional.ofNullable(this.controller);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class IngressClassSpecArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<TypedLocalObjectReferenceArgs> parameters;
+    private @Nullable Output<TypedLocalObjectReferenceArgs> parameters;
 
-    public Output<TypedLocalObjectReferenceArgs> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<TypedLocalObjectReferenceArgs>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public IngressClassSpecArgs(
-        @Nullable Output<String> controller,
-        @Nullable Output<TypedLocalObjectReferenceArgs> parameters) {
-        this.controller = controller;
-        this.parameters = parameters;
-    }
+    private IngressClassSpecArgs() {}
 
-    private IngressClassSpecArgs() {
-        this.controller = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private IngressClassSpecArgs(IngressClassSpecArgs $) {
+        this.controller = $.controller;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressClassSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> controller;
-        private @Nullable Output<TypedLocalObjectReferenceArgs> parameters;
+        private IngressClassSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressClassSpecArgs();
         }
 
         public Builder(IngressClassSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controller = defaults.controller;
-    	      this.parameters = defaults.parameters;
+            $ = new IngressClassSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder controller(@Nullable Output<String> controller) {
-            this.controller = controller;
+            $.controller = controller;
             return this;
         }
-        public Builder controller(@Nullable String controller) {
-            this.controller = Codegen.ofNullable(controller);
-            return this;
+
+        public Builder controller(String controller) {
+            return controller(Output.of(controller));
         }
+
         public Builder parameters(@Nullable Output<TypedLocalObjectReferenceArgs> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable TypedLocalObjectReferenceArgs parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
-        }        public IngressClassSpecArgs build() {
-            return new IngressClassSpecArgs(controller, parameters);
+
+        public Builder parameters(TypedLocalObjectReferenceArgs parameters) {
+            return parameters(Output.of(parameters));
+        }
+
+        public IngressClassSpecArgs build() {
+            return $;
         }
     }
+
 }

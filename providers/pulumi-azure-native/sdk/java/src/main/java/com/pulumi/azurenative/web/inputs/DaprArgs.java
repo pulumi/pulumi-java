@@ -6,12 +6,12 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.DaprComponentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class DaprArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DaprArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appPort")
-      private final @Nullable Output<Integer> appPort;
+    private @Nullable Output<Integer> appPort;
 
-    public Output<Integer> appPort() {
-        return this.appPort == null ? Codegen.empty() : this.appPort;
+    public Optional<Output<Integer>> appPort() {
+        return Optional.ofNullable(this.appPort);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DaprArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="components")
-      private final @Nullable Output<List<DaprComponentArgs>> components;
+    private @Nullable Output<List<DaprComponentArgs>> components;
 
-    public Output<List<DaprComponentArgs>> components() {
-        return this.components == null ? Codegen.empty() : this.components;
+    public Optional<Output<List<DaprComponentArgs>>> components() {
+        return Optional.ofNullable(this.components);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class DaprArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public DaprArgs(
-        @Nullable Output<String> appId,
-        @Nullable Output<Integer> appPort,
-        @Nullable Output<List<DaprComponentArgs>> components,
-        @Nullable Output<Boolean> enabled) {
-        this.appId = appId;
-        this.appPort = appPort;
-        this.components = components;
-        this.enabled = enabled;
-    }
+    private DaprArgs() {}
 
-    private DaprArgs() {
-        this.appId = Codegen.empty();
-        this.appPort = Codegen.empty();
-        this.components = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private DaprArgs(DaprArgs $) {
+        this.appId = $.appId;
+        this.appPort = $.appPort;
+        this.components = $.components;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DaprArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<Integer> appPort;
-        private @Nullable Output<List<DaprComponentArgs>> components;
-        private @Nullable Output<Boolean> enabled;
+        private DaprArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DaprArgs();
         }
 
         public Builder(DaprArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.appPort = defaults.appPort;
-    	      this.components = defaults.components;
-    	      this.enabled = defaults.enabled;
+            $ = new DaprArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder appPort(@Nullable Output<Integer> appPort) {
-            this.appPort = appPort;
+            $.appPort = appPort;
             return this;
         }
-        public Builder appPort(@Nullable Integer appPort) {
-            this.appPort = Codegen.ofNullable(appPort);
-            return this;
+
+        public Builder appPort(Integer appPort) {
+            return appPort(Output.of(appPort));
         }
+
         public Builder components(@Nullable Output<List<DaprComponentArgs>> components) {
-            this.components = components;
+            $.components = components;
             return this;
         }
-        public Builder components(@Nullable List<DaprComponentArgs> components) {
-            this.components = Codegen.ofNullable(components);
-            return this;
+
+        public Builder components(List<DaprComponentArgs> components) {
+            return components(Output.of(components));
         }
+
         public Builder components(DaprComponentArgs... components) {
             return components(List.of(components));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public DaprArgs build() {
-            return new DaprArgs(appId, appPort, components, enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public DaprArgs build() {
+            return $;
         }
     }
+
 }

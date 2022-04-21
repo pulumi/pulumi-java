@@ -21,45 +21,45 @@ public final class ResourcePolicyResourceStatusResponse extends com.pulumi.resou
      * 
      */
     @Import(name="instanceSchedulePolicy", required=true)
-      private final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
+    private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
 
     public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy() {
         return this.instanceSchedulePolicy;
     }
 
-    public ResourcePolicyResourceStatusResponse(ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy) {
-        this.instanceSchedulePolicy = Objects.requireNonNull(instanceSchedulePolicy, "expected parameter 'instanceSchedulePolicy' to be non-null");
-    }
+    private ResourcePolicyResourceStatusResponse() {}
 
-    private ResourcePolicyResourceStatusResponse() {
-        this.instanceSchedulePolicy = null;
+    private ResourcePolicyResourceStatusResponse(ResourcePolicyResourceStatusResponse $) {
+        this.instanceSchedulePolicy = $.instanceSchedulePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyResourceStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
+        private ResourcePolicyResourceStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyResourceStatusResponse();
         }
 
         public Builder(ResourcePolicyResourceStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceSchedulePolicy = defaults.instanceSchedulePolicy;
+            $ = new ResourcePolicyResourceStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceSchedulePolicy(ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy) {
-            this.instanceSchedulePolicy = Objects.requireNonNull(instanceSchedulePolicy);
+            $.instanceSchedulePolicy = instanceSchedulePolicy;
             return this;
-        }        public ResourcePolicyResourceStatusResponse build() {
-            return new ResourcePolicyResourceStatusResponse(instanceSchedulePolicy);
+        }
+
+        public ResourcePolicyResourceStatusResponse build() {
+            $.instanceSchedulePolicy = Objects.requireNonNull($.instanceSchedulePolicy, "expected parameter 'instanceSchedulePolicy' to be non-null");
+            return $;
         }
     }
+
 }

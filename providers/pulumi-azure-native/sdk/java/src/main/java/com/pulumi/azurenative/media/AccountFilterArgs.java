@@ -8,10 +8,10 @@ import com.pulumi.azurenative.media.inputs.FirstQualityArgs;
 import com.pulumi.azurenative.media.inputs.PresentationTimeRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -35,10 +35,10 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filterName")
-      private final @Nullable Output<String> filterName;
+    private @Nullable Output<String> filterName;
 
-    public Output<String> filterName() {
-        return this.filterName == null ? Codegen.empty() : this.filterName;
+    public Optional<Output<String>> filterName() {
+        return Optional.ofNullable(this.filterName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstQuality")
-      private final @Nullable Output<FirstQualityArgs> firstQuality;
+    private @Nullable Output<FirstQualityArgs> firstQuality;
 
-    public Output<FirstQualityArgs> firstQuality() {
-        return this.firstQuality == null ? Codegen.empty() : this.firstQuality;
+    public Optional<Output<FirstQualityArgs>> firstQuality() {
+        return Optional.ofNullable(this.firstQuality);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="presentationTimeRange")
-      private final @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
+    private @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
 
-    public Output<PresentationTimeRangeArgs> presentationTimeRange() {
-        return this.presentationTimeRange == null ? Codegen.empty() : this.presentationTimeRange;
+    public Optional<Output<PresentationTimeRangeArgs>> presentationTimeRange() {
+        return Optional.ofNullable(this.presentationTimeRange);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -79,118 +79,104 @@ public final class AccountFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tracks")
-      private final @Nullable Output<List<FilterTrackSelectionArgs>> tracks;
+    private @Nullable Output<List<FilterTrackSelectionArgs>> tracks;
 
-    public Output<List<FilterTrackSelectionArgs>> tracks() {
-        return this.tracks == null ? Codegen.empty() : this.tracks;
+    public Optional<Output<List<FilterTrackSelectionArgs>>> tracks() {
+        return Optional.ofNullable(this.tracks);
     }
 
-    public AccountFilterArgs(
-        Output<String> accountName,
-        @Nullable Output<String> filterName,
-        @Nullable Output<FirstQualityArgs> firstQuality,
-        @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<FilterTrackSelectionArgs>> tracks) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.filterName = filterName;
-        this.firstQuality = firstQuality;
-        this.presentationTimeRange = presentationTimeRange;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tracks = tracks;
-    }
+    private AccountFilterArgs() {}
 
-    private AccountFilterArgs() {
-        this.accountName = Codegen.empty();
-        this.filterName = Codegen.empty();
-        this.firstQuality = Codegen.empty();
-        this.presentationTimeRange = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tracks = Codegen.empty();
+    private AccountFilterArgs(AccountFilterArgs $) {
+        this.accountName = $.accountName;
+        this.filterName = $.filterName;
+        this.firstQuality = $.firstQuality;
+        this.presentationTimeRange = $.presentationTimeRange;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tracks = $.tracks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> filterName;
-        private @Nullable Output<FirstQualityArgs> firstQuality;
-        private @Nullable Output<PresentationTimeRangeArgs> presentationTimeRange;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<FilterTrackSelectionArgs>> tracks;
+        private AccountFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountFilterArgs();
         }
 
         public Builder(AccountFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.filterName = defaults.filterName;
-    	      this.firstQuality = defaults.firstQuality;
-    	      this.presentationTimeRange = defaults.presentationTimeRange;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tracks = defaults.tracks;
+            $ = new AccountFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder filterName(@Nullable Output<String> filterName) {
-            this.filterName = filterName;
+            $.filterName = filterName;
             return this;
         }
-        public Builder filterName(@Nullable String filterName) {
-            this.filterName = Codegen.ofNullable(filterName);
-            return this;
+
+        public Builder filterName(String filterName) {
+            return filterName(Output.of(filterName));
         }
+
         public Builder firstQuality(@Nullable Output<FirstQualityArgs> firstQuality) {
-            this.firstQuality = firstQuality;
+            $.firstQuality = firstQuality;
             return this;
         }
-        public Builder firstQuality(@Nullable FirstQualityArgs firstQuality) {
-            this.firstQuality = Codegen.ofNullable(firstQuality);
-            return this;
+
+        public Builder firstQuality(FirstQualityArgs firstQuality) {
+            return firstQuality(Output.of(firstQuality));
         }
+
         public Builder presentationTimeRange(@Nullable Output<PresentationTimeRangeArgs> presentationTimeRange) {
-            this.presentationTimeRange = presentationTimeRange;
+            $.presentationTimeRange = presentationTimeRange;
             return this;
         }
-        public Builder presentationTimeRange(@Nullable PresentationTimeRangeArgs presentationTimeRange) {
-            this.presentationTimeRange = Codegen.ofNullable(presentationTimeRange);
-            return this;
+
+        public Builder presentationTimeRange(PresentationTimeRangeArgs presentationTimeRange) {
+            return presentationTimeRange(Output.of(presentationTimeRange));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tracks(@Nullable Output<List<FilterTrackSelectionArgs>> tracks) {
-            this.tracks = tracks;
+            $.tracks = tracks;
             return this;
         }
-        public Builder tracks(@Nullable List<FilterTrackSelectionArgs> tracks) {
-            this.tracks = Codegen.ofNullable(tracks);
-            return this;
+
+        public Builder tracks(List<FilterTrackSelectionArgs> tracks) {
+            return tracks(Output.of(tracks));
         }
+
         public Builder tracks(FilterTrackSelectionArgs... tracks) {
             return tracks(List.of(tracks));
-        }        public AccountFilterArgs build() {
-            return new AccountFilterArgs(accountName, filterName, firstQuality, presentationTimeRange, resourceGroupName, tracks);
+        }
+
+        public AccountFilterArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="customMetadata", required=true)
-      private final Map<String,String> customMetadata;
+    private Map<String,String> customMetadata;
 
     public Map<String,String> customMetadata() {
         return this.customMetadata;
@@ -35,7 +35,7 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="helpText", required=true)
-      private final String helpText;
+    private String helpText;
 
     public String helpText() {
         return this.helpText;
@@ -46,7 +46,7 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="isOptional", required=true)
-      private final Boolean isOptional;
+    private Boolean isOptional;
 
     public Boolean isOptional() {
         return this.isOptional;
@@ -57,7 +57,7 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -68,7 +68,7 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -79,7 +79,7 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="paramType", required=true)
-      private final String paramType;
+    private String paramType;
 
     public String paramType() {
         return this.paramType;
@@ -90,103 +90,91 @@ public final class ParameterMetadataResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="regexes", required=true)
-      private final List<String> regexes;
+    private List<String> regexes;
 
     public List<String> regexes() {
         return this.regexes;
     }
 
-    public ParameterMetadataResponse(
-        Map<String,String> customMetadata,
-        String helpText,
-        Boolean isOptional,
-        String label,
-        String name,
-        String paramType,
-        List<String> regexes) {
-        this.customMetadata = Objects.requireNonNull(customMetadata, "expected parameter 'customMetadata' to be non-null");
-        this.helpText = Objects.requireNonNull(helpText, "expected parameter 'helpText' to be non-null");
-        this.isOptional = Objects.requireNonNull(isOptional, "expected parameter 'isOptional' to be non-null");
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.paramType = Objects.requireNonNull(paramType, "expected parameter 'paramType' to be non-null");
-        this.regexes = Objects.requireNonNull(regexes, "expected parameter 'regexes' to be non-null");
-    }
+    private ParameterMetadataResponse() {}
 
-    private ParameterMetadataResponse() {
-        this.customMetadata = Map.of();
-        this.helpText = null;
-        this.isOptional = null;
-        this.label = null;
-        this.name = null;
-        this.paramType = null;
-        this.regexes = List.of();
+    private ParameterMetadataResponse(ParameterMetadataResponse $) {
+        this.customMetadata = $.customMetadata;
+        this.helpText = $.helpText;
+        this.isOptional = $.isOptional;
+        this.label = $.label;
+        this.name = $.name;
+        this.paramType = $.paramType;
+        this.regexes = $.regexes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> customMetadata;
-        private String helpText;
-        private Boolean isOptional;
-        private String label;
-        private String name;
-        private String paramType;
-        private List<String> regexes;
+        private ParameterMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterMetadataResponse();
         }
 
         public Builder(ParameterMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customMetadata = defaults.customMetadata;
-    	      this.helpText = defaults.helpText;
-    	      this.isOptional = defaults.isOptional;
-    	      this.label = defaults.label;
-    	      this.name = defaults.name;
-    	      this.paramType = defaults.paramType;
-    	      this.regexes = defaults.regexes;
+            $ = new ParameterMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customMetadata(Map<String,String> customMetadata) {
-            this.customMetadata = Objects.requireNonNull(customMetadata);
+            $.customMetadata = customMetadata;
             return this;
         }
+
         public Builder helpText(String helpText) {
-            this.helpText = Objects.requireNonNull(helpText);
+            $.helpText = helpText;
             return this;
         }
+
         public Builder isOptional(Boolean isOptional) {
-            this.isOptional = Objects.requireNonNull(isOptional);
+            $.isOptional = isOptional;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder paramType(String paramType) {
-            this.paramType = Objects.requireNonNull(paramType);
+            $.paramType = paramType;
             return this;
         }
+
         public Builder regexes(List<String> regexes) {
-            this.regexes = Objects.requireNonNull(regexes);
+            $.regexes = regexes;
             return this;
         }
+
         public Builder regexes(String... regexes) {
             return regexes(List.of(regexes));
-        }        public ParameterMetadataResponse build() {
-            return new ParameterMetadataResponse(customMetadata, helpText, isOptional, label, name, paramType, regexes);
+        }
+
+        public ParameterMetadataResponse build() {
+            $.customMetadata = Objects.requireNonNull($.customMetadata, "expected parameter 'customMetadata' to be non-null");
+            $.helpText = Objects.requireNonNull($.helpText, "expected parameter 'helpText' to be non-null");
+            $.isOptional = Objects.requireNonNull($.isOptional, "expected parameter 'isOptional' to be non-null");
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.paramType = Objects.requireNonNull($.paramType, "expected parameter 'paramType' to be non-null");
+            $.regexes = Objects.requireNonNull($.regexes, "expected parameter 'regexes' to be non-null");
+            return $;
         }
     }
+
 }

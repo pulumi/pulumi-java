@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ReplicaSetSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="minReadySeconds")
-      private final @Nullable Output<Integer> minReadySeconds;
+    private @Nullable Output<Integer> minReadySeconds;
 
-    public Output<Integer> minReadySeconds() {
-        return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
+    public Optional<Output<Integer>> minReadySeconds() {
+        return Optional.ofNullable(this.minReadySeconds);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ReplicaSetSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="replicas")
-      private final @Nullable Output<Integer> replicas;
+    private @Nullable Output<Integer> replicas;
 
-    public Output<Integer> replicas() {
-        return this.replicas == null ? Codegen.empty() : this.replicas;
+    public Optional<Output<Integer>> replicas() {
+        return Optional.ofNullable(this.replicas);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ReplicaSetSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="selector", required=true)
-      private final Output<LabelSelectorArgs> selector;
+    private Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> selector() {
         return this.selector;
@@ -59,89 +59,79 @@ public final class ReplicaSetSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<PodTemplateSpecArgs> template;
+    private @Nullable Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<PodTemplateSpecArgs>> template() {
+        return Optional.ofNullable(this.template);
     }
 
-    public ReplicaSetSpecArgs(
-        @Nullable Output<Integer> minReadySeconds,
-        @Nullable Output<Integer> replicas,
-        Output<LabelSelectorArgs> selector,
-        @Nullable Output<PodTemplateSpecArgs> template) {
-        this.minReadySeconds = minReadySeconds;
-        this.replicas = replicas;
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-        this.template = template;
-    }
+    private ReplicaSetSpecArgs() {}
 
-    private ReplicaSetSpecArgs() {
-        this.minReadySeconds = Codegen.empty();
-        this.replicas = Codegen.empty();
-        this.selector = Codegen.empty();
-        this.template = Codegen.empty();
+    private ReplicaSetSpecArgs(ReplicaSetSpecArgs $) {
+        this.minReadySeconds = $.minReadySeconds;
+        this.replicas = $.replicas;
+        this.selector = $.selector;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicaSetSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> minReadySeconds;
-        private @Nullable Output<Integer> replicas;
-        private Output<LabelSelectorArgs> selector;
-        private @Nullable Output<PodTemplateSpecArgs> template;
+        private ReplicaSetSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicaSetSpecArgs();
         }
 
         public Builder(ReplicaSetSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minReadySeconds = defaults.minReadySeconds;
-    	      this.replicas = defaults.replicas;
-    	      this.selector = defaults.selector;
-    	      this.template = defaults.template;
+            $ = new ReplicaSetSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minReadySeconds(@Nullable Output<Integer> minReadySeconds) {
-            this.minReadySeconds = minReadySeconds;
+            $.minReadySeconds = minReadySeconds;
             return this;
         }
-        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
-            this.minReadySeconds = Codegen.ofNullable(minReadySeconds);
-            return this;
+
+        public Builder minReadySeconds(Integer minReadySeconds) {
+            return minReadySeconds(Output.of(minReadySeconds));
         }
+
         public Builder replicas(@Nullable Output<Integer> replicas) {
-            this.replicas = replicas;
+            $.replicas = replicas;
             return this;
         }
-        public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Codegen.ofNullable(replicas);
-            return this;
+
+        public Builder replicas(Integer replicas) {
+            return replicas(Output.of(replicas));
         }
+
         public Builder selector(Output<LabelSelectorArgs> selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
         }
+
         public Builder selector(LabelSelectorArgs selector) {
-            this.selector = Output.of(Objects.requireNonNull(selector));
-            return this;
+            return selector(Output.of(selector));
         }
+
         public Builder template(@Nullable Output<PodTemplateSpecArgs> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable PodTemplateSpecArgs template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
-        }        public ReplicaSetSpecArgs build() {
-            return new ReplicaSetSpecArgs(minReadySeconds, replicas, selector, template);
+
+        public Builder template(PodTemplateSpecArgs template) {
+            return template(Output.of(template));
+        }
+
+        public ReplicaSetSpecArgs build() {
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            return $;
         }
     }
+
 }

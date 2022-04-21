@@ -6,9 +6,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,17 +25,17 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
      * 
      */
     @Import(name="creationTime", required=true)
-      private final Output<String> creationTime;
+    private Output<String> creationTime;
 
     public Output<String> creationTime() {
         return this.creationTime;
     }
 
     @Import(name="endpointName")
-      private final @Nullable Output<String> endpointName;
+    private @Nullable Output<String> endpointName;
 
-    public Output<String> endpointName() {
-        return this.endpointName == null ? Codegen.empty() : this.endpointName;
+    public Optional<Output<String>> endpointName() {
+        return Optional.ofNullable(this.endpointName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
      * 
      */
     @Import(name="failureReason")
-      private final @Nullable Output<String> failureReason;
+    private @Nullable Output<String> failureReason;
 
-    public Output<String> failureReason() {
-        return this.failureReason == null ? Codegen.empty() : this.failureReason;
+    public Optional<Output<String>> failureReason() {
+        return Optional.ofNullable(this.failureReason);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
      * 
      */
     @Import(name="lastModifiedTime", required=true)
-      private final Output<String> lastModifiedTime;
+    private Output<String> lastModifiedTime;
 
     public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
@@ -65,14 +65,14 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
      * 
      */
     @Import(name="monitoringExecutionStatus", required=true)
-      private final Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
+    private Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
 
     public Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
 
     @Import(name="monitoringScheduleName", required=true)
-      private final Output<String> monitoringScheduleName;
+    private Output<String> monitoringScheduleName;
 
     public Output<String> monitoringScheduleName() {
         return this.monitoringScheduleName;
@@ -83,10 +83,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
      * 
      */
     @Import(name="processingJobArn")
-      private final @Nullable Output<String> processingJobArn;
+    private @Nullable Output<String> processingJobArn;
 
-    public Output<String> processingJobArn() {
-        return this.processingJobArn == null ? Codegen.empty() : this.processingJobArn;
+    public Optional<Output<String>> processingJobArn() {
+        return Optional.ofNullable(this.processingJobArn);
     }
 
     /**
@@ -94,141 +94,123 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends com.
      * 
      */
     @Import(name="scheduledTime", required=true)
-      private final Output<String> scheduledTime;
+    private Output<String> scheduledTime;
 
     public Output<String> scheduledTime() {
         return this.scheduledTime;
     }
 
-    public MonitoringScheduleMonitoringExecutionSummaryArgs(
-        Output<String> creationTime,
-        @Nullable Output<String> endpointName,
-        @Nullable Output<String> failureReason,
-        Output<String> lastModifiedTime,
-        Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus,
-        Output<String> monitoringScheduleName,
-        @Nullable Output<String> processingJobArn,
-        Output<String> scheduledTime) {
-        this.creationTime = Objects.requireNonNull(creationTime, "expected parameter 'creationTime' to be non-null");
-        this.endpointName = endpointName;
-        this.failureReason = failureReason;
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
-        this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus, "expected parameter 'monitoringExecutionStatus' to be non-null");
-        this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName, "expected parameter 'monitoringScheduleName' to be non-null");
-        this.processingJobArn = processingJobArn;
-        this.scheduledTime = Objects.requireNonNull(scheduledTime, "expected parameter 'scheduledTime' to be non-null");
-    }
+    private MonitoringScheduleMonitoringExecutionSummaryArgs() {}
 
-    private MonitoringScheduleMonitoringExecutionSummaryArgs() {
-        this.creationTime = Codegen.empty();
-        this.endpointName = Codegen.empty();
-        this.failureReason = Codegen.empty();
-        this.lastModifiedTime = Codegen.empty();
-        this.monitoringExecutionStatus = Codegen.empty();
-        this.monitoringScheduleName = Codegen.empty();
-        this.processingJobArn = Codegen.empty();
-        this.scheduledTime = Codegen.empty();
+    private MonitoringScheduleMonitoringExecutionSummaryArgs(MonitoringScheduleMonitoringExecutionSummaryArgs $) {
+        this.creationTime = $.creationTime;
+        this.endpointName = $.endpointName;
+        this.failureReason = $.failureReason;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.monitoringExecutionStatus = $.monitoringExecutionStatus;
+        this.monitoringScheduleName = $.monitoringScheduleName;
+        this.processingJobArn = $.processingJobArn;
+        this.scheduledTime = $.scheduledTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleMonitoringExecutionSummaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> creationTime;
-        private @Nullable Output<String> endpointName;
-        private @Nullable Output<String> failureReason;
-        private Output<String> lastModifiedTime;
-        private Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
-        private Output<String> monitoringScheduleName;
-        private @Nullable Output<String> processingJobArn;
-        private Output<String> scheduledTime;
+        private MonitoringScheduleMonitoringExecutionSummaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleMonitoringExecutionSummaryArgs();
         }
 
         public Builder(MonitoringScheduleMonitoringExecutionSummaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.endpointName = defaults.endpointName;
-    	      this.failureReason = defaults.failureReason;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.monitoringExecutionStatus = defaults.monitoringExecutionStatus;
-    	      this.monitoringScheduleName = defaults.monitoringScheduleName;
-    	      this.processingJobArn = defaults.processingJobArn;
-    	      this.scheduledTime = defaults.scheduledTime;
+            $ = new MonitoringScheduleMonitoringExecutionSummaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(Output<String> creationTime) {
-            this.creationTime = Objects.requireNonNull(creationTime);
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder creationTime(String creationTime) {
-            this.creationTime = Output.of(Objects.requireNonNull(creationTime));
-            return this;
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder endpointName(@Nullable Output<String> endpointName) {
-            this.endpointName = endpointName;
+            $.endpointName = endpointName;
             return this;
         }
-        public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Codegen.ofNullable(endpointName);
-            return this;
+
+        public Builder endpointName(String endpointName) {
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder failureReason(@Nullable Output<String> failureReason) {
-            this.failureReason = failureReason;
+            $.failureReason = failureReason;
             return this;
         }
-        public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Codegen.ofNullable(failureReason);
-            return this;
+
+        public Builder failureReason(String failureReason) {
+            return failureReason(Output.of(failureReason));
         }
+
         public Builder lastModifiedTime(Output<String> lastModifiedTime) {
-            this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
+
         public Builder lastModifiedTime(String lastModifiedTime) {
-            this.lastModifiedTime = Output.of(Objects.requireNonNull(lastModifiedTime));
-            return this;
+            return lastModifiedTime(Output.of(lastModifiedTime));
         }
+
         public Builder monitoringExecutionStatus(Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus) {
-            this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus);
+            $.monitoringExecutionStatus = monitoringExecutionStatus;
             return this;
         }
+
         public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
-            this.monitoringExecutionStatus = Output.of(Objects.requireNonNull(monitoringExecutionStatus));
-            return this;
+            return monitoringExecutionStatus(Output.of(monitoringExecutionStatus));
         }
+
         public Builder monitoringScheduleName(Output<String> monitoringScheduleName) {
-            this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName);
+            $.monitoringScheduleName = monitoringScheduleName;
             return this;
         }
+
         public Builder monitoringScheduleName(String monitoringScheduleName) {
-            this.monitoringScheduleName = Output.of(Objects.requireNonNull(monitoringScheduleName));
-            return this;
+            return monitoringScheduleName(Output.of(monitoringScheduleName));
         }
+
         public Builder processingJobArn(@Nullable Output<String> processingJobArn) {
-            this.processingJobArn = processingJobArn;
+            $.processingJobArn = processingJobArn;
             return this;
         }
-        public Builder processingJobArn(@Nullable String processingJobArn) {
-            this.processingJobArn = Codegen.ofNullable(processingJobArn);
-            return this;
+
+        public Builder processingJobArn(String processingJobArn) {
+            return processingJobArn(Output.of(processingJobArn));
         }
+
         public Builder scheduledTime(Output<String> scheduledTime) {
-            this.scheduledTime = Objects.requireNonNull(scheduledTime);
+            $.scheduledTime = scheduledTime;
             return this;
         }
+
         public Builder scheduledTime(String scheduledTime) {
-            this.scheduledTime = Output.of(Objects.requireNonNull(scheduledTime));
-            return this;
-        }        public MonitoringScheduleMonitoringExecutionSummaryArgs build() {
-            return new MonitoringScheduleMonitoringExecutionSummaryArgs(creationTime, endpointName, failureReason, lastModifiedTime, monitoringExecutionStatus, monitoringScheduleName, processingJobArn, scheduledTime);
+            return scheduledTime(Output.of(scheduledTime));
+        }
+
+        public MonitoringScheduleMonitoringExecutionSummaryArgs build() {
+            $.creationTime = Objects.requireNonNull($.creationTime, "expected parameter 'creationTime' to be non-null");
+            $.lastModifiedTime = Objects.requireNonNull($.lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
+            $.monitoringExecutionStatus = Objects.requireNonNull($.monitoringExecutionStatus, "expected parameter 'monitoringExecutionStatus' to be non-null");
+            $.monitoringScheduleName = Objects.requireNonNull($.monitoringScheduleName, "expected parameter 'monitoringScheduleName' to be non-null");
+            $.scheduledTime = Objects.requireNonNull($.scheduledTime, "expected parameter 'scheduledTime' to be non-null");
+            return $;
         }
     }
+
 }

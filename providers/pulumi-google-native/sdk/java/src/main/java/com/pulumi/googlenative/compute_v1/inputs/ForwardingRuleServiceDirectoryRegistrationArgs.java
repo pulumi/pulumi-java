@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends com.pu
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends com.pu
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends com.pu
      * 
      */
     @Import(name="serviceDirectoryRegion")
-      private final @Nullable Output<String> serviceDirectoryRegion;
+    private @Nullable Output<String> serviceDirectoryRegion;
 
-    public Output<String> serviceDirectoryRegion() {
-        return this.serviceDirectoryRegion == null ? Codegen.empty() : this.serviceDirectoryRegion;
+    public Optional<Output<String>> serviceDirectoryRegion() {
+        return Optional.ofNullable(this.serviceDirectoryRegion);
     }
 
-    public ForwardingRuleServiceDirectoryRegistrationArgs(
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> service,
-        @Nullable Output<String> serviceDirectoryRegion) {
-        this.namespace = namespace;
-        this.service = service;
-        this.serviceDirectoryRegion = serviceDirectoryRegion;
-    }
+    private ForwardingRuleServiceDirectoryRegistrationArgs() {}
 
-    private ForwardingRuleServiceDirectoryRegistrationArgs() {
-        this.namespace = Codegen.empty();
-        this.service = Codegen.empty();
-        this.serviceDirectoryRegion = Codegen.empty();
+    private ForwardingRuleServiceDirectoryRegistrationArgs(ForwardingRuleServiceDirectoryRegistrationArgs $) {
+        this.namespace = $.namespace;
+        this.service = $.service;
+        this.serviceDirectoryRegion = $.serviceDirectoryRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ForwardingRuleServiceDirectoryRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> service;
-        private @Nullable Output<String> serviceDirectoryRegion;
+        private ForwardingRuleServiceDirectoryRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ForwardingRuleServiceDirectoryRegistrationArgs();
         }
 
         public Builder(ForwardingRuleServiceDirectoryRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
-    	      this.service = defaults.service;
-    	      this.serviceDirectoryRegion = defaults.serviceDirectoryRegion;
+            $ = new ForwardingRuleServiceDirectoryRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
+
+        public Builder service(String service) {
+            return service(Output.of(service));
         }
+
         public Builder serviceDirectoryRegion(@Nullable Output<String> serviceDirectoryRegion) {
-            this.serviceDirectoryRegion = serviceDirectoryRegion;
+            $.serviceDirectoryRegion = serviceDirectoryRegion;
             return this;
         }
-        public Builder serviceDirectoryRegion(@Nullable String serviceDirectoryRegion) {
-            this.serviceDirectoryRegion = Codegen.ofNullable(serviceDirectoryRegion);
-            return this;
-        }        public ForwardingRuleServiceDirectoryRegistrationArgs build() {
-            return new ForwardingRuleServiceDirectoryRegistrationArgs(namespace, service, serviceDirectoryRegion);
+
+        public Builder serviceDirectoryRegion(String serviceDirectoryRegion) {
+            return serviceDirectoryRegion(Output.of(serviceDirectoryRegion));
+        }
+
+        public ForwardingRuleServiceDirectoryRegistrationArgs build() {
+            return $;
         }
     }
+
 }

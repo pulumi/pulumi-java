@@ -21,45 +21,45 @@ public final class ResourceAnnotationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
     }
 
-    public ResourceAnnotationResponse(String label) {
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-    }
+    private ResourceAnnotationResponse() {}
 
-    private ResourceAnnotationResponse() {
-        this.label = null;
+    private ResourceAnnotationResponse(ResourceAnnotationResponse $) {
+        this.label = $.label;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceAnnotationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String label;
+        private ResourceAnnotationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceAnnotationResponse();
         }
 
         public Builder(ResourceAnnotationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
+            $ = new ResourceAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
-        }        public ResourceAnnotationResponse build() {
-            return new ResourceAnnotationResponse(label);
+        }
+
+        public ResourceAnnotationResponse build() {
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            return $;
         }
     }
+
 }

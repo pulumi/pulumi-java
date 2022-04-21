@@ -6,9 +6,9 @@ package com.pulumi.aws.securityhub.inputs;
 import com.pulumi.aws.securityhub.inputs.InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
      * 
      */
     @Import(name="dateRange")
-      private final @Nullable Output<InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs> dateRange;
+    private @Nullable Output<InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs> dateRange;
 
-    public Output<InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs> dateRange() {
-        return this.dateRange == null ? Codegen.empty() : this.dateRange;
+    public Optional<Output<InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs>> dateRange() {
+        return Optional.ofNullable(this.dateRange);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<String> end;
+    private @Nullable Output<String> end;
 
-    public Output<String> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<String>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class InsightFiltersThreatIntelIndicatorLastObservedAtArgs extends 
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<String> start;
+    private @Nullable Output<String> start;
 
-    public Output<String> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<String>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public InsightFiltersThreatIntelIndicatorLastObservedAtArgs(
-        @Nullable Output<InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs> dateRange,
-        @Nullable Output<String> end,
-        @Nullable Output<String> start) {
-        this.dateRange = dateRange;
-        this.end = end;
-        this.start = start;
-    }
+    private InsightFiltersThreatIntelIndicatorLastObservedAtArgs() {}
 
-    private InsightFiltersThreatIntelIndicatorLastObservedAtArgs() {
-        this.dateRange = Codegen.empty();
-        this.end = Codegen.empty();
-        this.start = Codegen.empty();
+    private InsightFiltersThreatIntelIndicatorLastObservedAtArgs(InsightFiltersThreatIntelIndicatorLastObservedAtArgs $) {
+        this.dateRange = $.dateRange;
+        this.end = $.end;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightFiltersThreatIntelIndicatorLastObservedAtArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs> dateRange;
-        private @Nullable Output<String> end;
-        private @Nullable Output<String> start;
+        private InsightFiltersThreatIntelIndicatorLastObservedAtArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightFiltersThreatIntelIndicatorLastObservedAtArgs();
         }
 
         public Builder(InsightFiltersThreatIntelIndicatorLastObservedAtArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dateRange = defaults.dateRange;
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
+            $ = new InsightFiltersThreatIntelIndicatorLastObservedAtArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dateRange(@Nullable Output<InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs> dateRange) {
-            this.dateRange = dateRange;
+            $.dateRange = dateRange;
             return this;
         }
-        public Builder dateRange(@Nullable InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs dateRange) {
-            this.dateRange = Codegen.ofNullable(dateRange);
-            return this;
+
+        public Builder dateRange(InsightFiltersThreatIntelIndicatorLastObservedAtDateRangeArgs dateRange) {
+            return dateRange(Output.of(dateRange));
         }
+
         public Builder end(@Nullable Output<String> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable String end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
+
+        public Builder end(String end) {
+            return end(Output.of(end));
         }
+
         public Builder start(@Nullable Output<String> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable String start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
-        }        public InsightFiltersThreatIntelIndicatorLastObservedAtArgs build() {
-            return new InsightFiltersThreatIntelIndicatorLastObservedAtArgs(dateRange, end, start);
+
+        public Builder start(String start) {
+            return start(Output.of(start));
+        }
+
+        public InsightFiltersThreatIntelIndicatorLastObservedAtArgs build() {
+            return $;
         }
     }
+
 }

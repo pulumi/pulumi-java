@@ -21,45 +21,45 @@ public final class NodeInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public NodeInfoResponse(String zone) {
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private NodeInfoResponse() {}
 
-    private NodeInfoResponse() {
-        this.zone = null;
+    private NodeInfoResponse(NodeInfoResponse $) {
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String zone;
+        private NodeInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeInfoResponse();
         }
 
         public Builder(NodeInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.zone = defaults.zone;
+            $ = new NodeInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public NodeInfoResponse build() {
-            return new NodeInfoResponse(zone);
+        }
+
+        public NodeInfoResponse build() {
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

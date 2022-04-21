@@ -25,7 +25,7 @@ public final class SqlElasticPoolResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -36,7 +36,7 @@ public final class SqlElasticPoolResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final String targetResourceName;
+    private String targetResourceName;
 
     public String targetResourceName() {
         return this.targetResourceName;
@@ -47,64 +47,58 @@ public final class SqlElasticPoolResourceSettingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="zoneRedundant")
-      private final @Nullable String zoneRedundant;
+    private @Nullable String zoneRedundant;
 
     public Optional<String> zoneRedundant() {
-        return this.zoneRedundant == null ? Optional.empty() : Optional.ofNullable(this.zoneRedundant);
+        return Optional.ofNullable(this.zoneRedundant);
     }
 
-    public SqlElasticPoolResourceSettingsResponse(
-        String resourceType,
-        String targetResourceName,
-        @Nullable String zoneRedundant) {
-        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-        this.zoneRedundant = zoneRedundant;
-    }
+    private SqlElasticPoolResourceSettingsResponse() {}
 
-    private SqlElasticPoolResourceSettingsResponse() {
-        this.resourceType = null;
-        this.targetResourceName = null;
-        this.zoneRedundant = null;
+    private SqlElasticPoolResourceSettingsResponse(SqlElasticPoolResourceSettingsResponse $) {
+        this.resourceType = $.resourceType;
+        this.targetResourceName = $.targetResourceName;
+        this.zoneRedundant = $.zoneRedundant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlElasticPoolResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceType;
-        private String targetResourceName;
-        private @Nullable String zoneRedundant;
+        private SqlElasticPoolResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlElasticPoolResourceSettingsResponse();
         }
 
         public Builder(SqlElasticPoolResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetResourceName = defaults.targetResourceName;
-    	      this.zoneRedundant = defaults.zoneRedundant;
+            $ = new SqlElasticPoolResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
         }
+
         public Builder zoneRedundant(@Nullable String zoneRedundant) {
-            this.zoneRedundant = zoneRedundant;
+            $.zoneRedundant = zoneRedundant;
             return this;
-        }        public SqlElasticPoolResourceSettingsResponse build() {
-            return new SqlElasticPoolResourceSettingsResponse(resourceType, targetResourceName, zoneRedundant);
+        }
+
+        public SqlElasticPoolResourceSettingsResponse build() {
+            $.resourceType = Codegen.stringProp("resourceType").arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

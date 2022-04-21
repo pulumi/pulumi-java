@@ -5,10 +5,10 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
      * 
      */
     @Import(name="keyArn")
-      private final @Nullable Output<String> keyArn;
+    private @Nullable Output<String> keyArn;
 
-    public Output<String> keyArn() {
-        return this.keyArn == null ? Codegen.empty() : this.keyArn;
+    public Optional<Output<String>> keyArn() {
+        return Optional.ofNullable(this.keyArn);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends com
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Output<String> keyType;
+    private @Nullable Output<String> keyType;
 
-    public Output<String> keyType() {
-        return this.keyType == null ? Codegen.empty() : this.keyType;
+    public Optional<Output<String>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
-    public FirehoseDeliveryStreamServerSideEncryptionGetArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> keyArn,
-        @Nullable Output<String> keyType) {
-        this.enabled = enabled;
-        this.keyArn = keyArn;
-        this.keyType = keyType;
-    }
+    private FirehoseDeliveryStreamServerSideEncryptionGetArgs() {}
 
-    private FirehoseDeliveryStreamServerSideEncryptionGetArgs() {
-        this.enabled = Codegen.empty();
-        this.keyArn = Codegen.empty();
-        this.keyType = Codegen.empty();
+    private FirehoseDeliveryStreamServerSideEncryptionGetArgs(FirehoseDeliveryStreamServerSideEncryptionGetArgs $) {
+        this.enabled = $.enabled;
+        this.keyArn = $.keyArn;
+        this.keyType = $.keyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamServerSideEncryptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> keyArn;
-        private @Nullable Output<String> keyType;
+        private FirehoseDeliveryStreamServerSideEncryptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamServerSideEncryptionGetArgs();
         }
 
         public Builder(FirehoseDeliveryStreamServerSideEncryptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.keyArn = defaults.keyArn;
-    	      this.keyType = defaults.keyType;
+            $ = new FirehoseDeliveryStreamServerSideEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder keyArn(@Nullable Output<String> keyArn) {
-            this.keyArn = keyArn;
+            $.keyArn = keyArn;
             return this;
         }
-        public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = Codegen.ofNullable(keyArn);
-            return this;
+
+        public Builder keyArn(String keyArn) {
+            return keyArn(Output.of(keyArn));
         }
+
         public Builder keyType(@Nullable Output<String> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
-        public Builder keyType(@Nullable String keyType) {
-            this.keyType = Codegen.ofNullable(keyType);
-            return this;
-        }        public FirehoseDeliveryStreamServerSideEncryptionGetArgs build() {
-            return new FirehoseDeliveryStreamServerSideEncryptionGetArgs(enabled, keyArn, keyType);
+
+        public Builder keyType(String keyType) {
+            return keyType(Output.of(keyType));
+        }
+
+        public FirehoseDeliveryStreamServerSideEncryptionGetArgs build() {
+            return $;
         }
     }
+
 }

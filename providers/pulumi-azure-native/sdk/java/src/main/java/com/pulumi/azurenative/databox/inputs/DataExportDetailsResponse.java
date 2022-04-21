@@ -28,7 +28,7 @@ public final class DataExportDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountDetails", required=true)
-      private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
+    private Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails() {
         return this.accountDetails;
@@ -39,10 +39,10 @@ public final class DataExportDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="logCollectionLevel")
-      private final @Nullable String logCollectionLevel;
+    private @Nullable String logCollectionLevel;
 
     public Optional<String> logCollectionLevel() {
-        return this.logCollectionLevel == null ? Optional.empty() : Optional.ofNullable(this.logCollectionLevel);
+        return Optional.ofNullable(this.logCollectionLevel);
     }
 
     /**
@@ -50,64 +50,59 @@ public final class DataExportDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="transferConfiguration", required=true)
-      private final TransferConfigurationResponse transferConfiguration;
+    private TransferConfigurationResponse transferConfiguration;
 
     public TransferConfigurationResponse transferConfiguration() {
         return this.transferConfiguration;
     }
 
-    public DataExportDetailsResponse(
-        Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails,
-        @Nullable String logCollectionLevel,
-        TransferConfigurationResponse transferConfiguration) {
-        this.accountDetails = Objects.requireNonNull(accountDetails, "expected parameter 'accountDetails' to be non-null");
-        this.logCollectionLevel = Codegen.stringProp("logCollectionLevel").arg(logCollectionLevel).def("Error").getNullable();
-        this.transferConfiguration = Objects.requireNonNull(transferConfiguration, "expected parameter 'transferConfiguration' to be non-null");
-    }
+    private DataExportDetailsResponse() {}
 
-    private DataExportDetailsResponse() {
-        this.accountDetails = null;
-        this.logCollectionLevel = null;
-        this.transferConfiguration = null;
+    private DataExportDetailsResponse(DataExportDetailsResponse $) {
+        this.accountDetails = $.accountDetails;
+        this.logCollectionLevel = $.logCollectionLevel;
+        this.transferConfiguration = $.transferConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataExportDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
-        private @Nullable String logCollectionLevel;
-        private TransferConfigurationResponse transferConfiguration;
+        private DataExportDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataExportDetailsResponse();
         }
 
         public Builder(DataExportDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountDetails = defaults.accountDetails;
-    	      this.logCollectionLevel = defaults.logCollectionLevel;
-    	      this.transferConfiguration = defaults.transferConfiguration;
+            $ = new DataExportDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
-            this.accountDetails = Objects.requireNonNull(accountDetails);
+            $.accountDetails = accountDetails;
             return this;
         }
+
         public Builder logCollectionLevel(@Nullable String logCollectionLevel) {
-            this.logCollectionLevel = logCollectionLevel;
+            $.logCollectionLevel = logCollectionLevel;
             return this;
         }
+
         public Builder transferConfiguration(TransferConfigurationResponse transferConfiguration) {
-            this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
+            $.transferConfiguration = transferConfiguration;
             return this;
-        }        public DataExportDetailsResponse build() {
-            return new DataExportDetailsResponse(accountDetails, logCollectionLevel, transferConfiguration);
+        }
+
+        public DataExportDetailsResponse build() {
+            $.accountDetails = Objects.requireNonNull($.accountDetails, "expected parameter 'accountDetails' to be non-null");
+            $.logCollectionLevel = Codegen.stringProp("logCollectionLevel").arg($.logCollectionLevel).def("Error").getNullable();
+            $.transferConfiguration = Objects.requireNonNull($.transferConfiguration, "expected parameter 'transferConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

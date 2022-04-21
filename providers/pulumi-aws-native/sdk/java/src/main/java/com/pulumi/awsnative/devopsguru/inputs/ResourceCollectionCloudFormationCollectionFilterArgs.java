@@ -5,10 +5,10 @@ package com.pulumi.awsnative.devopsguru.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
      * 
      */
     @Import(name="stackNames")
-      private final @Nullable Output<List<String>> stackNames;
+    private @Nullable Output<List<String>> stackNames;
 
-    public Output<List<String>> stackNames() {
-        return this.stackNames == null ? Codegen.empty() : this.stackNames;
+    public Optional<Output<List<String>>> stackNames() {
+        return Optional.ofNullable(this.stackNames);
     }
 
-    public ResourceCollectionCloudFormationCollectionFilterArgs(@Nullable Output<List<String>> stackNames) {
-        this.stackNames = stackNames;
-    }
+    private ResourceCollectionCloudFormationCollectionFilterArgs() {}
 
-    private ResourceCollectionCloudFormationCollectionFilterArgs() {
-        this.stackNames = Codegen.empty();
+    private ResourceCollectionCloudFormationCollectionFilterArgs(ResourceCollectionCloudFormationCollectionFilterArgs $) {
+        this.stackNames = $.stackNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceCollectionCloudFormationCollectionFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> stackNames;
+        private ResourceCollectionCloudFormationCollectionFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceCollectionCloudFormationCollectionFilterArgs();
         }
 
         public Builder(ResourceCollectionCloudFormationCollectionFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.stackNames = defaults.stackNames;
+            $ = new ResourceCollectionCloudFormationCollectionFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder stackNames(@Nullable Output<List<String>> stackNames) {
-            this.stackNames = stackNames;
+            $.stackNames = stackNames;
             return this;
         }
-        public Builder stackNames(@Nullable List<String> stackNames) {
-            this.stackNames = Codegen.ofNullable(stackNames);
-            return this;
+
+        public Builder stackNames(List<String> stackNames) {
+            return stackNames(Output.of(stackNames));
         }
+
         public Builder stackNames(String... stackNames) {
             return stackNames(List.of(stackNames));
-        }        public ResourceCollectionCloudFormationCollectionFilterArgs build() {
-            return new ResourceCollectionCloudFormationCollectionFilterArgs(stackNames);
+        }
+
+        public ResourceCollectionCloudFormationCollectionFilterArgs build() {
+            return $;
         }
     }
+
 }

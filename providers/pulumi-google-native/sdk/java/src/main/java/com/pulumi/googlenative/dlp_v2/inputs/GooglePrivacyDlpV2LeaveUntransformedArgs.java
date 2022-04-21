@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GooglePrivacyDlpV2LeaveUntransformedArgs extends com.pulumi.r
 
     public static final GooglePrivacyDlpV2LeaveUntransformedArgs Empty = new GooglePrivacyDlpV2LeaveUntransformedArgs();
 
-    public GooglePrivacyDlpV2LeaveUntransformedArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GooglePrivacyDlpV2LeaveUntransformedArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GooglePrivacyDlpV2LeaveUntransformedArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GooglePrivacyDlpV2LeaveUntransformedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GooglePrivacyDlpV2LeaveUntransformedArgs();
         }
         public GooglePrivacyDlpV2LeaveUntransformedArgs build() {
-            return new GooglePrivacyDlpV2LeaveUntransformedArgs();
+            return $;
         }
     }
+
 }

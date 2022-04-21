@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleClusterConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class MonitoringScheduleMonitoringResourcesArgs extends com.pulumi.
     public static final MonitoringScheduleMonitoringResourcesArgs Empty = new MonitoringScheduleMonitoringResourcesArgs();
 
     @Import(name="clusterConfig", required=true)
-      private final Output<MonitoringScheduleClusterConfigArgs> clusterConfig;
+    private Output<MonitoringScheduleClusterConfigArgs> clusterConfig;
 
     public Output<MonitoringScheduleClusterConfigArgs> clusterConfig() {
         return this.clusterConfig;
     }
 
-    public MonitoringScheduleMonitoringResourcesArgs(Output<MonitoringScheduleClusterConfigArgs> clusterConfig) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
-    }
+    private MonitoringScheduleMonitoringResourcesArgs() {}
 
-    private MonitoringScheduleMonitoringResourcesArgs() {
-        this.clusterConfig = Codegen.empty();
+    private MonitoringScheduleMonitoringResourcesArgs(MonitoringScheduleMonitoringResourcesArgs $) {
+        this.clusterConfig = $.clusterConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleMonitoringResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MonitoringScheduleClusterConfigArgs> clusterConfig;
+        private MonitoringScheduleMonitoringResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleMonitoringResourcesArgs();
         }
 
         public Builder(MonitoringScheduleMonitoringResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterConfig = defaults.clusterConfig;
+            $ = new MonitoringScheduleMonitoringResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterConfig(Output<MonitoringScheduleClusterConfigArgs> clusterConfig) {
-            this.clusterConfig = Objects.requireNonNull(clusterConfig);
+            $.clusterConfig = clusterConfig;
             return this;
         }
+
         public Builder clusterConfig(MonitoringScheduleClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
-            return this;
-        }        public MonitoringScheduleMonitoringResourcesArgs build() {
-            return new MonitoringScheduleMonitoringResourcesArgs(clusterConfig);
+            return clusterConfig(Output.of(clusterConfig));
+        }
+
+        public MonitoringScheduleMonitoringResourcesArgs build() {
+            $.clusterConfig = Objects.requireNonNull($.clusterConfig, "expected parameter 'clusterConfig' to be non-null");
+            return $;
         }
     }
+
 }

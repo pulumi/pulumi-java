@@ -23,10 +23,10 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="rewrite")
-      private final @Nullable String rewrite;
+    private @Nullable String rewrite;
 
     public Optional<String> rewrite() {
-        return this.rewrite == null ? Optional.empty() : Optional.ofNullable(this.rewrite);
+        return Optional.ofNullable(this.rewrite);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -45,64 +45,58 @@ public final class HttpRouteMatchPathResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public HttpRouteMatchPathResponse(
-        @Nullable String rewrite,
-        String type,
-        String value) {
-        this.rewrite = rewrite;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private HttpRouteMatchPathResponse() {}
 
-    private HttpRouteMatchPathResponse() {
-        this.rewrite = null;
-        this.type = null;
-        this.value = null;
+    private HttpRouteMatchPathResponse(HttpRouteMatchPathResponse $) {
+        this.rewrite = $.rewrite;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteMatchPathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String rewrite;
-        private String type;
-        private String value;
+        private HttpRouteMatchPathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteMatchPathResponse();
         }
 
         public Builder(HttpRouteMatchPathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rewrite = defaults.rewrite;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new HttpRouteMatchPathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rewrite(@Nullable String rewrite) {
-            this.rewrite = rewrite;
+            $.rewrite = rewrite;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public HttpRouteMatchPathResponse build() {
-            return new HttpRouteMatchPathResponse(rewrite, type, value);
+        }
+
+        public HttpRouteMatchPathResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

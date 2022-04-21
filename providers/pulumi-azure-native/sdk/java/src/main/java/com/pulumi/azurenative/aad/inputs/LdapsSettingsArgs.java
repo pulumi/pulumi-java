@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalAccess")
-      private final @Nullable Output<Either<String,ExternalAccess>> externalAccess;
+    private @Nullable Output<Either<String,ExternalAccess>> externalAccess;
 
-    public Output<Either<String,ExternalAccess>> externalAccess() {
-        return this.externalAccess == null ? Codegen.empty() : this.externalAccess;
+    public Optional<Output<Either<String,ExternalAccess>>> externalAccess() {
+        return Optional.ofNullable(this.externalAccess);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ldaps")
-      private final @Nullable Output<Either<String,Ldaps>> ldaps;
+    private @Nullable Output<Either<String,Ldaps>> ldaps;
 
-    public Output<Either<String,Ldaps>> ldaps() {
-        return this.ldaps == null ? Codegen.empty() : this.ldaps;
+    public Optional<Output<Either<String,Ldaps>>> ldaps() {
+        return Optional.ofNullable(this.ldaps);
     }
 
     /**
@@ -49,10 +50,10 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pfxCertificate")
-      private final @Nullable Output<String> pfxCertificate;
+    private @Nullable Output<String> pfxCertificate;
 
-    public Output<String> pfxCertificate() {
-        return this.pfxCertificate == null ? Codegen.empty() : this.pfxCertificate;
+    public Optional<Output<String>> pfxCertificate() {
+        return Optional.ofNullable(this.pfxCertificate);
     }
 
     /**
@@ -60,89 +61,80 @@ public final class LdapsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pfxCertificatePassword")
-      private final @Nullable Output<String> pfxCertificatePassword;
+    private @Nullable Output<String> pfxCertificatePassword;
 
-    public Output<String> pfxCertificatePassword() {
-        return this.pfxCertificatePassword == null ? Codegen.empty() : this.pfxCertificatePassword;
+    public Optional<Output<String>> pfxCertificatePassword() {
+        return Optional.ofNullable(this.pfxCertificatePassword);
     }
 
-    public LdapsSettingsArgs(
-        @Nullable Output<Either<String,ExternalAccess>> externalAccess,
-        @Nullable Output<Either<String,Ldaps>> ldaps,
-        @Nullable Output<String> pfxCertificate,
-        @Nullable Output<String> pfxCertificatePassword) {
-        this.externalAccess = Codegen.stringProp("externalAccess").left(ExternalAccess.class).output().arg(externalAccess).def("Disabled").getNullable();
-        this.ldaps = Codegen.stringProp("ldaps").left(Ldaps.class).output().arg(ldaps).def("Disabled").getNullable();
-        this.pfxCertificate = pfxCertificate;
-        this.pfxCertificatePassword = pfxCertificatePassword;
-    }
+    private LdapsSettingsArgs() {}
 
-    private LdapsSettingsArgs() {
-        this.externalAccess = Codegen.empty();
-        this.ldaps = Codegen.empty();
-        this.pfxCertificate = Codegen.empty();
-        this.pfxCertificatePassword = Codegen.empty();
+    private LdapsSettingsArgs(LdapsSettingsArgs $) {
+        this.externalAccess = $.externalAccess;
+        this.ldaps = $.ldaps;
+        this.pfxCertificate = $.pfxCertificate;
+        this.pfxCertificatePassword = $.pfxCertificatePassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LdapsSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ExternalAccess>> externalAccess;
-        private @Nullable Output<Either<String,Ldaps>> ldaps;
-        private @Nullable Output<String> pfxCertificate;
-        private @Nullable Output<String> pfxCertificatePassword;
+        private LdapsSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LdapsSettingsArgs();
         }
 
         public Builder(LdapsSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalAccess = defaults.externalAccess;
-    	      this.ldaps = defaults.ldaps;
-    	      this.pfxCertificate = defaults.pfxCertificate;
-    	      this.pfxCertificatePassword = defaults.pfxCertificatePassword;
+            $ = new LdapsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalAccess(@Nullable Output<Either<String,ExternalAccess>> externalAccess) {
-            this.externalAccess = externalAccess;
+            $.externalAccess = externalAccess;
             return this;
         }
-        public Builder externalAccess(@Nullable Either<String,ExternalAccess> externalAccess) {
-            this.externalAccess = Codegen.ofNullable(externalAccess);
-            return this;
+
+        public Builder externalAccess(Either<String,ExternalAccess> externalAccess) {
+            return externalAccess(Output.of(externalAccess));
         }
+
         public Builder ldaps(@Nullable Output<Either<String,Ldaps>> ldaps) {
-            this.ldaps = ldaps;
+            $.ldaps = ldaps;
             return this;
         }
-        public Builder ldaps(@Nullable Either<String,Ldaps> ldaps) {
-            this.ldaps = Codegen.ofNullable(ldaps);
-            return this;
+
+        public Builder ldaps(Either<String,Ldaps> ldaps) {
+            return ldaps(Output.of(ldaps));
         }
+
         public Builder pfxCertificate(@Nullable Output<String> pfxCertificate) {
-            this.pfxCertificate = pfxCertificate;
+            $.pfxCertificate = pfxCertificate;
             return this;
         }
-        public Builder pfxCertificate(@Nullable String pfxCertificate) {
-            this.pfxCertificate = Codegen.ofNullable(pfxCertificate);
-            return this;
+
+        public Builder pfxCertificate(String pfxCertificate) {
+            return pfxCertificate(Output.of(pfxCertificate));
         }
+
         public Builder pfxCertificatePassword(@Nullable Output<String> pfxCertificatePassword) {
-            this.pfxCertificatePassword = pfxCertificatePassword;
+            $.pfxCertificatePassword = pfxCertificatePassword;
             return this;
         }
-        public Builder pfxCertificatePassword(@Nullable String pfxCertificatePassword) {
-            this.pfxCertificatePassword = Codegen.ofNullable(pfxCertificatePassword);
-            return this;
-        }        public LdapsSettingsArgs build() {
-            return new LdapsSettingsArgs(externalAccess, ldaps, pfxCertificate, pfxCertificatePassword);
+
+        public Builder pfxCertificatePassword(String pfxCertificatePassword) {
+            return pfxCertificatePassword(Output.of(pfxCertificatePassword));
+        }
+
+        public LdapsSettingsArgs build() {
+            $.externalAccess = Codegen.stringProp("externalAccess").left(ExternalAccess.class).output().arg($.externalAccess).def("Disabled").getNullable();
+            $.ldaps = Codegen.stringProp("ldaps").left(Ldaps.class).output().arg($.ldaps).def("Disabled").getNullable();
+            return $;
         }
     }
+
 }

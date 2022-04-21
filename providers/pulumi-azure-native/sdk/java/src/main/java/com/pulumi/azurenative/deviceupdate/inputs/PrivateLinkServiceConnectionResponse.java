@@ -24,10 +24,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="groupIds")
-      private final @Nullable List<String> groupIds;
+    private @Nullable List<String> groupIds;
 
-    public List<String> groupIds() {
-        return this.groupIds == null ? List.of() : this.groupIds;
+    public Optional<List<String>> groupIds() {
+        return Optional.ofNullable(this.groupIds);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,67 +46,60 @@ public final class PrivateLinkServiceConnectionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="requestMessage")
-      private final @Nullable String requestMessage;
+    private @Nullable String requestMessage;
 
     public Optional<String> requestMessage() {
-        return this.requestMessage == null ? Optional.empty() : Optional.ofNullable(this.requestMessage);
+        return Optional.ofNullable(this.requestMessage);
     }
 
-    public PrivateLinkServiceConnectionResponse(
-        @Nullable List<String> groupIds,
-        @Nullable String name,
-        @Nullable String requestMessage) {
-        this.groupIds = groupIds;
-        this.name = name;
-        this.requestMessage = requestMessage;
-    }
+    private PrivateLinkServiceConnectionResponse() {}
 
-    private PrivateLinkServiceConnectionResponse() {
-        this.groupIds = List.of();
-        this.name = null;
-        this.requestMessage = null;
+    private PrivateLinkServiceConnectionResponse(PrivateLinkServiceConnectionResponse $) {
+        this.groupIds = $.groupIds;
+        this.name = $.name;
+        this.requestMessage = $.requestMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> groupIds;
-        private @Nullable String name;
-        private @Nullable String requestMessage;
+        private PrivateLinkServiceConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceConnectionResponse();
         }
 
         public Builder(PrivateLinkServiceConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIds = defaults.groupIds;
-    	      this.name = defaults.name;
-    	      this.requestMessage = defaults.requestMessage;
+            $ = new PrivateLinkServiceConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = groupIds;
+            $.groupIds = groupIds;
             return this;
         }
+
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = requestMessage;
+            $.requestMessage = requestMessage;
             return this;
-        }        public PrivateLinkServiceConnectionResponse build() {
-            return new PrivateLinkServiceConnectionResponse(groupIds, name, requestMessage);
+        }
+
+        public PrivateLinkServiceConnectionResponse build() {
+            return $;
         }
     }
+
 }

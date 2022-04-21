@@ -5,10 +5,10 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,73 +17,69 @@ public final class GlobalTableProjectionArgs extends com.pulumi.resources.Resour
     public static final GlobalTableProjectionArgs Empty = new GlobalTableProjectionArgs();
 
     @Import(name="nonKeyAttributes")
-      private final @Nullable Output<List<String>> nonKeyAttributes;
+    private @Nullable Output<List<String>> nonKeyAttributes;
 
-    public Output<List<String>> nonKeyAttributes() {
-        return this.nonKeyAttributes == null ? Codegen.empty() : this.nonKeyAttributes;
+    public Optional<Output<List<String>>> nonKeyAttributes() {
+        return Optional.ofNullable(this.nonKeyAttributes);
     }
 
     @Import(name="projectionType")
-      private final @Nullable Output<String> projectionType;
+    private @Nullable Output<String> projectionType;
 
-    public Output<String> projectionType() {
-        return this.projectionType == null ? Codegen.empty() : this.projectionType;
+    public Optional<Output<String>> projectionType() {
+        return Optional.ofNullable(this.projectionType);
     }
 
-    public GlobalTableProjectionArgs(
-        @Nullable Output<List<String>> nonKeyAttributes,
-        @Nullable Output<String> projectionType) {
-        this.nonKeyAttributes = nonKeyAttributes;
-        this.projectionType = projectionType;
-    }
+    private GlobalTableProjectionArgs() {}
 
-    private GlobalTableProjectionArgs() {
-        this.nonKeyAttributes = Codegen.empty();
-        this.projectionType = Codegen.empty();
+    private GlobalTableProjectionArgs(GlobalTableProjectionArgs $) {
+        this.nonKeyAttributes = $.nonKeyAttributes;
+        this.projectionType = $.projectionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableProjectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> nonKeyAttributes;
-        private @Nullable Output<String> projectionType;
+        private GlobalTableProjectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableProjectionArgs();
         }
 
         public Builder(GlobalTableProjectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nonKeyAttributes = defaults.nonKeyAttributes;
-    	      this.projectionType = defaults.projectionType;
+            $ = new GlobalTableProjectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nonKeyAttributes(@Nullable Output<List<String>> nonKeyAttributes) {
-            this.nonKeyAttributes = nonKeyAttributes;
+            $.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
-        public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Codegen.ofNullable(nonKeyAttributes);
-            return this;
+
+        public Builder nonKeyAttributes(List<String> nonKeyAttributes) {
+            return nonKeyAttributes(Output.of(nonKeyAttributes));
         }
+
         public Builder nonKeyAttributes(String... nonKeyAttributes) {
             return nonKeyAttributes(List.of(nonKeyAttributes));
         }
+
         public Builder projectionType(@Nullable Output<String> projectionType) {
-            this.projectionType = projectionType;
+            $.projectionType = projectionType;
             return this;
         }
-        public Builder projectionType(@Nullable String projectionType) {
-            this.projectionType = Codegen.ofNullable(projectionType);
-            return this;
-        }        public GlobalTableProjectionArgs build() {
-            return new GlobalTableProjectionArgs(nonKeyAttributes, projectionType);
+
+        public Builder projectionType(String projectionType) {
+            return projectionType(Output.of(projectionType));
+        }
+
+        public GlobalTableProjectionArgs build() {
+            return $;
         }
     }
+
 }

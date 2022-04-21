@@ -5,7 +5,6 @@ package com.pulumi.googlenative.monitoring_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.AppEngineArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.CloudEndpointsArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.ClusterIstioArgs;
@@ -16,6 +15,7 @@ import com.pulumi.googlenative.monitoring_v3.inputs.TelemetryArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appEngine")
-      private final @Nullable Output<AppEngineArgs> appEngine;
+    private @Nullable Output<AppEngineArgs> appEngine;
 
-    public Output<AppEngineArgs> appEngine() {
-        return this.appEngine == null ? Codegen.empty() : this.appEngine;
+    public Optional<Output<AppEngineArgs>> appEngine() {
+        return Optional.ofNullable(this.appEngine);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudEndpoints")
-      private final @Nullable Output<CloudEndpointsArgs> cloudEndpoints;
+    private @Nullable Output<CloudEndpointsArgs> cloudEndpoints;
 
-    public Output<CloudEndpointsArgs> cloudEndpoints() {
-        return this.cloudEndpoints == null ? Codegen.empty() : this.cloudEndpoints;
+    public Optional<Output<CloudEndpointsArgs>> cloudEndpoints() {
+        return Optional.ofNullable(this.cloudEndpoints);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterIstio")
-      private final @Nullable Output<ClusterIstioArgs> clusterIstio;
+    private @Nullable Output<ClusterIstioArgs> clusterIstio;
 
-    public Output<ClusterIstioArgs> clusterIstio() {
-        return this.clusterIstio == null ? Codegen.empty() : this.clusterIstio;
+    public Optional<Output<ClusterIstioArgs>> clusterIstio() {
+        return Optional.ofNullable(this.clusterIstio);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="custom")
-      private final @Nullable Output<CustomArgs> custom;
+    private @Nullable Output<CustomArgs> custom;
 
-    public Output<CustomArgs> custom() {
-        return this.custom == null ? Codegen.empty() : this.custom;
+    public Optional<Output<CustomArgs>> custom() {
+        return Optional.ofNullable(this.custom);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="istioCanonicalService")
-      private final @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService;
+    private @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService;
 
-    public Output<IstioCanonicalServiceArgs> istioCanonicalService() {
-        return this.istioCanonicalService == null ? Codegen.empty() : this.istioCanonicalService;
+    public Optional<Output<IstioCanonicalServiceArgs>> istioCanonicalService() {
+        return Optional.ofNullable(this.istioCanonicalService);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="meshIstio")
-      private final @Nullable Output<MeshIstioArgs> meshIstio;
+    private @Nullable Output<MeshIstioArgs> meshIstio;
 
-    public Output<MeshIstioArgs> meshIstio() {
-        return this.meshIstio == null ? Codegen.empty() : this.meshIstio;
+    public Optional<Output<MeshIstioArgs>> meshIstio() {
+        return Optional.ofNullable(this.meshIstio);
     }
 
     /**
@@ -105,17 +105,17 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="serviceId")
-      private final @Nullable Output<String> serviceId;
+    private @Nullable Output<String> serviceId;
 
-    public Output<String> serviceId() {
-        return this.serviceId == null ? Codegen.empty() : this.serviceId;
+    public Optional<Output<String>> serviceId() {
+        return Optional.ofNullable(this.serviceId);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="telemetry")
-      private final @Nullable Output<TelemetryArgs> telemetry;
+    private @Nullable Output<TelemetryArgs> telemetry;
 
-    public Output<TelemetryArgs> telemetry() {
-        return this.telemetry == null ? Codegen.empty() : this.telemetry;
+    public Optional<Output<TelemetryArgs>> telemetry() {
+        return Optional.ofNullable(this.telemetry);
     }
 
     /**
@@ -134,220 +134,184 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userLabels")
-      private final @Nullable Output<Map<String,String>> userLabels;
+    private @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> userLabels() {
-        return this.userLabels == null ? Codegen.empty() : this.userLabels;
+    public Optional<Output<Map<String,String>>> userLabels() {
+        return Optional.ofNullable(this.userLabels);
     }
 
     @Import(name="v3Id", required=true)
-      private final Output<String> v3Id;
+    private Output<String> v3Id;
 
     public Output<String> v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
-      private final Output<String> v3Id1;
+    private Output<String> v3Id1;
 
     public Output<String> v3Id1() {
         return this.v3Id1;
     }
 
-    public ServiceArgs(
-        @Nullable Output<AppEngineArgs> appEngine,
-        @Nullable Output<CloudEndpointsArgs> cloudEndpoints,
-        @Nullable Output<ClusterIstioArgs> clusterIstio,
-        @Nullable Output<CustomArgs> custom,
-        @Nullable Output<String> displayName,
-        @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService,
-        @Nullable Output<MeshIstioArgs> meshIstio,
-        @Nullable Output<String> name,
-        @Nullable Output<String> serviceId,
-        @Nullable Output<TelemetryArgs> telemetry,
-        @Nullable Output<Map<String,String>> userLabels,
-        Output<String> v3Id,
-        Output<String> v3Id1) {
-        this.appEngine = appEngine;
-        this.cloudEndpoints = cloudEndpoints;
-        this.clusterIstio = clusterIstio;
-        this.custom = custom;
-        this.displayName = displayName;
-        this.istioCanonicalService = istioCanonicalService;
-        this.meshIstio = meshIstio;
-        this.name = name;
-        this.serviceId = serviceId;
-        this.telemetry = telemetry;
-        this.userLabels = userLabels;
-        this.v3Id = Objects.requireNonNull(v3Id, "expected parameter 'v3Id' to be non-null");
-        this.v3Id1 = Objects.requireNonNull(v3Id1, "expected parameter 'v3Id1' to be non-null");
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.appEngine = Codegen.empty();
-        this.cloudEndpoints = Codegen.empty();
-        this.clusterIstio = Codegen.empty();
-        this.custom = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.istioCanonicalService = Codegen.empty();
-        this.meshIstio = Codegen.empty();
-        this.name = Codegen.empty();
-        this.serviceId = Codegen.empty();
-        this.telemetry = Codegen.empty();
-        this.userLabels = Codegen.empty();
-        this.v3Id = Codegen.empty();
-        this.v3Id1 = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.appEngine = $.appEngine;
+        this.cloudEndpoints = $.cloudEndpoints;
+        this.clusterIstio = $.clusterIstio;
+        this.custom = $.custom;
+        this.displayName = $.displayName;
+        this.istioCanonicalService = $.istioCanonicalService;
+        this.meshIstio = $.meshIstio;
+        this.name = $.name;
+        this.serviceId = $.serviceId;
+        this.telemetry = $.telemetry;
+        this.userLabels = $.userLabels;
+        this.v3Id = $.v3Id;
+        this.v3Id1 = $.v3Id1;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AppEngineArgs> appEngine;
-        private @Nullable Output<CloudEndpointsArgs> cloudEndpoints;
-        private @Nullable Output<ClusterIstioArgs> clusterIstio;
-        private @Nullable Output<CustomArgs> custom;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService;
-        private @Nullable Output<MeshIstioArgs> meshIstio;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> serviceId;
-        private @Nullable Output<TelemetryArgs> telemetry;
-        private @Nullable Output<Map<String,String>> userLabels;
-        private Output<String> v3Id;
-        private Output<String> v3Id1;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngine = defaults.appEngine;
-    	      this.cloudEndpoints = defaults.cloudEndpoints;
-    	      this.clusterIstio = defaults.clusterIstio;
-    	      this.custom = defaults.custom;
-    	      this.displayName = defaults.displayName;
-    	      this.istioCanonicalService = defaults.istioCanonicalService;
-    	      this.meshIstio = defaults.meshIstio;
-    	      this.name = defaults.name;
-    	      this.serviceId = defaults.serviceId;
-    	      this.telemetry = defaults.telemetry;
-    	      this.userLabels = defaults.userLabels;
-    	      this.v3Id = defaults.v3Id;
-    	      this.v3Id1 = defaults.v3Id1;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngine(@Nullable Output<AppEngineArgs> appEngine) {
-            this.appEngine = appEngine;
+            $.appEngine = appEngine;
             return this;
         }
-        public Builder appEngine(@Nullable AppEngineArgs appEngine) {
-            this.appEngine = Codegen.ofNullable(appEngine);
-            return this;
+
+        public Builder appEngine(AppEngineArgs appEngine) {
+            return appEngine(Output.of(appEngine));
         }
+
         public Builder cloudEndpoints(@Nullable Output<CloudEndpointsArgs> cloudEndpoints) {
-            this.cloudEndpoints = cloudEndpoints;
+            $.cloudEndpoints = cloudEndpoints;
             return this;
         }
-        public Builder cloudEndpoints(@Nullable CloudEndpointsArgs cloudEndpoints) {
-            this.cloudEndpoints = Codegen.ofNullable(cloudEndpoints);
-            return this;
+
+        public Builder cloudEndpoints(CloudEndpointsArgs cloudEndpoints) {
+            return cloudEndpoints(Output.of(cloudEndpoints));
         }
+
         public Builder clusterIstio(@Nullable Output<ClusterIstioArgs> clusterIstio) {
-            this.clusterIstio = clusterIstio;
+            $.clusterIstio = clusterIstio;
             return this;
         }
-        public Builder clusterIstio(@Nullable ClusterIstioArgs clusterIstio) {
-            this.clusterIstio = Codegen.ofNullable(clusterIstio);
-            return this;
+
+        public Builder clusterIstio(ClusterIstioArgs clusterIstio) {
+            return clusterIstio(Output.of(clusterIstio));
         }
+
         public Builder custom(@Nullable Output<CustomArgs> custom) {
-            this.custom = custom;
+            $.custom = custom;
             return this;
         }
-        public Builder custom(@Nullable CustomArgs custom) {
-            this.custom = Codegen.ofNullable(custom);
-            return this;
+
+        public Builder custom(CustomArgs custom) {
+            return custom(Output.of(custom));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder istioCanonicalService(@Nullable Output<IstioCanonicalServiceArgs> istioCanonicalService) {
-            this.istioCanonicalService = istioCanonicalService;
+            $.istioCanonicalService = istioCanonicalService;
             return this;
         }
-        public Builder istioCanonicalService(@Nullable IstioCanonicalServiceArgs istioCanonicalService) {
-            this.istioCanonicalService = Codegen.ofNullable(istioCanonicalService);
-            return this;
+
+        public Builder istioCanonicalService(IstioCanonicalServiceArgs istioCanonicalService) {
+            return istioCanonicalService(Output.of(istioCanonicalService));
         }
+
         public Builder meshIstio(@Nullable Output<MeshIstioArgs> meshIstio) {
-            this.meshIstio = meshIstio;
+            $.meshIstio = meshIstio;
             return this;
         }
-        public Builder meshIstio(@Nullable MeshIstioArgs meshIstio) {
-            this.meshIstio = Codegen.ofNullable(meshIstio);
-            return this;
+
+        public Builder meshIstio(MeshIstioArgs meshIstio) {
+            return meshIstio(Output.of(meshIstio));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder serviceId(@Nullable Output<String> serviceId) {
-            this.serviceId = serviceId;
+            $.serviceId = serviceId;
             return this;
         }
-        public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Codegen.ofNullable(serviceId);
-            return this;
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
         }
+
         public Builder telemetry(@Nullable Output<TelemetryArgs> telemetry) {
-            this.telemetry = telemetry;
+            $.telemetry = telemetry;
             return this;
         }
-        public Builder telemetry(@Nullable TelemetryArgs telemetry) {
-            this.telemetry = Codegen.ofNullable(telemetry);
-            return this;
+
+        public Builder telemetry(TelemetryArgs telemetry) {
+            return telemetry(Output.of(telemetry));
         }
+
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
-            this.userLabels = userLabels;
+            $.userLabels = userLabels;
             return this;
         }
-        public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Codegen.ofNullable(userLabels);
-            return this;
+
+        public Builder userLabels(Map<String,String> userLabels) {
+            return userLabels(Output.of(userLabels));
         }
+
         public Builder v3Id(Output<String> v3Id) {
-            this.v3Id = Objects.requireNonNull(v3Id);
+            $.v3Id = v3Id;
             return this;
         }
+
         public Builder v3Id(String v3Id) {
-            this.v3Id = Output.of(Objects.requireNonNull(v3Id));
-            return this;
+            return v3Id(Output.of(v3Id));
         }
+
         public Builder v3Id1(Output<String> v3Id1) {
-            this.v3Id1 = Objects.requireNonNull(v3Id1);
+            $.v3Id1 = v3Id1;
             return this;
         }
+
         public Builder v3Id1(String v3Id1) {
-            this.v3Id1 = Output.of(Objects.requireNonNull(v3Id1));
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(appEngine, cloudEndpoints, clusterIstio, custom, displayName, istioCanonicalService, meshIstio, name, serviceId, telemetry, userLabels, v3Id, v3Id1);
+            return v3Id1(Output.of(v3Id1));
+        }
+
+        public ServiceArgs build() {
+            $.v3Id = Objects.requireNonNull($.v3Id, "expected parameter 'v3Id' to be non-null");
+            $.v3Id1 = Objects.requireNonNull($.v3Id1, "expected parameter 'v3Id1' to be non-null");
+            return $;
         }
     }
+
 }

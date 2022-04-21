@@ -5,10 +5,10 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RuntimeVirtualMachineArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RuntimeVirtualMachineArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class RuntimeVirtualMachineArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="virtualMachineConfig")
-      private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig;
+    private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig() {
-        return this.virtualMachineConfig == null ? Codegen.empty() : this.virtualMachineConfig;
+    public Optional<Output<RuntimeVirtualMachineVirtualMachineConfigArgs>> virtualMachineConfig() {
+        return Optional.ofNullable(this.virtualMachineConfig);
     }
 
-    public RuntimeVirtualMachineArgs(
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> instanceName,
-        @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig) {
-        this.instanceId = instanceId;
-        this.instanceName = instanceName;
-        this.virtualMachineConfig = virtualMachineConfig;
-    }
+    private RuntimeVirtualMachineArgs() {}
 
-    private RuntimeVirtualMachineArgs() {
-        this.instanceId = Codegen.empty();
-        this.instanceName = Codegen.empty();
-        this.virtualMachineConfig = Codegen.empty();
+    private RuntimeVirtualMachineArgs(RuntimeVirtualMachineArgs $) {
+        this.instanceId = $.instanceId;
+        this.instanceName = $.instanceName;
+        this.virtualMachineConfig = $.virtualMachineConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeVirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig;
+        private RuntimeVirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeVirtualMachineArgs();
         }
 
         public Builder(RuntimeVirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.instanceName = defaults.instanceName;
-    	      this.virtualMachineConfig = defaults.virtualMachineConfig;
+            $ = new RuntimeVirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder virtualMachineConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig) {
-            this.virtualMachineConfig = virtualMachineConfig;
+            $.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
-        public Builder virtualMachineConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigArgs virtualMachineConfig) {
-            this.virtualMachineConfig = Codegen.ofNullable(virtualMachineConfig);
-            return this;
-        }        public RuntimeVirtualMachineArgs build() {
-            return new RuntimeVirtualMachineArgs(instanceId, instanceName, virtualMachineConfig);
+
+        public Builder virtualMachineConfig(RuntimeVirtualMachineVirtualMachineConfigArgs virtualMachineConfig) {
+            return virtualMachineConfig(Output.of(virtualMachineConfig));
+        }
+
+        public RuntimeVirtualMachineArgs build() {
+            return $;
         }
     }
+
 }

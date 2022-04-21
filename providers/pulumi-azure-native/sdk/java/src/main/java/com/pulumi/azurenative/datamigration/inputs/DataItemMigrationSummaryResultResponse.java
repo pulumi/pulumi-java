@@ -22,7 +22,7 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -33,7 +33,7 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
      * 
      */
     @Import(name="errorPrefix", required=true)
-      private final String errorPrefix;
+    private String errorPrefix;
 
     public String errorPrefix() {
         return this.errorPrefix;
@@ -44,7 +44,7 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
      * 
      */
     @Import(name="itemsCompletedCount", required=true)
-      private final Double itemsCompletedCount;
+    private Double itemsCompletedCount;
 
     public Double itemsCompletedCount() {
         return this.itemsCompletedCount;
@@ -55,7 +55,7 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
      * 
      */
     @Import(name="itemsCount", required=true)
-      private final Double itemsCount;
+    private Double itemsCount;
 
     public Double itemsCount() {
         return this.itemsCount;
@@ -66,7 +66,7 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -77,7 +77,7 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
      * 
      */
     @Import(name="resultPrefix", required=true)
-      private final String resultPrefix;
+    private String resultPrefix;
 
     public String resultPrefix() {
         return this.resultPrefix;
@@ -88,7 +88,7 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -99,7 +99,7 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -110,118 +110,101 @@ public final class DataItemMigrationSummaryResultResponse extends com.pulumi.res
      * 
      */
     @Import(name="statusMessage", required=true)
-      private final String statusMessage;
+    private String statusMessage;
 
     public String statusMessage() {
         return this.statusMessage;
     }
 
-    public DataItemMigrationSummaryResultResponse(
-        String endedOn,
-        String errorPrefix,
-        Double itemsCompletedCount,
-        Double itemsCount,
-        String name,
-        String resultPrefix,
-        String startedOn,
-        String state,
-        String statusMessage) {
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.errorPrefix = Objects.requireNonNull(errorPrefix, "expected parameter 'errorPrefix' to be non-null");
-        this.itemsCompletedCount = Objects.requireNonNull(itemsCompletedCount, "expected parameter 'itemsCompletedCount' to be non-null");
-        this.itemsCount = Objects.requireNonNull(itemsCount, "expected parameter 'itemsCount' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resultPrefix = Objects.requireNonNull(resultPrefix, "expected parameter 'resultPrefix' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.statusMessage = Objects.requireNonNull(statusMessage, "expected parameter 'statusMessage' to be non-null");
-    }
+    private DataItemMigrationSummaryResultResponse() {}
 
-    private DataItemMigrationSummaryResultResponse() {
-        this.endedOn = null;
-        this.errorPrefix = null;
-        this.itemsCompletedCount = null;
-        this.itemsCount = null;
-        this.name = null;
-        this.resultPrefix = null;
-        this.startedOn = null;
-        this.state = null;
-        this.statusMessage = null;
+    private DataItemMigrationSummaryResultResponse(DataItemMigrationSummaryResultResponse $) {
+        this.endedOn = $.endedOn;
+        this.errorPrefix = $.errorPrefix;
+        this.itemsCompletedCount = $.itemsCompletedCount;
+        this.itemsCount = $.itemsCount;
+        this.name = $.name;
+        this.resultPrefix = $.resultPrefix;
+        this.startedOn = $.startedOn;
+        this.state = $.state;
+        this.statusMessage = $.statusMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataItemMigrationSummaryResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endedOn;
-        private String errorPrefix;
-        private Double itemsCompletedCount;
-        private Double itemsCount;
-        private String name;
-        private String resultPrefix;
-        private String startedOn;
-        private String state;
-        private String statusMessage;
+        private DataItemMigrationSummaryResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataItemMigrationSummaryResultResponse();
         }
 
         public Builder(DataItemMigrationSummaryResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endedOn = defaults.endedOn;
-    	      this.errorPrefix = defaults.errorPrefix;
-    	      this.itemsCompletedCount = defaults.itemsCompletedCount;
-    	      this.itemsCount = defaults.itemsCount;
-    	      this.name = defaults.name;
-    	      this.resultPrefix = defaults.resultPrefix;
-    	      this.startedOn = defaults.startedOn;
-    	      this.state = defaults.state;
-    	      this.statusMessage = defaults.statusMessage;
+            $ = new DataItemMigrationSummaryResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder errorPrefix(String errorPrefix) {
-            this.errorPrefix = Objects.requireNonNull(errorPrefix);
+            $.errorPrefix = errorPrefix;
             return this;
         }
+
         public Builder itemsCompletedCount(Double itemsCompletedCount) {
-            this.itemsCompletedCount = Objects.requireNonNull(itemsCompletedCount);
+            $.itemsCompletedCount = itemsCompletedCount;
             return this;
         }
+
         public Builder itemsCount(Double itemsCount) {
-            this.itemsCount = Objects.requireNonNull(itemsCount);
+            $.itemsCount = itemsCount;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resultPrefix(String resultPrefix) {
-            this.resultPrefix = Objects.requireNonNull(resultPrefix);
+            $.resultPrefix = resultPrefix;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder statusMessage(String statusMessage) {
-            this.statusMessage = Objects.requireNonNull(statusMessage);
+            $.statusMessage = statusMessage;
             return this;
-        }        public DataItemMigrationSummaryResultResponse build() {
-            return new DataItemMigrationSummaryResultResponse(endedOn, errorPrefix, itemsCompletedCount, itemsCount, name, resultPrefix, startedOn, state, statusMessage);
+        }
+
+        public DataItemMigrationSummaryResultResponse build() {
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.errorPrefix = Objects.requireNonNull($.errorPrefix, "expected parameter 'errorPrefix' to be non-null");
+            $.itemsCompletedCount = Objects.requireNonNull($.itemsCompletedCount, "expected parameter 'itemsCompletedCount' to be non-null");
+            $.itemsCount = Objects.requireNonNull($.itemsCount, "expected parameter 'itemsCount' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resultPrefix = Objects.requireNonNull($.resultPrefix, "expected parameter 'resultPrefix' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.statusMessage = Objects.requireNonNull($.statusMessage, "expected parameter 'statusMessage' to be non-null");
+            return $;
         }
     }
+
 }

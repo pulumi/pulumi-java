@@ -13,45 +13,45 @@ public final class GetMeshIstioServiceTelemetry extends com.pulumi.resources.Inv
     public static final GetMeshIstioServiceTelemetry Empty = new GetMeshIstioServiceTelemetry();
 
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetMeshIstioServiceTelemetry(String resourceName) {
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetMeshIstioServiceTelemetry() {}
 
-    private GetMeshIstioServiceTelemetry() {
-        this.resourceName = null;
+    private GetMeshIstioServiceTelemetry(GetMeshIstioServiceTelemetry $) {
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMeshIstioServiceTelemetry defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceName;
+        private GetMeshIstioServiceTelemetry $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMeshIstioServiceTelemetry();
         }
 
         public Builder(GetMeshIstioServiceTelemetry defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetMeshIstioServiceTelemetry(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetMeshIstioServiceTelemetry build() {
-            return new GetMeshIstioServiceTelemetry(resourceName);
+        }
+
+        public GetMeshIstioServiceTelemetry build() {
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

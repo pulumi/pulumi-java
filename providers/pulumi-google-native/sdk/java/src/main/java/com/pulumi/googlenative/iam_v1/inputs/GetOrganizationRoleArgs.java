@@ -13,62 +13,59 @@ public final class GetOrganizationRoleArgs extends com.pulumi.resources.InvokeAr
     public static final GetOrganizationRoleArgs Empty = new GetOrganizationRoleArgs();
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="roleId", required=true)
-      private final String roleId;
+    private String roleId;
 
     public String roleId() {
         return this.roleId;
     }
 
-    public GetOrganizationRoleArgs(
-        String organizationId,
-        String roleId) {
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
-    }
+    private GetOrganizationRoleArgs() {}
 
-    private GetOrganizationRoleArgs() {
-        this.organizationId = null;
-        this.roleId = null;
+    private GetOrganizationRoleArgs(GetOrganizationRoleArgs $) {
+        this.organizationId = $.organizationId;
+        this.roleId = $.roleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String organizationId;
-        private String roleId;
+        private GetOrganizationRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationRoleArgs();
         }
 
         public Builder(GetOrganizationRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationId = defaults.organizationId;
-    	      this.roleId = defaults.roleId;
+            $ = new GetOrganizationRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder roleId(String roleId) {
-            this.roleId = Objects.requireNonNull(roleId);
+            $.roleId = roleId;
             return this;
-        }        public GetOrganizationRoleArgs build() {
-            return new GetOrganizationRoleArgs(organizationId, roleId);
+        }
+
+        public GetOrganizationRoleArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.roleId = Objects.requireNonNull($.roleId, "expected parameter 'roleId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class AaaaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv6Address")
-      private final @Nullable String ipv6Address;
+    private @Nullable String ipv6Address;
 
     public Optional<String> ipv6Address() {
-        return this.ipv6Address == null ? Optional.empty() : Optional.ofNullable(this.ipv6Address);
+        return Optional.ofNullable(this.ipv6Address);
     }
 
-    public AaaaRecordResponse(@Nullable String ipv6Address) {
-        this.ipv6Address = ipv6Address;
-    }
+    private AaaaRecordResponse() {}
 
-    private AaaaRecordResponse() {
-        this.ipv6Address = null;
+    private AaaaRecordResponse(AaaaRecordResponse $) {
+        this.ipv6Address = $.ipv6Address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AaaaRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ipv6Address;
+        private AaaaRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AaaaRecordResponse();
         }
 
         public Builder(AaaaRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipv6Address = defaults.ipv6Address;
+            $ = new AaaaRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = ipv6Address;
+            $.ipv6Address = ipv6Address;
             return this;
-        }        public AaaaRecordResponse build() {
-            return new AaaaRecordResponse(ipv6Address);
+        }
+
+        public AaaaRecordResponse build() {
+            return $;
         }
     }
+
 }

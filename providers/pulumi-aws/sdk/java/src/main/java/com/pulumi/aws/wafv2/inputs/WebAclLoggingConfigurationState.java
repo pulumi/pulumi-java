@@ -7,10 +7,10 @@ import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterGetArg
 import com.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
      * 
      */
     @Import(name="logDestinationConfigs")
-      private final @Nullable Output<List<String>> logDestinationConfigs;
+    private @Nullable Output<List<String>> logDestinationConfigs;
 
-    public Output<List<String>> logDestinationConfigs() {
-        return this.logDestinationConfigs == null ? Codegen.empty() : this.logDestinationConfigs;
+    public Optional<Output<List<String>>> logDestinationConfigs() {
+        return Optional.ofNullable(this.logDestinationConfigs);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
      * 
      */
     @Import(name="loggingFilter")
-      private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter;
+    private @Nullable Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter() {
-        return this.loggingFilter == null ? Codegen.empty() : this.loggingFilter;
+    public Optional<Output<WebAclLoggingConfigurationLoggingFilterGetArgs>> loggingFilter() {
+        return Optional.ofNullable(this.loggingFilter);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
      * 
      */
     @Import(name="redactedFields")
-      private final @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields;
+    private @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields;
 
-    public Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields() {
-        return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
+    public Optional<Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>>> redactedFields() {
+        return Optional.ofNullable(this.redactedFields);
     }
 
     /**
@@ -56,95 +56,86 @@ public final class WebAclLoggingConfigurationState extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceArn")
-      private final @Nullable Output<String> resourceArn;
+    private @Nullable Output<String> resourceArn;
 
-    public Output<String> resourceArn() {
-        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
+    public Optional<Output<String>> resourceArn() {
+        return Optional.ofNullable(this.resourceArn);
     }
 
-    public WebAclLoggingConfigurationState(
-        @Nullable Output<List<String>> logDestinationConfigs,
-        @Nullable Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter,
-        @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields,
-        @Nullable Output<String> resourceArn) {
-        this.logDestinationConfigs = logDestinationConfigs;
-        this.loggingFilter = loggingFilter;
-        this.redactedFields = redactedFields;
-        this.resourceArn = resourceArn;
-    }
+    private WebAclLoggingConfigurationState() {}
 
-    private WebAclLoggingConfigurationState() {
-        this.logDestinationConfigs = Codegen.empty();
-        this.loggingFilter = Codegen.empty();
-        this.redactedFields = Codegen.empty();
-        this.resourceArn = Codegen.empty();
+    private WebAclLoggingConfigurationState(WebAclLoggingConfigurationState $) {
+        this.logDestinationConfigs = $.logDestinationConfigs;
+        this.loggingFilter = $.loggingFilter;
+        this.redactedFields = $.redactedFields;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclLoggingConfigurationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> logDestinationConfigs;
-        private @Nullable Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter;
-        private @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields;
-        private @Nullable Output<String> resourceArn;
+        private WebAclLoggingConfigurationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclLoggingConfigurationState();
         }
 
         public Builder(WebAclLoggingConfigurationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logDestinationConfigs = defaults.logDestinationConfigs;
-    	      this.loggingFilter = defaults.loggingFilter;
-    	      this.redactedFields = defaults.redactedFields;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new WebAclLoggingConfigurationState(Objects.requireNonNull(defaults));
         }
 
         public Builder logDestinationConfigs(@Nullable Output<List<String>> logDestinationConfigs) {
-            this.logDestinationConfigs = logDestinationConfigs;
+            $.logDestinationConfigs = logDestinationConfigs;
             return this;
         }
-        public Builder logDestinationConfigs(@Nullable List<String> logDestinationConfigs) {
-            this.logDestinationConfigs = Codegen.ofNullable(logDestinationConfigs);
-            return this;
+
+        public Builder logDestinationConfigs(List<String> logDestinationConfigs) {
+            return logDestinationConfigs(Output.of(logDestinationConfigs));
         }
+
         public Builder logDestinationConfigs(String... logDestinationConfigs) {
             return logDestinationConfigs(List.of(logDestinationConfigs));
         }
+
         public Builder loggingFilter(@Nullable Output<WebAclLoggingConfigurationLoggingFilterGetArgs> loggingFilter) {
-            this.loggingFilter = loggingFilter;
+            $.loggingFilter = loggingFilter;
             return this;
         }
-        public Builder loggingFilter(@Nullable WebAclLoggingConfigurationLoggingFilterGetArgs loggingFilter) {
-            this.loggingFilter = Codegen.ofNullable(loggingFilter);
-            return this;
+
+        public Builder loggingFilter(WebAclLoggingConfigurationLoggingFilterGetArgs loggingFilter) {
+            return loggingFilter(Output.of(loggingFilter));
         }
+
         public Builder redactedFields(@Nullable Output<List<WebAclLoggingConfigurationRedactedFieldGetArgs>> redactedFields) {
-            this.redactedFields = redactedFields;
+            $.redactedFields = redactedFields;
             return this;
         }
-        public Builder redactedFields(@Nullable List<WebAclLoggingConfigurationRedactedFieldGetArgs> redactedFields) {
-            this.redactedFields = Codegen.ofNullable(redactedFields);
-            return this;
+
+        public Builder redactedFields(List<WebAclLoggingConfigurationRedactedFieldGetArgs> redactedFields) {
+            return redactedFields(Output.of(redactedFields));
         }
+
         public Builder redactedFields(WebAclLoggingConfigurationRedactedFieldGetArgs... redactedFields) {
             return redactedFields(List.of(redactedFields));
         }
+
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
-            this.resourceArn = resourceArn;
+            $.resourceArn = resourceArn;
             return this;
         }
-        public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Codegen.ofNullable(resourceArn);
-            return this;
-        }        public WebAclLoggingConfigurationState build() {
-            return new WebAclLoggingConfigurationState(logDestinationConfigs, loggingFilter, redactedFields, resourceArn);
+
+        public Builder resourceArn(String resourceArn) {
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public WebAclLoggingConfigurationState build() {
+            return $;
         }
     }
+
 }

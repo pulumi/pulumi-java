@@ -17,7 +17,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -39,7 +39,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetThreatIntelligenceIndicatorArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetThreatIntelligenceIndicatorArgs(
-        String name,
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String workspaceName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetThreatIntelligenceIndicatorArgs() {}
 
-    private GetThreatIntelligenceIndicatorArgs() {
-        this.name = null;
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetThreatIntelligenceIndicatorArgs(GetThreatIntelligenceIndicatorArgs $) {
+        this.name = $.name;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetThreatIntelligenceIndicatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetThreatIntelligenceIndicatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetThreatIntelligenceIndicatorArgs();
         }
 
         public Builder(GetThreatIntelligenceIndicatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetThreatIntelligenceIndicatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetThreatIntelligenceIndicatorArgs build() {
-            return new GetThreatIntelligenceIndicatorArgs(name, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
+        }
+
+        public GetThreatIntelligenceIndicatorArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStateRunningArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStateTerminatedArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStateWaitingArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ContainerStateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="running")
-      private final @Nullable Output<ContainerStateRunningArgs> running;
+    private @Nullable Output<ContainerStateRunningArgs> running;
 
-    public Output<ContainerStateRunningArgs> running() {
-        return this.running == null ? Codegen.empty() : this.running;
+    public Optional<Output<ContainerStateRunningArgs>> running() {
+        return Optional.ofNullable(this.running);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContainerStateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="terminated")
-      private final @Nullable Output<ContainerStateTerminatedArgs> terminated;
+    private @Nullable Output<ContainerStateTerminatedArgs> terminated;
 
-    public Output<ContainerStateTerminatedArgs> terminated() {
-        return this.terminated == null ? Codegen.empty() : this.terminated;
+    public Optional<Output<ContainerStateTerminatedArgs>> terminated() {
+        return Optional.ofNullable(this.terminated);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ContainerStateArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="waiting")
-      private final @Nullable Output<ContainerStateWaitingArgs> waiting;
+    private @Nullable Output<ContainerStateWaitingArgs> waiting;
 
-    public Output<ContainerStateWaitingArgs> waiting() {
-        return this.waiting == null ? Codegen.empty() : this.waiting;
+    public Optional<Output<ContainerStateWaitingArgs>> waiting() {
+        return Optional.ofNullable(this.waiting);
     }
 
-    public ContainerStateArgs(
-        @Nullable Output<ContainerStateRunningArgs> running,
-        @Nullable Output<ContainerStateTerminatedArgs> terminated,
-        @Nullable Output<ContainerStateWaitingArgs> waiting) {
-        this.running = running;
-        this.terminated = terminated;
-        this.waiting = waiting;
-    }
+    private ContainerStateArgs() {}
 
-    private ContainerStateArgs() {
-        this.running = Codegen.empty();
-        this.terminated = Codegen.empty();
-        this.waiting = Codegen.empty();
+    private ContainerStateArgs(ContainerStateArgs $) {
+        this.running = $.running;
+        this.terminated = $.terminated;
+        this.waiting = $.waiting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContainerStateRunningArgs> running;
-        private @Nullable Output<ContainerStateTerminatedArgs> terminated;
-        private @Nullable Output<ContainerStateWaitingArgs> waiting;
+        private ContainerStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerStateArgs();
         }
 
         public Builder(ContainerStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.running = defaults.running;
-    	      this.terminated = defaults.terminated;
-    	      this.waiting = defaults.waiting;
+            $ = new ContainerStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder running(@Nullable Output<ContainerStateRunningArgs> running) {
-            this.running = running;
+            $.running = running;
             return this;
         }
-        public Builder running(@Nullable ContainerStateRunningArgs running) {
-            this.running = Codegen.ofNullable(running);
-            return this;
+
+        public Builder running(ContainerStateRunningArgs running) {
+            return running(Output.of(running));
         }
+
         public Builder terminated(@Nullable Output<ContainerStateTerminatedArgs> terminated) {
-            this.terminated = terminated;
+            $.terminated = terminated;
             return this;
         }
-        public Builder terminated(@Nullable ContainerStateTerminatedArgs terminated) {
-            this.terminated = Codegen.ofNullable(terminated);
-            return this;
+
+        public Builder terminated(ContainerStateTerminatedArgs terminated) {
+            return terminated(Output.of(terminated));
         }
+
         public Builder waiting(@Nullable Output<ContainerStateWaitingArgs> waiting) {
-            this.waiting = waiting;
+            $.waiting = waiting;
             return this;
         }
-        public Builder waiting(@Nullable ContainerStateWaitingArgs waiting) {
-            this.waiting = Codegen.ofNullable(waiting);
-            return this;
-        }        public ContainerStateArgs build() {
-            return new ContainerStateArgs(running, terminated, waiting);
+
+        public Builder waiting(ContainerStateWaitingArgs waiting) {
+            return waiting(Output.of(waiting));
+        }
+
+        public ContainerStateArgs build() {
+            return $;
         }
     }
+
 }

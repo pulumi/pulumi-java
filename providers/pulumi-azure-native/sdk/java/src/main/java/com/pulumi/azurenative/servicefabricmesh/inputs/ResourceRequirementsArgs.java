@@ -7,8 +7,8 @@ import com.pulumi.azurenative.servicefabricmesh.inputs.ResourceLimitsArgs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.ResourceRequestsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="limits")
-      private final @Nullable Output<ResourceLimitsArgs> limits;
+    private @Nullable Output<ResourceLimitsArgs> limits;
 
-    public Output<ResourceLimitsArgs> limits() {
-        return this.limits == null ? Codegen.empty() : this.limits;
+    public Optional<Output<ResourceLimitsArgs>> limits() {
+        return Optional.ofNullable(this.limits);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="requests", required=true)
-      private final Output<ResourceRequestsArgs> requests;
+    private Output<ResourceRequestsArgs> requests;
 
     public Output<ResourceRequestsArgs> requests() {
         return this.requests;
     }
 
-    public ResourceRequirementsArgs(
-        @Nullable Output<ResourceLimitsArgs> limits,
-        Output<ResourceRequestsArgs> requests) {
-        this.limits = limits;
-        this.requests = Objects.requireNonNull(requests, "expected parameter 'requests' to be non-null");
-    }
+    private ResourceRequirementsArgs() {}
 
-    private ResourceRequirementsArgs() {
-        this.limits = Codegen.empty();
-        this.requests = Codegen.empty();
+    private ResourceRequirementsArgs(ResourceRequirementsArgs $) {
+        this.limits = $.limits;
+        this.requests = $.requests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRequirementsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceLimitsArgs> limits;
-        private Output<ResourceRequestsArgs> requests;
+        private ResourceRequirementsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRequirementsArgs();
         }
 
         public Builder(ResourceRequirementsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
-    	      this.requests = defaults.requests;
+            $ = new ResourceRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(@Nullable Output<ResourceLimitsArgs> limits) {
-            this.limits = limits;
+            $.limits = limits;
             return this;
         }
-        public Builder limits(@Nullable ResourceLimitsArgs limits) {
-            this.limits = Codegen.ofNullable(limits);
-            return this;
+
+        public Builder limits(ResourceLimitsArgs limits) {
+            return limits(Output.of(limits));
         }
+
         public Builder requests(Output<ResourceRequestsArgs> requests) {
-            this.requests = Objects.requireNonNull(requests);
+            $.requests = requests;
             return this;
         }
+
         public Builder requests(ResourceRequestsArgs requests) {
-            this.requests = Output.of(Objects.requireNonNull(requests));
-            return this;
-        }        public ResourceRequirementsArgs build() {
-            return new ResourceRequirementsArgs(limits, requests);
+            return requests(Output.of(requests));
+        }
+
+        public ResourceRequirementsArgs build() {
+            $.requests = Objects.requireNonNull($.requests, "expected parameter 'requests' to be non-null");
+            return $;
         }
     }
+
 }

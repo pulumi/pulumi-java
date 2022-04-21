@@ -5,7 +5,6 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @Import(name="repositoryName", required=true)
-      private final Output<String> repositoryName;
+    private Output<String> repositoryName;
 
     public Output<String> repositoryName() {
         return this.repositoryName;
@@ -30,63 +29,60 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs(
-        Output<String> repositoryName,
-        Output<String> service) {
-        this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs() {}
 
-    private DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs() {
-        this.repositoryName = Codegen.empty();
-        this.service = Codegen.empty();
+    private DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs $) {
+        this.repositoryName = $.repositoryName;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> repositoryName;
-        private Output<String> service;
+        private DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs();
         }
 
         public Builder(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.service = defaults.service;
+            $ = new DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repositoryName(Output<String> repositoryName) {
-            this.repositoryName = Objects.requireNonNull(repositoryName);
+            $.repositoryName = repositoryName;
             return this;
         }
+
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
-            return this;
+            return repositoryName(Output.of(repositoryName));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs build() {
-            return new DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs(repositoryName, service);
+            return service(Output.of(service));
+        }
+
+        public DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs build() {
+            $.repositoryName = Objects.requireNonNull($.repositoryName, "expected parameter 'repositoryName' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

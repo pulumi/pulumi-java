@@ -15,94 +15,85 @@ public final class GetNodeTemplateIamPolicyArgs extends com.pulumi.resources.Inv
     public static final GetNodeTemplateIamPolicyArgs Empty = new GetNodeTemplateIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
     }
 
-    public GetNodeTemplateIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String region,
-        String resource) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private GetNodeTemplateIamPolicyArgs() {}
 
-    private GetNodeTemplateIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.region = null;
-        this.resource = null;
+    private GetNodeTemplateIamPolicyArgs(GetNodeTemplateIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.region = $.region;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeTemplateIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String region;
-        private String resource;
+        private GetNodeTemplateIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeTemplateIamPolicyArgs();
         }
 
         public Builder(GetNodeTemplateIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.resource = defaults.resource;
+            $ = new GetNodeTemplateIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
-        }        public GetNodeTemplateIamPolicyArgs build() {
-            return new GetNodeTemplateIamPolicyArgs(optionsRequestedPolicyVersion, project, region, resource);
+        }
+
+        public GetNodeTemplateIamPolicyArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

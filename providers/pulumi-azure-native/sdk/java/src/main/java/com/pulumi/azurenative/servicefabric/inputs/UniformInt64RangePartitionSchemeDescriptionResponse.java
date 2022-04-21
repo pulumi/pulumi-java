@@ -23,7 +23,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -35,7 +35,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
      * 
      */
     @Import(name="highKey", required=true)
-      private final String highKey;
+    private String highKey;
 
     public String highKey() {
         return this.highKey;
@@ -47,7 +47,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
      * 
      */
     @Import(name="lowKey", required=true)
-      private final String lowKey;
+    private String lowKey;
 
     public String lowKey() {
         return this.lowKey;
@@ -59,73 +59,66 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends c
      * 
      */
     @Import(name="partitionScheme", required=true)
-      private final String partitionScheme;
+    private String partitionScheme;
 
     public String partitionScheme() {
         return this.partitionScheme;
     }
 
-    public UniformInt64RangePartitionSchemeDescriptionResponse(
-        Integer count,
-        String highKey,
-        String lowKey,
-        String partitionScheme) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.highKey = Objects.requireNonNull(highKey, "expected parameter 'highKey' to be non-null");
-        this.lowKey = Objects.requireNonNull(lowKey, "expected parameter 'lowKey' to be non-null");
-        this.partitionScheme = Codegen.stringProp("partitionScheme").arg(partitionScheme).require();
-    }
+    private UniformInt64RangePartitionSchemeDescriptionResponse() {}
 
-    private UniformInt64RangePartitionSchemeDescriptionResponse() {
-        this.count = null;
-        this.highKey = null;
-        this.lowKey = null;
-        this.partitionScheme = null;
+    private UniformInt64RangePartitionSchemeDescriptionResponse(UniformInt64RangePartitionSchemeDescriptionResponse $) {
+        this.count = $.count;
+        this.highKey = $.highKey;
+        this.lowKey = $.lowKey;
+        this.partitionScheme = $.partitionScheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UniformInt64RangePartitionSchemeDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private String highKey;
-        private String lowKey;
-        private String partitionScheme;
+        private UniformInt64RangePartitionSchemeDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UniformInt64RangePartitionSchemeDescriptionResponse();
         }
 
         public Builder(UniformInt64RangePartitionSchemeDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.highKey = defaults.highKey;
-    	      this.lowKey = defaults.lowKey;
-    	      this.partitionScheme = defaults.partitionScheme;
+            $ = new UniformInt64RangePartitionSchemeDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder highKey(String highKey) {
-            this.highKey = Objects.requireNonNull(highKey);
+            $.highKey = highKey;
             return this;
         }
+
         public Builder lowKey(String lowKey) {
-            this.lowKey = Objects.requireNonNull(lowKey);
+            $.lowKey = lowKey;
             return this;
         }
+
         public Builder partitionScheme(String partitionScheme) {
-            this.partitionScheme = Objects.requireNonNull(partitionScheme);
+            $.partitionScheme = partitionScheme;
             return this;
-        }        public UniformInt64RangePartitionSchemeDescriptionResponse build() {
-            return new UniformInt64RangePartitionSchemeDescriptionResponse(count, highKey, lowKey, partitionScheme);
+        }
+
+        public UniformInt64RangePartitionSchemeDescriptionResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.highKey = Objects.requireNonNull($.highKey, "expected parameter 'highKey' to be non-null");
+            $.lowKey = Objects.requireNonNull($.lowKey, "expected parameter 'lowKey' to be non-null");
+            $.partitionScheme = Codegen.stringProp("partitionScheme").arg($.partitionScheme).require();
+            return $;
         }
     }
+
 }

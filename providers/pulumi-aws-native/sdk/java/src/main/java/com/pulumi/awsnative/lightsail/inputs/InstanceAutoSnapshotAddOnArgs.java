@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class InstanceAutoSnapshotAddOnArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="snapshotTimeOfDay")
-      private final @Nullable Output<String> snapshotTimeOfDay;
+    private @Nullable Output<String> snapshotTimeOfDay;
 
-    public Output<String> snapshotTimeOfDay() {
-        return this.snapshotTimeOfDay == null ? Codegen.empty() : this.snapshotTimeOfDay;
+    public Optional<Output<String>> snapshotTimeOfDay() {
+        return Optional.ofNullable(this.snapshotTimeOfDay);
     }
 
-    public InstanceAutoSnapshotAddOnArgs(@Nullable Output<String> snapshotTimeOfDay) {
-        this.snapshotTimeOfDay = snapshotTimeOfDay;
-    }
+    private InstanceAutoSnapshotAddOnArgs() {}
 
-    private InstanceAutoSnapshotAddOnArgs() {
-        this.snapshotTimeOfDay = Codegen.empty();
+    private InstanceAutoSnapshotAddOnArgs(InstanceAutoSnapshotAddOnArgs $) {
+        this.snapshotTimeOfDay = $.snapshotTimeOfDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAutoSnapshotAddOnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> snapshotTimeOfDay;
+        private InstanceAutoSnapshotAddOnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAutoSnapshotAddOnArgs();
         }
 
         public Builder(InstanceAutoSnapshotAddOnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snapshotTimeOfDay = defaults.snapshotTimeOfDay;
+            $ = new InstanceAutoSnapshotAddOnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder snapshotTimeOfDay(@Nullable Output<String> snapshotTimeOfDay) {
-            this.snapshotTimeOfDay = snapshotTimeOfDay;
+            $.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
-        public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
-            this.snapshotTimeOfDay = Codegen.ofNullable(snapshotTimeOfDay);
-            return this;
-        }        public InstanceAutoSnapshotAddOnArgs build() {
-            return new InstanceAutoSnapshotAddOnArgs(snapshotTimeOfDay);
+
+        public Builder snapshotTimeOfDay(String snapshotTimeOfDay) {
+            return snapshotTimeOfDay(Output.of(snapshotTimeOfDay));
+        }
+
+        public InstanceAutoSnapshotAddOnArgs build() {
+            return $;
         }
     }
+
 }

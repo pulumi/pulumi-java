@@ -5,11 +5,11 @@ package com.pulumi.aws.cloudhsmv2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hsmType", required=true)
-      private final Output<String> hsmType;
+    private Output<String> hsmType;
 
     public Output<String> hsmType() {
         return this.hsmType;
@@ -33,10 +33,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceBackupIdentifier")
-      private final @Nullable Output<String> sourceBackupIdentifier;
+    private @Nullable Output<String> sourceBackupIdentifier;
 
-    public Output<String> sourceBackupIdentifier() {
-        return this.sourceBackupIdentifier == null ? Codegen.empty() : this.sourceBackupIdentifier;
+    public Optional<Output<String>> sourceBackupIdentifier() {
+        return Optional.ofNullable(this.sourceBackupIdentifier);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
@@ -55,92 +55,84 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ClusterArgs(
-        Output<String> hsmType,
-        @Nullable Output<String> sourceBackupIdentifier,
-        Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags) {
-        this.hsmType = Objects.requireNonNull(hsmType, "expected parameter 'hsmType' to be non-null");
-        this.sourceBackupIdentifier = sourceBackupIdentifier;
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.tags = tags;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.hsmType = Codegen.empty();
-        this.sourceBackupIdentifier = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.hsmType = $.hsmType;
+        this.sourceBackupIdentifier = $.sourceBackupIdentifier;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hsmType;
-        private @Nullable Output<String> sourceBackupIdentifier;
-        private Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hsmType = defaults.hsmType;
-    	      this.sourceBackupIdentifier = defaults.sourceBackupIdentifier;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hsmType(Output<String> hsmType) {
-            this.hsmType = Objects.requireNonNull(hsmType);
+            $.hsmType = hsmType;
             return this;
         }
+
         public Builder hsmType(String hsmType) {
-            this.hsmType = Output.of(Objects.requireNonNull(hsmType));
-            return this;
+            return hsmType(Output.of(hsmType));
         }
+
         public Builder sourceBackupIdentifier(@Nullable Output<String> sourceBackupIdentifier) {
-            this.sourceBackupIdentifier = sourceBackupIdentifier;
+            $.sourceBackupIdentifier = sourceBackupIdentifier;
             return this;
         }
-        public Builder sourceBackupIdentifier(@Nullable String sourceBackupIdentifier) {
-            this.sourceBackupIdentifier = Codegen.ofNullable(sourceBackupIdentifier);
-            return this;
+
+        public Builder sourceBackupIdentifier(String sourceBackupIdentifier) {
+            return sourceBackupIdentifier(Output.of(sourceBackupIdentifier));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ClusterArgs build() {
-            return new ClusterArgs(hsmType, sourceBackupIdentifier, subnetIds, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ClusterArgs build() {
+            $.hsmType = Objects.requireNonNull($.hsmType, "expected parameter 'hsmType' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            return $;
         }
     }
+
 }

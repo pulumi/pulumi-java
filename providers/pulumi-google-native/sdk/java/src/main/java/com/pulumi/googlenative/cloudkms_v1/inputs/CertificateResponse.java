@@ -23,7 +23,7 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -34,7 +34,7 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="notAfterTime", required=true)
-      private final String notAfterTime;
+    private String notAfterTime;
 
     public String notAfterTime() {
         return this.notAfterTime;
@@ -45,7 +45,7 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="notBeforeTime", required=true)
-      private final String notBeforeTime;
+    private String notBeforeTime;
 
     public String notBeforeTime() {
         return this.notBeforeTime;
@@ -56,7 +56,7 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parsed", required=true)
-      private final Boolean parsed;
+    private Boolean parsed;
 
     public Boolean parsed() {
         return this.parsed;
@@ -67,7 +67,7 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rawDer", required=true)
-      private final String rawDer;
+    private String rawDer;
 
     public String rawDer() {
         return this.rawDer;
@@ -78,7 +78,7 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serialNumber", required=true)
-      private final String serialNumber;
+    private String serialNumber;
 
     public String serialNumber() {
         return this.serialNumber;
@@ -89,7 +89,7 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sha256Fingerprint", required=true)
-      private final String sha256Fingerprint;
+    private String sha256Fingerprint;
 
     public String sha256Fingerprint() {
         return this.sha256Fingerprint;
@@ -100,7 +100,7 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subject", required=true)
-      private final String subject;
+    private String subject;
 
     public String subject() {
         return this.subject;
@@ -111,121 +111,105 @@ public final class CertificateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subjectAlternativeDnsNames", required=true)
-      private final List<String> subjectAlternativeDnsNames;
+    private List<String> subjectAlternativeDnsNames;
 
     public List<String> subjectAlternativeDnsNames() {
         return this.subjectAlternativeDnsNames;
     }
 
-    public CertificateResponse(
-        String issuer,
-        String notAfterTime,
-        String notBeforeTime,
-        Boolean parsed,
-        String rawDer,
-        String serialNumber,
-        String sha256Fingerprint,
-        String subject,
-        List<String> subjectAlternativeDnsNames) {
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.notAfterTime = Objects.requireNonNull(notAfterTime, "expected parameter 'notAfterTime' to be non-null");
-        this.notBeforeTime = Objects.requireNonNull(notBeforeTime, "expected parameter 'notBeforeTime' to be non-null");
-        this.parsed = Objects.requireNonNull(parsed, "expected parameter 'parsed' to be non-null");
-        this.rawDer = Objects.requireNonNull(rawDer, "expected parameter 'rawDer' to be non-null");
-        this.serialNumber = Objects.requireNonNull(serialNumber, "expected parameter 'serialNumber' to be non-null");
-        this.sha256Fingerprint = Objects.requireNonNull(sha256Fingerprint, "expected parameter 'sha256Fingerprint' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.subjectAlternativeDnsNames = Objects.requireNonNull(subjectAlternativeDnsNames, "expected parameter 'subjectAlternativeDnsNames' to be non-null");
-    }
+    private CertificateResponse() {}
 
-    private CertificateResponse() {
-        this.issuer = null;
-        this.notAfterTime = null;
-        this.notBeforeTime = null;
-        this.parsed = null;
-        this.rawDer = null;
-        this.serialNumber = null;
-        this.sha256Fingerprint = null;
-        this.subject = null;
-        this.subjectAlternativeDnsNames = List.of();
+    private CertificateResponse(CertificateResponse $) {
+        this.issuer = $.issuer;
+        this.notAfterTime = $.notAfterTime;
+        this.notBeforeTime = $.notBeforeTime;
+        this.parsed = $.parsed;
+        this.rawDer = $.rawDer;
+        this.serialNumber = $.serialNumber;
+        this.sha256Fingerprint = $.sha256Fingerprint;
+        this.subject = $.subject;
+        this.subjectAlternativeDnsNames = $.subjectAlternativeDnsNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String issuer;
-        private String notAfterTime;
-        private String notBeforeTime;
-        private Boolean parsed;
-        private String rawDer;
-        private String serialNumber;
-        private String sha256Fingerprint;
-        private String subject;
-        private List<String> subjectAlternativeDnsNames;
+        private CertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateResponse();
         }
 
         public Builder(CertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuer = defaults.issuer;
-    	      this.notAfterTime = defaults.notAfterTime;
-    	      this.notBeforeTime = defaults.notBeforeTime;
-    	      this.parsed = defaults.parsed;
-    	      this.rawDer = defaults.rawDer;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.sha256Fingerprint = defaults.sha256Fingerprint;
-    	      this.subject = defaults.subject;
-    	      this.subjectAlternativeDnsNames = defaults.subjectAlternativeDnsNames;
+            $ = new CertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder notAfterTime(String notAfterTime) {
-            this.notAfterTime = Objects.requireNonNull(notAfterTime);
+            $.notAfterTime = notAfterTime;
             return this;
         }
+
         public Builder notBeforeTime(String notBeforeTime) {
-            this.notBeforeTime = Objects.requireNonNull(notBeforeTime);
+            $.notBeforeTime = notBeforeTime;
             return this;
         }
+
         public Builder parsed(Boolean parsed) {
-            this.parsed = Objects.requireNonNull(parsed);
+            $.parsed = parsed;
             return this;
         }
+
         public Builder rawDer(String rawDer) {
-            this.rawDer = Objects.requireNonNull(rawDer);
+            $.rawDer = rawDer;
             return this;
         }
+
         public Builder serialNumber(String serialNumber) {
-            this.serialNumber = Objects.requireNonNull(serialNumber);
+            $.serialNumber = serialNumber;
             return this;
         }
+
         public Builder sha256Fingerprint(String sha256Fingerprint) {
-            this.sha256Fingerprint = Objects.requireNonNull(sha256Fingerprint);
+            $.sha256Fingerprint = sha256Fingerprint;
             return this;
         }
+
         public Builder subject(String subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subjectAlternativeDnsNames(List<String> subjectAlternativeDnsNames) {
-            this.subjectAlternativeDnsNames = Objects.requireNonNull(subjectAlternativeDnsNames);
+            $.subjectAlternativeDnsNames = subjectAlternativeDnsNames;
             return this;
         }
+
         public Builder subjectAlternativeDnsNames(String... subjectAlternativeDnsNames) {
             return subjectAlternativeDnsNames(List.of(subjectAlternativeDnsNames));
-        }        public CertificateResponse build() {
-            return new CertificateResponse(issuer, notAfterTime, notBeforeTime, parsed, rawDer, serialNumber, sha256Fingerprint, subject, subjectAlternativeDnsNames);
+        }
+
+        public CertificateResponse build() {
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.notAfterTime = Objects.requireNonNull($.notAfterTime, "expected parameter 'notAfterTime' to be non-null");
+            $.notBeforeTime = Objects.requireNonNull($.notBeforeTime, "expected parameter 'notBeforeTime' to be non-null");
+            $.parsed = Objects.requireNonNull($.parsed, "expected parameter 'parsed' to be non-null");
+            $.rawDer = Objects.requireNonNull($.rawDer, "expected parameter 'rawDer' to be non-null");
+            $.serialNumber = Objects.requireNonNull($.serialNumber, "expected parameter 'serialNumber' to be non-null");
+            $.sha256Fingerprint = Objects.requireNonNull($.sha256Fingerprint, "expected parameter 'sha256Fingerprint' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            $.subjectAlternativeDnsNames = Objects.requireNonNull($.subjectAlternativeDnsNames, "expected parameter 'subjectAlternativeDnsNames' to be non-null");
+            return $;
         }
     }
+
 }

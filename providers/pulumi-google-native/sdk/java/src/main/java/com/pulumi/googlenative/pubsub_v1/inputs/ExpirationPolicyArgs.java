@@ -5,9 +5,9 @@ package com.pulumi.googlenative.pubsub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ExpirationPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<String> ttl;
+    private @Nullable Output<String> ttl;
 
-    public Output<String> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<String>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
-    public ExpirationPolicyArgs(@Nullable Output<String> ttl) {
-        this.ttl = ttl;
-    }
+    private ExpirationPolicyArgs() {}
 
-    private ExpirationPolicyArgs() {
-        this.ttl = Codegen.empty();
+    private ExpirationPolicyArgs(ExpirationPolicyArgs $) {
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpirationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ttl;
+        private ExpirationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpirationPolicyArgs();
         }
 
         public Builder(ExpirationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ttl = defaults.ttl;
+            $ = new ExpirationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ttl(@Nullable Output<String> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable String ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
-        }        public ExpirationPolicyArgs build() {
-            return new ExpirationPolicyArgs(ttl);
+
+        public Builder ttl(String ttl) {
+            return ttl(Output.of(ttl));
+        }
+
+        public ExpirationPolicyArgs build() {
+            return $;
         }
     }
+
 }

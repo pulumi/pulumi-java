@@ -22,48 +22,49 @@ public final class MysqlRdbmsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mysqlDatabases", required=true)
-      private final List<MysqlDatabaseResponse> mysqlDatabases;
+    private List<MysqlDatabaseResponse> mysqlDatabases;
 
     public List<MysqlDatabaseResponse> mysqlDatabases() {
         return this.mysqlDatabases;
     }
 
-    public MysqlRdbmsResponse(List<MysqlDatabaseResponse> mysqlDatabases) {
-        this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases, "expected parameter 'mysqlDatabases' to be non-null");
-    }
+    private MysqlRdbmsResponse() {}
 
-    private MysqlRdbmsResponse() {
-        this.mysqlDatabases = List.of();
+    private MysqlRdbmsResponse(MysqlRdbmsResponse $) {
+        this.mysqlDatabases = $.mysqlDatabases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlRdbmsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MysqlDatabaseResponse> mysqlDatabases;
+        private MysqlRdbmsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlRdbmsResponse();
         }
 
         public Builder(MysqlRdbmsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mysqlDatabases = defaults.mysqlDatabases;
+            $ = new MysqlRdbmsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mysqlDatabases(List<MysqlDatabaseResponse> mysqlDatabases) {
-            this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases);
+            $.mysqlDatabases = mysqlDatabases;
             return this;
         }
+
         public Builder mysqlDatabases(MysqlDatabaseResponse... mysqlDatabases) {
             return mysqlDatabases(List.of(mysqlDatabases));
-        }        public MysqlRdbmsResponse build() {
-            return new MysqlRdbmsResponse(mysqlDatabases);
+        }
+
+        public MysqlRdbmsResponse build() {
+            $.mysqlDatabases = Objects.requireNonNull($.mysqlDatabases, "expected parameter 'mysqlDatabases' to be non-null");
+            return $;
         }
     }
+
 }

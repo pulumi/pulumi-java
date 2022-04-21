@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class RepositoryLifecyclePolicyArgs extends com.pulumi.resources.Re
     public static final RepositoryLifecyclePolicyArgs Empty = new RepositoryLifecyclePolicyArgs();
 
     @Import(name="lifecyclePolicyText")
-      private final @Nullable Output<String> lifecyclePolicyText;
+    private @Nullable Output<String> lifecyclePolicyText;
 
-    public Output<String> lifecyclePolicyText() {
-        return this.lifecyclePolicyText == null ? Codegen.empty() : this.lifecyclePolicyText;
+    public Optional<Output<String>> lifecyclePolicyText() {
+        return Optional.ofNullable(this.lifecyclePolicyText);
     }
 
     @Import(name="registryId")
-      private final @Nullable Output<String> registryId;
+    private @Nullable Output<String> registryId;
 
-    public Output<String> registryId() {
-        return this.registryId == null ? Codegen.empty() : this.registryId;
+    public Optional<Output<String>> registryId() {
+        return Optional.ofNullable(this.registryId);
     }
 
-    public RepositoryLifecyclePolicyArgs(
-        @Nullable Output<String> lifecyclePolicyText,
-        @Nullable Output<String> registryId) {
-        this.lifecyclePolicyText = lifecyclePolicyText;
-        this.registryId = registryId;
-    }
+    private RepositoryLifecyclePolicyArgs() {}
 
-    private RepositoryLifecyclePolicyArgs() {
-        this.lifecyclePolicyText = Codegen.empty();
-        this.registryId = Codegen.empty();
+    private RepositoryLifecyclePolicyArgs(RepositoryLifecyclePolicyArgs $) {
+        this.lifecyclePolicyText = $.lifecyclePolicyText;
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryLifecyclePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> lifecyclePolicyText;
-        private @Nullable Output<String> registryId;
+        private RepositoryLifecyclePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryLifecyclePolicyArgs();
         }
 
         public Builder(RepositoryLifecyclePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lifecyclePolicyText = defaults.lifecyclePolicyText;
-    	      this.registryId = defaults.registryId;
+            $ = new RepositoryLifecyclePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lifecyclePolicyText(@Nullable Output<String> lifecyclePolicyText) {
-            this.lifecyclePolicyText = lifecyclePolicyText;
+            $.lifecyclePolicyText = lifecyclePolicyText;
             return this;
         }
-        public Builder lifecyclePolicyText(@Nullable String lifecyclePolicyText) {
-            this.lifecyclePolicyText = Codegen.ofNullable(lifecyclePolicyText);
-            return this;
+
+        public Builder lifecyclePolicyText(String lifecyclePolicyText) {
+            return lifecyclePolicyText(Output.of(lifecyclePolicyText));
         }
+
         public Builder registryId(@Nullable Output<String> registryId) {
-            this.registryId = registryId;
+            $.registryId = registryId;
             return this;
         }
-        public Builder registryId(@Nullable String registryId) {
-            this.registryId = Codegen.ofNullable(registryId);
-            return this;
-        }        public RepositoryLifecyclePolicyArgs build() {
-            return new RepositoryLifecyclePolicyArgs(lifecyclePolicyText, registryId);
+
+        public Builder registryId(String registryId) {
+            return registryId(Output.of(registryId));
+        }
+
+        public RepositoryLifecyclePolicyArgs build() {
+            return $;
         }
     }
+
 }

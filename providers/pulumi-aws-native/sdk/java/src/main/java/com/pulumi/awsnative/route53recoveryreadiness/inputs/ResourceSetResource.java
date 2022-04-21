@@ -25,17 +25,17 @@ public final class ResourceSetResource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="componentId")
-      private final @Nullable String componentId;
+    private @Nullable String componentId;
 
     public Optional<String> componentId() {
-        return this.componentId == null ? Optional.empty() : Optional.ofNullable(this.componentId);
+        return Optional.ofNullable(this.componentId);
     }
 
     @Import(name="dnsTargetResource")
-      private final @Nullable ResourceSetDNSTargetResource dnsTargetResource;
+    private @Nullable ResourceSetDNSTargetResource dnsTargetResource;
 
     public Optional<ResourceSetDNSTargetResource> dnsTargetResource() {
-        return this.dnsTargetResource == null ? Optional.empty() : Optional.ofNullable(this.dnsTargetResource);
+        return Optional.ofNullable(this.dnsTargetResource);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResourceSetResource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="readinessScopes")
-      private final @Nullable List<String> readinessScopes;
+    private @Nullable List<String> readinessScopes;
 
-    public List<String> readinessScopes() {
-        return this.readinessScopes == null ? List.of() : this.readinessScopes;
+    public Optional<List<String>> readinessScopes() {
+        return Optional.ofNullable(this.readinessScopes);
     }
 
     /**
@@ -54,76 +54,66 @@ public final class ResourceSetResource extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceArn")
-      private final @Nullable String resourceArn;
+    private @Nullable String resourceArn;
 
     public Optional<String> resourceArn() {
-        return this.resourceArn == null ? Optional.empty() : Optional.ofNullable(this.resourceArn);
+        return Optional.ofNullable(this.resourceArn);
     }
 
-    public ResourceSetResource(
-        @Nullable String componentId,
-        @Nullable ResourceSetDNSTargetResource dnsTargetResource,
-        @Nullable List<String> readinessScopes,
-        @Nullable String resourceArn) {
-        this.componentId = componentId;
-        this.dnsTargetResource = dnsTargetResource;
-        this.readinessScopes = readinessScopes;
-        this.resourceArn = resourceArn;
-    }
+    private ResourceSetResource() {}
 
-    private ResourceSetResource() {
-        this.componentId = null;
-        this.dnsTargetResource = null;
-        this.readinessScopes = List.of();
-        this.resourceArn = null;
+    private ResourceSetResource(ResourceSetResource $) {
+        this.componentId = $.componentId;
+        this.dnsTargetResource = $.dnsTargetResource;
+        this.readinessScopes = $.readinessScopes;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String componentId;
-        private @Nullable ResourceSetDNSTargetResource dnsTargetResource;
-        private @Nullable List<String> readinessScopes;
-        private @Nullable String resourceArn;
+        private ResourceSetResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetResource();
         }
 
         public Builder(ResourceSetResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentId = defaults.componentId;
-    	      this.dnsTargetResource = defaults.dnsTargetResource;
-    	      this.readinessScopes = defaults.readinessScopes;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new ResourceSetResource(Objects.requireNonNull(defaults));
         }
 
         public Builder componentId(@Nullable String componentId) {
-            this.componentId = componentId;
+            $.componentId = componentId;
             return this;
         }
+
         public Builder dnsTargetResource(@Nullable ResourceSetDNSTargetResource dnsTargetResource) {
-            this.dnsTargetResource = dnsTargetResource;
+            $.dnsTargetResource = dnsTargetResource;
             return this;
         }
+
         public Builder readinessScopes(@Nullable List<String> readinessScopes) {
-            this.readinessScopes = readinessScopes;
+            $.readinessScopes = readinessScopes;
             return this;
         }
+
         public Builder readinessScopes(String... readinessScopes) {
             return readinessScopes(List.of(readinessScopes));
         }
+
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = resourceArn;
+            $.resourceArn = resourceArn;
             return this;
-        }        public ResourceSetResource build() {
-            return new ResourceSetResource(componentId, dnsTargetResource, readinessScopes, resourceArn);
+        }
+
+        public ResourceSetResource build() {
+            return $;
         }
     }
+
 }

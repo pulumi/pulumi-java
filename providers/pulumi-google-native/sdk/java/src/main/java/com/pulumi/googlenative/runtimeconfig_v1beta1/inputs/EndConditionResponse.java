@@ -21,45 +21,45 @@ public final class EndConditionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cardinality", required=true)
-      private final CardinalityResponse cardinality;
+    private CardinalityResponse cardinality;
 
     public CardinalityResponse cardinality() {
         return this.cardinality;
     }
 
-    public EndConditionResponse(CardinalityResponse cardinality) {
-        this.cardinality = Objects.requireNonNull(cardinality, "expected parameter 'cardinality' to be non-null");
-    }
+    private EndConditionResponse() {}
 
-    private EndConditionResponse() {
-        this.cardinality = null;
+    private EndConditionResponse(EndConditionResponse $) {
+        this.cardinality = $.cardinality;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CardinalityResponse cardinality;
+        private EndConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndConditionResponse();
         }
 
         public Builder(EndConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cardinality = defaults.cardinality;
+            $ = new EndConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cardinality(CardinalityResponse cardinality) {
-            this.cardinality = Objects.requireNonNull(cardinality);
+            $.cardinality = cardinality;
             return this;
-        }        public EndConditionResponse build() {
-            return new EndConditionResponse(cardinality);
+        }
+
+        public EndConditionResponse build() {
+            $.cardinality = Objects.requireNonNull($.cardinality, "expected parameter 'cardinality' to be non-null");
+            return $;
         }
     }
+
 }

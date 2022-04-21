@@ -21,7 +21,7 @@ public final class V2AndroidApplicationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="packageName", required=true)
-      private final String packageName;
+    private String packageName;
 
     public String packageName() {
         return this.packageName;
@@ -32,55 +32,52 @@ public final class V2AndroidApplicationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sha1Fingerprint", required=true)
-      private final String sha1Fingerprint;
+    private String sha1Fingerprint;
 
     public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 
-    public V2AndroidApplicationResponse(
-        String packageName,
-        String sha1Fingerprint) {
-        this.packageName = Objects.requireNonNull(packageName, "expected parameter 'packageName' to be non-null");
-        this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint, "expected parameter 'sha1Fingerprint' to be non-null");
-    }
+    private V2AndroidApplicationResponse() {}
 
-    private V2AndroidApplicationResponse() {
-        this.packageName = null;
-        this.sha1Fingerprint = null;
+    private V2AndroidApplicationResponse(V2AndroidApplicationResponse $) {
+        this.packageName = $.packageName;
+        this.sha1Fingerprint = $.sha1Fingerprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2AndroidApplicationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String packageName;
-        private String sha1Fingerprint;
+        private V2AndroidApplicationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2AndroidApplicationResponse();
         }
 
         public Builder(V2AndroidApplicationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packageName = defaults.packageName;
-    	      this.sha1Fingerprint = defaults.sha1Fingerprint;
+            $ = new V2AndroidApplicationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder packageName(String packageName) {
-            this.packageName = Objects.requireNonNull(packageName);
+            $.packageName = packageName;
             return this;
         }
+
         public Builder sha1Fingerprint(String sha1Fingerprint) {
-            this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
+            $.sha1Fingerprint = sha1Fingerprint;
             return this;
-        }        public V2AndroidApplicationResponse build() {
-            return new V2AndroidApplicationResponse(packageName, sha1Fingerprint);
+        }
+
+        public V2AndroidApplicationResponse build() {
+            $.packageName = Objects.requireNonNull($.packageName, "expected parameter 'packageName' to be non-null");
+            $.sha1Fingerprint = Objects.requireNonNull($.sha1Fingerprint, "expected parameter 'sha1Fingerprint' to be non-null");
+            return $;
         }
     }
+
 }

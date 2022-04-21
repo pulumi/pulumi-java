@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class AllowedFlexVolumeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="driver", required=true)
-      private final Output<String> driver;
+    private Output<String> driver;
 
     public Output<String> driver() {
         return this.driver;
     }
 
-    public AllowedFlexVolumeArgs(Output<String> driver) {
-        this.driver = Objects.requireNonNull(driver, "expected parameter 'driver' to be non-null");
-    }
+    private AllowedFlexVolumeArgs() {}
 
-    private AllowedFlexVolumeArgs() {
-        this.driver = Codegen.empty();
+    private AllowedFlexVolumeArgs(AllowedFlexVolumeArgs $) {
+        this.driver = $.driver;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllowedFlexVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> driver;
+        private AllowedFlexVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllowedFlexVolumeArgs();
         }
 
         public Builder(AllowedFlexVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driver = defaults.driver;
+            $ = new AllowedFlexVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder driver(Output<String> driver) {
-            this.driver = Objects.requireNonNull(driver);
+            $.driver = driver;
             return this;
         }
+
         public Builder driver(String driver) {
-            this.driver = Output.of(Objects.requireNonNull(driver));
-            return this;
-        }        public AllowedFlexVolumeArgs build() {
-            return new AllowedFlexVolumeArgs(driver);
+            return driver(Output.of(driver));
+        }
+
+        public AllowedFlexVolumeArgs build() {
+            $.driver = Objects.requireNonNull($.driver, "expected parameter 'driver' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bitrateKbps")
-      private final @Nullable Output<String> bitrateKbps;
+    private @Nullable Output<String> bitrateKbps;
 
-    public Output<String> bitrateKbps() {
-        return this.bitrateKbps == null ? Codegen.empty() : this.bitrateKbps;
+    public Optional<Output<String>> bitrateKbps() {
+        return Optional.ofNullable(this.bitrateKbps);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="frameRate")
-      private final @Nullable Output<String> frameRate;
+    private @Nullable Output<String> frameRate;
 
-    public Output<String> frameRate() {
-        return this.frameRate == null ? Codegen.empty() : this.frameRate;
+    public Optional<Output<String>> frameRate() {
+        return Optional.ofNullable(this.frameRate);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="scale")
-      private final @Nullable Output<VideoScaleArgs> scale;
+    private @Nullable Output<VideoScaleArgs> scale;
 
-    public Output<VideoScaleArgs> scale() {
-        return this.scale == null ? Codegen.empty() : this.scale;
+    public Optional<Output<VideoScaleArgs>> scale() {
+        return Optional.ofNullable(this.scale);
     }
 
     /**
@@ -59,89 +60,79 @@ public final class VideoEncoderH264Args extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public VideoEncoderH264Args(
-        @Nullable Output<String> bitrateKbps,
-        @Nullable Output<String> frameRate,
-        @Nullable Output<VideoScaleArgs> scale,
-        Output<String> type) {
-        this.bitrateKbps = bitrateKbps;
-        this.frameRate = frameRate;
-        this.scale = scale;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private VideoEncoderH264Args() {}
 
-    private VideoEncoderH264Args() {
-        this.bitrateKbps = Codegen.empty();
-        this.frameRate = Codegen.empty();
-        this.scale = Codegen.empty();
-        this.type = Codegen.empty();
+    private VideoEncoderH264Args(VideoEncoderH264Args $) {
+        this.bitrateKbps = $.bitrateKbps;
+        this.frameRate = $.frameRate;
+        this.scale = $.scale;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoEncoderH264Args defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bitrateKbps;
-        private @Nullable Output<String> frameRate;
-        private @Nullable Output<VideoScaleArgs> scale;
-        private Output<String> type;
+        private VideoEncoderH264Args $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoEncoderH264Args();
         }
 
         public Builder(VideoEncoderH264Args defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitrateKbps = defaults.bitrateKbps;
-    	      this.frameRate = defaults.frameRate;
-    	      this.scale = defaults.scale;
-    	      this.type = defaults.type;
+            $ = new VideoEncoderH264Args(Objects.requireNonNull(defaults));
         }
 
         public Builder bitrateKbps(@Nullable Output<String> bitrateKbps) {
-            this.bitrateKbps = bitrateKbps;
+            $.bitrateKbps = bitrateKbps;
             return this;
         }
-        public Builder bitrateKbps(@Nullable String bitrateKbps) {
-            this.bitrateKbps = Codegen.ofNullable(bitrateKbps);
-            return this;
+
+        public Builder bitrateKbps(String bitrateKbps) {
+            return bitrateKbps(Output.of(bitrateKbps));
         }
+
         public Builder frameRate(@Nullable Output<String> frameRate) {
-            this.frameRate = frameRate;
+            $.frameRate = frameRate;
             return this;
         }
-        public Builder frameRate(@Nullable String frameRate) {
-            this.frameRate = Codegen.ofNullable(frameRate);
-            return this;
+
+        public Builder frameRate(String frameRate) {
+            return frameRate(Output.of(frameRate));
         }
+
         public Builder scale(@Nullable Output<VideoScaleArgs> scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
         }
-        public Builder scale(@Nullable VideoScaleArgs scale) {
-            this.scale = Codegen.ofNullable(scale);
-            return this;
+
+        public Builder scale(VideoScaleArgs scale) {
+            return scale(Output.of(scale));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public VideoEncoderH264Args build() {
-            return new VideoEncoderH264Args(bitrateKbps, frameRate, scale, type);
+            return type(Output.of(type));
+        }
+
+        public VideoEncoderH264Args build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

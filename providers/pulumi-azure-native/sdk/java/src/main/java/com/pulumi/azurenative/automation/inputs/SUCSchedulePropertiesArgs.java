@@ -13,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="advancedSchedule")
-      private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
+    private @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
-    public Output<AdvancedScheduleArgs> advancedSchedule() {
-        return this.advancedSchedule == null ? Codegen.empty() : this.advancedSchedule;
+    public Optional<Output<AdvancedScheduleArgs>> advancedSchedule() {
+        return Optional.ofNullable(this.advancedSchedule);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable Output<String> creationTime;
+    private @Nullable Output<String> creationTime;
 
-    public Output<String> creationTime() {
-        return this.creationTime == null ? Codegen.empty() : this.creationTime;
+    public Optional<Output<String>> creationTime() {
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="expiryTime")
-      private final @Nullable Output<String> expiryTime;
+    private @Nullable Output<String> expiryTime;
 
-    public Output<String> expiryTime() {
-        return this.expiryTime == null ? Codegen.empty() : this.expiryTime;
+    public Optional<Output<String>> expiryTime() {
+        return Optional.ofNullable(this.expiryTime);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="expiryTimeOffsetMinutes")
-      private final @Nullable Output<Double> expiryTimeOffsetMinutes;
+    private @Nullable Output<Double> expiryTimeOffsetMinutes;
 
-    public Output<Double> expiryTimeOffsetMinutes() {
-        return this.expiryTimeOffsetMinutes == null ? Codegen.empty() : this.expiryTimeOffsetMinutes;
+    public Optional<Output<Double>> expiryTimeOffsetMinutes() {
+        return Optional.ofNullable(this.expiryTimeOffsetMinutes);
     }
 
     /**
@@ -84,10 +85,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="frequency")
-      private final @Nullable Output<Either<String,ScheduleFrequency>> frequency;
+    private @Nullable Output<Either<String,ScheduleFrequency>> frequency;
 
-    public Output<Either<String,ScheduleFrequency>> frequency() {
-        return this.frequency == null ? Codegen.empty() : this.frequency;
+    public Optional<Output<Either<String,ScheduleFrequency>>> frequency() {
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
@@ -95,10 +96,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Double> interval;
+    private @Nullable Output<Double> interval;
 
-    public Output<Double> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Double>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -106,10 +107,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Output<Boolean> isEnabled;
+    private @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> isEnabled() {
-        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
+    public Optional<Output<Boolean>> isEnabled() {
+        return Optional.ofNullable(this.isEnabled);
     }
 
     /**
@@ -117,10 +118,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="lastModifiedTime")
-      private final @Nullable Output<String> lastModifiedTime;
+    private @Nullable Output<String> lastModifiedTime;
 
-    public Output<String> lastModifiedTime() {
-        return this.lastModifiedTime == null ? Codegen.empty() : this.lastModifiedTime;
+    public Optional<Output<String>> lastModifiedTime() {
+        return Optional.ofNullable(this.lastModifiedTime);
     }
 
     /**
@@ -128,10 +129,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="nextRun")
-      private final @Nullable Output<String> nextRun;
+    private @Nullable Output<String> nextRun;
 
-    public Output<String> nextRun() {
-        return this.nextRun == null ? Codegen.empty() : this.nextRun;
+    public Optional<Output<String>> nextRun() {
+        return Optional.ofNullable(this.nextRun);
     }
 
     /**
@@ -139,10 +140,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="nextRunOffsetMinutes")
-      private final @Nullable Output<Double> nextRunOffsetMinutes;
+    private @Nullable Output<Double> nextRunOffsetMinutes;
 
-    public Output<Double> nextRunOffsetMinutes() {
-        return this.nextRunOffsetMinutes == null ? Codegen.empty() : this.nextRunOffsetMinutes;
+    public Optional<Output<Double>> nextRunOffsetMinutes() {
+        return Optional.ofNullable(this.nextRunOffsetMinutes);
     }
 
     /**
@@ -150,10 +151,10 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -161,206 +162,169 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public SUCSchedulePropertiesArgs(
-        @Nullable Output<AdvancedScheduleArgs> advancedSchedule,
-        @Nullable Output<String> creationTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> expiryTime,
-        @Nullable Output<Double> expiryTimeOffsetMinutes,
-        @Nullable Output<Either<String,ScheduleFrequency>> frequency,
-        @Nullable Output<Double> interval,
-        @Nullable Output<Boolean> isEnabled,
-        @Nullable Output<String> lastModifiedTime,
-        @Nullable Output<String> nextRun,
-        @Nullable Output<Double> nextRunOffsetMinutes,
-        @Nullable Output<String> startTime,
-        @Nullable Output<String> timeZone) {
-        this.advancedSchedule = advancedSchedule;
-        this.creationTime = creationTime;
-        this.description = description;
-        this.expiryTime = expiryTime;
-        this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
-        this.frequency = frequency;
-        this.interval = interval;
-        this.isEnabled = Codegen.booleanProp("isEnabled").output().arg(isEnabled).def(false).getNullable();
-        this.lastModifiedTime = lastModifiedTime;
-        this.nextRun = nextRun;
-        this.nextRunOffsetMinutes = nextRunOffsetMinutes;
-        this.startTime = startTime;
-        this.timeZone = timeZone;
-    }
+    private SUCSchedulePropertiesArgs() {}
 
-    private SUCSchedulePropertiesArgs() {
-        this.advancedSchedule = Codegen.empty();
-        this.creationTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.expiryTime = Codegen.empty();
-        this.expiryTimeOffsetMinutes = Codegen.empty();
-        this.frequency = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.lastModifiedTime = Codegen.empty();
-        this.nextRun = Codegen.empty();
-        this.nextRunOffsetMinutes = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private SUCSchedulePropertiesArgs(SUCSchedulePropertiesArgs $) {
+        this.advancedSchedule = $.advancedSchedule;
+        this.creationTime = $.creationTime;
+        this.description = $.description;
+        this.expiryTime = $.expiryTime;
+        this.expiryTimeOffsetMinutes = $.expiryTimeOffsetMinutes;
+        this.frequency = $.frequency;
+        this.interval = $.interval;
+        this.isEnabled = $.isEnabled;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.nextRun = $.nextRun;
+        this.nextRunOffsetMinutes = $.nextRunOffsetMinutes;
+        this.startTime = $.startTime;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SUCSchedulePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
-        private @Nullable Output<String> creationTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> expiryTime;
-        private @Nullable Output<Double> expiryTimeOffsetMinutes;
-        private @Nullable Output<Either<String,ScheduleFrequency>> frequency;
-        private @Nullable Output<Double> interval;
-        private @Nullable Output<Boolean> isEnabled;
-        private @Nullable Output<String> lastModifiedTime;
-        private @Nullable Output<String> nextRun;
-        private @Nullable Output<Double> nextRunOffsetMinutes;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<String> timeZone;
+        private SUCSchedulePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SUCSchedulePropertiesArgs();
         }
 
         public Builder(SUCSchedulePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedSchedule = defaults.advancedSchedule;
-    	      this.creationTime = defaults.creationTime;
-    	      this.description = defaults.description;
-    	      this.expiryTime = defaults.expiryTime;
-    	      this.expiryTimeOffsetMinutes = defaults.expiryTimeOffsetMinutes;
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.nextRun = defaults.nextRun;
-    	      this.nextRunOffsetMinutes = defaults.nextRunOffsetMinutes;
-    	      this.startTime = defaults.startTime;
-    	      this.timeZone = defaults.timeZone;
+            $ = new SUCSchedulePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedSchedule(@Nullable Output<AdvancedScheduleArgs> advancedSchedule) {
-            this.advancedSchedule = advancedSchedule;
+            $.advancedSchedule = advancedSchedule;
             return this;
         }
-        public Builder advancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
-            this.advancedSchedule = Codegen.ofNullable(advancedSchedule);
-            return this;
+
+        public Builder advancedSchedule(AdvancedScheduleArgs advancedSchedule) {
+            return advancedSchedule(Output.of(advancedSchedule));
         }
+
         public Builder creationTime(@Nullable Output<String> creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
-        public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Codegen.ofNullable(creationTime);
-            return this;
+
+        public Builder creationTime(String creationTime) {
+            return creationTime(Output.of(creationTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expiryTime(@Nullable Output<String> expiryTime) {
-            this.expiryTime = expiryTime;
+            $.expiryTime = expiryTime;
             return this;
         }
-        public Builder expiryTime(@Nullable String expiryTime) {
-            this.expiryTime = Codegen.ofNullable(expiryTime);
-            return this;
+
+        public Builder expiryTime(String expiryTime) {
+            return expiryTime(Output.of(expiryTime));
         }
+
         public Builder expiryTimeOffsetMinutes(@Nullable Output<Double> expiryTimeOffsetMinutes) {
-            this.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
+            $.expiryTimeOffsetMinutes = expiryTimeOffsetMinutes;
             return this;
         }
-        public Builder expiryTimeOffsetMinutes(@Nullable Double expiryTimeOffsetMinutes) {
-            this.expiryTimeOffsetMinutes = Codegen.ofNullable(expiryTimeOffsetMinutes);
-            return this;
+
+        public Builder expiryTimeOffsetMinutes(Double expiryTimeOffsetMinutes) {
+            return expiryTimeOffsetMinutes(Output.of(expiryTimeOffsetMinutes));
         }
+
         public Builder frequency(@Nullable Output<Either<String,ScheduleFrequency>> frequency) {
-            this.frequency = frequency;
+            $.frequency = frequency;
             return this;
         }
-        public Builder frequency(@Nullable Either<String,ScheduleFrequency> frequency) {
-            this.frequency = Codegen.ofNullable(frequency);
-            return this;
+
+        public Builder frequency(Either<String,ScheduleFrequency> frequency) {
+            return frequency(Output.of(frequency));
         }
+
         public Builder interval(@Nullable Output<Double> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Double interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(Double interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
-        public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Codegen.ofNullable(isEnabled);
-            return this;
+
+        public Builder isEnabled(Boolean isEnabled) {
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
-            this.lastModifiedTime = lastModifiedTime;
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
-        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = Codegen.ofNullable(lastModifiedTime);
-            return this;
+
+        public Builder lastModifiedTime(String lastModifiedTime) {
+            return lastModifiedTime(Output.of(lastModifiedTime));
         }
+
         public Builder nextRun(@Nullable Output<String> nextRun) {
-            this.nextRun = nextRun;
+            $.nextRun = nextRun;
             return this;
         }
-        public Builder nextRun(@Nullable String nextRun) {
-            this.nextRun = Codegen.ofNullable(nextRun);
-            return this;
+
+        public Builder nextRun(String nextRun) {
+            return nextRun(Output.of(nextRun));
         }
+
         public Builder nextRunOffsetMinutes(@Nullable Output<Double> nextRunOffsetMinutes) {
-            this.nextRunOffsetMinutes = nextRunOffsetMinutes;
+            $.nextRunOffsetMinutes = nextRunOffsetMinutes;
             return this;
         }
-        public Builder nextRunOffsetMinutes(@Nullable Double nextRunOffsetMinutes) {
-            this.nextRunOffsetMinutes = Codegen.ofNullable(nextRunOffsetMinutes);
-            return this;
+
+        public Builder nextRunOffsetMinutes(Double nextRunOffsetMinutes) {
+            return nextRunOffsetMinutes(Output.of(nextRunOffsetMinutes));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
-        }        public SUCSchedulePropertiesArgs build() {
-            return new SUCSchedulePropertiesArgs(advancedSchedule, creationTime, description, expiryTime, expiryTimeOffsetMinutes, frequency, interval, isEnabled, lastModifiedTime, nextRun, nextRunOffsetMinutes, startTime, timeZone);
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
+        }
+
+        public SUCSchedulePropertiesArgs build() {
+            $.isEnabled = Codegen.booleanProp("isEnabled").output().arg($.isEnabled).def(false).getNullable();
+            return $;
         }
     }
+
 }

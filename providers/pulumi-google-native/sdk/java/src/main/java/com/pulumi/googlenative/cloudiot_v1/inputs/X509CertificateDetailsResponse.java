@@ -21,7 +21,7 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="expiryTime", required=true)
-      private final String expiryTime;
+    private String expiryTime;
 
     public String expiryTime() {
         return this.expiryTime;
@@ -32,7 +32,7 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -43,7 +43,7 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="publicKeyType", required=true)
-      private final String publicKeyType;
+    private String publicKeyType;
 
     public String publicKeyType() {
         return this.publicKeyType;
@@ -54,7 +54,7 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="signatureAlgorithm", required=true)
-      private final String signatureAlgorithm;
+    private String signatureAlgorithm;
 
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
@@ -65,7 +65,7 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -76,91 +76,80 @@ public final class X509CertificateDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="subject", required=true)
-      private final String subject;
+    private String subject;
 
     public String subject() {
         return this.subject;
     }
 
-    public X509CertificateDetailsResponse(
-        String expiryTime,
-        String issuer,
-        String publicKeyType,
-        String signatureAlgorithm,
-        String startTime,
-        String subject) {
-        this.expiryTime = Objects.requireNonNull(expiryTime, "expected parameter 'expiryTime' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.publicKeyType = Objects.requireNonNull(publicKeyType, "expected parameter 'publicKeyType' to be non-null");
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-    }
+    private X509CertificateDetailsResponse() {}
 
-    private X509CertificateDetailsResponse() {
-        this.expiryTime = null;
-        this.issuer = null;
-        this.publicKeyType = null;
-        this.signatureAlgorithm = null;
-        this.startTime = null;
-        this.subject = null;
+    private X509CertificateDetailsResponse(X509CertificateDetailsResponse $) {
+        this.expiryTime = $.expiryTime;
+        this.issuer = $.issuer;
+        this.publicKeyType = $.publicKeyType;
+        this.signatureAlgorithm = $.signatureAlgorithm;
+        this.startTime = $.startTime;
+        this.subject = $.subject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X509CertificateDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expiryTime;
-        private String issuer;
-        private String publicKeyType;
-        private String signatureAlgorithm;
-        private String startTime;
-        private String subject;
+        private X509CertificateDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X509CertificateDetailsResponse();
         }
 
         public Builder(X509CertificateDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiryTime = defaults.expiryTime;
-    	      this.issuer = defaults.issuer;
-    	      this.publicKeyType = defaults.publicKeyType;
-    	      this.signatureAlgorithm = defaults.signatureAlgorithm;
-    	      this.startTime = defaults.startTime;
-    	      this.subject = defaults.subject;
+            $ = new X509CertificateDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expiryTime(String expiryTime) {
-            this.expiryTime = Objects.requireNonNull(expiryTime);
+            $.expiryTime = expiryTime;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder publicKeyType(String publicKeyType) {
-            this.publicKeyType = Objects.requireNonNull(publicKeyType);
+            $.publicKeyType = publicKeyType;
             return this;
         }
+
         public Builder signatureAlgorithm(String signatureAlgorithm) {
-            this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+            $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder subject(String subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
-        }        public X509CertificateDetailsResponse build() {
-            return new X509CertificateDetailsResponse(expiryTime, issuer, publicKeyType, signatureAlgorithm, startTime, subject);
+        }
+
+        public X509CertificateDetailsResponse build() {
+            $.expiryTime = Objects.requireNonNull($.expiryTime, "expected parameter 'expiryTime' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.publicKeyType = Objects.requireNonNull($.publicKeyType, "expected parameter 'publicKeyType' to be non-null");
+            $.signatureAlgorithm = Objects.requireNonNull($.signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            return $;
         }
     }
+
 }

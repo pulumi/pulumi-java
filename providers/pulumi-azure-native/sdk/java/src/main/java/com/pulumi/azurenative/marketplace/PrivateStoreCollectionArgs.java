@@ -5,11 +5,11 @@ package com.pulumi.azurenative.marketplace;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allSubscriptions")
-      private final @Nullable Output<Boolean> allSubscriptions;
+    private @Nullable Output<Boolean> allSubscriptions;
 
-    public Output<Boolean> allSubscriptions() {
-        return this.allSubscriptions == null ? Codegen.empty() : this.allSubscriptions;
+    public Optional<Output<Boolean>> allSubscriptions() {
+        return Optional.ofNullable(this.allSubscriptions);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="claim")
-      private final @Nullable Output<String> claim;
+    private @Nullable Output<String> claim;
 
-    public Output<String> claim() {
-        return this.claim == null ? Codegen.empty() : this.claim;
+    public Optional<Output<String>> claim() {
+        return Optional.ofNullable(this.claim);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="collectionId")
-      private final @Nullable Output<String> collectionId;
+    private @Nullable Output<String> collectionId;
 
-    public Output<String> collectionId() {
-        return this.collectionId == null ? Codegen.empty() : this.collectionId;
+    public Optional<Output<String>> collectionId() {
+        return Optional.ofNullable(this.collectionId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="collectionName")
-      private final @Nullable Output<String> collectionName;
+    private @Nullable Output<String> collectionName;
 
-    public Output<String> collectionName() {
-        return this.collectionName == null ? Codegen.empty() : this.collectionName;
+    public Optional<Output<String>> collectionName() {
+        return Optional.ofNullable(this.collectionName);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="privateStoreId", required=true)
-      private final Output<String> privateStoreId;
+    private Output<String> privateStoreId;
 
     public Output<String> privateStoreId() {
         return this.privateStoreId;
@@ -88,131 +88,113 @@ public final class PrivateStoreCollectionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="subscriptionsList")
-      private final @Nullable Output<List<String>> subscriptionsList;
+    private @Nullable Output<List<String>> subscriptionsList;
 
-    public Output<List<String>> subscriptionsList() {
-        return this.subscriptionsList == null ? Codegen.empty() : this.subscriptionsList;
+    public Optional<Output<List<String>>> subscriptionsList() {
+        return Optional.ofNullable(this.subscriptionsList);
     }
 
-    public PrivateStoreCollectionArgs(
-        @Nullable Output<Boolean> allSubscriptions,
-        @Nullable Output<String> claim,
-        @Nullable Output<String> collectionId,
-        @Nullable Output<String> collectionName,
-        @Nullable Output<Boolean> enabled,
-        Output<String> privateStoreId,
-        @Nullable Output<List<String>> subscriptionsList) {
-        this.allSubscriptions = allSubscriptions;
-        this.claim = claim;
-        this.collectionId = collectionId;
-        this.collectionName = collectionName;
-        this.enabled = enabled;
-        this.privateStoreId = Objects.requireNonNull(privateStoreId, "expected parameter 'privateStoreId' to be non-null");
-        this.subscriptionsList = subscriptionsList;
-    }
+    private PrivateStoreCollectionArgs() {}
 
-    private PrivateStoreCollectionArgs() {
-        this.allSubscriptions = Codegen.empty();
-        this.claim = Codegen.empty();
-        this.collectionId = Codegen.empty();
-        this.collectionName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.privateStoreId = Codegen.empty();
-        this.subscriptionsList = Codegen.empty();
+    private PrivateStoreCollectionArgs(PrivateStoreCollectionArgs $) {
+        this.allSubscriptions = $.allSubscriptions;
+        this.claim = $.claim;
+        this.collectionId = $.collectionId;
+        this.collectionName = $.collectionName;
+        this.enabled = $.enabled;
+        this.privateStoreId = $.privateStoreId;
+        this.subscriptionsList = $.subscriptionsList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateStoreCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allSubscriptions;
-        private @Nullable Output<String> claim;
-        private @Nullable Output<String> collectionId;
-        private @Nullable Output<String> collectionName;
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> privateStoreId;
-        private @Nullable Output<List<String>> subscriptionsList;
+        private PrivateStoreCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateStoreCollectionArgs();
         }
 
         public Builder(PrivateStoreCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allSubscriptions = defaults.allSubscriptions;
-    	      this.claim = defaults.claim;
-    	      this.collectionId = defaults.collectionId;
-    	      this.collectionName = defaults.collectionName;
-    	      this.enabled = defaults.enabled;
-    	      this.privateStoreId = defaults.privateStoreId;
-    	      this.subscriptionsList = defaults.subscriptionsList;
+            $ = new PrivateStoreCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allSubscriptions(@Nullable Output<Boolean> allSubscriptions) {
-            this.allSubscriptions = allSubscriptions;
+            $.allSubscriptions = allSubscriptions;
             return this;
         }
-        public Builder allSubscriptions(@Nullable Boolean allSubscriptions) {
-            this.allSubscriptions = Codegen.ofNullable(allSubscriptions);
-            return this;
+
+        public Builder allSubscriptions(Boolean allSubscriptions) {
+            return allSubscriptions(Output.of(allSubscriptions));
         }
+
         public Builder claim(@Nullable Output<String> claim) {
-            this.claim = claim;
+            $.claim = claim;
             return this;
         }
-        public Builder claim(@Nullable String claim) {
-            this.claim = Codegen.ofNullable(claim);
-            return this;
+
+        public Builder claim(String claim) {
+            return claim(Output.of(claim));
         }
+
         public Builder collectionId(@Nullable Output<String> collectionId) {
-            this.collectionId = collectionId;
+            $.collectionId = collectionId;
             return this;
         }
-        public Builder collectionId(@Nullable String collectionId) {
-            this.collectionId = Codegen.ofNullable(collectionId);
-            return this;
+
+        public Builder collectionId(String collectionId) {
+            return collectionId(Output.of(collectionId));
         }
+
         public Builder collectionName(@Nullable Output<String> collectionName) {
-            this.collectionName = collectionName;
+            $.collectionName = collectionName;
             return this;
         }
-        public Builder collectionName(@Nullable String collectionName) {
-            this.collectionName = Codegen.ofNullable(collectionName);
-            return this;
+
+        public Builder collectionName(String collectionName) {
+            return collectionName(Output.of(collectionName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder privateStoreId(Output<String> privateStoreId) {
-            this.privateStoreId = Objects.requireNonNull(privateStoreId);
+            $.privateStoreId = privateStoreId;
             return this;
         }
+
         public Builder privateStoreId(String privateStoreId) {
-            this.privateStoreId = Output.of(Objects.requireNonNull(privateStoreId));
-            return this;
+            return privateStoreId(Output.of(privateStoreId));
         }
+
         public Builder subscriptionsList(@Nullable Output<List<String>> subscriptionsList) {
-            this.subscriptionsList = subscriptionsList;
+            $.subscriptionsList = subscriptionsList;
             return this;
         }
-        public Builder subscriptionsList(@Nullable List<String> subscriptionsList) {
-            this.subscriptionsList = Codegen.ofNullable(subscriptionsList);
-            return this;
+
+        public Builder subscriptionsList(List<String> subscriptionsList) {
+            return subscriptionsList(Output.of(subscriptionsList));
         }
+
         public Builder subscriptionsList(String... subscriptionsList) {
             return subscriptionsList(List.of(subscriptionsList));
-        }        public PrivateStoreCollectionArgs build() {
-            return new PrivateStoreCollectionArgs(allSubscriptions, claim, collectionId, collectionName, enabled, privateStoreId, subscriptionsList);
+        }
+
+        public PrivateStoreCollectionArgs build() {
+            $.privateStoreId = Objects.requireNonNull($.privateStoreId, "expected parameter 'privateStoreId' to be non-null");
+            return $;
         }
     }
+
 }

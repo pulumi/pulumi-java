@@ -21,7 +21,7 @@ public final class VaultCertificateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="certificateStore", required=true)
-      private final String certificateStore;
+    private String certificateStore;
 
     public String certificateStore() {
         return this.certificateStore;
@@ -32,55 +32,52 @@ public final class VaultCertificateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="certificateUrl", required=true)
-      private final String certificateUrl;
+    private String certificateUrl;
 
     public String certificateUrl() {
         return this.certificateUrl;
     }
 
-    public VaultCertificateResponse(
-        String certificateStore,
-        String certificateUrl) {
-        this.certificateStore = Objects.requireNonNull(certificateStore, "expected parameter 'certificateStore' to be non-null");
-        this.certificateUrl = Objects.requireNonNull(certificateUrl, "expected parameter 'certificateUrl' to be non-null");
-    }
+    private VaultCertificateResponse() {}
 
-    private VaultCertificateResponse() {
-        this.certificateStore = null;
-        this.certificateUrl = null;
+    private VaultCertificateResponse(VaultCertificateResponse $) {
+        this.certificateStore = $.certificateStore;
+        this.certificateUrl = $.certificateUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateStore;
-        private String certificateUrl;
+        private VaultCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultCertificateResponse();
         }
 
         public Builder(VaultCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateStore = defaults.certificateStore;
-    	      this.certificateUrl = defaults.certificateUrl;
+            $ = new VaultCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateStore(String certificateStore) {
-            this.certificateStore = Objects.requireNonNull(certificateStore);
+            $.certificateStore = certificateStore;
             return this;
         }
+
         public Builder certificateUrl(String certificateUrl) {
-            this.certificateUrl = Objects.requireNonNull(certificateUrl);
+            $.certificateUrl = certificateUrl;
             return this;
-        }        public VaultCertificateResponse build() {
-            return new VaultCertificateResponse(certificateStore, certificateUrl);
+        }
+
+        public VaultCertificateResponse build() {
+            $.certificateStore = Objects.requireNonNull($.certificateStore, "expected parameter 'certificateStore' to be non-null");
+            $.certificateUrl = Objects.requireNonNull($.certificateUrl, "expected parameter 'certificateUrl' to be non-null");
+            return $;
         }
     }
+
 }

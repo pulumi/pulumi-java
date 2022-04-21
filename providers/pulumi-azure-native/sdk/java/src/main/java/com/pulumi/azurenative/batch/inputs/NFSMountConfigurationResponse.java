@@ -19,10 +19,10 @@ public final class NFSMountConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="mountOptions")
-      private final @Nullable String mountOptions;
+    private @Nullable String mountOptions;
 
     public Optional<String> mountOptions() {
-        return this.mountOptions == null ? Optional.empty() : Optional.ofNullable(this.mountOptions);
+        return Optional.ofNullable(this.mountOptions);
     }
 
     /**
@@ -30,71 +30,65 @@ public final class NFSMountConfigurationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="relativeMountPath", required=true)
-      private final String relativeMountPath;
+    private String relativeMountPath;
 
     public String relativeMountPath() {
         return this.relativeMountPath;
     }
 
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
     }
 
-    public NFSMountConfigurationResponse(
-        @Nullable String mountOptions,
-        String relativeMountPath,
-        String source) {
-        this.mountOptions = mountOptions;
-        this.relativeMountPath = Objects.requireNonNull(relativeMountPath, "expected parameter 'relativeMountPath' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private NFSMountConfigurationResponse() {}
 
-    private NFSMountConfigurationResponse() {
-        this.mountOptions = null;
-        this.relativeMountPath = null;
-        this.source = null;
+    private NFSMountConfigurationResponse(NFSMountConfigurationResponse $) {
+        this.mountOptions = $.mountOptions;
+        this.relativeMountPath = $.relativeMountPath;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NFSMountConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String mountOptions;
-        private String relativeMountPath;
-        private String source;
+        private NFSMountConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NFSMountConfigurationResponse();
         }
 
         public Builder(NFSMountConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.relativeMountPath = defaults.relativeMountPath;
-    	      this.source = defaults.source;
+            $ = new NFSMountConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mountOptions(@Nullable String mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
+
         public Builder relativeMountPath(String relativeMountPath) {
-            this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
+            $.relativeMountPath = relativeMountPath;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
-        }        public NFSMountConfigurationResponse build() {
-            return new NFSMountConfigurationResponse(mountOptions, relativeMountPath, source);
+        }
+
+        public NFSMountConfigurationResponse build() {
+            $.relativeMountPath = Objects.requireNonNull($.relativeMountPath, "expected parameter 'relativeMountPath' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

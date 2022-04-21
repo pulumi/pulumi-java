@@ -17,7 +17,7 @@ public final class GetPipelineRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pipelineRunName", required=true)
-      private final String pipelineRunName;
+    private String pipelineRunName;
 
     public String pipelineRunName() {
         return this.pipelineRunName;
@@ -28,7 +28,7 @@ public final class GetPipelineRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -39,64 +39,59 @@ public final class GetPipelineRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPipelineRunArgs(
-        String pipelineRunName,
-        String registryName,
-        String resourceGroupName) {
-        this.pipelineRunName = Objects.requireNonNull(pipelineRunName, "expected parameter 'pipelineRunName' to be non-null");
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPipelineRunArgs() {}
 
-    private GetPipelineRunArgs() {
-        this.pipelineRunName = null;
-        this.registryName = null;
-        this.resourceGroupName = null;
+    private GetPipelineRunArgs(GetPipelineRunArgs $) {
+        this.pipelineRunName = $.pipelineRunName;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pipelineRunName;
-        private String registryName;
-        private String resourceGroupName;
+        private GetPipelineRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineRunArgs();
         }
 
         public Builder(GetPipelineRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineRunName = defaults.pipelineRunName;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPipelineRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineRunName(String pipelineRunName) {
-            this.pipelineRunName = Objects.requireNonNull(pipelineRunName);
+            $.pipelineRunName = pipelineRunName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPipelineRunArgs build() {
-            return new GetPipelineRunArgs(pipelineRunName, registryName, resourceGroupName);
+        }
+
+        public GetPipelineRunArgs build() {
+            $.pipelineRunName = Objects.requireNonNull($.pipelineRunName, "expected parameter 'pipelineRunName' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

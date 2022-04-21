@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lightsail;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class StaticIpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attachedTo")
-      private final @Nullable Output<String> attachedTo;
+    private @Nullable Output<String> attachedTo;
 
-    public Output<String> attachedTo() {
-        return this.attachedTo == null ? Codegen.empty() : this.attachedTo;
+    public Optional<Output<String>> attachedTo() {
+        return Optional.ofNullable(this.attachedTo);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class StaticIpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="staticIpName")
-      private final @Nullable Output<String> staticIpName;
+    private @Nullable Output<String> staticIpName;
 
-    public Output<String> staticIpName() {
-        return this.staticIpName == null ? Codegen.empty() : this.staticIpName;
+    public Optional<Output<String>> staticIpName() {
+        return Optional.ofNullable(this.staticIpName);
     }
 
-    public StaticIpArgs(
-        @Nullable Output<String> attachedTo,
-        @Nullable Output<String> staticIpName) {
-        this.attachedTo = attachedTo;
-        this.staticIpName = staticIpName;
-    }
+    private StaticIpArgs() {}
 
-    private StaticIpArgs() {
-        this.attachedTo = Codegen.empty();
-        this.staticIpName = Codegen.empty();
+    private StaticIpArgs(StaticIpArgs $) {
+        this.attachedTo = $.attachedTo;
+        this.staticIpName = $.staticIpName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticIpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attachedTo;
-        private @Nullable Output<String> staticIpName;
+        private StaticIpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticIpArgs();
         }
 
         public Builder(StaticIpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachedTo = defaults.attachedTo;
-    	      this.staticIpName = defaults.staticIpName;
+            $ = new StaticIpArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachedTo(@Nullable Output<String> attachedTo) {
-            this.attachedTo = attachedTo;
+            $.attachedTo = attachedTo;
             return this;
         }
-        public Builder attachedTo(@Nullable String attachedTo) {
-            this.attachedTo = Codegen.ofNullable(attachedTo);
-            return this;
+
+        public Builder attachedTo(String attachedTo) {
+            return attachedTo(Output.of(attachedTo));
         }
+
         public Builder staticIpName(@Nullable Output<String> staticIpName) {
-            this.staticIpName = staticIpName;
+            $.staticIpName = staticIpName;
             return this;
         }
-        public Builder staticIpName(@Nullable String staticIpName) {
-            this.staticIpName = Codegen.ofNullable(staticIpName);
-            return this;
-        }        public StaticIpArgs build() {
-            return new StaticIpArgs(attachedTo, staticIpName);
+
+        public Builder staticIpName(String staticIpName) {
+            return staticIpName(Output.of(staticIpName));
+        }
+
+        public StaticIpArgs build() {
+            return $;
         }
     }
+
 }

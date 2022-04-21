@@ -23,7 +23,7 @@ public final class AzurePlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skuDescription", required=true)
-      private final String skuDescription;
+    private String skuDescription;
 
     public String skuDescription() {
         return this.skuDescription;
@@ -34,55 +34,51 @@ public final class AzurePlanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skuId")
-      private final @Nullable String skuId;
+    private @Nullable String skuId;
 
     public Optional<String> skuId() {
-        return this.skuId == null ? Optional.empty() : Optional.ofNullable(this.skuId);
+        return Optional.ofNullable(this.skuId);
     }
 
-    public AzurePlanResponse(
-        String skuDescription,
-        @Nullable String skuId) {
-        this.skuDescription = Objects.requireNonNull(skuDescription, "expected parameter 'skuDescription' to be non-null");
-        this.skuId = skuId;
-    }
+    private AzurePlanResponse() {}
 
-    private AzurePlanResponse() {
-        this.skuDescription = null;
-        this.skuId = null;
+    private AzurePlanResponse(AzurePlanResponse $) {
+        this.skuDescription = $.skuDescription;
+        this.skuId = $.skuId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzurePlanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String skuDescription;
-        private @Nullable String skuId;
+        private AzurePlanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzurePlanResponse();
         }
 
         public Builder(AzurePlanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.skuDescription = defaults.skuDescription;
-    	      this.skuId = defaults.skuId;
+            $ = new AzurePlanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder skuDescription(String skuDescription) {
-            this.skuDescription = Objects.requireNonNull(skuDescription);
+            $.skuDescription = skuDescription;
             return this;
         }
+
         public Builder skuId(@Nullable String skuId) {
-            this.skuId = skuId;
+            $.skuId = skuId;
             return this;
-        }        public AzurePlanResponse build() {
-            return new AzurePlanResponse(skuDescription, skuId);
+        }
+
+        public AzurePlanResponse build() {
+            $.skuDescription = Objects.requireNonNull($.skuDescription, "expected parameter 'skuDescription' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetClusterArgs Empty = new GetClusterArgs();
 
     @Import(name="clusterId", required=true)
-      private final String clusterId;
+    private String clusterId;
 
     public String clusterId() {
         return this.clusterId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetClusterArgs(
-        String clusterId,
-        String location,
-        @Nullable String project) {
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetClusterArgs() {}
 
-    private GetClusterArgs() {
-        this.clusterId = null;
-        this.location = null;
-        this.project = null;
+    private GetClusterArgs(GetClusterArgs $) {
+        this.clusterId = $.clusterId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterId;
-        private String location;
-        private @Nullable String project;
+        private GetClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterArgs();
         }
 
         public Builder(GetClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetClusterArgs build() {
-            return new GetClusterArgs(clusterId, location, project);
+        }
+
+        public GetClusterArgs build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

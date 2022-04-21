@@ -23,10 +23,10 @@ public final class DetectorModelAssetPropertyTimestamp extends com.pulumi.resour
      * 
      */
     @Import(name="offsetInNanos")
-      private final @Nullable String offsetInNanos;
+    private @Nullable String offsetInNanos;
 
     public Optional<String> offsetInNanos() {
-        return this.offsetInNanos == null ? Optional.empty() : Optional.ofNullable(this.offsetInNanos);
+        return Optional.ofNullable(this.offsetInNanos);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class DetectorModelAssetPropertyTimestamp extends com.pulumi.resour
      * 
      */
     @Import(name="timeInSeconds", required=true)
-      private final String timeInSeconds;
+    private String timeInSeconds;
 
     public String timeInSeconds() {
         return this.timeInSeconds;
     }
 
-    public DetectorModelAssetPropertyTimestamp(
-        @Nullable String offsetInNanos,
-        String timeInSeconds) {
-        this.offsetInNanos = offsetInNanos;
-        this.timeInSeconds = Objects.requireNonNull(timeInSeconds, "expected parameter 'timeInSeconds' to be non-null");
-    }
+    private DetectorModelAssetPropertyTimestamp() {}
 
-    private DetectorModelAssetPropertyTimestamp() {
-        this.offsetInNanos = null;
-        this.timeInSeconds = null;
+    private DetectorModelAssetPropertyTimestamp(DetectorModelAssetPropertyTimestamp $) {
+        this.offsetInNanos = $.offsetInNanos;
+        this.timeInSeconds = $.timeInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelAssetPropertyTimestamp defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String offsetInNanos;
-        private String timeInSeconds;
+        private DetectorModelAssetPropertyTimestamp $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelAssetPropertyTimestamp();
         }
 
         public Builder(DetectorModelAssetPropertyTimestamp defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offsetInNanos = defaults.offsetInNanos;
-    	      this.timeInSeconds = defaults.timeInSeconds;
+            $ = new DetectorModelAssetPropertyTimestamp(Objects.requireNonNull(defaults));
         }
 
         public Builder offsetInNanos(@Nullable String offsetInNanos) {
-            this.offsetInNanos = offsetInNanos;
+            $.offsetInNanos = offsetInNanos;
             return this;
         }
+
         public Builder timeInSeconds(String timeInSeconds) {
-            this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
+            $.timeInSeconds = timeInSeconds;
             return this;
-        }        public DetectorModelAssetPropertyTimestamp build() {
-            return new DetectorModelAssetPropertyTimestamp(offsetInNanos, timeInSeconds);
+        }
+
+        public DetectorModelAssetPropertyTimestamp build() {
+            $.timeInSeconds = Objects.requireNonNull($.timeInSeconds, "expected parameter 'timeInSeconds' to be non-null");
+            return $;
         }
     }
+
 }

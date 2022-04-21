@@ -26,10 +26,10 @@ public final class CorsSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="allowedOrigins")
-      private final @Nullable List<String> allowedOrigins;
+    private @Nullable List<String> allowedOrigins;
 
-    public List<String> allowedOrigins() {
-        return this.allowedOrigins == null ? List.of() : this.allowedOrigins;
+    public Optional<List<String>> allowedOrigins() {
+        return Optional.ofNullable(this.allowedOrigins);
     }
 
     /**
@@ -39,58 +39,54 @@ public final class CorsSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="supportCredentials")
-      private final @Nullable Boolean supportCredentials;
+    private @Nullable Boolean supportCredentials;
 
     public Optional<Boolean> supportCredentials() {
-        return this.supportCredentials == null ? Optional.empty() : Optional.ofNullable(this.supportCredentials);
+        return Optional.ofNullable(this.supportCredentials);
     }
 
-    public CorsSettingsResponse(
-        @Nullable List<String> allowedOrigins,
-        @Nullable Boolean supportCredentials) {
-        this.allowedOrigins = allowedOrigins;
-        this.supportCredentials = supportCredentials;
-    }
+    private CorsSettingsResponse() {}
 
-    private CorsSettingsResponse() {
-        this.allowedOrigins = List.of();
-        this.supportCredentials = null;
+    private CorsSettingsResponse(CorsSettingsResponse $) {
+        this.allowedOrigins = $.allowedOrigins;
+        this.supportCredentials = $.supportCredentials;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CorsSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedOrigins;
-        private @Nullable Boolean supportCredentials;
+        private CorsSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CorsSettingsResponse();
         }
 
         public Builder(CorsSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedOrigins = defaults.allowedOrigins;
-    	      this.supportCredentials = defaults.supportCredentials;
+            $ = new CorsSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
-            this.allowedOrigins = allowedOrigins;
+            $.allowedOrigins = allowedOrigins;
             return this;
         }
+
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
+
         public Builder supportCredentials(@Nullable Boolean supportCredentials) {
-            this.supportCredentials = supportCredentials;
+            $.supportCredentials = supportCredentials;
             return this;
-        }        public CorsSettingsResponse build() {
-            return new CorsSettingsResponse(allowedOrigins, supportCredentials);
+        }
+
+        public CorsSettingsResponse build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class MonitoringScheduleVpcConfig extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="securityGroupIds", required=true)
-      private final List<String> securityGroupIds;
+    private List<String> securityGroupIds;
 
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
@@ -33,61 +33,60 @@ public final class MonitoringScheduleVpcConfig extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="subnets", required=true)
-      private final List<String> subnets;
+    private List<String> subnets;
 
     public List<String> subnets() {
         return this.subnets;
     }
 
-    public MonitoringScheduleVpcConfig(
-        List<String> securityGroupIds,
-        List<String> subnets) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnets = Objects.requireNonNull(subnets, "expected parameter 'subnets' to be non-null");
-    }
+    private MonitoringScheduleVpcConfig() {}
 
-    private MonitoringScheduleVpcConfig() {
-        this.securityGroupIds = List.of();
-        this.subnets = List.of();
+    private MonitoringScheduleVpcConfig(MonitoringScheduleVpcConfig $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnets = $.subnets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleVpcConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> securityGroupIds;
-        private List<String> subnets;
+        private MonitoringScheduleVpcConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleVpcConfig();
         }
 
         public Builder(MonitoringScheduleVpcConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnets = defaults.subnets;
+            $ = new MonitoringScheduleVpcConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnets(List<String> subnets) {
-            this.subnets = Objects.requireNonNull(subnets);
+            $.subnets = subnets;
             return this;
         }
+
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
-        }        public MonitoringScheduleVpcConfig build() {
-            return new MonitoringScheduleVpcConfig(securityGroupIds, subnets);
+        }
+
+        public MonitoringScheduleVpcConfig build() {
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnets = Objects.requireNonNull($.subnets, "expected parameter 'subnets' to be non-null");
+            return $;
         }
     }
+
 }

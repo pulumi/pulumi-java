@@ -23,45 +23,44 @@ public final class LiveEventInputAccessControlResponse extends com.pulumi.resour
      * 
      */
     @Import(name="ip")
-      private final @Nullable IPAccessControlResponse ip;
+    private @Nullable IPAccessControlResponse ip;
 
     public Optional<IPAccessControlResponse> ip() {
-        return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
+        return Optional.ofNullable(this.ip);
     }
 
-    public LiveEventInputAccessControlResponse(@Nullable IPAccessControlResponse ip) {
-        this.ip = ip;
-    }
+    private LiveEventInputAccessControlResponse() {}
 
-    private LiveEventInputAccessControlResponse() {
-        this.ip = null;
+    private LiveEventInputAccessControlResponse(LiveEventInputAccessControlResponse $) {
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventInputAccessControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable IPAccessControlResponse ip;
+        private LiveEventInputAccessControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventInputAccessControlResponse();
         }
 
         public Builder(LiveEventInputAccessControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
+            $ = new LiveEventInputAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable IPAccessControlResponse ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
-        }        public LiveEventInputAccessControlResponse build() {
-            return new LiveEventInputAccessControlResponse(ip);
+        }
+
+        public LiveEventInputAccessControlResponse build() {
+            return $;
         }
     }
+
 }

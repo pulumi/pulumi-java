@@ -7,7 +7,6 @@ import com.pulumi.azurenative.sql.enums.PrivateLinkServiceConnectionStateStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -32,63 +31,60 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
      * 
      */
     @Import(name="status", required=true)
-      private final Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
+    private Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
 
     public Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status() {
         return this.status;
     }
 
-    public PrivateLinkServiceConnectionStatePropertyArgs(
-        Output<String> description,
-        Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private PrivateLinkServiceConnectionStatePropertyArgs() {}
 
-    private PrivateLinkServiceConnectionStatePropertyArgs() {
-        this.description = Codegen.empty();
-        this.status = Codegen.empty();
+    private PrivateLinkServiceConnectionStatePropertyArgs(PrivateLinkServiceConnectionStatePropertyArgs $) {
+        this.description = $.description;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceConnectionStatePropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> description;
-        private Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
+        private PrivateLinkServiceConnectionStatePropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceConnectionStatePropertyArgs();
         }
 
         public Builder(PrivateLinkServiceConnectionStatePropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.status = defaults.status;
+            $ = new PrivateLinkServiceConnectionStatePropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder status(Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(Either<String,PrivateLinkServiceConnectionStateStatus> status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public PrivateLinkServiceConnectionStatePropertyArgs build() {
-            return new PrivateLinkServiceConnectionStatePropertyArgs(description, status);
+            return status(Output.of(status));
+        }
+
+        public PrivateLinkServiceConnectionStatePropertyArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

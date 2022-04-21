@@ -24,10 +24,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backendHostHeader")
-      private final @Nullable String backendHostHeader;
+    private @Nullable String backendHostHeader;
 
     public Optional<String> backendHostHeader() {
-        return this.backendHostHeader == null ? Optional.empty() : Optional.ofNullable(this.backendHostHeader);
+        return Optional.ofNullable(this.backendHostHeader);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpPort")
-      private final @Nullable Integer httpPort;
+    private @Nullable Integer httpPort;
 
     public Optional<Integer> httpPort() {
-        return this.httpPort == null ? Optional.empty() : Optional.ofNullable(this.httpPort);
+        return Optional.ofNullable(this.httpPort);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpsPort")
-      private final @Nullable Integer httpsPort;
+    private @Nullable Integer httpsPort;
 
     public Optional<Integer> httpsPort() {
-        return this.httpsPort == null ? Optional.empty() : Optional.ofNullable(this.httpsPort);
+        return Optional.ofNullable(this.httpsPort);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateEndpointStatus", required=true)
-      private final String privateEndpointStatus;
+    private String privateEndpointStatus;
 
     public String privateEndpointStatus() {
         return this.privateEndpointStatus;
@@ -101,10 +101,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateLinkAlias")
-      private final @Nullable String privateLinkAlias;
+    private @Nullable String privateLinkAlias;
 
     public Optional<String> privateLinkAlias() {
-        return this.privateLinkAlias == null ? Optional.empty() : Optional.ofNullable(this.privateLinkAlias);
+        return Optional.ofNullable(this.privateLinkAlias);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateLinkApprovalMessage")
-      private final @Nullable String privateLinkApprovalMessage;
+    private @Nullable String privateLinkApprovalMessage;
 
     public Optional<String> privateLinkApprovalMessage() {
-        return this.privateLinkApprovalMessage == null ? Optional.empty() : Optional.ofNullable(this.privateLinkApprovalMessage);
+        return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateLinkLocation")
-      private final @Nullable String privateLinkLocation;
+    private @Nullable String privateLinkLocation;
 
     public Optional<String> privateLinkLocation() {
-        return this.privateLinkLocation == null ? Optional.empty() : Optional.ofNullable(this.privateLinkLocation);
+        return Optional.ofNullable(this.privateLinkLocation);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable String privateLinkResourceId;
+    private @Nullable String privateLinkResourceId;
 
     public Optional<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
     /**
@@ -145,145 +145,111 @@ public final class BackendResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="weight")
-      private final @Nullable Integer weight;
+    private @Nullable Integer weight;
 
     public Optional<Integer> weight() {
-        return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
+        return Optional.ofNullable(this.weight);
     }
 
-    public BackendResponse(
-        @Nullable String address,
-        @Nullable String backendHostHeader,
-        @Nullable String enabledState,
-        @Nullable Integer httpPort,
-        @Nullable Integer httpsPort,
-        @Nullable Integer priority,
-        String privateEndpointStatus,
-        @Nullable String privateLinkAlias,
-        @Nullable String privateLinkApprovalMessage,
-        @Nullable String privateLinkLocation,
-        @Nullable String privateLinkResourceId,
-        @Nullable Integer weight) {
-        this.address = address;
-        this.backendHostHeader = backendHostHeader;
-        this.enabledState = enabledState;
-        this.httpPort = httpPort;
-        this.httpsPort = httpsPort;
-        this.priority = priority;
-        this.privateEndpointStatus = Objects.requireNonNull(privateEndpointStatus, "expected parameter 'privateEndpointStatus' to be non-null");
-        this.privateLinkAlias = privateLinkAlias;
-        this.privateLinkApprovalMessage = privateLinkApprovalMessage;
-        this.privateLinkLocation = privateLinkLocation;
-        this.privateLinkResourceId = privateLinkResourceId;
-        this.weight = weight;
-    }
+    private BackendResponse() {}
 
-    private BackendResponse() {
-        this.address = null;
-        this.backendHostHeader = null;
-        this.enabledState = null;
-        this.httpPort = null;
-        this.httpsPort = null;
-        this.priority = null;
-        this.privateEndpointStatus = null;
-        this.privateLinkAlias = null;
-        this.privateLinkApprovalMessage = null;
-        this.privateLinkLocation = null;
-        this.privateLinkResourceId = null;
-        this.weight = null;
+    private BackendResponse(BackendResponse $) {
+        this.address = $.address;
+        this.backendHostHeader = $.backendHostHeader;
+        this.enabledState = $.enabledState;
+        this.httpPort = $.httpPort;
+        this.httpsPort = $.httpsPort;
+        this.priority = $.priority;
+        this.privateEndpointStatus = $.privateEndpointStatus;
+        this.privateLinkAlias = $.privateLinkAlias;
+        this.privateLinkApprovalMessage = $.privateLinkApprovalMessage;
+        this.privateLinkLocation = $.privateLinkLocation;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable String backendHostHeader;
-        private @Nullable String enabledState;
-        private @Nullable Integer httpPort;
-        private @Nullable Integer httpsPort;
-        private @Nullable Integer priority;
-        private String privateEndpointStatus;
-        private @Nullable String privateLinkAlias;
-        private @Nullable String privateLinkApprovalMessage;
-        private @Nullable String privateLinkLocation;
-        private @Nullable String privateLinkResourceId;
-        private @Nullable Integer weight;
+        private BackendResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendResponse();
         }
 
         public Builder(BackendResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.backendHostHeader = defaults.backendHostHeader;
-    	      this.enabledState = defaults.enabledState;
-    	      this.httpPort = defaults.httpPort;
-    	      this.httpsPort = defaults.httpsPort;
-    	      this.priority = defaults.priority;
-    	      this.privateEndpointStatus = defaults.privateEndpointStatus;
-    	      this.privateLinkAlias = defaults.privateLinkAlias;
-    	      this.privateLinkApprovalMessage = defaults.privateLinkApprovalMessage;
-    	      this.privateLinkLocation = defaults.privateLinkLocation;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.weight = defaults.weight;
+            $ = new BackendResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder backendHostHeader(@Nullable String backendHostHeader) {
-            this.backendHostHeader = backendHostHeader;
+            $.backendHostHeader = backendHostHeader;
             return this;
         }
+
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder httpPort(@Nullable Integer httpPort) {
-            this.httpPort = httpPort;
+            $.httpPort = httpPort;
             return this;
         }
+
         public Builder httpsPort(@Nullable Integer httpsPort) {
-            this.httpsPort = httpsPort;
+            $.httpsPort = httpsPort;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder privateEndpointStatus(String privateEndpointStatus) {
-            this.privateEndpointStatus = Objects.requireNonNull(privateEndpointStatus);
+            $.privateEndpointStatus = privateEndpointStatus;
             return this;
         }
+
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
-            this.privateLinkAlias = privateLinkAlias;
+            $.privateLinkAlias = privateLinkAlias;
             return this;
         }
+
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = privateLinkApprovalMessage;
+            $.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
+
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = privateLinkLocation;
+            $.privateLinkLocation = privateLinkLocation;
             return this;
         }
+
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
+
         public Builder weight(@Nullable Integer weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
-        }        public BackendResponse build() {
-            return new BackendResponse(address, backendHostHeader, enabledState, httpPort, httpsPort, priority, privateEndpointStatus, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
+        }
+
+        public BackendResponse build() {
+            $.privateEndpointStatus = Objects.requireNonNull($.privateEndpointStatus, "expected parameter 'privateEndpointStatus' to be non-null");
+            return $;
         }
     }
+
 }

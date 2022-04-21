@@ -5,10 +5,10 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class DistributionLambdaFunctionAssociationArgs extends com.pulumi.
     public static final DistributionLambdaFunctionAssociationArgs Empty = new DistributionLambdaFunctionAssociationArgs();
 
     @Import(name="eventType")
-      private final @Nullable Output<String> eventType;
+    private @Nullable Output<String> eventType;
 
-    public Output<String> eventType() {
-        return this.eventType == null ? Codegen.empty() : this.eventType;
+    public Optional<Output<String>> eventType() {
+        return Optional.ofNullable(this.eventType);
     }
 
     @Import(name="includeBody")
-      private final @Nullable Output<Boolean> includeBody;
+    private @Nullable Output<Boolean> includeBody;
 
-    public Output<Boolean> includeBody() {
-        return this.includeBody == null ? Codegen.empty() : this.includeBody;
+    public Optional<Output<Boolean>> includeBody() {
+        return Optional.ofNullable(this.includeBody);
     }
 
     @Import(name="lambdaFunctionARN")
-      private final @Nullable Output<String> lambdaFunctionARN;
+    private @Nullable Output<String> lambdaFunctionARN;
 
-    public Output<String> lambdaFunctionARN() {
-        return this.lambdaFunctionARN == null ? Codegen.empty() : this.lambdaFunctionARN;
+    public Optional<Output<String>> lambdaFunctionARN() {
+        return Optional.ofNullable(this.lambdaFunctionARN);
     }
 
-    public DistributionLambdaFunctionAssociationArgs(
-        @Nullable Output<String> eventType,
-        @Nullable Output<Boolean> includeBody,
-        @Nullable Output<String> lambdaFunctionARN) {
-        this.eventType = eventType;
-        this.includeBody = includeBody;
-        this.lambdaFunctionARN = lambdaFunctionARN;
-    }
+    private DistributionLambdaFunctionAssociationArgs() {}
 
-    private DistributionLambdaFunctionAssociationArgs() {
-        this.eventType = Codegen.empty();
-        this.includeBody = Codegen.empty();
-        this.lambdaFunctionARN = Codegen.empty();
+    private DistributionLambdaFunctionAssociationArgs(DistributionLambdaFunctionAssociationArgs $) {
+        this.eventType = $.eventType;
+        this.includeBody = $.includeBody;
+        this.lambdaFunctionARN = $.lambdaFunctionARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionLambdaFunctionAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eventType;
-        private @Nullable Output<Boolean> includeBody;
-        private @Nullable Output<String> lambdaFunctionARN;
+        private DistributionLambdaFunctionAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionLambdaFunctionAssociationArgs();
         }
 
         public Builder(DistributionLambdaFunctionAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
-    	      this.includeBody = defaults.includeBody;
-    	      this.lambdaFunctionARN = defaults.lambdaFunctionARN;
+            $ = new DistributionLambdaFunctionAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(@Nullable Output<String> eventType) {
-            this.eventType = eventType;
+            $.eventType = eventType;
             return this;
         }
-        public Builder eventType(@Nullable String eventType) {
-            this.eventType = Codegen.ofNullable(eventType);
-            return this;
+
+        public Builder eventType(String eventType) {
+            return eventType(Output.of(eventType));
         }
+
         public Builder includeBody(@Nullable Output<Boolean> includeBody) {
-            this.includeBody = includeBody;
+            $.includeBody = includeBody;
             return this;
         }
-        public Builder includeBody(@Nullable Boolean includeBody) {
-            this.includeBody = Codegen.ofNullable(includeBody);
-            return this;
+
+        public Builder includeBody(Boolean includeBody) {
+            return includeBody(Output.of(includeBody));
         }
+
         public Builder lambdaFunctionARN(@Nullable Output<String> lambdaFunctionARN) {
-            this.lambdaFunctionARN = lambdaFunctionARN;
+            $.lambdaFunctionARN = lambdaFunctionARN;
             return this;
         }
-        public Builder lambdaFunctionARN(@Nullable String lambdaFunctionARN) {
-            this.lambdaFunctionARN = Codegen.ofNullable(lambdaFunctionARN);
-            return this;
-        }        public DistributionLambdaFunctionAssociationArgs build() {
-            return new DistributionLambdaFunctionAssociationArgs(eventType, includeBody, lambdaFunctionARN);
+
+        public Builder lambdaFunctionARN(String lambdaFunctionARN) {
+            return lambdaFunctionARN(Output.of(lambdaFunctionARN));
+        }
+
+        public DistributionLambdaFunctionAssociationArgs build() {
+            return $;
         }
     }
+
 }

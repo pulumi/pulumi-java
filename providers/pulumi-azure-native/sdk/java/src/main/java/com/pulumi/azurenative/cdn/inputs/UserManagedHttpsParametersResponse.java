@@ -26,7 +26,7 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="certificateSource", required=true)
-      private final String certificateSource;
+    private String certificateSource;
 
     public String certificateSource() {
         return this.certificateSource;
@@ -37,7 +37,7 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="certificateSourceParameters", required=true)
-      private final KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
+    private KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
 
     public KeyVaultCertificateSourceParametersResponse certificateSourceParameters() {
         return this.certificateSourceParameters;
@@ -48,10 +48,10 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="minimumTlsVersion")
-      private final @Nullable String minimumTlsVersion;
+    private @Nullable String minimumTlsVersion;
 
     public Optional<String> minimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minimumTlsVersion);
+        return Optional.ofNullable(this.minimumTlsVersion);
     }
 
     /**
@@ -59,73 +59,65 @@ public final class UserManagedHttpsParametersResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="protocolType", required=true)
-      private final String protocolType;
+    private String protocolType;
 
     public String protocolType() {
         return this.protocolType;
     }
 
-    public UserManagedHttpsParametersResponse(
-        String certificateSource,
-        KeyVaultCertificateSourceParametersResponse certificateSourceParameters,
-        @Nullable String minimumTlsVersion,
-        String protocolType) {
-        this.certificateSource = Codegen.stringProp("certificateSource").arg(certificateSource).require();
-        this.certificateSourceParameters = Objects.requireNonNull(certificateSourceParameters, "expected parameter 'certificateSourceParameters' to be non-null");
-        this.minimumTlsVersion = minimumTlsVersion;
-        this.protocolType = Objects.requireNonNull(protocolType, "expected parameter 'protocolType' to be non-null");
-    }
+    private UserManagedHttpsParametersResponse() {}
 
-    private UserManagedHttpsParametersResponse() {
-        this.certificateSource = null;
-        this.certificateSourceParameters = null;
-        this.minimumTlsVersion = null;
-        this.protocolType = null;
+    private UserManagedHttpsParametersResponse(UserManagedHttpsParametersResponse $) {
+        this.certificateSource = $.certificateSource;
+        this.certificateSourceParameters = $.certificateSourceParameters;
+        this.minimumTlsVersion = $.minimumTlsVersion;
+        this.protocolType = $.protocolType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserManagedHttpsParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateSource;
-        private KeyVaultCertificateSourceParametersResponse certificateSourceParameters;
-        private @Nullable String minimumTlsVersion;
-        private String protocolType;
+        private UserManagedHttpsParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserManagedHttpsParametersResponse();
         }
 
         public Builder(UserManagedHttpsParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateSource = defaults.certificateSource;
-    	      this.certificateSourceParameters = defaults.certificateSourceParameters;
-    	      this.minimumTlsVersion = defaults.minimumTlsVersion;
-    	      this.protocolType = defaults.protocolType;
+            $ = new UserManagedHttpsParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateSource(String certificateSource) {
-            this.certificateSource = Objects.requireNonNull(certificateSource);
+            $.certificateSource = certificateSource;
             return this;
         }
+
         public Builder certificateSourceParameters(KeyVaultCertificateSourceParametersResponse certificateSourceParameters) {
-            this.certificateSourceParameters = Objects.requireNonNull(certificateSourceParameters);
+            $.certificateSourceParameters = certificateSourceParameters;
             return this;
         }
+
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
-            this.minimumTlsVersion = minimumTlsVersion;
+            $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
+
         public Builder protocolType(String protocolType) {
-            this.protocolType = Objects.requireNonNull(protocolType);
+            $.protocolType = protocolType;
             return this;
-        }        public UserManagedHttpsParametersResponse build() {
-            return new UserManagedHttpsParametersResponse(certificateSource, certificateSourceParameters, minimumTlsVersion, protocolType);
+        }
+
+        public UserManagedHttpsParametersResponse build() {
+            $.certificateSource = Codegen.stringProp("certificateSource").arg($.certificateSource).require();
+            $.certificateSourceParameters = Objects.requireNonNull($.certificateSourceParameters, "expected parameter 'certificateSourceParameters' to be non-null");
+            $.protocolType = Objects.requireNonNull($.protocolType, "expected parameter 'protocolType' to be non-null");
+            return $;
         }
     }
+
 }

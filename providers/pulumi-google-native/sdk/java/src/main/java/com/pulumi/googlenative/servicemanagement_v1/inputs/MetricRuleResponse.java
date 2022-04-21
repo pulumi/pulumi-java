@@ -22,7 +22,7 @@ public final class MetricRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metricCosts", required=true)
-      private final Map<String,String> metricCosts;
+    private Map<String,String> metricCosts;
 
     public Map<String,String> metricCosts() {
         return this.metricCosts;
@@ -33,55 +33,52 @@ public final class MetricRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
     }
 
-    public MetricRuleResponse(
-        Map<String,String> metricCosts,
-        String selector) {
-        this.metricCosts = Objects.requireNonNull(metricCosts, "expected parameter 'metricCosts' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-    }
+    private MetricRuleResponse() {}
 
-    private MetricRuleResponse() {
-        this.metricCosts = Map.of();
-        this.selector = null;
+    private MetricRuleResponse(MetricRuleResponse $) {
+        this.metricCosts = $.metricCosts;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> metricCosts;
-        private String selector;
+        private MetricRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricRuleResponse();
         }
 
         public Builder(MetricRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricCosts = defaults.metricCosts;
-    	      this.selector = defaults.selector;
+            $ = new MetricRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metricCosts(Map<String,String> metricCosts) {
-            this.metricCosts = Objects.requireNonNull(metricCosts);
+            $.metricCosts = metricCosts;
             return this;
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
-        }        public MetricRuleResponse build() {
-            return new MetricRuleResponse(metricCosts, selector);
+        }
+
+        public MetricRuleResponse build() {
+            $.metricCosts = Objects.requireNonNull($.metricCosts, "expected parameter 'metricCosts' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            return $;
         }
     }
+
 }

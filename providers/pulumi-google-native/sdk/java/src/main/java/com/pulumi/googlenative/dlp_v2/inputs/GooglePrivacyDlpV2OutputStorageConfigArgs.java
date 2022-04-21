@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2OutputStorageConfigOutputSchema;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends com.pulumi.
      * 
      */
     @Import(name="outputSchema")
-      private final @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema;
+    private @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema;
 
-    public Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema() {
-        return this.outputSchema == null ? Codegen.empty() : this.outputSchema;
+    public Optional<Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema>> outputSchema() {
+        return Optional.ofNullable(this.outputSchema);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends com.pulumi.
      * 
      */
     @Import(name="table")
-      private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
+    private @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
-    public Output<GooglePrivacyDlpV2BigQueryTableArgs> table() {
-        return this.table == null ? Codegen.empty() : this.table;
+    public Optional<Output<GooglePrivacyDlpV2BigQueryTableArgs>> table() {
+        return Optional.ofNullable(this.table);
     }
 
-    public GooglePrivacyDlpV2OutputStorageConfigArgs(
-        @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema,
-        @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
-        this.outputSchema = outputSchema;
-        this.table = table;
-    }
+    private GooglePrivacyDlpV2OutputStorageConfigArgs() {}
 
-    private GooglePrivacyDlpV2OutputStorageConfigArgs() {
-        this.outputSchema = Codegen.empty();
-        this.table = Codegen.empty();
+    private GooglePrivacyDlpV2OutputStorageConfigArgs(GooglePrivacyDlpV2OutputStorageConfigArgs $) {
+        this.outputSchema = $.outputSchema;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2OutputStorageConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema;
-        private @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
+        private GooglePrivacyDlpV2OutputStorageConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2OutputStorageConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2OutputStorageConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.outputSchema = defaults.outputSchema;
-    	      this.table = defaults.table;
+            $ = new GooglePrivacyDlpV2OutputStorageConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder outputSchema(@Nullable Output<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema) {
-            this.outputSchema = outputSchema;
+            $.outputSchema = outputSchema;
             return this;
         }
-        public Builder outputSchema(@Nullable GooglePrivacyDlpV2OutputStorageConfigOutputSchema outputSchema) {
-            this.outputSchema = Codegen.ofNullable(outputSchema);
-            return this;
+
+        public Builder outputSchema(GooglePrivacyDlpV2OutputStorageConfigOutputSchema outputSchema) {
+            return outputSchema(Output.of(outputSchema));
         }
+
         public Builder table(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
-            this.table = table;
+            $.table = table;
             return this;
         }
-        public Builder table(@Nullable GooglePrivacyDlpV2BigQueryTableArgs table) {
-            this.table = Codegen.ofNullable(table);
-            return this;
-        }        public GooglePrivacyDlpV2OutputStorageConfigArgs build() {
-            return new GooglePrivacyDlpV2OutputStorageConfigArgs(outputSchema, table);
+
+        public Builder table(GooglePrivacyDlpV2BigQueryTableArgs table) {
+            return table(Output.of(table));
+        }
+
+        public GooglePrivacyDlpV2OutputStorageConfigArgs build() {
+            return $;
         }
     }
+
 }

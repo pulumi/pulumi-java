@@ -23,7 +23,7 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,55 +34,51 @@ public final class ParameterDefinitionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ParameterDefinitionResponse(
-        String name,
-        @Nullable String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = value;
-    }
+    private ParameterDefinitionResponse() {}
 
-    private ParameterDefinitionResponse() {
-        this.name = null;
-        this.value = null;
+    private ParameterDefinitionResponse(ParameterDefinitionResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String value;
+        private ParameterDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterDefinitionResponse();
         }
 
         public Builder(ParameterDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new ParameterDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ParameterDefinitionResponse build() {
-            return new ParameterDefinitionResponse(name, value);
+        }
+
+        public ParameterDefinitionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

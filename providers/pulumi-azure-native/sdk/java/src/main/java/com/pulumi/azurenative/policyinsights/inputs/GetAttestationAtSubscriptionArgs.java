@@ -17,45 +17,45 @@ public final class GetAttestationAtSubscriptionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="attestationName", required=true)
-      private final String attestationName;
+    private String attestationName;
 
     public String attestationName() {
         return this.attestationName;
     }
 
-    public GetAttestationAtSubscriptionArgs(String attestationName) {
-        this.attestationName = Objects.requireNonNull(attestationName, "expected parameter 'attestationName' to be non-null");
-    }
+    private GetAttestationAtSubscriptionArgs() {}
 
-    private GetAttestationAtSubscriptionArgs() {
-        this.attestationName = null;
+    private GetAttestationAtSubscriptionArgs(GetAttestationAtSubscriptionArgs $) {
+        this.attestationName = $.attestationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAttestationAtSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attestationName;
+        private GetAttestationAtSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAttestationAtSubscriptionArgs();
         }
 
         public Builder(GetAttestationAtSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestationName = defaults.attestationName;
+            $ = new GetAttestationAtSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestationName(String attestationName) {
-            this.attestationName = Objects.requireNonNull(attestationName);
+            $.attestationName = attestationName;
             return this;
-        }        public GetAttestationAtSubscriptionArgs build() {
-            return new GetAttestationAtSubscriptionArgs(attestationName);
+        }
+
+        public GetAttestationAtSubscriptionArgs build() {
+            $.attestationName = Objects.requireNonNull($.attestationName, "expected parameter 'attestationName' to be non-null");
+            return $;
         }
     }
+
 }

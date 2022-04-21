@@ -22,48 +22,49 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse extends com.pulumi
      * 
      */
     @Import(name="connections", required=true)
-      private final List<String> connections;
+    private List<String> connections;
 
     public List<String> connections() {
         return this.connections;
     }
 
-    public GoogleCloudRunOpV2CloudSqlInstanceResponse(List<String> connections) {
-        this.connections = Objects.requireNonNull(connections, "expected parameter 'connections' to be non-null");
-    }
+    private GoogleCloudRunOpV2CloudSqlInstanceResponse() {}
 
-    private GoogleCloudRunOpV2CloudSqlInstanceResponse() {
-        this.connections = List.of();
+    private GoogleCloudRunOpV2CloudSqlInstanceResponse(GoogleCloudRunOpV2CloudSqlInstanceResponse $) {
+        this.connections = $.connections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2CloudSqlInstanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> connections;
+        private GoogleCloudRunOpV2CloudSqlInstanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2CloudSqlInstanceResponse();
         }
 
         public Builder(GoogleCloudRunOpV2CloudSqlInstanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connections = defaults.connections;
+            $ = new GoogleCloudRunOpV2CloudSqlInstanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connections(List<String> connections) {
-            this.connections = Objects.requireNonNull(connections);
+            $.connections = connections;
             return this;
         }
+
         public Builder connections(String... connections) {
             return connections(List.of(connections));
-        }        public GoogleCloudRunOpV2CloudSqlInstanceResponse build() {
-            return new GoogleCloudRunOpV2CloudSqlInstanceResponse(connections);
+        }
+
+        public GoogleCloudRunOpV2CloudSqlInstanceResponse build() {
+            $.connections = Objects.requireNonNull($.connections, "expected parameter 'connections' to be non-null");
+            return $;
         }
     }
+
 }

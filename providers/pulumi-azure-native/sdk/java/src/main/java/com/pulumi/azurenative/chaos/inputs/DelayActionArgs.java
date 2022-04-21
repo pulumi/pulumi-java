@@ -23,7 +23,7 @@ public final class DelayActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="duration", required=true)
-      private final Output<String> duration;
+    private Output<String> duration;
 
     public Output<String> duration() {
         return this.duration;
@@ -34,7 +34,7 @@ public final class DelayActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -46,76 +46,71 @@ public final class DelayActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DelayActionArgs(
-        Output<String> duration,
-        Output<String> name,
-        Output<String> type) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private DelayActionArgs() {}
 
-    private DelayActionArgs() {
-        this.duration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private DelayActionArgs(DelayActionArgs $) {
+        this.duration = $.duration;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelayActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> duration;
-        private Output<String> name;
-        private Output<String> type;
+        private DelayActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelayActionArgs();
         }
 
         public Builder(DelayActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new DelayActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(Output<String> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
+            return duration(Output.of(duration));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DelayActionArgs build() {
-            return new DelayActionArgs(duration, name, type);
+            return type(Output.of(type));
+        }
+
+        public DelayActionArgs build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

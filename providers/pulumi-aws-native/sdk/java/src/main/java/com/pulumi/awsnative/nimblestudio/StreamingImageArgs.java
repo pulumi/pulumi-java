@@ -6,9 +6,9 @@ package com.pulumi.awsnative.nimblestudio;
 import com.pulumi.awsnative.nimblestudio.inputs.StreamingImageTagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ec2ImageId", required=true)
-      private final Output<String> ec2ImageId;
+    private Output<String> ec2ImageId;
 
     public Output<String> ec2ImageId() {
         return this.ec2ImageId;
@@ -43,10 +43,10 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,109 +54,97 @@ public final class StreamingImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="studioId", required=true)
-      private final Output<String> studioId;
+    private Output<String> studioId;
 
     public Output<String> studioId() {
         return this.studioId;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<StreamingImageTagsArgs> tags;
+    private @Nullable Output<StreamingImageTagsArgs> tags;
 
-    public Output<StreamingImageTagsArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<StreamingImageTagsArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public StreamingImageArgs(
-        @Nullable Output<String> description,
-        Output<String> ec2ImageId,
-        @Nullable Output<String> name,
-        Output<String> studioId,
-        @Nullable Output<StreamingImageTagsArgs> tags) {
-        this.description = description;
-        this.ec2ImageId = Objects.requireNonNull(ec2ImageId, "expected parameter 'ec2ImageId' to be non-null");
-        this.name = name;
-        this.studioId = Objects.requireNonNull(studioId, "expected parameter 'studioId' to be non-null");
-        this.tags = tags;
-    }
+    private StreamingImageArgs() {}
 
-    private StreamingImageArgs() {
-        this.description = Codegen.empty();
-        this.ec2ImageId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.studioId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private StreamingImageArgs(StreamingImageArgs $) {
+        this.description = $.description;
+        this.ec2ImageId = $.ec2ImageId;
+        this.name = $.name;
+        this.studioId = $.studioId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> ec2ImageId;
-        private @Nullable Output<String> name;
-        private Output<String> studioId;
-        private @Nullable Output<StreamingImageTagsArgs> tags;
+        private StreamingImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingImageArgs();
         }
 
         public Builder(StreamingImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.ec2ImageId = defaults.ec2ImageId;
-    	      this.name = defaults.name;
-    	      this.studioId = defaults.studioId;
-    	      this.tags = defaults.tags;
+            $ = new StreamingImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ec2ImageId(Output<String> ec2ImageId) {
-            this.ec2ImageId = Objects.requireNonNull(ec2ImageId);
+            $.ec2ImageId = ec2ImageId;
             return this;
         }
+
         public Builder ec2ImageId(String ec2ImageId) {
-            this.ec2ImageId = Output.of(Objects.requireNonNull(ec2ImageId));
-            return this;
+            return ec2ImageId(Output.of(ec2ImageId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder studioId(Output<String> studioId) {
-            this.studioId = Objects.requireNonNull(studioId);
+            $.studioId = studioId;
             return this;
         }
+
         public Builder studioId(String studioId) {
-            this.studioId = Output.of(Objects.requireNonNull(studioId));
-            return this;
+            return studioId(Output.of(studioId));
         }
+
         public Builder tags(@Nullable Output<StreamingImageTagsArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable StreamingImageTagsArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public StreamingImageArgs build() {
-            return new StreamingImageArgs(description, ec2ImageId, name, studioId, tags);
+
+        public Builder tags(StreamingImageTagsArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public StreamingImageArgs build() {
+            $.ec2ImageId = Objects.requireNonNull($.ec2ImageId, "expected parameter 'ec2ImageId' to be non-null");
+            $.studioId = Objects.requireNonNull($.studioId, "expected parameter 'studioId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.servicequotas;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ServiceQuotaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quotaCode", required=true)
-      private final Output<String> quotaCode;
+    private Output<String> quotaCode;
 
     public Output<String> quotaCode() {
         return this.quotaCode;
@@ -31,7 +30,7 @@ public final class ServiceQuotaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceCode", required=true)
-      private final Output<String> serviceCode;
+    private Output<String> serviceCode;
 
     public Output<String> serviceCode() {
         return this.serviceCode;
@@ -42,76 +41,71 @@ public final class ServiceQuotaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<Double> value;
+    private Output<Double> value;
 
     public Output<Double> value() {
         return this.value;
     }
 
-    public ServiceQuotaArgs(
-        Output<String> quotaCode,
-        Output<String> serviceCode,
-        Output<Double> value) {
-        this.quotaCode = Objects.requireNonNull(quotaCode, "expected parameter 'quotaCode' to be non-null");
-        this.serviceCode = Objects.requireNonNull(serviceCode, "expected parameter 'serviceCode' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ServiceQuotaArgs() {}
 
-    private ServiceQuotaArgs() {
-        this.quotaCode = Codegen.empty();
-        this.serviceCode = Codegen.empty();
-        this.value = Codegen.empty();
+    private ServiceQuotaArgs(ServiceQuotaArgs $) {
+        this.quotaCode = $.quotaCode;
+        this.serviceCode = $.serviceCode;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceQuotaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> quotaCode;
-        private Output<String> serviceCode;
-        private Output<Double> value;
+        private ServiceQuotaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceQuotaArgs();
         }
 
         public Builder(ServiceQuotaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quotaCode = defaults.quotaCode;
-    	      this.serviceCode = defaults.serviceCode;
-    	      this.value = defaults.value;
+            $ = new ServiceQuotaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quotaCode(Output<String> quotaCode) {
-            this.quotaCode = Objects.requireNonNull(quotaCode);
+            $.quotaCode = quotaCode;
             return this;
         }
+
         public Builder quotaCode(String quotaCode) {
-            this.quotaCode = Output.of(Objects.requireNonNull(quotaCode));
-            return this;
+            return quotaCode(Output.of(quotaCode));
         }
+
         public Builder serviceCode(Output<String> serviceCode) {
-            this.serviceCode = Objects.requireNonNull(serviceCode);
+            $.serviceCode = serviceCode;
             return this;
         }
+
         public Builder serviceCode(String serviceCode) {
-            this.serviceCode = Output.of(Objects.requireNonNull(serviceCode));
-            return this;
+            return serviceCode(Output.of(serviceCode));
         }
+
         public Builder value(Output<Double> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Double value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ServiceQuotaArgs build() {
-            return new ServiceQuotaArgs(quotaCode, serviceCode, value);
+            return value(Output.of(value));
+        }
+
+        public ServiceQuotaArgs build() {
+            $.quotaCode = Objects.requireNonNull($.quotaCode, "expected parameter 'quotaCode' to be non-null");
+            $.serviceCode = Objects.requireNonNull($.serviceCode, "expected parameter 'serviceCode' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

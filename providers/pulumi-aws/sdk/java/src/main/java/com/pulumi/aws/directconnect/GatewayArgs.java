@@ -5,9 +5,9 @@ package com.pulumi.aws.directconnect;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="amazonSideAsn", required=true)
-      private final Output<String> amazonSideAsn;
+    private Output<String> amazonSideAsn;
 
     public Output<String> amazonSideAsn() {
         return this.amazonSideAsn;
@@ -31,63 +31,59 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public GatewayArgs(
-        Output<String> amazonSideAsn,
-        @Nullable Output<String> name) {
-        this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn, "expected parameter 'amazonSideAsn' to be non-null");
-        this.name = name;
-    }
+    private GatewayArgs() {}
 
-    private GatewayArgs() {
-        this.amazonSideAsn = Codegen.empty();
-        this.name = Codegen.empty();
+    private GatewayArgs(GatewayArgs $) {
+        this.amazonSideAsn = $.amazonSideAsn;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> amazonSideAsn;
-        private @Nullable Output<String> name;
+        private GatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayArgs();
         }
 
         public Builder(GatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amazonSideAsn = defaults.amazonSideAsn;
-    	      this.name = defaults.name;
+            $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amazonSideAsn(Output<String> amazonSideAsn) {
-            this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
+            $.amazonSideAsn = amazonSideAsn;
             return this;
         }
+
         public Builder amazonSideAsn(String amazonSideAsn) {
-            this.amazonSideAsn = Output.of(Objects.requireNonNull(amazonSideAsn));
-            return this;
+            return amazonSideAsn(Output.of(amazonSideAsn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public GatewayArgs build() {
-            return new GatewayArgs(amazonSideAsn, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public GatewayArgs build() {
+            $.amazonSideAsn = Objects.requireNonNull($.amazonSideAsn, "expected parameter 'amazonSideAsn' to be non-null");
+            return $;
         }
     }
+
 }

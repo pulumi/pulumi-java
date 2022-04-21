@@ -3,35 +3,26 @@
 
 package com.pulumi.aws.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 public final class WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs Empty = new WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs();
 
-    public WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs();
         }
         public WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs build() {
-            return new WebAclRuleStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs();
+            return $;
         }
     }
+
 }

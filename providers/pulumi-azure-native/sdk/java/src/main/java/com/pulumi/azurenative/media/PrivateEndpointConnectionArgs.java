@@ -6,9 +6,9 @@ package com.pulumi.azurenative.media;
 import com.pulumi.azurenative.media.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
-      private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+    private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -50,89 +50,81 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public PrivateEndpointConnectionArgs(
-        Output<String> accountName,
-        @Nullable Output<String> name,
-        Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.name = name;
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private PrivateEndpointConnectionArgs() {}
 
-    private PrivateEndpointConnectionArgs() {
-        this.accountName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.privateLinkServiceConnectionState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private PrivateEndpointConnectionArgs(PrivateEndpointConnectionArgs $) {
+        this.accountName = $.accountName;
+        this.name = $.name;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> name;
-        private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
-        private Output<String> resourceGroupName;
+        private PrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionArgs();
         }
 
         public Builder(PrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.name = defaults.name;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
-            return this;
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public PrivateEndpointConnectionArgs build() {
-            return new PrivateEndpointConnectionArgs(accountName, name, privateLinkServiceConnectionState, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public PrivateEndpointConnectionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.privateLinkServiceConnectionState = Objects.requireNonNull($.privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

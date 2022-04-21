@@ -21,45 +21,45 @@ public final class DataSourceVpcConnectionProperties extends com.pulumi.resource
      * 
      */
     @Import(name="vpcConnectionArn", required=true)
-      private final String vpcConnectionArn;
+    private String vpcConnectionArn;
 
     public String vpcConnectionArn() {
         return this.vpcConnectionArn;
     }
 
-    public DataSourceVpcConnectionProperties(String vpcConnectionArn) {
-        this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn, "expected parameter 'vpcConnectionArn' to be non-null");
-    }
+    private DataSourceVpcConnectionProperties() {}
 
-    private DataSourceVpcConnectionProperties() {
-        this.vpcConnectionArn = null;
+    private DataSourceVpcConnectionProperties(DataSourceVpcConnectionProperties $) {
+        this.vpcConnectionArn = $.vpcConnectionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceVpcConnectionProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String vpcConnectionArn;
+        private DataSourceVpcConnectionProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceVpcConnectionProperties();
         }
 
         public Builder(DataSourceVpcConnectionProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcConnectionArn = defaults.vpcConnectionArn;
+            $ = new DataSourceVpcConnectionProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcConnectionArn(String vpcConnectionArn) {
-            this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn);
+            $.vpcConnectionArn = vpcConnectionArn;
             return this;
-        }        public DataSourceVpcConnectionProperties build() {
-            return new DataSourceVpcConnectionProperties(vpcConnectionArn);
+        }
+
+        public DataSourceVpcConnectionProperties build() {
+            $.vpcConnectionArn = Objects.requireNonNull($.vpcConnectionArn, "expected parameter 'vpcConnectionArn' to be non-null");
+            return $;
         }
     }
+
 }

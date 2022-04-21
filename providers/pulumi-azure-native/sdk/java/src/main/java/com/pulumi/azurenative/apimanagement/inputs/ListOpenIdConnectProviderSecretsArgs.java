@@ -17,7 +17,7 @@ public final class ListOpenIdConnectProviderSecretsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="opid", required=true)
-      private final String opid;
+    private String opid;
 
     public String opid() {
         return this.opid;
@@ -28,7 +28,7 @@ public final class ListOpenIdConnectProviderSecretsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListOpenIdConnectProviderSecretsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public ListOpenIdConnectProviderSecretsArgs(
-        String opid,
-        String resourceGroupName,
-        String serviceName) {
-        this.opid = Objects.requireNonNull(opid, "expected parameter 'opid' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ListOpenIdConnectProviderSecretsArgs() {}
 
-    private ListOpenIdConnectProviderSecretsArgs() {
-        this.opid = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private ListOpenIdConnectProviderSecretsArgs(ListOpenIdConnectProviderSecretsArgs $) {
+        this.opid = $.opid;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListOpenIdConnectProviderSecretsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String opid;
-        private String resourceGroupName;
-        private String serviceName;
+        private ListOpenIdConnectProviderSecretsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListOpenIdConnectProviderSecretsArgs();
         }
 
         public Builder(ListOpenIdConnectProviderSecretsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.opid = defaults.opid;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ListOpenIdConnectProviderSecretsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder opid(String opid) {
-            this.opid = Objects.requireNonNull(opid);
+            $.opid = opid;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public ListOpenIdConnectProviderSecretsArgs build() {
-            return new ListOpenIdConnectProviderSecretsArgs(opid, resourceGroupName, serviceName);
+        }
+
+        public ListOpenIdConnectProviderSecretsArgs build() {
+            $.opid = Objects.requireNonNull($.opid, "expected parameter 'opid' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

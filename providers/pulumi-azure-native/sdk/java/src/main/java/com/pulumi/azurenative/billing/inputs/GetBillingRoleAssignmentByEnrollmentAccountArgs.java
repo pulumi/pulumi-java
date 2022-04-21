@@ -17,7 +17,7 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
      * 
      */
     @Import(name="billingAccountName", required=true)
-      private final String billingAccountName;
+    private String billingAccountName;
 
     public String billingAccountName() {
         return this.billingAccountName;
@@ -28,7 +28,7 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
      * 
      */
     @Import(name="billingRoleAssignmentName", required=true)
-      private final String billingRoleAssignmentName;
+    private String billingRoleAssignmentName;
 
     public String billingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
@@ -39,64 +39,59 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountArgs extends com.p
      * 
      */
     @Import(name="enrollmentAccountName", required=true)
-      private final String enrollmentAccountName;
+    private String enrollmentAccountName;
 
     public String enrollmentAccountName() {
         return this.enrollmentAccountName;
     }
 
-    public GetBillingRoleAssignmentByEnrollmentAccountArgs(
-        String billingAccountName,
-        String billingRoleAssignmentName,
-        String enrollmentAccountName) {
-        this.billingAccountName = Objects.requireNonNull(billingAccountName, "expected parameter 'billingAccountName' to be non-null");
-        this.billingRoleAssignmentName = Objects.requireNonNull(billingRoleAssignmentName, "expected parameter 'billingRoleAssignmentName' to be non-null");
-        this.enrollmentAccountName = Objects.requireNonNull(enrollmentAccountName, "expected parameter 'enrollmentAccountName' to be non-null");
-    }
+    private GetBillingRoleAssignmentByEnrollmentAccountArgs() {}
 
-    private GetBillingRoleAssignmentByEnrollmentAccountArgs() {
-        this.billingAccountName = null;
-        this.billingRoleAssignmentName = null;
-        this.enrollmentAccountName = null;
+    private GetBillingRoleAssignmentByEnrollmentAccountArgs(GetBillingRoleAssignmentByEnrollmentAccountArgs $) {
+        this.billingAccountName = $.billingAccountName;
+        this.billingRoleAssignmentName = $.billingRoleAssignmentName;
+        this.enrollmentAccountName = $.enrollmentAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBillingRoleAssignmentByEnrollmentAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountName;
-        private String billingRoleAssignmentName;
-        private String enrollmentAccountName;
+        private GetBillingRoleAssignmentByEnrollmentAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBillingRoleAssignmentByEnrollmentAccountArgs();
         }
 
         public Builder(GetBillingRoleAssignmentByEnrollmentAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountName = defaults.billingAccountName;
-    	      this.billingRoleAssignmentName = defaults.billingRoleAssignmentName;
-    	      this.enrollmentAccountName = defaults.enrollmentAccountName;
+            $ = new GetBillingRoleAssignmentByEnrollmentAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountName(String billingAccountName) {
-            this.billingAccountName = Objects.requireNonNull(billingAccountName);
+            $.billingAccountName = billingAccountName;
             return this;
         }
+
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
-            this.billingRoleAssignmentName = Objects.requireNonNull(billingRoleAssignmentName);
+            $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
+
         public Builder enrollmentAccountName(String enrollmentAccountName) {
-            this.enrollmentAccountName = Objects.requireNonNull(enrollmentAccountName);
+            $.enrollmentAccountName = enrollmentAccountName;
             return this;
-        }        public GetBillingRoleAssignmentByEnrollmentAccountArgs build() {
-            return new GetBillingRoleAssignmentByEnrollmentAccountArgs(billingAccountName, billingRoleAssignmentName, enrollmentAccountName);
+        }
+
+        public GetBillingRoleAssignmentByEnrollmentAccountArgs build() {
+            $.billingAccountName = Objects.requireNonNull($.billingAccountName, "expected parameter 'billingAccountName' to be non-null");
+            $.billingRoleAssignmentName = Objects.requireNonNull($.billingRoleAssignmentName, "expected parameter 'billingRoleAssignmentName' to be non-null");
+            $.enrollmentAccountName = Objects.requireNonNull($.enrollmentAccountName, "expected parameter 'enrollmentAccountName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class FirewallPolicyCertificateAuthorityResponse extends com.pulumi
      * 
      */
     @Import(name="keyVaultSecretId")
-      private final @Nullable String keyVaultSecretId;
+    private @Nullable String keyVaultSecretId;
 
     public Optional<String> keyVaultSecretId() {
-        return this.keyVaultSecretId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretId);
+        return Optional.ofNullable(this.keyVaultSecretId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class FirewallPolicyCertificateAuthorityResponse extends com.pulumi
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public FirewallPolicyCertificateAuthorityResponse(
-        @Nullable String keyVaultSecretId,
-        @Nullable String name) {
-        this.keyVaultSecretId = keyVaultSecretId;
-        this.name = name;
-    }
+    private FirewallPolicyCertificateAuthorityResponse() {}
 
-    private FirewallPolicyCertificateAuthorityResponse() {
-        this.keyVaultSecretId = null;
-        this.name = null;
+    private FirewallPolicyCertificateAuthorityResponse(FirewallPolicyCertificateAuthorityResponse $) {
+        this.keyVaultSecretId = $.keyVaultSecretId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyCertificateAuthorityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyVaultSecretId;
-        private @Nullable String name;
+        private FirewallPolicyCertificateAuthorityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyCertificateAuthorityResponse();
         }
 
         public Builder(FirewallPolicyCertificateAuthorityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultSecretId = defaults.keyVaultSecretId;
-    	      this.name = defaults.name;
+            $ = new FirewallPolicyCertificateAuthorityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
-            this.keyVaultSecretId = keyVaultSecretId;
+            $.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public FirewallPolicyCertificateAuthorityResponse build() {
-            return new FirewallPolicyCertificateAuthorityResponse(keyVaultSecretId, name);
+        }
+
+        public FirewallPolicyCertificateAuthorityResponse build() {
+            return $;
         }
     }
+
 }

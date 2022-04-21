@@ -22,7 +22,7 @@ public final class BuiltImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="digest", required=true)
-      private final String digest;
+    private String digest;
 
     public String digest() {
         return this.digest;
@@ -33,7 +33,7 @@ public final class BuiltImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,64 +44,59 @@ public final class BuiltImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pushTiming", required=true)
-      private final TimeSpanResponse pushTiming;
+    private TimeSpanResponse pushTiming;
 
     public TimeSpanResponse pushTiming() {
         return this.pushTiming;
     }
 
-    public BuiltImageResponse(
-        String digest,
-        String name,
-        TimeSpanResponse pushTiming) {
-        this.digest = Objects.requireNonNull(digest, "expected parameter 'digest' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.pushTiming = Objects.requireNonNull(pushTiming, "expected parameter 'pushTiming' to be non-null");
-    }
+    private BuiltImageResponse() {}
 
-    private BuiltImageResponse() {
-        this.digest = null;
-        this.name = null;
-        this.pushTiming = null;
+    private BuiltImageResponse(BuiltImageResponse $) {
+        this.digest = $.digest;
+        this.name = $.name;
+        this.pushTiming = $.pushTiming;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuiltImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String digest;
-        private String name;
-        private TimeSpanResponse pushTiming;
+        private BuiltImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuiltImageResponse();
         }
 
         public Builder(BuiltImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digest = defaults.digest;
-    	      this.name = defaults.name;
-    	      this.pushTiming = defaults.pushTiming;
+            $ = new BuiltImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder digest(String digest) {
-            this.digest = Objects.requireNonNull(digest);
+            $.digest = digest;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder pushTiming(TimeSpanResponse pushTiming) {
-            this.pushTiming = Objects.requireNonNull(pushTiming);
+            $.pushTiming = pushTiming;
             return this;
-        }        public BuiltImageResponse build() {
-            return new BuiltImageResponse(digest, name, pushTiming);
+        }
+
+        public BuiltImageResponse build() {
+            $.digest = Objects.requireNonNull($.digest, "expected parameter 'digest' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.pushTiming = Objects.requireNonNull($.pushTiming, "expected parameter 'pushTiming' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class StreamInputPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="datasource")
-      private final @Nullable Output<Object> datasource;
+    private @Nullable Output<Object> datasource;
 
-    public Output<Object> datasource() {
-        return this.datasource == null ? Codegen.empty() : this.datasource;
+    public Optional<Output<Object>> datasource() {
+        return Optional.ofNullable(this.datasource);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class StreamInputPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="serialization")
-      private final @Nullable Output<Object> serialization;
+    private @Nullable Output<Object> serialization;
 
-    public Output<Object> serialization() {
-        return this.serialization == null ? Codegen.empty() : this.serialization;
+    public Optional<Output<Object>> serialization() {
+        return Optional.ofNullable(this.serialization);
     }
 
     /**
@@ -54,76 +55,69 @@ public final class StreamInputPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public StreamInputPropertiesArgs(
-        @Nullable Output<Object> datasource,
-        @Nullable Output<Object> serialization,
-        Output<String> type) {
-        this.datasource = datasource;
-        this.serialization = serialization;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private StreamInputPropertiesArgs() {}
 
-    private StreamInputPropertiesArgs() {
-        this.datasource = Codegen.empty();
-        this.serialization = Codegen.empty();
-        this.type = Codegen.empty();
+    private StreamInputPropertiesArgs(StreamInputPropertiesArgs $) {
+        this.datasource = $.datasource;
+        this.serialization = $.serialization;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> datasource;
-        private @Nullable Output<Object> serialization;
-        private Output<String> type;
+        private StreamInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamInputPropertiesArgs();
         }
 
         public Builder(StreamInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasource = defaults.datasource;
-    	      this.serialization = defaults.serialization;
-    	      this.type = defaults.type;
+            $ = new StreamInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasource(@Nullable Output<Object> datasource) {
-            this.datasource = datasource;
+            $.datasource = datasource;
             return this;
         }
-        public Builder datasource(@Nullable Object datasource) {
-            this.datasource = Codegen.ofNullable(datasource);
-            return this;
+
+        public Builder datasource(Object datasource) {
+            return datasource(Output.of(datasource));
         }
+
         public Builder serialization(@Nullable Output<Object> serialization) {
-            this.serialization = serialization;
+            $.serialization = serialization;
             return this;
         }
-        public Builder serialization(@Nullable Object serialization) {
-            this.serialization = Codegen.ofNullable(serialization);
-            return this;
+
+        public Builder serialization(Object serialization) {
+            return serialization(Output.of(serialization));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public StreamInputPropertiesArgs build() {
-            return new StreamInputPropertiesArgs(datasource, serialization, type);
+            return type(Output.of(type));
+        }
+
+        public StreamInputPropertiesArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

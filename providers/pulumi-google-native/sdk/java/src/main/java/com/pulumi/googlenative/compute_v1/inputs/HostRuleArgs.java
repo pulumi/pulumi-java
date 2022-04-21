@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HostRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HostRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hosts")
-      private final @Nullable Output<List<String>> hosts;
+    private @Nullable Output<List<String>> hosts;
 
-    public Output<List<String>> hosts() {
-        return this.hosts == null ? Codegen.empty() : this.hosts;
+    public Optional<Output<List<String>>> hosts() {
+        return Optional.ofNullable(this.hosts);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class HostRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pathMatcher")
-      private final @Nullable Output<String> pathMatcher;
+    private @Nullable Output<String> pathMatcher;
 
-    public Output<String> pathMatcher() {
-        return this.pathMatcher == null ? Codegen.empty() : this.pathMatcher;
+    public Optional<Output<String>> pathMatcher() {
+        return Optional.ofNullable(this.pathMatcher);
     }
 
-    public HostRuleArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> hosts,
-        @Nullable Output<String> pathMatcher) {
-        this.description = description;
-        this.hosts = hosts;
-        this.pathMatcher = pathMatcher;
-    }
+    private HostRuleArgs() {}
 
-    private HostRuleArgs() {
-        this.description = Codegen.empty();
-        this.hosts = Codegen.empty();
-        this.pathMatcher = Codegen.empty();
+    private HostRuleArgs(HostRuleArgs $) {
+        this.description = $.description;
+        this.hosts = $.hosts;
+        this.pathMatcher = $.pathMatcher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> hosts;
-        private @Nullable Output<String> pathMatcher;
+        private HostRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostRuleArgs();
         }
 
         public Builder(HostRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.hosts = defaults.hosts;
-    	      this.pathMatcher = defaults.pathMatcher;
+            $ = new HostRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder hosts(@Nullable Output<List<String>> hosts) {
-            this.hosts = hosts;
+            $.hosts = hosts;
             return this;
         }
-        public Builder hosts(@Nullable List<String> hosts) {
-            this.hosts = Codegen.ofNullable(hosts);
-            return this;
+
+        public Builder hosts(List<String> hosts) {
+            return hosts(Output.of(hosts));
         }
+
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder pathMatcher(@Nullable Output<String> pathMatcher) {
-            this.pathMatcher = pathMatcher;
+            $.pathMatcher = pathMatcher;
             return this;
         }
-        public Builder pathMatcher(@Nullable String pathMatcher) {
-            this.pathMatcher = Codegen.ofNullable(pathMatcher);
-            return this;
-        }        public HostRuleArgs build() {
-            return new HostRuleArgs(description, hosts, pathMatcher);
+
+        public Builder pathMatcher(String pathMatcher) {
+            return pathMatcher(Output.of(pathMatcher));
+        }
+
+        public HostRuleArgs build() {
+            return $;
         }
     }
+
 }

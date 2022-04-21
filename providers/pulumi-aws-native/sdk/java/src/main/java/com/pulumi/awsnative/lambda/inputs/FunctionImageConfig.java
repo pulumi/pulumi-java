@@ -20,10 +20,10 @@ public final class FunctionImageConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable List<String> command;
+    private @Nullable List<String> command;
 
-    public List<String> command() {
-        return this.command == null ? List.of() : this.command;
+    public Optional<List<String>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FunctionImageConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="entryPoint")
-      private final @Nullable List<String> entryPoint;
+    private @Nullable List<String> entryPoint;
 
-    public List<String> entryPoint() {
-        return this.entryPoint == null ? List.of() : this.entryPoint;
+    public Optional<List<String>> entryPoint() {
+        return Optional.ofNullable(this.entryPoint);
     }
 
     /**
@@ -42,70 +42,64 @@ public final class FunctionImageConfig extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workingDirectory")
-      private final @Nullable String workingDirectory;
+    private @Nullable String workingDirectory;
 
     public Optional<String> workingDirectory() {
-        return this.workingDirectory == null ? Optional.empty() : Optional.ofNullable(this.workingDirectory);
+        return Optional.ofNullable(this.workingDirectory);
     }
 
-    public FunctionImageConfig(
-        @Nullable List<String> command,
-        @Nullable List<String> entryPoint,
-        @Nullable String workingDirectory) {
-        this.command = command;
-        this.entryPoint = entryPoint;
-        this.workingDirectory = workingDirectory;
-    }
+    private FunctionImageConfig() {}
 
-    private FunctionImageConfig() {
-        this.command = List.of();
-        this.entryPoint = List.of();
-        this.workingDirectory = null;
+    private FunctionImageConfig(FunctionImageConfig $) {
+        this.command = $.command;
+        this.entryPoint = $.entryPoint;
+        this.workingDirectory = $.workingDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionImageConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> command;
-        private @Nullable List<String> entryPoint;
-        private @Nullable String workingDirectory;
+        private FunctionImageConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionImageConfig();
         }
 
         public Builder(FunctionImageConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.entryPoint = defaults.entryPoint;
-    	      this.workingDirectory = defaults.workingDirectory;
+            $ = new FunctionImageConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder entryPoint(@Nullable List<String> entryPoint) {
-            this.entryPoint = entryPoint;
+            $.entryPoint = entryPoint;
             return this;
         }
+
         public Builder entryPoint(String... entryPoint) {
             return entryPoint(List.of(entryPoint));
         }
+
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = workingDirectory;
+            $.workingDirectory = workingDirectory;
             return this;
-        }        public FunctionImageConfig build() {
-            return new FunctionImageConfig(command, entryPoint, workingDirectory);
+        }
+
+        public FunctionImageConfig build() {
+            return $;
         }
     }
+
 }

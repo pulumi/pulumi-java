@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs ex
      * 
      */
     @Import(name="virtualServiceName", required=true)
-      private final Output<String> virtualServiceName;
+    private Output<String> virtualServiceName;
 
     public Output<String> virtualServiceName() {
         return this.virtualServiceName;
     }
 
-    public GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs(Output<String> virtualServiceName) {
-        this.virtualServiceName = Objects.requireNonNull(virtualServiceName, "expected parameter 'virtualServiceName' to be non-null");
-    }
+    private GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs() {}
 
-    private GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs() {
-        this.virtualServiceName = Codegen.empty();
+    private GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs(GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs $) {
+        this.virtualServiceName = $.virtualServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> virtualServiceName;
+        private GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs();
         }
 
         public Builder(GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualServiceName = defaults.virtualServiceName;
+            $ = new GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualServiceName(Output<String> virtualServiceName) {
-            this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
+            $.virtualServiceName = virtualServiceName;
             return this;
         }
+
         public Builder virtualServiceName(String virtualServiceName) {
-            this.virtualServiceName = Output.of(Objects.requireNonNull(virtualServiceName));
-            return this;
-        }        public GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs build() {
-            return new GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs(virtualServiceName);
+            return virtualServiceName(Output.of(virtualServiceName));
+        }
+
+        public GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs build() {
+            $.virtualServiceName = Objects.requireNonNull($.virtualServiceName, "expected parameter 'virtualServiceName' to be non-null");
+            return $;
         }
     }
+
 }

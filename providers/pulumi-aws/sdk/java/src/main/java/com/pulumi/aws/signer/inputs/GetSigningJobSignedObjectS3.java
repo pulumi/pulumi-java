@@ -13,62 +13,59 @@ public final class GetSigningJobSignedObjectS3 extends com.pulumi.resources.Invo
     public static final GetSigningJobSignedObjectS3 Empty = new GetSigningJobSignedObjectS3();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
-    public GetSigningJobSignedObjectS3(
-        String bucket,
-        String key) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private GetSigningJobSignedObjectS3() {}
 
-    private GetSigningJobSignedObjectS3() {
-        this.bucket = null;
-        this.key = null;
+    private GetSigningJobSignedObjectS3(GetSigningJobSignedObjectS3 $) {
+        this.bucket = $.bucket;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSigningJobSignedObjectS3 defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String key;
+        private GetSigningJobSignedObjectS3 $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSigningJobSignedObjectS3();
         }
 
         public Builder(GetSigningJobSignedObjectS3 defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.key = defaults.key;
+            $ = new GetSigningJobSignedObjectS3(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
-        }        public GetSigningJobSignedObjectS3 build() {
-            return new GetSigningJobSignedObjectS3(bucket, key);
+        }
+
+        public GetSigningJobSignedObjectS3 build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

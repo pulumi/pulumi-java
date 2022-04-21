@@ -5,7 +5,6 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +20,7 @@ public final class CrawlerDeltaTargetGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectionName", required=true)
-      private final Output<String> connectionName;
+    private Output<String> connectionName;
 
     public Output<String> connectionName() {
         return this.connectionName;
@@ -32,7 +31,7 @@ public final class CrawlerDeltaTargetGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="deltaTables", required=true)
-      private final Output<List<String>> deltaTables;
+    private Output<List<String>> deltaTables;
 
     public Output<List<String>> deltaTables() {
         return this.deltaTables;
@@ -43,79 +42,75 @@ public final class CrawlerDeltaTargetGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="writeManifest", required=true)
-      private final Output<Boolean> writeManifest;
+    private Output<Boolean> writeManifest;
 
     public Output<Boolean> writeManifest() {
         return this.writeManifest;
     }
 
-    public CrawlerDeltaTargetGetArgs(
-        Output<String> connectionName,
-        Output<List<String>> deltaTables,
-        Output<Boolean> writeManifest) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.deltaTables = Objects.requireNonNull(deltaTables, "expected parameter 'deltaTables' to be non-null");
-        this.writeManifest = Objects.requireNonNull(writeManifest, "expected parameter 'writeManifest' to be non-null");
-    }
+    private CrawlerDeltaTargetGetArgs() {}
 
-    private CrawlerDeltaTargetGetArgs() {
-        this.connectionName = Codegen.empty();
-        this.deltaTables = Codegen.empty();
-        this.writeManifest = Codegen.empty();
+    private CrawlerDeltaTargetGetArgs(CrawlerDeltaTargetGetArgs $) {
+        this.connectionName = $.connectionName;
+        this.deltaTables = $.deltaTables;
+        this.writeManifest = $.writeManifest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrawlerDeltaTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectionName;
-        private Output<List<String>> deltaTables;
-        private Output<Boolean> writeManifest;
+        private CrawlerDeltaTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrawlerDeltaTargetGetArgs();
         }
 
         public Builder(CrawlerDeltaTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.deltaTables = defaults.deltaTables;
-    	      this.writeManifest = defaults.writeManifest;
+            $ = new CrawlerDeltaTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(Output<String> connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder connectionName(String connectionName) {
-            this.connectionName = Output.of(Objects.requireNonNull(connectionName));
-            return this;
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder deltaTables(Output<List<String>> deltaTables) {
-            this.deltaTables = Objects.requireNonNull(deltaTables);
+            $.deltaTables = deltaTables;
             return this;
         }
+
         public Builder deltaTables(List<String> deltaTables) {
-            this.deltaTables = Output.of(Objects.requireNonNull(deltaTables));
-            return this;
+            return deltaTables(Output.of(deltaTables));
         }
+
         public Builder deltaTables(String... deltaTables) {
             return deltaTables(List.of(deltaTables));
         }
+
         public Builder writeManifest(Output<Boolean> writeManifest) {
-            this.writeManifest = Objects.requireNonNull(writeManifest);
+            $.writeManifest = writeManifest;
             return this;
         }
+
         public Builder writeManifest(Boolean writeManifest) {
-            this.writeManifest = Output.of(Objects.requireNonNull(writeManifest));
-            return this;
-        }        public CrawlerDeltaTargetGetArgs build() {
-            return new CrawlerDeltaTargetGetArgs(connectionName, deltaTables, writeManifest);
+            return writeManifest(Output.of(writeManifest));
+        }
+
+        public CrawlerDeltaTargetGetArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.deltaTables = Objects.requireNonNull($.deltaTables, "expected parameter 'deltaTables' to be non-null");
+            $.writeManifest = Objects.requireNonNull($.writeManifest, "expected parameter 'writeManifest' to be non-null");
+            return $;
         }
     }
+
 }

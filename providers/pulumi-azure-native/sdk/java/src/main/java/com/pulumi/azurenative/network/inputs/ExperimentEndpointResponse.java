@@ -23,10 +23,10 @@ public final class ExperimentEndpointResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ExperimentEndpointResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public ExperimentEndpointResponse(
-        @Nullable String endpoint,
-        @Nullable String name) {
-        this.endpoint = endpoint;
-        this.name = name;
-    }
+    private ExperimentEndpointResponse() {}
 
-    private ExperimentEndpointResponse() {
-        this.endpoint = null;
-        this.name = null;
+    private ExperimentEndpointResponse(ExperimentEndpointResponse $) {
+        this.endpoint = $.endpoint;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpoint;
-        private @Nullable String name;
+        private ExperimentEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentEndpointResponse();
         }
 
         public Builder(ExperimentEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.name = defaults.name;
+            $ = new ExperimentEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public ExperimentEndpointResponse build() {
-            return new ExperimentEndpointResponse(endpoint, name);
+        }
+
+        public ExperimentEndpointResponse build() {
+            return $;
         }
     }
+
 }

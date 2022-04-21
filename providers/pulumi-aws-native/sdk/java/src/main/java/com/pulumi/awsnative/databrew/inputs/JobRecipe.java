@@ -19,7 +19,7 @@ public final class JobRecipe extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -30,55 +30,51 @@ public final class JobRecipe extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public JobRecipe(
-        String name,
-        @Nullable String version) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.version = version;
-    }
+    private JobRecipe() {}
 
-    private JobRecipe() {
-        this.name = null;
-        this.version = null;
+    private JobRecipe(JobRecipe $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobRecipe defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String version;
+        private JobRecipe $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobRecipe();
         }
 
         public Builder(JobRecipe defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new JobRecipe(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public JobRecipe build() {
-            return new JobRecipe(name, version);
+        }
+
+        public JobRecipe build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="androidModelId", required=true)
-      private final Output<String> androidModelId;
+    private Output<String> androidModelId;
 
     public Output<String> androidModelId() {
         return this.androidModelId;
@@ -34,7 +33,7 @@ public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="androidVersionId", required=true)
-      private final Output<String> androidVersionId;
+    private Output<String> androidVersionId;
 
     public Output<String> androidVersionId() {
         return this.androidVersionId;
@@ -45,7 +44,7 @@ public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locale", required=true)
-      private final Output<String> locale;
+    private Output<String> locale;
 
     public Output<String> locale() {
         return this.locale;
@@ -56,89 +55,82 @@ public final class AndroidDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orientation", required=true)
-      private final Output<String> orientation;
+    private Output<String> orientation;
 
     public Output<String> orientation() {
         return this.orientation;
     }
 
-    public AndroidDeviceArgs(
-        Output<String> androidModelId,
-        Output<String> androidVersionId,
-        Output<String> locale,
-        Output<String> orientation) {
-        this.androidModelId = Objects.requireNonNull(androidModelId, "expected parameter 'androidModelId' to be non-null");
-        this.androidVersionId = Objects.requireNonNull(androidVersionId, "expected parameter 'androidVersionId' to be non-null");
-        this.locale = Objects.requireNonNull(locale, "expected parameter 'locale' to be non-null");
-        this.orientation = Objects.requireNonNull(orientation, "expected parameter 'orientation' to be non-null");
-    }
+    private AndroidDeviceArgs() {}
 
-    private AndroidDeviceArgs() {
-        this.androidModelId = Codegen.empty();
-        this.androidVersionId = Codegen.empty();
-        this.locale = Codegen.empty();
-        this.orientation = Codegen.empty();
+    private AndroidDeviceArgs(AndroidDeviceArgs $) {
+        this.androidModelId = $.androidModelId;
+        this.androidVersionId = $.androidVersionId;
+        this.locale = $.locale;
+        this.orientation = $.orientation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> androidModelId;
-        private Output<String> androidVersionId;
-        private Output<String> locale;
-        private Output<String> orientation;
+        private AndroidDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidDeviceArgs();
         }
 
         public Builder(AndroidDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidModelId = defaults.androidModelId;
-    	      this.androidVersionId = defaults.androidVersionId;
-    	      this.locale = defaults.locale;
-    	      this.orientation = defaults.orientation;
+            $ = new AndroidDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder androidModelId(Output<String> androidModelId) {
-            this.androidModelId = Objects.requireNonNull(androidModelId);
+            $.androidModelId = androidModelId;
             return this;
         }
+
         public Builder androidModelId(String androidModelId) {
-            this.androidModelId = Output.of(Objects.requireNonNull(androidModelId));
-            return this;
+            return androidModelId(Output.of(androidModelId));
         }
+
         public Builder androidVersionId(Output<String> androidVersionId) {
-            this.androidVersionId = Objects.requireNonNull(androidVersionId);
+            $.androidVersionId = androidVersionId;
             return this;
         }
+
         public Builder androidVersionId(String androidVersionId) {
-            this.androidVersionId = Output.of(Objects.requireNonNull(androidVersionId));
-            return this;
+            return androidVersionId(Output.of(androidVersionId));
         }
+
         public Builder locale(Output<String> locale) {
-            this.locale = Objects.requireNonNull(locale);
+            $.locale = locale;
             return this;
         }
+
         public Builder locale(String locale) {
-            this.locale = Output.of(Objects.requireNonNull(locale));
-            return this;
+            return locale(Output.of(locale));
         }
+
         public Builder orientation(Output<String> orientation) {
-            this.orientation = Objects.requireNonNull(orientation);
+            $.orientation = orientation;
             return this;
         }
+
         public Builder orientation(String orientation) {
-            this.orientation = Output.of(Objects.requireNonNull(orientation));
-            return this;
-        }        public AndroidDeviceArgs build() {
-            return new AndroidDeviceArgs(androidModelId, androidVersionId, locale, orientation);
+            return orientation(Output.of(orientation));
+        }
+
+        public AndroidDeviceArgs build() {
+            $.androidModelId = Objects.requireNonNull($.androidModelId, "expected parameter 'androidModelId' to be non-null");
+            $.androidVersionId = Objects.requireNonNull($.androidVersionId, "expected parameter 'androidVersionId' to be non-null");
+            $.locale = Objects.requireNonNull($.locale, "expected parameter 'locale' to be non-null");
+            $.orientation = Objects.requireNonNull($.orientation, "expected parameter 'orientation' to be non-null");
+            return $;
         }
     }
+
 }

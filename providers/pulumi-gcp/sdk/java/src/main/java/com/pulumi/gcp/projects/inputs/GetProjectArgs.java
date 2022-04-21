@@ -17,45 +17,45 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
     }
 
-    public GetProjectArgs(String filter) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-    }
+    private GetProjectArgs() {}
 
-    private GetProjectArgs() {
-        this.filter = null;
+    private GetProjectArgs(GetProjectArgs $) {
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
+        private GetProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProjectArgs();
         }
 
         public Builder(GetProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
+            $ = new GetProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
-        }        public GetProjectArgs build() {
-            return new GetProjectArgs(filter);
+        }
+
+        public GetProjectArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

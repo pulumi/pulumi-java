@@ -20,10 +20,10 @@ public final class TaskSetScale extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="unit")
-      private final @Nullable TaskSetScaleUnit unit;
+    private @Nullable TaskSetScaleUnit unit;
 
     public Optional<TaskSetScaleUnit> unit() {
-        return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
+        return Optional.ofNullable(this.unit);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class TaskSetScale extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Double value;
+    private @Nullable Double value;
 
     public Optional<Double> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public TaskSetScale(
-        @Nullable TaskSetScaleUnit unit,
-        @Nullable Double value) {
-        this.unit = unit;
-        this.value = value;
-    }
+    private TaskSetScale() {}
 
-    private TaskSetScale() {
-        this.unit = null;
-        this.value = null;
+    private TaskSetScale(TaskSetScale $) {
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSetScale defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TaskSetScaleUnit unit;
-        private @Nullable Double value;
+        private TaskSetScale $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSetScale();
         }
 
         public Builder(TaskSetScale defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new TaskSetScale(Objects.requireNonNull(defaults));
         }
 
         public Builder unit(@Nullable TaskSetScaleUnit unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
+
         public Builder value(@Nullable Double value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public TaskSetScale build() {
-            return new TaskSetScale(unit, value);
+        }
+
+        public TaskSetScale build() {
+            return $;
         }
     }
+
 }

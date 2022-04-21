@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SingleClusterRoutingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowTransactionalWrites")
-      private final @Nullable Output<Boolean> allowTransactionalWrites;
+    private @Nullable Output<Boolean> allowTransactionalWrites;
 
-    public Output<Boolean> allowTransactionalWrites() {
-        return this.allowTransactionalWrites == null ? Codegen.empty() : this.allowTransactionalWrites;
+    public Optional<Output<Boolean>> allowTransactionalWrites() {
+        return Optional.ofNullable(this.allowTransactionalWrites);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SingleClusterRoutingArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable Output<String> clusterId;
+    private @Nullable Output<String> clusterId;
 
-    public Output<String> clusterId() {
-        return this.clusterId == null ? Codegen.empty() : this.clusterId;
+    public Optional<Output<String>> clusterId() {
+        return Optional.ofNullable(this.clusterId);
     }
 
-    public SingleClusterRoutingArgs(
-        @Nullable Output<Boolean> allowTransactionalWrites,
-        @Nullable Output<String> clusterId) {
-        this.allowTransactionalWrites = allowTransactionalWrites;
-        this.clusterId = clusterId;
-    }
+    private SingleClusterRoutingArgs() {}
 
-    private SingleClusterRoutingArgs() {
-        this.allowTransactionalWrites = Codegen.empty();
-        this.clusterId = Codegen.empty();
+    private SingleClusterRoutingArgs(SingleClusterRoutingArgs $) {
+        this.allowTransactionalWrites = $.allowTransactionalWrites;
+        this.clusterId = $.clusterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SingleClusterRoutingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowTransactionalWrites;
-        private @Nullable Output<String> clusterId;
+        private SingleClusterRoutingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SingleClusterRoutingArgs();
         }
 
         public Builder(SingleClusterRoutingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowTransactionalWrites = defaults.allowTransactionalWrites;
-    	      this.clusterId = defaults.clusterId;
+            $ = new SingleClusterRoutingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowTransactionalWrites(@Nullable Output<Boolean> allowTransactionalWrites) {
-            this.allowTransactionalWrites = allowTransactionalWrites;
+            $.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
-        public Builder allowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
-            this.allowTransactionalWrites = Codegen.ofNullable(allowTransactionalWrites);
-            return this;
+
+        public Builder allowTransactionalWrites(Boolean allowTransactionalWrites) {
+            return allowTransactionalWrites(Output.of(allowTransactionalWrites));
         }
+
         public Builder clusterId(@Nullable Output<String> clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
-        public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Codegen.ofNullable(clusterId);
-            return this;
-        }        public SingleClusterRoutingArgs build() {
-            return new SingleClusterRoutingArgs(allowTransactionalWrites, clusterId);
+
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
+        }
+
+        public SingleClusterRoutingArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.oslogin_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationTimeUsec")
-      private final @Nullable Output<String> expirationTimeUsec;
+    private @Nullable Output<String> expirationTimeUsec;
 
-    public Output<String> expirationTimeUsec() {
-        return this.expirationTimeUsec == null ? Codegen.empty() : this.expirationTimeUsec;
+    public Optional<Output<String>> expirationTimeUsec() {
+        return Optional.ofNullable(this.expirationTimeUsec);
     }
 
     /**
@@ -31,83 +31,76 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public SshPublicKeyArgs(
-        @Nullable Output<String> expirationTimeUsec,
-        @Nullable Output<String> key,
-        Output<String> userId) {
-        this.expirationTimeUsec = expirationTimeUsec;
-        this.key = key;
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private SshPublicKeyArgs() {}
 
-    private SshPublicKeyArgs() {
-        this.expirationTimeUsec = Codegen.empty();
-        this.key = Codegen.empty();
-        this.userId = Codegen.empty();
+    private SshPublicKeyArgs(SshPublicKeyArgs $) {
+        this.expirationTimeUsec = $.expirationTimeUsec;
+        this.key = $.key;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationTimeUsec;
-        private @Nullable Output<String> key;
-        private Output<String> userId;
+        private SshPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshPublicKeyArgs();
         }
 
         public Builder(SshPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTimeUsec = defaults.expirationTimeUsec;
-    	      this.key = defaults.key;
-    	      this.userId = defaults.userId;
+            $ = new SshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTimeUsec(@Nullable Output<String> expirationTimeUsec) {
-            this.expirationTimeUsec = expirationTimeUsec;
+            $.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
-        public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
-            this.expirationTimeUsec = Codegen.ofNullable(expirationTimeUsec);
-            return this;
+
+        public Builder expirationTimeUsec(String expirationTimeUsec) {
+            return expirationTimeUsec(Output.of(expirationTimeUsec));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public SshPublicKeyArgs build() {
-            return new SshPublicKeyArgs(expirationTimeUsec, key, userId);
+            return userId(Output.of(userId));
+        }
+
+        public SshPublicKeyArgs build() {
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

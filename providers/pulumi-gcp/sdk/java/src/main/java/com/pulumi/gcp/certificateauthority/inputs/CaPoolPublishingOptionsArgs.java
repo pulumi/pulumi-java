@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class CaPoolPublishingOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="publishCaCert", required=true)
-      private final Output<Boolean> publishCaCert;
+    private Output<Boolean> publishCaCert;
 
     public Output<Boolean> publishCaCert() {
         return this.publishCaCert;
@@ -35,63 +34,60 @@ public final class CaPoolPublishingOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="publishCrl", required=true)
-      private final Output<Boolean> publishCrl;
+    private Output<Boolean> publishCrl;
 
     public Output<Boolean> publishCrl() {
         return this.publishCrl;
     }
 
-    public CaPoolPublishingOptionsArgs(
-        Output<Boolean> publishCaCert,
-        Output<Boolean> publishCrl) {
-        this.publishCaCert = Objects.requireNonNull(publishCaCert, "expected parameter 'publishCaCert' to be non-null");
-        this.publishCrl = Objects.requireNonNull(publishCrl, "expected parameter 'publishCrl' to be non-null");
-    }
+    private CaPoolPublishingOptionsArgs() {}
 
-    private CaPoolPublishingOptionsArgs() {
-        this.publishCaCert = Codegen.empty();
-        this.publishCrl = Codegen.empty();
+    private CaPoolPublishingOptionsArgs(CaPoolPublishingOptionsArgs $) {
+        this.publishCaCert = $.publishCaCert;
+        this.publishCrl = $.publishCrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolPublishingOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> publishCaCert;
-        private Output<Boolean> publishCrl;
+        private CaPoolPublishingOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolPublishingOptionsArgs();
         }
 
         public Builder(CaPoolPublishingOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishCaCert = defaults.publishCaCert;
-    	      this.publishCrl = defaults.publishCrl;
+            $ = new CaPoolPublishingOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publishCaCert(Output<Boolean> publishCaCert) {
-            this.publishCaCert = Objects.requireNonNull(publishCaCert);
+            $.publishCaCert = publishCaCert;
             return this;
         }
+
         public Builder publishCaCert(Boolean publishCaCert) {
-            this.publishCaCert = Output.of(Objects.requireNonNull(publishCaCert));
-            return this;
+            return publishCaCert(Output.of(publishCaCert));
         }
+
         public Builder publishCrl(Output<Boolean> publishCrl) {
-            this.publishCrl = Objects.requireNonNull(publishCrl);
+            $.publishCrl = publishCrl;
             return this;
         }
+
         public Builder publishCrl(Boolean publishCrl) {
-            this.publishCrl = Output.of(Objects.requireNonNull(publishCrl));
-            return this;
-        }        public CaPoolPublishingOptionsArgs build() {
-            return new CaPoolPublishingOptionsArgs(publishCaCert, publishCrl);
+            return publishCrl(Output.of(publishCrl));
+        }
+
+        public CaPoolPublishingOptionsArgs build() {
+            $.publishCaCert = Objects.requireNonNull($.publishCaCert, "expected parameter 'publishCaCert' to be non-null");
+            $.publishCrl = Objects.requireNonNull($.publishCrl, "expected parameter 'publishCrl' to be non-null");
+            return $;
         }
     }
+
 }

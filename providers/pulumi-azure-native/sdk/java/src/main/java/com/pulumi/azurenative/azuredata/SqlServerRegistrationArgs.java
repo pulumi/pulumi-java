@@ -5,10 +5,10 @@ package com.pulumi.azurenative.azuredata;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="propertyBag")
-      private final @Nullable Output<String> propertyBag;
+    private @Nullable Output<String> propertyBag;
 
-    public Output<String> propertyBag() {
-        return this.propertyBag == null ? Codegen.empty() : this.propertyBag;
+    public Optional<Output<String>> propertyBag() {
+        return Optional.ofNullable(this.propertyBag);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroup")
-      private final @Nullable Output<String> resourceGroup;
+    private @Nullable Output<String> resourceGroup;
 
-    public Output<String> resourceGroup() {
-        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
+    public Optional<Output<String>> resourceGroup() {
+        return Optional.ofNullable(this.resourceGroup);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,10 +65,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sqlServerRegistrationName")
-      private final @Nullable Output<String> sqlServerRegistrationName;
+    private @Nullable Output<String> sqlServerRegistrationName;
 
-    public Output<String> sqlServerRegistrationName() {
-        return this.sqlServerRegistrationName == null ? Codegen.empty() : this.sqlServerRegistrationName;
+    public Optional<Output<String>> sqlServerRegistrationName() {
+        return Optional.ofNullable(this.sqlServerRegistrationName);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
-    public Output<String> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -87,128 +87,109 @@ public final class SqlServerRegistrationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SqlServerRegistrationArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<String> propertyBag,
-        @Nullable Output<String> resourceGroup,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> sqlServerRegistrationName,
-        @Nullable Output<String> subscriptionId,
-        @Nullable Output<Map<String,String>> tags) {
-        this.location = location;
-        this.propertyBag = propertyBag;
-        this.resourceGroup = resourceGroup;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlServerRegistrationName = sqlServerRegistrationName;
-        this.subscriptionId = subscriptionId;
-        this.tags = tags;
-    }
+    private SqlServerRegistrationArgs() {}
 
-    private SqlServerRegistrationArgs() {
-        this.location = Codegen.empty();
-        this.propertyBag = Codegen.empty();
-        this.resourceGroup = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sqlServerRegistrationName = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SqlServerRegistrationArgs(SqlServerRegistrationArgs $) {
+        this.location = $.location;
+        this.propertyBag = $.propertyBag;
+        this.resourceGroup = $.resourceGroup;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlServerRegistrationName = $.sqlServerRegistrationName;
+        this.subscriptionId = $.subscriptionId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> propertyBag;
-        private @Nullable Output<String> resourceGroup;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> sqlServerRegistrationName;
-        private @Nullable Output<String> subscriptionId;
-        private @Nullable Output<Map<String,String>> tags;
+        private SqlServerRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerRegistrationArgs();
         }
 
         public Builder(SqlServerRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.propertyBag = defaults.propertyBag;
-    	      this.resourceGroup = defaults.resourceGroup;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlServerRegistrationName = defaults.sqlServerRegistrationName;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tags = defaults.tags;
+            $ = new SqlServerRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder propertyBag(@Nullable Output<String> propertyBag) {
-            this.propertyBag = propertyBag;
+            $.propertyBag = propertyBag;
             return this;
         }
-        public Builder propertyBag(@Nullable String propertyBag) {
-            this.propertyBag = Codegen.ofNullable(propertyBag);
-            return this;
+
+        public Builder propertyBag(String propertyBag) {
+            return propertyBag(Output.of(propertyBag));
         }
+
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
-            this.resourceGroup = resourceGroup;
+            $.resourceGroup = resourceGroup;
             return this;
         }
-        public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Codegen.ofNullable(resourceGroup);
-            return this;
+
+        public Builder resourceGroup(String resourceGroup) {
+            return resourceGroup(Output.of(resourceGroup));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sqlServerRegistrationName(@Nullable Output<String> sqlServerRegistrationName) {
-            this.sqlServerRegistrationName = sqlServerRegistrationName;
+            $.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;
         }
-        public Builder sqlServerRegistrationName(@Nullable String sqlServerRegistrationName) {
-            this.sqlServerRegistrationName = Codegen.ofNullable(sqlServerRegistrationName);
-            return this;
+
+        public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
+            return sqlServerRegistrationName(Output.of(sqlServerRegistrationName));
         }
+
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public SqlServerRegistrationArgs build() {
-            return new SqlServerRegistrationArgs(location, propertyBag, resourceGroup, resourceGroupName, sqlServerRegistrationName, subscriptionId, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public SqlServerRegistrationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

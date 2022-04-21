@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AzureClusterControlPlaneDatabaseEncryptionArgs extends com.pu
      * 
      */
     @Import(name="keyId", required=true)
-      private final Output<String> keyId;
+    private Output<String> keyId;
 
     public Output<String> keyId() {
         return this.keyId;
     }
 
-    public AzureClusterControlPlaneDatabaseEncryptionArgs(Output<String> keyId) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-    }
+    private AzureClusterControlPlaneDatabaseEncryptionArgs() {}
 
-    private AzureClusterControlPlaneDatabaseEncryptionArgs() {
-        this.keyId = Codegen.empty();
+    private AzureClusterControlPlaneDatabaseEncryptionArgs(AzureClusterControlPlaneDatabaseEncryptionArgs $) {
+        this.keyId = $.keyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureClusterControlPlaneDatabaseEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyId;
+        private AzureClusterControlPlaneDatabaseEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureClusterControlPlaneDatabaseEncryptionArgs();
         }
 
         public Builder(AzureClusterControlPlaneDatabaseEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
+            $ = new AzureClusterControlPlaneDatabaseEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(Output<String> keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Output.of(Objects.requireNonNull(keyId));
-            return this;
-        }        public AzureClusterControlPlaneDatabaseEncryptionArgs build() {
-            return new AzureClusterControlPlaneDatabaseEncryptionArgs(keyId);
+            return keyId(Output.of(keyId));
+        }
+
+        public AzureClusterControlPlaneDatabaseEncryptionArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            return $;
         }
     }
+
 }

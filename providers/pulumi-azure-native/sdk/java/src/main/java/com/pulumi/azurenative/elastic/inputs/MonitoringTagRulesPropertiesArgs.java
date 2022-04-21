@@ -8,9 +8,9 @@ import com.pulumi.azurenative.elastic.inputs.LogRulesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class MonitoringTagRulesPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="logRules")
-      private final @Nullable Output<LogRulesArgs> logRules;
+    private @Nullable Output<LogRulesArgs> logRules;
 
-    public Output<LogRulesArgs> logRules() {
-        return this.logRules == null ? Codegen.empty() : this.logRules;
+    public Optional<Output<LogRulesArgs>> logRules() {
+        return Optional.ofNullable(this.logRules);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class MonitoringTagRulesPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public MonitoringTagRulesPropertiesArgs(
-        @Nullable Output<LogRulesArgs> logRules,
-        @Nullable Output<Either<String,ProvisioningState>> provisioningState) {
-        this.logRules = logRules;
-        this.provisioningState = provisioningState;
-    }
+    private MonitoringTagRulesPropertiesArgs() {}
 
-    private MonitoringTagRulesPropertiesArgs() {
-        this.logRules = Codegen.empty();
-        this.provisioningState = Codegen.empty();
+    private MonitoringTagRulesPropertiesArgs(MonitoringTagRulesPropertiesArgs $) {
+        this.logRules = $.logRules;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringTagRulesPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LogRulesArgs> logRules;
-        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+        private MonitoringTagRulesPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringTagRulesPropertiesArgs();
         }
 
         public Builder(MonitoringTagRulesPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logRules = defaults.logRules;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new MonitoringTagRulesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logRules(@Nullable Output<LogRulesArgs> logRules) {
-            this.logRules = logRules;
+            $.logRules = logRules;
             return this;
         }
-        public Builder logRules(@Nullable LogRulesArgs logRules) {
-            this.logRules = Codegen.ofNullable(logRules);
-            return this;
+
+        public Builder logRules(LogRulesArgs logRules) {
+            return logRules(Output.of(logRules));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
-        }        public MonitoringTagRulesPropertiesArgs build() {
-            return new MonitoringTagRulesPropertiesArgs(logRules, provisioningState);
+
+        public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
+        }
+
+        public MonitoringTagRulesPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,110 +13,101 @@ public final class GetLoadBalancerSubnetMapping extends com.pulumi.resources.Inv
     public static final GetLoadBalancerSubnetMapping Empty = new GetLoadBalancerSubnetMapping();
 
     @Import(name="allocationId", required=true)
-      private final String allocationId;
+    private String allocationId;
 
     public String allocationId() {
         return this.allocationId;
     }
 
     @Import(name="ipv6Address", required=true)
-      private final String ipv6Address;
+    private String ipv6Address;
 
     public String ipv6Address() {
         return this.ipv6Address;
     }
 
     @Import(name="outpostId", required=true)
-      private final String outpostId;
+    private String outpostId;
 
     public String outpostId() {
         return this.outpostId;
     }
 
     @Import(name="privateIpv4Address", required=true)
-      private final String privateIpv4Address;
+    private String privateIpv4Address;
 
     public String privateIpv4Address() {
         return this.privateIpv4Address;
     }
 
     @Import(name="subnetId", required=true)
-      private final String subnetId;
+    private String subnetId;
 
     public String subnetId() {
         return this.subnetId;
     }
 
-    public GetLoadBalancerSubnetMapping(
-        String allocationId,
-        String ipv6Address,
-        String outpostId,
-        String privateIpv4Address,
-        String subnetId) {
-        this.allocationId = Objects.requireNonNull(allocationId, "expected parameter 'allocationId' to be non-null");
-        this.ipv6Address = Objects.requireNonNull(ipv6Address, "expected parameter 'ipv6Address' to be non-null");
-        this.outpostId = Objects.requireNonNull(outpostId, "expected parameter 'outpostId' to be non-null");
-        this.privateIpv4Address = Objects.requireNonNull(privateIpv4Address, "expected parameter 'privateIpv4Address' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-    }
+    private GetLoadBalancerSubnetMapping() {}
 
-    private GetLoadBalancerSubnetMapping() {
-        this.allocationId = null;
-        this.ipv6Address = null;
-        this.outpostId = null;
-        this.privateIpv4Address = null;
-        this.subnetId = null;
+    private GetLoadBalancerSubnetMapping(GetLoadBalancerSubnetMapping $) {
+        this.allocationId = $.allocationId;
+        this.ipv6Address = $.ipv6Address;
+        this.outpostId = $.outpostId;
+        this.privateIpv4Address = $.privateIpv4Address;
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoadBalancerSubnetMapping defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String allocationId;
-        private String ipv6Address;
-        private String outpostId;
-        private String privateIpv4Address;
-        private String subnetId;
+        private GetLoadBalancerSubnetMapping $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoadBalancerSubnetMapping();
         }
 
         public Builder(GetLoadBalancerSubnetMapping defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationId = defaults.allocationId;
-    	      this.ipv6Address = defaults.ipv6Address;
-    	      this.outpostId = defaults.outpostId;
-    	      this.privateIpv4Address = defaults.privateIpv4Address;
-    	      this.subnetId = defaults.subnetId;
+            $ = new GetLoadBalancerSubnetMapping(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationId(String allocationId) {
-            this.allocationId = Objects.requireNonNull(allocationId);
+            $.allocationId = allocationId;
             return this;
         }
+
         public Builder ipv6Address(String ipv6Address) {
-            this.ipv6Address = Objects.requireNonNull(ipv6Address);
+            $.ipv6Address = ipv6Address;
             return this;
         }
+
         public Builder outpostId(String outpostId) {
-            this.outpostId = Objects.requireNonNull(outpostId);
+            $.outpostId = outpostId;
             return this;
         }
+
         public Builder privateIpv4Address(String privateIpv4Address) {
-            this.privateIpv4Address = Objects.requireNonNull(privateIpv4Address);
+            $.privateIpv4Address = privateIpv4Address;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
-        }        public GetLoadBalancerSubnetMapping build() {
-            return new GetLoadBalancerSubnetMapping(allocationId, ipv6Address, outpostId, privateIpv4Address, subnetId);
+        }
+
+        public GetLoadBalancerSubnetMapping build() {
+            $.allocationId = Objects.requireNonNull($.allocationId, "expected parameter 'allocationId' to be non-null");
+            $.ipv6Address = Objects.requireNonNull($.ipv6Address, "expected parameter 'ipv6Address' to be non-null");
+            $.outpostId = Objects.requireNonNull($.outpostId, "expected parameter 'outpostId' to be non-null");
+            $.privateIpv4Address = Objects.requireNonNull($.privateIpv4Address, "expected parameter 'privateIpv4Address' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

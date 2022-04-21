@@ -27,7 +27,7 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="archiveExtraction", required=true)
-      private final SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
+    private SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
 
     public SoftwareRecipeStepExtractArchiveResponse archiveExtraction() {
         return this.archiveExtraction;
@@ -38,7 +38,7 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dpkgInstallation", required=true)
-      private final SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
+    private SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
 
     public SoftwareRecipeStepInstallDpkgResponse dpkgInstallation() {
         return this.dpkgInstallation;
@@ -49,7 +49,7 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fileCopy", required=true)
-      private final SoftwareRecipeStepCopyFileResponse fileCopy;
+    private SoftwareRecipeStepCopyFileResponse fileCopy;
 
     public SoftwareRecipeStepCopyFileResponse fileCopy() {
         return this.fileCopy;
@@ -60,7 +60,7 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fileExec", required=true)
-      private final SoftwareRecipeStepExecFileResponse fileExec;
+    private SoftwareRecipeStepExecFileResponse fileExec;
 
     public SoftwareRecipeStepExecFileResponse fileExec() {
         return this.fileExec;
@@ -71,7 +71,7 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="msiInstallation", required=true)
-      private final SoftwareRecipeStepInstallMsiResponse msiInstallation;
+    private SoftwareRecipeStepInstallMsiResponse msiInstallation;
 
     public SoftwareRecipeStepInstallMsiResponse msiInstallation() {
         return this.msiInstallation;
@@ -82,7 +82,7 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="rpmInstallation", required=true)
-      private final SoftwareRecipeStepInstallRpmResponse rpmInstallation;
+    private SoftwareRecipeStepInstallRpmResponse rpmInstallation;
 
     public SoftwareRecipeStepInstallRpmResponse rpmInstallation() {
         return this.rpmInstallation;
@@ -93,100 +93,87 @@ public final class SoftwareRecipeStepResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="scriptRun", required=true)
-      private final SoftwareRecipeStepRunScriptResponse scriptRun;
+    private SoftwareRecipeStepRunScriptResponse scriptRun;
 
     public SoftwareRecipeStepRunScriptResponse scriptRun() {
         return this.scriptRun;
     }
 
-    public SoftwareRecipeStepResponse(
-        SoftwareRecipeStepExtractArchiveResponse archiveExtraction,
-        SoftwareRecipeStepInstallDpkgResponse dpkgInstallation,
-        SoftwareRecipeStepCopyFileResponse fileCopy,
-        SoftwareRecipeStepExecFileResponse fileExec,
-        SoftwareRecipeStepInstallMsiResponse msiInstallation,
-        SoftwareRecipeStepInstallRpmResponse rpmInstallation,
-        SoftwareRecipeStepRunScriptResponse scriptRun) {
-        this.archiveExtraction = Objects.requireNonNull(archiveExtraction, "expected parameter 'archiveExtraction' to be non-null");
-        this.dpkgInstallation = Objects.requireNonNull(dpkgInstallation, "expected parameter 'dpkgInstallation' to be non-null");
-        this.fileCopy = Objects.requireNonNull(fileCopy, "expected parameter 'fileCopy' to be non-null");
-        this.fileExec = Objects.requireNonNull(fileExec, "expected parameter 'fileExec' to be non-null");
-        this.msiInstallation = Objects.requireNonNull(msiInstallation, "expected parameter 'msiInstallation' to be non-null");
-        this.rpmInstallation = Objects.requireNonNull(rpmInstallation, "expected parameter 'rpmInstallation' to be non-null");
-        this.scriptRun = Objects.requireNonNull(scriptRun, "expected parameter 'scriptRun' to be non-null");
-    }
+    private SoftwareRecipeStepResponse() {}
 
-    private SoftwareRecipeStepResponse() {
-        this.archiveExtraction = null;
-        this.dpkgInstallation = null;
-        this.fileCopy = null;
-        this.fileExec = null;
-        this.msiInstallation = null;
-        this.rpmInstallation = null;
-        this.scriptRun = null;
+    private SoftwareRecipeStepResponse(SoftwareRecipeStepResponse $) {
+        this.archiveExtraction = $.archiveExtraction;
+        this.dpkgInstallation = $.dpkgInstallation;
+        this.fileCopy = $.fileCopy;
+        this.fileExec = $.fileExec;
+        this.msiInstallation = $.msiInstallation;
+        this.rpmInstallation = $.rpmInstallation;
+        this.scriptRun = $.scriptRun;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SoftwareRecipeStepExtractArchiveResponse archiveExtraction;
-        private SoftwareRecipeStepInstallDpkgResponse dpkgInstallation;
-        private SoftwareRecipeStepCopyFileResponse fileCopy;
-        private SoftwareRecipeStepExecFileResponse fileExec;
-        private SoftwareRecipeStepInstallMsiResponse msiInstallation;
-        private SoftwareRecipeStepInstallRpmResponse rpmInstallation;
-        private SoftwareRecipeStepRunScriptResponse scriptRun;
+        private SoftwareRecipeStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeStepResponse();
         }
 
         public Builder(SoftwareRecipeStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveExtraction = defaults.archiveExtraction;
-    	      this.dpkgInstallation = defaults.dpkgInstallation;
-    	      this.fileCopy = defaults.fileCopy;
-    	      this.fileExec = defaults.fileExec;
-    	      this.msiInstallation = defaults.msiInstallation;
-    	      this.rpmInstallation = defaults.rpmInstallation;
-    	      this.scriptRun = defaults.scriptRun;
+            $ = new SoftwareRecipeStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveExtraction(SoftwareRecipeStepExtractArchiveResponse archiveExtraction) {
-            this.archiveExtraction = Objects.requireNonNull(archiveExtraction);
+            $.archiveExtraction = archiveExtraction;
             return this;
         }
+
         public Builder dpkgInstallation(SoftwareRecipeStepInstallDpkgResponse dpkgInstallation) {
-            this.dpkgInstallation = Objects.requireNonNull(dpkgInstallation);
+            $.dpkgInstallation = dpkgInstallation;
             return this;
         }
+
         public Builder fileCopy(SoftwareRecipeStepCopyFileResponse fileCopy) {
-            this.fileCopy = Objects.requireNonNull(fileCopy);
+            $.fileCopy = fileCopy;
             return this;
         }
+
         public Builder fileExec(SoftwareRecipeStepExecFileResponse fileExec) {
-            this.fileExec = Objects.requireNonNull(fileExec);
+            $.fileExec = fileExec;
             return this;
         }
+
         public Builder msiInstallation(SoftwareRecipeStepInstallMsiResponse msiInstallation) {
-            this.msiInstallation = Objects.requireNonNull(msiInstallation);
+            $.msiInstallation = msiInstallation;
             return this;
         }
+
         public Builder rpmInstallation(SoftwareRecipeStepInstallRpmResponse rpmInstallation) {
-            this.rpmInstallation = Objects.requireNonNull(rpmInstallation);
+            $.rpmInstallation = rpmInstallation;
             return this;
         }
+
         public Builder scriptRun(SoftwareRecipeStepRunScriptResponse scriptRun) {
-            this.scriptRun = Objects.requireNonNull(scriptRun);
+            $.scriptRun = scriptRun;
             return this;
-        }        public SoftwareRecipeStepResponse build() {
-            return new SoftwareRecipeStepResponse(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
+        }
+
+        public SoftwareRecipeStepResponse build() {
+            $.archiveExtraction = Objects.requireNonNull($.archiveExtraction, "expected parameter 'archiveExtraction' to be non-null");
+            $.dpkgInstallation = Objects.requireNonNull($.dpkgInstallation, "expected parameter 'dpkgInstallation' to be non-null");
+            $.fileCopy = Objects.requireNonNull($.fileCopy, "expected parameter 'fileCopy' to be non-null");
+            $.fileExec = Objects.requireNonNull($.fileExec, "expected parameter 'fileExec' to be non-null");
+            $.msiInstallation = Objects.requireNonNull($.msiInstallation, "expected parameter 'msiInstallation' to be non-null");
+            $.rpmInstallation = Objects.requireNonNull($.rpmInstallation, "expected parameter 'rpmInstallation' to be non-null");
+            $.scriptRun = Objects.requireNonNull($.scriptRun, "expected parameter 'scriptRun' to be non-null");
+            return $;
         }
     }
+
 }

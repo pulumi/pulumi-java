@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DistributionS3OriginConfigArgs extends com.pulumi.resources.R
     public static final DistributionS3OriginConfigArgs Empty = new DistributionS3OriginConfigArgs();
 
     @Import(name="originAccessIdentity")
-      private final @Nullable Output<String> originAccessIdentity;
+    private @Nullable Output<String> originAccessIdentity;
 
-    public Output<String> originAccessIdentity() {
-        return this.originAccessIdentity == null ? Codegen.empty() : this.originAccessIdentity;
+    public Optional<Output<String>> originAccessIdentity() {
+        return Optional.ofNullable(this.originAccessIdentity);
     }
 
-    public DistributionS3OriginConfigArgs(@Nullable Output<String> originAccessIdentity) {
-        this.originAccessIdentity = originAccessIdentity;
-    }
+    private DistributionS3OriginConfigArgs() {}
 
-    private DistributionS3OriginConfigArgs() {
-        this.originAccessIdentity = Codegen.empty();
+    private DistributionS3OriginConfigArgs(DistributionS3OriginConfigArgs $) {
+        this.originAccessIdentity = $.originAccessIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionS3OriginConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> originAccessIdentity;
+        private DistributionS3OriginConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionS3OriginConfigArgs();
         }
 
         public Builder(DistributionS3OriginConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.originAccessIdentity = defaults.originAccessIdentity;
+            $ = new DistributionS3OriginConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder originAccessIdentity(@Nullable Output<String> originAccessIdentity) {
-            this.originAccessIdentity = originAccessIdentity;
+            $.originAccessIdentity = originAccessIdentity;
             return this;
         }
-        public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
-            this.originAccessIdentity = Codegen.ofNullable(originAccessIdentity);
-            return this;
-        }        public DistributionS3OriginConfigArgs build() {
-            return new DistributionS3OriginConfigArgs(originAccessIdentity);
+
+        public Builder originAccessIdentity(String originAccessIdentity) {
+            return originAccessIdentity(Output.of(originAccessIdentity));
+        }
+
+        public DistributionS3OriginConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends co
      * 
      */
     @Import(name="analysisResult", required=true)
-      private final GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult;
+    private GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult;
 
     public GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult() {
         return this.analysisResult;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends co
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends co
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -55,73 +55,66 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResponse extends co
      * 
      */
     @Import(name="requestTime", required=true)
-      private final String requestTime;
+    private String requestTime;
 
     public String requestTime() {
         return this.requestTime;
     }
 
-    public GoogleCloudContactcenterinsightsV1AnalysisResponse(
-        GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult,
-        String createTime,
-        String name,
-        String requestTime) {
-        this.analysisResult = Objects.requireNonNull(analysisResult, "expected parameter 'analysisResult' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.requestTime = Objects.requireNonNull(requestTime, "expected parameter 'requestTime' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1AnalysisResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1AnalysisResponse() {
-        this.analysisResult = null;
-        this.createTime = null;
-        this.name = null;
-        this.requestTime = null;
+    private GoogleCloudContactcenterinsightsV1AnalysisResponse(GoogleCloudContactcenterinsightsV1AnalysisResponse $) {
+        this.analysisResult = $.analysisResult;
+        this.createTime = $.createTime;
+        this.name = $.name;
+        this.requestTime = $.requestTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1AnalysisResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult;
-        private String createTime;
-        private String name;
-        private String requestTime;
+        private GoogleCloudContactcenterinsightsV1AnalysisResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1AnalysisResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1AnalysisResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisResult = defaults.analysisResult;
-    	      this.createTime = defaults.createTime;
-    	      this.name = defaults.name;
-    	      this.requestTime = defaults.requestTime;
+            $ = new GoogleCloudContactcenterinsightsV1AnalysisResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisResult(GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult) {
-            this.analysisResult = Objects.requireNonNull(analysisResult);
+            $.analysisResult = analysisResult;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder requestTime(String requestTime) {
-            this.requestTime = Objects.requireNonNull(requestTime);
+            $.requestTime = requestTime;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1AnalysisResponse build() {
-            return new GoogleCloudContactcenterinsightsV1AnalysisResponse(analysisResult, createTime, name, requestTime);
+        }
+
+        public GoogleCloudContactcenterinsightsV1AnalysisResponse build() {
+            $.analysisResult = Objects.requireNonNull($.analysisResult, "expected parameter 'analysisResult' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.requestTime = Objects.requireNonNull($.requestTime, "expected parameter 'requestTime' to be non-null");
+            return $;
         }
     }
+
 }

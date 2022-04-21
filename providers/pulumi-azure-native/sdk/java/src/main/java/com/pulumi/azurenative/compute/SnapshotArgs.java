@@ -15,12 +15,12 @@ import com.pulumi.azurenative.compute.inputs.SnapshotSkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,7 +33,7 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationData", required=true)
-      private final Output<CreationDataArgs> creationData;
+    private Output<CreationDataArgs> creationData;
 
     public Output<CreationDataArgs> creationData() {
         return this.creationData;
@@ -44,10 +44,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskAccessId")
-      private final @Nullable Output<String> diskAccessId;
+    private @Nullable Output<String> diskAccessId;
 
-    public Output<String> diskAccessId() {
-        return this.diskAccessId == null ? Codegen.empty() : this.diskAccessId;
+    public Optional<Output<String>> diskAccessId() {
+        return Optional.ofNullable(this.diskAccessId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<EncryptionArgs> encryption;
+    private @Nullable Output<EncryptionArgs> encryption;
 
-    public Output<EncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<EncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionSettingsCollection")
-      private final @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
+    private @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
-    public Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection() {
-        return this.encryptionSettingsCollection == null ? Codegen.empty() : this.encryptionSettingsCollection;
+    public Optional<Output<EncryptionSettingsCollectionArgs>> encryptionSettingsCollection() {
+        return Optional.ofNullable(this.encryptionSettingsCollection);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hyperVGeneration")
-      private final @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
+    private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
 
-    public Output<Either<String,HyperVGeneration>> hyperVGeneration() {
-        return this.hyperVGeneration == null ? Codegen.empty() : this.hyperVGeneration;
+    public Optional<Output<Either<String,HyperVGeneration>>> hyperVGeneration() {
+        return Optional.ofNullable(this.hyperVGeneration);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="incremental")
-      private final @Nullable Output<Boolean> incremental;
+    private @Nullable Output<Boolean> incremental;
 
-    public Output<Boolean> incremental() {
-        return this.incremental == null ? Codegen.empty() : this.incremental;
+    public Optional<Output<Boolean>> incremental() {
+        return Optional.ofNullable(this.incremental);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkAccessPolicy")
-      private final @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
+    private @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
-    public Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy() {
-        return this.networkAccessPolicy == null ? Codegen.empty() : this.networkAccessPolicy;
+    public Optional<Output<Either<String,NetworkAccessPolicy>>> networkAccessPolicy() {
+        return Optional.ofNullable(this.networkAccessPolicy);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<OperatingSystemTypes> osType;
+    private @Nullable Output<OperatingSystemTypes> osType;
 
-    public Output<OperatingSystemTypes> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<OperatingSystemTypes>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="purchasePlan")
-      private final @Nullable Output<PurchasePlanArgs> purchasePlan;
+    private @Nullable Output<PurchasePlanArgs> purchasePlan;
 
-    public Output<PurchasePlanArgs> purchasePlan() {
-        return this.purchasePlan == null ? Codegen.empty() : this.purchasePlan;
+    public Optional<Output<PurchasePlanArgs>> purchasePlan() {
+        return Optional.ofNullable(this.purchasePlan);
     }
 
     /**
@@ -165,7 +165,7 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -176,10 +176,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SnapshotSkuArgs> sku;
+    private @Nullable Output<SnapshotSkuArgs> sku;
 
-    public Output<SnapshotSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SnapshotSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotName")
-      private final @Nullable Output<String> snapshotName;
+    private @Nullable Output<String> snapshotName;
 
-    public Output<String> snapshotName() {
-        return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
+    public Optional<Output<String>> snapshotName() {
+        return Optional.ofNullable(this.snapshotName);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportsHibernation")
-      private final @Nullable Output<Boolean> supportsHibernation;
+    private @Nullable Output<Boolean> supportsHibernation;
 
-    public Output<Boolean> supportsHibernation() {
-        return this.supportsHibernation == null ? Codegen.empty() : this.supportsHibernation;
+    public Optional<Output<Boolean>> supportsHibernation() {
+        return Optional.ofNullable(this.supportsHibernation);
     }
 
     /**
@@ -209,258 +209,210 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SnapshotArgs(
-        Output<CreationDataArgs> creationData,
-        @Nullable Output<String> diskAccessId,
-        @Nullable Output<Integer> diskSizeGB,
-        @Nullable Output<EncryptionArgs> encryption,
-        @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration,
-        @Nullable Output<Boolean> incremental,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy,
-        @Nullable Output<OperatingSystemTypes> osType,
-        @Nullable Output<PurchasePlanArgs> purchasePlan,
-        Output<String> resourceGroupName,
-        @Nullable Output<SnapshotSkuArgs> sku,
-        @Nullable Output<String> snapshotName,
-        @Nullable Output<Boolean> supportsHibernation,
-        @Nullable Output<Map<String,String>> tags) {
-        this.creationData = Objects.requireNonNull(creationData, "expected parameter 'creationData' to be non-null");
-        this.diskAccessId = diskAccessId;
-        this.diskSizeGB = diskSizeGB;
-        this.encryption = encryption;
-        this.encryptionSettingsCollection = encryptionSettingsCollection;
-        this.extendedLocation = extendedLocation;
-        this.hyperVGeneration = hyperVGeneration;
-        this.incremental = incremental;
-        this.location = location;
-        this.networkAccessPolicy = networkAccessPolicy;
-        this.osType = osType;
-        this.purchasePlan = purchasePlan;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.snapshotName = snapshotName;
-        this.supportsHibernation = supportsHibernation;
-        this.tags = tags;
-    }
+    private SnapshotArgs() {}
 
-    private SnapshotArgs() {
-        this.creationData = Codegen.empty();
-        this.diskAccessId = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.encryptionSettingsCollection = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.hyperVGeneration = Codegen.empty();
-        this.incremental = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkAccessPolicy = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.purchasePlan = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.snapshotName = Codegen.empty();
-        this.supportsHibernation = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SnapshotArgs(SnapshotArgs $) {
+        this.creationData = $.creationData;
+        this.diskAccessId = $.diskAccessId;
+        this.diskSizeGB = $.diskSizeGB;
+        this.encryption = $.encryption;
+        this.encryptionSettingsCollection = $.encryptionSettingsCollection;
+        this.extendedLocation = $.extendedLocation;
+        this.hyperVGeneration = $.hyperVGeneration;
+        this.incremental = $.incremental;
+        this.location = $.location;
+        this.networkAccessPolicy = $.networkAccessPolicy;
+        this.osType = $.osType;
+        this.purchasePlan = $.purchasePlan;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.snapshotName = $.snapshotName;
+        this.supportsHibernation = $.supportsHibernation;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CreationDataArgs> creationData;
-        private @Nullable Output<String> diskAccessId;
-        private @Nullable Output<Integer> diskSizeGB;
-        private @Nullable Output<EncryptionArgs> encryption;
-        private @Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration;
-        private @Nullable Output<Boolean> incremental;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
-        private @Nullable Output<OperatingSystemTypes> osType;
-        private @Nullable Output<PurchasePlanArgs> purchasePlan;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SnapshotSkuArgs> sku;
-        private @Nullable Output<String> snapshotName;
-        private @Nullable Output<Boolean> supportsHibernation;
-        private @Nullable Output<Map<String,String>> tags;
+        private SnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotArgs();
         }
 
         public Builder(SnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationData = defaults.creationData;
-    	      this.diskAccessId = defaults.diskAccessId;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.encryption = defaults.encryption;
-    	      this.encryptionSettingsCollection = defaults.encryptionSettingsCollection;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.hyperVGeneration = defaults.hyperVGeneration;
-    	      this.incremental = defaults.incremental;
-    	      this.location = defaults.location;
-    	      this.networkAccessPolicy = defaults.networkAccessPolicy;
-    	      this.osType = defaults.osType;
-    	      this.purchasePlan = defaults.purchasePlan;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.snapshotName = defaults.snapshotName;
-    	      this.supportsHibernation = defaults.supportsHibernation;
-    	      this.tags = defaults.tags;
+            $ = new SnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationData(Output<CreationDataArgs> creationData) {
-            this.creationData = Objects.requireNonNull(creationData);
+            $.creationData = creationData;
             return this;
         }
+
         public Builder creationData(CreationDataArgs creationData) {
-            this.creationData = Output.of(Objects.requireNonNull(creationData));
-            return this;
+            return creationData(Output.of(creationData));
         }
+
         public Builder diskAccessId(@Nullable Output<String> diskAccessId) {
-            this.diskAccessId = diskAccessId;
+            $.diskAccessId = diskAccessId;
             return this;
         }
-        public Builder diskAccessId(@Nullable String diskAccessId) {
-            this.diskAccessId = Codegen.ofNullable(diskAccessId);
-            return this;
+
+        public Builder diskAccessId(String diskAccessId) {
+            return diskAccessId(Output.of(diskAccessId));
         }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable EncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(EncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder encryptionSettingsCollection(@Nullable Output<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
-            this.encryptionSettingsCollection = encryptionSettingsCollection;
+            $.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
-        public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
-            this.encryptionSettingsCollection = Codegen.ofNullable(encryptionSettingsCollection);
-            return this;
+
+        public Builder encryptionSettingsCollection(EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
+            return encryptionSettingsCollection(Output.of(encryptionSettingsCollection));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGeneration>> hyperVGeneration) {
-            this.hyperVGeneration = hyperVGeneration;
+            $.hyperVGeneration = hyperVGeneration;
             return this;
         }
-        public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
-            this.hyperVGeneration = Codegen.ofNullable(hyperVGeneration);
-            return this;
+
+        public Builder hyperVGeneration(Either<String,HyperVGeneration> hyperVGeneration) {
+            return hyperVGeneration(Output.of(hyperVGeneration));
         }
+
         public Builder incremental(@Nullable Output<Boolean> incremental) {
-            this.incremental = incremental;
+            $.incremental = incremental;
             return this;
         }
-        public Builder incremental(@Nullable Boolean incremental) {
-            this.incremental = Codegen.ofNullable(incremental);
-            return this;
+
+        public Builder incremental(Boolean incremental) {
+            return incremental(Output.of(incremental));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkAccessPolicy(@Nullable Output<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
-            this.networkAccessPolicy = networkAccessPolicy;
+            $.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
-        public Builder networkAccessPolicy(@Nullable Either<String,NetworkAccessPolicy> networkAccessPolicy) {
-            this.networkAccessPolicy = Codegen.ofNullable(networkAccessPolicy);
-            return this;
+
+        public Builder networkAccessPolicy(Either<String,NetworkAccessPolicy> networkAccessPolicy) {
+            return networkAccessPolicy(Output.of(networkAccessPolicy));
         }
+
         public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable OperatingSystemTypes osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(OperatingSystemTypes osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder purchasePlan(@Nullable Output<PurchasePlanArgs> purchasePlan) {
-            this.purchasePlan = purchasePlan;
+            $.purchasePlan = purchasePlan;
             return this;
         }
-        public Builder purchasePlan(@Nullable PurchasePlanArgs purchasePlan) {
-            this.purchasePlan = Codegen.ofNullable(purchasePlan);
-            return this;
+
+        public Builder purchasePlan(PurchasePlanArgs purchasePlan) {
+            return purchasePlan(Output.of(purchasePlan));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SnapshotSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SnapshotSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SnapshotSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
-            this.snapshotName = snapshotName;
+            $.snapshotName = snapshotName;
             return this;
         }
-        public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Codegen.ofNullable(snapshotName);
-            return this;
+
+        public Builder snapshotName(String snapshotName) {
+            return snapshotName(Output.of(snapshotName));
         }
+
         public Builder supportsHibernation(@Nullable Output<Boolean> supportsHibernation) {
-            this.supportsHibernation = supportsHibernation;
+            $.supportsHibernation = supportsHibernation;
             return this;
         }
-        public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
-            this.supportsHibernation = Codegen.ofNullable(supportsHibernation);
-            return this;
+
+        public Builder supportsHibernation(Boolean supportsHibernation) {
+            return supportsHibernation(Output.of(supportsHibernation));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public SnapshotArgs build() {
-            return new SnapshotArgs(creationData, diskAccessId, diskSizeGB, encryption, encryptionSettingsCollection, extendedLocation, hyperVGeneration, incremental, location, networkAccessPolicy, osType, purchasePlan, resourceGroupName, sku, snapshotName, supportsHibernation, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public SnapshotArgs build() {
+            $.creationData = Objects.requireNonNull($.creationData, "expected parameter 'creationData' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

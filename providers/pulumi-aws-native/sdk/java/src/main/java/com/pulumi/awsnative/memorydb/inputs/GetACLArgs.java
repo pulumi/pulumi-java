@@ -17,45 +17,45 @@ public final class GetACLArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aCLName", required=true)
-      private final String aCLName;
+    private String aCLName;
 
     public String aCLName() {
         return this.aCLName;
     }
 
-    public GetACLArgs(String aCLName) {
-        this.aCLName = Objects.requireNonNull(aCLName, "expected parameter 'aCLName' to be non-null");
-    }
+    private GetACLArgs() {}
 
-    private GetACLArgs() {
-        this.aCLName = null;
+    private GetACLArgs(GetACLArgs $) {
+        this.aCLName = $.aCLName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetACLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aCLName;
+        private GetACLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetACLArgs();
         }
 
         public Builder(GetACLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aCLName = defaults.aCLName;
+            $ = new GetACLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aCLName(String aCLName) {
-            this.aCLName = Objects.requireNonNull(aCLName);
+            $.aCLName = aCLName;
             return this;
-        }        public GetACLArgs build() {
-            return new GetACLArgs(aCLName);
+        }
+
+        public GetACLArgs build() {
+            $.aCLName = Objects.requireNonNull($.aCLName, "expected parameter 'aCLName' to be non-null");
+            return $;
         }
     }
+
 }

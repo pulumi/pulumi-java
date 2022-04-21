@@ -22,10 +22,10 @@ public final class GetLocalGatewayVirtualInterfaceGroupsArgs extends com.pulumi.
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters;
+    private @Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters;
 
-    public List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetLocalGatewayVirtualInterfaceGroupsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,58 +33,54 @@ public final class GetLocalGatewayVirtualInterfaceGroupsArgs extends com.pulumi.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetLocalGatewayVirtualInterfaceGroupsArgs(
-        @Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetLocalGatewayVirtualInterfaceGroupsArgs() {}
 
-    private GetLocalGatewayVirtualInterfaceGroupsArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetLocalGatewayVirtualInterfaceGroupsArgs(GetLocalGatewayVirtualInterfaceGroupsArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocalGatewayVirtualInterfaceGroupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetLocalGatewayVirtualInterfaceGroupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocalGatewayVirtualInterfaceGroupsArgs();
         }
 
         public Builder(GetLocalGatewayVirtualInterfaceGroupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetLocalGatewayVirtualInterfaceGroupsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetLocalGatewayVirtualInterfaceGroupsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetLocalGatewayVirtualInterfaceGroupsArgs build() {
-            return new GetLocalGatewayVirtualInterfaceGroupsArgs(filters, tags);
+        }
+
+        public GetLocalGatewayVirtualInterfaceGroupsArgs build() {
+            return $;
         }
     }
+
 }

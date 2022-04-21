@@ -16,68 +16,65 @@ public final class LoggingRuleResponseHiddenPropertyPaths extends com.pulumi.res
     public static final LoggingRuleResponseHiddenPropertyPaths Empty = new LoggingRuleResponseHiddenPropertyPaths();
 
     @Import(name="hiddenPathsOnRequest")
-      private final @Nullable List<String> hiddenPathsOnRequest;
+    private @Nullable List<String> hiddenPathsOnRequest;
 
-    public List<String> hiddenPathsOnRequest() {
-        return this.hiddenPathsOnRequest == null ? List.of() : this.hiddenPathsOnRequest;
+    public Optional<List<String>> hiddenPathsOnRequest() {
+        return Optional.ofNullable(this.hiddenPathsOnRequest);
     }
 
     @Import(name="hiddenPathsOnResponse")
-      private final @Nullable List<String> hiddenPathsOnResponse;
+    private @Nullable List<String> hiddenPathsOnResponse;
 
-    public List<String> hiddenPathsOnResponse() {
-        return this.hiddenPathsOnResponse == null ? List.of() : this.hiddenPathsOnResponse;
+    public Optional<List<String>> hiddenPathsOnResponse() {
+        return Optional.ofNullable(this.hiddenPathsOnResponse);
     }
 
-    public LoggingRuleResponseHiddenPropertyPaths(
-        @Nullable List<String> hiddenPathsOnRequest,
-        @Nullable List<String> hiddenPathsOnResponse) {
-        this.hiddenPathsOnRequest = hiddenPathsOnRequest;
-        this.hiddenPathsOnResponse = hiddenPathsOnResponse;
-    }
+    private LoggingRuleResponseHiddenPropertyPaths() {}
 
-    private LoggingRuleResponseHiddenPropertyPaths() {
-        this.hiddenPathsOnRequest = List.of();
-        this.hiddenPathsOnResponse = List.of();
+    private LoggingRuleResponseHiddenPropertyPaths(LoggingRuleResponseHiddenPropertyPaths $) {
+        this.hiddenPathsOnRequest = $.hiddenPathsOnRequest;
+        this.hiddenPathsOnResponse = $.hiddenPathsOnResponse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingRuleResponseHiddenPropertyPaths defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> hiddenPathsOnRequest;
-        private @Nullable List<String> hiddenPathsOnResponse;
+        private LoggingRuleResponseHiddenPropertyPaths $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingRuleResponseHiddenPropertyPaths();
         }
 
         public Builder(LoggingRuleResponseHiddenPropertyPaths defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hiddenPathsOnRequest = defaults.hiddenPathsOnRequest;
-    	      this.hiddenPathsOnResponse = defaults.hiddenPathsOnResponse;
+            $ = new LoggingRuleResponseHiddenPropertyPaths(Objects.requireNonNull(defaults));
         }
 
         public Builder hiddenPathsOnRequest(@Nullable List<String> hiddenPathsOnRequest) {
-            this.hiddenPathsOnRequest = hiddenPathsOnRequest;
+            $.hiddenPathsOnRequest = hiddenPathsOnRequest;
             return this;
         }
+
         public Builder hiddenPathsOnRequest(String... hiddenPathsOnRequest) {
             return hiddenPathsOnRequest(List.of(hiddenPathsOnRequest));
         }
+
         public Builder hiddenPathsOnResponse(@Nullable List<String> hiddenPathsOnResponse) {
-            this.hiddenPathsOnResponse = hiddenPathsOnResponse;
+            $.hiddenPathsOnResponse = hiddenPathsOnResponse;
             return this;
         }
+
         public Builder hiddenPathsOnResponse(String... hiddenPathsOnResponse) {
             return hiddenPathsOnResponse(List.of(hiddenPathsOnResponse));
-        }        public LoggingRuleResponseHiddenPropertyPaths build() {
-            return new LoggingRuleResponseHiddenPropertyPaths(hiddenPathsOnRequest, hiddenPathsOnResponse);
+        }
+
+        public LoggingRuleResponseHiddenPropertyPaths build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.retail_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudRetailV2PromotionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="promotionId")
-      private final @Nullable Output<String> promotionId;
+    private @Nullable Output<String> promotionId;
 
-    public Output<String> promotionId() {
-        return this.promotionId == null ? Codegen.empty() : this.promotionId;
+    public Optional<Output<String>> promotionId() {
+        return Optional.ofNullable(this.promotionId);
     }
 
-    public GoogleCloudRetailV2PromotionArgs(@Nullable Output<String> promotionId) {
-        this.promotionId = promotionId;
-    }
+    private GoogleCloudRetailV2PromotionArgs() {}
 
-    private GoogleCloudRetailV2PromotionArgs() {
-        this.promotionId = Codegen.empty();
+    private GoogleCloudRetailV2PromotionArgs(GoogleCloudRetailV2PromotionArgs $) {
+        this.promotionId = $.promotionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2PromotionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> promotionId;
+        private GoogleCloudRetailV2PromotionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2PromotionArgs();
         }
 
         public Builder(GoogleCloudRetailV2PromotionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.promotionId = defaults.promotionId;
+            $ = new GoogleCloudRetailV2PromotionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder promotionId(@Nullable Output<String> promotionId) {
-            this.promotionId = promotionId;
+            $.promotionId = promotionId;
             return this;
         }
-        public Builder promotionId(@Nullable String promotionId) {
-            this.promotionId = Codegen.ofNullable(promotionId);
-            return this;
-        }        public GoogleCloudRetailV2PromotionArgs build() {
-            return new GoogleCloudRetailV2PromotionArgs(promotionId);
+
+        public Builder promotionId(String promotionId) {
+            return promotionId(Output.of(promotionId));
+        }
+
+        public GoogleCloudRetailV2PromotionArgs build() {
+            return $;
         }
     }
+
 }

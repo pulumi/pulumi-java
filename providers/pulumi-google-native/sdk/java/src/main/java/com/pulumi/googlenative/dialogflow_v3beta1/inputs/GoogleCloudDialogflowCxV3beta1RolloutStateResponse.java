@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends co
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends co
      * 
      */
     @Import(name="step", required=true)
-      private final String step;
+    private String step;
 
     public String step() {
         return this.step;
@@ -44,64 +44,59 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends co
      * 
      */
     @Import(name="stepIndex", required=true)
-      private final Integer stepIndex;
+    private Integer stepIndex;
 
     public Integer stepIndex() {
         return this.stepIndex;
     }
 
-    public GoogleCloudDialogflowCxV3beta1RolloutStateResponse(
-        String startTime,
-        String step,
-        Integer stepIndex) {
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.step = Objects.requireNonNull(step, "expected parameter 'step' to be non-null");
-        this.stepIndex = Objects.requireNonNull(stepIndex, "expected parameter 'stepIndex' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1RolloutStateResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1RolloutStateResponse() {
-        this.startTime = null;
-        this.step = null;
-        this.stepIndex = null;
+    private GoogleCloudDialogflowCxV3beta1RolloutStateResponse(GoogleCloudDialogflowCxV3beta1RolloutStateResponse $) {
+        this.startTime = $.startTime;
+        this.step = $.step;
+        this.stepIndex = $.stepIndex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1RolloutStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String startTime;
-        private String step;
-        private Integer stepIndex;
+        private GoogleCloudDialogflowCxV3beta1RolloutStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1RolloutStateResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1RolloutStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTime = defaults.startTime;
-    	      this.step = defaults.step;
-    	      this.stepIndex = defaults.stepIndex;
+            $ = new GoogleCloudDialogflowCxV3beta1RolloutStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder step(String step) {
-            this.step = Objects.requireNonNull(step);
+            $.step = step;
             return this;
         }
+
         public Builder stepIndex(Integer stepIndex) {
-            this.stepIndex = Objects.requireNonNull(stepIndex);
+            $.stepIndex = stepIndex;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1RolloutStateResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1RolloutStateResponse(startTime, step, stepIndex);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1RolloutStateResponse build() {
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.step = Objects.requireNonNull($.step, "expected parameter 'step' to be non-null");
+            $.stepIndex = Objects.requireNonNull($.stepIndex, "expected parameter 'stepIndex' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class DataMaskingEntityResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class DataMaskingEntityResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public DataMaskingEntityResponse(
-        @Nullable String mode,
-        @Nullable String value) {
-        this.mode = mode;
-        this.value = value;
-    }
+    private DataMaskingEntityResponse() {}
 
-    private DataMaskingEntityResponse() {
-        this.mode = null;
-        this.value = null;
+    private DataMaskingEntityResponse(DataMaskingEntityResponse $) {
+        this.mode = $.mode;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataMaskingEntityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String mode;
-        private @Nullable String value;
+        private DataMaskingEntityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataMaskingEntityResponse();
         }
 
         public Builder(DataMaskingEntityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.value = defaults.value;
+            $ = new DataMaskingEntityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public DataMaskingEntityResponse build() {
-            return new DataMaskingEntityResponse(mode, value);
+        }
+
+        public DataMaskingEntityResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.awsnative.macie;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ignoreWords")
-      private final @Nullable Output<List<String>> ignoreWords;
+    private @Nullable Output<List<String>> ignoreWords;
 
-    public Output<List<String>> ignoreWords() {
-        return this.ignoreWords == null ? Codegen.empty() : this.ignoreWords;
+    public Optional<Output<List<String>>> ignoreWords() {
+        return Optional.ofNullable(this.ignoreWords);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keywords")
-      private final @Nullable Output<List<String>> keywords;
+    private @Nullable Output<List<String>> keywords;
 
-    public Output<List<String>> keywords() {
-        return this.keywords == null ? Codegen.empty() : this.keywords;
+    public Optional<Output<List<String>>> keywords() {
+        return Optional.ofNullable(this.keywords);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maximumMatchDistance")
-      private final @Nullable Output<Integer> maximumMatchDistance;
+    private @Nullable Output<Integer> maximumMatchDistance;
 
-    public Output<Integer> maximumMatchDistance() {
-        return this.maximumMatchDistance == null ? Codegen.empty() : this.maximumMatchDistance;
+    public Optional<Output<Integer>> maximumMatchDistance() {
+        return Optional.ofNullable(this.maximumMatchDistance);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,121 +77,107 @@ public final class CustomDataIdentifierArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="regex", required=true)
-      private final Output<String> regex;
+    private Output<String> regex;
 
     public Output<String> regex() {
         return this.regex;
     }
 
-    public CustomDataIdentifierArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> ignoreWords,
-        @Nullable Output<List<String>> keywords,
-        @Nullable Output<Integer> maximumMatchDistance,
-        @Nullable Output<String> name,
-        Output<String> regex) {
-        this.description = description;
-        this.ignoreWords = ignoreWords;
-        this.keywords = keywords;
-        this.maximumMatchDistance = maximumMatchDistance;
-        this.name = name;
-        this.regex = Objects.requireNonNull(regex, "expected parameter 'regex' to be non-null");
-    }
+    private CustomDataIdentifierArgs() {}
 
-    private CustomDataIdentifierArgs() {
-        this.description = Codegen.empty();
-        this.ignoreWords = Codegen.empty();
-        this.keywords = Codegen.empty();
-        this.maximumMatchDistance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.regex = Codegen.empty();
+    private CustomDataIdentifierArgs(CustomDataIdentifierArgs $) {
+        this.description = $.description;
+        this.ignoreWords = $.ignoreWords;
+        this.keywords = $.keywords;
+        this.maximumMatchDistance = $.maximumMatchDistance;
+        this.name = $.name;
+        this.regex = $.regex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDataIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> ignoreWords;
-        private @Nullable Output<List<String>> keywords;
-        private @Nullable Output<Integer> maximumMatchDistance;
-        private @Nullable Output<String> name;
-        private Output<String> regex;
+        private CustomDataIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDataIdentifierArgs();
         }
 
         public Builder(CustomDataIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.ignoreWords = defaults.ignoreWords;
-    	      this.keywords = defaults.keywords;
-    	      this.maximumMatchDistance = defaults.maximumMatchDistance;
-    	      this.name = defaults.name;
-    	      this.regex = defaults.regex;
+            $ = new CustomDataIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ignoreWords(@Nullable Output<List<String>> ignoreWords) {
-            this.ignoreWords = ignoreWords;
+            $.ignoreWords = ignoreWords;
             return this;
         }
-        public Builder ignoreWords(@Nullable List<String> ignoreWords) {
-            this.ignoreWords = Codegen.ofNullable(ignoreWords);
-            return this;
+
+        public Builder ignoreWords(List<String> ignoreWords) {
+            return ignoreWords(Output.of(ignoreWords));
         }
+
         public Builder ignoreWords(String... ignoreWords) {
             return ignoreWords(List.of(ignoreWords));
         }
+
         public Builder keywords(@Nullable Output<List<String>> keywords) {
-            this.keywords = keywords;
+            $.keywords = keywords;
             return this;
         }
-        public Builder keywords(@Nullable List<String> keywords) {
-            this.keywords = Codegen.ofNullable(keywords);
-            return this;
+
+        public Builder keywords(List<String> keywords) {
+            return keywords(Output.of(keywords));
         }
+
         public Builder keywords(String... keywords) {
             return keywords(List.of(keywords));
         }
+
         public Builder maximumMatchDistance(@Nullable Output<Integer> maximumMatchDistance) {
-            this.maximumMatchDistance = maximumMatchDistance;
+            $.maximumMatchDistance = maximumMatchDistance;
             return this;
         }
-        public Builder maximumMatchDistance(@Nullable Integer maximumMatchDistance) {
-            this.maximumMatchDistance = Codegen.ofNullable(maximumMatchDistance);
-            return this;
+
+        public Builder maximumMatchDistance(Integer maximumMatchDistance) {
+            return maximumMatchDistance(Output.of(maximumMatchDistance));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder regex(Output<String> regex) {
-            this.regex = Objects.requireNonNull(regex);
+            $.regex = regex;
             return this;
         }
+
         public Builder regex(String regex) {
-            this.regex = Output.of(Objects.requireNonNull(regex));
-            return this;
-        }        public CustomDataIdentifierArgs build() {
-            return new CustomDataIdentifierArgs(description, ignoreWords, keywords, maximumMatchDistance, name, regex);
+            return regex(Output.of(regex));
+        }
+
+        public CustomDataIdentifierArgs build() {
+            $.regex = Objects.requireNonNull($.regex, "expected parameter 'regex' to be non-null");
+            return $;
         }
     }
+
 }

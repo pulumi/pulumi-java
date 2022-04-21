@@ -24,7 +24,7 @@ public final class MachineExtensionInstanceViewResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,10 +35,10 @@ public final class MachineExtensionInstanceViewResponse extends com.pulumi.resou
      * 
      */
     @Import(name="status")
-      private final @Nullable MachineExtensionInstanceViewResponseStatus status;
+    private @Nullable MachineExtensionInstanceViewResponseStatus status;
 
     public Optional<MachineExtensionInstanceViewResponseStatus> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class MachineExtensionInstanceViewResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -57,73 +57,65 @@ public final class MachineExtensionInstanceViewResponse extends com.pulumi.resou
      * 
      */
     @Import(name="typeHandlerVersion", required=true)
-      private final String typeHandlerVersion;
+    private String typeHandlerVersion;
 
     public String typeHandlerVersion() {
         return this.typeHandlerVersion;
     }
 
-    public MachineExtensionInstanceViewResponse(
-        String name,
-        @Nullable MachineExtensionInstanceViewResponseStatus status,
-        String type,
-        String typeHandlerVersion) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = status;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion, "expected parameter 'typeHandlerVersion' to be non-null");
-    }
+    private MachineExtensionInstanceViewResponse() {}
 
-    private MachineExtensionInstanceViewResponse() {
-        this.name = null;
-        this.status = null;
-        this.type = null;
-        this.typeHandlerVersion = null;
+    private MachineExtensionInstanceViewResponse(MachineExtensionInstanceViewResponse $) {
+        this.name = $.name;
+        this.status = $.status;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineExtensionInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable MachineExtensionInstanceViewResponseStatus status;
-        private String type;
-        private String typeHandlerVersion;
+        private MachineExtensionInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineExtensionInstanceViewResponse();
         }
 
         public Builder(MachineExtensionInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
+            $ = new MachineExtensionInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder status(@Nullable MachineExtensionInstanceViewResponseStatus status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder typeHandlerVersion(String typeHandlerVersion) {
-            this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
-        }        public MachineExtensionInstanceViewResponse build() {
-            return new MachineExtensionInstanceViewResponse(name, status, type, typeHandlerVersion);
+        }
+
+        public MachineExtensionInstanceViewResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.typeHandlerVersion = Objects.requireNonNull($.typeHandlerVersion, "expected parameter 'typeHandlerVersion' to be non-null");
+            return $;
         }
     }
+
 }

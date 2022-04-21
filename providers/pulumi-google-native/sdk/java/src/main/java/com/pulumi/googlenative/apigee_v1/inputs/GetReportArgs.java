@@ -13,62 +13,59 @@ public final class GetReportArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetReportArgs Empty = new GetReportArgs();
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="reportId", required=true)
-      private final String reportId;
+    private String reportId;
 
     public String reportId() {
         return this.reportId;
     }
 
-    public GetReportArgs(
-        String organizationId,
-        String reportId) {
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.reportId = Objects.requireNonNull(reportId, "expected parameter 'reportId' to be non-null");
-    }
+    private GetReportArgs() {}
 
-    private GetReportArgs() {
-        this.organizationId = null;
-        this.reportId = null;
+    private GetReportArgs(GetReportArgs $) {
+        this.organizationId = $.organizationId;
+        this.reportId = $.reportId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String organizationId;
-        private String reportId;
+        private GetReportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReportArgs();
         }
 
         public Builder(GetReportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationId = defaults.organizationId;
-    	      this.reportId = defaults.reportId;
+            $ = new GetReportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder reportId(String reportId) {
-            this.reportId = Objects.requireNonNull(reportId);
+            $.reportId = reportId;
             return this;
-        }        public GetReportArgs build() {
-            return new GetReportArgs(organizationId, reportId);
+        }
+
+        public GetReportArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.reportId = Objects.requireNonNull($.reportId, "expected parameter 'reportId' to be non-null");
+            return $;
         }
     }
+
 }

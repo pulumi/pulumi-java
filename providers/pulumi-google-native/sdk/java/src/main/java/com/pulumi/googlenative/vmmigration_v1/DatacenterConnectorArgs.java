@@ -5,9 +5,9 @@ package com.pulumi.googlenative.vmmigration_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,24 +16,24 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
     public static final DatacenterConnectorArgs Empty = new DatacenterConnectorArgs();
 
     @Import(name="datacenterConnectorId", required=true)
-      private final Output<String> datacenterConnectorId;
+    private Output<String> datacenterConnectorId;
 
     public Output<String> datacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -41,17 +41,17 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="registrationId")
-      private final @Nullable Output<String> registrationId;
+    private @Nullable Output<String> registrationId;
 
-    public Output<String> registrationId() {
-        return this.registrationId == null ? Codegen.empty() : this.registrationId;
+    public Optional<Output<String>> registrationId() {
+        return Optional.ofNullable(this.registrationId);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -59,14 +59,14 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     @Import(name="sourceId", required=true)
-      private final Output<String> sourceId;
+    private Output<String> sourceId;
 
     public Output<String> sourceId() {
         return this.sourceId;
@@ -77,141 +77,120 @@ public final class DatacenterConnectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public DatacenterConnectorArgs(
-        Output<String> datacenterConnectorId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<String> registrationId,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> serviceAccount,
-        Output<String> sourceId,
-        @Nullable Output<String> version) {
-        this.datacenterConnectorId = Objects.requireNonNull(datacenterConnectorId, "expected parameter 'datacenterConnectorId' to be non-null");
-        this.location = location;
-        this.project = project;
-        this.registrationId = registrationId;
-        this.requestId = requestId;
-        this.serviceAccount = serviceAccount;
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-        this.version = version;
-    }
+    private DatacenterConnectorArgs() {}
 
-    private DatacenterConnectorArgs() {
-        this.datacenterConnectorId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.registrationId = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.sourceId = Codegen.empty();
-        this.version = Codegen.empty();
+    private DatacenterConnectorArgs(DatacenterConnectorArgs $) {
+        this.datacenterConnectorId = $.datacenterConnectorId;
+        this.location = $.location;
+        this.project = $.project;
+        this.registrationId = $.registrationId;
+        this.requestId = $.requestId;
+        this.serviceAccount = $.serviceAccount;
+        this.sourceId = $.sourceId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatacenterConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> datacenterConnectorId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> registrationId;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> serviceAccount;
-        private Output<String> sourceId;
-        private @Nullable Output<String> version;
+        private DatacenterConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatacenterConnectorArgs();
         }
 
         public Builder(DatacenterConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datacenterConnectorId = defaults.datacenterConnectorId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.registrationId = defaults.registrationId;
-    	      this.requestId = defaults.requestId;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.sourceId = defaults.sourceId;
-    	      this.version = defaults.version;
+            $ = new DatacenterConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datacenterConnectorId(Output<String> datacenterConnectorId) {
-            this.datacenterConnectorId = Objects.requireNonNull(datacenterConnectorId);
+            $.datacenterConnectorId = datacenterConnectorId;
             return this;
         }
+
         public Builder datacenterConnectorId(String datacenterConnectorId) {
-            this.datacenterConnectorId = Output.of(Objects.requireNonNull(datacenterConnectorId));
-            return this;
+            return datacenterConnectorId(Output.of(datacenterConnectorId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder registrationId(@Nullable Output<String> registrationId) {
-            this.registrationId = registrationId;
+            $.registrationId = registrationId;
             return this;
         }
-        public Builder registrationId(@Nullable String registrationId) {
-            this.registrationId = Codegen.ofNullable(registrationId);
-            return this;
+
+        public Builder registrationId(String registrationId) {
+            return registrationId(Output.of(registrationId));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder sourceId(Output<String> sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Output.of(Objects.requireNonNull(sourceId));
-            return this;
+            return sourceId(Output.of(sourceId));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public DatacenterConnectorArgs build() {
-            return new DatacenterConnectorArgs(datacenterConnectorId, location, project, registrationId, requestId, serviceAccount, sourceId, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public DatacenterConnectorArgs build() {
+            $.datacenterConnectorId = Objects.requireNonNull($.datacenterConnectorId, "expected parameter 'datacenterConnectorId' to be non-null");
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            return $;
         }
     }
+
 }

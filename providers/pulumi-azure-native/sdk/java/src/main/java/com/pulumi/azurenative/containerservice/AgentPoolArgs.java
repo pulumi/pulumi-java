@@ -18,7 +18,6 @@ import com.pulumi.azurenative.containerservice.inputs.LinuxOSConfigArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,6 +25,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -38,10 +38,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentPoolName")
-      private final @Nullable Output<String> agentPoolName;
+    private @Nullable Output<String> agentPoolName;
 
-    public Output<String> agentPoolName() {
-        return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
+    public Optional<Output<String>> agentPoolName() {
+        return Optional.ofNullable(this.agentPoolName);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZones")
-      private final @Nullable Output<List<String>> availabilityZones;
+    private @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> availabilityZones() {
-        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
+    public Optional<Output<List<String>>> availabilityZones() {
+        return Optional.ofNullable(this.availabilityZones);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableAutoScaling")
-      private final @Nullable Output<Boolean> enableAutoScaling;
+    private @Nullable Output<Boolean> enableAutoScaling;
 
-    public Output<Boolean> enableAutoScaling() {
-        return this.enableAutoScaling == null ? Codegen.empty() : this.enableAutoScaling;
+    public Optional<Output<Boolean>> enableAutoScaling() {
+        return Optional.ofNullable(this.enableAutoScaling);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableEncryptionAtHost")
-      private final @Nullable Output<Boolean> enableEncryptionAtHost;
+    private @Nullable Output<Boolean> enableEncryptionAtHost;
 
-    public Output<Boolean> enableEncryptionAtHost() {
-        return this.enableEncryptionAtHost == null ? Codegen.empty() : this.enableEncryptionAtHost;
+    public Optional<Output<Boolean>> enableEncryptionAtHost() {
+        return Optional.ofNullable(this.enableEncryptionAtHost);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableFIPS")
-      private final @Nullable Output<Boolean> enableFIPS;
+    private @Nullable Output<Boolean> enableFIPS;
 
-    public Output<Boolean> enableFIPS() {
-        return this.enableFIPS == null ? Codegen.empty() : this.enableFIPS;
+    public Optional<Output<Boolean>> enableFIPS() {
+        return Optional.ofNullable(this.enableFIPS);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableNodePublicIP")
-      private final @Nullable Output<Boolean> enableNodePublicIP;
+    private @Nullable Output<Boolean> enableNodePublicIP;
 
-    public Output<Boolean> enableNodePublicIP() {
-        return this.enableNodePublicIP == null ? Codegen.empty() : this.enableNodePublicIP;
+    public Optional<Output<Boolean>> enableNodePublicIP() {
+        return Optional.ofNullable(this.enableNodePublicIP);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gpuInstanceProfile")
-      private final @Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
+    private @Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
 
-    public Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile() {
-        return this.gpuInstanceProfile == null ? Codegen.empty() : this.gpuInstanceProfile;
+    public Optional<Output<Either<String,GPUInstanceProfile>>> gpuInstanceProfile() {
+        return Optional.ofNullable(this.gpuInstanceProfile);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubeletConfig")
-      private final @Nullable Output<KubeletConfigArgs> kubeletConfig;
+    private @Nullable Output<KubeletConfigArgs> kubeletConfig;
 
-    public Output<KubeletConfigArgs> kubeletConfig() {
-        return this.kubeletConfig == null ? Codegen.empty() : this.kubeletConfig;
+    public Optional<Output<KubeletConfigArgs>> kubeletConfig() {
+        return Optional.ofNullable(this.kubeletConfig);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubeletDiskType")
-      private final @Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType;
+    private @Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType;
 
-    public Output<Either<String,KubeletDiskType>> kubeletDiskType() {
-        return this.kubeletDiskType == null ? Codegen.empty() : this.kubeletDiskType;
+    public Optional<Output<Either<String,KubeletDiskType>>> kubeletDiskType() {
+        return Optional.ofNullable(this.kubeletDiskType);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linuxOSConfig")
-      private final @Nullable Output<LinuxOSConfigArgs> linuxOSConfig;
+    private @Nullable Output<LinuxOSConfigArgs> linuxOSConfig;
 
-    public Output<LinuxOSConfigArgs> linuxOSConfig() {
-        return this.linuxOSConfig == null ? Codegen.empty() : this.linuxOSConfig;
+    public Optional<Output<LinuxOSConfigArgs>> linuxOSConfig() {
+        return Optional.ofNullable(this.linuxOSConfig);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxCount")
-      private final @Nullable Output<Integer> maxCount;
+    private @Nullable Output<Integer> maxCount;
 
-    public Output<Integer> maxCount() {
-        return this.maxCount == null ? Codegen.empty() : this.maxCount;
+    public Optional<Output<Integer>> maxCount() {
+        return Optional.ofNullable(this.maxCount);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxPods")
-      private final @Nullable Output<Integer> maxPods;
+    private @Nullable Output<Integer> maxPods;
 
-    public Output<Integer> maxPods() {
-        return this.maxPods == null ? Codegen.empty() : this.maxPods;
+    public Optional<Output<Integer>> maxPods() {
+        return Optional.ofNullable(this.maxPods);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minCount")
-      private final @Nullable Output<Integer> minCount;
+    private @Nullable Output<Integer> minCount;
 
-    public Output<Integer> minCount() {
-        return this.minCount == null ? Codegen.empty() : this.minCount;
+    public Optional<Output<Integer>> minCount() {
+        return Optional.ofNullable(this.minCount);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,AgentPoolMode>> mode;
+    private @Nullable Output<Either<String,AgentPoolMode>> mode;
 
-    public Output<Either<String,AgentPoolMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,AgentPoolMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeLabels")
-      private final @Nullable Output<Map<String,String>> nodeLabels;
+    private @Nullable Output<Map<String,String>> nodeLabels;
 
-    public Output<Map<String,String>> nodeLabels() {
-        return this.nodeLabels == null ? Codegen.empty() : this.nodeLabels;
+    public Optional<Output<Map<String,String>>> nodeLabels() {
+        return Optional.ofNullable(this.nodeLabels);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodePublicIPPrefixID")
-      private final @Nullable Output<String> nodePublicIPPrefixID;
+    private @Nullable Output<String> nodePublicIPPrefixID;
 
-    public Output<String> nodePublicIPPrefixID() {
-        return this.nodePublicIPPrefixID == null ? Codegen.empty() : this.nodePublicIPPrefixID;
+    public Optional<Output<String>> nodePublicIPPrefixID() {
+        return Optional.ofNullable(this.nodePublicIPPrefixID);
     }
 
     /**
@@ -225,10 +225,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeTaints")
-      private final @Nullable Output<List<String>> nodeTaints;
+    private @Nullable Output<List<String>> nodeTaints;
 
-    public Output<List<String>> nodeTaints() {
-        return this.nodeTaints == null ? Codegen.empty() : this.nodeTaints;
+    public Optional<Output<List<String>>> nodeTaints() {
+        return Optional.ofNullable(this.nodeTaints);
     }
 
     /**
@@ -236,10 +236,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orchestratorVersion")
-      private final @Nullable Output<String> orchestratorVersion;
+    private @Nullable Output<String> orchestratorVersion;
 
-    public Output<String> orchestratorVersion() {
-        return this.orchestratorVersion == null ? Codegen.empty() : this.orchestratorVersion;
+    public Optional<Output<String>> orchestratorVersion() {
+        return Optional.ofNullable(this.orchestratorVersion);
     }
 
     /**
@@ -247,10 +247,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osDiskSizeGB")
-      private final @Nullable Output<Integer> osDiskSizeGB;
+    private @Nullable Output<Integer> osDiskSizeGB;
 
-    public Output<Integer> osDiskSizeGB() {
-        return this.osDiskSizeGB == null ? Codegen.empty() : this.osDiskSizeGB;
+    public Optional<Output<Integer>> osDiskSizeGB() {
+        return Optional.ofNullable(this.osDiskSizeGB);
     }
 
     /**
@@ -258,10 +258,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osDiskType")
-      private final @Nullable Output<Either<String,OSDiskType>> osDiskType;
+    private @Nullable Output<Either<String,OSDiskType>> osDiskType;
 
-    public Output<Either<String,OSDiskType>> osDiskType() {
-        return this.osDiskType == null ? Codegen.empty() : this.osDiskType;
+    public Optional<Output<Either<String,OSDiskType>>> osDiskType() {
+        return Optional.ofNullable(this.osDiskType);
     }
 
     /**
@@ -269,10 +269,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osSKU")
-      private final @Nullable Output<Either<String,OSSKU>> osSKU;
+    private @Nullable Output<Either<String,OSSKU>> osSKU;
 
-    public Output<Either<String,OSSKU>> osSKU() {
-        return this.osSKU == null ? Codegen.empty() : this.osSKU;
+    public Optional<Output<Either<String,OSSKU>>> osSKU() {
+        return Optional.ofNullable(this.osSKU);
     }
 
     /**
@@ -280,10 +280,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<Either<String,OSType>> osType;
+    private @Nullable Output<Either<String,OSType>> osType;
 
-    public Output<Either<String,OSType>> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<Either<String,OSType>>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -291,10 +291,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="podSubnetID")
-      private final @Nullable Output<String> podSubnetID;
+    private @Nullable Output<String> podSubnetID;
 
-    public Output<String> podSubnetID() {
-        return this.podSubnetID == null ? Codegen.empty() : this.podSubnetID;
+    public Optional<Output<String>> podSubnetID() {
+        return Optional.ofNullable(this.podSubnetID);
     }
 
     /**
@@ -302,10 +302,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="proximityPlacementGroupID")
-      private final @Nullable Output<String> proximityPlacementGroupID;
+    private @Nullable Output<String> proximityPlacementGroupID;
 
-    public Output<String> proximityPlacementGroupID() {
-        return this.proximityPlacementGroupID == null ? Codegen.empty() : this.proximityPlacementGroupID;
+    public Optional<Output<String>> proximityPlacementGroupID() {
+        return Optional.ofNullable(this.proximityPlacementGroupID);
     }
 
     /**
@@ -313,7 +313,7 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -324,7 +324,7 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -335,10 +335,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scaleSetEvictionPolicy")
-      private final @Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
+    private @Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
 
-    public Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy() {
-        return this.scaleSetEvictionPolicy == null ? Codegen.empty() : this.scaleSetEvictionPolicy;
+    public Optional<Output<Either<String,ScaleSetEvictionPolicy>>> scaleSetEvictionPolicy() {
+        return Optional.ofNullable(this.scaleSetEvictionPolicy);
     }
 
     /**
@@ -346,10 +346,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scaleSetPriority")
-      private final @Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority;
+    private @Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority;
 
-    public Output<Either<String,ScaleSetPriority>> scaleSetPriority() {
-        return this.scaleSetPriority == null ? Codegen.empty() : this.scaleSetPriority;
+    public Optional<Output<Either<String,ScaleSetPriority>>> scaleSetPriority() {
+        return Optional.ofNullable(this.scaleSetPriority);
     }
 
     /**
@@ -357,10 +357,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spotMaxPrice")
-      private final @Nullable Output<Double> spotMaxPrice;
+    private @Nullable Output<Double> spotMaxPrice;
 
-    public Output<Double> spotMaxPrice() {
-        return this.spotMaxPrice == null ? Codegen.empty() : this.spotMaxPrice;
+    public Optional<Output<Double>> spotMaxPrice() {
+        return Optional.ofNullable(this.spotMaxPrice);
     }
 
     /**
@@ -368,10 +368,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -379,10 +379,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,AgentPoolType>> type;
+    private @Nullable Output<Either<String,AgentPoolType>> type;
 
-    public Output<Either<String,AgentPoolType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,AgentPoolType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -390,10 +390,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="upgradeSettings")
-      private final @Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings;
+    private @Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings;
 
-    public Output<AgentPoolUpgradeSettingsArgs> upgradeSettings() {
-        return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
+    public Optional<Output<AgentPoolUpgradeSettingsArgs>> upgradeSettings() {
+        return Optional.ofNullable(this.upgradeSettings);
     }
 
     /**
@@ -401,10 +401,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable Output<String> vmSize;
+    private @Nullable Output<String> vmSize;
 
-    public Output<String> vmSize() {
-        return this.vmSize == null ? Codegen.empty() : this.vmSize;
+    public Optional<Output<String>> vmSize() {
+        return Optional.ofNullable(this.vmSize);
     }
 
     /**
@@ -412,498 +412,398 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vnetSubnetID")
-      private final @Nullable Output<String> vnetSubnetID;
+    private @Nullable Output<String> vnetSubnetID;
 
-    public Output<String> vnetSubnetID() {
-        return this.vnetSubnetID == null ? Codegen.empty() : this.vnetSubnetID;
+    public Optional<Output<String>> vnetSubnetID() {
+        return Optional.ofNullable(this.vnetSubnetID);
     }
 
-    public AgentPoolArgs(
-        @Nullable Output<String> agentPoolName,
-        @Nullable Output<List<String>> availabilityZones,
-        @Nullable Output<Integer> count,
-        @Nullable Output<Boolean> enableAutoScaling,
-        @Nullable Output<Boolean> enableEncryptionAtHost,
-        @Nullable Output<Boolean> enableFIPS,
-        @Nullable Output<Boolean> enableNodePublicIP,
-        @Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile,
-        @Nullable Output<KubeletConfigArgs> kubeletConfig,
-        @Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType,
-        @Nullable Output<LinuxOSConfigArgs> linuxOSConfig,
-        @Nullable Output<Integer> maxCount,
-        @Nullable Output<Integer> maxPods,
-        @Nullable Output<Integer> minCount,
-        @Nullable Output<Either<String,AgentPoolMode>> mode,
-        @Nullable Output<Map<String,String>> nodeLabels,
-        @Nullable Output<String> nodePublicIPPrefixID,
-        @Nullable Output<List<String>> nodeTaints,
-        @Nullable Output<String> orchestratorVersion,
-        @Nullable Output<Integer> osDiskSizeGB,
-        @Nullable Output<Either<String,OSDiskType>> osDiskType,
-        @Nullable Output<Either<String,OSSKU>> osSKU,
-        @Nullable Output<Either<String,OSType>> osType,
-        @Nullable Output<String> podSubnetID,
-        @Nullable Output<String> proximityPlacementGroupID,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        @Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy,
-        @Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority,
-        @Nullable Output<Double> spotMaxPrice,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Either<String,AgentPoolType>> type,
-        @Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings,
-        @Nullable Output<String> vmSize,
-        @Nullable Output<String> vnetSubnetID) {
-        this.agentPoolName = agentPoolName;
-        this.availabilityZones = availabilityZones;
-        this.count = count;
-        this.enableAutoScaling = enableAutoScaling;
-        this.enableEncryptionAtHost = enableEncryptionAtHost;
-        this.enableFIPS = enableFIPS;
-        this.enableNodePublicIP = enableNodePublicIP;
-        this.gpuInstanceProfile = gpuInstanceProfile;
-        this.kubeletConfig = kubeletConfig;
-        this.kubeletDiskType = kubeletDiskType;
-        this.linuxOSConfig = linuxOSConfig;
-        this.maxCount = maxCount;
-        this.maxPods = maxPods;
-        this.minCount = minCount;
-        this.mode = mode;
-        this.nodeLabels = nodeLabels;
-        this.nodePublicIPPrefixID = nodePublicIPPrefixID;
-        this.nodeTaints = nodeTaints;
-        this.orchestratorVersion = orchestratorVersion;
-        this.osDiskSizeGB = osDiskSizeGB;
-        this.osDiskType = osDiskType;
-        this.osSKU = osSKU;
-        this.osType = osType;
-        this.podSubnetID = podSubnetID;
-        this.proximityPlacementGroupID = proximityPlacementGroupID;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
-        this.scaleSetPriority = scaleSetPriority;
-        this.spotMaxPrice = spotMaxPrice;
-        this.tags = tags;
-        this.type = type;
-        this.upgradeSettings = upgradeSettings;
-        this.vmSize = vmSize;
-        this.vnetSubnetID = vnetSubnetID;
-    }
+    private AgentPoolArgs() {}
 
-    private AgentPoolArgs() {
-        this.agentPoolName = Codegen.empty();
-        this.availabilityZones = Codegen.empty();
-        this.count = Codegen.empty();
-        this.enableAutoScaling = Codegen.empty();
-        this.enableEncryptionAtHost = Codegen.empty();
-        this.enableFIPS = Codegen.empty();
-        this.enableNodePublicIP = Codegen.empty();
-        this.gpuInstanceProfile = Codegen.empty();
-        this.kubeletConfig = Codegen.empty();
-        this.kubeletDiskType = Codegen.empty();
-        this.linuxOSConfig = Codegen.empty();
-        this.maxCount = Codegen.empty();
-        this.maxPods = Codegen.empty();
-        this.minCount = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.nodeLabels = Codegen.empty();
-        this.nodePublicIPPrefixID = Codegen.empty();
-        this.nodeTaints = Codegen.empty();
-        this.orchestratorVersion = Codegen.empty();
-        this.osDiskSizeGB = Codegen.empty();
-        this.osDiskType = Codegen.empty();
-        this.osSKU = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.podSubnetID = Codegen.empty();
-        this.proximityPlacementGroupID = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.scaleSetEvictionPolicy = Codegen.empty();
-        this.scaleSetPriority = Codegen.empty();
-        this.spotMaxPrice = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
-        this.upgradeSettings = Codegen.empty();
-        this.vmSize = Codegen.empty();
-        this.vnetSubnetID = Codegen.empty();
+    private AgentPoolArgs(AgentPoolArgs $) {
+        this.agentPoolName = $.agentPoolName;
+        this.availabilityZones = $.availabilityZones;
+        this.count = $.count;
+        this.enableAutoScaling = $.enableAutoScaling;
+        this.enableEncryptionAtHost = $.enableEncryptionAtHost;
+        this.enableFIPS = $.enableFIPS;
+        this.enableNodePublicIP = $.enableNodePublicIP;
+        this.gpuInstanceProfile = $.gpuInstanceProfile;
+        this.kubeletConfig = $.kubeletConfig;
+        this.kubeletDiskType = $.kubeletDiskType;
+        this.linuxOSConfig = $.linuxOSConfig;
+        this.maxCount = $.maxCount;
+        this.maxPods = $.maxPods;
+        this.minCount = $.minCount;
+        this.mode = $.mode;
+        this.nodeLabels = $.nodeLabels;
+        this.nodePublicIPPrefixID = $.nodePublicIPPrefixID;
+        this.nodeTaints = $.nodeTaints;
+        this.orchestratorVersion = $.orchestratorVersion;
+        this.osDiskSizeGB = $.osDiskSizeGB;
+        this.osDiskType = $.osDiskType;
+        this.osSKU = $.osSKU;
+        this.osType = $.osType;
+        this.podSubnetID = $.podSubnetID;
+        this.proximityPlacementGroupID = $.proximityPlacementGroupID;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.scaleSetEvictionPolicy = $.scaleSetEvictionPolicy;
+        this.scaleSetPriority = $.scaleSetPriority;
+        this.spotMaxPrice = $.spotMaxPrice;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.upgradeSettings = $.upgradeSettings;
+        this.vmSize = $.vmSize;
+        this.vnetSubnetID = $.vnetSubnetID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> agentPoolName;
-        private @Nullable Output<List<String>> availabilityZones;
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<Boolean> enableAutoScaling;
-        private @Nullable Output<Boolean> enableEncryptionAtHost;
-        private @Nullable Output<Boolean> enableFIPS;
-        private @Nullable Output<Boolean> enableNodePublicIP;
-        private @Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
-        private @Nullable Output<KubeletConfigArgs> kubeletConfig;
-        private @Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType;
-        private @Nullable Output<LinuxOSConfigArgs> linuxOSConfig;
-        private @Nullable Output<Integer> maxCount;
-        private @Nullable Output<Integer> maxPods;
-        private @Nullable Output<Integer> minCount;
-        private @Nullable Output<Either<String,AgentPoolMode>> mode;
-        private @Nullable Output<Map<String,String>> nodeLabels;
-        private @Nullable Output<String> nodePublicIPPrefixID;
-        private @Nullable Output<List<String>> nodeTaints;
-        private @Nullable Output<String> orchestratorVersion;
-        private @Nullable Output<Integer> osDiskSizeGB;
-        private @Nullable Output<Either<String,OSDiskType>> osDiskType;
-        private @Nullable Output<Either<String,OSSKU>> osSKU;
-        private @Nullable Output<Either<String,OSType>> osType;
-        private @Nullable Output<String> podSubnetID;
-        private @Nullable Output<String> proximityPlacementGroupID;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private @Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
-        private @Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority;
-        private @Nullable Output<Double> spotMaxPrice;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Either<String,AgentPoolType>> type;
-        private @Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings;
-        private @Nullable Output<String> vmSize;
-        private @Nullable Output<String> vnetSubnetID;
+        private AgentPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentPoolArgs();
         }
 
         public Builder(AgentPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentPoolName = defaults.agentPoolName;
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.count = defaults.count;
-    	      this.enableAutoScaling = defaults.enableAutoScaling;
-    	      this.enableEncryptionAtHost = defaults.enableEncryptionAtHost;
-    	      this.enableFIPS = defaults.enableFIPS;
-    	      this.enableNodePublicIP = defaults.enableNodePublicIP;
-    	      this.gpuInstanceProfile = defaults.gpuInstanceProfile;
-    	      this.kubeletConfig = defaults.kubeletConfig;
-    	      this.kubeletDiskType = defaults.kubeletDiskType;
-    	      this.linuxOSConfig = defaults.linuxOSConfig;
-    	      this.maxCount = defaults.maxCount;
-    	      this.maxPods = defaults.maxPods;
-    	      this.minCount = defaults.minCount;
-    	      this.mode = defaults.mode;
-    	      this.nodeLabels = defaults.nodeLabels;
-    	      this.nodePublicIPPrefixID = defaults.nodePublicIPPrefixID;
-    	      this.nodeTaints = defaults.nodeTaints;
-    	      this.orchestratorVersion = defaults.orchestratorVersion;
-    	      this.osDiskSizeGB = defaults.osDiskSizeGB;
-    	      this.osDiskType = defaults.osDiskType;
-    	      this.osSKU = defaults.osSKU;
-    	      this.osType = defaults.osType;
-    	      this.podSubnetID = defaults.podSubnetID;
-    	      this.proximityPlacementGroupID = defaults.proximityPlacementGroupID;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.scaleSetEvictionPolicy = defaults.scaleSetEvictionPolicy;
-    	      this.scaleSetPriority = defaults.scaleSetPriority;
-    	      this.spotMaxPrice = defaults.spotMaxPrice;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.upgradeSettings = defaults.upgradeSettings;
-    	      this.vmSize = defaults.vmSize;
-    	      this.vnetSubnetID = defaults.vnetSubnetID;
+            $ = new AgentPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
-            this.agentPoolName = agentPoolName;
+            $.agentPoolName = agentPoolName;
             return this;
         }
-        public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Codegen.ofNullable(agentPoolName);
-            return this;
+
+        public Builder agentPoolName(String agentPoolName) {
+            return agentPoolName(Output.of(agentPoolName));
         }
+
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
-            this.availabilityZones = availabilityZones;
+            $.availabilityZones = availabilityZones;
             return this;
         }
-        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Codegen.ofNullable(availabilityZones);
-            return this;
+
+        public Builder availabilityZones(List<String> availabilityZones) {
+            return availabilityZones(Output.of(availabilityZones));
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder enableAutoScaling(@Nullable Output<Boolean> enableAutoScaling) {
-            this.enableAutoScaling = enableAutoScaling;
+            $.enableAutoScaling = enableAutoScaling;
             return this;
         }
-        public Builder enableAutoScaling(@Nullable Boolean enableAutoScaling) {
-            this.enableAutoScaling = Codegen.ofNullable(enableAutoScaling);
-            return this;
+
+        public Builder enableAutoScaling(Boolean enableAutoScaling) {
+            return enableAutoScaling(Output.of(enableAutoScaling));
         }
+
         public Builder enableEncryptionAtHost(@Nullable Output<Boolean> enableEncryptionAtHost) {
-            this.enableEncryptionAtHost = enableEncryptionAtHost;
+            $.enableEncryptionAtHost = enableEncryptionAtHost;
             return this;
         }
-        public Builder enableEncryptionAtHost(@Nullable Boolean enableEncryptionAtHost) {
-            this.enableEncryptionAtHost = Codegen.ofNullable(enableEncryptionAtHost);
-            return this;
+
+        public Builder enableEncryptionAtHost(Boolean enableEncryptionAtHost) {
+            return enableEncryptionAtHost(Output.of(enableEncryptionAtHost));
         }
+
         public Builder enableFIPS(@Nullable Output<Boolean> enableFIPS) {
-            this.enableFIPS = enableFIPS;
+            $.enableFIPS = enableFIPS;
             return this;
         }
-        public Builder enableFIPS(@Nullable Boolean enableFIPS) {
-            this.enableFIPS = Codegen.ofNullable(enableFIPS);
-            return this;
+
+        public Builder enableFIPS(Boolean enableFIPS) {
+            return enableFIPS(Output.of(enableFIPS));
         }
+
         public Builder enableNodePublicIP(@Nullable Output<Boolean> enableNodePublicIP) {
-            this.enableNodePublicIP = enableNodePublicIP;
+            $.enableNodePublicIP = enableNodePublicIP;
             return this;
         }
-        public Builder enableNodePublicIP(@Nullable Boolean enableNodePublicIP) {
-            this.enableNodePublicIP = Codegen.ofNullable(enableNodePublicIP);
-            return this;
+
+        public Builder enableNodePublicIP(Boolean enableNodePublicIP) {
+            return enableNodePublicIP(Output.of(enableNodePublicIP));
         }
+
         public Builder gpuInstanceProfile(@Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile) {
-            this.gpuInstanceProfile = gpuInstanceProfile;
+            $.gpuInstanceProfile = gpuInstanceProfile;
             return this;
         }
-        public Builder gpuInstanceProfile(@Nullable Either<String,GPUInstanceProfile> gpuInstanceProfile) {
-            this.gpuInstanceProfile = Codegen.ofNullable(gpuInstanceProfile);
-            return this;
+
+        public Builder gpuInstanceProfile(Either<String,GPUInstanceProfile> gpuInstanceProfile) {
+            return gpuInstanceProfile(Output.of(gpuInstanceProfile));
         }
+
         public Builder kubeletConfig(@Nullable Output<KubeletConfigArgs> kubeletConfig) {
-            this.kubeletConfig = kubeletConfig;
+            $.kubeletConfig = kubeletConfig;
             return this;
         }
-        public Builder kubeletConfig(@Nullable KubeletConfigArgs kubeletConfig) {
-            this.kubeletConfig = Codegen.ofNullable(kubeletConfig);
-            return this;
+
+        public Builder kubeletConfig(KubeletConfigArgs kubeletConfig) {
+            return kubeletConfig(Output.of(kubeletConfig));
         }
+
         public Builder kubeletDiskType(@Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType) {
-            this.kubeletDiskType = kubeletDiskType;
+            $.kubeletDiskType = kubeletDiskType;
             return this;
         }
-        public Builder kubeletDiskType(@Nullable Either<String,KubeletDiskType> kubeletDiskType) {
-            this.kubeletDiskType = Codegen.ofNullable(kubeletDiskType);
-            return this;
+
+        public Builder kubeletDiskType(Either<String,KubeletDiskType> kubeletDiskType) {
+            return kubeletDiskType(Output.of(kubeletDiskType));
         }
+
         public Builder linuxOSConfig(@Nullable Output<LinuxOSConfigArgs> linuxOSConfig) {
-            this.linuxOSConfig = linuxOSConfig;
+            $.linuxOSConfig = linuxOSConfig;
             return this;
         }
-        public Builder linuxOSConfig(@Nullable LinuxOSConfigArgs linuxOSConfig) {
-            this.linuxOSConfig = Codegen.ofNullable(linuxOSConfig);
-            return this;
+
+        public Builder linuxOSConfig(LinuxOSConfigArgs linuxOSConfig) {
+            return linuxOSConfig(Output.of(linuxOSConfig));
         }
+
         public Builder maxCount(@Nullable Output<Integer> maxCount) {
-            this.maxCount = maxCount;
+            $.maxCount = maxCount;
             return this;
         }
-        public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = Codegen.ofNullable(maxCount);
-            return this;
+
+        public Builder maxCount(Integer maxCount) {
+            return maxCount(Output.of(maxCount));
         }
+
         public Builder maxPods(@Nullable Output<Integer> maxPods) {
-            this.maxPods = maxPods;
+            $.maxPods = maxPods;
             return this;
         }
-        public Builder maxPods(@Nullable Integer maxPods) {
-            this.maxPods = Codegen.ofNullable(maxPods);
-            return this;
+
+        public Builder maxPods(Integer maxPods) {
+            return maxPods(Output.of(maxPods));
         }
+
         public Builder minCount(@Nullable Output<Integer> minCount) {
-            this.minCount = minCount;
+            $.minCount = minCount;
             return this;
         }
-        public Builder minCount(@Nullable Integer minCount) {
-            this.minCount = Codegen.ofNullable(minCount);
-            return this;
+
+        public Builder minCount(Integer minCount) {
+            return minCount(Output.of(minCount));
         }
+
         public Builder mode(@Nullable Output<Either<String,AgentPoolMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,AgentPoolMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,AgentPoolMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder nodeLabels(@Nullable Output<Map<String,String>> nodeLabels) {
-            this.nodeLabels = nodeLabels;
+            $.nodeLabels = nodeLabels;
             return this;
         }
-        public Builder nodeLabels(@Nullable Map<String,String> nodeLabels) {
-            this.nodeLabels = Codegen.ofNullable(nodeLabels);
-            return this;
+
+        public Builder nodeLabels(Map<String,String> nodeLabels) {
+            return nodeLabels(Output.of(nodeLabels));
         }
+
         public Builder nodePublicIPPrefixID(@Nullable Output<String> nodePublicIPPrefixID) {
-            this.nodePublicIPPrefixID = nodePublicIPPrefixID;
+            $.nodePublicIPPrefixID = nodePublicIPPrefixID;
             return this;
         }
-        public Builder nodePublicIPPrefixID(@Nullable String nodePublicIPPrefixID) {
-            this.nodePublicIPPrefixID = Codegen.ofNullable(nodePublicIPPrefixID);
-            return this;
+
+        public Builder nodePublicIPPrefixID(String nodePublicIPPrefixID) {
+            return nodePublicIPPrefixID(Output.of(nodePublicIPPrefixID));
         }
+
         public Builder nodeTaints(@Nullable Output<List<String>> nodeTaints) {
-            this.nodeTaints = nodeTaints;
+            $.nodeTaints = nodeTaints;
             return this;
         }
-        public Builder nodeTaints(@Nullable List<String> nodeTaints) {
-            this.nodeTaints = Codegen.ofNullable(nodeTaints);
-            return this;
+
+        public Builder nodeTaints(List<String> nodeTaints) {
+            return nodeTaints(Output.of(nodeTaints));
         }
+
         public Builder nodeTaints(String... nodeTaints) {
             return nodeTaints(List.of(nodeTaints));
         }
+
         public Builder orchestratorVersion(@Nullable Output<String> orchestratorVersion) {
-            this.orchestratorVersion = orchestratorVersion;
+            $.orchestratorVersion = orchestratorVersion;
             return this;
         }
-        public Builder orchestratorVersion(@Nullable String orchestratorVersion) {
-            this.orchestratorVersion = Codegen.ofNullable(orchestratorVersion);
-            return this;
+
+        public Builder orchestratorVersion(String orchestratorVersion) {
+            return orchestratorVersion(Output.of(orchestratorVersion));
         }
+
         public Builder osDiskSizeGB(@Nullable Output<Integer> osDiskSizeGB) {
-            this.osDiskSizeGB = osDiskSizeGB;
+            $.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
-        public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
-            this.osDiskSizeGB = Codegen.ofNullable(osDiskSizeGB);
-            return this;
+
+        public Builder osDiskSizeGB(Integer osDiskSizeGB) {
+            return osDiskSizeGB(Output.of(osDiskSizeGB));
         }
+
         public Builder osDiskType(@Nullable Output<Either<String,OSDiskType>> osDiskType) {
-            this.osDiskType = osDiskType;
+            $.osDiskType = osDiskType;
             return this;
         }
-        public Builder osDiskType(@Nullable Either<String,OSDiskType> osDiskType) {
-            this.osDiskType = Codegen.ofNullable(osDiskType);
-            return this;
+
+        public Builder osDiskType(Either<String,OSDiskType> osDiskType) {
+            return osDiskType(Output.of(osDiskType));
         }
+
         public Builder osSKU(@Nullable Output<Either<String,OSSKU>> osSKU) {
-            this.osSKU = osSKU;
+            $.osSKU = osSKU;
             return this;
         }
-        public Builder osSKU(@Nullable Either<String,OSSKU> osSKU) {
-            this.osSKU = Codegen.ofNullable(osSKU);
-            return this;
+
+        public Builder osSKU(Either<String,OSSKU> osSKU) {
+            return osSKU(Output.of(osSKU));
         }
+
         public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable Either<String,OSType> osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(Either<String,OSType> osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder podSubnetID(@Nullable Output<String> podSubnetID) {
-            this.podSubnetID = podSubnetID;
+            $.podSubnetID = podSubnetID;
             return this;
         }
-        public Builder podSubnetID(@Nullable String podSubnetID) {
-            this.podSubnetID = Codegen.ofNullable(podSubnetID);
-            return this;
+
+        public Builder podSubnetID(String podSubnetID) {
+            return podSubnetID(Output.of(podSubnetID));
         }
+
         public Builder proximityPlacementGroupID(@Nullable Output<String> proximityPlacementGroupID) {
-            this.proximityPlacementGroupID = proximityPlacementGroupID;
+            $.proximityPlacementGroupID = proximityPlacementGroupID;
             return this;
         }
-        public Builder proximityPlacementGroupID(@Nullable String proximityPlacementGroupID) {
-            this.proximityPlacementGroupID = Codegen.ofNullable(proximityPlacementGroupID);
-            return this;
+
+        public Builder proximityPlacementGroupID(String proximityPlacementGroupID) {
+            return proximityPlacementGroupID(Output.of(proximityPlacementGroupID));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder scaleSetEvictionPolicy(@Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy) {
-            this.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
+            $.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
             return this;
         }
-        public Builder scaleSetEvictionPolicy(@Nullable Either<String,ScaleSetEvictionPolicy> scaleSetEvictionPolicy) {
-            this.scaleSetEvictionPolicy = Codegen.ofNullable(scaleSetEvictionPolicy);
-            return this;
+
+        public Builder scaleSetEvictionPolicy(Either<String,ScaleSetEvictionPolicy> scaleSetEvictionPolicy) {
+            return scaleSetEvictionPolicy(Output.of(scaleSetEvictionPolicy));
         }
+
         public Builder scaleSetPriority(@Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority) {
-            this.scaleSetPriority = scaleSetPriority;
+            $.scaleSetPriority = scaleSetPriority;
             return this;
         }
-        public Builder scaleSetPriority(@Nullable Either<String,ScaleSetPriority> scaleSetPriority) {
-            this.scaleSetPriority = Codegen.ofNullable(scaleSetPriority);
-            return this;
+
+        public Builder scaleSetPriority(Either<String,ScaleSetPriority> scaleSetPriority) {
+            return scaleSetPriority(Output.of(scaleSetPriority));
         }
+
         public Builder spotMaxPrice(@Nullable Output<Double> spotMaxPrice) {
-            this.spotMaxPrice = spotMaxPrice;
+            $.spotMaxPrice = spotMaxPrice;
             return this;
         }
-        public Builder spotMaxPrice(@Nullable Double spotMaxPrice) {
-            this.spotMaxPrice = Codegen.ofNullable(spotMaxPrice);
-            return this;
+
+        public Builder spotMaxPrice(Double spotMaxPrice) {
+            return spotMaxPrice(Output.of(spotMaxPrice));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(@Nullable Output<Either<String,AgentPoolType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,AgentPoolType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,AgentPoolType> type) {
+            return type(Output.of(type));
         }
+
         public Builder upgradeSettings(@Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings) {
-            this.upgradeSettings = upgradeSettings;
+            $.upgradeSettings = upgradeSettings;
             return this;
         }
-        public Builder upgradeSettings(@Nullable AgentPoolUpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Codegen.ofNullable(upgradeSettings);
-            return this;
+
+        public Builder upgradeSettings(AgentPoolUpgradeSettingsArgs upgradeSettings) {
+            return upgradeSettings(Output.of(upgradeSettings));
         }
+
         public Builder vmSize(@Nullable Output<String> vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
-        public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Codegen.ofNullable(vmSize);
-            return this;
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Output.of(vmSize));
         }
+
         public Builder vnetSubnetID(@Nullable Output<String> vnetSubnetID) {
-            this.vnetSubnetID = vnetSubnetID;
+            $.vnetSubnetID = vnetSubnetID;
             return this;
         }
-        public Builder vnetSubnetID(@Nullable String vnetSubnetID) {
-            this.vnetSubnetID = Codegen.ofNullable(vnetSubnetID);
-            return this;
-        }        public AgentPoolArgs build() {
-            return new AgentPoolArgs(agentPoolName, availabilityZones, count, enableAutoScaling, enableEncryptionAtHost, enableFIPS, enableNodePublicIP, gpuInstanceProfile, kubeletConfig, kubeletDiskType, linuxOSConfig, maxCount, maxPods, minCount, mode, nodeLabels, nodePublicIPPrefixID, nodeTaints, orchestratorVersion, osDiskSizeGB, osDiskType, osSKU, osType, podSubnetID, proximityPlacementGroupID, resourceGroupName, resourceName, scaleSetEvictionPolicy, scaleSetPriority, spotMaxPrice, tags, type, upgradeSettings, vmSize, vnetSubnetID);
+
+        public Builder vnetSubnetID(String vnetSubnetID) {
+            return vnetSubnetID(Output.of(vnetSubnetID));
+        }
+
+        public AgentPoolArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

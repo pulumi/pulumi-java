@@ -17,7 +17,7 @@ public final class GetIncidentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="incidentId", required=true)
-      private final String incidentId;
+    private String incidentId;
 
     public String incidentId() {
         return this.incidentId;
@@ -28,7 +28,7 @@ public final class GetIncidentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetIncidentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetIncidentArgs(
-        String incidentId,
-        String resourceGroupName,
-        String workspaceName) {
-        this.incidentId = Objects.requireNonNull(incidentId, "expected parameter 'incidentId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetIncidentArgs() {}
 
-    private GetIncidentArgs() {
-        this.incidentId = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetIncidentArgs(GetIncidentArgs $) {
+        this.incidentId = $.incidentId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIncidentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String incidentId;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetIncidentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIncidentArgs();
         }
 
         public Builder(GetIncidentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.incidentId = defaults.incidentId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetIncidentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder incidentId(String incidentId) {
-            this.incidentId = Objects.requireNonNull(incidentId);
+            $.incidentId = incidentId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetIncidentArgs build() {
-            return new GetIncidentArgs(incidentId, resourceGroupName, workspaceName);
+        }
+
+        public GetIncidentArgs build() {
+            $.incidentId = Objects.requireNonNull($.incidentId, "expected parameter 'incidentId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.cloudwatch;
 import com.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionsEnabled")
-      private final @Nullable Output<Boolean> actionsEnabled;
+    private @Nullable Output<Boolean> actionsEnabled;
 
-    public Output<Boolean> actionsEnabled() {
-        return this.actionsEnabled == null ? Codegen.empty() : this.actionsEnabled;
+    public Optional<Output<Boolean>> actionsEnabled() {
+        return Optional.ofNullable(this.actionsEnabled);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alarmActions")
-      private final @Nullable Output<List<String>> alarmActions;
+    private @Nullable Output<List<String>> alarmActions;
 
-    public Output<List<String>> alarmActions() {
-        return this.alarmActions == null ? Codegen.empty() : this.alarmActions;
+    public Optional<Output<List<String>>> alarmActions() {
+        return Optional.ofNullable(this.alarmActions);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alarmDescription")
-      private final @Nullable Output<String> alarmDescription;
+    private @Nullable Output<String> alarmDescription;
 
-    public Output<String> alarmDescription() {
-        return this.alarmDescription == null ? Codegen.empty() : this.alarmDescription;
+    public Optional<Output<String>> alarmDescription() {
+        return Optional.ofNullable(this.alarmDescription);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comparisonOperator", required=true)
-      private final Output<String> comparisonOperator;
+    private Output<String> comparisonOperator;
 
     public Output<String> comparisonOperator() {
         return this.comparisonOperator;
@@ -70,10 +70,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datapointsToAlarm")
-      private final @Nullable Output<Integer> datapointsToAlarm;
+    private @Nullable Output<Integer> datapointsToAlarm;
 
-    public Output<Integer> datapointsToAlarm() {
-        return this.datapointsToAlarm == null ? Codegen.empty() : this.datapointsToAlarm;
+    public Optional<Output<Integer>> datapointsToAlarm() {
+        return Optional.ofNullable(this.datapointsToAlarm);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<Map<String,String>> dimensions;
+    private @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<Map<String,String>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="evaluateLowSampleCountPercentiles")
-      private final @Nullable Output<String> evaluateLowSampleCountPercentiles;
+    private @Nullable Output<String> evaluateLowSampleCountPercentiles;
 
-    public Output<String> evaluateLowSampleCountPercentiles() {
-        return this.evaluateLowSampleCountPercentiles == null ? Codegen.empty() : this.evaluateLowSampleCountPercentiles;
+    public Optional<Output<String>> evaluateLowSampleCountPercentiles() {
+        return Optional.ofNullable(this.evaluateLowSampleCountPercentiles);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="evaluationPeriods", required=true)
-      private final Output<Integer> evaluationPeriods;
+    private Output<Integer> evaluationPeriods;
 
     public Output<Integer> evaluationPeriods() {
         return this.evaluationPeriods;
@@ -119,10 +119,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extendedStatistic")
-      private final @Nullable Output<String> extendedStatistic;
+    private @Nullable Output<String> extendedStatistic;
 
-    public Output<String> extendedStatistic() {
-        return this.extendedStatistic == null ? Codegen.empty() : this.extendedStatistic;
+    public Optional<Output<String>> extendedStatistic() {
+        return Optional.ofNullable(this.extendedStatistic);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="insufficientDataActions")
-      private final @Nullable Output<List<String>> insufficientDataActions;
+    private @Nullable Output<List<String>> insufficientDataActions;
 
-    public Output<List<String>> insufficientDataActions() {
-        return this.insufficientDataActions == null ? Codegen.empty() : this.insufficientDataActions;
+    public Optional<Output<List<String>>> insufficientDataActions() {
+        return Optional.ofNullable(this.insufficientDataActions);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricName")
-      private final @Nullable Output<String> metricName;
+    private @Nullable Output<String> metricName;
 
-    public Output<String> metricName() {
-        return this.metricName == null ? Codegen.empty() : this.metricName;
+    public Optional<Output<String>> metricName() {
+        return Optional.ofNullable(this.metricName);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricQueries")
-      private final @Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries;
+    private @Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries;
 
-    public Output<List<MetricAlarmMetricQueryArgs>> metricQueries() {
-        return this.metricQueries == null ? Codegen.empty() : this.metricQueries;
+    public Optional<Output<List<MetricAlarmMetricQueryArgs>>> metricQueries() {
+        return Optional.ofNullable(this.metricQueries);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="okActions")
-      private final @Nullable Output<List<String>> okActions;
+    private @Nullable Output<List<String>> okActions;
 
-    public Output<List<String>> okActions() {
-        return this.okActions == null ? Codegen.empty() : this.okActions;
+    public Optional<Output<List<String>>> okActions() {
+        return Optional.ofNullable(this.okActions);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<Integer> period;
+    private @Nullable Output<Integer> period;
 
-    public Output<Integer> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<Integer>> period() {
+        return Optional.ofNullable(this.period);
     }
 
     /**
@@ -210,10 +210,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statistic")
-      private final @Nullable Output<String> statistic;
+    private @Nullable Output<String> statistic;
 
-    public Output<String> statistic() {
-        return this.statistic == null ? Codegen.empty() : this.statistic;
+    public Optional<Output<String>> statistic() {
+        return Optional.ofNullable(this.statistic);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="threshold")
-      private final @Nullable Output<Double> threshold;
+    private @Nullable Output<Double> threshold;
 
-    public Output<Double> threshold() {
-        return this.threshold == null ? Codegen.empty() : this.threshold;
+    public Optional<Output<Double>> threshold() {
+        return Optional.ofNullable(this.threshold);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="thresholdMetricId")
-      private final @Nullable Output<String> thresholdMetricId;
+    private @Nullable Output<String> thresholdMetricId;
 
-    public Output<String> thresholdMetricId() {
-        return this.thresholdMetricId == null ? Codegen.empty() : this.thresholdMetricId;
+    public Optional<Output<String>> thresholdMetricId() {
+        return Optional.ofNullable(this.thresholdMetricId);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="treatMissingData")
-      private final @Nullable Output<String> treatMissingData;
+    private @Nullable Output<String> treatMissingData;
 
-    public Output<String> treatMissingData() {
-        return this.treatMissingData == null ? Codegen.empty() : this.treatMissingData;
+    public Optional<Output<String>> treatMissingData() {
+        return Optional.ofNullable(this.treatMissingData);
     }
 
     /**
@@ -265,335 +265,276 @@ public final class MetricAlarmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unit")
-      private final @Nullable Output<String> unit;
+    private @Nullable Output<String> unit;
 
-    public Output<String> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<String>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
-    public MetricAlarmArgs(
-        @Nullable Output<Boolean> actionsEnabled,
-        @Nullable Output<List<String>> alarmActions,
-        @Nullable Output<String> alarmDescription,
-        Output<String> comparisonOperator,
-        @Nullable Output<Integer> datapointsToAlarm,
-        @Nullable Output<Map<String,String>> dimensions,
-        @Nullable Output<String> evaluateLowSampleCountPercentiles,
-        Output<Integer> evaluationPeriods,
-        @Nullable Output<String> extendedStatistic,
-        @Nullable Output<List<String>> insufficientDataActions,
-        @Nullable Output<String> metricName,
-        @Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespace,
-        @Nullable Output<List<String>> okActions,
-        @Nullable Output<Integer> period,
-        @Nullable Output<String> statistic,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Double> threshold,
-        @Nullable Output<String> thresholdMetricId,
-        @Nullable Output<String> treatMissingData,
-        @Nullable Output<String> unit) {
-        this.actionsEnabled = actionsEnabled;
-        this.alarmActions = alarmActions;
-        this.alarmDescription = alarmDescription;
-        this.comparisonOperator = Objects.requireNonNull(comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
-        this.datapointsToAlarm = datapointsToAlarm;
-        this.dimensions = dimensions;
-        this.evaluateLowSampleCountPercentiles = evaluateLowSampleCountPercentiles;
-        this.evaluationPeriods = Objects.requireNonNull(evaluationPeriods, "expected parameter 'evaluationPeriods' to be non-null");
-        this.extendedStatistic = extendedStatistic;
-        this.insufficientDataActions = insufficientDataActions;
-        this.metricName = metricName;
-        this.metricQueries = metricQueries;
-        this.name = name;
-        this.namespace = namespace;
-        this.okActions = okActions;
-        this.period = period;
-        this.statistic = statistic;
-        this.tags = tags;
-        this.threshold = threshold;
-        this.thresholdMetricId = thresholdMetricId;
-        this.treatMissingData = treatMissingData;
-        this.unit = unit;
-    }
+    private MetricAlarmArgs() {}
 
-    private MetricAlarmArgs() {
-        this.actionsEnabled = Codegen.empty();
-        this.alarmActions = Codegen.empty();
-        this.alarmDescription = Codegen.empty();
-        this.comparisonOperator = Codegen.empty();
-        this.datapointsToAlarm = Codegen.empty();
-        this.dimensions = Codegen.empty();
-        this.evaluateLowSampleCountPercentiles = Codegen.empty();
-        this.evaluationPeriods = Codegen.empty();
-        this.extendedStatistic = Codegen.empty();
-        this.insufficientDataActions = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.metricQueries = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.okActions = Codegen.empty();
-        this.period = Codegen.empty();
-        this.statistic = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.threshold = Codegen.empty();
-        this.thresholdMetricId = Codegen.empty();
-        this.treatMissingData = Codegen.empty();
-        this.unit = Codegen.empty();
+    private MetricAlarmArgs(MetricAlarmArgs $) {
+        this.actionsEnabled = $.actionsEnabled;
+        this.alarmActions = $.alarmActions;
+        this.alarmDescription = $.alarmDescription;
+        this.comparisonOperator = $.comparisonOperator;
+        this.datapointsToAlarm = $.datapointsToAlarm;
+        this.dimensions = $.dimensions;
+        this.evaluateLowSampleCountPercentiles = $.evaluateLowSampleCountPercentiles;
+        this.evaluationPeriods = $.evaluationPeriods;
+        this.extendedStatistic = $.extendedStatistic;
+        this.insufficientDataActions = $.insufficientDataActions;
+        this.metricName = $.metricName;
+        this.metricQueries = $.metricQueries;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.okActions = $.okActions;
+        this.period = $.period;
+        this.statistic = $.statistic;
+        this.tags = $.tags;
+        this.threshold = $.threshold;
+        this.thresholdMetricId = $.thresholdMetricId;
+        this.treatMissingData = $.treatMissingData;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAlarmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> actionsEnabled;
-        private @Nullable Output<List<String>> alarmActions;
-        private @Nullable Output<String> alarmDescription;
-        private Output<String> comparisonOperator;
-        private @Nullable Output<Integer> datapointsToAlarm;
-        private @Nullable Output<Map<String,String>> dimensions;
-        private @Nullable Output<String> evaluateLowSampleCountPercentiles;
-        private Output<Integer> evaluationPeriods;
-        private @Nullable Output<String> extendedStatistic;
-        private @Nullable Output<List<String>> insufficientDataActions;
-        private @Nullable Output<String> metricName;
-        private @Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<List<String>> okActions;
-        private @Nullable Output<Integer> period;
-        private @Nullable Output<String> statistic;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Double> threshold;
-        private @Nullable Output<String> thresholdMetricId;
-        private @Nullable Output<String> treatMissingData;
-        private @Nullable Output<String> unit;
+        private MetricAlarmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAlarmArgs();
         }
 
         public Builder(MetricAlarmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionsEnabled = defaults.actionsEnabled;
-    	      this.alarmActions = defaults.alarmActions;
-    	      this.alarmDescription = defaults.alarmDescription;
-    	      this.comparisonOperator = defaults.comparisonOperator;
-    	      this.datapointsToAlarm = defaults.datapointsToAlarm;
-    	      this.dimensions = defaults.dimensions;
-    	      this.evaluateLowSampleCountPercentiles = defaults.evaluateLowSampleCountPercentiles;
-    	      this.evaluationPeriods = defaults.evaluationPeriods;
-    	      this.extendedStatistic = defaults.extendedStatistic;
-    	      this.insufficientDataActions = defaults.insufficientDataActions;
-    	      this.metricName = defaults.metricName;
-    	      this.metricQueries = defaults.metricQueries;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.okActions = defaults.okActions;
-    	      this.period = defaults.period;
-    	      this.statistic = defaults.statistic;
-    	      this.tags = defaults.tags;
-    	      this.threshold = defaults.threshold;
-    	      this.thresholdMetricId = defaults.thresholdMetricId;
-    	      this.treatMissingData = defaults.treatMissingData;
-    	      this.unit = defaults.unit;
+            $ = new MetricAlarmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionsEnabled(@Nullable Output<Boolean> actionsEnabled) {
-            this.actionsEnabled = actionsEnabled;
+            $.actionsEnabled = actionsEnabled;
             return this;
         }
-        public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
-            this.actionsEnabled = Codegen.ofNullable(actionsEnabled);
-            return this;
+
+        public Builder actionsEnabled(Boolean actionsEnabled) {
+            return actionsEnabled(Output.of(actionsEnabled));
         }
+
         public Builder alarmActions(@Nullable Output<List<String>> alarmActions) {
-            this.alarmActions = alarmActions;
+            $.alarmActions = alarmActions;
             return this;
         }
-        public Builder alarmActions(@Nullable List<String> alarmActions) {
-            this.alarmActions = Codegen.ofNullable(alarmActions);
-            return this;
+
+        public Builder alarmActions(List<String> alarmActions) {
+            return alarmActions(Output.of(alarmActions));
         }
+
         public Builder alarmActions(String... alarmActions) {
             return alarmActions(List.of(alarmActions));
         }
+
         public Builder alarmDescription(@Nullable Output<String> alarmDescription) {
-            this.alarmDescription = alarmDescription;
+            $.alarmDescription = alarmDescription;
             return this;
         }
-        public Builder alarmDescription(@Nullable String alarmDescription) {
-            this.alarmDescription = Codegen.ofNullable(alarmDescription);
-            return this;
+
+        public Builder alarmDescription(String alarmDescription) {
+            return alarmDescription(Output.of(alarmDescription));
         }
+
         public Builder comparisonOperator(Output<String> comparisonOperator) {
-            this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
+            $.comparisonOperator = comparisonOperator;
             return this;
         }
+
         public Builder comparisonOperator(String comparisonOperator) {
-            this.comparisonOperator = Output.of(Objects.requireNonNull(comparisonOperator));
-            return this;
+            return comparisonOperator(Output.of(comparisonOperator));
         }
+
         public Builder datapointsToAlarm(@Nullable Output<Integer> datapointsToAlarm) {
-            this.datapointsToAlarm = datapointsToAlarm;
+            $.datapointsToAlarm = datapointsToAlarm;
             return this;
         }
-        public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
-            this.datapointsToAlarm = Codegen.ofNullable(datapointsToAlarm);
-            return this;
+
+        public Builder datapointsToAlarm(Integer datapointsToAlarm) {
+            return datapointsToAlarm(Output.of(datapointsToAlarm));
         }
+
         public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(Map<String,String> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder evaluateLowSampleCountPercentiles(@Nullable Output<String> evaluateLowSampleCountPercentiles) {
-            this.evaluateLowSampleCountPercentiles = evaluateLowSampleCountPercentiles;
+            $.evaluateLowSampleCountPercentiles = evaluateLowSampleCountPercentiles;
             return this;
         }
-        public Builder evaluateLowSampleCountPercentiles(@Nullable String evaluateLowSampleCountPercentiles) {
-            this.evaluateLowSampleCountPercentiles = Codegen.ofNullable(evaluateLowSampleCountPercentiles);
-            return this;
+
+        public Builder evaluateLowSampleCountPercentiles(String evaluateLowSampleCountPercentiles) {
+            return evaluateLowSampleCountPercentiles(Output.of(evaluateLowSampleCountPercentiles));
         }
+
         public Builder evaluationPeriods(Output<Integer> evaluationPeriods) {
-            this.evaluationPeriods = Objects.requireNonNull(evaluationPeriods);
+            $.evaluationPeriods = evaluationPeriods;
             return this;
         }
+
         public Builder evaluationPeriods(Integer evaluationPeriods) {
-            this.evaluationPeriods = Output.of(Objects.requireNonNull(evaluationPeriods));
-            return this;
+            return evaluationPeriods(Output.of(evaluationPeriods));
         }
+
         public Builder extendedStatistic(@Nullable Output<String> extendedStatistic) {
-            this.extendedStatistic = extendedStatistic;
+            $.extendedStatistic = extendedStatistic;
             return this;
         }
-        public Builder extendedStatistic(@Nullable String extendedStatistic) {
-            this.extendedStatistic = Codegen.ofNullable(extendedStatistic);
-            return this;
+
+        public Builder extendedStatistic(String extendedStatistic) {
+            return extendedStatistic(Output.of(extendedStatistic));
         }
+
         public Builder insufficientDataActions(@Nullable Output<List<String>> insufficientDataActions) {
-            this.insufficientDataActions = insufficientDataActions;
+            $.insufficientDataActions = insufficientDataActions;
             return this;
         }
-        public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
-            this.insufficientDataActions = Codegen.ofNullable(insufficientDataActions);
-            return this;
+
+        public Builder insufficientDataActions(List<String> insufficientDataActions) {
+            return insufficientDataActions(Output.of(insufficientDataActions));
         }
+
         public Builder insufficientDataActions(String... insufficientDataActions) {
             return insufficientDataActions(List.of(insufficientDataActions));
         }
+
         public Builder metricName(@Nullable Output<String> metricName) {
-            this.metricName = metricName;
+            $.metricName = metricName;
             return this;
         }
-        public Builder metricName(@Nullable String metricName) {
-            this.metricName = Codegen.ofNullable(metricName);
-            return this;
+
+        public Builder metricName(String metricName) {
+            return metricName(Output.of(metricName));
         }
+
         public Builder metricQueries(@Nullable Output<List<MetricAlarmMetricQueryArgs>> metricQueries) {
-            this.metricQueries = metricQueries;
+            $.metricQueries = metricQueries;
             return this;
         }
-        public Builder metricQueries(@Nullable List<MetricAlarmMetricQueryArgs> metricQueries) {
-            this.metricQueries = Codegen.ofNullable(metricQueries);
-            return this;
+
+        public Builder metricQueries(List<MetricAlarmMetricQueryArgs> metricQueries) {
+            return metricQueries(Output.of(metricQueries));
         }
+
         public Builder metricQueries(MetricAlarmMetricQueryArgs... metricQueries) {
             return metricQueries(List.of(metricQueries));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder okActions(@Nullable Output<List<String>> okActions) {
-            this.okActions = okActions;
+            $.okActions = okActions;
             return this;
         }
-        public Builder okActions(@Nullable List<String> okActions) {
-            this.okActions = Codegen.ofNullable(okActions);
-            return this;
+
+        public Builder okActions(List<String> okActions) {
+            return okActions(Output.of(okActions));
         }
+
         public Builder okActions(String... okActions) {
             return okActions(List.of(okActions));
         }
+
         public Builder period(@Nullable Output<Integer> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable Integer period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
+
+        public Builder period(Integer period) {
+            return period(Output.of(period));
         }
+
         public Builder statistic(@Nullable Output<String> statistic) {
-            this.statistic = statistic;
+            $.statistic = statistic;
             return this;
         }
-        public Builder statistic(@Nullable String statistic) {
-            this.statistic = Codegen.ofNullable(statistic);
-            return this;
+
+        public Builder statistic(String statistic) {
+            return statistic(Output.of(statistic));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder threshold(@Nullable Output<Double> threshold) {
-            this.threshold = threshold;
+            $.threshold = threshold;
             return this;
         }
-        public Builder threshold(@Nullable Double threshold) {
-            this.threshold = Codegen.ofNullable(threshold);
-            return this;
+
+        public Builder threshold(Double threshold) {
+            return threshold(Output.of(threshold));
         }
+
         public Builder thresholdMetricId(@Nullable Output<String> thresholdMetricId) {
-            this.thresholdMetricId = thresholdMetricId;
+            $.thresholdMetricId = thresholdMetricId;
             return this;
         }
-        public Builder thresholdMetricId(@Nullable String thresholdMetricId) {
-            this.thresholdMetricId = Codegen.ofNullable(thresholdMetricId);
-            return this;
+
+        public Builder thresholdMetricId(String thresholdMetricId) {
+            return thresholdMetricId(Output.of(thresholdMetricId));
         }
+
         public Builder treatMissingData(@Nullable Output<String> treatMissingData) {
-            this.treatMissingData = treatMissingData;
+            $.treatMissingData = treatMissingData;
             return this;
         }
-        public Builder treatMissingData(@Nullable String treatMissingData) {
-            this.treatMissingData = Codegen.ofNullable(treatMissingData);
-            return this;
+
+        public Builder treatMissingData(String treatMissingData) {
+            return treatMissingData(Output.of(treatMissingData));
         }
+
         public Builder unit(@Nullable Output<String> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable String unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
-        }        public MetricAlarmArgs build() {
-            return new MetricAlarmArgs(actionsEnabled, alarmActions, alarmDescription, comparisonOperator, datapointsToAlarm, dimensions, evaluateLowSampleCountPercentiles, evaluationPeriods, extendedStatistic, insufficientDataActions, metricName, metricQueries, name, namespace, okActions, period, statistic, tags, threshold, thresholdMetricId, treatMissingData, unit);
+
+        public Builder unit(String unit) {
+            return unit(Output.of(unit));
+        }
+
+        public MetricAlarmArgs build() {
+            $.comparisonOperator = Objects.requireNonNull($.comparisonOperator, "expected parameter 'comparisonOperator' to be non-null");
+            $.evaluationPeriods = Objects.requireNonNull($.evaluationPeriods, "expected parameter 'evaluationPeriods' to be non-null");
+            return $;
         }
     }
+
 }

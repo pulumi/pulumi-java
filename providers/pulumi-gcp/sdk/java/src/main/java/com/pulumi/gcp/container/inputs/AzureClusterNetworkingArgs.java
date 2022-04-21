@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class AzureClusterNetworkingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="podAddressCidrBlocks", required=true)
-      private final Output<List<String>> podAddressCidrBlocks;
+    private Output<List<String>> podAddressCidrBlocks;
 
     public Output<List<String>> podAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
@@ -31,7 +30,7 @@ public final class AzureClusterNetworkingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="serviceAddressCidrBlocks", required=true)
-      private final Output<List<String>> serviceAddressCidrBlocks;
+    private Output<List<String>> serviceAddressCidrBlocks;
 
     public Output<List<String>> serviceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
@@ -42,82 +41,79 @@ public final class AzureClusterNetworkingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="virtualNetworkId", required=true)
-      private final Output<String> virtualNetworkId;
+    private Output<String> virtualNetworkId;
 
     public Output<String> virtualNetworkId() {
         return this.virtualNetworkId;
     }
 
-    public AzureClusterNetworkingArgs(
-        Output<List<String>> podAddressCidrBlocks,
-        Output<List<String>> serviceAddressCidrBlocks,
-        Output<String> virtualNetworkId) {
-        this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks, "expected parameter 'podAddressCidrBlocks' to be non-null");
-        this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks, "expected parameter 'serviceAddressCidrBlocks' to be non-null");
-        this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId, "expected parameter 'virtualNetworkId' to be non-null");
-    }
+    private AzureClusterNetworkingArgs() {}
 
-    private AzureClusterNetworkingArgs() {
-        this.podAddressCidrBlocks = Codegen.empty();
-        this.serviceAddressCidrBlocks = Codegen.empty();
-        this.virtualNetworkId = Codegen.empty();
+    private AzureClusterNetworkingArgs(AzureClusterNetworkingArgs $) {
+        this.podAddressCidrBlocks = $.podAddressCidrBlocks;
+        this.serviceAddressCidrBlocks = $.serviceAddressCidrBlocks;
+        this.virtualNetworkId = $.virtualNetworkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureClusterNetworkingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> podAddressCidrBlocks;
-        private Output<List<String>> serviceAddressCidrBlocks;
-        private Output<String> virtualNetworkId;
+        private AzureClusterNetworkingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureClusterNetworkingArgs();
         }
 
         public Builder(AzureClusterNetworkingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.podAddressCidrBlocks = defaults.podAddressCidrBlocks;
-    	      this.serviceAddressCidrBlocks = defaults.serviceAddressCidrBlocks;
-    	      this.virtualNetworkId = defaults.virtualNetworkId;
+            $ = new AzureClusterNetworkingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder podAddressCidrBlocks(Output<List<String>> podAddressCidrBlocks) {
-            this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
+            $.podAddressCidrBlocks = podAddressCidrBlocks;
             return this;
         }
+
         public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
-            this.podAddressCidrBlocks = Output.of(Objects.requireNonNull(podAddressCidrBlocks));
-            return this;
+            return podAddressCidrBlocks(Output.of(podAddressCidrBlocks));
         }
+
         public Builder podAddressCidrBlocks(String... podAddressCidrBlocks) {
             return podAddressCidrBlocks(List.of(podAddressCidrBlocks));
         }
+
         public Builder serviceAddressCidrBlocks(Output<List<String>> serviceAddressCidrBlocks) {
-            this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
+            $.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
             return this;
         }
+
         public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
-            this.serviceAddressCidrBlocks = Output.of(Objects.requireNonNull(serviceAddressCidrBlocks));
-            return this;
+            return serviceAddressCidrBlocks(Output.of(serviceAddressCidrBlocks));
         }
+
         public Builder serviceAddressCidrBlocks(String... serviceAddressCidrBlocks) {
             return serviceAddressCidrBlocks(List.of(serviceAddressCidrBlocks));
         }
+
         public Builder virtualNetworkId(Output<String> virtualNetworkId) {
-            this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId);
+            $.virtualNetworkId = virtualNetworkId;
             return this;
         }
+
         public Builder virtualNetworkId(String virtualNetworkId) {
-            this.virtualNetworkId = Output.of(Objects.requireNonNull(virtualNetworkId));
-            return this;
-        }        public AzureClusterNetworkingArgs build() {
-            return new AzureClusterNetworkingArgs(podAddressCidrBlocks, serviceAddressCidrBlocks, virtualNetworkId);
+            return virtualNetworkId(Output.of(virtualNetworkId));
+        }
+
+        public AzureClusterNetworkingArgs build() {
+            $.podAddressCidrBlocks = Objects.requireNonNull($.podAddressCidrBlocks, "expected parameter 'podAddressCidrBlocks' to be non-null");
+            $.serviceAddressCidrBlocks = Objects.requireNonNull($.serviceAddressCidrBlocks, "expected parameter 'serviceAddressCidrBlocks' to be non-null");
+            $.virtualNetworkId = Objects.requireNonNull($.virtualNetworkId, "expected parameter 'virtualNetworkId' to be non-null");
+            return $;
         }
     }
+
 }

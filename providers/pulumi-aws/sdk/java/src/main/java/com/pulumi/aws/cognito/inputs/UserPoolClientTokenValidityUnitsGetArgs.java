@@ -5,9 +5,9 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UserPoolClientTokenValidityUnitsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable Output<String> accessToken;
+    private @Nullable Output<String> accessToken;
 
-    public Output<String> accessToken() {
-        return this.accessToken == null ? Codegen.empty() : this.accessToken;
+    public Optional<Output<String>> accessToken() {
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UserPoolClientTokenValidityUnitsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="idToken")
-      private final @Nullable Output<String> idToken;
+    private @Nullable Output<String> idToken;
 
-    public Output<String> idToken() {
-        return this.idToken == null ? Codegen.empty() : this.idToken;
+    public Optional<Output<String>> idToken() {
+        return Optional.ofNullable(this.idToken);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class UserPoolClientTokenValidityUnitsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable Output<String> refreshToken;
+    private @Nullable Output<String> refreshToken;
 
-    public Output<String> refreshToken() {
-        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
+    public Optional<Output<String>> refreshToken() {
+        return Optional.ofNullable(this.refreshToken);
     }
 
-    public UserPoolClientTokenValidityUnitsGetArgs(
-        @Nullable Output<String> accessToken,
-        @Nullable Output<String> idToken,
-        @Nullable Output<String> refreshToken) {
-        this.accessToken = accessToken;
-        this.idToken = idToken;
-        this.refreshToken = refreshToken;
-    }
+    private UserPoolClientTokenValidityUnitsGetArgs() {}
 
-    private UserPoolClientTokenValidityUnitsGetArgs() {
-        this.accessToken = Codegen.empty();
-        this.idToken = Codegen.empty();
-        this.refreshToken = Codegen.empty();
+    private UserPoolClientTokenValidityUnitsGetArgs(UserPoolClientTokenValidityUnitsGetArgs $) {
+        this.accessToken = $.accessToken;
+        this.idToken = $.idToken;
+        this.refreshToken = $.refreshToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolClientTokenValidityUnitsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessToken;
-        private @Nullable Output<String> idToken;
-        private @Nullable Output<String> refreshToken;
+        private UserPoolClientTokenValidityUnitsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolClientTokenValidityUnitsGetArgs();
         }
 
         public Builder(UserPoolClientTokenValidityUnitsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.idToken = defaults.idToken;
-    	      this.refreshToken = defaults.refreshToken;
+            $ = new UserPoolClientTokenValidityUnitsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable Output<String> accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
-        public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Codegen.ofNullable(accessToken);
-            return this;
+
+        public Builder accessToken(String accessToken) {
+            return accessToken(Output.of(accessToken));
         }
+
         public Builder idToken(@Nullable Output<String> idToken) {
-            this.idToken = idToken;
+            $.idToken = idToken;
             return this;
         }
-        public Builder idToken(@Nullable String idToken) {
-            this.idToken = Codegen.ofNullable(idToken);
-            return this;
+
+        public Builder idToken(String idToken) {
+            return idToken(Output.of(idToken));
         }
+
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
-        public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Codegen.ofNullable(refreshToken);
-            return this;
-        }        public UserPoolClientTokenValidityUnitsGetArgs build() {
-            return new UserPoolClientTokenValidityUnitsGetArgs(accessToken, idToken, refreshToken);
+
+        public Builder refreshToken(String refreshToken) {
+            return refreshToken(Output.of(refreshToken));
+        }
+
+        public UserPoolClientTokenValidityUnitsGetArgs build() {
+            return $;
         }
     }
+
 }

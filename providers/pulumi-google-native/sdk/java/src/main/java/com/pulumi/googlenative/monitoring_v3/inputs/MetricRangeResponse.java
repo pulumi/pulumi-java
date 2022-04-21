@@ -22,7 +22,7 @@ public final class MetricRangeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="range", required=true)
-      private final GoogleMonitoringV3RangeResponse range;
+    private GoogleMonitoringV3RangeResponse range;
 
     public GoogleMonitoringV3RangeResponse range() {
         return this.range;
@@ -33,55 +33,52 @@ public final class MetricRangeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeSeries", required=true)
-      private final String timeSeries;
+    private String timeSeries;
 
     public String timeSeries() {
         return this.timeSeries;
     }
 
-    public MetricRangeResponse(
-        GoogleMonitoringV3RangeResponse range,
-        String timeSeries) {
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-        this.timeSeries = Objects.requireNonNull(timeSeries, "expected parameter 'timeSeries' to be non-null");
-    }
+    private MetricRangeResponse() {}
 
-    private MetricRangeResponse() {
-        this.range = null;
-        this.timeSeries = null;
+    private MetricRangeResponse(MetricRangeResponse $) {
+        this.range = $.range;
+        this.timeSeries = $.timeSeries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleMonitoringV3RangeResponse range;
-        private String timeSeries;
+        private MetricRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricRangeResponse();
         }
 
         public Builder(MetricRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.range = defaults.range;
-    	      this.timeSeries = defaults.timeSeries;
+            $ = new MetricRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder range(GoogleMonitoringV3RangeResponse range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder timeSeries(String timeSeries) {
-            this.timeSeries = Objects.requireNonNull(timeSeries);
+            $.timeSeries = timeSeries;
             return this;
-        }        public MetricRangeResponse build() {
-            return new MetricRangeResponse(range, timeSeries);
+        }
+
+        public MetricRangeResponse build() {
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            $.timeSeries = Objects.requireNonNull($.timeSeries, "expected parameter 'timeSeries' to be non-null");
+            return $;
         }
     }
+
 }

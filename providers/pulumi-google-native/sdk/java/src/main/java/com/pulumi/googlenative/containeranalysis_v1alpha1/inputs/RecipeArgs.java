@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<List<Map<String,String>>> arguments;
+    private @Nullable Output<List<Map<String,String>>> arguments;
 
-    public Output<List<Map<String,String>>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<List<Map<String,String>>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definedInMaterial")
-      private final @Nullable Output<String> definedInMaterial;
+    private @Nullable Output<String> definedInMaterial;
 
-    public Output<String> definedInMaterial() {
-        return this.definedInMaterial == null ? Codegen.empty() : this.definedInMaterial;
+    public Optional<Output<String>> definedInMaterial() {
+        return Optional.ofNullable(this.definedInMaterial);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entryPoint")
-      private final @Nullable Output<String> entryPoint;
+    private @Nullable Output<String> entryPoint;
 
-    public Output<String> entryPoint() {
-        return this.entryPoint == null ? Codegen.empty() : this.entryPoint;
+    public Optional<Output<String>> entryPoint() {
+        return Optional.ofNullable(this.entryPoint);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<List<Map<String,String>>> environment;
+    private @Nullable Output<List<Map<String,String>>> environment;
 
-    public Output<List<Map<String,String>>> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<List<Map<String,String>>>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -70,102 +70,96 @@ public final class RecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public RecipeArgs(
-        @Nullable Output<List<Map<String,String>>> arguments,
-        @Nullable Output<String> definedInMaterial,
-        @Nullable Output<String> entryPoint,
-        @Nullable Output<List<Map<String,String>>> environment,
-        @Nullable Output<String> type) {
-        this.arguments = arguments;
-        this.definedInMaterial = definedInMaterial;
-        this.entryPoint = entryPoint;
-        this.environment = environment;
-        this.type = type;
-    }
+    private RecipeArgs() {}
 
-    private RecipeArgs() {
-        this.arguments = Codegen.empty();
-        this.definedInMaterial = Codegen.empty();
-        this.entryPoint = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.type = Codegen.empty();
+    private RecipeArgs(RecipeArgs $) {
+        this.arguments = $.arguments;
+        this.definedInMaterial = $.definedInMaterial;
+        this.entryPoint = $.entryPoint;
+        this.environment = $.environment;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Map<String,String>>> arguments;
-        private @Nullable Output<String> definedInMaterial;
-        private @Nullable Output<String> entryPoint;
-        private @Nullable Output<List<Map<String,String>>> environment;
-        private @Nullable Output<String> type;
+        private RecipeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeArgs();
         }
 
         public Builder(RecipeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.definedInMaterial = defaults.definedInMaterial;
-    	      this.entryPoint = defaults.entryPoint;
-    	      this.environment = defaults.environment;
-    	      this.type = defaults.type;
+            $ = new RecipeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<List<Map<String,String>>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable List<Map<String,String>> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(List<Map<String,String>> arguments) {
+            return arguments(Output.of(arguments));
         }
+
+        public Builder arguments(Map<String,String>... arguments) {
+            return arguments(List.of(arguments));
+        }
+
         public Builder definedInMaterial(@Nullable Output<String> definedInMaterial) {
-            this.definedInMaterial = definedInMaterial;
+            $.definedInMaterial = definedInMaterial;
             return this;
         }
-        public Builder definedInMaterial(@Nullable String definedInMaterial) {
-            this.definedInMaterial = Codegen.ofNullable(definedInMaterial);
-            return this;
+
+        public Builder definedInMaterial(String definedInMaterial) {
+            return definedInMaterial(Output.of(definedInMaterial));
         }
+
         public Builder entryPoint(@Nullable Output<String> entryPoint) {
-            this.entryPoint = entryPoint;
+            $.entryPoint = entryPoint;
             return this;
         }
-        public Builder entryPoint(@Nullable String entryPoint) {
-            this.entryPoint = Codegen.ofNullable(entryPoint);
-            return this;
+
+        public Builder entryPoint(String entryPoint) {
+            return entryPoint(Output.of(entryPoint));
         }
+
         public Builder environment(@Nullable Output<List<Map<String,String>>> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable List<Map<String,String>> environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(List<Map<String,String>> environment) {
+            return environment(Output.of(environment));
         }
+
+        public Builder environment(Map<String,String>... environment) {
+            return environment(List.of(environment));
+        }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public RecipeArgs build() {
-            return new RecipeArgs(arguments, definedInMaterial, entryPoint, environment, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public RecipeArgs build() {
+            return $;
         }
     }
+
 }

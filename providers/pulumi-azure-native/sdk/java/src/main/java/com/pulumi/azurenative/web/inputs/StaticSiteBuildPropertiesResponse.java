@@ -24,10 +24,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="apiBuildCommand")
-      private final @Nullable String apiBuildCommand;
+    private @Nullable String apiBuildCommand;
 
     public Optional<String> apiBuildCommand() {
-        return this.apiBuildCommand == null ? Optional.empty() : Optional.ofNullable(this.apiBuildCommand);
+        return Optional.ofNullable(this.apiBuildCommand);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="apiLocation")
-      private final @Nullable String apiLocation;
+    private @Nullable String apiLocation;
 
     public Optional<String> apiLocation() {
-        return this.apiLocation == null ? Optional.empty() : Optional.ofNullable(this.apiLocation);
+        return Optional.ofNullable(this.apiLocation);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="appArtifactLocation")
-      private final @Nullable String appArtifactLocation;
+    private @Nullable String appArtifactLocation;
 
     public Optional<String> appArtifactLocation() {
-        return this.appArtifactLocation == null ? Optional.empty() : Optional.ofNullable(this.appArtifactLocation);
+        return Optional.ofNullable(this.appArtifactLocation);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="appBuildCommand")
-      private final @Nullable String appBuildCommand;
+    private @Nullable String appBuildCommand;
 
     public Optional<String> appBuildCommand() {
-        return this.appBuildCommand == null ? Optional.empty() : Optional.ofNullable(this.appBuildCommand);
+        return Optional.ofNullable(this.appBuildCommand);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="appLocation")
-      private final @Nullable String appLocation;
+    private @Nullable String appLocation;
 
     public Optional<String> appLocation() {
-        return this.appLocation == null ? Optional.empty() : Optional.ofNullable(this.appLocation);
+        return Optional.ofNullable(this.appLocation);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="githubActionSecretNameOverride")
-      private final @Nullable String githubActionSecretNameOverride;
+    private @Nullable String githubActionSecretNameOverride;
 
     public Optional<String> githubActionSecretNameOverride() {
-        return this.githubActionSecretNameOverride == null ? Optional.empty() : Optional.ofNullable(this.githubActionSecretNameOverride);
+        return Optional.ofNullable(this.githubActionSecretNameOverride);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="outputLocation")
-      private final @Nullable String outputLocation;
+    private @Nullable String outputLocation;
 
     public Optional<String> outputLocation() {
-        return this.outputLocation == null ? Optional.empty() : Optional.ofNullable(this.outputLocation);
+        return Optional.ofNullable(this.outputLocation);
     }
 
     /**
@@ -101,109 +101,86 @@ public final class StaticSiteBuildPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="skipGithubActionWorkflowGeneration")
-      private final @Nullable Boolean skipGithubActionWorkflowGeneration;
+    private @Nullable Boolean skipGithubActionWorkflowGeneration;
 
     public Optional<Boolean> skipGithubActionWorkflowGeneration() {
-        return this.skipGithubActionWorkflowGeneration == null ? Optional.empty() : Optional.ofNullable(this.skipGithubActionWorkflowGeneration);
+        return Optional.ofNullable(this.skipGithubActionWorkflowGeneration);
     }
 
-    public StaticSiteBuildPropertiesResponse(
-        @Nullable String apiBuildCommand,
-        @Nullable String apiLocation,
-        @Nullable String appArtifactLocation,
-        @Nullable String appBuildCommand,
-        @Nullable String appLocation,
-        @Nullable String githubActionSecretNameOverride,
-        @Nullable String outputLocation,
-        @Nullable Boolean skipGithubActionWorkflowGeneration) {
-        this.apiBuildCommand = apiBuildCommand;
-        this.apiLocation = apiLocation;
-        this.appArtifactLocation = appArtifactLocation;
-        this.appBuildCommand = appBuildCommand;
-        this.appLocation = appLocation;
-        this.githubActionSecretNameOverride = githubActionSecretNameOverride;
-        this.outputLocation = outputLocation;
-        this.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
-    }
+    private StaticSiteBuildPropertiesResponse() {}
 
-    private StaticSiteBuildPropertiesResponse() {
-        this.apiBuildCommand = null;
-        this.apiLocation = null;
-        this.appArtifactLocation = null;
-        this.appBuildCommand = null;
-        this.appLocation = null;
-        this.githubActionSecretNameOverride = null;
-        this.outputLocation = null;
-        this.skipGithubActionWorkflowGeneration = null;
+    private StaticSiteBuildPropertiesResponse(StaticSiteBuildPropertiesResponse $) {
+        this.apiBuildCommand = $.apiBuildCommand;
+        this.apiLocation = $.apiLocation;
+        this.appArtifactLocation = $.appArtifactLocation;
+        this.appBuildCommand = $.appBuildCommand;
+        this.appLocation = $.appLocation;
+        this.githubActionSecretNameOverride = $.githubActionSecretNameOverride;
+        this.outputLocation = $.outputLocation;
+        this.skipGithubActionWorkflowGeneration = $.skipGithubActionWorkflowGeneration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticSiteBuildPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String apiBuildCommand;
-        private @Nullable String apiLocation;
-        private @Nullable String appArtifactLocation;
-        private @Nullable String appBuildCommand;
-        private @Nullable String appLocation;
-        private @Nullable String githubActionSecretNameOverride;
-        private @Nullable String outputLocation;
-        private @Nullable Boolean skipGithubActionWorkflowGeneration;
+        private StaticSiteBuildPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticSiteBuildPropertiesResponse();
         }
 
         public Builder(StaticSiteBuildPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiBuildCommand = defaults.apiBuildCommand;
-    	      this.apiLocation = defaults.apiLocation;
-    	      this.appArtifactLocation = defaults.appArtifactLocation;
-    	      this.appBuildCommand = defaults.appBuildCommand;
-    	      this.appLocation = defaults.appLocation;
-    	      this.githubActionSecretNameOverride = defaults.githubActionSecretNameOverride;
-    	      this.outputLocation = defaults.outputLocation;
-    	      this.skipGithubActionWorkflowGeneration = defaults.skipGithubActionWorkflowGeneration;
+            $ = new StaticSiteBuildPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiBuildCommand(@Nullable String apiBuildCommand) {
-            this.apiBuildCommand = apiBuildCommand;
+            $.apiBuildCommand = apiBuildCommand;
             return this;
         }
+
         public Builder apiLocation(@Nullable String apiLocation) {
-            this.apiLocation = apiLocation;
+            $.apiLocation = apiLocation;
             return this;
         }
+
         public Builder appArtifactLocation(@Nullable String appArtifactLocation) {
-            this.appArtifactLocation = appArtifactLocation;
+            $.appArtifactLocation = appArtifactLocation;
             return this;
         }
+
         public Builder appBuildCommand(@Nullable String appBuildCommand) {
-            this.appBuildCommand = appBuildCommand;
+            $.appBuildCommand = appBuildCommand;
             return this;
         }
+
         public Builder appLocation(@Nullable String appLocation) {
-            this.appLocation = appLocation;
+            $.appLocation = appLocation;
             return this;
         }
+
         public Builder githubActionSecretNameOverride(@Nullable String githubActionSecretNameOverride) {
-            this.githubActionSecretNameOverride = githubActionSecretNameOverride;
+            $.githubActionSecretNameOverride = githubActionSecretNameOverride;
             return this;
         }
+
         public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = outputLocation;
+            $.outputLocation = outputLocation;
             return this;
         }
+
         public Builder skipGithubActionWorkflowGeneration(@Nullable Boolean skipGithubActionWorkflowGeneration) {
-            this.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
+            $.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;
-        }        public StaticSiteBuildPropertiesResponse build() {
-            return new StaticSiteBuildPropertiesResponse(apiBuildCommand, apiLocation, appArtifactLocation, appBuildCommand, appLocation, githubActionSecretNameOverride, outputLocation, skipGithubActionWorkflowGeneration);
+        }
+
+        public StaticSiteBuildPropertiesResponse build() {
+            return $;
         }
     }
+
 }

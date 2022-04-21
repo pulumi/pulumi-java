@@ -21,7 +21,7 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,55 +32,52 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
-    public StorageAccountResponse(
-        String id,
-        String key) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private StorageAccountResponse() {}
 
-    private StorageAccountResponse() {
-        this.id = null;
-        this.key = null;
+    private StorageAccountResponse(StorageAccountResponse $) {
+        this.id = $.id;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String key;
+        private StorageAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountResponse();
         }
 
         public Builder(StorageAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.key = defaults.key;
+            $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
-        }        public StorageAccountResponse build() {
-            return new StorageAccountResponse(id, key);
+        }
+
+        public StorageAccountResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

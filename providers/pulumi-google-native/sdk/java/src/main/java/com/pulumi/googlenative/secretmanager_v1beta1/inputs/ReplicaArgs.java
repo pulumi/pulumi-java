@@ -5,9 +5,9 @@ package com.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ReplicaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
-    public ReplicaArgs(@Nullable Output<String> location) {
-        this.location = location;
-    }
+    private ReplicaArgs() {}
 
-    private ReplicaArgs() {
-        this.location = Codegen.empty();
+    private ReplicaArgs(ReplicaArgs $) {
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
+        private ReplicaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicaArgs();
         }
 
         public Builder(ReplicaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
+            $ = new ReplicaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
-        }        public ReplicaArgs build() {
-            return new ReplicaArgs(location);
+
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public ReplicaArgs build() {
+            return $;
         }
     }
+
 }

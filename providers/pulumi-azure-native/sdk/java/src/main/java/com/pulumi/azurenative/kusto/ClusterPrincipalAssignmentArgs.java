@@ -8,9 +8,9 @@ import com.pulumi.azurenative.kusto.enums.PrincipalType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ClusterPrincipalAssignmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -34,10 +34,10 @@ public final class ClusterPrincipalAssignmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="principalAssignmentName")
-      private final @Nullable Output<String> principalAssignmentName;
+    private @Nullable Output<String> principalAssignmentName;
 
-    public Output<String> principalAssignmentName() {
-        return this.principalAssignmentName == null ? Codegen.empty() : this.principalAssignmentName;
+    public Optional<Output<String>> principalAssignmentName() {
+        return Optional.ofNullable(this.principalAssignmentName);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ClusterPrincipalAssignmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="principalId", required=true)
-      private final Output<String> principalId;
+    private Output<String> principalId;
 
     public Output<String> principalId() {
         return this.principalId;
@@ -56,7 +56,7 @@ public final class ClusterPrincipalAssignmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="principalType", required=true)
-      private final Output<Either<String,PrincipalType>> principalType;
+    private Output<Either<String,PrincipalType>> principalType;
 
     public Output<Either<String,PrincipalType>> principalType() {
         return this.principalType;
@@ -67,7 +67,7 @@ public final class ClusterPrincipalAssignmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class ClusterPrincipalAssignmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="role", required=true)
-      private final Output<Either<String,ClusterPrincipalRole>> role;
+    private Output<Either<String,ClusterPrincipalRole>> role;
 
     public Output<Either<String,ClusterPrincipalRole>> role() {
         return this.role;
@@ -89,128 +89,113 @@ public final class ClusterPrincipalAssignmentArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ClusterPrincipalAssignmentArgs(
-        Output<String> clusterName,
-        @Nullable Output<String> principalAssignmentName,
-        Output<String> principalId,
-        Output<Either<String,PrincipalType>> principalType,
-        Output<String> resourceGroupName,
-        Output<Either<String,ClusterPrincipalRole>> role,
-        @Nullable Output<String> tenantId) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.principalAssignmentName = principalAssignmentName;
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.principalType = Objects.requireNonNull(principalType, "expected parameter 'principalType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.tenantId = tenantId;
-    }
+    private ClusterPrincipalAssignmentArgs() {}
 
-    private ClusterPrincipalAssignmentArgs() {
-        this.clusterName = Codegen.empty();
-        this.principalAssignmentName = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.principalType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.role = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private ClusterPrincipalAssignmentArgs(ClusterPrincipalAssignmentArgs $) {
+        this.clusterName = $.clusterName;
+        this.principalAssignmentName = $.principalAssignmentName;
+        this.principalId = $.principalId;
+        this.principalType = $.principalType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.role = $.role;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterPrincipalAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private @Nullable Output<String> principalAssignmentName;
-        private Output<String> principalId;
-        private Output<Either<String,PrincipalType>> principalType;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,ClusterPrincipalRole>> role;
-        private @Nullable Output<String> tenantId;
+        private ClusterPrincipalAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterPrincipalAssignmentArgs();
         }
 
         public Builder(ClusterPrincipalAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.principalAssignmentName = defaults.principalAssignmentName;
-    	      this.principalId = defaults.principalId;
-    	      this.principalType = defaults.principalType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.role = defaults.role;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ClusterPrincipalAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder principalAssignmentName(@Nullable Output<String> principalAssignmentName) {
-            this.principalAssignmentName = principalAssignmentName;
+            $.principalAssignmentName = principalAssignmentName;
             return this;
         }
-        public Builder principalAssignmentName(@Nullable String principalAssignmentName) {
-            this.principalAssignmentName = Codegen.ofNullable(principalAssignmentName);
-            return this;
+
+        public Builder principalAssignmentName(String principalAssignmentName) {
+            return principalAssignmentName(Output.of(principalAssignmentName));
         }
+
         public Builder principalId(Output<String> principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Output.of(Objects.requireNonNull(principalId));
-            return this;
+            return principalId(Output.of(principalId));
         }
+
         public Builder principalType(Output<Either<String,PrincipalType>> principalType) {
-            this.principalType = Objects.requireNonNull(principalType);
+            $.principalType = principalType;
             return this;
         }
+
         public Builder principalType(Either<String,PrincipalType> principalType) {
-            this.principalType = Output.of(Objects.requireNonNull(principalType));
-            return this;
+            return principalType(Output.of(principalType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder role(Output<Either<String,ClusterPrincipalRole>> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(Either<String,ClusterPrincipalRole> role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public ClusterPrincipalAssignmentArgs build() {
-            return new ClusterPrincipalAssignmentArgs(clusterName, principalAssignmentName, principalId, principalType, resourceGroupName, role, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public ClusterPrincipalAssignmentArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.principalType = Objects.requireNonNull($.principalType, "expected parameter 'principalType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

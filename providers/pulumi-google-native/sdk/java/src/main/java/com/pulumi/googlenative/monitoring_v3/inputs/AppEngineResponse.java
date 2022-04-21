@@ -21,45 +21,45 @@ public final class AppEngineResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="moduleId", required=true)
-      private final String moduleId;
+    private String moduleId;
 
     public String moduleId() {
         return this.moduleId;
     }
 
-    public AppEngineResponse(String moduleId) {
-        this.moduleId = Objects.requireNonNull(moduleId, "expected parameter 'moduleId' to be non-null");
-    }
+    private AppEngineResponse() {}
 
-    private AppEngineResponse() {
-        this.moduleId = null;
+    private AppEngineResponse(AppEngineResponse $) {
+        this.moduleId = $.moduleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String moduleId;
+        private AppEngineResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineResponse();
         }
 
         public Builder(AppEngineResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.moduleId = defaults.moduleId;
+            $ = new AppEngineResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder moduleId(String moduleId) {
-            this.moduleId = Objects.requireNonNull(moduleId);
+            $.moduleId = moduleId;
             return this;
-        }        public AppEngineResponse build() {
-            return new AppEngineResponse(moduleId);
+        }
+
+        public AppEngineResponse build() {
+            $.moduleId = Objects.requireNonNull($.moduleId, "expected parameter 'moduleId' to be non-null");
+            return $;
         }
     }
+
 }

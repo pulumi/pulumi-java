@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class PostProcessingStepResponse extends com.pulumi.resources.Invok
 
     public static final PostProcessingStepResponse Empty = new PostProcessingStepResponse();
 
-    public PostProcessingStepResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(PostProcessingStepResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private PostProcessingStepResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(PostProcessingStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new PostProcessingStepResponse();
         }
         public PostProcessingStepResponse build() {
-            return new PostProcessingStepResponse();
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GlusterFsSectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="serverAddress", required=true)
-      private final String serverAddress;
+    private String serverAddress;
 
     public String serverAddress() {
         return this.serverAddress;
@@ -32,55 +32,52 @@ public final class GlusterFsSectionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="volumeName", required=true)
-      private final String volumeName;
+    private String volumeName;
 
     public String volumeName() {
         return this.volumeName;
     }
 
-    public GlusterFsSectionResponse(
-        String serverAddress,
-        String volumeName) {
-        this.serverAddress = Objects.requireNonNull(serverAddress, "expected parameter 'serverAddress' to be non-null");
-        this.volumeName = Objects.requireNonNull(volumeName, "expected parameter 'volumeName' to be non-null");
-    }
+    private GlusterFsSectionResponse() {}
 
-    private GlusterFsSectionResponse() {
-        this.serverAddress = null;
-        this.volumeName = null;
+    private GlusterFsSectionResponse(GlusterFsSectionResponse $) {
+        this.serverAddress = $.serverAddress;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlusterFsSectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String serverAddress;
-        private String volumeName;
+        private GlusterFsSectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlusterFsSectionResponse();
         }
 
         public Builder(GlusterFsSectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverAddress = defaults.serverAddress;
-    	      this.volumeName = defaults.volumeName;
+            $ = new GlusterFsSectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder serverAddress(String serverAddress) {
-            this.serverAddress = Objects.requireNonNull(serverAddress);
+            $.serverAddress = serverAddress;
             return this;
         }
+
         public Builder volumeName(String volumeName) {
-            this.volumeName = Objects.requireNonNull(volumeName);
+            $.volumeName = volumeName;
             return this;
-        }        public GlusterFsSectionResponse build() {
-            return new GlusterFsSectionResponse(serverAddress, volumeName);
+        }
+
+        public GlusterFsSectionResponse build() {
+            $.serverAddress = Objects.requireNonNull($.serverAddress, "expected parameter 'serverAddress' to be non-null");
+            $.volumeName = Objects.requireNonNull($.volumeName, "expected parameter 'volumeName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repoSource", required=true)
-      private final RepoSourceResponse repoSource;
+    private RepoSourceResponse repoSource;
 
     public RepoSourceResponse repoSource() {
         return this.repoSource;
@@ -34,7 +34,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageSource", required=true)
-      private final StorageSourceResponse storageSource;
+    private StorageSourceResponse storageSource;
 
     public StorageSourceResponse storageSource() {
         return this.storageSource;
@@ -45,64 +45,59 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageSourceManifest", required=true)
-      private final StorageSourceManifestResponse storageSourceManifest;
+    private StorageSourceManifestResponse storageSourceManifest;
 
     public StorageSourceManifestResponse storageSourceManifest() {
         return this.storageSourceManifest;
     }
 
-    public SourceResponse(
-        RepoSourceResponse repoSource,
-        StorageSourceResponse storageSource,
-        StorageSourceManifestResponse storageSourceManifest) {
-        this.repoSource = Objects.requireNonNull(repoSource, "expected parameter 'repoSource' to be non-null");
-        this.storageSource = Objects.requireNonNull(storageSource, "expected parameter 'storageSource' to be non-null");
-        this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest, "expected parameter 'storageSourceManifest' to be non-null");
-    }
+    private SourceResponse() {}
 
-    private SourceResponse() {
-        this.repoSource = null;
-        this.storageSource = null;
-        this.storageSourceManifest = null;
+    private SourceResponse(SourceResponse $) {
+        this.repoSource = $.repoSource;
+        this.storageSource = $.storageSource;
+        this.storageSourceManifest = $.storageSourceManifest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RepoSourceResponse repoSource;
-        private StorageSourceResponse storageSource;
-        private StorageSourceManifestResponse storageSourceManifest;
+        private SourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceResponse();
         }
 
         public Builder(SourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repoSource = defaults.repoSource;
-    	      this.storageSource = defaults.storageSource;
-    	      this.storageSourceManifest = defaults.storageSourceManifest;
+            $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder repoSource(RepoSourceResponse repoSource) {
-            this.repoSource = Objects.requireNonNull(repoSource);
+            $.repoSource = repoSource;
             return this;
         }
+
         public Builder storageSource(StorageSourceResponse storageSource) {
-            this.storageSource = Objects.requireNonNull(storageSource);
+            $.storageSource = storageSource;
             return this;
         }
+
         public Builder storageSourceManifest(StorageSourceManifestResponse storageSourceManifest) {
-            this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest);
+            $.storageSourceManifest = storageSourceManifest;
             return this;
-        }        public SourceResponse build() {
-            return new SourceResponse(repoSource, storageSource, storageSourceManifest);
+        }
+
+        public SourceResponse build() {
+            $.repoSource = Objects.requireNonNull($.repoSource, "expected parameter 'repoSource' to be non-null");
+            $.storageSource = Objects.requireNonNull($.storageSource, "expected parameter 'storageSource' to be non-null");
+            $.storageSourceManifest = Objects.requireNonNull($.storageSourceManifest, "expected parameter 'storageSourceManifest' to be non-null");
+            return $;
         }
     }
+
 }

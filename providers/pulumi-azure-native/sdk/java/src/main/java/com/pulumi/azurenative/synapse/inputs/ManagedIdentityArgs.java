@@ -6,8 +6,8 @@ package com.pulumi.azurenative.synapse.inputs;
 import com.pulumi.azurenative.synapse.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ManagedIdentityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ResourceIdentityType> type;
+    private @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ResourceIdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ManagedIdentityArgs(@Nullable Output<ResourceIdentityType> type) {
-        this.type = type;
-    }
+    private ManagedIdentityArgs() {}
 
-    private ManagedIdentityArgs() {
-        this.type = Codegen.empty();
+    private ManagedIdentityArgs(ManagedIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdentityType> type;
+        private ManagedIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIdentityArgs();
         }
 
         public Builder(ManagedIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ManagedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ManagedIdentityArgs build() {
-            return new ManagedIdentityArgs(type);
+
+        public Builder type(ResourceIdentityType type) {
+            return type(Output.of(type));
+        }
+
+        public ManagedIdentityArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class WebAclRuleStatementOrStatementArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="statements", required=true)
-      private final Output<List<WebAclRuleStatementOrStatementStatementArgs>> statements;
+    private Output<List<WebAclRuleStatementOrStatementStatementArgs>> statements;
 
     public Output<List<WebAclRuleStatementOrStatementStatementArgs>> statements() {
         return this.statements;
     }
 
-    public WebAclRuleStatementOrStatementArgs(Output<List<WebAclRuleStatementOrStatementStatementArgs>> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private WebAclRuleStatementOrStatementArgs() {}
 
-    private WebAclRuleStatementOrStatementArgs() {
-        this.statements = Codegen.empty();
+    private WebAclRuleStatementOrStatementArgs(WebAclRuleStatementOrStatementArgs $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementOrStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<WebAclRuleStatementOrStatementStatementArgs>> statements;
+        private WebAclRuleStatementOrStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementOrStatementArgs();
         }
 
         public Builder(WebAclRuleStatementOrStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new WebAclRuleStatementOrStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(Output<List<WebAclRuleStatementOrStatementStatementArgs>> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(List<WebAclRuleStatementOrStatementStatementArgs> statements) {
-            this.statements = Output.of(Objects.requireNonNull(statements));
-            return this;
+            return statements(Output.of(statements));
         }
+
         public Builder statements(WebAclRuleStatementOrStatementStatementArgs... statements) {
             return statements(List.of(statements));
-        }        public WebAclRuleStatementOrStatementArgs build() {
-            return new WebAclRuleStatementOrStatementArgs(statements);
+        }
+
+        public WebAclRuleStatementOrStatementArgs build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

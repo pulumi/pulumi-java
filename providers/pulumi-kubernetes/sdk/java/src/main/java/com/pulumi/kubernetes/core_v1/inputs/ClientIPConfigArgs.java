@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ClientIPConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Output<Integer> timeoutSeconds;
+    private @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
+    public Optional<Output<Integer>> timeoutSeconds() {
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
-    public ClientIPConfigArgs(@Nullable Output<Integer> timeoutSeconds) {
-        this.timeoutSeconds = timeoutSeconds;
-    }
+    private ClientIPConfigArgs() {}
 
-    private ClientIPConfigArgs() {
-        this.timeoutSeconds = Codegen.empty();
+    private ClientIPConfigArgs(ClientIPConfigArgs $) {
+        this.timeoutSeconds = $.timeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientIPConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> timeoutSeconds;
+        private ClientIPConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientIPConfigArgs();
         }
 
         public Builder(ClientIPConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
+            $ = new ClientIPConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
-        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
-            return this;
-        }        public ClientIPConfigArgs build() {
-            return new ClientIPConfigArgs(timeoutSeconds);
+
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
+            return timeoutSeconds(Output.of(timeoutSeconds));
+        }
+
+        public ClientIPConfigArgs build() {
+            return $;
         }
     }
+
 }

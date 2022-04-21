@@ -6,7 +6,6 @@ package com.pulumi.azurenative.providerhub;
 import com.pulumi.azurenative.providerhub.inputs.OperationsDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +16,7 @@ public final class OperationByProviderRegistrationArgs extends com.pulumi.resour
     public static final OperationByProviderRegistrationArgs Empty = new OperationByProviderRegistrationArgs();
 
     @Import(name="contents", required=true)
-      private final Output<List<OperationsDefinitionArgs>> contents;
+    private Output<List<OperationsDefinitionArgs>> contents;
 
     public Output<List<OperationsDefinitionArgs>> contents() {
         return this.contents;
@@ -28,66 +27,64 @@ public final class OperationByProviderRegistrationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="providerNamespace", required=true)
-      private final Output<String> providerNamespace;
+    private Output<String> providerNamespace;
 
     public Output<String> providerNamespace() {
         return this.providerNamespace;
     }
 
-    public OperationByProviderRegistrationArgs(
-        Output<List<OperationsDefinitionArgs>> contents,
-        Output<String> providerNamespace) {
-        this.contents = Objects.requireNonNull(contents, "expected parameter 'contents' to be non-null");
-        this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
-    }
+    private OperationByProviderRegistrationArgs() {}
 
-    private OperationByProviderRegistrationArgs() {
-        this.contents = Codegen.empty();
-        this.providerNamespace = Codegen.empty();
+    private OperationByProviderRegistrationArgs(OperationByProviderRegistrationArgs $) {
+        this.contents = $.contents;
+        this.providerNamespace = $.providerNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OperationByProviderRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<OperationsDefinitionArgs>> contents;
-        private Output<String> providerNamespace;
+        private OperationByProviderRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OperationByProviderRegistrationArgs();
         }
 
         public Builder(OperationByProviderRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contents = defaults.contents;
-    	      this.providerNamespace = defaults.providerNamespace;
+            $ = new OperationByProviderRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contents(Output<List<OperationsDefinitionArgs>> contents) {
-            this.contents = Objects.requireNonNull(contents);
+            $.contents = contents;
             return this;
         }
+
         public Builder contents(List<OperationsDefinitionArgs> contents) {
-            this.contents = Output.of(Objects.requireNonNull(contents));
-            return this;
+            return contents(Output.of(contents));
         }
+
         public Builder contents(OperationsDefinitionArgs... contents) {
             return contents(List.of(contents));
         }
+
         public Builder providerNamespace(Output<String> providerNamespace) {
-            this.providerNamespace = Objects.requireNonNull(providerNamespace);
+            $.providerNamespace = providerNamespace;
             return this;
         }
+
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
-            return this;
-        }        public OperationByProviderRegistrationArgs build() {
-            return new OperationByProviderRegistrationArgs(contents, providerNamespace);
+            return providerNamespace(Output.of(providerNamespace));
+        }
+
+        public OperationByProviderRegistrationArgs build() {
+            $.contents = Objects.requireNonNull($.contents, "expected parameter 'contents' to be non-null");
+            $.providerNamespace = Objects.requireNonNull($.providerNamespace, "expected parameter 'providerNamespace' to be non-null");
+            return $;
         }
     }
+
 }

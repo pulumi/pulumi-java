@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ivs;
 import com.pulumi.awsnative.ivs.inputs.StreamKeyTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class StreamKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="channelArn", required=true)
-      private final Output<String> channelArn;
+    private Output<String> channelArn;
 
     public Output<String> channelArn() {
         return this.channelArn;
@@ -33,66 +33,63 @@ public final class StreamKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<StreamKeyTagArgs>> tags;
+    private @Nullable Output<List<StreamKeyTagArgs>> tags;
 
-    public Output<List<StreamKeyTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<StreamKeyTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public StreamKeyArgs(
-        Output<String> channelArn,
-        @Nullable Output<List<StreamKeyTagArgs>> tags) {
-        this.channelArn = Objects.requireNonNull(channelArn, "expected parameter 'channelArn' to be non-null");
-        this.tags = tags;
-    }
+    private StreamKeyArgs() {}
 
-    private StreamKeyArgs() {
-        this.channelArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private StreamKeyArgs(StreamKeyArgs $) {
+        this.channelArn = $.channelArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> channelArn;
-        private @Nullable Output<List<StreamKeyTagArgs>> tags;
+        private StreamKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamKeyArgs();
         }
 
         public Builder(StreamKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelArn = defaults.channelArn;
-    	      this.tags = defaults.tags;
+            $ = new StreamKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelArn(Output<String> channelArn) {
-            this.channelArn = Objects.requireNonNull(channelArn);
+            $.channelArn = channelArn;
             return this;
         }
+
         public Builder channelArn(String channelArn) {
-            this.channelArn = Output.of(Objects.requireNonNull(channelArn));
-            return this;
+            return channelArn(Output.of(channelArn));
         }
+
         public Builder tags(@Nullable Output<List<StreamKeyTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<StreamKeyTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<StreamKeyTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(StreamKeyTagArgs... tags) {
             return tags(List.of(tags));
-        }        public StreamKeyArgs build() {
-            return new StreamKeyArgs(channelArn, tags);
+        }
+
+        public StreamKeyArgs build() {
+            $.channelArn = Objects.requireNonNull($.channelArn, "expected parameter 'channelArn' to be non-null");
+            return $;
         }
     }
+
 }

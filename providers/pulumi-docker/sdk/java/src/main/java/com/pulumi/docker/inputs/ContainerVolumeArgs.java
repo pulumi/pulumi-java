@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,130 +17,116 @@ public final class ContainerVolumeArgs extends com.pulumi.resources.ResourceArgs
     public static final ContainerVolumeArgs Empty = new ContainerVolumeArgs();
 
     @Import(name="containerPath")
-      private final @Nullable Output<String> containerPath;
+    private @Nullable Output<String> containerPath;
 
-    public Output<String> containerPath() {
-        return this.containerPath == null ? Codegen.empty() : this.containerPath;
+    public Optional<Output<String>> containerPath() {
+        return Optional.ofNullable(this.containerPath);
     }
 
     @Import(name="fromContainer")
-      private final @Nullable Output<String> fromContainer;
+    private @Nullable Output<String> fromContainer;
 
-    public Output<String> fromContainer() {
-        return this.fromContainer == null ? Codegen.empty() : this.fromContainer;
+    public Optional<Output<String>> fromContainer() {
+        return Optional.ofNullable(this.fromContainer);
     }
 
     @Import(name="hostPath")
-      private final @Nullable Output<String> hostPath;
+    private @Nullable Output<String> hostPath;
 
-    public Output<String> hostPath() {
-        return this.hostPath == null ? Codegen.empty() : this.hostPath;
+    public Optional<Output<String>> hostPath() {
+        return Optional.ofNullable(this.hostPath);
     }
 
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     @Import(name="volumeName")
-      private final @Nullable Output<String> volumeName;
+    private @Nullable Output<String> volumeName;
 
-    public Output<String> volumeName() {
-        return this.volumeName == null ? Codegen.empty() : this.volumeName;
+    public Optional<Output<String>> volumeName() {
+        return Optional.ofNullable(this.volumeName);
     }
 
-    public ContainerVolumeArgs(
-        @Nullable Output<String> containerPath,
-        @Nullable Output<String> fromContainer,
-        @Nullable Output<String> hostPath,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<String> volumeName) {
-        this.containerPath = containerPath;
-        this.fromContainer = fromContainer;
-        this.hostPath = hostPath;
-        this.readOnly = readOnly;
-        this.volumeName = volumeName;
-    }
+    private ContainerVolumeArgs() {}
 
-    private ContainerVolumeArgs() {
-        this.containerPath = Codegen.empty();
-        this.fromContainer = Codegen.empty();
-        this.hostPath = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.volumeName = Codegen.empty();
+    private ContainerVolumeArgs(ContainerVolumeArgs $) {
+        this.containerPath = $.containerPath;
+        this.fromContainer = $.fromContainer;
+        this.hostPath = $.hostPath;
+        this.readOnly = $.readOnly;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerPath;
-        private @Nullable Output<String> fromContainer;
-        private @Nullable Output<String> hostPath;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<String> volumeName;
+        private ContainerVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerVolumeArgs();
         }
 
         public Builder(ContainerVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPath = defaults.containerPath;
-    	      this.fromContainer = defaults.fromContainer;
-    	      this.hostPath = defaults.hostPath;
-    	      this.readOnly = defaults.readOnly;
-    	      this.volumeName = defaults.volumeName;
+            $ = new ContainerVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPath(@Nullable Output<String> containerPath) {
-            this.containerPath = containerPath;
+            $.containerPath = containerPath;
             return this;
         }
-        public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Codegen.ofNullable(containerPath);
-            return this;
+
+        public Builder containerPath(String containerPath) {
+            return containerPath(Output.of(containerPath));
         }
+
         public Builder fromContainer(@Nullable Output<String> fromContainer) {
-            this.fromContainer = fromContainer;
+            $.fromContainer = fromContainer;
             return this;
         }
-        public Builder fromContainer(@Nullable String fromContainer) {
-            this.fromContainer = Codegen.ofNullable(fromContainer);
-            return this;
+
+        public Builder fromContainer(String fromContainer) {
+            return fromContainer(Output.of(fromContainer));
         }
+
         public Builder hostPath(@Nullable Output<String> hostPath) {
-            this.hostPath = hostPath;
+            $.hostPath = hostPath;
             return this;
         }
-        public Builder hostPath(@Nullable String hostPath) {
-            this.hostPath = Codegen.ofNullable(hostPath);
-            return this;
+
+        public Builder hostPath(String hostPath) {
+            return hostPath(Output.of(hostPath));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder volumeName(@Nullable Output<String> volumeName) {
-            this.volumeName = volumeName;
+            $.volumeName = volumeName;
             return this;
         }
-        public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Codegen.ofNullable(volumeName);
-            return this;
-        }        public ContainerVolumeArgs build() {
-            return new ContainerVolumeArgs(containerPath, fromContainer, hostPath, readOnly, volumeName);
+
+        public Builder volumeName(String volumeName) {
+            return volumeName(Output.of(volumeName));
+        }
+
+        public ContainerVolumeArgs build() {
+            return $;
         }
     }
+
 }

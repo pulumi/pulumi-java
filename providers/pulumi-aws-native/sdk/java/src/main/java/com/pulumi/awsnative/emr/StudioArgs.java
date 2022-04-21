@@ -7,10 +7,10 @@ import com.pulumi.awsnative.emr.enums.StudioAuthMode;
 import com.pulumi.awsnative.emr.inputs.StudioTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authMode", required=true)
-      private final Output<StudioAuthMode> authMode;
+    private Output<StudioAuthMode> authMode;
 
     public Output<StudioAuthMode> authMode() {
         return this.authMode;
@@ -34,7 +34,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultS3Location", required=true)
-      private final Output<String> defaultS3Location;
+    private Output<String> defaultS3Location;
 
     public Output<String> defaultS3Location() {
         return this.defaultS3Location;
@@ -45,10 +45,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engineSecurityGroupId", required=true)
-      private final Output<String> engineSecurityGroupId;
+    private Output<String> engineSecurityGroupId;
 
     public Output<String> engineSecurityGroupId() {
         return this.engineSecurityGroupId;
@@ -67,10 +67,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="idpAuthUrl")
-      private final @Nullable Output<String> idpAuthUrl;
+    private @Nullable Output<String> idpAuthUrl;
 
-    public Output<String> idpAuthUrl() {
-        return this.idpAuthUrl == null ? Codegen.empty() : this.idpAuthUrl;
+    public Optional<Output<String>> idpAuthUrl() {
+        return Optional.ofNullable(this.idpAuthUrl);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="idpRelayStateParameterName")
-      private final @Nullable Output<String> idpRelayStateParameterName;
+    private @Nullable Output<String> idpRelayStateParameterName;
 
-    public Output<String> idpRelayStateParameterName() {
-        return this.idpRelayStateParameterName == null ? Codegen.empty() : this.idpRelayStateParameterName;
+    public Optional<Output<String>> idpRelayStateParameterName() {
+        return Optional.ofNullable(this.idpRelayStateParameterName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRole", required=true)
-      private final Output<String> serviceRole;
+    private Output<String> serviceRole;
 
     public Output<String> serviceRole() {
         return this.serviceRole;
@@ -111,7 +111,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
@@ -122,10 +122,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<StudioTagArgs>> tags;
+    private @Nullable Output<List<StudioTagArgs>> tags;
 
-    public Output<List<StudioTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<StudioTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userRole")
-      private final @Nullable Output<String> userRole;
+    private @Nullable Output<String> userRole;
 
-    public Output<String> userRole() {
-        return this.userRole == null ? Codegen.empty() : this.userRole;
+    public Optional<Output<String>> userRole() {
+        return Optional.ofNullable(this.userRole);
     }
 
     /**
@@ -144,7 +144,7 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
@@ -155,212 +155,183 @@ public final class StudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceSecurityGroupId", required=true)
-      private final Output<String> workspaceSecurityGroupId;
+    private Output<String> workspaceSecurityGroupId;
 
     public Output<String> workspaceSecurityGroupId() {
         return this.workspaceSecurityGroupId;
     }
 
-    public StudioArgs(
-        Output<StudioAuthMode> authMode,
-        Output<String> defaultS3Location,
-        @Nullable Output<String> description,
-        Output<String> engineSecurityGroupId,
-        @Nullable Output<String> idpAuthUrl,
-        @Nullable Output<String> idpRelayStateParameterName,
-        @Nullable Output<String> name,
-        Output<String> serviceRole,
-        Output<List<String>> subnetIds,
-        @Nullable Output<List<StudioTagArgs>> tags,
-        @Nullable Output<String> userRole,
-        Output<String> vpcId,
-        Output<String> workspaceSecurityGroupId) {
-        this.authMode = Objects.requireNonNull(authMode, "expected parameter 'authMode' to be non-null");
-        this.defaultS3Location = Objects.requireNonNull(defaultS3Location, "expected parameter 'defaultS3Location' to be non-null");
-        this.description = description;
-        this.engineSecurityGroupId = Objects.requireNonNull(engineSecurityGroupId, "expected parameter 'engineSecurityGroupId' to be non-null");
-        this.idpAuthUrl = idpAuthUrl;
-        this.idpRelayStateParameterName = idpRelayStateParameterName;
-        this.name = name;
-        this.serviceRole = Objects.requireNonNull(serviceRole, "expected parameter 'serviceRole' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.tags = tags;
-        this.userRole = userRole;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-        this.workspaceSecurityGroupId = Objects.requireNonNull(workspaceSecurityGroupId, "expected parameter 'workspaceSecurityGroupId' to be non-null");
-    }
+    private StudioArgs() {}
 
-    private StudioArgs() {
-        this.authMode = Codegen.empty();
-        this.defaultS3Location = Codegen.empty();
-        this.description = Codegen.empty();
-        this.engineSecurityGroupId = Codegen.empty();
-        this.idpAuthUrl = Codegen.empty();
-        this.idpRelayStateParameterName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.serviceRole = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userRole = Codegen.empty();
-        this.vpcId = Codegen.empty();
-        this.workspaceSecurityGroupId = Codegen.empty();
+    private StudioArgs(StudioArgs $) {
+        this.authMode = $.authMode;
+        this.defaultS3Location = $.defaultS3Location;
+        this.description = $.description;
+        this.engineSecurityGroupId = $.engineSecurityGroupId;
+        this.idpAuthUrl = $.idpAuthUrl;
+        this.idpRelayStateParameterName = $.idpRelayStateParameterName;
+        this.name = $.name;
+        this.serviceRole = $.serviceRole;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.userRole = $.userRole;
+        this.vpcId = $.vpcId;
+        this.workspaceSecurityGroupId = $.workspaceSecurityGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<StudioAuthMode> authMode;
-        private Output<String> defaultS3Location;
-        private @Nullable Output<String> description;
-        private Output<String> engineSecurityGroupId;
-        private @Nullable Output<String> idpAuthUrl;
-        private @Nullable Output<String> idpRelayStateParameterName;
-        private @Nullable Output<String> name;
-        private Output<String> serviceRole;
-        private Output<List<String>> subnetIds;
-        private @Nullable Output<List<StudioTagArgs>> tags;
-        private @Nullable Output<String> userRole;
-        private Output<String> vpcId;
-        private Output<String> workspaceSecurityGroupId;
+        private StudioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioArgs();
         }
 
         public Builder(StudioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authMode = defaults.authMode;
-    	      this.defaultS3Location = defaults.defaultS3Location;
-    	      this.description = defaults.description;
-    	      this.engineSecurityGroupId = defaults.engineSecurityGroupId;
-    	      this.idpAuthUrl = defaults.idpAuthUrl;
-    	      this.idpRelayStateParameterName = defaults.idpRelayStateParameterName;
-    	      this.name = defaults.name;
-    	      this.serviceRole = defaults.serviceRole;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.userRole = defaults.userRole;
-    	      this.vpcId = defaults.vpcId;
-    	      this.workspaceSecurityGroupId = defaults.workspaceSecurityGroupId;
+            $ = new StudioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authMode(Output<StudioAuthMode> authMode) {
-            this.authMode = Objects.requireNonNull(authMode);
+            $.authMode = authMode;
             return this;
         }
+
         public Builder authMode(StudioAuthMode authMode) {
-            this.authMode = Output.of(Objects.requireNonNull(authMode));
-            return this;
+            return authMode(Output.of(authMode));
         }
+
         public Builder defaultS3Location(Output<String> defaultS3Location) {
-            this.defaultS3Location = Objects.requireNonNull(defaultS3Location);
+            $.defaultS3Location = defaultS3Location;
             return this;
         }
+
         public Builder defaultS3Location(String defaultS3Location) {
-            this.defaultS3Location = Output.of(Objects.requireNonNull(defaultS3Location));
-            return this;
+            return defaultS3Location(Output.of(defaultS3Location));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder engineSecurityGroupId(Output<String> engineSecurityGroupId) {
-            this.engineSecurityGroupId = Objects.requireNonNull(engineSecurityGroupId);
+            $.engineSecurityGroupId = engineSecurityGroupId;
             return this;
         }
+
         public Builder engineSecurityGroupId(String engineSecurityGroupId) {
-            this.engineSecurityGroupId = Output.of(Objects.requireNonNull(engineSecurityGroupId));
-            return this;
+            return engineSecurityGroupId(Output.of(engineSecurityGroupId));
         }
+
         public Builder idpAuthUrl(@Nullable Output<String> idpAuthUrl) {
-            this.idpAuthUrl = idpAuthUrl;
+            $.idpAuthUrl = idpAuthUrl;
             return this;
         }
-        public Builder idpAuthUrl(@Nullable String idpAuthUrl) {
-            this.idpAuthUrl = Codegen.ofNullable(idpAuthUrl);
-            return this;
+
+        public Builder idpAuthUrl(String idpAuthUrl) {
+            return idpAuthUrl(Output.of(idpAuthUrl));
         }
+
         public Builder idpRelayStateParameterName(@Nullable Output<String> idpRelayStateParameterName) {
-            this.idpRelayStateParameterName = idpRelayStateParameterName;
+            $.idpRelayStateParameterName = idpRelayStateParameterName;
             return this;
         }
-        public Builder idpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
-            this.idpRelayStateParameterName = Codegen.ofNullable(idpRelayStateParameterName);
-            return this;
+
+        public Builder idpRelayStateParameterName(String idpRelayStateParameterName) {
+            return idpRelayStateParameterName(Output.of(idpRelayStateParameterName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder serviceRole(Output<String> serviceRole) {
-            this.serviceRole = Objects.requireNonNull(serviceRole);
+            $.serviceRole = serviceRole;
             return this;
         }
+
         public Builder serviceRole(String serviceRole) {
-            this.serviceRole = Output.of(Objects.requireNonNull(serviceRole));
-            return this;
+            return serviceRole(Output.of(serviceRole));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<List<StudioTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<StudioTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<StudioTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(StudioTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder userRole(@Nullable Output<String> userRole) {
-            this.userRole = userRole;
+            $.userRole = userRole;
             return this;
         }
-        public Builder userRole(@Nullable String userRole) {
-            this.userRole = Codegen.ofNullable(userRole);
-            return this;
+
+        public Builder userRole(String userRole) {
+            return userRole(Output.of(userRole));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
+            return vpcId(Output.of(vpcId));
         }
+
         public Builder workspaceSecurityGroupId(Output<String> workspaceSecurityGroupId) {
-            this.workspaceSecurityGroupId = Objects.requireNonNull(workspaceSecurityGroupId);
+            $.workspaceSecurityGroupId = workspaceSecurityGroupId;
             return this;
         }
+
         public Builder workspaceSecurityGroupId(String workspaceSecurityGroupId) {
-            this.workspaceSecurityGroupId = Output.of(Objects.requireNonNull(workspaceSecurityGroupId));
-            return this;
-        }        public StudioArgs build() {
-            return new StudioArgs(authMode, defaultS3Location, description, engineSecurityGroupId, idpAuthUrl, idpRelayStateParameterName, name, serviceRole, subnetIds, tags, userRole, vpcId, workspaceSecurityGroupId);
+            return workspaceSecurityGroupId(Output.of(workspaceSecurityGroupId));
+        }
+
+        public StudioArgs build() {
+            $.authMode = Objects.requireNonNull($.authMode, "expected parameter 'authMode' to be non-null");
+            $.defaultS3Location = Objects.requireNonNull($.defaultS3Location, "expected parameter 'defaultS3Location' to be non-null");
+            $.engineSecurityGroupId = Objects.requireNonNull($.engineSecurityGroupId, "expected parameter 'engineSecurityGroupId' to be non-null");
+            $.serviceRole = Objects.requireNonNull($.serviceRole, "expected parameter 'serviceRole' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            $.workspaceSecurityGroupId = Objects.requireNonNull($.workspaceSecurityGroupId, "expected parameter 'workspaceSecurityGroupId' to be non-null");
+            return $;
         }
     }
+
 }

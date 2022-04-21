@@ -13,62 +13,59 @@ public final class DeliveryStreamProcessorParameter extends com.pulumi.resources
     public static final DeliveryStreamProcessorParameter Empty = new DeliveryStreamProcessorParameter();
 
     @Import(name="parameterName", required=true)
-      private final String parameterName;
+    private String parameterName;
 
     public String parameterName() {
         return this.parameterName;
     }
 
     @Import(name="parameterValue", required=true)
-      private final String parameterValue;
+    private String parameterValue;
 
     public String parameterValue() {
         return this.parameterValue;
     }
 
-    public DeliveryStreamProcessorParameter(
-        String parameterName,
-        String parameterValue) {
-        this.parameterName = Objects.requireNonNull(parameterName, "expected parameter 'parameterName' to be non-null");
-        this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
-    }
+    private DeliveryStreamProcessorParameter() {}
 
-    private DeliveryStreamProcessorParameter() {
-        this.parameterName = null;
-        this.parameterValue = null;
+    private DeliveryStreamProcessorParameter(DeliveryStreamProcessorParameter $) {
+        this.parameterName = $.parameterName;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamProcessorParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parameterName;
-        private String parameterValue;
+        private DeliveryStreamProcessorParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamProcessorParameter();
         }
 
         public Builder(DeliveryStreamProcessorParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterName = defaults.parameterName;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new DeliveryStreamProcessorParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterName(String parameterName) {
-            this.parameterName = Objects.requireNonNull(parameterName);
+            $.parameterName = parameterName;
             return this;
         }
+
         public Builder parameterValue(String parameterValue) {
-            this.parameterValue = Objects.requireNonNull(parameterValue);
+            $.parameterValue = parameterValue;
             return this;
-        }        public DeliveryStreamProcessorParameter build() {
-            return new DeliveryStreamProcessorParameter(parameterName, parameterValue);
+        }
+
+        public DeliveryStreamProcessorParameter build() {
+            $.parameterName = Objects.requireNonNull($.parameterName, "expected parameter 'parameterName' to be non-null");
+            $.parameterValue = Objects.requireNonNull($.parameterValue, "expected parameter 'parameterValue' to be non-null");
+            return $;
         }
     }
+
 }

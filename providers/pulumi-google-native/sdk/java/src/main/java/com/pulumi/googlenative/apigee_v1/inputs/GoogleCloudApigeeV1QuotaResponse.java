@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1QuotaResponse extends com.pulumi.resources
      * 
      */
     @Import(name="interval", required=true)
-      private final String interval;
+    private String interval;
 
     public String interval() {
         return this.interval;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1QuotaResponse extends com.pulumi.resources
      * 
      */
     @Import(name="limit", required=true)
-      private final String limit;
+    private String limit;
 
     public String limit() {
         return this.limit;
@@ -43,64 +43,59 @@ public final class GoogleCloudApigeeV1QuotaResponse extends com.pulumi.resources
      * 
      */
     @Import(name="timeUnit", required=true)
-      private final String timeUnit;
+    private String timeUnit;
 
     public String timeUnit() {
         return this.timeUnit;
     }
 
-    public GoogleCloudApigeeV1QuotaResponse(
-        String interval,
-        String limit,
-        String timeUnit) {
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.limit = Objects.requireNonNull(limit, "expected parameter 'limit' to be non-null");
-        this.timeUnit = Objects.requireNonNull(timeUnit, "expected parameter 'timeUnit' to be non-null");
-    }
+    private GoogleCloudApigeeV1QuotaResponse() {}
 
-    private GoogleCloudApigeeV1QuotaResponse() {
-        this.interval = null;
-        this.limit = null;
-        this.timeUnit = null;
+    private GoogleCloudApigeeV1QuotaResponse(GoogleCloudApigeeV1QuotaResponse $) {
+        this.interval = $.interval;
+        this.limit = $.limit;
+        this.timeUnit = $.timeUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1QuotaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String interval;
-        private String limit;
-        private String timeUnit;
+        private GoogleCloudApigeeV1QuotaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1QuotaResponse();
         }
 
         public Builder(GoogleCloudApigeeV1QuotaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interval = defaults.interval;
-    	      this.limit = defaults.limit;
-    	      this.timeUnit = defaults.timeUnit;
+            $ = new GoogleCloudApigeeV1QuotaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder interval(String interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder limit(String limit) {
-            this.limit = Objects.requireNonNull(limit);
+            $.limit = limit;
             return this;
         }
+
         public Builder timeUnit(String timeUnit) {
-            this.timeUnit = Objects.requireNonNull(timeUnit);
+            $.timeUnit = timeUnit;
             return this;
-        }        public GoogleCloudApigeeV1QuotaResponse build() {
-            return new GoogleCloudApigeeV1QuotaResponse(interval, limit, timeUnit);
+        }
+
+        public GoogleCloudApigeeV1QuotaResponse build() {
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.limit = Objects.requireNonNull($.limit, "expected parameter 'limit' to be non-null");
+            $.timeUnit = Objects.requireNonNull($.timeUnit, "expected parameter 'timeUnit' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,68 +16,65 @@ public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin ext
     public static final ResourceTypeExtensionOptionsResponseResourceCreationBegin Empty = new ResourceTypeExtensionOptionsResponseResourceCreationBegin();
 
     @Import(name="request")
-      private final @Nullable List<String> request;
+    private @Nullable List<String> request;
 
-    public List<String> request() {
-        return this.request == null ? List.of() : this.request;
+    public Optional<List<String>> request() {
+        return Optional.ofNullable(this.request);
     }
 
     @Import(name="response")
-      private final @Nullable List<String> response;
+    private @Nullable List<String> response;
 
-    public List<String> response() {
-        return this.response == null ? List.of() : this.response;
+    public Optional<List<String>> response() {
+        return Optional.ofNullable(this.response);
     }
 
-    public ResourceTypeExtensionOptionsResponseResourceCreationBegin(
-        @Nullable List<String> request,
-        @Nullable List<String> response) {
-        this.request = request;
-        this.response = response;
-    }
+    private ResourceTypeExtensionOptionsResponseResourceCreationBegin() {}
 
-    private ResourceTypeExtensionOptionsResponseResourceCreationBegin() {
-        this.request = List.of();
-        this.response = List.of();
+    private ResourceTypeExtensionOptionsResponseResourceCreationBegin(ResourceTypeExtensionOptionsResponseResourceCreationBegin $) {
+        this.request = $.request;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeExtensionOptionsResponseResourceCreationBegin defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> request;
-        private @Nullable List<String> response;
+        private ResourceTypeExtensionOptionsResponseResourceCreationBegin $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeExtensionOptionsResponseResourceCreationBegin();
         }
 
         public Builder(ResourceTypeExtensionOptionsResponseResourceCreationBegin defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.request = defaults.request;
-    	      this.response = defaults.response;
+            $ = new ResourceTypeExtensionOptionsResponseResourceCreationBegin(Objects.requireNonNull(defaults));
         }
 
         public Builder request(@Nullable List<String> request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
+
         public Builder request(String... request) {
             return request(List.of(request));
         }
+
         public Builder response(@Nullable List<String> response) {
-            this.response = response;
+            $.response = response;
             return this;
         }
+
         public Builder response(String... response) {
             return response(List.of(response));
-        }        public ResourceTypeExtensionOptionsResponseResourceCreationBegin build() {
-            return new ResourceTypeExtensionOptionsResponseResourceCreationBegin(request, response);
+        }
+
+        public ResourceTypeExtensionOptionsResponseResourceCreationBegin build() {
+            return $;
         }
     }
+
 }

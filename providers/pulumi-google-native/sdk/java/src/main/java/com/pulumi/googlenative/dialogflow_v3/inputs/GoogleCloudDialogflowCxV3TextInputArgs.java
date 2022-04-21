@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowCxV3TextInputArgs extends com.pulumi.res
      * 
      */
     @Import(name="text", required=true)
-      private final Output<String> text;
+    private Output<String> text;
 
     public Output<String> text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3TextInputArgs(Output<String> text) {
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3TextInputArgs() {}
 
-    private GoogleCloudDialogflowCxV3TextInputArgs() {
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowCxV3TextInputArgs(GoogleCloudDialogflowCxV3TextInputArgs $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3TextInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> text;
+        private GoogleCloudDialogflowCxV3TextInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3TextInputArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3TextInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowCxV3TextInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder text(Output<String> text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Output.of(Objects.requireNonNull(text));
-            return this;
-        }        public GoogleCloudDialogflowCxV3TextInputArgs build() {
-            return new GoogleCloudDialogflowCxV3TextInputArgs(text);
+            return text(Output.of(text));
+        }
+
+        public GoogleCloudDialogflowCxV3TextInputArgs build() {
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

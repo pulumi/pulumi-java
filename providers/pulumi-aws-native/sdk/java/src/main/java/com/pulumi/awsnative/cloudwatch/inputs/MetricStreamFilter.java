@@ -21,45 +21,45 @@ public final class MetricStreamFilter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
     }
 
-    public MetricStreamFilter(String namespace) {
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private MetricStreamFilter() {}
 
-    private MetricStreamFilter() {
-        this.namespace = null;
+    private MetricStreamFilter(MetricStreamFilter $) {
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricStreamFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespace;
+        private MetricStreamFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricStreamFilter();
         }
 
         public Builder(MetricStreamFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
+            $ = new MetricStreamFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
-        }        public MetricStreamFilter build() {
-            return new MetricStreamFilter(namespace);
+        }
+
+        public MetricStreamFilter build() {
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

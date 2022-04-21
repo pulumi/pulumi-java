@@ -7,10 +7,10 @@ import com.pulumi.aws.worklink.inputs.FleetIdentityProviderGetArgs;
 import com.pulumi.aws.worklink.inputs.FleetNetworkGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auditStreamArn")
-      private final @Nullable Output<String> auditStreamArn;
+    private @Nullable Output<String> auditStreamArn;
 
-    public Output<String> auditStreamArn() {
-        return this.auditStreamArn == null ? Codegen.empty() : this.auditStreamArn;
+    public Optional<Output<String>> auditStreamArn() {
+        return Optional.ofNullable(this.auditStreamArn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="companyCode")
-      private final @Nullable Output<String> companyCode;
+    private @Nullable Output<String> companyCode;
 
-    public Output<String> companyCode() {
-        return this.companyCode == null ? Codegen.empty() : this.companyCode;
+    public Optional<Output<String>> companyCode() {
+        return Optional.ofNullable(this.companyCode);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceCaCertificate")
-      private final @Nullable Output<String> deviceCaCertificate;
+    private @Nullable Output<String> deviceCaCertificate;
 
-    public Output<String> deviceCaCertificate() {
-        return this.deviceCaCertificate == null ? Codegen.empty() : this.deviceCaCertificate;
+    public Optional<Output<String>> deviceCaCertificate() {
+        return Optional.ofNullable(this.deviceCaCertificate);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityProvider")
-      private final @Nullable Output<FleetIdentityProviderGetArgs> identityProvider;
+    private @Nullable Output<FleetIdentityProviderGetArgs> identityProvider;
 
-    public Output<FleetIdentityProviderGetArgs> identityProvider() {
-        return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
+    public Optional<Output<FleetIdentityProviderGetArgs>> identityProvider() {
+        return Optional.ofNullable(this.identityProvider);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable Output<String> lastUpdatedTime;
+    private @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
+    public Optional<Output<String>> lastUpdatedTime() {
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<FleetNetworkGetArgs> network;
+    private @Nullable Output<FleetNetworkGetArgs> network;
 
-    public Output<FleetNetworkGetArgs> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<FleetNetworkGetArgs>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -133,180 +133,148 @@ public final class FleetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="optimizeForEndUserLocation")
-      private final @Nullable Output<Boolean> optimizeForEndUserLocation;
+    private @Nullable Output<Boolean> optimizeForEndUserLocation;
 
-    public Output<Boolean> optimizeForEndUserLocation() {
-        return this.optimizeForEndUserLocation == null ? Codegen.empty() : this.optimizeForEndUserLocation;
+    public Optional<Output<Boolean>> optimizeForEndUserLocation() {
+        return Optional.ofNullable(this.optimizeForEndUserLocation);
     }
 
-    public FleetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> auditStreamArn,
-        @Nullable Output<String> companyCode,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<String> deviceCaCertificate,
-        @Nullable Output<String> displayName,
-        @Nullable Output<FleetIdentityProviderGetArgs> identityProvider,
-        @Nullable Output<String> lastUpdatedTime,
-        @Nullable Output<String> name,
-        @Nullable Output<FleetNetworkGetArgs> network,
-        @Nullable Output<Boolean> optimizeForEndUserLocation) {
-        this.arn = arn;
-        this.auditStreamArn = auditStreamArn;
-        this.companyCode = companyCode;
-        this.createdTime = createdTime;
-        this.deviceCaCertificate = deviceCaCertificate;
-        this.displayName = displayName;
-        this.identityProvider = identityProvider;
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.name = name;
-        this.network = network;
-        this.optimizeForEndUserLocation = optimizeForEndUserLocation;
-    }
+    private FleetState() {}
 
-    private FleetState() {
-        this.arn = Codegen.empty();
-        this.auditStreamArn = Codegen.empty();
-        this.companyCode = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.deviceCaCertificate = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.identityProvider = Codegen.empty();
-        this.lastUpdatedTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.optimizeForEndUserLocation = Codegen.empty();
+    private FleetState(FleetState $) {
+        this.arn = $.arn;
+        this.auditStreamArn = $.auditStreamArn;
+        this.companyCode = $.companyCode;
+        this.createdTime = $.createdTime;
+        this.deviceCaCertificate = $.deviceCaCertificate;
+        this.displayName = $.displayName;
+        this.identityProvider = $.identityProvider;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.name = $.name;
+        this.network = $.network;
+        this.optimizeForEndUserLocation = $.optimizeForEndUserLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> auditStreamArn;
-        private @Nullable Output<String> companyCode;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<String> deviceCaCertificate;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<FleetIdentityProviderGetArgs> identityProvider;
-        private @Nullable Output<String> lastUpdatedTime;
-        private @Nullable Output<String> name;
-        private @Nullable Output<FleetNetworkGetArgs> network;
-        private @Nullable Output<Boolean> optimizeForEndUserLocation;
+        private FleetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetState();
         }
 
         public Builder(FleetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.auditStreamArn = defaults.auditStreamArn;
-    	      this.companyCode = defaults.companyCode;
-    	      this.createdTime = defaults.createdTime;
-    	      this.deviceCaCertificate = defaults.deviceCaCertificate;
-    	      this.displayName = defaults.displayName;
-    	      this.identityProvider = defaults.identityProvider;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.optimizeForEndUserLocation = defaults.optimizeForEndUserLocation;
+            $ = new FleetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder auditStreamArn(@Nullable Output<String> auditStreamArn) {
-            this.auditStreamArn = auditStreamArn;
+            $.auditStreamArn = auditStreamArn;
             return this;
         }
-        public Builder auditStreamArn(@Nullable String auditStreamArn) {
-            this.auditStreamArn = Codegen.ofNullable(auditStreamArn);
-            return this;
+
+        public Builder auditStreamArn(String auditStreamArn) {
+            return auditStreamArn(Output.of(auditStreamArn));
         }
+
         public Builder companyCode(@Nullable Output<String> companyCode) {
-            this.companyCode = companyCode;
+            $.companyCode = companyCode;
             return this;
         }
-        public Builder companyCode(@Nullable String companyCode) {
-            this.companyCode = Codegen.ofNullable(companyCode);
-            return this;
+
+        public Builder companyCode(String companyCode) {
+            return companyCode(Output.of(companyCode));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder deviceCaCertificate(@Nullable Output<String> deviceCaCertificate) {
-            this.deviceCaCertificate = deviceCaCertificate;
+            $.deviceCaCertificate = deviceCaCertificate;
             return this;
         }
-        public Builder deviceCaCertificate(@Nullable String deviceCaCertificate) {
-            this.deviceCaCertificate = Codegen.ofNullable(deviceCaCertificate);
-            return this;
+
+        public Builder deviceCaCertificate(String deviceCaCertificate) {
+            return deviceCaCertificate(Output.of(deviceCaCertificate));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder identityProvider(@Nullable Output<FleetIdentityProviderGetArgs> identityProvider) {
-            this.identityProvider = identityProvider;
+            $.identityProvider = identityProvider;
             return this;
         }
-        public Builder identityProvider(@Nullable FleetIdentityProviderGetArgs identityProvider) {
-            this.identityProvider = Codegen.ofNullable(identityProvider);
-            return this;
+
+        public Builder identityProvider(FleetIdentityProviderGetArgs identityProvider) {
+            return identityProvider(Output.of(identityProvider));
         }
+
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
-            return this;
+
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
+            return lastUpdatedTime(Output.of(lastUpdatedTime));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<FleetNetworkGetArgs> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable FleetNetworkGetArgs network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(FleetNetworkGetArgs network) {
+            return network(Output.of(network));
         }
+
         public Builder optimizeForEndUserLocation(@Nullable Output<Boolean> optimizeForEndUserLocation) {
-            this.optimizeForEndUserLocation = optimizeForEndUserLocation;
+            $.optimizeForEndUserLocation = optimizeForEndUserLocation;
             return this;
         }
-        public Builder optimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
-            this.optimizeForEndUserLocation = Codegen.ofNullable(optimizeForEndUserLocation);
-            return this;
-        }        public FleetState build() {
-            return new FleetState(arn, auditStreamArn, companyCode, createdTime, deviceCaCertificate, displayName, identityProvider, lastUpdatedTime, name, network, optimizeForEndUserLocation);
+
+        public Builder optimizeForEndUserLocation(Boolean optimizeForEndUserLocation) {
+            return optimizeForEndUserLocation(Output.of(optimizeForEndUserLocation));
+        }
+
+        public FleetState build() {
+            return $;
         }
     }
+
 }

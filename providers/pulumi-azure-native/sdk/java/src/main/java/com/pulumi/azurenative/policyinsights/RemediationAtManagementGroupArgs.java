@@ -8,9 +8,9 @@ import com.pulumi.azurenative.policyinsights.inputs.RemediationFiltersArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<RemediationFiltersArgs> filters;
+    private @Nullable Output<RemediationFiltersArgs> filters;
 
-    public Output<RemediationFiltersArgs> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<RemediationFiltersArgs>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="managementGroupId", required=true)
-      private final Output<String> managementGroupId;
+    private Output<String> managementGroupId;
 
     public Output<String> managementGroupId() {
         return this.managementGroupId;
@@ -45,7 +45,7 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="managementGroupsNamespace", required=true)
-      private final Output<String> managementGroupsNamespace;
+    private Output<String> managementGroupsNamespace;
 
     public Output<String> managementGroupsNamespace() {
         return this.managementGroupsNamespace;
@@ -56,10 +56,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="policyAssignmentId")
-      private final @Nullable Output<String> policyAssignmentId;
+    private @Nullable Output<String> policyAssignmentId;
 
-    public Output<String> policyAssignmentId() {
-        return this.policyAssignmentId == null ? Codegen.empty() : this.policyAssignmentId;
+    public Optional<Output<String>> policyAssignmentId() {
+        return Optional.ofNullable(this.policyAssignmentId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="policyDefinitionReferenceId")
-      private final @Nullable Output<String> policyDefinitionReferenceId;
+    private @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Output<String> policyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Codegen.empty() : this.policyDefinitionReferenceId;
+    public Optional<Output<String>> policyDefinitionReferenceId() {
+        return Optional.ofNullable(this.policyDefinitionReferenceId);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="remediationName")
-      private final @Nullable Output<String> remediationName;
+    private @Nullable Output<String> remediationName;
 
-    public Output<String> remediationName() {
-        return this.remediationName == null ? Codegen.empty() : this.remediationName;
+    public Optional<Output<String>> remediationName() {
+        return Optional.ofNullable(this.remediationName);
     }
 
     /**
@@ -89,128 +89,110 @@ public final class RemediationAtManagementGroupArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceDiscoveryMode")
-      private final @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
+    private @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
 
-    public Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode() {
-        return this.resourceDiscoveryMode == null ? Codegen.empty() : this.resourceDiscoveryMode;
+    public Optional<Output<Either<String,ResourceDiscoveryMode>>> resourceDiscoveryMode() {
+        return Optional.ofNullable(this.resourceDiscoveryMode);
     }
 
-    public RemediationAtManagementGroupArgs(
-        @Nullable Output<RemediationFiltersArgs> filters,
-        Output<String> managementGroupId,
-        Output<String> managementGroupsNamespace,
-        @Nullable Output<String> policyAssignmentId,
-        @Nullable Output<String> policyDefinitionReferenceId,
-        @Nullable Output<String> remediationName,
-        @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
-        this.filters = filters;
-        this.managementGroupId = Objects.requireNonNull(managementGroupId, "expected parameter 'managementGroupId' to be non-null");
-        this.managementGroupsNamespace = Objects.requireNonNull(managementGroupsNamespace, "expected parameter 'managementGroupsNamespace' to be non-null");
-        this.policyAssignmentId = policyAssignmentId;
-        this.policyDefinitionReferenceId = policyDefinitionReferenceId;
-        this.remediationName = remediationName;
-        this.resourceDiscoveryMode = resourceDiscoveryMode;
-    }
+    private RemediationAtManagementGroupArgs() {}
 
-    private RemediationAtManagementGroupArgs() {
-        this.filters = Codegen.empty();
-        this.managementGroupId = Codegen.empty();
-        this.managementGroupsNamespace = Codegen.empty();
-        this.policyAssignmentId = Codegen.empty();
-        this.policyDefinitionReferenceId = Codegen.empty();
-        this.remediationName = Codegen.empty();
-        this.resourceDiscoveryMode = Codegen.empty();
+    private RemediationAtManagementGroupArgs(RemediationAtManagementGroupArgs $) {
+        this.filters = $.filters;
+        this.managementGroupId = $.managementGroupId;
+        this.managementGroupsNamespace = $.managementGroupsNamespace;
+        this.policyAssignmentId = $.policyAssignmentId;
+        this.policyDefinitionReferenceId = $.policyDefinitionReferenceId;
+        this.remediationName = $.remediationName;
+        this.resourceDiscoveryMode = $.resourceDiscoveryMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationAtManagementGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RemediationFiltersArgs> filters;
-        private Output<String> managementGroupId;
-        private Output<String> managementGroupsNamespace;
-        private @Nullable Output<String> policyAssignmentId;
-        private @Nullable Output<String> policyDefinitionReferenceId;
-        private @Nullable Output<String> remediationName;
-        private @Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode;
+        private RemediationAtManagementGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationAtManagementGroupArgs();
         }
 
         public Builder(RemediationAtManagementGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.managementGroupId = defaults.managementGroupId;
-    	      this.managementGroupsNamespace = defaults.managementGroupsNamespace;
-    	      this.policyAssignmentId = defaults.policyAssignmentId;
-    	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
-    	      this.remediationName = defaults.remediationName;
-    	      this.resourceDiscoveryMode = defaults.resourceDiscoveryMode;
+            $ = new RemediationAtManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable Output<RemediationFiltersArgs> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable RemediationFiltersArgs filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(RemediationFiltersArgs filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder managementGroupId(Output<String> managementGroupId) {
-            this.managementGroupId = Objects.requireNonNull(managementGroupId);
+            $.managementGroupId = managementGroupId;
             return this;
         }
+
         public Builder managementGroupId(String managementGroupId) {
-            this.managementGroupId = Output.of(Objects.requireNonNull(managementGroupId));
-            return this;
+            return managementGroupId(Output.of(managementGroupId));
         }
+
         public Builder managementGroupsNamespace(Output<String> managementGroupsNamespace) {
-            this.managementGroupsNamespace = Objects.requireNonNull(managementGroupsNamespace);
+            $.managementGroupsNamespace = managementGroupsNamespace;
             return this;
         }
+
         public Builder managementGroupsNamespace(String managementGroupsNamespace) {
-            this.managementGroupsNamespace = Output.of(Objects.requireNonNull(managementGroupsNamespace));
-            return this;
+            return managementGroupsNamespace(Output.of(managementGroupsNamespace));
         }
+
         public Builder policyAssignmentId(@Nullable Output<String> policyAssignmentId) {
-            this.policyAssignmentId = policyAssignmentId;
+            $.policyAssignmentId = policyAssignmentId;
             return this;
         }
-        public Builder policyAssignmentId(@Nullable String policyAssignmentId) {
-            this.policyAssignmentId = Codegen.ofNullable(policyAssignmentId);
-            return this;
+
+        public Builder policyAssignmentId(String policyAssignmentId) {
+            return policyAssignmentId(Output.of(policyAssignmentId));
         }
+
         public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = policyDefinitionReferenceId;
+            $.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
-        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Codegen.ofNullable(policyDefinitionReferenceId);
-            return this;
+
+        public Builder policyDefinitionReferenceId(String policyDefinitionReferenceId) {
+            return policyDefinitionReferenceId(Output.of(policyDefinitionReferenceId));
         }
+
         public Builder remediationName(@Nullable Output<String> remediationName) {
-            this.remediationName = remediationName;
+            $.remediationName = remediationName;
             return this;
         }
-        public Builder remediationName(@Nullable String remediationName) {
-            this.remediationName = Codegen.ofNullable(remediationName);
-            return this;
+
+        public Builder remediationName(String remediationName) {
+            return remediationName(Output.of(remediationName));
         }
+
         public Builder resourceDiscoveryMode(@Nullable Output<Either<String,ResourceDiscoveryMode>> resourceDiscoveryMode) {
-            this.resourceDiscoveryMode = resourceDiscoveryMode;
+            $.resourceDiscoveryMode = resourceDiscoveryMode;
             return this;
         }
-        public Builder resourceDiscoveryMode(@Nullable Either<String,ResourceDiscoveryMode> resourceDiscoveryMode) {
-            this.resourceDiscoveryMode = Codegen.ofNullable(resourceDiscoveryMode);
-            return this;
-        }        public RemediationAtManagementGroupArgs build() {
-            return new RemediationAtManagementGroupArgs(filters, managementGroupId, managementGroupsNamespace, policyAssignmentId, policyDefinitionReferenceId, remediationName, resourceDiscoveryMode);
+
+        public Builder resourceDiscoveryMode(Either<String,ResourceDiscoveryMode> resourceDiscoveryMode) {
+            return resourceDiscoveryMode(Output.of(resourceDiscoveryMode));
+        }
+
+        public RemediationAtManagementGroupArgs build() {
+            $.managementGroupId = Objects.requireNonNull($.managementGroupId, "expected parameter 'managementGroupId' to be non-null");
+            $.managementGroupsNamespace = Objects.requireNonNull($.managementGroupsNamespace, "expected parameter 'managementGroupsNamespace' to be non-null");
+            return $;
         }
     }
+
 }

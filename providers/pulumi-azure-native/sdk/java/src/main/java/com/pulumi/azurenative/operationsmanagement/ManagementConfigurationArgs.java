@@ -6,9 +6,9 @@ package com.pulumi.azurenative.operationsmanagement;
 import com.pulumi.azurenative.operationsmanagement.inputs.ManagementConfigurationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="managementConfigurationName")
-      private final @Nullable Output<String> managementConfigurationName;
+    private @Nullable Output<String> managementConfigurationName;
 
-    public Output<String> managementConfigurationName() {
-        return this.managementConfigurationName == null ? Codegen.empty() : this.managementConfigurationName;
+    public Optional<Output<String>> managementConfigurationName() {
+        return Optional.ofNullable(this.managementConfigurationName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
+    private @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
 
-    public Output<ManagementConfigurationPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ManagementConfigurationPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class ManagementConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ManagementConfigurationArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<String> managementConfigurationName,
-        @Nullable Output<ManagementConfigurationPropertiesArgs> properties,
-        Output<String> resourceGroupName) {
-        this.location = location;
-        this.managementConfigurationName = managementConfigurationName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ManagementConfigurationArgs() {}
 
-    private ManagementConfigurationArgs() {
-        this.location = Codegen.empty();
-        this.managementConfigurationName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ManagementConfigurationArgs(ManagementConfigurationArgs $) {
+        this.location = $.location;
+        this.managementConfigurationName = $.managementConfigurationName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> managementConfigurationName;
-        private @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
+        private ManagementConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementConfigurationArgs();
         }
 
         public Builder(ManagementConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.managementConfigurationName = defaults.managementConfigurationName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ManagementConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managementConfigurationName(@Nullable Output<String> managementConfigurationName) {
-            this.managementConfigurationName = managementConfigurationName;
+            $.managementConfigurationName = managementConfigurationName;
             return this;
         }
-        public Builder managementConfigurationName(@Nullable String managementConfigurationName) {
-            this.managementConfigurationName = Codegen.ofNullable(managementConfigurationName);
-            return this;
+
+        public Builder managementConfigurationName(String managementConfigurationName) {
+            return managementConfigurationName(Output.of(managementConfigurationName));
         }
+
         public Builder properties(@Nullable Output<ManagementConfigurationPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ManagementConfigurationPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ManagementConfigurationPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ManagementConfigurationArgs build() {
-            return new ManagementConfigurationArgs(location, managementConfigurationName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ManagementConfigurationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

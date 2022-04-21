@@ -5,12 +5,12 @@ package com.pulumi.googlenative.datafusion_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datafusion_v1.enums.VersionType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availableFeatures")
-      private final @Nullable Output<List<String>> availableFeatures;
+    private @Nullable Output<List<String>> availableFeatures;
 
-    public Output<List<String>> availableFeatures() {
-        return this.availableFeatures == null ? Codegen.empty() : this.availableFeatures;
+    public Optional<Output<List<String>>> availableFeatures() {
+        return Optional.ofNullable(this.availableFeatures);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultVersion")
-      private final @Nullable Output<Boolean> defaultVersion;
+    private @Nullable Output<Boolean> defaultVersion;
 
-    public Output<Boolean> defaultVersion() {
-        return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
+    public Optional<Output<Boolean>> defaultVersion() {
+        return Optional.ofNullable(this.defaultVersion);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<VersionType> type;
+    private @Nullable Output<VersionType> type;
 
-    public Output<VersionType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<VersionType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -60,92 +60,82 @@ public final class VersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionNumber")
-      private final @Nullable Output<String> versionNumber;
+    private @Nullable Output<String> versionNumber;
 
-    public Output<String> versionNumber() {
-        return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
+    public Optional<Output<String>> versionNumber() {
+        return Optional.ofNullable(this.versionNumber);
     }
 
-    public VersionArgs(
-        @Nullable Output<List<String>> availableFeatures,
-        @Nullable Output<Boolean> defaultVersion,
-        @Nullable Output<VersionType> type,
-        @Nullable Output<String> versionNumber) {
-        this.availableFeatures = availableFeatures;
-        this.defaultVersion = defaultVersion;
-        this.type = type;
-        this.versionNumber = versionNumber;
-    }
+    private VersionArgs() {}
 
-    private VersionArgs() {
-        this.availableFeatures = Codegen.empty();
-        this.defaultVersion = Codegen.empty();
-        this.type = Codegen.empty();
-        this.versionNumber = Codegen.empty();
+    private VersionArgs(VersionArgs $) {
+        this.availableFeatures = $.availableFeatures;
+        this.defaultVersion = $.defaultVersion;
+        this.type = $.type;
+        this.versionNumber = $.versionNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> availableFeatures;
-        private @Nullable Output<Boolean> defaultVersion;
-        private @Nullable Output<VersionType> type;
-        private @Nullable Output<String> versionNumber;
+        private VersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VersionArgs();
         }
 
         public Builder(VersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availableFeatures = defaults.availableFeatures;
-    	      this.defaultVersion = defaults.defaultVersion;
-    	      this.type = defaults.type;
-    	      this.versionNumber = defaults.versionNumber;
+            $ = new VersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availableFeatures(@Nullable Output<List<String>> availableFeatures) {
-            this.availableFeatures = availableFeatures;
+            $.availableFeatures = availableFeatures;
             return this;
         }
-        public Builder availableFeatures(@Nullable List<String> availableFeatures) {
-            this.availableFeatures = Codegen.ofNullable(availableFeatures);
-            return this;
+
+        public Builder availableFeatures(List<String> availableFeatures) {
+            return availableFeatures(Output.of(availableFeatures));
         }
+
         public Builder availableFeatures(String... availableFeatures) {
             return availableFeatures(List.of(availableFeatures));
         }
+
         public Builder defaultVersion(@Nullable Output<Boolean> defaultVersion) {
-            this.defaultVersion = defaultVersion;
+            $.defaultVersion = defaultVersion;
             return this;
         }
-        public Builder defaultVersion(@Nullable Boolean defaultVersion) {
-            this.defaultVersion = Codegen.ofNullable(defaultVersion);
-            return this;
+
+        public Builder defaultVersion(Boolean defaultVersion) {
+            return defaultVersion(Output.of(defaultVersion));
         }
+
         public Builder type(@Nullable Output<VersionType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable VersionType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(VersionType type) {
+            return type(Output.of(type));
         }
+
         public Builder versionNumber(@Nullable Output<String> versionNumber) {
-            this.versionNumber = versionNumber;
+            $.versionNumber = versionNumber;
             return this;
         }
-        public Builder versionNumber(@Nullable String versionNumber) {
-            this.versionNumber = Codegen.ofNullable(versionNumber);
-            return this;
-        }        public VersionArgs build() {
-            return new VersionArgs(availableFeatures, defaultVersion, type, versionNumber);
+
+        public Builder versionNumber(String versionNumber) {
+            return versionNumber(Output.of(versionNumber));
+        }
+
+        public VersionArgs build() {
+            return $;
         }
     }
+
 }

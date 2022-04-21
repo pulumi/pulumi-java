@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeGetArgs extends com.pulumi.
      * 
      */
     @Import(name="ellipticCurve")
-      private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve;
+    private @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve;
 
-    public Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve() {
-        return this.ellipticCurve == null ? Codegen.empty() : this.ellipticCurve;
+    public Optional<Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs>> ellipticCurve() {
+        return Optional.ofNullable(this.ellipticCurve);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeGetArgs extends com.pulumi.
      * 
      */
     @Import(name="rsa")
-      private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa;
+    private @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa;
 
-    public Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa() {
-        return this.rsa == null ? Codegen.empty() : this.rsa;
+    public Optional<Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs>> rsa() {
+        return Optional.ofNullable(this.rsa);
     }
 
-    public CaPoolIssuancePolicyAllowedKeyTypeGetArgs(
-        @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve,
-        @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa) {
-        this.ellipticCurve = ellipticCurve;
-        this.rsa = rsa;
-    }
+    private CaPoolIssuancePolicyAllowedKeyTypeGetArgs() {}
 
-    private CaPoolIssuancePolicyAllowedKeyTypeGetArgs() {
-        this.ellipticCurve = Codegen.empty();
-        this.rsa = Codegen.empty();
+    private CaPoolIssuancePolicyAllowedKeyTypeGetArgs(CaPoolIssuancePolicyAllowedKeyTypeGetArgs $) {
+        this.ellipticCurve = $.ellipticCurve;
+        this.rsa = $.rsa;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIssuancePolicyAllowedKeyTypeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve;
-        private @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa;
+        private CaPoolIssuancePolicyAllowedKeyTypeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIssuancePolicyAllowedKeyTypeGetArgs();
         }
 
         public Builder(CaPoolIssuancePolicyAllowedKeyTypeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ellipticCurve = defaults.ellipticCurve;
-    	      this.rsa = defaults.rsa;
+            $ = new CaPoolIssuancePolicyAllowedKeyTypeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ellipticCurve(@Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs> ellipticCurve) {
-            this.ellipticCurve = ellipticCurve;
+            $.ellipticCurve = ellipticCurve;
             return this;
         }
-        public Builder ellipticCurve(@Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs ellipticCurve) {
-            this.ellipticCurve = Codegen.ofNullable(ellipticCurve);
-            return this;
+
+        public Builder ellipticCurve(CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveGetArgs ellipticCurve) {
+            return ellipticCurve(Output.of(ellipticCurve));
         }
+
         public Builder rsa(@Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs> rsa) {
-            this.rsa = rsa;
+            $.rsa = rsa;
             return this;
         }
-        public Builder rsa(@Nullable CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs rsa) {
-            this.rsa = Codegen.ofNullable(rsa);
-            return this;
-        }        public CaPoolIssuancePolicyAllowedKeyTypeGetArgs build() {
-            return new CaPoolIssuancePolicyAllowedKeyTypeGetArgs(ellipticCurve, rsa);
+
+        public Builder rsa(CaPoolIssuancePolicyAllowedKeyTypeRsaGetArgs rsa) {
+            return rsa(Output.of(rsa));
+        }
+
+        public CaPoolIssuancePolicyAllowedKeyTypeGetArgs build() {
+            return $;
         }
     }
+
 }

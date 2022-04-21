@@ -23,45 +23,44 @@ public final class AppliancePropertiesResponseInfrastructureConfig extends com.p
      * 
      */
     @Import(name="provider")
-      private final @Nullable String provider;
+    private @Nullable String provider;
 
     public Optional<String> provider() {
-        return this.provider == null ? Optional.empty() : Optional.ofNullable(this.provider);
+        return Optional.ofNullable(this.provider);
     }
 
-    public AppliancePropertiesResponseInfrastructureConfig(@Nullable String provider) {
-        this.provider = provider;
-    }
+    private AppliancePropertiesResponseInfrastructureConfig() {}
 
-    private AppliancePropertiesResponseInfrastructureConfig() {
-        this.provider = null;
+    private AppliancePropertiesResponseInfrastructureConfig(AppliancePropertiesResponseInfrastructureConfig $) {
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppliancePropertiesResponseInfrastructureConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String provider;
+        private AppliancePropertiesResponseInfrastructureConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppliancePropertiesResponseInfrastructureConfig();
         }
 
         public Builder(AppliancePropertiesResponseInfrastructureConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provider = defaults.provider;
+            $ = new AppliancePropertiesResponseInfrastructureConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder provider(@Nullable String provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
-        }        public AppliancePropertiesResponseInfrastructureConfig build() {
-            return new AppliancePropertiesResponseInfrastructureConfig(provider);
+        }
+
+        public AppliancePropertiesResponseInfrastructureConfig build() {
+            return $;
         }
     }
+
 }

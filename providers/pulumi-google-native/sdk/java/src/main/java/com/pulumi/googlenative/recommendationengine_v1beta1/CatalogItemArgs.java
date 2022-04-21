@@ -5,13 +5,13 @@ package com.pulumi.googlenative.recommendationengine_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs;
 import com.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1FeatureMapArgs;
 import com.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
     public static final CatalogItemArgs Empty = new CatalogItemArgs();
 
     @Import(name="catalogId", required=true)
-      private final Output<String> catalogId;
+    private Output<String> catalogId;
 
     public Output<String> catalogId() {
         return this.catalogId;
@@ -31,7 +31,7 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="categoryHierarchies", required=true)
-      private final Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
+    private Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
 
     public Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies() {
         return this.categoryHierarchies;
@@ -42,10 +42,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -64,10 +64,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="itemAttributes")
-      private final @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
+    private @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
 
-    public Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes() {
-        return this.itemAttributes == null ? Codegen.empty() : this.itemAttributes;
+    public Optional<Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs>> itemAttributes() {
+        return Optional.ofNullable(this.itemAttributes);
     }
 
     /**
@@ -75,17 +75,17 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="itemGroupId")
-      private final @Nullable Output<String> itemGroupId;
+    private @Nullable Output<String> itemGroupId;
 
-    public Output<String> itemGroupId() {
-        return this.itemGroupId == null ? Codegen.empty() : this.itemGroupId;
+    public Optional<Output<String>> itemGroupId() {
+        return Optional.ofNullable(this.itemGroupId);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -93,17 +93,17 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productMetadata")
-      private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
+    private @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
 
-    public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata() {
-        return this.productMetadata == null ? Codegen.empty() : this.productMetadata;
+    public Optional<Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs>> productMetadata() {
+        return Optional.ofNullable(this.productMetadata);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -122,186 +122,160 @@ public final class CatalogItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public CatalogItemArgs(
-        Output<String> catalogId,
-        Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies,
-        @Nullable Output<String> description,
-        Output<String> id,
-        @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes,
-        @Nullable Output<String> itemGroupId,
-        @Nullable Output<String> location,
-        @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata,
-        @Nullable Output<String> project,
-        @Nullable Output<List<String>> tags,
-        Output<String> title) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies, "expected parameter 'categoryHierarchies' to be non-null");
-        this.description = description;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.itemAttributes = itemAttributes;
-        this.itemGroupId = itemGroupId;
-        this.location = location;
-        this.productMetadata = productMetadata;
-        this.project = project;
-        this.tags = tags;
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private CatalogItemArgs() {}
 
-    private CatalogItemArgs() {
-        this.catalogId = Codegen.empty();
-        this.categoryHierarchies = Codegen.empty();
-        this.description = Codegen.empty();
-        this.id = Codegen.empty();
-        this.itemAttributes = Codegen.empty();
-        this.itemGroupId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.productMetadata = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.title = Codegen.empty();
+    private CatalogItemArgs(CatalogItemArgs $) {
+        this.catalogId = $.catalogId;
+        this.categoryHierarchies = $.categoryHierarchies;
+        this.description = $.description;
+        this.id = $.id;
+        this.itemAttributes = $.itemAttributes;
+        this.itemGroupId = $.itemGroupId;
+        this.location = $.location;
+        this.productMetadata = $.productMetadata;
+        this.project = $.project;
+        this.tags = $.tags;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CatalogItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> catalogId;
-        private Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
-        private @Nullable Output<String> description;
-        private Output<String> id;
-        private @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
-        private @Nullable Output<String> itemGroupId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<String>> tags;
-        private Output<String> title;
+        private CatalogItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CatalogItemArgs();
         }
 
         public Builder(CatalogItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.categoryHierarchies = defaults.categoryHierarchies;
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.itemAttributes = defaults.itemAttributes;
-    	      this.itemGroupId = defaults.itemGroupId;
-    	      this.location = defaults.location;
-    	      this.productMetadata = defaults.productMetadata;
-    	      this.project = defaults.project;
-    	      this.tags = defaults.tags;
-    	      this.title = defaults.title;
+            $ = new CatalogItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(Output<String> catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder catalogId(String catalogId) {
-            this.catalogId = Output.of(Objects.requireNonNull(catalogId));
-            return this;
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder categoryHierarchies(Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies) {
-            this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies);
+            $.categoryHierarchies = categoryHierarchies;
             return this;
         }
+
         public Builder categoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs> categoryHierarchies) {
-            this.categoryHierarchies = Output.of(Objects.requireNonNull(categoryHierarchies));
-            return this;
+            return categoryHierarchies(Output.of(categoryHierarchies));
         }
+
         public Builder categoryHierarchies(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs... categoryHierarchies) {
             return categoryHierarchies(List.of(categoryHierarchies));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder itemAttributes(@Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes) {
-            this.itemAttributes = itemAttributes;
+            $.itemAttributes = itemAttributes;
             return this;
         }
-        public Builder itemAttributes(@Nullable GoogleCloudRecommendationengineV1beta1FeatureMapArgs itemAttributes) {
-            this.itemAttributes = Codegen.ofNullable(itemAttributes);
-            return this;
+
+        public Builder itemAttributes(GoogleCloudRecommendationengineV1beta1FeatureMapArgs itemAttributes) {
+            return itemAttributes(Output.of(itemAttributes));
         }
+
         public Builder itemGroupId(@Nullable Output<String> itemGroupId) {
-            this.itemGroupId = itemGroupId;
+            $.itemGroupId = itemGroupId;
             return this;
         }
-        public Builder itemGroupId(@Nullable String itemGroupId) {
-            this.itemGroupId = Codegen.ofNullable(itemGroupId);
-            return this;
+
+        public Builder itemGroupId(String itemGroupId) {
+            return itemGroupId(Output.of(itemGroupId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder productMetadata(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata) {
-            this.productMetadata = productMetadata;
+            $.productMetadata = productMetadata;
             return this;
         }
-        public Builder productMetadata(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs productMetadata) {
-            this.productMetadata = Codegen.ofNullable(productMetadata);
-            return this;
+
+        public Builder productMetadata(GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs productMetadata) {
+            return productMetadata(Output.of(productMetadata));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public CatalogItemArgs build() {
-            return new CatalogItemArgs(catalogId, categoryHierarchies, description, id, itemAttributes, itemGroupId, location, productMetadata, project, tags, title);
+            return title(Output.of(title));
+        }
+
+        public CatalogItemArgs build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.categoryHierarchies = Objects.requireNonNull($.categoryHierarchies, "expected parameter 'categoryHierarchies' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

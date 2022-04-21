@@ -7,9 +7,9 @@ import com.pulumi.awsnative.mediaconnect.inputs.FlowFailoverConfigArgs;
 import com.pulumi.awsnative.mediaconnect.inputs.FlowSourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable Output<String> availabilityZone;
+    private @Nullable Output<String> availabilityZone;
 
-    public Output<String> availabilityZone() {
-        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
+    public Optional<Output<String>> availabilityZone() {
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final Output<FlowSourceArgs> source;
+    private Output<FlowSourceArgs> source;
 
     public Output<FlowSourceArgs> source() {
         return this.source;
@@ -55,89 +55,79 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceFailoverConfig")
-      private final @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig;
+    private @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig;
 
-    public Output<FlowFailoverConfigArgs> sourceFailoverConfig() {
-        return this.sourceFailoverConfig == null ? Codegen.empty() : this.sourceFailoverConfig;
+    public Optional<Output<FlowFailoverConfigArgs>> sourceFailoverConfig() {
+        return Optional.ofNullable(this.sourceFailoverConfig);
     }
 
-    public FlowArgs(
-        @Nullable Output<String> availabilityZone,
-        @Nullable Output<String> name,
-        Output<FlowSourceArgs> source,
-        @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig) {
-        this.availabilityZone = availabilityZone;
-        this.name = name;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.sourceFailoverConfig = sourceFailoverConfig;
-    }
+    private FlowArgs() {}
 
-    private FlowArgs() {
-        this.availabilityZone = Codegen.empty();
-        this.name = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourceFailoverConfig = Codegen.empty();
+    private FlowArgs(FlowArgs $) {
+        this.availabilityZone = $.availabilityZone;
+        this.name = $.name;
+        this.source = $.source;
+        this.sourceFailoverConfig = $.sourceFailoverConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZone;
-        private @Nullable Output<String> name;
-        private Output<FlowSourceArgs> source;
-        private @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig;
+        private FlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowArgs();
         }
 
         public Builder(FlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.name = defaults.name;
-    	      this.source = defaults.source;
-    	      this.sourceFailoverConfig = defaults.sourceFailoverConfig;
+            $ = new FlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
-        public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Codegen.ofNullable(availabilityZone);
-            return this;
+
+        public Builder availabilityZone(String availabilityZone) {
+            return availabilityZone(Output.of(availabilityZone));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder source(Output<FlowSourceArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(FlowSourceArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder sourceFailoverConfig(@Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig) {
-            this.sourceFailoverConfig = sourceFailoverConfig;
+            $.sourceFailoverConfig = sourceFailoverConfig;
             return this;
         }
-        public Builder sourceFailoverConfig(@Nullable FlowFailoverConfigArgs sourceFailoverConfig) {
-            this.sourceFailoverConfig = Codegen.ofNullable(sourceFailoverConfig);
-            return this;
-        }        public FlowArgs build() {
-            return new FlowArgs(availabilityZone, name, source, sourceFailoverConfig);
+
+        public Builder sourceFailoverConfig(FlowFailoverConfigArgs sourceFailoverConfig) {
+            return sourceFailoverConfig(Output.of(sourceFailoverConfig));
+        }
+
+        public FlowArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

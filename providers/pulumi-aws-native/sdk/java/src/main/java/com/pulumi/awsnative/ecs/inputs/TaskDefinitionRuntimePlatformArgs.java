@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class TaskDefinitionRuntimePlatformArgs extends com.pulumi.resource
     public static final TaskDefinitionRuntimePlatformArgs Empty = new TaskDefinitionRuntimePlatformArgs();
 
     @Import(name="cpuArchitecture")
-      private final @Nullable Output<String> cpuArchitecture;
+    private @Nullable Output<String> cpuArchitecture;
 
-    public Output<String> cpuArchitecture() {
-        return this.cpuArchitecture == null ? Codegen.empty() : this.cpuArchitecture;
+    public Optional<Output<String>> cpuArchitecture() {
+        return Optional.ofNullable(this.cpuArchitecture);
     }
 
     @Import(name="operatingSystemFamily")
-      private final @Nullable Output<String> operatingSystemFamily;
+    private @Nullable Output<String> operatingSystemFamily;
 
-    public Output<String> operatingSystemFamily() {
-        return this.operatingSystemFamily == null ? Codegen.empty() : this.operatingSystemFamily;
+    public Optional<Output<String>> operatingSystemFamily() {
+        return Optional.ofNullable(this.operatingSystemFamily);
     }
 
-    public TaskDefinitionRuntimePlatformArgs(
-        @Nullable Output<String> cpuArchitecture,
-        @Nullable Output<String> operatingSystemFamily) {
-        this.cpuArchitecture = cpuArchitecture;
-        this.operatingSystemFamily = operatingSystemFamily;
-    }
+    private TaskDefinitionRuntimePlatformArgs() {}
 
-    private TaskDefinitionRuntimePlatformArgs() {
-        this.cpuArchitecture = Codegen.empty();
-        this.operatingSystemFamily = Codegen.empty();
+    private TaskDefinitionRuntimePlatformArgs(TaskDefinitionRuntimePlatformArgs $) {
+        this.cpuArchitecture = $.cpuArchitecture;
+        this.operatingSystemFamily = $.operatingSystemFamily;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionRuntimePlatformArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cpuArchitecture;
-        private @Nullable Output<String> operatingSystemFamily;
+        private TaskDefinitionRuntimePlatformArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionRuntimePlatformArgs();
         }
 
         public Builder(TaskDefinitionRuntimePlatformArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuArchitecture = defaults.cpuArchitecture;
-    	      this.operatingSystemFamily = defaults.operatingSystemFamily;
+            $ = new TaskDefinitionRuntimePlatformArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuArchitecture(@Nullable Output<String> cpuArchitecture) {
-            this.cpuArchitecture = cpuArchitecture;
+            $.cpuArchitecture = cpuArchitecture;
             return this;
         }
-        public Builder cpuArchitecture(@Nullable String cpuArchitecture) {
-            this.cpuArchitecture = Codegen.ofNullable(cpuArchitecture);
-            return this;
+
+        public Builder cpuArchitecture(String cpuArchitecture) {
+            return cpuArchitecture(Output.of(cpuArchitecture));
         }
+
         public Builder operatingSystemFamily(@Nullable Output<String> operatingSystemFamily) {
-            this.operatingSystemFamily = operatingSystemFamily;
+            $.operatingSystemFamily = operatingSystemFamily;
             return this;
         }
-        public Builder operatingSystemFamily(@Nullable String operatingSystemFamily) {
-            this.operatingSystemFamily = Codegen.ofNullable(operatingSystemFamily);
-            return this;
-        }        public TaskDefinitionRuntimePlatformArgs build() {
-            return new TaskDefinitionRuntimePlatformArgs(cpuArchitecture, operatingSystemFamily);
+
+        public Builder operatingSystemFamily(String operatingSystemFamily) {
+            return operatingSystemFamily(Output.of(operatingSystemFamily));
+        }
+
+        public TaskDefinitionRuntimePlatformArgs build() {
+            return $;
         }
     }
+
 }

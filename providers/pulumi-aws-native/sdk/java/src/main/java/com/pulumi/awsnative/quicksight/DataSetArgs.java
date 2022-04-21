@@ -15,10 +15,10 @@ import com.pulumi.awsnative.quicksight.inputs.DataSetRowLevelPermissionDataSetAr
 import com.pulumi.awsnative.quicksight.inputs.DataSetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
     public static final DataSetArgs Empty = new DataSetArgs();
 
     @Import(name="awsAccountId")
-      private final @Nullable Output<String> awsAccountId;
+    private @Nullable Output<String> awsAccountId;
 
-    public Output<String> awsAccountId() {
-        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
+    public Optional<Output<String>> awsAccountId() {
+        return Optional.ofNullable(this.awsAccountId);
     }
 
     /**
@@ -38,52 +38,52 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columnGroups")
-      private final @Nullable Output<List<DataSetColumnGroupArgs>> columnGroups;
+    private @Nullable Output<List<DataSetColumnGroupArgs>> columnGroups;
 
-    public Output<List<DataSetColumnGroupArgs>> columnGroups() {
-        return this.columnGroups == null ? Codegen.empty() : this.columnGroups;
+    public Optional<Output<List<DataSetColumnGroupArgs>>> columnGroups() {
+        return Optional.ofNullable(this.columnGroups);
     }
 
     @Import(name="columnLevelPermissionRules")
-      private final @Nullable Output<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules;
+    private @Nullable Output<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules;
 
-    public Output<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules() {
-        return this.columnLevelPermissionRules == null ? Codegen.empty() : this.columnLevelPermissionRules;
+    public Optional<Output<List<DataSetColumnLevelPermissionRuleArgs>>> columnLevelPermissionRules() {
+        return Optional.ofNullable(this.columnLevelPermissionRules);
     }
 
     @Import(name="dataSetId")
-      private final @Nullable Output<String> dataSetId;
+    private @Nullable Output<String> dataSetId;
 
-    public Output<String> dataSetId() {
-        return this.dataSetId == null ? Codegen.empty() : this.dataSetId;
+    public Optional<Output<String>> dataSetId() {
+        return Optional.ofNullable(this.dataSetId);
     }
 
     @Import(name="fieldFolders")
-      private final @Nullable Output<DataSetFieldFolderMapArgs> fieldFolders;
+    private @Nullable Output<DataSetFieldFolderMapArgs> fieldFolders;
 
-    public Output<DataSetFieldFolderMapArgs> fieldFolders() {
-        return this.fieldFolders == null ? Codegen.empty() : this.fieldFolders;
+    public Optional<Output<DataSetFieldFolderMapArgs>> fieldFolders() {
+        return Optional.ofNullable(this.fieldFolders);
     }
 
     @Import(name="importMode")
-      private final @Nullable Output<DataSetImportMode> importMode;
+    private @Nullable Output<DataSetImportMode> importMode;
 
-    public Output<DataSetImportMode> importMode() {
-        return this.importMode == null ? Codegen.empty() : this.importMode;
+    public Optional<Output<DataSetImportMode>> importMode() {
+        return Optional.ofNullable(this.importMode);
     }
 
     @Import(name="ingestionWaitPolicy")
-      private final @Nullable Output<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy;
+    private @Nullable Output<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy;
 
-    public Output<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy() {
-        return this.ingestionWaitPolicy == null ? Codegen.empty() : this.ingestionWaitPolicy;
+    public Optional<Output<DataSetIngestionWaitPolicyArgs>> ingestionWaitPolicy() {
+        return Optional.ofNullable(this.ingestionWaitPolicy);
     }
 
     @Import(name="logicalTableMap")
-      private final @Nullable Output<DataSetLogicalTableMapArgs> logicalTableMap;
+    private @Nullable Output<DataSetLogicalTableMapArgs> logicalTableMap;
 
-    public Output<DataSetLogicalTableMapArgs> logicalTableMap() {
-        return this.logicalTableMap == null ? Codegen.empty() : this.logicalTableMap;
+    public Optional<Output<DataSetLogicalTableMapArgs>> logicalTableMap() {
+        return Optional.ofNullable(this.logicalTableMap);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -102,24 +102,24 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Output<List<DataSetResourcePermissionArgs>> permissions;
+    private @Nullable Output<List<DataSetResourcePermissionArgs>> permissions;
 
-    public Output<List<DataSetResourcePermissionArgs>> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<List<DataSetResourcePermissionArgs>>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     @Import(name="physicalTableMap")
-      private final @Nullable Output<DataSetPhysicalTableMapArgs> physicalTableMap;
+    private @Nullable Output<DataSetPhysicalTableMapArgs> physicalTableMap;
 
-    public Output<DataSetPhysicalTableMapArgs> physicalTableMap() {
-        return this.physicalTableMap == null ? Codegen.empty() : this.physicalTableMap;
+    public Optional<Output<DataSetPhysicalTableMapArgs>> physicalTableMap() {
+        return Optional.ofNullable(this.physicalTableMap);
     }
 
     @Import(name="rowLevelPermissionDataSet")
-      private final @Nullable Output<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet;
+    private @Nullable Output<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet;
 
-    public Output<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet() {
-        return this.rowLevelPermissionDataSet == null ? Codegen.empty() : this.rowLevelPermissionDataSet;
+    public Optional<Output<DataSetRowLevelPermissionDataSetArgs>> rowLevelPermissionDataSet() {
+        return Optional.ofNullable(this.rowLevelPermissionDataSet);
     }
 
     /**
@@ -127,218 +127,184 @@ public final class DataSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DataSetTagArgs>> tags;
+    private @Nullable Output<List<DataSetTagArgs>> tags;
 
-    public Output<List<DataSetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DataSetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DataSetArgs(
-        @Nullable Output<String> awsAccountId,
-        @Nullable Output<List<DataSetColumnGroupArgs>> columnGroups,
-        @Nullable Output<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules,
-        @Nullable Output<String> dataSetId,
-        @Nullable Output<DataSetFieldFolderMapArgs> fieldFolders,
-        @Nullable Output<DataSetImportMode> importMode,
-        @Nullable Output<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy,
-        @Nullable Output<DataSetLogicalTableMapArgs> logicalTableMap,
-        @Nullable Output<String> name,
-        @Nullable Output<List<DataSetResourcePermissionArgs>> permissions,
-        @Nullable Output<DataSetPhysicalTableMapArgs> physicalTableMap,
-        @Nullable Output<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet,
-        @Nullable Output<List<DataSetTagArgs>> tags) {
-        this.awsAccountId = awsAccountId;
-        this.columnGroups = columnGroups;
-        this.columnLevelPermissionRules = columnLevelPermissionRules;
-        this.dataSetId = dataSetId;
-        this.fieldFolders = fieldFolders;
-        this.importMode = importMode;
-        this.ingestionWaitPolicy = ingestionWaitPolicy;
-        this.logicalTableMap = logicalTableMap;
-        this.name = name;
-        this.permissions = permissions;
-        this.physicalTableMap = physicalTableMap;
-        this.rowLevelPermissionDataSet = rowLevelPermissionDataSet;
-        this.tags = tags;
-    }
+    private DataSetArgs() {}
 
-    private DataSetArgs() {
-        this.awsAccountId = Codegen.empty();
-        this.columnGroups = Codegen.empty();
-        this.columnLevelPermissionRules = Codegen.empty();
-        this.dataSetId = Codegen.empty();
-        this.fieldFolders = Codegen.empty();
-        this.importMode = Codegen.empty();
-        this.ingestionWaitPolicy = Codegen.empty();
-        this.logicalTableMap = Codegen.empty();
-        this.name = Codegen.empty();
-        this.permissions = Codegen.empty();
-        this.physicalTableMap = Codegen.empty();
-        this.rowLevelPermissionDataSet = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DataSetArgs(DataSetArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.columnGroups = $.columnGroups;
+        this.columnLevelPermissionRules = $.columnLevelPermissionRules;
+        this.dataSetId = $.dataSetId;
+        this.fieldFolders = $.fieldFolders;
+        this.importMode = $.importMode;
+        this.ingestionWaitPolicy = $.ingestionWaitPolicy;
+        this.logicalTableMap = $.logicalTableMap;
+        this.name = $.name;
+        this.permissions = $.permissions;
+        this.physicalTableMap = $.physicalTableMap;
+        this.rowLevelPermissionDataSet = $.rowLevelPermissionDataSet;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> awsAccountId;
-        private @Nullable Output<List<DataSetColumnGroupArgs>> columnGroups;
-        private @Nullable Output<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules;
-        private @Nullable Output<String> dataSetId;
-        private @Nullable Output<DataSetFieldFolderMapArgs> fieldFolders;
-        private @Nullable Output<DataSetImportMode> importMode;
-        private @Nullable Output<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy;
-        private @Nullable Output<DataSetLogicalTableMapArgs> logicalTableMap;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<DataSetResourcePermissionArgs>> permissions;
-        private @Nullable Output<DataSetPhysicalTableMapArgs> physicalTableMap;
-        private @Nullable Output<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet;
-        private @Nullable Output<List<DataSetTagArgs>> tags;
+        private DataSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetArgs();
         }
 
         public Builder(DataSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.columnGroups = defaults.columnGroups;
-    	      this.columnLevelPermissionRules = defaults.columnLevelPermissionRules;
-    	      this.dataSetId = defaults.dataSetId;
-    	      this.fieldFolders = defaults.fieldFolders;
-    	      this.importMode = defaults.importMode;
-    	      this.ingestionWaitPolicy = defaults.ingestionWaitPolicy;
-    	      this.logicalTableMap = defaults.logicalTableMap;
-    	      this.name = defaults.name;
-    	      this.permissions = defaults.permissions;
-    	      this.physicalTableMap = defaults.physicalTableMap;
-    	      this.rowLevelPermissionDataSet = defaults.rowLevelPermissionDataSet;
-    	      this.tags = defaults.tags;
+            $ = new DataSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
-            this.awsAccountId = awsAccountId;
+            $.awsAccountId = awsAccountId;
             return this;
         }
-        public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Codegen.ofNullable(awsAccountId);
-            return this;
+
+        public Builder awsAccountId(String awsAccountId) {
+            return awsAccountId(Output.of(awsAccountId));
         }
+
         public Builder columnGroups(@Nullable Output<List<DataSetColumnGroupArgs>> columnGroups) {
-            this.columnGroups = columnGroups;
+            $.columnGroups = columnGroups;
             return this;
         }
-        public Builder columnGroups(@Nullable List<DataSetColumnGroupArgs> columnGroups) {
-            this.columnGroups = Codegen.ofNullable(columnGroups);
-            return this;
+
+        public Builder columnGroups(List<DataSetColumnGroupArgs> columnGroups) {
+            return columnGroups(Output.of(columnGroups));
         }
+
         public Builder columnGroups(DataSetColumnGroupArgs... columnGroups) {
             return columnGroups(List.of(columnGroups));
         }
+
         public Builder columnLevelPermissionRules(@Nullable Output<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules) {
-            this.columnLevelPermissionRules = columnLevelPermissionRules;
+            $.columnLevelPermissionRules = columnLevelPermissionRules;
             return this;
         }
-        public Builder columnLevelPermissionRules(@Nullable List<DataSetColumnLevelPermissionRuleArgs> columnLevelPermissionRules) {
-            this.columnLevelPermissionRules = Codegen.ofNullable(columnLevelPermissionRules);
-            return this;
+
+        public Builder columnLevelPermissionRules(List<DataSetColumnLevelPermissionRuleArgs> columnLevelPermissionRules) {
+            return columnLevelPermissionRules(Output.of(columnLevelPermissionRules));
         }
+
         public Builder columnLevelPermissionRules(DataSetColumnLevelPermissionRuleArgs... columnLevelPermissionRules) {
             return columnLevelPermissionRules(List.of(columnLevelPermissionRules));
         }
+
         public Builder dataSetId(@Nullable Output<String> dataSetId) {
-            this.dataSetId = dataSetId;
+            $.dataSetId = dataSetId;
             return this;
         }
-        public Builder dataSetId(@Nullable String dataSetId) {
-            this.dataSetId = Codegen.ofNullable(dataSetId);
-            return this;
+
+        public Builder dataSetId(String dataSetId) {
+            return dataSetId(Output.of(dataSetId));
         }
+
         public Builder fieldFolders(@Nullable Output<DataSetFieldFolderMapArgs> fieldFolders) {
-            this.fieldFolders = fieldFolders;
+            $.fieldFolders = fieldFolders;
             return this;
         }
-        public Builder fieldFolders(@Nullable DataSetFieldFolderMapArgs fieldFolders) {
-            this.fieldFolders = Codegen.ofNullable(fieldFolders);
-            return this;
+
+        public Builder fieldFolders(DataSetFieldFolderMapArgs fieldFolders) {
+            return fieldFolders(Output.of(fieldFolders));
         }
+
         public Builder importMode(@Nullable Output<DataSetImportMode> importMode) {
-            this.importMode = importMode;
+            $.importMode = importMode;
             return this;
         }
-        public Builder importMode(@Nullable DataSetImportMode importMode) {
-            this.importMode = Codegen.ofNullable(importMode);
-            return this;
+
+        public Builder importMode(DataSetImportMode importMode) {
+            return importMode(Output.of(importMode));
         }
+
         public Builder ingestionWaitPolicy(@Nullable Output<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy) {
-            this.ingestionWaitPolicy = ingestionWaitPolicy;
+            $.ingestionWaitPolicy = ingestionWaitPolicy;
             return this;
         }
-        public Builder ingestionWaitPolicy(@Nullable DataSetIngestionWaitPolicyArgs ingestionWaitPolicy) {
-            this.ingestionWaitPolicy = Codegen.ofNullable(ingestionWaitPolicy);
-            return this;
+
+        public Builder ingestionWaitPolicy(DataSetIngestionWaitPolicyArgs ingestionWaitPolicy) {
+            return ingestionWaitPolicy(Output.of(ingestionWaitPolicy));
         }
+
         public Builder logicalTableMap(@Nullable Output<DataSetLogicalTableMapArgs> logicalTableMap) {
-            this.logicalTableMap = logicalTableMap;
+            $.logicalTableMap = logicalTableMap;
             return this;
         }
-        public Builder logicalTableMap(@Nullable DataSetLogicalTableMapArgs logicalTableMap) {
-            this.logicalTableMap = Codegen.ofNullable(logicalTableMap);
-            return this;
+
+        public Builder logicalTableMap(DataSetLogicalTableMapArgs logicalTableMap) {
+            return logicalTableMap(Output.of(logicalTableMap));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder permissions(@Nullable Output<List<DataSetResourcePermissionArgs>> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable List<DataSetResourcePermissionArgs> permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
+
+        public Builder permissions(List<DataSetResourcePermissionArgs> permissions) {
+            return permissions(Output.of(permissions));
         }
+
         public Builder permissions(DataSetResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
+
         public Builder physicalTableMap(@Nullable Output<DataSetPhysicalTableMapArgs> physicalTableMap) {
-            this.physicalTableMap = physicalTableMap;
+            $.physicalTableMap = physicalTableMap;
             return this;
         }
-        public Builder physicalTableMap(@Nullable DataSetPhysicalTableMapArgs physicalTableMap) {
-            this.physicalTableMap = Codegen.ofNullable(physicalTableMap);
-            return this;
+
+        public Builder physicalTableMap(DataSetPhysicalTableMapArgs physicalTableMap) {
+            return physicalTableMap(Output.of(physicalTableMap));
         }
+
         public Builder rowLevelPermissionDataSet(@Nullable Output<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet) {
-            this.rowLevelPermissionDataSet = rowLevelPermissionDataSet;
+            $.rowLevelPermissionDataSet = rowLevelPermissionDataSet;
             return this;
         }
-        public Builder rowLevelPermissionDataSet(@Nullable DataSetRowLevelPermissionDataSetArgs rowLevelPermissionDataSet) {
-            this.rowLevelPermissionDataSet = Codegen.ofNullable(rowLevelPermissionDataSet);
-            return this;
+
+        public Builder rowLevelPermissionDataSet(DataSetRowLevelPermissionDataSetArgs rowLevelPermissionDataSet) {
+            return rowLevelPermissionDataSet(Output.of(rowLevelPermissionDataSet));
         }
+
         public Builder tags(@Nullable Output<List<DataSetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DataSetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DataSetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DataSetTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DataSetArgs build() {
-            return new DataSetArgs(awsAccountId, columnGroups, columnLevelPermissionRules, dataSetId, fieldFolders, importMode, ingestionWaitPolicy, logicalTableMap, name, permissions, physicalTableMap, rowLevelPermissionDataSet, tags);
+        }
+
+        public DataSetArgs build() {
+            return $;
         }
     }
+
 }

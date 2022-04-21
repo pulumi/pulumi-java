@@ -23,7 +23,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="branches", required=true)
-      private final List<BranchResponse> branches;
+    private List<BranchResponse> branches;
 
     public List<BranchResponse> branches() {
         return this.branches;
@@ -34,58 +34,56 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public StepResponse(
-        List<BranchResponse> branches,
-        String name) {
-        this.branches = Objects.requireNonNull(branches, "expected parameter 'branches' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private StepResponse() {}
 
-    private StepResponse() {
-        this.branches = List.of();
-        this.name = null;
+    private StepResponse(StepResponse $) {
+        this.branches = $.branches;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BranchResponse> branches;
-        private String name;
+        private StepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StepResponse();
         }
 
         public Builder(StepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branches = defaults.branches;
-    	      this.name = defaults.name;
+            $ = new StepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branches(List<BranchResponse> branches) {
-            this.branches = Objects.requireNonNull(branches);
+            $.branches = branches;
             return this;
         }
+
         public Builder branches(BranchResponse... branches) {
             return branches(List.of(branches));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public StepResponse build() {
-            return new StepResponse(branches, name);
+        }
+
+        public StepResponse build() {
+            $.branches = Objects.requireNonNull($.branches, "expected parameter 'branches' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

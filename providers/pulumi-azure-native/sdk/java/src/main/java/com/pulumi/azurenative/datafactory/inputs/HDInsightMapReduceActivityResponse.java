@@ -31,10 +31,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="arguments")
-      private final @Nullable List<Object> arguments;
+    private @Nullable List<Object> arguments;
 
-    public List<Object> arguments() {
-        return this.arguments == null ? List.of() : this.arguments;
+    public Optional<List<Object>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="className", required=true)
-      private final Object className;
+    private Object className;
 
     public Object className() {
         return this.className;
@@ -53,10 +53,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="defines")
-      private final @Nullable Map<String,Object> defines;
+    private @Nullable Map<String,Object> defines;
 
-    public Map<String,Object> defines() {
-        return this.defines == null ? Map.of() : this.defines;
+    public Optional<Map<String,Object>> defines() {
+        return Optional.ofNullable(this.defines);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="getDebugInfo")
-      private final @Nullable String getDebugInfo;
+    private @Nullable String getDebugInfo;
 
     public Optional<String> getDebugInfo() {
-        return this.getDebugInfo == null ? Optional.empty() : Optional.ofNullable(this.getDebugInfo);
+        return Optional.ofNullable(this.getDebugInfo);
     }
 
     /**
@@ -97,7 +97,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="jarFilePath", required=true)
-      private final Object jarFilePath;
+    private Object jarFilePath;
 
     public Object jarFilePath() {
         return this.jarFilePath;
@@ -108,10 +108,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="jarLibs")
-      private final @Nullable List<Object> jarLibs;
+    private @Nullable List<Object> jarLibs;
 
-    public List<Object> jarLibs() {
-        return this.jarLibs == null ? List.of() : this.jarLibs;
+    public Optional<List<Object>> jarLibs() {
+        return Optional.ofNullable(this.jarLibs);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="jarLinkedService")
-      private final @Nullable LinkedServiceReferenceResponse jarLinkedService;
+    private @Nullable LinkedServiceReferenceResponse jarLinkedService;
 
     public Optional<LinkedServiceReferenceResponse> jarLinkedService() {
-        return this.jarLinkedService == null ? Optional.empty() : Optional.ofNullable(this.jarLinkedService);
+        return Optional.ofNullable(this.jarLinkedService);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -141,7 +141,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -152,10 +152,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="storageLinkedServices")
-      private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
+    private @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
-    public List<LinkedServiceReferenceResponse> storageLinkedServices() {
-        return this.storageLinkedServices == null ? List.of() : this.storageLinkedServices;
+    public Optional<List<LinkedServiceReferenceResponse>> storageLinkedServices() {
+        return Optional.ofNullable(this.storageLinkedServices);
     }
 
     /**
@@ -175,7 +175,7 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -186,187 +186,152 @@ public final class HDInsightMapReduceActivityResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public HDInsightMapReduceActivityResponse(
-        @Nullable List<Object> arguments,
-        Object className,
-        @Nullable Map<String,Object> defines,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable String getDebugInfo,
-        Object jarFilePath,
-        @Nullable List<Object> jarLibs,
-        @Nullable LinkedServiceReferenceResponse jarLinkedService,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
-        this.arguments = arguments;
-        this.className = Objects.requireNonNull(className, "expected parameter 'className' to be non-null");
-        this.defines = defines;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.getDebugInfo = getDebugInfo;
-        this.jarFilePath = Objects.requireNonNull(jarFilePath, "expected parameter 'jarFilePath' to be non-null");
-        this.jarLibs = jarLibs;
-        this.jarLinkedService = jarLinkedService;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.storageLinkedServices = storageLinkedServices;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private HDInsightMapReduceActivityResponse() {}
 
-    private HDInsightMapReduceActivityResponse() {
-        this.arguments = List.of();
-        this.className = null;
-        this.defines = Map.of();
-        this.dependsOn = List.of();
-        this.description = null;
-        this.getDebugInfo = null;
-        this.jarFilePath = null;
-        this.jarLibs = List.of();
-        this.jarLinkedService = null;
-        this.linkedServiceName = null;
-        this.name = null;
-        this.policy = null;
-        this.storageLinkedServices = List.of();
-        this.type = null;
-        this.userProperties = List.of();
+    private HDInsightMapReduceActivityResponse(HDInsightMapReduceActivityResponse $) {
+        this.arguments = $.arguments;
+        this.className = $.className;
+        this.defines = $.defines;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.getDebugInfo = $.getDebugInfo;
+        this.jarFilePath = $.jarFilePath;
+        this.jarLibs = $.jarLibs;
+        this.jarLinkedService = $.jarLinkedService;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.storageLinkedServices = $.storageLinkedServices;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HDInsightMapReduceActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> arguments;
-        private Object className;
-        private @Nullable Map<String,Object> defines;
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable String getDebugInfo;
-        private Object jarFilePath;
-        private @Nullable List<Object> jarLibs;
-        private @Nullable LinkedServiceReferenceResponse jarLinkedService;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
+        private HDInsightMapReduceActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HDInsightMapReduceActivityResponse();
         }
 
         public Builder(HDInsightMapReduceActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.className = defaults.className;
-    	      this.defines = defaults.defines;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.getDebugInfo = defaults.getDebugInfo;
-    	      this.jarFilePath = defaults.jarFilePath;
-    	      this.jarLibs = defaults.jarLibs;
-    	      this.jarLinkedService = defaults.jarLinkedService;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.storageLinkedServices = defaults.storageLinkedServices;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new HDInsightMapReduceActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable List<Object> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
+
         public Builder arguments(Object... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder className(Object className) {
-            this.className = Objects.requireNonNull(className);
+            $.className = className;
             return this;
         }
+
         public Builder defines(@Nullable Map<String,Object> defines) {
-            this.defines = defines;
+            $.defines = defines;
             return this;
         }
+
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder getDebugInfo(@Nullable String getDebugInfo) {
-            this.getDebugInfo = getDebugInfo;
+            $.getDebugInfo = getDebugInfo;
             return this;
         }
+
         public Builder jarFilePath(Object jarFilePath) {
-            this.jarFilePath = Objects.requireNonNull(jarFilePath);
+            $.jarFilePath = jarFilePath;
             return this;
         }
+
         public Builder jarLibs(@Nullable List<Object> jarLibs) {
-            this.jarLibs = jarLibs;
+            $.jarLibs = jarLibs;
             return this;
         }
+
         public Builder jarLibs(Object... jarLibs) {
             return jarLibs(List.of(jarLibs));
         }
+
         public Builder jarLinkedService(@Nullable LinkedServiceReferenceResponse jarLinkedService) {
-            this.jarLinkedService = jarLinkedService;
+            $.jarLinkedService = jarLinkedService;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
-            this.storageLinkedServices = storageLinkedServices;
+            $.storageLinkedServices = storageLinkedServices;
             return this;
         }
+
         public Builder storageLinkedServices(LinkedServiceReferenceResponse... storageLinkedServices) {
             return storageLinkedServices(List.of(storageLinkedServices));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public HDInsightMapReduceActivityResponse build() {
-            return new HDInsightMapReduceActivityResponse(arguments, className, defines, dependsOn, description, getDebugInfo, jarFilePath, jarLibs, jarLinkedService, linkedServiceName, name, policy, storageLinkedServices, type, userProperties);
+        }
+
+        public HDInsightMapReduceActivityResponse build() {
+            $.className = Objects.requireNonNull($.className, "expected parameter 'className' to be non-null");
+            $.jarFilePath = Objects.requireNonNull($.jarFilePath, "expected parameter 'jarFilePath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

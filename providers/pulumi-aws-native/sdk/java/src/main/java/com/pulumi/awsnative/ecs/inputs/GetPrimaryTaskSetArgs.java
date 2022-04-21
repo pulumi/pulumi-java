@@ -17,7 +17,7 @@ public final class GetPrimaryTaskSetArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cluster", required=true)
-      private final String cluster;
+    private String cluster;
 
     public String cluster() {
         return this.cluster;
@@ -28,55 +28,52 @@ public final class GetPrimaryTaskSetArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public GetPrimaryTaskSetArgs(
-        String cluster,
-        String service) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private GetPrimaryTaskSetArgs() {}
 
-    private GetPrimaryTaskSetArgs() {
-        this.cluster = null;
-        this.service = null;
+    private GetPrimaryTaskSetArgs(GetPrimaryTaskSetArgs $) {
+        this.cluster = $.cluster;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrimaryTaskSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cluster;
-        private String service;
+        private GetPrimaryTaskSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrimaryTaskSetArgs();
         }
 
         public Builder(GetPrimaryTaskSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.service = defaults.service;
+            $ = new GetPrimaryTaskSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public GetPrimaryTaskSetArgs build() {
-            return new GetPrimaryTaskSetArgs(cluster, service);
+        }
+
+        public GetPrimaryTaskSetArgs build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

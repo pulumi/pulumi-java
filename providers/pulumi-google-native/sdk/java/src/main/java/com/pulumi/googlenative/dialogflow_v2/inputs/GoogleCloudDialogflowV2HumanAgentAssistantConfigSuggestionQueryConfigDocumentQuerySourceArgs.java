@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="documents", required=true)
-      private final Output<List<String>> documents;
+    private Output<List<String>> documents;
 
     public Output<List<String>> documents() {
         return this.documents;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs(Output<List<String>> documents) {
-        this.documents = Objects.requireNonNull(documents, "expected parameter 'documents' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs() {
-        this.documents = Codegen.empty();
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs $) {
+        this.documents = $.documents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> documents;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documents = defaults.documents;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder documents(Output<List<String>> documents) {
-            this.documents = Objects.requireNonNull(documents);
+            $.documents = documents;
             return this;
         }
+
         public Builder documents(List<String> documents) {
-            this.documents = Output.of(Objects.requireNonNull(documents));
-            return this;
+            return documents(Output.of(documents));
         }
+
         public Builder documents(String... documents) {
             return documents(List.of(documents));
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs(documents);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceArgs build() {
+            $.documents = Objects.requireNonNull($.documents, "expected parameter 'documents' to be non-null");
+            return $;
         }
     }
+
 }

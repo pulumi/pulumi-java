@@ -21,7 +21,7 @@ public final class EndpointRangeDescriptionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="endPort", required=true)
-      private final Integer endPort;
+    private Integer endPort;
 
     public Integer endPort() {
         return this.endPort;
@@ -32,55 +32,52 @@ public final class EndpointRangeDescriptionResponse extends com.pulumi.resources
      * 
      */
     @Import(name="startPort", required=true)
-      private final Integer startPort;
+    private Integer startPort;
 
     public Integer startPort() {
         return this.startPort;
     }
 
-    public EndpointRangeDescriptionResponse(
-        Integer endPort,
-        Integer startPort) {
-        this.endPort = Objects.requireNonNull(endPort, "expected parameter 'endPort' to be non-null");
-        this.startPort = Objects.requireNonNull(startPort, "expected parameter 'startPort' to be non-null");
-    }
+    private EndpointRangeDescriptionResponse() {}
 
-    private EndpointRangeDescriptionResponse() {
-        this.endPort = null;
-        this.startPort = null;
+    private EndpointRangeDescriptionResponse(EndpointRangeDescriptionResponse $) {
+        this.endPort = $.endPort;
+        this.startPort = $.startPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointRangeDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer endPort;
-        private Integer startPort;
+        private EndpointRangeDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointRangeDescriptionResponse();
         }
 
         public Builder(EndpointRangeDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endPort = defaults.endPort;
-    	      this.startPort = defaults.startPort;
+            $ = new EndpointRangeDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endPort(Integer endPort) {
-            this.endPort = Objects.requireNonNull(endPort);
+            $.endPort = endPort;
             return this;
         }
+
         public Builder startPort(Integer startPort) {
-            this.startPort = Objects.requireNonNull(startPort);
+            $.startPort = startPort;
             return this;
-        }        public EndpointRangeDescriptionResponse build() {
-            return new EndpointRangeDescriptionResponse(endPort, startPort);
+        }
+
+        public EndpointRangeDescriptionResponse build() {
+            $.endPort = Objects.requireNonNull($.endPort, "expected parameter 'endPort' to be non-null");
+            $.startPort = Objects.requireNonNull($.startPort, "expected parameter 'startPort' to be non-null");
+            return $;
         }
     }
+
 }

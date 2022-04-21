@@ -21,45 +21,45 @@ public final class AppEngineHttpQueueResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="appEngineRoutingOverride", required=true)
-      private final AppEngineRoutingResponse appEngineRoutingOverride;
+    private AppEngineRoutingResponse appEngineRoutingOverride;
 
     public AppEngineRoutingResponse appEngineRoutingOverride() {
         return this.appEngineRoutingOverride;
     }
 
-    public AppEngineHttpQueueResponse(AppEngineRoutingResponse appEngineRoutingOverride) {
-        this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride, "expected parameter 'appEngineRoutingOverride' to be non-null");
-    }
+    private AppEngineHttpQueueResponse() {}
 
-    private AppEngineHttpQueueResponse() {
-        this.appEngineRoutingOverride = null;
+    private AppEngineHttpQueueResponse(AppEngineHttpQueueResponse $) {
+        this.appEngineRoutingOverride = $.appEngineRoutingOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineHttpQueueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AppEngineRoutingResponse appEngineRoutingOverride;
+        private AppEngineHttpQueueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineHttpQueueResponse();
         }
 
         public Builder(AppEngineHttpQueueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngineRoutingOverride = defaults.appEngineRoutingOverride;
+            $ = new AppEngineHttpQueueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngineRoutingOverride(AppEngineRoutingResponse appEngineRoutingOverride) {
-            this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
+            $.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
-        }        public AppEngineHttpQueueResponse build() {
-            return new AppEngineHttpQueueResponse(appEngineRoutingOverride);
+        }
+
+        public AppEngineHttpQueueResponse build() {
+            $.appEngineRoutingOverride = Objects.requireNonNull($.appEngineRoutingOverride, "expected parameter 'appEngineRoutingOverride' to be non-null");
+            return $;
         }
     }
+
 }

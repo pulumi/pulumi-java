@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CustomDnsConfigPropertiesFormatArgs extends com.pulumi.resour
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable Output<String> fqdn;
+    private @Nullable Output<String> fqdn;
 
-    public Output<String> fqdn() {
-        return this.fqdn == null ? Codegen.empty() : this.fqdn;
+    public Optional<Output<String>> fqdn() {
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class CustomDnsConfigPropertiesFormatArgs extends com.pulumi.resour
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<String>> ipAddresses;
+    private @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<String>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
-    public CustomDnsConfigPropertiesFormatArgs(
-        @Nullable Output<String> fqdn,
-        @Nullable Output<List<String>> ipAddresses) {
-        this.fqdn = fqdn;
-        this.ipAddresses = ipAddresses;
-    }
+    private CustomDnsConfigPropertiesFormatArgs() {}
 
-    private CustomDnsConfigPropertiesFormatArgs() {
-        this.fqdn = Codegen.empty();
-        this.ipAddresses = Codegen.empty();
+    private CustomDnsConfigPropertiesFormatArgs(CustomDnsConfigPropertiesFormatArgs $) {
+        this.fqdn = $.fqdn;
+        this.ipAddresses = $.ipAddresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDnsConfigPropertiesFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fqdn;
-        private @Nullable Output<List<String>> ipAddresses;
+        private CustomDnsConfigPropertiesFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDnsConfigPropertiesFormatArgs();
         }
 
         public Builder(CustomDnsConfigPropertiesFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdn = defaults.fqdn;
-    	      this.ipAddresses = defaults.ipAddresses;
+            $ = new CustomDnsConfigPropertiesFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdn(@Nullable Output<String> fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
-        public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Codegen.ofNullable(fqdn);
-            return this;
+
+        public Builder fqdn(String fqdn) {
+            return fqdn(Output.of(fqdn));
         }
+
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<String> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
-        }        public CustomDnsConfigPropertiesFormatArgs build() {
-            return new CustomDnsConfigPropertiesFormatArgs(fqdn, ipAddresses);
+        }
+
+        public CustomDnsConfigPropertiesFormatArgs build() {
+            return $;
         }
     }
+
 }

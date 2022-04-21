@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DataDisksGroupsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="disksPerNode")
-      private final @Nullable Output<Integer> disksPerNode;
+    private @Nullable Output<Integer> disksPerNode;
 
-    public Output<Integer> disksPerNode() {
-        return this.disksPerNode == null ? Codegen.empty() : this.disksPerNode;
+    public Optional<Output<Integer>> disksPerNode() {
+        return Optional.ofNullable(this.disksPerNode);
     }
 
-    public DataDisksGroupsArgs(@Nullable Output<Integer> disksPerNode) {
-        this.disksPerNode = disksPerNode;
-    }
+    private DataDisksGroupsArgs() {}
 
-    private DataDisksGroupsArgs() {
-        this.disksPerNode = Codegen.empty();
+    private DataDisksGroupsArgs(DataDisksGroupsArgs $) {
+        this.disksPerNode = $.disksPerNode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDisksGroupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> disksPerNode;
+        private DataDisksGroupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDisksGroupsArgs();
         }
 
         public Builder(DataDisksGroupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disksPerNode = defaults.disksPerNode;
+            $ = new DataDisksGroupsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disksPerNode(@Nullable Output<Integer> disksPerNode) {
-            this.disksPerNode = disksPerNode;
+            $.disksPerNode = disksPerNode;
             return this;
         }
-        public Builder disksPerNode(@Nullable Integer disksPerNode) {
-            this.disksPerNode = Codegen.ofNullable(disksPerNode);
-            return this;
-        }        public DataDisksGroupsArgs build() {
-            return new DataDisksGroupsArgs(disksPerNode);
+
+        public Builder disksPerNode(Integer disksPerNode) {
+            return disksPerNode(Output.of(disksPerNode));
+        }
+
+        public DataDisksGroupsArgs build() {
+            return $;
         }
     }
+
 }

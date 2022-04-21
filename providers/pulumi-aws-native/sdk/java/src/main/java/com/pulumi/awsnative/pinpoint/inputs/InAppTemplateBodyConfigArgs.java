@@ -6,9 +6,9 @@ package com.pulumi.awsnative.pinpoint.inputs;
 import com.pulumi.awsnative.pinpoint.enums.InAppTemplateAlignment;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class InAppTemplateBodyConfigArgs extends com.pulumi.resources.Reso
     public static final InAppTemplateBodyConfigArgs Empty = new InAppTemplateBodyConfigArgs();
 
     @Import(name="alignment")
-      private final @Nullable Output<InAppTemplateAlignment> alignment;
+    private @Nullable Output<InAppTemplateAlignment> alignment;
 
-    public Output<InAppTemplateAlignment> alignment() {
-        return this.alignment == null ? Codegen.empty() : this.alignment;
+    public Optional<Output<InAppTemplateAlignment>> alignment() {
+        return Optional.ofNullable(this.alignment);
     }
 
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     @Import(name="textColor")
-      private final @Nullable Output<String> textColor;
+    private @Nullable Output<String> textColor;
 
-    public Output<String> textColor() {
-        return this.textColor == null ? Codegen.empty() : this.textColor;
+    public Optional<Output<String>> textColor() {
+        return Optional.ofNullable(this.textColor);
     }
 
-    public InAppTemplateBodyConfigArgs(
-        @Nullable Output<InAppTemplateAlignment> alignment,
-        @Nullable Output<String> body,
-        @Nullable Output<String> textColor) {
-        this.alignment = alignment;
-        this.body = body;
-        this.textColor = textColor;
-    }
+    private InAppTemplateBodyConfigArgs() {}
 
-    private InAppTemplateBodyConfigArgs() {
-        this.alignment = Codegen.empty();
-        this.body = Codegen.empty();
-        this.textColor = Codegen.empty();
+    private InAppTemplateBodyConfigArgs(InAppTemplateBodyConfigArgs $) {
+        this.alignment = $.alignment;
+        this.body = $.body;
+        this.textColor = $.textColor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InAppTemplateBodyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InAppTemplateAlignment> alignment;
-        private @Nullable Output<String> body;
-        private @Nullable Output<String> textColor;
+        private InAppTemplateBodyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InAppTemplateBodyConfigArgs();
         }
 
         public Builder(InAppTemplateBodyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alignment = defaults.alignment;
-    	      this.body = defaults.body;
-    	      this.textColor = defaults.textColor;
+            $ = new InAppTemplateBodyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alignment(@Nullable Output<InAppTemplateAlignment> alignment) {
-            this.alignment = alignment;
+            $.alignment = alignment;
             return this;
         }
-        public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
-            this.alignment = Codegen.ofNullable(alignment);
-            return this;
+
+        public Builder alignment(InAppTemplateAlignment alignment) {
+            return alignment(Output.of(alignment));
         }
+
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder textColor(@Nullable Output<String> textColor) {
-            this.textColor = textColor;
+            $.textColor = textColor;
             return this;
         }
-        public Builder textColor(@Nullable String textColor) {
-            this.textColor = Codegen.ofNullable(textColor);
-            return this;
-        }        public InAppTemplateBodyConfigArgs build() {
-            return new InAppTemplateBodyConfigArgs(alignment, body, textColor);
+
+        public Builder textColor(String textColor) {
+            return textColor(Output.of(textColor));
+        }
+
+        public InAppTemplateBodyConfigArgs build() {
+            return $;
         }
     }
+
 }

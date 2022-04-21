@@ -20,62 +20,57 @@ public final class ThemeTileLayoutStyle extends com.pulumi.resources.InvokeArgs 
     public static final ThemeTileLayoutStyle Empty = new ThemeTileLayoutStyle();
 
     @Import(name="gutter")
-      private final @Nullable ThemeGutterStyle gutter;
+    private @Nullable ThemeGutterStyle gutter;
 
     public Optional<ThemeGutterStyle> gutter() {
-        return this.gutter == null ? Optional.empty() : Optional.ofNullable(this.gutter);
+        return Optional.ofNullable(this.gutter);
     }
 
     @Import(name="margin")
-      private final @Nullable ThemeMarginStyle margin;
+    private @Nullable ThemeMarginStyle margin;
 
     public Optional<ThemeMarginStyle> margin() {
-        return this.margin == null ? Optional.empty() : Optional.ofNullable(this.margin);
+        return Optional.ofNullable(this.margin);
     }
 
-    public ThemeTileLayoutStyle(
-        @Nullable ThemeGutterStyle gutter,
-        @Nullable ThemeMarginStyle margin) {
-        this.gutter = gutter;
-        this.margin = margin;
-    }
+    private ThemeTileLayoutStyle() {}
 
-    private ThemeTileLayoutStyle() {
-        this.gutter = null;
-        this.margin = null;
+    private ThemeTileLayoutStyle(ThemeTileLayoutStyle $) {
+        this.gutter = $.gutter;
+        this.margin = $.margin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeTileLayoutStyle defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ThemeGutterStyle gutter;
-        private @Nullable ThemeMarginStyle margin;
+        private ThemeTileLayoutStyle $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeTileLayoutStyle();
         }
 
         public Builder(ThemeTileLayoutStyle defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gutter = defaults.gutter;
-    	      this.margin = defaults.margin;
+            $ = new ThemeTileLayoutStyle(Objects.requireNonNull(defaults));
         }
 
         public Builder gutter(@Nullable ThemeGutterStyle gutter) {
-            this.gutter = gutter;
+            $.gutter = gutter;
             return this;
         }
+
         public Builder margin(@Nullable ThemeMarginStyle margin) {
-            this.margin = margin;
+            $.margin = margin;
             return this;
-        }        public ThemeTileLayoutStyle build() {
-            return new ThemeTileLayoutStyle(gutter, margin);
+        }
+
+        public ThemeTileLayoutStyle build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.msk;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ScramSecretAssociationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="clusterArn", required=true)
-      private final Output<String> clusterArn;
+    private Output<String> clusterArn;
 
     public Output<String> clusterArn() {
         return this.clusterArn;
@@ -31,66 +30,64 @@ public final class ScramSecretAssociationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="secretArnLists", required=true)
-      private final Output<List<String>> secretArnLists;
+    private Output<List<String>> secretArnLists;
 
     public Output<List<String>> secretArnLists() {
         return this.secretArnLists;
     }
 
-    public ScramSecretAssociationArgs(
-        Output<String> clusterArn,
-        Output<List<String>> secretArnLists) {
-        this.clusterArn = Objects.requireNonNull(clusterArn, "expected parameter 'clusterArn' to be non-null");
-        this.secretArnLists = Objects.requireNonNull(secretArnLists, "expected parameter 'secretArnLists' to be non-null");
-    }
+    private ScramSecretAssociationArgs() {}
 
-    private ScramSecretAssociationArgs() {
-        this.clusterArn = Codegen.empty();
-        this.secretArnLists = Codegen.empty();
+    private ScramSecretAssociationArgs(ScramSecretAssociationArgs $) {
+        this.clusterArn = $.clusterArn;
+        this.secretArnLists = $.secretArnLists;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScramSecretAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterArn;
-        private Output<List<String>> secretArnLists;
+        private ScramSecretAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScramSecretAssociationArgs();
         }
 
         public Builder(ScramSecretAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterArn = defaults.clusterArn;
-    	      this.secretArnLists = defaults.secretArnLists;
+            $ = new ScramSecretAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterArn(Output<String> clusterArn) {
-            this.clusterArn = Objects.requireNonNull(clusterArn);
+            $.clusterArn = clusterArn;
             return this;
         }
+
         public Builder clusterArn(String clusterArn) {
-            this.clusterArn = Output.of(Objects.requireNonNull(clusterArn));
-            return this;
+            return clusterArn(Output.of(clusterArn));
         }
+
         public Builder secretArnLists(Output<List<String>> secretArnLists) {
-            this.secretArnLists = Objects.requireNonNull(secretArnLists);
+            $.secretArnLists = secretArnLists;
             return this;
         }
+
         public Builder secretArnLists(List<String> secretArnLists) {
-            this.secretArnLists = Output.of(Objects.requireNonNull(secretArnLists));
-            return this;
+            return secretArnLists(Output.of(secretArnLists));
         }
+
         public Builder secretArnLists(String... secretArnLists) {
             return secretArnLists(List.of(secretArnLists));
-        }        public ScramSecretAssociationArgs build() {
-            return new ScramSecretAssociationArgs(clusterArn, secretArnLists);
+        }
+
+        public ScramSecretAssociationArgs build() {
+            $.clusterArn = Objects.requireNonNull($.clusterArn, "expected parameter 'clusterArn' to be non-null");
+            $.secretArnLists = Objects.requireNonNull($.secretArnLists, "expected parameter 'secretArnLists' to be non-null");
+            return $;
         }
     }
+
 }

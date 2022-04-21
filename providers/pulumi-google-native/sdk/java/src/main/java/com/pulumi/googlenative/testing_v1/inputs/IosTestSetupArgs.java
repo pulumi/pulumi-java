@@ -5,12 +5,12 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import com.pulumi.googlenative.testing_v1.inputs.IosDeviceFileArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalIpas")
-      private final @Nullable Output<List<FileReferenceArgs>> additionalIpas;
+    private @Nullable Output<List<FileReferenceArgs>> additionalIpas;
 
-    public Output<List<FileReferenceArgs>> additionalIpas() {
-        return this.additionalIpas == null ? Codegen.empty() : this.additionalIpas;
+    public Optional<Output<List<FileReferenceArgs>>> additionalIpas() {
+        return Optional.ofNullable(this.additionalIpas);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<String> networkProfile;
+    private @Nullable Output<String> networkProfile;
 
-    public Output<String> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<String>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pullDirectories")
-      private final @Nullable Output<List<IosDeviceFileArgs>> pullDirectories;
+    private @Nullable Output<List<IosDeviceFileArgs>> pullDirectories;
 
-    public Output<List<IosDeviceFileArgs>> pullDirectories() {
-        return this.pullDirectories == null ? Codegen.empty() : this.pullDirectories;
+    public Optional<Output<List<IosDeviceFileArgs>>> pullDirectories() {
+        return Optional.ofNullable(this.pullDirectories);
     }
 
     /**
@@ -60,98 +60,90 @@ public final class IosTestSetupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pushFiles")
-      private final @Nullable Output<List<IosDeviceFileArgs>> pushFiles;
+    private @Nullable Output<List<IosDeviceFileArgs>> pushFiles;
 
-    public Output<List<IosDeviceFileArgs>> pushFiles() {
-        return this.pushFiles == null ? Codegen.empty() : this.pushFiles;
+    public Optional<Output<List<IosDeviceFileArgs>>> pushFiles() {
+        return Optional.ofNullable(this.pushFiles);
     }
 
-    public IosTestSetupArgs(
-        @Nullable Output<List<FileReferenceArgs>> additionalIpas,
-        @Nullable Output<String> networkProfile,
-        @Nullable Output<List<IosDeviceFileArgs>> pullDirectories,
-        @Nullable Output<List<IosDeviceFileArgs>> pushFiles) {
-        this.additionalIpas = additionalIpas;
-        this.networkProfile = networkProfile;
-        this.pullDirectories = pullDirectories;
-        this.pushFiles = pushFiles;
-    }
+    private IosTestSetupArgs() {}
 
-    private IosTestSetupArgs() {
-        this.additionalIpas = Codegen.empty();
-        this.networkProfile = Codegen.empty();
-        this.pullDirectories = Codegen.empty();
-        this.pushFiles = Codegen.empty();
+    private IosTestSetupArgs(IosTestSetupArgs $) {
+        this.additionalIpas = $.additionalIpas;
+        this.networkProfile = $.networkProfile;
+        this.pullDirectories = $.pullDirectories;
+        this.pushFiles = $.pushFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosTestSetupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FileReferenceArgs>> additionalIpas;
-        private @Nullable Output<String> networkProfile;
-        private @Nullable Output<List<IosDeviceFileArgs>> pullDirectories;
-        private @Nullable Output<List<IosDeviceFileArgs>> pushFiles;
+        private IosTestSetupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosTestSetupArgs();
         }
 
         public Builder(IosTestSetupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalIpas = defaults.additionalIpas;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.pullDirectories = defaults.pullDirectories;
-    	      this.pushFiles = defaults.pushFiles;
+            $ = new IosTestSetupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalIpas(@Nullable Output<List<FileReferenceArgs>> additionalIpas) {
-            this.additionalIpas = additionalIpas;
+            $.additionalIpas = additionalIpas;
             return this;
         }
-        public Builder additionalIpas(@Nullable List<FileReferenceArgs> additionalIpas) {
-            this.additionalIpas = Codegen.ofNullable(additionalIpas);
-            return this;
+
+        public Builder additionalIpas(List<FileReferenceArgs> additionalIpas) {
+            return additionalIpas(Output.of(additionalIpas));
         }
+
         public Builder additionalIpas(FileReferenceArgs... additionalIpas) {
             return additionalIpas(List.of(additionalIpas));
         }
+
         public Builder networkProfile(@Nullable Output<String> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable String networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
+
+        public Builder networkProfile(String networkProfile) {
+            return networkProfile(Output.of(networkProfile));
         }
+
         public Builder pullDirectories(@Nullable Output<List<IosDeviceFileArgs>> pullDirectories) {
-            this.pullDirectories = pullDirectories;
+            $.pullDirectories = pullDirectories;
             return this;
         }
-        public Builder pullDirectories(@Nullable List<IosDeviceFileArgs> pullDirectories) {
-            this.pullDirectories = Codegen.ofNullable(pullDirectories);
-            return this;
+
+        public Builder pullDirectories(List<IosDeviceFileArgs> pullDirectories) {
+            return pullDirectories(Output.of(pullDirectories));
         }
+
         public Builder pullDirectories(IosDeviceFileArgs... pullDirectories) {
             return pullDirectories(List.of(pullDirectories));
         }
+
         public Builder pushFiles(@Nullable Output<List<IosDeviceFileArgs>> pushFiles) {
-            this.pushFiles = pushFiles;
+            $.pushFiles = pushFiles;
             return this;
         }
-        public Builder pushFiles(@Nullable List<IosDeviceFileArgs> pushFiles) {
-            this.pushFiles = Codegen.ofNullable(pushFiles);
-            return this;
+
+        public Builder pushFiles(List<IosDeviceFileArgs> pushFiles) {
+            return pushFiles(Output.of(pushFiles));
         }
+
         public Builder pushFiles(IosDeviceFileArgs... pushFiles) {
             return pushFiles(List.of(pushFiles));
-        }        public IosTestSetupArgs build() {
-            return new IosTestSetupArgs(additionalIpas, networkProfile, pullDirectories, pushFiles);
+        }
+
+        public IosTestSetupArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,66 @@ public final class DetectorModelIotEventsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="inputName", required=true)
-      private final Output<String> inputName;
+    private Output<String> inputName;
 
     public Output<String> inputName() {
         return this.inputName;
     }
 
     @Import(name="payload")
-      private final @Nullable Output<DetectorModelPayloadArgs> payload;
+    private @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> payload() {
-        return this.payload == null ? Codegen.empty() : this.payload;
+    public Optional<Output<DetectorModelPayloadArgs>> payload() {
+        return Optional.ofNullable(this.payload);
     }
 
-    public DetectorModelIotEventsArgs(
-        Output<String> inputName,
-        @Nullable Output<DetectorModelPayloadArgs> payload) {
-        this.inputName = Objects.requireNonNull(inputName, "expected parameter 'inputName' to be non-null");
-        this.payload = payload;
-    }
+    private DetectorModelIotEventsArgs() {}
 
-    private DetectorModelIotEventsArgs() {
-        this.inputName = Codegen.empty();
-        this.payload = Codegen.empty();
+    private DetectorModelIotEventsArgs(DetectorModelIotEventsArgs $) {
+        this.inputName = $.inputName;
+        this.payload = $.payload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelIotEventsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> inputName;
-        private @Nullable Output<DetectorModelPayloadArgs> payload;
+        private DetectorModelIotEventsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelIotEventsArgs();
         }
 
         public Builder(DetectorModelIotEventsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputName = defaults.inputName;
-    	      this.payload = defaults.payload;
+            $ = new DetectorModelIotEventsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputName(Output<String> inputName) {
-            this.inputName = Objects.requireNonNull(inputName);
+            $.inputName = inputName;
             return this;
         }
+
         public Builder inputName(String inputName) {
-            this.inputName = Output.of(Objects.requireNonNull(inputName));
-            return this;
+            return inputName(Output.of(inputName));
         }
+
         public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
-        public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Codegen.ofNullable(payload);
-            return this;
-        }        public DetectorModelIotEventsArgs build() {
-            return new DetectorModelIotEventsArgs(inputName, payload);
+
+        public Builder payload(DetectorModelPayloadArgs payload) {
+            return payload(Output.of(payload));
+        }
+
+        public DetectorModelIotEventsArgs build() {
+            $.inputName = Objects.requireNonNull($.inputName, "expected parameter 'inputName' to be non-null");
+            return $;
         }
     }
+
 }

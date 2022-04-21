@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LoginRoutesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logoutEndpoint")
-      private final @Nullable Output<String> logoutEndpoint;
+    private @Nullable Output<String> logoutEndpoint;
 
-    public Output<String> logoutEndpoint() {
-        return this.logoutEndpoint == null ? Codegen.empty() : this.logoutEndpoint;
+    public Optional<Output<String>> logoutEndpoint() {
+        return Optional.ofNullable(this.logoutEndpoint);
     }
 
-    public LoginRoutesArgs(@Nullable Output<String> logoutEndpoint) {
-        this.logoutEndpoint = logoutEndpoint;
-    }
+    private LoginRoutesArgs() {}
 
-    private LoginRoutesArgs() {
-        this.logoutEndpoint = Codegen.empty();
+    private LoginRoutesArgs(LoginRoutesArgs $) {
+        this.logoutEndpoint = $.logoutEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoginRoutesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> logoutEndpoint;
+        private LoginRoutesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoginRoutesArgs();
         }
 
         public Builder(LoginRoutesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logoutEndpoint = defaults.logoutEndpoint;
+            $ = new LoginRoutesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logoutEndpoint(@Nullable Output<String> logoutEndpoint) {
-            this.logoutEndpoint = logoutEndpoint;
+            $.logoutEndpoint = logoutEndpoint;
             return this;
         }
-        public Builder logoutEndpoint(@Nullable String logoutEndpoint) {
-            this.logoutEndpoint = Codegen.ofNullable(logoutEndpoint);
-            return this;
-        }        public LoginRoutesArgs build() {
-            return new LoginRoutesArgs(logoutEndpoint);
+
+        public Builder logoutEndpoint(String logoutEndpoint) {
+            return logoutEndpoint(Output.of(logoutEndpoint));
+        }
+
+        public LoginRoutesArgs build() {
+            return $;
         }
     }
+
 }

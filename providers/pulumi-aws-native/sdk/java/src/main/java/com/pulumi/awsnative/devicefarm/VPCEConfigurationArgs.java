@@ -6,10 +6,10 @@ package com.pulumi.awsnative.devicefarm;
 import com.pulumi.awsnative.devicefarm.inputs.VPCEConfigurationTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,133 +18,123 @@ public final class VPCEConfigurationArgs extends com.pulumi.resources.ResourceAr
     public static final VPCEConfigurationArgs Empty = new VPCEConfigurationArgs();
 
     @Import(name="serviceDnsName", required=true)
-      private final Output<String> serviceDnsName;
+    private Output<String> serviceDnsName;
 
     public Output<String> serviceDnsName() {
         return this.serviceDnsName;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<VPCEConfigurationTagArgs>> tags;
+    private @Nullable Output<List<VPCEConfigurationTagArgs>> tags;
 
-    public Output<List<VPCEConfigurationTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<VPCEConfigurationTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="vpceConfigurationDescription")
-      private final @Nullable Output<String> vpceConfigurationDescription;
+    private @Nullable Output<String> vpceConfigurationDescription;
 
-    public Output<String> vpceConfigurationDescription() {
-        return this.vpceConfigurationDescription == null ? Codegen.empty() : this.vpceConfigurationDescription;
+    public Optional<Output<String>> vpceConfigurationDescription() {
+        return Optional.ofNullable(this.vpceConfigurationDescription);
     }
 
     @Import(name="vpceConfigurationName", required=true)
-      private final Output<String> vpceConfigurationName;
+    private Output<String> vpceConfigurationName;
 
     public Output<String> vpceConfigurationName() {
         return this.vpceConfigurationName;
     }
 
     @Import(name="vpceServiceName", required=true)
-      private final Output<String> vpceServiceName;
+    private Output<String> vpceServiceName;
 
     public Output<String> vpceServiceName() {
         return this.vpceServiceName;
     }
 
-    public VPCEConfigurationArgs(
-        Output<String> serviceDnsName,
-        @Nullable Output<List<VPCEConfigurationTagArgs>> tags,
-        @Nullable Output<String> vpceConfigurationDescription,
-        Output<String> vpceConfigurationName,
-        Output<String> vpceServiceName) {
-        this.serviceDnsName = Objects.requireNonNull(serviceDnsName, "expected parameter 'serviceDnsName' to be non-null");
-        this.tags = tags;
-        this.vpceConfigurationDescription = vpceConfigurationDescription;
-        this.vpceConfigurationName = Objects.requireNonNull(vpceConfigurationName, "expected parameter 'vpceConfigurationName' to be non-null");
-        this.vpceServiceName = Objects.requireNonNull(vpceServiceName, "expected parameter 'vpceServiceName' to be non-null");
-    }
+    private VPCEConfigurationArgs() {}
 
-    private VPCEConfigurationArgs() {
-        this.serviceDnsName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vpceConfigurationDescription = Codegen.empty();
-        this.vpceConfigurationName = Codegen.empty();
-        this.vpceServiceName = Codegen.empty();
+    private VPCEConfigurationArgs(VPCEConfigurationArgs $) {
+        this.serviceDnsName = $.serviceDnsName;
+        this.tags = $.tags;
+        this.vpceConfigurationDescription = $.vpceConfigurationDescription;
+        this.vpceConfigurationName = $.vpceConfigurationName;
+        this.vpceServiceName = $.vpceServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VPCEConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> serviceDnsName;
-        private @Nullable Output<List<VPCEConfigurationTagArgs>> tags;
-        private @Nullable Output<String> vpceConfigurationDescription;
-        private Output<String> vpceConfigurationName;
-        private Output<String> vpceServiceName;
+        private VPCEConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VPCEConfigurationArgs();
         }
 
         public Builder(VPCEConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serviceDnsName = defaults.serviceDnsName;
-    	      this.tags = defaults.tags;
-    	      this.vpceConfigurationDescription = defaults.vpceConfigurationDescription;
-    	      this.vpceConfigurationName = defaults.vpceConfigurationName;
-    	      this.vpceServiceName = defaults.vpceServiceName;
+            $ = new VPCEConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serviceDnsName(Output<String> serviceDnsName) {
-            this.serviceDnsName = Objects.requireNonNull(serviceDnsName);
+            $.serviceDnsName = serviceDnsName;
             return this;
         }
+
         public Builder serviceDnsName(String serviceDnsName) {
-            this.serviceDnsName = Output.of(Objects.requireNonNull(serviceDnsName));
-            return this;
+            return serviceDnsName(Output.of(serviceDnsName));
         }
+
         public Builder tags(@Nullable Output<List<VPCEConfigurationTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<VPCEConfigurationTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<VPCEConfigurationTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(VPCEConfigurationTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder vpceConfigurationDescription(@Nullable Output<String> vpceConfigurationDescription) {
-            this.vpceConfigurationDescription = vpceConfigurationDescription;
+            $.vpceConfigurationDescription = vpceConfigurationDescription;
             return this;
         }
-        public Builder vpceConfigurationDescription(@Nullable String vpceConfigurationDescription) {
-            this.vpceConfigurationDescription = Codegen.ofNullable(vpceConfigurationDescription);
-            return this;
+
+        public Builder vpceConfigurationDescription(String vpceConfigurationDescription) {
+            return vpceConfigurationDescription(Output.of(vpceConfigurationDescription));
         }
+
         public Builder vpceConfigurationName(Output<String> vpceConfigurationName) {
-            this.vpceConfigurationName = Objects.requireNonNull(vpceConfigurationName);
+            $.vpceConfigurationName = vpceConfigurationName;
             return this;
         }
+
         public Builder vpceConfigurationName(String vpceConfigurationName) {
-            this.vpceConfigurationName = Output.of(Objects.requireNonNull(vpceConfigurationName));
-            return this;
+            return vpceConfigurationName(Output.of(vpceConfigurationName));
         }
+
         public Builder vpceServiceName(Output<String> vpceServiceName) {
-            this.vpceServiceName = Objects.requireNonNull(vpceServiceName);
+            $.vpceServiceName = vpceServiceName;
             return this;
         }
+
         public Builder vpceServiceName(String vpceServiceName) {
-            this.vpceServiceName = Output.of(Objects.requireNonNull(vpceServiceName));
-            return this;
-        }        public VPCEConfigurationArgs build() {
-            return new VPCEConfigurationArgs(serviceDnsName, tags, vpceConfigurationDescription, vpceConfigurationName, vpceServiceName);
+            return vpceServiceName(Output.of(vpceServiceName));
+        }
+
+        public VPCEConfigurationArgs build() {
+            $.serviceDnsName = Objects.requireNonNull($.serviceDnsName, "expected parameter 'serviceDnsName' to be non-null");
+            $.vpceConfigurationName = Objects.requireNonNull($.vpceConfigurationName, "expected parameter 'vpceConfigurationName' to be non-null");
+            $.vpceServiceName = Objects.requireNonNull($.vpceServiceName, "expected parameter 'vpceServiceName' to be non-null");
+            return $;
         }
     }
+
 }

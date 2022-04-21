@@ -24,7 +24,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="alsologtostderr", required=true)
-      private final Boolean alsologtostderr;
+    private Boolean alsologtostderr;
 
     public Boolean alsologtostderr() {
         return this.alsologtostderr;
@@ -35,7 +35,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="baseTaskDir", required=true)
-      private final String baseTaskDir;
+    private String baseTaskDir;
 
     public String baseTaskDir() {
         return this.baseTaskDir;
@@ -46,7 +46,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="baseUrl", required=true)
-      private final String baseUrl;
+    private String baseUrl;
 
     public String baseUrl() {
         return this.baseUrl;
@@ -57,7 +57,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="commandlinesFileName", required=true)
-      private final String commandlinesFileName;
+    private String commandlinesFileName;
 
     public String commandlinesFileName() {
         return this.commandlinesFileName;
@@ -68,7 +68,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="continueOnException", required=true)
-      private final Boolean continueOnException;
+    private Boolean continueOnException;
 
     public Boolean continueOnException() {
         return this.continueOnException;
@@ -79,7 +79,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataflowApiVersion", required=true)
-      private final String dataflowApiVersion;
+    private String dataflowApiVersion;
 
     public String dataflowApiVersion() {
         return this.dataflowApiVersion;
@@ -90,7 +90,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="harnessCommand", required=true)
-      private final String harnessCommand;
+    private String harnessCommand;
 
     public String harnessCommand() {
         return this.harnessCommand;
@@ -101,7 +101,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="languageHint", required=true)
-      private final String languageHint;
+    private String languageHint;
 
     public String languageHint() {
         return this.languageHint;
@@ -112,7 +112,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="logDir", required=true)
-      private final String logDir;
+    private String logDir;
 
     public String logDir() {
         return this.logDir;
@@ -123,7 +123,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="logToSerialconsole", required=true)
-      private final Boolean logToSerialconsole;
+    private Boolean logToSerialconsole;
 
     public Boolean logToSerialconsole() {
         return this.logToSerialconsole;
@@ -134,7 +134,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="logUploadLocation", required=true)
-      private final String logUploadLocation;
+    private String logUploadLocation;
 
     public String logUploadLocation() {
         return this.logUploadLocation;
@@ -145,7 +145,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="oauthScopes", required=true)
-      private final List<String> oauthScopes;
+    private List<String> oauthScopes;
 
     public List<String> oauthScopes() {
         return this.oauthScopes;
@@ -156,7 +156,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="parallelWorkerSettings", required=true)
-      private final WorkerSettingsResponse parallelWorkerSettings;
+    private WorkerSettingsResponse parallelWorkerSettings;
 
     public WorkerSettingsResponse parallelWorkerSettings() {
         return this.parallelWorkerSettings;
@@ -167,7 +167,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="streamingWorkerMainClass", required=true)
-      private final String streamingWorkerMainClass;
+    private String streamingWorkerMainClass;
 
     public String streamingWorkerMainClass() {
         return this.streamingWorkerMainClass;
@@ -178,7 +178,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="taskGroup", required=true)
-      private final String taskGroup;
+    private String taskGroup;
 
     public String taskGroup() {
         return this.taskGroup;
@@ -189,7 +189,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="taskUser", required=true)
-      private final String taskUser;
+    private String taskUser;
 
     public String taskUser() {
         return this.taskUser;
@@ -200,7 +200,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tempStoragePrefix", required=true)
-      private final String tempStoragePrefix;
+    private String tempStoragePrefix;
 
     public String tempStoragePrefix() {
         return this.tempStoragePrefix;
@@ -211,7 +211,7 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vmId", required=true)
-      private final String vmId;
+    private String vmId;
 
     public String vmId() {
         return this.vmId;
@@ -222,211 +222,175 @@ public final class TaskRunnerSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="workflowFileName", required=true)
-      private final String workflowFileName;
+    private String workflowFileName;
 
     public String workflowFileName() {
         return this.workflowFileName;
     }
 
-    public TaskRunnerSettingsResponse(
-        Boolean alsologtostderr,
-        String baseTaskDir,
-        String baseUrl,
-        String commandlinesFileName,
-        Boolean continueOnException,
-        String dataflowApiVersion,
-        String harnessCommand,
-        String languageHint,
-        String logDir,
-        Boolean logToSerialconsole,
-        String logUploadLocation,
-        List<String> oauthScopes,
-        WorkerSettingsResponse parallelWorkerSettings,
-        String streamingWorkerMainClass,
-        String taskGroup,
-        String taskUser,
-        String tempStoragePrefix,
-        String vmId,
-        String workflowFileName) {
-        this.alsologtostderr = Objects.requireNonNull(alsologtostderr, "expected parameter 'alsologtostderr' to be non-null");
-        this.baseTaskDir = Objects.requireNonNull(baseTaskDir, "expected parameter 'baseTaskDir' to be non-null");
-        this.baseUrl = Objects.requireNonNull(baseUrl, "expected parameter 'baseUrl' to be non-null");
-        this.commandlinesFileName = Objects.requireNonNull(commandlinesFileName, "expected parameter 'commandlinesFileName' to be non-null");
-        this.continueOnException = Objects.requireNonNull(continueOnException, "expected parameter 'continueOnException' to be non-null");
-        this.dataflowApiVersion = Objects.requireNonNull(dataflowApiVersion, "expected parameter 'dataflowApiVersion' to be non-null");
-        this.harnessCommand = Objects.requireNonNull(harnessCommand, "expected parameter 'harnessCommand' to be non-null");
-        this.languageHint = Objects.requireNonNull(languageHint, "expected parameter 'languageHint' to be non-null");
-        this.logDir = Objects.requireNonNull(logDir, "expected parameter 'logDir' to be non-null");
-        this.logToSerialconsole = Objects.requireNonNull(logToSerialconsole, "expected parameter 'logToSerialconsole' to be non-null");
-        this.logUploadLocation = Objects.requireNonNull(logUploadLocation, "expected parameter 'logUploadLocation' to be non-null");
-        this.oauthScopes = Objects.requireNonNull(oauthScopes, "expected parameter 'oauthScopes' to be non-null");
-        this.parallelWorkerSettings = Objects.requireNonNull(parallelWorkerSettings, "expected parameter 'parallelWorkerSettings' to be non-null");
-        this.streamingWorkerMainClass = Objects.requireNonNull(streamingWorkerMainClass, "expected parameter 'streamingWorkerMainClass' to be non-null");
-        this.taskGroup = Objects.requireNonNull(taskGroup, "expected parameter 'taskGroup' to be non-null");
-        this.taskUser = Objects.requireNonNull(taskUser, "expected parameter 'taskUser' to be non-null");
-        this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix, "expected parameter 'tempStoragePrefix' to be non-null");
-        this.vmId = Objects.requireNonNull(vmId, "expected parameter 'vmId' to be non-null");
-        this.workflowFileName = Objects.requireNonNull(workflowFileName, "expected parameter 'workflowFileName' to be non-null");
-    }
+    private TaskRunnerSettingsResponse() {}
 
-    private TaskRunnerSettingsResponse() {
-        this.alsologtostderr = null;
-        this.baseTaskDir = null;
-        this.baseUrl = null;
-        this.commandlinesFileName = null;
-        this.continueOnException = null;
-        this.dataflowApiVersion = null;
-        this.harnessCommand = null;
-        this.languageHint = null;
-        this.logDir = null;
-        this.logToSerialconsole = null;
-        this.logUploadLocation = null;
-        this.oauthScopes = List.of();
-        this.parallelWorkerSettings = null;
-        this.streamingWorkerMainClass = null;
-        this.taskGroup = null;
-        this.taskUser = null;
-        this.tempStoragePrefix = null;
-        this.vmId = null;
-        this.workflowFileName = null;
+    private TaskRunnerSettingsResponse(TaskRunnerSettingsResponse $) {
+        this.alsologtostderr = $.alsologtostderr;
+        this.baseTaskDir = $.baseTaskDir;
+        this.baseUrl = $.baseUrl;
+        this.commandlinesFileName = $.commandlinesFileName;
+        this.continueOnException = $.continueOnException;
+        this.dataflowApiVersion = $.dataflowApiVersion;
+        this.harnessCommand = $.harnessCommand;
+        this.languageHint = $.languageHint;
+        this.logDir = $.logDir;
+        this.logToSerialconsole = $.logToSerialconsole;
+        this.logUploadLocation = $.logUploadLocation;
+        this.oauthScopes = $.oauthScopes;
+        this.parallelWorkerSettings = $.parallelWorkerSettings;
+        this.streamingWorkerMainClass = $.streamingWorkerMainClass;
+        this.taskGroup = $.taskGroup;
+        this.taskUser = $.taskUser;
+        this.tempStoragePrefix = $.tempStoragePrefix;
+        this.vmId = $.vmId;
+        this.workflowFileName = $.workflowFileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskRunnerSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean alsologtostderr;
-        private String baseTaskDir;
-        private String baseUrl;
-        private String commandlinesFileName;
-        private Boolean continueOnException;
-        private String dataflowApiVersion;
-        private String harnessCommand;
-        private String languageHint;
-        private String logDir;
-        private Boolean logToSerialconsole;
-        private String logUploadLocation;
-        private List<String> oauthScopes;
-        private WorkerSettingsResponse parallelWorkerSettings;
-        private String streamingWorkerMainClass;
-        private String taskGroup;
-        private String taskUser;
-        private String tempStoragePrefix;
-        private String vmId;
-        private String workflowFileName;
+        private TaskRunnerSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskRunnerSettingsResponse();
         }
 
         public Builder(TaskRunnerSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alsologtostderr = defaults.alsologtostderr;
-    	      this.baseTaskDir = defaults.baseTaskDir;
-    	      this.baseUrl = defaults.baseUrl;
-    	      this.commandlinesFileName = defaults.commandlinesFileName;
-    	      this.continueOnException = defaults.continueOnException;
-    	      this.dataflowApiVersion = defaults.dataflowApiVersion;
-    	      this.harnessCommand = defaults.harnessCommand;
-    	      this.languageHint = defaults.languageHint;
-    	      this.logDir = defaults.logDir;
-    	      this.logToSerialconsole = defaults.logToSerialconsole;
-    	      this.logUploadLocation = defaults.logUploadLocation;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.parallelWorkerSettings = defaults.parallelWorkerSettings;
-    	      this.streamingWorkerMainClass = defaults.streamingWorkerMainClass;
-    	      this.taskGroup = defaults.taskGroup;
-    	      this.taskUser = defaults.taskUser;
-    	      this.tempStoragePrefix = defaults.tempStoragePrefix;
-    	      this.vmId = defaults.vmId;
-    	      this.workflowFileName = defaults.workflowFileName;
+            $ = new TaskRunnerSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alsologtostderr(Boolean alsologtostderr) {
-            this.alsologtostderr = Objects.requireNonNull(alsologtostderr);
+            $.alsologtostderr = alsologtostderr;
             return this;
         }
+
         public Builder baseTaskDir(String baseTaskDir) {
-            this.baseTaskDir = Objects.requireNonNull(baseTaskDir);
+            $.baseTaskDir = baseTaskDir;
             return this;
         }
+
         public Builder baseUrl(String baseUrl) {
-            this.baseUrl = Objects.requireNonNull(baseUrl);
+            $.baseUrl = baseUrl;
             return this;
         }
+
         public Builder commandlinesFileName(String commandlinesFileName) {
-            this.commandlinesFileName = Objects.requireNonNull(commandlinesFileName);
+            $.commandlinesFileName = commandlinesFileName;
             return this;
         }
+
         public Builder continueOnException(Boolean continueOnException) {
-            this.continueOnException = Objects.requireNonNull(continueOnException);
+            $.continueOnException = continueOnException;
             return this;
         }
+
         public Builder dataflowApiVersion(String dataflowApiVersion) {
-            this.dataflowApiVersion = Objects.requireNonNull(dataflowApiVersion);
+            $.dataflowApiVersion = dataflowApiVersion;
             return this;
         }
+
         public Builder harnessCommand(String harnessCommand) {
-            this.harnessCommand = Objects.requireNonNull(harnessCommand);
+            $.harnessCommand = harnessCommand;
             return this;
         }
+
         public Builder languageHint(String languageHint) {
-            this.languageHint = Objects.requireNonNull(languageHint);
+            $.languageHint = languageHint;
             return this;
         }
+
         public Builder logDir(String logDir) {
-            this.logDir = Objects.requireNonNull(logDir);
+            $.logDir = logDir;
             return this;
         }
+
         public Builder logToSerialconsole(Boolean logToSerialconsole) {
-            this.logToSerialconsole = Objects.requireNonNull(logToSerialconsole);
+            $.logToSerialconsole = logToSerialconsole;
             return this;
         }
+
         public Builder logUploadLocation(String logUploadLocation) {
-            this.logUploadLocation = Objects.requireNonNull(logUploadLocation);
+            $.logUploadLocation = logUploadLocation;
             return this;
         }
+
         public Builder oauthScopes(List<String> oauthScopes) {
-            this.oauthScopes = Objects.requireNonNull(oauthScopes);
+            $.oauthScopes = oauthScopes;
             return this;
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder parallelWorkerSettings(WorkerSettingsResponse parallelWorkerSettings) {
-            this.parallelWorkerSettings = Objects.requireNonNull(parallelWorkerSettings);
+            $.parallelWorkerSettings = parallelWorkerSettings;
             return this;
         }
+
         public Builder streamingWorkerMainClass(String streamingWorkerMainClass) {
-            this.streamingWorkerMainClass = Objects.requireNonNull(streamingWorkerMainClass);
+            $.streamingWorkerMainClass = streamingWorkerMainClass;
             return this;
         }
+
         public Builder taskGroup(String taskGroup) {
-            this.taskGroup = Objects.requireNonNull(taskGroup);
+            $.taskGroup = taskGroup;
             return this;
         }
+
         public Builder taskUser(String taskUser) {
-            this.taskUser = Objects.requireNonNull(taskUser);
+            $.taskUser = taskUser;
             return this;
         }
+
         public Builder tempStoragePrefix(String tempStoragePrefix) {
-            this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
+            $.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
+
         public Builder vmId(String vmId) {
-            this.vmId = Objects.requireNonNull(vmId);
+            $.vmId = vmId;
             return this;
         }
+
         public Builder workflowFileName(String workflowFileName) {
-            this.workflowFileName = Objects.requireNonNull(workflowFileName);
+            $.workflowFileName = workflowFileName;
             return this;
-        }        public TaskRunnerSettingsResponse build() {
-            return new TaskRunnerSettingsResponse(alsologtostderr, baseTaskDir, baseUrl, commandlinesFileName, continueOnException, dataflowApiVersion, harnessCommand, languageHint, logDir, logToSerialconsole, logUploadLocation, oauthScopes, parallelWorkerSettings, streamingWorkerMainClass, taskGroup, taskUser, tempStoragePrefix, vmId, workflowFileName);
+        }
+
+        public TaskRunnerSettingsResponse build() {
+            $.alsologtostderr = Objects.requireNonNull($.alsologtostderr, "expected parameter 'alsologtostderr' to be non-null");
+            $.baseTaskDir = Objects.requireNonNull($.baseTaskDir, "expected parameter 'baseTaskDir' to be non-null");
+            $.baseUrl = Objects.requireNonNull($.baseUrl, "expected parameter 'baseUrl' to be non-null");
+            $.commandlinesFileName = Objects.requireNonNull($.commandlinesFileName, "expected parameter 'commandlinesFileName' to be non-null");
+            $.continueOnException = Objects.requireNonNull($.continueOnException, "expected parameter 'continueOnException' to be non-null");
+            $.dataflowApiVersion = Objects.requireNonNull($.dataflowApiVersion, "expected parameter 'dataflowApiVersion' to be non-null");
+            $.harnessCommand = Objects.requireNonNull($.harnessCommand, "expected parameter 'harnessCommand' to be non-null");
+            $.languageHint = Objects.requireNonNull($.languageHint, "expected parameter 'languageHint' to be non-null");
+            $.logDir = Objects.requireNonNull($.logDir, "expected parameter 'logDir' to be non-null");
+            $.logToSerialconsole = Objects.requireNonNull($.logToSerialconsole, "expected parameter 'logToSerialconsole' to be non-null");
+            $.logUploadLocation = Objects.requireNonNull($.logUploadLocation, "expected parameter 'logUploadLocation' to be non-null");
+            $.oauthScopes = Objects.requireNonNull($.oauthScopes, "expected parameter 'oauthScopes' to be non-null");
+            $.parallelWorkerSettings = Objects.requireNonNull($.parallelWorkerSettings, "expected parameter 'parallelWorkerSettings' to be non-null");
+            $.streamingWorkerMainClass = Objects.requireNonNull($.streamingWorkerMainClass, "expected parameter 'streamingWorkerMainClass' to be non-null");
+            $.taskGroup = Objects.requireNonNull($.taskGroup, "expected parameter 'taskGroup' to be non-null");
+            $.taskUser = Objects.requireNonNull($.taskUser, "expected parameter 'taskUser' to be non-null");
+            $.tempStoragePrefix = Objects.requireNonNull($.tempStoragePrefix, "expected parameter 'tempStoragePrefix' to be non-null");
+            $.vmId = Objects.requireNonNull($.vmId, "expected parameter 'vmId' to be non-null");
+            $.workflowFileName = Objects.requireNonNull($.workflowFileName, "expected parameter 'workflowFileName' to be non-null");
+            return $;
         }
     }
+
 }

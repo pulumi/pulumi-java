@@ -5,7 +5,6 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1beta4.enums.SettingsActivationPolicy;
 import com.pulumi.googlenative.sqladmin_v1beta4.enums.SettingsAvailabilityType;
 import com.pulumi.googlenative.sqladmin_v1beta4.enums.SettingsDataDiskType;
@@ -25,6 +24,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -41,10 +41,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activationPolicy")
-      private final @Nullable Output<SettingsActivationPolicy> activationPolicy;
+    private @Nullable Output<SettingsActivationPolicy> activationPolicy;
 
-    public Output<SettingsActivationPolicy> activationPolicy() {
-        return this.activationPolicy == null ? Codegen.empty() : this.activationPolicy;
+    public Optional<Output<SettingsActivationPolicy>> activationPolicy() {
+        return Optional.ofNullable(this.activationPolicy);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activeDirectoryConfig")
-      private final @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
+    private @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
 
-    public Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig() {
-        return this.activeDirectoryConfig == null ? Codegen.empty() : this.activeDirectoryConfig;
+    public Optional<Output<SqlActiveDirectoryConfigArgs>> activeDirectoryConfig() {
+        return Optional.ofNullable(this.activeDirectoryConfig);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityType")
-      private final @Nullable Output<SettingsAvailabilityType> availabilityType;
+    private @Nullable Output<SettingsAvailabilityType> availabilityType;
 
-    public Output<SettingsAvailabilityType> availabilityType() {
-        return this.availabilityType == null ? Codegen.empty() : this.availabilityType;
+    public Optional<Output<SettingsAvailabilityType>> availabilityType() {
+        return Optional.ofNullable(this.availabilityType);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupConfiguration")
-      private final @Nullable Output<BackupConfigurationArgs> backupConfiguration;
+    private @Nullable Output<BackupConfigurationArgs> backupConfiguration;
 
-    public Output<BackupConfigurationArgs> backupConfiguration() {
-        return this.backupConfiguration == null ? Codegen.empty() : this.backupConfiguration;
+    public Optional<Output<BackupConfigurationArgs>> backupConfiguration() {
+        return Optional.ofNullable(this.backupConfiguration);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="crashSafeReplicationEnabled")
-      private final @Nullable Output<Boolean> crashSafeReplicationEnabled;
+    private @Nullable Output<Boolean> crashSafeReplicationEnabled;
 
-    public Output<Boolean> crashSafeReplicationEnabled() {
-        return this.crashSafeReplicationEnabled == null ? Codegen.empty() : this.crashSafeReplicationEnabled;
+    public Optional<Output<Boolean>> crashSafeReplicationEnabled() {
+        return Optional.ofNullable(this.crashSafeReplicationEnabled);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataDiskSizeGb")
-      private final @Nullable Output<String> dataDiskSizeGb;
+    private @Nullable Output<String> dataDiskSizeGb;
 
-    public Output<String> dataDiskSizeGb() {
-        return this.dataDiskSizeGb == null ? Codegen.empty() : this.dataDiskSizeGb;
+    public Optional<Output<String>> dataDiskSizeGb() {
+        return Optional.ofNullable(this.dataDiskSizeGb);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataDiskType")
-      private final @Nullable Output<SettingsDataDiskType> dataDiskType;
+    private @Nullable Output<SettingsDataDiskType> dataDiskType;
 
-    public Output<SettingsDataDiskType> dataDiskType() {
-        return this.dataDiskType == null ? Codegen.empty() : this.dataDiskType;
+    public Optional<Output<SettingsDataDiskType>> dataDiskType() {
+        return Optional.ofNullable(this.dataDiskType);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseFlags")
-      private final @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags;
+    private @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags;
 
-    public Output<List<DatabaseFlagsArgs>> databaseFlags() {
-        return this.databaseFlags == null ? Codegen.empty() : this.databaseFlags;
+    public Optional<Output<List<DatabaseFlagsArgs>>> databaseFlags() {
+        return Optional.ofNullable(this.databaseFlags);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseReplicationEnabled")
-      private final @Nullable Output<Boolean> databaseReplicationEnabled;
+    private @Nullable Output<Boolean> databaseReplicationEnabled;
 
-    public Output<Boolean> databaseReplicationEnabled() {
-        return this.databaseReplicationEnabled == null ? Codegen.empty() : this.databaseReplicationEnabled;
+    public Optional<Output<Boolean>> databaseReplicationEnabled() {
+        return Optional.ofNullable(this.databaseReplicationEnabled);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="denyMaintenancePeriods")
-      private final @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
+    private @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
 
-    public Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods() {
-        return this.denyMaintenancePeriods == null ? Codegen.empty() : this.denyMaintenancePeriods;
+    public Optional<Output<List<DenyMaintenancePeriodArgs>>> denyMaintenancePeriods() {
+        return Optional.ofNullable(this.denyMaintenancePeriods);
     }
 
     /**
@@ -162,10 +162,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="insightsConfig")
-      private final @Nullable Output<InsightsConfigArgs> insightsConfig;
+    private @Nullable Output<InsightsConfigArgs> insightsConfig;
 
-    public Output<InsightsConfigArgs> insightsConfig() {
-        return this.insightsConfig == null ? Codegen.empty() : this.insightsConfig;
+    public Optional<Output<InsightsConfigArgs>> insightsConfig() {
+        return Optional.ofNullable(this.insightsConfig);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipConfiguration")
-      private final @Nullable Output<IpConfigurationArgs> ipConfiguration;
+    private @Nullable Output<IpConfigurationArgs> ipConfiguration;
 
-    public Output<IpConfigurationArgs> ipConfiguration() {
-        return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
+    public Optional<Output<IpConfigurationArgs>> ipConfiguration() {
+        return Optional.ofNullable(this.ipConfiguration);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -195,10 +195,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationPreference")
-      private final @Nullable Output<LocationPreferenceArgs> locationPreference;
+    private @Nullable Output<LocationPreferenceArgs> locationPreference;
 
-    public Output<LocationPreferenceArgs> locationPreference() {
-        return this.locationPreference == null ? Codegen.empty() : this.locationPreference;
+    public Optional<Output<LocationPreferenceArgs>> locationPreference() {
+        return Optional.ofNullable(this.locationPreference);
     }
 
     /**
@@ -206,10 +206,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
+    private @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<MaintenanceWindowArgs> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<MaintenanceWindowArgs>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -217,10 +217,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="passwordValidationPolicy")
-      private final @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy;
+    private @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy;
 
-    public Output<PasswordValidationPolicyArgs> passwordValidationPolicy() {
-        return this.passwordValidationPolicy == null ? Codegen.empty() : this.passwordValidationPolicy;
+    public Optional<Output<PasswordValidationPolicyArgs>> passwordValidationPolicy() {
+        return Optional.ofNullable(this.passwordValidationPolicy);
     }
 
     /**
@@ -228,10 +228,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pricingPlan")
-      private final @Nullable Output<SettingsPricingPlan> pricingPlan;
+    private @Nullable Output<SettingsPricingPlan> pricingPlan;
 
-    public Output<SettingsPricingPlan> pricingPlan() {
-        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
+    public Optional<Output<SettingsPricingPlan>> pricingPlan() {
+        return Optional.ofNullable(this.pricingPlan);
     }
 
     /**
@@ -239,10 +239,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="settingsVersion")
-      private final @Nullable Output<String> settingsVersion;
+    private @Nullable Output<String> settingsVersion;
 
-    public Output<String> settingsVersion() {
-        return this.settingsVersion == null ? Codegen.empty() : this.settingsVersion;
+    public Optional<Output<String>> settingsVersion() {
+        return Optional.ofNullable(this.settingsVersion);
     }
 
     /**
@@ -250,10 +250,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlServerAuditConfig")
-      private final @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig;
+    private @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig;
 
-    public Output<SqlServerAuditConfigArgs> sqlServerAuditConfig() {
-        return this.sqlServerAuditConfig == null ? Codegen.empty() : this.sqlServerAuditConfig;
+    public Optional<Output<SqlServerAuditConfigArgs>> sqlServerAuditConfig() {
+        return Optional.ofNullable(this.sqlServerAuditConfig);
     }
 
     /**
@@ -261,10 +261,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAutoResize")
-      private final @Nullable Output<Boolean> storageAutoResize;
+    private @Nullable Output<Boolean> storageAutoResize;
 
-    public Output<Boolean> storageAutoResize() {
-        return this.storageAutoResize == null ? Codegen.empty() : this.storageAutoResize;
+    public Optional<Output<Boolean>> storageAutoResize() {
+        return Optional.ofNullable(this.storageAutoResize);
     }
 
     /**
@@ -272,10 +272,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAutoResizeLimit")
-      private final @Nullable Output<String> storageAutoResizeLimit;
+    private @Nullable Output<String> storageAutoResizeLimit;
 
-    public Output<String> storageAutoResizeLimit() {
-        return this.storageAutoResizeLimit == null ? Codegen.empty() : this.storageAutoResizeLimit;
+    public Optional<Output<String>> storageAutoResizeLimit() {
+        return Optional.ofNullable(this.storageAutoResizeLimit);
     }
 
     /**
@@ -283,10 +283,10 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
     /**
@@ -294,355 +294,286 @@ public final class SettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userLabels")
-      private final @Nullable Output<Map<String,String>> userLabels;
+    private @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> userLabels() {
-        return this.userLabels == null ? Codegen.empty() : this.userLabels;
+    public Optional<Output<Map<String,String>>> userLabels() {
+        return Optional.ofNullable(this.userLabels);
     }
 
-    public SettingsArgs(
-        @Nullable Output<SettingsActivationPolicy> activationPolicy,
-        @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig,
-        @Nullable Output<SettingsAvailabilityType> availabilityType,
-        @Nullable Output<BackupConfigurationArgs> backupConfiguration,
-        @Nullable Output<String> collation,
-        @Nullable Output<Boolean> crashSafeReplicationEnabled,
-        @Nullable Output<String> dataDiskSizeGb,
-        @Nullable Output<SettingsDataDiskType> dataDiskType,
-        @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags,
-        @Nullable Output<Boolean> databaseReplicationEnabled,
-        @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods,
-        @Nullable Output<InsightsConfigArgs> insightsConfig,
-        @Nullable Output<IpConfigurationArgs> ipConfiguration,
-        @Nullable Output<String> kind,
-        @Nullable Output<LocationPreferenceArgs> locationPreference,
-        @Nullable Output<MaintenanceWindowArgs> maintenanceWindow,
-        @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy,
-        @Nullable Output<SettingsPricingPlan> pricingPlan,
-        @Nullable Output<String> settingsVersion,
-        @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig,
-        @Nullable Output<Boolean> storageAutoResize,
-        @Nullable Output<String> storageAutoResizeLimit,
-        @Nullable Output<String> tier,
-        @Nullable Output<Map<String,String>> userLabels) {
-        this.activationPolicy = activationPolicy;
-        this.activeDirectoryConfig = activeDirectoryConfig;
-        this.availabilityType = availabilityType;
-        this.backupConfiguration = backupConfiguration;
-        this.collation = collation;
-        this.crashSafeReplicationEnabled = crashSafeReplicationEnabled;
-        this.dataDiskSizeGb = dataDiskSizeGb;
-        this.dataDiskType = dataDiskType;
-        this.databaseFlags = databaseFlags;
-        this.databaseReplicationEnabled = databaseReplicationEnabled;
-        this.denyMaintenancePeriods = denyMaintenancePeriods;
-        this.insightsConfig = insightsConfig;
-        this.ipConfiguration = ipConfiguration;
-        this.kind = kind;
-        this.locationPreference = locationPreference;
-        this.maintenanceWindow = maintenanceWindow;
-        this.passwordValidationPolicy = passwordValidationPolicy;
-        this.pricingPlan = pricingPlan;
-        this.settingsVersion = settingsVersion;
-        this.sqlServerAuditConfig = sqlServerAuditConfig;
-        this.storageAutoResize = storageAutoResize;
-        this.storageAutoResizeLimit = storageAutoResizeLimit;
-        this.tier = tier;
-        this.userLabels = userLabels;
-    }
+    private SettingsArgs() {}
 
-    private SettingsArgs() {
-        this.activationPolicy = Codegen.empty();
-        this.activeDirectoryConfig = Codegen.empty();
-        this.availabilityType = Codegen.empty();
-        this.backupConfiguration = Codegen.empty();
-        this.collation = Codegen.empty();
-        this.crashSafeReplicationEnabled = Codegen.empty();
-        this.dataDiskSizeGb = Codegen.empty();
-        this.dataDiskType = Codegen.empty();
-        this.databaseFlags = Codegen.empty();
-        this.databaseReplicationEnabled = Codegen.empty();
-        this.denyMaintenancePeriods = Codegen.empty();
-        this.insightsConfig = Codegen.empty();
-        this.ipConfiguration = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.locationPreference = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.passwordValidationPolicy = Codegen.empty();
-        this.pricingPlan = Codegen.empty();
-        this.settingsVersion = Codegen.empty();
-        this.sqlServerAuditConfig = Codegen.empty();
-        this.storageAutoResize = Codegen.empty();
-        this.storageAutoResizeLimit = Codegen.empty();
-        this.tier = Codegen.empty();
-        this.userLabels = Codegen.empty();
+    private SettingsArgs(SettingsArgs $) {
+        this.activationPolicy = $.activationPolicy;
+        this.activeDirectoryConfig = $.activeDirectoryConfig;
+        this.availabilityType = $.availabilityType;
+        this.backupConfiguration = $.backupConfiguration;
+        this.collation = $.collation;
+        this.crashSafeReplicationEnabled = $.crashSafeReplicationEnabled;
+        this.dataDiskSizeGb = $.dataDiskSizeGb;
+        this.dataDiskType = $.dataDiskType;
+        this.databaseFlags = $.databaseFlags;
+        this.databaseReplicationEnabled = $.databaseReplicationEnabled;
+        this.denyMaintenancePeriods = $.denyMaintenancePeriods;
+        this.insightsConfig = $.insightsConfig;
+        this.ipConfiguration = $.ipConfiguration;
+        this.kind = $.kind;
+        this.locationPreference = $.locationPreference;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.passwordValidationPolicy = $.passwordValidationPolicy;
+        this.pricingPlan = $.pricingPlan;
+        this.settingsVersion = $.settingsVersion;
+        this.sqlServerAuditConfig = $.sqlServerAuditConfig;
+        this.storageAutoResize = $.storageAutoResize;
+        this.storageAutoResizeLimit = $.storageAutoResizeLimit;
+        this.tier = $.tier;
+        this.userLabels = $.userLabels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SettingsActivationPolicy> activationPolicy;
-        private @Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig;
-        private @Nullable Output<SettingsAvailabilityType> availabilityType;
-        private @Nullable Output<BackupConfigurationArgs> backupConfiguration;
-        private @Nullable Output<String> collation;
-        private @Nullable Output<Boolean> crashSafeReplicationEnabled;
-        private @Nullable Output<String> dataDiskSizeGb;
-        private @Nullable Output<SettingsDataDiskType> dataDiskType;
-        private @Nullable Output<List<DatabaseFlagsArgs>> databaseFlags;
-        private @Nullable Output<Boolean> databaseReplicationEnabled;
-        private @Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods;
-        private @Nullable Output<InsightsConfigArgs> insightsConfig;
-        private @Nullable Output<IpConfigurationArgs> ipConfiguration;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<LocationPreferenceArgs> locationPreference;
-        private @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
-        private @Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy;
-        private @Nullable Output<SettingsPricingPlan> pricingPlan;
-        private @Nullable Output<String> settingsVersion;
-        private @Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig;
-        private @Nullable Output<Boolean> storageAutoResize;
-        private @Nullable Output<String> storageAutoResizeLimit;
-        private @Nullable Output<String> tier;
-        private @Nullable Output<Map<String,String>> userLabels;
+        private SettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SettingsArgs();
         }
 
         public Builder(SettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationPolicy = defaults.activationPolicy;
-    	      this.activeDirectoryConfig = defaults.activeDirectoryConfig;
-    	      this.availabilityType = defaults.availabilityType;
-    	      this.backupConfiguration = defaults.backupConfiguration;
-    	      this.collation = defaults.collation;
-    	      this.crashSafeReplicationEnabled = defaults.crashSafeReplicationEnabled;
-    	      this.dataDiskSizeGb = defaults.dataDiskSizeGb;
-    	      this.dataDiskType = defaults.dataDiskType;
-    	      this.databaseFlags = defaults.databaseFlags;
-    	      this.databaseReplicationEnabled = defaults.databaseReplicationEnabled;
-    	      this.denyMaintenancePeriods = defaults.denyMaintenancePeriods;
-    	      this.insightsConfig = defaults.insightsConfig;
-    	      this.ipConfiguration = defaults.ipConfiguration;
-    	      this.kind = defaults.kind;
-    	      this.locationPreference = defaults.locationPreference;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.passwordValidationPolicy = defaults.passwordValidationPolicy;
-    	      this.pricingPlan = defaults.pricingPlan;
-    	      this.settingsVersion = defaults.settingsVersion;
-    	      this.sqlServerAuditConfig = defaults.sqlServerAuditConfig;
-    	      this.storageAutoResize = defaults.storageAutoResize;
-    	      this.storageAutoResizeLimit = defaults.storageAutoResizeLimit;
-    	      this.tier = defaults.tier;
-    	      this.userLabels = defaults.userLabels;
+            $ = new SettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activationPolicy(@Nullable Output<SettingsActivationPolicy> activationPolicy) {
-            this.activationPolicy = activationPolicy;
+            $.activationPolicy = activationPolicy;
             return this;
         }
-        public Builder activationPolicy(@Nullable SettingsActivationPolicy activationPolicy) {
-            this.activationPolicy = Codegen.ofNullable(activationPolicy);
-            return this;
+
+        public Builder activationPolicy(SettingsActivationPolicy activationPolicy) {
+            return activationPolicy(Output.of(activationPolicy));
         }
+
         public Builder activeDirectoryConfig(@Nullable Output<SqlActiveDirectoryConfigArgs> activeDirectoryConfig) {
-            this.activeDirectoryConfig = activeDirectoryConfig;
+            $.activeDirectoryConfig = activeDirectoryConfig;
             return this;
         }
-        public Builder activeDirectoryConfig(@Nullable SqlActiveDirectoryConfigArgs activeDirectoryConfig) {
-            this.activeDirectoryConfig = Codegen.ofNullable(activeDirectoryConfig);
-            return this;
+
+        public Builder activeDirectoryConfig(SqlActiveDirectoryConfigArgs activeDirectoryConfig) {
+            return activeDirectoryConfig(Output.of(activeDirectoryConfig));
         }
+
         public Builder availabilityType(@Nullable Output<SettingsAvailabilityType> availabilityType) {
-            this.availabilityType = availabilityType;
+            $.availabilityType = availabilityType;
             return this;
         }
-        public Builder availabilityType(@Nullable SettingsAvailabilityType availabilityType) {
-            this.availabilityType = Codegen.ofNullable(availabilityType);
-            return this;
+
+        public Builder availabilityType(SettingsAvailabilityType availabilityType) {
+            return availabilityType(Output.of(availabilityType));
         }
+
         public Builder backupConfiguration(@Nullable Output<BackupConfigurationArgs> backupConfiguration) {
-            this.backupConfiguration = backupConfiguration;
+            $.backupConfiguration = backupConfiguration;
             return this;
         }
-        public Builder backupConfiguration(@Nullable BackupConfigurationArgs backupConfiguration) {
-            this.backupConfiguration = Codegen.ofNullable(backupConfiguration);
-            return this;
+
+        public Builder backupConfiguration(BackupConfigurationArgs backupConfiguration) {
+            return backupConfiguration(Output.of(backupConfiguration));
         }
+
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder crashSafeReplicationEnabled(@Nullable Output<Boolean> crashSafeReplicationEnabled) {
-            this.crashSafeReplicationEnabled = crashSafeReplicationEnabled;
+            $.crashSafeReplicationEnabled = crashSafeReplicationEnabled;
             return this;
         }
-        public Builder crashSafeReplicationEnabled(@Nullable Boolean crashSafeReplicationEnabled) {
-            this.crashSafeReplicationEnabled = Codegen.ofNullable(crashSafeReplicationEnabled);
-            return this;
+
+        public Builder crashSafeReplicationEnabled(Boolean crashSafeReplicationEnabled) {
+            return crashSafeReplicationEnabled(Output.of(crashSafeReplicationEnabled));
         }
+
         public Builder dataDiskSizeGb(@Nullable Output<String> dataDiskSizeGb) {
-            this.dataDiskSizeGb = dataDiskSizeGb;
+            $.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
-        public Builder dataDiskSizeGb(@Nullable String dataDiskSizeGb) {
-            this.dataDiskSizeGb = Codegen.ofNullable(dataDiskSizeGb);
-            return this;
+
+        public Builder dataDiskSizeGb(String dataDiskSizeGb) {
+            return dataDiskSizeGb(Output.of(dataDiskSizeGb));
         }
+
         public Builder dataDiskType(@Nullable Output<SettingsDataDiskType> dataDiskType) {
-            this.dataDiskType = dataDiskType;
+            $.dataDiskType = dataDiskType;
             return this;
         }
-        public Builder dataDiskType(@Nullable SettingsDataDiskType dataDiskType) {
-            this.dataDiskType = Codegen.ofNullable(dataDiskType);
-            return this;
+
+        public Builder dataDiskType(SettingsDataDiskType dataDiskType) {
+            return dataDiskType(Output.of(dataDiskType));
         }
+
         public Builder databaseFlags(@Nullable Output<List<DatabaseFlagsArgs>> databaseFlags) {
-            this.databaseFlags = databaseFlags;
+            $.databaseFlags = databaseFlags;
             return this;
         }
-        public Builder databaseFlags(@Nullable List<DatabaseFlagsArgs> databaseFlags) {
-            this.databaseFlags = Codegen.ofNullable(databaseFlags);
-            return this;
+
+        public Builder databaseFlags(List<DatabaseFlagsArgs> databaseFlags) {
+            return databaseFlags(Output.of(databaseFlags));
         }
+
         public Builder databaseFlags(DatabaseFlagsArgs... databaseFlags) {
             return databaseFlags(List.of(databaseFlags));
         }
+
         public Builder databaseReplicationEnabled(@Nullable Output<Boolean> databaseReplicationEnabled) {
-            this.databaseReplicationEnabled = databaseReplicationEnabled;
+            $.databaseReplicationEnabled = databaseReplicationEnabled;
             return this;
         }
-        public Builder databaseReplicationEnabled(@Nullable Boolean databaseReplicationEnabled) {
-            this.databaseReplicationEnabled = Codegen.ofNullable(databaseReplicationEnabled);
-            return this;
+
+        public Builder databaseReplicationEnabled(Boolean databaseReplicationEnabled) {
+            return databaseReplicationEnabled(Output.of(databaseReplicationEnabled));
         }
+
         public Builder denyMaintenancePeriods(@Nullable Output<List<DenyMaintenancePeriodArgs>> denyMaintenancePeriods) {
-            this.denyMaintenancePeriods = denyMaintenancePeriods;
+            $.denyMaintenancePeriods = denyMaintenancePeriods;
             return this;
         }
-        public Builder denyMaintenancePeriods(@Nullable List<DenyMaintenancePeriodArgs> denyMaintenancePeriods) {
-            this.denyMaintenancePeriods = Codegen.ofNullable(denyMaintenancePeriods);
-            return this;
+
+        public Builder denyMaintenancePeriods(List<DenyMaintenancePeriodArgs> denyMaintenancePeriods) {
+            return denyMaintenancePeriods(Output.of(denyMaintenancePeriods));
         }
+
         public Builder denyMaintenancePeriods(DenyMaintenancePeriodArgs... denyMaintenancePeriods) {
             return denyMaintenancePeriods(List.of(denyMaintenancePeriods));
         }
+
         public Builder insightsConfig(@Nullable Output<InsightsConfigArgs> insightsConfig) {
-            this.insightsConfig = insightsConfig;
+            $.insightsConfig = insightsConfig;
             return this;
         }
-        public Builder insightsConfig(@Nullable InsightsConfigArgs insightsConfig) {
-            this.insightsConfig = Codegen.ofNullable(insightsConfig);
-            return this;
+
+        public Builder insightsConfig(InsightsConfigArgs insightsConfig) {
+            return insightsConfig(Output.of(insightsConfig));
         }
+
         public Builder ipConfiguration(@Nullable Output<IpConfigurationArgs> ipConfiguration) {
-            this.ipConfiguration = ipConfiguration;
+            $.ipConfiguration = ipConfiguration;
             return this;
         }
-        public Builder ipConfiguration(@Nullable IpConfigurationArgs ipConfiguration) {
-            this.ipConfiguration = Codegen.ofNullable(ipConfiguration);
-            return this;
+
+        public Builder ipConfiguration(IpConfigurationArgs ipConfiguration) {
+            return ipConfiguration(Output.of(ipConfiguration));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder locationPreference(@Nullable Output<LocationPreferenceArgs> locationPreference) {
-            this.locationPreference = locationPreference;
+            $.locationPreference = locationPreference;
             return this;
         }
-        public Builder locationPreference(@Nullable LocationPreferenceArgs locationPreference) {
-            this.locationPreference = Codegen.ofNullable(locationPreference);
-            return this;
+
+        public Builder locationPreference(LocationPreferenceArgs locationPreference) {
+            return locationPreference(Output.of(locationPreference));
         }
+
         public Builder maintenanceWindow(@Nullable Output<MaintenanceWindowArgs> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(MaintenanceWindowArgs maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder passwordValidationPolicy(@Nullable Output<PasswordValidationPolicyArgs> passwordValidationPolicy) {
-            this.passwordValidationPolicy = passwordValidationPolicy;
+            $.passwordValidationPolicy = passwordValidationPolicy;
             return this;
         }
-        public Builder passwordValidationPolicy(@Nullable PasswordValidationPolicyArgs passwordValidationPolicy) {
-            this.passwordValidationPolicy = Codegen.ofNullable(passwordValidationPolicy);
-            return this;
+
+        public Builder passwordValidationPolicy(PasswordValidationPolicyArgs passwordValidationPolicy) {
+            return passwordValidationPolicy(Output.of(passwordValidationPolicy));
         }
+
         public Builder pricingPlan(@Nullable Output<SettingsPricingPlan> pricingPlan) {
-            this.pricingPlan = pricingPlan;
+            $.pricingPlan = pricingPlan;
             return this;
         }
-        public Builder pricingPlan(@Nullable SettingsPricingPlan pricingPlan) {
-            this.pricingPlan = Codegen.ofNullable(pricingPlan);
-            return this;
+
+        public Builder pricingPlan(SettingsPricingPlan pricingPlan) {
+            return pricingPlan(Output.of(pricingPlan));
         }
+
         public Builder settingsVersion(@Nullable Output<String> settingsVersion) {
-            this.settingsVersion = settingsVersion;
+            $.settingsVersion = settingsVersion;
             return this;
         }
-        public Builder settingsVersion(@Nullable String settingsVersion) {
-            this.settingsVersion = Codegen.ofNullable(settingsVersion);
-            return this;
+
+        public Builder settingsVersion(String settingsVersion) {
+            return settingsVersion(Output.of(settingsVersion));
         }
+
         public Builder sqlServerAuditConfig(@Nullable Output<SqlServerAuditConfigArgs> sqlServerAuditConfig) {
-            this.sqlServerAuditConfig = sqlServerAuditConfig;
+            $.sqlServerAuditConfig = sqlServerAuditConfig;
             return this;
         }
-        public Builder sqlServerAuditConfig(@Nullable SqlServerAuditConfigArgs sqlServerAuditConfig) {
-            this.sqlServerAuditConfig = Codegen.ofNullable(sqlServerAuditConfig);
-            return this;
+
+        public Builder sqlServerAuditConfig(SqlServerAuditConfigArgs sqlServerAuditConfig) {
+            return sqlServerAuditConfig(Output.of(sqlServerAuditConfig));
         }
+
         public Builder storageAutoResize(@Nullable Output<Boolean> storageAutoResize) {
-            this.storageAutoResize = storageAutoResize;
+            $.storageAutoResize = storageAutoResize;
             return this;
         }
-        public Builder storageAutoResize(@Nullable Boolean storageAutoResize) {
-            this.storageAutoResize = Codegen.ofNullable(storageAutoResize);
-            return this;
+
+        public Builder storageAutoResize(Boolean storageAutoResize) {
+            return storageAutoResize(Output.of(storageAutoResize));
         }
+
         public Builder storageAutoResizeLimit(@Nullable Output<String> storageAutoResizeLimit) {
-            this.storageAutoResizeLimit = storageAutoResizeLimit;
+            $.storageAutoResizeLimit = storageAutoResizeLimit;
             return this;
         }
-        public Builder storageAutoResizeLimit(@Nullable String storageAutoResizeLimit) {
-            this.storageAutoResizeLimit = Codegen.ofNullable(storageAutoResizeLimit);
-            return this;
+
+        public Builder storageAutoResizeLimit(String storageAutoResizeLimit) {
+            return storageAutoResizeLimit(Output.of(storageAutoResizeLimit));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
         }
+
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
-            this.userLabels = userLabels;
+            $.userLabels = userLabels;
             return this;
         }
-        public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Codegen.ofNullable(userLabels);
-            return this;
-        }        public SettingsArgs build() {
-            return new SettingsArgs(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
+
+        public Builder userLabels(Map<String,String> userLabels) {
+            return userLabels(Output.of(userLabels));
+        }
+
+        public SettingsArgs build() {
+            return $;
         }
     }
+
 }

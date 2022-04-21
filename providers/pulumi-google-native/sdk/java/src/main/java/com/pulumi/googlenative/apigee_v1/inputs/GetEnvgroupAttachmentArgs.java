@@ -13,78 +13,73 @@ public final class GetEnvgroupAttachmentArgs extends com.pulumi.resources.Invoke
     public static final GetEnvgroupAttachmentArgs Empty = new GetEnvgroupAttachmentArgs();
 
     @Import(name="attachmentId", required=true)
-      private final String attachmentId;
+    private String attachmentId;
 
     public String attachmentId() {
         return this.attachmentId;
     }
 
     @Import(name="envgroupId", required=true)
-      private final String envgroupId;
+    private String envgroupId;
 
     public String envgroupId() {
         return this.envgroupId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetEnvgroupAttachmentArgs(
-        String attachmentId,
-        String envgroupId,
-        String organizationId) {
-        this.attachmentId = Objects.requireNonNull(attachmentId, "expected parameter 'attachmentId' to be non-null");
-        this.envgroupId = Objects.requireNonNull(envgroupId, "expected parameter 'envgroupId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetEnvgroupAttachmentArgs() {}
 
-    private GetEnvgroupAttachmentArgs() {
-        this.attachmentId = null;
-        this.envgroupId = null;
-        this.organizationId = null;
+    private GetEnvgroupAttachmentArgs(GetEnvgroupAttachmentArgs $) {
+        this.attachmentId = $.attachmentId;
+        this.envgroupId = $.envgroupId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvgroupAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attachmentId;
-        private String envgroupId;
-        private String organizationId;
+        private GetEnvgroupAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvgroupAttachmentArgs();
         }
 
         public Builder(GetEnvgroupAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentId = defaults.attachmentId;
-    	      this.envgroupId = defaults.envgroupId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetEnvgroupAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentId(String attachmentId) {
-            this.attachmentId = Objects.requireNonNull(attachmentId);
+            $.attachmentId = attachmentId;
             return this;
         }
+
         public Builder envgroupId(String envgroupId) {
-            this.envgroupId = Objects.requireNonNull(envgroupId);
+            $.envgroupId = envgroupId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetEnvgroupAttachmentArgs build() {
-            return new GetEnvgroupAttachmentArgs(attachmentId, envgroupId, organizationId);
+        }
+
+        public GetEnvgroupAttachmentArgs build() {
+            $.attachmentId = Objects.requireNonNull($.attachmentId, "expected parameter 'attachmentId' to be non-null");
+            $.envgroupId = Objects.requireNonNull($.envgroupId, "expected parameter 'envgroupId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="initiatorIqn", required=true)
-      private final String initiatorIqn;
+    private String initiatorIqn;
 
     public String initiatorIqn() {
         return this.initiatorIqn;
@@ -33,7 +33,7 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mappedLuns", required=true)
-      private final List<String> mappedLuns;
+    private List<String> mappedLuns;
 
     public List<String> mappedLuns() {
         return this.mappedLuns;
@@ -44,7 +44,7 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -55,76 +55,70 @@ public final class AclResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public AclResponse(
-        String initiatorIqn,
-        List<String> mappedLuns,
-        String password,
-        String username) {
-        this.initiatorIqn = Objects.requireNonNull(initiatorIqn, "expected parameter 'initiatorIqn' to be non-null");
-        this.mappedLuns = Objects.requireNonNull(mappedLuns, "expected parameter 'mappedLuns' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private AclResponse() {}
 
-    private AclResponse() {
-        this.initiatorIqn = null;
-        this.mappedLuns = List.of();
-        this.password = null;
-        this.username = null;
+    private AclResponse(AclResponse $) {
+        this.initiatorIqn = $.initiatorIqn;
+        this.mappedLuns = $.mappedLuns;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AclResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String initiatorIqn;
-        private List<String> mappedLuns;
-        private String password;
-        private String username;
+        private AclResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AclResponse();
         }
 
         public Builder(AclResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initiatorIqn = defaults.initiatorIqn;
-    	      this.mappedLuns = defaults.mappedLuns;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new AclResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder initiatorIqn(String initiatorIqn) {
-            this.initiatorIqn = Objects.requireNonNull(initiatorIqn);
+            $.initiatorIqn = initiatorIqn;
             return this;
         }
+
         public Builder mappedLuns(List<String> mappedLuns) {
-            this.mappedLuns = Objects.requireNonNull(mappedLuns);
+            $.mappedLuns = mappedLuns;
             return this;
         }
+
         public Builder mappedLuns(String... mappedLuns) {
             return mappedLuns(List.of(mappedLuns));
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public AclResponse build() {
-            return new AclResponse(initiatorIqn, mappedLuns, password, username);
+        }
+
+        public AclResponse build() {
+            $.initiatorIqn = Objects.requireNonNull($.initiatorIqn, "expected parameter 'initiatorIqn' to be non-null");
+            $.mappedLuns = Objects.requireNonNull($.mappedLuns, "expected parameter 'mappedLuns' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

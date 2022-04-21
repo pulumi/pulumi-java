@@ -6,10 +6,10 @@ package com.pulumi.azurenative.logz.inputs;
 import com.pulumi.azurenative.logz.inputs.MetricRulesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class MetricsTagRulesPropertiesArgs extends com.pulumi.resources.Re
     public static final MetricsTagRulesPropertiesArgs Empty = new MetricsTagRulesPropertiesArgs();
 
     @Import(name="metricRules")
-      private final @Nullable Output<List<MetricRulesArgs>> metricRules;
+    private @Nullable Output<List<MetricRulesArgs>> metricRules;
 
-    public Output<List<MetricRulesArgs>> metricRules() {
-        return this.metricRules == null ? Codegen.empty() : this.metricRules;
+    public Optional<Output<List<MetricRulesArgs>>> metricRules() {
+        return Optional.ofNullable(this.metricRules);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class MetricsTagRulesPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sendMetrics")
-      private final @Nullable Output<Boolean> sendMetrics;
+    private @Nullable Output<Boolean> sendMetrics;
 
-    public Output<Boolean> sendMetrics() {
-        return this.sendMetrics == null ? Codegen.empty() : this.sendMetrics;
+    public Optional<Output<Boolean>> sendMetrics() {
+        return Optional.ofNullable(this.sendMetrics);
     }
 
-    public MetricsTagRulesPropertiesArgs(
-        @Nullable Output<List<MetricRulesArgs>> metricRules,
-        @Nullable Output<Boolean> sendMetrics) {
-        this.metricRules = metricRules;
-        this.sendMetrics = sendMetrics;
-    }
+    private MetricsTagRulesPropertiesArgs() {}
 
-    private MetricsTagRulesPropertiesArgs() {
-        this.metricRules = Codegen.empty();
-        this.sendMetrics = Codegen.empty();
+    private MetricsTagRulesPropertiesArgs(MetricsTagRulesPropertiesArgs $) {
+        this.metricRules = $.metricRules;
+        this.sendMetrics = $.sendMetrics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricsTagRulesPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MetricRulesArgs>> metricRules;
-        private @Nullable Output<Boolean> sendMetrics;
+        private MetricsTagRulesPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricsTagRulesPropertiesArgs();
         }
 
         public Builder(MetricsTagRulesPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricRules = defaults.metricRules;
-    	      this.sendMetrics = defaults.sendMetrics;
+            $ = new MetricsTagRulesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricRules(@Nullable Output<List<MetricRulesArgs>> metricRules) {
-            this.metricRules = metricRules;
+            $.metricRules = metricRules;
             return this;
         }
-        public Builder metricRules(@Nullable List<MetricRulesArgs> metricRules) {
-            this.metricRules = Codegen.ofNullable(metricRules);
-            return this;
+
+        public Builder metricRules(List<MetricRulesArgs> metricRules) {
+            return metricRules(Output.of(metricRules));
         }
+
         public Builder metricRules(MetricRulesArgs... metricRules) {
             return metricRules(List.of(metricRules));
         }
+
         public Builder sendMetrics(@Nullable Output<Boolean> sendMetrics) {
-            this.sendMetrics = sendMetrics;
+            $.sendMetrics = sendMetrics;
             return this;
         }
-        public Builder sendMetrics(@Nullable Boolean sendMetrics) {
-            this.sendMetrics = Codegen.ofNullable(sendMetrics);
-            return this;
-        }        public MetricsTagRulesPropertiesArgs build() {
-            return new MetricsTagRulesPropertiesArgs(metricRules, sendMetrics);
+
+        public Builder sendMetrics(Boolean sendMetrics) {
+            return sendMetrics(Output.of(sendMetrics));
+        }
+
+        public MetricsTagRulesPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
@@ -28,55 +28,52 @@ public final class GetScopeAssignmentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scopeAssignmentName", required=true)
-      private final String scopeAssignmentName;
+    private String scopeAssignmentName;
 
     public String scopeAssignmentName() {
         return this.scopeAssignmentName;
     }
 
-    public GetScopeAssignmentArgs(
-        String scope,
-        String scopeAssignmentName) {
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.scopeAssignmentName = Objects.requireNonNull(scopeAssignmentName, "expected parameter 'scopeAssignmentName' to be non-null");
-    }
+    private GetScopeAssignmentArgs() {}
 
-    private GetScopeAssignmentArgs() {
-        this.scope = null;
-        this.scopeAssignmentName = null;
+    private GetScopeAssignmentArgs(GetScopeAssignmentArgs $) {
+        this.scope = $.scope;
+        this.scopeAssignmentName = $.scopeAssignmentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScopeAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scope;
-        private String scopeAssignmentName;
+        private GetScopeAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScopeAssignmentArgs();
         }
 
         public Builder(GetScopeAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
-    	      this.scopeAssignmentName = defaults.scopeAssignmentName;
+            $ = new GetScopeAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder scopeAssignmentName(String scopeAssignmentName) {
-            this.scopeAssignmentName = Objects.requireNonNull(scopeAssignmentName);
+            $.scopeAssignmentName = scopeAssignmentName;
             return this;
-        }        public GetScopeAssignmentArgs build() {
-            return new GetScopeAssignmentArgs(scope, scopeAssignmentName);
+        }
+
+        public GetScopeAssignmentArgs build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.scopeAssignmentName = Objects.requireNonNull($.scopeAssignmentName, "expected parameter 'scopeAssignmentName' to be non-null");
+            return $;
         }
     }
+
 }

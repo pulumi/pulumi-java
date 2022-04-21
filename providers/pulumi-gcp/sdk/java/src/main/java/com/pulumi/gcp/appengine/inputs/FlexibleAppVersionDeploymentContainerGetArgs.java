@@ -5,7 +5,6 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class FlexibleAppVersionDeploymentContainerGetArgs extends com.pulu
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
     }
 
-    public FlexibleAppVersionDeploymentContainerGetArgs(Output<String> image) {
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-    }
+    private FlexibleAppVersionDeploymentContainerGetArgs() {}
 
-    private FlexibleAppVersionDeploymentContainerGetArgs() {
-        this.image = Codegen.empty();
+    private FlexibleAppVersionDeploymentContainerGetArgs(FlexibleAppVersionDeploymentContainerGetArgs $) {
+        this.image = $.image;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionDeploymentContainerGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> image;
+        private FlexibleAppVersionDeploymentContainerGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionDeploymentContainerGetArgs();
         }
 
         public Builder(FlexibleAppVersionDeploymentContainerGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
+            $ = new FlexibleAppVersionDeploymentContainerGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
-        }        public FlexibleAppVersionDeploymentContainerGetArgs build() {
-            return new FlexibleAppVersionDeploymentContainerGetArgs(image);
+            return image(Output.of(image));
+        }
+
+        public FlexibleAppVersionDeploymentContainerGetArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            return $;
         }
     }
+
 }

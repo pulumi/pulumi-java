@@ -5,12 +5,12 @@ package com.pulumi.gcp.logging;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.logging.inputs.MetricBucketOptionsArgs;
 import com.pulumi.gcp.logging.inputs.MetricMetricDescriptorArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucketOptions")
-      private final @Nullable Output<MetricBucketOptionsArgs> bucketOptions;
+    private @Nullable Output<MetricBucketOptionsArgs> bucketOptions;
 
-    public Output<MetricBucketOptionsArgs> bucketOptions() {
-        return this.bucketOptions == null ? Codegen.empty() : this.bucketOptions;
+    public Optional<Output<MetricBucketOptionsArgs>> bucketOptions() {
+        return Optional.ofNullable(this.bucketOptions);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class MetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
@@ -63,10 +63,10 @@ public final class MetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labelExtractors")
-      private final @Nullable Output<Map<String,String>> labelExtractors;
+    private @Nullable Output<Map<String,String>> labelExtractors;
 
-    public Output<Map<String,String>> labelExtractors() {
-        return this.labelExtractors == null ? Codegen.empty() : this.labelExtractors;
+    public Optional<Output<Map<String,String>>> labelExtractors() {
+        return Optional.ofNullable(this.labelExtractors);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class MetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricDescriptor", required=true)
-      private final Output<MetricMetricDescriptorArgs> metricDescriptor;
+    private Output<MetricMetricDescriptorArgs> metricDescriptor;
 
     public Output<MetricMetricDescriptorArgs> metricDescriptor() {
         return this.metricDescriptor;
@@ -90,10 +90,10 @@ public final class MetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class MetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -119,141 +119,120 @@ public final class MetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="valueExtractor")
-      private final @Nullable Output<String> valueExtractor;
+    private @Nullable Output<String> valueExtractor;
 
-    public Output<String> valueExtractor() {
-        return this.valueExtractor == null ? Codegen.empty() : this.valueExtractor;
+    public Optional<Output<String>> valueExtractor() {
+        return Optional.ofNullable(this.valueExtractor);
     }
 
-    public MetricArgs(
-        @Nullable Output<MetricBucketOptionsArgs> bucketOptions,
-        @Nullable Output<String> description,
-        Output<String> filter,
-        @Nullable Output<Map<String,String>> labelExtractors,
-        Output<MetricMetricDescriptorArgs> metricDescriptor,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> valueExtractor) {
-        this.bucketOptions = bucketOptions;
-        this.description = description;
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.labelExtractors = labelExtractors;
-        this.metricDescriptor = Objects.requireNonNull(metricDescriptor, "expected parameter 'metricDescriptor' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.valueExtractor = valueExtractor;
-    }
+    private MetricArgs() {}
 
-    private MetricArgs() {
-        this.bucketOptions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.labelExtractors = Codegen.empty();
-        this.metricDescriptor = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.valueExtractor = Codegen.empty();
+    private MetricArgs(MetricArgs $) {
+        this.bucketOptions = $.bucketOptions;
+        this.description = $.description;
+        this.filter = $.filter;
+        this.labelExtractors = $.labelExtractors;
+        this.metricDescriptor = $.metricDescriptor;
+        this.name = $.name;
+        this.project = $.project;
+        this.valueExtractor = $.valueExtractor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MetricBucketOptionsArgs> bucketOptions;
-        private @Nullable Output<String> description;
-        private Output<String> filter;
-        private @Nullable Output<Map<String,String>> labelExtractors;
-        private Output<MetricMetricDescriptorArgs> metricDescriptor;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> valueExtractor;
+        private MetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricArgs();
         }
 
         public Builder(MetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketOptions = defaults.bucketOptions;
-    	      this.description = defaults.description;
-    	      this.filter = defaults.filter;
-    	      this.labelExtractors = defaults.labelExtractors;
-    	      this.metricDescriptor = defaults.metricDescriptor;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.valueExtractor = defaults.valueExtractor;
+            $ = new MetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketOptions(@Nullable Output<MetricBucketOptionsArgs> bucketOptions) {
-            this.bucketOptions = bucketOptions;
+            $.bucketOptions = bucketOptions;
             return this;
         }
-        public Builder bucketOptions(@Nullable MetricBucketOptionsArgs bucketOptions) {
-            this.bucketOptions = Codegen.ofNullable(bucketOptions);
-            return this;
+
+        public Builder bucketOptions(MetricBucketOptionsArgs bucketOptions) {
+            return bucketOptions(Output.of(bucketOptions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder labelExtractors(@Nullable Output<Map<String,String>> labelExtractors) {
-            this.labelExtractors = labelExtractors;
+            $.labelExtractors = labelExtractors;
             return this;
         }
-        public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
-            this.labelExtractors = Codegen.ofNullable(labelExtractors);
-            return this;
+
+        public Builder labelExtractors(Map<String,String> labelExtractors) {
+            return labelExtractors(Output.of(labelExtractors));
         }
+
         public Builder metricDescriptor(Output<MetricMetricDescriptorArgs> metricDescriptor) {
-            this.metricDescriptor = Objects.requireNonNull(metricDescriptor);
+            $.metricDescriptor = metricDescriptor;
             return this;
         }
+
         public Builder metricDescriptor(MetricMetricDescriptorArgs metricDescriptor) {
-            this.metricDescriptor = Output.of(Objects.requireNonNull(metricDescriptor));
-            return this;
+            return metricDescriptor(Output.of(metricDescriptor));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder valueExtractor(@Nullable Output<String> valueExtractor) {
-            this.valueExtractor = valueExtractor;
+            $.valueExtractor = valueExtractor;
             return this;
         }
-        public Builder valueExtractor(@Nullable String valueExtractor) {
-            this.valueExtractor = Codegen.ofNullable(valueExtractor);
-            return this;
-        }        public MetricArgs build() {
-            return new MetricArgs(bucketOptions, description, filter, labelExtractors, metricDescriptor, name, project, valueExtractor);
+
+        public Builder valueExtractor(String valueExtractor) {
+            return valueExtractor(Output.of(valueExtractor));
+        }
+
+        public MetricArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.metricDescriptor = Objects.requireNonNull($.metricDescriptor, "expected parameter 'metricDescriptor' to be non-null");
+            return $;
         }
     }
+
 }

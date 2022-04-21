@@ -22,45 +22,45 @@ public final class LabelSelectorResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
-    public LabelSelectorResponse(Map<String,String> labels) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private LabelSelectorResponse() {}
 
-    private LabelSelectorResponse() {
-        this.labels = Map.of();
+    private LabelSelectorResponse(LabelSelectorResponse $) {
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelSelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> labels;
+        private LabelSelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelSelectorResponse();
         }
 
         public Builder(LabelSelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
+            $ = new LabelSelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
-        }        public LabelSelectorResponse build() {
-            return new LabelSelectorResponse(labels);
+        }
+
+        public LabelSelectorResponse build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

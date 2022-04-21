@@ -11,12 +11,12 @@ import com.pulumi.azurenative.security.inputs.SecurityConnectorPropertiesOrganiz
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cloudName")
-      private final @Nullable Output<Either<String,CloudName>> cloudName;
+    private @Nullable Output<Either<String,CloudName>> cloudName;
 
-    public Output<Either<String,CloudName>> cloudName() {
-        return this.cloudName == null ? Codegen.empty() : this.cloudName;
+    public Optional<Output<Either<String,CloudName>>> cloudName() {
+        return Optional.ofNullable(this.cloudName);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hierarchyIdentifier")
-      private final @Nullable Output<String> hierarchyIdentifier;
+    private @Nullable Output<String> hierarchyIdentifier;
 
-    public Output<String> hierarchyIdentifier() {
-        return this.hierarchyIdentifier == null ? Codegen.empty() : this.hierarchyIdentifier;
+    public Optional<Output<String>> hierarchyIdentifier() {
+        return Optional.ofNullable(this.hierarchyIdentifier);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="offerings")
-      private final @Nullable Output<List<Object>> offerings;
+    private @Nullable Output<List<Object>> offerings;
 
-    public Output<List<Object>> offerings() {
-        return this.offerings == null ? Codegen.empty() : this.offerings;
+    public Optional<Output<List<Object>>> offerings() {
+        return Optional.ofNullable(this.offerings);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="organizationalData")
-      private final @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
+    private @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
 
-    public Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData() {
-        return this.organizationalData == null ? Codegen.empty() : this.organizationalData;
+    public Optional<Output<SecurityConnectorPropertiesOrganizationalDataArgs>> organizationalData() {
+        return Optional.ofNullable(this.organizationalData);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -106,10 +106,10 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="securityConnectorName")
-      private final @Nullable Output<String> securityConnectorName;
+    private @Nullable Output<String> securityConnectorName;
 
-    public Output<String> securityConnectorName() {
-        return this.securityConnectorName == null ? Codegen.empty() : this.securityConnectorName;
+    public Optional<Output<String>> securityConnectorName() {
+        return Optional.ofNullable(this.securityConnectorName);
     }
 
     /**
@@ -117,157 +117,133 @@ public final class SecurityConnectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SecurityConnectorArgs(
-        @Nullable Output<Either<String,CloudName>> cloudName,
-        @Nullable Output<String> hierarchyIdentifier,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<List<Object>> offerings,
-        @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> securityConnectorName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.cloudName = cloudName;
-        this.hierarchyIdentifier = hierarchyIdentifier;
-        this.kind = kind;
-        this.location = location;
-        this.offerings = offerings;
-        this.organizationalData = organizationalData;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityConnectorName = securityConnectorName;
-        this.tags = tags;
-    }
+    private SecurityConnectorArgs() {}
 
-    private SecurityConnectorArgs() {
-        this.cloudName = Codegen.empty();
-        this.hierarchyIdentifier = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.offerings = Codegen.empty();
-        this.organizationalData = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.securityConnectorName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private SecurityConnectorArgs(SecurityConnectorArgs $) {
+        this.cloudName = $.cloudName;
+        this.hierarchyIdentifier = $.hierarchyIdentifier;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.offerings = $.offerings;
+        this.organizationalData = $.organizationalData;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityConnectorName = $.securityConnectorName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,CloudName>> cloudName;
-        private @Nullable Output<String> hierarchyIdentifier;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<Object>> offerings;
-        private @Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> securityConnectorName;
-        private @Nullable Output<Map<String,String>> tags;
+        private SecurityConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityConnectorArgs();
         }
 
         public Builder(SecurityConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudName = defaults.cloudName;
-    	      this.hierarchyIdentifier = defaults.hierarchyIdentifier;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.offerings = defaults.offerings;
-    	      this.organizationalData = defaults.organizationalData;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityConnectorName = defaults.securityConnectorName;
-    	      this.tags = defaults.tags;
+            $ = new SecurityConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudName(@Nullable Output<Either<String,CloudName>> cloudName) {
-            this.cloudName = cloudName;
+            $.cloudName = cloudName;
             return this;
         }
-        public Builder cloudName(@Nullable Either<String,CloudName> cloudName) {
-            this.cloudName = Codegen.ofNullable(cloudName);
-            return this;
+
+        public Builder cloudName(Either<String,CloudName> cloudName) {
+            return cloudName(Output.of(cloudName));
         }
+
         public Builder hierarchyIdentifier(@Nullable Output<String> hierarchyIdentifier) {
-            this.hierarchyIdentifier = hierarchyIdentifier;
+            $.hierarchyIdentifier = hierarchyIdentifier;
             return this;
         }
-        public Builder hierarchyIdentifier(@Nullable String hierarchyIdentifier) {
-            this.hierarchyIdentifier = Codegen.ofNullable(hierarchyIdentifier);
-            return this;
+
+        public Builder hierarchyIdentifier(String hierarchyIdentifier) {
+            return hierarchyIdentifier(Output.of(hierarchyIdentifier));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder offerings(@Nullable Output<List<Object>> offerings) {
-            this.offerings = offerings;
+            $.offerings = offerings;
             return this;
         }
-        public Builder offerings(@Nullable List<Object> offerings) {
-            this.offerings = Codegen.ofNullable(offerings);
-            return this;
+
+        public Builder offerings(List<Object> offerings) {
+            return offerings(Output.of(offerings));
         }
+
         public Builder offerings(Object... offerings) {
             return offerings(List.of(offerings));
         }
+
         public Builder organizationalData(@Nullable Output<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData) {
-            this.organizationalData = organizationalData;
+            $.organizationalData = organizationalData;
             return this;
         }
-        public Builder organizationalData(@Nullable SecurityConnectorPropertiesOrganizationalDataArgs organizationalData) {
-            this.organizationalData = Codegen.ofNullable(organizationalData);
-            return this;
+
+        public Builder organizationalData(SecurityConnectorPropertiesOrganizationalDataArgs organizationalData) {
+            return organizationalData(Output.of(organizationalData));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder securityConnectorName(@Nullable Output<String> securityConnectorName) {
-            this.securityConnectorName = securityConnectorName;
+            $.securityConnectorName = securityConnectorName;
             return this;
         }
-        public Builder securityConnectorName(@Nullable String securityConnectorName) {
-            this.securityConnectorName = Codegen.ofNullable(securityConnectorName);
-            return this;
+
+        public Builder securityConnectorName(String securityConnectorName) {
+            return securityConnectorName(Output.of(securityConnectorName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public SecurityConnectorArgs build() {
-            return new SecurityConnectorArgs(cloudName, hierarchyIdentifier, kind, location, offerings, organizationalData, resourceGroupName, securityConnectorName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public SecurityConnectorArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

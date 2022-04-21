@@ -13,12 +13,12 @@ import com.pulumi.azurenative.network.inputs.PrivateLinkServiceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings;
+    private @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings;
 
-    public Output<NetworkInterfaceDnsSettingsArgs> dnsSettings() {
-        return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
+    public Optional<Output<NetworkInterfaceDnsSettingsArgs>> dnsSettings() {
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enableAcceleratedNetworking")
-      private final @Nullable Output<Boolean> enableAcceleratedNetworking;
+    private @Nullable Output<Boolean> enableAcceleratedNetworking;
 
-    public Output<Boolean> enableAcceleratedNetworking() {
-        return this.enableAcceleratedNetworking == null ? Codegen.empty() : this.enableAcceleratedNetworking;
+    public Optional<Output<Boolean>> enableAcceleratedNetworking() {
+        return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enableIPForwarding")
-      private final @Nullable Output<Boolean> enableIPForwarding;
+    private @Nullable Output<Boolean> enableIPForwarding;
 
-    public Output<Boolean> enableIPForwarding() {
-        return this.enableIPForwarding == null ? Codegen.empty() : this.enableIPForwarding;
+    public Optional<Output<Boolean>> enableIPForwarding() {
+        return Optional.ofNullable(this.enableIPForwarding);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipConfigurations")
-      private final @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
+    private @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
-    public Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations() {
-        return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
+    public Optional<Output<List<NetworkInterfaceIPConfigurationArgs>>> ipConfigurations() {
+        return Optional.ofNullable(this.ipConfigurations);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="migrationPhase")
-      private final @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
+    private @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
 
-    public Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase() {
-        return this.migrationPhase == null ? Codegen.empty() : this.migrationPhase;
+    public Optional<Output<Either<String,NetworkInterfaceMigrationPhase>>> migrationPhase() {
+        return Optional.ofNullable(this.migrationPhase);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkInterfaceName")
-      private final @Nullable Output<String> networkInterfaceName;
+    private @Nullable Output<String> networkInterfaceName;
 
-    public Output<String> networkInterfaceName() {
-        return this.networkInterfaceName == null ? Codegen.empty() : this.networkInterfaceName;
+    public Optional<Output<String>> networkInterfaceName() {
+        return Optional.ofNullable(this.networkInterfaceName);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkSecurityGroup")
-      private final @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
+    private @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
 
-    public Output<NetworkSecurityGroupArgs> networkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
+    public Optional<Output<NetworkSecurityGroupArgs>> networkSecurityGroup() {
+        return Optional.ofNullable(this.networkSecurityGroup);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="nicType")
-      private final @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType;
+    private @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType;
 
-    public Output<Either<String,NetworkInterfaceNicType>> nicType() {
-        return this.nicType == null ? Codegen.empty() : this.nicType;
+    public Optional<Output<Either<String,NetworkInterfaceNicType>>> nicType() {
+        return Optional.ofNullable(this.nicType);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="privateLinkService")
-      private final @Nullable Output<PrivateLinkServiceArgs> privateLinkService;
+    private @Nullable Output<PrivateLinkServiceArgs> privateLinkService;
 
-    public Output<PrivateLinkServiceArgs> privateLinkService() {
-        return this.privateLinkService == null ? Codegen.empty() : this.privateLinkService;
+    public Optional<Output<PrivateLinkServiceArgs>> privateLinkService() {
+        return Optional.ofNullable(this.privateLinkService);
     }
 
     /**
@@ -163,7 +163,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -174,222 +174,183 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NetworkInterfaceArgs(
-        @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings,
-        @Nullable Output<Boolean> enableAcceleratedNetworking,
-        @Nullable Output<Boolean> enableIPForwarding,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<String> id,
-        @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase,
-        @Nullable Output<String> networkInterfaceName,
-        @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup,
-        @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType,
-        @Nullable Output<PrivateLinkServiceArgs> privateLinkService,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.dnsSettings = dnsSettings;
-        this.enableAcceleratedNetworking = enableAcceleratedNetworking;
-        this.enableIPForwarding = enableIPForwarding;
-        this.extendedLocation = extendedLocation;
-        this.id = id;
-        this.ipConfigurations = ipConfigurations;
-        this.location = location;
-        this.migrationPhase = migrationPhase;
-        this.networkInterfaceName = networkInterfaceName;
-        this.networkSecurityGroup = networkSecurityGroup;
-        this.nicType = nicType;
-        this.privateLinkService = privateLinkService;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private NetworkInterfaceArgs() {}
 
-    private NetworkInterfaceArgs() {
-        this.dnsSettings = Codegen.empty();
-        this.enableAcceleratedNetworking = Codegen.empty();
-        this.enableIPForwarding = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipConfigurations = Codegen.empty();
-        this.location = Codegen.empty();
-        this.migrationPhase = Codegen.empty();
-        this.networkInterfaceName = Codegen.empty();
-        this.networkSecurityGroup = Codegen.empty();
-        this.nicType = Codegen.empty();
-        this.privateLinkService = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NetworkInterfaceArgs(NetworkInterfaceArgs $) {
+        this.dnsSettings = $.dnsSettings;
+        this.enableAcceleratedNetworking = $.enableAcceleratedNetworking;
+        this.enableIPForwarding = $.enableIPForwarding;
+        this.extendedLocation = $.extendedLocation;
+        this.id = $.id;
+        this.ipConfigurations = $.ipConfigurations;
+        this.location = $.location;
+        this.migrationPhase = $.migrationPhase;
+        this.networkInterfaceName = $.networkInterfaceName;
+        this.networkSecurityGroup = $.networkSecurityGroup;
+        this.nicType = $.nicType;
+        this.privateLinkService = $.privateLinkService;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings;
-        private @Nullable Output<Boolean> enableAcceleratedNetworking;
-        private @Nullable Output<Boolean> enableIPForwarding;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
-        private @Nullable Output<String> networkInterfaceName;
-        private @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
-        private @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType;
-        private @Nullable Output<PrivateLinkServiceArgs> privateLinkService;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private NetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceArgs();
         }
 
         public Builder(NetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.enableAcceleratedNetworking = defaults.enableAcceleratedNetworking;
-    	      this.enableIPForwarding = defaults.enableIPForwarding;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.id = defaults.id;
-    	      this.ipConfigurations = defaults.ipConfigurations;
-    	      this.location = defaults.location;
-    	      this.migrationPhase = defaults.migrationPhase;
-    	      this.networkInterfaceName = defaults.networkInterfaceName;
-    	      this.networkSecurityGroup = defaults.networkSecurityGroup;
-    	      this.nicType = defaults.nicType;
-    	      this.privateLinkService = defaults.privateLinkService;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsSettings(@Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
-        public Builder dnsSettings(@Nullable NetworkInterfaceDnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Codegen.ofNullable(dnsSettings);
-            return this;
+
+        public Builder dnsSettings(NetworkInterfaceDnsSettingsArgs dnsSettings) {
+            return dnsSettings(Output.of(dnsSettings));
         }
+
         public Builder enableAcceleratedNetworking(@Nullable Output<Boolean> enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = enableAcceleratedNetworking;
+            $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
-        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
-            this.enableAcceleratedNetworking = Codegen.ofNullable(enableAcceleratedNetworking);
-            return this;
+
+        public Builder enableAcceleratedNetworking(Boolean enableAcceleratedNetworking) {
+            return enableAcceleratedNetworking(Output.of(enableAcceleratedNetworking));
         }
+
         public Builder enableIPForwarding(@Nullable Output<Boolean> enableIPForwarding) {
-            this.enableIPForwarding = enableIPForwarding;
+            $.enableIPForwarding = enableIPForwarding;
             return this;
         }
-        public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
-            this.enableIPForwarding = Codegen.ofNullable(enableIPForwarding);
-            return this;
+
+        public Builder enableIPForwarding(Boolean enableIPForwarding) {
+            return enableIPForwarding(Output.of(enableIPForwarding));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipConfigurations(@Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
-            this.ipConfigurations = ipConfigurations;
+            $.ipConfigurations = ipConfigurations;
             return this;
         }
-        public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Codegen.ofNullable(ipConfigurations);
-            return this;
+
+        public Builder ipConfigurations(List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
+            return ipConfigurations(Output.of(ipConfigurations));
         }
+
         public Builder ipConfigurations(NetworkInterfaceIPConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder migrationPhase(@Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase) {
-            this.migrationPhase = migrationPhase;
+            $.migrationPhase = migrationPhase;
             return this;
         }
-        public Builder migrationPhase(@Nullable Either<String,NetworkInterfaceMigrationPhase> migrationPhase) {
-            this.migrationPhase = Codegen.ofNullable(migrationPhase);
-            return this;
+
+        public Builder migrationPhase(Either<String,NetworkInterfaceMigrationPhase> migrationPhase) {
+            return migrationPhase(Output.of(migrationPhase));
         }
+
         public Builder networkInterfaceName(@Nullable Output<String> networkInterfaceName) {
-            this.networkInterfaceName = networkInterfaceName;
+            $.networkInterfaceName = networkInterfaceName;
             return this;
         }
-        public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
-            this.networkInterfaceName = Codegen.ofNullable(networkInterfaceName);
-            return this;
+
+        public Builder networkInterfaceName(String networkInterfaceName) {
+            return networkInterfaceName(Output.of(networkInterfaceName));
         }
+
         public Builder networkSecurityGroup(@Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup) {
-            this.networkSecurityGroup = networkSecurityGroup;
+            $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-        public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
-            this.networkSecurityGroup = Codegen.ofNullable(networkSecurityGroup);
-            return this;
+
+        public Builder networkSecurityGroup(NetworkSecurityGroupArgs networkSecurityGroup) {
+            return networkSecurityGroup(Output.of(networkSecurityGroup));
         }
+
         public Builder nicType(@Nullable Output<Either<String,NetworkInterfaceNicType>> nicType) {
-            this.nicType = nicType;
+            $.nicType = nicType;
             return this;
         }
-        public Builder nicType(@Nullable Either<String,NetworkInterfaceNicType> nicType) {
-            this.nicType = Codegen.ofNullable(nicType);
-            return this;
+
+        public Builder nicType(Either<String,NetworkInterfaceNicType> nicType) {
+            return nicType(Output.of(nicType));
         }
+
         public Builder privateLinkService(@Nullable Output<PrivateLinkServiceArgs> privateLinkService) {
-            this.privateLinkService = privateLinkService;
+            $.privateLinkService = privateLinkService;
             return this;
         }
-        public Builder privateLinkService(@Nullable PrivateLinkServiceArgs privateLinkService) {
-            this.privateLinkService = Codegen.ofNullable(privateLinkService);
-            return this;
+
+        public Builder privateLinkService(PrivateLinkServiceArgs privateLinkService) {
+            return privateLinkService(Output.of(privateLinkService));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public NetworkInterfaceArgs build() {
-            return new NetworkInterfaceArgs(dnsSettings, enableAcceleratedNetworking, enableIPForwarding, extendedLocation, id, ipConfigurations, location, migrationPhase, networkInterfaceName, networkSecurityGroup, nicType, privateLinkService, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public NetworkInterfaceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

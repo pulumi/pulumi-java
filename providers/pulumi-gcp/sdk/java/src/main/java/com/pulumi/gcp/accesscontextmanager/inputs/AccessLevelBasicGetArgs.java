@@ -5,11 +5,11 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicConditionGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AccessLevelBasicGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="combiningFunction")
-      private final @Nullable Output<String> combiningFunction;
+    private @Nullable Output<String> combiningFunction;
 
-    public Output<String> combiningFunction() {
-        return this.combiningFunction == null ? Codegen.empty() : this.combiningFunction;
+    public Optional<Output<String>> combiningFunction() {
+        return Optional.ofNullable(this.combiningFunction);
     }
 
     /**
@@ -40,66 +40,63 @@ public final class AccessLevelBasicGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="conditions", required=true)
-      private final Output<List<AccessLevelBasicConditionGetArgs>> conditions;
+    private Output<List<AccessLevelBasicConditionGetArgs>> conditions;
 
     public Output<List<AccessLevelBasicConditionGetArgs>> conditions() {
         return this.conditions;
     }
 
-    public AccessLevelBasicGetArgs(
-        @Nullable Output<String> combiningFunction,
-        Output<List<AccessLevelBasicConditionGetArgs>> conditions) {
-        this.combiningFunction = combiningFunction;
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-    }
+    private AccessLevelBasicGetArgs() {}
 
-    private AccessLevelBasicGetArgs() {
-        this.combiningFunction = Codegen.empty();
-        this.conditions = Codegen.empty();
+    private AccessLevelBasicGetArgs(AccessLevelBasicGetArgs $) {
+        this.combiningFunction = $.combiningFunction;
+        this.conditions = $.conditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessLevelBasicGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> combiningFunction;
-        private Output<List<AccessLevelBasicConditionGetArgs>> conditions;
+        private AccessLevelBasicGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessLevelBasicGetArgs();
         }
 
         public Builder(AccessLevelBasicGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.combiningFunction = defaults.combiningFunction;
-    	      this.conditions = defaults.conditions;
+            $ = new AccessLevelBasicGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder combiningFunction(@Nullable Output<String> combiningFunction) {
-            this.combiningFunction = combiningFunction;
+            $.combiningFunction = combiningFunction;
             return this;
         }
-        public Builder combiningFunction(@Nullable String combiningFunction) {
-            this.combiningFunction = Codegen.ofNullable(combiningFunction);
-            return this;
+
+        public Builder combiningFunction(String combiningFunction) {
+            return combiningFunction(Output.of(combiningFunction));
         }
+
         public Builder conditions(Output<List<AccessLevelBasicConditionGetArgs>> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(List<AccessLevelBasicConditionGetArgs> conditions) {
-            this.conditions = Output.of(Objects.requireNonNull(conditions));
-            return this;
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(AccessLevelBasicConditionGetArgs... conditions) {
             return conditions(List.of(conditions));
-        }        public AccessLevelBasicGetArgs build() {
-            return new AccessLevelBasicGetArgs(combiningFunction, conditions);
+        }
+
+        public AccessLevelBasicGetArgs build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            return $;
         }
     }
+
 }

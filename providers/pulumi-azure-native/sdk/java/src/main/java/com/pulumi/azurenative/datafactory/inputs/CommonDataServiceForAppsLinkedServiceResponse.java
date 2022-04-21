@@ -32,10 +32,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Object authenticationType;
+    private Object authenticationType;
 
     public Object authenticationType() {
         return this.authenticationType;
@@ -54,10 +54,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="deploymentType", required=true)
-      private final Object deploymentType;
+    private Object deploymentType;
 
     public Object deploymentType() {
         return this.deploymentType;
@@ -76,10 +76,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="hostName")
-      private final @Nullable Object hostName;
+    private @Nullable Object hostName;
 
     public Optional<Object> hostName() {
-        return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="organizationName")
-      private final @Nullable Object organizationName;
+    private @Nullable Object organizationName;
 
     public Optional<Object> organizationName() {
-        return this.organizationName == null ? Optional.empty() : Optional.ofNullable(this.organizationName);
+        return Optional.ofNullable(this.organizationName);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="port")
-      private final @Nullable Object port;
+    private @Nullable Object port;
 
     public Optional<Object> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="servicePrincipalCredential")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential() {
-        return this.servicePrincipalCredential == null ? null : this.servicePrincipalCredential;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalCredential() {
+        return Optional.ofNullable(this.servicePrincipalCredential);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="servicePrincipalCredentialType")
-      private final @Nullable Object servicePrincipalCredentialType;
+    private @Nullable Object servicePrincipalCredentialType;
 
     public Optional<Object> servicePrincipalCredentialType() {
-        return this.servicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalCredentialType);
+        return Optional.ofNullable(this.servicePrincipalCredentialType);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="serviceUri")
-      private final @Nullable Object serviceUri;
+    private @Nullable Object serviceUri;
 
     public Optional<Object> serviceUri() {
-        return this.serviceUri == null ? Optional.empty() : Optional.ofNullable(this.serviceUri);
+        return Optional.ofNullable(this.serviceUri);
     }
 
     /**
@@ -198,7 +198,7 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -209,193 +209,147 @@ public final class CommonDataServiceForAppsLinkedServiceResponse extends com.pul
      * 
      */
     @Import(name="username")
-      private final @Nullable Object username;
+    private @Nullable Object username;
 
     public Optional<Object> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public CommonDataServiceForAppsLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        Object authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        Object deploymentType,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object hostName,
-        @Nullable Object organizationName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential,
-        @Nullable Object servicePrincipalCredentialType,
-        @Nullable Object servicePrincipalId,
-        @Nullable Object serviceUri,
-        String type,
-        @Nullable Object username) {
-        this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.connectVia = connectVia;
-        this.deploymentType = Objects.requireNonNull(deploymentType, "expected parameter 'deploymentType' to be non-null");
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.hostName = hostName;
-        this.organizationName = organizationName;
-        this.parameters = parameters;
-        this.password = password;
-        this.port = port;
-        this.servicePrincipalCredential = servicePrincipalCredential;
-        this.servicePrincipalCredentialType = servicePrincipalCredentialType;
-        this.servicePrincipalId = servicePrincipalId;
-        this.serviceUri = serviceUri;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.username = username;
-    }
+    private CommonDataServiceForAppsLinkedServiceResponse() {}
 
-    private CommonDataServiceForAppsLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.authenticationType = null;
-        this.connectVia = null;
-        this.deploymentType = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.hostName = null;
-        this.organizationName = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.port = null;
-        this.servicePrincipalCredential = null;
-        this.servicePrincipalCredentialType = null;
-        this.servicePrincipalId = null;
-        this.serviceUri = null;
-        this.type = null;
-        this.username = null;
+    private CommonDataServiceForAppsLinkedServiceResponse(CommonDataServiceForAppsLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.connectVia = $.connectVia;
+        this.deploymentType = $.deploymentType;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.hostName = $.hostName;
+        this.organizationName = $.organizationName;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.port = $.port;
+        this.servicePrincipalCredential = $.servicePrincipalCredential;
+        this.servicePrincipalCredentialType = $.servicePrincipalCredentialType;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.serviceUri = $.serviceUri;
+        this.type = $.type;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommonDataServiceForAppsLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private Object authenticationType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private Object deploymentType;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object hostName;
-        private @Nullable Object organizationName;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Object port;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
-        private @Nullable Object servicePrincipalCredentialType;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Object serviceUri;
-        private String type;
-        private @Nullable Object username;
+        private CommonDataServiceForAppsLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommonDataServiceForAppsLinkedServiceResponse();
         }
 
         public Builder(CommonDataServiceForAppsLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.deploymentType = defaults.deploymentType;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.hostName = defaults.hostName;
-    	      this.organizationName = defaults.organizationName;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.servicePrincipalCredential = defaults.servicePrincipalCredential;
-    	      this.servicePrincipalCredentialType = defaults.servicePrincipalCredentialType;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.serviceUri = defaults.serviceUri;
-    	      this.type = defaults.type;
-    	      this.username = defaults.username;
+            $ = new CommonDataServiceForAppsLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(Object authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder deploymentType(Object deploymentType) {
-            this.deploymentType = Objects.requireNonNull(deploymentType);
+            $.deploymentType = deploymentType;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder hostName(@Nullable Object hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
+
         public Builder organizationName(@Nullable Object organizationName) {
-            this.organizationName = organizationName;
+            $.organizationName = organizationName;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder port(@Nullable Object port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential) {
-            this.servicePrincipalCredential = servicePrincipalCredential;
+            $.servicePrincipalCredential = servicePrincipalCredential;
             return this;
         }
+
         public Builder servicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {
-            this.servicePrincipalCredentialType = servicePrincipalCredentialType;
+            $.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder serviceUri(@Nullable Object serviceUri) {
-            this.serviceUri = serviceUri;
+            $.serviceUri = serviceUri;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder username(@Nullable Object username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public CommonDataServiceForAppsLinkedServiceResponse build() {
-            return new CommonDataServiceForAppsLinkedServiceResponse(annotations, authenticationType, connectVia, deploymentType, description, encryptedCredential, hostName, organizationName, parameters, password, port, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, serviceUri, type, username);
+        }
+
+        public CommonDataServiceForAppsLinkedServiceResponse build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            $.deploymentType = Objects.requireNonNull($.deploymentType, "expected parameter 'deploymentType' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

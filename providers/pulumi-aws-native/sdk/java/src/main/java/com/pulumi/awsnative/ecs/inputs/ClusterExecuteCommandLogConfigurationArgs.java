@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,130 +21,116 @@ public final class ClusterExecuteCommandLogConfigurationArgs extends com.pulumi.
     public static final ClusterExecuteCommandLogConfigurationArgs Empty = new ClusterExecuteCommandLogConfigurationArgs();
 
     @Import(name="cloudWatchEncryptionEnabled")
-      private final @Nullable Output<Boolean> cloudWatchEncryptionEnabled;
+    private @Nullable Output<Boolean> cloudWatchEncryptionEnabled;
 
-    public Output<Boolean> cloudWatchEncryptionEnabled() {
-        return this.cloudWatchEncryptionEnabled == null ? Codegen.empty() : this.cloudWatchEncryptionEnabled;
+    public Optional<Output<Boolean>> cloudWatchEncryptionEnabled() {
+        return Optional.ofNullable(this.cloudWatchEncryptionEnabled);
     }
 
     @Import(name="cloudWatchLogGroupName")
-      private final @Nullable Output<String> cloudWatchLogGroupName;
+    private @Nullable Output<String> cloudWatchLogGroupName;
 
-    public Output<String> cloudWatchLogGroupName() {
-        return this.cloudWatchLogGroupName == null ? Codegen.empty() : this.cloudWatchLogGroupName;
+    public Optional<Output<String>> cloudWatchLogGroupName() {
+        return Optional.ofNullable(this.cloudWatchLogGroupName);
     }
 
     @Import(name="s3BucketName")
-      private final @Nullable Output<String> s3BucketName;
+    private @Nullable Output<String> s3BucketName;
 
-    public Output<String> s3BucketName() {
-        return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
+    public Optional<Output<String>> s3BucketName() {
+        return Optional.ofNullable(this.s3BucketName);
     }
 
     @Import(name="s3EncryptionEnabled")
-      private final @Nullable Output<Boolean> s3EncryptionEnabled;
+    private @Nullable Output<Boolean> s3EncryptionEnabled;
 
-    public Output<Boolean> s3EncryptionEnabled() {
-        return this.s3EncryptionEnabled == null ? Codegen.empty() : this.s3EncryptionEnabled;
+    public Optional<Output<Boolean>> s3EncryptionEnabled() {
+        return Optional.ofNullable(this.s3EncryptionEnabled);
     }
 
     @Import(name="s3KeyPrefix")
-      private final @Nullable Output<String> s3KeyPrefix;
+    private @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> s3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
+    public Optional<Output<String>> s3KeyPrefix() {
+        return Optional.ofNullable(this.s3KeyPrefix);
     }
 
-    public ClusterExecuteCommandLogConfigurationArgs(
-        @Nullable Output<Boolean> cloudWatchEncryptionEnabled,
-        @Nullable Output<String> cloudWatchLogGroupName,
-        @Nullable Output<String> s3BucketName,
-        @Nullable Output<Boolean> s3EncryptionEnabled,
-        @Nullable Output<String> s3KeyPrefix) {
-        this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
-        this.cloudWatchLogGroupName = cloudWatchLogGroupName;
-        this.s3BucketName = s3BucketName;
-        this.s3EncryptionEnabled = s3EncryptionEnabled;
-        this.s3KeyPrefix = s3KeyPrefix;
-    }
+    private ClusterExecuteCommandLogConfigurationArgs() {}
 
-    private ClusterExecuteCommandLogConfigurationArgs() {
-        this.cloudWatchEncryptionEnabled = Codegen.empty();
-        this.cloudWatchLogGroupName = Codegen.empty();
-        this.s3BucketName = Codegen.empty();
-        this.s3EncryptionEnabled = Codegen.empty();
-        this.s3KeyPrefix = Codegen.empty();
+    private ClusterExecuteCommandLogConfigurationArgs(ClusterExecuteCommandLogConfigurationArgs $) {
+        this.cloudWatchEncryptionEnabled = $.cloudWatchEncryptionEnabled;
+        this.cloudWatchLogGroupName = $.cloudWatchLogGroupName;
+        this.s3BucketName = $.s3BucketName;
+        this.s3EncryptionEnabled = $.s3EncryptionEnabled;
+        this.s3KeyPrefix = $.s3KeyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterExecuteCommandLogConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> cloudWatchEncryptionEnabled;
-        private @Nullable Output<String> cloudWatchLogGroupName;
-        private @Nullable Output<String> s3BucketName;
-        private @Nullable Output<Boolean> s3EncryptionEnabled;
-        private @Nullable Output<String> s3KeyPrefix;
+        private ClusterExecuteCommandLogConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterExecuteCommandLogConfigurationArgs();
         }
 
         public Builder(ClusterExecuteCommandLogConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchEncryptionEnabled = defaults.cloudWatchEncryptionEnabled;
-    	      this.cloudWatchLogGroupName = defaults.cloudWatchLogGroupName;
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3EncryptionEnabled = defaults.s3EncryptionEnabled;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
+            $ = new ClusterExecuteCommandLogConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchEncryptionEnabled(@Nullable Output<Boolean> cloudWatchEncryptionEnabled) {
-            this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
+            $.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
             return this;
         }
-        public Builder cloudWatchEncryptionEnabled(@Nullable Boolean cloudWatchEncryptionEnabled) {
-            this.cloudWatchEncryptionEnabled = Codegen.ofNullable(cloudWatchEncryptionEnabled);
-            return this;
+
+        public Builder cloudWatchEncryptionEnabled(Boolean cloudWatchEncryptionEnabled) {
+            return cloudWatchEncryptionEnabled(Output.of(cloudWatchEncryptionEnabled));
         }
+
         public Builder cloudWatchLogGroupName(@Nullable Output<String> cloudWatchLogGroupName) {
-            this.cloudWatchLogGroupName = cloudWatchLogGroupName;
+            $.cloudWatchLogGroupName = cloudWatchLogGroupName;
             return this;
         }
-        public Builder cloudWatchLogGroupName(@Nullable String cloudWatchLogGroupName) {
-            this.cloudWatchLogGroupName = Codegen.ofNullable(cloudWatchLogGroupName);
-            return this;
+
+        public Builder cloudWatchLogGroupName(String cloudWatchLogGroupName) {
+            return cloudWatchLogGroupName(Output.of(cloudWatchLogGroupName));
         }
+
         public Builder s3BucketName(@Nullable Output<String> s3BucketName) {
-            this.s3BucketName = s3BucketName;
+            $.s3BucketName = s3BucketName;
             return this;
         }
-        public Builder s3BucketName(@Nullable String s3BucketName) {
-            this.s3BucketName = Codegen.ofNullable(s3BucketName);
-            return this;
+
+        public Builder s3BucketName(String s3BucketName) {
+            return s3BucketName(Output.of(s3BucketName));
         }
+
         public Builder s3EncryptionEnabled(@Nullable Output<Boolean> s3EncryptionEnabled) {
-            this.s3EncryptionEnabled = s3EncryptionEnabled;
+            $.s3EncryptionEnabled = s3EncryptionEnabled;
             return this;
         }
-        public Builder s3EncryptionEnabled(@Nullable Boolean s3EncryptionEnabled) {
-            this.s3EncryptionEnabled = Codegen.ofNullable(s3EncryptionEnabled);
-            return this;
+
+        public Builder s3EncryptionEnabled(Boolean s3EncryptionEnabled) {
+            return s3EncryptionEnabled(Output.of(s3EncryptionEnabled));
         }
+
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
-            this.s3KeyPrefix = s3KeyPrefix;
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
-            return this;
-        }        public ClusterExecuteCommandLogConfigurationArgs build() {
-            return new ClusterExecuteCommandLogConfigurationArgs(cloudWatchEncryptionEnabled, cloudWatchLogGroupName, s3BucketName, s3EncryptionEnabled, s3KeyPrefix);
+
+        public Builder s3KeyPrefix(String s3KeyPrefix) {
+            return s3KeyPrefix(Output.of(s3KeyPrefix));
+        }
+
+        public ClusterExecuteCommandLogConfigurationArgs build() {
+            return $;
         }
     }
+
 }

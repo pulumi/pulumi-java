@@ -5,11 +5,11 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
      * 
      */
     @Import(name="acceleratorType")
-      private final @Nullable Output<String> acceleratorType;
+    private @Nullable Output<String> acceleratorType;
 
-    public Output<String> acceleratorType() {
-        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
+    public Optional<Output<String>> acceleratorType() {
+        return Optional.ofNullable(this.acceleratorType);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
      * 
      */
     @Import(name="initialInstanceCount", required=true)
-      private final Output<Integer> initialInstanceCount;
+    private Output<Integer> initialInstanceCount;
 
     public Output<Integer> initialInstanceCount() {
         return this.initialInstanceCount;
@@ -44,10 +44,10 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
      * 
      */
     @Import(name="initialVariantWeight")
-      private final @Nullable Output<Double> initialVariantWeight;
+    private @Nullable Output<Double> initialVariantWeight;
 
-    public Output<Double> initialVariantWeight() {
-        return this.initialVariantWeight == null ? Codegen.empty() : this.initialVariantWeight;
+    public Optional<Output<Double>> initialVariantWeight() {
+        return Optional.ofNullable(this.initialVariantWeight);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
@@ -66,7 +66,7 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
      * 
      */
     @Import(name="modelName", required=true)
-      private final Output<String> modelName;
+    private Output<String> modelName;
 
     public Output<String> modelName() {
         return this.modelName;
@@ -77,115 +77,101 @@ public final class EndpointConfigurationProductionVariantArgs extends com.pulumi
      * 
      */
     @Import(name="variantName")
-      private final @Nullable Output<String> variantName;
+    private @Nullable Output<String> variantName;
 
-    public Output<String> variantName() {
-        return this.variantName == null ? Codegen.empty() : this.variantName;
+    public Optional<Output<String>> variantName() {
+        return Optional.ofNullable(this.variantName);
     }
 
-    public EndpointConfigurationProductionVariantArgs(
-        @Nullable Output<String> acceleratorType,
-        Output<Integer> initialInstanceCount,
-        @Nullable Output<Double> initialVariantWeight,
-        Output<String> instanceType,
-        Output<String> modelName,
-        @Nullable Output<String> variantName) {
-        this.acceleratorType = acceleratorType;
-        this.initialInstanceCount = Objects.requireNonNull(initialInstanceCount, "expected parameter 'initialInstanceCount' to be non-null");
-        this.initialVariantWeight = initialVariantWeight;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.modelName = Objects.requireNonNull(modelName, "expected parameter 'modelName' to be non-null");
-        this.variantName = variantName;
-    }
+    private EndpointConfigurationProductionVariantArgs() {}
 
-    private EndpointConfigurationProductionVariantArgs() {
-        this.acceleratorType = Codegen.empty();
-        this.initialInstanceCount = Codegen.empty();
-        this.initialVariantWeight = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.modelName = Codegen.empty();
-        this.variantName = Codegen.empty();
+    private EndpointConfigurationProductionVariantArgs(EndpointConfigurationProductionVariantArgs $) {
+        this.acceleratorType = $.acceleratorType;
+        this.initialInstanceCount = $.initialInstanceCount;
+        this.initialVariantWeight = $.initialVariantWeight;
+        this.instanceType = $.instanceType;
+        this.modelName = $.modelName;
+        this.variantName = $.variantName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConfigurationProductionVariantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceleratorType;
-        private Output<Integer> initialInstanceCount;
-        private @Nullable Output<Double> initialVariantWeight;
-        private Output<String> instanceType;
-        private Output<String> modelName;
-        private @Nullable Output<String> variantName;
+        private EndpointConfigurationProductionVariantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConfigurationProductionVariantArgs();
         }
 
         public Builder(EndpointConfigurationProductionVariantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorType = defaults.acceleratorType;
-    	      this.initialInstanceCount = defaults.initialInstanceCount;
-    	      this.initialVariantWeight = defaults.initialVariantWeight;
-    	      this.instanceType = defaults.instanceType;
-    	      this.modelName = defaults.modelName;
-    	      this.variantName = defaults.variantName;
+            $ = new EndpointConfigurationProductionVariantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
-            this.acceleratorType = acceleratorType;
+            $.acceleratorType = acceleratorType;
             return this;
         }
-        public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Codegen.ofNullable(acceleratorType);
-            return this;
+
+        public Builder acceleratorType(String acceleratorType) {
+            return acceleratorType(Output.of(acceleratorType));
         }
+
         public Builder initialInstanceCount(Output<Integer> initialInstanceCount) {
-            this.initialInstanceCount = Objects.requireNonNull(initialInstanceCount);
+            $.initialInstanceCount = initialInstanceCount;
             return this;
         }
+
         public Builder initialInstanceCount(Integer initialInstanceCount) {
-            this.initialInstanceCount = Output.of(Objects.requireNonNull(initialInstanceCount));
-            return this;
+            return initialInstanceCount(Output.of(initialInstanceCount));
         }
+
         public Builder initialVariantWeight(@Nullable Output<Double> initialVariantWeight) {
-            this.initialVariantWeight = initialVariantWeight;
+            $.initialVariantWeight = initialVariantWeight;
             return this;
         }
-        public Builder initialVariantWeight(@Nullable Double initialVariantWeight) {
-            this.initialVariantWeight = Codegen.ofNullable(initialVariantWeight);
-            return this;
+
+        public Builder initialVariantWeight(Double initialVariantWeight) {
+            return initialVariantWeight(Output.of(initialVariantWeight));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder modelName(Output<String> modelName) {
-            this.modelName = Objects.requireNonNull(modelName);
+            $.modelName = modelName;
             return this;
         }
+
         public Builder modelName(String modelName) {
-            this.modelName = Output.of(Objects.requireNonNull(modelName));
-            return this;
+            return modelName(Output.of(modelName));
         }
+
         public Builder variantName(@Nullable Output<String> variantName) {
-            this.variantName = variantName;
+            $.variantName = variantName;
             return this;
         }
-        public Builder variantName(@Nullable String variantName) {
-            this.variantName = Codegen.ofNullable(variantName);
-            return this;
-        }        public EndpointConfigurationProductionVariantArgs build() {
-            return new EndpointConfigurationProductionVariantArgs(acceleratorType, initialInstanceCount, initialVariantWeight, instanceType, modelName, variantName);
+
+        public Builder variantName(String variantName) {
+            return variantName(Output.of(variantName));
+        }
+
+        public EndpointConfigurationProductionVariantArgs build() {
+            $.initialInstanceCount = Objects.requireNonNull($.initialInstanceCount, "expected parameter 'initialInstanceCount' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            $.modelName = Objects.requireNonNull($.modelName, "expected parameter 'modelName' to be non-null");
+            return $;
         }
     }
+
 }

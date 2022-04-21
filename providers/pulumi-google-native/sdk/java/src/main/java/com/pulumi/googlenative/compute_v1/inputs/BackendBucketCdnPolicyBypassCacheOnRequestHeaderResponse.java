@@ -21,45 +21,45 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse exte
      * 
      */
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
     }
 
-    public BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse(String headerName) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-    }
+    private BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse() {}
 
-    private BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse() {
-        this.headerName = null;
+    private BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse(BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse $) {
+        this.headerName = $.headerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerName;
+        private BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse();
         }
 
         public Builder(BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
+            $ = new BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
-        }        public BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse build() {
-            return new BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse(headerName);
+        }
+
+        public BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            return $;
         }
     }
+
 }

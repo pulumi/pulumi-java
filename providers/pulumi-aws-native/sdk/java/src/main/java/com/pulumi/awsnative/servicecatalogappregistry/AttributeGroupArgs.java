@@ -6,10 +6,10 @@ package com.pulumi.awsnative.servicecatalogappregistry;
 import com.pulumi.awsnative.servicecatalogappregistry.inputs.AttributeGroupTagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class AttributeGroupArgs extends com.pulumi.resources.ResourceArgs 
     public static final AttributeGroupArgs Empty = new AttributeGroupArgs();
 
     @Import(name="attributes", required=true)
-      private final Output<Object> attributes;
+    private Output<Object> attributes;
 
     public Output<Object> attributes() {
         return this.attributes;
@@ -29,10 +29,10 @@ public final class AttributeGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -40,96 +40,86 @@ public final class AttributeGroupArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<AttributeGroupTagsArgs> tags;
+    private @Nullable Output<AttributeGroupTagsArgs> tags;
 
-    public Output<AttributeGroupTagsArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<AttributeGroupTagsArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AttributeGroupArgs(
-        Output<Object> attributes,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<AttributeGroupTagsArgs> tags) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.tags = tags;
-    }
+    private AttributeGroupArgs() {}
 
-    private AttributeGroupArgs() {
-        this.attributes = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AttributeGroupArgs(AttributeGroupArgs $) {
+        this.attributes = $.attributes;
+        this.description = $.description;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttributeGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> attributes;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<AttributeGroupTagsArgs> tags;
+        private AttributeGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttributeGroupArgs();
         }
 
         public Builder(AttributeGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new AttributeGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(Output<Object> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(Object attributes) {
-            this.attributes = Output.of(Objects.requireNonNull(attributes));
-            return this;
+            return attributes(Output.of(attributes));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<AttributeGroupTagsArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable AttributeGroupTagsArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AttributeGroupArgs build() {
-            return new AttributeGroupArgs(attributes, description, name, tags);
+
+        public Builder tags(AttributeGroupTagsArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AttributeGroupArgs build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            return $;
         }
     }
+
 }

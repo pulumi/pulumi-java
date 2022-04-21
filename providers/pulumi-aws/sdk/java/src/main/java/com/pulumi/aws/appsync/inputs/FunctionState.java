@@ -6,10 +6,10 @@ package com.pulumi.aws.appsync.inputs;
 import com.pulumi.aws.appsync.inputs.FunctionSyncConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSource")
-      private final @Nullable Output<String> dataSource;
+    private @Nullable Output<String> dataSource;
 
-    public Output<String> dataSource() {
-        return this.dataSource == null ? Codegen.empty() : this.dataSource;
+    public Optional<Output<String>> dataSource() {
+        return Optional.ofNullable(this.dataSource);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionId")
-      private final @Nullable Output<String> functionId;
+    private @Nullable Output<String> functionId;
 
-    public Output<String> functionId() {
-        return this.functionId == null ? Codegen.empty() : this.functionId;
+    public Optional<Output<String>> functionId() {
+        return Optional.ofNullable(this.functionId);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionVersion")
-      private final @Nullable Output<String> functionVersion;
+    private @Nullable Output<String> functionVersion;
 
-    public Output<String> functionVersion() {
-        return this.functionVersion == null ? Codegen.empty() : this.functionVersion;
+    public Optional<Output<String>> functionVersion() {
+        return Optional.ofNullable(this.functionVersion);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxBatchSize")
-      private final @Nullable Output<Integer> maxBatchSize;
+    private @Nullable Output<Integer> maxBatchSize;
 
-    public Output<Integer> maxBatchSize() {
-        return this.maxBatchSize == null ? Codegen.empty() : this.maxBatchSize;
+    public Optional<Output<Integer>> maxBatchSize() {
+        return Optional.ofNullable(this.maxBatchSize);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestMappingTemplate")
-      private final @Nullable Output<String> requestMappingTemplate;
+    private @Nullable Output<String> requestMappingTemplate;
 
-    public Output<String> requestMappingTemplate() {
-        return this.requestMappingTemplate == null ? Codegen.empty() : this.requestMappingTemplate;
+    public Optional<Output<String>> requestMappingTemplate() {
+        return Optional.ofNullable(this.requestMappingTemplate);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseMappingTemplate")
-      private final @Nullable Output<String> responseMappingTemplate;
+    private @Nullable Output<String> responseMappingTemplate;
 
-    public Output<String> responseMappingTemplate() {
-        return this.responseMappingTemplate == null ? Codegen.empty() : this.responseMappingTemplate;
+    public Optional<Output<String>> responseMappingTemplate() {
+        return Optional.ofNullable(this.responseMappingTemplate);
     }
 
     /**
@@ -132,180 +132,148 @@ public final class FunctionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncConfig")
-      private final @Nullable Output<FunctionSyncConfigGetArgs> syncConfig;
+    private @Nullable Output<FunctionSyncConfigGetArgs> syncConfig;
 
-    public Output<FunctionSyncConfigGetArgs> syncConfig() {
-        return this.syncConfig == null ? Codegen.empty() : this.syncConfig;
+    public Optional<Output<FunctionSyncConfigGetArgs>> syncConfig() {
+        return Optional.ofNullable(this.syncConfig);
     }
 
-    public FunctionState(
-        @Nullable Output<String> apiId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> dataSource,
-        @Nullable Output<String> description,
-        @Nullable Output<String> functionId,
-        @Nullable Output<String> functionVersion,
-        @Nullable Output<Integer> maxBatchSize,
-        @Nullable Output<String> name,
-        @Nullable Output<String> requestMappingTemplate,
-        @Nullable Output<String> responseMappingTemplate,
-        @Nullable Output<FunctionSyncConfigGetArgs> syncConfig) {
-        this.apiId = apiId;
-        this.arn = arn;
-        this.dataSource = dataSource;
-        this.description = description;
-        this.functionId = functionId;
-        this.functionVersion = functionVersion;
-        this.maxBatchSize = maxBatchSize;
-        this.name = name;
-        this.requestMappingTemplate = requestMappingTemplate;
-        this.responseMappingTemplate = responseMappingTemplate;
-        this.syncConfig = syncConfig;
-    }
+    private FunctionState() {}
 
-    private FunctionState() {
-        this.apiId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.dataSource = Codegen.empty();
-        this.description = Codegen.empty();
-        this.functionId = Codegen.empty();
-        this.functionVersion = Codegen.empty();
-        this.maxBatchSize = Codegen.empty();
-        this.name = Codegen.empty();
-        this.requestMappingTemplate = Codegen.empty();
-        this.responseMappingTemplate = Codegen.empty();
-        this.syncConfig = Codegen.empty();
+    private FunctionState(FunctionState $) {
+        this.apiId = $.apiId;
+        this.arn = $.arn;
+        this.dataSource = $.dataSource;
+        this.description = $.description;
+        this.functionId = $.functionId;
+        this.functionVersion = $.functionVersion;
+        this.maxBatchSize = $.maxBatchSize;
+        this.name = $.name;
+        this.requestMappingTemplate = $.requestMappingTemplate;
+        this.responseMappingTemplate = $.responseMappingTemplate;
+        this.syncConfig = $.syncConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> dataSource;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> functionId;
-        private @Nullable Output<String> functionVersion;
-        private @Nullable Output<Integer> maxBatchSize;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> requestMappingTemplate;
-        private @Nullable Output<String> responseMappingTemplate;
-        private @Nullable Output<FunctionSyncConfigGetArgs> syncConfig;
+        private FunctionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionState();
         }
 
         public Builder(FunctionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.arn = defaults.arn;
-    	      this.dataSource = defaults.dataSource;
-    	      this.description = defaults.description;
-    	      this.functionId = defaults.functionId;
-    	      this.functionVersion = defaults.functionVersion;
-    	      this.maxBatchSize = defaults.maxBatchSize;
-    	      this.name = defaults.name;
-    	      this.requestMappingTemplate = defaults.requestMappingTemplate;
-    	      this.responseMappingTemplate = defaults.responseMappingTemplate;
-    	      this.syncConfig = defaults.syncConfig;
+            $ = new FunctionState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder dataSource(@Nullable Output<String> dataSource) {
-            this.dataSource = dataSource;
+            $.dataSource = dataSource;
             return this;
         }
-        public Builder dataSource(@Nullable String dataSource) {
-            this.dataSource = Codegen.ofNullable(dataSource);
-            return this;
+
+        public Builder dataSource(String dataSource) {
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder functionId(@Nullable Output<String> functionId) {
-            this.functionId = functionId;
+            $.functionId = functionId;
             return this;
         }
-        public Builder functionId(@Nullable String functionId) {
-            this.functionId = Codegen.ofNullable(functionId);
-            return this;
+
+        public Builder functionId(String functionId) {
+            return functionId(Output.of(functionId));
         }
+
         public Builder functionVersion(@Nullable Output<String> functionVersion) {
-            this.functionVersion = functionVersion;
+            $.functionVersion = functionVersion;
             return this;
         }
-        public Builder functionVersion(@Nullable String functionVersion) {
-            this.functionVersion = Codegen.ofNullable(functionVersion);
-            return this;
+
+        public Builder functionVersion(String functionVersion) {
+            return functionVersion(Output.of(functionVersion));
         }
+
         public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
-            this.maxBatchSize = maxBatchSize;
+            $.maxBatchSize = maxBatchSize;
             return this;
         }
-        public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
-            this.maxBatchSize = Codegen.ofNullable(maxBatchSize);
-            return this;
+
+        public Builder maxBatchSize(Integer maxBatchSize) {
+            return maxBatchSize(Output.of(maxBatchSize));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder requestMappingTemplate(@Nullable Output<String> requestMappingTemplate) {
-            this.requestMappingTemplate = requestMappingTemplate;
+            $.requestMappingTemplate = requestMappingTemplate;
             return this;
         }
-        public Builder requestMappingTemplate(@Nullable String requestMappingTemplate) {
-            this.requestMappingTemplate = Codegen.ofNullable(requestMappingTemplate);
-            return this;
+
+        public Builder requestMappingTemplate(String requestMappingTemplate) {
+            return requestMappingTemplate(Output.of(requestMappingTemplate));
         }
+
         public Builder responseMappingTemplate(@Nullable Output<String> responseMappingTemplate) {
-            this.responseMappingTemplate = responseMappingTemplate;
+            $.responseMappingTemplate = responseMappingTemplate;
             return this;
         }
-        public Builder responseMappingTemplate(@Nullable String responseMappingTemplate) {
-            this.responseMappingTemplate = Codegen.ofNullable(responseMappingTemplate);
-            return this;
+
+        public Builder responseMappingTemplate(String responseMappingTemplate) {
+            return responseMappingTemplate(Output.of(responseMappingTemplate));
         }
+
         public Builder syncConfig(@Nullable Output<FunctionSyncConfigGetArgs> syncConfig) {
-            this.syncConfig = syncConfig;
+            $.syncConfig = syncConfig;
             return this;
         }
-        public Builder syncConfig(@Nullable FunctionSyncConfigGetArgs syncConfig) {
-            this.syncConfig = Codegen.ofNullable(syncConfig);
-            return this;
-        }        public FunctionState build() {
-            return new FunctionState(apiId, arn, dataSource, description, functionId, functionVersion, maxBatchSize, name, requestMappingTemplate, responseMappingTemplate, syncConfig);
+
+        public Builder syncConfig(FunctionSyncConfigGetArgs syncConfig) {
+            return syncConfig(Output.of(syncConfig));
+        }
+
+        public FunctionState build() {
+            return $;
         }
     }
+
 }

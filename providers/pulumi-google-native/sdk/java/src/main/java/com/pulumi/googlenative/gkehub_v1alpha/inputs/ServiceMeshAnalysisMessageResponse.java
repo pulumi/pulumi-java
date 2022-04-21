@@ -24,7 +24,7 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="args", required=true)
-      private final Map<String,String> args;
+    private Map<String,String> args;
 
     public Map<String,String> args() {
         return this.args;
@@ -35,7 +35,7 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -46,7 +46,7 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="messageBase", required=true)
-      private final ServiceMeshAnalysisMessageBaseResponse messageBase;
+    private ServiceMeshAnalysisMessageBaseResponse messageBase;
 
     public ServiceMeshAnalysisMessageBaseResponse messageBase() {
         return this.messageBase;
@@ -57,76 +57,70 @@ public final class ServiceMeshAnalysisMessageResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="resourcePaths", required=true)
-      private final List<String> resourcePaths;
+    private List<String> resourcePaths;
 
     public List<String> resourcePaths() {
         return this.resourcePaths;
     }
 
-    public ServiceMeshAnalysisMessageResponse(
-        Map<String,String> args,
-        String description,
-        ServiceMeshAnalysisMessageBaseResponse messageBase,
-        List<String> resourcePaths) {
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.messageBase = Objects.requireNonNull(messageBase, "expected parameter 'messageBase' to be non-null");
-        this.resourcePaths = Objects.requireNonNull(resourcePaths, "expected parameter 'resourcePaths' to be non-null");
-    }
+    private ServiceMeshAnalysisMessageResponse() {}
 
-    private ServiceMeshAnalysisMessageResponse() {
-        this.args = Map.of();
-        this.description = null;
-        this.messageBase = null;
-        this.resourcePaths = List.of();
+    private ServiceMeshAnalysisMessageResponse(ServiceMeshAnalysisMessageResponse $) {
+        this.args = $.args;
+        this.description = $.description;
+        this.messageBase = $.messageBase;
+        this.resourcePaths = $.resourcePaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceMeshAnalysisMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> args;
-        private String description;
-        private ServiceMeshAnalysisMessageBaseResponse messageBase;
-        private List<String> resourcePaths;
+        private ServiceMeshAnalysisMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceMeshAnalysisMessageResponse();
         }
 
         public Builder(ServiceMeshAnalysisMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.description = defaults.description;
-    	      this.messageBase = defaults.messageBase;
-    	      this.resourcePaths = defaults.resourcePaths;
+            $ = new ServiceMeshAnalysisMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder args(Map<String,String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder messageBase(ServiceMeshAnalysisMessageBaseResponse messageBase) {
-            this.messageBase = Objects.requireNonNull(messageBase);
+            $.messageBase = messageBase;
             return this;
         }
+
         public Builder resourcePaths(List<String> resourcePaths) {
-            this.resourcePaths = Objects.requireNonNull(resourcePaths);
+            $.resourcePaths = resourcePaths;
             return this;
         }
+
         public Builder resourcePaths(String... resourcePaths) {
             return resourcePaths(List.of(resourcePaths));
-        }        public ServiceMeshAnalysisMessageResponse build() {
-            return new ServiceMeshAnalysisMessageResponse(args, description, messageBase, resourcePaths);
+        }
+
+        public ServiceMeshAnalysisMessageResponse build() {
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.messageBase = Objects.requireNonNull($.messageBase, "expected parameter 'messageBase' to be non-null");
+            $.resourcePaths = Objects.requireNonNull($.resourcePaths, "expected parameter 'resourcePaths' to be non-null");
+            return $;
         }
     }
+
 }

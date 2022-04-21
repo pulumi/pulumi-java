@@ -5,12 +5,12 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends com.pulumi.
      * 
      */
     @Import(name="imageVersion")
-      private final @Nullable Output<String> imageVersion;
+    private @Nullable Output<String> imageVersion;
 
-    public Output<String> imageVersion() {
-        return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
+    public Optional<Output<String>> imageVersion() {
+        return Optional.ofNullable(this.imageVersion);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends com.pulumi.
      * 
      */
     @Import(name="optionalComponents")
-      private final @Nullable Output<List<String>> optionalComponents;
+    private @Nullable Output<List<String>> optionalComponents;
 
-    public Output<List<String>> optionalComponents() {
-        return this.optionalComponents == null ? Codegen.empty() : this.optionalComponents;
+    public Optional<Output<List<String>>> optionalComponents() {
+        return Optional.ofNullable(this.optionalComponents);
     }
 
     /**
@@ -64,99 +64,89 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends com.pulumi.
      * 
      */
     @Import(name="overrideProperties")
-      private final @Nullable Output<Map<String,String>> overrideProperties;
+    private @Nullable Output<Map<String,String>> overrideProperties;
 
-    public Output<Map<String,String>> overrideProperties() {
-        return this.overrideProperties == null ? Codegen.empty() : this.overrideProperties;
+    public Optional<Output<Map<String,String>>> overrideProperties() {
+        return Optional.ofNullable(this.overrideProperties);
     }
 
     @Import(name="properties")
-      private final @Nullable Output<Map<String,Object>> properties;
+    private @Nullable Output<Map<String,Object>> properties;
 
-    public Output<Map<String,Object>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,Object>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public ClusterClusterConfigSoftwareConfigGetArgs(
-        @Nullable Output<String> imageVersion,
-        @Nullable Output<List<String>> optionalComponents,
-        @Nullable Output<Map<String,String>> overrideProperties,
-        @Nullable Output<Map<String,Object>> properties) {
-        this.imageVersion = imageVersion;
-        this.optionalComponents = optionalComponents;
-        this.overrideProperties = overrideProperties;
-        this.properties = properties;
-    }
+    private ClusterClusterConfigSoftwareConfigGetArgs() {}
 
-    private ClusterClusterConfigSoftwareConfigGetArgs() {
-        this.imageVersion = Codegen.empty();
-        this.optionalComponents = Codegen.empty();
-        this.overrideProperties = Codegen.empty();
-        this.properties = Codegen.empty();
+    private ClusterClusterConfigSoftwareConfigGetArgs(ClusterClusterConfigSoftwareConfigGetArgs $) {
+        this.imageVersion = $.imageVersion;
+        this.optionalComponents = $.optionalComponents;
+        this.overrideProperties = $.overrideProperties;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigSoftwareConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> imageVersion;
-        private @Nullable Output<List<String>> optionalComponents;
-        private @Nullable Output<Map<String,String>> overrideProperties;
-        private @Nullable Output<Map<String,Object>> properties;
+        private ClusterClusterConfigSoftwareConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigSoftwareConfigGetArgs();
         }
 
         public Builder(ClusterClusterConfigSoftwareConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageVersion = defaults.imageVersion;
-    	      this.optionalComponents = defaults.optionalComponents;
-    	      this.overrideProperties = defaults.overrideProperties;
-    	      this.properties = defaults.properties;
+            $ = new ClusterClusterConfigSoftwareConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageVersion(@Nullable Output<String> imageVersion) {
-            this.imageVersion = imageVersion;
+            $.imageVersion = imageVersion;
             return this;
         }
-        public Builder imageVersion(@Nullable String imageVersion) {
-            this.imageVersion = Codegen.ofNullable(imageVersion);
-            return this;
+
+        public Builder imageVersion(String imageVersion) {
+            return imageVersion(Output.of(imageVersion));
         }
+
         public Builder optionalComponents(@Nullable Output<List<String>> optionalComponents) {
-            this.optionalComponents = optionalComponents;
+            $.optionalComponents = optionalComponents;
             return this;
         }
-        public Builder optionalComponents(@Nullable List<String> optionalComponents) {
-            this.optionalComponents = Codegen.ofNullable(optionalComponents);
-            return this;
+
+        public Builder optionalComponents(List<String> optionalComponents) {
+            return optionalComponents(Output.of(optionalComponents));
         }
+
         public Builder optionalComponents(String... optionalComponents) {
             return optionalComponents(List.of(optionalComponents));
         }
+
         public Builder overrideProperties(@Nullable Output<Map<String,String>> overrideProperties) {
-            this.overrideProperties = overrideProperties;
+            $.overrideProperties = overrideProperties;
             return this;
         }
-        public Builder overrideProperties(@Nullable Map<String,String> overrideProperties) {
-            this.overrideProperties = Codegen.ofNullable(overrideProperties);
-            return this;
+
+        public Builder overrideProperties(Map<String,String> overrideProperties) {
+            return overrideProperties(Output.of(overrideProperties));
         }
+
         public Builder properties(@Nullable Output<Map<String,Object>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,Object> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public ClusterClusterConfigSoftwareConfigGetArgs build() {
-            return new ClusterClusterConfigSoftwareConfigGetArgs(imageVersion, optionalComponents, overrideProperties, properties);
+
+        public Builder properties(Map<String,Object> properties) {
+            return properties(Output.of(properties));
+        }
+
+        public ClusterClusterConfigSoftwareConfigGetArgs build() {
+            return $;
         }
     }
+
 }

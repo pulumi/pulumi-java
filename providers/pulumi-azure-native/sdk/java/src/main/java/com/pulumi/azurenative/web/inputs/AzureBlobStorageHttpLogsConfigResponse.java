@@ -25,10 +25,10 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="retentionInDays")
-      private final @Nullable Integer retentionInDays;
+    private @Nullable Integer retentionInDays;
 
     public Optional<Integer> retentionInDays() {
-        return this.retentionInDays == null ? Optional.empty() : Optional.ofNullable(this.retentionInDays);
+        return Optional.ofNullable(this.retentionInDays);
     }
 
     /**
@@ -49,64 +49,56 @@ public final class AzureBlobStorageHttpLogsConfigResponse extends com.pulumi.res
      * 
      */
     @Import(name="sasUrl")
-      private final @Nullable String sasUrl;
+    private @Nullable String sasUrl;
 
     public Optional<String> sasUrl() {
-        return this.sasUrl == null ? Optional.empty() : Optional.ofNullable(this.sasUrl);
+        return Optional.ofNullable(this.sasUrl);
     }
 
-    public AzureBlobStorageHttpLogsConfigResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer retentionInDays,
-        @Nullable String sasUrl) {
-        this.enabled = enabled;
-        this.retentionInDays = retentionInDays;
-        this.sasUrl = sasUrl;
-    }
+    private AzureBlobStorageHttpLogsConfigResponse() {}
 
-    private AzureBlobStorageHttpLogsConfigResponse() {
-        this.enabled = null;
-        this.retentionInDays = null;
-        this.sasUrl = null;
+    private AzureBlobStorageHttpLogsConfigResponse(AzureBlobStorageHttpLogsConfigResponse $) {
+        this.enabled = $.enabled;
+        this.retentionInDays = $.retentionInDays;
+        this.sasUrl = $.sasUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobStorageHttpLogsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable Integer retentionInDays;
-        private @Nullable String sasUrl;
+        private AzureBlobStorageHttpLogsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobStorageHttpLogsConfigResponse();
         }
 
         public Builder(AzureBlobStorageHttpLogsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.retentionInDays = defaults.retentionInDays;
-    	      this.sasUrl = defaults.sasUrl;
+            $ = new AzureBlobStorageHttpLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = retentionInDays;
+            $.retentionInDays = retentionInDays;
             return this;
         }
+
         public Builder sasUrl(@Nullable String sasUrl) {
-            this.sasUrl = sasUrl;
+            $.sasUrl = sasUrl;
             return this;
-        }        public AzureBlobStorageHttpLogsConfigResponse build() {
-            return new AzureBlobStorageHttpLogsConfigResponse(enabled, retentionInDays, sasUrl);
+        }
+
+        public AzureBlobStorageHttpLogsConfigResponse build() {
+            return $;
         }
     }
+
 }

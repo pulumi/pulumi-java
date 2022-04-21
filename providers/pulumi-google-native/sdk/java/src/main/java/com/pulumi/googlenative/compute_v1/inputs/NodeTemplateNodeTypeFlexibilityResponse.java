@@ -13,78 +13,73 @@ public final class NodeTemplateNodeTypeFlexibilityResponse extends com.pulumi.re
     public static final NodeTemplateNodeTypeFlexibilityResponse Empty = new NodeTemplateNodeTypeFlexibilityResponse();
 
     @Import(name="cpus", required=true)
-      private final String cpus;
+    private String cpus;
 
     public String cpus() {
         return this.cpus;
     }
 
     @Import(name="localSsd", required=true)
-      private final String localSsd;
+    private String localSsd;
 
     public String localSsd() {
         return this.localSsd;
     }
 
     @Import(name="memory", required=true)
-      private final String memory;
+    private String memory;
 
     public String memory() {
         return this.memory;
     }
 
-    public NodeTemplateNodeTypeFlexibilityResponse(
-        String cpus,
-        String localSsd,
-        String memory) {
-        this.cpus = Objects.requireNonNull(cpus, "expected parameter 'cpus' to be non-null");
-        this.localSsd = Objects.requireNonNull(localSsd, "expected parameter 'localSsd' to be non-null");
-        this.memory = Objects.requireNonNull(memory, "expected parameter 'memory' to be non-null");
-    }
+    private NodeTemplateNodeTypeFlexibilityResponse() {}
 
-    private NodeTemplateNodeTypeFlexibilityResponse() {
-        this.cpus = null;
-        this.localSsd = null;
-        this.memory = null;
+    private NodeTemplateNodeTypeFlexibilityResponse(NodeTemplateNodeTypeFlexibilityResponse $) {
+        this.cpus = $.cpus;
+        this.localSsd = $.localSsd;
+        this.memory = $.memory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeTemplateNodeTypeFlexibilityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cpus;
-        private String localSsd;
-        private String memory;
+        private NodeTemplateNodeTypeFlexibilityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeTemplateNodeTypeFlexibilityResponse();
         }
 
         public Builder(NodeTemplateNodeTypeFlexibilityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpus = defaults.cpus;
-    	      this.localSsd = defaults.localSsd;
-    	      this.memory = defaults.memory;
+            $ = new NodeTemplateNodeTypeFlexibilityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpus(String cpus) {
-            this.cpus = Objects.requireNonNull(cpus);
+            $.cpus = cpus;
             return this;
         }
+
         public Builder localSsd(String localSsd) {
-            this.localSsd = Objects.requireNonNull(localSsd);
+            $.localSsd = localSsd;
             return this;
         }
+
         public Builder memory(String memory) {
-            this.memory = Objects.requireNonNull(memory);
+            $.memory = memory;
             return this;
-        }        public NodeTemplateNodeTypeFlexibilityResponse build() {
-            return new NodeTemplateNodeTypeFlexibilityResponse(cpus, localSsd, memory);
+        }
+
+        public NodeTemplateNodeTypeFlexibilityResponse build() {
+            $.cpus = Objects.requireNonNull($.cpus, "expected parameter 'cpus' to be non-null");
+            $.localSsd = Objects.requireNonNull($.localSsd, "expected parameter 'localSsd' to be non-null");
+            $.memory = Objects.requireNonNull($.memory, "expected parameter 'memory' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class MonitoringScheduleStoppingConditionArgs extends com.pulumi.re
      * 
      */
     @Import(name="maxRuntimeInSeconds", required=true)
-      private final Output<Integer> maxRuntimeInSeconds;
+    private Output<Integer> maxRuntimeInSeconds;
 
     public Output<Integer> maxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
     }
 
-    public MonitoringScheduleStoppingConditionArgs(Output<Integer> maxRuntimeInSeconds) {
-        this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds, "expected parameter 'maxRuntimeInSeconds' to be non-null");
-    }
+    private MonitoringScheduleStoppingConditionArgs() {}
 
-    private MonitoringScheduleStoppingConditionArgs() {
-        this.maxRuntimeInSeconds = Codegen.empty();
+    private MonitoringScheduleStoppingConditionArgs(MonitoringScheduleStoppingConditionArgs $) {
+        this.maxRuntimeInSeconds = $.maxRuntimeInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleStoppingConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxRuntimeInSeconds;
+        private MonitoringScheduleStoppingConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleStoppingConditionArgs();
         }
 
         public Builder(MonitoringScheduleStoppingConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRuntimeInSeconds = defaults.maxRuntimeInSeconds;
+            $ = new MonitoringScheduleStoppingConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRuntimeInSeconds(Output<Integer> maxRuntimeInSeconds) {
-            this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
+            $.maxRuntimeInSeconds = maxRuntimeInSeconds;
             return this;
         }
+
         public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
-            this.maxRuntimeInSeconds = Output.of(Objects.requireNonNull(maxRuntimeInSeconds));
-            return this;
-        }        public MonitoringScheduleStoppingConditionArgs build() {
-            return new MonitoringScheduleStoppingConditionArgs(maxRuntimeInSeconds);
+            return maxRuntimeInSeconds(Output.of(maxRuntimeInSeconds));
+        }
+
+        public MonitoringScheduleStoppingConditionArgs build() {
+            $.maxRuntimeInSeconds = Objects.requireNonNull($.maxRuntimeInSeconds, "expected parameter 'maxRuntimeInSeconds' to be non-null");
+            return $;
         }
     }
+
 }

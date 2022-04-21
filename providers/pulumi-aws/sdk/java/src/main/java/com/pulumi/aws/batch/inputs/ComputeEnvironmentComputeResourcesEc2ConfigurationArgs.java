@@ -5,9 +5,9 @@ package com.pulumi.aws.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
      * 
      */
     @Import(name="imageIdOverride")
-      private final @Nullable Output<String> imageIdOverride;
+    private @Nullable Output<String> imageIdOverride;
 
-    public Output<String> imageIdOverride() {
-        return this.imageIdOverride == null ? Codegen.empty() : this.imageIdOverride;
+    public Optional<Output<String>> imageIdOverride() {
+        return Optional.ofNullable(this.imageIdOverride);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationArgs extend
      * 
      */
     @Import(name="imageType")
-      private final @Nullable Output<String> imageType;
+    private @Nullable Output<String> imageType;
 
-    public Output<String> imageType() {
-        return this.imageType == null ? Codegen.empty() : this.imageType;
+    public Optional<Output<String>> imageType() {
+        return Optional.ofNullable(this.imageType);
     }
 
-    public ComputeEnvironmentComputeResourcesEc2ConfigurationArgs(
-        @Nullable Output<String> imageIdOverride,
-        @Nullable Output<String> imageType) {
-        this.imageIdOverride = imageIdOverride;
-        this.imageType = imageType;
-    }
+    private ComputeEnvironmentComputeResourcesEc2ConfigurationArgs() {}
 
-    private ComputeEnvironmentComputeResourcesEc2ConfigurationArgs() {
-        this.imageIdOverride = Codegen.empty();
-        this.imageType = Codegen.empty();
+    private ComputeEnvironmentComputeResourcesEc2ConfigurationArgs(ComputeEnvironmentComputeResourcesEc2ConfigurationArgs $) {
+        this.imageIdOverride = $.imageIdOverride;
+        this.imageType = $.imageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeEnvironmentComputeResourcesEc2ConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> imageIdOverride;
-        private @Nullable Output<String> imageType;
+        private ComputeEnvironmentComputeResourcesEc2ConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeEnvironmentComputeResourcesEc2ConfigurationArgs();
         }
 
         public Builder(ComputeEnvironmentComputeResourcesEc2ConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageIdOverride = defaults.imageIdOverride;
-    	      this.imageType = defaults.imageType;
+            $ = new ComputeEnvironmentComputeResourcesEc2ConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageIdOverride(@Nullable Output<String> imageIdOverride) {
-            this.imageIdOverride = imageIdOverride;
+            $.imageIdOverride = imageIdOverride;
             return this;
         }
-        public Builder imageIdOverride(@Nullable String imageIdOverride) {
-            this.imageIdOverride = Codegen.ofNullable(imageIdOverride);
-            return this;
+
+        public Builder imageIdOverride(String imageIdOverride) {
+            return imageIdOverride(Output.of(imageIdOverride));
         }
+
         public Builder imageType(@Nullable Output<String> imageType) {
-            this.imageType = imageType;
+            $.imageType = imageType;
             return this;
         }
-        public Builder imageType(@Nullable String imageType) {
-            this.imageType = Codegen.ofNullable(imageType);
-            return this;
-        }        public ComputeEnvironmentComputeResourcesEc2ConfigurationArgs build() {
-            return new ComputeEnvironmentComputeResourcesEc2ConfigurationArgs(imageIdOverride, imageType);
+
+        public Builder imageType(String imageType) {
+            return imageType(Output.of(imageType));
+        }
+
+        public ComputeEnvironmentComputeResourcesEc2ConfigurationArgs build() {
+            return $;
         }
     }
+
 }

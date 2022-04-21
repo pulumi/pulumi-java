@@ -5,9 +5,9 @@ package com.pulumi.aws.macie.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class MemberAccountAssociationState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="memberAccountId")
-      private final @Nullable Output<String> memberAccountId;
+    private @Nullable Output<String> memberAccountId;
 
-    public Output<String> memberAccountId() {
-        return this.memberAccountId == null ? Codegen.empty() : this.memberAccountId;
+    public Optional<Output<String>> memberAccountId() {
+        return Optional.ofNullable(this.memberAccountId);
     }
 
-    public MemberAccountAssociationState(@Nullable Output<String> memberAccountId) {
-        this.memberAccountId = memberAccountId;
-    }
+    private MemberAccountAssociationState() {}
 
-    private MemberAccountAssociationState() {
-        this.memberAccountId = Codegen.empty();
+    private MemberAccountAssociationState(MemberAccountAssociationState $) {
+        this.memberAccountId = $.memberAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemberAccountAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> memberAccountId;
+        private MemberAccountAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemberAccountAssociationState();
         }
 
         public Builder(MemberAccountAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.memberAccountId = defaults.memberAccountId;
+            $ = new MemberAccountAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder memberAccountId(@Nullable Output<String> memberAccountId) {
-            this.memberAccountId = memberAccountId;
+            $.memberAccountId = memberAccountId;
             return this;
         }
-        public Builder memberAccountId(@Nullable String memberAccountId) {
-            this.memberAccountId = Codegen.ofNullable(memberAccountId);
-            return this;
-        }        public MemberAccountAssociationState build() {
-            return new MemberAccountAssociationState(memberAccountId);
+
+        public Builder memberAccountId(String memberAccountId) {
+            return memberAccountId(Output.of(memberAccountId));
+        }
+
+        public MemberAccountAssociationState build() {
+            return $;
         }
     }
+
 }

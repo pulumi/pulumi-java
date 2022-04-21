@@ -5,7 +5,6 @@ package com.pulumi.googlenative.firebaserules_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.firebaserules_v1.inputs.FileArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="files", required=true)
-      private final Output<List<FileArgs>> files;
+    private Output<List<FileArgs>> files;
 
     public Output<List<FileArgs>> files() {
         return this.files;
     }
 
-    public SourceArgs(Output<List<FileArgs>> files) {
-        this.files = Objects.requireNonNull(files, "expected parameter 'files' to be non-null");
-    }
+    private SourceArgs() {}
 
-    private SourceArgs() {
-        this.files = Codegen.empty();
+    private SourceArgs(SourceArgs $) {
+        this.files = $.files;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<FileArgs>> files;
+        private SourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceArgs();
         }
 
         public Builder(SourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.files = defaults.files;
+            $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder files(Output<List<FileArgs>> files) {
-            this.files = Objects.requireNonNull(files);
+            $.files = files;
             return this;
         }
+
         public Builder files(List<FileArgs> files) {
-            this.files = Output.of(Objects.requireNonNull(files));
-            return this;
+            return files(Output.of(files));
         }
+
         public Builder files(FileArgs... files) {
             return files(List.of(files));
-        }        public SourceArgs build() {
-            return new SourceArgs(files);
+        }
+
+        public SourceArgs build() {
+            $.files = Objects.requireNonNull($.files, "expected parameter 'files' to be non-null");
+            return $;
         }
     }
+
 }

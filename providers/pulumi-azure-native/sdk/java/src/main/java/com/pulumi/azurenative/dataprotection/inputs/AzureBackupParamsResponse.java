@@ -22,7 +22,7 @@ public final class AzureBackupParamsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="backupType", required=true)
-      private final String backupType;
+    private String backupType;
 
     public String backupType() {
         return this.backupType;
@@ -34,55 +34,52 @@ public final class AzureBackupParamsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
     }
 
-    public AzureBackupParamsResponse(
-        String backupType,
-        String objectType) {
-        this.backupType = Objects.requireNonNull(backupType, "expected parameter 'backupType' to be non-null");
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-    }
+    private AzureBackupParamsResponse() {}
 
-    private AzureBackupParamsResponse() {
-        this.backupType = null;
-        this.objectType = null;
+    private AzureBackupParamsResponse(AzureBackupParamsResponse $) {
+        this.backupType = $.backupType;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBackupParamsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupType;
-        private String objectType;
+        private AzureBackupParamsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBackupParamsResponse();
         }
 
         public Builder(AzureBackupParamsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupType = defaults.backupType;
-    	      this.objectType = defaults.objectType;
+            $ = new AzureBackupParamsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupType(String backupType) {
-            this.backupType = Objects.requireNonNull(backupType);
+            $.backupType = backupType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
-        }        public AzureBackupParamsResponse build() {
-            return new AzureBackupParamsResponse(backupType, objectType);
+        }
+
+        public AzureBackupParamsResponse build() {
+            $.backupType = Objects.requireNonNull($.backupType, "expected parameter 'backupType' to be non-null");
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            return $;
         }
     }
+
 }

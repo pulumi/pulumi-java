@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteTimeoutIdleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class RouteSpecTcpRouteTimeoutArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="idle")
-      private final @Nullable Output<RouteSpecTcpRouteTimeoutIdleArgs> idle;
+    private @Nullable Output<RouteSpecTcpRouteTimeoutIdleArgs> idle;
 
-    public Output<RouteSpecTcpRouteTimeoutIdleArgs> idle() {
-        return this.idle == null ? Codegen.empty() : this.idle;
+    public Optional<Output<RouteSpecTcpRouteTimeoutIdleArgs>> idle() {
+        return Optional.ofNullable(this.idle);
     }
 
-    public RouteSpecTcpRouteTimeoutArgs(@Nullable Output<RouteSpecTcpRouteTimeoutIdleArgs> idle) {
-        this.idle = idle;
-    }
+    private RouteSpecTcpRouteTimeoutArgs() {}
 
-    private RouteSpecTcpRouteTimeoutArgs() {
-        this.idle = Codegen.empty();
+    private RouteSpecTcpRouteTimeoutArgs(RouteSpecTcpRouteTimeoutArgs $) {
+        this.idle = $.idle;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecTcpRouteTimeoutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RouteSpecTcpRouteTimeoutIdleArgs> idle;
+        private RouteSpecTcpRouteTimeoutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecTcpRouteTimeoutArgs();
         }
 
         public Builder(RouteSpecTcpRouteTimeoutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idle = defaults.idle;
+            $ = new RouteSpecTcpRouteTimeoutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder idle(@Nullable Output<RouteSpecTcpRouteTimeoutIdleArgs> idle) {
-            this.idle = idle;
+            $.idle = idle;
             return this;
         }
-        public Builder idle(@Nullable RouteSpecTcpRouteTimeoutIdleArgs idle) {
-            this.idle = Codegen.ofNullable(idle);
-            return this;
-        }        public RouteSpecTcpRouteTimeoutArgs build() {
-            return new RouteSpecTcpRouteTimeoutArgs(idle);
+
+        public Builder idle(RouteSpecTcpRouteTimeoutIdleArgs idle) {
+            return idle(Output.of(idle));
+        }
+
+        public RouteSpecTcpRouteTimeoutArgs build() {
+            return $;
         }
     }
+
 }

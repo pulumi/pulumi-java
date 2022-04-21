@@ -24,48 +24,48 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="storageaccounts")
-      private final @Nullable List<StorageAccountResponse> storageaccounts;
+    private @Nullable List<StorageAccountResponse> storageaccounts;
 
-    public List<StorageAccountResponse> storageaccounts() {
-        return this.storageaccounts == null ? List.of() : this.storageaccounts;
+    public Optional<List<StorageAccountResponse>> storageaccounts() {
+        return Optional.ofNullable(this.storageaccounts);
     }
 
-    public StorageProfileResponse(@Nullable List<StorageAccountResponse> storageaccounts) {
-        this.storageaccounts = storageaccounts;
-    }
+    private StorageProfileResponse() {}
 
-    private StorageProfileResponse() {
-        this.storageaccounts = List.of();
+    private StorageProfileResponse(StorageProfileResponse $) {
+        this.storageaccounts = $.storageaccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<StorageAccountResponse> storageaccounts;
+        private StorageProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageProfileResponse();
         }
 
         public Builder(StorageProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageaccounts = defaults.storageaccounts;
+            $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder storageaccounts(@Nullable List<StorageAccountResponse> storageaccounts) {
-            this.storageaccounts = storageaccounts;
+            $.storageaccounts = storageaccounts;
             return this;
         }
+
         public Builder storageaccounts(StorageAccountResponse... storageaccounts) {
             return storageaccounts(List.of(storageaccounts));
-        }        public StorageProfileResponse build() {
-            return new StorageProfileResponse(storageaccounts);
+        }
+
+        public StorageProfileResponse build() {
+            return $;
         }
     }
+
 }

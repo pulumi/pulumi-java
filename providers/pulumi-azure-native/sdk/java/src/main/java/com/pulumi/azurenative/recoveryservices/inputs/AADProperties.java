@@ -15,110 +15,96 @@ public final class AADProperties extends com.pulumi.resources.InvokeArgs {
     public static final AADProperties Empty = new AADProperties();
 
     @Import(name="audience")
-      private final @Nullable String audience;
+    private @Nullable String audience;
 
     public Optional<String> audience() {
-        return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
+        return Optional.ofNullable(this.audience);
     }
 
     @Import(name="authority")
-      private final @Nullable String authority;
+    private @Nullable String authority;
 
     public Optional<String> authority() {
-        return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
+        return Optional.ofNullable(this.authority);
     }
 
     @Import(name="servicePrincipalClientId")
-      private final @Nullable String servicePrincipalClientId;
+    private @Nullable String servicePrincipalClientId;
 
     public Optional<String> servicePrincipalClientId() {
-        return this.servicePrincipalClientId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalClientId);
+        return Optional.ofNullable(this.servicePrincipalClientId);
     }
 
     @Import(name="servicePrincipalObjectId")
-      private final @Nullable String servicePrincipalObjectId;
+    private @Nullable String servicePrincipalObjectId;
 
     public Optional<String> servicePrincipalObjectId() {
-        return this.servicePrincipalObjectId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalObjectId);
+        return Optional.ofNullable(this.servicePrincipalObjectId);
     }
 
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public AADProperties(
-        @Nullable String audience,
-        @Nullable String authority,
-        @Nullable String servicePrincipalClientId,
-        @Nullable String servicePrincipalObjectId,
-        @Nullable String tenantId) {
-        this.audience = audience;
-        this.authority = authority;
-        this.servicePrincipalClientId = servicePrincipalClientId;
-        this.servicePrincipalObjectId = servicePrincipalObjectId;
-        this.tenantId = tenantId;
-    }
+    private AADProperties() {}
 
-    private AADProperties() {
-        this.audience = null;
-        this.authority = null;
-        this.servicePrincipalClientId = null;
-        this.servicePrincipalObjectId = null;
-        this.tenantId = null;
+    private AADProperties(AADProperties $) {
+        this.audience = $.audience;
+        this.authority = $.authority;
+        this.servicePrincipalClientId = $.servicePrincipalClientId;
+        this.servicePrincipalObjectId = $.servicePrincipalObjectId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AADProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String audience;
-        private @Nullable String authority;
-        private @Nullable String servicePrincipalClientId;
-        private @Nullable String servicePrincipalObjectId;
-        private @Nullable String tenantId;
+        private AADProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new AADProperties();
         }
 
         public Builder(AADProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.authority = defaults.authority;
-    	      this.servicePrincipalClientId = defaults.servicePrincipalClientId;
-    	      this.servicePrincipalObjectId = defaults.servicePrincipalObjectId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AADProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
+
         public Builder authority(@Nullable String authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
+
         public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
-            this.servicePrincipalClientId = servicePrincipalClientId;
+            $.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
+
         public Builder servicePrincipalObjectId(@Nullable String servicePrincipalObjectId) {
-            this.servicePrincipalObjectId = servicePrincipalObjectId;
+            $.servicePrincipalObjectId = servicePrincipalObjectId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public AADProperties build() {
-            return new AADProperties(audience, authority, servicePrincipalClientId, servicePrincipalObjectId, tenantId);
+        }
+
+        public AADProperties build() {
+            return $;
         }
     }
+
 }

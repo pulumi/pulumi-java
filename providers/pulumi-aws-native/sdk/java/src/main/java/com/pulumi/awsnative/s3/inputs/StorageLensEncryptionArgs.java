@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.s3.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class StorageLensEncryptionArgs extends com.pulumi.resources.Resour
 
     public static final StorageLensEncryptionArgs Empty = new StorageLensEncryptionArgs();
 
-    public StorageLensEncryptionArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(StorageLensEncryptionArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private StorageLensEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(StorageLensEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new StorageLensEncryptionArgs();
         }
         public StorageLensEncryptionArgs build() {
-            return new StorageLensEncryptionArgs();
+            return $;
         }
     }
+
 }

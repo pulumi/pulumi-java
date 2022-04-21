@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class DataSourceParametersPrestoGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="catalog", required=true)
-      private final Output<String> catalog;
+    private Output<String> catalog;
 
     public Output<String> catalog() {
         return this.catalog;
@@ -31,7 +30,7 @@ public final class DataSourceParametersPrestoGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
@@ -42,76 +41,71 @@ public final class DataSourceParametersPrestoGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
     }
 
-    public DataSourceParametersPrestoGetArgs(
-        Output<String> catalog,
-        Output<String> host,
-        Output<Integer> port) {
-        this.catalog = Objects.requireNonNull(catalog, "expected parameter 'catalog' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private DataSourceParametersPrestoGetArgs() {}
 
-    private DataSourceParametersPrestoGetArgs() {
-        this.catalog = Codegen.empty();
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
+    private DataSourceParametersPrestoGetArgs(DataSourceParametersPrestoGetArgs $) {
+        this.catalog = $.catalog;
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersPrestoGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> catalog;
-        private Output<String> host;
-        private Output<Integer> port;
+        private DataSourceParametersPrestoGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersPrestoGetArgs();
         }
 
         public Builder(DataSourceParametersPrestoGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalog = defaults.catalog;
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourceParametersPrestoGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalog(Output<String> catalog) {
-            this.catalog = Objects.requireNonNull(catalog);
+            $.catalog = catalog;
             return this;
         }
+
         public Builder catalog(String catalog) {
-            this.catalog = Output.of(Objects.requireNonNull(catalog));
-            return this;
+            return catalog(Output.of(catalog));
         }
+
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
-        }        public DataSourceParametersPrestoGetArgs build() {
-            return new DataSourceParametersPrestoGetArgs(catalog, host, port);
+            return port(Output.of(port));
+        }
+
+        public DataSourceParametersPrestoGetArgs build() {
+            $.catalog = Objects.requireNonNull($.catalog, "expected parameter 'catalog' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

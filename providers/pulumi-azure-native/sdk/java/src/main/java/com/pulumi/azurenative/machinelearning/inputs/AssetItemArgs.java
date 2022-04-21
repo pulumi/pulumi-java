@@ -11,11 +11,11 @@ import com.pulumi.azurenative.machinelearning.inputs.OutputPortArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputPorts")
-      private final @Nullable Output<Map<String,InputPortArgs>> inputPorts;
+    private @Nullable Output<Map<String,InputPortArgs>> inputPorts;
 
-    public Output<Map<String,InputPortArgs>> inputPorts() {
-        return this.inputPorts == null ? Codegen.empty() : this.inputPorts;
+    public Optional<Output<Map<String,InputPortArgs>>> inputPorts() {
+        return Optional.ofNullable(this.inputPorts);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationInfo", required=true)
-      private final Output<BlobLocationArgs> locationInfo;
+    private Output<BlobLocationArgs> locationInfo;
 
     public Output<BlobLocationArgs> locationInfo() {
         return this.locationInfo;
@@ -65,10 +65,10 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -87,10 +87,10 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outputPorts")
-      private final @Nullable Output<Map<String,OutputPortArgs>> outputPorts;
+    private @Nullable Output<Map<String,OutputPortArgs>> outputPorts;
 
-    public Output<Map<String,OutputPortArgs>> outputPorts() {
-        return this.outputPorts == null ? Codegen.empty() : this.outputPorts;
+    public Optional<Output<Map<String,OutputPortArgs>>> outputPorts() {
+        return Optional.ofNullable(this.outputPorts);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
+    private @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
-    public Output<List<ModuleAssetParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<ModuleAssetParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -109,144 +109,125 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,AssetType>> type;
+    private Output<Either<String,AssetType>> type;
 
     public Output<Either<String,AssetType>> type() {
         return this.type;
     }
 
-    public AssetItemArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<Map<String,InputPortArgs>> inputPorts,
-        Output<BlobLocationArgs> locationInfo,
-        @Nullable Output<Map<String,String>> metadata,
-        Output<String> name,
-        @Nullable Output<Map<String,OutputPortArgs>> outputPorts,
-        @Nullable Output<List<ModuleAssetParameterArgs>> parameters,
-        Output<Either<String,AssetType>> type) {
-        this.id = id;
-        this.inputPorts = inputPorts;
-        this.locationInfo = Objects.requireNonNull(locationInfo, "expected parameter 'locationInfo' to be non-null");
-        this.metadata = metadata;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.outputPorts = outputPorts;
-        this.parameters = parameters;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AssetItemArgs() {}
 
-    private AssetItemArgs() {
-        this.id = Codegen.empty();
-        this.inputPorts = Codegen.empty();
-        this.locationInfo = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outputPorts = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.type = Codegen.empty();
+    private AssetItemArgs(AssetItemArgs $) {
+        this.id = $.id;
+        this.inputPorts = $.inputPorts;
+        this.locationInfo = $.locationInfo;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.outputPorts = $.outputPorts;
+        this.parameters = $.parameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<Map<String,InputPortArgs>> inputPorts;
-        private Output<BlobLocationArgs> locationInfo;
-        private @Nullable Output<Map<String,String>> metadata;
-        private Output<String> name;
-        private @Nullable Output<Map<String,OutputPortArgs>> outputPorts;
-        private @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
-        private Output<Either<String,AssetType>> type;
+        private AssetItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetItemArgs();
         }
 
         public Builder(AssetItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.inputPorts = defaults.inputPorts;
-    	      this.locationInfo = defaults.locationInfo;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.outputPorts = defaults.outputPorts;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
+            $ = new AssetItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder inputPorts(@Nullable Output<Map<String,InputPortArgs>> inputPorts) {
-            this.inputPorts = inputPorts;
+            $.inputPorts = inputPorts;
             return this;
         }
-        public Builder inputPorts(@Nullable Map<String,InputPortArgs> inputPorts) {
-            this.inputPorts = Codegen.ofNullable(inputPorts);
-            return this;
+
+        public Builder inputPorts(Map<String,InputPortArgs> inputPorts) {
+            return inputPorts(Output.of(inputPorts));
         }
+
         public Builder locationInfo(Output<BlobLocationArgs> locationInfo) {
-            this.locationInfo = Objects.requireNonNull(locationInfo);
+            $.locationInfo = locationInfo;
             return this;
         }
+
         public Builder locationInfo(BlobLocationArgs locationInfo) {
-            this.locationInfo = Output.of(Objects.requireNonNull(locationInfo));
-            return this;
+            return locationInfo(Output.of(locationInfo));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder outputPorts(@Nullable Output<Map<String,OutputPortArgs>> outputPorts) {
-            this.outputPorts = outputPorts;
+            $.outputPorts = outputPorts;
             return this;
         }
-        public Builder outputPorts(@Nullable Map<String,OutputPortArgs> outputPorts) {
-            this.outputPorts = Codegen.ofNullable(outputPorts);
-            return this;
+
+        public Builder outputPorts(Map<String,OutputPortArgs> outputPorts) {
+            return outputPorts(Output.of(outputPorts));
         }
+
         public Builder parameters(@Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<ModuleAssetParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(ModuleAssetParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder type(Output<Either<String,AssetType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,AssetType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AssetItemArgs build() {
-            return new AssetItemArgs(id, inputPorts, locationInfo, metadata, name, outputPorts, parameters, type);
+            return type(Output.of(type));
+        }
+
+        public AssetItemArgs build() {
+            $.locationInfo = Objects.requireNonNull($.locationInfo, "expected parameter 'locationInfo' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

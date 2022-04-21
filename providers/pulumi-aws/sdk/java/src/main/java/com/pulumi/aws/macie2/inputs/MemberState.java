@@ -5,11 +5,11 @@ package com.pulumi.aws.macie2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="administratorAccountId")
-      private final @Nullable Output<String> administratorAccountId;
+    private @Nullable Output<String> administratorAccountId;
 
-    public Output<String> administratorAccountId() {
-        return this.administratorAccountId == null ? Codegen.empty() : this.administratorAccountId;
+    public Optional<Output<String>> administratorAccountId() {
+        return Optional.ofNullable(this.administratorAccountId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invitationDisableEmailNotification")
-      private final @Nullable Output<String> invitationDisableEmailNotification;
+    private @Nullable Output<String> invitationDisableEmailNotification;
 
-    public Output<String> invitationDisableEmailNotification() {
-        return this.invitationDisableEmailNotification == null ? Codegen.empty() : this.invitationDisableEmailNotification;
+    public Optional<Output<String>> invitationDisableEmailNotification() {
+        return Optional.ofNullable(this.invitationDisableEmailNotification);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invitationMessage")
-      private final @Nullable Output<String> invitationMessage;
+    private @Nullable Output<String> invitationMessage;
 
-    public Output<String> invitationMessage() {
-        return this.invitationMessage == null ? Codegen.empty() : this.invitationMessage;
+    public Optional<Output<String>> invitationMessage() {
+        return Optional.ofNullable(this.invitationMessage);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invite")
-      private final @Nullable Output<Boolean> invite;
+    private @Nullable Output<Boolean> invite;
 
-    public Output<Boolean> invite() {
-        return this.invite == null ? Codegen.empty() : this.invite;
+    public Optional<Output<Boolean>> invite() {
+        return Optional.ofNullable(this.invite);
     }
 
     /**
@@ -99,17 +99,17 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invitedAt")
-      private final @Nullable Output<String> invitedAt;
+    private @Nullable Output<String> invitedAt;
 
-    public Output<String> invitedAt() {
-        return this.invitedAt == null ? Codegen.empty() : this.invitedAt;
+    public Optional<Output<String>> invitedAt() {
+        return Optional.ofNullable(this.invitedAt);
     }
 
     @Import(name="masterAccountId")
-      private final @Nullable Output<String> masterAccountId;
+    private @Nullable Output<String> masterAccountId;
 
-    public Output<String> masterAccountId() {
-        return this.masterAccountId == null ? Codegen.empty() : this.masterAccountId;
+    public Optional<Output<String>> masterAccountId() {
+        return Optional.ofNullable(this.masterAccountId);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relationshipStatus")
-      private final @Nullable Output<String> relationshipStatus;
+    private @Nullable Output<String> relationshipStatus;
 
-    public Output<String> relationshipStatus() {
-        return this.relationshipStatus == null ? Codegen.empty() : this.relationshipStatus;
+    public Optional<Output<String>> relationshipStatus() {
+        return Optional.ofNullable(this.relationshipStatus);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -139,17 +139,17 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -157,219 +157,178 @@ public final class MemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updatedAt")
-      private final @Nullable Output<String> updatedAt;
+    private @Nullable Output<String> updatedAt;
 
-    public Output<String> updatedAt() {
-        return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
+    public Optional<Output<String>> updatedAt() {
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    public MemberState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> administratorAccountId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> email,
-        @Nullable Output<String> invitationDisableEmailNotification,
-        @Nullable Output<String> invitationMessage,
-        @Nullable Output<Boolean> invite,
-        @Nullable Output<String> invitedAt,
-        @Nullable Output<String> masterAccountId,
-        @Nullable Output<String> relationshipStatus,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> updatedAt) {
-        this.accountId = accountId;
-        this.administratorAccountId = administratorAccountId;
-        this.arn = arn;
-        this.email = email;
-        this.invitationDisableEmailNotification = invitationDisableEmailNotification;
-        this.invitationMessage = invitationMessage;
-        this.invite = invite;
-        this.invitedAt = invitedAt;
-        this.masterAccountId = masterAccountId;
-        this.relationshipStatus = relationshipStatus;
-        this.status = status;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.updatedAt = updatedAt;
-    }
+    private MemberState() {}
 
-    private MemberState() {
-        this.accountId = Codegen.empty();
-        this.administratorAccountId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.email = Codegen.empty();
-        this.invitationDisableEmailNotification = Codegen.empty();
-        this.invitationMessage = Codegen.empty();
-        this.invite = Codegen.empty();
-        this.invitedAt = Codegen.empty();
-        this.masterAccountId = Codegen.empty();
-        this.relationshipStatus = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.updatedAt = Codegen.empty();
+    private MemberState(MemberState $) {
+        this.accountId = $.accountId;
+        this.administratorAccountId = $.administratorAccountId;
+        this.arn = $.arn;
+        this.email = $.email;
+        this.invitationDisableEmailNotification = $.invitationDisableEmailNotification;
+        this.invitationMessage = $.invitationMessage;
+        this.invite = $.invite;
+        this.invitedAt = $.invitedAt;
+        this.masterAccountId = $.masterAccountId;
+        this.relationshipStatus = $.relationshipStatus;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.updatedAt = $.updatedAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> administratorAccountId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> invitationDisableEmailNotification;
-        private @Nullable Output<String> invitationMessage;
-        private @Nullable Output<Boolean> invite;
-        private @Nullable Output<String> invitedAt;
-        private @Nullable Output<String> masterAccountId;
-        private @Nullable Output<String> relationshipStatus;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> updatedAt;
+        private MemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemberState();
         }
 
         public Builder(MemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.administratorAccountId = defaults.administratorAccountId;
-    	      this.arn = defaults.arn;
-    	      this.email = defaults.email;
-    	      this.invitationDisableEmailNotification = defaults.invitationDisableEmailNotification;
-    	      this.invitationMessage = defaults.invitationMessage;
-    	      this.invite = defaults.invite;
-    	      this.invitedAt = defaults.invitedAt;
-    	      this.masterAccountId = defaults.masterAccountId;
-    	      this.relationshipStatus = defaults.relationshipStatus;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.updatedAt = defaults.updatedAt;
+            $ = new MemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder administratorAccountId(@Nullable Output<String> administratorAccountId) {
-            this.administratorAccountId = administratorAccountId;
+            $.administratorAccountId = administratorAccountId;
             return this;
         }
-        public Builder administratorAccountId(@Nullable String administratorAccountId) {
-            this.administratorAccountId = Codegen.ofNullable(administratorAccountId);
-            return this;
+
+        public Builder administratorAccountId(String administratorAccountId) {
+            return administratorAccountId(Output.of(administratorAccountId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder invitationDisableEmailNotification(@Nullable Output<String> invitationDisableEmailNotification) {
-            this.invitationDisableEmailNotification = invitationDisableEmailNotification;
+            $.invitationDisableEmailNotification = invitationDisableEmailNotification;
             return this;
         }
-        public Builder invitationDisableEmailNotification(@Nullable String invitationDisableEmailNotification) {
-            this.invitationDisableEmailNotification = Codegen.ofNullable(invitationDisableEmailNotification);
-            return this;
+
+        public Builder invitationDisableEmailNotification(String invitationDisableEmailNotification) {
+            return invitationDisableEmailNotification(Output.of(invitationDisableEmailNotification));
         }
+
         public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
-            this.invitationMessage = invitationMessage;
+            $.invitationMessage = invitationMessage;
             return this;
         }
-        public Builder invitationMessage(@Nullable String invitationMessage) {
-            this.invitationMessage = Codegen.ofNullable(invitationMessage);
-            return this;
+
+        public Builder invitationMessage(String invitationMessage) {
+            return invitationMessage(Output.of(invitationMessage));
         }
+
         public Builder invite(@Nullable Output<Boolean> invite) {
-            this.invite = invite;
+            $.invite = invite;
             return this;
         }
-        public Builder invite(@Nullable Boolean invite) {
-            this.invite = Codegen.ofNullable(invite);
-            return this;
+
+        public Builder invite(Boolean invite) {
+            return invite(Output.of(invite));
         }
+
         public Builder invitedAt(@Nullable Output<String> invitedAt) {
-            this.invitedAt = invitedAt;
+            $.invitedAt = invitedAt;
             return this;
         }
-        public Builder invitedAt(@Nullable String invitedAt) {
-            this.invitedAt = Codegen.ofNullable(invitedAt);
-            return this;
+
+        public Builder invitedAt(String invitedAt) {
+            return invitedAt(Output.of(invitedAt));
         }
+
         public Builder masterAccountId(@Nullable Output<String> masterAccountId) {
-            this.masterAccountId = masterAccountId;
+            $.masterAccountId = masterAccountId;
             return this;
         }
-        public Builder masterAccountId(@Nullable String masterAccountId) {
-            this.masterAccountId = Codegen.ofNullable(masterAccountId);
-            return this;
+
+        public Builder masterAccountId(String masterAccountId) {
+            return masterAccountId(Output.of(masterAccountId));
         }
+
         public Builder relationshipStatus(@Nullable Output<String> relationshipStatus) {
-            this.relationshipStatus = relationshipStatus;
+            $.relationshipStatus = relationshipStatus;
             return this;
         }
-        public Builder relationshipStatus(@Nullable String relationshipStatus) {
-            this.relationshipStatus = Codegen.ofNullable(relationshipStatus);
-            return this;
+
+        public Builder relationshipStatus(String relationshipStatus) {
+            return relationshipStatus(Output.of(relationshipStatus));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
-            this.updatedAt = updatedAt;
+            $.updatedAt = updatedAt;
             return this;
         }
-        public Builder updatedAt(@Nullable String updatedAt) {
-            this.updatedAt = Codegen.ofNullable(updatedAt);
-            return this;
-        }        public MemberState build() {
-            return new MemberState(accountId, administratorAccountId, arn, email, invitationDisableEmailNotification, invitationMessage, invite, invitedAt, masterAccountId, relationshipStatus, status, tags, tagsAll, updatedAt);
+
+        public Builder updatedAt(String updatedAt) {
+            return updatedAt(Output.of(updatedAt));
+        }
+
+        public MemberState build() {
+            return $;
         }
     }
+
 }

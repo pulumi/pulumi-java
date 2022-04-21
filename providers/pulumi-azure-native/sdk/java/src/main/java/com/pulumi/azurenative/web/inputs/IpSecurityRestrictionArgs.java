@@ -7,12 +7,12 @@ import com.pulumi.azurenative.web.enums.IpFilterTag;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<Map<String,List<String>>> headers;
+    private @Nullable Output<Map<String,List<String>>> headers;
 
-    public Output<Map<String,List<String>>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<Map<String,List<String>>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="subnetMask")
-      private final @Nullable Output<String> subnetMask;
+    private @Nullable Output<String> subnetMask;
 
-    public Output<String> subnetMask() {
-        return this.subnetMask == null ? Codegen.empty() : this.subnetMask;
+    public Optional<Output<String>> subnetMask() {
+        return Optional.ofNullable(this.subnetMask);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="subnetTrafficTag")
-      private final @Nullable Output<Integer> subnetTrafficTag;
+    private @Nullable Output<Integer> subnetTrafficTag;
 
-    public Output<Integer> subnetTrafficTag() {
-        return this.subnetTrafficTag == null ? Codegen.empty() : this.subnetTrafficTag;
+    public Optional<Output<Integer>> subnetTrafficTag() {
+        return Optional.ofNullable(this.subnetTrafficTag);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<Either<String,IpFilterTag>> tag;
+    private @Nullable Output<Either<String,IpFilterTag>> tag;
 
-    public Output<Either<String,IpFilterTag>> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<Either<String,IpFilterTag>>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="vnetSubnetResourceId")
-      private final @Nullable Output<String> vnetSubnetResourceId;
+    private @Nullable Output<String> vnetSubnetResourceId;
 
-    public Output<String> vnetSubnetResourceId() {
-        return this.vnetSubnetResourceId == null ? Codegen.empty() : this.vnetSubnetResourceId;
+    public Optional<Output<String>> vnetSubnetResourceId() {
+        return Optional.ofNullable(this.vnetSubnetResourceId);
     }
 
     /**
@@ -157,180 +157,148 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="vnetTrafficTag")
-      private final @Nullable Output<Integer> vnetTrafficTag;
+    private @Nullable Output<Integer> vnetTrafficTag;
 
-    public Output<Integer> vnetTrafficTag() {
-        return this.vnetTrafficTag == null ? Codegen.empty() : this.vnetTrafficTag;
+    public Optional<Output<Integer>> vnetTrafficTag() {
+        return Optional.ofNullable(this.vnetTrafficTag);
     }
 
-    public IpSecurityRestrictionArgs(
-        @Nullable Output<String> action,
-        @Nullable Output<String> description,
-        @Nullable Output<Map<String,List<String>>> headers,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> subnetMask,
-        @Nullable Output<Integer> subnetTrafficTag,
-        @Nullable Output<Either<String,IpFilterTag>> tag,
-        @Nullable Output<String> vnetSubnetResourceId,
-        @Nullable Output<Integer> vnetTrafficTag) {
-        this.action = action;
-        this.description = description;
-        this.headers = headers;
-        this.ipAddress = ipAddress;
-        this.name = name;
-        this.priority = priority;
-        this.subnetMask = subnetMask;
-        this.subnetTrafficTag = subnetTrafficTag;
-        this.tag = tag;
-        this.vnetSubnetResourceId = vnetSubnetResourceId;
-        this.vnetTrafficTag = vnetTrafficTag;
-    }
+    private IpSecurityRestrictionArgs() {}
 
-    private IpSecurityRestrictionArgs() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.subnetMask = Codegen.empty();
-        this.subnetTrafficTag = Codegen.empty();
-        this.tag = Codegen.empty();
-        this.vnetSubnetResourceId = Codegen.empty();
-        this.vnetTrafficTag = Codegen.empty();
+    private IpSecurityRestrictionArgs(IpSecurityRestrictionArgs $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.headers = $.headers;
+        this.ipAddress = $.ipAddress;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.subnetMask = $.subnetMask;
+        this.subnetTrafficTag = $.subnetTrafficTag;
+        this.tag = $.tag;
+        this.vnetSubnetResourceId = $.vnetSubnetResourceId;
+        this.vnetTrafficTag = $.vnetTrafficTag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpSecurityRestrictionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Map<String,List<String>>> headers;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> subnetMask;
-        private @Nullable Output<Integer> subnetTrafficTag;
-        private @Nullable Output<Either<String,IpFilterTag>> tag;
-        private @Nullable Output<String> vnetSubnetResourceId;
-        private @Nullable Output<Integer> vnetTrafficTag;
+        private IpSecurityRestrictionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpSecurityRestrictionArgs();
         }
 
         public Builder(IpSecurityRestrictionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.subnetMask = defaults.subnetMask;
-    	      this.subnetTrafficTag = defaults.subnetTrafficTag;
-    	      this.tag = defaults.tag;
-    	      this.vnetSubnetResourceId = defaults.vnetSubnetResourceId;
-    	      this.vnetTrafficTag = defaults.vnetTrafficTag;
+            $ = new IpSecurityRestrictionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder headers(@Nullable Output<Map<String,List<String>>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable Map<String,List<String>> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(Map<String,List<String>> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder subnetMask(@Nullable Output<String> subnetMask) {
-            this.subnetMask = subnetMask;
+            $.subnetMask = subnetMask;
             return this;
         }
-        public Builder subnetMask(@Nullable String subnetMask) {
-            this.subnetMask = Codegen.ofNullable(subnetMask);
-            return this;
+
+        public Builder subnetMask(String subnetMask) {
+            return subnetMask(Output.of(subnetMask));
         }
+
         public Builder subnetTrafficTag(@Nullable Output<Integer> subnetTrafficTag) {
-            this.subnetTrafficTag = subnetTrafficTag;
+            $.subnetTrafficTag = subnetTrafficTag;
             return this;
         }
-        public Builder subnetTrafficTag(@Nullable Integer subnetTrafficTag) {
-            this.subnetTrafficTag = Codegen.ofNullable(subnetTrafficTag);
-            return this;
+
+        public Builder subnetTrafficTag(Integer subnetTrafficTag) {
+            return subnetTrafficTag(Output.of(subnetTrafficTag));
         }
+
         public Builder tag(@Nullable Output<Either<String,IpFilterTag>> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable Either<String,IpFilterTag> tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
+
+        public Builder tag(Either<String,IpFilterTag> tag) {
+            return tag(Output.of(tag));
         }
+
         public Builder vnetSubnetResourceId(@Nullable Output<String> vnetSubnetResourceId) {
-            this.vnetSubnetResourceId = vnetSubnetResourceId;
+            $.vnetSubnetResourceId = vnetSubnetResourceId;
             return this;
         }
-        public Builder vnetSubnetResourceId(@Nullable String vnetSubnetResourceId) {
-            this.vnetSubnetResourceId = Codegen.ofNullable(vnetSubnetResourceId);
-            return this;
+
+        public Builder vnetSubnetResourceId(String vnetSubnetResourceId) {
+            return vnetSubnetResourceId(Output.of(vnetSubnetResourceId));
         }
+
         public Builder vnetTrafficTag(@Nullable Output<Integer> vnetTrafficTag) {
-            this.vnetTrafficTag = vnetTrafficTag;
+            $.vnetTrafficTag = vnetTrafficTag;
             return this;
         }
-        public Builder vnetTrafficTag(@Nullable Integer vnetTrafficTag) {
-            this.vnetTrafficTag = Codegen.ofNullable(vnetTrafficTag);
-            return this;
-        }        public IpSecurityRestrictionArgs build() {
-            return new IpSecurityRestrictionArgs(action, description, headers, ipAddress, name, priority, subnetMask, subnetTrafficTag, tag, vnetSubnetResourceId, vnetTrafficTag);
+
+        public Builder vnetTrafficTag(Integer vnetTrafficTag) {
+            return vnetTrafficTag(Output.of(vnetTrafficTag));
+        }
+
+        public IpSecurityRestrictionArgs build() {
+            return $;
         }
     }
+
 }

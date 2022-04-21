@@ -21,45 +21,45 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="pubsubTopic", required=true)
-      private final String pubsubTopic;
+    private String pubsubTopic;
 
     public String pubsubTopic() {
         return this.pubsubTopic;
     }
 
-    public NotificationConfigResponse(String pubsubTopic) {
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
-    }
+    private NotificationConfigResponse() {}
 
-    private NotificationConfigResponse() {
-        this.pubsubTopic = null;
+    private NotificationConfigResponse(NotificationConfigResponse $) {
+        this.pubsubTopic = $.pubsubTopic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pubsubTopic;
+        private NotificationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigResponse();
         }
 
         public Builder(NotificationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopic = defaults.pubsubTopic;
+            $ = new NotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+            $.pubsubTopic = pubsubTopic;
             return this;
-        }        public NotificationConfigResponse build() {
-            return new NotificationConfigResponse(pubsubTopic);
+        }
+
+        public NotificationConfigResponse build() {
+            $.pubsubTopic = Objects.requireNonNull($.pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
+            return $;
         }
     }
+
 }

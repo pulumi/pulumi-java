@@ -26,10 +26,10 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="dataFlowProperties")
-      private final @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties;
+    private @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties;
 
     public Optional<IntegrationRuntimeDataFlowPropertiesResponse> dataFlowProperties() {
-        return this.dataFlowProperties == null ? Optional.empty() : Optional.ofNullable(this.dataFlowProperties);
+        return Optional.ofNullable(this.dataFlowProperties);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="maxParallelExecutionsPerNode")
-      private final @Nullable Integer maxParallelExecutionsPerNode;
+    private @Nullable Integer maxParallelExecutionsPerNode;
 
     public Optional<Integer> maxParallelExecutionsPerNode() {
-        return this.maxParallelExecutionsPerNode == null ? Optional.empty() : Optional.ofNullable(this.maxParallelExecutionsPerNode);
+        return Optional.ofNullable(this.maxParallelExecutionsPerNode);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="nodeSize")
-      private final @Nullable String nodeSize;
+    private @Nullable String nodeSize;
 
     public Optional<String> nodeSize() {
-        return this.nodeSize == null ? Optional.empty() : Optional.ofNullable(this.nodeSize);
+        return Optional.ofNullable(this.nodeSize);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="numberOfNodes")
-      private final @Nullable Integer numberOfNodes;
+    private @Nullable Integer numberOfNodes;
 
     public Optional<Integer> numberOfNodes() {
-        return this.numberOfNodes == null ? Optional.empty() : Optional.ofNullable(this.numberOfNodes);
+        return Optional.ofNullable(this.numberOfNodes);
     }
 
     /**
@@ -81,91 +81,74 @@ public final class IntegrationRuntimeComputePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="vNetProperties")
-      private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
+    private @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
 
     public Optional<IntegrationRuntimeVNetPropertiesResponse> vNetProperties() {
-        return this.vNetProperties == null ? Optional.empty() : Optional.ofNullable(this.vNetProperties);
+        return Optional.ofNullable(this.vNetProperties);
     }
 
-    public IntegrationRuntimeComputePropertiesResponse(
-        @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties,
-        @Nullable String location,
-        @Nullable Integer maxParallelExecutionsPerNode,
-        @Nullable String nodeSize,
-        @Nullable Integer numberOfNodes,
-        @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
-        this.dataFlowProperties = dataFlowProperties;
-        this.location = location;
-        this.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;
-        this.nodeSize = nodeSize;
-        this.numberOfNodes = numberOfNodes;
-        this.vNetProperties = vNetProperties;
-    }
+    private IntegrationRuntimeComputePropertiesResponse() {}
 
-    private IntegrationRuntimeComputePropertiesResponse() {
-        this.dataFlowProperties = null;
-        this.location = null;
-        this.maxParallelExecutionsPerNode = null;
-        this.nodeSize = null;
-        this.numberOfNodes = null;
-        this.vNetProperties = null;
+    private IntegrationRuntimeComputePropertiesResponse(IntegrationRuntimeComputePropertiesResponse $) {
+        this.dataFlowProperties = $.dataFlowProperties;
+        this.location = $.location;
+        this.maxParallelExecutionsPerNode = $.maxParallelExecutionsPerNode;
+        this.nodeSize = $.nodeSize;
+        this.numberOfNodes = $.numberOfNodes;
+        this.vNetProperties = $.vNetProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeComputePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties;
-        private @Nullable String location;
-        private @Nullable Integer maxParallelExecutionsPerNode;
-        private @Nullable String nodeSize;
-        private @Nullable Integer numberOfNodes;
-        private @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
+        private IntegrationRuntimeComputePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeComputePropertiesResponse();
         }
 
         public Builder(IntegrationRuntimeComputePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataFlowProperties = defaults.dataFlowProperties;
-    	      this.location = defaults.location;
-    	      this.maxParallelExecutionsPerNode = defaults.maxParallelExecutionsPerNode;
-    	      this.nodeSize = defaults.nodeSize;
-    	      this.numberOfNodes = defaults.numberOfNodes;
-    	      this.vNetProperties = defaults.vNetProperties;
+            $ = new IntegrationRuntimeComputePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataFlowProperties(@Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties) {
-            this.dataFlowProperties = dataFlowProperties;
+            $.dataFlowProperties = dataFlowProperties;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder maxParallelExecutionsPerNode(@Nullable Integer maxParallelExecutionsPerNode) {
-            this.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;
+            $.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;
             return this;
         }
+
         public Builder nodeSize(@Nullable String nodeSize) {
-            this.nodeSize = nodeSize;
+            $.nodeSize = nodeSize;
             return this;
         }
+
         public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
-            this.numberOfNodes = numberOfNodes;
+            $.numberOfNodes = numberOfNodes;
             return this;
         }
+
         public Builder vNetProperties(@Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
-            this.vNetProperties = vNetProperties;
+            $.vNetProperties = vNetProperties;
             return this;
-        }        public IntegrationRuntimeComputePropertiesResponse build() {
-            return new IntegrationRuntimeComputePropertiesResponse(dataFlowProperties, location, maxParallelExecutionsPerNode, nodeSize, numberOfNodes, vNetProperties);
+        }
+
+        public IntegrationRuntimeComputePropertiesResponse build() {
+            return $;
         }
     }
+
 }

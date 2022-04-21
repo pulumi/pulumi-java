@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs extends c
      * 
      */
     @Import(name="signatureAlgorithm", required=true)
-      private final Output<String> signatureAlgorithm;
+    private Output<String> signatureAlgorithm;
 
     public Output<String> signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 
-    public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs(Output<String> signatureAlgorithm) {
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
-    }
+    private CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs() {}
 
-    private CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs() {
-        this.signatureAlgorithm = Codegen.empty();
+    private CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs(CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs $) {
+        this.signatureAlgorithm = $.signatureAlgorithm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> signatureAlgorithm;
+        private CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs();
         }
 
         public Builder(CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.signatureAlgorithm = defaults.signatureAlgorithm;
+            $ = new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder signatureAlgorithm(Output<String> signatureAlgorithm) {
-            this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+            $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
+
         public Builder signatureAlgorithm(String signatureAlgorithm) {
-            this.signatureAlgorithm = Output.of(Objects.requireNonNull(signatureAlgorithm));
-            return this;
-        }        public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs build() {
-            return new CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs(signatureAlgorithm);
+            return signatureAlgorithm(Output.of(signatureAlgorithm));
+        }
+
+        public CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs build() {
+            $.signatureAlgorithm = Objects.requireNonNull($.signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
+            return $;
         }
     }
+
 }

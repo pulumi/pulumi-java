@@ -30,10 +30,10 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
      * 
      */
     @Import(name="collection", required=true)
-      private final Object collection;
+    private Object collection;
 
     public Object collection() {
         return this.collection;
@@ -52,10 +52,10 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
      * 
      */
     @Import(name="folder")
-      private final @Nullable DatasetResponseFolder folder;
+    private @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> folder() {
-        return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -74,7 +74,7 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final LinkedServiceReferenceResponse linkedServiceName;
+    private LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
@@ -85,10 +85,10 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
      * 
      */
     @Import(name="schema")
-      private final @Nullable Object schema;
+    private @Nullable Object schema;
 
     public Optional<Object> schema() {
-        return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
      * 
      */
     @Import(name="structure")
-      private final @Nullable Object structure;
+    private @Nullable Object structure;
 
     public Optional<Object> structure() {
-        return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
+        return Optional.ofNullable(this.structure);
     }
 
     /**
@@ -119,121 +119,99 @@ public final class CosmosDbMongoDbApiCollectionDatasetResponse extends com.pulum
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public CosmosDbMongoDbApiCollectionDatasetResponse(
-        @Nullable List<Object> annotations,
-        Object collection,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
-        this.annotations = annotations;
-        this.collection = Objects.requireNonNull(collection, "expected parameter 'collection' to be non-null");
-        this.description = description;
-        this.folder = folder;
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.parameters = parameters;
-        this.schema = schema;
-        this.structure = structure;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private CosmosDbMongoDbApiCollectionDatasetResponse() {}
 
-    private CosmosDbMongoDbApiCollectionDatasetResponse() {
-        this.annotations = List.of();
-        this.collection = null;
-        this.description = null;
-        this.folder = null;
-        this.linkedServiceName = null;
-        this.parameters = Map.of();
-        this.schema = null;
-        this.structure = null;
-        this.type = null;
+    private CosmosDbMongoDbApiCollectionDatasetResponse(CosmosDbMongoDbApiCollectionDatasetResponse $) {
+        this.annotations = $.annotations;
+        this.collection = $.collection;
+        this.description = $.description;
+        this.folder = $.folder;
+        this.linkedServiceName = $.linkedServiceName;
+        this.parameters = $.parameters;
+        this.schema = $.schema;
+        this.structure = $.structure;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CosmosDbMongoDbApiCollectionDatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private Object collection;
-        private @Nullable String description;
-        private @Nullable DatasetResponseFolder folder;
-        private LinkedServiceReferenceResponse linkedServiceName;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Object schema;
-        private @Nullable Object structure;
-        private String type;
+        private CosmosDbMongoDbApiCollectionDatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CosmosDbMongoDbApiCollectionDatasetResponse();
         }
 
         public Builder(CosmosDbMongoDbApiCollectionDatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.collection = defaults.collection;
-    	      this.description = defaults.description;
-    	      this.folder = defaults.folder;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.parameters = defaults.parameters;
-    	      this.schema = defaults.schema;
-    	      this.structure = defaults.structure;
-    	      this.type = defaults.type;
+            $ = new CosmosDbMongoDbApiCollectionDatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder collection(Object collection) {
-            this.collection = Objects.requireNonNull(collection);
+            $.collection = collection;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder folder(@Nullable DatasetResponseFolder folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
+
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder schema(@Nullable Object schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
+
         public Builder structure(@Nullable Object structure) {
-            this.structure = structure;
+            $.structure = structure;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public CosmosDbMongoDbApiCollectionDatasetResponse build() {
-            return new CosmosDbMongoDbApiCollectionDatasetResponse(annotations, collection, description, folder, linkedServiceName, parameters, schema, structure, type);
+        }
+
+        public CosmosDbMongoDbApiCollectionDatasetResponse build() {
+            $.collection = Objects.requireNonNull($.collection, "expected parameter 'collection' to be non-null");
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

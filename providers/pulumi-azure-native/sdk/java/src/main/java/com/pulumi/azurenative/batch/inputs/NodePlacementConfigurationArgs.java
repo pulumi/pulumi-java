@@ -6,8 +6,8 @@ package com.pulumi.azurenative.batch.inputs;
 import com.pulumi.azurenative.batch.enums.NodePlacementPolicyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NodePlacementConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<NodePlacementPolicyType> policy;
+    private @Nullable Output<NodePlacementPolicyType> policy;
 
-    public Output<NodePlacementPolicyType> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<NodePlacementPolicyType>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public NodePlacementConfigurationArgs(@Nullable Output<NodePlacementPolicyType> policy) {
-        this.policy = policy;
-    }
+    private NodePlacementConfigurationArgs() {}
 
-    private NodePlacementConfigurationArgs() {
-        this.policy = Codegen.empty();
+    private NodePlacementConfigurationArgs(NodePlacementConfigurationArgs $) {
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePlacementConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodePlacementPolicyType> policy;
+        private NodePlacementConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePlacementConfigurationArgs();
         }
 
         public Builder(NodePlacementConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
+            $ = new NodePlacementConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable Output<NodePlacementPolicyType> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable NodePlacementPolicyType policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public NodePlacementConfigurationArgs build() {
-            return new NodePlacementConfigurationArgs(policy);
+
+        public Builder policy(NodePlacementPolicyType policy) {
+            return policy(Output.of(policy));
+        }
+
+        public NodePlacementConfigurationArgs build() {
+            return $;
         }
     }
+
 }

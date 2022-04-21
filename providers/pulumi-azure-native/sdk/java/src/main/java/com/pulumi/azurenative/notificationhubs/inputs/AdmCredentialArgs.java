@@ -5,9 +5,9 @@ package com.pulumi.azurenative.notificationhubs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authTokenUrl")
-      private final @Nullable Output<String> authTokenUrl;
+    private @Nullable Output<String> authTokenUrl;
 
-    public Output<String> authTokenUrl() {
-        return this.authTokenUrl == null ? Codegen.empty() : this.authTokenUrl;
+    public Optional<Output<String>> authTokenUrl() {
+        return Optional.ofNullable(this.authTokenUrl);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class AdmCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
-    public AdmCredentialArgs(
-        @Nullable Output<String> authTokenUrl,
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> clientSecret) {
-        this.authTokenUrl = authTokenUrl;
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-    }
+    private AdmCredentialArgs() {}
 
-    private AdmCredentialArgs() {
-        this.authTokenUrl = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
+    private AdmCredentialArgs(AdmCredentialArgs $) {
+        this.authTokenUrl = $.authTokenUrl;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdmCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authTokenUrl;
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> clientSecret;
+        private AdmCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdmCredentialArgs();
         }
 
         public Builder(AdmCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authTokenUrl = defaults.authTokenUrl;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
+            $ = new AdmCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authTokenUrl(@Nullable Output<String> authTokenUrl) {
-            this.authTokenUrl = authTokenUrl;
+            $.authTokenUrl = authTokenUrl;
             return this;
         }
-        public Builder authTokenUrl(@Nullable String authTokenUrl) {
-            this.authTokenUrl = Codegen.ofNullable(authTokenUrl);
-            return this;
+
+        public Builder authTokenUrl(String authTokenUrl) {
+            return authTokenUrl(Output.of(authTokenUrl));
         }
+
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
-        }        public AdmCredentialArgs build() {
-            return new AdmCredentialArgs(authTokenUrl, clientId, clientSecret);
+
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
+        }
+
+        public AdmCredentialArgs build() {
+            return $;
         }
     }
+
 }

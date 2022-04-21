@@ -17,45 +17,45 @@ public final class GetLogGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logGroupNamePrefix", required=true)
-      private final String logGroupNamePrefix;
+    private String logGroupNamePrefix;
 
     public String logGroupNamePrefix() {
         return this.logGroupNamePrefix;
     }
 
-    public GetLogGroupsArgs(String logGroupNamePrefix) {
-        this.logGroupNamePrefix = Objects.requireNonNull(logGroupNamePrefix, "expected parameter 'logGroupNamePrefix' to be non-null");
-    }
+    private GetLogGroupsArgs() {}
 
-    private GetLogGroupsArgs() {
-        this.logGroupNamePrefix = null;
+    private GetLogGroupsArgs(GetLogGroupsArgs $) {
+        this.logGroupNamePrefix = $.logGroupNamePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLogGroupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String logGroupNamePrefix;
+        private GetLogGroupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLogGroupsArgs();
         }
 
         public Builder(GetLogGroupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupNamePrefix = defaults.logGroupNamePrefix;
+            $ = new GetLogGroupsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupNamePrefix(String logGroupNamePrefix) {
-            this.logGroupNamePrefix = Objects.requireNonNull(logGroupNamePrefix);
+            $.logGroupNamePrefix = logGroupNamePrefix;
             return this;
-        }        public GetLogGroupsArgs build() {
-            return new GetLogGroupsArgs(logGroupNamePrefix);
+        }
+
+        public GetLogGroupsArgs build() {
+            $.logGroupNamePrefix = Objects.requireNonNull($.logGroupNamePrefix, "expected parameter 'logGroupNamePrefix' to be non-null");
+            return $;
         }
     }
+
 }

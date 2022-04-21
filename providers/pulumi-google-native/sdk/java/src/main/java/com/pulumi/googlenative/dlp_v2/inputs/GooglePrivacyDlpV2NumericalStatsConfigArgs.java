@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2NumericalStatsConfigArgs extends com.pulumi
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
+    private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> field() {
+        return Optional.ofNullable(this.field);
     }
 
-    public GooglePrivacyDlpV2NumericalStatsConfigArgs(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
-        this.field = field;
-    }
+    private GooglePrivacyDlpV2NumericalStatsConfigArgs() {}
 
-    private GooglePrivacyDlpV2NumericalStatsConfigArgs() {
-        this.field = Codegen.empty();
+    private GooglePrivacyDlpV2NumericalStatsConfigArgs(GooglePrivacyDlpV2NumericalStatsConfigArgs $) {
+        this.field = $.field;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2NumericalStatsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
+        private GooglePrivacyDlpV2NumericalStatsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2NumericalStatsConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2NumericalStatsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
+            $ = new GooglePrivacyDlpV2NumericalStatsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
-        }        public GooglePrivacyDlpV2NumericalStatsConfigArgs build() {
-            return new GooglePrivacyDlpV2NumericalStatsConfigArgs(field);
+
+        public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
+            return field(Output.of(field));
+        }
+
+        public GooglePrivacyDlpV2NumericalStatsConfigArgs build() {
+            return $;
         }
     }
+
 }

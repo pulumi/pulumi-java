@@ -23,45 +23,44 @@ public final class WindowsOsInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="windowsOsState")
-      private final @Nullable String windowsOsState;
+    private @Nullable String windowsOsState;
 
     public Optional<String> windowsOsState() {
-        return this.windowsOsState == null ? Optional.empty() : Optional.ofNullable(this.windowsOsState);
+        return Optional.ofNullable(this.windowsOsState);
     }
 
-    public WindowsOsInfoResponse(@Nullable String windowsOsState) {
-        this.windowsOsState = windowsOsState;
-    }
+    private WindowsOsInfoResponse() {}
 
-    private WindowsOsInfoResponse() {
-        this.windowsOsState = null;
+    private WindowsOsInfoResponse(WindowsOsInfoResponse $) {
+        this.windowsOsState = $.windowsOsState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsOsInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String windowsOsState;
+        private WindowsOsInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsOsInfoResponse();
         }
 
         public Builder(WindowsOsInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.windowsOsState = defaults.windowsOsState;
+            $ = new WindowsOsInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder windowsOsState(@Nullable String windowsOsState) {
-            this.windowsOsState = windowsOsState;
+            $.windowsOsState = windowsOsState;
             return this;
-        }        public WindowsOsInfoResponse build() {
-            return new WindowsOsInfoResponse(windowsOsState);
+        }
+
+        public WindowsOsInfoResponse build() {
+            return $;
         }
     }
+
 }

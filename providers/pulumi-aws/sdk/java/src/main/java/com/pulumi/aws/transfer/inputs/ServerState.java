@@ -6,12 +6,12 @@ package com.pulumi.aws.transfer.inputs;
 import com.pulumi.aws.transfer.inputs.ServerEndpointDetailsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificate")
-      private final @Nullable Output<String> certificate;
+    private @Nullable Output<String> certificate;
 
-    public Output<String> certificate() {
-        return this.certificate == null ? Codegen.empty() : this.certificate;
+    public Optional<Output<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="directoryId")
-      private final @Nullable Output<String> directoryId;
+    private @Nullable Output<String> directoryId;
 
-    public Output<String> directoryId() {
-        return this.directoryId == null ? Codegen.empty() : this.directoryId;
+    public Optional<Output<String>> directoryId() {
+        return Optional.ofNullable(this.directoryId);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointDetails")
-      private final @Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails;
+    private @Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails;
 
-    public Output<ServerEndpointDetailsGetArgs> endpointDetails() {
-        return this.endpointDetails == null ? Codegen.empty() : this.endpointDetails;
+    public Optional<Output<ServerEndpointDetailsGetArgs>> endpointDetails() {
+        return Optional.ofNullable(this.endpointDetails);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointType")
-      private final @Nullable Output<String> endpointType;
+    private @Nullable Output<String> endpointType;
 
-    public Output<String> endpointType() {
-        return this.endpointType == null ? Codegen.empty() : this.endpointType;
+    public Optional<Output<String>> endpointType() {
+        return Optional.ofNullable(this.endpointType);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="function")
-      private final @Nullable Output<String> function;
+    private @Nullable Output<String> function;
 
-    public Output<String> function() {
-        return this.function == null ? Codegen.empty() : this.function;
+    public Optional<Output<String>> function() {
+        return Optional.ofNullable(this.function);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostKey")
-      private final @Nullable Output<String> hostKey;
+    private @Nullable Output<String> hostKey;
 
-    public Output<String> hostKey() {
-        return this.hostKey == null ? Codegen.empty() : this.hostKey;
+    public Optional<Output<String>> hostKey() {
+        return Optional.ofNullable(this.hostKey);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostKeyFingerprint")
-      private final @Nullable Output<String> hostKeyFingerprint;
+    private @Nullable Output<String> hostKeyFingerprint;
 
-    public Output<String> hostKeyFingerprint() {
-        return this.hostKeyFingerprint == null ? Codegen.empty() : this.hostKeyFingerprint;
+    public Optional<Output<String>> hostKeyFingerprint() {
+        return Optional.ofNullable(this.hostKeyFingerprint);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identityProviderType")
-      private final @Nullable Output<String> identityProviderType;
+    private @Nullable Output<String> identityProviderType;
 
-    public Output<String> identityProviderType() {
-        return this.identityProviderType == null ? Codegen.empty() : this.identityProviderType;
+    public Optional<Output<String>> identityProviderType() {
+        return Optional.ofNullable(this.identityProviderType);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invocationRole")
-      private final @Nullable Output<String> invocationRole;
+    private @Nullable Output<String> invocationRole;
 
-    public Output<String> invocationRole() {
-        return this.invocationRole == null ? Codegen.empty() : this.invocationRole;
+    public Optional<Output<String>> invocationRole() {
+        return Optional.ofNullable(this.invocationRole);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingRole")
-      private final @Nullable Output<String> loggingRole;
+    private @Nullable Output<String> loggingRole;
 
-    public Output<String> loggingRole() {
-        return this.loggingRole == null ? Codegen.empty() : this.loggingRole;
+    public Optional<Output<String>> loggingRole() {
+        return Optional.ofNullable(this.loggingRole);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocols")
-      private final @Nullable Output<List<String>> protocols;
+    private @Nullable Output<List<String>> protocols;
 
-    public Output<List<String>> protocols() {
-        return this.protocols == null ? Codegen.empty() : this.protocols;
+    public Optional<Output<List<String>>> protocols() {
+        return Optional.ofNullable(this.protocols);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityPolicyName")
-      private final @Nullable Output<String> securityPolicyName;
+    private @Nullable Output<String> securityPolicyName;
 
-    public Output<String> securityPolicyName() {
-        return this.securityPolicyName == null ? Codegen.empty() : this.securityPolicyName;
+    public Optional<Output<String>> securityPolicyName() {
+        return Optional.ofNullable(this.securityPolicyName);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -225,287 +225,232 @@ public final class ServerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public ServerState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> certificate,
-        @Nullable Output<String> directoryId,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails,
-        @Nullable Output<String> endpointType,
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<String> function,
-        @Nullable Output<String> hostKey,
-        @Nullable Output<String> hostKeyFingerprint,
-        @Nullable Output<String> identityProviderType,
-        @Nullable Output<String> invocationRole,
-        @Nullable Output<String> loggingRole,
-        @Nullable Output<List<String>> protocols,
-        @Nullable Output<String> securityPolicyName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> url) {
-        this.arn = arn;
-        this.certificate = certificate;
-        this.directoryId = directoryId;
-        this.domain = domain;
-        this.endpoint = endpoint;
-        this.endpointDetails = endpointDetails;
-        this.endpointType = endpointType;
-        this.forceDestroy = forceDestroy;
-        this.function = function;
-        this.hostKey = hostKey;
-        this.hostKeyFingerprint = hostKeyFingerprint;
-        this.identityProviderType = identityProviderType;
-        this.invocationRole = invocationRole;
-        this.loggingRole = loggingRole;
-        this.protocols = protocols;
-        this.securityPolicyName = securityPolicyName;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.url = url;
-    }
+    private ServerState() {}
 
-    private ServerState() {
-        this.arn = Codegen.empty();
-        this.certificate = Codegen.empty();
-        this.directoryId = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.endpointDetails = Codegen.empty();
-        this.endpointType = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.function = Codegen.empty();
-        this.hostKey = Codegen.empty();
-        this.hostKeyFingerprint = Codegen.empty();
-        this.identityProviderType = Codegen.empty();
-        this.invocationRole = Codegen.empty();
-        this.loggingRole = Codegen.empty();
-        this.protocols = Codegen.empty();
-        this.securityPolicyName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.url = Codegen.empty();
+    private ServerState(ServerState $) {
+        this.arn = $.arn;
+        this.certificate = $.certificate;
+        this.directoryId = $.directoryId;
+        this.domain = $.domain;
+        this.endpoint = $.endpoint;
+        this.endpointDetails = $.endpointDetails;
+        this.endpointType = $.endpointType;
+        this.forceDestroy = $.forceDestroy;
+        this.function = $.function;
+        this.hostKey = $.hostKey;
+        this.hostKeyFingerprint = $.hostKeyFingerprint;
+        this.identityProviderType = $.identityProviderType;
+        this.invocationRole = $.invocationRole;
+        this.loggingRole = $.loggingRole;
+        this.protocols = $.protocols;
+        this.securityPolicyName = $.securityPolicyName;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> certificate;
-        private @Nullable Output<String> directoryId;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails;
-        private @Nullable Output<String> endpointType;
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<String> function;
-        private @Nullable Output<String> hostKey;
-        private @Nullable Output<String> hostKeyFingerprint;
-        private @Nullable Output<String> identityProviderType;
-        private @Nullable Output<String> invocationRole;
-        private @Nullable Output<String> loggingRole;
-        private @Nullable Output<List<String>> protocols;
-        private @Nullable Output<String> securityPolicyName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> url;
+        private ServerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerState();
         }
 
         public Builder(ServerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.certificate = defaults.certificate;
-    	      this.directoryId = defaults.directoryId;
-    	      this.domain = defaults.domain;
-    	      this.endpoint = defaults.endpoint;
-    	      this.endpointDetails = defaults.endpointDetails;
-    	      this.endpointType = defaults.endpointType;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.function = defaults.function;
-    	      this.hostKey = defaults.hostKey;
-    	      this.hostKeyFingerprint = defaults.hostKeyFingerprint;
-    	      this.identityProviderType = defaults.identityProviderType;
-    	      this.invocationRole = defaults.invocationRole;
-    	      this.loggingRole = defaults.loggingRole;
-    	      this.protocols = defaults.protocols;
-    	      this.securityPolicyName = defaults.securityPolicyName;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.url = defaults.url;
+            $ = new ServerState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder certificate(@Nullable Output<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
-        public Builder certificate(@Nullable String certificate) {
-            this.certificate = Codegen.ofNullable(certificate);
-            return this;
+
+        public Builder certificate(String certificate) {
+            return certificate(Output.of(certificate));
         }
+
         public Builder directoryId(@Nullable Output<String> directoryId) {
-            this.directoryId = directoryId;
+            $.directoryId = directoryId;
             return this;
         }
-        public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Codegen.ofNullable(directoryId);
-            return this;
+
+        public Builder directoryId(String directoryId) {
+            return directoryId(Output.of(directoryId));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder endpointDetails(@Nullable Output<ServerEndpointDetailsGetArgs> endpointDetails) {
-            this.endpointDetails = endpointDetails;
+            $.endpointDetails = endpointDetails;
             return this;
         }
-        public Builder endpointDetails(@Nullable ServerEndpointDetailsGetArgs endpointDetails) {
-            this.endpointDetails = Codegen.ofNullable(endpointDetails);
-            return this;
+
+        public Builder endpointDetails(ServerEndpointDetailsGetArgs endpointDetails) {
+            return endpointDetails(Output.of(endpointDetails));
         }
+
         public Builder endpointType(@Nullable Output<String> endpointType) {
-            this.endpointType = endpointType;
+            $.endpointType = endpointType;
             return this;
         }
-        public Builder endpointType(@Nullable String endpointType) {
-            this.endpointType = Codegen.ofNullable(endpointType);
-            return this;
+
+        public Builder endpointType(String endpointType) {
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder function(@Nullable Output<String> function) {
-            this.function = function;
+            $.function = function;
             return this;
         }
-        public Builder function(@Nullable String function) {
-            this.function = Codegen.ofNullable(function);
-            return this;
+
+        public Builder function(String function) {
+            return function(Output.of(function));
         }
+
         public Builder hostKey(@Nullable Output<String> hostKey) {
-            this.hostKey = hostKey;
+            $.hostKey = hostKey;
             return this;
         }
-        public Builder hostKey(@Nullable String hostKey) {
-            this.hostKey = Codegen.ofNullable(hostKey);
-            return this;
+
+        public Builder hostKey(String hostKey) {
+            return hostKey(Output.of(hostKey));
         }
+
         public Builder hostKeyFingerprint(@Nullable Output<String> hostKeyFingerprint) {
-            this.hostKeyFingerprint = hostKeyFingerprint;
+            $.hostKeyFingerprint = hostKeyFingerprint;
             return this;
         }
-        public Builder hostKeyFingerprint(@Nullable String hostKeyFingerprint) {
-            this.hostKeyFingerprint = Codegen.ofNullable(hostKeyFingerprint);
-            return this;
+
+        public Builder hostKeyFingerprint(String hostKeyFingerprint) {
+            return hostKeyFingerprint(Output.of(hostKeyFingerprint));
         }
+
         public Builder identityProviderType(@Nullable Output<String> identityProviderType) {
-            this.identityProviderType = identityProviderType;
+            $.identityProviderType = identityProviderType;
             return this;
         }
-        public Builder identityProviderType(@Nullable String identityProviderType) {
-            this.identityProviderType = Codegen.ofNullable(identityProviderType);
-            return this;
+
+        public Builder identityProviderType(String identityProviderType) {
+            return identityProviderType(Output.of(identityProviderType));
         }
+
         public Builder invocationRole(@Nullable Output<String> invocationRole) {
-            this.invocationRole = invocationRole;
+            $.invocationRole = invocationRole;
             return this;
         }
-        public Builder invocationRole(@Nullable String invocationRole) {
-            this.invocationRole = Codegen.ofNullable(invocationRole);
-            return this;
+
+        public Builder invocationRole(String invocationRole) {
+            return invocationRole(Output.of(invocationRole));
         }
+
         public Builder loggingRole(@Nullable Output<String> loggingRole) {
-            this.loggingRole = loggingRole;
+            $.loggingRole = loggingRole;
             return this;
         }
-        public Builder loggingRole(@Nullable String loggingRole) {
-            this.loggingRole = Codegen.ofNullable(loggingRole);
-            return this;
+
+        public Builder loggingRole(String loggingRole) {
+            return loggingRole(Output.of(loggingRole));
         }
+
         public Builder protocols(@Nullable Output<List<String>> protocols) {
-            this.protocols = protocols;
+            $.protocols = protocols;
             return this;
         }
-        public Builder protocols(@Nullable List<String> protocols) {
-            this.protocols = Codegen.ofNullable(protocols);
-            return this;
+
+        public Builder protocols(List<String> protocols) {
+            return protocols(Output.of(protocols));
         }
+
         public Builder protocols(String... protocols) {
             return protocols(List.of(protocols));
         }
+
         public Builder securityPolicyName(@Nullable Output<String> securityPolicyName) {
-            this.securityPolicyName = securityPolicyName;
+            $.securityPolicyName = securityPolicyName;
             return this;
         }
-        public Builder securityPolicyName(@Nullable String securityPolicyName) {
-            this.securityPolicyName = Codegen.ofNullable(securityPolicyName);
-            return this;
+
+        public Builder securityPolicyName(String securityPolicyName) {
+            return securityPolicyName(Output.of(securityPolicyName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public ServerState build() {
-            return new ServerState(arn, certificate, directoryId, domain, endpoint, endpointDetails, endpointType, forceDestroy, function, hostKey, hostKeyFingerprint, identityProviderType, invocationRole, loggingRole, protocols, securityPolicyName, tags, tagsAll, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public ServerState build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class AzPowerShellSetupResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -34,55 +34,52 @@ public final class AzPowerShellSetupResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public AzPowerShellSetupResponse(
-        String type,
-        String version) {
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private AzPowerShellSetupResponse() {}
 
-    private AzPowerShellSetupResponse() {
-        this.type = null;
-        this.version = null;
+    private AzPowerShellSetupResponse(AzPowerShellSetupResponse $) {
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzPowerShellSetupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private String version;
+        private AzPowerShellSetupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzPowerShellSetupResponse();
         }
 
         public Builder(AzPowerShellSetupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new AzPowerShellSetupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public AzPowerShellSetupResponse build() {
-            return new AzPowerShellSetupResponse(type, version);
+        }
+
+        public AzPowerShellSetupResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

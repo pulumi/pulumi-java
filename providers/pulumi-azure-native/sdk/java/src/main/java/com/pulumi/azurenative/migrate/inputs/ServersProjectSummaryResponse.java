@@ -26,10 +26,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="assessedCount")
-      private final @Nullable Integer assessedCount;
+    private @Nullable Integer assessedCount;
 
     public Optional<Integer> assessedCount() {
-        return this.assessedCount == null ? Optional.empty() : Optional.ofNullable(this.assessedCount);
+        return Optional.ofNullable(this.assessedCount);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="discoveredCount")
-      private final @Nullable Integer discoveredCount;
+    private @Nullable Integer discoveredCount;
 
     public Optional<Integer> discoveredCount() {
-        return this.discoveredCount == null ? Optional.empty() : Optional.ofNullable(this.discoveredCount);
+        return Optional.ofNullable(this.discoveredCount);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="extendedSummary")
-      private final @Nullable Map<String,String> extendedSummary;
+    private @Nullable Map<String,String> extendedSummary;
 
-    public Map<String,String> extendedSummary() {
-        return this.extendedSummary == null ? Map.of() : this.extendedSummary;
+    public Optional<Map<String,String>> extendedSummary() {
+        return Optional.ofNullable(this.extendedSummary);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -71,10 +71,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lastSummaryRefreshedTime")
-      private final @Nullable String lastSummaryRefreshedTime;
+    private @Nullable String lastSummaryRefreshedTime;
 
     public Optional<String> lastSummaryRefreshedTime() {
-        return this.lastSummaryRefreshedTime == null ? Optional.empty() : Optional.ofNullable(this.lastSummaryRefreshedTime);
+        return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="migratedCount")
-      private final @Nullable Integer migratedCount;
+    private @Nullable Integer migratedCount;
 
     public Optional<Integer> migratedCount() {
-        return this.migratedCount == null ? Optional.empty() : Optional.ofNullable(this.migratedCount);
+        return Optional.ofNullable(this.migratedCount);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="refreshSummaryState")
-      private final @Nullable String refreshSummaryState;
+    private @Nullable String refreshSummaryState;
 
     public Optional<String> refreshSummaryState() {
-        return this.refreshSummaryState == null ? Optional.empty() : Optional.ofNullable(this.refreshSummaryState);
+        return Optional.ofNullable(this.refreshSummaryState);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="replicatingCount")
-      private final @Nullable Integer replicatingCount;
+    private @Nullable Integer replicatingCount;
 
     public Optional<Integer> replicatingCount() {
-        return this.replicatingCount == null ? Optional.empty() : Optional.ofNullable(this.replicatingCount);
+        return Optional.ofNullable(this.replicatingCount);
     }
 
     /**
@@ -115,118 +115,93 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="testMigratedCount")
-      private final @Nullable Integer testMigratedCount;
+    private @Nullable Integer testMigratedCount;
 
     public Optional<Integer> testMigratedCount() {
-        return this.testMigratedCount == null ? Optional.empty() : Optional.ofNullable(this.testMigratedCount);
+        return Optional.ofNullable(this.testMigratedCount);
     }
 
-    public ServersProjectSummaryResponse(
-        @Nullable Integer assessedCount,
-        @Nullable Integer discoveredCount,
-        @Nullable Map<String,String> extendedSummary,
-        String instanceType,
-        @Nullable String lastSummaryRefreshedTime,
-        @Nullable Integer migratedCount,
-        @Nullable String refreshSummaryState,
-        @Nullable Integer replicatingCount,
-        @Nullable Integer testMigratedCount) {
-        this.assessedCount = assessedCount;
-        this.discoveredCount = discoveredCount;
-        this.extendedSummary = extendedSummary;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
-        this.migratedCount = migratedCount;
-        this.refreshSummaryState = refreshSummaryState;
-        this.replicatingCount = replicatingCount;
-        this.testMigratedCount = testMigratedCount;
-    }
+    private ServersProjectSummaryResponse() {}
 
-    private ServersProjectSummaryResponse() {
-        this.assessedCount = null;
-        this.discoveredCount = null;
-        this.extendedSummary = Map.of();
-        this.instanceType = null;
-        this.lastSummaryRefreshedTime = null;
-        this.migratedCount = null;
-        this.refreshSummaryState = null;
-        this.replicatingCount = null;
-        this.testMigratedCount = null;
+    private ServersProjectSummaryResponse(ServersProjectSummaryResponse $) {
+        this.assessedCount = $.assessedCount;
+        this.discoveredCount = $.discoveredCount;
+        this.extendedSummary = $.extendedSummary;
+        this.instanceType = $.instanceType;
+        this.lastSummaryRefreshedTime = $.lastSummaryRefreshedTime;
+        this.migratedCount = $.migratedCount;
+        this.refreshSummaryState = $.refreshSummaryState;
+        this.replicatingCount = $.replicatingCount;
+        this.testMigratedCount = $.testMigratedCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServersProjectSummaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer assessedCount;
-        private @Nullable Integer discoveredCount;
-        private @Nullable Map<String,String> extendedSummary;
-        private String instanceType;
-        private @Nullable String lastSummaryRefreshedTime;
-        private @Nullable Integer migratedCount;
-        private @Nullable String refreshSummaryState;
-        private @Nullable Integer replicatingCount;
-        private @Nullable Integer testMigratedCount;
+        private ServersProjectSummaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServersProjectSummaryResponse();
         }
 
         public Builder(ServersProjectSummaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessedCount = defaults.assessedCount;
-    	      this.discoveredCount = defaults.discoveredCount;
-    	      this.extendedSummary = defaults.extendedSummary;
-    	      this.instanceType = defaults.instanceType;
-    	      this.lastSummaryRefreshedTime = defaults.lastSummaryRefreshedTime;
-    	      this.migratedCount = defaults.migratedCount;
-    	      this.refreshSummaryState = defaults.refreshSummaryState;
-    	      this.replicatingCount = defaults.replicatingCount;
-    	      this.testMigratedCount = defaults.testMigratedCount;
+            $ = new ServersProjectSummaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assessedCount(@Nullable Integer assessedCount) {
-            this.assessedCount = assessedCount;
+            $.assessedCount = assessedCount;
             return this;
         }
+
         public Builder discoveredCount(@Nullable Integer discoveredCount) {
-            this.discoveredCount = discoveredCount;
+            $.discoveredCount = discoveredCount;
             return this;
         }
+
         public Builder extendedSummary(@Nullable Map<String,String> extendedSummary) {
-            this.extendedSummary = extendedSummary;
+            $.extendedSummary = extendedSummary;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder lastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
-            this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
+            $.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
+
         public Builder migratedCount(@Nullable Integer migratedCount) {
-            this.migratedCount = migratedCount;
+            $.migratedCount = migratedCount;
             return this;
         }
+
         public Builder refreshSummaryState(@Nullable String refreshSummaryState) {
-            this.refreshSummaryState = refreshSummaryState;
+            $.refreshSummaryState = refreshSummaryState;
             return this;
         }
+
         public Builder replicatingCount(@Nullable Integer replicatingCount) {
-            this.replicatingCount = replicatingCount;
+            $.replicatingCount = replicatingCount;
             return this;
         }
+
         public Builder testMigratedCount(@Nullable Integer testMigratedCount) {
-            this.testMigratedCount = testMigratedCount;
+            $.testMigratedCount = testMigratedCount;
             return this;
-        }        public ServersProjectSummaryResponse build() {
-            return new ServersProjectSummaryResponse(assessedCount, discoveredCount, extendedSummary, instanceType, lastSummaryRefreshedTime, migratedCount, refreshSummaryState, replicatingCount, testMigratedCount);
+        }
+
+        public ServersProjectSummaryResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

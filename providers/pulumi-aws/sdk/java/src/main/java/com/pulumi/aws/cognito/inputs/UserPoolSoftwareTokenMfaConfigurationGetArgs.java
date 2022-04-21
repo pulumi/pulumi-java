@@ -5,7 +5,6 @@ package com.pulumi.aws.cognito.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class UserPoolSoftwareTokenMfaConfigurationGetArgs extends com.pulu
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public UserPoolSoftwareTokenMfaConfigurationGetArgs(Output<Boolean> enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private UserPoolSoftwareTokenMfaConfigurationGetArgs() {}
 
-    private UserPoolSoftwareTokenMfaConfigurationGetArgs() {
-        this.enabled = Codegen.empty();
+    private UserPoolSoftwareTokenMfaConfigurationGetArgs(UserPoolSoftwareTokenMfaConfigurationGetArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolSoftwareTokenMfaConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
+        private UserPoolSoftwareTokenMfaConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolSoftwareTokenMfaConfigurationGetArgs();
         }
 
         public Builder(UserPoolSoftwareTokenMfaConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new UserPoolSoftwareTokenMfaConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public UserPoolSoftwareTokenMfaConfigurationGetArgs build() {
-            return new UserPoolSoftwareTokenMfaConfigurationGetArgs(enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public UserPoolSoftwareTokenMfaConfigurationGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

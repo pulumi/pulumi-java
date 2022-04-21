@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +22,17 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
      * 
      */
     @Import(name="imageVersion")
-      private final @Nullable Output<String> imageVersion;
+    private @Nullable Output<String> imageVersion;
 
-    public Output<String> imageVersion() {
-        return this.imageVersion == null ? Codegen.empty() : this.imageVersion;
+    public Optional<Output<String>> imageVersion() {
+        return Optional.ofNullable(this.imageVersion);
     }
 
     @Import(name="optionalComponents")
-      private final @Nullable Output<List<String>> optionalComponents;
+    private @Nullable Output<List<String>> optionalComponents;
 
-    public Output<List<String>> optionalComponents() {
-        return this.optionalComponents == null ? Codegen.empty() : this.optionalComponents;
+    public Optional<Output<List<String>>> optionalComponents() {
+        return Optional.ofNullable(this.optionalComponents);
     }
 
     /**
@@ -40,79 +40,72 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs(
-        @Nullable Output<String> imageVersion,
-        @Nullable Output<List<String>> optionalComponents,
-        @Nullable Output<Map<String,String>> properties) {
-        this.imageVersion = imageVersion;
-        this.optionalComponents = optionalComponents;
-        this.properties = properties;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs() {
-        this.imageVersion = Codegen.empty();
-        this.optionalComponents = Codegen.empty();
-        this.properties = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs(WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs $) {
+        this.imageVersion = $.imageVersion;
+        this.optionalComponents = $.optionalComponents;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> imageVersion;
-        private @Nullable Output<List<String>> optionalComponents;
-        private @Nullable Output<Map<String,String>> properties;
+        private WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageVersion = defaults.imageVersion;
-    	      this.optionalComponents = defaults.optionalComponents;
-    	      this.properties = defaults.properties;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageVersion(@Nullable Output<String> imageVersion) {
-            this.imageVersion = imageVersion;
+            $.imageVersion = imageVersion;
             return this;
         }
-        public Builder imageVersion(@Nullable String imageVersion) {
-            this.imageVersion = Codegen.ofNullable(imageVersion);
-            return this;
+
+        public Builder imageVersion(String imageVersion) {
+            return imageVersion(Output.of(imageVersion));
         }
+
         public Builder optionalComponents(@Nullable Output<List<String>> optionalComponents) {
-            this.optionalComponents = optionalComponents;
+            $.optionalComponents = optionalComponents;
             return this;
         }
-        public Builder optionalComponents(@Nullable List<String> optionalComponents) {
-            this.optionalComponents = Codegen.ofNullable(optionalComponents);
-            return this;
+
+        public Builder optionalComponents(List<String> optionalComponents) {
+            return optionalComponents(Output.of(optionalComponents));
         }
+
         public Builder optionalComponents(String... optionalComponents) {
             return optionalComponents(List.of(optionalComponents));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs(imageVersion, optionalComponents, properties);
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class WebACLOverrideAction extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="count")
-      private final @Nullable Object count;
+    private @Nullable Object count;
 
     public Optional<Object> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class WebACLOverrideAction extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="none")
-      private final @Nullable Object none;
+    private @Nullable Object none;
 
     public Optional<Object> none() {
-        return this.none == null ? Optional.empty() : Optional.ofNullable(this.none);
+        return Optional.ofNullable(this.none);
     }
 
-    public WebACLOverrideAction(
-        @Nullable Object count,
-        @Nullable Object none) {
-        this.count = count;
-        this.none = none;
-    }
+    private WebACLOverrideAction() {}
 
-    private WebACLOverrideAction() {
-        this.count = null;
-        this.none = null;
+    private WebACLOverrideAction(WebACLOverrideAction $) {
+        this.count = $.count;
+        this.none = $.none;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLOverrideAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object count;
-        private @Nullable Object none;
+        private WebACLOverrideAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLOverrideAction();
         }
 
         public Builder(WebACLOverrideAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.none = defaults.none;
+            $ = new WebACLOverrideAction(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Object count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder none(@Nullable Object none) {
-            this.none = none;
+            $.none = none;
             return this;
-        }        public WebACLOverrideAction build() {
-            return new WebACLOverrideAction(count, none);
+        }
+
+        public WebACLOverrideAction build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetFlowLogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="flowLogName", required=true)
-      private final String flowLogName;
+    private String flowLogName;
 
     public String flowLogName() {
         return this.flowLogName;
@@ -28,7 +28,7 @@ public final class GetFlowLogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkWatcherName", required=true)
-      private final String networkWatcherName;
+    private String networkWatcherName;
 
     public String networkWatcherName() {
         return this.networkWatcherName;
@@ -39,64 +39,59 @@ public final class GetFlowLogArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetFlowLogArgs(
-        String flowLogName,
-        String networkWatcherName,
-        String resourceGroupName) {
-        this.flowLogName = Objects.requireNonNull(flowLogName, "expected parameter 'flowLogName' to be non-null");
-        this.networkWatcherName = Objects.requireNonNull(networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetFlowLogArgs() {}
 
-    private GetFlowLogArgs() {
-        this.flowLogName = null;
-        this.networkWatcherName = null;
-        this.resourceGroupName = null;
+    private GetFlowLogArgs(GetFlowLogArgs $) {
+        this.flowLogName = $.flowLogName;
+        this.networkWatcherName = $.networkWatcherName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFlowLogArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String flowLogName;
-        private String networkWatcherName;
-        private String resourceGroupName;
+        private GetFlowLogArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFlowLogArgs();
         }
 
         public Builder(GetFlowLogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flowLogName = defaults.flowLogName;
-    	      this.networkWatcherName = defaults.networkWatcherName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetFlowLogArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flowLogName(String flowLogName) {
-            this.flowLogName = Objects.requireNonNull(flowLogName);
+            $.flowLogName = flowLogName;
             return this;
         }
+
         public Builder networkWatcherName(String networkWatcherName) {
-            this.networkWatcherName = Objects.requireNonNull(networkWatcherName);
+            $.networkWatcherName = networkWatcherName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetFlowLogArgs build() {
-            return new GetFlowLogArgs(flowLogName, networkWatcherName, resourceGroupName);
+        }
+
+        public GetFlowLogArgs build() {
+            $.flowLogName = Objects.requireNonNull($.flowLogName, "expected parameter 'flowLogName' to be non-null");
+            $.networkWatcherName = Objects.requireNonNull($.networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

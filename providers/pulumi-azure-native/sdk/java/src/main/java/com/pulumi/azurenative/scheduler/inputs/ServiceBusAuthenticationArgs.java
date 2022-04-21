@@ -6,9 +6,9 @@ package com.pulumi.azurenative.scheduler.inputs;
 import com.pulumi.azurenative.scheduler.enums.ServiceBusAuthenticationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceBusAuthenticationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sasKey")
-      private final @Nullable Output<String> sasKey;
+    private @Nullable Output<String> sasKey;
 
-    public Output<String> sasKey() {
-        return this.sasKey == null ? Codegen.empty() : this.sasKey;
+    public Optional<Output<String>> sasKey() {
+        return Optional.ofNullable(this.sasKey);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServiceBusAuthenticationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sasKeyName")
-      private final @Nullable Output<String> sasKeyName;
+    private @Nullable Output<String> sasKeyName;
 
-    public Output<String> sasKeyName() {
-        return this.sasKeyName == null ? Codegen.empty() : this.sasKeyName;
+    public Optional<Output<String>> sasKeyName() {
+        return Optional.ofNullable(this.sasKeyName);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class ServiceBusAuthenticationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ServiceBusAuthenticationType> type;
+    private @Nullable Output<ServiceBusAuthenticationType> type;
 
-    public Output<ServiceBusAuthenticationType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ServiceBusAuthenticationType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ServiceBusAuthenticationArgs(
-        @Nullable Output<String> sasKey,
-        @Nullable Output<String> sasKeyName,
-        @Nullable Output<ServiceBusAuthenticationType> type) {
-        this.sasKey = sasKey;
-        this.sasKeyName = sasKeyName;
-        this.type = type;
-    }
+    private ServiceBusAuthenticationArgs() {}
 
-    private ServiceBusAuthenticationArgs() {
-        this.sasKey = Codegen.empty();
-        this.sasKeyName = Codegen.empty();
-        this.type = Codegen.empty();
+    private ServiceBusAuthenticationArgs(ServiceBusAuthenticationArgs $) {
+        this.sasKey = $.sasKey;
+        this.sasKeyName = $.sasKeyName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sasKey;
-        private @Nullable Output<String> sasKeyName;
-        private @Nullable Output<ServiceBusAuthenticationType> type;
+        private ServiceBusAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusAuthenticationArgs();
         }
 
         public Builder(ServiceBusAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasKey = defaults.sasKey;
-    	      this.sasKeyName = defaults.sasKeyName;
-    	      this.type = defaults.type;
+            $ = new ServiceBusAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sasKey(@Nullable Output<String> sasKey) {
-            this.sasKey = sasKey;
+            $.sasKey = sasKey;
             return this;
         }
-        public Builder sasKey(@Nullable String sasKey) {
-            this.sasKey = Codegen.ofNullable(sasKey);
-            return this;
+
+        public Builder sasKey(String sasKey) {
+            return sasKey(Output.of(sasKey));
         }
+
         public Builder sasKeyName(@Nullable Output<String> sasKeyName) {
-            this.sasKeyName = sasKeyName;
+            $.sasKeyName = sasKeyName;
             return this;
         }
-        public Builder sasKeyName(@Nullable String sasKeyName) {
-            this.sasKeyName = Codegen.ofNullable(sasKeyName);
-            return this;
+
+        public Builder sasKeyName(String sasKeyName) {
+            return sasKeyName(Output.of(sasKeyName));
         }
+
         public Builder type(@Nullable Output<ServiceBusAuthenticationType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ServiceBusAuthenticationType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ServiceBusAuthenticationArgs build() {
-            return new ServiceBusAuthenticationArgs(sasKey, sasKeyName, type);
+
+        public Builder type(ServiceBusAuthenticationType type) {
+            return type(Output.of(type));
+        }
+
+        public ServiceBusAuthenticationArgs build() {
+            return $;
         }
     }
+
 }

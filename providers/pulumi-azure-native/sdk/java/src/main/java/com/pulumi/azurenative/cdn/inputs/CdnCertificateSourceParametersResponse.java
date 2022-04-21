@@ -21,62 +21,59 @@ public final class CdnCertificateSourceParametersResponse extends com.pulumi.res
      * 
      */
     @Import(name="certificateType", required=true)
-      private final String certificateType;
+    private String certificateType;
 
     public String certificateType() {
         return this.certificateType;
     }
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public CdnCertificateSourceParametersResponse(
-        String certificateType,
-        String odataType) {
-        this.certificateType = Objects.requireNonNull(certificateType, "expected parameter 'certificateType' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-    }
+    private CdnCertificateSourceParametersResponse() {}
 
-    private CdnCertificateSourceParametersResponse() {
-        this.certificateType = null;
-        this.odataType = null;
+    private CdnCertificateSourceParametersResponse(CdnCertificateSourceParametersResponse $) {
+        this.certificateType = $.certificateType;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CdnCertificateSourceParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateType;
-        private String odataType;
+        private CdnCertificateSourceParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CdnCertificateSourceParametersResponse();
         }
 
         public Builder(CdnCertificateSourceParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateType = defaults.certificateType;
-    	      this.odataType = defaults.odataType;
+            $ = new CdnCertificateSourceParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateType(String certificateType) {
-            this.certificateType = Objects.requireNonNull(certificateType);
+            $.certificateType = certificateType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public CdnCertificateSourceParametersResponse build() {
-            return new CdnCertificateSourceParametersResponse(certificateType, odataType);
+        }
+
+        public CdnCertificateSourceParametersResponse build() {
+            $.certificateType = Objects.requireNonNull($.certificateType, "expected parameter 'certificateType' to be non-null");
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            return $;
         }
     }
+
 }

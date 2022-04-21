@@ -23,10 +23,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="appId")
-      private final @Nullable String appId;
+    private @Nullable String appId;
 
     public Optional<String> appId() {
-        return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fqn")
-      private final @Nullable String fqn;
+    private @Nullable String fqn;
 
     public Optional<String> fqn() {
-        return this.fqn == null ? Optional.empty() : Optional.ofNullable(this.fqn);
+        return Optional.ofNullable(this.fqn);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,7 +67,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="role", required=true)
-      private final String role;
+    private String role;
 
     public String role() {
         return this.role;
@@ -78,7 +78,7 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tenantName", required=true)
-      private final String tenantName;
+    private String tenantName;
 
     public String tenantName() {
         return this.tenantName;
@@ -89,100 +89,84 @@ public final class DatabasePrincipalResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DatabasePrincipalResponse(
-        @Nullable String appId,
-        @Nullable String email,
-        @Nullable String fqn,
-        String name,
-        String role,
-        String tenantName,
-        String type) {
-        this.appId = appId;
-        this.email = email;
-        this.fqn = fqn;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.tenantName = Objects.requireNonNull(tenantName, "expected parameter 'tenantName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DatabasePrincipalResponse() {}
 
-    private DatabasePrincipalResponse() {
-        this.appId = null;
-        this.email = null;
-        this.fqn = null;
-        this.name = null;
-        this.role = null;
-        this.tenantName = null;
-        this.type = null;
+    private DatabasePrincipalResponse(DatabasePrincipalResponse $) {
+        this.appId = $.appId;
+        this.email = $.email;
+        this.fqn = $.fqn;
+        this.name = $.name;
+        this.role = $.role;
+        this.tenantName = $.tenantName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabasePrincipalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String appId;
-        private @Nullable String email;
-        private @Nullable String fqn;
-        private String name;
-        private String role;
-        private String tenantName;
-        private String type;
+        private DatabasePrincipalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabasePrincipalResponse();
         }
 
         public Builder(DatabasePrincipalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.email = defaults.email;
-    	      this.fqn = defaults.fqn;
-    	      this.name = defaults.name;
-    	      this.role = defaults.role;
-    	      this.tenantName = defaults.tenantName;
-    	      this.type = defaults.type;
+            $ = new DatabasePrincipalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable String appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
+
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder fqn(@Nullable String fqn) {
-            this.fqn = fqn;
+            $.fqn = fqn;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder tenantName(String tenantName) {
-            this.tenantName = Objects.requireNonNull(tenantName);
+            $.tenantName = tenantName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DatabasePrincipalResponse build() {
-            return new DatabasePrincipalResponse(appId, email, fqn, name, role, tenantName, type);
+        }
+
+        public DatabasePrincipalResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.tenantName = Objects.requireNonNull($.tenantName, "expected parameter 'tenantName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

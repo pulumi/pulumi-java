@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DetectorModelSetTimerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="durationExpression")
-      private final @Nullable Output<String> durationExpression;
+    private @Nullable Output<String> durationExpression;
 
-    public Output<String> durationExpression() {
-        return this.durationExpression == null ? Codegen.empty() : this.durationExpression;
+    public Optional<Output<String>> durationExpression() {
+        return Optional.ofNullable(this.durationExpression);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DetectorModelSetTimerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="seconds")
-      private final @Nullable Output<Integer> seconds;
+    private @Nullable Output<Integer> seconds;
 
-    public Output<Integer> seconds() {
-        return this.seconds == null ? Codegen.empty() : this.seconds;
+    public Optional<Output<Integer>> seconds() {
+        return Optional.ofNullable(this.seconds);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class DetectorModelSetTimerArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="timerName", required=true)
-      private final Output<String> timerName;
+    private Output<String> timerName;
 
     public Output<String> timerName() {
         return this.timerName;
     }
 
-    public DetectorModelSetTimerArgs(
-        @Nullable Output<String> durationExpression,
-        @Nullable Output<Integer> seconds,
-        Output<String> timerName) {
-        this.durationExpression = durationExpression;
-        this.seconds = seconds;
-        this.timerName = Objects.requireNonNull(timerName, "expected parameter 'timerName' to be non-null");
-    }
+    private DetectorModelSetTimerArgs() {}
 
-    private DetectorModelSetTimerArgs() {
-        this.durationExpression = Codegen.empty();
-        this.seconds = Codegen.empty();
-        this.timerName = Codegen.empty();
+    private DetectorModelSetTimerArgs(DetectorModelSetTimerArgs $) {
+        this.durationExpression = $.durationExpression;
+        this.seconds = $.seconds;
+        this.timerName = $.timerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelSetTimerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> durationExpression;
-        private @Nullable Output<Integer> seconds;
-        private Output<String> timerName;
+        private DetectorModelSetTimerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelSetTimerArgs();
         }
 
         public Builder(DetectorModelSetTimerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationExpression = defaults.durationExpression;
-    	      this.seconds = defaults.seconds;
-    	      this.timerName = defaults.timerName;
+            $ = new DetectorModelSetTimerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder durationExpression(@Nullable Output<String> durationExpression) {
-            this.durationExpression = durationExpression;
+            $.durationExpression = durationExpression;
             return this;
         }
-        public Builder durationExpression(@Nullable String durationExpression) {
-            this.durationExpression = Codegen.ofNullable(durationExpression);
-            return this;
+
+        public Builder durationExpression(String durationExpression) {
+            return durationExpression(Output.of(durationExpression));
         }
+
         public Builder seconds(@Nullable Output<Integer> seconds) {
-            this.seconds = seconds;
+            $.seconds = seconds;
             return this;
         }
-        public Builder seconds(@Nullable Integer seconds) {
-            this.seconds = Codegen.ofNullable(seconds);
-            return this;
+
+        public Builder seconds(Integer seconds) {
+            return seconds(Output.of(seconds));
         }
+
         public Builder timerName(Output<String> timerName) {
-            this.timerName = Objects.requireNonNull(timerName);
+            $.timerName = timerName;
             return this;
         }
+
         public Builder timerName(String timerName) {
-            this.timerName = Output.of(Objects.requireNonNull(timerName));
-            return this;
-        }        public DetectorModelSetTimerArgs build() {
-            return new DetectorModelSetTimerArgs(durationExpression, seconds, timerName);
+            return timerName(Output.of(timerName));
+        }
+
+        public DetectorModelSetTimerArgs build() {
+            $.timerName = Objects.requireNonNull($.timerName, "expected parameter 'timerName' to be non-null");
+            return $;
         }
     }
+
 }

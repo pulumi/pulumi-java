@@ -5,7 +5,6 @@ package com.pulumi.aws.shield;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ProtectionHealthCheckAssociationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="healthCheckArn", required=true)
-      private final Output<String> healthCheckArn;
+    private Output<String> healthCheckArn;
 
     public Output<String> healthCheckArn() {
         return this.healthCheckArn;
@@ -30,63 +29,60 @@ public final class ProtectionHealthCheckAssociationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="shieldProtectionId", required=true)
-      private final Output<String> shieldProtectionId;
+    private Output<String> shieldProtectionId;
 
     public Output<String> shieldProtectionId() {
         return this.shieldProtectionId;
     }
 
-    public ProtectionHealthCheckAssociationArgs(
-        Output<String> healthCheckArn,
-        Output<String> shieldProtectionId) {
-        this.healthCheckArn = Objects.requireNonNull(healthCheckArn, "expected parameter 'healthCheckArn' to be non-null");
-        this.shieldProtectionId = Objects.requireNonNull(shieldProtectionId, "expected parameter 'shieldProtectionId' to be non-null");
-    }
+    private ProtectionHealthCheckAssociationArgs() {}
 
-    private ProtectionHealthCheckAssociationArgs() {
-        this.healthCheckArn = Codegen.empty();
-        this.shieldProtectionId = Codegen.empty();
+    private ProtectionHealthCheckAssociationArgs(ProtectionHealthCheckAssociationArgs $) {
+        this.healthCheckArn = $.healthCheckArn;
+        this.shieldProtectionId = $.shieldProtectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtectionHealthCheckAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> healthCheckArn;
-        private Output<String> shieldProtectionId;
+        private ProtectionHealthCheckAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtectionHealthCheckAssociationArgs();
         }
 
         public Builder(ProtectionHealthCheckAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthCheckArn = defaults.healthCheckArn;
-    	      this.shieldProtectionId = defaults.shieldProtectionId;
+            $ = new ProtectionHealthCheckAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthCheckArn(Output<String> healthCheckArn) {
-            this.healthCheckArn = Objects.requireNonNull(healthCheckArn);
+            $.healthCheckArn = healthCheckArn;
             return this;
         }
+
         public Builder healthCheckArn(String healthCheckArn) {
-            this.healthCheckArn = Output.of(Objects.requireNonNull(healthCheckArn));
-            return this;
+            return healthCheckArn(Output.of(healthCheckArn));
         }
+
         public Builder shieldProtectionId(Output<String> shieldProtectionId) {
-            this.shieldProtectionId = Objects.requireNonNull(shieldProtectionId);
+            $.shieldProtectionId = shieldProtectionId;
             return this;
         }
+
         public Builder shieldProtectionId(String shieldProtectionId) {
-            this.shieldProtectionId = Output.of(Objects.requireNonNull(shieldProtectionId));
-            return this;
-        }        public ProtectionHealthCheckAssociationArgs build() {
-            return new ProtectionHealthCheckAssociationArgs(healthCheckArn, shieldProtectionId);
+            return shieldProtectionId(Output.of(shieldProtectionId));
+        }
+
+        public ProtectionHealthCheckAssociationArgs build() {
+            $.healthCheckArn = Objects.requireNonNull($.healthCheckArn, "expected parameter 'healthCheckArn' to be non-null");
+            $.shieldProtectionId = Objects.requireNonNull($.shieldProtectionId, "expected parameter 'shieldProtectionId' to be non-null");
+            return $;
         }
     }
+
 }

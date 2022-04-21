@@ -17,45 +17,45 @@ public final class GetPolicyDefinitionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="policyDefinitionName", required=true)
-      private final String policyDefinitionName;
+    private String policyDefinitionName;
 
     public String policyDefinitionName() {
         return this.policyDefinitionName;
     }
 
-    public GetPolicyDefinitionArgs(String policyDefinitionName) {
-        this.policyDefinitionName = Objects.requireNonNull(policyDefinitionName, "expected parameter 'policyDefinitionName' to be non-null");
-    }
+    private GetPolicyDefinitionArgs() {}
 
-    private GetPolicyDefinitionArgs() {
-        this.policyDefinitionName = null;
+    private GetPolicyDefinitionArgs(GetPolicyDefinitionArgs $) {
+        this.policyDefinitionName = $.policyDefinitionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyDefinitionName;
+        private GetPolicyDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyDefinitionArgs();
         }
 
         public Builder(GetPolicyDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyDefinitionName = defaults.policyDefinitionName;
+            $ = new GetPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyDefinitionName(String policyDefinitionName) {
-            this.policyDefinitionName = Objects.requireNonNull(policyDefinitionName);
+            $.policyDefinitionName = policyDefinitionName;
             return this;
-        }        public GetPolicyDefinitionArgs build() {
-            return new GetPolicyDefinitionArgs(policyDefinitionName);
+        }
+
+        public GetPolicyDefinitionArgs build() {
+            $.policyDefinitionName = Objects.requireNonNull($.policyDefinitionName, "expected parameter 'policyDefinitionName' to be non-null");
+            return $;
         }
     }
+
 }

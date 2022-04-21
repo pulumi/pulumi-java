@@ -21,7 +21,7 @@ public final class TextResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -32,55 +32,52 @@ public final class TextResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="format", required=true)
-      private final String format;
+    private String format;
 
     public String format() {
         return this.format;
     }
 
-    public TextResponse(
-        String content,
-        String format) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-    }
+    private TextResponse() {}
 
-    private TextResponse() {
-        this.content = null;
-        this.format = null;
+    private TextResponse(TextResponse $) {
+        this.content = $.content;
+        this.format = $.format;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String content;
-        private String format;
+        private TextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TextResponse();
         }
 
         public Builder(TextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.format = defaults.format;
+            $ = new TextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
-        }        public TextResponse build() {
-            return new TextResponse(content, format);
+        }
+
+        public TextResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            return $;
         }
     }
+
 }

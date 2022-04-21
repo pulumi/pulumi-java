@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="codeId")
-      private final @Nullable Output<String> codeId;
+    private @Nullable Output<String> codeId;
 
-    public Output<String> codeId() {
-        return this.codeId == null ? Codegen.empty() : this.codeId;
+    public Optional<Output<String>> codeId() {
+        return Optional.ofNullable(this.codeId);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class CodeConfigurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scoringScript", required=true)
-      private final Output<String> scoringScript;
+    private Output<String> scoringScript;
 
     public Output<String> scoringScript() {
         return this.scoringScript;
     }
 
-    public CodeConfigurationArgs(
-        @Nullable Output<String> codeId,
-        Output<String> scoringScript) {
-        this.codeId = codeId;
-        this.scoringScript = Objects.requireNonNull(scoringScript, "expected parameter 'scoringScript' to be non-null");
-    }
+    private CodeConfigurationArgs() {}
 
-    private CodeConfigurationArgs() {
-        this.codeId = Codegen.empty();
-        this.scoringScript = Codegen.empty();
+    private CodeConfigurationArgs(CodeConfigurationArgs $) {
+        this.codeId = $.codeId;
+        this.scoringScript = $.scoringScript;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> codeId;
-        private Output<String> scoringScript;
+        private CodeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeConfigurationArgs();
         }
 
         public Builder(CodeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeId = defaults.codeId;
-    	      this.scoringScript = defaults.scoringScript;
+            $ = new CodeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codeId(@Nullable Output<String> codeId) {
-            this.codeId = codeId;
+            $.codeId = codeId;
             return this;
         }
-        public Builder codeId(@Nullable String codeId) {
-            this.codeId = Codegen.ofNullable(codeId);
-            return this;
+
+        public Builder codeId(String codeId) {
+            return codeId(Output.of(codeId));
         }
+
         public Builder scoringScript(Output<String> scoringScript) {
-            this.scoringScript = Objects.requireNonNull(scoringScript);
+            $.scoringScript = scoringScript;
             return this;
         }
+
         public Builder scoringScript(String scoringScript) {
-            this.scoringScript = Output.of(Objects.requireNonNull(scoringScript));
-            return this;
-        }        public CodeConfigurationArgs build() {
-            return new CodeConfigurationArgs(codeId, scoringScript);
+            return scoringScript(Output.of(scoringScript));
+        }
+
+        public CodeConfigurationArgs build() {
+            $.scoringScript = Objects.requireNonNull($.scoringScript, "expected parameter 'scoringScript' to be non-null");
+            return $;
         }
     }
+
 }

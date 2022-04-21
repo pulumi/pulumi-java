@@ -5,10 +5,10 @@ package com.pulumi.aws.budgets.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends com.pul
      * 
      */
     @Import(name="groups")
-      private final @Nullable Output<List<String>> groups;
+    private @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> groups() {
-        return this.groups == null ? Codegen.empty() : this.groups;
+    public Optional<Output<List<String>>> groups() {
+        return Optional.ofNullable(this.groups);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends com.pul
      * 
      */
     @Import(name="policyArn", required=true)
-      private final Output<String> policyArn;
+    private Output<String> policyArn;
 
     public Output<String> policyArn() {
         return this.policyArn;
@@ -43,10 +43,10 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends com.pul
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<String>> roles;
+    private @Nullable Output<List<String>> roles;
 
-    public Output<List<String>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<String>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
     /**
@@ -54,98 +54,91 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends com.pul
      * 
      */
     @Import(name="users")
-      private final @Nullable Output<List<String>> users;
+    private @Nullable Output<List<String>> users;
 
-    public Output<List<String>> users() {
-        return this.users == null ? Codegen.empty() : this.users;
+    public Optional<Output<List<String>>> users() {
+        return Optional.ofNullable(this.users);
     }
 
-    public BudgetActionDefinitionIamActionDefinitionArgs(
-        @Nullable Output<List<String>> groups,
-        Output<String> policyArn,
-        @Nullable Output<List<String>> roles,
-        @Nullable Output<List<String>> users) {
-        this.groups = groups;
-        this.policyArn = Objects.requireNonNull(policyArn, "expected parameter 'policyArn' to be non-null");
-        this.roles = roles;
-        this.users = users;
-    }
+    private BudgetActionDefinitionIamActionDefinitionArgs() {}
 
-    private BudgetActionDefinitionIamActionDefinitionArgs() {
-        this.groups = Codegen.empty();
-        this.policyArn = Codegen.empty();
-        this.roles = Codegen.empty();
-        this.users = Codegen.empty();
+    private BudgetActionDefinitionIamActionDefinitionArgs(BudgetActionDefinitionIamActionDefinitionArgs $) {
+        this.groups = $.groups;
+        this.policyArn = $.policyArn;
+        this.roles = $.roles;
+        this.users = $.users;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetActionDefinitionIamActionDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> groups;
-        private Output<String> policyArn;
-        private @Nullable Output<List<String>> roles;
-        private @Nullable Output<List<String>> users;
+        private BudgetActionDefinitionIamActionDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetActionDefinitionIamActionDefinitionArgs();
         }
 
         public Builder(BudgetActionDefinitionIamActionDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groups = defaults.groups;
-    	      this.policyArn = defaults.policyArn;
-    	      this.roles = defaults.roles;
-    	      this.users = defaults.users;
+            $ = new BudgetActionDefinitionIamActionDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groups(@Nullable Output<List<String>> groups) {
-            this.groups = groups;
+            $.groups = groups;
             return this;
         }
-        public Builder groups(@Nullable List<String> groups) {
-            this.groups = Codegen.ofNullable(groups);
-            return this;
+
+        public Builder groups(List<String> groups) {
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder policyArn(Output<String> policyArn) {
-            this.policyArn = Objects.requireNonNull(policyArn);
+            $.policyArn = policyArn;
             return this;
         }
+
         public Builder policyArn(String policyArn) {
-            this.policyArn = Output.of(Objects.requireNonNull(policyArn));
-            return this;
+            return policyArn(Output.of(policyArn));
         }
+
         public Builder roles(@Nullable Output<List<String>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<String> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<String> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(String... roles) {
             return roles(List.of(roles));
         }
+
         public Builder users(@Nullable Output<List<String>> users) {
-            this.users = users;
+            $.users = users;
             return this;
         }
-        public Builder users(@Nullable List<String> users) {
-            this.users = Codegen.ofNullable(users);
-            return this;
+
+        public Builder users(List<String> users) {
+            return users(Output.of(users));
         }
+
         public Builder users(String... users) {
             return users(List.of(users));
-        }        public BudgetActionDefinitionIamActionDefinitionArgs build() {
-            return new BudgetActionDefinitionIamActionDefinitionArgs(groups, policyArn, roles, users);
+        }
+
+        public BudgetActionDefinitionIamActionDefinitionArgs build() {
+            $.policyArn = Objects.requireNonNull($.policyArn, "expected parameter 'policyArn' to be non-null");
+            return $;
         }
     }
+
 }

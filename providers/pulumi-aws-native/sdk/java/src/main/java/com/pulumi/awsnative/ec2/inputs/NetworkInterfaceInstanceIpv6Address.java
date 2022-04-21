@@ -13,45 +13,45 @@ public final class NetworkInterfaceInstanceIpv6Address extends com.pulumi.resour
     public static final NetworkInterfaceInstanceIpv6Address Empty = new NetworkInterfaceInstanceIpv6Address();
 
     @Import(name="ipv6Address", required=true)
-      private final String ipv6Address;
+    private String ipv6Address;
 
     public String ipv6Address() {
         return this.ipv6Address;
     }
 
-    public NetworkInterfaceInstanceIpv6Address(String ipv6Address) {
-        this.ipv6Address = Objects.requireNonNull(ipv6Address, "expected parameter 'ipv6Address' to be non-null");
-    }
+    private NetworkInterfaceInstanceIpv6Address() {}
 
-    private NetworkInterfaceInstanceIpv6Address() {
-        this.ipv6Address = null;
+    private NetworkInterfaceInstanceIpv6Address(NetworkInterfaceInstanceIpv6Address $) {
+        this.ipv6Address = $.ipv6Address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceInstanceIpv6Address defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipv6Address;
+        private NetworkInterfaceInstanceIpv6Address $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceInstanceIpv6Address();
         }
 
         public Builder(NetworkInterfaceInstanceIpv6Address defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipv6Address = defaults.ipv6Address;
+            $ = new NetworkInterfaceInstanceIpv6Address(Objects.requireNonNull(defaults));
         }
 
         public Builder ipv6Address(String ipv6Address) {
-            this.ipv6Address = Objects.requireNonNull(ipv6Address);
+            $.ipv6Address = ipv6Address;
             return this;
-        }        public NetworkInterfaceInstanceIpv6Address build() {
-            return new NetworkInterfaceInstanceIpv6Address(ipv6Address);
+        }
+
+        public NetworkInterfaceInstanceIpv6Address build() {
+            $.ipv6Address = Objects.requireNonNull($.ipv6Address, "expected parameter 'ipv6Address' to be non-null");
+            return $;
         }
     }
+
 }

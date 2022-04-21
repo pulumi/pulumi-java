@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      * 
      */
     @Import(name="applicationRestoreType")
-      private final @Nullable Output<String> applicationRestoreType;
+    private @Nullable Output<String> applicationRestoreType;
 
-    public Output<String> applicationRestoreType() {
-        return this.applicationRestoreType == null ? Codegen.empty() : this.applicationRestoreType;
+    public Optional<Output<String>> applicationRestoreType() {
+        return Optional.ofNullable(this.applicationRestoreType);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      * 
      */
     @Import(name="snapshotName")
-      private final @Nullable Output<String> snapshotName;
+    private @Nullable Output<String> snapshotName;
 
-    public Output<String> snapshotName() {
-        return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
+    public Optional<Output<String>> snapshotName() {
+        return Optional.ofNullable(this.snapshotName);
     }
 
-    public ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs(
-        @Nullable Output<String> applicationRestoreType,
-        @Nullable Output<String> snapshotName) {
-        this.applicationRestoreType = applicationRestoreType;
-        this.snapshotName = snapshotName;
-    }
+    private ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs() {}
 
-    private ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs() {
-        this.applicationRestoreType = Codegen.empty();
-        this.snapshotName = Codegen.empty();
+    private ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs(ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs $) {
+        this.applicationRestoreType = $.applicationRestoreType;
+        this.snapshotName = $.snapshotName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationRestoreType;
-        private @Nullable Output<String> snapshotName;
+        private ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationRestoreType = defaults.applicationRestoreType;
-    	      this.snapshotName = defaults.snapshotName;
+            $ = new ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationRestoreType(@Nullable Output<String> applicationRestoreType) {
-            this.applicationRestoreType = applicationRestoreType;
+            $.applicationRestoreType = applicationRestoreType;
             return this;
         }
-        public Builder applicationRestoreType(@Nullable String applicationRestoreType) {
-            this.applicationRestoreType = Codegen.ofNullable(applicationRestoreType);
-            return this;
+
+        public Builder applicationRestoreType(String applicationRestoreType) {
+            return applicationRestoreType(Output.of(applicationRestoreType));
         }
+
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
-            this.snapshotName = snapshotName;
+            $.snapshotName = snapshotName;
             return this;
         }
-        public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Codegen.ofNullable(snapshotName);
-            return this;
-        }        public ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs build() {
-            return new ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs(applicationRestoreType, snapshotName);
+
+        public Builder snapshotName(String snapshotName) {
+            return snapshotName(Output.of(snapshotName));
+        }
+
+        public ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

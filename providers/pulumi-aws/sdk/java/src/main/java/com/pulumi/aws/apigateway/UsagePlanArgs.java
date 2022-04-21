@@ -8,11 +8,11 @@ import com.pulumi.aws.apigateway.inputs.UsagePlanQuotaSettingsArgs;
 import com.pulumi.aws.apigateway.inputs.UsagePlanThrottleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiStages")
-      private final @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
+    private @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
 
-    public Output<List<UsagePlanApiStageArgs>> apiStages() {
-        return this.apiStages == null ? Codegen.empty() : this.apiStages;
+    public Optional<Output<List<UsagePlanApiStageArgs>>> apiStages() {
+        return Optional.ofNullable(this.apiStages);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productCode")
-      private final @Nullable Output<String> productCode;
+    private @Nullable Output<String> productCode;
 
-    public Output<String> productCode() {
-        return this.productCode == null ? Codegen.empty() : this.productCode;
+    public Optional<Output<String>> productCode() {
+        return Optional.ofNullable(this.productCode);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quotaSettings")
-      private final @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings;
+    private @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings;
 
-    public Output<UsagePlanQuotaSettingsArgs> quotaSettings() {
-        return this.quotaSettings == null ? Codegen.empty() : this.quotaSettings;
+    public Optional<Output<UsagePlanQuotaSettingsArgs>> quotaSettings() {
+        return Optional.ofNullable(this.quotaSettings);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -91,131 +91,112 @@ public final class UsagePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="throttleSettings")
-      private final @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings;
+    private @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings;
 
-    public Output<UsagePlanThrottleSettingsArgs> throttleSettings() {
-        return this.throttleSettings == null ? Codegen.empty() : this.throttleSettings;
+    public Optional<Output<UsagePlanThrottleSettingsArgs>> throttleSettings() {
+        return Optional.ofNullable(this.throttleSettings);
     }
 
-    public UsagePlanArgs(
-        @Nullable Output<List<UsagePlanApiStageArgs>> apiStages,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> productCode,
-        @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings) {
-        this.apiStages = apiStages;
-        this.description = description;
-        this.name = name;
-        this.productCode = productCode;
-        this.quotaSettings = quotaSettings;
-        this.tags = tags;
-        this.throttleSettings = throttleSettings;
-    }
+    private UsagePlanArgs() {}
 
-    private UsagePlanArgs() {
-        this.apiStages = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.productCode = Codegen.empty();
-        this.quotaSettings = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.throttleSettings = Codegen.empty();
+    private UsagePlanArgs(UsagePlanArgs $) {
+        this.apiStages = $.apiStages;
+        this.description = $.description;
+        this.name = $.name;
+        this.productCode = $.productCode;
+        this.quotaSettings = $.quotaSettings;
+        this.tags = $.tags;
+        this.throttleSettings = $.throttleSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsagePlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> productCode;
-        private @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings;
+        private UsagePlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsagePlanArgs();
         }
 
         public Builder(UsagePlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiStages = defaults.apiStages;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.productCode = defaults.productCode;
-    	      this.quotaSettings = defaults.quotaSettings;
-    	      this.tags = defaults.tags;
-    	      this.throttleSettings = defaults.throttleSettings;
+            $ = new UsagePlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiStages(@Nullable Output<List<UsagePlanApiStageArgs>> apiStages) {
-            this.apiStages = apiStages;
+            $.apiStages = apiStages;
             return this;
         }
-        public Builder apiStages(@Nullable List<UsagePlanApiStageArgs> apiStages) {
-            this.apiStages = Codegen.ofNullable(apiStages);
-            return this;
+
+        public Builder apiStages(List<UsagePlanApiStageArgs> apiStages) {
+            return apiStages(Output.of(apiStages));
         }
+
         public Builder apiStages(UsagePlanApiStageArgs... apiStages) {
             return apiStages(List.of(apiStages));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder productCode(@Nullable Output<String> productCode) {
-            this.productCode = productCode;
+            $.productCode = productCode;
             return this;
         }
-        public Builder productCode(@Nullable String productCode) {
-            this.productCode = Codegen.ofNullable(productCode);
-            return this;
+
+        public Builder productCode(String productCode) {
+            return productCode(Output.of(productCode));
         }
+
         public Builder quotaSettings(@Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings) {
-            this.quotaSettings = quotaSettings;
+            $.quotaSettings = quotaSettings;
             return this;
         }
-        public Builder quotaSettings(@Nullable UsagePlanQuotaSettingsArgs quotaSettings) {
-            this.quotaSettings = Codegen.ofNullable(quotaSettings);
-            return this;
+
+        public Builder quotaSettings(UsagePlanQuotaSettingsArgs quotaSettings) {
+            return quotaSettings(Output.of(quotaSettings));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder throttleSettings(@Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings) {
-            this.throttleSettings = throttleSettings;
+            $.throttleSettings = throttleSettings;
             return this;
         }
-        public Builder throttleSettings(@Nullable UsagePlanThrottleSettingsArgs throttleSettings) {
-            this.throttleSettings = Codegen.ofNullable(throttleSettings);
-            return this;
-        }        public UsagePlanArgs build() {
-            return new UsagePlanArgs(apiStages, description, name, productCode, quotaSettings, tags, throttleSettings);
+
+        public Builder throttleSettings(UsagePlanThrottleSettingsArgs throttleSettings) {
+            return throttleSettings(Output.of(throttleSettings));
+        }
+
+        public UsagePlanArgs build() {
+            return $;
         }
     }
+
 }

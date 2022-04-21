@@ -15,78 +15,71 @@ public final class ListenerRuleFixedResponseConfig extends com.pulumi.resources.
     public static final ListenerRuleFixedResponseConfig Empty = new ListenerRuleFixedResponseConfig();
 
     @Import(name="contentType")
-      private final @Nullable String contentType;
+    private @Nullable String contentType;
 
     public Optional<String> contentType() {
-        return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
+        return Optional.ofNullable(this.contentType);
     }
 
     @Import(name="messageBody")
-      private final @Nullable String messageBody;
+    private @Nullable String messageBody;
 
     public Optional<String> messageBody() {
-        return this.messageBody == null ? Optional.empty() : Optional.ofNullable(this.messageBody);
+        return Optional.ofNullable(this.messageBody);
     }
 
     @Import(name="statusCode", required=true)
-      private final String statusCode;
+    private String statusCode;
 
     public String statusCode() {
         return this.statusCode;
     }
 
-    public ListenerRuleFixedResponseConfig(
-        @Nullable String contentType,
-        @Nullable String messageBody,
-        String statusCode) {
-        this.contentType = contentType;
-        this.messageBody = messageBody;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private ListenerRuleFixedResponseConfig() {}
 
-    private ListenerRuleFixedResponseConfig() {
-        this.contentType = null;
-        this.messageBody = null;
-        this.statusCode = null;
+    private ListenerRuleFixedResponseConfig(ListenerRuleFixedResponseConfig $) {
+        this.contentType = $.contentType;
+        this.messageBody = $.messageBody;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleFixedResponseConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contentType;
-        private @Nullable String messageBody;
-        private String statusCode;
+        private ListenerRuleFixedResponseConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleFixedResponseConfig();
         }
 
         public Builder(ListenerRuleFixedResponseConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.messageBody = defaults.messageBody;
-    	      this.statusCode = defaults.statusCode;
+            $ = new ListenerRuleFixedResponseConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
+
         public Builder messageBody(@Nullable String messageBody) {
-            this.messageBody = messageBody;
+            $.messageBody = messageBody;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
-        }        public ListenerRuleFixedResponseConfig build() {
-            return new ListenerRuleFixedResponseConfig(contentType, messageBody, statusCode);
+        }
+
+        public ListenerRuleFixedResponseConfig build() {
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

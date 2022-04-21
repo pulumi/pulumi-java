@@ -5,11 +5,11 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clusterEndpointIdentifier")
-      private final @Nullable Output<String> clusterEndpointIdentifier;
+    private @Nullable Output<String> clusterEndpointIdentifier;
 
-    public Output<String> clusterEndpointIdentifier() {
-        return this.clusterEndpointIdentifier == null ? Codegen.empty() : this.clusterEndpointIdentifier;
+    public Optional<Output<String>> clusterEndpointIdentifier() {
+        return Optional.ofNullable(this.clusterEndpointIdentifier);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clusterIdentifier")
-      private final @Nullable Output<String> clusterIdentifier;
+    private @Nullable Output<String> clusterIdentifier;
 
-    public Output<String> clusterIdentifier() {
-        return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
+    public Optional<Output<String>> clusterIdentifier() {
+        return Optional.ofNullable(this.clusterIdentifier);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="customEndpointType")
-      private final @Nullable Output<String> customEndpointType;
+    private @Nullable Output<String> customEndpointType;
 
-    public Output<String> customEndpointType() {
-        return this.customEndpointType == null ? Codegen.empty() : this.customEndpointType;
+    public Optional<Output<String>> customEndpointType() {
+        return Optional.ofNullable(this.customEndpointType);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="excludedMembers")
-      private final @Nullable Output<List<String>> excludedMembers;
+    private @Nullable Output<List<String>> excludedMembers;
 
-    public Output<List<String>> excludedMembers() {
-        return this.excludedMembers == null ? Codegen.empty() : this.excludedMembers;
+    public Optional<Output<List<String>>> excludedMembers() {
+        return Optional.ofNullable(this.excludedMembers);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="staticMembers")
-      private final @Nullable Output<List<String>> staticMembers;
+    private @Nullable Output<List<String>> staticMembers;
 
-    public Output<List<String>> staticMembers() {
-        return this.staticMembers == null ? Codegen.empty() : this.staticMembers;
+    public Optional<Output<List<String>>> staticMembers() {
+        return Optional.ofNullable(this.staticMembers);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -110,160 +110,136 @@ public final class ClusterEndpointState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ClusterEndpointState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> clusterEndpointIdentifier,
-        @Nullable Output<String> clusterIdentifier,
-        @Nullable Output<String> customEndpointType,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<List<String>> excludedMembers,
-        @Nullable Output<List<String>> staticMembers,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.clusterEndpointIdentifier = clusterEndpointIdentifier;
-        this.clusterIdentifier = clusterIdentifier;
-        this.customEndpointType = customEndpointType;
-        this.endpoint = endpoint;
-        this.excludedMembers = excludedMembers;
-        this.staticMembers = staticMembers;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ClusterEndpointState() {}
 
-    private ClusterEndpointState() {
-        this.arn = Codegen.empty();
-        this.clusterEndpointIdentifier = Codegen.empty();
-        this.clusterIdentifier = Codegen.empty();
-        this.customEndpointType = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.excludedMembers = Codegen.empty();
-        this.staticMembers = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ClusterEndpointState(ClusterEndpointState $) {
+        this.arn = $.arn;
+        this.clusterEndpointIdentifier = $.clusterEndpointIdentifier;
+        this.clusterIdentifier = $.clusterIdentifier;
+        this.customEndpointType = $.customEndpointType;
+        this.endpoint = $.endpoint;
+        this.excludedMembers = $.excludedMembers;
+        this.staticMembers = $.staticMembers;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEndpointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> clusterEndpointIdentifier;
-        private @Nullable Output<String> clusterIdentifier;
-        private @Nullable Output<String> customEndpointType;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<List<String>> excludedMembers;
-        private @Nullable Output<List<String>> staticMembers;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ClusterEndpointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEndpointState();
         }
 
         public Builder(ClusterEndpointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.clusterEndpointIdentifier = defaults.clusterEndpointIdentifier;
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
-    	      this.customEndpointType = defaults.customEndpointType;
-    	      this.endpoint = defaults.endpoint;
-    	      this.excludedMembers = defaults.excludedMembers;
-    	      this.staticMembers = defaults.staticMembers;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ClusterEndpointState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder clusterEndpointIdentifier(@Nullable Output<String> clusterEndpointIdentifier) {
-            this.clusterEndpointIdentifier = clusterEndpointIdentifier;
+            $.clusterEndpointIdentifier = clusterEndpointIdentifier;
             return this;
         }
-        public Builder clusterEndpointIdentifier(@Nullable String clusterEndpointIdentifier) {
-            this.clusterEndpointIdentifier = Codegen.ofNullable(clusterEndpointIdentifier);
-            return this;
+
+        public Builder clusterEndpointIdentifier(String clusterEndpointIdentifier) {
+            return clusterEndpointIdentifier(Output.of(clusterEndpointIdentifier));
         }
+
         public Builder clusterIdentifier(@Nullable Output<String> clusterIdentifier) {
-            this.clusterIdentifier = clusterIdentifier;
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
-        public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Codegen.ofNullable(clusterIdentifier);
-            return this;
+
+        public Builder clusterIdentifier(String clusterIdentifier) {
+            return clusterIdentifier(Output.of(clusterIdentifier));
         }
+
         public Builder customEndpointType(@Nullable Output<String> customEndpointType) {
-            this.customEndpointType = customEndpointType;
+            $.customEndpointType = customEndpointType;
             return this;
         }
-        public Builder customEndpointType(@Nullable String customEndpointType) {
-            this.customEndpointType = Codegen.ofNullable(customEndpointType);
-            return this;
+
+        public Builder customEndpointType(String customEndpointType) {
+            return customEndpointType(Output.of(customEndpointType));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder excludedMembers(@Nullable Output<List<String>> excludedMembers) {
-            this.excludedMembers = excludedMembers;
+            $.excludedMembers = excludedMembers;
             return this;
         }
-        public Builder excludedMembers(@Nullable List<String> excludedMembers) {
-            this.excludedMembers = Codegen.ofNullable(excludedMembers);
-            return this;
+
+        public Builder excludedMembers(List<String> excludedMembers) {
+            return excludedMembers(Output.of(excludedMembers));
         }
+
         public Builder excludedMembers(String... excludedMembers) {
             return excludedMembers(List.of(excludedMembers));
         }
+
         public Builder staticMembers(@Nullable Output<List<String>> staticMembers) {
-            this.staticMembers = staticMembers;
+            $.staticMembers = staticMembers;
             return this;
         }
-        public Builder staticMembers(@Nullable List<String> staticMembers) {
-            this.staticMembers = Codegen.ofNullable(staticMembers);
-            return this;
+
+        public Builder staticMembers(List<String> staticMembers) {
+            return staticMembers(Output.of(staticMembers));
         }
+
         public Builder staticMembers(String... staticMembers) {
             return staticMembers(List.of(staticMembers));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ClusterEndpointState build() {
-            return new ClusterEndpointState(arn, clusterEndpointIdentifier, clusterIdentifier, customEndpointType, endpoint, excludedMembers, staticMembers, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ClusterEndpointState build() {
+            return $;
         }
     }
+
 }

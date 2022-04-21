@@ -15,78 +15,72 @@ public final class GetJobArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetJobArgs Empty = new GetJobArgs();
 
     @Import(name="jobId", required=true)
-      private final String jobId;
+    private String jobId;
 
     public String jobId() {
         return this.jobId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetJobArgs(
-        String jobId,
-        String location,
-        @Nullable String project) {
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetJobArgs() {}
 
-    private GetJobArgs() {
-        this.jobId = null;
-        this.location = null;
-        this.project = null;
+    private GetJobArgs(GetJobArgs $) {
+        this.jobId = $.jobId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobId;
-        private String location;
-        private @Nullable String project;
+        private GetJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJobArgs();
         }
 
         public Builder(GetJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(String jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetJobArgs build() {
-            return new GetJobArgs(jobId, location, project);
+        }
+
+        public GetJobArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

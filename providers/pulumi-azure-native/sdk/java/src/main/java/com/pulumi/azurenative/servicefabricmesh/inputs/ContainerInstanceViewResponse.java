@@ -26,10 +26,10 @@ public final class ContainerInstanceViewResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="currentState")
-      private final @Nullable ContainerStateResponse currentState;
+    private @Nullable ContainerStateResponse currentState;
 
     public Optional<ContainerStateResponse> currentState() {
-        return this.currentState == null ? Optional.empty() : Optional.ofNullable(this.currentState);
+        return Optional.ofNullable(this.currentState);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContainerInstanceViewResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="events")
-      private final @Nullable List<ContainerEventResponse> events;
+    private @Nullable List<ContainerEventResponse> events;
 
-    public List<ContainerEventResponse> events() {
-        return this.events == null ? List.of() : this.events;
+    public Optional<List<ContainerEventResponse>> events() {
+        return Optional.ofNullable(this.events);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ContainerInstanceViewResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="previousState")
-      private final @Nullable ContainerStateResponse previousState;
+    private @Nullable ContainerStateResponse previousState;
 
     public Optional<ContainerStateResponse> previousState() {
-        return this.previousState == null ? Optional.empty() : Optional.ofNullable(this.previousState);
+        return Optional.ofNullable(this.previousState);
     }
 
     /**
@@ -59,76 +59,66 @@ public final class ContainerInstanceViewResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="restartCount")
-      private final @Nullable Integer restartCount;
+    private @Nullable Integer restartCount;
 
     public Optional<Integer> restartCount() {
-        return this.restartCount == null ? Optional.empty() : Optional.ofNullable(this.restartCount);
+        return Optional.ofNullable(this.restartCount);
     }
 
-    public ContainerInstanceViewResponse(
-        @Nullable ContainerStateResponse currentState,
-        @Nullable List<ContainerEventResponse> events,
-        @Nullable ContainerStateResponse previousState,
-        @Nullable Integer restartCount) {
-        this.currentState = currentState;
-        this.events = events;
-        this.previousState = previousState;
-        this.restartCount = restartCount;
-    }
+    private ContainerInstanceViewResponse() {}
 
-    private ContainerInstanceViewResponse() {
-        this.currentState = null;
-        this.events = List.of();
-        this.previousState = null;
-        this.restartCount = null;
+    private ContainerInstanceViewResponse(ContainerInstanceViewResponse $) {
+        this.currentState = $.currentState;
+        this.events = $.events;
+        this.previousState = $.previousState;
+        this.restartCount = $.restartCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ContainerStateResponse currentState;
-        private @Nullable List<ContainerEventResponse> events;
-        private @Nullable ContainerStateResponse previousState;
-        private @Nullable Integer restartCount;
+        private ContainerInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerInstanceViewResponse();
         }
 
         public Builder(ContainerInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentState = defaults.currentState;
-    	      this.events = defaults.events;
-    	      this.previousState = defaults.previousState;
-    	      this.restartCount = defaults.restartCount;
+            $ = new ContainerInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentState(@Nullable ContainerStateResponse currentState) {
-            this.currentState = currentState;
+            $.currentState = currentState;
             return this;
         }
+
         public Builder events(@Nullable List<ContainerEventResponse> events) {
-            this.events = events;
+            $.events = events;
             return this;
         }
+
         public Builder events(ContainerEventResponse... events) {
             return events(List.of(events));
         }
+
         public Builder previousState(@Nullable ContainerStateResponse previousState) {
-            this.previousState = previousState;
+            $.previousState = previousState;
             return this;
         }
+
         public Builder restartCount(@Nullable Integer restartCount) {
-            this.restartCount = restartCount;
+            $.restartCount = restartCount;
             return this;
-        }        public ContainerInstanceViewResponse build() {
-            return new ContainerInstanceViewResponse(currentState, events, previousState, restartCount);
+        }
+
+        public ContainerInstanceViewResponse build() {
+            return $;
         }
     }
+
 }

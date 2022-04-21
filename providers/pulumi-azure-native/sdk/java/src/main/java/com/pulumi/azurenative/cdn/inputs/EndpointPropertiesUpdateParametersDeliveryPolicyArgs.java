@@ -6,10 +6,10 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.DeliveryRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<List<DeliveryRuleArgs>> rules;
+    private Output<List<DeliveryRuleArgs>> rules;
 
     public Output<List<DeliveryRuleArgs>> rules() {
         return this.rules;
     }
 
-    public EndpointPropertiesUpdateParametersDeliveryPolicyArgs(
-        @Nullable Output<String> description,
-        Output<List<DeliveryRuleArgs>> rules) {
-        this.description = description;
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private EndpointPropertiesUpdateParametersDeliveryPolicyArgs() {}
 
-    private EndpointPropertiesUpdateParametersDeliveryPolicyArgs() {
-        this.description = Codegen.empty();
-        this.rules = Codegen.empty();
+    private EndpointPropertiesUpdateParametersDeliveryPolicyArgs(EndpointPropertiesUpdateParametersDeliveryPolicyArgs $) {
+        this.description = $.description;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointPropertiesUpdateParametersDeliveryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<DeliveryRuleArgs>> rules;
+        private EndpointPropertiesUpdateParametersDeliveryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointPropertiesUpdateParametersDeliveryPolicyArgs();
         }
 
         public Builder(EndpointPropertiesUpdateParametersDeliveryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.rules = defaults.rules;
+            $ = new EndpointPropertiesUpdateParametersDeliveryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder rules(Output<List<DeliveryRuleArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<DeliveryRuleArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(DeliveryRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public EndpointPropertiesUpdateParametersDeliveryPolicyArgs build() {
-            return new EndpointPropertiesUpdateParametersDeliveryPolicyArgs(description, rules);
+        }
+
+        public EndpointPropertiesUpdateParametersDeliveryPolicyArgs build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

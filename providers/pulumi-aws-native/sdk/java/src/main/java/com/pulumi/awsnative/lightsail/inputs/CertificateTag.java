@@ -23,7 +23,7 @@ public final class CertificateTag extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -34,55 +34,51 @@ public final class CertificateTag extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public CertificateTag(
-        String key,
-        @Nullable String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = value;
-    }
+    private CertificateTag() {}
 
-    private CertificateTag() {
-        this.key = null;
-        this.value = null;
+    private CertificateTag(CertificateTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private @Nullable String value;
+        private CertificateTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateTag();
         }
 
         public Builder(CertificateTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new CertificateTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public CertificateTag build() {
-            return new CertificateTag(key, value);
+        }
+
+        public CertificateTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

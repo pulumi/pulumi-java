@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.enums.GitRepoSourceRepoType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ref")
-      private final @Nullable Output<String> ref;
+    private @Nullable Output<String> ref;
 
-    public Output<String> ref() {
-        return this.ref == null ? Codegen.empty() : this.ref;
+    public Optional<Output<String>> ref() {
+        return Optional.ofNullable(this.ref);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repoType")
-      private final @Nullable Output<GitRepoSourceRepoType> repoType;
+    private @Nullable Output<GitRepoSourceRepoType> repoType;
 
-    public Output<GitRepoSourceRepoType> repoType() {
-        return this.repoType == null ? Codegen.empty() : this.repoType;
+    public Optional<Output<GitRepoSourceRepoType>> repoType() {
+        return Optional.ofNullable(this.repoType);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class GitRepoSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public GitRepoSourceArgs(
-        @Nullable Output<String> ref,
-        @Nullable Output<GitRepoSourceRepoType> repoType,
-        @Nullable Output<String> uri) {
-        this.ref = ref;
-        this.repoType = repoType;
-        this.uri = uri;
-    }
+    private GitRepoSourceArgs() {}
 
-    private GitRepoSourceArgs() {
-        this.ref = Codegen.empty();
-        this.repoType = Codegen.empty();
-        this.uri = Codegen.empty();
+    private GitRepoSourceArgs(GitRepoSourceArgs $) {
+        this.ref = $.ref;
+        this.repoType = $.repoType;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitRepoSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ref;
-        private @Nullable Output<GitRepoSourceRepoType> repoType;
-        private @Nullable Output<String> uri;
+        private GitRepoSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitRepoSourceArgs();
         }
 
         public Builder(GitRepoSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ref = defaults.ref;
-    	      this.repoType = defaults.repoType;
-    	      this.uri = defaults.uri;
+            $ = new GitRepoSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ref(@Nullable Output<String> ref) {
-            this.ref = ref;
+            $.ref = ref;
             return this;
         }
-        public Builder ref(@Nullable String ref) {
-            this.ref = Codegen.ofNullable(ref);
-            return this;
+
+        public Builder ref(String ref) {
+            return ref(Output.of(ref));
         }
+
         public Builder repoType(@Nullable Output<GitRepoSourceRepoType> repoType) {
-            this.repoType = repoType;
+            $.repoType = repoType;
             return this;
         }
-        public Builder repoType(@Nullable GitRepoSourceRepoType repoType) {
-            this.repoType = Codegen.ofNullable(repoType);
-            return this;
+
+        public Builder repoType(GitRepoSourceRepoType repoType) {
+            return repoType(Output.of(repoType));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public GitRepoSourceArgs build() {
-            return new GitRepoSourceArgs(ref, repoType, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public GitRepoSourceArgs build() {
+            return $;
         }
     }
+
 }

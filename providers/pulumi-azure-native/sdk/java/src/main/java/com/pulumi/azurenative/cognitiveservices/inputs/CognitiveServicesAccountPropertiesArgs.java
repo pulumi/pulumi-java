@@ -12,10 +12,10 @@ import com.pulumi.azurenative.cognitiveservices.inputs.UserOwnedStorageArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="apiProperties")
-      private final @Nullable Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties;
+    private @Nullable Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties;
 
-    public Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties() {
-        return this.apiProperties == null ? Codegen.empty() : this.apiProperties;
+    public Optional<Output<CognitiveServicesAccountApiPropertiesArgs>> apiProperties() {
+        return Optional.ofNullable(this.apiProperties);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="customSubDomainName")
-      private final @Nullable Output<String> customSubDomainName;
+    private @Nullable Output<String> customSubDomainName;
 
-    public Output<String> customSubDomainName() {
-        return this.customSubDomainName == null ? Codegen.empty() : this.customSubDomainName;
+    public Optional<Output<String>> customSubDomainName() {
+        return Optional.ofNullable(this.customSubDomainName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<EncryptionArgs> encryption;
+    private @Nullable Output<EncryptionArgs> encryption;
 
-    public Output<EncryptionArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<EncryptionArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="networkAcls")
-      private final @Nullable Output<NetworkRuleSetArgs> networkAcls;
+    private @Nullable Output<NetworkRuleSetArgs> networkAcls;
 
-    public Output<NetworkRuleSetArgs> networkAcls() {
-        return this.networkAcls == null ? Codegen.empty() : this.networkAcls;
+    public Optional<Output<NetworkRuleSetArgs>> networkAcls() {
+        return Optional.ofNullable(this.networkAcls);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="privateEndpointConnections")
-      private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+    private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
+    public Optional<Output<List<PrivateEndpointConnectionArgs>>> privateEndpointConnections() {
+        return Optional.ofNullable(this.privateEndpointConnections);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class CognitiveServicesAccountPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -98,134 +98,116 @@ public final class CognitiveServicesAccountPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="userOwnedStorage")
-      private final @Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage;
+    private @Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage;
 
-    public Output<List<UserOwnedStorageArgs>> userOwnedStorage() {
-        return this.userOwnedStorage == null ? Codegen.empty() : this.userOwnedStorage;
+    public Optional<Output<List<UserOwnedStorageArgs>>> userOwnedStorage() {
+        return Optional.ofNullable(this.userOwnedStorage);
     }
 
-    public CognitiveServicesAccountPropertiesArgs(
-        @Nullable Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties,
-        @Nullable Output<String> customSubDomainName,
-        @Nullable Output<EncryptionArgs> encryption,
-        @Nullable Output<NetworkRuleSetArgs> networkAcls,
-        @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
-        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage) {
-        this.apiProperties = apiProperties;
-        this.customSubDomainName = customSubDomainName;
-        this.encryption = encryption;
-        this.networkAcls = networkAcls;
-        this.privateEndpointConnections = privateEndpointConnections;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.userOwnedStorage = userOwnedStorage;
-    }
+    private CognitiveServicesAccountPropertiesArgs() {}
 
-    private CognitiveServicesAccountPropertiesArgs() {
-        this.apiProperties = Codegen.empty();
-        this.customSubDomainName = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.networkAcls = Codegen.empty();
-        this.privateEndpointConnections = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.userOwnedStorage = Codegen.empty();
+    private CognitiveServicesAccountPropertiesArgs(CognitiveServicesAccountPropertiesArgs $) {
+        this.apiProperties = $.apiProperties;
+        this.customSubDomainName = $.customSubDomainName;
+        this.encryption = $.encryption;
+        this.networkAcls = $.networkAcls;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.userOwnedStorage = $.userOwnedStorage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CognitiveServicesAccountPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties;
-        private @Nullable Output<String> customSubDomainName;
-        private @Nullable Output<EncryptionArgs> encryption;
-        private @Nullable Output<NetworkRuleSetArgs> networkAcls;
-        private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
-        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage;
+        private CognitiveServicesAccountPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CognitiveServicesAccountPropertiesArgs();
         }
 
         public Builder(CognitiveServicesAccountPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiProperties = defaults.apiProperties;
-    	      this.customSubDomainName = defaults.customSubDomainName;
-    	      this.encryption = defaults.encryption;
-    	      this.networkAcls = defaults.networkAcls;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.userOwnedStorage = defaults.userOwnedStorage;
+            $ = new CognitiveServicesAccountPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiProperties(@Nullable Output<CognitiveServicesAccountApiPropertiesArgs> apiProperties) {
-            this.apiProperties = apiProperties;
+            $.apiProperties = apiProperties;
             return this;
         }
-        public Builder apiProperties(@Nullable CognitiveServicesAccountApiPropertiesArgs apiProperties) {
-            this.apiProperties = Codegen.ofNullable(apiProperties);
-            return this;
+
+        public Builder apiProperties(CognitiveServicesAccountApiPropertiesArgs apiProperties) {
+            return apiProperties(Output.of(apiProperties));
         }
+
         public Builder customSubDomainName(@Nullable Output<String> customSubDomainName) {
-            this.customSubDomainName = customSubDomainName;
+            $.customSubDomainName = customSubDomainName;
             return this;
         }
-        public Builder customSubDomainName(@Nullable String customSubDomainName) {
-            this.customSubDomainName = Codegen.ofNullable(customSubDomainName);
-            return this;
+
+        public Builder customSubDomainName(String customSubDomainName) {
+            return customSubDomainName(Output.of(customSubDomainName));
         }
+
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable EncryptionArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(EncryptionArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder networkAcls(@Nullable Output<NetworkRuleSetArgs> networkAcls) {
-            this.networkAcls = networkAcls;
+            $.networkAcls = networkAcls;
             return this;
         }
-        public Builder networkAcls(@Nullable NetworkRuleSetArgs networkAcls) {
-            this.networkAcls = Codegen.ofNullable(networkAcls);
-            return this;
+
+        public Builder networkAcls(NetworkRuleSetArgs networkAcls) {
+            return networkAcls(Output.of(networkAcls));
         }
+
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
-            this.privateEndpointConnections = privateEndpointConnections;
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Codegen.ofNullable(privateEndpointConnections);
-            return this;
+
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
+            return privateEndpointConnections(Output.of(privateEndpointConnections));
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder userOwnedStorage(@Nullable Output<List<UserOwnedStorageArgs>> userOwnedStorage) {
-            this.userOwnedStorage = userOwnedStorage;
+            $.userOwnedStorage = userOwnedStorage;
             return this;
         }
-        public Builder userOwnedStorage(@Nullable List<UserOwnedStorageArgs> userOwnedStorage) {
-            this.userOwnedStorage = Codegen.ofNullable(userOwnedStorage);
-            return this;
+
+        public Builder userOwnedStorage(List<UserOwnedStorageArgs> userOwnedStorage) {
+            return userOwnedStorage(Output.of(userOwnedStorage));
         }
+
         public Builder userOwnedStorage(UserOwnedStorageArgs... userOwnedStorage) {
             return userOwnedStorage(List.of(userOwnedStorage));
-        }        public CognitiveServicesAccountPropertiesArgs build() {
-            return new CognitiveServicesAccountPropertiesArgs(apiProperties, customSubDomainName, encryption, networkAcls, privateEndpointConnections, publicNetworkAccess, userOwnedStorage);
+        }
+
+        public CognitiveServicesAccountPropertiesArgs build() {
+            return $;
         }
     }
+
 }

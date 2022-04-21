@@ -23,7 +23,7 @@ public final class CustomErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rules", required=true)
-      private final List<CustomErrorRuleResponse> rules;
+    private List<CustomErrorRuleResponse> rules;
 
     public List<CustomErrorRuleResponse> rules() {
         return this.rules;
@@ -34,61 +34,60 @@ public final class CustomErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="types", required=true)
-      private final List<String> types;
+    private List<String> types;
 
     public List<String> types() {
         return this.types;
     }
 
-    public CustomErrorResponse(
-        List<CustomErrorRuleResponse> rules,
-        List<String> types) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.types = Objects.requireNonNull(types, "expected parameter 'types' to be non-null");
-    }
+    private CustomErrorResponse() {}
 
-    private CustomErrorResponse() {
-        this.rules = List.of();
-        this.types = List.of();
+    private CustomErrorResponse(CustomErrorResponse $) {
+        this.rules = $.rules;
+        this.types = $.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<CustomErrorRuleResponse> rules;
-        private List<String> types;
+        private CustomErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomErrorResponse();
         }
 
         public Builder(CustomErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
-    	      this.types = defaults.types;
+            $ = new CustomErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(List<CustomErrorRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(CustomErrorRuleResponse... rules) {
             return rules(List.of(rules));
         }
+
         public Builder types(List<String> types) {
-            this.types = Objects.requireNonNull(types);
+            $.types = types;
             return this;
         }
+
         public Builder types(String... types) {
             return types(List.of(types));
-        }        public CustomErrorResponse build() {
-            return new CustomErrorResponse(rules, types);
+        }
+
+        public CustomErrorResponse build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            $.types = Objects.requireNonNull($.types, "expected parameter 'types' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,48 +18,49 @@ public final class ArtifactRuleResponse extends com.pulumi.resources.InvokeArgs 
     public static final ArtifactRuleResponse Empty = new ArtifactRuleResponse();
 
     @Import(name="artifactRule", required=true)
-      private final List<String> artifactRule;
+    private List<String> artifactRule;
 
     public List<String> artifactRule() {
         return this.artifactRule;
     }
 
-    public ArtifactRuleResponse(List<String> artifactRule) {
-        this.artifactRule = Objects.requireNonNull(artifactRule, "expected parameter 'artifactRule' to be non-null");
-    }
+    private ArtifactRuleResponse() {}
 
-    private ArtifactRuleResponse() {
-        this.artifactRule = List.of();
+    private ArtifactRuleResponse(ArtifactRuleResponse $) {
+        this.artifactRule = $.artifactRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> artifactRule;
+        private ArtifactRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactRuleResponse();
         }
 
         public Builder(ArtifactRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactRule = defaults.artifactRule;
+            $ = new ArtifactRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactRule(List<String> artifactRule) {
-            this.artifactRule = Objects.requireNonNull(artifactRule);
+            $.artifactRule = artifactRule;
             return this;
         }
+
         public Builder artifactRule(String... artifactRule) {
             return artifactRule(List.of(artifactRule));
-        }        public ArtifactRuleResponse build() {
-            return new ArtifactRuleResponse(artifactRule);
+        }
+
+        public ArtifactRuleResponse build() {
+            $.artifactRule = Objects.requireNonNull($.artifactRule, "expected parameter 'artifactRule' to be non-null");
+            return $;
         }
     }
+
 }

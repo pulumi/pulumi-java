@@ -21,7 +21,7 @@ public final class OidcTokenResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="audience", required=true)
-      private final String audience;
+    private String audience;
 
     public String audience() {
         return this.audience;
@@ -32,55 +32,52 @@ public final class OidcTokenResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceAccountEmail", required=true)
-      private final String serviceAccountEmail;
+    private String serviceAccountEmail;
 
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
-    public OidcTokenResponse(
-        String audience,
-        String serviceAccountEmail) {
-        this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
-    }
+    private OidcTokenResponse() {}
 
-    private OidcTokenResponse() {
-        this.audience = null;
-        this.serviceAccountEmail = null;
+    private OidcTokenResponse(OidcTokenResponse $) {
+        this.audience = $.audience;
+        this.serviceAccountEmail = $.serviceAccountEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OidcTokenResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String audience;
-        private String serviceAccountEmail;
+        private OidcTokenResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OidcTokenResponse();
         }
 
         public Builder(OidcTokenResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
+            $ = new OidcTokenResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(String audience) {
-            this.audience = Objects.requireNonNull(audience);
+            $.audience = audience;
             return this;
         }
+
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
-        }        public OidcTokenResponse build() {
-            return new OidcTokenResponse(audience, serviceAccountEmail);
+        }
+
+        public OidcTokenResponse build() {
+            $.audience = Objects.requireNonNull($.audience, "expected parameter 'audience' to be non-null");
+            $.serviceAccountEmail = Objects.requireNonNull($.serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
+            return $;
         }
     }
+
 }

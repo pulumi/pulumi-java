@@ -21,10 +21,10 @@ public final class OriginEndpointMssPackage extends com.pulumi.resources.InvokeA
     public static final OriginEndpointMssPackage Empty = new OriginEndpointMssPackage();
 
     @Import(name="encryption")
-      private final @Nullable OriginEndpointMssEncryption encryption;
+    private @Nullable OriginEndpointMssEncryption encryption;
 
     public Optional<OriginEndpointMssEncryption> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class OriginEndpointMssPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="manifestWindowSeconds")
-      private final @Nullable Integer manifestWindowSeconds;
+    private @Nullable Integer manifestWindowSeconds;
 
     public Optional<Integer> manifestWindowSeconds() {
-        return this.manifestWindowSeconds == null ? Optional.empty() : Optional.ofNullable(this.manifestWindowSeconds);
+        return Optional.ofNullable(this.manifestWindowSeconds);
     }
 
     /**
@@ -43,80 +43,69 @@ public final class OriginEndpointMssPackage extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="segmentDurationSeconds")
-      private final @Nullable Integer segmentDurationSeconds;
+    private @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> segmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
+        return Optional.ofNullable(this.segmentDurationSeconds);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable OriginEndpointStreamSelection streamSelection;
+    private @Nullable OriginEndpointStreamSelection streamSelection;
 
     public Optional<OriginEndpointStreamSelection> streamSelection() {
-        return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
+        return Optional.ofNullable(this.streamSelection);
     }
 
-    public OriginEndpointMssPackage(
-        @Nullable OriginEndpointMssEncryption encryption,
-        @Nullable Integer manifestWindowSeconds,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable OriginEndpointStreamSelection streamSelection) {
-        this.encryption = encryption;
-        this.manifestWindowSeconds = manifestWindowSeconds;
-        this.segmentDurationSeconds = segmentDurationSeconds;
-        this.streamSelection = streamSelection;
-    }
+    private OriginEndpointMssPackage() {}
 
-    private OriginEndpointMssPackage() {
-        this.encryption = null;
-        this.manifestWindowSeconds = null;
-        this.segmentDurationSeconds = null;
-        this.streamSelection = null;
+    private OriginEndpointMssPackage(OriginEndpointMssPackage $) {
+        this.encryption = $.encryption;
+        this.manifestWindowSeconds = $.manifestWindowSeconds;
+        this.segmentDurationSeconds = $.segmentDurationSeconds;
+        this.streamSelection = $.streamSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointMssPackage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable OriginEndpointMssEncryption encryption;
-        private @Nullable Integer manifestWindowSeconds;
-        private @Nullable Integer segmentDurationSeconds;
-        private @Nullable OriginEndpointStreamSelection streamSelection;
+        private OriginEndpointMssPackage $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointMssPackage();
         }
 
         public Builder(OriginEndpointMssPackage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.manifestWindowSeconds = defaults.manifestWindowSeconds;
-    	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
-    	      this.streamSelection = defaults.streamSelection;
+            $ = new OriginEndpointMssPackage(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable OriginEndpointMssEncryption encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
-            this.manifestWindowSeconds = manifestWindowSeconds;
+            $.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
+
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = segmentDurationSeconds;
+            $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
+
         public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
-        }        public OriginEndpointMssPackage build() {
-            return new OriginEndpointMssPackage(encryption, manifestWindowSeconds, segmentDurationSeconds, streamSelection);
+        }
+
+        public OriginEndpointMssPackage build() {
+            return $;
         }
     }
+
 }

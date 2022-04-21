@@ -17,45 +17,45 @@ public final class GetDataCatalogEncryptionSettingsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="catalogId", required=true)
-      private final String catalogId;
+    private String catalogId;
 
     public String catalogId() {
         return this.catalogId;
     }
 
-    public GetDataCatalogEncryptionSettingsArgs(String catalogId) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-    }
+    private GetDataCatalogEncryptionSettingsArgs() {}
 
-    private GetDataCatalogEncryptionSettingsArgs() {
-        this.catalogId = null;
+    private GetDataCatalogEncryptionSettingsArgs(GetDataCatalogEncryptionSettingsArgs $) {
+        this.catalogId = $.catalogId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataCatalogEncryptionSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String catalogId;
+        private GetDataCatalogEncryptionSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataCatalogEncryptionSettingsArgs();
         }
 
         public Builder(GetDataCatalogEncryptionSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
+            $ = new GetDataCatalogEncryptionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
-        }        public GetDataCatalogEncryptionSettingsArgs build() {
-            return new GetDataCatalogEncryptionSettingsArgs(catalogId);
+        }
+
+        public GetDataCatalogEncryptionSettingsArgs build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            return $;
         }
     }
+
 }

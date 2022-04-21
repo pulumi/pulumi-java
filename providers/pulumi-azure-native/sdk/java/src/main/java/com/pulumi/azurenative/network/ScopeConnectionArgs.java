@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final Output<String> networkManagerName;
+    private Output<String> networkManagerName;
 
     public Output<String> networkManagerName() {
         return this.networkManagerName;
@@ -42,7 +42,7 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,10 +53,10 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scopeConnectionName")
-      private final @Nullable Output<String> scopeConnectionName;
+    private @Nullable Output<String> scopeConnectionName;
 
-    public Output<String> scopeConnectionName() {
-        return this.scopeConnectionName == null ? Codegen.empty() : this.scopeConnectionName;
+    public Optional<Output<String>> scopeConnectionName() {
+        return Optional.ofNullable(this.scopeConnectionName);
     }
 
     /**
@@ -75,115 +75,100 @@ public final class ScopeConnectionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ScopeConnectionArgs(
-        @Nullable Output<String> description,
-        Output<String> networkManagerName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> scopeConnectionName,
-        @Nullable Output<String> tenantId) {
-        this.description = description;
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceId = resourceId;
-        this.scopeConnectionName = scopeConnectionName;
-        this.tenantId = tenantId;
-    }
+    private ScopeConnectionArgs() {}
 
-    private ScopeConnectionArgs() {
-        this.description = Codegen.empty();
-        this.networkManagerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.scopeConnectionName = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private ScopeConnectionArgs(ScopeConnectionArgs $) {
+        this.description = $.description;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceId = $.resourceId;
+        this.scopeConnectionName = $.scopeConnectionName;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> networkManagerName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> scopeConnectionName;
-        private @Nullable Output<String> tenantId;
+        private ScopeConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeConnectionArgs();
         }
 
         public Builder(ScopeConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.scopeConnectionName = defaults.scopeConnectionName;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ScopeConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder networkManagerName(Output<String> networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
-            return this;
+            return networkManagerName(Output.of(networkManagerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder scopeConnectionName(@Nullable Output<String> scopeConnectionName) {
-            this.scopeConnectionName = scopeConnectionName;
+            $.scopeConnectionName = scopeConnectionName;
             return this;
         }
-        public Builder scopeConnectionName(@Nullable String scopeConnectionName) {
-            this.scopeConnectionName = Codegen.ofNullable(scopeConnectionName);
-            return this;
+
+        public Builder scopeConnectionName(String scopeConnectionName) {
+            return scopeConnectionName(Output.of(scopeConnectionName));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public ScopeConnectionArgs build() {
-            return new ScopeConnectionArgs(description, networkManagerName, resourceGroupName, resourceId, scopeConnectionName, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public ScopeConnectionArgs build() {
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

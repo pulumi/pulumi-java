@@ -13,78 +13,73 @@ public final class GetPackageVersionArgs extends com.pulumi.resources.InvokeArgs
     public static final GetPackageVersionArgs Empty = new GetPackageVersionArgs();
 
     @Import(name="packageId", required=true)
-      private final String packageId;
+    private String packageId;
 
     public String packageId() {
         return this.packageId;
     }
 
     @Import(name="packageVersion", required=true)
-      private final String packageVersion;
+    private String packageVersion;
 
     public String packageVersion() {
         return this.packageVersion;
     }
 
     @Import(name="patchVersion", required=true)
-      private final String patchVersion;
+    private String patchVersion;
 
     public String patchVersion() {
         return this.patchVersion;
     }
 
-    public GetPackageVersionArgs(
-        String packageId,
-        String packageVersion,
-        String patchVersion) {
-        this.packageId = Objects.requireNonNull(packageId, "expected parameter 'packageId' to be non-null");
-        this.packageVersion = Objects.requireNonNull(packageVersion, "expected parameter 'packageVersion' to be non-null");
-        this.patchVersion = Objects.requireNonNull(patchVersion, "expected parameter 'patchVersion' to be non-null");
-    }
+    private GetPackageVersionArgs() {}
 
-    private GetPackageVersionArgs() {
-        this.packageId = null;
-        this.packageVersion = null;
-        this.patchVersion = null;
+    private GetPackageVersionArgs(GetPackageVersionArgs $) {
+        this.packageId = $.packageId;
+        this.packageVersion = $.packageVersion;
+        this.patchVersion = $.patchVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPackageVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String packageId;
-        private String packageVersion;
-        private String patchVersion;
+        private GetPackageVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPackageVersionArgs();
         }
 
         public Builder(GetPackageVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packageId = defaults.packageId;
-    	      this.packageVersion = defaults.packageVersion;
-    	      this.patchVersion = defaults.patchVersion;
+            $ = new GetPackageVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder packageId(String packageId) {
-            this.packageId = Objects.requireNonNull(packageId);
+            $.packageId = packageId;
             return this;
         }
+
         public Builder packageVersion(String packageVersion) {
-            this.packageVersion = Objects.requireNonNull(packageVersion);
+            $.packageVersion = packageVersion;
             return this;
         }
+
         public Builder patchVersion(String patchVersion) {
-            this.patchVersion = Objects.requireNonNull(patchVersion);
+            $.patchVersion = patchVersion;
             return this;
-        }        public GetPackageVersionArgs build() {
-            return new GetPackageVersionArgs(packageId, packageVersion, patchVersion);
+        }
+
+        public GetPackageVersionArgs build() {
+            $.packageId = Objects.requireNonNull($.packageId, "expected parameter 'packageId' to be non-null");
+            $.packageVersion = Objects.requireNonNull($.packageVersion, "expected parameter 'packageVersion' to be non-null");
+            $.patchVersion = Objects.requireNonNull($.patchVersion, "expected parameter 'patchVersion' to be non-null");
+            return $;
         }
     }
+
 }

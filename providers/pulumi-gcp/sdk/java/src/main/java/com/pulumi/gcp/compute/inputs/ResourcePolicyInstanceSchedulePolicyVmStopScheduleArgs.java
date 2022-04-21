@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs extend
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<String> schedule;
+    private Output<String> schedule;
 
     public Output<String> schedule() {
         return this.schedule;
     }
 
-    public ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs(Output<String> schedule) {
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-    }
+    private ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs() {}
 
-    private ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs() {
-        this.schedule = Codegen.empty();
+    private ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs(ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs $) {
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> schedule;
+        private ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs();
         }
 
         public Builder(ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
+            $ = new ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(Output<String> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(String schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
-        }        public ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs build() {
-            return new ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs(schedule);
+            return schedule(Output.of(schedule));
+        }
+
+        public ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs build() {
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

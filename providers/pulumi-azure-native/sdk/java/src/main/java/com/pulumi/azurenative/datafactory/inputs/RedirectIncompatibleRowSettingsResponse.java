@@ -23,7 +23,7 @@ public final class RedirectIncompatibleRowSettingsResponse extends com.pulumi.re
      * 
      */
     @Import(name="linkedServiceName", required=true)
-      private final Object linkedServiceName;
+    private Object linkedServiceName;
 
     public Object linkedServiceName() {
         return this.linkedServiceName;
@@ -34,55 +34,51 @@ public final class RedirectIncompatibleRowSettingsResponse extends com.pulumi.re
      * 
      */
     @Import(name="path")
-      private final @Nullable Object path;
+    private @Nullable Object path;
 
     public Optional<Object> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
-    public RedirectIncompatibleRowSettingsResponse(
-        Object linkedServiceName,
-        @Nullable Object path) {
-        this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
-        this.path = path;
-    }
+    private RedirectIncompatibleRowSettingsResponse() {}
 
-    private RedirectIncompatibleRowSettingsResponse() {
-        this.linkedServiceName = null;
-        this.path = null;
+    private RedirectIncompatibleRowSettingsResponse(RedirectIncompatibleRowSettingsResponse $) {
+        this.linkedServiceName = $.linkedServiceName;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedirectIncompatibleRowSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object linkedServiceName;
-        private @Nullable Object path;
+        private RedirectIncompatibleRowSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedirectIncompatibleRowSettingsResponse();
         }
 
         public Builder(RedirectIncompatibleRowSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.path = defaults.path;
+            $ = new RedirectIncompatibleRowSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedServiceName(Object linkedServiceName) {
-            this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder path(@Nullable Object path) {
-            this.path = path;
+            $.path = path;
             return this;
-        }        public RedirectIncompatibleRowSettingsResponse build() {
-            return new RedirectIncompatibleRowSettingsResponse(linkedServiceName, path);
+        }
+
+        public RedirectIncompatibleRowSettingsResponse build() {
+            $.linkedServiceName = Objects.requireNonNull($.linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

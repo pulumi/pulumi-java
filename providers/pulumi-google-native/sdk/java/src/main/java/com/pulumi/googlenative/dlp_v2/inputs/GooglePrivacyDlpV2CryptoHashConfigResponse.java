@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse extends com.pulumi
      * 
      */
     @Import(name="cryptoKey", required=true)
-      private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
+    private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
     public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
     }
 
-    public GooglePrivacyDlpV2CryptoHashConfigResponse(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
-        this.cryptoKey = Objects.requireNonNull(cryptoKey, "expected parameter 'cryptoKey' to be non-null");
-    }
+    private GooglePrivacyDlpV2CryptoHashConfigResponse() {}
 
-    private GooglePrivacyDlpV2CryptoHashConfigResponse() {
-        this.cryptoKey = null;
+    private GooglePrivacyDlpV2CryptoHashConfigResponse(GooglePrivacyDlpV2CryptoHashConfigResponse $) {
+        this.cryptoKey = $.cryptoKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CryptoHashConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
+        private GooglePrivacyDlpV2CryptoHashConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CryptoHashConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CryptoHashConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKey = defaults.cryptoKey;
+            $ = new GooglePrivacyDlpV2CryptoHashConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
-            this.cryptoKey = Objects.requireNonNull(cryptoKey);
+            $.cryptoKey = cryptoKey;
             return this;
-        }        public GooglePrivacyDlpV2CryptoHashConfigResponse build() {
-            return new GooglePrivacyDlpV2CryptoHashConfigResponse(cryptoKey);
+        }
+
+        public GooglePrivacyDlpV2CryptoHashConfigResponse build() {
+            $.cryptoKey = Objects.requireNonNull($.cryptoKey, "expected parameter 'cryptoKey' to be non-null");
+            return $;
         }
     }
+
 }

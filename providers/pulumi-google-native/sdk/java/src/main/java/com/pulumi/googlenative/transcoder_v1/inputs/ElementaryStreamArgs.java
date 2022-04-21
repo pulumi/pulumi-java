@@ -5,12 +5,12 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.AudioStreamArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.TextStreamArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.VideoStreamArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ElementaryStreamArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="audioStream")
-      private final @Nullable Output<AudioStreamArgs> audioStream;
+    private @Nullable Output<AudioStreamArgs> audioStream;
 
-    public Output<AudioStreamArgs> audioStream() {
-        return this.audioStream == null ? Codegen.empty() : this.audioStream;
+    public Optional<Output<AudioStreamArgs>> audioStream() {
+        return Optional.ofNullable(this.audioStream);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ElementaryStreamArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ElementaryStreamArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="textStream")
-      private final @Nullable Output<TextStreamArgs> textStream;
+    private @Nullable Output<TextStreamArgs> textStream;
 
-    public Output<TextStreamArgs> textStream() {
-        return this.textStream == null ? Codegen.empty() : this.textStream;
+    public Optional<Output<TextStreamArgs>> textStream() {
+        return Optional.ofNullable(this.textStream);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ElementaryStreamArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="videoStream")
-      private final @Nullable Output<VideoStreamArgs> videoStream;
+    private @Nullable Output<VideoStreamArgs> videoStream;
 
-    public Output<VideoStreamArgs> videoStream() {
-        return this.videoStream == null ? Codegen.empty() : this.videoStream;
+    public Optional<Output<VideoStreamArgs>> videoStream() {
+        return Optional.ofNullable(this.videoStream);
     }
 
-    public ElementaryStreamArgs(
-        @Nullable Output<AudioStreamArgs> audioStream,
-        @Nullable Output<String> key,
-        @Nullable Output<TextStreamArgs> textStream,
-        @Nullable Output<VideoStreamArgs> videoStream) {
-        this.audioStream = audioStream;
-        this.key = key;
-        this.textStream = textStream;
-        this.videoStream = videoStream;
-    }
+    private ElementaryStreamArgs() {}
 
-    private ElementaryStreamArgs() {
-        this.audioStream = Codegen.empty();
-        this.key = Codegen.empty();
-        this.textStream = Codegen.empty();
-        this.videoStream = Codegen.empty();
+    private ElementaryStreamArgs(ElementaryStreamArgs $) {
+        this.audioStream = $.audioStream;
+        this.key = $.key;
+        this.textStream = $.textStream;
+        this.videoStream = $.videoStream;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ElementaryStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AudioStreamArgs> audioStream;
-        private @Nullable Output<String> key;
-        private @Nullable Output<TextStreamArgs> textStream;
-        private @Nullable Output<VideoStreamArgs> videoStream;
+        private ElementaryStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ElementaryStreamArgs();
         }
 
         public Builder(ElementaryStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioStream = defaults.audioStream;
-    	      this.key = defaults.key;
-    	      this.textStream = defaults.textStream;
-    	      this.videoStream = defaults.videoStream;
+            $ = new ElementaryStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audioStream(@Nullable Output<AudioStreamArgs> audioStream) {
-            this.audioStream = audioStream;
+            $.audioStream = audioStream;
             return this;
         }
-        public Builder audioStream(@Nullable AudioStreamArgs audioStream) {
-            this.audioStream = Codegen.ofNullable(audioStream);
-            return this;
+
+        public Builder audioStream(AudioStreamArgs audioStream) {
+            return audioStream(Output.of(audioStream));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder textStream(@Nullable Output<TextStreamArgs> textStream) {
-            this.textStream = textStream;
+            $.textStream = textStream;
             return this;
         }
-        public Builder textStream(@Nullable TextStreamArgs textStream) {
-            this.textStream = Codegen.ofNullable(textStream);
-            return this;
+
+        public Builder textStream(TextStreamArgs textStream) {
+            return textStream(Output.of(textStream));
         }
+
         public Builder videoStream(@Nullable Output<VideoStreamArgs> videoStream) {
-            this.videoStream = videoStream;
+            $.videoStream = videoStream;
             return this;
         }
-        public Builder videoStream(@Nullable VideoStreamArgs videoStream) {
-            this.videoStream = Codegen.ofNullable(videoStream);
-            return this;
-        }        public ElementaryStreamArgs build() {
-            return new ElementaryStreamArgs(audioStream, key, textStream, videoStream);
+
+        public Builder videoStream(VideoStreamArgs videoStream) {
+            return videoStream(Output.of(videoStream));
+        }
+
+        public ElementaryStreamArgs build() {
+            return $;
         }
     }
+
 }

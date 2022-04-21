@@ -5,9 +5,9 @@ package com.pulumi.gcp.servicenetworking.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PeeredDnsDomainState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dnsSuffix")
-      private final @Nullable Output<String> dnsSuffix;
+    private @Nullable Output<String> dnsSuffix;
 
-    public Output<String> dnsSuffix() {
-        return this.dnsSuffix == null ? Codegen.empty() : this.dnsSuffix;
+    public Optional<Output<String>> dnsSuffix() {
+        return Optional.ofNullable(this.dnsSuffix);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PeeredDnsDomainState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PeeredDnsDomainState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PeeredDnsDomainState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class PeeredDnsDomainState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class PeeredDnsDomainState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public PeeredDnsDomainState(
-        @Nullable Output<String> dnsSuffix,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> project,
-        @Nullable Output<String> service) {
-        this.dnsSuffix = dnsSuffix;
-        this.name = name;
-        this.network = network;
-        this.parent = parent;
-        this.project = project;
-        this.service = service;
-    }
+    private PeeredDnsDomainState() {}
 
-    private PeeredDnsDomainState() {
-        this.dnsSuffix = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
+    private PeeredDnsDomainState(PeeredDnsDomainState $) {
+        this.dnsSuffix = $.dnsSuffix;
+        this.name = $.name;
+        this.network = $.network;
+        this.parent = $.parent;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeredDnsDomainState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dnsSuffix;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> service;
+        private PeeredDnsDomainState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeredDnsDomainState();
         }
 
         public Builder(PeeredDnsDomainState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsSuffix = defaults.dnsSuffix;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.parent = defaults.parent;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new PeeredDnsDomainState(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsSuffix(@Nullable Output<String> dnsSuffix) {
-            this.dnsSuffix = dnsSuffix;
+            $.dnsSuffix = dnsSuffix;
             return this;
         }
-        public Builder dnsSuffix(@Nullable String dnsSuffix) {
-            this.dnsSuffix = Codegen.ofNullable(dnsSuffix);
-            return this;
+
+        public Builder dnsSuffix(String dnsSuffix) {
+            return dnsSuffix(Output.of(dnsSuffix));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public PeeredDnsDomainState build() {
-            return new PeeredDnsDomainState(dnsSuffix, name, network, parent, project, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public PeeredDnsDomainState build() {
+            return $;
         }
     }
+
 }

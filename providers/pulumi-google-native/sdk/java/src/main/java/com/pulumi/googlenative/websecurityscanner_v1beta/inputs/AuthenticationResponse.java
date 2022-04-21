@@ -23,7 +23,7 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="customAccount", required=true)
-      private final CustomAccountResponse customAccount;
+    private CustomAccountResponse customAccount;
 
     public CustomAccountResponse customAccount() {
         return this.customAccount;
@@ -34,7 +34,7 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="googleAccount", required=true)
-      private final GoogleAccountResponse googleAccount;
+    private GoogleAccountResponse googleAccount;
 
     public GoogleAccountResponse googleAccount() {
         return this.googleAccount;
@@ -45,64 +45,59 @@ public final class AuthenticationResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="iapCredential", required=true)
-      private final IapCredentialResponse iapCredential;
+    private IapCredentialResponse iapCredential;
 
     public IapCredentialResponse iapCredential() {
         return this.iapCredential;
     }
 
-    public AuthenticationResponse(
-        CustomAccountResponse customAccount,
-        GoogleAccountResponse googleAccount,
-        IapCredentialResponse iapCredential) {
-        this.customAccount = Objects.requireNonNull(customAccount, "expected parameter 'customAccount' to be non-null");
-        this.googleAccount = Objects.requireNonNull(googleAccount, "expected parameter 'googleAccount' to be non-null");
-        this.iapCredential = Objects.requireNonNull(iapCredential, "expected parameter 'iapCredential' to be non-null");
-    }
+    private AuthenticationResponse() {}
 
-    private AuthenticationResponse() {
-        this.customAccount = null;
-        this.googleAccount = null;
-        this.iapCredential = null;
+    private AuthenticationResponse(AuthenticationResponse $) {
+        this.customAccount = $.customAccount;
+        this.googleAccount = $.googleAccount;
+        this.iapCredential = $.iapCredential;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CustomAccountResponse customAccount;
-        private GoogleAccountResponse googleAccount;
-        private IapCredentialResponse iapCredential;
+        private AuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticationResponse();
         }
 
         public Builder(AuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customAccount = defaults.customAccount;
-    	      this.googleAccount = defaults.googleAccount;
-    	      this.iapCredential = defaults.iapCredential;
+            $ = new AuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customAccount(CustomAccountResponse customAccount) {
-            this.customAccount = Objects.requireNonNull(customAccount);
+            $.customAccount = customAccount;
             return this;
         }
+
         public Builder googleAccount(GoogleAccountResponse googleAccount) {
-            this.googleAccount = Objects.requireNonNull(googleAccount);
+            $.googleAccount = googleAccount;
             return this;
         }
+
         public Builder iapCredential(IapCredentialResponse iapCredential) {
-            this.iapCredential = Objects.requireNonNull(iapCredential);
+            $.iapCredential = iapCredential;
             return this;
-        }        public AuthenticationResponse build() {
-            return new AuthenticationResponse(customAccount, googleAccount, iapCredential);
+        }
+
+        public AuthenticationResponse build() {
+            $.customAccount = Objects.requireNonNull($.customAccount, "expected parameter 'customAccount' to be non-null");
+            $.googleAccount = Objects.requireNonNull($.googleAccount, "expected parameter 'googleAccount' to be non-null");
+            $.iapCredential = Objects.requireNonNull($.iapCredential, "expected parameter 'iapCredential' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.dms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateId", required=true)
-      private final Output<String> certificateId;
+    private Output<String> certificateId;
 
     public Output<String> certificateId() {
         return this.certificateId;
@@ -32,10 +32,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificatePem")
-      private final @Nullable Output<String> certificatePem;
+    private @Nullable Output<String> certificatePem;
 
-    public Output<String> certificatePem() {
-        return this.certificatePem == null ? Codegen.empty() : this.certificatePem;
+    public Optional<Output<String>> certificatePem() {
+        return Optional.ofNullable(this.certificatePem);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateWallet")
-      private final @Nullable Output<String> certificateWallet;
+    private @Nullable Output<String> certificateWallet;
 
-    public Output<String> certificateWallet() {
-        return this.certificateWallet == null ? Codegen.empty() : this.certificateWallet;
+    public Optional<Output<String>> certificateWallet() {
+        return Optional.ofNullable(this.certificateWallet);
     }
 
     /**
@@ -54,89 +54,79 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CertificateArgs(
-        Output<String> certificateId,
-        @Nullable Output<String> certificatePem,
-        @Nullable Output<String> certificateWallet,
-        @Nullable Output<Map<String,String>> tags) {
-        this.certificateId = Objects.requireNonNull(certificateId, "expected parameter 'certificateId' to be non-null");
-        this.certificatePem = certificatePem;
-        this.certificateWallet = certificateWallet;
-        this.tags = tags;
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.certificateId = Codegen.empty();
-        this.certificatePem = Codegen.empty();
-        this.certificateWallet = Codegen.empty();
-        this.tags = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.certificateId = $.certificateId;
+        this.certificatePem = $.certificatePem;
+        this.certificateWallet = $.certificateWallet;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateId;
-        private @Nullable Output<String> certificatePem;
-        private @Nullable Output<String> certificateWallet;
-        private @Nullable Output<Map<String,String>> tags;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.certificatePem = defaults.certificatePem;
-    	      this.certificateWallet = defaults.certificateWallet;
-    	      this.tags = defaults.tags;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(Output<String> certificateId) {
-            this.certificateId = Objects.requireNonNull(certificateId);
+            $.certificateId = certificateId;
             return this;
         }
+
         public Builder certificateId(String certificateId) {
-            this.certificateId = Output.of(Objects.requireNonNull(certificateId));
-            return this;
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder certificatePem(@Nullable Output<String> certificatePem) {
-            this.certificatePem = certificatePem;
+            $.certificatePem = certificatePem;
             return this;
         }
-        public Builder certificatePem(@Nullable String certificatePem) {
-            this.certificatePem = Codegen.ofNullable(certificatePem);
-            return this;
+
+        public Builder certificatePem(String certificatePem) {
+            return certificatePem(Output.of(certificatePem));
         }
+
         public Builder certificateWallet(@Nullable Output<String> certificateWallet) {
-            this.certificateWallet = certificateWallet;
+            $.certificateWallet = certificateWallet;
             return this;
         }
-        public Builder certificateWallet(@Nullable String certificateWallet) {
-            this.certificateWallet = Codegen.ofNullable(certificateWallet);
-            return this;
+
+        public Builder certificateWallet(String certificateWallet) {
+            return certificateWallet(Output.of(certificateWallet));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(certificateId, certificatePem, certificateWallet, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public CertificateArgs build() {
+            $.certificateId = Objects.requireNonNull($.certificateId, "expected parameter 'certificateId' to be non-null");
+            return $;
         }
     }
+
 }

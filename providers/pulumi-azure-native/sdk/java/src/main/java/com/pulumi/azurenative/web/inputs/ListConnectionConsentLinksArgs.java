@@ -21,7 +21,7 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectionName", required=true)
-      private final String connectionName;
+    private String connectionName;
 
     public String connectionName() {
         return this.connectionName;
@@ -32,10 +32,10 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="parameters")
-      private final @Nullable List<ConsentLinkParameterDefinition> parameters;
+    private @Nullable List<ConsentLinkParameterDefinition> parameters;
 
-    public List<ConsentLinkParameterDefinition> parameters() {
-        return this.parameters == null ? List.of() : this.parameters;
+    public Optional<List<ConsentLinkParameterDefinition>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -54,76 +54,68 @@ public final class ListConnectionConsentLinksArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
-    public ListConnectionConsentLinksArgs(
-        String connectionName,
-        @Nullable List<ConsentLinkParameterDefinition> parameters,
-        String resourceGroupName,
-        @Nullable String subscriptionId) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.parameters = parameters;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.subscriptionId = subscriptionId;
-    }
+    private ListConnectionConsentLinksArgs() {}
 
-    private ListConnectionConsentLinksArgs() {
-        this.connectionName = null;
-        this.parameters = List.of();
-        this.resourceGroupName = null;
-        this.subscriptionId = null;
+    private ListConnectionConsentLinksArgs(ListConnectionConsentLinksArgs $) {
+        this.connectionName = $.connectionName;
+        this.parameters = $.parameters;
+        this.resourceGroupName = $.resourceGroupName;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListConnectionConsentLinksArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionName;
-        private @Nullable List<ConsentLinkParameterDefinition> parameters;
-        private String resourceGroupName;
-        private @Nullable String subscriptionId;
+        private ListConnectionConsentLinksArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListConnectionConsentLinksArgs();
         }
 
         public Builder(ListConnectionConsentLinksArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new ListConnectionConsentLinksArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder parameters(@Nullable List<ConsentLinkParameterDefinition> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(ConsentLinkParameterDefinition... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public ListConnectionConsentLinksArgs build() {
-            return new ListConnectionConsentLinksArgs(connectionName, parameters, resourceGroupName, subscriptionId);
+        }
+
+        public ListConnectionConsentLinksArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

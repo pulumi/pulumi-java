@@ -9,10 +9,10 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceConfi
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkApiVersion")
-      private final @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
+    private @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
 
-    public Output<Either<String,NetworkApiVersion>> networkApiVersion() {
-        return this.networkApiVersion == null ? Codegen.empty() : this.networkApiVersion;
+    public Optional<Output<Either<String,NetworkApiVersion>>> networkApiVersion() {
+        return Optional.ofNullable(this.networkApiVersion);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkInterfaceConfigurations")
-      private final @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
+    private @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
 
-    public Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations() {
-        return this.networkInterfaceConfigurations == null ? Codegen.empty() : this.networkInterfaceConfigurations;
+    public Optional<Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>>> networkInterfaceConfigurations() {
+        return Optional.ofNullable(this.networkInterfaceConfigurations);
     }
 
     /**
@@ -51,82 +51,76 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
+    private @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces() {
-        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
+    public Optional<Output<List<NetworkInterfaceReferenceArgs>>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
-    public NetworkProfileArgs(
-        @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion,
-        @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations,
-        @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
-        this.networkApiVersion = networkApiVersion;
-        this.networkInterfaceConfigurations = networkInterfaceConfigurations;
-        this.networkInterfaces = networkInterfaces;
-    }
+    private NetworkProfileArgs() {}
 
-    private NetworkProfileArgs() {
-        this.networkApiVersion = Codegen.empty();
-        this.networkInterfaceConfigurations = Codegen.empty();
-        this.networkInterfaces = Codegen.empty();
+    private NetworkProfileArgs(NetworkProfileArgs $) {
+        this.networkApiVersion = $.networkApiVersion;
+        this.networkInterfaceConfigurations = $.networkInterfaceConfigurations;
+        this.networkInterfaces = $.networkInterfaces;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
-        private @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
-        private @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
+        private NetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileArgs();
         }
 
         public Builder(NetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkApiVersion = defaults.networkApiVersion;
-    	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
-    	      this.networkInterfaces = defaults.networkInterfaces;
+            $ = new NetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkApiVersion(@Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion) {
-            this.networkApiVersion = networkApiVersion;
+            $.networkApiVersion = networkApiVersion;
             return this;
         }
-        public Builder networkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
-            this.networkApiVersion = Codegen.ofNullable(networkApiVersion);
-            return this;
+
+        public Builder networkApiVersion(Either<String,NetworkApiVersion> networkApiVersion) {
+            return networkApiVersion(Output.of(networkApiVersion));
         }
+
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = networkInterfaceConfigurations;
+            $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
-        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationArgs> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = Codegen.ofNullable(networkInterfaceConfigurations);
-            return this;
+
+        public Builder networkInterfaceConfigurations(List<VirtualMachineNetworkInterfaceConfigurationArgs> networkInterfaceConfigurations) {
+            return networkInterfaceConfigurations(Output.of(networkInterfaceConfigurations));
         }
+
         public Builder networkInterfaceConfigurations(VirtualMachineNetworkInterfaceConfigurationArgs... networkInterfaceConfigurations) {
             return networkInterfaceConfigurations(List.of(networkInterfaceConfigurations));
         }
+
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
-        public Builder networkInterfaces(@Nullable List<NetworkInterfaceReferenceArgs> networkInterfaces) {
-            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
-            return this;
+
+        public Builder networkInterfaces(List<NetworkInterfaceReferenceArgs> networkInterfaces) {
+            return networkInterfaces(Output.of(networkInterfaces));
         }
+
         public Builder networkInterfaces(NetworkInterfaceReferenceArgs... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
-        }        public NetworkProfileArgs build() {
-            return new NetworkProfileArgs(networkApiVersion, networkInterfaceConfigurations, networkInterfaces);
+        }
+
+        public NetworkProfileArgs build() {
+            return $;
         }
     }
+
 }

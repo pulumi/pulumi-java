@@ -17,45 +17,45 @@ public final class GetNamedQueryArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namedQueryId", required=true)
-      private final String namedQueryId;
+    private String namedQueryId;
 
     public String namedQueryId() {
         return this.namedQueryId;
     }
 
-    public GetNamedQueryArgs(String namedQueryId) {
-        this.namedQueryId = Objects.requireNonNull(namedQueryId, "expected parameter 'namedQueryId' to be non-null");
-    }
+    private GetNamedQueryArgs() {}
 
-    private GetNamedQueryArgs() {
-        this.namedQueryId = null;
+    private GetNamedQueryArgs(GetNamedQueryArgs $) {
+        this.namedQueryId = $.namedQueryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNamedQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namedQueryId;
+        private GetNamedQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNamedQueryArgs();
         }
 
         public Builder(GetNamedQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namedQueryId = defaults.namedQueryId;
+            $ = new GetNamedQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namedQueryId(String namedQueryId) {
-            this.namedQueryId = Objects.requireNonNull(namedQueryId);
+            $.namedQueryId = namedQueryId;
             return this;
-        }        public GetNamedQueryArgs build() {
-            return new GetNamedQueryArgs(namedQueryId);
+        }
+
+        public GetNamedQueryArgs build() {
+            $.namedQueryId = Objects.requireNonNull($.namedQueryId, "expected parameter 'namedQueryId' to be non-null");
+            return $;
         }
     }
+
 }

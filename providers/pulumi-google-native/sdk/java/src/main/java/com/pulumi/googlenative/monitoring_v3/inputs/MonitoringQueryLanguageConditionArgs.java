@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MonitoringQueryLanguageConditionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MonitoringQueryLanguageConditionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class MonitoringQueryLanguageConditionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="trigger")
-      private final @Nullable Output<TriggerArgs> trigger;
+    private @Nullable Output<TriggerArgs> trigger;
 
-    public Output<TriggerArgs> trigger() {
-        return this.trigger == null ? Codegen.empty() : this.trigger;
+    public Optional<Output<TriggerArgs>> trigger() {
+        return Optional.ofNullable(this.trigger);
     }
 
-    public MonitoringQueryLanguageConditionArgs(
-        @Nullable Output<String> duration,
-        @Nullable Output<String> query,
-        @Nullable Output<TriggerArgs> trigger) {
-        this.duration = duration;
-        this.query = query;
-        this.trigger = trigger;
-    }
+    private MonitoringQueryLanguageConditionArgs() {}
 
-    private MonitoringQueryLanguageConditionArgs() {
-        this.duration = Codegen.empty();
-        this.query = Codegen.empty();
-        this.trigger = Codegen.empty();
+    private MonitoringQueryLanguageConditionArgs(MonitoringQueryLanguageConditionArgs $) {
+        this.duration = $.duration;
+        this.query = $.query;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringQueryLanguageConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> duration;
-        private @Nullable Output<String> query;
-        private @Nullable Output<TriggerArgs> trigger;
+        private MonitoringQueryLanguageConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringQueryLanguageConditionArgs();
         }
 
         public Builder(MonitoringQueryLanguageConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.query = defaults.query;
-    	      this.trigger = defaults.trigger;
+            $ = new MonitoringQueryLanguageConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(String query) {
+            return query(Output.of(query));
         }
+
         public Builder trigger(@Nullable Output<TriggerArgs> trigger) {
-            this.trigger = trigger;
+            $.trigger = trigger;
             return this;
         }
-        public Builder trigger(@Nullable TriggerArgs trigger) {
-            this.trigger = Codegen.ofNullable(trigger);
-            return this;
-        }        public MonitoringQueryLanguageConditionArgs build() {
-            return new MonitoringQueryLanguageConditionArgs(duration, query, trigger);
+
+        public Builder trigger(TriggerArgs trigger) {
+            return trigger(Output.of(trigger));
+        }
+
+        public MonitoringQueryLanguageConditionArgs build() {
+            return $;
         }
     }
+
 }

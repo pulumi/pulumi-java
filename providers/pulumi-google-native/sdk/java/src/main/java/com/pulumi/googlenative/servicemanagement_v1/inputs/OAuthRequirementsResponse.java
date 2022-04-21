@@ -21,45 +21,45 @@ public final class OAuthRequirementsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="canonicalScopes", required=true)
-      private final String canonicalScopes;
+    private String canonicalScopes;
 
     public String canonicalScopes() {
         return this.canonicalScopes;
     }
 
-    public OAuthRequirementsResponse(String canonicalScopes) {
-        this.canonicalScopes = Objects.requireNonNull(canonicalScopes, "expected parameter 'canonicalScopes' to be non-null");
-    }
+    private OAuthRequirementsResponse() {}
 
-    private OAuthRequirementsResponse() {
-        this.canonicalScopes = null;
+    private OAuthRequirementsResponse(OAuthRequirementsResponse $) {
+        this.canonicalScopes = $.canonicalScopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OAuthRequirementsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String canonicalScopes;
+        private OAuthRequirementsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OAuthRequirementsResponse();
         }
 
         public Builder(OAuthRequirementsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalScopes = defaults.canonicalScopes;
+            $ = new OAuthRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalScopes(String canonicalScopes) {
-            this.canonicalScopes = Objects.requireNonNull(canonicalScopes);
+            $.canonicalScopes = canonicalScopes;
             return this;
-        }        public OAuthRequirementsResponse build() {
-            return new OAuthRequirementsResponse(canonicalScopes);
+        }
+
+        public OAuthRequirementsResponse build() {
+            $.canonicalScopes = Objects.requireNonNull($.canonicalScopes, "expected parameter 'canonicalScopes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.azurenative.automation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RunbookParameterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RunbookParameterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="isMandatory")
-      private final @Nullable Output<Boolean> isMandatory;
+    private @Nullable Output<Boolean> isMandatory;
 
-    public Output<Boolean> isMandatory() {
-        return this.isMandatory == null ? Codegen.empty() : this.isMandatory;
+    public Optional<Output<Boolean>> isMandatory() {
+        return Optional.ofNullable(this.isMandatory);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RunbookParameterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="position")
-      private final @Nullable Output<Integer> position;
+    private @Nullable Output<Integer> position;
 
-    public Output<Integer> position() {
-        return this.position == null ? Codegen.empty() : this.position;
+    public Optional<Output<Integer>> position() {
+        return Optional.ofNullable(this.position);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class RunbookParameterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public RunbookParameterArgs(
-        @Nullable Output<String> defaultValue,
-        @Nullable Output<Boolean> isMandatory,
-        @Nullable Output<Integer> position,
-        @Nullable Output<String> type) {
-        this.defaultValue = defaultValue;
-        this.isMandatory = isMandatory;
-        this.position = position;
-        this.type = type;
-    }
+    private RunbookParameterArgs() {}
 
-    private RunbookParameterArgs() {
-        this.defaultValue = Codegen.empty();
-        this.isMandatory = Codegen.empty();
-        this.position = Codegen.empty();
-        this.type = Codegen.empty();
+    private RunbookParameterArgs(RunbookParameterArgs $) {
+        this.defaultValue = $.defaultValue;
+        this.isMandatory = $.isMandatory;
+        this.position = $.position;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RunbookParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultValue;
-        private @Nullable Output<Boolean> isMandatory;
-        private @Nullable Output<Integer> position;
-        private @Nullable Output<String> type;
+        private RunbookParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RunbookParameterArgs();
         }
 
         public Builder(RunbookParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.isMandatory = defaults.isMandatory;
-    	      this.position = defaults.position;
-    	      this.type = defaults.type;
+            $ = new RunbookParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder isMandatory(@Nullable Output<Boolean> isMandatory) {
-            this.isMandatory = isMandatory;
+            $.isMandatory = isMandatory;
             return this;
         }
-        public Builder isMandatory(@Nullable Boolean isMandatory) {
-            this.isMandatory = Codegen.ofNullable(isMandatory);
-            return this;
+
+        public Builder isMandatory(Boolean isMandatory) {
+            return isMandatory(Output.of(isMandatory));
         }
+
         public Builder position(@Nullable Output<Integer> position) {
-            this.position = position;
+            $.position = position;
             return this;
         }
-        public Builder position(@Nullable Integer position) {
-            this.position = Codegen.ofNullable(position);
-            return this;
+
+        public Builder position(Integer position) {
+            return position(Output.of(position));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public RunbookParameterArgs build() {
-            return new RunbookParameterArgs(defaultValue, isMandatory, position, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public RunbookParameterArgs build() {
+            return $;
         }
     }
+
 }

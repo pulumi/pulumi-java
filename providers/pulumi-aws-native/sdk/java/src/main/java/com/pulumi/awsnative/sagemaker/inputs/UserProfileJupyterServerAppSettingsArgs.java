@@ -6,8 +6,8 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class UserProfileJupyterServerAppSettingsArgs extends com.pulumi.re
     public static final UserProfileJupyterServerAppSettingsArgs Empty = new UserProfileJupyterServerAppSettingsArgs();
 
     @Import(name="defaultResourceSpec")
-      private final @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
+    private @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
 
-    public Output<UserProfileResourceSpecArgs> defaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
+    public Optional<Output<UserProfileResourceSpecArgs>> defaultResourceSpec() {
+        return Optional.ofNullable(this.defaultResourceSpec);
     }
 
-    public UserProfileJupyterServerAppSettingsArgs(@Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
-        this.defaultResourceSpec = defaultResourceSpec;
-    }
+    private UserProfileJupyterServerAppSettingsArgs() {}
 
-    private UserProfileJupyterServerAppSettingsArgs() {
-        this.defaultResourceSpec = Codegen.empty();
+    private UserProfileJupyterServerAppSettingsArgs(UserProfileJupyterServerAppSettingsArgs $) {
+        this.defaultResourceSpec = $.defaultResourceSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileJupyterServerAppSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
+        private UserProfileJupyterServerAppSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileJupyterServerAppSettingsArgs();
         }
 
         public Builder(UserProfileJupyterServerAppSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
+            $ = new UserProfileJupyterServerAppSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultResourceSpec(@Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
-            this.defaultResourceSpec = defaultResourceSpec;
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-        public Builder defaultResourceSpec(@Nullable UserProfileResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
-            return this;
-        }        public UserProfileJupyterServerAppSettingsArgs build() {
-            return new UserProfileJupyterServerAppSettingsArgs(defaultResourceSpec);
+
+        public Builder defaultResourceSpec(UserProfileResourceSpecArgs defaultResourceSpec) {
+            return defaultResourceSpec(Output.of(defaultResourceSpec));
+        }
+
+        public UserProfileJupyterServerAppSettingsArgs build() {
+            return $;
         }
     }
+
 }

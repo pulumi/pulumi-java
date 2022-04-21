@@ -20,8 +20,8 @@ import com.pulumi.awsnative.appflow.enums.FlowVeevaConnectorOperator;
 import com.pulumi.awsnative.appflow.enums.FlowZendeskConnectorOperator;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,330 +34,286 @@ public final class FlowConnectorOperatorArgs extends com.pulumi.resources.Resour
     public static final FlowConnectorOperatorArgs Empty = new FlowConnectorOperatorArgs();
 
     @Import(name="amplitude")
-      private final @Nullable Output<FlowAmplitudeConnectorOperator> amplitude;
+    private @Nullable Output<FlowAmplitudeConnectorOperator> amplitude;
 
-    public Output<FlowAmplitudeConnectorOperator> amplitude() {
-        return this.amplitude == null ? Codegen.empty() : this.amplitude;
+    public Optional<Output<FlowAmplitudeConnectorOperator>> amplitude() {
+        return Optional.ofNullable(this.amplitude);
     }
 
     @Import(name="datadog")
-      private final @Nullable Output<FlowDatadogConnectorOperator> datadog;
+    private @Nullable Output<FlowDatadogConnectorOperator> datadog;
 
-    public Output<FlowDatadogConnectorOperator> datadog() {
-        return this.datadog == null ? Codegen.empty() : this.datadog;
+    public Optional<Output<FlowDatadogConnectorOperator>> datadog() {
+        return Optional.ofNullable(this.datadog);
     }
 
     @Import(name="dynatrace")
-      private final @Nullable Output<FlowDynatraceConnectorOperator> dynatrace;
+    private @Nullable Output<FlowDynatraceConnectorOperator> dynatrace;
 
-    public Output<FlowDynatraceConnectorOperator> dynatrace() {
-        return this.dynatrace == null ? Codegen.empty() : this.dynatrace;
+    public Optional<Output<FlowDynatraceConnectorOperator>> dynatrace() {
+        return Optional.ofNullable(this.dynatrace);
     }
 
     @Import(name="googleAnalytics")
-      private final @Nullable Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics;
+    private @Nullable Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics;
 
-    public Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics() {
-        return this.googleAnalytics == null ? Codegen.empty() : this.googleAnalytics;
+    public Optional<Output<FlowGoogleAnalyticsConnectorOperator>> googleAnalytics() {
+        return Optional.ofNullable(this.googleAnalytics);
     }
 
     @Import(name="inforNexus")
-      private final @Nullable Output<FlowInforNexusConnectorOperator> inforNexus;
+    private @Nullable Output<FlowInforNexusConnectorOperator> inforNexus;
 
-    public Output<FlowInforNexusConnectorOperator> inforNexus() {
-        return this.inforNexus == null ? Codegen.empty() : this.inforNexus;
+    public Optional<Output<FlowInforNexusConnectorOperator>> inforNexus() {
+        return Optional.ofNullable(this.inforNexus);
     }
 
     @Import(name="marketo")
-      private final @Nullable Output<FlowMarketoConnectorOperator> marketo;
+    private @Nullable Output<FlowMarketoConnectorOperator> marketo;
 
-    public Output<FlowMarketoConnectorOperator> marketo() {
-        return this.marketo == null ? Codegen.empty() : this.marketo;
+    public Optional<Output<FlowMarketoConnectorOperator>> marketo() {
+        return Optional.ofNullable(this.marketo);
     }
 
     @Import(name="s3")
-      private final @Nullable Output<FlowS3ConnectorOperator> s3;
+    private @Nullable Output<FlowS3ConnectorOperator> s3;
 
-    public Output<FlowS3ConnectorOperator> s3() {
-        return this.s3 == null ? Codegen.empty() : this.s3;
+    public Optional<Output<FlowS3ConnectorOperator>> s3() {
+        return Optional.ofNullable(this.s3);
     }
 
     @Import(name="sAPOData")
-      private final @Nullable Output<FlowSAPODataConnectorOperator> sAPOData;
+    private @Nullable Output<FlowSAPODataConnectorOperator> sAPOData;
 
-    public Output<FlowSAPODataConnectorOperator> sAPOData() {
-        return this.sAPOData == null ? Codegen.empty() : this.sAPOData;
+    public Optional<Output<FlowSAPODataConnectorOperator>> sAPOData() {
+        return Optional.ofNullable(this.sAPOData);
     }
 
     @Import(name="salesforce")
-      private final @Nullable Output<FlowSalesforceConnectorOperator> salesforce;
+    private @Nullable Output<FlowSalesforceConnectorOperator> salesforce;
 
-    public Output<FlowSalesforceConnectorOperator> salesforce() {
-        return this.salesforce == null ? Codegen.empty() : this.salesforce;
+    public Optional<Output<FlowSalesforceConnectorOperator>> salesforce() {
+        return Optional.ofNullable(this.salesforce);
     }
 
     @Import(name="serviceNow")
-      private final @Nullable Output<FlowServiceNowConnectorOperator> serviceNow;
+    private @Nullable Output<FlowServiceNowConnectorOperator> serviceNow;
 
-    public Output<FlowServiceNowConnectorOperator> serviceNow() {
-        return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
+    public Optional<Output<FlowServiceNowConnectorOperator>> serviceNow() {
+        return Optional.ofNullable(this.serviceNow);
     }
 
     @Import(name="singular")
-      private final @Nullable Output<FlowSingularConnectorOperator> singular;
+    private @Nullable Output<FlowSingularConnectorOperator> singular;
 
-    public Output<FlowSingularConnectorOperator> singular() {
-        return this.singular == null ? Codegen.empty() : this.singular;
+    public Optional<Output<FlowSingularConnectorOperator>> singular() {
+        return Optional.ofNullable(this.singular);
     }
 
     @Import(name="slack")
-      private final @Nullable Output<FlowSlackConnectorOperator> slack;
+    private @Nullable Output<FlowSlackConnectorOperator> slack;
 
-    public Output<FlowSlackConnectorOperator> slack() {
-        return this.slack == null ? Codegen.empty() : this.slack;
+    public Optional<Output<FlowSlackConnectorOperator>> slack() {
+        return Optional.ofNullable(this.slack);
     }
 
     @Import(name="trendmicro")
-      private final @Nullable Output<FlowTrendmicroConnectorOperator> trendmicro;
+    private @Nullable Output<FlowTrendmicroConnectorOperator> trendmicro;
 
-    public Output<FlowTrendmicroConnectorOperator> trendmicro() {
-        return this.trendmicro == null ? Codegen.empty() : this.trendmicro;
+    public Optional<Output<FlowTrendmicroConnectorOperator>> trendmicro() {
+        return Optional.ofNullable(this.trendmicro);
     }
 
     @Import(name="veeva")
-      private final @Nullable Output<FlowVeevaConnectorOperator> veeva;
+    private @Nullable Output<FlowVeevaConnectorOperator> veeva;
 
-    public Output<FlowVeevaConnectorOperator> veeva() {
-        return this.veeva == null ? Codegen.empty() : this.veeva;
+    public Optional<Output<FlowVeevaConnectorOperator>> veeva() {
+        return Optional.ofNullable(this.veeva);
     }
 
     @Import(name="zendesk")
-      private final @Nullable Output<FlowZendeskConnectorOperator> zendesk;
+    private @Nullable Output<FlowZendeskConnectorOperator> zendesk;
 
-    public Output<FlowZendeskConnectorOperator> zendesk() {
-        return this.zendesk == null ? Codegen.empty() : this.zendesk;
+    public Optional<Output<FlowZendeskConnectorOperator>> zendesk() {
+        return Optional.ofNullable(this.zendesk);
     }
 
-    public FlowConnectorOperatorArgs(
-        @Nullable Output<FlowAmplitudeConnectorOperator> amplitude,
-        @Nullable Output<FlowDatadogConnectorOperator> datadog,
-        @Nullable Output<FlowDynatraceConnectorOperator> dynatrace,
-        @Nullable Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics,
-        @Nullable Output<FlowInforNexusConnectorOperator> inforNexus,
-        @Nullable Output<FlowMarketoConnectorOperator> marketo,
-        @Nullable Output<FlowS3ConnectorOperator> s3,
-        @Nullable Output<FlowSAPODataConnectorOperator> sAPOData,
-        @Nullable Output<FlowSalesforceConnectorOperator> salesforce,
-        @Nullable Output<FlowServiceNowConnectorOperator> serviceNow,
-        @Nullable Output<FlowSingularConnectorOperator> singular,
-        @Nullable Output<FlowSlackConnectorOperator> slack,
-        @Nullable Output<FlowTrendmicroConnectorOperator> trendmicro,
-        @Nullable Output<FlowVeevaConnectorOperator> veeva,
-        @Nullable Output<FlowZendeskConnectorOperator> zendesk) {
-        this.amplitude = amplitude;
-        this.datadog = datadog;
-        this.dynatrace = dynatrace;
-        this.googleAnalytics = googleAnalytics;
-        this.inforNexus = inforNexus;
-        this.marketo = marketo;
-        this.s3 = s3;
-        this.sAPOData = sAPOData;
-        this.salesforce = salesforce;
-        this.serviceNow = serviceNow;
-        this.singular = singular;
-        this.slack = slack;
-        this.trendmicro = trendmicro;
-        this.veeva = veeva;
-        this.zendesk = zendesk;
-    }
+    private FlowConnectorOperatorArgs() {}
 
-    private FlowConnectorOperatorArgs() {
-        this.amplitude = Codegen.empty();
-        this.datadog = Codegen.empty();
-        this.dynatrace = Codegen.empty();
-        this.googleAnalytics = Codegen.empty();
-        this.inforNexus = Codegen.empty();
-        this.marketo = Codegen.empty();
-        this.s3 = Codegen.empty();
-        this.sAPOData = Codegen.empty();
-        this.salesforce = Codegen.empty();
-        this.serviceNow = Codegen.empty();
-        this.singular = Codegen.empty();
-        this.slack = Codegen.empty();
-        this.trendmicro = Codegen.empty();
-        this.veeva = Codegen.empty();
-        this.zendesk = Codegen.empty();
+    private FlowConnectorOperatorArgs(FlowConnectorOperatorArgs $) {
+        this.amplitude = $.amplitude;
+        this.datadog = $.datadog;
+        this.dynatrace = $.dynatrace;
+        this.googleAnalytics = $.googleAnalytics;
+        this.inforNexus = $.inforNexus;
+        this.marketo = $.marketo;
+        this.s3 = $.s3;
+        this.sAPOData = $.sAPOData;
+        this.salesforce = $.salesforce;
+        this.serviceNow = $.serviceNow;
+        this.singular = $.singular;
+        this.slack = $.slack;
+        this.trendmicro = $.trendmicro;
+        this.veeva = $.veeva;
+        this.zendesk = $.zendesk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowConnectorOperatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowAmplitudeConnectorOperator> amplitude;
-        private @Nullable Output<FlowDatadogConnectorOperator> datadog;
-        private @Nullable Output<FlowDynatraceConnectorOperator> dynatrace;
-        private @Nullable Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics;
-        private @Nullable Output<FlowInforNexusConnectorOperator> inforNexus;
-        private @Nullable Output<FlowMarketoConnectorOperator> marketo;
-        private @Nullable Output<FlowS3ConnectorOperator> s3;
-        private @Nullable Output<FlowSAPODataConnectorOperator> sAPOData;
-        private @Nullable Output<FlowSalesforceConnectorOperator> salesforce;
-        private @Nullable Output<FlowServiceNowConnectorOperator> serviceNow;
-        private @Nullable Output<FlowSingularConnectorOperator> singular;
-        private @Nullable Output<FlowSlackConnectorOperator> slack;
-        private @Nullable Output<FlowTrendmicroConnectorOperator> trendmicro;
-        private @Nullable Output<FlowVeevaConnectorOperator> veeva;
-        private @Nullable Output<FlowZendeskConnectorOperator> zendesk;
+        private FlowConnectorOperatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowConnectorOperatorArgs();
         }
 
         public Builder(FlowConnectorOperatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amplitude = defaults.amplitude;
-    	      this.datadog = defaults.datadog;
-    	      this.dynatrace = defaults.dynatrace;
-    	      this.googleAnalytics = defaults.googleAnalytics;
-    	      this.inforNexus = defaults.inforNexus;
-    	      this.marketo = defaults.marketo;
-    	      this.s3 = defaults.s3;
-    	      this.sAPOData = defaults.sAPOData;
-    	      this.salesforce = defaults.salesforce;
-    	      this.serviceNow = defaults.serviceNow;
-    	      this.singular = defaults.singular;
-    	      this.slack = defaults.slack;
-    	      this.trendmicro = defaults.trendmicro;
-    	      this.veeva = defaults.veeva;
-    	      this.zendesk = defaults.zendesk;
+            $ = new FlowConnectorOperatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amplitude(@Nullable Output<FlowAmplitudeConnectorOperator> amplitude) {
-            this.amplitude = amplitude;
+            $.amplitude = amplitude;
             return this;
         }
-        public Builder amplitude(@Nullable FlowAmplitudeConnectorOperator amplitude) {
-            this.amplitude = Codegen.ofNullable(amplitude);
-            return this;
+
+        public Builder amplitude(FlowAmplitudeConnectorOperator amplitude) {
+            return amplitude(Output.of(amplitude));
         }
+
         public Builder datadog(@Nullable Output<FlowDatadogConnectorOperator> datadog) {
-            this.datadog = datadog;
+            $.datadog = datadog;
             return this;
         }
-        public Builder datadog(@Nullable FlowDatadogConnectorOperator datadog) {
-            this.datadog = Codegen.ofNullable(datadog);
-            return this;
+
+        public Builder datadog(FlowDatadogConnectorOperator datadog) {
+            return datadog(Output.of(datadog));
         }
+
         public Builder dynatrace(@Nullable Output<FlowDynatraceConnectorOperator> dynatrace) {
-            this.dynatrace = dynatrace;
+            $.dynatrace = dynatrace;
             return this;
         }
-        public Builder dynatrace(@Nullable FlowDynatraceConnectorOperator dynatrace) {
-            this.dynatrace = Codegen.ofNullable(dynatrace);
-            return this;
+
+        public Builder dynatrace(FlowDynatraceConnectorOperator dynatrace) {
+            return dynatrace(Output.of(dynatrace));
         }
+
         public Builder googleAnalytics(@Nullable Output<FlowGoogleAnalyticsConnectorOperator> googleAnalytics) {
-            this.googleAnalytics = googleAnalytics;
+            $.googleAnalytics = googleAnalytics;
             return this;
         }
-        public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsConnectorOperator googleAnalytics) {
-            this.googleAnalytics = Codegen.ofNullable(googleAnalytics);
-            return this;
+
+        public Builder googleAnalytics(FlowGoogleAnalyticsConnectorOperator googleAnalytics) {
+            return googleAnalytics(Output.of(googleAnalytics));
         }
+
         public Builder inforNexus(@Nullable Output<FlowInforNexusConnectorOperator> inforNexus) {
-            this.inforNexus = inforNexus;
+            $.inforNexus = inforNexus;
             return this;
         }
-        public Builder inforNexus(@Nullable FlowInforNexusConnectorOperator inforNexus) {
-            this.inforNexus = Codegen.ofNullable(inforNexus);
-            return this;
+
+        public Builder inforNexus(FlowInforNexusConnectorOperator inforNexus) {
+            return inforNexus(Output.of(inforNexus));
         }
+
         public Builder marketo(@Nullable Output<FlowMarketoConnectorOperator> marketo) {
-            this.marketo = marketo;
+            $.marketo = marketo;
             return this;
         }
-        public Builder marketo(@Nullable FlowMarketoConnectorOperator marketo) {
-            this.marketo = Codegen.ofNullable(marketo);
-            return this;
+
+        public Builder marketo(FlowMarketoConnectorOperator marketo) {
+            return marketo(Output.of(marketo));
         }
+
         public Builder s3(@Nullable Output<FlowS3ConnectorOperator> s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
-        public Builder s3(@Nullable FlowS3ConnectorOperator s3) {
-            this.s3 = Codegen.ofNullable(s3);
-            return this;
+
+        public Builder s3(FlowS3ConnectorOperator s3) {
+            return s3(Output.of(s3));
         }
+
         public Builder sAPOData(@Nullable Output<FlowSAPODataConnectorOperator> sAPOData) {
-            this.sAPOData = sAPOData;
+            $.sAPOData = sAPOData;
             return this;
         }
-        public Builder sAPOData(@Nullable FlowSAPODataConnectorOperator sAPOData) {
-            this.sAPOData = Codegen.ofNullable(sAPOData);
-            return this;
+
+        public Builder sAPOData(FlowSAPODataConnectorOperator sAPOData) {
+            return sAPOData(Output.of(sAPOData));
         }
+
         public Builder salesforce(@Nullable Output<FlowSalesforceConnectorOperator> salesforce) {
-            this.salesforce = salesforce;
+            $.salesforce = salesforce;
             return this;
         }
-        public Builder salesforce(@Nullable FlowSalesforceConnectorOperator salesforce) {
-            this.salesforce = Codegen.ofNullable(salesforce);
-            return this;
+
+        public Builder salesforce(FlowSalesforceConnectorOperator salesforce) {
+            return salesforce(Output.of(salesforce));
         }
+
         public Builder serviceNow(@Nullable Output<FlowServiceNowConnectorOperator> serviceNow) {
-            this.serviceNow = serviceNow;
+            $.serviceNow = serviceNow;
             return this;
         }
-        public Builder serviceNow(@Nullable FlowServiceNowConnectorOperator serviceNow) {
-            this.serviceNow = Codegen.ofNullable(serviceNow);
-            return this;
+
+        public Builder serviceNow(FlowServiceNowConnectorOperator serviceNow) {
+            return serviceNow(Output.of(serviceNow));
         }
+
         public Builder singular(@Nullable Output<FlowSingularConnectorOperator> singular) {
-            this.singular = singular;
+            $.singular = singular;
             return this;
         }
-        public Builder singular(@Nullable FlowSingularConnectorOperator singular) {
-            this.singular = Codegen.ofNullable(singular);
-            return this;
+
+        public Builder singular(FlowSingularConnectorOperator singular) {
+            return singular(Output.of(singular));
         }
+
         public Builder slack(@Nullable Output<FlowSlackConnectorOperator> slack) {
-            this.slack = slack;
+            $.slack = slack;
             return this;
         }
-        public Builder slack(@Nullable FlowSlackConnectorOperator slack) {
-            this.slack = Codegen.ofNullable(slack);
-            return this;
+
+        public Builder slack(FlowSlackConnectorOperator slack) {
+            return slack(Output.of(slack));
         }
+
         public Builder trendmicro(@Nullable Output<FlowTrendmicroConnectorOperator> trendmicro) {
-            this.trendmicro = trendmicro;
+            $.trendmicro = trendmicro;
             return this;
         }
-        public Builder trendmicro(@Nullable FlowTrendmicroConnectorOperator trendmicro) {
-            this.trendmicro = Codegen.ofNullable(trendmicro);
-            return this;
+
+        public Builder trendmicro(FlowTrendmicroConnectorOperator trendmicro) {
+            return trendmicro(Output.of(trendmicro));
         }
+
         public Builder veeva(@Nullable Output<FlowVeevaConnectorOperator> veeva) {
-            this.veeva = veeva;
+            $.veeva = veeva;
             return this;
         }
-        public Builder veeva(@Nullable FlowVeevaConnectorOperator veeva) {
-            this.veeva = Codegen.ofNullable(veeva);
-            return this;
+
+        public Builder veeva(FlowVeevaConnectorOperator veeva) {
+            return veeva(Output.of(veeva));
         }
+
         public Builder zendesk(@Nullable Output<FlowZendeskConnectorOperator> zendesk) {
-            this.zendesk = zendesk;
+            $.zendesk = zendesk;
             return this;
         }
-        public Builder zendesk(@Nullable FlowZendeskConnectorOperator zendesk) {
-            this.zendesk = Codegen.ofNullable(zendesk);
-            return this;
-        }        public FlowConnectorOperatorArgs build() {
-            return new FlowConnectorOperatorArgs(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, s3, sAPOData, salesforce, serviceNow, singular, slack, trendmicro, veeva, zendesk);
+
+        public Builder zendesk(FlowZendeskConnectorOperator zendesk) {
+            return zendesk(Output.of(zendesk));
+        }
+
+        public FlowConnectorOperatorArgs build() {
+            return $;
         }
     }
+
 }

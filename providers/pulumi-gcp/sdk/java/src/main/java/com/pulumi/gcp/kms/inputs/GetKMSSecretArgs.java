@@ -19,10 +19,10 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalAuthenticatedData")
-      private final @Nullable String additionalAuthenticatedData;
+    private @Nullable String additionalAuthenticatedData;
 
     public Optional<String> additionalAuthenticatedData() {
-        return this.additionalAuthenticatedData == null ? Optional.empty() : Optional.ofNullable(this.additionalAuthenticatedData);
+        return Optional.ofNullable(this.additionalAuthenticatedData);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ciphertext", required=true)
-      private final String ciphertext;
+    private String ciphertext;
 
     public String ciphertext() {
         return this.ciphertext;
@@ -43,64 +43,58 @@ public final class GetKMSSecretArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cryptoKey", required=true)
-      private final String cryptoKey;
+    private String cryptoKey;
 
     public String cryptoKey() {
         return this.cryptoKey;
     }
 
-    public GetKMSSecretArgs(
-        @Nullable String additionalAuthenticatedData,
-        String ciphertext,
-        String cryptoKey) {
-        this.additionalAuthenticatedData = additionalAuthenticatedData;
-        this.ciphertext = Objects.requireNonNull(ciphertext, "expected parameter 'ciphertext' to be non-null");
-        this.cryptoKey = Objects.requireNonNull(cryptoKey, "expected parameter 'cryptoKey' to be non-null");
-    }
+    private GetKMSSecretArgs() {}
 
-    private GetKMSSecretArgs() {
-        this.additionalAuthenticatedData = null;
-        this.ciphertext = null;
-        this.cryptoKey = null;
+    private GetKMSSecretArgs(GetKMSSecretArgs $) {
+        this.additionalAuthenticatedData = $.additionalAuthenticatedData;
+        this.ciphertext = $.ciphertext;
+        this.cryptoKey = $.cryptoKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKMSSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String additionalAuthenticatedData;
-        private String ciphertext;
-        private String cryptoKey;
+        private GetKMSSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKMSSecretArgs();
         }
 
         public Builder(GetKMSSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalAuthenticatedData = defaults.additionalAuthenticatedData;
-    	      this.ciphertext = defaults.ciphertext;
-    	      this.cryptoKey = defaults.cryptoKey;
+            $ = new GetKMSSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
-            this.additionalAuthenticatedData = additionalAuthenticatedData;
+            $.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
+
         public Builder ciphertext(String ciphertext) {
-            this.ciphertext = Objects.requireNonNull(ciphertext);
+            $.ciphertext = ciphertext;
             return this;
         }
+
         public Builder cryptoKey(String cryptoKey) {
-            this.cryptoKey = Objects.requireNonNull(cryptoKey);
+            $.cryptoKey = cryptoKey;
             return this;
-        }        public GetKMSSecretArgs build() {
-            return new GetKMSSecretArgs(additionalAuthenticatedData, ciphertext, cryptoKey);
+        }
+
+        public GetKMSSecretArgs build() {
+            $.ciphertext = Objects.requireNonNull($.ciphertext, "expected parameter 'ciphertext' to be non-null");
+            $.cryptoKey = Objects.requireNonNull($.cryptoKey, "expected parameter 'cryptoKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class TaskSchedule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scheduleExpression", required=true)
-      private final String scheduleExpression;
+    private String scheduleExpression;
 
     public String scheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public TaskSchedule(String scheduleExpression) {
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
-    }
+    private TaskSchedule() {}
 
-    private TaskSchedule() {
-        this.scheduleExpression = null;
+    private TaskSchedule(TaskSchedule $) {
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSchedule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scheduleExpression;
+        private TaskSchedule $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSchedule();
         }
 
         public Builder(TaskSchedule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new TaskSchedule(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+            $.scheduleExpression = scheduleExpression;
             return this;
-        }        public TaskSchedule build() {
-            return new TaskSchedule(scheduleExpression);
+        }
+
+        public TaskSchedule build() {
+            $.scheduleExpression = Objects.requireNonNull($.scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
+            return $;
         }
     }
+
 }

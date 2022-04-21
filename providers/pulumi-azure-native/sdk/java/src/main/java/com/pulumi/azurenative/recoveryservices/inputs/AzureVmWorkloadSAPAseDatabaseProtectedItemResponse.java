@@ -29,10 +29,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="backupSetName")
-      private final @Nullable String backupSetName;
+    private @Nullable String backupSetName;
 
     public Optional<String> backupSetName() {
-        return this.backupSetName == null ? Optional.empty() : Optional.ofNullable(this.backupSetName);
+        return Optional.ofNullable(this.backupSetName);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="containerName")
-      private final @Nullable String containerName;
+    private @Nullable String containerName;
 
     public Optional<String> containerName() {
-        return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="createMode")
-      private final @Nullable String createMode;
+    private @Nullable String createMode;
 
     public Optional<String> createMode() {
-        return this.createMode == null ? Optional.empty() : Optional.ofNullable(this.createMode);
+        return Optional.ofNullable(this.createMode);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="deferredDeleteTimeInUTC")
-      private final @Nullable String deferredDeleteTimeInUTC;
+    private @Nullable String deferredDeleteTimeInUTC;
 
     public Optional<String> deferredDeleteTimeInUTC() {
-        return this.deferredDeleteTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeInUTC);
+        return Optional.ofNullable(this.deferredDeleteTimeInUTC);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="deferredDeleteTimeRemaining")
-      private final @Nullable String deferredDeleteTimeRemaining;
+    private @Nullable String deferredDeleteTimeRemaining;
 
     public Optional<String> deferredDeleteTimeRemaining() {
-        return this.deferredDeleteTimeRemaining == null ? Optional.empty() : Optional.ofNullable(this.deferredDeleteTimeRemaining);
+        return Optional.ofNullable(this.deferredDeleteTimeRemaining);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="extendedInfo")
-      private final @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo;
+    private @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo;
 
     public Optional<AzureVmWorkloadProtectedItemExtendedInfoResponse> extendedInfo() {
-        return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
+        return Optional.ofNullable(this.extendedInfo);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="isDeferredDeleteScheduleUpcoming")
-      private final @Nullable Boolean isDeferredDeleteScheduleUpcoming;
+    private @Nullable Boolean isDeferredDeleteScheduleUpcoming;
 
     public Optional<Boolean> isDeferredDeleteScheduleUpcoming() {
-        return this.isDeferredDeleteScheduleUpcoming == null ? Optional.empty() : Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
+        return Optional.ofNullable(this.isDeferredDeleteScheduleUpcoming);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="isRehydrate")
-      private final @Nullable Boolean isRehydrate;
+    private @Nullable Boolean isRehydrate;
 
     public Optional<Boolean> isRehydrate() {
-        return this.isRehydrate == null ? Optional.empty() : Optional.ofNullable(this.isRehydrate);
+        return Optional.ofNullable(this.isRehydrate);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="isScheduledForDeferredDelete")
-      private final @Nullable Boolean isScheduledForDeferredDelete;
+    private @Nullable Boolean isScheduledForDeferredDelete;
 
     public Optional<Boolean> isScheduledForDeferredDelete() {
-        return this.isScheduledForDeferredDelete == null ? Optional.empty() : Optional.ofNullable(this.isScheduledForDeferredDelete);
+        return Optional.ofNullable(this.isScheduledForDeferredDelete);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="kpisHealths")
-      private final @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
+    private @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
 
-    public Map<String,KPIResourceHealthDetailsResponse> kpisHealths() {
-        return this.kpisHealths == null ? Map.of() : this.kpisHealths;
+    public Optional<Map<String,KPIResourceHealthDetailsResponse>> kpisHealths() {
+        return Optional.ofNullable(this.kpisHealths);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="lastBackupErrorDetail")
-      private final @Nullable ErrorDetailResponse lastBackupErrorDetail;
+    private @Nullable ErrorDetailResponse lastBackupErrorDetail;
 
     public Optional<ErrorDetailResponse> lastBackupErrorDetail() {
-        return this.lastBackupErrorDetail == null ? Optional.empty() : Optional.ofNullable(this.lastBackupErrorDetail);
+        return Optional.ofNullable(this.lastBackupErrorDetail);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="lastBackupStatus")
-      private final @Nullable String lastBackupStatus;
+    private @Nullable String lastBackupStatus;
 
     public Optional<String> lastBackupStatus() {
-        return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
+        return Optional.ofNullable(this.lastBackupStatus);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="lastBackupTime")
-      private final @Nullable String lastBackupTime;
+    private @Nullable String lastBackupTime;
 
     public Optional<String> lastBackupTime() {
-        return this.lastBackupTime == null ? Optional.empty() : Optional.ofNullable(this.lastBackupTime);
+        return Optional.ofNullable(this.lastBackupTime);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="lastRecoveryPoint")
-      private final @Nullable String lastRecoveryPoint;
+    private @Nullable String lastRecoveryPoint;
 
     public Optional<String> lastRecoveryPoint() {
-        return this.lastRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.lastRecoveryPoint);
+        return Optional.ofNullable(this.lastRecoveryPoint);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="parentName")
-      private final @Nullable String parentName;
+    private @Nullable String parentName;
 
     public Optional<String> parentName() {
-        return this.parentName == null ? Optional.empty() : Optional.ofNullable(this.parentName);
+        return Optional.ofNullable(this.parentName);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="parentType")
-      private final @Nullable String parentType;
+    private @Nullable String parentType;
 
     public Optional<String> parentType() {
-        return this.parentType == null ? Optional.empty() : Optional.ofNullable(this.parentType);
+        return Optional.ofNullable(this.parentType);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="policyId")
-      private final @Nullable String policyId;
+    private @Nullable String policyId;
 
     public Optional<String> policyId() {
-        return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -238,10 +238,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="protectedItemDataSourceId")
-      private final @Nullable String protectedItemDataSourceId;
+    private @Nullable String protectedItemDataSourceId;
 
     public Optional<String> protectedItemDataSourceId() {
-        return this.protectedItemDataSourceId == null ? Optional.empty() : Optional.ofNullable(this.protectedItemDataSourceId);
+        return Optional.ofNullable(this.protectedItemDataSourceId);
     }
 
     /**
@@ -249,10 +249,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="protectedItemHealthStatus")
-      private final @Nullable String protectedItemHealthStatus;
+    private @Nullable String protectedItemHealthStatus;
 
     public Optional<String> protectedItemHealthStatus() {
-        return this.protectedItemHealthStatus == null ? Optional.empty() : Optional.ofNullable(this.protectedItemHealthStatus);
+        return Optional.ofNullable(this.protectedItemHealthStatus);
     }
 
     /**
@@ -261,7 +261,7 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="protectedItemType", required=true)
-      private final String protectedItemType;
+    private String protectedItemType;
 
     public String protectedItemType() {
         return this.protectedItemType;
@@ -272,10 +272,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="protectionState")
-      private final @Nullable String protectionState;
+    private @Nullable String protectionState;
 
     public Optional<String> protectionState() {
-        return this.protectionState == null ? Optional.empty() : Optional.ofNullable(this.protectionState);
+        return Optional.ofNullable(this.protectionState);
     }
 
     /**
@@ -283,10 +283,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="protectionStatus")
-      private final @Nullable String protectionStatus;
+    private @Nullable String protectionStatus;
 
     public Optional<String> protectionStatus() {
-        return this.protectionStatus == null ? Optional.empty() : Optional.ofNullable(this.protectionStatus);
+        return Optional.ofNullable(this.protectionStatus);
     }
 
     /**
@@ -294,10 +294,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="serverName")
-      private final @Nullable String serverName;
+    private @Nullable String serverName;
 
     public Optional<String> serverName() {
-        return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
+        return Optional.ofNullable(this.serverName);
     }
 
     /**
@@ -305,10 +305,10 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable String sourceResourceId;
+    private @Nullable String sourceResourceId;
 
     public Optional<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
     /**
@@ -316,280 +316,201 @@ public final class AzureVmWorkloadSAPAseDatabaseProtectedItemResponse extends co
      * 
      */
     @Import(name="workloadType")
-      private final @Nullable String workloadType;
+    private @Nullable String workloadType;
 
     public Optional<String> workloadType() {
-        return this.workloadType == null ? Optional.empty() : Optional.ofNullable(this.workloadType);
+        return Optional.ofNullable(this.workloadType);
     }
 
-    public AzureVmWorkloadSAPAseDatabaseProtectedItemResponse(
-        @Nullable String backupManagementType,
-        @Nullable String backupSetName,
-        @Nullable String containerName,
-        @Nullable String createMode,
-        @Nullable String deferredDeleteTimeInUTC,
-        @Nullable String deferredDeleteTimeRemaining,
-        @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @Nullable Boolean isRehydrate,
-        @Nullable Boolean isScheduledForDeferredDelete,
-        @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
-        @Nullable ErrorDetailResponse lastBackupErrorDetail,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastBackupTime,
-        @Nullable String lastRecoveryPoint,
-        @Nullable String parentName,
-        @Nullable String parentType,
-        @Nullable String policyId,
-        @Nullable String protectedItemDataSourceId,
-        @Nullable String protectedItemHealthStatus,
-        String protectedItemType,
-        @Nullable String protectionState,
-        @Nullable String protectionStatus,
-        @Nullable String serverName,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadType) {
-        this.backupManagementType = backupManagementType;
-        this.backupSetName = backupSetName;
-        this.containerName = containerName;
-        this.createMode = createMode;
-        this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
-        this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
-        this.extendedInfo = extendedInfo;
-        this.friendlyName = friendlyName;
-        this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
-        this.isRehydrate = isRehydrate;
-        this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
-        this.kpisHealths = kpisHealths;
-        this.lastBackupErrorDetail = lastBackupErrorDetail;
-        this.lastBackupStatus = lastBackupStatus;
-        this.lastBackupTime = lastBackupTime;
-        this.lastRecoveryPoint = lastRecoveryPoint;
-        this.parentName = parentName;
-        this.parentType = parentType;
-        this.policyId = policyId;
-        this.protectedItemDataSourceId = protectedItemDataSourceId;
-        this.protectedItemHealthStatus = protectedItemHealthStatus;
-        this.protectedItemType = Codegen.stringProp("protectedItemType").arg(protectedItemType).require();
-        this.protectionState = protectionState;
-        this.protectionStatus = protectionStatus;
-        this.serverName = serverName;
-        this.sourceResourceId = sourceResourceId;
-        this.workloadType = workloadType;
-    }
+    private AzureVmWorkloadSAPAseDatabaseProtectedItemResponse() {}
 
-    private AzureVmWorkloadSAPAseDatabaseProtectedItemResponse() {
-        this.backupManagementType = null;
-        this.backupSetName = null;
-        this.containerName = null;
-        this.createMode = null;
-        this.deferredDeleteTimeInUTC = null;
-        this.deferredDeleteTimeRemaining = null;
-        this.extendedInfo = null;
-        this.friendlyName = null;
-        this.isDeferredDeleteScheduleUpcoming = null;
-        this.isRehydrate = null;
-        this.isScheduledForDeferredDelete = null;
-        this.kpisHealths = Map.of();
-        this.lastBackupErrorDetail = null;
-        this.lastBackupStatus = null;
-        this.lastBackupTime = null;
-        this.lastRecoveryPoint = null;
-        this.parentName = null;
-        this.parentType = null;
-        this.policyId = null;
-        this.protectedItemDataSourceId = null;
-        this.protectedItemHealthStatus = null;
-        this.protectedItemType = null;
-        this.protectionState = null;
-        this.protectionStatus = null;
-        this.serverName = null;
-        this.sourceResourceId = null;
-        this.workloadType = null;
+    private AzureVmWorkloadSAPAseDatabaseProtectedItemResponse(AzureVmWorkloadSAPAseDatabaseProtectedItemResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.backupSetName = $.backupSetName;
+        this.containerName = $.containerName;
+        this.createMode = $.createMode;
+        this.deferredDeleteTimeInUTC = $.deferredDeleteTimeInUTC;
+        this.deferredDeleteTimeRemaining = $.deferredDeleteTimeRemaining;
+        this.extendedInfo = $.extendedInfo;
+        this.friendlyName = $.friendlyName;
+        this.isDeferredDeleteScheduleUpcoming = $.isDeferredDeleteScheduleUpcoming;
+        this.isRehydrate = $.isRehydrate;
+        this.isScheduledForDeferredDelete = $.isScheduledForDeferredDelete;
+        this.kpisHealths = $.kpisHealths;
+        this.lastBackupErrorDetail = $.lastBackupErrorDetail;
+        this.lastBackupStatus = $.lastBackupStatus;
+        this.lastBackupTime = $.lastBackupTime;
+        this.lastRecoveryPoint = $.lastRecoveryPoint;
+        this.parentName = $.parentName;
+        this.parentType = $.parentType;
+        this.policyId = $.policyId;
+        this.protectedItemDataSourceId = $.protectedItemDataSourceId;
+        this.protectedItemHealthStatus = $.protectedItemHealthStatus;
+        this.protectedItemType = $.protectedItemType;
+        this.protectionState = $.protectionState;
+        this.protectionStatus = $.protectionStatus;
+        this.serverName = $.serverName;
+        this.sourceResourceId = $.sourceResourceId;
+        this.workloadType = $.workloadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureVmWorkloadSAPAseDatabaseProtectedItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupManagementType;
-        private @Nullable String backupSetName;
-        private @Nullable String containerName;
-        private @Nullable String createMode;
-        private @Nullable String deferredDeleteTimeInUTC;
-        private @Nullable String deferredDeleteTimeRemaining;
-        private @Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo;
-        private @Nullable String friendlyName;
-        private @Nullable Boolean isDeferredDeleteScheduleUpcoming;
-        private @Nullable Boolean isRehydrate;
-        private @Nullable Boolean isScheduledForDeferredDelete;
-        private @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths;
-        private @Nullable ErrorDetailResponse lastBackupErrorDetail;
-        private @Nullable String lastBackupStatus;
-        private @Nullable String lastBackupTime;
-        private @Nullable String lastRecoveryPoint;
-        private @Nullable String parentName;
-        private @Nullable String parentType;
-        private @Nullable String policyId;
-        private @Nullable String protectedItemDataSourceId;
-        private @Nullable String protectedItemHealthStatus;
-        private String protectedItemType;
-        private @Nullable String protectionState;
-        private @Nullable String protectionStatus;
-        private @Nullable String serverName;
-        private @Nullable String sourceResourceId;
-        private @Nullable String workloadType;
+        private AzureVmWorkloadSAPAseDatabaseProtectedItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureVmWorkloadSAPAseDatabaseProtectedItemResponse();
         }
 
         public Builder(AzureVmWorkloadSAPAseDatabaseProtectedItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.backupSetName = defaults.backupSetName;
-    	      this.containerName = defaults.containerName;
-    	      this.createMode = defaults.createMode;
-    	      this.deferredDeleteTimeInUTC = defaults.deferredDeleteTimeInUTC;
-    	      this.deferredDeleteTimeRemaining = defaults.deferredDeleteTimeRemaining;
-    	      this.extendedInfo = defaults.extendedInfo;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.isDeferredDeleteScheduleUpcoming = defaults.isDeferredDeleteScheduleUpcoming;
-    	      this.isRehydrate = defaults.isRehydrate;
-    	      this.isScheduledForDeferredDelete = defaults.isScheduledForDeferredDelete;
-    	      this.kpisHealths = defaults.kpisHealths;
-    	      this.lastBackupErrorDetail = defaults.lastBackupErrorDetail;
-    	      this.lastBackupStatus = defaults.lastBackupStatus;
-    	      this.lastBackupTime = defaults.lastBackupTime;
-    	      this.lastRecoveryPoint = defaults.lastRecoveryPoint;
-    	      this.parentName = defaults.parentName;
-    	      this.parentType = defaults.parentType;
-    	      this.policyId = defaults.policyId;
-    	      this.protectedItemDataSourceId = defaults.protectedItemDataSourceId;
-    	      this.protectedItemHealthStatus = defaults.protectedItemHealthStatus;
-    	      this.protectedItemType = defaults.protectedItemType;
-    	      this.protectionState = defaults.protectionState;
-    	      this.protectionStatus = defaults.protectionStatus;
-    	      this.serverName = defaults.serverName;
-    	      this.sourceResourceId = defaults.sourceResourceId;
-    	      this.workloadType = defaults.workloadType;
+            $ = new AzureVmWorkloadSAPAseDatabaseProtectedItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder backupSetName(@Nullable String backupSetName) {
-            this.backupSetName = backupSetName;
+            $.backupSetName = backupSetName;
             return this;
         }
+
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
+
         public Builder createMode(@Nullable String createMode) {
-            this.createMode = createMode;
+            $.createMode = createMode;
             return this;
         }
+
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
-            this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
+            $.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
+
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
-            this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
+            $.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
+
         public Builder extendedInfo(@Nullable AzureVmWorkloadProtectedItemExtendedInfoResponse extendedInfo) {
-            this.extendedInfo = extendedInfo;
+            $.extendedInfo = extendedInfo;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
-            this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
+            $.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
+
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
-            this.isRehydrate = isRehydrate;
+            $.isRehydrate = isRehydrate;
             return this;
         }
+
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
-            this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
+            $.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
+
         public Builder kpisHealths(@Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths) {
-            this.kpisHealths = kpisHealths;
+            $.kpisHealths = kpisHealths;
             return this;
         }
+
         public Builder lastBackupErrorDetail(@Nullable ErrorDetailResponse lastBackupErrorDetail) {
-            this.lastBackupErrorDetail = lastBackupErrorDetail;
+            $.lastBackupErrorDetail = lastBackupErrorDetail;
             return this;
         }
+
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
-            this.lastBackupStatus = lastBackupStatus;
+            $.lastBackupStatus = lastBackupStatus;
             return this;
         }
+
         public Builder lastBackupTime(@Nullable String lastBackupTime) {
-            this.lastBackupTime = lastBackupTime;
+            $.lastBackupTime = lastBackupTime;
             return this;
         }
+
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
-            this.lastRecoveryPoint = lastRecoveryPoint;
+            $.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
+
         public Builder parentName(@Nullable String parentName) {
-            this.parentName = parentName;
+            $.parentName = parentName;
             return this;
         }
+
         public Builder parentType(@Nullable String parentType) {
-            this.parentType = parentType;
+            $.parentType = parentType;
             return this;
         }
+
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
+
         public Builder protectedItemDataSourceId(@Nullable String protectedItemDataSourceId) {
-            this.protectedItemDataSourceId = protectedItemDataSourceId;
+            $.protectedItemDataSourceId = protectedItemDataSourceId;
             return this;
         }
+
         public Builder protectedItemHealthStatus(@Nullable String protectedItemHealthStatus) {
-            this.protectedItemHealthStatus = protectedItemHealthStatus;
+            $.protectedItemHealthStatus = protectedItemHealthStatus;
             return this;
         }
+
         public Builder protectedItemType(String protectedItemType) {
-            this.protectedItemType = Objects.requireNonNull(protectedItemType);
+            $.protectedItemType = protectedItemType;
             return this;
         }
+
         public Builder protectionState(@Nullable String protectionState) {
-            this.protectionState = protectionState;
+            $.protectionState = protectionState;
             return this;
         }
+
         public Builder protectionStatus(@Nullable String protectionStatus) {
-            this.protectionStatus = protectionStatus;
+            $.protectionStatus = protectionStatus;
             return this;
         }
+
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = serverName;
+            $.serverName = serverName;
             return this;
         }
+
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
+
         public Builder workloadType(@Nullable String workloadType) {
-            this.workloadType = workloadType;
+            $.workloadType = workloadType;
             return this;
-        }        public AzureVmWorkloadSAPAseDatabaseProtectedItemResponse build() {
-            return new AzureVmWorkloadSAPAseDatabaseProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupErrorDetail, lastBackupStatus, lastBackupTime, lastRecoveryPoint, parentName, parentType, policyId, protectedItemDataSourceId, protectedItemHealthStatus, protectedItemType, protectionState, protectionStatus, serverName, sourceResourceId, workloadType);
+        }
+
+        public AzureVmWorkloadSAPAseDatabaseProtectedItemResponse build() {
+            $.protectedItemType = Codegen.stringProp("protectedItemType").arg($.protectedItemType).require();
+            return $;
         }
     }
+
 }

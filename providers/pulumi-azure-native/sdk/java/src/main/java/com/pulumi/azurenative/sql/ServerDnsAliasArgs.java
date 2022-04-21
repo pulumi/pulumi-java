@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dnsAliasName")
-      private final @Nullable Output<String> dnsAliasName;
+    private @Nullable Output<String> dnsAliasName;
 
-    public Output<String> dnsAliasName() {
-        return this.dnsAliasName == null ? Codegen.empty() : this.dnsAliasName;
+    public Optional<Output<String>> dnsAliasName() {
+        return Optional.ofNullable(this.dnsAliasName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,76 +42,70 @@ public final class ServerDnsAliasArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="serverName", required=true)
-      private final Output<String> serverName;
+    private Output<String> serverName;
 
     public Output<String> serverName() {
         return this.serverName;
     }
 
-    public ServerDnsAliasArgs(
-        @Nullable Output<String> dnsAliasName,
-        Output<String> resourceGroupName,
-        Output<String> serverName) {
-        this.dnsAliasName = dnsAliasName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private ServerDnsAliasArgs() {}
 
-    private ServerDnsAliasArgs() {
-        this.dnsAliasName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverName = Codegen.empty();
+    private ServerDnsAliasArgs(ServerDnsAliasArgs $) {
+        this.dnsAliasName = $.dnsAliasName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerDnsAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dnsAliasName;
-        private Output<String> resourceGroupName;
-        private Output<String> serverName;
+        private ServerDnsAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerDnsAliasArgs();
         }
 
         public Builder(ServerDnsAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsAliasName = defaults.dnsAliasName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new ServerDnsAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsAliasName(@Nullable Output<String> dnsAliasName) {
-            this.dnsAliasName = dnsAliasName;
+            $.dnsAliasName = dnsAliasName;
             return this;
         }
-        public Builder dnsAliasName(@Nullable String dnsAliasName) {
-            this.dnsAliasName = Codegen.ofNullable(dnsAliasName);
-            return this;
+
+        public Builder dnsAliasName(String dnsAliasName) {
+            return dnsAliasName(Output.of(dnsAliasName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverName(Output<String> serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Output.of(Objects.requireNonNull(serverName));
-            return this;
-        }        public ServerDnsAliasArgs build() {
-            return new ServerDnsAliasArgs(dnsAliasName, resourceGroupName, serverName);
+            return serverName(Output.of(serverName));
+        }
+
+        public ServerDnsAliasArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

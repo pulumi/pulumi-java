@@ -24,10 +24,10 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="durationExpression")
-      private final @Nullable String durationExpression;
+    private @Nullable String durationExpression;
 
     public Optional<String> durationExpression() {
-        return this.durationExpression == null ? Optional.empty() : Optional.ofNullable(this.durationExpression);
+        return Optional.ofNullable(this.durationExpression);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="seconds")
-      private final @Nullable Integer seconds;
+    private @Nullable Integer seconds;
 
     public Optional<Integer> seconds() {
-        return this.seconds == null ? Optional.empty() : Optional.ofNullable(this.seconds);
+        return Optional.ofNullable(this.seconds);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class DetectorModelSetTimer extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timerName", required=true)
-      private final String timerName;
+    private String timerName;
 
     public String timerName() {
         return this.timerName;
     }
 
-    public DetectorModelSetTimer(
-        @Nullable String durationExpression,
-        @Nullable Integer seconds,
-        String timerName) {
-        this.durationExpression = durationExpression;
-        this.seconds = seconds;
-        this.timerName = Objects.requireNonNull(timerName, "expected parameter 'timerName' to be non-null");
-    }
+    private DetectorModelSetTimer() {}
 
-    private DetectorModelSetTimer() {
-        this.durationExpression = null;
-        this.seconds = null;
-        this.timerName = null;
+    private DetectorModelSetTimer(DetectorModelSetTimer $) {
+        this.durationExpression = $.durationExpression;
+        this.seconds = $.seconds;
+        this.timerName = $.timerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelSetTimer defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String durationExpression;
-        private @Nullable Integer seconds;
-        private String timerName;
+        private DetectorModelSetTimer $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelSetTimer();
         }
 
         public Builder(DetectorModelSetTimer defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationExpression = defaults.durationExpression;
-    	      this.seconds = defaults.seconds;
-    	      this.timerName = defaults.timerName;
+            $ = new DetectorModelSetTimer(Objects.requireNonNull(defaults));
         }
 
         public Builder durationExpression(@Nullable String durationExpression) {
-            this.durationExpression = durationExpression;
+            $.durationExpression = durationExpression;
             return this;
         }
+
         public Builder seconds(@Nullable Integer seconds) {
-            this.seconds = seconds;
+            $.seconds = seconds;
             return this;
         }
+
         public Builder timerName(String timerName) {
-            this.timerName = Objects.requireNonNull(timerName);
+            $.timerName = timerName;
             return this;
-        }        public DetectorModelSetTimer build() {
-            return new DetectorModelSetTimer(durationExpression, seconds, timerName);
+        }
+
+        public DetectorModelSetTimer build() {
+            $.timerName = Objects.requireNonNull($.timerName, "expected parameter 'timerName' to be non-null");
+            return $;
         }
     }
+
 }

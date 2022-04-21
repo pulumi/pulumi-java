@@ -18,48 +18,49 @@ public final class SecurityPolicyRuleMatcherConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="srcIpRanges", required=true)
-      private final List<String> srcIpRanges;
+    private List<String> srcIpRanges;
 
     public List<String> srcIpRanges() {
         return this.srcIpRanges;
     }
 
-    public SecurityPolicyRuleMatcherConfigResponse(List<String> srcIpRanges) {
-        this.srcIpRanges = Objects.requireNonNull(srcIpRanges, "expected parameter 'srcIpRanges' to be non-null");
-    }
+    private SecurityPolicyRuleMatcherConfigResponse() {}
 
-    private SecurityPolicyRuleMatcherConfigResponse() {
-        this.srcIpRanges = List.of();
+    private SecurityPolicyRuleMatcherConfigResponse(SecurityPolicyRuleMatcherConfigResponse $) {
+        this.srcIpRanges = $.srcIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleMatcherConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> srcIpRanges;
+        private SecurityPolicyRuleMatcherConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleMatcherConfigResponse();
         }
 
         public Builder(SecurityPolicyRuleMatcherConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.srcIpRanges = defaults.srcIpRanges;
+            $ = new SecurityPolicyRuleMatcherConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder srcIpRanges(List<String> srcIpRanges) {
-            this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
+            $.srcIpRanges = srcIpRanges;
             return this;
         }
+
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
-        }        public SecurityPolicyRuleMatcherConfigResponse build() {
-            return new SecurityPolicyRuleMatcherConfigResponse(srcIpRanges);
+        }
+
+        public SecurityPolicyRuleMatcherConfigResponse build() {
+            $.srcIpRanges = Objects.requireNonNull($.srcIpRanges, "expected parameter 'srcIpRanges' to be non-null");
+            return $;
         }
     }
+
 }

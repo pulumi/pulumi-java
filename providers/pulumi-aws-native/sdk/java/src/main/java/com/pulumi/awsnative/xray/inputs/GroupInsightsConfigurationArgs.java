@@ -5,9 +5,9 @@ package com.pulumi.awsnative.xray.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GroupInsightsConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="insightsEnabled")
-      private final @Nullable Output<Boolean> insightsEnabled;
+    private @Nullable Output<Boolean> insightsEnabled;
 
-    public Output<Boolean> insightsEnabled() {
-        return this.insightsEnabled == null ? Codegen.empty() : this.insightsEnabled;
+    public Optional<Output<Boolean>> insightsEnabled() {
+        return Optional.ofNullable(this.insightsEnabled);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class GroupInsightsConfigurationArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="notificationsEnabled")
-      private final @Nullable Output<Boolean> notificationsEnabled;
+    private @Nullable Output<Boolean> notificationsEnabled;
 
-    public Output<Boolean> notificationsEnabled() {
-        return this.notificationsEnabled == null ? Codegen.empty() : this.notificationsEnabled;
+    public Optional<Output<Boolean>> notificationsEnabled() {
+        return Optional.ofNullable(this.notificationsEnabled);
     }
 
-    public GroupInsightsConfigurationArgs(
-        @Nullable Output<Boolean> insightsEnabled,
-        @Nullable Output<Boolean> notificationsEnabled) {
-        this.insightsEnabled = insightsEnabled;
-        this.notificationsEnabled = notificationsEnabled;
-    }
+    private GroupInsightsConfigurationArgs() {}
 
-    private GroupInsightsConfigurationArgs() {
-        this.insightsEnabled = Codegen.empty();
-        this.notificationsEnabled = Codegen.empty();
+    private GroupInsightsConfigurationArgs(GroupInsightsConfigurationArgs $) {
+        this.insightsEnabled = $.insightsEnabled;
+        this.notificationsEnabled = $.notificationsEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupInsightsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> insightsEnabled;
-        private @Nullable Output<Boolean> notificationsEnabled;
+        private GroupInsightsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupInsightsConfigurationArgs();
         }
 
         public Builder(GroupInsightsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.insightsEnabled = defaults.insightsEnabled;
-    	      this.notificationsEnabled = defaults.notificationsEnabled;
+            $ = new GroupInsightsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder insightsEnabled(@Nullable Output<Boolean> insightsEnabled) {
-            this.insightsEnabled = insightsEnabled;
+            $.insightsEnabled = insightsEnabled;
             return this;
         }
-        public Builder insightsEnabled(@Nullable Boolean insightsEnabled) {
-            this.insightsEnabled = Codegen.ofNullable(insightsEnabled);
-            return this;
+
+        public Builder insightsEnabled(Boolean insightsEnabled) {
+            return insightsEnabled(Output.of(insightsEnabled));
         }
+
         public Builder notificationsEnabled(@Nullable Output<Boolean> notificationsEnabled) {
-            this.notificationsEnabled = notificationsEnabled;
+            $.notificationsEnabled = notificationsEnabled;
             return this;
         }
-        public Builder notificationsEnabled(@Nullable Boolean notificationsEnabled) {
-            this.notificationsEnabled = Codegen.ofNullable(notificationsEnabled);
-            return this;
-        }        public GroupInsightsConfigurationArgs build() {
-            return new GroupInsightsConfigurationArgs(insightsEnabled, notificationsEnabled);
+
+        public Builder notificationsEnabled(Boolean notificationsEnabled) {
+            return notificationsEnabled(Output.of(notificationsEnabled));
+        }
+
+        public GroupInsightsConfigurationArgs build() {
+            return $;
         }
     }
+
 }

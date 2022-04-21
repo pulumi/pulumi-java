@@ -7,8 +7,8 @@ import com.pulumi.awsnative.cassandra.enums.TableMode;
 import com.pulumi.awsnative.cassandra.inputs.TableProvisionedThroughputArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class TableBillingModeArgs extends com.pulumi.resources.ResourceArg
     public static final TableBillingModeArgs Empty = new TableBillingModeArgs();
 
     @Import(name="mode", required=true)
-      private final Output<TableMode> mode;
+    private Output<TableMode> mode;
 
     public Output<TableMode> mode() {
         return this.mode;
     }
 
     @Import(name="provisionedThroughput")
-      private final @Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput;
+    private @Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput;
 
-    public Output<TableProvisionedThroughputArgs> provisionedThroughput() {
-        return this.provisionedThroughput == null ? Codegen.empty() : this.provisionedThroughput;
+    public Optional<Output<TableProvisionedThroughputArgs>> provisionedThroughput() {
+        return Optional.ofNullable(this.provisionedThroughput);
     }
 
-    public TableBillingModeArgs(
-        Output<TableMode> mode,
-        @Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.provisionedThroughput = provisionedThroughput;
-    }
+    private TableBillingModeArgs() {}
 
-    private TableBillingModeArgs() {
-        this.mode = Codegen.empty();
-        this.provisionedThroughput = Codegen.empty();
+    private TableBillingModeArgs(TableBillingModeArgs $) {
+        this.mode = $.mode;
+        this.provisionedThroughput = $.provisionedThroughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableBillingModeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<TableMode> mode;
-        private @Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput;
+        private TableBillingModeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableBillingModeArgs();
         }
 
         public Builder(TableBillingModeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.provisionedThroughput = defaults.provisionedThroughput;
+            $ = new TableBillingModeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(Output<TableMode> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(TableMode mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
+            return mode(Output.of(mode));
         }
+
         public Builder provisionedThroughput(@Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput) {
-            this.provisionedThroughput = provisionedThroughput;
+            $.provisionedThroughput = provisionedThroughput;
             return this;
         }
-        public Builder provisionedThroughput(@Nullable TableProvisionedThroughputArgs provisionedThroughput) {
-            this.provisionedThroughput = Codegen.ofNullable(provisionedThroughput);
-            return this;
-        }        public TableBillingModeArgs build() {
-            return new TableBillingModeArgs(mode, provisionedThroughput);
+
+        public Builder provisionedThroughput(TableProvisionedThroughputArgs provisionedThroughput) {
+            return provisionedThroughput(Output.of(provisionedThroughput));
+        }
+
+        public TableBillingModeArgs build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

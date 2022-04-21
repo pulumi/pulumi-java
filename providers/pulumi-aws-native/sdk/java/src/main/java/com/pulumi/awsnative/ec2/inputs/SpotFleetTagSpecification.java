@@ -17,65 +17,61 @@ public final class SpotFleetTagSpecification extends com.pulumi.resources.Invoke
     public static final SpotFleetTagSpecification Empty = new SpotFleetTagSpecification();
 
     @Import(name="resourceType")
-      private final @Nullable SpotFleetTagSpecificationResourceType resourceType;
+    private @Nullable SpotFleetTagSpecificationResourceType resourceType;
 
     public Optional<SpotFleetTagSpecificationResourceType> resourceType() {
-        return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
+        return Optional.ofNullable(this.resourceType);
     }
 
     @Import(name="tags")
-      private final @Nullable List<SpotFleetTag> tags;
+    private @Nullable List<SpotFleetTag> tags;
 
-    public List<SpotFleetTag> tags() {
-        return this.tags == null ? List.of() : this.tags;
+    public Optional<List<SpotFleetTag>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public SpotFleetTagSpecification(
-        @Nullable SpotFleetTagSpecificationResourceType resourceType,
-        @Nullable List<SpotFleetTag> tags) {
-        this.resourceType = resourceType;
-        this.tags = tags;
-    }
+    private SpotFleetTagSpecification() {}
 
-    private SpotFleetTagSpecification() {
-        this.resourceType = null;
-        this.tags = List.of();
+    private SpotFleetTagSpecification(SpotFleetTagSpecification $) {
+        this.resourceType = $.resourceType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetTagSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SpotFleetTagSpecificationResourceType resourceType;
-        private @Nullable List<SpotFleetTag> tags;
+        private SpotFleetTagSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetTagSpecification();
         }
 
         public Builder(SpotFleetTagSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.tags = defaults.tags;
+            $ = new SpotFleetTagSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(@Nullable SpotFleetTagSpecificationResourceType resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder tags(@Nullable List<SpotFleetTag> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(SpotFleetTag... tags) {
             return tags(List.of(tags));
-        }        public SpotFleetTagSpecification build() {
-            return new SpotFleetTagSpecification(resourceType, tags);
+        }
+
+        public SpotFleetTagSpecification build() {
+            return $;
         }
     }
+
 }

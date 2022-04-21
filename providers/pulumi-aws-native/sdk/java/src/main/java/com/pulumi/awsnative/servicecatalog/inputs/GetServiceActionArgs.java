@@ -13,45 +13,45 @@ public final class GetServiceActionArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetServiceActionArgs Empty = new GetServiceActionArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetServiceActionArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetServiceActionArgs() {}
 
-    private GetServiceActionArgs() {
-        this.id = null;
+    private GetServiceActionArgs(GetServiceActionArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetServiceActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceActionArgs();
         }
 
         public Builder(GetServiceActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetServiceActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetServiceActionArgs build() {
-            return new GetServiceActionArgs(id);
+        }
+
+        public GetServiceActionArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

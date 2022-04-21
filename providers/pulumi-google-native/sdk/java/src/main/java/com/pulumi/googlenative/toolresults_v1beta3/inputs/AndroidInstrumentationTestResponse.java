@@ -23,7 +23,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="testPackageId", required=true)
-      private final String testPackageId;
+    private String testPackageId;
 
     public String testPackageId() {
         return this.testPackageId;
@@ -34,7 +34,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="testRunnerClass", required=true)
-      private final String testRunnerClass;
+    private String testRunnerClass;
 
     public String testRunnerClass() {
         return this.testRunnerClass;
@@ -45,7 +45,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="testTargets", required=true)
-      private final List<String> testTargets;
+    private List<String> testTargets;
 
     public List<String> testTargets() {
         return this.testTargets;
@@ -56,76 +56,70 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="useOrchestrator", required=true)
-      private final Boolean useOrchestrator;
+    private Boolean useOrchestrator;
 
     public Boolean useOrchestrator() {
         return this.useOrchestrator;
     }
 
-    public AndroidInstrumentationTestResponse(
-        String testPackageId,
-        String testRunnerClass,
-        List<String> testTargets,
-        Boolean useOrchestrator) {
-        this.testPackageId = Objects.requireNonNull(testPackageId, "expected parameter 'testPackageId' to be non-null");
-        this.testRunnerClass = Objects.requireNonNull(testRunnerClass, "expected parameter 'testRunnerClass' to be non-null");
-        this.testTargets = Objects.requireNonNull(testTargets, "expected parameter 'testTargets' to be non-null");
-        this.useOrchestrator = Objects.requireNonNull(useOrchestrator, "expected parameter 'useOrchestrator' to be non-null");
-    }
+    private AndroidInstrumentationTestResponse() {}
 
-    private AndroidInstrumentationTestResponse() {
-        this.testPackageId = null;
-        this.testRunnerClass = null;
-        this.testTargets = List.of();
-        this.useOrchestrator = null;
+    private AndroidInstrumentationTestResponse(AndroidInstrumentationTestResponse $) {
+        this.testPackageId = $.testPackageId;
+        this.testRunnerClass = $.testRunnerClass;
+        this.testTargets = $.testTargets;
+        this.useOrchestrator = $.useOrchestrator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidInstrumentationTestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String testPackageId;
-        private String testRunnerClass;
-        private List<String> testTargets;
-        private Boolean useOrchestrator;
+        private AndroidInstrumentationTestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidInstrumentationTestResponse();
         }
 
         public Builder(AndroidInstrumentationTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testPackageId = defaults.testPackageId;
-    	      this.testRunnerClass = defaults.testRunnerClass;
-    	      this.testTargets = defaults.testTargets;
-    	      this.useOrchestrator = defaults.useOrchestrator;
+            $ = new AndroidInstrumentationTestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder testPackageId(String testPackageId) {
-            this.testPackageId = Objects.requireNonNull(testPackageId);
+            $.testPackageId = testPackageId;
             return this;
         }
+
         public Builder testRunnerClass(String testRunnerClass) {
-            this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
+            $.testRunnerClass = testRunnerClass;
             return this;
         }
+
         public Builder testTargets(List<String> testTargets) {
-            this.testTargets = Objects.requireNonNull(testTargets);
+            $.testTargets = testTargets;
             return this;
         }
+
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
         }
+
         public Builder useOrchestrator(Boolean useOrchestrator) {
-            this.useOrchestrator = Objects.requireNonNull(useOrchestrator);
+            $.useOrchestrator = useOrchestrator;
             return this;
-        }        public AndroidInstrumentationTestResponse build() {
-            return new AndroidInstrumentationTestResponse(testPackageId, testRunnerClass, testTargets, useOrchestrator);
+        }
+
+        public AndroidInstrumentationTestResponse build() {
+            $.testPackageId = Objects.requireNonNull($.testPackageId, "expected parameter 'testPackageId' to be non-null");
+            $.testRunnerClass = Objects.requireNonNull($.testRunnerClass, "expected parameter 'testRunnerClass' to be non-null");
+            $.testTargets = Objects.requireNonNull($.testTargets, "expected parameter 'testTargets' to be non-null");
+            $.useOrchestrator = Objects.requireNonNull($.useOrchestrator, "expected parameter 'useOrchestrator' to be non-null");
+            return $;
         }
     }
+
 }

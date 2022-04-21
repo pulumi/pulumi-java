@@ -24,7 +24,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="age", required=true)
-      private final Integer age;
+    private Integer age;
 
     public Integer age() {
         return this.age;
@@ -35,7 +35,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="createdBefore", required=true)
-      private final String createdBefore;
+    private String createdBefore;
 
     public String createdBefore() {
         return this.createdBefore;
@@ -46,7 +46,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="customTimeBefore", required=true)
-      private final String customTimeBefore;
+    private String customTimeBefore;
 
     public String customTimeBefore() {
         return this.customTimeBefore;
@@ -57,7 +57,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="daysSinceCustomTime", required=true)
-      private final Integer daysSinceCustomTime;
+    private Integer daysSinceCustomTime;
 
     public Integer daysSinceCustomTime() {
         return this.daysSinceCustomTime;
@@ -68,7 +68,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="daysSinceNoncurrentTime", required=true)
-      private final Integer daysSinceNoncurrentTime;
+    private Integer daysSinceNoncurrentTime;
 
     public Integer daysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime;
@@ -79,7 +79,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="isLive", required=true)
-      private final Boolean isLive;
+    private Boolean isLive;
 
     public Boolean isLive() {
         return this.isLive;
@@ -90,7 +90,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="matchesPattern", required=true)
-      private final String matchesPattern;
+    private String matchesPattern;
 
     public String matchesPattern() {
         return this.matchesPattern;
@@ -101,7 +101,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="matchesStorageClass", required=true)
-      private final List<String> matchesStorageClass;
+    private List<String> matchesStorageClass;
 
     public List<String> matchesStorageClass() {
         return this.matchesStorageClass;
@@ -112,7 +112,7 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="noncurrentTimeBefore", required=true)
-      private final String noncurrentTimeBefore;
+    private String noncurrentTimeBefore;
 
     public String noncurrentTimeBefore() {
         return this.noncurrentTimeBefore;
@@ -123,130 +123,112 @@ public final class BucketLifecycleRuleItemConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="numNewerVersions", required=true)
-      private final Integer numNewerVersions;
+    private Integer numNewerVersions;
 
     public Integer numNewerVersions() {
         return this.numNewerVersions;
     }
 
-    public BucketLifecycleRuleItemConditionResponse(
-        Integer age,
-        String createdBefore,
-        String customTimeBefore,
-        Integer daysSinceCustomTime,
-        Integer daysSinceNoncurrentTime,
-        Boolean isLive,
-        String matchesPattern,
-        List<String> matchesStorageClass,
-        String noncurrentTimeBefore,
-        Integer numNewerVersions) {
-        this.age = Objects.requireNonNull(age, "expected parameter 'age' to be non-null");
-        this.createdBefore = Objects.requireNonNull(createdBefore, "expected parameter 'createdBefore' to be non-null");
-        this.customTimeBefore = Objects.requireNonNull(customTimeBefore, "expected parameter 'customTimeBefore' to be non-null");
-        this.daysSinceCustomTime = Objects.requireNonNull(daysSinceCustomTime, "expected parameter 'daysSinceCustomTime' to be non-null");
-        this.daysSinceNoncurrentTime = Objects.requireNonNull(daysSinceNoncurrentTime, "expected parameter 'daysSinceNoncurrentTime' to be non-null");
-        this.isLive = Objects.requireNonNull(isLive, "expected parameter 'isLive' to be non-null");
-        this.matchesPattern = Objects.requireNonNull(matchesPattern, "expected parameter 'matchesPattern' to be non-null");
-        this.matchesStorageClass = Objects.requireNonNull(matchesStorageClass, "expected parameter 'matchesStorageClass' to be non-null");
-        this.noncurrentTimeBefore = Objects.requireNonNull(noncurrentTimeBefore, "expected parameter 'noncurrentTimeBefore' to be non-null");
-        this.numNewerVersions = Objects.requireNonNull(numNewerVersions, "expected parameter 'numNewerVersions' to be non-null");
-    }
+    private BucketLifecycleRuleItemConditionResponse() {}
 
-    private BucketLifecycleRuleItemConditionResponse() {
-        this.age = null;
-        this.createdBefore = null;
-        this.customTimeBefore = null;
-        this.daysSinceCustomTime = null;
-        this.daysSinceNoncurrentTime = null;
-        this.isLive = null;
-        this.matchesPattern = null;
-        this.matchesStorageClass = List.of();
-        this.noncurrentTimeBefore = null;
-        this.numNewerVersions = null;
+    private BucketLifecycleRuleItemConditionResponse(BucketLifecycleRuleItemConditionResponse $) {
+        this.age = $.age;
+        this.createdBefore = $.createdBefore;
+        this.customTimeBefore = $.customTimeBefore;
+        this.daysSinceCustomTime = $.daysSinceCustomTime;
+        this.daysSinceNoncurrentTime = $.daysSinceNoncurrentTime;
+        this.isLive = $.isLive;
+        this.matchesPattern = $.matchesPattern;
+        this.matchesStorageClass = $.matchesStorageClass;
+        this.noncurrentTimeBefore = $.noncurrentTimeBefore;
+        this.numNewerVersions = $.numNewerVersions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleRuleItemConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer age;
-        private String createdBefore;
-        private String customTimeBefore;
-        private Integer daysSinceCustomTime;
-        private Integer daysSinceNoncurrentTime;
-        private Boolean isLive;
-        private String matchesPattern;
-        private List<String> matchesStorageClass;
-        private String noncurrentTimeBefore;
-        private Integer numNewerVersions;
+        private BucketLifecycleRuleItemConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleRuleItemConditionResponse();
         }
 
         public Builder(BucketLifecycleRuleItemConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.age = defaults.age;
-    	      this.createdBefore = defaults.createdBefore;
-    	      this.customTimeBefore = defaults.customTimeBefore;
-    	      this.daysSinceCustomTime = defaults.daysSinceCustomTime;
-    	      this.daysSinceNoncurrentTime = defaults.daysSinceNoncurrentTime;
-    	      this.isLive = defaults.isLive;
-    	      this.matchesPattern = defaults.matchesPattern;
-    	      this.matchesStorageClass = defaults.matchesStorageClass;
-    	      this.noncurrentTimeBefore = defaults.noncurrentTimeBefore;
-    	      this.numNewerVersions = defaults.numNewerVersions;
+            $ = new BucketLifecycleRuleItemConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder age(Integer age) {
-            this.age = Objects.requireNonNull(age);
+            $.age = age;
             return this;
         }
+
         public Builder createdBefore(String createdBefore) {
-            this.createdBefore = Objects.requireNonNull(createdBefore);
+            $.createdBefore = createdBefore;
             return this;
         }
+
         public Builder customTimeBefore(String customTimeBefore) {
-            this.customTimeBefore = Objects.requireNonNull(customTimeBefore);
+            $.customTimeBefore = customTimeBefore;
             return this;
         }
+
         public Builder daysSinceCustomTime(Integer daysSinceCustomTime) {
-            this.daysSinceCustomTime = Objects.requireNonNull(daysSinceCustomTime);
+            $.daysSinceCustomTime = daysSinceCustomTime;
             return this;
         }
+
         public Builder daysSinceNoncurrentTime(Integer daysSinceNoncurrentTime) {
-            this.daysSinceNoncurrentTime = Objects.requireNonNull(daysSinceNoncurrentTime);
+            $.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
             return this;
         }
+
         public Builder isLive(Boolean isLive) {
-            this.isLive = Objects.requireNonNull(isLive);
+            $.isLive = isLive;
             return this;
         }
+
         public Builder matchesPattern(String matchesPattern) {
-            this.matchesPattern = Objects.requireNonNull(matchesPattern);
+            $.matchesPattern = matchesPattern;
             return this;
         }
+
         public Builder matchesStorageClass(List<String> matchesStorageClass) {
-            this.matchesStorageClass = Objects.requireNonNull(matchesStorageClass);
+            $.matchesStorageClass = matchesStorageClass;
             return this;
         }
+
         public Builder matchesStorageClass(String... matchesStorageClass) {
             return matchesStorageClass(List.of(matchesStorageClass));
         }
+
         public Builder noncurrentTimeBefore(String noncurrentTimeBefore) {
-            this.noncurrentTimeBefore = Objects.requireNonNull(noncurrentTimeBefore);
+            $.noncurrentTimeBefore = noncurrentTimeBefore;
             return this;
         }
+
         public Builder numNewerVersions(Integer numNewerVersions) {
-            this.numNewerVersions = Objects.requireNonNull(numNewerVersions);
+            $.numNewerVersions = numNewerVersions;
             return this;
-        }        public BucketLifecycleRuleItemConditionResponse build() {
-            return new BucketLifecycleRuleItemConditionResponse(age, createdBefore, customTimeBefore, daysSinceCustomTime, daysSinceNoncurrentTime, isLive, matchesPattern, matchesStorageClass, noncurrentTimeBefore, numNewerVersions);
+        }
+
+        public BucketLifecycleRuleItemConditionResponse build() {
+            $.age = Objects.requireNonNull($.age, "expected parameter 'age' to be non-null");
+            $.createdBefore = Objects.requireNonNull($.createdBefore, "expected parameter 'createdBefore' to be non-null");
+            $.customTimeBefore = Objects.requireNonNull($.customTimeBefore, "expected parameter 'customTimeBefore' to be non-null");
+            $.daysSinceCustomTime = Objects.requireNonNull($.daysSinceCustomTime, "expected parameter 'daysSinceCustomTime' to be non-null");
+            $.daysSinceNoncurrentTime = Objects.requireNonNull($.daysSinceNoncurrentTime, "expected parameter 'daysSinceNoncurrentTime' to be non-null");
+            $.isLive = Objects.requireNonNull($.isLive, "expected parameter 'isLive' to be non-null");
+            $.matchesPattern = Objects.requireNonNull($.matchesPattern, "expected parameter 'matchesPattern' to be non-null");
+            $.matchesStorageClass = Objects.requireNonNull($.matchesStorageClass, "expected parameter 'matchesStorageClass' to be non-null");
+            $.noncurrentTimeBefore = Objects.requireNonNull($.noncurrentTimeBefore, "expected parameter 'noncurrentTimeBefore' to be non-null");
+            $.numNewerVersions = Objects.requireNonNull($.numNewerVersions, "expected parameter 'numNewerVersions' to be non-null");
+            return $;
         }
     }
+
 }

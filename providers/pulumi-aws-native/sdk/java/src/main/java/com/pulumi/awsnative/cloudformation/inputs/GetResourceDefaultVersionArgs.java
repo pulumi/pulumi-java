@@ -17,45 +17,45 @@ public final class GetResourceDefaultVersionArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetResourceDefaultVersionArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetResourceDefaultVersionArgs() {}
 
-    private GetResourceDefaultVersionArgs() {
-        this.arn = null;
+    private GetResourceDefaultVersionArgs(GetResourceDefaultVersionArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceDefaultVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetResourceDefaultVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceDefaultVersionArgs();
         }
 
         public Builder(GetResourceDefaultVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetResourceDefaultVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetResourceDefaultVersionArgs build() {
-            return new GetResourceDefaultVersionArgs(arn);
+        }
+
+        public GetResourceDefaultVersionArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

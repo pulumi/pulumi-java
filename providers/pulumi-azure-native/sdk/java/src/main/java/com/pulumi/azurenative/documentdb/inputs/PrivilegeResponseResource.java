@@ -23,10 +23,10 @@ public final class PrivilegeResponseResource extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="collection")
-      private final @Nullable String collection;
+    private @Nullable String collection;
 
     public Optional<String> collection() {
-        return this.collection == null ? Optional.empty() : Optional.ofNullable(this.collection);
+        return Optional.ofNullable(this.collection);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class PrivilegeResponseResource extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="db")
-      private final @Nullable String db;
+    private @Nullable String db;
 
     public Optional<String> db() {
-        return this.db == null ? Optional.empty() : Optional.ofNullable(this.db);
+        return Optional.ofNullable(this.db);
     }
 
-    public PrivilegeResponseResource(
-        @Nullable String collection,
-        @Nullable String db) {
-        this.collection = collection;
-        this.db = db;
-    }
+    private PrivilegeResponseResource() {}
 
-    private PrivilegeResponseResource() {
-        this.collection = null;
-        this.db = null;
+    private PrivilegeResponseResource(PrivilegeResponseResource $) {
+        this.collection = $.collection;
+        this.db = $.db;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivilegeResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String collection;
-        private @Nullable String db;
+        private PrivilegeResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivilegeResponseResource();
         }
 
         public Builder(PrivilegeResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collection = defaults.collection;
-    	      this.db = defaults.db;
+            $ = new PrivilegeResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder collection(@Nullable String collection) {
-            this.collection = collection;
+            $.collection = collection;
             return this;
         }
+
         public Builder db(@Nullable String db) {
-            this.db = db;
+            $.db = db;
             return this;
-        }        public PrivilegeResponseResource build() {
-            return new PrivilegeResponseResource(collection, db);
+        }
+
+        public PrivilegeResponseResource build() {
+            return $;
         }
     }
+
 }

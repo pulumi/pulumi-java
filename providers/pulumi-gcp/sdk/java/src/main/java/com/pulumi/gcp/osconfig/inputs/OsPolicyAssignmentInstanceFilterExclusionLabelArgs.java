@@ -5,10 +5,10 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class OsPolicyAssignmentInstanceFilterExclusionLabelArgs extends co
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
-    public OsPolicyAssignmentInstanceFilterExclusionLabelArgs(@Nullable Output<Map<String,String>> labels) {
-        this.labels = labels;
-    }
+    private OsPolicyAssignmentInstanceFilterExclusionLabelArgs() {}
 
-    private OsPolicyAssignmentInstanceFilterExclusionLabelArgs() {
-        this.labels = Codegen.empty();
+    private OsPolicyAssignmentInstanceFilterExclusionLabelArgs(OsPolicyAssignmentInstanceFilterExclusionLabelArgs $) {
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentInstanceFilterExclusionLabelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> labels;
+        private OsPolicyAssignmentInstanceFilterExclusionLabelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentInstanceFilterExclusionLabelArgs();
         }
 
         public Builder(OsPolicyAssignmentInstanceFilterExclusionLabelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
+            $ = new OsPolicyAssignmentInstanceFilterExclusionLabelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
-        }        public OsPolicyAssignmentInstanceFilterExclusionLabelArgs build() {
-            return new OsPolicyAssignmentInstanceFilterExclusionLabelArgs(labels);
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
+        }
+
+        public OsPolicyAssignmentInstanceFilterExclusionLabelArgs build() {
+            return $;
         }
     }
+
 }

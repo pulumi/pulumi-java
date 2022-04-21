@@ -10,10 +10,10 @@ import com.pulumi.azurenative.providerhub.inputs.NotificationEndpointArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,136 +22,124 @@ public final class NotificationRegistrationPropertiesArgs extends com.pulumi.res
     public static final NotificationRegistrationPropertiesArgs Empty = new NotificationRegistrationPropertiesArgs();
 
     @Import(name="includedEvents")
-      private final @Nullable Output<List<String>> includedEvents;
+    private @Nullable Output<List<String>> includedEvents;
 
-    public Output<List<String>> includedEvents() {
-        return this.includedEvents == null ? Codegen.empty() : this.includedEvents;
+    public Optional<Output<List<String>>> includedEvents() {
+        return Optional.ofNullable(this.includedEvents);
     }
 
     @Import(name="messageScope")
-      private final @Nullable Output<Either<String,MessageScope>> messageScope;
+    private @Nullable Output<Either<String,MessageScope>> messageScope;
 
-    public Output<Either<String,MessageScope>> messageScope() {
-        return this.messageScope == null ? Codegen.empty() : this.messageScope;
+    public Optional<Output<Either<String,MessageScope>>> messageScope() {
+        return Optional.ofNullable(this.messageScope);
     }
 
     @Import(name="notificationEndpoints")
-      private final @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints;
+    private @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints;
 
-    public Output<List<NotificationEndpointArgs>> notificationEndpoints() {
-        return this.notificationEndpoints == null ? Codegen.empty() : this.notificationEndpoints;
+    public Optional<Output<List<NotificationEndpointArgs>>> notificationEndpoints() {
+        return Optional.ofNullable(this.notificationEndpoints);
     }
 
     @Import(name="notificationMode")
-      private final @Nullable Output<Either<String,NotificationMode>> notificationMode;
+    private @Nullable Output<Either<String,NotificationMode>> notificationMode;
 
-    public Output<Either<String,NotificationMode>> notificationMode() {
-        return this.notificationMode == null ? Codegen.empty() : this.notificationMode;
+    public Optional<Output<Either<String,NotificationMode>>> notificationMode() {
+        return Optional.ofNullable(this.notificationMode);
     }
 
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public NotificationRegistrationPropertiesArgs(
-        @Nullable Output<List<String>> includedEvents,
-        @Nullable Output<Either<String,MessageScope>> messageScope,
-        @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints,
-        @Nullable Output<Either<String,NotificationMode>> notificationMode,
-        @Nullable Output<Either<String,ProvisioningState>> provisioningState) {
-        this.includedEvents = includedEvents;
-        this.messageScope = messageScope;
-        this.notificationEndpoints = notificationEndpoints;
-        this.notificationMode = notificationMode;
-        this.provisioningState = provisioningState;
-    }
+    private NotificationRegistrationPropertiesArgs() {}
 
-    private NotificationRegistrationPropertiesArgs() {
-        this.includedEvents = Codegen.empty();
-        this.messageScope = Codegen.empty();
-        this.notificationEndpoints = Codegen.empty();
-        this.notificationMode = Codegen.empty();
-        this.provisioningState = Codegen.empty();
+    private NotificationRegistrationPropertiesArgs(NotificationRegistrationPropertiesArgs $) {
+        this.includedEvents = $.includedEvents;
+        this.messageScope = $.messageScope;
+        this.notificationEndpoints = $.notificationEndpoints;
+        this.notificationMode = $.notificationMode;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRegistrationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> includedEvents;
-        private @Nullable Output<Either<String,MessageScope>> messageScope;
-        private @Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints;
-        private @Nullable Output<Either<String,NotificationMode>> notificationMode;
-        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+        private NotificationRegistrationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRegistrationPropertiesArgs();
         }
 
         public Builder(NotificationRegistrationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includedEvents = defaults.includedEvents;
-    	      this.messageScope = defaults.messageScope;
-    	      this.notificationEndpoints = defaults.notificationEndpoints;
-    	      this.notificationMode = defaults.notificationMode;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new NotificationRegistrationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder includedEvents(@Nullable Output<List<String>> includedEvents) {
-            this.includedEvents = includedEvents;
+            $.includedEvents = includedEvents;
             return this;
         }
-        public Builder includedEvents(@Nullable List<String> includedEvents) {
-            this.includedEvents = Codegen.ofNullable(includedEvents);
-            return this;
+
+        public Builder includedEvents(List<String> includedEvents) {
+            return includedEvents(Output.of(includedEvents));
         }
+
         public Builder includedEvents(String... includedEvents) {
             return includedEvents(List.of(includedEvents));
         }
+
         public Builder messageScope(@Nullable Output<Either<String,MessageScope>> messageScope) {
-            this.messageScope = messageScope;
+            $.messageScope = messageScope;
             return this;
         }
-        public Builder messageScope(@Nullable Either<String,MessageScope> messageScope) {
-            this.messageScope = Codegen.ofNullable(messageScope);
-            return this;
+
+        public Builder messageScope(Either<String,MessageScope> messageScope) {
+            return messageScope(Output.of(messageScope));
         }
+
         public Builder notificationEndpoints(@Nullable Output<List<NotificationEndpointArgs>> notificationEndpoints) {
-            this.notificationEndpoints = notificationEndpoints;
+            $.notificationEndpoints = notificationEndpoints;
             return this;
         }
-        public Builder notificationEndpoints(@Nullable List<NotificationEndpointArgs> notificationEndpoints) {
-            this.notificationEndpoints = Codegen.ofNullable(notificationEndpoints);
-            return this;
+
+        public Builder notificationEndpoints(List<NotificationEndpointArgs> notificationEndpoints) {
+            return notificationEndpoints(Output.of(notificationEndpoints));
         }
+
         public Builder notificationEndpoints(NotificationEndpointArgs... notificationEndpoints) {
             return notificationEndpoints(List.of(notificationEndpoints));
         }
+
         public Builder notificationMode(@Nullable Output<Either<String,NotificationMode>> notificationMode) {
-            this.notificationMode = notificationMode;
+            $.notificationMode = notificationMode;
             return this;
         }
-        public Builder notificationMode(@Nullable Either<String,NotificationMode> notificationMode) {
-            this.notificationMode = Codegen.ofNullable(notificationMode);
-            return this;
+
+        public Builder notificationMode(Either<String,NotificationMode> notificationMode) {
+            return notificationMode(Output.of(notificationMode));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
-        }        public NotificationRegistrationPropertiesArgs build() {
-            return new NotificationRegistrationPropertiesArgs(includedEvents, messageScope, notificationEndpoints, notificationMode, provisioningState);
+
+        public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
+        }
+
+        public NotificationRegistrationPropertiesArgs build() {
+            return $;
         }
     }
+
 }

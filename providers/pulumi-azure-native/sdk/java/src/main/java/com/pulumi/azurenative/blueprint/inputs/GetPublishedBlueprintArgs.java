@@ -17,7 +17,7 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="blueprintName", required=true)
-      private final String blueprintName;
+    private String blueprintName;
 
     public String blueprintName() {
         return this.blueprintName;
@@ -28,7 +28,7 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceScope", required=true)
-      private final String resourceScope;
+    private String resourceScope;
 
     public String resourceScope() {
         return this.resourceScope;
@@ -39,64 +39,59 @@ public final class GetPublishedBlueprintArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="versionId", required=true)
-      private final String versionId;
+    private String versionId;
 
     public String versionId() {
         return this.versionId;
     }
 
-    public GetPublishedBlueprintArgs(
-        String blueprintName,
-        String resourceScope,
-        String versionId) {
-        this.blueprintName = Objects.requireNonNull(blueprintName, "expected parameter 'blueprintName' to be non-null");
-        this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");
-        this.versionId = Objects.requireNonNull(versionId, "expected parameter 'versionId' to be non-null");
-    }
+    private GetPublishedBlueprintArgs() {}
 
-    private GetPublishedBlueprintArgs() {
-        this.blueprintName = null;
-        this.resourceScope = null;
-        this.versionId = null;
+    private GetPublishedBlueprintArgs(GetPublishedBlueprintArgs $) {
+        this.blueprintName = $.blueprintName;
+        this.resourceScope = $.resourceScope;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPublishedBlueprintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blueprintName;
-        private String resourceScope;
-        private String versionId;
+        private GetPublishedBlueprintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPublishedBlueprintArgs();
         }
 
         public Builder(GetPublishedBlueprintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blueprintName = defaults.blueprintName;
-    	      this.resourceScope = defaults.resourceScope;
-    	      this.versionId = defaults.versionId;
+            $ = new GetPublishedBlueprintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blueprintName(String blueprintName) {
-            this.blueprintName = Objects.requireNonNull(blueprintName);
+            $.blueprintName = blueprintName;
             return this;
         }
+
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Objects.requireNonNull(resourceScope);
+            $.resourceScope = resourceScope;
             return this;
         }
+
         public Builder versionId(String versionId) {
-            this.versionId = Objects.requireNonNull(versionId);
+            $.versionId = versionId;
             return this;
-        }        public GetPublishedBlueprintArgs build() {
-            return new GetPublishedBlueprintArgs(blueprintName, resourceScope, versionId);
+        }
+
+        public GetPublishedBlueprintArgs build() {
+            $.blueprintName = Objects.requireNonNull($.blueprintName, "expected parameter 'blueprintName' to be non-null");
+            $.resourceScope = Objects.requireNonNull($.resourceScope, "expected parameter 'resourceScope' to be non-null");
+            $.versionId = Objects.requireNonNull($.versionId, "expected parameter 'versionId' to be non-null");
+            return $;
         }
     }
+
 }

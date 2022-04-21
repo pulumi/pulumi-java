@@ -5,10 +5,10 @@ package com.pulumi.awsnative.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
      * 
      */
     @Import(name="allowedValues")
-      private final @Nullable Output<String> allowedValues;
+    private @Nullable Output<String> allowedValues;
 
-    public Output<String> allowedValues() {
-        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
+    public Optional<Output<String>> allowedValues() {
+        return Optional.ofNullable(this.allowedValues);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
      * 
      */
     @Import(name="applyMethod")
-      private final @Nullable Output<String> applyMethod;
+    private @Nullable Output<String> applyMethod;
 
-    public Output<String> applyMethod() {
-        return this.applyMethod == null ? Codegen.empty() : this.applyMethod;
+    public Optional<Output<String>> applyMethod() {
+        return Optional.ofNullable(this.applyMethod);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
      * 
      */
     @Import(name="applyType")
-      private final @Nullable Output<String> applyType;
+    private @Nullable Output<String> applyType;
 
-    public Output<String> applyType() {
-        return this.applyType == null ? Codegen.empty() : this.applyType;
+    public Optional<Output<String>> applyType() {
+        return Optional.ofNullable(this.applyType);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<String> dataType;
+    private @Nullable Output<String> dataType;
 
-    public Output<String> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<String>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
      * 
      */
     @Import(name="isModifiable")
-      private final @Nullable Output<Boolean> isModifiable;
+    private @Nullable Output<Boolean> isModifiable;
 
-    public Output<Boolean> isModifiable() {
-        return this.isModifiable == null ? Codegen.empty() : this.isModifiable;
+    public Optional<Output<Boolean>> isModifiable() {
+        return Optional.ofNullable(this.isModifiable);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
      * 
      */
     @Import(name="parameterName")
-      private final @Nullable Output<String> parameterName;
+    private @Nullable Output<String> parameterName;
 
-    public Output<String> parameterName() {
-        return this.parameterName == null ? Codegen.empty() : this.parameterName;
+    public Optional<Output<String>> parameterName() {
+        return Optional.ofNullable(this.parameterName);
     }
 
     /**
@@ -102,141 +102,118 @@ public final class DatabaseRelationalDatabaseParameterArgs extends com.pulumi.re
      * 
      */
     @Import(name="parameterValue")
-      private final @Nullable Output<String> parameterValue;
+    private @Nullable Output<String> parameterValue;
 
-    public Output<String> parameterValue() {
-        return this.parameterValue == null ? Codegen.empty() : this.parameterValue;
+    public Optional<Output<String>> parameterValue() {
+        return Optional.ofNullable(this.parameterValue);
     }
 
-    public DatabaseRelationalDatabaseParameterArgs(
-        @Nullable Output<String> allowedValues,
-        @Nullable Output<String> applyMethod,
-        @Nullable Output<String> applyType,
-        @Nullable Output<String> dataType,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> isModifiable,
-        @Nullable Output<String> parameterName,
-        @Nullable Output<String> parameterValue) {
-        this.allowedValues = allowedValues;
-        this.applyMethod = applyMethod;
-        this.applyType = applyType;
-        this.dataType = dataType;
-        this.description = description;
-        this.isModifiable = isModifiable;
-        this.parameterName = parameterName;
-        this.parameterValue = parameterValue;
-    }
+    private DatabaseRelationalDatabaseParameterArgs() {}
 
-    private DatabaseRelationalDatabaseParameterArgs() {
-        this.allowedValues = Codegen.empty();
-        this.applyMethod = Codegen.empty();
-        this.applyType = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.isModifiable = Codegen.empty();
-        this.parameterName = Codegen.empty();
-        this.parameterValue = Codegen.empty();
+    private DatabaseRelationalDatabaseParameterArgs(DatabaseRelationalDatabaseParameterArgs $) {
+        this.allowedValues = $.allowedValues;
+        this.applyMethod = $.applyMethod;
+        this.applyType = $.applyType;
+        this.dataType = $.dataType;
+        this.description = $.description;
+        this.isModifiable = $.isModifiable;
+        this.parameterName = $.parameterName;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseRelationalDatabaseParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allowedValues;
-        private @Nullable Output<String> applyMethod;
-        private @Nullable Output<String> applyType;
-        private @Nullable Output<String> dataType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> isModifiable;
-        private @Nullable Output<String> parameterName;
-        private @Nullable Output<String> parameterValue;
+        private DatabaseRelationalDatabaseParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseRelationalDatabaseParameterArgs();
         }
 
         public Builder(DatabaseRelationalDatabaseParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
-    	      this.applyMethod = defaults.applyMethod;
-    	      this.applyType = defaults.applyType;
-    	      this.dataType = defaults.dataType;
-    	      this.description = defaults.description;
-    	      this.isModifiable = defaults.isModifiable;
-    	      this.parameterName = defaults.parameterName;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new DatabaseRelationalDatabaseParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(@Nullable Output<String> allowedValues) {
-            this.allowedValues = allowedValues;
+            $.allowedValues = allowedValues;
             return this;
         }
-        public Builder allowedValues(@Nullable String allowedValues) {
-            this.allowedValues = Codegen.ofNullable(allowedValues);
-            return this;
+
+        public Builder allowedValues(String allowedValues) {
+            return allowedValues(Output.of(allowedValues));
         }
+
         public Builder applyMethod(@Nullable Output<String> applyMethod) {
-            this.applyMethod = applyMethod;
+            $.applyMethod = applyMethod;
             return this;
         }
-        public Builder applyMethod(@Nullable String applyMethod) {
-            this.applyMethod = Codegen.ofNullable(applyMethod);
-            return this;
+
+        public Builder applyMethod(String applyMethod) {
+            return applyMethod(Output.of(applyMethod));
         }
+
         public Builder applyType(@Nullable Output<String> applyType) {
-            this.applyType = applyType;
+            $.applyType = applyType;
             return this;
         }
-        public Builder applyType(@Nullable String applyType) {
-            this.applyType = Codegen.ofNullable(applyType);
-            return this;
+
+        public Builder applyType(String applyType) {
+            return applyType(Output.of(applyType));
         }
+
         public Builder dataType(@Nullable Output<String> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable String dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(String dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder isModifiable(@Nullable Output<Boolean> isModifiable) {
-            this.isModifiable = isModifiable;
+            $.isModifiable = isModifiable;
             return this;
         }
-        public Builder isModifiable(@Nullable Boolean isModifiable) {
-            this.isModifiable = Codegen.ofNullable(isModifiable);
-            return this;
+
+        public Builder isModifiable(Boolean isModifiable) {
+            return isModifiable(Output.of(isModifiable));
         }
+
         public Builder parameterName(@Nullable Output<String> parameterName) {
-            this.parameterName = parameterName;
+            $.parameterName = parameterName;
             return this;
         }
-        public Builder parameterName(@Nullable String parameterName) {
-            this.parameterName = Codegen.ofNullable(parameterName);
-            return this;
+
+        public Builder parameterName(String parameterName) {
+            return parameterName(Output.of(parameterName));
         }
+
         public Builder parameterValue(@Nullable Output<String> parameterValue) {
-            this.parameterValue = parameterValue;
+            $.parameterValue = parameterValue;
             return this;
         }
-        public Builder parameterValue(@Nullable String parameterValue) {
-            this.parameterValue = Codegen.ofNullable(parameterValue);
-            return this;
-        }        public DatabaseRelationalDatabaseParameterArgs build() {
-            return new DatabaseRelationalDatabaseParameterArgs(allowedValues, applyMethod, applyType, dataType, description, isModifiable, parameterName, parameterValue);
+
+        public Builder parameterValue(String parameterValue) {
+            return parameterValue(Output.of(parameterValue));
+        }
+
+        public DatabaseRelationalDatabaseParameterArgs build() {
+            return $;
         }
     }
+
 }

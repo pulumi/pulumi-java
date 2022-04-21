@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apps_v1beta1.inputs.StatefulSetConditionArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="collisionCount")
-      private final @Nullable Output<Integer> collisionCount;
+    private @Nullable Output<Integer> collisionCount;
 
-    public Output<Integer> collisionCount() {
-        return this.collisionCount == null ? Codegen.empty() : this.collisionCount;
+    public Optional<Output<Integer>> collisionCount() {
+        return Optional.ofNullable(this.collisionCount);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<StatefulSetConditionArgs>> conditions;
+    private @Nullable Output<List<StatefulSetConditionArgs>> conditions;
 
-    public Output<List<StatefulSetConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<StatefulSetConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="currentReplicas")
-      private final @Nullable Output<Integer> currentReplicas;
+    private @Nullable Output<Integer> currentReplicas;
 
-    public Output<Integer> currentReplicas() {
-        return this.currentReplicas == null ? Codegen.empty() : this.currentReplicas;
+    public Optional<Output<Integer>> currentReplicas() {
+        return Optional.ofNullable(this.currentReplicas);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="currentRevision")
-      private final @Nullable Output<String> currentRevision;
+    private @Nullable Output<String> currentRevision;
 
-    public Output<String> currentRevision() {
-        return this.currentRevision == null ? Codegen.empty() : this.currentRevision;
+    public Optional<Output<String>> currentRevision() {
+        return Optional.ofNullable(this.currentRevision);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="observedGeneration")
-      private final @Nullable Output<Integer> observedGeneration;
+    private @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> observedGeneration() {
-        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
+    public Optional<Output<Integer>> observedGeneration() {
+        return Optional.ofNullable(this.observedGeneration);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="readyReplicas")
-      private final @Nullable Output<Integer> readyReplicas;
+    private @Nullable Output<Integer> readyReplicas;
 
-    public Output<Integer> readyReplicas() {
-        return this.readyReplicas == null ? Codegen.empty() : this.readyReplicas;
+    public Optional<Output<Integer>> readyReplicas() {
+        return Optional.ofNullable(this.readyReplicas);
     }
 
     /**
@@ -93,7 +93,7 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="replicas", required=true)
-      private final Output<Integer> replicas;
+    private Output<Integer> replicas;
 
     public Output<Integer> replicas() {
         return this.replicas;
@@ -104,10 +104,10 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="updateRevision")
-      private final @Nullable Output<String> updateRevision;
+    private @Nullable Output<String> updateRevision;
 
-    public Output<String> updateRevision() {
-        return this.updateRevision == null ? Codegen.empty() : this.updateRevision;
+    public Optional<Output<String>> updateRevision() {
+        return Optional.ofNullable(this.updateRevision);
     }
 
     /**
@@ -115,157 +115,133 @@ public final class StatefulSetStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="updatedReplicas")
-      private final @Nullable Output<Integer> updatedReplicas;
+    private @Nullable Output<Integer> updatedReplicas;
 
-    public Output<Integer> updatedReplicas() {
-        return this.updatedReplicas == null ? Codegen.empty() : this.updatedReplicas;
+    public Optional<Output<Integer>> updatedReplicas() {
+        return Optional.ofNullable(this.updatedReplicas);
     }
 
-    public StatefulSetStatusArgs(
-        @Nullable Output<Integer> collisionCount,
-        @Nullable Output<List<StatefulSetConditionArgs>> conditions,
-        @Nullable Output<Integer> currentReplicas,
-        @Nullable Output<String> currentRevision,
-        @Nullable Output<Integer> observedGeneration,
-        @Nullable Output<Integer> readyReplicas,
-        Output<Integer> replicas,
-        @Nullable Output<String> updateRevision,
-        @Nullable Output<Integer> updatedReplicas) {
-        this.collisionCount = collisionCount;
-        this.conditions = conditions;
-        this.currentReplicas = currentReplicas;
-        this.currentRevision = currentRevision;
-        this.observedGeneration = observedGeneration;
-        this.readyReplicas = readyReplicas;
-        this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
-        this.updateRevision = updateRevision;
-        this.updatedReplicas = updatedReplicas;
-    }
+    private StatefulSetStatusArgs() {}
 
-    private StatefulSetStatusArgs() {
-        this.collisionCount = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.currentReplicas = Codegen.empty();
-        this.currentRevision = Codegen.empty();
-        this.observedGeneration = Codegen.empty();
-        this.readyReplicas = Codegen.empty();
-        this.replicas = Codegen.empty();
-        this.updateRevision = Codegen.empty();
-        this.updatedReplicas = Codegen.empty();
+    private StatefulSetStatusArgs(StatefulSetStatusArgs $) {
+        this.collisionCount = $.collisionCount;
+        this.conditions = $.conditions;
+        this.currentReplicas = $.currentReplicas;
+        this.currentRevision = $.currentRevision;
+        this.observedGeneration = $.observedGeneration;
+        this.readyReplicas = $.readyReplicas;
+        this.replicas = $.replicas;
+        this.updateRevision = $.updateRevision;
+        this.updatedReplicas = $.updatedReplicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulSetStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> collisionCount;
-        private @Nullable Output<List<StatefulSetConditionArgs>> conditions;
-        private @Nullable Output<Integer> currentReplicas;
-        private @Nullable Output<String> currentRevision;
-        private @Nullable Output<Integer> observedGeneration;
-        private @Nullable Output<Integer> readyReplicas;
-        private Output<Integer> replicas;
-        private @Nullable Output<String> updateRevision;
-        private @Nullable Output<Integer> updatedReplicas;
+        private StatefulSetStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulSetStatusArgs();
         }
 
         public Builder(StatefulSetStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collisionCount = defaults.collisionCount;
-    	      this.conditions = defaults.conditions;
-    	      this.currentReplicas = defaults.currentReplicas;
-    	      this.currentRevision = defaults.currentRevision;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.readyReplicas = defaults.readyReplicas;
-    	      this.replicas = defaults.replicas;
-    	      this.updateRevision = defaults.updateRevision;
-    	      this.updatedReplicas = defaults.updatedReplicas;
+            $ = new StatefulSetStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collisionCount(@Nullable Output<Integer> collisionCount) {
-            this.collisionCount = collisionCount;
+            $.collisionCount = collisionCount;
             return this;
         }
-        public Builder collisionCount(@Nullable Integer collisionCount) {
-            this.collisionCount = Codegen.ofNullable(collisionCount);
-            return this;
+
+        public Builder collisionCount(Integer collisionCount) {
+            return collisionCount(Output.of(collisionCount));
         }
+
         public Builder conditions(@Nullable Output<List<StatefulSetConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<StatefulSetConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<StatefulSetConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(StatefulSetConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder currentReplicas(@Nullable Output<Integer> currentReplicas) {
-            this.currentReplicas = currentReplicas;
+            $.currentReplicas = currentReplicas;
             return this;
         }
-        public Builder currentReplicas(@Nullable Integer currentReplicas) {
-            this.currentReplicas = Codegen.ofNullable(currentReplicas);
-            return this;
+
+        public Builder currentReplicas(Integer currentReplicas) {
+            return currentReplicas(Output.of(currentReplicas));
         }
+
         public Builder currentRevision(@Nullable Output<String> currentRevision) {
-            this.currentRevision = currentRevision;
+            $.currentRevision = currentRevision;
             return this;
         }
-        public Builder currentRevision(@Nullable String currentRevision) {
-            this.currentRevision = Codegen.ofNullable(currentRevision);
-            return this;
+
+        public Builder currentRevision(String currentRevision) {
+            return currentRevision(Output.of(currentRevision));
         }
+
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
-            this.observedGeneration = observedGeneration;
+            $.observedGeneration = observedGeneration;
             return this;
         }
-        public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Codegen.ofNullable(observedGeneration);
-            return this;
+
+        public Builder observedGeneration(Integer observedGeneration) {
+            return observedGeneration(Output.of(observedGeneration));
         }
+
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
-            this.readyReplicas = readyReplicas;
+            $.readyReplicas = readyReplicas;
             return this;
         }
-        public Builder readyReplicas(@Nullable Integer readyReplicas) {
-            this.readyReplicas = Codegen.ofNullable(readyReplicas);
-            return this;
+
+        public Builder readyReplicas(Integer readyReplicas) {
+            return readyReplicas(Output.of(readyReplicas));
         }
+
         public Builder replicas(Output<Integer> replicas) {
-            this.replicas = Objects.requireNonNull(replicas);
+            $.replicas = replicas;
             return this;
         }
+
         public Builder replicas(Integer replicas) {
-            this.replicas = Output.of(Objects.requireNonNull(replicas));
-            return this;
+            return replicas(Output.of(replicas));
         }
+
         public Builder updateRevision(@Nullable Output<String> updateRevision) {
-            this.updateRevision = updateRevision;
+            $.updateRevision = updateRevision;
             return this;
         }
-        public Builder updateRevision(@Nullable String updateRevision) {
-            this.updateRevision = Codegen.ofNullable(updateRevision);
-            return this;
+
+        public Builder updateRevision(String updateRevision) {
+            return updateRevision(Output.of(updateRevision));
         }
+
         public Builder updatedReplicas(@Nullable Output<Integer> updatedReplicas) {
-            this.updatedReplicas = updatedReplicas;
+            $.updatedReplicas = updatedReplicas;
             return this;
         }
-        public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
-            this.updatedReplicas = Codegen.ofNullable(updatedReplicas);
-            return this;
-        }        public StatefulSetStatusArgs build() {
-            return new StatefulSetStatusArgs(collisionCount, conditions, currentReplicas, currentRevision, observedGeneration, readyReplicas, replicas, updateRevision, updatedReplicas);
+
+        public Builder updatedReplicas(Integer updatedReplicas) {
+            return updatedReplicas(Output.of(updatedReplicas));
+        }
+
+        public StatefulSetStatusArgs build() {
+            $.replicas = Objects.requireNonNull($.replicas, "expected parameter 'replicas' to be non-null");
+            return $;
         }
     }
+
 }

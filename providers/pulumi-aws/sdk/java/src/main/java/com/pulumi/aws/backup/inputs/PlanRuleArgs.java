@@ -7,13 +7,13 @@ import com.pulumi.aws.backup.inputs.PlanRuleCopyActionArgs;
 import com.pulumi.aws.backup.inputs.PlanRuleLifecycleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="completionWindow")
-      private final @Nullable Output<Integer> completionWindow;
+    private @Nullable Output<Integer> completionWindow;
 
-    public Output<Integer> completionWindow() {
-        return this.completionWindow == null ? Codegen.empty() : this.completionWindow;
+    public Optional<Output<Integer>> completionWindow() {
+        return Optional.ofNullable(this.completionWindow);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="copyActions")
-      private final @Nullable Output<List<PlanRuleCopyActionArgs>> copyActions;
+    private @Nullable Output<List<PlanRuleCopyActionArgs>> copyActions;
 
-    public Output<List<PlanRuleCopyActionArgs>> copyActions() {
-        return this.copyActions == null ? Codegen.empty() : this.copyActions;
+    public Optional<Output<List<PlanRuleCopyActionArgs>>> copyActions() {
+        return Optional.ofNullable(this.copyActions);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableContinuousBackup")
-      private final @Nullable Output<Boolean> enableContinuousBackup;
+    private @Nullable Output<Boolean> enableContinuousBackup;
 
-    public Output<Boolean> enableContinuousBackup() {
-        return this.enableContinuousBackup == null ? Codegen.empty() : this.enableContinuousBackup;
+    public Optional<Output<Boolean>> enableContinuousBackup() {
+        return Optional.ofNullable(this.enableContinuousBackup);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecycle")
-      private final @Nullable Output<PlanRuleLifecycleArgs> lifecycle;
+    private @Nullable Output<PlanRuleLifecycleArgs> lifecycle;
 
-    public Output<PlanRuleLifecycleArgs> lifecycle() {
-        return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
+    public Optional<Output<PlanRuleLifecycleArgs>> lifecycle() {
+        return Optional.ofNullable(this.lifecycle);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recoveryPointTags")
-      private final @Nullable Output<Map<String,String>> recoveryPointTags;
+    private @Nullable Output<Map<String,String>> recoveryPointTags;
 
-    public Output<Map<String,String>> recoveryPointTags() {
-        return this.recoveryPointTags == null ? Codegen.empty() : this.recoveryPointTags;
+    public Optional<Output<Map<String,String>>> recoveryPointTags() {
+        return Optional.ofNullable(this.recoveryPointTags);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleName", required=true)
-      private final Output<String> ruleName;
+    private Output<String> ruleName;
 
     public Output<String> ruleName() {
         return this.ruleName;
@@ -92,10 +92,10 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startWindow")
-      private final @Nullable Output<Integer> startWindow;
+    private @Nullable Output<Integer> startWindow;
 
-    public Output<Integer> startWindow() {
-        return this.startWindow == null ? Codegen.empty() : this.startWindow;
+    public Optional<Output<Integer>> startWindow() {
+        return Optional.ofNullable(this.startWindow);
     }
 
     /**
@@ -114,157 +114,134 @@ public final class PlanRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetVaultName", required=true)
-      private final Output<String> targetVaultName;
+    private Output<String> targetVaultName;
 
     public Output<String> targetVaultName() {
         return this.targetVaultName;
     }
 
-    public PlanRuleArgs(
-        @Nullable Output<Integer> completionWindow,
-        @Nullable Output<List<PlanRuleCopyActionArgs>> copyActions,
-        @Nullable Output<Boolean> enableContinuousBackup,
-        @Nullable Output<PlanRuleLifecycleArgs> lifecycle,
-        @Nullable Output<Map<String,String>> recoveryPointTags,
-        Output<String> ruleName,
-        @Nullable Output<String> schedule,
-        @Nullable Output<Integer> startWindow,
-        Output<String> targetVaultName) {
-        this.completionWindow = completionWindow;
-        this.copyActions = copyActions;
-        this.enableContinuousBackup = enableContinuousBackup;
-        this.lifecycle = lifecycle;
-        this.recoveryPointTags = recoveryPointTags;
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-        this.schedule = schedule;
-        this.startWindow = startWindow;
-        this.targetVaultName = Objects.requireNonNull(targetVaultName, "expected parameter 'targetVaultName' to be non-null");
-    }
+    private PlanRuleArgs() {}
 
-    private PlanRuleArgs() {
-        this.completionWindow = Codegen.empty();
-        this.copyActions = Codegen.empty();
-        this.enableContinuousBackup = Codegen.empty();
-        this.lifecycle = Codegen.empty();
-        this.recoveryPointTags = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.startWindow = Codegen.empty();
-        this.targetVaultName = Codegen.empty();
+    private PlanRuleArgs(PlanRuleArgs $) {
+        this.completionWindow = $.completionWindow;
+        this.copyActions = $.copyActions;
+        this.enableContinuousBackup = $.enableContinuousBackup;
+        this.lifecycle = $.lifecycle;
+        this.recoveryPointTags = $.recoveryPointTags;
+        this.ruleName = $.ruleName;
+        this.schedule = $.schedule;
+        this.startWindow = $.startWindow;
+        this.targetVaultName = $.targetVaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> completionWindow;
-        private @Nullable Output<List<PlanRuleCopyActionArgs>> copyActions;
-        private @Nullable Output<Boolean> enableContinuousBackup;
-        private @Nullable Output<PlanRuleLifecycleArgs> lifecycle;
-        private @Nullable Output<Map<String,String>> recoveryPointTags;
-        private Output<String> ruleName;
-        private @Nullable Output<String> schedule;
-        private @Nullable Output<Integer> startWindow;
-        private Output<String> targetVaultName;
+        private PlanRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanRuleArgs();
         }
 
         public Builder(PlanRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completionWindow = defaults.completionWindow;
-    	      this.copyActions = defaults.copyActions;
-    	      this.enableContinuousBackup = defaults.enableContinuousBackup;
-    	      this.lifecycle = defaults.lifecycle;
-    	      this.recoveryPointTags = defaults.recoveryPointTags;
-    	      this.ruleName = defaults.ruleName;
-    	      this.schedule = defaults.schedule;
-    	      this.startWindow = defaults.startWindow;
-    	      this.targetVaultName = defaults.targetVaultName;
+            $ = new PlanRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder completionWindow(@Nullable Output<Integer> completionWindow) {
-            this.completionWindow = completionWindow;
+            $.completionWindow = completionWindow;
             return this;
         }
-        public Builder completionWindow(@Nullable Integer completionWindow) {
-            this.completionWindow = Codegen.ofNullable(completionWindow);
-            return this;
+
+        public Builder completionWindow(Integer completionWindow) {
+            return completionWindow(Output.of(completionWindow));
         }
+
         public Builder copyActions(@Nullable Output<List<PlanRuleCopyActionArgs>> copyActions) {
-            this.copyActions = copyActions;
+            $.copyActions = copyActions;
             return this;
         }
-        public Builder copyActions(@Nullable List<PlanRuleCopyActionArgs> copyActions) {
-            this.copyActions = Codegen.ofNullable(copyActions);
-            return this;
+
+        public Builder copyActions(List<PlanRuleCopyActionArgs> copyActions) {
+            return copyActions(Output.of(copyActions));
         }
+
         public Builder copyActions(PlanRuleCopyActionArgs... copyActions) {
             return copyActions(List.of(copyActions));
         }
+
         public Builder enableContinuousBackup(@Nullable Output<Boolean> enableContinuousBackup) {
-            this.enableContinuousBackup = enableContinuousBackup;
+            $.enableContinuousBackup = enableContinuousBackup;
             return this;
         }
-        public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
-            this.enableContinuousBackup = Codegen.ofNullable(enableContinuousBackup);
-            return this;
+
+        public Builder enableContinuousBackup(Boolean enableContinuousBackup) {
+            return enableContinuousBackup(Output.of(enableContinuousBackup));
         }
+
         public Builder lifecycle(@Nullable Output<PlanRuleLifecycleArgs> lifecycle) {
-            this.lifecycle = lifecycle;
+            $.lifecycle = lifecycle;
             return this;
         }
-        public Builder lifecycle(@Nullable PlanRuleLifecycleArgs lifecycle) {
-            this.lifecycle = Codegen.ofNullable(lifecycle);
-            return this;
+
+        public Builder lifecycle(PlanRuleLifecycleArgs lifecycle) {
+            return lifecycle(Output.of(lifecycle));
         }
+
         public Builder recoveryPointTags(@Nullable Output<Map<String,String>> recoveryPointTags) {
-            this.recoveryPointTags = recoveryPointTags;
+            $.recoveryPointTags = recoveryPointTags;
             return this;
         }
-        public Builder recoveryPointTags(@Nullable Map<String,String> recoveryPointTags) {
-            this.recoveryPointTags = Codegen.ofNullable(recoveryPointTags);
-            return this;
+
+        public Builder recoveryPointTags(Map<String,String> recoveryPointTags) {
+            return recoveryPointTags(Output.of(recoveryPointTags));
         }
+
         public Builder ruleName(Output<String> ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Output.of(Objects.requireNonNull(ruleName));
-            return this;
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder startWindow(@Nullable Output<Integer> startWindow) {
-            this.startWindow = startWindow;
+            $.startWindow = startWindow;
             return this;
         }
-        public Builder startWindow(@Nullable Integer startWindow) {
-            this.startWindow = Codegen.ofNullable(startWindow);
-            return this;
+
+        public Builder startWindow(Integer startWindow) {
+            return startWindow(Output.of(startWindow));
         }
+
         public Builder targetVaultName(Output<String> targetVaultName) {
-            this.targetVaultName = Objects.requireNonNull(targetVaultName);
+            $.targetVaultName = targetVaultName;
             return this;
         }
+
         public Builder targetVaultName(String targetVaultName) {
-            this.targetVaultName = Output.of(Objects.requireNonNull(targetVaultName));
-            return this;
-        }        public PlanRuleArgs build() {
-            return new PlanRuleArgs(completionWindow, copyActions, enableContinuousBackup, lifecycle, recoveryPointTags, ruleName, schedule, startWindow, targetVaultName);
+            return targetVaultName(Output.of(targetVaultName));
+        }
+
+        public PlanRuleArgs build() {
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            $.targetVaultName = Objects.requireNonNull($.targetVaultName, "expected parameter 'targetVaultName' to be non-null");
+            return $;
         }
     }
+
 }

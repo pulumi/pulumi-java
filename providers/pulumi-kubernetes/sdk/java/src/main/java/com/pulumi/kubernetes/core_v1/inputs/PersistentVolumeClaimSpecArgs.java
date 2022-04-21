@@ -5,13 +5,13 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs;
 import com.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="accessModes")
-      private final @Nullable Output<List<String>> accessModes;
+    private @Nullable Output<List<String>> accessModes;
 
-    public Output<List<String>> accessModes() {
-        return this.accessModes == null ? Codegen.empty() : this.accessModes;
+    public Optional<Output<List<String>>> accessModes() {
+        return Optional.ofNullable(this.accessModes);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="dataSource")
-      private final @Nullable Output<TypedLocalObjectReferenceArgs> dataSource;
+    private @Nullable Output<TypedLocalObjectReferenceArgs> dataSource;
 
-    public Output<TypedLocalObjectReferenceArgs> dataSource() {
-        return this.dataSource == null ? Codegen.empty() : this.dataSource;
+    public Optional<Output<TypedLocalObjectReferenceArgs>> dataSource() {
+        return Optional.ofNullable(this.dataSource);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="dataSourceRef")
-      private final @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef;
+    private @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef;
 
-    public Output<TypedLocalObjectReferenceArgs> dataSourceRef() {
-        return this.dataSourceRef == null ? Codegen.empty() : this.dataSourceRef;
+    public Optional<Output<TypedLocalObjectReferenceArgs>> dataSourceRef() {
+        return Optional.ofNullable(this.dataSourceRef);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<ResourceRequirementsArgs> resources;
+    private @Nullable Output<ResourceRequirementsArgs> resources;
 
-    public Output<ResourceRequirementsArgs> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<ResourceRequirementsArgs>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<LabelSelectorArgs> selector;
+    private @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<LabelSelectorArgs>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="storageClassName")
-      private final @Nullable Output<String> storageClassName;
+    private @Nullable Output<String> storageClassName;
 
-    public Output<String> storageClassName() {
-        return this.storageClassName == null ? Codegen.empty() : this.storageClassName;
+    public Optional<Output<String>> storageClassName() {
+        return Optional.ofNullable(this.storageClassName);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="volumeMode")
-      private final @Nullable Output<String> volumeMode;
+    private @Nullable Output<String> volumeMode;
 
-    public Output<String> volumeMode() {
-        return this.volumeMode == null ? Codegen.empty() : this.volumeMode;
+    public Optional<Output<String>> volumeMode() {
+        return Optional.ofNullable(this.volumeMode);
     }
 
     /**
@@ -110,144 +110,122 @@ public final class PersistentVolumeClaimSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="volumeName")
-      private final @Nullable Output<String> volumeName;
+    private @Nullable Output<String> volumeName;
 
-    public Output<String> volumeName() {
-        return this.volumeName == null ? Codegen.empty() : this.volumeName;
+    public Optional<Output<String>> volumeName() {
+        return Optional.ofNullable(this.volumeName);
     }
 
-    public PersistentVolumeClaimSpecArgs(
-        @Nullable Output<List<String>> accessModes,
-        @Nullable Output<TypedLocalObjectReferenceArgs> dataSource,
-        @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef,
-        @Nullable Output<ResourceRequirementsArgs> resources,
-        @Nullable Output<LabelSelectorArgs> selector,
-        @Nullable Output<String> storageClassName,
-        @Nullable Output<String> volumeMode,
-        @Nullable Output<String> volumeName) {
-        this.accessModes = accessModes;
-        this.dataSource = dataSource;
-        this.dataSourceRef = dataSourceRef;
-        this.resources = resources;
-        this.selector = selector;
-        this.storageClassName = storageClassName;
-        this.volumeMode = volumeMode;
-        this.volumeName = volumeName;
-    }
+    private PersistentVolumeClaimSpecArgs() {}
 
-    private PersistentVolumeClaimSpecArgs() {
-        this.accessModes = Codegen.empty();
-        this.dataSource = Codegen.empty();
-        this.dataSourceRef = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.selector = Codegen.empty();
-        this.storageClassName = Codegen.empty();
-        this.volumeMode = Codegen.empty();
-        this.volumeName = Codegen.empty();
+    private PersistentVolumeClaimSpecArgs(PersistentVolumeClaimSpecArgs $) {
+        this.accessModes = $.accessModes;
+        this.dataSource = $.dataSource;
+        this.dataSourceRef = $.dataSourceRef;
+        this.resources = $.resources;
+        this.selector = $.selector;
+        this.storageClassName = $.storageClassName;
+        this.volumeMode = $.volumeMode;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistentVolumeClaimSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> accessModes;
-        private @Nullable Output<TypedLocalObjectReferenceArgs> dataSource;
-        private @Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef;
-        private @Nullable Output<ResourceRequirementsArgs> resources;
-        private @Nullable Output<LabelSelectorArgs> selector;
-        private @Nullable Output<String> storageClassName;
-        private @Nullable Output<String> volumeMode;
-        private @Nullable Output<String> volumeName;
+        private PersistentVolumeClaimSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistentVolumeClaimSpecArgs();
         }
 
         public Builder(PersistentVolumeClaimSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessModes = defaults.accessModes;
-    	      this.dataSource = defaults.dataSource;
-    	      this.dataSourceRef = defaults.dataSourceRef;
-    	      this.resources = defaults.resources;
-    	      this.selector = defaults.selector;
-    	      this.storageClassName = defaults.storageClassName;
-    	      this.volumeMode = defaults.volumeMode;
-    	      this.volumeName = defaults.volumeName;
+            $ = new PersistentVolumeClaimSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessModes(@Nullable Output<List<String>> accessModes) {
-            this.accessModes = accessModes;
+            $.accessModes = accessModes;
             return this;
         }
-        public Builder accessModes(@Nullable List<String> accessModes) {
-            this.accessModes = Codegen.ofNullable(accessModes);
-            return this;
+
+        public Builder accessModes(List<String> accessModes) {
+            return accessModes(Output.of(accessModes));
         }
+
         public Builder accessModes(String... accessModes) {
             return accessModes(List.of(accessModes));
         }
+
         public Builder dataSource(@Nullable Output<TypedLocalObjectReferenceArgs> dataSource) {
-            this.dataSource = dataSource;
+            $.dataSource = dataSource;
             return this;
         }
-        public Builder dataSource(@Nullable TypedLocalObjectReferenceArgs dataSource) {
-            this.dataSource = Codegen.ofNullable(dataSource);
-            return this;
+
+        public Builder dataSource(TypedLocalObjectReferenceArgs dataSource) {
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder dataSourceRef(@Nullable Output<TypedLocalObjectReferenceArgs> dataSourceRef) {
-            this.dataSourceRef = dataSourceRef;
+            $.dataSourceRef = dataSourceRef;
             return this;
         }
-        public Builder dataSourceRef(@Nullable TypedLocalObjectReferenceArgs dataSourceRef) {
-            this.dataSourceRef = Codegen.ofNullable(dataSourceRef);
-            return this;
+
+        public Builder dataSourceRef(TypedLocalObjectReferenceArgs dataSourceRef) {
+            return dataSourceRef(Output.of(dataSourceRef));
         }
+
         public Builder resources(@Nullable Output<ResourceRequirementsArgs> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable ResourceRequirementsArgs resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(ResourceRequirementsArgs resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
+
+        public Builder selector(LabelSelectorArgs selector) {
+            return selector(Output.of(selector));
         }
+
         public Builder storageClassName(@Nullable Output<String> storageClassName) {
-            this.storageClassName = storageClassName;
+            $.storageClassName = storageClassName;
             return this;
         }
-        public Builder storageClassName(@Nullable String storageClassName) {
-            this.storageClassName = Codegen.ofNullable(storageClassName);
-            return this;
+
+        public Builder storageClassName(String storageClassName) {
+            return storageClassName(Output.of(storageClassName));
         }
+
         public Builder volumeMode(@Nullable Output<String> volumeMode) {
-            this.volumeMode = volumeMode;
+            $.volumeMode = volumeMode;
             return this;
         }
-        public Builder volumeMode(@Nullable String volumeMode) {
-            this.volumeMode = Codegen.ofNullable(volumeMode);
-            return this;
+
+        public Builder volumeMode(String volumeMode) {
+            return volumeMode(Output.of(volumeMode));
         }
+
         public Builder volumeName(@Nullable Output<String> volumeName) {
-            this.volumeName = volumeName;
+            $.volumeName = volumeName;
             return this;
         }
-        public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Codegen.ofNullable(volumeName);
-            return this;
-        }        public PersistentVolumeClaimSpecArgs build() {
-            return new PersistentVolumeClaimSpecArgs(accessModes, dataSource, dataSourceRef, resources, selector, storageClassName, volumeMode, volumeName);
+
+        public Builder volumeName(String volumeName) {
+            return volumeName(Output.of(volumeName));
+        }
+
+        public PersistentVolumeClaimSpecArgs build() {
+            return $;
         }
     }
+
 }

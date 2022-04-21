@@ -5,10 +5,10 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class FunctionEnvironmentArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="variables")
-      private final @Nullable Output<Map<String,String>> variables;
+    private @Nullable Output<Map<String,String>> variables;
 
-    public Output<Map<String,String>> variables() {
-        return this.variables == null ? Codegen.empty() : this.variables;
+    public Optional<Output<Map<String,String>>> variables() {
+        return Optional.ofNullable(this.variables);
     }
 
-    public FunctionEnvironmentArgs(@Nullable Output<Map<String,String>> variables) {
-        this.variables = variables;
-    }
+    private FunctionEnvironmentArgs() {}
 
-    private FunctionEnvironmentArgs() {
-        this.variables = Codegen.empty();
+    private FunctionEnvironmentArgs(FunctionEnvironmentArgs $) {
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> variables;
+        private FunctionEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionEnvironmentArgs();
         }
 
         public Builder(FunctionEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.variables = defaults.variables;
+            $ = new FunctionEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
-            this.variables = variables;
+            $.variables = variables;
             return this;
         }
-        public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Codegen.ofNullable(variables);
-            return this;
-        }        public FunctionEnvironmentArgs build() {
-            return new FunctionEnvironmentArgs(variables);
+
+        public Builder variables(Map<String,String> variables) {
+            return variables(Output.of(variables));
+        }
+
+        public FunctionEnvironmentArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataType", required=true)
-      private final AssetModelDataType dataType;
+    private AssetModelDataType dataType;
 
     public AssetModelDataType dataType() {
         return this.dataType;
@@ -37,10 +37,10 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataTypeSpec")
-      private final @Nullable AssetModelDataTypeSpec dataTypeSpec;
+    private @Nullable AssetModelDataTypeSpec dataTypeSpec;
 
     public Optional<AssetModelDataTypeSpec> dataTypeSpec() {
-        return this.dataTypeSpec == null ? Optional.empty() : Optional.ofNullable(this.dataTypeSpec);
+        return Optional.ofNullable(this.dataTypeSpec);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logicalId", required=true)
-      private final String logicalId;
+    private String logicalId;
 
     public String logicalId() {
         return this.logicalId;
@@ -59,7 +59,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -70,7 +70,7 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final AssetModelPropertyType type;
+    private AssetModelPropertyType type;
 
     public AssetModelPropertyType type() {
         return this.type;
@@ -81,91 +81,78 @@ public final class AssetModelProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="unit")
-      private final @Nullable String unit;
+    private @Nullable String unit;
 
     public Optional<String> unit() {
-        return this.unit == null ? Optional.empty() : Optional.ofNullable(this.unit);
+        return Optional.ofNullable(this.unit);
     }
 
-    public AssetModelProperty(
-        AssetModelDataType dataType,
-        @Nullable AssetModelDataTypeSpec dataTypeSpec,
-        String logicalId,
-        String name,
-        AssetModelPropertyType type,
-        @Nullable String unit) {
-        this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
-        this.dataTypeSpec = dataTypeSpec;
-        this.logicalId = Objects.requireNonNull(logicalId, "expected parameter 'logicalId' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.unit = unit;
-    }
+    private AssetModelProperty() {}
 
-    private AssetModelProperty() {
-        this.dataType = null;
-        this.dataTypeSpec = null;
-        this.logicalId = null;
-        this.name = null;
-        this.type = null;
-        this.unit = null;
+    private AssetModelProperty(AssetModelProperty $) {
+        this.dataType = $.dataType;
+        this.dataTypeSpec = $.dataTypeSpec;
+        this.logicalId = $.logicalId;
+        this.name = $.name;
+        this.type = $.type;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelProperty defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AssetModelDataType dataType;
-        private @Nullable AssetModelDataTypeSpec dataTypeSpec;
-        private String logicalId;
-        private String name;
-        private AssetModelPropertyType type;
-        private @Nullable String unit;
+        private AssetModelProperty $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelProperty();
         }
 
         public Builder(AssetModelProperty defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.dataTypeSpec = defaults.dataTypeSpec;
-    	      this.logicalId = defaults.logicalId;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.unit = defaults.unit;
+            $ = new AssetModelProperty(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(AssetModelDataType dataType) {
-            this.dataType = Objects.requireNonNull(dataType);
+            $.dataType = dataType;
             return this;
         }
+
         public Builder dataTypeSpec(@Nullable AssetModelDataTypeSpec dataTypeSpec) {
-            this.dataTypeSpec = dataTypeSpec;
+            $.dataTypeSpec = dataTypeSpec;
             return this;
         }
+
         public Builder logicalId(String logicalId) {
-            this.logicalId = Objects.requireNonNull(logicalId);
+            $.logicalId = logicalId;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(AssetModelPropertyType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder unit(@Nullable String unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
-        }        public AssetModelProperty build() {
-            return new AssetModelProperty(dataType, dataTypeSpec, logicalId, name, type, unit);
+        }
+
+        public AssetModelProperty build() {
+            $.dataType = Objects.requireNonNull($.dataType, "expected parameter 'dataType' to be non-null");
+            $.logicalId = Objects.requireNonNull($.logicalId, "expected parameter 'logicalId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

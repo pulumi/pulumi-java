@@ -20,10 +20,10 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,String> parameters;
+    private @Nullable Map<String,String> parameters;
 
-    public Map<String,String> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
@@ -42,7 +42,7 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sdkType", required=true)
-      private final String sdkType;
+    private String sdkType;
 
     public String sdkType() {
         return this.sdkType;
@@ -53,73 +53,65 @@ public final class GetSdkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stageName", required=true)
-      private final String stageName;
+    private String stageName;
 
     public String stageName() {
         return this.stageName;
     }
 
-    public GetSdkArgs(
-        @Nullable Map<String,String> parameters,
-        String restApiId,
-        String sdkType,
-        String stageName) {
-        this.parameters = parameters;
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-        this.sdkType = Objects.requireNonNull(sdkType, "expected parameter 'sdkType' to be non-null");
-        this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
-    }
+    private GetSdkArgs() {}
 
-    private GetSdkArgs() {
-        this.parameters = Map.of();
-        this.restApiId = null;
-        this.sdkType = null;
-        this.stageName = null;
+    private GetSdkArgs(GetSdkArgs $) {
+        this.parameters = $.parameters;
+        this.restApiId = $.restApiId;
+        this.sdkType = $.sdkType;
+        this.stageName = $.stageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSdkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> parameters;
-        private String restApiId;
-        private String sdkType;
-        private String stageName;
+        private GetSdkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSdkArgs();
         }
 
         public Builder(GetSdkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.restApiId = defaults.restApiId;
-    	      this.sdkType = defaults.sdkType;
-    	      this.stageName = defaults.stageName;
+            $ = new GetSdkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
         }
+
         public Builder sdkType(String sdkType) {
-            this.sdkType = Objects.requireNonNull(sdkType);
+            $.sdkType = sdkType;
             return this;
         }
+
         public Builder stageName(String stageName) {
-            this.stageName = Objects.requireNonNull(stageName);
+            $.stageName = stageName;
             return this;
-        }        public GetSdkArgs build() {
-            return new GetSdkArgs(parameters, restApiId, sdkType, stageName);
+        }
+
+        public GetSdkArgs build() {
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            $.sdkType = Objects.requireNonNull($.sdkType, "expected parameter 'sdkType' to be non-null");
+            $.stageName = Objects.requireNonNull($.stageName, "expected parameter 'stageName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class OccurrenceIamPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -34,24 +34,24 @@ public final class OccurrenceIamPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="occurrenceId", required=true)
-      private final Output<String> occurrenceId;
+    private Output<String> occurrenceId;
 
     public Output<String> occurrenceId() {
         return this.occurrenceId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -59,105 +59,93 @@ public final class OccurrenceIamPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public OccurrenceIamPolicyArgs(
-        @Nullable Output<List<BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        Output<String> occurrenceId,
-        @Nullable Output<String> project,
-        @Nullable Output<Integer> version) {
-        this.bindings = bindings;
-        this.etag = etag;
-        this.occurrenceId = Objects.requireNonNull(occurrenceId, "expected parameter 'occurrenceId' to be non-null");
-        this.project = project;
-        this.version = version;
-    }
+    private OccurrenceIamPolicyArgs() {}
 
-    private OccurrenceIamPolicyArgs() {
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.occurrenceId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.version = Codegen.empty();
+    private OccurrenceIamPolicyArgs(OccurrenceIamPolicyArgs $) {
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.occurrenceId = $.occurrenceId;
+        this.project = $.project;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OccurrenceIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private Output<String> occurrenceId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Integer> version;
+        private OccurrenceIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OccurrenceIamPolicyArgs();
         }
 
         public Builder(OccurrenceIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.occurrenceId = defaults.occurrenceId;
-    	      this.project = defaults.project;
-    	      this.version = defaults.version;
+            $ = new OccurrenceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder occurrenceId(Output<String> occurrenceId) {
-            this.occurrenceId = Objects.requireNonNull(occurrenceId);
+            $.occurrenceId = occurrenceId;
             return this;
         }
+
         public Builder occurrenceId(String occurrenceId) {
-            this.occurrenceId = Output.of(Objects.requireNonNull(occurrenceId));
-            return this;
+            return occurrenceId(Output.of(occurrenceId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public OccurrenceIamPolicyArgs build() {
-            return new OccurrenceIamPolicyArgs(bindings, etag, occurrenceId, project, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public OccurrenceIamPolicyArgs build() {
+            $.occurrenceId = Objects.requireNonNull($.occurrenceId, "expected parameter 'occurrenceId' to be non-null");
+            return $;
         }
     }
+
 }

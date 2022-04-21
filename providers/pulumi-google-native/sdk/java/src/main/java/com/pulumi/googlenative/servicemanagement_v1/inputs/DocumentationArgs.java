@@ -5,12 +5,12 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.DocumentationRuleArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.PageArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentationRootUrl")
-      private final @Nullable Output<String> documentationRootUrl;
+    private @Nullable Output<String> documentationRootUrl;
 
-    public Output<String> documentationRootUrl() {
-        return this.documentationRootUrl == null ? Codegen.empty() : this.documentationRootUrl;
+    public Optional<Output<String>> documentationRootUrl() {
+        return Optional.ofNullable(this.documentationRootUrl);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overview")
-      private final @Nullable Output<String> overview;
+    private @Nullable Output<String> overview;
 
-    public Output<String> overview() {
-        return this.overview == null ? Codegen.empty() : this.overview;
+    public Optional<Output<String>> overview() {
+        return Optional.ofNullable(this.overview);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pages")
-      private final @Nullable Output<List<PageArgs>> pages;
+    private @Nullable Output<List<PageArgs>> pages;
 
-    public Output<List<PageArgs>> pages() {
-        return this.pages == null ? Codegen.empty() : this.pages;
+    public Optional<Output<List<PageArgs>>> pages() {
+        return Optional.ofNullable(this.pages);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<DocumentationRuleArgs>> rules;
+    private @Nullable Output<List<DocumentationRuleArgs>> rules;
 
-    public Output<List<DocumentationRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<DocumentationRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRootUrl")
-      private final @Nullable Output<String> serviceRootUrl;
+    private @Nullable Output<String> serviceRootUrl;
 
-    public Output<String> serviceRootUrl() {
-        return this.serviceRootUrl == null ? Codegen.empty() : this.serviceRootUrl;
+    public Optional<Output<String>> serviceRootUrl() {
+        return Optional.ofNullable(this.serviceRootUrl);
     }
 
     /**
@@ -82,121 +82,106 @@ public final class DocumentationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="summary")
-      private final @Nullable Output<String> summary;
+    private @Nullable Output<String> summary;
 
-    public Output<String> summary() {
-        return this.summary == null ? Codegen.empty() : this.summary;
+    public Optional<Output<String>> summary() {
+        return Optional.ofNullable(this.summary);
     }
 
-    public DocumentationArgs(
-        @Nullable Output<String> documentationRootUrl,
-        @Nullable Output<String> overview,
-        @Nullable Output<List<PageArgs>> pages,
-        @Nullable Output<List<DocumentationRuleArgs>> rules,
-        @Nullable Output<String> serviceRootUrl,
-        @Nullable Output<String> summary) {
-        this.documentationRootUrl = documentationRootUrl;
-        this.overview = overview;
-        this.pages = pages;
-        this.rules = rules;
-        this.serviceRootUrl = serviceRootUrl;
-        this.summary = summary;
-    }
+    private DocumentationArgs() {}
 
-    private DocumentationArgs() {
-        this.documentationRootUrl = Codegen.empty();
-        this.overview = Codegen.empty();
-        this.pages = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.serviceRootUrl = Codegen.empty();
-        this.summary = Codegen.empty();
+    private DocumentationArgs(DocumentationArgs $) {
+        this.documentationRootUrl = $.documentationRootUrl;
+        this.overview = $.overview;
+        this.pages = $.pages;
+        this.rules = $.rules;
+        this.serviceRootUrl = $.serviceRootUrl;
+        this.summary = $.summary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> documentationRootUrl;
-        private @Nullable Output<String> overview;
-        private @Nullable Output<List<PageArgs>> pages;
-        private @Nullable Output<List<DocumentationRuleArgs>> rules;
-        private @Nullable Output<String> serviceRootUrl;
-        private @Nullable Output<String> summary;
+        private DocumentationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationArgs();
         }
 
         public Builder(DocumentationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentationRootUrl = defaults.documentationRootUrl;
-    	      this.overview = defaults.overview;
-    	      this.pages = defaults.pages;
-    	      this.rules = defaults.rules;
-    	      this.serviceRootUrl = defaults.serviceRootUrl;
-    	      this.summary = defaults.summary;
+            $ = new DocumentationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder documentationRootUrl(@Nullable Output<String> documentationRootUrl) {
-            this.documentationRootUrl = documentationRootUrl;
+            $.documentationRootUrl = documentationRootUrl;
             return this;
         }
-        public Builder documentationRootUrl(@Nullable String documentationRootUrl) {
-            this.documentationRootUrl = Codegen.ofNullable(documentationRootUrl);
-            return this;
+
+        public Builder documentationRootUrl(String documentationRootUrl) {
+            return documentationRootUrl(Output.of(documentationRootUrl));
         }
+
         public Builder overview(@Nullable Output<String> overview) {
-            this.overview = overview;
+            $.overview = overview;
             return this;
         }
-        public Builder overview(@Nullable String overview) {
-            this.overview = Codegen.ofNullable(overview);
-            return this;
+
+        public Builder overview(String overview) {
+            return overview(Output.of(overview));
         }
+
         public Builder pages(@Nullable Output<List<PageArgs>> pages) {
-            this.pages = pages;
+            $.pages = pages;
             return this;
         }
-        public Builder pages(@Nullable List<PageArgs> pages) {
-            this.pages = Codegen.ofNullable(pages);
-            return this;
+
+        public Builder pages(List<PageArgs> pages) {
+            return pages(Output.of(pages));
         }
+
         public Builder pages(PageArgs... pages) {
             return pages(List.of(pages));
         }
+
         public Builder rules(@Nullable Output<List<DocumentationRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<DocumentationRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<DocumentationRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(DocumentationRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder serviceRootUrl(@Nullable Output<String> serviceRootUrl) {
-            this.serviceRootUrl = serviceRootUrl;
+            $.serviceRootUrl = serviceRootUrl;
             return this;
         }
-        public Builder serviceRootUrl(@Nullable String serviceRootUrl) {
-            this.serviceRootUrl = Codegen.ofNullable(serviceRootUrl);
-            return this;
+
+        public Builder serviceRootUrl(String serviceRootUrl) {
+            return serviceRootUrl(Output.of(serviceRootUrl));
         }
+
         public Builder summary(@Nullable Output<String> summary) {
-            this.summary = summary;
+            $.summary = summary;
             return this;
         }
-        public Builder summary(@Nullable String summary) {
-            this.summary = Codegen.ofNullable(summary);
-            return this;
-        }        public DocumentationArgs build() {
-            return new DocumentationArgs(documentationRootUrl, overview, pages, rules, serviceRootUrl, summary);
+
+        public Builder summary(String summary) {
+            return summary(Output.of(summary));
+        }
+
+        public DocumentationArgs build() {
+            return $;
         }
     }
+
 }

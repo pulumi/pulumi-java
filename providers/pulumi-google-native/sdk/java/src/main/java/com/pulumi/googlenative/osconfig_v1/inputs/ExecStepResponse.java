@@ -21,7 +21,7 @@ public final class ExecStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linuxExecStepConfig", required=true)
-      private final ExecStepConfigResponse linuxExecStepConfig;
+    private ExecStepConfigResponse linuxExecStepConfig;
 
     public ExecStepConfigResponse linuxExecStepConfig() {
         return this.linuxExecStepConfig;
@@ -32,55 +32,52 @@ public final class ExecStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="windowsExecStepConfig", required=true)
-      private final ExecStepConfigResponse windowsExecStepConfig;
+    private ExecStepConfigResponse windowsExecStepConfig;
 
     public ExecStepConfigResponse windowsExecStepConfig() {
         return this.windowsExecStepConfig;
     }
 
-    public ExecStepResponse(
-        ExecStepConfigResponse linuxExecStepConfig,
-        ExecStepConfigResponse windowsExecStepConfig) {
-        this.linuxExecStepConfig = Objects.requireNonNull(linuxExecStepConfig, "expected parameter 'linuxExecStepConfig' to be non-null");
-        this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig, "expected parameter 'windowsExecStepConfig' to be non-null");
-    }
+    private ExecStepResponse() {}
 
-    private ExecStepResponse() {
-        this.linuxExecStepConfig = null;
-        this.windowsExecStepConfig = null;
+    private ExecStepResponse(ExecStepResponse $) {
+        this.linuxExecStepConfig = $.linuxExecStepConfig;
+        this.windowsExecStepConfig = $.windowsExecStepConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ExecStepConfigResponse linuxExecStepConfig;
-        private ExecStepConfigResponse windowsExecStepConfig;
+        private ExecStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecStepResponse();
         }
 
         public Builder(ExecStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linuxExecStepConfig = defaults.linuxExecStepConfig;
-    	      this.windowsExecStepConfig = defaults.windowsExecStepConfig;
+            $ = new ExecStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linuxExecStepConfig(ExecStepConfigResponse linuxExecStepConfig) {
-            this.linuxExecStepConfig = Objects.requireNonNull(linuxExecStepConfig);
+            $.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
+
         public Builder windowsExecStepConfig(ExecStepConfigResponse windowsExecStepConfig) {
-            this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig);
+            $.windowsExecStepConfig = windowsExecStepConfig;
             return this;
-        }        public ExecStepResponse build() {
-            return new ExecStepResponse(linuxExecStepConfig, windowsExecStepConfig);
+        }
+
+        public ExecStepResponse build() {
+            $.linuxExecStepConfig = Objects.requireNonNull($.linuxExecStepConfig, "expected parameter 'linuxExecStepConfig' to be non-null");
+            $.windowsExecStepConfig = Objects.requireNonNull($.windowsExecStepConfig, "expected parameter 'windowsExecStepConfig' to be non-null");
+            return $;
         }
     }
+
 }

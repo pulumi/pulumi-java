@@ -5,10 +5,10 @@ package com.pulumi.aws.cfg.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RuleScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="complianceResourceId")
-      private final @Nullable Output<String> complianceResourceId;
+    private @Nullable Output<String> complianceResourceId;
 
-    public Output<String> complianceResourceId() {
-        return this.complianceResourceId == null ? Codegen.empty() : this.complianceResourceId;
+    public Optional<Output<String>> complianceResourceId() {
+        return Optional.ofNullable(this.complianceResourceId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RuleScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="complianceResourceTypes")
-      private final @Nullable Output<List<String>> complianceResourceTypes;
+    private @Nullable Output<List<String>> complianceResourceTypes;
 
-    public Output<List<String>> complianceResourceTypes() {
-        return this.complianceResourceTypes == null ? Codegen.empty() : this.complianceResourceTypes;
+    public Optional<Output<List<String>>> complianceResourceTypes() {
+        return Optional.ofNullable(this.complianceResourceTypes);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RuleScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagKey")
-      private final @Nullable Output<String> tagKey;
+    private @Nullable Output<String> tagKey;
 
-    public Output<String> tagKey() {
-        return this.tagKey == null ? Codegen.empty() : this.tagKey;
+    public Optional<Output<String>> tagKey() {
+        return Optional.ofNullable(this.tagKey);
     }
 
     /**
@@ -54,92 +54,82 @@ public final class RuleScopeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagValue")
-      private final @Nullable Output<String> tagValue;
+    private @Nullable Output<String> tagValue;
 
-    public Output<String> tagValue() {
-        return this.tagValue == null ? Codegen.empty() : this.tagValue;
+    public Optional<Output<String>> tagValue() {
+        return Optional.ofNullable(this.tagValue);
     }
 
-    public RuleScopeArgs(
-        @Nullable Output<String> complianceResourceId,
-        @Nullable Output<List<String>> complianceResourceTypes,
-        @Nullable Output<String> tagKey,
-        @Nullable Output<String> tagValue) {
-        this.complianceResourceId = complianceResourceId;
-        this.complianceResourceTypes = complianceResourceTypes;
-        this.tagKey = tagKey;
-        this.tagValue = tagValue;
-    }
+    private RuleScopeArgs() {}
 
-    private RuleScopeArgs() {
-        this.complianceResourceId = Codegen.empty();
-        this.complianceResourceTypes = Codegen.empty();
-        this.tagKey = Codegen.empty();
-        this.tagValue = Codegen.empty();
+    private RuleScopeArgs(RuleScopeArgs $) {
+        this.complianceResourceId = $.complianceResourceId;
+        this.complianceResourceTypes = $.complianceResourceTypes;
+        this.tagKey = $.tagKey;
+        this.tagValue = $.tagValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> complianceResourceId;
-        private @Nullable Output<List<String>> complianceResourceTypes;
-        private @Nullable Output<String> tagKey;
-        private @Nullable Output<String> tagValue;
+        private RuleScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleScopeArgs();
         }
 
         public Builder(RuleScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complianceResourceId = defaults.complianceResourceId;
-    	      this.complianceResourceTypes = defaults.complianceResourceTypes;
-    	      this.tagKey = defaults.tagKey;
-    	      this.tagValue = defaults.tagValue;
+            $ = new RuleScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder complianceResourceId(@Nullable Output<String> complianceResourceId) {
-            this.complianceResourceId = complianceResourceId;
+            $.complianceResourceId = complianceResourceId;
             return this;
         }
-        public Builder complianceResourceId(@Nullable String complianceResourceId) {
-            this.complianceResourceId = Codegen.ofNullable(complianceResourceId);
-            return this;
+
+        public Builder complianceResourceId(String complianceResourceId) {
+            return complianceResourceId(Output.of(complianceResourceId));
         }
+
         public Builder complianceResourceTypes(@Nullable Output<List<String>> complianceResourceTypes) {
-            this.complianceResourceTypes = complianceResourceTypes;
+            $.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
-        public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
-            this.complianceResourceTypes = Codegen.ofNullable(complianceResourceTypes);
-            return this;
+
+        public Builder complianceResourceTypes(List<String> complianceResourceTypes) {
+            return complianceResourceTypes(Output.of(complianceResourceTypes));
         }
+
         public Builder complianceResourceTypes(String... complianceResourceTypes) {
             return complianceResourceTypes(List.of(complianceResourceTypes));
         }
+
         public Builder tagKey(@Nullable Output<String> tagKey) {
-            this.tagKey = tagKey;
+            $.tagKey = tagKey;
             return this;
         }
-        public Builder tagKey(@Nullable String tagKey) {
-            this.tagKey = Codegen.ofNullable(tagKey);
-            return this;
+
+        public Builder tagKey(String tagKey) {
+            return tagKey(Output.of(tagKey));
         }
+
         public Builder tagValue(@Nullable Output<String> tagValue) {
-            this.tagValue = tagValue;
+            $.tagValue = tagValue;
             return this;
         }
-        public Builder tagValue(@Nullable String tagValue) {
-            this.tagValue = Codegen.ofNullable(tagValue);
-            return this;
-        }        public RuleScopeArgs build() {
-            return new RuleScopeArgs(complianceResourceId, complianceResourceTypes, tagKey, tagValue);
+
+        public Builder tagValue(String tagValue) {
+            return tagValue(Output.of(tagValue));
+        }
+
+        public RuleScopeArgs build() {
+            return $;
         }
     }
+
 }

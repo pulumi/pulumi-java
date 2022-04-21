@@ -25,10 +25,10 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
      * 
      */
     @Import(name="healthyThreshold")
-      private final @Nullable Integer healthyThreshold;
+    private @Nullable Integer healthyThreshold;
 
     public Optional<Integer> healthyThreshold() {
-        return this.healthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthyThreshold);
+        return Optional.ofNullable(this.healthyThreshold);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
      * 
      */
     @Import(name="interval")
-      private final @Nullable Integer interval;
+    private @Nullable Integer interval;
 
     public Optional<Integer> interval() {
-        return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
      * 
      */
     @Import(name="protocol")
-      private final @Nullable ServiceHealthCheckConfigurationProtocol protocol;
+    private @Nullable ServiceHealthCheckConfigurationProtocol protocol;
 
     public Optional<ServiceHealthCheckConfigurationProtocol> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Integer timeout;
+    private @Nullable Integer timeout;
 
     public Optional<Integer> timeout() {
-        return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -80,91 +80,74 @@ public final class ServiceHealthCheckConfiguration extends com.pulumi.resources.
      * 
      */
     @Import(name="unhealthyThreshold")
-      private final @Nullable Integer unhealthyThreshold;
+    private @Nullable Integer unhealthyThreshold;
 
     public Optional<Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.unhealthyThreshold);
+        return Optional.ofNullable(this.unhealthyThreshold);
     }
 
-    public ServiceHealthCheckConfiguration(
-        @Nullable Integer healthyThreshold,
-        @Nullable Integer interval,
-        @Nullable String path,
-        @Nullable ServiceHealthCheckConfigurationProtocol protocol,
-        @Nullable Integer timeout,
-        @Nullable Integer unhealthyThreshold) {
-        this.healthyThreshold = healthyThreshold;
-        this.interval = interval;
-        this.path = path;
-        this.protocol = protocol;
-        this.timeout = timeout;
-        this.unhealthyThreshold = unhealthyThreshold;
-    }
+    private ServiceHealthCheckConfiguration() {}
 
-    private ServiceHealthCheckConfiguration() {
-        this.healthyThreshold = null;
-        this.interval = null;
-        this.path = null;
-        this.protocol = null;
-        this.timeout = null;
-        this.unhealthyThreshold = null;
+    private ServiceHealthCheckConfiguration(ServiceHealthCheckConfiguration $) {
+        this.healthyThreshold = $.healthyThreshold;
+        this.interval = $.interval;
+        this.path = $.path;
+        this.protocol = $.protocol;
+        this.timeout = $.timeout;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceHealthCheckConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer healthyThreshold;
-        private @Nullable Integer interval;
-        private @Nullable String path;
-        private @Nullable ServiceHealthCheckConfigurationProtocol protocol;
-        private @Nullable Integer timeout;
-        private @Nullable Integer unhealthyThreshold;
+        private ServiceHealthCheckConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceHealthCheckConfiguration();
         }
 
         public Builder(ServiceHealthCheckConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.interval = defaults.interval;
-    	      this.path = defaults.path;
-    	      this.protocol = defaults.protocol;
-    	      this.timeout = defaults.timeout;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new ServiceHealthCheckConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = healthyThreshold;
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
+
         public Builder interval(@Nullable Integer interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder protocol(@Nullable ServiceHealthCheckConfigurationProtocol protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
+
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = unhealthyThreshold;
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
-        }        public ServiceHealthCheckConfiguration build() {
-            return new ServiceHealthCheckConfiguration(healthyThreshold, interval, path, protocol, timeout, unhealthyThreshold);
+        }
+
+        public ServiceHealthCheckConfiguration build() {
+            return $;
         }
     }
+
 }

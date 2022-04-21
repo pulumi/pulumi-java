@@ -25,10 +25,10 @@ public final class ManagedIntegrationRuntimeNodeResponse extends com.pulumi.reso
      * 
      */
     @Import(name="errors")
-      private final @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
+    private @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
 
-    public List<ManagedIntegrationRuntimeErrorResponse> errors() {
-        return this.errors == null ? List.of() : this.errors;
+    public Optional<List<ManagedIntegrationRuntimeErrorResponse>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends com.pulumi.reso
      * 
      */
     @Import(name="nodeId", required=true)
-      private final String nodeId;
+    private String nodeId;
 
     public String nodeId() {
         return this.nodeId;
@@ -47,67 +47,62 @@ public final class ManagedIntegrationRuntimeNodeResponse extends com.pulumi.reso
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public ManagedIntegrationRuntimeNodeResponse(
-        @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors,
-        String nodeId,
-        String status) {
-        this.errors = errors;
-        this.nodeId = Objects.requireNonNull(nodeId, "expected parameter 'nodeId' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private ManagedIntegrationRuntimeNodeResponse() {}
 
-    private ManagedIntegrationRuntimeNodeResponse() {
-        this.errors = List.of();
-        this.nodeId = null;
-        this.status = null;
+    private ManagedIntegrationRuntimeNodeResponse(ManagedIntegrationRuntimeNodeResponse $) {
+        this.errors = $.errors;
+        this.nodeId = $.nodeId;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIntegrationRuntimeNodeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
-        private String nodeId;
-        private String status;
+        private ManagedIntegrationRuntimeNodeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIntegrationRuntimeNodeResponse();
         }
 
         public Builder(ManagedIntegrationRuntimeNodeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
-    	      this.nodeId = defaults.nodeId;
-    	      this.status = defaults.status;
+            $ = new ManagedIntegrationRuntimeNodeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(@Nullable List<ManagedIntegrationRuntimeErrorResponse> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ManagedIntegrationRuntimeErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder nodeId(String nodeId) {
-            this.nodeId = Objects.requireNonNull(nodeId);
+            $.nodeId = nodeId;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public ManagedIntegrationRuntimeNodeResponse build() {
-            return new ManagedIntegrationRuntimeNodeResponse(errors, nodeId, status);
+        }
+
+        public ManagedIntegrationRuntimeNodeResponse build() {
+            $.nodeId = Objects.requireNonNull($.nodeId, "expected parameter 'nodeId' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

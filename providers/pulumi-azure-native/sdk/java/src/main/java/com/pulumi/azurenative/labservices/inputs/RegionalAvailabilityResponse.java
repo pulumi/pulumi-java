@@ -25,10 +25,10 @@ public final class RegionalAvailabilityResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class RegionalAvailabilityResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sizeAvailabilities")
-      private final @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;
+    private @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;
 
-    public List<SizeAvailabilityResponse> sizeAvailabilities() {
-        return this.sizeAvailabilities == null ? List.of() : this.sizeAvailabilities;
+    public Optional<List<SizeAvailabilityResponse>> sizeAvailabilities() {
+        return Optional.ofNullable(this.sizeAvailabilities);
     }
 
-    public RegionalAvailabilityResponse(
-        @Nullable String region,
-        @Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
-        this.region = region;
-        this.sizeAvailabilities = sizeAvailabilities;
-    }
+    private RegionalAvailabilityResponse() {}
 
-    private RegionalAvailabilityResponse() {
-        this.region = null;
-        this.sizeAvailabilities = List.of();
+    private RegionalAvailabilityResponse(RegionalAvailabilityResponse $) {
+        this.region = $.region;
+        this.sizeAvailabilities = $.sizeAvailabilities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionalAvailabilityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String region;
-        private @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;
+        private RegionalAvailabilityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionalAvailabilityResponse();
         }
 
         public Builder(RegionalAvailabilityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.region = defaults.region;
-    	      this.sizeAvailabilities = defaults.sizeAvailabilities;
+            $ = new RegionalAvailabilityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder sizeAvailabilities(@Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
-            this.sizeAvailabilities = sizeAvailabilities;
+            $.sizeAvailabilities = sizeAvailabilities;
             return this;
         }
+
         public Builder sizeAvailabilities(SizeAvailabilityResponse... sizeAvailabilities) {
             return sizeAvailabilities(List.of(sizeAvailabilities));
-        }        public RegionalAvailabilityResponse build() {
-            return new RegionalAvailabilityResponse(region, sizeAvailabilities);
+        }
+
+        public RegionalAvailabilityResponse build() {
+            return $;
         }
     }
+
 }

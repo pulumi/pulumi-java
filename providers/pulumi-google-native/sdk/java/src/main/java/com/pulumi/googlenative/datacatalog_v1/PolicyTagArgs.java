@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datacatalog_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PolicyTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,17 +31,17 @@ public final class PolicyTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -49,129 +49,114 @@ public final class PolicyTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentPolicyTag")
-      private final @Nullable Output<String> parentPolicyTag;
+    private @Nullable Output<String> parentPolicyTag;
 
-    public Output<String> parentPolicyTag() {
-        return this.parentPolicyTag == null ? Codegen.empty() : this.parentPolicyTag;
+    public Optional<Output<String>> parentPolicyTag() {
+        return Optional.ofNullable(this.parentPolicyTag);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="taxonomyId", required=true)
-      private final Output<String> taxonomyId;
+    private Output<String> taxonomyId;
 
     public Output<String> taxonomyId() {
         return this.taxonomyId;
     }
 
-    public PolicyTagArgs(
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> parentPolicyTag,
-        @Nullable Output<String> project,
-        Output<String> taxonomyId) {
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.location = location;
-        this.parentPolicyTag = parentPolicyTag;
-        this.project = project;
-        this.taxonomyId = Objects.requireNonNull(taxonomyId, "expected parameter 'taxonomyId' to be non-null");
-    }
+    private PolicyTagArgs() {}
 
-    private PolicyTagArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.parentPolicyTag = Codegen.empty();
-        this.project = Codegen.empty();
-        this.taxonomyId = Codegen.empty();
+    private PolicyTagArgs(PolicyTagArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.parentPolicyTag = $.parentPolicyTag;
+        this.project = $.project;
+        this.taxonomyId = $.taxonomyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> parentPolicyTag;
-        private @Nullable Output<String> project;
-        private Output<String> taxonomyId;
+        private PolicyTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyTagArgs();
         }
 
         public Builder(PolicyTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.parentPolicyTag = defaults.parentPolicyTag;
-    	      this.project = defaults.project;
-    	      this.taxonomyId = defaults.taxonomyId;
+            $ = new PolicyTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder parentPolicyTag(@Nullable Output<String> parentPolicyTag) {
-            this.parentPolicyTag = parentPolicyTag;
+            $.parentPolicyTag = parentPolicyTag;
             return this;
         }
-        public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
-            this.parentPolicyTag = Codegen.ofNullable(parentPolicyTag);
-            return this;
+
+        public Builder parentPolicyTag(String parentPolicyTag) {
+            return parentPolicyTag(Output.of(parentPolicyTag));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder taxonomyId(Output<String> taxonomyId) {
-            this.taxonomyId = Objects.requireNonNull(taxonomyId);
+            $.taxonomyId = taxonomyId;
             return this;
         }
+
         public Builder taxonomyId(String taxonomyId) {
-            this.taxonomyId = Output.of(Objects.requireNonNull(taxonomyId));
-            return this;
-        }        public PolicyTagArgs build() {
-            return new PolicyTagArgs(description, displayName, location, parentPolicyTag, project, taxonomyId);
+            return taxonomyId(Output.of(taxonomyId));
+        }
+
+        public PolicyTagArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.taxonomyId = Objects.requireNonNull($.taxonomyId, "expected parameter 'taxonomyId' to be non-null");
+            return $;
         }
     }
+
 }

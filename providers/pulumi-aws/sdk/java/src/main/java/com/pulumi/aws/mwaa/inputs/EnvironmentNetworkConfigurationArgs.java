@@ -5,7 +5,6 @@ package com.pulumi.aws.mwaa.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class EnvironmentNetworkConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="securityGroupIds", required=true)
-      private final Output<List<String>> securityGroupIds;
+    private Output<List<String>> securityGroupIds;
 
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
@@ -31,69 +30,68 @@ public final class EnvironmentNetworkConfigurationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
-    public EnvironmentNetworkConfigurationArgs(
-        Output<List<String>> securityGroupIds,
-        Output<List<String>> subnetIds) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-    }
+    private EnvironmentNetworkConfigurationArgs() {}
 
-    private EnvironmentNetworkConfigurationArgs() {
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
+    private EnvironmentNetworkConfigurationArgs(EnvironmentNetworkConfigurationArgs $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentNetworkConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> securityGroupIds;
-        private Output<List<String>> subnetIds;
+        private EnvironmentNetworkConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentNetworkConfigurationArgs();
         }
 
         public Builder(EnvironmentNetworkConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
+            $ = new EnvironmentNetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
-            return this;
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
-        }        public EnvironmentNetworkConfigurationArgs build() {
-            return new EnvironmentNetworkConfigurationArgs(securityGroupIds, subnetIds);
+        }
+
+        public EnvironmentNetworkConfigurationArgs build() {
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            return $;
         }
     }
+
 }

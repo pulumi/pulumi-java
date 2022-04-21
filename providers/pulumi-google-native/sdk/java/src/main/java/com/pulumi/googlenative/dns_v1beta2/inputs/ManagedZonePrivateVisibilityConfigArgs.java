@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ManagedZonePrivateVisibilityConfigGKEClusterArgs;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ManagedZonePrivateVisibilityConfigNetworkArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="gkeClusters")
-      private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
+    private @Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
 
-    public Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters() {
-        return this.gkeClusters == null ? Codegen.empty() : this.gkeClusters;
+    public Optional<Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>>> gkeClusters() {
+        return Optional.ofNullable(this.gkeClusters);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -41,82 +41,76 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="networks")
-      private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
+    private @Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 
-    public Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks() {
-        return this.networks == null ? Codegen.empty() : this.networks;
+    public Optional<Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>>> networks() {
+        return Optional.ofNullable(this.networks);
     }
 
-    public ManagedZonePrivateVisibilityConfigArgs(
-        @Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters,
-        @Nullable Output<String> kind,
-        @Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
-        this.gkeClusters = gkeClusters;
-        this.kind = kind;
-        this.networks = networks;
-    }
+    private ManagedZonePrivateVisibilityConfigArgs() {}
 
-    private ManagedZonePrivateVisibilityConfigArgs() {
-        this.gkeClusters = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.networks = Codegen.empty();
+    private ManagedZonePrivateVisibilityConfigArgs(ManagedZonePrivateVisibilityConfigArgs $) {
+        this.gkeClusters = $.gkeClusters;
+        this.kind = $.kind;
+        this.networks = $.networks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePrivateVisibilityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
+        private ManagedZonePrivateVisibilityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePrivateVisibilityConfigArgs();
         }
 
         public Builder(ManagedZonePrivateVisibilityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gkeClusters = defaults.gkeClusters;
-    	      this.kind = defaults.kind;
-    	      this.networks = defaults.networks;
+            $ = new ManagedZonePrivateVisibilityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gkeClusters(@Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters) {
-            this.gkeClusters = gkeClusters;
+            $.gkeClusters = gkeClusters;
             return this;
         }
-        public Builder gkeClusters(@Nullable List<ManagedZonePrivateVisibilityConfigGKEClusterArgs> gkeClusters) {
-            this.gkeClusters = Codegen.ofNullable(gkeClusters);
-            return this;
+
+        public Builder gkeClusters(List<ManagedZonePrivateVisibilityConfigGKEClusterArgs> gkeClusters) {
+            return gkeClusters(Output.of(gkeClusters));
         }
+
         public Builder gkeClusters(ManagedZonePrivateVisibilityConfigGKEClusterArgs... gkeClusters) {
             return gkeClusters(List.of(gkeClusters));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder networks(@Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks) {
-            this.networks = networks;
+            $.networks = networks;
             return this;
         }
-        public Builder networks(@Nullable List<ManagedZonePrivateVisibilityConfigNetworkArgs> networks) {
-            this.networks = Codegen.ofNullable(networks);
-            return this;
+
+        public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkArgs> networks) {
+            return networks(Output.of(networks));
         }
+
         public Builder networks(ManagedZonePrivateVisibilityConfigNetworkArgs... networks) {
             return networks(List.of(networks));
-        }        public ManagedZonePrivateVisibilityConfigArgs build() {
-            return new ManagedZonePrivateVisibilityConfigArgs(gkeClusters, kind, networks);
+        }
+
+        public ManagedZonePrivateVisibilityConfigArgs build() {
+            return $;
         }
     }
+
 }

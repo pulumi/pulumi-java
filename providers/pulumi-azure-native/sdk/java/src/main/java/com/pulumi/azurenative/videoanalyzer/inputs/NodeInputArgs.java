@@ -5,7 +5,6 @@ package com.pulumi.azurenative.videoanalyzer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class NodeInputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeName", required=true)
-      private final Output<String> nodeName;
+    private Output<String> nodeName;
 
     public Output<String> nodeName() {
         return this.nodeName;
     }
 
-    public NodeInputArgs(Output<String> nodeName) {
-        this.nodeName = Objects.requireNonNull(nodeName, "expected parameter 'nodeName' to be non-null");
-    }
+    private NodeInputArgs() {}
 
-    private NodeInputArgs() {
-        this.nodeName = Codegen.empty();
+    private NodeInputArgs(NodeInputArgs $) {
+        this.nodeName = $.nodeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> nodeName;
+        private NodeInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeInputArgs();
         }
 
         public Builder(NodeInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeName = defaults.nodeName;
+            $ = new NodeInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeName(Output<String> nodeName) {
-            this.nodeName = Objects.requireNonNull(nodeName);
+            $.nodeName = nodeName;
             return this;
         }
+
         public Builder nodeName(String nodeName) {
-            this.nodeName = Output.of(Objects.requireNonNull(nodeName));
-            return this;
-        }        public NodeInputArgs build() {
-            return new NodeInputArgs(nodeName);
+            return nodeName(Output.of(nodeName));
+        }
+
+        public NodeInputArgs build() {
+            $.nodeName = Objects.requireNonNull($.nodeName, "expected parameter 'nodeName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
      * 
      */
     @Import(name="aliasContext", required=true)
-      private final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
+    private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
 
     public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext() {
         return this.aliasContext;
@@ -33,7 +33,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
      * 
      */
     @Import(name="gerritProject", required=true)
-      private final String gerritProject;
+    private String gerritProject;
 
     public String gerritProject() {
         return this.gerritProject;
@@ -44,7 +44,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
      * 
      */
     @Import(name="hostUri", required=true)
-      private final String hostUri;
+    private String hostUri;
 
     public String hostUri() {
         return this.hostUri;
@@ -55,73 +55,66 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
      * 
      */
     @Import(name="revisionId", required=true)
-      private final String revisionId;
+    private String revisionId;
 
     public String revisionId() {
         return this.revisionId;
     }
 
-    public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse(
-        GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
-        String gerritProject,
-        String hostUri,
-        String revisionId) {
-        this.aliasContext = Objects.requireNonNull(aliasContext, "expected parameter 'aliasContext' to be non-null");
-        this.gerritProject = Objects.requireNonNull(gerritProject, "expected parameter 'gerritProject' to be non-null");
-        this.hostUri = Objects.requireNonNull(hostUri, "expected parameter 'hostUri' to be non-null");
-        this.revisionId = Objects.requireNonNull(revisionId, "expected parameter 'revisionId' to be non-null");
-    }
+    private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse() {}
 
-    private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse() {
-        this.aliasContext = null;
-        this.gerritProject = null;
-        this.hostUri = null;
-        this.revisionId = null;
+    private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse $) {
+        this.aliasContext = $.aliasContext;
+        this.gerritProject = $.gerritProject;
+        this.hostUri = $.hostUri;
+        this.revisionId = $.revisionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
-        private String gerritProject;
-        private String hostUri;
-        private String revisionId;
+        private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse();
         }
 
         public Builder(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasContext = defaults.aliasContext;
-    	      this.gerritProject = defaults.gerritProject;
-    	      this.hostUri = defaults.hostUri;
-    	      this.revisionId = defaults.revisionId;
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext) {
-            this.aliasContext = Objects.requireNonNull(aliasContext);
+            $.aliasContext = aliasContext;
             return this;
         }
+
         public Builder gerritProject(String gerritProject) {
-            this.gerritProject = Objects.requireNonNull(gerritProject);
+            $.gerritProject = gerritProject;
             return this;
         }
+
         public Builder hostUri(String hostUri) {
-            this.hostUri = Objects.requireNonNull(hostUri);
+            $.hostUri = hostUri;
             return this;
         }
+
         public Builder revisionId(String revisionId) {
-            this.revisionId = Objects.requireNonNull(revisionId);
+            $.revisionId = revisionId;
             return this;
-        }        public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse build() {
-            return new GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse(aliasContext, gerritProject, hostUri, revisionId);
+        }
+
+        public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse build() {
+            $.aliasContext = Objects.requireNonNull($.aliasContext, "expected parameter 'aliasContext' to be non-null");
+            $.gerritProject = Objects.requireNonNull($.gerritProject, "expected parameter 'gerritProject' to be non-null");
+            $.hostUri = Objects.requireNonNull($.hostUri, "expected parameter 'hostUri' to be non-null");
+            $.revisionId = Objects.requireNonNull($.revisionId, "expected parameter 'revisionId' to be non-null");
+            return $;
         }
     }
+
 }

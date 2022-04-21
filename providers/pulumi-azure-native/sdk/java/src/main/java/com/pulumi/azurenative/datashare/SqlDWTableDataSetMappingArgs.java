@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +21,7 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,7 +32,7 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataSetId", required=true)
-      private final Output<String> dataSetId;
+    private Output<String> dataSetId;
 
     public Output<String> dataSetId() {
         return this.dataSetId;
@@ -42,10 +43,10 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataSetMappingName")
-      private final @Nullable Output<String> dataSetMappingName;
+    private @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> dataSetMappingName() {
-        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
+    public Optional<Output<String>> dataSetMappingName() {
+        return Optional.ofNullable(this.dataSetMappingName);
     }
 
     /**
@@ -53,7 +54,7 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataWarehouseName", required=true)
-      private final Output<String> dataWarehouseName;
+    private Output<String> dataWarehouseName;
 
     public Output<String> dataWarehouseName() {
         return this.dataWarehouseName;
@@ -65,7 +66,7 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -76,7 +77,7 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +88,7 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="schemaName", required=true)
-      private final Output<String> schemaName;
+    private Output<String> schemaName;
 
     public Output<String> schemaName() {
         return this.schemaName;
@@ -98,7 +99,7 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="shareSubscriptionName", required=true)
-      private final Output<String> shareSubscriptionName;
+    private Output<String> shareSubscriptionName;
 
     public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -109,7 +110,7 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sqlServerResourceId", required=true)
-      private final Output<String> sqlServerResourceId;
+    private Output<String> sqlServerResourceId;
 
     public Output<String> sqlServerResourceId() {
         return this.sqlServerResourceId;
@@ -120,167 +121,147 @@ public final class SqlDWTableDataSetMappingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public SqlDWTableDataSetMappingArgs(
-        Output<String> accountName,
-        Output<String> dataSetId,
-        @Nullable Output<String> dataSetMappingName,
-        Output<String> dataWarehouseName,
-        Output<String> kind,
-        Output<String> resourceGroupName,
-        Output<String> schemaName,
-        Output<String> shareSubscriptionName,
-        Output<String> sqlServerResourceId,
-        Output<String> tableName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dataSetId = Objects.requireNonNull(dataSetId, "expected parameter 'dataSetId' to be non-null");
-        this.dataSetMappingName = dataSetMappingName;
-        this.dataWarehouseName = Objects.requireNonNull(dataWarehouseName, "expected parameter 'dataWarehouseName' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-        this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
-        this.sqlServerResourceId = Objects.requireNonNull(sqlServerResourceId, "expected parameter 'sqlServerResourceId' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private SqlDWTableDataSetMappingArgs() {}
 
-    private SqlDWTableDataSetMappingArgs() {
-        this.accountName = Codegen.empty();
-        this.dataSetId = Codegen.empty();
-        this.dataSetMappingName = Codegen.empty();
-        this.dataWarehouseName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.schemaName = Codegen.empty();
-        this.shareSubscriptionName = Codegen.empty();
-        this.sqlServerResourceId = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private SqlDWTableDataSetMappingArgs(SqlDWTableDataSetMappingArgs $) {
+        this.accountName = $.accountName;
+        this.dataSetId = $.dataSetId;
+        this.dataSetMappingName = $.dataSetMappingName;
+        this.dataWarehouseName = $.dataWarehouseName;
+        this.kind = $.kind;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaName = $.schemaName;
+        this.shareSubscriptionName = $.shareSubscriptionName;
+        this.sqlServerResourceId = $.sqlServerResourceId;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlDWTableDataSetMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> dataSetId;
-        private @Nullable Output<String> dataSetMappingName;
-        private Output<String> dataWarehouseName;
-        private Output<String> kind;
-        private Output<String> resourceGroupName;
-        private Output<String> schemaName;
-        private Output<String> shareSubscriptionName;
-        private Output<String> sqlServerResourceId;
-        private Output<String> tableName;
+        private SqlDWTableDataSetMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlDWTableDataSetMappingArgs();
         }
 
         public Builder(SqlDWTableDataSetMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dataSetId = defaults.dataSetId;
-    	      this.dataSetMappingName = defaults.dataSetMappingName;
-    	      this.dataWarehouseName = defaults.dataWarehouseName;
-    	      this.kind = defaults.kind;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaName = defaults.schemaName;
-    	      this.shareSubscriptionName = defaults.shareSubscriptionName;
-    	      this.sqlServerResourceId = defaults.sqlServerResourceId;
-    	      this.tableName = defaults.tableName;
+            $ = new SqlDWTableDataSetMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder dataSetId(Output<String> dataSetId) {
-            this.dataSetId = Objects.requireNonNull(dataSetId);
+            $.dataSetId = dataSetId;
             return this;
         }
+
         public Builder dataSetId(String dataSetId) {
-            this.dataSetId = Output.of(Objects.requireNonNull(dataSetId));
-            return this;
+            return dataSetId(Output.of(dataSetId));
         }
+
         public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
-            this.dataSetMappingName = dataSetMappingName;
+            $.dataSetMappingName = dataSetMappingName;
             return this;
         }
-        public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
-            return this;
+
+        public Builder dataSetMappingName(String dataSetMappingName) {
+            return dataSetMappingName(Output.of(dataSetMappingName));
         }
+
         public Builder dataWarehouseName(Output<String> dataWarehouseName) {
-            this.dataWarehouseName = Objects.requireNonNull(dataWarehouseName);
+            $.dataWarehouseName = dataWarehouseName;
             return this;
         }
+
         public Builder dataWarehouseName(String dataWarehouseName) {
-            this.dataWarehouseName = Output.of(Objects.requireNonNull(dataWarehouseName));
-            return this;
+            return dataWarehouseName(Output.of(dataWarehouseName));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder schemaName(Output<String> schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Output.of(Objects.requireNonNull(schemaName));
-            return this;
+            return schemaName(Output.of(schemaName));
         }
+
         public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
-            this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
+            $.shareSubscriptionName = shareSubscriptionName;
             return this;
         }
+
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
-            return this;
+            return shareSubscriptionName(Output.of(shareSubscriptionName));
         }
+
         public Builder sqlServerResourceId(Output<String> sqlServerResourceId) {
-            this.sqlServerResourceId = Objects.requireNonNull(sqlServerResourceId);
+            $.sqlServerResourceId = sqlServerResourceId;
             return this;
         }
+
         public Builder sqlServerResourceId(String sqlServerResourceId) {
-            this.sqlServerResourceId = Output.of(Objects.requireNonNull(sqlServerResourceId));
-            return this;
+            return sqlServerResourceId(Output.of(sqlServerResourceId));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public SqlDWTableDataSetMappingArgs build() {
-            return new SqlDWTableDataSetMappingArgs(accountName, dataSetId, dataSetMappingName, dataWarehouseName, kind, resourceGroupName, schemaName, shareSubscriptionName, sqlServerResourceId, tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public SqlDWTableDataSetMappingArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.dataSetId = Objects.requireNonNull($.dataSetId, "expected parameter 'dataSetId' to be non-null");
+            $.dataWarehouseName = Objects.requireNonNull($.dataWarehouseName, "expected parameter 'dataWarehouseName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            $.shareSubscriptionName = Objects.requireNonNull($.shareSubscriptionName, "expected parameter 'shareSubscriptionName' to be non-null");
+            $.sqlServerResourceId = Objects.requireNonNull($.sqlServerResourceId, "expected parameter 'sqlServerResourceId' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

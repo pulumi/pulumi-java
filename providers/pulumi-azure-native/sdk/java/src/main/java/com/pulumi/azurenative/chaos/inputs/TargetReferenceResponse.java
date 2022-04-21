@@ -21,7 +21,7 @@ public final class TargetReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,55 +32,52 @@ public final class TargetReferenceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TargetReferenceResponse(
-        String id,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TargetReferenceResponse() {}
 
-    private TargetReferenceResponse() {
-        this.id = null;
-        this.type = null;
+    private TargetReferenceResponse(TargetReferenceResponse $) {
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String type;
+        private TargetReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetReferenceResponse();
         }
 
         public Builder(TargetReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new TargetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TargetReferenceResponse build() {
-            return new TargetReferenceResponse(id, type);
+        }
+
+        public TargetReferenceResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

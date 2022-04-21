@@ -13,45 +13,45 @@ public final class GetAuthorizerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAuthorizerArgs Empty = new GetAuthorizerArgs();
 
     @Import(name="authorizerName", required=true)
-      private final String authorizerName;
+    private String authorizerName;
 
     public String authorizerName() {
         return this.authorizerName;
     }
 
-    public GetAuthorizerArgs(String authorizerName) {
-        this.authorizerName = Objects.requireNonNull(authorizerName, "expected parameter 'authorizerName' to be non-null");
-    }
+    private GetAuthorizerArgs() {}
 
-    private GetAuthorizerArgs() {
-        this.authorizerName = null;
+    private GetAuthorizerArgs(GetAuthorizerArgs $) {
+        this.authorizerName = $.authorizerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAuthorizerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizerName;
+        private GetAuthorizerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAuthorizerArgs();
         }
 
         public Builder(GetAuthorizerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizerName = defaults.authorizerName;
+            $ = new GetAuthorizerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizerName(String authorizerName) {
-            this.authorizerName = Objects.requireNonNull(authorizerName);
+            $.authorizerName = authorizerName;
             return this;
-        }        public GetAuthorizerArgs build() {
-            return new GetAuthorizerArgs(authorizerName);
+        }
+
+        public GetAuthorizerArgs build() {
+            $.authorizerName = Objects.requireNonNull($.authorizerName, "expected parameter 'authorizerName' to be non-null");
+            return $;
         }
     }
+
 }

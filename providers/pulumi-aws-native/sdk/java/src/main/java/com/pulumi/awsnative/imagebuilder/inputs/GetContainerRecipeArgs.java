@@ -17,45 +17,45 @@ public final class GetContainerRecipeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetContainerRecipeArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetContainerRecipeArgs() {}
 
-    private GetContainerRecipeArgs() {
-        this.arn = null;
+    private GetContainerRecipeArgs(GetContainerRecipeArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContainerRecipeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetContainerRecipeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContainerRecipeArgs();
         }
 
         public Builder(GetContainerRecipeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetContainerRecipeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetContainerRecipeArgs build() {
-            return new GetContainerRecipeArgs(arn);
+        }
+
+        public GetContainerRecipeArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

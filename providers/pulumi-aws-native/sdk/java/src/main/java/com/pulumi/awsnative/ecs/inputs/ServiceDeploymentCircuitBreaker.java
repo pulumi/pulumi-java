@@ -13,62 +13,59 @@ public final class ServiceDeploymentCircuitBreaker extends com.pulumi.resources.
     public static final ServiceDeploymentCircuitBreaker Empty = new ServiceDeploymentCircuitBreaker();
 
     @Import(name="enable", required=true)
-      private final Boolean enable;
+    private Boolean enable;
 
     public Boolean enable() {
         return this.enable;
     }
 
     @Import(name="rollback", required=true)
-      private final Boolean rollback;
+    private Boolean rollback;
 
     public Boolean rollback() {
         return this.rollback;
     }
 
-    public ServiceDeploymentCircuitBreaker(
-        Boolean enable,
-        Boolean rollback) {
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.rollback = Objects.requireNonNull(rollback, "expected parameter 'rollback' to be non-null");
-    }
+    private ServiceDeploymentCircuitBreaker() {}
 
-    private ServiceDeploymentCircuitBreaker() {
-        this.enable = null;
-        this.rollback = null;
+    private ServiceDeploymentCircuitBreaker(ServiceDeploymentCircuitBreaker $) {
+        this.enable = $.enable;
+        this.rollback = $.rollback;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceDeploymentCircuitBreaker defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enable;
-        private Boolean rollback;
+        private ServiceDeploymentCircuitBreaker $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceDeploymentCircuitBreaker();
         }
 
         public Builder(ServiceDeploymentCircuitBreaker defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.rollback = defaults.rollback;
+            $ = new ServiceDeploymentCircuitBreaker(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(Boolean enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder rollback(Boolean rollback) {
-            this.rollback = Objects.requireNonNull(rollback);
+            $.rollback = rollback;
             return this;
-        }        public ServiceDeploymentCircuitBreaker build() {
-            return new ServiceDeploymentCircuitBreaker(enable, rollback);
+        }
+
+        public ServiceDeploymentCircuitBreaker build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            $.rollback = Objects.requireNonNull($.rollback, "expected parameter 'rollback' to be non-null");
+            return $;
         }
     }
+
 }

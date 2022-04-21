@@ -23,45 +23,44 @@ public final class LocationSMBMountOptions extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version")
-      private final @Nullable LocationSMBMountOptionsVersion version;
+    private @Nullable LocationSMBMountOptionsVersion version;
 
     public Optional<LocationSMBMountOptionsVersion> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public LocationSMBMountOptions(@Nullable LocationSMBMountOptionsVersion version) {
-        this.version = version;
-    }
+    private LocationSMBMountOptions() {}
 
-    private LocationSMBMountOptions() {
-        this.version = null;
+    private LocationSMBMountOptions(LocationSMBMountOptions $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationSMBMountOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LocationSMBMountOptionsVersion version;
+        private LocationSMBMountOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationSMBMountOptions();
         }
 
         public Builder(LocationSMBMountOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new LocationSMBMountOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder version(@Nullable LocationSMBMountOptionsVersion version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public LocationSMBMountOptions build() {
-            return new LocationSMBMountOptions(version);
+        }
+
+        public LocationSMBMountOptions build() {
+            return $;
         }
     }
+
 }

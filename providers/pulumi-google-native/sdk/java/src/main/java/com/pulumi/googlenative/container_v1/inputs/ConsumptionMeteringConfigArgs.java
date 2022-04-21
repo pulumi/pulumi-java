@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConsumptionMeteringConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public ConsumptionMeteringConfigArgs(@Nullable Output<Boolean> enabled) {
-        this.enabled = enabled;
-    }
+    private ConsumptionMeteringConfigArgs() {}
 
-    private ConsumptionMeteringConfigArgs() {
-        this.enabled = Codegen.empty();
+    private ConsumptionMeteringConfigArgs(ConsumptionMeteringConfigArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsumptionMeteringConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
+        private ConsumptionMeteringConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsumptionMeteringConfigArgs();
         }
 
         public Builder(ConsumptionMeteringConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new ConsumptionMeteringConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public ConsumptionMeteringConfigArgs build() {
-            return new ConsumptionMeteringConfigArgs(enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public ConsumptionMeteringConfigArgs build() {
+            return $;
         }
     }
+
 }

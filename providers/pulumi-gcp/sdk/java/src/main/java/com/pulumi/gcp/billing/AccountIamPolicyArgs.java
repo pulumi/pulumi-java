@@ -5,7 +5,6 @@ package com.pulumi.gcp.billing;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class AccountIamPolicyArgs extends com.pulumi.resources.ResourceArg
     public static final AccountIamPolicyArgs Empty = new AccountIamPolicyArgs();
 
     @Import(name="billingAccountId", required=true)
-      private final Output<String> billingAccountId;
+    private Output<String> billingAccountId;
 
     public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public AccountIamPolicyArgs(
-        Output<String> billingAccountId,
-        Output<String> policyData) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private AccountIamPolicyArgs() {}
 
-    private AccountIamPolicyArgs() {
-        this.billingAccountId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private AccountIamPolicyArgs(AccountIamPolicyArgs $) {
+        this.billingAccountId = $.billingAccountId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> billingAccountId;
-        private Output<String> policyData;
+        private AccountIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountIamPolicyArgs();
         }
 
         public Builder(AccountIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.policyData = defaults.policyData;
+            $ = new AccountIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(Output<String> billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
-            return this;
+            return billingAccountId(Output.of(billingAccountId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public AccountIamPolicyArgs build() {
-            return new AccountIamPolicyArgs(billingAccountId, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public AccountIamPolicyArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

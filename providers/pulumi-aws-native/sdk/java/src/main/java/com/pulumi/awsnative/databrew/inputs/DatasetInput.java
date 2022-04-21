@@ -22,94 +22,83 @@ public final class DatasetInput extends com.pulumi.resources.InvokeArgs {
     public static final DatasetInput Empty = new DatasetInput();
 
     @Import(name="dataCatalogInputDefinition")
-      private final @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition;
+    private @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition;
 
     public Optional<DatasetDataCatalogInputDefinition> dataCatalogInputDefinition() {
-        return this.dataCatalogInputDefinition == null ? Optional.empty() : Optional.ofNullable(this.dataCatalogInputDefinition);
+        return Optional.ofNullable(this.dataCatalogInputDefinition);
     }
 
     @Import(name="databaseInputDefinition")
-      private final @Nullable DatasetDatabaseInputDefinition databaseInputDefinition;
+    private @Nullable DatasetDatabaseInputDefinition databaseInputDefinition;
 
     public Optional<DatasetDatabaseInputDefinition> databaseInputDefinition() {
-        return this.databaseInputDefinition == null ? Optional.empty() : Optional.ofNullable(this.databaseInputDefinition);
+        return Optional.ofNullable(this.databaseInputDefinition);
     }
 
     @Import(name="metadata")
-      private final @Nullable DatasetMetadata metadata;
+    private @Nullable DatasetMetadata metadata;
 
     public Optional<DatasetMetadata> metadata() {
-        return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
+        return Optional.ofNullable(this.metadata);
     }
 
     @Import(name="s3InputDefinition")
-      private final @Nullable DatasetS3Location s3InputDefinition;
+    private @Nullable DatasetS3Location s3InputDefinition;
 
     public Optional<DatasetS3Location> s3InputDefinition() {
-        return this.s3InputDefinition == null ? Optional.empty() : Optional.ofNullable(this.s3InputDefinition);
+        return Optional.ofNullable(this.s3InputDefinition);
     }
 
-    public DatasetInput(
-        @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition,
-        @Nullable DatasetDatabaseInputDefinition databaseInputDefinition,
-        @Nullable DatasetMetadata metadata,
-        @Nullable DatasetS3Location s3InputDefinition) {
-        this.dataCatalogInputDefinition = dataCatalogInputDefinition;
-        this.databaseInputDefinition = databaseInputDefinition;
-        this.metadata = metadata;
-        this.s3InputDefinition = s3InputDefinition;
-    }
+    private DatasetInput() {}
 
-    private DatasetInput() {
-        this.dataCatalogInputDefinition = null;
-        this.databaseInputDefinition = null;
-        this.metadata = null;
-        this.s3InputDefinition = null;
+    private DatasetInput(DatasetInput $) {
+        this.dataCatalogInputDefinition = $.dataCatalogInputDefinition;
+        this.databaseInputDefinition = $.databaseInputDefinition;
+        this.metadata = $.metadata;
+        this.s3InputDefinition = $.s3InputDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetInput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition;
-        private @Nullable DatasetDatabaseInputDefinition databaseInputDefinition;
-        private @Nullable DatasetMetadata metadata;
-        private @Nullable DatasetS3Location s3InputDefinition;
+        private DatasetInput $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetInput();
         }
 
         public Builder(DatasetInput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCatalogInputDefinition = defaults.dataCatalogInputDefinition;
-    	      this.databaseInputDefinition = defaults.databaseInputDefinition;
-    	      this.metadata = defaults.metadata;
-    	      this.s3InputDefinition = defaults.s3InputDefinition;
+            $ = new DatasetInput(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCatalogInputDefinition(@Nullable DatasetDataCatalogInputDefinition dataCatalogInputDefinition) {
-            this.dataCatalogInputDefinition = dataCatalogInputDefinition;
+            $.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
+
         public Builder databaseInputDefinition(@Nullable DatasetDatabaseInputDefinition databaseInputDefinition) {
-            this.databaseInputDefinition = databaseInputDefinition;
+            $.databaseInputDefinition = databaseInputDefinition;
             return this;
         }
+
         public Builder metadata(@Nullable DatasetMetadata metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder s3InputDefinition(@Nullable DatasetS3Location s3InputDefinition) {
-            this.s3InputDefinition = s3InputDefinition;
+            $.s3InputDefinition = s3InputDefinition;
             return this;
-        }        public DatasetInput build() {
-            return new DatasetInput(dataCatalogInputDefinition, databaseInputDefinition, metadata, s3InputDefinition);
+        }
+
+        public DatasetInput build() {
+            return $;
         }
     }
+
 }

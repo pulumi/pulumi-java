@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="enableWebAccess", required=true)
-      private final Boolean enableWebAccess;
+    private Boolean enableWebAccess;
 
     public Boolean enableWebAccess() {
         return this.enableWebAccess;
@@ -49,7 +49,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="encryptionConfig", required=true)
-      private final GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig;
+    private GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig;
 
     public GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
@@ -60,7 +60,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="evaluatorConfig", required=true)
-      private final GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig;
+    private GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig;
 
     public GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig() {
         return this.evaluatorConfig;
@@ -71,7 +71,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="evaluatorCount", required=true)
-      private final String evaluatorCount;
+    private String evaluatorCount;
 
     public String evaluatorCount() {
         return this.evaluatorCount;
@@ -82,7 +82,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="evaluatorType", required=true)
-      private final String evaluatorType;
+    private String evaluatorType;
 
     public String evaluatorType() {
         return this.evaluatorType;
@@ -93,7 +93,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="hyperparameters", required=true)
-      private final GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters;
+    private GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters;
 
     public GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters() {
         return this.hyperparameters;
@@ -104,7 +104,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="jobDir", required=true)
-      private final String jobDir;
+    private String jobDir;
 
     public String jobDir() {
         return this.jobDir;
@@ -115,7 +115,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="masterConfig", required=true)
-      private final GoogleCloudMlV1__ReplicaConfigResponse masterConfig;
+    private GoogleCloudMlV1__ReplicaConfigResponse masterConfig;
 
     public GoogleCloudMlV1__ReplicaConfigResponse masterConfig() {
         return this.masterConfig;
@@ -126,7 +126,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="masterType", required=true)
-      private final String masterType;
+    private String masterType;
 
     public String masterType() {
         return this.masterType;
@@ -137,7 +137,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -148,7 +148,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="packageUris", required=true)
-      private final List<String> packageUris;
+    private List<String> packageUris;
 
     public List<String> packageUris() {
         return this.packageUris;
@@ -159,7 +159,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="parameterServerConfig", required=true)
-      private final GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig;
+    private GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig;
 
     public GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig() {
         return this.parameterServerConfig;
@@ -170,7 +170,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="parameterServerCount", required=true)
-      private final String parameterServerCount;
+    private String parameterServerCount;
 
     public String parameterServerCount() {
         return this.parameterServerCount;
@@ -181,7 +181,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="parameterServerType", required=true)
-      private final String parameterServerType;
+    private String parameterServerType;
 
     public String parameterServerType() {
         return this.parameterServerType;
@@ -192,7 +192,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="pythonModule", required=true)
-      private final String pythonModule;
+    private String pythonModule;
 
     public String pythonModule() {
         return this.pythonModule;
@@ -203,7 +203,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="pythonVersion", required=true)
-      private final String pythonVersion;
+    private String pythonVersion;
 
     public String pythonVersion() {
         return this.pythonVersion;
@@ -214,7 +214,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -225,7 +225,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="runtimeVersion", required=true)
-      private final String runtimeVersion;
+    private String runtimeVersion;
 
     public String runtimeVersion() {
         return this.runtimeVersion;
@@ -236,7 +236,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="scaleTier", required=true)
-      private final String scaleTier;
+    private String scaleTier;
 
     public String scaleTier() {
         return this.scaleTier;
@@ -247,7 +247,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="scheduling", required=true)
-      private final GoogleCloudMlV1__SchedulingResponse scheduling;
+    private GoogleCloudMlV1__SchedulingResponse scheduling;
 
     public GoogleCloudMlV1__SchedulingResponse scheduling() {
         return this.scheduling;
@@ -258,7 +258,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -269,7 +269,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="useChiefInTfConfig", required=true)
-      private final Boolean useChiefInTfConfig;
+    private Boolean useChiefInTfConfig;
 
     public Boolean useChiefInTfConfig() {
         return this.useChiefInTfConfig;
@@ -280,7 +280,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="workerConfig", required=true)
-      private final GoogleCloudMlV1__ReplicaConfigResponse workerConfig;
+    private GoogleCloudMlV1__ReplicaConfigResponse workerConfig;
 
     public GoogleCloudMlV1__ReplicaConfigResponse workerConfig() {
         return this.workerConfig;
@@ -291,7 +291,7 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="workerCount", required=true)
-      private final String workerCount;
+    private String workerCount;
 
     public String workerCount() {
         return this.workerCount;
@@ -302,277 +302,228 @@ public final class GoogleCloudMlV1__TrainingInputResponse extends com.pulumi.res
      * 
      */
     @Import(name="workerType", required=true)
-      private final String workerType;
+    private String workerType;
 
     public String workerType() {
         return this.workerType;
     }
 
-    public GoogleCloudMlV1__TrainingInputResponse(
-        List<String> args,
-        Boolean enableWebAccess,
-        GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig,
-        GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig,
-        String evaluatorCount,
-        String evaluatorType,
-        GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters,
-        String jobDir,
-        GoogleCloudMlV1__ReplicaConfigResponse masterConfig,
-        String masterType,
-        String network,
-        List<String> packageUris,
-        GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig,
-        String parameterServerCount,
-        String parameterServerType,
-        String pythonModule,
-        String pythonVersion,
-        String region,
-        String runtimeVersion,
-        String scaleTier,
-        GoogleCloudMlV1__SchedulingResponse scheduling,
-        String serviceAccount,
-        Boolean useChiefInTfConfig,
-        GoogleCloudMlV1__ReplicaConfigResponse workerConfig,
-        String workerCount,
-        String workerType) {
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.enableWebAccess = Objects.requireNonNull(enableWebAccess, "expected parameter 'enableWebAccess' to be non-null");
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig, "expected parameter 'encryptionConfig' to be non-null");
-        this.evaluatorConfig = Objects.requireNonNull(evaluatorConfig, "expected parameter 'evaluatorConfig' to be non-null");
-        this.evaluatorCount = Objects.requireNonNull(evaluatorCount, "expected parameter 'evaluatorCount' to be non-null");
-        this.evaluatorType = Objects.requireNonNull(evaluatorType, "expected parameter 'evaluatorType' to be non-null");
-        this.hyperparameters = Objects.requireNonNull(hyperparameters, "expected parameter 'hyperparameters' to be non-null");
-        this.jobDir = Objects.requireNonNull(jobDir, "expected parameter 'jobDir' to be non-null");
-        this.masterConfig = Objects.requireNonNull(masterConfig, "expected parameter 'masterConfig' to be non-null");
-        this.masterType = Objects.requireNonNull(masterType, "expected parameter 'masterType' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.packageUris = Objects.requireNonNull(packageUris, "expected parameter 'packageUris' to be non-null");
-        this.parameterServerConfig = Objects.requireNonNull(parameterServerConfig, "expected parameter 'parameterServerConfig' to be non-null");
-        this.parameterServerCount = Objects.requireNonNull(parameterServerCount, "expected parameter 'parameterServerCount' to be non-null");
-        this.parameterServerType = Objects.requireNonNull(parameterServerType, "expected parameter 'parameterServerType' to be non-null");
-        this.pythonModule = Objects.requireNonNull(pythonModule, "expected parameter 'pythonModule' to be non-null");
-        this.pythonVersion = Objects.requireNonNull(pythonVersion, "expected parameter 'pythonVersion' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
-        this.scaleTier = Objects.requireNonNull(scaleTier, "expected parameter 'scaleTier' to be non-null");
-        this.scheduling = Objects.requireNonNull(scheduling, "expected parameter 'scheduling' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.useChiefInTfConfig = Objects.requireNonNull(useChiefInTfConfig, "expected parameter 'useChiefInTfConfig' to be non-null");
-        this.workerConfig = Objects.requireNonNull(workerConfig, "expected parameter 'workerConfig' to be non-null");
-        this.workerCount = Objects.requireNonNull(workerCount, "expected parameter 'workerCount' to be non-null");
-        this.workerType = Objects.requireNonNull(workerType, "expected parameter 'workerType' to be non-null");
-    }
+    private GoogleCloudMlV1__TrainingInputResponse() {}
 
-    private GoogleCloudMlV1__TrainingInputResponse() {
-        this.args = List.of();
-        this.enableWebAccess = null;
-        this.encryptionConfig = null;
-        this.evaluatorConfig = null;
-        this.evaluatorCount = null;
-        this.evaluatorType = null;
-        this.hyperparameters = null;
-        this.jobDir = null;
-        this.masterConfig = null;
-        this.masterType = null;
-        this.network = null;
-        this.packageUris = List.of();
-        this.parameterServerConfig = null;
-        this.parameterServerCount = null;
-        this.parameterServerType = null;
-        this.pythonModule = null;
-        this.pythonVersion = null;
-        this.region = null;
-        this.runtimeVersion = null;
-        this.scaleTier = null;
-        this.scheduling = null;
-        this.serviceAccount = null;
-        this.useChiefInTfConfig = null;
-        this.workerConfig = null;
-        this.workerCount = null;
-        this.workerType = null;
+    private GoogleCloudMlV1__TrainingInputResponse(GoogleCloudMlV1__TrainingInputResponse $) {
+        this.args = $.args;
+        this.enableWebAccess = $.enableWebAccess;
+        this.encryptionConfig = $.encryptionConfig;
+        this.evaluatorConfig = $.evaluatorConfig;
+        this.evaluatorCount = $.evaluatorCount;
+        this.evaluatorType = $.evaluatorType;
+        this.hyperparameters = $.hyperparameters;
+        this.jobDir = $.jobDir;
+        this.masterConfig = $.masterConfig;
+        this.masterType = $.masterType;
+        this.network = $.network;
+        this.packageUris = $.packageUris;
+        this.parameterServerConfig = $.parameterServerConfig;
+        this.parameterServerCount = $.parameterServerCount;
+        this.parameterServerType = $.parameterServerType;
+        this.pythonModule = $.pythonModule;
+        this.pythonVersion = $.pythonVersion;
+        this.region = $.region;
+        this.runtimeVersion = $.runtimeVersion;
+        this.scaleTier = $.scaleTier;
+        this.scheduling = $.scheduling;
+        this.serviceAccount = $.serviceAccount;
+        this.useChiefInTfConfig = $.useChiefInTfConfig;
+        this.workerConfig = $.workerConfig;
+        this.workerCount = $.workerCount;
+        this.workerType = $.workerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__TrainingInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> args;
-        private Boolean enableWebAccess;
-        private GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig;
-        private GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig;
-        private String evaluatorCount;
-        private String evaluatorType;
-        private GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters;
-        private String jobDir;
-        private GoogleCloudMlV1__ReplicaConfigResponse masterConfig;
-        private String masterType;
-        private String network;
-        private List<String> packageUris;
-        private GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig;
-        private String parameterServerCount;
-        private String parameterServerType;
-        private String pythonModule;
-        private String pythonVersion;
-        private String region;
-        private String runtimeVersion;
-        private String scaleTier;
-        private GoogleCloudMlV1__SchedulingResponse scheduling;
-        private String serviceAccount;
-        private Boolean useChiefInTfConfig;
-        private GoogleCloudMlV1__ReplicaConfigResponse workerConfig;
-        private String workerCount;
-        private String workerType;
+        private GoogleCloudMlV1__TrainingInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__TrainingInputResponse();
         }
 
         public Builder(GoogleCloudMlV1__TrainingInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.enableWebAccess = defaults.enableWebAccess;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.evaluatorConfig = defaults.evaluatorConfig;
-    	      this.evaluatorCount = defaults.evaluatorCount;
-    	      this.evaluatorType = defaults.evaluatorType;
-    	      this.hyperparameters = defaults.hyperparameters;
-    	      this.jobDir = defaults.jobDir;
-    	      this.masterConfig = defaults.masterConfig;
-    	      this.masterType = defaults.masterType;
-    	      this.network = defaults.network;
-    	      this.packageUris = defaults.packageUris;
-    	      this.parameterServerConfig = defaults.parameterServerConfig;
-    	      this.parameterServerCount = defaults.parameterServerCount;
-    	      this.parameterServerType = defaults.parameterServerType;
-    	      this.pythonModule = defaults.pythonModule;
-    	      this.pythonVersion = defaults.pythonVersion;
-    	      this.region = defaults.region;
-    	      this.runtimeVersion = defaults.runtimeVersion;
-    	      this.scaleTier = defaults.scaleTier;
-    	      this.scheduling = defaults.scheduling;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.useChiefInTfConfig = defaults.useChiefInTfConfig;
-    	      this.workerConfig = defaults.workerConfig;
-    	      this.workerCount = defaults.workerCount;
-    	      this.workerType = defaults.workerType;
+            $ = new GoogleCloudMlV1__TrainingInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder enableWebAccess(Boolean enableWebAccess) {
-            this.enableWebAccess = Objects.requireNonNull(enableWebAccess);
+            $.enableWebAccess = enableWebAccess;
             return this;
         }
+
         public Builder encryptionConfig(GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig) {
-            this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
+
         public Builder evaluatorConfig(GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig) {
-            this.evaluatorConfig = Objects.requireNonNull(evaluatorConfig);
+            $.evaluatorConfig = evaluatorConfig;
             return this;
         }
+
         public Builder evaluatorCount(String evaluatorCount) {
-            this.evaluatorCount = Objects.requireNonNull(evaluatorCount);
+            $.evaluatorCount = evaluatorCount;
             return this;
         }
+
         public Builder evaluatorType(String evaluatorType) {
-            this.evaluatorType = Objects.requireNonNull(evaluatorType);
+            $.evaluatorType = evaluatorType;
             return this;
         }
+
         public Builder hyperparameters(GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters) {
-            this.hyperparameters = Objects.requireNonNull(hyperparameters);
+            $.hyperparameters = hyperparameters;
             return this;
         }
+
         public Builder jobDir(String jobDir) {
-            this.jobDir = Objects.requireNonNull(jobDir);
+            $.jobDir = jobDir;
             return this;
         }
+
         public Builder masterConfig(GoogleCloudMlV1__ReplicaConfigResponse masterConfig) {
-            this.masterConfig = Objects.requireNonNull(masterConfig);
+            $.masterConfig = masterConfig;
             return this;
         }
+
         public Builder masterType(String masterType) {
-            this.masterType = Objects.requireNonNull(masterType);
+            $.masterType = masterType;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder packageUris(List<String> packageUris) {
-            this.packageUris = Objects.requireNonNull(packageUris);
+            $.packageUris = packageUris;
             return this;
         }
+
         public Builder packageUris(String... packageUris) {
             return packageUris(List.of(packageUris));
         }
+
         public Builder parameterServerConfig(GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig) {
-            this.parameterServerConfig = Objects.requireNonNull(parameterServerConfig);
+            $.parameterServerConfig = parameterServerConfig;
             return this;
         }
+
         public Builder parameterServerCount(String parameterServerCount) {
-            this.parameterServerCount = Objects.requireNonNull(parameterServerCount);
+            $.parameterServerCount = parameterServerCount;
             return this;
         }
+
         public Builder parameterServerType(String parameterServerType) {
-            this.parameterServerType = Objects.requireNonNull(parameterServerType);
+            $.parameterServerType = parameterServerType;
             return this;
         }
+
         public Builder pythonModule(String pythonModule) {
-            this.pythonModule = Objects.requireNonNull(pythonModule);
+            $.pythonModule = pythonModule;
             return this;
         }
+
         public Builder pythonVersion(String pythonVersion) {
-            this.pythonVersion = Objects.requireNonNull(pythonVersion);
+            $.pythonVersion = pythonVersion;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder runtimeVersion(String runtimeVersion) {
-            this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
+
         public Builder scaleTier(String scaleTier) {
-            this.scaleTier = Objects.requireNonNull(scaleTier);
+            $.scaleTier = scaleTier;
             return this;
         }
+
         public Builder scheduling(GoogleCloudMlV1__SchedulingResponse scheduling) {
-            this.scheduling = Objects.requireNonNull(scheduling);
+            $.scheduling = scheduling;
             return this;
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder useChiefInTfConfig(Boolean useChiefInTfConfig) {
-            this.useChiefInTfConfig = Objects.requireNonNull(useChiefInTfConfig);
+            $.useChiefInTfConfig = useChiefInTfConfig;
             return this;
         }
+
         public Builder workerConfig(GoogleCloudMlV1__ReplicaConfigResponse workerConfig) {
-            this.workerConfig = Objects.requireNonNull(workerConfig);
+            $.workerConfig = workerConfig;
             return this;
         }
+
         public Builder workerCount(String workerCount) {
-            this.workerCount = Objects.requireNonNull(workerCount);
+            $.workerCount = workerCount;
             return this;
         }
+
         public Builder workerType(String workerType) {
-            this.workerType = Objects.requireNonNull(workerType);
+            $.workerType = workerType;
             return this;
-        }        public GoogleCloudMlV1__TrainingInputResponse build() {
-            return new GoogleCloudMlV1__TrainingInputResponse(args, enableWebAccess, encryptionConfig, evaluatorConfig, evaluatorCount, evaluatorType, hyperparameters, jobDir, masterConfig, masterType, network, packageUris, parameterServerConfig, parameterServerCount, parameterServerType, pythonModule, pythonVersion, region, runtimeVersion, scaleTier, scheduling, serviceAccount, useChiefInTfConfig, workerConfig, workerCount, workerType);
+        }
+
+        public GoogleCloudMlV1__TrainingInputResponse build() {
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.enableWebAccess = Objects.requireNonNull($.enableWebAccess, "expected parameter 'enableWebAccess' to be non-null");
+            $.encryptionConfig = Objects.requireNonNull($.encryptionConfig, "expected parameter 'encryptionConfig' to be non-null");
+            $.evaluatorConfig = Objects.requireNonNull($.evaluatorConfig, "expected parameter 'evaluatorConfig' to be non-null");
+            $.evaluatorCount = Objects.requireNonNull($.evaluatorCount, "expected parameter 'evaluatorCount' to be non-null");
+            $.evaluatorType = Objects.requireNonNull($.evaluatorType, "expected parameter 'evaluatorType' to be non-null");
+            $.hyperparameters = Objects.requireNonNull($.hyperparameters, "expected parameter 'hyperparameters' to be non-null");
+            $.jobDir = Objects.requireNonNull($.jobDir, "expected parameter 'jobDir' to be non-null");
+            $.masterConfig = Objects.requireNonNull($.masterConfig, "expected parameter 'masterConfig' to be non-null");
+            $.masterType = Objects.requireNonNull($.masterType, "expected parameter 'masterType' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.packageUris = Objects.requireNonNull($.packageUris, "expected parameter 'packageUris' to be non-null");
+            $.parameterServerConfig = Objects.requireNonNull($.parameterServerConfig, "expected parameter 'parameterServerConfig' to be non-null");
+            $.parameterServerCount = Objects.requireNonNull($.parameterServerCount, "expected parameter 'parameterServerCount' to be non-null");
+            $.parameterServerType = Objects.requireNonNull($.parameterServerType, "expected parameter 'parameterServerType' to be non-null");
+            $.pythonModule = Objects.requireNonNull($.pythonModule, "expected parameter 'pythonModule' to be non-null");
+            $.pythonVersion = Objects.requireNonNull($.pythonVersion, "expected parameter 'pythonVersion' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.runtimeVersion = Objects.requireNonNull($.runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
+            $.scaleTier = Objects.requireNonNull($.scaleTier, "expected parameter 'scaleTier' to be non-null");
+            $.scheduling = Objects.requireNonNull($.scheduling, "expected parameter 'scheduling' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.useChiefInTfConfig = Objects.requireNonNull($.useChiefInTfConfig, "expected parameter 'useChiefInTfConfig' to be non-null");
+            $.workerConfig = Objects.requireNonNull($.workerConfig, "expected parameter 'workerConfig' to be non-null");
+            $.workerCount = Objects.requireNonNull($.workerCount, "expected parameter 'workerCount' to be non-null");
+            $.workerType = Objects.requireNonNull($.workerType, "expected parameter 'workerType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.lex.inputs;
 import com.pulumi.aws.lex.inputs.SlotTypeEnumerationValueGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="checksum")
-      private final @Nullable Output<String> checksum;
+    private @Nullable Output<String> checksum;
 
-    public Output<String> checksum() {
-        return this.checksum == null ? Codegen.empty() : this.checksum;
+    public Optional<Output<String>> checksum() {
+        return Optional.ofNullable(this.checksum);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createVersion")
-      private final @Nullable Output<Boolean> createVersion;
+    private @Nullable Output<Boolean> createVersion;
 
-    public Output<Boolean> createVersion() {
-        return this.createVersion == null ? Codegen.empty() : this.createVersion;
+    public Optional<Output<Boolean>> createVersion() {
+        return Optional.ofNullable(this.createVersion);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enumerationValues")
-      private final @Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues;
+    private @Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues;
 
-    public Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues() {
-        return this.enumerationValues == null ? Codegen.empty() : this.enumerationValues;
+    public Optional<Output<List<SlotTypeEnumerationValueGetArgs>>> enumerationValues() {
+        return Optional.ofNullable(this.enumerationValues);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastUpdatedDate")
-      private final @Nullable Output<String> lastUpdatedDate;
+    private @Nullable Output<String> lastUpdatedDate;
 
-    public Output<String> lastUpdatedDate() {
-        return this.lastUpdatedDate == null ? Codegen.empty() : this.lastUpdatedDate;
+    public Optional<Output<String>> lastUpdatedDate() {
+        return Optional.ofNullable(this.lastUpdatedDate);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="valueSelectionStrategy")
-      private final @Nullable Output<String> valueSelectionStrategy;
+    private @Nullable Output<String> valueSelectionStrategy;
 
-    public Output<String> valueSelectionStrategy() {
-        return this.valueSelectionStrategy == null ? Codegen.empty() : this.valueSelectionStrategy;
+    public Optional<Output<String>> valueSelectionStrategy() {
+        return Optional.ofNullable(this.valueSelectionStrategy);
     }
 
     /**
@@ -119,157 +119,132 @@ public final class SlotTypeState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public SlotTypeState(
-        @Nullable Output<String> checksum,
-        @Nullable Output<Boolean> createVersion,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> description,
-        @Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues,
-        @Nullable Output<String> lastUpdatedDate,
-        @Nullable Output<String> name,
-        @Nullable Output<String> valueSelectionStrategy,
-        @Nullable Output<String> version) {
-        this.checksum = checksum;
-        this.createVersion = createVersion;
-        this.createdDate = createdDate;
-        this.description = description;
-        this.enumerationValues = enumerationValues;
-        this.lastUpdatedDate = lastUpdatedDate;
-        this.name = name;
-        this.valueSelectionStrategy = valueSelectionStrategy;
-        this.version = version;
-    }
+    private SlotTypeState() {}
 
-    private SlotTypeState() {
-        this.checksum = Codegen.empty();
-        this.createVersion = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enumerationValues = Codegen.empty();
-        this.lastUpdatedDate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.valueSelectionStrategy = Codegen.empty();
-        this.version = Codegen.empty();
+    private SlotTypeState(SlotTypeState $) {
+        this.checksum = $.checksum;
+        this.createVersion = $.createVersion;
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.enumerationValues = $.enumerationValues;
+        this.lastUpdatedDate = $.lastUpdatedDate;
+        this.name = $.name;
+        this.valueSelectionStrategy = $.valueSelectionStrategy;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlotTypeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> checksum;
-        private @Nullable Output<Boolean> createVersion;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues;
-        private @Nullable Output<String> lastUpdatedDate;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> valueSelectionStrategy;
-        private @Nullable Output<String> version;
+        private SlotTypeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlotTypeState();
         }
 
         public Builder(SlotTypeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checksum = defaults.checksum;
-    	      this.createVersion = defaults.createVersion;
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.enumerationValues = defaults.enumerationValues;
-    	      this.lastUpdatedDate = defaults.lastUpdatedDate;
-    	      this.name = defaults.name;
-    	      this.valueSelectionStrategy = defaults.valueSelectionStrategy;
-    	      this.version = defaults.version;
+            $ = new SlotTypeState(Objects.requireNonNull(defaults));
         }
 
         public Builder checksum(@Nullable Output<String> checksum) {
-            this.checksum = checksum;
+            $.checksum = checksum;
             return this;
         }
-        public Builder checksum(@Nullable String checksum) {
-            this.checksum = Codegen.ofNullable(checksum);
-            return this;
+
+        public Builder checksum(String checksum) {
+            return checksum(Output.of(checksum));
         }
+
         public Builder createVersion(@Nullable Output<Boolean> createVersion) {
-            this.createVersion = createVersion;
+            $.createVersion = createVersion;
             return this;
         }
-        public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Codegen.ofNullable(createVersion);
-            return this;
+
+        public Builder createVersion(Boolean createVersion) {
+            return createVersion(Output.of(createVersion));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enumerationValues(@Nullable Output<List<SlotTypeEnumerationValueGetArgs>> enumerationValues) {
-            this.enumerationValues = enumerationValues;
+            $.enumerationValues = enumerationValues;
             return this;
         }
-        public Builder enumerationValues(@Nullable List<SlotTypeEnumerationValueGetArgs> enumerationValues) {
-            this.enumerationValues = Codegen.ofNullable(enumerationValues);
-            return this;
+
+        public Builder enumerationValues(List<SlotTypeEnumerationValueGetArgs> enumerationValues) {
+            return enumerationValues(Output.of(enumerationValues));
         }
+
         public Builder enumerationValues(SlotTypeEnumerationValueGetArgs... enumerationValues) {
             return enumerationValues(List.of(enumerationValues));
         }
+
         public Builder lastUpdatedDate(@Nullable Output<String> lastUpdatedDate) {
-            this.lastUpdatedDate = lastUpdatedDate;
+            $.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
-        public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
-            this.lastUpdatedDate = Codegen.ofNullable(lastUpdatedDate);
-            return this;
+
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
+            return lastUpdatedDate(Output.of(lastUpdatedDate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder valueSelectionStrategy(@Nullable Output<String> valueSelectionStrategy) {
-            this.valueSelectionStrategy = valueSelectionStrategy;
+            $.valueSelectionStrategy = valueSelectionStrategy;
             return this;
         }
-        public Builder valueSelectionStrategy(@Nullable String valueSelectionStrategy) {
-            this.valueSelectionStrategy = Codegen.ofNullable(valueSelectionStrategy);
-            return this;
+
+        public Builder valueSelectionStrategy(String valueSelectionStrategy) {
+            return valueSelectionStrategy(Output.of(valueSelectionStrategy));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public SlotTypeState build() {
-            return new SlotTypeState(checksum, createVersion, createdDate, description, enumerationValues, lastUpdatedDate, name, valueSelectionStrategy, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public SlotTypeState build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.azurenative.cdn;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-      private final Output<String> endpointName;
+    private Output<String> endpointName;
 
     public Output<String> endpointName() {
         return this.endpointName;
@@ -44,7 +44,7 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostName", required=true)
-      private final Output<String> hostName;
+    private Output<String> hostName;
 
     public Output<String> hostName() {
         return this.hostName;
@@ -55,10 +55,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpPort")
-      private final @Nullable Output<Integer> httpPort;
+    private @Nullable Output<Integer> httpPort;
 
-    public Output<Integer> httpPort() {
-        return this.httpPort == null ? Codegen.empty() : this.httpPort;
+    public Optional<Output<Integer>> httpPort() {
+        return Optional.ofNullable(this.httpPort);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpsPort")
-      private final @Nullable Output<Integer> httpsPort;
+    private @Nullable Output<Integer> httpsPort;
 
-    public Output<Integer> httpsPort() {
-        return this.httpsPort == null ? Codegen.empty() : this.httpsPort;
+    public Optional<Output<Integer>> httpsPort() {
+        return Optional.ofNullable(this.httpsPort);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="originHostHeader")
-      private final @Nullable Output<String> originHostHeader;
+    private @Nullable Output<String> originHostHeader;
 
-    public Output<String> originHostHeader() {
-        return this.originHostHeader == null ? Codegen.empty() : this.originHostHeader;
+    public Optional<Output<String>> originHostHeader() {
+        return Optional.ofNullable(this.originHostHeader);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="originName")
-      private final @Nullable Output<String> originName;
+    private @Nullable Output<String> originName;
 
-    public Output<String> originName() {
-        return this.originName == null ? Codegen.empty() : this.originName;
+    public Optional<Output<String>> originName() {
+        return Optional.ofNullable(this.originName);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateLinkAlias")
-      private final @Nullable Output<String> privateLinkAlias;
+    private @Nullable Output<String> privateLinkAlias;
 
-    public Output<String> privateLinkAlias() {
-        return this.privateLinkAlias == null ? Codegen.empty() : this.privateLinkAlias;
+    public Optional<Output<String>> privateLinkAlias() {
+        return Optional.ofNullable(this.privateLinkAlias);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateLinkApprovalMessage")
-      private final @Nullable Output<String> privateLinkApprovalMessage;
+    private @Nullable Output<String> privateLinkApprovalMessage;
 
-    public Output<String> privateLinkApprovalMessage() {
-        return this.privateLinkApprovalMessage == null ? Codegen.empty() : this.privateLinkApprovalMessage;
+    public Optional<Output<String>> privateLinkApprovalMessage() {
+        return Optional.ofNullable(this.privateLinkApprovalMessage);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateLinkLocation")
-      private final @Nullable Output<String> privateLinkLocation;
+    private @Nullable Output<String> privateLinkLocation;
 
-    public Output<String> privateLinkLocation() {
-        return this.privateLinkLocation == null ? Codegen.empty() : this.privateLinkLocation;
+    public Optional<Output<String>> privateLinkLocation() {
+        return Optional.ofNullable(this.privateLinkLocation);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateLinkResourceId")
-      private final @Nullable Output<String> privateLinkResourceId;
+    private @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> privateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
+    public Optional<Output<String>> privateLinkResourceId() {
+        return Optional.ofNullable(this.privateLinkResourceId);
     }
 
     /**
@@ -154,7 +154,7 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -165,7 +165,7 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -176,232 +176,192 @@ public final class OriginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="weight")
-      private final @Nullable Output<Integer> weight;
+    private @Nullable Output<Integer> weight;
 
-    public Output<Integer> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<Integer>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
-    public OriginArgs(
-        @Nullable Output<Boolean> enabled,
-        Output<String> endpointName,
-        Output<String> hostName,
-        @Nullable Output<Integer> httpPort,
-        @Nullable Output<Integer> httpsPort,
-        @Nullable Output<String> originHostHeader,
-        @Nullable Output<String> originName,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> privateLinkAlias,
-        @Nullable Output<String> privateLinkApprovalMessage,
-        @Nullable Output<String> privateLinkLocation,
-        @Nullable Output<String> privateLinkResourceId,
-        Output<String> profileName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Integer> weight) {
-        this.enabled = enabled;
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.httpPort = httpPort;
-        this.httpsPort = httpsPort;
-        this.originHostHeader = originHostHeader;
-        this.originName = originName;
-        this.priority = priority;
-        this.privateLinkAlias = privateLinkAlias;
-        this.privateLinkApprovalMessage = privateLinkApprovalMessage;
-        this.privateLinkLocation = privateLinkLocation;
-        this.privateLinkResourceId = privateLinkResourceId;
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.weight = weight;
-    }
+    private OriginArgs() {}
 
-    private OriginArgs() {
-        this.enabled = Codegen.empty();
-        this.endpointName = Codegen.empty();
-        this.hostName = Codegen.empty();
-        this.httpPort = Codegen.empty();
-        this.httpsPort = Codegen.empty();
-        this.originHostHeader = Codegen.empty();
-        this.originName = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.privateLinkAlias = Codegen.empty();
-        this.privateLinkApprovalMessage = Codegen.empty();
-        this.privateLinkLocation = Codegen.empty();
-        this.privateLinkResourceId = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.weight = Codegen.empty();
+    private OriginArgs(OriginArgs $) {
+        this.enabled = $.enabled;
+        this.endpointName = $.endpointName;
+        this.hostName = $.hostName;
+        this.httpPort = $.httpPort;
+        this.httpsPort = $.httpsPort;
+        this.originHostHeader = $.originHostHeader;
+        this.originName = $.originName;
+        this.priority = $.priority;
+        this.privateLinkAlias = $.privateLinkAlias;
+        this.privateLinkApprovalMessage = $.privateLinkApprovalMessage;
+        this.privateLinkLocation = $.privateLinkLocation;
+        this.privateLinkResourceId = $.privateLinkResourceId;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> endpointName;
-        private Output<String> hostName;
-        private @Nullable Output<Integer> httpPort;
-        private @Nullable Output<Integer> httpsPort;
-        private @Nullable Output<String> originHostHeader;
-        private @Nullable Output<String> originName;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> privateLinkAlias;
-        private @Nullable Output<String> privateLinkApprovalMessage;
-        private @Nullable Output<String> privateLinkLocation;
-        private @Nullable Output<String> privateLinkResourceId;
-        private Output<String> profileName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Integer> weight;
+        private OriginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginArgs();
         }
 
         public Builder(OriginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.endpointName = defaults.endpointName;
-    	      this.hostName = defaults.hostName;
-    	      this.httpPort = defaults.httpPort;
-    	      this.httpsPort = defaults.httpsPort;
-    	      this.originHostHeader = defaults.originHostHeader;
-    	      this.originName = defaults.originName;
-    	      this.priority = defaults.priority;
-    	      this.privateLinkAlias = defaults.privateLinkAlias;
-    	      this.privateLinkApprovalMessage = defaults.privateLinkApprovalMessage;
-    	      this.privateLinkLocation = defaults.privateLinkLocation;
-    	      this.privateLinkResourceId = defaults.privateLinkResourceId;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.weight = defaults.weight;
+            $ = new OriginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder endpointName(Output<String> endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder endpointName(String endpointName) {
-            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
-            return this;
+            return endpointName(Output.of(endpointName));
         }
+
         public Builder hostName(Output<String> hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder hostName(String hostName) {
-            this.hostName = Output.of(Objects.requireNonNull(hostName));
-            return this;
+            return hostName(Output.of(hostName));
         }
+
         public Builder httpPort(@Nullable Output<Integer> httpPort) {
-            this.httpPort = httpPort;
+            $.httpPort = httpPort;
             return this;
         }
-        public Builder httpPort(@Nullable Integer httpPort) {
-            this.httpPort = Codegen.ofNullable(httpPort);
-            return this;
+
+        public Builder httpPort(Integer httpPort) {
+            return httpPort(Output.of(httpPort));
         }
+
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
-            this.httpsPort = httpsPort;
+            $.httpsPort = httpsPort;
             return this;
         }
-        public Builder httpsPort(@Nullable Integer httpsPort) {
-            this.httpsPort = Codegen.ofNullable(httpsPort);
-            return this;
+
+        public Builder httpsPort(Integer httpsPort) {
+            return httpsPort(Output.of(httpsPort));
         }
+
         public Builder originHostHeader(@Nullable Output<String> originHostHeader) {
-            this.originHostHeader = originHostHeader;
+            $.originHostHeader = originHostHeader;
             return this;
         }
-        public Builder originHostHeader(@Nullable String originHostHeader) {
-            this.originHostHeader = Codegen.ofNullable(originHostHeader);
-            return this;
+
+        public Builder originHostHeader(String originHostHeader) {
+            return originHostHeader(Output.of(originHostHeader));
         }
+
         public Builder originName(@Nullable Output<String> originName) {
-            this.originName = originName;
+            $.originName = originName;
             return this;
         }
-        public Builder originName(@Nullable String originName) {
-            this.originName = Codegen.ofNullable(originName);
-            return this;
+
+        public Builder originName(String originName) {
+            return originName(Output.of(originName));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder privateLinkAlias(@Nullable Output<String> privateLinkAlias) {
-            this.privateLinkAlias = privateLinkAlias;
+            $.privateLinkAlias = privateLinkAlias;
             return this;
         }
-        public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
-            this.privateLinkAlias = Codegen.ofNullable(privateLinkAlias);
-            return this;
+
+        public Builder privateLinkAlias(String privateLinkAlias) {
+            return privateLinkAlias(Output.of(privateLinkAlias));
         }
+
         public Builder privateLinkApprovalMessage(@Nullable Output<String> privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = privateLinkApprovalMessage;
+            $.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
-        public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = Codegen.ofNullable(privateLinkApprovalMessage);
-            return this;
+
+        public Builder privateLinkApprovalMessage(String privateLinkApprovalMessage) {
+            return privateLinkApprovalMessage(Output.of(privateLinkApprovalMessage));
         }
+
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
-            this.privateLinkLocation = privateLinkLocation;
+            $.privateLinkLocation = privateLinkLocation;
             return this;
         }
-        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = Codegen.ofNullable(privateLinkLocation);
-            return this;
+
+        public Builder privateLinkLocation(String privateLinkLocation) {
+            return privateLinkLocation(Output.of(privateLinkLocation));
         }
+
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
-            this.privateLinkResourceId = privateLinkResourceId;
+            $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
-        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Codegen.ofNullable(privateLinkResourceId);
-            return this;
+
+        public Builder privateLinkResourceId(String privateLinkResourceId) {
+            return privateLinkResourceId(Output.of(privateLinkResourceId));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder weight(@Nullable Output<Integer> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable Integer weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
-        }        public OriginArgs build() {
-            return new OriginArgs(enabled, endpointName, hostName, httpPort, httpsPort, originHostHeader, originName, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, profileName, resourceGroupName, weight);
+
+        public Builder weight(Integer weight) {
+            return weight(Output.of(weight));
+        }
+
+        public OriginArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse exte
      * 
      */
     @Import(name="bigqueryConnectionSpec", required=true)
-      private final GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
+    private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
 
     public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec() {
         return this.bigqueryConnectionSpec;
     }
 
-    public GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse(GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec) {
-        this.bigqueryConnectionSpec = Objects.requireNonNull(bigqueryConnectionSpec, "expected parameter 'bigqueryConnectionSpec' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse() {
-        this.bigqueryConnectionSpec = null;
+    private GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse(GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse $) {
+        this.bigqueryConnectionSpec = $.bigqueryConnectionSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
+        private GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryConnectionSpec = defaults.bigqueryConnectionSpec;
+            $ = new GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryConnectionSpec(GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec) {
-            this.bigqueryConnectionSpec = Objects.requireNonNull(bigqueryConnectionSpec);
+            $.bigqueryConnectionSpec = bigqueryConnectionSpec;
             return this;
-        }        public GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse build() {
-            return new GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse(bigqueryConnectionSpec);
+        }
+
+        public GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse build() {
+            $.bigqueryConnectionSpec = Objects.requireNonNull($.bigqueryConnectionSpec, "expected parameter 'bigqueryConnectionSpec' to be non-null");
+            return $;
         }
     }
+
 }

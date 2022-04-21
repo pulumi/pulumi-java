@@ -17,7 +17,7 @@ public final class GetProjectKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectName", required=true)
-      private final String projectName;
+    private String projectName;
 
     public String projectName() {
         return this.projectName;
@@ -28,55 +28,52 @@ public final class GetProjectKeysArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetProjectKeysArgs(
-        String projectName,
-        String resourceGroupName) {
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetProjectKeysArgs() {}
 
-    private GetProjectKeysArgs() {
-        this.projectName = null;
-        this.resourceGroupName = null;
+    private GetProjectKeysArgs(GetProjectKeysArgs $) {
+        this.projectName = $.projectName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProjectKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String projectName;
-        private String resourceGroupName;
+        private GetProjectKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProjectKeysArgs();
         }
 
         public Builder(GetProjectKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectName = defaults.projectName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetProjectKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectName(String projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetProjectKeysArgs build() {
-            return new GetProjectKeysArgs(projectName, resourceGroupName);
+        }
+
+        public GetProjectKeysArgs build() {
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

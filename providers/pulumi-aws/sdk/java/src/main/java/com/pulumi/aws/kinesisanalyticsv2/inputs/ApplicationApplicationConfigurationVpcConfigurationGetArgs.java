@@ -5,10 +5,10 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
      * 
      */
     @Import(name="securityGroupIds", required=true)
-      private final Output<List<String>> securityGroupIds;
+    private Output<List<String>> securityGroupIds;
 
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
@@ -32,109 +32,102 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
      * 
      */
     @Import(name="subnetIds", required=true)
-      private final Output<List<String>> subnetIds;
+    private Output<List<String>> subnetIds;
 
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
     @Import(name="vpcConfigurationId")
-      private final @Nullable Output<String> vpcConfigurationId;
+    private @Nullable Output<String> vpcConfigurationId;
 
-    public Output<String> vpcConfigurationId() {
-        return this.vpcConfigurationId == null ? Codegen.empty() : this.vpcConfigurationId;
+    public Optional<Output<String>> vpcConfigurationId() {
+        return Optional.ofNullable(this.vpcConfigurationId);
     }
 
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public ApplicationApplicationConfigurationVpcConfigurationGetArgs(
-        Output<List<String>> securityGroupIds,
-        Output<List<String>> subnetIds,
-        @Nullable Output<String> vpcConfigurationId,
-        @Nullable Output<String> vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.vpcConfigurationId = vpcConfigurationId;
-        this.vpcId = vpcId;
-    }
+    private ApplicationApplicationConfigurationVpcConfigurationGetArgs() {}
 
-    private ApplicationApplicationConfigurationVpcConfigurationGetArgs() {
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.vpcConfigurationId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private ApplicationApplicationConfigurationVpcConfigurationGetArgs(ApplicationApplicationConfigurationVpcConfigurationGetArgs $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.vpcConfigurationId = $.vpcConfigurationId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationVpcConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> securityGroupIds;
-        private Output<List<String>> subnetIds;
-        private @Nullable Output<String> vpcConfigurationId;
-        private @Nullable Output<String> vpcId;
+        private ApplicationApplicationConfigurationVpcConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationVpcConfigurationGetArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationVpcConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcConfigurationId = defaults.vpcConfigurationId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new ApplicationApplicationConfigurationVpcConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
-            return this;
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(Output<List<String>> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
-            return this;
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcConfigurationId(@Nullable Output<String> vpcConfigurationId) {
-            this.vpcConfigurationId = vpcConfigurationId;
+            $.vpcConfigurationId = vpcConfigurationId;
             return this;
         }
-        public Builder vpcConfigurationId(@Nullable String vpcConfigurationId) {
-            this.vpcConfigurationId = Codegen.ofNullable(vpcConfigurationId);
-            return this;
+
+        public Builder vpcConfigurationId(String vpcConfigurationId) {
+            return vpcConfigurationId(Output.of(vpcConfigurationId));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public ApplicationApplicationConfigurationVpcConfigurationGetArgs build() {
-            return new ApplicationApplicationConfigurationVpcConfigurationGetArgs(securityGroupIds, subnetIds, vpcConfigurationId, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public ApplicationApplicationConfigurationVpcConfigurationGetArgs build() {
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            return $;
         }
     }
+
 }

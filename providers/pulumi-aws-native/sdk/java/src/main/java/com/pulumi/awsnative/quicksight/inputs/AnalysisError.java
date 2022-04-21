@@ -24,62 +24,57 @@ public final class AnalysisError extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     @Import(name="type")
-      private final @Nullable AnalysisErrorType type;
+    private @Nullable AnalysisErrorType type;
 
     public Optional<AnalysisErrorType> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public AnalysisError(
-        @Nullable String message,
-        @Nullable AnalysisErrorType type) {
-        this.message = message;
-        this.type = type;
-    }
+    private AnalysisError() {}
 
-    private AnalysisError() {
-        this.message = null;
-        this.type = null;
+    private AnalysisError(AnalysisError $) {
+        this.message = $.message;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalysisError defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String message;
-        private @Nullable AnalysisErrorType type;
+        private AnalysisError $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalysisError();
         }
 
         public Builder(AnalysisError defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.type = defaults.type;
+            $ = new AnalysisError(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder type(@Nullable AnalysisErrorType type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public AnalysisError build() {
-            return new AnalysisError(message, type);
+        }
+
+        public AnalysisError build() {
+            return $;
         }
     }
+
 }

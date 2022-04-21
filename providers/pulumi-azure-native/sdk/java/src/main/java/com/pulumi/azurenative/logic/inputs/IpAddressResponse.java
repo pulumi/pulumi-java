@@ -23,45 +23,44 @@ public final class IpAddressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
-    public IpAddressResponse(@Nullable String address) {
-        this.address = address;
-    }
+    private IpAddressResponse() {}
 
-    private IpAddressResponse() {
-        this.address = null;
+    private IpAddressResponse(IpAddressResponse $) {
+        this.address = $.address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
+        private IpAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpAddressResponse();
         }
 
         public Builder(IpAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
+            $ = new IpAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
-        }        public IpAddressResponse build() {
-            return new IpAddressResponse(address);
+        }
+
+        public IpAddressResponse build() {
+            return $;
         }
     }
+
 }

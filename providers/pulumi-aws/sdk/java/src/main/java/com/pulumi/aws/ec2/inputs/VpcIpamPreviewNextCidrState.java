@@ -5,11 +5,11 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VpcIpamPreviewNextCidrState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="cidr")
-      private final @Nullable Output<String> cidr;
+    private @Nullable Output<String> cidr;
 
-    public Output<String> cidr() {
-        return this.cidr == null ? Codegen.empty() : this.cidr;
+    public Optional<Output<String>> cidr() {
+        return Optional.ofNullable(this.cidr);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VpcIpamPreviewNextCidrState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="disallowedCidrs")
-      private final @Nullable Output<List<String>> disallowedCidrs;
+    private @Nullable Output<List<String>> disallowedCidrs;
 
-    public Output<List<String>> disallowedCidrs() {
-        return this.disallowedCidrs == null ? Codegen.empty() : this.disallowedCidrs;
+    public Optional<Output<List<String>>> disallowedCidrs() {
+        return Optional.ofNullable(this.disallowedCidrs);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class VpcIpamPreviewNextCidrState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ipamPoolId")
-      private final @Nullable Output<String> ipamPoolId;
+    private @Nullable Output<String> ipamPoolId;
 
-    public Output<String> ipamPoolId() {
-        return this.ipamPoolId == null ? Codegen.empty() : this.ipamPoolId;
+    public Optional<Output<String>> ipamPoolId() {
+        return Optional.ofNullable(this.ipamPoolId);
     }
 
     /**
@@ -55,92 +55,82 @@ public final class VpcIpamPreviewNextCidrState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="netmaskLength")
-      private final @Nullable Output<Integer> netmaskLength;
+    private @Nullable Output<Integer> netmaskLength;
 
-    public Output<Integer> netmaskLength() {
-        return this.netmaskLength == null ? Codegen.empty() : this.netmaskLength;
+    public Optional<Output<Integer>> netmaskLength() {
+        return Optional.ofNullable(this.netmaskLength);
     }
 
-    public VpcIpamPreviewNextCidrState(
-        @Nullable Output<String> cidr,
-        @Nullable Output<List<String>> disallowedCidrs,
-        @Nullable Output<String> ipamPoolId,
-        @Nullable Output<Integer> netmaskLength) {
-        this.cidr = cidr;
-        this.disallowedCidrs = disallowedCidrs;
-        this.ipamPoolId = ipamPoolId;
-        this.netmaskLength = netmaskLength;
-    }
+    private VpcIpamPreviewNextCidrState() {}
 
-    private VpcIpamPreviewNextCidrState() {
-        this.cidr = Codegen.empty();
-        this.disallowedCidrs = Codegen.empty();
-        this.ipamPoolId = Codegen.empty();
-        this.netmaskLength = Codegen.empty();
+    private VpcIpamPreviewNextCidrState(VpcIpamPreviewNextCidrState $) {
+        this.cidr = $.cidr;
+        this.disallowedCidrs = $.disallowedCidrs;
+        this.ipamPoolId = $.ipamPoolId;
+        this.netmaskLength = $.netmaskLength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcIpamPreviewNextCidrState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cidr;
-        private @Nullable Output<List<String>> disallowedCidrs;
-        private @Nullable Output<String> ipamPoolId;
-        private @Nullable Output<Integer> netmaskLength;
+        private VpcIpamPreviewNextCidrState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcIpamPreviewNextCidrState();
         }
 
         public Builder(VpcIpamPreviewNextCidrState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.disallowedCidrs = defaults.disallowedCidrs;
-    	      this.ipamPoolId = defaults.ipamPoolId;
-    	      this.netmaskLength = defaults.netmaskLength;
+            $ = new VpcIpamPreviewNextCidrState(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(@Nullable Output<String> cidr) {
-            this.cidr = cidr;
+            $.cidr = cidr;
             return this;
         }
-        public Builder cidr(@Nullable String cidr) {
-            this.cidr = Codegen.ofNullable(cidr);
-            return this;
+
+        public Builder cidr(String cidr) {
+            return cidr(Output.of(cidr));
         }
+
         public Builder disallowedCidrs(@Nullable Output<List<String>> disallowedCidrs) {
-            this.disallowedCidrs = disallowedCidrs;
+            $.disallowedCidrs = disallowedCidrs;
             return this;
         }
-        public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
-            this.disallowedCidrs = Codegen.ofNullable(disallowedCidrs);
-            return this;
+
+        public Builder disallowedCidrs(List<String> disallowedCidrs) {
+            return disallowedCidrs(Output.of(disallowedCidrs));
         }
+
         public Builder disallowedCidrs(String... disallowedCidrs) {
             return disallowedCidrs(List.of(disallowedCidrs));
         }
+
         public Builder ipamPoolId(@Nullable Output<String> ipamPoolId) {
-            this.ipamPoolId = ipamPoolId;
+            $.ipamPoolId = ipamPoolId;
             return this;
         }
-        public Builder ipamPoolId(@Nullable String ipamPoolId) {
-            this.ipamPoolId = Codegen.ofNullable(ipamPoolId);
-            return this;
+
+        public Builder ipamPoolId(String ipamPoolId) {
+            return ipamPoolId(Output.of(ipamPoolId));
         }
+
         public Builder netmaskLength(@Nullable Output<Integer> netmaskLength) {
-            this.netmaskLength = netmaskLength;
+            $.netmaskLength = netmaskLength;
             return this;
         }
-        public Builder netmaskLength(@Nullable Integer netmaskLength) {
-            this.netmaskLength = Codegen.ofNullable(netmaskLength);
-            return this;
-        }        public VpcIpamPreviewNextCidrState build() {
-            return new VpcIpamPreviewNextCidrState(cidr, disallowedCidrs, ipamPoolId, netmaskLength);
+
+        public Builder netmaskLength(Integer netmaskLength) {
+            return netmaskLength(Output.of(netmaskLength));
+        }
+
+        public VpcIpamPreviewNextCidrState build() {
+            return $;
         }
     }
+
 }

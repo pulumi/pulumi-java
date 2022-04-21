@@ -10,10 +10,10 @@ import com.pulumi.azurenative.azurearcdata.inputs.UploadServicePrincipalArgs;
 import com.pulumi.azurenative.azurearcdata.inputs.UploadWatermarkArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class DataControllerPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="basicLoginInformation")
-      private final @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
+    private @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
 
-    public Output<BasicLoginInformationArgs> basicLoginInformation() {
-        return this.basicLoginInformation == null ? Codegen.empty() : this.basicLoginInformation;
+    public Optional<Output<BasicLoginInformationArgs>> basicLoginInformation() {
+        return Optional.ofNullable(this.basicLoginInformation);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DataControllerPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="k8sRaw")
-      private final @Nullable Output<Object> k8sRaw;
+    private @Nullable Output<Object> k8sRaw;
 
-    public Output<Object> k8sRaw() {
-        return this.k8sRaw == null ? Codegen.empty() : this.k8sRaw;
+    public Optional<Output<Object>> k8sRaw() {
+        return Optional.ofNullable(this.k8sRaw);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DataControllerPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="lastUploadedDate")
-      private final @Nullable Output<String> lastUploadedDate;
+    private @Nullable Output<String> lastUploadedDate;
 
-    public Output<String> lastUploadedDate() {
-        return this.lastUploadedDate == null ? Codegen.empty() : this.lastUploadedDate;
+    public Optional<Output<String>> lastUploadedDate() {
+        return Optional.ofNullable(this.lastUploadedDate);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DataControllerPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="logAnalyticsWorkspaceConfig")
-      private final @Nullable Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig;
+    private @Nullable Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig;
 
-    public Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig() {
-        return this.logAnalyticsWorkspaceConfig == null ? Codegen.empty() : this.logAnalyticsWorkspaceConfig;
+    public Optional<Output<LogAnalyticsWorkspaceConfigArgs>> logAnalyticsWorkspaceConfig() {
+        return Optional.ofNullable(this.logAnalyticsWorkspaceConfig);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DataControllerPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="onPremiseProperty")
-      private final @Nullable Output<OnPremisePropertyArgs> onPremiseProperty;
+    private @Nullable Output<OnPremisePropertyArgs> onPremiseProperty;
 
-    public Output<OnPremisePropertyArgs> onPremiseProperty() {
-        return this.onPremiseProperty == null ? Codegen.empty() : this.onPremiseProperty;
+    public Optional<Output<OnPremisePropertyArgs>> onPremiseProperty() {
+        return Optional.ofNullable(this.onPremiseProperty);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class DataControllerPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="uploadServicePrincipal")
-      private final @Nullable Output<UploadServicePrincipalArgs> uploadServicePrincipal;
+    private @Nullable Output<UploadServicePrincipalArgs> uploadServicePrincipal;
 
-    public Output<UploadServicePrincipalArgs> uploadServicePrincipal() {
-        return this.uploadServicePrincipal == null ? Codegen.empty() : this.uploadServicePrincipal;
+    public Optional<Output<UploadServicePrincipalArgs>> uploadServicePrincipal() {
+        return Optional.ofNullable(this.uploadServicePrincipal);
     }
 
     /**
@@ -96,128 +96,108 @@ public final class DataControllerPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="uploadWatermark")
-      private final @Nullable Output<UploadWatermarkArgs> uploadWatermark;
+    private @Nullable Output<UploadWatermarkArgs> uploadWatermark;
 
-    public Output<UploadWatermarkArgs> uploadWatermark() {
-        return this.uploadWatermark == null ? Codegen.empty() : this.uploadWatermark;
+    public Optional<Output<UploadWatermarkArgs>> uploadWatermark() {
+        return Optional.ofNullable(this.uploadWatermark);
     }
 
-    public DataControllerPropertiesArgs(
-        @Nullable Output<BasicLoginInformationArgs> basicLoginInformation,
-        @Nullable Output<Object> k8sRaw,
-        @Nullable Output<String> lastUploadedDate,
-        @Nullable Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig,
-        @Nullable Output<OnPremisePropertyArgs> onPremiseProperty,
-        @Nullable Output<UploadServicePrincipalArgs> uploadServicePrincipal,
-        @Nullable Output<UploadWatermarkArgs> uploadWatermark) {
-        this.basicLoginInformation = basicLoginInformation;
-        this.k8sRaw = k8sRaw;
-        this.lastUploadedDate = lastUploadedDate;
-        this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
-        this.onPremiseProperty = onPremiseProperty;
-        this.uploadServicePrincipal = uploadServicePrincipal;
-        this.uploadWatermark = uploadWatermark;
-    }
+    private DataControllerPropertiesArgs() {}
 
-    private DataControllerPropertiesArgs() {
-        this.basicLoginInformation = Codegen.empty();
-        this.k8sRaw = Codegen.empty();
-        this.lastUploadedDate = Codegen.empty();
-        this.logAnalyticsWorkspaceConfig = Codegen.empty();
-        this.onPremiseProperty = Codegen.empty();
-        this.uploadServicePrincipal = Codegen.empty();
-        this.uploadWatermark = Codegen.empty();
+    private DataControllerPropertiesArgs(DataControllerPropertiesArgs $) {
+        this.basicLoginInformation = $.basicLoginInformation;
+        this.k8sRaw = $.k8sRaw;
+        this.lastUploadedDate = $.lastUploadedDate;
+        this.logAnalyticsWorkspaceConfig = $.logAnalyticsWorkspaceConfig;
+        this.onPremiseProperty = $.onPremiseProperty;
+        this.uploadServicePrincipal = $.uploadServicePrincipal;
+        this.uploadWatermark = $.uploadWatermark;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataControllerPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
-        private @Nullable Output<Object> k8sRaw;
-        private @Nullable Output<String> lastUploadedDate;
-        private @Nullable Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig;
-        private @Nullable Output<OnPremisePropertyArgs> onPremiseProperty;
-        private @Nullable Output<UploadServicePrincipalArgs> uploadServicePrincipal;
-        private @Nullable Output<UploadWatermarkArgs> uploadWatermark;
+        private DataControllerPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataControllerPropertiesArgs();
         }
 
         public Builder(DataControllerPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicLoginInformation = defaults.basicLoginInformation;
-    	      this.k8sRaw = defaults.k8sRaw;
-    	      this.lastUploadedDate = defaults.lastUploadedDate;
-    	      this.logAnalyticsWorkspaceConfig = defaults.logAnalyticsWorkspaceConfig;
-    	      this.onPremiseProperty = defaults.onPremiseProperty;
-    	      this.uploadServicePrincipal = defaults.uploadServicePrincipal;
-    	      this.uploadWatermark = defaults.uploadWatermark;
+            $ = new DataControllerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicLoginInformation(@Nullable Output<BasicLoginInformationArgs> basicLoginInformation) {
-            this.basicLoginInformation = basicLoginInformation;
+            $.basicLoginInformation = basicLoginInformation;
             return this;
         }
-        public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
-            this.basicLoginInformation = Codegen.ofNullable(basicLoginInformation);
-            return this;
+
+        public Builder basicLoginInformation(BasicLoginInformationArgs basicLoginInformation) {
+            return basicLoginInformation(Output.of(basicLoginInformation));
         }
+
         public Builder k8sRaw(@Nullable Output<Object> k8sRaw) {
-            this.k8sRaw = k8sRaw;
+            $.k8sRaw = k8sRaw;
             return this;
         }
-        public Builder k8sRaw(@Nullable Object k8sRaw) {
-            this.k8sRaw = Codegen.ofNullable(k8sRaw);
-            return this;
+
+        public Builder k8sRaw(Object k8sRaw) {
+            return k8sRaw(Output.of(k8sRaw));
         }
+
         public Builder lastUploadedDate(@Nullable Output<String> lastUploadedDate) {
-            this.lastUploadedDate = lastUploadedDate;
+            $.lastUploadedDate = lastUploadedDate;
             return this;
         }
-        public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
-            this.lastUploadedDate = Codegen.ofNullable(lastUploadedDate);
-            return this;
+
+        public Builder lastUploadedDate(String lastUploadedDate) {
+            return lastUploadedDate(Output.of(lastUploadedDate));
         }
+
         public Builder logAnalyticsWorkspaceConfig(@Nullable Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig) {
-            this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
+            $.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
             return this;
         }
-        public Builder logAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigArgs logAnalyticsWorkspaceConfig) {
-            this.logAnalyticsWorkspaceConfig = Codegen.ofNullable(logAnalyticsWorkspaceConfig);
-            return this;
+
+        public Builder logAnalyticsWorkspaceConfig(LogAnalyticsWorkspaceConfigArgs logAnalyticsWorkspaceConfig) {
+            return logAnalyticsWorkspaceConfig(Output.of(logAnalyticsWorkspaceConfig));
         }
+
         public Builder onPremiseProperty(@Nullable Output<OnPremisePropertyArgs> onPremiseProperty) {
-            this.onPremiseProperty = onPremiseProperty;
+            $.onPremiseProperty = onPremiseProperty;
             return this;
         }
-        public Builder onPremiseProperty(@Nullable OnPremisePropertyArgs onPremiseProperty) {
-            this.onPremiseProperty = Codegen.ofNullable(onPremiseProperty);
-            return this;
+
+        public Builder onPremiseProperty(OnPremisePropertyArgs onPremiseProperty) {
+            return onPremiseProperty(Output.of(onPremiseProperty));
         }
+
         public Builder uploadServicePrincipal(@Nullable Output<UploadServicePrincipalArgs> uploadServicePrincipal) {
-            this.uploadServicePrincipal = uploadServicePrincipal;
+            $.uploadServicePrincipal = uploadServicePrincipal;
             return this;
         }
-        public Builder uploadServicePrincipal(@Nullable UploadServicePrincipalArgs uploadServicePrincipal) {
-            this.uploadServicePrincipal = Codegen.ofNullable(uploadServicePrincipal);
-            return this;
+
+        public Builder uploadServicePrincipal(UploadServicePrincipalArgs uploadServicePrincipal) {
+            return uploadServicePrincipal(Output.of(uploadServicePrincipal));
         }
+
         public Builder uploadWatermark(@Nullable Output<UploadWatermarkArgs> uploadWatermark) {
-            this.uploadWatermark = uploadWatermark;
+            $.uploadWatermark = uploadWatermark;
             return this;
         }
-        public Builder uploadWatermark(@Nullable UploadWatermarkArgs uploadWatermark) {
-            this.uploadWatermark = Codegen.ofNullable(uploadWatermark);
-            return this;
-        }        public DataControllerPropertiesArgs build() {
-            return new DataControllerPropertiesArgs(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, uploadServicePrincipal, uploadWatermark);
+
+        public Builder uploadWatermark(UploadWatermarkArgs uploadWatermark) {
+            return uploadWatermark(Output.of(uploadWatermark));
+        }
+
+        public DataControllerPropertiesArgs build() {
+            return $;
         }
     }
+
 }

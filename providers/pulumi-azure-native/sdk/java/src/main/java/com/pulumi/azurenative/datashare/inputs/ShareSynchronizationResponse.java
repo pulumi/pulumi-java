@@ -24,10 +24,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="consumerEmail")
-      private final @Nullable String consumerEmail;
+    private @Nullable String consumerEmail;
 
     public Optional<String> consumerEmail() {
-        return this.consumerEmail == null ? Optional.empty() : Optional.ofNullable(this.consumerEmail);
+        return Optional.ofNullable(this.consumerEmail);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="consumerName")
-      private final @Nullable String consumerName;
+    private @Nullable String consumerName;
 
     public Optional<String> consumerName() {
-        return this.consumerName == null ? Optional.empty() : Optional.ofNullable(this.consumerName);
+        return Optional.ofNullable(this.consumerName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="consumerTenantName")
-      private final @Nullable String consumerTenantName;
+    private @Nullable String consumerTenantName;
 
     public Optional<String> consumerTenantName() {
-        return this.consumerTenantName == null ? Optional.empty() : Optional.ofNullable(this.consumerTenantName);
+        return Optional.ofNullable(this.consumerTenantName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="durationMs")
-      private final @Nullable Integer durationMs;
+    private @Nullable Integer durationMs;
 
     public Optional<Integer> durationMs() {
-        return this.durationMs == null ? Optional.empty() : Optional.ofNullable(this.durationMs);
+        return Optional.ofNullable(this.durationMs);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="synchronizationId")
-      private final @Nullable String synchronizationId;
+    private @Nullable String synchronizationId;
 
     public Optional<String> synchronizationId() {
-        return this.synchronizationId == null ? Optional.empty() : Optional.ofNullable(this.synchronizationId);
+        return Optional.ofNullable(this.synchronizationId);
     }
 
     /**
@@ -123,127 +123,99 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="synchronizationMode", required=true)
-      private final String synchronizationMode;
+    private String synchronizationMode;
 
     public String synchronizationMode() {
         return this.synchronizationMode;
     }
 
-    public ShareSynchronizationResponse(
-        @Nullable String consumerEmail,
-        @Nullable String consumerName,
-        @Nullable String consumerTenantName,
-        @Nullable Integer durationMs,
-        @Nullable String endTime,
-        @Nullable String message,
-        @Nullable String startTime,
-        @Nullable String status,
-        @Nullable String synchronizationId,
-        String synchronizationMode) {
-        this.consumerEmail = consumerEmail;
-        this.consumerName = consumerName;
-        this.consumerTenantName = consumerTenantName;
-        this.durationMs = durationMs;
-        this.endTime = endTime;
-        this.message = message;
-        this.startTime = startTime;
-        this.status = status;
-        this.synchronizationId = synchronizationId;
-        this.synchronizationMode = Objects.requireNonNull(synchronizationMode, "expected parameter 'synchronizationMode' to be non-null");
-    }
+    private ShareSynchronizationResponse() {}
 
-    private ShareSynchronizationResponse() {
-        this.consumerEmail = null;
-        this.consumerName = null;
-        this.consumerTenantName = null;
-        this.durationMs = null;
-        this.endTime = null;
-        this.message = null;
-        this.startTime = null;
-        this.status = null;
-        this.synchronizationId = null;
-        this.synchronizationMode = null;
+    private ShareSynchronizationResponse(ShareSynchronizationResponse $) {
+        this.consumerEmail = $.consumerEmail;
+        this.consumerName = $.consumerName;
+        this.consumerTenantName = $.consumerTenantName;
+        this.durationMs = $.durationMs;
+        this.endTime = $.endTime;
+        this.message = $.message;
+        this.startTime = $.startTime;
+        this.status = $.status;
+        this.synchronizationId = $.synchronizationId;
+        this.synchronizationMode = $.synchronizationMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareSynchronizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String consumerEmail;
-        private @Nullable String consumerName;
-        private @Nullable String consumerTenantName;
-        private @Nullable Integer durationMs;
-        private @Nullable String endTime;
-        private @Nullable String message;
-        private @Nullable String startTime;
-        private @Nullable String status;
-        private @Nullable String synchronizationId;
-        private String synchronizationMode;
+        private ShareSynchronizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareSynchronizationResponse();
         }
 
         public Builder(ShareSynchronizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerEmail = defaults.consumerEmail;
-    	      this.consumerName = defaults.consumerName;
-    	      this.consumerTenantName = defaults.consumerTenantName;
-    	      this.durationMs = defaults.durationMs;
-    	      this.endTime = defaults.endTime;
-    	      this.message = defaults.message;
-    	      this.startTime = defaults.startTime;
-    	      this.status = defaults.status;
-    	      this.synchronizationId = defaults.synchronizationId;
-    	      this.synchronizationMode = defaults.synchronizationMode;
+            $ = new ShareSynchronizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerEmail(@Nullable String consumerEmail) {
-            this.consumerEmail = consumerEmail;
+            $.consumerEmail = consumerEmail;
             return this;
         }
+
         public Builder consumerName(@Nullable String consumerName) {
-            this.consumerName = consumerName;
+            $.consumerName = consumerName;
             return this;
         }
+
         public Builder consumerTenantName(@Nullable String consumerTenantName) {
-            this.consumerTenantName = consumerTenantName;
+            $.consumerTenantName = consumerTenantName;
             return this;
         }
+
         public Builder durationMs(@Nullable Integer durationMs) {
-            this.durationMs = durationMs;
+            $.durationMs = durationMs;
             return this;
         }
+
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder synchronizationId(@Nullable String synchronizationId) {
-            this.synchronizationId = synchronizationId;
+            $.synchronizationId = synchronizationId;
             return this;
         }
+
         public Builder synchronizationMode(String synchronizationMode) {
-            this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
+            $.synchronizationMode = synchronizationMode;
             return this;
-        }        public ShareSynchronizationResponse build() {
-            return new ShareSynchronizationResponse(consumerEmail, consumerName, consumerTenantName, durationMs, endTime, message, startTime, status, synchronizationId, synchronizationMode);
+        }
+
+        public ShareSynchronizationResponse build() {
+            $.synchronizationMode = Objects.requireNonNull($.synchronizationMode, "expected parameter 'synchronizationMode' to be non-null");
+            return $;
         }
     }
+
 }

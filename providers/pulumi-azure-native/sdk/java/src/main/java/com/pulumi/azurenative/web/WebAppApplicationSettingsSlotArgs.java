@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WebAppApplicationSettingsSlotArgs extends com.pulumi.resource
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class WebAppApplicationSettingsSlotArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -43,10 +43,10 @@ public final class WebAppApplicationSettingsSlotArgs extends com.pulumi.resource
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class WebAppApplicationSettingsSlotArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,91 @@ public final class WebAppApplicationSettingsSlotArgs extends com.pulumi.resource
      * 
      */
     @Import(name="slot", required=true)
-      private final Output<String> slot;
+    private Output<String> slot;
 
     public Output<String> slot() {
         return this.slot;
     }
 
-    public WebAppApplicationSettingsSlotArgs(
-        @Nullable Output<String> kind,
-        Output<String> name,
-        @Nullable Output<Map<String,String>> properties,
-        Output<String> resourceGroupName,
-        Output<String> slot) {
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private WebAppApplicationSettingsSlotArgs() {}
 
-    private WebAppApplicationSettingsSlotArgs() {
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.slot = Codegen.empty();
+    private WebAppApplicationSettingsSlotArgs(WebAppApplicationSettingsSlotArgs $) {
+        this.kind = $.kind;
+        this.name = $.name;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppApplicationSettingsSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private @Nullable Output<Map<String,String>> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> slot;
+        private WebAppApplicationSettingsSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppApplicationSettingsSlotArgs();
         }
 
         public Builder(WebAppApplicationSettingsSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new WebAppApplicationSettingsSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder slot(Output<String> slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Output.of(Objects.requireNonNull(slot));
-            return this;
-        }        public WebAppApplicationSettingsSlotArgs build() {
-            return new WebAppApplicationSettingsSlotArgs(kind, name, properties, resourceGroupName, slot);
+            return slot(Output.of(slot));
+        }
+
+        public WebAppApplicationSettingsSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

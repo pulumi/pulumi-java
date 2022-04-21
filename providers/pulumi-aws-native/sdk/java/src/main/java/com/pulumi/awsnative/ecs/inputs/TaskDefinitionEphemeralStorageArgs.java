@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class TaskDefinitionEphemeralStorageArgs extends com.pulumi.resourc
     public static final TaskDefinitionEphemeralStorageArgs Empty = new TaskDefinitionEphemeralStorageArgs();
 
     @Import(name="sizeInGiB")
-      private final @Nullable Output<Integer> sizeInGiB;
+    private @Nullable Output<Integer> sizeInGiB;
 
-    public Output<Integer> sizeInGiB() {
-        return this.sizeInGiB == null ? Codegen.empty() : this.sizeInGiB;
+    public Optional<Output<Integer>> sizeInGiB() {
+        return Optional.ofNullable(this.sizeInGiB);
     }
 
-    public TaskDefinitionEphemeralStorageArgs(@Nullable Output<Integer> sizeInGiB) {
-        this.sizeInGiB = sizeInGiB;
-    }
+    private TaskDefinitionEphemeralStorageArgs() {}
 
-    private TaskDefinitionEphemeralStorageArgs() {
-        this.sizeInGiB = Codegen.empty();
+    private TaskDefinitionEphemeralStorageArgs(TaskDefinitionEphemeralStorageArgs $) {
+        this.sizeInGiB = $.sizeInGiB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionEphemeralStorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> sizeInGiB;
+        private TaskDefinitionEphemeralStorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionEphemeralStorageArgs();
         }
 
         public Builder(TaskDefinitionEphemeralStorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sizeInGiB = defaults.sizeInGiB;
+            $ = new TaskDefinitionEphemeralStorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sizeInGiB(@Nullable Output<Integer> sizeInGiB) {
-            this.sizeInGiB = sizeInGiB;
+            $.sizeInGiB = sizeInGiB;
             return this;
         }
-        public Builder sizeInGiB(@Nullable Integer sizeInGiB) {
-            this.sizeInGiB = Codegen.ofNullable(sizeInGiB);
-            return this;
-        }        public TaskDefinitionEphemeralStorageArgs build() {
-            return new TaskDefinitionEphemeralStorageArgs(sizeInGiB);
+
+        public Builder sizeInGiB(Integer sizeInGiB) {
+            return sizeInGiB(Output.of(sizeInGiB));
+        }
+
+        public TaskDefinitionEphemeralStorageArgs build() {
+            return $;
         }
     }
+
 }

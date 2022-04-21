@@ -5,9 +5,9 @@ package com.pulumi.azurenative.resources.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ContainerConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="containerGroupName")
-      private final @Nullable Output<String> containerGroupName;
+    private @Nullable Output<String> containerGroupName;
 
-    public Output<String> containerGroupName() {
-        return this.containerGroupName == null ? Codegen.empty() : this.containerGroupName;
+    public Optional<Output<String>> containerGroupName() {
+        return Optional.ofNullable(this.containerGroupName);
     }
 
-    public ContainerConfigurationArgs(@Nullable Output<String> containerGroupName) {
-        this.containerGroupName = containerGroupName;
-    }
+    private ContainerConfigurationArgs() {}
 
-    private ContainerConfigurationArgs() {
-        this.containerGroupName = Codegen.empty();
+    private ContainerConfigurationArgs(ContainerConfigurationArgs $) {
+        this.containerGroupName = $.containerGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerGroupName;
+        private ContainerConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerConfigurationArgs();
         }
 
         public Builder(ContainerConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerGroupName = defaults.containerGroupName;
+            $ = new ContainerConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerGroupName(@Nullable Output<String> containerGroupName) {
-            this.containerGroupName = containerGroupName;
+            $.containerGroupName = containerGroupName;
             return this;
         }
-        public Builder containerGroupName(@Nullable String containerGroupName) {
-            this.containerGroupName = Codegen.ofNullable(containerGroupName);
-            return this;
-        }        public ContainerConfigurationArgs build() {
-            return new ContainerConfigurationArgs(containerGroupName);
+
+        public Builder containerGroupName(String containerGroupName) {
+            return containerGroupName(Output.of(containerGroupName));
+        }
+
+        public ContainerConfigurationArgs build() {
+            return $;
         }
     }
+
 }

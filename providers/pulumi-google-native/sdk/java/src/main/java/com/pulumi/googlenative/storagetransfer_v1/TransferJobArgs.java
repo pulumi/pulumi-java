@@ -5,7 +5,6 @@ package com.pulumi.googlenative.storagetransfer_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storagetransfer_v1.enums.TransferJobStatus;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.LoggingConfigArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.NotificationConfigArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.storagetransfer_v1.inputs.ScheduleArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.TransferSpecArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latestOperationName")
-      private final @Nullable Output<String> latestOperationName;
+    private @Nullable Output<String> latestOperationName;
 
-    public Output<String> latestOperationName() {
-        return this.latestOperationName == null ? Codegen.empty() : this.latestOperationName;
+    public Optional<Output<String>> latestOperationName() {
+        return Optional.ofNullable(this.latestOperationName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingConfig")
-      private final @Nullable Output<LoggingConfigArgs> loggingConfig;
+    private @Nullable Output<LoggingConfigArgs> loggingConfig;
 
-    public Output<LoggingConfigArgs> loggingConfig() {
-        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
+    public Optional<Output<LoggingConfigArgs>> loggingConfig() {
+        return Optional.ofNullable(this.loggingConfig);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfig")
-      private final @Nullable Output<NotificationConfigArgs> notificationConfig;
+    private @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Output<NotificationConfigArgs> notificationConfig() {
-        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
+    public Optional<Output<NotificationConfigArgs>> notificationConfig() {
+        return Optional.ofNullable(this.notificationConfig);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<ScheduleArgs> schedule;
+    private @Nullable Output<ScheduleArgs> schedule;
 
-    public Output<ScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<ScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<TransferJobStatus> status;
+    private @Nullable Output<TransferJobStatus> status;
 
-    public Output<TransferJobStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<TransferJobStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -113,154 +113,128 @@ public final class TransferJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transferSpec")
-      private final @Nullable Output<TransferSpecArgs> transferSpec;
+    private @Nullable Output<TransferSpecArgs> transferSpec;
 
-    public Output<TransferSpecArgs> transferSpec() {
-        return this.transferSpec == null ? Codegen.empty() : this.transferSpec;
+    public Optional<Output<TransferSpecArgs>> transferSpec() {
+        return Optional.ofNullable(this.transferSpec);
     }
 
-    public TransferJobArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> latestOperationName,
-        @Nullable Output<LoggingConfigArgs> loggingConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<NotificationConfigArgs> notificationConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<ScheduleArgs> schedule,
-        @Nullable Output<TransferJobStatus> status,
-        @Nullable Output<TransferSpecArgs> transferSpec) {
-        this.description = description;
-        this.latestOperationName = latestOperationName;
-        this.loggingConfig = loggingConfig;
-        this.name = name;
-        this.notificationConfig = notificationConfig;
-        this.project = project;
-        this.schedule = schedule;
-        this.status = status;
-        this.transferSpec = transferSpec;
-    }
+    private TransferJobArgs() {}
 
-    private TransferJobArgs() {
-        this.description = Codegen.empty();
-        this.latestOperationName = Codegen.empty();
-        this.loggingConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.status = Codegen.empty();
-        this.transferSpec = Codegen.empty();
+    private TransferJobArgs(TransferJobArgs $) {
+        this.description = $.description;
+        this.latestOperationName = $.latestOperationName;
+        this.loggingConfig = $.loggingConfig;
+        this.name = $.name;
+        this.notificationConfig = $.notificationConfig;
+        this.project = $.project;
+        this.schedule = $.schedule;
+        this.status = $.status;
+        this.transferSpec = $.transferSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> latestOperationName;
-        private @Nullable Output<LoggingConfigArgs> loggingConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<NotificationConfigArgs> notificationConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ScheduleArgs> schedule;
-        private @Nullable Output<TransferJobStatus> status;
-        private @Nullable Output<TransferSpecArgs> transferSpec;
+        private TransferJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferJobArgs();
         }
 
         public Builder(TransferJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.latestOperationName = defaults.latestOperationName;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.name = defaults.name;
-    	      this.notificationConfig = defaults.notificationConfig;
-    	      this.project = defaults.project;
-    	      this.schedule = defaults.schedule;
-    	      this.status = defaults.status;
-    	      this.transferSpec = defaults.transferSpec;
+            $ = new TransferJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder latestOperationName(@Nullable Output<String> latestOperationName) {
-            this.latestOperationName = latestOperationName;
+            $.latestOperationName = latestOperationName;
             return this;
         }
-        public Builder latestOperationName(@Nullable String latestOperationName) {
-            this.latestOperationName = Codegen.ofNullable(latestOperationName);
-            return this;
+
+        public Builder latestOperationName(String latestOperationName) {
+            return latestOperationName(Output.of(latestOperationName));
         }
+
         public Builder loggingConfig(@Nullable Output<LoggingConfigArgs> loggingConfig) {
-            this.loggingConfig = loggingConfig;
+            $.loggingConfig = loggingConfig;
             return this;
         }
-        public Builder loggingConfig(@Nullable LoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Codegen.ofNullable(loggingConfig);
-            return this;
+
+        public Builder loggingConfig(LoggingConfigArgs loggingConfig) {
+            return loggingConfig(Output.of(loggingConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
-            this.notificationConfig = notificationConfig;
+            $.notificationConfig = notificationConfig;
             return this;
         }
-        public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Codegen.ofNullable(notificationConfig);
-            return this;
+
+        public Builder notificationConfig(NotificationConfigArgs notificationConfig) {
+            return notificationConfig(Output.of(notificationConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schedule(@Nullable Output<ScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable ScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(ScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder status(@Nullable Output<TransferJobStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable TransferJobStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(TransferJobStatus status) {
+            return status(Output.of(status));
         }
+
         public Builder transferSpec(@Nullable Output<TransferSpecArgs> transferSpec) {
-            this.transferSpec = transferSpec;
+            $.transferSpec = transferSpec;
             return this;
         }
-        public Builder transferSpec(@Nullable TransferSpecArgs transferSpec) {
-            this.transferSpec = Codegen.ofNullable(transferSpec);
-            return this;
-        }        public TransferJobArgs build() {
-            return new TransferJobArgs(description, latestOperationName, loggingConfig, name, notificationConfig, project, schedule, status, transferSpec);
+
+        public Builder transferSpec(TransferSpecArgs transferSpec) {
+            return transferSpec(Output.of(transferSpec));
+        }
+
+        public TransferJobArgs build() {
+            return $;
         }
     }
+
 }

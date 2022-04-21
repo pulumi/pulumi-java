@@ -17,45 +17,45 @@ public final class MitigationActionReplaceDefaultPolicyVersionParams extends com
     public static final MitigationActionReplaceDefaultPolicyVersionParams Empty = new MitigationActionReplaceDefaultPolicyVersionParams();
 
     @Import(name="templateName", required=true)
-      private final MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName;
+    private MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName;
 
     public MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName() {
         return this.templateName;
     }
 
-    public MitigationActionReplaceDefaultPolicyVersionParams(MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
-        this.templateName = Objects.requireNonNull(templateName, "expected parameter 'templateName' to be non-null");
-    }
+    private MitigationActionReplaceDefaultPolicyVersionParams() {}
 
-    private MitigationActionReplaceDefaultPolicyVersionParams() {
-        this.templateName = null;
+    private MitigationActionReplaceDefaultPolicyVersionParams(MitigationActionReplaceDefaultPolicyVersionParams $) {
+        this.templateName = $.templateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionReplaceDefaultPolicyVersionParams defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName;
+        private MitigationActionReplaceDefaultPolicyVersionParams $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionReplaceDefaultPolicyVersionParams();
         }
 
         public Builder(MitigationActionReplaceDefaultPolicyVersionParams defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.templateName = defaults.templateName;
+            $ = new MitigationActionReplaceDefaultPolicyVersionParams(Objects.requireNonNull(defaults));
         }
 
         public Builder templateName(MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
-            this.templateName = Objects.requireNonNull(templateName);
+            $.templateName = templateName;
             return this;
-        }        public MitigationActionReplaceDefaultPolicyVersionParams build() {
-            return new MitigationActionReplaceDefaultPolicyVersionParams(templateName);
+        }
+
+        public MitigationActionReplaceDefaultPolicyVersionParams build() {
+            $.templateName = Objects.requireNonNull($.templateName, "expected parameter 'templateName' to be non-null");
+            return $;
         }
     }
+
 }

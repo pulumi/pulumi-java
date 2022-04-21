@@ -5,10 +5,10 @@ package com.pulumi.azurenative.importexport.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobListBlobPath")
-      private final @Nullable Output<String> blobListBlobPath;
+    private @Nullable Output<String> blobListBlobPath;
 
-    public Output<String> blobListBlobPath() {
-        return this.blobListBlobPath == null ? Codegen.empty() : this.blobListBlobPath;
+    public Optional<Output<String>> blobListBlobPath() {
+        return Optional.ofNullable(this.blobListBlobPath);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobPath")
-      private final @Nullable Output<List<String>> blobPath;
+    private @Nullable Output<List<String>> blobPath;
 
-    public Output<List<String>> blobPath() {
-        return this.blobPath == null ? Codegen.empty() : this.blobPath;
+    public Optional<Output<List<String>>> blobPath() {
+        return Optional.ofNullable(this.blobPath);
     }
 
     /**
@@ -47,82 +47,76 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobPathPrefix")
-      private final @Nullable Output<List<String>> blobPathPrefix;
+    private @Nullable Output<List<String>> blobPathPrefix;
 
-    public Output<List<String>> blobPathPrefix() {
-        return this.blobPathPrefix == null ? Codegen.empty() : this.blobPathPrefix;
+    public Optional<Output<List<String>>> blobPathPrefix() {
+        return Optional.ofNullable(this.blobPathPrefix);
     }
 
-    public ExportArgs(
-        @Nullable Output<String> blobListBlobPath,
-        @Nullable Output<List<String>> blobPath,
-        @Nullable Output<List<String>> blobPathPrefix) {
-        this.blobListBlobPath = blobListBlobPath;
-        this.blobPath = blobPath;
-        this.blobPathPrefix = blobPathPrefix;
-    }
+    private ExportArgs() {}
 
-    private ExportArgs() {
-        this.blobListBlobPath = Codegen.empty();
-        this.blobPath = Codegen.empty();
-        this.blobPathPrefix = Codegen.empty();
+    private ExportArgs(ExportArgs $) {
+        this.blobListBlobPath = $.blobListBlobPath;
+        this.blobPath = $.blobPath;
+        this.blobPathPrefix = $.blobPathPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> blobListBlobPath;
-        private @Nullable Output<List<String>> blobPath;
-        private @Nullable Output<List<String>> blobPathPrefix;
+        private ExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportArgs();
         }
 
         public Builder(ExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobListBlobPath = defaults.blobListBlobPath;
-    	      this.blobPath = defaults.blobPath;
-    	      this.blobPathPrefix = defaults.blobPathPrefix;
+            $ = new ExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobListBlobPath(@Nullable Output<String> blobListBlobPath) {
-            this.blobListBlobPath = blobListBlobPath;
+            $.blobListBlobPath = blobListBlobPath;
             return this;
         }
-        public Builder blobListBlobPath(@Nullable String blobListBlobPath) {
-            this.blobListBlobPath = Codegen.ofNullable(blobListBlobPath);
-            return this;
+
+        public Builder blobListBlobPath(String blobListBlobPath) {
+            return blobListBlobPath(Output.of(blobListBlobPath));
         }
+
         public Builder blobPath(@Nullable Output<List<String>> blobPath) {
-            this.blobPath = blobPath;
+            $.blobPath = blobPath;
             return this;
         }
-        public Builder blobPath(@Nullable List<String> blobPath) {
-            this.blobPath = Codegen.ofNullable(blobPath);
-            return this;
+
+        public Builder blobPath(List<String> blobPath) {
+            return blobPath(Output.of(blobPath));
         }
+
         public Builder blobPath(String... blobPath) {
             return blobPath(List.of(blobPath));
         }
+
         public Builder blobPathPrefix(@Nullable Output<List<String>> blobPathPrefix) {
-            this.blobPathPrefix = blobPathPrefix;
+            $.blobPathPrefix = blobPathPrefix;
             return this;
         }
-        public Builder blobPathPrefix(@Nullable List<String> blobPathPrefix) {
-            this.blobPathPrefix = Codegen.ofNullable(blobPathPrefix);
-            return this;
+
+        public Builder blobPathPrefix(List<String> blobPathPrefix) {
+            return blobPathPrefix(Output.of(blobPathPrefix));
         }
+
         public Builder blobPathPrefix(String... blobPathPrefix) {
             return blobPathPrefix(List.of(blobPathPrefix));
-        }        public ExportArgs build() {
-            return new ExportArgs(blobListBlobPath, blobPath, blobPathPrefix);
+        }
+
+        public ExportArgs build() {
+            return $;
         }
     }
+
 }

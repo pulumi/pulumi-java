@@ -5,7 +5,6 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class InventoryDestinationBucketEncryptionSseKmsGetArgs extends com
      * 
      */
     @Import(name="keyId", required=true)
-      private final Output<String> keyId;
+    private Output<String> keyId;
 
     public Output<String> keyId() {
         return this.keyId;
     }
 
-    public InventoryDestinationBucketEncryptionSseKmsGetArgs(Output<String> keyId) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-    }
+    private InventoryDestinationBucketEncryptionSseKmsGetArgs() {}
 
-    private InventoryDestinationBucketEncryptionSseKmsGetArgs() {
-        this.keyId = Codegen.empty();
+    private InventoryDestinationBucketEncryptionSseKmsGetArgs(InventoryDestinationBucketEncryptionSseKmsGetArgs $) {
+        this.keyId = $.keyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InventoryDestinationBucketEncryptionSseKmsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyId;
+        private InventoryDestinationBucketEncryptionSseKmsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InventoryDestinationBucketEncryptionSseKmsGetArgs();
         }
 
         public Builder(InventoryDestinationBucketEncryptionSseKmsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
+            $ = new InventoryDestinationBucketEncryptionSseKmsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(Output<String> keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Output.of(Objects.requireNonNull(keyId));
-            return this;
-        }        public InventoryDestinationBucketEncryptionSseKmsGetArgs build() {
-            return new InventoryDestinationBucketEncryptionSseKmsGetArgs(keyId);
+            return keyId(Output.of(keyId));
+        }
+
+        public InventoryDestinationBucketEncryptionSseKmsGetArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            return $;
         }
     }
+
 }

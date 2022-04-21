@@ -15,78 +15,72 @@ public final class GetMembershipArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMembershipArgs Empty = new GetMembershipArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="membershipId", required=true)
-      private final String membershipId;
+    private String membershipId;
 
     public String membershipId() {
         return this.membershipId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetMembershipArgs(
-        String location,
-        String membershipId,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.membershipId = Objects.requireNonNull(membershipId, "expected parameter 'membershipId' to be non-null");
-        this.project = project;
-    }
+    private GetMembershipArgs() {}
 
-    private GetMembershipArgs() {
-        this.location = null;
-        this.membershipId = null;
-        this.project = null;
+    private GetMembershipArgs(GetMembershipArgs $) {
+        this.location = $.location;
+        this.membershipId = $.membershipId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMembershipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String membershipId;
-        private @Nullable String project;
+        private GetMembershipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMembershipArgs();
         }
 
         public Builder(GetMembershipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.membershipId = defaults.membershipId;
-    	      this.project = defaults.project;
+            $ = new GetMembershipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder membershipId(String membershipId) {
-            this.membershipId = Objects.requireNonNull(membershipId);
+            $.membershipId = membershipId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetMembershipArgs build() {
-            return new GetMembershipArgs(location, membershipId, project);
+        }
+
+        public GetMembershipArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.membershipId = Objects.requireNonNull($.membershipId, "expected parameter 'membershipId' to be non-null");
+            return $;
         }
     }
+
 }

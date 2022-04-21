@@ -24,7 +24,7 @@ public final class DeliveryRuleRequestBodyConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,55 +35,52 @@ public final class DeliveryRuleRequestBodyConditionResponse extends com.pulumi.r
      * 
      */
     @Import(name="parameters", required=true)
-      private final RequestBodyMatchConditionParametersResponse parameters;
+    private RequestBodyMatchConditionParametersResponse parameters;
 
     public RequestBodyMatchConditionParametersResponse parameters() {
         return this.parameters;
     }
 
-    public DeliveryRuleRequestBodyConditionResponse(
-        String name,
-        RequestBodyMatchConditionParametersResponse parameters) {
-        this.name = Codegen.stringProp("name").arg(name).require();
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private DeliveryRuleRequestBodyConditionResponse() {}
 
-    private DeliveryRuleRequestBodyConditionResponse() {
-        this.name = null;
-        this.parameters = null;
+    private DeliveryRuleRequestBodyConditionResponse(DeliveryRuleRequestBodyConditionResponse $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryRuleRequestBodyConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private RequestBodyMatchConditionParametersResponse parameters;
+        private DeliveryRuleRequestBodyConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryRuleRequestBodyConditionResponse();
         }
 
         public Builder(DeliveryRuleRequestBodyConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new DeliveryRuleRequestBodyConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(RequestBodyMatchConditionParametersResponse parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
-        }        public DeliveryRuleRequestBodyConditionResponse build() {
-            return new DeliveryRuleRequestBodyConditionResponse(name, parameters);
+        }
+
+        public DeliveryRuleRequestBodyConditionResponse build() {
+            $.name = Codegen.stringProp("name").arg($.name).require();
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

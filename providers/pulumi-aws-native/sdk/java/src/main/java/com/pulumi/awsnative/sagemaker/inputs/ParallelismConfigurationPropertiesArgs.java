@@ -5,7 +5,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ParallelismConfigurationPropertiesArgs extends com.pulumi.res
      * 
      */
     @Import(name="maxParallelExecutionSteps", required=true)
-      private final Output<Integer> maxParallelExecutionSteps;
+    private Output<Integer> maxParallelExecutionSteps;
 
     public Output<Integer> maxParallelExecutionSteps() {
         return this.maxParallelExecutionSteps;
     }
 
-    public ParallelismConfigurationPropertiesArgs(Output<Integer> maxParallelExecutionSteps) {
-        this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps, "expected parameter 'maxParallelExecutionSteps' to be non-null");
-    }
+    private ParallelismConfigurationPropertiesArgs() {}
 
-    private ParallelismConfigurationPropertiesArgs() {
-        this.maxParallelExecutionSteps = Codegen.empty();
+    private ParallelismConfigurationPropertiesArgs(ParallelismConfigurationPropertiesArgs $) {
+        this.maxParallelExecutionSteps = $.maxParallelExecutionSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParallelismConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxParallelExecutionSteps;
+        private ParallelismConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParallelismConfigurationPropertiesArgs();
         }
 
         public Builder(ParallelismConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxParallelExecutionSteps = defaults.maxParallelExecutionSteps;
+            $ = new ParallelismConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxParallelExecutionSteps(Output<Integer> maxParallelExecutionSteps) {
-            this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps);
+            $.maxParallelExecutionSteps = maxParallelExecutionSteps;
             return this;
         }
+
         public Builder maxParallelExecutionSteps(Integer maxParallelExecutionSteps) {
-            this.maxParallelExecutionSteps = Output.of(Objects.requireNonNull(maxParallelExecutionSteps));
-            return this;
-        }        public ParallelismConfigurationPropertiesArgs build() {
-            return new ParallelismConfigurationPropertiesArgs(maxParallelExecutionSteps);
+            return maxParallelExecutionSteps(Output.of(maxParallelExecutionSteps));
+        }
+
+        public ParallelismConfigurationPropertiesArgs build() {
+            $.maxParallelExecutionSteps = Objects.requireNonNull($.maxParallelExecutionSteps, "expected parameter 'maxParallelExecutionSteps' to be non-null");
+            return $;
         }
     }
+
 }

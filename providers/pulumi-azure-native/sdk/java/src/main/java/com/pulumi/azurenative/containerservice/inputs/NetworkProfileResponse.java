@@ -24,10 +24,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="peerVnetId")
-      private final @Nullable String peerVnetId;
+    private @Nullable String peerVnetId;
 
     public Optional<String> peerVnetId() {
-        return this.peerVnetId == null ? Optional.empty() : Optional.ofNullable(this.peerVnetId);
+        return Optional.ofNullable(this.peerVnetId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="vnetCidr")
-      private final @Nullable String vnetCidr;
+    private @Nullable String vnetCidr;
 
     public Optional<String> vnetCidr() {
-        return this.vnetCidr == null ? Optional.empty() : Optional.ofNullable(this.vnetCidr);
+        return Optional.ofNullable(this.vnetCidr);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="vnetId")
-      private final @Nullable String vnetId;
+    private @Nullable String vnetId;
 
     public Optional<String> vnetId() {
-        return this.vnetId == null ? Optional.empty() : Optional.ofNullable(this.vnetId);
+        return Optional.ofNullable(this.vnetId);
     }
 
-    public NetworkProfileResponse(
-        @Nullable String peerVnetId,
-        @Nullable String vnetCidr,
-        @Nullable String vnetId) {
-        this.peerVnetId = peerVnetId;
-        this.vnetCidr = Codegen.stringProp("vnetCidr").arg(vnetCidr).def("10.0.0.0/8").getNullable();
-        this.vnetId = vnetId;
-    }
+    private NetworkProfileResponse() {}
 
-    private NetworkProfileResponse() {
-        this.peerVnetId = null;
-        this.vnetCidr = null;
-        this.vnetId = null;
+    private NetworkProfileResponse(NetworkProfileResponse $) {
+        this.peerVnetId = $.peerVnetId;
+        this.vnetCidr = $.vnetCidr;
+        this.vnetId = $.vnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String peerVnetId;
-        private @Nullable String vnetCidr;
-        private @Nullable String vnetId;
+        private NetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileResponse();
         }
 
         public Builder(NetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peerVnetId = defaults.peerVnetId;
-    	      this.vnetCidr = defaults.vnetCidr;
-    	      this.vnetId = defaults.vnetId;
+            $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder peerVnetId(@Nullable String peerVnetId) {
-            this.peerVnetId = peerVnetId;
+            $.peerVnetId = peerVnetId;
             return this;
         }
+
         public Builder vnetCidr(@Nullable String vnetCidr) {
-            this.vnetCidr = vnetCidr;
+            $.vnetCidr = vnetCidr;
             return this;
         }
+
         public Builder vnetId(@Nullable String vnetId) {
-            this.vnetId = vnetId;
+            $.vnetId = vnetId;
             return this;
-        }        public NetworkProfileResponse build() {
-            return new NetworkProfileResponse(peerVnetId, vnetCidr, vnetId);
+        }
+
+        public NetworkProfileResponse build() {
+            $.vnetCidr = Codegen.stringProp("vnetCidr").arg($.vnetCidr).def("10.0.0.0/8").getNullable();
+            return $;
         }
     }
+
 }

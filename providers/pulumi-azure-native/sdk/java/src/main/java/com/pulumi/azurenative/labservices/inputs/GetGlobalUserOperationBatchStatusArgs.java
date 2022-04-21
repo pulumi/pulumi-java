@@ -18,7 +18,7 @@ public final class GetGlobalUserOperationBatchStatusArgs extends com.pulumi.reso
      * 
      */
     @Import(name="urls", required=true)
-      private final List<String> urls;
+    private List<String> urls;
 
     public List<String> urls() {
         return this.urls;
@@ -29,58 +29,56 @@ public final class GetGlobalUserOperationBatchStatusArgs extends com.pulumi.reso
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public GetGlobalUserOperationBatchStatusArgs(
-        List<String> urls,
-        String userName) {
-        this.urls = Objects.requireNonNull(urls, "expected parameter 'urls' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private GetGlobalUserOperationBatchStatusArgs() {}
 
-    private GetGlobalUserOperationBatchStatusArgs() {
-        this.urls = List.of();
-        this.userName = null;
+    private GetGlobalUserOperationBatchStatusArgs(GetGlobalUserOperationBatchStatusArgs $) {
+        this.urls = $.urls;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalUserOperationBatchStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> urls;
-        private String userName;
+        private GetGlobalUserOperationBatchStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalUserOperationBatchStatusArgs();
         }
 
         public Builder(GetGlobalUserOperationBatchStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.urls = defaults.urls;
-    	      this.userName = defaults.userName;
+            $ = new GetGlobalUserOperationBatchStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder urls(List<String> urls) {
-            this.urls = Objects.requireNonNull(urls);
+            $.urls = urls;
             return this;
         }
+
         public Builder urls(String... urls) {
             return urls(List.of(urls));
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public GetGlobalUserOperationBatchStatusArgs build() {
-            return new GetGlobalUserOperationBatchStatusArgs(urls, userName);
+        }
+
+        public GetGlobalUserOperationBatchStatusArgs build() {
+            $.urls = Objects.requireNonNull($.urls, "expected parameter 'urls' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

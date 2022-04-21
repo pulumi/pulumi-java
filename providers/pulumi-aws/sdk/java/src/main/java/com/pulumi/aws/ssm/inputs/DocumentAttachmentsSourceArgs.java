@@ -5,10 +5,10 @@ package com.pulumi.aws.ssm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DocumentAttachmentsSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -32,10 +32,10 @@ public final class DocumentAttachmentsSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,79 +43,74 @@ public final class DocumentAttachmentsSourceArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="values", required=true)
-      private final Output<List<String>> values;
+    private Output<List<String>> values;
 
     public Output<List<String>> values() {
         return this.values;
     }
 
-    public DocumentAttachmentsSourceArgs(
-        Output<String> key,
-        @Nullable Output<String> name,
-        Output<List<String>> values) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.name = name;
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private DocumentAttachmentsSourceArgs() {}
 
-    private DocumentAttachmentsSourceArgs() {
-        this.key = Codegen.empty();
-        this.name = Codegen.empty();
-        this.values = Codegen.empty();
+    private DocumentAttachmentsSourceArgs(DocumentAttachmentsSourceArgs $) {
+        this.key = $.key;
+        this.name = $.name;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentAttachmentsSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<String> name;
-        private Output<List<String>> values;
+        private DocumentAttachmentsSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentAttachmentsSourceArgs();
         }
 
         public Builder(DocumentAttachmentsSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.name = defaults.name;
-    	      this.values = defaults.values;
+            $ = new DocumentAttachmentsSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder values(Output<List<String>> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Output.of(Objects.requireNonNull(values));
-            return this;
+            return values(Output.of(values));
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public DocumentAttachmentsSourceArgs build() {
-            return new DocumentAttachmentsSourceArgs(key, name, values);
+        }
+
+        public DocumentAttachmentsSourceArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

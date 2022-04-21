@@ -5,10 +5,10 @@ package com.pulumi.googlenative.vmmigration_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SchedulePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="idleDuration")
-      private final @Nullable Output<String> idleDuration;
+    private @Nullable Output<String> idleDuration;
 
-    public Output<String> idleDuration() {
-        return this.idleDuration == null ? Codegen.empty() : this.idleDuration;
+    public Optional<Output<String>> idleDuration() {
+        return Optional.ofNullable(this.idleDuration);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SchedulePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="skipOsAdaptation")
-      private final @Nullable Output<Boolean> skipOsAdaptation;
+    private @Nullable Output<Boolean> skipOsAdaptation;
 
-    public Output<Boolean> skipOsAdaptation() {
-        return this.skipOsAdaptation == null ? Codegen.empty() : this.skipOsAdaptation;
+    public Optional<Output<Boolean>> skipOsAdaptation() {
+        return Optional.ofNullable(this.skipOsAdaptation);
     }
 
-    public SchedulePolicyArgs(
-        @Nullable Output<String> idleDuration,
-        @Nullable Output<Boolean> skipOsAdaptation) {
-        this.idleDuration = idleDuration;
-        this.skipOsAdaptation = skipOsAdaptation;
-    }
+    private SchedulePolicyArgs() {}
 
-    private SchedulePolicyArgs() {
-        this.idleDuration = Codegen.empty();
-        this.skipOsAdaptation = Codegen.empty();
+    private SchedulePolicyArgs(SchedulePolicyArgs $) {
+        this.idleDuration = $.idleDuration;
+        this.skipOsAdaptation = $.skipOsAdaptation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> idleDuration;
-        private @Nullable Output<Boolean> skipOsAdaptation;
+        private SchedulePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulePolicyArgs();
         }
 
         public Builder(SchedulePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idleDuration = defaults.idleDuration;
-    	      this.skipOsAdaptation = defaults.skipOsAdaptation;
+            $ = new SchedulePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder idleDuration(@Nullable Output<String> idleDuration) {
-            this.idleDuration = idleDuration;
+            $.idleDuration = idleDuration;
             return this;
         }
-        public Builder idleDuration(@Nullable String idleDuration) {
-            this.idleDuration = Codegen.ofNullable(idleDuration);
-            return this;
+
+        public Builder idleDuration(String idleDuration) {
+            return idleDuration(Output.of(idleDuration));
         }
+
         public Builder skipOsAdaptation(@Nullable Output<Boolean> skipOsAdaptation) {
-            this.skipOsAdaptation = skipOsAdaptation;
+            $.skipOsAdaptation = skipOsAdaptation;
             return this;
         }
-        public Builder skipOsAdaptation(@Nullable Boolean skipOsAdaptation) {
-            this.skipOsAdaptation = Codegen.ofNullable(skipOsAdaptation);
-            return this;
-        }        public SchedulePolicyArgs build() {
-            return new SchedulePolicyArgs(idleDuration, skipOsAdaptation);
+
+        public Builder skipOsAdaptation(Boolean skipOsAdaptation) {
+            return skipOsAdaptation(Output.of(skipOsAdaptation));
+        }
+
+        public SchedulePolicyArgs build() {
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="assetName", required=true)
-      private final String assetName;
+    private String assetName;
 
     public String assetName() {
         return this.assetName;
@@ -37,7 +37,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -48,7 +48,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="error", required=true)
-      private final JobErrorResponse error;
+    private JobErrorResponse error;
 
     public JobErrorResponse error() {
         return this.error;
@@ -59,10 +59,10 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -82,7 +82,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="progress", required=true)
-      private final Integer progress;
+    private Integer progress;
 
     public Integer progress() {
         return this.progress;
@@ -93,7 +93,7 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -104,109 +104,93 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public JobOutputAssetResponse(
-        String assetName,
-        String endTime,
-        JobErrorResponse error,
-        @Nullable String label,
-        String odataType,
-        Integer progress,
-        String startTime,
-        String state) {
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.progress = Objects.requireNonNull(progress, "expected parameter 'progress' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private JobOutputAssetResponse() {}
 
-    private JobOutputAssetResponse() {
-        this.assetName = null;
-        this.endTime = null;
-        this.error = null;
-        this.label = null;
-        this.odataType = null;
-        this.progress = null;
-        this.startTime = null;
-        this.state = null;
+    private JobOutputAssetResponse(JobOutputAssetResponse $) {
+        this.assetName = $.assetName;
+        this.endTime = $.endTime;
+        this.error = $.error;
+        this.label = $.label;
+        this.odataType = $.odataType;
+        this.progress = $.progress;
+        this.startTime = $.startTime;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobOutputAssetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assetName;
-        private String endTime;
-        private JobErrorResponse error;
-        private @Nullable String label;
-        private String odataType;
-        private Integer progress;
-        private String startTime;
-        private String state;
+        private JobOutputAssetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobOutputAssetResponse();
         }
 
         public Builder(JobOutputAssetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetName = defaults.assetName;
-    	      this.endTime = defaults.endTime;
-    	      this.error = defaults.error;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
-    	      this.progress = defaults.progress;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
+            $ = new JobOutputAssetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assetName(String assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder error(JobErrorResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder progress(Integer progress) {
-            this.progress = Objects.requireNonNull(progress);
+            $.progress = progress;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public JobOutputAssetResponse build() {
-            return new JobOutputAssetResponse(assetName, endTime, error, label, odataType, progress, startTime, state);
+        }
+
+        public JobOutputAssetResponse build() {
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.progress = Objects.requireNonNull($.progress, "expected parameter 'progress' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

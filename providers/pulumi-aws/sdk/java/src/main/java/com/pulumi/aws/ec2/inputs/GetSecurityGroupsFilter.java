@@ -14,65 +14,63 @@ public final class GetSecurityGroupsFilter extends com.pulumi.resources.InvokeAr
     public static final GetSecurityGroupsFilter Empty = new GetSecurityGroupsFilter();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public GetSecurityGroupsFilter(
-        String name,
-        List<String> values) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private GetSecurityGroupsFilter() {}
 
-    private GetSecurityGroupsFilter() {
-        this.name = null;
-        this.values = List.of();
+    private GetSecurityGroupsFilter(GetSecurityGroupsFilter $) {
+        this.name = $.name;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityGroupsFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<String> values;
+        private GetSecurityGroupsFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityGroupsFilter();
         }
 
         public Builder(GetSecurityGroupsFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.values = defaults.values;
+            $ = new GetSecurityGroupsFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public GetSecurityGroupsFilter build() {
-            return new GetSecurityGroupsFilter(name, values);
+        }
+
+        public GetSecurityGroupsFilter build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

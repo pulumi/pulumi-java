@@ -5,10 +5,10 @@ package com.pulumi.aws.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final Output<String> content;
+    private Output<String> content;
 
     public Output<String> content() {
         return this.content;
@@ -32,10 +32,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -65,102 +65,89 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public PolicyArgs(
-        Output<String> content,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> type) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.tags = tags;
-        this.type = type;
-    }
+    private PolicyArgs() {}
 
-    private PolicyArgs() {
-        this.content = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private PolicyArgs(PolicyArgs $) {
+        this.content = $.content;
+        this.description = $.description;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> content;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> type;
+        private PolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyArgs();
         }
 
         public Builder(PolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(Output<String> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public PolicyArgs build() {
-            return new PolicyArgs(content, description, name, tags, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public PolicyArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            return $;
         }
     }
+
 }

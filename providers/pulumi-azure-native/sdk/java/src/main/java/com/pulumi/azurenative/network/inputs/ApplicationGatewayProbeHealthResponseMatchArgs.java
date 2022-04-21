@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends com.pu
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends com.pu
      * 
      */
     @Import(name="statusCodes")
-      private final @Nullable Output<List<String>> statusCodes;
+    private @Nullable Output<List<String>> statusCodes;
 
-    public Output<List<String>> statusCodes() {
-        return this.statusCodes == null ? Codegen.empty() : this.statusCodes;
+    public Optional<Output<List<String>>> statusCodes() {
+        return Optional.ofNullable(this.statusCodes);
     }
 
-    public ApplicationGatewayProbeHealthResponseMatchArgs(
-        @Nullable Output<String> body,
-        @Nullable Output<List<String>> statusCodes) {
-        this.body = body;
-        this.statusCodes = statusCodes;
-    }
+    private ApplicationGatewayProbeHealthResponseMatchArgs() {}
 
-    private ApplicationGatewayProbeHealthResponseMatchArgs() {
-        this.body = Codegen.empty();
-        this.statusCodes = Codegen.empty();
+    private ApplicationGatewayProbeHealthResponseMatchArgs(ApplicationGatewayProbeHealthResponseMatchArgs $) {
+        this.body = $.body;
+        this.statusCodes = $.statusCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayProbeHealthResponseMatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> body;
-        private @Nullable Output<List<String>> statusCodes;
+        private ApplicationGatewayProbeHealthResponseMatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayProbeHealthResponseMatchArgs();
         }
 
         public Builder(ApplicationGatewayProbeHealthResponseMatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.statusCodes = defaults.statusCodes;
+            $ = new ApplicationGatewayProbeHealthResponseMatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder statusCodes(@Nullable Output<List<String>> statusCodes) {
-            this.statusCodes = statusCodes;
+            $.statusCodes = statusCodes;
             return this;
         }
-        public Builder statusCodes(@Nullable List<String> statusCodes) {
-            this.statusCodes = Codegen.ofNullable(statusCodes);
-            return this;
+
+        public Builder statusCodes(List<String> statusCodes) {
+            return statusCodes(Output.of(statusCodes));
         }
+
         public Builder statusCodes(String... statusCodes) {
             return statusCodes(List.of(statusCodes));
-        }        public ApplicationGatewayProbeHealthResponseMatchArgs build() {
-            return new ApplicationGatewayProbeHealthResponseMatchArgs(body, statusCodes);
+        }
+
+        public ApplicationGatewayProbeHealthResponseMatchArgs build() {
+            return $;
         }
     }
+
 }

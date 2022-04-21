@@ -6,10 +6,10 @@ package com.pulumi.azurenative.logic;
 import com.pulumi.azurenative.logic.inputs.AssemblyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IntegrationAccountAssemblyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="assemblyArtifactName")
-      private final @Nullable Output<String> assemblyArtifactName;
+    private @Nullable Output<String> assemblyArtifactName;
 
-    public Output<String> assemblyArtifactName() {
-        return this.assemblyArtifactName == null ? Codegen.empty() : this.assemblyArtifactName;
+    public Optional<Output<String>> assemblyArtifactName() {
+        return Optional.ofNullable(this.assemblyArtifactName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class IntegrationAccountAssemblyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final Output<String> integrationAccountName;
+    private Output<String> integrationAccountName;
 
     public Output<String> integrationAccountName() {
         return this.integrationAccountName;
@@ -44,10 +44,10 @@ public final class IntegrationAccountAssemblyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class IntegrationAccountAssemblyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<AssemblyPropertiesArgs> properties;
+    private Output<AssemblyPropertiesArgs> properties;
 
     public Output<AssemblyPropertiesArgs> properties() {
         return this.properties;
@@ -66,7 +66,7 @@ public final class IntegrationAccountAssemblyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,115 +77,101 @@ public final class IntegrationAccountAssemblyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public IntegrationAccountAssemblyArgs(
-        @Nullable Output<String> assemblyArtifactName,
-        Output<String> integrationAccountName,
-        @Nullable Output<String> location,
-        Output<AssemblyPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.assemblyArtifactName = assemblyArtifactName;
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.location = location;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private IntegrationAccountAssemblyArgs() {}
 
-    private IntegrationAccountAssemblyArgs() {
-        this.assemblyArtifactName = Codegen.empty();
-        this.integrationAccountName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private IntegrationAccountAssemblyArgs(IntegrationAccountAssemblyArgs $) {
+        this.assemblyArtifactName = $.assemblyArtifactName;
+        this.integrationAccountName = $.integrationAccountName;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationAccountAssemblyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assemblyArtifactName;
-        private Output<String> integrationAccountName;
-        private @Nullable Output<String> location;
-        private Output<AssemblyPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private IntegrationAccountAssemblyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationAccountAssemblyArgs();
         }
 
         public Builder(IntegrationAccountAssemblyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assemblyArtifactName = defaults.assemblyArtifactName;
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new IntegrationAccountAssemblyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assemblyArtifactName(@Nullable Output<String> assemblyArtifactName) {
-            this.assemblyArtifactName = assemblyArtifactName;
+            $.assemblyArtifactName = assemblyArtifactName;
             return this;
         }
-        public Builder assemblyArtifactName(@Nullable String assemblyArtifactName) {
-            this.assemblyArtifactName = Codegen.ofNullable(assemblyArtifactName);
-            return this;
+
+        public Builder assemblyArtifactName(String assemblyArtifactName) {
+            return assemblyArtifactName(Output.of(assemblyArtifactName));
         }
+
         public Builder integrationAccountName(Output<String> integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
-            return this;
+            return integrationAccountName(Output.of(integrationAccountName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(Output<AssemblyPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(AssemblyPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public IntegrationAccountAssemblyArgs build() {
-            return new IntegrationAccountAssemblyArgs(assemblyArtifactName, integrationAccountName, location, properties, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public IntegrationAccountAssemblyArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

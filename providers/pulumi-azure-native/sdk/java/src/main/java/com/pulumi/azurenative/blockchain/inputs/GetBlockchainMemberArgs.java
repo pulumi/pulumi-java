@@ -17,7 +17,7 @@ public final class GetBlockchainMemberArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="blockchainMemberName", required=true)
-      private final String blockchainMemberName;
+    private String blockchainMemberName;
 
     public String blockchainMemberName() {
         return this.blockchainMemberName;
@@ -28,55 +28,52 @@ public final class GetBlockchainMemberArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBlockchainMemberArgs(
-        String blockchainMemberName,
-        String resourceGroupName) {
-        this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName, "expected parameter 'blockchainMemberName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBlockchainMemberArgs() {}
 
-    private GetBlockchainMemberArgs() {
-        this.blockchainMemberName = null;
-        this.resourceGroupName = null;
+    private GetBlockchainMemberArgs(GetBlockchainMemberArgs $) {
+        this.blockchainMemberName = $.blockchainMemberName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBlockchainMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blockchainMemberName;
-        private String resourceGroupName;
+        private GetBlockchainMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBlockchainMemberArgs();
         }
 
         public Builder(GetBlockchainMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockchainMemberName = defaults.blockchainMemberName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBlockchainMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockchainMemberName(String blockchainMemberName) {
-            this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
+            $.blockchainMemberName = blockchainMemberName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBlockchainMemberArgs build() {
-            return new GetBlockchainMemberArgs(blockchainMemberName, resourceGroupName);
+        }
+
+        public GetBlockchainMemberArgs build() {
+            $.blockchainMemberName = Objects.requireNonNull($.blockchainMemberName, "expected parameter 'blockchainMemberName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

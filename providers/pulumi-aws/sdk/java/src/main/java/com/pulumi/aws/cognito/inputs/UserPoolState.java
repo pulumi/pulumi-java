@@ -17,12 +17,12 @@ import com.pulumi.aws.cognito.inputs.UserPoolUsernameConfigurationGetArgs;
 import com.pulumi.aws.cognito.inputs.UserPoolVerificationMessageTemplateGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountRecoverySetting")
-      private final @Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting;
+    private @Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting;
 
-    public Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting() {
-        return this.accountRecoverySetting == null ? Codegen.empty() : this.accountRecoverySetting;
+    public Optional<Output<UserPoolAccountRecoverySettingGetArgs>> accountRecoverySetting() {
+        return Optional.ofNullable(this.accountRecoverySetting);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminCreateUserConfig")
-      private final @Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig;
+    private @Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig;
 
-    public Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig() {
-        return this.adminCreateUserConfig == null ? Codegen.empty() : this.adminCreateUserConfig;
+    public Optional<Output<UserPoolAdminCreateUserConfigGetArgs>> adminCreateUserConfig() {
+        return Optional.ofNullable(this.adminCreateUserConfig);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aliasAttributes")
-      private final @Nullable Output<List<String>> aliasAttributes;
+    private @Nullable Output<List<String>> aliasAttributes;
 
-    public Output<List<String>> aliasAttributes() {
-        return this.aliasAttributes == null ? Codegen.empty() : this.aliasAttributes;
+    public Optional<Output<List<String>>> aliasAttributes() {
+        return Optional.ofNullable(this.aliasAttributes);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoVerifiedAttributes")
-      private final @Nullable Output<List<String>> autoVerifiedAttributes;
+    private @Nullable Output<List<String>> autoVerifiedAttributes;
 
-    public Output<List<String>> autoVerifiedAttributes() {
-        return this.autoVerifiedAttributes == null ? Codegen.empty() : this.autoVerifiedAttributes;
+    public Optional<Output<List<String>>> autoVerifiedAttributes() {
+        return Optional.ofNullable(this.autoVerifiedAttributes);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationDate")
-      private final @Nullable Output<String> creationDate;
+    private @Nullable Output<String> creationDate;
 
-    public Output<String> creationDate() {
-        return this.creationDate == null ? Codegen.empty() : this.creationDate;
+    public Optional<Output<String>> creationDate() {
+        return Optional.ofNullable(this.creationDate);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customDomain")
-      private final @Nullable Output<String> customDomain;
+    private @Nullable Output<String> customDomain;
 
-    public Output<String> customDomain() {
-        return this.customDomain == null ? Codegen.empty() : this.customDomain;
+    public Optional<Output<String>> customDomain() {
+        return Optional.ofNullable(this.customDomain);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceConfiguration")
-      private final @Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration;
+    private @Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration;
 
-    public Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration() {
-        return this.deviceConfiguration == null ? Codegen.empty() : this.deviceConfiguration;
+    public Optional<Output<UserPoolDeviceConfigurationGetArgs>> deviceConfiguration() {
+        return Optional.ofNullable(this.deviceConfiguration);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailConfiguration")
-      private final @Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration;
+    private @Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration;
 
-    public Output<UserPoolEmailConfigurationGetArgs> emailConfiguration() {
-        return this.emailConfiguration == null ? Codegen.empty() : this.emailConfiguration;
+    public Optional<Output<UserPoolEmailConfigurationGetArgs>> emailConfiguration() {
+        return Optional.ofNullable(this.emailConfiguration);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailVerificationMessage")
-      private final @Nullable Output<String> emailVerificationMessage;
+    private @Nullable Output<String> emailVerificationMessage;
 
-    public Output<String> emailVerificationMessage() {
-        return this.emailVerificationMessage == null ? Codegen.empty() : this.emailVerificationMessage;
+    public Optional<Output<String>> emailVerificationMessage() {
+        return Optional.ofNullable(this.emailVerificationMessage);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailVerificationSubject")
-      private final @Nullable Output<String> emailVerificationSubject;
+    private @Nullable Output<String> emailVerificationSubject;
 
-    public Output<String> emailVerificationSubject() {
-        return this.emailVerificationSubject == null ? Codegen.empty() : this.emailVerificationSubject;
+    public Optional<Output<String>> emailVerificationSubject() {
+        return Optional.ofNullable(this.emailVerificationSubject);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="estimatedNumberOfUsers")
-      private final @Nullable Output<Integer> estimatedNumberOfUsers;
+    private @Nullable Output<Integer> estimatedNumberOfUsers;
 
-    public Output<Integer> estimatedNumberOfUsers() {
-        return this.estimatedNumberOfUsers == null ? Codegen.empty() : this.estimatedNumberOfUsers;
+    public Optional<Output<Integer>> estimatedNumberOfUsers() {
+        return Optional.ofNullable(this.estimatedNumberOfUsers);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lambdaConfig")
-      private final @Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig;
+    private @Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig;
 
-    public Output<UserPoolLambdaConfigGetArgs> lambdaConfig() {
-        return this.lambdaConfig == null ? Codegen.empty() : this.lambdaConfig;
+    public Optional<Output<UserPoolLambdaConfigGetArgs>> lambdaConfig() {
+        return Optional.ofNullable(this.lambdaConfig);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastModifiedDate")
-      private final @Nullable Output<String> lastModifiedDate;
+    private @Nullable Output<String> lastModifiedDate;
 
-    public Output<String> lastModifiedDate() {
-        return this.lastModifiedDate == null ? Codegen.empty() : this.lastModifiedDate;
+    public Optional<Output<String>> lastModifiedDate() {
+        return Optional.ofNullable(this.lastModifiedDate);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mfaConfiguration")
-      private final @Nullable Output<String> mfaConfiguration;
+    private @Nullable Output<String> mfaConfiguration;
 
-    public Output<String> mfaConfiguration() {
-        return this.mfaConfiguration == null ? Codegen.empty() : this.mfaConfiguration;
+    public Optional<Output<String>> mfaConfiguration() {
+        return Optional.ofNullable(this.mfaConfiguration);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="passwordPolicy")
-      private final @Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy;
+    private @Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy;
 
-    public Output<UserPoolPasswordPolicyGetArgs> passwordPolicy() {
-        return this.passwordPolicy == null ? Codegen.empty() : this.passwordPolicy;
+    public Optional<Output<UserPoolPasswordPolicyGetArgs>> passwordPolicy() {
+        return Optional.ofNullable(this.passwordPolicy);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemas")
-      private final @Nullable Output<List<UserPoolSchemaGetArgs>> schemas;
+    private @Nullable Output<List<UserPoolSchemaGetArgs>> schemas;
 
-    public Output<List<UserPoolSchemaGetArgs>> schemas() {
-        return this.schemas == null ? Codegen.empty() : this.schemas;
+    public Optional<Output<List<UserPoolSchemaGetArgs>>> schemas() {
+        return Optional.ofNullable(this.schemas);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smsAuthenticationMessage")
-      private final @Nullable Output<String> smsAuthenticationMessage;
+    private @Nullable Output<String> smsAuthenticationMessage;
 
-    public Output<String> smsAuthenticationMessage() {
-        return this.smsAuthenticationMessage == null ? Codegen.empty() : this.smsAuthenticationMessage;
+    public Optional<Output<String>> smsAuthenticationMessage() {
+        return Optional.ofNullable(this.smsAuthenticationMessage);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smsConfiguration")
-      private final @Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration;
+    private @Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration;
 
-    public Output<UserPoolSmsConfigurationGetArgs> smsConfiguration() {
-        return this.smsConfiguration == null ? Codegen.empty() : this.smsConfiguration;
+    public Optional<Output<UserPoolSmsConfigurationGetArgs>> smsConfiguration() {
+        return Optional.ofNullable(this.smsConfiguration);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smsVerificationMessage")
-      private final @Nullable Output<String> smsVerificationMessage;
+    private @Nullable Output<String> smsVerificationMessage;
 
-    public Output<String> smsVerificationMessage() {
-        return this.smsVerificationMessage == null ? Codegen.empty() : this.smsVerificationMessage;
+    public Optional<Output<String>> smsVerificationMessage() {
+        return Optional.ofNullable(this.smsVerificationMessage);
     }
 
     /**
@@ -288,10 +288,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="softwareTokenMfaConfiguration")
-      private final @Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration;
+    private @Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration;
 
-    public Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration() {
-        return this.softwareTokenMfaConfiguration == null ? Codegen.empty() : this.softwareTokenMfaConfiguration;
+    public Optional<Output<UserPoolSoftwareTokenMfaConfigurationGetArgs>> softwareTokenMfaConfiguration() {
+        return Optional.ofNullable(this.softwareTokenMfaConfiguration);
     }
 
     /**
@@ -299,10 +299,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -310,10 +310,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -321,10 +321,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userPoolAddOns")
-      private final @Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns;
+    private @Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns;
 
-    public Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns() {
-        return this.userPoolAddOns == null ? Codegen.empty() : this.userPoolAddOns;
+    public Optional<Output<UserPoolUserPoolAddOnsGetArgs>> userPoolAddOns() {
+        return Optional.ofNullable(this.userPoolAddOns);
     }
 
     /**
@@ -332,10 +332,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usernameAttributes")
-      private final @Nullable Output<List<String>> usernameAttributes;
+    private @Nullable Output<List<String>> usernameAttributes;
 
-    public Output<List<String>> usernameAttributes() {
-        return this.usernameAttributes == null ? Codegen.empty() : this.usernameAttributes;
+    public Optional<Output<List<String>>> usernameAttributes() {
+        return Optional.ofNullable(this.usernameAttributes);
     }
 
     /**
@@ -343,10 +343,10 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usernameConfiguration")
-      private final @Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration;
+    private @Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration;
 
-    public Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration() {
-        return this.usernameConfiguration == null ? Codegen.empty() : this.usernameConfiguration;
+    public Optional<Output<UserPoolUsernameConfigurationGetArgs>> usernameConfiguration() {
+        return Optional.ofNullable(this.usernameConfiguration);
     }
 
     /**
@@ -354,439 +354,354 @@ public final class UserPoolState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="verificationMessageTemplate")
-      private final @Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate;
+    private @Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate;
 
-    public Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate() {
-        return this.verificationMessageTemplate == null ? Codegen.empty() : this.verificationMessageTemplate;
+    public Optional<Output<UserPoolVerificationMessageTemplateGetArgs>> verificationMessageTemplate() {
+        return Optional.ofNullable(this.verificationMessageTemplate);
     }
 
-    public UserPoolState(
-        @Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting,
-        @Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig,
-        @Nullable Output<List<String>> aliasAttributes,
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> autoVerifiedAttributes,
-        @Nullable Output<String> creationDate,
-        @Nullable Output<String> customDomain,
-        @Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration,
-        @Nullable Output<String> domain,
-        @Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration,
-        @Nullable Output<String> emailVerificationMessage,
-        @Nullable Output<String> emailVerificationSubject,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<Integer> estimatedNumberOfUsers,
-        @Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig,
-        @Nullable Output<String> lastModifiedDate,
-        @Nullable Output<String> mfaConfiguration,
-        @Nullable Output<String> name,
-        @Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy,
-        @Nullable Output<List<UserPoolSchemaGetArgs>> schemas,
-        @Nullable Output<String> smsAuthenticationMessage,
-        @Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration,
-        @Nullable Output<String> smsVerificationMessage,
-        @Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns,
-        @Nullable Output<List<String>> usernameAttributes,
-        @Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration,
-        @Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate) {
-        this.accountRecoverySetting = accountRecoverySetting;
-        this.adminCreateUserConfig = adminCreateUserConfig;
-        this.aliasAttributes = aliasAttributes;
-        this.arn = arn;
-        this.autoVerifiedAttributes = autoVerifiedAttributes;
-        this.creationDate = creationDate;
-        this.customDomain = customDomain;
-        this.deviceConfiguration = deviceConfiguration;
-        this.domain = domain;
-        this.emailConfiguration = emailConfiguration;
-        this.emailVerificationMessage = emailVerificationMessage;
-        this.emailVerificationSubject = emailVerificationSubject;
-        this.endpoint = endpoint;
-        this.estimatedNumberOfUsers = estimatedNumberOfUsers;
-        this.lambdaConfig = lambdaConfig;
-        this.lastModifiedDate = lastModifiedDate;
-        this.mfaConfiguration = mfaConfiguration;
-        this.name = name;
-        this.passwordPolicy = passwordPolicy;
-        this.schemas = schemas;
-        this.smsAuthenticationMessage = smsAuthenticationMessage;
-        this.smsConfiguration = smsConfiguration;
-        this.smsVerificationMessage = smsVerificationMessage;
-        this.softwareTokenMfaConfiguration = softwareTokenMfaConfiguration;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.userPoolAddOns = userPoolAddOns;
-        this.usernameAttributes = usernameAttributes;
-        this.usernameConfiguration = usernameConfiguration;
-        this.verificationMessageTemplate = verificationMessageTemplate;
-    }
+    private UserPoolState() {}
 
-    private UserPoolState() {
-        this.accountRecoverySetting = Codegen.empty();
-        this.adminCreateUserConfig = Codegen.empty();
-        this.aliasAttributes = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.autoVerifiedAttributes = Codegen.empty();
-        this.creationDate = Codegen.empty();
-        this.customDomain = Codegen.empty();
-        this.deviceConfiguration = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.emailConfiguration = Codegen.empty();
-        this.emailVerificationMessage = Codegen.empty();
-        this.emailVerificationSubject = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.estimatedNumberOfUsers = Codegen.empty();
-        this.lambdaConfig = Codegen.empty();
-        this.lastModifiedDate = Codegen.empty();
-        this.mfaConfiguration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.passwordPolicy = Codegen.empty();
-        this.schemas = Codegen.empty();
-        this.smsAuthenticationMessage = Codegen.empty();
-        this.smsConfiguration = Codegen.empty();
-        this.smsVerificationMessage = Codegen.empty();
-        this.softwareTokenMfaConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.userPoolAddOns = Codegen.empty();
-        this.usernameAttributes = Codegen.empty();
-        this.usernameConfiguration = Codegen.empty();
-        this.verificationMessageTemplate = Codegen.empty();
+    private UserPoolState(UserPoolState $) {
+        this.accountRecoverySetting = $.accountRecoverySetting;
+        this.adminCreateUserConfig = $.adminCreateUserConfig;
+        this.aliasAttributes = $.aliasAttributes;
+        this.arn = $.arn;
+        this.autoVerifiedAttributes = $.autoVerifiedAttributes;
+        this.creationDate = $.creationDate;
+        this.customDomain = $.customDomain;
+        this.deviceConfiguration = $.deviceConfiguration;
+        this.domain = $.domain;
+        this.emailConfiguration = $.emailConfiguration;
+        this.emailVerificationMessage = $.emailVerificationMessage;
+        this.emailVerificationSubject = $.emailVerificationSubject;
+        this.endpoint = $.endpoint;
+        this.estimatedNumberOfUsers = $.estimatedNumberOfUsers;
+        this.lambdaConfig = $.lambdaConfig;
+        this.lastModifiedDate = $.lastModifiedDate;
+        this.mfaConfiguration = $.mfaConfiguration;
+        this.name = $.name;
+        this.passwordPolicy = $.passwordPolicy;
+        this.schemas = $.schemas;
+        this.smsAuthenticationMessage = $.smsAuthenticationMessage;
+        this.smsConfiguration = $.smsConfiguration;
+        this.smsVerificationMessage = $.smsVerificationMessage;
+        this.softwareTokenMfaConfiguration = $.softwareTokenMfaConfiguration;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.userPoolAddOns = $.userPoolAddOns;
+        this.usernameAttributes = $.usernameAttributes;
+        this.usernameConfiguration = $.usernameConfiguration;
+        this.verificationMessageTemplate = $.verificationMessageTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserPoolState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting;
-        private @Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig;
-        private @Nullable Output<List<String>> aliasAttributes;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> autoVerifiedAttributes;
-        private @Nullable Output<String> creationDate;
-        private @Nullable Output<String> customDomain;
-        private @Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration;
-        private @Nullable Output<String> emailVerificationMessage;
-        private @Nullable Output<String> emailVerificationSubject;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<Integer> estimatedNumberOfUsers;
-        private @Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig;
-        private @Nullable Output<String> lastModifiedDate;
-        private @Nullable Output<String> mfaConfiguration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy;
-        private @Nullable Output<List<UserPoolSchemaGetArgs>> schemas;
-        private @Nullable Output<String> smsAuthenticationMessage;
-        private @Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration;
-        private @Nullable Output<String> smsVerificationMessage;
-        private @Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns;
-        private @Nullable Output<List<String>> usernameAttributes;
-        private @Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration;
-        private @Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate;
+        private UserPoolState $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserPoolState();
         }
 
         public Builder(UserPoolState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountRecoverySetting = defaults.accountRecoverySetting;
-    	      this.adminCreateUserConfig = defaults.adminCreateUserConfig;
-    	      this.aliasAttributes = defaults.aliasAttributes;
-    	      this.arn = defaults.arn;
-    	      this.autoVerifiedAttributes = defaults.autoVerifiedAttributes;
-    	      this.creationDate = defaults.creationDate;
-    	      this.customDomain = defaults.customDomain;
-    	      this.deviceConfiguration = defaults.deviceConfiguration;
-    	      this.domain = defaults.domain;
-    	      this.emailConfiguration = defaults.emailConfiguration;
-    	      this.emailVerificationMessage = defaults.emailVerificationMessage;
-    	      this.emailVerificationSubject = defaults.emailVerificationSubject;
-    	      this.endpoint = defaults.endpoint;
-    	      this.estimatedNumberOfUsers = defaults.estimatedNumberOfUsers;
-    	      this.lambdaConfig = defaults.lambdaConfig;
-    	      this.lastModifiedDate = defaults.lastModifiedDate;
-    	      this.mfaConfiguration = defaults.mfaConfiguration;
-    	      this.name = defaults.name;
-    	      this.passwordPolicy = defaults.passwordPolicy;
-    	      this.schemas = defaults.schemas;
-    	      this.smsAuthenticationMessage = defaults.smsAuthenticationMessage;
-    	      this.smsConfiguration = defaults.smsConfiguration;
-    	      this.smsVerificationMessage = defaults.smsVerificationMessage;
-    	      this.softwareTokenMfaConfiguration = defaults.softwareTokenMfaConfiguration;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.userPoolAddOns = defaults.userPoolAddOns;
-    	      this.usernameAttributes = defaults.usernameAttributes;
-    	      this.usernameConfiguration = defaults.usernameConfiguration;
-    	      this.verificationMessageTemplate = defaults.verificationMessageTemplate;
+            $ = new UserPoolState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountRecoverySetting(@Nullable Output<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting) {
-            this.accountRecoverySetting = accountRecoverySetting;
+            $.accountRecoverySetting = accountRecoverySetting;
             return this;
         }
-        public Builder accountRecoverySetting(@Nullable UserPoolAccountRecoverySettingGetArgs accountRecoverySetting) {
-            this.accountRecoverySetting = Codegen.ofNullable(accountRecoverySetting);
-            return this;
+
+        public Builder accountRecoverySetting(UserPoolAccountRecoverySettingGetArgs accountRecoverySetting) {
+            return accountRecoverySetting(Output.of(accountRecoverySetting));
         }
+
         public Builder adminCreateUserConfig(@Nullable Output<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig) {
-            this.adminCreateUserConfig = adminCreateUserConfig;
+            $.adminCreateUserConfig = adminCreateUserConfig;
             return this;
         }
-        public Builder adminCreateUserConfig(@Nullable UserPoolAdminCreateUserConfigGetArgs adminCreateUserConfig) {
-            this.adminCreateUserConfig = Codegen.ofNullable(adminCreateUserConfig);
-            return this;
+
+        public Builder adminCreateUserConfig(UserPoolAdminCreateUserConfigGetArgs adminCreateUserConfig) {
+            return adminCreateUserConfig(Output.of(adminCreateUserConfig));
         }
+
         public Builder aliasAttributes(@Nullable Output<List<String>> aliasAttributes) {
-            this.aliasAttributes = aliasAttributes;
+            $.aliasAttributes = aliasAttributes;
             return this;
         }
-        public Builder aliasAttributes(@Nullable List<String> aliasAttributes) {
-            this.aliasAttributes = Codegen.ofNullable(aliasAttributes);
-            return this;
+
+        public Builder aliasAttributes(List<String> aliasAttributes) {
+            return aliasAttributes(Output.of(aliasAttributes));
         }
+
         public Builder aliasAttributes(String... aliasAttributes) {
             return aliasAttributes(List.of(aliasAttributes));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder autoVerifiedAttributes(@Nullable Output<List<String>> autoVerifiedAttributes) {
-            this.autoVerifiedAttributes = autoVerifiedAttributes;
+            $.autoVerifiedAttributes = autoVerifiedAttributes;
             return this;
         }
-        public Builder autoVerifiedAttributes(@Nullable List<String> autoVerifiedAttributes) {
-            this.autoVerifiedAttributes = Codegen.ofNullable(autoVerifiedAttributes);
-            return this;
+
+        public Builder autoVerifiedAttributes(List<String> autoVerifiedAttributes) {
+            return autoVerifiedAttributes(Output.of(autoVerifiedAttributes));
         }
+
         public Builder autoVerifiedAttributes(String... autoVerifiedAttributes) {
             return autoVerifiedAttributes(List.of(autoVerifiedAttributes));
         }
+
         public Builder creationDate(@Nullable Output<String> creationDate) {
-            this.creationDate = creationDate;
+            $.creationDate = creationDate;
             return this;
         }
-        public Builder creationDate(@Nullable String creationDate) {
-            this.creationDate = Codegen.ofNullable(creationDate);
-            return this;
+
+        public Builder creationDate(String creationDate) {
+            return creationDate(Output.of(creationDate));
         }
+
         public Builder customDomain(@Nullable Output<String> customDomain) {
-            this.customDomain = customDomain;
+            $.customDomain = customDomain;
             return this;
         }
-        public Builder customDomain(@Nullable String customDomain) {
-            this.customDomain = Codegen.ofNullable(customDomain);
-            return this;
+
+        public Builder customDomain(String customDomain) {
+            return customDomain(Output.of(customDomain));
         }
+
         public Builder deviceConfiguration(@Nullable Output<UserPoolDeviceConfigurationGetArgs> deviceConfiguration) {
-            this.deviceConfiguration = deviceConfiguration;
+            $.deviceConfiguration = deviceConfiguration;
             return this;
         }
-        public Builder deviceConfiguration(@Nullable UserPoolDeviceConfigurationGetArgs deviceConfiguration) {
-            this.deviceConfiguration = Codegen.ofNullable(deviceConfiguration);
-            return this;
+
+        public Builder deviceConfiguration(UserPoolDeviceConfigurationGetArgs deviceConfiguration) {
+            return deviceConfiguration(Output.of(deviceConfiguration));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder emailConfiguration(@Nullable Output<UserPoolEmailConfigurationGetArgs> emailConfiguration) {
-            this.emailConfiguration = emailConfiguration;
+            $.emailConfiguration = emailConfiguration;
             return this;
         }
-        public Builder emailConfiguration(@Nullable UserPoolEmailConfigurationGetArgs emailConfiguration) {
-            this.emailConfiguration = Codegen.ofNullable(emailConfiguration);
-            return this;
+
+        public Builder emailConfiguration(UserPoolEmailConfigurationGetArgs emailConfiguration) {
+            return emailConfiguration(Output.of(emailConfiguration));
         }
+
         public Builder emailVerificationMessage(@Nullable Output<String> emailVerificationMessage) {
-            this.emailVerificationMessage = emailVerificationMessage;
+            $.emailVerificationMessage = emailVerificationMessage;
             return this;
         }
-        public Builder emailVerificationMessage(@Nullable String emailVerificationMessage) {
-            this.emailVerificationMessage = Codegen.ofNullable(emailVerificationMessage);
-            return this;
+
+        public Builder emailVerificationMessage(String emailVerificationMessage) {
+            return emailVerificationMessage(Output.of(emailVerificationMessage));
         }
+
         public Builder emailVerificationSubject(@Nullable Output<String> emailVerificationSubject) {
-            this.emailVerificationSubject = emailVerificationSubject;
+            $.emailVerificationSubject = emailVerificationSubject;
             return this;
         }
-        public Builder emailVerificationSubject(@Nullable String emailVerificationSubject) {
-            this.emailVerificationSubject = Codegen.ofNullable(emailVerificationSubject);
-            return this;
+
+        public Builder emailVerificationSubject(String emailVerificationSubject) {
+            return emailVerificationSubject(Output.of(emailVerificationSubject));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder estimatedNumberOfUsers(@Nullable Output<Integer> estimatedNumberOfUsers) {
-            this.estimatedNumberOfUsers = estimatedNumberOfUsers;
+            $.estimatedNumberOfUsers = estimatedNumberOfUsers;
             return this;
         }
-        public Builder estimatedNumberOfUsers(@Nullable Integer estimatedNumberOfUsers) {
-            this.estimatedNumberOfUsers = Codegen.ofNullable(estimatedNumberOfUsers);
-            return this;
+
+        public Builder estimatedNumberOfUsers(Integer estimatedNumberOfUsers) {
+            return estimatedNumberOfUsers(Output.of(estimatedNumberOfUsers));
         }
+
         public Builder lambdaConfig(@Nullable Output<UserPoolLambdaConfigGetArgs> lambdaConfig) {
-            this.lambdaConfig = lambdaConfig;
+            $.lambdaConfig = lambdaConfig;
             return this;
         }
-        public Builder lambdaConfig(@Nullable UserPoolLambdaConfigGetArgs lambdaConfig) {
-            this.lambdaConfig = Codegen.ofNullable(lambdaConfig);
-            return this;
+
+        public Builder lambdaConfig(UserPoolLambdaConfigGetArgs lambdaConfig) {
+            return lambdaConfig(Output.of(lambdaConfig));
         }
+
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
-            this.lastModifiedDate = lastModifiedDate;
+            $.lastModifiedDate = lastModifiedDate;
             return this;
         }
-        public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
-            this.lastModifiedDate = Codegen.ofNullable(lastModifiedDate);
-            return this;
+
+        public Builder lastModifiedDate(String lastModifiedDate) {
+            return lastModifiedDate(Output.of(lastModifiedDate));
         }
+
         public Builder mfaConfiguration(@Nullable Output<String> mfaConfiguration) {
-            this.mfaConfiguration = mfaConfiguration;
+            $.mfaConfiguration = mfaConfiguration;
             return this;
         }
-        public Builder mfaConfiguration(@Nullable String mfaConfiguration) {
-            this.mfaConfiguration = Codegen.ofNullable(mfaConfiguration);
-            return this;
+
+        public Builder mfaConfiguration(String mfaConfiguration) {
+            return mfaConfiguration(Output.of(mfaConfiguration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder passwordPolicy(@Nullable Output<UserPoolPasswordPolicyGetArgs> passwordPolicy) {
-            this.passwordPolicy = passwordPolicy;
+            $.passwordPolicy = passwordPolicy;
             return this;
         }
-        public Builder passwordPolicy(@Nullable UserPoolPasswordPolicyGetArgs passwordPolicy) {
-            this.passwordPolicy = Codegen.ofNullable(passwordPolicy);
-            return this;
+
+        public Builder passwordPolicy(UserPoolPasswordPolicyGetArgs passwordPolicy) {
+            return passwordPolicy(Output.of(passwordPolicy));
         }
+
         public Builder schemas(@Nullable Output<List<UserPoolSchemaGetArgs>> schemas) {
-            this.schemas = schemas;
+            $.schemas = schemas;
             return this;
         }
-        public Builder schemas(@Nullable List<UserPoolSchemaGetArgs> schemas) {
-            this.schemas = Codegen.ofNullable(schemas);
-            return this;
+
+        public Builder schemas(List<UserPoolSchemaGetArgs> schemas) {
+            return schemas(Output.of(schemas));
         }
+
         public Builder schemas(UserPoolSchemaGetArgs... schemas) {
             return schemas(List.of(schemas));
         }
+
         public Builder smsAuthenticationMessage(@Nullable Output<String> smsAuthenticationMessage) {
-            this.smsAuthenticationMessage = smsAuthenticationMessage;
+            $.smsAuthenticationMessage = smsAuthenticationMessage;
             return this;
         }
-        public Builder smsAuthenticationMessage(@Nullable String smsAuthenticationMessage) {
-            this.smsAuthenticationMessage = Codegen.ofNullable(smsAuthenticationMessage);
-            return this;
+
+        public Builder smsAuthenticationMessage(String smsAuthenticationMessage) {
+            return smsAuthenticationMessage(Output.of(smsAuthenticationMessage));
         }
+
         public Builder smsConfiguration(@Nullable Output<UserPoolSmsConfigurationGetArgs> smsConfiguration) {
-            this.smsConfiguration = smsConfiguration;
+            $.smsConfiguration = smsConfiguration;
             return this;
         }
-        public Builder smsConfiguration(@Nullable UserPoolSmsConfigurationGetArgs smsConfiguration) {
-            this.smsConfiguration = Codegen.ofNullable(smsConfiguration);
-            return this;
+
+        public Builder smsConfiguration(UserPoolSmsConfigurationGetArgs smsConfiguration) {
+            return smsConfiguration(Output.of(smsConfiguration));
         }
+
         public Builder smsVerificationMessage(@Nullable Output<String> smsVerificationMessage) {
-            this.smsVerificationMessage = smsVerificationMessage;
+            $.smsVerificationMessage = smsVerificationMessage;
             return this;
         }
-        public Builder smsVerificationMessage(@Nullable String smsVerificationMessage) {
-            this.smsVerificationMessage = Codegen.ofNullable(smsVerificationMessage);
-            return this;
+
+        public Builder smsVerificationMessage(String smsVerificationMessage) {
+            return smsVerificationMessage(Output.of(smsVerificationMessage));
         }
+
         public Builder softwareTokenMfaConfiguration(@Nullable Output<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration) {
-            this.softwareTokenMfaConfiguration = softwareTokenMfaConfiguration;
+            $.softwareTokenMfaConfiguration = softwareTokenMfaConfiguration;
             return this;
         }
-        public Builder softwareTokenMfaConfiguration(@Nullable UserPoolSoftwareTokenMfaConfigurationGetArgs softwareTokenMfaConfiguration) {
-            this.softwareTokenMfaConfiguration = Codegen.ofNullable(softwareTokenMfaConfiguration);
-            return this;
+
+        public Builder softwareTokenMfaConfiguration(UserPoolSoftwareTokenMfaConfigurationGetArgs softwareTokenMfaConfiguration) {
+            return softwareTokenMfaConfiguration(Output.of(softwareTokenMfaConfiguration));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder userPoolAddOns(@Nullable Output<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns) {
-            this.userPoolAddOns = userPoolAddOns;
+            $.userPoolAddOns = userPoolAddOns;
             return this;
         }
-        public Builder userPoolAddOns(@Nullable UserPoolUserPoolAddOnsGetArgs userPoolAddOns) {
-            this.userPoolAddOns = Codegen.ofNullable(userPoolAddOns);
-            return this;
+
+        public Builder userPoolAddOns(UserPoolUserPoolAddOnsGetArgs userPoolAddOns) {
+            return userPoolAddOns(Output.of(userPoolAddOns));
         }
+
         public Builder usernameAttributes(@Nullable Output<List<String>> usernameAttributes) {
-            this.usernameAttributes = usernameAttributes;
+            $.usernameAttributes = usernameAttributes;
             return this;
         }
-        public Builder usernameAttributes(@Nullable List<String> usernameAttributes) {
-            this.usernameAttributes = Codegen.ofNullable(usernameAttributes);
-            return this;
+
+        public Builder usernameAttributes(List<String> usernameAttributes) {
+            return usernameAttributes(Output.of(usernameAttributes));
         }
+
         public Builder usernameAttributes(String... usernameAttributes) {
             return usernameAttributes(List.of(usernameAttributes));
         }
+
         public Builder usernameConfiguration(@Nullable Output<UserPoolUsernameConfigurationGetArgs> usernameConfiguration) {
-            this.usernameConfiguration = usernameConfiguration;
+            $.usernameConfiguration = usernameConfiguration;
             return this;
         }
-        public Builder usernameConfiguration(@Nullable UserPoolUsernameConfigurationGetArgs usernameConfiguration) {
-            this.usernameConfiguration = Codegen.ofNullable(usernameConfiguration);
-            return this;
+
+        public Builder usernameConfiguration(UserPoolUsernameConfigurationGetArgs usernameConfiguration) {
+            return usernameConfiguration(Output.of(usernameConfiguration));
         }
+
         public Builder verificationMessageTemplate(@Nullable Output<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate) {
-            this.verificationMessageTemplate = verificationMessageTemplate;
+            $.verificationMessageTemplate = verificationMessageTemplate;
             return this;
         }
-        public Builder verificationMessageTemplate(@Nullable UserPoolVerificationMessageTemplateGetArgs verificationMessageTemplate) {
-            this.verificationMessageTemplate = Codegen.ofNullable(verificationMessageTemplate);
-            return this;
-        }        public UserPoolState build() {
-            return new UserPoolState(accountRecoverySetting, adminCreateUserConfig, aliasAttributes, arn, autoVerifiedAttributes, creationDate, customDomain, deviceConfiguration, domain, emailConfiguration, emailVerificationMessage, emailVerificationSubject, endpoint, estimatedNumberOfUsers, lambdaConfig, lastModifiedDate, mfaConfiguration, name, passwordPolicy, schemas, smsAuthenticationMessage, smsConfiguration, smsVerificationMessage, softwareTokenMfaConfiguration, tags, tagsAll, userPoolAddOns, usernameAttributes, usernameConfiguration, verificationMessageTemplate);
+
+        public Builder verificationMessageTemplate(UserPoolVerificationMessageTemplateGetArgs verificationMessageTemplate) {
+            return verificationMessageTemplate(Output.of(verificationMessageTemplate));
+        }
+
+        public UserPoolState build() {
+            return $;
         }
     }
+
 }

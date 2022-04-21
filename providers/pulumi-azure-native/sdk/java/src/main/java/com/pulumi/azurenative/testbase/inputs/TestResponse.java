@@ -26,7 +26,7 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="commands", required=true)
-      private final List<CommandResponse> commands;
+    private List<CommandResponse> commands;
 
     public List<CommandResponse> commands() {
         return this.commands;
@@ -37,10 +37,10 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isActive")
-      private final @Nullable Boolean isActive;
+    private @Nullable Boolean isActive;
 
     public Optional<Boolean> isActive() {
-        return this.isActive == null ? Optional.empty() : Optional.ofNullable(this.isActive);
+        return Optional.ofNullable(this.isActive);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="testType", required=true)
-      private final String testType;
+    private String testType;
 
     public String testType() {
         return this.testType;
@@ -59,76 +59,69 @@ public final class TestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="validationRunStatus", required=true)
-      private final String validationRunStatus;
+    private String validationRunStatus;
 
     public String validationRunStatus() {
         return this.validationRunStatus;
     }
 
-    public TestResponse(
-        List<CommandResponse> commands,
-        @Nullable Boolean isActive,
-        String testType,
-        String validationRunStatus) {
-        this.commands = Objects.requireNonNull(commands, "expected parameter 'commands' to be non-null");
-        this.isActive = isActive;
-        this.testType = Objects.requireNonNull(testType, "expected parameter 'testType' to be non-null");
-        this.validationRunStatus = Objects.requireNonNull(validationRunStatus, "expected parameter 'validationRunStatus' to be non-null");
-    }
+    private TestResponse() {}
 
-    private TestResponse() {
-        this.commands = List.of();
-        this.isActive = null;
-        this.testType = null;
-        this.validationRunStatus = null;
+    private TestResponse(TestResponse $) {
+        this.commands = $.commands;
+        this.isActive = $.isActive;
+        this.testType = $.testType;
+        this.validationRunStatus = $.validationRunStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<CommandResponse> commands;
-        private @Nullable Boolean isActive;
-        private String testType;
-        private String validationRunStatus;
+        private TestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestResponse();
         }
 
         public Builder(TestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commands = defaults.commands;
-    	      this.isActive = defaults.isActive;
-    	      this.testType = defaults.testType;
-    	      this.validationRunStatus = defaults.validationRunStatus;
+            $ = new TestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commands(List<CommandResponse> commands) {
-            this.commands = Objects.requireNonNull(commands);
+            $.commands = commands;
             return this;
         }
+
         public Builder commands(CommandResponse... commands) {
             return commands(List.of(commands));
         }
+
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = isActive;
+            $.isActive = isActive;
             return this;
         }
+
         public Builder testType(String testType) {
-            this.testType = Objects.requireNonNull(testType);
+            $.testType = testType;
             return this;
         }
+
         public Builder validationRunStatus(String validationRunStatus) {
-            this.validationRunStatus = Objects.requireNonNull(validationRunStatus);
+            $.validationRunStatus = validationRunStatus;
             return this;
-        }        public TestResponse build() {
-            return new TestResponse(commands, isActive, testType, validationRunStatus);
+        }
+
+        public TestResponse build() {
+            $.commands = Objects.requireNonNull($.commands, "expected parameter 'commands' to be non-null");
+            $.testType = Objects.requireNonNull($.testType, "expected parameter 'testType' to be non-null");
+            $.validationRunStatus = Objects.requireNonNull($.validationRunStatus, "expected parameter 'validationRunStatus' to be non-null");
+            return $;
         }
     }
+
 }

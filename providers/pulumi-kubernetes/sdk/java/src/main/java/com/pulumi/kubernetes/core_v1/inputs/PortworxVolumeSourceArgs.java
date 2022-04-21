@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class PortworxVolumeSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="volumeID", required=true)
-      private final Output<String> volumeID;
+    private Output<String> volumeID;
 
     public Output<String> volumeID() {
         return this.volumeID;
     }
 
-    public PortworxVolumeSourceArgs(
-        @Nullable Output<String> fsType,
-        @Nullable Output<Boolean> readOnly,
-        Output<String> volumeID) {
-        this.fsType = fsType;
-        this.readOnly = readOnly;
-        this.volumeID = Objects.requireNonNull(volumeID, "expected parameter 'volumeID' to be non-null");
-    }
+    private PortworxVolumeSourceArgs() {}
 
-    private PortworxVolumeSourceArgs() {
-        this.fsType = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.volumeID = Codegen.empty();
+    private PortworxVolumeSourceArgs(PortworxVolumeSourceArgs $) {
+        this.fsType = $.fsType;
+        this.readOnly = $.readOnly;
+        this.volumeID = $.volumeID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PortworxVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fsType;
-        private @Nullable Output<Boolean> readOnly;
-        private Output<String> volumeID;
+        private PortworxVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PortworxVolumeSourceArgs();
         }
 
         public Builder(PortworxVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsType = defaults.fsType;
-    	      this.readOnly = defaults.readOnly;
-    	      this.volumeID = defaults.volumeID;
+            $ = new PortworxVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder volumeID(Output<String> volumeID) {
-            this.volumeID = Objects.requireNonNull(volumeID);
+            $.volumeID = volumeID;
             return this;
         }
+
         public Builder volumeID(String volumeID) {
-            this.volumeID = Output.of(Objects.requireNonNull(volumeID));
-            return this;
-        }        public PortworxVolumeSourceArgs build() {
-            return new PortworxVolumeSourceArgs(fsType, readOnly, volumeID);
+            return volumeID(Output.of(volumeID));
+        }
+
+        public PortworxVolumeSourceArgs build() {
+            $.volumeID = Objects.requireNonNull($.volumeID, "expected parameter 'volumeID' to be non-null");
+            return $;
         }
     }
+
 }

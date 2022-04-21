@@ -5,7 +5,6 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class DateAfterCreationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="daysAfterCreationGreaterThan", required=true)
-      private final Output<Double> daysAfterCreationGreaterThan;
+    private Output<Double> daysAfterCreationGreaterThan;
 
     public Output<Double> daysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
     }
 
-    public DateAfterCreationArgs(Output<Double> daysAfterCreationGreaterThan) {
-        this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan, "expected parameter 'daysAfterCreationGreaterThan' to be non-null");
-    }
+    private DateAfterCreationArgs() {}
 
-    private DateAfterCreationArgs() {
-        this.daysAfterCreationGreaterThan = Codegen.empty();
+    private DateAfterCreationArgs(DateAfterCreationArgs $) {
+        this.daysAfterCreationGreaterThan = $.daysAfterCreationGreaterThan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DateAfterCreationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> daysAfterCreationGreaterThan;
+        private DateAfterCreationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DateAfterCreationArgs();
         }
 
         public Builder(DateAfterCreationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysAfterCreationGreaterThan = defaults.daysAfterCreationGreaterThan;
+            $ = new DateAfterCreationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysAfterCreationGreaterThan(Output<Double> daysAfterCreationGreaterThan) {
-            this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
+            $.daysAfterCreationGreaterThan = daysAfterCreationGreaterThan;
             return this;
         }
+
         public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
-            this.daysAfterCreationGreaterThan = Output.of(Objects.requireNonNull(daysAfterCreationGreaterThan));
-            return this;
-        }        public DateAfterCreationArgs build() {
-            return new DateAfterCreationArgs(daysAfterCreationGreaterThan);
+            return daysAfterCreationGreaterThan(Output.of(daysAfterCreationGreaterThan));
+        }
+
+        public DateAfterCreationArgs build() {
+            $.daysAfterCreationGreaterThan = Objects.requireNonNull($.daysAfterCreationGreaterThan, "expected parameter 'daysAfterCreationGreaterThan' to be non-null");
+            return $;
         }
     }
+
 }

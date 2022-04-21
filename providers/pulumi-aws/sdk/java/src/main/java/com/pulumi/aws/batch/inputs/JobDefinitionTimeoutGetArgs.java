@@ -5,9 +5,9 @@ package com.pulumi.aws.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class JobDefinitionTimeoutGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="attemptDurationSeconds")
-      private final @Nullable Output<Integer> attemptDurationSeconds;
+    private @Nullable Output<Integer> attemptDurationSeconds;
 
-    public Output<Integer> attemptDurationSeconds() {
-        return this.attemptDurationSeconds == null ? Codegen.empty() : this.attemptDurationSeconds;
+    public Optional<Output<Integer>> attemptDurationSeconds() {
+        return Optional.ofNullable(this.attemptDurationSeconds);
     }
 
-    public JobDefinitionTimeoutGetArgs(@Nullable Output<Integer> attemptDurationSeconds) {
-        this.attemptDurationSeconds = attemptDurationSeconds;
-    }
+    private JobDefinitionTimeoutGetArgs() {}
 
-    private JobDefinitionTimeoutGetArgs() {
-        this.attemptDurationSeconds = Codegen.empty();
+    private JobDefinitionTimeoutGetArgs(JobDefinitionTimeoutGetArgs $) {
+        this.attemptDurationSeconds = $.attemptDurationSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDefinitionTimeoutGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> attemptDurationSeconds;
+        private JobDefinitionTimeoutGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDefinitionTimeoutGetArgs();
         }
 
         public Builder(JobDefinitionTimeoutGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attemptDurationSeconds = defaults.attemptDurationSeconds;
+            $ = new JobDefinitionTimeoutGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attemptDurationSeconds(@Nullable Output<Integer> attemptDurationSeconds) {
-            this.attemptDurationSeconds = attemptDurationSeconds;
+            $.attemptDurationSeconds = attemptDurationSeconds;
             return this;
         }
-        public Builder attemptDurationSeconds(@Nullable Integer attemptDurationSeconds) {
-            this.attemptDurationSeconds = Codegen.ofNullable(attemptDurationSeconds);
-            return this;
-        }        public JobDefinitionTimeoutGetArgs build() {
-            return new JobDefinitionTimeoutGetArgs(attemptDurationSeconds);
+
+        public Builder attemptDurationSeconds(Integer attemptDurationSeconds) {
+            return attemptDurationSeconds(Output.of(attemptDurationSeconds));
+        }
+
+        public JobDefinitionTimeoutGetArgs build() {
+            return $;
         }
     }
+
 }

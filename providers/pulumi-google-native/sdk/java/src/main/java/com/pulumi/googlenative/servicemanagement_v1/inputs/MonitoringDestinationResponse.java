@@ -22,7 +22,7 @@ public final class MonitoringDestinationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="metrics", required=true)
-      private final List<String> metrics;
+    private List<String> metrics;
 
     public List<String> metrics() {
         return this.metrics;
@@ -33,58 +33,56 @@ public final class MonitoringDestinationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="monitoredResource", required=true)
-      private final String monitoredResource;
+    private String monitoredResource;
 
     public String monitoredResource() {
         return this.monitoredResource;
     }
 
-    public MonitoringDestinationResponse(
-        List<String> metrics,
-        String monitoredResource) {
-        this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
-        this.monitoredResource = Objects.requireNonNull(monitoredResource, "expected parameter 'monitoredResource' to be non-null");
-    }
+    private MonitoringDestinationResponse() {}
 
-    private MonitoringDestinationResponse() {
-        this.metrics = List.of();
-        this.monitoredResource = null;
+    private MonitoringDestinationResponse(MonitoringDestinationResponse $) {
+        this.metrics = $.metrics;
+        this.monitoredResource = $.monitoredResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> metrics;
-        private String monitoredResource;
+        private MonitoringDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringDestinationResponse();
         }
 
         public Builder(MonitoringDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metrics = defaults.metrics;
-    	      this.monitoredResource = defaults.monitoredResource;
+            $ = new MonitoringDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metrics(List<String> metrics) {
-            this.metrics = Objects.requireNonNull(metrics);
+            $.metrics = metrics;
             return this;
         }
+
         public Builder metrics(String... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder monitoredResource(String monitoredResource) {
-            this.monitoredResource = Objects.requireNonNull(monitoredResource);
+            $.monitoredResource = monitoredResource;
             return this;
-        }        public MonitoringDestinationResponse build() {
-            return new MonitoringDestinationResponse(metrics, monitoredResource);
+        }
+
+        public MonitoringDestinationResponse build() {
+            $.metrics = Objects.requireNonNull($.metrics, "expected parameter 'metrics' to be non-null");
+            $.monitoredResource = Objects.requireNonNull($.monitoredResource, "expected parameter 'monitoredResource' to be non-null");
+            return $;
         }
     }
+
 }

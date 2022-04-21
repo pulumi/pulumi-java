@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class IndexCapacityUnitsConfigurationArgs extends com.pulumi.resour
     public static final IndexCapacityUnitsConfigurationArgs Empty = new IndexCapacityUnitsConfigurationArgs();
 
     @Import(name="queryCapacityUnits", required=true)
-      private final Output<Integer> queryCapacityUnits;
+    private Output<Integer> queryCapacityUnits;
 
     public Output<Integer> queryCapacityUnits() {
         return this.queryCapacityUnits;
     }
 
     @Import(name="storageCapacityUnits", required=true)
-      private final Output<Integer> storageCapacityUnits;
+    private Output<Integer> storageCapacityUnits;
 
     public Output<Integer> storageCapacityUnits() {
         return this.storageCapacityUnits;
     }
 
-    public IndexCapacityUnitsConfigurationArgs(
-        Output<Integer> queryCapacityUnits,
-        Output<Integer> storageCapacityUnits) {
-        this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits, "expected parameter 'queryCapacityUnits' to be non-null");
-        this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits, "expected parameter 'storageCapacityUnits' to be non-null");
-    }
+    private IndexCapacityUnitsConfigurationArgs() {}
 
-    private IndexCapacityUnitsConfigurationArgs() {
-        this.queryCapacityUnits = Codegen.empty();
-        this.storageCapacityUnits = Codegen.empty();
+    private IndexCapacityUnitsConfigurationArgs(IndexCapacityUnitsConfigurationArgs $) {
+        this.queryCapacityUnits = $.queryCapacityUnits;
+        this.storageCapacityUnits = $.storageCapacityUnits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexCapacityUnitsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> queryCapacityUnits;
-        private Output<Integer> storageCapacityUnits;
+        private IndexCapacityUnitsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexCapacityUnitsConfigurationArgs();
         }
 
         public Builder(IndexCapacityUnitsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryCapacityUnits = defaults.queryCapacityUnits;
-    	      this.storageCapacityUnits = defaults.storageCapacityUnits;
+            $ = new IndexCapacityUnitsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queryCapacityUnits(Output<Integer> queryCapacityUnits) {
-            this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits);
+            $.queryCapacityUnits = queryCapacityUnits;
             return this;
         }
+
         public Builder queryCapacityUnits(Integer queryCapacityUnits) {
-            this.queryCapacityUnits = Output.of(Objects.requireNonNull(queryCapacityUnits));
-            return this;
+            return queryCapacityUnits(Output.of(queryCapacityUnits));
         }
+
         public Builder storageCapacityUnits(Output<Integer> storageCapacityUnits) {
-            this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
+            $.storageCapacityUnits = storageCapacityUnits;
             return this;
         }
+
         public Builder storageCapacityUnits(Integer storageCapacityUnits) {
-            this.storageCapacityUnits = Output.of(Objects.requireNonNull(storageCapacityUnits));
-            return this;
-        }        public IndexCapacityUnitsConfigurationArgs build() {
-            return new IndexCapacityUnitsConfigurationArgs(queryCapacityUnits, storageCapacityUnits);
+            return storageCapacityUnits(Output.of(storageCapacityUnits));
+        }
+
+        public IndexCapacityUnitsConfigurationArgs build() {
+            $.queryCapacityUnits = Objects.requireNonNull($.queryCapacityUnits, "expected parameter 'queryCapacityUnits' to be non-null");
+            $.storageCapacityUnits = Objects.requireNonNull($.storageCapacityUnits, "expected parameter 'storageCapacityUnits' to be non-null");
+            return $;
         }
     }
+
 }

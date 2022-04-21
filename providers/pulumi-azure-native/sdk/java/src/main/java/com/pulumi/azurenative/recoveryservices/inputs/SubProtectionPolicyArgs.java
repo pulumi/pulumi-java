@@ -12,10 +12,10 @@ import com.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class SubProtectionPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyType")
-      private final @Nullable Output<Either<String,PolicyType>> policyType;
+    private @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Output<Either<String,PolicyType>> policyType() {
-        return this.policyType == null ? Codegen.empty() : this.policyType;
+    public Optional<Output<Either<String,PolicyType>>> policyType() {
+        return Optional.ofNullable(this.policyType);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SubProtectionPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+    private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
-    public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy() {
-        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
+    public Optional<Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -54,76 +54,68 @@ public final class SubProtectionPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="schedulePolicy")
-      private final @Nullable Output<Object> schedulePolicy;
+    private @Nullable Output<Object> schedulePolicy;
 
-    public Output<Object> schedulePolicy() {
-        return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
+    public Optional<Output<Object>> schedulePolicy() {
+        return Optional.ofNullable(this.schedulePolicy);
     }
 
-    public SubProtectionPolicyArgs(
-        @Nullable Output<Either<String,PolicyType>> policyType,
-        @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy,
-        @Nullable Output<Object> schedulePolicy) {
-        this.policyType = policyType;
-        this.retentionPolicy = retentionPolicy;
-        this.schedulePolicy = schedulePolicy;
-    }
+    private SubProtectionPolicyArgs() {}
 
-    private SubProtectionPolicyArgs() {
-        this.policyType = Codegen.empty();
-        this.retentionPolicy = Codegen.empty();
-        this.schedulePolicy = Codegen.empty();
+    private SubProtectionPolicyArgs(SubProtectionPolicyArgs $) {
+        this.policyType = $.policyType;
+        this.retentionPolicy = $.retentionPolicy;
+        this.schedulePolicy = $.schedulePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubProtectionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,PolicyType>> policyType;
-        private @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
-        private @Nullable Output<Object> schedulePolicy;
+        private SubProtectionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubProtectionPolicyArgs();
         }
 
         public Builder(SubProtectionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyType = defaults.policyType;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.schedulePolicy = defaults.schedulePolicy;
+            $ = new SubProtectionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyType(@Nullable Output<Either<String,PolicyType>> policyType) {
-            this.policyType = policyType;
+            $.policyType = policyType;
             return this;
         }
-        public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
-            this.policyType = Codegen.ofNullable(policyType);
-            return this;
+
+        public Builder policyType(Either<String,PolicyType> policyType) {
+            return policyType(Output.of(policyType));
         }
+
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
-        public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
-            return this;
+
+        public Builder retentionPolicy(Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
+            return retentionPolicy(Output.of(retentionPolicy));
         }
+
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
-            this.schedulePolicy = schedulePolicy;
+            $.schedulePolicy = schedulePolicy;
             return this;
         }
-        public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = Codegen.ofNullable(schedulePolicy);
-            return this;
-        }        public SubProtectionPolicyArgs build() {
-            return new SubProtectionPolicyArgs(policyType, retentionPolicy, schedulePolicy);
+
+        public Builder schedulePolicy(Object schedulePolicy) {
+            return schedulePolicy(Output.of(schedulePolicy));
+        }
+
+        public SubProtectionPolicyArgs build() {
+            return $;
         }
     }
+
 }

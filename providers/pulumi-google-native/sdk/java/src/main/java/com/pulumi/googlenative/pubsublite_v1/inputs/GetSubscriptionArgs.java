@@ -15,78 +15,72 @@ public final class GetSubscriptionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSubscriptionArgs Empty = new GetSubscriptionArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="subscriptionId", required=true)
-      private final String subscriptionId;
+    private String subscriptionId;
 
     public String subscriptionId() {
         return this.subscriptionId;
     }
 
-    public GetSubscriptionArgs(
-        String location,
-        @Nullable String project,
-        String subscriptionId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-    }
+    private GetSubscriptionArgs() {}
 
-    private GetSubscriptionArgs() {
-        this.location = null;
-        this.project = null;
-        this.subscriptionId = null;
+    private GetSubscriptionArgs(GetSubscriptionArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String subscriptionId;
+        private GetSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubscriptionArgs();
         }
 
         public Builder(GetSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new GetSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public GetSubscriptionArgs build() {
-            return new GetSubscriptionArgs(location, project, subscriptionId);
+        }
+
+        public GetSubscriptionArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            return $;
         }
     }
+
 }

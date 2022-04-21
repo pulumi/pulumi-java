@@ -6,9 +6,9 @@ package com.pulumi.azurenative.migrate.inputs;
 import com.pulumi.azurenative.migrate.inputs.CollectorAgentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class CollectorPropertiesArgs extends com.pulumi.resources.Resource
     public static final CollectorPropertiesArgs Empty = new CollectorPropertiesArgs();
 
     @Import(name="agentProperties")
-      private final @Nullable Output<CollectorAgentPropertiesArgs> agentProperties;
+    private @Nullable Output<CollectorAgentPropertiesArgs> agentProperties;
 
-    public Output<CollectorAgentPropertiesArgs> agentProperties() {
-        return this.agentProperties == null ? Codegen.empty() : this.agentProperties;
+    public Optional<Output<CollectorAgentPropertiesArgs>> agentProperties() {
+        return Optional.ofNullable(this.agentProperties);
     }
 
     /**
@@ -28,63 +28,58 @@ public final class CollectorPropertiesArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="discoverySiteId")
-      private final @Nullable Output<String> discoverySiteId;
+    private @Nullable Output<String> discoverySiteId;
 
-    public Output<String> discoverySiteId() {
-        return this.discoverySiteId == null ? Codegen.empty() : this.discoverySiteId;
+    public Optional<Output<String>> discoverySiteId() {
+        return Optional.ofNullable(this.discoverySiteId);
     }
 
-    public CollectorPropertiesArgs(
-        @Nullable Output<CollectorAgentPropertiesArgs> agentProperties,
-        @Nullable Output<String> discoverySiteId) {
-        this.agentProperties = agentProperties;
-        this.discoverySiteId = discoverySiteId;
-    }
+    private CollectorPropertiesArgs() {}
 
-    private CollectorPropertiesArgs() {
-        this.agentProperties = Codegen.empty();
-        this.discoverySiteId = Codegen.empty();
+    private CollectorPropertiesArgs(CollectorPropertiesArgs $) {
+        this.agentProperties = $.agentProperties;
+        this.discoverySiteId = $.discoverySiteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CollectorPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CollectorAgentPropertiesArgs> agentProperties;
-        private @Nullable Output<String> discoverySiteId;
+        private CollectorPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CollectorPropertiesArgs();
         }
 
         public Builder(CollectorPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentProperties = defaults.agentProperties;
-    	      this.discoverySiteId = defaults.discoverySiteId;
+            $ = new CollectorPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentProperties(@Nullable Output<CollectorAgentPropertiesArgs> agentProperties) {
-            this.agentProperties = agentProperties;
+            $.agentProperties = agentProperties;
             return this;
         }
-        public Builder agentProperties(@Nullable CollectorAgentPropertiesArgs agentProperties) {
-            this.agentProperties = Codegen.ofNullable(agentProperties);
-            return this;
+
+        public Builder agentProperties(CollectorAgentPropertiesArgs agentProperties) {
+            return agentProperties(Output.of(agentProperties));
         }
+
         public Builder discoverySiteId(@Nullable Output<String> discoverySiteId) {
-            this.discoverySiteId = discoverySiteId;
+            $.discoverySiteId = discoverySiteId;
             return this;
         }
-        public Builder discoverySiteId(@Nullable String discoverySiteId) {
-            this.discoverySiteId = Codegen.ofNullable(discoverySiteId);
-            return this;
-        }        public CollectorPropertiesArgs build() {
-            return new CollectorPropertiesArgs(agentProperties, discoverySiteId);
+
+        public Builder discoverySiteId(String discoverySiteId) {
+            return discoverySiteId(Output.of(discoverySiteId));
+        }
+
+        public CollectorPropertiesArgs build() {
+            return $;
         }
     }
+
 }

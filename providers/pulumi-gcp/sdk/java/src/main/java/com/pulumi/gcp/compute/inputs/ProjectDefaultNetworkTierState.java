@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProjectDefaultNetworkTierState extends com.pulumi.resources.R
      * 
      */
     @Import(name="networkTier")
-      private final @Nullable Output<String> networkTier;
+    private @Nullable Output<String> networkTier;
 
-    public Output<String> networkTier() {
-        return this.networkTier == null ? Codegen.empty() : this.networkTier;
+    public Optional<Output<String>> networkTier() {
+        return Optional.ofNullable(this.networkTier);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class ProjectDefaultNetworkTierState extends com.pulumi.resources.R
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ProjectDefaultNetworkTierState(
-        @Nullable Output<String> networkTier,
-        @Nullable Output<String> project) {
-        this.networkTier = networkTier;
-        this.project = project;
-    }
+    private ProjectDefaultNetworkTierState() {}
 
-    private ProjectDefaultNetworkTierState() {
-        this.networkTier = Codegen.empty();
-        this.project = Codegen.empty();
+    private ProjectDefaultNetworkTierState(ProjectDefaultNetworkTierState $) {
+        this.networkTier = $.networkTier;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectDefaultNetworkTierState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> networkTier;
-        private @Nullable Output<String> project;
+        private ProjectDefaultNetworkTierState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectDefaultNetworkTierState();
         }
 
         public Builder(ProjectDefaultNetworkTierState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkTier = defaults.networkTier;
-    	      this.project = defaults.project;
+            $ = new ProjectDefaultNetworkTierState(Objects.requireNonNull(defaults));
         }
 
         public Builder networkTier(@Nullable Output<String> networkTier) {
-            this.networkTier = networkTier;
+            $.networkTier = networkTier;
             return this;
         }
-        public Builder networkTier(@Nullable String networkTier) {
-            this.networkTier = Codegen.ofNullable(networkTier);
-            return this;
+
+        public Builder networkTier(String networkTier) {
+            return networkTier(Output.of(networkTier));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ProjectDefaultNetworkTierState build() {
-            return new ProjectDefaultNetworkTierState(networkTier, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ProjectDefaultNetworkTierState build() {
+            return $;
         }
     }
+
 }

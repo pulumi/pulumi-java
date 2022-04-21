@@ -21,7 +21,7 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cluster", required=true)
-      private final String cluster;
+    private String cluster;
 
     public String cluster() {
         return this.cluster;
@@ -32,7 +32,7 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -43,7 +43,7 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
@@ -54,7 +54,7 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -65,82 +65,73 @@ public final class GKEResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public GKEResponse(
-        String cluster,
-        String location,
-        String namespace,
-        String path,
-        String service) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private GKEResponse() {}
 
-    private GKEResponse() {
-        this.cluster = null;
-        this.location = null;
-        this.namespace = null;
-        this.path = null;
-        this.service = null;
+    private GKEResponse(GKEResponse $) {
+        this.cluster = $.cluster;
+        this.location = $.location;
+        this.namespace = $.namespace;
+        this.path = $.path;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GKEResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cluster;
-        private String location;
-        private String namespace;
-        private String path;
-        private String service;
+        private GKEResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GKEResponse();
         }
 
         public Builder(GKEResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.location = defaults.location;
-    	      this.namespace = defaults.namespace;
-    	      this.path = defaults.path;
-    	      this.service = defaults.service;
+            $ = new GKEResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public GKEResponse build() {
-            return new GKEResponse(cluster, location, namespace, path, service);
+        }
+
+        public GKEResponse build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

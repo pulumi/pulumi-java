@@ -21,7 +21,7 @@ public final class DomainValidationPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="expirationDate", required=true)
-      private final String expirationDate;
+    private String expirationDate;
 
     public String expirationDate() {
         return this.expirationDate;
@@ -32,55 +32,52 @@ public final class DomainValidationPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="validationToken", required=true)
-      private final String validationToken;
+    private String validationToken;
 
     public String validationToken() {
         return this.validationToken;
     }
 
-    public DomainValidationPropertiesResponse(
-        String expirationDate,
-        String validationToken) {
-        this.expirationDate = Objects.requireNonNull(expirationDate, "expected parameter 'expirationDate' to be non-null");
-        this.validationToken = Objects.requireNonNull(validationToken, "expected parameter 'validationToken' to be non-null");
-    }
+    private DomainValidationPropertiesResponse() {}
 
-    private DomainValidationPropertiesResponse() {
-        this.expirationDate = null;
-        this.validationToken = null;
+    private DomainValidationPropertiesResponse(DomainValidationPropertiesResponse $) {
+        this.expirationDate = $.expirationDate;
+        this.validationToken = $.validationToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainValidationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expirationDate;
-        private String validationToken;
+        private DomainValidationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainValidationPropertiesResponse();
         }
 
         public Builder(DomainValidationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.validationToken = defaults.validationToken;
+            $ = new DomainValidationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationDate(String expirationDate) {
-            this.expirationDate = Objects.requireNonNull(expirationDate);
+            $.expirationDate = expirationDate;
             return this;
         }
+
         public Builder validationToken(String validationToken) {
-            this.validationToken = Objects.requireNonNull(validationToken);
+            $.validationToken = validationToken;
             return this;
-        }        public DomainValidationPropertiesResponse build() {
-            return new DomainValidationPropertiesResponse(expirationDate, validationToken);
+        }
+
+        public DomainValidationPropertiesResponse build() {
+            $.expirationDate = Objects.requireNonNull($.expirationDate, "expected parameter 'expirationDate' to be non-null");
+            $.validationToken = Objects.requireNonNull($.validationToken, "expected parameter 'validationToken' to be non-null");
+            return $;
         }
     }
+
 }

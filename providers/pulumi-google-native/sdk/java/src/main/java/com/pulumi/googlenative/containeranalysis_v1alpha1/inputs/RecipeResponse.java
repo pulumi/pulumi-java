@@ -23,7 +23,7 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arguments", required=true)
-      private final List<Map<String,String>> arguments;
+    private List<Map<String,String>> arguments;
 
     public List<Map<String,String>> arguments() {
         return this.arguments;
@@ -34,7 +34,7 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="definedInMaterial", required=true)
-      private final String definedInMaterial;
+    private String definedInMaterial;
 
     public String definedInMaterial() {
         return this.definedInMaterial;
@@ -45,7 +45,7 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="entryPoint", required=true)
-      private final String entryPoint;
+    private String entryPoint;
 
     public String entryPoint() {
         return this.entryPoint;
@@ -56,7 +56,7 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environment", required=true)
-      private final List<Map<String,String>> environment;
+    private List<Map<String,String>> environment;
 
     public List<Map<String,String>> environment() {
         return this.environment;
@@ -67,82 +67,81 @@ public final class RecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RecipeResponse(
-        List<Map<String,String>> arguments,
-        String definedInMaterial,
-        String entryPoint,
-        List<Map<String,String>> environment,
-        String type) {
-        this.arguments = Objects.requireNonNull(arguments, "expected parameter 'arguments' to be non-null");
-        this.definedInMaterial = Objects.requireNonNull(definedInMaterial, "expected parameter 'definedInMaterial' to be non-null");
-        this.entryPoint = Objects.requireNonNull(entryPoint, "expected parameter 'entryPoint' to be non-null");
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RecipeResponse() {}
 
-    private RecipeResponse() {
-        this.arguments = List.of();
-        this.definedInMaterial = null;
-        this.entryPoint = null;
-        this.environment = List.of();
-        this.type = null;
+    private RecipeResponse(RecipeResponse $) {
+        this.arguments = $.arguments;
+        this.definedInMaterial = $.definedInMaterial;
+        this.entryPoint = $.entryPoint;
+        this.environment = $.environment;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Map<String,String>> arguments;
-        private String definedInMaterial;
-        private String entryPoint;
-        private List<Map<String,String>> environment;
-        private String type;
+        private RecipeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeResponse();
         }
 
         public Builder(RecipeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.definedInMaterial = defaults.definedInMaterial;
-    	      this.entryPoint = defaults.entryPoint;
-    	      this.environment = defaults.environment;
-    	      this.type = defaults.type;
+            $ = new RecipeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(List<Map<String,String>> arguments) {
-            this.arguments = Objects.requireNonNull(arguments);
+            $.arguments = arguments;
             return this;
         }
+
+        public Builder arguments(Map<String,String>... arguments) {
+            return arguments(List.of(arguments));
+        }
+
         public Builder definedInMaterial(String definedInMaterial) {
-            this.definedInMaterial = Objects.requireNonNull(definedInMaterial);
+            $.definedInMaterial = definedInMaterial;
             return this;
         }
+
         public Builder entryPoint(String entryPoint) {
-            this.entryPoint = Objects.requireNonNull(entryPoint);
+            $.entryPoint = entryPoint;
             return this;
         }
+
         public Builder environment(List<Map<String,String>> environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
+        public Builder environment(Map<String,String>... environment) {
+            return environment(List.of(environment));
+        }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RecipeResponse build() {
-            return new RecipeResponse(arguments, definedInMaterial, entryPoint, environment, type);
+        }
+
+        public RecipeResponse build() {
+            $.arguments = Objects.requireNonNull($.arguments, "expected parameter 'arguments' to be non-null");
+            $.definedInMaterial = Objects.requireNonNull($.definedInMaterial, "expected parameter 'definedInMaterial' to be non-null");
+            $.entryPoint = Objects.requireNonNull($.entryPoint, "expected parameter 'entryPoint' to be non-null");
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

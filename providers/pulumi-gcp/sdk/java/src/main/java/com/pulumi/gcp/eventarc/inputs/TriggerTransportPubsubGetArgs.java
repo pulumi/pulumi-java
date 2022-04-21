@@ -5,9 +5,9 @@ package com.pulumi.gcp.eventarc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TriggerTransportPubsubGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="subscription")
-      private final @Nullable Output<String> subscription;
+    private @Nullable Output<String> subscription;
 
-    public Output<String> subscription() {
-        return this.subscription == null ? Codegen.empty() : this.subscription;
+    public Optional<Output<String>> subscription() {
+        return Optional.ofNullable(this.subscription);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class TriggerTransportPubsubGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public TriggerTransportPubsubGetArgs(
-        @Nullable Output<String> subscription,
-        @Nullable Output<String> topic) {
-        this.subscription = subscription;
-        this.topic = topic;
-    }
+    private TriggerTransportPubsubGetArgs() {}
 
-    private TriggerTransportPubsubGetArgs() {
-        this.subscription = Codegen.empty();
-        this.topic = Codegen.empty();
+    private TriggerTransportPubsubGetArgs(TriggerTransportPubsubGetArgs $) {
+        this.subscription = $.subscription;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerTransportPubsubGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> subscription;
-        private @Nullable Output<String> topic;
+        private TriggerTransportPubsubGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerTransportPubsubGetArgs();
         }
 
         public Builder(TriggerTransportPubsubGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subscription = defaults.subscription;
-    	      this.topic = defaults.topic;
+            $ = new TriggerTransportPubsubGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subscription(@Nullable Output<String> subscription) {
-            this.subscription = subscription;
+            $.subscription = subscription;
             return this;
         }
-        public Builder subscription(@Nullable String subscription) {
-            this.subscription = Codegen.ofNullable(subscription);
-            return this;
+
+        public Builder subscription(String subscription) {
+            return subscription(Output.of(subscription));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public TriggerTransportPubsubGetArgs build() {
-            return new TriggerTransportPubsubGetArgs(subscription, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public TriggerTransportPubsubGetArgs build() {
+            return $;
         }
     }
+
 }

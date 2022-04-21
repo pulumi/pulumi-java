@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends com.p
      * 
      */
     @Import(name="actions", required=true)
-      private final List<GooglePrivacyDlpV2ActionResponse> actions;
+    private List<GooglePrivacyDlpV2ActionResponse> actions;
 
     public List<GooglePrivacyDlpV2ActionResponse> actions() {
         return this.actions;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends com.p
      * 
      */
     @Import(name="privacyMetric", required=true)
-      private final GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric;
+    private GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric;
 
     public GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric() {
         return this.privacyMetric;
@@ -46,67 +46,63 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse extends com.p
      * 
      */
     @Import(name="sourceTable", required=true)
-      private final GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
+    private GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
 
     public GooglePrivacyDlpV2BigQueryTableResponse sourceTable() {
         return this.sourceTable;
     }
 
-    public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(
-        List<GooglePrivacyDlpV2ActionResponse> actions,
-        GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric,
-        GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.privacyMetric = Objects.requireNonNull(privacyMetric, "expected parameter 'privacyMetric' to be non-null");
-        this.sourceTable = Objects.requireNonNull(sourceTable, "expected parameter 'sourceTable' to be non-null");
-    }
+    private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse() {}
 
-    private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse() {
-        this.actions = List.of();
-        this.privacyMetric = null;
-        this.sourceTable = null;
+    private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse $) {
+        this.actions = $.actions;
+        this.privacyMetric = $.privacyMetric;
+        this.sourceTable = $.sourceTable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2ActionResponse> actions;
-        private GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric;
-        private GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
+        private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RiskAnalysisJobConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.privacyMetric = defaults.privacyMetric;
-    	      this.sourceTable = defaults.sourceTable;
+            $ = new GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(List<GooglePrivacyDlpV2ActionResponse> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(GooglePrivacyDlpV2ActionResponse... actions) {
             return actions(List.of(actions));
         }
+
         public Builder privacyMetric(GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric) {
-            this.privacyMetric = Objects.requireNonNull(privacyMetric);
+            $.privacyMetric = privacyMetric;
             return this;
         }
+
         public Builder sourceTable(GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
-            this.sourceTable = Objects.requireNonNull(sourceTable);
+            $.sourceTable = sourceTable;
             return this;
-        }        public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse build() {
-            return new GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(actions, privacyMetric, sourceTable);
+        }
+
+        public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.privacyMetric = Objects.requireNonNull($.privacyMetric, "expected parameter 'privacyMetric' to be non-null");
+            $.sourceTable = Objects.requireNonNull($.sourceTable, "expected parameter 'sourceTable' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetIotDpsResourceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="provisioningServiceName", required=true)
-      private final String provisioningServiceName;
+    private String provisioningServiceName;
 
     public String provisioningServiceName() {
         return this.provisioningServiceName;
@@ -28,55 +28,52 @@ public final class GetIotDpsResourceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetIotDpsResourceArgs(
-        String provisioningServiceName,
-        String resourceGroupName) {
-        this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName, "expected parameter 'provisioningServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetIotDpsResourceArgs() {}
 
-    private GetIotDpsResourceArgs() {
-        this.provisioningServiceName = null;
-        this.resourceGroupName = null;
+    private GetIotDpsResourceArgs(GetIotDpsResourceArgs $) {
+        this.provisioningServiceName = $.provisioningServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIotDpsResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String provisioningServiceName;
-        private String resourceGroupName;
+        private GetIotDpsResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIotDpsResourceArgs();
         }
 
         public Builder(GetIotDpsResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningServiceName = defaults.provisioningServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetIotDpsResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningServiceName(String provisioningServiceName) {
-            this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
+            $.provisioningServiceName = provisioningServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetIotDpsResourceArgs build() {
-            return new GetIotDpsResourceArgs(provisioningServiceName, resourceGroupName);
+        }
+
+        public GetIotDpsResourceArgs build() {
+            $.provisioningServiceName = Objects.requireNonNull($.provisioningServiceName, "expected parameter 'provisioningServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

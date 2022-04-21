@@ -32,10 +32,10 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Object authenticationType;
+    private @Nullable Object authenticationType;
 
     public Optional<Object> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="host", required=true)
-      private final Object host;
+    private Object host;
 
     public Object host() {
         return this.host;
@@ -98,10 +98,10 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="port")
-      private final @Nullable Object port;
+    private @Nullable Object port;
 
     public Optional<Object> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -132,7 +132,7 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -143,139 +143,110 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="username")
-      private final @Nullable Object username;
+    private @Nullable Object username;
 
     public Optional<Object> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public CassandraLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        String type,
-        @Nullable Object username) {
-        this.annotations = annotations;
-        this.authenticationType = authenticationType;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.parameters = parameters;
-        this.password = password;
-        this.port = port;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.username = username;
-    }
+    private CassandraLinkedServiceResponse() {}
 
-    private CassandraLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.authenticationType = null;
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.host = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.port = null;
-        this.type = null;
-        this.username = null;
+    private CassandraLinkedServiceResponse(CassandraLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.host = $.host;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.port = $.port;
+        this.type = $.type;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable Object authenticationType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private Object host;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Object port;
-        private String type;
-        private @Nullable Object username;
+        private CassandraLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraLinkedServiceResponse();
         }
 
         public Builder(CassandraLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.host = defaults.host;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.type = defaults.type;
-    	      this.username = defaults.username;
+            $ = new CassandraLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(@Nullable Object authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder host(Object host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder port(@Nullable Object port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder username(@Nullable Object username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public CassandraLinkedServiceResponse build() {
-            return new CassandraLinkedServiceResponse(annotations, authenticationType, connectVia, description, encryptedCredential, host, parameters, password, port, type, username);
+        }
+
+        public CassandraLinkedServiceResponse build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

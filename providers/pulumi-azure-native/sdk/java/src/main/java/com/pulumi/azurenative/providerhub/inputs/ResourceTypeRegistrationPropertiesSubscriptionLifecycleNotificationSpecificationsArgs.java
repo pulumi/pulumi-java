@@ -6,10 +6,10 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.SubscriptionStateOverrideActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotifi
     public static final ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs Empty = new ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs();
 
     @Import(name="softDeleteTTL")
-      private final @Nullable Output<String> softDeleteTTL;
+    private @Nullable Output<String> softDeleteTTL;
 
-    public Output<String> softDeleteTTL() {
-        return this.softDeleteTTL == null ? Codegen.empty() : this.softDeleteTTL;
+    public Optional<Output<String>> softDeleteTTL() {
+        return Optional.ofNullable(this.softDeleteTTL);
     }
 
     @Import(name="subscriptionStateOverrideActions")
-      private final @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
+    private @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
 
-    public Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions() {
-        return this.subscriptionStateOverrideActions == null ? Codegen.empty() : this.subscriptionStateOverrideActions;
+    public Optional<Output<List<SubscriptionStateOverrideActionArgs>>> subscriptionStateOverrideActions() {
+        return Optional.ofNullable(this.subscriptionStateOverrideActions);
     }
 
-    public ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs(
-        @Nullable Output<String> softDeleteTTL,
-        @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
-        this.softDeleteTTL = softDeleteTTL;
-        this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
-    }
+    private ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs() {}
 
-    private ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs() {
-        this.softDeleteTTL = Codegen.empty();
-        this.subscriptionStateOverrideActions = Codegen.empty();
+    private ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs(ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs $) {
+        this.softDeleteTTL = $.softDeleteTTL;
+        this.subscriptionStateOverrideActions = $.subscriptionStateOverrideActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> softDeleteTTL;
-        private @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
+        private ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs();
         }
 
         public Builder(ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.softDeleteTTL = defaults.softDeleteTTL;
-    	      this.subscriptionStateOverrideActions = defaults.subscriptionStateOverrideActions;
+            $ = new ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder softDeleteTTL(@Nullable Output<String> softDeleteTTL) {
-            this.softDeleteTTL = softDeleteTTL;
+            $.softDeleteTTL = softDeleteTTL;
             return this;
         }
-        public Builder softDeleteTTL(@Nullable String softDeleteTTL) {
-            this.softDeleteTTL = Codegen.ofNullable(softDeleteTTL);
-            return this;
+
+        public Builder softDeleteTTL(String softDeleteTTL) {
+            return softDeleteTTL(Output.of(softDeleteTTL));
         }
+
         public Builder subscriptionStateOverrideActions(@Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
-            this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
+            $.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }
-        public Builder subscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionArgs> subscriptionStateOverrideActions) {
-            this.subscriptionStateOverrideActions = Codegen.ofNullable(subscriptionStateOverrideActions);
-            return this;
+
+        public Builder subscriptionStateOverrideActions(List<SubscriptionStateOverrideActionArgs> subscriptionStateOverrideActions) {
+            return subscriptionStateOverrideActions(Output.of(subscriptionStateOverrideActions));
         }
+
         public Builder subscriptionStateOverrideActions(SubscriptionStateOverrideActionArgs... subscriptionStateOverrideActions) {
             return subscriptionStateOverrideActions(List.of(subscriptionStateOverrideActions));
-        }        public ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs build() {
-            return new ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs(softDeleteTTL, subscriptionStateOverrideActions);
+        }
+
+        public ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs build() {
+            return $;
         }
     }
+
 }

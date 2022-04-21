@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Integer> status;
+    private @Nullable Output<Integer> status;
 
-    public Output<Integer> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Integer>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="subStatus")
-      private final @Nullable Output<Integer> subStatus;
+    private @Nullable Output<Integer> subStatus;
 
-    public Output<Integer> subStatus() {
-        return this.subStatus == null ? Codegen.empty() : this.subStatus;
+    public Optional<Output<Integer>> subStatus() {
+        return Optional.ofNullable(this.subStatus);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="timeInterval")
-      private final @Nullable Output<String> timeInterval;
+    private @Nullable Output<String> timeInterval;
 
-    public Output<String> timeInterval() {
-        return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
+    public Optional<Output<String>> timeInterval() {
+        return Optional.ofNullable(this.timeInterval);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class StatusCodesBasedTriggerArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="win32Status")
-      private final @Nullable Output<Integer> win32Status;
+    private @Nullable Output<Integer> win32Status;
 
-    public Output<Integer> win32Status() {
-        return this.win32Status == null ? Codegen.empty() : this.win32Status;
+    public Optional<Output<Integer>> win32Status() {
+        return Optional.ofNullable(this.win32Status);
     }
 
-    public StatusCodesBasedTriggerArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<String> path,
-        @Nullable Output<Integer> status,
-        @Nullable Output<Integer> subStatus,
-        @Nullable Output<String> timeInterval,
-        @Nullable Output<Integer> win32Status) {
-        this.count = count;
-        this.path = path;
-        this.status = status;
-        this.subStatus = subStatus;
-        this.timeInterval = timeInterval;
-        this.win32Status = win32Status;
-    }
+    private StatusCodesBasedTriggerArgs() {}
 
-    private StatusCodesBasedTriggerArgs() {
-        this.count = Codegen.empty();
-        this.path = Codegen.empty();
-        this.status = Codegen.empty();
-        this.subStatus = Codegen.empty();
-        this.timeInterval = Codegen.empty();
-        this.win32Status = Codegen.empty();
+    private StatusCodesBasedTriggerArgs(StatusCodesBasedTriggerArgs $) {
+        this.count = $.count;
+        this.path = $.path;
+        this.status = $.status;
+        this.subStatus = $.subStatus;
+        this.timeInterval = $.timeInterval;
+        this.win32Status = $.win32Status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusCodesBasedTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<String> path;
-        private @Nullable Output<Integer> status;
-        private @Nullable Output<Integer> subStatus;
-        private @Nullable Output<String> timeInterval;
-        private @Nullable Output<Integer> win32Status;
+        private StatusCodesBasedTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusCodesBasedTriggerArgs();
         }
 
         public Builder(StatusCodesBasedTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.path = defaults.path;
-    	      this.status = defaults.status;
-    	      this.subStatus = defaults.subStatus;
-    	      this.timeInterval = defaults.timeInterval;
-    	      this.win32Status = defaults.win32Status;
+            $ = new StatusCodesBasedTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder status(@Nullable Output<Integer> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Integer status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Integer status) {
+            return status(Output.of(status));
         }
+
         public Builder subStatus(@Nullable Output<Integer> subStatus) {
-            this.subStatus = subStatus;
+            $.subStatus = subStatus;
             return this;
         }
-        public Builder subStatus(@Nullable Integer subStatus) {
-            this.subStatus = Codegen.ofNullable(subStatus);
-            return this;
+
+        public Builder subStatus(Integer subStatus) {
+            return subStatus(Output.of(subStatus));
         }
+
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
-            this.timeInterval = timeInterval;
+            $.timeInterval = timeInterval;
             return this;
         }
-        public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Codegen.ofNullable(timeInterval);
-            return this;
+
+        public Builder timeInterval(String timeInterval) {
+            return timeInterval(Output.of(timeInterval));
         }
+
         public Builder win32Status(@Nullable Output<Integer> win32Status) {
-            this.win32Status = win32Status;
+            $.win32Status = win32Status;
             return this;
         }
-        public Builder win32Status(@Nullable Integer win32Status) {
-            this.win32Status = Codegen.ofNullable(win32Status);
-            return this;
-        }        public StatusCodesBasedTriggerArgs build() {
-            return new StatusCodesBasedTriggerArgs(count, path, status, subStatus, timeInterval, win32Status);
+
+        public Builder win32Status(Integer win32Status) {
+            return win32Status(Output.of(win32Status));
+        }
+
+        public StatusCodesBasedTriggerArgs build() {
+            return $;
         }
     }
+
 }

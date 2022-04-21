@@ -7,12 +7,12 @@ import com.pulumi.azurenative.customerinsights.inputs.PredictionGradesArgs;
 import com.pulumi.azurenative.customerinsights.inputs.PredictionMappingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoAnalyze", required=true)
-      private final Output<Boolean> autoAnalyze;
+    private Output<Boolean> autoAnalyze;
 
     public Output<Boolean> autoAnalyze() {
         return this.autoAnalyze;
@@ -36,10 +36,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<Map<String,String>> description;
+    private @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<Map<String,String>>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<Map<String,String>> displayName;
+    private @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<Map<String,String>>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grades")
-      private final @Nullable Output<List<PredictionGradesArgs>> grades;
+    private @Nullable Output<List<PredictionGradesArgs>> grades;
 
-    public Output<List<PredictionGradesArgs>> grades() {
-        return this.grades == null ? Codegen.empty() : this.grades;
+    public Optional<Output<List<PredictionGradesArgs>>> grades() {
+        return Optional.ofNullable(this.grades);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final Output<String> hubName;
+    private Output<String> hubName;
 
     public Output<String> hubName() {
         return this.hubName;
@@ -80,10 +80,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="involvedInteractionTypes")
-      private final @Nullable Output<List<String>> involvedInteractionTypes;
+    private @Nullable Output<List<String>> involvedInteractionTypes;
 
-    public Output<List<String>> involvedInteractionTypes() {
-        return this.involvedInteractionTypes == null ? Codegen.empty() : this.involvedInteractionTypes;
+    public Optional<Output<List<String>>> involvedInteractionTypes() {
+        return Optional.ofNullable(this.involvedInteractionTypes);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="involvedKpiTypes")
-      private final @Nullable Output<List<String>> involvedKpiTypes;
+    private @Nullable Output<List<String>> involvedKpiTypes;
 
-    public Output<List<String>> involvedKpiTypes() {
-        return this.involvedKpiTypes == null ? Codegen.empty() : this.involvedKpiTypes;
+    public Optional<Output<List<String>>> involvedKpiTypes() {
+        return Optional.ofNullable(this.involvedKpiTypes);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="involvedRelationships")
-      private final @Nullable Output<List<String>> involvedRelationships;
+    private @Nullable Output<List<String>> involvedRelationships;
 
-    public Output<List<String>> involvedRelationships() {
-        return this.involvedRelationships == null ? Codegen.empty() : this.involvedRelationships;
+    public Optional<Output<List<String>>> involvedRelationships() {
+        return Optional.ofNullable(this.involvedRelationships);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mappings", required=true)
-      private final Output<PredictionMappingsArgs> mappings;
+    private Output<PredictionMappingsArgs> mappings;
 
     public Output<PredictionMappingsArgs> mappings() {
         return this.mappings;
@@ -124,7 +124,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="negativeOutcomeExpression", required=true)
-      private final Output<String> negativeOutcomeExpression;
+    private Output<String> negativeOutcomeExpression;
 
     public Output<String> negativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
@@ -135,7 +135,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="positiveOutcomeExpression", required=true)
-      private final Output<String> positiveOutcomeExpression;
+    private Output<String> positiveOutcomeExpression;
 
     public Output<String> positiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
@@ -146,10 +146,10 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predictionName")
-      private final @Nullable Output<String> predictionName;
+    private @Nullable Output<String> predictionName;
 
-    public Output<String> predictionName() {
-        return this.predictionName == null ? Codegen.empty() : this.predictionName;
+    public Optional<Output<String>> predictionName() {
+        return Optional.ofNullable(this.predictionName);
     }
 
     /**
@@ -157,7 +157,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryProfileType", required=true)
-      private final Output<String> primaryProfileType;
+    private Output<String> primaryProfileType;
 
     public Output<String> primaryProfileType() {
         return this.primaryProfileType;
@@ -168,7 +168,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -179,7 +179,7 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scopeExpression", required=true)
-      private final Output<String> scopeExpression;
+    private Output<String> scopeExpression;
 
     public Output<String> scopeExpression() {
         return this.scopeExpression;
@@ -190,257 +190,223 @@ public final class PredictionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scoreLabel", required=true)
-      private final Output<String> scoreLabel;
+    private Output<String> scoreLabel;
 
     public Output<String> scoreLabel() {
         return this.scoreLabel;
     }
 
-    public PredictionArgs(
-        Output<Boolean> autoAnalyze,
-        @Nullable Output<Map<String,String>> description,
-        @Nullable Output<Map<String,String>> displayName,
-        @Nullable Output<List<PredictionGradesArgs>> grades,
-        Output<String> hubName,
-        @Nullable Output<List<String>> involvedInteractionTypes,
-        @Nullable Output<List<String>> involvedKpiTypes,
-        @Nullable Output<List<String>> involvedRelationships,
-        Output<PredictionMappingsArgs> mappings,
-        Output<String> negativeOutcomeExpression,
-        Output<String> positiveOutcomeExpression,
-        @Nullable Output<String> predictionName,
-        Output<String> primaryProfileType,
-        Output<String> resourceGroupName,
-        Output<String> scopeExpression,
-        Output<String> scoreLabel) {
-        this.autoAnalyze = Objects.requireNonNull(autoAnalyze, "expected parameter 'autoAnalyze' to be non-null");
-        this.description = description;
-        this.displayName = displayName;
-        this.grades = grades;
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.involvedInteractionTypes = involvedInteractionTypes;
-        this.involvedKpiTypes = involvedKpiTypes;
-        this.involvedRelationships = involvedRelationships;
-        this.mappings = Objects.requireNonNull(mappings, "expected parameter 'mappings' to be non-null");
-        this.negativeOutcomeExpression = Objects.requireNonNull(negativeOutcomeExpression, "expected parameter 'negativeOutcomeExpression' to be non-null");
-        this.positiveOutcomeExpression = Objects.requireNonNull(positiveOutcomeExpression, "expected parameter 'positiveOutcomeExpression' to be non-null");
-        this.predictionName = predictionName;
-        this.primaryProfileType = Objects.requireNonNull(primaryProfileType, "expected parameter 'primaryProfileType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scopeExpression = Objects.requireNonNull(scopeExpression, "expected parameter 'scopeExpression' to be non-null");
-        this.scoreLabel = Objects.requireNonNull(scoreLabel, "expected parameter 'scoreLabel' to be non-null");
-    }
+    private PredictionArgs() {}
 
-    private PredictionArgs() {
-        this.autoAnalyze = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.grades = Codegen.empty();
-        this.hubName = Codegen.empty();
-        this.involvedInteractionTypes = Codegen.empty();
-        this.involvedKpiTypes = Codegen.empty();
-        this.involvedRelationships = Codegen.empty();
-        this.mappings = Codegen.empty();
-        this.negativeOutcomeExpression = Codegen.empty();
-        this.positiveOutcomeExpression = Codegen.empty();
-        this.predictionName = Codegen.empty();
-        this.primaryProfileType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scopeExpression = Codegen.empty();
-        this.scoreLabel = Codegen.empty();
+    private PredictionArgs(PredictionArgs $) {
+        this.autoAnalyze = $.autoAnalyze;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.grades = $.grades;
+        this.hubName = $.hubName;
+        this.involvedInteractionTypes = $.involvedInteractionTypes;
+        this.involvedKpiTypes = $.involvedKpiTypes;
+        this.involvedRelationships = $.involvedRelationships;
+        this.mappings = $.mappings;
+        this.negativeOutcomeExpression = $.negativeOutcomeExpression;
+        this.positiveOutcomeExpression = $.positiveOutcomeExpression;
+        this.predictionName = $.predictionName;
+        this.primaryProfileType = $.primaryProfileType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scopeExpression = $.scopeExpression;
+        this.scoreLabel = $.scoreLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PredictionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> autoAnalyze;
-        private @Nullable Output<Map<String,String>> description;
-        private @Nullable Output<Map<String,String>> displayName;
-        private @Nullable Output<List<PredictionGradesArgs>> grades;
-        private Output<String> hubName;
-        private @Nullable Output<List<String>> involvedInteractionTypes;
-        private @Nullable Output<List<String>> involvedKpiTypes;
-        private @Nullable Output<List<String>> involvedRelationships;
-        private Output<PredictionMappingsArgs> mappings;
-        private Output<String> negativeOutcomeExpression;
-        private Output<String> positiveOutcomeExpression;
-        private @Nullable Output<String> predictionName;
-        private Output<String> primaryProfileType;
-        private Output<String> resourceGroupName;
-        private Output<String> scopeExpression;
-        private Output<String> scoreLabel;
+        private PredictionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PredictionArgs();
         }
 
         public Builder(PredictionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoAnalyze = defaults.autoAnalyze;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.grades = defaults.grades;
-    	      this.hubName = defaults.hubName;
-    	      this.involvedInteractionTypes = defaults.involvedInteractionTypes;
-    	      this.involvedKpiTypes = defaults.involvedKpiTypes;
-    	      this.involvedRelationships = defaults.involvedRelationships;
-    	      this.mappings = defaults.mappings;
-    	      this.negativeOutcomeExpression = defaults.negativeOutcomeExpression;
-    	      this.positiveOutcomeExpression = defaults.positiveOutcomeExpression;
-    	      this.predictionName = defaults.predictionName;
-    	      this.primaryProfileType = defaults.primaryProfileType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scopeExpression = defaults.scopeExpression;
-    	      this.scoreLabel = defaults.scoreLabel;
+            $ = new PredictionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoAnalyze(Output<Boolean> autoAnalyze) {
-            this.autoAnalyze = Objects.requireNonNull(autoAnalyze);
+            $.autoAnalyze = autoAnalyze;
             return this;
         }
+
         public Builder autoAnalyze(Boolean autoAnalyze) {
-            this.autoAnalyze = Output.of(Objects.requireNonNull(autoAnalyze));
-            return this;
+            return autoAnalyze(Output.of(autoAnalyze));
         }
+
         public Builder description(@Nullable Output<Map<String,String>> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable Map<String,String> description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(Map<String,String> description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(Map<String,String> displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder grades(@Nullable Output<List<PredictionGradesArgs>> grades) {
-            this.grades = grades;
+            $.grades = grades;
             return this;
         }
-        public Builder grades(@Nullable List<PredictionGradesArgs> grades) {
-            this.grades = Codegen.ofNullable(grades);
-            return this;
+
+        public Builder grades(List<PredictionGradesArgs> grades) {
+            return grades(Output.of(grades));
         }
+
         public Builder grades(PredictionGradesArgs... grades) {
             return grades(List.of(grades));
         }
+
         public Builder hubName(Output<String> hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Output.of(Objects.requireNonNull(hubName));
-            return this;
+            return hubName(Output.of(hubName));
         }
+
         public Builder involvedInteractionTypes(@Nullable Output<List<String>> involvedInteractionTypes) {
-            this.involvedInteractionTypes = involvedInteractionTypes;
+            $.involvedInteractionTypes = involvedInteractionTypes;
             return this;
         }
-        public Builder involvedInteractionTypes(@Nullable List<String> involvedInteractionTypes) {
-            this.involvedInteractionTypes = Codegen.ofNullable(involvedInteractionTypes);
-            return this;
+
+        public Builder involvedInteractionTypes(List<String> involvedInteractionTypes) {
+            return involvedInteractionTypes(Output.of(involvedInteractionTypes));
         }
+
         public Builder involvedInteractionTypes(String... involvedInteractionTypes) {
             return involvedInteractionTypes(List.of(involvedInteractionTypes));
         }
+
         public Builder involvedKpiTypes(@Nullable Output<List<String>> involvedKpiTypes) {
-            this.involvedKpiTypes = involvedKpiTypes;
+            $.involvedKpiTypes = involvedKpiTypes;
             return this;
         }
-        public Builder involvedKpiTypes(@Nullable List<String> involvedKpiTypes) {
-            this.involvedKpiTypes = Codegen.ofNullable(involvedKpiTypes);
-            return this;
+
+        public Builder involvedKpiTypes(List<String> involvedKpiTypes) {
+            return involvedKpiTypes(Output.of(involvedKpiTypes));
         }
+
         public Builder involvedKpiTypes(String... involvedKpiTypes) {
             return involvedKpiTypes(List.of(involvedKpiTypes));
         }
+
         public Builder involvedRelationships(@Nullable Output<List<String>> involvedRelationships) {
-            this.involvedRelationships = involvedRelationships;
+            $.involvedRelationships = involvedRelationships;
             return this;
         }
-        public Builder involvedRelationships(@Nullable List<String> involvedRelationships) {
-            this.involvedRelationships = Codegen.ofNullable(involvedRelationships);
-            return this;
+
+        public Builder involvedRelationships(List<String> involvedRelationships) {
+            return involvedRelationships(Output.of(involvedRelationships));
         }
+
         public Builder involvedRelationships(String... involvedRelationships) {
             return involvedRelationships(List.of(involvedRelationships));
         }
+
         public Builder mappings(Output<PredictionMappingsArgs> mappings) {
-            this.mappings = Objects.requireNonNull(mappings);
+            $.mappings = mappings;
             return this;
         }
+
         public Builder mappings(PredictionMappingsArgs mappings) {
-            this.mappings = Output.of(Objects.requireNonNull(mappings));
-            return this;
+            return mappings(Output.of(mappings));
         }
+
         public Builder negativeOutcomeExpression(Output<String> negativeOutcomeExpression) {
-            this.negativeOutcomeExpression = Objects.requireNonNull(negativeOutcomeExpression);
+            $.negativeOutcomeExpression = negativeOutcomeExpression;
             return this;
         }
+
         public Builder negativeOutcomeExpression(String negativeOutcomeExpression) {
-            this.negativeOutcomeExpression = Output.of(Objects.requireNonNull(negativeOutcomeExpression));
-            return this;
+            return negativeOutcomeExpression(Output.of(negativeOutcomeExpression));
         }
+
         public Builder positiveOutcomeExpression(Output<String> positiveOutcomeExpression) {
-            this.positiveOutcomeExpression = Objects.requireNonNull(positiveOutcomeExpression);
+            $.positiveOutcomeExpression = positiveOutcomeExpression;
             return this;
         }
+
         public Builder positiveOutcomeExpression(String positiveOutcomeExpression) {
-            this.positiveOutcomeExpression = Output.of(Objects.requireNonNull(positiveOutcomeExpression));
-            return this;
+            return positiveOutcomeExpression(Output.of(positiveOutcomeExpression));
         }
+
         public Builder predictionName(@Nullable Output<String> predictionName) {
-            this.predictionName = predictionName;
+            $.predictionName = predictionName;
             return this;
         }
-        public Builder predictionName(@Nullable String predictionName) {
-            this.predictionName = Codegen.ofNullable(predictionName);
-            return this;
+
+        public Builder predictionName(String predictionName) {
+            return predictionName(Output.of(predictionName));
         }
+
         public Builder primaryProfileType(Output<String> primaryProfileType) {
-            this.primaryProfileType = Objects.requireNonNull(primaryProfileType);
+            $.primaryProfileType = primaryProfileType;
             return this;
         }
+
         public Builder primaryProfileType(String primaryProfileType) {
-            this.primaryProfileType = Output.of(Objects.requireNonNull(primaryProfileType));
-            return this;
+            return primaryProfileType(Output.of(primaryProfileType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scopeExpression(Output<String> scopeExpression) {
-            this.scopeExpression = Objects.requireNonNull(scopeExpression);
+            $.scopeExpression = scopeExpression;
             return this;
         }
+
         public Builder scopeExpression(String scopeExpression) {
-            this.scopeExpression = Output.of(Objects.requireNonNull(scopeExpression));
-            return this;
+            return scopeExpression(Output.of(scopeExpression));
         }
+
         public Builder scoreLabel(Output<String> scoreLabel) {
-            this.scoreLabel = Objects.requireNonNull(scoreLabel);
+            $.scoreLabel = scoreLabel;
             return this;
         }
+
         public Builder scoreLabel(String scoreLabel) {
-            this.scoreLabel = Output.of(Objects.requireNonNull(scoreLabel));
-            return this;
-        }        public PredictionArgs build() {
-            return new PredictionArgs(autoAnalyze, description, displayName, grades, hubName, involvedInteractionTypes, involvedKpiTypes, involvedRelationships, mappings, negativeOutcomeExpression, positiveOutcomeExpression, predictionName, primaryProfileType, resourceGroupName, scopeExpression, scoreLabel);
+            return scoreLabel(Output.of(scoreLabel));
+        }
+
+        public PredictionArgs build() {
+            $.autoAnalyze = Objects.requireNonNull($.autoAnalyze, "expected parameter 'autoAnalyze' to be non-null");
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.mappings = Objects.requireNonNull($.mappings, "expected parameter 'mappings' to be non-null");
+            $.negativeOutcomeExpression = Objects.requireNonNull($.negativeOutcomeExpression, "expected parameter 'negativeOutcomeExpression' to be non-null");
+            $.positiveOutcomeExpression = Objects.requireNonNull($.positiveOutcomeExpression, "expected parameter 'positiveOutcomeExpression' to be non-null");
+            $.primaryProfileType = Objects.requireNonNull($.primaryProfileType, "expected parameter 'primaryProfileType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.scopeExpression = Objects.requireNonNull($.scopeExpression, "expected parameter 'scopeExpression' to be non-null");
+            $.scoreLabel = Objects.requireNonNull($.scoreLabel, "expected parameter 'scoreLabel' to be non-null");
+            return $;
         }
     }
+
 }

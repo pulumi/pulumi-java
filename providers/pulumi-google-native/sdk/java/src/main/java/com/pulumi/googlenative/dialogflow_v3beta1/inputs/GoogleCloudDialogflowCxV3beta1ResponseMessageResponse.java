@@ -30,7 +30,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
      * 
      */
     @Import(name="conversationSuccess", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess;
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess() {
         return this.conversationSuccess;
@@ -41,7 +41,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
      * 
      */
     @Import(name="endInteraction", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction;
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction() {
         return this.endInteraction;
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
      * 
      */
     @Import(name="liveAgentHandoff", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff;
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff() {
         return this.liveAgentHandoff;
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
      * 
      */
     @Import(name="mixedAudio", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio;
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio() {
         return this.mixedAudio;
@@ -74,7 +74,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
      * 
      */
     @Import(name="outputAudioText", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText;
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText() {
         return this.outputAudioText;
@@ -85,7 +85,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
      * 
      */
     @Import(name="payload", required=true)
-      private final Map<String,String> payload;
+    private Map<String,String> payload;
 
     public Map<String,String> payload() {
         return this.payload;
@@ -96,7 +96,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
      * 
      */
     @Import(name="playAudio", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio;
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio() {
         return this.playAudio;
@@ -107,7 +107,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
      * 
      */
     @Import(name="telephonyTransferCall", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall;
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall() {
         return this.telephonyTransferCall;
@@ -118,118 +118,101 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageResponse extends
      * 
      */
     @Import(name="text", required=true)
-      private final GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text;
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse(
-        GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess,
-        GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction,
-        GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff,
-        GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio,
-        GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText,
-        Map<String,String> payload,
-        GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio,
-        GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall,
-        GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text) {
-        this.conversationSuccess = Objects.requireNonNull(conversationSuccess, "expected parameter 'conversationSuccess' to be non-null");
-        this.endInteraction = Objects.requireNonNull(endInteraction, "expected parameter 'endInteraction' to be non-null");
-        this.liveAgentHandoff = Objects.requireNonNull(liveAgentHandoff, "expected parameter 'liveAgentHandoff' to be non-null");
-        this.mixedAudio = Objects.requireNonNull(mixedAudio, "expected parameter 'mixedAudio' to be non-null");
-        this.outputAudioText = Objects.requireNonNull(outputAudioText, "expected parameter 'outputAudioText' to be non-null");
-        this.payload = Objects.requireNonNull(payload, "expected parameter 'payload' to be non-null");
-        this.playAudio = Objects.requireNonNull(playAudio, "expected parameter 'playAudio' to be non-null");
-        this.telephonyTransferCall = Objects.requireNonNull(telephonyTransferCall, "expected parameter 'telephonyTransferCall' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageResponse() {
-        this.conversationSuccess = null;
-        this.endInteraction = null;
-        this.liveAgentHandoff = null;
-        this.mixedAudio = null;
-        this.outputAudioText = null;
-        this.payload = Map.of();
-        this.playAudio = null;
-        this.telephonyTransferCall = null;
-        this.text = null;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageResponse(GoogleCloudDialogflowCxV3beta1ResponseMessageResponse $) {
+        this.conversationSuccess = $.conversationSuccess;
+        this.endInteraction = $.endInteraction;
+        this.liveAgentHandoff = $.liveAgentHandoff;
+        this.mixedAudio = $.mixedAudio;
+        this.outputAudioText = $.outputAudioText;
+        this.payload = $.payload;
+        this.playAudio = $.playAudio;
+        this.telephonyTransferCall = $.telephonyTransferCall;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess;
-        private GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction;
-        private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff;
-        private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio;
-        private GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText;
-        private Map<String,String> payload;
-        private GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio;
-        private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall;
-        private GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text;
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversationSuccess = defaults.conversationSuccess;
-    	      this.endInteraction = defaults.endInteraction;
-    	      this.liveAgentHandoff = defaults.liveAgentHandoff;
-    	      this.mixedAudio = defaults.mixedAudio;
-    	      this.outputAudioText = defaults.outputAudioText;
-    	      this.payload = defaults.payload;
-    	      this.playAudio = defaults.playAudio;
-    	      this.telephonyTransferCall = defaults.telephonyTransferCall;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conversationSuccess(GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse conversationSuccess) {
-            this.conversationSuccess = Objects.requireNonNull(conversationSuccess);
+            $.conversationSuccess = conversationSuccess;
             return this;
         }
+
         public Builder endInteraction(GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse endInteraction) {
-            this.endInteraction = Objects.requireNonNull(endInteraction);
+            $.endInteraction = endInteraction;
             return this;
         }
+
         public Builder liveAgentHandoff(GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse liveAgentHandoff) {
-            this.liveAgentHandoff = Objects.requireNonNull(liveAgentHandoff);
+            $.liveAgentHandoff = liveAgentHandoff;
             return this;
         }
+
         public Builder mixedAudio(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioResponse mixedAudio) {
-            this.mixedAudio = Objects.requireNonNull(mixedAudio);
+            $.mixedAudio = mixedAudio;
             return this;
         }
+
         public Builder outputAudioText(GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextResponse outputAudioText) {
-            this.outputAudioText = Objects.requireNonNull(outputAudioText);
+            $.outputAudioText = outputAudioText;
             return this;
         }
+
         public Builder payload(Map<String,String> payload) {
-            this.payload = Objects.requireNonNull(payload);
+            $.payload = payload;
             return this;
         }
+
         public Builder playAudio(GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse playAudio) {
-            this.playAudio = Objects.requireNonNull(playAudio);
+            $.playAudio = playAudio;
             return this;
         }
+
         public Builder telephonyTransferCall(GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse telephonyTransferCall) {
-            this.telephonyTransferCall = Objects.requireNonNull(telephonyTransferCall);
+            $.telephonyTransferCall = telephonyTransferCall;
             return this;
         }
+
         public Builder text(GoogleCloudDialogflowCxV3beta1ResponseMessageTextResponse text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageResponse(conversationSuccess, endInteraction, liveAgentHandoff, mixedAudio, outputAudioText, payload, playAudio, telephonyTransferCall, text);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse build() {
+            $.conversationSuccess = Objects.requireNonNull($.conversationSuccess, "expected parameter 'conversationSuccess' to be non-null");
+            $.endInteraction = Objects.requireNonNull($.endInteraction, "expected parameter 'endInteraction' to be non-null");
+            $.liveAgentHandoff = Objects.requireNonNull($.liveAgentHandoff, "expected parameter 'liveAgentHandoff' to be non-null");
+            $.mixedAudio = Objects.requireNonNull($.mixedAudio, "expected parameter 'mixedAudio' to be non-null");
+            $.outputAudioText = Objects.requireNonNull($.outputAudioText, "expected parameter 'outputAudioText' to be non-null");
+            $.payload = Objects.requireNonNull($.payload, "expected parameter 'payload' to be non-null");
+            $.playAudio = Objects.requireNonNull($.playAudio, "expected parameter 'playAudio' to be non-null");
+            $.telephonyTransferCall = Objects.requireNonNull($.telephonyTransferCall, "expected parameter 'telephonyTransferCall' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

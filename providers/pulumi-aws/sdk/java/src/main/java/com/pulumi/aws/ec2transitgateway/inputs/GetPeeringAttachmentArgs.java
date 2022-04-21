@@ -22,10 +22,10 @@ public final class GetPeeringAttachmentArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetPeeringAttachmentFilter> filters;
+    private @Nullable List<GetPeeringAttachmentFilter> filters;
 
-    public List<GetPeeringAttachmentFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetPeeringAttachmentFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetPeeringAttachmentArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -45,67 +45,60 @@ public final class GetPeeringAttachmentArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetPeeringAttachmentArgs(
-        @Nullable List<GetPeeringAttachmentFilter> filters,
-        @Nullable String id,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.id = id;
-        this.tags = tags;
-    }
+    private GetPeeringAttachmentArgs() {}
 
-    private GetPeeringAttachmentArgs() {
-        this.filters = List.of();
-        this.id = null;
-        this.tags = Map.of();
+    private GetPeeringAttachmentArgs(GetPeeringAttachmentArgs $) {
+        this.filters = $.filters;
+        this.id = $.id;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPeeringAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetPeeringAttachmentFilter> filters;
-        private @Nullable String id;
-        private @Nullable Map<String,String> tags;
+        private GetPeeringAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPeeringAttachmentArgs();
         }
 
         public Builder(GetPeeringAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.tags = defaults.tags;
+            $ = new GetPeeringAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetPeeringAttachmentFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetPeeringAttachmentFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetPeeringAttachmentArgs build() {
-            return new GetPeeringAttachmentArgs(filters, id, tags);
+        }
+
+        public GetPeeringAttachmentArgs build() {
+            return $;
         }
     }
+
 }

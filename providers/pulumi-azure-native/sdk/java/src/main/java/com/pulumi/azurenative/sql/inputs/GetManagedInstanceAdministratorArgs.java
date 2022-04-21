@@ -13,7 +13,7 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
     public static final GetManagedInstanceAdministratorArgs Empty = new GetManagedInstanceAdministratorArgs();
 
     @Import(name="administratorName", required=true)
-      private final String administratorName;
+    private String administratorName;
 
     public String administratorName() {
         return this.administratorName;
@@ -24,7 +24,7 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final String managedInstanceName;
+    private String managedInstanceName;
 
     public String managedInstanceName() {
         return this.managedInstanceName;
@@ -35,64 +35,59 @@ public final class GetManagedInstanceAdministratorArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagedInstanceAdministratorArgs(
-        String administratorName,
-        String managedInstanceName,
-        String resourceGroupName) {
-        this.administratorName = Objects.requireNonNull(administratorName, "expected parameter 'administratorName' to be non-null");
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagedInstanceAdministratorArgs() {}
 
-    private GetManagedInstanceAdministratorArgs() {
-        this.administratorName = null;
-        this.managedInstanceName = null;
-        this.resourceGroupName = null;
+    private GetManagedInstanceAdministratorArgs(GetManagedInstanceAdministratorArgs $) {
+        this.administratorName = $.administratorName;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagedInstanceAdministratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String administratorName;
-        private String managedInstanceName;
-        private String resourceGroupName;
+        private GetManagedInstanceAdministratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagedInstanceAdministratorArgs();
         }
 
         public Builder(GetManagedInstanceAdministratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorName = defaults.administratorName;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagedInstanceAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorName(String administratorName) {
-            this.administratorName = Objects.requireNonNull(administratorName);
+            $.administratorName = administratorName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagedInstanceAdministratorArgs build() {
-            return new GetManagedInstanceAdministratorArgs(administratorName, managedInstanceName, resourceGroupName);
+        }
+
+        public GetManagedInstanceAdministratorArgs build() {
+            $.administratorName = Objects.requireNonNull($.administratorName, "expected parameter 'administratorName' to be non-null");
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

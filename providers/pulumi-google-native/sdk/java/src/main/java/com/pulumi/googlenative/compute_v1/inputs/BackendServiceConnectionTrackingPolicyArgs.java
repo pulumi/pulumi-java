@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends;
 import com.pulumi.googlenative.compute_v1.enums.BackendServiceConnectionTrackingPolicyTrackingMode;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends com.pulumi
      * 
      */
     @Import(name="connectionPersistenceOnUnhealthyBackends")
-      private final @Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
+    private @Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
 
-    public Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends() {
-        return this.connectionPersistenceOnUnhealthyBackends == null ? Codegen.empty() : this.connectionPersistenceOnUnhealthyBackends;
+    public Optional<Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends>> connectionPersistenceOnUnhealthyBackends() {
+        return Optional.ofNullable(this.connectionPersistenceOnUnhealthyBackends);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends com.pulumi
      * 
      */
     @Import(name="idleTimeoutSec")
-      private final @Nullable Output<Integer> idleTimeoutSec;
+    private @Nullable Output<Integer> idleTimeoutSec;
 
-    public Output<Integer> idleTimeoutSec() {
-        return this.idleTimeoutSec == null ? Codegen.empty() : this.idleTimeoutSec;
+    public Optional<Output<Integer>> idleTimeoutSec() {
+        return Optional.ofNullable(this.idleTimeoutSec);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class BackendServiceConnectionTrackingPolicyArgs extends com.pulumi
      * 
      */
     @Import(name="trackingMode")
-      private final @Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
+    private @Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
 
-    public Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode() {
-        return this.trackingMode == null ? Codegen.empty() : this.trackingMode;
+    public Optional<Output<BackendServiceConnectionTrackingPolicyTrackingMode>> trackingMode() {
+        return Optional.ofNullable(this.trackingMode);
     }
 
-    public BackendServiceConnectionTrackingPolicyArgs(
-        @Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends,
-        @Nullable Output<Integer> idleTimeoutSec,
-        @Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
-        this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
-        this.idleTimeoutSec = idleTimeoutSec;
-        this.trackingMode = trackingMode;
-    }
+    private BackendServiceConnectionTrackingPolicyArgs() {}
 
-    private BackendServiceConnectionTrackingPolicyArgs() {
-        this.connectionPersistenceOnUnhealthyBackends = Codegen.empty();
-        this.idleTimeoutSec = Codegen.empty();
-        this.trackingMode = Codegen.empty();
+    private BackendServiceConnectionTrackingPolicyArgs(BackendServiceConnectionTrackingPolicyArgs $) {
+        this.connectionPersistenceOnUnhealthyBackends = $.connectionPersistenceOnUnhealthyBackends;
+        this.idleTimeoutSec = $.idleTimeoutSec;
+        this.trackingMode = $.trackingMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceConnectionTrackingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends;
-        private @Nullable Output<Integer> idleTimeoutSec;
-        private @Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode;
+        private BackendServiceConnectionTrackingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceConnectionTrackingPolicyArgs();
         }
 
         public Builder(BackendServiceConnectionTrackingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionPersistenceOnUnhealthyBackends = defaults.connectionPersistenceOnUnhealthyBackends;
-    	      this.idleTimeoutSec = defaults.idleTimeoutSec;
-    	      this.trackingMode = defaults.trackingMode;
+            $ = new BackendServiceConnectionTrackingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionPersistenceOnUnhealthyBackends(@Nullable Output<BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends> connectionPersistenceOnUnhealthyBackends) {
-            this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
+            $.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
-        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends) {
-            this.connectionPersistenceOnUnhealthyBackends = Codegen.ofNullable(connectionPersistenceOnUnhealthyBackends);
-            return this;
+
+        public Builder connectionPersistenceOnUnhealthyBackends(BackendServiceConnectionTrackingPolicyConnectionPersistenceOnUnhealthyBackends connectionPersistenceOnUnhealthyBackends) {
+            return connectionPersistenceOnUnhealthyBackends(Output.of(connectionPersistenceOnUnhealthyBackends));
         }
+
         public Builder idleTimeoutSec(@Nullable Output<Integer> idleTimeoutSec) {
-            this.idleTimeoutSec = idleTimeoutSec;
+            $.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
-        public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
-            this.idleTimeoutSec = Codegen.ofNullable(idleTimeoutSec);
-            return this;
+
+        public Builder idleTimeoutSec(Integer idleTimeoutSec) {
+            return idleTimeoutSec(Output.of(idleTimeoutSec));
         }
+
         public Builder trackingMode(@Nullable Output<BackendServiceConnectionTrackingPolicyTrackingMode> trackingMode) {
-            this.trackingMode = trackingMode;
+            $.trackingMode = trackingMode;
             return this;
         }
-        public Builder trackingMode(@Nullable BackendServiceConnectionTrackingPolicyTrackingMode trackingMode) {
-            this.trackingMode = Codegen.ofNullable(trackingMode);
-            return this;
-        }        public BackendServiceConnectionTrackingPolicyArgs build() {
-            return new BackendServiceConnectionTrackingPolicyArgs(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);
+
+        public Builder trackingMode(BackendServiceConnectionTrackingPolicyTrackingMode trackingMode) {
+            return trackingMode(Output.of(trackingMode));
+        }
+
+        public BackendServiceConnectionTrackingPolicyArgs build() {
+            return $;
         }
     }
+
 }

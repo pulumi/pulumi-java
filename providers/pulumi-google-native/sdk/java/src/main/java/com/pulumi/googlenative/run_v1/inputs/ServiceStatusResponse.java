@@ -26,7 +26,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="address", required=true)
-      private final AddressableResponse address;
+    private AddressableResponse address;
 
     public AddressableResponse address() {
         return this.address;
@@ -37,7 +37,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<GoogleCloudRunV1ConditionResponse> conditions;
+    private List<GoogleCloudRunV1ConditionResponse> conditions;
 
     public List<GoogleCloudRunV1ConditionResponse> conditions() {
         return this.conditions;
@@ -48,7 +48,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="latestCreatedRevisionName", required=true)
-      private final String latestCreatedRevisionName;
+    private String latestCreatedRevisionName;
 
     public String latestCreatedRevisionName() {
         return this.latestCreatedRevisionName;
@@ -59,7 +59,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="latestReadyRevisionName", required=true)
-      private final String latestReadyRevisionName;
+    private String latestReadyRevisionName;
 
     public String latestReadyRevisionName() {
         return this.latestReadyRevisionName;
@@ -70,7 +70,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="observedGeneration", required=true)
-      private final Integer observedGeneration;
+    private Integer observedGeneration;
 
     public Integer observedGeneration() {
         return this.observedGeneration;
@@ -81,7 +81,7 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="traffic", required=true)
-      private final List<TrafficTargetResponse> traffic;
+    private List<TrafficTargetResponse> traffic;
 
     public List<TrafficTargetResponse> traffic() {
         return this.traffic;
@@ -92,106 +92,95 @@ public final class ServiceStatusResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public ServiceStatusResponse(
-        AddressableResponse address,
-        List<GoogleCloudRunV1ConditionResponse> conditions,
-        String latestCreatedRevisionName,
-        String latestReadyRevisionName,
-        Integer observedGeneration,
-        List<TrafficTargetResponse> traffic,
-        String url) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName, "expected parameter 'latestCreatedRevisionName' to be non-null");
-        this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName, "expected parameter 'latestReadyRevisionName' to be non-null");
-        this.observedGeneration = Objects.requireNonNull(observedGeneration, "expected parameter 'observedGeneration' to be non-null");
-        this.traffic = Objects.requireNonNull(traffic, "expected parameter 'traffic' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private ServiceStatusResponse() {}
 
-    private ServiceStatusResponse() {
-        this.address = null;
-        this.conditions = List.of();
-        this.latestCreatedRevisionName = null;
-        this.latestReadyRevisionName = null;
-        this.observedGeneration = null;
-        this.traffic = List.of();
-        this.url = null;
+    private ServiceStatusResponse(ServiceStatusResponse $) {
+        this.address = $.address;
+        this.conditions = $.conditions;
+        this.latestCreatedRevisionName = $.latestCreatedRevisionName;
+        this.latestReadyRevisionName = $.latestReadyRevisionName;
+        this.observedGeneration = $.observedGeneration;
+        this.traffic = $.traffic;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AddressableResponse address;
-        private List<GoogleCloudRunV1ConditionResponse> conditions;
-        private String latestCreatedRevisionName;
-        private String latestReadyRevisionName;
-        private Integer observedGeneration;
-        private List<TrafficTargetResponse> traffic;
-        private String url;
+        private ServiceStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceStatusResponse();
         }
 
         public Builder(ServiceStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.conditions = defaults.conditions;
-    	      this.latestCreatedRevisionName = defaults.latestCreatedRevisionName;
-    	      this.latestReadyRevisionName = defaults.latestReadyRevisionName;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.traffic = defaults.traffic;
-    	      this.url = defaults.url;
+            $ = new ServiceStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(AddressableResponse address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder conditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(GoogleCloudRunV1ConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder latestCreatedRevisionName(String latestCreatedRevisionName) {
-            this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName);
+            $.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
+
         public Builder latestReadyRevisionName(String latestReadyRevisionName) {
-            this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName);
+            $.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
+
         public Builder observedGeneration(Integer observedGeneration) {
-            this.observedGeneration = Objects.requireNonNull(observedGeneration);
+            $.observedGeneration = observedGeneration;
             return this;
         }
+
         public Builder traffic(List<TrafficTargetResponse> traffic) {
-            this.traffic = Objects.requireNonNull(traffic);
+            $.traffic = traffic;
             return this;
         }
+
         public Builder traffic(TrafficTargetResponse... traffic) {
             return traffic(List.of(traffic));
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public ServiceStatusResponse build() {
-            return new ServiceStatusResponse(address, conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, traffic, url);
+        }
+
+        public ServiceStatusResponse build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.latestCreatedRevisionName = Objects.requireNonNull($.latestCreatedRevisionName, "expected parameter 'latestCreatedRevisionName' to be non-null");
+            $.latestReadyRevisionName = Objects.requireNonNull($.latestReadyRevisionName, "expected parameter 'latestReadyRevisionName' to be non-null");
+            $.observedGeneration = Objects.requireNonNull($.observedGeneration, "expected parameter 'observedGeneration' to be non-null");
+            $.traffic = Objects.requireNonNull($.traffic, "expected parameter 'traffic' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

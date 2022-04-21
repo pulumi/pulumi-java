@@ -5,12 +5,12 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentInstanceFilterInventoryArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentLabelSetArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
      * 
      */
     @Import(name="all")
-      private final @Nullable Output<Boolean> all;
+    private @Nullable Output<Boolean> all;
 
-    public Output<Boolean> all() {
-        return this.all == null ? Codegen.empty() : this.all;
+    public Optional<Output<Boolean>> all() {
+        return Optional.ofNullable(this.all);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
      * 
      */
     @Import(name="exclusionLabels")
-      private final @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
+    private @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
 
-    public Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels() {
-        return this.exclusionLabels == null ? Codegen.empty() : this.exclusionLabels;
+    public Optional<Output<List<OSPolicyAssignmentLabelSetArgs>>> exclusionLabels() {
+        return Optional.ofNullable(this.exclusionLabels);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
      * 
      */
     @Import(name="inclusionLabels")
-      private final @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
+    private @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
 
-    public Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels() {
-        return this.inclusionLabels == null ? Codegen.empty() : this.inclusionLabels;
+    public Optional<Output<List<OSPolicyAssignmentLabelSetArgs>>> inclusionLabels() {
+        return Optional.ofNullable(this.inclusionLabels);
     }
 
     /**
@@ -60,98 +60,90 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
      * 
      */
     @Import(name="inventories")
-      private final @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
+    private @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 
-    public Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories() {
-        return this.inventories == null ? Codegen.empty() : this.inventories;
+    public Optional<Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>>> inventories() {
+        return Optional.ofNullable(this.inventories);
     }
 
-    public OSPolicyAssignmentInstanceFilterArgs(
-        @Nullable Output<Boolean> all,
-        @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels,
-        @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels,
-        @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
-        this.all = all;
-        this.exclusionLabels = exclusionLabels;
-        this.inclusionLabels = inclusionLabels;
-        this.inventories = inventories;
-    }
+    private OSPolicyAssignmentInstanceFilterArgs() {}
 
-    private OSPolicyAssignmentInstanceFilterArgs() {
-        this.all = Codegen.empty();
-        this.exclusionLabels = Codegen.empty();
-        this.inclusionLabels = Codegen.empty();
-        this.inventories = Codegen.empty();
+    private OSPolicyAssignmentInstanceFilterArgs(OSPolicyAssignmentInstanceFilterArgs $) {
+        this.all = $.all;
+        this.exclusionLabels = $.exclusionLabels;
+        this.inclusionLabels = $.inclusionLabels;
+        this.inventories = $.inventories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyAssignmentInstanceFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> all;
-        private @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
-        private @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
-        private @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
+        private OSPolicyAssignmentInstanceFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyAssignmentInstanceFilterArgs();
         }
 
         public Builder(OSPolicyAssignmentInstanceFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.all = defaults.all;
-    	      this.exclusionLabels = defaults.exclusionLabels;
-    	      this.inclusionLabels = defaults.inclusionLabels;
-    	      this.inventories = defaults.inventories;
+            $ = new OSPolicyAssignmentInstanceFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder all(@Nullable Output<Boolean> all) {
-            this.all = all;
+            $.all = all;
             return this;
         }
-        public Builder all(@Nullable Boolean all) {
-            this.all = Codegen.ofNullable(all);
-            return this;
+
+        public Builder all(Boolean all) {
+            return all(Output.of(all));
         }
+
         public Builder exclusionLabels(@Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels) {
-            this.exclusionLabels = exclusionLabels;
+            $.exclusionLabels = exclusionLabels;
             return this;
         }
-        public Builder exclusionLabels(@Nullable List<OSPolicyAssignmentLabelSetArgs> exclusionLabels) {
-            this.exclusionLabels = Codegen.ofNullable(exclusionLabels);
-            return this;
+
+        public Builder exclusionLabels(List<OSPolicyAssignmentLabelSetArgs> exclusionLabels) {
+            return exclusionLabels(Output.of(exclusionLabels));
         }
+
         public Builder exclusionLabels(OSPolicyAssignmentLabelSetArgs... exclusionLabels) {
             return exclusionLabels(List.of(exclusionLabels));
         }
+
         public Builder inclusionLabels(@Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels) {
-            this.inclusionLabels = inclusionLabels;
+            $.inclusionLabels = inclusionLabels;
             return this;
         }
-        public Builder inclusionLabels(@Nullable List<OSPolicyAssignmentLabelSetArgs> inclusionLabels) {
-            this.inclusionLabels = Codegen.ofNullable(inclusionLabels);
-            return this;
+
+        public Builder inclusionLabels(List<OSPolicyAssignmentLabelSetArgs> inclusionLabels) {
+            return inclusionLabels(Output.of(inclusionLabels));
         }
+
         public Builder inclusionLabels(OSPolicyAssignmentLabelSetArgs... inclusionLabels) {
             return inclusionLabels(List.of(inclusionLabels));
         }
+
         public Builder inventories(@Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
-            this.inventories = inventories;
+            $.inventories = inventories;
             return this;
         }
-        public Builder inventories(@Nullable List<OSPolicyAssignmentInstanceFilterInventoryArgs> inventories) {
-            this.inventories = Codegen.ofNullable(inventories);
-            return this;
+
+        public Builder inventories(List<OSPolicyAssignmentInstanceFilterInventoryArgs> inventories) {
+            return inventories(Output.of(inventories));
         }
+
         public Builder inventories(OSPolicyAssignmentInstanceFilterInventoryArgs... inventories) {
             return inventories(List.of(inventories));
-        }        public OSPolicyAssignmentInstanceFilterArgs build() {
-            return new OSPolicyAssignmentInstanceFilterArgs(all, exclusionLabels, inclusionLabels, inventories);
+        }
+
+        public OSPolicyAssignmentInstanceFilterArgs build() {
+            return $;
         }
     }
+
 }

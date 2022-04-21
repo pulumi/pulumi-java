@@ -25,7 +25,7 @@ public final class ToolExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="commandLineArguments", required=true)
-      private final List<String> commandLineArguments;
+    private List<String> commandLineArguments;
 
     public List<String> commandLineArguments() {
         return this.commandLineArguments;
@@ -36,7 +36,7 @@ public final class ToolExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="exitCode", required=true)
-      private final ToolExitCodeResponse exitCode;
+    private ToolExitCodeResponse exitCode;
 
     public ToolExitCodeResponse exitCode() {
         return this.exitCode;
@@ -47,7 +47,7 @@ public final class ToolExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="toolLogs", required=true)
-      private final List<FileReferenceResponse> toolLogs;
+    private List<FileReferenceResponse> toolLogs;
 
     public List<FileReferenceResponse> toolLogs() {
         return this.toolLogs;
@@ -58,82 +58,78 @@ public final class ToolExecutionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="toolOutputs", required=true)
-      private final List<ToolOutputReferenceResponse> toolOutputs;
+    private List<ToolOutputReferenceResponse> toolOutputs;
 
     public List<ToolOutputReferenceResponse> toolOutputs() {
         return this.toolOutputs;
     }
 
-    public ToolExecutionResponse(
-        List<String> commandLineArguments,
-        ToolExitCodeResponse exitCode,
-        List<FileReferenceResponse> toolLogs,
-        List<ToolOutputReferenceResponse> toolOutputs) {
-        this.commandLineArguments = Objects.requireNonNull(commandLineArguments, "expected parameter 'commandLineArguments' to be non-null");
-        this.exitCode = Objects.requireNonNull(exitCode, "expected parameter 'exitCode' to be non-null");
-        this.toolLogs = Objects.requireNonNull(toolLogs, "expected parameter 'toolLogs' to be non-null");
-        this.toolOutputs = Objects.requireNonNull(toolOutputs, "expected parameter 'toolOutputs' to be non-null");
-    }
+    private ToolExecutionResponse() {}
 
-    private ToolExecutionResponse() {
-        this.commandLineArguments = List.of();
-        this.exitCode = null;
-        this.toolLogs = List.of();
-        this.toolOutputs = List.of();
+    private ToolExecutionResponse(ToolExecutionResponse $) {
+        this.commandLineArguments = $.commandLineArguments;
+        this.exitCode = $.exitCode;
+        this.toolLogs = $.toolLogs;
+        this.toolOutputs = $.toolOutputs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolExecutionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> commandLineArguments;
-        private ToolExitCodeResponse exitCode;
-        private List<FileReferenceResponse> toolLogs;
-        private List<ToolOutputReferenceResponse> toolOutputs;
+        private ToolExecutionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolExecutionResponse();
         }
 
         public Builder(ToolExecutionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commandLineArguments = defaults.commandLineArguments;
-    	      this.exitCode = defaults.exitCode;
-    	      this.toolLogs = defaults.toolLogs;
-    	      this.toolOutputs = defaults.toolOutputs;
+            $ = new ToolExecutionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commandLineArguments(List<String> commandLineArguments) {
-            this.commandLineArguments = Objects.requireNonNull(commandLineArguments);
+            $.commandLineArguments = commandLineArguments;
             return this;
         }
+
         public Builder commandLineArguments(String... commandLineArguments) {
             return commandLineArguments(List.of(commandLineArguments));
         }
+
         public Builder exitCode(ToolExitCodeResponse exitCode) {
-            this.exitCode = Objects.requireNonNull(exitCode);
+            $.exitCode = exitCode;
             return this;
         }
+
         public Builder toolLogs(List<FileReferenceResponse> toolLogs) {
-            this.toolLogs = Objects.requireNonNull(toolLogs);
+            $.toolLogs = toolLogs;
             return this;
         }
+
         public Builder toolLogs(FileReferenceResponse... toolLogs) {
             return toolLogs(List.of(toolLogs));
         }
+
         public Builder toolOutputs(List<ToolOutputReferenceResponse> toolOutputs) {
-            this.toolOutputs = Objects.requireNonNull(toolOutputs);
+            $.toolOutputs = toolOutputs;
             return this;
         }
+
         public Builder toolOutputs(ToolOutputReferenceResponse... toolOutputs) {
             return toolOutputs(List.of(toolOutputs));
-        }        public ToolExecutionResponse build() {
-            return new ToolExecutionResponse(commandLineArguments, exitCode, toolLogs, toolOutputs);
+        }
+
+        public ToolExecutionResponse build() {
+            $.commandLineArguments = Objects.requireNonNull($.commandLineArguments, "expected parameter 'commandLineArguments' to be non-null");
+            $.exitCode = Objects.requireNonNull($.exitCode, "expected parameter 'exitCode' to be non-null");
+            $.toolLogs = Objects.requireNonNull($.toolLogs, "expected parameter 'toolLogs' to be non-null");
+            $.toolOutputs = Objects.requireNonNull($.toolOutputs, "expected parameter 'toolOutputs' to be non-null");
+            return $;
         }
     }
+
 }

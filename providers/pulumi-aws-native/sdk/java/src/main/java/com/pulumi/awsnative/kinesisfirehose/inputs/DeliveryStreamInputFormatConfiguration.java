@@ -15,45 +15,44 @@ public final class DeliveryStreamInputFormatConfiguration extends com.pulumi.res
     public static final DeliveryStreamInputFormatConfiguration Empty = new DeliveryStreamInputFormatConfiguration();
 
     @Import(name="deserializer")
-      private final @Nullable DeliveryStreamDeserializer deserializer;
+    private @Nullable DeliveryStreamDeserializer deserializer;
 
     public Optional<DeliveryStreamDeserializer> deserializer() {
-        return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
+        return Optional.ofNullable(this.deserializer);
     }
 
-    public DeliveryStreamInputFormatConfiguration(@Nullable DeliveryStreamDeserializer deserializer) {
-        this.deserializer = deserializer;
-    }
+    private DeliveryStreamInputFormatConfiguration() {}
 
-    private DeliveryStreamInputFormatConfiguration() {
-        this.deserializer = null;
+    private DeliveryStreamInputFormatConfiguration(DeliveryStreamInputFormatConfiguration $) {
+        this.deserializer = $.deserializer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamInputFormatConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DeliveryStreamDeserializer deserializer;
+        private DeliveryStreamInputFormatConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamInputFormatConfiguration();
         }
 
         public Builder(DeliveryStreamInputFormatConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deserializer = defaults.deserializer;
+            $ = new DeliveryStreamInputFormatConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder deserializer(@Nullable DeliveryStreamDeserializer deserializer) {
-            this.deserializer = deserializer;
+            $.deserializer = deserializer;
             return this;
-        }        public DeliveryStreamInputFormatConfiguration build() {
-            return new DeliveryStreamInputFormatConfiguration(deserializer);
+        }
+
+        public DeliveryStreamInputFormatConfiguration build() {
+            return $;
         }
     }
+
 }

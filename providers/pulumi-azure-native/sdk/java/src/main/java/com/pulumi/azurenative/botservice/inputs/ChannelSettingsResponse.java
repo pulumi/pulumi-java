@@ -26,10 +26,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="botIconUrl")
-      private final @Nullable String botIconUrl;
+    private @Nullable String botIconUrl;
 
     public Optional<String> botIconUrl() {
-        return this.botIconUrl == null ? Optional.empty() : Optional.ofNullable(this.botIconUrl);
+        return Optional.ofNullable(this.botIconUrl);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="botId")
-      private final @Nullable String botId;
+    private @Nullable String botId;
 
     public Optional<String> botId() {
-        return this.botId == null ? Optional.empty() : Optional.ofNullable(this.botId);
+        return Optional.ofNullable(this.botId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="channelDisplayName")
-      private final @Nullable String channelDisplayName;
+    private @Nullable String channelDisplayName;
 
     public Optional<String> channelDisplayName() {
-        return this.channelDisplayName == null ? Optional.empty() : Optional.ofNullable(this.channelDisplayName);
+        return Optional.ofNullable(this.channelDisplayName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="channelId")
-      private final @Nullable String channelId;
+    private @Nullable String channelId;
 
     public Optional<String> channelId() {
-        return this.channelId == null ? Optional.empty() : Optional.ofNullable(this.channelId);
+        return Optional.ofNullable(this.channelId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="disableLocalAuth")
-      private final @Nullable Boolean disableLocalAuth;
+    private @Nullable Boolean disableLocalAuth;
 
     public Optional<Boolean> disableLocalAuth() {
-        return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
+        return Optional.ofNullable(this.disableLocalAuth);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="extensionKey1")
-      private final @Nullable String extensionKey1;
+    private @Nullable String extensionKey1;
 
     public Optional<String> extensionKey1() {
-        return this.extensionKey1 == null ? Optional.empty() : Optional.ofNullable(this.extensionKey1);
+        return Optional.ofNullable(this.extensionKey1);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="extensionKey2")
-      private final @Nullable String extensionKey2;
+    private @Nullable String extensionKey2;
 
     public Optional<String> extensionKey2() {
-        return this.extensionKey2 == null ? Optional.empty() : Optional.ofNullable(this.extensionKey2);
+        return Optional.ofNullable(this.extensionKey2);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Boolean isEnabled;
+    private @Nullable Boolean isEnabled;
 
     public Optional<Boolean> isEnabled() {
-        return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
+        return Optional.ofNullable(this.isEnabled);
     }
 
     /**
@@ -114,121 +114,96 @@ public final class ChannelSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sites")
-      private final @Nullable List<SiteResponse> sites;
+    private @Nullable List<SiteResponse> sites;
 
-    public List<SiteResponse> sites() {
-        return this.sites == null ? List.of() : this.sites;
+    public Optional<List<SiteResponse>> sites() {
+        return Optional.ofNullable(this.sites);
     }
 
-    public ChannelSettingsResponse(
-        @Nullable String botIconUrl,
-        @Nullable String botId,
-        @Nullable String channelDisplayName,
-        @Nullable String channelId,
-        @Nullable Boolean disableLocalAuth,
-        @Nullable String extensionKey1,
-        @Nullable String extensionKey2,
-        @Nullable Boolean isEnabled,
-        @Nullable List<SiteResponse> sites) {
-        this.botIconUrl = botIconUrl;
-        this.botId = botId;
-        this.channelDisplayName = channelDisplayName;
-        this.channelId = channelId;
-        this.disableLocalAuth = disableLocalAuth;
-        this.extensionKey1 = extensionKey1;
-        this.extensionKey2 = extensionKey2;
-        this.isEnabled = isEnabled;
-        this.sites = sites;
-    }
+    private ChannelSettingsResponse() {}
 
-    private ChannelSettingsResponse() {
-        this.botIconUrl = null;
-        this.botId = null;
-        this.channelDisplayName = null;
-        this.channelId = null;
-        this.disableLocalAuth = null;
-        this.extensionKey1 = null;
-        this.extensionKey2 = null;
-        this.isEnabled = null;
-        this.sites = List.of();
+    private ChannelSettingsResponse(ChannelSettingsResponse $) {
+        this.botIconUrl = $.botIconUrl;
+        this.botId = $.botId;
+        this.channelDisplayName = $.channelDisplayName;
+        this.channelId = $.channelId;
+        this.disableLocalAuth = $.disableLocalAuth;
+        this.extensionKey1 = $.extensionKey1;
+        this.extensionKey2 = $.extensionKey2;
+        this.isEnabled = $.isEnabled;
+        this.sites = $.sites;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String botIconUrl;
-        private @Nullable String botId;
-        private @Nullable String channelDisplayName;
-        private @Nullable String channelId;
-        private @Nullable Boolean disableLocalAuth;
-        private @Nullable String extensionKey1;
-        private @Nullable String extensionKey2;
-        private @Nullable Boolean isEnabled;
-        private @Nullable List<SiteResponse> sites;
+        private ChannelSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelSettingsResponse();
         }
 
         public Builder(ChannelSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.botIconUrl = defaults.botIconUrl;
-    	      this.botId = defaults.botId;
-    	      this.channelDisplayName = defaults.channelDisplayName;
-    	      this.channelId = defaults.channelId;
-    	      this.disableLocalAuth = defaults.disableLocalAuth;
-    	      this.extensionKey1 = defaults.extensionKey1;
-    	      this.extensionKey2 = defaults.extensionKey2;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.sites = defaults.sites;
+            $ = new ChannelSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder botIconUrl(@Nullable String botIconUrl) {
-            this.botIconUrl = botIconUrl;
+            $.botIconUrl = botIconUrl;
             return this;
         }
+
         public Builder botId(@Nullable String botId) {
-            this.botId = botId;
+            $.botId = botId;
             return this;
         }
+
         public Builder channelDisplayName(@Nullable String channelDisplayName) {
-            this.channelDisplayName = channelDisplayName;
+            $.channelDisplayName = channelDisplayName;
             return this;
         }
+
         public Builder channelId(@Nullable String channelId) {
-            this.channelId = channelId;
+            $.channelId = channelId;
             return this;
         }
+
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = disableLocalAuth;
+            $.disableLocalAuth = disableLocalAuth;
             return this;
         }
+
         public Builder extensionKey1(@Nullable String extensionKey1) {
-            this.extensionKey1 = extensionKey1;
+            $.extensionKey1 = extensionKey1;
             return this;
         }
+
         public Builder extensionKey2(@Nullable String extensionKey2) {
-            this.extensionKey2 = extensionKey2;
+            $.extensionKey2 = extensionKey2;
             return this;
         }
+
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder sites(@Nullable List<SiteResponse> sites) {
-            this.sites = sites;
+            $.sites = sites;
             return this;
         }
+
         public Builder sites(SiteResponse... sites) {
             return sites(List.of(sites));
-        }        public ChannelSettingsResponse build() {
-            return new ChannelSettingsResponse(botIconUrl, botId, channelDisplayName, channelId, disableLocalAuth, extensionKey1, extensionKey2, isEnabled, sites);
+        }
+
+        public ChannelSettingsResponse build() {
+            return $;
         }
     }
+
 }

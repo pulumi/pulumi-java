@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WorkflowTemplateJobSchedulingArgs extends com.pulumi.resource
      * 
      */
     @Import(name="maxFailuresPerHour")
-      private final @Nullable Output<Integer> maxFailuresPerHour;
+    private @Nullable Output<Integer> maxFailuresPerHour;
 
-    public Output<Integer> maxFailuresPerHour() {
-        return this.maxFailuresPerHour == null ? Codegen.empty() : this.maxFailuresPerHour;
+    public Optional<Output<Integer>> maxFailuresPerHour() {
+        return Optional.ofNullable(this.maxFailuresPerHour);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class WorkflowTemplateJobSchedulingArgs extends com.pulumi.resource
      * 
      */
     @Import(name="maxFailuresTotal")
-      private final @Nullable Output<Integer> maxFailuresTotal;
+    private @Nullable Output<Integer> maxFailuresTotal;
 
-    public Output<Integer> maxFailuresTotal() {
-        return this.maxFailuresTotal == null ? Codegen.empty() : this.maxFailuresTotal;
+    public Optional<Output<Integer>> maxFailuresTotal() {
+        return Optional.ofNullable(this.maxFailuresTotal);
     }
 
-    public WorkflowTemplateJobSchedulingArgs(
-        @Nullable Output<Integer> maxFailuresPerHour,
-        @Nullable Output<Integer> maxFailuresTotal) {
-        this.maxFailuresPerHour = maxFailuresPerHour;
-        this.maxFailuresTotal = maxFailuresTotal;
-    }
+    private WorkflowTemplateJobSchedulingArgs() {}
 
-    private WorkflowTemplateJobSchedulingArgs() {
-        this.maxFailuresPerHour = Codegen.empty();
-        this.maxFailuresTotal = Codegen.empty();
+    private WorkflowTemplateJobSchedulingArgs(WorkflowTemplateJobSchedulingArgs $) {
+        this.maxFailuresPerHour = $.maxFailuresPerHour;
+        this.maxFailuresTotal = $.maxFailuresTotal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateJobSchedulingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxFailuresPerHour;
-        private @Nullable Output<Integer> maxFailuresTotal;
+        private WorkflowTemplateJobSchedulingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateJobSchedulingArgs();
         }
 
         public Builder(WorkflowTemplateJobSchedulingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxFailuresPerHour = defaults.maxFailuresPerHour;
-    	      this.maxFailuresTotal = defaults.maxFailuresTotal;
+            $ = new WorkflowTemplateJobSchedulingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxFailuresPerHour(@Nullable Output<Integer> maxFailuresPerHour) {
-            this.maxFailuresPerHour = maxFailuresPerHour;
+            $.maxFailuresPerHour = maxFailuresPerHour;
             return this;
         }
-        public Builder maxFailuresPerHour(@Nullable Integer maxFailuresPerHour) {
-            this.maxFailuresPerHour = Codegen.ofNullable(maxFailuresPerHour);
-            return this;
+
+        public Builder maxFailuresPerHour(Integer maxFailuresPerHour) {
+            return maxFailuresPerHour(Output.of(maxFailuresPerHour));
         }
+
         public Builder maxFailuresTotal(@Nullable Output<Integer> maxFailuresTotal) {
-            this.maxFailuresTotal = maxFailuresTotal;
+            $.maxFailuresTotal = maxFailuresTotal;
             return this;
         }
-        public Builder maxFailuresTotal(@Nullable Integer maxFailuresTotal) {
-            this.maxFailuresTotal = Codegen.ofNullable(maxFailuresTotal);
-            return this;
-        }        public WorkflowTemplateJobSchedulingArgs build() {
-            return new WorkflowTemplateJobSchedulingArgs(maxFailuresPerHour, maxFailuresTotal);
+
+        public Builder maxFailuresTotal(Integer maxFailuresTotal) {
+            return maxFailuresTotal(Output.of(maxFailuresTotal));
+        }
+
+        public WorkflowTemplateJobSchedulingArgs build() {
+            return $;
         }
     }
+
 }

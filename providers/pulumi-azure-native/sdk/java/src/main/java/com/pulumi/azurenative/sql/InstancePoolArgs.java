@@ -8,11 +8,11 @@ import com.pulumi.azurenative.sql.inputs.SkuArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instancePoolName")
-      private final @Nullable Output<String> instancePoolName;
+    private @Nullable Output<String> instancePoolName;
 
-    public Output<String> instancePoolName() {
-        return this.instancePoolName == null ? Codegen.empty() : this.instancePoolName;
+    public Optional<Output<String>> instancePoolName() {
+        return Optional.ofNullable(this.instancePoolName);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseType", required=true)
-      private final Output<Either<String,InstancePoolLicenseType>> licenseType;
+    private Output<Either<String,InstancePoolLicenseType>> licenseType;
 
     public Output<Either<String,InstancePoolLicenseType>> licenseType() {
         return this.licenseType;
@@ -47,10 +47,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -69,10 +69,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
@@ -91,10 +91,10 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -102,141 +102,122 @@ public final class InstancePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vCores", required=true)
-      private final Output<Integer> vCores;
+    private Output<Integer> vCores;
 
     public Output<Integer> vCores() {
         return this.vCores;
     }
 
-    public InstancePoolArgs(
-        @Nullable Output<String> instancePoolName,
-        Output<Either<String,InstancePoolLicenseType>> licenseType,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<SkuArgs> sku,
-        Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        Output<Integer> vCores) {
-        this.instancePoolName = instancePoolName;
-        this.licenseType = Objects.requireNonNull(licenseType, "expected parameter 'licenseType' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.tags = tags;
-        this.vCores = Objects.requireNonNull(vCores, "expected parameter 'vCores' to be non-null");
-    }
+    private InstancePoolArgs() {}
 
-    private InstancePoolArgs() {
-        this.instancePoolName = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vCores = Codegen.empty();
+    private InstancePoolArgs(InstancePoolArgs $) {
+        this.instancePoolName = $.instancePoolName;
+        this.licenseType = $.licenseType;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.vCores = $.vCores;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstancePoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instancePoolName;
-        private Output<Either<String,InstancePoolLicenseType>> licenseType;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<SkuArgs> sku;
-        private Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<Integer> vCores;
+        private InstancePoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstancePoolArgs();
         }
 
         public Builder(InstancePoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instancePoolName = defaults.instancePoolName;
-    	      this.licenseType = defaults.licenseType;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.vCores = defaults.vCores;
+            $ = new InstancePoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instancePoolName(@Nullable Output<String> instancePoolName) {
-            this.instancePoolName = instancePoolName;
+            $.instancePoolName = instancePoolName;
             return this;
         }
-        public Builder instancePoolName(@Nullable String instancePoolName) {
-            this.instancePoolName = Codegen.ofNullable(instancePoolName);
-            return this;
+
+        public Builder instancePoolName(String instancePoolName) {
+            return instancePoolName(Output.of(instancePoolName));
         }
+
         public Builder licenseType(Output<Either<String,InstancePoolLicenseType>> licenseType) {
-            this.licenseType = Objects.requireNonNull(licenseType);
+            $.licenseType = licenseType;
             return this;
         }
+
         public Builder licenseType(Either<String,InstancePoolLicenseType> licenseType) {
-            this.licenseType = Output.of(Objects.requireNonNull(licenseType));
-            return this;
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vCores(Output<Integer> vCores) {
-            this.vCores = Objects.requireNonNull(vCores);
+            $.vCores = vCores;
             return this;
         }
+
         public Builder vCores(Integer vCores) {
-            this.vCores = Output.of(Objects.requireNonNull(vCores));
-            return this;
-        }        public InstancePoolArgs build() {
-            return new InstancePoolArgs(instancePoolName, licenseType, location, resourceGroupName, sku, subnetId, tags, vCores);
+            return vCores(Output.of(vCores));
+        }
+
+        public InstancePoolArgs build() {
+            $.licenseType = Objects.requireNonNull($.licenseType, "expected parameter 'licenseType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            $.vCores = Objects.requireNonNull($.vCores, "expected parameter 'vCores' to be non-null");
+            return $;
         }
     }
+
 }

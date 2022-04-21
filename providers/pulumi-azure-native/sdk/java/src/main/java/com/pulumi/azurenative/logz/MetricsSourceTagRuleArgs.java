@@ -6,9 +6,9 @@ package com.pulumi.azurenative.logz;
 import com.pulumi.azurenative.logz.inputs.MetricsTagRulesPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class MetricsSourceTagRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metricsSourceName", required=true)
-      private final Output<String> metricsSourceName;
+    private Output<String> metricsSourceName;
 
     public Output<String> metricsSourceName() {
         return this.metricsSourceName;
@@ -32,7 +32,7 @@ public final class MetricsSourceTagRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="monitorName", required=true)
-      private final Output<String> monitorName;
+    private Output<String> monitorName;
 
     public Output<String> monitorName() {
         return this.monitorName;
@@ -43,10 +43,10 @@ public final class MetricsSourceTagRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<MetricsTagRulesPropertiesArgs> properties;
+    private @Nullable Output<MetricsTagRulesPropertiesArgs> properties;
 
-    public Output<MetricsTagRulesPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<MetricsTagRulesPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,109 +54,98 @@ public final class MetricsSourceTagRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName")
-      private final @Nullable Output<String> ruleSetName;
+    private @Nullable Output<String> ruleSetName;
 
-    public Output<String> ruleSetName() {
-        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
+    public Optional<Output<String>> ruleSetName() {
+        return Optional.ofNullable(this.ruleSetName);
     }
 
-    public MetricsSourceTagRuleArgs(
-        Output<String> metricsSourceName,
-        Output<String> monitorName,
-        @Nullable Output<MetricsTagRulesPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleSetName) {
-        this.metricsSourceName = Objects.requireNonNull(metricsSourceName, "expected parameter 'metricsSourceName' to be non-null");
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleSetName = ruleSetName;
-    }
+    private MetricsSourceTagRuleArgs() {}
 
-    private MetricsSourceTagRuleArgs() {
-        this.metricsSourceName = Codegen.empty();
-        this.monitorName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleSetName = Codegen.empty();
+    private MetricsSourceTagRuleArgs(MetricsSourceTagRuleArgs $) {
+        this.metricsSourceName = $.metricsSourceName;
+        this.monitorName = $.monitorName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricsSourceTagRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> metricsSourceName;
-        private Output<String> monitorName;
-        private @Nullable Output<MetricsTagRulesPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleSetName;
+        private MetricsSourceTagRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricsSourceTagRuleArgs();
         }
 
         public Builder(MetricsSourceTagRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricsSourceName = defaults.metricsSourceName;
-    	      this.monitorName = defaults.monitorName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new MetricsSourceTagRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricsSourceName(Output<String> metricsSourceName) {
-            this.metricsSourceName = Objects.requireNonNull(metricsSourceName);
+            $.metricsSourceName = metricsSourceName;
             return this;
         }
+
         public Builder metricsSourceName(String metricsSourceName) {
-            this.metricsSourceName = Output.of(Objects.requireNonNull(metricsSourceName));
-            return this;
+            return metricsSourceName(Output.of(metricsSourceName));
         }
+
         public Builder monitorName(Output<String> monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder monitorName(String monitorName) {
-            this.monitorName = Output.of(Objects.requireNonNull(monitorName));
-            return this;
+            return monitorName(Output.of(monitorName));
         }
+
         public Builder properties(@Nullable Output<MetricsTagRulesPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable MetricsTagRulesPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(MetricsTagRulesPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
-            this.ruleSetName = ruleSetName;
+            $.ruleSetName = ruleSetName;
             return this;
         }
-        public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Codegen.ofNullable(ruleSetName);
-            return this;
-        }        public MetricsSourceTagRuleArgs build() {
-            return new MetricsSourceTagRuleArgs(metricsSourceName, monitorName, properties, resourceGroupName, ruleSetName);
+
+        public Builder ruleSetName(String ruleSetName) {
+            return ruleSetName(Output.of(ruleSetName));
+        }
+
+        public MetricsSourceTagRuleArgs build() {
+            $.metricsSourceName = Objects.requireNonNull($.metricsSourceName, "expected parameter 'metricsSourceName' to be non-null");
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

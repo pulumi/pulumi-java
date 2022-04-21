@@ -23,10 +23,10 @@ public final class ObjectReferenceDefinitionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ObjectReferenceDefinitionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="namespace")
-      private final @Nullable String namespace;
+    private @Nullable String namespace;
 
     public Optional<String> namespace() {
-        return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
+        return Optional.ofNullable(this.namespace);
     }
 
-    public ObjectReferenceDefinitionResponse(
-        @Nullable String name,
-        @Nullable String namespace) {
-        this.name = name;
-        this.namespace = namespace;
-    }
+    private ObjectReferenceDefinitionResponse() {}
 
-    private ObjectReferenceDefinitionResponse() {
-        this.name = null;
-        this.namespace = null;
+    private ObjectReferenceDefinitionResponse(ObjectReferenceDefinitionResponse $) {
+        this.name = $.name;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectReferenceDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String namespace;
+        private ObjectReferenceDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectReferenceDefinitionResponse();
         }
 
         public Builder(ObjectReferenceDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
+            $ = new ObjectReferenceDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
-        }        public ObjectReferenceDefinitionResponse build() {
-            return new ObjectReferenceDefinitionResponse(name, namespace);
+        }
+
+        public ObjectReferenceDefinitionResponse build() {
+            return $;
         }
     }
+
 }

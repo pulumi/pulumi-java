@@ -15,62 +15,57 @@ public final class AuthorizationActionMappingResponse extends com.pulumi.resourc
     public static final AuthorizationActionMappingResponse Empty = new AuthorizationActionMappingResponse();
 
     @Import(name="desired")
-      private final @Nullable String desired;
+    private @Nullable String desired;
 
     public Optional<String> desired() {
-        return this.desired == null ? Optional.empty() : Optional.ofNullable(this.desired);
+        return Optional.ofNullable(this.desired);
     }
 
     @Import(name="original")
-      private final @Nullable String original;
+    private @Nullable String original;
 
     public Optional<String> original() {
-        return this.original == null ? Optional.empty() : Optional.ofNullable(this.original);
+        return Optional.ofNullable(this.original);
     }
 
-    public AuthorizationActionMappingResponse(
-        @Nullable String desired,
-        @Nullable String original) {
-        this.desired = desired;
-        this.original = original;
-    }
+    private AuthorizationActionMappingResponse() {}
 
-    private AuthorizationActionMappingResponse() {
-        this.desired = null;
-        this.original = null;
+    private AuthorizationActionMappingResponse(AuthorizationActionMappingResponse $) {
+        this.desired = $.desired;
+        this.original = $.original;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationActionMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String desired;
-        private @Nullable String original;
+        private AuthorizationActionMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationActionMappingResponse();
         }
 
         public Builder(AuthorizationActionMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.desired = defaults.desired;
-    	      this.original = defaults.original;
+            $ = new AuthorizationActionMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder desired(@Nullable String desired) {
-            this.desired = desired;
+            $.desired = desired;
             return this;
         }
+
         public Builder original(@Nullable String original) {
-            this.original = original;
+            $.original = original;
             return this;
-        }        public AuthorizationActionMappingResponse build() {
-            return new AuthorizationActionMappingResponse(desired, original);
+        }
+
+        public AuthorizationActionMappingResponse build() {
+            return $;
         }
     }
+
 }

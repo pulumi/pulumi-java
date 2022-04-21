@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cloudformation;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class ModuleVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="moduleName", required=true)
-      private final Output<String> moduleName;
+    private Output<String> moduleName;
 
     public Output<String> moduleName() {
         return this.moduleName;
@@ -32,63 +31,60 @@ public final class ModuleVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="modulePackage", required=true)
-      private final Output<String> modulePackage;
+    private Output<String> modulePackage;
 
     public Output<String> modulePackage() {
         return this.modulePackage;
     }
 
-    public ModuleVersionArgs(
-        Output<String> moduleName,
-        Output<String> modulePackage) {
-        this.moduleName = Objects.requireNonNull(moduleName, "expected parameter 'moduleName' to be non-null");
-        this.modulePackage = Objects.requireNonNull(modulePackage, "expected parameter 'modulePackage' to be non-null");
-    }
+    private ModuleVersionArgs() {}
 
-    private ModuleVersionArgs() {
-        this.moduleName = Codegen.empty();
-        this.modulePackage = Codegen.empty();
+    private ModuleVersionArgs(ModuleVersionArgs $) {
+        this.moduleName = $.moduleName;
+        this.modulePackage = $.modulePackage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModuleVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> moduleName;
-        private Output<String> modulePackage;
+        private ModuleVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModuleVersionArgs();
         }
 
         public Builder(ModuleVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.moduleName = defaults.moduleName;
-    	      this.modulePackage = defaults.modulePackage;
+            $ = new ModuleVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder moduleName(Output<String> moduleName) {
-            this.moduleName = Objects.requireNonNull(moduleName);
+            $.moduleName = moduleName;
             return this;
         }
+
         public Builder moduleName(String moduleName) {
-            this.moduleName = Output.of(Objects.requireNonNull(moduleName));
-            return this;
+            return moduleName(Output.of(moduleName));
         }
+
         public Builder modulePackage(Output<String> modulePackage) {
-            this.modulePackage = Objects.requireNonNull(modulePackage);
+            $.modulePackage = modulePackage;
             return this;
         }
+
         public Builder modulePackage(String modulePackage) {
-            this.modulePackage = Output.of(Objects.requireNonNull(modulePackage));
-            return this;
-        }        public ModuleVersionArgs build() {
-            return new ModuleVersionArgs(moduleName, modulePackage);
+            return modulePackage(Output.of(modulePackage));
+        }
+
+        public ModuleVersionArgs build() {
+            $.moduleName = Objects.requireNonNull($.moduleName, "expected parameter 'moduleName' to be non-null");
+            $.modulePackage = Objects.requireNonNull($.modulePackage, "expected parameter 'modulePackage' to be non-null");
+            return $;
         }
     }
+
 }

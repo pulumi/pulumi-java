@@ -24,10 +24,10 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends com.pu
      * 
      */
     @Import(name="audience")
-      private final @Nullable String audience;
+    private @Nullable String audience;
 
     public Optional<String> audience() {
-        return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends com.pu
      * 
      */
     @Import(name="authority")
-      private final @Nullable String authority;
+    private @Nullable String authority;
 
     public Optional<String> authority() {
-        return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
+        return Optional.ofNullable(this.authority);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ServiceAuthenticationConfigurationInfoResponse extends com.pu
      * 
      */
     @Import(name="smartProxyEnabled")
-      private final @Nullable Boolean smartProxyEnabled;
+    private @Nullable Boolean smartProxyEnabled;
 
     public Optional<Boolean> smartProxyEnabled() {
-        return this.smartProxyEnabled == null ? Optional.empty() : Optional.ofNullable(this.smartProxyEnabled);
+        return Optional.ofNullable(this.smartProxyEnabled);
     }
 
-    public ServiceAuthenticationConfigurationInfoResponse(
-        @Nullable String audience,
-        @Nullable String authority,
-        @Nullable Boolean smartProxyEnabled) {
-        this.audience = audience;
-        this.authority = authority;
-        this.smartProxyEnabled = smartProxyEnabled;
-    }
+    private ServiceAuthenticationConfigurationInfoResponse() {}
 
-    private ServiceAuthenticationConfigurationInfoResponse() {
-        this.audience = null;
-        this.authority = null;
-        this.smartProxyEnabled = null;
+    private ServiceAuthenticationConfigurationInfoResponse(ServiceAuthenticationConfigurationInfoResponse $) {
+        this.audience = $.audience;
+        this.authority = $.authority;
+        this.smartProxyEnabled = $.smartProxyEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAuthenticationConfigurationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String audience;
-        private @Nullable String authority;
-        private @Nullable Boolean smartProxyEnabled;
+        private ServiceAuthenticationConfigurationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAuthenticationConfigurationInfoResponse();
         }
 
         public Builder(ServiceAuthenticationConfigurationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.authority = defaults.authority;
-    	      this.smartProxyEnabled = defaults.smartProxyEnabled;
+            $ = new ServiceAuthenticationConfigurationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
+
         public Builder authority(@Nullable String authority) {
-            this.authority = authority;
+            $.authority = authority;
             return this;
         }
+
         public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
-            this.smartProxyEnabled = smartProxyEnabled;
+            $.smartProxyEnabled = smartProxyEnabled;
             return this;
-        }        public ServiceAuthenticationConfigurationInfoResponse build() {
-            return new ServiceAuthenticationConfigurationInfoResponse(audience, authority, smartProxyEnabled);
+        }
+
+        public ServiceAuthenticationConfigurationInfoResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class FilterItems extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="field")
-      private final @Nullable String field;
+    private @Nullable String field;
 
     public Optional<String> field() {
-        return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
+        return Optional.ofNullable(this.field);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class FilterItems extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public FilterItems(
-        @Nullable String field,
-        @Nullable List<String> values) {
-        this.field = field;
-        this.values = values;
-    }
+    private FilterItems() {}
 
-    private FilterItems() {
-        this.field = null;
-        this.values = List.of();
+    private FilterItems(FilterItems $) {
+        this.field = $.field;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterItems defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String field;
-        private @Nullable List<String> values;
+        private FilterItems $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterItems();
         }
 
         public Builder(FilterItems defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.values = defaults.values;
+            $ = new FilterItems(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable String field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
+
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public FilterItems build() {
-            return new FilterItems(field, values);
+        }
+
+        public FilterItems build() {
+            return $;
         }
     }
+
 }

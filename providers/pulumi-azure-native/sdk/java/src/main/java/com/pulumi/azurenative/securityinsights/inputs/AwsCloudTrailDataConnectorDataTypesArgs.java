@@ -6,8 +6,8 @@ package com.pulumi.azurenative.securityinsights.inputs;
 import com.pulumi.azurenative.securityinsights.inputs.AwsCloudTrailDataConnectorDataTypesLogsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends com.pulumi.re
      * 
      */
     @Import(name="logs")
-      private final @Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
+    private @Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
 
-    public Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs() {
-        return this.logs == null ? Codegen.empty() : this.logs;
+    public Optional<Output<AwsCloudTrailDataConnectorDataTypesLogsArgs>> logs() {
+        return Optional.ofNullable(this.logs);
     }
 
-    public AwsCloudTrailDataConnectorDataTypesArgs(@Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs) {
-        this.logs = logs;
-    }
+    private AwsCloudTrailDataConnectorDataTypesArgs() {}
 
-    private AwsCloudTrailDataConnectorDataTypesArgs() {
-        this.logs = Codegen.empty();
+    private AwsCloudTrailDataConnectorDataTypesArgs(AwsCloudTrailDataConnectorDataTypesArgs $) {
+        this.logs = $.logs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsCloudTrailDataConnectorDataTypesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
+        private AwsCloudTrailDataConnectorDataTypesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsCloudTrailDataConnectorDataTypesArgs();
         }
 
         public Builder(AwsCloudTrailDataConnectorDataTypesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logs = defaults.logs;
+            $ = new AwsCloudTrailDataConnectorDataTypesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logs(@Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs) {
-            this.logs = logs;
+            $.logs = logs;
             return this;
         }
-        public Builder logs(@Nullable AwsCloudTrailDataConnectorDataTypesLogsArgs logs) {
-            this.logs = Codegen.ofNullable(logs);
-            return this;
-        }        public AwsCloudTrailDataConnectorDataTypesArgs build() {
-            return new AwsCloudTrailDataConnectorDataTypesArgs(logs);
+
+        public Builder logs(AwsCloudTrailDataConnectorDataTypesLogsArgs logs) {
+            return logs(Output.of(logs));
+        }
+
+        public AwsCloudTrailDataConnectorDataTypesArgs build() {
+            return $;
         }
     }
+
 }

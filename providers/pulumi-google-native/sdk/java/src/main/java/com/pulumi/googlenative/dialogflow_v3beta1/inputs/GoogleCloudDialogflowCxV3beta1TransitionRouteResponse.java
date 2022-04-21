@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse extends
      * 
      */
     @Import(name="condition", required=true)
-      private final String condition;
+    private String condition;
 
     public String condition() {
         return this.condition;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse extends
      * 
      */
     @Import(name="intent", required=true)
-      private final String intent;
+    private String intent;
 
     public String intent() {
         return this.intent;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse extends
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse extends
      * 
      */
     @Import(name="targetFlow", required=true)
-      private final String targetFlow;
+    private String targetFlow;
 
     public String targetFlow() {
         return this.targetFlow;
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse extends
      * 
      */
     @Import(name="targetPage", required=true)
-      private final String targetPage;
+    private String targetPage;
 
     public String targetPage() {
         return this.targetPage;
@@ -77,91 +77,80 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse extends
      * 
      */
     @Import(name="triggerFulfillment", required=true)
-      private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment;
+    private GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment;
 
     public GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment() {
         return this.triggerFulfillment;
     }
 
-    public GoogleCloudDialogflowCxV3beta1TransitionRouteResponse(
-        String condition,
-        String intent,
-        String name,
-        String targetFlow,
-        String targetPage,
-        GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.intent = Objects.requireNonNull(intent, "expected parameter 'intent' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.targetFlow = Objects.requireNonNull(targetFlow, "expected parameter 'targetFlow' to be non-null");
-        this.targetPage = Objects.requireNonNull(targetPage, "expected parameter 'targetPage' to be non-null");
-        this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment, "expected parameter 'triggerFulfillment' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1TransitionRouteResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1TransitionRouteResponse() {
-        this.condition = null;
-        this.intent = null;
-        this.name = null;
-        this.targetFlow = null;
-        this.targetPage = null;
-        this.triggerFulfillment = null;
+    private GoogleCloudDialogflowCxV3beta1TransitionRouteResponse(GoogleCloudDialogflowCxV3beta1TransitionRouteResponse $) {
+        this.condition = $.condition;
+        this.intent = $.intent;
+        this.name = $.name;
+        this.targetFlow = $.targetFlow;
+        this.targetPage = $.targetPage;
+        this.triggerFulfillment = $.triggerFulfillment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1TransitionRouteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String condition;
-        private String intent;
-        private String name;
-        private String targetFlow;
-        private String targetPage;
-        private GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment;
+        private GoogleCloudDialogflowCxV3beta1TransitionRouteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1TransitionRouteResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1TransitionRouteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.intent = defaults.intent;
-    	      this.name = defaults.name;
-    	      this.targetFlow = defaults.targetFlow;
-    	      this.targetPage = defaults.targetPage;
-    	      this.triggerFulfillment = defaults.triggerFulfillment;
+            $ = new GoogleCloudDialogflowCxV3beta1TransitionRouteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(String condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder intent(String intent) {
-            this.intent = Objects.requireNonNull(intent);
+            $.intent = intent;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder targetFlow(String targetFlow) {
-            this.targetFlow = Objects.requireNonNull(targetFlow);
+            $.targetFlow = targetFlow;
             return this;
         }
+
         public Builder targetPage(String targetPage) {
-            this.targetPage = Objects.requireNonNull(targetPage);
+            $.targetPage = targetPage;
             return this;
         }
+
         public Builder triggerFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
-            this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
+            $.triggerFulfillment = triggerFulfillment;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1TransitionRouteResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1TransitionRouteResponse(condition, intent, name, targetFlow, targetPage, triggerFulfillment);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1TransitionRouteResponse build() {
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.intent = Objects.requireNonNull($.intent, "expected parameter 'intent' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.targetFlow = Objects.requireNonNull($.targetFlow, "expected parameter 'targetFlow' to be non-null");
+            $.targetPage = Objects.requireNonNull($.targetPage, "expected parameter 'targetPage' to be non-null");
+            $.triggerFulfillment = Objects.requireNonNull($.triggerFulfillment, "expected parameter 'triggerFulfillment' to be non-null");
+            return $;
         }
     }
+
 }

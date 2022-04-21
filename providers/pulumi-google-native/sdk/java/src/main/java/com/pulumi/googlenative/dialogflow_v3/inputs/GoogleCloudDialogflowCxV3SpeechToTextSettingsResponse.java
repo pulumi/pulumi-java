@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse extends
      * 
      */
     @Import(name="enableSpeechAdaptation", required=true)
-      private final Boolean enableSpeechAdaptation;
+    private Boolean enableSpeechAdaptation;
 
     public Boolean enableSpeechAdaptation() {
         return this.enableSpeechAdaptation;
     }
 
-    public GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse(Boolean enableSpeechAdaptation) {
-        this.enableSpeechAdaptation = Objects.requireNonNull(enableSpeechAdaptation, "expected parameter 'enableSpeechAdaptation' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse() {}
 
-    private GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse() {
-        this.enableSpeechAdaptation = null;
+    private GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse(GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse $) {
+        this.enableSpeechAdaptation = $.enableSpeechAdaptation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableSpeechAdaptation;
+        private GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableSpeechAdaptation = defaults.enableSpeechAdaptation;
+            $ = new GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableSpeechAdaptation(Boolean enableSpeechAdaptation) {
-            this.enableSpeechAdaptation = Objects.requireNonNull(enableSpeechAdaptation);
+            $.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
-        }        public GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse build() {
-            return new GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse(enableSpeechAdaptation);
+        }
+
+        public GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse build() {
+            $.enableSpeechAdaptation = Objects.requireNonNull($.enableSpeechAdaptation, "expected parameter 'enableSpeechAdaptation' to be non-null");
+            return $;
         }
     }
+
 }

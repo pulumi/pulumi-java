@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends com.pu
      * 
      */
     @Import(name="productId", required=true)
-      private final String productId;
+    private String productId;
 
     public String productId() {
         return this.productId;
@@ -32,7 +32,7 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends com.pu
      * 
      */
     @Import(name="provisioningId", required=true)
-      private final String provisioningId;
+    private String provisioningId;
 
     public String provisioningId() {
         return this.provisioningId;
@@ -43,64 +43,59 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse extends com.pu
      * 
      */
     @Import(name="skuId", required=true)
-      private final String skuId;
+    private String skuId;
 
     public String skuId() {
         return this.skuId;
     }
 
-    public GoogleCloudChannelV1ProvisionedServiceResponse(
-        String productId,
-        String provisioningId,
-        String skuId) {
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.provisioningId = Objects.requireNonNull(provisioningId, "expected parameter 'provisioningId' to be non-null");
-        this.skuId = Objects.requireNonNull(skuId, "expected parameter 'skuId' to be non-null");
-    }
+    private GoogleCloudChannelV1ProvisionedServiceResponse() {}
 
-    private GoogleCloudChannelV1ProvisionedServiceResponse() {
-        this.productId = null;
-        this.provisioningId = null;
-        this.skuId = null;
+    private GoogleCloudChannelV1ProvisionedServiceResponse(GoogleCloudChannelV1ProvisionedServiceResponse $) {
+        this.productId = $.productId;
+        this.provisioningId = $.provisioningId;
+        this.skuId = $.skuId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1ProvisionedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String productId;
-        private String provisioningId;
-        private String skuId;
+        private GoogleCloudChannelV1ProvisionedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1ProvisionedServiceResponse();
         }
 
         public Builder(GoogleCloudChannelV1ProvisionedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.productId = defaults.productId;
-    	      this.provisioningId = defaults.provisioningId;
-    	      this.skuId = defaults.skuId;
+            $ = new GoogleCloudChannelV1ProvisionedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder provisioningId(String provisioningId) {
-            this.provisioningId = Objects.requireNonNull(provisioningId);
+            $.provisioningId = provisioningId;
             return this;
         }
+
         public Builder skuId(String skuId) {
-            this.skuId = Objects.requireNonNull(skuId);
+            $.skuId = skuId;
             return this;
-        }        public GoogleCloudChannelV1ProvisionedServiceResponse build() {
-            return new GoogleCloudChannelV1ProvisionedServiceResponse(productId, provisioningId, skuId);
+        }
+
+        public GoogleCloudChannelV1ProvisionedServiceResponse build() {
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            $.provisioningId = Objects.requireNonNull($.provisioningId, "expected parameter 'provisioningId' to be non-null");
+            $.skuId = Objects.requireNonNull($.skuId, "expected parameter 'skuId' to be non-null");
+            return $;
         }
     }
+
 }

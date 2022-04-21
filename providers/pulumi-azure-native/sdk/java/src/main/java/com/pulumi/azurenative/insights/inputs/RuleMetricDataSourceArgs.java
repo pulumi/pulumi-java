@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="legacyResourceId")
-      private final @Nullable Output<String> legacyResourceId;
+    private @Nullable Output<String> legacyResourceId;
 
-    public Output<String> legacyResourceId() {
-        return this.legacyResourceId == null ? Codegen.empty() : this.legacyResourceId;
+    public Optional<Output<String>> legacyResourceId() {
+        return Optional.ofNullable(this.legacyResourceId);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metricName")
-      private final @Nullable Output<String> metricName;
+    private @Nullable Output<String> metricName;
 
-    public Output<String> metricName() {
-        return this.metricName == null ? Codegen.empty() : this.metricName;
+    public Optional<Output<String>> metricName() {
+        return Optional.ofNullable(this.metricName);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metricNamespace")
-      private final @Nullable Output<String> metricNamespace;
+    private @Nullable Output<String> metricNamespace;
 
-    public Output<String> metricNamespace() {
-        return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
+    public Optional<Output<String>> metricNamespace() {
+        return Optional.ofNullable(this.metricNamespace);
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -69,10 +70,10 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceLocation")
-      private final @Nullable Output<String> resourceLocation;
+    private @Nullable Output<String> resourceLocation;
 
-    public Output<String> resourceLocation() {
-        return this.resourceLocation == null ? Codegen.empty() : this.resourceLocation;
+    public Optional<Output<String>> resourceLocation() {
+        return Optional.ofNullable(this.resourceLocation);
     }
 
     /**
@@ -80,115 +81,99 @@ public final class RuleMetricDataSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceUri")
-      private final @Nullable Output<String> resourceUri;
+    private @Nullable Output<String> resourceUri;
 
-    public Output<String> resourceUri() {
-        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
+    public Optional<Output<String>> resourceUri() {
+        return Optional.ofNullable(this.resourceUri);
     }
 
-    public RuleMetricDataSourceArgs(
-        @Nullable Output<String> legacyResourceId,
-        @Nullable Output<String> metricName,
-        @Nullable Output<String> metricNamespace,
-        Output<String> odataType,
-        @Nullable Output<String> resourceLocation,
-        @Nullable Output<String> resourceUri) {
-        this.legacyResourceId = legacyResourceId;
-        this.metricName = metricName;
-        this.metricNamespace = metricNamespace;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.resourceLocation = resourceLocation;
-        this.resourceUri = resourceUri;
-    }
+    private RuleMetricDataSourceArgs() {}
 
-    private RuleMetricDataSourceArgs() {
-        this.legacyResourceId = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.metricNamespace = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.resourceLocation = Codegen.empty();
-        this.resourceUri = Codegen.empty();
+    private RuleMetricDataSourceArgs(RuleMetricDataSourceArgs $) {
+        this.legacyResourceId = $.legacyResourceId;
+        this.metricName = $.metricName;
+        this.metricNamespace = $.metricNamespace;
+        this.odataType = $.odataType;
+        this.resourceLocation = $.resourceLocation;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleMetricDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> legacyResourceId;
-        private @Nullable Output<String> metricName;
-        private @Nullable Output<String> metricNamespace;
-        private Output<String> odataType;
-        private @Nullable Output<String> resourceLocation;
-        private @Nullable Output<String> resourceUri;
+        private RuleMetricDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleMetricDataSourceArgs();
         }
 
         public Builder(RuleMetricDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.legacyResourceId = defaults.legacyResourceId;
-    	      this.metricName = defaults.metricName;
-    	      this.metricNamespace = defaults.metricNamespace;
-    	      this.odataType = defaults.odataType;
-    	      this.resourceLocation = defaults.resourceLocation;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new RuleMetricDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder legacyResourceId(@Nullable Output<String> legacyResourceId) {
-            this.legacyResourceId = legacyResourceId;
+            $.legacyResourceId = legacyResourceId;
             return this;
         }
-        public Builder legacyResourceId(@Nullable String legacyResourceId) {
-            this.legacyResourceId = Codegen.ofNullable(legacyResourceId);
-            return this;
+
+        public Builder legacyResourceId(String legacyResourceId) {
+            return legacyResourceId(Output.of(legacyResourceId));
         }
+
         public Builder metricName(@Nullable Output<String> metricName) {
-            this.metricName = metricName;
+            $.metricName = metricName;
             return this;
         }
-        public Builder metricName(@Nullable String metricName) {
-            this.metricName = Codegen.ofNullable(metricName);
-            return this;
+
+        public Builder metricName(String metricName) {
+            return metricName(Output.of(metricName));
         }
+
         public Builder metricNamespace(@Nullable Output<String> metricNamespace) {
-            this.metricNamespace = metricNamespace;
+            $.metricNamespace = metricNamespace;
             return this;
         }
-        public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Codegen.ofNullable(metricNamespace);
-            return this;
+
+        public Builder metricNamespace(String metricNamespace) {
+            return metricNamespace(Output.of(metricNamespace));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder resourceLocation(@Nullable Output<String> resourceLocation) {
-            this.resourceLocation = resourceLocation;
+            $.resourceLocation = resourceLocation;
             return this;
         }
-        public Builder resourceLocation(@Nullable String resourceLocation) {
-            this.resourceLocation = Codegen.ofNullable(resourceLocation);
-            return this;
+
+        public Builder resourceLocation(String resourceLocation) {
+            return resourceLocation(Output.of(resourceLocation));
         }
+
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
         }
-        public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Codegen.ofNullable(resourceUri);
-            return this;
-        }        public RuleMetricDataSourceArgs build() {
-            return new RuleMetricDataSourceArgs(legacyResourceId, metricName, metricNamespace, odataType, resourceLocation, resourceUri);
+
+        public Builder resourceUri(String resourceUri) {
+            return resourceUri(Output.of(resourceUri));
+        }
+
+        public RuleMetricDataSourceArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

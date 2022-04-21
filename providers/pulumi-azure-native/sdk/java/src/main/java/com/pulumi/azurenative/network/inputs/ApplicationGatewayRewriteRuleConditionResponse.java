@@ -24,10 +24,10 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends com.pu
      * 
      */
     @Import(name="ignoreCase")
-      private final @Nullable Boolean ignoreCase;
+    private @Nullable Boolean ignoreCase;
 
     public Optional<Boolean> ignoreCase() {
-        return this.ignoreCase == null ? Optional.empty() : Optional.ofNullable(this.ignoreCase);
+        return Optional.ofNullable(this.ignoreCase);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends com.pu
      * 
      */
     @Import(name="negate")
-      private final @Nullable Boolean negate;
+    private @Nullable Boolean negate;
 
     public Optional<Boolean> negate() {
-        return this.negate == null ? Optional.empty() : Optional.ofNullable(this.negate);
+        return Optional.ofNullable(this.negate);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends com.pu
      * 
      */
     @Import(name="pattern")
-      private final @Nullable String pattern;
+    private @Nullable String pattern;
 
     public Optional<String> pattern() {
-        return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);
+        return Optional.ofNullable(this.pattern);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends com.pu
      * 
      */
     @Import(name="variable")
-      private final @Nullable String variable;
+    private @Nullable String variable;
 
     public Optional<String> variable() {
-        return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
+        return Optional.ofNullable(this.variable);
     }
 
-    public ApplicationGatewayRewriteRuleConditionResponse(
-        @Nullable Boolean ignoreCase,
-        @Nullable Boolean negate,
-        @Nullable String pattern,
-        @Nullable String variable) {
-        this.ignoreCase = ignoreCase;
-        this.negate = negate;
-        this.pattern = pattern;
-        this.variable = variable;
-    }
+    private ApplicationGatewayRewriteRuleConditionResponse() {}
 
-    private ApplicationGatewayRewriteRuleConditionResponse() {
-        this.ignoreCase = null;
-        this.negate = null;
-        this.pattern = null;
-        this.variable = null;
+    private ApplicationGatewayRewriteRuleConditionResponse(ApplicationGatewayRewriteRuleConditionResponse $) {
+        this.ignoreCase = $.ignoreCase;
+        this.negate = $.negate;
+        this.pattern = $.pattern;
+        this.variable = $.variable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayRewriteRuleConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean ignoreCase;
-        private @Nullable Boolean negate;
-        private @Nullable String pattern;
-        private @Nullable String variable;
+        private ApplicationGatewayRewriteRuleConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayRewriteRuleConditionResponse();
         }
 
         public Builder(ApplicationGatewayRewriteRuleConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreCase = defaults.ignoreCase;
-    	      this.negate = defaults.negate;
-    	      this.pattern = defaults.pattern;
-    	      this.variable = defaults.variable;
+            $ = new ApplicationGatewayRewriteRuleConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
-            this.ignoreCase = ignoreCase;
+            $.ignoreCase = ignoreCase;
             return this;
         }
+
         public Builder negate(@Nullable Boolean negate) {
-            this.negate = negate;
+            $.negate = negate;
             return this;
         }
+
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = pattern;
+            $.pattern = pattern;
             return this;
         }
+
         public Builder variable(@Nullable String variable) {
-            this.variable = variable;
+            $.variable = variable;
             return this;
-        }        public ApplicationGatewayRewriteRuleConditionResponse build() {
-            return new ApplicationGatewayRewriteRuleConditionResponse(ignoreCase, negate, pattern, variable);
+        }
+
+        public ApplicationGatewayRewriteRuleConditionResponse build() {
+            return $;
         }
     }
+
 }

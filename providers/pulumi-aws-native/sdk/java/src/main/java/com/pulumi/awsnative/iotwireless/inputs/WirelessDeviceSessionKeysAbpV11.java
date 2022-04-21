@@ -13,94 +13,87 @@ public final class WirelessDeviceSessionKeysAbpV11 extends com.pulumi.resources.
     public static final WirelessDeviceSessionKeysAbpV11 Empty = new WirelessDeviceSessionKeysAbpV11();
 
     @Import(name="appSKey", required=true)
-      private final String appSKey;
+    private String appSKey;
 
     public String appSKey() {
         return this.appSKey;
     }
 
     @Import(name="fNwkSIntKey", required=true)
-      private final String fNwkSIntKey;
+    private String fNwkSIntKey;
 
     public String fNwkSIntKey() {
         return this.fNwkSIntKey;
     }
 
     @Import(name="nwkSEncKey", required=true)
-      private final String nwkSEncKey;
+    private String nwkSEncKey;
 
     public String nwkSEncKey() {
         return this.nwkSEncKey;
     }
 
     @Import(name="sNwkSIntKey", required=true)
-      private final String sNwkSIntKey;
+    private String sNwkSIntKey;
 
     public String sNwkSIntKey() {
         return this.sNwkSIntKey;
     }
 
-    public WirelessDeviceSessionKeysAbpV11(
-        String appSKey,
-        String fNwkSIntKey,
-        String nwkSEncKey,
-        String sNwkSIntKey) {
-        this.appSKey = Objects.requireNonNull(appSKey, "expected parameter 'appSKey' to be non-null");
-        this.fNwkSIntKey = Objects.requireNonNull(fNwkSIntKey, "expected parameter 'fNwkSIntKey' to be non-null");
-        this.nwkSEncKey = Objects.requireNonNull(nwkSEncKey, "expected parameter 'nwkSEncKey' to be non-null");
-        this.sNwkSIntKey = Objects.requireNonNull(sNwkSIntKey, "expected parameter 'sNwkSIntKey' to be non-null");
-    }
+    private WirelessDeviceSessionKeysAbpV11() {}
 
-    private WirelessDeviceSessionKeysAbpV11() {
-        this.appSKey = null;
-        this.fNwkSIntKey = null;
-        this.nwkSEncKey = null;
-        this.sNwkSIntKey = null;
+    private WirelessDeviceSessionKeysAbpV11(WirelessDeviceSessionKeysAbpV11 $) {
+        this.appSKey = $.appSKey;
+        this.fNwkSIntKey = $.fNwkSIntKey;
+        this.nwkSEncKey = $.nwkSEncKey;
+        this.sNwkSIntKey = $.sNwkSIntKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WirelessDeviceSessionKeysAbpV11 defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appSKey;
-        private String fNwkSIntKey;
-        private String nwkSEncKey;
-        private String sNwkSIntKey;
+        private WirelessDeviceSessionKeysAbpV11 $;
 
         public Builder() {
-    	      // Empty
+            $ = new WirelessDeviceSessionKeysAbpV11();
         }
 
         public Builder(WirelessDeviceSessionKeysAbpV11 defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appSKey = defaults.appSKey;
-    	      this.fNwkSIntKey = defaults.fNwkSIntKey;
-    	      this.nwkSEncKey = defaults.nwkSEncKey;
-    	      this.sNwkSIntKey = defaults.sNwkSIntKey;
+            $ = new WirelessDeviceSessionKeysAbpV11(Objects.requireNonNull(defaults));
         }
 
         public Builder appSKey(String appSKey) {
-            this.appSKey = Objects.requireNonNull(appSKey);
+            $.appSKey = appSKey;
             return this;
         }
+
         public Builder fNwkSIntKey(String fNwkSIntKey) {
-            this.fNwkSIntKey = Objects.requireNonNull(fNwkSIntKey);
+            $.fNwkSIntKey = fNwkSIntKey;
             return this;
         }
+
         public Builder nwkSEncKey(String nwkSEncKey) {
-            this.nwkSEncKey = Objects.requireNonNull(nwkSEncKey);
+            $.nwkSEncKey = nwkSEncKey;
             return this;
         }
+
         public Builder sNwkSIntKey(String sNwkSIntKey) {
-            this.sNwkSIntKey = Objects.requireNonNull(sNwkSIntKey);
+            $.sNwkSIntKey = sNwkSIntKey;
             return this;
-        }        public WirelessDeviceSessionKeysAbpV11 build() {
-            return new WirelessDeviceSessionKeysAbpV11(appSKey, fNwkSIntKey, nwkSEncKey, sNwkSIntKey);
+        }
+
+        public WirelessDeviceSessionKeysAbpV11 build() {
+            $.appSKey = Objects.requireNonNull($.appSKey, "expected parameter 'appSKey' to be non-null");
+            $.fNwkSIntKey = Objects.requireNonNull($.fNwkSIntKey, "expected parameter 'fNwkSIntKey' to be non-null");
+            $.nwkSEncKey = Objects.requireNonNull($.nwkSEncKey, "expected parameter 'nwkSEncKey' to be non-null");
+            $.sNwkSIntKey = Objects.requireNonNull($.sNwkSIntKey, "expected parameter 'sNwkSIntKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class EndpointGroupEndpointConfiguration extends com.pulumi.resourc
      * 
      */
     @Import(name="clientIPPreservationEnabled")
-      private final @Nullable Boolean clientIPPreservationEnabled;
+    private @Nullable Boolean clientIPPreservationEnabled;
 
     public Optional<Boolean> clientIPPreservationEnabled() {
-        return this.clientIPPreservationEnabled == null ? Optional.empty() : Optional.ofNullable(this.clientIPPreservationEnabled);
+        return Optional.ofNullable(this.clientIPPreservationEnabled);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class EndpointGroupEndpointConfiguration extends com.pulumi.resourc
      * 
      */
     @Import(name="endpointId", required=true)
-      private final String endpointId;
+    private String endpointId;
 
     public String endpointId() {
         return this.endpointId;
@@ -47,64 +47,57 @@ public final class EndpointGroupEndpointConfiguration extends com.pulumi.resourc
      * 
      */
     @Import(name="weight")
-      private final @Nullable Integer weight;
+    private @Nullable Integer weight;
 
     public Optional<Integer> weight() {
-        return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
+        return Optional.ofNullable(this.weight);
     }
 
-    public EndpointGroupEndpointConfiguration(
-        @Nullable Boolean clientIPPreservationEnabled,
-        String endpointId,
-        @Nullable Integer weight) {
-        this.clientIPPreservationEnabled = clientIPPreservationEnabled;
-        this.endpointId = Objects.requireNonNull(endpointId, "expected parameter 'endpointId' to be non-null");
-        this.weight = weight;
-    }
+    private EndpointGroupEndpointConfiguration() {}
 
-    private EndpointGroupEndpointConfiguration() {
-        this.clientIPPreservationEnabled = null;
-        this.endpointId = null;
-        this.weight = null;
+    private EndpointGroupEndpointConfiguration(EndpointGroupEndpointConfiguration $) {
+        this.clientIPPreservationEnabled = $.clientIPPreservationEnabled;
+        this.endpointId = $.endpointId;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointGroupEndpointConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean clientIPPreservationEnabled;
-        private String endpointId;
-        private @Nullable Integer weight;
+        private EndpointGroupEndpointConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointGroupEndpointConfiguration();
         }
 
         public Builder(EndpointGroupEndpointConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientIPPreservationEnabled = defaults.clientIPPreservationEnabled;
-    	      this.endpointId = defaults.endpointId;
-    	      this.weight = defaults.weight;
+            $ = new EndpointGroupEndpointConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder clientIPPreservationEnabled(@Nullable Boolean clientIPPreservationEnabled) {
-            this.clientIPPreservationEnabled = clientIPPreservationEnabled;
+            $.clientIPPreservationEnabled = clientIPPreservationEnabled;
             return this;
         }
+
         public Builder endpointId(String endpointId) {
-            this.endpointId = Objects.requireNonNull(endpointId);
+            $.endpointId = endpointId;
             return this;
         }
+
         public Builder weight(@Nullable Integer weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
-        }        public EndpointGroupEndpointConfiguration build() {
-            return new EndpointGroupEndpointConfiguration(clientIPPreservationEnabled, endpointId, weight);
+        }
+
+        public EndpointGroupEndpointConfiguration build() {
+            $.endpointId = Objects.requireNonNull($.endpointId, "expected parameter 'endpointId' to be non-null");
+            return $;
         }
     }
+
 }

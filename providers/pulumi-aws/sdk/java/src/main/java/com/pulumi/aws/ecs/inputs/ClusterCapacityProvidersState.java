@@ -6,10 +6,10 @@ package com.pulumi.aws.ecs.inputs;
 import com.pulumi.aws.ecs.inputs.ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterCapacityProvidersState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="capacityProviders")
-      private final @Nullable Output<List<String>> capacityProviders;
+    private @Nullable Output<List<String>> capacityProviders;
 
-    public Output<List<String>> capacityProviders() {
-        return this.capacityProviders == null ? Codegen.empty() : this.capacityProviders;
+    public Optional<Output<List<String>>> capacityProviders() {
+        return Optional.ofNullable(this.capacityProviders);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ClusterCapacityProvidersState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -44,82 +44,76 @@ public final class ClusterCapacityProvidersState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="defaultCapacityProviderStrategies")
-      private final @Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
+    private @Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
 
-    public Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies() {
-        return this.defaultCapacityProviderStrategies == null ? Codegen.empty() : this.defaultCapacityProviderStrategies;
+    public Optional<Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>>> defaultCapacityProviderStrategies() {
+        return Optional.ofNullable(this.defaultCapacityProviderStrategies);
     }
 
-    public ClusterCapacityProvidersState(
-        @Nullable Output<List<String>> capacityProviders,
-        @Nullable Output<String> clusterName,
-        @Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies) {
-        this.capacityProviders = capacityProviders;
-        this.clusterName = clusterName;
-        this.defaultCapacityProviderStrategies = defaultCapacityProviderStrategies;
-    }
+    private ClusterCapacityProvidersState() {}
 
-    private ClusterCapacityProvidersState() {
-        this.capacityProviders = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.defaultCapacityProviderStrategies = Codegen.empty();
+    private ClusterCapacityProvidersState(ClusterCapacityProvidersState $) {
+        this.capacityProviders = $.capacityProviders;
+        this.clusterName = $.clusterName;
+        this.defaultCapacityProviderStrategies = $.defaultCapacityProviderStrategies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCapacityProvidersState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> capacityProviders;
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
+        private ClusterCapacityProvidersState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCapacityProvidersState();
         }
 
         public Builder(ClusterCapacityProvidersState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityProviders = defaults.capacityProviders;
-    	      this.clusterName = defaults.clusterName;
-    	      this.defaultCapacityProviderStrategies = defaults.defaultCapacityProviderStrategies;
+            $ = new ClusterCapacityProvidersState(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityProviders(@Nullable Output<List<String>> capacityProviders) {
-            this.capacityProviders = capacityProviders;
+            $.capacityProviders = capacityProviders;
             return this;
         }
-        public Builder capacityProviders(@Nullable List<String> capacityProviders) {
-            this.capacityProviders = Codegen.ofNullable(capacityProviders);
-            return this;
+
+        public Builder capacityProviders(List<String> capacityProviders) {
+            return capacityProviders(Output.of(capacityProviders));
         }
+
         public Builder capacityProviders(String... capacityProviders) {
             return capacityProviders(List.of(capacityProviders));
         }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder defaultCapacityProviderStrategies(@Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies) {
-            this.defaultCapacityProviderStrategies = defaultCapacityProviderStrategies;
+            $.defaultCapacityProviderStrategies = defaultCapacityProviderStrategies;
             return this;
         }
-        public Builder defaultCapacityProviderStrategies(@Nullable List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs> defaultCapacityProviderStrategies) {
-            this.defaultCapacityProviderStrategies = Codegen.ofNullable(defaultCapacityProviderStrategies);
-            return this;
+
+        public Builder defaultCapacityProviderStrategies(List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs> defaultCapacityProviderStrategies) {
+            return defaultCapacityProviderStrategies(Output.of(defaultCapacityProviderStrategies));
         }
+
         public Builder defaultCapacityProviderStrategies(ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs... defaultCapacityProviderStrategies) {
             return defaultCapacityProviderStrategies(List.of(defaultCapacityProviderStrategies));
-        }        public ClusterCapacityProvidersState build() {
-            return new ClusterCapacityProvidersState(capacityProviders, clusterName, defaultCapacityProviderStrategies);
+        }
+
+        public ClusterCapacityProvidersState build() {
+            return $;
         }
     }
+
 }

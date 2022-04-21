@@ -7,7 +7,6 @@ import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionBase
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionIntervalArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends com.pulum
      * 
      */
     @Import(name="baseEjectionDuration", required=true)
-      private final Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration;
+    private Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration;
 
     public Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration() {
         return this.baseEjectionDuration;
@@ -32,7 +31,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends com.pulum
      * 
      */
     @Import(name="interval", required=true)
-      private final Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval;
+    private Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval;
 
     public Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval() {
         return this.interval;
@@ -44,7 +43,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends com.pulum
      * 
      */
     @Import(name="maxEjectionPercent", required=true)
-      private final Output<Integer> maxEjectionPercent;
+    private Output<Integer> maxEjectionPercent;
 
     public Output<Integer> maxEjectionPercent() {
         return this.maxEjectionPercent;
@@ -55,89 +54,82 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends com.pulum
      * 
      */
     @Import(name="maxServerErrors", required=true)
-      private final Output<Integer> maxServerErrors;
+    private Output<Integer> maxServerErrors;
 
     public Output<Integer> maxServerErrors() {
         return this.maxServerErrors;
     }
 
-    public VirtualNodeSpecListenerOutlierDetectionArgs(
-        Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration,
-        Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval,
-        Output<Integer> maxEjectionPercent,
-        Output<Integer> maxServerErrors) {
-        this.baseEjectionDuration = Objects.requireNonNull(baseEjectionDuration, "expected parameter 'baseEjectionDuration' to be non-null");
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent, "expected parameter 'maxEjectionPercent' to be non-null");
-        this.maxServerErrors = Objects.requireNonNull(maxServerErrors, "expected parameter 'maxServerErrors' to be non-null");
-    }
+    private VirtualNodeSpecListenerOutlierDetectionArgs() {}
 
-    private VirtualNodeSpecListenerOutlierDetectionArgs() {
-        this.baseEjectionDuration = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.maxEjectionPercent = Codegen.empty();
-        this.maxServerErrors = Codegen.empty();
+    private VirtualNodeSpecListenerOutlierDetectionArgs(VirtualNodeSpecListenerOutlierDetectionArgs $) {
+        this.baseEjectionDuration = $.baseEjectionDuration;
+        this.interval = $.interval;
+        this.maxEjectionPercent = $.maxEjectionPercent;
+        this.maxServerErrors = $.maxServerErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerOutlierDetectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration;
-        private Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval;
-        private Output<Integer> maxEjectionPercent;
-        private Output<Integer> maxServerErrors;
+        private VirtualNodeSpecListenerOutlierDetectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerOutlierDetectionArgs();
         }
 
         public Builder(VirtualNodeSpecListenerOutlierDetectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseEjectionDuration = defaults.baseEjectionDuration;
-    	      this.interval = defaults.interval;
-    	      this.maxEjectionPercent = defaults.maxEjectionPercent;
-    	      this.maxServerErrors = defaults.maxServerErrors;
+            $ = new VirtualNodeSpecListenerOutlierDetectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseEjectionDuration(Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration) {
-            this.baseEjectionDuration = Objects.requireNonNull(baseEjectionDuration);
+            $.baseEjectionDuration = baseEjectionDuration;
             return this;
         }
+
         public Builder baseEjectionDuration(VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs baseEjectionDuration) {
-            this.baseEjectionDuration = Output.of(Objects.requireNonNull(baseEjectionDuration));
-            return this;
+            return baseEjectionDuration(Output.of(baseEjectionDuration));
         }
+
         public Builder interval(Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder interval(VirtualNodeSpecListenerOutlierDetectionIntervalArgs interval) {
-            this.interval = Output.of(Objects.requireNonNull(interval));
-            return this;
+            return interval(Output.of(interval));
         }
+
         public Builder maxEjectionPercent(Output<Integer> maxEjectionPercent) {
-            this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
+            $.maxEjectionPercent = maxEjectionPercent;
             return this;
         }
+
         public Builder maxEjectionPercent(Integer maxEjectionPercent) {
-            this.maxEjectionPercent = Output.of(Objects.requireNonNull(maxEjectionPercent));
-            return this;
+            return maxEjectionPercent(Output.of(maxEjectionPercent));
         }
+
         public Builder maxServerErrors(Output<Integer> maxServerErrors) {
-            this.maxServerErrors = Objects.requireNonNull(maxServerErrors);
+            $.maxServerErrors = maxServerErrors;
             return this;
         }
+
         public Builder maxServerErrors(Integer maxServerErrors) {
-            this.maxServerErrors = Output.of(Objects.requireNonNull(maxServerErrors));
-            return this;
-        }        public VirtualNodeSpecListenerOutlierDetectionArgs build() {
-            return new VirtualNodeSpecListenerOutlierDetectionArgs(baseEjectionDuration, interval, maxEjectionPercent, maxServerErrors);
+            return maxServerErrors(Output.of(maxServerErrors));
+        }
+
+        public VirtualNodeSpecListenerOutlierDetectionArgs build() {
+            $.baseEjectionDuration = Objects.requireNonNull($.baseEjectionDuration, "expected parameter 'baseEjectionDuration' to be non-null");
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.maxEjectionPercent = Objects.requireNonNull($.maxEjectionPercent, "expected parameter 'maxEjectionPercent' to be non-null");
+            $.maxServerErrors = Objects.requireNonNull($.maxServerErrors, "expected parameter 'maxServerErrors' to be non-null");
+            return $;
         }
     }
+
 }

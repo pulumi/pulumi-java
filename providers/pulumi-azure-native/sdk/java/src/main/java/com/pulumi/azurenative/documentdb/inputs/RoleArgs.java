@@ -5,9 +5,9 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="db")
-      private final @Nullable Output<String> db;
+    private @Nullable Output<String> db;
 
-    public Output<String> db() {
-        return this.db == null ? Codegen.empty() : this.db;
+    public Optional<Output<String>> db() {
+        return Optional.ofNullable(this.db);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public RoleArgs(
-        @Nullable Output<String> db,
-        @Nullable Output<String> role) {
-        this.db = db;
-        this.role = role;
-    }
+    private RoleArgs() {}
 
-    private RoleArgs() {
-        this.db = Codegen.empty();
-        this.role = Codegen.empty();
+    private RoleArgs(RoleArgs $) {
+        this.db = $.db;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> db;
-        private @Nullable Output<String> role;
+        private RoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleArgs();
         }
 
         public Builder(RoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.db = defaults.db;
-    	      this.role = defaults.role;
+            $ = new RoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder db(@Nullable Output<String> db) {
-            this.db = db;
+            $.db = db;
             return this;
         }
-        public Builder db(@Nullable String db) {
-            this.db = Codegen.ofNullable(db);
-            return this;
+
+        public Builder db(String db) {
+            return db(Output.of(db));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public RoleArgs build() {
-            return new RoleArgs(db, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public RoleArgs build() {
+            return $;
         }
     }
+
 }

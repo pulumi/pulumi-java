@@ -24,10 +24,10 @@ public final class CmkKekIdentityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="useSystemAssignedIdentity")
-      private final @Nullable Boolean useSystemAssignedIdentity;
+    private @Nullable Boolean useSystemAssignedIdentity;
 
     public Optional<Boolean> useSystemAssignedIdentity() {
-        return this.useSystemAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.useSystemAssignedIdentity);
+        return Optional.ofNullable(this.useSystemAssignedIdentity);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class CmkKekIdentityResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable String userAssignedIdentity;
+    private @Nullable String userAssignedIdentity;
 
     public Optional<String> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentity);
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public CmkKekIdentityResponse(
-        @Nullable Boolean useSystemAssignedIdentity,
-        @Nullable String userAssignedIdentity) {
-        this.useSystemAssignedIdentity = useSystemAssignedIdentity;
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private CmkKekIdentityResponse() {}
 
-    private CmkKekIdentityResponse() {
-        this.useSystemAssignedIdentity = null;
-        this.userAssignedIdentity = null;
+    private CmkKekIdentityResponse(CmkKekIdentityResponse $) {
+        this.useSystemAssignedIdentity = $.useSystemAssignedIdentity;
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CmkKekIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean useSystemAssignedIdentity;
-        private @Nullable String userAssignedIdentity;
+        private CmkKekIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CmkKekIdentityResponse();
         }
 
         public Builder(CmkKekIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.useSystemAssignedIdentity = defaults.useSystemAssignedIdentity;
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new CmkKekIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder useSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
-            this.useSystemAssignedIdentity = useSystemAssignedIdentity;
+            $.useSystemAssignedIdentity = useSystemAssignedIdentity;
             return this;
         }
+
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
-        }        public CmkKekIdentityResponse build() {
-            return new CmkKekIdentityResponse(useSystemAssignedIdentity, userAssignedIdentity);
+        }
+
+        public CmkKekIdentityResponse build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class MetadataSupportResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MetadataSupportResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="link")
-      private final @Nullable String link;
+    private @Nullable String link;
 
     public Optional<String> link() {
-        return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
+        return Optional.ofNullable(this.link);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MetadataSupportResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,73 +56,63 @@ public final class MetadataSupportResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
     }
 
-    public MetadataSupportResponse(
-        @Nullable String email,
-        @Nullable String link,
-        @Nullable String name,
-        String tier) {
-        this.email = email;
-        this.link = link;
-        this.name = name;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private MetadataSupportResponse() {}
 
-    private MetadataSupportResponse() {
-        this.email = null;
-        this.link = null;
-        this.name = null;
-        this.tier = null;
+    private MetadataSupportResponse(MetadataSupportResponse $) {
+        this.email = $.email;
+        this.link = $.link;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataSupportResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String email;
-        private @Nullable String link;
-        private @Nullable String name;
-        private String tier;
+        private MetadataSupportResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataSupportResponse();
         }
 
         public Builder(MetadataSupportResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.link = defaults.link;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new MetadataSupportResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder link(@Nullable String link) {
-            this.link = link;
+            $.link = link;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
-        }        public MetadataSupportResponse build() {
-            return new MetadataSupportResponse(email, link, name, tier);
+        }
+
+        public MetadataSupportResponse build() {
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

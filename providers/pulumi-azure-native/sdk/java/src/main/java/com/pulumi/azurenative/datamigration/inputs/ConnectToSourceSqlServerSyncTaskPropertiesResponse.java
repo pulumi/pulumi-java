@@ -35,7 +35,7 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends co
      * 
      */
     @Import(name="commands", required=true)
-      private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+    private List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands() {
         return this.commands;
@@ -46,7 +46,7 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends co
      * 
      */
     @Import(name="errors", required=true)
-      private final List<ODataErrorResponse> errors;
+    private List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> errors() {
         return this.errors;
@@ -57,10 +57,10 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends co
      * 
      */
     @Import(name="input")
-      private final @Nullable ConnectToSourceSqlServerTaskInputResponse input;
+    private @Nullable ConnectToSourceSqlServerTaskInputResponse input;
 
     public Optional<ConnectToSourceSqlServerTaskInputResponse> input() {
-        return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends co
      * 
      */
     @Import(name="output", required=true)
-      private final List<Object> output;
+    private List<Object> output;
 
     public List<Object> output() {
         return this.output;
@@ -79,7 +79,7 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends co
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -91,100 +91,91 @@ public final class ConnectToSourceSqlServerSyncTaskPropertiesResponse extends co
      * 
      */
     @Import(name="taskType", required=true)
-      private final String taskType;
+    private String taskType;
 
     public String taskType() {
         return this.taskType;
     }
 
-    public ConnectToSourceSqlServerSyncTaskPropertiesResponse(
-        List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        List<ODataErrorResponse> errors,
-        @Nullable ConnectToSourceSqlServerTaskInputResponse input,
-        List<Object> output,
-        String state,
-        String taskType) {
-        this.commands = Objects.requireNonNull(commands, "expected parameter 'commands' to be non-null");
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.input = input;
-        this.output = Objects.requireNonNull(output, "expected parameter 'output' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.taskType = Codegen.stringProp("taskType").arg(taskType).require();
-    }
+    private ConnectToSourceSqlServerSyncTaskPropertiesResponse() {}
 
-    private ConnectToSourceSqlServerSyncTaskPropertiesResponse() {
-        this.commands = List.of();
-        this.errors = List.of();
-        this.input = null;
-        this.output = List.of();
-        this.state = null;
-        this.taskType = null;
+    private ConnectToSourceSqlServerSyncTaskPropertiesResponse(ConnectToSourceSqlServerSyncTaskPropertiesResponse $) {
+        this.commands = $.commands;
+        this.errors = $.errors;
+        this.input = $.input;
+        this.output = $.output;
+        this.state = $.state;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToSourceSqlServerSyncTaskPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
-        private List<ODataErrorResponse> errors;
-        private @Nullable ConnectToSourceSqlServerTaskInputResponse input;
-        private List<Object> output;
-        private String state;
-        private String taskType;
+        private ConnectToSourceSqlServerSyncTaskPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToSourceSqlServerSyncTaskPropertiesResponse();
         }
 
         public Builder(ConnectToSourceSqlServerSyncTaskPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commands = defaults.commands;
-    	      this.errors = defaults.errors;
-    	      this.input = defaults.input;
-    	      this.output = defaults.output;
-    	      this.state = defaults.state;
-    	      this.taskType = defaults.taskType;
+            $ = new ConnectToSourceSqlServerSyncTaskPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder commands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
-            this.commands = Objects.requireNonNull(commands);
+            $.commands = commands;
             return this;
         }
+
         public Builder commands(Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>... commands) {
             return commands(List.of(commands));
         }
+
         public Builder errors(List<ODataErrorResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ODataErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder input(@Nullable ConnectToSourceSqlServerTaskInputResponse input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
+
         public Builder output(List<Object> output) {
-            this.output = Objects.requireNonNull(output);
+            $.output = output;
             return this;
         }
+
         public Builder output(Object... output) {
             return output(List.of(output));
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
-        }        public ConnectToSourceSqlServerSyncTaskPropertiesResponse build() {
-            return new ConnectToSourceSqlServerSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
+        }
+
+        public ConnectToSourceSqlServerSyncTaskPropertiesResponse build() {
+            $.commands = Objects.requireNonNull($.commands, "expected parameter 'commands' to be non-null");
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.output = Objects.requireNonNull($.output, "expected parameter 'output' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.taskType = Codegen.stringProp("taskType").arg($.taskType).require();
+            return $;
         }
     }
+
 }

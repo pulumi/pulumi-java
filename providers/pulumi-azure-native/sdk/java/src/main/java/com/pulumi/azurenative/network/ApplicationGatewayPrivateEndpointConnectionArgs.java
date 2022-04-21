@@ -6,9 +6,9 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends com.p
      * 
      */
     @Import(name="applicationGatewayName", required=true)
-      private final Output<String> applicationGatewayName;
+    private Output<String> applicationGatewayName;
 
     public Output<String> applicationGatewayName() {
         return this.applicationGatewayName;
@@ -32,10 +32,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends com.p
      * 
      */
     @Import(name="connectionName")
-      private final @Nullable Output<String> connectionName;
+    private @Nullable Output<String> connectionName;
 
-    public Output<String> connectionName() {
-        return this.connectionName == null ? Codegen.empty() : this.connectionName;
+    public Optional<Output<String>> connectionName() {
+        return Optional.ofNullable(this.connectionName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends com.p
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends com.p
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends com.p
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+    private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
+    public Optional<Output<PrivateLinkServiceConnectionStateArgs>> privateLinkServiceConnectionState() {
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -76,115 +76,100 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends com.p
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ApplicationGatewayPrivateEndpointConnectionArgs(
-        Output<String> applicationGatewayName,
-        @Nullable Output<String> connectionName,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
-        Output<String> resourceGroupName) {
-        this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName, "expected parameter 'applicationGatewayName' to be non-null");
-        this.connectionName = connectionName;
-        this.id = id;
-        this.name = name;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ApplicationGatewayPrivateEndpointConnectionArgs() {}
 
-    private ApplicationGatewayPrivateEndpointConnectionArgs() {
-        this.applicationGatewayName = Codegen.empty();
-        this.connectionName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.privateLinkServiceConnectionState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ApplicationGatewayPrivateEndpointConnectionArgs(ApplicationGatewayPrivateEndpointConnectionArgs $) {
+        this.applicationGatewayName = $.applicationGatewayName;
+        this.connectionName = $.connectionName;
+        this.id = $.id;
+        this.name = $.name;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayPrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationGatewayName;
-        private @Nullable Output<String> connectionName;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
-        private Output<String> resourceGroupName;
+        private ApplicationGatewayPrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayPrivateEndpointConnectionArgs();
         }
 
         public Builder(ApplicationGatewayPrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGatewayName = defaults.applicationGatewayName;
-    	      this.connectionName = defaults.connectionName;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ApplicationGatewayPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGatewayName(Output<String> applicationGatewayName) {
-            this.applicationGatewayName = Objects.requireNonNull(applicationGatewayName);
+            $.applicationGatewayName = applicationGatewayName;
             return this;
         }
+
         public Builder applicationGatewayName(String applicationGatewayName) {
-            this.applicationGatewayName = Output.of(Objects.requireNonNull(applicationGatewayName));
-            return this;
+            return applicationGatewayName(Output.of(applicationGatewayName));
         }
+
         public Builder connectionName(@Nullable Output<String> connectionName) {
-            this.connectionName = connectionName;
+            $.connectionName = connectionName;
             return this;
         }
-        public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Codegen.ofNullable(connectionName);
-            return this;
+
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
-            return this;
+
+        public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ApplicationGatewayPrivateEndpointConnectionArgs build() {
-            return new ApplicationGatewayPrivateEndpointConnectionArgs(applicationGatewayName, connectionName, id, name, privateLinkServiceConnectionState, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ApplicationGatewayPrivateEndpointConnectionArgs build() {
+            $.applicationGatewayName = Objects.requireNonNull($.applicationGatewayName, "expected parameter 'applicationGatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

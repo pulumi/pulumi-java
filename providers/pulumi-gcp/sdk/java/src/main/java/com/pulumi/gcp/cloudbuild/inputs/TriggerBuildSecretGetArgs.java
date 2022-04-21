@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TriggerBuildSecretGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final Output<String> kmsKeyName;
+    private Output<String> kmsKeyName;
 
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
@@ -34,63 +34,59 @@ public final class TriggerBuildSecretGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="secretEnv")
-      private final @Nullable Output<Map<String,String>> secretEnv;
+    private @Nullable Output<Map<String,String>> secretEnv;
 
-    public Output<Map<String,String>> secretEnv() {
-        return this.secretEnv == null ? Codegen.empty() : this.secretEnv;
+    public Optional<Output<Map<String,String>>> secretEnv() {
+        return Optional.ofNullable(this.secretEnv);
     }
 
-    public TriggerBuildSecretGetArgs(
-        Output<String> kmsKeyName,
-        @Nullable Output<Map<String,String>> secretEnv) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-        this.secretEnv = secretEnv;
-    }
+    private TriggerBuildSecretGetArgs() {}
 
-    private TriggerBuildSecretGetArgs() {
-        this.kmsKeyName = Codegen.empty();
-        this.secretEnv = Codegen.empty();
+    private TriggerBuildSecretGetArgs(TriggerBuildSecretGetArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
+        this.secretEnv = $.secretEnv;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildSecretGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKeyName;
-        private @Nullable Output<Map<String,String>> secretEnv;
+        private TriggerBuildSecretGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildSecretGetArgs();
         }
 
         public Builder(TriggerBuildSecretGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.secretEnv = defaults.secretEnv;
+            $ = new TriggerBuildSecretGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(Output<String> kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
-            return this;
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder secretEnv(@Nullable Output<Map<String,String>> secretEnv) {
-            this.secretEnv = secretEnv;
+            $.secretEnv = secretEnv;
             return this;
         }
-        public Builder secretEnv(@Nullable Map<String,String> secretEnv) {
-            this.secretEnv = Codegen.ofNullable(secretEnv);
-            return this;
-        }        public TriggerBuildSecretGetArgs build() {
-            return new TriggerBuildSecretGetArgs(kmsKeyName, secretEnv);
+
+        public Builder secretEnv(Map<String,String> secretEnv) {
+            return secretEnv(Output.of(secretEnv));
+        }
+
+        public TriggerBuildSecretGetArgs build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

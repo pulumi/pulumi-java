@@ -5,10 +5,10 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EditAtomArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTimeOffset")
-      private final @Nullable Output<String> endTimeOffset;
+    private @Nullable Output<String> endTimeOffset;
 
-    public Output<String> endTimeOffset() {
-        return this.endTimeOffset == null ? Codegen.empty() : this.endTimeOffset;
+    public Optional<Output<String>> endTimeOffset() {
+        return Optional.ofNullable(this.endTimeOffset);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EditAtomArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputs")
-      private final @Nullable Output<List<String>> inputs;
+    private @Nullable Output<List<String>> inputs;
 
-    public Output<List<String>> inputs() {
-        return this.inputs == null ? Codegen.empty() : this.inputs;
+    public Optional<Output<List<String>>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EditAtomArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -58,92 +58,82 @@ public final class EditAtomArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTimeOffset")
-      private final @Nullable Output<String> startTimeOffset;
+    private @Nullable Output<String> startTimeOffset;
 
-    public Output<String> startTimeOffset() {
-        return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
+    public Optional<Output<String>> startTimeOffset() {
+        return Optional.ofNullable(this.startTimeOffset);
     }
 
-    public EditAtomArgs(
-        @Nullable Output<String> endTimeOffset,
-        @Nullable Output<List<String>> inputs,
-        @Nullable Output<String> key,
-        @Nullable Output<String> startTimeOffset) {
-        this.endTimeOffset = endTimeOffset;
-        this.inputs = inputs;
-        this.key = key;
-        this.startTimeOffset = startTimeOffset;
-    }
+    private EditAtomArgs() {}
 
-    private EditAtomArgs() {
-        this.endTimeOffset = Codegen.empty();
-        this.inputs = Codegen.empty();
-        this.key = Codegen.empty();
-        this.startTimeOffset = Codegen.empty();
+    private EditAtomArgs(EditAtomArgs $) {
+        this.endTimeOffset = $.endTimeOffset;
+        this.inputs = $.inputs;
+        this.key = $.key;
+        this.startTimeOffset = $.startTimeOffset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EditAtomArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endTimeOffset;
-        private @Nullable Output<List<String>> inputs;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> startTimeOffset;
+        private EditAtomArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EditAtomArgs();
         }
 
         public Builder(EditAtomArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTimeOffset = defaults.endTimeOffset;
-    	      this.inputs = defaults.inputs;
-    	      this.key = defaults.key;
-    	      this.startTimeOffset = defaults.startTimeOffset;
+            $ = new EditAtomArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTimeOffset(@Nullable Output<String> endTimeOffset) {
-            this.endTimeOffset = endTimeOffset;
+            $.endTimeOffset = endTimeOffset;
             return this;
         }
-        public Builder endTimeOffset(@Nullable String endTimeOffset) {
-            this.endTimeOffset = Codegen.ofNullable(endTimeOffset);
-            return this;
+
+        public Builder endTimeOffset(String endTimeOffset) {
+            return endTimeOffset(Output.of(endTimeOffset));
         }
+
         public Builder inputs(@Nullable Output<List<String>> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
-        public Builder inputs(@Nullable List<String> inputs) {
-            this.inputs = Codegen.ofNullable(inputs);
-            return this;
+
+        public Builder inputs(List<String> inputs) {
+            return inputs(Output.of(inputs));
         }
+
         public Builder inputs(String... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
-            this.startTimeOffset = startTimeOffset;
+            $.startTimeOffset = startTimeOffset;
             return this;
         }
-        public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Codegen.ofNullable(startTimeOffset);
-            return this;
-        }        public EditAtomArgs build() {
-            return new EditAtomArgs(endTimeOffset, inputs, key, startTimeOffset);
+
+        public Builder startTimeOffset(String startTimeOffset) {
+            return startTimeOffset(Output.of(startTimeOffset));
+        }
+
+        public EditAtomArgs build() {
+            return $;
         }
     }
+
 }

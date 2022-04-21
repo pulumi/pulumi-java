@@ -6,10 +6,10 @@ package com.pulumi.aws.codebuild;
 import com.pulumi.aws.codebuild.inputs.WebhookFilterGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branchFilter")
-      private final @Nullable Output<String> branchFilter;
+    private @Nullable Output<String> branchFilter;
 
-    public Output<String> branchFilter() {
-        return this.branchFilter == null ? Codegen.empty() : this.branchFilter;
+    public Optional<Output<String>> branchFilter() {
+        return Optional.ofNullable(this.branchFilter);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildType")
-      private final @Nullable Output<String> buildType;
+    private @Nullable Output<String> buildType;
 
-    public Output<String> buildType() {
-        return this.buildType == null ? Codegen.empty() : this.buildType;
+    public Optional<Output<String>> buildType() {
+        return Optional.ofNullable(this.buildType);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filterGroups")
-      private final @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups;
+    private @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups;
 
-    public Output<List<WebhookFilterGroupArgs>> filterGroups() {
-        return this.filterGroups == null ? Codegen.empty() : this.filterGroups;
+    public Optional<Output<List<WebhookFilterGroupArgs>>> filterGroups() {
+        return Optional.ofNullable(this.filterGroups);
     }
 
     /**
@@ -55,92 +55,83 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName", required=true)
-      private final Output<String> projectName;
+    private Output<String> projectName;
 
     public Output<String> projectName() {
         return this.projectName;
     }
 
-    public WebhookArgs(
-        @Nullable Output<String> branchFilter,
-        @Nullable Output<String> buildType,
-        @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups,
-        Output<String> projectName) {
-        this.branchFilter = branchFilter;
-        this.buildType = buildType;
-        this.filterGroups = filterGroups;
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-    }
+    private WebhookArgs() {}
 
-    private WebhookArgs() {
-        this.branchFilter = Codegen.empty();
-        this.buildType = Codegen.empty();
-        this.filterGroups = Codegen.empty();
-        this.projectName = Codegen.empty();
+    private WebhookArgs(WebhookArgs $) {
+        this.branchFilter = $.branchFilter;
+        this.buildType = $.buildType;
+        this.filterGroups = $.filterGroups;
+        this.projectName = $.projectName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branchFilter;
-        private @Nullable Output<String> buildType;
-        private @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups;
-        private Output<String> projectName;
+        private WebhookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookArgs();
         }
 
         public Builder(WebhookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchFilter = defaults.branchFilter;
-    	      this.buildType = defaults.buildType;
-    	      this.filterGroups = defaults.filterGroups;
-    	      this.projectName = defaults.projectName;
+            $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branchFilter(@Nullable Output<String> branchFilter) {
-            this.branchFilter = branchFilter;
+            $.branchFilter = branchFilter;
             return this;
         }
-        public Builder branchFilter(@Nullable String branchFilter) {
-            this.branchFilter = Codegen.ofNullable(branchFilter);
-            return this;
+
+        public Builder branchFilter(String branchFilter) {
+            return branchFilter(Output.of(branchFilter));
         }
+
         public Builder buildType(@Nullable Output<String> buildType) {
-            this.buildType = buildType;
+            $.buildType = buildType;
             return this;
         }
-        public Builder buildType(@Nullable String buildType) {
-            this.buildType = Codegen.ofNullable(buildType);
-            return this;
+
+        public Builder buildType(String buildType) {
+            return buildType(Output.of(buildType));
         }
+
         public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupArgs>> filterGroups) {
-            this.filterGroups = filterGroups;
+            $.filterGroups = filterGroups;
             return this;
         }
-        public Builder filterGroups(@Nullable List<WebhookFilterGroupArgs> filterGroups) {
-            this.filterGroups = Codegen.ofNullable(filterGroups);
-            return this;
+
+        public Builder filterGroups(List<WebhookFilterGroupArgs> filterGroups) {
+            return filterGroups(Output.of(filterGroups));
         }
+
         public Builder filterGroups(WebhookFilterGroupArgs... filterGroups) {
             return filterGroups(List.of(filterGroups));
         }
+
         public Builder projectName(Output<String> projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Output.of(Objects.requireNonNull(projectName));
-            return this;
-        }        public WebhookArgs build() {
-            return new WebhookArgs(branchFilter, buildType, filterGroups, projectName);
+            return projectName(Output.of(projectName));
+        }
+
+        public WebhookArgs build() {
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            return $;
         }
     }
+
 }

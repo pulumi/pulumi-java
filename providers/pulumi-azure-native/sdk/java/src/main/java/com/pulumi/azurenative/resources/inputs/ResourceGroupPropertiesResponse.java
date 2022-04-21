@@ -21,45 +21,45 @@ public final class ResourceGroupPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public ResourceGroupPropertiesResponse(String provisioningState) {
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private ResourceGroupPropertiesResponse() {}
 
-    private ResourceGroupPropertiesResponse() {
-        this.provisioningState = null;
+    private ResourceGroupPropertiesResponse(ResourceGroupPropertiesResponse $) {
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGroupPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String provisioningState;
+        private ResourceGroupPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGroupPropertiesResponse();
         }
 
         public Builder(ResourceGroupPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new ResourceGroupPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public ResourceGroupPropertiesResponse build() {
-            return new ResourceGroupPropertiesResponse(provisioningState);
+        }
+
+        public ResourceGroupPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

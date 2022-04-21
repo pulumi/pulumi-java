@@ -28,10 +28,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="additionalUnattendContent")
-      private final @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent;
+    private @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent;
 
-    public List<AdditionalUnattendContentResponse> additionalUnattendContent() {
-        return this.additionalUnattendContent == null ? List.of() : this.additionalUnattendContent;
+    public Optional<List<AdditionalUnattendContentResponse>> additionalUnattendContent() {
+        return Optional.ofNullable(this.additionalUnattendContent);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enableAutomaticUpdates")
-      private final @Nullable Boolean enableAutomaticUpdates;
+    private @Nullable Boolean enableAutomaticUpdates;
 
     public Optional<Boolean> enableAutomaticUpdates() {
-        return this.enableAutomaticUpdates == null ? Optional.empty() : Optional.ofNullable(this.enableAutomaticUpdates);
+        return Optional.ofNullable(this.enableAutomaticUpdates);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="patchSettings")
-      private final @Nullable PatchSettingsResponse patchSettings;
+    private @Nullable PatchSettingsResponse patchSettings;
 
     public Optional<PatchSettingsResponse> patchSettings() {
-        return this.patchSettings == null ? Optional.empty() : Optional.ofNullable(this.patchSettings);
+        return Optional.ofNullable(this.patchSettings);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="provisionVMAgent")
-      private final @Nullable Boolean provisionVMAgent;
+    private @Nullable Boolean provisionVMAgent;
 
     public Optional<Boolean> provisionVMAgent() {
-        return this.provisionVMAgent == null ? Optional.empty() : Optional.ofNullable(this.provisionVMAgent);
+        return Optional.ofNullable(this.provisionVMAgent);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable String timeZone;
+    private @Nullable String timeZone;
 
     public Optional<String> timeZone() {
-        return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
+        return Optional.ofNullable(this.timeZone);
     }
 
     /**
@@ -83,94 +83,78 @@ public final class WindowsConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="winRM")
-      private final @Nullable WinRMConfigurationResponse winRM;
+    private @Nullable WinRMConfigurationResponse winRM;
 
     public Optional<WinRMConfigurationResponse> winRM() {
-        return this.winRM == null ? Optional.empty() : Optional.ofNullable(this.winRM);
+        return Optional.ofNullable(this.winRM);
     }
 
-    public WindowsConfigurationResponse(
-        @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent,
-        @Nullable Boolean enableAutomaticUpdates,
-        @Nullable PatchSettingsResponse patchSettings,
-        @Nullable Boolean provisionVMAgent,
-        @Nullable String timeZone,
-        @Nullable WinRMConfigurationResponse winRM) {
-        this.additionalUnattendContent = additionalUnattendContent;
-        this.enableAutomaticUpdates = enableAutomaticUpdates;
-        this.patchSettings = patchSettings;
-        this.provisionVMAgent = provisionVMAgent;
-        this.timeZone = timeZone;
-        this.winRM = winRM;
-    }
+    private WindowsConfigurationResponse() {}
 
-    private WindowsConfigurationResponse() {
-        this.additionalUnattendContent = List.of();
-        this.enableAutomaticUpdates = null;
-        this.patchSettings = null;
-        this.provisionVMAgent = null;
-        this.timeZone = null;
-        this.winRM = null;
+    private WindowsConfigurationResponse(WindowsConfigurationResponse $) {
+        this.additionalUnattendContent = $.additionalUnattendContent;
+        this.enableAutomaticUpdates = $.enableAutomaticUpdates;
+        this.patchSettings = $.patchSettings;
+        this.provisionVMAgent = $.provisionVMAgent;
+        this.timeZone = $.timeZone;
+        this.winRM = $.winRM;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent;
-        private @Nullable Boolean enableAutomaticUpdates;
-        private @Nullable PatchSettingsResponse patchSettings;
-        private @Nullable Boolean provisionVMAgent;
-        private @Nullable String timeZone;
-        private @Nullable WinRMConfigurationResponse winRM;
+        private WindowsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsConfigurationResponse();
         }
 
         public Builder(WindowsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalUnattendContent = defaults.additionalUnattendContent;
-    	      this.enableAutomaticUpdates = defaults.enableAutomaticUpdates;
-    	      this.patchSettings = defaults.patchSettings;
-    	      this.provisionVMAgent = defaults.provisionVMAgent;
-    	      this.timeZone = defaults.timeZone;
-    	      this.winRM = defaults.winRM;
+            $ = new WindowsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalUnattendContent(@Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent) {
-            this.additionalUnattendContent = additionalUnattendContent;
+            $.additionalUnattendContent = additionalUnattendContent;
             return this;
         }
+
         public Builder additionalUnattendContent(AdditionalUnattendContentResponse... additionalUnattendContent) {
             return additionalUnattendContent(List.of(additionalUnattendContent));
         }
+
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
-            this.enableAutomaticUpdates = enableAutomaticUpdates;
+            $.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
+
         public Builder patchSettings(@Nullable PatchSettingsResponse patchSettings) {
-            this.patchSettings = patchSettings;
+            $.patchSettings = patchSettings;
             return this;
         }
+
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
-            this.provisionVMAgent = provisionVMAgent;
+            $.provisionVMAgent = provisionVMAgent;
             return this;
         }
+
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder winRM(@Nullable WinRMConfigurationResponse winRM) {
-            this.winRM = winRM;
+            $.winRM = winRM;
             return this;
-        }        public WindowsConfigurationResponse build() {
-            return new WindowsConfigurationResponse(additionalUnattendContent, enableAutomaticUpdates, patchSettings, provisionVMAgent, timeZone, winRM);
+        }
+
+        public WindowsConfigurationResponse build() {
+            return $;
         }
     }
+
 }

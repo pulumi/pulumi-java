@@ -17,45 +17,45 @@ public final class ListContainerAppSecretsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ListContainerAppSecretsArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ListContainerAppSecretsArgs() {}
 
-    private ListContainerAppSecretsArgs() {
-        this.name = null;
+    private ListContainerAppSecretsArgs(ListContainerAppSecretsArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListContainerAppSecretsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private ListContainerAppSecretsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListContainerAppSecretsArgs();
         }
 
         public Builder(ListContainerAppSecretsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new ListContainerAppSecretsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ListContainerAppSecretsArgs build() {
-            return new ListContainerAppSecretsArgs(name);
+        }
+
+        public ListContainerAppSecretsArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

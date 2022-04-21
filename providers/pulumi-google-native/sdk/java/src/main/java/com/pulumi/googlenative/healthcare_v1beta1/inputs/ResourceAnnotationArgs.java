@@ -5,9 +5,9 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ResourceAnnotationArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
-    public ResourceAnnotationArgs(@Nullable Output<String> label) {
-        this.label = label;
-    }
+    private ResourceAnnotationArgs() {}
 
-    private ResourceAnnotationArgs() {
-        this.label = Codegen.empty();
+    private ResourceAnnotationArgs(ResourceAnnotationArgs $) {
+        this.label = $.label;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceAnnotationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> label;
+        private ResourceAnnotationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceAnnotationArgs();
         }
 
         public Builder(ResourceAnnotationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
+            $ = new ResourceAnnotationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
-        }        public ResourceAnnotationArgs build() {
-            return new ResourceAnnotationArgs(label);
+
+        public Builder label(String label) {
+            return label(Output.of(label));
+        }
+
+        public ResourceAnnotationArgs build() {
+            return $;
         }
     }
+
 }

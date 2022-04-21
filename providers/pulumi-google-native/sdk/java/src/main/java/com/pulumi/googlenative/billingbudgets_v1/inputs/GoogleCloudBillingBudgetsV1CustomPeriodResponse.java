@@ -21,7 +21,7 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodResponse extends com.p
      * 
      */
     @Import(name="endDate", required=true)
-      private final GoogleTypeDateResponse endDate;
+    private GoogleTypeDateResponse endDate;
 
     public GoogleTypeDateResponse endDate() {
         return this.endDate;
@@ -32,55 +32,52 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodResponse extends com.p
      * 
      */
     @Import(name="startDate", required=true)
-      private final GoogleTypeDateResponse startDate;
+    private GoogleTypeDateResponse startDate;
 
     public GoogleTypeDateResponse startDate() {
         return this.startDate;
     }
 
-    public GoogleCloudBillingBudgetsV1CustomPeriodResponse(
-        GoogleTypeDateResponse endDate,
-        GoogleTypeDateResponse startDate) {
-        this.endDate = Objects.requireNonNull(endDate, "expected parameter 'endDate' to be non-null");
-        this.startDate = Objects.requireNonNull(startDate, "expected parameter 'startDate' to be non-null");
-    }
+    private GoogleCloudBillingBudgetsV1CustomPeriodResponse() {}
 
-    private GoogleCloudBillingBudgetsV1CustomPeriodResponse() {
-        this.endDate = null;
-        this.startDate = null;
+    private GoogleCloudBillingBudgetsV1CustomPeriodResponse(GoogleCloudBillingBudgetsV1CustomPeriodResponse $) {
+        this.endDate = $.endDate;
+        this.startDate = $.startDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1CustomPeriodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleTypeDateResponse endDate;
-        private GoogleTypeDateResponse startDate;
+        private GoogleCloudBillingBudgetsV1CustomPeriodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1CustomPeriodResponse();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1CustomPeriodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.startDate = defaults.startDate;
+            $ = new GoogleCloudBillingBudgetsV1CustomPeriodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(GoogleTypeDateResponse endDate) {
-            this.endDate = Objects.requireNonNull(endDate);
+            $.endDate = endDate;
             return this;
         }
+
         public Builder startDate(GoogleTypeDateResponse startDate) {
-            this.startDate = Objects.requireNonNull(startDate);
+            $.startDate = startDate;
             return this;
-        }        public GoogleCloudBillingBudgetsV1CustomPeriodResponse build() {
-            return new GoogleCloudBillingBudgetsV1CustomPeriodResponse(endDate, startDate);
+        }
+
+        public GoogleCloudBillingBudgetsV1CustomPeriodResponse build() {
+            $.endDate = Objects.requireNonNull($.endDate, "expected parameter 'endDate' to be non-null");
+            $.startDate = Objects.requireNonNull($.startDate, "expected parameter 'startDate' to be non-null");
+            return $;
         }
     }
+
 }

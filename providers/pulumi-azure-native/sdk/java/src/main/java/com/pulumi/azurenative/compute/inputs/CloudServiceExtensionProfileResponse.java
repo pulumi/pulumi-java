@@ -24,48 +24,48 @@ public final class CloudServiceExtensionProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="extensions")
-      private final @Nullable List<ExtensionResponse> extensions;
+    private @Nullable List<ExtensionResponse> extensions;
 
-    public List<ExtensionResponse> extensions() {
-        return this.extensions == null ? List.of() : this.extensions;
+    public Optional<List<ExtensionResponse>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
-    public CloudServiceExtensionProfileResponse(@Nullable List<ExtensionResponse> extensions) {
-        this.extensions = extensions;
-    }
+    private CloudServiceExtensionProfileResponse() {}
 
-    private CloudServiceExtensionProfileResponse() {
-        this.extensions = List.of();
+    private CloudServiceExtensionProfileResponse(CloudServiceExtensionProfileResponse $) {
+        this.extensions = $.extensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceExtensionProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ExtensionResponse> extensions;
+        private CloudServiceExtensionProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceExtensionProfileResponse();
         }
 
         public Builder(CloudServiceExtensionProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensions = defaults.extensions;
+            $ = new CloudServiceExtensionProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extensions(@Nullable List<ExtensionResponse> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
+
         public Builder extensions(ExtensionResponse... extensions) {
             return extensions(List.of(extensions));
-        }        public CloudServiceExtensionProfileResponse build() {
-            return new CloudServiceExtensionProfileResponse(extensions);
+        }
+
+        public CloudServiceExtensionProfileResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class SasTokenInformationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="accessToken", required=true)
-      private final String accessToken;
+    private String accessToken;
 
     public String accessToken() {
         return this.accessToken;
     }
 
-    public SasTokenInformationResponse(String accessToken) {
-        this.accessToken = Objects.requireNonNull(accessToken, "expected parameter 'accessToken' to be non-null");
-    }
+    private SasTokenInformationResponse() {}
 
-    private SasTokenInformationResponse() {
-        this.accessToken = null;
+    private SasTokenInformationResponse(SasTokenInformationResponse $) {
+        this.accessToken = $.accessToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SasTokenInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessToken;
+        private SasTokenInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SasTokenInformationResponse();
         }
 
         public Builder(SasTokenInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
+            $ = new SasTokenInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(String accessToken) {
-            this.accessToken = Objects.requireNonNull(accessToken);
+            $.accessToken = accessToken;
             return this;
-        }        public SasTokenInformationResponse build() {
-            return new SasTokenInformationResponse(accessToken);
+        }
+
+        public SasTokenInformationResponse build() {
+            $.accessToken = Objects.requireNonNull($.accessToken, "expected parameter 'accessToken' to be non-null");
+            return $;
         }
     }
+
 }

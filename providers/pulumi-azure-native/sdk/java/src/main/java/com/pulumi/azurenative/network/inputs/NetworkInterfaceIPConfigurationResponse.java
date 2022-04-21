@@ -33,10 +33,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="applicationGatewayBackendAddressPools")
-      private final @Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools;
+    private @Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools;
 
-    public List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools() {
-        return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
+    public Optional<List<ApplicationGatewayBackendAddressPoolResponse>> applicationGatewayBackendAddressPools() {
+        return Optional.ofNullable(this.applicationGatewayBackendAddressPools);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="applicationSecurityGroups")
-      private final @Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups;
+    private @Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups;
 
-    public List<ApplicationSecurityGroupResponse> applicationSecurityGroups() {
-        return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
+    public Optional<List<ApplicationSecurityGroupResponse>> applicationSecurityGroups() {
+        return Optional.ofNullable(this.applicationSecurityGroups);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -66,10 +66,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="loadBalancerBackendAddressPools")
-      private final @Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools;
+    private @Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools;
 
-    public List<BackendAddressPoolResponse> loadBalancerBackendAddressPools() {
-        return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
+    public Optional<List<BackendAddressPoolResponse>> loadBalancerBackendAddressPools() {
+        return Optional.ofNullable(this.loadBalancerBackendAddressPools);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="loadBalancerInboundNatRules")
-      private final @Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules;
+    private @Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules;
 
-    public List<InboundNatRuleResponse> loadBalancerInboundNatRules() {
-        return this.loadBalancerInboundNatRules == null ? List.of() : this.loadBalancerInboundNatRules;
+    public Optional<List<InboundNatRuleResponse>> loadBalancerInboundNatRules() {
+        return Optional.ofNullable(this.loadBalancerInboundNatRules);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="primary")
-      private final @Nullable Boolean primary;
+    private @Nullable Boolean primary;
 
     public Optional<Boolean> primary() {
-        return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
+        return Optional.ofNullable(this.primary);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable String privateIPAddress;
+    private @Nullable String privateIPAddress;
 
     public Optional<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="privateIPAddressVersion")
-      private final @Nullable String privateIPAddressVersion;
+    private @Nullable String privateIPAddressVersion;
 
     public Optional<String> privateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
+        return Optional.ofNullable(this.privateIPAddressVersion);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="privateIPAllocationMethod")
-      private final @Nullable String privateIPAllocationMethod;
+    private @Nullable String privateIPAllocationMethod;
 
     public Optional<String> privateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
+        return Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
     /**
@@ -154,7 +154,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="privateLinkConnectionProperties", required=true)
-      private final NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties;
+    private NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties;
 
     public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties() {
         return this.privateLinkConnectionProperties;
@@ -165,7 +165,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -176,10 +176,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="publicIPAddress")
-      private final @Nullable PublicIPAddressResponse publicIPAddress;
+    private @Nullable PublicIPAddressResponse publicIPAddress;
 
     public Optional<PublicIPAddressResponse> publicIPAddress() {
-        return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
+        return Optional.ofNullable(this.publicIPAddress);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubnetResponse subnet;
+    private @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -209,205 +209,163 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="virtualNetworkTaps")
-      private final @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps;
+    private @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps;
 
-    public List<VirtualNetworkTapResponse> virtualNetworkTaps() {
-        return this.virtualNetworkTaps == null ? List.of() : this.virtualNetworkTaps;
+    public Optional<List<VirtualNetworkTapResponse>> virtualNetworkTaps() {
+        return Optional.ofNullable(this.virtualNetworkTaps);
     }
 
-    public NetworkInterfaceIPConfigurationResponse(
-        @Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools,
-        @Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups,
-        String etag,
-        @Nullable String id,
-        @Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools,
-        @Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules,
-        @Nullable String name,
-        @Nullable Boolean primary,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAddressVersion,
-        @Nullable String privateIPAllocationMethod,
-        NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties,
-        String provisioningState,
-        @Nullable PublicIPAddressResponse publicIPAddress,
-        @Nullable SubnetResponse subnet,
-        @Nullable String type,
-        @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps) {
-        this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
-        this.applicationSecurityGroups = applicationSecurityGroups;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
-        this.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
-        this.name = name;
-        this.primary = primary;
-        this.privateIPAddress = privateIPAddress;
-        this.privateIPAddressVersion = privateIPAddressVersion;
-        this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.privateLinkConnectionProperties = Objects.requireNonNull(privateLinkConnectionProperties, "expected parameter 'privateLinkConnectionProperties' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicIPAddress = publicIPAddress;
-        this.subnet = subnet;
-        this.type = type;
-        this.virtualNetworkTaps = virtualNetworkTaps;
-    }
+    private NetworkInterfaceIPConfigurationResponse() {}
 
-    private NetworkInterfaceIPConfigurationResponse() {
-        this.applicationGatewayBackendAddressPools = List.of();
-        this.applicationSecurityGroups = List.of();
-        this.etag = null;
-        this.id = null;
-        this.loadBalancerBackendAddressPools = List.of();
-        this.loadBalancerInboundNatRules = List.of();
-        this.name = null;
-        this.primary = null;
-        this.privateIPAddress = null;
-        this.privateIPAddressVersion = null;
-        this.privateIPAllocationMethod = null;
-        this.privateLinkConnectionProperties = null;
-        this.provisioningState = null;
-        this.publicIPAddress = null;
-        this.subnet = null;
-        this.type = null;
-        this.virtualNetworkTaps = List.of();
+    private NetworkInterfaceIPConfigurationResponse(NetworkInterfaceIPConfigurationResponse $) {
+        this.applicationGatewayBackendAddressPools = $.applicationGatewayBackendAddressPools;
+        this.applicationSecurityGroups = $.applicationSecurityGroups;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.loadBalancerBackendAddressPools = $.loadBalancerBackendAddressPools;
+        this.loadBalancerInboundNatRules = $.loadBalancerInboundNatRules;
+        this.name = $.name;
+        this.primary = $.primary;
+        this.privateIPAddress = $.privateIPAddress;
+        this.privateIPAddressVersion = $.privateIPAddressVersion;
+        this.privateIPAllocationMethod = $.privateIPAllocationMethod;
+        this.privateLinkConnectionProperties = $.privateLinkConnectionProperties;
+        this.provisioningState = $.provisioningState;
+        this.publicIPAddress = $.publicIPAddress;
+        this.subnet = $.subnet;
+        this.type = $.type;
+        this.virtualNetworkTaps = $.virtualNetworkTaps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceIPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools;
-        private @Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools;
-        private @Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules;
-        private @Nullable String name;
-        private @Nullable Boolean primary;
-        private @Nullable String privateIPAddress;
-        private @Nullable String privateIPAddressVersion;
-        private @Nullable String privateIPAllocationMethod;
-        private NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties;
-        private String provisioningState;
-        private @Nullable PublicIPAddressResponse publicIPAddress;
-        private @Nullable SubnetResponse subnet;
-        private @Nullable String type;
-        private @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps;
+        private NetworkInterfaceIPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceIPConfigurationResponse();
         }
 
         public Builder(NetworkInterfaceIPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationGatewayBackendAddressPools = defaults.applicationGatewayBackendAddressPools;
-    	      this.applicationSecurityGroups = defaults.applicationSecurityGroups;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.loadBalancerBackendAddressPools = defaults.loadBalancerBackendAddressPools;
-    	      this.loadBalancerInboundNatRules = defaults.loadBalancerInboundNatRules;
-    	      this.name = defaults.name;
-    	      this.primary = defaults.primary;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.privateIPAddressVersion = defaults.privateIPAddressVersion;
-    	      this.privateIPAllocationMethod = defaults.privateIPAllocationMethod;
-    	      this.privateLinkConnectionProperties = defaults.privateLinkConnectionProperties;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.subnet = defaults.subnet;
-    	      this.type = defaults.type;
-    	      this.virtualNetworkTaps = defaults.virtualNetworkTaps;
+            $ = new NetworkInterfaceIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationGatewayBackendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools) {
-            this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
+            $.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
+
         public Builder applicationGatewayBackendAddressPools(ApplicationGatewayBackendAddressPoolResponse... applicationGatewayBackendAddressPools) {
             return applicationGatewayBackendAddressPools(List.of(applicationGatewayBackendAddressPools));
         }
+
         public Builder applicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups) {
-            this.applicationSecurityGroups = applicationSecurityGroups;
+            $.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
+
         public Builder applicationSecurityGroups(ApplicationSecurityGroupResponse... applicationSecurityGroups) {
             return applicationSecurityGroups(List.of(applicationSecurityGroups));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder loadBalancerBackendAddressPools(@Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
+            $.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
+
         public Builder loadBalancerBackendAddressPools(BackendAddressPoolResponse... loadBalancerBackendAddressPools) {
             return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
         }
+
         public Builder loadBalancerInboundNatRules(@Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules) {
-            this.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
+            $.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
             return this;
         }
+
         public Builder loadBalancerInboundNatRules(InboundNatRuleResponse... loadBalancerInboundNatRules) {
             return loadBalancerInboundNatRules(List.of(loadBalancerInboundNatRules));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
+
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
-            this.privateIPAddressVersion = privateIPAddressVersion;
+            $.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
+
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = privateIPAllocationMethod;
+            $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
+
         public Builder privateLinkConnectionProperties(NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties) {
-            this.privateLinkConnectionProperties = Objects.requireNonNull(privateLinkConnectionProperties);
+            $.privateLinkConnectionProperties = privateLinkConnectionProperties;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
-            this.publicIPAddress = publicIPAddress;
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
+
         public Builder subnet(@Nullable SubnetResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder virtualNetworkTaps(@Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps) {
-            this.virtualNetworkTaps = virtualNetworkTaps;
+            $.virtualNetworkTaps = virtualNetworkTaps;
             return this;
         }
+
         public Builder virtualNetworkTaps(VirtualNetworkTapResponse... virtualNetworkTaps) {
             return virtualNetworkTaps(List.of(virtualNetworkTaps));
-        }        public NetworkInterfaceIPConfigurationResponse build() {
-            return new NetworkInterfaceIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, etag, id, loadBalancerBackendAddressPools, loadBalancerInboundNatRules, name, primary, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, privateLinkConnectionProperties, provisioningState, publicIPAddress, subnet, type, virtualNetworkTaps);
+        }
+
+        public NetworkInterfaceIPConfigurationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.privateLinkConnectionProperties = Objects.requireNonNull($.privateLinkConnectionProperties, "expected parameter 'privateLinkConnectionProperties' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

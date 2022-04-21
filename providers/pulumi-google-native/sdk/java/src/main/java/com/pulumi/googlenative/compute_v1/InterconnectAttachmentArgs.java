@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.InterconnectAttachmentBandwidth;
 import com.pulumi.googlenative.compute_v1.enums.InterconnectAttachmentEdgeAvailabilityDomain;
 import com.pulumi.googlenative.compute_v1.enums.InterconnectAttachmentEncryption;
@@ -17,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="adminEnabled")
-      private final @Nullable Output<Boolean> adminEnabled;
+    private @Nullable Output<Boolean> adminEnabled;
 
-    public Output<Boolean> adminEnabled() {
-        return this.adminEnabled == null ? Codegen.empty() : this.adminEnabled;
+    public Optional<Output<Boolean>> adminEnabled() {
+        return Optional.ofNullable(this.adminEnabled);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bandwidth")
-      private final @Nullable Output<InterconnectAttachmentBandwidth> bandwidth;
+    private @Nullable Output<InterconnectAttachmentBandwidth> bandwidth;
 
-    public Output<InterconnectAttachmentBandwidth> bandwidth() {
-        return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
+    public Optional<Output<InterconnectAttachmentBandwidth>> bandwidth() {
+        return Optional.ofNullable(this.bandwidth);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="candidateIpv6Subnets")
-      private final @Nullable Output<List<String>> candidateIpv6Subnets;
+    private @Nullable Output<List<String>> candidateIpv6Subnets;
 
-    public Output<List<String>> candidateIpv6Subnets() {
-        return this.candidateIpv6Subnets == null ? Codegen.empty() : this.candidateIpv6Subnets;
+    public Optional<Output<List<String>>> candidateIpv6Subnets() {
+        return Optional.ofNullable(this.candidateIpv6Subnets);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="candidateSubnets")
-      private final @Nullable Output<List<String>> candidateSubnets;
+    private @Nullable Output<List<String>> candidateSubnets;
 
-    public Output<List<String>> candidateSubnets() {
-        return this.candidateSubnets == null ? Codegen.empty() : this.candidateSubnets;
+    public Optional<Output<List<String>>> candidateSubnets() {
+        return Optional.ofNullable(this.candidateSubnets);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cloudRouterIpv6InterfaceId")
-      private final @Nullable Output<String> cloudRouterIpv6InterfaceId;
+    private @Nullable Output<String> cloudRouterIpv6InterfaceId;
 
-    public Output<String> cloudRouterIpv6InterfaceId() {
-        return this.cloudRouterIpv6InterfaceId == null ? Codegen.empty() : this.cloudRouterIpv6InterfaceId;
+    public Optional<Output<String>> cloudRouterIpv6InterfaceId() {
+        return Optional.ofNullable(this.cloudRouterIpv6InterfaceId);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="customerRouterIpv6InterfaceId")
-      private final @Nullable Output<String> customerRouterIpv6InterfaceId;
+    private @Nullable Output<String> customerRouterIpv6InterfaceId;
 
-    public Output<String> customerRouterIpv6InterfaceId() {
-        return this.customerRouterIpv6InterfaceId == null ? Codegen.empty() : this.customerRouterIpv6InterfaceId;
+    public Optional<Output<String>> customerRouterIpv6InterfaceId() {
+        return Optional.ofNullable(this.customerRouterIpv6InterfaceId);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataplaneVersion")
-      private final @Nullable Output<Integer> dataplaneVersion;
+    private @Nullable Output<Integer> dataplaneVersion;
 
-    public Output<Integer> dataplaneVersion() {
-        return this.dataplaneVersion == null ? Codegen.empty() : this.dataplaneVersion;
+    public Optional<Output<Integer>> dataplaneVersion() {
+        return Optional.ofNullable(this.dataplaneVersion);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="edgeAvailabilityDomain")
-      private final @Nullable Output<InterconnectAttachmentEdgeAvailabilityDomain> edgeAvailabilityDomain;
+    private @Nullable Output<InterconnectAttachmentEdgeAvailabilityDomain> edgeAvailabilityDomain;
 
-    public Output<InterconnectAttachmentEdgeAvailabilityDomain> edgeAvailabilityDomain() {
-        return this.edgeAvailabilityDomain == null ? Codegen.empty() : this.edgeAvailabilityDomain;
+    public Optional<Output<InterconnectAttachmentEdgeAvailabilityDomain>> edgeAvailabilityDomain() {
+        return Optional.ofNullable(this.edgeAvailabilityDomain);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<InterconnectAttachmentEncryption> encryption;
+    private @Nullable Output<InterconnectAttachmentEncryption> encryption;
 
-    public Output<InterconnectAttachmentEncryption> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<InterconnectAttachmentEncryption>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="interconnect")
-      private final @Nullable Output<String> interconnect;
+    private @Nullable Output<String> interconnect;
 
-    public Output<String> interconnect() {
-        return this.interconnect == null ? Codegen.empty() : this.interconnect;
+    public Optional<Output<String>> interconnect() {
+        return Optional.ofNullable(this.interconnect);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="ipsecInternalAddresses")
-      private final @Nullable Output<List<String>> ipsecInternalAddresses;
+    private @Nullable Output<List<String>> ipsecInternalAddresses;
 
-    public Output<List<String>> ipsecInternalAddresses() {
-        return this.ipsecInternalAddresses == null ? Codegen.empty() : this.ipsecInternalAddresses;
+    public Optional<Output<List<String>>> ipsecInternalAddresses() {
+        return Optional.ofNullable(this.ipsecInternalAddresses);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="mtu")
-      private final @Nullable Output<Integer> mtu;
+    private @Nullable Output<Integer> mtu;
 
-    public Output<Integer> mtu() {
-        return this.mtu == null ? Codegen.empty() : this.mtu;
+    public Optional<Output<Integer>> mtu() {
+        return Optional.ofNullable(this.mtu);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="pairingKey")
-      private final @Nullable Output<String> pairingKey;
+    private @Nullable Output<String> pairingKey;
 
-    public Output<String> pairingKey() {
-        return this.pairingKey == null ? Codegen.empty() : this.pairingKey;
+    public Optional<Output<String>> pairingKey() {
+        return Optional.ofNullable(this.pairingKey);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="partnerAsn")
-      private final @Nullable Output<String> partnerAsn;
+    private @Nullable Output<String> partnerAsn;
 
-    public Output<String> partnerAsn() {
-        return this.partnerAsn == null ? Codegen.empty() : this.partnerAsn;
+    public Optional<Output<String>> partnerAsn() {
+        return Optional.ofNullable(this.partnerAsn);
     }
 
     /**
@@ -205,31 +205,31 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="partnerMetadata")
-      private final @Nullable Output<InterconnectAttachmentPartnerMetadataArgs> partnerMetadata;
+    private @Nullable Output<InterconnectAttachmentPartnerMetadataArgs> partnerMetadata;
 
-    public Output<InterconnectAttachmentPartnerMetadataArgs> partnerMetadata() {
-        return this.partnerMetadata == null ? Codegen.empty() : this.partnerMetadata;
+    public Optional<Output<InterconnectAttachmentPartnerMetadataArgs>> partnerMetadata() {
+        return Optional.ofNullable(this.partnerMetadata);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -237,10 +237,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="router")
-      private final @Nullable Output<String> router;
+    private @Nullable Output<String> router;
 
-    public Output<String> router() {
-        return this.router == null ? Codegen.empty() : this.router;
+    public Optional<Output<String>> router() {
+        return Optional.ofNullable(this.router);
     }
 
     /**
@@ -248,10 +248,10 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="stackType")
-      private final @Nullable Output<InterconnectAttachmentStackType> stackType;
+    private @Nullable Output<InterconnectAttachmentStackType> stackType;
 
-    public Output<InterconnectAttachmentStackType> stackType() {
-        return this.stackType == null ? Codegen.empty() : this.stackType;
+    public Optional<Output<InterconnectAttachmentStackType>> stackType() {
+        return Optional.ofNullable(this.stackType);
     }
 
     /**
@@ -259,17 +259,17 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<InterconnectAttachmentType> type;
+    private @Nullable Output<InterconnectAttachmentType> type;
 
-    public Output<InterconnectAttachmentType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<InterconnectAttachmentType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
     /**
@@ -277,371 +277,301 @@ public final class InterconnectAttachmentArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="vlanTag8021q")
-      private final @Nullable Output<Integer> vlanTag8021q;
+    private @Nullable Output<Integer> vlanTag8021q;
 
-    public Output<Integer> vlanTag8021q() {
-        return this.vlanTag8021q == null ? Codegen.empty() : this.vlanTag8021q;
+    public Optional<Output<Integer>> vlanTag8021q() {
+        return Optional.ofNullable(this.vlanTag8021q);
     }
 
-    public InterconnectAttachmentArgs(
-        @Nullable Output<Boolean> adminEnabled,
-        @Nullable Output<InterconnectAttachmentBandwidth> bandwidth,
-        @Nullable Output<List<String>> candidateIpv6Subnets,
-        @Nullable Output<List<String>> candidateSubnets,
-        @Nullable Output<String> cloudRouterIpv6InterfaceId,
-        @Nullable Output<String> customerRouterIpv6InterfaceId,
-        @Nullable Output<Integer> dataplaneVersion,
-        @Nullable Output<String> description,
-        @Nullable Output<InterconnectAttachmentEdgeAvailabilityDomain> edgeAvailabilityDomain,
-        @Nullable Output<InterconnectAttachmentEncryption> encryption,
-        @Nullable Output<String> interconnect,
-        @Nullable Output<List<String>> ipsecInternalAddresses,
-        @Nullable Output<Integer> mtu,
-        @Nullable Output<String> name,
-        @Nullable Output<String> pairingKey,
-        @Nullable Output<String> partnerAsn,
-        @Nullable Output<InterconnectAttachmentPartnerMetadataArgs> partnerMetadata,
-        @Nullable Output<String> project,
-        Output<String> region,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> router,
-        @Nullable Output<InterconnectAttachmentStackType> stackType,
-        @Nullable Output<InterconnectAttachmentType> type,
-        @Nullable Output<String> validateOnly,
-        @Nullable Output<Integer> vlanTag8021q) {
-        this.adminEnabled = adminEnabled;
-        this.bandwidth = bandwidth;
-        this.candidateIpv6Subnets = candidateIpv6Subnets;
-        this.candidateSubnets = candidateSubnets;
-        this.cloudRouterIpv6InterfaceId = cloudRouterIpv6InterfaceId;
-        this.customerRouterIpv6InterfaceId = customerRouterIpv6InterfaceId;
-        this.dataplaneVersion = dataplaneVersion;
-        this.description = description;
-        this.edgeAvailabilityDomain = edgeAvailabilityDomain;
-        this.encryption = encryption;
-        this.interconnect = interconnect;
-        this.ipsecInternalAddresses = ipsecInternalAddresses;
-        this.mtu = mtu;
-        this.name = name;
-        this.pairingKey = pairingKey;
-        this.partnerAsn = partnerAsn;
-        this.partnerMetadata = partnerMetadata;
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.requestId = requestId;
-        this.router = router;
-        this.stackType = stackType;
-        this.type = type;
-        this.validateOnly = validateOnly;
-        this.vlanTag8021q = vlanTag8021q;
-    }
+    private InterconnectAttachmentArgs() {}
 
-    private InterconnectAttachmentArgs() {
-        this.adminEnabled = Codegen.empty();
-        this.bandwidth = Codegen.empty();
-        this.candidateIpv6Subnets = Codegen.empty();
-        this.candidateSubnets = Codegen.empty();
-        this.cloudRouterIpv6InterfaceId = Codegen.empty();
-        this.customerRouterIpv6InterfaceId = Codegen.empty();
-        this.dataplaneVersion = Codegen.empty();
-        this.description = Codegen.empty();
-        this.edgeAvailabilityDomain = Codegen.empty();
-        this.encryption = Codegen.empty();
-        this.interconnect = Codegen.empty();
-        this.ipsecInternalAddresses = Codegen.empty();
-        this.mtu = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pairingKey = Codegen.empty();
-        this.partnerAsn = Codegen.empty();
-        this.partnerMetadata = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.router = Codegen.empty();
-        this.stackType = Codegen.empty();
-        this.type = Codegen.empty();
-        this.validateOnly = Codegen.empty();
-        this.vlanTag8021q = Codegen.empty();
+    private InterconnectAttachmentArgs(InterconnectAttachmentArgs $) {
+        this.adminEnabled = $.adminEnabled;
+        this.bandwidth = $.bandwidth;
+        this.candidateIpv6Subnets = $.candidateIpv6Subnets;
+        this.candidateSubnets = $.candidateSubnets;
+        this.cloudRouterIpv6InterfaceId = $.cloudRouterIpv6InterfaceId;
+        this.customerRouterIpv6InterfaceId = $.customerRouterIpv6InterfaceId;
+        this.dataplaneVersion = $.dataplaneVersion;
+        this.description = $.description;
+        this.edgeAvailabilityDomain = $.edgeAvailabilityDomain;
+        this.encryption = $.encryption;
+        this.interconnect = $.interconnect;
+        this.ipsecInternalAddresses = $.ipsecInternalAddresses;
+        this.mtu = $.mtu;
+        this.name = $.name;
+        this.pairingKey = $.pairingKey;
+        this.partnerAsn = $.partnerAsn;
+        this.partnerMetadata = $.partnerMetadata;
+        this.project = $.project;
+        this.region = $.region;
+        this.requestId = $.requestId;
+        this.router = $.router;
+        this.stackType = $.stackType;
+        this.type = $.type;
+        this.validateOnly = $.validateOnly;
+        this.vlanTag8021q = $.vlanTag8021q;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> adminEnabled;
-        private @Nullable Output<InterconnectAttachmentBandwidth> bandwidth;
-        private @Nullable Output<List<String>> candidateIpv6Subnets;
-        private @Nullable Output<List<String>> candidateSubnets;
-        private @Nullable Output<String> cloudRouterIpv6InterfaceId;
-        private @Nullable Output<String> customerRouterIpv6InterfaceId;
-        private @Nullable Output<Integer> dataplaneVersion;
-        private @Nullable Output<String> description;
-        private @Nullable Output<InterconnectAttachmentEdgeAvailabilityDomain> edgeAvailabilityDomain;
-        private @Nullable Output<InterconnectAttachmentEncryption> encryption;
-        private @Nullable Output<String> interconnect;
-        private @Nullable Output<List<String>> ipsecInternalAddresses;
-        private @Nullable Output<Integer> mtu;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> pairingKey;
-        private @Nullable Output<String> partnerAsn;
-        private @Nullable Output<InterconnectAttachmentPartnerMetadataArgs> partnerMetadata;
-        private @Nullable Output<String> project;
-        private Output<String> region;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> router;
-        private @Nullable Output<InterconnectAttachmentStackType> stackType;
-        private @Nullable Output<InterconnectAttachmentType> type;
-        private @Nullable Output<String> validateOnly;
-        private @Nullable Output<Integer> vlanTag8021q;
+        private InterconnectAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectAttachmentArgs();
         }
 
         public Builder(InterconnectAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminEnabled = defaults.adminEnabled;
-    	      this.bandwidth = defaults.bandwidth;
-    	      this.candidateIpv6Subnets = defaults.candidateIpv6Subnets;
-    	      this.candidateSubnets = defaults.candidateSubnets;
-    	      this.cloudRouterIpv6InterfaceId = defaults.cloudRouterIpv6InterfaceId;
-    	      this.customerRouterIpv6InterfaceId = defaults.customerRouterIpv6InterfaceId;
-    	      this.dataplaneVersion = defaults.dataplaneVersion;
-    	      this.description = defaults.description;
-    	      this.edgeAvailabilityDomain = defaults.edgeAvailabilityDomain;
-    	      this.encryption = defaults.encryption;
-    	      this.interconnect = defaults.interconnect;
-    	      this.ipsecInternalAddresses = defaults.ipsecInternalAddresses;
-    	      this.mtu = defaults.mtu;
-    	      this.name = defaults.name;
-    	      this.pairingKey = defaults.pairingKey;
-    	      this.partnerAsn = defaults.partnerAsn;
-    	      this.partnerMetadata = defaults.partnerMetadata;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.requestId = defaults.requestId;
-    	      this.router = defaults.router;
-    	      this.stackType = defaults.stackType;
-    	      this.type = defaults.type;
-    	      this.validateOnly = defaults.validateOnly;
-    	      this.vlanTag8021q = defaults.vlanTag8021q;
+            $ = new InterconnectAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminEnabled(@Nullable Output<Boolean> adminEnabled) {
-            this.adminEnabled = adminEnabled;
+            $.adminEnabled = adminEnabled;
             return this;
         }
-        public Builder adminEnabled(@Nullable Boolean adminEnabled) {
-            this.adminEnabled = Codegen.ofNullable(adminEnabled);
-            return this;
+
+        public Builder adminEnabled(Boolean adminEnabled) {
+            return adminEnabled(Output.of(adminEnabled));
         }
+
         public Builder bandwidth(@Nullable Output<InterconnectAttachmentBandwidth> bandwidth) {
-            this.bandwidth = bandwidth;
+            $.bandwidth = bandwidth;
             return this;
         }
-        public Builder bandwidth(@Nullable InterconnectAttachmentBandwidth bandwidth) {
-            this.bandwidth = Codegen.ofNullable(bandwidth);
-            return this;
+
+        public Builder bandwidth(InterconnectAttachmentBandwidth bandwidth) {
+            return bandwidth(Output.of(bandwidth));
         }
+
         public Builder candidateIpv6Subnets(@Nullable Output<List<String>> candidateIpv6Subnets) {
-            this.candidateIpv6Subnets = candidateIpv6Subnets;
+            $.candidateIpv6Subnets = candidateIpv6Subnets;
             return this;
         }
-        public Builder candidateIpv6Subnets(@Nullable List<String> candidateIpv6Subnets) {
-            this.candidateIpv6Subnets = Codegen.ofNullable(candidateIpv6Subnets);
-            return this;
+
+        public Builder candidateIpv6Subnets(List<String> candidateIpv6Subnets) {
+            return candidateIpv6Subnets(Output.of(candidateIpv6Subnets));
         }
+
         public Builder candidateIpv6Subnets(String... candidateIpv6Subnets) {
             return candidateIpv6Subnets(List.of(candidateIpv6Subnets));
         }
+
         public Builder candidateSubnets(@Nullable Output<List<String>> candidateSubnets) {
-            this.candidateSubnets = candidateSubnets;
+            $.candidateSubnets = candidateSubnets;
             return this;
         }
-        public Builder candidateSubnets(@Nullable List<String> candidateSubnets) {
-            this.candidateSubnets = Codegen.ofNullable(candidateSubnets);
-            return this;
+
+        public Builder candidateSubnets(List<String> candidateSubnets) {
+            return candidateSubnets(Output.of(candidateSubnets));
         }
+
         public Builder candidateSubnets(String... candidateSubnets) {
             return candidateSubnets(List.of(candidateSubnets));
         }
+
         public Builder cloudRouterIpv6InterfaceId(@Nullable Output<String> cloudRouterIpv6InterfaceId) {
-            this.cloudRouterIpv6InterfaceId = cloudRouterIpv6InterfaceId;
+            $.cloudRouterIpv6InterfaceId = cloudRouterIpv6InterfaceId;
             return this;
         }
-        public Builder cloudRouterIpv6InterfaceId(@Nullable String cloudRouterIpv6InterfaceId) {
-            this.cloudRouterIpv6InterfaceId = Codegen.ofNullable(cloudRouterIpv6InterfaceId);
-            return this;
+
+        public Builder cloudRouterIpv6InterfaceId(String cloudRouterIpv6InterfaceId) {
+            return cloudRouterIpv6InterfaceId(Output.of(cloudRouterIpv6InterfaceId));
         }
+
         public Builder customerRouterIpv6InterfaceId(@Nullable Output<String> customerRouterIpv6InterfaceId) {
-            this.customerRouterIpv6InterfaceId = customerRouterIpv6InterfaceId;
+            $.customerRouterIpv6InterfaceId = customerRouterIpv6InterfaceId;
             return this;
         }
-        public Builder customerRouterIpv6InterfaceId(@Nullable String customerRouterIpv6InterfaceId) {
-            this.customerRouterIpv6InterfaceId = Codegen.ofNullable(customerRouterIpv6InterfaceId);
-            return this;
+
+        public Builder customerRouterIpv6InterfaceId(String customerRouterIpv6InterfaceId) {
+            return customerRouterIpv6InterfaceId(Output.of(customerRouterIpv6InterfaceId));
         }
+
         public Builder dataplaneVersion(@Nullable Output<Integer> dataplaneVersion) {
-            this.dataplaneVersion = dataplaneVersion;
+            $.dataplaneVersion = dataplaneVersion;
             return this;
         }
-        public Builder dataplaneVersion(@Nullable Integer dataplaneVersion) {
-            this.dataplaneVersion = Codegen.ofNullable(dataplaneVersion);
-            return this;
+
+        public Builder dataplaneVersion(Integer dataplaneVersion) {
+            return dataplaneVersion(Output.of(dataplaneVersion));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder edgeAvailabilityDomain(@Nullable Output<InterconnectAttachmentEdgeAvailabilityDomain> edgeAvailabilityDomain) {
-            this.edgeAvailabilityDomain = edgeAvailabilityDomain;
+            $.edgeAvailabilityDomain = edgeAvailabilityDomain;
             return this;
         }
-        public Builder edgeAvailabilityDomain(@Nullable InterconnectAttachmentEdgeAvailabilityDomain edgeAvailabilityDomain) {
-            this.edgeAvailabilityDomain = Codegen.ofNullable(edgeAvailabilityDomain);
-            return this;
+
+        public Builder edgeAvailabilityDomain(InterconnectAttachmentEdgeAvailabilityDomain edgeAvailabilityDomain) {
+            return edgeAvailabilityDomain(Output.of(edgeAvailabilityDomain));
         }
+
         public Builder encryption(@Nullable Output<InterconnectAttachmentEncryption> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable InterconnectAttachmentEncryption encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(InterconnectAttachmentEncryption encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder interconnect(@Nullable Output<String> interconnect) {
-            this.interconnect = interconnect;
+            $.interconnect = interconnect;
             return this;
         }
-        public Builder interconnect(@Nullable String interconnect) {
-            this.interconnect = Codegen.ofNullable(interconnect);
-            return this;
+
+        public Builder interconnect(String interconnect) {
+            return interconnect(Output.of(interconnect));
         }
+
         public Builder ipsecInternalAddresses(@Nullable Output<List<String>> ipsecInternalAddresses) {
-            this.ipsecInternalAddresses = ipsecInternalAddresses;
+            $.ipsecInternalAddresses = ipsecInternalAddresses;
             return this;
         }
-        public Builder ipsecInternalAddresses(@Nullable List<String> ipsecInternalAddresses) {
-            this.ipsecInternalAddresses = Codegen.ofNullable(ipsecInternalAddresses);
-            return this;
+
+        public Builder ipsecInternalAddresses(List<String> ipsecInternalAddresses) {
+            return ipsecInternalAddresses(Output.of(ipsecInternalAddresses));
         }
+
         public Builder ipsecInternalAddresses(String... ipsecInternalAddresses) {
             return ipsecInternalAddresses(List.of(ipsecInternalAddresses));
         }
+
         public Builder mtu(@Nullable Output<Integer> mtu) {
-            this.mtu = mtu;
+            $.mtu = mtu;
             return this;
         }
-        public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Codegen.ofNullable(mtu);
-            return this;
+
+        public Builder mtu(Integer mtu) {
+            return mtu(Output.of(mtu));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pairingKey(@Nullable Output<String> pairingKey) {
-            this.pairingKey = pairingKey;
+            $.pairingKey = pairingKey;
             return this;
         }
-        public Builder pairingKey(@Nullable String pairingKey) {
-            this.pairingKey = Codegen.ofNullable(pairingKey);
-            return this;
+
+        public Builder pairingKey(String pairingKey) {
+            return pairingKey(Output.of(pairingKey));
         }
+
         public Builder partnerAsn(@Nullable Output<String> partnerAsn) {
-            this.partnerAsn = partnerAsn;
+            $.partnerAsn = partnerAsn;
             return this;
         }
-        public Builder partnerAsn(@Nullable String partnerAsn) {
-            this.partnerAsn = Codegen.ofNullable(partnerAsn);
-            return this;
+
+        public Builder partnerAsn(String partnerAsn) {
+            return partnerAsn(Output.of(partnerAsn));
         }
+
         public Builder partnerMetadata(@Nullable Output<InterconnectAttachmentPartnerMetadataArgs> partnerMetadata) {
-            this.partnerMetadata = partnerMetadata;
+            $.partnerMetadata = partnerMetadata;
             return this;
         }
-        public Builder partnerMetadata(@Nullable InterconnectAttachmentPartnerMetadataArgs partnerMetadata) {
-            this.partnerMetadata = Codegen.ofNullable(partnerMetadata);
-            return this;
+
+        public Builder partnerMetadata(InterconnectAttachmentPartnerMetadataArgs partnerMetadata) {
+            return partnerMetadata(Output.of(partnerMetadata));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder router(@Nullable Output<String> router) {
-            this.router = router;
+            $.router = router;
             return this;
         }
-        public Builder router(@Nullable String router) {
-            this.router = Codegen.ofNullable(router);
-            return this;
+
+        public Builder router(String router) {
+            return router(Output.of(router));
         }
+
         public Builder stackType(@Nullable Output<InterconnectAttachmentStackType> stackType) {
-            this.stackType = stackType;
+            $.stackType = stackType;
             return this;
         }
-        public Builder stackType(@Nullable InterconnectAttachmentStackType stackType) {
-            this.stackType = Codegen.ofNullable(stackType);
-            return this;
+
+        public Builder stackType(InterconnectAttachmentStackType stackType) {
+            return stackType(Output.of(stackType));
         }
+
         public Builder type(@Nullable Output<InterconnectAttachmentType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable InterconnectAttachmentType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(InterconnectAttachmentType type) {
+            return type(Output.of(type));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
         }
+
         public Builder vlanTag8021q(@Nullable Output<Integer> vlanTag8021q) {
-            this.vlanTag8021q = vlanTag8021q;
+            $.vlanTag8021q = vlanTag8021q;
             return this;
         }
-        public Builder vlanTag8021q(@Nullable Integer vlanTag8021q) {
-            this.vlanTag8021q = Codegen.ofNullable(vlanTag8021q);
-            return this;
-        }        public InterconnectAttachmentArgs build() {
-            return new InterconnectAttachmentArgs(adminEnabled, bandwidth, candidateIpv6Subnets, candidateSubnets, cloudRouterIpv6InterfaceId, customerRouterIpv6InterfaceId, dataplaneVersion, description, edgeAvailabilityDomain, encryption, interconnect, ipsecInternalAddresses, mtu, name, pairingKey, partnerAsn, partnerMetadata, project, region, requestId, router, stackType, type, validateOnly, vlanTag8021q);
+
+        public Builder vlanTag8021q(Integer vlanTag8021q) {
+            return vlanTag8021q(Output.of(vlanTag8021q));
+        }
+
+        public InterconnectAttachmentArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

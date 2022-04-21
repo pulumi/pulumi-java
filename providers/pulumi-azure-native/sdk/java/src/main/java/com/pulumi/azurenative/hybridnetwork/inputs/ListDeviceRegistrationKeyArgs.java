@@ -17,7 +17,7 @@ public final class ListDeviceRegistrationKeyArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -28,55 +28,52 @@ public final class ListDeviceRegistrationKeyArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListDeviceRegistrationKeyArgs(
-        String deviceName,
-        String resourceGroupName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListDeviceRegistrationKeyArgs() {}
 
-    private ListDeviceRegistrationKeyArgs() {
-        this.deviceName = null;
-        this.resourceGroupName = null;
+    private ListDeviceRegistrationKeyArgs(ListDeviceRegistrationKeyArgs $) {
+        this.deviceName = $.deviceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListDeviceRegistrationKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private String resourceGroupName;
+        private ListDeviceRegistrationKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListDeviceRegistrationKeyArgs();
         }
 
         public Builder(ListDeviceRegistrationKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListDeviceRegistrationKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListDeviceRegistrationKeyArgs build() {
-            return new ListDeviceRegistrationKeyArgs(deviceName, resourceGroupName);
+        }
+
+        public ListDeviceRegistrationKeyArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

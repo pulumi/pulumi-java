@@ -5,10 +5,10 @@ package com.pulumi.googlenative.metastore_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.metastore_v1beta.inputs.DatabaseDumpArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MetadataImportArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="databaseDump")
-      private final @Nullable Output<DatabaseDumpArgs> databaseDump;
+    private @Nullable Output<DatabaseDumpArgs> databaseDump;
 
-    public Output<DatabaseDumpArgs> databaseDump() {
-        return this.databaseDump == null ? Codegen.empty() : this.databaseDump;
+    public Optional<Output<DatabaseDumpArgs>> databaseDump() {
+        return Optional.ofNullable(this.databaseDump);
     }
 
     /**
@@ -32,21 +32,21 @@ public final class MetadataImportArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="metadataImportId", required=true)
-      private final Output<String> metadataImportId;
+    private Output<String> metadataImportId;
 
     public Output<String> metadataImportId() {
         return this.metadataImportId;
@@ -57,162 +57,141 @@ public final class MetadataImportArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     @Import(name="serviceId", required=true)
-      private final Output<String> serviceId;
+    private Output<String> serviceId;
 
     public Output<String> serviceId() {
         return this.serviceId;
     }
 
-    public MetadataImportArgs(
-        @Nullable Output<DatabaseDumpArgs> databaseDump,
-        @Nullable Output<String> description,
-        @Nullable Output<String> location,
-        Output<String> metadataImportId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        Output<String> serviceId) {
-        this.databaseDump = databaseDump;
-        this.description = description;
-        this.location = location;
-        this.metadataImportId = Objects.requireNonNull(metadataImportId, "expected parameter 'metadataImportId' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-    }
+    private MetadataImportArgs() {}
 
-    private MetadataImportArgs() {
-        this.databaseDump = Codegen.empty();
-        this.description = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadataImportId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.serviceId = Codegen.empty();
+    private MetadataImportArgs(MetadataImportArgs $) {
+        this.databaseDump = $.databaseDump;
+        this.description = $.description;
+        this.location = $.location;
+        this.metadataImportId = $.metadataImportId;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.serviceId = $.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataImportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatabaseDumpArgs> databaseDump;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> location;
-        private Output<String> metadataImportId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private Output<String> serviceId;
+        private MetadataImportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataImportArgs();
         }
 
         public Builder(MetadataImportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseDump = defaults.databaseDump;
-    	      this.description = defaults.description;
-    	      this.location = defaults.location;
-    	      this.metadataImportId = defaults.metadataImportId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.serviceId = defaults.serviceId;
+            $ = new MetadataImportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseDump(@Nullable Output<DatabaseDumpArgs> databaseDump) {
-            this.databaseDump = databaseDump;
+            $.databaseDump = databaseDump;
             return this;
         }
-        public Builder databaseDump(@Nullable DatabaseDumpArgs databaseDump) {
-            this.databaseDump = Codegen.ofNullable(databaseDump);
-            return this;
+
+        public Builder databaseDump(DatabaseDumpArgs databaseDump) {
+            return databaseDump(Output.of(databaseDump));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadataImportId(Output<String> metadataImportId) {
-            this.metadataImportId = Objects.requireNonNull(metadataImportId);
+            $.metadataImportId = metadataImportId;
             return this;
         }
+
         public Builder metadataImportId(String metadataImportId) {
-            this.metadataImportId = Output.of(Objects.requireNonNull(metadataImportId));
-            return this;
+            return metadataImportId(Output.of(metadataImportId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder serviceId(Output<String> serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
-            return this;
-        }        public MetadataImportArgs build() {
-            return new MetadataImportArgs(databaseDump, description, location, metadataImportId, name, project, requestId, serviceId);
+            return serviceId(Output.of(serviceId));
+        }
+
+        public MetadataImportArgs build() {
+            $.metadataImportId = Objects.requireNonNull($.metadataImportId, "expected parameter 'metadataImportId' to be non-null");
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            return $;
         }
     }
+
 }

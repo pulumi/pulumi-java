@@ -15,129 +15,119 @@ public final class GetBackendServiceCircuitBreaker extends com.pulumi.resources.
     public static final GetBackendServiceCircuitBreaker Empty = new GetBackendServiceCircuitBreaker();
 
     @Import(name="connectTimeouts", required=true)
-      private final List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts;
+    private List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts;
 
     public List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts() {
         return this.connectTimeouts;
     }
 
     @Import(name="maxConnections", required=true)
-      private final Integer maxConnections;
+    private Integer maxConnections;
 
     public Integer maxConnections() {
         return this.maxConnections;
     }
 
     @Import(name="maxPendingRequests", required=true)
-      private final Integer maxPendingRequests;
+    private Integer maxPendingRequests;
 
     public Integer maxPendingRequests() {
         return this.maxPendingRequests;
     }
 
     @Import(name="maxRequests", required=true)
-      private final Integer maxRequests;
+    private Integer maxRequests;
 
     public Integer maxRequests() {
         return this.maxRequests;
     }
 
     @Import(name="maxRequestsPerConnection", required=true)
-      private final Integer maxRequestsPerConnection;
+    private Integer maxRequestsPerConnection;
 
     public Integer maxRequestsPerConnection() {
         return this.maxRequestsPerConnection;
     }
 
     @Import(name="maxRetries", required=true)
-      private final Integer maxRetries;
+    private Integer maxRetries;
 
     public Integer maxRetries() {
         return this.maxRetries;
     }
 
-    public GetBackendServiceCircuitBreaker(
-        List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts,
-        Integer maxConnections,
-        Integer maxPendingRequests,
-        Integer maxRequests,
-        Integer maxRequestsPerConnection,
-        Integer maxRetries) {
-        this.connectTimeouts = Objects.requireNonNull(connectTimeouts, "expected parameter 'connectTimeouts' to be non-null");
-        this.maxConnections = Objects.requireNonNull(maxConnections, "expected parameter 'maxConnections' to be non-null");
-        this.maxPendingRequests = Objects.requireNonNull(maxPendingRequests, "expected parameter 'maxPendingRequests' to be non-null");
-        this.maxRequests = Objects.requireNonNull(maxRequests, "expected parameter 'maxRequests' to be non-null");
-        this.maxRequestsPerConnection = Objects.requireNonNull(maxRequestsPerConnection, "expected parameter 'maxRequestsPerConnection' to be non-null");
-        this.maxRetries = Objects.requireNonNull(maxRetries, "expected parameter 'maxRetries' to be non-null");
-    }
+    private GetBackendServiceCircuitBreaker() {}
 
-    private GetBackendServiceCircuitBreaker() {
-        this.connectTimeouts = List.of();
-        this.maxConnections = null;
-        this.maxPendingRequests = null;
-        this.maxRequests = null;
-        this.maxRequestsPerConnection = null;
-        this.maxRetries = null;
+    private GetBackendServiceCircuitBreaker(GetBackendServiceCircuitBreaker $) {
+        this.connectTimeouts = $.connectTimeouts;
+        this.maxConnections = $.maxConnections;
+        this.maxPendingRequests = $.maxPendingRequests;
+        this.maxRequests = $.maxRequests;
+        this.maxRequestsPerConnection = $.maxRequestsPerConnection;
+        this.maxRetries = $.maxRetries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceCircuitBreaker defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts;
-        private Integer maxConnections;
-        private Integer maxPendingRequests;
-        private Integer maxRequests;
-        private Integer maxRequestsPerConnection;
-        private Integer maxRetries;
+        private GetBackendServiceCircuitBreaker $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceCircuitBreaker();
         }
 
         public Builder(GetBackendServiceCircuitBreaker defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectTimeouts = defaults.connectTimeouts;
-    	      this.maxConnections = defaults.maxConnections;
-    	      this.maxPendingRequests = defaults.maxPendingRequests;
-    	      this.maxRequests = defaults.maxRequests;
-    	      this.maxRequestsPerConnection = defaults.maxRequestsPerConnection;
-    	      this.maxRetries = defaults.maxRetries;
+            $ = new GetBackendServiceCircuitBreaker(Objects.requireNonNull(defaults));
         }
 
         public Builder connectTimeouts(List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts) {
-            this.connectTimeouts = Objects.requireNonNull(connectTimeouts);
+            $.connectTimeouts = connectTimeouts;
             return this;
         }
+
         public Builder connectTimeouts(GetBackendServiceCircuitBreakerConnectTimeout... connectTimeouts) {
             return connectTimeouts(List.of(connectTimeouts));
         }
+
         public Builder maxConnections(Integer maxConnections) {
-            this.maxConnections = Objects.requireNonNull(maxConnections);
+            $.maxConnections = maxConnections;
             return this;
         }
+
         public Builder maxPendingRequests(Integer maxPendingRequests) {
-            this.maxPendingRequests = Objects.requireNonNull(maxPendingRequests);
+            $.maxPendingRequests = maxPendingRequests;
             return this;
         }
+
         public Builder maxRequests(Integer maxRequests) {
-            this.maxRequests = Objects.requireNonNull(maxRequests);
+            $.maxRequests = maxRequests;
             return this;
         }
+
         public Builder maxRequestsPerConnection(Integer maxRequestsPerConnection) {
-            this.maxRequestsPerConnection = Objects.requireNonNull(maxRequestsPerConnection);
+            $.maxRequestsPerConnection = maxRequestsPerConnection;
             return this;
         }
+
         public Builder maxRetries(Integer maxRetries) {
-            this.maxRetries = Objects.requireNonNull(maxRetries);
+            $.maxRetries = maxRetries;
             return this;
-        }        public GetBackendServiceCircuitBreaker build() {
-            return new GetBackendServiceCircuitBreaker(connectTimeouts, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
+        }
+
+        public GetBackendServiceCircuitBreaker build() {
+            $.connectTimeouts = Objects.requireNonNull($.connectTimeouts, "expected parameter 'connectTimeouts' to be non-null");
+            $.maxConnections = Objects.requireNonNull($.maxConnections, "expected parameter 'maxConnections' to be non-null");
+            $.maxPendingRequests = Objects.requireNonNull($.maxPendingRequests, "expected parameter 'maxPendingRequests' to be non-null");
+            $.maxRequests = Objects.requireNonNull($.maxRequests, "expected parameter 'maxRequests' to be non-null");
+            $.maxRequestsPerConnection = Objects.requireNonNull($.maxRequestsPerConnection, "expected parameter 'maxRequestsPerConnection' to be non-null");
+            $.maxRetries = Objects.requireNonNull($.maxRetries, "expected parameter 'maxRetries' to be non-null");
+            return $;
         }
     }
+
 }

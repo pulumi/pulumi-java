@@ -24,7 +24,7 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="allocatedIpRange", required=true)
-      private final String allocatedIpRange;
+    private String allocatedIpRange;
 
     public String allocatedIpRange() {
         return this.allocatedIpRange;
@@ -35,7 +35,7 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="authorizedNetworks", required=true)
-      private final List<AclEntryResponse> authorizedNetworks;
+    private List<AclEntryResponse> authorizedNetworks;
 
     public List<AclEntryResponse> authorizedNetworks() {
         return this.authorizedNetworks;
@@ -46,7 +46,7 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ipv4Enabled", required=true)
-      private final Boolean ipv4Enabled;
+    private Boolean ipv4Enabled;
 
     public Boolean ipv4Enabled() {
         return this.ipv4Enabled;
@@ -57,7 +57,7 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateNetwork", required=true)
-      private final String privateNetwork;
+    private String privateNetwork;
 
     public String privateNetwork() {
         return this.privateNetwork;
@@ -68,85 +68,77 @@ public final class IpConfigurationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="requireSsl", required=true)
-      private final Boolean requireSsl;
+    private Boolean requireSsl;
 
     public Boolean requireSsl() {
         return this.requireSsl;
     }
 
-    public IpConfigurationResponse(
-        String allocatedIpRange,
-        List<AclEntryResponse> authorizedNetworks,
-        Boolean ipv4Enabled,
-        String privateNetwork,
-        Boolean requireSsl) {
-        this.allocatedIpRange = Objects.requireNonNull(allocatedIpRange, "expected parameter 'allocatedIpRange' to be non-null");
-        this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks, "expected parameter 'authorizedNetworks' to be non-null");
-        this.ipv4Enabled = Objects.requireNonNull(ipv4Enabled, "expected parameter 'ipv4Enabled' to be non-null");
-        this.privateNetwork = Objects.requireNonNull(privateNetwork, "expected parameter 'privateNetwork' to be non-null");
-        this.requireSsl = Objects.requireNonNull(requireSsl, "expected parameter 'requireSsl' to be non-null");
-    }
+    private IpConfigurationResponse() {}
 
-    private IpConfigurationResponse() {
-        this.allocatedIpRange = null;
-        this.authorizedNetworks = List.of();
-        this.ipv4Enabled = null;
-        this.privateNetwork = null;
-        this.requireSsl = null;
+    private IpConfigurationResponse(IpConfigurationResponse $) {
+        this.allocatedIpRange = $.allocatedIpRange;
+        this.authorizedNetworks = $.authorizedNetworks;
+        this.ipv4Enabled = $.ipv4Enabled;
+        this.privateNetwork = $.privateNetwork;
+        this.requireSsl = $.requireSsl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String allocatedIpRange;
-        private List<AclEntryResponse> authorizedNetworks;
-        private Boolean ipv4Enabled;
-        private String privateNetwork;
-        private Boolean requireSsl;
+        private IpConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpConfigurationResponse();
         }
 
         public Builder(IpConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocatedIpRange = defaults.allocatedIpRange;
-    	      this.authorizedNetworks = defaults.authorizedNetworks;
-    	      this.ipv4Enabled = defaults.ipv4Enabled;
-    	      this.privateNetwork = defaults.privateNetwork;
-    	      this.requireSsl = defaults.requireSsl;
+            $ = new IpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allocatedIpRange(String allocatedIpRange) {
-            this.allocatedIpRange = Objects.requireNonNull(allocatedIpRange);
+            $.allocatedIpRange = allocatedIpRange;
             return this;
         }
+
         public Builder authorizedNetworks(List<AclEntryResponse> authorizedNetworks) {
-            this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
+            $.authorizedNetworks = authorizedNetworks;
             return this;
         }
+
         public Builder authorizedNetworks(AclEntryResponse... authorizedNetworks) {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
+
         public Builder ipv4Enabled(Boolean ipv4Enabled) {
-            this.ipv4Enabled = Objects.requireNonNull(ipv4Enabled);
+            $.ipv4Enabled = ipv4Enabled;
             return this;
         }
+
         public Builder privateNetwork(String privateNetwork) {
-            this.privateNetwork = Objects.requireNonNull(privateNetwork);
+            $.privateNetwork = privateNetwork;
             return this;
         }
+
         public Builder requireSsl(Boolean requireSsl) {
-            this.requireSsl = Objects.requireNonNull(requireSsl);
+            $.requireSsl = requireSsl;
             return this;
-        }        public IpConfigurationResponse build() {
-            return new IpConfigurationResponse(allocatedIpRange, authorizedNetworks, ipv4Enabled, privateNetwork, requireSsl);
+        }
+
+        public IpConfigurationResponse build() {
+            $.allocatedIpRange = Objects.requireNonNull($.allocatedIpRange, "expected parameter 'allocatedIpRange' to be non-null");
+            $.authorizedNetworks = Objects.requireNonNull($.authorizedNetworks, "expected parameter 'authorizedNetworks' to be non-null");
+            $.ipv4Enabled = Objects.requireNonNull($.ipv4Enabled, "expected parameter 'ipv4Enabled' to be non-null");
+            $.privateNetwork = Objects.requireNonNull($.privateNetwork, "expected parameter 'privateNetwork' to be non-null");
+            $.requireSsl = Objects.requireNonNull($.requireSsl, "expected parameter 'requireSsl' to be non-null");
+            return $;
         }
     }
+
 }

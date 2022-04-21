@@ -7,9 +7,9 @@ import com.pulumi.awsnative.lightsail.enums.InstanceAddOnStatus;
 import com.pulumi.awsnative.lightsail.inputs.InstanceAutoSnapshotAddOnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,17 +26,17 @@ public final class InstanceAddOnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addOnType", required=true)
-      private final Output<String> addOnType;
+    private Output<String> addOnType;
 
     public Output<String> addOnType() {
         return this.addOnType;
     }
 
     @Import(name="autoSnapshotAddOnRequest")
-      private final @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
+    private @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
 
-    public Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest() {
-        return this.autoSnapshotAddOnRequest == null ? Codegen.empty() : this.autoSnapshotAddOnRequest;
+    public Optional<Output<InstanceAutoSnapshotAddOnArgs>> autoSnapshotAddOnRequest() {
+        return Optional.ofNullable(this.autoSnapshotAddOnRequest);
     }
 
     /**
@@ -44,76 +44,69 @@ public final class InstanceAddOnArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<InstanceAddOnStatus> status;
+    private @Nullable Output<InstanceAddOnStatus> status;
 
-    public Output<InstanceAddOnStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<InstanceAddOnStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public InstanceAddOnArgs(
-        Output<String> addOnType,
-        @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest,
-        @Nullable Output<InstanceAddOnStatus> status) {
-        this.addOnType = Objects.requireNonNull(addOnType, "expected parameter 'addOnType' to be non-null");
-        this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
-        this.status = status;
-    }
+    private InstanceAddOnArgs() {}
 
-    private InstanceAddOnArgs() {
-        this.addOnType = Codegen.empty();
-        this.autoSnapshotAddOnRequest = Codegen.empty();
-        this.status = Codegen.empty();
+    private InstanceAddOnArgs(InstanceAddOnArgs $) {
+        this.addOnType = $.addOnType;
+        this.autoSnapshotAddOnRequest = $.autoSnapshotAddOnRequest;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAddOnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> addOnType;
-        private @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
-        private @Nullable Output<InstanceAddOnStatus> status;
+        private InstanceAddOnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAddOnArgs();
         }
 
         public Builder(InstanceAddOnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addOnType = defaults.addOnType;
-    	      this.autoSnapshotAddOnRequest = defaults.autoSnapshotAddOnRequest;
-    	      this.status = defaults.status;
+            $ = new InstanceAddOnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addOnType(Output<String> addOnType) {
-            this.addOnType = Objects.requireNonNull(addOnType);
+            $.addOnType = addOnType;
             return this;
         }
+
         public Builder addOnType(String addOnType) {
-            this.addOnType = Output.of(Objects.requireNonNull(addOnType));
-            return this;
+            return addOnType(Output.of(addOnType));
         }
+
         public Builder autoSnapshotAddOnRequest(@Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest) {
-            this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
+            $.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
-        public Builder autoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
-            this.autoSnapshotAddOnRequest = Codegen.ofNullable(autoSnapshotAddOnRequest);
-            return this;
+
+        public Builder autoSnapshotAddOnRequest(InstanceAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
+            return autoSnapshotAddOnRequest(Output.of(autoSnapshotAddOnRequest));
         }
+
         public Builder status(@Nullable Output<InstanceAddOnStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable InstanceAddOnStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public InstanceAddOnArgs build() {
-            return new InstanceAddOnArgs(addOnType, autoSnapshotAddOnRequest, status);
+
+        public Builder status(InstanceAddOnStatus status) {
+            return status(Output.of(status));
+        }
+
+        public InstanceAddOnArgs build() {
+            $.addOnType = Objects.requireNonNull($.addOnType, "expected parameter 'addOnType' to be non-null");
+            return $;
         }
     }
+
 }

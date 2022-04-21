@@ -5,9 +5,9 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CrawlerSchemaChangePolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="deleteBehavior")
-      private final @Nullable Output<String> deleteBehavior;
+    private @Nullable Output<String> deleteBehavior;
 
-    public Output<String> deleteBehavior() {
-        return this.deleteBehavior == null ? Codegen.empty() : this.deleteBehavior;
+    public Optional<Output<String>> deleteBehavior() {
+        return Optional.ofNullable(this.deleteBehavior);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class CrawlerSchemaChangePolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="updateBehavior")
-      private final @Nullable Output<String> updateBehavior;
+    private @Nullable Output<String> updateBehavior;
 
-    public Output<String> updateBehavior() {
-        return this.updateBehavior == null ? Codegen.empty() : this.updateBehavior;
+    public Optional<Output<String>> updateBehavior() {
+        return Optional.ofNullable(this.updateBehavior);
     }
 
-    public CrawlerSchemaChangePolicyArgs(
-        @Nullable Output<String> deleteBehavior,
-        @Nullable Output<String> updateBehavior) {
-        this.deleteBehavior = deleteBehavior;
-        this.updateBehavior = updateBehavior;
-    }
+    private CrawlerSchemaChangePolicyArgs() {}
 
-    private CrawlerSchemaChangePolicyArgs() {
-        this.deleteBehavior = Codegen.empty();
-        this.updateBehavior = Codegen.empty();
+    private CrawlerSchemaChangePolicyArgs(CrawlerSchemaChangePolicyArgs $) {
+        this.deleteBehavior = $.deleteBehavior;
+        this.updateBehavior = $.updateBehavior;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrawlerSchemaChangePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deleteBehavior;
-        private @Nullable Output<String> updateBehavior;
+        private CrawlerSchemaChangePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrawlerSchemaChangePolicyArgs();
         }
 
         public Builder(CrawlerSchemaChangePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteBehavior = defaults.deleteBehavior;
-    	      this.updateBehavior = defaults.updateBehavior;
+            $ = new CrawlerSchemaChangePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteBehavior(@Nullable Output<String> deleteBehavior) {
-            this.deleteBehavior = deleteBehavior;
+            $.deleteBehavior = deleteBehavior;
             return this;
         }
-        public Builder deleteBehavior(@Nullable String deleteBehavior) {
-            this.deleteBehavior = Codegen.ofNullable(deleteBehavior);
-            return this;
+
+        public Builder deleteBehavior(String deleteBehavior) {
+            return deleteBehavior(Output.of(deleteBehavior));
         }
+
         public Builder updateBehavior(@Nullable Output<String> updateBehavior) {
-            this.updateBehavior = updateBehavior;
+            $.updateBehavior = updateBehavior;
             return this;
         }
-        public Builder updateBehavior(@Nullable String updateBehavior) {
-            this.updateBehavior = Codegen.ofNullable(updateBehavior);
-            return this;
-        }        public CrawlerSchemaChangePolicyArgs build() {
-            return new CrawlerSchemaChangePolicyArgs(deleteBehavior, updateBehavior);
+
+        public Builder updateBehavior(String updateBehavior) {
+            return updateBehavior(Output.of(updateBehavior));
+        }
+
+        public CrawlerSchemaChangePolicyArgs build() {
+            return $;
         }
     }
+
 }

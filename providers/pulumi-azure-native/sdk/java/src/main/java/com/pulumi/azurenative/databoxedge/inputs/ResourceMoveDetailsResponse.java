@@ -23,10 +23,10 @@ public final class ResourceMoveDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="operationInProgress")
-      private final @Nullable String operationInProgress;
+    private @Nullable String operationInProgress;
 
     public Optional<String> operationInProgress() {
-        return this.operationInProgress == null ? Optional.empty() : Optional.ofNullable(this.operationInProgress);
+        return Optional.ofNullable(this.operationInProgress);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ResourceMoveDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="operationInProgressLockTimeoutInUTC")
-      private final @Nullable String operationInProgressLockTimeoutInUTC;
+    private @Nullable String operationInProgressLockTimeoutInUTC;
 
     public Optional<String> operationInProgressLockTimeoutInUTC() {
-        return this.operationInProgressLockTimeoutInUTC == null ? Optional.empty() : Optional.ofNullable(this.operationInProgressLockTimeoutInUTC);
+        return Optional.ofNullable(this.operationInProgressLockTimeoutInUTC);
     }
 
-    public ResourceMoveDetailsResponse(
-        @Nullable String operationInProgress,
-        @Nullable String operationInProgressLockTimeoutInUTC) {
-        this.operationInProgress = operationInProgress;
-        this.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
-    }
+    private ResourceMoveDetailsResponse() {}
 
-    private ResourceMoveDetailsResponse() {
-        this.operationInProgress = null;
-        this.operationInProgressLockTimeoutInUTC = null;
+    private ResourceMoveDetailsResponse(ResourceMoveDetailsResponse $) {
+        this.operationInProgress = $.operationInProgress;
+        this.operationInProgressLockTimeoutInUTC = $.operationInProgressLockTimeoutInUTC;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceMoveDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String operationInProgress;
-        private @Nullable String operationInProgressLockTimeoutInUTC;
+        private ResourceMoveDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceMoveDetailsResponse();
         }
 
         public Builder(ResourceMoveDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationInProgress = defaults.operationInProgress;
-    	      this.operationInProgressLockTimeoutInUTC = defaults.operationInProgressLockTimeoutInUTC;
+            $ = new ResourceMoveDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operationInProgress(@Nullable String operationInProgress) {
-            this.operationInProgress = operationInProgress;
+            $.operationInProgress = operationInProgress;
             return this;
         }
+
         public Builder operationInProgressLockTimeoutInUTC(@Nullable String operationInProgressLockTimeoutInUTC) {
-            this.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
+            $.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
             return this;
-        }        public ResourceMoveDetailsResponse build() {
-            return new ResourceMoveDetailsResponse(operationInProgress, operationInProgressLockTimeoutInUTC);
+        }
+
+        public ResourceMoveDetailsResponse build() {
+            return $;
         }
     }
+
 }

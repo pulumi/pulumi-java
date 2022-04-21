@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
      * 
      */
     @Import(name="isMultiLabel")
-      private final @Nullable Output<Boolean> isMultiLabel;
+    private @Nullable Output<Boolean> isMultiLabel;
 
-    public Output<Boolean> isMultiLabel() {
-        return this.isMultiLabel == null ? Codegen.empty() : this.isMultiLabel;
+    public Optional<Output<Boolean>> isMultiLabel() {
+        return Optional.ofNullable(this.isMultiLabel);
     }
 
-    public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(@Nullable Output<Boolean> isMultiLabel) {
-        this.isMultiLabel = isMultiLabel;
-    }
+    private GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs() {
-        this.isMultiLabel = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs $) {
+        this.isMultiLabel = $.isMultiLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isMultiLabel;
+        private GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isMultiLabel = defaults.isMultiLabel;
+            $ = new GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isMultiLabel(@Nullable Output<Boolean> isMultiLabel) {
-            this.isMultiLabel = isMultiLabel;
+            $.isMultiLabel = isMultiLabel;
             return this;
         }
-        public Builder isMultiLabel(@Nullable Boolean isMultiLabel) {
-            this.isMultiLabel = Codegen.ofNullable(isMultiLabel);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs build() {
-            return new GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs(isMultiLabel);
+
+        public Builder isMultiLabel(Boolean isMultiLabel) {
+            return isMultiLabel(Output.of(isMultiLabel));
+        }
+
+        public GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs build() {
+            return $;
         }
     }
+
 }

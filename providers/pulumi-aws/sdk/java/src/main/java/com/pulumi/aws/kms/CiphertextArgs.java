@@ -5,10 +5,10 @@ package com.pulumi.aws.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CiphertextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<Map<String,String>> context;
+    private @Nullable Output<Map<String,String>> context;
 
-    public Output<Map<String,String>> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<Map<String,String>>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class CiphertextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyId", required=true)
-      private final Output<String> keyId;
+    private Output<String> keyId;
 
     public Output<String> keyId() {
         return this.keyId;
@@ -43,76 +43,70 @@ public final class CiphertextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="plaintext", required=true)
-      private final Output<String> plaintext;
+    private Output<String> plaintext;
 
     public Output<String> plaintext() {
         return this.plaintext;
     }
 
-    public CiphertextArgs(
-        @Nullable Output<Map<String,String>> context,
-        Output<String> keyId,
-        Output<String> plaintext) {
-        this.context = context;
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.plaintext = Objects.requireNonNull(plaintext, "expected parameter 'plaintext' to be non-null");
-    }
+    private CiphertextArgs() {}
 
-    private CiphertextArgs() {
-        this.context = Codegen.empty();
-        this.keyId = Codegen.empty();
-        this.plaintext = Codegen.empty();
+    private CiphertextArgs(CiphertextArgs $) {
+        this.context = $.context;
+        this.keyId = $.keyId;
+        this.plaintext = $.plaintext;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CiphertextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> context;
-        private Output<String> keyId;
-        private Output<String> plaintext;
+        private CiphertextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CiphertextArgs();
         }
 
         public Builder(CiphertextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.keyId = defaults.keyId;
-    	      this.plaintext = defaults.plaintext;
+            $ = new CiphertextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder context(@Nullable Output<Map<String,String>> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable Map<String,String> context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(Map<String,String> context) {
+            return context(Output.of(context));
         }
+
         public Builder keyId(Output<String> keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Output.of(Objects.requireNonNull(keyId));
-            return this;
+            return keyId(Output.of(keyId));
         }
+
         public Builder plaintext(Output<String> plaintext) {
-            this.plaintext = Objects.requireNonNull(plaintext);
+            $.plaintext = plaintext;
             return this;
         }
+
         public Builder plaintext(String plaintext) {
-            this.plaintext = Output.of(Objects.requireNonNull(plaintext));
-            return this;
-        }        public CiphertextArgs build() {
-            return new CiphertextArgs(context, keyId, plaintext);
+            return plaintext(Output.of(plaintext));
+        }
+
+        public CiphertextArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.plaintext = Objects.requireNonNull($.plaintext, "expected parameter 'plaintext' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,66 @@ public final class EventBusPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="eventBusName")
-      private final @Nullable Output<String> eventBusName;
+    private @Nullable Output<String> eventBusName;
 
-    public Output<String> eventBusName() {
-        return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
+    public Optional<Output<String>> eventBusName() {
+        return Optional.ofNullable(this.eventBusName);
     }
 
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public EventBusPolicyArgs(
-        @Nullable Output<String> eventBusName,
-        Output<String> policy) {
-        this.eventBusName = eventBusName;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private EventBusPolicyArgs() {}
 
-    private EventBusPolicyArgs() {
-        this.eventBusName = Codegen.empty();
-        this.policy = Codegen.empty();
+    private EventBusPolicyArgs(EventBusPolicyArgs $) {
+        this.eventBusName = $.eventBusName;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventBusPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eventBusName;
-        private Output<String> policy;
+        private EventBusPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventBusPolicyArgs();
         }
 
         public Builder(EventBusPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventBusName = defaults.eventBusName;
-    	      this.policy = defaults.policy;
+            $ = new EventBusPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
-            this.eventBusName = eventBusName;
+            $.eventBusName = eventBusName;
             return this;
         }
-        public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Codegen.ofNullable(eventBusName);
-            return this;
+
+        public Builder eventBusName(String eventBusName) {
+            return eventBusName(Output.of(eventBusName));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public EventBusPolicyArgs build() {
-            return new EventBusPolicyArgs(eventBusName, policy);
+            return policy(Output.of(policy));
+        }
+
+        public EventBusPolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

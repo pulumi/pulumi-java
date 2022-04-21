@@ -5,7 +5,6 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -30,63 +29,60 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends com.pulumi.res
      * 
      */
     @Import(name="deviceType", required=true)
-      private final Output<String> deviceType;
+    private Output<String> deviceType;
 
     public Output<String> deviceType() {
         return this.deviceType;
     }
 
-    public TaskDefinitionInferenceAcceleratorArgs(
-        Output<String> deviceName,
-        Output<String> deviceType) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.deviceType = Objects.requireNonNull(deviceType, "expected parameter 'deviceType' to be non-null");
-    }
+    private TaskDefinitionInferenceAcceleratorArgs() {}
 
-    private TaskDefinitionInferenceAcceleratorArgs() {
-        this.deviceName = Codegen.empty();
-        this.deviceType = Codegen.empty();
+    private TaskDefinitionInferenceAcceleratorArgs(TaskDefinitionInferenceAcceleratorArgs $) {
+        this.deviceName = $.deviceName;
+        this.deviceType = $.deviceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionInferenceAcceleratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceName;
-        private Output<String> deviceType;
+        private TaskDefinitionInferenceAcceleratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionInferenceAcceleratorArgs();
         }
 
         public Builder(TaskDefinitionInferenceAcceleratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.deviceType = defaults.deviceType;
+            $ = new TaskDefinitionInferenceAcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder deviceType(Output<String> deviceType) {
-            this.deviceType = Objects.requireNonNull(deviceType);
+            $.deviceType = deviceType;
             return this;
         }
+
         public Builder deviceType(String deviceType) {
-            this.deviceType = Output.of(Objects.requireNonNull(deviceType));
-            return this;
-        }        public TaskDefinitionInferenceAcceleratorArgs build() {
-            return new TaskDefinitionInferenceAcceleratorArgs(deviceName, deviceType);
+            return deviceType(Output.of(deviceType));
+        }
+
+        public TaskDefinitionInferenceAcceleratorArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.deviceType = Objects.requireNonNull($.deviceType, "expected parameter 'deviceType' to be non-null");
+            return $;
         }
     }
+
 }

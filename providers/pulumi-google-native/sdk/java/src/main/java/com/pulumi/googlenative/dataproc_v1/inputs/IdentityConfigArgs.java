@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,49 +23,49 @@ public final class IdentityConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userServiceAccountMapping", required=true)
-      private final Output<Map<String,String>> userServiceAccountMapping;
+    private Output<Map<String,String>> userServiceAccountMapping;
 
     public Output<Map<String,String>> userServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }
 
-    public IdentityConfigArgs(Output<Map<String,String>> userServiceAccountMapping) {
-        this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping, "expected parameter 'userServiceAccountMapping' to be non-null");
-    }
+    private IdentityConfigArgs() {}
 
-    private IdentityConfigArgs() {
-        this.userServiceAccountMapping = Codegen.empty();
+    private IdentityConfigArgs(IdentityConfigArgs $) {
+        this.userServiceAccountMapping = $.userServiceAccountMapping;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> userServiceAccountMapping;
+        private IdentityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityConfigArgs();
         }
 
         public Builder(IdentityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userServiceAccountMapping = defaults.userServiceAccountMapping;
+            $ = new IdentityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userServiceAccountMapping(Output<Map<String,String>> userServiceAccountMapping) {
-            this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
+            $.userServiceAccountMapping = userServiceAccountMapping;
             return this;
         }
+
         public Builder userServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
-            this.userServiceAccountMapping = Output.of(Objects.requireNonNull(userServiceAccountMapping));
-            return this;
-        }        public IdentityConfigArgs build() {
-            return new IdentityConfigArgs(userServiceAccountMapping);
+            return userServiceAccountMapping(Output.of(userServiceAccountMapping));
+        }
+
+        public IdentityConfigArgs build() {
+            $.userServiceAccountMapping = Objects.requireNonNull($.userServiceAccountMapping, "expected parameter 'userServiceAccountMapping' to be non-null");
+            return $;
         }
     }
+
 }

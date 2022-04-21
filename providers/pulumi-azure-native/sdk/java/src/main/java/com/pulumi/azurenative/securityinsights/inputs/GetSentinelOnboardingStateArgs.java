@@ -17,7 +17,7 @@ public final class GetSentinelOnboardingStateArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final String operationalInsightsResourceProvider;
+    private String operationalInsightsResourceProvider;
 
     public String operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -28,7 +28,7 @@ public final class GetSentinelOnboardingStateArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSentinelOnboardingStateArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="sentinelOnboardingStateName", required=true)
-      private final String sentinelOnboardingStateName;
+    private String sentinelOnboardingStateName;
 
     public String sentinelOnboardingStateName() {
         return this.sentinelOnboardingStateName;
@@ -50,73 +50,66 @@ public final class GetSentinelOnboardingStateArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetSentinelOnboardingStateArgs(
-        String operationalInsightsResourceProvider,
-        String resourceGroupName,
-        String sentinelOnboardingStateName,
-        String workspaceName) {
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sentinelOnboardingStateName = Objects.requireNonNull(sentinelOnboardingStateName, "expected parameter 'sentinelOnboardingStateName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetSentinelOnboardingStateArgs() {}
 
-    private GetSentinelOnboardingStateArgs() {
-        this.operationalInsightsResourceProvider = null;
-        this.resourceGroupName = null;
-        this.sentinelOnboardingStateName = null;
-        this.workspaceName = null;
+    private GetSentinelOnboardingStateArgs(GetSentinelOnboardingStateArgs $) {
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sentinelOnboardingStateName = $.sentinelOnboardingStateName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSentinelOnboardingStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationalInsightsResourceProvider;
-        private String resourceGroupName;
-        private String sentinelOnboardingStateName;
-        private String workspaceName;
+        private GetSentinelOnboardingStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSentinelOnboardingStateArgs();
         }
 
         public Builder(GetSentinelOnboardingStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sentinelOnboardingStateName = defaults.sentinelOnboardingStateName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetSentinelOnboardingStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sentinelOnboardingStateName(String sentinelOnboardingStateName) {
-            this.sentinelOnboardingStateName = Objects.requireNonNull(sentinelOnboardingStateName);
+            $.sentinelOnboardingStateName = sentinelOnboardingStateName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetSentinelOnboardingStateArgs build() {
-            return new GetSentinelOnboardingStateArgs(operationalInsightsResourceProvider, resourceGroupName, sentinelOnboardingStateName, workspaceName);
+        }
+
+        public GetSentinelOnboardingStateArgs build() {
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sentinelOnboardingStateName = Objects.requireNonNull($.sentinelOnboardingStateName, "expected parameter 'sentinelOnboardingStateName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

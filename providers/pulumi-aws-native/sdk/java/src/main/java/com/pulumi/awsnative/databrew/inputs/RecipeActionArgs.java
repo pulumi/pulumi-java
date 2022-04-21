@@ -8,9 +8,9 @@ import com.pulumi.awsnative.databrew.inputs.RecipeParametersArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,70 +23,66 @@ public final class RecipeActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operation", required=true)
-      private final Output<String> operation;
+    private Output<String> operation;
 
     public Output<String> operation() {
         return this.operation;
     }
 
     @Import(name="parameters")
-      private final @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
+    private @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
 
-    public Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public RecipeActionArgs(
-        Output<String> operation,
-        @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters) {
-        this.operation = Objects.requireNonNull(operation, "expected parameter 'operation' to be non-null");
-        this.parameters = parameters;
-    }
+    private RecipeActionArgs() {}
 
-    private RecipeActionArgs() {
-        this.operation = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private RecipeActionArgs(RecipeActionArgs $) {
+        this.operation = $.operation;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecipeActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> operation;
-        private @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
+        private RecipeActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecipeActionArgs();
         }
 
         public Builder(RecipeActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operation = defaults.operation;
-    	      this.parameters = defaults.parameters;
+            $ = new RecipeActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operation(Output<String> operation) {
-            this.operation = Objects.requireNonNull(operation);
+            $.operation = operation;
             return this;
         }
+
         public Builder operation(String operation) {
-            this.operation = Output.of(Objects.requireNonNull(operation));
-            return this;
+            return operation(Output.of(operation));
         }
+
         public Builder parameters(@Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Either<RecipeParametersArgs,RecipeParameterMapArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
-        }        public RecipeActionArgs build() {
-            return new RecipeActionArgs(operation, parameters);
+
+        public Builder parameters(Either<RecipeParametersArgs,RecipeParameterMapArgs> parameters) {
+            return parameters(Output.of(parameters));
+        }
+
+        public RecipeActionArgs build() {
+            $.operation = Objects.requireNonNull($.operation, "expected parameter 'operation' to be non-null");
+            return $;
         }
     }
+
 }

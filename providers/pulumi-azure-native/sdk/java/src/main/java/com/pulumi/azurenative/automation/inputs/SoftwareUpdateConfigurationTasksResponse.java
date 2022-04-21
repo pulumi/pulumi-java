@@ -23,10 +23,10 @@ public final class SoftwareUpdateConfigurationTasksResponse extends com.pulumi.r
      * 
      */
     @Import(name="postTask")
-      private final @Nullable TaskPropertiesResponse postTask;
+    private @Nullable TaskPropertiesResponse postTask;
 
     public Optional<TaskPropertiesResponse> postTask() {
-        return this.postTask == null ? Optional.empty() : Optional.ofNullable(this.postTask);
+        return Optional.ofNullable(this.postTask);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class SoftwareUpdateConfigurationTasksResponse extends com.pulumi.r
      * 
      */
     @Import(name="preTask")
-      private final @Nullable TaskPropertiesResponse preTask;
+    private @Nullable TaskPropertiesResponse preTask;
 
     public Optional<TaskPropertiesResponse> preTask() {
-        return this.preTask == null ? Optional.empty() : Optional.ofNullable(this.preTask);
+        return Optional.ofNullable(this.preTask);
     }
 
-    public SoftwareUpdateConfigurationTasksResponse(
-        @Nullable TaskPropertiesResponse postTask,
-        @Nullable TaskPropertiesResponse preTask) {
-        this.postTask = postTask;
-        this.preTask = preTask;
-    }
+    private SoftwareUpdateConfigurationTasksResponse() {}
 
-    private SoftwareUpdateConfigurationTasksResponse() {
-        this.postTask = null;
-        this.preTask = null;
+    private SoftwareUpdateConfigurationTasksResponse(SoftwareUpdateConfigurationTasksResponse $) {
+        this.postTask = $.postTask;
+        this.preTask = $.preTask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareUpdateConfigurationTasksResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TaskPropertiesResponse postTask;
-        private @Nullable TaskPropertiesResponse preTask;
+        private SoftwareUpdateConfigurationTasksResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareUpdateConfigurationTasksResponse();
         }
 
         public Builder(SoftwareUpdateConfigurationTasksResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.postTask = defaults.postTask;
-    	      this.preTask = defaults.preTask;
+            $ = new SoftwareUpdateConfigurationTasksResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder postTask(@Nullable TaskPropertiesResponse postTask) {
-            this.postTask = postTask;
+            $.postTask = postTask;
             return this;
         }
+
         public Builder preTask(@Nullable TaskPropertiesResponse preTask) {
-            this.preTask = preTask;
+            $.preTask = preTask;
             return this;
-        }        public SoftwareUpdateConfigurationTasksResponse build() {
-            return new SoftwareUpdateConfigurationTasksResponse(postTask, preTask);
+        }
+
+        public SoftwareUpdateConfigurationTasksResponse build() {
+            return $;
         }
     }
+
 }

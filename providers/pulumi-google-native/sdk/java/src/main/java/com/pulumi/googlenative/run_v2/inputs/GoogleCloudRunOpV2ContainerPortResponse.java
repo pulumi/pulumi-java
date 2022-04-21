@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends com.pulumi.re
      * 
      */
     @Import(name="containerPort", required=true)
-      private final Integer containerPort;
+    private Integer containerPort;
 
     public Integer containerPort() {
         return this.containerPort;
@@ -33,55 +33,52 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GoogleCloudRunOpV2ContainerPortResponse(
-        Integer containerPort,
-        String name) {
-        this.containerPort = Objects.requireNonNull(containerPort, "expected parameter 'containerPort' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleCloudRunOpV2ContainerPortResponse() {}
 
-    private GoogleCloudRunOpV2ContainerPortResponse() {
-        this.containerPort = null;
-        this.name = null;
+    private GoogleCloudRunOpV2ContainerPortResponse(GoogleCloudRunOpV2ContainerPortResponse $) {
+        this.containerPort = $.containerPort;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2ContainerPortResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer containerPort;
-        private String name;
+        private GoogleCloudRunOpV2ContainerPortResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2ContainerPortResponse();
         }
 
         public Builder(GoogleCloudRunOpV2ContainerPortResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPort = defaults.containerPort;
-    	      this.name = defaults.name;
+            $ = new GoogleCloudRunOpV2ContainerPortResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPort(Integer containerPort) {
-            this.containerPort = Objects.requireNonNull(containerPort);
+            $.containerPort = containerPort;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GoogleCloudRunOpV2ContainerPortResponse build() {
-            return new GoogleCloudRunOpV2ContainerPortResponse(containerPort, name);
+        }
+
+        public GoogleCloudRunOpV2ContainerPortResponse build() {
+            $.containerPort = Objects.requireNonNull($.containerPort, "expected parameter 'containerPort' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

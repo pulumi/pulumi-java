@@ -6,9 +6,9 @@ package com.pulumi.azurenative.migrate;
 import com.pulumi.azurenative.migrate.inputs.AssessmentPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assessmentName")
-      private final @Nullable Output<String> assessmentName;
+    private @Nullable Output<String> assessmentName;
 
-    public Output<String> assessmentName() {
-        return this.assessmentName == null ? Codegen.empty() : this.assessmentName;
+    public Optional<Output<String>> assessmentName() {
+        return Optional.ofNullable(this.assessmentName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final Output<String> groupName;
+    private Output<String> groupName;
 
     public Output<String> groupName() {
         return this.groupName;
@@ -54,7 +54,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName", required=true)
-      private final Output<String> projectName;
+    private Output<String> projectName;
 
     public Output<String> projectName() {
         return this.projectName;
@@ -65,7 +65,7 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<AssessmentPropertiesArgs> properties;
+    private Output<AssessmentPropertiesArgs> properties;
 
     public Output<AssessmentPropertiesArgs> properties() {
         return this.properties;
@@ -76,115 +76,102 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public AssessmentArgs(
-        @Nullable Output<String> assessmentName,
-        @Nullable Output<String> eTag,
-        Output<String> groupName,
-        Output<String> projectName,
-        Output<AssessmentPropertiesArgs> properties,
-        Output<String> resourceGroupName) {
-        this.assessmentName = assessmentName;
-        this.eTag = eTag;
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private AssessmentArgs() {}
 
-    private AssessmentArgs() {
-        this.assessmentName = Codegen.empty();
-        this.eTag = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private AssessmentArgs(AssessmentArgs $) {
+        this.assessmentName = $.assessmentName;
+        this.eTag = $.eTag;
+        this.groupName = $.groupName;
+        this.projectName = $.projectName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assessmentName;
-        private @Nullable Output<String> eTag;
-        private Output<String> groupName;
-        private Output<String> projectName;
-        private Output<AssessmentPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
+        private AssessmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentArgs();
         }
 
         public Builder(AssessmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentName = defaults.assessmentName;
-    	      this.eTag = defaults.eTag;
-    	      this.groupName = defaults.groupName;
-    	      this.projectName = defaults.projectName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new AssessmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentName(@Nullable Output<String> assessmentName) {
-            this.assessmentName = assessmentName;
+            $.assessmentName = assessmentName;
             return this;
         }
-        public Builder assessmentName(@Nullable String assessmentName) {
-            this.assessmentName = Codegen.ofNullable(assessmentName);
-            return this;
+
+        public Builder assessmentName(String assessmentName) {
+            return assessmentName(Output.of(assessmentName));
         }
+
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder groupName(Output<String> groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Output.of(Objects.requireNonNull(groupName));
-            return this;
+            return groupName(Output.of(groupName));
         }
+
         public Builder projectName(Output<String> projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Output.of(Objects.requireNonNull(projectName));
-            return this;
+            return projectName(Output.of(projectName));
         }
+
         public Builder properties(Output<AssessmentPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(AssessmentPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public AssessmentArgs build() {
-            return new AssessmentArgs(assessmentName, eTag, groupName, projectName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public AssessmentArgs build() {
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

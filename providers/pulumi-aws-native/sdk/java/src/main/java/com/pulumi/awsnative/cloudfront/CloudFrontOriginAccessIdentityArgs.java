@@ -6,7 +6,6 @@ package com.pulumi.awsnative.cloudfront;
 import com.pulumi.awsnative.cloudfront.inputs.CloudFrontOriginAccessIdentityConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class CloudFrontOriginAccessIdentityArgs extends com.pulumi.resourc
     public static final CloudFrontOriginAccessIdentityArgs Empty = new CloudFrontOriginAccessIdentityArgs();
 
     @Import(name="cloudFrontOriginAccessIdentityConfig", required=true)
-      private final Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig;
+    private Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig;
 
     public Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig() {
         return this.cloudFrontOriginAccessIdentityConfig;
     }
 
-    public CloudFrontOriginAccessIdentityArgs(Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig) {
-        this.cloudFrontOriginAccessIdentityConfig = Objects.requireNonNull(cloudFrontOriginAccessIdentityConfig, "expected parameter 'cloudFrontOriginAccessIdentityConfig' to be non-null");
-    }
+    private CloudFrontOriginAccessIdentityArgs() {}
 
-    private CloudFrontOriginAccessIdentityArgs() {
-        this.cloudFrontOriginAccessIdentityConfig = Codegen.empty();
+    private CloudFrontOriginAccessIdentityArgs(CloudFrontOriginAccessIdentityArgs $) {
+        this.cloudFrontOriginAccessIdentityConfig = $.cloudFrontOriginAccessIdentityConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFrontOriginAccessIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig;
+        private CloudFrontOriginAccessIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFrontOriginAccessIdentityArgs();
         }
 
         public Builder(CloudFrontOriginAccessIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudFrontOriginAccessIdentityConfig = defaults.cloudFrontOriginAccessIdentityConfig;
+            $ = new CloudFrontOriginAccessIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudFrontOriginAccessIdentityConfig(Output<CloudFrontOriginAccessIdentityConfigArgs> cloudFrontOriginAccessIdentityConfig) {
-            this.cloudFrontOriginAccessIdentityConfig = Objects.requireNonNull(cloudFrontOriginAccessIdentityConfig);
+            $.cloudFrontOriginAccessIdentityConfig = cloudFrontOriginAccessIdentityConfig;
             return this;
         }
+
         public Builder cloudFrontOriginAccessIdentityConfig(CloudFrontOriginAccessIdentityConfigArgs cloudFrontOriginAccessIdentityConfig) {
-            this.cloudFrontOriginAccessIdentityConfig = Output.of(Objects.requireNonNull(cloudFrontOriginAccessIdentityConfig));
-            return this;
-        }        public CloudFrontOriginAccessIdentityArgs build() {
-            return new CloudFrontOriginAccessIdentityArgs(cloudFrontOriginAccessIdentityConfig);
+            return cloudFrontOriginAccessIdentityConfig(Output.of(cloudFrontOriginAccessIdentityConfig));
+        }
+
+        public CloudFrontOriginAccessIdentityArgs build() {
+            $.cloudFrontOriginAccessIdentityConfig = Objects.requireNonNull($.cloudFrontOriginAccessIdentityConfig, "expected parameter 'cloudFrontOriginAccessIdentityConfig' to be non-null");
+            return $;
         }
     }
+
 }

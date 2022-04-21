@@ -21,7 +21,7 @@ public final class DisplayInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="configurationDisplayName", required=true)
-      private final String configurationDisplayName;
+    private String configurationDisplayName;
 
     public String configurationDisplayName() {
         return this.configurationDisplayName;
@@ -32,55 +32,52 @@ public final class DisplayInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="productFamilyDisplayName", required=true)
-      private final String productFamilyDisplayName;
+    private String productFamilyDisplayName;
 
     public String productFamilyDisplayName() {
         return this.productFamilyDisplayName;
     }
 
-    public DisplayInfoResponse(
-        String configurationDisplayName,
-        String productFamilyDisplayName) {
-        this.configurationDisplayName = Objects.requireNonNull(configurationDisplayName, "expected parameter 'configurationDisplayName' to be non-null");
-        this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName, "expected parameter 'productFamilyDisplayName' to be non-null");
-    }
+    private DisplayInfoResponse() {}
 
-    private DisplayInfoResponse() {
-        this.configurationDisplayName = null;
-        this.productFamilyDisplayName = null;
+    private DisplayInfoResponse(DisplayInfoResponse $) {
+        this.configurationDisplayName = $.configurationDisplayName;
+        this.productFamilyDisplayName = $.productFamilyDisplayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DisplayInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationDisplayName;
-        private String productFamilyDisplayName;
+        private DisplayInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DisplayInfoResponse();
         }
 
         public Builder(DisplayInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationDisplayName = defaults.configurationDisplayName;
-    	      this.productFamilyDisplayName = defaults.productFamilyDisplayName;
+            $ = new DisplayInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationDisplayName(String configurationDisplayName) {
-            this.configurationDisplayName = Objects.requireNonNull(configurationDisplayName);
+            $.configurationDisplayName = configurationDisplayName;
             return this;
         }
+
         public Builder productFamilyDisplayName(String productFamilyDisplayName) {
-            this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName);
+            $.productFamilyDisplayName = productFamilyDisplayName;
             return this;
-        }        public DisplayInfoResponse build() {
-            return new DisplayInfoResponse(configurationDisplayName, productFamilyDisplayName);
+        }
+
+        public DisplayInfoResponse build() {
+            $.configurationDisplayName = Objects.requireNonNull($.configurationDisplayName, "expected parameter 'configurationDisplayName' to be non-null");
+            $.productFamilyDisplayName = Objects.requireNonNull($.productFamilyDisplayName, "expected parameter 'productFamilyDisplayName' to be non-null");
+            return $;
         }
     }
+
 }

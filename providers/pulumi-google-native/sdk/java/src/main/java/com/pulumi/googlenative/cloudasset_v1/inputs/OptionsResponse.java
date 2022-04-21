@@ -21,7 +21,7 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="analyzeServiceAccountImpersonation", required=true)
-      private final Boolean analyzeServiceAccountImpersonation;
+    private Boolean analyzeServiceAccountImpersonation;
 
     public Boolean analyzeServiceAccountImpersonation() {
         return this.analyzeServiceAccountImpersonation;
@@ -32,7 +32,7 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expandGroups", required=true)
-      private final Boolean expandGroups;
+    private Boolean expandGroups;
 
     public Boolean expandGroups() {
         return this.expandGroups;
@@ -43,7 +43,7 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expandResources", required=true)
-      private final Boolean expandResources;
+    private Boolean expandResources;
 
     public Boolean expandResources() {
         return this.expandResources;
@@ -54,7 +54,7 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expandRoles", required=true)
-      private final Boolean expandRoles;
+    private Boolean expandRoles;
 
     public Boolean expandRoles() {
         return this.expandRoles;
@@ -65,7 +65,7 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputGroupEdges", required=true)
-      private final Boolean outputGroupEdges;
+    private Boolean outputGroupEdges;
 
     public Boolean outputGroupEdges() {
         return this.outputGroupEdges;
@@ -76,91 +76,80 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputResourceEdges", required=true)
-      private final Boolean outputResourceEdges;
+    private Boolean outputResourceEdges;
 
     public Boolean outputResourceEdges() {
         return this.outputResourceEdges;
     }
 
-    public OptionsResponse(
-        Boolean analyzeServiceAccountImpersonation,
-        Boolean expandGroups,
-        Boolean expandResources,
-        Boolean expandRoles,
-        Boolean outputGroupEdges,
-        Boolean outputResourceEdges) {
-        this.analyzeServiceAccountImpersonation = Objects.requireNonNull(analyzeServiceAccountImpersonation, "expected parameter 'analyzeServiceAccountImpersonation' to be non-null");
-        this.expandGroups = Objects.requireNonNull(expandGroups, "expected parameter 'expandGroups' to be non-null");
-        this.expandResources = Objects.requireNonNull(expandResources, "expected parameter 'expandResources' to be non-null");
-        this.expandRoles = Objects.requireNonNull(expandRoles, "expected parameter 'expandRoles' to be non-null");
-        this.outputGroupEdges = Objects.requireNonNull(outputGroupEdges, "expected parameter 'outputGroupEdges' to be non-null");
-        this.outputResourceEdges = Objects.requireNonNull(outputResourceEdges, "expected parameter 'outputResourceEdges' to be non-null");
-    }
+    private OptionsResponse() {}
 
-    private OptionsResponse() {
-        this.analyzeServiceAccountImpersonation = null;
-        this.expandGroups = null;
-        this.expandResources = null;
-        this.expandRoles = null;
-        this.outputGroupEdges = null;
-        this.outputResourceEdges = null;
+    private OptionsResponse(OptionsResponse $) {
+        this.analyzeServiceAccountImpersonation = $.analyzeServiceAccountImpersonation;
+        this.expandGroups = $.expandGroups;
+        this.expandResources = $.expandResources;
+        this.expandRoles = $.expandRoles;
+        this.outputGroupEdges = $.outputGroupEdges;
+        this.outputResourceEdges = $.outputResourceEdges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean analyzeServiceAccountImpersonation;
-        private Boolean expandGroups;
-        private Boolean expandResources;
-        private Boolean expandRoles;
-        private Boolean outputGroupEdges;
-        private Boolean outputResourceEdges;
+        private OptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OptionsResponse();
         }
 
         public Builder(OptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyzeServiceAccountImpersonation = defaults.analyzeServiceAccountImpersonation;
-    	      this.expandGroups = defaults.expandGroups;
-    	      this.expandResources = defaults.expandResources;
-    	      this.expandRoles = defaults.expandRoles;
-    	      this.outputGroupEdges = defaults.outputGroupEdges;
-    	      this.outputResourceEdges = defaults.outputResourceEdges;
+            $ = new OptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder analyzeServiceAccountImpersonation(Boolean analyzeServiceAccountImpersonation) {
-            this.analyzeServiceAccountImpersonation = Objects.requireNonNull(analyzeServiceAccountImpersonation);
+            $.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
             return this;
         }
+
         public Builder expandGroups(Boolean expandGroups) {
-            this.expandGroups = Objects.requireNonNull(expandGroups);
+            $.expandGroups = expandGroups;
             return this;
         }
+
         public Builder expandResources(Boolean expandResources) {
-            this.expandResources = Objects.requireNonNull(expandResources);
+            $.expandResources = expandResources;
             return this;
         }
+
         public Builder expandRoles(Boolean expandRoles) {
-            this.expandRoles = Objects.requireNonNull(expandRoles);
+            $.expandRoles = expandRoles;
             return this;
         }
+
         public Builder outputGroupEdges(Boolean outputGroupEdges) {
-            this.outputGroupEdges = Objects.requireNonNull(outputGroupEdges);
+            $.outputGroupEdges = outputGroupEdges;
             return this;
         }
+
         public Builder outputResourceEdges(Boolean outputResourceEdges) {
-            this.outputResourceEdges = Objects.requireNonNull(outputResourceEdges);
+            $.outputResourceEdges = outputResourceEdges;
             return this;
-        }        public OptionsResponse build() {
-            return new OptionsResponse(analyzeServiceAccountImpersonation, expandGroups, expandResources, expandRoles, outputGroupEdges, outputResourceEdges);
+        }
+
+        public OptionsResponse build() {
+            $.analyzeServiceAccountImpersonation = Objects.requireNonNull($.analyzeServiceAccountImpersonation, "expected parameter 'analyzeServiceAccountImpersonation' to be non-null");
+            $.expandGroups = Objects.requireNonNull($.expandGroups, "expected parameter 'expandGroups' to be non-null");
+            $.expandResources = Objects.requireNonNull($.expandResources, "expected parameter 'expandResources' to be non-null");
+            $.expandRoles = Objects.requireNonNull($.expandRoles, "expected parameter 'expandRoles' to be non-null");
+            $.outputGroupEdges = Objects.requireNonNull($.outputGroupEdges, "expected parameter 'outputGroupEdges' to be non-null");
+            $.outputResourceEdges = Objects.requireNonNull($.outputResourceEdges, "expected parameter 'outputResourceEdges' to be non-null");
+            return $;
         }
     }
+
 }

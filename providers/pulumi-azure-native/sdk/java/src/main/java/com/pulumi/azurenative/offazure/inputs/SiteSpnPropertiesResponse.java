@@ -23,10 +23,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="aadAuthority")
-      private final @Nullable String aadAuthority;
+    private @Nullable String aadAuthority;
 
     public Optional<String> aadAuthority() {
-        return this.aadAuthority == null ? Optional.empty() : Optional.ofNullable(this.aadAuthority);
+        return Optional.ofNullable(this.aadAuthority);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="audience")
-      private final @Nullable String audience;
+    private @Nullable String audience;
 
     public Optional<String> audience() {
-        return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="objectId")
-      private final @Nullable String objectId;
+    private @Nullable String objectId;
 
     public Optional<String> objectId() {
-        return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rawCertData")
-      private final @Nullable String rawCertData;
+    private @Nullable String rawCertData;
 
     public Optional<String> rawCertData() {
-        return this.rawCertData == null ? Optional.empty() : Optional.ofNullable(this.rawCertData);
+        return Optional.ofNullable(this.rawCertData);
     }
 
     /**
@@ -78,91 +78,74 @@ public final class SiteSpnPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public SiteSpnPropertiesResponse(
-        @Nullable String aadAuthority,
-        @Nullable String applicationId,
-        @Nullable String audience,
-        @Nullable String objectId,
-        @Nullable String rawCertData,
-        @Nullable String tenantId) {
-        this.aadAuthority = aadAuthority;
-        this.applicationId = applicationId;
-        this.audience = audience;
-        this.objectId = objectId;
-        this.rawCertData = rawCertData;
-        this.tenantId = tenantId;
-    }
+    private SiteSpnPropertiesResponse() {}
 
-    private SiteSpnPropertiesResponse() {
-        this.aadAuthority = null;
-        this.applicationId = null;
-        this.audience = null;
-        this.objectId = null;
-        this.rawCertData = null;
-        this.tenantId = null;
+    private SiteSpnPropertiesResponse(SiteSpnPropertiesResponse $) {
+        this.aadAuthority = $.aadAuthority;
+        this.applicationId = $.applicationId;
+        this.audience = $.audience;
+        this.objectId = $.objectId;
+        this.rawCertData = $.rawCertData;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteSpnPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String aadAuthority;
-        private @Nullable String applicationId;
-        private @Nullable String audience;
-        private @Nullable String objectId;
-        private @Nullable String rawCertData;
-        private @Nullable String tenantId;
+        private SiteSpnPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteSpnPropertiesResponse();
         }
 
         public Builder(SiteSpnPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadAuthority = defaults.aadAuthority;
-    	      this.applicationId = defaults.applicationId;
-    	      this.audience = defaults.audience;
-    	      this.objectId = defaults.objectId;
-    	      this.rawCertData = defaults.rawCertData;
-    	      this.tenantId = defaults.tenantId;
+            $ = new SiteSpnPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aadAuthority(@Nullable String aadAuthority) {
-            this.aadAuthority = aadAuthority;
+            $.aadAuthority = aadAuthority;
             return this;
         }
+
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder audience(@Nullable String audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
+
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
+
         public Builder rawCertData(@Nullable String rawCertData) {
-            this.rawCertData = rawCertData;
+            $.rawCertData = rawCertData;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public SiteSpnPropertiesResponse build() {
-            return new SiteSpnPropertiesResponse(aadAuthority, applicationId, audience, objectId, rawCertData, tenantId);
+        }
+
+        public SiteSpnPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -15,62 +15,57 @@ public final class MissionProfileDataflowEdge extends com.pulumi.resources.Invok
     public static final MissionProfileDataflowEdge Empty = new MissionProfileDataflowEdge();
 
     @Import(name="destination")
-      private final @Nullable String destination;
+    private @Nullable String destination;
 
     public Optional<String> destination() {
-        return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
+        return Optional.ofNullable(this.destination);
     }
 
     @Import(name="source")
-      private final @Nullable String source;
+    private @Nullable String source;
 
     public Optional<String> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
-    public MissionProfileDataflowEdge(
-        @Nullable String destination,
-        @Nullable String source) {
-        this.destination = destination;
-        this.source = source;
-    }
+    private MissionProfileDataflowEdge() {}
 
-    private MissionProfileDataflowEdge() {
-        this.destination = null;
-        this.source = null;
+    private MissionProfileDataflowEdge(MissionProfileDataflowEdge $) {
+        this.destination = $.destination;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MissionProfileDataflowEdge defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String destination;
-        private @Nullable String source;
+        private MissionProfileDataflowEdge $;
 
         public Builder() {
-    	      // Empty
+            $ = new MissionProfileDataflowEdge();
         }
 
         public Builder(MissionProfileDataflowEdge defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.source = defaults.source;
+            $ = new MissionProfileDataflowEdge(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
+
         public Builder source(@Nullable String source) {
-            this.source = source;
+            $.source = source;
             return this;
-        }        public MissionProfileDataflowEdge build() {
-            return new MissionProfileDataflowEdge(destination, source);
+        }
+
+        public MissionProfileDataflowEdge build() {
+            return $;
         }
     }
+
 }

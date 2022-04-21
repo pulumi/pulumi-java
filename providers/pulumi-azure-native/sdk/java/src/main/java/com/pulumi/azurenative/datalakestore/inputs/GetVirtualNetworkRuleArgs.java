@@ -17,7 +17,7 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetVirtualNetworkRuleArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="virtualNetworkRuleName", required=true)
-      private final String virtualNetworkRuleName;
+    private String virtualNetworkRuleName;
 
     public String virtualNetworkRuleName() {
         return this.virtualNetworkRuleName;
     }
 
-    public GetVirtualNetworkRuleArgs(
-        String accountName,
-        String resourceGroupName,
-        String virtualNetworkRuleName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkRuleName = Objects.requireNonNull(virtualNetworkRuleName, "expected parameter 'virtualNetworkRuleName' to be non-null");
-    }
+    private GetVirtualNetworkRuleArgs() {}
 
-    private GetVirtualNetworkRuleArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.virtualNetworkRuleName = null;
+    private GetVirtualNetworkRuleArgs(GetVirtualNetworkRuleArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkRuleName = $.virtualNetworkRuleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String virtualNetworkRuleName;
+        private GetVirtualNetworkRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkRuleArgs();
         }
 
         public Builder(GetVirtualNetworkRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkRuleName = defaults.virtualNetworkRuleName;
+            $ = new GetVirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
-            this.virtualNetworkRuleName = Objects.requireNonNull(virtualNetworkRuleName);
+            $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
-        }        public GetVirtualNetworkRuleArgs build() {
-            return new GetVirtualNetworkRuleArgs(accountName, resourceGroupName, virtualNetworkRuleName);
+        }
+
+        public GetVirtualNetworkRuleArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkRuleName = Objects.requireNonNull($.virtualNetworkRuleName, "expected parameter 'virtualNetworkRuleName' to be non-null");
+            return $;
         }
     }
+
 }

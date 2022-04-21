@@ -5,7 +5,6 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AS2MessageConnectionSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ignoreCertificateNameMismatch", required=true)
-      private final Output<Boolean> ignoreCertificateNameMismatch;
+    private Output<Boolean> ignoreCertificateNameMismatch;
 
     public Output<Boolean> ignoreCertificateNameMismatch() {
         return this.ignoreCertificateNameMismatch;
@@ -34,7 +33,7 @@ public final class AS2MessageConnectionSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keepHttpConnectionAlive", required=true)
-      private final Output<Boolean> keepHttpConnectionAlive;
+    private Output<Boolean> keepHttpConnectionAlive;
 
     public Output<Boolean> keepHttpConnectionAlive() {
         return this.keepHttpConnectionAlive;
@@ -45,7 +44,7 @@ public final class AS2MessageConnectionSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="supportHttpStatusCodeContinue", required=true)
-      private final Output<Boolean> supportHttpStatusCodeContinue;
+    private Output<Boolean> supportHttpStatusCodeContinue;
 
     public Output<Boolean> supportHttpStatusCodeContinue() {
         return this.supportHttpStatusCodeContinue;
@@ -56,89 +55,82 @@ public final class AS2MessageConnectionSettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="unfoldHttpHeaders", required=true)
-      private final Output<Boolean> unfoldHttpHeaders;
+    private Output<Boolean> unfoldHttpHeaders;
 
     public Output<Boolean> unfoldHttpHeaders() {
         return this.unfoldHttpHeaders;
     }
 
-    public AS2MessageConnectionSettingsArgs(
-        Output<Boolean> ignoreCertificateNameMismatch,
-        Output<Boolean> keepHttpConnectionAlive,
-        Output<Boolean> supportHttpStatusCodeContinue,
-        Output<Boolean> unfoldHttpHeaders) {
-        this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch, "expected parameter 'ignoreCertificateNameMismatch' to be non-null");
-        this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive, "expected parameter 'keepHttpConnectionAlive' to be non-null");
-        this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue, "expected parameter 'supportHttpStatusCodeContinue' to be non-null");
-        this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders, "expected parameter 'unfoldHttpHeaders' to be non-null");
-    }
+    private AS2MessageConnectionSettingsArgs() {}
 
-    private AS2MessageConnectionSettingsArgs() {
-        this.ignoreCertificateNameMismatch = Codegen.empty();
-        this.keepHttpConnectionAlive = Codegen.empty();
-        this.supportHttpStatusCodeContinue = Codegen.empty();
-        this.unfoldHttpHeaders = Codegen.empty();
+    private AS2MessageConnectionSettingsArgs(AS2MessageConnectionSettingsArgs $) {
+        this.ignoreCertificateNameMismatch = $.ignoreCertificateNameMismatch;
+        this.keepHttpConnectionAlive = $.keepHttpConnectionAlive;
+        this.supportHttpStatusCodeContinue = $.supportHttpStatusCodeContinue;
+        this.unfoldHttpHeaders = $.unfoldHttpHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2MessageConnectionSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> ignoreCertificateNameMismatch;
-        private Output<Boolean> keepHttpConnectionAlive;
-        private Output<Boolean> supportHttpStatusCodeContinue;
-        private Output<Boolean> unfoldHttpHeaders;
+        private AS2MessageConnectionSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2MessageConnectionSettingsArgs();
         }
 
         public Builder(AS2MessageConnectionSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreCertificateNameMismatch = defaults.ignoreCertificateNameMismatch;
-    	      this.keepHttpConnectionAlive = defaults.keepHttpConnectionAlive;
-    	      this.supportHttpStatusCodeContinue = defaults.supportHttpStatusCodeContinue;
-    	      this.unfoldHttpHeaders = defaults.unfoldHttpHeaders;
+            $ = new AS2MessageConnectionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreCertificateNameMismatch(Output<Boolean> ignoreCertificateNameMismatch) {
-            this.ignoreCertificateNameMismatch = Objects.requireNonNull(ignoreCertificateNameMismatch);
+            $.ignoreCertificateNameMismatch = ignoreCertificateNameMismatch;
             return this;
         }
+
         public Builder ignoreCertificateNameMismatch(Boolean ignoreCertificateNameMismatch) {
-            this.ignoreCertificateNameMismatch = Output.of(Objects.requireNonNull(ignoreCertificateNameMismatch));
-            return this;
+            return ignoreCertificateNameMismatch(Output.of(ignoreCertificateNameMismatch));
         }
+
         public Builder keepHttpConnectionAlive(Output<Boolean> keepHttpConnectionAlive) {
-            this.keepHttpConnectionAlive = Objects.requireNonNull(keepHttpConnectionAlive);
+            $.keepHttpConnectionAlive = keepHttpConnectionAlive;
             return this;
         }
+
         public Builder keepHttpConnectionAlive(Boolean keepHttpConnectionAlive) {
-            this.keepHttpConnectionAlive = Output.of(Objects.requireNonNull(keepHttpConnectionAlive));
-            return this;
+            return keepHttpConnectionAlive(Output.of(keepHttpConnectionAlive));
         }
+
         public Builder supportHttpStatusCodeContinue(Output<Boolean> supportHttpStatusCodeContinue) {
-            this.supportHttpStatusCodeContinue = Objects.requireNonNull(supportHttpStatusCodeContinue);
+            $.supportHttpStatusCodeContinue = supportHttpStatusCodeContinue;
             return this;
         }
+
         public Builder supportHttpStatusCodeContinue(Boolean supportHttpStatusCodeContinue) {
-            this.supportHttpStatusCodeContinue = Output.of(Objects.requireNonNull(supportHttpStatusCodeContinue));
-            return this;
+            return supportHttpStatusCodeContinue(Output.of(supportHttpStatusCodeContinue));
         }
+
         public Builder unfoldHttpHeaders(Output<Boolean> unfoldHttpHeaders) {
-            this.unfoldHttpHeaders = Objects.requireNonNull(unfoldHttpHeaders);
+            $.unfoldHttpHeaders = unfoldHttpHeaders;
             return this;
         }
+
         public Builder unfoldHttpHeaders(Boolean unfoldHttpHeaders) {
-            this.unfoldHttpHeaders = Output.of(Objects.requireNonNull(unfoldHttpHeaders));
-            return this;
-        }        public AS2MessageConnectionSettingsArgs build() {
-            return new AS2MessageConnectionSettingsArgs(ignoreCertificateNameMismatch, keepHttpConnectionAlive, supportHttpStatusCodeContinue, unfoldHttpHeaders);
+            return unfoldHttpHeaders(Output.of(unfoldHttpHeaders));
+        }
+
+        public AS2MessageConnectionSettingsArgs build() {
+            $.ignoreCertificateNameMismatch = Objects.requireNonNull($.ignoreCertificateNameMismatch, "expected parameter 'ignoreCertificateNameMismatch' to be non-null");
+            $.keepHttpConnectionAlive = Objects.requireNonNull($.keepHttpConnectionAlive, "expected parameter 'keepHttpConnectionAlive' to be non-null");
+            $.supportHttpStatusCodeContinue = Objects.requireNonNull($.supportHttpStatusCodeContinue, "expected parameter 'supportHttpStatusCodeContinue' to be non-null");
+            $.unfoldHttpHeaders = Objects.requireNonNull($.unfoldHttpHeaders, "expected parameter 'unfoldHttpHeaders' to be non-null");
+            return $;
         }
     }
+
 }

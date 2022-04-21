@@ -13,45 +13,45 @@ public final class GetClusterNodeConfigSandboxConfig extends com.pulumi.resource
     public static final GetClusterNodeConfigSandboxConfig Empty = new GetClusterNodeConfigSandboxConfig();
 
     @Import(name="sandboxType", required=true)
-      private final String sandboxType;
+    private String sandboxType;
 
     public String sandboxType() {
         return this.sandboxType;
     }
 
-    public GetClusterNodeConfigSandboxConfig(String sandboxType) {
-        this.sandboxType = Objects.requireNonNull(sandboxType, "expected parameter 'sandboxType' to be non-null");
-    }
+    private GetClusterNodeConfigSandboxConfig() {}
 
-    private GetClusterNodeConfigSandboxConfig() {
-        this.sandboxType = null;
+    private GetClusterNodeConfigSandboxConfig(GetClusterNodeConfigSandboxConfig $) {
+        this.sandboxType = $.sandboxType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodeConfigSandboxConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sandboxType;
+        private GetClusterNodeConfigSandboxConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodeConfigSandboxConfig();
         }
 
         public Builder(GetClusterNodeConfigSandboxConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sandboxType = defaults.sandboxType;
+            $ = new GetClusterNodeConfigSandboxConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder sandboxType(String sandboxType) {
-            this.sandboxType = Objects.requireNonNull(sandboxType);
+            $.sandboxType = sandboxType;
             return this;
-        }        public GetClusterNodeConfigSandboxConfig build() {
-            return new GetClusterNodeConfigSandboxConfig(sandboxType);
+        }
+
+        public GetClusterNodeConfigSandboxConfig build() {
+            $.sandboxType = Objects.requireNonNull($.sandboxType, "expected parameter 'sandboxType' to be non-null");
+            return $;
         }
     }
+
 }

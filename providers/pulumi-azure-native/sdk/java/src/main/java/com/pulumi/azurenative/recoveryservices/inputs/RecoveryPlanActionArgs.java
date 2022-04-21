@@ -8,7 +8,6 @@ import com.pulumi.azurenative.recoveryservices.enums.ReplicationProtectedItemOpe
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +26,7 @@ public final class RecoveryPlanActionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="actionName", required=true)
-      private final Output<String> actionName;
+    private Output<String> actionName;
 
     public Output<String> actionName() {
         return this.actionName;
@@ -38,7 +37,7 @@ public final class RecoveryPlanActionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="failoverDirections", required=true)
-      private final Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
+    private Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
 
     public Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections() {
         return this.failoverDirections;
@@ -49,82 +48,79 @@ public final class RecoveryPlanActionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="failoverTypes", required=true)
-      private final Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
+    private Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
 
     public Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes() {
         return this.failoverTypes;
     }
 
-    public RecoveryPlanActionArgs(
-        Output<String> actionName,
-        Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections,
-        Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-        this.failoverDirections = Objects.requireNonNull(failoverDirections, "expected parameter 'failoverDirections' to be non-null");
-        this.failoverTypes = Objects.requireNonNull(failoverTypes, "expected parameter 'failoverTypes' to be non-null");
-    }
+    private RecoveryPlanActionArgs() {}
 
-    private RecoveryPlanActionArgs() {
-        this.actionName = Codegen.empty();
-        this.failoverDirections = Codegen.empty();
-        this.failoverTypes = Codegen.empty();
+    private RecoveryPlanActionArgs(RecoveryPlanActionArgs $) {
+        this.actionName = $.actionName;
+        this.failoverDirections = $.failoverDirections;
+        this.failoverTypes = $.failoverTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> actionName;
-        private Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
-        private Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
+        private RecoveryPlanActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanActionArgs();
         }
 
         public Builder(RecoveryPlanActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionName = defaults.actionName;
-    	      this.failoverDirections = defaults.failoverDirections;
-    	      this.failoverTypes = defaults.failoverTypes;
+            $ = new RecoveryPlanActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionName(Output<String> actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
         }
+
         public Builder actionName(String actionName) {
-            this.actionName = Output.of(Objects.requireNonNull(actionName));
-            return this;
+            return actionName(Output.of(actionName));
         }
+
         public Builder failoverDirections(Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections) {
-            this.failoverDirections = Objects.requireNonNull(failoverDirections);
+            $.failoverDirections = failoverDirections;
             return this;
         }
+
         public Builder failoverDirections(List<Either<String,PossibleOperationsDirections>> failoverDirections) {
-            this.failoverDirections = Output.of(Objects.requireNonNull(failoverDirections));
-            return this;
+            return failoverDirections(Output.of(failoverDirections));
         }
+
         public Builder failoverDirections(Either<String,PossibleOperationsDirections>... failoverDirections) {
             return failoverDirections(List.of(failoverDirections));
         }
+
         public Builder failoverTypes(Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
-            this.failoverTypes = Objects.requireNonNull(failoverTypes);
+            $.failoverTypes = failoverTypes;
             return this;
         }
+
         public Builder failoverTypes(List<Either<String,ReplicationProtectedItemOperation>> failoverTypes) {
-            this.failoverTypes = Output.of(Objects.requireNonNull(failoverTypes));
-            return this;
+            return failoverTypes(Output.of(failoverTypes));
         }
+
         public Builder failoverTypes(Either<String,ReplicationProtectedItemOperation>... failoverTypes) {
             return failoverTypes(List.of(failoverTypes));
-        }        public RecoveryPlanActionArgs build() {
-            return new RecoveryPlanActionArgs(actionName, failoverDirections, failoverTypes);
+        }
+
+        public RecoveryPlanActionArgs build() {
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            $.failoverDirections = Objects.requireNonNull($.failoverDirections, "expected parameter 'failoverDirections' to be non-null");
+            $.failoverTypes = Objects.requireNonNull($.failoverTypes, "expected parameter 'failoverTypes' to be non-null");
+            return $;
         }
     }
+
 }

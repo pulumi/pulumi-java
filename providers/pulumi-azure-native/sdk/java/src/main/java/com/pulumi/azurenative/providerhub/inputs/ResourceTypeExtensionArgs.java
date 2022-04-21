@@ -7,10 +7,10 @@ import com.pulumi.azurenative.providerhub.enums.ExtensionCategory;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,93 +19,86 @@ public final class ResourceTypeExtensionArgs extends com.pulumi.resources.Resour
     public static final ResourceTypeExtensionArgs Empty = new ResourceTypeExtensionArgs();
 
     @Import(name="endpointUri")
-      private final @Nullable Output<String> endpointUri;
+    private @Nullable Output<String> endpointUri;
 
-    public Output<String> endpointUri() {
-        return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
+    public Optional<Output<String>> endpointUri() {
+        return Optional.ofNullable(this.endpointUri);
     }
 
     @Import(name="extensionCategories")
-      private final @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories;
+    private @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories;
 
-    public Output<List<Either<String,ExtensionCategory>>> extensionCategories() {
-        return this.extensionCategories == null ? Codegen.empty() : this.extensionCategories;
+    public Optional<Output<List<Either<String,ExtensionCategory>>>> extensionCategories() {
+        return Optional.ofNullable(this.extensionCategories);
     }
 
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ResourceTypeExtensionArgs(
-        @Nullable Output<String> endpointUri,
-        @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories,
-        @Nullable Output<String> timeout) {
-        this.endpointUri = endpointUri;
-        this.extensionCategories = extensionCategories;
-        this.timeout = timeout;
-    }
+    private ResourceTypeExtensionArgs() {}
 
-    private ResourceTypeExtensionArgs() {
-        this.endpointUri = Codegen.empty();
-        this.extensionCategories = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private ResourceTypeExtensionArgs(ResourceTypeExtensionArgs $) {
+        this.endpointUri = $.endpointUri;
+        this.extensionCategories = $.extensionCategories;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endpointUri;
-        private @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories;
-        private @Nullable Output<String> timeout;
+        private ResourceTypeExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeExtensionArgs();
         }
 
         public Builder(ResourceTypeExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.extensionCategories = defaults.extensionCategories;
-    	      this.timeout = defaults.timeout;
+            $ = new ResourceTypeExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointUri(@Nullable Output<String> endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
         }
-        public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Codegen.ofNullable(endpointUri);
-            return this;
+
+        public Builder endpointUri(String endpointUri) {
+            return endpointUri(Output.of(endpointUri));
         }
+
         public Builder extensionCategories(@Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories) {
-            this.extensionCategories = extensionCategories;
+            $.extensionCategories = extensionCategories;
             return this;
         }
-        public Builder extensionCategories(@Nullable List<Either<String,ExtensionCategory>> extensionCategories) {
-            this.extensionCategories = Codegen.ofNullable(extensionCategories);
-            return this;
+
+        public Builder extensionCategories(List<Either<String,ExtensionCategory>> extensionCategories) {
+            return extensionCategories(Output.of(extensionCategories));
         }
+
         public Builder extensionCategories(Either<String,ExtensionCategory>... extensionCategories) {
             return extensionCategories(List.of(extensionCategories));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public ResourceTypeExtensionArgs build() {
-            return new ResourceTypeExtensionArgs(endpointUri, extensionCategories, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public ResourceTypeExtensionArgs build() {
+            return $;
         }
     }
+
 }

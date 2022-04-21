@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BigtableColumnArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<String> encoding;
+    private @Nullable Output<String> encoding;
 
-    public Output<String> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<String>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BigtableColumnArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="fieldName")
-      private final @Nullable Output<String> fieldName;
+    private @Nullable Output<String> fieldName;
 
-    public Output<String> fieldName() {
-        return this.fieldName == null ? Codegen.empty() : this.fieldName;
+    public Optional<Output<String>> fieldName() {
+        return Optional.ofNullable(this.fieldName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BigtableColumnArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="onlyReadLatest")
-      private final @Nullable Output<Boolean> onlyReadLatest;
+    private @Nullable Output<Boolean> onlyReadLatest;
 
-    public Output<Boolean> onlyReadLatest() {
-        return this.onlyReadLatest == null ? Codegen.empty() : this.onlyReadLatest;
+    public Optional<Output<Boolean>> onlyReadLatest() {
+        return Optional.ofNullable(this.onlyReadLatest);
     }
 
     /**
@@ -54,17 +54,17 @@ public final class BigtableColumnArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="qualifierEncoded")
-      private final @Nullable Output<String> qualifierEncoded;
+    private @Nullable Output<String> qualifierEncoded;
 
-    public Output<String> qualifierEncoded() {
-        return this.qualifierEncoded == null ? Codegen.empty() : this.qualifierEncoded;
+    public Optional<Output<String>> qualifierEncoded() {
+        return Optional.ofNullable(this.qualifierEncoded);
     }
 
     @Import(name="qualifierString")
-      private final @Nullable Output<String> qualifierString;
+    private @Nullable Output<String> qualifierString;
 
-    public Output<String> qualifierString() {
-        return this.qualifierString == null ? Codegen.empty() : this.qualifierString;
+    public Optional<Output<String>> qualifierString() {
+        return Optional.ofNullable(this.qualifierString);
     }
 
     /**
@@ -72,115 +72,98 @@ public final class BigtableColumnArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public BigtableColumnArgs(
-        @Nullable Output<String> encoding,
-        @Nullable Output<String> fieldName,
-        @Nullable Output<Boolean> onlyReadLatest,
-        @Nullable Output<String> qualifierEncoded,
-        @Nullable Output<String> qualifierString,
-        @Nullable Output<String> type) {
-        this.encoding = encoding;
-        this.fieldName = fieldName;
-        this.onlyReadLatest = onlyReadLatest;
-        this.qualifierEncoded = qualifierEncoded;
-        this.qualifierString = qualifierString;
-        this.type = type;
-    }
+    private BigtableColumnArgs() {}
 
-    private BigtableColumnArgs() {
-        this.encoding = Codegen.empty();
-        this.fieldName = Codegen.empty();
-        this.onlyReadLatest = Codegen.empty();
-        this.qualifierEncoded = Codegen.empty();
-        this.qualifierString = Codegen.empty();
-        this.type = Codegen.empty();
+    private BigtableColumnArgs(BigtableColumnArgs $) {
+        this.encoding = $.encoding;
+        this.fieldName = $.fieldName;
+        this.onlyReadLatest = $.onlyReadLatest;
+        this.qualifierEncoded = $.qualifierEncoded;
+        this.qualifierString = $.qualifierString;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigtableColumnArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encoding;
-        private @Nullable Output<String> fieldName;
-        private @Nullable Output<Boolean> onlyReadLatest;
-        private @Nullable Output<String> qualifierEncoded;
-        private @Nullable Output<String> qualifierString;
-        private @Nullable Output<String> type;
+        private BigtableColumnArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigtableColumnArgs();
         }
 
         public Builder(BigtableColumnArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.fieldName = defaults.fieldName;
-    	      this.onlyReadLatest = defaults.onlyReadLatest;
-    	      this.qualifierEncoded = defaults.qualifierEncoded;
-    	      this.qualifierString = defaults.qualifierString;
-    	      this.type = defaults.type;
+            $ = new BigtableColumnArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable Output<String> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable String encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder fieldName(@Nullable Output<String> fieldName) {
-            this.fieldName = fieldName;
+            $.fieldName = fieldName;
             return this;
         }
-        public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = Codegen.ofNullable(fieldName);
-            return this;
+
+        public Builder fieldName(String fieldName) {
+            return fieldName(Output.of(fieldName));
         }
+
         public Builder onlyReadLatest(@Nullable Output<Boolean> onlyReadLatest) {
-            this.onlyReadLatest = onlyReadLatest;
+            $.onlyReadLatest = onlyReadLatest;
             return this;
         }
-        public Builder onlyReadLatest(@Nullable Boolean onlyReadLatest) {
-            this.onlyReadLatest = Codegen.ofNullable(onlyReadLatest);
-            return this;
+
+        public Builder onlyReadLatest(Boolean onlyReadLatest) {
+            return onlyReadLatest(Output.of(onlyReadLatest));
         }
+
         public Builder qualifierEncoded(@Nullable Output<String> qualifierEncoded) {
-            this.qualifierEncoded = qualifierEncoded;
+            $.qualifierEncoded = qualifierEncoded;
             return this;
         }
-        public Builder qualifierEncoded(@Nullable String qualifierEncoded) {
-            this.qualifierEncoded = Codegen.ofNullable(qualifierEncoded);
-            return this;
+
+        public Builder qualifierEncoded(String qualifierEncoded) {
+            return qualifierEncoded(Output.of(qualifierEncoded));
         }
+
         public Builder qualifierString(@Nullable Output<String> qualifierString) {
-            this.qualifierString = qualifierString;
+            $.qualifierString = qualifierString;
             return this;
         }
-        public Builder qualifierString(@Nullable String qualifierString) {
-            this.qualifierString = Codegen.ofNullable(qualifierString);
-            return this;
+
+        public Builder qualifierString(String qualifierString) {
+            return qualifierString(Output.of(qualifierString));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public BigtableColumnArgs build() {
-            return new BigtableColumnArgs(encoding, fieldName, onlyReadLatest, qualifierEncoded, qualifierString, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public BigtableColumnArgs build() {
+            return $;
         }
     }
+
 }

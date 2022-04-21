@@ -8,8 +8,8 @@ import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceArgs;
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupStatefulRuleOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RuleGroupRuleGroupArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="ruleVariables")
-      private final @Nullable Output<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables;
+    private @Nullable Output<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables;
 
-    public Output<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables() {
-        return this.ruleVariables == null ? Codegen.empty() : this.ruleVariables;
+    public Optional<Output<RuleGroupRuleGroupRuleVariablesArgs>> ruleVariables() {
+        return Optional.ofNullable(this.ruleVariables);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class RuleGroupRuleGroupArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="rulesSource", required=true)
-      private final Output<RuleGroupRuleGroupRulesSourceArgs> rulesSource;
+    private Output<RuleGroupRuleGroupRulesSourceArgs> rulesSource;
 
     public Output<RuleGroupRuleGroupRulesSourceArgs> rulesSource() {
         return this.rulesSource;
@@ -44,76 +44,69 @@ public final class RuleGroupRuleGroupArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="statefulRuleOptions")
-      private final @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions;
+    private @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions;
 
-    public Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions() {
-        return this.statefulRuleOptions == null ? Codegen.empty() : this.statefulRuleOptions;
+    public Optional<Output<RuleGroupRuleGroupStatefulRuleOptionsArgs>> statefulRuleOptions() {
+        return Optional.ofNullable(this.statefulRuleOptions);
     }
 
-    public RuleGroupRuleGroupArgs(
-        @Nullable Output<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables,
-        Output<RuleGroupRuleGroupRulesSourceArgs> rulesSource,
-        @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions) {
-        this.ruleVariables = ruleVariables;
-        this.rulesSource = Objects.requireNonNull(rulesSource, "expected parameter 'rulesSource' to be non-null");
-        this.statefulRuleOptions = statefulRuleOptions;
-    }
+    private RuleGroupRuleGroupArgs() {}
 
-    private RuleGroupRuleGroupArgs() {
-        this.ruleVariables = Codegen.empty();
-        this.rulesSource = Codegen.empty();
-        this.statefulRuleOptions = Codegen.empty();
+    private RuleGroupRuleGroupArgs(RuleGroupRuleGroupArgs $) {
+        this.ruleVariables = $.ruleVariables;
+        this.rulesSource = $.rulesSource;
+        this.statefulRuleOptions = $.statefulRuleOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables;
-        private Output<RuleGroupRuleGroupRulesSourceArgs> rulesSource;
-        private @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions;
+        private RuleGroupRuleGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupArgs();
         }
 
         public Builder(RuleGroupRuleGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleVariables = defaults.ruleVariables;
-    	      this.rulesSource = defaults.rulesSource;
-    	      this.statefulRuleOptions = defaults.statefulRuleOptions;
+            $ = new RuleGroupRuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleVariables(@Nullable Output<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables) {
-            this.ruleVariables = ruleVariables;
+            $.ruleVariables = ruleVariables;
             return this;
         }
-        public Builder ruleVariables(@Nullable RuleGroupRuleGroupRuleVariablesArgs ruleVariables) {
-            this.ruleVariables = Codegen.ofNullable(ruleVariables);
-            return this;
+
+        public Builder ruleVariables(RuleGroupRuleGroupRuleVariablesArgs ruleVariables) {
+            return ruleVariables(Output.of(ruleVariables));
         }
+
         public Builder rulesSource(Output<RuleGroupRuleGroupRulesSourceArgs> rulesSource) {
-            this.rulesSource = Objects.requireNonNull(rulesSource);
+            $.rulesSource = rulesSource;
             return this;
         }
+
         public Builder rulesSource(RuleGroupRuleGroupRulesSourceArgs rulesSource) {
-            this.rulesSource = Output.of(Objects.requireNonNull(rulesSource));
-            return this;
+            return rulesSource(Output.of(rulesSource));
         }
+
         public Builder statefulRuleOptions(@Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions) {
-            this.statefulRuleOptions = statefulRuleOptions;
+            $.statefulRuleOptions = statefulRuleOptions;
             return this;
         }
-        public Builder statefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptionsArgs statefulRuleOptions) {
-            this.statefulRuleOptions = Codegen.ofNullable(statefulRuleOptions);
-            return this;
-        }        public RuleGroupRuleGroupArgs build() {
-            return new RuleGroupRuleGroupArgs(ruleVariables, rulesSource, statefulRuleOptions);
+
+        public Builder statefulRuleOptions(RuleGroupRuleGroupStatefulRuleOptionsArgs statefulRuleOptions) {
+            return statefulRuleOptions(Output.of(statefulRuleOptions));
+        }
+
+        public RuleGroupRuleGroupArgs build() {
+            $.rulesSource = Objects.requireNonNull($.rulesSource, "expected parameter 'rulesSource' to be non-null");
+            return $;
         }
     }
+
 }

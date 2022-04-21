@@ -28,10 +28,10 @@ public final class DatabricksResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeLocation")
-      private final @Nullable String computeLocation;
+    private @Nullable String computeLocation;
 
     public Optional<String> computeLocation() {
-        return this.computeLocation == null ? Optional.empty() : Optional.ofNullable(this.computeLocation);
+        return Optional.ofNullable(this.computeLocation);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class DatabricksResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeType", required=true)
-      private final String computeType;
+    private String computeType;
 
     public String computeType() {
         return this.computeType;
@@ -51,10 +51,10 @@ public final class DatabricksResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,17 +62,17 @@ public final class DatabricksResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isAttachedCompute", required=true)
-      private final Boolean isAttachedCompute;
+    private Boolean isAttachedCompute;
 
     public Boolean isAttachedCompute() {
         return this.isAttachedCompute;
     }
 
     @Import(name="properties")
-      private final @Nullable DatabricksResponseProperties properties;
+    private @Nullable DatabricksResponseProperties properties;
 
     public Optional<DatabricksResponseProperties> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class DatabricksResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningErrors", required=true)
-      private final List<MachineLearningServiceErrorResponse> provisioningErrors;
+    private List<MachineLearningServiceErrorResponse> provisioningErrors;
 
     public List<MachineLearningServiceErrorResponse> provisioningErrors() {
         return this.provisioningErrors;
@@ -91,7 +91,7 @@ public final class DatabricksResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -102,112 +102,94 @@ public final class DatabricksResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public DatabricksResponse(
-        @Nullable String computeLocation,
-        String computeType,
-        @Nullable String description,
-        Boolean isAttachedCompute,
-        @Nullable DatabricksResponseProperties properties,
-        List<MachineLearningServiceErrorResponse> provisioningErrors,
-        String provisioningState,
-        @Nullable String resourceId) {
-        this.computeLocation = computeLocation;
-        this.computeType = Codegen.stringProp("computeType").arg(computeType).require();
-        this.description = description;
-        this.isAttachedCompute = Objects.requireNonNull(isAttachedCompute, "expected parameter 'isAttachedCompute' to be non-null");
-        this.properties = properties;
-        this.provisioningErrors = Objects.requireNonNull(provisioningErrors, "expected parameter 'provisioningErrors' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceId = resourceId;
-    }
+    private DatabricksResponse() {}
 
-    private DatabricksResponse() {
-        this.computeLocation = null;
-        this.computeType = null;
-        this.description = null;
-        this.isAttachedCompute = null;
-        this.properties = null;
-        this.provisioningErrors = List.of();
-        this.provisioningState = null;
-        this.resourceId = null;
+    private DatabricksResponse(DatabricksResponse $) {
+        this.computeLocation = $.computeLocation;
+        this.computeType = $.computeType;
+        this.description = $.description;
+        this.isAttachedCompute = $.isAttachedCompute;
+        this.properties = $.properties;
+        this.provisioningErrors = $.provisioningErrors;
+        this.provisioningState = $.provisioningState;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabricksResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String computeLocation;
-        private String computeType;
-        private @Nullable String description;
-        private Boolean isAttachedCompute;
-        private @Nullable DatabricksResponseProperties properties;
-        private List<MachineLearningServiceErrorResponse> provisioningErrors;
-        private String provisioningState;
-        private @Nullable String resourceId;
+        private DatabricksResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabricksResponse();
         }
 
         public Builder(DatabricksResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeLocation = defaults.computeLocation;
-    	      this.computeType = defaults.computeType;
-    	      this.description = defaults.description;
-    	      this.isAttachedCompute = defaults.isAttachedCompute;
-    	      this.properties = defaults.properties;
-    	      this.provisioningErrors = defaults.provisioningErrors;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceId = defaults.resourceId;
+            $ = new DatabricksResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computeLocation(@Nullable String computeLocation) {
-            this.computeLocation = computeLocation;
+            $.computeLocation = computeLocation;
             return this;
         }
+
         public Builder computeType(String computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder isAttachedCompute(Boolean isAttachedCompute) {
-            this.isAttachedCompute = Objects.requireNonNull(isAttachedCompute);
+            $.isAttachedCompute = isAttachedCompute;
             return this;
         }
+
         public Builder properties(@Nullable DatabricksResponseProperties properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder provisioningErrors(List<MachineLearningServiceErrorResponse> provisioningErrors) {
-            this.provisioningErrors = Objects.requireNonNull(provisioningErrors);
+            $.provisioningErrors = provisioningErrors;
             return this;
         }
+
         public Builder provisioningErrors(MachineLearningServiceErrorResponse... provisioningErrors) {
             return provisioningErrors(List.of(provisioningErrors));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public DatabricksResponse build() {
-            return new DatabricksResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
+        }
+
+        public DatabricksResponse build() {
+            $.computeType = Codegen.stringProp("computeType").arg($.computeType).require();
+            $.isAttachedCompute = Objects.requireNonNull($.isAttachedCompute, "expected parameter 'isAttachedCompute' to be non-null");
+            $.provisioningErrors = Objects.requireNonNull($.provisioningErrors, "expected parameter 'provisioningErrors' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enableNRRForInboundDecodedMessages", required=true)
-      private final Boolean enableNRRForInboundDecodedMessages;
+    private Boolean enableNRRForInboundDecodedMessages;
 
     public Boolean enableNRRForInboundDecodedMessages() {
         return this.enableNRRForInboundDecodedMessages;
@@ -35,7 +35,7 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enableNRRForInboundEncodedMessages", required=true)
-      private final Boolean enableNRRForInboundEncodedMessages;
+    private Boolean enableNRRForInboundEncodedMessages;
 
     public Boolean enableNRRForInboundEncodedMessages() {
         return this.enableNRRForInboundEncodedMessages;
@@ -46,7 +46,7 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enableNRRForInboundMDN", required=true)
-      private final Boolean enableNRRForInboundMDN;
+    private Boolean enableNRRForInboundMDN;
 
     public Boolean enableNRRForInboundMDN() {
         return this.enableNRRForInboundMDN;
@@ -57,7 +57,7 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enableNRRForOutboundDecodedMessages", required=true)
-      private final Boolean enableNRRForOutboundDecodedMessages;
+    private Boolean enableNRRForOutboundDecodedMessages;
 
     public Boolean enableNRRForOutboundDecodedMessages() {
         return this.enableNRRForOutboundDecodedMessages;
@@ -68,7 +68,7 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enableNRRForOutboundEncodedMessages", required=true)
-      private final Boolean enableNRRForOutboundEncodedMessages;
+    private Boolean enableNRRForOutboundEncodedMessages;
 
     public Boolean enableNRRForOutboundEncodedMessages() {
         return this.enableNRRForOutboundEncodedMessages;
@@ -79,7 +79,7 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enableNRRForOutboundMDN", required=true)
-      private final Boolean enableNRRForOutboundMDN;
+    private Boolean enableNRRForOutboundMDN;
 
     public Boolean enableNRRForOutboundMDN() {
         return this.enableNRRForOutboundMDN;
@@ -90,10 +90,10 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="encryptionCertificateName")
-      private final @Nullable String encryptionCertificateName;
+    private @Nullable String encryptionCertificateName;
 
     public Optional<String> encryptionCertificateName() {
-        return this.encryptionCertificateName == null ? Optional.empty() : Optional.ofNullable(this.encryptionCertificateName);
+        return Optional.ofNullable(this.encryptionCertificateName);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="overrideGroupSigningCertificate", required=true)
-      private final Boolean overrideGroupSigningCertificate;
+    private Boolean overrideGroupSigningCertificate;
 
     public Boolean overrideGroupSigningCertificate() {
         return this.overrideGroupSigningCertificate;
@@ -112,10 +112,10 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sha2AlgorithmFormat")
-      private final @Nullable String sha2AlgorithmFormat;
+    private @Nullable String sha2AlgorithmFormat;
 
     public Optional<String> sha2AlgorithmFormat() {
-        return this.sha2AlgorithmFormat == null ? Optional.empty() : Optional.ofNullable(this.sha2AlgorithmFormat);
+        return Optional.ofNullable(this.sha2AlgorithmFormat);
     }
 
     /**
@@ -123,127 +123,105 @@ public final class AS2SecuritySettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="signingCertificateName")
-      private final @Nullable String signingCertificateName;
+    private @Nullable String signingCertificateName;
 
     public Optional<String> signingCertificateName() {
-        return this.signingCertificateName == null ? Optional.empty() : Optional.ofNullable(this.signingCertificateName);
+        return Optional.ofNullable(this.signingCertificateName);
     }
 
-    public AS2SecuritySettingsResponse(
-        Boolean enableNRRForInboundDecodedMessages,
-        Boolean enableNRRForInboundEncodedMessages,
-        Boolean enableNRRForInboundMDN,
-        Boolean enableNRRForOutboundDecodedMessages,
-        Boolean enableNRRForOutboundEncodedMessages,
-        Boolean enableNRRForOutboundMDN,
-        @Nullable String encryptionCertificateName,
-        Boolean overrideGroupSigningCertificate,
-        @Nullable String sha2AlgorithmFormat,
-        @Nullable String signingCertificateName) {
-        this.enableNRRForInboundDecodedMessages = Objects.requireNonNull(enableNRRForInboundDecodedMessages, "expected parameter 'enableNRRForInboundDecodedMessages' to be non-null");
-        this.enableNRRForInboundEncodedMessages = Objects.requireNonNull(enableNRRForInboundEncodedMessages, "expected parameter 'enableNRRForInboundEncodedMessages' to be non-null");
-        this.enableNRRForInboundMDN = Objects.requireNonNull(enableNRRForInboundMDN, "expected parameter 'enableNRRForInboundMDN' to be non-null");
-        this.enableNRRForOutboundDecodedMessages = Objects.requireNonNull(enableNRRForOutboundDecodedMessages, "expected parameter 'enableNRRForOutboundDecodedMessages' to be non-null");
-        this.enableNRRForOutboundEncodedMessages = Objects.requireNonNull(enableNRRForOutboundEncodedMessages, "expected parameter 'enableNRRForOutboundEncodedMessages' to be non-null");
-        this.enableNRRForOutboundMDN = Objects.requireNonNull(enableNRRForOutboundMDN, "expected parameter 'enableNRRForOutboundMDN' to be non-null");
-        this.encryptionCertificateName = encryptionCertificateName;
-        this.overrideGroupSigningCertificate = Objects.requireNonNull(overrideGroupSigningCertificate, "expected parameter 'overrideGroupSigningCertificate' to be non-null");
-        this.sha2AlgorithmFormat = sha2AlgorithmFormat;
-        this.signingCertificateName = signingCertificateName;
-    }
+    private AS2SecuritySettingsResponse() {}
 
-    private AS2SecuritySettingsResponse() {
-        this.enableNRRForInboundDecodedMessages = null;
-        this.enableNRRForInboundEncodedMessages = null;
-        this.enableNRRForInboundMDN = null;
-        this.enableNRRForOutboundDecodedMessages = null;
-        this.enableNRRForOutboundEncodedMessages = null;
-        this.enableNRRForOutboundMDN = null;
-        this.encryptionCertificateName = null;
-        this.overrideGroupSigningCertificate = null;
-        this.sha2AlgorithmFormat = null;
-        this.signingCertificateName = null;
+    private AS2SecuritySettingsResponse(AS2SecuritySettingsResponse $) {
+        this.enableNRRForInboundDecodedMessages = $.enableNRRForInboundDecodedMessages;
+        this.enableNRRForInboundEncodedMessages = $.enableNRRForInboundEncodedMessages;
+        this.enableNRRForInboundMDN = $.enableNRRForInboundMDN;
+        this.enableNRRForOutboundDecodedMessages = $.enableNRRForOutboundDecodedMessages;
+        this.enableNRRForOutboundEncodedMessages = $.enableNRRForOutboundEncodedMessages;
+        this.enableNRRForOutboundMDN = $.enableNRRForOutboundMDN;
+        this.encryptionCertificateName = $.encryptionCertificateName;
+        this.overrideGroupSigningCertificate = $.overrideGroupSigningCertificate;
+        this.sha2AlgorithmFormat = $.sha2AlgorithmFormat;
+        this.signingCertificateName = $.signingCertificateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2SecuritySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableNRRForInboundDecodedMessages;
-        private Boolean enableNRRForInboundEncodedMessages;
-        private Boolean enableNRRForInboundMDN;
-        private Boolean enableNRRForOutboundDecodedMessages;
-        private Boolean enableNRRForOutboundEncodedMessages;
-        private Boolean enableNRRForOutboundMDN;
-        private @Nullable String encryptionCertificateName;
-        private Boolean overrideGroupSigningCertificate;
-        private @Nullable String sha2AlgorithmFormat;
-        private @Nullable String signingCertificateName;
+        private AS2SecuritySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2SecuritySettingsResponse();
         }
 
         public Builder(AS2SecuritySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableNRRForInboundDecodedMessages = defaults.enableNRRForInboundDecodedMessages;
-    	      this.enableNRRForInboundEncodedMessages = defaults.enableNRRForInboundEncodedMessages;
-    	      this.enableNRRForInboundMDN = defaults.enableNRRForInboundMDN;
-    	      this.enableNRRForOutboundDecodedMessages = defaults.enableNRRForOutboundDecodedMessages;
-    	      this.enableNRRForOutboundEncodedMessages = defaults.enableNRRForOutboundEncodedMessages;
-    	      this.enableNRRForOutboundMDN = defaults.enableNRRForOutboundMDN;
-    	      this.encryptionCertificateName = defaults.encryptionCertificateName;
-    	      this.overrideGroupSigningCertificate = defaults.overrideGroupSigningCertificate;
-    	      this.sha2AlgorithmFormat = defaults.sha2AlgorithmFormat;
-    	      this.signingCertificateName = defaults.signingCertificateName;
+            $ = new AS2SecuritySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableNRRForInboundDecodedMessages(Boolean enableNRRForInboundDecodedMessages) {
-            this.enableNRRForInboundDecodedMessages = Objects.requireNonNull(enableNRRForInboundDecodedMessages);
+            $.enableNRRForInboundDecodedMessages = enableNRRForInboundDecodedMessages;
             return this;
         }
+
         public Builder enableNRRForInboundEncodedMessages(Boolean enableNRRForInboundEncodedMessages) {
-            this.enableNRRForInboundEncodedMessages = Objects.requireNonNull(enableNRRForInboundEncodedMessages);
+            $.enableNRRForInboundEncodedMessages = enableNRRForInboundEncodedMessages;
             return this;
         }
+
         public Builder enableNRRForInboundMDN(Boolean enableNRRForInboundMDN) {
-            this.enableNRRForInboundMDN = Objects.requireNonNull(enableNRRForInboundMDN);
+            $.enableNRRForInboundMDN = enableNRRForInboundMDN;
             return this;
         }
+
         public Builder enableNRRForOutboundDecodedMessages(Boolean enableNRRForOutboundDecodedMessages) {
-            this.enableNRRForOutboundDecodedMessages = Objects.requireNonNull(enableNRRForOutboundDecodedMessages);
+            $.enableNRRForOutboundDecodedMessages = enableNRRForOutboundDecodedMessages;
             return this;
         }
+
         public Builder enableNRRForOutboundEncodedMessages(Boolean enableNRRForOutboundEncodedMessages) {
-            this.enableNRRForOutboundEncodedMessages = Objects.requireNonNull(enableNRRForOutboundEncodedMessages);
+            $.enableNRRForOutboundEncodedMessages = enableNRRForOutboundEncodedMessages;
             return this;
         }
+
         public Builder enableNRRForOutboundMDN(Boolean enableNRRForOutboundMDN) {
-            this.enableNRRForOutboundMDN = Objects.requireNonNull(enableNRRForOutboundMDN);
+            $.enableNRRForOutboundMDN = enableNRRForOutboundMDN;
             return this;
         }
+
         public Builder encryptionCertificateName(@Nullable String encryptionCertificateName) {
-            this.encryptionCertificateName = encryptionCertificateName;
+            $.encryptionCertificateName = encryptionCertificateName;
             return this;
         }
+
         public Builder overrideGroupSigningCertificate(Boolean overrideGroupSigningCertificate) {
-            this.overrideGroupSigningCertificate = Objects.requireNonNull(overrideGroupSigningCertificate);
+            $.overrideGroupSigningCertificate = overrideGroupSigningCertificate;
             return this;
         }
+
         public Builder sha2AlgorithmFormat(@Nullable String sha2AlgorithmFormat) {
-            this.sha2AlgorithmFormat = sha2AlgorithmFormat;
+            $.sha2AlgorithmFormat = sha2AlgorithmFormat;
             return this;
         }
+
         public Builder signingCertificateName(@Nullable String signingCertificateName) {
-            this.signingCertificateName = signingCertificateName;
+            $.signingCertificateName = signingCertificateName;
             return this;
-        }        public AS2SecuritySettingsResponse build() {
-            return new AS2SecuritySettingsResponse(enableNRRForInboundDecodedMessages, enableNRRForInboundEncodedMessages, enableNRRForInboundMDN, enableNRRForOutboundDecodedMessages, enableNRRForOutboundEncodedMessages, enableNRRForOutboundMDN, encryptionCertificateName, overrideGroupSigningCertificate, sha2AlgorithmFormat, signingCertificateName);
+        }
+
+        public AS2SecuritySettingsResponse build() {
+            $.enableNRRForInboundDecodedMessages = Objects.requireNonNull($.enableNRRForInboundDecodedMessages, "expected parameter 'enableNRRForInboundDecodedMessages' to be non-null");
+            $.enableNRRForInboundEncodedMessages = Objects.requireNonNull($.enableNRRForInboundEncodedMessages, "expected parameter 'enableNRRForInboundEncodedMessages' to be non-null");
+            $.enableNRRForInboundMDN = Objects.requireNonNull($.enableNRRForInboundMDN, "expected parameter 'enableNRRForInboundMDN' to be non-null");
+            $.enableNRRForOutboundDecodedMessages = Objects.requireNonNull($.enableNRRForOutboundDecodedMessages, "expected parameter 'enableNRRForOutboundDecodedMessages' to be non-null");
+            $.enableNRRForOutboundEncodedMessages = Objects.requireNonNull($.enableNRRForOutboundEncodedMessages, "expected parameter 'enableNRRForOutboundEncodedMessages' to be non-null");
+            $.enableNRRForOutboundMDN = Objects.requireNonNull($.enableNRRForOutboundMDN, "expected parameter 'enableNRRForOutboundMDN' to be non-null");
+            $.overrideGroupSigningCertificate = Objects.requireNonNull($.overrideGroupSigningCertificate, "expected parameter 'overrideGroupSigningCertificate' to be non-null");
+            return $;
         }
     }
+
 }

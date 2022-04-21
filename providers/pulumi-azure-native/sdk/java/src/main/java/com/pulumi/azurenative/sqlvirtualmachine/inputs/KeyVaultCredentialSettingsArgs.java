@@ -5,10 +5,10 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="azureKeyVaultUrl")
-      private final @Nullable Output<String> azureKeyVaultUrl;
+    private @Nullable Output<String> azureKeyVaultUrl;
 
-    public Output<String> azureKeyVaultUrl() {
-        return this.azureKeyVaultUrl == null ? Codegen.empty() : this.azureKeyVaultUrl;
+    public Optional<Output<String>> azureKeyVaultUrl() {
+        return Optional.ofNullable(this.azureKeyVaultUrl);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="credentialName")
-      private final @Nullable Output<String> credentialName;
+    private @Nullable Output<String> credentialName;
 
-    public Output<String> credentialName() {
-        return this.credentialName == null ? Codegen.empty() : this.credentialName;
+    public Optional<Output<String>> credentialName() {
+        return Optional.ofNullable(this.credentialName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="servicePrincipalName")
-      private final @Nullable Output<String> servicePrincipalName;
+    private @Nullable Output<String> servicePrincipalName;
 
-    public Output<String> servicePrincipalName() {
-        return this.servicePrincipalName == null ? Codegen.empty() : this.servicePrincipalName;
+    public Optional<Output<String>> servicePrincipalName() {
+        return Optional.ofNullable(this.servicePrincipalName);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class KeyVaultCredentialSettingsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="servicePrincipalSecret")
-      private final @Nullable Output<String> servicePrincipalSecret;
+    private @Nullable Output<String> servicePrincipalSecret;
 
-    public Output<String> servicePrincipalSecret() {
-        return this.servicePrincipalSecret == null ? Codegen.empty() : this.servicePrincipalSecret;
+    public Optional<Output<String>> servicePrincipalSecret() {
+        return Optional.ofNullable(this.servicePrincipalSecret);
     }
 
-    public KeyVaultCredentialSettingsArgs(
-        @Nullable Output<String> azureKeyVaultUrl,
-        @Nullable Output<String> credentialName,
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<String> servicePrincipalName,
-        @Nullable Output<String> servicePrincipalSecret) {
-        this.azureKeyVaultUrl = azureKeyVaultUrl;
-        this.credentialName = credentialName;
-        this.enable = enable;
-        this.servicePrincipalName = servicePrincipalName;
-        this.servicePrincipalSecret = servicePrincipalSecret;
-    }
+    private KeyVaultCredentialSettingsArgs() {}
 
-    private KeyVaultCredentialSettingsArgs() {
-        this.azureKeyVaultUrl = Codegen.empty();
-        this.credentialName = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.servicePrincipalName = Codegen.empty();
-        this.servicePrincipalSecret = Codegen.empty();
+    private KeyVaultCredentialSettingsArgs(KeyVaultCredentialSettingsArgs $) {
+        this.azureKeyVaultUrl = $.azureKeyVaultUrl;
+        this.credentialName = $.credentialName;
+        this.enable = $.enable;
+        this.servicePrincipalName = $.servicePrincipalName;
+        this.servicePrincipalSecret = $.servicePrincipalSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultCredentialSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> azureKeyVaultUrl;
-        private @Nullable Output<String> credentialName;
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<String> servicePrincipalName;
-        private @Nullable Output<String> servicePrincipalSecret;
+        private KeyVaultCredentialSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultCredentialSettingsArgs();
         }
 
         public Builder(KeyVaultCredentialSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureKeyVaultUrl = defaults.azureKeyVaultUrl;
-    	      this.credentialName = defaults.credentialName;
-    	      this.enable = defaults.enable;
-    	      this.servicePrincipalName = defaults.servicePrincipalName;
-    	      this.servicePrincipalSecret = defaults.servicePrincipalSecret;
+            $ = new KeyVaultCredentialSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureKeyVaultUrl(@Nullable Output<String> azureKeyVaultUrl) {
-            this.azureKeyVaultUrl = azureKeyVaultUrl;
+            $.azureKeyVaultUrl = azureKeyVaultUrl;
             return this;
         }
-        public Builder azureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
-            this.azureKeyVaultUrl = Codegen.ofNullable(azureKeyVaultUrl);
-            return this;
+
+        public Builder azureKeyVaultUrl(String azureKeyVaultUrl) {
+            return azureKeyVaultUrl(Output.of(azureKeyVaultUrl));
         }
+
         public Builder credentialName(@Nullable Output<String> credentialName) {
-            this.credentialName = credentialName;
+            $.credentialName = credentialName;
             return this;
         }
-        public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = Codegen.ofNullable(credentialName);
-            return this;
+
+        public Builder credentialName(String credentialName) {
+            return credentialName(Output.of(credentialName));
         }
+
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder servicePrincipalName(@Nullable Output<String> servicePrincipalName) {
-            this.servicePrincipalName = servicePrincipalName;
+            $.servicePrincipalName = servicePrincipalName;
             return this;
         }
-        public Builder servicePrincipalName(@Nullable String servicePrincipalName) {
-            this.servicePrincipalName = Codegen.ofNullable(servicePrincipalName);
-            return this;
+
+        public Builder servicePrincipalName(String servicePrincipalName) {
+            return servicePrincipalName(Output.of(servicePrincipalName));
         }
+
         public Builder servicePrincipalSecret(@Nullable Output<String> servicePrincipalSecret) {
-            this.servicePrincipalSecret = servicePrincipalSecret;
+            $.servicePrincipalSecret = servicePrincipalSecret;
             return this;
         }
-        public Builder servicePrincipalSecret(@Nullable String servicePrincipalSecret) {
-            this.servicePrincipalSecret = Codegen.ofNullable(servicePrincipalSecret);
-            return this;
-        }        public KeyVaultCredentialSettingsArgs build() {
-            return new KeyVaultCredentialSettingsArgs(azureKeyVaultUrl, credentialName, enable, servicePrincipalName, servicePrincipalSecret);
+
+        public Builder servicePrincipalSecret(String servicePrincipalSecret) {
+            return servicePrincipalSecret(Output.of(servicePrincipalSecret));
+        }
+
+        public KeyVaultCredentialSettingsArgs build() {
+            return $;
         }
     }
+
 }

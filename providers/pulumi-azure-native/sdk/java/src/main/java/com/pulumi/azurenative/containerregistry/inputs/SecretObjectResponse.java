@@ -24,10 +24,10 @@ public final class SecretObjectResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -37,55 +37,50 @@ public final class SecretObjectResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public SecretObjectResponse(
-        @Nullable String type,
-        @Nullable String value) {
-        this.type = type;
-        this.value = value;
-    }
+    private SecretObjectResponse() {}
 
-    private SecretObjectResponse() {
-        this.type = null;
-        this.value = null;
+    private SecretObjectResponse(SecretObjectResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretObjectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String type;
-        private @Nullable String value;
+        private SecretObjectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretObjectResponse();
         }
 
         public Builder(SecretObjectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new SecretObjectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public SecretObjectResponse build() {
-            return new SecretObjectResponse(type, value);
+        }
+
+        public SecretObjectResponse build() {
+            return $;
         }
     }
+
 }

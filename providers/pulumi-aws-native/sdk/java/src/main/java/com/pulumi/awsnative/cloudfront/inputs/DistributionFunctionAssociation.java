@@ -15,62 +15,57 @@ public final class DistributionFunctionAssociation extends com.pulumi.resources.
     public static final DistributionFunctionAssociation Empty = new DistributionFunctionAssociation();
 
     @Import(name="eventType")
-      private final @Nullable String eventType;
+    private @Nullable String eventType;
 
     public Optional<String> eventType() {
-        return this.eventType == null ? Optional.empty() : Optional.ofNullable(this.eventType);
+        return Optional.ofNullable(this.eventType);
     }
 
     @Import(name="functionARN")
-      private final @Nullable String functionARN;
+    private @Nullable String functionARN;
 
     public Optional<String> functionARN() {
-        return this.functionARN == null ? Optional.empty() : Optional.ofNullable(this.functionARN);
+        return Optional.ofNullable(this.functionARN);
     }
 
-    public DistributionFunctionAssociation(
-        @Nullable String eventType,
-        @Nullable String functionARN) {
-        this.eventType = eventType;
-        this.functionARN = functionARN;
-    }
+    private DistributionFunctionAssociation() {}
 
-    private DistributionFunctionAssociation() {
-        this.eventType = null;
-        this.functionARN = null;
+    private DistributionFunctionAssociation(DistributionFunctionAssociation $) {
+        this.eventType = $.eventType;
+        this.functionARN = $.functionARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionFunctionAssociation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String eventType;
-        private @Nullable String functionARN;
+        private DistributionFunctionAssociation $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionFunctionAssociation();
         }
 
         public Builder(DistributionFunctionAssociation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
-    	      this.functionARN = defaults.functionARN;
+            $ = new DistributionFunctionAssociation(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(@Nullable String eventType) {
-            this.eventType = eventType;
+            $.eventType = eventType;
             return this;
         }
+
         public Builder functionARN(@Nullable String functionARN) {
-            this.functionARN = functionARN;
+            $.functionARN = functionARN;
             return this;
-        }        public DistributionFunctionAssociation build() {
-            return new DistributionFunctionAssociation(eventType, functionARN);
+        }
+
+        public DistributionFunctionAssociation build() {
+            return $;
         }
     }
+
 }

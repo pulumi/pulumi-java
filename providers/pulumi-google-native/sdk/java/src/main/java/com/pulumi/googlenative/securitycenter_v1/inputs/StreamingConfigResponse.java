@@ -21,45 +21,45 @@ public final class StreamingConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
     }
 
-    public StreamingConfigResponse(String filter) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-    }
+    private StreamingConfigResponse() {}
 
-    private StreamingConfigResponse() {
-        this.filter = null;
+    private StreamingConfigResponse(StreamingConfigResponse $) {
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
+        private StreamingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingConfigResponse();
         }
 
         public Builder(StreamingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
+            $ = new StreamingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
-        }        public StreamingConfigResponse build() {
-            return new StreamingConfigResponse(filter);
+        }
+
+        public StreamingConfigResponse build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

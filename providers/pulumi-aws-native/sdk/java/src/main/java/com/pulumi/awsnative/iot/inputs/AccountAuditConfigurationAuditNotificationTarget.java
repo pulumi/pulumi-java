@@ -20,10 +20,10 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable String roleArn;
+    private @Nullable String roleArn;
 
     public Optional<String> roleArn() {
-        return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class AccountAuditConfigurationAuditNotificationTarget extends com.
      * 
      */
     @Import(name="targetArn")
-      private final @Nullable String targetArn;
+    private @Nullable String targetArn;
 
     public Optional<String> targetArn() {
-        return this.targetArn == null ? Optional.empty() : Optional.ofNullable(this.targetArn);
+        return Optional.ofNullable(this.targetArn);
     }
 
-    public AccountAuditConfigurationAuditNotificationTarget(
-        @Nullable Boolean enabled,
-        @Nullable String roleArn,
-        @Nullable String targetArn) {
-        this.enabled = enabled;
-        this.roleArn = roleArn;
-        this.targetArn = targetArn;
-    }
+    private AccountAuditConfigurationAuditNotificationTarget() {}
 
-    private AccountAuditConfigurationAuditNotificationTarget() {
-        this.enabled = null;
-        this.roleArn = null;
-        this.targetArn = null;
+    private AccountAuditConfigurationAuditNotificationTarget(AccountAuditConfigurationAuditNotificationTarget $) {
+        this.enabled = $.enabled;
+        this.roleArn = $.roleArn;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountAuditConfigurationAuditNotificationTarget defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String roleArn;
-        private @Nullable String targetArn;
+        private AccountAuditConfigurationAuditNotificationTarget $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountAuditConfigurationAuditNotificationTarget();
         }
 
         public Builder(AccountAuditConfigurationAuditNotificationTarget defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.roleArn = defaults.roleArn;
-    	      this.targetArn = defaults.targetArn;
+            $ = new AccountAuditConfigurationAuditNotificationTarget(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = targetArn;
+            $.targetArn = targetArn;
             return this;
-        }        public AccountAuditConfigurationAuditNotificationTarget build() {
-            return new AccountAuditConfigurationAuditNotificationTarget(enabled, roleArn, targetArn);
+        }
+
+        public AccountAuditConfigurationAuditNotificationTarget build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse extend
      * 
      */
     @Import(name="items", required=true)
-      private final List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items;
+    private List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items;
 
     public List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items() {
         return this.items;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse extend
      * 
      */
     @Import(name="subtitle", required=true)
-      private final String subtitle;
+    private String subtitle;
 
     public String subtitle() {
         return this.subtitle;
@@ -45,67 +45,63 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse extend
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageListSelectResponse(
-        List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items,
-        String subtitle,
-        String title) {
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.subtitle = Objects.requireNonNull(subtitle, "expected parameter 'subtitle' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageListSelectResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageListSelectResponse() {
-        this.items = List.of();
-        this.subtitle = null;
-        this.title = null;
+    private GoogleCloudDialogflowV2IntentMessageListSelectResponse(GoogleCloudDialogflowV2IntentMessageListSelectResponse $) {
+        this.items = $.items;
+        this.subtitle = $.subtitle;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageListSelectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items;
-        private String subtitle;
-        private String title;
+        private GoogleCloudDialogflowV2IntentMessageListSelectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageListSelectResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageListSelectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
-    	      this.subtitle = defaults.subtitle;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2IntentMessageListSelectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder items(List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(GoogleCloudDialogflowV2IntentMessageListSelectItemResponse... items) {
             return items(List.of(items));
         }
+
         public Builder subtitle(String subtitle) {
-            this.subtitle = Objects.requireNonNull(subtitle);
+            $.subtitle = subtitle;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageListSelectResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageListSelectResponse(items, subtitle, title);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageListSelectResponse build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.subtitle = Objects.requireNonNull($.subtitle, "expected parameter 'subtitle' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

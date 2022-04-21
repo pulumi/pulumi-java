@@ -17,7 +17,7 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peeringName", required=true)
-      private final String peeringName;
+    private String peeringName;
 
     public String peeringName() {
         return this.peeringName;
@@ -28,7 +28,7 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetVirtualRouterPeeringArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="virtualRouterName", required=true)
-      private final String virtualRouterName;
+    private String virtualRouterName;
 
     public String virtualRouterName() {
         return this.virtualRouterName;
     }
 
-    public GetVirtualRouterPeeringArgs(
-        String peeringName,
-        String resourceGroupName,
-        String virtualRouterName) {
-        this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualRouterName = Objects.requireNonNull(virtualRouterName, "expected parameter 'virtualRouterName' to be non-null");
-    }
+    private GetVirtualRouterPeeringArgs() {}
 
-    private GetVirtualRouterPeeringArgs() {
-        this.peeringName = null;
-        this.resourceGroupName = null;
-        this.virtualRouterName = null;
+    private GetVirtualRouterPeeringArgs(GetVirtualRouterPeeringArgs $) {
+        this.peeringName = $.peeringName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualRouterName = $.virtualRouterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualRouterPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String peeringName;
-        private String resourceGroupName;
-        private String virtualRouterName;
+        private GetVirtualRouterPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualRouterPeeringArgs();
         }
 
         public Builder(GetVirtualRouterPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peeringName = defaults.peeringName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualRouterName = defaults.virtualRouterName;
+            $ = new GetVirtualRouterPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peeringName(String peeringName) {
-            this.peeringName = Objects.requireNonNull(peeringName);
+            $.peeringName = peeringName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualRouterName(String virtualRouterName) {
-            this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
+            $.virtualRouterName = virtualRouterName;
             return this;
-        }        public GetVirtualRouterPeeringArgs build() {
-            return new GetVirtualRouterPeeringArgs(peeringName, resourceGroupName, virtualRouterName);
+        }
+
+        public GetVirtualRouterPeeringArgs build() {
+            $.peeringName = Objects.requireNonNull($.peeringName, "expected parameter 'peeringName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualRouterName = Objects.requireNonNull($.virtualRouterName, "expected parameter 'virtualRouterName' to be non-null");
+            return $;
         }
     }
+
 }

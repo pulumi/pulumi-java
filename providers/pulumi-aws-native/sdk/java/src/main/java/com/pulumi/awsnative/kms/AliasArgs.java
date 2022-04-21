@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aliasName")
-      private final @Nullable Output<String> aliasName;
+    private @Nullable Output<String> aliasName;
 
-    public Output<String> aliasName() {
-        return this.aliasName == null ? Codegen.empty() : this.aliasName;
+    public Optional<Output<String>> aliasName() {
+        return Optional.ofNullable(this.aliasName);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class AliasArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetKeyId", required=true)
-      private final Output<String> targetKeyId;
+    private Output<String> targetKeyId;
 
     public Output<String> targetKeyId() {
         return this.targetKeyId;
     }
 
-    public AliasArgs(
-        @Nullable Output<String> aliasName,
-        Output<String> targetKeyId) {
-        this.aliasName = aliasName;
-        this.targetKeyId = Objects.requireNonNull(targetKeyId, "expected parameter 'targetKeyId' to be non-null");
-    }
+    private AliasArgs() {}
 
-    private AliasArgs() {
-        this.aliasName = Codegen.empty();
-        this.targetKeyId = Codegen.empty();
+    private AliasArgs(AliasArgs $) {
+        this.aliasName = $.aliasName;
+        this.targetKeyId = $.targetKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aliasName;
-        private Output<String> targetKeyId;
+        private AliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AliasArgs();
         }
 
         public Builder(AliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasName = defaults.aliasName;
-    	      this.targetKeyId = defaults.targetKeyId;
+            $ = new AliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasName(@Nullable Output<String> aliasName) {
-            this.aliasName = aliasName;
+            $.aliasName = aliasName;
             return this;
         }
-        public Builder aliasName(@Nullable String aliasName) {
-            this.aliasName = Codegen.ofNullable(aliasName);
-            return this;
+
+        public Builder aliasName(String aliasName) {
+            return aliasName(Output.of(aliasName));
         }
+
         public Builder targetKeyId(Output<String> targetKeyId) {
-            this.targetKeyId = Objects.requireNonNull(targetKeyId);
+            $.targetKeyId = targetKeyId;
             return this;
         }
+
         public Builder targetKeyId(String targetKeyId) {
-            this.targetKeyId = Output.of(Objects.requireNonNull(targetKeyId));
-            return this;
-        }        public AliasArgs build() {
-            return new AliasArgs(aliasName, targetKeyId);
+            return targetKeyId(Output.of(targetKeyId));
+        }
+
+        public AliasArgs build() {
+            $.targetKeyId = Objects.requireNonNull($.targetKeyId, "expected parameter 'targetKeyId' to be non-null");
+            return $;
         }
     }
+
 }

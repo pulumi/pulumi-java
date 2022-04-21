@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
      * 
      */
     @Import(name="postbackData")
-      private final @Nullable Output<String> postbackData;
+    private @Nullable Output<String> postbackData;
 
-    public Output<String> postbackData() {
-        return this.postbackData == null ? Codegen.empty() : this.postbackData;
+    public Optional<Output<String>> postbackData() {
+        return Optional.ofNullable(this.postbackData);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs(
-        @Nullable Output<String> postbackData,
-        @Nullable Output<String> text) {
-        this.postbackData = postbackData;
-        this.text = text;
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs() {
-        this.postbackData = Codegen.empty();
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs $) {
+        this.postbackData = $.postbackData;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> postbackData;
-        private @Nullable Output<String> text;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.postbackData = defaults.postbackData;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder postbackData(@Nullable Output<String> postbackData) {
-            this.postbackData = postbackData;
+            $.postbackData = postbackData;
             return this;
         }
-        public Builder postbackData(@Nullable String postbackData) {
-            this.postbackData = Codegen.ofNullable(postbackData);
-            return this;
+
+        public Builder postbackData(String postbackData) {
+            return postbackData(Output.of(postbackData));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs(postbackData, text);
+
+        public Builder text(String text) {
+            return text(Output.of(text));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs build() {
+            return $;
         }
     }
+
 }

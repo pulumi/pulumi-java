@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.enums.GitFileSourceRepoType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GitFileSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GitFileSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repoType")
-      private final @Nullable Output<GitFileSourceRepoType> repoType;
+    private @Nullable Output<GitFileSourceRepoType> repoType;
 
-    public Output<GitFileSourceRepoType> repoType() {
-        return this.repoType == null ? Codegen.empty() : this.repoType;
+    public Optional<Output<GitFileSourceRepoType>> repoType() {
+        return Optional.ofNullable(this.repoType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GitFileSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<String> revision;
+    private @Nullable Output<String> revision;
 
-    public Output<String> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<String>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class GitFileSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public GitFileSourceArgs(
-        @Nullable Output<String> path,
-        @Nullable Output<GitFileSourceRepoType> repoType,
-        @Nullable Output<String> revision,
-        @Nullable Output<String> uri) {
-        this.path = path;
-        this.repoType = repoType;
-        this.revision = revision;
-        this.uri = uri;
-    }
+    private GitFileSourceArgs() {}
 
-    private GitFileSourceArgs() {
-        this.path = Codegen.empty();
-        this.repoType = Codegen.empty();
-        this.revision = Codegen.empty();
-        this.uri = Codegen.empty();
+    private GitFileSourceArgs(GitFileSourceArgs $) {
+        this.path = $.path;
+        this.repoType = $.repoType;
+        this.revision = $.revision;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitFileSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> path;
-        private @Nullable Output<GitFileSourceRepoType> repoType;
-        private @Nullable Output<String> revision;
-        private @Nullable Output<String> uri;
+        private GitFileSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitFileSourceArgs();
         }
 
         public Builder(GitFileSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.repoType = defaults.repoType;
-    	      this.revision = defaults.revision;
-    	      this.uri = defaults.uri;
+            $ = new GitFileSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder repoType(@Nullable Output<GitFileSourceRepoType> repoType) {
-            this.repoType = repoType;
+            $.repoType = repoType;
             return this;
         }
-        public Builder repoType(@Nullable GitFileSourceRepoType repoType) {
-            this.repoType = Codegen.ofNullable(repoType);
-            return this;
+
+        public Builder repoType(GitFileSourceRepoType repoType) {
+            return repoType(Output.of(repoType));
         }
+
         public Builder revision(@Nullable Output<String> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable String revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
+
+        public Builder revision(String revision) {
+            return revision(Output.of(revision));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public GitFileSourceArgs build() {
-            return new GitFileSourceArgs(path, repoType, revision, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public GitFileSourceArgs build() {
+            return $;
         }
     }
+
 }

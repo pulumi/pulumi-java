@@ -32,10 +32,10 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="clientId", required=true)
-      private final Object clientId;
+    private Object clientId;
 
     public Object clientId() {
         return this.clientId;
@@ -54,10 +54,10 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret() {
-        return this.clientSecret == null ? null : this.clientSecret;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -98,7 +98,7 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="host", required=true)
-      private final Object host;
+    private Object host;
 
     public Object host() {
         return this.host;
@@ -109,10 +109,10 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -121,7 +121,7 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -132,10 +132,10 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="useEncryptedEndpoints")
-      private final @Nullable Object useEncryptedEndpoints;
+    private @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> useEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
+        return Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="useHostVerification")
-      private final @Nullable Object useHostVerification;
+    private @Nullable Object useHostVerification;
 
     public Optional<Object> useHostVerification() {
-        return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
+        return Optional.ofNullable(this.useHostVerification);
     }
 
     /**
@@ -154,148 +154,117 @@ public final class PaypalLinkedServiceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="usePeerVerification")
-      private final @Nullable Object usePeerVerification;
+    private @Nullable Object usePeerVerification;
 
     public Optional<Object> usePeerVerification() {
-        return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
+        return Optional.ofNullable(this.usePeerVerification);
     }
 
-    public PaypalLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        Object clientId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        @Nullable Object useEncryptedEndpoints,
-        @Nullable Object useHostVerification,
-        @Nullable Object usePeerVerification) {
-        this.annotations = annotations;
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = clientSecret;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.parameters = parameters;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.useEncryptedEndpoints = useEncryptedEndpoints;
-        this.useHostVerification = useHostVerification;
-        this.usePeerVerification = usePeerVerification;
-    }
+    private PaypalLinkedServiceResponse() {}
 
-    private PaypalLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.clientId = null;
-        this.clientSecret = null;
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.host = null;
-        this.parameters = Map.of();
-        this.type = null;
-        this.useEncryptedEndpoints = null;
-        this.useHostVerification = null;
-        this.usePeerVerification = null;
+    private PaypalLinkedServiceResponse(PaypalLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.host = $.host;
+        this.parameters = $.parameters;
+        this.type = $.type;
+        this.useEncryptedEndpoints = $.useEncryptedEndpoints;
+        this.useHostVerification = $.useHostVerification;
+        this.usePeerVerification = $.usePeerVerification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PaypalLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private Object clientId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private Object host;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private String type;
-        private @Nullable Object useEncryptedEndpoints;
-        private @Nullable Object useHostVerification;
-        private @Nullable Object usePeerVerification;
+        private PaypalLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PaypalLinkedServiceResponse();
         }
 
         public Builder(PaypalLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.host = defaults.host;
-    	      this.parameters = defaults.parameters;
-    	      this.type = defaults.type;
-    	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
-    	      this.useHostVerification = defaults.useHostVerification;
-    	      this.usePeerVerification = defaults.usePeerVerification;
+            $ = new PaypalLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder clientId(Object clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder host(Object host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = useEncryptedEndpoints;
+            $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
+
         public Builder useHostVerification(@Nullable Object useHostVerification) {
-            this.useHostVerification = useHostVerification;
+            $.useHostVerification = useHostVerification;
             return this;
         }
+
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
-            this.usePeerVerification = usePeerVerification;
+            $.usePeerVerification = usePeerVerification;
             return this;
-        }        public PaypalLinkedServiceResponse build() {
-            return new PaypalLinkedServiceResponse(annotations, clientId, clientSecret, connectVia, description, encryptedCredential, host, parameters, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
+        }
+
+        public PaypalLinkedServiceResponse build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

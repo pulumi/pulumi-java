@@ -20,10 +20,10 @@ public final class TerminateNotificationProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="enable")
-      private final @Nullable Boolean enable;
+    private @Nullable Boolean enable;
 
     public Optional<Boolean> enable() {
-        return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class TerminateNotificationProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="notBeforeTimeout")
-      private final @Nullable String notBeforeTimeout;
+    private @Nullable String notBeforeTimeout;
 
     public Optional<String> notBeforeTimeout() {
-        return this.notBeforeTimeout == null ? Optional.empty() : Optional.ofNullable(this.notBeforeTimeout);
+        return Optional.ofNullable(this.notBeforeTimeout);
     }
 
-    public TerminateNotificationProfileResponse(
-        @Nullable Boolean enable,
-        @Nullable String notBeforeTimeout) {
-        this.enable = enable;
-        this.notBeforeTimeout = notBeforeTimeout;
-    }
+    private TerminateNotificationProfileResponse() {}
 
-    private TerminateNotificationProfileResponse() {
-        this.enable = null;
-        this.notBeforeTimeout = null;
+    private TerminateNotificationProfileResponse(TerminateNotificationProfileResponse $) {
+        this.enable = $.enable;
+        this.notBeforeTimeout = $.notBeforeTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TerminateNotificationProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enable;
-        private @Nullable String notBeforeTimeout;
+        private TerminateNotificationProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TerminateNotificationProfileResponse();
         }
 
         public Builder(TerminateNotificationProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enable = defaults.enable;
-    	      this.notBeforeTimeout = defaults.notBeforeTimeout;
+            $ = new TerminateNotificationProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
+
         public Builder notBeforeTimeout(@Nullable String notBeforeTimeout) {
-            this.notBeforeTimeout = notBeforeTimeout;
+            $.notBeforeTimeout = notBeforeTimeout;
             return this;
-        }        public TerminateNotificationProfileResponse build() {
-            return new TerminateNotificationProfileResponse(enable, notBeforeTimeout);
+        }
+
+        public TerminateNotificationProfileResponse build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class CloudSqlCredentialResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -32,55 +32,52 @@ public final class CloudSqlCredentialResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public CloudSqlCredentialResponse(
-        String password,
-        String username) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private CloudSqlCredentialResponse() {}
 
-    private CloudSqlCredentialResponse() {
-        this.password = null;
-        this.username = null;
+    private CloudSqlCredentialResponse(CloudSqlCredentialResponse $) {
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudSqlCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String password;
-        private String username;
+        private CloudSqlCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudSqlCredentialResponse();
         }
 
         public Builder(CloudSqlCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new CloudSqlCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public CloudSqlCredentialResponse build() {
-            return new CloudSqlCredentialResponse(password, username);
+        }
+
+        public CloudSqlCredentialResponse build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

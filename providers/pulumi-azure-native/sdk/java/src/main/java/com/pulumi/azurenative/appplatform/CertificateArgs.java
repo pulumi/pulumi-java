@@ -6,9 +6,9 @@ package com.pulumi.azurenative.appplatform;
 import com.pulumi.azurenative.appplatform.inputs.CertificatePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateName")
-      private final @Nullable Output<String> certificateName;
+    private @Nullable Output<String> certificateName;
 
-    public Output<String> certificateName() {
-        return this.certificateName == null ? Codegen.empty() : this.certificateName;
+    public Optional<Output<String>> certificateName() {
+        return Optional.ofNullable(this.certificateName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<CertificatePropertiesArgs> properties;
+    private @Nullable Output<CertificatePropertiesArgs> properties;
 
-    public Output<CertificatePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<CertificatePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,80 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public CertificateArgs(
-        @Nullable Output<String> certificateName,
-        @Nullable Output<CertificatePropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.certificateName = certificateName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.certificateName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.certificateName = $.certificateName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateName;
-        private @Nullable Output<CertificatePropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(@Nullable Output<String> certificateName) {
-            this.certificateName = certificateName;
+            $.certificateName = certificateName;
             return this;
         }
-        public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Codegen.ofNullable(certificateName);
-            return this;
+
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder properties(@Nullable Output<CertificatePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable CertificatePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(CertificatePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(certificateName, properties, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public CertificateArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

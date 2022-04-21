@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,84 @@ public final class TopicRuleSqsActionArgs extends com.pulumi.resources.ResourceA
     public static final TopicRuleSqsActionArgs Empty = new TopicRuleSqsActionArgs();
 
     @Import(name="queueUrl", required=true)
-      private final Output<String> queueUrl;
+    private Output<String> queueUrl;
 
     public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="useBase64")
-      private final @Nullable Output<Boolean> useBase64;
+    private @Nullable Output<Boolean> useBase64;
 
-    public Output<Boolean> useBase64() {
-        return this.useBase64 == null ? Codegen.empty() : this.useBase64;
+    public Optional<Output<Boolean>> useBase64() {
+        return Optional.ofNullable(this.useBase64);
     }
 
-    public TopicRuleSqsActionArgs(
-        Output<String> queueUrl,
-        Output<String> roleArn,
-        @Nullable Output<Boolean> useBase64) {
-        this.queueUrl = Objects.requireNonNull(queueUrl, "expected parameter 'queueUrl' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.useBase64 = useBase64;
-    }
+    private TopicRuleSqsActionArgs() {}
 
-    private TopicRuleSqsActionArgs() {
-        this.queueUrl = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.useBase64 = Codegen.empty();
+    private TopicRuleSqsActionArgs(TopicRuleSqsActionArgs $) {
+        this.queueUrl = $.queueUrl;
+        this.roleArn = $.roleArn;
+        this.useBase64 = $.useBase64;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleSqsActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> queueUrl;
-        private Output<String> roleArn;
-        private @Nullable Output<Boolean> useBase64;
+        private TopicRuleSqsActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleSqsActionArgs();
         }
 
         public Builder(TopicRuleSqsActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queueUrl = defaults.queueUrl;
-    	      this.roleArn = defaults.roleArn;
-    	      this.useBase64 = defaults.useBase64;
+            $ = new TopicRuleSqsActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queueUrl(Output<String> queueUrl) {
-            this.queueUrl = Objects.requireNonNull(queueUrl);
+            $.queueUrl = queueUrl;
             return this;
         }
+
         public Builder queueUrl(String queueUrl) {
-            this.queueUrl = Output.of(Objects.requireNonNull(queueUrl));
-            return this;
+            return queueUrl(Output.of(queueUrl));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder useBase64(@Nullable Output<Boolean> useBase64) {
-            this.useBase64 = useBase64;
+            $.useBase64 = useBase64;
             return this;
         }
-        public Builder useBase64(@Nullable Boolean useBase64) {
-            this.useBase64 = Codegen.ofNullable(useBase64);
-            return this;
-        }        public TopicRuleSqsActionArgs build() {
-            return new TopicRuleSqsActionArgs(queueUrl, roleArn, useBase64);
+
+        public Builder useBase64(Boolean useBase64) {
+            return useBase64(Output.of(useBase64));
+        }
+
+        public TopicRuleSqsActionArgs build() {
+            $.queueUrl = Objects.requireNonNull($.queueUrl, "expected parameter 'queueUrl' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

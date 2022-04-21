@@ -23,10 +23,10 @@ public final class StackPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class StackPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public StackPropertiesResponse(
-        @Nullable String id,
-        @Nullable String version) {
-        this.id = id;
-        this.version = version;
-    }
+    private StackPropertiesResponse() {}
 
-    private StackPropertiesResponse() {
-        this.id = null;
-        this.version = null;
+    private StackPropertiesResponse(StackPropertiesResponse $) {
+        this.id = $.id;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String version;
+        private StackPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackPropertiesResponse();
         }
 
         public Builder(StackPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.version = defaults.version;
+            $ = new StackPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public StackPropertiesResponse build() {
-            return new StackPropertiesResponse(id, version);
+        }
+
+        public StackPropertiesResponse build() {
+            return $;
         }
     }
+
 }

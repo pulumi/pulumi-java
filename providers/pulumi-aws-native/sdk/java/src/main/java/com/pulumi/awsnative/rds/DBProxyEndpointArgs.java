@@ -7,10 +7,10 @@ import com.pulumi.awsnative.rds.enums.DBProxyEndpointTargetRole;
 import com.pulumi.awsnative.rds.inputs.DBProxyEndpointTagFormatArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dBProxyEndpointName")
-      private final @Nullable Output<String> dBProxyEndpointName;
+    private @Nullable Output<String> dBProxyEndpointName;
 
-    public Output<String> dBProxyEndpointName() {
-        return this.dBProxyEndpointName == null ? Codegen.empty() : this.dBProxyEndpointName;
+    public Optional<Output<String>> dBProxyEndpointName() {
+        return Optional.ofNullable(this.dBProxyEndpointName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dBProxyName", required=true)
-      private final Output<String> dBProxyName;
+    private Output<String> dBProxyName;
 
     public Output<String> dBProxyName() {
         return this.dBProxyName;
@@ -45,10 +45,10 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags;
+    private @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags;
 
-    public Output<List<DBProxyEndpointTagFormatArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DBProxyEndpointTagFormatArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="targetRole")
-      private final @Nullable Output<DBProxyEndpointTargetRole> targetRole;
+    private @Nullable Output<DBProxyEndpointTargetRole> targetRole;
 
-    public Output<DBProxyEndpointTargetRole> targetRole() {
-        return this.targetRole == null ? Codegen.empty() : this.targetRole;
+    public Optional<Output<DBProxyEndpointTargetRole>> targetRole() {
+        return Optional.ofNullable(this.targetRole);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vpcSecurityGroupIds")
-      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
+    private @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
+    public Optional<Output<List<String>>> vpcSecurityGroupIds() {
+        return Optional.ofNullable(this.vpcSecurityGroupIds);
     }
 
     /**
@@ -78,124 +78,112 @@ public final class DBProxyEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vpcSubnetIds", required=true)
-      private final Output<List<String>> vpcSubnetIds;
+    private Output<List<String>> vpcSubnetIds;
 
     public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
-    public DBProxyEndpointArgs(
-        @Nullable Output<String> dBProxyEndpointName,
-        Output<String> dBProxyName,
-        @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags,
-        @Nullable Output<DBProxyEndpointTargetRole> targetRole,
-        @Nullable Output<List<String>> vpcSecurityGroupIds,
-        Output<List<String>> vpcSubnetIds) {
-        this.dBProxyEndpointName = dBProxyEndpointName;
-        this.dBProxyName = Objects.requireNonNull(dBProxyName, "expected parameter 'dBProxyName' to be non-null");
-        this.tags = tags;
-        this.targetRole = targetRole;
-        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
-        this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds, "expected parameter 'vpcSubnetIds' to be non-null");
-    }
+    private DBProxyEndpointArgs() {}
 
-    private DBProxyEndpointArgs() {
-        this.dBProxyEndpointName = Codegen.empty();
-        this.dBProxyName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetRole = Codegen.empty();
-        this.vpcSecurityGroupIds = Codegen.empty();
-        this.vpcSubnetIds = Codegen.empty();
+    private DBProxyEndpointArgs(DBProxyEndpointArgs $) {
+        this.dBProxyEndpointName = $.dBProxyEndpointName;
+        this.dBProxyName = $.dBProxyName;
+        this.tags = $.tags;
+        this.targetRole = $.targetRole;
+        this.vpcSecurityGroupIds = $.vpcSecurityGroupIds;
+        this.vpcSubnetIds = $.vpcSubnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DBProxyEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dBProxyEndpointName;
-        private Output<String> dBProxyName;
-        private @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags;
-        private @Nullable Output<DBProxyEndpointTargetRole> targetRole;
-        private @Nullable Output<List<String>> vpcSecurityGroupIds;
-        private Output<List<String>> vpcSubnetIds;
+        private DBProxyEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DBProxyEndpointArgs();
         }
 
         public Builder(DBProxyEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dBProxyEndpointName = defaults.dBProxyEndpointName;
-    	      this.dBProxyName = defaults.dBProxyName;
-    	      this.tags = defaults.tags;
-    	      this.targetRole = defaults.targetRole;
-    	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
-    	      this.vpcSubnetIds = defaults.vpcSubnetIds;
+            $ = new DBProxyEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dBProxyEndpointName(@Nullable Output<String> dBProxyEndpointName) {
-            this.dBProxyEndpointName = dBProxyEndpointName;
+            $.dBProxyEndpointName = dBProxyEndpointName;
             return this;
         }
-        public Builder dBProxyEndpointName(@Nullable String dBProxyEndpointName) {
-            this.dBProxyEndpointName = Codegen.ofNullable(dBProxyEndpointName);
-            return this;
+
+        public Builder dBProxyEndpointName(String dBProxyEndpointName) {
+            return dBProxyEndpointName(Output.of(dBProxyEndpointName));
         }
+
         public Builder dBProxyName(Output<String> dBProxyName) {
-            this.dBProxyName = Objects.requireNonNull(dBProxyName);
+            $.dBProxyName = dBProxyName;
             return this;
         }
+
         public Builder dBProxyName(String dBProxyName) {
-            this.dBProxyName = Output.of(Objects.requireNonNull(dBProxyName));
-            return this;
+            return dBProxyName(Output.of(dBProxyName));
         }
+
         public Builder tags(@Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DBProxyEndpointTagFormatArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DBProxyEndpointTagFormatArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DBProxyEndpointTagFormatArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder targetRole(@Nullable Output<DBProxyEndpointTargetRole> targetRole) {
-            this.targetRole = targetRole;
+            $.targetRole = targetRole;
             return this;
         }
-        public Builder targetRole(@Nullable DBProxyEndpointTargetRole targetRole) {
-            this.targetRole = Codegen.ofNullable(targetRole);
-            return this;
+
+        public Builder targetRole(DBProxyEndpointTargetRole targetRole) {
+            return targetRole(Output.of(targetRole));
         }
+
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+            $.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
-            return this;
+
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+            return vpcSecurityGroupIds(Output.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
             return vpcSecurityGroupIds(List.of(vpcSecurityGroupIds));
         }
+
         public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
-            this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
+            $.vpcSubnetIds = vpcSubnetIds;
             return this;
         }
+
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
-            this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
-            return this;
+            return vpcSubnetIds(Output.of(vpcSubnetIds));
         }
+
         public Builder vpcSubnetIds(String... vpcSubnetIds) {
             return vpcSubnetIds(List.of(vpcSubnetIds));
-        }        public DBProxyEndpointArgs build() {
-            return new DBProxyEndpointArgs(dBProxyEndpointName, dBProxyName, tags, targetRole, vpcSecurityGroupIds, vpcSubnetIds);
+        }
+
+        public DBProxyEndpointArgs build() {
+            $.dBProxyName = Objects.requireNonNull($.dBProxyName, "expected parameter 'dBProxyName' to be non-null");
+            $.vpcSubnetIds = Objects.requireNonNull($.vpcSubnetIds, "expected parameter 'vpcSubnetIds' to be non-null");
+            return $;
         }
     }
+
 }

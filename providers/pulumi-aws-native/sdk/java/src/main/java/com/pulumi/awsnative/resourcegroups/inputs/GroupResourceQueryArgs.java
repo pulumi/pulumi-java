@@ -7,8 +7,8 @@ import com.pulumi.awsnative.resourcegroups.enums.GroupResourceQueryType;
 import com.pulumi.awsnative.resourcegroups.inputs.GroupQueryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class GroupResourceQueryArgs extends com.pulumi.resources.ResourceA
     public static final GroupResourceQueryArgs Empty = new GroupResourceQueryArgs();
 
     @Import(name="query")
-      private final @Nullable Output<GroupQueryArgs> query;
+    private @Nullable Output<GroupQueryArgs> query;
 
-    public Output<GroupQueryArgs> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<GroupQueryArgs>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     @Import(name="type")
-      private final @Nullable Output<GroupResourceQueryType> type;
+    private @Nullable Output<GroupResourceQueryType> type;
 
-    public Output<GroupResourceQueryType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<GroupResourceQueryType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public GroupResourceQueryArgs(
-        @Nullable Output<GroupQueryArgs> query,
-        @Nullable Output<GroupResourceQueryType> type) {
-        this.query = query;
-        this.type = type;
-    }
+    private GroupResourceQueryArgs() {}
 
-    private GroupResourceQueryArgs() {
-        this.query = Codegen.empty();
-        this.type = Codegen.empty();
+    private GroupResourceQueryArgs(GroupResourceQueryArgs $) {
+        this.query = $.query;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupResourceQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GroupQueryArgs> query;
-        private @Nullable Output<GroupResourceQueryType> type;
+        private GroupResourceQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupResourceQueryArgs();
         }
 
         public Builder(GroupResourceQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
-    	      this.type = defaults.type;
+            $ = new GroupResourceQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder query(@Nullable Output<GroupQueryArgs> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable GroupQueryArgs query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(GroupQueryArgs query) {
+            return query(Output.of(query));
         }
+
         public Builder type(@Nullable Output<GroupResourceQueryType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable GroupResourceQueryType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public GroupResourceQueryArgs build() {
-            return new GroupResourceQueryArgs(query, type);
+
+        public Builder type(GroupResourceQueryType type) {
+            return type(Output.of(type));
+        }
+
+        public GroupResourceQueryArgs build() {
+            return $;
         }
     }
+
 }

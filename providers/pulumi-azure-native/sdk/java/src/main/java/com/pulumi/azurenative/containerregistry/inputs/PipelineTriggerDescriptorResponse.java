@@ -19,45 +19,44 @@ public final class PipelineTriggerDescriptorResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sourceTrigger")
-      private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
+    private @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
 
     public Optional<PipelineSourceTriggerDescriptorResponse> sourceTrigger() {
-        return this.sourceTrigger == null ? Optional.empty() : Optional.ofNullable(this.sourceTrigger);
+        return Optional.ofNullable(this.sourceTrigger);
     }
 
-    public PipelineTriggerDescriptorResponse(@Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
-        this.sourceTrigger = sourceTrigger;
-    }
+    private PipelineTriggerDescriptorResponse() {}
 
-    private PipelineTriggerDescriptorResponse() {
-        this.sourceTrigger = null;
+    private PipelineTriggerDescriptorResponse(PipelineTriggerDescriptorResponse $) {
+        this.sourceTrigger = $.sourceTrigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineTriggerDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
+        private PipelineTriggerDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineTriggerDescriptorResponse();
         }
 
         public Builder(PipelineTriggerDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceTrigger = defaults.sourceTrigger;
+            $ = new PipelineTriggerDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceTrigger(@Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
-            this.sourceTrigger = sourceTrigger;
+            $.sourceTrigger = sourceTrigger;
             return this;
-        }        public PipelineTriggerDescriptorResponse build() {
-            return new PipelineTriggerDescriptorResponse(sourceTrigger);
+        }
+
+        public PipelineTriggerDescriptorResponse build() {
+            return $;
         }
     }
+
 }

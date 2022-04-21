@@ -5,7 +5,6 @@ package com.pulumi.gcp.networkconnectivity.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +20,7 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends com.pulumi.
      * 
      */
     @Import(name="siteToSiteDataTransfer", required=true)
-      private final Output<Boolean> siteToSiteDataTransfer;
+    private Output<Boolean> siteToSiteDataTransfer;
 
     public Output<Boolean> siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
@@ -32,66 +31,64 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends com.pulumi.
      * 
      */
     @Import(name="uris", required=true)
-      private final Output<List<String>> uris;
+    private Output<List<String>> uris;
 
     public Output<List<String>> uris() {
         return this.uris;
     }
 
-    public SpokeLinkedInterconnectAttachmentsGetArgs(
-        Output<Boolean> siteToSiteDataTransfer,
-        Output<List<String>> uris) {
-        this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
-        this.uris = Objects.requireNonNull(uris, "expected parameter 'uris' to be non-null");
-    }
+    private SpokeLinkedInterconnectAttachmentsGetArgs() {}
 
-    private SpokeLinkedInterconnectAttachmentsGetArgs() {
-        this.siteToSiteDataTransfer = Codegen.empty();
-        this.uris = Codegen.empty();
+    private SpokeLinkedInterconnectAttachmentsGetArgs(SpokeLinkedInterconnectAttachmentsGetArgs $) {
+        this.siteToSiteDataTransfer = $.siteToSiteDataTransfer;
+        this.uris = $.uris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpokeLinkedInterconnectAttachmentsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> siteToSiteDataTransfer;
-        private Output<List<String>> uris;
+        private SpokeLinkedInterconnectAttachmentsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpokeLinkedInterconnectAttachmentsGetArgs();
         }
 
         public Builder(SpokeLinkedInterconnectAttachmentsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
-    	      this.uris = defaults.uris;
+            $ = new SpokeLinkedInterconnectAttachmentsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder siteToSiteDataTransfer(Output<Boolean> siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
+            $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
+
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Output.of(Objects.requireNonNull(siteToSiteDataTransfer));
-            return this;
+            return siteToSiteDataTransfer(Output.of(siteToSiteDataTransfer));
         }
+
         public Builder uris(Output<List<String>> uris) {
-            this.uris = Objects.requireNonNull(uris);
+            $.uris = uris;
             return this;
         }
+
         public Builder uris(List<String> uris) {
-            this.uris = Output.of(Objects.requireNonNull(uris));
-            return this;
+            return uris(Output.of(uris));
         }
+
         public Builder uris(String... uris) {
             return uris(List.of(uris));
-        }        public SpokeLinkedInterconnectAttachmentsGetArgs build() {
-            return new SpokeLinkedInterconnectAttachmentsGetArgs(siteToSiteDataTransfer, uris);
+        }
+
+        public SpokeLinkedInterconnectAttachmentsGetArgs build() {
+            $.siteToSiteDataTransfer = Objects.requireNonNull($.siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
+            $.uris = Objects.requireNonNull($.uris, "expected parameter 'uris' to be non-null");
+            return $;
         }
     }
+
 }

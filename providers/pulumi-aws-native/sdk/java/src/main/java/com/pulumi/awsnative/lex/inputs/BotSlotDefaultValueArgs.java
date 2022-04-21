@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class BotSlotDefaultValueArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="defaultValue", required=true)
-      private final Output<String> defaultValue;
+    private Output<String> defaultValue;
 
     public Output<String> defaultValue() {
         return this.defaultValue;
     }
 
-    public BotSlotDefaultValueArgs(Output<String> defaultValue) {
-        this.defaultValue = Objects.requireNonNull(defaultValue, "expected parameter 'defaultValue' to be non-null");
-    }
+    private BotSlotDefaultValueArgs() {}
 
-    private BotSlotDefaultValueArgs() {
-        this.defaultValue = Codegen.empty();
+    private BotSlotDefaultValueArgs(BotSlotDefaultValueArgs $) {
+        this.defaultValue = $.defaultValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotSlotDefaultValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> defaultValue;
+        private BotSlotDefaultValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotSlotDefaultValueArgs();
         }
 
         public Builder(BotSlotDefaultValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
+            $ = new BotSlotDefaultValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(Output<String> defaultValue) {
-            this.defaultValue = Objects.requireNonNull(defaultValue);
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Output.of(Objects.requireNonNull(defaultValue));
-            return this;
-        }        public BotSlotDefaultValueArgs build() {
-            return new BotSlotDefaultValueArgs(defaultValue);
+            return defaultValue(Output.of(defaultValue));
+        }
+
+        public BotSlotDefaultValueArgs build() {
+            $.defaultValue = Objects.requireNonNull($.defaultValue, "expected parameter 'defaultValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,12 +13,12 @@ import com.pulumi.azurenative.network.inputs.MonitorConfigArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedEndpointRecordTypes")
-      private final @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
+    private @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
 
-    public Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes() {
-        return this.allowedEndpointRecordTypes == null ? Codegen.empty() : this.allowedEndpointRecordTypes;
+    public Optional<Output<List<Either<String,AllowedEndpointRecordType>>>> allowedEndpointRecordTypes() {
+        return Optional.ofNullable(this.allowedEndpointRecordTypes);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsConfig")
-      private final @Nullable Output<DnsConfigArgs> dnsConfig;
+    private @Nullable Output<DnsConfigArgs> dnsConfig;
 
-    public Output<DnsConfigArgs> dnsConfig() {
-        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
+    public Optional<Output<DnsConfigArgs>> dnsConfig() {
+        return Optional.ofNullable(this.dnsConfig);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable Output<List<EndpointArgs>> endpoints;
+    private @Nullable Output<List<EndpointArgs>> endpoints;
 
-    public Output<List<EndpointArgs>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<EndpointArgs>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxReturn")
-      private final @Nullable Output<Double> maxReturn;
+    private @Nullable Output<Double> maxReturn;
 
-    public Output<Double> maxReturn() {
-        return this.maxReturn == null ? Codegen.empty() : this.maxReturn;
+    public Optional<Output<Double>> maxReturn() {
+        return Optional.ofNullable(this.maxReturn);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitorConfig")
-      private final @Nullable Output<MonitorConfigArgs> monitorConfig;
+    private @Nullable Output<MonitorConfigArgs> monitorConfig;
 
-    public Output<MonitorConfigArgs> monitorConfig() {
-        return this.monitorConfig == null ? Codegen.empty() : this.monitorConfig;
+    public Optional<Output<MonitorConfigArgs>> monitorConfig() {
+        return Optional.ofNullable(this.monitorConfig);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName")
-      private final @Nullable Output<String> profileName;
+    private @Nullable Output<String> profileName;
 
-    public Output<String> profileName() {
-        return this.profileName == null ? Codegen.empty() : this.profileName;
+    public Optional<Output<String>> profileName() {
+        return Optional.ofNullable(this.profileName);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileStatus")
-      private final @Nullable Output<Either<String,ProfileStatus>> profileStatus;
+    private @Nullable Output<Either<String,ProfileStatus>> profileStatus;
 
-    public Output<Either<String,ProfileStatus>> profileStatus() {
-        return this.profileStatus == null ? Codegen.empty() : this.profileStatus;
+    public Optional<Output<Either<String,ProfileStatus>>> profileStatus() {
+        return Optional.ofNullable(this.profileStatus);
     }
 
     /**
@@ -141,7 +141,7 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -152,10 +152,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficRoutingMethod")
-      private final @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
+    private @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
 
-    public Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod() {
-        return this.trafficRoutingMethod == null ? Codegen.empty() : this.trafficRoutingMethod;
+    public Optional<Output<Either<String,TrafficRoutingMethod>>> trafficRoutingMethod() {
+        return Optional.ofNullable(this.trafficRoutingMethod);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficViewEnrollmentStatus")
-      private final @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
+    private @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
 
-    public Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus() {
-        return this.trafficViewEnrollmentStatus == null ? Codegen.empty() : this.trafficViewEnrollmentStatus;
+    public Optional<Output<Either<String,TrafficViewEnrollmentStatus>>> trafficViewEnrollmentStatus() {
+        return Optional.ofNullable(this.trafficViewEnrollmentStatus);
     }
 
     /**
@@ -185,238 +185,197 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ProfileArgs(
-        @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes,
-        @Nullable Output<DnsConfigArgs> dnsConfig,
-        @Nullable Output<List<EndpointArgs>> endpoints,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        @Nullable Output<Double> maxReturn,
-        @Nullable Output<MonitorConfigArgs> monitorConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> profileName,
-        @Nullable Output<Either<String,ProfileStatus>> profileStatus,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod,
-        @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus,
-        @Nullable Output<String> type) {
-        this.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
-        this.dnsConfig = dnsConfig;
-        this.endpoints = endpoints;
-        this.id = id;
-        this.location = location;
-        this.maxReturn = maxReturn;
-        this.monitorConfig = monitorConfig;
-        this.name = name;
-        this.profileName = profileName;
-        this.profileStatus = profileStatus;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.trafficRoutingMethod = trafficRoutingMethod;
-        this.trafficViewEnrollmentStatus = trafficViewEnrollmentStatus;
-        this.type = type;
-    }
+    private ProfileArgs() {}
 
-    private ProfileArgs() {
-        this.allowedEndpointRecordTypes = Codegen.empty();
-        this.dnsConfig = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maxReturn = Codegen.empty();
-        this.monitorConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.profileStatus = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.trafficRoutingMethod = Codegen.empty();
-        this.trafficViewEnrollmentStatus = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProfileArgs(ProfileArgs $) {
+        this.allowedEndpointRecordTypes = $.allowedEndpointRecordTypes;
+        this.dnsConfig = $.dnsConfig;
+        this.endpoints = $.endpoints;
+        this.id = $.id;
+        this.location = $.location;
+        this.maxReturn = $.maxReturn;
+        this.monitorConfig = $.monitorConfig;
+        this.name = $.name;
+        this.profileName = $.profileName;
+        this.profileStatus = $.profileStatus;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.trafficRoutingMethod = $.trafficRoutingMethod;
+        this.trafficViewEnrollmentStatus = $.trafficViewEnrollmentStatus;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
-        private @Nullable Output<DnsConfigArgs> dnsConfig;
-        private @Nullable Output<List<EndpointArgs>> endpoints;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Double> maxReturn;
-        private @Nullable Output<MonitorConfigArgs> monitorConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> profileName;
-        private @Nullable Output<Either<String,ProfileStatus>> profileStatus;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
-        private @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
-        private @Nullable Output<String> type;
+        private ProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProfileArgs();
         }
 
         public Builder(ProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedEndpointRecordTypes = defaults.allowedEndpointRecordTypes;
-    	      this.dnsConfig = defaults.dnsConfig;
-    	      this.endpoints = defaults.endpoints;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.maxReturn = defaults.maxReturn;
-    	      this.monitorConfig = defaults.monitorConfig;
-    	      this.name = defaults.name;
-    	      this.profileName = defaults.profileName;
-    	      this.profileStatus = defaults.profileStatus;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.trafficRoutingMethod = defaults.trafficRoutingMethod;
-    	      this.trafficViewEnrollmentStatus = defaults.trafficViewEnrollmentStatus;
-    	      this.type = defaults.type;
+            $ = new ProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedEndpointRecordTypes(@Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes) {
-            this.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
+            $.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
             return this;
         }
-        public Builder allowedEndpointRecordTypes(@Nullable List<Either<String,AllowedEndpointRecordType>> allowedEndpointRecordTypes) {
-            this.allowedEndpointRecordTypes = Codegen.ofNullable(allowedEndpointRecordTypes);
-            return this;
+
+        public Builder allowedEndpointRecordTypes(List<Either<String,AllowedEndpointRecordType>> allowedEndpointRecordTypes) {
+            return allowedEndpointRecordTypes(Output.of(allowedEndpointRecordTypes));
         }
+
         public Builder allowedEndpointRecordTypes(Either<String,AllowedEndpointRecordType>... allowedEndpointRecordTypes) {
             return allowedEndpointRecordTypes(List.of(allowedEndpointRecordTypes));
         }
+
         public Builder dnsConfig(@Nullable Output<DnsConfigArgs> dnsConfig) {
-            this.dnsConfig = dnsConfig;
+            $.dnsConfig = dnsConfig;
             return this;
         }
-        public Builder dnsConfig(@Nullable DnsConfigArgs dnsConfig) {
-            this.dnsConfig = Codegen.ofNullable(dnsConfig);
-            return this;
+
+        public Builder dnsConfig(DnsConfigArgs dnsConfig) {
+            return dnsConfig(Output.of(dnsConfig));
         }
+
         public Builder endpoints(@Nullable Output<List<EndpointArgs>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<EndpointArgs> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(EndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maxReturn(@Nullable Output<Double> maxReturn) {
-            this.maxReturn = maxReturn;
+            $.maxReturn = maxReturn;
             return this;
         }
-        public Builder maxReturn(@Nullable Double maxReturn) {
-            this.maxReturn = Codegen.ofNullable(maxReturn);
-            return this;
+
+        public Builder maxReturn(Double maxReturn) {
+            return maxReturn(Output.of(maxReturn));
         }
+
         public Builder monitorConfig(@Nullable Output<MonitorConfigArgs> monitorConfig) {
-            this.monitorConfig = monitorConfig;
+            $.monitorConfig = monitorConfig;
             return this;
         }
-        public Builder monitorConfig(@Nullable MonitorConfigArgs monitorConfig) {
-            this.monitorConfig = Codegen.ofNullable(monitorConfig);
-            return this;
+
+        public Builder monitorConfig(MonitorConfigArgs monitorConfig) {
+            return monitorConfig(Output.of(monitorConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder profileName(@Nullable Output<String> profileName) {
-            this.profileName = profileName;
+            $.profileName = profileName;
             return this;
         }
-        public Builder profileName(@Nullable String profileName) {
-            this.profileName = Codegen.ofNullable(profileName);
-            return this;
+
+        public Builder profileName(String profileName) {
+            return profileName(Output.of(profileName));
         }
+
         public Builder profileStatus(@Nullable Output<Either<String,ProfileStatus>> profileStatus) {
-            this.profileStatus = profileStatus;
+            $.profileStatus = profileStatus;
             return this;
         }
-        public Builder profileStatus(@Nullable Either<String,ProfileStatus> profileStatus) {
-            this.profileStatus = Codegen.ofNullable(profileStatus);
-            return this;
+
+        public Builder profileStatus(Either<String,ProfileStatus> profileStatus) {
+            return profileStatus(Output.of(profileStatus));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder trafficRoutingMethod(@Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod) {
-            this.trafficRoutingMethod = trafficRoutingMethod;
+            $.trafficRoutingMethod = trafficRoutingMethod;
             return this;
         }
-        public Builder trafficRoutingMethod(@Nullable Either<String,TrafficRoutingMethod> trafficRoutingMethod) {
-            this.trafficRoutingMethod = Codegen.ofNullable(trafficRoutingMethod);
-            return this;
+
+        public Builder trafficRoutingMethod(Either<String,TrafficRoutingMethod> trafficRoutingMethod) {
+            return trafficRoutingMethod(Output.of(trafficRoutingMethod));
         }
+
         public Builder trafficViewEnrollmentStatus(@Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus) {
-            this.trafficViewEnrollmentStatus = trafficViewEnrollmentStatus;
+            $.trafficViewEnrollmentStatus = trafficViewEnrollmentStatus;
             return this;
         }
-        public Builder trafficViewEnrollmentStatus(@Nullable Either<String,TrafficViewEnrollmentStatus> trafficViewEnrollmentStatus) {
-            this.trafficViewEnrollmentStatus = Codegen.ofNullable(trafficViewEnrollmentStatus);
-            return this;
+
+        public Builder trafficViewEnrollmentStatus(Either<String,TrafficViewEnrollmentStatus> trafficViewEnrollmentStatus) {
+            return trafficViewEnrollmentStatus(Output.of(trafficViewEnrollmentStatus));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ProfileArgs build() {
-            return new ProfileArgs(allowedEndpointRecordTypes, dnsConfig, endpoints, id, location, maxReturn, monitorConfig, name, profileName, profileStatus, resourceGroupName, tags, trafficRoutingMethod, trafficViewEnrollmentStatus, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ProfileArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

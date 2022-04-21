@@ -24,10 +24,10 @@ public final class KeyVaultKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable KeyVaultKeyResponseAttributes attributes;
+    private @Nullable KeyVaultKeyResponseAttributes attributes;
 
     public Optional<KeyVaultKeyResponseAttributes> attributes() {
-        return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class KeyVaultKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kid")
-      private final @Nullable String kid;
+    private @Nullable String kid;
 
     public Optional<String> kid() {
-        return this.kid == null ? Optional.empty() : Optional.ofNullable(this.kid);
+        return Optional.ofNullable(this.kid);
     }
 
-    public KeyVaultKeyResponse(
-        @Nullable KeyVaultKeyResponseAttributes attributes,
-        @Nullable String kid) {
-        this.attributes = attributes;
-        this.kid = kid;
-    }
+    private KeyVaultKeyResponse() {}
 
-    private KeyVaultKeyResponse() {
-        this.attributes = null;
-        this.kid = null;
+    private KeyVaultKeyResponse(KeyVaultKeyResponse $) {
+        this.attributes = $.attributes;
+        this.kid = $.kid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable KeyVaultKeyResponseAttributes attributes;
-        private @Nullable String kid;
+        private KeyVaultKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultKeyResponse();
         }
 
         public Builder(KeyVaultKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.kid = defaults.kid;
+            $ = new KeyVaultKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable KeyVaultKeyResponseAttributes attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
+
         public Builder kid(@Nullable String kid) {
-            this.kid = kid;
+            $.kid = kid;
             return this;
-        }        public KeyVaultKeyResponse build() {
-            return new KeyVaultKeyResponse(attributes, kid);
+        }
+
+        public KeyVaultKeyResponse build() {
+            return $;
         }
     }
+
 }

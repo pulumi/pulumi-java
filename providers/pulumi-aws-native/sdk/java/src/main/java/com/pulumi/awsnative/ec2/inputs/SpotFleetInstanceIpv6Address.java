@@ -13,45 +13,45 @@ public final class SpotFleetInstanceIpv6Address extends com.pulumi.resources.Inv
     public static final SpotFleetInstanceIpv6Address Empty = new SpotFleetInstanceIpv6Address();
 
     @Import(name="ipv6Address", required=true)
-      private final String ipv6Address;
+    private String ipv6Address;
 
     public String ipv6Address() {
         return this.ipv6Address;
     }
 
-    public SpotFleetInstanceIpv6Address(String ipv6Address) {
-        this.ipv6Address = Objects.requireNonNull(ipv6Address, "expected parameter 'ipv6Address' to be non-null");
-    }
+    private SpotFleetInstanceIpv6Address() {}
 
-    private SpotFleetInstanceIpv6Address() {
-        this.ipv6Address = null;
+    private SpotFleetInstanceIpv6Address(SpotFleetInstanceIpv6Address $) {
+        this.ipv6Address = $.ipv6Address;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetInstanceIpv6Address defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipv6Address;
+        private SpotFleetInstanceIpv6Address $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetInstanceIpv6Address();
         }
 
         public Builder(SpotFleetInstanceIpv6Address defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipv6Address = defaults.ipv6Address;
+            $ = new SpotFleetInstanceIpv6Address(Objects.requireNonNull(defaults));
         }
 
         public Builder ipv6Address(String ipv6Address) {
-            this.ipv6Address = Objects.requireNonNull(ipv6Address);
+            $.ipv6Address = ipv6Address;
             return this;
-        }        public SpotFleetInstanceIpv6Address build() {
-            return new SpotFleetInstanceIpv6Address(ipv6Address);
+        }
+
+        public SpotFleetInstanceIpv6Address build() {
+            $.ipv6Address = Objects.requireNonNull($.ipv6Address, "expected parameter 'ipv6Address' to be non-null");
+            return $;
         }
     }
+
 }

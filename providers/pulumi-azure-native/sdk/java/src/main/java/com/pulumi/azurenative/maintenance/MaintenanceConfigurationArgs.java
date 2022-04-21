@@ -7,10 +7,10 @@ import com.pulumi.azurenative.maintenance.enums.MaintenanceScope;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="extensionProperties")
-      private final @Nullable Output<Map<String,String>> extensionProperties;
+    private @Nullable Output<Map<String,String>> extensionProperties;
 
-    public Output<Map<String,String>> extensionProperties() {
-        return this.extensionProperties == null ? Codegen.empty() : this.extensionProperties;
+    public Optional<Output<Map<String,String>>> extensionProperties() {
+        return Optional.ofNullable(this.extensionProperties);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maintenanceScope")
-      private final @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
+    private @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
 
-    public Output<Either<String,MaintenanceScope>> maintenanceScope() {
-        return this.maintenanceScope == null ? Codegen.empty() : this.maintenanceScope;
+    public Optional<Output<Either<String,MaintenanceScope>>> maintenanceScope() {
+        return Optional.ofNullable(this.maintenanceScope);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -78,10 +78,10 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -89,128 +89,109 @@ public final class MaintenanceConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public MaintenanceConfigurationArgs(
-        @Nullable Output<Map<String,String>> extensionProperties,
-        @Nullable Output<String> location,
-        @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope,
-        @Nullable Output<String> namespace,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.extensionProperties = extensionProperties;
-        this.location = location;
-        this.maintenanceScope = maintenanceScope;
-        this.namespace = namespace;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.tags = tags;
-    }
+    private MaintenanceConfigurationArgs() {}
 
-    private MaintenanceConfigurationArgs() {
-        this.extensionProperties = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maintenanceScope = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private MaintenanceConfigurationArgs(MaintenanceConfigurationArgs $) {
+        this.extensionProperties = $.extensionProperties;
+        this.location = $.location;
+        this.maintenanceScope = $.maintenanceScope;
+        this.namespace = $.namespace;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> extensionProperties;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
-        private @Nullable Output<String> namespace;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<Map<String,String>> tags;
+        private MaintenanceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceConfigurationArgs();
         }
 
         public Builder(MaintenanceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensionProperties = defaults.extensionProperties;
-    	      this.location = defaults.location;
-    	      this.maintenanceScope = defaults.maintenanceScope;
-    	      this.namespace = defaults.namespace;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.tags = defaults.tags;
+            $ = new MaintenanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extensionProperties(@Nullable Output<Map<String,String>> extensionProperties) {
-            this.extensionProperties = extensionProperties;
+            $.extensionProperties = extensionProperties;
             return this;
         }
-        public Builder extensionProperties(@Nullable Map<String,String> extensionProperties) {
-            this.extensionProperties = Codegen.ofNullable(extensionProperties);
-            return this;
+
+        public Builder extensionProperties(Map<String,String> extensionProperties) {
+            return extensionProperties(Output.of(extensionProperties));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maintenanceScope(@Nullable Output<Either<String,MaintenanceScope>> maintenanceScope) {
-            this.maintenanceScope = maintenanceScope;
+            $.maintenanceScope = maintenanceScope;
             return this;
         }
-        public Builder maintenanceScope(@Nullable Either<String,MaintenanceScope> maintenanceScope) {
-            this.maintenanceScope = Codegen.ofNullable(maintenanceScope);
-            return this;
+
+        public Builder maintenanceScope(Either<String,MaintenanceScope> maintenanceScope) {
+            return maintenanceScope(Output.of(maintenanceScope));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public MaintenanceConfigurationArgs build() {
-            return new MaintenanceConfigurationArgs(extensionProperties, location, maintenanceScope, namespace, resourceGroupName, resourceName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public MaintenanceConfigurationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

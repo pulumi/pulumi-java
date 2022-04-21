@@ -17,65 +17,61 @@ public final class DataSourceConfluenceAttachmentConfiguration extends com.pulum
     public static final DataSourceConfluenceAttachmentConfiguration Empty = new DataSourceConfluenceAttachmentConfiguration();
 
     @Import(name="attachmentFieldMappings")
-      private final @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings;
+    private @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings;
 
-    public List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings() {
-        return this.attachmentFieldMappings == null ? List.of() : this.attachmentFieldMappings;
+    public Optional<List<DataSourceConfluenceAttachmentToIndexFieldMapping>> attachmentFieldMappings() {
+        return Optional.ofNullable(this.attachmentFieldMappings);
     }
 
     @Import(name="crawlAttachments")
-      private final @Nullable Boolean crawlAttachments;
+    private @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> crawlAttachments() {
-        return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
+        return Optional.ofNullable(this.crawlAttachments);
     }
 
-    public DataSourceConfluenceAttachmentConfiguration(
-        @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings,
-        @Nullable Boolean crawlAttachments) {
-        this.attachmentFieldMappings = attachmentFieldMappings;
-        this.crawlAttachments = crawlAttachments;
-    }
+    private DataSourceConfluenceAttachmentConfiguration() {}
 
-    private DataSourceConfluenceAttachmentConfiguration() {
-        this.attachmentFieldMappings = List.of();
-        this.crawlAttachments = null;
+    private DataSourceConfluenceAttachmentConfiguration(DataSourceConfluenceAttachmentConfiguration $) {
+        this.attachmentFieldMappings = $.attachmentFieldMappings;
+        this.crawlAttachments = $.crawlAttachments;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluenceAttachmentConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings;
-        private @Nullable Boolean crawlAttachments;
+        private DataSourceConfluenceAttachmentConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluenceAttachmentConfiguration();
         }
 
         public Builder(DataSourceConfluenceAttachmentConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentFieldMappings = defaults.attachmentFieldMappings;
-    	      this.crawlAttachments = defaults.crawlAttachments;
+            $ = new DataSourceConfluenceAttachmentConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentFieldMappings(@Nullable List<DataSourceConfluenceAttachmentToIndexFieldMapping> attachmentFieldMappings) {
-            this.attachmentFieldMappings = attachmentFieldMappings;
+            $.attachmentFieldMappings = attachmentFieldMappings;
             return this;
         }
+
         public Builder attachmentFieldMappings(DataSourceConfluenceAttachmentToIndexFieldMapping... attachmentFieldMappings) {
             return attachmentFieldMappings(List.of(attachmentFieldMappings));
         }
+
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = crawlAttachments;
+            $.crawlAttachments = crawlAttachments;
             return this;
-        }        public DataSourceConfluenceAttachmentConfiguration build() {
-            return new DataSourceConfluenceAttachmentConfiguration(attachmentFieldMappings, crawlAttachments);
+        }
+
+        public DataSourceConfluenceAttachmentConfiguration build() {
+            return $;
         }
     }
+
 }

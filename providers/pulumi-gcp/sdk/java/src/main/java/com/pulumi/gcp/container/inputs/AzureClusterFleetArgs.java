@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AzureClusterFleetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="membership")
-      private final @Nullable Output<String> membership;
+    private @Nullable Output<String> membership;
 
-    public Output<String> membership() {
-        return this.membership == null ? Codegen.empty() : this.membership;
+    public Optional<Output<String>> membership() {
+        return Optional.ofNullable(this.membership);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class AzureClusterFleetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public AzureClusterFleetArgs(
-        @Nullable Output<String> membership,
-        @Nullable Output<String> project) {
-        this.membership = membership;
-        this.project = project;
-    }
+    private AzureClusterFleetArgs() {}
 
-    private AzureClusterFleetArgs() {
-        this.membership = Codegen.empty();
-        this.project = Codegen.empty();
+    private AzureClusterFleetArgs(AzureClusterFleetArgs $) {
+        this.membership = $.membership;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureClusterFleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> membership;
-        private @Nullable Output<String> project;
+        private AzureClusterFleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureClusterFleetArgs();
         }
 
         public Builder(AzureClusterFleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.membership = defaults.membership;
-    	      this.project = defaults.project;
+            $ = new AzureClusterFleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder membership(@Nullable Output<String> membership) {
-            this.membership = membership;
+            $.membership = membership;
             return this;
         }
-        public Builder membership(@Nullable String membership) {
-            this.membership = Codegen.ofNullable(membership);
-            return this;
+
+        public Builder membership(String membership) {
+            return membership(Output.of(membership));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public AzureClusterFleetArgs build() {
-            return new AzureClusterFleetArgs(membership, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public AzureClusterFleetArgs build() {
+            return $;
         }
     }
+
 }

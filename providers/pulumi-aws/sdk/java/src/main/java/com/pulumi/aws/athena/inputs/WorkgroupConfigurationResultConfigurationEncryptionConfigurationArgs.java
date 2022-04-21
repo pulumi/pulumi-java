@@ -5,9 +5,9 @@ package com.pulumi.aws.athena.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      * 
      */
     @Import(name="encryptionOption")
-      private final @Nullable Output<String> encryptionOption;
+    private @Nullable Output<String> encryptionOption;
 
-    public Output<String> encryptionOption() {
-        return this.encryptionOption == null ? Codegen.empty() : this.encryptionOption;
+    public Optional<Output<String>> encryptionOption() {
+        return Optional.ofNullable(this.encryptionOption);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
-    public WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs(
-        @Nullable Output<String> encryptionOption,
-        @Nullable Output<String> kmsKeyArn) {
-        this.encryptionOption = encryptionOption;
-        this.kmsKeyArn = kmsKeyArn;
-    }
+    private WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs() {}
 
-    private WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs() {
-        this.encryptionOption = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
+    private WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs(WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs $) {
+        this.encryptionOption = $.encryptionOption;
+        this.kmsKeyArn = $.kmsKeyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encryptionOption;
-        private @Nullable Output<String> kmsKeyArn;
+        private WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs();
         }
 
         public Builder(WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionOption = defaults.encryptionOption;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
+            $ = new WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionOption(@Nullable Output<String> encryptionOption) {
-            this.encryptionOption = encryptionOption;
+            $.encryptionOption = encryptionOption;
             return this;
         }
-        public Builder encryptionOption(@Nullable String encryptionOption) {
-            this.encryptionOption = Codegen.ofNullable(encryptionOption);
-            return this;
+
+        public Builder encryptionOption(String encryptionOption) {
+            return encryptionOption(Output.of(encryptionOption));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
-        }        public WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs build() {
-            return new WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs(encryptionOption, kmsKeyArn);
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
+        }
+
+        public WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

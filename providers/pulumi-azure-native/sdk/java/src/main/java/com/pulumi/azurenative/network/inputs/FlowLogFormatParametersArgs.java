@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class FlowLogFormatParametersArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,FlowLogFormatType>> type;
+    private @Nullable Output<Either<String,FlowLogFormatType>> type;
 
-    public Output<Either<String,FlowLogFormatType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,FlowLogFormatType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -38,63 +39,59 @@ public final class FlowLogFormatParametersArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public FlowLogFormatParametersArgs(
-        @Nullable Output<Either<String,FlowLogFormatType>> type,
-        @Nullable Output<Integer> version) {
-        this.type = type;
-        this.version = Codegen.integerProp("version").output().arg(version).def(0).getNullable();
-    }
+    private FlowLogFormatParametersArgs() {}
 
-    private FlowLogFormatParametersArgs() {
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private FlowLogFormatParametersArgs(FlowLogFormatParametersArgs $) {
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowLogFormatParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,FlowLogFormatType>> type;
-        private @Nullable Output<Integer> version;
+        private FlowLogFormatParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowLogFormatParametersArgs();
         }
 
         public Builder(FlowLogFormatParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new FlowLogFormatParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,FlowLogFormatType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,FlowLogFormatType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,FlowLogFormatType> type) {
+            return type(Output.of(type));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public FlowLogFormatParametersArgs build() {
-            return new FlowLogFormatParametersArgs(type, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public FlowLogFormatParametersArgs build() {
+            $.version = Codegen.integerProp("version").output().arg($.version).def(0).getNullable();
+            return $;
         }
     }
+
 }

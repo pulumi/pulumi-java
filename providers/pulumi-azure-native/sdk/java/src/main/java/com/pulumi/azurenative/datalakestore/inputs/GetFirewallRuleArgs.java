@@ -17,7 +17,7 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="firewallRuleName", required=true)
-      private final String firewallRuleName;
+    private String firewallRuleName;
 
     public String firewallRuleName() {
         return this.firewallRuleName;
@@ -39,64 +39,59 @@ public final class GetFirewallRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetFirewallRuleArgs(
-        String accountName,
-        String firewallRuleName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.firewallRuleName = Objects.requireNonNull(firewallRuleName, "expected parameter 'firewallRuleName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetFirewallRuleArgs() {}
 
-    private GetFirewallRuleArgs() {
-        this.accountName = null;
-        this.firewallRuleName = null;
-        this.resourceGroupName = null;
+    private GetFirewallRuleArgs(GetFirewallRuleArgs $) {
+        this.accountName = $.accountName;
+        this.firewallRuleName = $.firewallRuleName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String firewallRuleName;
-        private String resourceGroupName;
+        private GetFirewallRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallRuleArgs();
         }
 
         public Builder(GetFirewallRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.firewallRuleName = defaults.firewallRuleName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder firewallRuleName(String firewallRuleName) {
-            this.firewallRuleName = Objects.requireNonNull(firewallRuleName);
+            $.firewallRuleName = firewallRuleName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetFirewallRuleArgs build() {
-            return new GetFirewallRuleArgs(accountName, firewallRuleName, resourceGroupName);
+        }
+
+        public GetFirewallRuleArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.firewallRuleName = Objects.requireNonNull($.firewallRuleName, "expected parameter 'firewallRuleName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

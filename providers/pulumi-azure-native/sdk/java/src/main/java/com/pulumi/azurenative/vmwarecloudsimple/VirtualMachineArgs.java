@@ -9,13 +9,13 @@ import com.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualDiskArgs;
 import com.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualNicArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="amountOfRam", required=true)
-      private final Output<Integer> amountOfRam;
+    private Output<Integer> amountOfRam;
 
     public Output<Integer> amountOfRam() {
         return this.amountOfRam;
@@ -39,10 +39,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="customization")
-      private final @Nullable Output<GuestOSCustomizationArgs> customization;
+    private @Nullable Output<GuestOSCustomizationArgs> customization;
 
-    public Output<GuestOSCustomizationArgs> customization() {
-        return this.customization == null ? Codegen.empty() : this.customization;
+    public Optional<Output<GuestOSCustomizationArgs>> customization() {
+        return Optional.ofNullable(this.customization);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="disks")
-      private final @Nullable Output<List<VirtualDiskArgs>> disks;
+    private @Nullable Output<List<VirtualDiskArgs>> disks;
 
-    public Output<List<VirtualDiskArgs>> disks() {
-        return this.disks == null ? Codegen.empty() : this.disks;
+    public Optional<Output<List<VirtualDiskArgs>>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="exposeToGuestVM")
-      private final @Nullable Output<Boolean> exposeToGuestVM;
+    private @Nullable Output<Boolean> exposeToGuestVM;
 
-    public Output<Boolean> exposeToGuestVM() {
-        return this.exposeToGuestVM == null ? Codegen.empty() : this.exposeToGuestVM;
+    public Optional<Output<Boolean>> exposeToGuestVM() {
+        return Optional.ofNullable(this.exposeToGuestVM);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="nics")
-      private final @Nullable Output<List<VirtualNicArgs>> nics;
+    private @Nullable Output<List<VirtualNicArgs>> nics;
 
-    public Output<List<VirtualNicArgs>> nics() {
-        return this.nics == null ? Codegen.empty() : this.nics;
+    public Optional<Output<List<VirtualNicArgs>>> nics() {
+        return Optional.ofNullable(this.nics);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="numberOfCores", required=true)
-      private final Output<Integer> numberOfCores;
+    private Output<Integer> numberOfCores;
 
     public Output<Integer> numberOfCores() {
         return this.numberOfCores;
@@ -105,10 +105,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="privateCloudId", required=true)
-      private final Output<String> privateCloudId;
+    private Output<String> privateCloudId;
 
     public Output<String> privateCloudId() {
         return this.privateCloudId;
@@ -127,7 +127,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -138,10 +138,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourcePool")
-      private final @Nullable Output<ResourcePoolArgs> resourcePool;
+    private @Nullable Output<ResourcePoolArgs> resourcePool;
 
-    public Output<ResourcePoolArgs> resourcePool() {
-        return this.resourcePool == null ? Codegen.empty() : this.resourcePool;
+    public Optional<Output<ResourcePoolArgs>> resourcePool() {
+        return Optional.ofNullable(this.resourcePool);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="vSphereNetworks")
-      private final @Nullable Output<List<String>> vSphereNetworks;
+    private @Nullable Output<List<String>> vSphereNetworks;
 
-    public Output<List<String>> vSphereNetworks() {
-        return this.vSphereNetworks == null ? Codegen.empty() : this.vSphereNetworks;
+    public Optional<Output<List<String>>> vSphereNetworks() {
+        return Optional.ofNullable(this.vSphereNetworks);
     }
 
     /**
@@ -193,254 +193,214 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="virtualMachineName")
-      private final @Nullable Output<String> virtualMachineName;
+    private @Nullable Output<String> virtualMachineName;
 
-    public Output<String> virtualMachineName() {
-        return this.virtualMachineName == null ? Codegen.empty() : this.virtualMachineName;
+    public Optional<Output<String>> virtualMachineName() {
+        return Optional.ofNullable(this.virtualMachineName);
     }
 
-    public VirtualMachineArgs(
-        Output<Integer> amountOfRam,
-        @Nullable Output<GuestOSCustomizationArgs> customization,
-        @Nullable Output<List<VirtualDiskArgs>> disks,
-        @Nullable Output<Boolean> exposeToGuestVM,
-        @Nullable Output<String> location,
-        @Nullable Output<List<VirtualNicArgs>> nics,
-        Output<Integer> numberOfCores,
-        @Nullable Output<String> password,
-        Output<String> privateCloudId,
-        Output<String> resourceGroupName,
-        @Nullable Output<ResourcePoolArgs> resourcePool,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> templateId,
-        @Nullable Output<String> username,
-        @Nullable Output<List<String>> vSphereNetworks,
-        @Nullable Output<String> virtualMachineName) {
-        this.amountOfRam = Objects.requireNonNull(amountOfRam, "expected parameter 'amountOfRam' to be non-null");
-        this.customization = customization;
-        this.disks = disks;
-        this.exposeToGuestVM = exposeToGuestVM;
-        this.location = location;
-        this.nics = nics;
-        this.numberOfCores = Objects.requireNonNull(numberOfCores, "expected parameter 'numberOfCores' to be non-null");
-        this.password = password;
-        this.privateCloudId = Objects.requireNonNull(privateCloudId, "expected parameter 'privateCloudId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourcePool = resourcePool;
-        this.tags = tags;
-        this.templateId = templateId;
-        this.username = username;
-        this.vSphereNetworks = vSphereNetworks;
-        this.virtualMachineName = virtualMachineName;
-    }
+    private VirtualMachineArgs() {}
 
-    private VirtualMachineArgs() {
-        this.amountOfRam = Codegen.empty();
-        this.customization = Codegen.empty();
-        this.disks = Codegen.empty();
-        this.exposeToGuestVM = Codegen.empty();
-        this.location = Codegen.empty();
-        this.nics = Codegen.empty();
-        this.numberOfCores = Codegen.empty();
-        this.password = Codegen.empty();
-        this.privateCloudId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourcePool = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateId = Codegen.empty();
-        this.username = Codegen.empty();
-        this.vSphereNetworks = Codegen.empty();
-        this.virtualMachineName = Codegen.empty();
+    private VirtualMachineArgs(VirtualMachineArgs $) {
+        this.amountOfRam = $.amountOfRam;
+        this.customization = $.customization;
+        this.disks = $.disks;
+        this.exposeToGuestVM = $.exposeToGuestVM;
+        this.location = $.location;
+        this.nics = $.nics;
+        this.numberOfCores = $.numberOfCores;
+        this.password = $.password;
+        this.privateCloudId = $.privateCloudId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourcePool = $.resourcePool;
+        this.tags = $.tags;
+        this.templateId = $.templateId;
+        this.username = $.username;
+        this.vSphereNetworks = $.vSphereNetworks;
+        this.virtualMachineName = $.virtualMachineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> amountOfRam;
-        private @Nullable Output<GuestOSCustomizationArgs> customization;
-        private @Nullable Output<List<VirtualDiskArgs>> disks;
-        private @Nullable Output<Boolean> exposeToGuestVM;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<VirtualNicArgs>> nics;
-        private Output<Integer> numberOfCores;
-        private @Nullable Output<String> password;
-        private Output<String> privateCloudId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<ResourcePoolArgs> resourcePool;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> templateId;
-        private @Nullable Output<String> username;
-        private @Nullable Output<List<String>> vSphereNetworks;
-        private @Nullable Output<String> virtualMachineName;
+        private VirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineArgs();
         }
 
         public Builder(VirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amountOfRam = defaults.amountOfRam;
-    	      this.customization = defaults.customization;
-    	      this.disks = defaults.disks;
-    	      this.exposeToGuestVM = defaults.exposeToGuestVM;
-    	      this.location = defaults.location;
-    	      this.nics = defaults.nics;
-    	      this.numberOfCores = defaults.numberOfCores;
-    	      this.password = defaults.password;
-    	      this.privateCloudId = defaults.privateCloudId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourcePool = defaults.resourcePool;
-    	      this.tags = defaults.tags;
-    	      this.templateId = defaults.templateId;
-    	      this.username = defaults.username;
-    	      this.vSphereNetworks = defaults.vSphereNetworks;
-    	      this.virtualMachineName = defaults.virtualMachineName;
+            $ = new VirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amountOfRam(Output<Integer> amountOfRam) {
-            this.amountOfRam = Objects.requireNonNull(amountOfRam);
+            $.amountOfRam = amountOfRam;
             return this;
         }
+
         public Builder amountOfRam(Integer amountOfRam) {
-            this.amountOfRam = Output.of(Objects.requireNonNull(amountOfRam));
-            return this;
+            return amountOfRam(Output.of(amountOfRam));
         }
+
         public Builder customization(@Nullable Output<GuestOSCustomizationArgs> customization) {
-            this.customization = customization;
+            $.customization = customization;
             return this;
         }
-        public Builder customization(@Nullable GuestOSCustomizationArgs customization) {
-            this.customization = Codegen.ofNullable(customization);
-            return this;
+
+        public Builder customization(GuestOSCustomizationArgs customization) {
+            return customization(Output.of(customization));
         }
+
         public Builder disks(@Nullable Output<List<VirtualDiskArgs>> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
-        public Builder disks(@Nullable List<VirtualDiskArgs> disks) {
-            this.disks = Codegen.ofNullable(disks);
-            return this;
+
+        public Builder disks(List<VirtualDiskArgs> disks) {
+            return disks(Output.of(disks));
         }
+
         public Builder disks(VirtualDiskArgs... disks) {
             return disks(List.of(disks));
         }
+
         public Builder exposeToGuestVM(@Nullable Output<Boolean> exposeToGuestVM) {
-            this.exposeToGuestVM = exposeToGuestVM;
+            $.exposeToGuestVM = exposeToGuestVM;
             return this;
         }
-        public Builder exposeToGuestVM(@Nullable Boolean exposeToGuestVM) {
-            this.exposeToGuestVM = Codegen.ofNullable(exposeToGuestVM);
-            return this;
+
+        public Builder exposeToGuestVM(Boolean exposeToGuestVM) {
+            return exposeToGuestVM(Output.of(exposeToGuestVM));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder nics(@Nullable Output<List<VirtualNicArgs>> nics) {
-            this.nics = nics;
+            $.nics = nics;
             return this;
         }
-        public Builder nics(@Nullable List<VirtualNicArgs> nics) {
-            this.nics = Codegen.ofNullable(nics);
-            return this;
+
+        public Builder nics(List<VirtualNicArgs> nics) {
+            return nics(Output.of(nics));
         }
+
         public Builder nics(VirtualNicArgs... nics) {
             return nics(List.of(nics));
         }
+
         public Builder numberOfCores(Output<Integer> numberOfCores) {
-            this.numberOfCores = Objects.requireNonNull(numberOfCores);
+            $.numberOfCores = numberOfCores;
             return this;
         }
+
         public Builder numberOfCores(Integer numberOfCores) {
-            this.numberOfCores = Output.of(Objects.requireNonNull(numberOfCores));
-            return this;
+            return numberOfCores(Output.of(numberOfCores));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder privateCloudId(Output<String> privateCloudId) {
-            this.privateCloudId = Objects.requireNonNull(privateCloudId);
+            $.privateCloudId = privateCloudId;
             return this;
         }
+
         public Builder privateCloudId(String privateCloudId) {
-            this.privateCloudId = Output.of(Objects.requireNonNull(privateCloudId));
-            return this;
+            return privateCloudId(Output.of(privateCloudId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourcePool(@Nullable Output<ResourcePoolArgs> resourcePool) {
-            this.resourcePool = resourcePool;
+            $.resourcePool = resourcePool;
             return this;
         }
-        public Builder resourcePool(@Nullable ResourcePoolArgs resourcePool) {
-            this.resourcePool = Codegen.ofNullable(resourcePool);
-            return this;
+
+        public Builder resourcePool(ResourcePoolArgs resourcePool) {
+            return resourcePool(Output.of(resourcePool));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
+
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
+
+        public Builder username(String username) {
+            return username(Output.of(username));
         }
+
         public Builder vSphereNetworks(@Nullable Output<List<String>> vSphereNetworks) {
-            this.vSphereNetworks = vSphereNetworks;
+            $.vSphereNetworks = vSphereNetworks;
             return this;
         }
-        public Builder vSphereNetworks(@Nullable List<String> vSphereNetworks) {
-            this.vSphereNetworks = Codegen.ofNullable(vSphereNetworks);
-            return this;
+
+        public Builder vSphereNetworks(List<String> vSphereNetworks) {
+            return vSphereNetworks(Output.of(vSphereNetworks));
         }
+
         public Builder vSphereNetworks(String... vSphereNetworks) {
             return vSphereNetworks(List.of(vSphereNetworks));
         }
+
         public Builder virtualMachineName(@Nullable Output<String> virtualMachineName) {
-            this.virtualMachineName = virtualMachineName;
+            $.virtualMachineName = virtualMachineName;
             return this;
         }
-        public Builder virtualMachineName(@Nullable String virtualMachineName) {
-            this.virtualMachineName = Codegen.ofNullable(virtualMachineName);
-            return this;
-        }        public VirtualMachineArgs build() {
-            return new VirtualMachineArgs(amountOfRam, customization, disks, exposeToGuestVM, location, nics, numberOfCores, password, privateCloudId, resourceGroupName, resourcePool, tags, templateId, username, vSphereNetworks, virtualMachineName);
+
+        public Builder virtualMachineName(String virtualMachineName) {
+            return virtualMachineName(Output.of(virtualMachineName));
+        }
+
+        public VirtualMachineArgs build() {
+            $.amountOfRam = Objects.requireNonNull($.amountOfRam, "expected parameter 'amountOfRam' to be non-null");
+            $.numberOfCores = Objects.requireNonNull($.numberOfCores, "expected parameter 'numberOfCores' to be non-null");
+            $.privateCloudId = Objects.requireNonNull($.privateCloudId, "expected parameter 'privateCloudId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

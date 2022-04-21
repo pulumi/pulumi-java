@@ -23,10 +23,10 @@ public final class AadAuthenticationParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="aadAudience")
-      private final @Nullable String aadAudience;
+    private @Nullable String aadAudience;
 
     public Optional<String> aadAudience() {
-        return this.aadAudience == null ? Optional.empty() : Optional.ofNullable(this.aadAudience);
+        return Optional.ofNullable(this.aadAudience);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AadAuthenticationParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="aadIssuer")
-      private final @Nullable String aadIssuer;
+    private @Nullable String aadIssuer;
 
     public Optional<String> aadIssuer() {
-        return this.aadIssuer == null ? Optional.empty() : Optional.ofNullable(this.aadIssuer);
+        return Optional.ofNullable(this.aadIssuer);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class AadAuthenticationParametersResponse extends com.pulumi.resour
      * 
      */
     @Import(name="aadTenant")
-      private final @Nullable String aadTenant;
+    private @Nullable String aadTenant;
 
     public Optional<String> aadTenant() {
-        return this.aadTenant == null ? Optional.empty() : Optional.ofNullable(this.aadTenant);
+        return Optional.ofNullable(this.aadTenant);
     }
 
-    public AadAuthenticationParametersResponse(
-        @Nullable String aadAudience,
-        @Nullable String aadIssuer,
-        @Nullable String aadTenant) {
-        this.aadAudience = aadAudience;
-        this.aadIssuer = aadIssuer;
-        this.aadTenant = aadTenant;
-    }
+    private AadAuthenticationParametersResponse() {}
 
-    private AadAuthenticationParametersResponse() {
-        this.aadAudience = null;
-        this.aadIssuer = null;
-        this.aadTenant = null;
+    private AadAuthenticationParametersResponse(AadAuthenticationParametersResponse $) {
+        this.aadAudience = $.aadAudience;
+        this.aadIssuer = $.aadIssuer;
+        this.aadTenant = $.aadTenant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AadAuthenticationParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String aadAudience;
-        private @Nullable String aadIssuer;
-        private @Nullable String aadTenant;
+        private AadAuthenticationParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AadAuthenticationParametersResponse();
         }
 
         public Builder(AadAuthenticationParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadAudience = defaults.aadAudience;
-    	      this.aadIssuer = defaults.aadIssuer;
-    	      this.aadTenant = defaults.aadTenant;
+            $ = new AadAuthenticationParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aadAudience(@Nullable String aadAudience) {
-            this.aadAudience = aadAudience;
+            $.aadAudience = aadAudience;
             return this;
         }
+
         public Builder aadIssuer(@Nullable String aadIssuer) {
-            this.aadIssuer = aadIssuer;
+            $.aadIssuer = aadIssuer;
             return this;
         }
+
         public Builder aadTenant(@Nullable String aadTenant) {
-            this.aadTenant = aadTenant;
+            $.aadTenant = aadTenant;
             return this;
-        }        public AadAuthenticationParametersResponse build() {
-            return new AadAuthenticationParametersResponse(aadAudience, aadIssuer, aadTenant);
+        }
+
+        public AadAuthenticationParametersResponse build() {
+            return $;
         }
     }
+
 }

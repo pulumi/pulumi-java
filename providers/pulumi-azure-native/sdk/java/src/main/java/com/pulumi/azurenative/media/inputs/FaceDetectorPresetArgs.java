@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="blurType")
-      private final @Nullable Output<Either<String,BlurType>> blurType;
+    private @Nullable Output<Either<String,BlurType>> blurType;
 
-    public Output<Either<String,BlurType>> blurType() {
-        return this.blurType == null ? Codegen.empty() : this.blurType;
+    public Optional<Output<Either<String,BlurType>>> blurType() {
+        return Optional.ofNullable(this.blurType);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="experimentalOptions")
-      private final @Nullable Output<Map<String,String>> experimentalOptions;
+    private @Nullable Output<Map<String,String>> experimentalOptions;
 
-    public Output<Map<String,String>> experimentalOptions() {
-        return this.experimentalOptions == null ? Codegen.empty() : this.experimentalOptions;
+    public Optional<Output<Map<String,String>>> experimentalOptions() {
+        return Optional.ofNullable(this.experimentalOptions);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Either<String,FaceRedactorMode>> mode;
+    private @Nullable Output<Either<String,FaceRedactorMode>> mode;
 
-    public Output<Either<String,FaceRedactorMode>> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Either<String,FaceRedactorMode>>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -63,7 +64,7 @@ public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -74,102 +75,89 @@ public final class FaceDetectorPresetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resolution")
-      private final @Nullable Output<Either<String,AnalysisResolution>> resolution;
+    private @Nullable Output<Either<String,AnalysisResolution>> resolution;
 
-    public Output<Either<String,AnalysisResolution>> resolution() {
-        return this.resolution == null ? Codegen.empty() : this.resolution;
+    public Optional<Output<Either<String,AnalysisResolution>>> resolution() {
+        return Optional.ofNullable(this.resolution);
     }
 
-    public FaceDetectorPresetArgs(
-        @Nullable Output<Either<String,BlurType>> blurType,
-        @Nullable Output<Map<String,String>> experimentalOptions,
-        @Nullable Output<Either<String,FaceRedactorMode>> mode,
-        Output<String> odataType,
-        @Nullable Output<Either<String,AnalysisResolution>> resolution) {
-        this.blurType = blurType;
-        this.experimentalOptions = experimentalOptions;
-        this.mode = mode;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.resolution = resolution;
-    }
+    private FaceDetectorPresetArgs() {}
 
-    private FaceDetectorPresetArgs() {
-        this.blurType = Codegen.empty();
-        this.experimentalOptions = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.resolution = Codegen.empty();
+    private FaceDetectorPresetArgs(FaceDetectorPresetArgs $) {
+        this.blurType = $.blurType;
+        this.experimentalOptions = $.experimentalOptions;
+        this.mode = $.mode;
+        this.odataType = $.odataType;
+        this.resolution = $.resolution;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FaceDetectorPresetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BlurType>> blurType;
-        private @Nullable Output<Map<String,String>> experimentalOptions;
-        private @Nullable Output<Either<String,FaceRedactorMode>> mode;
-        private Output<String> odataType;
-        private @Nullable Output<Either<String,AnalysisResolution>> resolution;
+        private FaceDetectorPresetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FaceDetectorPresetArgs();
         }
 
         public Builder(FaceDetectorPresetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blurType = defaults.blurType;
-    	      this.experimentalOptions = defaults.experimentalOptions;
-    	      this.mode = defaults.mode;
-    	      this.odataType = defaults.odataType;
-    	      this.resolution = defaults.resolution;
+            $ = new FaceDetectorPresetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blurType(@Nullable Output<Either<String,BlurType>> blurType) {
-            this.blurType = blurType;
+            $.blurType = blurType;
             return this;
         }
-        public Builder blurType(@Nullable Either<String,BlurType> blurType) {
-            this.blurType = Codegen.ofNullable(blurType);
-            return this;
+
+        public Builder blurType(Either<String,BlurType> blurType) {
+            return blurType(Output.of(blurType));
         }
+
         public Builder experimentalOptions(@Nullable Output<Map<String,String>> experimentalOptions) {
-            this.experimentalOptions = experimentalOptions;
+            $.experimentalOptions = experimentalOptions;
             return this;
         }
-        public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
-            this.experimentalOptions = Codegen.ofNullable(experimentalOptions);
-            return this;
+
+        public Builder experimentalOptions(Map<String,String> experimentalOptions) {
+            return experimentalOptions(Output.of(experimentalOptions));
         }
+
         public Builder mode(@Nullable Output<Either<String,FaceRedactorMode>> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Either<String,FaceRedactorMode> mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Either<String,FaceRedactorMode> mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder resolution(@Nullable Output<Either<String,AnalysisResolution>> resolution) {
-            this.resolution = resolution;
+            $.resolution = resolution;
             return this;
         }
-        public Builder resolution(@Nullable Either<String,AnalysisResolution> resolution) {
-            this.resolution = Codegen.ofNullable(resolution);
-            return this;
-        }        public FaceDetectorPresetArgs build() {
-            return new FaceDetectorPresetArgs(blurType, experimentalOptions, mode, odataType, resolution);
+
+        public Builder resolution(Either<String,AnalysisResolution> resolution) {
+            return resolution(Output.of(resolution));
+        }
+
+        public FaceDetectorPresetArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

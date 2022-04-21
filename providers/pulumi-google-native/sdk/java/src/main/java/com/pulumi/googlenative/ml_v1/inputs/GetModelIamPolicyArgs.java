@@ -15,78 +15,71 @@ public final class GetModelIamPolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetModelIamPolicyArgs Empty = new GetModelIamPolicyArgs();
 
     @Import(name="modelId", required=true)
-      private final String modelId;
+    private String modelId;
 
     public String modelId() {
         return this.modelId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetModelIamPolicyArgs(
-        String modelId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.modelId = Objects.requireNonNull(modelId, "expected parameter 'modelId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetModelIamPolicyArgs() {}
 
-    private GetModelIamPolicyArgs() {
-        this.modelId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetModelIamPolicyArgs(GetModelIamPolicyArgs $) {
+        this.modelId = $.modelId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetModelIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String modelId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetModelIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetModelIamPolicyArgs();
         }
 
         public Builder(GetModelIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modelId = defaults.modelId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetModelIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modelId(String modelId) {
-            this.modelId = Objects.requireNonNull(modelId);
+            $.modelId = modelId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetModelIamPolicyArgs build() {
-            return new GetModelIamPolicyArgs(modelId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetModelIamPolicyArgs build() {
+            $.modelId = Objects.requireNonNull($.modelId, "expected parameter 'modelId' to be non-null");
+            return $;
         }
     }
+
 }

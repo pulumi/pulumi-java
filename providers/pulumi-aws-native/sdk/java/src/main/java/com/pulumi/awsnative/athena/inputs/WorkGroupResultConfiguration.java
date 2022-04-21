@@ -20,62 +20,57 @@ public final class WorkGroupResultConfiguration extends com.pulumi.resources.Inv
     public static final WorkGroupResultConfiguration Empty = new WorkGroupResultConfiguration();
 
     @Import(name="encryptionConfiguration")
-      private final @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
+    private @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
 
     public Optional<WorkGroupEncryptionConfiguration> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="outputLocation")
-      private final @Nullable String outputLocation;
+    private @Nullable String outputLocation;
 
     public Optional<String> outputLocation() {
-        return this.outputLocation == null ? Optional.empty() : Optional.ofNullable(this.outputLocation);
+        return Optional.ofNullable(this.outputLocation);
     }
 
-    public WorkGroupResultConfiguration(
-        @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
-        @Nullable String outputLocation) {
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.outputLocation = outputLocation;
-    }
+    private WorkGroupResultConfiguration() {}
 
-    private WorkGroupResultConfiguration() {
-        this.encryptionConfiguration = null;
-        this.outputLocation = null;
+    private WorkGroupResultConfiguration(WorkGroupResultConfiguration $) {
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.outputLocation = $.outputLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkGroupResultConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
-        private @Nullable String outputLocation;
+        private WorkGroupResultConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkGroupResultConfiguration();
         }
 
         public Builder(WorkGroupResultConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.outputLocation = defaults.outputLocation;
+            $ = new WorkGroupResultConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfiguration encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
+
         public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = outputLocation;
+            $.outputLocation = outputLocation;
             return this;
-        }        public WorkGroupResultConfiguration build() {
-            return new WorkGroupResultConfiguration(encryptionConfiguration, outputLocation);
+        }
+
+        public WorkGroupResultConfiguration build() {
+            return $;
         }
     }
+
 }

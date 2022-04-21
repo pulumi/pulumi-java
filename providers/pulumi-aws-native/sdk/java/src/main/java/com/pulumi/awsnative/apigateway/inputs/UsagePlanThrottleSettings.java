@@ -20,10 +20,10 @@ public final class UsagePlanThrottleSettings extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="burstLimit")
-      private final @Nullable Integer burstLimit;
+    private @Nullable Integer burstLimit;
 
     public Optional<Integer> burstLimit() {
-        return this.burstLimit == null ? Optional.empty() : Optional.ofNullable(this.burstLimit);
+        return Optional.ofNullable(this.burstLimit);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class UsagePlanThrottleSettings extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rateLimit")
-      private final @Nullable Double rateLimit;
+    private @Nullable Double rateLimit;
 
     public Optional<Double> rateLimit() {
-        return this.rateLimit == null ? Optional.empty() : Optional.ofNullable(this.rateLimit);
+        return Optional.ofNullable(this.rateLimit);
     }
 
-    public UsagePlanThrottleSettings(
-        @Nullable Integer burstLimit,
-        @Nullable Double rateLimit) {
-        this.burstLimit = burstLimit;
-        this.rateLimit = rateLimit;
-    }
+    private UsagePlanThrottleSettings() {}
 
-    private UsagePlanThrottleSettings() {
-        this.burstLimit = null;
-        this.rateLimit = null;
+    private UsagePlanThrottleSettings(UsagePlanThrottleSettings $) {
+        this.burstLimit = $.burstLimit;
+        this.rateLimit = $.rateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UsagePlanThrottleSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer burstLimit;
-        private @Nullable Double rateLimit;
+        private UsagePlanThrottleSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new UsagePlanThrottleSettings();
         }
 
         public Builder(UsagePlanThrottleSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.burstLimit = defaults.burstLimit;
-    	      this.rateLimit = defaults.rateLimit;
+            $ = new UsagePlanThrottleSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder burstLimit(@Nullable Integer burstLimit) {
-            this.burstLimit = burstLimit;
+            $.burstLimit = burstLimit;
             return this;
         }
+
         public Builder rateLimit(@Nullable Double rateLimit) {
-            this.rateLimit = rateLimit;
+            $.rateLimit = rateLimit;
             return this;
-        }        public UsagePlanThrottleSettings build() {
-            return new UsagePlanThrottleSettings(burstLimit, rateLimit);
+        }
+
+        public UsagePlanThrottleSettings build() {
+            return $;
         }
     }
+
 }

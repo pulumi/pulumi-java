@@ -28,10 +28,10 @@ public final class ApplicationMetricDescriptionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="maximumCapacity")
-      private final @Nullable Double maximumCapacity;
+    private @Nullable Double maximumCapacity;
 
     public Optional<Double> maximumCapacity() {
-        return this.maximumCapacity == null ? Optional.empty() : Optional.ofNullable(this.maximumCapacity);
+        return Optional.ofNullable(this.maximumCapacity);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationMetricDescriptionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ApplicationMetricDescriptionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="reservationCapacity")
-      private final @Nullable Double reservationCapacity;
+    private @Nullable Double reservationCapacity;
 
     public Optional<Double> reservationCapacity() {
-        return this.reservationCapacity == null ? Optional.empty() : Optional.ofNullable(this.reservationCapacity);
+        return Optional.ofNullable(this.reservationCapacity);
     }
 
     /**
@@ -67,73 +67,62 @@ public final class ApplicationMetricDescriptionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="totalApplicationCapacity")
-      private final @Nullable Double totalApplicationCapacity;
+    private @Nullable Double totalApplicationCapacity;
 
     public Optional<Double> totalApplicationCapacity() {
-        return this.totalApplicationCapacity == null ? Optional.empty() : Optional.ofNullable(this.totalApplicationCapacity);
+        return Optional.ofNullable(this.totalApplicationCapacity);
     }
 
-    public ApplicationMetricDescriptionResponse(
-        @Nullable Double maximumCapacity,
-        @Nullable String name,
-        @Nullable Double reservationCapacity,
-        @Nullable Double totalApplicationCapacity) {
-        this.maximumCapacity = maximumCapacity;
-        this.name = name;
-        this.reservationCapacity = reservationCapacity;
-        this.totalApplicationCapacity = totalApplicationCapacity;
-    }
+    private ApplicationMetricDescriptionResponse() {}
 
-    private ApplicationMetricDescriptionResponse() {
-        this.maximumCapacity = null;
-        this.name = null;
-        this.reservationCapacity = null;
-        this.totalApplicationCapacity = null;
+    private ApplicationMetricDescriptionResponse(ApplicationMetricDescriptionResponse $) {
+        this.maximumCapacity = $.maximumCapacity;
+        this.name = $.name;
+        this.reservationCapacity = $.reservationCapacity;
+        this.totalApplicationCapacity = $.totalApplicationCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationMetricDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double maximumCapacity;
-        private @Nullable String name;
-        private @Nullable Double reservationCapacity;
-        private @Nullable Double totalApplicationCapacity;
+        private ApplicationMetricDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationMetricDescriptionResponse();
         }
 
         public Builder(ApplicationMetricDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximumCapacity = defaults.maximumCapacity;
-    	      this.name = defaults.name;
-    	      this.reservationCapacity = defaults.reservationCapacity;
-    	      this.totalApplicationCapacity = defaults.totalApplicationCapacity;
+            $ = new ApplicationMetricDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maximumCapacity(@Nullable Double maximumCapacity) {
-            this.maximumCapacity = maximumCapacity;
+            $.maximumCapacity = maximumCapacity;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder reservationCapacity(@Nullable Double reservationCapacity) {
-            this.reservationCapacity = reservationCapacity;
+            $.reservationCapacity = reservationCapacity;
             return this;
         }
+
         public Builder totalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
-            this.totalApplicationCapacity = totalApplicationCapacity;
+            $.totalApplicationCapacity = totalApplicationCapacity;
             return this;
-        }        public ApplicationMetricDescriptionResponse build() {
-            return new ApplicationMetricDescriptionResponse(maximumCapacity, name, reservationCapacity, totalApplicationCapacity);
+        }
+
+        public ApplicationMetricDescriptionResponse build() {
+            return $;
         }
     }
+
 }

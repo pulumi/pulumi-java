@@ -5,10 +5,10 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class AccountAuditConfigurationAuditNotificationTargetArgs extends 
      * 
      */
     @Import(name="targetArn")
-      private final @Nullable Output<String> targetArn;
+    private @Nullable Output<String> targetArn;
 
-    public Output<String> targetArn() {
-        return this.targetArn == null ? Codegen.empty() : this.targetArn;
+    public Optional<Output<String>> targetArn() {
+        return Optional.ofNullable(this.targetArn);
     }
 
-    public AccountAuditConfigurationAuditNotificationTargetArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> targetArn) {
-        this.enabled = enabled;
-        this.roleArn = roleArn;
-        this.targetArn = targetArn;
-    }
+    private AccountAuditConfigurationAuditNotificationTargetArgs() {}
 
-    private AccountAuditConfigurationAuditNotificationTargetArgs() {
-        this.enabled = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.targetArn = Codegen.empty();
+    private AccountAuditConfigurationAuditNotificationTargetArgs(AccountAuditConfigurationAuditNotificationTargetArgs $) {
+        this.enabled = $.enabled;
+        this.roleArn = $.roleArn;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountAuditConfigurationAuditNotificationTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> targetArn;
+        private AccountAuditConfigurationAuditNotificationTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountAuditConfigurationAuditNotificationTargetArgs();
         }
 
         public Builder(AccountAuditConfigurationAuditNotificationTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.roleArn = defaults.roleArn;
-    	      this.targetArn = defaults.targetArn;
+            $ = new AccountAuditConfigurationAuditNotificationTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder targetArn(@Nullable Output<String> targetArn) {
-            this.targetArn = targetArn;
+            $.targetArn = targetArn;
             return this;
         }
-        public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Codegen.ofNullable(targetArn);
-            return this;
-        }        public AccountAuditConfigurationAuditNotificationTargetArgs build() {
-            return new AccountAuditConfigurationAuditNotificationTargetArgs(enabled, roleArn, targetArn);
+
+        public Builder targetArn(String targetArn) {
+            return targetArn(Output.of(targetArn));
+        }
+
+        public AccountAuditConfigurationAuditNotificationTargetArgs build() {
+            return $;
         }
     }
+
 }

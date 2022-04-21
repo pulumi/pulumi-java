@@ -22,7 +22,7 @@ public final class SchedulePolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="idleDuration", required=true)
-      private final String idleDuration;
+    private String idleDuration;
 
     public String idleDuration() {
         return this.idleDuration;
@@ -33,55 +33,52 @@ public final class SchedulePolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="skipOsAdaptation", required=true)
-      private final Boolean skipOsAdaptation;
+    private Boolean skipOsAdaptation;
 
     public Boolean skipOsAdaptation() {
         return this.skipOsAdaptation;
     }
 
-    public SchedulePolicyResponse(
-        String idleDuration,
-        Boolean skipOsAdaptation) {
-        this.idleDuration = Objects.requireNonNull(idleDuration, "expected parameter 'idleDuration' to be non-null");
-        this.skipOsAdaptation = Objects.requireNonNull(skipOsAdaptation, "expected parameter 'skipOsAdaptation' to be non-null");
-    }
+    private SchedulePolicyResponse() {}
 
-    private SchedulePolicyResponse() {
-        this.idleDuration = null;
-        this.skipOsAdaptation = null;
+    private SchedulePolicyResponse(SchedulePolicyResponse $) {
+        this.idleDuration = $.idleDuration;
+        this.skipOsAdaptation = $.skipOsAdaptation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String idleDuration;
-        private Boolean skipOsAdaptation;
+        private SchedulePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulePolicyResponse();
         }
 
         public Builder(SchedulePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idleDuration = defaults.idleDuration;
-    	      this.skipOsAdaptation = defaults.skipOsAdaptation;
+            $ = new SchedulePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder idleDuration(String idleDuration) {
-            this.idleDuration = Objects.requireNonNull(idleDuration);
+            $.idleDuration = idleDuration;
             return this;
         }
+
         public Builder skipOsAdaptation(Boolean skipOsAdaptation) {
-            this.skipOsAdaptation = Objects.requireNonNull(skipOsAdaptation);
+            $.skipOsAdaptation = skipOsAdaptation;
             return this;
-        }        public SchedulePolicyResponse build() {
-            return new SchedulePolicyResponse(idleDuration, skipOsAdaptation);
+        }
+
+        public SchedulePolicyResponse build() {
+            $.idleDuration = Objects.requireNonNull($.idleDuration, "expected parameter 'idleDuration' to be non-null");
+            $.skipOsAdaptation = Objects.requireNonNull($.skipOsAdaptation, "expected parameter 'skipOsAdaptation' to be non-null");
+            return $;
         }
     }
+
 }

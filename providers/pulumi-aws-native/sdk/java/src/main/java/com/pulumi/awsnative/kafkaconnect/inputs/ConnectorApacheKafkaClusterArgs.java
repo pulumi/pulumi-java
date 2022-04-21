@@ -6,7 +6,6 @@ package com.pulumi.awsnative.kafkaconnect.inputs;
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorVpcArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,70 +23,67 @@ public final class ConnectorApacheKafkaClusterArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="bootstrapServers", required=true)
-      private final Output<String> bootstrapServers;
+    private Output<String> bootstrapServers;
 
     public Output<String> bootstrapServers() {
         return this.bootstrapServers;
     }
 
     @Import(name="vpc", required=true)
-      private final Output<ConnectorVpcArgs> vpc;
+    private Output<ConnectorVpcArgs> vpc;
 
     public Output<ConnectorVpcArgs> vpc() {
         return this.vpc;
     }
 
-    public ConnectorApacheKafkaClusterArgs(
-        Output<String> bootstrapServers,
-        Output<ConnectorVpcArgs> vpc) {
-        this.bootstrapServers = Objects.requireNonNull(bootstrapServers, "expected parameter 'bootstrapServers' to be non-null");
-        this.vpc = Objects.requireNonNull(vpc, "expected parameter 'vpc' to be non-null");
-    }
+    private ConnectorApacheKafkaClusterArgs() {}
 
-    private ConnectorApacheKafkaClusterArgs() {
-        this.bootstrapServers = Codegen.empty();
-        this.vpc = Codegen.empty();
+    private ConnectorApacheKafkaClusterArgs(ConnectorApacheKafkaClusterArgs $) {
+        this.bootstrapServers = $.bootstrapServers;
+        this.vpc = $.vpc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorApacheKafkaClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bootstrapServers;
-        private Output<ConnectorVpcArgs> vpc;
+        private ConnectorApacheKafkaClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorApacheKafkaClusterArgs();
         }
 
         public Builder(ConnectorApacheKafkaClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootstrapServers = defaults.bootstrapServers;
-    	      this.vpc = defaults.vpc;
+            $ = new ConnectorApacheKafkaClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bootstrapServers(Output<String> bootstrapServers) {
-            this.bootstrapServers = Objects.requireNonNull(bootstrapServers);
+            $.bootstrapServers = bootstrapServers;
             return this;
         }
+
         public Builder bootstrapServers(String bootstrapServers) {
-            this.bootstrapServers = Output.of(Objects.requireNonNull(bootstrapServers));
-            return this;
+            return bootstrapServers(Output.of(bootstrapServers));
         }
+
         public Builder vpc(Output<ConnectorVpcArgs> vpc) {
-            this.vpc = Objects.requireNonNull(vpc);
+            $.vpc = vpc;
             return this;
         }
+
         public Builder vpc(ConnectorVpcArgs vpc) {
-            this.vpc = Output.of(Objects.requireNonNull(vpc));
-            return this;
-        }        public ConnectorApacheKafkaClusterArgs build() {
-            return new ConnectorApacheKafkaClusterArgs(bootstrapServers, vpc);
+            return vpc(Output.of(vpc));
+        }
+
+        public ConnectorApacheKafkaClusterArgs build() {
+            $.bootstrapServers = Objects.requireNonNull($.bootstrapServers, "expected parameter 'bootstrapServers' to be non-null");
+            $.vpc = Objects.requireNonNull($.vpc, "expected parameter 'vpc' to be non-null");
+            return $;
         }
     }
+
 }

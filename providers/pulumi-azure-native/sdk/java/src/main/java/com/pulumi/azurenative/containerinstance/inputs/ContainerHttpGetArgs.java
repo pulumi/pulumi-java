@@ -8,10 +8,10 @@ import com.pulumi.azurenative.containerinstance.inputs.HttpHeadersArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="httpHeaders")
-      private final @Nullable Output<HttpHeadersArgs> httpHeaders;
+    private @Nullable Output<HttpHeadersArgs> httpHeaders;
 
-    public Output<HttpHeadersArgs> httpHeaders() {
-        return this.httpHeaders == null ? Codegen.empty() : this.httpHeaders;
+    public Optional<Output<HttpHeadersArgs>> httpHeaders() {
+        return Optional.ofNullable(this.httpHeaders);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -61,89 +61,79 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="scheme")
-      private final @Nullable Output<Either<String,Scheme>> scheme;
+    private @Nullable Output<Either<String,Scheme>> scheme;
 
-    public Output<Either<String,Scheme>> scheme() {
-        return this.scheme == null ? Codegen.empty() : this.scheme;
+    public Optional<Output<Either<String,Scheme>>> scheme() {
+        return Optional.ofNullable(this.scheme);
     }
 
-    public ContainerHttpGetArgs(
-        @Nullable Output<HttpHeadersArgs> httpHeaders,
-        @Nullable Output<String> path,
-        Output<Integer> port,
-        @Nullable Output<Either<String,Scheme>> scheme) {
-        this.httpHeaders = httpHeaders;
-        this.path = path;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.scheme = scheme;
-    }
+    private ContainerHttpGetArgs() {}
 
-    private ContainerHttpGetArgs() {
-        this.httpHeaders = Codegen.empty();
-        this.path = Codegen.empty();
-        this.port = Codegen.empty();
-        this.scheme = Codegen.empty();
+    private ContainerHttpGetArgs(ContainerHttpGetArgs $) {
+        this.httpHeaders = $.httpHeaders;
+        this.path = $.path;
+        this.port = $.port;
+        this.scheme = $.scheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerHttpGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HttpHeadersArgs> httpHeaders;
-        private @Nullable Output<String> path;
-        private Output<Integer> port;
-        private @Nullable Output<Either<String,Scheme>> scheme;
+        private ContainerHttpGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerHttpGetArgs();
         }
 
         public Builder(ContainerHttpGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpHeaders = defaults.httpHeaders;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.scheme = defaults.scheme;
+            $ = new ContainerHttpGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpHeaders(@Nullable Output<HttpHeadersArgs> httpHeaders) {
-            this.httpHeaders = httpHeaders;
+            $.httpHeaders = httpHeaders;
             return this;
         }
-        public Builder httpHeaders(@Nullable HttpHeadersArgs httpHeaders) {
-            this.httpHeaders = Codegen.ofNullable(httpHeaders);
-            return this;
+
+        public Builder httpHeaders(HttpHeadersArgs httpHeaders) {
+            return httpHeaders(Output.of(httpHeaders));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder scheme(@Nullable Output<Either<String,Scheme>> scheme) {
-            this.scheme = scheme;
+            $.scheme = scheme;
             return this;
         }
-        public Builder scheme(@Nullable Either<String,Scheme> scheme) {
-            this.scheme = Codegen.ofNullable(scheme);
-            return this;
-        }        public ContainerHttpGetArgs build() {
-            return new ContainerHttpGetArgs(httpHeaders, path, port, scheme);
+
+        public Builder scheme(Either<String,Scheme> scheme) {
+            return scheme(Output.of(scheme));
+        }
+
+        public ContainerHttpGetArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

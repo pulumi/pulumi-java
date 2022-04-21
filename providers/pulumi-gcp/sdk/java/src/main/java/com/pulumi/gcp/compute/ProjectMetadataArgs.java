@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ProjectMetadataArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metadata", required=true)
-      private final Output<Map<String,String>> metadata;
+    private Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> metadata() {
         return this.metadata;
@@ -33,63 +33,59 @@ public final class ProjectMetadataArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ProjectMetadataArgs(
-        Output<Map<String,String>> metadata,
-        @Nullable Output<String> project) {
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.project = project;
-    }
+    private ProjectMetadataArgs() {}
 
-    private ProjectMetadataArgs() {
-        this.metadata = Codegen.empty();
-        this.project = Codegen.empty();
+    private ProjectMetadataArgs(ProjectMetadataArgs $) {
+        this.metadata = $.metadata;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> metadata;
-        private @Nullable Output<String> project;
+        private ProjectMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectMetadataArgs();
         }
 
         public Builder(ProjectMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.project = defaults.project;
+            $ = new ProjectMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(Output<Map<String,String>> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Output.of(Objects.requireNonNull(metadata));
-            return this;
+            return metadata(Output.of(metadata));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ProjectMetadataArgs build() {
-            return new ProjectMetadataArgs(metadata, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ProjectMetadataArgs build() {
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            return $;
         }
     }
+
 }

@@ -16,78 +16,70 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate extends com.pul
     public static final TaskDefinitionUpdateWirelessGatewayTaskCreate Empty = new TaskDefinitionUpdateWirelessGatewayTaskCreate();
 
     @Import(name="loRaWAN")
-      private final @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN;
+    private @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN;
 
     public Optional<TaskDefinitionLoRaWANUpdateGatewayTaskCreate> loRaWAN() {
-        return this.loRaWAN == null ? Optional.empty() : Optional.ofNullable(this.loRaWAN);
+        return Optional.ofNullable(this.loRaWAN);
     }
 
     @Import(name="updateDataRole")
-      private final @Nullable String updateDataRole;
+    private @Nullable String updateDataRole;
 
     public Optional<String> updateDataRole() {
-        return this.updateDataRole == null ? Optional.empty() : Optional.ofNullable(this.updateDataRole);
+        return Optional.ofNullable(this.updateDataRole);
     }
 
     @Import(name="updateDataSource")
-      private final @Nullable String updateDataSource;
+    private @Nullable String updateDataSource;
 
     public Optional<String> updateDataSource() {
-        return this.updateDataSource == null ? Optional.empty() : Optional.ofNullable(this.updateDataSource);
+        return Optional.ofNullable(this.updateDataSource);
     }
 
-    public TaskDefinitionUpdateWirelessGatewayTaskCreate(
-        @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN,
-        @Nullable String updateDataRole,
-        @Nullable String updateDataSource) {
-        this.loRaWAN = loRaWAN;
-        this.updateDataRole = updateDataRole;
-        this.updateDataSource = updateDataSource;
-    }
+    private TaskDefinitionUpdateWirelessGatewayTaskCreate() {}
 
-    private TaskDefinitionUpdateWirelessGatewayTaskCreate() {
-        this.loRaWAN = null;
-        this.updateDataRole = null;
-        this.updateDataSource = null;
+    private TaskDefinitionUpdateWirelessGatewayTaskCreate(TaskDefinitionUpdateWirelessGatewayTaskCreate $) {
+        this.loRaWAN = $.loRaWAN;
+        this.updateDataRole = $.updateDataRole;
+        this.updateDataSource = $.updateDataSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionUpdateWirelessGatewayTaskCreate defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN;
-        private @Nullable String updateDataRole;
-        private @Nullable String updateDataSource;
+        private TaskDefinitionUpdateWirelessGatewayTaskCreate $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionUpdateWirelessGatewayTaskCreate();
         }
 
         public Builder(TaskDefinitionUpdateWirelessGatewayTaskCreate defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loRaWAN = defaults.loRaWAN;
-    	      this.updateDataRole = defaults.updateDataRole;
-    	      this.updateDataSource = defaults.updateDataSource;
+            $ = new TaskDefinitionUpdateWirelessGatewayTaskCreate(Objects.requireNonNull(defaults));
         }
 
         public Builder loRaWAN(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN) {
-            this.loRaWAN = loRaWAN;
+            $.loRaWAN = loRaWAN;
             return this;
         }
+
         public Builder updateDataRole(@Nullable String updateDataRole) {
-            this.updateDataRole = updateDataRole;
+            $.updateDataRole = updateDataRole;
             return this;
         }
+
         public Builder updateDataSource(@Nullable String updateDataSource) {
-            this.updateDataSource = updateDataSource;
+            $.updateDataSource = updateDataSource;
             return this;
-        }        public TaskDefinitionUpdateWirelessGatewayTaskCreate build() {
-            return new TaskDefinitionUpdateWirelessGatewayTaskCreate(loRaWAN, updateDataRole, updateDataSource);
+        }
+
+        public TaskDefinitionUpdateWirelessGatewayTaskCreate build() {
+            return $;
         }
     }
+
 }

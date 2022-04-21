@@ -5,9 +5,9 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1alpha1.inputs.InstanceSpecArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class InstanceTemplateSpecArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<InstanceSpecArgs> spec;
+    private @Nullable Output<InstanceSpecArgs> spec;
 
-    public Output<InstanceSpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<InstanceSpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
-    public InstanceTemplateSpecArgs(@Nullable Output<InstanceSpecArgs> spec) {
-        this.spec = spec;
-    }
+    private InstanceTemplateSpecArgs() {}
 
-    private InstanceTemplateSpecArgs() {
-        this.spec = Codegen.empty();
+    private InstanceTemplateSpecArgs(InstanceTemplateSpecArgs $) {
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceTemplateSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceSpecArgs> spec;
+        private InstanceTemplateSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceTemplateSpecArgs();
         }
 
         public Builder(InstanceTemplateSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spec = defaults.spec;
+            $ = new InstanceTemplateSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder spec(@Nullable Output<InstanceSpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable InstanceSpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
-        }        public InstanceTemplateSpecArgs build() {
-            return new InstanceTemplateSpecArgs(spec);
+
+        public Builder spec(InstanceSpecArgs spec) {
+            return spec(Output.of(spec));
+        }
+
+        public InstanceTemplateSpecArgs build() {
+            return $;
         }
     }
+
 }

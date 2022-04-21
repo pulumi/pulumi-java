@@ -17,7 +17,7 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="triggerName", required=true)
-      private final String triggerName;
+    private String triggerName;
 
     public String triggerName() {
         return this.triggerName;
@@ -39,64 +39,59 @@ public final class ListWorkflowTriggerCallbackUrlArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="workflowName", required=true)
-      private final String workflowName;
+    private String workflowName;
 
     public String workflowName() {
         return this.workflowName;
     }
 
-    public ListWorkflowTriggerCallbackUrlArgs(
-        String resourceGroupName,
-        String triggerName,
-        String workflowName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.triggerName = Objects.requireNonNull(triggerName, "expected parameter 'triggerName' to be non-null");
-        this.workflowName = Objects.requireNonNull(workflowName, "expected parameter 'workflowName' to be non-null");
-    }
+    private ListWorkflowTriggerCallbackUrlArgs() {}
 
-    private ListWorkflowTriggerCallbackUrlArgs() {
-        this.resourceGroupName = null;
-        this.triggerName = null;
-        this.workflowName = null;
+    private ListWorkflowTriggerCallbackUrlArgs(ListWorkflowTriggerCallbackUrlArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.triggerName = $.triggerName;
+        this.workflowName = $.workflowName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListWorkflowTriggerCallbackUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String triggerName;
-        private String workflowName;
+        private ListWorkflowTriggerCallbackUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListWorkflowTriggerCallbackUrlArgs();
         }
 
         public Builder(ListWorkflowTriggerCallbackUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.triggerName = defaults.triggerName;
-    	      this.workflowName = defaults.workflowName;
+            $ = new ListWorkflowTriggerCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder triggerName(String triggerName) {
-            this.triggerName = Objects.requireNonNull(triggerName);
+            $.triggerName = triggerName;
             return this;
         }
+
         public Builder workflowName(String workflowName) {
-            this.workflowName = Objects.requireNonNull(workflowName);
+            $.workflowName = workflowName;
             return this;
-        }        public ListWorkflowTriggerCallbackUrlArgs build() {
-            return new ListWorkflowTriggerCallbackUrlArgs(resourceGroupName, triggerName, workflowName);
+        }
+
+        public ListWorkflowTriggerCallbackUrlArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.triggerName = Objects.requireNonNull($.triggerName, "expected parameter 'triggerName' to be non-null");
+            $.workflowName = Objects.requireNonNull($.workflowName, "expected parameter 'workflowName' to be non-null");
+            return $;
         }
     }
+
 }

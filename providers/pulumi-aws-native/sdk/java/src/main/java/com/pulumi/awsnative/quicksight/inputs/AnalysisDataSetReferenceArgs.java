@@ -5,7 +5,6 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AnalysisDataSetReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataSetArn", required=true)
-      private final Output<String> dataSetArn;
+    private Output<String> dataSetArn;
 
     public Output<String> dataSetArn() {
         return this.dataSetArn;
@@ -34,63 +33,60 @@ public final class AnalysisDataSetReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataSetPlaceholder", required=true)
-      private final Output<String> dataSetPlaceholder;
+    private Output<String> dataSetPlaceholder;
 
     public Output<String> dataSetPlaceholder() {
         return this.dataSetPlaceholder;
     }
 
-    public AnalysisDataSetReferenceArgs(
-        Output<String> dataSetArn,
-        Output<String> dataSetPlaceholder) {
-        this.dataSetArn = Objects.requireNonNull(dataSetArn, "expected parameter 'dataSetArn' to be non-null");
-        this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder, "expected parameter 'dataSetPlaceholder' to be non-null");
-    }
+    private AnalysisDataSetReferenceArgs() {}
 
-    private AnalysisDataSetReferenceArgs() {
-        this.dataSetArn = Codegen.empty();
-        this.dataSetPlaceholder = Codegen.empty();
+    private AnalysisDataSetReferenceArgs(AnalysisDataSetReferenceArgs $) {
+        this.dataSetArn = $.dataSetArn;
+        this.dataSetPlaceholder = $.dataSetPlaceholder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalysisDataSetReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataSetArn;
-        private Output<String> dataSetPlaceholder;
+        private AnalysisDataSetReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalysisDataSetReferenceArgs();
         }
 
         public Builder(AnalysisDataSetReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSetArn = defaults.dataSetArn;
-    	      this.dataSetPlaceholder = defaults.dataSetPlaceholder;
+            $ = new AnalysisDataSetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSetArn(Output<String> dataSetArn) {
-            this.dataSetArn = Objects.requireNonNull(dataSetArn);
+            $.dataSetArn = dataSetArn;
             return this;
         }
+
         public Builder dataSetArn(String dataSetArn) {
-            this.dataSetArn = Output.of(Objects.requireNonNull(dataSetArn));
-            return this;
+            return dataSetArn(Output.of(dataSetArn));
         }
+
         public Builder dataSetPlaceholder(Output<String> dataSetPlaceholder) {
-            this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
+            $.dataSetPlaceholder = dataSetPlaceholder;
             return this;
         }
+
         public Builder dataSetPlaceholder(String dataSetPlaceholder) {
-            this.dataSetPlaceholder = Output.of(Objects.requireNonNull(dataSetPlaceholder));
-            return this;
-        }        public AnalysisDataSetReferenceArgs build() {
-            return new AnalysisDataSetReferenceArgs(dataSetArn, dataSetPlaceholder);
+            return dataSetPlaceholder(Output.of(dataSetPlaceholder));
+        }
+
+        public AnalysisDataSetReferenceArgs build() {
+            $.dataSetArn = Objects.requireNonNull($.dataSetArn, "expected parameter 'dataSetArn' to be non-null");
+            $.dataSetPlaceholder = Objects.requireNonNull($.dataSetPlaceholder, "expected parameter 'dataSetPlaceholder' to be non-null");
+            return $;
         }
     }
+
 }

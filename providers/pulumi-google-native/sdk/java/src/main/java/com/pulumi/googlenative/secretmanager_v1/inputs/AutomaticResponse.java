@@ -21,45 +21,45 @@ public final class AutomaticResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customerManagedEncryption", required=true)
-      private final CustomerManagedEncryptionResponse customerManagedEncryption;
+    private CustomerManagedEncryptionResponse customerManagedEncryption;
 
     public CustomerManagedEncryptionResponse customerManagedEncryption() {
         return this.customerManagedEncryption;
     }
 
-    public AutomaticResponse(CustomerManagedEncryptionResponse customerManagedEncryption) {
-        this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption, "expected parameter 'customerManagedEncryption' to be non-null");
-    }
+    private AutomaticResponse() {}
 
-    private AutomaticResponse() {
-        this.customerManagedEncryption = null;
+    private AutomaticResponse(AutomaticResponse $) {
+        this.customerManagedEncryption = $.customerManagedEncryption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomaticResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CustomerManagedEncryptionResponse customerManagedEncryption;
+        private AutomaticResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomaticResponse();
         }
 
         public Builder(AutomaticResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerManagedEncryption = defaults.customerManagedEncryption;
+            $ = new AutomaticResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
-            this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
+            $.customerManagedEncryption = customerManagedEncryption;
             return this;
-        }        public AutomaticResponse build() {
-            return new AutomaticResponse(customerManagedEncryption);
+        }
+
+        public AutomaticResponse build() {
+            $.customerManagedEncryption = Objects.requireNonNull($.customerManagedEncryption, "expected parameter 'customerManagedEncryption' to be non-null");
+            return $;
         }
     }
+
 }

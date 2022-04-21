@@ -6,9 +6,9 @@ package com.pulumi.aws.s3control;
 import com.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
     public static final MultiRegionAccessPointPolicyArgs Empty = new MultiRegionAccessPointPolicyArgs();
 
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -28,63 +28,59 @@ public final class MultiRegionAccessPointPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="details", required=true)
-      private final Output<MultiRegionAccessPointPolicyDetailsArgs> details;
+    private Output<MultiRegionAccessPointPolicyDetailsArgs> details;
 
     public Output<MultiRegionAccessPointPolicyDetailsArgs> details() {
         return this.details;
     }
 
-    public MultiRegionAccessPointPolicyArgs(
-        @Nullable Output<String> accountId,
-        Output<MultiRegionAccessPointPolicyDetailsArgs> details) {
-        this.accountId = accountId;
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-    }
+    private MultiRegionAccessPointPolicyArgs() {}
 
-    private MultiRegionAccessPointPolicyArgs() {
-        this.accountId = Codegen.empty();
-        this.details = Codegen.empty();
+    private MultiRegionAccessPointPolicyArgs(MultiRegionAccessPointPolicyArgs $) {
+        this.accountId = $.accountId;
+        this.details = $.details;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiRegionAccessPointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private Output<MultiRegionAccessPointPolicyDetailsArgs> details;
+        private MultiRegionAccessPointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiRegionAccessPointPolicyArgs();
         }
 
         public Builder(MultiRegionAccessPointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.details = defaults.details;
+            $ = new MultiRegionAccessPointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder details(Output<MultiRegionAccessPointPolicyDetailsArgs> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder details(MultiRegionAccessPointPolicyDetailsArgs details) {
-            this.details = Output.of(Objects.requireNonNull(details));
-            return this;
-        }        public MultiRegionAccessPointPolicyArgs build() {
-            return new MultiRegionAccessPointPolicyArgs(accountId, details);
+            return details(Output.of(details));
+        }
+
+        public MultiRegionAccessPointPolicyArgs build() {
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            return $;
         }
     }
+
 }

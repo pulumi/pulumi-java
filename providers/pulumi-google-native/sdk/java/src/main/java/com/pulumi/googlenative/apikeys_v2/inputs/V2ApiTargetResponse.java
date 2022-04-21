@@ -22,7 +22,7 @@ public final class V2ApiTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="methods", required=true)
-      private final List<String> methods;
+    private List<String> methods;
 
     public List<String> methods() {
         return this.methods;
@@ -33,58 +33,56 @@ public final class V2ApiTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public V2ApiTargetResponse(
-        List<String> methods,
-        String service) {
-        this.methods = Objects.requireNonNull(methods, "expected parameter 'methods' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private V2ApiTargetResponse() {}
 
-    private V2ApiTargetResponse() {
-        this.methods = List.of();
-        this.service = null;
+    private V2ApiTargetResponse(V2ApiTargetResponse $) {
+        this.methods = $.methods;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2ApiTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> methods;
-        private String service;
+        private V2ApiTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2ApiTargetResponse();
         }
 
         public Builder(V2ApiTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methods = defaults.methods;
-    	      this.service = defaults.service;
+            $ = new V2ApiTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder methods(List<String> methods) {
-            this.methods = Objects.requireNonNull(methods);
+            $.methods = methods;
             return this;
         }
+
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public V2ApiTargetResponse build() {
-            return new V2ApiTargetResponse(methods, service);
+        }
+
+        public V2ApiTargetResponse build() {
+            $.methods = Objects.requireNonNull($.methods, "expected parameter 'methods' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

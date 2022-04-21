@@ -15,45 +15,44 @@ public final class GetProjectArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetProjectArgs Empty = new GetProjectArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetProjectArgs(@Nullable String project) {
-        this.project = project;
-    }
+    private GetProjectArgs() {}
 
-    private GetProjectArgs() {
-        this.project = null;
+    private GetProjectArgs(GetProjectArgs $) {
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
+        private GetProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProjectArgs();
         }
 
         public Builder(GetProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
+            $ = new GetProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetProjectArgs build() {
-            return new GetProjectArgs(project);
+        }
+
+        public GetProjectArgs build() {
+            return $;
         }
     }
+
 }

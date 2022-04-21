@@ -5,10 +5,10 @@ package com.pulumi.azurenative.operationalinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyRsaSize")
-      private final @Nullable Output<Integer> keyRsaSize;
+    private @Nullable Output<Integer> keyRsaSize;
 
-    public Output<Integer> keyRsaSize() {
-        return this.keyRsaSize == null ? Codegen.empty() : this.keyRsaSize;
+    public Optional<Output<Integer>> keyRsaSize() {
+        return Optional.ofNullable(this.keyRsaSize);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyVaultUri")
-      private final @Nullable Output<String> keyVaultUri;
+    private @Nullable Output<String> keyVaultUri;
 
-    public Output<String> keyVaultUri() {
-        return this.keyVaultUri == null ? Codegen.empty() : this.keyVaultUri;
+    public Optional<Output<String>> keyVaultUri() {
+        return Optional.ofNullable(this.keyVaultUri);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class KeyVaultPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyVersion")
-      private final @Nullable Output<String> keyVersion;
+    private @Nullable Output<String> keyVersion;
 
-    public Output<String> keyVersion() {
-        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
+    public Optional<Output<String>> keyVersion() {
+        return Optional.ofNullable(this.keyVersion);
     }
 
-    public KeyVaultPropertiesArgs(
-        @Nullable Output<String> keyName,
-        @Nullable Output<Integer> keyRsaSize,
-        @Nullable Output<String> keyVaultUri,
-        @Nullable Output<String> keyVersion) {
-        this.keyName = keyName;
-        this.keyRsaSize = keyRsaSize;
-        this.keyVaultUri = keyVaultUri;
-        this.keyVersion = keyVersion;
-    }
+    private KeyVaultPropertiesArgs() {}
 
-    private KeyVaultPropertiesArgs() {
-        this.keyName = Codegen.empty();
-        this.keyRsaSize = Codegen.empty();
-        this.keyVaultUri = Codegen.empty();
-        this.keyVersion = Codegen.empty();
+    private KeyVaultPropertiesArgs(KeyVaultPropertiesArgs $) {
+        this.keyName = $.keyName;
+        this.keyRsaSize = $.keyRsaSize;
+        this.keyVaultUri = $.keyVaultUri;
+        this.keyVersion = $.keyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyName;
-        private @Nullable Output<Integer> keyRsaSize;
-        private @Nullable Output<String> keyVaultUri;
-        private @Nullable Output<String> keyVersion;
+        private KeyVaultPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultPropertiesArgs();
         }
 
         public Builder(KeyVaultPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.keyRsaSize = defaults.keyRsaSize;
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.keyVersion = defaults.keyVersion;
+            $ = new KeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder keyRsaSize(@Nullable Output<Integer> keyRsaSize) {
-            this.keyRsaSize = keyRsaSize;
+            $.keyRsaSize = keyRsaSize;
             return this;
         }
-        public Builder keyRsaSize(@Nullable Integer keyRsaSize) {
-            this.keyRsaSize = Codegen.ofNullable(keyRsaSize);
-            return this;
+
+        public Builder keyRsaSize(Integer keyRsaSize) {
+            return keyRsaSize(Output.of(keyRsaSize));
         }
+
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
-            this.keyVaultUri = keyVaultUri;
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
-        public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = Codegen.ofNullable(keyVaultUri);
-            return this;
+
+        public Builder keyVaultUri(String keyVaultUri) {
+            return keyVaultUri(Output.of(keyVaultUri));
         }
+
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
-            this.keyVersion = keyVersion;
+            $.keyVersion = keyVersion;
             return this;
         }
-        public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Codegen.ofNullable(keyVersion);
-            return this;
-        }        public KeyVaultPropertiesArgs build() {
-            return new KeyVaultPropertiesArgs(keyName, keyRsaSize, keyVaultUri, keyVersion);
+
+        public Builder keyVersion(String keyVersion) {
+            return keyVersion(Output.of(keyVersion));
+        }
+
+        public KeyVaultPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2EnvVarSourceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,10 +36,10 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="valueSource")
-      private final @Nullable Output<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource;
+    private @Nullable Output<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource;
 
-    public Output<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource() {
-        return this.valueSource == null ? Codegen.empty() : this.valueSource;
+    public Optional<Output<GoogleCloudRunOpV2EnvVarSourceArgs>> valueSource() {
+        return Optional.ofNullable(this.valueSource);
     }
 
-    public GoogleCloudRunOpV2EnvVarArgs(
-        Output<String> name,
-        @Nullable Output<String> value,
-        @Nullable Output<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = value;
-        this.valueSource = valueSource;
-    }
+    private GoogleCloudRunOpV2EnvVarArgs() {}
 
-    private GoogleCloudRunOpV2EnvVarArgs() {
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
-        this.valueSource = Codegen.empty();
+    private GoogleCloudRunOpV2EnvVarArgs(GoogleCloudRunOpV2EnvVarArgs $) {
+        this.name = $.name;
+        this.value = $.value;
+        this.valueSource = $.valueSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2EnvVarArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<String> value;
-        private @Nullable Output<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource;
+        private GoogleCloudRunOpV2EnvVarArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2EnvVarArgs();
         }
 
         public Builder(GoogleCloudRunOpV2EnvVarArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
-    	      this.valueSource = defaults.valueSource;
+            $ = new GoogleCloudRunOpV2EnvVarArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder valueSource(@Nullable Output<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource) {
-            this.valueSource = valueSource;
+            $.valueSource = valueSource;
             return this;
         }
-        public Builder valueSource(@Nullable GoogleCloudRunOpV2EnvVarSourceArgs valueSource) {
-            this.valueSource = Codegen.ofNullable(valueSource);
-            return this;
-        }        public GoogleCloudRunOpV2EnvVarArgs build() {
-            return new GoogleCloudRunOpV2EnvVarArgs(name, value, valueSource);
+
+        public Builder valueSource(GoogleCloudRunOpV2EnvVarSourceArgs valueSource) {
+            return valueSource(Output.of(valueSource));
+        }
+
+        public GoogleCloudRunOpV2EnvVarArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

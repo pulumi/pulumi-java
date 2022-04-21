@@ -24,10 +24,10 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="maxPercentUnhealthyPartitionsPerService")
-      private final @Nullable Integer maxPercentUnhealthyPartitionsPerService;
+    private @Nullable Integer maxPercentUnhealthyPartitionsPerService;
 
     public Optional<Integer> maxPercentUnhealthyPartitionsPerService() {
-        return this.maxPercentUnhealthyPartitionsPerService == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyPartitionsPerService);
+        return Optional.ofNullable(this.maxPercentUnhealthyPartitionsPerService);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="maxPercentUnhealthyReplicasPerPartition")
-      private final @Nullable Integer maxPercentUnhealthyReplicasPerPartition;
+    private @Nullable Integer maxPercentUnhealthyReplicasPerPartition;
 
     public Optional<Integer> maxPercentUnhealthyReplicasPerPartition() {
-        return this.maxPercentUnhealthyReplicasPerPartition == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyReplicasPerPartition);
+        return Optional.ofNullable(this.maxPercentUnhealthyReplicasPerPartition);
     }
 
     /**
@@ -46,64 +46,59 @@ public final class ArmServiceTypeHealthPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="maxPercentUnhealthyServices")
-      private final @Nullable Integer maxPercentUnhealthyServices;
+    private @Nullable Integer maxPercentUnhealthyServices;
 
     public Optional<Integer> maxPercentUnhealthyServices() {
-        return this.maxPercentUnhealthyServices == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyServices);
+        return Optional.ofNullable(this.maxPercentUnhealthyServices);
     }
 
-    public ArmServiceTypeHealthPolicyResponse(
-        @Nullable Integer maxPercentUnhealthyPartitionsPerService,
-        @Nullable Integer maxPercentUnhealthyReplicasPerPartition,
-        @Nullable Integer maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyPartitionsPerService = Codegen.integerProp("maxPercentUnhealthyPartitionsPerService").arg(maxPercentUnhealthyPartitionsPerService).def(0).getNullable();
-        this.maxPercentUnhealthyReplicasPerPartition = Codegen.integerProp("maxPercentUnhealthyReplicasPerPartition").arg(maxPercentUnhealthyReplicasPerPartition).def(0).getNullable();
-        this.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").arg(maxPercentUnhealthyServices).def(0).getNullable();
-    }
+    private ArmServiceTypeHealthPolicyResponse() {}
 
-    private ArmServiceTypeHealthPolicyResponse() {
-        this.maxPercentUnhealthyPartitionsPerService = null;
-        this.maxPercentUnhealthyReplicasPerPartition = null;
-        this.maxPercentUnhealthyServices = null;
+    private ArmServiceTypeHealthPolicyResponse(ArmServiceTypeHealthPolicyResponse $) {
+        this.maxPercentUnhealthyPartitionsPerService = $.maxPercentUnhealthyPartitionsPerService;
+        this.maxPercentUnhealthyReplicasPerPartition = $.maxPercentUnhealthyReplicasPerPartition;
+        this.maxPercentUnhealthyServices = $.maxPercentUnhealthyServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArmServiceTypeHealthPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxPercentUnhealthyPartitionsPerService;
-        private @Nullable Integer maxPercentUnhealthyReplicasPerPartition;
-        private @Nullable Integer maxPercentUnhealthyServices;
+        private ArmServiceTypeHealthPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArmServiceTypeHealthPolicyResponse();
         }
 
         public Builder(ArmServiceTypeHealthPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPercentUnhealthyPartitionsPerService = defaults.maxPercentUnhealthyPartitionsPerService;
-    	      this.maxPercentUnhealthyReplicasPerPartition = defaults.maxPercentUnhealthyReplicasPerPartition;
-    	      this.maxPercentUnhealthyServices = defaults.maxPercentUnhealthyServices;
+            $ = new ArmServiceTypeHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPercentUnhealthyPartitionsPerService(@Nullable Integer maxPercentUnhealthyPartitionsPerService) {
-            this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService;
+            $.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService;
             return this;
         }
+
         public Builder maxPercentUnhealthyReplicasPerPartition(@Nullable Integer maxPercentUnhealthyReplicasPerPartition) {
-            this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition;
+            $.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition;
             return this;
         }
+
         public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
-            this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
+            $.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
-        }        public ArmServiceTypeHealthPolicyResponse build() {
-            return new ArmServiceTypeHealthPolicyResponse(maxPercentUnhealthyPartitionsPerService, maxPercentUnhealthyReplicasPerPartition, maxPercentUnhealthyServices);
+        }
+
+        public ArmServiceTypeHealthPolicyResponse build() {
+            $.maxPercentUnhealthyPartitionsPerService = Codegen.integerProp("maxPercentUnhealthyPartitionsPerService").arg($.maxPercentUnhealthyPartitionsPerService).def(0).getNullable();
+            $.maxPercentUnhealthyReplicasPerPartition = Codegen.integerProp("maxPercentUnhealthyReplicasPerPartition").arg($.maxPercentUnhealthyReplicasPerPartition).def(0).getNullable();
+            $.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").arg($.maxPercentUnhealthyServices).def(0).getNullable();
+            return $;
         }
     }
+
 }

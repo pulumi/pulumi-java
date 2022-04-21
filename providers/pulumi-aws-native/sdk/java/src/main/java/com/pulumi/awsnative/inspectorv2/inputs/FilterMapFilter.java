@@ -16,78 +16,71 @@ public final class FilterMapFilter extends com.pulumi.resources.InvokeArgs {
     public static final FilterMapFilter Empty = new FilterMapFilter();
 
     @Import(name="comparison", required=true)
-      private final FilterMapComparison comparison;
+    private FilterMapComparison comparison;
 
     public FilterMapComparison comparison() {
         return this.comparison;
     }
 
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public FilterMapFilter(
-        FilterMapComparison comparison,
-        @Nullable String key,
-        @Nullable String value) {
-        this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
-        this.key = key;
-        this.value = value;
-    }
+    private FilterMapFilter() {}
 
-    private FilterMapFilter() {
-        this.comparison = null;
-        this.key = null;
-        this.value = null;
+    private FilterMapFilter(FilterMapFilter $) {
+        this.comparison = $.comparison;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterMapFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FilterMapComparison comparison;
-        private @Nullable String key;
-        private @Nullable String value;
+        private FilterMapFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterMapFilter();
         }
 
         public Builder(FilterMapFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparison = defaults.comparison;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new FilterMapFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder comparison(FilterMapComparison comparison) {
-            this.comparison = Objects.requireNonNull(comparison);
+            $.comparison = comparison;
             return this;
         }
+
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public FilterMapFilter build() {
-            return new FilterMapFilter(comparison, key, value);
+        }
+
+        public FilterMapFilter build() {
+            $.comparison = Objects.requireNonNull($.comparison, "expected parameter 'comparison' to be non-null");
+            return $;
         }
     }
+
 }

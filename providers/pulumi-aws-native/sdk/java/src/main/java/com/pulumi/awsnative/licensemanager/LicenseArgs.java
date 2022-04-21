@@ -10,10 +10,10 @@ import com.pulumi.awsnative.licensemanager.inputs.LicenseMetadataArgs;
 import com.pulumi.awsnative.licensemanager.inputs.LicenseValidityDateFormatArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,21 +26,21 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="beneficiary")
-      private final @Nullable Output<String> beneficiary;
+    private @Nullable Output<String> beneficiary;
 
-    public Output<String> beneficiary() {
-        return this.beneficiary == null ? Codegen.empty() : this.beneficiary;
+    public Optional<Output<String>> beneficiary() {
+        return Optional.ofNullable(this.beneficiary);
     }
 
     @Import(name="consumptionConfiguration", required=true)
-      private final Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration;
+    private Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration;
 
     public Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration() {
         return this.consumptionConfiguration;
     }
 
     @Import(name="entitlements", required=true)
-      private final Output<List<LicenseEntitlementArgs>> entitlements;
+    private Output<List<LicenseEntitlementArgs>> entitlements;
 
     public Output<List<LicenseEntitlementArgs>> entitlements() {
         return this.entitlements;
@@ -51,24 +51,24 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="homeRegion", required=true)
-      private final Output<String> homeRegion;
+    private Output<String> homeRegion;
 
     public Output<String> homeRegion() {
         return this.homeRegion;
     }
 
     @Import(name="issuer", required=true)
-      private final Output<LicenseIssuerDataArgs> issuer;
+    private Output<LicenseIssuerDataArgs> issuer;
 
     public Output<LicenseIssuerDataArgs> issuer() {
         return this.issuer;
     }
 
     @Import(name="licenseMetadata")
-      private final @Nullable Output<List<LicenseMetadataArgs>> licenseMetadata;
+    private @Nullable Output<List<LicenseMetadataArgs>> licenseMetadata;
 
-    public Output<List<LicenseMetadataArgs>> licenseMetadata() {
-        return this.licenseMetadata == null ? Codegen.empty() : this.licenseMetadata;
+    public Optional<Output<List<LicenseMetadataArgs>>> licenseMetadata() {
+        return Optional.ofNullable(this.licenseMetadata);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenseName")
-      private final @Nullable Output<String> licenseName;
+    private @Nullable Output<String> licenseName;
 
-    public Output<String> licenseName() {
-        return this.licenseName == null ? Codegen.empty() : this.licenseName;
+    public Optional<Output<String>> licenseName() {
+        return Optional.ofNullable(this.licenseName);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productName", required=true)
-      private final Output<String> productName;
+    private Output<String> productName;
 
     public Output<String> productName() {
         return this.productName;
@@ -98,200 +98,176 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productSKU")
-      private final @Nullable Output<String> productSKU;
+    private @Nullable Output<String> productSKU;
 
-    public Output<String> productSKU() {
-        return this.productSKU == null ? Codegen.empty() : this.productSKU;
+    public Optional<Output<String>> productSKU() {
+        return Optional.ofNullable(this.productSKU);
     }
 
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     @Import(name="validity", required=true)
-      private final Output<LicenseValidityDateFormatArgs> validity;
+    private Output<LicenseValidityDateFormatArgs> validity;
 
     public Output<LicenseValidityDateFormatArgs> validity() {
         return this.validity;
     }
 
-    public LicenseArgs(
-        @Nullable Output<String> beneficiary,
-        Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration,
-        Output<List<LicenseEntitlementArgs>> entitlements,
-        Output<String> homeRegion,
-        Output<LicenseIssuerDataArgs> issuer,
-        @Nullable Output<List<LicenseMetadataArgs>> licenseMetadata,
-        @Nullable Output<String> licenseName,
-        Output<String> productName,
-        @Nullable Output<String> productSKU,
-        @Nullable Output<String> status,
-        Output<LicenseValidityDateFormatArgs> validity) {
-        this.beneficiary = beneficiary;
-        this.consumptionConfiguration = Objects.requireNonNull(consumptionConfiguration, "expected parameter 'consumptionConfiguration' to be non-null");
-        this.entitlements = Objects.requireNonNull(entitlements, "expected parameter 'entitlements' to be non-null");
-        this.homeRegion = Objects.requireNonNull(homeRegion, "expected parameter 'homeRegion' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.licenseMetadata = licenseMetadata;
-        this.licenseName = licenseName;
-        this.productName = Objects.requireNonNull(productName, "expected parameter 'productName' to be non-null");
-        this.productSKU = productSKU;
-        this.status = status;
-        this.validity = Objects.requireNonNull(validity, "expected parameter 'validity' to be non-null");
-    }
+    private LicenseArgs() {}
 
-    private LicenseArgs() {
-        this.beneficiary = Codegen.empty();
-        this.consumptionConfiguration = Codegen.empty();
-        this.entitlements = Codegen.empty();
-        this.homeRegion = Codegen.empty();
-        this.issuer = Codegen.empty();
-        this.licenseMetadata = Codegen.empty();
-        this.licenseName = Codegen.empty();
-        this.productName = Codegen.empty();
-        this.productSKU = Codegen.empty();
-        this.status = Codegen.empty();
-        this.validity = Codegen.empty();
+    private LicenseArgs(LicenseArgs $) {
+        this.beneficiary = $.beneficiary;
+        this.consumptionConfiguration = $.consumptionConfiguration;
+        this.entitlements = $.entitlements;
+        this.homeRegion = $.homeRegion;
+        this.issuer = $.issuer;
+        this.licenseMetadata = $.licenseMetadata;
+        this.licenseName = $.licenseName;
+        this.productName = $.productName;
+        this.productSKU = $.productSKU;
+        this.status = $.status;
+        this.validity = $.validity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> beneficiary;
-        private Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration;
-        private Output<List<LicenseEntitlementArgs>> entitlements;
-        private Output<String> homeRegion;
-        private Output<LicenseIssuerDataArgs> issuer;
-        private @Nullable Output<List<LicenseMetadataArgs>> licenseMetadata;
-        private @Nullable Output<String> licenseName;
-        private Output<String> productName;
-        private @Nullable Output<String> productSKU;
-        private @Nullable Output<String> status;
-        private Output<LicenseValidityDateFormatArgs> validity;
+        private LicenseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseArgs();
         }
 
         public Builder(LicenseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.beneficiary = defaults.beneficiary;
-    	      this.consumptionConfiguration = defaults.consumptionConfiguration;
-    	      this.entitlements = defaults.entitlements;
-    	      this.homeRegion = defaults.homeRegion;
-    	      this.issuer = defaults.issuer;
-    	      this.licenseMetadata = defaults.licenseMetadata;
-    	      this.licenseName = defaults.licenseName;
-    	      this.productName = defaults.productName;
-    	      this.productSKU = defaults.productSKU;
-    	      this.status = defaults.status;
-    	      this.validity = defaults.validity;
+            $ = new LicenseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder beneficiary(@Nullable Output<String> beneficiary) {
-            this.beneficiary = beneficiary;
+            $.beneficiary = beneficiary;
             return this;
         }
-        public Builder beneficiary(@Nullable String beneficiary) {
-            this.beneficiary = Codegen.ofNullable(beneficiary);
-            return this;
+
+        public Builder beneficiary(String beneficiary) {
+            return beneficiary(Output.of(beneficiary));
         }
+
         public Builder consumptionConfiguration(Output<LicenseConsumptionConfigurationArgs> consumptionConfiguration) {
-            this.consumptionConfiguration = Objects.requireNonNull(consumptionConfiguration);
+            $.consumptionConfiguration = consumptionConfiguration;
             return this;
         }
+
         public Builder consumptionConfiguration(LicenseConsumptionConfigurationArgs consumptionConfiguration) {
-            this.consumptionConfiguration = Output.of(Objects.requireNonNull(consumptionConfiguration));
-            return this;
+            return consumptionConfiguration(Output.of(consumptionConfiguration));
         }
+
         public Builder entitlements(Output<List<LicenseEntitlementArgs>> entitlements) {
-            this.entitlements = Objects.requireNonNull(entitlements);
+            $.entitlements = entitlements;
             return this;
         }
+
         public Builder entitlements(List<LicenseEntitlementArgs> entitlements) {
-            this.entitlements = Output.of(Objects.requireNonNull(entitlements));
-            return this;
+            return entitlements(Output.of(entitlements));
         }
+
         public Builder entitlements(LicenseEntitlementArgs... entitlements) {
             return entitlements(List.of(entitlements));
         }
+
         public Builder homeRegion(Output<String> homeRegion) {
-            this.homeRegion = Objects.requireNonNull(homeRegion);
+            $.homeRegion = homeRegion;
             return this;
         }
+
         public Builder homeRegion(String homeRegion) {
-            this.homeRegion = Output.of(Objects.requireNonNull(homeRegion));
-            return this;
+            return homeRegion(Output.of(homeRegion));
         }
+
         public Builder issuer(Output<LicenseIssuerDataArgs> issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder issuer(LicenseIssuerDataArgs issuer) {
-            this.issuer = Output.of(Objects.requireNonNull(issuer));
-            return this;
+            return issuer(Output.of(issuer));
         }
+
         public Builder licenseMetadata(@Nullable Output<List<LicenseMetadataArgs>> licenseMetadata) {
-            this.licenseMetadata = licenseMetadata;
+            $.licenseMetadata = licenseMetadata;
             return this;
         }
-        public Builder licenseMetadata(@Nullable List<LicenseMetadataArgs> licenseMetadata) {
-            this.licenseMetadata = Codegen.ofNullable(licenseMetadata);
-            return this;
+
+        public Builder licenseMetadata(List<LicenseMetadataArgs> licenseMetadata) {
+            return licenseMetadata(Output.of(licenseMetadata));
         }
+
         public Builder licenseMetadata(LicenseMetadataArgs... licenseMetadata) {
             return licenseMetadata(List.of(licenseMetadata));
         }
+
         public Builder licenseName(@Nullable Output<String> licenseName) {
-            this.licenseName = licenseName;
+            $.licenseName = licenseName;
             return this;
         }
-        public Builder licenseName(@Nullable String licenseName) {
-            this.licenseName = Codegen.ofNullable(licenseName);
-            return this;
+
+        public Builder licenseName(String licenseName) {
+            return licenseName(Output.of(licenseName));
         }
+
         public Builder productName(Output<String> productName) {
-            this.productName = Objects.requireNonNull(productName);
+            $.productName = productName;
             return this;
         }
+
         public Builder productName(String productName) {
-            this.productName = Output.of(Objects.requireNonNull(productName));
-            return this;
+            return productName(Output.of(productName));
         }
+
         public Builder productSKU(@Nullable Output<String> productSKU) {
-            this.productSKU = productSKU;
+            $.productSKU = productSKU;
             return this;
         }
-        public Builder productSKU(@Nullable String productSKU) {
-            this.productSKU = Codegen.ofNullable(productSKU);
-            return this;
+
+        public Builder productSKU(String productSKU) {
+            return productSKU(Output.of(productSKU));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder validity(Output<LicenseValidityDateFormatArgs> validity) {
-            this.validity = Objects.requireNonNull(validity);
+            $.validity = validity;
             return this;
         }
+
         public Builder validity(LicenseValidityDateFormatArgs validity) {
-            this.validity = Output.of(Objects.requireNonNull(validity));
-            return this;
-        }        public LicenseArgs build() {
-            return new LicenseArgs(beneficiary, consumptionConfiguration, entitlements, homeRegion, issuer, licenseMetadata, licenseName, productName, productSKU, status, validity);
+            return validity(Output.of(validity));
+        }
+
+        public LicenseArgs build() {
+            $.consumptionConfiguration = Objects.requireNonNull($.consumptionConfiguration, "expected parameter 'consumptionConfiguration' to be non-null");
+            $.entitlements = Objects.requireNonNull($.entitlements, "expected parameter 'entitlements' to be non-null");
+            $.homeRegion = Objects.requireNonNull($.homeRegion, "expected parameter 'homeRegion' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.productName = Objects.requireNonNull($.productName, "expected parameter 'productName' to be non-null");
+            $.validity = Objects.requireNonNull($.validity, "expected parameter 'validity' to be non-null");
+            return $;
         }
     }
+
 }

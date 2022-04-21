@@ -5,11 +5,11 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<Map<String,String>> description;
+    private @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<Map<String,String>>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<Map<String,String>> displayName;
+    private @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<Map<String,String>>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyPropertyNames", required=true)
-      private final Output<List<String>> keyPropertyNames;
+    private Output<List<String>> keyPropertyNames;
 
     public Output<List<String>> keyPropertyNames() {
         return this.keyPropertyNames;
@@ -59,92 +59,84 @@ public final class StrongIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="strongIdName", required=true)
-      private final Output<String> strongIdName;
+    private Output<String> strongIdName;
 
     public Output<String> strongIdName() {
         return this.strongIdName;
     }
 
-    public StrongIdArgs(
-        @Nullable Output<Map<String,String>> description,
-        @Nullable Output<Map<String,String>> displayName,
-        Output<List<String>> keyPropertyNames,
-        Output<String> strongIdName) {
-        this.description = description;
-        this.displayName = displayName;
-        this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames, "expected parameter 'keyPropertyNames' to be non-null");
-        this.strongIdName = Objects.requireNonNull(strongIdName, "expected parameter 'strongIdName' to be non-null");
-    }
+    private StrongIdArgs() {}
 
-    private StrongIdArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.keyPropertyNames = Codegen.empty();
-        this.strongIdName = Codegen.empty();
+    private StrongIdArgs(StrongIdArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.keyPropertyNames = $.keyPropertyNames;
+        this.strongIdName = $.strongIdName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StrongIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> description;
-        private @Nullable Output<Map<String,String>> displayName;
-        private Output<List<String>> keyPropertyNames;
-        private Output<String> strongIdName;
+        private StrongIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StrongIdArgs();
         }
 
         public Builder(StrongIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.keyPropertyNames = defaults.keyPropertyNames;
-    	      this.strongIdName = defaults.strongIdName;
+            $ = new StrongIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<Map<String,String>> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable Map<String,String> description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(Map<String,String> description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(Map<String,String> displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder keyPropertyNames(Output<List<String>> keyPropertyNames) {
-            this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames);
+            $.keyPropertyNames = keyPropertyNames;
             return this;
         }
+
         public Builder keyPropertyNames(List<String> keyPropertyNames) {
-            this.keyPropertyNames = Output.of(Objects.requireNonNull(keyPropertyNames));
-            return this;
+            return keyPropertyNames(Output.of(keyPropertyNames));
         }
+
         public Builder keyPropertyNames(String... keyPropertyNames) {
             return keyPropertyNames(List.of(keyPropertyNames));
         }
+
         public Builder strongIdName(Output<String> strongIdName) {
-            this.strongIdName = Objects.requireNonNull(strongIdName);
+            $.strongIdName = strongIdName;
             return this;
         }
+
         public Builder strongIdName(String strongIdName) {
-            this.strongIdName = Output.of(Objects.requireNonNull(strongIdName));
-            return this;
-        }        public StrongIdArgs build() {
-            return new StrongIdArgs(description, displayName, keyPropertyNames, strongIdName);
+            return strongIdName(Output.of(strongIdName));
+        }
+
+        public StrongIdArgs build() {
+            $.keyPropertyNames = Objects.requireNonNull($.keyPropertyNames, "expected parameter 'keyPropertyNames' to be non-null");
+            $.strongIdName = Objects.requireNonNull($.strongIdName, "expected parameter 'strongIdName' to be non-null");
+            return $;
         }
     }
+
 }

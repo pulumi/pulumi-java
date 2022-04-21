@@ -23,10 +23,10 @@ public final class ConnectorProvisionedCapacity extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="mcuCount")
-      private final @Nullable Integer mcuCount;
+    private @Nullable Integer mcuCount;
 
     public Optional<Integer> mcuCount() {
-        return this.mcuCount == null ? Optional.empty() : Optional.ofNullable(this.mcuCount);
+        return Optional.ofNullable(this.mcuCount);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class ConnectorProvisionedCapacity extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="workerCount", required=true)
-      private final Integer workerCount;
+    private Integer workerCount;
 
     public Integer workerCount() {
         return this.workerCount;
     }
 
-    public ConnectorProvisionedCapacity(
-        @Nullable Integer mcuCount,
-        Integer workerCount) {
-        this.mcuCount = mcuCount;
-        this.workerCount = Objects.requireNonNull(workerCount, "expected parameter 'workerCount' to be non-null");
-    }
+    private ConnectorProvisionedCapacity() {}
 
-    private ConnectorProvisionedCapacity() {
-        this.mcuCount = null;
-        this.workerCount = null;
+    private ConnectorProvisionedCapacity(ConnectorProvisionedCapacity $) {
+        this.mcuCount = $.mcuCount;
+        this.workerCount = $.workerCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProvisionedCapacity defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer mcuCount;
-        private Integer workerCount;
+        private ConnectorProvisionedCapacity $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProvisionedCapacity();
         }
 
         public Builder(ConnectorProvisionedCapacity defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mcuCount = defaults.mcuCount;
-    	      this.workerCount = defaults.workerCount;
+            $ = new ConnectorProvisionedCapacity(Objects.requireNonNull(defaults));
         }
 
         public Builder mcuCount(@Nullable Integer mcuCount) {
-            this.mcuCount = mcuCount;
+            $.mcuCount = mcuCount;
             return this;
         }
+
         public Builder workerCount(Integer workerCount) {
-            this.workerCount = Objects.requireNonNull(workerCount);
+            $.workerCount = workerCount;
             return this;
-        }        public ConnectorProvisionedCapacity build() {
-            return new ConnectorProvisionedCapacity(mcuCount, workerCount);
+        }
+
+        public ConnectorProvisionedCapacity build() {
+            $.workerCount = Objects.requireNonNull($.workerCount, "expected parameter 'workerCount' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,8 +8,8 @@ import com.pulumi.azurenative.storage.inputs.ManagementPolicySnapShotArgs;
 import com.pulumi.azurenative.storage.inputs.ManagementPolicyVersionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ManagementPolicyActionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="baseBlob")
-      private final @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob;
+    private @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob;
 
-    public Output<ManagementPolicyBaseBlobArgs> baseBlob() {
-        return this.baseBlob == null ? Codegen.empty() : this.baseBlob;
+    public Optional<Output<ManagementPolicyBaseBlobArgs>> baseBlob() {
+        return Optional.ofNullable(this.baseBlob);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ManagementPolicyActionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable Output<ManagementPolicySnapShotArgs> snapshot;
+    private @Nullable Output<ManagementPolicySnapShotArgs> snapshot;
 
-    public Output<ManagementPolicySnapShotArgs> snapshot() {
-        return this.snapshot == null ? Codegen.empty() : this.snapshot;
+    public Optional<Output<ManagementPolicySnapShotArgs>> snapshot() {
+        return Optional.ofNullable(this.snapshot);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ManagementPolicyActionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<ManagementPolicyVersionArgs> version;
+    private @Nullable Output<ManagementPolicyVersionArgs> version;
 
-    public Output<ManagementPolicyVersionArgs> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<ManagementPolicyVersionArgs>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ManagementPolicyActionArgs(
-        @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob,
-        @Nullable Output<ManagementPolicySnapShotArgs> snapshot,
-        @Nullable Output<ManagementPolicyVersionArgs> version) {
-        this.baseBlob = baseBlob;
-        this.snapshot = snapshot;
-        this.version = version;
-    }
+    private ManagementPolicyActionArgs() {}
 
-    private ManagementPolicyActionArgs() {
-        this.baseBlob = Codegen.empty();
-        this.snapshot = Codegen.empty();
-        this.version = Codegen.empty();
+    private ManagementPolicyActionArgs(ManagementPolicyActionArgs $) {
+        this.baseBlob = $.baseBlob;
+        this.snapshot = $.snapshot;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob;
-        private @Nullable Output<ManagementPolicySnapShotArgs> snapshot;
-        private @Nullable Output<ManagementPolicyVersionArgs> version;
+        private ManagementPolicyActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyActionArgs();
         }
 
         public Builder(ManagementPolicyActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseBlob = defaults.baseBlob;
-    	      this.snapshot = defaults.snapshot;
-    	      this.version = defaults.version;
+            $ = new ManagementPolicyActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseBlob(@Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob) {
-            this.baseBlob = baseBlob;
+            $.baseBlob = baseBlob;
             return this;
         }
-        public Builder baseBlob(@Nullable ManagementPolicyBaseBlobArgs baseBlob) {
-            this.baseBlob = Codegen.ofNullable(baseBlob);
-            return this;
+
+        public Builder baseBlob(ManagementPolicyBaseBlobArgs baseBlob) {
+            return baseBlob(Output.of(baseBlob));
         }
+
         public Builder snapshot(@Nullable Output<ManagementPolicySnapShotArgs> snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
         }
-        public Builder snapshot(@Nullable ManagementPolicySnapShotArgs snapshot) {
-            this.snapshot = Codegen.ofNullable(snapshot);
-            return this;
+
+        public Builder snapshot(ManagementPolicySnapShotArgs snapshot) {
+            return snapshot(Output.of(snapshot));
         }
+
         public Builder version(@Nullable Output<ManagementPolicyVersionArgs> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable ManagementPolicyVersionArgs version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ManagementPolicyActionArgs build() {
-            return new ManagementPolicyActionArgs(baseBlob, snapshot, version);
+
+        public Builder version(ManagementPolicyVersionArgs version) {
+            return version(Output.of(version));
+        }
+
+        public ManagementPolicyActionArgs build() {
+            return $;
         }
     }
+
 }

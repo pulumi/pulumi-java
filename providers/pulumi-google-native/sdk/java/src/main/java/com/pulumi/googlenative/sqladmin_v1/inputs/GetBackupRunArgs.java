@@ -15,78 +15,72 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBackupRunArgs Empty = new GetBackupRunArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="instance", required=true)
-      private final String instance;
+    private String instance;
 
     public String instance() {
         return this.instance;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetBackupRunArgs(
-        String id,
-        String instance,
-        @Nullable String project) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.project = project;
-    }
+    private GetBackupRunArgs() {}
 
-    private GetBackupRunArgs() {
-        this.id = null;
-        this.instance = null;
-        this.project = null;
+    private GetBackupRunArgs(GetBackupRunArgs $) {
+        this.id = $.id;
+        this.instance = $.instance;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String instance;
-        private @Nullable String project;
+        private GetBackupRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupRunArgs();
         }
 
         public Builder(GetBackupRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.instance = defaults.instance;
-    	      this.project = defaults.project;
+            $ = new GetBackupRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetBackupRunArgs build() {
-            return new GetBackupRunArgs(id, instance, project);
+        }
+
+        public GetBackupRunArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            return $;
         }
     }
+
 }

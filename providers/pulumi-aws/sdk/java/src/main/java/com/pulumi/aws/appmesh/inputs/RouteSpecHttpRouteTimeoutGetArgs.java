@@ -7,8 +7,8 @@ import com.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteTimeoutIdleGetArgs;
 import com.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteTimeoutPerRequestGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RouteSpecHttpRouteTimeoutGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="idle")
-      private final @Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle;
+    private @Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle;
 
-    public Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle() {
-        return this.idle == null ? Codegen.empty() : this.idle;
+    public Optional<Output<RouteSpecHttpRouteTimeoutIdleGetArgs>> idle() {
+        return Optional.ofNullable(this.idle);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class RouteSpecHttpRouteTimeoutGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="perRequest")
-      private final @Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest;
+    private @Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest;
 
-    public Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest() {
-        return this.perRequest == null ? Codegen.empty() : this.perRequest;
+    public Optional<Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs>> perRequest() {
+        return Optional.ofNullable(this.perRequest);
     }
 
-    public RouteSpecHttpRouteTimeoutGetArgs(
-        @Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle,
-        @Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest) {
-        this.idle = idle;
-        this.perRequest = perRequest;
-    }
+    private RouteSpecHttpRouteTimeoutGetArgs() {}
 
-    private RouteSpecHttpRouteTimeoutGetArgs() {
-        this.idle = Codegen.empty();
-        this.perRequest = Codegen.empty();
+    private RouteSpecHttpRouteTimeoutGetArgs(RouteSpecHttpRouteTimeoutGetArgs $) {
+        this.idle = $.idle;
+        this.perRequest = $.perRequest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecHttpRouteTimeoutGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle;
-        private @Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest;
+        private RouteSpecHttpRouteTimeoutGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecHttpRouteTimeoutGetArgs();
         }
 
         public Builder(RouteSpecHttpRouteTimeoutGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idle = defaults.idle;
-    	      this.perRequest = defaults.perRequest;
+            $ = new RouteSpecHttpRouteTimeoutGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder idle(@Nullable Output<RouteSpecHttpRouteTimeoutIdleGetArgs> idle) {
-            this.idle = idle;
+            $.idle = idle;
             return this;
         }
-        public Builder idle(@Nullable RouteSpecHttpRouteTimeoutIdleGetArgs idle) {
-            this.idle = Codegen.ofNullable(idle);
-            return this;
+
+        public Builder idle(RouteSpecHttpRouteTimeoutIdleGetArgs idle) {
+            return idle(Output.of(idle));
         }
+
         public Builder perRequest(@Nullable Output<RouteSpecHttpRouteTimeoutPerRequestGetArgs> perRequest) {
-            this.perRequest = perRequest;
+            $.perRequest = perRequest;
             return this;
         }
-        public Builder perRequest(@Nullable RouteSpecHttpRouteTimeoutPerRequestGetArgs perRequest) {
-            this.perRequest = Codegen.ofNullable(perRequest);
-            return this;
-        }        public RouteSpecHttpRouteTimeoutGetArgs build() {
-            return new RouteSpecHttpRouteTimeoutGetArgs(idle, perRequest);
+
+        public Builder perRequest(RouteSpecHttpRouteTimeoutPerRequestGetArgs perRequest) {
+            return perRequest(Output.of(perRequest));
+        }
+
+        public RouteSpecHttpRouteTimeoutGetArgs build() {
+            return $;
         }
     }
+
 }

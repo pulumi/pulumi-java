@@ -5,9 +5,9 @@ package com.pulumi.aws.amplify;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class BackendEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -31,10 +31,10 @@ public final class BackendEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="deploymentArtifacts")
-      private final @Nullable Output<String> deploymentArtifacts;
+    private @Nullable Output<String> deploymentArtifacts;
 
-    public Output<String> deploymentArtifacts() {
-        return this.deploymentArtifacts == null ? Codegen.empty() : this.deploymentArtifacts;
+    public Optional<Output<String>> deploymentArtifacts() {
+        return Optional.ofNullable(this.deploymentArtifacts);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class BackendEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="environmentName", required=true)
-      private final Output<String> environmentName;
+    private Output<String> environmentName;
 
     public Output<String> environmentName() {
         return this.environmentName;
@@ -53,89 +53,80 @@ public final class BackendEnvironmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="stackName")
-      private final @Nullable Output<String> stackName;
+    private @Nullable Output<String> stackName;
 
-    public Output<String> stackName() {
-        return this.stackName == null ? Codegen.empty() : this.stackName;
+    public Optional<Output<String>> stackName() {
+        return Optional.ofNullable(this.stackName);
     }
 
-    public BackendEnvironmentArgs(
-        Output<String> appId,
-        @Nullable Output<String> deploymentArtifacts,
-        Output<String> environmentName,
-        @Nullable Output<String> stackName) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.deploymentArtifacts = deploymentArtifacts;
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.stackName = stackName;
-    }
+    private BackendEnvironmentArgs() {}
 
-    private BackendEnvironmentArgs() {
-        this.appId = Codegen.empty();
-        this.deploymentArtifacts = Codegen.empty();
-        this.environmentName = Codegen.empty();
-        this.stackName = Codegen.empty();
+    private BackendEnvironmentArgs(BackendEnvironmentArgs $) {
+        this.appId = $.appId;
+        this.deploymentArtifacts = $.deploymentArtifacts;
+        this.environmentName = $.environmentName;
+        this.stackName = $.stackName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private @Nullable Output<String> deploymentArtifacts;
-        private Output<String> environmentName;
-        private @Nullable Output<String> stackName;
+        private BackendEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendEnvironmentArgs();
         }
 
         public Builder(BackendEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.deploymentArtifacts = defaults.deploymentArtifacts;
-    	      this.environmentName = defaults.environmentName;
-    	      this.stackName = defaults.stackName;
+            $ = new BackendEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder deploymentArtifacts(@Nullable Output<String> deploymentArtifacts) {
-            this.deploymentArtifacts = deploymentArtifacts;
+            $.deploymentArtifacts = deploymentArtifacts;
             return this;
         }
-        public Builder deploymentArtifacts(@Nullable String deploymentArtifacts) {
-            this.deploymentArtifacts = Codegen.ofNullable(deploymentArtifacts);
-            return this;
+
+        public Builder deploymentArtifacts(String deploymentArtifacts) {
+            return deploymentArtifacts(Output.of(deploymentArtifacts));
         }
+
         public Builder environmentName(Output<String> environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder environmentName(String environmentName) {
-            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
-            return this;
+            return environmentName(Output.of(environmentName));
         }
+
         public Builder stackName(@Nullable Output<String> stackName) {
-            this.stackName = stackName;
+            $.stackName = stackName;
             return this;
         }
-        public Builder stackName(@Nullable String stackName) {
-            this.stackName = Codegen.ofNullable(stackName);
-            return this;
-        }        public BackendEnvironmentArgs build() {
-            return new BackendEnvironmentArgs(appId, deploymentArtifacts, environmentName, stackName);
+
+        public Builder stackName(String stackName) {
+            return stackName(Output.of(stackName));
+        }
+
+        public BackendEnvironmentArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            return $;
         }
     }
+
 }

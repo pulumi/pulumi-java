@@ -9,11 +9,11 @@ import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementGetArgs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleVisibilityConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class RuleGroupRuleGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="action", required=true)
-      private final Output<RuleGroupRuleActionGetArgs> action;
+    private Output<RuleGroupRuleActionGetArgs> action;
 
     public Output<RuleGroupRuleActionGetArgs> action() {
         return this.action;
@@ -37,7 +37,7 @@ public final class RuleGroupRuleGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -48,7 +48,7 @@ public final class RuleGroupRuleGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -59,10 +59,10 @@ public final class RuleGroupRuleGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ruleLabels")
-      private final @Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
+    private @Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
 
-    public Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels() {
-        return this.ruleLabels == null ? Codegen.empty() : this.ruleLabels;
+    public Optional<Output<List<RuleGroupRuleRuleLabelGetArgs>>> ruleLabels() {
+        return Optional.ofNullable(this.ruleLabels);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class RuleGroupRuleGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="statement", required=true)
-      private final Output<RuleGroupRuleStatementGetArgs> statement;
+    private Output<RuleGroupRuleStatementGetArgs> statement;
 
     public Output<RuleGroupRuleStatementGetArgs> statement() {
         return this.statement;
@@ -81,118 +81,107 @@ public final class RuleGroupRuleGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="visibilityConfig", required=true)
-      private final Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
+    private Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
 
     public Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 
-    public RuleGroupRuleGetArgs(
-        Output<RuleGroupRuleActionGetArgs> action,
-        Output<String> name,
-        Output<Integer> priority,
-        @Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels,
-        Output<RuleGroupRuleStatementGetArgs> statement,
-        Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.ruleLabels = ruleLabels;
-        this.statement = Objects.requireNonNull(statement, "expected parameter 'statement' to be non-null");
-        this.visibilityConfig = Objects.requireNonNull(visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
-    }
+    private RuleGroupRuleGetArgs() {}
 
-    private RuleGroupRuleGetArgs() {
-        this.action = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.ruleLabels = Codegen.empty();
-        this.statement = Codegen.empty();
-        this.visibilityConfig = Codegen.empty();
+    private RuleGroupRuleGetArgs(RuleGroupRuleGetArgs $) {
+        this.action = $.action;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.ruleLabels = $.ruleLabels;
+        this.statement = $.statement;
+        this.visibilityConfig = $.visibilityConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RuleGroupRuleActionGetArgs> action;
-        private Output<String> name;
-        private Output<Integer> priority;
-        private @Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
-        private Output<RuleGroupRuleStatementGetArgs> statement;
-        private Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig;
+        private RuleGroupRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGetArgs();
         }
 
         public Builder(RuleGroupRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.ruleLabels = defaults.ruleLabels;
-    	      this.statement = defaults.statement;
-    	      this.visibilityConfig = defaults.visibilityConfig;
+            $ = new RuleGroupRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<RuleGroupRuleActionGetArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(RuleGroupRuleActionGetArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder ruleLabels(@Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels) {
-            this.ruleLabels = ruleLabels;
+            $.ruleLabels = ruleLabels;
             return this;
         }
-        public Builder ruleLabels(@Nullable List<RuleGroupRuleRuleLabelGetArgs> ruleLabels) {
-            this.ruleLabels = Codegen.ofNullable(ruleLabels);
-            return this;
+
+        public Builder ruleLabels(List<RuleGroupRuleRuleLabelGetArgs> ruleLabels) {
+            return ruleLabels(Output.of(ruleLabels));
         }
+
         public Builder ruleLabels(RuleGroupRuleRuleLabelGetArgs... ruleLabels) {
             return ruleLabels(List.of(ruleLabels));
         }
+
         public Builder statement(Output<RuleGroupRuleStatementGetArgs> statement) {
-            this.statement = Objects.requireNonNull(statement);
+            $.statement = statement;
             return this;
         }
+
         public Builder statement(RuleGroupRuleStatementGetArgs statement) {
-            this.statement = Output.of(Objects.requireNonNull(statement));
-            return this;
+            return statement(Output.of(statement));
         }
+
         public Builder visibilityConfig(Output<RuleGroupRuleVisibilityConfigGetArgs> visibilityConfig) {
-            this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
+            $.visibilityConfig = visibilityConfig;
             return this;
         }
+
         public Builder visibilityConfig(RuleGroupRuleVisibilityConfigGetArgs visibilityConfig) {
-            this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
-            return this;
-        }        public RuleGroupRuleGetArgs build() {
-            return new RuleGroupRuleGetArgs(action, name, priority, ruleLabels, statement, visibilityConfig);
+            return visibilityConfig(Output.of(visibilityConfig));
+        }
+
+        public RuleGroupRuleGetArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.statement = Objects.requireNonNull($.statement, "expected parameter 'statement' to be non-null");
+            $.visibilityConfig = Objects.requireNonNull($.visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
+            return $;
         }
     }
+
 }

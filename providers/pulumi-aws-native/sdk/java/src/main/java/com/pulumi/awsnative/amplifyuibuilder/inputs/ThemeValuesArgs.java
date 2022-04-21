@@ -6,9 +6,9 @@ package com.pulumi.awsnative.amplifyuibuilder.inputs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValueArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ThemeValuesArgs extends com.pulumi.resources.ResourceArgs {
     public static final ThemeValuesArgs Empty = new ThemeValuesArgs();
 
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable Output<ThemeValueArgs> value;
+    private @Nullable Output<ThemeValueArgs> value;
 
-    public Output<ThemeValueArgs> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<ThemeValueArgs>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ThemeValuesArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<ThemeValueArgs> value) {
-        this.key = key;
-        this.value = value;
-    }
+    private ThemeValuesArgs() {}
 
-    private ThemeValuesArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private ThemeValuesArgs(ThemeValuesArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeValuesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<ThemeValueArgs> value;
+        private ThemeValuesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeValuesArgs();
         }
 
         public Builder(ThemeValuesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ThemeValuesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<ThemeValueArgs> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable ThemeValueArgs value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ThemeValuesArgs build() {
-            return new ThemeValuesArgs(key, value);
+
+        public Builder value(ThemeValueArgs value) {
+            return value(Output.of(value));
+        }
+
+        public ThemeValuesArgs build() {
+            return $;
         }
     }
+
 }

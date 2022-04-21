@@ -23,10 +23,10 @@ public final class ManagedInstancePairInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="partnerManagedInstanceId")
-      private final @Nullable String partnerManagedInstanceId;
+    private @Nullable String partnerManagedInstanceId;
 
     public Optional<String> partnerManagedInstanceId() {
-        return this.partnerManagedInstanceId == null ? Optional.empty() : Optional.ofNullable(this.partnerManagedInstanceId);
+        return Optional.ofNullable(this.partnerManagedInstanceId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ManagedInstancePairInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="primaryManagedInstanceId")
-      private final @Nullable String primaryManagedInstanceId;
+    private @Nullable String primaryManagedInstanceId;
 
     public Optional<String> primaryManagedInstanceId() {
-        return this.primaryManagedInstanceId == null ? Optional.empty() : Optional.ofNullable(this.primaryManagedInstanceId);
+        return Optional.ofNullable(this.primaryManagedInstanceId);
     }
 
-    public ManagedInstancePairInfoResponse(
-        @Nullable String partnerManagedInstanceId,
-        @Nullable String primaryManagedInstanceId) {
-        this.partnerManagedInstanceId = partnerManagedInstanceId;
-        this.primaryManagedInstanceId = primaryManagedInstanceId;
-    }
+    private ManagedInstancePairInfoResponse() {}
 
-    private ManagedInstancePairInfoResponse() {
-        this.partnerManagedInstanceId = null;
-        this.primaryManagedInstanceId = null;
+    private ManagedInstancePairInfoResponse(ManagedInstancePairInfoResponse $) {
+        this.partnerManagedInstanceId = $.partnerManagedInstanceId;
+        this.primaryManagedInstanceId = $.primaryManagedInstanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstancePairInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String partnerManagedInstanceId;
-        private @Nullable String primaryManagedInstanceId;
+        private ManagedInstancePairInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstancePairInfoResponse();
         }
 
         public Builder(ManagedInstancePairInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerManagedInstanceId = defaults.partnerManagedInstanceId;
-    	      this.primaryManagedInstanceId = defaults.primaryManagedInstanceId;
+            $ = new ManagedInstancePairInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
-            this.partnerManagedInstanceId = partnerManagedInstanceId;
+            $.partnerManagedInstanceId = partnerManagedInstanceId;
             return this;
         }
+
         public Builder primaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
-            this.primaryManagedInstanceId = primaryManagedInstanceId;
+            $.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;
-        }        public ManagedInstancePairInfoResponse build() {
-            return new ManagedInstancePairInfoResponse(partnerManagedInstanceId, primaryManagedInstanceId);
+        }
+
+        public ManagedInstancePairInfoResponse build() {
+            return $;
         }
     }
+
 }

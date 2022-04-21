@@ -5,7 +5,6 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class AutoStorageBasePropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="storageAccountId", required=true)
-      private final Output<String> storageAccountId;
+    private Output<String> storageAccountId;
 
     public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
 
-    public AutoStorageBasePropertiesArgs(Output<String> storageAccountId) {
-        this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
-    }
+    private AutoStorageBasePropertiesArgs() {}
 
-    private AutoStorageBasePropertiesArgs() {
-        this.storageAccountId = Codegen.empty();
+    private AutoStorageBasePropertiesArgs(AutoStorageBasePropertiesArgs $) {
+        this.storageAccountId = $.storageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoStorageBasePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> storageAccountId;
+        private AutoStorageBasePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoStorageBasePropertiesArgs();
         }
 
         public Builder(AutoStorageBasePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageAccountId = defaults.storageAccountId;
+            $ = new AutoStorageBasePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder storageAccountId(Output<String> storageAccountId) {
-            this.storageAccountId = Objects.requireNonNull(storageAccountId);
+            $.storageAccountId = storageAccountId;
             return this;
         }
+
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
-            return this;
-        }        public AutoStorageBasePropertiesArgs build() {
-            return new AutoStorageBasePropertiesArgs(storageAccountId);
+            return storageAccountId(Output.of(storageAccountId));
+        }
+
+        public AutoStorageBasePropertiesArgs build() {
+            $.storageAccountId = Objects.requireNonNull($.storageAccountId, "expected parameter 'storageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

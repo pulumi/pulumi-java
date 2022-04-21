@@ -17,7 +17,7 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
      * 
      */
     @Import(name="factoryName", required=true)
-      private final String factoryName;
+    private String factoryName;
 
     public String factoryName() {
         return this.factoryName;
@@ -28,7 +28,7 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
      * 
      */
     @Import(name="triggerName", required=true)
-      private final String triggerName;
+    private String triggerName;
 
     public String triggerName() {
         return this.triggerName;
     }
 
-    public GetTriggerEventSubscriptionStatusArgs(
-        String factoryName,
-        String resourceGroupName,
-        String triggerName) {
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.triggerName = Objects.requireNonNull(triggerName, "expected parameter 'triggerName' to be non-null");
-    }
+    private GetTriggerEventSubscriptionStatusArgs() {}
 
-    private GetTriggerEventSubscriptionStatusArgs() {
-        this.factoryName = null;
-        this.resourceGroupName = null;
-        this.triggerName = null;
+    private GetTriggerEventSubscriptionStatusArgs(GetTriggerEventSubscriptionStatusArgs $) {
+        this.factoryName = $.factoryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.triggerName = $.triggerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTriggerEventSubscriptionStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String factoryName;
-        private String resourceGroupName;
-        private String triggerName;
+        private GetTriggerEventSubscriptionStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTriggerEventSubscriptionStatusArgs();
         }
 
         public Builder(GetTriggerEventSubscriptionStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.factoryName = defaults.factoryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.triggerName = defaults.triggerName;
+            $ = new GetTriggerEventSubscriptionStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder triggerName(String triggerName) {
-            this.triggerName = Objects.requireNonNull(triggerName);
+            $.triggerName = triggerName;
             return this;
-        }        public GetTriggerEventSubscriptionStatusArgs build() {
-            return new GetTriggerEventSubscriptionStatusArgs(factoryName, resourceGroupName, triggerName);
+        }
+
+        public GetTriggerEventSubscriptionStatusArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.triggerName = Objects.requireNonNull($.triggerName, "expected parameter 'triggerName' to be non-null");
+            return $;
         }
     }
+
 }

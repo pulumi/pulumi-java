@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class DistributionOriginOriginShieldArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -31,63 +30,60 @@ public final class DistributionOriginOriginShieldArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="originShieldRegion", required=true)
-      private final Output<String> originShieldRegion;
+    private Output<String> originShieldRegion;
 
     public Output<String> originShieldRegion() {
         return this.originShieldRegion;
     }
 
-    public DistributionOriginOriginShieldArgs(
-        Output<Boolean> enabled,
-        Output<String> originShieldRegion) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.originShieldRegion = Objects.requireNonNull(originShieldRegion, "expected parameter 'originShieldRegion' to be non-null");
-    }
+    private DistributionOriginOriginShieldArgs() {}
 
-    private DistributionOriginOriginShieldArgs() {
-        this.enabled = Codegen.empty();
-        this.originShieldRegion = Codegen.empty();
+    private DistributionOriginOriginShieldArgs(DistributionOriginOriginShieldArgs $) {
+        this.enabled = $.enabled;
+        this.originShieldRegion = $.originShieldRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginOriginShieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
-        private Output<String> originShieldRegion;
+        private DistributionOriginOriginShieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginOriginShieldArgs();
         }
 
         public Builder(DistributionOriginOriginShieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.originShieldRegion = defaults.originShieldRegion;
+            $ = new DistributionOriginOriginShieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder originShieldRegion(Output<String> originShieldRegion) {
-            this.originShieldRegion = Objects.requireNonNull(originShieldRegion);
+            $.originShieldRegion = originShieldRegion;
             return this;
         }
+
         public Builder originShieldRegion(String originShieldRegion) {
-            this.originShieldRegion = Output.of(Objects.requireNonNull(originShieldRegion));
-            return this;
-        }        public DistributionOriginOriginShieldArgs build() {
-            return new DistributionOriginOriginShieldArgs(enabled, originShieldRegion);
+            return originShieldRegion(Output.of(originShieldRegion));
+        }
+
+        public DistributionOriginOriginShieldArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.originShieldRegion = Objects.requireNonNull($.originShieldRegion, "expected parameter 'originShieldRegion' to be non-null");
+            return $;
         }
     }
+
 }

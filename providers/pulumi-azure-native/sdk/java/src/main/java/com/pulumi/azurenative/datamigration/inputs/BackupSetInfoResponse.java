@@ -26,10 +26,10 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="backupFinishedDate")
-      private final @Nullable String backupFinishedDate;
+    private @Nullable String backupFinishedDate;
 
     public Optional<String> backupFinishedDate() {
-        return this.backupFinishedDate == null ? Optional.empty() : Optional.ofNullable(this.backupFinishedDate);
+        return Optional.ofNullable(this.backupFinishedDate);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="backupSetId")
-      private final @Nullable String backupSetId;
+    private @Nullable String backupSetId;
 
     public Optional<String> backupSetId() {
-        return this.backupSetId == null ? Optional.empty() : Optional.ofNullable(this.backupSetId);
+        return Optional.ofNullable(this.backupSetId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="backupStartDate")
-      private final @Nullable String backupStartDate;
+    private @Nullable String backupStartDate;
 
     public Optional<String> backupStartDate() {
-        return this.backupStartDate == null ? Optional.empty() : Optional.ofNullable(this.backupStartDate);
+        return Optional.ofNullable(this.backupStartDate);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="backupType")
-      private final @Nullable String backupType;
+    private @Nullable String backupType;
 
     public Optional<String> backupType() {
-        return this.backupType == null ? Optional.empty() : Optional.ofNullable(this.backupType);
+        return Optional.ofNullable(this.backupType);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable String databaseName;
+    private @Nullable String databaseName;
 
     public Optional<String> databaseName() {
-        return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="firstLsn")
-      private final @Nullable String firstLsn;
+    private @Nullable String firstLsn;
 
     public Optional<String> firstLsn() {
-        return this.firstLsn == null ? Optional.empty() : Optional.ofNullable(this.firstLsn);
+        return Optional.ofNullable(this.firstLsn);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isBackupRestored")
-      private final @Nullable Boolean isBackupRestored;
+    private @Nullable Boolean isBackupRestored;
 
     public Optional<Boolean> isBackupRestored() {
-        return this.isBackupRestored == null ? Optional.empty() : Optional.ofNullable(this.isBackupRestored);
+        return Optional.ofNullable(this.isBackupRestored);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lastLsn")
-      private final @Nullable String lastLsn;
+    private @Nullable String lastLsn;
 
     public Optional<String> lastLsn() {
-        return this.lastLsn == null ? Optional.empty() : Optional.ofNullable(this.lastLsn);
+        return Optional.ofNullable(this.lastLsn);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lastModifiedTime")
-      private final @Nullable String lastModifiedTime;
+    private @Nullable String lastModifiedTime;
 
     public Optional<String> lastModifiedTime() {
-        return this.lastModifiedTime == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedTime);
+        return Optional.ofNullable(this.lastModifiedTime);
     }
 
     /**
@@ -125,130 +125,102 @@ public final class BackupSetInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="listOfBackupFiles")
-      private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
+    private @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
 
-    public List<BackupFileInfoResponse> listOfBackupFiles() {
-        return this.listOfBackupFiles == null ? List.of() : this.listOfBackupFiles;
+    public Optional<List<BackupFileInfoResponse>> listOfBackupFiles() {
+        return Optional.ofNullable(this.listOfBackupFiles);
     }
 
-    public BackupSetInfoResponse(
-        @Nullable String backupFinishedDate,
-        @Nullable String backupSetId,
-        @Nullable String backupStartDate,
-        @Nullable String backupType,
-        @Nullable String databaseName,
-        @Nullable String firstLsn,
-        @Nullable Boolean isBackupRestored,
-        @Nullable String lastLsn,
-        @Nullable String lastModifiedTime,
-        @Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
-        this.backupFinishedDate = backupFinishedDate;
-        this.backupSetId = backupSetId;
-        this.backupStartDate = backupStartDate;
-        this.backupType = backupType;
-        this.databaseName = databaseName;
-        this.firstLsn = firstLsn;
-        this.isBackupRestored = isBackupRestored;
-        this.lastLsn = lastLsn;
-        this.lastModifiedTime = lastModifiedTime;
-        this.listOfBackupFiles = listOfBackupFiles;
-    }
+    private BackupSetInfoResponse() {}
 
-    private BackupSetInfoResponse() {
-        this.backupFinishedDate = null;
-        this.backupSetId = null;
-        this.backupStartDate = null;
-        this.backupType = null;
-        this.databaseName = null;
-        this.firstLsn = null;
-        this.isBackupRestored = null;
-        this.lastLsn = null;
-        this.lastModifiedTime = null;
-        this.listOfBackupFiles = List.of();
+    private BackupSetInfoResponse(BackupSetInfoResponse $) {
+        this.backupFinishedDate = $.backupFinishedDate;
+        this.backupSetId = $.backupSetId;
+        this.backupStartDate = $.backupStartDate;
+        this.backupType = $.backupType;
+        this.databaseName = $.databaseName;
+        this.firstLsn = $.firstLsn;
+        this.isBackupRestored = $.isBackupRestored;
+        this.lastLsn = $.lastLsn;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.listOfBackupFiles = $.listOfBackupFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupSetInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupFinishedDate;
-        private @Nullable String backupSetId;
-        private @Nullable String backupStartDate;
-        private @Nullable String backupType;
-        private @Nullable String databaseName;
-        private @Nullable String firstLsn;
-        private @Nullable Boolean isBackupRestored;
-        private @Nullable String lastLsn;
-        private @Nullable String lastModifiedTime;
-        private @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
+        private BackupSetInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupSetInfoResponse();
         }
 
         public Builder(BackupSetInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupFinishedDate = defaults.backupFinishedDate;
-    	      this.backupSetId = defaults.backupSetId;
-    	      this.backupStartDate = defaults.backupStartDate;
-    	      this.backupType = defaults.backupType;
-    	      this.databaseName = defaults.databaseName;
-    	      this.firstLsn = defaults.firstLsn;
-    	      this.isBackupRestored = defaults.isBackupRestored;
-    	      this.lastLsn = defaults.lastLsn;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.listOfBackupFiles = defaults.listOfBackupFiles;
+            $ = new BackupSetInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupFinishedDate(@Nullable String backupFinishedDate) {
-            this.backupFinishedDate = backupFinishedDate;
+            $.backupFinishedDate = backupFinishedDate;
             return this;
         }
+
         public Builder backupSetId(@Nullable String backupSetId) {
-            this.backupSetId = backupSetId;
+            $.backupSetId = backupSetId;
             return this;
         }
+
         public Builder backupStartDate(@Nullable String backupStartDate) {
-            this.backupStartDate = backupStartDate;
+            $.backupStartDate = backupStartDate;
             return this;
         }
+
         public Builder backupType(@Nullable String backupType) {
-            this.backupType = backupType;
+            $.backupType = backupType;
             return this;
         }
+
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder firstLsn(@Nullable String firstLsn) {
-            this.firstLsn = firstLsn;
+            $.firstLsn = firstLsn;
             return this;
         }
+
         public Builder isBackupRestored(@Nullable Boolean isBackupRestored) {
-            this.isBackupRestored = isBackupRestored;
+            $.isBackupRestored = isBackupRestored;
             return this;
         }
+
         public Builder lastLsn(@Nullable String lastLsn) {
-            this.lastLsn = lastLsn;
+            $.lastLsn = lastLsn;
             return this;
         }
+
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = lastModifiedTime;
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
+
         public Builder listOfBackupFiles(@Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
-            this.listOfBackupFiles = listOfBackupFiles;
+            $.listOfBackupFiles = listOfBackupFiles;
             return this;
         }
+
         public Builder listOfBackupFiles(BackupFileInfoResponse... listOfBackupFiles) {
             return listOfBackupFiles(List.of(listOfBackupFiles));
-        }        public BackupSetInfoResponse build() {
-            return new BackupSetInfoResponse(backupFinishedDate, backupSetId, backupStartDate, backupType, databaseName, firstLsn, isBackupRestored, lastLsn, lastModifiedTime, listOfBackupFiles);
+        }
+
+        public BackupSetInfoResponse build() {
+            return $;
         }
     }
+
 }

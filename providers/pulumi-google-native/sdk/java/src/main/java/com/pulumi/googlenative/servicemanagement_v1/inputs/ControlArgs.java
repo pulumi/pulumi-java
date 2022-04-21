@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ControlArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<String> environment;
+    private @Nullable Output<String> environment;
 
-    public Output<String> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<String>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
-    public ControlArgs(@Nullable Output<String> environment) {
-        this.environment = environment;
-    }
+    private ControlArgs() {}
 
-    private ControlArgs() {
-        this.environment = Codegen.empty();
+    private ControlArgs(ControlArgs $) {
+        this.environment = $.environment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> environment;
+        private ControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ControlArgs();
         }
 
         public Builder(ControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environment = defaults.environment;
+            $ = new ControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environment(@Nullable Output<String> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable String environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
-        }        public ControlArgs build() {
-            return new ControlArgs(environment);
+
+        public Builder environment(String environment) {
+            return environment(Output.of(environment));
+        }
+
+        public ControlArgs build() {
+            return $;
         }
     }
+
 }

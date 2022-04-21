@@ -5,11 +5,11 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.inputs.PrivateClusterMasterGlobalAccessConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enablePrivateEndpoint")
-      private final @Nullable Output<Boolean> enablePrivateEndpoint;
+    private @Nullable Output<Boolean> enablePrivateEndpoint;
 
-    public Output<Boolean> enablePrivateEndpoint() {
-        return this.enablePrivateEndpoint == null ? Codegen.empty() : this.enablePrivateEndpoint;
+    public Optional<Output<Boolean>> enablePrivateEndpoint() {
+        return Optional.ofNullable(this.enablePrivateEndpoint);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enablePrivateNodes")
-      private final @Nullable Output<Boolean> enablePrivateNodes;
+    private @Nullable Output<Boolean> enablePrivateNodes;
 
-    public Output<Boolean> enablePrivateNodes() {
-        return this.enablePrivateNodes == null ? Codegen.empty() : this.enablePrivateNodes;
+    public Optional<Output<Boolean>> enablePrivateNodes() {
+        return Optional.ofNullable(this.enablePrivateNodes);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="masterGlobalAccessConfig")
-      private final @Nullable Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig;
+    private @Nullable Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig;
 
-    public Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig() {
-        return this.masterGlobalAccessConfig == null ? Codegen.empty() : this.masterGlobalAccessConfig;
+    public Optional<Output<PrivateClusterMasterGlobalAccessConfigArgs>> masterGlobalAccessConfig() {
+        return Optional.ofNullable(this.masterGlobalAccessConfig);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class PrivateClusterConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="masterIpv4CidrBlock")
-      private final @Nullable Output<String> masterIpv4CidrBlock;
+    private @Nullable Output<String> masterIpv4CidrBlock;
 
-    public Output<String> masterIpv4CidrBlock() {
-        return this.masterIpv4CidrBlock == null ? Codegen.empty() : this.masterIpv4CidrBlock;
+    public Optional<Output<String>> masterIpv4CidrBlock() {
+        return Optional.ofNullable(this.masterIpv4CidrBlock);
     }
 
-    public PrivateClusterConfigArgs(
-        @Nullable Output<Boolean> enablePrivateEndpoint,
-        @Nullable Output<Boolean> enablePrivateNodes,
-        @Nullable Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig,
-        @Nullable Output<String> masterIpv4CidrBlock) {
-        this.enablePrivateEndpoint = enablePrivateEndpoint;
-        this.enablePrivateNodes = enablePrivateNodes;
-        this.masterGlobalAccessConfig = masterGlobalAccessConfig;
-        this.masterIpv4CidrBlock = masterIpv4CidrBlock;
-    }
+    private PrivateClusterConfigArgs() {}
 
-    private PrivateClusterConfigArgs() {
-        this.enablePrivateEndpoint = Codegen.empty();
-        this.enablePrivateNodes = Codegen.empty();
-        this.masterGlobalAccessConfig = Codegen.empty();
-        this.masterIpv4CidrBlock = Codegen.empty();
+    private PrivateClusterConfigArgs(PrivateClusterConfigArgs $) {
+        this.enablePrivateEndpoint = $.enablePrivateEndpoint;
+        this.enablePrivateNodes = $.enablePrivateNodes;
+        this.masterGlobalAccessConfig = $.masterGlobalAccessConfig;
+        this.masterIpv4CidrBlock = $.masterIpv4CidrBlock;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateClusterConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enablePrivateEndpoint;
-        private @Nullable Output<Boolean> enablePrivateNodes;
-        private @Nullable Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig;
-        private @Nullable Output<String> masterIpv4CidrBlock;
+        private PrivateClusterConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateClusterConfigArgs();
         }
 
         public Builder(PrivateClusterConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enablePrivateEndpoint = defaults.enablePrivateEndpoint;
-    	      this.enablePrivateNodes = defaults.enablePrivateNodes;
-    	      this.masterGlobalAccessConfig = defaults.masterGlobalAccessConfig;
-    	      this.masterIpv4CidrBlock = defaults.masterIpv4CidrBlock;
+            $ = new PrivateClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enablePrivateEndpoint(@Nullable Output<Boolean> enablePrivateEndpoint) {
-            this.enablePrivateEndpoint = enablePrivateEndpoint;
+            $.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
-        public Builder enablePrivateEndpoint(@Nullable Boolean enablePrivateEndpoint) {
-            this.enablePrivateEndpoint = Codegen.ofNullable(enablePrivateEndpoint);
-            return this;
+
+        public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
+            return enablePrivateEndpoint(Output.of(enablePrivateEndpoint));
         }
+
         public Builder enablePrivateNodes(@Nullable Output<Boolean> enablePrivateNodes) {
-            this.enablePrivateNodes = enablePrivateNodes;
+            $.enablePrivateNodes = enablePrivateNodes;
             return this;
         }
-        public Builder enablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
-            this.enablePrivateNodes = Codegen.ofNullable(enablePrivateNodes);
-            return this;
+
+        public Builder enablePrivateNodes(Boolean enablePrivateNodes) {
+            return enablePrivateNodes(Output.of(enablePrivateNodes));
         }
+
         public Builder masterGlobalAccessConfig(@Nullable Output<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig) {
-            this.masterGlobalAccessConfig = masterGlobalAccessConfig;
+            $.masterGlobalAccessConfig = masterGlobalAccessConfig;
             return this;
         }
-        public Builder masterGlobalAccessConfig(@Nullable PrivateClusterMasterGlobalAccessConfigArgs masterGlobalAccessConfig) {
-            this.masterGlobalAccessConfig = Codegen.ofNullable(masterGlobalAccessConfig);
-            return this;
+
+        public Builder masterGlobalAccessConfig(PrivateClusterMasterGlobalAccessConfigArgs masterGlobalAccessConfig) {
+            return masterGlobalAccessConfig(Output.of(masterGlobalAccessConfig));
         }
+
         public Builder masterIpv4CidrBlock(@Nullable Output<String> masterIpv4CidrBlock) {
-            this.masterIpv4CidrBlock = masterIpv4CidrBlock;
+            $.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
-        public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
-            this.masterIpv4CidrBlock = Codegen.ofNullable(masterIpv4CidrBlock);
-            return this;
-        }        public PrivateClusterConfigArgs build() {
-            return new PrivateClusterConfigArgs(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock);
+
+        public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
+            return masterIpv4CidrBlock(Output.of(masterIpv4CidrBlock));
+        }
+
+        public PrivateClusterConfigArgs build() {
+            return $;
         }
     }
+
 }

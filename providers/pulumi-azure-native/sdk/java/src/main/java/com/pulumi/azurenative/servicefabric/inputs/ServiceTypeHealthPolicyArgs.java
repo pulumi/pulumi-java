@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +25,49 @@ public final class ServiceTypeHealthPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxPercentUnhealthyServices")
-      private final @Nullable Output<Integer> maxPercentUnhealthyServices;
+    private @Nullable Output<Integer> maxPercentUnhealthyServices;
 
-    public Output<Integer> maxPercentUnhealthyServices() {
-        return this.maxPercentUnhealthyServices == null ? Codegen.empty() : this.maxPercentUnhealthyServices;
+    public Optional<Output<Integer>> maxPercentUnhealthyServices() {
+        return Optional.ofNullable(this.maxPercentUnhealthyServices);
     }
 
-    public ServiceTypeHealthPolicyArgs(@Nullable Output<Integer> maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").output().arg(maxPercentUnhealthyServices).def(0).getNullable();
-    }
+    private ServiceTypeHealthPolicyArgs() {}
 
-    private ServiceTypeHealthPolicyArgs() {
-        this.maxPercentUnhealthyServices = Codegen.empty();
+    private ServiceTypeHealthPolicyArgs(ServiceTypeHealthPolicyArgs $) {
+        this.maxPercentUnhealthyServices = $.maxPercentUnhealthyServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTypeHealthPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxPercentUnhealthyServices;
+        private ServiceTypeHealthPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTypeHealthPolicyArgs();
         }
 
         public Builder(ServiceTypeHealthPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPercentUnhealthyServices = defaults.maxPercentUnhealthyServices;
+            $ = new ServiceTypeHealthPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPercentUnhealthyServices(@Nullable Output<Integer> maxPercentUnhealthyServices) {
-            this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
+            $.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
-        public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
-            this.maxPercentUnhealthyServices = Codegen.ofNullable(maxPercentUnhealthyServices);
-            return this;
-        }        public ServiceTypeHealthPolicyArgs build() {
-            return new ServiceTypeHealthPolicyArgs(maxPercentUnhealthyServices);
+
+        public Builder maxPercentUnhealthyServices(Integer maxPercentUnhealthyServices) {
+            return maxPercentUnhealthyServices(Output.of(maxPercentUnhealthyServices));
+        }
+
+        public ServiceTypeHealthPolicyArgs build() {
+            $.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").output().arg($.maxPercentUnhealthyServices).def(0).getNullable();
+            return $;
         }
     }
+
 }

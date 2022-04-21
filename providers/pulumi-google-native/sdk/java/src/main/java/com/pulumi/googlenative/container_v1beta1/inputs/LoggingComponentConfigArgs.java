@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.LoggingComponentConfigEnableComponentsItem;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class LoggingComponentConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableComponents")
-      private final @Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
+    private @Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
 
-    public Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents() {
-        return this.enableComponents == null ? Codegen.empty() : this.enableComponents;
+    public Optional<Output<List<LoggingComponentConfigEnableComponentsItem>>> enableComponents() {
+        return Optional.ofNullable(this.enableComponents);
     }
 
-    public LoggingComponentConfigArgs(@Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents) {
-        this.enableComponents = enableComponents;
-    }
+    private LoggingComponentConfigArgs() {}
 
-    private LoggingComponentConfigArgs() {
-        this.enableComponents = Codegen.empty();
+    private LoggingComponentConfigArgs(LoggingComponentConfigArgs $) {
+        this.enableComponents = $.enableComponents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingComponentConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
+        private LoggingComponentConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingComponentConfigArgs();
         }
 
         public Builder(LoggingComponentConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableComponents = defaults.enableComponents;
+            $ = new LoggingComponentConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableComponents(@Nullable Output<List<LoggingComponentConfigEnableComponentsItem>> enableComponents) {
-            this.enableComponents = enableComponents;
+            $.enableComponents = enableComponents;
             return this;
         }
-        public Builder enableComponents(@Nullable List<LoggingComponentConfigEnableComponentsItem> enableComponents) {
-            this.enableComponents = Codegen.ofNullable(enableComponents);
-            return this;
+
+        public Builder enableComponents(List<LoggingComponentConfigEnableComponentsItem> enableComponents) {
+            return enableComponents(Output.of(enableComponents));
         }
+
         public Builder enableComponents(LoggingComponentConfigEnableComponentsItem... enableComponents) {
             return enableComponents(List.of(enableComponents));
-        }        public LoggingComponentConfigArgs build() {
-            return new LoggingComponentConfigArgs(enableComponents);
+        }
+
+        public LoggingComponentConfigArgs build() {
+            return $;
         }
     }
+
 }

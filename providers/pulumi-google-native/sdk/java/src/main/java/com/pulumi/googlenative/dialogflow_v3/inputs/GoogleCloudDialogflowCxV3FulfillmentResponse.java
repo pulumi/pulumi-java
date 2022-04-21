@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends com.pulu
      * 
      */
     @Import(name="conditionalCases", required=true)
-      private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases;
+    private List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases;
 
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases() {
         return this.conditionalCases;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends com.pulu
      * 
      */
     @Import(name="messages", required=true)
-      private final List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages;
+    private List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages;
 
     public List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages() {
         return this.messages;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends com.pulu
      * 
      */
     @Import(name="returnPartialResponses", required=true)
-      private final Boolean returnPartialResponses;
+    private Boolean returnPartialResponses;
 
     public Boolean returnPartialResponses() {
         return this.returnPartialResponses;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends com.pulu
      * 
      */
     @Import(name="setParameterActions", required=true)
-      private final List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions;
+    private List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions;
 
     public List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions() {
         return this.setParameterActions;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends com.pulu
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
@@ -81,100 +81,92 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends com.pulu
      * 
      */
     @Import(name="webhook", required=true)
-      private final String webhook;
+    private String webhook;
 
     public String webhook() {
         return this.webhook;
     }
 
-    public GoogleCloudDialogflowCxV3FulfillmentResponse(
-        List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases,
-        List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages,
-        Boolean returnPartialResponses,
-        List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions,
-        String tag,
-        String webhook) {
-        this.conditionalCases = Objects.requireNonNull(conditionalCases, "expected parameter 'conditionalCases' to be non-null");
-        this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
-        this.returnPartialResponses = Objects.requireNonNull(returnPartialResponses, "expected parameter 'returnPartialResponses' to be non-null");
-        this.setParameterActions = Objects.requireNonNull(setParameterActions, "expected parameter 'setParameterActions' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-        this.webhook = Objects.requireNonNull(webhook, "expected parameter 'webhook' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3FulfillmentResponse() {}
 
-    private GoogleCloudDialogflowCxV3FulfillmentResponse() {
-        this.conditionalCases = List.of();
-        this.messages = List.of();
-        this.returnPartialResponses = null;
-        this.setParameterActions = List.of();
-        this.tag = null;
-        this.webhook = null;
+    private GoogleCloudDialogflowCxV3FulfillmentResponse(GoogleCloudDialogflowCxV3FulfillmentResponse $) {
+        this.conditionalCases = $.conditionalCases;
+        this.messages = $.messages;
+        this.returnPartialResponses = $.returnPartialResponses;
+        this.setParameterActions = $.setParameterActions;
+        this.tag = $.tag;
+        this.webhook = $.webhook;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3FulfillmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases;
-        private List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages;
-        private Boolean returnPartialResponses;
-        private List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions;
-        private String tag;
-        private String webhook;
+        private GoogleCloudDialogflowCxV3FulfillmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3FulfillmentResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3FulfillmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionalCases = defaults.conditionalCases;
-    	      this.messages = defaults.messages;
-    	      this.returnPartialResponses = defaults.returnPartialResponses;
-    	      this.setParameterActions = defaults.setParameterActions;
-    	      this.tag = defaults.tag;
-    	      this.webhook = defaults.webhook;
+            $ = new GoogleCloudDialogflowCxV3FulfillmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionalCases(List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases) {
-            this.conditionalCases = Objects.requireNonNull(conditionalCases);
+            $.conditionalCases = conditionalCases;
             return this;
         }
+
         public Builder conditionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse... conditionalCases) {
             return conditionalCases(List.of(conditionalCases));
         }
+
         public Builder messages(List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages) {
-            this.messages = Objects.requireNonNull(messages);
+            $.messages = messages;
             return this;
         }
+
         public Builder messages(GoogleCloudDialogflowCxV3ResponseMessageResponse... messages) {
             return messages(List.of(messages));
         }
+
         public Builder returnPartialResponses(Boolean returnPartialResponses) {
-            this.returnPartialResponses = Objects.requireNonNull(returnPartialResponses);
+            $.returnPartialResponses = returnPartialResponses;
             return this;
         }
+
         public Builder setParameterActions(List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions) {
-            this.setParameterActions = Objects.requireNonNull(setParameterActions);
+            $.setParameterActions = setParameterActions;
             return this;
         }
+
         public Builder setParameterActions(GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse... setParameterActions) {
             return setParameterActions(List.of(setParameterActions));
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
         }
+
         public Builder webhook(String webhook) {
-            this.webhook = Objects.requireNonNull(webhook);
+            $.webhook = webhook;
             return this;
-        }        public GoogleCloudDialogflowCxV3FulfillmentResponse build() {
-            return new GoogleCloudDialogflowCxV3FulfillmentResponse(conditionalCases, messages, returnPartialResponses, setParameterActions, tag, webhook);
+        }
+
+        public GoogleCloudDialogflowCxV3FulfillmentResponse build() {
+            $.conditionalCases = Objects.requireNonNull($.conditionalCases, "expected parameter 'conditionalCases' to be non-null");
+            $.messages = Objects.requireNonNull($.messages, "expected parameter 'messages' to be non-null");
+            $.returnPartialResponses = Objects.requireNonNull($.returnPartialResponses, "expected parameter 'returnPartialResponses' to be non-null");
+            $.setParameterActions = Objects.requireNonNull($.setParameterActions, "expected parameter 'setParameterActions' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            $.webhook = Objects.requireNonNull($.webhook, "expected parameter 'webhook' to be non-null");
+            return $;
         }
     }
+
 }

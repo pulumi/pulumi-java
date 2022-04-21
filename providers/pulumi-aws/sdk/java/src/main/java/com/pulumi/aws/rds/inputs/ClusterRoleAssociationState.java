@@ -5,9 +5,9 @@ package com.pulumi.aws.rds.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="dbClusterIdentifier")
-      private final @Nullable Output<String> dbClusterIdentifier;
+    private @Nullable Output<String> dbClusterIdentifier;
 
-    public Output<String> dbClusterIdentifier() {
-        return this.dbClusterIdentifier == null ? Codegen.empty() : this.dbClusterIdentifier;
+    public Optional<Output<String>> dbClusterIdentifier() {
+        return Optional.ofNullable(this.dbClusterIdentifier);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="featureName")
-      private final @Nullable Output<String> featureName;
+    private @Nullable Output<String> featureName;
 
-    public Output<String> featureName() {
-        return this.featureName == null ? Codegen.empty() : this.featureName;
+    public Optional<Output<String>> featureName() {
+        return Optional.ofNullable(this.featureName);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ClusterRoleAssociationState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public ClusterRoleAssociationState(
-        @Nullable Output<String> dbClusterIdentifier,
-        @Nullable Output<String> featureName,
-        @Nullable Output<String> roleArn) {
-        this.dbClusterIdentifier = dbClusterIdentifier;
-        this.featureName = featureName;
-        this.roleArn = roleArn;
-    }
+    private ClusterRoleAssociationState() {}
 
-    private ClusterRoleAssociationState() {
-        this.dbClusterIdentifier = Codegen.empty();
-        this.featureName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private ClusterRoleAssociationState(ClusterRoleAssociationState $) {
+        this.dbClusterIdentifier = $.dbClusterIdentifier;
+        this.featureName = $.featureName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterRoleAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dbClusterIdentifier;
-        private @Nullable Output<String> featureName;
-        private @Nullable Output<String> roleArn;
+        private ClusterRoleAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterRoleAssociationState();
         }
 
         public Builder(ClusterRoleAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbClusterIdentifier = defaults.dbClusterIdentifier;
-    	      this.featureName = defaults.featureName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ClusterRoleAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder dbClusterIdentifier(@Nullable Output<String> dbClusterIdentifier) {
-            this.dbClusterIdentifier = dbClusterIdentifier;
+            $.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
-        public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Codegen.ofNullable(dbClusterIdentifier);
-            return this;
+
+        public Builder dbClusterIdentifier(String dbClusterIdentifier) {
+            return dbClusterIdentifier(Output.of(dbClusterIdentifier));
         }
+
         public Builder featureName(@Nullable Output<String> featureName) {
-            this.featureName = featureName;
+            $.featureName = featureName;
             return this;
         }
-        public Builder featureName(@Nullable String featureName) {
-            this.featureName = Codegen.ofNullable(featureName);
-            return this;
+
+        public Builder featureName(String featureName) {
+            return featureName(Output.of(featureName));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public ClusterRoleAssociationState build() {
-            return new ClusterRoleAssociationState(dbClusterIdentifier, featureName, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public ClusterRoleAssociationState build() {
+            return $;
         }
     }
+
 }

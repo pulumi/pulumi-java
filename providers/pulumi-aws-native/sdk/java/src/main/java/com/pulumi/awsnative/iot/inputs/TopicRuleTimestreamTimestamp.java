@@ -13,62 +13,59 @@ public final class TopicRuleTimestreamTimestamp extends com.pulumi.resources.Inv
     public static final TopicRuleTimestreamTimestamp Empty = new TopicRuleTimestreamTimestamp();
 
     @Import(name="unit", required=true)
-      private final String unit;
+    private String unit;
 
     public String unit() {
         return this.unit;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public TopicRuleTimestreamTimestamp(
-        String unit,
-        String value) {
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TopicRuleTimestreamTimestamp() {}
 
-    private TopicRuleTimestreamTimestamp() {
-        this.unit = null;
-        this.value = null;
+    private TopicRuleTimestreamTimestamp(TopicRuleTimestreamTimestamp $) {
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleTimestreamTimestamp defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String unit;
-        private String value;
+        private TopicRuleTimestreamTimestamp $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleTimestreamTimestamp();
         }
 
         public Builder(TopicRuleTimestreamTimestamp defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new TopicRuleTimestreamTimestamp(Objects.requireNonNull(defaults));
         }
 
         public Builder unit(String unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public TopicRuleTimestreamTimestamp build() {
-            return new TopicRuleTimestreamTimestamp(unit, value);
+        }
+
+        public TopicRuleTimestreamTimestamp build() {
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

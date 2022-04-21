@@ -19,45 +19,44 @@ public final class ResponsePlanAction extends com.pulumi.resources.InvokeArgs {
     public static final ResponsePlanAction Empty = new ResponsePlanAction();
 
     @Import(name="ssmAutomation")
-      private final @Nullable ResponsePlanSsmAutomation ssmAutomation;
+    private @Nullable ResponsePlanSsmAutomation ssmAutomation;
 
     public Optional<ResponsePlanSsmAutomation> ssmAutomation() {
-        return this.ssmAutomation == null ? Optional.empty() : Optional.ofNullable(this.ssmAutomation);
+        return Optional.ofNullable(this.ssmAutomation);
     }
 
-    public ResponsePlanAction(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
-        this.ssmAutomation = ssmAutomation;
-    }
+    private ResponsePlanAction() {}
 
-    private ResponsePlanAction() {
-        this.ssmAutomation = null;
+    private ResponsePlanAction(ResponsePlanAction $) {
+        this.ssmAutomation = $.ssmAutomation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ResponsePlanSsmAutomation ssmAutomation;
+        private ResponsePlanAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanAction();
         }
 
         public Builder(ResponsePlanAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ssmAutomation = defaults.ssmAutomation;
+            $ = new ResponsePlanAction(Objects.requireNonNull(defaults));
         }
 
         public Builder ssmAutomation(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
-            this.ssmAutomation = ssmAutomation;
+            $.ssmAutomation = ssmAutomation;
             return this;
-        }        public ResponsePlanAction build() {
-            return new ResponsePlanAction(ssmAutomation);
+        }
+
+        public ResponsePlanAction build() {
+            return $;
         }
     }
+
 }

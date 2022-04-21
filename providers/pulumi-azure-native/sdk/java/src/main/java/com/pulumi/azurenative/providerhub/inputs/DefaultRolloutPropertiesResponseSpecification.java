@@ -23,161 +23,139 @@ public final class DefaultRolloutPropertiesResponseSpecification extends com.pul
     public static final DefaultRolloutPropertiesResponseSpecification Empty = new DefaultRolloutPropertiesResponseSpecification();
 
     @Import(name="canary")
-      private final @Nullable DefaultRolloutSpecificationResponseCanary canary;
+    private @Nullable DefaultRolloutSpecificationResponseCanary canary;
 
     public Optional<DefaultRolloutSpecificationResponseCanary> canary() {
-        return this.canary == null ? Optional.empty() : Optional.ofNullable(this.canary);
+        return Optional.ofNullable(this.canary);
     }
 
     @Import(name="highTraffic")
-      private final @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
+    private @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
 
     public Optional<DefaultRolloutSpecificationResponseHighTraffic> highTraffic() {
-        return this.highTraffic == null ? Optional.empty() : Optional.ofNullable(this.highTraffic);
+        return Optional.ofNullable(this.highTraffic);
     }
 
     @Import(name="lowTraffic")
-      private final @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic;
+    private @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic;
 
     public Optional<DefaultRolloutSpecificationResponseLowTraffic> lowTraffic() {
-        return this.lowTraffic == null ? Optional.empty() : Optional.ofNullable(this.lowTraffic);
+        return Optional.ofNullable(this.lowTraffic);
     }
 
     @Import(name="mediumTraffic")
-      private final @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic;
+    private @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic;
 
     public Optional<DefaultRolloutSpecificationResponseMediumTraffic> mediumTraffic() {
-        return this.mediumTraffic == null ? Optional.empty() : Optional.ofNullable(this.mediumTraffic);
+        return Optional.ofNullable(this.mediumTraffic);
     }
 
     @Import(name="providerRegistration")
-      private final @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration;
+    private @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration;
 
     public Optional<DefaultRolloutSpecificationResponseProviderRegistration> providerRegistration() {
-        return this.providerRegistration == null ? Optional.empty() : Optional.ofNullable(this.providerRegistration);
+        return Optional.ofNullable(this.providerRegistration);
     }
 
     @Import(name="resourceTypeRegistrations")
-      private final @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations;
+    private @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations;
 
-    public List<ResourceTypeRegistrationResponse> resourceTypeRegistrations() {
-        return this.resourceTypeRegistrations == null ? List.of() : this.resourceTypeRegistrations;
+    public Optional<List<ResourceTypeRegistrationResponse>> resourceTypeRegistrations() {
+        return Optional.ofNullable(this.resourceTypeRegistrations);
     }
 
     @Import(name="restOfTheWorldGroupOne")
-      private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
+    private @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
 
     public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne> restOfTheWorldGroupOne() {
-        return this.restOfTheWorldGroupOne == null ? Optional.empty() : Optional.ofNullable(this.restOfTheWorldGroupOne);
+        return Optional.ofNullable(this.restOfTheWorldGroupOne);
     }
 
     @Import(name="restOfTheWorldGroupTwo")
-      private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
+    private @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
 
     public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo> restOfTheWorldGroupTwo() {
-        return this.restOfTheWorldGroupTwo == null ? Optional.empty() : Optional.ofNullable(this.restOfTheWorldGroupTwo);
+        return Optional.ofNullable(this.restOfTheWorldGroupTwo);
     }
 
-    public DefaultRolloutPropertiesResponseSpecification(
-        @Nullable DefaultRolloutSpecificationResponseCanary canary,
-        @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic,
-        @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic,
-        @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic,
-        @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration,
-        @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations,
-        @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne,
-        @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
-        this.canary = canary;
-        this.highTraffic = highTraffic;
-        this.lowTraffic = lowTraffic;
-        this.mediumTraffic = mediumTraffic;
-        this.providerRegistration = providerRegistration;
-        this.resourceTypeRegistrations = resourceTypeRegistrations;
-        this.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
-        this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
-    }
+    private DefaultRolloutPropertiesResponseSpecification() {}
 
-    private DefaultRolloutPropertiesResponseSpecification() {
-        this.canary = null;
-        this.highTraffic = null;
-        this.lowTraffic = null;
-        this.mediumTraffic = null;
-        this.providerRegistration = null;
-        this.resourceTypeRegistrations = List.of();
-        this.restOfTheWorldGroupOne = null;
-        this.restOfTheWorldGroupTwo = null;
+    private DefaultRolloutPropertiesResponseSpecification(DefaultRolloutPropertiesResponseSpecification $) {
+        this.canary = $.canary;
+        this.highTraffic = $.highTraffic;
+        this.lowTraffic = $.lowTraffic;
+        this.mediumTraffic = $.mediumTraffic;
+        this.providerRegistration = $.providerRegistration;
+        this.resourceTypeRegistrations = $.resourceTypeRegistrations;
+        this.restOfTheWorldGroupOne = $.restOfTheWorldGroupOne;
+        this.restOfTheWorldGroupTwo = $.restOfTheWorldGroupTwo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutPropertiesResponseSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DefaultRolloutSpecificationResponseCanary canary;
-        private @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
-        private @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic;
-        private @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic;
-        private @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration;
-        private @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations;
-        private @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
-        private @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
+        private DefaultRolloutPropertiesResponseSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutPropertiesResponseSpecification();
         }
 
         public Builder(DefaultRolloutPropertiesResponseSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canary = defaults.canary;
-    	      this.highTraffic = defaults.highTraffic;
-    	      this.lowTraffic = defaults.lowTraffic;
-    	      this.mediumTraffic = defaults.mediumTraffic;
-    	      this.providerRegistration = defaults.providerRegistration;
-    	      this.resourceTypeRegistrations = defaults.resourceTypeRegistrations;
-    	      this.restOfTheWorldGroupOne = defaults.restOfTheWorldGroupOne;
-    	      this.restOfTheWorldGroupTwo = defaults.restOfTheWorldGroupTwo;
+            $ = new DefaultRolloutPropertiesResponseSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder canary(@Nullable DefaultRolloutSpecificationResponseCanary canary) {
-            this.canary = canary;
+            $.canary = canary;
             return this;
         }
+
         public Builder highTraffic(@Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic) {
-            this.highTraffic = highTraffic;
+            $.highTraffic = highTraffic;
             return this;
         }
+
         public Builder lowTraffic(@Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic) {
-            this.lowTraffic = lowTraffic;
+            $.lowTraffic = lowTraffic;
             return this;
         }
+
         public Builder mediumTraffic(@Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic) {
-            this.mediumTraffic = mediumTraffic;
+            $.mediumTraffic = mediumTraffic;
             return this;
         }
+
         public Builder providerRegistration(@Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration) {
-            this.providerRegistration = providerRegistration;
+            $.providerRegistration = providerRegistration;
             return this;
         }
+
         public Builder resourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations) {
-            this.resourceTypeRegistrations = resourceTypeRegistrations;
+            $.resourceTypeRegistrations = resourceTypeRegistrations;
             return this;
         }
+
         public Builder resourceTypeRegistrations(ResourceTypeRegistrationResponse... resourceTypeRegistrations) {
             return resourceTypeRegistrations(List.of(resourceTypeRegistrations));
         }
+
         public Builder restOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne) {
-            this.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
+            $.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
             return this;
         }
+
         public Builder restOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
-            this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
+            $.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
-        }        public DefaultRolloutPropertiesResponseSpecification build() {
-            return new DefaultRolloutPropertiesResponseSpecification(canary, highTraffic, lowTraffic, mediumTraffic, providerRegistration, resourceTypeRegistrations, restOfTheWorldGroupOne, restOfTheWorldGroupTwo);
+        }
+
+        public DefaultRolloutPropertiesResponseSpecification build() {
+            return $;
         }
     }
+
 }

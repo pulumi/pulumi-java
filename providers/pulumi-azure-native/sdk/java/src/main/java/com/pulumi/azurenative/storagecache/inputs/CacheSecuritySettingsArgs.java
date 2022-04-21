@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storagecache.inputs;
 import com.pulumi.azurenative.storagecache.inputs.NfsAccessPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class CacheSecuritySettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="accessPolicies")
-      private final @Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies;
+    private @Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies;
 
-    public Output<List<NfsAccessPolicyArgs>> accessPolicies() {
-        return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
+    public Optional<Output<List<NfsAccessPolicyArgs>>> accessPolicies() {
+        return Optional.ofNullable(this.accessPolicies);
     }
 
-    public CacheSecuritySettingsArgs(@Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies) {
-        this.accessPolicies = accessPolicies;
-    }
+    private CacheSecuritySettingsArgs() {}
 
-    private CacheSecuritySettingsArgs() {
-        this.accessPolicies = Codegen.empty();
+    private CacheSecuritySettingsArgs(CacheSecuritySettingsArgs $) {
+        this.accessPolicies = $.accessPolicies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheSecuritySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies;
+        private CacheSecuritySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheSecuritySettingsArgs();
         }
 
         public Builder(CacheSecuritySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicies = defaults.accessPolicies;
+            $ = new CacheSecuritySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicies(@Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies) {
-            this.accessPolicies = accessPolicies;
+            $.accessPolicies = accessPolicies;
             return this;
         }
-        public Builder accessPolicies(@Nullable List<NfsAccessPolicyArgs> accessPolicies) {
-            this.accessPolicies = Codegen.ofNullable(accessPolicies);
-            return this;
+
+        public Builder accessPolicies(List<NfsAccessPolicyArgs> accessPolicies) {
+            return accessPolicies(Output.of(accessPolicies));
         }
+
         public Builder accessPolicies(NfsAccessPolicyArgs... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
-        }        public CacheSecuritySettingsArgs build() {
-            return new CacheSecuritySettingsArgs(accessPolicies);
+        }
+
+        public CacheSecuritySettingsArgs build() {
+            return $;
         }
     }
+
 }

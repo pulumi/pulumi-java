@@ -5,9 +5,9 @@ package com.pulumi.gcp.servicenetworking;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dnsSuffix", required=true)
-      private final Output<String> dnsSuffix;
+    private Output<String> dnsSuffix;
 
     public Output<String> dnsSuffix() {
         return this.dnsSuffix;
@@ -31,10 +31,10 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="network", required=true)
-      private final Output<String> network;
+    private Output<String> network;
 
     public Output<String> network() {
         return this.network;
@@ -53,10 +53,10 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -64,102 +64,90 @@ public final class PeeredDnsDomainArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public PeeredDnsDomainArgs(
-        Output<String> dnsSuffix,
-        @Nullable Output<String> name,
-        Output<String> network,
-        @Nullable Output<String> project,
-        @Nullable Output<String> service) {
-        this.dnsSuffix = Objects.requireNonNull(dnsSuffix, "expected parameter 'dnsSuffix' to be non-null");
-        this.name = name;
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.project = project;
-        this.service = service;
-    }
+    private PeeredDnsDomainArgs() {}
 
-    private PeeredDnsDomainArgs() {
-        this.dnsSuffix = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
+    private PeeredDnsDomainArgs(PeeredDnsDomainArgs $) {
+        this.dnsSuffix = $.dnsSuffix;
+        this.name = $.name;
+        this.network = $.network;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeredDnsDomainArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dnsSuffix;
-        private @Nullable Output<String> name;
-        private Output<String> network;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> service;
+        private PeeredDnsDomainArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeredDnsDomainArgs();
         }
 
         public Builder(PeeredDnsDomainArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsSuffix = defaults.dnsSuffix;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new PeeredDnsDomainArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsSuffix(Output<String> dnsSuffix) {
-            this.dnsSuffix = Objects.requireNonNull(dnsSuffix);
+            $.dnsSuffix = dnsSuffix;
             return this;
         }
+
         public Builder dnsSuffix(String dnsSuffix) {
-            this.dnsSuffix = Output.of(Objects.requireNonNull(dnsSuffix));
-            return this;
+            return dnsSuffix(Output.of(dnsSuffix));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(Output<String> network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Output.of(Objects.requireNonNull(network));
-            return this;
+            return network(Output.of(network));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public PeeredDnsDomainArgs build() {
-            return new PeeredDnsDomainArgs(dnsSuffix, name, network, project, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public PeeredDnsDomainArgs build() {
+            $.dnsSuffix = Objects.requireNonNull($.dnsSuffix, "expected parameter 'dnsSuffix' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1beta.inputs.BuildInfoArgs;
 import com.pulumi.googlenative.appengine_v1beta.inputs.CloudBuildOptionsArgs;
 import com.pulumi.googlenative.appengine_v1beta.inputs.ContainerInfoArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.appengine_v1beta.inputs.ZipInfoArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="build")
-      private final @Nullable Output<BuildInfoArgs> build;
+    private @Nullable Output<BuildInfoArgs> build;
 
-    public Output<BuildInfoArgs> build() {
-        return this.build == null ? Codegen.empty() : this.build;
+    public Optional<Output<BuildInfoArgs>> build() {
+        return Optional.ofNullable(this.build);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudBuildOptions")
-      private final @Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions;
+    private @Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions;
 
-    public Output<CloudBuildOptionsArgs> cloudBuildOptions() {
-        return this.cloudBuildOptions == null ? Codegen.empty() : this.cloudBuildOptions;
+    public Optional<Output<CloudBuildOptionsArgs>> cloudBuildOptions() {
+        return Optional.ofNullable(this.cloudBuildOptions);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="container")
-      private final @Nullable Output<ContainerInfoArgs> container;
+    private @Nullable Output<ContainerInfoArgs> container;
 
-    public Output<ContainerInfoArgs> container() {
-        return this.container == null ? Codegen.empty() : this.container;
+    public Optional<Output<ContainerInfoArgs>> container() {
+        return Optional.ofNullable(this.container);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="files")
-      private final @Nullable Output<Map<String,String>> files;
+    private @Nullable Output<Map<String,String>> files;
 
-    public Output<Map<String,String>> files() {
-        return this.files == null ? Codegen.empty() : this.files;
+    public Optional<Output<Map<String,String>>> files() {
+        return Optional.ofNullable(this.files);
     }
 
     /**
@@ -73,102 +73,88 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zip")
-      private final @Nullable Output<ZipInfoArgs> zip;
+    private @Nullable Output<ZipInfoArgs> zip;
 
-    public Output<ZipInfoArgs> zip() {
-        return this.zip == null ? Codegen.empty() : this.zip;
+    public Optional<Output<ZipInfoArgs>> zip() {
+        return Optional.ofNullable(this.zip);
     }
 
-    public DeploymentArgs(
-        @Nullable Output<BuildInfoArgs> build,
-        @Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions,
-        @Nullable Output<ContainerInfoArgs> container,
-        @Nullable Output<Map<String,String>> files,
-        @Nullable Output<ZipInfoArgs> zip) {
-        this.build = build;
-        this.cloudBuildOptions = cloudBuildOptions;
-        this.container = container;
-        this.files = files;
-        this.zip = zip;
-    }
+    private DeploymentArgs() {}
 
-    private DeploymentArgs() {
-        this.build = Codegen.empty();
-        this.cloudBuildOptions = Codegen.empty();
-        this.container = Codegen.empty();
-        this.files = Codegen.empty();
-        this.zip = Codegen.empty();
+    private DeploymentArgs(DeploymentArgs $) {
+        this.build = $.build;
+        this.cloudBuildOptions = $.cloudBuildOptions;
+        this.container = $.container;
+        this.files = $.files;
+        this.zip = $.zip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BuildInfoArgs> build;
-        private @Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions;
-        private @Nullable Output<ContainerInfoArgs> container;
-        private @Nullable Output<Map<String,String>> files;
-        private @Nullable Output<ZipInfoArgs> zip;
+        private DeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentArgs();
         }
 
         public Builder(DeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.build = defaults.build;
-    	      this.cloudBuildOptions = defaults.cloudBuildOptions;
-    	      this.container = defaults.container;
-    	      this.files = defaults.files;
-    	      this.zip = defaults.zip;
+            $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder build(@Nullable Output<BuildInfoArgs> build) {
-            this.build = build;
+            $.build = build;
             return this;
         }
-        public Builder build(@Nullable BuildInfoArgs build) {
-            this.build = Codegen.ofNullable(build);
-            return this;
+
+        public Builder build(BuildInfoArgs build) {
+            return build(Output.of(build));
         }
+
         public Builder cloudBuildOptions(@Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions) {
-            this.cloudBuildOptions = cloudBuildOptions;
+            $.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
-        public Builder cloudBuildOptions(@Nullable CloudBuildOptionsArgs cloudBuildOptions) {
-            this.cloudBuildOptions = Codegen.ofNullable(cloudBuildOptions);
-            return this;
+
+        public Builder cloudBuildOptions(CloudBuildOptionsArgs cloudBuildOptions) {
+            return cloudBuildOptions(Output.of(cloudBuildOptions));
         }
+
         public Builder container(@Nullable Output<ContainerInfoArgs> container) {
-            this.container = container;
+            $.container = container;
             return this;
         }
-        public Builder container(@Nullable ContainerInfoArgs container) {
-            this.container = Codegen.ofNullable(container);
-            return this;
+
+        public Builder container(ContainerInfoArgs container) {
+            return container(Output.of(container));
         }
+
         public Builder files(@Nullable Output<Map<String,String>> files) {
-            this.files = files;
+            $.files = files;
             return this;
         }
-        public Builder files(@Nullable Map<String,String> files) {
-            this.files = Codegen.ofNullable(files);
-            return this;
+
+        public Builder files(Map<String,String> files) {
+            return files(Output.of(files));
         }
+
         public Builder zip(@Nullable Output<ZipInfoArgs> zip) {
-            this.zip = zip;
+            $.zip = zip;
             return this;
         }
-        public Builder zip(@Nullable ZipInfoArgs zip) {
-            this.zip = Codegen.ofNullable(zip);
-            return this;
-        }        public DeploymentArgs build() {
-            return new DeploymentArgs(build, cloudBuildOptions, container, files, zip);
+
+        public Builder zip(ZipInfoArgs zip) {
+            return zip(Output.of(zip));
+        }
+
+        public DeploymentArgs build() {
+            return $;
         }
     }
+
 }

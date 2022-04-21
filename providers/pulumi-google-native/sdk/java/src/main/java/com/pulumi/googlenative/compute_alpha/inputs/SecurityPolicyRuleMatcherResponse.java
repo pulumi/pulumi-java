@@ -23,7 +23,7 @@ public final class SecurityPolicyRuleMatcherResponse extends com.pulumi.resource
      * 
      */
     @Import(name="config", required=true)
-      private final SecurityPolicyRuleMatcherConfigResponse config;
+    private SecurityPolicyRuleMatcherConfigResponse config;
 
     public SecurityPolicyRuleMatcherConfigResponse config() {
         return this.config;
@@ -34,7 +34,7 @@ public final class SecurityPolicyRuleMatcherResponse extends com.pulumi.resource
      * 
      */
     @Import(name="expr", required=true)
-      private final ExprResponse expr;
+    private ExprResponse expr;
 
     public ExprResponse expr() {
         return this.expr;
@@ -45,64 +45,59 @@ public final class SecurityPolicyRuleMatcherResponse extends com.pulumi.resource
      * 
      */
     @Import(name="versionedExpr", required=true)
-      private final String versionedExpr;
+    private String versionedExpr;
 
     public String versionedExpr() {
         return this.versionedExpr;
     }
 
-    public SecurityPolicyRuleMatcherResponse(
-        SecurityPolicyRuleMatcherConfigResponse config,
-        ExprResponse expr,
-        String versionedExpr) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.expr = Objects.requireNonNull(expr, "expected parameter 'expr' to be non-null");
-        this.versionedExpr = Objects.requireNonNull(versionedExpr, "expected parameter 'versionedExpr' to be non-null");
-    }
+    private SecurityPolicyRuleMatcherResponse() {}
 
-    private SecurityPolicyRuleMatcherResponse() {
-        this.config = null;
-        this.expr = null;
-        this.versionedExpr = null;
+    private SecurityPolicyRuleMatcherResponse(SecurityPolicyRuleMatcherResponse $) {
+        this.config = $.config;
+        this.expr = $.expr;
+        this.versionedExpr = $.versionedExpr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleMatcherResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private SecurityPolicyRuleMatcherConfigResponse config;
-        private ExprResponse expr;
-        private String versionedExpr;
+        private SecurityPolicyRuleMatcherResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleMatcherResponse();
         }
 
         public Builder(SecurityPolicyRuleMatcherResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.expr = defaults.expr;
-    	      this.versionedExpr = defaults.versionedExpr;
+            $ = new SecurityPolicyRuleMatcherResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder config(SecurityPolicyRuleMatcherConfigResponse config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder expr(ExprResponse expr) {
-            this.expr = Objects.requireNonNull(expr);
+            $.expr = expr;
             return this;
         }
+
         public Builder versionedExpr(String versionedExpr) {
-            this.versionedExpr = Objects.requireNonNull(versionedExpr);
+            $.versionedExpr = versionedExpr;
             return this;
-        }        public SecurityPolicyRuleMatcherResponse build() {
-            return new SecurityPolicyRuleMatcherResponse(config, expr, versionedExpr);
+        }
+
+        public SecurityPolicyRuleMatcherResponse build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.expr = Objects.requireNonNull($.expr, "expected parameter 'expr' to be non-null");
+            $.versionedExpr = Objects.requireNonNull($.versionedExpr, "expected parameter 'versionedExpr' to be non-null");
+            return $;
         }
     }
+
 }

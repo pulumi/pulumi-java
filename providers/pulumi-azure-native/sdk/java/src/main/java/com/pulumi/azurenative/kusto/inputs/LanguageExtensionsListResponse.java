@@ -24,48 +24,48 @@ public final class LanguageExtensionsListResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="value")
-      private final @Nullable List<LanguageExtensionResponse> value;
+    private @Nullable List<LanguageExtensionResponse> value;
 
-    public List<LanguageExtensionResponse> value() {
-        return this.value == null ? List.of() : this.value;
+    public Optional<List<LanguageExtensionResponse>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public LanguageExtensionsListResponse(@Nullable List<LanguageExtensionResponse> value) {
-        this.value = value;
-    }
+    private LanguageExtensionsListResponse() {}
 
-    private LanguageExtensionsListResponse() {
-        this.value = List.of();
+    private LanguageExtensionsListResponse(LanguageExtensionsListResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LanguageExtensionsListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<LanguageExtensionResponse> value;
+        private LanguageExtensionsListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LanguageExtensionsListResponse();
         }
 
         public Builder(LanguageExtensionsListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new LanguageExtensionsListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable List<LanguageExtensionResponse> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
+
         public Builder value(LanguageExtensionResponse... value) {
             return value(List.of(value));
-        }        public LanguageExtensionsListResponse build() {
-            return new LanguageExtensionsListResponse(value);
+        }
+
+        public LanguageExtensionsListResponse build() {
+            return $;
         }
     }
+
 }

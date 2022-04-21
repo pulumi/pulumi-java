@@ -5,11 +5,11 @@ package com.pulumi.awsnative.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
      * 
      */
     @Import(name="all")
-      private final @Nullable Output<Object> all;
+    private @Nullable Output<Object> all;
 
-    public Output<Object> all() {
-        return this.all == null ? Codegen.empty() : this.all;
+    public Optional<Output<Object>> all() {
+        return Optional.ofNullable(this.all);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
      * 
      */
     @Import(name="includedPaths")
-      private final @Nullable Output<List<String>> includedPaths;
+    private @Nullable Output<List<String>> includedPaths;
 
-    public Output<List<String>> includedPaths() {
-        return this.includedPaths == null ? Codegen.empty() : this.includedPaths;
+    public Optional<Output<List<String>>> includedPaths() {
+        return Optional.ofNullable(this.includedPaths);
     }
 
-    public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(
-        @Nullable Output<Object> all,
-        @Nullable Output<List<String>> includedPaths) {
-        this.all = all;
-        this.includedPaths = includedPaths;
-    }
+    private LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs() {}
 
-    private LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs() {
-        this.all = Codegen.empty();
-        this.includedPaths = Codegen.empty();
+    private LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs $) {
+        this.all = $.all;
+        this.includedPaths = $.includedPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> all;
-        private @Nullable Output<List<String>> includedPaths;
+        private LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs();
         }
 
         public Builder(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.all = defaults.all;
-    	      this.includedPaths = defaults.includedPaths;
+            $ = new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder all(@Nullable Output<Object> all) {
-            this.all = all;
+            $.all = all;
             return this;
         }
-        public Builder all(@Nullable Object all) {
-            this.all = Codegen.ofNullable(all);
-            return this;
+
+        public Builder all(Object all) {
+            return all(Output.of(all));
         }
+
         public Builder includedPaths(@Nullable Output<List<String>> includedPaths) {
-            this.includedPaths = includedPaths;
+            $.includedPaths = includedPaths;
             return this;
         }
-        public Builder includedPaths(@Nullable List<String> includedPaths) {
-            this.includedPaths = Codegen.ofNullable(includedPaths);
-            return this;
+
+        public Builder includedPaths(List<String> includedPaths) {
+            return includedPaths(Output.of(includedPaths));
         }
+
         public Builder includedPaths(String... includedPaths) {
             return includedPaths(List.of(includedPaths));
-        }        public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs build() {
-            return new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(all, includedPaths);
+        }
+
+        public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs build() {
+            return $;
         }
     }
+
 }

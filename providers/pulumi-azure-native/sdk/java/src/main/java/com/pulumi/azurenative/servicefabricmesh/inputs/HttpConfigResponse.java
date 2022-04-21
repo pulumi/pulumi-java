@@ -24,7 +24,7 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hosts", required=true)
-      private final List<HttpHostConfigResponse> hosts;
+    private List<HttpHostConfigResponse> hosts;
 
     public List<HttpHostConfigResponse> hosts() {
         return this.hosts;
@@ -35,7 +35,7 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -46,67 +46,63 @@ public final class HttpConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public HttpConfigResponse(
-        List<HttpHostConfigResponse> hosts,
-        String name,
-        Integer port) {
-        this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private HttpConfigResponse() {}
 
-    private HttpConfigResponse() {
-        this.hosts = List.of();
-        this.name = null;
-        this.port = null;
+    private HttpConfigResponse(HttpConfigResponse $) {
+        this.hosts = $.hosts;
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<HttpHostConfigResponse> hosts;
-        private String name;
-        private Integer port;
+        private HttpConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpConfigResponse();
         }
 
         public Builder(HttpConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hosts = defaults.hosts;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new HttpConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hosts(List<HttpHostConfigResponse> hosts) {
-            this.hosts = Objects.requireNonNull(hosts);
+            $.hosts = hosts;
             return this;
         }
+
         public Builder hosts(HttpHostConfigResponse... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public HttpConfigResponse build() {
-            return new HttpConfigResponse(hosts, name, port);
+        }
+
+        public HttpConfigResponse build() {
+            $.hosts = Objects.requireNonNull($.hosts, "expected parameter 'hosts' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

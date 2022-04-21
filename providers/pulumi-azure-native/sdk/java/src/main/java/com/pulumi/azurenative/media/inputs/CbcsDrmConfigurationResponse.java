@@ -25,10 +25,10 @@ public final class CbcsDrmConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="fairPlay")
-      private final @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
+    private @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
 
     public Optional<StreamingPolicyFairPlayConfigurationResponse> fairPlay() {
-        return this.fairPlay == null ? Optional.empty() : Optional.ofNullable(this.fairPlay);
+        return Optional.ofNullable(this.fairPlay);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CbcsDrmConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="playReady")
-      private final @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
+    private @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
 
     public Optional<StreamingPolicyPlayReadyConfigurationResponse> playReady() {
-        return this.playReady == null ? Optional.empty() : Optional.ofNullable(this.playReady);
+        return Optional.ofNullable(this.playReady);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class CbcsDrmConfigurationResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="widevine")
-      private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
+    private @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
     public Optional<StreamingPolicyWidevineConfigurationResponse> widevine() {
-        return this.widevine == null ? Optional.empty() : Optional.ofNullable(this.widevine);
+        return Optional.ofNullable(this.widevine);
     }
 
-    public CbcsDrmConfigurationResponse(
-        @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay,
-        @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
-        @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
-        this.fairPlay = fairPlay;
-        this.playReady = playReady;
-        this.widevine = widevine;
-    }
+    private CbcsDrmConfigurationResponse() {}
 
-    private CbcsDrmConfigurationResponse() {
-        this.fairPlay = null;
-        this.playReady = null;
-        this.widevine = null;
+    private CbcsDrmConfigurationResponse(CbcsDrmConfigurationResponse $) {
+        this.fairPlay = $.fairPlay;
+        this.playReady = $.playReady;
+        this.widevine = $.widevine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CbcsDrmConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay;
-        private @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady;
-        private @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
+        private CbcsDrmConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CbcsDrmConfigurationResponse();
         }
 
         public Builder(CbcsDrmConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fairPlay = defaults.fairPlay;
-    	      this.playReady = defaults.playReady;
-    	      this.widevine = defaults.widevine;
+            $ = new CbcsDrmConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fairPlay(@Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay) {
-            this.fairPlay = fairPlay;
+            $.fairPlay = fairPlay;
             return this;
         }
+
         public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
-            this.playReady = playReady;
+            $.playReady = playReady;
             return this;
         }
+
         public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
-            this.widevine = widevine;
+            $.widevine = widevine;
             return this;
-        }        public CbcsDrmConfigurationResponse build() {
-            return new CbcsDrmConfigurationResponse(fairPlay, playReady, widevine);
+        }
+
+        public CbcsDrmConfigurationResponse build() {
+            return $;
         }
     }
+
 }

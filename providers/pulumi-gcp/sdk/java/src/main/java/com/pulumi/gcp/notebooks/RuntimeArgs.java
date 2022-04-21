@@ -5,12 +5,12 @@ package com.pulumi.gcp.notebooks;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessConfig")
-      private final @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
+    private @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
 
-    public Output<RuntimeAccessConfigArgs> accessConfig() {
-        return this.accessConfig == null ? Codegen.empty() : this.accessConfig;
+    public Optional<Output<RuntimeAccessConfigArgs>> accessConfig() {
+        return Optional.ofNullable(this.accessConfig);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -46,10 +46,10 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="softwareConfig")
-      private final @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
+    private @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
 
-    public Output<RuntimeSoftwareConfigArgs> softwareConfig() {
-        return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
+    public Optional<Output<RuntimeSoftwareConfigArgs>> softwareConfig() {
+        return Optional.ofNullable(this.softwareConfig);
     }
 
     /**
@@ -82,115 +82,99 @@ public final class RuntimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualMachine")
-      private final @Nullable Output<RuntimeVirtualMachineArgs> virtualMachine;
+    private @Nullable Output<RuntimeVirtualMachineArgs> virtualMachine;
 
-    public Output<RuntimeVirtualMachineArgs> virtualMachine() {
-        return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
+    public Optional<Output<RuntimeVirtualMachineArgs>> virtualMachine() {
+        return Optional.ofNullable(this.virtualMachine);
     }
 
-    public RuntimeArgs(
-        @Nullable Output<RuntimeAccessConfigArgs> accessConfig,
-        Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig,
-        @Nullable Output<RuntimeVirtualMachineArgs> virtualMachine) {
-        this.accessConfig = accessConfig;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.softwareConfig = softwareConfig;
-        this.virtualMachine = virtualMachine;
-    }
+    private RuntimeArgs() {}
 
-    private RuntimeArgs() {
-        this.accessConfig = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.softwareConfig = Codegen.empty();
-        this.virtualMachine = Codegen.empty();
+    private RuntimeArgs(RuntimeArgs $) {
+        this.accessConfig = $.accessConfig;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.softwareConfig = $.softwareConfig;
+        this.virtualMachine = $.virtualMachine;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
-        private Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
-        private @Nullable Output<RuntimeVirtualMachineArgs> virtualMachine;
+        private RuntimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeArgs();
         }
 
         public Builder(RuntimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessConfig = defaults.accessConfig;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.softwareConfig = defaults.softwareConfig;
-    	      this.virtualMachine = defaults.virtualMachine;
+            $ = new RuntimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessConfig(@Nullable Output<RuntimeAccessConfigArgs> accessConfig) {
-            this.accessConfig = accessConfig;
+            $.accessConfig = accessConfig;
             return this;
         }
-        public Builder accessConfig(@Nullable RuntimeAccessConfigArgs accessConfig) {
-            this.accessConfig = Codegen.ofNullable(accessConfig);
-            return this;
+
+        public Builder accessConfig(RuntimeAccessConfigArgs accessConfig) {
+            return accessConfig(Output.of(accessConfig));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig) {
-            this.softwareConfig = softwareConfig;
+            $.softwareConfig = softwareConfig;
             return this;
         }
-        public Builder softwareConfig(@Nullable RuntimeSoftwareConfigArgs softwareConfig) {
-            this.softwareConfig = Codegen.ofNullable(softwareConfig);
-            return this;
+
+        public Builder softwareConfig(RuntimeSoftwareConfigArgs softwareConfig) {
+            return softwareConfig(Output.of(softwareConfig));
         }
+
         public Builder virtualMachine(@Nullable Output<RuntimeVirtualMachineArgs> virtualMachine) {
-            this.virtualMachine = virtualMachine;
+            $.virtualMachine = virtualMachine;
             return this;
         }
-        public Builder virtualMachine(@Nullable RuntimeVirtualMachineArgs virtualMachine) {
-            this.virtualMachine = Codegen.ofNullable(virtualMachine);
-            return this;
-        }        public RuntimeArgs build() {
-            return new RuntimeArgs(accessConfig, location, name, project, softwareConfig, virtualMachine);
+
+        public Builder virtualMachine(RuntimeVirtualMachineArgs virtualMachine) {
+            return virtualMachine(Output.of(virtualMachine));
+        }
+
+        public RuntimeArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.compute.inputs;
 import com.pulumi.azurenative.compute.inputs.ExtensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class CloudServiceExtensionProfileArgs extends com.pulumi.resources
      * 
      */
     @Import(name="extensions")
-      private final @Nullable Output<List<ExtensionArgs>> extensions;
+    private @Nullable Output<List<ExtensionArgs>> extensions;
 
-    public Output<List<ExtensionArgs>> extensions() {
-        return this.extensions == null ? Codegen.empty() : this.extensions;
+    public Optional<Output<List<ExtensionArgs>>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
-    public CloudServiceExtensionProfileArgs(@Nullable Output<List<ExtensionArgs>> extensions) {
-        this.extensions = extensions;
-    }
+    private CloudServiceExtensionProfileArgs() {}
 
-    private CloudServiceExtensionProfileArgs() {
-        this.extensions = Codegen.empty();
+    private CloudServiceExtensionProfileArgs(CloudServiceExtensionProfileArgs $) {
+        this.extensions = $.extensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceExtensionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ExtensionArgs>> extensions;
+        private CloudServiceExtensionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceExtensionProfileArgs();
         }
 
         public Builder(CloudServiceExtensionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensions = defaults.extensions;
+            $ = new CloudServiceExtensionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extensions(@Nullable Output<List<ExtensionArgs>> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
-        public Builder extensions(@Nullable List<ExtensionArgs> extensions) {
-            this.extensions = Codegen.ofNullable(extensions);
-            return this;
+
+        public Builder extensions(List<ExtensionArgs> extensions) {
+            return extensions(Output.of(extensions));
         }
+
         public Builder extensions(ExtensionArgs... extensions) {
             return extensions(List.of(extensions));
-        }        public CloudServiceExtensionProfileArgs build() {
-            return new CloudServiceExtensionProfileArgs(extensions);
+        }
+
+        public CloudServiceExtensionProfileArgs build() {
+            return $;
         }
     }
+
 }

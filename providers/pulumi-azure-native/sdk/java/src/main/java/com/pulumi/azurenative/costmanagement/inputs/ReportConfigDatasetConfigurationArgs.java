@@ -5,10 +5,10 @@ package com.pulumi.azurenative.costmanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ReportConfigDatasetConfigurationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<List<String>> columns;
+    private @Nullable Output<List<String>> columns;
 
-    public Output<List<String>> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<List<String>>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
-    public ReportConfigDatasetConfigurationArgs(@Nullable Output<List<String>> columns) {
-        this.columns = columns;
-    }
+    private ReportConfigDatasetConfigurationArgs() {}
 
-    private ReportConfigDatasetConfigurationArgs() {
-        this.columns = Codegen.empty();
+    private ReportConfigDatasetConfigurationArgs(ReportConfigDatasetConfigurationArgs $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportConfigDatasetConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> columns;
+        private ReportConfigDatasetConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportConfigDatasetConfigurationArgs();
         }
 
         public Builder(ReportConfigDatasetConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new ReportConfigDatasetConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable Output<List<String>> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable List<String> columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(List<String> columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder columns(String... columns) {
             return columns(List.of(columns));
-        }        public ReportConfigDatasetConfigurationArgs build() {
-            return new ReportConfigDatasetConfigurationArgs(columns);
+        }
+
+        public ReportConfigDatasetConfigurationArgs build() {
+            return $;
         }
     }
+
 }

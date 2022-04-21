@@ -6,9 +6,9 @@ package com.pulumi.aws.ecs.inputs;
 import com.pulumi.aws.ecs.inputs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * 
      */
     @Import(name="logConfiguration")
-      private final @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
+    private @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
 
-    public Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration() {
-        return this.logConfiguration == null ? Codegen.empty() : this.logConfiguration;
+    public Optional<Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs>> logConfiguration() {
+        return Optional.ofNullable(this.logConfiguration);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
      * 
      */
     @Import(name="logging")
-      private final @Nullable Output<String> logging;
+    private @Nullable Output<String> logging;
 
-    public Output<String> logging() {
-        return this.logging == null ? Codegen.empty() : this.logging;
+    public Optional<Output<String>> logging() {
+        return Optional.ofNullable(this.logging);
     }
 
-    public ClusterConfigurationExecuteCommandConfigurationGetArgs(
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration,
-        @Nullable Output<String> logging) {
-        this.kmsKeyId = kmsKeyId;
-        this.logConfiguration = logConfiguration;
-        this.logging = logging;
-    }
+    private ClusterConfigurationExecuteCommandConfigurationGetArgs() {}
 
-    private ClusterConfigurationExecuteCommandConfigurationGetArgs() {
-        this.kmsKeyId = Codegen.empty();
-        this.logConfiguration = Codegen.empty();
-        this.logging = Codegen.empty();
+    private ClusterConfigurationExecuteCommandConfigurationGetArgs(ClusterConfigurationExecuteCommandConfigurationGetArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.logConfiguration = $.logConfiguration;
+        this.logging = $.logging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterConfigurationExecuteCommandConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
-        private @Nullable Output<String> logging;
+        private ClusterConfigurationExecuteCommandConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterConfigurationExecuteCommandConfigurationGetArgs();
         }
 
         public Builder(ClusterConfigurationExecuteCommandConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.logConfiguration = defaults.logConfiguration;
-    	      this.logging = defaults.logging;
+            $ = new ClusterConfigurationExecuteCommandConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder logConfiguration(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration) {
-            this.logConfiguration = logConfiguration;
+            $.logConfiguration = logConfiguration;
             return this;
         }
-        public Builder logConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs logConfiguration) {
-            this.logConfiguration = Codegen.ofNullable(logConfiguration);
-            return this;
+
+        public Builder logConfiguration(ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs logConfiguration) {
+            return logConfiguration(Output.of(logConfiguration));
         }
+
         public Builder logging(@Nullable Output<String> logging) {
-            this.logging = logging;
+            $.logging = logging;
             return this;
         }
-        public Builder logging(@Nullable String logging) {
-            this.logging = Codegen.ofNullable(logging);
-            return this;
-        }        public ClusterConfigurationExecuteCommandConfigurationGetArgs build() {
-            return new ClusterConfigurationExecuteCommandConfigurationGetArgs(kmsKeyId, logConfiguration, logging);
+
+        public Builder logging(String logging) {
+            return logging(Output.of(logging));
+        }
+
+        public ClusterConfigurationExecuteCommandConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

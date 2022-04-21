@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends com.pulumi.re
      * 
      */
     @Import(name="operation")
-      private final @Nullable Output<String> operation;
+    private @Nullable Output<String> operation;
 
-    public Output<String> operation() {
-        return this.operation == null ? Codegen.empty() : this.operation;
+    public Optional<Output<String>> operation() {
+        return Optional.ofNullable(this.operation);
     }
 
     /**
@@ -36,66 +36,63 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends com.pulumi.re
      * 
      */
     @Import(name="operationTypes", required=true)
-      private final Output<List<String>> operationTypes;
+    private Output<List<String>> operationTypes;
 
     public Output<List<String>> operationTypes() {
         return this.operationTypes;
     }
 
-    public GoogleCloudApigeeV1GraphQLOperationArgs(
-        @Nullable Output<String> operation,
-        Output<List<String>> operationTypes) {
-        this.operation = operation;
-        this.operationTypes = Objects.requireNonNull(operationTypes, "expected parameter 'operationTypes' to be non-null");
-    }
+    private GoogleCloudApigeeV1GraphQLOperationArgs() {}
 
-    private GoogleCloudApigeeV1GraphQLOperationArgs() {
-        this.operation = Codegen.empty();
-        this.operationTypes = Codegen.empty();
+    private GoogleCloudApigeeV1GraphQLOperationArgs(GoogleCloudApigeeV1GraphQLOperationArgs $) {
+        this.operation = $.operation;
+        this.operationTypes = $.operationTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1GraphQLOperationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> operation;
-        private Output<List<String>> operationTypes;
+        private GoogleCloudApigeeV1GraphQLOperationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1GraphQLOperationArgs();
         }
 
         public Builder(GoogleCloudApigeeV1GraphQLOperationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operation = defaults.operation;
-    	      this.operationTypes = defaults.operationTypes;
+            $ = new GoogleCloudApigeeV1GraphQLOperationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operation(@Nullable Output<String> operation) {
-            this.operation = operation;
+            $.operation = operation;
             return this;
         }
-        public Builder operation(@Nullable String operation) {
-            this.operation = Codegen.ofNullable(operation);
-            return this;
+
+        public Builder operation(String operation) {
+            return operation(Output.of(operation));
         }
+
         public Builder operationTypes(Output<List<String>> operationTypes) {
-            this.operationTypes = Objects.requireNonNull(operationTypes);
+            $.operationTypes = operationTypes;
             return this;
         }
+
         public Builder operationTypes(List<String> operationTypes) {
-            this.operationTypes = Output.of(Objects.requireNonNull(operationTypes));
-            return this;
+            return operationTypes(Output.of(operationTypes));
         }
+
         public Builder operationTypes(String... operationTypes) {
             return operationTypes(List.of(operationTypes));
-        }        public GoogleCloudApigeeV1GraphQLOperationArgs build() {
-            return new GoogleCloudApigeeV1GraphQLOperationArgs(operation, operationTypes);
+        }
+
+        public GoogleCloudApigeeV1GraphQLOperationArgs build() {
+            $.operationTypes = Objects.requireNonNull($.operationTypes, "expected parameter 'operationTypes' to be non-null");
+            return $;
         }
     }
+
 }

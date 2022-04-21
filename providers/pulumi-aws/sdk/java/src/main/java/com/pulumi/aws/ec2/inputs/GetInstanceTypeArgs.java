@@ -25,10 +25,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultCores")
-      private final @Nullable Integer defaultCores;
+    private @Nullable Integer defaultCores;
 
     public Optional<Integer> defaultCores() {
-        return this.defaultCores == null ? Optional.empty() : Optional.ofNullable(this.defaultCores);
+        return Optional.ofNullable(this.defaultCores);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultThreadsPerCore")
-      private final @Nullable Integer defaultThreadsPerCore;
+    private @Nullable Integer defaultThreadsPerCore;
 
     public Optional<Integer> defaultThreadsPerCore() {
-        return this.defaultThreadsPerCore == null ? Optional.empty() : Optional.ofNullable(this.defaultThreadsPerCore);
+        return Optional.ofNullable(this.defaultThreadsPerCore);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fpgas")
-      private final @Nullable List<GetInstanceTypeFpga> fpgas;
+    private @Nullable List<GetInstanceTypeFpga> fpgas;
 
-    public List<GetInstanceTypeFpga> fpgas() {
-        return this.fpgas == null ? List.of() : this.fpgas;
+    public Optional<List<GetInstanceTypeFpga>> fpgas() {
+        return Optional.ofNullable(this.fpgas);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gpuses")
-      private final @Nullable List<GetInstanceTypeGpus> gpuses;
+    private @Nullable List<GetInstanceTypeGpus> gpuses;
 
-    public List<GetInstanceTypeGpus> gpuses() {
-        return this.gpuses == null ? List.of() : this.gpuses;
+    public Optional<List<GetInstanceTypeGpus>> gpuses() {
+        return Optional.ofNullable(this.gpuses);
     }
 
     /**
@@ -81,17 +81,17 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hypervisor")
-      private final @Nullable String hypervisor;
+    private @Nullable String hypervisor;
 
     public Optional<String> hypervisor() {
-        return this.hypervisor == null ? Optional.empty() : Optional.ofNullable(this.hypervisor);
+        return Optional.ofNullable(this.hypervisor);
     }
 
     @Import(name="inferenceAccelerators")
-      private final @Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators;
+    private @Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators;
 
-    public List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators() {
-        return this.inferenceAccelerators == null ? List.of() : this.inferenceAccelerators;
+    public Optional<List<GetInstanceTypeInferenceAccelerator>> inferenceAccelerators() {
+        return Optional.ofNullable(this.inferenceAccelerators);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceDisks")
-      private final @Nullable List<GetInstanceTypeInstanceDisk> instanceDisks;
+    private @Nullable List<GetInstanceTypeInstanceDisk> instanceDisks;
 
-    public List<GetInstanceTypeInstanceDisk> instanceDisks() {
-        return this.instanceDisks == null ? List.of() : this.instanceDisks;
+    public Optional<List<GetInstanceTypeInstanceDisk>> instanceDisks() {
+        return Optional.ofNullable(this.instanceDisks);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -124,10 +124,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maximumIpv6AddressesPerInterface")
-      private final @Nullable Integer maximumIpv6AddressesPerInterface;
+    private @Nullable Integer maximumIpv6AddressesPerInterface;
 
     public Optional<Integer> maximumIpv6AddressesPerInterface() {
-        return this.maximumIpv6AddressesPerInterface == null ? Optional.empty() : Optional.ofNullable(this.maximumIpv6AddressesPerInterface);
+        return Optional.ofNullable(this.maximumIpv6AddressesPerInterface);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="totalFpgaMemory")
-      private final @Nullable Integer totalFpgaMemory;
+    private @Nullable Integer totalFpgaMemory;
 
     public Optional<Integer> totalFpgaMemory() {
-        return this.totalFpgaMemory == null ? Optional.empty() : Optional.ofNullable(this.totalFpgaMemory);
+        return Optional.ofNullable(this.totalFpgaMemory);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="totalGpuMemory")
-      private final @Nullable Integer totalGpuMemory;
+    private @Nullable Integer totalGpuMemory;
 
     public Optional<Integer> totalGpuMemory() {
-        return this.totalGpuMemory == null ? Optional.empty() : Optional.ofNullable(this.totalGpuMemory);
+        return Optional.ofNullable(this.totalGpuMemory);
     }
 
     /**
@@ -157,157 +157,127 @@ public final class GetInstanceTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="totalInstanceStorage")
-      private final @Nullable Integer totalInstanceStorage;
+    private @Nullable Integer totalInstanceStorage;
 
     public Optional<Integer> totalInstanceStorage() {
-        return this.totalInstanceStorage == null ? Optional.empty() : Optional.ofNullable(this.totalInstanceStorage);
+        return Optional.ofNullable(this.totalInstanceStorage);
     }
 
-    public GetInstanceTypeArgs(
-        @Nullable Integer defaultCores,
-        @Nullable Integer defaultThreadsPerCore,
-        @Nullable List<GetInstanceTypeFpga> fpgas,
-        @Nullable List<GetInstanceTypeGpus> gpuses,
-        @Nullable String hypervisor,
-        @Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators,
-        @Nullable List<GetInstanceTypeInstanceDisk> instanceDisks,
-        String instanceType,
-        @Nullable Integer maximumIpv6AddressesPerInterface,
-        @Nullable Integer totalFpgaMemory,
-        @Nullable Integer totalGpuMemory,
-        @Nullable Integer totalInstanceStorage) {
-        this.defaultCores = defaultCores;
-        this.defaultThreadsPerCore = defaultThreadsPerCore;
-        this.fpgas = fpgas;
-        this.gpuses = gpuses;
-        this.hypervisor = hypervisor;
-        this.inferenceAccelerators = inferenceAccelerators;
-        this.instanceDisks = instanceDisks;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.maximumIpv6AddressesPerInterface = maximumIpv6AddressesPerInterface;
-        this.totalFpgaMemory = totalFpgaMemory;
-        this.totalGpuMemory = totalGpuMemory;
-        this.totalInstanceStorage = totalInstanceStorage;
-    }
+    private GetInstanceTypeArgs() {}
 
-    private GetInstanceTypeArgs() {
-        this.defaultCores = null;
-        this.defaultThreadsPerCore = null;
-        this.fpgas = List.of();
-        this.gpuses = List.of();
-        this.hypervisor = null;
-        this.inferenceAccelerators = List.of();
-        this.instanceDisks = List.of();
-        this.instanceType = null;
-        this.maximumIpv6AddressesPerInterface = null;
-        this.totalFpgaMemory = null;
-        this.totalGpuMemory = null;
-        this.totalInstanceStorage = null;
+    private GetInstanceTypeArgs(GetInstanceTypeArgs $) {
+        this.defaultCores = $.defaultCores;
+        this.defaultThreadsPerCore = $.defaultThreadsPerCore;
+        this.fpgas = $.fpgas;
+        this.gpuses = $.gpuses;
+        this.hypervisor = $.hypervisor;
+        this.inferenceAccelerators = $.inferenceAccelerators;
+        this.instanceDisks = $.instanceDisks;
+        this.instanceType = $.instanceType;
+        this.maximumIpv6AddressesPerInterface = $.maximumIpv6AddressesPerInterface;
+        this.totalFpgaMemory = $.totalFpgaMemory;
+        this.totalGpuMemory = $.totalGpuMemory;
+        this.totalInstanceStorage = $.totalInstanceStorage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer defaultCores;
-        private @Nullable Integer defaultThreadsPerCore;
-        private @Nullable List<GetInstanceTypeFpga> fpgas;
-        private @Nullable List<GetInstanceTypeGpus> gpuses;
-        private @Nullable String hypervisor;
-        private @Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators;
-        private @Nullable List<GetInstanceTypeInstanceDisk> instanceDisks;
-        private String instanceType;
-        private @Nullable Integer maximumIpv6AddressesPerInterface;
-        private @Nullable Integer totalFpgaMemory;
-        private @Nullable Integer totalGpuMemory;
-        private @Nullable Integer totalInstanceStorage;
+        private GetInstanceTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTypeArgs();
         }
 
         public Builder(GetInstanceTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultCores = defaults.defaultCores;
-    	      this.defaultThreadsPerCore = defaults.defaultThreadsPerCore;
-    	      this.fpgas = defaults.fpgas;
-    	      this.gpuses = defaults.gpuses;
-    	      this.hypervisor = defaults.hypervisor;
-    	      this.inferenceAccelerators = defaults.inferenceAccelerators;
-    	      this.instanceDisks = defaults.instanceDisks;
-    	      this.instanceType = defaults.instanceType;
-    	      this.maximumIpv6AddressesPerInterface = defaults.maximumIpv6AddressesPerInterface;
-    	      this.totalFpgaMemory = defaults.totalFpgaMemory;
-    	      this.totalGpuMemory = defaults.totalGpuMemory;
-    	      this.totalInstanceStorage = defaults.totalInstanceStorage;
+            $ = new GetInstanceTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultCores(@Nullable Integer defaultCores) {
-            this.defaultCores = defaultCores;
+            $.defaultCores = defaultCores;
             return this;
         }
+
         public Builder defaultThreadsPerCore(@Nullable Integer defaultThreadsPerCore) {
-            this.defaultThreadsPerCore = defaultThreadsPerCore;
+            $.defaultThreadsPerCore = defaultThreadsPerCore;
             return this;
         }
+
         public Builder fpgas(@Nullable List<GetInstanceTypeFpga> fpgas) {
-            this.fpgas = fpgas;
+            $.fpgas = fpgas;
             return this;
         }
+
         public Builder fpgas(GetInstanceTypeFpga... fpgas) {
             return fpgas(List.of(fpgas));
         }
+
         public Builder gpuses(@Nullable List<GetInstanceTypeGpus> gpuses) {
-            this.gpuses = gpuses;
+            $.gpuses = gpuses;
             return this;
         }
+
         public Builder gpuses(GetInstanceTypeGpus... gpuses) {
             return gpuses(List.of(gpuses));
         }
+
         public Builder hypervisor(@Nullable String hypervisor) {
-            this.hypervisor = hypervisor;
+            $.hypervisor = hypervisor;
             return this;
         }
+
         public Builder inferenceAccelerators(@Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators) {
-            this.inferenceAccelerators = inferenceAccelerators;
+            $.inferenceAccelerators = inferenceAccelerators;
             return this;
         }
+
         public Builder inferenceAccelerators(GetInstanceTypeInferenceAccelerator... inferenceAccelerators) {
             return inferenceAccelerators(List.of(inferenceAccelerators));
         }
+
         public Builder instanceDisks(@Nullable List<GetInstanceTypeInstanceDisk> instanceDisks) {
-            this.instanceDisks = instanceDisks;
+            $.instanceDisks = instanceDisks;
             return this;
         }
+
         public Builder instanceDisks(GetInstanceTypeInstanceDisk... instanceDisks) {
             return instanceDisks(List.of(instanceDisks));
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder maximumIpv6AddressesPerInterface(@Nullable Integer maximumIpv6AddressesPerInterface) {
-            this.maximumIpv6AddressesPerInterface = maximumIpv6AddressesPerInterface;
+            $.maximumIpv6AddressesPerInterface = maximumIpv6AddressesPerInterface;
             return this;
         }
+
         public Builder totalFpgaMemory(@Nullable Integer totalFpgaMemory) {
-            this.totalFpgaMemory = totalFpgaMemory;
+            $.totalFpgaMemory = totalFpgaMemory;
             return this;
         }
+
         public Builder totalGpuMemory(@Nullable Integer totalGpuMemory) {
-            this.totalGpuMemory = totalGpuMemory;
+            $.totalGpuMemory = totalGpuMemory;
             return this;
         }
+
         public Builder totalInstanceStorage(@Nullable Integer totalInstanceStorage) {
-            this.totalInstanceStorage = totalInstanceStorage;
+            $.totalInstanceStorage = totalInstanceStorage;
             return this;
-        }        public GetInstanceTypeArgs build() {
-            return new GetInstanceTypeArgs(defaultCores, defaultThreadsPerCore, fpgas, gpuses, hypervisor, inferenceAccelerators, instanceDisks, instanceType, maximumIpv6AddressesPerInterface, totalFpgaMemory, totalGpuMemory, totalInstanceStorage);
+        }
+
+        public GetInstanceTypeArgs build() {
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

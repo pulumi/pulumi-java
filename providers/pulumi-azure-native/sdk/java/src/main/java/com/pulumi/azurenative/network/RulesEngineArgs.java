@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.RulesEngineRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="frontDoorName", required=true)
-      private final Output<String> frontDoorName;
+    private Output<String> frontDoorName;
 
     public Output<String> frontDoorName() {
         return this.frontDoorName;
@@ -33,7 +33,7 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -44,10 +44,10 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<RulesEngineRuleArgs>> rules;
+    private @Nullable Output<List<RulesEngineRuleArgs>> rules;
 
-    public Output<List<RulesEngineRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<RulesEngineRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -55,92 +55,84 @@ public final class RulesEngineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rulesEngineName")
-      private final @Nullable Output<String> rulesEngineName;
+    private @Nullable Output<String> rulesEngineName;
 
-    public Output<String> rulesEngineName() {
-        return this.rulesEngineName == null ? Codegen.empty() : this.rulesEngineName;
+    public Optional<Output<String>> rulesEngineName() {
+        return Optional.ofNullable(this.rulesEngineName);
     }
 
-    public RulesEngineArgs(
-        Output<String> frontDoorName,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<RulesEngineRuleArgs>> rules,
-        @Nullable Output<String> rulesEngineName) {
-        this.frontDoorName = Objects.requireNonNull(frontDoorName, "expected parameter 'frontDoorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.rules = rules;
-        this.rulesEngineName = rulesEngineName;
-    }
+    private RulesEngineArgs() {}
 
-    private RulesEngineArgs() {
-        this.frontDoorName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.rulesEngineName = Codegen.empty();
+    private RulesEngineArgs(RulesEngineArgs $) {
+        this.frontDoorName = $.frontDoorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.rules = $.rules;
+        this.rulesEngineName = $.rulesEngineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesEngineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> frontDoorName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<RulesEngineRuleArgs>> rules;
-        private @Nullable Output<String> rulesEngineName;
+        private RulesEngineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesEngineArgs();
         }
 
         public Builder(RulesEngineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.frontDoorName = defaults.frontDoorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.rules = defaults.rules;
-    	      this.rulesEngineName = defaults.rulesEngineName;
+            $ = new RulesEngineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder frontDoorName(Output<String> frontDoorName) {
-            this.frontDoorName = Objects.requireNonNull(frontDoorName);
+            $.frontDoorName = frontDoorName;
             return this;
         }
+
         public Builder frontDoorName(String frontDoorName) {
-            this.frontDoorName = Output.of(Objects.requireNonNull(frontDoorName));
-            return this;
+            return frontDoorName(Output.of(frontDoorName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder rules(@Nullable Output<List<RulesEngineRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<RulesEngineRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<RulesEngineRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(RulesEngineRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder rulesEngineName(@Nullable Output<String> rulesEngineName) {
-            this.rulesEngineName = rulesEngineName;
+            $.rulesEngineName = rulesEngineName;
             return this;
         }
-        public Builder rulesEngineName(@Nullable String rulesEngineName) {
-            this.rulesEngineName = Codegen.ofNullable(rulesEngineName);
-            return this;
-        }        public RulesEngineArgs build() {
-            return new RulesEngineArgs(frontDoorName, resourceGroupName, rules, rulesEngineName);
+
+        public Builder rulesEngineName(String rulesEngineName) {
+            return rulesEngineName(Output.of(rulesEngineName));
+        }
+
+        public RulesEngineArgs build() {
+            $.frontDoorName = Objects.requireNonNull($.frontDoorName, "expected parameter 'frontDoorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

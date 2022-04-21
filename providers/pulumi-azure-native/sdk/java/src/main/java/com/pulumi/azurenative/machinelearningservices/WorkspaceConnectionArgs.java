@@ -7,9 +7,9 @@ import com.pulumi.azurenative.machinelearningservices.enums.ValueFormat;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="authType")
-      private final @Nullable Output<String> authType;
+    private @Nullable Output<String> authType;
 
-    public Output<String> authType() {
-        return this.authType == null ? Codegen.empty() : this.authType;
+    public Optional<Output<String>> authType() {
+        return Optional.ofNullable(this.authType);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="category")
-      private final @Nullable Output<String> category;
+    private @Nullable Output<String> category;
 
-    public Output<String> category() {
-        return this.category == null ? Codegen.empty() : this.category;
+    public Optional<Output<String>> category() {
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="connectionName")
-      private final @Nullable Output<String> connectionName;
+    private @Nullable Output<String> connectionName;
 
-    public Output<String> connectionName() {
-        return this.connectionName == null ? Codegen.empty() : this.connectionName;
+    public Optional<Output<String>> connectionName() {
+        return Optional.ofNullable(this.connectionName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,10 +77,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="valueFormat")
-      private final @Nullable Output<Either<String,ValueFormat>> valueFormat;
+    private @Nullable Output<Either<String,ValueFormat>> valueFormat;
 
-    public Output<Either<String,ValueFormat>> valueFormat() {
-        return this.valueFormat == null ? Codegen.empty() : this.valueFormat;
+    public Optional<Output<Either<String,ValueFormat>>> valueFormat() {
+        return Optional.ofNullable(this.valueFormat);
     }
 
     /**
@@ -110,154 +110,130 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public WorkspaceConnectionArgs(
-        @Nullable Output<String> authType,
-        @Nullable Output<String> category,
-        @Nullable Output<String> connectionName,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> target,
-        @Nullable Output<String> value,
-        @Nullable Output<Either<String,ValueFormat>> valueFormat,
-        Output<String> workspaceName) {
-        this.authType = authType;
-        this.category = category;
-        this.connectionName = connectionName;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.target = target;
-        this.value = value;
-        this.valueFormat = valueFormat;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private WorkspaceConnectionArgs() {}
 
-    private WorkspaceConnectionArgs() {
-        this.authType = Codegen.empty();
-        this.category = Codegen.empty();
-        this.connectionName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.target = Codegen.empty();
-        this.value = Codegen.empty();
-        this.valueFormat = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private WorkspaceConnectionArgs(WorkspaceConnectionArgs $) {
+        this.authType = $.authType;
+        this.category = $.category;
+        this.connectionName = $.connectionName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.target = $.target;
+        this.value = $.value;
+        this.valueFormat = $.valueFormat;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authType;
-        private @Nullable Output<String> category;
-        private @Nullable Output<String> connectionName;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> target;
-        private @Nullable Output<String> value;
-        private @Nullable Output<Either<String,ValueFormat>> valueFormat;
-        private Output<String> workspaceName;
+        private WorkspaceConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceConnectionArgs();
         }
 
         public Builder(WorkspaceConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
-    	      this.category = defaults.category;
-    	      this.connectionName = defaults.connectionName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.target = defaults.target;
-    	      this.value = defaults.value;
-    	      this.valueFormat = defaults.valueFormat;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new WorkspaceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(@Nullable Output<String> authType) {
-            this.authType = authType;
+            $.authType = authType;
             return this;
         }
-        public Builder authType(@Nullable String authType) {
-            this.authType = Codegen.ofNullable(authType);
-            return this;
+
+        public Builder authType(String authType) {
+            return authType(Output.of(authType));
         }
+
         public Builder category(@Nullable Output<String> category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
-        public Builder category(@Nullable String category) {
-            this.category = Codegen.ofNullable(category);
-            return this;
+
+        public Builder category(String category) {
+            return category(Output.of(category));
         }
+
         public Builder connectionName(@Nullable Output<String> connectionName) {
-            this.connectionName = connectionName;
+            $.connectionName = connectionName;
             return this;
         }
-        public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Codegen.ofNullable(connectionName);
-            return this;
+
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder valueFormat(@Nullable Output<Either<String,ValueFormat>> valueFormat) {
-            this.valueFormat = valueFormat;
+            $.valueFormat = valueFormat;
             return this;
         }
-        public Builder valueFormat(@Nullable Either<String,ValueFormat> valueFormat) {
-            this.valueFormat = Codegen.ofNullable(valueFormat);
-            return this;
+
+        public Builder valueFormat(Either<String,ValueFormat> valueFormat) {
+            return valueFormat(Output.of(valueFormat));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public WorkspaceConnectionArgs build() {
-            return new WorkspaceConnectionArgs(authType, category, connectionName, name, resourceGroupName, target, value, valueFormat, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public WorkspaceConnectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

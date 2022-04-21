@@ -21,7 +21,7 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,7 +32,7 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,7 +43,7 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="subnetId", required=true)
-      private final String subnetId;
+    private String subnetId;
 
     public String subnetId() {
         return this.subnetId;
@@ -54,7 +54,7 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -65,82 +65,73 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="virtualNetworkRuleState", required=true)
-      private final String virtualNetworkRuleState;
+    private String virtualNetworkRuleState;
 
     public String virtualNetworkRuleState() {
         return this.virtualNetworkRuleState;
     }
 
-    public VirtualNetworkRuleResponse(
-        String id,
-        String name,
-        String subnetId,
-        String type,
-        String virtualNetworkRuleState) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.virtualNetworkRuleState = Objects.requireNonNull(virtualNetworkRuleState, "expected parameter 'virtualNetworkRuleState' to be non-null");
-    }
+    private VirtualNetworkRuleResponse() {}
 
-    private VirtualNetworkRuleResponse() {
-        this.id = null;
-        this.name = null;
-        this.subnetId = null;
-        this.type = null;
-        this.virtualNetworkRuleState = null;
+    private VirtualNetworkRuleResponse(VirtualNetworkRuleResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.subnetId = $.subnetId;
+        this.type = $.type;
+        this.virtualNetworkRuleState = $.virtualNetworkRuleState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private String subnetId;
-        private String type;
-        private String virtualNetworkRuleState;
+        private VirtualNetworkRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkRuleResponse();
         }
 
         public Builder(VirtualNetworkRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.subnetId = defaults.subnetId;
-    	      this.type = defaults.type;
-    	      this.virtualNetworkRuleState = defaults.virtualNetworkRuleState;
+            $ = new VirtualNetworkRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder virtualNetworkRuleState(String virtualNetworkRuleState) {
-            this.virtualNetworkRuleState = Objects.requireNonNull(virtualNetworkRuleState);
+            $.virtualNetworkRuleState = virtualNetworkRuleState;
             return this;
-        }        public VirtualNetworkRuleResponse build() {
-            return new VirtualNetworkRuleResponse(id, name, subnetId, type, virtualNetworkRuleState);
+        }
+
+        public VirtualNetworkRuleResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.virtualNetworkRuleState = Objects.requireNonNull($.virtualNetworkRuleState, "expected parameter 'virtualNetworkRuleState' to be non-null");
+            return $;
         }
     }
+
 }

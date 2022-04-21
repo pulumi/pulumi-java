@@ -5,10 +5,10 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CrawlerMongodbTargetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="connectionName", required=true)
-      private final Output<String> connectionName;
+    private Output<String> connectionName;
 
     public Output<String> connectionName() {
         return this.connectionName;
@@ -32,7 +32,7 @@ public final class CrawlerMongodbTargetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -43,76 +43,70 @@ public final class CrawlerMongodbTargetArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="scanAll")
-      private final @Nullable Output<Boolean> scanAll;
+    private @Nullable Output<Boolean> scanAll;
 
-    public Output<Boolean> scanAll() {
-        return this.scanAll == null ? Codegen.empty() : this.scanAll;
+    public Optional<Output<Boolean>> scanAll() {
+        return Optional.ofNullable(this.scanAll);
     }
 
-    public CrawlerMongodbTargetArgs(
-        Output<String> connectionName,
-        Output<String> path,
-        @Nullable Output<Boolean> scanAll) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.scanAll = scanAll;
-    }
+    private CrawlerMongodbTargetArgs() {}
 
-    private CrawlerMongodbTargetArgs() {
-        this.connectionName = Codegen.empty();
-        this.path = Codegen.empty();
-        this.scanAll = Codegen.empty();
+    private CrawlerMongodbTargetArgs(CrawlerMongodbTargetArgs $) {
+        this.connectionName = $.connectionName;
+        this.path = $.path;
+        this.scanAll = $.scanAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CrawlerMongodbTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectionName;
-        private Output<String> path;
-        private @Nullable Output<Boolean> scanAll;
+        private CrawlerMongodbTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CrawlerMongodbTargetArgs();
         }
 
         public Builder(CrawlerMongodbTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.path = defaults.path;
-    	      this.scanAll = defaults.scanAll;
+            $ = new CrawlerMongodbTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(Output<String> connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder connectionName(String connectionName) {
-            this.connectionName = Output.of(Objects.requireNonNull(connectionName));
-            return this;
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder scanAll(@Nullable Output<Boolean> scanAll) {
-            this.scanAll = scanAll;
+            $.scanAll = scanAll;
             return this;
         }
-        public Builder scanAll(@Nullable Boolean scanAll) {
-            this.scanAll = Codegen.ofNullable(scanAll);
-            return this;
-        }        public CrawlerMongodbTargetArgs build() {
-            return new CrawlerMongodbTargetArgs(connectionName, path, scanAll);
+
+        public Builder scanAll(Boolean scanAll) {
+            return scanAll(Output.of(scanAll));
+        }
+
+        public CrawlerMongodbTargetArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

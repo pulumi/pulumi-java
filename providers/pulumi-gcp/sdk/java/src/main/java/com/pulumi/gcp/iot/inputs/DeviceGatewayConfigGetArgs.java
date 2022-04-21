@@ -5,9 +5,9 @@ package com.pulumi.gcp.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DeviceGatewayConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="gatewayAuthMethod")
-      private final @Nullable Output<String> gatewayAuthMethod;
+    private @Nullable Output<String> gatewayAuthMethod;
 
-    public Output<String> gatewayAuthMethod() {
-        return this.gatewayAuthMethod == null ? Codegen.empty() : this.gatewayAuthMethod;
+    public Optional<Output<String>> gatewayAuthMethod() {
+        return Optional.ofNullable(this.gatewayAuthMethod);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeviceGatewayConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="gatewayType")
-      private final @Nullable Output<String> gatewayType;
+    private @Nullable Output<String> gatewayType;
 
-    public Output<String> gatewayType() {
-        return this.gatewayType == null ? Codegen.empty() : this.gatewayType;
+    public Optional<Output<String>> gatewayType() {
+        return Optional.ofNullable(this.gatewayType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DeviceGatewayConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="lastAccessedGatewayId")
-      private final @Nullable Output<String> lastAccessedGatewayId;
+    private @Nullable Output<String> lastAccessedGatewayId;
 
-    public Output<String> lastAccessedGatewayId() {
-        return this.lastAccessedGatewayId == null ? Codegen.empty() : this.lastAccessedGatewayId;
+    public Optional<Output<String>> lastAccessedGatewayId() {
+        return Optional.ofNullable(this.lastAccessedGatewayId);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class DeviceGatewayConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="lastAccessedGatewayTime")
-      private final @Nullable Output<String> lastAccessedGatewayTime;
+    private @Nullable Output<String> lastAccessedGatewayTime;
 
-    public Output<String> lastAccessedGatewayTime() {
-        return this.lastAccessedGatewayTime == null ? Codegen.empty() : this.lastAccessedGatewayTime;
+    public Optional<Output<String>> lastAccessedGatewayTime() {
+        return Optional.ofNullable(this.lastAccessedGatewayTime);
     }
 
-    public DeviceGatewayConfigGetArgs(
-        @Nullable Output<String> gatewayAuthMethod,
-        @Nullable Output<String> gatewayType,
-        @Nullable Output<String> lastAccessedGatewayId,
-        @Nullable Output<String> lastAccessedGatewayTime) {
-        this.gatewayAuthMethod = gatewayAuthMethod;
-        this.gatewayType = gatewayType;
-        this.lastAccessedGatewayId = lastAccessedGatewayId;
-        this.lastAccessedGatewayTime = lastAccessedGatewayTime;
-    }
+    private DeviceGatewayConfigGetArgs() {}
 
-    private DeviceGatewayConfigGetArgs() {
-        this.gatewayAuthMethod = Codegen.empty();
-        this.gatewayType = Codegen.empty();
-        this.lastAccessedGatewayId = Codegen.empty();
-        this.lastAccessedGatewayTime = Codegen.empty();
+    private DeviceGatewayConfigGetArgs(DeviceGatewayConfigGetArgs $) {
+        this.gatewayAuthMethod = $.gatewayAuthMethod;
+        this.gatewayType = $.gatewayType;
+        this.lastAccessedGatewayId = $.lastAccessedGatewayId;
+        this.lastAccessedGatewayTime = $.lastAccessedGatewayTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceGatewayConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gatewayAuthMethod;
-        private @Nullable Output<String> gatewayType;
-        private @Nullable Output<String> lastAccessedGatewayId;
-        private @Nullable Output<String> lastAccessedGatewayTime;
+        private DeviceGatewayConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceGatewayConfigGetArgs();
         }
 
         public Builder(DeviceGatewayConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayAuthMethod = defaults.gatewayAuthMethod;
-    	      this.gatewayType = defaults.gatewayType;
-    	      this.lastAccessedGatewayId = defaults.lastAccessedGatewayId;
-    	      this.lastAccessedGatewayTime = defaults.lastAccessedGatewayTime;
+            $ = new DeviceGatewayConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayAuthMethod(@Nullable Output<String> gatewayAuthMethod) {
-            this.gatewayAuthMethod = gatewayAuthMethod;
+            $.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
-        public Builder gatewayAuthMethod(@Nullable String gatewayAuthMethod) {
-            this.gatewayAuthMethod = Codegen.ofNullable(gatewayAuthMethod);
-            return this;
+
+        public Builder gatewayAuthMethod(String gatewayAuthMethod) {
+            return gatewayAuthMethod(Output.of(gatewayAuthMethod));
         }
+
         public Builder gatewayType(@Nullable Output<String> gatewayType) {
-            this.gatewayType = gatewayType;
+            $.gatewayType = gatewayType;
             return this;
         }
-        public Builder gatewayType(@Nullable String gatewayType) {
-            this.gatewayType = Codegen.ofNullable(gatewayType);
-            return this;
+
+        public Builder gatewayType(String gatewayType) {
+            return gatewayType(Output.of(gatewayType));
         }
+
         public Builder lastAccessedGatewayId(@Nullable Output<String> lastAccessedGatewayId) {
-            this.lastAccessedGatewayId = lastAccessedGatewayId;
+            $.lastAccessedGatewayId = lastAccessedGatewayId;
             return this;
         }
-        public Builder lastAccessedGatewayId(@Nullable String lastAccessedGatewayId) {
-            this.lastAccessedGatewayId = Codegen.ofNullable(lastAccessedGatewayId);
-            return this;
+
+        public Builder lastAccessedGatewayId(String lastAccessedGatewayId) {
+            return lastAccessedGatewayId(Output.of(lastAccessedGatewayId));
         }
+
         public Builder lastAccessedGatewayTime(@Nullable Output<String> lastAccessedGatewayTime) {
-            this.lastAccessedGatewayTime = lastAccessedGatewayTime;
+            $.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;
         }
-        public Builder lastAccessedGatewayTime(@Nullable String lastAccessedGatewayTime) {
-            this.lastAccessedGatewayTime = Codegen.ofNullable(lastAccessedGatewayTime);
-            return this;
-        }        public DeviceGatewayConfigGetArgs build() {
-            return new DeviceGatewayConfigGetArgs(gatewayAuthMethod, gatewayType, lastAccessedGatewayId, lastAccessedGatewayTime);
+
+        public Builder lastAccessedGatewayTime(String lastAccessedGatewayTime) {
+            return lastAccessedGatewayTime(Output.of(lastAccessedGatewayTime));
+        }
+
+        public DeviceGatewayConfigGetArgs build() {
+            return $;
         }
     }
+
 }

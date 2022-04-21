@@ -10,11 +10,11 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementArgs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleVisibilityConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<WebAclRuleActionArgs> action;
+    private @Nullable Output<WebAclRuleActionArgs> action;
 
-    public Output<WebAclRuleActionArgs> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<WebAclRuleActionArgs>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -49,10 +49,10 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overrideAction")
-      private final @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
+    private @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
 
-    public Output<WebAclRuleOverrideActionArgs> overrideAction() {
-        return this.overrideAction == null ? Codegen.empty() : this.overrideAction;
+    public Optional<Output<WebAclRuleOverrideActionArgs>> overrideAction() {
+        return Optional.ofNullable(this.overrideAction);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -71,10 +71,10 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleLabels")
-      private final @Nullable Output<List<WebAclRuleRuleLabelArgs>> ruleLabels;
+    private @Nullable Output<List<WebAclRuleRuleLabelArgs>> ruleLabels;
 
-    public Output<List<WebAclRuleRuleLabelArgs>> ruleLabels() {
-        return this.ruleLabels == null ? Codegen.empty() : this.ruleLabels;
+    public Optional<Output<List<WebAclRuleRuleLabelArgs>>> ruleLabels() {
+        return Optional.ofNullable(this.ruleLabels);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="statement", required=true)
-      private final Output<WebAclRuleStatementArgs> statement;
+    private Output<WebAclRuleStatementArgs> statement;
 
     public Output<WebAclRuleStatementArgs> statement() {
         return this.statement;
@@ -93,131 +93,116 @@ public final class WebAclRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="visibilityConfig", required=true)
-      private final Output<WebAclRuleVisibilityConfigArgs> visibilityConfig;
+    private Output<WebAclRuleVisibilityConfigArgs> visibilityConfig;
 
     public Output<WebAclRuleVisibilityConfigArgs> visibilityConfig() {
         return this.visibilityConfig;
     }
 
-    public WebAclRuleArgs(
-        @Nullable Output<WebAclRuleActionArgs> action,
-        Output<String> name,
-        @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction,
-        Output<Integer> priority,
-        @Nullable Output<List<WebAclRuleRuleLabelArgs>> ruleLabels,
-        Output<WebAclRuleStatementArgs> statement,
-        Output<WebAclRuleVisibilityConfigArgs> visibilityConfig) {
-        this.action = action;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.overrideAction = overrideAction;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.ruleLabels = ruleLabels;
-        this.statement = Objects.requireNonNull(statement, "expected parameter 'statement' to be non-null");
-        this.visibilityConfig = Objects.requireNonNull(visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
-    }
+    private WebAclRuleArgs() {}
 
-    private WebAclRuleArgs() {
-        this.action = Codegen.empty();
-        this.name = Codegen.empty();
-        this.overrideAction = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.ruleLabels = Codegen.empty();
-        this.statement = Codegen.empty();
-        this.visibilityConfig = Codegen.empty();
+    private WebAclRuleArgs(WebAclRuleArgs $) {
+        this.action = $.action;
+        this.name = $.name;
+        this.overrideAction = $.overrideAction;
+        this.priority = $.priority;
+        this.ruleLabels = $.ruleLabels;
+        this.statement = $.statement;
+        this.visibilityConfig = $.visibilityConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclRuleActionArgs> action;
-        private Output<String> name;
-        private @Nullable Output<WebAclRuleOverrideActionArgs> overrideAction;
-        private Output<Integer> priority;
-        private @Nullable Output<List<WebAclRuleRuleLabelArgs>> ruleLabels;
-        private Output<WebAclRuleStatementArgs> statement;
-        private Output<WebAclRuleVisibilityConfigArgs> visibilityConfig;
+        private WebAclRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleArgs();
         }
 
         public Builder(WebAclRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.name = defaults.name;
-    	      this.overrideAction = defaults.overrideAction;
-    	      this.priority = defaults.priority;
-    	      this.ruleLabels = defaults.ruleLabels;
-    	      this.statement = defaults.statement;
-    	      this.visibilityConfig = defaults.visibilityConfig;
+            $ = new WebAclRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<WebAclRuleActionArgs> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable WebAclRuleActionArgs action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(WebAclRuleActionArgs action) {
+            return action(Output.of(action));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder overrideAction(@Nullable Output<WebAclRuleOverrideActionArgs> overrideAction) {
-            this.overrideAction = overrideAction;
+            $.overrideAction = overrideAction;
             return this;
         }
-        public Builder overrideAction(@Nullable WebAclRuleOverrideActionArgs overrideAction) {
-            this.overrideAction = Codegen.ofNullable(overrideAction);
-            return this;
+
+        public Builder overrideAction(WebAclRuleOverrideActionArgs overrideAction) {
+            return overrideAction(Output.of(overrideAction));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder ruleLabels(@Nullable Output<List<WebAclRuleRuleLabelArgs>> ruleLabels) {
-            this.ruleLabels = ruleLabels;
+            $.ruleLabels = ruleLabels;
             return this;
         }
-        public Builder ruleLabels(@Nullable List<WebAclRuleRuleLabelArgs> ruleLabels) {
-            this.ruleLabels = Codegen.ofNullable(ruleLabels);
-            return this;
+
+        public Builder ruleLabels(List<WebAclRuleRuleLabelArgs> ruleLabels) {
+            return ruleLabels(Output.of(ruleLabels));
         }
+
         public Builder ruleLabels(WebAclRuleRuleLabelArgs... ruleLabels) {
             return ruleLabels(List.of(ruleLabels));
         }
+
         public Builder statement(Output<WebAclRuleStatementArgs> statement) {
-            this.statement = Objects.requireNonNull(statement);
+            $.statement = statement;
             return this;
         }
+
         public Builder statement(WebAclRuleStatementArgs statement) {
-            this.statement = Output.of(Objects.requireNonNull(statement));
-            return this;
+            return statement(Output.of(statement));
         }
+
         public Builder visibilityConfig(Output<WebAclRuleVisibilityConfigArgs> visibilityConfig) {
-            this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
+            $.visibilityConfig = visibilityConfig;
             return this;
         }
+
         public Builder visibilityConfig(WebAclRuleVisibilityConfigArgs visibilityConfig) {
-            this.visibilityConfig = Output.of(Objects.requireNonNull(visibilityConfig));
-            return this;
-        }        public WebAclRuleArgs build() {
-            return new WebAclRuleArgs(action, name, overrideAction, priority, ruleLabels, statement, visibilityConfig);
+            return visibilityConfig(Output.of(visibilityConfig));
+        }
+
+        public WebAclRuleArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.statement = Objects.requireNonNull($.statement, "expected parameter 'statement' to be non-null");
+            $.visibilityConfig = Objects.requireNonNull($.visibilityConfig, "expected parameter 'visibilityConfig' to be non-null");
+            return $;
         }
     }
+
 }

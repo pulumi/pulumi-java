@@ -23,10 +23,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="accountName")
-      private final @Nullable String accountName;
+    private @Nullable String accountName;
 
     public Optional<String> accountName() {
-        return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="collaborationBranch")
-      private final @Nullable String collaborationBranch;
+    private @Nullable String collaborationBranch;
 
     public Optional<String> collaborationBranch() {
-        return this.collaborationBranch == null ? Optional.empty() : Optional.ofNullable(this.collaborationBranch);
+        return Optional.ofNullable(this.collaborationBranch);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="hostName")
-      private final @Nullable String hostName;
+    private @Nullable String hostName;
 
     public Optional<String> hostName() {
-        return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="lastCommitId")
-      private final @Nullable String lastCommitId;
+    private @Nullable String lastCommitId;
 
     public Optional<String> lastCommitId() {
-        return this.lastCommitId == null ? Optional.empty() : Optional.ofNullable(this.lastCommitId);
+        return Optional.ofNullable(this.lastCommitId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="projectName")
-      private final @Nullable String projectName;
+    private @Nullable String projectName;
 
     public Optional<String> projectName() {
-        return this.projectName == null ? Optional.empty() : Optional.ofNullable(this.projectName);
+        return Optional.ofNullable(this.projectName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="repositoryName")
-      private final @Nullable String repositoryName;
+    private @Nullable String repositoryName;
 
     public Optional<String> repositoryName() {
-        return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
+        return Optional.ofNullable(this.repositoryName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="rootFolder")
-      private final @Nullable String rootFolder;
+    private @Nullable String rootFolder;
 
     public Optional<String> rootFolder() {
-        return this.rootFolder == null ? Optional.empty() : Optional.ofNullable(this.rootFolder);
+        return Optional.ofNullable(this.rootFolder);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -111,118 +111,92 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public WorkspaceRepositoryConfigurationResponse(
-        @Nullable String accountName,
-        @Nullable String collaborationBranch,
-        @Nullable String hostName,
-        @Nullable String lastCommitId,
-        @Nullable String projectName,
-        @Nullable String repositoryName,
-        @Nullable String rootFolder,
-        @Nullable String tenantId,
-        @Nullable String type) {
-        this.accountName = accountName;
-        this.collaborationBranch = collaborationBranch;
-        this.hostName = hostName;
-        this.lastCommitId = lastCommitId;
-        this.projectName = projectName;
-        this.repositoryName = repositoryName;
-        this.rootFolder = rootFolder;
-        this.tenantId = tenantId;
-        this.type = type;
-    }
+    private WorkspaceRepositoryConfigurationResponse() {}
 
-    private WorkspaceRepositoryConfigurationResponse() {
-        this.accountName = null;
-        this.collaborationBranch = null;
-        this.hostName = null;
-        this.lastCommitId = null;
-        this.projectName = null;
-        this.repositoryName = null;
-        this.rootFolder = null;
-        this.tenantId = null;
-        this.type = null;
+    private WorkspaceRepositoryConfigurationResponse(WorkspaceRepositoryConfigurationResponse $) {
+        this.accountName = $.accountName;
+        this.collaborationBranch = $.collaborationBranch;
+        this.hostName = $.hostName;
+        this.lastCommitId = $.lastCommitId;
+        this.projectName = $.projectName;
+        this.repositoryName = $.repositoryName;
+        this.rootFolder = $.rootFolder;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceRepositoryConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accountName;
-        private @Nullable String collaborationBranch;
-        private @Nullable String hostName;
-        private @Nullable String lastCommitId;
-        private @Nullable String projectName;
-        private @Nullable String repositoryName;
-        private @Nullable String rootFolder;
-        private @Nullable String tenantId;
-        private @Nullable String type;
+        private WorkspaceRepositoryConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceRepositoryConfigurationResponse();
         }
 
         public Builder(WorkspaceRepositoryConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.collaborationBranch = defaults.collaborationBranch;
-    	      this.hostName = defaults.hostName;
-    	      this.lastCommitId = defaults.lastCommitId;
-    	      this.projectName = defaults.projectName;
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.rootFolder = defaults.rootFolder;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
+            $ = new WorkspaceRepositoryConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
+
         public Builder collaborationBranch(@Nullable String collaborationBranch) {
-            this.collaborationBranch = collaborationBranch;
+            $.collaborationBranch = collaborationBranch;
             return this;
         }
+
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
+
         public Builder lastCommitId(@Nullable String lastCommitId) {
-            this.lastCommitId = lastCommitId;
+            $.lastCommitId = lastCommitId;
             return this;
         }
+
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = projectName;
+            $.projectName = projectName;
             return this;
         }
+
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = repositoryName;
+            $.repositoryName = repositoryName;
             return this;
         }
+
         public Builder rootFolder(@Nullable String rootFolder) {
-            this.rootFolder = rootFolder;
+            $.rootFolder = rootFolder;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public WorkspaceRepositoryConfigurationResponse build() {
-            return new WorkspaceRepositoryConfigurationResponse(accountName, collaborationBranch, hostName, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
+        }
+
+        public WorkspaceRepositoryConfigurationResponse build() {
+            return $;
         }
     }
+
 }

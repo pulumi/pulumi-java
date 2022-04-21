@@ -17,45 +17,45 @@ public final class GetFleetMetricArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metricName", required=true)
-      private final String metricName;
+    private String metricName;
 
     public String metricName() {
         return this.metricName;
     }
 
-    public GetFleetMetricArgs(String metricName) {
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-    }
+    private GetFleetMetricArgs() {}
 
-    private GetFleetMetricArgs() {
-        this.metricName = null;
+    private GetFleetMetricArgs(GetFleetMetricArgs $) {
+        this.metricName = $.metricName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFleetMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metricName;
+        private GetFleetMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFleetMetricArgs();
         }
 
         public Builder(GetFleetMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricName = defaults.metricName;
+            $ = new GetFleetMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
-        }        public GetFleetMetricArgs build() {
-            return new GetFleetMetricArgs(metricName);
+        }
+
+        public GetFleetMetricArgs build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            return $;
         }
     }
+
 }

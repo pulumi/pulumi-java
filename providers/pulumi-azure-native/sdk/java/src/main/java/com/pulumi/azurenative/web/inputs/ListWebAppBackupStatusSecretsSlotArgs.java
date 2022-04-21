@@ -23,7 +23,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="backupId", required=true)
-      private final String backupId;
+    private String backupId;
 
     public String backupId() {
         return this.backupId;
@@ -34,10 +34,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="backupName")
-      private final @Nullable String backupName;
+    private @Nullable String backupName;
 
     public Optional<String> backupName() {
-        return this.backupName == null ? Optional.empty() : Optional.ofNullable(this.backupName);
+        return Optional.ofNullable(this.backupName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="backupSchedule")
-      private final @Nullable BackupSchedule backupSchedule;
+    private @Nullable BackupSchedule backupSchedule;
 
     public Optional<BackupSchedule> backupSchedule() {
-        return this.backupSchedule == null ? Optional.empty() : Optional.ofNullable(this.backupSchedule);
+        return Optional.ofNullable(this.backupSchedule);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="databases")
-      private final @Nullable List<DatabaseBackupSetting> databases;
+    private @Nullable List<DatabaseBackupSetting> databases;
 
-    public List<DatabaseBackupSetting> databases() {
-        return this.databases == null ? List.of() : this.databases;
+    public Optional<List<DatabaseBackupSetting>> databases() {
+        return Optional.ofNullable(this.databases);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -100,7 +100,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
@@ -122,130 +122,107 @@ public final class ListWebAppBackupStatusSecretsSlotArgs extends com.pulumi.reso
      * 
      */
     @Import(name="storageAccountUrl", required=true)
-      private final String storageAccountUrl;
+    private String storageAccountUrl;
 
     public String storageAccountUrl() {
         return this.storageAccountUrl;
     }
 
-    public ListWebAppBackupStatusSecretsSlotArgs(
-        String backupId,
-        @Nullable String backupName,
-        @Nullable BackupSchedule backupSchedule,
-        @Nullable List<DatabaseBackupSetting> databases,
-        @Nullable Boolean enabled,
-        @Nullable String kind,
-        String name,
-        String resourceGroupName,
-        String slot,
-        String storageAccountUrl) {
-        this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
-        this.backupName = backupName;
-        this.backupSchedule = backupSchedule;
-        this.databases = databases;
-        this.enabled = enabled;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-        this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl, "expected parameter 'storageAccountUrl' to be non-null");
-    }
+    private ListWebAppBackupStatusSecretsSlotArgs() {}
 
-    private ListWebAppBackupStatusSecretsSlotArgs() {
-        this.backupId = null;
-        this.backupName = null;
-        this.backupSchedule = null;
-        this.databases = List.of();
-        this.enabled = null;
-        this.kind = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.slot = null;
-        this.storageAccountUrl = null;
+    private ListWebAppBackupStatusSecretsSlotArgs(ListWebAppBackupStatusSecretsSlotArgs $) {
+        this.backupId = $.backupId;
+        this.backupName = $.backupName;
+        this.backupSchedule = $.backupSchedule;
+        this.databases = $.databases;
+        this.enabled = $.enabled;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
+        this.storageAccountUrl = $.storageAccountUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListWebAppBackupStatusSecretsSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupId;
-        private @Nullable String backupName;
-        private @Nullable BackupSchedule backupSchedule;
-        private @Nullable List<DatabaseBackupSetting> databases;
-        private @Nullable Boolean enabled;
-        private @Nullable String kind;
-        private String name;
-        private String resourceGroupName;
-        private String slot;
-        private String storageAccountUrl;
+        private ListWebAppBackupStatusSecretsSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListWebAppBackupStatusSecretsSlotArgs();
         }
 
         public Builder(ListWebAppBackupStatusSecretsSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupId = defaults.backupId;
-    	      this.backupName = defaults.backupName;
-    	      this.backupSchedule = defaults.backupSchedule;
-    	      this.databases = defaults.databases;
-    	      this.enabled = defaults.enabled;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
-    	      this.storageAccountUrl = defaults.storageAccountUrl;
+            $ = new ListWebAppBackupStatusSecretsSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupId(String backupId) {
-            this.backupId = Objects.requireNonNull(backupId);
+            $.backupId = backupId;
             return this;
         }
+
         public Builder backupName(@Nullable String backupName) {
-            this.backupName = backupName;
+            $.backupName = backupName;
             return this;
         }
+
         public Builder backupSchedule(@Nullable BackupSchedule backupSchedule) {
-            this.backupSchedule = backupSchedule;
+            $.backupSchedule = backupSchedule;
             return this;
         }
+
         public Builder databases(@Nullable List<DatabaseBackupSetting> databases) {
-            this.databases = databases;
+            $.databases = databases;
             return this;
         }
+
         public Builder databases(DatabaseBackupSetting... databases) {
             return databases(List.of(databases));
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
         }
+
         public Builder storageAccountUrl(String storageAccountUrl) {
-            this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
+            $.storageAccountUrl = storageAccountUrl;
             return this;
-        }        public ListWebAppBackupStatusSecretsSlotArgs build() {
-            return new ListWebAppBackupStatusSecretsSlotArgs(backupId, backupName, backupSchedule, databases, enabled, kind, name, resourceGroupName, slot, storageAccountUrl);
+        }
+
+        public ListWebAppBackupStatusSecretsSlotArgs build() {
+            $.backupId = Objects.requireNonNull($.backupId, "expected parameter 'backupId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            $.storageAccountUrl = Objects.requireNonNull($.storageAccountUrl, "expected parameter 'storageAccountUrl' to be non-null");
+            return $;
         }
     }
+
 }

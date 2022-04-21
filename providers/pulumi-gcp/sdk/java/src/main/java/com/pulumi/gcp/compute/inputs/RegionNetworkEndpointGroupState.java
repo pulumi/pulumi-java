@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupAppEngineGetArgs;
 import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudFunctionGetArgs;
 import com.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudRunGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="appEngine")
-      private final @Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine;
+    private @Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine;
 
-    public Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine() {
-        return this.appEngine == null ? Codegen.empty() : this.appEngine;
+    public Optional<Output<RegionNetworkEndpointGroupAppEngineGetArgs>> appEngine() {
+        return Optional.ofNullable(this.appEngine);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="cloudFunction")
-      private final @Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction;
+    private @Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction;
 
-    public Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction() {
-        return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
+    public Optional<Output<RegionNetworkEndpointGroupCloudFunctionGetArgs>> cloudFunction() {
+        return Optional.ofNullable(this.cloudFunction);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="cloudRun")
-      private final @Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun;
+    private @Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun;
 
-    public Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun() {
-        return this.cloudRun == null ? Codegen.empty() : this.cloudRun;
+    public Optional<Output<RegionNetworkEndpointGroupCloudRunGetArgs>> cloudRun() {
+        return Optional.ofNullable(this.cloudRun);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="networkEndpointType")
-      private final @Nullable Output<String> networkEndpointType;
+    private @Nullable Output<String> networkEndpointType;
 
-    public Output<String> networkEndpointType() {
-        return this.networkEndpointType == null ? Codegen.empty() : this.networkEndpointType;
+    public Optional<Output<String>> networkEndpointType() {
+        return Optional.ofNullable(this.networkEndpointType);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -127,154 +127,128 @@ public final class RegionNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public RegionNetworkEndpointGroupState(
-        @Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine,
-        @Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction,
-        @Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> networkEndpointType,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> selfLink) {
-        this.appEngine = appEngine;
-        this.cloudFunction = cloudFunction;
-        this.cloudRun = cloudRun;
-        this.description = description;
-        this.name = name;
-        this.networkEndpointType = networkEndpointType;
-        this.project = project;
-        this.region = region;
-        this.selfLink = selfLink;
-    }
+    private RegionNetworkEndpointGroupState() {}
 
-    private RegionNetworkEndpointGroupState() {
-        this.appEngine = Codegen.empty();
-        this.cloudFunction = Codegen.empty();
-        this.cloudRun = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkEndpointType = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private RegionNetworkEndpointGroupState(RegionNetworkEndpointGroupState $) {
+        this.appEngine = $.appEngine;
+        this.cloudFunction = $.cloudFunction;
+        this.cloudRun = $.cloudRun;
+        this.description = $.description;
+        this.name = $.name;
+        this.networkEndpointType = $.networkEndpointType;
+        this.project = $.project;
+        this.region = $.region;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionNetworkEndpointGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine;
-        private @Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction;
-        private @Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> networkEndpointType;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> selfLink;
+        private RegionNetworkEndpointGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionNetworkEndpointGroupState();
         }
 
         public Builder(RegionNetworkEndpointGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngine = defaults.appEngine;
-    	      this.cloudFunction = defaults.cloudFunction;
-    	      this.cloudRun = defaults.cloudRun;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.networkEndpointType = defaults.networkEndpointType;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.selfLink = defaults.selfLink;
+            $ = new RegionNetworkEndpointGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngine(@Nullable Output<RegionNetworkEndpointGroupAppEngineGetArgs> appEngine) {
-            this.appEngine = appEngine;
+            $.appEngine = appEngine;
             return this;
         }
-        public Builder appEngine(@Nullable RegionNetworkEndpointGroupAppEngineGetArgs appEngine) {
-            this.appEngine = Codegen.ofNullable(appEngine);
-            return this;
+
+        public Builder appEngine(RegionNetworkEndpointGroupAppEngineGetArgs appEngine) {
+            return appEngine(Output.of(appEngine));
         }
+
         public Builder cloudFunction(@Nullable Output<RegionNetworkEndpointGroupCloudFunctionGetArgs> cloudFunction) {
-            this.cloudFunction = cloudFunction;
+            $.cloudFunction = cloudFunction;
             return this;
         }
-        public Builder cloudFunction(@Nullable RegionNetworkEndpointGroupCloudFunctionGetArgs cloudFunction) {
-            this.cloudFunction = Codegen.ofNullable(cloudFunction);
-            return this;
+
+        public Builder cloudFunction(RegionNetworkEndpointGroupCloudFunctionGetArgs cloudFunction) {
+            return cloudFunction(Output.of(cloudFunction));
         }
+
         public Builder cloudRun(@Nullable Output<RegionNetworkEndpointGroupCloudRunGetArgs> cloudRun) {
-            this.cloudRun = cloudRun;
+            $.cloudRun = cloudRun;
             return this;
         }
-        public Builder cloudRun(@Nullable RegionNetworkEndpointGroupCloudRunGetArgs cloudRun) {
-            this.cloudRun = Codegen.ofNullable(cloudRun);
-            return this;
+
+        public Builder cloudRun(RegionNetworkEndpointGroupCloudRunGetArgs cloudRun) {
+            return cloudRun(Output.of(cloudRun));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
-            this.networkEndpointType = networkEndpointType;
+            $.networkEndpointType = networkEndpointType;
             return this;
         }
-        public Builder networkEndpointType(@Nullable String networkEndpointType) {
-            this.networkEndpointType = Codegen.ofNullable(networkEndpointType);
-            return this;
+
+        public Builder networkEndpointType(String networkEndpointType) {
+            return networkEndpointType(Output.of(networkEndpointType));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public RegionNetworkEndpointGroupState build() {
-            return new RegionNetworkEndpointGroupState(appEngine, cloudFunction, cloudRun, description, name, networkEndpointType, project, region, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public RegionNetworkEndpointGroupState build() {
+            return $;
         }
     }
+
 }

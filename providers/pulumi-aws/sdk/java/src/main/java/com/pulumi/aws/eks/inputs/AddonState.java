@@ -5,10 +5,10 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addonName")
-      private final @Nullable Output<String> addonName;
+    private @Nullable Output<String> addonName;
 
-    public Output<String> addonName() {
-        return this.addonName == null ? Codegen.empty() : this.addonName;
+    public Optional<Output<String>> addonName() {
+        return Optional.ofNullable(this.addonName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addonVersion")
-      private final @Nullable Output<String> addonVersion;
+    private @Nullable Output<String> addonVersion;
 
-    public Output<String> addonVersion() {
-        return this.addonVersion == null ? Codegen.empty() : this.addonVersion;
+    public Optional<Output<String>> addonVersion() {
+        return Optional.ofNullable(this.addonVersion);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="modifiedAt")
-      private final @Nullable Output<String> modifiedAt;
+    private @Nullable Output<String> modifiedAt;
 
-    public Output<String> modifiedAt() {
-        return this.modifiedAt == null ? Codegen.empty() : this.modifiedAt;
+    public Optional<Output<String>> modifiedAt() {
+        return Optional.ofNullable(this.modifiedAt);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resolveConflicts")
-      private final @Nullable Output<String> resolveConflicts;
+    private @Nullable Output<String> resolveConflicts;
 
-    public Output<String> resolveConflicts() {
-        return this.resolveConflicts == null ? Codegen.empty() : this.resolveConflicts;
+    public Optional<Output<String>> resolveConflicts() {
+        return Optional.ofNullable(this.resolveConflicts);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountRoleArn")
-      private final @Nullable Output<String> serviceAccountRoleArn;
+    private @Nullable Output<String> serviceAccountRoleArn;
 
-    public Output<String> serviceAccountRoleArn() {
-        return this.serviceAccountRoleArn == null ? Codegen.empty() : this.serviceAccountRoleArn;
+    public Optional<Output<String>> serviceAccountRoleArn() {
+        return Optional.ofNullable(this.serviceAccountRoleArn);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -129,167 +129,138 @@ public final class AddonState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public AddonState(
-        @Nullable Output<String> addonName,
-        @Nullable Output<String> addonVersion,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> clusterName,
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> modifiedAt,
-        @Nullable Output<String> resolveConflicts,
-        @Nullable Output<String> serviceAccountRoleArn,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.addonName = addonName;
-        this.addonVersion = addonVersion;
-        this.arn = arn;
-        this.clusterName = clusterName;
-        this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
-        this.resolveConflicts = resolveConflicts;
-        this.serviceAccountRoleArn = serviceAccountRoleArn;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private AddonState() {}
 
-    private AddonState() {
-        this.addonName = Codegen.empty();
-        this.addonVersion = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.createdAt = Codegen.empty();
-        this.modifiedAt = Codegen.empty();
-        this.resolveConflicts = Codegen.empty();
-        this.serviceAccountRoleArn = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private AddonState(AddonState $) {
+        this.addonName = $.addonName;
+        this.addonVersion = $.addonVersion;
+        this.arn = $.arn;
+        this.clusterName = $.clusterName;
+        this.createdAt = $.createdAt;
+        this.modifiedAt = $.modifiedAt;
+        this.resolveConflicts = $.resolveConflicts;
+        this.serviceAccountRoleArn = $.serviceAccountRoleArn;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddonState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addonName;
-        private @Nullable Output<String> addonVersion;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> modifiedAt;
-        private @Nullable Output<String> resolveConflicts;
-        private @Nullable Output<String> serviceAccountRoleArn;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private AddonState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddonState();
         }
 
         public Builder(AddonState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addonName = defaults.addonName;
-    	      this.addonVersion = defaults.addonVersion;
-    	      this.arn = defaults.arn;
-    	      this.clusterName = defaults.clusterName;
-    	      this.createdAt = defaults.createdAt;
-    	      this.modifiedAt = defaults.modifiedAt;
-    	      this.resolveConflicts = defaults.resolveConflicts;
-    	      this.serviceAccountRoleArn = defaults.serviceAccountRoleArn;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new AddonState(Objects.requireNonNull(defaults));
         }
 
         public Builder addonName(@Nullable Output<String> addonName) {
-            this.addonName = addonName;
+            $.addonName = addonName;
             return this;
         }
-        public Builder addonName(@Nullable String addonName) {
-            this.addonName = Codegen.ofNullable(addonName);
-            return this;
+
+        public Builder addonName(String addonName) {
+            return addonName(Output.of(addonName));
         }
+
         public Builder addonVersion(@Nullable Output<String> addonVersion) {
-            this.addonVersion = addonVersion;
+            $.addonVersion = addonVersion;
             return this;
         }
-        public Builder addonVersion(@Nullable String addonVersion) {
-            this.addonVersion = Codegen.ofNullable(addonVersion);
-            return this;
+
+        public Builder addonVersion(String addonVersion) {
+            return addonVersion(Output.of(addonVersion));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder modifiedAt(@Nullable Output<String> modifiedAt) {
-            this.modifiedAt = modifiedAt;
+            $.modifiedAt = modifiedAt;
             return this;
         }
-        public Builder modifiedAt(@Nullable String modifiedAt) {
-            this.modifiedAt = Codegen.ofNullable(modifiedAt);
-            return this;
+
+        public Builder modifiedAt(String modifiedAt) {
+            return modifiedAt(Output.of(modifiedAt));
         }
+
         public Builder resolveConflicts(@Nullable Output<String> resolveConflicts) {
-            this.resolveConflicts = resolveConflicts;
+            $.resolveConflicts = resolveConflicts;
             return this;
         }
-        public Builder resolveConflicts(@Nullable String resolveConflicts) {
-            this.resolveConflicts = Codegen.ofNullable(resolveConflicts);
-            return this;
+
+        public Builder resolveConflicts(String resolveConflicts) {
+            return resolveConflicts(Output.of(resolveConflicts));
         }
+
         public Builder serviceAccountRoleArn(@Nullable Output<String> serviceAccountRoleArn) {
-            this.serviceAccountRoleArn = serviceAccountRoleArn;
+            $.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
-        public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
-            this.serviceAccountRoleArn = Codegen.ofNullable(serviceAccountRoleArn);
-            return this;
+
+        public Builder serviceAccountRoleArn(String serviceAccountRoleArn) {
+            return serviceAccountRoleArn(Output.of(serviceAccountRoleArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public AddonState build() {
-            return new AddonState(addonName, addonVersion, arn, clusterName, createdAt, modifiedAt, resolveConflicts, serviceAccountRoleArn, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public AddonState build() {
+            return $;
         }
     }
+
 }

@@ -14,7 +14,7 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
     public static final GetClusterCacheNode Empty = new GetClusterCacheNode();
 
     @Import(name="address", required=true)
-      private final String address;
+    private String address;
 
     public String address() {
         return this.address;
@@ -25,14 +25,14 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone", required=true)
-      private final String availabilityZone;
+    private String availabilityZone;
 
     public String availabilityZone() {
         return this.availabilityZone;
     }
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -44,73 +44,66 @@ public final class GetClusterCacheNode extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public GetClusterCacheNode(
-        String address,
-        String availabilityZone,
-        String id,
-        Integer port) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.availabilityZone = Objects.requireNonNull(availabilityZone, "expected parameter 'availabilityZone' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private GetClusterCacheNode() {}
 
-    private GetClusterCacheNode() {
-        this.address = null;
-        this.availabilityZone = null;
-        this.id = null;
-        this.port = null;
+    private GetClusterCacheNode(GetClusterCacheNode $) {
+        this.address = $.address;
+        this.availabilityZone = $.availabilityZone;
+        this.id = $.id;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterCacheNode defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String address;
-        private String availabilityZone;
-        private String id;
-        private Integer port;
+        private GetClusterCacheNode $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterCacheNode();
         }
 
         public Builder(GetClusterCacheNode defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.id = defaults.id;
-    	      this.port = defaults.port;
+            $ = new GetClusterCacheNode(Objects.requireNonNull(defaults));
         }
 
         public Builder address(String address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder availabilityZone(String availabilityZone) {
-            this.availabilityZone = Objects.requireNonNull(availabilityZone);
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public GetClusterCacheNode build() {
-            return new GetClusterCacheNode(address, availabilityZone, id, port);
+        }
+
+        public GetClusterCacheNode build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.availabilityZone = Objects.requireNonNull($.availabilityZone, "expected parameter 'availabilityZone' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3AudioInputResponse extends com.pulum
      * 
      */
     @Import(name="audio", required=true)
-      private final String audio;
+    private String audio;
 
     public String audio() {
         return this.audio;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowCxV3AudioInputResponse extends com.pulum
      * 
      */
     @Import(name="config", required=true)
-      private final GoogleCloudDialogflowCxV3InputAudioConfigResponse config;
+    private GoogleCloudDialogflowCxV3InputAudioConfigResponse config;
 
     public GoogleCloudDialogflowCxV3InputAudioConfigResponse config() {
         return this.config;
     }
 
-    public GoogleCloudDialogflowCxV3AudioInputResponse(
-        String audio,
-        GoogleCloudDialogflowCxV3InputAudioConfigResponse config) {
-        this.audio = Objects.requireNonNull(audio, "expected parameter 'audio' to be non-null");
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3AudioInputResponse() {}
 
-    private GoogleCloudDialogflowCxV3AudioInputResponse() {
-        this.audio = null;
-        this.config = null;
+    private GoogleCloudDialogflowCxV3AudioInputResponse(GoogleCloudDialogflowCxV3AudioInputResponse $) {
+        this.audio = $.audio;
+        this.config = $.config;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3AudioInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String audio;
-        private GoogleCloudDialogflowCxV3InputAudioConfigResponse config;
+        private GoogleCloudDialogflowCxV3AudioInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3AudioInputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3AudioInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audio = defaults.audio;
-    	      this.config = defaults.config;
+            $ = new GoogleCloudDialogflowCxV3AudioInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audio(String audio) {
-            this.audio = Objects.requireNonNull(audio);
+            $.audio = audio;
             return this;
         }
+
         public Builder config(GoogleCloudDialogflowCxV3InputAudioConfigResponse config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
-        }        public GoogleCloudDialogflowCxV3AudioInputResponse build() {
-            return new GoogleCloudDialogflowCxV3AudioInputResponse(audio, config);
+        }
+
+        public GoogleCloudDialogflowCxV3AudioInputResponse build() {
+            $.audio = Objects.requireNonNull($.audio, "expected parameter 'audio' to be non-null");
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            return $;
         }
     }
+
 }

@@ -28,10 +28,10 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<DependsOnDefinitionResponse> dependsOn;
+    private @Nullable List<DependsOnDefinitionResponse> dependsOn;
 
-    public List<DependsOnDefinitionResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<DependsOnDefinitionResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="force")
-      private final @Nullable Boolean force;
+    private @Nullable Boolean force;
 
     public Optional<Boolean> force() {
-        return this.force == null ? Optional.empty() : Optional.ofNullable(this.force);
+        return Optional.ofNullable(this.force);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="prune")
-      private final @Nullable Boolean prune;
+    private @Nullable Boolean prune;
 
     public Optional<Boolean> prune() {
-        return this.prune == null ? Optional.empty() : Optional.ofNullable(this.prune);
+        return Optional.ofNullable(this.prune);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retryIntervalInSeconds")
-      private final @Nullable Double retryIntervalInSeconds;
+    private @Nullable Double retryIntervalInSeconds;
 
     public Optional<Double> retryIntervalInSeconds() {
-        return this.retryIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalInSeconds);
+        return Optional.ofNullable(this.retryIntervalInSeconds);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="syncIntervalInSeconds")
-      private final @Nullable Double syncIntervalInSeconds;
+    private @Nullable Double syncIntervalInSeconds;
 
     public Optional<Double> syncIntervalInSeconds() {
-        return this.syncIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.syncIntervalInSeconds);
+        return Optional.ofNullable(this.syncIntervalInSeconds);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="timeoutInSeconds")
-      private final @Nullable Double timeoutInSeconds;
+    private @Nullable Double timeoutInSeconds;
 
     public Optional<Double> timeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
+        return Optional.ofNullable(this.timeoutInSeconds);
     }
 
     /**
@@ -105,112 +105,95 @@ public final class KustomizationDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="validation")
-      private final @Nullable String validation;
+    private @Nullable String validation;
 
     public Optional<String> validation() {
-        return this.validation == null ? Optional.empty() : Optional.ofNullable(this.validation);
+        return Optional.ofNullable(this.validation);
     }
 
-    public KustomizationDefinitionResponse(
-        @Nullable List<DependsOnDefinitionResponse> dependsOn,
-        @Nullable Boolean force,
-        @Nullable String path,
-        @Nullable Boolean prune,
-        @Nullable Double retryIntervalInSeconds,
-        @Nullable Double syncIntervalInSeconds,
-        @Nullable Double timeoutInSeconds,
-        @Nullable String validation) {
-        this.dependsOn = dependsOn;
-        this.force = Codegen.booleanProp("force").arg(force).def(false).getNullable();
-        this.path = Codegen.stringProp("path").arg(path).def("").getNullable();
-        this.prune = Codegen.booleanProp("prune").arg(prune).def(false).getNullable();
-        this.retryIntervalInSeconds = retryIntervalInSeconds;
-        this.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").arg(syncIntervalInSeconds).def(6e+02).getNullable();
-        this.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").arg(timeoutInSeconds).def(6e+02).getNullable();
-        this.validation = validation;
-    }
+    private KustomizationDefinitionResponse() {}
 
-    private KustomizationDefinitionResponse() {
-        this.dependsOn = List.of();
-        this.force = null;
-        this.path = null;
-        this.prune = null;
-        this.retryIntervalInSeconds = null;
-        this.syncIntervalInSeconds = null;
-        this.timeoutInSeconds = null;
-        this.validation = null;
+    private KustomizationDefinitionResponse(KustomizationDefinitionResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.force = $.force;
+        this.path = $.path;
+        this.prune = $.prune;
+        this.retryIntervalInSeconds = $.retryIntervalInSeconds;
+        this.syncIntervalInSeconds = $.syncIntervalInSeconds;
+        this.timeoutInSeconds = $.timeoutInSeconds;
+        this.validation = $.validation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KustomizationDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<DependsOnDefinitionResponse> dependsOn;
-        private @Nullable Boolean force;
-        private @Nullable String path;
-        private @Nullable Boolean prune;
-        private @Nullable Double retryIntervalInSeconds;
-        private @Nullable Double syncIntervalInSeconds;
-        private @Nullable Double timeoutInSeconds;
-        private @Nullable String validation;
+        private KustomizationDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KustomizationDefinitionResponse();
         }
 
         public Builder(KustomizationDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.force = defaults.force;
-    	      this.path = defaults.path;
-    	      this.prune = defaults.prune;
-    	      this.retryIntervalInSeconds = defaults.retryIntervalInSeconds;
-    	      this.syncIntervalInSeconds = defaults.syncIntervalInSeconds;
-    	      this.timeoutInSeconds = defaults.timeoutInSeconds;
-    	      this.validation = defaults.validation;
+            $ = new KustomizationDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable List<DependsOnDefinitionResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(DependsOnDefinitionResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder force(@Nullable Boolean force) {
-            this.force = force;
+            $.force = force;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder prune(@Nullable Boolean prune) {
-            this.prune = prune;
+            $.prune = prune;
             return this;
         }
+
         public Builder retryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
-            this.retryIntervalInSeconds = retryIntervalInSeconds;
+            $.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
+
         public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
-            this.syncIntervalInSeconds = syncIntervalInSeconds;
+            $.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
+
         public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
-            this.timeoutInSeconds = timeoutInSeconds;
+            $.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
+
         public Builder validation(@Nullable String validation) {
-            this.validation = validation;
+            $.validation = validation;
             return this;
-        }        public KustomizationDefinitionResponse build() {
-            return new KustomizationDefinitionResponse(dependsOn, force, path, prune, retryIntervalInSeconds, syncIntervalInSeconds, timeoutInSeconds, validation);
+        }
+
+        public KustomizationDefinitionResponse build() {
+            $.force = Codegen.booleanProp("force").arg($.force).def(false).getNullable();
+            $.path = Codegen.stringProp("path").arg($.path).def("").getNullable();
+            $.prune = Codegen.booleanProp("prune").arg($.prune).def(false).getNullable();
+            $.syncIntervalInSeconds = Codegen.doubleProp("syncIntervalInSeconds").arg($.syncIntervalInSeconds).def(6e+02).getNullable();
+            $.timeoutInSeconds = Codegen.doubleProp("timeoutInSeconds").arg($.timeoutInSeconds).def(6e+02).getNullable();
+            return $;
         }
     }
+
 }

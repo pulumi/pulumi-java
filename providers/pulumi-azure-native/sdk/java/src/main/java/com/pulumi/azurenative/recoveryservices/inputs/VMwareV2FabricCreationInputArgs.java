@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="migrationSolutionId", required=true)
-      private final Output<String> migrationSolutionId;
+    private Output<String> migrationSolutionId;
 
     public Output<String> migrationSolutionId() {
         return this.migrationSolutionId;
@@ -47,76 +48,71 @@ public final class VMwareV2FabricCreationInputArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="vmwareSiteId", required=true)
-      private final Output<String> vmwareSiteId;
+    private Output<String> vmwareSiteId;
 
     public Output<String> vmwareSiteId() {
         return this.vmwareSiteId;
     }
 
-    public VMwareV2FabricCreationInputArgs(
-        @Nullable Output<String> instanceType,
-        Output<String> migrationSolutionId,
-        Output<String> vmwareSiteId) {
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId, "expected parameter 'migrationSolutionId' to be non-null");
-        this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId, "expected parameter 'vmwareSiteId' to be non-null");
-    }
+    private VMwareV2FabricCreationInputArgs() {}
 
-    private VMwareV2FabricCreationInputArgs() {
-        this.instanceType = Codegen.empty();
-        this.migrationSolutionId = Codegen.empty();
-        this.vmwareSiteId = Codegen.empty();
+    private VMwareV2FabricCreationInputArgs(VMwareV2FabricCreationInputArgs $) {
+        this.instanceType = $.instanceType;
+        this.migrationSolutionId = $.migrationSolutionId;
+        this.vmwareSiteId = $.vmwareSiteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMwareV2FabricCreationInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceType;
-        private Output<String> migrationSolutionId;
-        private Output<String> vmwareSiteId;
+        private VMwareV2FabricCreationInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMwareV2FabricCreationInputArgs();
         }
 
         public Builder(VMwareV2FabricCreationInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.migrationSolutionId = defaults.migrationSolutionId;
-    	      this.vmwareSiteId = defaults.vmwareSiteId;
+            $ = new VMwareV2FabricCreationInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder migrationSolutionId(Output<String> migrationSolutionId) {
-            this.migrationSolutionId = Objects.requireNonNull(migrationSolutionId);
+            $.migrationSolutionId = migrationSolutionId;
             return this;
         }
+
         public Builder migrationSolutionId(String migrationSolutionId) {
-            this.migrationSolutionId = Output.of(Objects.requireNonNull(migrationSolutionId));
-            return this;
+            return migrationSolutionId(Output.of(migrationSolutionId));
         }
+
         public Builder vmwareSiteId(Output<String> vmwareSiteId) {
-            this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
+            $.vmwareSiteId = vmwareSiteId;
             return this;
         }
+
         public Builder vmwareSiteId(String vmwareSiteId) {
-            this.vmwareSiteId = Output.of(Objects.requireNonNull(vmwareSiteId));
-            return this;
-        }        public VMwareV2FabricCreationInputArgs build() {
-            return new VMwareV2FabricCreationInputArgs(instanceType, migrationSolutionId, vmwareSiteId);
+            return vmwareSiteId(Output.of(vmwareSiteId));
+        }
+
+        public VMwareV2FabricCreationInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            $.migrationSolutionId = Objects.requireNonNull($.migrationSolutionId, "expected parameter 'migrationSolutionId' to be non-null");
+            $.vmwareSiteId = Objects.requireNonNull($.vmwareSiteId, "expected parameter 'vmwareSiteId' to be non-null");
+            return $;
         }
     }
+
 }

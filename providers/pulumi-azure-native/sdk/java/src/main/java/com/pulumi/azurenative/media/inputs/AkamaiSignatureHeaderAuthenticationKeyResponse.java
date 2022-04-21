@@ -23,10 +23,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
      * 
      */
     @Import(name="base64Key")
-      private final @Nullable String base64Key;
+    private @Nullable String base64Key;
 
     public Optional<String> base64Key() {
-        return this.base64Key == null ? Optional.empty() : Optional.ofNullable(this.base64Key);
+        return Optional.ofNullable(this.base64Key);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
      * 
      */
     @Import(name="expiration")
-      private final @Nullable String expiration;
+    private @Nullable String expiration;
 
     public Optional<String> expiration() {
-        return this.expiration == null ? Optional.empty() : Optional.ofNullable(this.expiration);
+        return Optional.ofNullable(this.expiration);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class AkamaiSignatureHeaderAuthenticationKeyResponse extends com.pu
      * 
      */
     @Import(name="identifier")
-      private final @Nullable String identifier;
+    private @Nullable String identifier;
 
     public Optional<String> identifier() {
-        return this.identifier == null ? Optional.empty() : Optional.ofNullable(this.identifier);
+        return Optional.ofNullable(this.identifier);
     }
 
-    public AkamaiSignatureHeaderAuthenticationKeyResponse(
-        @Nullable String base64Key,
-        @Nullable String expiration,
-        @Nullable String identifier) {
-        this.base64Key = base64Key;
-        this.expiration = expiration;
-        this.identifier = identifier;
-    }
+    private AkamaiSignatureHeaderAuthenticationKeyResponse() {}
 
-    private AkamaiSignatureHeaderAuthenticationKeyResponse() {
-        this.base64Key = null;
-        this.expiration = null;
-        this.identifier = null;
+    private AkamaiSignatureHeaderAuthenticationKeyResponse(AkamaiSignatureHeaderAuthenticationKeyResponse $) {
+        this.base64Key = $.base64Key;
+        this.expiration = $.expiration;
+        this.identifier = $.identifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AkamaiSignatureHeaderAuthenticationKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String base64Key;
-        private @Nullable String expiration;
-        private @Nullable String identifier;
+        private AkamaiSignatureHeaderAuthenticationKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AkamaiSignatureHeaderAuthenticationKeyResponse();
         }
 
         public Builder(AkamaiSignatureHeaderAuthenticationKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.base64Key = defaults.base64Key;
-    	      this.expiration = defaults.expiration;
-    	      this.identifier = defaults.identifier;
+            $ = new AkamaiSignatureHeaderAuthenticationKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder base64Key(@Nullable String base64Key) {
-            this.base64Key = base64Key;
+            $.base64Key = base64Key;
             return this;
         }
+
         public Builder expiration(@Nullable String expiration) {
-            this.expiration = expiration;
+            $.expiration = expiration;
             return this;
         }
+
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = identifier;
+            $.identifier = identifier;
             return this;
-        }        public AkamaiSignatureHeaderAuthenticationKeyResponse build() {
-            return new AkamaiSignatureHeaderAuthenticationKeyResponse(base64Key, expiration, identifier);
+        }
+
+        public AkamaiSignatureHeaderAuthenticationKeyResponse build() {
+            return $;
         }
     }
+
 }

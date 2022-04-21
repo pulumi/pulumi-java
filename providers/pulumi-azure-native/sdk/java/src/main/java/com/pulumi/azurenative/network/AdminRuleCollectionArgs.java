@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.NetworkManagerSecurityGroupItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="appliesToGroups")
-      private final @Nullable Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
+    private @Nullable Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
 
-    public Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups() {
-        return this.appliesToGroups == null ? Codegen.empty() : this.appliesToGroups;
+    public Optional<Output<List<NetworkManagerSecurityGroupItemArgs>>> appliesToGroups() {
+        return Optional.ofNullable(this.appliesToGroups);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="configurationName", required=true)
-      private final Output<String> configurationName;
+    private Output<String> configurationName;
 
     public Output<String> configurationName() {
         return this.configurationName;
@@ -44,10 +44,10 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final Output<String> networkManagerName;
+    private Output<String> networkManagerName;
 
     public Output<String> networkManagerName() {
         return this.networkManagerName;
@@ -77,7 +77,7 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -88,131 +88,115 @@ public final class AdminRuleCollectionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ruleCollectionName")
-      private final @Nullable Output<String> ruleCollectionName;
+    private @Nullable Output<String> ruleCollectionName;
 
-    public Output<String> ruleCollectionName() {
-        return this.ruleCollectionName == null ? Codegen.empty() : this.ruleCollectionName;
+    public Optional<Output<String>> ruleCollectionName() {
+        return Optional.ofNullable(this.ruleCollectionName);
     }
 
-    public AdminRuleCollectionArgs(
-        @Nullable Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups,
-        Output<String> configurationName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> networkManagerName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleCollectionName) {
-        this.appliesToGroups = appliesToGroups;
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-        this.description = description;
-        this.displayName = displayName;
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleCollectionName = ruleCollectionName;
-    }
+    private AdminRuleCollectionArgs() {}
 
-    private AdminRuleCollectionArgs() {
-        this.appliesToGroups = Codegen.empty();
-        this.configurationName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.networkManagerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleCollectionName = Codegen.empty();
+    private AdminRuleCollectionArgs(AdminRuleCollectionArgs $) {
+        this.appliesToGroups = $.appliesToGroups;
+        this.configurationName = $.configurationName;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleCollectionName = $.ruleCollectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdminRuleCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
-        private Output<String> configurationName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> networkManagerName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleCollectionName;
+        private AdminRuleCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdminRuleCollectionArgs();
         }
 
         public Builder(AdminRuleCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appliesToGroups = defaults.appliesToGroups;
-    	      this.configurationName = defaults.configurationName;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleCollectionName = defaults.ruleCollectionName;
+            $ = new AdminRuleCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appliesToGroups(@Nullable Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups) {
-            this.appliesToGroups = appliesToGroups;
+            $.appliesToGroups = appliesToGroups;
             return this;
         }
-        public Builder appliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemArgs> appliesToGroups) {
-            this.appliesToGroups = Codegen.ofNullable(appliesToGroups);
-            return this;
+
+        public Builder appliesToGroups(List<NetworkManagerSecurityGroupItemArgs> appliesToGroups) {
+            return appliesToGroups(Output.of(appliesToGroups));
         }
+
         public Builder appliesToGroups(NetworkManagerSecurityGroupItemArgs... appliesToGroups) {
             return appliesToGroups(List.of(appliesToGroups));
         }
+
         public Builder configurationName(Output<String> configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder configurationName(String configurationName) {
-            this.configurationName = Output.of(Objects.requireNonNull(configurationName));
-            return this;
+            return configurationName(Output.of(configurationName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder networkManagerName(Output<String> networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
-            return this;
+            return networkManagerName(Output.of(networkManagerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleCollectionName(@Nullable Output<String> ruleCollectionName) {
-            this.ruleCollectionName = ruleCollectionName;
+            $.ruleCollectionName = ruleCollectionName;
             return this;
         }
-        public Builder ruleCollectionName(@Nullable String ruleCollectionName) {
-            this.ruleCollectionName = Codegen.ofNullable(ruleCollectionName);
-            return this;
-        }        public AdminRuleCollectionArgs build() {
-            return new AdminRuleCollectionArgs(appliesToGroups, configurationName, description, displayName, networkManagerName, resourceGroupName, ruleCollectionName);
+
+        public Builder ruleCollectionName(String ruleCollectionName) {
+            return ruleCollectionName(Output.of(ruleCollectionName));
+        }
+
+        public AdminRuleCollectionArgs build() {
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

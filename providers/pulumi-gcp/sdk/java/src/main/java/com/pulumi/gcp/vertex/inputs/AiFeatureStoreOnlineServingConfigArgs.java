@@ -5,7 +5,6 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AiFeatureStoreOnlineServingConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="fixedNodeCount", required=true)
-      private final Output<Integer> fixedNodeCount;
+    private Output<Integer> fixedNodeCount;
 
     public Output<Integer> fixedNodeCount() {
         return this.fixedNodeCount;
     }
 
-    public AiFeatureStoreOnlineServingConfigArgs(Output<Integer> fixedNodeCount) {
-        this.fixedNodeCount = Objects.requireNonNull(fixedNodeCount, "expected parameter 'fixedNodeCount' to be non-null");
-    }
+    private AiFeatureStoreOnlineServingConfigArgs() {}
 
-    private AiFeatureStoreOnlineServingConfigArgs() {
-        this.fixedNodeCount = Codegen.empty();
+    private AiFeatureStoreOnlineServingConfigArgs(AiFeatureStoreOnlineServingConfigArgs $) {
+        this.fixedNodeCount = $.fixedNodeCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiFeatureStoreOnlineServingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> fixedNodeCount;
+        private AiFeatureStoreOnlineServingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiFeatureStoreOnlineServingConfigArgs();
         }
 
         public Builder(AiFeatureStoreOnlineServingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fixedNodeCount = defaults.fixedNodeCount;
+            $ = new AiFeatureStoreOnlineServingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fixedNodeCount(Output<Integer> fixedNodeCount) {
-            this.fixedNodeCount = Objects.requireNonNull(fixedNodeCount);
+            $.fixedNodeCount = fixedNodeCount;
             return this;
         }
+
         public Builder fixedNodeCount(Integer fixedNodeCount) {
-            this.fixedNodeCount = Output.of(Objects.requireNonNull(fixedNodeCount));
-            return this;
-        }        public AiFeatureStoreOnlineServingConfigArgs build() {
-            return new AiFeatureStoreOnlineServingConfigArgs(fixedNodeCount);
+            return fixedNodeCount(Output.of(fixedNodeCount));
+        }
+
+        public AiFeatureStoreOnlineServingConfigArgs build() {
+            $.fixedNodeCount = Objects.requireNonNull($.fixedNodeCount, "expected parameter 'fixedNodeCount' to be non-null");
+            return $;
         }
     }
+
 }

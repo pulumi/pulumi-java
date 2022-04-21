@@ -5,11 +5,11 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudRetailV2betaRatingArgs extends com.pulumi.resource
      * 
      */
     @Import(name="averageRating")
-      private final @Nullable Output<Double> averageRating;
+    private @Nullable Output<Double> averageRating;
 
-    public Output<Double> averageRating() {
-        return this.averageRating == null ? Codegen.empty() : this.averageRating;
+    public Optional<Output<Double>> averageRating() {
+        return Optional.ofNullable(this.averageRating);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudRetailV2betaRatingArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ratingCount")
-      private final @Nullable Output<Integer> ratingCount;
+    private @Nullable Output<Integer> ratingCount;
 
-    public Output<Integer> ratingCount() {
-        return this.ratingCount == null ? Codegen.empty() : this.ratingCount;
+    public Optional<Output<Integer>> ratingCount() {
+        return Optional.ofNullable(this.ratingCount);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class GoogleCloudRetailV2betaRatingArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ratingHistogram")
-      private final @Nullable Output<List<Integer>> ratingHistogram;
+    private @Nullable Output<List<Integer>> ratingHistogram;
 
-    public Output<List<Integer>> ratingHistogram() {
-        return this.ratingHistogram == null ? Codegen.empty() : this.ratingHistogram;
+    public Optional<Output<List<Integer>>> ratingHistogram() {
+        return Optional.ofNullable(this.ratingHistogram);
     }
 
-    public GoogleCloudRetailV2betaRatingArgs(
-        @Nullable Output<Double> averageRating,
-        @Nullable Output<Integer> ratingCount,
-        @Nullable Output<List<Integer>> ratingHistogram) {
-        this.averageRating = averageRating;
-        this.ratingCount = ratingCount;
-        this.ratingHistogram = ratingHistogram;
-    }
+    private GoogleCloudRetailV2betaRatingArgs() {}
 
-    private GoogleCloudRetailV2betaRatingArgs() {
-        this.averageRating = Codegen.empty();
-        this.ratingCount = Codegen.empty();
-        this.ratingHistogram = Codegen.empty();
+    private GoogleCloudRetailV2betaRatingArgs(GoogleCloudRetailV2betaRatingArgs $) {
+        this.averageRating = $.averageRating;
+        this.ratingCount = $.ratingCount;
+        this.ratingHistogram = $.ratingHistogram;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaRatingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> averageRating;
-        private @Nullable Output<Integer> ratingCount;
-        private @Nullable Output<List<Integer>> ratingHistogram;
+        private GoogleCloudRetailV2betaRatingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaRatingArgs();
         }
 
         public Builder(GoogleCloudRetailV2betaRatingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.averageRating = defaults.averageRating;
-    	      this.ratingCount = defaults.ratingCount;
-    	      this.ratingHistogram = defaults.ratingHistogram;
+            $ = new GoogleCloudRetailV2betaRatingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder averageRating(@Nullable Output<Double> averageRating) {
-            this.averageRating = averageRating;
+            $.averageRating = averageRating;
             return this;
         }
-        public Builder averageRating(@Nullable Double averageRating) {
-            this.averageRating = Codegen.ofNullable(averageRating);
-            return this;
+
+        public Builder averageRating(Double averageRating) {
+            return averageRating(Output.of(averageRating));
         }
+
         public Builder ratingCount(@Nullable Output<Integer> ratingCount) {
-            this.ratingCount = ratingCount;
+            $.ratingCount = ratingCount;
             return this;
         }
-        public Builder ratingCount(@Nullable Integer ratingCount) {
-            this.ratingCount = Codegen.ofNullable(ratingCount);
-            return this;
+
+        public Builder ratingCount(Integer ratingCount) {
+            return ratingCount(Output.of(ratingCount));
         }
+
         public Builder ratingHistogram(@Nullable Output<List<Integer>> ratingHistogram) {
-            this.ratingHistogram = ratingHistogram;
+            $.ratingHistogram = ratingHistogram;
             return this;
         }
-        public Builder ratingHistogram(@Nullable List<Integer> ratingHistogram) {
-            this.ratingHistogram = Codegen.ofNullable(ratingHistogram);
-            return this;
+
+        public Builder ratingHistogram(List<Integer> ratingHistogram) {
+            return ratingHistogram(Output.of(ratingHistogram));
         }
+
         public Builder ratingHistogram(Integer... ratingHistogram) {
             return ratingHistogram(List.of(ratingHistogram));
-        }        public GoogleCloudRetailV2betaRatingArgs build() {
-            return new GoogleCloudRetailV2betaRatingArgs(averageRating, ratingCount, ratingHistogram);
+        }
+
+        public GoogleCloudRetailV2betaRatingArgs build() {
+            return $;
         }
     }
+
 }

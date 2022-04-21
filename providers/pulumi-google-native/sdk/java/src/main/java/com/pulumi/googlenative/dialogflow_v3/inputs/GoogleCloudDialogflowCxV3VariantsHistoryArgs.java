@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3VersionVariantsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends com.pulu
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends com.pulu
      * 
      */
     @Import(name="versionVariants")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
+    private @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 
-    public Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants() {
-        return this.versionVariants == null ? Codegen.empty() : this.versionVariants;
+    public Optional<Output<GoogleCloudDialogflowCxV3VersionVariantsArgs>> versionVariants() {
+        return Optional.ofNullable(this.versionVariants);
     }
 
-    public GoogleCloudDialogflowCxV3VariantsHistoryArgs(
-        @Nullable Output<String> updateTime,
-        @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants) {
-        this.updateTime = updateTime;
-        this.versionVariants = versionVariants;
-    }
+    private GoogleCloudDialogflowCxV3VariantsHistoryArgs() {}
 
-    private GoogleCloudDialogflowCxV3VariantsHistoryArgs() {
-        this.updateTime = Codegen.empty();
-        this.versionVariants = Codegen.empty();
+    private GoogleCloudDialogflowCxV3VariantsHistoryArgs(GoogleCloudDialogflowCxV3VariantsHistoryArgs $) {
+        this.updateTime = $.updateTime;
+        this.versionVariants = $.versionVariants;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3VariantsHistoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
+        private GoogleCloudDialogflowCxV3VariantsHistoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3VariantsHistoryArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3VariantsHistoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.updateTime = defaults.updateTime;
-    	      this.versionVariants = defaults.versionVariants;
+            $ = new GoogleCloudDialogflowCxV3VariantsHistoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder versionVariants(@Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants) {
-            this.versionVariants = versionVariants;
+            $.versionVariants = versionVariants;
             return this;
         }
-        public Builder versionVariants(@Nullable GoogleCloudDialogflowCxV3VersionVariantsArgs versionVariants) {
-            this.versionVariants = Codegen.ofNullable(versionVariants);
-            return this;
-        }        public GoogleCloudDialogflowCxV3VariantsHistoryArgs build() {
-            return new GoogleCloudDialogflowCxV3VariantsHistoryArgs(updateTime, versionVariants);
+
+        public Builder versionVariants(GoogleCloudDialogflowCxV3VersionVariantsArgs versionVariants) {
+            return versionVariants(Output.of(versionVariants));
+        }
+
+        public GoogleCloudDialogflowCxV3VariantsHistoryArgs build() {
+            return $;
         }
     }
+
 }

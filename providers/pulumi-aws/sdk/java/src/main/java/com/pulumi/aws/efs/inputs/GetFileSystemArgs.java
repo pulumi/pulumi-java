@@ -20,10 +20,10 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="creationToken")
-      private final @Nullable String creationToken;
+    private @Nullable String creationToken;
 
     public Optional<String> creationToken() {
-        return this.creationToken == null ? Optional.empty() : Optional.ofNullable(this.creationToken);
+        return Optional.ofNullable(this.creationToken);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileSystemId")
-      private final @Nullable String fileSystemId;
+    private @Nullable String fileSystemId;
 
     public Optional<String> fileSystemId() {
-        return this.fileSystemId == null ? Optional.empty() : Optional.ofNullable(this.fileSystemId);
+        return Optional.ofNullable(this.fileSystemId);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetFileSystemArgs(
-        @Nullable String creationToken,
-        @Nullable String fileSystemId,
-        @Nullable Map<String,String> tags) {
-        this.creationToken = creationToken;
-        this.fileSystemId = fileSystemId;
-        this.tags = tags;
-    }
+    private GetFileSystemArgs() {}
 
-    private GetFileSystemArgs() {
-        this.creationToken = null;
-        this.fileSystemId = null;
-        this.tags = Map.of();
+    private GetFileSystemArgs(GetFileSystemArgs $) {
+        this.creationToken = $.creationToken;
+        this.fileSystemId = $.fileSystemId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFileSystemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String creationToken;
-        private @Nullable String fileSystemId;
-        private @Nullable Map<String,String> tags;
+        private GetFileSystemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFileSystemArgs();
         }
 
         public Builder(GetFileSystemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationToken = defaults.creationToken;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.tags = defaults.tags;
+            $ = new GetFileSystemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationToken(@Nullable String creationToken) {
-            this.creationToken = creationToken;
+            $.creationToken = creationToken;
             return this;
         }
+
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = fileSystemId;
+            $.fileSystemId = fileSystemId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetFileSystemArgs build() {
-            return new GetFileSystemArgs(creationToken, fileSystemId, tags);
+        }
+
+        public GetFileSystemArgs build() {
+            return $;
         }
     }
+
 }

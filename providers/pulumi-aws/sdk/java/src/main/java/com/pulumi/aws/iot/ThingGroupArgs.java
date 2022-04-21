@@ -6,10 +6,10 @@ package com.pulumi.aws.iot;
 import com.pulumi.aws.iot.inputs.ThingGroupPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ThingGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ThingGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentGroupName")
-      private final @Nullable Output<String> parentGroupName;
+    private @Nullable Output<String> parentGroupName;
 
-    public Output<String> parentGroupName() {
-        return this.parentGroupName == null ? Codegen.empty() : this.parentGroupName;
+    public Optional<Output<String>> parentGroupName() {
+        return Optional.ofNullable(this.parentGroupName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ThingGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<ThingGroupPropertiesArgs> properties;
+    private @Nullable Output<ThingGroupPropertiesArgs> properties;
 
-    public Output<ThingGroupPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ThingGroupPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class ThingGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ThingGroupArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentGroupName,
-        @Nullable Output<ThingGroupPropertiesArgs> properties,
-        @Nullable Output<Map<String,String>> tags) {
-        this.name = name;
-        this.parentGroupName = parentGroupName;
-        this.properties = properties;
-        this.tags = tags;
-    }
+    private ThingGroupArgs() {}
 
-    private ThingGroupArgs() {
-        this.name = Codegen.empty();
-        this.parentGroupName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ThingGroupArgs(ThingGroupArgs $) {
+        this.name = $.name;
+        this.parentGroupName = $.parentGroupName;
+        this.properties = $.properties;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentGroupName;
-        private @Nullable Output<ThingGroupPropertiesArgs> properties;
-        private @Nullable Output<Map<String,String>> tags;
+        private ThingGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingGroupArgs();
         }
 
         public Builder(ThingGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parentGroupName = defaults.parentGroupName;
-    	      this.properties = defaults.properties;
-    	      this.tags = defaults.tags;
+            $ = new ThingGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentGroupName(@Nullable Output<String> parentGroupName) {
-            this.parentGroupName = parentGroupName;
+            $.parentGroupName = parentGroupName;
             return this;
         }
-        public Builder parentGroupName(@Nullable String parentGroupName) {
-            this.parentGroupName = Codegen.ofNullable(parentGroupName);
-            return this;
+
+        public Builder parentGroupName(String parentGroupName) {
+            return parentGroupName(Output.of(parentGroupName));
         }
+
         public Builder properties(@Nullable Output<ThingGroupPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ThingGroupPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ThingGroupPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ThingGroupArgs build() {
-            return new ThingGroupArgs(name, parentGroupName, properties, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ThingGroupArgs build() {
+            return $;
         }
     }
+
 }

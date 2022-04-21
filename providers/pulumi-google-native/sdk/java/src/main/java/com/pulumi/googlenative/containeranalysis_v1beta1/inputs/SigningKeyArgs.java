@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyScheme")
-      private final @Nullable Output<String> keyScheme;
+    private @Nullable Output<String> keyScheme;
 
-    public Output<String> keyScheme() {
-        return this.keyScheme == null ? Codegen.empty() : this.keyScheme;
+    public Optional<Output<String>> keyScheme() {
+        return Optional.ofNullable(this.keyScheme);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Output<String> keyType;
+    private @Nullable Output<String> keyType;
 
-    public Output<String> keyType() {
-        return this.keyType == null ? Codegen.empty() : this.keyType;
+    public Optional<Output<String>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class SigningKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKeyValue")
-      private final @Nullable Output<String> publicKeyValue;
+    private @Nullable Output<String> publicKeyValue;
 
-    public Output<String> publicKeyValue() {
-        return this.publicKeyValue == null ? Codegen.empty() : this.publicKeyValue;
+    public Optional<Output<String>> publicKeyValue() {
+        return Optional.ofNullable(this.publicKeyValue);
     }
 
-    public SigningKeyArgs(
-        @Nullable Output<String> keyId,
-        @Nullable Output<String> keyScheme,
-        @Nullable Output<String> keyType,
-        @Nullable Output<String> publicKeyValue) {
-        this.keyId = keyId;
-        this.keyScheme = keyScheme;
-        this.keyType = keyType;
-        this.publicKeyValue = publicKeyValue;
-    }
+    private SigningKeyArgs() {}
 
-    private SigningKeyArgs() {
-        this.keyId = Codegen.empty();
-        this.keyScheme = Codegen.empty();
-        this.keyType = Codegen.empty();
-        this.publicKeyValue = Codegen.empty();
+    private SigningKeyArgs(SigningKeyArgs $) {
+        this.keyId = $.keyId;
+        this.keyScheme = $.keyScheme;
+        this.keyType = $.keyType;
+        this.publicKeyValue = $.publicKeyValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<String> keyScheme;
-        private @Nullable Output<String> keyType;
-        private @Nullable Output<String> publicKeyValue;
+        private SigningKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningKeyArgs();
         }
 
         public Builder(SigningKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.keyScheme = defaults.keyScheme;
-    	      this.keyType = defaults.keyType;
-    	      this.publicKeyValue = defaults.publicKeyValue;
+            $ = new SigningKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
         public Builder keyScheme(@Nullable Output<String> keyScheme) {
-            this.keyScheme = keyScheme;
+            $.keyScheme = keyScheme;
             return this;
         }
-        public Builder keyScheme(@Nullable String keyScheme) {
-            this.keyScheme = Codegen.ofNullable(keyScheme);
-            return this;
+
+        public Builder keyScheme(String keyScheme) {
+            return keyScheme(Output.of(keyScheme));
         }
+
         public Builder keyType(@Nullable Output<String> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
-        public Builder keyType(@Nullable String keyType) {
-            this.keyType = Codegen.ofNullable(keyType);
-            return this;
+
+        public Builder keyType(String keyType) {
+            return keyType(Output.of(keyType));
         }
+
         public Builder publicKeyValue(@Nullable Output<String> publicKeyValue) {
-            this.publicKeyValue = publicKeyValue;
+            $.publicKeyValue = publicKeyValue;
             return this;
         }
-        public Builder publicKeyValue(@Nullable String publicKeyValue) {
-            this.publicKeyValue = Codegen.ofNullable(publicKeyValue);
-            return this;
-        }        public SigningKeyArgs build() {
-            return new SigningKeyArgs(keyId, keyScheme, keyType, publicKeyValue);
+
+        public Builder publicKeyValue(String publicKeyValue) {
+            return publicKeyValue(Output.of(publicKeyValue));
+        }
+
+        public SigningKeyArgs build() {
+            return $;
         }
     }
+
 }

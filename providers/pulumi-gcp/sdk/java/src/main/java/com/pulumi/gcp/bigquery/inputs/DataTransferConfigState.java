@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.DataTransferConfigEmailPreferencesGetArgs;
 import com.pulumi.gcp.bigquery.inputs.DataTransferConfigScheduleOptionsGetArgs;
 import com.pulumi.gcp.bigquery.inputs.DataTransferConfigSensitiveParamsGetArgs;
@@ -14,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dataRefreshWindowDays")
-      private final @Nullable Output<Integer> dataRefreshWindowDays;
+    private @Nullable Output<Integer> dataRefreshWindowDays;
 
-    public Output<Integer> dataRefreshWindowDays() {
-        return this.dataRefreshWindowDays == null ? Codegen.empty() : this.dataRefreshWindowDays;
+    public Optional<Output<Integer>> dataRefreshWindowDays() {
+        return Optional.ofNullable(this.dataRefreshWindowDays);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dataSourceId")
-      private final @Nullable Output<String> dataSourceId;
+    private @Nullable Output<String> dataSourceId;
 
-    public Output<String> dataSourceId() {
-        return this.dataSourceId == null ? Codegen.empty() : this.dataSourceId;
+    public Optional<Output<String>> dataSourceId() {
+        return Optional.ofNullable(this.dataSourceId);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="destinationDatasetId")
-      private final @Nullable Output<String> destinationDatasetId;
+    private @Nullable Output<String> destinationDatasetId;
 
-    public Output<String> destinationDatasetId() {
-        return this.destinationDatasetId == null ? Codegen.empty() : this.destinationDatasetId;
+    public Optional<Output<String>> destinationDatasetId() {
+        return Optional.ofNullable(this.destinationDatasetId);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="emailPreferences")
-      private final @Nullable Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences;
+    private @Nullable Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences;
 
-    public Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences() {
-        return this.emailPreferences == null ? Codegen.empty() : this.emailPreferences;
+    public Optional<Output<DataTransferConfigEmailPreferencesGetArgs>> emailPreferences() {
+        return Optional.ofNullable(this.emailPreferences);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="notificationPubsubTopic")
-      private final @Nullable Output<String> notificationPubsubTopic;
+    private @Nullable Output<String> notificationPubsubTopic;
 
-    public Output<String> notificationPubsubTopic() {
-        return this.notificationPubsubTopic == null ? Codegen.empty() : this.notificationPubsubTopic;
+    public Optional<Output<String>> notificationPubsubTopic() {
+        return Optional.ofNullable(this.notificationPubsubTopic);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="params")
-      private final @Nullable Output<Map<String,String>> params;
+    private @Nullable Output<Map<String,String>> params;
 
-    public Output<Map<String,String>> params() {
-        return this.params == null ? Codegen.empty() : this.params;
+    public Optional<Output<Map<String,String>>> params() {
+        return Optional.ofNullable(this.params);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="scheduleOptions")
-      private final @Nullable Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions;
+    private @Nullable Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions;
 
-    public Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions() {
-        return this.scheduleOptions == null ? Codegen.empty() : this.scheduleOptions;
+    public Optional<Output<DataTransferConfigScheduleOptionsGetArgs>> scheduleOptions() {
+        return Optional.ofNullable(this.scheduleOptions);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sensitiveParams")
-      private final @Nullable Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams;
+    private @Nullable Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams;
 
-    public Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams() {
-        return this.sensitiveParams == null ? Codegen.empty() : this.sensitiveParams;
+    public Optional<Output<DataTransferConfigSensitiveParamsGetArgs>> sensitiveParams() {
+        return Optional.ofNullable(this.sensitiveParams);
     }
 
     /**
@@ -209,232 +209,188 @@ public final class DataTransferConfigState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceAccountName")
-      private final @Nullable Output<String> serviceAccountName;
+    private @Nullable Output<String> serviceAccountName;
 
-    public Output<String> serviceAccountName() {
-        return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
+    public Optional<Output<String>> serviceAccountName() {
+        return Optional.ofNullable(this.serviceAccountName);
     }
 
-    public DataTransferConfigState(
-        @Nullable Output<Integer> dataRefreshWindowDays,
-        @Nullable Output<String> dataSourceId,
-        @Nullable Output<String> destinationDatasetId,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<String> displayName,
-        @Nullable Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> notificationPubsubTopic,
-        @Nullable Output<Map<String,String>> params,
-        @Nullable Output<String> project,
-        @Nullable Output<String> schedule,
-        @Nullable Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions,
-        @Nullable Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams,
-        @Nullable Output<String> serviceAccountName) {
-        this.dataRefreshWindowDays = dataRefreshWindowDays;
-        this.dataSourceId = dataSourceId;
-        this.destinationDatasetId = destinationDatasetId;
-        this.disabled = disabled;
-        this.displayName = displayName;
-        this.emailPreferences = emailPreferences;
-        this.location = location;
-        this.name = name;
-        this.notificationPubsubTopic = notificationPubsubTopic;
-        this.params = params;
-        this.project = project;
-        this.schedule = schedule;
-        this.scheduleOptions = scheduleOptions;
-        this.sensitiveParams = sensitiveParams;
-        this.serviceAccountName = serviceAccountName;
-    }
+    private DataTransferConfigState() {}
 
-    private DataTransferConfigState() {
-        this.dataRefreshWindowDays = Codegen.empty();
-        this.dataSourceId = Codegen.empty();
-        this.destinationDatasetId = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.emailPreferences = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationPubsubTopic = Codegen.empty();
-        this.params = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.scheduleOptions = Codegen.empty();
-        this.sensitiveParams = Codegen.empty();
-        this.serviceAccountName = Codegen.empty();
+    private DataTransferConfigState(DataTransferConfigState $) {
+        this.dataRefreshWindowDays = $.dataRefreshWindowDays;
+        this.dataSourceId = $.dataSourceId;
+        this.destinationDatasetId = $.destinationDatasetId;
+        this.disabled = $.disabled;
+        this.displayName = $.displayName;
+        this.emailPreferences = $.emailPreferences;
+        this.location = $.location;
+        this.name = $.name;
+        this.notificationPubsubTopic = $.notificationPubsubTopic;
+        this.params = $.params;
+        this.project = $.project;
+        this.schedule = $.schedule;
+        this.scheduleOptions = $.scheduleOptions;
+        this.sensitiveParams = $.sensitiveParams;
+        this.serviceAccountName = $.serviceAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataTransferConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> dataRefreshWindowDays;
-        private @Nullable Output<String> dataSourceId;
-        private @Nullable Output<String> destinationDatasetId;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> notificationPubsubTopic;
-        private @Nullable Output<Map<String,String>> params;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> schedule;
-        private @Nullable Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions;
-        private @Nullable Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams;
-        private @Nullable Output<String> serviceAccountName;
+        private DataTransferConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataTransferConfigState();
         }
 
         public Builder(DataTransferConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataRefreshWindowDays = defaults.dataRefreshWindowDays;
-    	      this.dataSourceId = defaults.dataSourceId;
-    	      this.destinationDatasetId = defaults.destinationDatasetId;
-    	      this.disabled = defaults.disabled;
-    	      this.displayName = defaults.displayName;
-    	      this.emailPreferences = defaults.emailPreferences;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.notificationPubsubTopic = defaults.notificationPubsubTopic;
-    	      this.params = defaults.params;
-    	      this.project = defaults.project;
-    	      this.schedule = defaults.schedule;
-    	      this.scheduleOptions = defaults.scheduleOptions;
-    	      this.sensitiveParams = defaults.sensitiveParams;
-    	      this.serviceAccountName = defaults.serviceAccountName;
+            $ = new DataTransferConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder dataRefreshWindowDays(@Nullable Output<Integer> dataRefreshWindowDays) {
-            this.dataRefreshWindowDays = dataRefreshWindowDays;
+            $.dataRefreshWindowDays = dataRefreshWindowDays;
             return this;
         }
-        public Builder dataRefreshWindowDays(@Nullable Integer dataRefreshWindowDays) {
-            this.dataRefreshWindowDays = Codegen.ofNullable(dataRefreshWindowDays);
-            return this;
+
+        public Builder dataRefreshWindowDays(Integer dataRefreshWindowDays) {
+            return dataRefreshWindowDays(Output.of(dataRefreshWindowDays));
         }
+
         public Builder dataSourceId(@Nullable Output<String> dataSourceId) {
-            this.dataSourceId = dataSourceId;
+            $.dataSourceId = dataSourceId;
             return this;
         }
-        public Builder dataSourceId(@Nullable String dataSourceId) {
-            this.dataSourceId = Codegen.ofNullable(dataSourceId);
-            return this;
+
+        public Builder dataSourceId(String dataSourceId) {
+            return dataSourceId(Output.of(dataSourceId));
         }
+
         public Builder destinationDatasetId(@Nullable Output<String> destinationDatasetId) {
-            this.destinationDatasetId = destinationDatasetId;
+            $.destinationDatasetId = destinationDatasetId;
             return this;
         }
-        public Builder destinationDatasetId(@Nullable String destinationDatasetId) {
-            this.destinationDatasetId = Codegen.ofNullable(destinationDatasetId);
-            return this;
+
+        public Builder destinationDatasetId(String destinationDatasetId) {
+            return destinationDatasetId(Output.of(destinationDatasetId));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder emailPreferences(@Nullable Output<DataTransferConfigEmailPreferencesGetArgs> emailPreferences) {
-            this.emailPreferences = emailPreferences;
+            $.emailPreferences = emailPreferences;
             return this;
         }
-        public Builder emailPreferences(@Nullable DataTransferConfigEmailPreferencesGetArgs emailPreferences) {
-            this.emailPreferences = Codegen.ofNullable(emailPreferences);
-            return this;
+
+        public Builder emailPreferences(DataTransferConfigEmailPreferencesGetArgs emailPreferences) {
+            return emailPreferences(Output.of(emailPreferences));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationPubsubTopic(@Nullable Output<String> notificationPubsubTopic) {
-            this.notificationPubsubTopic = notificationPubsubTopic;
+            $.notificationPubsubTopic = notificationPubsubTopic;
             return this;
         }
-        public Builder notificationPubsubTopic(@Nullable String notificationPubsubTopic) {
-            this.notificationPubsubTopic = Codegen.ofNullable(notificationPubsubTopic);
-            return this;
+
+        public Builder notificationPubsubTopic(String notificationPubsubTopic) {
+            return notificationPubsubTopic(Output.of(notificationPubsubTopic));
         }
+
         public Builder params(@Nullable Output<Map<String,String>> params) {
-            this.params = params;
+            $.params = params;
             return this;
         }
-        public Builder params(@Nullable Map<String,String> params) {
-            this.params = Codegen.ofNullable(params);
-            return this;
+
+        public Builder params(Map<String,String> params) {
+            return params(Output.of(params));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder scheduleOptions(@Nullable Output<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions) {
-            this.scheduleOptions = scheduleOptions;
+            $.scheduleOptions = scheduleOptions;
             return this;
         }
-        public Builder scheduleOptions(@Nullable DataTransferConfigScheduleOptionsGetArgs scheduleOptions) {
-            this.scheduleOptions = Codegen.ofNullable(scheduleOptions);
-            return this;
+
+        public Builder scheduleOptions(DataTransferConfigScheduleOptionsGetArgs scheduleOptions) {
+            return scheduleOptions(Output.of(scheduleOptions));
         }
+
         public Builder sensitiveParams(@Nullable Output<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams) {
-            this.sensitiveParams = sensitiveParams;
+            $.sensitiveParams = sensitiveParams;
             return this;
         }
-        public Builder sensitiveParams(@Nullable DataTransferConfigSensitiveParamsGetArgs sensitiveParams) {
-            this.sensitiveParams = Codegen.ofNullable(sensitiveParams);
-            return this;
+
+        public Builder sensitiveParams(DataTransferConfigSensitiveParamsGetArgs sensitiveParams) {
+            return sensitiveParams(Output.of(sensitiveParams));
         }
+
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
-            this.serviceAccountName = serviceAccountName;
+            $.serviceAccountName = serviceAccountName;
             return this;
         }
-        public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Codegen.ofNullable(serviceAccountName);
-            return this;
-        }        public DataTransferConfigState build() {
-            return new DataTransferConfigState(dataRefreshWindowDays, dataSourceId, destinationDatasetId, disabled, displayName, emailPreferences, location, name, notificationPubsubTopic, params, project, schedule, scheduleOptions, sensitiveParams, serviceAccountName);
+
+        public Builder serviceAccountName(String serviceAccountName) {
+            return serviceAccountName(Output.of(serviceAccountName));
+        }
+
+        public DataTransferConfigState build() {
+            return $;
         }
     }
+
 }

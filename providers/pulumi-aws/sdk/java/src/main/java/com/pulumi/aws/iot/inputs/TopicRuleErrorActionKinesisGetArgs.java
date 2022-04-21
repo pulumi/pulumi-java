@@ -5,9 +5,9 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TopicRuleErrorActionKinesisGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="partitionKey")
-      private final @Nullable Output<String> partitionKey;
+    private @Nullable Output<String> partitionKey;
 
-    public Output<String> partitionKey() {
-        return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
+    public Optional<Output<String>> partitionKey() {
+        return Optional.ofNullable(this.partitionKey);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class TopicRuleErrorActionKinesisGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -42,76 +42,70 @@ public final class TopicRuleErrorActionKinesisGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="streamName", required=true)
-      private final Output<String> streamName;
+    private Output<String> streamName;
 
     public Output<String> streamName() {
         return this.streamName;
     }
 
-    public TopicRuleErrorActionKinesisGetArgs(
-        @Nullable Output<String> partitionKey,
-        Output<String> roleArn,
-        Output<String> streamName) {
-        this.partitionKey = partitionKey;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.streamName = Objects.requireNonNull(streamName, "expected parameter 'streamName' to be non-null");
-    }
+    private TopicRuleErrorActionKinesisGetArgs() {}
 
-    private TopicRuleErrorActionKinesisGetArgs() {
-        this.partitionKey = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.streamName = Codegen.empty();
+    private TopicRuleErrorActionKinesisGetArgs(TopicRuleErrorActionKinesisGetArgs $) {
+        this.partitionKey = $.partitionKey;
+        this.roleArn = $.roleArn;
+        this.streamName = $.streamName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleErrorActionKinesisGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> partitionKey;
-        private Output<String> roleArn;
-        private Output<String> streamName;
+        private TopicRuleErrorActionKinesisGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleErrorActionKinesisGetArgs();
         }
 
         public Builder(TopicRuleErrorActionKinesisGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionKey = defaults.partitionKey;
-    	      this.roleArn = defaults.roleArn;
-    	      this.streamName = defaults.streamName;
+            $ = new TopicRuleErrorActionKinesisGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionKey(@Nullable Output<String> partitionKey) {
-            this.partitionKey = partitionKey;
+            $.partitionKey = partitionKey;
             return this;
         }
-        public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Codegen.ofNullable(partitionKey);
-            return this;
+
+        public Builder partitionKey(String partitionKey) {
+            return partitionKey(Output.of(partitionKey));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder streamName(Output<String> streamName) {
-            this.streamName = Objects.requireNonNull(streamName);
+            $.streamName = streamName;
             return this;
         }
+
         public Builder streamName(String streamName) {
-            this.streamName = Output.of(Objects.requireNonNull(streamName));
-            return this;
-        }        public TopicRuleErrorActionKinesisGetArgs build() {
-            return new TopicRuleErrorActionKinesisGetArgs(partitionKey, roleArn, streamName);
+            return streamName(Output.of(streamName));
+        }
+
+        public TopicRuleErrorActionKinesisGetArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.streamName = Objects.requireNonNull($.streamName, "expected parameter 'streamName' to be non-null");
+            return $;
         }
     }
+
 }

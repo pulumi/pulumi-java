@@ -5,7 +5,6 @@ package com.pulumi.googlenative.translate_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GcsSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputUri", required=true)
-      private final Output<String> inputUri;
+    private Output<String> inputUri;
 
     public Output<String> inputUri() {
         return this.inputUri;
     }
 
-    public GcsSourceArgs(Output<String> inputUri) {
-        this.inputUri = Objects.requireNonNull(inputUri, "expected parameter 'inputUri' to be non-null");
-    }
+    private GcsSourceArgs() {}
 
-    private GcsSourceArgs() {
-        this.inputUri = Codegen.empty();
+    private GcsSourceArgs(GcsSourceArgs $) {
+        this.inputUri = $.inputUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcsSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> inputUri;
+        private GcsSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcsSourceArgs();
         }
 
         public Builder(GcsSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputUri = defaults.inputUri;
+            $ = new GcsSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputUri(Output<String> inputUri) {
-            this.inputUri = Objects.requireNonNull(inputUri);
+            $.inputUri = inputUri;
             return this;
         }
+
         public Builder inputUri(String inputUri) {
-            this.inputUri = Output.of(Objects.requireNonNull(inputUri));
-            return this;
-        }        public GcsSourceArgs build() {
-            return new GcsSourceArgs(inputUri);
+            return inputUri(Output.of(inputUri));
+        }
+
+        public GcsSourceArgs build() {
+            $.inputUri = Objects.requireNonNull($.inputUri, "expected parameter 'inputUri' to be non-null");
+            return $;
         }
     }
+
 }

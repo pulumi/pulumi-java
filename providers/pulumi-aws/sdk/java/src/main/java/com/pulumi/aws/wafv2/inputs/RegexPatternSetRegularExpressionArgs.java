@@ -5,7 +5,6 @@ package com.pulumi.aws.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class RegexPatternSetRegularExpressionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="regexString", required=true)
-      private final Output<String> regexString;
+    private Output<String> regexString;
 
     public Output<String> regexString() {
         return this.regexString;
     }
 
-    public RegexPatternSetRegularExpressionArgs(Output<String> regexString) {
-        this.regexString = Objects.requireNonNull(regexString, "expected parameter 'regexString' to be non-null");
-    }
+    private RegexPatternSetRegularExpressionArgs() {}
 
-    private RegexPatternSetRegularExpressionArgs() {
-        this.regexString = Codegen.empty();
+    private RegexPatternSetRegularExpressionArgs(RegexPatternSetRegularExpressionArgs $) {
+        this.regexString = $.regexString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegexPatternSetRegularExpressionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> regexString;
+        private RegexPatternSetRegularExpressionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegexPatternSetRegularExpressionArgs();
         }
 
         public Builder(RegexPatternSetRegularExpressionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regexString = defaults.regexString;
+            $ = new RegexPatternSetRegularExpressionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regexString(Output<String> regexString) {
-            this.regexString = Objects.requireNonNull(regexString);
+            $.regexString = regexString;
             return this;
         }
+
         public Builder regexString(String regexString) {
-            this.regexString = Output.of(Objects.requireNonNull(regexString));
-            return this;
-        }        public RegexPatternSetRegularExpressionArgs build() {
-            return new RegexPatternSetRegularExpressionArgs(regexString);
+            return regexString(Output.of(regexString));
+        }
+
+        public RegexPatternSetRegularExpressionArgs build() {
+            $.regexString = Objects.requireNonNull($.regexString, "expected parameter 'regexString' to be non-null");
+            return $;
         }
     }
+
 }

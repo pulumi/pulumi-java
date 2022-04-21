@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @Import(name="certSign")
-      private final @Nullable Output<Boolean> certSign;
+    private @Nullable Output<Boolean> certSign;
 
-    public Output<Boolean> certSign() {
-        return this.certSign == null ? Codegen.empty() : this.certSign;
+    public Optional<Output<Boolean>> certSign() {
+        return Optional.ofNullable(this.certSign);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @Import(name="contentCommitment")
-      private final @Nullable Output<Boolean> contentCommitment;
+    private @Nullable Output<Boolean> contentCommitment;
 
-    public Output<Boolean> contentCommitment() {
-        return this.contentCommitment == null ? Codegen.empty() : this.contentCommitment;
+    public Optional<Output<Boolean>> contentCommitment() {
+        return Optional.ofNullable(this.contentCommitment);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @Import(name="crlSign")
-      private final @Nullable Output<Boolean> crlSign;
+    private @Nullable Output<Boolean> crlSign;
 
-    public Output<Boolean> crlSign() {
-        return this.crlSign == null ? Codegen.empty() : this.crlSign;
+    public Optional<Output<Boolean>> crlSign() {
+        return Optional.ofNullable(this.crlSign);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @Import(name="dataEncipherment")
-      private final @Nullable Output<Boolean> dataEncipherment;
+    private @Nullable Output<Boolean> dataEncipherment;
 
-    public Output<Boolean> dataEncipherment() {
-        return this.dataEncipherment == null ? Codegen.empty() : this.dataEncipherment;
+    public Optional<Output<Boolean>> dataEncipherment() {
+        return Optional.ofNullable(this.dataEncipherment);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @Import(name="decipherOnly")
-      private final @Nullable Output<Boolean> decipherOnly;
+    private @Nullable Output<Boolean> decipherOnly;
 
-    public Output<Boolean> decipherOnly() {
-        return this.decipherOnly == null ? Codegen.empty() : this.decipherOnly;
+    public Optional<Output<Boolean>> decipherOnly() {
+        return Optional.ofNullable(this.decipherOnly);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @Import(name="digitalSignature")
-      private final @Nullable Output<Boolean> digitalSignature;
+    private @Nullable Output<Boolean> digitalSignature;
 
-    public Output<Boolean> digitalSignature() {
-        return this.digitalSignature == null ? Codegen.empty() : this.digitalSignature;
+    public Optional<Output<Boolean>> digitalSignature() {
+        return Optional.ofNullable(this.digitalSignature);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @Import(name="encipherOnly")
-      private final @Nullable Output<Boolean> encipherOnly;
+    private @Nullable Output<Boolean> encipherOnly;
 
-    public Output<Boolean> encipherOnly() {
-        return this.encipherOnly == null ? Codegen.empty() : this.encipherOnly;
+    public Optional<Output<Boolean>> encipherOnly() {
+        return Optional.ofNullable(this.encipherOnly);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @Import(name="keyAgreement")
-      private final @Nullable Output<Boolean> keyAgreement;
+    private @Nullable Output<Boolean> keyAgreement;
 
-    public Output<Boolean> keyAgreement() {
-        return this.keyAgreement == null ? Codegen.empty() : this.keyAgreement;
+    public Optional<Output<Boolean>> keyAgreement() {
+        return Optional.ofNullable(this.keyAgreement);
     }
 
     /**
@@ -108,154 +108,128 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs ex
      * 
      */
     @Import(name="keyEncipherment")
-      private final @Nullable Output<Boolean> keyEncipherment;
+    private @Nullable Output<Boolean> keyEncipherment;
 
-    public Output<Boolean> keyEncipherment() {
-        return this.keyEncipherment == null ? Codegen.empty() : this.keyEncipherment;
+    public Optional<Output<Boolean>> keyEncipherment() {
+        return Optional.ofNullable(this.keyEncipherment);
     }
 
-    public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs(
-        @Nullable Output<Boolean> certSign,
-        @Nullable Output<Boolean> contentCommitment,
-        @Nullable Output<Boolean> crlSign,
-        @Nullable Output<Boolean> dataEncipherment,
-        @Nullable Output<Boolean> decipherOnly,
-        @Nullable Output<Boolean> digitalSignature,
-        @Nullable Output<Boolean> encipherOnly,
-        @Nullable Output<Boolean> keyAgreement,
-        @Nullable Output<Boolean> keyEncipherment) {
-        this.certSign = certSign;
-        this.contentCommitment = contentCommitment;
-        this.crlSign = crlSign;
-        this.dataEncipherment = dataEncipherment;
-        this.decipherOnly = decipherOnly;
-        this.digitalSignature = digitalSignature;
-        this.encipherOnly = encipherOnly;
-        this.keyAgreement = keyAgreement;
-        this.keyEncipherment = keyEncipherment;
-    }
+    private CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs() {}
 
-    private CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs() {
-        this.certSign = Codegen.empty();
-        this.contentCommitment = Codegen.empty();
-        this.crlSign = Codegen.empty();
-        this.dataEncipherment = Codegen.empty();
-        this.decipherOnly = Codegen.empty();
-        this.digitalSignature = Codegen.empty();
-        this.encipherOnly = Codegen.empty();
-        this.keyAgreement = Codegen.empty();
-        this.keyEncipherment = Codegen.empty();
+    private CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs(CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs $) {
+        this.certSign = $.certSign;
+        this.contentCommitment = $.contentCommitment;
+        this.crlSign = $.crlSign;
+        this.dataEncipherment = $.dataEncipherment;
+        this.decipherOnly = $.decipherOnly;
+        this.digitalSignature = $.digitalSignature;
+        this.encipherOnly = $.encipherOnly;
+        this.keyAgreement = $.keyAgreement;
+        this.keyEncipherment = $.keyEncipherment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> certSign;
-        private @Nullable Output<Boolean> contentCommitment;
-        private @Nullable Output<Boolean> crlSign;
-        private @Nullable Output<Boolean> dataEncipherment;
-        private @Nullable Output<Boolean> decipherOnly;
-        private @Nullable Output<Boolean> digitalSignature;
-        private @Nullable Output<Boolean> encipherOnly;
-        private @Nullable Output<Boolean> keyAgreement;
-        private @Nullable Output<Boolean> keyEncipherment;
+        private CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs();
         }
 
         public Builder(CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certSign = defaults.certSign;
-    	      this.contentCommitment = defaults.contentCommitment;
-    	      this.crlSign = defaults.crlSign;
-    	      this.dataEncipherment = defaults.dataEncipherment;
-    	      this.decipherOnly = defaults.decipherOnly;
-    	      this.digitalSignature = defaults.digitalSignature;
-    	      this.encipherOnly = defaults.encipherOnly;
-    	      this.keyAgreement = defaults.keyAgreement;
-    	      this.keyEncipherment = defaults.keyEncipherment;
+            $ = new CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certSign(@Nullable Output<Boolean> certSign) {
-            this.certSign = certSign;
+            $.certSign = certSign;
             return this;
         }
-        public Builder certSign(@Nullable Boolean certSign) {
-            this.certSign = Codegen.ofNullable(certSign);
-            return this;
+
+        public Builder certSign(Boolean certSign) {
+            return certSign(Output.of(certSign));
         }
+
         public Builder contentCommitment(@Nullable Output<Boolean> contentCommitment) {
-            this.contentCommitment = contentCommitment;
+            $.contentCommitment = contentCommitment;
             return this;
         }
-        public Builder contentCommitment(@Nullable Boolean contentCommitment) {
-            this.contentCommitment = Codegen.ofNullable(contentCommitment);
-            return this;
+
+        public Builder contentCommitment(Boolean contentCommitment) {
+            return contentCommitment(Output.of(contentCommitment));
         }
+
         public Builder crlSign(@Nullable Output<Boolean> crlSign) {
-            this.crlSign = crlSign;
+            $.crlSign = crlSign;
             return this;
         }
-        public Builder crlSign(@Nullable Boolean crlSign) {
-            this.crlSign = Codegen.ofNullable(crlSign);
-            return this;
+
+        public Builder crlSign(Boolean crlSign) {
+            return crlSign(Output.of(crlSign));
         }
+
         public Builder dataEncipherment(@Nullable Output<Boolean> dataEncipherment) {
-            this.dataEncipherment = dataEncipherment;
+            $.dataEncipherment = dataEncipherment;
             return this;
         }
-        public Builder dataEncipherment(@Nullable Boolean dataEncipherment) {
-            this.dataEncipherment = Codegen.ofNullable(dataEncipherment);
-            return this;
+
+        public Builder dataEncipherment(Boolean dataEncipherment) {
+            return dataEncipherment(Output.of(dataEncipherment));
         }
+
         public Builder decipherOnly(@Nullable Output<Boolean> decipherOnly) {
-            this.decipherOnly = decipherOnly;
+            $.decipherOnly = decipherOnly;
             return this;
         }
-        public Builder decipherOnly(@Nullable Boolean decipherOnly) {
-            this.decipherOnly = Codegen.ofNullable(decipherOnly);
-            return this;
+
+        public Builder decipherOnly(Boolean decipherOnly) {
+            return decipherOnly(Output.of(decipherOnly));
         }
+
         public Builder digitalSignature(@Nullable Output<Boolean> digitalSignature) {
-            this.digitalSignature = digitalSignature;
+            $.digitalSignature = digitalSignature;
             return this;
         }
-        public Builder digitalSignature(@Nullable Boolean digitalSignature) {
-            this.digitalSignature = Codegen.ofNullable(digitalSignature);
-            return this;
+
+        public Builder digitalSignature(Boolean digitalSignature) {
+            return digitalSignature(Output.of(digitalSignature));
         }
+
         public Builder encipherOnly(@Nullable Output<Boolean> encipherOnly) {
-            this.encipherOnly = encipherOnly;
+            $.encipherOnly = encipherOnly;
             return this;
         }
-        public Builder encipherOnly(@Nullable Boolean encipherOnly) {
-            this.encipherOnly = Codegen.ofNullable(encipherOnly);
-            return this;
+
+        public Builder encipherOnly(Boolean encipherOnly) {
+            return encipherOnly(Output.of(encipherOnly));
         }
+
         public Builder keyAgreement(@Nullable Output<Boolean> keyAgreement) {
-            this.keyAgreement = keyAgreement;
+            $.keyAgreement = keyAgreement;
             return this;
         }
-        public Builder keyAgreement(@Nullable Boolean keyAgreement) {
-            this.keyAgreement = Codegen.ofNullable(keyAgreement);
-            return this;
+
+        public Builder keyAgreement(Boolean keyAgreement) {
+            return keyAgreement(Output.of(keyAgreement));
         }
+
         public Builder keyEncipherment(@Nullable Output<Boolean> keyEncipherment) {
-            this.keyEncipherment = keyEncipherment;
+            $.keyEncipherment = keyEncipherment;
             return this;
         }
-        public Builder keyEncipherment(@Nullable Boolean keyEncipherment) {
-            this.keyEncipherment = Codegen.ofNullable(keyEncipherment);
-            return this;
-        }        public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs build() {
-            return new CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
+
+        public Builder keyEncipherment(Boolean keyEncipherment) {
+            return keyEncipherment(Output.of(keyEncipherment));
+        }
+
+        public CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsageArgs build() {
+            return $;
         }
     }
+
 }

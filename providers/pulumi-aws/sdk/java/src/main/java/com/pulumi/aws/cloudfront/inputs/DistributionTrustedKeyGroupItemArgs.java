@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DistributionTrustedKeyGroupItemArgs extends com.pulumi.resour
      * 
      */
     @Import(name="keyGroupId")
-      private final @Nullable Output<String> keyGroupId;
+    private @Nullable Output<String> keyGroupId;
 
-    public Output<String> keyGroupId() {
-        return this.keyGroupId == null ? Codegen.empty() : this.keyGroupId;
+    public Optional<Output<String>> keyGroupId() {
+        return Optional.ofNullable(this.keyGroupId);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class DistributionTrustedKeyGroupItemArgs extends com.pulumi.resour
      * 
      */
     @Import(name="keyPairIds")
-      private final @Nullable Output<List<String>> keyPairIds;
+    private @Nullable Output<List<String>> keyPairIds;
 
-    public Output<List<String>> keyPairIds() {
-        return this.keyPairIds == null ? Codegen.empty() : this.keyPairIds;
+    public Optional<Output<List<String>>> keyPairIds() {
+        return Optional.ofNullable(this.keyPairIds);
     }
 
-    public DistributionTrustedKeyGroupItemArgs(
-        @Nullable Output<String> keyGroupId,
-        @Nullable Output<List<String>> keyPairIds) {
-        this.keyGroupId = keyGroupId;
-        this.keyPairIds = keyPairIds;
-    }
+    private DistributionTrustedKeyGroupItemArgs() {}
 
-    private DistributionTrustedKeyGroupItemArgs() {
-        this.keyGroupId = Codegen.empty();
-        this.keyPairIds = Codegen.empty();
+    private DistributionTrustedKeyGroupItemArgs(DistributionTrustedKeyGroupItemArgs $) {
+        this.keyGroupId = $.keyGroupId;
+        this.keyPairIds = $.keyPairIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionTrustedKeyGroupItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyGroupId;
-        private @Nullable Output<List<String>> keyPairIds;
+        private DistributionTrustedKeyGroupItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionTrustedKeyGroupItemArgs();
         }
 
         public Builder(DistributionTrustedKeyGroupItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyGroupId = defaults.keyGroupId;
-    	      this.keyPairIds = defaults.keyPairIds;
+            $ = new DistributionTrustedKeyGroupItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyGroupId(@Nullable Output<String> keyGroupId) {
-            this.keyGroupId = keyGroupId;
+            $.keyGroupId = keyGroupId;
             return this;
         }
-        public Builder keyGroupId(@Nullable String keyGroupId) {
-            this.keyGroupId = Codegen.ofNullable(keyGroupId);
-            return this;
+
+        public Builder keyGroupId(String keyGroupId) {
+            return keyGroupId(Output.of(keyGroupId));
         }
+
         public Builder keyPairIds(@Nullable Output<List<String>> keyPairIds) {
-            this.keyPairIds = keyPairIds;
+            $.keyPairIds = keyPairIds;
             return this;
         }
-        public Builder keyPairIds(@Nullable List<String> keyPairIds) {
-            this.keyPairIds = Codegen.ofNullable(keyPairIds);
-            return this;
+
+        public Builder keyPairIds(List<String> keyPairIds) {
+            return keyPairIds(Output.of(keyPairIds));
         }
+
         public Builder keyPairIds(String... keyPairIds) {
             return keyPairIds(List.of(keyPairIds));
-        }        public DistributionTrustedKeyGroupItemArgs build() {
-            return new DistributionTrustedKeyGroupItemArgs(keyGroupId, keyPairIds);
+        }
+
+        public DistributionTrustedKeyGroupItemArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -45,7 +45,7 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="entity", required=true)
-      private final Output<String> entity;
+    private Output<String> entity;
 
     public Output<String> entity() {
         return this.entity;
@@ -57,76 +57,70 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public BucketAccessControlArgs(
-        Output<String> bucket,
-        Output<String> entity,
-        @Nullable Output<String> role) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.entity = Objects.requireNonNull(entity, "expected parameter 'entity' to be non-null");
-        this.role = role;
-    }
+    private BucketAccessControlArgs() {}
 
-    private BucketAccessControlArgs() {
-        this.bucket = Codegen.empty();
-        this.entity = Codegen.empty();
-        this.role = Codegen.empty();
+    private BucketAccessControlArgs(BucketAccessControlArgs $) {
+        this.bucket = $.bucket;
+        this.entity = $.entity;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<String> entity;
-        private @Nullable Output<String> role;
+        private BucketAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAccessControlArgs();
         }
 
         public Builder(BucketAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.entity = defaults.entity;
-    	      this.role = defaults.role;
+            $ = new BucketAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder entity(Output<String> entity) {
-            this.entity = Objects.requireNonNull(entity);
+            $.entity = entity;
             return this;
         }
+
         public Builder entity(String entity) {
-            this.entity = Output.of(Objects.requireNonNull(entity));
-            return this;
+            return entity(Output.of(entity));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public BucketAccessControlArgs build() {
-            return new BucketAccessControlArgs(bucket, entity, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public BucketAccessControlArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.entity = Objects.requireNonNull($.entity, "expected parameter 'entity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ApiConfigGatewayConfigBackendConfigGetArgs extends com.pulumi
      * 
      */
     @Import(name="googleServiceAccount", required=true)
-      private final Output<String> googleServiceAccount;
+    private Output<String> googleServiceAccount;
 
     public Output<String> googleServiceAccount() {
         return this.googleServiceAccount;
     }
 
-    public ApiConfigGatewayConfigBackendConfigGetArgs(Output<String> googleServiceAccount) {
-        this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount, "expected parameter 'googleServiceAccount' to be non-null");
-    }
+    private ApiConfigGatewayConfigBackendConfigGetArgs() {}
 
-    private ApiConfigGatewayConfigBackendConfigGetArgs() {
-        this.googleServiceAccount = Codegen.empty();
+    private ApiConfigGatewayConfigBackendConfigGetArgs(ApiConfigGatewayConfigBackendConfigGetArgs $) {
+        this.googleServiceAccount = $.googleServiceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiConfigGatewayConfigBackendConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> googleServiceAccount;
+        private ApiConfigGatewayConfigBackendConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiConfigGatewayConfigBackendConfigGetArgs();
         }
 
         public Builder(ApiConfigGatewayConfigBackendConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.googleServiceAccount = defaults.googleServiceAccount;
+            $ = new ApiConfigGatewayConfigBackendConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder googleServiceAccount(Output<String> googleServiceAccount) {
-            this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
+            $.googleServiceAccount = googleServiceAccount;
             return this;
         }
+
         public Builder googleServiceAccount(String googleServiceAccount) {
-            this.googleServiceAccount = Output.of(Objects.requireNonNull(googleServiceAccount));
-            return this;
-        }        public ApiConfigGatewayConfigBackendConfigGetArgs build() {
-            return new ApiConfigGatewayConfigBackendConfigGetArgs(googleServiceAccount);
+            return googleServiceAccount(Output.of(googleServiceAccount));
+        }
+
+        public ApiConfigGatewayConfigBackendConfigGetArgs build() {
+            $.googleServiceAccount = Objects.requireNonNull($.googleServiceAccount, "expected parameter 'googleServiceAccount' to be non-null");
+            return $;
         }
     }
+
 }

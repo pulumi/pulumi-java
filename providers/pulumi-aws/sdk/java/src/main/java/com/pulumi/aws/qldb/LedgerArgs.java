@@ -5,11 +5,11 @@ package com.pulumi.aws.qldb;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissionsMode", required=true)
-      private final Output<String> permissionsMode;
+    private Output<String> permissionsMode;
 
     public Output<String> permissionsMode() {
         return this.permissionsMode;
@@ -55,89 +55,79 @@ public final class LedgerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LedgerArgs(
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<String> name,
-        Output<String> permissionsMode,
-        @Nullable Output<Map<String,String>> tags) {
-        this.deletionProtection = deletionProtection;
-        this.name = name;
-        this.permissionsMode = Objects.requireNonNull(permissionsMode, "expected parameter 'permissionsMode' to be non-null");
-        this.tags = tags;
-    }
+    private LedgerArgs() {}
 
-    private LedgerArgs() {
-        this.deletionProtection = Codegen.empty();
-        this.name = Codegen.empty();
-        this.permissionsMode = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LedgerArgs(LedgerArgs $) {
+        this.deletionProtection = $.deletionProtection;
+        this.name = $.name;
+        this.permissionsMode = $.permissionsMode;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LedgerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<String> name;
-        private Output<String> permissionsMode;
-        private @Nullable Output<Map<String,String>> tags;
+        private LedgerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LedgerArgs();
         }
 
         public Builder(LedgerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.name = defaults.name;
-    	      this.permissionsMode = defaults.permissionsMode;
-    	      this.tags = defaults.tags;
+            $ = new LedgerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder permissionsMode(Output<String> permissionsMode) {
-            this.permissionsMode = Objects.requireNonNull(permissionsMode);
+            $.permissionsMode = permissionsMode;
             return this;
         }
+
         public Builder permissionsMode(String permissionsMode) {
-            this.permissionsMode = Output.of(Objects.requireNonNull(permissionsMode));
-            return this;
+            return permissionsMode(Output.of(permissionsMode));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public LedgerArgs build() {
-            return new LedgerArgs(deletionProtection, name, permissionsMode, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public LedgerArgs build() {
+            $.permissionsMode = Objects.requireNonNull($.permissionsMode, "expected parameter 'permissionsMode' to be non-null");
+            return $;
         }
     }
+
 }

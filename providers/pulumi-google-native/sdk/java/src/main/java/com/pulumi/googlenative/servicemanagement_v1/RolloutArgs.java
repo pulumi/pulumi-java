@@ -5,12 +5,12 @@ package com.pulumi.googlenative.servicemanagement_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.enums.RolloutStatus;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.DeleteServiceStrategyArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.TrafficPercentStrategyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteServiceStrategy")
-      private final @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
+    private @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
 
-    public Output<DeleteServiceStrategyArgs> deleteServiceStrategy() {
-        return this.deleteServiceStrategy == null ? Codegen.empty() : this.deleteServiceStrategy;
+    public Optional<Output<DeleteServiceStrategyArgs>> deleteServiceStrategy() {
+        return Optional.ofNullable(this.deleteServiceStrategy);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rolloutId")
-      private final @Nullable Output<String> rolloutId;
+    private @Nullable Output<String> rolloutId;
 
-    public Output<String> rolloutId() {
-        return this.rolloutId == null ? Codegen.empty() : this.rolloutId;
+    public Optional<Output<String>> rolloutId() {
+        return Optional.ofNullable(this.rolloutId);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -67,10 +67,10 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<RolloutStatus> status;
+    private @Nullable Output<RolloutStatus> status;
 
-    public Output<RolloutStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<RolloutStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -78,115 +78,99 @@ public final class RolloutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficPercentStrategy")
-      private final @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;
+    private @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;
 
-    public Output<TrafficPercentStrategyArgs> trafficPercentStrategy() {
-        return this.trafficPercentStrategy == null ? Codegen.empty() : this.trafficPercentStrategy;
+    public Optional<Output<TrafficPercentStrategyArgs>> trafficPercentStrategy() {
+        return Optional.ofNullable(this.trafficPercentStrategy);
     }
 
-    public RolloutArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy,
-        @Nullable Output<String> rolloutId,
-        Output<String> serviceName,
-        @Nullable Output<RolloutStatus> status,
-        @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy) {
-        this.createTime = createTime;
-        this.deleteServiceStrategy = deleteServiceStrategy;
-        this.rolloutId = rolloutId;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.status = status;
-        this.trafficPercentStrategy = trafficPercentStrategy;
-    }
+    private RolloutArgs() {}
 
-    private RolloutArgs() {
-        this.createTime = Codegen.empty();
-        this.deleteServiceStrategy = Codegen.empty();
-        this.rolloutId = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.status = Codegen.empty();
-        this.trafficPercentStrategy = Codegen.empty();
+    private RolloutArgs(RolloutArgs $) {
+        this.createTime = $.createTime;
+        this.deleteServiceStrategy = $.deleteServiceStrategy;
+        this.rolloutId = $.rolloutId;
+        this.serviceName = $.serviceName;
+        this.status = $.status;
+        this.trafficPercentStrategy = $.trafficPercentStrategy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
-        private @Nullable Output<String> rolloutId;
-        private Output<String> serviceName;
-        private @Nullable Output<RolloutStatus> status;
-        private @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;
+        private RolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolloutArgs();
         }
 
         public Builder(RolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.deleteServiceStrategy = defaults.deleteServiceStrategy;
-    	      this.rolloutId = defaults.rolloutId;
-    	      this.serviceName = defaults.serviceName;
-    	      this.status = defaults.status;
-    	      this.trafficPercentStrategy = defaults.trafficPercentStrategy;
+            $ = new RolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder deleteServiceStrategy(@Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy) {
-            this.deleteServiceStrategy = deleteServiceStrategy;
+            $.deleteServiceStrategy = deleteServiceStrategy;
             return this;
         }
-        public Builder deleteServiceStrategy(@Nullable DeleteServiceStrategyArgs deleteServiceStrategy) {
-            this.deleteServiceStrategy = Codegen.ofNullable(deleteServiceStrategy);
-            return this;
+
+        public Builder deleteServiceStrategy(DeleteServiceStrategyArgs deleteServiceStrategy) {
+            return deleteServiceStrategy(Output.of(deleteServiceStrategy));
         }
+
         public Builder rolloutId(@Nullable Output<String> rolloutId) {
-            this.rolloutId = rolloutId;
+            $.rolloutId = rolloutId;
             return this;
         }
-        public Builder rolloutId(@Nullable String rolloutId) {
-            this.rolloutId = Codegen.ofNullable(rolloutId);
-            return this;
+
+        public Builder rolloutId(String rolloutId) {
+            return rolloutId(Output.of(rolloutId));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder status(@Nullable Output<RolloutStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable RolloutStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(RolloutStatus status) {
+            return status(Output.of(status));
         }
+
         public Builder trafficPercentStrategy(@Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy) {
-            this.trafficPercentStrategy = trafficPercentStrategy;
+            $.trafficPercentStrategy = trafficPercentStrategy;
             return this;
         }
-        public Builder trafficPercentStrategy(@Nullable TrafficPercentStrategyArgs trafficPercentStrategy) {
-            this.trafficPercentStrategy = Codegen.ofNullable(trafficPercentStrategy);
-            return this;
-        }        public RolloutArgs build() {
-            return new RolloutArgs(createTime, deleteServiceStrategy, rolloutId, serviceName, status, trafficPercentStrategy);
+
+        public Builder trafficPercentStrategy(TrafficPercentStrategyArgs trafficPercentStrategy) {
+            return trafficPercentStrategy(Output.of(trafficPercentStrategy));
+        }
+
+        public RolloutArgs build() {
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

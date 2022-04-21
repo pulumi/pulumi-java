@@ -23,10 +23,10 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="configurationStatus")
-      private final @Nullable String configurationStatus;
+    private @Nullable String configurationStatus;
 
     public Optional<String> configurationStatus() {
-        return this.configurationStatus == null ? Optional.empty() : Optional.ofNullable(this.configurationStatus);
+        return Optional.ofNullable(this.configurationStatus);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enforcementSupport")
-      private final @Nullable String enforcementSupport;
+    private @Nullable String enforcementSupport;
 
     public Optional<String> enforcementSupport() {
-        return this.enforcementSupport == null ? Optional.empty() : Optional.ofNullable(this.enforcementSupport);
+        return Optional.ofNullable(this.enforcementSupport);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="recommendationAction")
-      private final @Nullable String recommendationAction;
+    private @Nullable String recommendationAction;
 
     public Optional<String> recommendationAction() {
-        return this.recommendationAction == null ? Optional.empty() : Optional.ofNullable(this.recommendationAction);
+        return Optional.ofNullable(this.recommendationAction);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public VmRecommendationResponse(
-        @Nullable String configurationStatus,
-        @Nullable String enforcementSupport,
-        @Nullable String recommendationAction,
-        @Nullable String resourceId) {
-        this.configurationStatus = configurationStatus;
-        this.enforcementSupport = enforcementSupport;
-        this.recommendationAction = recommendationAction;
-        this.resourceId = resourceId;
-    }
+    private VmRecommendationResponse() {}
 
-    private VmRecommendationResponse() {
-        this.configurationStatus = null;
-        this.enforcementSupport = null;
-        this.recommendationAction = null;
-        this.resourceId = null;
+    private VmRecommendationResponse(VmRecommendationResponse $) {
+        this.configurationStatus = $.configurationStatus;
+        this.enforcementSupport = $.enforcementSupport;
+        this.recommendationAction = $.recommendationAction;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmRecommendationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String configurationStatus;
-        private @Nullable String enforcementSupport;
-        private @Nullable String recommendationAction;
-        private @Nullable String resourceId;
+        private VmRecommendationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmRecommendationResponse();
         }
 
         public Builder(VmRecommendationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationStatus = defaults.configurationStatus;
-    	      this.enforcementSupport = defaults.enforcementSupport;
-    	      this.recommendationAction = defaults.recommendationAction;
-    	      this.resourceId = defaults.resourceId;
+            $ = new VmRecommendationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationStatus(@Nullable String configurationStatus) {
-            this.configurationStatus = configurationStatus;
+            $.configurationStatus = configurationStatus;
             return this;
         }
+
         public Builder enforcementSupport(@Nullable String enforcementSupport) {
-            this.enforcementSupport = enforcementSupport;
+            $.enforcementSupport = enforcementSupport;
             return this;
         }
+
         public Builder recommendationAction(@Nullable String recommendationAction) {
-            this.recommendationAction = recommendationAction;
+            $.recommendationAction = recommendationAction;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public VmRecommendationResponse build() {
-            return new VmRecommendationResponse(configurationStatus, enforcementSupport, recommendationAction, resourceId);
+        }
+
+        public VmRecommendationResponse build() {
+            return $;
         }
     }
+
 }

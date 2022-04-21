@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<Either<String,DataType>> dataType;
+    private @Nullable Output<Either<String,DataType>> dataType;
 
-    public Output<Either<String,DataType>> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<Either<String,DataType>>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Either<String,IndexKind>> kind;
+    private @Nullable Output<Either<String,IndexKind>> kind;
 
-    public Output<Either<String,IndexKind>> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Either<String,IndexKind>>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -50,76 +51,70 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="precision")
-      private final @Nullable Output<Integer> precision;
+    private @Nullable Output<Integer> precision;
 
-    public Output<Integer> precision() {
-        return this.precision == null ? Codegen.empty() : this.precision;
+    public Optional<Output<Integer>> precision() {
+        return Optional.ofNullable(this.precision);
     }
 
-    public IndexesArgs(
-        @Nullable Output<Either<String,DataType>> dataType,
-        @Nullable Output<Either<String,IndexKind>> kind,
-        @Nullable Output<Integer> precision) {
-        this.dataType = Codegen.stringProp("dataType").left(DataType.class).output().arg(dataType).def("String").getNullable();
-        this.kind = Codegen.stringProp("kind").left(IndexKind.class).output().arg(kind).def("Hash").getNullable();
-        this.precision = precision;
-    }
+    private IndexesArgs() {}
 
-    private IndexesArgs() {
-        this.dataType = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.precision = Codegen.empty();
+    private IndexesArgs(IndexesArgs $) {
+        this.dataType = $.dataType;
+        this.kind = $.kind;
+        this.precision = $.precision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DataType>> dataType;
-        private @Nullable Output<Either<String,IndexKind>> kind;
-        private @Nullable Output<Integer> precision;
+        private IndexesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexesArgs();
         }
 
         public Builder(IndexesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.kind = defaults.kind;
-    	      this.precision = defaults.precision;
+            $ = new IndexesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable Output<Either<String,DataType>> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable Either<String,DataType> dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(Either<String,DataType> dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder kind(@Nullable Output<Either<String,IndexKind>> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Either<String,IndexKind> kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Either<String,IndexKind> kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder precision(@Nullable Output<Integer> precision) {
-            this.precision = precision;
+            $.precision = precision;
             return this;
         }
-        public Builder precision(@Nullable Integer precision) {
-            this.precision = Codegen.ofNullable(precision);
-            return this;
-        }        public IndexesArgs build() {
-            return new IndexesArgs(dataType, kind, precision);
+
+        public Builder precision(Integer precision) {
+            return precision(Output.of(precision));
+        }
+
+        public IndexesArgs build() {
+            $.dataType = Codegen.stringProp("dataType").left(DataType.class).output().arg($.dataType).def("String").getNullable();
+            $.kind = Codegen.stringProp("kind").left(IndexKind.class).output().arg($.kind).def("Hash").getNullable();
+            return $;
         }
     }
+
 }

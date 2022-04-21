@@ -21,7 +21,7 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
      * 
      */
     @Import(name="planName", required=true)
-      private final String planName;
+    private String planName;
 
     public String planName() {
         return this.planName;
@@ -32,7 +32,7 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
      * 
      */
     @Import(name="planProduct", required=true)
-      private final String planProduct;
+    private String planProduct;
 
     public String planProduct() {
         return this.planProduct;
@@ -43,64 +43,59 @@ public final class PlatformImagePurchasePlanResponse extends com.pulumi.resource
      * 
      */
     @Import(name="planPublisher", required=true)
-      private final String planPublisher;
+    private String planPublisher;
 
     public String planPublisher() {
         return this.planPublisher;
     }
 
-    public PlatformImagePurchasePlanResponse(
-        String planName,
-        String planProduct,
-        String planPublisher) {
-        this.planName = Objects.requireNonNull(planName, "expected parameter 'planName' to be non-null");
-        this.planProduct = Objects.requireNonNull(planProduct, "expected parameter 'planProduct' to be non-null");
-        this.planPublisher = Objects.requireNonNull(planPublisher, "expected parameter 'planPublisher' to be non-null");
-    }
+    private PlatformImagePurchasePlanResponse() {}
 
-    private PlatformImagePurchasePlanResponse() {
-        this.planName = null;
-        this.planProduct = null;
-        this.planPublisher = null;
+    private PlatformImagePurchasePlanResponse(PlatformImagePurchasePlanResponse $) {
+        this.planName = $.planName;
+        this.planProduct = $.planProduct;
+        this.planPublisher = $.planPublisher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlatformImagePurchasePlanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String planName;
-        private String planProduct;
-        private String planPublisher;
+        private PlatformImagePurchasePlanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlatformImagePurchasePlanResponse();
         }
 
         public Builder(PlatformImagePurchasePlanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.planName = defaults.planName;
-    	      this.planProduct = defaults.planProduct;
-    	      this.planPublisher = defaults.planPublisher;
+            $ = new PlatformImagePurchasePlanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder planName(String planName) {
-            this.planName = Objects.requireNonNull(planName);
+            $.planName = planName;
             return this;
         }
+
         public Builder planProduct(String planProduct) {
-            this.planProduct = Objects.requireNonNull(planProduct);
+            $.planProduct = planProduct;
             return this;
         }
+
         public Builder planPublisher(String planPublisher) {
-            this.planPublisher = Objects.requireNonNull(planPublisher);
+            $.planPublisher = planPublisher;
             return this;
-        }        public PlatformImagePurchasePlanResponse build() {
-            return new PlatformImagePurchasePlanResponse(planName, planProduct, planPublisher);
+        }
+
+        public PlatformImagePurchasePlanResponse build() {
+            $.planName = Objects.requireNonNull($.planName, "expected parameter 'planName' to be non-null");
+            $.planProduct = Objects.requireNonNull($.planProduct, "expected parameter 'planProduct' to be non-null");
+            $.planPublisher = Objects.requireNonNull($.planPublisher, "expected parameter 'planPublisher' to be non-null");
+            return $;
         }
     }
+
 }

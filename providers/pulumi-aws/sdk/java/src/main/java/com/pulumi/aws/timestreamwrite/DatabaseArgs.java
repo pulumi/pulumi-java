@@ -5,10 +5,10 @@ package com.pulumi.aws.timestreamwrite;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -32,10 +32,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DatabaseArgs(
-        Output<String> databaseName,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<Map<String,String>> tags) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.kmsKeyId = kmsKeyId;
-        this.tags = tags;
-    }
+    private DatabaseArgs() {}
 
-    private DatabaseArgs() {
-        this.databaseName = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DatabaseArgs(DatabaseArgs $) {
+        this.databaseName = $.databaseName;
+        this.kmsKeyId = $.kmsKeyId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseName;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<Map<String,String>> tags;
+        private DatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseArgs();
         }
 
         public Builder(DatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.tags = defaults.tags;
+            $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public DatabaseArgs build() {
-            return new DatabaseArgs(databaseName, kmsKeyId, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public DatabaseArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            return $;
         }
     }
+
 }

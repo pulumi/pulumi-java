@@ -11,10 +11,10 @@ import com.pulumi.awsnative.auditmanager.inputs.AssessmentScopeArgs;
 import com.pulumi.awsnative.auditmanager.inputs.AssessmentTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,38 +23,38 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
     public static final AssessmentArgs Empty = new AssessmentArgs();
 
     @Import(name="assessmentReportsDestination")
-      private final @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination;
+    private @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination;
 
-    public Output<AssessmentReportsDestinationArgs> assessmentReportsDestination() {
-        return this.assessmentReportsDestination == null ? Codegen.empty() : this.assessmentReportsDestination;
+    public Optional<Output<AssessmentReportsDestinationArgs>> assessmentReportsDestination() {
+        return Optional.ofNullable(this.assessmentReportsDestination);
     }
 
     @Import(name="awsAccount")
-      private final @Nullable Output<AssessmentAWSAccountArgs> awsAccount;
+    private @Nullable Output<AssessmentAWSAccountArgs> awsAccount;
 
-    public Output<AssessmentAWSAccountArgs> awsAccount() {
-        return this.awsAccount == null ? Codegen.empty() : this.awsAccount;
+    public Optional<Output<AssessmentAWSAccountArgs>> awsAccount() {
+        return Optional.ofNullable(this.awsAccount);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="frameworkId")
-      private final @Nullable Output<String> frameworkId;
+    private @Nullable Output<String> frameworkId;
 
-    public Output<String> frameworkId() {
-        return this.frameworkId == null ? Codegen.empty() : this.frameworkId;
+    public Optional<Output<String>> frameworkId() {
+        return Optional.ofNullable(this.frameworkId);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -62,24 +62,24 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<AssessmentRoleArgs>> roles;
+    private @Nullable Output<List<AssessmentRoleArgs>> roles;
 
-    public Output<List<AssessmentRoleArgs>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<AssessmentRoleArgs>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
     @Import(name="scope")
-      private final @Nullable Output<AssessmentScopeArgs> scope;
+    private @Nullable Output<AssessmentScopeArgs> scope;
 
-    public Output<AssessmentScopeArgs> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<AssessmentScopeArgs>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     @Import(name="status")
-      private final @Nullable Output<AssessmentStatus> status;
+    private @Nullable Output<AssessmentStatus> status;
 
-    public Output<AssessmentStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<AssessmentStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -87,160 +87,136 @@ public final class AssessmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<AssessmentTagArgs>> tags;
+    private @Nullable Output<List<AssessmentTagArgs>> tags;
 
-    public Output<List<AssessmentTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AssessmentTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AssessmentArgs(
-        @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination,
-        @Nullable Output<AssessmentAWSAccountArgs> awsAccount,
-        @Nullable Output<String> description,
-        @Nullable Output<String> frameworkId,
-        @Nullable Output<String> name,
-        @Nullable Output<List<AssessmentRoleArgs>> roles,
-        @Nullable Output<AssessmentScopeArgs> scope,
-        @Nullable Output<AssessmentStatus> status,
-        @Nullable Output<List<AssessmentTagArgs>> tags) {
-        this.assessmentReportsDestination = assessmentReportsDestination;
-        this.awsAccount = awsAccount;
-        this.description = description;
-        this.frameworkId = frameworkId;
-        this.name = name;
-        this.roles = roles;
-        this.scope = scope;
-        this.status = status;
-        this.tags = tags;
-    }
+    private AssessmentArgs() {}
 
-    private AssessmentArgs() {
-        this.assessmentReportsDestination = Codegen.empty();
-        this.awsAccount = Codegen.empty();
-        this.description = Codegen.empty();
-        this.frameworkId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roles = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AssessmentArgs(AssessmentArgs $) {
+        this.assessmentReportsDestination = $.assessmentReportsDestination;
+        this.awsAccount = $.awsAccount;
+        this.description = $.description;
+        this.frameworkId = $.frameworkId;
+        this.name = $.name;
+        this.roles = $.roles;
+        this.scope = $.scope;
+        this.status = $.status;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination;
-        private @Nullable Output<AssessmentAWSAccountArgs> awsAccount;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> frameworkId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<AssessmentRoleArgs>> roles;
-        private @Nullable Output<AssessmentScopeArgs> scope;
-        private @Nullable Output<AssessmentStatus> status;
-        private @Nullable Output<List<AssessmentTagArgs>> tags;
+        private AssessmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentArgs();
         }
 
         public Builder(AssessmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentReportsDestination = defaults.assessmentReportsDestination;
-    	      this.awsAccount = defaults.awsAccount;
-    	      this.description = defaults.description;
-    	      this.frameworkId = defaults.frameworkId;
-    	      this.name = defaults.name;
-    	      this.roles = defaults.roles;
-    	      this.scope = defaults.scope;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
+            $ = new AssessmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentReportsDestination(@Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination) {
-            this.assessmentReportsDestination = assessmentReportsDestination;
+            $.assessmentReportsDestination = assessmentReportsDestination;
             return this;
         }
-        public Builder assessmentReportsDestination(@Nullable AssessmentReportsDestinationArgs assessmentReportsDestination) {
-            this.assessmentReportsDestination = Codegen.ofNullable(assessmentReportsDestination);
-            return this;
+
+        public Builder assessmentReportsDestination(AssessmentReportsDestinationArgs assessmentReportsDestination) {
+            return assessmentReportsDestination(Output.of(assessmentReportsDestination));
         }
+
         public Builder awsAccount(@Nullable Output<AssessmentAWSAccountArgs> awsAccount) {
-            this.awsAccount = awsAccount;
+            $.awsAccount = awsAccount;
             return this;
         }
-        public Builder awsAccount(@Nullable AssessmentAWSAccountArgs awsAccount) {
-            this.awsAccount = Codegen.ofNullable(awsAccount);
-            return this;
+
+        public Builder awsAccount(AssessmentAWSAccountArgs awsAccount) {
+            return awsAccount(Output.of(awsAccount));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder frameworkId(@Nullable Output<String> frameworkId) {
-            this.frameworkId = frameworkId;
+            $.frameworkId = frameworkId;
             return this;
         }
-        public Builder frameworkId(@Nullable String frameworkId) {
-            this.frameworkId = Codegen.ofNullable(frameworkId);
-            return this;
+
+        public Builder frameworkId(String frameworkId) {
+            return frameworkId(Output.of(frameworkId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roles(@Nullable Output<List<AssessmentRoleArgs>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<AssessmentRoleArgs> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<AssessmentRoleArgs> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(AssessmentRoleArgs... roles) {
             return roles(List.of(roles));
         }
+
         public Builder scope(@Nullable Output<AssessmentScopeArgs> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable AssessmentScopeArgs scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(AssessmentScopeArgs scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder status(@Nullable Output<AssessmentStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable AssessmentStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(AssessmentStatus status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<List<AssessmentTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AssessmentTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AssessmentTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AssessmentTagArgs... tags) {
             return tags(List.of(tags));
-        }        public AssessmentArgs build() {
-            return new AssessmentArgs(assessmentReportsDestination, awsAccount, description, frameworkId, name, roles, scope, status, tags);
+        }
+
+        public AssessmentArgs build() {
+            return $;
         }
     }
+
 }

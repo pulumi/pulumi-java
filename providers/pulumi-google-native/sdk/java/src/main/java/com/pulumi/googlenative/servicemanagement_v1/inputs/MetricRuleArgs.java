@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MetricRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricCosts")
-      private final @Nullable Output<Map<String,String>> metricCosts;
+    private @Nullable Output<Map<String,String>> metricCosts;
 
-    public Output<Map<String,String>> metricCosts() {
-        return this.metricCosts == null ? Codegen.empty() : this.metricCosts;
+    public Optional<Output<Map<String,String>>> metricCosts() {
+        return Optional.ofNullable(this.metricCosts);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MetricRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public MetricRuleArgs(
-        @Nullable Output<Map<String,String>> metricCosts,
-        @Nullable Output<String> selector) {
-        this.metricCosts = metricCosts;
-        this.selector = selector;
-    }
+    private MetricRuleArgs() {}
 
-    private MetricRuleArgs() {
-        this.metricCosts = Codegen.empty();
-        this.selector = Codegen.empty();
+    private MetricRuleArgs(MetricRuleArgs $) {
+        this.metricCosts = $.metricCosts;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> metricCosts;
-        private @Nullable Output<String> selector;
+        private MetricRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricRuleArgs();
         }
 
         public Builder(MetricRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricCosts = defaults.metricCosts;
-    	      this.selector = defaults.selector;
+            $ = new MetricRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricCosts(@Nullable Output<Map<String,String>> metricCosts) {
-            this.metricCosts = metricCosts;
+            $.metricCosts = metricCosts;
             return this;
         }
-        public Builder metricCosts(@Nullable Map<String,String> metricCosts) {
-            this.metricCosts = Codegen.ofNullable(metricCosts);
-            return this;
+
+        public Builder metricCosts(Map<String,String> metricCosts) {
+            return metricCosts(Output.of(metricCosts));
         }
+
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public MetricRuleArgs build() {
-            return new MetricRuleArgs(metricCosts, selector);
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
+        }
+
+        public MetricRuleArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.AdminRuleKind;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AdminRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationName", required=true)
-      private final Output<String> configurationName;
+    private Output<String> configurationName;
 
     public Output<String> configurationName() {
         return this.configurationName;
@@ -33,7 +33,7 @@ public final class AdminRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,AdminRuleKind>> kind;
+    private Output<Either<String,AdminRuleKind>> kind;
 
     public Output<Either<String,AdminRuleKind>> kind() {
         return this.kind;
@@ -44,7 +44,7 @@ public final class AdminRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkManagerName", required=true)
-      private final Output<String> networkManagerName;
+    private Output<String> networkManagerName;
 
     public Output<String> networkManagerName() {
         return this.networkManagerName;
@@ -55,7 +55,7 @@ public final class AdminRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class AdminRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleCollectionName", required=true)
-      private final Output<String> ruleCollectionName;
+    private Output<String> ruleCollectionName;
 
     public Output<String> ruleCollectionName() {
         return this.ruleCollectionName;
@@ -77,115 +77,103 @@ public final class AdminRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
-    public AdminRuleArgs(
-        Output<String> configurationName,
-        Output<Either<String,AdminRuleKind>> kind,
-        Output<String> networkManagerName,
-        Output<String> resourceGroupName,
-        Output<String> ruleCollectionName,
-        @Nullable Output<String> ruleName) {
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.networkManagerName = Objects.requireNonNull(networkManagerName, "expected parameter 'networkManagerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName, "expected parameter 'ruleCollectionName' to be non-null");
-        this.ruleName = ruleName;
-    }
+    private AdminRuleArgs() {}
 
-    private AdminRuleArgs() {
-        this.configurationName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.networkManagerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleCollectionName = Codegen.empty();
-        this.ruleName = Codegen.empty();
+    private AdminRuleArgs(AdminRuleArgs $) {
+        this.configurationName = $.configurationName;
+        this.kind = $.kind;
+        this.networkManagerName = $.networkManagerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleCollectionName = $.ruleCollectionName;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdminRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configurationName;
-        private Output<Either<String,AdminRuleKind>> kind;
-        private Output<String> networkManagerName;
-        private Output<String> resourceGroupName;
-        private Output<String> ruleCollectionName;
-        private @Nullable Output<String> ruleName;
+        private AdminRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdminRuleArgs();
         }
 
         public Builder(AdminRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.kind = defaults.kind;
-    	      this.networkManagerName = defaults.networkManagerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleCollectionName = defaults.ruleCollectionName;
-    	      this.ruleName = defaults.ruleName;
+            $ = new AdminRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(Output<String> configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder configurationName(String configurationName) {
-            this.configurationName = Output.of(Objects.requireNonNull(configurationName));
-            return this;
+            return configurationName(Output.of(configurationName));
         }
+
         public Builder kind(Output<Either<String,AdminRuleKind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,AdminRuleKind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder networkManagerName(Output<String> networkManagerName) {
-            this.networkManagerName = Objects.requireNonNull(networkManagerName);
+            $.networkManagerName = networkManagerName;
             return this;
         }
+
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
-            return this;
+            return networkManagerName(Output.of(networkManagerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleCollectionName(Output<String> ruleCollectionName) {
-            this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
+            $.ruleCollectionName = ruleCollectionName;
             return this;
         }
+
         public Builder ruleCollectionName(String ruleCollectionName) {
-            this.ruleCollectionName = Output.of(Objects.requireNonNull(ruleCollectionName));
-            return this;
+            return ruleCollectionName(Output.of(ruleCollectionName));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
-        }        public AdminRuleArgs build() {
-            return new AdminRuleArgs(configurationName, kind, networkManagerName, resourceGroupName, ruleCollectionName, ruleName);
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
+        }
+
+        public AdminRuleArgs build() {
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.networkManagerName = Objects.requireNonNull($.networkManagerName, "expected parameter 'networkManagerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleCollectionName = Objects.requireNonNull($.ruleCollectionName, "expected parameter 'ruleCollectionName' to be non-null");
+            return $;
         }
     }
+
 }

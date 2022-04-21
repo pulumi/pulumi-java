@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.enums.AzureFirewallSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AzureFirewallSkuArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,AzureFirewallSkuName>> name;
+    private @Nullable Output<Either<String,AzureFirewallSkuName>> name;
 
-    public Output<Either<String,AzureFirewallSkuName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,AzureFirewallSkuName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class AzureFirewallSkuArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,AzureFirewallSkuTier>> tier;
+    private @Nullable Output<Either<String,AzureFirewallSkuTier>> tier;
 
-    public Output<Either<String,AzureFirewallSkuTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,AzureFirewallSkuTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public AzureFirewallSkuArgs(
-        @Nullable Output<Either<String,AzureFirewallSkuName>> name,
-        @Nullable Output<Either<String,AzureFirewallSkuTier>> tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private AzureFirewallSkuArgs() {}
 
-    private AzureFirewallSkuArgs() {
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private AzureFirewallSkuArgs(AzureFirewallSkuArgs $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFirewallSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AzureFirewallSkuName>> name;
-        private @Nullable Output<Either<String,AzureFirewallSkuTier>> tier;
+        private AzureFirewallSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFirewallSkuArgs();
         }
 
         public Builder(AzureFirewallSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new AzureFirewallSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,AzureFirewallSkuName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,AzureFirewallSkuName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Either<String,AzureFirewallSkuName> name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,AzureFirewallSkuTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,AzureFirewallSkuTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public AzureFirewallSkuArgs build() {
-            return new AzureFirewallSkuArgs(name, tier);
+
+        public Builder tier(Either<String,AzureFirewallSkuTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public AzureFirewallSkuArgs build() {
+            return $;
         }
     }
+
 }

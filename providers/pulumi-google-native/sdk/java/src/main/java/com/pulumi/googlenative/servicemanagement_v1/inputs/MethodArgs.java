@@ -5,13 +5,13 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.enums.MethodSyntax;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<List<OptionArgs>> options;
+    private @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<List<OptionArgs>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestStreaming")
-      private final @Nullable Output<Boolean> requestStreaming;
+    private @Nullable Output<Boolean> requestStreaming;
 
-    public Output<Boolean> requestStreaming() {
-        return this.requestStreaming == null ? Codegen.empty() : this.requestStreaming;
+    public Optional<Output<Boolean>> requestStreaming() {
+        return Optional.ofNullable(this.requestStreaming);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestTypeUrl")
-      private final @Nullable Output<String> requestTypeUrl;
+    private @Nullable Output<String> requestTypeUrl;
 
-    public Output<String> requestTypeUrl() {
-        return this.requestTypeUrl == null ? Codegen.empty() : this.requestTypeUrl;
+    public Optional<Output<String>> requestTypeUrl() {
+        return Optional.ofNullable(this.requestTypeUrl);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseStreaming")
-      private final @Nullable Output<Boolean> responseStreaming;
+    private @Nullable Output<Boolean> responseStreaming;
 
-    public Output<Boolean> responseStreaming() {
-        return this.responseStreaming == null ? Codegen.empty() : this.responseStreaming;
+    public Optional<Output<Boolean>> responseStreaming() {
+        return Optional.ofNullable(this.responseStreaming);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseTypeUrl")
-      private final @Nullable Output<String> responseTypeUrl;
+    private @Nullable Output<String> responseTypeUrl;
 
-    public Output<String> responseTypeUrl() {
-        return this.responseTypeUrl == null ? Codegen.empty() : this.responseTypeUrl;
+    public Optional<Output<String>> responseTypeUrl() {
+        return Optional.ofNullable(this.responseTypeUrl);
     }
 
     /**
@@ -94,131 +94,112 @@ public final class MethodArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syntax")
-      private final @Nullable Output<MethodSyntax> syntax;
+    private @Nullable Output<MethodSyntax> syntax;
 
-    public Output<MethodSyntax> syntax() {
-        return this.syntax == null ? Codegen.empty() : this.syntax;
+    public Optional<Output<MethodSyntax>> syntax() {
+        return Optional.ofNullable(this.syntax);
     }
 
-    public MethodArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<OptionArgs>> options,
-        @Nullable Output<Boolean> requestStreaming,
-        @Nullable Output<String> requestTypeUrl,
-        @Nullable Output<Boolean> responseStreaming,
-        @Nullable Output<String> responseTypeUrl,
-        @Nullable Output<MethodSyntax> syntax) {
-        this.name = name;
-        this.options = options;
-        this.requestStreaming = requestStreaming;
-        this.requestTypeUrl = requestTypeUrl;
-        this.responseStreaming = responseStreaming;
-        this.responseTypeUrl = responseTypeUrl;
-        this.syntax = syntax;
-    }
+    private MethodArgs() {}
 
-    private MethodArgs() {
-        this.name = Codegen.empty();
-        this.options = Codegen.empty();
-        this.requestStreaming = Codegen.empty();
-        this.requestTypeUrl = Codegen.empty();
-        this.responseStreaming = Codegen.empty();
-        this.responseTypeUrl = Codegen.empty();
-        this.syntax = Codegen.empty();
+    private MethodArgs(MethodArgs $) {
+        this.name = $.name;
+        this.options = $.options;
+        this.requestStreaming = $.requestStreaming;
+        this.requestTypeUrl = $.requestTypeUrl;
+        this.responseStreaming = $.responseStreaming;
+        this.responseTypeUrl = $.responseTypeUrl;
+        this.syntax = $.syntax;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<OptionArgs>> options;
-        private @Nullable Output<Boolean> requestStreaming;
-        private @Nullable Output<String> requestTypeUrl;
-        private @Nullable Output<Boolean> responseStreaming;
-        private @Nullable Output<String> responseTypeUrl;
-        private @Nullable Output<MethodSyntax> syntax;
+        private MethodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodArgs();
         }
 
         public Builder(MethodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
-    	      this.requestStreaming = defaults.requestStreaming;
-    	      this.requestTypeUrl = defaults.requestTypeUrl;
-    	      this.responseStreaming = defaults.responseStreaming;
-    	      this.responseTypeUrl = defaults.responseTypeUrl;
-    	      this.syntax = defaults.syntax;
+            $ = new MethodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(List<OptionArgs> options) {
+            return options(Output.of(options));
         }
+
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
         }
+
         public Builder requestStreaming(@Nullable Output<Boolean> requestStreaming) {
-            this.requestStreaming = requestStreaming;
+            $.requestStreaming = requestStreaming;
             return this;
         }
-        public Builder requestStreaming(@Nullable Boolean requestStreaming) {
-            this.requestStreaming = Codegen.ofNullable(requestStreaming);
-            return this;
+
+        public Builder requestStreaming(Boolean requestStreaming) {
+            return requestStreaming(Output.of(requestStreaming));
         }
+
         public Builder requestTypeUrl(@Nullable Output<String> requestTypeUrl) {
-            this.requestTypeUrl = requestTypeUrl;
+            $.requestTypeUrl = requestTypeUrl;
             return this;
         }
-        public Builder requestTypeUrl(@Nullable String requestTypeUrl) {
-            this.requestTypeUrl = Codegen.ofNullable(requestTypeUrl);
-            return this;
+
+        public Builder requestTypeUrl(String requestTypeUrl) {
+            return requestTypeUrl(Output.of(requestTypeUrl));
         }
+
         public Builder responseStreaming(@Nullable Output<Boolean> responseStreaming) {
-            this.responseStreaming = responseStreaming;
+            $.responseStreaming = responseStreaming;
             return this;
         }
-        public Builder responseStreaming(@Nullable Boolean responseStreaming) {
-            this.responseStreaming = Codegen.ofNullable(responseStreaming);
-            return this;
+
+        public Builder responseStreaming(Boolean responseStreaming) {
+            return responseStreaming(Output.of(responseStreaming));
         }
+
         public Builder responseTypeUrl(@Nullable Output<String> responseTypeUrl) {
-            this.responseTypeUrl = responseTypeUrl;
+            $.responseTypeUrl = responseTypeUrl;
             return this;
         }
-        public Builder responseTypeUrl(@Nullable String responseTypeUrl) {
-            this.responseTypeUrl = Codegen.ofNullable(responseTypeUrl);
-            return this;
+
+        public Builder responseTypeUrl(String responseTypeUrl) {
+            return responseTypeUrl(Output.of(responseTypeUrl));
         }
+
         public Builder syntax(@Nullable Output<MethodSyntax> syntax) {
-            this.syntax = syntax;
+            $.syntax = syntax;
             return this;
         }
-        public Builder syntax(@Nullable MethodSyntax syntax) {
-            this.syntax = Codegen.ofNullable(syntax);
-            return this;
-        }        public MethodArgs build() {
-            return new MethodArgs(name, options, requestStreaming, requestTypeUrl, responseStreaming, responseTypeUrl, syntax);
+
+        public Builder syntax(MethodSyntax syntax) {
+            return syntax(Output.of(syntax));
+        }
+
+        public MethodArgs build() {
+            return $;
         }
     }
+
 }

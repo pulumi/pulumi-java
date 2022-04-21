@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -47,10 +47,10 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -82,10 +82,10 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="singleInstanceAssignment")
-      private final @Nullable Output<Double> singleInstanceAssignment;
+    private @Nullable Output<Double> singleInstanceAssignment;
 
-    public Output<Double> singleInstanceAssignment() {
-        return this.singleInstanceAssignment == null ? Codegen.empty() : this.singleInstanceAssignment;
+    public Optional<Output<Double>> singleInstanceAssignment() {
+        return Optional.ofNullable(this.singleInstanceAssignment);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<Double> target;
+    private @Nullable Output<Double> target;
 
-    public Output<Double> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<Double>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -108,102 +108,89 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AutoscalarAutoscalingPolicyMetricGetArgs(
-        @Nullable Output<String> filter,
-        Output<String> name,
-        @Nullable Output<Double> singleInstanceAssignment,
-        @Nullable Output<Double> target,
-        @Nullable Output<String> type) {
-        this.filter = filter;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.singleInstanceAssignment = singleInstanceAssignment;
-        this.target = target;
-        this.type = type;
-    }
+    private AutoscalarAutoscalingPolicyMetricGetArgs() {}
 
-    private AutoscalarAutoscalingPolicyMetricGetArgs() {
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.singleInstanceAssignment = Codegen.empty();
-        this.target = Codegen.empty();
-        this.type = Codegen.empty();
+    private AutoscalarAutoscalingPolicyMetricGetArgs(AutoscalarAutoscalingPolicyMetricGetArgs $) {
+        this.filter = $.filter;
+        this.name = $.name;
+        this.singleInstanceAssignment = $.singleInstanceAssignment;
+        this.target = $.target;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalarAutoscalingPolicyMetricGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
-        private Output<String> name;
-        private @Nullable Output<Double> singleInstanceAssignment;
-        private @Nullable Output<Double> target;
-        private @Nullable Output<String> type;
+        private AutoscalarAutoscalingPolicyMetricGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalarAutoscalingPolicyMetricGetArgs();
         }
 
         public Builder(AutoscalarAutoscalingPolicyMetricGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.singleInstanceAssignment = defaults.singleInstanceAssignment;
-    	      this.target = defaults.target;
-    	      this.type = defaults.type;
+            $ = new AutoscalarAutoscalingPolicyMetricGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
-            this.singleInstanceAssignment = singleInstanceAssignment;
+            $.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
-        public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Codegen.ofNullable(singleInstanceAssignment);
-            return this;
+
+        public Builder singleInstanceAssignment(Double singleInstanceAssignment) {
+            return singleInstanceAssignment(Output.of(singleInstanceAssignment));
         }
+
         public Builder target(@Nullable Output<Double> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable Double target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(Double target) {
+            return target(Output.of(target));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AutoscalarAutoscalingPolicyMetricGetArgs build() {
-            return new AutoscalarAutoscalingPolicyMetricGetArgs(filter, name, singleInstanceAssignment, target, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public AutoscalarAutoscalingPolicyMetricGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

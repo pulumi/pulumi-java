@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends com.pul
      * 
      */
     @Import(name="breakglassJustification", required=true)
-      private final String breakglassJustification;
+    private String breakglassJustification;
 
     public String breakglassJustification() {
         return this.breakglassJustification;
@@ -33,55 +33,52 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends com.pul
      * 
      */
     @Import(name="useDefault", required=true)
-      private final Boolean useDefault;
+    private Boolean useDefault;
 
     public Boolean useDefault() {
         return this.useDefault;
     }
 
-    public GoogleCloudRunOpV2BinaryAuthorizationResponse(
-        String breakglassJustification,
-        Boolean useDefault) {
-        this.breakglassJustification = Objects.requireNonNull(breakglassJustification, "expected parameter 'breakglassJustification' to be non-null");
-        this.useDefault = Objects.requireNonNull(useDefault, "expected parameter 'useDefault' to be non-null");
-    }
+    private GoogleCloudRunOpV2BinaryAuthorizationResponse() {}
 
-    private GoogleCloudRunOpV2BinaryAuthorizationResponse() {
-        this.breakglassJustification = null;
-        this.useDefault = null;
+    private GoogleCloudRunOpV2BinaryAuthorizationResponse(GoogleCloudRunOpV2BinaryAuthorizationResponse $) {
+        this.breakglassJustification = $.breakglassJustification;
+        this.useDefault = $.useDefault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2BinaryAuthorizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String breakglassJustification;
-        private Boolean useDefault;
+        private GoogleCloudRunOpV2BinaryAuthorizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2BinaryAuthorizationResponse();
         }
 
         public Builder(GoogleCloudRunOpV2BinaryAuthorizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.breakglassJustification = defaults.breakglassJustification;
-    	      this.useDefault = defaults.useDefault;
+            $ = new GoogleCloudRunOpV2BinaryAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder breakglassJustification(String breakglassJustification) {
-            this.breakglassJustification = Objects.requireNonNull(breakglassJustification);
+            $.breakglassJustification = breakglassJustification;
             return this;
         }
+
         public Builder useDefault(Boolean useDefault) {
-            this.useDefault = Objects.requireNonNull(useDefault);
+            $.useDefault = useDefault;
             return this;
-        }        public GoogleCloudRunOpV2BinaryAuthorizationResponse build() {
-            return new GoogleCloudRunOpV2BinaryAuthorizationResponse(breakglassJustification, useDefault);
+        }
+
+        public GoogleCloudRunOpV2BinaryAuthorizationResponse build() {
+            $.breakglassJustification = Objects.requireNonNull($.breakglassJustification, "expected parameter 'breakglassJustification' to be non-null");
+            $.useDefault = Objects.requireNonNull($.useDefault, "expected parameter 'useDefault' to be non-null");
+            return $;
         }
     }
+
 }

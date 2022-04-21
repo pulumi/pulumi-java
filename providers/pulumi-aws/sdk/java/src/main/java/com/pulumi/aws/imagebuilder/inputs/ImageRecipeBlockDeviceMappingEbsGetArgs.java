@@ -5,10 +5,10 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="deleteOnTermination")
-      private final @Nullable Output<String> deleteOnTermination;
+    private @Nullable Output<String> deleteOnTermination;
 
-    public Output<String> deleteOnTermination() {
-        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
+    public Optional<Output<String>> deleteOnTermination() {
+        return Optional.ofNullable(this.deleteOnTermination);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<String> encrypted;
+    private @Nullable Output<String> encrypted;
 
-    public Output<String> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<String>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="snapshotId")
-      private final @Nullable Output<String> snapshotId;
+    private @Nullable Output<String> snapshotId;
 
-    public Output<String> snapshotId() {
-        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
+    public Optional<Output<String>> snapshotId() {
+        return Optional.ofNullable(this.snapshotId);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="volumeSize")
-      private final @Nullable Output<Integer> volumeSize;
+    private @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> volumeSize() {
-        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
+    public Optional<Output<Integer>> volumeSize() {
+        return Optional.ofNullable(this.volumeSize);
     }
 
     /**
@@ -87,128 +87,108 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public ImageRecipeBlockDeviceMappingEbsGetArgs(
-        @Nullable Output<String> deleteOnTermination,
-        @Nullable Output<String> encrypted,
-        @Nullable Output<Integer> iops,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> snapshotId,
-        @Nullable Output<Integer> volumeSize,
-        @Nullable Output<String> volumeType) {
-        this.deleteOnTermination = deleteOnTermination;
-        this.encrypted = encrypted;
-        this.iops = iops;
-        this.kmsKeyId = kmsKeyId;
-        this.snapshotId = snapshotId;
-        this.volumeSize = volumeSize;
-        this.volumeType = volumeType;
-    }
+    private ImageRecipeBlockDeviceMappingEbsGetArgs() {}
 
-    private ImageRecipeBlockDeviceMappingEbsGetArgs() {
-        this.deleteOnTermination = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.iops = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.snapshotId = Codegen.empty();
-        this.volumeSize = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private ImageRecipeBlockDeviceMappingEbsGetArgs(ImageRecipeBlockDeviceMappingEbsGetArgs $) {
+        this.deleteOnTermination = $.deleteOnTermination;
+        this.encrypted = $.encrypted;
+        this.iops = $.iops;
+        this.kmsKeyId = $.kmsKeyId;
+        this.snapshotId = $.snapshotId;
+        this.volumeSize = $.volumeSize;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRecipeBlockDeviceMappingEbsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deleteOnTermination;
-        private @Nullable Output<String> encrypted;
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> snapshotId;
-        private @Nullable Output<Integer> volumeSize;
-        private @Nullable Output<String> volumeType;
+        private ImageRecipeBlockDeviceMappingEbsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRecipeBlockDeviceMappingEbsGetArgs();
         }
 
         public Builder(ImageRecipeBlockDeviceMappingEbsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOnTermination = defaults.deleteOnTermination;
-    	      this.encrypted = defaults.encrypted;
-    	      this.iops = defaults.iops;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.volumeSize = defaults.volumeSize;
-    	      this.volumeType = defaults.volumeType;
+            $ = new ImageRecipeBlockDeviceMappingEbsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOnTermination(@Nullable Output<String> deleteOnTermination) {
-            this.deleteOnTermination = deleteOnTermination;
+            $.deleteOnTermination = deleteOnTermination;
             return this;
         }
-        public Builder deleteOnTermination(@Nullable String deleteOnTermination) {
-            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
-            return this;
+
+        public Builder deleteOnTermination(String deleteOnTermination) {
+            return deleteOnTermination(Output.of(deleteOnTermination));
         }
+
         public Builder encrypted(@Nullable Output<String> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable String encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(String encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
-            this.snapshotId = snapshotId;
+            $.snapshotId = snapshotId;
             return this;
         }
-        public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Codegen.ofNullable(snapshotId);
-            return this;
+
+        public Builder snapshotId(String snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
+
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
-            this.volumeSize = volumeSize;
+            $.volumeSize = volumeSize;
             return this;
         }
-        public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Codegen.ofNullable(volumeSize);
-            return this;
+
+        public Builder volumeSize(Integer volumeSize) {
+            return volumeSize(Output.of(volumeSize));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public ImageRecipeBlockDeviceMappingEbsGetArgs build() {
-            return new ImageRecipeBlockDeviceMappingEbsGetArgs(deleteOnTermination, encrypted, iops, kmsKeyId, snapshotId, volumeSize, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public ImageRecipeBlockDeviceMappingEbsGetArgs build() {
+            return $;
         }
     }
+
 }

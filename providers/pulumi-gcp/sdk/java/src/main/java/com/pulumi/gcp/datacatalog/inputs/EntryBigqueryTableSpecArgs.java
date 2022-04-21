@@ -5,12 +5,12 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecTableSpecArgs;
 import com.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecViewSpecArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,96 +19,90 @@ public final class EntryBigqueryTableSpecArgs extends com.pulumi.resources.Resou
     public static final EntryBigqueryTableSpecArgs Empty = new EntryBigqueryTableSpecArgs();
 
     @Import(name="tableSourceType")
-      private final @Nullable Output<String> tableSourceType;
+    private @Nullable Output<String> tableSourceType;
 
-    public Output<String> tableSourceType() {
-        return this.tableSourceType == null ? Codegen.empty() : this.tableSourceType;
+    public Optional<Output<String>> tableSourceType() {
+        return Optional.ofNullable(this.tableSourceType);
     }
 
     @Import(name="tableSpecs")
-      private final @Nullable Output<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs;
+    private @Nullable Output<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs;
 
-    public Output<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs() {
-        return this.tableSpecs == null ? Codegen.empty() : this.tableSpecs;
+    public Optional<Output<List<EntryBigqueryTableSpecTableSpecArgs>>> tableSpecs() {
+        return Optional.ofNullable(this.tableSpecs);
     }
 
     @Import(name="viewSpecs")
-      private final @Nullable Output<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs;
+    private @Nullable Output<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs;
 
-    public Output<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs() {
-        return this.viewSpecs == null ? Codegen.empty() : this.viewSpecs;
+    public Optional<Output<List<EntryBigqueryTableSpecViewSpecArgs>>> viewSpecs() {
+        return Optional.ofNullable(this.viewSpecs);
     }
 
-    public EntryBigqueryTableSpecArgs(
-        @Nullable Output<String> tableSourceType,
-        @Nullable Output<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs,
-        @Nullable Output<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs) {
-        this.tableSourceType = tableSourceType;
-        this.tableSpecs = tableSpecs;
-        this.viewSpecs = viewSpecs;
-    }
+    private EntryBigqueryTableSpecArgs() {}
 
-    private EntryBigqueryTableSpecArgs() {
-        this.tableSourceType = Codegen.empty();
-        this.tableSpecs = Codegen.empty();
-        this.viewSpecs = Codegen.empty();
+    private EntryBigqueryTableSpecArgs(EntryBigqueryTableSpecArgs $) {
+        this.tableSourceType = $.tableSourceType;
+        this.tableSpecs = $.tableSpecs;
+        this.viewSpecs = $.viewSpecs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntryBigqueryTableSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> tableSourceType;
-        private @Nullable Output<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs;
-        private @Nullable Output<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs;
+        private EntryBigqueryTableSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntryBigqueryTableSpecArgs();
         }
 
         public Builder(EntryBigqueryTableSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableSourceType = defaults.tableSourceType;
-    	      this.tableSpecs = defaults.tableSpecs;
-    	      this.viewSpecs = defaults.viewSpecs;
+            $ = new EntryBigqueryTableSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tableSourceType(@Nullable Output<String> tableSourceType) {
-            this.tableSourceType = tableSourceType;
+            $.tableSourceType = tableSourceType;
             return this;
         }
-        public Builder tableSourceType(@Nullable String tableSourceType) {
-            this.tableSourceType = Codegen.ofNullable(tableSourceType);
-            return this;
+
+        public Builder tableSourceType(String tableSourceType) {
+            return tableSourceType(Output.of(tableSourceType));
         }
+
         public Builder tableSpecs(@Nullable Output<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs) {
-            this.tableSpecs = tableSpecs;
+            $.tableSpecs = tableSpecs;
             return this;
         }
-        public Builder tableSpecs(@Nullable List<EntryBigqueryTableSpecTableSpecArgs> tableSpecs) {
-            this.tableSpecs = Codegen.ofNullable(tableSpecs);
-            return this;
+
+        public Builder tableSpecs(List<EntryBigqueryTableSpecTableSpecArgs> tableSpecs) {
+            return tableSpecs(Output.of(tableSpecs));
         }
+
         public Builder tableSpecs(EntryBigqueryTableSpecTableSpecArgs... tableSpecs) {
             return tableSpecs(List.of(tableSpecs));
         }
+
         public Builder viewSpecs(@Nullable Output<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs) {
-            this.viewSpecs = viewSpecs;
+            $.viewSpecs = viewSpecs;
             return this;
         }
-        public Builder viewSpecs(@Nullable List<EntryBigqueryTableSpecViewSpecArgs> viewSpecs) {
-            this.viewSpecs = Codegen.ofNullable(viewSpecs);
-            return this;
+
+        public Builder viewSpecs(List<EntryBigqueryTableSpecViewSpecArgs> viewSpecs) {
+            return viewSpecs(Output.of(viewSpecs));
         }
+
         public Builder viewSpecs(EntryBigqueryTableSpecViewSpecArgs... viewSpecs) {
             return viewSpecs(List.of(viewSpecs));
-        }        public EntryBigqueryTableSpecArgs build() {
-            return new EntryBigqueryTableSpecArgs(tableSourceType, tableSpecs, viewSpecs);
+        }
+
+        public EntryBigqueryTableSpecArgs build() {
+            return $;
         }
     }
+
 }

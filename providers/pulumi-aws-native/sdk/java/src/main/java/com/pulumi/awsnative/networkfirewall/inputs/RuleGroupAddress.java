@@ -13,45 +13,45 @@ public final class RuleGroupAddress extends com.pulumi.resources.InvokeArgs {
     public static final RuleGroupAddress Empty = new RuleGroupAddress();
 
     @Import(name="addressDefinition", required=true)
-      private final String addressDefinition;
+    private String addressDefinition;
 
     public String addressDefinition() {
         return this.addressDefinition;
     }
 
-    public RuleGroupAddress(String addressDefinition) {
-        this.addressDefinition = Objects.requireNonNull(addressDefinition, "expected parameter 'addressDefinition' to be non-null");
-    }
+    private RuleGroupAddress() {}
 
-    private RuleGroupAddress() {
-        this.addressDefinition = null;
+    private RuleGroupAddress(RuleGroupAddress $) {
+        this.addressDefinition = $.addressDefinition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupAddress defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String addressDefinition;
+        private RuleGroupAddress $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupAddress();
         }
 
         public Builder(RuleGroupAddress defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressDefinition = defaults.addressDefinition;
+            $ = new RuleGroupAddress(Objects.requireNonNull(defaults));
         }
 
         public Builder addressDefinition(String addressDefinition) {
-            this.addressDefinition = Objects.requireNonNull(addressDefinition);
+            $.addressDefinition = addressDefinition;
             return this;
-        }        public RuleGroupAddress build() {
-            return new RuleGroupAddress(addressDefinition);
+        }
+
+        public RuleGroupAddress build() {
+            $.addressDefinition = Objects.requireNonNull($.addressDefinition, "expected parameter 'addressDefinition' to be non-null");
+            return $;
         }
     }
+
 }

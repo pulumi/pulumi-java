@@ -17,7 +17,7 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
      * 
      */
     @Import(name="constraintId", required=true)
-      private final String constraintId;
+    private String constraintId;
 
     public String constraintId() {
         return this.constraintId;
@@ -28,14 +28,14 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
     @Import(name="owner", required=true)
-      private final String owner;
+    private String owner;
 
     public String owner() {
         return this.owner;
@@ -46,7 +46,7 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
      * 
      */
     @Import(name="portfolioId", required=true)
-      private final String portfolioId;
+    private String portfolioId;
 
     public String portfolioId() {
         return this.portfolioId;
@@ -57,7 +57,7 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
      * 
      */
     @Import(name="productId", required=true)
-      private final String productId;
+    private String productId;
 
     public String productId() {
         return this.productId;
@@ -68,91 +68,80 @@ public final class GetPortfolioConstraintsDetail extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetPortfolioConstraintsDetail(
-        String constraintId,
-        String description,
-        String owner,
-        String portfolioId,
-        String productId,
-        String type) {
-        this.constraintId = Objects.requireNonNull(constraintId, "expected parameter 'constraintId' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.owner = Objects.requireNonNull(owner, "expected parameter 'owner' to be non-null");
-        this.portfolioId = Objects.requireNonNull(portfolioId, "expected parameter 'portfolioId' to be non-null");
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetPortfolioConstraintsDetail() {}
 
-    private GetPortfolioConstraintsDetail() {
-        this.constraintId = null;
-        this.description = null;
-        this.owner = null;
-        this.portfolioId = null;
-        this.productId = null;
-        this.type = null;
+    private GetPortfolioConstraintsDetail(GetPortfolioConstraintsDetail $) {
+        this.constraintId = $.constraintId;
+        this.description = $.description;
+        this.owner = $.owner;
+        this.portfolioId = $.portfolioId;
+        this.productId = $.productId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPortfolioConstraintsDetail defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String constraintId;
-        private String description;
-        private String owner;
-        private String portfolioId;
-        private String productId;
-        private String type;
+        private GetPortfolioConstraintsDetail $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPortfolioConstraintsDetail();
         }
 
         public Builder(GetPortfolioConstraintsDetail defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.constraintId = defaults.constraintId;
-    	      this.description = defaults.description;
-    	      this.owner = defaults.owner;
-    	      this.portfolioId = defaults.portfolioId;
-    	      this.productId = defaults.productId;
-    	      this.type = defaults.type;
+            $ = new GetPortfolioConstraintsDetail(Objects.requireNonNull(defaults));
         }
 
         public Builder constraintId(String constraintId) {
-            this.constraintId = Objects.requireNonNull(constraintId);
+            $.constraintId = constraintId;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder owner(String owner) {
-            this.owner = Objects.requireNonNull(owner);
+            $.owner = owner;
             return this;
         }
+
         public Builder portfolioId(String portfolioId) {
-            this.portfolioId = Objects.requireNonNull(portfolioId);
+            $.portfolioId = portfolioId;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetPortfolioConstraintsDetail build() {
-            return new GetPortfolioConstraintsDetail(constraintId, description, owner, portfolioId, productId, type);
+        }
+
+        public GetPortfolioConstraintsDetail build() {
+            $.constraintId = Objects.requireNonNull($.constraintId, "expected parameter 'constraintId' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.owner = Objects.requireNonNull($.owner, "expected parameter 'owner' to be non-null");
+            $.portfolioId = Objects.requireNonNull($.portfolioId, "expected parameter 'portfolioId' to be non-null");
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,113 +18,104 @@ public final class BucketMetricsConfigurationArgs extends com.pulumi.resources.R
     public static final BucketMetricsConfigurationArgs Empty = new BucketMetricsConfigurationArgs();
 
     @Import(name="accessPointArn")
-      private final @Nullable Output<String> accessPointArn;
+    private @Nullable Output<String> accessPointArn;
 
-    public Output<String> accessPointArn() {
-        return this.accessPointArn == null ? Codegen.empty() : this.accessPointArn;
+    public Optional<Output<String>> accessPointArn() {
+        return Optional.ofNullable(this.accessPointArn);
     }
 
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     @Import(name="tagFilters")
-      private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
+    private @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
-    public Output<List<BucketTagFilterArgs>> tagFilters() {
-        return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
+    public Optional<Output<List<BucketTagFilterArgs>>> tagFilters() {
+        return Optional.ofNullable(this.tagFilters);
     }
 
-    public BucketMetricsConfigurationArgs(
-        @Nullable Output<String> accessPointArn,
-        Output<String> id,
-        @Nullable Output<String> prefix,
-        @Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
-        this.accessPointArn = accessPointArn;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.prefix = prefix;
-        this.tagFilters = tagFilters;
-    }
+    private BucketMetricsConfigurationArgs() {}
 
-    private BucketMetricsConfigurationArgs() {
-        this.accessPointArn = Codegen.empty();
-        this.id = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.tagFilters = Codegen.empty();
+    private BucketMetricsConfigurationArgs(BucketMetricsConfigurationArgs $) {
+        this.accessPointArn = $.accessPointArn;
+        this.id = $.id;
+        this.prefix = $.prefix;
+        this.tagFilters = $.tagFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketMetricsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPointArn;
-        private Output<String> id;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
+        private BucketMetricsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketMetricsConfigurationArgs();
         }
 
         public Builder(BucketMetricsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPointArn = defaults.accessPointArn;
-    	      this.id = defaults.id;
-    	      this.prefix = defaults.prefix;
-    	      this.tagFilters = defaults.tagFilters;
+            $ = new BucketMetricsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPointArn(@Nullable Output<String> accessPointArn) {
-            this.accessPointArn = accessPointArn;
+            $.accessPointArn = accessPointArn;
             return this;
         }
-        public Builder accessPointArn(@Nullable String accessPointArn) {
-            this.accessPointArn = Codegen.ofNullable(accessPointArn);
-            return this;
+
+        public Builder accessPointArn(String accessPointArn) {
+            return accessPointArn(Output.of(accessPointArn));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder tagFilters(@Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
-            this.tagFilters = tagFilters;
+            $.tagFilters = tagFilters;
             return this;
         }
-        public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
-            this.tagFilters = Codegen.ofNullable(tagFilters);
-            return this;
+
+        public Builder tagFilters(List<BucketTagFilterArgs> tagFilters) {
+            return tagFilters(Output.of(tagFilters));
         }
+
         public Builder tagFilters(BucketTagFilterArgs... tagFilters) {
             return tagFilters(List.of(tagFilters));
-        }        public BucketMetricsConfigurationArgs build() {
-            return new BucketMetricsConfigurationArgs(accessPointArn, id, prefix, tagFilters);
+        }
+
+        public BucketMetricsConfigurationArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

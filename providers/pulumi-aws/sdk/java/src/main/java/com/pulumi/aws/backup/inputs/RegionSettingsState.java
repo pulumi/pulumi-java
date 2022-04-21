@@ -5,11 +5,11 @@ package com.pulumi.aws.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegionSettingsState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceTypeManagementPreference")
-      private final @Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference;
+    private @Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference;
 
-    public Output<Map<String,Boolean>> resourceTypeManagementPreference() {
-        return this.resourceTypeManagementPreference == null ? Codegen.empty() : this.resourceTypeManagementPreference;
+    public Optional<Output<Map<String,Boolean>>> resourceTypeManagementPreference() {
+        return Optional.ofNullable(this.resourceTypeManagementPreference);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class RegionSettingsState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceTypeOptInPreference")
-      private final @Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference;
+    private @Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference;
 
-    public Output<Map<String,Boolean>> resourceTypeOptInPreference() {
-        return this.resourceTypeOptInPreference == null ? Codegen.empty() : this.resourceTypeOptInPreference;
+    public Optional<Output<Map<String,Boolean>>> resourceTypeOptInPreference() {
+        return Optional.ofNullable(this.resourceTypeOptInPreference);
     }
 
-    public RegionSettingsState(
-        @Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference,
-        @Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference) {
-        this.resourceTypeManagementPreference = resourceTypeManagementPreference;
-        this.resourceTypeOptInPreference = resourceTypeOptInPreference;
-    }
+    private RegionSettingsState() {}
 
-    private RegionSettingsState() {
-        this.resourceTypeManagementPreference = Codegen.empty();
-        this.resourceTypeOptInPreference = Codegen.empty();
+    private RegionSettingsState(RegionSettingsState $) {
+        this.resourceTypeManagementPreference = $.resourceTypeManagementPreference;
+        this.resourceTypeOptInPreference = $.resourceTypeOptInPreference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionSettingsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference;
-        private @Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference;
+        private RegionSettingsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionSettingsState();
         }
 
         public Builder(RegionSettingsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceTypeManagementPreference = defaults.resourceTypeManagementPreference;
-    	      this.resourceTypeOptInPreference = defaults.resourceTypeOptInPreference;
+            $ = new RegionSettingsState(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceTypeManagementPreference(@Nullable Output<Map<String,Boolean>> resourceTypeManagementPreference) {
-            this.resourceTypeManagementPreference = resourceTypeManagementPreference;
+            $.resourceTypeManagementPreference = resourceTypeManagementPreference;
             return this;
         }
-        public Builder resourceTypeManagementPreference(@Nullable Map<String,Boolean> resourceTypeManagementPreference) {
-            this.resourceTypeManagementPreference = Codegen.ofNullable(resourceTypeManagementPreference);
-            return this;
+
+        public Builder resourceTypeManagementPreference(Map<String,Boolean> resourceTypeManagementPreference) {
+            return resourceTypeManagementPreference(Output.of(resourceTypeManagementPreference));
         }
+
         public Builder resourceTypeOptInPreference(@Nullable Output<Map<String,Boolean>> resourceTypeOptInPreference) {
-            this.resourceTypeOptInPreference = resourceTypeOptInPreference;
+            $.resourceTypeOptInPreference = resourceTypeOptInPreference;
             return this;
         }
-        public Builder resourceTypeOptInPreference(@Nullable Map<String,Boolean> resourceTypeOptInPreference) {
-            this.resourceTypeOptInPreference = Codegen.ofNullable(resourceTypeOptInPreference);
-            return this;
-        }        public RegionSettingsState build() {
-            return new RegionSettingsState(resourceTypeManagementPreference, resourceTypeOptInPreference);
+
+        public Builder resourceTypeOptInPreference(Map<String,Boolean> resourceTypeOptInPreference) {
+            return resourceTypeOptInPreference(Output.of(resourceTypeOptInPreference));
+        }
+
+        public RegionSettingsState build() {
+            return $;
         }
     }
+
 }

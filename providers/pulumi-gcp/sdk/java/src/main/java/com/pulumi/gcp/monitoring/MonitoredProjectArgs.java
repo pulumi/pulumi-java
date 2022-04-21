@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class MonitoredProjectArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="metricsScope", required=true)
-      private final Output<String> metricsScope;
+    private Output<String> metricsScope;
 
     public Output<String> metricsScope() {
         return this.metricsScope;
@@ -31,63 +31,59 @@ public final class MonitoredProjectArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public MonitoredProjectArgs(
-        Output<String> metricsScope,
-        @Nullable Output<String> name) {
-        this.metricsScope = Objects.requireNonNull(metricsScope, "expected parameter 'metricsScope' to be non-null");
-        this.name = name;
-    }
+    private MonitoredProjectArgs() {}
 
-    private MonitoredProjectArgs() {
-        this.metricsScope = Codegen.empty();
-        this.name = Codegen.empty();
+    private MonitoredProjectArgs(MonitoredProjectArgs $) {
+        this.metricsScope = $.metricsScope;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoredProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> metricsScope;
-        private @Nullable Output<String> name;
+        private MonitoredProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoredProjectArgs();
         }
 
         public Builder(MonitoredProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricsScope = defaults.metricsScope;
-    	      this.name = defaults.name;
+            $ = new MonitoredProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricsScope(Output<String> metricsScope) {
-            this.metricsScope = Objects.requireNonNull(metricsScope);
+            $.metricsScope = metricsScope;
             return this;
         }
+
         public Builder metricsScope(String metricsScope) {
-            this.metricsScope = Output.of(Objects.requireNonNull(metricsScope));
-            return this;
+            return metricsScope(Output.of(metricsScope));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public MonitoredProjectArgs build() {
-            return new MonitoredProjectArgs(metricsScope, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public MonitoredProjectArgs build() {
+            $.metricsScope = Objects.requireNonNull($.metricsScope, "expected parameter 'metricsScope' to be non-null");
+            return $;
         }
     }
+
 }

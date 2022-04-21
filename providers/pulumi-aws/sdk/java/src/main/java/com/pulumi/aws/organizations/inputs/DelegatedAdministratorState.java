@@ -5,9 +5,9 @@ package com.pulumi.aws.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DelegatedAdministratorState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DelegatedAdministratorState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DelegatedAdministratorState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="delegationEnabledDate")
-      private final @Nullable Output<String> delegationEnabledDate;
+    private @Nullable Output<String> delegationEnabledDate;
 
-    public Output<String> delegationEnabledDate() {
-        return this.delegationEnabledDate == null ? Codegen.empty() : this.delegationEnabledDate;
+    public Optional<Output<String>> delegationEnabledDate() {
+        return Optional.ofNullable(this.delegationEnabledDate);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DelegatedAdministratorState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DelegatedAdministratorState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="joinedMethod")
-      private final @Nullable Output<String> joinedMethod;
+    private @Nullable Output<String> joinedMethod;
 
-    public Output<String> joinedMethod() {
-        return this.joinedMethod == null ? Codegen.empty() : this.joinedMethod;
+    public Optional<Output<String>> joinedMethod() {
+        return Optional.ofNullable(this.joinedMethod);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DelegatedAdministratorState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="joinedTimestamp")
-      private final @Nullable Output<String> joinedTimestamp;
+    private @Nullable Output<String> joinedTimestamp;
 
-    public Output<String> joinedTimestamp() {
-        return this.joinedTimestamp == null ? Codegen.empty() : this.joinedTimestamp;
+    public Optional<Output<String>> joinedTimestamp() {
+        return Optional.ofNullable(this.joinedTimestamp);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DelegatedAdministratorState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class DelegatedAdministratorState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="servicePrincipal")
-      private final @Nullable Output<String> servicePrincipal;
+    private @Nullable Output<String> servicePrincipal;
 
-    public Output<String> servicePrincipal() {
-        return this.servicePrincipal == null ? Codegen.empty() : this.servicePrincipal;
+    public Optional<Output<String>> servicePrincipal() {
+        return Optional.ofNullable(this.servicePrincipal);
     }
 
     /**
@@ -108,154 +108,128 @@ public final class DelegatedAdministratorState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public DelegatedAdministratorState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> delegationEnabledDate,
-        @Nullable Output<String> email,
-        @Nullable Output<String> joinedMethod,
-        @Nullable Output<String> joinedTimestamp,
-        @Nullable Output<String> name,
-        @Nullable Output<String> servicePrincipal,
-        @Nullable Output<String> status) {
-        this.accountId = accountId;
-        this.arn = arn;
-        this.delegationEnabledDate = delegationEnabledDate;
-        this.email = email;
-        this.joinedMethod = joinedMethod;
-        this.joinedTimestamp = joinedTimestamp;
-        this.name = name;
-        this.servicePrincipal = servicePrincipal;
-        this.status = status;
-    }
+    private DelegatedAdministratorState() {}
 
-    private DelegatedAdministratorState() {
-        this.accountId = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.delegationEnabledDate = Codegen.empty();
-        this.email = Codegen.empty();
-        this.joinedMethod = Codegen.empty();
-        this.joinedTimestamp = Codegen.empty();
-        this.name = Codegen.empty();
-        this.servicePrincipal = Codegen.empty();
-        this.status = Codegen.empty();
+    private DelegatedAdministratorState(DelegatedAdministratorState $) {
+        this.accountId = $.accountId;
+        this.arn = $.arn;
+        this.delegationEnabledDate = $.delegationEnabledDate;
+        this.email = $.email;
+        this.joinedMethod = $.joinedMethod;
+        this.joinedTimestamp = $.joinedTimestamp;
+        this.name = $.name;
+        this.servicePrincipal = $.servicePrincipal;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelegatedAdministratorState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> delegationEnabledDate;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> joinedMethod;
-        private @Nullable Output<String> joinedTimestamp;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> servicePrincipal;
-        private @Nullable Output<String> status;
+        private DelegatedAdministratorState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelegatedAdministratorState();
         }
 
         public Builder(DelegatedAdministratorState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.arn = defaults.arn;
-    	      this.delegationEnabledDate = defaults.delegationEnabledDate;
-    	      this.email = defaults.email;
-    	      this.joinedMethod = defaults.joinedMethod;
-    	      this.joinedTimestamp = defaults.joinedTimestamp;
-    	      this.name = defaults.name;
-    	      this.servicePrincipal = defaults.servicePrincipal;
-    	      this.status = defaults.status;
+            $ = new DelegatedAdministratorState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder delegationEnabledDate(@Nullable Output<String> delegationEnabledDate) {
-            this.delegationEnabledDate = delegationEnabledDate;
+            $.delegationEnabledDate = delegationEnabledDate;
             return this;
         }
-        public Builder delegationEnabledDate(@Nullable String delegationEnabledDate) {
-            this.delegationEnabledDate = Codegen.ofNullable(delegationEnabledDate);
-            return this;
+
+        public Builder delegationEnabledDate(String delegationEnabledDate) {
+            return delegationEnabledDate(Output.of(delegationEnabledDate));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder joinedMethod(@Nullable Output<String> joinedMethod) {
-            this.joinedMethod = joinedMethod;
+            $.joinedMethod = joinedMethod;
             return this;
         }
-        public Builder joinedMethod(@Nullable String joinedMethod) {
-            this.joinedMethod = Codegen.ofNullable(joinedMethod);
-            return this;
+
+        public Builder joinedMethod(String joinedMethod) {
+            return joinedMethod(Output.of(joinedMethod));
         }
+
         public Builder joinedTimestamp(@Nullable Output<String> joinedTimestamp) {
-            this.joinedTimestamp = joinedTimestamp;
+            $.joinedTimestamp = joinedTimestamp;
             return this;
         }
-        public Builder joinedTimestamp(@Nullable String joinedTimestamp) {
-            this.joinedTimestamp = Codegen.ofNullable(joinedTimestamp);
-            return this;
+
+        public Builder joinedTimestamp(String joinedTimestamp) {
+            return joinedTimestamp(Output.of(joinedTimestamp));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder servicePrincipal(@Nullable Output<String> servicePrincipal) {
-            this.servicePrincipal = servicePrincipal;
+            $.servicePrincipal = servicePrincipal;
             return this;
         }
-        public Builder servicePrincipal(@Nullable String servicePrincipal) {
-            this.servicePrincipal = Codegen.ofNullable(servicePrincipal);
-            return this;
+
+        public Builder servicePrincipal(String servicePrincipal) {
+            return servicePrincipal(Output.of(servicePrincipal));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public DelegatedAdministratorState build() {
-            return new DelegatedAdministratorState(accountId, arn, delegationEnabledDate, email, joinedMethod, joinedTimestamp, name, servicePrincipal, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public DelegatedAdministratorState build() {
+            return $;
         }
     }
+
 }

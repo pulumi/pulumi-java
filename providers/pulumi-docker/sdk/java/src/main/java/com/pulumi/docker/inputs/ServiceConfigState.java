@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServiceConfigState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ServiceConfigState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ServiceConfigState(
-        @Nullable Output<String> data,
-        @Nullable Output<String> name) {
-        this.data = data;
-        this.name = name;
-    }
+    private ServiceConfigState() {}
 
-    private ServiceConfigState() {
-        this.data = Codegen.empty();
-        this.name = Codegen.empty();
+    private ServiceConfigState(ServiceConfigState $) {
+        this.data = $.data;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> data;
-        private @Nullable Output<String> name;
+        private ServiceConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceConfigState();
         }
 
         public Builder(ServiceConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.name = defaults.name;
+            $ = new ServiceConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ServiceConfigState build() {
-            return new ServiceConfigState(data, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ServiceConfigState build() {
+            return $;
         }
     }
+
 }

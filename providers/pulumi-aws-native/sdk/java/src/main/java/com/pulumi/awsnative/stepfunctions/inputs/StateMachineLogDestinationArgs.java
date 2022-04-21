@@ -6,8 +6,8 @@ package com.pulumi.awsnative.stepfunctions.inputs;
 import com.pulumi.awsnative.stepfunctions.inputs.StateMachineCloudWatchLogsLogGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class StateMachineLogDestinationArgs extends com.pulumi.resources.R
     public static final StateMachineLogDestinationArgs Empty = new StateMachineLogDestinationArgs();
 
     @Import(name="cloudWatchLogsLogGroup")
-      private final @Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
+    private @Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
 
-    public Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup() {
-        return this.cloudWatchLogsLogGroup == null ? Codegen.empty() : this.cloudWatchLogsLogGroup;
+    public Optional<Output<StateMachineCloudWatchLogsLogGroupArgs>> cloudWatchLogsLogGroup() {
+        return Optional.ofNullable(this.cloudWatchLogsLogGroup);
     }
 
-    public StateMachineLogDestinationArgs(@Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup) {
-        this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
-    }
+    private StateMachineLogDestinationArgs() {}
 
-    private StateMachineLogDestinationArgs() {
-        this.cloudWatchLogsLogGroup = Codegen.empty();
+    private StateMachineLogDestinationArgs(StateMachineLogDestinationArgs $) {
+        this.cloudWatchLogsLogGroup = $.cloudWatchLogsLogGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateMachineLogDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup;
+        private StateMachineLogDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateMachineLogDestinationArgs();
         }
 
         public Builder(StateMachineLogDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchLogsLogGroup = defaults.cloudWatchLogsLogGroup;
+            $ = new StateMachineLogDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchLogsLogGroup(@Nullable Output<StateMachineCloudWatchLogsLogGroupArgs> cloudWatchLogsLogGroup) {
-            this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
+            $.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
             return this;
         }
-        public Builder cloudWatchLogsLogGroup(@Nullable StateMachineCloudWatchLogsLogGroupArgs cloudWatchLogsLogGroup) {
-            this.cloudWatchLogsLogGroup = Codegen.ofNullable(cloudWatchLogsLogGroup);
-            return this;
-        }        public StateMachineLogDestinationArgs build() {
-            return new StateMachineLogDestinationArgs(cloudWatchLogsLogGroup);
+
+        public Builder cloudWatchLogsLogGroup(StateMachineCloudWatchLogsLogGroupArgs cloudWatchLogsLogGroup) {
+            return cloudWatchLogsLogGroup(Output.of(cloudWatchLogsLogGroup));
+        }
+
+        public StateMachineLogDestinationArgs build() {
+            return $;
         }
     }
+
 }

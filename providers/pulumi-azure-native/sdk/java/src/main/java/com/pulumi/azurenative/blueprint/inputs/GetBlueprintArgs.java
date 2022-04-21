@@ -17,7 +17,7 @@ public final class GetBlueprintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blueprintName", required=true)
-      private final String blueprintName;
+    private String blueprintName;
 
     public String blueprintName() {
         return this.blueprintName;
@@ -28,55 +28,52 @@ public final class GetBlueprintArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceScope", required=true)
-      private final String resourceScope;
+    private String resourceScope;
 
     public String resourceScope() {
         return this.resourceScope;
     }
 
-    public GetBlueprintArgs(
-        String blueprintName,
-        String resourceScope) {
-        this.blueprintName = Objects.requireNonNull(blueprintName, "expected parameter 'blueprintName' to be non-null");
-        this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");
-    }
+    private GetBlueprintArgs() {}
 
-    private GetBlueprintArgs() {
-        this.blueprintName = null;
-        this.resourceScope = null;
+    private GetBlueprintArgs(GetBlueprintArgs $) {
+        this.blueprintName = $.blueprintName;
+        this.resourceScope = $.resourceScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBlueprintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blueprintName;
-        private String resourceScope;
+        private GetBlueprintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBlueprintArgs();
         }
 
         public Builder(GetBlueprintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blueprintName = defaults.blueprintName;
-    	      this.resourceScope = defaults.resourceScope;
+            $ = new GetBlueprintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blueprintName(String blueprintName) {
-            this.blueprintName = Objects.requireNonNull(blueprintName);
+            $.blueprintName = blueprintName;
             return this;
         }
+
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Objects.requireNonNull(resourceScope);
+            $.resourceScope = resourceScope;
             return this;
-        }        public GetBlueprintArgs build() {
-            return new GetBlueprintArgs(blueprintName, resourceScope);
+        }
+
+        public GetBlueprintArgs build() {
+            $.blueprintName = Objects.requireNonNull($.blueprintName, "expected parameter 'blueprintName' to be non-null");
+            $.resourceScope = Objects.requireNonNull($.resourceScope, "expected parameter 'resourceScope' to be non-null");
+            return $;
         }
     }
+
 }

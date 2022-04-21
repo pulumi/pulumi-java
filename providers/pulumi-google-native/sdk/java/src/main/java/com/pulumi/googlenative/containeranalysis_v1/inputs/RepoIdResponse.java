@@ -22,7 +22,7 @@ public final class RepoIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectRepoId", required=true)
-      private final ProjectRepoIdResponse projectRepoId;
+    private ProjectRepoIdResponse projectRepoId;
 
     public ProjectRepoIdResponse projectRepoId() {
         return this.projectRepoId;
@@ -33,55 +33,52 @@ public final class RepoIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uid", required=true)
-      private final String uid;
+    private String uid;
 
     public String uid() {
         return this.uid;
     }
 
-    public RepoIdResponse(
-        ProjectRepoIdResponse projectRepoId,
-        String uid) {
-        this.projectRepoId = Objects.requireNonNull(projectRepoId, "expected parameter 'projectRepoId' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-    }
+    private RepoIdResponse() {}
 
-    private RepoIdResponse() {
-        this.projectRepoId = null;
-        this.uid = null;
+    private RepoIdResponse(RepoIdResponse $) {
+        this.projectRepoId = $.projectRepoId;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepoIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ProjectRepoIdResponse projectRepoId;
-        private String uid;
+        private RepoIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepoIdResponse();
         }
 
         public Builder(RepoIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectRepoId = defaults.projectRepoId;
-    	      this.uid = defaults.uid;
+            $ = new RepoIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder projectRepoId(ProjectRepoIdResponse projectRepoId) {
-            this.projectRepoId = Objects.requireNonNull(projectRepoId);
+            $.projectRepoId = projectRepoId;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
-        }        public RepoIdResponse build() {
-            return new RepoIdResponse(projectRepoId, uid);
+        }
+
+        public RepoIdResponse build() {
+            $.projectRepoId = Objects.requireNonNull($.projectRepoId, "expected parameter 'projectRepoId' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            return $;
         }
     }
+
 }

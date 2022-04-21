@@ -5,7 +5,6 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends com.pulumi.
      * 
      */
     @Import(name="parameter", required=true)
-      private final Output<String> parameter;
+    private Output<String> parameter;
 
     public Output<String> parameter() {
         return this.parameter;
@@ -34,63 +33,60 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends com.pulumi.
      * 
      */
     @Import(name="scheme", required=true)
-      private final Output<String> scheme;
+    private Output<String> scheme;
 
     public Output<String> scheme() {
         return this.scheme;
     }
 
-    public BackendAuthorizationHeaderCredentialsArgs(
-        Output<String> parameter,
-        Output<String> scheme) {
-        this.parameter = Objects.requireNonNull(parameter, "expected parameter 'parameter' to be non-null");
-        this.scheme = Objects.requireNonNull(scheme, "expected parameter 'scheme' to be non-null");
-    }
+    private BackendAuthorizationHeaderCredentialsArgs() {}
 
-    private BackendAuthorizationHeaderCredentialsArgs() {
-        this.parameter = Codegen.empty();
-        this.scheme = Codegen.empty();
+    private BackendAuthorizationHeaderCredentialsArgs(BackendAuthorizationHeaderCredentialsArgs $) {
+        this.parameter = $.parameter;
+        this.scheme = $.scheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendAuthorizationHeaderCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> parameter;
-        private Output<String> scheme;
+        private BackendAuthorizationHeaderCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendAuthorizationHeaderCredentialsArgs();
         }
 
         public Builder(BackendAuthorizationHeaderCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameter = defaults.parameter;
-    	      this.scheme = defaults.scheme;
+            $ = new BackendAuthorizationHeaderCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameter(Output<String> parameter) {
-            this.parameter = Objects.requireNonNull(parameter);
+            $.parameter = parameter;
             return this;
         }
+
         public Builder parameter(String parameter) {
-            this.parameter = Output.of(Objects.requireNonNull(parameter));
-            return this;
+            return parameter(Output.of(parameter));
         }
+
         public Builder scheme(Output<String> scheme) {
-            this.scheme = Objects.requireNonNull(scheme);
+            $.scheme = scheme;
             return this;
         }
+
         public Builder scheme(String scheme) {
-            this.scheme = Output.of(Objects.requireNonNull(scheme));
-            return this;
-        }        public BackendAuthorizationHeaderCredentialsArgs build() {
-            return new BackendAuthorizationHeaderCredentialsArgs(parameter, scheme);
+            return scheme(Output.of(scheme));
+        }
+
+        public BackendAuthorizationHeaderCredentialsArgs build() {
+            $.parameter = Objects.requireNonNull($.parameter, "expected parameter 'parameter' to be non-null");
+            $.scheme = Objects.requireNonNull($.scheme, "expected parameter 'scheme' to be non-null");
+            return $;
         }
     }
+
 }

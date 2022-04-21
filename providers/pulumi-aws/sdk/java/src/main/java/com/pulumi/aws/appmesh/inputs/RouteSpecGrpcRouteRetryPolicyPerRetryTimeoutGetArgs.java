@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs extends c
      * 
      */
     @Import(name="unit", required=true)
-      private final Output<String> unit;
+    private Output<String> unit;
 
     public Output<String> unit() {
         return this.unit;
@@ -31,63 +30,60 @@ public final class RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs extends c
      * 
      */
     @Import(name="value", required=true)
-      private final Output<Integer> value;
+    private Output<Integer> value;
 
     public Output<Integer> value() {
         return this.value;
     }
 
-    public RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs(
-        Output<String> unit,
-        Output<Integer> value) {
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs() {}
 
-    private RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs() {
-        this.unit = Codegen.empty();
-        this.value = Codegen.empty();
+    private RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs(RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs $) {
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> unit;
-        private Output<Integer> value;
+        private RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs();
         }
 
         public Builder(RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder unit(Output<String> unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
         }
+
         public Builder unit(String unit) {
-            this.unit = Output.of(Objects.requireNonNull(unit));
-            return this;
+            return unit(Output.of(unit));
         }
+
         public Builder value(Output<Integer> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Integer value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs build() {
-            return new RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs(unit, value);
+            return value(Output.of(value));
+        }
+
+        public RouteSpecGrpcRouteRetryPolicyPerRetryTimeoutGetArgs build() {
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class RouterBgpResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="advertiseMode", required=true)
-      private final String advertiseMode;
+    private String advertiseMode;
 
     public String advertiseMode() {
         return this.advertiseMode;
@@ -31,7 +31,7 @@ public final class RouterBgpResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="advertisedGroups", required=true)
-      private final List<String> advertisedGroups;
+    private List<String> advertisedGroups;
 
     public List<String> advertisedGroups() {
         return this.advertisedGroups;
@@ -42,7 +42,7 @@ public final class RouterBgpResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="advertisedIpRanges", required=true)
-      private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
+    private List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
 
     public List<RouterAdvertisedIpRangeResponse> advertisedIpRanges() {
         return this.advertisedIpRanges;
@@ -53,7 +53,7 @@ public final class RouterBgpResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="asn", required=true)
-      private final Integer asn;
+    private Integer asn;
 
     public Integer asn() {
         return this.asn;
@@ -64,88 +64,81 @@ public final class RouterBgpResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keepaliveInterval", required=true)
-      private final Integer keepaliveInterval;
+    private Integer keepaliveInterval;
 
     public Integer keepaliveInterval() {
         return this.keepaliveInterval;
     }
 
-    public RouterBgpResponse(
-        String advertiseMode,
-        List<String> advertisedGroups,
-        List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
-        Integer asn,
-        Integer keepaliveInterval) {
-        this.advertiseMode = Objects.requireNonNull(advertiseMode, "expected parameter 'advertiseMode' to be non-null");
-        this.advertisedGroups = Objects.requireNonNull(advertisedGroups, "expected parameter 'advertisedGroups' to be non-null");
-        this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges, "expected parameter 'advertisedIpRanges' to be non-null");
-        this.asn = Objects.requireNonNull(asn, "expected parameter 'asn' to be non-null");
-        this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval, "expected parameter 'keepaliveInterval' to be non-null");
-    }
+    private RouterBgpResponse() {}
 
-    private RouterBgpResponse() {
-        this.advertiseMode = null;
-        this.advertisedGroups = List.of();
-        this.advertisedIpRanges = List.of();
-        this.asn = null;
-        this.keepaliveInterval = null;
+    private RouterBgpResponse(RouterBgpResponse $) {
+        this.advertiseMode = $.advertiseMode;
+        this.advertisedGroups = $.advertisedGroups;
+        this.advertisedIpRanges = $.advertisedIpRanges;
+        this.asn = $.asn;
+        this.keepaliveInterval = $.keepaliveInterval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterBgpResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String advertiseMode;
-        private List<String> advertisedGroups;
-        private List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
-        private Integer asn;
-        private Integer keepaliveInterval;
+        private RouterBgpResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterBgpResponse();
         }
 
         public Builder(RouterBgpResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advertiseMode = defaults.advertiseMode;
-    	      this.advertisedGroups = defaults.advertisedGroups;
-    	      this.advertisedIpRanges = defaults.advertisedIpRanges;
-    	      this.asn = defaults.asn;
-    	      this.keepaliveInterval = defaults.keepaliveInterval;
+            $ = new RouterBgpResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder advertiseMode(String advertiseMode) {
-            this.advertiseMode = Objects.requireNonNull(advertiseMode);
+            $.advertiseMode = advertiseMode;
             return this;
         }
+
         public Builder advertisedGroups(List<String> advertisedGroups) {
-            this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
+            $.advertisedGroups = advertisedGroups;
             return this;
         }
+
         public Builder advertisedGroups(String... advertisedGroups) {
             return advertisedGroups(List.of(advertisedGroups));
         }
+
         public Builder advertisedIpRanges(List<RouterAdvertisedIpRangeResponse> advertisedIpRanges) {
-            this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
+            $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
+
         public Builder advertisedIpRanges(RouterAdvertisedIpRangeResponse... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
+
         public Builder asn(Integer asn) {
-            this.asn = Objects.requireNonNull(asn);
+            $.asn = asn;
             return this;
         }
+
         public Builder keepaliveInterval(Integer keepaliveInterval) {
-            this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval);
+            $.keepaliveInterval = keepaliveInterval;
             return this;
-        }        public RouterBgpResponse build() {
-            return new RouterBgpResponse(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
+        }
+
+        public RouterBgpResponse build() {
+            $.advertiseMode = Objects.requireNonNull($.advertiseMode, "expected parameter 'advertiseMode' to be non-null");
+            $.advertisedGroups = Objects.requireNonNull($.advertisedGroups, "expected parameter 'advertisedGroups' to be non-null");
+            $.advertisedIpRanges = Objects.requireNonNull($.advertisedIpRanges, "expected parameter 'advertisedIpRanges' to be non-null");
+            $.asn = Objects.requireNonNull($.asn, "expected parameter 'asn' to be non-null");
+            $.keepaliveInterval = Objects.requireNonNull($.keepaliveInterval, "expected parameter 'keepaliveInterval' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class MetricCounterSetResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="counters", required=true)
-      private final List<MetricCounterResponse> counters;
+    private List<MetricCounterResponse> counters;
 
     public List<MetricCounterResponse> counters() {
         return this.counters;
     }
 
-    public MetricCounterSetResponse(List<MetricCounterResponse> counters) {
-        this.counters = Objects.requireNonNull(counters, "expected parameter 'counters' to be non-null");
-    }
+    private MetricCounterSetResponse() {}
 
-    private MetricCounterSetResponse() {
-        this.counters = List.of();
+    private MetricCounterSetResponse(MetricCounterSetResponse $) {
+        this.counters = $.counters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricCounterSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MetricCounterResponse> counters;
+        private MetricCounterSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricCounterSetResponse();
         }
 
         public Builder(MetricCounterSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.counters = defaults.counters;
+            $ = new MetricCounterSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder counters(List<MetricCounterResponse> counters) {
-            this.counters = Objects.requireNonNull(counters);
+            $.counters = counters;
             return this;
         }
+
         public Builder counters(MetricCounterResponse... counters) {
             return counters(List.of(counters));
-        }        public MetricCounterSetResponse build() {
-            return new MetricCounterSetResponse(counters);
+        }
+
+        public MetricCounterSetResponse build() {
+            $.counters = Objects.requireNonNull($.counters, "expected parameter 'counters' to be non-null");
+            return $;
         }
     }
+
 }

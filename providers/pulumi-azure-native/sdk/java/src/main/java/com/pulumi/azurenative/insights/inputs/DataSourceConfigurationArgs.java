@@ -8,9 +8,9 @@ import com.pulumi.azurenative.insights.inputs.EventLogConfigurationArgs;
 import com.pulumi.azurenative.insights.inputs.PerformanceCounterConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="eventLogs")
-      private final @Nullable Output<List<EventLogConfigurationArgs>> eventLogs;
+    private @Nullable Output<List<EventLogConfigurationArgs>> eventLogs;
 
-    public Output<List<EventLogConfigurationArgs>> eventLogs() {
-        return this.eventLogs == null ? Codegen.empty() : this.eventLogs;
+    public Optional<Output<List<EventLogConfigurationArgs>>> eventLogs() {
+        return Optional.ofNullable(this.eventLogs);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="perfCounters")
-      private final @Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters;
+    private @Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters;
 
-    public Output<List<PerformanceCounterConfigurationArgs>> perfCounters() {
-        return this.perfCounters == null ? Codegen.empty() : this.perfCounters;
+    public Optional<Output<List<PerformanceCounterConfigurationArgs>>> perfCounters() {
+        return Optional.ofNullable(this.perfCounters);
     }
 
     /**
@@ -45,85 +45,80 @@ public final class DataSourceConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="providers")
-      private final @Nullable Output<List<EtwProviderConfigurationArgs>> providers;
+    private @Nullable Output<List<EtwProviderConfigurationArgs>> providers;
 
-    public Output<List<EtwProviderConfigurationArgs>> providers() {
-        return this.providers == null ? Codegen.empty() : this.providers;
+    public Optional<Output<List<EtwProviderConfigurationArgs>>> providers() {
+        return Optional.ofNullable(this.providers);
     }
 
-    public DataSourceConfigurationArgs(
-        @Nullable Output<List<EventLogConfigurationArgs>> eventLogs,
-        @Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters,
-        @Nullable Output<List<EtwProviderConfigurationArgs>> providers) {
-        this.eventLogs = eventLogs;
-        this.perfCounters = perfCounters;
-        this.providers = providers;
-    }
+    private DataSourceConfigurationArgs() {}
 
-    private DataSourceConfigurationArgs() {
-        this.eventLogs = Codegen.empty();
-        this.perfCounters = Codegen.empty();
-        this.providers = Codegen.empty();
+    private DataSourceConfigurationArgs(DataSourceConfigurationArgs $) {
+        this.eventLogs = $.eventLogs;
+        this.perfCounters = $.perfCounters;
+        this.providers = $.providers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EventLogConfigurationArgs>> eventLogs;
-        private @Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters;
-        private @Nullable Output<List<EtwProviderConfigurationArgs>> providers;
+        private DataSourceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfigurationArgs();
         }
 
         public Builder(DataSourceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventLogs = defaults.eventLogs;
-    	      this.perfCounters = defaults.perfCounters;
-    	      this.providers = defaults.providers;
+            $ = new DataSourceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventLogs(@Nullable Output<List<EventLogConfigurationArgs>> eventLogs) {
-            this.eventLogs = eventLogs;
+            $.eventLogs = eventLogs;
             return this;
         }
-        public Builder eventLogs(@Nullable List<EventLogConfigurationArgs> eventLogs) {
-            this.eventLogs = Codegen.ofNullable(eventLogs);
-            return this;
+
+        public Builder eventLogs(List<EventLogConfigurationArgs> eventLogs) {
+            return eventLogs(Output.of(eventLogs));
         }
+
         public Builder eventLogs(EventLogConfigurationArgs... eventLogs) {
             return eventLogs(List.of(eventLogs));
         }
+
         public Builder perfCounters(@Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters) {
-            this.perfCounters = perfCounters;
+            $.perfCounters = perfCounters;
             return this;
         }
-        public Builder perfCounters(@Nullable List<PerformanceCounterConfigurationArgs> perfCounters) {
-            this.perfCounters = Codegen.ofNullable(perfCounters);
-            return this;
+
+        public Builder perfCounters(List<PerformanceCounterConfigurationArgs> perfCounters) {
+            return perfCounters(Output.of(perfCounters));
         }
+
         public Builder perfCounters(PerformanceCounterConfigurationArgs... perfCounters) {
             return perfCounters(List.of(perfCounters));
         }
+
         public Builder providers(@Nullable Output<List<EtwProviderConfigurationArgs>> providers) {
-            this.providers = providers;
+            $.providers = providers;
             return this;
         }
-        public Builder providers(@Nullable List<EtwProviderConfigurationArgs> providers) {
-            this.providers = Codegen.ofNullable(providers);
-            return this;
+
+        public Builder providers(List<EtwProviderConfigurationArgs> providers) {
+            return providers(Output.of(providers));
         }
+
         public Builder providers(EtwProviderConfigurationArgs... providers) {
             return providers(List.of(providers));
-        }        public DataSourceConfigurationArgs build() {
-            return new DataSourceConfigurationArgs(eventLogs, perfCounters, providers);
+        }
+
+        public DataSourceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

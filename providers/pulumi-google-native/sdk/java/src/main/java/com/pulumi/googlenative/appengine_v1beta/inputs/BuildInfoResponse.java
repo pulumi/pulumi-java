@@ -21,45 +21,45 @@ public final class BuildInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudBuildId", required=true)
-      private final String cloudBuildId;
+    private String cloudBuildId;
 
     public String cloudBuildId() {
         return this.cloudBuildId;
     }
 
-    public BuildInfoResponse(String cloudBuildId) {
-        this.cloudBuildId = Objects.requireNonNull(cloudBuildId, "expected parameter 'cloudBuildId' to be non-null");
-    }
+    private BuildInfoResponse() {}
 
-    private BuildInfoResponse() {
-        this.cloudBuildId = null;
+    private BuildInfoResponse(BuildInfoResponse $) {
+        this.cloudBuildId = $.cloudBuildId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudBuildId;
+        private BuildInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildInfoResponse();
         }
 
         public Builder(BuildInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudBuildId = defaults.cloudBuildId;
+            $ = new BuildInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudBuildId(String cloudBuildId) {
-            this.cloudBuildId = Objects.requireNonNull(cloudBuildId);
+            $.cloudBuildId = cloudBuildId;
             return this;
-        }        public BuildInfoResponse build() {
-            return new BuildInfoResponse(cloudBuildId);
+        }
+
+        public BuildInfoResponse build() {
+            $.cloudBuildId = Objects.requireNonNull($.cloudBuildId, "expected parameter 'cloudBuildId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,62 +14,59 @@ public final class BudgetsActionActionThreshold extends com.pulumi.resources.Inv
     public static final BudgetsActionActionThreshold Empty = new BudgetsActionActionThreshold();
 
     @Import(name="type", required=true)
-      private final BudgetsActionActionThresholdType type;
+    private BudgetsActionActionThresholdType type;
 
     public BudgetsActionActionThresholdType type() {
         return this.type;
     }
 
     @Import(name="value", required=true)
-      private final Double value;
+    private Double value;
 
     public Double value() {
         return this.value;
     }
 
-    public BudgetsActionActionThreshold(
-        BudgetsActionActionThresholdType type,
-        Double value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private BudgetsActionActionThreshold() {}
 
-    private BudgetsActionActionThreshold() {
-        this.type = null;
-        this.value = null;
+    private BudgetsActionActionThreshold(BudgetsActionActionThreshold $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetsActionActionThreshold defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BudgetsActionActionThresholdType type;
-        private Double value;
+        private BudgetsActionActionThreshold $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetsActionActionThreshold();
         }
 
         public Builder(BudgetsActionActionThreshold defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new BudgetsActionActionThreshold(Objects.requireNonNull(defaults));
         }
 
         public Builder type(BudgetsActionActionThresholdType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(Double value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public BudgetsActionActionThreshold build() {
-            return new BudgetsActionActionThreshold(type, value);
+        }
+
+        public BudgetsActionActionThreshold build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

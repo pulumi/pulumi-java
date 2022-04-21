@@ -14,68 +14,67 @@ public final class DataSourceVpcConfiguration extends com.pulumi.resources.Invok
     public static final DataSourceVpcConfiguration Empty = new DataSourceVpcConfiguration();
 
     @Import(name="securityGroupIds", required=true)
-      private final List<String> securityGroupIds;
+    private List<String> securityGroupIds;
 
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
-      private final List<String> subnetIds;
+    private List<String> subnetIds;
 
     public List<String> subnetIds() {
         return this.subnetIds;
     }
 
-    public DataSourceVpcConfiguration(
-        List<String> securityGroupIds,
-        List<String> subnetIds) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-    }
+    private DataSourceVpcConfiguration() {}
 
-    private DataSourceVpcConfiguration() {
-        this.securityGroupIds = List.of();
-        this.subnetIds = List.of();
+    private DataSourceVpcConfiguration(DataSourceVpcConfiguration $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceVpcConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> securityGroupIds;
-        private List<String> subnetIds;
+        private DataSourceVpcConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceVpcConfiguration();
         }
 
         public Builder(DataSourceVpcConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
+            $ = new DataSourceVpcConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
-        }        public DataSourceVpcConfiguration build() {
-            return new DataSourceVpcConfiguration(securityGroupIds, subnetIds);
+        }
+
+        public DataSourceVpcConfiguration build() {
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            return $;
         }
     }
+
 }

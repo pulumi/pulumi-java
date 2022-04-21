@@ -17,7 +17,7 @@ public final class GetBuildLogLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="buildId", required=true)
-      private final String buildId;
+    private String buildId;
 
     public String buildId() {
         return this.buildId;
@@ -28,7 +28,7 @@ public final class GetBuildLogLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -39,64 +39,59 @@ public final class GetBuildLogLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetBuildLogLinkArgs(
-        String buildId,
-        String registryName,
-        String resourceGroupName) {
-        this.buildId = Objects.requireNonNull(buildId, "expected parameter 'buildId' to be non-null");
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetBuildLogLinkArgs() {}
 
-    private GetBuildLogLinkArgs() {
-        this.buildId = null;
-        this.registryName = null;
-        this.resourceGroupName = null;
+    private GetBuildLogLinkArgs(GetBuildLogLinkArgs $) {
+        this.buildId = $.buildId;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBuildLogLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String buildId;
-        private String registryName;
-        private String resourceGroupName;
+        private GetBuildLogLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBuildLogLinkArgs();
         }
 
         public Builder(GetBuildLogLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildId = defaults.buildId;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetBuildLogLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildId(String buildId) {
-            this.buildId = Objects.requireNonNull(buildId);
+            $.buildId = buildId;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetBuildLogLinkArgs build() {
-            return new GetBuildLogLinkArgs(buildId, registryName, resourceGroupName);
+        }
+
+        public GetBuildLogLinkArgs build() {
+            $.buildId = Objects.requireNonNull($.buildId, "expected parameter 'buildId' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

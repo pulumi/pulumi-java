@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpnGatewayRoutePropagationState extends com.pulumi.resources.
      * 
      */
     @Import(name="routeTableId")
-      private final @Nullable Output<String> routeTableId;
+    private @Nullable Output<String> routeTableId;
 
-    public Output<String> routeTableId() {
-        return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
+    public Optional<Output<String>> routeTableId() {
+        return Optional.ofNullable(this.routeTableId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class VpnGatewayRoutePropagationState extends com.pulumi.resources.
      * 
      */
     @Import(name="vpnGatewayId")
-      private final @Nullable Output<String> vpnGatewayId;
+    private @Nullable Output<String> vpnGatewayId;
 
-    public Output<String> vpnGatewayId() {
-        return this.vpnGatewayId == null ? Codegen.empty() : this.vpnGatewayId;
+    public Optional<Output<String>> vpnGatewayId() {
+        return Optional.ofNullable(this.vpnGatewayId);
     }
 
-    public VpnGatewayRoutePropagationState(
-        @Nullable Output<String> routeTableId,
-        @Nullable Output<String> vpnGatewayId) {
-        this.routeTableId = routeTableId;
-        this.vpnGatewayId = vpnGatewayId;
-    }
+    private VpnGatewayRoutePropagationState() {}
 
-    private VpnGatewayRoutePropagationState() {
-        this.routeTableId = Codegen.empty();
-        this.vpnGatewayId = Codegen.empty();
+    private VpnGatewayRoutePropagationState(VpnGatewayRoutePropagationState $) {
+        this.routeTableId = $.routeTableId;
+        this.vpnGatewayId = $.vpnGatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnGatewayRoutePropagationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> routeTableId;
-        private @Nullable Output<String> vpnGatewayId;
+        private VpnGatewayRoutePropagationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnGatewayRoutePropagationState();
         }
 
         public Builder(VpnGatewayRoutePropagationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.vpnGatewayId = defaults.vpnGatewayId;
+            $ = new VpnGatewayRoutePropagationState(Objects.requireNonNull(defaults));
         }
 
         public Builder routeTableId(@Nullable Output<String> routeTableId) {
-            this.routeTableId = routeTableId;
+            $.routeTableId = routeTableId;
             return this;
         }
-        public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = Codegen.ofNullable(routeTableId);
-            return this;
+
+        public Builder routeTableId(String routeTableId) {
+            return routeTableId(Output.of(routeTableId));
         }
+
         public Builder vpnGatewayId(@Nullable Output<String> vpnGatewayId) {
-            this.vpnGatewayId = vpnGatewayId;
+            $.vpnGatewayId = vpnGatewayId;
             return this;
         }
-        public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
-            this.vpnGatewayId = Codegen.ofNullable(vpnGatewayId);
-            return this;
-        }        public VpnGatewayRoutePropagationState build() {
-            return new VpnGatewayRoutePropagationState(routeTableId, vpnGatewayId);
+
+        public Builder vpnGatewayId(String vpnGatewayId) {
+            return vpnGatewayId(Output.of(vpnGatewayId));
+        }
+
+        public VpnGatewayRoutePropagationState build() {
+            return $;
         }
     }
+
 }

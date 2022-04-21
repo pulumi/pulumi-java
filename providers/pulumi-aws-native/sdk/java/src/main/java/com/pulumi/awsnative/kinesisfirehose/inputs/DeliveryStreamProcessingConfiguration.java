@@ -17,65 +17,61 @@ public final class DeliveryStreamProcessingConfiguration extends com.pulumi.reso
     public static final DeliveryStreamProcessingConfiguration Empty = new DeliveryStreamProcessingConfiguration();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="processors")
-      private final @Nullable List<DeliveryStreamProcessor> processors;
+    private @Nullable List<DeliveryStreamProcessor> processors;
 
-    public List<DeliveryStreamProcessor> processors() {
-        return this.processors == null ? List.of() : this.processors;
+    public Optional<List<DeliveryStreamProcessor>> processors() {
+        return Optional.ofNullable(this.processors);
     }
 
-    public DeliveryStreamProcessingConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<DeliveryStreamProcessor> processors) {
-        this.enabled = enabled;
-        this.processors = processors;
-    }
+    private DeliveryStreamProcessingConfiguration() {}
 
-    private DeliveryStreamProcessingConfiguration() {
-        this.enabled = null;
-        this.processors = List.of();
+    private DeliveryStreamProcessingConfiguration(DeliveryStreamProcessingConfiguration $) {
+        this.enabled = $.enabled;
+        this.processors = $.processors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamProcessingConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable List<DeliveryStreamProcessor> processors;
+        private DeliveryStreamProcessingConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamProcessingConfiguration();
         }
 
         public Builder(DeliveryStreamProcessingConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.processors = defaults.processors;
+            $ = new DeliveryStreamProcessingConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder processors(@Nullable List<DeliveryStreamProcessor> processors) {
-            this.processors = processors;
+            $.processors = processors;
             return this;
         }
+
         public Builder processors(DeliveryStreamProcessor... processors) {
             return processors(List.of(processors));
-        }        public DeliveryStreamProcessingConfiguration build() {
-            return new DeliveryStreamProcessingConfiguration(enabled, processors);
+        }
+
+        public DeliveryStreamProcessingConfiguration build() {
+            return $;
         }
     }
+
 }

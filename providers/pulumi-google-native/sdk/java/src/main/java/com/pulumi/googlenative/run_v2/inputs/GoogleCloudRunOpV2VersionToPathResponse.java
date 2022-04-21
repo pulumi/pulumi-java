@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.re
      * 
      */
     @Import(name="mode", required=true)
-      private final Integer mode;
+    private Integer mode;
 
     public Integer mode() {
         return this.mode;
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.re
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -44,64 +44,59 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends com.pulumi.re
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public GoogleCloudRunOpV2VersionToPathResponse(
-        Integer mode,
-        String path,
-        String version) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GoogleCloudRunOpV2VersionToPathResponse() {}
 
-    private GoogleCloudRunOpV2VersionToPathResponse() {
-        this.mode = null;
-        this.path = null;
-        this.version = null;
+    private GoogleCloudRunOpV2VersionToPathResponse(GoogleCloudRunOpV2VersionToPathResponse $) {
+        this.mode = $.mode;
+        this.path = $.path;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2VersionToPathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer mode;
-        private String path;
-        private String version;
+        private GoogleCloudRunOpV2VersionToPathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2VersionToPathResponse();
         }
 
         public Builder(GoogleCloudRunOpV2VersionToPathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.path = defaults.path;
-    	      this.version = defaults.version;
+            $ = new GoogleCloudRunOpV2VersionToPathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(Integer mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public GoogleCloudRunOpV2VersionToPathResponse build() {
-            return new GoogleCloudRunOpV2VersionToPathResponse(mode, path, version);
+        }
+
+        public GoogleCloudRunOpV2VersionToPathResponse build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

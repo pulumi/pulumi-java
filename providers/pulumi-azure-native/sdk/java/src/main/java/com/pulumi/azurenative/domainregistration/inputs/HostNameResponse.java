@@ -24,10 +24,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="azureResourceName")
-      private final @Nullable String azureResourceName;
+    private @Nullable String azureResourceName;
 
     public Optional<String> azureResourceName() {
-        return this.azureResourceName == null ? Optional.empty() : Optional.ofNullable(this.azureResourceName);
+        return Optional.ofNullable(this.azureResourceName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="azureResourceType")
-      private final @Nullable String azureResourceType;
+    private @Nullable String azureResourceType;
 
     public Optional<String> azureResourceType() {
-        return this.azureResourceType == null ? Optional.empty() : Optional.ofNullable(this.azureResourceType);
+        return Optional.ofNullable(this.azureResourceType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="customHostNameDnsRecordType")
-      private final @Nullable String customHostNameDnsRecordType;
+    private @Nullable String customHostNameDnsRecordType;
 
     public Optional<String> customHostNameDnsRecordType() {
-        return this.customHostNameDnsRecordType == null ? Optional.empty() : Optional.ofNullable(this.customHostNameDnsRecordType);
+        return Optional.ofNullable(this.customHostNameDnsRecordType);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostNameType")
-      private final @Nullable String hostNameType;
+    private @Nullable String hostNameType;
 
     public Optional<String> hostNameType() {
-        return this.hostNameType == null ? Optional.empty() : Optional.ofNullable(this.hostNameType);
+        return Optional.ofNullable(this.hostNameType);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,94 +79,78 @@ public final class HostNameResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="siteNames")
-      private final @Nullable List<String> siteNames;
+    private @Nullable List<String> siteNames;
 
-    public List<String> siteNames() {
-        return this.siteNames == null ? List.of() : this.siteNames;
+    public Optional<List<String>> siteNames() {
+        return Optional.ofNullable(this.siteNames);
     }
 
-    public HostNameResponse(
-        @Nullable String azureResourceName,
-        @Nullable String azureResourceType,
-        @Nullable String customHostNameDnsRecordType,
-        @Nullable String hostNameType,
-        @Nullable String name,
-        @Nullable List<String> siteNames) {
-        this.azureResourceName = azureResourceName;
-        this.azureResourceType = azureResourceType;
-        this.customHostNameDnsRecordType = customHostNameDnsRecordType;
-        this.hostNameType = hostNameType;
-        this.name = name;
-        this.siteNames = siteNames;
-    }
+    private HostNameResponse() {}
 
-    private HostNameResponse() {
-        this.azureResourceName = null;
-        this.azureResourceType = null;
-        this.customHostNameDnsRecordType = null;
-        this.hostNameType = null;
-        this.name = null;
-        this.siteNames = List.of();
+    private HostNameResponse(HostNameResponse $) {
+        this.azureResourceName = $.azureResourceName;
+        this.azureResourceType = $.azureResourceType;
+        this.customHostNameDnsRecordType = $.customHostNameDnsRecordType;
+        this.hostNameType = $.hostNameType;
+        this.name = $.name;
+        this.siteNames = $.siteNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostNameResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String azureResourceName;
-        private @Nullable String azureResourceType;
-        private @Nullable String customHostNameDnsRecordType;
-        private @Nullable String hostNameType;
-        private @Nullable String name;
-        private @Nullable List<String> siteNames;
+        private HostNameResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostNameResponse();
         }
 
         public Builder(HostNameResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureResourceName = defaults.azureResourceName;
-    	      this.azureResourceType = defaults.azureResourceType;
-    	      this.customHostNameDnsRecordType = defaults.customHostNameDnsRecordType;
-    	      this.hostNameType = defaults.hostNameType;
-    	      this.name = defaults.name;
-    	      this.siteNames = defaults.siteNames;
+            $ = new HostNameResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureResourceName(@Nullable String azureResourceName) {
-            this.azureResourceName = azureResourceName;
+            $.azureResourceName = azureResourceName;
             return this;
         }
+
         public Builder azureResourceType(@Nullable String azureResourceType) {
-            this.azureResourceType = azureResourceType;
+            $.azureResourceType = azureResourceType;
             return this;
         }
+
         public Builder customHostNameDnsRecordType(@Nullable String customHostNameDnsRecordType) {
-            this.customHostNameDnsRecordType = customHostNameDnsRecordType;
+            $.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
+
         public Builder hostNameType(@Nullable String hostNameType) {
-            this.hostNameType = hostNameType;
+            $.hostNameType = hostNameType;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder siteNames(@Nullable List<String> siteNames) {
-            this.siteNames = siteNames;
+            $.siteNames = siteNames;
             return this;
         }
+
         public Builder siteNames(String... siteNames) {
             return siteNames(List.of(siteNames));
-        }        public HostNameResponse build() {
-            return new HostNameResponse(azureResourceName, azureResourceType, customHostNameDnsRecordType, hostNameType, name, siteNames);
+        }
+
+        public HostNameResponse build() {
+            return $;
         }
     }
+
 }

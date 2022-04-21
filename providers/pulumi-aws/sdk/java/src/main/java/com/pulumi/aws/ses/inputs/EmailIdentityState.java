@@ -5,9 +5,9 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EmailIdentityState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class EmailIdentityState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
-    public EmailIdentityState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> email) {
-        this.arn = arn;
-        this.email = email;
-    }
+    private EmailIdentityState() {}
 
-    private EmailIdentityState() {
-        this.arn = Codegen.empty();
-        this.email = Codegen.empty();
+    private EmailIdentityState(EmailIdentityState $) {
+        this.arn = $.arn;
+        this.email = $.email;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailIdentityState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> email;
+        private EmailIdentityState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailIdentityState();
         }
 
         public Builder(EmailIdentityState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.email = defaults.email;
+            $ = new EmailIdentityState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
-        }        public EmailIdentityState build() {
-            return new EmailIdentityState(arn, email);
+
+        public Builder email(String email) {
+            return email(Output.of(email));
+        }
+
+        public EmailIdentityState build() {
+            return $;
         }
     }
+
 }

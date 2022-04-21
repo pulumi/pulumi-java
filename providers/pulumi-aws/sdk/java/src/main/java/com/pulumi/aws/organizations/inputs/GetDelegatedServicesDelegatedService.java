@@ -17,7 +17,7 @@ public final class GetDelegatedServicesDelegatedService extends com.pulumi.resou
      * 
      */
     @Import(name="delegationEnabledDate", required=true)
-      private final String delegationEnabledDate;
+    private String delegationEnabledDate;
 
     public String delegationEnabledDate() {
         return this.delegationEnabledDate;
@@ -28,55 +28,52 @@ public final class GetDelegatedServicesDelegatedService extends com.pulumi.resou
      * 
      */
     @Import(name="servicePrincipal", required=true)
-      private final String servicePrincipal;
+    private String servicePrincipal;
 
     public String servicePrincipal() {
         return this.servicePrincipal;
     }
 
-    public GetDelegatedServicesDelegatedService(
-        String delegationEnabledDate,
-        String servicePrincipal) {
-        this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate, "expected parameter 'delegationEnabledDate' to be non-null");
-        this.servicePrincipal = Objects.requireNonNull(servicePrincipal, "expected parameter 'servicePrincipal' to be non-null");
-    }
+    private GetDelegatedServicesDelegatedService() {}
 
-    private GetDelegatedServicesDelegatedService() {
-        this.delegationEnabledDate = null;
-        this.servicePrincipal = null;
+    private GetDelegatedServicesDelegatedService(GetDelegatedServicesDelegatedService $) {
+        this.delegationEnabledDate = $.delegationEnabledDate;
+        this.servicePrincipal = $.servicePrincipal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDelegatedServicesDelegatedService defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String delegationEnabledDate;
-        private String servicePrincipal;
+        private GetDelegatedServicesDelegatedService $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDelegatedServicesDelegatedService();
         }
 
         public Builder(GetDelegatedServicesDelegatedService defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegationEnabledDate = defaults.delegationEnabledDate;
-    	      this.servicePrincipal = defaults.servicePrincipal;
+            $ = new GetDelegatedServicesDelegatedService(Objects.requireNonNull(defaults));
         }
 
         public Builder delegationEnabledDate(String delegationEnabledDate) {
-            this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate);
+            $.delegationEnabledDate = delegationEnabledDate;
             return this;
         }
+
         public Builder servicePrincipal(String servicePrincipal) {
-            this.servicePrincipal = Objects.requireNonNull(servicePrincipal);
+            $.servicePrincipal = servicePrincipal;
             return this;
-        }        public GetDelegatedServicesDelegatedService build() {
-            return new GetDelegatedServicesDelegatedService(delegationEnabledDate, servicePrincipal);
+        }
+
+        public GetDelegatedServicesDelegatedService build() {
+            $.delegationEnabledDate = Objects.requireNonNull($.delegationEnabledDate, "expected parameter 'delegationEnabledDate' to be non-null");
+            $.servicePrincipal = Objects.requireNonNull($.servicePrincipal, "expected parameter 'servicePrincipal' to be non-null");
+            return $;
         }
     }
+
 }

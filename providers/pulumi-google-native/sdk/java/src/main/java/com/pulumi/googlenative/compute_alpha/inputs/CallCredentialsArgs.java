@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.CallCredentialsCallCredentialType;
 import com.pulumi.googlenative.compute_alpha.inputs.MetadataCredentialsFromPluginArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CallCredentialsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="callCredentialType")
-      private final @Nullable Output<CallCredentialsCallCredentialType> callCredentialType;
+    private @Nullable Output<CallCredentialsCallCredentialType> callCredentialType;
 
-    public Output<CallCredentialsCallCredentialType> callCredentialType() {
-        return this.callCredentialType == null ? Codegen.empty() : this.callCredentialType;
+    public Optional<Output<CallCredentialsCallCredentialType>> callCredentialType() {
+        return Optional.ofNullable(this.callCredentialType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CallCredentialsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="fromPlugin")
-      private final @Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin;
+    private @Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin;
 
-    public Output<MetadataCredentialsFromPluginArgs> fromPlugin() {
-        return this.fromPlugin == null ? Codegen.empty() : this.fromPlugin;
+    public Optional<Output<MetadataCredentialsFromPluginArgs>> fromPlugin() {
+        return Optional.ofNullable(this.fromPlugin);
     }
 
-    public CallCredentialsArgs(
-        @Nullable Output<CallCredentialsCallCredentialType> callCredentialType,
-        @Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin) {
-        this.callCredentialType = callCredentialType;
-        this.fromPlugin = fromPlugin;
-    }
+    private CallCredentialsArgs() {}
 
-    private CallCredentialsArgs() {
-        this.callCredentialType = Codegen.empty();
-        this.fromPlugin = Codegen.empty();
+    private CallCredentialsArgs(CallCredentialsArgs $) {
+        this.callCredentialType = $.callCredentialType;
+        this.fromPlugin = $.fromPlugin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CallCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CallCredentialsCallCredentialType> callCredentialType;
-        private @Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin;
+        private CallCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CallCredentialsArgs();
         }
 
         public Builder(CallCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callCredentialType = defaults.callCredentialType;
-    	      this.fromPlugin = defaults.fromPlugin;
+            $ = new CallCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder callCredentialType(@Nullable Output<CallCredentialsCallCredentialType> callCredentialType) {
-            this.callCredentialType = callCredentialType;
+            $.callCredentialType = callCredentialType;
             return this;
         }
-        public Builder callCredentialType(@Nullable CallCredentialsCallCredentialType callCredentialType) {
-            this.callCredentialType = Codegen.ofNullable(callCredentialType);
-            return this;
+
+        public Builder callCredentialType(CallCredentialsCallCredentialType callCredentialType) {
+            return callCredentialType(Output.of(callCredentialType));
         }
+
         public Builder fromPlugin(@Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin) {
-            this.fromPlugin = fromPlugin;
+            $.fromPlugin = fromPlugin;
             return this;
         }
-        public Builder fromPlugin(@Nullable MetadataCredentialsFromPluginArgs fromPlugin) {
-            this.fromPlugin = Codegen.ofNullable(fromPlugin);
-            return this;
-        }        public CallCredentialsArgs build() {
-            return new CallCredentialsArgs(callCredentialType, fromPlugin);
+
+        public Builder fromPlugin(MetadataCredentialsFromPluginArgs fromPlugin) {
+            return fromPlugin(Output.of(fromPlugin));
+        }
+
+        public CallCredentialsArgs build() {
+            return $;
         }
     }
+
 }

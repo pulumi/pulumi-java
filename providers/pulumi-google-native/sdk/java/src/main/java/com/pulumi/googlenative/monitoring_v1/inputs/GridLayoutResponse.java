@@ -23,7 +23,7 @@ public final class GridLayoutResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="columns", required=true)
-      private final String columns;
+    private String columns;
 
     public String columns() {
         return this.columns;
@@ -34,58 +34,56 @@ public final class GridLayoutResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="widgets", required=true)
-      private final List<WidgetResponse> widgets;
+    private List<WidgetResponse> widgets;
 
     public List<WidgetResponse> widgets() {
         return this.widgets;
     }
 
-    public GridLayoutResponse(
-        String columns,
-        List<WidgetResponse> widgets) {
-        this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
-        this.widgets = Objects.requireNonNull(widgets, "expected parameter 'widgets' to be non-null");
-    }
+    private GridLayoutResponse() {}
 
-    private GridLayoutResponse() {
-        this.columns = null;
-        this.widgets = List.of();
+    private GridLayoutResponse(GridLayoutResponse $) {
+        this.columns = $.columns;
+        this.widgets = $.widgets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GridLayoutResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String columns;
-        private List<WidgetResponse> widgets;
+        private GridLayoutResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GridLayoutResponse();
         }
 
         public Builder(GridLayoutResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.widgets = defaults.widgets;
+            $ = new GridLayoutResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(String columns) {
-            this.columns = Objects.requireNonNull(columns);
+            $.columns = columns;
             return this;
         }
+
         public Builder widgets(List<WidgetResponse> widgets) {
-            this.widgets = Objects.requireNonNull(widgets);
+            $.widgets = widgets;
             return this;
         }
+
         public Builder widgets(WidgetResponse... widgets) {
             return widgets(List.of(widgets));
-        }        public GridLayoutResponse build() {
-            return new GridLayoutResponse(columns, widgets);
+        }
+
+        public GridLayoutResponse build() {
+            $.columns = Objects.requireNonNull($.columns, "expected parameter 'columns' to be non-null");
+            $.widgets = Objects.requireNonNull($.widgets, "expected parameter 'widgets' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fabricName", required=true)
-      private final String fabricName;
+    private String fabricName;
 
     public String fabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
@@ -50,73 +50,66 @@ public final class GetReplicationvCenterArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vCenterName", required=true)
-      private final String vCenterName;
+    private String vCenterName;
 
     public String vCenterName() {
         return this.vCenterName;
     }
 
-    public GetReplicationvCenterArgs(
-        String fabricName,
-        String resourceGroupName,
-        String resourceName,
-        String vCenterName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.vCenterName = Objects.requireNonNull(vCenterName, "expected parameter 'vCenterName' to be non-null");
-    }
+    private GetReplicationvCenterArgs() {}
 
-    private GetReplicationvCenterArgs() {
-        this.fabricName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
-        this.vCenterName = null;
+    private GetReplicationvCenterArgs(GetReplicationvCenterArgs $) {
+        this.fabricName = $.fabricName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.vCenterName = $.vCenterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationvCenterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fabricName;
-        private String resourceGroupName;
-        private String resourceName;
-        private String vCenterName;
+        private GetReplicationvCenterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationvCenterArgs();
         }
 
         public Builder(GetReplicationvCenterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.vCenterName = defaults.vCenterName;
+            $ = new GetReplicationvCenterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder vCenterName(String vCenterName) {
-            this.vCenterName = Objects.requireNonNull(vCenterName);
+            $.vCenterName = vCenterName;
             return this;
-        }        public GetReplicationvCenterArgs build() {
-            return new GetReplicationvCenterArgs(fabricName, resourceGroupName, resourceName, vCenterName);
+        }
+
+        public GetReplicationvCenterArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.vCenterName = Objects.requireNonNull($.vCenterName, "expected parameter 'vCenterName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
      * 
      */
     @Import(name="quickReplies")
-      private final @Nullable Output<List<String>> quickReplies;
+    private @Nullable Output<List<String>> quickReplies;
 
-    public Output<List<String>> quickReplies() {
-        return this.quickReplies == null ? Codegen.empty() : this.quickReplies;
+    public Optional<Output<List<String>>> quickReplies() {
+        return Optional.ofNullable(this.quickReplies);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs(
-        @Nullable Output<List<String>> quickReplies,
-        @Nullable Output<String> title) {
-        this.quickReplies = quickReplies;
-        this.title = title;
-    }
+    private GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs() {
-        this.quickReplies = Codegen.empty();
-        this.title = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs(GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs $) {
+        this.quickReplies = $.quickReplies;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> quickReplies;
-        private @Nullable Output<String> title;
+        private GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quickReplies = defaults.quickReplies;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quickReplies(@Nullable Output<List<String>> quickReplies) {
-            this.quickReplies = quickReplies;
+            $.quickReplies = quickReplies;
             return this;
         }
-        public Builder quickReplies(@Nullable List<String> quickReplies) {
-            this.quickReplies = Codegen.ofNullable(quickReplies);
-            return this;
+
+        public Builder quickReplies(List<String> quickReplies) {
+            return quickReplies(Output.of(quickReplies));
         }
+
         public Builder quickReplies(String... quickReplies) {
             return quickReplies(List.of(quickReplies));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs(quickReplies, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs build() {
+            return $;
         }
     }
+
 }

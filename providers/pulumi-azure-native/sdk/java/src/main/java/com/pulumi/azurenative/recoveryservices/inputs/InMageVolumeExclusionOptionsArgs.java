@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InMageVolumeExclusionOptionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="onlyExcludeIfSingleVolume")
-      private final @Nullable Output<String> onlyExcludeIfSingleVolume;
+    private @Nullable Output<String> onlyExcludeIfSingleVolume;
 
-    public Output<String> onlyExcludeIfSingleVolume() {
-        return this.onlyExcludeIfSingleVolume == null ? Codegen.empty() : this.onlyExcludeIfSingleVolume;
+    public Optional<Output<String>> onlyExcludeIfSingleVolume() {
+        return Optional.ofNullable(this.onlyExcludeIfSingleVolume);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class InMageVolumeExclusionOptionsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="volumeLabel")
-      private final @Nullable Output<String> volumeLabel;
+    private @Nullable Output<String> volumeLabel;
 
-    public Output<String> volumeLabel() {
-        return this.volumeLabel == null ? Codegen.empty() : this.volumeLabel;
+    public Optional<Output<String>> volumeLabel() {
+        return Optional.ofNullable(this.volumeLabel);
     }
 
-    public InMageVolumeExclusionOptionsArgs(
-        @Nullable Output<String> onlyExcludeIfSingleVolume,
-        @Nullable Output<String> volumeLabel) {
-        this.onlyExcludeIfSingleVolume = onlyExcludeIfSingleVolume;
-        this.volumeLabel = volumeLabel;
-    }
+    private InMageVolumeExclusionOptionsArgs() {}
 
-    private InMageVolumeExclusionOptionsArgs() {
-        this.onlyExcludeIfSingleVolume = Codegen.empty();
-        this.volumeLabel = Codegen.empty();
+    private InMageVolumeExclusionOptionsArgs(InMageVolumeExclusionOptionsArgs $) {
+        this.onlyExcludeIfSingleVolume = $.onlyExcludeIfSingleVolume;
+        this.volumeLabel = $.volumeLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageVolumeExclusionOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> onlyExcludeIfSingleVolume;
-        private @Nullable Output<String> volumeLabel;
+        private InMageVolumeExclusionOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageVolumeExclusionOptionsArgs();
         }
 
         public Builder(InMageVolumeExclusionOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onlyExcludeIfSingleVolume = defaults.onlyExcludeIfSingleVolume;
-    	      this.volumeLabel = defaults.volumeLabel;
+            $ = new InMageVolumeExclusionOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onlyExcludeIfSingleVolume(@Nullable Output<String> onlyExcludeIfSingleVolume) {
-            this.onlyExcludeIfSingleVolume = onlyExcludeIfSingleVolume;
+            $.onlyExcludeIfSingleVolume = onlyExcludeIfSingleVolume;
             return this;
         }
-        public Builder onlyExcludeIfSingleVolume(@Nullable String onlyExcludeIfSingleVolume) {
-            this.onlyExcludeIfSingleVolume = Codegen.ofNullable(onlyExcludeIfSingleVolume);
-            return this;
+
+        public Builder onlyExcludeIfSingleVolume(String onlyExcludeIfSingleVolume) {
+            return onlyExcludeIfSingleVolume(Output.of(onlyExcludeIfSingleVolume));
         }
+
         public Builder volumeLabel(@Nullable Output<String> volumeLabel) {
-            this.volumeLabel = volumeLabel;
+            $.volumeLabel = volumeLabel;
             return this;
         }
-        public Builder volumeLabel(@Nullable String volumeLabel) {
-            this.volumeLabel = Codegen.ofNullable(volumeLabel);
-            return this;
-        }        public InMageVolumeExclusionOptionsArgs build() {
-            return new InMageVolumeExclusionOptionsArgs(onlyExcludeIfSingleVolume, volumeLabel);
+
+        public Builder volumeLabel(String volumeLabel) {
+            return volumeLabel(Output.of(volumeLabel));
+        }
+
+        public InMageVolumeExclusionOptionsArgs build() {
+            return $;
         }
     }
+
 }

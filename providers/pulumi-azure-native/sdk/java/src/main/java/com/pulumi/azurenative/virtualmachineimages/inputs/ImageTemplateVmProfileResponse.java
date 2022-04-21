@@ -26,10 +26,10 @@ public final class ImageTemplateVmProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="osDiskSizeGB")
-      private final @Nullable Integer osDiskSizeGB;
+    private @Nullable Integer osDiskSizeGB;
 
     public Optional<Integer> osDiskSizeGB() {
-        return this.osDiskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.osDiskSizeGB);
+        return Optional.ofNullable(this.osDiskSizeGB);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ImageTemplateVmProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable String vmSize;
+    private @Nullable String vmSize;
 
     public Optional<String> vmSize() {
-        return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
+        return Optional.ofNullable(this.vmSize);
     }
 
     /**
@@ -48,64 +48,58 @@ public final class ImageTemplateVmProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vnetConfig")
-      private final @Nullable VirtualNetworkConfigResponse vnetConfig;
+    private @Nullable VirtualNetworkConfigResponse vnetConfig;
 
     public Optional<VirtualNetworkConfigResponse> vnetConfig() {
-        return this.vnetConfig == null ? Optional.empty() : Optional.ofNullable(this.vnetConfig);
+        return Optional.ofNullable(this.vnetConfig);
     }
 
-    public ImageTemplateVmProfileResponse(
-        @Nullable Integer osDiskSizeGB,
-        @Nullable String vmSize,
-        @Nullable VirtualNetworkConfigResponse vnetConfig) {
-        this.osDiskSizeGB = Codegen.integerProp("osDiskSizeGB").arg(osDiskSizeGB).def(0).getNullable();
-        this.vmSize = Codegen.stringProp("vmSize").arg(vmSize).def("").getNullable();
-        this.vnetConfig = vnetConfig;
-    }
+    private ImageTemplateVmProfileResponse() {}
 
-    private ImageTemplateVmProfileResponse() {
-        this.osDiskSizeGB = null;
-        this.vmSize = null;
-        this.vnetConfig = null;
+    private ImageTemplateVmProfileResponse(ImageTemplateVmProfileResponse $) {
+        this.osDiskSizeGB = $.osDiskSizeGB;
+        this.vmSize = $.vmSize;
+        this.vnetConfig = $.vnetConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateVmProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer osDiskSizeGB;
-        private @Nullable String vmSize;
-        private @Nullable VirtualNetworkConfigResponse vnetConfig;
+        private ImageTemplateVmProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateVmProfileResponse();
         }
 
         public Builder(ImageTemplateVmProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osDiskSizeGB = defaults.osDiskSizeGB;
-    	      this.vmSize = defaults.vmSize;
-    	      this.vnetConfig = defaults.vnetConfig;
+            $ = new ImageTemplateVmProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
-            this.osDiskSizeGB = osDiskSizeGB;
+            $.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
+
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
+
         public Builder vnetConfig(@Nullable VirtualNetworkConfigResponse vnetConfig) {
-            this.vnetConfig = vnetConfig;
+            $.vnetConfig = vnetConfig;
             return this;
-        }        public ImageTemplateVmProfileResponse build() {
-            return new ImageTemplateVmProfileResponse(osDiskSizeGB, vmSize, vnetConfig);
+        }
+
+        public ImageTemplateVmProfileResponse build() {
+            $.osDiskSizeGB = Codegen.integerProp("osDiskSizeGB").arg($.osDiskSizeGB).def(0).getNullable();
+            $.vmSize = Codegen.stringProp("vmSize").arg($.vmSize).def("").getNullable();
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.awsnative.sagemaker.inputs.UserProfileCustomImageArgs;
 import com.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpecArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends com.pulumi.re
      * 
      */
     @Import(name="customImages")
-      private final @Nullable Output<List<UserProfileCustomImageArgs>> customImages;
+    private @Nullable Output<List<UserProfileCustomImageArgs>> customImages;
 
-    public Output<List<UserProfileCustomImageArgs>> customImages() {
-        return this.customImages == null ? Codegen.empty() : this.customImages;
+    public Optional<Output<List<UserProfileCustomImageArgs>>> customImages() {
+        return Optional.ofNullable(this.customImages);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class UserProfileKernelGatewayAppSettingsArgs extends com.pulumi.re
      * 
      */
     @Import(name="defaultResourceSpec")
-      private final @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
+    private @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
 
-    public Output<UserProfileResourceSpecArgs> defaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
+    public Optional<Output<UserProfileResourceSpecArgs>> defaultResourceSpec() {
+        return Optional.ofNullable(this.defaultResourceSpec);
     }
 
-    public UserProfileKernelGatewayAppSettingsArgs(
-        @Nullable Output<List<UserProfileCustomImageArgs>> customImages,
-        @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
-        this.customImages = customImages;
-        this.defaultResourceSpec = defaultResourceSpec;
-    }
+    private UserProfileKernelGatewayAppSettingsArgs() {}
 
-    private UserProfileKernelGatewayAppSettingsArgs() {
-        this.customImages = Codegen.empty();
-        this.defaultResourceSpec = Codegen.empty();
+    private UserProfileKernelGatewayAppSettingsArgs(UserProfileKernelGatewayAppSettingsArgs $) {
+        this.customImages = $.customImages;
+        this.defaultResourceSpec = $.defaultResourceSpec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserProfileKernelGatewayAppSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<UserProfileCustomImageArgs>> customImages;
-        private @Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec;
+        private UserProfileKernelGatewayAppSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserProfileKernelGatewayAppSettingsArgs();
         }
 
         public Builder(UserProfileKernelGatewayAppSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customImages = defaults.customImages;
-    	      this.defaultResourceSpec = defaults.defaultResourceSpec;
+            $ = new UserProfileKernelGatewayAppSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customImages(@Nullable Output<List<UserProfileCustomImageArgs>> customImages) {
-            this.customImages = customImages;
+            $.customImages = customImages;
             return this;
         }
-        public Builder customImages(@Nullable List<UserProfileCustomImageArgs> customImages) {
-            this.customImages = Codegen.ofNullable(customImages);
-            return this;
+
+        public Builder customImages(List<UserProfileCustomImageArgs> customImages) {
+            return customImages(Output.of(customImages));
         }
+
         public Builder customImages(UserProfileCustomImageArgs... customImages) {
             return customImages(List.of(customImages));
         }
+
         public Builder defaultResourceSpec(@Nullable Output<UserProfileResourceSpecArgs> defaultResourceSpec) {
-            this.defaultResourceSpec = defaultResourceSpec;
+            $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-        public Builder defaultResourceSpec(@Nullable UserProfileResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
-            return this;
-        }        public UserProfileKernelGatewayAppSettingsArgs build() {
-            return new UserProfileKernelGatewayAppSettingsArgs(customImages, defaultResourceSpec);
+
+        public Builder defaultResourceSpec(UserProfileResourceSpecArgs defaultResourceSpec) {
+            return defaultResourceSpec(Output.of(defaultResourceSpec));
+        }
+
+        public UserProfileKernelGatewayAppSettingsArgs build() {
+            return $;
         }
     }
+
 }

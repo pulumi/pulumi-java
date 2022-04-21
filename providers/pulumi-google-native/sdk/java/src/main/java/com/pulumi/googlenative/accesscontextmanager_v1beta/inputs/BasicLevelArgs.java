@@ -5,11 +5,11 @@ package com.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.accesscontextmanager_v1beta.enums.BasicLevelCombiningFunction;
 import com.pulumi.googlenative.accesscontextmanager_v1beta.inputs.ConditionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BasicLevelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="combiningFunction")
-      private final @Nullable Output<BasicLevelCombiningFunction> combiningFunction;
+    private @Nullable Output<BasicLevelCombiningFunction> combiningFunction;
 
-    public Output<BasicLevelCombiningFunction> combiningFunction() {
-        return this.combiningFunction == null ? Codegen.empty() : this.combiningFunction;
+    public Optional<Output<BasicLevelCombiningFunction>> combiningFunction() {
+        return Optional.ofNullable(this.combiningFunction);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class BasicLevelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions", required=true)
-      private final Output<List<ConditionArgs>> conditions;
+    private Output<List<ConditionArgs>> conditions;
 
     public Output<List<ConditionArgs>> conditions() {
         return this.conditions;
     }
 
-    public BasicLevelArgs(
-        @Nullable Output<BasicLevelCombiningFunction> combiningFunction,
-        Output<List<ConditionArgs>> conditions) {
-        this.combiningFunction = combiningFunction;
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-    }
+    private BasicLevelArgs() {}
 
-    private BasicLevelArgs() {
-        this.combiningFunction = Codegen.empty();
-        this.conditions = Codegen.empty();
+    private BasicLevelArgs(BasicLevelArgs $) {
+        this.combiningFunction = $.combiningFunction;
+        this.conditions = $.conditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BasicLevelCombiningFunction> combiningFunction;
-        private Output<List<ConditionArgs>> conditions;
+        private BasicLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicLevelArgs();
         }
 
         public Builder(BasicLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.combiningFunction = defaults.combiningFunction;
-    	      this.conditions = defaults.conditions;
+            $ = new BasicLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder combiningFunction(@Nullable Output<BasicLevelCombiningFunction> combiningFunction) {
-            this.combiningFunction = combiningFunction;
+            $.combiningFunction = combiningFunction;
             return this;
         }
-        public Builder combiningFunction(@Nullable BasicLevelCombiningFunction combiningFunction) {
-            this.combiningFunction = Codegen.ofNullable(combiningFunction);
-            return this;
+
+        public Builder combiningFunction(BasicLevelCombiningFunction combiningFunction) {
+            return combiningFunction(Output.of(combiningFunction));
         }
+
         public Builder conditions(Output<List<ConditionArgs>> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(List<ConditionArgs> conditions) {
-            this.conditions = Output.of(Objects.requireNonNull(conditions));
-            return this;
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(ConditionArgs... conditions) {
             return conditions(List.of(conditions));
-        }        public BasicLevelArgs build() {
-            return new BasicLevelArgs(combiningFunction, conditions);
+        }
+
+        public BasicLevelArgs build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            return $;
         }
     }
+
 }

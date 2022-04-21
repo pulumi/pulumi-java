@@ -7,9 +7,9 @@ import com.pulumi.azurenative.securityinsights.enums.SupportTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="link")
-      private final @Nullable Output<String> link;
+    private @Nullable Output<String> link;
 
-    public Output<String> link() {
-        return this.link == null ? Codegen.empty() : this.link;
+    public Optional<Output<String>> link() {
+        return Optional.ofNullable(this.link);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,89 +59,79 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tier", required=true)
-      private final Output<Either<String,SupportTier>> tier;
+    private Output<Either<String,SupportTier>> tier;
 
     public Output<Either<String,SupportTier>> tier() {
         return this.tier;
     }
 
-    public MetadataSupportArgs(
-        @Nullable Output<String> email,
-        @Nullable Output<String> link,
-        @Nullable Output<String> name,
-        Output<Either<String,SupportTier>> tier) {
-        this.email = email;
-        this.link = link;
-        this.name = name;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private MetadataSupportArgs() {}
 
-    private MetadataSupportArgs() {
-        this.email = Codegen.empty();
-        this.link = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private MetadataSupportArgs(MetadataSupportArgs $) {
+        this.email = $.email;
+        this.link = $.link;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataSupportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> link;
-        private @Nullable Output<String> name;
-        private Output<Either<String,SupportTier>> tier;
+        private MetadataSupportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataSupportArgs();
         }
 
         public Builder(MetadataSupportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.link = defaults.link;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new MetadataSupportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder link(@Nullable Output<String> link) {
-            this.link = link;
+            $.link = link;
             return this;
         }
-        public Builder link(@Nullable String link) {
-            this.link = Codegen.ofNullable(link);
-            return this;
+
+        public Builder link(String link) {
+            return link(Output.of(link));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(Output<Either<String,SupportTier>> tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder tier(Either<String,SupportTier> tier) {
-            this.tier = Output.of(Objects.requireNonNull(tier));
-            return this;
-        }        public MetadataSupportArgs build() {
-            return new MetadataSupportArgs(email, link, name, tier);
+            return tier(Output.of(tier));
+        }
+
+        public MetadataSupportArgs build() {
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

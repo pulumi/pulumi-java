@@ -26,10 +26,10 @@ public final class GalleryImageVersionStorageProfileResponse extends com.pulumi.
      * 
      */
     @Import(name="dataDiskImages")
-      private final @Nullable List<GalleryDataDiskImageResponse> dataDiskImages;
+    private @Nullable List<GalleryDataDiskImageResponse> dataDiskImages;
 
-    public List<GalleryDataDiskImageResponse> dataDiskImages() {
-        return this.dataDiskImages == null ? List.of() : this.dataDiskImages;
+    public Optional<List<GalleryDataDiskImageResponse>> dataDiskImages() {
+        return Optional.ofNullable(this.dataDiskImages);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GalleryImageVersionStorageProfileResponse extends com.pulumi.
      * 
      */
     @Import(name="osDiskImage")
-      private final @Nullable GalleryOSDiskImageResponse osDiskImage;
+    private @Nullable GalleryOSDiskImageResponse osDiskImage;
 
     public Optional<GalleryOSDiskImageResponse> osDiskImage() {
-        return this.osDiskImage == null ? Optional.empty() : Optional.ofNullable(this.osDiskImage);
+        return Optional.ofNullable(this.osDiskImage);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class GalleryImageVersionStorageProfileResponse extends com.pulumi.
      * 
      */
     @Import(name="source")
-      private final @Nullable GalleryArtifactVersionSourceResponse source;
+    private @Nullable GalleryArtifactVersionSourceResponse source;
 
     public Optional<GalleryArtifactVersionSourceResponse> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
-    public GalleryImageVersionStorageProfileResponse(
-        @Nullable List<GalleryDataDiskImageResponse> dataDiskImages,
-        @Nullable GalleryOSDiskImageResponse osDiskImage,
-        @Nullable GalleryArtifactVersionSourceResponse source) {
-        this.dataDiskImages = dataDiskImages;
-        this.osDiskImage = osDiskImage;
-        this.source = source;
-    }
+    private GalleryImageVersionStorageProfileResponse() {}
 
-    private GalleryImageVersionStorageProfileResponse() {
-        this.dataDiskImages = List.of();
-        this.osDiskImage = null;
-        this.source = null;
+    private GalleryImageVersionStorageProfileResponse(GalleryImageVersionStorageProfileResponse $) {
+        this.dataDiskImages = $.dataDiskImages;
+        this.osDiskImage = $.osDiskImage;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryImageVersionStorageProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GalleryDataDiskImageResponse> dataDiskImages;
-        private @Nullable GalleryOSDiskImageResponse osDiskImage;
-        private @Nullable GalleryArtifactVersionSourceResponse source;
+        private GalleryImageVersionStorageProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryImageVersionStorageProfileResponse();
         }
 
         public Builder(GalleryImageVersionStorageProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDiskImages = defaults.dataDiskImages;
-    	      this.osDiskImage = defaults.osDiskImage;
-    	      this.source = defaults.source;
+            $ = new GalleryImageVersionStorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDiskImages(@Nullable List<GalleryDataDiskImageResponse> dataDiskImages) {
-            this.dataDiskImages = dataDiskImages;
+            $.dataDiskImages = dataDiskImages;
             return this;
         }
+
         public Builder dataDiskImages(GalleryDataDiskImageResponse... dataDiskImages) {
             return dataDiskImages(List.of(dataDiskImages));
         }
+
         public Builder osDiskImage(@Nullable GalleryOSDiskImageResponse osDiskImage) {
-            this.osDiskImage = osDiskImage;
+            $.osDiskImage = osDiskImage;
             return this;
         }
+
         public Builder source(@Nullable GalleryArtifactVersionSourceResponse source) {
-            this.source = source;
+            $.source = source;
             return this;
-        }        public GalleryImageVersionStorageProfileResponse build() {
-            return new GalleryImageVersionStorageProfileResponse(dataDiskImages, osDiskImage, source);
+        }
+
+        public GalleryImageVersionStorageProfileResponse build() {
+            return $;
         }
     }
+
 }

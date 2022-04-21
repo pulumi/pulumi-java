@@ -7,10 +7,10 @@ import com.pulumi.azurenative.recoveryservices.enums.RetentionDurationType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class RetentionDurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -39,63 +39,58 @@ public final class RetentionDurationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="durationType")
-      private final @Nullable Output<Either<String,RetentionDurationType>> durationType;
+    private @Nullable Output<Either<String,RetentionDurationType>> durationType;
 
-    public Output<Either<String,RetentionDurationType>> durationType() {
-        return this.durationType == null ? Codegen.empty() : this.durationType;
+    public Optional<Output<Either<String,RetentionDurationType>>> durationType() {
+        return Optional.ofNullable(this.durationType);
     }
 
-    public RetentionDurationArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<Either<String,RetentionDurationType>> durationType) {
-        this.count = count;
-        this.durationType = durationType;
-    }
+    private RetentionDurationArgs() {}
 
-    private RetentionDurationArgs() {
-        this.count = Codegen.empty();
-        this.durationType = Codegen.empty();
+    private RetentionDurationArgs(RetentionDurationArgs $) {
+        this.count = $.count;
+        this.durationType = $.durationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionDurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<Either<String,RetentionDurationType>> durationType;
+        private RetentionDurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionDurationArgs();
         }
 
         public Builder(RetentionDurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.durationType = defaults.durationType;
+            $ = new RetentionDurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder durationType(@Nullable Output<Either<String,RetentionDurationType>> durationType) {
-            this.durationType = durationType;
+            $.durationType = durationType;
             return this;
         }
-        public Builder durationType(@Nullable Either<String,RetentionDurationType> durationType) {
-            this.durationType = Codegen.ofNullable(durationType);
-            return this;
-        }        public RetentionDurationArgs build() {
-            return new RetentionDurationArgs(count, durationType);
+
+        public Builder durationType(Either<String,RetentionDurationType> durationType) {
+            return durationType(Output.of(durationType));
+        }
+
+        public RetentionDurationArgs build() {
+            return $;
         }
     }
+
 }

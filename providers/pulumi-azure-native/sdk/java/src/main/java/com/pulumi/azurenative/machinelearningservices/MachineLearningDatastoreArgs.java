@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable Output<String> accountKey;
+    private @Nullable Output<String> accountKey;
 
-    public Output<String> accountKey() {
-        return this.accountKey == null ? Codegen.empty() : this.accountKey;
+    public Optional<Output<String>> accountKey() {
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -34,10 +35,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="accountName")
-      private final @Nullable Output<String> accountName;
+    private @Nullable Output<String> accountName;
 
-    public Output<String> accountName() {
-        return this.accountName == null ? Codegen.empty() : this.accountName;
+    public Optional<Output<String>> accountName() {
+        return Optional.ofNullable(this.accountName);
     }
 
     /**
@@ -45,10 +46,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="adlsResourceGroup")
-      private final @Nullable Output<String> adlsResourceGroup;
+    private @Nullable Output<String> adlsResourceGroup;
 
-    public Output<String> adlsResourceGroup() {
-        return this.adlsResourceGroup == null ? Codegen.empty() : this.adlsResourceGroup;
+    public Optional<Output<String>> adlsResourceGroup() {
+        return Optional.ofNullable(this.adlsResourceGroup);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="adlsSubscriptionId")
-      private final @Nullable Output<String> adlsSubscriptionId;
+    private @Nullable Output<String> adlsSubscriptionId;
 
-    public Output<String> adlsSubscriptionId() {
-        return this.adlsSubscriptionId == null ? Codegen.empty() : this.adlsSubscriptionId;
+    public Optional<Output<String>> adlsSubscriptionId() {
+        return Optional.ofNullable(this.adlsSubscriptionId);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="authorityUrl")
-      private final @Nullable Output<String> authorityUrl;
+    private @Nullable Output<String> authorityUrl;
 
-    public Output<String> authorityUrl() {
-        return this.authorityUrl == null ? Codegen.empty() : this.authorityUrl;
+    public Optional<Output<String>> authorityUrl() {
+        return Optional.ofNullable(this.authorityUrl);
     }
 
     /**
@@ -78,10 +79,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Output<String> clientId;
+    private @Nullable Output<String> clientId;
 
-    public Output<String> clientId() {
-        return this.clientId == null ? Codegen.empty() : this.clientId;
+    public Optional<Output<String>> clientId() {
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -89,10 +90,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Output<String> clientSecret;
+    private @Nullable Output<String> clientSecret;
 
-    public Output<String> clientSecret() {
-        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
+    public Optional<Output<String>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -100,10 +101,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="containerName")
-      private final @Nullable Output<String> containerName;
+    private @Nullable Output<String> containerName;
 
-    public Output<String> containerName() {
-        return this.containerName == null ? Codegen.empty() : this.containerName;
+    public Optional<Output<String>> containerName() {
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -111,7 +112,7 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataStoreType", required=true)
-      private final Output<Either<String,DatastoreTypeArm>> dataStoreType;
+    private Output<Either<String,DatastoreTypeArm>> dataStoreType;
 
     public Output<Either<String,DatastoreTypeArm>> dataStoreType() {
         return this.dataStoreType;
@@ -122,10 +123,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -133,10 +134,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="datastoreName")
-      private final @Nullable Output<String> datastoreName;
+    private @Nullable Output<String> datastoreName;
 
-    public Output<String> datastoreName() {
-        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
+    public Optional<Output<String>> datastoreName() {
+        return Optional.ofNullable(this.datastoreName);
     }
 
     /**
@@ -144,10 +145,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -155,10 +156,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -166,10 +167,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="enforceSSL")
-      private final @Nullable Output<Boolean> enforceSSL;
+    private @Nullable Output<Boolean> enforceSSL;
 
-    public Output<Boolean> enforceSSL() {
-        return this.enforceSSL == null ? Codegen.empty() : this.enforceSSL;
+    public Optional<Output<Boolean>> enforceSSL() {
+        return Optional.ofNullable(this.enforceSSL);
     }
 
     /**
@@ -177,10 +178,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="fileSystem")
-      private final @Nullable Output<String> fileSystem;
+    private @Nullable Output<String> fileSystem;
 
-    public Output<String> fileSystem() {
-        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
+    public Optional<Output<String>> fileSystem() {
+        return Optional.ofNullable(this.fileSystem);
     }
 
     /**
@@ -188,10 +189,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="includeSecret")
-      private final @Nullable Output<Boolean> includeSecret;
+    private @Nullable Output<Boolean> includeSecret;
 
-    public Output<Boolean> includeSecret() {
-        return this.includeSecret == null ? Codegen.empty() : this.includeSecret;
+    public Optional<Output<Boolean>> includeSecret() {
+        return Optional.ofNullable(this.includeSecret);
     }
 
     /**
@@ -199,10 +200,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -210,10 +211,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -221,10 +222,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<String> port;
+    private @Nullable Output<String> port;
 
-    public Output<String> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<String>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -232,10 +233,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -243,7 +244,7 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -254,10 +255,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceUrl")
-      private final @Nullable Output<String> resourceUrl;
+    private @Nullable Output<String> resourceUrl;
 
-    public Output<String> resourceUrl() {
-        return this.resourceUrl == null ? Codegen.empty() : this.resourceUrl;
+    public Optional<Output<String>> resourceUrl() {
+        return Optional.ofNullable(this.resourceUrl);
     }
 
     /**
@@ -265,10 +266,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sasToken")
-      private final @Nullable Output<String> sasToken;
+    private @Nullable Output<String> sasToken;
 
-    public Output<String> sasToken() {
-        return this.sasToken == null ? Codegen.empty() : this.sasToken;
+    public Optional<Output<String>> sasToken() {
+        return Optional.ofNullable(this.sasToken);
     }
 
     /**
@@ -276,10 +277,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="serverName")
-      private final @Nullable Output<String> serverName;
+    private @Nullable Output<String> serverName;
 
-    public Output<String> serverName() {
-        return this.serverName == null ? Codegen.empty() : this.serverName;
+    public Optional<Output<String>> serverName() {
+        return Optional.ofNullable(this.serverName);
     }
 
     /**
@@ -287,10 +288,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="shareName")
-      private final @Nullable Output<String> shareName;
+    private @Nullable Output<String> shareName;
 
-    public Output<String> shareName() {
-        return this.shareName == null ? Codegen.empty() : this.shareName;
+    public Optional<Output<String>> shareName() {
+        return Optional.ofNullable(this.shareName);
     }
 
     /**
@@ -298,10 +299,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="skipValidation")
-      private final @Nullable Output<Boolean> skipValidation;
+    private @Nullable Output<Boolean> skipValidation;
 
-    public Output<Boolean> skipValidation() {
-        return this.skipValidation == null ? Codegen.empty() : this.skipValidation;
+    public Optional<Output<Boolean>> skipValidation() {
+        return Optional.ofNullable(this.skipValidation);
     }
 
     /**
@@ -309,10 +310,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="storageAccountResourceGroup")
-      private final @Nullable Output<String> storageAccountResourceGroup;
+    private @Nullable Output<String> storageAccountResourceGroup;
 
-    public Output<String> storageAccountResourceGroup() {
-        return this.storageAccountResourceGroup == null ? Codegen.empty() : this.storageAccountResourceGroup;
+    public Optional<Output<String>> storageAccountResourceGroup() {
+        return Optional.ofNullable(this.storageAccountResourceGroup);
     }
 
     /**
@@ -320,10 +321,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="storageAccountSubscriptionId")
-      private final @Nullable Output<String> storageAccountSubscriptionId;
+    private @Nullable Output<String> storageAccountSubscriptionId;
 
-    public Output<String> storageAccountSubscriptionId() {
-        return this.storageAccountSubscriptionId == null ? Codegen.empty() : this.storageAccountSubscriptionId;
+    public Optional<Output<String>> storageAccountSubscriptionId() {
+        return Optional.ofNullable(this.storageAccountSubscriptionId);
     }
 
     /**
@@ -331,10 +332,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="storeName")
-      private final @Nullable Output<String> storeName;
+    private @Nullable Output<String> storeName;
 
-    public Output<String> storeName() {
-        return this.storeName == null ? Codegen.empty() : this.storeName;
+    public Optional<Output<String>> storeName() {
+        return Optional.ofNullable(this.storeName);
     }
 
     /**
@@ -342,10 +343,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -353,10 +354,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userId")
-      private final @Nullable Output<String> userId;
+    private @Nullable Output<String> userId;
 
-    public Output<String> userId() {
-        return this.userId == null ? Codegen.empty() : this.userId;
+    public Optional<Output<String>> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
     /**
@@ -364,10 +365,10 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
     /**
@@ -375,7 +376,7 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
@@ -386,479 +387,383 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="workspaceSystemAssignedIdentity")
-      private final @Nullable Output<Boolean> workspaceSystemAssignedIdentity;
+    private @Nullable Output<Boolean> workspaceSystemAssignedIdentity;
 
-    public Output<Boolean> workspaceSystemAssignedIdentity() {
-        return this.workspaceSystemAssignedIdentity == null ? Codegen.empty() : this.workspaceSystemAssignedIdentity;
+    public Optional<Output<Boolean>> workspaceSystemAssignedIdentity() {
+        return Optional.ofNullable(this.workspaceSystemAssignedIdentity);
     }
 
-    public MachineLearningDatastoreArgs(
-        @Nullable Output<String> accountKey,
-        @Nullable Output<String> accountName,
-        @Nullable Output<String> adlsResourceGroup,
-        @Nullable Output<String> adlsSubscriptionId,
-        @Nullable Output<String> authorityUrl,
-        @Nullable Output<String> clientId,
-        @Nullable Output<String> clientSecret,
-        @Nullable Output<String> containerName,
-        Output<Either<String,DatastoreTypeArm>> dataStoreType,
-        @Nullable Output<String> databaseName,
-        @Nullable Output<String> datastoreName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<Boolean> enforceSSL,
-        @Nullable Output<String> fileSystem,
-        @Nullable Output<Boolean> includeSecret,
-        @Nullable Output<String> name,
-        @Nullable Output<String> password,
-        @Nullable Output<String> port,
-        @Nullable Output<String> protocol,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceUrl,
-        @Nullable Output<String> sasToken,
-        @Nullable Output<String> serverName,
-        @Nullable Output<String> shareName,
-        @Nullable Output<Boolean> skipValidation,
-        @Nullable Output<String> storageAccountResourceGroup,
-        @Nullable Output<String> storageAccountSubscriptionId,
-        @Nullable Output<String> storeName,
-        @Nullable Output<String> tenantId,
-        @Nullable Output<String> userId,
-        @Nullable Output<String> userName,
-        Output<String> workspaceName,
-        @Nullable Output<Boolean> workspaceSystemAssignedIdentity) {
-        this.accountKey = accountKey;
-        this.accountName = accountName;
-        this.adlsResourceGroup = adlsResourceGroup;
-        this.adlsSubscriptionId = adlsSubscriptionId;
-        this.authorityUrl = authorityUrl;
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.containerName = containerName;
-        this.dataStoreType = Objects.requireNonNull(dataStoreType, "expected parameter 'dataStoreType' to be non-null");
-        this.databaseName = databaseName;
-        this.datastoreName = datastoreName;
-        this.description = description;
-        this.endpoint = endpoint;
-        this.enforceSSL = Codegen.booleanProp("enforceSSL").output().arg(enforceSSL).def(true).getNullable();
-        this.fileSystem = fileSystem;
-        this.includeSecret = Codegen.booleanProp("includeSecret").output().arg(includeSecret).def(true).getNullable();
-        this.name = name;
-        this.password = password;
-        this.port = port;
-        this.protocol = protocol;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceUrl = resourceUrl;
-        this.sasToken = sasToken;
-        this.serverName = serverName;
-        this.shareName = shareName;
-        this.skipValidation = skipValidation;
-        this.storageAccountResourceGroup = storageAccountResourceGroup;
-        this.storageAccountSubscriptionId = storageAccountSubscriptionId;
-        this.storeName = storeName;
-        this.tenantId = tenantId;
-        this.userId = userId;
-        this.userName = userName;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-        this.workspaceSystemAssignedIdentity = workspaceSystemAssignedIdentity;
-    }
+    private MachineLearningDatastoreArgs() {}
 
-    private MachineLearningDatastoreArgs() {
-        this.accountKey = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.adlsResourceGroup = Codegen.empty();
-        this.adlsSubscriptionId = Codegen.empty();
-        this.authorityUrl = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.containerName = Codegen.empty();
-        this.dataStoreType = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.datastoreName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.enforceSSL = Codegen.empty();
-        this.fileSystem = Codegen.empty();
-        this.includeSecret = Codegen.empty();
-        this.name = Codegen.empty();
-        this.password = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceUrl = Codegen.empty();
-        this.sasToken = Codegen.empty();
-        this.serverName = Codegen.empty();
-        this.shareName = Codegen.empty();
-        this.skipValidation = Codegen.empty();
-        this.storageAccountResourceGroup = Codegen.empty();
-        this.storageAccountSubscriptionId = Codegen.empty();
-        this.storeName = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.userId = Codegen.empty();
-        this.userName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
-        this.workspaceSystemAssignedIdentity = Codegen.empty();
+    private MachineLearningDatastoreArgs(MachineLearningDatastoreArgs $) {
+        this.accountKey = $.accountKey;
+        this.accountName = $.accountName;
+        this.adlsResourceGroup = $.adlsResourceGroup;
+        this.adlsSubscriptionId = $.adlsSubscriptionId;
+        this.authorityUrl = $.authorityUrl;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.containerName = $.containerName;
+        this.dataStoreType = $.dataStoreType;
+        this.databaseName = $.databaseName;
+        this.datastoreName = $.datastoreName;
+        this.description = $.description;
+        this.endpoint = $.endpoint;
+        this.enforceSSL = $.enforceSSL;
+        this.fileSystem = $.fileSystem;
+        this.includeSecret = $.includeSecret;
+        this.name = $.name;
+        this.password = $.password;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceUrl = $.resourceUrl;
+        this.sasToken = $.sasToken;
+        this.serverName = $.serverName;
+        this.shareName = $.shareName;
+        this.skipValidation = $.skipValidation;
+        this.storageAccountResourceGroup = $.storageAccountResourceGroup;
+        this.storageAccountSubscriptionId = $.storageAccountSubscriptionId;
+        this.storeName = $.storeName;
+        this.tenantId = $.tenantId;
+        this.userId = $.userId;
+        this.userName = $.userName;
+        this.workspaceName = $.workspaceName;
+        this.workspaceSystemAssignedIdentity = $.workspaceSystemAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineLearningDatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountKey;
-        private @Nullable Output<String> accountName;
-        private @Nullable Output<String> adlsResourceGroup;
-        private @Nullable Output<String> adlsSubscriptionId;
-        private @Nullable Output<String> authorityUrl;
-        private @Nullable Output<String> clientId;
-        private @Nullable Output<String> clientSecret;
-        private @Nullable Output<String> containerName;
-        private Output<Either<String,DatastoreTypeArm>> dataStoreType;
-        private @Nullable Output<String> databaseName;
-        private @Nullable Output<String> datastoreName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<Boolean> enforceSSL;
-        private @Nullable Output<String> fileSystem;
-        private @Nullable Output<Boolean> includeSecret;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> port;
-        private @Nullable Output<String> protocol;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceUrl;
-        private @Nullable Output<String> sasToken;
-        private @Nullable Output<String> serverName;
-        private @Nullable Output<String> shareName;
-        private @Nullable Output<Boolean> skipValidation;
-        private @Nullable Output<String> storageAccountResourceGroup;
-        private @Nullable Output<String> storageAccountSubscriptionId;
-        private @Nullable Output<String> storeName;
-        private @Nullable Output<String> tenantId;
-        private @Nullable Output<String> userId;
-        private @Nullable Output<String> userName;
-        private Output<String> workspaceName;
-        private @Nullable Output<Boolean> workspaceSystemAssignedIdentity;
+        private MachineLearningDatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineLearningDatastoreArgs();
         }
 
         public Builder(MachineLearningDatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.accountName = defaults.accountName;
-    	      this.adlsResourceGroup = defaults.adlsResourceGroup;
-    	      this.adlsSubscriptionId = defaults.adlsSubscriptionId;
-    	      this.authorityUrl = defaults.authorityUrl;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.containerName = defaults.containerName;
-    	      this.dataStoreType = defaults.dataStoreType;
-    	      this.databaseName = defaults.databaseName;
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.description = defaults.description;
-    	      this.endpoint = defaults.endpoint;
-    	      this.enforceSSL = defaults.enforceSSL;
-    	      this.fileSystem = defaults.fileSystem;
-    	      this.includeSecret = defaults.includeSecret;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceUrl = defaults.resourceUrl;
-    	      this.sasToken = defaults.sasToken;
-    	      this.serverName = defaults.serverName;
-    	      this.shareName = defaults.shareName;
-    	      this.skipValidation = defaults.skipValidation;
-    	      this.storageAccountResourceGroup = defaults.storageAccountResourceGroup;
-    	      this.storageAccountSubscriptionId = defaults.storageAccountSubscriptionId;
-    	      this.storeName = defaults.storeName;
-    	      this.tenantId = defaults.tenantId;
-    	      this.userId = defaults.userId;
-    	      this.userName = defaults.userName;
-    	      this.workspaceName = defaults.workspaceName;
-    	      this.workspaceSystemAssignedIdentity = defaults.workspaceSystemAssignedIdentity;
+            $ = new MachineLearningDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable Output<String> accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
-        public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Codegen.ofNullable(accountKey);
-            return this;
+
+        public Builder accountKey(String accountKey) {
+            return accountKey(Output.of(accountKey));
         }
+
         public Builder accountName(@Nullable Output<String> accountName) {
-            this.accountName = accountName;
+            $.accountName = accountName;
             return this;
         }
-        public Builder accountName(@Nullable String accountName) {
-            this.accountName = Codegen.ofNullable(accountName);
-            return this;
+
+        public Builder accountName(String accountName) {
+            return accountName(Output.of(accountName));
         }
+
         public Builder adlsResourceGroup(@Nullable Output<String> adlsResourceGroup) {
-            this.adlsResourceGroup = adlsResourceGroup;
+            $.adlsResourceGroup = adlsResourceGroup;
             return this;
         }
-        public Builder adlsResourceGroup(@Nullable String adlsResourceGroup) {
-            this.adlsResourceGroup = Codegen.ofNullable(adlsResourceGroup);
-            return this;
+
+        public Builder adlsResourceGroup(String adlsResourceGroup) {
+            return adlsResourceGroup(Output.of(adlsResourceGroup));
         }
+
         public Builder adlsSubscriptionId(@Nullable Output<String> adlsSubscriptionId) {
-            this.adlsSubscriptionId = adlsSubscriptionId;
+            $.adlsSubscriptionId = adlsSubscriptionId;
             return this;
         }
-        public Builder adlsSubscriptionId(@Nullable String adlsSubscriptionId) {
-            this.adlsSubscriptionId = Codegen.ofNullable(adlsSubscriptionId);
-            return this;
+
+        public Builder adlsSubscriptionId(String adlsSubscriptionId) {
+            return adlsSubscriptionId(Output.of(adlsSubscriptionId));
         }
+
         public Builder authorityUrl(@Nullable Output<String> authorityUrl) {
-            this.authorityUrl = authorityUrl;
+            $.authorityUrl = authorityUrl;
             return this;
         }
-        public Builder authorityUrl(@Nullable String authorityUrl) {
-            this.authorityUrl = Codegen.ofNullable(authorityUrl);
-            return this;
+
+        public Builder authorityUrl(String authorityUrl) {
+            return authorityUrl(Output.of(authorityUrl));
         }
+
         public Builder clientId(@Nullable Output<String> clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
-        public Builder clientId(@Nullable String clientId) {
-            this.clientId = Codegen.ofNullable(clientId);
-            return this;
+
+        public Builder clientId(String clientId) {
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
-        public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Codegen.ofNullable(clientSecret);
-            return this;
+
+        public Builder clientSecret(String clientSecret) {
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder containerName(@Nullable Output<String> containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
-        public Builder containerName(@Nullable String containerName) {
-            this.containerName = Codegen.ofNullable(containerName);
-            return this;
+
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
         }
+
         public Builder dataStoreType(Output<Either<String,DatastoreTypeArm>> dataStoreType) {
-            this.dataStoreType = Objects.requireNonNull(dataStoreType);
+            $.dataStoreType = dataStoreType;
             return this;
         }
+
         public Builder dataStoreType(Either<String,DatastoreTypeArm> dataStoreType) {
-            this.dataStoreType = Output.of(Objects.requireNonNull(dataStoreType));
-            return this;
+            return dataStoreType(Output.of(dataStoreType));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
-            this.datastoreName = datastoreName;
+            $.datastoreName = datastoreName;
             return this;
         }
-        public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Codegen.ofNullable(datastoreName);
-            return this;
+
+        public Builder datastoreName(String datastoreName) {
+            return datastoreName(Output.of(datastoreName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder enforceSSL(@Nullable Output<Boolean> enforceSSL) {
-            this.enforceSSL = enforceSSL;
+            $.enforceSSL = enforceSSL;
             return this;
         }
-        public Builder enforceSSL(@Nullable Boolean enforceSSL) {
-            this.enforceSSL = Codegen.ofNullable(enforceSSL);
-            return this;
+
+        public Builder enforceSSL(Boolean enforceSSL) {
+            return enforceSSL(Output.of(enforceSSL));
         }
+
         public Builder fileSystem(@Nullable Output<String> fileSystem) {
-            this.fileSystem = fileSystem;
+            $.fileSystem = fileSystem;
             return this;
         }
-        public Builder fileSystem(@Nullable String fileSystem) {
-            this.fileSystem = Codegen.ofNullable(fileSystem);
-            return this;
+
+        public Builder fileSystem(String fileSystem) {
+            return fileSystem(Output.of(fileSystem));
         }
+
         public Builder includeSecret(@Nullable Output<Boolean> includeSecret) {
-            this.includeSecret = includeSecret;
+            $.includeSecret = includeSecret;
             return this;
         }
-        public Builder includeSecret(@Nullable Boolean includeSecret) {
-            this.includeSecret = Codegen.ofNullable(includeSecret);
-            return this;
+
+        public Builder includeSecret(Boolean includeSecret) {
+            return includeSecret(Output.of(includeSecret));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder port(@Nullable Output<String> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable String port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(String port) {
+            return port(Output.of(port));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceUrl(@Nullable Output<String> resourceUrl) {
-            this.resourceUrl = resourceUrl;
+            $.resourceUrl = resourceUrl;
             return this;
         }
-        public Builder resourceUrl(@Nullable String resourceUrl) {
-            this.resourceUrl = Codegen.ofNullable(resourceUrl);
-            return this;
+
+        public Builder resourceUrl(String resourceUrl) {
+            return resourceUrl(Output.of(resourceUrl));
         }
+
         public Builder sasToken(@Nullable Output<String> sasToken) {
-            this.sasToken = sasToken;
+            $.sasToken = sasToken;
             return this;
         }
-        public Builder sasToken(@Nullable String sasToken) {
-            this.sasToken = Codegen.ofNullable(sasToken);
-            return this;
+
+        public Builder sasToken(String sasToken) {
+            return sasToken(Output.of(sasToken));
         }
+
         public Builder serverName(@Nullable Output<String> serverName) {
-            this.serverName = serverName;
+            $.serverName = serverName;
             return this;
         }
-        public Builder serverName(@Nullable String serverName) {
-            this.serverName = Codegen.ofNullable(serverName);
-            return this;
+
+        public Builder serverName(String serverName) {
+            return serverName(Output.of(serverName));
         }
+
         public Builder shareName(@Nullable Output<String> shareName) {
-            this.shareName = shareName;
+            $.shareName = shareName;
             return this;
         }
-        public Builder shareName(@Nullable String shareName) {
-            this.shareName = Codegen.ofNullable(shareName);
-            return this;
+
+        public Builder shareName(String shareName) {
+            return shareName(Output.of(shareName));
         }
+
         public Builder skipValidation(@Nullable Output<Boolean> skipValidation) {
-            this.skipValidation = skipValidation;
+            $.skipValidation = skipValidation;
             return this;
         }
-        public Builder skipValidation(@Nullable Boolean skipValidation) {
-            this.skipValidation = Codegen.ofNullable(skipValidation);
-            return this;
+
+        public Builder skipValidation(Boolean skipValidation) {
+            return skipValidation(Output.of(skipValidation));
         }
+
         public Builder storageAccountResourceGroup(@Nullable Output<String> storageAccountResourceGroup) {
-            this.storageAccountResourceGroup = storageAccountResourceGroup;
+            $.storageAccountResourceGroup = storageAccountResourceGroup;
             return this;
         }
-        public Builder storageAccountResourceGroup(@Nullable String storageAccountResourceGroup) {
-            this.storageAccountResourceGroup = Codegen.ofNullable(storageAccountResourceGroup);
-            return this;
+
+        public Builder storageAccountResourceGroup(String storageAccountResourceGroup) {
+            return storageAccountResourceGroup(Output.of(storageAccountResourceGroup));
         }
+
         public Builder storageAccountSubscriptionId(@Nullable Output<String> storageAccountSubscriptionId) {
-            this.storageAccountSubscriptionId = storageAccountSubscriptionId;
+            $.storageAccountSubscriptionId = storageAccountSubscriptionId;
             return this;
         }
-        public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
-            this.storageAccountSubscriptionId = Codegen.ofNullable(storageAccountSubscriptionId);
-            return this;
+
+        public Builder storageAccountSubscriptionId(String storageAccountSubscriptionId) {
+            return storageAccountSubscriptionId(Output.of(storageAccountSubscriptionId));
         }
+
         public Builder storeName(@Nullable Output<String> storeName) {
-            this.storeName = storeName;
+            $.storeName = storeName;
             return this;
         }
-        public Builder storeName(@Nullable String storeName) {
-            this.storeName = Codegen.ofNullable(storeName);
-            return this;
+
+        public Builder storeName(String storeName) {
+            return storeName(Output.of(storeName));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder userId(@Nullable Output<String> userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
         }
-        public Builder userId(@Nullable String userId) {
-            this.userId = Codegen.ofNullable(userId);
-            return this;
+
+        public Builder userId(String userId) {
+            return userId(Output.of(userId));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
+            return workspaceName(Output.of(workspaceName));
         }
+
         public Builder workspaceSystemAssignedIdentity(@Nullable Output<Boolean> workspaceSystemAssignedIdentity) {
-            this.workspaceSystemAssignedIdentity = workspaceSystemAssignedIdentity;
+            $.workspaceSystemAssignedIdentity = workspaceSystemAssignedIdentity;
             return this;
         }
-        public Builder workspaceSystemAssignedIdentity(@Nullable Boolean workspaceSystemAssignedIdentity) {
-            this.workspaceSystemAssignedIdentity = Codegen.ofNullable(workspaceSystemAssignedIdentity);
-            return this;
-        }        public MachineLearningDatastoreArgs build() {
-            return new MachineLearningDatastoreArgs(accountKey, accountName, adlsResourceGroup, adlsSubscriptionId, authorityUrl, clientId, clientSecret, containerName, dataStoreType, databaseName, datastoreName, description, endpoint, enforceSSL, fileSystem, includeSecret, name, password, port, protocol, resourceGroupName, resourceUrl, sasToken, serverName, shareName, skipValidation, storageAccountResourceGroup, storageAccountSubscriptionId, storeName, tenantId, userId, userName, workspaceName, workspaceSystemAssignedIdentity);
+
+        public Builder workspaceSystemAssignedIdentity(Boolean workspaceSystemAssignedIdentity) {
+            return workspaceSystemAssignedIdentity(Output.of(workspaceSystemAssignedIdentity));
+        }
+
+        public MachineLearningDatastoreArgs build() {
+            $.dataStoreType = Objects.requireNonNull($.dataStoreType, "expected parameter 'dataStoreType' to be non-null");
+            $.enforceSSL = Codegen.booleanProp("enforceSSL").output().arg($.enforceSSL).def(true).getNullable();
+            $.includeSecret = Codegen.booleanProp("includeSecret").output().arg($.includeSecret).def(true).getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

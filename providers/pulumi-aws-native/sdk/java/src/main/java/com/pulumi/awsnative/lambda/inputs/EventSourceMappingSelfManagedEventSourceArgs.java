@@ -6,8 +6,8 @@ package com.pulumi.awsnative.lambda.inputs;
 import com.pulumi.awsnative.lambda.inputs.EventSourceMappingEndpointsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends com.pulu
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable Output<EventSourceMappingEndpointsArgs> endpoints;
+    private @Nullable Output<EventSourceMappingEndpointsArgs> endpoints;
 
-    public Output<EventSourceMappingEndpointsArgs> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<EventSourceMappingEndpointsArgs>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
-    public EventSourceMappingSelfManagedEventSourceArgs(@Nullable Output<EventSourceMappingEndpointsArgs> endpoints) {
-        this.endpoints = endpoints;
-    }
+    private EventSourceMappingSelfManagedEventSourceArgs() {}
 
-    private EventSourceMappingSelfManagedEventSourceArgs() {
-        this.endpoints = Codegen.empty();
+    private EventSourceMappingSelfManagedEventSourceArgs(EventSourceMappingSelfManagedEventSourceArgs $) {
+        this.endpoints = $.endpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingSelfManagedEventSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EventSourceMappingEndpointsArgs> endpoints;
+        private EventSourceMappingSelfManagedEventSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingSelfManagedEventSourceArgs();
         }
 
         public Builder(EventSourceMappingSelfManagedEventSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoints = defaults.endpoints;
+            $ = new EventSourceMappingSelfManagedEventSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoints(@Nullable Output<EventSourceMappingEndpointsArgs> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable EventSourceMappingEndpointsArgs endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
-        }        public EventSourceMappingSelfManagedEventSourceArgs build() {
-            return new EventSourceMappingSelfManagedEventSourceArgs(endpoints);
+
+        public Builder endpoints(EventSourceMappingEndpointsArgs endpoints) {
+            return endpoints(Output.of(endpoints));
+        }
+
+        public EventSourceMappingSelfManagedEventSourceArgs build() {
+            return $;
         }
     }
+
 }

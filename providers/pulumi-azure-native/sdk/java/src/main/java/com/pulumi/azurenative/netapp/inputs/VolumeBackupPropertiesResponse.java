@@ -24,10 +24,10 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backupEnabled")
-      private final @Nullable Boolean backupEnabled;
+    private @Nullable Boolean backupEnabled;
 
     public Optional<Boolean> backupEnabled() {
-        return this.backupEnabled == null ? Optional.empty() : Optional.ofNullable(this.backupEnabled);
+        return Optional.ofNullable(this.backupEnabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backupPolicyId")
-      private final @Nullable String backupPolicyId;
+    private @Nullable String backupPolicyId;
 
     public Optional<String> backupPolicyId() {
-        return this.backupPolicyId == null ? Optional.empty() : Optional.ofNullable(this.backupPolicyId);
+        return Optional.ofNullable(this.backupPolicyId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="policyEnforced")
-      private final @Nullable Boolean policyEnforced;
+    private @Nullable Boolean policyEnforced;
 
     public Optional<Boolean> policyEnforced() {
-        return this.policyEnforced == null ? Optional.empty() : Optional.ofNullable(this.policyEnforced);
+        return Optional.ofNullable(this.policyEnforced);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class VolumeBackupPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vaultId")
-      private final @Nullable String vaultId;
+    private @Nullable String vaultId;
 
     public Optional<String> vaultId() {
-        return this.vaultId == null ? Optional.empty() : Optional.ofNullable(this.vaultId);
+        return Optional.ofNullable(this.vaultId);
     }
 
-    public VolumeBackupPropertiesResponse(
-        @Nullable Boolean backupEnabled,
-        @Nullable String backupPolicyId,
-        @Nullable Boolean policyEnforced,
-        @Nullable String vaultId) {
-        this.backupEnabled = backupEnabled;
-        this.backupPolicyId = backupPolicyId;
-        this.policyEnforced = policyEnforced;
-        this.vaultId = vaultId;
-    }
+    private VolumeBackupPropertiesResponse() {}
 
-    private VolumeBackupPropertiesResponse() {
-        this.backupEnabled = null;
-        this.backupPolicyId = null;
-        this.policyEnforced = null;
-        this.vaultId = null;
+    private VolumeBackupPropertiesResponse(VolumeBackupPropertiesResponse $) {
+        this.backupEnabled = $.backupEnabled;
+        this.backupPolicyId = $.backupPolicyId;
+        this.policyEnforced = $.policyEnforced;
+        this.vaultId = $.vaultId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeBackupPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean backupEnabled;
-        private @Nullable String backupPolicyId;
-        private @Nullable Boolean policyEnforced;
-        private @Nullable String vaultId;
+        private VolumeBackupPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeBackupPropertiesResponse();
         }
 
         public Builder(VolumeBackupPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupEnabled = defaults.backupEnabled;
-    	      this.backupPolicyId = defaults.backupPolicyId;
-    	      this.policyEnforced = defaults.policyEnforced;
-    	      this.vaultId = defaults.vaultId;
+            $ = new VolumeBackupPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupEnabled(@Nullable Boolean backupEnabled) {
-            this.backupEnabled = backupEnabled;
+            $.backupEnabled = backupEnabled;
             return this;
         }
+
         public Builder backupPolicyId(@Nullable String backupPolicyId) {
-            this.backupPolicyId = backupPolicyId;
+            $.backupPolicyId = backupPolicyId;
             return this;
         }
+
         public Builder policyEnforced(@Nullable Boolean policyEnforced) {
-            this.policyEnforced = policyEnforced;
+            $.policyEnforced = policyEnforced;
             return this;
         }
+
         public Builder vaultId(@Nullable String vaultId) {
-            this.vaultId = vaultId;
+            $.vaultId = vaultId;
             return this;
-        }        public VolumeBackupPropertiesResponse build() {
-            return new VolumeBackupPropertiesResponse(backupEnabled, backupPolicyId, policyEnforced, vaultId);
+        }
+
+        public VolumeBackupPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,8 +6,8 @@ package com.pulumi.aws.lambda.inputs;
 import com.pulumi.aws.lambda.inputs.EventSourceMappingDestinationConfigOnFailureArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class EventSourceMappingDestinationConfigArgs extends com.pulumi.re
      * 
      */
     @Import(name="onFailure")
-      private final @Nullable Output<EventSourceMappingDestinationConfigOnFailureArgs> onFailure;
+    private @Nullable Output<EventSourceMappingDestinationConfigOnFailureArgs> onFailure;
 
-    public Output<EventSourceMappingDestinationConfigOnFailureArgs> onFailure() {
-        return this.onFailure == null ? Codegen.empty() : this.onFailure;
+    public Optional<Output<EventSourceMappingDestinationConfigOnFailureArgs>> onFailure() {
+        return Optional.ofNullable(this.onFailure);
     }
 
-    public EventSourceMappingDestinationConfigArgs(@Nullable Output<EventSourceMappingDestinationConfigOnFailureArgs> onFailure) {
-        this.onFailure = onFailure;
-    }
+    private EventSourceMappingDestinationConfigArgs() {}
 
-    private EventSourceMappingDestinationConfigArgs() {
-        this.onFailure = Codegen.empty();
+    private EventSourceMappingDestinationConfigArgs(EventSourceMappingDestinationConfigArgs $) {
+        this.onFailure = $.onFailure;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingDestinationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EventSourceMappingDestinationConfigOnFailureArgs> onFailure;
+        private EventSourceMappingDestinationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingDestinationConfigArgs();
         }
 
         public Builder(EventSourceMappingDestinationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onFailure = defaults.onFailure;
+            $ = new EventSourceMappingDestinationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder onFailure(@Nullable Output<EventSourceMappingDestinationConfigOnFailureArgs> onFailure) {
-            this.onFailure = onFailure;
+            $.onFailure = onFailure;
             return this;
         }
-        public Builder onFailure(@Nullable EventSourceMappingDestinationConfigOnFailureArgs onFailure) {
-            this.onFailure = Codegen.ofNullable(onFailure);
-            return this;
-        }        public EventSourceMappingDestinationConfigArgs build() {
-            return new EventSourceMappingDestinationConfigArgs(onFailure);
+
+        public Builder onFailure(EventSourceMappingDestinationConfigOnFailureArgs onFailure) {
+            return onFailure(Output.of(onFailure));
+        }
+
+        public EventSourceMappingDestinationConfigArgs build() {
+            return $;
         }
     }
+
 }

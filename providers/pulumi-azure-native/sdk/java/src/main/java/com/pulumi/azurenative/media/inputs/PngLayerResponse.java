@@ -24,10 +24,10 @@ public final class PngLayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="height")
-      private final @Nullable String height;
+    private @Nullable String height;
 
     public Optional<String> height() {
-        return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PngLayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class PngLayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -58,73 +58,63 @@ public final class PngLayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="width")
-      private final @Nullable String width;
+    private @Nullable String width;
 
     public Optional<String> width() {
-        return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
+        return Optional.ofNullable(this.width);
     }
 
-    public PngLayerResponse(
-        @Nullable String height,
-        @Nullable String label,
-        String odataType,
-        @Nullable String width) {
-        this.height = height;
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.width = width;
-    }
+    private PngLayerResponse() {}
 
-    private PngLayerResponse() {
-        this.height = null;
-        this.label = null;
-        this.odataType = null;
-        this.width = null;
+    private PngLayerResponse(PngLayerResponse $) {
+        this.height = $.height;
+        this.label = $.label;
+        this.odataType = $.odataType;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PngLayerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String height;
-        private @Nullable String label;
-        private String odataType;
-        private @Nullable String width;
+        private PngLayerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PngLayerResponse();
         }
 
         public Builder(PngLayerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
-    	      this.width = defaults.width;
+            $ = new PngLayerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder height(@Nullable String height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder width(@Nullable String width) {
-            this.width = width;
+            $.width = width;
             return this;
-        }        public PngLayerResponse build() {
-            return new PngLayerResponse(height, label, odataType, width);
+        }
+
+        public PngLayerResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

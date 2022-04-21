@@ -5,9 +5,9 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AccessReviewReviewerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
-    public AccessReviewReviewerArgs(@Nullable Output<String> principalId) {
-        this.principalId = principalId;
-    }
+    private AccessReviewReviewerArgs() {}
 
-    private AccessReviewReviewerArgs() {
-        this.principalId = Codegen.empty();
+    private AccessReviewReviewerArgs(AccessReviewReviewerArgs $) {
+        this.principalId = $.principalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessReviewReviewerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> principalId;
+        private AccessReviewReviewerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessReviewReviewerArgs();
         }
 
         public Builder(AccessReviewReviewerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
+            $ = new AccessReviewReviewerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
-        }        public AccessReviewReviewerArgs build() {
-            return new AccessReviewReviewerArgs(principalId);
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
+        }
+
+        public AccessReviewReviewerArgs build() {
+            return $;
         }
     }
+
 }

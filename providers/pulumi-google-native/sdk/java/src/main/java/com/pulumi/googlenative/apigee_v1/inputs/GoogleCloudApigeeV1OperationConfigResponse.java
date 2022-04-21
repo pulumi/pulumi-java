@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends com.pulumi
      * 
      */
     @Import(name="apiSource", required=true)
-      private final String apiSource;
+    private String apiSource;
 
     public String apiSource() {
         return this.apiSource;
@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends com.pulumi
      * 
      */
     @Import(name="attributes", required=true)
-      private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
+    private List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
     public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
@@ -47,7 +47,7 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends com.pulumi
      * 
      */
     @Import(name="operations", required=true)
-      private final List<GoogleCloudApigeeV1OperationResponse> operations;
+    private List<GoogleCloudApigeeV1OperationResponse> operations;
 
     public List<GoogleCloudApigeeV1OperationResponse> operations() {
         return this.operations;
@@ -58,79 +58,74 @@ public final class GoogleCloudApigeeV1OperationConfigResponse extends com.pulumi
      * 
      */
     @Import(name="quota", required=true)
-      private final GoogleCloudApigeeV1QuotaResponse quota;
+    private GoogleCloudApigeeV1QuotaResponse quota;
 
     public GoogleCloudApigeeV1QuotaResponse quota() {
         return this.quota;
     }
 
-    public GoogleCloudApigeeV1OperationConfigResponse(
-        String apiSource,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        List<GoogleCloudApigeeV1OperationResponse> operations,
-        GoogleCloudApigeeV1QuotaResponse quota) {
-        this.apiSource = Objects.requireNonNull(apiSource, "expected parameter 'apiSource' to be non-null");
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.operations = Objects.requireNonNull(operations, "expected parameter 'operations' to be non-null");
-        this.quota = Objects.requireNonNull(quota, "expected parameter 'quota' to be non-null");
-    }
+    private GoogleCloudApigeeV1OperationConfigResponse() {}
 
-    private GoogleCloudApigeeV1OperationConfigResponse() {
-        this.apiSource = null;
-        this.attributes = List.of();
-        this.operations = List.of();
-        this.quota = null;
+    private GoogleCloudApigeeV1OperationConfigResponse(GoogleCloudApigeeV1OperationConfigResponse $) {
+        this.apiSource = $.apiSource;
+        this.attributes = $.attributes;
+        this.operations = $.operations;
+        this.quota = $.quota;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1OperationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiSource;
-        private List<GoogleCloudApigeeV1AttributeResponse> attributes;
-        private List<GoogleCloudApigeeV1OperationResponse> operations;
-        private GoogleCloudApigeeV1QuotaResponse quota;
+        private GoogleCloudApigeeV1OperationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1OperationConfigResponse();
         }
 
         public Builder(GoogleCloudApigeeV1OperationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiSource = defaults.apiSource;
-    	      this.attributes = defaults.attributes;
-    	      this.operations = defaults.operations;
-    	      this.quota = defaults.quota;
+            $ = new GoogleCloudApigeeV1OperationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiSource(String apiSource) {
-            this.apiSource = Objects.requireNonNull(apiSource);
+            $.apiSource = apiSource;
             return this;
         }
+
         public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(GoogleCloudApigeeV1AttributeResponse... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder operations(List<GoogleCloudApigeeV1OperationResponse> operations) {
-            this.operations = Objects.requireNonNull(operations);
+            $.operations = operations;
             return this;
         }
+
         public Builder operations(GoogleCloudApigeeV1OperationResponse... operations) {
             return operations(List.of(operations));
         }
+
         public Builder quota(GoogleCloudApigeeV1QuotaResponse quota) {
-            this.quota = Objects.requireNonNull(quota);
+            $.quota = quota;
             return this;
-        }        public GoogleCloudApigeeV1OperationConfigResponse build() {
-            return new GoogleCloudApigeeV1OperationConfigResponse(apiSource, attributes, operations, quota);
+        }
+
+        public GoogleCloudApigeeV1OperationConfigResponse build() {
+            $.apiSource = Objects.requireNonNull($.apiSource, "expected parameter 'apiSource' to be non-null");
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.operations = Objects.requireNonNull($.operations, "expected parameter 'operations' to be non-null");
+            $.quota = Objects.requireNonNull($.quota, "expected parameter 'quota' to be non-null");
+            return $;
         }
     }
+
 }

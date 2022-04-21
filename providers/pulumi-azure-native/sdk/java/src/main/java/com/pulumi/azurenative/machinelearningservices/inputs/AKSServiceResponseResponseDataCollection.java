@@ -23,10 +23,10 @@ public final class AKSServiceResponseResponseDataCollection extends com.pulumi.r
      * 
      */
     @Import(name="eventHubEnabled")
-      private final @Nullable Boolean eventHubEnabled;
+    private @Nullable Boolean eventHubEnabled;
 
     public Optional<Boolean> eventHubEnabled() {
-        return this.eventHubEnabled == null ? Optional.empty() : Optional.ofNullable(this.eventHubEnabled);
+        return Optional.ofNullable(this.eventHubEnabled);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AKSServiceResponseResponseDataCollection extends com.pulumi.r
      * 
      */
     @Import(name="storageEnabled")
-      private final @Nullable Boolean storageEnabled;
+    private @Nullable Boolean storageEnabled;
 
     public Optional<Boolean> storageEnabled() {
-        return this.storageEnabled == null ? Optional.empty() : Optional.ofNullable(this.storageEnabled);
+        return Optional.ofNullable(this.storageEnabled);
     }
 
-    public AKSServiceResponseResponseDataCollection(
-        @Nullable Boolean eventHubEnabled,
-        @Nullable Boolean storageEnabled) {
-        this.eventHubEnabled = eventHubEnabled;
-        this.storageEnabled = storageEnabled;
-    }
+    private AKSServiceResponseResponseDataCollection() {}
 
-    private AKSServiceResponseResponseDataCollection() {
-        this.eventHubEnabled = null;
-        this.storageEnabled = null;
+    private AKSServiceResponseResponseDataCollection(AKSServiceResponseResponseDataCollection $) {
+        this.eventHubEnabled = $.eventHubEnabled;
+        this.storageEnabled = $.storageEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSServiceResponseResponseDataCollection defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean eventHubEnabled;
-        private @Nullable Boolean storageEnabled;
+        private AKSServiceResponseResponseDataCollection $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSServiceResponseResponseDataCollection();
         }
 
         public Builder(AKSServiceResponseResponseDataCollection defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubEnabled = defaults.eventHubEnabled;
-    	      this.storageEnabled = defaults.storageEnabled;
+            $ = new AKSServiceResponseResponseDataCollection(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubEnabled(@Nullable Boolean eventHubEnabled) {
-            this.eventHubEnabled = eventHubEnabled;
+            $.eventHubEnabled = eventHubEnabled;
             return this;
         }
+
         public Builder storageEnabled(@Nullable Boolean storageEnabled) {
-            this.storageEnabled = storageEnabled;
+            $.storageEnabled = storageEnabled;
             return this;
-        }        public AKSServiceResponseResponseDataCollection build() {
-            return new AKSServiceResponseResponseDataCollection(eventHubEnabled, storageEnabled);
+        }
+
+        public AKSServiceResponseResponseDataCollection build() {
+            return $;
         }
     }
+
 }

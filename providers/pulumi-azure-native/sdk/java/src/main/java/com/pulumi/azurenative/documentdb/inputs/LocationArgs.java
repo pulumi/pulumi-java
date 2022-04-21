@@ -5,11 +5,11 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failoverPriority")
-      private final @Nullable Output<Integer> failoverPriority;
+    private @Nullable Output<Integer> failoverPriority;
 
-    public Output<Integer> failoverPriority() {
-        return this.failoverPriority == null ? Codegen.empty() : this.failoverPriority;
+    public Optional<Output<Integer>> failoverPriority() {
+        return Optional.ofNullable(this.failoverPriority);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isZoneRedundant")
-      private final @Nullable Output<Boolean> isZoneRedundant;
+    private @Nullable Output<Boolean> isZoneRedundant;
 
-    public Output<Boolean> isZoneRedundant() {
-        return this.isZoneRedundant == null ? Codegen.empty() : this.isZoneRedundant;
+    public Optional<Output<Boolean>> isZoneRedundant() {
+        return Optional.ofNullable(this.isZoneRedundant);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationName")
-      private final @Nullable Output<String> locationName;
+    private @Nullable Output<String> locationName;
 
-    public Output<String> locationName() {
-        return this.locationName == null ? Codegen.empty() : this.locationName;
+    public Optional<Output<String>> locationName() {
+        return Optional.ofNullable(this.locationName);
     }
 
-    public LocationArgs(
-        @Nullable Output<Integer> failoverPriority,
-        @Nullable Output<Boolean> isZoneRedundant,
-        @Nullable Output<String> locationName) {
-        this.failoverPriority = failoverPriority;
-        this.isZoneRedundant = isZoneRedundant;
-        this.locationName = locationName;
-    }
+    private LocationArgs() {}
 
-    private LocationArgs() {
-        this.failoverPriority = Codegen.empty();
-        this.isZoneRedundant = Codegen.empty();
-        this.locationName = Codegen.empty();
+    private LocationArgs(LocationArgs $) {
+        this.failoverPriority = $.failoverPriority;
+        this.isZoneRedundant = $.isZoneRedundant;
+        this.locationName = $.locationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> failoverPriority;
-        private @Nullable Output<Boolean> isZoneRedundant;
-        private @Nullable Output<String> locationName;
+        private LocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationArgs();
         }
 
         public Builder(LocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverPriority = defaults.failoverPriority;
-    	      this.isZoneRedundant = defaults.isZoneRedundant;
-    	      this.locationName = defaults.locationName;
+            $ = new LocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverPriority(@Nullable Output<Integer> failoverPriority) {
-            this.failoverPriority = failoverPriority;
+            $.failoverPriority = failoverPriority;
             return this;
         }
-        public Builder failoverPriority(@Nullable Integer failoverPriority) {
-            this.failoverPriority = Codegen.ofNullable(failoverPriority);
-            return this;
+
+        public Builder failoverPriority(Integer failoverPriority) {
+            return failoverPriority(Output.of(failoverPriority));
         }
+
         public Builder isZoneRedundant(@Nullable Output<Boolean> isZoneRedundant) {
-            this.isZoneRedundant = isZoneRedundant;
+            $.isZoneRedundant = isZoneRedundant;
             return this;
         }
-        public Builder isZoneRedundant(@Nullable Boolean isZoneRedundant) {
-            this.isZoneRedundant = Codegen.ofNullable(isZoneRedundant);
-            return this;
+
+        public Builder isZoneRedundant(Boolean isZoneRedundant) {
+            return isZoneRedundant(Output.of(isZoneRedundant));
         }
+
         public Builder locationName(@Nullable Output<String> locationName) {
-            this.locationName = locationName;
+            $.locationName = locationName;
             return this;
         }
-        public Builder locationName(@Nullable String locationName) {
-            this.locationName = Codegen.ofNullable(locationName);
-            return this;
-        }        public LocationArgs build() {
-            return new LocationArgs(failoverPriority, isZoneRedundant, locationName);
+
+        public Builder locationName(String locationName) {
+            return locationName(Output.of(locationName));
+        }
+
+        public LocationArgs build() {
+            return $;
         }
     }
+
 }

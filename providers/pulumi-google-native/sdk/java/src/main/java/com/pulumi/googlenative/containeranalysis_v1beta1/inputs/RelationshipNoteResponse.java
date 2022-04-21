@@ -21,45 +21,45 @@ public final class RelationshipNoteResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RelationshipNoteResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RelationshipNoteResponse() {}
 
-    private RelationshipNoteResponse() {
-        this.type = null;
+    private RelationshipNoteResponse(RelationshipNoteResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private RelationshipNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipNoteResponse();
         }
 
         public Builder(RelationshipNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new RelationshipNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RelationshipNoteResponse build() {
-            return new RelationshipNoteResponse(type);
+        }
+
+        public RelationshipNoteResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionRe
 
     public static final GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse Empty = new GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse();
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse();
         }
         public GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageEndInteractionResponse();
+            return $;
         }
     }
+
 }

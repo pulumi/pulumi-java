@@ -5,11 +5,11 @@ package com.pulumi.aws.elasticloadbalancing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class LoadBalancerAccessLogsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -33,10 +33,10 @@ public final class LoadBalancerAccessLogsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bucketPrefix")
-      private final @Nullable Output<String> bucketPrefix;
+    private @Nullable Output<String> bucketPrefix;
 
-    public Output<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
+    public Optional<Output<String>> bucketPrefix() {
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LoadBalancerAccessLogsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -55,89 +55,79 @@ public final class LoadBalancerAccessLogsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<Integer> interval;
+    private @Nullable Output<Integer> interval;
 
-    public Output<Integer> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<Integer>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
-    public LoadBalancerAccessLogsArgs(
-        Output<String> bucket,
-        @Nullable Output<String> bucketPrefix,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Integer> interval) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.bucketPrefix = bucketPrefix;
-        this.enabled = enabled;
-        this.interval = interval;
-    }
+    private LoadBalancerAccessLogsArgs() {}
 
-    private LoadBalancerAccessLogsArgs() {
-        this.bucket = Codegen.empty();
-        this.bucketPrefix = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.interval = Codegen.empty();
+    private LoadBalancerAccessLogsArgs(LoadBalancerAccessLogsArgs $) {
+        this.bucket = $.bucket;
+        this.bucketPrefix = $.bucketPrefix;
+        this.enabled = $.enabled;
+        this.interval = $.interval;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerAccessLogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> bucketPrefix;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Integer> interval;
+        private LoadBalancerAccessLogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerAccessLogsArgs();
         }
 
         public Builder(LoadBalancerAccessLogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.enabled = defaults.enabled;
-    	      this.interval = defaults.interval;
+            $ = new LoadBalancerAccessLogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
-        public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
-            return this;
+
+        public Builder bucketPrefix(String bucketPrefix) {
+            return bucketPrefix(Output.of(bucketPrefix));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder interval(@Nullable Output<Integer> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable Integer interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
-        }        public LoadBalancerAccessLogsArgs build() {
-            return new LoadBalancerAccessLogsArgs(bucket, bucketPrefix, enabled, interval);
+
+        public Builder interval(Integer interval) {
+            return interval(Output.of(interval));
+        }
+
+        public LoadBalancerAccessLogsArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

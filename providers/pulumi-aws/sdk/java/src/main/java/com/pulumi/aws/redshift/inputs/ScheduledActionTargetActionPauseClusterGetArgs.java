@@ -5,7 +5,6 @@ package com.pulumi.aws.redshift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ScheduledActionTargetActionPauseClusterGetArgs extends com.pu
      * 
      */
     @Import(name="clusterIdentifier", required=true)
-      private final Output<String> clusterIdentifier;
+    private Output<String> clusterIdentifier;
 
     public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
-    public ScheduledActionTargetActionPauseClusterGetArgs(Output<String> clusterIdentifier) {
-        this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
-    }
+    private ScheduledActionTargetActionPauseClusterGetArgs() {}
 
-    private ScheduledActionTargetActionPauseClusterGetArgs() {
-        this.clusterIdentifier = Codegen.empty();
+    private ScheduledActionTargetActionPauseClusterGetArgs(ScheduledActionTargetActionPauseClusterGetArgs $) {
+        this.clusterIdentifier = $.clusterIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionTargetActionPauseClusterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterIdentifier;
+        private ScheduledActionTargetActionPauseClusterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionTargetActionPauseClusterGetArgs();
         }
 
         public Builder(ScheduledActionTargetActionPauseClusterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIdentifier = defaults.clusterIdentifier;
+            $ = new ScheduledActionTargetActionPauseClusterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
-            this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
+            $.clusterIdentifier = clusterIdentifier;
             return this;
         }
+
         public Builder clusterIdentifier(String clusterIdentifier) {
-            this.clusterIdentifier = Output.of(Objects.requireNonNull(clusterIdentifier));
-            return this;
-        }        public ScheduledActionTargetActionPauseClusterGetArgs build() {
-            return new ScheduledActionTargetActionPauseClusterGetArgs(clusterIdentifier);
+            return clusterIdentifier(Output.of(clusterIdentifier));
+        }
+
+        public ScheduledActionTargetActionPauseClusterGetArgs build() {
+            $.clusterIdentifier = Objects.requireNonNull($.clusterIdentifier, "expected parameter 'clusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

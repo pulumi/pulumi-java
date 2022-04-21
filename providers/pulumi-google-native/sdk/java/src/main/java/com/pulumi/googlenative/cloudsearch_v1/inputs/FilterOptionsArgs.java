@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.FilterArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FilterOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<FilterArgs> filter;
+    private @Nullable Output<FilterArgs> filter;
 
-    public Output<FilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<FilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class FilterOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectType")
-      private final @Nullable Output<String> objectType;
+    private @Nullable Output<String> objectType;
 
-    public Output<String> objectType() {
-        return this.objectType == null ? Codegen.empty() : this.objectType;
+    public Optional<Output<String>> objectType() {
+        return Optional.ofNullable(this.objectType);
     }
 
-    public FilterOptionsArgs(
-        @Nullable Output<FilterArgs> filter,
-        @Nullable Output<String> objectType) {
-        this.filter = filter;
-        this.objectType = objectType;
-    }
+    private FilterOptionsArgs() {}
 
-    private FilterOptionsArgs() {
-        this.filter = Codegen.empty();
-        this.objectType = Codegen.empty();
+    private FilterOptionsArgs(FilterOptionsArgs $) {
+        this.filter = $.filter;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FilterArgs> filter;
-        private @Nullable Output<String> objectType;
+        private FilterOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterOptionsArgs();
         }
 
         public Builder(FilterOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.objectType = defaults.objectType;
+            $ = new FilterOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<FilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable FilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(FilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder objectType(@Nullable Output<String> objectType) {
-            this.objectType = objectType;
+            $.objectType = objectType;
             return this;
         }
-        public Builder objectType(@Nullable String objectType) {
-            this.objectType = Codegen.ofNullable(objectType);
-            return this;
-        }        public FilterOptionsArgs build() {
-            return new FilterOptionsArgs(filter, objectType);
+
+        public Builder objectType(String objectType) {
+            return objectType(Output.of(objectType));
+        }
+
+        public FilterOptionsArgs build() {
+            return $;
         }
     }
+
 }

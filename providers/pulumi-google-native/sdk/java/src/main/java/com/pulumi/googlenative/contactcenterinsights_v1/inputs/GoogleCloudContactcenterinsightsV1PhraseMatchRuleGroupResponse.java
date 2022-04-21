@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      * 
      */
     @Import(name="phraseMatchRules", required=true)
-      private final List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
+    private List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
 
     public List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules() {
         return this.phraseMatchRules;
@@ -34,58 +34,56 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(
-        List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules,
-        String type) {
-        this.phraseMatchRules = Objects.requireNonNull(phraseMatchRules, "expected parameter 'phraseMatchRules' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse() {
-        this.phraseMatchRules = List.of();
-        this.type = null;
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse $) {
+        this.phraseMatchRules = $.phraseMatchRules;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules;
-        private String type;
+        private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phraseMatchRules = defaults.phraseMatchRules;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder phraseMatchRules(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules) {
-            this.phraseMatchRules = Objects.requireNonNull(phraseMatchRules);
+            $.phraseMatchRules = phraseMatchRules;
             return this;
         }
+
         public Builder phraseMatchRules(GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse... phraseMatchRules) {
             return phraseMatchRules(List.of(phraseMatchRules));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse build() {
-            return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(phraseMatchRules, type);
+        }
+
+        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse build() {
+            $.phraseMatchRules = Objects.requireNonNull($.phraseMatchRules, "expected parameter 'phraseMatchRules' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

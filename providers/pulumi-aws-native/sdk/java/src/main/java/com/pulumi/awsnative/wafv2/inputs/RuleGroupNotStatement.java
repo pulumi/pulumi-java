@@ -13,45 +13,45 @@ public final class RuleGroupNotStatement extends com.pulumi.resources.InvokeArgs
     public static final RuleGroupNotStatement Empty = new RuleGroupNotStatement();
 
     @Import(name="statement", required=true)
-      private final RuleGroupStatement statement;
+    private RuleGroupStatement statement;
 
     public RuleGroupStatement statement() {
         return this.statement;
     }
 
-    public RuleGroupNotStatement(RuleGroupStatement statement) {
-        this.statement = Objects.requireNonNull(statement, "expected parameter 'statement' to be non-null");
-    }
+    private RuleGroupNotStatement() {}
 
-    private RuleGroupNotStatement() {
-        this.statement = null;
+    private RuleGroupNotStatement(RuleGroupNotStatement $) {
+        this.statement = $.statement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupNotStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuleGroupStatement statement;
+        private RuleGroupNotStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupNotStatement();
         }
 
         public Builder(RuleGroupNotStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statement = defaults.statement;
+            $ = new RuleGroupNotStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder statement(RuleGroupStatement statement) {
-            this.statement = Objects.requireNonNull(statement);
+            $.statement = statement;
             return this;
-        }        public RuleGroupNotStatement build() {
-            return new RuleGroupNotStatement(statement);
+        }
+
+        public RuleGroupNotStatement build() {
+            $.statement = Objects.requireNonNull($.statement, "expected parameter 'statement' to be non-null");
+            return $;
         }
     }
+
 }

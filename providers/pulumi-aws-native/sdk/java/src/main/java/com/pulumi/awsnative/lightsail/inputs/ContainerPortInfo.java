@@ -15,62 +15,57 @@ public final class ContainerPortInfo extends com.pulumi.resources.InvokeArgs {
     public static final ContainerPortInfo Empty = new ContainerPortInfo();
 
     @Import(name="port")
-      private final @Nullable String port;
+    private @Nullable String port;
 
     public Optional<String> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
-    public ContainerPortInfo(
-        @Nullable String port,
-        @Nullable String protocol) {
-        this.port = port;
-        this.protocol = protocol;
-    }
+    private ContainerPortInfo() {}
 
-    private ContainerPortInfo() {
-        this.port = null;
-        this.protocol = null;
+    private ContainerPortInfo(ContainerPortInfo $) {
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPortInfo defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String port;
-        private @Nullable String protocol;
+        private ContainerPortInfo $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPortInfo();
         }
 
         public Builder(ContainerPortInfo defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new ContainerPortInfo(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable String port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
-        }        public ContainerPortInfo build() {
-            return new ContainerPortInfo(port, protocol);
+        }
+
+        public ContainerPortInfo build() {
+            return $;
         }
     }
+
 }

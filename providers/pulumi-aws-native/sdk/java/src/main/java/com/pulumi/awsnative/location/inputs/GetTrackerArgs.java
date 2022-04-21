@@ -13,45 +13,45 @@ public final class GetTrackerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTrackerArgs Empty = new GetTrackerArgs();
 
     @Import(name="trackerName", required=true)
-      private final String trackerName;
+    private String trackerName;
 
     public String trackerName() {
         return this.trackerName;
     }
 
-    public GetTrackerArgs(String trackerName) {
-        this.trackerName = Objects.requireNonNull(trackerName, "expected parameter 'trackerName' to be non-null");
-    }
+    private GetTrackerArgs() {}
 
-    private GetTrackerArgs() {
-        this.trackerName = null;
+    private GetTrackerArgs(GetTrackerArgs $) {
+        this.trackerName = $.trackerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTrackerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String trackerName;
+        private GetTrackerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTrackerArgs();
         }
 
         public Builder(GetTrackerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.trackerName = defaults.trackerName;
+            $ = new GetTrackerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder trackerName(String trackerName) {
-            this.trackerName = Objects.requireNonNull(trackerName);
+            $.trackerName = trackerName;
             return this;
-        }        public GetTrackerArgs build() {
-            return new GetTrackerArgs(trackerName);
+        }
+
+        public GetTrackerArgs build() {
+            $.trackerName = Objects.requireNonNull($.trackerName, "expected parameter 'trackerName' to be non-null");
+            return $;
         }
     }
+
 }

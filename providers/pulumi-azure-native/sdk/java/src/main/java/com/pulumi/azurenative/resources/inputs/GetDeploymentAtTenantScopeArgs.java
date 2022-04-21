@@ -17,45 +17,45 @@ public final class GetDeploymentAtTenantScopeArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="deploymentName", required=true)
-      private final String deploymentName;
+    private String deploymentName;
 
     public String deploymentName() {
         return this.deploymentName;
     }
 
-    public GetDeploymentAtTenantScopeArgs(String deploymentName) {
-        this.deploymentName = Objects.requireNonNull(deploymentName, "expected parameter 'deploymentName' to be non-null");
-    }
+    private GetDeploymentAtTenantScopeArgs() {}
 
-    private GetDeploymentAtTenantScopeArgs() {
-        this.deploymentName = null;
+    private GetDeploymentAtTenantScopeArgs(GetDeploymentAtTenantScopeArgs $) {
+        this.deploymentName = $.deploymentName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeploymentAtTenantScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deploymentName;
+        private GetDeploymentAtTenantScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeploymentAtTenantScopeArgs();
         }
 
         public Builder(GetDeploymentAtTenantScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentName = defaults.deploymentName;
+            $ = new GetDeploymentAtTenantScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentName(String deploymentName) {
-            this.deploymentName = Objects.requireNonNull(deploymentName);
+            $.deploymentName = deploymentName;
             return this;
-        }        public GetDeploymentAtTenantScopeArgs build() {
-            return new GetDeploymentAtTenantScopeArgs(deploymentName);
+        }
+
+        public GetDeploymentAtTenantScopeArgs build() {
+            $.deploymentName = Objects.requireNonNull($.deploymentName, "expected parameter 'deploymentName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.aws.backup;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class VaultNotificationsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="backupVaultEvents", required=true)
-      private final Output<List<String>> backupVaultEvents;
+    private Output<List<String>> backupVaultEvents;
 
     public Output<List<String>> backupVaultEvents() {
         return this.backupVaultEvents;
@@ -31,7 +30,7 @@ public final class VaultNotificationsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="backupVaultName", required=true)
-      private final Output<String> backupVaultName;
+    private Output<String> backupVaultName;
 
     public Output<String> backupVaultName() {
         return this.backupVaultName;
@@ -42,79 +41,75 @@ public final class VaultNotificationsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="snsTopicArn", required=true)
-      private final Output<String> snsTopicArn;
+    private Output<String> snsTopicArn;
 
     public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 
-    public VaultNotificationsArgs(
-        Output<List<String>> backupVaultEvents,
-        Output<String> backupVaultName,
-        Output<String> snsTopicArn) {
-        this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents, "expected parameter 'backupVaultEvents' to be non-null");
-        this.backupVaultName = Objects.requireNonNull(backupVaultName, "expected parameter 'backupVaultName' to be non-null");
-        this.snsTopicArn = Objects.requireNonNull(snsTopicArn, "expected parameter 'snsTopicArn' to be non-null");
-    }
+    private VaultNotificationsArgs() {}
 
-    private VaultNotificationsArgs() {
-        this.backupVaultEvents = Codegen.empty();
-        this.backupVaultName = Codegen.empty();
-        this.snsTopicArn = Codegen.empty();
+    private VaultNotificationsArgs(VaultNotificationsArgs $) {
+        this.backupVaultEvents = $.backupVaultEvents;
+        this.backupVaultName = $.backupVaultName;
+        this.snsTopicArn = $.snsTopicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultNotificationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> backupVaultEvents;
-        private Output<String> backupVaultName;
-        private Output<String> snsTopicArn;
+        private VaultNotificationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultNotificationsArgs();
         }
 
         public Builder(VaultNotificationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupVaultEvents = defaults.backupVaultEvents;
-    	      this.backupVaultName = defaults.backupVaultName;
-    	      this.snsTopicArn = defaults.snsTopicArn;
+            $ = new VaultNotificationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupVaultEvents(Output<List<String>> backupVaultEvents) {
-            this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
+            $.backupVaultEvents = backupVaultEvents;
             return this;
         }
+
         public Builder backupVaultEvents(List<String> backupVaultEvents) {
-            this.backupVaultEvents = Output.of(Objects.requireNonNull(backupVaultEvents));
-            return this;
+            return backupVaultEvents(Output.of(backupVaultEvents));
         }
+
         public Builder backupVaultEvents(String... backupVaultEvents) {
             return backupVaultEvents(List.of(backupVaultEvents));
         }
+
         public Builder backupVaultName(Output<String> backupVaultName) {
-            this.backupVaultName = Objects.requireNonNull(backupVaultName);
+            $.backupVaultName = backupVaultName;
             return this;
         }
+
         public Builder backupVaultName(String backupVaultName) {
-            this.backupVaultName = Output.of(Objects.requireNonNull(backupVaultName));
-            return this;
+            return backupVaultName(Output.of(backupVaultName));
         }
+
         public Builder snsTopicArn(Output<String> snsTopicArn) {
-            this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
+            $.snsTopicArn = snsTopicArn;
             return this;
         }
+
         public Builder snsTopicArn(String snsTopicArn) {
-            this.snsTopicArn = Output.of(Objects.requireNonNull(snsTopicArn));
-            return this;
-        }        public VaultNotificationsArgs build() {
-            return new VaultNotificationsArgs(backupVaultEvents, backupVaultName, snsTopicArn);
+            return snsTopicArn(Output.of(snsTopicArn));
+        }
+
+        public VaultNotificationsArgs build() {
+            $.backupVaultEvents = Objects.requireNonNull($.backupVaultEvents, "expected parameter 'backupVaultEvents' to be non-null");
+            $.backupVaultName = Objects.requireNonNull($.backupVaultName, "expected parameter 'backupVaultName' to be non-null");
+            $.snsTopicArn = Objects.requireNonNull($.snsTopicArn, "expected parameter 'snsTopicArn' to be non-null");
+            return $;
         }
     }
+
 }

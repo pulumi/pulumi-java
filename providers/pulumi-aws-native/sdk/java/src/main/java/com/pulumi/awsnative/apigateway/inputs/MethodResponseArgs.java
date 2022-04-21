@@ -5,10 +5,10 @@ package com.pulumi.awsnative.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="responseModels")
-      private final @Nullable Output<Object> responseModels;
+    private @Nullable Output<Object> responseModels;
 
-    public Output<Object> responseModels() {
-        return this.responseModels == null ? Codegen.empty() : this.responseModels;
+    public Optional<Output<Object>> responseModels() {
+        return Optional.ofNullable(this.responseModels);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="responseParameters")
-      private final @Nullable Output<Object> responseParameters;
+    private @Nullable Output<Object> responseParameters;
 
-    public Output<Object> responseParameters() {
-        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
+    public Optional<Output<Object>> responseParameters() {
+        return Optional.ofNullable(this.responseParameters);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class MethodResponseArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="statusCode", required=true)
-      private final Output<String> statusCode;
+    private Output<String> statusCode;
 
     public Output<String> statusCode() {
         return this.statusCode;
     }
 
-    public MethodResponseArgs(
-        @Nullable Output<Object> responseModels,
-        @Nullable Output<Object> responseParameters,
-        Output<String> statusCode) {
-        this.responseModels = responseModels;
-        this.responseParameters = responseParameters;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private MethodResponseArgs() {}
 
-    private MethodResponseArgs() {
-        this.responseModels = Codegen.empty();
-        this.responseParameters = Codegen.empty();
-        this.statusCode = Codegen.empty();
+    private MethodResponseArgs(MethodResponseArgs $) {
+        this.responseModels = $.responseModels;
+        this.responseParameters = $.responseParameters;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodResponseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> responseModels;
-        private @Nullable Output<Object> responseParameters;
-        private Output<String> statusCode;
+        private MethodResponseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodResponseArgs();
         }
 
         public Builder(MethodResponseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.responseModels = defaults.responseModels;
-    	      this.responseParameters = defaults.responseParameters;
-    	      this.statusCode = defaults.statusCode;
+            $ = new MethodResponseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder responseModels(@Nullable Output<Object> responseModels) {
-            this.responseModels = responseModels;
+            $.responseModels = responseModels;
             return this;
         }
-        public Builder responseModels(@Nullable Object responseModels) {
-            this.responseModels = Codegen.ofNullable(responseModels);
-            return this;
+
+        public Builder responseModels(Object responseModels) {
+            return responseModels(Output.of(responseModels));
         }
+
         public Builder responseParameters(@Nullable Output<Object> responseParameters) {
-            this.responseParameters = responseParameters;
+            $.responseParameters = responseParameters;
             return this;
         }
-        public Builder responseParameters(@Nullable Object responseParameters) {
-            this.responseParameters = Codegen.ofNullable(responseParameters);
-            return this;
+
+        public Builder responseParameters(Object responseParameters) {
+            return responseParameters(Output.of(responseParameters));
         }
+
         public Builder statusCode(Output<String> statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
-            return this;
-        }        public MethodResponseArgs build() {
-            return new MethodResponseArgs(responseModels, responseParameters, statusCode);
+            return statusCode(Output.of(statusCode));
+        }
+
+        public MethodResponseArgs build() {
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

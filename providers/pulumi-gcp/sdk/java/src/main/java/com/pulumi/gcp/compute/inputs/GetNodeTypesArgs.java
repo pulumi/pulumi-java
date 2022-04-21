@@ -21,10 +21,10 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -33,55 +33,50 @@ public final class GetNodeTypesArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable String zone;
+    private @Nullable String zone;
 
     public Optional<String> zone() {
-        return this.zone == null ? Optional.empty() : Optional.ofNullable(this.zone);
+        return Optional.ofNullable(this.zone);
     }
 
-    public GetNodeTypesArgs(
-        @Nullable String project,
-        @Nullable String zone) {
-        this.project = project;
-        this.zone = zone;
-    }
+    private GetNodeTypesArgs() {}
 
-    private GetNodeTypesArgs() {
-        this.project = null;
-        this.zone = null;
+    private GetNodeTypesArgs(GetNodeTypesArgs $) {
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeTypesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private @Nullable String zone;
+        private GetNodeTypesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeTypesArgs();
         }
 
         public Builder(GetNodeTypesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new GetNodeTypesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder zone(@Nullable String zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
-        }        public GetNodeTypesArgs build() {
-            return new GetNodeTypesArgs(project, zone);
+        }
+
+        public GetNodeTypesArgs build() {
+            return $;
         }
     }
+
 }

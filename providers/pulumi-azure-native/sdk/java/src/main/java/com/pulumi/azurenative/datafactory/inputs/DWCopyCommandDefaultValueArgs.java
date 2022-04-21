@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DWCopyCommandDefaultValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="columnName")
-      private final @Nullable Output<Object> columnName;
+    private @Nullable Output<Object> columnName;
 
-    public Output<Object> columnName() {
-        return this.columnName == null ? Codegen.empty() : this.columnName;
+    public Optional<Output<Object>> columnName() {
+        return Optional.ofNullable(this.columnName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DWCopyCommandDefaultValueArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="defaultValue")
-      private final @Nullable Output<Object> defaultValue;
+    private @Nullable Output<Object> defaultValue;
 
-    public Output<Object> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<Object>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
-    public DWCopyCommandDefaultValueArgs(
-        @Nullable Output<Object> columnName,
-        @Nullable Output<Object> defaultValue) {
-        this.columnName = columnName;
-        this.defaultValue = defaultValue;
-    }
+    private DWCopyCommandDefaultValueArgs() {}
 
-    private DWCopyCommandDefaultValueArgs() {
-        this.columnName = Codegen.empty();
-        this.defaultValue = Codegen.empty();
+    private DWCopyCommandDefaultValueArgs(DWCopyCommandDefaultValueArgs $) {
+        this.columnName = $.columnName;
+        this.defaultValue = $.defaultValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DWCopyCommandDefaultValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> columnName;
-        private @Nullable Output<Object> defaultValue;
+        private DWCopyCommandDefaultValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DWCopyCommandDefaultValueArgs();
         }
 
         public Builder(DWCopyCommandDefaultValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnName = defaults.columnName;
-    	      this.defaultValue = defaults.defaultValue;
+            $ = new DWCopyCommandDefaultValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnName(@Nullable Output<Object> columnName) {
-            this.columnName = columnName;
+            $.columnName = columnName;
             return this;
         }
-        public Builder columnName(@Nullable Object columnName) {
-            this.columnName = Codegen.ofNullable(columnName);
-            return this;
+
+        public Builder columnName(Object columnName) {
+            return columnName(Output.of(columnName));
         }
+
         public Builder defaultValue(@Nullable Output<Object> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
-        }        public DWCopyCommandDefaultValueArgs build() {
-            return new DWCopyCommandDefaultValueArgs(columnName, defaultValue);
+
+        public Builder defaultValue(Object defaultValue) {
+            return defaultValue(Output.of(defaultValue));
+        }
+
+        public DWCopyCommandDefaultValueArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="locationName", required=true)
-      private final String locationName;
+    private String locationName;
 
     public String locationName() {
         return this.locationName;
@@ -28,7 +28,7 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serverTrustGroupName", required=true)
-      private final String serverTrustGroupName;
+    private String serverTrustGroupName;
 
     public String serverTrustGroupName() {
         return this.serverTrustGroupName;
     }
 
-    public GetServerTrustGroupArgs(
-        String locationName,
-        String resourceGroupName,
-        String serverTrustGroupName) {
-        this.locationName = Objects.requireNonNull(locationName, "expected parameter 'locationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverTrustGroupName = Objects.requireNonNull(serverTrustGroupName, "expected parameter 'serverTrustGroupName' to be non-null");
-    }
+    private GetServerTrustGroupArgs() {}
 
-    private GetServerTrustGroupArgs() {
-        this.locationName = null;
-        this.resourceGroupName = null;
-        this.serverTrustGroupName = null;
+    private GetServerTrustGroupArgs(GetServerTrustGroupArgs $) {
+        this.locationName = $.locationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverTrustGroupName = $.serverTrustGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerTrustGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String locationName;
-        private String resourceGroupName;
-        private String serverTrustGroupName;
+        private GetServerTrustGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerTrustGroupArgs();
         }
 
         public Builder(GetServerTrustGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locationName = defaults.locationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverTrustGroupName = defaults.serverTrustGroupName;
+            $ = new GetServerTrustGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locationName(String locationName) {
-            this.locationName = Objects.requireNonNull(locationName);
+            $.locationName = locationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverTrustGroupName(String serverTrustGroupName) {
-            this.serverTrustGroupName = Objects.requireNonNull(serverTrustGroupName);
+            $.serverTrustGroupName = serverTrustGroupName;
             return this;
-        }        public GetServerTrustGroupArgs build() {
-            return new GetServerTrustGroupArgs(locationName, resourceGroupName, serverTrustGroupName);
+        }
+
+        public GetServerTrustGroupArgs build() {
+            $.locationName = Objects.requireNonNull($.locationName, "expected parameter 'locationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverTrustGroupName = Objects.requireNonNull($.serverTrustGroupName, "expected parameter 'serverTrustGroupName' to be non-null");
+            return $;
         }
     }
+
 }

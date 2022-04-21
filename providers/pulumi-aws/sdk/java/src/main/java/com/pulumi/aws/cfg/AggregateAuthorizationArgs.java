@@ -5,10 +5,10 @@ package com.pulumi.aws.cfg;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class AggregateAuthorizationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -32,7 +32,7 @@ public final class AggregateAuthorizationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
@@ -43,76 +43,70 @@ public final class AggregateAuthorizationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AggregateAuthorizationArgs(
-        Output<String> accountId,
-        Output<String> region,
-        @Nullable Output<Map<String,String>> tags) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.tags = tags;
-    }
+    private AggregateAuthorizationArgs() {}
 
-    private AggregateAuthorizationArgs() {
-        this.accountId = Codegen.empty();
-        this.region = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AggregateAuthorizationArgs(AggregateAuthorizationArgs $) {
+        this.accountId = $.accountId;
+        this.region = $.region;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AggregateAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private Output<String> region;
-        private @Nullable Output<Map<String,String>> tags;
+        private AggregateAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AggregateAuthorizationArgs();
         }
 
         public Builder(AggregateAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.region = defaults.region;
-    	      this.tags = defaults.tags;
+            $ = new AggregateAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public AggregateAuthorizationArgs build() {
-            return new AggregateAuthorizationArgs(accountId, region, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public AggregateAuthorizationArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

@@ -18,7 +18,7 @@ public final class GetNodeGroupRemoteAccess extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ec2SshKey", required=true)
-      private final String ec2SshKey;
+    private String ec2SshKey;
 
     public String ec2SshKey() {
         return this.ec2SshKey;
@@ -29,58 +29,56 @@ public final class GetNodeGroupRemoteAccess extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceSecurityGroupIds", required=true)
-      private final List<String> sourceSecurityGroupIds;
+    private List<String> sourceSecurityGroupIds;
 
     public List<String> sourceSecurityGroupIds() {
         return this.sourceSecurityGroupIds;
     }
 
-    public GetNodeGroupRemoteAccess(
-        String ec2SshKey,
-        List<String> sourceSecurityGroupIds) {
-        this.ec2SshKey = Objects.requireNonNull(ec2SshKey, "expected parameter 'ec2SshKey' to be non-null");
-        this.sourceSecurityGroupIds = Objects.requireNonNull(sourceSecurityGroupIds, "expected parameter 'sourceSecurityGroupIds' to be non-null");
-    }
+    private GetNodeGroupRemoteAccess() {}
 
-    private GetNodeGroupRemoteAccess() {
-        this.ec2SshKey = null;
-        this.sourceSecurityGroupIds = List.of();
+    private GetNodeGroupRemoteAccess(GetNodeGroupRemoteAccess $) {
+        this.ec2SshKey = $.ec2SshKey;
+        this.sourceSecurityGroupIds = $.sourceSecurityGroupIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodeGroupRemoteAccess defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ec2SshKey;
-        private List<String> sourceSecurityGroupIds;
+        private GetNodeGroupRemoteAccess $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodeGroupRemoteAccess();
         }
 
         public Builder(GetNodeGroupRemoteAccess defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ec2SshKey = defaults.ec2SshKey;
-    	      this.sourceSecurityGroupIds = defaults.sourceSecurityGroupIds;
+            $ = new GetNodeGroupRemoteAccess(Objects.requireNonNull(defaults));
         }
 
         public Builder ec2SshKey(String ec2SshKey) {
-            this.ec2SshKey = Objects.requireNonNull(ec2SshKey);
+            $.ec2SshKey = ec2SshKey;
             return this;
         }
+
         public Builder sourceSecurityGroupIds(List<String> sourceSecurityGroupIds) {
-            this.sourceSecurityGroupIds = Objects.requireNonNull(sourceSecurityGroupIds);
+            $.sourceSecurityGroupIds = sourceSecurityGroupIds;
             return this;
         }
+
         public Builder sourceSecurityGroupIds(String... sourceSecurityGroupIds) {
             return sourceSecurityGroupIds(List.of(sourceSecurityGroupIds));
-        }        public GetNodeGroupRemoteAccess build() {
-            return new GetNodeGroupRemoteAccess(ec2SshKey, sourceSecurityGroupIds);
+        }
+
+        public GetNodeGroupRemoteAccess build() {
+            $.ec2SshKey = Objects.requireNonNull($.ec2SshKey, "expected parameter 'ec2SshKey' to be non-null");
+            $.sourceSecurityGroupIds = Objects.requireNonNull($.sourceSecurityGroupIds, "expected parameter 'sourceSecurityGroupIds' to be non-null");
+            return $;
         }
     }
+
 }

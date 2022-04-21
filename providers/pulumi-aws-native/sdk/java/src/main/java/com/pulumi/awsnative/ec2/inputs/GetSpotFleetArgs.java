@@ -13,45 +13,45 @@ public final class GetSpotFleetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSpotFleetArgs Empty = new GetSpotFleetArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetSpotFleetArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetSpotFleetArgs() {}
 
-    private GetSpotFleetArgs() {
-        this.id = null;
+    private GetSpotFleetArgs(GetSpotFleetArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSpotFleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetSpotFleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSpotFleetArgs();
         }
 
         public Builder(GetSpotFleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetSpotFleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetSpotFleetArgs build() {
-            return new GetSpotFleetArgs(id);
+        }
+
+        public GetSpotFleetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

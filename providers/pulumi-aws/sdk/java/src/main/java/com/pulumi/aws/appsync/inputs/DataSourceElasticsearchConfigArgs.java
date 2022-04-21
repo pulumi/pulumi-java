@@ -5,9 +5,9 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DataSourceElasticsearchConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="endpoint", required=true)
-      private final Output<String> endpoint;
+    private Output<String> endpoint;
 
     public Output<String> endpoint() {
         return this.endpoint;
@@ -31,63 +31,59 @@ public final class DataSourceElasticsearchConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public DataSourceElasticsearchConfigArgs(
-        Output<String> endpoint,
-        @Nullable Output<String> region) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.region = region;
-    }
+    private DataSourceElasticsearchConfigArgs() {}
 
-    private DataSourceElasticsearchConfigArgs() {
-        this.endpoint = Codegen.empty();
-        this.region = Codegen.empty();
+    private DataSourceElasticsearchConfigArgs(DataSourceElasticsearchConfigArgs $) {
+        this.endpoint = $.endpoint;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceElasticsearchConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endpoint;
-        private @Nullable Output<String> region;
+        private DataSourceElasticsearchConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceElasticsearchConfigArgs();
         }
 
         public Builder(DataSourceElasticsearchConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.region = defaults.region;
+            $ = new DataSourceElasticsearchConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(Output<String> endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder endpoint(String endpoint) {
-            this.endpoint = Output.of(Objects.requireNonNull(endpoint));
-            return this;
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public DataSourceElasticsearchConfigArgs build() {
-            return new DataSourceElasticsearchConfigArgs(endpoint, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public DataSourceElasticsearchConfigArgs build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            return $;
         }
     }
+
 }

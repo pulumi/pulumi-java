@@ -5,9 +5,9 @@ package com.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ListenerCertificateArgs extends com.pulumi.resources.Resource
     public static final ListenerCertificateArgs Empty = new ListenerCertificateArgs();
 
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
-    public ListenerCertificateArgs(@Nullable Output<String> certificateArn) {
-        this.certificateArn = certificateArn;
-    }
+    private ListenerCertificateArgs() {}
 
-    private ListenerCertificateArgs() {
-        this.certificateArn = Codegen.empty();
+    private ListenerCertificateArgs(ListenerCertificateArgs $) {
+        this.certificateArn = $.certificateArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateArn;
+        private ListenerCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerCertificateArgs();
         }
 
         public Builder(ListenerCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
+            $ = new ListenerCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
-        }        public ListenerCertificateArgs build() {
-            return new ListenerCertificateArgs(certificateArn);
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
+        }
+
+        public ListenerCertificateArgs build() {
+            return $;
         }
     }
+
 }

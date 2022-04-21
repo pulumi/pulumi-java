@@ -27,7 +27,7 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -38,10 +38,10 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
      * 
      */
     @Import(name="securityRules")
-      private final @Nullable List<NsgSecurityRuleResponse> securityRules;
+    private @Nullable List<NsgSecurityRuleResponse> securityRules;
 
-    public List<NsgSecurityRuleResponse> securityRules() {
-        return this.securityRules == null ? List.of() : this.securityRules;
+    public Optional<List<NsgSecurityRuleResponse>> securityRules() {
+        return Optional.ofNullable(this.securityRules);
     }
 
     /**
@@ -49,67 +49,62 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends com.pulu
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final String targetResourceName;
+    private String targetResourceName;
 
     public String targetResourceName() {
         return this.targetResourceName;
     }
 
-    public NetworkSecurityGroupResourceSettingsResponse(
-        String resourceType,
-        @Nullable List<NsgSecurityRuleResponse> securityRules,
-        String targetResourceName) {
-        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
-        this.securityRules = securityRules;
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-    }
+    private NetworkSecurityGroupResourceSettingsResponse() {}
 
-    private NetworkSecurityGroupResourceSettingsResponse() {
-        this.resourceType = null;
-        this.securityRules = List.of();
-        this.targetResourceName = null;
+    private NetworkSecurityGroupResourceSettingsResponse(NetworkSecurityGroupResourceSettingsResponse $) {
+        this.resourceType = $.resourceType;
+        this.securityRules = $.securityRules;
+        this.targetResourceName = $.targetResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkSecurityGroupResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceType;
-        private @Nullable List<NsgSecurityRuleResponse> securityRules;
-        private String targetResourceName;
+        private NetworkSecurityGroupResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkSecurityGroupResourceSettingsResponse();
         }
 
         public Builder(NetworkSecurityGroupResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.securityRules = defaults.securityRules;
-    	      this.targetResourceName = defaults.targetResourceName;
+            $ = new NetworkSecurityGroupResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder securityRules(@Nullable List<NsgSecurityRuleResponse> securityRules) {
-            this.securityRules = securityRules;
+            $.securityRules = securityRules;
             return this;
         }
+
         public Builder securityRules(NsgSecurityRuleResponse... securityRules) {
             return securityRules(List.of(securityRules));
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
-        }        public NetworkSecurityGroupResourceSettingsResponse build() {
-            return new NetworkSecurityGroupResourceSettingsResponse(resourceType, securityRules, targetResourceName);
+        }
+
+        public NetworkSecurityGroupResourceSettingsResponse build() {
+            $.resourceType = Codegen.stringProp("resourceType").arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementN
      * 
      */
     @Import(name="statements", required=true)
-      private final Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementGetArgs>> statements;
+    private Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementGetArgs>> statements;
 
     public Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementGetArgs>> statements() {
         return this.statements;
     }
 
-    public WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs(Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementGetArgs>> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs() {}
 
-    private WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs() {
-        this.statements = Codegen.empty();
+    private WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs(WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementGetArgs>> statements;
+        private WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs();
         }
 
         public Builder(WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(Output<List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementGetArgs>> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementGetArgs> statements) {
-            this.statements = Output.of(Objects.requireNonNull(statements));
-            return this;
+            return statements(Output.of(statements));
         }
+
         public Builder statements(WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementGetArgs... statements) {
             return statements(List.of(statements));
-        }        public WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs build() {
-            return new WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs(statements);
+        }
+
+        public WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementGetArgs build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

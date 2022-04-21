@@ -7,9 +7,9 @@ import com.pulumi.azurenative.recoveryservices.inputs.InMageDiskSignatureExclusi
 import com.pulumi.azurenative.recoveryservices.inputs.InMageVolumeExclusionOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class InMageDiskExclusionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="diskSignatureOptions")
-      private final @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
+    private @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
 
-    public Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions() {
-        return this.diskSignatureOptions == null ? Codegen.empty() : this.diskSignatureOptions;
+    public Optional<Output<List<InMageDiskSignatureExclusionOptionsArgs>>> diskSignatureOptions() {
+        return Optional.ofNullable(this.diskSignatureOptions);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class InMageDiskExclusionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="volumeOptions")
-      private final @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
+    private @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
 
-    public Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions() {
-        return this.volumeOptions == null ? Codegen.empty() : this.volumeOptions;
+    public Optional<Output<List<InMageVolumeExclusionOptionsArgs>>> volumeOptions() {
+        return Optional.ofNullable(this.volumeOptions);
     }
 
-    public InMageDiskExclusionInputArgs(
-        @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions,
-        @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions) {
-        this.diskSignatureOptions = diskSignatureOptions;
-        this.volumeOptions = volumeOptions;
-    }
+    private InMageDiskExclusionInputArgs() {}
 
-    private InMageDiskExclusionInputArgs() {
-        this.diskSignatureOptions = Codegen.empty();
-        this.volumeOptions = Codegen.empty();
+    private InMageDiskExclusionInputArgs(InMageDiskExclusionInputArgs $) {
+        this.diskSignatureOptions = $.diskSignatureOptions;
+        this.volumeOptions = $.volumeOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageDiskExclusionInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions;
-        private @Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions;
+        private InMageDiskExclusionInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageDiskExclusionInputArgs();
         }
 
         public Builder(InMageDiskExclusionInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSignatureOptions = defaults.diskSignatureOptions;
-    	      this.volumeOptions = defaults.volumeOptions;
+            $ = new InMageDiskExclusionInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSignatureOptions(@Nullable Output<List<InMageDiskSignatureExclusionOptionsArgs>> diskSignatureOptions) {
-            this.diskSignatureOptions = diskSignatureOptions;
+            $.diskSignatureOptions = diskSignatureOptions;
             return this;
         }
-        public Builder diskSignatureOptions(@Nullable List<InMageDiskSignatureExclusionOptionsArgs> diskSignatureOptions) {
-            this.diskSignatureOptions = Codegen.ofNullable(diskSignatureOptions);
-            return this;
+
+        public Builder diskSignatureOptions(List<InMageDiskSignatureExclusionOptionsArgs> diskSignatureOptions) {
+            return diskSignatureOptions(Output.of(diskSignatureOptions));
         }
+
         public Builder diskSignatureOptions(InMageDiskSignatureExclusionOptionsArgs... diskSignatureOptions) {
             return diskSignatureOptions(List.of(diskSignatureOptions));
         }
+
         public Builder volumeOptions(@Nullable Output<List<InMageVolumeExclusionOptionsArgs>> volumeOptions) {
-            this.volumeOptions = volumeOptions;
+            $.volumeOptions = volumeOptions;
             return this;
         }
-        public Builder volumeOptions(@Nullable List<InMageVolumeExclusionOptionsArgs> volumeOptions) {
-            this.volumeOptions = Codegen.ofNullable(volumeOptions);
-            return this;
+
+        public Builder volumeOptions(List<InMageVolumeExclusionOptionsArgs> volumeOptions) {
+            return volumeOptions(Output.of(volumeOptions));
         }
+
         public Builder volumeOptions(InMageVolumeExclusionOptionsArgs... volumeOptions) {
             return volumeOptions(List.of(volumeOptions));
-        }        public InMageDiskExclusionInputArgs build() {
-            return new InMageDiskExclusionInputArgs(diskSignatureOptions, volumeOptions);
+        }
+
+        public InMageDiskExclusionInputArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.storage_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storage_v1.inputs.ObjectIamPolicyBindingsItemArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +23,14 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<ObjectIamPolicyBindingsItemArgs>> bindings;
+    private @Nullable Output<List<ObjectIamPolicyBindingsItemArgs>> bindings;
 
-    public Output<List<ObjectIamPolicyBindingsItemArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<ObjectIamPolicyBindingsItemArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -41,17 +41,17 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="generation")
-      private final @Nullable Output<String> generation;
+    private @Nullable Output<String> generation;
 
-    public Output<String> generation() {
-        return this.generation == null ? Codegen.empty() : this.generation;
+    public Optional<Output<String>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     /**
@@ -59,24 +59,24 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
     }
 
     @Import(name="provisionalUserProject")
-      private final @Nullable Output<String> provisionalUserProject;
+    private @Nullable Output<String> provisionalUserProject;
 
-    public Output<String> provisionalUserProject() {
-        return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
+    public Optional<Output<String>> provisionalUserProject() {
+        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     /**
@@ -84,17 +84,17 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     @Import(name="userProject")
-      private final @Nullable Output<String> userProject;
+    private @Nullable Output<String> userProject;
 
-    public Output<String> userProject() {
-        return this.userProject == null ? Codegen.empty() : this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
     /**
@@ -102,170 +102,144 @@ public final class ObjectIamPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ObjectIamPolicyArgs(
-        @Nullable Output<List<ObjectIamPolicyBindingsItemArgs>> bindings,
-        Output<String> bucket,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> generation,
-        @Nullable Output<String> kind,
-        Output<String> object,
-        @Nullable Output<String> provisionalUserProject,
-        @Nullable Output<String> resourceId,
-        @Nullable Output<String> userProject,
-        @Nullable Output<Integer> version) {
-        this.bindings = bindings;
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.etag = etag;
-        this.generation = generation;
-        this.kind = kind;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-        this.provisionalUserProject = provisionalUserProject;
-        this.resourceId = resourceId;
-        this.userProject = userProject;
-        this.version = version;
-    }
+    private ObjectIamPolicyArgs() {}
 
-    private ObjectIamPolicyArgs() {
-        this.bindings = Codegen.empty();
-        this.bucket = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.generation = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.object = Codegen.empty();
-        this.provisionalUserProject = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.userProject = Codegen.empty();
-        this.version = Codegen.empty();
+    private ObjectIamPolicyArgs(ObjectIamPolicyArgs $) {
+        this.bindings = $.bindings;
+        this.bucket = $.bucket;
+        this.etag = $.etag;
+        this.generation = $.generation;
+        this.kind = $.kind;
+        this.object = $.object;
+        this.provisionalUserProject = $.provisionalUserProject;
+        this.resourceId = $.resourceId;
+        this.userProject = $.userProject;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ObjectIamPolicyBindingsItemArgs>> bindings;
-        private Output<String> bucket;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> generation;
-        private @Nullable Output<String> kind;
-        private Output<String> object;
-        private @Nullable Output<String> provisionalUserProject;
-        private @Nullable Output<String> resourceId;
-        private @Nullable Output<String> userProject;
-        private @Nullable Output<Integer> version;
+        private ObjectIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectIamPolicyArgs();
         }
 
         public Builder(ObjectIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindings = defaults.bindings;
-    	      this.bucket = defaults.bucket;
-    	      this.etag = defaults.etag;
-    	      this.generation = defaults.generation;
-    	      this.kind = defaults.kind;
-    	      this.object = defaults.object;
-    	      this.provisionalUserProject = defaults.provisionalUserProject;
-    	      this.resourceId = defaults.resourceId;
-    	      this.userProject = defaults.userProject;
-    	      this.version = defaults.version;
+            $ = new ObjectIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindings(@Nullable Output<List<ObjectIamPolicyBindingsItemArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<ObjectIamPolicyBindingsItemArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<ObjectIamPolicyBindingsItemArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(ObjectIamPolicyBindingsItemArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder generation(@Nullable Output<String> generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
-        public Builder generation(@Nullable String generation) {
-            this.generation = Codegen.ofNullable(generation);
-            return this;
+
+        public Builder generation(String generation) {
+            return generation(Output.of(generation));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
+            return object(Output.of(object));
         }
+
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
-            this.provisionalUserProject = provisionalUserProject;
+            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
-        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = Codegen.ofNullable(provisionalUserProject);
-            return this;
+
+        public Builder provisionalUserProject(String provisionalUserProject) {
+            return provisionalUserProject(Output.of(provisionalUserProject));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder userProject(@Nullable Output<String> userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
         }
-        public Builder userProject(@Nullable String userProject) {
-            this.userProject = Codegen.ofNullable(userProject);
-            return this;
+
+        public Builder userProject(String userProject) {
+            return userProject(Output.of(userProject));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ObjectIamPolicyArgs build() {
-            return new ObjectIamPolicyArgs(bindings, bucket, etag, generation, kind, object, provisionalUserProject, resourceId, userProject, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public ObjectIamPolicyArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

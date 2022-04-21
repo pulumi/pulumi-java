@@ -6,10 +6,10 @@ package com.pulumi.awsnative.amplifyuibuilder.inputs;
 import com.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValuesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class ThemeValueArgs extends com.pulumi.resources.ResourceArgs {
     public static final ThemeValueArgs Empty = new ThemeValueArgs();
 
     @Import(name="children")
-      private final @Nullable Output<List<ThemeValuesArgs>> children;
+    private @Nullable Output<List<ThemeValuesArgs>> children;
 
-    public Output<List<ThemeValuesArgs>> children() {
-        return this.children == null ? Codegen.empty() : this.children;
+    public Optional<Output<List<ThemeValuesArgs>>> children() {
+        return Optional.ofNullable(this.children);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ThemeValueArgs(
-        @Nullable Output<List<ThemeValuesArgs>> children,
-        @Nullable Output<String> value) {
-        this.children = children;
-        this.value = value;
-    }
+    private ThemeValueArgs() {}
 
-    private ThemeValueArgs() {
-        this.children = Codegen.empty();
-        this.value = Codegen.empty();
+    private ThemeValueArgs(ThemeValueArgs $) {
+        this.children = $.children;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ThemeValuesArgs>> children;
-        private @Nullable Output<String> value;
+        private ThemeValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeValueArgs();
         }
 
         public Builder(ThemeValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.children = defaults.children;
-    	      this.value = defaults.value;
+            $ = new ThemeValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder children(@Nullable Output<List<ThemeValuesArgs>> children) {
-            this.children = children;
+            $.children = children;
             return this;
         }
-        public Builder children(@Nullable List<ThemeValuesArgs> children) {
-            this.children = Codegen.ofNullable(children);
-            return this;
+
+        public Builder children(List<ThemeValuesArgs> children) {
+            return children(Output.of(children));
         }
+
         public Builder children(ThemeValuesArgs... children) {
             return children(List.of(children));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ThemeValueArgs build() {
-            return new ThemeValueArgs(children, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ThemeValueArgs build() {
+            return $;
         }
     }
+
 }

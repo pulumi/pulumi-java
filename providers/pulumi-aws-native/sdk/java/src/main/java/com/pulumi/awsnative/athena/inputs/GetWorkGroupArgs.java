@@ -17,45 +17,45 @@ public final class GetWorkGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetWorkGroupArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetWorkGroupArgs() {}
 
-    private GetWorkGroupArgs() {
-        this.name = null;
+    private GetWorkGroupArgs(GetWorkGroupArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetWorkGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkGroupArgs();
         }
 
         public Builder(GetWorkGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetWorkGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetWorkGroupArgs build() {
-            return new GetWorkGroupArgs(name);
+        }
+
+        public GetWorkGroupArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

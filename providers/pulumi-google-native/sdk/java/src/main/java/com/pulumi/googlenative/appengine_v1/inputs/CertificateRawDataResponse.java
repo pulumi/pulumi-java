@@ -21,7 +21,7 @@ public final class CertificateRawDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="privateKey", required=true)
-      private final String privateKey;
+    private String privateKey;
 
     public String privateKey() {
         return this.privateKey;
@@ -32,55 +32,52 @@ public final class CertificateRawDataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="publicCertificate", required=true)
-      private final String publicCertificate;
+    private String publicCertificate;
 
     public String publicCertificate() {
         return this.publicCertificate;
     }
 
-    public CertificateRawDataResponse(
-        String privateKey,
-        String publicCertificate) {
-        this.privateKey = Objects.requireNonNull(privateKey, "expected parameter 'privateKey' to be non-null");
-        this.publicCertificate = Objects.requireNonNull(publicCertificate, "expected parameter 'publicCertificate' to be non-null");
-    }
+    private CertificateRawDataResponse() {}
 
-    private CertificateRawDataResponse() {
-        this.privateKey = null;
-        this.publicCertificate = null;
+    private CertificateRawDataResponse(CertificateRawDataResponse $) {
+        this.privateKey = $.privateKey;
+        this.publicCertificate = $.publicCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateRawDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateKey;
-        private String publicCertificate;
+        private CertificateRawDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateRawDataResponse();
         }
 
         public Builder(CertificateRawDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateKey = defaults.privateKey;
-    	      this.publicCertificate = defaults.publicCertificate;
+            $ = new CertificateRawDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateKey(String privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey);
+            $.privateKey = privateKey;
             return this;
         }
+
         public Builder publicCertificate(String publicCertificate) {
-            this.publicCertificate = Objects.requireNonNull(publicCertificate);
+            $.publicCertificate = publicCertificate;
             return this;
-        }        public CertificateRawDataResponse build() {
-            return new CertificateRawDataResponse(privateKey, publicCertificate);
+        }
+
+        public CertificateRawDataResponse build() {
+            $.privateKey = Objects.requireNonNull($.privateKey, "expected parameter 'privateKey' to be non-null");
+            $.publicCertificate = Objects.requireNonNull($.publicCertificate, "expected parameter 'publicCertificate' to be non-null");
+            return $;
         }
     }
+
 }

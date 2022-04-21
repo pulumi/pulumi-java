@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class GoogleCloudDatacatalogV1GcsFilesetSpecArgs extends com.pulumi
      * 
      */
     @Import(name="filePatterns", required=true)
-      private final Output<List<String>> filePatterns;
+    private Output<List<String>> filePatterns;
 
     public Output<List<String>> filePatterns() {
         return this.filePatterns;
     }
 
-    public GoogleCloudDatacatalogV1GcsFilesetSpecArgs(Output<List<String>> filePatterns) {
-        this.filePatterns = Objects.requireNonNull(filePatterns, "expected parameter 'filePatterns' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1GcsFilesetSpecArgs() {}
 
-    private GoogleCloudDatacatalogV1GcsFilesetSpecArgs() {
-        this.filePatterns = Codegen.empty();
+    private GoogleCloudDatacatalogV1GcsFilesetSpecArgs(GoogleCloudDatacatalogV1GcsFilesetSpecArgs $) {
+        this.filePatterns = $.filePatterns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1GcsFilesetSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> filePatterns;
+        private GoogleCloudDatacatalogV1GcsFilesetSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1GcsFilesetSpecArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1GcsFilesetSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePatterns = defaults.filePatterns;
+            $ = new GoogleCloudDatacatalogV1GcsFilesetSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filePatterns(Output<List<String>> filePatterns) {
-            this.filePatterns = Objects.requireNonNull(filePatterns);
+            $.filePatterns = filePatterns;
             return this;
         }
+
         public Builder filePatterns(List<String> filePatterns) {
-            this.filePatterns = Output.of(Objects.requireNonNull(filePatterns));
-            return this;
+            return filePatterns(Output.of(filePatterns));
         }
+
         public Builder filePatterns(String... filePatterns) {
             return filePatterns(List.of(filePatterns));
-        }        public GoogleCloudDatacatalogV1GcsFilesetSpecArgs build() {
-            return new GoogleCloudDatacatalogV1GcsFilesetSpecArgs(filePatterns);
+        }
+
+        public GoogleCloudDatacatalogV1GcsFilesetSpecArgs build() {
+            $.filePatterns = Objects.requireNonNull($.filePatterns, "expected parameter 'filePatterns' to be non-null");
+            return $;
         }
     }
+
 }

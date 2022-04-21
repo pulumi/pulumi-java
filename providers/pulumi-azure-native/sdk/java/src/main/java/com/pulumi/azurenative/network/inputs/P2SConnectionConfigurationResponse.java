@@ -26,10 +26,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enableInternetSecurity")
-      private final @Nullable Boolean enableInternetSecurity;
+    private @Nullable Boolean enableInternetSecurity;
 
     public Optional<Boolean> enableInternetSecurity() {
-        return this.enableInternetSecurity == null ? Optional.empty() : Optional.ofNullable(this.enableInternetSecurity);
+        return Optional.ofNullable(this.enableInternetSecurity);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -48,10 +48,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -81,10 +81,10 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="routingConfiguration")
-      private final @Nullable RoutingConfigurationResponse routingConfiguration;
+    private @Nullable RoutingConfigurationResponse routingConfiguration;
 
     public Optional<RoutingConfigurationResponse> routingConfiguration() {
-        return this.routingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.routingConfiguration);
+        return Optional.ofNullable(this.routingConfiguration);
     }
 
     /**
@@ -92,100 +92,82 @@ public final class P2SConnectionConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="vpnClientAddressPool")
-      private final @Nullable AddressSpaceResponse vpnClientAddressPool;
+    private @Nullable AddressSpaceResponse vpnClientAddressPool;
 
     public Optional<AddressSpaceResponse> vpnClientAddressPool() {
-        return this.vpnClientAddressPool == null ? Optional.empty() : Optional.ofNullable(this.vpnClientAddressPool);
+        return Optional.ofNullable(this.vpnClientAddressPool);
     }
 
-    public P2SConnectionConfigurationResponse(
-        @Nullable Boolean enableInternetSecurity,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable RoutingConfigurationResponse routingConfiguration,
-        @Nullable AddressSpaceResponse vpnClientAddressPool) {
-        this.enableInternetSecurity = enableInternetSecurity;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.routingConfiguration = routingConfiguration;
-        this.vpnClientAddressPool = vpnClientAddressPool;
-    }
+    private P2SConnectionConfigurationResponse() {}
 
-    private P2SConnectionConfigurationResponse() {
-        this.enableInternetSecurity = null;
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.routingConfiguration = null;
-        this.vpnClientAddressPool = null;
+    private P2SConnectionConfigurationResponse(P2SConnectionConfigurationResponse $) {
+        this.enableInternetSecurity = $.enableInternetSecurity;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.routingConfiguration = $.routingConfiguration;
+        this.vpnClientAddressPool = $.vpnClientAddressPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(P2SConnectionConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableInternetSecurity;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String provisioningState;
-        private @Nullable RoutingConfigurationResponse routingConfiguration;
-        private @Nullable AddressSpaceResponse vpnClientAddressPool;
+        private P2SConnectionConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new P2SConnectionConfigurationResponse();
         }
 
         public Builder(P2SConnectionConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableInternetSecurity = defaults.enableInternetSecurity;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.routingConfiguration = defaults.routingConfiguration;
-    	      this.vpnClientAddressPool = defaults.vpnClientAddressPool;
+            $ = new P2SConnectionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
-            this.enableInternetSecurity = enableInternetSecurity;
+            $.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
-            this.routingConfiguration = routingConfiguration;
+            $.routingConfiguration = routingConfiguration;
             return this;
         }
+
         public Builder vpnClientAddressPool(@Nullable AddressSpaceResponse vpnClientAddressPool) {
-            this.vpnClientAddressPool = vpnClientAddressPool;
+            $.vpnClientAddressPool = vpnClientAddressPool;
             return this;
-        }        public P2SConnectionConfigurationResponse build() {
-            return new P2SConnectionConfigurationResponse(enableInternetSecurity, etag, id, name, provisioningState, routingConfiguration, vpnClientAddressPool);
+        }
+
+        public P2SConnectionConfigurationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

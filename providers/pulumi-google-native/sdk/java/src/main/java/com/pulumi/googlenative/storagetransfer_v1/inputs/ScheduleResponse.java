@@ -23,7 +23,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTimeOfDay", required=true)
-      private final TimeOfDayResponse endTimeOfDay;
+    private TimeOfDayResponse endTimeOfDay;
 
     public TimeOfDayResponse endTimeOfDay() {
         return this.endTimeOfDay;
@@ -34,7 +34,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repeatInterval", required=true)
-      private final String repeatInterval;
+    private String repeatInterval;
 
     public String repeatInterval() {
         return this.repeatInterval;
@@ -45,7 +45,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scheduleEndDate", required=true)
-      private final DateResponse scheduleEndDate;
+    private DateResponse scheduleEndDate;
 
     public DateResponse scheduleEndDate() {
         return this.scheduleEndDate;
@@ -56,7 +56,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scheduleStartDate", required=true)
-      private final DateResponse scheduleStartDate;
+    private DateResponse scheduleStartDate;
 
     public DateResponse scheduleStartDate() {
         return this.scheduleStartDate;
@@ -67,82 +67,73 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTimeOfDay", required=true)
-      private final TimeOfDayResponse startTimeOfDay;
+    private TimeOfDayResponse startTimeOfDay;
 
     public TimeOfDayResponse startTimeOfDay() {
         return this.startTimeOfDay;
     }
 
-    public ScheduleResponse(
-        TimeOfDayResponse endTimeOfDay,
-        String repeatInterval,
-        DateResponse scheduleEndDate,
-        DateResponse scheduleStartDate,
-        TimeOfDayResponse startTimeOfDay) {
-        this.endTimeOfDay = Objects.requireNonNull(endTimeOfDay, "expected parameter 'endTimeOfDay' to be non-null");
-        this.repeatInterval = Objects.requireNonNull(repeatInterval, "expected parameter 'repeatInterval' to be non-null");
-        this.scheduleEndDate = Objects.requireNonNull(scheduleEndDate, "expected parameter 'scheduleEndDate' to be non-null");
-        this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate, "expected parameter 'scheduleStartDate' to be non-null");
-        this.startTimeOfDay = Objects.requireNonNull(startTimeOfDay, "expected parameter 'startTimeOfDay' to be non-null");
-    }
+    private ScheduleResponse() {}
 
-    private ScheduleResponse() {
-        this.endTimeOfDay = null;
-        this.repeatInterval = null;
-        this.scheduleEndDate = null;
-        this.scheduleStartDate = null;
-        this.startTimeOfDay = null;
+    private ScheduleResponse(ScheduleResponse $) {
+        this.endTimeOfDay = $.endTimeOfDay;
+        this.repeatInterval = $.repeatInterval;
+        this.scheduleEndDate = $.scheduleEndDate;
+        this.scheduleStartDate = $.scheduleStartDate;
+        this.startTimeOfDay = $.startTimeOfDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TimeOfDayResponse endTimeOfDay;
-        private String repeatInterval;
-        private DateResponse scheduleEndDate;
-        private DateResponse scheduleStartDate;
-        private TimeOfDayResponse startTimeOfDay;
+        private ScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleResponse();
         }
 
         public Builder(ScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTimeOfDay = defaults.endTimeOfDay;
-    	      this.repeatInterval = defaults.repeatInterval;
-    	      this.scheduleEndDate = defaults.scheduleEndDate;
-    	      this.scheduleStartDate = defaults.scheduleStartDate;
-    	      this.startTimeOfDay = defaults.startTimeOfDay;
+            $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTimeOfDay(TimeOfDayResponse endTimeOfDay) {
-            this.endTimeOfDay = Objects.requireNonNull(endTimeOfDay);
+            $.endTimeOfDay = endTimeOfDay;
             return this;
         }
+
         public Builder repeatInterval(String repeatInterval) {
-            this.repeatInterval = Objects.requireNonNull(repeatInterval);
+            $.repeatInterval = repeatInterval;
             return this;
         }
+
         public Builder scheduleEndDate(DateResponse scheduleEndDate) {
-            this.scheduleEndDate = Objects.requireNonNull(scheduleEndDate);
+            $.scheduleEndDate = scheduleEndDate;
             return this;
         }
+
         public Builder scheduleStartDate(DateResponse scheduleStartDate) {
-            this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
+            $.scheduleStartDate = scheduleStartDate;
             return this;
         }
+
         public Builder startTimeOfDay(TimeOfDayResponse startTimeOfDay) {
-            this.startTimeOfDay = Objects.requireNonNull(startTimeOfDay);
+            $.startTimeOfDay = startTimeOfDay;
             return this;
-        }        public ScheduleResponse build() {
-            return new ScheduleResponse(endTimeOfDay, repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);
+        }
+
+        public ScheduleResponse build() {
+            $.endTimeOfDay = Objects.requireNonNull($.endTimeOfDay, "expected parameter 'endTimeOfDay' to be non-null");
+            $.repeatInterval = Objects.requireNonNull($.repeatInterval, "expected parameter 'repeatInterval' to be non-null");
+            $.scheduleEndDate = Objects.requireNonNull($.scheduleEndDate, "expected parameter 'scheduleEndDate' to be non-null");
+            $.scheduleStartDate = Objects.requireNonNull($.scheduleStartDate, "expected parameter 'scheduleStartDate' to be non-null");
+            $.startTimeOfDay = Objects.requireNonNull($.startTimeOfDay, "expected parameter 'startTimeOfDay' to be non-null");
+            return $;
         }
     }
+
 }

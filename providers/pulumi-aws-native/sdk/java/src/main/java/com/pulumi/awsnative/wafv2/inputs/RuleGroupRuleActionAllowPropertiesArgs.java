@@ -6,8 +6,8 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupCustomRequestHandlingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class RuleGroupRuleActionAllowPropertiesArgs extends com.pulumi.res
     public static final RuleGroupRuleActionAllowPropertiesArgs Empty = new RuleGroupRuleActionAllowPropertiesArgs();
 
     @Import(name="customRequestHandling")
-      private final @Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
+    private @Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling() {
-        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
+    public Optional<Output<RuleGroupCustomRequestHandlingArgs>> customRequestHandling() {
+        return Optional.ofNullable(this.customRequestHandling);
     }
 
-    public RuleGroupRuleActionAllowPropertiesArgs(@Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling) {
-        this.customRequestHandling = customRequestHandling;
-    }
+    private RuleGroupRuleActionAllowPropertiesArgs() {}
 
-    private RuleGroupRuleActionAllowPropertiesArgs() {
-        this.customRequestHandling = Codegen.empty();
+    private RuleGroupRuleActionAllowPropertiesArgs(RuleGroupRuleActionAllowPropertiesArgs $) {
+        this.customRequestHandling = $.customRequestHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionAllowPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling;
+        private RuleGroupRuleActionAllowPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionAllowPropertiesArgs();
         }
 
         public Builder(RuleGroupRuleActionAllowPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRequestHandling = defaults.customRequestHandling;
+            $ = new RuleGroupRuleActionAllowPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customRequestHandling(@Nullable Output<RuleGroupCustomRequestHandlingArgs> customRequestHandling) {
-            this.customRequestHandling = customRequestHandling;
+            $.customRequestHandling = customRequestHandling;
             return this;
         }
-        public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandlingArgs customRequestHandling) {
-            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
-            return this;
-        }        public RuleGroupRuleActionAllowPropertiesArgs build() {
-            return new RuleGroupRuleActionAllowPropertiesArgs(customRequestHandling);
+
+        public Builder customRequestHandling(RuleGroupCustomRequestHandlingArgs customRequestHandling) {
+            return customRequestHandling(Output.of(customRequestHandling));
+        }
+
+        public RuleGroupRuleActionAllowPropertiesArgs build() {
+            return $;
         }
     }
+
 }

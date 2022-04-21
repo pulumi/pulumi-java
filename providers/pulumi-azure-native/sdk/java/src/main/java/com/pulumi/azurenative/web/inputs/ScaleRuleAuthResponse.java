@@ -23,10 +23,10 @@ public final class ScaleRuleAuthResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable String secretRef;
+    private @Nullable String secretRef;
 
     public Optional<String> secretRef() {
-        return this.secretRef == null ? Optional.empty() : Optional.ofNullable(this.secretRef);
+        return Optional.ofNullable(this.secretRef);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ScaleRuleAuthResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="triggerParameter")
-      private final @Nullable String triggerParameter;
+    private @Nullable String triggerParameter;
 
     public Optional<String> triggerParameter() {
-        return this.triggerParameter == null ? Optional.empty() : Optional.ofNullable(this.triggerParameter);
+        return Optional.ofNullable(this.triggerParameter);
     }
 
-    public ScaleRuleAuthResponse(
-        @Nullable String secretRef,
-        @Nullable String triggerParameter) {
-        this.secretRef = secretRef;
-        this.triggerParameter = triggerParameter;
-    }
+    private ScaleRuleAuthResponse() {}
 
-    private ScaleRuleAuthResponse() {
-        this.secretRef = null;
-        this.triggerParameter = null;
+    private ScaleRuleAuthResponse(ScaleRuleAuthResponse $) {
+        this.secretRef = $.secretRef;
+        this.triggerParameter = $.triggerParameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScaleRuleAuthResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String secretRef;
-        private @Nullable String triggerParameter;
+        private ScaleRuleAuthResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScaleRuleAuthResponse();
         }
 
         public Builder(ScaleRuleAuthResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretRef = defaults.secretRef;
-    	      this.triggerParameter = defaults.triggerParameter;
+            $ = new ScaleRuleAuthResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder secretRef(@Nullable String secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
+
         public Builder triggerParameter(@Nullable String triggerParameter) {
-            this.triggerParameter = triggerParameter;
+            $.triggerParameter = triggerParameter;
             return this;
-        }        public ScaleRuleAuthResponse build() {
-            return new ScaleRuleAuthResponse(secretRef, triggerParameter);
+        }
+
+        public ScaleRuleAuthResponse build() {
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="dnsServers")
-      private final @Nullable List<String> dnsServers;
+    private @Nullable List<String> dnsServers;
 
-    public List<String> dnsServers() {
-        return this.dnsServers == null ? List.of() : this.dnsServers;
+    public Optional<List<String>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="gateway")
-      private final @Nullable String gateway;
+    private @Nullable String gateway;
 
     public Optional<String> gateway() {
-        return this.gateway == null ? Optional.empty() : Optional.ofNullable(this.gateway);
+        return Optional.ofNullable(this.gateway);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="ipAllocationMethod")
-      private final @Nullable String ipAllocationMethod;
+    private @Nullable String ipAllocationMethod;
 
     public Optional<String> ipAllocationMethod() {
-        return this.ipAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.ipAllocationMethod);
+        return Optional.ofNullable(this.ipAllocationMethod);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="ipVersion")
-      private final @Nullable String ipVersion;
+    private @Nullable String ipVersion;
 
     public Optional<String> ipVersion() {
-        return this.ipVersion == null ? Optional.empty() : Optional.ofNullable(this.ipVersion);
+        return Optional.ofNullable(this.ipVersion);
     }
 
     /**
@@ -79,94 +79,78 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
      * 
      */
     @Import(name="subnet")
-      private final @Nullable String subnet;
+    private @Nullable String subnet;
 
     public Optional<String> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
-    public NetworkInterfaceIPConfigurationResponse(
-        @Nullable List<String> dnsServers,
-        @Nullable String gateway,
-        @Nullable String ipAddress,
-        @Nullable String ipAllocationMethod,
-        @Nullable String ipVersion,
-        @Nullable String subnet) {
-        this.dnsServers = dnsServers;
-        this.gateway = gateway;
-        this.ipAddress = ipAddress;
-        this.ipAllocationMethod = ipAllocationMethod;
-        this.ipVersion = ipVersion;
-        this.subnet = subnet;
-    }
+    private NetworkInterfaceIPConfigurationResponse() {}
 
-    private NetworkInterfaceIPConfigurationResponse() {
-        this.dnsServers = List.of();
-        this.gateway = null;
-        this.ipAddress = null;
-        this.ipAllocationMethod = null;
-        this.ipVersion = null;
-        this.subnet = null;
+    private NetworkInterfaceIPConfigurationResponse(NetworkInterfaceIPConfigurationResponse $) {
+        this.dnsServers = $.dnsServers;
+        this.gateway = $.gateway;
+        this.ipAddress = $.ipAddress;
+        this.ipAllocationMethod = $.ipAllocationMethod;
+        this.ipVersion = $.ipVersion;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceIPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> dnsServers;
-        private @Nullable String gateway;
-        private @Nullable String ipAddress;
-        private @Nullable String ipAllocationMethod;
-        private @Nullable String ipVersion;
-        private @Nullable String subnet;
+        private NetworkInterfaceIPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceIPConfigurationResponse();
         }
 
         public Builder(NetworkInterfaceIPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.gateway = defaults.gateway;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.ipAllocationMethod = defaults.ipAllocationMethod;
-    	      this.ipVersion = defaults.ipVersion;
-    	      this.subnet = defaults.subnet;
+            $ = new NetworkInterfaceIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder gateway(@Nullable String gateway) {
-            this.gateway = gateway;
+            $.gateway = gateway;
             return this;
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder ipAllocationMethod(@Nullable String ipAllocationMethod) {
-            this.ipAllocationMethod = ipAllocationMethod;
+            $.ipAllocationMethod = ipAllocationMethod;
             return this;
         }
+
         public Builder ipVersion(@Nullable String ipVersion) {
-            this.ipVersion = ipVersion;
+            $.ipVersion = ipVersion;
             return this;
         }
+
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
-        }        public NetworkInterfaceIPConfigurationResponse build() {
-            return new NetworkInterfaceIPConfigurationResponse(dnsServers, gateway, ipAddress, ipAllocationMethod, ipVersion, subnet);
+        }
+
+        public NetworkInterfaceIPConfigurationResponse build() {
+            return $;
         }
     }
+
 }

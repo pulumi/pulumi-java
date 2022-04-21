@@ -7,13 +7,13 @@ import com.pulumi.awsnative.backup.inputs.BackupPlanCopyActionResourceTypeArgs;
 import com.pulumi.awsnative.backup.inputs.BackupPlanLifecycleResourceTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,213 +22,190 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends com.pulumi.resou
     public static final BackupPlanBackupRuleResourceTypeArgs Empty = new BackupPlanBackupRuleResourceTypeArgs();
 
     @Import(name="completionWindowMinutes")
-      private final @Nullable Output<Double> completionWindowMinutes;
+    private @Nullable Output<Double> completionWindowMinutes;
 
-    public Output<Double> completionWindowMinutes() {
-        return this.completionWindowMinutes == null ? Codegen.empty() : this.completionWindowMinutes;
+    public Optional<Output<Double>> completionWindowMinutes() {
+        return Optional.ofNullable(this.completionWindowMinutes);
     }
 
     @Import(name="copyActions")
-      private final @Nullable Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions;
+    private @Nullable Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions;
 
-    public Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions() {
-        return this.copyActions == null ? Codegen.empty() : this.copyActions;
+    public Optional<Output<List<BackupPlanCopyActionResourceTypeArgs>>> copyActions() {
+        return Optional.ofNullable(this.copyActions);
     }
 
     @Import(name="enableContinuousBackup")
-      private final @Nullable Output<Boolean> enableContinuousBackup;
+    private @Nullable Output<Boolean> enableContinuousBackup;
 
-    public Output<Boolean> enableContinuousBackup() {
-        return this.enableContinuousBackup == null ? Codegen.empty() : this.enableContinuousBackup;
+    public Optional<Output<Boolean>> enableContinuousBackup() {
+        return Optional.ofNullable(this.enableContinuousBackup);
     }
 
     @Import(name="lifecycle")
-      private final @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
+    private @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
-    public Output<BackupPlanLifecycleResourceTypeArgs> lifecycle() {
-        return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
+    public Optional<Output<BackupPlanLifecycleResourceTypeArgs>> lifecycle() {
+        return Optional.ofNullable(this.lifecycle);
     }
 
     @Import(name="recoveryPointTags")
-      private final @Nullable Output<Object> recoveryPointTags;
+    private @Nullable Output<Object> recoveryPointTags;
 
-    public Output<Object> recoveryPointTags() {
-        return this.recoveryPointTags == null ? Codegen.empty() : this.recoveryPointTags;
+    public Optional<Output<Object>> recoveryPointTags() {
+        return Optional.ofNullable(this.recoveryPointTags);
     }
 
     @Import(name="ruleName", required=true)
-      private final Output<String> ruleName;
+    private Output<String> ruleName;
 
     public Output<String> ruleName() {
         return this.ruleName;
     }
 
     @Import(name="scheduleExpression")
-      private final @Nullable Output<String> scheduleExpression;
+    private @Nullable Output<String> scheduleExpression;
 
-    public Output<String> scheduleExpression() {
-        return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
+    public Optional<Output<String>> scheduleExpression() {
+        return Optional.ofNullable(this.scheduleExpression);
     }
 
     @Import(name="startWindowMinutes")
-      private final @Nullable Output<Double> startWindowMinutes;
+    private @Nullable Output<Double> startWindowMinutes;
 
-    public Output<Double> startWindowMinutes() {
-        return this.startWindowMinutes == null ? Codegen.empty() : this.startWindowMinutes;
+    public Optional<Output<Double>> startWindowMinutes() {
+        return Optional.ofNullable(this.startWindowMinutes);
     }
 
     @Import(name="targetBackupVault", required=true)
-      private final Output<String> targetBackupVault;
+    private Output<String> targetBackupVault;
 
     public Output<String> targetBackupVault() {
         return this.targetBackupVault;
     }
 
-    public BackupPlanBackupRuleResourceTypeArgs(
-        @Nullable Output<Double> completionWindowMinutes,
-        @Nullable Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions,
-        @Nullable Output<Boolean> enableContinuousBackup,
-        @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle,
-        @Nullable Output<Object> recoveryPointTags,
-        Output<String> ruleName,
-        @Nullable Output<String> scheduleExpression,
-        @Nullable Output<Double> startWindowMinutes,
-        Output<String> targetBackupVault) {
-        this.completionWindowMinutes = completionWindowMinutes;
-        this.copyActions = copyActions;
-        this.enableContinuousBackup = enableContinuousBackup;
-        this.lifecycle = lifecycle;
-        this.recoveryPointTags = recoveryPointTags;
-        this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
-        this.scheduleExpression = scheduleExpression;
-        this.startWindowMinutes = startWindowMinutes;
-        this.targetBackupVault = Objects.requireNonNull(targetBackupVault, "expected parameter 'targetBackupVault' to be non-null");
-    }
+    private BackupPlanBackupRuleResourceTypeArgs() {}
 
-    private BackupPlanBackupRuleResourceTypeArgs() {
-        this.completionWindowMinutes = Codegen.empty();
-        this.copyActions = Codegen.empty();
-        this.enableContinuousBackup = Codegen.empty();
-        this.lifecycle = Codegen.empty();
-        this.recoveryPointTags = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.scheduleExpression = Codegen.empty();
-        this.startWindowMinutes = Codegen.empty();
-        this.targetBackupVault = Codegen.empty();
+    private BackupPlanBackupRuleResourceTypeArgs(BackupPlanBackupRuleResourceTypeArgs $) {
+        this.completionWindowMinutes = $.completionWindowMinutes;
+        this.copyActions = $.copyActions;
+        this.enableContinuousBackup = $.enableContinuousBackup;
+        this.lifecycle = $.lifecycle;
+        this.recoveryPointTags = $.recoveryPointTags;
+        this.ruleName = $.ruleName;
+        this.scheduleExpression = $.scheduleExpression;
+        this.startWindowMinutes = $.startWindowMinutes;
+        this.targetBackupVault = $.targetBackupVault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupPlanBackupRuleResourceTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> completionWindowMinutes;
-        private @Nullable Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions;
-        private @Nullable Output<Boolean> enableContinuousBackup;
-        private @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
-        private @Nullable Output<Object> recoveryPointTags;
-        private Output<String> ruleName;
-        private @Nullable Output<String> scheduleExpression;
-        private @Nullable Output<Double> startWindowMinutes;
-        private Output<String> targetBackupVault;
+        private BackupPlanBackupRuleResourceTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupPlanBackupRuleResourceTypeArgs();
         }
 
         public Builder(BackupPlanBackupRuleResourceTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completionWindowMinutes = defaults.completionWindowMinutes;
-    	      this.copyActions = defaults.copyActions;
-    	      this.enableContinuousBackup = defaults.enableContinuousBackup;
-    	      this.lifecycle = defaults.lifecycle;
-    	      this.recoveryPointTags = defaults.recoveryPointTags;
-    	      this.ruleName = defaults.ruleName;
-    	      this.scheduleExpression = defaults.scheduleExpression;
-    	      this.startWindowMinutes = defaults.startWindowMinutes;
-    	      this.targetBackupVault = defaults.targetBackupVault;
+            $ = new BackupPlanBackupRuleResourceTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder completionWindowMinutes(@Nullable Output<Double> completionWindowMinutes) {
-            this.completionWindowMinutes = completionWindowMinutes;
+            $.completionWindowMinutes = completionWindowMinutes;
             return this;
         }
-        public Builder completionWindowMinutes(@Nullable Double completionWindowMinutes) {
-            this.completionWindowMinutes = Codegen.ofNullable(completionWindowMinutes);
-            return this;
+
+        public Builder completionWindowMinutes(Double completionWindowMinutes) {
+            return completionWindowMinutes(Output.of(completionWindowMinutes));
         }
+
         public Builder copyActions(@Nullable Output<List<BackupPlanCopyActionResourceTypeArgs>> copyActions) {
-            this.copyActions = copyActions;
+            $.copyActions = copyActions;
             return this;
         }
-        public Builder copyActions(@Nullable List<BackupPlanCopyActionResourceTypeArgs> copyActions) {
-            this.copyActions = Codegen.ofNullable(copyActions);
-            return this;
+
+        public Builder copyActions(List<BackupPlanCopyActionResourceTypeArgs> copyActions) {
+            return copyActions(Output.of(copyActions));
         }
+
         public Builder copyActions(BackupPlanCopyActionResourceTypeArgs... copyActions) {
             return copyActions(List.of(copyActions));
         }
+
         public Builder enableContinuousBackup(@Nullable Output<Boolean> enableContinuousBackup) {
-            this.enableContinuousBackup = enableContinuousBackup;
+            $.enableContinuousBackup = enableContinuousBackup;
             return this;
         }
-        public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
-            this.enableContinuousBackup = Codegen.ofNullable(enableContinuousBackup);
-            return this;
+
+        public Builder enableContinuousBackup(Boolean enableContinuousBackup) {
+            return enableContinuousBackup(Output.of(enableContinuousBackup));
         }
+
         public Builder lifecycle(@Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
-            this.lifecycle = lifecycle;
+            $.lifecycle = lifecycle;
             return this;
         }
-        public Builder lifecycle(@Nullable BackupPlanLifecycleResourceTypeArgs lifecycle) {
-            this.lifecycle = Codegen.ofNullable(lifecycle);
-            return this;
+
+        public Builder lifecycle(BackupPlanLifecycleResourceTypeArgs lifecycle) {
+            return lifecycle(Output.of(lifecycle));
         }
+
         public Builder recoveryPointTags(@Nullable Output<Object> recoveryPointTags) {
-            this.recoveryPointTags = recoveryPointTags;
+            $.recoveryPointTags = recoveryPointTags;
             return this;
         }
-        public Builder recoveryPointTags(@Nullable Object recoveryPointTags) {
-            this.recoveryPointTags = Codegen.ofNullable(recoveryPointTags);
-            return this;
+
+        public Builder recoveryPointTags(Object recoveryPointTags) {
+            return recoveryPointTags(Output.of(recoveryPointTags));
         }
+
         public Builder ruleName(Output<String> ruleName) {
-            this.ruleName = Objects.requireNonNull(ruleName);
+            $.ruleName = ruleName;
             return this;
         }
+
         public Builder ruleName(String ruleName) {
-            this.ruleName = Output.of(Objects.requireNonNull(ruleName));
-            return this;
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
-            this.scheduleExpression = scheduleExpression;
+            $.scheduleExpression = scheduleExpression;
             return this;
         }
-        public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = Codegen.ofNullable(scheduleExpression);
-            return this;
+
+        public Builder scheduleExpression(String scheduleExpression) {
+            return scheduleExpression(Output.of(scheduleExpression));
         }
+
         public Builder startWindowMinutes(@Nullable Output<Double> startWindowMinutes) {
-            this.startWindowMinutes = startWindowMinutes;
+            $.startWindowMinutes = startWindowMinutes;
             return this;
         }
-        public Builder startWindowMinutes(@Nullable Double startWindowMinutes) {
-            this.startWindowMinutes = Codegen.ofNullable(startWindowMinutes);
-            return this;
+
+        public Builder startWindowMinutes(Double startWindowMinutes) {
+            return startWindowMinutes(Output.of(startWindowMinutes));
         }
+
         public Builder targetBackupVault(Output<String> targetBackupVault) {
-            this.targetBackupVault = Objects.requireNonNull(targetBackupVault);
+            $.targetBackupVault = targetBackupVault;
             return this;
         }
+
         public Builder targetBackupVault(String targetBackupVault) {
-            this.targetBackupVault = Output.of(Objects.requireNonNull(targetBackupVault));
-            return this;
-        }        public BackupPlanBackupRuleResourceTypeArgs build() {
-            return new BackupPlanBackupRuleResourceTypeArgs(completionWindowMinutes, copyActions, enableContinuousBackup, lifecycle, recoveryPointTags, ruleName, scheduleExpression, startWindowMinutes, targetBackupVault);
+            return targetBackupVault(Output.of(targetBackupVault));
+        }
+
+        public BackupPlanBackupRuleResourceTypeArgs build() {
+            $.ruleName = Objects.requireNonNull($.ruleName, "expected parameter 'ruleName' to be non-null");
+            $.targetBackupVault = Objects.requireNonNull($.targetBackupVault, "expected parameter 'targetBackupVault' to be non-null");
+            return $;
         }
     }
+
 }

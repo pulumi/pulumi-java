@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input;
+    private @Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input;
 
-    public Output<MigrateSqlServerSqlMITaskInputArgs> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<MigrateSqlServerSqlMITaskInputArgs>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class MigrateSqlServerSqlMITaskPropertiesArgs extends com.pulumi.re
      * 
      */
     @Import(name="taskType", required=true)
-      private final Output<String> taskType;
+    private Output<String> taskType;
 
     public Output<String> taskType() {
         return this.taskType;
     }
 
-    public MigrateSqlServerSqlMITaskPropertiesArgs(
-        @Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input,
-        Output<String> taskType) {
-        this.input = input;
-        this.taskType = Codegen.stringProp("taskType").output().arg(taskType).require();
-    }
+    private MigrateSqlServerSqlMITaskPropertiesArgs() {}
 
-    private MigrateSqlServerSqlMITaskPropertiesArgs() {
-        this.input = Codegen.empty();
-        this.taskType = Codegen.empty();
+    private MigrateSqlServerSqlMITaskPropertiesArgs(MigrateSqlServerSqlMITaskPropertiesArgs $) {
+        this.input = $.input;
+        this.taskType = $.taskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlMITaskPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input;
-        private Output<String> taskType;
+        private MigrateSqlServerSqlMITaskPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlMITaskPropertiesArgs();
         }
 
         public Builder(MigrateSqlServerSqlMITaskPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.input = defaults.input;
-    	      this.taskType = defaults.taskType;
+            $ = new MigrateSqlServerSqlMITaskPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder input(@Nullable Output<MigrateSqlServerSqlMITaskInputArgs> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable MigrateSqlServerSqlMITaskInputArgs input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(MigrateSqlServerSqlMITaskInputArgs input) {
+            return input(Output.of(input));
         }
+
         public Builder taskType(Output<String> taskType) {
-            this.taskType = Objects.requireNonNull(taskType);
+            $.taskType = taskType;
             return this;
         }
+
         public Builder taskType(String taskType) {
-            this.taskType = Output.of(Objects.requireNonNull(taskType));
-            return this;
-        }        public MigrateSqlServerSqlMITaskPropertiesArgs build() {
-            return new MigrateSqlServerSqlMITaskPropertiesArgs(input, taskType);
+            return taskType(Output.of(taskType));
+        }
+
+        public MigrateSqlServerSqlMITaskPropertiesArgs build() {
+            $.taskType = Codegen.stringProp("taskType").output().arg($.taskType).require();
+            return $;
         }
     }
+
 }

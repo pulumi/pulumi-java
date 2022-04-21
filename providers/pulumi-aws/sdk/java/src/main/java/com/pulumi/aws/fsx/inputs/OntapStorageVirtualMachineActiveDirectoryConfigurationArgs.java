@@ -6,9 +6,9 @@ package com.pulumi.aws.fsx.inputs;
 import com.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationArgs ex
      * 
      */
     @Import(name="netbiosName")
-      private final @Nullable Output<String> netbiosName;
+    private @Nullable Output<String> netbiosName;
 
-    public Output<String> netbiosName() {
-        return this.netbiosName == null ? Codegen.empty() : this.netbiosName;
+    public Optional<Output<String>> netbiosName() {
+        return Optional.ofNullable(this.netbiosName);
     }
 
     @Import(name="selfManagedActiveDirectoryConfiguration")
-      private final @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs> selfManagedActiveDirectoryConfiguration;
+    private @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs> selfManagedActiveDirectoryConfiguration;
 
-    public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs> selfManagedActiveDirectoryConfiguration() {
-        return this.selfManagedActiveDirectoryConfiguration == null ? Codegen.empty() : this.selfManagedActiveDirectoryConfiguration;
+    public Optional<Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs>> selfManagedActiveDirectoryConfiguration() {
+        return Optional.ofNullable(this.selfManagedActiveDirectoryConfiguration);
     }
 
-    public OntapStorageVirtualMachineActiveDirectoryConfigurationArgs(
-        @Nullable Output<String> netbiosName,
-        @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs> selfManagedActiveDirectoryConfiguration) {
-        this.netbiosName = netbiosName;
-        this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
-    }
+    private OntapStorageVirtualMachineActiveDirectoryConfigurationArgs() {}
 
-    private OntapStorageVirtualMachineActiveDirectoryConfigurationArgs() {
-        this.netbiosName = Codegen.empty();
-        this.selfManagedActiveDirectoryConfiguration = Codegen.empty();
+    private OntapStorageVirtualMachineActiveDirectoryConfigurationArgs(OntapStorageVirtualMachineActiveDirectoryConfigurationArgs $) {
+        this.netbiosName = $.netbiosName;
+        this.selfManagedActiveDirectoryConfiguration = $.selfManagedActiveDirectoryConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OntapStorageVirtualMachineActiveDirectoryConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> netbiosName;
-        private @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs> selfManagedActiveDirectoryConfiguration;
+        private OntapStorageVirtualMachineActiveDirectoryConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OntapStorageVirtualMachineActiveDirectoryConfigurationArgs();
         }
 
         public Builder(OntapStorageVirtualMachineActiveDirectoryConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.netbiosName = defaults.netbiosName;
-    	      this.selfManagedActiveDirectoryConfiguration = defaults.selfManagedActiveDirectoryConfiguration;
+            $ = new OntapStorageVirtualMachineActiveDirectoryConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder netbiosName(@Nullable Output<String> netbiosName) {
-            this.netbiosName = netbiosName;
+            $.netbiosName = netbiosName;
             return this;
         }
-        public Builder netbiosName(@Nullable String netbiosName) {
-            this.netbiosName = Codegen.ofNullable(netbiosName);
-            return this;
+
+        public Builder netbiosName(String netbiosName) {
+            return netbiosName(Output.of(netbiosName));
         }
+
         public Builder selfManagedActiveDirectoryConfiguration(@Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs> selfManagedActiveDirectoryConfiguration) {
-            this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
+            $.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
             return this;
         }
-        public Builder selfManagedActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs selfManagedActiveDirectoryConfiguration) {
-            this.selfManagedActiveDirectoryConfiguration = Codegen.ofNullable(selfManagedActiveDirectoryConfiguration);
-            return this;
-        }        public OntapStorageVirtualMachineActiveDirectoryConfigurationArgs build() {
-            return new OntapStorageVirtualMachineActiveDirectoryConfigurationArgs(netbiosName, selfManagedActiveDirectoryConfiguration);
+
+        public Builder selfManagedActiveDirectoryConfiguration(OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs selfManagedActiveDirectoryConfiguration) {
+            return selfManagedActiveDirectoryConfiguration(Output.of(selfManagedActiveDirectoryConfiguration));
+        }
+
+        public OntapStorageVirtualMachineActiveDirectoryConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -8,8 +8,8 @@ import com.pulumi.azurenative.scheduler.inputs.JobCollectionQuotaArgs;
 import com.pulumi.azurenative.scheduler.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class JobCollectionPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="quota")
-      private final @Nullable Output<JobCollectionQuotaArgs> quota;
+    private @Nullable Output<JobCollectionQuotaArgs> quota;
 
-    public Output<JobCollectionQuotaArgs> quota() {
-        return this.quota == null ? Codegen.empty() : this.quota;
+    public Optional<Output<JobCollectionQuotaArgs>> quota() {
+        return Optional.ofNullable(this.quota);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class JobCollectionPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class JobCollectionPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<JobCollectionState> state;
+    private @Nullable Output<JobCollectionState> state;
 
-    public Output<JobCollectionState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<JobCollectionState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public JobCollectionPropertiesArgs(
-        @Nullable Output<JobCollectionQuotaArgs> quota,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<JobCollectionState> state) {
-        this.quota = quota;
-        this.sku = sku;
-        this.state = state;
-    }
+    private JobCollectionPropertiesArgs() {}
 
-    private JobCollectionPropertiesArgs() {
-        this.quota = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.state = Codegen.empty();
+    private JobCollectionPropertiesArgs(JobCollectionPropertiesArgs $) {
+        this.quota = $.quota;
+        this.sku = $.sku;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobCollectionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobCollectionQuotaArgs> quota;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<JobCollectionState> state;
+        private JobCollectionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobCollectionPropertiesArgs();
         }
 
         public Builder(JobCollectionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quota = defaults.quota;
-    	      this.sku = defaults.sku;
-    	      this.state = defaults.state;
+            $ = new JobCollectionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quota(@Nullable Output<JobCollectionQuotaArgs> quota) {
-            this.quota = quota;
+            $.quota = quota;
             return this;
         }
-        public Builder quota(@Nullable JobCollectionQuotaArgs quota) {
-            this.quota = Codegen.ofNullable(quota);
-            return this;
+
+        public Builder quota(JobCollectionQuotaArgs quota) {
+            return quota(Output.of(quota));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder state(@Nullable Output<JobCollectionState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable JobCollectionState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public JobCollectionPropertiesArgs build() {
-            return new JobCollectionPropertiesArgs(quota, sku, state);
+
+        public Builder state(JobCollectionState state) {
+            return state(Output.of(state));
+        }
+
+        public JobCollectionPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EventTargetRetryPolicyGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="maximumEventAgeInSeconds")
-      private final @Nullable Output<Integer> maximumEventAgeInSeconds;
+    private @Nullable Output<Integer> maximumEventAgeInSeconds;
 
-    public Output<Integer> maximumEventAgeInSeconds() {
-        return this.maximumEventAgeInSeconds == null ? Codegen.empty() : this.maximumEventAgeInSeconds;
+    public Optional<Output<Integer>> maximumEventAgeInSeconds() {
+        return Optional.ofNullable(this.maximumEventAgeInSeconds);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class EventTargetRetryPolicyGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="maximumRetryAttempts")
-      private final @Nullable Output<Integer> maximumRetryAttempts;
+    private @Nullable Output<Integer> maximumRetryAttempts;
 
-    public Output<Integer> maximumRetryAttempts() {
-        return this.maximumRetryAttempts == null ? Codegen.empty() : this.maximumRetryAttempts;
+    public Optional<Output<Integer>> maximumRetryAttempts() {
+        return Optional.ofNullable(this.maximumRetryAttempts);
     }
 
-    public EventTargetRetryPolicyGetArgs(
-        @Nullable Output<Integer> maximumEventAgeInSeconds,
-        @Nullable Output<Integer> maximumRetryAttempts) {
-        this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
-        this.maximumRetryAttempts = maximumRetryAttempts;
-    }
+    private EventTargetRetryPolicyGetArgs() {}
 
-    private EventTargetRetryPolicyGetArgs() {
-        this.maximumEventAgeInSeconds = Codegen.empty();
-        this.maximumRetryAttempts = Codegen.empty();
+    private EventTargetRetryPolicyGetArgs(EventTargetRetryPolicyGetArgs $) {
+        this.maximumEventAgeInSeconds = $.maximumEventAgeInSeconds;
+        this.maximumRetryAttempts = $.maximumRetryAttempts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTargetRetryPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maximumEventAgeInSeconds;
-        private @Nullable Output<Integer> maximumRetryAttempts;
+        private EventTargetRetryPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTargetRetryPolicyGetArgs();
         }
 
         public Builder(EventTargetRetryPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximumEventAgeInSeconds = defaults.maximumEventAgeInSeconds;
-    	      this.maximumRetryAttempts = defaults.maximumRetryAttempts;
+            $ = new EventTargetRetryPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maximumEventAgeInSeconds(@Nullable Output<Integer> maximumEventAgeInSeconds) {
-            this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
+            $.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
             return this;
         }
-        public Builder maximumEventAgeInSeconds(@Nullable Integer maximumEventAgeInSeconds) {
-            this.maximumEventAgeInSeconds = Codegen.ofNullable(maximumEventAgeInSeconds);
-            return this;
+
+        public Builder maximumEventAgeInSeconds(Integer maximumEventAgeInSeconds) {
+            return maximumEventAgeInSeconds(Output.of(maximumEventAgeInSeconds));
         }
+
         public Builder maximumRetryAttempts(@Nullable Output<Integer> maximumRetryAttempts) {
-            this.maximumRetryAttempts = maximumRetryAttempts;
+            $.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
-        public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
-            this.maximumRetryAttempts = Codegen.ofNullable(maximumRetryAttempts);
-            return this;
-        }        public EventTargetRetryPolicyGetArgs build() {
-            return new EventTargetRetryPolicyGetArgs(maximumEventAgeInSeconds, maximumRetryAttempts);
+
+        public Builder maximumRetryAttempts(Integer maximumRetryAttempts) {
+            return maximumRetryAttempts(Output.of(maximumRetryAttempts));
+        }
+
+        public EventTargetRetryPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

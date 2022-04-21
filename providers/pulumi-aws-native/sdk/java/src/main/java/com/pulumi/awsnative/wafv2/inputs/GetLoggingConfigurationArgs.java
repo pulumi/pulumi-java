@@ -17,45 +17,45 @@ public final class GetLoggingConfigurationArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceArn", required=true)
-      private final String resourceArn;
+    private String resourceArn;
 
     public String resourceArn() {
         return this.resourceArn;
     }
 
-    public GetLoggingConfigurationArgs(String resourceArn) {
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-    }
+    private GetLoggingConfigurationArgs() {}
 
-    private GetLoggingConfigurationArgs() {
-        this.resourceArn = null;
+    private GetLoggingConfigurationArgs(GetLoggingConfigurationArgs $) {
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLoggingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceArn;
+        private GetLoggingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLoggingConfigurationArgs();
         }
 
         public Builder(GetLoggingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new GetLoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
-        }        public GetLoggingConfigurationArgs build() {
-            return new GetLoggingConfigurationArgs(resourceArn);
+        }
+
+        public GetLoggingConfigurationArgs build() {
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            return $;
         }
     }
+
 }

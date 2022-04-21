@@ -20,160 +20,148 @@ public final class FirewallPolicy extends com.pulumi.resources.InvokeArgs {
     public static final FirewallPolicy Empty = new FirewallPolicy();
 
     @Import(name="statefulDefaultActions")
-      private final @Nullable List<String> statefulDefaultActions;
+    private @Nullable List<String> statefulDefaultActions;
 
-    public List<String> statefulDefaultActions() {
-        return this.statefulDefaultActions == null ? List.of() : this.statefulDefaultActions;
+    public Optional<List<String>> statefulDefaultActions() {
+        return Optional.ofNullable(this.statefulDefaultActions);
     }
 
     @Import(name="statefulEngineOptions")
-      private final @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions;
+    private @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions;
 
     public Optional<FirewallPolicyStatefulEngineOptions> statefulEngineOptions() {
-        return this.statefulEngineOptions == null ? Optional.empty() : Optional.ofNullable(this.statefulEngineOptions);
+        return Optional.ofNullable(this.statefulEngineOptions);
     }
 
     @Import(name="statefulRuleGroupReferences")
-      private final @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences;
+    private @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences;
 
-    public List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences() {
-        return this.statefulRuleGroupReferences == null ? List.of() : this.statefulRuleGroupReferences;
+    public Optional<List<FirewallPolicyStatefulRuleGroupReference>> statefulRuleGroupReferences() {
+        return Optional.ofNullable(this.statefulRuleGroupReferences);
     }
 
     @Import(name="statelessCustomActions")
-      private final @Nullable List<FirewallPolicyCustomAction> statelessCustomActions;
+    private @Nullable List<FirewallPolicyCustomAction> statelessCustomActions;
 
-    public List<FirewallPolicyCustomAction> statelessCustomActions() {
-        return this.statelessCustomActions == null ? List.of() : this.statelessCustomActions;
+    public Optional<List<FirewallPolicyCustomAction>> statelessCustomActions() {
+        return Optional.ofNullable(this.statelessCustomActions);
     }
 
     @Import(name="statelessDefaultActions", required=true)
-      private final List<String> statelessDefaultActions;
+    private List<String> statelessDefaultActions;
 
     public List<String> statelessDefaultActions() {
         return this.statelessDefaultActions;
     }
 
     @Import(name="statelessFragmentDefaultActions", required=true)
-      private final List<String> statelessFragmentDefaultActions;
+    private List<String> statelessFragmentDefaultActions;
 
     public List<String> statelessFragmentDefaultActions() {
         return this.statelessFragmentDefaultActions;
     }
 
     @Import(name="statelessRuleGroupReferences")
-      private final @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences;
+    private @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences;
 
-    public List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences() {
-        return this.statelessRuleGroupReferences == null ? List.of() : this.statelessRuleGroupReferences;
+    public Optional<List<FirewallPolicyStatelessRuleGroupReference>> statelessRuleGroupReferences() {
+        return Optional.ofNullable(this.statelessRuleGroupReferences);
     }
 
-    public FirewallPolicy(
-        @Nullable List<String> statefulDefaultActions,
-        @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions,
-        @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences,
-        @Nullable List<FirewallPolicyCustomAction> statelessCustomActions,
-        List<String> statelessDefaultActions,
-        List<String> statelessFragmentDefaultActions,
-        @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
-        this.statefulDefaultActions = statefulDefaultActions;
-        this.statefulEngineOptions = statefulEngineOptions;
-        this.statefulRuleGroupReferences = statefulRuleGroupReferences;
-        this.statelessCustomActions = statelessCustomActions;
-        this.statelessDefaultActions = Objects.requireNonNull(statelessDefaultActions, "expected parameter 'statelessDefaultActions' to be non-null");
-        this.statelessFragmentDefaultActions = Objects.requireNonNull(statelessFragmentDefaultActions, "expected parameter 'statelessFragmentDefaultActions' to be non-null");
-        this.statelessRuleGroupReferences = statelessRuleGroupReferences;
-    }
+    private FirewallPolicy() {}
 
-    private FirewallPolicy() {
-        this.statefulDefaultActions = List.of();
-        this.statefulEngineOptions = null;
-        this.statefulRuleGroupReferences = List.of();
-        this.statelessCustomActions = List.of();
-        this.statelessDefaultActions = List.of();
-        this.statelessFragmentDefaultActions = List.of();
-        this.statelessRuleGroupReferences = List.of();
+    private FirewallPolicy(FirewallPolicy $) {
+        this.statefulDefaultActions = $.statefulDefaultActions;
+        this.statefulEngineOptions = $.statefulEngineOptions;
+        this.statefulRuleGroupReferences = $.statefulRuleGroupReferences;
+        this.statelessCustomActions = $.statelessCustomActions;
+        this.statelessDefaultActions = $.statelessDefaultActions;
+        this.statelessFragmentDefaultActions = $.statelessFragmentDefaultActions;
+        this.statelessRuleGroupReferences = $.statelessRuleGroupReferences;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> statefulDefaultActions;
-        private @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions;
-        private @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences;
-        private @Nullable List<FirewallPolicyCustomAction> statelessCustomActions;
-        private List<String> statelessDefaultActions;
-        private List<String> statelessFragmentDefaultActions;
-        private @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences;
+        private FirewallPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicy();
         }
 
         public Builder(FirewallPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statefulDefaultActions = defaults.statefulDefaultActions;
-    	      this.statefulEngineOptions = defaults.statefulEngineOptions;
-    	      this.statefulRuleGroupReferences = defaults.statefulRuleGroupReferences;
-    	      this.statelessCustomActions = defaults.statelessCustomActions;
-    	      this.statelessDefaultActions = defaults.statelessDefaultActions;
-    	      this.statelessFragmentDefaultActions = defaults.statelessFragmentDefaultActions;
-    	      this.statelessRuleGroupReferences = defaults.statelessRuleGroupReferences;
+            $ = new FirewallPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder statefulDefaultActions(@Nullable List<String> statefulDefaultActions) {
-            this.statefulDefaultActions = statefulDefaultActions;
+            $.statefulDefaultActions = statefulDefaultActions;
             return this;
         }
+
         public Builder statefulDefaultActions(String... statefulDefaultActions) {
             return statefulDefaultActions(List.of(statefulDefaultActions));
         }
+
         public Builder statefulEngineOptions(@Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions) {
-            this.statefulEngineOptions = statefulEngineOptions;
+            $.statefulEngineOptions = statefulEngineOptions;
             return this;
         }
+
         public Builder statefulRuleGroupReferences(@Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences) {
-            this.statefulRuleGroupReferences = statefulRuleGroupReferences;
+            $.statefulRuleGroupReferences = statefulRuleGroupReferences;
             return this;
         }
+
         public Builder statefulRuleGroupReferences(FirewallPolicyStatefulRuleGroupReference... statefulRuleGroupReferences) {
             return statefulRuleGroupReferences(List.of(statefulRuleGroupReferences));
         }
+
         public Builder statelessCustomActions(@Nullable List<FirewallPolicyCustomAction> statelessCustomActions) {
-            this.statelessCustomActions = statelessCustomActions;
+            $.statelessCustomActions = statelessCustomActions;
             return this;
         }
+
         public Builder statelessCustomActions(FirewallPolicyCustomAction... statelessCustomActions) {
             return statelessCustomActions(List.of(statelessCustomActions));
         }
+
         public Builder statelessDefaultActions(List<String> statelessDefaultActions) {
-            this.statelessDefaultActions = Objects.requireNonNull(statelessDefaultActions);
+            $.statelessDefaultActions = statelessDefaultActions;
             return this;
         }
+
         public Builder statelessDefaultActions(String... statelessDefaultActions) {
             return statelessDefaultActions(List.of(statelessDefaultActions));
         }
+
         public Builder statelessFragmentDefaultActions(List<String> statelessFragmentDefaultActions) {
-            this.statelessFragmentDefaultActions = Objects.requireNonNull(statelessFragmentDefaultActions);
+            $.statelessFragmentDefaultActions = statelessFragmentDefaultActions;
             return this;
         }
+
         public Builder statelessFragmentDefaultActions(String... statelessFragmentDefaultActions) {
             return statelessFragmentDefaultActions(List.of(statelessFragmentDefaultActions));
         }
+
         public Builder statelessRuleGroupReferences(@Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
-            this.statelessRuleGroupReferences = statelessRuleGroupReferences;
+            $.statelessRuleGroupReferences = statelessRuleGroupReferences;
             return this;
         }
+
         public Builder statelessRuleGroupReferences(FirewallPolicyStatelessRuleGroupReference... statelessRuleGroupReferences) {
             return statelessRuleGroupReferences(List.of(statelessRuleGroupReferences));
-        }        public FirewallPolicy build() {
-            return new FirewallPolicy(statefulDefaultActions, statefulEngineOptions, statefulRuleGroupReferences, statelessCustomActions, statelessDefaultActions, statelessFragmentDefaultActions, statelessRuleGroupReferences);
+        }
+
+        public FirewallPolicy build() {
+            $.statelessDefaultActions = Objects.requireNonNull($.statelessDefaultActions, "expected parameter 'statelessDefaultActions' to be non-null");
+            $.statelessFragmentDefaultActions = Objects.requireNonNull($.statelessFragmentDefaultActions, "expected parameter 'statelessFragmentDefaultActions' to be non-null");
+            return $;
         }
     }
+
 }

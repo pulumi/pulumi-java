@@ -24,7 +24,7 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -35,7 +35,7 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="progress", required=true)
-      private final Integer progress;
+    private Integer progress;
 
     public Integer progress() {
         return this.progress;
@@ -46,7 +46,7 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="progressPercent", required=true)
-      private final Integer progressPercent;
+    private Integer progressPercent;
 
     public Integer progressPercent() {
         return this.progressPercent;
@@ -57,7 +57,7 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -68,7 +68,7 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="steps", required=true)
-      private final List<CycleStepResponse> steps;
+    private List<CycleStepResponse> steps;
 
     public List<CycleStepResponse> steps() {
         return this.steps;
@@ -79,94 +79,84 @@ public final class ReplicationCycleResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="totalPauseDuration", required=true)
-      private final String totalPauseDuration;
+    private String totalPauseDuration;
 
     public String totalPauseDuration() {
         return this.totalPauseDuration;
     }
 
-    public ReplicationCycleResponse(
-        String endTime,
-        Integer progress,
-        Integer progressPercent,
-        String startTime,
-        List<CycleStepResponse> steps,
-        String totalPauseDuration) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.progress = Objects.requireNonNull(progress, "expected parameter 'progress' to be non-null");
-        this.progressPercent = Objects.requireNonNull(progressPercent, "expected parameter 'progressPercent' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.steps = Objects.requireNonNull(steps, "expected parameter 'steps' to be non-null");
-        this.totalPauseDuration = Objects.requireNonNull(totalPauseDuration, "expected parameter 'totalPauseDuration' to be non-null");
-    }
+    private ReplicationCycleResponse() {}
 
-    private ReplicationCycleResponse() {
-        this.endTime = null;
-        this.progress = null;
-        this.progressPercent = null;
-        this.startTime = null;
-        this.steps = List.of();
-        this.totalPauseDuration = null;
+    private ReplicationCycleResponse(ReplicationCycleResponse $) {
+        this.endTime = $.endTime;
+        this.progress = $.progress;
+        this.progressPercent = $.progressPercent;
+        this.startTime = $.startTime;
+        this.steps = $.steps;
+        this.totalPauseDuration = $.totalPauseDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationCycleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private Integer progress;
-        private Integer progressPercent;
-        private String startTime;
-        private List<CycleStepResponse> steps;
-        private String totalPauseDuration;
+        private ReplicationCycleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationCycleResponse();
         }
 
         public Builder(ReplicationCycleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.progress = defaults.progress;
-    	      this.progressPercent = defaults.progressPercent;
-    	      this.startTime = defaults.startTime;
-    	      this.steps = defaults.steps;
-    	      this.totalPauseDuration = defaults.totalPauseDuration;
+            $ = new ReplicationCycleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder progress(Integer progress) {
-            this.progress = Objects.requireNonNull(progress);
+            $.progress = progress;
             return this;
         }
+
         public Builder progressPercent(Integer progressPercent) {
-            this.progressPercent = Objects.requireNonNull(progressPercent);
+            $.progressPercent = progressPercent;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder steps(List<CycleStepResponse> steps) {
-            this.steps = Objects.requireNonNull(steps);
+            $.steps = steps;
             return this;
         }
+
         public Builder steps(CycleStepResponse... steps) {
             return steps(List.of(steps));
         }
+
         public Builder totalPauseDuration(String totalPauseDuration) {
-            this.totalPauseDuration = Objects.requireNonNull(totalPauseDuration);
+            $.totalPauseDuration = totalPauseDuration;
             return this;
-        }        public ReplicationCycleResponse build() {
-            return new ReplicationCycleResponse(endTime, progress, progressPercent, startTime, steps, totalPauseDuration);
+        }
+
+        public ReplicationCycleResponse build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.progress = Objects.requireNonNull($.progress, "expected parameter 'progress' to be non-null");
+            $.progressPercent = Objects.requireNonNull($.progressPercent, "expected parameter 'progressPercent' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.steps = Objects.requireNonNull($.steps, "expected parameter 'steps' to be non-null");
+            $.totalPauseDuration = Objects.requireNonNull($.totalPauseDuration, "expected parameter 'totalPauseDuration' to be non-null");
+            return $;
         }
     }
+
 }

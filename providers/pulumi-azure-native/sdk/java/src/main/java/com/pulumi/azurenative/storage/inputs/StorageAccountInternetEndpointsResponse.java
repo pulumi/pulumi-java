@@ -21,7 +21,7 @@ public final class StorageAccountInternetEndpointsResponse extends com.pulumi.re
      * 
      */
     @Import(name="blob", required=true)
-      private final String blob;
+    private String blob;
 
     public String blob() {
         return this.blob;
@@ -32,7 +32,7 @@ public final class StorageAccountInternetEndpointsResponse extends com.pulumi.re
      * 
      */
     @Import(name="dfs", required=true)
-      private final String dfs;
+    private String dfs;
 
     public String dfs() {
         return this.dfs;
@@ -43,7 +43,7 @@ public final class StorageAccountInternetEndpointsResponse extends com.pulumi.re
      * 
      */
     @Import(name="file", required=true)
-      private final String file;
+    private String file;
 
     public String file() {
         return this.file;
@@ -54,73 +54,66 @@ public final class StorageAccountInternetEndpointsResponse extends com.pulumi.re
      * 
      */
     @Import(name="web", required=true)
-      private final String web;
+    private String web;
 
     public String web() {
         return this.web;
     }
 
-    public StorageAccountInternetEndpointsResponse(
-        String blob,
-        String dfs,
-        String file,
-        String web) {
-        this.blob = Objects.requireNonNull(blob, "expected parameter 'blob' to be non-null");
-        this.dfs = Objects.requireNonNull(dfs, "expected parameter 'dfs' to be non-null");
-        this.file = Objects.requireNonNull(file, "expected parameter 'file' to be non-null");
-        this.web = Objects.requireNonNull(web, "expected parameter 'web' to be non-null");
-    }
+    private StorageAccountInternetEndpointsResponse() {}
 
-    private StorageAccountInternetEndpointsResponse() {
-        this.blob = null;
-        this.dfs = null;
-        this.file = null;
-        this.web = null;
+    private StorageAccountInternetEndpointsResponse(StorageAccountInternetEndpointsResponse $) {
+        this.blob = $.blob;
+        this.dfs = $.dfs;
+        this.file = $.file;
+        this.web = $.web;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountInternetEndpointsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blob;
-        private String dfs;
-        private String file;
-        private String web;
+        private StorageAccountInternetEndpointsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountInternetEndpointsResponse();
         }
 
         public Builder(StorageAccountInternetEndpointsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blob = defaults.blob;
-    	      this.dfs = defaults.dfs;
-    	      this.file = defaults.file;
-    	      this.web = defaults.web;
+            $ = new StorageAccountInternetEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blob(String blob) {
-            this.blob = Objects.requireNonNull(blob);
+            $.blob = blob;
             return this;
         }
+
         public Builder dfs(String dfs) {
-            this.dfs = Objects.requireNonNull(dfs);
+            $.dfs = dfs;
             return this;
         }
+
         public Builder file(String file) {
-            this.file = Objects.requireNonNull(file);
+            $.file = file;
             return this;
         }
+
         public Builder web(String web) {
-            this.web = Objects.requireNonNull(web);
+            $.web = web;
             return this;
-        }        public StorageAccountInternetEndpointsResponse build() {
-            return new StorageAccountInternetEndpointsResponse(blob, dfs, file, web);
+        }
+
+        public StorageAccountInternetEndpointsResponse build() {
+            $.blob = Objects.requireNonNull($.blob, "expected parameter 'blob' to be non-null");
+            $.dfs = Objects.requireNonNull($.dfs, "expected parameter 'dfs' to be non-null");
+            $.file = Objects.requireNonNull($.file, "expected parameter 'file' to be non-null");
+            $.web = Objects.requireNonNull($.web, "expected parameter 'web' to be non-null");
+            return $;
         }
     }
+
 }

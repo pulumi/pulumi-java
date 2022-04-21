@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DatasetCreateRequestDataPathArgs extends com.pulumi.resources
      * 
      */
     @Import(name="datastoreName")
-      private final @Nullable Output<String> datastoreName;
+    private @Nullable Output<String> datastoreName;
 
-    public Output<String> datastoreName() {
-        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
+    public Optional<Output<String>> datastoreName() {
+        return Optional.ofNullable(this.datastoreName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DatasetCreateRequestDataPathArgs extends com.pulumi.resources
      * 
      */
     @Import(name="relativePath")
-      private final @Nullable Output<String> relativePath;
+    private @Nullable Output<String> relativePath;
 
-    public Output<String> relativePath() {
-        return this.relativePath == null ? Codegen.empty() : this.relativePath;
+    public Optional<Output<String>> relativePath() {
+        return Optional.ofNullable(this.relativePath);
     }
 
-    public DatasetCreateRequestDataPathArgs(
-        @Nullable Output<String> datastoreName,
-        @Nullable Output<String> relativePath) {
-        this.datastoreName = datastoreName;
-        this.relativePath = relativePath;
-    }
+    private DatasetCreateRequestDataPathArgs() {}
 
-    private DatasetCreateRequestDataPathArgs() {
-        this.datastoreName = Codegen.empty();
-        this.relativePath = Codegen.empty();
+    private DatasetCreateRequestDataPathArgs(DatasetCreateRequestDataPathArgs $) {
+        this.datastoreName = $.datastoreName;
+        this.relativePath = $.relativePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetCreateRequestDataPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datastoreName;
-        private @Nullable Output<String> relativePath;
+        private DatasetCreateRequestDataPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetCreateRequestDataPathArgs();
         }
 
         public Builder(DatasetCreateRequestDataPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreName = defaults.datastoreName;
-    	      this.relativePath = defaults.relativePath;
+            $ = new DatasetCreateRequestDataPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
-            this.datastoreName = datastoreName;
+            $.datastoreName = datastoreName;
             return this;
         }
-        public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Codegen.ofNullable(datastoreName);
-            return this;
+
+        public Builder datastoreName(String datastoreName) {
+            return datastoreName(Output.of(datastoreName));
         }
+
         public Builder relativePath(@Nullable Output<String> relativePath) {
-            this.relativePath = relativePath;
+            $.relativePath = relativePath;
             return this;
         }
-        public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = Codegen.ofNullable(relativePath);
-            return this;
-        }        public DatasetCreateRequestDataPathArgs build() {
-            return new DatasetCreateRequestDataPathArgs(datastoreName, relativePath);
+
+        public Builder relativePath(String relativePath) {
+            return relativePath(Output.of(relativePath));
+        }
+
+        public DatasetCreateRequestDataPathArgs build() {
+            return $;
         }
     }
+
 }

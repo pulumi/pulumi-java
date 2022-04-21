@@ -17,7 +17,7 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSnapshotArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="snapshotName", required=true)
-      private final String snapshotName;
+    private String snapshotName;
 
     public String snapshotName() {
         return this.snapshotName;
     }
 
-    public GetSnapshotArgs(
-        String resourceGroupName,
-        String snapshotName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.snapshotName = Objects.requireNonNull(snapshotName, "expected parameter 'snapshotName' to be non-null");
-    }
+    private GetSnapshotArgs() {}
 
-    private GetSnapshotArgs() {
-        this.resourceGroupName = null;
-        this.snapshotName = null;
+    private GetSnapshotArgs(GetSnapshotArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.snapshotName = $.snapshotName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String snapshotName;
+        private GetSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSnapshotArgs();
         }
 
         public Builder(GetSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.snapshotName = defaults.snapshotName;
+            $ = new GetSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder snapshotName(String snapshotName) {
-            this.snapshotName = Objects.requireNonNull(snapshotName);
+            $.snapshotName = snapshotName;
             return this;
-        }        public GetSnapshotArgs build() {
-            return new GetSnapshotArgs(resourceGroupName, snapshotName);
+        }
+
+        public GetSnapshotArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.snapshotName = Objects.requireNonNull($.snapshotName, "expected parameter 'snapshotName' to be non-null");
+            return $;
         }
     }
+
 }

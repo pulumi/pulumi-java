@@ -22,48 +22,49 @@ public final class TimeSeriesTableResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dataSets", required=true)
-      private final List<TableDataSetResponse> dataSets;
+    private List<TableDataSetResponse> dataSets;
 
     public List<TableDataSetResponse> dataSets() {
         return this.dataSets;
     }
 
-    public TimeSeriesTableResponse(List<TableDataSetResponse> dataSets) {
-        this.dataSets = Objects.requireNonNull(dataSets, "expected parameter 'dataSets' to be non-null");
-    }
+    private TimeSeriesTableResponse() {}
 
-    private TimeSeriesTableResponse() {
-        this.dataSets = List.of();
+    private TimeSeriesTableResponse(TimeSeriesTableResponse $) {
+        this.dataSets = $.dataSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesTableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TableDataSetResponse> dataSets;
+        private TimeSeriesTableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesTableResponse();
         }
 
         public Builder(TimeSeriesTableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSets = defaults.dataSets;
+            $ = new TimeSeriesTableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSets(List<TableDataSetResponse> dataSets) {
-            this.dataSets = Objects.requireNonNull(dataSets);
+            $.dataSets = dataSets;
             return this;
         }
+
         public Builder dataSets(TableDataSetResponse... dataSets) {
             return dataSets(List.of(dataSets));
-        }        public TimeSeriesTableResponse build() {
-            return new TimeSeriesTableResponse(dataSets);
+        }
+
+        public TimeSeriesTableResponse build() {
+            $.dataSets = Objects.requireNonNull($.dataSets, "expected parameter 'dataSets' to be non-null");
+            return $;
         }
     }
+
 }

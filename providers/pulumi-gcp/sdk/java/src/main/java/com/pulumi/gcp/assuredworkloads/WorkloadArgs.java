@@ -5,13 +5,13 @@ package com.pulumi.gcp.assuredworkloads;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.assuredworkloads.inputs.WorkloadKmsSettingsArgs;
 import com.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceSettingArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingAccount", required=true)
-      private final Output<String> billingAccount;
+    private Output<String> billingAccount;
 
     public Output<String> billingAccount() {
         return this.billingAccount;
@@ -35,7 +35,7 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="complianceRegime", required=true)
-      private final Output<String> complianceRegime;
+    private Output<String> complianceRegime;
 
     public Output<String> complianceRegime() {
         return this.complianceRegime;
@@ -46,7 +46,7 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -57,10 +57,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsSettings")
-      private final @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings;
+    private @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings;
 
-    public Output<WorkloadKmsSettingsArgs> kmsSettings() {
-        return this.kmsSettings == null ? Codegen.empty() : this.kmsSettings;
+    public Optional<Output<WorkloadKmsSettingsArgs>> kmsSettings() {
+        return Optional.ofNullable(this.kmsSettings);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -90,7 +90,7 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="organization", required=true)
-      private final Output<String> organization;
+    private Output<String> organization;
 
     public Output<String> organization() {
         return this.organization;
@@ -101,10 +101,10 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisionedResourcesParent")
-      private final @Nullable Output<String> provisionedResourcesParent;
+    private @Nullable Output<String> provisionedResourcesParent;
 
-    public Output<String> provisionedResourcesParent() {
-        return this.provisionedResourcesParent == null ? Codegen.empty() : this.provisionedResourcesParent;
+    public Optional<Output<String>> provisionedResourcesParent() {
+        return Optional.ofNullable(this.provisionedResourcesParent);
     }
 
     /**
@@ -112,157 +112,137 @@ public final class WorkloadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSettings")
-      private final @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings;
+    private @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings;
 
-    public Output<List<WorkloadResourceSettingArgs>> resourceSettings() {
-        return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
+    public Optional<Output<List<WorkloadResourceSettingArgs>>> resourceSettings() {
+        return Optional.ofNullable(this.resourceSettings);
     }
 
-    public WorkloadArgs(
-        Output<String> billingAccount,
-        Output<String> complianceRegime,
-        Output<String> displayName,
-        @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> location,
-        Output<String> organization,
-        @Nullable Output<String> provisionedResourcesParent,
-        @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings) {
-        this.billingAccount = Objects.requireNonNull(billingAccount, "expected parameter 'billingAccount' to be non-null");
-        this.complianceRegime = Objects.requireNonNull(complianceRegime, "expected parameter 'complianceRegime' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.kmsSettings = kmsSettings;
-        this.labels = labels;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.organization = Objects.requireNonNull(organization, "expected parameter 'organization' to be non-null");
-        this.provisionedResourcesParent = provisionedResourcesParent;
-        this.resourceSettings = resourceSettings;
-    }
+    private WorkloadArgs() {}
 
-    private WorkloadArgs() {
-        this.billingAccount = Codegen.empty();
-        this.complianceRegime = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.kmsSettings = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.organization = Codegen.empty();
-        this.provisionedResourcesParent = Codegen.empty();
-        this.resourceSettings = Codegen.empty();
+    private WorkloadArgs(WorkloadArgs $) {
+        this.billingAccount = $.billingAccount;
+        this.complianceRegime = $.complianceRegime;
+        this.displayName = $.displayName;
+        this.kmsSettings = $.kmsSettings;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.organization = $.organization;
+        this.provisionedResourcesParent = $.provisionedResourcesParent;
+        this.resourceSettings = $.resourceSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> billingAccount;
-        private Output<String> complianceRegime;
-        private Output<String> displayName;
-        private @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> location;
-        private Output<String> organization;
-        private @Nullable Output<String> provisionedResourcesParent;
-        private @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings;
+        private WorkloadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadArgs();
         }
 
         public Builder(WorkloadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccount = defaults.billingAccount;
-    	      this.complianceRegime = defaults.complianceRegime;
-    	      this.displayName = defaults.displayName;
-    	      this.kmsSettings = defaults.kmsSettings;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.organization = defaults.organization;
-    	      this.provisionedResourcesParent = defaults.provisionedResourcesParent;
-    	      this.resourceSettings = defaults.resourceSettings;
+            $ = new WorkloadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccount(Output<String> billingAccount) {
-            this.billingAccount = Objects.requireNonNull(billingAccount);
+            $.billingAccount = billingAccount;
             return this;
         }
+
         public Builder billingAccount(String billingAccount) {
-            this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
-            return this;
+            return billingAccount(Output.of(billingAccount));
         }
+
         public Builder complianceRegime(Output<String> complianceRegime) {
-            this.complianceRegime = Objects.requireNonNull(complianceRegime);
+            $.complianceRegime = complianceRegime;
             return this;
         }
+
         public Builder complianceRegime(String complianceRegime) {
-            this.complianceRegime = Output.of(Objects.requireNonNull(complianceRegime));
-            return this;
+            return complianceRegime(Output.of(complianceRegime));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder kmsSettings(@Nullable Output<WorkloadKmsSettingsArgs> kmsSettings) {
-            this.kmsSettings = kmsSettings;
+            $.kmsSettings = kmsSettings;
             return this;
         }
-        public Builder kmsSettings(@Nullable WorkloadKmsSettingsArgs kmsSettings) {
-            this.kmsSettings = Codegen.ofNullable(kmsSettings);
-            return this;
+
+        public Builder kmsSettings(WorkloadKmsSettingsArgs kmsSettings) {
+            return kmsSettings(Output.of(kmsSettings));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder organization(Output<String> organization) {
-            this.organization = Objects.requireNonNull(organization);
+            $.organization = organization;
             return this;
         }
+
         public Builder organization(String organization) {
-            this.organization = Output.of(Objects.requireNonNull(organization));
-            return this;
+            return organization(Output.of(organization));
         }
+
         public Builder provisionedResourcesParent(@Nullable Output<String> provisionedResourcesParent) {
-            this.provisionedResourcesParent = provisionedResourcesParent;
+            $.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
-        public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
-            this.provisionedResourcesParent = Codegen.ofNullable(provisionedResourcesParent);
-            return this;
+
+        public Builder provisionedResourcesParent(String provisionedResourcesParent) {
+            return provisionedResourcesParent(Output.of(provisionedResourcesParent));
         }
+
         public Builder resourceSettings(@Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings) {
-            this.resourceSettings = resourceSettings;
+            $.resourceSettings = resourceSettings;
             return this;
         }
-        public Builder resourceSettings(@Nullable List<WorkloadResourceSettingArgs> resourceSettings) {
-            this.resourceSettings = Codegen.ofNullable(resourceSettings);
-            return this;
+
+        public Builder resourceSettings(List<WorkloadResourceSettingArgs> resourceSettings) {
+            return resourceSettings(Output.of(resourceSettings));
         }
+
         public Builder resourceSettings(WorkloadResourceSettingArgs... resourceSettings) {
             return resourceSettings(List.of(resourceSettings));
-        }        public WorkloadArgs build() {
-            return new WorkloadArgs(billingAccount, complianceRegime, displayName, kmsSettings, labels, location, organization, provisionedResourcesParent, resourceSettings);
+        }
+
+        public WorkloadArgs build() {
+            $.billingAccount = Objects.requireNonNull($.billingAccount, "expected parameter 'billingAccount' to be non-null");
+            $.complianceRegime = Objects.requireNonNull($.complianceRegime, "expected parameter 'complianceRegime' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.organization = Objects.requireNonNull($.organization, "expected parameter 'organization' to be non-null");
+            return $;
         }
     }
+
 }

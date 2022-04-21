@@ -5,9 +5,9 @@ package com.pulumi.awsnative.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="basePath")
-      private final @Nullable Output<String> basePath;
+    private @Nullable Output<String> basePath;
 
-    public Output<String> basePath() {
-        return this.basePath == null ? Codegen.empty() : this.basePath;
+    public Optional<Output<String>> basePath() {
+        return Optional.ofNullable(this.basePath);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -42,10 +42,10 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="restApiId")
-      private final @Nullable Output<String> restApiId;
+    private @Nullable Output<String> restApiId;
 
-    public Output<String> restApiId() {
-        return this.restApiId == null ? Codegen.empty() : this.restApiId;
+    public Optional<Output<String>> restApiId() {
+        return Optional.ofNullable(this.restApiId);
     }
 
     /**
@@ -53,89 +53,79 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="stage")
-      private final @Nullable Output<String> stage;
+    private @Nullable Output<String> stage;
 
-    public Output<String> stage() {
-        return this.stage == null ? Codegen.empty() : this.stage;
+    public Optional<Output<String>> stage() {
+        return Optional.ofNullable(this.stage);
     }
 
-    public BasePathMappingArgs(
-        @Nullable Output<String> basePath,
-        Output<String> domainName,
-        @Nullable Output<String> restApiId,
-        @Nullable Output<String> stage) {
-        this.basePath = basePath;
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.restApiId = restApiId;
-        this.stage = stage;
-    }
+    private BasePathMappingArgs() {}
 
-    private BasePathMappingArgs() {
-        this.basePath = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.restApiId = Codegen.empty();
-        this.stage = Codegen.empty();
+    private BasePathMappingArgs(BasePathMappingArgs $) {
+        this.basePath = $.basePath;
+        this.domainName = $.domainName;
+        this.restApiId = $.restApiId;
+        this.stage = $.stage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasePathMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> basePath;
-        private Output<String> domainName;
-        private @Nullable Output<String> restApiId;
-        private @Nullable Output<String> stage;
+        private BasePathMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasePathMappingArgs();
         }
 
         public Builder(BasePathMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basePath = defaults.basePath;
-    	      this.domainName = defaults.domainName;
-    	      this.restApiId = defaults.restApiId;
-    	      this.stage = defaults.stage;
+            $ = new BasePathMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basePath(@Nullable Output<String> basePath) {
-            this.basePath = basePath;
+            $.basePath = basePath;
             return this;
         }
-        public Builder basePath(@Nullable String basePath) {
-            this.basePath = Codegen.ofNullable(basePath);
-            return this;
+
+        public Builder basePath(String basePath) {
+            return basePath(Output.of(basePath));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder restApiId(@Nullable Output<String> restApiId) {
-            this.restApiId = restApiId;
+            $.restApiId = restApiId;
             return this;
         }
-        public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Codegen.ofNullable(restApiId);
-            return this;
+
+        public Builder restApiId(String restApiId) {
+            return restApiId(Output.of(restApiId));
         }
+
         public Builder stage(@Nullable Output<String> stage) {
-            this.stage = stage;
+            $.stage = stage;
             return this;
         }
-        public Builder stage(@Nullable String stage) {
-            this.stage = Codegen.ofNullable(stage);
-            return this;
-        }        public BasePathMappingArgs build() {
-            return new BasePathMappingArgs(basePath, domainName, restApiId, stage);
+
+        public Builder stage(String stage) {
+            return stage(Output.of(stage));
+        }
+
+        public BasePathMappingArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

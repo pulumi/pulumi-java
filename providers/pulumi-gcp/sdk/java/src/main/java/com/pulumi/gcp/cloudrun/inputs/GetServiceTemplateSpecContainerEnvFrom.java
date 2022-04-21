@@ -16,84 +16,81 @@ public final class GetServiceTemplateSpecContainerEnvFrom extends com.pulumi.res
     public static final GetServiceTemplateSpecContainerEnvFrom Empty = new GetServiceTemplateSpecContainerEnvFrom();
 
     @Import(name="configMapReves", required=true)
-      private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves;
+    private List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves;
 
     public List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves() {
         return this.configMapReves;
     }
 
     @Import(name="prefix", required=true)
-      private final String prefix;
+    private String prefix;
 
     public String prefix() {
         return this.prefix;
     }
 
     @Import(name="secretReves", required=true)
-      private final List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves;
+    private List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves;
 
     public List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves() {
         return this.secretReves;
     }
 
-    public GetServiceTemplateSpecContainerEnvFrom(
-        List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves,
-        String prefix,
-        List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves) {
-        this.configMapReves = Objects.requireNonNull(configMapReves, "expected parameter 'configMapReves' to be non-null");
-        this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
-        this.secretReves = Objects.requireNonNull(secretReves, "expected parameter 'secretReves' to be non-null");
-    }
+    private GetServiceTemplateSpecContainerEnvFrom() {}
 
-    private GetServiceTemplateSpecContainerEnvFrom() {
-        this.configMapReves = List.of();
-        this.prefix = null;
-        this.secretReves = List.of();
+    private GetServiceTemplateSpecContainerEnvFrom(GetServiceTemplateSpecContainerEnvFrom $) {
+        this.configMapReves = $.configMapReves;
+        this.prefix = $.prefix;
+        this.secretReves = $.secretReves;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecContainerEnvFrom defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves;
-        private String prefix;
-        private List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves;
+        private GetServiceTemplateSpecContainerEnvFrom $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecContainerEnvFrom();
         }
 
         public Builder(GetServiceTemplateSpecContainerEnvFrom defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMapReves = defaults.configMapReves;
-    	      this.prefix = defaults.prefix;
-    	      this.secretReves = defaults.secretReves;
+            $ = new GetServiceTemplateSpecContainerEnvFrom(Objects.requireNonNull(defaults));
         }
 
         public Builder configMapReves(List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves) {
-            this.configMapReves = Objects.requireNonNull(configMapReves);
+            $.configMapReves = configMapReves;
             return this;
         }
+
         public Builder configMapReves(GetServiceTemplateSpecContainerEnvFromConfigMapRef... configMapReves) {
             return configMapReves(List.of(configMapReves));
         }
+
         public Builder prefix(String prefix) {
-            this.prefix = Objects.requireNonNull(prefix);
+            $.prefix = prefix;
             return this;
         }
+
         public Builder secretReves(List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves) {
-            this.secretReves = Objects.requireNonNull(secretReves);
+            $.secretReves = secretReves;
             return this;
         }
+
         public Builder secretReves(GetServiceTemplateSpecContainerEnvFromSecretRef... secretReves) {
             return secretReves(List.of(secretReves));
-        }        public GetServiceTemplateSpecContainerEnvFrom build() {
-            return new GetServiceTemplateSpecContainerEnvFrom(configMapReves, prefix, secretReves);
+        }
+
+        public GetServiceTemplateSpecContainerEnvFrom build() {
+            $.configMapReves = Objects.requireNonNull($.configMapReves, "expected parameter 'configMapReves' to be non-null");
+            $.prefix = Objects.requireNonNull($.prefix, "expected parameter 'prefix' to be non-null");
+            $.secretReves = Objects.requireNonNull($.secretReves, "expected parameter 'secretReves' to be non-null");
+            return $;
         }
     }
+
 }

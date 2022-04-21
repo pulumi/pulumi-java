@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="continueOnStepFailure")
-      private final @Nullable Output<Object> continueOnStepFailure;
+    private @Nullable Output<Object> continueOnStepFailure;
 
-    public Output<Object> continueOnStepFailure() {
-        return this.continueOnStepFailure == null ? Codegen.empty() : this.continueOnStepFailure;
+    public Optional<Output<Object>> continueOnStepFailure() {
+        return Optional.ofNullable(this.continueOnStepFailure);
     }
 
     /**
@@ -41,10 +42,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dataPathAssignments")
-      private final @Nullable Output<Object> dataPathAssignments;
+    private @Nullable Output<Object> dataPathAssignments;
 
-    public Output<Object> dataPathAssignments() {
-        return this.dataPathAssignments == null ? Codegen.empty() : this.dataPathAssignments;
+    public Optional<Output<Object>> dataPathAssignments() {
+        return Optional.ofNullable(this.dataPathAssignments);
     }
 
     /**
@@ -52,10 +53,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -63,10 +64,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -74,10 +75,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="experimentName")
-      private final @Nullable Output<Object> experimentName;
+    private @Nullable Output<Object> experimentName;
 
-    public Output<Object> experimentName() {
-        return this.experimentName == null ? Codegen.empty() : this.experimentName;
+    public Optional<Output<Object>> experimentName() {
+        return Optional.ofNullable(this.experimentName);
     }
 
     /**
@@ -85,10 +86,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -96,10 +97,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="mlParentRunId")
-      private final @Nullable Output<Object> mlParentRunId;
+    private @Nullable Output<Object> mlParentRunId;
 
-    public Output<Object> mlParentRunId() {
-        return this.mlParentRunId == null ? Codegen.empty() : this.mlParentRunId;
+    public Optional<Output<Object>> mlParentRunId() {
+        return Optional.ofNullable(this.mlParentRunId);
     }
 
     /**
@@ -107,10 +108,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="mlPipelineEndpointId")
-      private final @Nullable Output<Object> mlPipelineEndpointId;
+    private @Nullable Output<Object> mlPipelineEndpointId;
 
-    public Output<Object> mlPipelineEndpointId() {
-        return this.mlPipelineEndpointId == null ? Codegen.empty() : this.mlPipelineEndpointId;
+    public Optional<Output<Object>> mlPipelineEndpointId() {
+        return Optional.ofNullable(this.mlPipelineEndpointId);
     }
 
     /**
@@ -118,10 +119,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="mlPipelineId")
-      private final @Nullable Output<Object> mlPipelineId;
+    private @Nullable Output<Object> mlPipelineId;
 
-    public Output<Object> mlPipelineId() {
-        return this.mlPipelineId == null ? Codegen.empty() : this.mlPipelineId;
+    public Optional<Output<Object>> mlPipelineId() {
+        return Optional.ofNullable(this.mlPipelineId);
     }
 
     /**
@@ -129,10 +130,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="mlPipelineParameters")
-      private final @Nullable Output<Object> mlPipelineParameters;
+    private @Nullable Output<Object> mlPipelineParameters;
 
-    public Output<Object> mlPipelineParameters() {
-        return this.mlPipelineParameters == null ? Codegen.empty() : this.mlPipelineParameters;
+    public Optional<Output<Object>> mlPipelineParameters() {
+        return Optional.ofNullable(this.mlPipelineParameters);
     }
 
     /**
@@ -140,7 +141,7 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -151,10 +152,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<ActivityPolicyArgs> policy;
+    private @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<ActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -163,7 +164,7 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -174,10 +175,10 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
     /**
@@ -185,238 +186,198 @@ public final class AzureMLExecutePipelineActivityArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Object> version;
+    private @Nullable Output<Object> version;
 
-    public Output<Object> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Object>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public AzureMLExecutePipelineActivityArgs(
-        @Nullable Output<Object> continueOnStepFailure,
-        @Nullable Output<Object> dataPathAssignments,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> experimentName,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Output<Object> mlParentRunId,
-        @Nullable Output<Object> mlPipelineEndpointId,
-        @Nullable Output<Object> mlPipelineId,
-        @Nullable Output<Object> mlPipelineParameters,
-        Output<String> name,
-        @Nullable Output<ActivityPolicyArgs> policy,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties,
-        @Nullable Output<Object> version) {
-        this.continueOnStepFailure = continueOnStepFailure;
-        this.dataPathAssignments = dataPathAssignments;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.experimentName = experimentName;
-        this.linkedServiceName = linkedServiceName;
-        this.mlParentRunId = mlParentRunId;
-        this.mlPipelineEndpointId = mlPipelineEndpointId;
-        this.mlPipelineId = mlPipelineId;
-        this.mlPipelineParameters = mlPipelineParameters;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-        this.version = version;
-    }
+    private AzureMLExecutePipelineActivityArgs() {}
 
-    private AzureMLExecutePipelineActivityArgs() {
-        this.continueOnStepFailure = Codegen.empty();
-        this.dataPathAssignments = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.experimentName = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.mlParentRunId = Codegen.empty();
-        this.mlPipelineEndpointId = Codegen.empty();
-        this.mlPipelineId = Codegen.empty();
-        this.mlPipelineParameters = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
-        this.version = Codegen.empty();
+    private AzureMLExecutePipelineActivityArgs(AzureMLExecutePipelineActivityArgs $) {
+        this.continueOnStepFailure = $.continueOnStepFailure;
+        this.dataPathAssignments = $.dataPathAssignments;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.experimentName = $.experimentName;
+        this.linkedServiceName = $.linkedServiceName;
+        this.mlParentRunId = $.mlParentRunId;
+        this.mlPipelineEndpointId = $.mlPipelineEndpointId;
+        this.mlPipelineId = $.mlPipelineId;
+        this.mlPipelineParameters = $.mlPipelineParameters;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMLExecutePipelineActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> continueOnStepFailure;
-        private @Nullable Output<Object> dataPathAssignments;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> experimentName;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Output<Object> mlParentRunId;
-        private @Nullable Output<Object> mlPipelineEndpointId;
-        private @Nullable Output<Object> mlPipelineId;
-        private @Nullable Output<Object> mlPipelineParameters;
-        private Output<String> name;
-        private @Nullable Output<ActivityPolicyArgs> policy;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
-        private @Nullable Output<Object> version;
+        private AzureMLExecutePipelineActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMLExecutePipelineActivityArgs();
         }
 
         public Builder(AzureMLExecutePipelineActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.continueOnStepFailure = defaults.continueOnStepFailure;
-    	      this.dataPathAssignments = defaults.dataPathAssignments;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.experimentName = defaults.experimentName;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.mlParentRunId = defaults.mlParentRunId;
-    	      this.mlPipelineEndpointId = defaults.mlPipelineEndpointId;
-    	      this.mlPipelineId = defaults.mlPipelineId;
-    	      this.mlPipelineParameters = defaults.mlPipelineParameters;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
-    	      this.version = defaults.version;
+            $ = new AzureMLExecutePipelineActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder continueOnStepFailure(@Nullable Output<Object> continueOnStepFailure) {
-            this.continueOnStepFailure = continueOnStepFailure;
+            $.continueOnStepFailure = continueOnStepFailure;
             return this;
         }
-        public Builder continueOnStepFailure(@Nullable Object continueOnStepFailure) {
-            this.continueOnStepFailure = Codegen.ofNullable(continueOnStepFailure);
-            return this;
+
+        public Builder continueOnStepFailure(Object continueOnStepFailure) {
+            return continueOnStepFailure(Output.of(continueOnStepFailure));
         }
+
         public Builder dataPathAssignments(@Nullable Output<Object> dataPathAssignments) {
-            this.dataPathAssignments = dataPathAssignments;
+            $.dataPathAssignments = dataPathAssignments;
             return this;
         }
-        public Builder dataPathAssignments(@Nullable Object dataPathAssignments) {
-            this.dataPathAssignments = Codegen.ofNullable(dataPathAssignments);
-            return this;
+
+        public Builder dataPathAssignments(Object dataPathAssignments) {
+            return dataPathAssignments(Output.of(dataPathAssignments));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder experimentName(@Nullable Output<Object> experimentName) {
-            this.experimentName = experimentName;
+            $.experimentName = experimentName;
             return this;
         }
-        public Builder experimentName(@Nullable Object experimentName) {
-            this.experimentName = Codegen.ofNullable(experimentName);
-            return this;
+
+        public Builder experimentName(Object experimentName) {
+            return experimentName(Output.of(experimentName));
         }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder mlParentRunId(@Nullable Output<Object> mlParentRunId) {
-            this.mlParentRunId = mlParentRunId;
+            $.mlParentRunId = mlParentRunId;
             return this;
         }
-        public Builder mlParentRunId(@Nullable Object mlParentRunId) {
-            this.mlParentRunId = Codegen.ofNullable(mlParentRunId);
-            return this;
+
+        public Builder mlParentRunId(Object mlParentRunId) {
+            return mlParentRunId(Output.of(mlParentRunId));
         }
+
         public Builder mlPipelineEndpointId(@Nullable Output<Object> mlPipelineEndpointId) {
-            this.mlPipelineEndpointId = mlPipelineEndpointId;
+            $.mlPipelineEndpointId = mlPipelineEndpointId;
             return this;
         }
-        public Builder mlPipelineEndpointId(@Nullable Object mlPipelineEndpointId) {
-            this.mlPipelineEndpointId = Codegen.ofNullable(mlPipelineEndpointId);
-            return this;
+
+        public Builder mlPipelineEndpointId(Object mlPipelineEndpointId) {
+            return mlPipelineEndpointId(Output.of(mlPipelineEndpointId));
         }
+
         public Builder mlPipelineId(@Nullable Output<Object> mlPipelineId) {
-            this.mlPipelineId = mlPipelineId;
+            $.mlPipelineId = mlPipelineId;
             return this;
         }
-        public Builder mlPipelineId(@Nullable Object mlPipelineId) {
-            this.mlPipelineId = Codegen.ofNullable(mlPipelineId);
-            return this;
+
+        public Builder mlPipelineId(Object mlPipelineId) {
+            return mlPipelineId(Output.of(mlPipelineId));
         }
+
         public Builder mlPipelineParameters(@Nullable Output<Object> mlPipelineParameters) {
-            this.mlPipelineParameters = mlPipelineParameters;
+            $.mlPipelineParameters = mlPipelineParameters;
             return this;
         }
-        public Builder mlPipelineParameters(@Nullable Object mlPipelineParameters) {
-            this.mlPipelineParameters = Codegen.ofNullable(mlPipelineParameters);
-            return this;
+
+        public Builder mlPipelineParameters(Object mlPipelineParameters) {
+            return mlPipelineParameters(Output.of(mlPipelineParameters));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(ActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
         }
+
         public Builder version(@Nullable Output<Object> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Object version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public AzureMLExecutePipelineActivityArgs build() {
-            return new AzureMLExecutePipelineActivityArgs(continueOnStepFailure, dataPathAssignments, dependsOn, description, experimentName, linkedServiceName, mlParentRunId, mlPipelineEndpointId, mlPipelineId, mlPipelineParameters, name, policy, type, userProperties, version);
+
+        public Builder version(Object version) {
+            return version(Output.of(version));
+        }
+
+        public AzureMLExecutePipelineActivityArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

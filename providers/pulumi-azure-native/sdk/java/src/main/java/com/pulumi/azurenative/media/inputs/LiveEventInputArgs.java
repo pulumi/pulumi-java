@@ -9,10 +9,10 @@ import com.pulumi.azurenative.media.inputs.LiveEventInputAccessControlArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="accessControl")
-      private final @Nullable Output<LiveEventInputAccessControlArgs> accessControl;
+    private @Nullable Output<LiveEventInputAccessControlArgs> accessControl;
 
-    public Output<LiveEventInputAccessControlArgs> accessControl() {
-        return this.accessControl == null ? Codegen.empty() : this.accessControl;
+    public Optional<Output<LiveEventInputAccessControlArgs>> accessControl() {
+        return Optional.ofNullable(this.accessControl);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable Output<String> accessToken;
+    private @Nullable Output<String> accessToken;
 
-    public Output<String> accessToken() {
-        return this.accessToken == null ? Codegen.empty() : this.accessToken;
+    public Optional<Output<String>> accessToken() {
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
+    private @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
 
-    public Output<List<LiveEventEndpointArgs>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<LiveEventEndpointArgs>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyFrameIntervalDuration")
-      private final @Nullable Output<String> keyFrameIntervalDuration;
+    private @Nullable Output<String> keyFrameIntervalDuration;
 
-    public Output<String> keyFrameIntervalDuration() {
-        return this.keyFrameIntervalDuration == null ? Codegen.empty() : this.keyFrameIntervalDuration;
+    public Optional<Output<String>> keyFrameIntervalDuration() {
+        return Optional.ofNullable(this.keyFrameIntervalDuration);
     }
 
     /**
@@ -73,105 +73,93 @@ public final class LiveEventInputArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="streamingProtocol", required=true)
-      private final Output<Either<String,LiveEventInputProtocol>> streamingProtocol;
+    private Output<Either<String,LiveEventInputProtocol>> streamingProtocol;
 
     public Output<Either<String,LiveEventInputProtocol>> streamingProtocol() {
         return this.streamingProtocol;
     }
 
-    public LiveEventInputArgs(
-        @Nullable Output<LiveEventInputAccessControlArgs> accessControl,
-        @Nullable Output<String> accessToken,
-        @Nullable Output<List<LiveEventEndpointArgs>> endpoints,
-        @Nullable Output<String> keyFrameIntervalDuration,
-        Output<Either<String,LiveEventInputProtocol>> streamingProtocol) {
-        this.accessControl = accessControl;
-        this.accessToken = accessToken;
-        this.endpoints = endpoints;
-        this.keyFrameIntervalDuration = keyFrameIntervalDuration;
-        this.streamingProtocol = Objects.requireNonNull(streamingProtocol, "expected parameter 'streamingProtocol' to be non-null");
-    }
+    private LiveEventInputArgs() {}
 
-    private LiveEventInputArgs() {
-        this.accessControl = Codegen.empty();
-        this.accessToken = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.keyFrameIntervalDuration = Codegen.empty();
-        this.streamingProtocol = Codegen.empty();
+    private LiveEventInputArgs(LiveEventInputArgs $) {
+        this.accessControl = $.accessControl;
+        this.accessToken = $.accessToken;
+        this.endpoints = $.endpoints;
+        this.keyFrameIntervalDuration = $.keyFrameIntervalDuration;
+        this.streamingProtocol = $.streamingProtocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LiveEventInputAccessControlArgs> accessControl;
-        private @Nullable Output<String> accessToken;
-        private @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
-        private @Nullable Output<String> keyFrameIntervalDuration;
-        private Output<Either<String,LiveEventInputProtocol>> streamingProtocol;
+        private LiveEventInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventInputArgs();
         }
 
         public Builder(LiveEventInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControl = defaults.accessControl;
-    	      this.accessToken = defaults.accessToken;
-    	      this.endpoints = defaults.endpoints;
-    	      this.keyFrameIntervalDuration = defaults.keyFrameIntervalDuration;
-    	      this.streamingProtocol = defaults.streamingProtocol;
+            $ = new LiveEventInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControl(@Nullable Output<LiveEventInputAccessControlArgs> accessControl) {
-            this.accessControl = accessControl;
+            $.accessControl = accessControl;
             return this;
         }
-        public Builder accessControl(@Nullable LiveEventInputAccessControlArgs accessControl) {
-            this.accessControl = Codegen.ofNullable(accessControl);
-            return this;
+
+        public Builder accessControl(LiveEventInputAccessControlArgs accessControl) {
+            return accessControl(Output.of(accessControl));
         }
+
         public Builder accessToken(@Nullable Output<String> accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
-        public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Codegen.ofNullable(accessToken);
-            return this;
+
+        public Builder accessToken(String accessToken) {
+            return accessToken(Output.of(accessToken));
         }
+
         public Builder endpoints(@Nullable Output<List<LiveEventEndpointArgs>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<LiveEventEndpointArgs> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<LiveEventEndpointArgs> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(LiveEventEndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder keyFrameIntervalDuration(@Nullable Output<String> keyFrameIntervalDuration) {
-            this.keyFrameIntervalDuration = keyFrameIntervalDuration;
+            $.keyFrameIntervalDuration = keyFrameIntervalDuration;
             return this;
         }
-        public Builder keyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
-            this.keyFrameIntervalDuration = Codegen.ofNullable(keyFrameIntervalDuration);
-            return this;
+
+        public Builder keyFrameIntervalDuration(String keyFrameIntervalDuration) {
+            return keyFrameIntervalDuration(Output.of(keyFrameIntervalDuration));
         }
+
         public Builder streamingProtocol(Output<Either<String,LiveEventInputProtocol>> streamingProtocol) {
-            this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
+            $.streamingProtocol = streamingProtocol;
             return this;
         }
+
         public Builder streamingProtocol(Either<String,LiveEventInputProtocol> streamingProtocol) {
-            this.streamingProtocol = Output.of(Objects.requireNonNull(streamingProtocol));
-            return this;
-        }        public LiveEventInputArgs build() {
-            return new LiveEventInputArgs(accessControl, accessToken, endpoints, keyFrameIntervalDuration, streamingProtocol);
+            return streamingProtocol(Output.of(streamingProtocol));
+        }
+
+        public LiveEventInputArgs build() {
+            $.streamingProtocol = Objects.requireNonNull($.streamingProtocol, "expected parameter 'streamingProtocol' to be non-null");
+            return $;
         }
     }
+
 }

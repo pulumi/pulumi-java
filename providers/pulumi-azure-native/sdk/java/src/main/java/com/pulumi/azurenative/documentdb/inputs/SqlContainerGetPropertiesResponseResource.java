@@ -25,10 +25,10 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="analyticalStorageTtl")
-      private final @Nullable Double analyticalStorageTtl;
+    private @Nullable Double analyticalStorageTtl;
 
     public Optional<Double> analyticalStorageTtl() {
-        return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
+        return Optional.ofNullable(this.analyticalStorageTtl);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="conflictResolutionPolicy")
-      private final @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy;
+    private @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy;
 
     public Optional<ConflictResolutionPolicyResponse> conflictResolutionPolicy() {
-        return this.conflictResolutionPolicy == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionPolicy);
+        return Optional.ofNullable(this.conflictResolutionPolicy);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="defaultTtl")
-      private final @Nullable Integer defaultTtl;
+    private @Nullable Integer defaultTtl;
 
     public Optional<Integer> defaultTtl() {
-        return this.defaultTtl == null ? Optional.empty() : Optional.ofNullable(this.defaultTtl);
+        return Optional.ofNullable(this.defaultTtl);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -69,7 +69,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -80,10 +80,10 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="indexingPolicy")
-      private final @Nullable IndexingPolicyResponse indexingPolicy;
+    private @Nullable IndexingPolicyResponse indexingPolicy;
 
     public Optional<IndexingPolicyResponse> indexingPolicy() {
-        return this.indexingPolicy == null ? Optional.empty() : Optional.ofNullable(this.indexingPolicy);
+        return Optional.ofNullable(this.indexingPolicy);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="partitionKey")
-      private final @Nullable ContainerPartitionKeyResponse partitionKey;
+    private @Nullable ContainerPartitionKeyResponse partitionKey;
 
     public Optional<ContainerPartitionKeyResponse> partitionKey() {
-        return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
+        return Optional.ofNullable(this.partitionKey);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="rid", required=true)
-      private final String rid;
+    private String rid;
 
     public String rid() {
         return this.rid;
@@ -113,7 +113,7 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="ts", required=true)
-      private final Double ts;
+    private Double ts;
 
     public Double ts() {
         return this.ts;
@@ -124,127 +124,102 @@ public final class SqlContainerGetPropertiesResponseResource extends com.pulumi.
      * 
      */
     @Import(name="uniqueKeyPolicy")
-      private final @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
+    private @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
 
     public Optional<UniqueKeyPolicyResponse> uniqueKeyPolicy() {
-        return this.uniqueKeyPolicy == null ? Optional.empty() : Optional.ofNullable(this.uniqueKeyPolicy);
+        return Optional.ofNullable(this.uniqueKeyPolicy);
     }
 
-    public SqlContainerGetPropertiesResponseResource(
-        @Nullable Double analyticalStorageTtl,
-        @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy,
-        @Nullable Integer defaultTtl,
-        String etag,
-        String id,
-        @Nullable IndexingPolicyResponse indexingPolicy,
-        @Nullable ContainerPartitionKeyResponse partitionKey,
-        String rid,
-        Double ts,
-        @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
-        this.analyticalStorageTtl = analyticalStorageTtl;
-        this.conflictResolutionPolicy = conflictResolutionPolicy;
-        this.defaultTtl = defaultTtl;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.indexingPolicy = indexingPolicy;
-        this.partitionKey = partitionKey;
-        this.rid = Objects.requireNonNull(rid, "expected parameter 'rid' to be non-null");
-        this.ts = Objects.requireNonNull(ts, "expected parameter 'ts' to be non-null");
-        this.uniqueKeyPolicy = uniqueKeyPolicy;
-    }
+    private SqlContainerGetPropertiesResponseResource() {}
 
-    private SqlContainerGetPropertiesResponseResource() {
-        this.analyticalStorageTtl = null;
-        this.conflictResolutionPolicy = null;
-        this.defaultTtl = null;
-        this.etag = null;
-        this.id = null;
-        this.indexingPolicy = null;
-        this.partitionKey = null;
-        this.rid = null;
-        this.ts = null;
-        this.uniqueKeyPolicy = null;
+    private SqlContainerGetPropertiesResponseResource(SqlContainerGetPropertiesResponseResource $) {
+        this.analyticalStorageTtl = $.analyticalStorageTtl;
+        this.conflictResolutionPolicy = $.conflictResolutionPolicy;
+        this.defaultTtl = $.defaultTtl;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.indexingPolicy = $.indexingPolicy;
+        this.partitionKey = $.partitionKey;
+        this.rid = $.rid;
+        this.ts = $.ts;
+        this.uniqueKeyPolicy = $.uniqueKeyPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlContainerGetPropertiesResponseResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double analyticalStorageTtl;
-        private @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy;
-        private @Nullable Integer defaultTtl;
-        private String etag;
-        private String id;
-        private @Nullable IndexingPolicyResponse indexingPolicy;
-        private @Nullable ContainerPartitionKeyResponse partitionKey;
-        private String rid;
-        private Double ts;
-        private @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
+        private SqlContainerGetPropertiesResponseResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlContainerGetPropertiesResponseResource();
         }
 
         public Builder(SqlContainerGetPropertiesResponseResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyticalStorageTtl = defaults.analyticalStorageTtl;
-    	      this.conflictResolutionPolicy = defaults.conflictResolutionPolicy;
-    	      this.defaultTtl = defaults.defaultTtl;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.indexingPolicy = defaults.indexingPolicy;
-    	      this.partitionKey = defaults.partitionKey;
-    	      this.rid = defaults.rid;
-    	      this.ts = defaults.ts;
-    	      this.uniqueKeyPolicy = defaults.uniqueKeyPolicy;
+            $ = new SqlContainerGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
         public Builder analyticalStorageTtl(@Nullable Double analyticalStorageTtl) {
-            this.analyticalStorageTtl = analyticalStorageTtl;
+            $.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
+
         public Builder conflictResolutionPolicy(@Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy) {
-            this.conflictResolutionPolicy = conflictResolutionPolicy;
+            $.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
+
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = defaultTtl;
+            $.defaultTtl = defaultTtl;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
-            this.indexingPolicy = indexingPolicy;
+            $.indexingPolicy = indexingPolicy;
             return this;
         }
+
         public Builder partitionKey(@Nullable ContainerPartitionKeyResponse partitionKey) {
-            this.partitionKey = partitionKey;
+            $.partitionKey = partitionKey;
             return this;
         }
+
         public Builder rid(String rid) {
-            this.rid = Objects.requireNonNull(rid);
+            $.rid = rid;
             return this;
         }
+
         public Builder ts(Double ts) {
-            this.ts = Objects.requireNonNull(ts);
+            $.ts = ts;
             return this;
         }
+
         public Builder uniqueKeyPolicy(@Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
-            this.uniqueKeyPolicy = uniqueKeyPolicy;
+            $.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;
-        }        public SqlContainerGetPropertiesResponseResource build() {
-            return new SqlContainerGetPropertiesResponseResource(analyticalStorageTtl, conflictResolutionPolicy, defaultTtl, etag, id, indexingPolicy, partitionKey, rid, ts, uniqueKeyPolicy);
+        }
+
+        public SqlContainerGetPropertiesResponseResource build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.rid = Objects.requireNonNull($.rid, "expected parameter 'rid' to be non-null");
+            $.ts = Objects.requireNonNull($.ts, "expected parameter 'ts' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,62 +15,58 @@ public final class GetPeeringArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPeeringArgs Empty = new GetPeeringArgs();
 
     @Import(name="peeringId", required=true)
-      private final String peeringId;
+    private String peeringId;
 
     public String peeringId() {
         return this.peeringId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetPeeringArgs(
-        String peeringId,
-        @Nullable String project) {
-        this.peeringId = Objects.requireNonNull(peeringId, "expected parameter 'peeringId' to be non-null");
-        this.project = project;
-    }
+    private GetPeeringArgs() {}
 
-    private GetPeeringArgs() {
-        this.peeringId = null;
-        this.project = null;
+    private GetPeeringArgs(GetPeeringArgs $) {
+        this.peeringId = $.peeringId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPeeringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String peeringId;
-        private @Nullable String project;
+        private GetPeeringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPeeringArgs();
         }
 
         public Builder(GetPeeringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peeringId = defaults.peeringId;
-    	      this.project = defaults.project;
+            $ = new GetPeeringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peeringId(String peeringId) {
-            this.peeringId = Objects.requireNonNull(peeringId);
+            $.peeringId = peeringId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetPeeringArgs build() {
-            return new GetPeeringArgs(peeringId, project);
+        }
+
+        public GetPeeringArgs build() {
+            $.peeringId = Objects.requireNonNull($.peeringId, "expected parameter 'peeringId' to be non-null");
+            return $;
         }
     }
+
 }

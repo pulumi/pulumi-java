@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
      * 
      */
     @Import(name="isControlGroup", required=true)
-      private final Boolean isControlGroup;
+    private Boolean isControlGroup;
 
     public Boolean isControlGroup() {
         return this.isControlGroup;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
      * 
      */
     @Import(name="trafficAllocation", required=true)
-      private final Double trafficAllocation;
+    private Double trafficAllocation;
 
     public Double trafficAllocation() {
         return this.trafficAllocation;
@@ -45,64 +45,59 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse(
-        Boolean isControlGroup,
-        Double trafficAllocation,
-        String version) {
-        this.isControlGroup = Objects.requireNonNull(isControlGroup, "expected parameter 'isControlGroup' to be non-null");
-        this.trafficAllocation = Objects.requireNonNull(trafficAllocation, "expected parameter 'trafficAllocation' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse() {
-        this.isControlGroup = null;
-        this.trafficAllocation = null;
-        this.version = null;
+    private GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse(GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse $) {
+        this.isControlGroup = $.isControlGroup;
+        this.trafficAllocation = $.trafficAllocation;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isControlGroup;
-        private Double trafficAllocation;
-        private String version;
+        private GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isControlGroup = defaults.isControlGroup;
-    	      this.trafficAllocation = defaults.trafficAllocation;
-    	      this.version = defaults.version;
+            $ = new GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isControlGroup(Boolean isControlGroup) {
-            this.isControlGroup = Objects.requireNonNull(isControlGroup);
+            $.isControlGroup = isControlGroup;
             return this;
         }
+
         public Builder trafficAllocation(Double trafficAllocation) {
-            this.trafficAllocation = Objects.requireNonNull(trafficAllocation);
+            $.trafficAllocation = trafficAllocation;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse(isControlGroup, trafficAllocation, version);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse build() {
+            $.isControlGroup = Objects.requireNonNull($.isControlGroup, "expected parameter 'isControlGroup' to be non-null");
+            $.trafficAllocation = Objects.requireNonNull($.trafficAllocation, "expected parameter 'trafficAllocation' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

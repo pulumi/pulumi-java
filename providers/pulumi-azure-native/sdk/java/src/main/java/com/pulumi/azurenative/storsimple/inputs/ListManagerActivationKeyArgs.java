@@ -17,7 +17,7 @@ public final class ListManagerActivationKeyArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -28,55 +28,52 @@ public final class ListManagerActivationKeyArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListManagerActivationKeyArgs(
-        String managerName,
-        String resourceGroupName) {
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListManagerActivationKeyArgs() {}
 
-    private ListManagerActivationKeyArgs() {
-        this.managerName = null;
-        this.resourceGroupName = null;
+    private ListManagerActivationKeyArgs(ListManagerActivationKeyArgs $) {
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListManagerActivationKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managerName;
-        private String resourceGroupName;
+        private ListManagerActivationKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListManagerActivationKeyArgs();
         }
 
         public Builder(ListManagerActivationKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListManagerActivationKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListManagerActivationKeyArgs build() {
-            return new ListManagerActivationKeyArgs(managerName, resourceGroupName);
+        }
+
+        public ListManagerActivationKeyArgs build() {
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

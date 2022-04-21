@@ -31,10 +31,10 @@ public final class BinarySinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class BinarySinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class BinarySinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Object sinkRetryCount;
+    private @Nullable Object sinkRetryCount;
 
     public Optional<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class BinarySinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Object sinkRetryWait;
+    private @Nullable Object sinkRetryWait;
 
     public Optional<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class BinarySinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storeSettings")
-      private final @Nullable Object storeSettings;
+    private @Nullable Object storeSettings;
 
-    public Object storeSettings() {
-        return this.storeSettings == null ? null : this.storeSettings;
+    public Optional<Object> storeSettings() {
+        return Optional.ofNullable(this.storeSettings);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class BinarySinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -98,10 +98,10 @@ public final class BinarySinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Object writeBatchSize;
+    private @Nullable Object writeBatchSize;
 
     public Optional<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -109,109 +109,87 @@ public final class BinarySinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Object writeBatchTimeout;
+    private @Nullable Object writeBatchTimeout;
 
     public Optional<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
-    public BinarySinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        @Nullable Object storeSettings,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.storeSettings = storeSettings;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-    }
+    private BinarySinkResponse() {}
 
-    private BinarySinkResponse() {
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.sinkRetryCount = null;
-        this.sinkRetryWait = null;
-        this.storeSettings = null;
-        this.type = null;
-        this.writeBatchSize = null;
-        this.writeBatchTimeout = null;
+    private BinarySinkResponse(BinarySinkResponse $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.storeSettings = $.storeSettings;
+        this.type = $.type;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BinarySinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object sinkRetryCount;
-        private @Nullable Object sinkRetryWait;
-        private @Nullable Object storeSettings;
-        private String type;
-        private @Nullable Object writeBatchSize;
-        private @Nullable Object writeBatchTimeout;
+        private BinarySinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BinarySinkResponse();
         }
 
         public Builder(BinarySinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.storeSettings = defaults.storeSettings;
-    	      this.type = defaults.type;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
+            $ = new BinarySinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
+
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
+
         public Builder storeSettings(@Nullable Object storeSettings) {
-            this.storeSettings = storeSettings;
+            $.storeSettings = storeSettings;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
+
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
-        }        public BinarySinkResponse build() {
-            return new BinarySinkResponse(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
+        }
+
+        public BinarySinkResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

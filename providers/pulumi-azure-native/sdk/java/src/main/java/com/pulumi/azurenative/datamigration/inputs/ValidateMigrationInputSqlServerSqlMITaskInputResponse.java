@@ -28,7 +28,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @Import(name="backupBlobShare", required=true)
-      private final BlobShareResponse backupBlobShare;
+    private BlobShareResponse backupBlobShare;
 
     public BlobShareResponse backupBlobShare() {
         return this.backupBlobShare;
@@ -39,10 +39,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @Import(name="backupFileShare")
-      private final @Nullable FileShareResponse backupFileShare;
+    private @Nullable FileShareResponse backupFileShare;
 
     public Optional<FileShareResponse> backupFileShare() {
-        return this.backupFileShare == null ? Optional.empty() : Optional.ofNullable(this.backupFileShare);
+        return Optional.ofNullable(this.backupFileShare);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @Import(name="backupMode")
-      private final @Nullable String backupMode;
+    private @Nullable String backupMode;
 
     public Optional<String> backupMode() {
-        return this.backupMode == null ? Optional.empty() : Optional.ofNullable(this.backupMode);
+        return Optional.ofNullable(this.backupMode);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @Import(name="selectedDatabases", required=true)
-      private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
+    private List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
@@ -72,10 +72,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @Import(name="selectedLogins")
-      private final @Nullable List<String> selectedLogins;
+    private @Nullable List<String> selectedLogins;
 
-    public List<String> selectedLogins() {
-        return this.selectedLogins == null ? List.of() : this.selectedLogins;
+    public Optional<List<String>> selectedLogins() {
+        return Optional.ofNullable(this.selectedLogins);
     }
 
     /**
@@ -83,7 +83,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final SqlConnectionInfoResponse sourceConnectionInfo;
+    private SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -94,106 +94,92 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final SqlConnectionInfoResponse targetConnectionInfo;
+    private SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ValidateMigrationInputSqlServerSqlMITaskInputResponse(
-        BlobShareResponse backupBlobShare,
-        @Nullable FileShareResponse backupFileShare,
-        @Nullable String backupMode,
-        List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
-        @Nullable List<String> selectedLogins,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        SqlConnectionInfoResponse targetConnectionInfo) {
-        this.backupBlobShare = Objects.requireNonNull(backupBlobShare, "expected parameter 'backupBlobShare' to be non-null");
-        this.backupFileShare = backupFileShare;
-        this.backupMode = backupMode;
-        this.selectedDatabases = Objects.requireNonNull(selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
-        this.selectedLogins = selectedLogins;
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ValidateMigrationInputSqlServerSqlMITaskInputResponse() {}
 
-    private ValidateMigrationInputSqlServerSqlMITaskInputResponse() {
-        this.backupBlobShare = null;
-        this.backupFileShare = null;
-        this.backupMode = null;
-        this.selectedDatabases = List.of();
-        this.selectedLogins = List.of();
-        this.sourceConnectionInfo = null;
-        this.targetConnectionInfo = null;
+    private ValidateMigrationInputSqlServerSqlMITaskInputResponse(ValidateMigrationInputSqlServerSqlMITaskInputResponse $) {
+        this.backupBlobShare = $.backupBlobShare;
+        this.backupFileShare = $.backupFileShare;
+        this.backupMode = $.backupMode;
+        this.selectedDatabases = $.selectedDatabases;
+        this.selectedLogins = $.selectedLogins;
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidateMigrationInputSqlServerSqlMITaskInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BlobShareResponse backupBlobShare;
-        private @Nullable FileShareResponse backupFileShare;
-        private @Nullable String backupMode;
-        private List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
-        private @Nullable List<String> selectedLogins;
-        private SqlConnectionInfoResponse sourceConnectionInfo;
-        private SqlConnectionInfoResponse targetConnectionInfo;
+        private ValidateMigrationInputSqlServerSqlMITaskInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidateMigrationInputSqlServerSqlMITaskInputResponse();
         }
 
         public Builder(ValidateMigrationInputSqlServerSqlMITaskInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupBlobShare = defaults.backupBlobShare;
-    	      this.backupFileShare = defaults.backupFileShare;
-    	      this.backupMode = defaults.backupMode;
-    	      this.selectedDatabases = defaults.selectedDatabases;
-    	      this.selectedLogins = defaults.selectedLogins;
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ValidateMigrationInputSqlServerSqlMITaskInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupBlobShare(BlobShareResponse backupBlobShare) {
-            this.backupBlobShare = Objects.requireNonNull(backupBlobShare);
+            $.backupBlobShare = backupBlobShare;
             return this;
         }
+
         public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
-            this.backupFileShare = backupFileShare;
+            $.backupFileShare = backupFileShare;
             return this;
         }
+
         public Builder backupMode(@Nullable String backupMode) {
-            this.backupMode = backupMode;
+            $.backupMode = backupMode;
             return this;
         }
+
         public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
-            this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
+            $.selectedDatabases = selectedDatabases;
             return this;
         }
+
         public Builder selectedDatabases(MigrateSqlServerSqlMIDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
+
         public Builder selectedLogins(@Nullable List<String> selectedLogins) {
-            this.selectedLogins = selectedLogins;
+            $.selectedLogins = selectedLogins;
             return this;
         }
+
         public Builder selectedLogins(String... selectedLogins) {
             return selectedLogins(List.of(selectedLogins));
         }
+
         public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
-        }        public ValidateMigrationInputSqlServerSqlMITaskInputResponse build() {
-            return new ValidateMigrationInputSqlServerSqlMITaskInputResponse(backupBlobShare, backupFileShare, backupMode, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
+        }
+
+        public ValidateMigrationInputSqlServerSqlMITaskInputResponse build() {
+            $.backupBlobShare = Objects.requireNonNull($.backupBlobShare, "expected parameter 'backupBlobShare' to be non-null");
+            $.selectedDatabases = Objects.requireNonNull($.selectedDatabases, "expected parameter 'selectedDatabases' to be non-null");
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

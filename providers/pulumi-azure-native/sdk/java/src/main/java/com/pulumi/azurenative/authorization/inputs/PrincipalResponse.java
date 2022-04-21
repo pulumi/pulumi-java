@@ -23,10 +23,10 @@ public final class PrincipalResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PrincipalResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PrincipalResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class PrincipalResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public PrincipalResponse(
-        @Nullable String displayName,
-        @Nullable String email,
-        @Nullable String id,
-        @Nullable String type) {
-        this.displayName = displayName;
-        this.email = email;
-        this.id = id;
-        this.type = type;
-    }
+    private PrincipalResponse() {}
 
-    private PrincipalResponse() {
-        this.displayName = null;
-        this.email = null;
-        this.id = null;
-        this.type = null;
+    private PrincipalResponse(PrincipalResponse $) {
+        this.displayName = $.displayName;
+        this.email = $.email;
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrincipalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable String email;
-        private @Nullable String id;
-        private @Nullable String type;
+        private PrincipalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrincipalResponse();
         }
 
         public Builder(PrincipalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.email = defaults.email;
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new PrincipalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public PrincipalResponse build() {
-            return new PrincipalResponse(displayName, email, id, type);
+        }
+
+        public PrincipalResponse build() {
+            return $;
         }
     }
+
 }

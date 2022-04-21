@@ -16,65 +16,61 @@ public final class GroupConfigurationParameter extends com.pulumi.resources.Invo
     public static final GroupConfigurationParameter Empty = new GroupConfigurationParameter();
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public GroupConfigurationParameter(
-        @Nullable String name,
-        @Nullable List<String> values) {
-        this.name = name;
-        this.values = values;
-    }
+    private GroupConfigurationParameter() {}
 
-    private GroupConfigurationParameter() {
-        this.name = null;
-        this.values = List.of();
+    private GroupConfigurationParameter(GroupConfigurationParameter $) {
+        this.name = $.name;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupConfigurationParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable List<String> values;
+        private GroupConfigurationParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupConfigurationParameter();
         }
 
         public Builder(GroupConfigurationParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.values = defaults.values;
+            $ = new GroupConfigurationParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public GroupConfigurationParameter build() {
-            return new GroupConfigurationParameter(name, values);
+        }
+
+        public GroupConfigurationParameter build() {
+            return $;
         }
     }
+
 }

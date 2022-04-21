@@ -20,7 +20,7 @@ public final class ResourceTypeRegistrationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -31,17 +31,17 @@ public final class ResourceTypeRegistrationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="properties")
-      private final @Nullable ResourceTypeRegistrationResponseProperties properties;
+    private @Nullable ResourceTypeRegistrationResponseProperties properties;
 
     public Optional<ResourceTypeRegistrationResponseProperties> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -49,73 +49,65 @@ public final class ResourceTypeRegistrationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ResourceTypeRegistrationResponse(
-        String id,
-        String name,
-        @Nullable ResourceTypeRegistrationResponseProperties properties,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = properties;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ResourceTypeRegistrationResponse() {}
 
-    private ResourceTypeRegistrationResponse() {
-        this.id = null;
-        this.name = null;
-        this.properties = null;
-        this.type = null;
+    private ResourceTypeRegistrationResponse(ResourceTypeRegistrationResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.properties = $.properties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private @Nullable ResourceTypeRegistrationResponseProperties properties;
-        private String type;
+        private ResourceTypeRegistrationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationResponse();
         }
 
         public Builder(ResourceTypeRegistrationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
-    	      this.type = defaults.type;
+            $ = new ResourceTypeRegistrationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder properties(@Nullable ResourceTypeRegistrationResponseProperties properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ResourceTypeRegistrationResponse build() {
-            return new ResourceTypeRegistrationResponse(id, name, properties, type);
+        }
+
+        public ResourceTypeRegistrationResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

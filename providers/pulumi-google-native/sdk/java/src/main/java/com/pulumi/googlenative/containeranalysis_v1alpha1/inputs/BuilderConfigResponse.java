@@ -3,35 +3,26 @@
 
 package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import java.util.Objects;
+
 
 
 public final class BuilderConfigResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final BuilderConfigResponse Empty = new BuilderConfigResponse();
 
-    public BuilderConfigResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(BuilderConfigResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private BuilderConfigResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(BuilderConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new BuilderConfigResponse();
         }
         public BuilderConfigResponse build() {
-            return new BuilderConfigResponse();
+            return $;
         }
     }
+
 }

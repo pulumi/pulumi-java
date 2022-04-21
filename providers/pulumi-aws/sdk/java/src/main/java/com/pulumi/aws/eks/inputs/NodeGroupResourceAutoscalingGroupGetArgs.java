@@ -5,9 +5,9 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class NodeGroupResourceAutoscalingGroupGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public NodeGroupResourceAutoscalingGroupGetArgs(@Nullable Output<String> name) {
-        this.name = name;
-    }
+    private NodeGroupResourceAutoscalingGroupGetArgs() {}
 
-    private NodeGroupResourceAutoscalingGroupGetArgs() {
-        this.name = Codegen.empty();
+    private NodeGroupResourceAutoscalingGroupGetArgs(NodeGroupResourceAutoscalingGroupGetArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupResourceAutoscalingGroupGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
+        private NodeGroupResourceAutoscalingGroupGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupResourceAutoscalingGroupGetArgs();
         }
 
         public Builder(NodeGroupResourceAutoscalingGroupGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new NodeGroupResourceAutoscalingGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public NodeGroupResourceAutoscalingGroupGetArgs build() {
-            return new NodeGroupResourceAutoscalingGroupGetArgs(name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public NodeGroupResourceAutoscalingGroupGetArgs build() {
+            return $;
         }
     }
+
 }

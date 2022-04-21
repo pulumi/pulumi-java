@@ -6,8 +6,8 @@ package com.pulumi.azurenative.delegatednetwork.inputs;
 import com.pulumi.azurenative.delegatednetwork.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class OrchestratorIdentityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ResourceIdentityType> type;
+    private @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ResourceIdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public OrchestratorIdentityArgs(@Nullable Output<ResourceIdentityType> type) {
-        this.type = type;
-    }
+    private OrchestratorIdentityArgs() {}
 
-    private OrchestratorIdentityArgs() {
-        this.type = Codegen.empty();
+    private OrchestratorIdentityArgs(OrchestratorIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrchestratorIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdentityType> type;
+        private OrchestratorIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrchestratorIdentityArgs();
         }
 
         public Builder(OrchestratorIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new OrchestratorIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public OrchestratorIdentityArgs build() {
-            return new OrchestratorIdentityArgs(type);
+
+        public Builder type(ResourceIdentityType type) {
+            return type(Output.of(type));
+        }
+
+        public OrchestratorIdentityArgs build() {
+            return $;
         }
     }
+
 }

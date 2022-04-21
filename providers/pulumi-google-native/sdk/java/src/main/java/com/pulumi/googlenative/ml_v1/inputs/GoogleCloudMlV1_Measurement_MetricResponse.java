@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends com.pulumi
      * 
      */
     @Import(name="metric", required=true)
-      private final String metric;
+    private String metric;
 
     public String metric() {
         return this.metric;
@@ -33,55 +33,52 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse extends com.pulumi
      * 
      */
     @Import(name="value", required=true)
-      private final Double value;
+    private Double value;
 
     public Double value() {
         return this.value;
     }
 
-    public GoogleCloudMlV1_Measurement_MetricResponse(
-        String metric,
-        Double value) {
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudMlV1_Measurement_MetricResponse() {}
 
-    private GoogleCloudMlV1_Measurement_MetricResponse() {
-        this.metric = null;
-        this.value = null;
+    private GoogleCloudMlV1_Measurement_MetricResponse(GoogleCloudMlV1_Measurement_MetricResponse $) {
+        this.metric = $.metric;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_Measurement_MetricResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metric;
-        private Double value;
+        private GoogleCloudMlV1_Measurement_MetricResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_Measurement_MetricResponse();
         }
 
         public Builder(GoogleCloudMlV1_Measurement_MetricResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metric = defaults.metric;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudMlV1_Measurement_MetricResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metric(String metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder value(Double value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GoogleCloudMlV1_Measurement_MetricResponse build() {
-            return new GoogleCloudMlV1_Measurement_MetricResponse(metric, value);
+        }
+
+        public GoogleCloudMlV1_Measurement_MetricResponse build() {
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

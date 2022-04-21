@@ -15,110 +15,99 @@ public final class GetConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
     @Import(name="apiId", required=true)
-      private final String apiId;
+    private String apiId;
 
     public String apiId() {
         return this.apiId;
     }
 
     @Import(name="configId", required=true)
-      private final String configId;
+    private String configId;
 
     public String configId() {
         return this.configId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetConfigArgs(
-        String apiId,
-        String configId,
-        String location,
-        @Nullable String project,
-        @Nullable String view) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.view = view;
-    }
+    private GetConfigArgs() {}
 
-    private GetConfigArgs() {
-        this.apiId = null;
-        this.configId = null;
-        this.location = null;
-        this.project = null;
-        this.view = null;
+    private GetConfigArgs(GetConfigArgs $) {
+        this.apiId = $.apiId;
+        this.configId = $.configId;
+        this.location = $.location;
+        this.project = $.project;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiId;
-        private String configId;
-        private String location;
-        private @Nullable String project;
-        private @Nullable String view;
+        private GetConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConfigArgs();
         }
 
         public Builder(GetConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.configId = defaults.configId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.view = defaults.view;
+            $ = new GetConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(String apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder configId(String configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetConfigArgs build() {
-            return new GetConfigArgs(apiId, configId, location, project, view);
+        }
+
+        public GetConfigArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

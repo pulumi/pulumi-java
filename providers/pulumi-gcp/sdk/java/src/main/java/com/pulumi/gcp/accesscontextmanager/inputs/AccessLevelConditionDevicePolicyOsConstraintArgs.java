@@ -5,9 +5,9 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class AccessLevelConditionDevicePolicyOsConstraintArgs extends com.
      * 
      */
     @Import(name="minimumVersion")
-      private final @Nullable Output<String> minimumVersion;
+    private @Nullable Output<String> minimumVersion;
 
-    public Output<String> minimumVersion() {
-        return this.minimumVersion == null ? Codegen.empty() : this.minimumVersion;
+    public Optional<Output<String>> minimumVersion() {
+        return Optional.ofNullable(this.minimumVersion);
     }
 
     /**
@@ -34,63 +34,59 @@ public final class AccessLevelConditionDevicePolicyOsConstraintArgs extends com.
      * 
      */
     @Import(name="osType", required=true)
-      private final Output<String> osType;
+    private Output<String> osType;
 
     public Output<String> osType() {
         return this.osType;
     }
 
-    public AccessLevelConditionDevicePolicyOsConstraintArgs(
-        @Nullable Output<String> minimumVersion,
-        Output<String> osType) {
-        this.minimumVersion = minimumVersion;
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-    }
+    private AccessLevelConditionDevicePolicyOsConstraintArgs() {}
 
-    private AccessLevelConditionDevicePolicyOsConstraintArgs() {
-        this.minimumVersion = Codegen.empty();
-        this.osType = Codegen.empty();
+    private AccessLevelConditionDevicePolicyOsConstraintArgs(AccessLevelConditionDevicePolicyOsConstraintArgs $) {
+        this.minimumVersion = $.minimumVersion;
+        this.osType = $.osType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessLevelConditionDevicePolicyOsConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> minimumVersion;
-        private Output<String> osType;
+        private AccessLevelConditionDevicePolicyOsConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessLevelConditionDevicePolicyOsConstraintArgs();
         }
 
         public Builder(AccessLevelConditionDevicePolicyOsConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minimumVersion = defaults.minimumVersion;
-    	      this.osType = defaults.osType;
+            $ = new AccessLevelConditionDevicePolicyOsConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minimumVersion(@Nullable Output<String> minimumVersion) {
-            this.minimumVersion = minimumVersion;
+            $.minimumVersion = minimumVersion;
             return this;
         }
-        public Builder minimumVersion(@Nullable String minimumVersion) {
-            this.minimumVersion = Codegen.ofNullable(minimumVersion);
-            return this;
+
+        public Builder minimumVersion(String minimumVersion) {
+            return minimumVersion(Output.of(minimumVersion));
         }
+
         public Builder osType(Output<String> osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder osType(String osType) {
-            this.osType = Output.of(Objects.requireNonNull(osType));
-            return this;
-        }        public AccessLevelConditionDevicePolicyOsConstraintArgs build() {
-            return new AccessLevelConditionDevicePolicyOsConstraintArgs(minimumVersion, osType);
+            return osType(Output.of(osType));
+        }
+
+        public AccessLevelConditionDevicePolicyOsConstraintArgs build() {
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            return $;
         }
     }
+
 }

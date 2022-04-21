@@ -5,9 +5,9 @@ package com.pulumi.gcp.firebase;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ProjectLocationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="locationId", required=true)
-      private final Output<String> locationId;
+    private Output<String> locationId;
 
     public Output<String> locationId() {
         return this.locationId;
@@ -33,63 +33,59 @@ public final class ProjectLocationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ProjectLocationArgs(
-        Output<String> locationId,
-        @Nullable Output<String> project) {
-        this.locationId = Objects.requireNonNull(locationId, "expected parameter 'locationId' to be non-null");
-        this.project = project;
-    }
+    private ProjectLocationArgs() {}
 
-    private ProjectLocationArgs() {
-        this.locationId = Codegen.empty();
-        this.project = Codegen.empty();
+    private ProjectLocationArgs(ProjectLocationArgs $) {
+        this.locationId = $.locationId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> locationId;
-        private @Nullable Output<String> project;
+        private ProjectLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectLocationArgs();
         }
 
         public Builder(ProjectLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locationId = defaults.locationId;
-    	      this.project = defaults.project;
+            $ = new ProjectLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locationId(Output<String> locationId) {
-            this.locationId = Objects.requireNonNull(locationId);
+            $.locationId = locationId;
             return this;
         }
+
         public Builder locationId(String locationId) {
-            this.locationId = Output.of(Objects.requireNonNull(locationId));
-            return this;
+            return locationId(Output.of(locationId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ProjectLocationArgs build() {
-            return new ProjectLocationArgs(locationId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ProjectLocationArgs build() {
+            $.locationId = Objects.requireNonNull($.locationId, "expected parameter 'locationId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class MonitoringScheduleMonitoringOutputConfig extends com.pulumi.r
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable String kmsKeyId;
+    private @Nullable String kmsKeyId;
 
     public Optional<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -36,58 +36,55 @@ public final class MonitoringScheduleMonitoringOutputConfig extends com.pulumi.r
      * 
      */
     @Import(name="monitoringOutputs", required=true)
-      private final List<MonitoringScheduleMonitoringOutput> monitoringOutputs;
+    private List<MonitoringScheduleMonitoringOutput> monitoringOutputs;
 
     public List<MonitoringScheduleMonitoringOutput> monitoringOutputs() {
         return this.monitoringOutputs;
     }
 
-    public MonitoringScheduleMonitoringOutputConfig(
-        @Nullable String kmsKeyId,
-        List<MonitoringScheduleMonitoringOutput> monitoringOutputs) {
-        this.kmsKeyId = kmsKeyId;
-        this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs, "expected parameter 'monitoringOutputs' to be non-null");
-    }
+    private MonitoringScheduleMonitoringOutputConfig() {}
 
-    private MonitoringScheduleMonitoringOutputConfig() {
-        this.kmsKeyId = null;
-        this.monitoringOutputs = List.of();
+    private MonitoringScheduleMonitoringOutputConfig(MonitoringScheduleMonitoringOutputConfig $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.monitoringOutputs = $.monitoringOutputs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleMonitoringOutputConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kmsKeyId;
-        private List<MonitoringScheduleMonitoringOutput> monitoringOutputs;
+        private MonitoringScheduleMonitoringOutputConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleMonitoringOutputConfig();
         }
 
         public Builder(MonitoringScheduleMonitoringOutputConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.monitoringOutputs = defaults.monitoringOutputs;
+            $ = new MonitoringScheduleMonitoringOutputConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
+
         public Builder monitoringOutputs(List<MonitoringScheduleMonitoringOutput> monitoringOutputs) {
-            this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
+            $.monitoringOutputs = monitoringOutputs;
             return this;
         }
+
         public Builder monitoringOutputs(MonitoringScheduleMonitoringOutput... monitoringOutputs) {
             return monitoringOutputs(List.of(monitoringOutputs));
-        }        public MonitoringScheduleMonitoringOutputConfig build() {
-            return new MonitoringScheduleMonitoringOutputConfig(kmsKeyId, monitoringOutputs);
+        }
+
+        public MonitoringScheduleMonitoringOutputConfig build() {
+            $.monitoringOutputs = Objects.requireNonNull($.monitoringOutputs, "expected parameter 'monitoringOutputs' to be non-null");
+            return $;
         }
     }
+
 }

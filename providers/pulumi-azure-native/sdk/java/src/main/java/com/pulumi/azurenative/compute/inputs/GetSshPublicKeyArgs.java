@@ -17,7 +17,7 @@ public final class GetSshPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSshPublicKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sshPublicKeyName", required=true)
-      private final String sshPublicKeyName;
+    private String sshPublicKeyName;
 
     public String sshPublicKeyName() {
         return this.sshPublicKeyName;
     }
 
-    public GetSshPublicKeyArgs(
-        String resourceGroupName,
-        String sshPublicKeyName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sshPublicKeyName = Objects.requireNonNull(sshPublicKeyName, "expected parameter 'sshPublicKeyName' to be non-null");
-    }
+    private GetSshPublicKeyArgs() {}
 
-    private GetSshPublicKeyArgs() {
-        this.resourceGroupName = null;
-        this.sshPublicKeyName = null;
+    private GetSshPublicKeyArgs(GetSshPublicKeyArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sshPublicKeyName = $.sshPublicKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSshPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sshPublicKeyName;
+        private GetSshPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSshPublicKeyArgs();
         }
 
         public Builder(GetSshPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sshPublicKeyName = defaults.sshPublicKeyName;
+            $ = new GetSshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sshPublicKeyName(String sshPublicKeyName) {
-            this.sshPublicKeyName = Objects.requireNonNull(sshPublicKeyName);
+            $.sshPublicKeyName = sshPublicKeyName;
             return this;
-        }        public GetSshPublicKeyArgs build() {
-            return new GetSshPublicKeyArgs(resourceGroupName, sshPublicKeyName);
+        }
+
+        public GetSshPublicKeyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sshPublicKeyName = Objects.requireNonNull($.sshPublicKeyName, "expected parameter 'sshPublicKeyName' to be non-null");
+            return $;
         }
     }
+
 }

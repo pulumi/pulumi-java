@@ -6,12 +6,12 @@ package com.pulumi.aws.elasticloadbalancingv2.inputs;
 import com.pulumi.aws.elasticloadbalancingv2.inputs.ListenerDefaultActionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alpnPolicy")
-      private final @Nullable Output<String> alpnPolicy;
+    private @Nullable Output<String> alpnPolicy;
 
-    public Output<String> alpnPolicy() {
-        return this.alpnPolicy == null ? Codegen.empty() : this.alpnPolicy;
+    public Optional<Output<String>> alpnPolicy() {
+        return Optional.ofNullable(this.alpnPolicy);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateArn")
-      private final @Nullable Output<String> certificateArn;
+    private @Nullable Output<String> certificateArn;
 
-    public Output<String> certificateArn() {
-        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
+    public Optional<Output<String>> certificateArn() {
+        return Optional.ofNullable(this.certificateArn);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultActions")
-      private final @Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions;
+    private @Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions;
 
-    public Output<List<ListenerDefaultActionGetArgs>> defaultActions() {
-        return this.defaultActions == null ? Codegen.empty() : this.defaultActions;
+    public Optional<Output<List<ListenerDefaultActionGetArgs>>> defaultActions() {
+        return Optional.ofNullable(this.defaultActions);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancerArn")
-      private final @Nullable Output<String> loadBalancerArn;
+    private @Nullable Output<String> loadBalancerArn;
 
-    public Output<String> loadBalancerArn() {
-        return this.loadBalancerArn == null ? Codegen.empty() : this.loadBalancerArn;
+    public Optional<Output<String>> loadBalancerArn() {
+        return Optional.ofNullable(this.loadBalancerArn);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslPolicy")
-      private final @Nullable Output<String> sslPolicy;
+    private @Nullable Output<String> sslPolicy;
 
-    public Output<String> sslPolicy() {
-        return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
+    public Optional<Output<String>> sslPolicy() {
+        return Optional.ofNullable(this.sslPolicy);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -123,170 +123,142 @@ public final class ListenerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ListenerState(
-        @Nullable Output<String> alpnPolicy,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> certificateArn,
-        @Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions,
-        @Nullable Output<String> loadBalancerArn,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> protocol,
-        @Nullable Output<String> sslPolicy,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.alpnPolicy = alpnPolicy;
-        this.arn = arn;
-        this.certificateArn = certificateArn;
-        this.defaultActions = defaultActions;
-        this.loadBalancerArn = loadBalancerArn;
-        this.port = port;
-        this.protocol = protocol;
-        this.sslPolicy = sslPolicy;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ListenerState() {}
 
-    private ListenerState() {
-        this.alpnPolicy = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.certificateArn = Codegen.empty();
-        this.defaultActions = Codegen.empty();
-        this.loadBalancerArn = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.sslPolicy = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ListenerState(ListenerState $) {
+        this.alpnPolicy = $.alpnPolicy;
+        this.arn = $.arn;
+        this.certificateArn = $.certificateArn;
+        this.defaultActions = $.defaultActions;
+        this.loadBalancerArn = $.loadBalancerArn;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.sslPolicy = $.sslPolicy;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alpnPolicy;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> certificateArn;
-        private @Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions;
-        private @Nullable Output<String> loadBalancerArn;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<String> sslPolicy;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ListenerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerState();
         }
 
         public Builder(ListenerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alpnPolicy = defaults.alpnPolicy;
-    	      this.arn = defaults.arn;
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.defaultActions = defaults.defaultActions;
-    	      this.loadBalancerArn = defaults.loadBalancerArn;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.sslPolicy = defaults.sslPolicy;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ListenerState(Objects.requireNonNull(defaults));
         }
 
         public Builder alpnPolicy(@Nullable Output<String> alpnPolicy) {
-            this.alpnPolicy = alpnPolicy;
+            $.alpnPolicy = alpnPolicy;
             return this;
         }
-        public Builder alpnPolicy(@Nullable String alpnPolicy) {
-            this.alpnPolicy = Codegen.ofNullable(alpnPolicy);
-            return this;
+
+        public Builder alpnPolicy(String alpnPolicy) {
+            return alpnPolicy(Output.of(alpnPolicy));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
         }
-        public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Codegen.ofNullable(certificateArn);
-            return this;
+
+        public Builder certificateArn(String certificateArn) {
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder defaultActions(@Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions) {
-            this.defaultActions = defaultActions;
+            $.defaultActions = defaultActions;
             return this;
         }
-        public Builder defaultActions(@Nullable List<ListenerDefaultActionGetArgs> defaultActions) {
-            this.defaultActions = Codegen.ofNullable(defaultActions);
-            return this;
+
+        public Builder defaultActions(List<ListenerDefaultActionGetArgs> defaultActions) {
+            return defaultActions(Output.of(defaultActions));
         }
+
         public Builder defaultActions(ListenerDefaultActionGetArgs... defaultActions) {
             return defaultActions(List.of(defaultActions));
         }
+
         public Builder loadBalancerArn(@Nullable Output<String> loadBalancerArn) {
-            this.loadBalancerArn = loadBalancerArn;
+            $.loadBalancerArn = loadBalancerArn;
             return this;
         }
-        public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
-            this.loadBalancerArn = Codegen.ofNullable(loadBalancerArn);
-            return this;
+
+        public Builder loadBalancerArn(String loadBalancerArn) {
+            return loadBalancerArn(Output.of(loadBalancerArn));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
-            this.sslPolicy = sslPolicy;
+            $.sslPolicy = sslPolicy;
             return this;
         }
-        public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Codegen.ofNullable(sslPolicy);
-            return this;
+
+        public Builder sslPolicy(String sslPolicy) {
+            return sslPolicy(Output.of(sslPolicy));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ListenerState build() {
-            return new ListenerState(alpnPolicy, arn, certificateArn, defaultActions, loadBalancerArn, port, protocol, sslPolicy, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ListenerState build() {
+            return $;
         }
     }
+
 }

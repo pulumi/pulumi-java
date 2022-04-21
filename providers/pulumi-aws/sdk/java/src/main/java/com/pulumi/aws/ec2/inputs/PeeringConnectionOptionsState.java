@@ -7,9 +7,9 @@ import com.pulumi.aws.ec2.inputs.PeeringConnectionOptionsAccepterGetArgs;
 import com.pulumi.aws.ec2.inputs.PeeringConnectionOptionsRequesterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="accepter")
-      private final @Nullable Output<PeeringConnectionOptionsAccepterGetArgs> accepter;
+    private @Nullable Output<PeeringConnectionOptionsAccepterGetArgs> accepter;
 
-    public Output<PeeringConnectionOptionsAccepterGetArgs> accepter() {
-        return this.accepter == null ? Codegen.empty() : this.accepter;
+    public Optional<Output<PeeringConnectionOptionsAccepterGetArgs>> accepter() {
+        return Optional.ofNullable(this.accepter);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="requester")
-      private final @Nullable Output<PeeringConnectionOptionsRequesterGetArgs> requester;
+    private @Nullable Output<PeeringConnectionOptionsRequesterGetArgs> requester;
 
-    public Output<PeeringConnectionOptionsRequesterGetArgs> requester() {
-        return this.requester == null ? Codegen.empty() : this.requester;
+    public Optional<Output<PeeringConnectionOptionsRequesterGetArgs>> requester() {
+        return Optional.ofNullable(this.requester);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class PeeringConnectionOptionsState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="vpcPeeringConnectionId")
-      private final @Nullable Output<String> vpcPeeringConnectionId;
+    private @Nullable Output<String> vpcPeeringConnectionId;
 
-    public Output<String> vpcPeeringConnectionId() {
-        return this.vpcPeeringConnectionId == null ? Codegen.empty() : this.vpcPeeringConnectionId;
+    public Optional<Output<String>> vpcPeeringConnectionId() {
+        return Optional.ofNullable(this.vpcPeeringConnectionId);
     }
 
-    public PeeringConnectionOptionsState(
-        @Nullable Output<PeeringConnectionOptionsAccepterGetArgs> accepter,
-        @Nullable Output<PeeringConnectionOptionsRequesterGetArgs> requester,
-        @Nullable Output<String> vpcPeeringConnectionId) {
-        this.accepter = accepter;
-        this.requester = requester;
-        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
-    }
+    private PeeringConnectionOptionsState() {}
 
-    private PeeringConnectionOptionsState() {
-        this.accepter = Codegen.empty();
-        this.requester = Codegen.empty();
-        this.vpcPeeringConnectionId = Codegen.empty();
+    private PeeringConnectionOptionsState(PeeringConnectionOptionsState $) {
+        this.accepter = $.accepter;
+        this.requester = $.requester;
+        this.vpcPeeringConnectionId = $.vpcPeeringConnectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringConnectionOptionsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PeeringConnectionOptionsAccepterGetArgs> accepter;
-        private @Nullable Output<PeeringConnectionOptionsRequesterGetArgs> requester;
-        private @Nullable Output<String> vpcPeeringConnectionId;
+        private PeeringConnectionOptionsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringConnectionOptionsState();
         }
 
         public Builder(PeeringConnectionOptionsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accepter = defaults.accepter;
-    	      this.requester = defaults.requester;
-    	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
+            $ = new PeeringConnectionOptionsState(Objects.requireNonNull(defaults));
         }
 
         public Builder accepter(@Nullable Output<PeeringConnectionOptionsAccepterGetArgs> accepter) {
-            this.accepter = accepter;
+            $.accepter = accepter;
             return this;
         }
-        public Builder accepter(@Nullable PeeringConnectionOptionsAccepterGetArgs accepter) {
-            this.accepter = Codegen.ofNullable(accepter);
-            return this;
+
+        public Builder accepter(PeeringConnectionOptionsAccepterGetArgs accepter) {
+            return accepter(Output.of(accepter));
         }
+
         public Builder requester(@Nullable Output<PeeringConnectionOptionsRequesterGetArgs> requester) {
-            this.requester = requester;
+            $.requester = requester;
             return this;
         }
-        public Builder requester(@Nullable PeeringConnectionOptionsRequesterGetArgs requester) {
-            this.requester = Codegen.ofNullable(requester);
-            return this;
+
+        public Builder requester(PeeringConnectionOptionsRequesterGetArgs requester) {
+            return requester(Output.of(requester));
         }
+
         public Builder vpcPeeringConnectionId(@Nullable Output<String> vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+            $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
-        public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = Codegen.ofNullable(vpcPeeringConnectionId);
-            return this;
-        }        public PeeringConnectionOptionsState build() {
-            return new PeeringConnectionOptionsState(accepter, requester, vpcPeeringConnectionId);
+
+        public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
+            return vpcPeeringConnectionId(Output.of(vpcPeeringConnectionId));
+        }
+
+        public PeeringConnectionOptionsState build() {
+            return $;
         }
     }
+
 }

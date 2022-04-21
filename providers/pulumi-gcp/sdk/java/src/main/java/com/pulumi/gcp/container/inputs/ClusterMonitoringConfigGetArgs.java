@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class ClusterMonitoringConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enableComponents", required=true)
-      private final Output<List<String>> enableComponents;
+    private Output<List<String>> enableComponents;
 
     public Output<List<String>> enableComponents() {
         return this.enableComponents;
     }
 
-    public ClusterMonitoringConfigGetArgs(Output<List<String>> enableComponents) {
-        this.enableComponents = Objects.requireNonNull(enableComponents, "expected parameter 'enableComponents' to be non-null");
-    }
+    private ClusterMonitoringConfigGetArgs() {}
 
-    private ClusterMonitoringConfigGetArgs() {
-        this.enableComponents = Codegen.empty();
+    private ClusterMonitoringConfigGetArgs(ClusterMonitoringConfigGetArgs $) {
+        this.enableComponents = $.enableComponents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMonitoringConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> enableComponents;
+        private ClusterMonitoringConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMonitoringConfigGetArgs();
         }
 
         public Builder(ClusterMonitoringConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableComponents = defaults.enableComponents;
+            $ = new ClusterMonitoringConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableComponents(Output<List<String>> enableComponents) {
-            this.enableComponents = Objects.requireNonNull(enableComponents);
+            $.enableComponents = enableComponents;
             return this;
         }
+
         public Builder enableComponents(List<String> enableComponents) {
-            this.enableComponents = Output.of(Objects.requireNonNull(enableComponents));
-            return this;
+            return enableComponents(Output.of(enableComponents));
         }
+
         public Builder enableComponents(String... enableComponents) {
             return enableComponents(List.of(enableComponents));
-        }        public ClusterMonitoringConfigGetArgs build() {
-            return new ClusterMonitoringConfigGetArgs(enableComponents);
+        }
+
+        public ClusterMonitoringConfigGetArgs build() {
+            $.enableComponents = Objects.requireNonNull($.enableComponents, "expected parameter 'enableComponents' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class FirewallPolicyRuleSecureTagResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,55 +28,52 @@ public final class FirewallPolicyRuleSecureTagResponse extends com.pulumi.resour
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public FirewallPolicyRuleSecureTagResponse(
-        String name,
-        String state) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private FirewallPolicyRuleSecureTagResponse() {}
 
-    private FirewallPolicyRuleSecureTagResponse() {
-        this.name = null;
-        this.state = null;
+    private FirewallPolicyRuleSecureTagResponse(FirewallPolicyRuleSecureTagResponse $) {
+        this.name = $.name;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyRuleSecureTagResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String state;
+        private FirewallPolicyRuleSecureTagResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyRuleSecureTagResponse();
         }
 
         public Builder(FirewallPolicyRuleSecureTagResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
+            $ = new FirewallPolicyRuleSecureTagResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public FirewallPolicyRuleSecureTagResponse build() {
-            return new FirewallPolicyRuleSecureTagResponse(name, state);
+        }
+
+        public FirewallPolicyRuleSecureTagResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class DatabaseConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
     }
 
-    public DatabaseConfigResponse(String machineType) {
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-    }
+    private DatabaseConfigResponse() {}
 
-    private DatabaseConfigResponse() {
-        this.machineType = null;
+    private DatabaseConfigResponse(DatabaseConfigResponse $) {
+        this.machineType = $.machineType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String machineType;
+        private DatabaseConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseConfigResponse();
         }
 
         public Builder(DatabaseConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.machineType = defaults.machineType;
+            $ = new DatabaseConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
-        }        public DatabaseConfigResponse build() {
-            return new DatabaseConfigResponse(machineType);
+        }
+
+        public DatabaseConfigResponse build() {
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            return $;
         }
     }
+
 }

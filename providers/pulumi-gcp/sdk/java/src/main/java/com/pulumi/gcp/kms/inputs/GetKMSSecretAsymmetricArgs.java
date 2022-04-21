@@ -19,7 +19,7 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ciphertext", required=true)
-      private final String ciphertext;
+    private String ciphertext;
 
     public String ciphertext() {
         return this.ciphertext;
@@ -30,10 +30,10 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="crc32")
-      private final @Nullable String crc32;
+    private @Nullable String crc32;
 
     public Optional<String> crc32() {
-        return this.crc32 == null ? Optional.empty() : Optional.ofNullable(this.crc32);
+        return Optional.ofNullable(this.crc32);
     }
 
     /**
@@ -43,64 +43,58 @@ public final class GetKMSSecretAsymmetricArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cryptoKeyVersion", required=true)
-      private final String cryptoKeyVersion;
+    private String cryptoKeyVersion;
 
     public String cryptoKeyVersion() {
         return this.cryptoKeyVersion;
     }
 
-    public GetKMSSecretAsymmetricArgs(
-        String ciphertext,
-        @Nullable String crc32,
-        String cryptoKeyVersion) {
-        this.ciphertext = Objects.requireNonNull(ciphertext, "expected parameter 'ciphertext' to be non-null");
-        this.crc32 = crc32;
-        this.cryptoKeyVersion = Objects.requireNonNull(cryptoKeyVersion, "expected parameter 'cryptoKeyVersion' to be non-null");
-    }
+    private GetKMSSecretAsymmetricArgs() {}
 
-    private GetKMSSecretAsymmetricArgs() {
-        this.ciphertext = null;
-        this.crc32 = null;
-        this.cryptoKeyVersion = null;
+    private GetKMSSecretAsymmetricArgs(GetKMSSecretAsymmetricArgs $) {
+        this.ciphertext = $.ciphertext;
+        this.crc32 = $.crc32;
+        this.cryptoKeyVersion = $.cryptoKeyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKMSSecretAsymmetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ciphertext;
-        private @Nullable String crc32;
-        private String cryptoKeyVersion;
+        private GetKMSSecretAsymmetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKMSSecretAsymmetricArgs();
         }
 
         public Builder(GetKMSSecretAsymmetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ciphertext = defaults.ciphertext;
-    	      this.crc32 = defaults.crc32;
-    	      this.cryptoKeyVersion = defaults.cryptoKeyVersion;
+            $ = new GetKMSSecretAsymmetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ciphertext(String ciphertext) {
-            this.ciphertext = Objects.requireNonNull(ciphertext);
+            $.ciphertext = ciphertext;
             return this;
         }
+
         public Builder crc32(@Nullable String crc32) {
-            this.crc32 = crc32;
+            $.crc32 = crc32;
             return this;
         }
+
         public Builder cryptoKeyVersion(String cryptoKeyVersion) {
-            this.cryptoKeyVersion = Objects.requireNonNull(cryptoKeyVersion);
+            $.cryptoKeyVersion = cryptoKeyVersion;
             return this;
-        }        public GetKMSSecretAsymmetricArgs build() {
-            return new GetKMSSecretAsymmetricArgs(ciphertext, crc32, cryptoKeyVersion);
+        }
+
+        public GetKMSSecretAsymmetricArgs build() {
+            $.ciphertext = Objects.requireNonNull($.ciphertext, "expected parameter 'ciphertext' to be non-null");
+            $.cryptoKeyVersion = Objects.requireNonNull($.cryptoKeyVersion, "expected parameter 'cryptoKeyVersion' to be non-null");
+            return $;
         }
     }
+
 }

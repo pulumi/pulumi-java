@@ -14,48 +14,49 @@ public final class StandardSqlStructTypeResponse extends com.pulumi.resources.In
     public static final StandardSqlStructTypeResponse Empty = new StandardSqlStructTypeResponse();
 
     @Import(name="fields", required=true)
-      private final List<StandardSqlFieldResponse> fields;
+    private List<StandardSqlFieldResponse> fields;
 
     public List<StandardSqlFieldResponse> fields() {
         return this.fields;
     }
 
-    public StandardSqlStructTypeResponse(List<StandardSqlFieldResponse> fields) {
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-    }
+    private StandardSqlStructTypeResponse() {}
 
-    private StandardSqlStructTypeResponse() {
-        this.fields = List.of();
+    private StandardSqlStructTypeResponse(StandardSqlStructTypeResponse $) {
+        this.fields = $.fields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardSqlStructTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<StandardSqlFieldResponse> fields;
+        private StandardSqlStructTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardSqlStructTypeResponse();
         }
 
         public Builder(StandardSqlStructTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
+            $ = new StandardSqlStructTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(List<StandardSqlFieldResponse> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(StandardSqlFieldResponse... fields) {
             return fields(List.of(fields));
-        }        public StandardSqlStructTypeResponse build() {
-            return new StandardSqlStructTypeResponse(fields);
+        }
+
+        public StandardSqlStructTypeResponse build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            return $;
         }
     }
+
 }

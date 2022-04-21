@@ -21,7 +21,7 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -32,7 +32,7 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -43,64 +43,59 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
     }
 
-    public NetworkResponse(
-        String network,
-        String project,
-        String subnetwork) {
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-    }
+    private NetworkResponse() {}
 
-    private NetworkResponse() {
-        this.network = null;
-        this.project = null;
-        this.subnetwork = null;
+    private NetworkResponse(NetworkResponse $) {
+        this.network = $.network;
+        this.project = $.project;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String network;
-        private String project;
-        private String subnetwork;
+        private NetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkResponse();
         }
 
         public Builder(NetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new NetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
-        }        public NetworkResponse build() {
-            return new NetworkResponse(network, project, subnetwork);
+        }
+
+        public NetworkResponse build() {
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            return $;
         }
     }
+
 }

@@ -26,7 +26,7 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainControllerIpAddress", required=true)
-      private final List<String> domainControllerIpAddress;
+    private List<String> domainControllerIpAddress;
 
     public List<String> domainControllerIpAddress() {
         return this.domainControllerIpAddress;
@@ -37,7 +37,7 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="externalAccessIpAddress", required=true)
-      private final String externalAccessIpAddress;
+    private String externalAccessIpAddress;
 
     public String externalAccessIpAddress() {
         return this.externalAccessIpAddress;
@@ -48,7 +48,7 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="healthAlerts", required=true)
-      private final List<HealthAlertResponse> healthAlerts;
+    private List<HealthAlertResponse> healthAlerts;
 
     public List<HealthAlertResponse> healthAlerts() {
         return this.healthAlerts;
@@ -59,7 +59,7 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="healthLastEvaluated", required=true)
-      private final String healthLastEvaluated;
+    private String healthLastEvaluated;
 
     public String healthLastEvaluated() {
         return this.healthLastEvaluated;
@@ -70,7 +70,7 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="healthMonitors", required=true)
-      private final List<HealthMonitorResponse> healthMonitors;
+    private List<HealthMonitorResponse> healthMonitors;
 
     public List<HealthMonitorResponse> healthMonitors() {
         return this.healthMonitors;
@@ -81,10 +81,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="replicaSetId", required=true)
-      private final String replicaSetId;
+    private String replicaSetId;
 
     public String replicaSetId() {
         return this.replicaSetId;
@@ -103,7 +103,7 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceStatus", required=true)
-      private final String serviceStatus;
+    private String serviceStatus;
 
     public String serviceStatus() {
         return this.serviceStatus;
@@ -114,10 +114,10 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -125,136 +125,118 @@ public final class ReplicaSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vnetSiteId", required=true)
-      private final String vnetSiteId;
+    private String vnetSiteId;
 
     public String vnetSiteId() {
         return this.vnetSiteId;
     }
 
-    public ReplicaSetResponse(
-        List<String> domainControllerIpAddress,
-        String externalAccessIpAddress,
-        List<HealthAlertResponse> healthAlerts,
-        String healthLastEvaluated,
-        List<HealthMonitorResponse> healthMonitors,
-        @Nullable String location,
-        String replicaSetId,
-        String serviceStatus,
-        @Nullable String subnetId,
-        String vnetSiteId) {
-        this.domainControllerIpAddress = Objects.requireNonNull(domainControllerIpAddress, "expected parameter 'domainControllerIpAddress' to be non-null");
-        this.externalAccessIpAddress = Objects.requireNonNull(externalAccessIpAddress, "expected parameter 'externalAccessIpAddress' to be non-null");
-        this.healthAlerts = Objects.requireNonNull(healthAlerts, "expected parameter 'healthAlerts' to be non-null");
-        this.healthLastEvaluated = Objects.requireNonNull(healthLastEvaluated, "expected parameter 'healthLastEvaluated' to be non-null");
-        this.healthMonitors = Objects.requireNonNull(healthMonitors, "expected parameter 'healthMonitors' to be non-null");
-        this.location = location;
-        this.replicaSetId = Objects.requireNonNull(replicaSetId, "expected parameter 'replicaSetId' to be non-null");
-        this.serviceStatus = Objects.requireNonNull(serviceStatus, "expected parameter 'serviceStatus' to be non-null");
-        this.subnetId = subnetId;
-        this.vnetSiteId = Objects.requireNonNull(vnetSiteId, "expected parameter 'vnetSiteId' to be non-null");
-    }
+    private ReplicaSetResponse() {}
 
-    private ReplicaSetResponse() {
-        this.domainControllerIpAddress = List.of();
-        this.externalAccessIpAddress = null;
-        this.healthAlerts = List.of();
-        this.healthLastEvaluated = null;
-        this.healthMonitors = List.of();
-        this.location = null;
-        this.replicaSetId = null;
-        this.serviceStatus = null;
-        this.subnetId = null;
-        this.vnetSiteId = null;
+    private ReplicaSetResponse(ReplicaSetResponse $) {
+        this.domainControllerIpAddress = $.domainControllerIpAddress;
+        this.externalAccessIpAddress = $.externalAccessIpAddress;
+        this.healthAlerts = $.healthAlerts;
+        this.healthLastEvaluated = $.healthLastEvaluated;
+        this.healthMonitors = $.healthMonitors;
+        this.location = $.location;
+        this.replicaSetId = $.replicaSetId;
+        this.serviceStatus = $.serviceStatus;
+        this.subnetId = $.subnetId;
+        this.vnetSiteId = $.vnetSiteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicaSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> domainControllerIpAddress;
-        private String externalAccessIpAddress;
-        private List<HealthAlertResponse> healthAlerts;
-        private String healthLastEvaluated;
-        private List<HealthMonitorResponse> healthMonitors;
-        private @Nullable String location;
-        private String replicaSetId;
-        private String serviceStatus;
-        private @Nullable String subnetId;
-        private String vnetSiteId;
+        private ReplicaSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicaSetResponse();
         }
 
         public Builder(ReplicaSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainControllerIpAddress = defaults.domainControllerIpAddress;
-    	      this.externalAccessIpAddress = defaults.externalAccessIpAddress;
-    	      this.healthAlerts = defaults.healthAlerts;
-    	      this.healthLastEvaluated = defaults.healthLastEvaluated;
-    	      this.healthMonitors = defaults.healthMonitors;
-    	      this.location = defaults.location;
-    	      this.replicaSetId = defaults.replicaSetId;
-    	      this.serviceStatus = defaults.serviceStatus;
-    	      this.subnetId = defaults.subnetId;
-    	      this.vnetSiteId = defaults.vnetSiteId;
+            $ = new ReplicaSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domainControllerIpAddress(List<String> domainControllerIpAddress) {
-            this.domainControllerIpAddress = Objects.requireNonNull(domainControllerIpAddress);
+            $.domainControllerIpAddress = domainControllerIpAddress;
             return this;
         }
+
         public Builder domainControllerIpAddress(String... domainControllerIpAddress) {
             return domainControllerIpAddress(List.of(domainControllerIpAddress));
         }
+
         public Builder externalAccessIpAddress(String externalAccessIpAddress) {
-            this.externalAccessIpAddress = Objects.requireNonNull(externalAccessIpAddress);
+            $.externalAccessIpAddress = externalAccessIpAddress;
             return this;
         }
+
         public Builder healthAlerts(List<HealthAlertResponse> healthAlerts) {
-            this.healthAlerts = Objects.requireNonNull(healthAlerts);
+            $.healthAlerts = healthAlerts;
             return this;
         }
+
         public Builder healthAlerts(HealthAlertResponse... healthAlerts) {
             return healthAlerts(List.of(healthAlerts));
         }
+
         public Builder healthLastEvaluated(String healthLastEvaluated) {
-            this.healthLastEvaluated = Objects.requireNonNull(healthLastEvaluated);
+            $.healthLastEvaluated = healthLastEvaluated;
             return this;
         }
+
         public Builder healthMonitors(List<HealthMonitorResponse> healthMonitors) {
-            this.healthMonitors = Objects.requireNonNull(healthMonitors);
+            $.healthMonitors = healthMonitors;
             return this;
         }
+
         public Builder healthMonitors(HealthMonitorResponse... healthMonitors) {
             return healthMonitors(List.of(healthMonitors));
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder replicaSetId(String replicaSetId) {
-            this.replicaSetId = Objects.requireNonNull(replicaSetId);
+            $.replicaSetId = replicaSetId;
             return this;
         }
+
         public Builder serviceStatus(String serviceStatus) {
-            this.serviceStatus = Objects.requireNonNull(serviceStatus);
+            $.serviceStatus = serviceStatus;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder vnetSiteId(String vnetSiteId) {
-            this.vnetSiteId = Objects.requireNonNull(vnetSiteId);
+            $.vnetSiteId = vnetSiteId;
             return this;
-        }        public ReplicaSetResponse build() {
-            return new ReplicaSetResponse(domainControllerIpAddress, externalAccessIpAddress, healthAlerts, healthLastEvaluated, healthMonitors, location, replicaSetId, serviceStatus, subnetId, vnetSiteId);
+        }
+
+        public ReplicaSetResponse build() {
+            $.domainControllerIpAddress = Objects.requireNonNull($.domainControllerIpAddress, "expected parameter 'domainControllerIpAddress' to be non-null");
+            $.externalAccessIpAddress = Objects.requireNonNull($.externalAccessIpAddress, "expected parameter 'externalAccessIpAddress' to be non-null");
+            $.healthAlerts = Objects.requireNonNull($.healthAlerts, "expected parameter 'healthAlerts' to be non-null");
+            $.healthLastEvaluated = Objects.requireNonNull($.healthLastEvaluated, "expected parameter 'healthLastEvaluated' to be non-null");
+            $.healthMonitors = Objects.requireNonNull($.healthMonitors, "expected parameter 'healthMonitors' to be non-null");
+            $.replicaSetId = Objects.requireNonNull($.replicaSetId, "expected parameter 'replicaSetId' to be non-null");
+            $.serviceStatus = Objects.requireNonNull($.serviceStatus, "expected parameter 'serviceStatus' to be non-null");
+            $.vnetSiteId = Objects.requireNonNull($.vnetSiteId, "expected parameter 'vnetSiteId' to be non-null");
+            return $;
         }
     }
+
 }

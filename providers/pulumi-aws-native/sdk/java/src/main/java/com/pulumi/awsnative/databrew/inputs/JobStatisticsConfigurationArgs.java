@@ -6,10 +6,10 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.JobStatisticOverrideArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,76 +18,73 @@ public final class JobStatisticsConfigurationArgs extends com.pulumi.resources.R
     public static final JobStatisticsConfigurationArgs Empty = new JobStatisticsConfigurationArgs();
 
     @Import(name="includedStatistics")
-      private final @Nullable Output<List<String>> includedStatistics;
+    private @Nullable Output<List<String>> includedStatistics;
 
-    public Output<List<String>> includedStatistics() {
-        return this.includedStatistics == null ? Codegen.empty() : this.includedStatistics;
+    public Optional<Output<List<String>>> includedStatistics() {
+        return Optional.ofNullable(this.includedStatistics);
     }
 
     @Import(name="overrides")
-      private final @Nullable Output<List<JobStatisticOverrideArgs>> overrides;
+    private @Nullable Output<List<JobStatisticOverrideArgs>> overrides;
 
-    public Output<List<JobStatisticOverrideArgs>> overrides() {
-        return this.overrides == null ? Codegen.empty() : this.overrides;
+    public Optional<Output<List<JobStatisticOverrideArgs>>> overrides() {
+        return Optional.ofNullable(this.overrides);
     }
 
-    public JobStatisticsConfigurationArgs(
-        @Nullable Output<List<String>> includedStatistics,
-        @Nullable Output<List<JobStatisticOverrideArgs>> overrides) {
-        this.includedStatistics = includedStatistics;
-        this.overrides = overrides;
-    }
+    private JobStatisticsConfigurationArgs() {}
 
-    private JobStatisticsConfigurationArgs() {
-        this.includedStatistics = Codegen.empty();
-        this.overrides = Codegen.empty();
+    private JobStatisticsConfigurationArgs(JobStatisticsConfigurationArgs $) {
+        this.includedStatistics = $.includedStatistics;
+        this.overrides = $.overrides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatisticsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> includedStatistics;
-        private @Nullable Output<List<JobStatisticOverrideArgs>> overrides;
+        private JobStatisticsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatisticsConfigurationArgs();
         }
 
         public Builder(JobStatisticsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includedStatistics = defaults.includedStatistics;
-    	      this.overrides = defaults.overrides;
+            $ = new JobStatisticsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder includedStatistics(@Nullable Output<List<String>> includedStatistics) {
-            this.includedStatistics = includedStatistics;
+            $.includedStatistics = includedStatistics;
             return this;
         }
-        public Builder includedStatistics(@Nullable List<String> includedStatistics) {
-            this.includedStatistics = Codegen.ofNullable(includedStatistics);
-            return this;
+
+        public Builder includedStatistics(List<String> includedStatistics) {
+            return includedStatistics(Output.of(includedStatistics));
         }
+
         public Builder includedStatistics(String... includedStatistics) {
             return includedStatistics(List.of(includedStatistics));
         }
+
         public Builder overrides(@Nullable Output<List<JobStatisticOverrideArgs>> overrides) {
-            this.overrides = overrides;
+            $.overrides = overrides;
             return this;
         }
-        public Builder overrides(@Nullable List<JobStatisticOverrideArgs> overrides) {
-            this.overrides = Codegen.ofNullable(overrides);
-            return this;
+
+        public Builder overrides(List<JobStatisticOverrideArgs> overrides) {
+            return overrides(Output.of(overrides));
         }
+
         public Builder overrides(JobStatisticOverrideArgs... overrides) {
             return overrides(List.of(overrides));
-        }        public JobStatisticsConfigurationArgs build() {
-            return new JobStatisticsConfigurationArgs(includedStatistics, overrides);
+        }
+
+        public JobStatisticsConfigurationArgs build() {
+            return $;
         }
     }
+
 }

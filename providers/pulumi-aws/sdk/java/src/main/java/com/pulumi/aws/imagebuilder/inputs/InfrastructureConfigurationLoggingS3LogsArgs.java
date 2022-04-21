@@ -5,9 +5,9 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class InfrastructureConfigurationLoggingS3LogsArgs extends com.pulu
      * 
      */
     @Import(name="s3BucketName", required=true)
-      private final Output<String> s3BucketName;
+    private Output<String> s3BucketName;
 
     public Output<String> s3BucketName() {
         return this.s3BucketName;
@@ -31,63 +31,59 @@ public final class InfrastructureConfigurationLoggingS3LogsArgs extends com.pulu
      * 
      */
     @Import(name="s3KeyPrefix")
-      private final @Nullable Output<String> s3KeyPrefix;
+    private @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> s3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
+    public Optional<Output<String>> s3KeyPrefix() {
+        return Optional.ofNullable(this.s3KeyPrefix);
     }
 
-    public InfrastructureConfigurationLoggingS3LogsArgs(
-        Output<String> s3BucketName,
-        @Nullable Output<String> s3KeyPrefix) {
-        this.s3BucketName = Objects.requireNonNull(s3BucketName, "expected parameter 's3BucketName' to be non-null");
-        this.s3KeyPrefix = s3KeyPrefix;
-    }
+    private InfrastructureConfigurationLoggingS3LogsArgs() {}
 
-    private InfrastructureConfigurationLoggingS3LogsArgs() {
-        this.s3BucketName = Codegen.empty();
-        this.s3KeyPrefix = Codegen.empty();
+    private InfrastructureConfigurationLoggingS3LogsArgs(InfrastructureConfigurationLoggingS3LogsArgs $) {
+        this.s3BucketName = $.s3BucketName;
+        this.s3KeyPrefix = $.s3KeyPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InfrastructureConfigurationLoggingS3LogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> s3BucketName;
-        private @Nullable Output<String> s3KeyPrefix;
+        private InfrastructureConfigurationLoggingS3LogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InfrastructureConfigurationLoggingS3LogsArgs();
         }
 
         public Builder(InfrastructureConfigurationLoggingS3LogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3KeyPrefix = defaults.s3KeyPrefix;
+            $ = new InfrastructureConfigurationLoggingS3LogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3BucketName(Output<String> s3BucketName) {
-            this.s3BucketName = Objects.requireNonNull(s3BucketName);
+            $.s3BucketName = s3BucketName;
             return this;
         }
+
         public Builder s3BucketName(String s3BucketName) {
-            this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
-            return this;
+            return s3BucketName(Output.of(s3BucketName));
         }
+
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
-            this.s3KeyPrefix = s3KeyPrefix;
+            $.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
-            return this;
-        }        public InfrastructureConfigurationLoggingS3LogsArgs build() {
-            return new InfrastructureConfigurationLoggingS3LogsArgs(s3BucketName, s3KeyPrefix);
+
+        public Builder s3KeyPrefix(String s3KeyPrefix) {
+            return s3KeyPrefix(Output.of(s3KeyPrefix));
+        }
+
+        public InfrastructureConfigurationLoggingS3LogsArgs build() {
+            $.s3BucketName = Objects.requireNonNull($.s3BucketName, "expected parameter 's3BucketName' to be non-null");
+            return $;
         }
     }
+
 }

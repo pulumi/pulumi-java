@@ -19,45 +19,44 @@ public final class BotAliasTextLogDestination extends com.pulumi.resources.Invok
     public static final BotAliasTextLogDestination Empty = new BotAliasTextLogDestination();
 
     @Import(name="cloudWatch")
-      private final @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
+    private @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
 
     public Optional<BotAliasCloudWatchLogGroupLogDestination> cloudWatch() {
-        return this.cloudWatch == null ? Optional.empty() : Optional.ofNullable(this.cloudWatch);
+        return Optional.ofNullable(this.cloudWatch);
     }
 
-    public BotAliasTextLogDestination(@Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
-        this.cloudWatch = cloudWatch;
-    }
+    private BotAliasTextLogDestination() {}
 
-    private BotAliasTextLogDestination() {
-        this.cloudWatch = null;
+    private BotAliasTextLogDestination(BotAliasTextLogDestination $) {
+        this.cloudWatch = $.cloudWatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotAliasTextLogDestination defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
+        private BotAliasTextLogDestination $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotAliasTextLogDestination();
         }
 
         public Builder(BotAliasTextLogDestination defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatch = defaults.cloudWatch;
+            $ = new BotAliasTextLogDestination(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatch(@Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
-            this.cloudWatch = cloudWatch;
+            $.cloudWatch = cloudWatch;
             return this;
-        }        public BotAliasTextLogDestination build() {
-            return new BotAliasTextLogDestination(cloudWatch);
+        }
+
+        public BotAliasTextLogDestination build() {
+            return $;
         }
     }
+
 }

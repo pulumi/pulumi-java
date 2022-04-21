@@ -5,7 +5,6 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class PrePostStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stepId", required=true)
-      private final Output<String> stepId;
+    private Output<String> stepId;
 
     public Output<String> stepId() {
         return this.stepId;
     }
 
-    public PrePostStepArgs(Output<String> stepId) {
-        this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
-    }
+    private PrePostStepArgs() {}
 
-    private PrePostStepArgs() {
-        this.stepId = Codegen.empty();
+    private PrePostStepArgs(PrePostStepArgs $) {
+        this.stepId = $.stepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrePostStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> stepId;
+        private PrePostStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrePostStepArgs();
         }
 
         public Builder(PrePostStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.stepId = defaults.stepId;
+            $ = new PrePostStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder stepId(Output<String> stepId) {
-            this.stepId = Objects.requireNonNull(stepId);
+            $.stepId = stepId;
             return this;
         }
+
         public Builder stepId(String stepId) {
-            this.stepId = Output.of(Objects.requireNonNull(stepId));
-            return this;
-        }        public PrePostStepArgs build() {
-            return new PrePostStepArgs(stepId);
+            return stepId(Output.of(stepId));
+        }
+
+        public PrePostStepArgs build() {
+            $.stepId = Objects.requireNonNull($.stepId, "expected parameter 'stepId' to be non-null");
+            return $;
         }
     }
+
 }

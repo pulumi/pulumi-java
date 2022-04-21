@@ -24,7 +24,7 @@ public final class UtcClipTimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -35,63 +35,60 @@ public final class UtcClipTimeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="time", required=true)
-      private final Output<String> time;
+    private Output<String> time;
 
     public Output<String> time() {
         return this.time;
     }
 
-    public UtcClipTimeArgs(
-        Output<String> odataType,
-        Output<String> time) {
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
-    }
+    private UtcClipTimeArgs() {}
 
-    private UtcClipTimeArgs() {
-        this.odataType = Codegen.empty();
-        this.time = Codegen.empty();
+    private UtcClipTimeArgs(UtcClipTimeArgs $) {
+        this.odataType = $.odataType;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UtcClipTimeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> odataType;
-        private Output<String> time;
+        private UtcClipTimeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UtcClipTimeArgs();
         }
 
         public Builder(UtcClipTimeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.time = defaults.time;
+            $ = new UtcClipTimeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder time(Output<String> time) {
-            this.time = Objects.requireNonNull(time);
+            $.time = time;
             return this;
         }
+
         public Builder time(String time) {
-            this.time = Output.of(Objects.requireNonNull(time));
-            return this;
-        }        public UtcClipTimeArgs build() {
-            return new UtcClipTimeArgs(odataType, time);
+            return time(Output.of(time));
+        }
+
+        public UtcClipTimeArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            $.time = Objects.requireNonNull($.time, "expected parameter 'time' to be non-null");
+            return $;
         }
     }
+
 }

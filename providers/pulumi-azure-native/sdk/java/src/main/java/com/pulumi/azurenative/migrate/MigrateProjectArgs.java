@@ -7,9 +7,9 @@ import com.pulumi.azurenative.migrate.inputs.MigrateProjectPropertiesArgs;
 import com.pulumi.azurenative.migrate.inputs.MigrateProjectTagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class MigrateProjectArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MigrateProjectArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MigrateProjectArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="migrateProjectName")
-      private final @Nullable Output<String> migrateProjectName;
+    private @Nullable Output<String> migrateProjectName;
 
-    public Output<String> migrateProjectName() {
-        return this.migrateProjectName == null ? Codegen.empty() : this.migrateProjectName;
+    public Optional<Output<String>> migrateProjectName() {
+        return Optional.ofNullable(this.migrateProjectName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class MigrateProjectArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<MigrateProjectPropertiesArgs> properties;
+    private @Nullable Output<MigrateProjectPropertiesArgs> properties;
 
-    public Output<MigrateProjectPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<MigrateProjectPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class MigrateProjectArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -77,115 +77,99 @@ public final class MigrateProjectArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<MigrateProjectTagsArgs> tags;
+    private @Nullable Output<MigrateProjectTagsArgs> tags;
 
-    public Output<MigrateProjectTagsArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<MigrateProjectTagsArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public MigrateProjectArgs(
-        @Nullable Output<String> eTag,
-        @Nullable Output<String> location,
-        @Nullable Output<String> migrateProjectName,
-        @Nullable Output<MigrateProjectPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<MigrateProjectTagsArgs> tags) {
-        this.eTag = eTag;
-        this.location = location;
-        this.migrateProjectName = migrateProjectName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private MigrateProjectArgs() {}
 
-    private MigrateProjectArgs() {
-        this.eTag = Codegen.empty();
-        this.location = Codegen.empty();
-        this.migrateProjectName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private MigrateProjectArgs(MigrateProjectArgs $) {
+        this.eTag = $.eTag;
+        this.location = $.location;
+        this.migrateProjectName = $.migrateProjectName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> migrateProjectName;
-        private @Nullable Output<MigrateProjectPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<MigrateProjectTagsArgs> tags;
+        private MigrateProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateProjectArgs();
         }
 
         public Builder(MigrateProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.location = defaults.location;
-    	      this.migrateProjectName = defaults.migrateProjectName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new MigrateProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder migrateProjectName(@Nullable Output<String> migrateProjectName) {
-            this.migrateProjectName = migrateProjectName;
+            $.migrateProjectName = migrateProjectName;
             return this;
         }
-        public Builder migrateProjectName(@Nullable String migrateProjectName) {
-            this.migrateProjectName = Codegen.ofNullable(migrateProjectName);
-            return this;
+
+        public Builder migrateProjectName(String migrateProjectName) {
+            return migrateProjectName(Output.of(migrateProjectName));
         }
+
         public Builder properties(@Nullable Output<MigrateProjectPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable MigrateProjectPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(MigrateProjectPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<MigrateProjectTagsArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable MigrateProjectTagsArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public MigrateProjectArgs build() {
-            return new MigrateProjectArgs(eTag, location, migrateProjectName, properties, resourceGroupName, tags);
+
+        public Builder tags(MigrateProjectTagsArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public MigrateProjectArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

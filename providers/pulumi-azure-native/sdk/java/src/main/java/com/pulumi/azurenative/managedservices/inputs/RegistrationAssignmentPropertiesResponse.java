@@ -22,7 +22,7 @@ public final class RegistrationAssignmentPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -33,7 +33,7 @@ public final class RegistrationAssignmentPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="registrationDefinition", required=true)
-      private final RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
+    private RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
 
     public RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition() {
         return this.registrationDefinition;
@@ -44,64 +44,59 @@ public final class RegistrationAssignmentPropertiesResponse extends com.pulumi.r
      * 
      */
     @Import(name="registrationDefinitionId", required=true)
-      private final String registrationDefinitionId;
+    private String registrationDefinitionId;
 
     public String registrationDefinitionId() {
         return this.registrationDefinitionId;
     }
 
-    public RegistrationAssignmentPropertiesResponse(
-        String provisioningState,
-        RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition,
-        String registrationDefinitionId) {
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.registrationDefinition = Objects.requireNonNull(registrationDefinition, "expected parameter 'registrationDefinition' to be non-null");
-        this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId, "expected parameter 'registrationDefinitionId' to be non-null");
-    }
+    private RegistrationAssignmentPropertiesResponse() {}
 
-    private RegistrationAssignmentPropertiesResponse() {
-        this.provisioningState = null;
-        this.registrationDefinition = null;
-        this.registrationDefinitionId = null;
+    private RegistrationAssignmentPropertiesResponse(RegistrationAssignmentPropertiesResponse $) {
+        this.provisioningState = $.provisioningState;
+        this.registrationDefinition = $.registrationDefinition;
+        this.registrationDefinitionId = $.registrationDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationAssignmentPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String provisioningState;
-        private RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
-        private String registrationDefinitionId;
+        private RegistrationAssignmentPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationAssignmentPropertiesResponse();
         }
 
         public Builder(RegistrationAssignmentPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.registrationDefinition = defaults.registrationDefinition;
-    	      this.registrationDefinitionId = defaults.registrationDefinitionId;
+            $ = new RegistrationAssignmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder registrationDefinition(RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition) {
-            this.registrationDefinition = Objects.requireNonNull(registrationDefinition);
+            $.registrationDefinition = registrationDefinition;
             return this;
         }
+
         public Builder registrationDefinitionId(String registrationDefinitionId) {
-            this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
+            $.registrationDefinitionId = registrationDefinitionId;
             return this;
-        }        public RegistrationAssignmentPropertiesResponse build() {
-            return new RegistrationAssignmentPropertiesResponse(provisioningState, registrationDefinition, registrationDefinitionId);
+        }
+
+        public RegistrationAssignmentPropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.registrationDefinition = Objects.requireNonNull($.registrationDefinition, "expected parameter 'registrationDefinition' to be non-null");
+            $.registrationDefinitionId = Objects.requireNonNull($.registrationDefinitionId, "expected parameter 'registrationDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

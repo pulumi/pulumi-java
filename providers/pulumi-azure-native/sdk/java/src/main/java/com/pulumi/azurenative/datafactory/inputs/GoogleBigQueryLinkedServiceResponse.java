@@ -32,10 +32,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="additionalProjects")
-      private final @Nullable Object additionalProjects;
+    private @Nullable Object additionalProjects;
 
     public Optional<Object> additionalProjects() {
-        return this.additionalProjects == null ? Optional.empty() : Optional.ofNullable(this.additionalProjects);
+        return Optional.ofNullable(this.additionalProjects);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -65,10 +65,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Object clientId;
+    private @Nullable Object clientId;
 
     public Optional<Object> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret() {
-        return this.clientSecret == null ? null : this.clientSecret;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="email")
-      private final @Nullable Object email;
+    private @Nullable Object email;
 
     public Optional<Object> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="keyFilePath")
-      private final @Nullable Object keyFilePath;
+    private @Nullable Object keyFilePath;
 
     public Optional<Object> keyFilePath() {
-        return this.keyFilePath == null ? Optional.empty() : Optional.ofNullable(this.keyFilePath);
+        return Optional.ofNullable(this.keyFilePath);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -153,7 +153,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="project", required=true)
-      private final Object project;
+    private Object project;
 
     public Object project() {
         return this.project;
@@ -164,10 +164,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken() {
-        return this.refreshToken == null ? null : this.refreshToken;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> refreshToken() {
+        return Optional.ofNullable(this.refreshToken);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="requestGoogleDriveScope")
-      private final @Nullable Object requestGoogleDriveScope;
+    private @Nullable Object requestGoogleDriveScope;
 
     public Optional<Object> requestGoogleDriveScope() {
-        return this.requestGoogleDriveScope == null ? Optional.empty() : Optional.ofNullable(this.requestGoogleDriveScope);
+        return Optional.ofNullable(this.requestGoogleDriveScope);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="trustedCertPath")
-      private final @Nullable Object trustedCertPath;
+    private @Nullable Object trustedCertPath;
 
     public Optional<Object> trustedCertPath() {
-        return this.trustedCertPath == null ? Optional.empty() : Optional.ofNullable(this.trustedCertPath);
+        return Optional.ofNullable(this.trustedCertPath);
     }
 
     /**
@@ -198,7 +198,7 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -209,193 +209,147 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="useSystemTrustStore")
-      private final @Nullable Object useSystemTrustStore;
+    private @Nullable Object useSystemTrustStore;
 
     public Optional<Object> useSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Optional.empty() : Optional.ofNullable(this.useSystemTrustStore);
+        return Optional.ofNullable(this.useSystemTrustStore);
     }
 
-    public GoogleBigQueryLinkedServiceResponse(
-        @Nullable Object additionalProjects,
-        @Nullable List<Object> annotations,
-        String authenticationType,
-        @Nullable Object clientId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object email,
-        @Nullable Object encryptedCredential,
-        @Nullable Object keyFilePath,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object project,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
-        @Nullable Object requestGoogleDriveScope,
-        @Nullable Object trustedCertPath,
-        String type,
-        @Nullable Object useSystemTrustStore) {
-        this.additionalProjects = additionalProjects;
-        this.annotations = annotations;
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.email = email;
-        this.encryptedCredential = encryptedCredential;
-        this.keyFilePath = keyFilePath;
-        this.parameters = parameters;
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.refreshToken = refreshToken;
-        this.requestGoogleDriveScope = requestGoogleDriveScope;
-        this.trustedCertPath = trustedCertPath;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.useSystemTrustStore = useSystemTrustStore;
-    }
+    private GoogleBigQueryLinkedServiceResponse() {}
 
-    private GoogleBigQueryLinkedServiceResponse() {
-        this.additionalProjects = null;
-        this.annotations = List.of();
-        this.authenticationType = null;
-        this.clientId = null;
-        this.clientSecret = null;
-        this.connectVia = null;
-        this.description = null;
-        this.email = null;
-        this.encryptedCredential = null;
-        this.keyFilePath = null;
-        this.parameters = Map.of();
-        this.project = null;
-        this.refreshToken = null;
-        this.requestGoogleDriveScope = null;
-        this.trustedCertPath = null;
-        this.type = null;
-        this.useSystemTrustStore = null;
+    private GoogleBigQueryLinkedServiceResponse(GoogleBigQueryLinkedServiceResponse $) {
+        this.additionalProjects = $.additionalProjects;
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.email = $.email;
+        this.encryptedCredential = $.encryptedCredential;
+        this.keyFilePath = $.keyFilePath;
+        this.parameters = $.parameters;
+        this.project = $.project;
+        this.refreshToken = $.refreshToken;
+        this.requestGoogleDriveScope = $.requestGoogleDriveScope;
+        this.trustedCertPath = $.trustedCertPath;
+        this.type = $.type;
+        this.useSystemTrustStore = $.useSystemTrustStore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleBigQueryLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object additionalProjects;
-        private @Nullable List<Object> annotations;
-        private String authenticationType;
-        private @Nullable Object clientId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object email;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object keyFilePath;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private Object project;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
-        private @Nullable Object requestGoogleDriveScope;
-        private @Nullable Object trustedCertPath;
-        private String type;
-        private @Nullable Object useSystemTrustStore;
+        private GoogleBigQueryLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleBigQueryLinkedServiceResponse();
         }
 
         public Builder(GoogleBigQueryLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalProjects = defaults.additionalProjects;
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.email = defaults.email;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.keyFilePath = defaults.keyFilePath;
-    	      this.parameters = defaults.parameters;
-    	      this.project = defaults.project;
-    	      this.refreshToken = defaults.refreshToken;
-    	      this.requestGoogleDriveScope = defaults.requestGoogleDriveScope;
-    	      this.trustedCertPath = defaults.trustedCertPath;
-    	      this.type = defaults.type;
-    	      this.useSystemTrustStore = defaults.useSystemTrustStore;
+            $ = new GoogleBigQueryLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalProjects(@Nullable Object additionalProjects) {
-            this.additionalProjects = additionalProjects;
+            $.additionalProjects = additionalProjects;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder clientId(@Nullable Object clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder email(@Nullable Object email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder keyFilePath(@Nullable Object keyFilePath) {
-            this.keyFilePath = keyFilePath;
+            $.keyFilePath = keyFilePath;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder project(Object project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
+
         public Builder requestGoogleDriveScope(@Nullable Object requestGoogleDriveScope) {
-            this.requestGoogleDriveScope = requestGoogleDriveScope;
+            $.requestGoogleDriveScope = requestGoogleDriveScope;
             return this;
         }
+
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = trustedCertPath;
+            $.trustedCertPath = trustedCertPath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = useSystemTrustStore;
+            $.useSystemTrustStore = useSystemTrustStore;
             return this;
-        }        public GoogleBigQueryLinkedServiceResponse build() {
-            return new GoogleBigQueryLinkedServiceResponse(additionalProjects, annotations, authenticationType, clientId, clientSecret, connectVia, description, email, encryptedCredential, keyFilePath, parameters, project, refreshToken, requestGoogleDriveScope, trustedCertPath, type, useSystemTrustStore);
+        }
+
+        public GoogleBigQueryLinkedServiceResponse build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

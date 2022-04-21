@@ -7,9 +7,9 @@ import com.pulumi.azurenative.blueprint.enums.ArtifactKind;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactName")
-      private final @Nullable Output<String> artifactName;
+    private @Nullable Output<String> artifactName;
 
-    public Output<String> artifactName() {
-        return this.artifactName == null ? Codegen.empty() : this.artifactName;
+    public Optional<Output<String>> artifactName() {
+        return Optional.ofNullable(this.artifactName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blueprintName", required=true)
-      private final Output<String> blueprintName;
+    private Output<String> blueprintName;
 
     public Output<String> blueprintName() {
         return this.blueprintName;
@@ -44,7 +44,7 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,ArtifactKind>> kind;
+    private Output<Either<String,ArtifactKind>> kind;
 
     public Output<Either<String,ArtifactKind>> kind() {
         return this.kind;
@@ -55,89 +55,81 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceScope", required=true)
-      private final Output<String> resourceScope;
+    private Output<String> resourceScope;
 
     public Output<String> resourceScope() {
         return this.resourceScope;
     }
 
-    public ArtifactArgs(
-        @Nullable Output<String> artifactName,
-        Output<String> blueprintName,
-        Output<Either<String,ArtifactKind>> kind,
-        Output<String> resourceScope) {
-        this.artifactName = artifactName;
-        this.blueprintName = Objects.requireNonNull(blueprintName, "expected parameter 'blueprintName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.resourceScope = Objects.requireNonNull(resourceScope, "expected parameter 'resourceScope' to be non-null");
-    }
+    private ArtifactArgs() {}
 
-    private ArtifactArgs() {
-        this.artifactName = Codegen.empty();
-        this.blueprintName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.resourceScope = Codegen.empty();
+    private ArtifactArgs(ArtifactArgs $) {
+        this.artifactName = $.artifactName;
+        this.blueprintName = $.blueprintName;
+        this.kind = $.kind;
+        this.resourceScope = $.resourceScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArtifactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactName;
-        private Output<String> blueprintName;
-        private Output<Either<String,ArtifactKind>> kind;
-        private Output<String> resourceScope;
+        private ArtifactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArtifactArgs();
         }
 
         public Builder(ArtifactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactName = defaults.artifactName;
-    	      this.blueprintName = defaults.blueprintName;
-    	      this.kind = defaults.kind;
-    	      this.resourceScope = defaults.resourceScope;
+            $ = new ArtifactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactName(@Nullable Output<String> artifactName) {
-            this.artifactName = artifactName;
+            $.artifactName = artifactName;
             return this;
         }
-        public Builder artifactName(@Nullable String artifactName) {
-            this.artifactName = Codegen.ofNullable(artifactName);
-            return this;
+
+        public Builder artifactName(String artifactName) {
+            return artifactName(Output.of(artifactName));
         }
+
         public Builder blueprintName(Output<String> blueprintName) {
-            this.blueprintName = Objects.requireNonNull(blueprintName);
+            $.blueprintName = blueprintName;
             return this;
         }
+
         public Builder blueprintName(String blueprintName) {
-            this.blueprintName = Output.of(Objects.requireNonNull(blueprintName));
-            return this;
+            return blueprintName(Output.of(blueprintName));
         }
+
         public Builder kind(Output<Either<String,ArtifactKind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,ArtifactKind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder resourceScope(Output<String> resourceScope) {
-            this.resourceScope = Objects.requireNonNull(resourceScope);
+            $.resourceScope = resourceScope;
             return this;
         }
+
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
-            return this;
-        }        public ArtifactArgs build() {
-            return new ArtifactArgs(artifactName, blueprintName, kind, resourceScope);
+            return resourceScope(Output.of(resourceScope));
+        }
+
+        public ArtifactArgs build() {
+            $.blueprintName = Objects.requireNonNull($.blueprintName, "expected parameter 'blueprintName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.resourceScope = Objects.requireNonNull($.resourceScope, "expected parameter 'resourceScope' to be non-null");
+            return $;
         }
     }
+
 }

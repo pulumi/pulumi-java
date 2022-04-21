@@ -5,9 +5,9 @@ package com.pulumi.aws.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ZoneAssociationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
@@ -31,10 +31,10 @@ public final class ZoneAssociationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vpcRegion")
-      private final @Nullable Output<String> vpcRegion;
+    private @Nullable Output<String> vpcRegion;
 
-    public Output<String> vpcRegion() {
-        return this.vpcRegion == null ? Codegen.empty() : this.vpcRegion;
+    public Optional<Output<String>> vpcRegion() {
+        return Optional.ofNullable(this.vpcRegion);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class ZoneAssociationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="zoneId", required=true)
-      private final Output<String> zoneId;
+    private Output<String> zoneId;
 
     public Output<String> zoneId() {
         return this.zoneId;
     }
 
-    public ZoneAssociationArgs(
-        Output<String> vpcId,
-        @Nullable Output<String> vpcRegion,
-        Output<String> zoneId) {
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-        this.vpcRegion = vpcRegion;
-        this.zoneId = Objects.requireNonNull(zoneId, "expected parameter 'zoneId' to be non-null");
-    }
+    private ZoneAssociationArgs() {}
 
-    private ZoneAssociationArgs() {
-        this.vpcId = Codegen.empty();
-        this.vpcRegion = Codegen.empty();
-        this.zoneId = Codegen.empty();
+    private ZoneAssociationArgs(ZoneAssociationArgs $) {
+        this.vpcId = $.vpcId;
+        this.vpcRegion = $.vpcRegion;
+        this.zoneId = $.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ZoneAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> vpcId;
-        private @Nullable Output<String> vpcRegion;
-        private Output<String> zoneId;
+        private ZoneAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ZoneAssociationArgs();
         }
 
         public Builder(ZoneAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpcId = defaults.vpcId;
-    	      this.vpcRegion = defaults.vpcRegion;
-    	      this.zoneId = defaults.zoneId;
+            $ = new ZoneAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
+            return vpcId(Output.of(vpcId));
         }
+
         public Builder vpcRegion(@Nullable Output<String> vpcRegion) {
-            this.vpcRegion = vpcRegion;
+            $.vpcRegion = vpcRegion;
             return this;
         }
-        public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Codegen.ofNullable(vpcRegion);
-            return this;
+
+        public Builder vpcRegion(String vpcRegion) {
+            return vpcRegion(Output.of(vpcRegion));
         }
+
         public Builder zoneId(Output<String> zoneId) {
-            this.zoneId = Objects.requireNonNull(zoneId);
+            $.zoneId = zoneId;
             return this;
         }
+
         public Builder zoneId(String zoneId) {
-            this.zoneId = Output.of(Objects.requireNonNull(zoneId));
-            return this;
-        }        public ZoneAssociationArgs build() {
-            return new ZoneAssociationArgs(vpcId, vpcRegion, zoneId);
+            return zoneId(Output.of(zoneId));
+        }
+
+        public ZoneAssociationArgs build() {
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            $.zoneId = Objects.requireNonNull($.zoneId, "expected parameter 'zoneId' to be non-null");
+            return $;
         }
     }
+
 }

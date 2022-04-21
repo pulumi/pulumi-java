@@ -5,7 +5,6 @@ package com.pulumi.azurenative.machinelearning.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class GraphParameterLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="nodeId", required=true)
-      private final Output<String> nodeId;
+    private Output<String> nodeId;
 
     public Output<String> nodeId() {
         return this.nodeId;
@@ -34,63 +33,60 @@ public final class GraphParameterLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="parameterKey", required=true)
-      private final Output<String> parameterKey;
+    private Output<String> parameterKey;
 
     public Output<String> parameterKey() {
         return this.parameterKey;
     }
 
-    public GraphParameterLinkArgs(
-        Output<String> nodeId,
-        Output<String> parameterKey) {
-        this.nodeId = Objects.requireNonNull(nodeId, "expected parameter 'nodeId' to be non-null");
-        this.parameterKey = Objects.requireNonNull(parameterKey, "expected parameter 'parameterKey' to be non-null");
-    }
+    private GraphParameterLinkArgs() {}
 
-    private GraphParameterLinkArgs() {
-        this.nodeId = Codegen.empty();
-        this.parameterKey = Codegen.empty();
+    private GraphParameterLinkArgs(GraphParameterLinkArgs $) {
+        this.nodeId = $.nodeId;
+        this.parameterKey = $.parameterKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphParameterLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> nodeId;
-        private Output<String> parameterKey;
+        private GraphParameterLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphParameterLinkArgs();
         }
 
         public Builder(GraphParameterLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeId = defaults.nodeId;
-    	      this.parameterKey = defaults.parameterKey;
+            $ = new GraphParameterLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeId(Output<String> nodeId) {
-            this.nodeId = Objects.requireNonNull(nodeId);
+            $.nodeId = nodeId;
             return this;
         }
+
         public Builder nodeId(String nodeId) {
-            this.nodeId = Output.of(Objects.requireNonNull(nodeId));
-            return this;
+            return nodeId(Output.of(nodeId));
         }
+
         public Builder parameterKey(Output<String> parameterKey) {
-            this.parameterKey = Objects.requireNonNull(parameterKey);
+            $.parameterKey = parameterKey;
             return this;
         }
+
         public Builder parameterKey(String parameterKey) {
-            this.parameterKey = Output.of(Objects.requireNonNull(parameterKey));
-            return this;
-        }        public GraphParameterLinkArgs build() {
-            return new GraphParameterLinkArgs(nodeId, parameterKey);
+            return parameterKey(Output.of(parameterKey));
+        }
+
+        public GraphParameterLinkArgs build() {
+            $.nodeId = Objects.requireNonNull($.nodeId, "expected parameter 'nodeId' to be non-null");
+            $.parameterKey = Objects.requireNonNull($.parameterKey, "expected parameter 'parameterKey' to be non-null");
+            return $;
         }
     }
+
 }

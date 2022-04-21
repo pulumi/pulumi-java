@@ -14,62 +14,59 @@ public final class NetworkInterfacePrivateIpAddressSpecification extends com.pul
     public static final NetworkInterfacePrivateIpAddressSpecification Empty = new NetworkInterfacePrivateIpAddressSpecification();
 
     @Import(name="primary", required=true)
-      private final Boolean primary;
+    private Boolean primary;
 
     public Boolean primary() {
         return this.primary;
     }
 
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
 
-    public NetworkInterfacePrivateIpAddressSpecification(
-        Boolean primary,
-        String privateIpAddress) {
-        this.primary = Objects.requireNonNull(primary, "expected parameter 'primary' to be non-null");
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-    }
+    private NetworkInterfacePrivateIpAddressSpecification() {}
 
-    private NetworkInterfacePrivateIpAddressSpecification() {
-        this.primary = null;
-        this.privateIpAddress = null;
+    private NetworkInterfacePrivateIpAddressSpecification(NetworkInterfacePrivateIpAddressSpecification $) {
+        this.primary = $.primary;
+        this.privateIpAddress = $.privateIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfacePrivateIpAddressSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean primary;
-        private String privateIpAddress;
+        private NetworkInterfacePrivateIpAddressSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfacePrivateIpAddressSpecification();
         }
 
         public Builder(NetworkInterfacePrivateIpAddressSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primary = defaults.primary;
-    	      this.privateIpAddress = defaults.privateIpAddress;
+            $ = new NetworkInterfacePrivateIpAddressSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder primary(Boolean primary) {
-            this.primary = Objects.requireNonNull(primary);
+            $.primary = primary;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
-        }        public NetworkInterfacePrivateIpAddressSpecification build() {
-            return new NetworkInterfacePrivateIpAddressSpecification(primary, privateIpAddress);
+        }
+
+        public NetworkInterfacePrivateIpAddressSpecification build() {
+            $.primary = Objects.requireNonNull($.primary, "expected parameter 'primary' to be non-null");
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

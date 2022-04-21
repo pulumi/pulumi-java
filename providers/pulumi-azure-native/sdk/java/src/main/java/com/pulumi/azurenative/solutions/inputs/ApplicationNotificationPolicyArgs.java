@@ -6,7 +6,6 @@ package com.pulumi.azurenative.solutions.inputs;
 import com.pulumi.azurenative.solutions.inputs.ApplicationNotificationEndpointArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class ApplicationNotificationPolicyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="notificationEndpoints", required=true)
-      private final Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
+    private Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
 
     public Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints() {
         return this.notificationEndpoints;
     }
 
-    public ApplicationNotificationPolicyArgs(Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints) {
-        this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints, "expected parameter 'notificationEndpoints' to be non-null");
-    }
+    private ApplicationNotificationPolicyArgs() {}
 
-    private ApplicationNotificationPolicyArgs() {
-        this.notificationEndpoints = Codegen.empty();
+    private ApplicationNotificationPolicyArgs(ApplicationNotificationPolicyArgs $) {
+        this.notificationEndpoints = $.notificationEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationNotificationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints;
+        private ApplicationNotificationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationNotificationPolicyArgs();
         }
 
         public Builder(ApplicationNotificationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.notificationEndpoints = defaults.notificationEndpoints;
+            $ = new ApplicationNotificationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder notificationEndpoints(Output<List<ApplicationNotificationEndpointArgs>> notificationEndpoints) {
-            this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
+            $.notificationEndpoints = notificationEndpoints;
             return this;
         }
+
         public Builder notificationEndpoints(List<ApplicationNotificationEndpointArgs> notificationEndpoints) {
-            this.notificationEndpoints = Output.of(Objects.requireNonNull(notificationEndpoints));
-            return this;
+            return notificationEndpoints(Output.of(notificationEndpoints));
         }
+
         public Builder notificationEndpoints(ApplicationNotificationEndpointArgs... notificationEndpoints) {
             return notificationEndpoints(List.of(notificationEndpoints));
-        }        public ApplicationNotificationPolicyArgs build() {
-            return new ApplicationNotificationPolicyArgs(notificationEndpoints);
+        }
+
+        public ApplicationNotificationPolicyArgs build() {
+            $.notificationEndpoints = Objects.requireNonNull($.notificationEndpoints, "expected parameter 'notificationEndpoints' to be non-null");
+            return $;
         }
     }
+
 }

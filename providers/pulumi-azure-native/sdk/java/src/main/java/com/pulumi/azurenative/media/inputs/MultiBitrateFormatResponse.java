@@ -26,7 +26,7 @@ public final class MultiBitrateFormatResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="filenamePattern", required=true)
-      private final String filenamePattern;
+    private String filenamePattern;
 
     public String filenamePattern() {
         return this.filenamePattern;
@@ -38,7 +38,7 @@ public final class MultiBitrateFormatResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -49,67 +49,62 @@ public final class MultiBitrateFormatResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="outputFiles")
-      private final @Nullable List<OutputFileResponse> outputFiles;
+    private @Nullable List<OutputFileResponse> outputFiles;
 
-    public List<OutputFileResponse> outputFiles() {
-        return this.outputFiles == null ? List.of() : this.outputFiles;
+    public Optional<List<OutputFileResponse>> outputFiles() {
+        return Optional.ofNullable(this.outputFiles);
     }
 
-    public MultiBitrateFormatResponse(
-        String filenamePattern,
-        String odataType,
-        @Nullable List<OutputFileResponse> outputFiles) {
-        this.filenamePattern = Objects.requireNonNull(filenamePattern, "expected parameter 'filenamePattern' to be non-null");
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.outputFiles = outputFiles;
-    }
+    private MultiBitrateFormatResponse() {}
 
-    private MultiBitrateFormatResponse() {
-        this.filenamePattern = null;
-        this.odataType = null;
-        this.outputFiles = List.of();
+    private MultiBitrateFormatResponse(MultiBitrateFormatResponse $) {
+        this.filenamePattern = $.filenamePattern;
+        this.odataType = $.odataType;
+        this.outputFiles = $.outputFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiBitrateFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filenamePattern;
-        private String odataType;
-        private @Nullable List<OutputFileResponse> outputFiles;
+        private MultiBitrateFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiBitrateFormatResponse();
         }
 
         public Builder(MultiBitrateFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filenamePattern = defaults.filenamePattern;
-    	      this.odataType = defaults.odataType;
-    	      this.outputFiles = defaults.outputFiles;
+            $ = new MultiBitrateFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filenamePattern(String filenamePattern) {
-            this.filenamePattern = Objects.requireNonNull(filenamePattern);
+            $.filenamePattern = filenamePattern;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder outputFiles(@Nullable List<OutputFileResponse> outputFiles) {
-            this.outputFiles = outputFiles;
+            $.outputFiles = outputFiles;
             return this;
         }
+
         public Builder outputFiles(OutputFileResponse... outputFiles) {
             return outputFiles(List.of(outputFiles));
-        }        public MultiBitrateFormatResponse build() {
-            return new MultiBitrateFormatResponse(filenamePattern, odataType, outputFiles);
+        }
+
+        public MultiBitrateFormatResponse build() {
+            $.filenamePattern = Objects.requireNonNull($.filenamePattern, "expected parameter 'filenamePattern' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

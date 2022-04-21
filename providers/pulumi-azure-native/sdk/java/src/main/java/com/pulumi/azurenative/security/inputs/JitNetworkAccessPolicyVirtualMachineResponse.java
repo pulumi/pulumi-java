@@ -21,7 +21,7 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,7 +32,7 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
      * 
      */
     @Import(name="ports", required=true)
-      private final List<JitNetworkAccessPortRuleResponse> ports;
+    private List<JitNetworkAccessPortRuleResponse> ports;
 
     public List<JitNetworkAccessPortRuleResponse> ports() {
         return this.ports;
@@ -43,67 +43,62 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends com.pulu
      * 
      */
     @Import(name="publicIpAddress")
-      private final @Nullable String publicIpAddress;
+    private @Nullable String publicIpAddress;
 
     public Optional<String> publicIpAddress() {
-        return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
+        return Optional.ofNullable(this.publicIpAddress);
     }
 
-    public JitNetworkAccessPolicyVirtualMachineResponse(
-        String id,
-        List<JitNetworkAccessPortRuleResponse> ports,
-        @Nullable String publicIpAddress) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-        this.publicIpAddress = publicIpAddress;
-    }
+    private JitNetworkAccessPolicyVirtualMachineResponse() {}
 
-    private JitNetworkAccessPolicyVirtualMachineResponse() {
-        this.id = null;
-        this.ports = List.of();
-        this.publicIpAddress = null;
+    private JitNetworkAccessPolicyVirtualMachineResponse(JitNetworkAccessPolicyVirtualMachineResponse $) {
+        this.id = $.id;
+        this.ports = $.ports;
+        this.publicIpAddress = $.publicIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitNetworkAccessPolicyVirtualMachineResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private List<JitNetworkAccessPortRuleResponse> ports;
-        private @Nullable String publicIpAddress;
+        private JitNetworkAccessPolicyVirtualMachineResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitNetworkAccessPolicyVirtualMachineResponse();
         }
 
         public Builder(JitNetworkAccessPolicyVirtualMachineResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.ports = defaults.ports;
-    	      this.publicIpAddress = defaults.publicIpAddress;
+            $ = new JitNetworkAccessPolicyVirtualMachineResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder ports(List<JitNetworkAccessPortRuleResponse> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(JitNetworkAccessPortRuleResponse... ports) {
             return ports(List.of(ports));
         }
+
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = publicIpAddress;
+            $.publicIpAddress = publicIpAddress;
             return this;
-        }        public JitNetworkAccessPolicyVirtualMachineResponse build() {
-            return new JitNetworkAccessPolicyVirtualMachineResponse(id, ports, publicIpAddress);
+        }
+
+        public JitNetworkAccessPolicyVirtualMachineResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

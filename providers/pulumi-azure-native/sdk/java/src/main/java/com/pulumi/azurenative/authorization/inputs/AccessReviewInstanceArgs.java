@@ -5,9 +5,9 @@ package com.pulumi.azurenative.authorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AccessReviewInstanceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="endDateTime")
-      private final @Nullable Output<String> endDateTime;
+    private @Nullable Output<String> endDateTime;
 
-    public Output<String> endDateTime() {
-        return this.endDateTime == null ? Codegen.empty() : this.endDateTime;
+    public Optional<Output<String>> endDateTime() {
+        return Optional.ofNullable(this.endDateTime);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AccessReviewInstanceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="startDateTime")
-      private final @Nullable Output<String> startDateTime;
+    private @Nullable Output<String> startDateTime;
 
-    public Output<String> startDateTime() {
-        return this.startDateTime == null ? Codegen.empty() : this.startDateTime;
+    public Optional<Output<String>> startDateTime() {
+        return Optional.ofNullable(this.startDateTime);
     }
 
-    public AccessReviewInstanceArgs(
-        @Nullable Output<String> endDateTime,
-        @Nullable Output<String> startDateTime) {
-        this.endDateTime = endDateTime;
-        this.startDateTime = startDateTime;
-    }
+    private AccessReviewInstanceArgs() {}
 
-    private AccessReviewInstanceArgs() {
-        this.endDateTime = Codegen.empty();
-        this.startDateTime = Codegen.empty();
+    private AccessReviewInstanceArgs(AccessReviewInstanceArgs $) {
+        this.endDateTime = $.endDateTime;
+        this.startDateTime = $.startDateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessReviewInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endDateTime;
-        private @Nullable Output<String> startDateTime;
+        private AccessReviewInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessReviewInstanceArgs();
         }
 
         public Builder(AccessReviewInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDateTime = defaults.endDateTime;
-    	      this.startDateTime = defaults.startDateTime;
+            $ = new AccessReviewInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endDateTime(@Nullable Output<String> endDateTime) {
-            this.endDateTime = endDateTime;
+            $.endDateTime = endDateTime;
             return this;
         }
-        public Builder endDateTime(@Nullable String endDateTime) {
-            this.endDateTime = Codegen.ofNullable(endDateTime);
-            return this;
+
+        public Builder endDateTime(String endDateTime) {
+            return endDateTime(Output.of(endDateTime));
         }
+
         public Builder startDateTime(@Nullable Output<String> startDateTime) {
-            this.startDateTime = startDateTime;
+            $.startDateTime = startDateTime;
             return this;
         }
-        public Builder startDateTime(@Nullable String startDateTime) {
-            this.startDateTime = Codegen.ofNullable(startDateTime);
-            return this;
-        }        public AccessReviewInstanceArgs build() {
-            return new AccessReviewInstanceArgs(endDateTime, startDateTime);
+
+        public Builder startDateTime(String startDateTime) {
+            return startDateTime(Output.of(startDateTime));
+        }
+
+        public AccessReviewInstanceArgs build() {
+            return $;
         }
     }
+
 }

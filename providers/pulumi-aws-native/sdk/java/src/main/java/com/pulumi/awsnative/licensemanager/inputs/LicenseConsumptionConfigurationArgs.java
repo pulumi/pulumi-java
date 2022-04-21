@@ -7,9 +7,9 @@ import com.pulumi.awsnative.licensemanager.inputs.LicenseBorrowConfigurationArgs
 import com.pulumi.awsnative.licensemanager.inputs.LicenseProvisionalConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class LicenseConsumptionConfigurationArgs extends com.pulumi.resour
     public static final LicenseConsumptionConfigurationArgs Empty = new LicenseConsumptionConfigurationArgs();
 
     @Import(name="borrowConfiguration")
-      private final @Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration;
+    private @Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration;
 
-    public Output<LicenseBorrowConfigurationArgs> borrowConfiguration() {
-        return this.borrowConfiguration == null ? Codegen.empty() : this.borrowConfiguration;
+    public Optional<Output<LicenseBorrowConfigurationArgs>> borrowConfiguration() {
+        return Optional.ofNullable(this.borrowConfiguration);
     }
 
     @Import(name="provisionalConfiguration")
-      private final @Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
+    private @Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
 
-    public Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration() {
-        return this.provisionalConfiguration == null ? Codegen.empty() : this.provisionalConfiguration;
+    public Optional<Output<LicenseProvisionalConfigurationArgs>> provisionalConfiguration() {
+        return Optional.ofNullable(this.provisionalConfiguration);
     }
 
     @Import(name="renewType")
-      private final @Nullable Output<String> renewType;
+    private @Nullable Output<String> renewType;
 
-    public Output<String> renewType() {
-        return this.renewType == null ? Codegen.empty() : this.renewType;
+    public Optional<Output<String>> renewType() {
+        return Optional.ofNullable(this.renewType);
     }
 
-    public LicenseConsumptionConfigurationArgs(
-        @Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration,
-        @Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration,
-        @Nullable Output<String> renewType) {
-        this.borrowConfiguration = borrowConfiguration;
-        this.provisionalConfiguration = provisionalConfiguration;
-        this.renewType = renewType;
-    }
+    private LicenseConsumptionConfigurationArgs() {}
 
-    private LicenseConsumptionConfigurationArgs() {
-        this.borrowConfiguration = Codegen.empty();
-        this.provisionalConfiguration = Codegen.empty();
-        this.renewType = Codegen.empty();
+    private LicenseConsumptionConfigurationArgs(LicenseConsumptionConfigurationArgs $) {
+        this.borrowConfiguration = $.borrowConfiguration;
+        this.provisionalConfiguration = $.provisionalConfiguration;
+        this.renewType = $.renewType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseConsumptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration;
-        private @Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration;
-        private @Nullable Output<String> renewType;
+        private LicenseConsumptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseConsumptionConfigurationArgs();
         }
 
         public Builder(LicenseConsumptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.borrowConfiguration = defaults.borrowConfiguration;
-    	      this.provisionalConfiguration = defaults.provisionalConfiguration;
-    	      this.renewType = defaults.renewType;
+            $ = new LicenseConsumptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder borrowConfiguration(@Nullable Output<LicenseBorrowConfigurationArgs> borrowConfiguration) {
-            this.borrowConfiguration = borrowConfiguration;
+            $.borrowConfiguration = borrowConfiguration;
             return this;
         }
-        public Builder borrowConfiguration(@Nullable LicenseBorrowConfigurationArgs borrowConfiguration) {
-            this.borrowConfiguration = Codegen.ofNullable(borrowConfiguration);
-            return this;
+
+        public Builder borrowConfiguration(LicenseBorrowConfigurationArgs borrowConfiguration) {
+            return borrowConfiguration(Output.of(borrowConfiguration));
         }
+
         public Builder provisionalConfiguration(@Nullable Output<LicenseProvisionalConfigurationArgs> provisionalConfiguration) {
-            this.provisionalConfiguration = provisionalConfiguration;
+            $.provisionalConfiguration = provisionalConfiguration;
             return this;
         }
-        public Builder provisionalConfiguration(@Nullable LicenseProvisionalConfigurationArgs provisionalConfiguration) {
-            this.provisionalConfiguration = Codegen.ofNullable(provisionalConfiguration);
-            return this;
+
+        public Builder provisionalConfiguration(LicenseProvisionalConfigurationArgs provisionalConfiguration) {
+            return provisionalConfiguration(Output.of(provisionalConfiguration));
         }
+
         public Builder renewType(@Nullable Output<String> renewType) {
-            this.renewType = renewType;
+            $.renewType = renewType;
             return this;
         }
-        public Builder renewType(@Nullable String renewType) {
-            this.renewType = Codegen.ofNullable(renewType);
-            return this;
-        }        public LicenseConsumptionConfigurationArgs build() {
-            return new LicenseConsumptionConfigurationArgs(borrowConfiguration, provisionalConfiguration, renewType);
+
+        public Builder renewType(String renewType) {
+            return renewType(Output.of(renewType));
+        }
+
+        public LicenseConsumptionConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="endTimestamp")
-      private final @Nullable Output<Double> endTimestamp;
+    private @Nullable Output<Double> endTimestamp;
 
-    public Output<Double> endTimestamp() {
-        return this.endTimestamp == null ? Codegen.empty() : this.endTimestamp;
+    public Optional<Output<Double>> endTimestamp() {
+        return Optional.ofNullable(this.endTimestamp);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="forceEndTimestamp")
-      private final @Nullable Output<Boolean> forceEndTimestamp;
+    private @Nullable Output<Boolean> forceEndTimestamp;
 
-    public Output<Boolean> forceEndTimestamp() {
-        return this.forceEndTimestamp == null ? Codegen.empty() : this.forceEndTimestamp;
+    public Optional<Output<Boolean>> forceEndTimestamp() {
+        return Optional.ofNullable(this.forceEndTimestamp);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="liveBackoffDuration")
-      private final @Nullable Output<Double> liveBackoffDuration;
+    private @Nullable Output<Double> liveBackoffDuration;
 
-    public Output<Double> liveBackoffDuration() {
-        return this.liveBackoffDuration == null ? Codegen.empty() : this.liveBackoffDuration;
+    public Optional<Output<Double>> liveBackoffDuration() {
+        return Optional.ofNullable(this.liveBackoffDuration);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="presentationWindowDuration")
-      private final @Nullable Output<Double> presentationWindowDuration;
+    private @Nullable Output<Double> presentationWindowDuration;
 
-    public Output<Double> presentationWindowDuration() {
-        return this.presentationWindowDuration == null ? Codegen.empty() : this.presentationWindowDuration;
+    public Optional<Output<Double>> presentationWindowDuration() {
+        return Optional.ofNullable(this.presentationWindowDuration);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="startTimestamp")
-      private final @Nullable Output<Double> startTimestamp;
+    private @Nullable Output<Double> startTimestamp;
 
-    public Output<Double> startTimestamp() {
-        return this.startTimestamp == null ? Codegen.empty() : this.startTimestamp;
+    public Optional<Output<Double>> startTimestamp() {
+        return Optional.ofNullable(this.startTimestamp);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class PresentationTimeRangeArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="timescale")
-      private final @Nullable Output<Double> timescale;
+    private @Nullable Output<Double> timescale;
 
-    public Output<Double> timescale() {
-        return this.timescale == null ? Codegen.empty() : this.timescale;
+    public Optional<Output<Double>> timescale() {
+        return Optional.ofNullable(this.timescale);
     }
 
-    public PresentationTimeRangeArgs(
-        @Nullable Output<Double> endTimestamp,
-        @Nullable Output<Boolean> forceEndTimestamp,
-        @Nullable Output<Double> liveBackoffDuration,
-        @Nullable Output<Double> presentationWindowDuration,
-        @Nullable Output<Double> startTimestamp,
-        @Nullable Output<Double> timescale) {
-        this.endTimestamp = endTimestamp;
-        this.forceEndTimestamp = forceEndTimestamp;
-        this.liveBackoffDuration = liveBackoffDuration;
-        this.presentationWindowDuration = presentationWindowDuration;
-        this.startTimestamp = startTimestamp;
-        this.timescale = timescale;
-    }
+    private PresentationTimeRangeArgs() {}
 
-    private PresentationTimeRangeArgs() {
-        this.endTimestamp = Codegen.empty();
-        this.forceEndTimestamp = Codegen.empty();
-        this.liveBackoffDuration = Codegen.empty();
-        this.presentationWindowDuration = Codegen.empty();
-        this.startTimestamp = Codegen.empty();
-        this.timescale = Codegen.empty();
+    private PresentationTimeRangeArgs(PresentationTimeRangeArgs $) {
+        this.endTimestamp = $.endTimestamp;
+        this.forceEndTimestamp = $.forceEndTimestamp;
+        this.liveBackoffDuration = $.liveBackoffDuration;
+        this.presentationWindowDuration = $.presentationWindowDuration;
+        this.startTimestamp = $.startTimestamp;
+        this.timescale = $.timescale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PresentationTimeRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> endTimestamp;
-        private @Nullable Output<Boolean> forceEndTimestamp;
-        private @Nullable Output<Double> liveBackoffDuration;
-        private @Nullable Output<Double> presentationWindowDuration;
-        private @Nullable Output<Double> startTimestamp;
-        private @Nullable Output<Double> timescale;
+        private PresentationTimeRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PresentationTimeRangeArgs();
         }
 
         public Builder(PresentationTimeRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTimestamp = defaults.endTimestamp;
-    	      this.forceEndTimestamp = defaults.forceEndTimestamp;
-    	      this.liveBackoffDuration = defaults.liveBackoffDuration;
-    	      this.presentationWindowDuration = defaults.presentationWindowDuration;
-    	      this.startTimestamp = defaults.startTimestamp;
-    	      this.timescale = defaults.timescale;
+            $ = new PresentationTimeRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTimestamp(@Nullable Output<Double> endTimestamp) {
-            this.endTimestamp = endTimestamp;
+            $.endTimestamp = endTimestamp;
             return this;
         }
-        public Builder endTimestamp(@Nullable Double endTimestamp) {
-            this.endTimestamp = Codegen.ofNullable(endTimestamp);
-            return this;
+
+        public Builder endTimestamp(Double endTimestamp) {
+            return endTimestamp(Output.of(endTimestamp));
         }
+
         public Builder forceEndTimestamp(@Nullable Output<Boolean> forceEndTimestamp) {
-            this.forceEndTimestamp = forceEndTimestamp;
+            $.forceEndTimestamp = forceEndTimestamp;
             return this;
         }
-        public Builder forceEndTimestamp(@Nullable Boolean forceEndTimestamp) {
-            this.forceEndTimestamp = Codegen.ofNullable(forceEndTimestamp);
-            return this;
+
+        public Builder forceEndTimestamp(Boolean forceEndTimestamp) {
+            return forceEndTimestamp(Output.of(forceEndTimestamp));
         }
+
         public Builder liveBackoffDuration(@Nullable Output<Double> liveBackoffDuration) {
-            this.liveBackoffDuration = liveBackoffDuration;
+            $.liveBackoffDuration = liveBackoffDuration;
             return this;
         }
-        public Builder liveBackoffDuration(@Nullable Double liveBackoffDuration) {
-            this.liveBackoffDuration = Codegen.ofNullable(liveBackoffDuration);
-            return this;
+
+        public Builder liveBackoffDuration(Double liveBackoffDuration) {
+            return liveBackoffDuration(Output.of(liveBackoffDuration));
         }
+
         public Builder presentationWindowDuration(@Nullable Output<Double> presentationWindowDuration) {
-            this.presentationWindowDuration = presentationWindowDuration;
+            $.presentationWindowDuration = presentationWindowDuration;
             return this;
         }
-        public Builder presentationWindowDuration(@Nullable Double presentationWindowDuration) {
-            this.presentationWindowDuration = Codegen.ofNullable(presentationWindowDuration);
-            return this;
+
+        public Builder presentationWindowDuration(Double presentationWindowDuration) {
+            return presentationWindowDuration(Output.of(presentationWindowDuration));
         }
+
         public Builder startTimestamp(@Nullable Output<Double> startTimestamp) {
-            this.startTimestamp = startTimestamp;
+            $.startTimestamp = startTimestamp;
             return this;
         }
-        public Builder startTimestamp(@Nullable Double startTimestamp) {
-            this.startTimestamp = Codegen.ofNullable(startTimestamp);
-            return this;
+
+        public Builder startTimestamp(Double startTimestamp) {
+            return startTimestamp(Output.of(startTimestamp));
         }
+
         public Builder timescale(@Nullable Output<Double> timescale) {
-            this.timescale = timescale;
+            $.timescale = timescale;
             return this;
         }
-        public Builder timescale(@Nullable Double timescale) {
-            this.timescale = Codegen.ofNullable(timescale);
-            return this;
-        }        public PresentationTimeRangeArgs build() {
-            return new PresentationTimeRangeArgs(endTimestamp, forceEndTimestamp, liveBackoffDuration, presentationWindowDuration, startTimestamp, timescale);
+
+        public Builder timescale(Double timescale) {
+            return timescale(Output.of(timescale));
+        }
+
+        public PresentationTimeRangeArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.awsnative.databrew.inputs.RulesetRuleArgs;
 import com.pulumi.awsnative.databrew.inputs.RulesetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<List<RulesetRuleArgs>> rules;
+    private Output<List<RulesetRuleArgs>> rules;
 
     public Output<List<RulesetRuleArgs>> rules() {
         return this.rules;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<RulesetTagArgs>> tags;
+    private @Nullable Output<List<RulesetTagArgs>> tags;
 
-    public Output<List<RulesetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RulesetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -63,108 +63,98 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetArn", required=true)
-      private final Output<String> targetArn;
+    private Output<String> targetArn;
 
     public Output<String> targetArn() {
         return this.targetArn;
     }
 
-    public RulesetArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        Output<List<RulesetRuleArgs>> rules,
-        @Nullable Output<List<RulesetTagArgs>> tags,
-        Output<String> targetArn) {
-        this.description = description;
-        this.name = name;
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.tags = tags;
-        this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
-    }
+    private RulesetArgs() {}
 
-    private RulesetArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targetArn = Codegen.empty();
+    private RulesetArgs(RulesetArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.rules = $.rules;
+        this.tags = $.tags;
+        this.targetArn = $.targetArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private Output<List<RulesetRuleArgs>> rules;
-        private @Nullable Output<List<RulesetTagArgs>> tags;
-        private Output<String> targetArn;
+        private RulesetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesetArgs();
         }
 
         public Builder(RulesetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.rules = defaults.rules;
-    	      this.tags = defaults.tags;
-    	      this.targetArn = defaults.targetArn;
+            $ = new RulesetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rules(Output<List<RulesetRuleArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<RulesetRuleArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(RulesetRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder tags(@Nullable Output<List<RulesetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RulesetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RulesetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RulesetTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder targetArn(Output<String> targetArn) {
-            this.targetArn = Objects.requireNonNull(targetArn);
+            $.targetArn = targetArn;
             return this;
         }
+
         public Builder targetArn(String targetArn) {
-            this.targetArn = Output.of(Objects.requireNonNull(targetArn));
-            return this;
-        }        public RulesetArgs build() {
-            return new RulesetArgs(description, name, rules, tags, targetArn);
+            return targetArn(Output.of(targetArn));
+        }
+
+        public RulesetArgs build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            $.targetArn = Objects.requireNonNull($.targetArn, "expected parameter 'targetArn' to be non-null");
+            return $;
         }
     }
+
 }

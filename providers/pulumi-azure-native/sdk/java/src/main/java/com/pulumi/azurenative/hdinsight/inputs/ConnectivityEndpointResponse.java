@@ -24,10 +24,10 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable String privateIPAddress;
+    private @Nullable String privateIPAddress;
 
     public Optional<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class ConnectivityEndpointResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
-    public ConnectivityEndpointResponse(
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable Integer port,
-        @Nullable String privateIPAddress,
-        @Nullable String protocol) {
-        this.location = location;
-        this.name = name;
-        this.port = port;
-        this.privateIPAddress = privateIPAddress;
-        this.protocol = protocol;
-    }
+    private ConnectivityEndpointResponse() {}
 
-    private ConnectivityEndpointResponse() {
-        this.location = null;
-        this.name = null;
-        this.port = null;
-        this.privateIPAddress = null;
-        this.protocol = null;
+    private ConnectivityEndpointResponse(ConnectivityEndpointResponse $) {
+        this.location = $.location;
+        this.name = $.name;
+        this.port = $.port;
+        this.privateIPAddress = $.privateIPAddress;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectivityEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String location;
-        private @Nullable String name;
-        private @Nullable Integer port;
-        private @Nullable String privateIPAddress;
-        private @Nullable String protocol;
+        private ConnectivityEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectivityEndpointResponse();
         }
 
         public Builder(ConnectivityEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.protocol = defaults.protocol;
+            $ = new ConnectivityEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
-        }        public ConnectivityEndpointResponse build() {
-            return new ConnectivityEndpointResponse(location, name, port, privateIPAddress, protocol);
+        }
+
+        public ConnectivityEndpointResponse build() {
+            return $;
         }
     }
+
 }

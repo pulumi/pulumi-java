@@ -21,45 +21,45 @@ public final class FirstQualityResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="bitrate", required=true)
-      private final Integer bitrate;
+    private Integer bitrate;
 
     public Integer bitrate() {
         return this.bitrate;
     }
 
-    public FirstQualityResponse(Integer bitrate) {
-        this.bitrate = Objects.requireNonNull(bitrate, "expected parameter 'bitrate' to be non-null");
-    }
+    private FirstQualityResponse() {}
 
-    private FirstQualityResponse() {
-        this.bitrate = null;
+    private FirstQualityResponse(FirstQualityResponse $) {
+        this.bitrate = $.bitrate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirstQualityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer bitrate;
+        private FirstQualityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirstQualityResponse();
         }
 
         public Builder(FirstQualityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitrate = defaults.bitrate;
+            $ = new FirstQualityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bitrate(Integer bitrate) {
-            this.bitrate = Objects.requireNonNull(bitrate);
+            $.bitrate = bitrate;
             return this;
-        }        public FirstQualityResponse build() {
-            return new FirstQualityResponse(bitrate);
+        }
+
+        public FirstQualityResponse build() {
+            $.bitrate = Objects.requireNonNull($.bitrate, "expected parameter 'bitrate' to be non-null");
+            return $;
         }
     }
+
 }

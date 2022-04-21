@@ -7,9 +7,9 @@ import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterAndGetArgs;
 import com.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterTagGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="and")
-      private final @Nullable Output<BucketReplicationConfigRuleFilterAndGetArgs> and;
+    private @Nullable Output<BucketReplicationConfigRuleFilterAndGetArgs> and;
 
-    public Output<BucketReplicationConfigRuleFilterAndGetArgs> and() {
-        return this.and == null ? Codegen.empty() : this.and;
+    public Optional<Output<BucketReplicationConfigRuleFilterAndGetArgs>> and() {
+        return Optional.ofNullable(this.and);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<BucketReplicationConfigRuleFilterTagGetArgs> tag;
+    private @Nullable Output<BucketReplicationConfigRuleFilterTagGetArgs> tag;
 
-    public Output<BucketReplicationConfigRuleFilterTagGetArgs> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<BucketReplicationConfigRuleFilterTagGetArgs>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public BucketReplicationConfigRuleFilterGetArgs(
-        @Nullable Output<BucketReplicationConfigRuleFilterAndGetArgs> and,
-        @Nullable Output<String> prefix,
-        @Nullable Output<BucketReplicationConfigRuleFilterTagGetArgs> tag) {
-        this.and = and;
-        this.prefix = prefix;
-        this.tag = tag;
-    }
+    private BucketReplicationConfigRuleFilterGetArgs() {}
 
-    private BucketReplicationConfigRuleFilterGetArgs() {
-        this.and = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.tag = Codegen.empty();
+    private BucketReplicationConfigRuleFilterGetArgs(BucketReplicationConfigRuleFilterGetArgs $) {
+        this.and = $.and;
+        this.prefix = $.prefix;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigRuleFilterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketReplicationConfigRuleFilterAndGetArgs> and;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<BucketReplicationConfigRuleFilterTagGetArgs> tag;
+        private BucketReplicationConfigRuleFilterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigRuleFilterGetArgs();
         }
 
         public Builder(BucketReplicationConfigRuleFilterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.and = defaults.and;
-    	      this.prefix = defaults.prefix;
-    	      this.tag = defaults.tag;
+            $ = new BucketReplicationConfigRuleFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder and(@Nullable Output<BucketReplicationConfigRuleFilterAndGetArgs> and) {
-            this.and = and;
+            $.and = and;
             return this;
         }
-        public Builder and(@Nullable BucketReplicationConfigRuleFilterAndGetArgs and) {
-            this.and = Codegen.ofNullable(and);
-            return this;
+
+        public Builder and(BucketReplicationConfigRuleFilterAndGetArgs and) {
+            return and(Output.of(and));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder tag(@Nullable Output<BucketReplicationConfigRuleFilterTagGetArgs> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable BucketReplicationConfigRuleFilterTagGetArgs tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public BucketReplicationConfigRuleFilterGetArgs build() {
-            return new BucketReplicationConfigRuleFilterGetArgs(and, prefix, tag);
+
+        public Builder tag(BucketReplicationConfigRuleFilterTagGetArgs tag) {
+            return tag(Output.of(tag));
+        }
+
+        public BucketReplicationConfigRuleFilterGetArgs build() {
+            return $;
         }
     }
+
 }

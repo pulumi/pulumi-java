@@ -17,45 +17,45 @@ public final class GetDomainNodeToNodeEncryption extends com.pulumi.resources.In
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetDomainNodeToNodeEncryption(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetDomainNodeToNodeEncryption() {}
 
-    private GetDomainNodeToNodeEncryption() {
-        this.enabled = null;
+    private GetDomainNodeToNodeEncryption(GetDomainNodeToNodeEncryption $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainNodeToNodeEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetDomainNodeToNodeEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainNodeToNodeEncryption();
         }
 
         public Builder(GetDomainNodeToNodeEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetDomainNodeToNodeEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetDomainNodeToNodeEncryption build() {
-            return new GetDomainNodeToNodeEncryption(enabled);
+        }
+
+        public GetDomainNodeToNodeEncryption build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

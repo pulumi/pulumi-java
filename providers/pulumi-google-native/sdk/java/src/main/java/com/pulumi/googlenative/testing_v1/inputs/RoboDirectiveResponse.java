@@ -21,7 +21,7 @@ public final class RoboDirectiveResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="actionType", required=true)
-      private final String actionType;
+    private String actionType;
 
     public String actionType() {
         return this.actionType;
@@ -32,7 +32,7 @@ public final class RoboDirectiveResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="inputText", required=true)
-      private final String inputText;
+    private String inputText;
 
     public String inputText() {
         return this.inputText;
@@ -43,64 +43,59 @@ public final class RoboDirectiveResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public RoboDirectiveResponse(
-        String actionType,
-        String inputText,
-        String resourceName) {
-        this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
-        this.inputText = Objects.requireNonNull(inputText, "expected parameter 'inputText' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private RoboDirectiveResponse() {}
 
-    private RoboDirectiveResponse() {
-        this.actionType = null;
-        this.inputText = null;
-        this.resourceName = null;
+    private RoboDirectiveResponse(RoboDirectiveResponse $) {
+        this.actionType = $.actionType;
+        this.inputText = $.inputText;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoboDirectiveResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionType;
-        private String inputText;
-        private String resourceName;
+        private RoboDirectiveResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoboDirectiveResponse();
         }
 
         public Builder(RoboDirectiveResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionType = defaults.actionType;
-    	      this.inputText = defaults.inputText;
-    	      this.resourceName = defaults.resourceName;
+            $ = new RoboDirectiveResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionType(String actionType) {
-            this.actionType = Objects.requireNonNull(actionType);
+            $.actionType = actionType;
             return this;
         }
+
         public Builder inputText(String inputText) {
-            this.inputText = Objects.requireNonNull(inputText);
+            $.inputText = inputText;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public RoboDirectiveResponse build() {
-            return new RoboDirectiveResponse(actionType, inputText, resourceName);
+        }
+
+        public RoboDirectiveResponse build() {
+            $.actionType = Objects.requireNonNull($.actionType, "expected parameter 'actionType' to be non-null");
+            $.inputText = Objects.requireNonNull($.inputText, "expected parameter 'inputText' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class SqlServerDatabaseDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="compatibilityLevel", required=true)
-      private final Integer compatibilityLevel;
+    private Integer compatibilityLevel;
 
     public Integer compatibilityLevel() {
         return this.compatibilityLevel;
@@ -33,55 +33,52 @@ public final class SqlServerDatabaseDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="recoveryModel", required=true)
-      private final String recoveryModel;
+    private String recoveryModel;
 
     public String recoveryModel() {
         return this.recoveryModel;
     }
 
-    public SqlServerDatabaseDetailsResponse(
-        Integer compatibilityLevel,
-        String recoveryModel) {
-        this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel, "expected parameter 'compatibilityLevel' to be non-null");
-        this.recoveryModel = Objects.requireNonNull(recoveryModel, "expected parameter 'recoveryModel' to be non-null");
-    }
+    private SqlServerDatabaseDetailsResponse() {}
 
-    private SqlServerDatabaseDetailsResponse() {
-        this.compatibilityLevel = null;
-        this.recoveryModel = null;
+    private SqlServerDatabaseDetailsResponse(SqlServerDatabaseDetailsResponse $) {
+        this.compatibilityLevel = $.compatibilityLevel;
+        this.recoveryModel = $.recoveryModel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerDatabaseDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer compatibilityLevel;
-        private String recoveryModel;
+        private SqlServerDatabaseDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerDatabaseDetailsResponse();
         }
 
         public Builder(SqlServerDatabaseDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compatibilityLevel = defaults.compatibilityLevel;
-    	      this.recoveryModel = defaults.recoveryModel;
+            $ = new SqlServerDatabaseDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compatibilityLevel(Integer compatibilityLevel) {
-            this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel);
+            $.compatibilityLevel = compatibilityLevel;
             return this;
         }
+
         public Builder recoveryModel(String recoveryModel) {
-            this.recoveryModel = Objects.requireNonNull(recoveryModel);
+            $.recoveryModel = recoveryModel;
             return this;
-        }        public SqlServerDatabaseDetailsResponse build() {
-            return new SqlServerDatabaseDetailsResponse(compatibilityLevel, recoveryModel);
+        }
+
+        public SqlServerDatabaseDetailsResponse build() {
+            $.compatibilityLevel = Objects.requireNonNull($.compatibilityLevel, "expected parameter 'compatibilityLevel' to be non-null");
+            $.recoveryModel = Objects.requireNonNull($.recoveryModel, "expected parameter 'recoveryModel' to be non-null");
+            return $;
         }
     }
+
 }

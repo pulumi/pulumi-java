@@ -21,7 +21,7 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -32,7 +32,7 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parametersSchema", required=true)
-      private final String parametersSchema;
+    private String parametersSchema;
 
     public String parametersSchema() {
         return this.parametersSchema;
@@ -43,7 +43,7 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="publisher", required=true)
-      private final String publisher;
+    private String publisher;
 
     public String publisher() {
         return this.publisher;
@@ -54,7 +54,7 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="targetType", required=true)
-      private final String targetType;
+    private String targetType;
 
     public String targetType() {
         return this.targetType;
@@ -65,82 +65,73 @@ public final class CapabilityPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="urn", required=true)
-      private final String urn;
+    private String urn;
 
     public String urn() {
         return this.urn;
     }
 
-    public CapabilityPropertiesResponse(
-        String description,
-        String parametersSchema,
-        String publisher,
-        String targetType,
-        String urn) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.parametersSchema = Objects.requireNonNull(parametersSchema, "expected parameter 'parametersSchema' to be non-null");
-        this.publisher = Objects.requireNonNull(publisher, "expected parameter 'publisher' to be non-null");
-        this.targetType = Objects.requireNonNull(targetType, "expected parameter 'targetType' to be non-null");
-        this.urn = Objects.requireNonNull(urn, "expected parameter 'urn' to be non-null");
-    }
+    private CapabilityPropertiesResponse() {}
 
-    private CapabilityPropertiesResponse() {
-        this.description = null;
-        this.parametersSchema = null;
-        this.publisher = null;
-        this.targetType = null;
-        this.urn = null;
+    private CapabilityPropertiesResponse(CapabilityPropertiesResponse $) {
+        this.description = $.description;
+        this.parametersSchema = $.parametersSchema;
+        this.publisher = $.publisher;
+        this.targetType = $.targetType;
+        this.urn = $.urn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapabilityPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String parametersSchema;
-        private String publisher;
-        private String targetType;
-        private String urn;
+        private CapabilityPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapabilityPropertiesResponse();
         }
 
         public Builder(CapabilityPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.parametersSchema = defaults.parametersSchema;
-    	      this.publisher = defaults.publisher;
-    	      this.targetType = defaults.targetType;
-    	      this.urn = defaults.urn;
+            $ = new CapabilityPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder parametersSchema(String parametersSchema) {
-            this.parametersSchema = Objects.requireNonNull(parametersSchema);
+            $.parametersSchema = parametersSchema;
             return this;
         }
+
         public Builder publisher(String publisher) {
-            this.publisher = Objects.requireNonNull(publisher);
+            $.publisher = publisher;
             return this;
         }
+
         public Builder targetType(String targetType) {
-            this.targetType = Objects.requireNonNull(targetType);
+            $.targetType = targetType;
             return this;
         }
+
         public Builder urn(String urn) {
-            this.urn = Objects.requireNonNull(urn);
+            $.urn = urn;
             return this;
-        }        public CapabilityPropertiesResponse build() {
-            return new CapabilityPropertiesResponse(description, parametersSchema, publisher, targetType, urn);
+        }
+
+        public CapabilityPropertiesResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.parametersSchema = Objects.requireNonNull($.parametersSchema, "expected parameter 'parametersSchema' to be non-null");
+            $.publisher = Objects.requireNonNull($.publisher, "expected parameter 'publisher' to be non-null");
+            $.targetType = Objects.requireNonNull($.targetType, "expected parameter 'targetType' to be non-null");
+            $.urn = Objects.requireNonNull($.urn, "expected parameter 'urn' to be non-null");
+            return $;
         }
     }
+
 }

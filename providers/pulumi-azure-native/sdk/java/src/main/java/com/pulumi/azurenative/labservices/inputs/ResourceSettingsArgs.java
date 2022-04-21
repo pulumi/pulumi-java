@@ -8,9 +8,9 @@ import com.pulumi.azurenative.labservices.inputs.ReferenceVmArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="galleryImageResourceId")
-      private final @Nullable Output<String> galleryImageResourceId;
+    private @Nullable Output<String> galleryImageResourceId;
 
-    public Output<String> galleryImageResourceId() {
-        return this.galleryImageResourceId == null ? Codegen.empty() : this.galleryImageResourceId;
+    public Optional<Output<String>> galleryImageResourceId() {
+        return Optional.ofNullable(this.galleryImageResourceId);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="referenceVm", required=true)
-      private final Output<ReferenceVmArgs> referenceVm;
+    private Output<ReferenceVmArgs> referenceVm;
 
     public Output<ReferenceVmArgs> referenceVm() {
         return this.referenceVm;
@@ -49,76 +49,69 @@ public final class ResourceSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<Either<String,ManagedLabVmSize>> size;
+    private @Nullable Output<Either<String,ManagedLabVmSize>> size;
 
-    public Output<Either<String,ManagedLabVmSize>> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<Either<String,ManagedLabVmSize>>> size() {
+        return Optional.ofNullable(this.size);
     }
 
-    public ResourceSettingsArgs(
-        @Nullable Output<String> galleryImageResourceId,
-        Output<ReferenceVmArgs> referenceVm,
-        @Nullable Output<Either<String,ManagedLabVmSize>> size) {
-        this.galleryImageResourceId = galleryImageResourceId;
-        this.referenceVm = Objects.requireNonNull(referenceVm, "expected parameter 'referenceVm' to be non-null");
-        this.size = size;
-    }
+    private ResourceSettingsArgs() {}
 
-    private ResourceSettingsArgs() {
-        this.galleryImageResourceId = Codegen.empty();
-        this.referenceVm = Codegen.empty();
-        this.size = Codegen.empty();
+    private ResourceSettingsArgs(ResourceSettingsArgs $) {
+        this.galleryImageResourceId = $.galleryImageResourceId;
+        this.referenceVm = $.referenceVm;
+        this.size = $.size;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> galleryImageResourceId;
-        private Output<ReferenceVmArgs> referenceVm;
-        private @Nullable Output<Either<String,ManagedLabVmSize>> size;
+        private ResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSettingsArgs();
         }
 
         public Builder(ResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.galleryImageResourceId = defaults.galleryImageResourceId;
-    	      this.referenceVm = defaults.referenceVm;
-    	      this.size = defaults.size;
+            $ = new ResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder galleryImageResourceId(@Nullable Output<String> galleryImageResourceId) {
-            this.galleryImageResourceId = galleryImageResourceId;
+            $.galleryImageResourceId = galleryImageResourceId;
             return this;
         }
-        public Builder galleryImageResourceId(@Nullable String galleryImageResourceId) {
-            this.galleryImageResourceId = Codegen.ofNullable(galleryImageResourceId);
-            return this;
+
+        public Builder galleryImageResourceId(String galleryImageResourceId) {
+            return galleryImageResourceId(Output.of(galleryImageResourceId));
         }
+
         public Builder referenceVm(Output<ReferenceVmArgs> referenceVm) {
-            this.referenceVm = Objects.requireNonNull(referenceVm);
+            $.referenceVm = referenceVm;
             return this;
         }
+
         public Builder referenceVm(ReferenceVmArgs referenceVm) {
-            this.referenceVm = Output.of(Objects.requireNonNull(referenceVm));
-            return this;
+            return referenceVm(Output.of(referenceVm));
         }
+
         public Builder size(@Nullable Output<Either<String,ManagedLabVmSize>> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable Either<String,ManagedLabVmSize> size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
-        }        public ResourceSettingsArgs build() {
-            return new ResourceSettingsArgs(galleryImageResourceId, referenceVm, size);
+
+        public Builder size(Either<String,ManagedLabVmSize> size) {
+            return size(Output.of(size));
+        }
+
+        public ResourceSettingsArgs build() {
+            $.referenceVm = Objects.requireNonNull($.referenceVm, "expected parameter 'referenceVm' to be non-null");
+            return $;
         }
     }
+
 }

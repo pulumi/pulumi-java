@@ -21,45 +21,45 @@ public final class ConfigurationProfileAssignmentComplianceResponse extends com.
      * 
      */
     @Import(name="updateStatus", required=true)
-      private final String updateStatus;
+    private String updateStatus;
 
     public String updateStatus() {
         return this.updateStatus;
     }
 
-    public ConfigurationProfileAssignmentComplianceResponse(String updateStatus) {
-        this.updateStatus = Objects.requireNonNull(updateStatus, "expected parameter 'updateStatus' to be non-null");
-    }
+    private ConfigurationProfileAssignmentComplianceResponse() {}
 
-    private ConfigurationProfileAssignmentComplianceResponse() {
-        this.updateStatus = null;
+    private ConfigurationProfileAssignmentComplianceResponse(ConfigurationProfileAssignmentComplianceResponse $) {
+        this.updateStatus = $.updateStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfileAssignmentComplianceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String updateStatus;
+        private ConfigurationProfileAssignmentComplianceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfileAssignmentComplianceResponse();
         }
 
         public Builder(ConfigurationProfileAssignmentComplianceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.updateStatus = defaults.updateStatus;
+            $ = new ConfigurationProfileAssignmentComplianceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder updateStatus(String updateStatus) {
-            this.updateStatus = Objects.requireNonNull(updateStatus);
+            $.updateStatus = updateStatus;
             return this;
-        }        public ConfigurationProfileAssignmentComplianceResponse build() {
-            return new ConfigurationProfileAssignmentComplianceResponse(updateStatus);
+        }
+
+        public ConfigurationProfileAssignmentComplianceResponse build() {
+            $.updateStatus = Objects.requireNonNull($.updateStatus, "expected parameter 'updateStatus' to be non-null");
+            return $;
         }
     }
+
 }

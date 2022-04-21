@@ -15,10 +15,10 @@ import com.pulumi.awsnative.lex.inputs.BotSlotArgs;
 import com.pulumi.awsnative.lex.inputs.BotSlotPriorityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,87 +31,87 @@ public final class BotIntentArgs extends com.pulumi.resources.ResourceArgs {
     public static final BotIntentArgs Empty = new BotIntentArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="dialogCodeHook")
-      private final @Nullable Output<BotDialogCodeHookSettingArgs> dialogCodeHook;
+    private @Nullable Output<BotDialogCodeHookSettingArgs> dialogCodeHook;
 
-    public Output<BotDialogCodeHookSettingArgs> dialogCodeHook() {
-        return this.dialogCodeHook == null ? Codegen.empty() : this.dialogCodeHook;
+    public Optional<Output<BotDialogCodeHookSettingArgs>> dialogCodeHook() {
+        return Optional.ofNullable(this.dialogCodeHook);
     }
 
     @Import(name="fulfillmentCodeHook")
-      private final @Nullable Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook;
+    private @Nullable Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook;
 
-    public Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook() {
-        return this.fulfillmentCodeHook == null ? Codegen.empty() : this.fulfillmentCodeHook;
+    public Optional<Output<BotFulfillmentCodeHookSettingArgs>> fulfillmentCodeHook() {
+        return Optional.ofNullable(this.fulfillmentCodeHook);
     }
 
     @Import(name="inputContexts")
-      private final @Nullable Output<List<BotInputContextArgs>> inputContexts;
+    private @Nullable Output<List<BotInputContextArgs>> inputContexts;
 
-    public Output<List<BotInputContextArgs>> inputContexts() {
-        return this.inputContexts == null ? Codegen.empty() : this.inputContexts;
+    public Optional<Output<List<BotInputContextArgs>>> inputContexts() {
+        return Optional.ofNullable(this.inputContexts);
     }
 
     @Import(name="intentClosingSetting")
-      private final @Nullable Output<BotIntentClosingSettingArgs> intentClosingSetting;
+    private @Nullable Output<BotIntentClosingSettingArgs> intentClosingSetting;
 
-    public Output<BotIntentClosingSettingArgs> intentClosingSetting() {
-        return this.intentClosingSetting == null ? Codegen.empty() : this.intentClosingSetting;
+    public Optional<Output<BotIntentClosingSettingArgs>> intentClosingSetting() {
+        return Optional.ofNullable(this.intentClosingSetting);
     }
 
     @Import(name="intentConfirmationSetting")
-      private final @Nullable Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting;
+    private @Nullable Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting;
 
-    public Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting() {
-        return this.intentConfirmationSetting == null ? Codegen.empty() : this.intentConfirmationSetting;
+    public Optional<Output<BotIntentConfirmationSettingArgs>> intentConfirmationSetting() {
+        return Optional.ofNullable(this.intentConfirmationSetting);
     }
 
     @Import(name="kendraConfiguration")
-      private final @Nullable Output<BotKendraConfigurationArgs> kendraConfiguration;
+    private @Nullable Output<BotKendraConfigurationArgs> kendraConfiguration;
 
-    public Output<BotKendraConfigurationArgs> kendraConfiguration() {
-        return this.kendraConfiguration == null ? Codegen.empty() : this.kendraConfiguration;
+    public Optional<Output<BotKendraConfigurationArgs>> kendraConfiguration() {
+        return Optional.ofNullable(this.kendraConfiguration);
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="outputContexts")
-      private final @Nullable Output<List<BotOutputContextArgs>> outputContexts;
+    private @Nullable Output<List<BotOutputContextArgs>> outputContexts;
 
-    public Output<List<BotOutputContextArgs>> outputContexts() {
-        return this.outputContexts == null ? Codegen.empty() : this.outputContexts;
+    public Optional<Output<List<BotOutputContextArgs>>> outputContexts() {
+        return Optional.ofNullable(this.outputContexts);
     }
 
     @Import(name="parentIntentSignature")
-      private final @Nullable Output<String> parentIntentSignature;
+    private @Nullable Output<String> parentIntentSignature;
 
-    public Output<String> parentIntentSignature() {
-        return this.parentIntentSignature == null ? Codegen.empty() : this.parentIntentSignature;
+    public Optional<Output<String>> parentIntentSignature() {
+        return Optional.ofNullable(this.parentIntentSignature);
     }
 
     @Import(name="sampleUtterances")
-      private final @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
+    private @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
 
-    public Output<List<BotSampleUtteranceArgs>> sampleUtterances() {
-        return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
+    public Optional<Output<List<BotSampleUtteranceArgs>>> sampleUtterances() {
+        return Optional.ofNullable(this.sampleUtterances);
     }
 
     @Import(name="slotPriorities")
-      private final @Nullable Output<List<BotSlotPriorityArgs>> slotPriorities;
+    private @Nullable Output<List<BotSlotPriorityArgs>> slotPriorities;
 
-    public Output<List<BotSlotPriorityArgs>> slotPriorities() {
-        return this.slotPriorities == null ? Codegen.empty() : this.slotPriorities;
+    public Optional<Output<List<BotSlotPriorityArgs>>> slotPriorities() {
+        return Optional.ofNullable(this.slotPriorities);
     }
 
     /**
@@ -119,221 +119,189 @@ public final class BotIntentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="slots")
-      private final @Nullable Output<List<BotSlotArgs>> slots;
+    private @Nullable Output<List<BotSlotArgs>> slots;
 
-    public Output<List<BotSlotArgs>> slots() {
-        return this.slots == null ? Codegen.empty() : this.slots;
+    public Optional<Output<List<BotSlotArgs>>> slots() {
+        return Optional.ofNullable(this.slots);
     }
 
-    public BotIntentArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<BotDialogCodeHookSettingArgs> dialogCodeHook,
-        @Nullable Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook,
-        @Nullable Output<List<BotInputContextArgs>> inputContexts,
-        @Nullable Output<BotIntentClosingSettingArgs> intentClosingSetting,
-        @Nullable Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting,
-        @Nullable Output<BotKendraConfigurationArgs> kendraConfiguration,
-        Output<String> name,
-        @Nullable Output<List<BotOutputContextArgs>> outputContexts,
-        @Nullable Output<String> parentIntentSignature,
-        @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances,
-        @Nullable Output<List<BotSlotPriorityArgs>> slotPriorities,
-        @Nullable Output<List<BotSlotArgs>> slots) {
-        this.description = description;
-        this.dialogCodeHook = dialogCodeHook;
-        this.fulfillmentCodeHook = fulfillmentCodeHook;
-        this.inputContexts = inputContexts;
-        this.intentClosingSetting = intentClosingSetting;
-        this.intentConfirmationSetting = intentConfirmationSetting;
-        this.kendraConfiguration = kendraConfiguration;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.outputContexts = outputContexts;
-        this.parentIntentSignature = parentIntentSignature;
-        this.sampleUtterances = sampleUtterances;
-        this.slotPriorities = slotPriorities;
-        this.slots = slots;
-    }
+    private BotIntentArgs() {}
 
-    private BotIntentArgs() {
-        this.description = Codegen.empty();
-        this.dialogCodeHook = Codegen.empty();
-        this.fulfillmentCodeHook = Codegen.empty();
-        this.inputContexts = Codegen.empty();
-        this.intentClosingSetting = Codegen.empty();
-        this.intentConfirmationSetting = Codegen.empty();
-        this.kendraConfiguration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outputContexts = Codegen.empty();
-        this.parentIntentSignature = Codegen.empty();
-        this.sampleUtterances = Codegen.empty();
-        this.slotPriorities = Codegen.empty();
-        this.slots = Codegen.empty();
+    private BotIntentArgs(BotIntentArgs $) {
+        this.description = $.description;
+        this.dialogCodeHook = $.dialogCodeHook;
+        this.fulfillmentCodeHook = $.fulfillmentCodeHook;
+        this.inputContexts = $.inputContexts;
+        this.intentClosingSetting = $.intentClosingSetting;
+        this.intentConfirmationSetting = $.intentConfirmationSetting;
+        this.kendraConfiguration = $.kendraConfiguration;
+        this.name = $.name;
+        this.outputContexts = $.outputContexts;
+        this.parentIntentSignature = $.parentIntentSignature;
+        this.sampleUtterances = $.sampleUtterances;
+        this.slotPriorities = $.slotPriorities;
+        this.slots = $.slots;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotIntentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<BotDialogCodeHookSettingArgs> dialogCodeHook;
-        private @Nullable Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook;
-        private @Nullable Output<List<BotInputContextArgs>> inputContexts;
-        private @Nullable Output<BotIntentClosingSettingArgs> intentClosingSetting;
-        private @Nullable Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting;
-        private @Nullable Output<BotKendraConfigurationArgs> kendraConfiguration;
-        private Output<String> name;
-        private @Nullable Output<List<BotOutputContextArgs>> outputContexts;
-        private @Nullable Output<String> parentIntentSignature;
-        private @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
-        private @Nullable Output<List<BotSlotPriorityArgs>> slotPriorities;
-        private @Nullable Output<List<BotSlotArgs>> slots;
+        private BotIntentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotIntentArgs();
         }
 
         public Builder(BotIntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.dialogCodeHook = defaults.dialogCodeHook;
-    	      this.fulfillmentCodeHook = defaults.fulfillmentCodeHook;
-    	      this.inputContexts = defaults.inputContexts;
-    	      this.intentClosingSetting = defaults.intentClosingSetting;
-    	      this.intentConfirmationSetting = defaults.intentConfirmationSetting;
-    	      this.kendraConfiguration = defaults.kendraConfiguration;
-    	      this.name = defaults.name;
-    	      this.outputContexts = defaults.outputContexts;
-    	      this.parentIntentSignature = defaults.parentIntentSignature;
-    	      this.sampleUtterances = defaults.sampleUtterances;
-    	      this.slotPriorities = defaults.slotPriorities;
-    	      this.slots = defaults.slots;
+            $ = new BotIntentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dialogCodeHook(@Nullable Output<BotDialogCodeHookSettingArgs> dialogCodeHook) {
-            this.dialogCodeHook = dialogCodeHook;
+            $.dialogCodeHook = dialogCodeHook;
             return this;
         }
-        public Builder dialogCodeHook(@Nullable BotDialogCodeHookSettingArgs dialogCodeHook) {
-            this.dialogCodeHook = Codegen.ofNullable(dialogCodeHook);
-            return this;
+
+        public Builder dialogCodeHook(BotDialogCodeHookSettingArgs dialogCodeHook) {
+            return dialogCodeHook(Output.of(dialogCodeHook));
         }
+
         public Builder fulfillmentCodeHook(@Nullable Output<BotFulfillmentCodeHookSettingArgs> fulfillmentCodeHook) {
-            this.fulfillmentCodeHook = fulfillmentCodeHook;
+            $.fulfillmentCodeHook = fulfillmentCodeHook;
             return this;
         }
-        public Builder fulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSettingArgs fulfillmentCodeHook) {
-            this.fulfillmentCodeHook = Codegen.ofNullable(fulfillmentCodeHook);
-            return this;
+
+        public Builder fulfillmentCodeHook(BotFulfillmentCodeHookSettingArgs fulfillmentCodeHook) {
+            return fulfillmentCodeHook(Output.of(fulfillmentCodeHook));
         }
+
         public Builder inputContexts(@Nullable Output<List<BotInputContextArgs>> inputContexts) {
-            this.inputContexts = inputContexts;
+            $.inputContexts = inputContexts;
             return this;
         }
-        public Builder inputContexts(@Nullable List<BotInputContextArgs> inputContexts) {
-            this.inputContexts = Codegen.ofNullable(inputContexts);
-            return this;
+
+        public Builder inputContexts(List<BotInputContextArgs> inputContexts) {
+            return inputContexts(Output.of(inputContexts));
         }
+
         public Builder inputContexts(BotInputContextArgs... inputContexts) {
             return inputContexts(List.of(inputContexts));
         }
+
         public Builder intentClosingSetting(@Nullable Output<BotIntentClosingSettingArgs> intentClosingSetting) {
-            this.intentClosingSetting = intentClosingSetting;
+            $.intentClosingSetting = intentClosingSetting;
             return this;
         }
-        public Builder intentClosingSetting(@Nullable BotIntentClosingSettingArgs intentClosingSetting) {
-            this.intentClosingSetting = Codegen.ofNullable(intentClosingSetting);
-            return this;
+
+        public Builder intentClosingSetting(BotIntentClosingSettingArgs intentClosingSetting) {
+            return intentClosingSetting(Output.of(intentClosingSetting));
         }
+
         public Builder intentConfirmationSetting(@Nullable Output<BotIntentConfirmationSettingArgs> intentConfirmationSetting) {
-            this.intentConfirmationSetting = intentConfirmationSetting;
+            $.intentConfirmationSetting = intentConfirmationSetting;
             return this;
         }
-        public Builder intentConfirmationSetting(@Nullable BotIntentConfirmationSettingArgs intentConfirmationSetting) {
-            this.intentConfirmationSetting = Codegen.ofNullable(intentConfirmationSetting);
-            return this;
+
+        public Builder intentConfirmationSetting(BotIntentConfirmationSettingArgs intentConfirmationSetting) {
+            return intentConfirmationSetting(Output.of(intentConfirmationSetting));
         }
+
         public Builder kendraConfiguration(@Nullable Output<BotKendraConfigurationArgs> kendraConfiguration) {
-            this.kendraConfiguration = kendraConfiguration;
+            $.kendraConfiguration = kendraConfiguration;
             return this;
         }
-        public Builder kendraConfiguration(@Nullable BotKendraConfigurationArgs kendraConfiguration) {
-            this.kendraConfiguration = Codegen.ofNullable(kendraConfiguration);
-            return this;
+
+        public Builder kendraConfiguration(BotKendraConfigurationArgs kendraConfiguration) {
+            return kendraConfiguration(Output.of(kendraConfiguration));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder outputContexts(@Nullable Output<List<BotOutputContextArgs>> outputContexts) {
-            this.outputContexts = outputContexts;
+            $.outputContexts = outputContexts;
             return this;
         }
-        public Builder outputContexts(@Nullable List<BotOutputContextArgs> outputContexts) {
-            this.outputContexts = Codegen.ofNullable(outputContexts);
-            return this;
+
+        public Builder outputContexts(List<BotOutputContextArgs> outputContexts) {
+            return outputContexts(Output.of(outputContexts));
         }
+
         public Builder outputContexts(BotOutputContextArgs... outputContexts) {
             return outputContexts(List.of(outputContexts));
         }
+
         public Builder parentIntentSignature(@Nullable Output<String> parentIntentSignature) {
-            this.parentIntentSignature = parentIntentSignature;
+            $.parentIntentSignature = parentIntentSignature;
             return this;
         }
-        public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
-            this.parentIntentSignature = Codegen.ofNullable(parentIntentSignature);
-            return this;
+
+        public Builder parentIntentSignature(String parentIntentSignature) {
+            return parentIntentSignature(Output.of(parentIntentSignature));
         }
+
         public Builder sampleUtterances(@Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances) {
-            this.sampleUtterances = sampleUtterances;
+            $.sampleUtterances = sampleUtterances;
             return this;
         }
-        public Builder sampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
-            this.sampleUtterances = Codegen.ofNullable(sampleUtterances);
-            return this;
+
+        public Builder sampleUtterances(List<BotSampleUtteranceArgs> sampleUtterances) {
+            return sampleUtterances(Output.of(sampleUtterances));
         }
+
         public Builder sampleUtterances(BotSampleUtteranceArgs... sampleUtterances) {
             return sampleUtterances(List.of(sampleUtterances));
         }
+
         public Builder slotPriorities(@Nullable Output<List<BotSlotPriorityArgs>> slotPriorities) {
-            this.slotPriorities = slotPriorities;
+            $.slotPriorities = slotPriorities;
             return this;
         }
-        public Builder slotPriorities(@Nullable List<BotSlotPriorityArgs> slotPriorities) {
-            this.slotPriorities = Codegen.ofNullable(slotPriorities);
-            return this;
+
+        public Builder slotPriorities(List<BotSlotPriorityArgs> slotPriorities) {
+            return slotPriorities(Output.of(slotPriorities));
         }
+
         public Builder slotPriorities(BotSlotPriorityArgs... slotPriorities) {
             return slotPriorities(List.of(slotPriorities));
         }
+
         public Builder slots(@Nullable Output<List<BotSlotArgs>> slots) {
-            this.slots = slots;
+            $.slots = slots;
             return this;
         }
-        public Builder slots(@Nullable List<BotSlotArgs> slots) {
-            this.slots = Codegen.ofNullable(slots);
-            return this;
+
+        public Builder slots(List<BotSlotArgs> slots) {
+            return slots(Output.of(slots));
         }
+
         public Builder slots(BotSlotArgs... slots) {
             return slots(List.of(slots));
-        }        public BotIntentArgs build() {
-            return new BotIntentArgs(description, dialogCodeHook, fulfillmentCodeHook, inputContexts, intentClosingSetting, intentConfirmationSetting, kendraConfiguration, name, outputContexts, parentIntentSignature, sampleUtterances, slotPriorities, slots);
+        }
+
+        public BotIntentArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -31,10 +31,10 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="action")
-      private final @Nullable FirewallPolicyFilterRuleCollectionActionResponse action;
+    private @Nullable FirewallPolicyFilterRuleCollectionActionResponse action;
 
     public Optional<FirewallPolicyFilterRuleCollectionActionResponse> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="priority")
-      private final @Nullable Integer priority;
+    private @Nullable Integer priority;
 
     public Optional<Integer> priority() {
-        return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="ruleCollectionType", required=true)
-      private final String ruleCollectionType;
+    private String ruleCollectionType;
 
     public String ruleCollectionType() {
         return this.ruleCollectionType;
@@ -76,85 +76,73 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends com.pulumi
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<Object> rules;
+    private @Nullable List<Object> rules;
 
-    public List<Object> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<Object>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public FirewallPolicyFilterRuleCollectionResponse(
-        @Nullable FirewallPolicyFilterRuleCollectionActionResponse action,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String ruleCollectionType,
-        @Nullable List<Object> rules) {
-        this.action = action;
-        this.name = name;
-        this.priority = priority;
-        this.ruleCollectionType = Codegen.stringProp("ruleCollectionType").arg(ruleCollectionType).require();
-        this.rules = rules;
-    }
+    private FirewallPolicyFilterRuleCollectionResponse() {}
 
-    private FirewallPolicyFilterRuleCollectionResponse() {
-        this.action = null;
-        this.name = null;
-        this.priority = null;
-        this.ruleCollectionType = null;
-        this.rules = List.of();
+    private FirewallPolicyFilterRuleCollectionResponse(FirewallPolicyFilterRuleCollectionResponse $) {
+        this.action = $.action;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.ruleCollectionType = $.ruleCollectionType;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyFilterRuleCollectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FirewallPolicyFilterRuleCollectionActionResponse action;
-        private @Nullable String name;
-        private @Nullable Integer priority;
-        private String ruleCollectionType;
-        private @Nullable List<Object> rules;
+        private FirewallPolicyFilterRuleCollectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyFilterRuleCollectionResponse();
         }
 
         public Builder(FirewallPolicyFilterRuleCollectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.ruleCollectionType = defaults.ruleCollectionType;
-    	      this.rules = defaults.rules;
+            $ = new FirewallPolicyFilterRuleCollectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable FirewallPolicyFilterRuleCollectionActionResponse action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder priority(@Nullable Integer priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
+
         public Builder ruleCollectionType(String ruleCollectionType) {
-            this.ruleCollectionType = Objects.requireNonNull(ruleCollectionType);
+            $.ruleCollectionType = ruleCollectionType;
             return this;
         }
+
         public Builder rules(@Nullable List<Object> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(Object... rules) {
             return rules(List.of(rules));
-        }        public FirewallPolicyFilterRuleCollectionResponse build() {
-            return new FirewallPolicyFilterRuleCollectionResponse(action, name, priority, ruleCollectionType, rules);
+        }
+
+        public FirewallPolicyFilterRuleCollectionResponse build() {
+            $.ruleCollectionType = Codegen.stringProp("ruleCollectionType").arg($.ruleCollectionType).require();
+            return $;
         }
     }
+
 }

@@ -15,97 +15,91 @@ public final class GetInstanceMaintenancePolicy extends com.pulumi.resources.Inv
     public static final GetInstanceMaintenancePolicy Empty = new GetInstanceMaintenancePolicy();
 
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
     }
 
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
     }
 
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
     @Import(name="weeklyMaintenanceWindows", required=true)
-      private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows;
+    private List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows;
 
     public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows() {
         return this.weeklyMaintenanceWindows;
     }
 
-    public GetInstanceMaintenancePolicy(
-        String createTime,
-        String description,
-        String updateTime,
-        List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-        this.weeklyMaintenanceWindows = Objects.requireNonNull(weeklyMaintenanceWindows, "expected parameter 'weeklyMaintenanceWindows' to be non-null");
-    }
+    private GetInstanceMaintenancePolicy() {}
 
-    private GetInstanceMaintenancePolicy() {
-        this.createTime = null;
-        this.description = null;
-        this.updateTime = null;
-        this.weeklyMaintenanceWindows = List.of();
+    private GetInstanceMaintenancePolicy(GetInstanceMaintenancePolicy $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.updateTime = $.updateTime;
+        this.weeklyMaintenanceWindows = $.weeklyMaintenanceWindows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceMaintenancePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String description;
-        private String updateTime;
-        private List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows;
+        private GetInstanceMaintenancePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceMaintenancePolicy();
         }
 
         public Builder(GetInstanceMaintenancePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.updateTime = defaults.updateTime;
-    	      this.weeklyMaintenanceWindows = defaults.weeklyMaintenanceWindows;
+            $ = new GetInstanceMaintenancePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
         }
+
         public Builder weeklyMaintenanceWindows(List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
-            this.weeklyMaintenanceWindows = Objects.requireNonNull(weeklyMaintenanceWindows);
+            $.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
             return this;
         }
+
         public Builder weeklyMaintenanceWindows(GetInstanceMaintenancePolicyWeeklyMaintenanceWindow... weeklyMaintenanceWindows) {
             return weeklyMaintenanceWindows(List.of(weeklyMaintenanceWindows));
-        }        public GetInstanceMaintenancePolicy build() {
-            return new GetInstanceMaintenancePolicy(createTime, description, updateTime, weeklyMaintenanceWindows);
+        }
+
+        public GetInstanceMaintenancePolicy build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            $.weeklyMaintenanceWindows = Objects.requireNonNull($.weeklyMaintenanceWindows, "expected parameter 'weeklyMaintenanceWindows' to be non-null");
+            return $;
         }
     }
+
 }

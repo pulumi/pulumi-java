@@ -7,12 +7,12 @@ import com.pulumi.aws.ssm.enums.ParameterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedPattern")
-      private final @Nullable Output<String> allowedPattern;
+    private @Nullable Output<String> allowedPattern;
 
-    public Output<String> allowedPattern() {
-        return this.allowedPattern == null ? Codegen.empty() : this.allowedPattern;
+    public Optional<Output<String>> allowedPattern() {
+        return Optional.ofNullable(this.allowedPattern);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<String> dataType;
+    private @Nullable Output<String> dataType;
 
-    public Output<String> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<String>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overwrite")
-      private final @Nullable Output<Boolean> overwrite;
+    private @Nullable Output<Boolean> overwrite;
 
-    public Output<Boolean> overwrite() {
-        return this.overwrite == null ? Codegen.empty() : this.overwrite;
+    public Optional<Output<Boolean>> overwrite() {
+        return Optional.ofNullable(this.overwrite);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,ParameterType>> type;
+    private @Nullable Output<Either<String,ParameterType>> type;
 
-    public Output<Either<String,ParameterType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,ParameterType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -158,206 +158,168 @@ public final class ParameterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ParameterState(
-        @Nullable Output<String> allowedPattern,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> dataType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> keyId,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> overwrite,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> tier,
-        @Nullable Output<Either<String,ParameterType>> type,
-        @Nullable Output<String> value,
-        @Nullable Output<Integer> version) {
-        this.allowedPattern = allowedPattern;
-        this.arn = arn;
-        this.dataType = dataType;
-        this.description = description;
-        this.keyId = keyId;
-        this.name = name;
-        this.overwrite = overwrite;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.tier = tier;
-        this.type = type;
-        this.value = value;
-        this.version = version;
-    }
+    private ParameterState() {}
 
-    private ParameterState() {
-        this.allowedPattern = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.keyId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.overwrite = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.tier = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
-        this.version = Codegen.empty();
+    private ParameterState(ParameterState $) {
+        this.allowedPattern = $.allowedPattern;
+        this.arn = $.arn;
+        this.dataType = $.dataType;
+        this.description = $.description;
+        this.keyId = $.keyId;
+        this.name = $.name;
+        this.overwrite = $.overwrite;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.tier = $.tier;
+        this.type = $.type;
+        this.value = $.value;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allowedPattern;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> dataType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> overwrite;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> tier;
-        private @Nullable Output<Either<String,ParameterType>> type;
-        private @Nullable Output<String> value;
-        private @Nullable Output<Integer> version;
+        private ParameterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterState();
         }
 
         public Builder(ParameterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedPattern = defaults.allowedPattern;
-    	      this.arn = defaults.arn;
-    	      this.dataType = defaults.dataType;
-    	      this.description = defaults.description;
-    	      this.keyId = defaults.keyId;
-    	      this.name = defaults.name;
-    	      this.overwrite = defaults.overwrite;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.tier = defaults.tier;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
-    	      this.version = defaults.version;
+            $ = new ParameterState(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedPattern(@Nullable Output<String> allowedPattern) {
-            this.allowedPattern = allowedPattern;
+            $.allowedPattern = allowedPattern;
             return this;
         }
-        public Builder allowedPattern(@Nullable String allowedPattern) {
-            this.allowedPattern = Codegen.ofNullable(allowedPattern);
-            return this;
+
+        public Builder allowedPattern(String allowedPattern) {
+            return allowedPattern(Output.of(allowedPattern));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder dataType(@Nullable Output<String> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable String dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(String dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder overwrite(@Nullable Output<Boolean> overwrite) {
-            this.overwrite = overwrite;
+            $.overwrite = overwrite;
             return this;
         }
-        public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Codegen.ofNullable(overwrite);
-            return this;
+
+        public Builder overwrite(Boolean overwrite) {
+            return overwrite(Output.of(overwrite));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
         }
+
         public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,ParameterType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,ParameterType> type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ParameterState build() {
-            return new ParameterState(allowedPattern, arn, dataType, description, keyId, name, overwrite, tags, tagsAll, tier, type, value, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public ParameterState build() {
+            return $;
         }
     }
+
 }

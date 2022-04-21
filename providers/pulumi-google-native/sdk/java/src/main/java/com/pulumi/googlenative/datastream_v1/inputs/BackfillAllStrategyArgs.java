@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.inputs.MysqlRdbmsArgs;
 import com.pulumi.googlenative.datastream_v1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BackfillAllStrategyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="mysqlExcludedObjects")
-      private final @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects;
+    private @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects;
 
-    public Output<MysqlRdbmsArgs> mysqlExcludedObjects() {
-        return this.mysqlExcludedObjects == null ? Codegen.empty() : this.mysqlExcludedObjects;
+    public Optional<Output<MysqlRdbmsArgs>> mysqlExcludedObjects() {
+        return Optional.ofNullable(this.mysqlExcludedObjects);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class BackfillAllStrategyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="oracleExcludedObjects")
-      private final @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects;
+    private @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects;
 
-    public Output<OracleRdbmsArgs> oracleExcludedObjects() {
-        return this.oracleExcludedObjects == null ? Codegen.empty() : this.oracleExcludedObjects;
+    public Optional<Output<OracleRdbmsArgs>> oracleExcludedObjects() {
+        return Optional.ofNullable(this.oracleExcludedObjects);
     }
 
-    public BackfillAllStrategyArgs(
-        @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects,
-        @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects) {
-        this.mysqlExcludedObjects = mysqlExcludedObjects;
-        this.oracleExcludedObjects = oracleExcludedObjects;
-    }
+    private BackfillAllStrategyArgs() {}
 
-    private BackfillAllStrategyArgs() {
-        this.mysqlExcludedObjects = Codegen.empty();
-        this.oracleExcludedObjects = Codegen.empty();
+    private BackfillAllStrategyArgs(BackfillAllStrategyArgs $) {
+        this.mysqlExcludedObjects = $.mysqlExcludedObjects;
+        this.oracleExcludedObjects = $.oracleExcludedObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackfillAllStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects;
-        private @Nullable Output<OracleRdbmsArgs> oracleExcludedObjects;
+        private BackfillAllStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackfillAllStrategyArgs();
         }
 
         public Builder(BackfillAllStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mysqlExcludedObjects = defaults.mysqlExcludedObjects;
-    	      this.oracleExcludedObjects = defaults.oracleExcludedObjects;
+            $ = new BackfillAllStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mysqlExcludedObjects(@Nullable Output<MysqlRdbmsArgs> mysqlExcludedObjects) {
-            this.mysqlExcludedObjects = mysqlExcludedObjects;
+            $.mysqlExcludedObjects = mysqlExcludedObjects;
             return this;
         }
-        public Builder mysqlExcludedObjects(@Nullable MysqlRdbmsArgs mysqlExcludedObjects) {
-            this.mysqlExcludedObjects = Codegen.ofNullable(mysqlExcludedObjects);
-            return this;
+
+        public Builder mysqlExcludedObjects(MysqlRdbmsArgs mysqlExcludedObjects) {
+            return mysqlExcludedObjects(Output.of(mysqlExcludedObjects));
         }
+
         public Builder oracleExcludedObjects(@Nullable Output<OracleRdbmsArgs> oracleExcludedObjects) {
-            this.oracleExcludedObjects = oracleExcludedObjects;
+            $.oracleExcludedObjects = oracleExcludedObjects;
             return this;
         }
-        public Builder oracleExcludedObjects(@Nullable OracleRdbmsArgs oracleExcludedObjects) {
-            this.oracleExcludedObjects = Codegen.ofNullable(oracleExcludedObjects);
-            return this;
-        }        public BackfillAllStrategyArgs build() {
-            return new BackfillAllStrategyArgs(mysqlExcludedObjects, oracleExcludedObjects);
+
+        public Builder oracleExcludedObjects(OracleRdbmsArgs oracleExcludedObjects) {
+            return oracleExcludedObjects(Output.of(oracleExcludedObjects));
+        }
+
+        public BackfillAllStrategyArgs build() {
+            return $;
         }
     }
+
 }

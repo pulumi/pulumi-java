@@ -17,7 +17,7 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileName", required=true)
-      private final String fileName;
+    private String fileName;
 
     public String fileName() {
         return this.fileName;
@@ -28,7 +28,7 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final String groupName;
+    private String groupName;
 
     public String groupName() {
         return this.groupName;
@@ -39,7 +39,7 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectName", required=true)
-      private final String projectName;
+    private String projectName;
 
     public String projectName() {
         return this.projectName;
@@ -50,73 +50,66 @@ public final class GetFileArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetFileArgs(
-        String fileName,
-        String groupName,
-        String projectName,
-        String serviceName) {
-        this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetFileArgs() {}
 
-    private GetFileArgs() {
-        this.fileName = null;
-        this.groupName = null;
-        this.projectName = null;
-        this.serviceName = null;
+    private GetFileArgs(GetFileArgs $) {
+        this.fileName = $.fileName;
+        this.groupName = $.groupName;
+        this.projectName = $.projectName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fileName;
-        private String groupName;
-        private String projectName;
-        private String serviceName;
+        private GetFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFileArgs();
         }
 
         public Builder(GetFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
-    	      this.groupName = defaults.groupName;
-    	      this.projectName = defaults.projectName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(String fileName) {
-            this.fileName = Objects.requireNonNull(fileName);
+            $.fileName = fileName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetFileArgs build() {
-            return new GetFileArgs(fileName, groupName, projectName, serviceName);
+        }
+
+        public GetFileArgs build() {
+            $.fileName = Objects.requireNonNull($.fileName, "expected parameter 'fileName' to be non-null");
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

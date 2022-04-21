@@ -23,7 +23,7 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="capacityInBytes", required=true)
-      private final Double capacityInBytes;
+    private Double capacityInBytes;
 
     public Double capacityInBytes() {
         return this.capacityInBytes;
@@ -34,7 +34,7 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="diskId", required=true)
-      private final String diskId;
+    private String diskId;
 
     public String diskId() {
         return this.diskId;
@@ -45,7 +45,7 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="diskName", required=true)
-      private final String diskName;
+    private String diskName;
 
     public String diskName() {
         return this.diskName;
@@ -56,7 +56,7 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="isOSDisk", required=true)
-      private final String isOSDisk;
+    private String isOSDisk;
 
     public String isOSDisk() {
         return this.isOSDisk;
@@ -67,82 +67,73 @@ public final class AgentDiskDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="lunId", required=true)
-      private final Integer lunId;
+    private Integer lunId;
 
     public Integer lunId() {
         return this.lunId;
     }
 
-    public AgentDiskDetailsResponse(
-        Double capacityInBytes,
-        String diskId,
-        String diskName,
-        String isOSDisk,
-        Integer lunId) {
-        this.capacityInBytes = Objects.requireNonNull(capacityInBytes, "expected parameter 'capacityInBytes' to be non-null");
-        this.diskId = Objects.requireNonNull(diskId, "expected parameter 'diskId' to be non-null");
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-        this.isOSDisk = Objects.requireNonNull(isOSDisk, "expected parameter 'isOSDisk' to be non-null");
-        this.lunId = Objects.requireNonNull(lunId, "expected parameter 'lunId' to be non-null");
-    }
+    private AgentDiskDetailsResponse() {}
 
-    private AgentDiskDetailsResponse() {
-        this.capacityInBytes = null;
-        this.diskId = null;
-        this.diskName = null;
-        this.isOSDisk = null;
-        this.lunId = null;
+    private AgentDiskDetailsResponse(AgentDiskDetailsResponse $) {
+        this.capacityInBytes = $.capacityInBytes;
+        this.diskId = $.diskId;
+        this.diskName = $.diskName;
+        this.isOSDisk = $.isOSDisk;
+        this.lunId = $.lunId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentDiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double capacityInBytes;
-        private String diskId;
-        private String diskName;
-        private String isOSDisk;
-        private Integer lunId;
+        private AgentDiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentDiskDetailsResponse();
         }
 
         public Builder(AgentDiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityInBytes = defaults.capacityInBytes;
-    	      this.diskId = defaults.diskId;
-    	      this.diskName = defaults.diskName;
-    	      this.isOSDisk = defaults.isOSDisk;
-    	      this.lunId = defaults.lunId;
+            $ = new AgentDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityInBytes(Double capacityInBytes) {
-            this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
+            $.capacityInBytes = capacityInBytes;
             return this;
         }
+
         public Builder diskId(String diskId) {
-            this.diskId = Objects.requireNonNull(diskId);
+            $.diskId = diskId;
             return this;
         }
+
         public Builder diskName(String diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
         }
+
         public Builder isOSDisk(String isOSDisk) {
-            this.isOSDisk = Objects.requireNonNull(isOSDisk);
+            $.isOSDisk = isOSDisk;
             return this;
         }
+
         public Builder lunId(Integer lunId) {
-            this.lunId = Objects.requireNonNull(lunId);
+            $.lunId = lunId;
             return this;
-        }        public AgentDiskDetailsResponse build() {
-            return new AgentDiskDetailsResponse(capacityInBytes, diskId, diskName, isOSDisk, lunId);
+        }
+
+        public AgentDiskDetailsResponse build() {
+            $.capacityInBytes = Objects.requireNonNull($.capacityInBytes, "expected parameter 'capacityInBytes' to be non-null");
+            $.diskId = Objects.requireNonNull($.diskId, "expected parameter 'diskId' to be non-null");
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            $.isOSDisk = Objects.requireNonNull($.isOSDisk, "expected parameter 'isOSDisk' to be non-null");
+            $.lunId = Objects.requireNonNull($.lunId, "expected parameter 'lunId' to be non-null");
+            return $;
         }
     }
+
 }

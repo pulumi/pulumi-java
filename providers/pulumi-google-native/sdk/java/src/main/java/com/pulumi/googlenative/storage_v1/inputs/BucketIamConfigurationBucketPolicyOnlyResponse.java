@@ -22,7 +22,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse extends com.pu
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -33,55 +33,52 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse extends com.pu
      * 
      */
     @Import(name="lockedTime", required=true)
-      private final String lockedTime;
+    private String lockedTime;
 
     public String lockedTime() {
         return this.lockedTime;
     }
 
-    public BucketIamConfigurationBucketPolicyOnlyResponse(
-        Boolean enabled,
-        String lockedTime) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.lockedTime = Objects.requireNonNull(lockedTime, "expected parameter 'lockedTime' to be non-null");
-    }
+    private BucketIamConfigurationBucketPolicyOnlyResponse() {}
 
-    private BucketIamConfigurationBucketPolicyOnlyResponse() {
-        this.enabled = null;
-        this.lockedTime = null;
+    private BucketIamConfigurationBucketPolicyOnlyResponse(BucketIamConfigurationBucketPolicyOnlyResponse $) {
+        this.enabled = $.enabled;
+        this.lockedTime = $.lockedTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIamConfigurationBucketPolicyOnlyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String lockedTime;
+        private BucketIamConfigurationBucketPolicyOnlyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIamConfigurationBucketPolicyOnlyResponse();
         }
 
         public Builder(BucketIamConfigurationBucketPolicyOnlyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.lockedTime = defaults.lockedTime;
+            $ = new BucketIamConfigurationBucketPolicyOnlyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder lockedTime(String lockedTime) {
-            this.lockedTime = Objects.requireNonNull(lockedTime);
+            $.lockedTime = lockedTime;
             return this;
-        }        public BucketIamConfigurationBucketPolicyOnlyResponse build() {
-            return new BucketIamConfigurationBucketPolicyOnlyResponse(enabled, lockedTime);
+        }
+
+        public BucketIamConfigurationBucketPolicyOnlyResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.lockedTime = Objects.requireNonNull($.lockedTime, "expected parameter 'lockedTime' to be non-null");
+            return $;
         }
     }
+
 }

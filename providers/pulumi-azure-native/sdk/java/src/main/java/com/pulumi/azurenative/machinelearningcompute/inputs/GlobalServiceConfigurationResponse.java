@@ -26,10 +26,10 @@ public final class GlobalServiceConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="autoScale")
-      private final @Nullable AutoScaleConfigurationResponse autoScale;
+    private @Nullable AutoScaleConfigurationResponse autoScale;
 
     public Optional<AutoScaleConfigurationResponse> autoScale() {
-        return this.autoScale == null ? Optional.empty() : Optional.ofNullable(this.autoScale);
+        return Optional.ofNullable(this.autoScale);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GlobalServiceConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="etag")
-      private final @Nullable String etag;
+    private @Nullable String etag;
 
     public Optional<String> etag() {
-        return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GlobalServiceConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="serviceAuth")
-      private final @Nullable ServiceAuthConfigurationResponse serviceAuth;
+    private @Nullable ServiceAuthConfigurationResponse serviceAuth;
 
     public Optional<ServiceAuthConfigurationResponse> serviceAuth() {
-        return this.serviceAuth == null ? Optional.empty() : Optional.ofNullable(this.serviceAuth);
+        return Optional.ofNullable(this.serviceAuth);
     }
 
     /**
@@ -59,73 +59,62 @@ public final class GlobalServiceConfigurationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="ssl")
-      private final @Nullable SslConfigurationResponse ssl;
+    private @Nullable SslConfigurationResponse ssl;
 
     public Optional<SslConfigurationResponse> ssl() {
-        return this.ssl == null ? Optional.empty() : Optional.ofNullable(this.ssl);
+        return Optional.ofNullable(this.ssl);
     }
 
-    public GlobalServiceConfigurationResponse(
-        @Nullable AutoScaleConfigurationResponse autoScale,
-        @Nullable String etag,
-        @Nullable ServiceAuthConfigurationResponse serviceAuth,
-        @Nullable SslConfigurationResponse ssl) {
-        this.autoScale = autoScale;
-        this.etag = etag;
-        this.serviceAuth = serviceAuth;
-        this.ssl = ssl;
-    }
+    private GlobalServiceConfigurationResponse() {}
 
-    private GlobalServiceConfigurationResponse() {
-        this.autoScale = null;
-        this.etag = null;
-        this.serviceAuth = null;
-        this.ssl = null;
+    private GlobalServiceConfigurationResponse(GlobalServiceConfigurationResponse $) {
+        this.autoScale = $.autoScale;
+        this.etag = $.etag;
+        this.serviceAuth = $.serviceAuth;
+        this.ssl = $.ssl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalServiceConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AutoScaleConfigurationResponse autoScale;
-        private @Nullable String etag;
-        private @Nullable ServiceAuthConfigurationResponse serviceAuth;
-        private @Nullable SslConfigurationResponse ssl;
+        private GlobalServiceConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalServiceConfigurationResponse();
         }
 
         public Builder(GlobalServiceConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScale = defaults.autoScale;
-    	      this.etag = defaults.etag;
-    	      this.serviceAuth = defaults.serviceAuth;
-    	      this.ssl = defaults.ssl;
+            $ = new GlobalServiceConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScale(@Nullable AutoScaleConfigurationResponse autoScale) {
-            this.autoScale = autoScale;
+            $.autoScale = autoScale;
             return this;
         }
+
         public Builder etag(@Nullable String etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
+
         public Builder serviceAuth(@Nullable ServiceAuthConfigurationResponse serviceAuth) {
-            this.serviceAuth = serviceAuth;
+            $.serviceAuth = serviceAuth;
             return this;
         }
+
         public Builder ssl(@Nullable SslConfigurationResponse ssl) {
-            this.ssl = ssl;
+            $.ssl = ssl;
             return this;
-        }        public GlobalServiceConfigurationResponse build() {
-            return new GlobalServiceConfigurationResponse(autoScale, etag, serviceAuth, ssl);
+        }
+
+        public GlobalServiceConfigurationResponse build() {
+            return $;
         }
     }
+
 }

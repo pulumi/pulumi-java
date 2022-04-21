@@ -21,7 +21,7 @@ public final class BusinessIdentityResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="qualifier", required=true)
-      private final String qualifier;
+    private String qualifier;
 
     public String qualifier() {
         return this.qualifier;
@@ -32,55 +32,52 @@ public final class BusinessIdentityResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public BusinessIdentityResponse(
-        String qualifier,
-        String value) {
-        this.qualifier = Objects.requireNonNull(qualifier, "expected parameter 'qualifier' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private BusinessIdentityResponse() {}
 
-    private BusinessIdentityResponse() {
-        this.qualifier = null;
-        this.value = null;
+    private BusinessIdentityResponse(BusinessIdentityResponse $) {
+        this.qualifier = $.qualifier;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BusinessIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String qualifier;
-        private String value;
+        private BusinessIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BusinessIdentityResponse();
         }
 
         public Builder(BusinessIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.qualifier = defaults.qualifier;
-    	      this.value = defaults.value;
+            $ = new BusinessIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder qualifier(String qualifier) {
-            this.qualifier = Objects.requireNonNull(qualifier);
+            $.qualifier = qualifier;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public BusinessIdentityResponse build() {
-            return new BusinessIdentityResponse(qualifier, value);
+        }
+
+        public BusinessIdentityResponse build() {
+            $.qualifier = Objects.requireNonNull($.qualifier, "expected parameter 'qualifier' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

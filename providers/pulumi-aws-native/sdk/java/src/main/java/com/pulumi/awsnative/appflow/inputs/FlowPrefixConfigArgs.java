@@ -7,8 +7,8 @@ import com.pulumi.awsnative.appflow.enums.FlowPrefixFormat;
 import com.pulumi.awsnative.appflow.enums.FlowPrefixType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class FlowPrefixConfigArgs extends com.pulumi.resources.ResourceArg
     public static final FlowPrefixConfigArgs Empty = new FlowPrefixConfigArgs();
 
     @Import(name="prefixFormat")
-      private final @Nullable Output<FlowPrefixFormat> prefixFormat;
+    private @Nullable Output<FlowPrefixFormat> prefixFormat;
 
-    public Output<FlowPrefixFormat> prefixFormat() {
-        return this.prefixFormat == null ? Codegen.empty() : this.prefixFormat;
+    public Optional<Output<FlowPrefixFormat>> prefixFormat() {
+        return Optional.ofNullable(this.prefixFormat);
     }
 
     @Import(name="prefixType")
-      private final @Nullable Output<FlowPrefixType> prefixType;
+    private @Nullable Output<FlowPrefixType> prefixType;
 
-    public Output<FlowPrefixType> prefixType() {
-        return this.prefixType == null ? Codegen.empty() : this.prefixType;
+    public Optional<Output<FlowPrefixType>> prefixType() {
+        return Optional.ofNullable(this.prefixType);
     }
 
-    public FlowPrefixConfigArgs(
-        @Nullable Output<FlowPrefixFormat> prefixFormat,
-        @Nullable Output<FlowPrefixType> prefixType) {
-        this.prefixFormat = prefixFormat;
-        this.prefixType = prefixType;
-    }
+    private FlowPrefixConfigArgs() {}
 
-    private FlowPrefixConfigArgs() {
-        this.prefixFormat = Codegen.empty();
-        this.prefixType = Codegen.empty();
+    private FlowPrefixConfigArgs(FlowPrefixConfigArgs $) {
+        this.prefixFormat = $.prefixFormat;
+        this.prefixType = $.prefixType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowPrefixConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowPrefixFormat> prefixFormat;
-        private @Nullable Output<FlowPrefixType> prefixType;
+        private FlowPrefixConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowPrefixConfigArgs();
         }
 
         public Builder(FlowPrefixConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.prefixFormat = defaults.prefixFormat;
-    	      this.prefixType = defaults.prefixType;
+            $ = new FlowPrefixConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder prefixFormat(@Nullable Output<FlowPrefixFormat> prefixFormat) {
-            this.prefixFormat = prefixFormat;
+            $.prefixFormat = prefixFormat;
             return this;
         }
-        public Builder prefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
-            this.prefixFormat = Codegen.ofNullable(prefixFormat);
-            return this;
+
+        public Builder prefixFormat(FlowPrefixFormat prefixFormat) {
+            return prefixFormat(Output.of(prefixFormat));
         }
+
         public Builder prefixType(@Nullable Output<FlowPrefixType> prefixType) {
-            this.prefixType = prefixType;
+            $.prefixType = prefixType;
             return this;
         }
-        public Builder prefixType(@Nullable FlowPrefixType prefixType) {
-            this.prefixType = Codegen.ofNullable(prefixType);
-            return this;
-        }        public FlowPrefixConfigArgs build() {
-            return new FlowPrefixConfigArgs(prefixFormat, prefixType);
+
+        public Builder prefixType(FlowPrefixType prefixType) {
+            return prefixType(Output.of(prefixType));
+        }
+
+        public FlowPrefixConfigArgs build() {
+            return $;
         }
     }
+
 }

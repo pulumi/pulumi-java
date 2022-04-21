@@ -5,9 +5,9 @@ package com.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gameservices_v1beta.enums.DataAccessOptionsLogMode;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DataAccessOptionsArgs extends com.pulumi.resources.ResourceAr
     public static final DataAccessOptionsArgs Empty = new DataAccessOptionsArgs();
 
     @Import(name="logMode")
-      private final @Nullable Output<DataAccessOptionsLogMode> logMode;
+    private @Nullable Output<DataAccessOptionsLogMode> logMode;
 
-    public Output<DataAccessOptionsLogMode> logMode() {
-        return this.logMode == null ? Codegen.empty() : this.logMode;
+    public Optional<Output<DataAccessOptionsLogMode>> logMode() {
+        return Optional.ofNullable(this.logMode);
     }
 
-    public DataAccessOptionsArgs(@Nullable Output<DataAccessOptionsLogMode> logMode) {
-        this.logMode = logMode;
-    }
+    private DataAccessOptionsArgs() {}
 
-    private DataAccessOptionsArgs() {
-        this.logMode = Codegen.empty();
+    private DataAccessOptionsArgs(DataAccessOptionsArgs $) {
+        this.logMode = $.logMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataAccessOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataAccessOptionsLogMode> logMode;
+        private DataAccessOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataAccessOptionsArgs();
         }
 
         public Builder(DataAccessOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logMode = defaults.logMode;
+            $ = new DataAccessOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logMode(@Nullable Output<DataAccessOptionsLogMode> logMode) {
-            this.logMode = logMode;
+            $.logMode = logMode;
             return this;
         }
-        public Builder logMode(@Nullable DataAccessOptionsLogMode logMode) {
-            this.logMode = Codegen.ofNullable(logMode);
-            return this;
-        }        public DataAccessOptionsArgs build() {
-            return new DataAccessOptionsArgs(logMode);
+
+        public Builder logMode(DataAccessOptionsLogMode logMode) {
+            return logMode(Output.of(logMode));
+        }
+
+        public DataAccessOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,14 +17,14 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,64 +35,59 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateEndpointConnectionArgs(
-        String accountName,
-        String name,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateEndpointConnectionArgs() {}
 
-    private GetPrivateEndpointConnectionArgs() {
-        this.accountName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetPrivateEndpointConnectionArgs(GetPrivateEndpointConnectionArgs $) {
+        this.accountName = $.accountName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String name;
-        private String resourceGroupName;
+        private GetPrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateEndpointConnectionArgs();
         }
 
         public Builder(GetPrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateEndpointConnectionArgs build() {
-            return new GetPrivateEndpointConnectionArgs(accountName, name, resourceGroupName);
+        }
+
+        public GetPrivateEndpointConnectionArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

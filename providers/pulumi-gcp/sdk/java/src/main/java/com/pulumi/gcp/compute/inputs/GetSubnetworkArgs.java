@@ -20,10 +20,10 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class GetSubnetworkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable String selfLink;
+    private @Nullable String selfLink;
 
     public Optional<String> selfLink() {
-        return this.selfLink == null ? Optional.empty() : Optional.ofNullable(this.selfLink);
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public GetSubnetworkArgs(
-        @Nullable String name,
-        @Nullable String project,
-        @Nullable String region,
-        @Nullable String selfLink) {
-        this.name = name;
-        this.project = project;
-        this.region = region;
-        this.selfLink = selfLink;
-    }
+    private GetSubnetworkArgs() {}
 
-    private GetSubnetworkArgs() {
-        this.name = null;
-        this.project = null;
-        this.region = null;
-        this.selfLink = null;
+    private GetSubnetworkArgs(GetSubnetworkArgs $) {
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubnetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String project;
-        private @Nullable String region;
-        private @Nullable String selfLink;
+        private GetSubnetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubnetworkArgs();
         }
 
         public Builder(GetSubnetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.selfLink = defaults.selfLink;
+            $ = new GetSubnetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
-        }        public GetSubnetworkArgs build() {
-            return new GetSubnetworkArgs(name, project, region, selfLink);
+        }
+
+        public GetSubnetworkArgs build() {
+            return $;
         }
     }
+
 }

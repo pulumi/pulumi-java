@@ -7,11 +7,11 @@ import com.pulumi.azurenative.powerbidedicated.inputs.AutoScaleVCoreSkuArgs;
 import com.pulumi.azurenative.powerbidedicated.inputs.SystemDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="capacityLimit")
-      private final @Nullable Output<Integer> capacityLimit;
+    private @Nullable Output<Integer> capacityLimit;
 
-    public Output<Integer> capacityLimit() {
-        return this.capacityLimit == null ? Codegen.empty() : this.capacityLimit;
+    public Optional<Output<Integer>> capacityLimit() {
+        return Optional.ofNullable(this.capacityLimit);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="capacityObjectId")
-      private final @Nullable Output<String> capacityObjectId;
+    private @Nullable Output<String> capacityObjectId;
 
-    public Output<String> capacityObjectId() {
-        return this.capacityObjectId == null ? Codegen.empty() : this.capacityObjectId;
+    public Optional<Output<String>> capacityObjectId() {
+        return Optional.ofNullable(this.capacityObjectId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -68,7 +68,7 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<AutoScaleVCoreSkuArgs> sku;
+    private Output<AutoScaleVCoreSkuArgs> sku;
 
     public Output<AutoScaleVCoreSkuArgs> sku() {
         return this.sku;
@@ -79,10 +79,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="systemData")
-      private final @Nullable Output<SystemDataArgs> systemData;
+    private @Nullable Output<SystemDataArgs> systemData;
 
-    public Output<SystemDataArgs> systemData() {
-        return this.systemData == null ? Codegen.empty() : this.systemData;
+    public Optional<Output<SystemDataArgs>> systemData() {
+        return Optional.ofNullable(this.systemData);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,141 +101,120 @@ public final class AutoScaleVCoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="vcoreName")
-      private final @Nullable Output<String> vcoreName;
+    private @Nullable Output<String> vcoreName;
 
-    public Output<String> vcoreName() {
-        return this.vcoreName == null ? Codegen.empty() : this.vcoreName;
+    public Optional<Output<String>> vcoreName() {
+        return Optional.ofNullable(this.vcoreName);
     }
 
-    public AutoScaleVCoreArgs(
-        @Nullable Output<Integer> capacityLimit,
-        @Nullable Output<String> capacityObjectId,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        Output<AutoScaleVCoreSkuArgs> sku,
-        @Nullable Output<SystemDataArgs> systemData,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vcoreName) {
-        this.capacityLimit = capacityLimit;
-        this.capacityObjectId = capacityObjectId;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.systemData = systemData;
-        this.tags = tags;
-        this.vcoreName = vcoreName;
-    }
+    private AutoScaleVCoreArgs() {}
 
-    private AutoScaleVCoreArgs() {
-        this.capacityLimit = Codegen.empty();
-        this.capacityObjectId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.systemData = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vcoreName = Codegen.empty();
+    private AutoScaleVCoreArgs(AutoScaleVCoreArgs $) {
+        this.capacityLimit = $.capacityLimit;
+        this.capacityObjectId = $.capacityObjectId;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.systemData = $.systemData;
+        this.tags = $.tags;
+        this.vcoreName = $.vcoreName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleVCoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> capacityLimit;
-        private @Nullable Output<String> capacityObjectId;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private Output<AutoScaleVCoreSkuArgs> sku;
-        private @Nullable Output<SystemDataArgs> systemData;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vcoreName;
+        private AutoScaleVCoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleVCoreArgs();
         }
 
         public Builder(AutoScaleVCoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityLimit = defaults.capacityLimit;
-    	      this.capacityObjectId = defaults.capacityObjectId;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.systemData = defaults.systemData;
-    	      this.tags = defaults.tags;
-    	      this.vcoreName = defaults.vcoreName;
+            $ = new AutoScaleVCoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityLimit(@Nullable Output<Integer> capacityLimit) {
-            this.capacityLimit = capacityLimit;
+            $.capacityLimit = capacityLimit;
             return this;
         }
-        public Builder capacityLimit(@Nullable Integer capacityLimit) {
-            this.capacityLimit = Codegen.ofNullable(capacityLimit);
-            return this;
+
+        public Builder capacityLimit(Integer capacityLimit) {
+            return capacityLimit(Output.of(capacityLimit));
         }
+
         public Builder capacityObjectId(@Nullable Output<String> capacityObjectId) {
-            this.capacityObjectId = capacityObjectId;
+            $.capacityObjectId = capacityObjectId;
             return this;
         }
-        public Builder capacityObjectId(@Nullable String capacityObjectId) {
-            this.capacityObjectId = Codegen.ofNullable(capacityObjectId);
-            return this;
+
+        public Builder capacityObjectId(String capacityObjectId) {
+            return capacityObjectId(Output.of(capacityObjectId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<AutoScaleVCoreSkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(AutoScaleVCoreSkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder systemData(@Nullable Output<SystemDataArgs> systemData) {
-            this.systemData = systemData;
+            $.systemData = systemData;
             return this;
         }
-        public Builder systemData(@Nullable SystemDataArgs systemData) {
-            this.systemData = Codegen.ofNullable(systemData);
-            return this;
+
+        public Builder systemData(SystemDataArgs systemData) {
+            return systemData(Output.of(systemData));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vcoreName(@Nullable Output<String> vcoreName) {
-            this.vcoreName = vcoreName;
+            $.vcoreName = vcoreName;
             return this;
         }
-        public Builder vcoreName(@Nullable String vcoreName) {
-            this.vcoreName = Codegen.ofNullable(vcoreName);
-            return this;
-        }        public AutoScaleVCoreArgs build() {
-            return new AutoScaleVCoreArgs(capacityLimit, capacityObjectId, location, resourceGroupName, sku, systemData, tags, vcoreName);
+
+        public Builder vcoreName(String vcoreName) {
+            return vcoreName(Output.of(vcoreName));
+        }
+
+        public AutoScaleVCoreArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
      * 
      */
     @Import(name="dictionary", required=true)
-      private final GooglePrivacyDlpV2DictionaryResponse dictionary;
+    private GooglePrivacyDlpV2DictionaryResponse dictionary;
 
     public GooglePrivacyDlpV2DictionaryResponse dictionary() {
         return this.dictionary;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
      * 
      */
     @Import(name="largeCustomDictionary", required=true)
-      private final GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
+    private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
 
     public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary() {
         return this.largeCustomDictionary;
@@ -68,82 +68,73 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends com.pu
      * 
      */
     @Import(name="regex", required=true)
-      private final GooglePrivacyDlpV2RegexResponse regex;
+    private GooglePrivacyDlpV2RegexResponse regex;
 
     public GooglePrivacyDlpV2RegexResponse regex() {
         return this.regex;
     }
 
-    public GooglePrivacyDlpV2StoredInfoTypeConfigResponse(
-        String description,
-        GooglePrivacyDlpV2DictionaryResponse dictionary,
-        String displayName,
-        GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary,
-        GooglePrivacyDlpV2RegexResponse regex) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.dictionary = Objects.requireNonNull(dictionary, "expected parameter 'dictionary' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary, "expected parameter 'largeCustomDictionary' to be non-null");
-        this.regex = Objects.requireNonNull(regex, "expected parameter 'regex' to be non-null");
-    }
+    private GooglePrivacyDlpV2StoredInfoTypeConfigResponse() {}
 
-    private GooglePrivacyDlpV2StoredInfoTypeConfigResponse() {
-        this.description = null;
-        this.dictionary = null;
-        this.displayName = null;
-        this.largeCustomDictionary = null;
-        this.regex = null;
+    private GooglePrivacyDlpV2StoredInfoTypeConfigResponse(GooglePrivacyDlpV2StoredInfoTypeConfigResponse $) {
+        this.description = $.description;
+        this.dictionary = $.dictionary;
+        this.displayName = $.displayName;
+        this.largeCustomDictionary = $.largeCustomDictionary;
+        this.regex = $.regex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2StoredInfoTypeConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private GooglePrivacyDlpV2DictionaryResponse dictionary;
-        private String displayName;
-        private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
-        private GooglePrivacyDlpV2RegexResponse regex;
+        private GooglePrivacyDlpV2StoredInfoTypeConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2StoredInfoTypeConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2StoredInfoTypeConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.dictionary = defaults.dictionary;
-    	      this.displayName = defaults.displayName;
-    	      this.largeCustomDictionary = defaults.largeCustomDictionary;
-    	      this.regex = defaults.regex;
+            $ = new GooglePrivacyDlpV2StoredInfoTypeConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
-            this.dictionary = Objects.requireNonNull(dictionary);
+            $.dictionary = dictionary;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder largeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary) {
-            this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
+            $.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
+
         public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
-            this.regex = Objects.requireNonNull(regex);
+            $.regex = regex;
             return this;
-        }        public GooglePrivacyDlpV2StoredInfoTypeConfigResponse build() {
-            return new GooglePrivacyDlpV2StoredInfoTypeConfigResponse(description, dictionary, displayName, largeCustomDictionary, regex);
+        }
+
+        public GooglePrivacyDlpV2StoredInfoTypeConfigResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.dictionary = Objects.requireNonNull($.dictionary, "expected parameter 'dictionary' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.largeCustomDictionary = Objects.requireNonNull($.largeCustomDictionary, "expected parameter 'largeCustomDictionary' to be non-null");
+            $.regex = Objects.requireNonNull($.regex, "expected parameter 'regex' to be non-null");
+            return $;
         }
     }
+
 }

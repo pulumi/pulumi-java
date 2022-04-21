@@ -25,10 +25,10 @@ public final class BlobSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BlobSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BlobSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recursive")
-      private final @Nullable Object recursive;
+    private @Nullable Object recursive;
 
     public Optional<Object> recursive() {
-        return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
+        return Optional.ofNullable(this.recursive);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class BlobSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skipHeaderLineCount")
-      private final @Nullable Object skipHeaderLineCount;
+    private @Nullable Object skipHeaderLineCount;
 
     public Optional<Object> skipHeaderLineCount() {
-        return this.skipHeaderLineCount == null ? Optional.empty() : Optional.ofNullable(this.skipHeaderLineCount);
+        return Optional.ofNullable(this.skipHeaderLineCount);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class BlobSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class BlobSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class BlobSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="treatEmptyAsNull")
-      private final @Nullable Object treatEmptyAsNull;
+    private @Nullable Object treatEmptyAsNull;
 
     public Optional<Object> treatEmptyAsNull() {
-        return this.treatEmptyAsNull == null ? Optional.empty() : Optional.ofNullable(this.treatEmptyAsNull);
+        return Optional.ofNullable(this.treatEmptyAsNull);
     }
 
     /**
@@ -103,109 +103,87 @@ public final class BlobSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BlobSourceResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object recursive,
-        @Nullable Object skipHeaderLineCount,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        @Nullable Object treatEmptyAsNull,
-        String type) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.recursive = recursive;
-        this.skipHeaderLineCount = skipHeaderLineCount;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.treatEmptyAsNull = treatEmptyAsNull;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private BlobSourceResponse() {}
 
-    private BlobSourceResponse() {
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.recursive = null;
-        this.skipHeaderLineCount = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.treatEmptyAsNull = null;
-        this.type = null;
+    private BlobSourceResponse(BlobSourceResponse $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.recursive = $.recursive;
+        this.skipHeaderLineCount = $.skipHeaderLineCount;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.treatEmptyAsNull = $.treatEmptyAsNull;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object recursive;
-        private @Nullable Object skipHeaderLineCount;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private @Nullable Object treatEmptyAsNull;
-        private String type;
+        private BlobSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobSourceResponse();
         }
 
         public Builder(BlobSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.recursive = defaults.recursive;
-    	      this.skipHeaderLineCount = defaults.skipHeaderLineCount;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.treatEmptyAsNull = defaults.treatEmptyAsNull;
-    	      this.type = defaults.type;
+            $ = new BlobSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = recursive;
+            $.recursive = recursive;
             return this;
         }
+
         public Builder skipHeaderLineCount(@Nullable Object skipHeaderLineCount) {
-            this.skipHeaderLineCount = skipHeaderLineCount;
+            $.skipHeaderLineCount = skipHeaderLineCount;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
-            this.treatEmptyAsNull = treatEmptyAsNull;
+            $.treatEmptyAsNull = treatEmptyAsNull;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BlobSourceResponse build() {
-            return new BlobSourceResponse(disableMetricsCollection, maxConcurrentConnections, recursive, skipHeaderLineCount, sourceRetryCount, sourceRetryWait, treatEmptyAsNull, type);
+        }
+
+        public BlobSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

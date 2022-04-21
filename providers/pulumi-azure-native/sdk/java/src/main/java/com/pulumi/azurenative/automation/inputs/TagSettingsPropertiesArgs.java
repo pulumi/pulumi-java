@@ -6,11 +6,11 @@ package com.pulumi.azurenative.automation.inputs;
 import com.pulumi.azurenative.automation.enums.TagOperators;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class TagSettingsPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="filterOperator")
-      private final @Nullable Output<TagOperators> filterOperator;
+    private @Nullable Output<TagOperators> filterOperator;
 
-    public Output<TagOperators> filterOperator() {
-        return this.filterOperator == null ? Codegen.empty() : this.filterOperator;
+    public Optional<Output<TagOperators>> filterOperator() {
+        return Optional.ofNullable(this.filterOperator);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class TagSettingsPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,List<String>>> tags;
+    private @Nullable Output<Map<String,List<String>>> tags;
 
-    public Output<Map<String,List<String>>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,List<String>>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public TagSettingsPropertiesArgs(
-        @Nullable Output<TagOperators> filterOperator,
-        @Nullable Output<Map<String,List<String>>> tags) {
-        this.filterOperator = filterOperator;
-        this.tags = tags;
-    }
+    private TagSettingsPropertiesArgs() {}
 
-    private TagSettingsPropertiesArgs() {
-        this.filterOperator = Codegen.empty();
-        this.tags = Codegen.empty();
+    private TagSettingsPropertiesArgs(TagSettingsPropertiesArgs $) {
+        this.filterOperator = $.filterOperator;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagSettingsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TagOperators> filterOperator;
-        private @Nullable Output<Map<String,List<String>>> tags;
+        private TagSettingsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagSettingsPropertiesArgs();
         }
 
         public Builder(TagSettingsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterOperator = defaults.filterOperator;
-    	      this.tags = defaults.tags;
+            $ = new TagSettingsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterOperator(@Nullable Output<TagOperators> filterOperator) {
-            this.filterOperator = filterOperator;
+            $.filterOperator = filterOperator;
             return this;
         }
-        public Builder filterOperator(@Nullable TagOperators filterOperator) {
-            this.filterOperator = Codegen.ofNullable(filterOperator);
-            return this;
+
+        public Builder filterOperator(TagOperators filterOperator) {
+            return filterOperator(Output.of(filterOperator));
         }
+
         public Builder tags(@Nullable Output<Map<String,List<String>>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,List<String>> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public TagSettingsPropertiesArgs build() {
-            return new TagSettingsPropertiesArgs(filterOperator, tags);
+
+        public Builder tags(Map<String,List<String>> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public TagSettingsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

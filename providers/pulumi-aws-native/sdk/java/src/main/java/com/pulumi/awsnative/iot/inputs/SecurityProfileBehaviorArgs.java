@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorCriteriaArgs;
 import com.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
     public static final SecurityProfileBehaviorArgs Empty = new SecurityProfileBehaviorArgs();
 
     @Import(name="criteria")
-      private final @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria;
+    private @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria;
 
-    public Output<SecurityProfileBehaviorCriteriaArgs> criteria() {
-        return this.criteria == null ? Codegen.empty() : this.criteria;
+    public Optional<Output<SecurityProfileBehaviorCriteriaArgs>> criteria() {
+        return Optional.ofNullable(this.criteria);
     }
 
     /**
@@ -34,17 +34,17 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="metric")
-      private final @Nullable Output<String> metric;
+    private @Nullable Output<String> metric;
 
-    public Output<String> metric() {
-        return this.metric == null ? Codegen.empty() : this.metric;
+    public Optional<Output<String>> metric() {
+        return Optional.ofNullable(this.metric);
     }
 
     @Import(name="metricDimension")
-      private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
+    private @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
-    public Output<SecurityProfileMetricDimensionArgs> metricDimension() {
-        return this.metricDimension == null ? Codegen.empty() : this.metricDimension;
+    public Optional<Output<SecurityProfileMetricDimensionArgs>> metricDimension() {
+        return Optional.ofNullable(this.metricDimension);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -63,102 +63,89 @@ public final class SecurityProfileBehaviorArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="suppressAlerts")
-      private final @Nullable Output<Boolean> suppressAlerts;
+    private @Nullable Output<Boolean> suppressAlerts;
 
-    public Output<Boolean> suppressAlerts() {
-        return this.suppressAlerts == null ? Codegen.empty() : this.suppressAlerts;
+    public Optional<Output<Boolean>> suppressAlerts() {
+        return Optional.ofNullable(this.suppressAlerts);
     }
 
-    public SecurityProfileBehaviorArgs(
-        @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria,
-        @Nullable Output<String> metric,
-        @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension,
-        Output<String> name,
-        @Nullable Output<Boolean> suppressAlerts) {
-        this.criteria = criteria;
-        this.metric = metric;
-        this.metricDimension = metricDimension;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.suppressAlerts = suppressAlerts;
-    }
+    private SecurityProfileBehaviorArgs() {}
 
-    private SecurityProfileBehaviorArgs() {
-        this.criteria = Codegen.empty();
-        this.metric = Codegen.empty();
-        this.metricDimension = Codegen.empty();
-        this.name = Codegen.empty();
-        this.suppressAlerts = Codegen.empty();
+    private SecurityProfileBehaviorArgs(SecurityProfileBehaviorArgs $) {
+        this.criteria = $.criteria;
+        this.metric = $.metric;
+        this.metricDimension = $.metricDimension;
+        this.name = $.name;
+        this.suppressAlerts = $.suppressAlerts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileBehaviorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria;
-        private @Nullable Output<String> metric;
-        private @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
-        private Output<String> name;
-        private @Nullable Output<Boolean> suppressAlerts;
+        private SecurityProfileBehaviorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileBehaviorArgs();
         }
 
         public Builder(SecurityProfileBehaviorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.criteria = defaults.criteria;
-    	      this.metric = defaults.metric;
-    	      this.metricDimension = defaults.metricDimension;
-    	      this.name = defaults.name;
-    	      this.suppressAlerts = defaults.suppressAlerts;
+            $ = new SecurityProfileBehaviorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder criteria(@Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria) {
-            this.criteria = criteria;
+            $.criteria = criteria;
             return this;
         }
-        public Builder criteria(@Nullable SecurityProfileBehaviorCriteriaArgs criteria) {
-            this.criteria = Codegen.ofNullable(criteria);
-            return this;
+
+        public Builder criteria(SecurityProfileBehaviorCriteriaArgs criteria) {
+            return criteria(Output.of(criteria));
         }
+
         public Builder metric(@Nullable Output<String> metric) {
-            this.metric = metric;
+            $.metric = metric;
             return this;
         }
-        public Builder metric(@Nullable String metric) {
-            this.metric = Codegen.ofNullable(metric);
-            return this;
+
+        public Builder metric(String metric) {
+            return metric(Output.of(metric));
         }
+
         public Builder metricDimension(@Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension) {
-            this.metricDimension = metricDimension;
+            $.metricDimension = metricDimension;
             return this;
         }
-        public Builder metricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
-            this.metricDimension = Codegen.ofNullable(metricDimension);
-            return this;
+
+        public Builder metricDimension(SecurityProfileMetricDimensionArgs metricDimension) {
+            return metricDimension(Output.of(metricDimension));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder suppressAlerts(@Nullable Output<Boolean> suppressAlerts) {
-            this.suppressAlerts = suppressAlerts;
+            $.suppressAlerts = suppressAlerts;
             return this;
         }
-        public Builder suppressAlerts(@Nullable Boolean suppressAlerts) {
-            this.suppressAlerts = Codegen.ofNullable(suppressAlerts);
-            return this;
-        }        public SecurityProfileBehaviorArgs build() {
-            return new SecurityProfileBehaviorArgs(criteria, metric, metricDimension, name, suppressAlerts);
+
+        public Builder suppressAlerts(Boolean suppressAlerts) {
+            return suppressAlerts(Output.of(suppressAlerts));
+        }
+
+        public SecurityProfileBehaviorArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

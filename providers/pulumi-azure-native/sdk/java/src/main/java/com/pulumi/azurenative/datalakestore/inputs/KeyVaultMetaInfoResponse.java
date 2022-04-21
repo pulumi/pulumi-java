@@ -21,7 +21,7 @@ public final class KeyVaultMetaInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="encryptionKeyName", required=true)
-      private final String encryptionKeyName;
+    private String encryptionKeyName;
 
     public String encryptionKeyName() {
         return this.encryptionKeyName;
@@ -32,7 +32,7 @@ public final class KeyVaultMetaInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="encryptionKeyVersion", required=true)
-      private final String encryptionKeyVersion;
+    private String encryptionKeyVersion;
 
     public String encryptionKeyVersion() {
         return this.encryptionKeyVersion;
@@ -43,64 +43,59 @@ public final class KeyVaultMetaInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="keyVaultResourceId", required=true)
-      private final String keyVaultResourceId;
+    private String keyVaultResourceId;
 
     public String keyVaultResourceId() {
         return this.keyVaultResourceId;
     }
 
-    public KeyVaultMetaInfoResponse(
-        String encryptionKeyName,
-        String encryptionKeyVersion,
-        String keyVaultResourceId) {
-        this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName, "expected parameter 'encryptionKeyName' to be non-null");
-        this.encryptionKeyVersion = Objects.requireNonNull(encryptionKeyVersion, "expected parameter 'encryptionKeyVersion' to be non-null");
-        this.keyVaultResourceId = Objects.requireNonNull(keyVaultResourceId, "expected parameter 'keyVaultResourceId' to be non-null");
-    }
+    private KeyVaultMetaInfoResponse() {}
 
-    private KeyVaultMetaInfoResponse() {
-        this.encryptionKeyName = null;
-        this.encryptionKeyVersion = null;
-        this.keyVaultResourceId = null;
+    private KeyVaultMetaInfoResponse(KeyVaultMetaInfoResponse $) {
+        this.encryptionKeyName = $.encryptionKeyName;
+        this.encryptionKeyVersion = $.encryptionKeyVersion;
+        this.keyVaultResourceId = $.keyVaultResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultMetaInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String encryptionKeyName;
-        private String encryptionKeyVersion;
-        private String keyVaultResourceId;
+        private KeyVaultMetaInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultMetaInfoResponse();
         }
 
         public Builder(KeyVaultMetaInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionKeyName = defaults.encryptionKeyName;
-    	      this.encryptionKeyVersion = defaults.encryptionKeyVersion;
-    	      this.keyVaultResourceId = defaults.keyVaultResourceId;
+            $ = new KeyVaultMetaInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionKeyName(String encryptionKeyName) {
-            this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName);
+            $.encryptionKeyName = encryptionKeyName;
             return this;
         }
+
         public Builder encryptionKeyVersion(String encryptionKeyVersion) {
-            this.encryptionKeyVersion = Objects.requireNonNull(encryptionKeyVersion);
+            $.encryptionKeyVersion = encryptionKeyVersion;
             return this;
         }
+
         public Builder keyVaultResourceId(String keyVaultResourceId) {
-            this.keyVaultResourceId = Objects.requireNonNull(keyVaultResourceId);
+            $.keyVaultResourceId = keyVaultResourceId;
             return this;
-        }        public KeyVaultMetaInfoResponse build() {
-            return new KeyVaultMetaInfoResponse(encryptionKeyName, encryptionKeyVersion, keyVaultResourceId);
+        }
+
+        public KeyVaultMetaInfoResponse build() {
+            $.encryptionKeyName = Objects.requireNonNull($.encryptionKeyName, "expected parameter 'encryptionKeyName' to be non-null");
+            $.encryptionKeyVersion = Objects.requireNonNull($.encryptionKeyVersion, "expected parameter 'encryptionKeyVersion' to be non-null");
+            $.keyVaultResourceId = Objects.requireNonNull($.keyVaultResourceId, "expected parameter 'keyVaultResourceId' to be non-null");
+            return $;
         }
     }
+
 }

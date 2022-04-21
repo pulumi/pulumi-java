@@ -5,7 +5,6 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class InstanceAcceleratorConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="coreCount", required=true)
-      private final Output<Integer> coreCount;
+    private Output<Integer> coreCount;
 
     public Output<Integer> coreCount() {
         return this.coreCount;
@@ -32,63 +31,60 @@ public final class InstanceAcceleratorConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public InstanceAcceleratorConfigArgs(
-        Output<Integer> coreCount,
-        Output<String> type) {
-        this.coreCount = Objects.requireNonNull(coreCount, "expected parameter 'coreCount' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private InstanceAcceleratorConfigArgs() {}
 
-    private InstanceAcceleratorConfigArgs() {
-        this.coreCount = Codegen.empty();
-        this.type = Codegen.empty();
+    private InstanceAcceleratorConfigArgs(InstanceAcceleratorConfigArgs $) {
+        this.coreCount = $.coreCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAcceleratorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> coreCount;
-        private Output<String> type;
+        private InstanceAcceleratorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAcceleratorConfigArgs();
         }
 
         public Builder(InstanceAcceleratorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coreCount = defaults.coreCount;
-    	      this.type = defaults.type;
+            $ = new InstanceAcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder coreCount(Output<Integer> coreCount) {
-            this.coreCount = Objects.requireNonNull(coreCount);
+            $.coreCount = coreCount;
             return this;
         }
+
         public Builder coreCount(Integer coreCount) {
-            this.coreCount = Output.of(Objects.requireNonNull(coreCount));
-            return this;
+            return coreCount(Output.of(coreCount));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public InstanceAcceleratorConfigArgs build() {
-            return new InstanceAcceleratorConfigArgs(coreCount, type);
+            return type(Output.of(type));
+        }
+
+        public InstanceAcceleratorConfigArgs build() {
+            $.coreCount = Objects.requireNonNull($.coreCount, "expected parameter 'coreCount' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

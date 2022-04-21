@@ -5,10 +5,10 @@ package com.pulumi.aws.synthetics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CanaryVpcConfigGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CanaryVpcConfigGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     /**
@@ -43,82 +43,76 @@ public final class CanaryVpcConfigGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public CanaryVpcConfigGetArgs(
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<String> vpcId) {
-        this.securityGroupIds = securityGroupIds;
-        this.subnetIds = subnetIds;
-        this.vpcId = vpcId;
-    }
+    private CanaryVpcConfigGetArgs() {}
 
-    private CanaryVpcConfigGetArgs() {
-        this.securityGroupIds = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private CanaryVpcConfigGetArgs(CanaryVpcConfigGetArgs $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryVpcConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<String> vpcId;
+        private CanaryVpcConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryVpcConfigGetArgs();
         }
 
         public Builder(CanaryVpcConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new CanaryVpcConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public CanaryVpcConfigGetArgs build() {
-            return new CanaryVpcConfigGetArgs(securityGroupIds, subnetIds, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public CanaryVpcConfigGetArgs build() {
+            return $;
         }
     }
+
 }

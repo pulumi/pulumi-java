@@ -5,9 +5,9 @@ package com.pulumi.aws.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RoleInlinePolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class RoleInlinePolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public RoleInlinePolicyArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> policy) {
-        this.name = name;
-        this.policy = policy;
-    }
+    private RoleInlinePolicyArgs() {}
 
-    private RoleInlinePolicyArgs() {
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
+    private RoleInlinePolicyArgs(RoleInlinePolicyArgs $) {
+        this.name = $.name;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleInlinePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> policy;
+        private RoleInlinePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleInlinePolicyArgs();
         }
 
         public Builder(RoleInlinePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
+            $ = new RoleInlinePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public RoleInlinePolicyArgs build() {
-            return new RoleInlinePolicyArgs(name, policy);
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public RoleInlinePolicyArgs build() {
+            return $;
         }
     }
+
 }

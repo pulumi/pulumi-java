@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AnalyticsApplicationInputsParallelismGetArgs extends com.pulu
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
-    public AnalyticsApplicationInputsParallelismGetArgs(@Nullable Output<Integer> count) {
-        this.count = count;
-    }
+    private AnalyticsApplicationInputsParallelismGetArgs() {}
 
-    private AnalyticsApplicationInputsParallelismGetArgs() {
-        this.count = Codegen.empty();
+    private AnalyticsApplicationInputsParallelismGetArgs(AnalyticsApplicationInputsParallelismGetArgs $) {
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnalyticsApplicationInputsParallelismGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
+        private AnalyticsApplicationInputsParallelismGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnalyticsApplicationInputsParallelismGetArgs();
         }
 
         public Builder(AnalyticsApplicationInputsParallelismGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
+            $ = new AnalyticsApplicationInputsParallelismGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
-        }        public AnalyticsApplicationInputsParallelismGetArgs build() {
-            return new AnalyticsApplicationInputsParallelismGetArgs(count);
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
+        }
+
+        public AnalyticsApplicationInputsParallelismGetArgs build() {
+            return $;
         }
     }
+
 }

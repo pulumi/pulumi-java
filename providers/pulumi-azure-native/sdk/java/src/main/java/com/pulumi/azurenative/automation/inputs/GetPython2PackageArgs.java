@@ -17,7 +17,7 @@ public final class GetPython2PackageArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetPython2PackageArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="packageName", required=true)
-      private final String packageName;
+    private String packageName;
 
     public String packageName() {
         return this.packageName;
@@ -39,64 +39,59 @@ public final class GetPython2PackageArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPython2PackageArgs(
-        String automationAccountName,
-        String packageName,
-        String resourceGroupName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.packageName = Objects.requireNonNull(packageName, "expected parameter 'packageName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPython2PackageArgs() {}
 
-    private GetPython2PackageArgs() {
-        this.automationAccountName = null;
-        this.packageName = null;
-        this.resourceGroupName = null;
+    private GetPython2PackageArgs(GetPython2PackageArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.packageName = $.packageName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPython2PackageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String packageName;
-        private String resourceGroupName;
+        private GetPython2PackageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPython2PackageArgs();
         }
 
         public Builder(GetPython2PackageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.packageName = defaults.packageName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPython2PackageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder packageName(String packageName) {
-            this.packageName = Objects.requireNonNull(packageName);
+            $.packageName = packageName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPython2PackageArgs build() {
-            return new GetPython2PackageArgs(automationAccountName, packageName, resourceGroupName);
+        }
+
+        public GetPython2PackageArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.packageName = Objects.requireNonNull($.packageName, "expected parameter 'packageName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

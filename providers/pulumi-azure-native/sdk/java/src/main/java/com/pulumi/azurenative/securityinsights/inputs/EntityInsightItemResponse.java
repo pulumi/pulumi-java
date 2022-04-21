@@ -26,10 +26,10 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="chartQueryResults")
-      private final @Nullable List<InsightsTableResultResponse> chartQueryResults;
+    private @Nullable List<InsightsTableResultResponse> chartQueryResults;
 
-    public List<InsightsTableResultResponse> chartQueryResults() {
-        return this.chartQueryResults == null ? List.of() : this.chartQueryResults;
+    public Optional<List<InsightsTableResultResponse>> chartQueryResults() {
+        return Optional.ofNullable(this.chartQueryResults);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="queryId")
-      private final @Nullable String queryId;
+    private @Nullable String queryId;
 
     public Optional<String> queryId() {
-        return this.queryId == null ? Optional.empty() : Optional.ofNullable(this.queryId);
+        return Optional.ofNullable(this.queryId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="queryTimeInterval")
-      private final @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
+    private @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
 
     public Optional<EntityInsightItemResponseQueryTimeInterval> queryTimeInterval() {
-        return this.queryTimeInterval == null ? Optional.empty() : Optional.ofNullable(this.queryTimeInterval);
+        return Optional.ofNullable(this.queryTimeInterval);
     }
 
     /**
@@ -59,76 +59,66 @@ public final class EntityInsightItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tableQueryResults")
-      private final @Nullable InsightsTableResultResponse tableQueryResults;
+    private @Nullable InsightsTableResultResponse tableQueryResults;
 
     public Optional<InsightsTableResultResponse> tableQueryResults() {
-        return this.tableQueryResults == null ? Optional.empty() : Optional.ofNullable(this.tableQueryResults);
+        return Optional.ofNullable(this.tableQueryResults);
     }
 
-    public EntityInsightItemResponse(
-        @Nullable List<InsightsTableResultResponse> chartQueryResults,
-        @Nullable String queryId,
-        @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval,
-        @Nullable InsightsTableResultResponse tableQueryResults) {
-        this.chartQueryResults = chartQueryResults;
-        this.queryId = queryId;
-        this.queryTimeInterval = queryTimeInterval;
-        this.tableQueryResults = tableQueryResults;
-    }
+    private EntityInsightItemResponse() {}
 
-    private EntityInsightItemResponse() {
-        this.chartQueryResults = List.of();
-        this.queryId = null;
-        this.queryTimeInterval = null;
-        this.tableQueryResults = null;
+    private EntityInsightItemResponse(EntityInsightItemResponse $) {
+        this.chartQueryResults = $.chartQueryResults;
+        this.queryId = $.queryId;
+        this.queryTimeInterval = $.queryTimeInterval;
+        this.tableQueryResults = $.tableQueryResults;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityInsightItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<InsightsTableResultResponse> chartQueryResults;
-        private @Nullable String queryId;
-        private @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval;
-        private @Nullable InsightsTableResultResponse tableQueryResults;
+        private EntityInsightItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityInsightItemResponse();
         }
 
         public Builder(EntityInsightItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chartQueryResults = defaults.chartQueryResults;
-    	      this.queryId = defaults.queryId;
-    	      this.queryTimeInterval = defaults.queryTimeInterval;
-    	      this.tableQueryResults = defaults.tableQueryResults;
+            $ = new EntityInsightItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder chartQueryResults(@Nullable List<InsightsTableResultResponse> chartQueryResults) {
-            this.chartQueryResults = chartQueryResults;
+            $.chartQueryResults = chartQueryResults;
             return this;
         }
+
         public Builder chartQueryResults(InsightsTableResultResponse... chartQueryResults) {
             return chartQueryResults(List.of(chartQueryResults));
         }
+
         public Builder queryId(@Nullable String queryId) {
-            this.queryId = queryId;
+            $.queryId = queryId;
             return this;
         }
+
         public Builder queryTimeInterval(@Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval) {
-            this.queryTimeInterval = queryTimeInterval;
+            $.queryTimeInterval = queryTimeInterval;
             return this;
         }
+
         public Builder tableQueryResults(@Nullable InsightsTableResultResponse tableQueryResults) {
-            this.tableQueryResults = tableQueryResults;
+            $.tableQueryResults = tableQueryResults;
             return this;
-        }        public EntityInsightItemResponse build() {
-            return new EntityInsightItemResponse(chartQueryResults, queryId, queryTimeInterval, tableQueryResults);
+        }
+
+        public EntityInsightItemResponse build() {
+            return $;
         }
     }
+
 }

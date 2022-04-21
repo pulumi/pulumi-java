@@ -23,10 +23,10 @@ public final class BatchOutputConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="appendRowFileName")
-      private final @Nullable String appendRowFileName;
+    private @Nullable String appendRowFileName;
 
     public Optional<String> appendRowFileName() {
-        return this.appendRowFileName == null ? Optional.empty() : Optional.ofNullable(this.appendRowFileName);
+        return Optional.ofNullable(this.appendRowFileName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class BatchOutputConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="outputAction")
-      private final @Nullable String outputAction;
+    private @Nullable String outputAction;
 
     public Optional<String> outputAction() {
-        return this.outputAction == null ? Optional.empty() : Optional.ofNullable(this.outputAction);
+        return Optional.ofNullable(this.outputAction);
     }
 
-    public BatchOutputConfigurationResponse(
-        @Nullable String appendRowFileName,
-        @Nullable String outputAction) {
-        this.appendRowFileName = appendRowFileName;
-        this.outputAction = outputAction;
-    }
+    private BatchOutputConfigurationResponse() {}
 
-    private BatchOutputConfigurationResponse() {
-        this.appendRowFileName = null;
-        this.outputAction = null;
+    private BatchOutputConfigurationResponse(BatchOutputConfigurationResponse $) {
+        this.appendRowFileName = $.appendRowFileName;
+        this.outputAction = $.outputAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchOutputConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String appendRowFileName;
-        private @Nullable String outputAction;
+        private BatchOutputConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchOutputConfigurationResponse();
         }
 
         public Builder(BatchOutputConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appendRowFileName = defaults.appendRowFileName;
-    	      this.outputAction = defaults.outputAction;
+            $ = new BatchOutputConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appendRowFileName(@Nullable String appendRowFileName) {
-            this.appendRowFileName = appendRowFileName;
+            $.appendRowFileName = appendRowFileName;
             return this;
         }
+
         public Builder outputAction(@Nullable String outputAction) {
-            this.outputAction = outputAction;
+            $.outputAction = outputAction;
             return this;
-        }        public BatchOutputConfigurationResponse build() {
-            return new BatchOutputConfigurationResponse(appendRowFileName, outputAction);
+        }
+
+        public BatchOutputConfigurationResponse build() {
+            return $;
         }
     }
+
 }

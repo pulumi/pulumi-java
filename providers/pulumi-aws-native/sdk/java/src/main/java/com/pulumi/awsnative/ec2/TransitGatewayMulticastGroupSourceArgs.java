@@ -5,7 +5,6 @@ package com.pulumi.awsnative.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TransitGatewayMulticastGroupSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="groupIpAddress", required=true)
-      private final Output<String> groupIpAddress;
+    private Output<String> groupIpAddress;
 
     public Output<String> groupIpAddress() {
         return this.groupIpAddress;
@@ -30,7 +29,7 @@ public final class TransitGatewayMulticastGroupSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="networkInterfaceId", required=true)
-      private final Output<String> networkInterfaceId;
+    private Output<String> networkInterfaceId;
 
     public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
@@ -41,76 +40,71 @@ public final class TransitGatewayMulticastGroupSourceArgs extends com.pulumi.res
      * 
      */
     @Import(name="transitGatewayMulticastDomainId", required=true)
-      private final Output<String> transitGatewayMulticastDomainId;
+    private Output<String> transitGatewayMulticastDomainId;
 
     public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
-    public TransitGatewayMulticastGroupSourceArgs(
-        Output<String> groupIpAddress,
-        Output<String> networkInterfaceId,
-        Output<String> transitGatewayMulticastDomainId) {
-        this.groupIpAddress = Objects.requireNonNull(groupIpAddress, "expected parameter 'groupIpAddress' to be non-null");
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
-        this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId, "expected parameter 'transitGatewayMulticastDomainId' to be non-null");
-    }
+    private TransitGatewayMulticastGroupSourceArgs() {}
 
-    private TransitGatewayMulticastGroupSourceArgs() {
-        this.groupIpAddress = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.transitGatewayMulticastDomainId = Codegen.empty();
+    private TransitGatewayMulticastGroupSourceArgs(TransitGatewayMulticastGroupSourceArgs $) {
+        this.groupIpAddress = $.groupIpAddress;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.transitGatewayMulticastDomainId = $.transitGatewayMulticastDomainId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayMulticastGroupSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> groupIpAddress;
-        private Output<String> networkInterfaceId;
-        private Output<String> transitGatewayMulticastDomainId;
+        private TransitGatewayMulticastGroupSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayMulticastGroupSourceArgs();
         }
 
         public Builder(TransitGatewayMulticastGroupSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIpAddress = defaults.groupIpAddress;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
+            $ = new TransitGatewayMulticastGroupSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIpAddress(Output<String> groupIpAddress) {
-            this.groupIpAddress = Objects.requireNonNull(groupIpAddress);
+            $.groupIpAddress = groupIpAddress;
             return this;
         }
+
         public Builder groupIpAddress(String groupIpAddress) {
-            this.groupIpAddress = Output.of(Objects.requireNonNull(groupIpAddress));
-            return this;
+            return groupIpAddress(Output.of(groupIpAddress));
         }
+
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
-            this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Output.of(Objects.requireNonNull(networkInterfaceId));
-            return this;
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder transitGatewayMulticastDomainId(Output<String> transitGatewayMulticastDomainId) {
-            this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
+            $.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
         }
+
         public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
-            this.transitGatewayMulticastDomainId = Output.of(Objects.requireNonNull(transitGatewayMulticastDomainId));
-            return this;
-        }        public TransitGatewayMulticastGroupSourceArgs build() {
-            return new TransitGatewayMulticastGroupSourceArgs(groupIpAddress, networkInterfaceId, transitGatewayMulticastDomainId);
+            return transitGatewayMulticastDomainId(Output.of(transitGatewayMulticastDomainId));
+        }
+
+        public TransitGatewayMulticastGroupSourceArgs build() {
+            $.groupIpAddress = Objects.requireNonNull($.groupIpAddress, "expected parameter 'groupIpAddress' to be non-null");
+            $.networkInterfaceId = Objects.requireNonNull($.networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
+            $.transitGatewayMulticastDomainId = Objects.requireNonNull($.transitGatewayMulticastDomainId, "expected parameter 'transitGatewayMulticastDomainId' to be non-null");
+            return $;
         }
     }
+
 }

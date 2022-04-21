@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.LimitRangeItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class LimitRangeSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="limits", required=true)
-      private final Output<List<LimitRangeItemArgs>> limits;
+    private Output<List<LimitRangeItemArgs>> limits;
 
     public Output<List<LimitRangeItemArgs>> limits() {
         return this.limits;
     }
 
-    public LimitRangeSpecArgs(Output<List<LimitRangeItemArgs>> limits) {
-        this.limits = Objects.requireNonNull(limits, "expected parameter 'limits' to be non-null");
-    }
+    private LimitRangeSpecArgs() {}
 
-    private LimitRangeSpecArgs() {
-        this.limits = Codegen.empty();
+    private LimitRangeSpecArgs(LimitRangeSpecArgs $) {
+        this.limits = $.limits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LimitRangeSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<LimitRangeItemArgs>> limits;
+        private LimitRangeSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LimitRangeSpecArgs();
         }
 
         public Builder(LimitRangeSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
+            $ = new LimitRangeSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(Output<List<LimitRangeItemArgs>> limits) {
-            this.limits = Objects.requireNonNull(limits);
+            $.limits = limits;
             return this;
         }
+
         public Builder limits(List<LimitRangeItemArgs> limits) {
-            this.limits = Output.of(Objects.requireNonNull(limits));
-            return this;
+            return limits(Output.of(limits));
         }
+
         public Builder limits(LimitRangeItemArgs... limits) {
             return limits(List.of(limits));
-        }        public LimitRangeSpecArgs build() {
-            return new LimitRangeSpecArgs(limits);
+        }
+
+        public LimitRangeSpecArgs build() {
+            $.limits = Objects.requireNonNull($.limits, "expected parameter 'limits' to be non-null");
+            return $;
         }
     }
+
 }

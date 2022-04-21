@@ -22,7 +22,7 @@ public final class UrlSigningKeyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
@@ -33,55 +33,52 @@ public final class UrlSigningKeyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="keySourceParameters", required=true)
-      private final KeyVaultSigningKeyParametersResponse keySourceParameters;
+    private KeyVaultSigningKeyParametersResponse keySourceParameters;
 
     public KeyVaultSigningKeyParametersResponse keySourceParameters() {
         return this.keySourceParameters;
     }
 
-    public UrlSigningKeyResponse(
-        String keyId,
-        KeyVaultSigningKeyParametersResponse keySourceParameters) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.keySourceParameters = Objects.requireNonNull(keySourceParameters, "expected parameter 'keySourceParameters' to be non-null");
-    }
+    private UrlSigningKeyResponse() {}
 
-    private UrlSigningKeyResponse() {
-        this.keyId = null;
-        this.keySourceParameters = null;
+    private UrlSigningKeyResponse(UrlSigningKeyResponse $) {
+        this.keyId = $.keyId;
+        this.keySourceParameters = $.keySourceParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlSigningKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyId;
-        private KeyVaultSigningKeyParametersResponse keySourceParameters;
+        private UrlSigningKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlSigningKeyResponse();
         }
 
         public Builder(UrlSigningKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.keySourceParameters = defaults.keySourceParameters;
+            $ = new UrlSigningKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keySourceParameters(KeyVaultSigningKeyParametersResponse keySourceParameters) {
-            this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
+            $.keySourceParameters = keySourceParameters;
             return this;
-        }        public UrlSigningKeyResponse build() {
-            return new UrlSigningKeyResponse(keyId, keySourceParameters);
+        }
+
+        public UrlSigningKeyResponse build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.keySourceParameters = Objects.requireNonNull($.keySourceParameters, "expected parameter 'keySourceParameters' to be non-null");
+            return $;
         }
     }
+
 }

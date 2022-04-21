@@ -5,7 +5,6 @@ package com.pulumi.googlenative.servicemanagement_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.ApiArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.AuthenticationArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.BackendArgs;
@@ -30,6 +29,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -42,10 +42,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apis")
-      private final @Nullable Output<List<ApiArgs>> apis;
+    private @Nullable Output<List<ApiArgs>> apis;
 
-    public Output<List<ApiArgs>> apis() {
-        return this.apis == null ? Codegen.empty() : this.apis;
+    public Optional<Output<List<ApiArgs>>> apis() {
+        return Optional.ofNullable(this.apis);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<AuthenticationArgs> authentication;
+    private @Nullable Output<AuthenticationArgs> authentication;
 
-    public Output<AuthenticationArgs> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<AuthenticationArgs>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backend")
-      private final @Nullable Output<BackendArgs> backend;
+    private @Nullable Output<BackendArgs> backend;
 
-    public Output<BackendArgs> backend() {
-        return this.backend == null ? Codegen.empty() : this.backend;
+    public Optional<Output<BackendArgs>> backend() {
+        return Optional.ofNullable(this.backend);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billing")
-      private final @Nullable Output<BillingArgs> billing;
+    private @Nullable Output<BillingArgs> billing;
 
-    public Output<BillingArgs> billing() {
-        return this.billing == null ? Codegen.empty() : this.billing;
+    public Optional<Output<BillingArgs>> billing() {
+        return Optional.ofNullable(this.billing);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configVersion")
-      private final @Nullable Output<Integer> configVersion;
+    private @Nullable Output<Integer> configVersion;
 
-    public Output<Integer> configVersion() {
-        return this.configVersion == null ? Codegen.empty() : this.configVersion;
+    public Optional<Output<Integer>> configVersion() {
+        return Optional.ofNullable(this.configVersion);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<ContextArgs> context;
+    private @Nullable Output<ContextArgs> context;
 
-    public Output<ContextArgs> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<ContextArgs>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="control")
-      private final @Nullable Output<ControlArgs> control;
+    private @Nullable Output<ControlArgs> control;
 
-    public Output<ControlArgs> control() {
-        return this.control == null ? Codegen.empty() : this.control;
+    public Optional<Output<ControlArgs>> control() {
+        return Optional.ofNullable(this.control);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customError")
-      private final @Nullable Output<CustomErrorArgs> customError;
+    private @Nullable Output<CustomErrorArgs> customError;
 
-    public Output<CustomErrorArgs> customError() {
-        return this.customError == null ? Codegen.empty() : this.customError;
+    public Optional<Output<CustomErrorArgs>> customError() {
+        return Optional.ofNullable(this.customError);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="documentation")
-      private final @Nullable Output<DocumentationArgs> documentation;
+    private @Nullable Output<DocumentationArgs> documentation;
 
-    public Output<DocumentationArgs> documentation() {
-        return this.documentation == null ? Codegen.empty() : this.documentation;
+    public Optional<Output<DocumentationArgs>> documentation() {
+        return Optional.ofNullable(this.documentation);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoints")
-      private final @Nullable Output<List<EndpointArgs>> endpoints;
+    private @Nullable Output<List<EndpointArgs>> endpoints;
 
-    public Output<List<EndpointArgs>> endpoints() {
-        return this.endpoints == null ? Codegen.empty() : this.endpoints;
+    public Optional<Output<List<EndpointArgs>>> endpoints() {
+        return Optional.ofNullable(this.endpoints);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enums")
-      private final @Nullable Output<List<EnumArgs>> enums;
+    private @Nullable Output<List<EnumArgs>> enums;
 
-    public Output<List<EnumArgs>> enums() {
-        return this.enums == null ? Codegen.empty() : this.enums;
+    public Optional<Output<List<EnumArgs>>> enums() {
+        return Optional.ofNullable(this.enums);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="http")
-      private final @Nullable Output<HttpArgs> http;
+    private @Nullable Output<HttpArgs> http;
 
-    public Output<HttpArgs> http() {
-        return this.http == null ? Codegen.empty() : this.http;
+    public Optional<Output<HttpArgs>> http() {
+        return Optional.ofNullable(this.http);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logging")
-      private final @Nullable Output<LoggingArgs> logging;
+    private @Nullable Output<LoggingArgs> logging;
 
-    public Output<LoggingArgs> logging() {
-        return this.logging == null ? Codegen.empty() : this.logging;
+    public Optional<Output<LoggingArgs>> logging() {
+        return Optional.ofNullable(this.logging);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logs")
-      private final @Nullable Output<List<LogDescriptorArgs>> logs;
+    private @Nullable Output<List<LogDescriptorArgs>> logs;
 
-    public Output<List<LogDescriptorArgs>> logs() {
-        return this.logs == null ? Codegen.empty() : this.logs;
+    public Optional<Output<List<LogDescriptorArgs>>> logs() {
+        return Optional.ofNullable(this.logs);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metrics")
-      private final @Nullable Output<List<MetricDescriptorArgs>> metrics;
+    private @Nullable Output<List<MetricDescriptorArgs>> metrics;
 
-    public Output<List<MetricDescriptorArgs>> metrics() {
-        return this.metrics == null ? Codegen.empty() : this.metrics;
+    public Optional<Output<List<MetricDescriptorArgs>>> metrics() {
+        return Optional.ofNullable(this.metrics);
     }
 
     /**
@@ -218,10 +218,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitoredResources")
-      private final @Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources;
+    private @Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources;
 
-    public Output<List<MonitoredResourceDescriptorArgs>> monitoredResources() {
-        return this.monitoredResources == null ? Codegen.empty() : this.monitoredResources;
+    public Optional<Output<List<MonitoredResourceDescriptorArgs>>> monitoredResources() {
+        return Optional.ofNullable(this.monitoredResources);
     }
 
     /**
@@ -229,10 +229,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitoring")
-      private final @Nullable Output<MonitoringArgs> monitoring;
+    private @Nullable Output<MonitoringArgs> monitoring;
 
-    public Output<MonitoringArgs> monitoring() {
-        return this.monitoring == null ? Codegen.empty() : this.monitoring;
+    public Optional<Output<MonitoringArgs>> monitoring() {
+        return Optional.ofNullable(this.monitoring);
     }
 
     /**
@@ -240,10 +240,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -251,10 +251,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="producerProjectId")
-      private final @Nullable Output<String> producerProjectId;
+    private @Nullable Output<String> producerProjectId;
 
-    public Output<String> producerProjectId() {
-        return this.producerProjectId == null ? Codegen.empty() : this.producerProjectId;
+    public Optional<Output<String>> producerProjectId() {
+        return Optional.ofNullable(this.producerProjectId);
     }
 
     /**
@@ -262,14 +262,14 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quota")
-      private final @Nullable Output<QuotaArgs> quota;
+    private @Nullable Output<QuotaArgs> quota;
 
-    public Output<QuotaArgs> quota() {
-        return this.quota == null ? Codegen.empty() : this.quota;
+    public Optional<Output<QuotaArgs>> quota() {
+        return Optional.ofNullable(this.quota);
     }
 
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -280,10 +280,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="systemParameters")
-      private final @Nullable Output<SystemParametersArgs> systemParameters;
+    private @Nullable Output<SystemParametersArgs> systemParameters;
 
-    public Output<SystemParametersArgs> systemParameters() {
-        return this.systemParameters == null ? Codegen.empty() : this.systemParameters;
+    public Optional<Output<SystemParametersArgs>> systemParameters() {
+        return Optional.ofNullable(this.systemParameters);
     }
 
     /**
@@ -291,10 +291,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="systemTypes")
-      private final @Nullable Output<List<TypeArgs>> systemTypes;
+    private @Nullable Output<List<TypeArgs>> systemTypes;
 
-    public Output<List<TypeArgs>> systemTypes() {
-        return this.systemTypes == null ? Codegen.empty() : this.systemTypes;
+    public Optional<Output<List<TypeArgs>>> systemTypes() {
+        return Optional.ofNullable(this.systemTypes);
     }
 
     /**
@@ -302,10 +302,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -313,10 +313,10 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="types")
-      private final @Nullable Output<List<TypeArgs>> types;
+    private @Nullable Output<List<TypeArgs>> types;
 
-    public Output<List<TypeArgs>> types() {
-        return this.types == null ? Codegen.empty() : this.types;
+    public Optional<Output<List<TypeArgs>>> types() {
+        return Optional.ofNullable(this.types);
     }
 
     /**
@@ -324,412 +324,341 @@ public final class ConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usage")
-      private final @Nullable Output<UsageArgs> usage;
+    private @Nullable Output<UsageArgs> usage;
 
-    public Output<UsageArgs> usage() {
-        return this.usage == null ? Codegen.empty() : this.usage;
+    public Optional<Output<UsageArgs>> usage() {
+        return Optional.ofNullable(this.usage);
     }
 
-    public ConfigArgs(
-        @Nullable Output<List<ApiArgs>> apis,
-        @Nullable Output<AuthenticationArgs> authentication,
-        @Nullable Output<BackendArgs> backend,
-        @Nullable Output<BillingArgs> billing,
-        @Nullable Output<Integer> configVersion,
-        @Nullable Output<ContextArgs> context,
-        @Nullable Output<ControlArgs> control,
-        @Nullable Output<CustomErrorArgs> customError,
-        @Nullable Output<DocumentationArgs> documentation,
-        @Nullable Output<List<EndpointArgs>> endpoints,
-        @Nullable Output<List<EnumArgs>> enums,
-        @Nullable Output<HttpArgs> http,
-        @Nullable Output<String> id,
-        @Nullable Output<LoggingArgs> logging,
-        @Nullable Output<List<LogDescriptorArgs>> logs,
-        @Nullable Output<List<MetricDescriptorArgs>> metrics,
-        @Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources,
-        @Nullable Output<MonitoringArgs> monitoring,
-        @Nullable Output<String> name,
-        @Nullable Output<String> producerProjectId,
-        @Nullable Output<QuotaArgs> quota,
-        Output<String> serviceName,
-        @Nullable Output<SystemParametersArgs> systemParameters,
-        @Nullable Output<List<TypeArgs>> systemTypes,
-        @Nullable Output<String> title,
-        @Nullable Output<List<TypeArgs>> types,
-        @Nullable Output<UsageArgs> usage) {
-        this.apis = apis;
-        this.authentication = authentication;
-        this.backend = backend;
-        this.billing = billing;
-        this.configVersion = configVersion;
-        this.context = context;
-        this.control = control;
-        this.customError = customError;
-        this.documentation = documentation;
-        this.endpoints = endpoints;
-        this.enums = enums;
-        this.http = http;
-        this.id = id;
-        this.logging = logging;
-        this.logs = logs;
-        this.metrics = metrics;
-        this.monitoredResources = monitoredResources;
-        this.monitoring = monitoring;
-        this.name = name;
-        this.producerProjectId = producerProjectId;
-        this.quota = quota;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.systemParameters = systemParameters;
-        this.systemTypes = systemTypes;
-        this.title = title;
-        this.types = types;
-        this.usage = usage;
-    }
+    private ConfigArgs() {}
 
-    private ConfigArgs() {
-        this.apis = Codegen.empty();
-        this.authentication = Codegen.empty();
-        this.backend = Codegen.empty();
-        this.billing = Codegen.empty();
-        this.configVersion = Codegen.empty();
-        this.context = Codegen.empty();
-        this.control = Codegen.empty();
-        this.customError = Codegen.empty();
-        this.documentation = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.enums = Codegen.empty();
-        this.http = Codegen.empty();
-        this.id = Codegen.empty();
-        this.logging = Codegen.empty();
-        this.logs = Codegen.empty();
-        this.metrics = Codegen.empty();
-        this.monitoredResources = Codegen.empty();
-        this.monitoring = Codegen.empty();
-        this.name = Codegen.empty();
-        this.producerProjectId = Codegen.empty();
-        this.quota = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.systemParameters = Codegen.empty();
-        this.systemTypes = Codegen.empty();
-        this.title = Codegen.empty();
-        this.types = Codegen.empty();
-        this.usage = Codegen.empty();
+    private ConfigArgs(ConfigArgs $) {
+        this.apis = $.apis;
+        this.authentication = $.authentication;
+        this.backend = $.backend;
+        this.billing = $.billing;
+        this.configVersion = $.configVersion;
+        this.context = $.context;
+        this.control = $.control;
+        this.customError = $.customError;
+        this.documentation = $.documentation;
+        this.endpoints = $.endpoints;
+        this.enums = $.enums;
+        this.http = $.http;
+        this.id = $.id;
+        this.logging = $.logging;
+        this.logs = $.logs;
+        this.metrics = $.metrics;
+        this.monitoredResources = $.monitoredResources;
+        this.monitoring = $.monitoring;
+        this.name = $.name;
+        this.producerProjectId = $.producerProjectId;
+        this.quota = $.quota;
+        this.serviceName = $.serviceName;
+        this.systemParameters = $.systemParameters;
+        this.systemTypes = $.systemTypes;
+        this.title = $.title;
+        this.types = $.types;
+        this.usage = $.usage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApiArgs>> apis;
-        private @Nullable Output<AuthenticationArgs> authentication;
-        private @Nullable Output<BackendArgs> backend;
-        private @Nullable Output<BillingArgs> billing;
-        private @Nullable Output<Integer> configVersion;
-        private @Nullable Output<ContextArgs> context;
-        private @Nullable Output<ControlArgs> control;
-        private @Nullable Output<CustomErrorArgs> customError;
-        private @Nullable Output<DocumentationArgs> documentation;
-        private @Nullable Output<List<EndpointArgs>> endpoints;
-        private @Nullable Output<List<EnumArgs>> enums;
-        private @Nullable Output<HttpArgs> http;
-        private @Nullable Output<String> id;
-        private @Nullable Output<LoggingArgs> logging;
-        private @Nullable Output<List<LogDescriptorArgs>> logs;
-        private @Nullable Output<List<MetricDescriptorArgs>> metrics;
-        private @Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources;
-        private @Nullable Output<MonitoringArgs> monitoring;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> producerProjectId;
-        private @Nullable Output<QuotaArgs> quota;
-        private Output<String> serviceName;
-        private @Nullable Output<SystemParametersArgs> systemParameters;
-        private @Nullable Output<List<TypeArgs>> systemTypes;
-        private @Nullable Output<String> title;
-        private @Nullable Output<List<TypeArgs>> types;
-        private @Nullable Output<UsageArgs> usage;
+        private ConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigArgs();
         }
 
         public Builder(ConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apis = defaults.apis;
-    	      this.authentication = defaults.authentication;
-    	      this.backend = defaults.backend;
-    	      this.billing = defaults.billing;
-    	      this.configVersion = defaults.configVersion;
-    	      this.context = defaults.context;
-    	      this.control = defaults.control;
-    	      this.customError = defaults.customError;
-    	      this.documentation = defaults.documentation;
-    	      this.endpoints = defaults.endpoints;
-    	      this.enums = defaults.enums;
-    	      this.http = defaults.http;
-    	      this.id = defaults.id;
-    	      this.logging = defaults.logging;
-    	      this.logs = defaults.logs;
-    	      this.metrics = defaults.metrics;
-    	      this.monitoredResources = defaults.monitoredResources;
-    	      this.monitoring = defaults.monitoring;
-    	      this.name = defaults.name;
-    	      this.producerProjectId = defaults.producerProjectId;
-    	      this.quota = defaults.quota;
-    	      this.serviceName = defaults.serviceName;
-    	      this.systemParameters = defaults.systemParameters;
-    	      this.systemTypes = defaults.systemTypes;
-    	      this.title = defaults.title;
-    	      this.types = defaults.types;
-    	      this.usage = defaults.usage;
+            $ = new ConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apis(@Nullable Output<List<ApiArgs>> apis) {
-            this.apis = apis;
+            $.apis = apis;
             return this;
         }
-        public Builder apis(@Nullable List<ApiArgs> apis) {
-            this.apis = Codegen.ofNullable(apis);
-            return this;
+
+        public Builder apis(List<ApiArgs> apis) {
+            return apis(Output.of(apis));
         }
+
         public Builder apis(ApiArgs... apis) {
             return apis(List.of(apis));
         }
+
         public Builder authentication(@Nullable Output<AuthenticationArgs> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable AuthenticationArgs authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(AuthenticationArgs authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder backend(@Nullable Output<BackendArgs> backend) {
-            this.backend = backend;
+            $.backend = backend;
             return this;
         }
-        public Builder backend(@Nullable BackendArgs backend) {
-            this.backend = Codegen.ofNullable(backend);
-            return this;
+
+        public Builder backend(BackendArgs backend) {
+            return backend(Output.of(backend));
         }
+
         public Builder billing(@Nullable Output<BillingArgs> billing) {
-            this.billing = billing;
+            $.billing = billing;
             return this;
         }
-        public Builder billing(@Nullable BillingArgs billing) {
-            this.billing = Codegen.ofNullable(billing);
-            return this;
+
+        public Builder billing(BillingArgs billing) {
+            return billing(Output.of(billing));
         }
+
         public Builder configVersion(@Nullable Output<Integer> configVersion) {
-            this.configVersion = configVersion;
+            $.configVersion = configVersion;
             return this;
         }
-        public Builder configVersion(@Nullable Integer configVersion) {
-            this.configVersion = Codegen.ofNullable(configVersion);
-            return this;
+
+        public Builder configVersion(Integer configVersion) {
+            return configVersion(Output.of(configVersion));
         }
+
         public Builder context(@Nullable Output<ContextArgs> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable ContextArgs context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(ContextArgs context) {
+            return context(Output.of(context));
         }
+
         public Builder control(@Nullable Output<ControlArgs> control) {
-            this.control = control;
+            $.control = control;
             return this;
         }
-        public Builder control(@Nullable ControlArgs control) {
-            this.control = Codegen.ofNullable(control);
-            return this;
+
+        public Builder control(ControlArgs control) {
+            return control(Output.of(control));
         }
+
         public Builder customError(@Nullable Output<CustomErrorArgs> customError) {
-            this.customError = customError;
+            $.customError = customError;
             return this;
         }
-        public Builder customError(@Nullable CustomErrorArgs customError) {
-            this.customError = Codegen.ofNullable(customError);
-            return this;
+
+        public Builder customError(CustomErrorArgs customError) {
+            return customError(Output.of(customError));
         }
+
         public Builder documentation(@Nullable Output<DocumentationArgs> documentation) {
-            this.documentation = documentation;
+            $.documentation = documentation;
             return this;
         }
-        public Builder documentation(@Nullable DocumentationArgs documentation) {
-            this.documentation = Codegen.ofNullable(documentation);
-            return this;
+
+        public Builder documentation(DocumentationArgs documentation) {
+            return documentation(Output.of(documentation));
         }
+
         public Builder endpoints(@Nullable Output<List<EndpointArgs>> endpoints) {
-            this.endpoints = endpoints;
+            $.endpoints = endpoints;
             return this;
         }
-        public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
-            this.endpoints = Codegen.ofNullable(endpoints);
-            return this;
+
+        public Builder endpoints(List<EndpointArgs> endpoints) {
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(EndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder enums(@Nullable Output<List<EnumArgs>> enums) {
-            this.enums = enums;
+            $.enums = enums;
             return this;
         }
-        public Builder enums(@Nullable List<EnumArgs> enums) {
-            this.enums = Codegen.ofNullable(enums);
-            return this;
+
+        public Builder enums(List<EnumArgs> enums) {
+            return enums(Output.of(enums));
         }
+
         public Builder enums(EnumArgs... enums) {
             return enums(List.of(enums));
         }
+
         public Builder http(@Nullable Output<HttpArgs> http) {
-            this.http = http;
+            $.http = http;
             return this;
         }
-        public Builder http(@Nullable HttpArgs http) {
-            this.http = Codegen.ofNullable(http);
-            return this;
+
+        public Builder http(HttpArgs http) {
+            return http(Output.of(http));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder logging(@Nullable Output<LoggingArgs> logging) {
-            this.logging = logging;
+            $.logging = logging;
             return this;
         }
-        public Builder logging(@Nullable LoggingArgs logging) {
-            this.logging = Codegen.ofNullable(logging);
-            return this;
+
+        public Builder logging(LoggingArgs logging) {
+            return logging(Output.of(logging));
         }
+
         public Builder logs(@Nullable Output<List<LogDescriptorArgs>> logs) {
-            this.logs = logs;
+            $.logs = logs;
             return this;
         }
-        public Builder logs(@Nullable List<LogDescriptorArgs> logs) {
-            this.logs = Codegen.ofNullable(logs);
-            return this;
+
+        public Builder logs(List<LogDescriptorArgs> logs) {
+            return logs(Output.of(logs));
         }
+
         public Builder logs(LogDescriptorArgs... logs) {
             return logs(List.of(logs));
         }
+
         public Builder metrics(@Nullable Output<List<MetricDescriptorArgs>> metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
-        public Builder metrics(@Nullable List<MetricDescriptorArgs> metrics) {
-            this.metrics = Codegen.ofNullable(metrics);
-            return this;
+
+        public Builder metrics(List<MetricDescriptorArgs> metrics) {
+            return metrics(Output.of(metrics));
         }
+
         public Builder metrics(MetricDescriptorArgs... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder monitoredResources(@Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources) {
-            this.monitoredResources = monitoredResources;
+            $.monitoredResources = monitoredResources;
             return this;
         }
-        public Builder monitoredResources(@Nullable List<MonitoredResourceDescriptorArgs> monitoredResources) {
-            this.monitoredResources = Codegen.ofNullable(monitoredResources);
-            return this;
+
+        public Builder monitoredResources(List<MonitoredResourceDescriptorArgs> monitoredResources) {
+            return monitoredResources(Output.of(monitoredResources));
         }
+
         public Builder monitoredResources(MonitoredResourceDescriptorArgs... monitoredResources) {
             return monitoredResources(List.of(monitoredResources));
         }
+
         public Builder monitoring(@Nullable Output<MonitoringArgs> monitoring) {
-            this.monitoring = monitoring;
+            $.monitoring = monitoring;
             return this;
         }
-        public Builder monitoring(@Nullable MonitoringArgs monitoring) {
-            this.monitoring = Codegen.ofNullable(monitoring);
-            return this;
+
+        public Builder monitoring(MonitoringArgs monitoring) {
+            return monitoring(Output.of(monitoring));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder producerProjectId(@Nullable Output<String> producerProjectId) {
-            this.producerProjectId = producerProjectId;
+            $.producerProjectId = producerProjectId;
             return this;
         }
-        public Builder producerProjectId(@Nullable String producerProjectId) {
-            this.producerProjectId = Codegen.ofNullable(producerProjectId);
-            return this;
+
+        public Builder producerProjectId(String producerProjectId) {
+            return producerProjectId(Output.of(producerProjectId));
         }
+
         public Builder quota(@Nullable Output<QuotaArgs> quota) {
-            this.quota = quota;
+            $.quota = quota;
             return this;
         }
-        public Builder quota(@Nullable QuotaArgs quota) {
-            this.quota = Codegen.ofNullable(quota);
-            return this;
+
+        public Builder quota(QuotaArgs quota) {
+            return quota(Output.of(quota));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder systemParameters(@Nullable Output<SystemParametersArgs> systemParameters) {
-            this.systemParameters = systemParameters;
+            $.systemParameters = systemParameters;
             return this;
         }
-        public Builder systemParameters(@Nullable SystemParametersArgs systemParameters) {
-            this.systemParameters = Codegen.ofNullable(systemParameters);
-            return this;
+
+        public Builder systemParameters(SystemParametersArgs systemParameters) {
+            return systemParameters(Output.of(systemParameters));
         }
+
         public Builder systemTypes(@Nullable Output<List<TypeArgs>> systemTypes) {
-            this.systemTypes = systemTypes;
+            $.systemTypes = systemTypes;
             return this;
         }
-        public Builder systemTypes(@Nullable List<TypeArgs> systemTypes) {
-            this.systemTypes = Codegen.ofNullable(systemTypes);
-            return this;
+
+        public Builder systemTypes(List<TypeArgs> systemTypes) {
+            return systemTypes(Output.of(systemTypes));
         }
+
         public Builder systemTypes(TypeArgs... systemTypes) {
             return systemTypes(List.of(systemTypes));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder types(@Nullable Output<List<TypeArgs>> types) {
-            this.types = types;
+            $.types = types;
             return this;
         }
-        public Builder types(@Nullable List<TypeArgs> types) {
-            this.types = Codegen.ofNullable(types);
-            return this;
+
+        public Builder types(List<TypeArgs> types) {
+            return types(Output.of(types));
         }
+
         public Builder types(TypeArgs... types) {
             return types(List.of(types));
         }
+
         public Builder usage(@Nullable Output<UsageArgs> usage) {
-            this.usage = usage;
+            $.usage = usage;
             return this;
         }
-        public Builder usage(@Nullable UsageArgs usage) {
-            this.usage = Codegen.ofNullable(usage);
-            return this;
-        }        public ConfigArgs build() {
-            return new ConfigArgs(apis, authentication, backend, billing, configVersion, context, control, customError, documentation, endpoints, enums, http, id, logging, logs, metrics, monitoredResources, monitoring, name, producerProjectId, quota, serviceName, systemParameters, systemTypes, title, types, usage);
+
+        public Builder usage(UsageArgs usage) {
+            return usage(Output.of(usage));
+        }
+
+        public ConfigArgs build() {
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

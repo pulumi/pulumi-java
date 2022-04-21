@@ -24,10 +24,10 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aofEnabled")
-      private final @Nullable Boolean aofEnabled;
+    private @Nullable Boolean aofEnabled;
 
     public Optional<Boolean> aofEnabled() {
-        return this.aofEnabled == null ? Optional.empty() : Optional.ofNullable(this.aofEnabled);
+        return Optional.ofNullable(this.aofEnabled);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aofFrequency")
-      private final @Nullable String aofFrequency;
+    private @Nullable String aofFrequency;
 
     public Optional<String> aofFrequency() {
-        return this.aofFrequency == null ? Optional.empty() : Optional.ofNullable(this.aofFrequency);
+        return Optional.ofNullable(this.aofFrequency);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rdbEnabled")
-      private final @Nullable Boolean rdbEnabled;
+    private @Nullable Boolean rdbEnabled;
 
     public Optional<Boolean> rdbEnabled() {
-        return this.rdbEnabled == null ? Optional.empty() : Optional.ofNullable(this.rdbEnabled);
+        return Optional.ofNullable(this.rdbEnabled);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class PersistenceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rdbFrequency")
-      private final @Nullable String rdbFrequency;
+    private @Nullable String rdbFrequency;
 
     public Optional<String> rdbFrequency() {
-        return this.rdbFrequency == null ? Optional.empty() : Optional.ofNullable(this.rdbFrequency);
+        return Optional.ofNullable(this.rdbFrequency);
     }
 
-    public PersistenceResponse(
-        @Nullable Boolean aofEnabled,
-        @Nullable String aofFrequency,
-        @Nullable Boolean rdbEnabled,
-        @Nullable String rdbFrequency) {
-        this.aofEnabled = aofEnabled;
-        this.aofFrequency = aofFrequency;
-        this.rdbEnabled = rdbEnabled;
-        this.rdbFrequency = rdbFrequency;
-    }
+    private PersistenceResponse() {}
 
-    private PersistenceResponse() {
-        this.aofEnabled = null;
-        this.aofFrequency = null;
-        this.rdbEnabled = null;
-        this.rdbFrequency = null;
+    private PersistenceResponse(PersistenceResponse $) {
+        this.aofEnabled = $.aofEnabled;
+        this.aofFrequency = $.aofFrequency;
+        this.rdbEnabled = $.rdbEnabled;
+        this.rdbFrequency = $.rdbFrequency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean aofEnabled;
-        private @Nullable String aofFrequency;
-        private @Nullable Boolean rdbEnabled;
-        private @Nullable String rdbFrequency;
+        private PersistenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistenceResponse();
         }
 
         public Builder(PersistenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aofEnabled = defaults.aofEnabled;
-    	      this.aofFrequency = defaults.aofFrequency;
-    	      this.rdbEnabled = defaults.rdbEnabled;
-    	      this.rdbFrequency = defaults.rdbFrequency;
+            $ = new PersistenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aofEnabled(@Nullable Boolean aofEnabled) {
-            this.aofEnabled = aofEnabled;
+            $.aofEnabled = aofEnabled;
             return this;
         }
+
         public Builder aofFrequency(@Nullable String aofFrequency) {
-            this.aofFrequency = aofFrequency;
+            $.aofFrequency = aofFrequency;
             return this;
         }
+
         public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
-            this.rdbEnabled = rdbEnabled;
+            $.rdbEnabled = rdbEnabled;
             return this;
         }
+
         public Builder rdbFrequency(@Nullable String rdbFrequency) {
-            this.rdbFrequency = rdbFrequency;
+            $.rdbFrequency = rdbFrequency;
             return this;
-        }        public PersistenceResponse build() {
-            return new PersistenceResponse(aofEnabled, aofFrequency, rdbEnabled, rdbFrequency);
+        }
+
+        public PersistenceResponse build() {
+            return $;
         }
     }
+
 }

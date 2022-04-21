@@ -21,7 +21,7 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backup", required=true)
-      private final String backup;
+    private String backup;
 
     public String backup() {
         return this.backup;
@@ -32,7 +32,7 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -43,7 +43,7 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceTable", required=true)
-      private final String sourceTable;
+    private String sourceTable;
 
     public String sourceTable() {
         return this.sourceTable;
@@ -54,73 +54,66 @@ public final class BackupInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public BackupInfoResponse(
-        String backup,
-        String endTime,
-        String sourceTable,
-        String startTime) {
-        this.backup = Objects.requireNonNull(backup, "expected parameter 'backup' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.sourceTable = Objects.requireNonNull(sourceTable, "expected parameter 'sourceTable' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private BackupInfoResponse() {}
 
-    private BackupInfoResponse() {
-        this.backup = null;
-        this.endTime = null;
-        this.sourceTable = null;
-        this.startTime = null;
+    private BackupInfoResponse(BackupInfoResponse $) {
+        this.backup = $.backup;
+        this.endTime = $.endTime;
+        this.sourceTable = $.sourceTable;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backup;
-        private String endTime;
-        private String sourceTable;
-        private String startTime;
+        private BackupInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupInfoResponse();
         }
 
         public Builder(BackupInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backup = defaults.backup;
-    	      this.endTime = defaults.endTime;
-    	      this.sourceTable = defaults.sourceTable;
-    	      this.startTime = defaults.startTime;
+            $ = new BackupInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backup(String backup) {
-            this.backup = Objects.requireNonNull(backup);
+            $.backup = backup;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder sourceTable(String sourceTable) {
-            this.sourceTable = Objects.requireNonNull(sourceTable);
+            $.sourceTable = sourceTable;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public BackupInfoResponse build() {
-            return new BackupInfoResponse(backup, endTime, sourceTable, startTime);
+        }
+
+        public BackupInfoResponse build() {
+            $.backup = Objects.requireNonNull($.backup, "expected parameter 'backup' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.sourceTable = Objects.requireNonNull($.sourceTable, "expected parameter 'sourceTable' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

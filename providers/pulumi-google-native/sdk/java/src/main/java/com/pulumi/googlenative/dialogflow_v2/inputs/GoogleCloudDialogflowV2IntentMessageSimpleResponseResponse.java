@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse ex
      * 
      */
     @Import(name="displayText", required=true)
-      private final String displayText;
+    private String displayText;
 
     public String displayText() {
         return this.displayText;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse ex
      * 
      */
     @Import(name="ssml", required=true)
-      private final String ssml;
+    private String ssml;
 
     public String ssml() {
         return this.ssml;
@@ -43,64 +43,59 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse ex
      * 
      */
     @Import(name="textToSpeech", required=true)
-      private final String textToSpeech;
+    private String textToSpeech;
 
     public String textToSpeech() {
         return this.textToSpeech;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse(
-        String displayText,
-        String ssml,
-        String textToSpeech) {
-        this.displayText = Objects.requireNonNull(displayText, "expected parameter 'displayText' to be non-null");
-        this.ssml = Objects.requireNonNull(ssml, "expected parameter 'ssml' to be non-null");
-        this.textToSpeech = Objects.requireNonNull(textToSpeech, "expected parameter 'textToSpeech' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse() {
-        this.displayText = null;
-        this.ssml = null;
-        this.textToSpeech = null;
+    private GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse(GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse $) {
+        this.displayText = $.displayText;
+        this.ssml = $.ssml;
+        this.textToSpeech = $.textToSpeech;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayText;
-        private String ssml;
-        private String textToSpeech;
+        private GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayText = defaults.displayText;
-    	      this.ssml = defaults.ssml;
-    	      this.textToSpeech = defaults.textToSpeech;
+            $ = new GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayText(String displayText) {
-            this.displayText = Objects.requireNonNull(displayText);
+            $.displayText = displayText;
             return this;
         }
+
         public Builder ssml(String ssml) {
-            this.ssml = Objects.requireNonNull(ssml);
+            $.ssml = ssml;
             return this;
         }
+
         public Builder textToSpeech(String textToSpeech) {
-            this.textToSpeech = Objects.requireNonNull(textToSpeech);
+            $.textToSpeech = textToSpeech;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse(displayText, ssml, textToSpeech);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse build() {
+            $.displayText = Objects.requireNonNull($.displayText, "expected parameter 'displayText' to be non-null");
+            $.ssml = Objects.requireNonNull($.ssml, "expected parameter 'ssml' to be non-null");
+            $.textToSpeech = Objects.requireNonNull($.textToSpeech, "expected parameter 'textToSpeech' to be non-null");
+            return $;
         }
     }
+
 }

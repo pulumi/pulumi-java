@@ -5,9 +5,9 @@ package com.pulumi.gcp.tags.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TagBindingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TagBindingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class TagBindingState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagValue")
-      private final @Nullable Output<String> tagValue;
+    private @Nullable Output<String> tagValue;
 
-    public Output<String> tagValue() {
-        return this.tagValue == null ? Codegen.empty() : this.tagValue;
+    public Optional<Output<String>> tagValue() {
+        return Optional.ofNullable(this.tagValue);
     }
 
-    public TagBindingState(
-        @Nullable Output<String> name,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> tagValue) {
-        this.name = name;
-        this.parent = parent;
-        this.tagValue = tagValue;
-    }
+    private TagBindingState() {}
 
-    private TagBindingState() {
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.tagValue = Codegen.empty();
+    private TagBindingState(TagBindingState $) {
+        this.name = $.name;
+        this.parent = $.parent;
+        this.tagValue = $.tagValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagBindingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> tagValue;
+        private TagBindingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagBindingState();
         }
 
         public Builder(TagBindingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.tagValue = defaults.tagValue;
+            $ = new TagBindingState(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder tagValue(@Nullable Output<String> tagValue) {
-            this.tagValue = tagValue;
+            $.tagValue = tagValue;
             return this;
         }
-        public Builder tagValue(@Nullable String tagValue) {
-            this.tagValue = Codegen.ofNullable(tagValue);
-            return this;
-        }        public TagBindingState build() {
-            return new TagBindingState(name, parent, tagValue);
+
+        public Builder tagValue(String tagValue) {
+            return tagValue(Output.of(tagValue));
+        }
+
+        public TagBindingState build() {
+            return $;
         }
     }
+
 }

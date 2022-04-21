@@ -5,10 +5,10 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DistributionOriginShieldArgs extends com.pulumi.resources.Res
     public static final DistributionOriginShieldArgs Empty = new DistributionOriginShieldArgs();
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="originShieldRegion")
-      private final @Nullable Output<String> originShieldRegion;
+    private @Nullable Output<String> originShieldRegion;
 
-    public Output<String> originShieldRegion() {
-        return this.originShieldRegion == null ? Codegen.empty() : this.originShieldRegion;
+    public Optional<Output<String>> originShieldRegion() {
+        return Optional.ofNullable(this.originShieldRegion);
     }
 
-    public DistributionOriginShieldArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> originShieldRegion) {
-        this.enabled = enabled;
-        this.originShieldRegion = originShieldRegion;
-    }
+    private DistributionOriginShieldArgs() {}
 
-    private DistributionOriginShieldArgs() {
-        this.enabled = Codegen.empty();
-        this.originShieldRegion = Codegen.empty();
+    private DistributionOriginShieldArgs(DistributionOriginShieldArgs $) {
+        this.enabled = $.enabled;
+        this.originShieldRegion = $.originShieldRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOriginShieldArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> originShieldRegion;
+        private DistributionOriginShieldArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOriginShieldArgs();
         }
 
         public Builder(DistributionOriginShieldArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.originShieldRegion = defaults.originShieldRegion;
+            $ = new DistributionOriginShieldArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder originShieldRegion(@Nullable Output<String> originShieldRegion) {
-            this.originShieldRegion = originShieldRegion;
+            $.originShieldRegion = originShieldRegion;
             return this;
         }
-        public Builder originShieldRegion(@Nullable String originShieldRegion) {
-            this.originShieldRegion = Codegen.ofNullable(originShieldRegion);
-            return this;
-        }        public DistributionOriginShieldArgs build() {
-            return new DistributionOriginShieldArgs(enabled, originShieldRegion);
+
+        public Builder originShieldRegion(String originShieldRegion) {
+            return originShieldRegion(Output.of(originShieldRegion));
+        }
+
+        public DistributionOriginShieldArgs build() {
+            return $;
         }
     }
+
 }

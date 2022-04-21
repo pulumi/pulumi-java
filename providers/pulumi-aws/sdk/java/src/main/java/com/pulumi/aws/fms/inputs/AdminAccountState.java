@@ -5,9 +5,9 @@ package com.pulumi.aws.fms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AdminAccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
-    public AdminAccountState(@Nullable Output<String> accountId) {
-        this.accountId = accountId;
-    }
+    private AdminAccountState() {}
 
-    private AdminAccountState() {
-        this.accountId = Codegen.empty();
+    private AdminAccountState(AdminAccountState $) {
+        this.accountId = $.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdminAccountState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
+        private AdminAccountState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdminAccountState();
         }
 
         public Builder(AdminAccountState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
+            $ = new AdminAccountState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
-        }        public AdminAccountState build() {
-            return new AdminAccountState(accountId);
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
+        }
+
+        public AdminAccountState build() {
+            return $;
         }
     }
+
 }

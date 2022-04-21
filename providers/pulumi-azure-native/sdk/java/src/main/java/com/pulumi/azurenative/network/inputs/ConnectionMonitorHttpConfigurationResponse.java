@@ -27,10 +27,10 @@ public final class ConnectionMonitorHttpConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="method")
-      private final @Nullable String method;
+    private @Nullable String method;
 
     public Optional<String> method() {
-        return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ConnectionMonitorHttpConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ConnectionMonitorHttpConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ConnectionMonitorHttpConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="preferHTTPS")
-      private final @Nullable Boolean preferHTTPS;
+    private @Nullable Boolean preferHTTPS;
 
     public Optional<Boolean> preferHTTPS() {
-        return this.preferHTTPS == null ? Optional.empty() : Optional.ofNullable(this.preferHTTPS);
+        return Optional.ofNullable(this.preferHTTPS);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ConnectionMonitorHttpConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="requestHeaders")
-      private final @Nullable List<HTTPHeaderResponse> requestHeaders;
+    private @Nullable List<HTTPHeaderResponse> requestHeaders;
 
-    public List<HTTPHeaderResponse> requestHeaders() {
-        return this.requestHeaders == null ? List.of() : this.requestHeaders;
+    public Optional<List<HTTPHeaderResponse>> requestHeaders() {
+        return Optional.ofNullable(this.requestHeaders);
     }
 
     /**
@@ -82,97 +82,82 @@ public final class ConnectionMonitorHttpConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="validStatusCodeRanges")
-      private final @Nullable List<String> validStatusCodeRanges;
+    private @Nullable List<String> validStatusCodeRanges;
 
-    public List<String> validStatusCodeRanges() {
-        return this.validStatusCodeRanges == null ? List.of() : this.validStatusCodeRanges;
+    public Optional<List<String>> validStatusCodeRanges() {
+        return Optional.ofNullable(this.validStatusCodeRanges);
     }
 
-    public ConnectionMonitorHttpConfigurationResponse(
-        @Nullable String method,
-        @Nullable String path,
-        @Nullable Integer port,
-        @Nullable Boolean preferHTTPS,
-        @Nullable List<HTTPHeaderResponse> requestHeaders,
-        @Nullable List<String> validStatusCodeRanges) {
-        this.method = method;
-        this.path = path;
-        this.port = port;
-        this.preferHTTPS = preferHTTPS;
-        this.requestHeaders = requestHeaders;
-        this.validStatusCodeRanges = validStatusCodeRanges;
-    }
+    private ConnectionMonitorHttpConfigurationResponse() {}
 
-    private ConnectionMonitorHttpConfigurationResponse() {
-        this.method = null;
-        this.path = null;
-        this.port = null;
-        this.preferHTTPS = null;
-        this.requestHeaders = List.of();
-        this.validStatusCodeRanges = List.of();
+    private ConnectionMonitorHttpConfigurationResponse(ConnectionMonitorHttpConfigurationResponse $) {
+        this.method = $.method;
+        this.path = $.path;
+        this.port = $.port;
+        this.preferHTTPS = $.preferHTTPS;
+        this.requestHeaders = $.requestHeaders;
+        this.validStatusCodeRanges = $.validStatusCodeRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorHttpConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String method;
-        private @Nullable String path;
-        private @Nullable Integer port;
-        private @Nullable Boolean preferHTTPS;
-        private @Nullable List<HTTPHeaderResponse> requestHeaders;
-        private @Nullable List<String> validStatusCodeRanges;
+        private ConnectionMonitorHttpConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorHttpConfigurationResponse();
         }
 
         public Builder(ConnectionMonitorHttpConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.method = defaults.method;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.preferHTTPS = defaults.preferHTTPS;
-    	      this.requestHeaders = defaults.requestHeaders;
-    	      this.validStatusCodeRanges = defaults.validStatusCodeRanges;
+            $ = new ConnectionMonitorHttpConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder method(@Nullable String method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder preferHTTPS(@Nullable Boolean preferHTTPS) {
-            this.preferHTTPS = preferHTTPS;
+            $.preferHTTPS = preferHTTPS;
             return this;
         }
+
         public Builder requestHeaders(@Nullable List<HTTPHeaderResponse> requestHeaders) {
-            this.requestHeaders = requestHeaders;
+            $.requestHeaders = requestHeaders;
             return this;
         }
+
         public Builder requestHeaders(HTTPHeaderResponse... requestHeaders) {
             return requestHeaders(List.of(requestHeaders));
         }
+
         public Builder validStatusCodeRanges(@Nullable List<String> validStatusCodeRanges) {
-            this.validStatusCodeRanges = validStatusCodeRanges;
+            $.validStatusCodeRanges = validStatusCodeRanges;
             return this;
         }
+
         public Builder validStatusCodeRanges(String... validStatusCodeRanges) {
             return validStatusCodeRanges(List.of(validStatusCodeRanges));
-        }        public ConnectionMonitorHttpConfigurationResponse build() {
-            return new ConnectionMonitorHttpConfigurationResponse(method, path, port, preferHTTPS, requestHeaders, validStatusCodeRanges);
+        }
+
+        public ConnectionMonitorHttpConfigurationResponse build() {
+            return $;
         }
     }
+
 }

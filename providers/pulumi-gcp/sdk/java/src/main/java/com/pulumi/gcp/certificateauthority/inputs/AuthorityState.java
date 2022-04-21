@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityAccessUrlGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityKeySpecGetArgs;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessUrls")
-      private final @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls;
+    private @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls;
 
-    public Output<List<AuthorityAccessUrlGetArgs>> accessUrls() {
-        return this.accessUrls == null ? Codegen.empty() : this.accessUrls;
+    public Optional<Output<List<AuthorityAccessUrlGetArgs>>> accessUrls() {
+        return Optional.ofNullable(this.accessUrls);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateAuthorityId")
-      private final @Nullable Output<String> certificateAuthorityId;
+    private @Nullable Output<String> certificateAuthorityId;
 
-    public Output<String> certificateAuthorityId() {
-        return this.certificateAuthorityId == null ? Codegen.empty() : this.certificateAuthorityId;
+    public Optional<Output<String>> certificateAuthorityId() {
+        return Optional.ofNullable(this.certificateAuthorityId);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<AuthorityConfigGetArgs> config;
+    private @Nullable Output<AuthorityConfigGetArgs> config;
 
-    public Output<AuthorityConfigGetArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<AuthorityConfigGetArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsBucket")
-      private final @Nullable Output<String> gcsBucket;
+    private @Nullable Output<String> gcsBucket;
 
-    public Output<String> gcsBucket() {
-        return this.gcsBucket == null ? Codegen.empty() : this.gcsBucket;
+    public Optional<Output<String>> gcsBucket() {
+        return Optional.ofNullable(this.gcsBucket);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ignoreActiveCertificatesOnDeletion")
-      private final @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
+    private @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
 
-    public Output<Boolean> ignoreActiveCertificatesOnDeletion() {
-        return this.ignoreActiveCertificatesOnDeletion == null ? Codegen.empty() : this.ignoreActiveCertificatesOnDeletion;
+    public Optional<Output<Boolean>> ignoreActiveCertificatesOnDeletion() {
+        return Optional.ofNullable(this.ignoreActiveCertificatesOnDeletion);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keySpec")
-      private final @Nullable Output<AuthorityKeySpecGetArgs> keySpec;
+    private @Nullable Output<AuthorityKeySpecGetArgs> keySpec;
 
-    public Output<AuthorityKeySpecGetArgs> keySpec() {
-        return this.keySpec == null ? Codegen.empty() : this.keySpec;
+    public Optional<Output<AuthorityKeySpecGetArgs>> keySpec() {
+        return Optional.ofNullable(this.keySpec);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifetime")
-      private final @Nullable Output<String> lifetime;
+    private @Nullable Output<String> lifetime;
 
-    public Output<String> lifetime() {
-        return this.lifetime == null ? Codegen.empty() : this.lifetime;
+    public Optional<Output<String>> lifetime() {
+        return Optional.ofNullable(this.lifetime);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pemCaCertificates")
-      private final @Nullable Output<List<String>> pemCaCertificates;
+    private @Nullable Output<List<String>> pemCaCertificates;
 
-    public Output<List<String>> pemCaCertificates() {
-        return this.pemCaCertificates == null ? Codegen.empty() : this.pemCaCertificates;
+    public Optional<Output<List<String>>> pemCaCertificates() {
+        return Optional.ofNullable(this.pemCaCertificates);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pool")
-      private final @Nullable Output<String> pool;
+    private @Nullable Output<String> pool;
 
-    public Output<String> pool() {
-        return this.pool == null ? Codegen.empty() : this.pool;
+    public Optional<Output<String>> pool() {
+        return Optional.ofNullable(this.pool);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -226,264 +226,216 @@ public final class AuthorityState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public AuthorityState(
-        @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls,
-        @Nullable Output<String> certificateAuthorityId,
-        @Nullable Output<AuthorityConfigGetArgs> config,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> gcsBucket,
-        @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion,
-        @Nullable Output<AuthorityKeySpecGetArgs> keySpec,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> lifetime,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> pemCaCertificates,
-        @Nullable Output<String> pool,
-        @Nullable Output<String> project,
-        @Nullable Output<String> state,
-        @Nullable Output<String> type,
-        @Nullable Output<String> updateTime) {
-        this.accessUrls = accessUrls;
-        this.certificateAuthorityId = certificateAuthorityId;
-        this.config = config;
-        this.createTime = createTime;
-        this.gcsBucket = gcsBucket;
-        this.ignoreActiveCertificatesOnDeletion = ignoreActiveCertificatesOnDeletion;
-        this.keySpec = keySpec;
-        this.labels = labels;
-        this.lifetime = lifetime;
-        this.location = location;
-        this.name = name;
-        this.pemCaCertificates = pemCaCertificates;
-        this.pool = pool;
-        this.project = project;
-        this.state = state;
-        this.type = type;
-        this.updateTime = updateTime;
-    }
+    private AuthorityState() {}
 
-    private AuthorityState() {
-        this.accessUrls = Codegen.empty();
-        this.certificateAuthorityId = Codegen.empty();
-        this.config = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.gcsBucket = Codegen.empty();
-        this.ignoreActiveCertificatesOnDeletion = Codegen.empty();
-        this.keySpec = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.lifetime = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pemCaCertificates = Codegen.empty();
-        this.pool = Codegen.empty();
-        this.project = Codegen.empty();
-        this.state = Codegen.empty();
-        this.type = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private AuthorityState(AuthorityState $) {
+        this.accessUrls = $.accessUrls;
+        this.certificateAuthorityId = $.certificateAuthorityId;
+        this.config = $.config;
+        this.createTime = $.createTime;
+        this.gcsBucket = $.gcsBucket;
+        this.ignoreActiveCertificatesOnDeletion = $.ignoreActiveCertificatesOnDeletion;
+        this.keySpec = $.keySpec;
+        this.labels = $.labels;
+        this.lifetime = $.lifetime;
+        this.location = $.location;
+        this.name = $.name;
+        this.pemCaCertificates = $.pemCaCertificates;
+        this.pool = $.pool;
+        this.project = $.project;
+        this.state = $.state;
+        this.type = $.type;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls;
-        private @Nullable Output<String> certificateAuthorityId;
-        private @Nullable Output<AuthorityConfigGetArgs> config;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> gcsBucket;
-        private @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
-        private @Nullable Output<AuthorityKeySpecGetArgs> keySpec;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> lifetime;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> pemCaCertificates;
-        private @Nullable Output<String> pool;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> updateTime;
+        private AuthorityState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityState();
         }
 
         public Builder(AuthorityState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessUrls = defaults.accessUrls;
-    	      this.certificateAuthorityId = defaults.certificateAuthorityId;
-    	      this.config = defaults.config;
-    	      this.createTime = defaults.createTime;
-    	      this.gcsBucket = defaults.gcsBucket;
-    	      this.ignoreActiveCertificatesOnDeletion = defaults.ignoreActiveCertificatesOnDeletion;
-    	      this.keySpec = defaults.keySpec;
-    	      this.labels = defaults.labels;
-    	      this.lifetime = defaults.lifetime;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.pemCaCertificates = defaults.pemCaCertificates;
-    	      this.pool = defaults.pool;
-    	      this.project = defaults.project;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
-    	      this.updateTime = defaults.updateTime;
+            $ = new AuthorityState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessUrls(@Nullable Output<List<AuthorityAccessUrlGetArgs>> accessUrls) {
-            this.accessUrls = accessUrls;
+            $.accessUrls = accessUrls;
             return this;
         }
-        public Builder accessUrls(@Nullable List<AuthorityAccessUrlGetArgs> accessUrls) {
-            this.accessUrls = Codegen.ofNullable(accessUrls);
-            return this;
+
+        public Builder accessUrls(List<AuthorityAccessUrlGetArgs> accessUrls) {
+            return accessUrls(Output.of(accessUrls));
         }
+
         public Builder accessUrls(AuthorityAccessUrlGetArgs... accessUrls) {
             return accessUrls(List.of(accessUrls));
         }
+
         public Builder certificateAuthorityId(@Nullable Output<String> certificateAuthorityId) {
-            this.certificateAuthorityId = certificateAuthorityId;
+            $.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
-        public Builder certificateAuthorityId(@Nullable String certificateAuthorityId) {
-            this.certificateAuthorityId = Codegen.ofNullable(certificateAuthorityId);
-            return this;
+
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
+            return certificateAuthorityId(Output.of(certificateAuthorityId));
         }
+
         public Builder config(@Nullable Output<AuthorityConfigGetArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable AuthorityConfigGetArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(AuthorityConfigGetArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder gcsBucket(@Nullable Output<String> gcsBucket) {
-            this.gcsBucket = gcsBucket;
+            $.gcsBucket = gcsBucket;
             return this;
         }
-        public Builder gcsBucket(@Nullable String gcsBucket) {
-            this.gcsBucket = Codegen.ofNullable(gcsBucket);
-            return this;
+
+        public Builder gcsBucket(String gcsBucket) {
+            return gcsBucket(Output.of(gcsBucket));
         }
+
         public Builder ignoreActiveCertificatesOnDeletion(@Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion) {
-            this.ignoreActiveCertificatesOnDeletion = ignoreActiveCertificatesOnDeletion;
+            $.ignoreActiveCertificatesOnDeletion = ignoreActiveCertificatesOnDeletion;
             return this;
         }
-        public Builder ignoreActiveCertificatesOnDeletion(@Nullable Boolean ignoreActiveCertificatesOnDeletion) {
-            this.ignoreActiveCertificatesOnDeletion = Codegen.ofNullable(ignoreActiveCertificatesOnDeletion);
-            return this;
+
+        public Builder ignoreActiveCertificatesOnDeletion(Boolean ignoreActiveCertificatesOnDeletion) {
+            return ignoreActiveCertificatesOnDeletion(Output.of(ignoreActiveCertificatesOnDeletion));
         }
+
         public Builder keySpec(@Nullable Output<AuthorityKeySpecGetArgs> keySpec) {
-            this.keySpec = keySpec;
+            $.keySpec = keySpec;
             return this;
         }
-        public Builder keySpec(@Nullable AuthorityKeySpecGetArgs keySpec) {
-            this.keySpec = Codegen.ofNullable(keySpec);
-            return this;
+
+        public Builder keySpec(AuthorityKeySpecGetArgs keySpec) {
+            return keySpec(Output.of(keySpec));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder lifetime(@Nullable Output<String> lifetime) {
-            this.lifetime = lifetime;
+            $.lifetime = lifetime;
             return this;
         }
-        public Builder lifetime(@Nullable String lifetime) {
-            this.lifetime = Codegen.ofNullable(lifetime);
-            return this;
+
+        public Builder lifetime(String lifetime) {
+            return lifetime(Output.of(lifetime));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pemCaCertificates(@Nullable Output<List<String>> pemCaCertificates) {
-            this.pemCaCertificates = pemCaCertificates;
+            $.pemCaCertificates = pemCaCertificates;
             return this;
         }
-        public Builder pemCaCertificates(@Nullable List<String> pemCaCertificates) {
-            this.pemCaCertificates = Codegen.ofNullable(pemCaCertificates);
-            return this;
+
+        public Builder pemCaCertificates(List<String> pemCaCertificates) {
+            return pemCaCertificates(Output.of(pemCaCertificates));
         }
+
         public Builder pemCaCertificates(String... pemCaCertificates) {
             return pemCaCertificates(List.of(pemCaCertificates));
         }
+
         public Builder pool(@Nullable Output<String> pool) {
-            this.pool = pool;
+            $.pool = pool;
             return this;
         }
-        public Builder pool(@Nullable String pool) {
-            this.pool = Codegen.ofNullable(pool);
-            return this;
+
+        public Builder pool(String pool) {
+            return pool(Output.of(pool));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public AuthorityState build() {
-            return new AuthorityState(accessUrls, certificateAuthorityId, config, createTime, gcsBucket, ignoreActiveCertificatesOnDeletion, keySpec, labels, lifetime, location, name, pemCaCertificates, pool, project, state, type, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public AuthorityState build() {
+            return $;
         }
     }
+
 }

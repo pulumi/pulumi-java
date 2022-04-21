@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.enums.ChartOptionsMode;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ChartOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<ChartOptionsMode> mode;
+    private @Nullable Output<ChartOptionsMode> mode;
 
-    public Output<ChartOptionsMode> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<ChartOptionsMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public ChartOptionsArgs(@Nullable Output<ChartOptionsMode> mode) {
-        this.mode = mode;
-    }
+    private ChartOptionsArgs() {}
 
-    private ChartOptionsArgs() {
-        this.mode = Codegen.empty();
+    private ChartOptionsArgs(ChartOptionsArgs $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChartOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ChartOptionsMode> mode;
+        private ChartOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChartOptionsArgs();
         }
 
         public Builder(ChartOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new ChartOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<ChartOptionsMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable ChartOptionsMode mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public ChartOptionsArgs build() {
-            return new ChartOptionsArgs(mode);
+
+        public Builder mode(ChartOptionsMode mode) {
+            return mode(Output.of(mode));
+        }
+
+        public ChartOptionsArgs build() {
+            return $;
         }
     }
+
 }

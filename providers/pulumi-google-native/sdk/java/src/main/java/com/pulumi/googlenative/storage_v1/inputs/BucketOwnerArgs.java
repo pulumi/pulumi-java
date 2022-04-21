@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BucketOwnerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entity")
-      private final @Nullable Output<String> entity;
+    private @Nullable Output<String> entity;
 
-    public Output<String> entity() {
-        return this.entity == null ? Codegen.empty() : this.entity;
+    public Optional<Output<String>> entity() {
+        return Optional.ofNullable(this.entity);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class BucketOwnerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entityId")
-      private final @Nullable Output<String> entityId;
+    private @Nullable Output<String> entityId;
 
-    public Output<String> entityId() {
-        return this.entityId == null ? Codegen.empty() : this.entityId;
+    public Optional<Output<String>> entityId() {
+        return Optional.ofNullable(this.entityId);
     }
 
-    public BucketOwnerArgs(
-        @Nullable Output<String> entity,
-        @Nullable Output<String> entityId) {
-        this.entity = entity;
-        this.entityId = entityId;
-    }
+    private BucketOwnerArgs() {}
 
-    private BucketOwnerArgs() {
-        this.entity = Codegen.empty();
-        this.entityId = Codegen.empty();
+    private BucketOwnerArgs(BucketOwnerArgs $) {
+        this.entity = $.entity;
+        this.entityId = $.entityId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketOwnerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> entity;
-        private @Nullable Output<String> entityId;
+        private BucketOwnerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketOwnerArgs();
         }
 
         public Builder(BucketOwnerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entity = defaults.entity;
-    	      this.entityId = defaults.entityId;
+            $ = new BucketOwnerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entity(@Nullable Output<String> entity) {
-            this.entity = entity;
+            $.entity = entity;
             return this;
         }
-        public Builder entity(@Nullable String entity) {
-            this.entity = Codegen.ofNullable(entity);
-            return this;
+
+        public Builder entity(String entity) {
+            return entity(Output.of(entity));
         }
+
         public Builder entityId(@Nullable Output<String> entityId) {
-            this.entityId = entityId;
+            $.entityId = entityId;
             return this;
         }
-        public Builder entityId(@Nullable String entityId) {
-            this.entityId = Codegen.ofNullable(entityId);
-            return this;
-        }        public BucketOwnerArgs build() {
-            return new BucketOwnerArgs(entity, entityId);
+
+        public Builder entityId(String entityId) {
+            return entityId(Output.of(entityId));
+        }
+
+        public BucketOwnerArgs build() {
+            return $;
         }
     }
+
 }

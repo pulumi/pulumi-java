@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends com.pulum
      * 
      */
     @Import(name="wsdlEndpointName")
-      private final @Nullable Output<String> wsdlEndpointName;
+    private @Nullable Output<String> wsdlEndpointName;
 
-    public Output<String> wsdlEndpointName() {
-        return this.wsdlEndpointName == null ? Codegen.empty() : this.wsdlEndpointName;
+    public Optional<Output<String>> wsdlEndpointName() {
+        return Optional.ofNullable(this.wsdlEndpointName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends com.pulum
      * 
      */
     @Import(name="wsdlServiceName")
-      private final @Nullable Output<String> wsdlServiceName;
+    private @Nullable Output<String> wsdlServiceName;
 
-    public Output<String> wsdlServiceName() {
-        return this.wsdlServiceName == null ? Codegen.empty() : this.wsdlServiceName;
+    public Optional<Output<String>> wsdlServiceName() {
+        return Optional.ofNullable(this.wsdlServiceName);
     }
 
-    public ApiCreateOrUpdatePropertiesWsdlSelectorArgs(
-        @Nullable Output<String> wsdlEndpointName,
-        @Nullable Output<String> wsdlServiceName) {
-        this.wsdlEndpointName = wsdlEndpointName;
-        this.wsdlServiceName = wsdlServiceName;
-    }
+    private ApiCreateOrUpdatePropertiesWsdlSelectorArgs() {}
 
-    private ApiCreateOrUpdatePropertiesWsdlSelectorArgs() {
-        this.wsdlEndpointName = Codegen.empty();
-        this.wsdlServiceName = Codegen.empty();
+    private ApiCreateOrUpdatePropertiesWsdlSelectorArgs(ApiCreateOrUpdatePropertiesWsdlSelectorArgs $) {
+        this.wsdlEndpointName = $.wsdlEndpointName;
+        this.wsdlServiceName = $.wsdlServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiCreateOrUpdatePropertiesWsdlSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> wsdlEndpointName;
-        private @Nullable Output<String> wsdlServiceName;
+        private ApiCreateOrUpdatePropertiesWsdlSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiCreateOrUpdatePropertiesWsdlSelectorArgs();
         }
 
         public Builder(ApiCreateOrUpdatePropertiesWsdlSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.wsdlEndpointName = defaults.wsdlEndpointName;
-    	      this.wsdlServiceName = defaults.wsdlServiceName;
+            $ = new ApiCreateOrUpdatePropertiesWsdlSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder wsdlEndpointName(@Nullable Output<String> wsdlEndpointName) {
-            this.wsdlEndpointName = wsdlEndpointName;
+            $.wsdlEndpointName = wsdlEndpointName;
             return this;
         }
-        public Builder wsdlEndpointName(@Nullable String wsdlEndpointName) {
-            this.wsdlEndpointName = Codegen.ofNullable(wsdlEndpointName);
-            return this;
+
+        public Builder wsdlEndpointName(String wsdlEndpointName) {
+            return wsdlEndpointName(Output.of(wsdlEndpointName));
         }
+
         public Builder wsdlServiceName(@Nullable Output<String> wsdlServiceName) {
-            this.wsdlServiceName = wsdlServiceName;
+            $.wsdlServiceName = wsdlServiceName;
             return this;
         }
-        public Builder wsdlServiceName(@Nullable String wsdlServiceName) {
-            this.wsdlServiceName = Codegen.ofNullable(wsdlServiceName);
-            return this;
-        }        public ApiCreateOrUpdatePropertiesWsdlSelectorArgs build() {
-            return new ApiCreateOrUpdatePropertiesWsdlSelectorArgs(wsdlEndpointName, wsdlServiceName);
+
+        public Builder wsdlServiceName(String wsdlServiceName) {
+            return wsdlServiceName(Output.of(wsdlServiceName));
+        }
+
+        public ApiCreateOrUpdatePropertiesWsdlSelectorArgs build() {
+            return $;
         }
     }
+
 }

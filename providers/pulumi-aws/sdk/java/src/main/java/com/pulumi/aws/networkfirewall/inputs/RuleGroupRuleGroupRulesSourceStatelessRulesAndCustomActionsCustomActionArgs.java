@@ -6,7 +6,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
      * 
      */
     @Import(name="actionDefinition", required=true)
-      private final Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs> actionDefinition;
+    private Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs> actionDefinition;
 
     public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs> actionDefinition() {
         return this.actionDefinition;
@@ -31,63 +30,60 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
      * 
      */
     @Import(name="actionName", required=true)
-      private final Output<String> actionName;
+    private Output<String> actionName;
 
     public Output<String> actionName() {
         return this.actionName;
     }
 
-    public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs(
-        Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs> actionDefinition,
-        Output<String> actionName) {
-        this.actionDefinition = Objects.requireNonNull(actionDefinition, "expected parameter 'actionDefinition' to be non-null");
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-    }
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs() {}
 
-    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs() {
-        this.actionDefinition = Codegen.empty();
-        this.actionName = Codegen.empty();
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs $) {
+        this.actionDefinition = $.actionDefinition;
+        this.actionName = $.actionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs> actionDefinition;
-        private Output<String> actionName;
+        private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs();
         }
 
         public Builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionDefinition = defaults.actionDefinition;
-    	      this.actionName = defaults.actionName;
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionDefinition(Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs> actionDefinition) {
-            this.actionDefinition = Objects.requireNonNull(actionDefinition);
+            $.actionDefinition = actionDefinition;
             return this;
         }
+
         public Builder actionDefinition(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs actionDefinition) {
-            this.actionDefinition = Output.of(Objects.requireNonNull(actionDefinition));
-            return this;
+            return actionDefinition(Output.of(actionDefinition));
         }
+
         public Builder actionName(Output<String> actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
         }
+
         public Builder actionName(String actionName) {
-            this.actionName = Output.of(Objects.requireNonNull(actionName));
-            return this;
-        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs build() {
-            return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs(actionDefinition, actionName);
+            return actionName(Output.of(actionName));
+        }
+
+        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs build() {
+            $.actionDefinition = Objects.requireNonNull($.actionDefinition, "expected parameter 'actionDefinition' to be non-null");
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            return $;
         }
     }
+
 }

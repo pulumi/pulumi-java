@@ -5,7 +5,6 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ProjectEnvironmentRegistryCredentialArgs extends com.pulumi.r
      * 
      */
     @Import(name="credential", required=true)
-      private final Output<String> credential;
+    private Output<String> credential;
 
     public Output<String> credential() {
         return this.credential;
@@ -30,63 +29,60 @@ public final class ProjectEnvironmentRegistryCredentialArgs extends com.pulumi.r
      * 
      */
     @Import(name="credentialProvider", required=true)
-      private final Output<String> credentialProvider;
+    private Output<String> credentialProvider;
 
     public Output<String> credentialProvider() {
         return this.credentialProvider;
     }
 
-    public ProjectEnvironmentRegistryCredentialArgs(
-        Output<String> credential,
-        Output<String> credentialProvider) {
-        this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
-        this.credentialProvider = Objects.requireNonNull(credentialProvider, "expected parameter 'credentialProvider' to be non-null");
-    }
+    private ProjectEnvironmentRegistryCredentialArgs() {}
 
-    private ProjectEnvironmentRegistryCredentialArgs() {
-        this.credential = Codegen.empty();
-        this.credentialProvider = Codegen.empty();
+    private ProjectEnvironmentRegistryCredentialArgs(ProjectEnvironmentRegistryCredentialArgs $) {
+        this.credential = $.credential;
+        this.credentialProvider = $.credentialProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectEnvironmentRegistryCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> credential;
-        private Output<String> credentialProvider;
+        private ProjectEnvironmentRegistryCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectEnvironmentRegistryCredentialArgs();
         }
 
         public Builder(ProjectEnvironmentRegistryCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credential = defaults.credential;
-    	      this.credentialProvider = defaults.credentialProvider;
+            $ = new ProjectEnvironmentRegistryCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credential(Output<String> credential) {
-            this.credential = Objects.requireNonNull(credential);
+            $.credential = credential;
             return this;
         }
+
         public Builder credential(String credential) {
-            this.credential = Output.of(Objects.requireNonNull(credential));
-            return this;
+            return credential(Output.of(credential));
         }
+
         public Builder credentialProvider(Output<String> credentialProvider) {
-            this.credentialProvider = Objects.requireNonNull(credentialProvider);
+            $.credentialProvider = credentialProvider;
             return this;
         }
+
         public Builder credentialProvider(String credentialProvider) {
-            this.credentialProvider = Output.of(Objects.requireNonNull(credentialProvider));
-            return this;
-        }        public ProjectEnvironmentRegistryCredentialArgs build() {
-            return new ProjectEnvironmentRegistryCredentialArgs(credential, credentialProvider);
+            return credentialProvider(Output.of(credentialProvider));
+        }
+
+        public ProjectEnvironmentRegistryCredentialArgs build() {
+            $.credential = Objects.requireNonNull($.credential, "expected parameter 'credential' to be non-null");
+            $.credentialProvider = Objects.requireNonNull($.credentialProvider, "expected parameter 'credentialProvider' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
      * 
      */
     @Import(name="nestingSeparator")
-      private final @Nullable Object nestingSeparator;
+    private @Nullable Object nestingSeparator;
 
     public Optional<Object> nestingSeparator() {
-        return this.nestingSeparator == null ? Optional.empty() : Optional.ofNullable(this.nestingSeparator);
+        return Optional.ofNullable(this.nestingSeparator);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sinkRetryCount")
-      private final @Nullable Object sinkRetryCount;
+    private @Nullable Object sinkRetryCount;
 
     public Optional<Object> sinkRetryCount() {
-        return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
+        return Optional.ofNullable(this.sinkRetryCount);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sinkRetryWait")
-      private final @Nullable Object sinkRetryWait;
+    private @Nullable Object sinkRetryWait;
 
     public Optional<Object> sinkRetryWait() {
-        return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
+        return Optional.ofNullable(this.sinkRetryWait);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -92,10 +92,10 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
      * 
      */
     @Import(name="writeBatchSize")
-      private final @Nullable Object writeBatchSize;
+    private @Nullable Object writeBatchSize;
 
     public Optional<Object> writeBatchSize() {
-        return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
+        return Optional.ofNullable(this.writeBatchSize);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
      * 
      */
     @Import(name="writeBatchTimeout")
-      private final @Nullable Object writeBatchTimeout;
+    private @Nullable Object writeBatchTimeout;
 
     public Optional<Object> writeBatchTimeout() {
-        return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
+        return Optional.ofNullable(this.writeBatchTimeout);
     }
 
     /**
@@ -114,118 +114,93 @@ public final class DocumentDbCollectionSinkResponse extends com.pulumi.resources
      * 
      */
     @Import(name="writeBehavior")
-      private final @Nullable Object writeBehavior;
+    private @Nullable Object writeBehavior;
 
     public Optional<Object> writeBehavior() {
-        return this.writeBehavior == null ? Optional.empty() : Optional.ofNullable(this.writeBehavior);
+        return Optional.ofNullable(this.writeBehavior);
     }
 
-    public DocumentDbCollectionSinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object nestingSeparator,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        @Nullable Object writeBehavior) {
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.nestingSeparator = nestingSeparator;
-        this.sinkRetryCount = sinkRetryCount;
-        this.sinkRetryWait = sinkRetryWait;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.writeBatchSize = writeBatchSize;
-        this.writeBatchTimeout = writeBatchTimeout;
-        this.writeBehavior = writeBehavior;
-    }
+    private DocumentDbCollectionSinkResponse() {}
 
-    private DocumentDbCollectionSinkResponse() {
-        this.disableMetricsCollection = null;
-        this.maxConcurrentConnections = null;
-        this.nestingSeparator = null;
-        this.sinkRetryCount = null;
-        this.sinkRetryWait = null;
-        this.type = null;
-        this.writeBatchSize = null;
-        this.writeBatchTimeout = null;
-        this.writeBehavior = null;
+    private DocumentDbCollectionSinkResponse(DocumentDbCollectionSinkResponse $) {
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.nestingSeparator = $.nestingSeparator;
+        this.sinkRetryCount = $.sinkRetryCount;
+        this.sinkRetryWait = $.sinkRetryWait;
+        this.type = $.type;
+        this.writeBatchSize = $.writeBatchSize;
+        this.writeBatchTimeout = $.writeBatchTimeout;
+        this.writeBehavior = $.writeBehavior;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentDbCollectionSinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object nestingSeparator;
-        private @Nullable Object sinkRetryCount;
-        private @Nullable Object sinkRetryWait;
-        private String type;
-        private @Nullable Object writeBatchSize;
-        private @Nullable Object writeBatchTimeout;
-        private @Nullable Object writeBehavior;
+        private DocumentDbCollectionSinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentDbCollectionSinkResponse();
         }
 
         public Builder(DocumentDbCollectionSinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.nestingSeparator = defaults.nestingSeparator;
-    	      this.sinkRetryCount = defaults.sinkRetryCount;
-    	      this.sinkRetryWait = defaults.sinkRetryWait;
-    	      this.type = defaults.type;
-    	      this.writeBatchSize = defaults.writeBatchSize;
-    	      this.writeBatchTimeout = defaults.writeBatchTimeout;
-    	      this.writeBehavior = defaults.writeBehavior;
+            $ = new DocumentDbCollectionSinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder nestingSeparator(@Nullable Object nestingSeparator) {
-            this.nestingSeparator = nestingSeparator;
+            $.nestingSeparator = nestingSeparator;
             return this;
         }
+
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = sinkRetryCount;
+            $.sinkRetryCount = sinkRetryCount;
             return this;
         }
+
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = sinkRetryWait;
+            $.sinkRetryWait = sinkRetryWait;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = writeBatchSize;
+            $.writeBatchSize = writeBatchSize;
             return this;
         }
+
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = writeBatchTimeout;
+            $.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
+
         public Builder writeBehavior(@Nullable Object writeBehavior) {
-            this.writeBehavior = writeBehavior;
+            $.writeBehavior = writeBehavior;
             return this;
-        }        public DocumentDbCollectionSinkResponse build() {
-            return new DocumentDbCollectionSinkResponse(disableMetricsCollection, maxConcurrentConnections, nestingSeparator, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
+        }
+
+        public DocumentDbCollectionSinkResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

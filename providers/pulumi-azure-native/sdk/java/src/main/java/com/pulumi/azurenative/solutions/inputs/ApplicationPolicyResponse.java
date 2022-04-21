@@ -23,10 +23,10 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameters")
-      private final @Nullable String parameters;
+    private @Nullable String parameters;
 
     public Optional<String> parameters() {
-        return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ApplicationPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="policyDefinitionId")
-      private final @Nullable String policyDefinitionId;
+    private @Nullable String policyDefinitionId;
 
     public Optional<String> policyDefinitionId() {
-        return this.policyDefinitionId == null ? Optional.empty() : Optional.ofNullable(this.policyDefinitionId);
+        return Optional.ofNullable(this.policyDefinitionId);
     }
 
-    public ApplicationPolicyResponse(
-        @Nullable String name,
-        @Nullable String parameters,
-        @Nullable String policyDefinitionId) {
-        this.name = name;
-        this.parameters = parameters;
-        this.policyDefinitionId = policyDefinitionId;
-    }
+    private ApplicationPolicyResponse() {}
 
-    private ApplicationPolicyResponse() {
-        this.name = null;
-        this.parameters = null;
-        this.policyDefinitionId = null;
+    private ApplicationPolicyResponse(ApplicationPolicyResponse $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.policyDefinitionId = $.policyDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String parameters;
-        private @Nullable String policyDefinitionId;
+        private ApplicationPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPolicyResponse();
         }
 
         public Builder(ApplicationPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.policyDefinitionId = defaults.policyDefinitionId;
+            $ = new ApplicationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
-            this.policyDefinitionId = policyDefinitionId;
+            $.policyDefinitionId = policyDefinitionId;
             return this;
-        }        public ApplicationPolicyResponse build() {
-            return new ApplicationPolicyResponse(name, parameters, policyDefinitionId);
+        }
+
+        public ApplicationPolicyResponse build() {
+            return $;
         }
     }
+
 }

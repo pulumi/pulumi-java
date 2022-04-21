@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionArgs extends com.pu
      * 
      */
     @Import(name="numPaths")
-      private final @Nullable Output<Integer> numPaths;
+    private @Nullable Output<Integer> numPaths;
 
-    public Output<Integer> numPaths() {
-        return this.numPaths == null ? Codegen.empty() : this.numPaths;
+    public Optional<Output<Integer>> numPaths() {
+        return Optional.ofNullable(this.numPaths);
     }
 
-    public GoogleCloudMlV1__SampledShapleyAttributionArgs(@Nullable Output<Integer> numPaths) {
-        this.numPaths = numPaths;
-    }
+    private GoogleCloudMlV1__SampledShapleyAttributionArgs() {}
 
-    private GoogleCloudMlV1__SampledShapleyAttributionArgs() {
-        this.numPaths = Codegen.empty();
+    private GoogleCloudMlV1__SampledShapleyAttributionArgs(GoogleCloudMlV1__SampledShapleyAttributionArgs $) {
+        this.numPaths = $.numPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__SampledShapleyAttributionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numPaths;
+        private GoogleCloudMlV1__SampledShapleyAttributionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__SampledShapleyAttributionArgs();
         }
 
         public Builder(GoogleCloudMlV1__SampledShapleyAttributionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numPaths = defaults.numPaths;
+            $ = new GoogleCloudMlV1__SampledShapleyAttributionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numPaths(@Nullable Output<Integer> numPaths) {
-            this.numPaths = numPaths;
+            $.numPaths = numPaths;
             return this;
         }
-        public Builder numPaths(@Nullable Integer numPaths) {
-            this.numPaths = Codegen.ofNullable(numPaths);
-            return this;
-        }        public GoogleCloudMlV1__SampledShapleyAttributionArgs build() {
-            return new GoogleCloudMlV1__SampledShapleyAttributionArgs(numPaths);
+
+        public Builder numPaths(Integer numPaths) {
+            return numPaths(Output.of(numPaths));
+        }
+
+        public GoogleCloudMlV1__SampledShapleyAttributionArgs build() {
+            return $;
         }
     }
+
 }

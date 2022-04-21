@@ -21,7 +21,7 @@ public final class ValidationOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="schemaValidation", required=true)
-      private final String schemaValidation;
+    private String schemaValidation;
 
     public String schemaValidation() {
         return this.schemaValidation;
@@ -32,55 +32,52 @@ public final class ValidationOptionsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="undeclaredProperties", required=true)
-      private final String undeclaredProperties;
+    private String undeclaredProperties;
 
     public String undeclaredProperties() {
         return this.undeclaredProperties;
     }
 
-    public ValidationOptionsResponse(
-        String schemaValidation,
-        String undeclaredProperties) {
-        this.schemaValidation = Objects.requireNonNull(schemaValidation, "expected parameter 'schemaValidation' to be non-null");
-        this.undeclaredProperties = Objects.requireNonNull(undeclaredProperties, "expected parameter 'undeclaredProperties' to be non-null");
-    }
+    private ValidationOptionsResponse() {}
 
-    private ValidationOptionsResponse() {
-        this.schemaValidation = null;
-        this.undeclaredProperties = null;
+    private ValidationOptionsResponse(ValidationOptionsResponse $) {
+        this.schemaValidation = $.schemaValidation;
+        this.undeclaredProperties = $.undeclaredProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidationOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String schemaValidation;
-        private String undeclaredProperties;
+        private ValidationOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidationOptionsResponse();
         }
 
         public Builder(ValidationOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schemaValidation = defaults.schemaValidation;
-    	      this.undeclaredProperties = defaults.undeclaredProperties;
+            $ = new ValidationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder schemaValidation(String schemaValidation) {
-            this.schemaValidation = Objects.requireNonNull(schemaValidation);
+            $.schemaValidation = schemaValidation;
             return this;
         }
+
         public Builder undeclaredProperties(String undeclaredProperties) {
-            this.undeclaredProperties = Objects.requireNonNull(undeclaredProperties);
+            $.undeclaredProperties = undeclaredProperties;
             return this;
-        }        public ValidationOptionsResponse build() {
-            return new ValidationOptionsResponse(schemaValidation, undeclaredProperties);
+        }
+
+        public ValidationOptionsResponse build() {
+            $.schemaValidation = Objects.requireNonNull($.schemaValidation, "expected parameter 'schemaValidation' to be non-null");
+            $.undeclaredProperties = Objects.requireNonNull($.undeclaredProperties, "expected parameter 'undeclaredProperties' to be non-null");
+            return $;
         }
     }
+
 }

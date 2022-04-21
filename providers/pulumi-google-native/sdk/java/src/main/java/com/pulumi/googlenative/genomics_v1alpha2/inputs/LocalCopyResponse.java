@@ -21,7 +21,7 @@ public final class LocalCopyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="disk", required=true)
-      private final String disk;
+    private String disk;
 
     public String disk() {
         return this.disk;
@@ -32,55 +32,52 @@ public final class LocalCopyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public LocalCopyResponse(
-        String disk,
-        String path) {
-        this.disk = Objects.requireNonNull(disk, "expected parameter 'disk' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private LocalCopyResponse() {}
 
-    private LocalCopyResponse() {
-        this.disk = null;
-        this.path = null;
+    private LocalCopyResponse(LocalCopyResponse $) {
+        this.disk = $.disk;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalCopyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String disk;
-        private String path;
+        private LocalCopyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalCopyResponse();
         }
 
         public Builder(LocalCopyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disk = defaults.disk;
-    	      this.path = defaults.path;
+            $ = new LocalCopyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disk(String disk) {
-            this.disk = Objects.requireNonNull(disk);
+            $.disk = disk;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public LocalCopyResponse build() {
-            return new LocalCopyResponse(disk, path);
+        }
+
+        public LocalCopyResponse build() {
+            $.disk = Objects.requireNonNull($.disk, "expected parameter 'disk' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__RouteMapResponse extends com.pulumi.resource
      * 
      */
     @Import(name="health", required=true)
-      private final String health;
+    private String health;
 
     public String health() {
         return this.health;
@@ -32,55 +32,52 @@ public final class GoogleCloudMlV1__RouteMapResponse extends com.pulumi.resource
      * 
      */
     @Import(name="predict", required=true)
-      private final String predict;
+    private String predict;
 
     public String predict() {
         return this.predict;
     }
 
-    public GoogleCloudMlV1__RouteMapResponse(
-        String health,
-        String predict) {
-        this.health = Objects.requireNonNull(health, "expected parameter 'health' to be non-null");
-        this.predict = Objects.requireNonNull(predict, "expected parameter 'predict' to be non-null");
-    }
+    private GoogleCloudMlV1__RouteMapResponse() {}
 
-    private GoogleCloudMlV1__RouteMapResponse() {
-        this.health = null;
-        this.predict = null;
+    private GoogleCloudMlV1__RouteMapResponse(GoogleCloudMlV1__RouteMapResponse $) {
+        this.health = $.health;
+        this.predict = $.predict;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__RouteMapResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String health;
-        private String predict;
+        private GoogleCloudMlV1__RouteMapResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__RouteMapResponse();
         }
 
         public Builder(GoogleCloudMlV1__RouteMapResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.health = defaults.health;
-    	      this.predict = defaults.predict;
+            $ = new GoogleCloudMlV1__RouteMapResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder health(String health) {
-            this.health = Objects.requireNonNull(health);
+            $.health = health;
             return this;
         }
+
         public Builder predict(String predict) {
-            this.predict = Objects.requireNonNull(predict);
+            $.predict = predict;
             return this;
-        }        public GoogleCloudMlV1__RouteMapResponse build() {
-            return new GoogleCloudMlV1__RouteMapResponse(health, predict);
+        }
+
+        public GoogleCloudMlV1__RouteMapResponse build() {
+            $.health = Objects.requireNonNull($.health, "expected parameter 'health' to be non-null");
+            $.predict = Objects.requireNonNull($.predict, "expected parameter 'predict' to be non-null");
+            return $;
         }
     }
+
 }

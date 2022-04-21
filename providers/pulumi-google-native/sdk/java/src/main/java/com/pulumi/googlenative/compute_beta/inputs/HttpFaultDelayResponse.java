@@ -22,7 +22,7 @@ public final class HttpFaultDelayResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fixedDelay", required=true)
-      private final DurationResponse fixedDelay;
+    private DurationResponse fixedDelay;
 
     public DurationResponse fixedDelay() {
         return this.fixedDelay;
@@ -33,55 +33,52 @@ public final class HttpFaultDelayResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="percentage", required=true)
-      private final Double percentage;
+    private Double percentage;
 
     public Double percentage() {
         return this.percentage;
     }
 
-    public HttpFaultDelayResponse(
-        DurationResponse fixedDelay,
-        Double percentage) {
-        this.fixedDelay = Objects.requireNonNull(fixedDelay, "expected parameter 'fixedDelay' to be non-null");
-        this.percentage = Objects.requireNonNull(percentage, "expected parameter 'percentage' to be non-null");
-    }
+    private HttpFaultDelayResponse() {}
 
-    private HttpFaultDelayResponse() {
-        this.fixedDelay = null;
-        this.percentage = null;
+    private HttpFaultDelayResponse(HttpFaultDelayResponse $) {
+        this.fixedDelay = $.fixedDelay;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpFaultDelayResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DurationResponse fixedDelay;
-        private Double percentage;
+        private HttpFaultDelayResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpFaultDelayResponse();
         }
 
         public Builder(HttpFaultDelayResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fixedDelay = defaults.fixedDelay;
-    	      this.percentage = defaults.percentage;
+            $ = new HttpFaultDelayResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fixedDelay(DurationResponse fixedDelay) {
-            this.fixedDelay = Objects.requireNonNull(fixedDelay);
+            $.fixedDelay = fixedDelay;
             return this;
         }
+
         public Builder percentage(Double percentage) {
-            this.percentage = Objects.requireNonNull(percentage);
+            $.percentage = percentage;
             return this;
-        }        public HttpFaultDelayResponse build() {
-            return new HttpFaultDelayResponse(fixedDelay, percentage);
+        }
+
+        public HttpFaultDelayResponse build() {
+            $.fixedDelay = Objects.requireNonNull($.fixedDelay, "expected parameter 'fixedDelay' to be non-null");
+            $.percentage = Objects.requireNonNull($.percentage, "expected parameter 'percentage' to be non-null");
+            return $;
         }
     }
+
 }

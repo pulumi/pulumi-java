@@ -22,7 +22,7 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final String kmsKeyName;
+    private String kmsKeyName;
 
     public String kmsKeyName() {
         return this.kmsKeyName;
@@ -33,55 +33,52 @@ public final class SecretResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretEnv", required=true)
-      private final Map<String,String> secretEnv;
+    private Map<String,String> secretEnv;
 
     public Map<String,String> secretEnv() {
         return this.secretEnv;
     }
 
-    public SecretResponse(
-        String kmsKeyName,
-        Map<String,String> secretEnv) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-        this.secretEnv = Objects.requireNonNull(secretEnv, "expected parameter 'secretEnv' to be non-null");
-    }
+    private SecretResponse() {}
 
-    private SecretResponse() {
-        this.kmsKeyName = null;
-        this.secretEnv = Map.of();
+    private SecretResponse(SecretResponse $) {
+        this.kmsKeyName = $.kmsKeyName;
+        this.secretEnv = $.secretEnv;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKeyName;
-        private Map<String,String> secretEnv;
+        private SecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretResponse();
         }
 
         public Builder(SecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.secretEnv = defaults.secretEnv;
+            $ = new SecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder secretEnv(Map<String,String> secretEnv) {
-            this.secretEnv = Objects.requireNonNull(secretEnv);
+            $.secretEnv = secretEnv;
             return this;
-        }        public SecretResponse build() {
-            return new SecretResponse(kmsKeyName, secretEnv);
+        }
+
+        public SecretResponse build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            $.secretEnv = Objects.requireNonNull($.secretEnv, "expected parameter 'secretEnv' to be non-null");
+            return $;
         }
     }
+
 }

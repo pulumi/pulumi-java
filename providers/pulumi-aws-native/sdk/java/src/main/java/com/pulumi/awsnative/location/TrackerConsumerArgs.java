@@ -5,7 +5,6 @@ package com.pulumi.awsnative.location;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class TrackerConsumerArgs extends com.pulumi.resources.ResourceArgs
     public static final TrackerConsumerArgs Empty = new TrackerConsumerArgs();
 
     @Import(name="consumerArn", required=true)
-      private final Output<String> consumerArn;
+    private Output<String> consumerArn;
 
     public Output<String> consumerArn() {
         return this.consumerArn;
     }
 
     @Import(name="trackerName", required=true)
-      private final Output<String> trackerName;
+    private Output<String> trackerName;
 
     public Output<String> trackerName() {
         return this.trackerName;
     }
 
-    public TrackerConsumerArgs(
-        Output<String> consumerArn,
-        Output<String> trackerName) {
-        this.consumerArn = Objects.requireNonNull(consumerArn, "expected parameter 'consumerArn' to be non-null");
-        this.trackerName = Objects.requireNonNull(trackerName, "expected parameter 'trackerName' to be non-null");
-    }
+    private TrackerConsumerArgs() {}
 
-    private TrackerConsumerArgs() {
-        this.consumerArn = Codegen.empty();
-        this.trackerName = Codegen.empty();
+    private TrackerConsumerArgs(TrackerConsumerArgs $) {
+        this.consumerArn = $.consumerArn;
+        this.trackerName = $.trackerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrackerConsumerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> consumerArn;
-        private Output<String> trackerName;
+        private TrackerConsumerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrackerConsumerArgs();
         }
 
         public Builder(TrackerConsumerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerArn = defaults.consumerArn;
-    	      this.trackerName = defaults.trackerName;
+            $ = new TrackerConsumerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerArn(Output<String> consumerArn) {
-            this.consumerArn = Objects.requireNonNull(consumerArn);
+            $.consumerArn = consumerArn;
             return this;
         }
+
         public Builder consumerArn(String consumerArn) {
-            this.consumerArn = Output.of(Objects.requireNonNull(consumerArn));
-            return this;
+            return consumerArn(Output.of(consumerArn));
         }
+
         public Builder trackerName(Output<String> trackerName) {
-            this.trackerName = Objects.requireNonNull(trackerName);
+            $.trackerName = trackerName;
             return this;
         }
+
         public Builder trackerName(String trackerName) {
-            this.trackerName = Output.of(Objects.requireNonNull(trackerName));
-            return this;
-        }        public TrackerConsumerArgs build() {
-            return new TrackerConsumerArgs(consumerArn, trackerName);
+            return trackerName(Output.of(trackerName));
+        }
+
+        public TrackerConsumerArgs build() {
+            $.consumerArn = Objects.requireNonNull($.consumerArn, "expected parameter 'consumerArn' to be non-null");
+            $.trackerName = Objects.requireNonNull($.trackerName, "expected parameter 'trackerName' to be non-null");
+            return $;
         }
     }
+
 }

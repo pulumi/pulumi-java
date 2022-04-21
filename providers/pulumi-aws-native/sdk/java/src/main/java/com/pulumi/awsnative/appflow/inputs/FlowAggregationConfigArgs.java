@@ -6,8 +6,8 @@ package com.pulumi.awsnative.appflow.inputs;
 import com.pulumi.awsnative.appflow.enums.FlowAggregationType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class FlowAggregationConfigArgs extends com.pulumi.resources.Resour
     public static final FlowAggregationConfigArgs Empty = new FlowAggregationConfigArgs();
 
     @Import(name="aggregationType")
-      private final @Nullable Output<FlowAggregationType> aggregationType;
+    private @Nullable Output<FlowAggregationType> aggregationType;
 
-    public Output<FlowAggregationType> aggregationType() {
-        return this.aggregationType == null ? Codegen.empty() : this.aggregationType;
+    public Optional<Output<FlowAggregationType>> aggregationType() {
+        return Optional.ofNullable(this.aggregationType);
     }
 
-    public FlowAggregationConfigArgs(@Nullable Output<FlowAggregationType> aggregationType) {
-        this.aggregationType = aggregationType;
-    }
+    private FlowAggregationConfigArgs() {}
 
-    private FlowAggregationConfigArgs() {
-        this.aggregationType = Codegen.empty();
+    private FlowAggregationConfigArgs(FlowAggregationConfigArgs $) {
+        this.aggregationType = $.aggregationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowAggregationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowAggregationType> aggregationType;
+        private FlowAggregationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowAggregationConfigArgs();
         }
 
         public Builder(FlowAggregationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationType = defaults.aggregationType;
+            $ = new FlowAggregationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationType(@Nullable Output<FlowAggregationType> aggregationType) {
-            this.aggregationType = aggregationType;
+            $.aggregationType = aggregationType;
             return this;
         }
-        public Builder aggregationType(@Nullable FlowAggregationType aggregationType) {
-            this.aggregationType = Codegen.ofNullable(aggregationType);
-            return this;
-        }        public FlowAggregationConfigArgs build() {
-            return new FlowAggregationConfigArgs(aggregationType);
+
+        public Builder aggregationType(FlowAggregationType aggregationType) {
+            return aggregationType(Output.of(aggregationType));
+        }
+
+        public FlowAggregationConfigArgs build() {
+            return $;
         }
     }
+
 }

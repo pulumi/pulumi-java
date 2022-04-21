@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyNamePrefix")
-      private final @Nullable Output<String> keyNamePrefix;
+    private @Nullable Output<String> keyNamePrefix;
 
-    public Output<String> keyNamePrefix() {
-        return this.keyNamePrefix == null ? Codegen.empty() : this.keyNamePrefix;
+    public Optional<Output<String>> keyNamePrefix() {
+        return Optional.ofNullable(this.keyNamePrefix);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicKey", required=true)
-      private final Output<String> publicKey;
+    private Output<String> publicKey;
 
     public Output<String> publicKey() {
         return this.publicKey;
@@ -54,89 +54,79 @@ public final class KeyPairArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public KeyPairArgs(
-        @Nullable Output<String> keyName,
-        @Nullable Output<String> keyNamePrefix,
-        Output<String> publicKey,
-        @Nullable Output<Map<String,String>> tags) {
-        this.keyName = keyName;
-        this.keyNamePrefix = keyNamePrefix;
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-        this.tags = tags;
-    }
+    private KeyPairArgs() {}
 
-    private KeyPairArgs() {
-        this.keyName = Codegen.empty();
-        this.keyNamePrefix = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.tags = Codegen.empty();
+    private KeyPairArgs(KeyPairArgs $) {
+        this.keyName = $.keyName;
+        this.keyNamePrefix = $.keyNamePrefix;
+        this.publicKey = $.publicKey;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyPairArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyName;
-        private @Nullable Output<String> keyNamePrefix;
-        private Output<String> publicKey;
-        private @Nullable Output<Map<String,String>> tags;
+        private KeyPairArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyPairArgs();
         }
 
         public Builder(KeyPairArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.keyNamePrefix = defaults.keyNamePrefix;
-    	      this.publicKey = defaults.publicKey;
-    	      this.tags = defaults.tags;
+            $ = new KeyPairArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder keyNamePrefix(@Nullable Output<String> keyNamePrefix) {
-            this.keyNamePrefix = keyNamePrefix;
+            $.keyNamePrefix = keyNamePrefix;
             return this;
         }
-        public Builder keyNamePrefix(@Nullable String keyNamePrefix) {
-            this.keyNamePrefix = Codegen.ofNullable(keyNamePrefix);
-            return this;
+
+        public Builder keyNamePrefix(String keyNamePrefix) {
+            return keyNamePrefix(Output.of(keyNamePrefix));
         }
+
         public Builder publicKey(Output<String> publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
         }
+
         public Builder publicKey(String publicKey) {
-            this.publicKey = Output.of(Objects.requireNonNull(publicKey));
-            return this;
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public KeyPairArgs build() {
-            return new KeyPairArgs(keyName, keyNamePrefix, publicKey, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public KeyPairArgs build() {
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            return $;
         }
     }
+
 }

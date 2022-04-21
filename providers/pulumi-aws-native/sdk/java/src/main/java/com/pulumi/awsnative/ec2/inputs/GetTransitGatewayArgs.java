@@ -13,45 +13,45 @@ public final class GetTransitGatewayArgs extends com.pulumi.resources.InvokeArgs
     public static final GetTransitGatewayArgs Empty = new GetTransitGatewayArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetTransitGatewayArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetTransitGatewayArgs() {}
 
-    private GetTransitGatewayArgs() {
-        this.id = null;
+    private GetTransitGatewayArgs(GetTransitGatewayArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetTransitGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitGatewayArgs();
         }
 
         public Builder(GetTransitGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetTransitGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetTransitGatewayArgs build() {
-            return new GetTransitGatewayArgs(id);
+        }
+
+        public GetTransitGatewayArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

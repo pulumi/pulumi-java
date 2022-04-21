@@ -24,7 +24,7 @@ public final class SelectVideoTrackByAttributeResponse extends com.pulumi.resour
      * 
      */
     @Import(name="attribute", required=true)
-      private final String attribute;
+    private String attribute;
 
     public String attribute() {
         return this.attribute;
@@ -35,7 +35,7 @@ public final class SelectVideoTrackByAttributeResponse extends com.pulumi.resour
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -46,10 +46,10 @@ public final class SelectVideoTrackByAttributeResponse extends com.pulumi.resour
      * 
      */
     @Import(name="filterValue")
-      private final @Nullable String filterValue;
+    private @Nullable String filterValue;
 
     public Optional<String> filterValue() {
-        return this.filterValue == null ? Optional.empty() : Optional.ofNullable(this.filterValue);
+        return Optional.ofNullable(this.filterValue);
     }
 
     /**
@@ -58,73 +58,65 @@ public final class SelectVideoTrackByAttributeResponse extends com.pulumi.resour
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public SelectVideoTrackByAttributeResponse(
-        String attribute,
-        String filter,
-        @Nullable String filterValue,
-        String odataType) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.filterValue = filterValue;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-    }
+    private SelectVideoTrackByAttributeResponse() {}
 
-    private SelectVideoTrackByAttributeResponse() {
-        this.attribute = null;
-        this.filter = null;
-        this.filterValue = null;
-        this.odataType = null;
+    private SelectVideoTrackByAttributeResponse(SelectVideoTrackByAttributeResponse $) {
+        this.attribute = $.attribute;
+        this.filter = $.filter;
+        this.filterValue = $.filterValue;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectVideoTrackByAttributeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attribute;
-        private String filter;
-        private @Nullable String filterValue;
-        private String odataType;
+        private SelectVideoTrackByAttributeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectVideoTrackByAttributeResponse();
         }
 
         public Builder(SelectVideoTrackByAttributeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.filter = defaults.filter;
-    	      this.filterValue = defaults.filterValue;
-    	      this.odataType = defaults.odataType;
+            $ = new SelectVideoTrackByAttributeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(String attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filterValue(@Nullable String filterValue) {
-            this.filterValue = filterValue;
+            $.filterValue = filterValue;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public SelectVideoTrackByAttributeResponse build() {
-            return new SelectVideoTrackByAttributeResponse(attribute, filter, filterValue, odataType);
+        }
+
+        public SelectVideoTrackByAttributeResponse build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

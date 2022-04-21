@@ -5,13 +5,13 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyCollocation;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyLocality;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyScope;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyStyle;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="availabilityDomainCount")
-      private final @Nullable Output<Integer> availabilityDomainCount;
+    private @Nullable Output<Integer> availabilityDomainCount;
 
-    public Output<Integer> availabilityDomainCount() {
-        return this.availabilityDomainCount == null ? Codegen.empty() : this.availabilityDomainCount;
+    public Optional<Output<Integer>> availabilityDomainCount() {
+        return Optional.ofNullable(this.availabilityDomainCount);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="collocation")
-      private final @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
+    private @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
 
-    public Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation() {
-        return this.collocation == null ? Codegen.empty() : this.collocation;
+    public Optional<Output<ResourcePolicyGroupPlacementPolicyCollocation>> collocation() {
+        return Optional.ofNullable(this.collocation);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="locality")
-      private final @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality;
+    private @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality;
 
-    public Output<ResourcePolicyGroupPlacementPolicyLocality> locality() {
-        return this.locality == null ? Codegen.empty() : this.locality;
+    public Optional<Output<ResourcePolicyGroupPlacementPolicyLocality>> locality() {
+        return Optional.ofNullable(this.locality);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope;
+    private @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope;
 
-    public Output<ResourcePolicyGroupPlacementPolicyScope> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<ResourcePolicyGroupPlacementPolicyScope>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="style")
-      private final @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style;
+    private @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style;
 
-    public Output<ResourcePolicyGroupPlacementPolicyStyle> style() {
-        return this.style == null ? Codegen.empty() : this.style;
+    public Optional<Output<ResourcePolicyGroupPlacementPolicyStyle>> style() {
+        return Optional.ofNullable(this.style);
     }
 
     /**
@@ -83,115 +83,98 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends com.pulumi.res
      * 
      */
     @Import(name="vmCount")
-      private final @Nullable Output<Integer> vmCount;
+    private @Nullable Output<Integer> vmCount;
 
-    public Output<Integer> vmCount() {
-        return this.vmCount == null ? Codegen.empty() : this.vmCount;
+    public Optional<Output<Integer>> vmCount() {
+        return Optional.ofNullable(this.vmCount);
     }
 
-    public ResourcePolicyGroupPlacementPolicyArgs(
-        @Nullable Output<Integer> availabilityDomainCount,
-        @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation,
-        @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality,
-        @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope,
-        @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style,
-        @Nullable Output<Integer> vmCount) {
-        this.availabilityDomainCount = availabilityDomainCount;
-        this.collocation = collocation;
-        this.locality = locality;
-        this.scope = scope;
-        this.style = style;
-        this.vmCount = vmCount;
-    }
+    private ResourcePolicyGroupPlacementPolicyArgs() {}
 
-    private ResourcePolicyGroupPlacementPolicyArgs() {
-        this.availabilityDomainCount = Codegen.empty();
-        this.collocation = Codegen.empty();
-        this.locality = Codegen.empty();
-        this.scope = Codegen.empty();
-        this.style = Codegen.empty();
-        this.vmCount = Codegen.empty();
+    private ResourcePolicyGroupPlacementPolicyArgs(ResourcePolicyGroupPlacementPolicyArgs $) {
+        this.availabilityDomainCount = $.availabilityDomainCount;
+        this.collocation = $.collocation;
+        this.locality = $.locality;
+        this.scope = $.scope;
+        this.style = $.style;
+        this.vmCount = $.vmCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyGroupPlacementPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> availabilityDomainCount;
-        private @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
-        private @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality;
-        private @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope;
-        private @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style;
-        private @Nullable Output<Integer> vmCount;
+        private ResourcePolicyGroupPlacementPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyGroupPlacementPolicyArgs();
         }
 
         public Builder(ResourcePolicyGroupPlacementPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityDomainCount = defaults.availabilityDomainCount;
-    	      this.collocation = defaults.collocation;
-    	      this.locality = defaults.locality;
-    	      this.scope = defaults.scope;
-    	      this.style = defaults.style;
-    	      this.vmCount = defaults.vmCount;
+            $ = new ResourcePolicyGroupPlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityDomainCount(@Nullable Output<Integer> availabilityDomainCount) {
-            this.availabilityDomainCount = availabilityDomainCount;
+            $.availabilityDomainCount = availabilityDomainCount;
             return this;
         }
-        public Builder availabilityDomainCount(@Nullable Integer availabilityDomainCount) {
-            this.availabilityDomainCount = Codegen.ofNullable(availabilityDomainCount);
-            return this;
+
+        public Builder availabilityDomainCount(Integer availabilityDomainCount) {
+            return availabilityDomainCount(Output.of(availabilityDomainCount));
         }
+
         public Builder collocation(@Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation) {
-            this.collocation = collocation;
+            $.collocation = collocation;
             return this;
         }
-        public Builder collocation(@Nullable ResourcePolicyGroupPlacementPolicyCollocation collocation) {
-            this.collocation = Codegen.ofNullable(collocation);
-            return this;
+
+        public Builder collocation(ResourcePolicyGroupPlacementPolicyCollocation collocation) {
+            return collocation(Output.of(collocation));
         }
+
         public Builder locality(@Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality) {
-            this.locality = locality;
+            $.locality = locality;
             return this;
         }
-        public Builder locality(@Nullable ResourcePolicyGroupPlacementPolicyLocality locality) {
-            this.locality = Codegen.ofNullable(locality);
-            return this;
+
+        public Builder locality(ResourcePolicyGroupPlacementPolicyLocality locality) {
+            return locality(Output.of(locality));
         }
+
         public Builder scope(@Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable ResourcePolicyGroupPlacementPolicyScope scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(ResourcePolicyGroupPlacementPolicyScope scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder style(@Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style) {
-            this.style = style;
+            $.style = style;
             return this;
         }
-        public Builder style(@Nullable ResourcePolicyGroupPlacementPolicyStyle style) {
-            this.style = Codegen.ofNullable(style);
-            return this;
+
+        public Builder style(ResourcePolicyGroupPlacementPolicyStyle style) {
+            return style(Output.of(style));
         }
+
         public Builder vmCount(@Nullable Output<Integer> vmCount) {
-            this.vmCount = vmCount;
+            $.vmCount = vmCount;
             return this;
         }
-        public Builder vmCount(@Nullable Integer vmCount) {
-            this.vmCount = Codegen.ofNullable(vmCount);
-            return this;
-        }        public ResourcePolicyGroupPlacementPolicyArgs build() {
-            return new ResourcePolicyGroupPlacementPolicyArgs(availabilityDomainCount, collocation, locality, scope, style, vmCount);
+
+        public Builder vmCount(Integer vmCount) {
+            return vmCount(Output.of(vmCount));
+        }
+
+        public ResourcePolicyGroupPlacementPolicyArgs build() {
+            return $;
         }
     }
+
 }

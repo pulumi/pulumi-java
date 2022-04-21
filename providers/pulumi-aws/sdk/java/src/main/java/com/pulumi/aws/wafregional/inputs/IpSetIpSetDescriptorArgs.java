@@ -5,7 +5,6 @@ package com.pulumi.aws.wafregional.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class IpSetIpSetDescriptorArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -30,63 +29,60 @@ public final class IpSetIpSetDescriptorArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public IpSetIpSetDescriptorArgs(
-        Output<String> type,
-        Output<String> value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private IpSetIpSetDescriptorArgs() {}
 
-    private IpSetIpSetDescriptorArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private IpSetIpSetDescriptorArgs(IpSetIpSetDescriptorArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpSetIpSetDescriptorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
-        private Output<String> value;
+        private IpSetIpSetDescriptorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpSetIpSetDescriptorArgs();
         }
 
         public Builder(IpSetIpSetDescriptorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new IpSetIpSetDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public IpSetIpSetDescriptorArgs build() {
-            return new IpSetIpSetDescriptorArgs(type, value);
+            return value(Output.of(value));
+        }
+
+        public IpSetIpSetDescriptorArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

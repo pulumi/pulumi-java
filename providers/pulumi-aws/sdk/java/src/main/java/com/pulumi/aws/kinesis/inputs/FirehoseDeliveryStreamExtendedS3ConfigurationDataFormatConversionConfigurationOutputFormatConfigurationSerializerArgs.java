@@ -7,8 +7,8 @@ import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3Configurati
 import com.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="orcSerDe")
-      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs> orcSerDe;
+    private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs> orcSerDe;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs> orcSerDe() {
-        return this.orcSerDe == null ? Codegen.empty() : this.orcSerDe;
+    public Optional<Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs>> orcSerDe() {
+        return Optional.ofNullable(this.orcSerDe);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * 
      */
     @Import(name="parquetSerDe")
-      private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs> parquetSerDe;
+    private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs> parquetSerDe;
 
-    public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs> parquetSerDe() {
-        return this.parquetSerDe == null ? Codegen.empty() : this.parquetSerDe;
+    public Optional<Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs>> parquetSerDe() {
+        return Optional.ofNullable(this.parquetSerDe);
     }
 
-    public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs(
-        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs> orcSerDe,
-        @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs> parquetSerDe) {
-        this.orcSerDe = orcSerDe;
-        this.parquetSerDe = parquetSerDe;
-    }
+    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs() {}
 
-    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs() {
-        this.orcSerDe = Codegen.empty();
-        this.parquetSerDe = Codegen.empty();
+    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs $) {
+        this.orcSerDe = $.orcSerDe;
+        this.parquetSerDe = $.parquetSerDe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs> orcSerDe;
-        private @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs> parquetSerDe;
+        private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs();
         }
 
         public Builder(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.orcSerDe = defaults.orcSerDe;
-    	      this.parquetSerDe = defaults.parquetSerDe;
+            $ = new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder orcSerDe(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs> orcSerDe) {
-            this.orcSerDe = orcSerDe;
+            $.orcSerDe = orcSerDe;
             return this;
         }
-        public Builder orcSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs orcSerDe) {
-            this.orcSerDe = Codegen.ofNullable(orcSerDe);
-            return this;
+
+        public Builder orcSerDe(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeArgs orcSerDe) {
+            return orcSerDe(Output.of(orcSerDe));
         }
+
         public Builder parquetSerDe(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs> parquetSerDe) {
-            this.parquetSerDe = parquetSerDe;
+            $.parquetSerDe = parquetSerDe;
             return this;
         }
-        public Builder parquetSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs parquetSerDe) {
-            this.parquetSerDe = Codegen.ofNullable(parquetSerDe);
-            return this;
-        }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs build() {
-            return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs(orcSerDe, parquetSerDe);
+
+        public Builder parquetSerDe(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeArgs parquetSerDe) {
+            return parquetSerDe(Output.of(parquetSerDe));
+        }
+
+        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerArgs build() {
+            return $;
         }
     }
+
 }

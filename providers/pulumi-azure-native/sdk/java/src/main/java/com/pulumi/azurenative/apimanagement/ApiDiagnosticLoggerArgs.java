@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ApiDiagnosticLoggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -31,7 +31,7 @@ public final class ApiDiagnosticLoggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="diagnosticId", required=true)
-      private final Output<String> diagnosticId;
+    private Output<String> diagnosticId;
 
     public Output<String> diagnosticId() {
         return this.diagnosticId;
@@ -42,10 +42,10 @@ public final class ApiDiagnosticLoggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="loggerid")
-      private final @Nullable Output<String> loggerid;
+    private @Nullable Output<String> loggerid;
 
-    public Output<String> loggerid() {
-        return this.loggerid == null ? Codegen.empty() : this.loggerid;
+    public Optional<Output<String>> loggerid() {
+        return Optional.ofNullable(this.loggerid);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class ApiDiagnosticLoggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,102 +64,92 @@ public final class ApiDiagnosticLoggerArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public ApiDiagnosticLoggerArgs(
-        Output<String> apiId,
-        Output<String> diagnosticId,
-        @Nullable Output<String> loggerid,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.diagnosticId = Objects.requireNonNull(diagnosticId, "expected parameter 'diagnosticId' to be non-null");
-        this.loggerid = loggerid;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ApiDiagnosticLoggerArgs() {}
 
-    private ApiDiagnosticLoggerArgs() {
-        this.apiId = Codegen.empty();
-        this.diagnosticId = Codegen.empty();
-        this.loggerid = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private ApiDiagnosticLoggerArgs(ApiDiagnosticLoggerArgs $) {
+        this.apiId = $.apiId;
+        this.diagnosticId = $.diagnosticId;
+        this.loggerid = $.loggerid;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiDiagnosticLoggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private Output<String> diagnosticId;
-        private @Nullable Output<String> loggerid;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private ApiDiagnosticLoggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiDiagnosticLoggerArgs();
         }
 
         public Builder(ApiDiagnosticLoggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.diagnosticId = defaults.diagnosticId;
-    	      this.loggerid = defaults.loggerid;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ApiDiagnosticLoggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder diagnosticId(Output<String> diagnosticId) {
-            this.diagnosticId = Objects.requireNonNull(diagnosticId);
+            $.diagnosticId = diagnosticId;
             return this;
         }
+
         public Builder diagnosticId(String diagnosticId) {
-            this.diagnosticId = Output.of(Objects.requireNonNull(diagnosticId));
-            return this;
+            return diagnosticId(Output.of(diagnosticId));
         }
+
         public Builder loggerid(@Nullable Output<String> loggerid) {
-            this.loggerid = loggerid;
+            $.loggerid = loggerid;
             return this;
         }
-        public Builder loggerid(@Nullable String loggerid) {
-            this.loggerid = Codegen.ofNullable(loggerid);
-            return this;
+
+        public Builder loggerid(String loggerid) {
+            return loggerid(Output.of(loggerid));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public ApiDiagnosticLoggerArgs build() {
-            return new ApiDiagnosticLoggerArgs(apiId, diagnosticId, loggerid, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public ApiDiagnosticLoggerArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.diagnosticId = Objects.requireNonNull($.diagnosticId, "expected parameter 'diagnosticId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

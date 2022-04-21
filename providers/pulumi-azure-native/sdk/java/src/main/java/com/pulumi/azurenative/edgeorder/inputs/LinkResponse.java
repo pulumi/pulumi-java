@@ -21,7 +21,7 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkType", required=true)
-      private final String linkType;
+    private String linkType;
 
     public String linkType() {
         return this.linkType;
@@ -32,55 +32,52 @@ public final class LinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkUrl", required=true)
-      private final String linkUrl;
+    private String linkUrl;
 
     public String linkUrl() {
         return this.linkUrl;
     }
 
-    public LinkResponse(
-        String linkType,
-        String linkUrl) {
-        this.linkType = Objects.requireNonNull(linkType, "expected parameter 'linkType' to be non-null");
-        this.linkUrl = Objects.requireNonNull(linkUrl, "expected parameter 'linkUrl' to be non-null");
-    }
+    private LinkResponse() {}
 
-    private LinkResponse() {
-        this.linkType = null;
-        this.linkUrl = null;
+    private LinkResponse(LinkResponse $) {
+        this.linkType = $.linkType;
+        this.linkUrl = $.linkUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String linkType;
-        private String linkUrl;
+        private LinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkResponse();
         }
 
         public Builder(LinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkType = defaults.linkType;
-    	      this.linkUrl = defaults.linkUrl;
+            $ = new LinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linkType(String linkType) {
-            this.linkType = Objects.requireNonNull(linkType);
+            $.linkType = linkType;
             return this;
         }
+
         public Builder linkUrl(String linkUrl) {
-            this.linkUrl = Objects.requireNonNull(linkUrl);
+            $.linkUrl = linkUrl;
             return this;
-        }        public LinkResponse build() {
-            return new LinkResponse(linkType, linkUrl);
+        }
+
+        public LinkResponse build() {
+            $.linkType = Objects.requireNonNull($.linkType, "expected parameter 'linkType' to be non-null");
+            $.linkUrl = Objects.requireNonNull($.linkUrl, "expected parameter 'linkUrl' to be non-null");
+            return $;
         }
     }
+
 }

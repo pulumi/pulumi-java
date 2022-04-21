@@ -21,7 +21,7 @@ public final class AclEntryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expirationTime", required=true)
-      private final String expirationTime;
+    private String expirationTime;
 
     public String expirationTime() {
         return this.expirationTime;
@@ -32,7 +32,7 @@ public final class AclEntryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -43,7 +43,7 @@ public final class AclEntryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -54,73 +54,66 @@ public final class AclEntryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public AclEntryResponse(
-        String expirationTime,
-        String kind,
-        String name,
-        String value) {
-        this.expirationTime = Objects.requireNonNull(expirationTime, "expected parameter 'expirationTime' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private AclEntryResponse() {}
 
-    private AclEntryResponse() {
-        this.expirationTime = null;
-        this.kind = null;
-        this.name = null;
-        this.value = null;
+    private AclEntryResponse(AclEntryResponse $) {
+        this.expirationTime = $.expirationTime;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AclEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expirationTime;
-        private String kind;
-        private String name;
-        private String value;
+        private AclEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AclEntryResponse();
         }
 
         public Builder(AclEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new AclEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(String expirationTime) {
-            this.expirationTime = Objects.requireNonNull(expirationTime);
+            $.expirationTime = expirationTime;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public AclEntryResponse build() {
-            return new AclEntryResponse(expirationTime, kind, name, value);
+        }
+
+        public AclEntryResponse build() {
+            $.expirationTime = Objects.requireNonNull($.expirationTime, "expected parameter 'expirationTime' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

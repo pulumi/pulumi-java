@@ -7,10 +7,10 @@ import com.pulumi.awsnative.databrew.inputs.ProjectSampleArgs;
 import com.pulumi.awsnative.databrew.inputs.ProjectTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetName", required=true)
-      private final Output<String> datasetName;
+    private Output<String> datasetName;
 
     public Output<String> datasetName() {
         return this.datasetName;
@@ -34,10 +34,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recipeName", required=true)
-      private final Output<String> recipeName;
+    private Output<String> recipeName;
 
     public Output<String> recipeName() {
         return this.recipeName;
@@ -56,7 +56,7 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -67,125 +67,112 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sample")
-      private final @Nullable Output<ProjectSampleArgs> sample;
+    private @Nullable Output<ProjectSampleArgs> sample;
 
-    public Output<ProjectSampleArgs> sample() {
-        return this.sample == null ? Codegen.empty() : this.sample;
+    public Optional<Output<ProjectSampleArgs>> sample() {
+        return Optional.ofNullable(this.sample);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ProjectTagArgs>> tags;
+    private @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Output<List<ProjectTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ProjectTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ProjectArgs(
-        Output<String> datasetName,
-        @Nullable Output<String> name,
-        Output<String> recipeName,
-        Output<String> roleArn,
-        @Nullable Output<ProjectSampleArgs> sample,
-        @Nullable Output<List<ProjectTagArgs>> tags) {
-        this.datasetName = Objects.requireNonNull(datasetName, "expected parameter 'datasetName' to be non-null");
-        this.name = name;
-        this.recipeName = Objects.requireNonNull(recipeName, "expected parameter 'recipeName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.sample = sample;
-        this.tags = tags;
-    }
+    private ProjectArgs() {}
 
-    private ProjectArgs() {
-        this.datasetName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.recipeName = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.sample = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ProjectArgs(ProjectArgs $) {
+        this.datasetName = $.datasetName;
+        this.name = $.name;
+        this.recipeName = $.recipeName;
+        this.roleArn = $.roleArn;
+        this.sample = $.sample;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> datasetName;
-        private @Nullable Output<String> name;
-        private Output<String> recipeName;
-        private Output<String> roleArn;
-        private @Nullable Output<ProjectSampleArgs> sample;
-        private @Nullable Output<List<ProjectTagArgs>> tags;
+        private ProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectArgs();
         }
 
         public Builder(ProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetName = defaults.datasetName;
-    	      this.name = defaults.name;
-    	      this.recipeName = defaults.recipeName;
-    	      this.roleArn = defaults.roleArn;
-    	      this.sample = defaults.sample;
-    	      this.tags = defaults.tags;
+            $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetName(Output<String> datasetName) {
-            this.datasetName = Objects.requireNonNull(datasetName);
+            $.datasetName = datasetName;
             return this;
         }
+
         public Builder datasetName(String datasetName) {
-            this.datasetName = Output.of(Objects.requireNonNull(datasetName));
-            return this;
+            return datasetName(Output.of(datasetName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder recipeName(Output<String> recipeName) {
-            this.recipeName = Objects.requireNonNull(recipeName);
+            $.recipeName = recipeName;
             return this;
         }
+
         public Builder recipeName(String recipeName) {
-            this.recipeName = Output.of(Objects.requireNonNull(recipeName));
-            return this;
+            return recipeName(Output.of(recipeName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder sample(@Nullable Output<ProjectSampleArgs> sample) {
-            this.sample = sample;
+            $.sample = sample;
             return this;
         }
-        public Builder sample(@Nullable ProjectSampleArgs sample) {
-            this.sample = Codegen.ofNullable(sample);
-            return this;
+
+        public Builder sample(ProjectSampleArgs sample) {
+            return sample(Output.of(sample));
         }
+
         public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ProjectTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ProjectTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ProjectArgs build() {
-            return new ProjectArgs(datasetName, name, recipeName, roleArn, sample, tags);
+        }
+
+        public ProjectArgs build() {
+            $.datasetName = Objects.requireNonNull($.datasetName, "expected parameter 'datasetName' to be non-null");
+            $.recipeName = Objects.requireNonNull($.recipeName, "expected parameter 'recipeName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

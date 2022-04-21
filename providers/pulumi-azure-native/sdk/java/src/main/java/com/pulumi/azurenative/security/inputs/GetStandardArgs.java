@@ -17,7 +17,7 @@ public final class GetStandardArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetStandardArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="standardId", required=true)
-      private final String standardId;
+    private String standardId;
 
     public String standardId() {
         return this.standardId;
     }
 
-    public GetStandardArgs(
-        String resourceGroupName,
-        String standardId) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.standardId = Objects.requireNonNull(standardId, "expected parameter 'standardId' to be non-null");
-    }
+    private GetStandardArgs() {}
 
-    private GetStandardArgs() {
-        this.resourceGroupName = null;
-        this.standardId = null;
+    private GetStandardArgs(GetStandardArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.standardId = $.standardId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStandardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String standardId;
+        private GetStandardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStandardArgs();
         }
 
         public Builder(GetStandardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.standardId = defaults.standardId;
+            $ = new GetStandardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder standardId(String standardId) {
-            this.standardId = Objects.requireNonNull(standardId);
+            $.standardId = standardId;
             return this;
-        }        public GetStandardArgs build() {
-            return new GetStandardArgs(resourceGroupName, standardId);
+        }
+
+        public GetStandardArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.standardId = Objects.requireNonNull($.standardId, "expected parameter 'standardId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends com.pu
      * 
      */
     @Import(name="bucketSize", required=true)
-      private final Output<Double> bucketSize;
+    private Output<Double> bucketSize;
 
     public Output<Double> bucketSize() {
         return this.bucketSize;
@@ -35,7 +34,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends com.pu
      * 
      */
     @Import(name="lowerBound", required=true)
-      private final Output<GooglePrivacyDlpV2ValueArgs> lowerBound;
+    private Output<GooglePrivacyDlpV2ValueArgs> lowerBound;
 
     public Output<GooglePrivacyDlpV2ValueArgs> lowerBound() {
         return this.lowerBound;
@@ -46,76 +45,71 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends com.pu
      * 
      */
     @Import(name="upperBound", required=true)
-      private final Output<GooglePrivacyDlpV2ValueArgs> upperBound;
+    private Output<GooglePrivacyDlpV2ValueArgs> upperBound;
 
     public Output<GooglePrivacyDlpV2ValueArgs> upperBound() {
         return this.upperBound;
     }
 
-    public GooglePrivacyDlpV2FixedSizeBucketingConfigArgs(
-        Output<Double> bucketSize,
-        Output<GooglePrivacyDlpV2ValueArgs> lowerBound,
-        Output<GooglePrivacyDlpV2ValueArgs> upperBound) {
-        this.bucketSize = Objects.requireNonNull(bucketSize, "expected parameter 'bucketSize' to be non-null");
-        this.lowerBound = Objects.requireNonNull(lowerBound, "expected parameter 'lowerBound' to be non-null");
-        this.upperBound = Objects.requireNonNull(upperBound, "expected parameter 'upperBound' to be non-null");
-    }
+    private GooglePrivacyDlpV2FixedSizeBucketingConfigArgs() {}
 
-    private GooglePrivacyDlpV2FixedSizeBucketingConfigArgs() {
-        this.bucketSize = Codegen.empty();
-        this.lowerBound = Codegen.empty();
-        this.upperBound = Codegen.empty();
+    private GooglePrivacyDlpV2FixedSizeBucketingConfigArgs(GooglePrivacyDlpV2FixedSizeBucketingConfigArgs $) {
+        this.bucketSize = $.bucketSize;
+        this.lowerBound = $.lowerBound;
+        this.upperBound = $.upperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2FixedSizeBucketingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> bucketSize;
-        private Output<GooglePrivacyDlpV2ValueArgs> lowerBound;
-        private Output<GooglePrivacyDlpV2ValueArgs> upperBound;
+        private GooglePrivacyDlpV2FixedSizeBucketingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2FixedSizeBucketingConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2FixedSizeBucketingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketSize = defaults.bucketSize;
-    	      this.lowerBound = defaults.lowerBound;
-    	      this.upperBound = defaults.upperBound;
+            $ = new GooglePrivacyDlpV2FixedSizeBucketingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketSize(Output<Double> bucketSize) {
-            this.bucketSize = Objects.requireNonNull(bucketSize);
+            $.bucketSize = bucketSize;
             return this;
         }
+
         public Builder bucketSize(Double bucketSize) {
-            this.bucketSize = Output.of(Objects.requireNonNull(bucketSize));
-            return this;
+            return bucketSize(Output.of(bucketSize));
         }
+
         public Builder lowerBound(Output<GooglePrivacyDlpV2ValueArgs> lowerBound) {
-            this.lowerBound = Objects.requireNonNull(lowerBound);
+            $.lowerBound = lowerBound;
             return this;
         }
+
         public Builder lowerBound(GooglePrivacyDlpV2ValueArgs lowerBound) {
-            this.lowerBound = Output.of(Objects.requireNonNull(lowerBound));
-            return this;
+            return lowerBound(Output.of(lowerBound));
         }
+
         public Builder upperBound(Output<GooglePrivacyDlpV2ValueArgs> upperBound) {
-            this.upperBound = Objects.requireNonNull(upperBound);
+            $.upperBound = upperBound;
             return this;
         }
+
         public Builder upperBound(GooglePrivacyDlpV2ValueArgs upperBound) {
-            this.upperBound = Output.of(Objects.requireNonNull(upperBound));
-            return this;
-        }        public GooglePrivacyDlpV2FixedSizeBucketingConfigArgs build() {
-            return new GooglePrivacyDlpV2FixedSizeBucketingConfigArgs(bucketSize, lowerBound, upperBound);
+            return upperBound(Output.of(upperBound));
+        }
+
+        public GooglePrivacyDlpV2FixedSizeBucketingConfigArgs build() {
+            $.bucketSize = Objects.requireNonNull($.bucketSize, "expected parameter 'bucketSize' to be non-null");
+            $.lowerBound = Objects.requireNonNull($.lowerBound, "expected parameter 'lowerBound' to be non-null");
+            $.upperBound = Objects.requireNonNull($.upperBound, "expected parameter 'upperBound' to be non-null");
+            return $;
         }
     }
+
 }

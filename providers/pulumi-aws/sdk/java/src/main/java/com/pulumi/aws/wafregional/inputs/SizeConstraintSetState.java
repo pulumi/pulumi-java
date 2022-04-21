@@ -6,10 +6,10 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
     public static final SizeConstraintSetState Empty = new SizeConstraintSetState();
 
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -40,79 +40,72 @@ public final class SizeConstraintSetState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sizeConstraints")
-      private final @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
+    private @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
 
-    public Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints() {
-        return this.sizeConstraints == null ? Codegen.empty() : this.sizeConstraints;
+    public Optional<Output<List<SizeConstraintSetSizeConstraintGetArgs>>> sizeConstraints() {
+        return Optional.ofNullable(this.sizeConstraints);
     }
 
-    public SizeConstraintSetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name,
-        @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints) {
-        this.arn = arn;
-        this.name = name;
-        this.sizeConstraints = sizeConstraints;
-    }
+    private SizeConstraintSetState() {}
 
-    private SizeConstraintSetState() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sizeConstraints = Codegen.empty();
+    private SizeConstraintSetState(SizeConstraintSetState $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.sizeConstraints = $.sizeConstraints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SizeConstraintSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints;
+        private SizeConstraintSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SizeConstraintSetState();
         }
 
         public Builder(SizeConstraintSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.sizeConstraints = defaults.sizeConstraints;
+            $ = new SizeConstraintSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sizeConstraints(@Nullable Output<List<SizeConstraintSetSizeConstraintGetArgs>> sizeConstraints) {
-            this.sizeConstraints = sizeConstraints;
+            $.sizeConstraints = sizeConstraints;
             return this;
         }
-        public Builder sizeConstraints(@Nullable List<SizeConstraintSetSizeConstraintGetArgs> sizeConstraints) {
-            this.sizeConstraints = Codegen.ofNullable(sizeConstraints);
-            return this;
+
+        public Builder sizeConstraints(List<SizeConstraintSetSizeConstraintGetArgs> sizeConstraints) {
+            return sizeConstraints(Output.of(sizeConstraints));
         }
+
         public Builder sizeConstraints(SizeConstraintSetSizeConstraintGetArgs... sizeConstraints) {
             return sizeConstraints(List.of(sizeConstraints));
-        }        public SizeConstraintSetState build() {
-            return new SizeConstraintSetState(arn, name, sizeConstraints);
+        }
+
+        public SizeConstraintSetState build() {
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeJobInstructions")
-      private final @Nullable Boolean includeJobInstructions;
+    private @Nullable Boolean includeJobInstructions;
 
     public Optional<Boolean> includeJobInstructions() {
-        return this.includeJobInstructions == null ? Optional.empty() : Optional.ofNullable(this.includeJobInstructions);
+        return Optional.ofNullable(this.includeJobInstructions);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeLabelCategories")
-      private final @Nullable Boolean includeLabelCategories;
+    private @Nullable Boolean includeLabelCategories;
 
     public Optional<Boolean> includeLabelCategories() {
-        return this.includeLabelCategories == null ? Optional.empty() : Optional.ofNullable(this.includeLabelCategories);
+        return Optional.ofNullable(this.includeLabelCategories);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labelingJobId", required=true)
-      private final String labelingJobId;
+    private String labelingJobId;
 
     public String labelingJobId() {
         return this.labelingJobId;
@@ -53,7 +53,7 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -64,82 +64,71 @@ public final class GetLabelingJobArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetLabelingJobArgs(
-        @Nullable Boolean includeJobInstructions,
-        @Nullable Boolean includeLabelCategories,
-        String labelingJobId,
-        String resourceGroupName,
-        String workspaceName) {
-        this.includeJobInstructions = includeJobInstructions;
-        this.includeLabelCategories = includeLabelCategories;
-        this.labelingJobId = Objects.requireNonNull(labelingJobId, "expected parameter 'labelingJobId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetLabelingJobArgs() {}
 
-    private GetLabelingJobArgs() {
-        this.includeJobInstructions = null;
-        this.includeLabelCategories = null;
-        this.labelingJobId = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetLabelingJobArgs(GetLabelingJobArgs $) {
+        this.includeJobInstructions = $.includeJobInstructions;
+        this.includeLabelCategories = $.includeLabelCategories;
+        this.labelingJobId = $.labelingJobId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLabelingJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean includeJobInstructions;
-        private @Nullable Boolean includeLabelCategories;
-        private String labelingJobId;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetLabelingJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLabelingJobArgs();
         }
 
         public Builder(GetLabelingJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeJobInstructions = defaults.includeJobInstructions;
-    	      this.includeLabelCategories = defaults.includeLabelCategories;
-    	      this.labelingJobId = defaults.labelingJobId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetLabelingJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder includeJobInstructions(@Nullable Boolean includeJobInstructions) {
-            this.includeJobInstructions = includeJobInstructions;
+            $.includeJobInstructions = includeJobInstructions;
             return this;
         }
+
         public Builder includeLabelCategories(@Nullable Boolean includeLabelCategories) {
-            this.includeLabelCategories = includeLabelCategories;
+            $.includeLabelCategories = includeLabelCategories;
             return this;
         }
+
         public Builder labelingJobId(String labelingJobId) {
-            this.labelingJobId = Objects.requireNonNull(labelingJobId);
+            $.labelingJobId = labelingJobId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetLabelingJobArgs build() {
-            return new GetLabelingJobArgs(includeJobInstructions, includeLabelCategories, labelingJobId, resourceGroupName, workspaceName);
+        }
+
+        public GetLabelingJobArgs build() {
+            $.labelingJobId = Objects.requireNonNull($.labelingJobId, "expected parameter 'labelingJobId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

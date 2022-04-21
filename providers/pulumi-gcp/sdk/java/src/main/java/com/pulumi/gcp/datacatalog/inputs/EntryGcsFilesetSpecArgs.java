@@ -5,11 +5,11 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecSampleGcsFileSpecArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,7 +32,7 @@ public final class EntryGcsFilesetSpecArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="filePatterns", required=true)
-      private final Output<List<String>> filePatterns;
+    private Output<List<String>> filePatterns;
 
     public Output<List<String>> filePatterns() {
         return this.filePatterns;
@@ -45,69 +45,67 @@ public final class EntryGcsFilesetSpecArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sampleGcsFileSpecs")
-      private final @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
+    private @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
 
-    public Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs() {
-        return this.sampleGcsFileSpecs == null ? Codegen.empty() : this.sampleGcsFileSpecs;
+    public Optional<Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>>> sampleGcsFileSpecs() {
+        return Optional.ofNullable(this.sampleGcsFileSpecs);
     }
 
-    public EntryGcsFilesetSpecArgs(
-        Output<List<String>> filePatterns,
-        @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs) {
-        this.filePatterns = Objects.requireNonNull(filePatterns, "expected parameter 'filePatterns' to be non-null");
-        this.sampleGcsFileSpecs = sampleGcsFileSpecs;
-    }
+    private EntryGcsFilesetSpecArgs() {}
 
-    private EntryGcsFilesetSpecArgs() {
-        this.filePatterns = Codegen.empty();
-        this.sampleGcsFileSpecs = Codegen.empty();
+    private EntryGcsFilesetSpecArgs(EntryGcsFilesetSpecArgs $) {
+        this.filePatterns = $.filePatterns;
+        this.sampleGcsFileSpecs = $.sampleGcsFileSpecs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntryGcsFilesetSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> filePatterns;
-        private @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
+        private EntryGcsFilesetSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntryGcsFilesetSpecArgs();
         }
 
         public Builder(EntryGcsFilesetSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePatterns = defaults.filePatterns;
-    	      this.sampleGcsFileSpecs = defaults.sampleGcsFileSpecs;
+            $ = new EntryGcsFilesetSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filePatterns(Output<List<String>> filePatterns) {
-            this.filePatterns = Objects.requireNonNull(filePatterns);
+            $.filePatterns = filePatterns;
             return this;
         }
+
         public Builder filePatterns(List<String> filePatterns) {
-            this.filePatterns = Output.of(Objects.requireNonNull(filePatterns));
-            return this;
+            return filePatterns(Output.of(filePatterns));
         }
+
         public Builder filePatterns(String... filePatterns) {
             return filePatterns(List.of(filePatterns));
         }
+
         public Builder sampleGcsFileSpecs(@Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs) {
-            this.sampleGcsFileSpecs = sampleGcsFileSpecs;
+            $.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
-        public Builder sampleGcsFileSpecs(@Nullable List<EntryGcsFilesetSpecSampleGcsFileSpecArgs> sampleGcsFileSpecs) {
-            this.sampleGcsFileSpecs = Codegen.ofNullable(sampleGcsFileSpecs);
-            return this;
+
+        public Builder sampleGcsFileSpecs(List<EntryGcsFilesetSpecSampleGcsFileSpecArgs> sampleGcsFileSpecs) {
+            return sampleGcsFileSpecs(Output.of(sampleGcsFileSpecs));
         }
+
         public Builder sampleGcsFileSpecs(EntryGcsFilesetSpecSampleGcsFileSpecArgs... sampleGcsFileSpecs) {
             return sampleGcsFileSpecs(List.of(sampleGcsFileSpecs));
-        }        public EntryGcsFilesetSpecArgs build() {
-            return new EntryGcsFilesetSpecArgs(filePatterns, sampleGcsFileSpecs);
+        }
+
+        public EntryGcsFilesetSpecArgs build() {
+            $.filePatterns = Objects.requireNonNull($.filePatterns, "expected parameter 'filePatterns' to be non-null");
+            return $;
         }
     }
+
 }

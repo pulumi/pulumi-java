@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apps_v1beta2.inputs.DaemonSetConditionArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="collisionCount")
-      private final @Nullable Output<Integer> collisionCount;
+    private @Nullable Output<Integer> collisionCount;
 
-    public Output<Integer> collisionCount() {
-        return this.collisionCount == null ? Codegen.empty() : this.collisionCount;
+    public Optional<Output<Integer>> collisionCount() {
+        return Optional.ofNullable(this.collisionCount);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<DaemonSetConditionArgs>> conditions;
+    private @Nullable Output<List<DaemonSetConditionArgs>> conditions;
 
-    public Output<List<DaemonSetConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<DaemonSetConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="currentNumberScheduled", required=true)
-      private final Output<Integer> currentNumberScheduled;
+    private Output<Integer> currentNumberScheduled;
 
     public Output<Integer> currentNumberScheduled() {
         return this.currentNumberScheduled;
@@ -59,7 +59,7 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="desiredNumberScheduled", required=true)
-      private final Output<Integer> desiredNumberScheduled;
+    private Output<Integer> desiredNumberScheduled;
 
     public Output<Integer> desiredNumberScheduled() {
         return this.desiredNumberScheduled;
@@ -70,10 +70,10 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numberAvailable")
-      private final @Nullable Output<Integer> numberAvailable;
+    private @Nullable Output<Integer> numberAvailable;
 
-    public Output<Integer> numberAvailable() {
-        return this.numberAvailable == null ? Codegen.empty() : this.numberAvailable;
+    public Optional<Output<Integer>> numberAvailable() {
+        return Optional.ofNullable(this.numberAvailable);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numberMisscheduled", required=true)
-      private final Output<Integer> numberMisscheduled;
+    private Output<Integer> numberMisscheduled;
 
     public Output<Integer> numberMisscheduled() {
         return this.numberMisscheduled;
@@ -92,7 +92,7 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numberReady", required=true)
-      private final Output<Integer> numberReady;
+    private Output<Integer> numberReady;
 
     public Output<Integer> numberReady() {
         return this.numberReady;
@@ -103,10 +103,10 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numberUnavailable")
-      private final @Nullable Output<Integer> numberUnavailable;
+    private @Nullable Output<Integer> numberUnavailable;
 
-    public Output<Integer> numberUnavailable() {
-        return this.numberUnavailable == null ? Codegen.empty() : this.numberUnavailable;
+    public Optional<Output<Integer>> numberUnavailable() {
+        return Optional.ofNullable(this.numberUnavailable);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="observedGeneration")
-      private final @Nullable Output<Integer> observedGeneration;
+    private @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> observedGeneration() {
-        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
+    public Optional<Output<Integer>> observedGeneration() {
+        return Optional.ofNullable(this.observedGeneration);
     }
 
     /**
@@ -125,170 +125,146 @@ public final class DaemonSetStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="updatedNumberScheduled")
-      private final @Nullable Output<Integer> updatedNumberScheduled;
+    private @Nullable Output<Integer> updatedNumberScheduled;
 
-    public Output<Integer> updatedNumberScheduled() {
-        return this.updatedNumberScheduled == null ? Codegen.empty() : this.updatedNumberScheduled;
+    public Optional<Output<Integer>> updatedNumberScheduled() {
+        return Optional.ofNullable(this.updatedNumberScheduled);
     }
 
-    public DaemonSetStatusArgs(
-        @Nullable Output<Integer> collisionCount,
-        @Nullable Output<List<DaemonSetConditionArgs>> conditions,
-        Output<Integer> currentNumberScheduled,
-        Output<Integer> desiredNumberScheduled,
-        @Nullable Output<Integer> numberAvailable,
-        Output<Integer> numberMisscheduled,
-        Output<Integer> numberReady,
-        @Nullable Output<Integer> numberUnavailable,
-        @Nullable Output<Integer> observedGeneration,
-        @Nullable Output<Integer> updatedNumberScheduled) {
-        this.collisionCount = collisionCount;
-        this.conditions = conditions;
-        this.currentNumberScheduled = Objects.requireNonNull(currentNumberScheduled, "expected parameter 'currentNumberScheduled' to be non-null");
-        this.desiredNumberScheduled = Objects.requireNonNull(desiredNumberScheduled, "expected parameter 'desiredNumberScheduled' to be non-null");
-        this.numberAvailable = numberAvailable;
-        this.numberMisscheduled = Objects.requireNonNull(numberMisscheduled, "expected parameter 'numberMisscheduled' to be non-null");
-        this.numberReady = Objects.requireNonNull(numberReady, "expected parameter 'numberReady' to be non-null");
-        this.numberUnavailable = numberUnavailable;
-        this.observedGeneration = observedGeneration;
-        this.updatedNumberScheduled = updatedNumberScheduled;
-    }
+    private DaemonSetStatusArgs() {}
 
-    private DaemonSetStatusArgs() {
-        this.collisionCount = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.currentNumberScheduled = Codegen.empty();
-        this.desiredNumberScheduled = Codegen.empty();
-        this.numberAvailable = Codegen.empty();
-        this.numberMisscheduled = Codegen.empty();
-        this.numberReady = Codegen.empty();
-        this.numberUnavailable = Codegen.empty();
-        this.observedGeneration = Codegen.empty();
-        this.updatedNumberScheduled = Codegen.empty();
+    private DaemonSetStatusArgs(DaemonSetStatusArgs $) {
+        this.collisionCount = $.collisionCount;
+        this.conditions = $.conditions;
+        this.currentNumberScheduled = $.currentNumberScheduled;
+        this.desiredNumberScheduled = $.desiredNumberScheduled;
+        this.numberAvailable = $.numberAvailable;
+        this.numberMisscheduled = $.numberMisscheduled;
+        this.numberReady = $.numberReady;
+        this.numberUnavailable = $.numberUnavailable;
+        this.observedGeneration = $.observedGeneration;
+        this.updatedNumberScheduled = $.updatedNumberScheduled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DaemonSetStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> collisionCount;
-        private @Nullable Output<List<DaemonSetConditionArgs>> conditions;
-        private Output<Integer> currentNumberScheduled;
-        private Output<Integer> desiredNumberScheduled;
-        private @Nullable Output<Integer> numberAvailable;
-        private Output<Integer> numberMisscheduled;
-        private Output<Integer> numberReady;
-        private @Nullable Output<Integer> numberUnavailable;
-        private @Nullable Output<Integer> observedGeneration;
-        private @Nullable Output<Integer> updatedNumberScheduled;
+        private DaemonSetStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DaemonSetStatusArgs();
         }
 
         public Builder(DaemonSetStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collisionCount = defaults.collisionCount;
-    	      this.conditions = defaults.conditions;
-    	      this.currentNumberScheduled = defaults.currentNumberScheduled;
-    	      this.desiredNumberScheduled = defaults.desiredNumberScheduled;
-    	      this.numberAvailable = defaults.numberAvailable;
-    	      this.numberMisscheduled = defaults.numberMisscheduled;
-    	      this.numberReady = defaults.numberReady;
-    	      this.numberUnavailable = defaults.numberUnavailable;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.updatedNumberScheduled = defaults.updatedNumberScheduled;
+            $ = new DaemonSetStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collisionCount(@Nullable Output<Integer> collisionCount) {
-            this.collisionCount = collisionCount;
+            $.collisionCount = collisionCount;
             return this;
         }
-        public Builder collisionCount(@Nullable Integer collisionCount) {
-            this.collisionCount = Codegen.ofNullable(collisionCount);
-            return this;
+
+        public Builder collisionCount(Integer collisionCount) {
+            return collisionCount(Output.of(collisionCount));
         }
+
         public Builder conditions(@Nullable Output<List<DaemonSetConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<DaemonSetConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<DaemonSetConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(DaemonSetConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder currentNumberScheduled(Output<Integer> currentNumberScheduled) {
-            this.currentNumberScheduled = Objects.requireNonNull(currentNumberScheduled);
+            $.currentNumberScheduled = currentNumberScheduled;
             return this;
         }
+
         public Builder currentNumberScheduled(Integer currentNumberScheduled) {
-            this.currentNumberScheduled = Output.of(Objects.requireNonNull(currentNumberScheduled));
-            return this;
+            return currentNumberScheduled(Output.of(currentNumberScheduled));
         }
+
         public Builder desiredNumberScheduled(Output<Integer> desiredNumberScheduled) {
-            this.desiredNumberScheduled = Objects.requireNonNull(desiredNumberScheduled);
+            $.desiredNumberScheduled = desiredNumberScheduled;
             return this;
         }
+
         public Builder desiredNumberScheduled(Integer desiredNumberScheduled) {
-            this.desiredNumberScheduled = Output.of(Objects.requireNonNull(desiredNumberScheduled));
-            return this;
+            return desiredNumberScheduled(Output.of(desiredNumberScheduled));
         }
+
         public Builder numberAvailable(@Nullable Output<Integer> numberAvailable) {
-            this.numberAvailable = numberAvailable;
+            $.numberAvailable = numberAvailable;
             return this;
         }
-        public Builder numberAvailable(@Nullable Integer numberAvailable) {
-            this.numberAvailable = Codegen.ofNullable(numberAvailable);
-            return this;
+
+        public Builder numberAvailable(Integer numberAvailable) {
+            return numberAvailable(Output.of(numberAvailable));
         }
+
         public Builder numberMisscheduled(Output<Integer> numberMisscheduled) {
-            this.numberMisscheduled = Objects.requireNonNull(numberMisscheduled);
+            $.numberMisscheduled = numberMisscheduled;
             return this;
         }
+
         public Builder numberMisscheduled(Integer numberMisscheduled) {
-            this.numberMisscheduled = Output.of(Objects.requireNonNull(numberMisscheduled));
-            return this;
+            return numberMisscheduled(Output.of(numberMisscheduled));
         }
+
         public Builder numberReady(Output<Integer> numberReady) {
-            this.numberReady = Objects.requireNonNull(numberReady);
+            $.numberReady = numberReady;
             return this;
         }
+
         public Builder numberReady(Integer numberReady) {
-            this.numberReady = Output.of(Objects.requireNonNull(numberReady));
-            return this;
+            return numberReady(Output.of(numberReady));
         }
+
         public Builder numberUnavailable(@Nullable Output<Integer> numberUnavailable) {
-            this.numberUnavailable = numberUnavailable;
+            $.numberUnavailable = numberUnavailable;
             return this;
         }
-        public Builder numberUnavailable(@Nullable Integer numberUnavailable) {
-            this.numberUnavailable = Codegen.ofNullable(numberUnavailable);
-            return this;
+
+        public Builder numberUnavailable(Integer numberUnavailable) {
+            return numberUnavailable(Output.of(numberUnavailable));
         }
+
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
-            this.observedGeneration = observedGeneration;
+            $.observedGeneration = observedGeneration;
             return this;
         }
-        public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Codegen.ofNullable(observedGeneration);
-            return this;
+
+        public Builder observedGeneration(Integer observedGeneration) {
+            return observedGeneration(Output.of(observedGeneration));
         }
+
         public Builder updatedNumberScheduled(@Nullable Output<Integer> updatedNumberScheduled) {
-            this.updatedNumberScheduled = updatedNumberScheduled;
+            $.updatedNumberScheduled = updatedNumberScheduled;
             return this;
         }
-        public Builder updatedNumberScheduled(@Nullable Integer updatedNumberScheduled) {
-            this.updatedNumberScheduled = Codegen.ofNullable(updatedNumberScheduled);
-            return this;
-        }        public DaemonSetStatusArgs build() {
-            return new DaemonSetStatusArgs(collisionCount, conditions, currentNumberScheduled, desiredNumberScheduled, numberAvailable, numberMisscheduled, numberReady, numberUnavailable, observedGeneration, updatedNumberScheduled);
+
+        public Builder updatedNumberScheduled(Integer updatedNumberScheduled) {
+            return updatedNumberScheduled(Output.of(updatedNumberScheduled));
+        }
+
+        public DaemonSetStatusArgs build() {
+            $.currentNumberScheduled = Objects.requireNonNull($.currentNumberScheduled, "expected parameter 'currentNumberScheduled' to be non-null");
+            $.desiredNumberScheduled = Objects.requireNonNull($.desiredNumberScheduled, "expected parameter 'desiredNumberScheduled' to be non-null");
+            $.numberMisscheduled = Objects.requireNonNull($.numberMisscheduled, "expected parameter 'numberMisscheduled' to be non-null");
+            $.numberReady = Objects.requireNonNull($.numberReady, "expected parameter 'numberReady' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ManagedInstancePairInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="partnerManagedInstanceId")
-      private final @Nullable Output<String> partnerManagedInstanceId;
+    private @Nullable Output<String> partnerManagedInstanceId;
 
-    public Output<String> partnerManagedInstanceId() {
-        return this.partnerManagedInstanceId == null ? Codegen.empty() : this.partnerManagedInstanceId;
+    public Optional<Output<String>> partnerManagedInstanceId() {
+        return Optional.ofNullable(this.partnerManagedInstanceId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ManagedInstancePairInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="primaryManagedInstanceId")
-      private final @Nullable Output<String> primaryManagedInstanceId;
+    private @Nullable Output<String> primaryManagedInstanceId;
 
-    public Output<String> primaryManagedInstanceId() {
-        return this.primaryManagedInstanceId == null ? Codegen.empty() : this.primaryManagedInstanceId;
+    public Optional<Output<String>> primaryManagedInstanceId() {
+        return Optional.ofNullable(this.primaryManagedInstanceId);
     }
 
-    public ManagedInstancePairInfoArgs(
-        @Nullable Output<String> partnerManagedInstanceId,
-        @Nullable Output<String> primaryManagedInstanceId) {
-        this.partnerManagedInstanceId = partnerManagedInstanceId;
-        this.primaryManagedInstanceId = primaryManagedInstanceId;
-    }
+    private ManagedInstancePairInfoArgs() {}
 
-    private ManagedInstancePairInfoArgs() {
-        this.partnerManagedInstanceId = Codegen.empty();
-        this.primaryManagedInstanceId = Codegen.empty();
+    private ManagedInstancePairInfoArgs(ManagedInstancePairInfoArgs $) {
+        this.partnerManagedInstanceId = $.partnerManagedInstanceId;
+        this.primaryManagedInstanceId = $.primaryManagedInstanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstancePairInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> partnerManagedInstanceId;
-        private @Nullable Output<String> primaryManagedInstanceId;
+        private ManagedInstancePairInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstancePairInfoArgs();
         }
 
         public Builder(ManagedInstancePairInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partnerManagedInstanceId = defaults.partnerManagedInstanceId;
-    	      this.primaryManagedInstanceId = defaults.primaryManagedInstanceId;
+            $ = new ManagedInstancePairInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partnerManagedInstanceId(@Nullable Output<String> partnerManagedInstanceId) {
-            this.partnerManagedInstanceId = partnerManagedInstanceId;
+            $.partnerManagedInstanceId = partnerManagedInstanceId;
             return this;
         }
-        public Builder partnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
-            this.partnerManagedInstanceId = Codegen.ofNullable(partnerManagedInstanceId);
-            return this;
+
+        public Builder partnerManagedInstanceId(String partnerManagedInstanceId) {
+            return partnerManagedInstanceId(Output.of(partnerManagedInstanceId));
         }
+
         public Builder primaryManagedInstanceId(@Nullable Output<String> primaryManagedInstanceId) {
-            this.primaryManagedInstanceId = primaryManagedInstanceId;
+            $.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;
         }
-        public Builder primaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
-            this.primaryManagedInstanceId = Codegen.ofNullable(primaryManagedInstanceId);
-            return this;
-        }        public ManagedInstancePairInfoArgs build() {
-            return new ManagedInstancePairInfoArgs(partnerManagedInstanceId, primaryManagedInstanceId);
+
+        public Builder primaryManagedInstanceId(String primaryManagedInstanceId) {
+            return primaryManagedInstanceId(Output.of(primaryManagedInstanceId));
+        }
+
+        public ManagedInstancePairInfoArgs build() {
+            return $;
         }
     }
+
 }

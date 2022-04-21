@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class BackendTlsPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="validateCertificateChain")
-      private final @Nullable Output<Boolean> validateCertificateChain;
+    private @Nullable Output<Boolean> validateCertificateChain;
 
-    public Output<Boolean> validateCertificateChain() {
-        return this.validateCertificateChain == null ? Codegen.empty() : this.validateCertificateChain;
+    public Optional<Output<Boolean>> validateCertificateChain() {
+        return Optional.ofNullable(this.validateCertificateChain);
     }
 
     /**
@@ -35,63 +36,60 @@ public final class BackendTlsPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="validateCertificateName")
-      private final @Nullable Output<Boolean> validateCertificateName;
+    private @Nullable Output<Boolean> validateCertificateName;
 
-    public Output<Boolean> validateCertificateName() {
-        return this.validateCertificateName == null ? Codegen.empty() : this.validateCertificateName;
+    public Optional<Output<Boolean>> validateCertificateName() {
+        return Optional.ofNullable(this.validateCertificateName);
     }
 
-    public BackendTlsPropertiesArgs(
-        @Nullable Output<Boolean> validateCertificateChain,
-        @Nullable Output<Boolean> validateCertificateName) {
-        this.validateCertificateChain = Codegen.booleanProp("validateCertificateChain").output().arg(validateCertificateChain).def(true).getNullable();
-        this.validateCertificateName = Codegen.booleanProp("validateCertificateName").output().arg(validateCertificateName).def(true).getNullable();
-    }
+    private BackendTlsPropertiesArgs() {}
 
-    private BackendTlsPropertiesArgs() {
-        this.validateCertificateChain = Codegen.empty();
-        this.validateCertificateName = Codegen.empty();
+    private BackendTlsPropertiesArgs(BackendTlsPropertiesArgs $) {
+        this.validateCertificateChain = $.validateCertificateChain;
+        this.validateCertificateName = $.validateCertificateName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendTlsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> validateCertificateChain;
-        private @Nullable Output<Boolean> validateCertificateName;
+        private BackendTlsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendTlsPropertiesArgs();
         }
 
         public Builder(BackendTlsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.validateCertificateChain = defaults.validateCertificateChain;
-    	      this.validateCertificateName = defaults.validateCertificateName;
+            $ = new BackendTlsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder validateCertificateChain(@Nullable Output<Boolean> validateCertificateChain) {
-            this.validateCertificateChain = validateCertificateChain;
+            $.validateCertificateChain = validateCertificateChain;
             return this;
         }
-        public Builder validateCertificateChain(@Nullable Boolean validateCertificateChain) {
-            this.validateCertificateChain = Codegen.ofNullable(validateCertificateChain);
-            return this;
+
+        public Builder validateCertificateChain(Boolean validateCertificateChain) {
+            return validateCertificateChain(Output.of(validateCertificateChain));
         }
+
         public Builder validateCertificateName(@Nullable Output<Boolean> validateCertificateName) {
-            this.validateCertificateName = validateCertificateName;
+            $.validateCertificateName = validateCertificateName;
             return this;
         }
-        public Builder validateCertificateName(@Nullable Boolean validateCertificateName) {
-            this.validateCertificateName = Codegen.ofNullable(validateCertificateName);
-            return this;
-        }        public BackendTlsPropertiesArgs build() {
-            return new BackendTlsPropertiesArgs(validateCertificateChain, validateCertificateName);
+
+        public Builder validateCertificateName(Boolean validateCertificateName) {
+            return validateCertificateName(Output.of(validateCertificateName));
+        }
+
+        public BackendTlsPropertiesArgs build() {
+            $.validateCertificateChain = Codegen.booleanProp("validateCertificateChain").output().arg($.validateCertificateChain).def(true).getNullable();
+            $.validateCertificateName = Codegen.booleanProp("validateCertificateName").output().arg($.validateCertificateName).def(true).getNullable();
+            return $;
         }
     }
+
 }

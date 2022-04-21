@@ -6,9 +6,9 @@ package com.pulumi.azurenative.appplatform;
 import com.pulumi.azurenative.appplatform.inputs.BuildpackBindingPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="buildServiceName", required=true)
-      private final Output<String> buildServiceName;
+    private Output<String> buildServiceName;
 
     public Output<String> buildServiceName() {
         return this.buildServiceName;
@@ -32,7 +32,7 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="builderName", required=true)
-      private final Output<String> builderName;
+    private Output<String> builderName;
 
     public Output<String> builderName() {
         return this.builderName;
@@ -43,10 +43,10 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="buildpackBindingName")
-      private final @Nullable Output<String> buildpackBindingName;
+    private @Nullable Output<String> buildpackBindingName;
 
-    public Output<String> buildpackBindingName() {
-        return this.buildpackBindingName == null ? Codegen.empty() : this.buildpackBindingName;
+    public Optional<Output<String>> buildpackBindingName() {
+        return Optional.ofNullable(this.buildpackBindingName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<BuildpackBindingPropertiesArgs> properties;
+    private @Nullable Output<BuildpackBindingPropertiesArgs> properties;
 
-    public Output<BuildpackBindingPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<BuildpackBindingPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,115 +76,102 @@ public final class BuildpackBindingArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public BuildpackBindingArgs(
-        Output<String> buildServiceName,
-        Output<String> builderName,
-        @Nullable Output<String> buildpackBindingName,
-        @Nullable Output<BuildpackBindingPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.buildServiceName = Objects.requireNonNull(buildServiceName, "expected parameter 'buildServiceName' to be non-null");
-        this.builderName = Objects.requireNonNull(builderName, "expected parameter 'builderName' to be non-null");
-        this.buildpackBindingName = buildpackBindingName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private BuildpackBindingArgs() {}
 
-    private BuildpackBindingArgs() {
-        this.buildServiceName = Codegen.empty();
-        this.builderName = Codegen.empty();
-        this.buildpackBindingName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private BuildpackBindingArgs(BuildpackBindingArgs $) {
+        this.buildServiceName = $.buildServiceName;
+        this.builderName = $.builderName;
+        this.buildpackBindingName = $.buildpackBindingName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildpackBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> buildServiceName;
-        private Output<String> builderName;
-        private @Nullable Output<String> buildpackBindingName;
-        private @Nullable Output<BuildpackBindingPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private BuildpackBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildpackBindingArgs();
         }
 
         public Builder(BuildpackBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildServiceName = defaults.buildServiceName;
-    	      this.builderName = defaults.builderName;
-    	      this.buildpackBindingName = defaults.buildpackBindingName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new BuildpackBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildServiceName(Output<String> buildServiceName) {
-            this.buildServiceName = Objects.requireNonNull(buildServiceName);
+            $.buildServiceName = buildServiceName;
             return this;
         }
+
         public Builder buildServiceName(String buildServiceName) {
-            this.buildServiceName = Output.of(Objects.requireNonNull(buildServiceName));
-            return this;
+            return buildServiceName(Output.of(buildServiceName));
         }
+
         public Builder builderName(Output<String> builderName) {
-            this.builderName = Objects.requireNonNull(builderName);
+            $.builderName = builderName;
             return this;
         }
+
         public Builder builderName(String builderName) {
-            this.builderName = Output.of(Objects.requireNonNull(builderName));
-            return this;
+            return builderName(Output.of(builderName));
         }
+
         public Builder buildpackBindingName(@Nullable Output<String> buildpackBindingName) {
-            this.buildpackBindingName = buildpackBindingName;
+            $.buildpackBindingName = buildpackBindingName;
             return this;
         }
-        public Builder buildpackBindingName(@Nullable String buildpackBindingName) {
-            this.buildpackBindingName = Codegen.ofNullable(buildpackBindingName);
-            return this;
+
+        public Builder buildpackBindingName(String buildpackBindingName) {
+            return buildpackBindingName(Output.of(buildpackBindingName));
         }
+
         public Builder properties(@Nullable Output<BuildpackBindingPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable BuildpackBindingPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(BuildpackBindingPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public BuildpackBindingArgs build() {
-            return new BuildpackBindingArgs(buildServiceName, builderName, buildpackBindingName, properties, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public BuildpackBindingArgs build() {
+            $.buildServiceName = Objects.requireNonNull($.buildServiceName, "expected parameter 'buildServiceName' to be non-null");
+            $.builderName = Objects.requireNonNull($.builderName, "expected parameter 'builderName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

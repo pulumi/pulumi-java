@@ -21,45 +21,45 @@ public final class MultiClusterIngressFeatureSpecResponse extends com.pulumi.res
      * 
      */
     @Import(name="configMembership", required=true)
-      private final String configMembership;
+    private String configMembership;
 
     public String configMembership() {
         return this.configMembership;
     }
 
-    public MultiClusterIngressFeatureSpecResponse(String configMembership) {
-        this.configMembership = Objects.requireNonNull(configMembership, "expected parameter 'configMembership' to be non-null");
-    }
+    private MultiClusterIngressFeatureSpecResponse() {}
 
-    private MultiClusterIngressFeatureSpecResponse() {
-        this.configMembership = null;
+    private MultiClusterIngressFeatureSpecResponse(MultiClusterIngressFeatureSpecResponse $) {
+        this.configMembership = $.configMembership;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiClusterIngressFeatureSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configMembership;
+        private MultiClusterIngressFeatureSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiClusterIngressFeatureSpecResponse();
         }
 
         public Builder(MultiClusterIngressFeatureSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMembership = defaults.configMembership;
+            $ = new MultiClusterIngressFeatureSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configMembership(String configMembership) {
-            this.configMembership = Objects.requireNonNull(configMembership);
+            $.configMembership = configMembership;
             return this;
-        }        public MultiClusterIngressFeatureSpecResponse build() {
-            return new MultiClusterIngressFeatureSpecResponse(configMembership);
+        }
+
+        public MultiClusterIngressFeatureSpecResponse build() {
+            $.configMembership = Objects.requireNonNull($.configMembership, "expected parameter 'configMembership' to be non-null");
+            return $;
         }
     }
+
 }

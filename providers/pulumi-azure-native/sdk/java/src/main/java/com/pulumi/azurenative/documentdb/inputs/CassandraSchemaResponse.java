@@ -26,10 +26,10 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="clusterKeys")
-      private final @Nullable List<ClusterKeyResponse> clusterKeys;
+    private @Nullable List<ClusterKeyResponse> clusterKeys;
 
-    public List<ClusterKeyResponse> clusterKeys() {
-        return this.clusterKeys == null ? List.of() : this.clusterKeys;
+    public Optional<List<ClusterKeyResponse>> clusterKeys() {
+        return Optional.ofNullable(this.clusterKeys);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="columns")
-      private final @Nullable List<ColumnResponse> columns;
+    private @Nullable List<ColumnResponse> columns;
 
-    public List<ColumnResponse> columns() {
-        return this.columns == null ? List.of() : this.columns;
+    public Optional<List<ColumnResponse>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -48,73 +48,68 @@ public final class CassandraSchemaResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="partitionKeys")
-      private final @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
+    private @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
 
-    public List<CassandraPartitionKeyResponse> partitionKeys() {
-        return this.partitionKeys == null ? List.of() : this.partitionKeys;
+    public Optional<List<CassandraPartitionKeyResponse>> partitionKeys() {
+        return Optional.ofNullable(this.partitionKeys);
     }
 
-    public CassandraSchemaResponse(
-        @Nullable List<ClusterKeyResponse> clusterKeys,
-        @Nullable List<ColumnResponse> columns,
-        @Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
-        this.clusterKeys = clusterKeys;
-        this.columns = columns;
-        this.partitionKeys = partitionKeys;
-    }
+    private CassandraSchemaResponse() {}
 
-    private CassandraSchemaResponse() {
-        this.clusterKeys = List.of();
-        this.columns = List.of();
-        this.partitionKeys = List.of();
+    private CassandraSchemaResponse(CassandraSchemaResponse $) {
+        this.clusterKeys = $.clusterKeys;
+        this.columns = $.columns;
+        this.partitionKeys = $.partitionKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraSchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ClusterKeyResponse> clusterKeys;
-        private @Nullable List<ColumnResponse> columns;
-        private @Nullable List<CassandraPartitionKeyResponse> partitionKeys;
+        private CassandraSchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraSchemaResponse();
         }
 
         public Builder(CassandraSchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterKeys = defaults.clusterKeys;
-    	      this.columns = defaults.columns;
-    	      this.partitionKeys = defaults.partitionKeys;
+            $ = new CassandraSchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterKeys(@Nullable List<ClusterKeyResponse> clusterKeys) {
-            this.clusterKeys = clusterKeys;
+            $.clusterKeys = clusterKeys;
             return this;
         }
+
         public Builder clusterKeys(ClusterKeyResponse... clusterKeys) {
             return clusterKeys(List.of(clusterKeys));
         }
+
         public Builder columns(@Nullable List<ColumnResponse> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(ColumnResponse... columns) {
             return columns(List.of(columns));
         }
+
         public Builder partitionKeys(@Nullable List<CassandraPartitionKeyResponse> partitionKeys) {
-            this.partitionKeys = partitionKeys;
+            $.partitionKeys = partitionKeys;
             return this;
         }
+
         public Builder partitionKeys(CassandraPartitionKeyResponse... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
-        }        public CassandraSchemaResponse build() {
-            return new CassandraSchemaResponse(clusterKeys, columns, partitionKeys);
+        }
+
+        public CassandraSchemaResponse build() {
+            return $;
         }
     }
+
 }

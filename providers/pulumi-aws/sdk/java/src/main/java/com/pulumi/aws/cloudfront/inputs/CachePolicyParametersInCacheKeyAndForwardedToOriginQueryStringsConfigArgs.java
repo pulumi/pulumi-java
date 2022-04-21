@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
      * 
      */
     @Import(name="queryStringBehavior", required=true)
-      private final Output<String> queryStringBehavior;
+    private Output<String> queryStringBehavior;
 
     public Output<String> queryStringBehavior() {
         return this.queryStringBehavior;
@@ -32,63 +32,59 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
      * 
      */
     @Import(name="queryStrings")
-      private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs> queryStrings;
+    private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs> queryStrings;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs> queryStrings() {
-        return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
+    public Optional<Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs>> queryStrings() {
+        return Optional.ofNullable(this.queryStrings);
     }
 
-    public CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs(
-        Output<String> queryStringBehavior,
-        @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs> queryStrings) {
-        this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");
-        this.queryStrings = queryStrings;
-    }
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs() {}
 
-    private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs() {
-        this.queryStringBehavior = Codegen.empty();
-        this.queryStrings = Codegen.empty();
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs(CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs $) {
+        this.queryStringBehavior = $.queryStringBehavior;
+        this.queryStrings = $.queryStrings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> queryStringBehavior;
-        private @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs> queryStrings;
+        private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs();
         }
 
         public Builder(CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryStringBehavior = defaults.queryStringBehavior;
-    	      this.queryStrings = defaults.queryStrings;
+            $ = new CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queryStringBehavior(Output<String> queryStringBehavior) {
-            this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
+            $.queryStringBehavior = queryStringBehavior;
             return this;
         }
+
         public Builder queryStringBehavior(String queryStringBehavior) {
-            this.queryStringBehavior = Output.of(Objects.requireNonNull(queryStringBehavior));
-            return this;
+            return queryStringBehavior(Output.of(queryStringBehavior));
         }
+
         public Builder queryStrings(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs> queryStrings) {
-            this.queryStrings = queryStrings;
+            $.queryStrings = queryStrings;
             return this;
         }
-        public Builder queryStrings(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs queryStrings) {
-            this.queryStrings = Codegen.ofNullable(queryStrings);
-            return this;
-        }        public CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs build() {
-            return new CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs(queryStringBehavior, queryStrings);
+
+        public Builder queryStrings(CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs queryStrings) {
+            return queryStrings(Output.of(queryStrings));
+        }
+
+        public CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs build() {
+            $.queryStringBehavior = Objects.requireNonNull($.queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");
+            return $;
         }
     }
+
 }

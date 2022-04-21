@@ -5,9 +5,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CmkKeyVaultPropertiesArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="keyUri")
-      private final @Nullable Output<String> keyUri;
+    private @Nullable Output<String> keyUri;
 
-    public Output<String> keyUri() {
-        return this.keyUri == null ? Codegen.empty() : this.keyUri;
+    public Optional<Output<String>> keyUri() {
+        return Optional.ofNullable(this.keyUri);
     }
 
-    public CmkKeyVaultPropertiesArgs(@Nullable Output<String> keyUri) {
-        this.keyUri = keyUri;
-    }
+    private CmkKeyVaultPropertiesArgs() {}
 
-    private CmkKeyVaultPropertiesArgs() {
-        this.keyUri = Codegen.empty();
+    private CmkKeyVaultPropertiesArgs(CmkKeyVaultPropertiesArgs $) {
+        this.keyUri = $.keyUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CmkKeyVaultPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyUri;
+        private CmkKeyVaultPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CmkKeyVaultPropertiesArgs();
         }
 
         public Builder(CmkKeyVaultPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyUri = defaults.keyUri;
+            $ = new CmkKeyVaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyUri(@Nullable Output<String> keyUri) {
-            this.keyUri = keyUri;
+            $.keyUri = keyUri;
             return this;
         }
-        public Builder keyUri(@Nullable String keyUri) {
-            this.keyUri = Codegen.ofNullable(keyUri);
-            return this;
-        }        public CmkKeyVaultPropertiesArgs build() {
-            return new CmkKeyVaultPropertiesArgs(keyUri);
+
+        public Builder keyUri(String keyUri) {
+            return keyUri(Output.of(keyUri));
+        }
+
+        public CmkKeyVaultPropertiesArgs build() {
+            return $;
         }
     }
+
 }

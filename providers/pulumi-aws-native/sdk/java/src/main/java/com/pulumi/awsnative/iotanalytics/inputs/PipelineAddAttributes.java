@@ -16,78 +16,72 @@ public final class PipelineAddAttributes extends com.pulumi.resources.InvokeArgs
     public static final PipelineAddAttributes Empty = new PipelineAddAttributes();
 
     @Import(name="attributes", required=true)
-      private final Object attributes;
+    private Object attributes;
 
     public Object attributes() {
         return this.attributes;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable String next;
+    private @Nullable String next;
 
     public Optional<String> next() {
-        return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
+        return Optional.ofNullable(this.next);
     }
 
-    public PipelineAddAttributes(
-        Object attributes,
-        String name,
-        @Nullable String next) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-    }
+    private PipelineAddAttributes() {}
 
-    private PipelineAddAttributes() {
-        this.attributes = null;
-        this.name = null;
-        this.next = null;
+    private PipelineAddAttributes(PipelineAddAttributes $) {
+        this.attributes = $.attributes;
+        this.name = $.name;
+        this.next = $.next;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineAddAttributes defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Object attributes;
-        private String name;
-        private @Nullable String next;
+        private PipelineAddAttributes $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineAddAttributes();
         }
 
         public Builder(PipelineAddAttributes defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
+            $ = new PipelineAddAttributes(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(Object attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder next(@Nullable String next) {
-            this.next = next;
+            $.next = next;
             return this;
-        }        public PipelineAddAttributes build() {
-            return new PipelineAddAttributes(attributes, name, next);
+        }
+
+        public PipelineAddAttributes build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

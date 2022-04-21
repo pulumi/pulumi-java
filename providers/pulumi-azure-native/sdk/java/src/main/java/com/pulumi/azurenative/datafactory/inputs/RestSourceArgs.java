@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Output<Object> additionalColumns;
+    private @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> additionalColumns() {
-        return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
+    public Optional<Output<Object>> additionalColumns() {
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalHeaders")
-      private final @Nullable Output<Object> additionalHeaders;
+    private @Nullable Output<Object> additionalHeaders;
 
-    public Output<Object> additionalHeaders() {
-        return this.additionalHeaders == null ? Codegen.empty() : this.additionalHeaders;
+    public Optional<Output<Object>> additionalHeaders() {
+        return Optional.ofNullable(this.additionalHeaders);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpRequestTimeout")
-      private final @Nullable Output<Object> httpRequestTimeout;
+    private @Nullable Output<Object> httpRequestTimeout;
 
-    public Output<Object> httpRequestTimeout() {
-        return this.httpRequestTimeout == null ? Codegen.empty() : this.httpRequestTimeout;
+    public Optional<Output<Object>> httpRequestTimeout() {
+        return Optional.ofNullable(this.httpRequestTimeout);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="paginationRules")
-      private final @Nullable Output<Object> paginationRules;
+    private @Nullable Output<Object> paginationRules;
 
-    public Output<Object> paginationRules() {
-        return this.paginationRules == null ? Codegen.empty() : this.paginationRules;
+    public Optional<Output<Object>> paginationRules() {
+        return Optional.ofNullable(this.paginationRules);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestBody")
-      private final @Nullable Output<Object> requestBody;
+    private @Nullable Output<Object> requestBody;
 
-    public Output<Object> requestBody() {
-        return this.requestBody == null ? Codegen.empty() : this.requestBody;
+    public Optional<Output<Object>> requestBody() {
+        return Optional.ofNullable(this.requestBody);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestInterval")
-      private final @Nullable Output<Object> requestInterval;
+    private @Nullable Output<Object> requestInterval;
 
-    public Output<Object> requestInterval() {
-        return this.requestInterval == null ? Codegen.empty() : this.requestInterval;
+    public Optional<Output<Object>> requestInterval() {
+        return Optional.ofNullable(this.requestInterval);
     }
 
     /**
@@ -113,10 +114,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestMethod")
-      private final @Nullable Output<Object> requestMethod;
+    private @Nullable Output<Object> requestMethod;
 
-    public Output<Object> requestMethod() {
-        return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
+    public Optional<Output<Object>> requestMethod() {
+        return Optional.ofNullable(this.requestMethod);
     }
 
     /**
@@ -124,10 +125,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Output<Object> sourceRetryCount;
+    private @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
+    public Optional<Output<Object>> sourceRetryCount() {
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -135,10 +136,10 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Output<Object> sourceRetryWait;
+    private @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
+    public Optional<Output<Object>> sourceRetryWait() {
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -147,193 +148,159 @@ public final class RestSourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public RestSourceArgs(
-        @Nullable Output<Object> additionalColumns,
-        @Nullable Output<Object> additionalHeaders,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> httpRequestTimeout,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> paginationRules,
-        @Nullable Output<Object> requestBody,
-        @Nullable Output<Object> requestInterval,
-        @Nullable Output<Object> requestMethod,
-        @Nullable Output<Object> sourceRetryCount,
-        @Nullable Output<Object> sourceRetryWait,
-        Output<String> type) {
-        this.additionalColumns = additionalColumns;
-        this.additionalHeaders = additionalHeaders;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.httpRequestTimeout = httpRequestTimeout;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.paginationRules = paginationRules;
-        this.requestBody = requestBody;
-        this.requestInterval = requestInterval;
-        this.requestMethod = requestMethod;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private RestSourceArgs() {}
 
-    private RestSourceArgs() {
-        this.additionalColumns = Codegen.empty();
-        this.additionalHeaders = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.httpRequestTimeout = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.paginationRules = Codegen.empty();
-        this.requestBody = Codegen.empty();
-        this.requestInterval = Codegen.empty();
-        this.requestMethod = Codegen.empty();
-        this.sourceRetryCount = Codegen.empty();
-        this.sourceRetryWait = Codegen.empty();
-        this.type = Codegen.empty();
+    private RestSourceArgs(RestSourceArgs $) {
+        this.additionalColumns = $.additionalColumns;
+        this.additionalHeaders = $.additionalHeaders;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.httpRequestTimeout = $.httpRequestTimeout;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.paginationRules = $.paginationRules;
+        this.requestBody = $.requestBody;
+        this.requestInterval = $.requestInterval;
+        this.requestMethod = $.requestMethod;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> additionalColumns;
-        private @Nullable Output<Object> additionalHeaders;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> httpRequestTimeout;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> paginationRules;
-        private @Nullable Output<Object> requestBody;
-        private @Nullable Output<Object> requestInterval;
-        private @Nullable Output<Object> requestMethod;
-        private @Nullable Output<Object> sourceRetryCount;
-        private @Nullable Output<Object> sourceRetryWait;
-        private Output<String> type;
+        private RestSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestSourceArgs();
         }
 
         public Builder(RestSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.additionalHeaders = defaults.additionalHeaders;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.httpRequestTimeout = defaults.httpRequestTimeout;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.paginationRules = defaults.paginationRules;
-    	      this.requestBody = defaults.requestBody;
-    	      this.requestInterval = defaults.requestInterval;
-    	      this.requestMethod = defaults.requestMethod;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.type = defaults.type;
+            $ = new RestSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
-        public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Codegen.ofNullable(additionalColumns);
-            return this;
+
+        public Builder additionalColumns(Object additionalColumns) {
+            return additionalColumns(Output.of(additionalColumns));
         }
+
         public Builder additionalHeaders(@Nullable Output<Object> additionalHeaders) {
-            this.additionalHeaders = additionalHeaders;
+            $.additionalHeaders = additionalHeaders;
             return this;
         }
-        public Builder additionalHeaders(@Nullable Object additionalHeaders) {
-            this.additionalHeaders = Codegen.ofNullable(additionalHeaders);
-            return this;
+
+        public Builder additionalHeaders(Object additionalHeaders) {
+            return additionalHeaders(Output.of(additionalHeaders));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder httpRequestTimeout(@Nullable Output<Object> httpRequestTimeout) {
-            this.httpRequestTimeout = httpRequestTimeout;
+            $.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
-        public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
-            this.httpRequestTimeout = Codegen.ofNullable(httpRequestTimeout);
-            return this;
+
+        public Builder httpRequestTimeout(Object httpRequestTimeout) {
+            return httpRequestTimeout(Output.of(httpRequestTimeout));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder paginationRules(@Nullable Output<Object> paginationRules) {
-            this.paginationRules = paginationRules;
+            $.paginationRules = paginationRules;
             return this;
         }
-        public Builder paginationRules(@Nullable Object paginationRules) {
-            this.paginationRules = Codegen.ofNullable(paginationRules);
-            return this;
+
+        public Builder paginationRules(Object paginationRules) {
+            return paginationRules(Output.of(paginationRules));
         }
+
         public Builder requestBody(@Nullable Output<Object> requestBody) {
-            this.requestBody = requestBody;
+            $.requestBody = requestBody;
             return this;
         }
-        public Builder requestBody(@Nullable Object requestBody) {
-            this.requestBody = Codegen.ofNullable(requestBody);
-            return this;
+
+        public Builder requestBody(Object requestBody) {
+            return requestBody(Output.of(requestBody));
         }
+
         public Builder requestInterval(@Nullable Output<Object> requestInterval) {
-            this.requestInterval = requestInterval;
+            $.requestInterval = requestInterval;
             return this;
         }
-        public Builder requestInterval(@Nullable Object requestInterval) {
-            this.requestInterval = Codegen.ofNullable(requestInterval);
-            return this;
+
+        public Builder requestInterval(Object requestInterval) {
+            return requestInterval(Output.of(requestInterval));
         }
+
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
-            this.requestMethod = requestMethod;
+            $.requestMethod = requestMethod;
             return this;
         }
-        public Builder requestMethod(@Nullable Object requestMethod) {
-            this.requestMethod = Codegen.ofNullable(requestMethod);
-            return this;
+
+        public Builder requestMethod(Object requestMethod) {
+            return requestMethod(Output.of(requestMethod));
         }
+
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
-        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
-            return this;
+
+        public Builder sourceRetryCount(Object sourceRetryCount) {
+            return sourceRetryCount(Output.of(sourceRetryCount));
         }
+
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
-        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
-            return this;
+
+        public Builder sourceRetryWait(Object sourceRetryWait) {
+            return sourceRetryWait(Output.of(sourceRetryWait));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RestSourceArgs build() {
-            return new RestSourceArgs(additionalColumns, additionalHeaders, disableMetricsCollection, httpRequestTimeout, maxConcurrentConnections, paginationRules, requestBody, requestInterval, requestMethod, sourceRetryCount, sourceRetryWait, type);
+            return type(Output.of(type));
+        }
+
+        public RestSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

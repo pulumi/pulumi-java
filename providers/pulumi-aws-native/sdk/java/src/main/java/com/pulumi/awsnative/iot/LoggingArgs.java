@@ -6,7 +6,6 @@ package com.pulumi.awsnative.iot;
 import com.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -31,7 +30,7 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultLogLevel", required=true)
-      private final Output<LoggingDefaultLogLevel> defaultLogLevel;
+    private Output<LoggingDefaultLogLevel> defaultLogLevel;
 
     public Output<LoggingDefaultLogLevel> defaultLogLevel() {
         return this.defaultLogLevel;
@@ -42,76 +41,71 @@ public final class LoggingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public LoggingArgs(
-        Output<String> accountId,
-        Output<LoggingDefaultLogLevel> defaultLogLevel,
-        Output<String> roleArn) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.defaultLogLevel = Objects.requireNonNull(defaultLogLevel, "expected parameter 'defaultLogLevel' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private LoggingArgs() {}
 
-    private LoggingArgs() {
-        this.accountId = Codegen.empty();
-        this.defaultLogLevel = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private LoggingArgs(LoggingArgs $) {
+        this.accountId = $.accountId;
+        this.defaultLogLevel = $.defaultLogLevel;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private Output<LoggingDefaultLogLevel> defaultLogLevel;
-        private Output<String> roleArn;
+        private LoggingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingArgs();
         }
 
         public Builder(LoggingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.defaultLogLevel = defaults.defaultLogLevel;
-    	      this.roleArn = defaults.roleArn;
+            $ = new LoggingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder defaultLogLevel(Output<LoggingDefaultLogLevel> defaultLogLevel) {
-            this.defaultLogLevel = Objects.requireNonNull(defaultLogLevel);
+            $.defaultLogLevel = defaultLogLevel;
             return this;
         }
+
         public Builder defaultLogLevel(LoggingDefaultLogLevel defaultLogLevel) {
-            this.defaultLogLevel = Output.of(Objects.requireNonNull(defaultLogLevel));
-            return this;
+            return defaultLogLevel(Output.of(defaultLogLevel));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public LoggingArgs build() {
-            return new LoggingArgs(accountId, defaultLogLevel, roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public LoggingArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.defaultLogLevel = Objects.requireNonNull($.defaultLogLevel, "expected parameter 'defaultLogLevel' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

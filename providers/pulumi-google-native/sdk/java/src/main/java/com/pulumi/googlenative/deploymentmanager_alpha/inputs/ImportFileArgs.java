@@ -5,9 +5,9 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ImportFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ImportFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ImportFileArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> name) {
-        this.content = content;
-        this.name = name;
-    }
+    private ImportFileArgs() {}
 
-    private ImportFileArgs() {
-        this.content = Codegen.empty();
-        this.name = Codegen.empty();
+    private ImportFileArgs(ImportFileArgs $) {
+        this.content = $.content;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImportFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> name;
+        private ImportFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImportFileArgs();
         }
 
         public Builder(ImportFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.name = defaults.name;
+            $ = new ImportFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ImportFileArgs build() {
-            return new ImportFileArgs(content, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ImportFileArgs build() {
+            return $;
         }
     }
+
 }

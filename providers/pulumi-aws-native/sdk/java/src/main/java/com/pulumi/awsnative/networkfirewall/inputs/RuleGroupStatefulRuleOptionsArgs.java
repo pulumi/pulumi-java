@@ -6,8 +6,8 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 import com.pulumi.awsnative.networkfirewall.enums.RuleGroupRuleOrder;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class RuleGroupStatefulRuleOptionsArgs extends com.pulumi.resources
     public static final RuleGroupStatefulRuleOptionsArgs Empty = new RuleGroupStatefulRuleOptionsArgs();
 
     @Import(name="ruleOrder")
-      private final @Nullable Output<RuleGroupRuleOrder> ruleOrder;
+    private @Nullable Output<RuleGroupRuleOrder> ruleOrder;
 
-    public Output<RuleGroupRuleOrder> ruleOrder() {
-        return this.ruleOrder == null ? Codegen.empty() : this.ruleOrder;
+    public Optional<Output<RuleGroupRuleOrder>> ruleOrder() {
+        return Optional.ofNullable(this.ruleOrder);
     }
 
-    public RuleGroupStatefulRuleOptionsArgs(@Nullable Output<RuleGroupRuleOrder> ruleOrder) {
-        this.ruleOrder = ruleOrder;
-    }
+    private RuleGroupStatefulRuleOptionsArgs() {}
 
-    private RuleGroupStatefulRuleOptionsArgs() {
-        this.ruleOrder = Codegen.empty();
+    private RuleGroupStatefulRuleOptionsArgs(RuleGroupStatefulRuleOptionsArgs $) {
+        this.ruleOrder = $.ruleOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupStatefulRuleOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleOrder> ruleOrder;
+        private RuleGroupStatefulRuleOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupStatefulRuleOptionsArgs();
         }
 
         public Builder(RuleGroupStatefulRuleOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleOrder = defaults.ruleOrder;
+            $ = new RuleGroupStatefulRuleOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleOrder(@Nullable Output<RuleGroupRuleOrder> ruleOrder) {
-            this.ruleOrder = ruleOrder;
+            $.ruleOrder = ruleOrder;
             return this;
         }
-        public Builder ruleOrder(@Nullable RuleGroupRuleOrder ruleOrder) {
-            this.ruleOrder = Codegen.ofNullable(ruleOrder);
-            return this;
-        }        public RuleGroupStatefulRuleOptionsArgs build() {
-            return new RuleGroupStatefulRuleOptionsArgs(ruleOrder);
+
+        public Builder ruleOrder(RuleGroupRuleOrder ruleOrder) {
+            return ruleOrder(Output.of(ruleOrder));
+        }
+
+        public RuleGroupStatefulRuleOptionsArgs build() {
+            return $;
         }
     }
+
 }

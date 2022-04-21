@@ -15,6 +15,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +29,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="computeType", required=true)
-      private final Output<String> computeType;
+    private Output<String> computeType;
 
     public Output<String> computeType() {
         return this.computeType;
@@ -39,10 +40,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="environmentImageRequest")
-      private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
+    private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
-    public Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest() {
-        return this.environmentImageRequest == null ? Codegen.empty() : this.environmentImageRequest;
+    public Optional<Output<CreateServiceRequestEnvironmentImageRequestArgs>> environmentImageRequest() {
+        return Optional.ofNullable(this.environmentImageRequest);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="isDefault")
-      private final @Nullable Output<Boolean> isDefault;
+    private @Nullable Output<Boolean> isDefault;
 
-    public Output<Boolean> isDefault() {
-        return this.isDefault == null ? Codegen.empty() : this.isDefault;
+    public Optional<Output<Boolean>> isDefault() {
+        return Optional.ofNullable(this.isDefault);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
+    private @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
-    public Output<CreateServiceRequestKeysArgs> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<CreateServiceRequestKeysArgs>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kvTags")
-      private final @Nullable Output<Map<String,String>> kvTags;
+    private @Nullable Output<Map<String,String>> kvTags;
 
-    public Output<Map<String,String>> kvTags() {
-        return this.kvTags == null ? Codegen.empty() : this.kvTags;
+    public Optional<Output<Map<String,String>>> kvTags() {
+        return Optional.ofNullable(this.kvTags);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -116,7 +117,7 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -127,10 +128,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -138,10 +139,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="trafficPercentile")
-      private final @Nullable Output<Double> trafficPercentile;
+    private @Nullable Output<Double> trafficPercentile;
 
-    public Output<Double> trafficPercentile() {
-        return this.trafficPercentile == null ? Codegen.empty() : this.trafficPercentile;
+    public Optional<Output<Double>> trafficPercentile() {
+        return Optional.ofNullable(this.trafficPercentile);
     }
 
     /**
@@ -149,10 +150,10 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,VariantType>> type;
+    private @Nullable Output<Either<String,VariantType>> type;
 
-    public Output<Either<String,VariantType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,VariantType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -160,206 +161,171 @@ public final class EndpointVariantArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public EndpointVariantArgs(
-        Output<String> computeType,
-        @Nullable Output<String> description,
-        @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest,
-        @Nullable Output<Boolean> isDefault,
-        @Nullable Output<CreateServiceRequestKeysArgs> keys,
-        @Nullable Output<Map<String,String>> kvTags,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> serviceName,
-        @Nullable Output<Double> trafficPercentile,
-        @Nullable Output<Either<String,VariantType>> type,
-        Output<String> workspaceName) {
-        this.computeType = Codegen.stringProp("computeType").output().arg(computeType).require();
-        this.description = description;
-        this.environmentImageRequest = environmentImageRequest;
-        this.isDefault = isDefault;
-        this.keys = keys;
-        this.kvTags = kvTags;
-        this.location = location;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = serviceName;
-        this.trafficPercentile = trafficPercentile;
-        this.type = type;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private EndpointVariantArgs() {}
 
-    private EndpointVariantArgs() {
-        this.computeType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.environmentImageRequest = Codegen.empty();
-        this.isDefault = Codegen.empty();
-        this.keys = Codegen.empty();
-        this.kvTags = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.trafficPercentile = Codegen.empty();
-        this.type = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private EndpointVariantArgs(EndpointVariantArgs $) {
+        this.computeType = $.computeType;
+        this.description = $.description;
+        this.environmentImageRequest = $.environmentImageRequest;
+        this.isDefault = $.isDefault;
+        this.keys = $.keys;
+        this.kvTags = $.kvTags;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.trafficPercentile = $.trafficPercentile;
+        this.type = $.type;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointVariantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> computeType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
-        private @Nullable Output<Boolean> isDefault;
-        private @Nullable Output<CreateServiceRequestKeysArgs> keys;
-        private @Nullable Output<Map<String,String>> kvTags;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> serviceName;
-        private @Nullable Output<Double> trafficPercentile;
-        private @Nullable Output<Either<String,VariantType>> type;
-        private Output<String> workspaceName;
+        private EndpointVariantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointVariantArgs();
         }
 
         public Builder(EndpointVariantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeType = defaults.computeType;
-    	      this.description = defaults.description;
-    	      this.environmentImageRequest = defaults.environmentImageRequest;
-    	      this.isDefault = defaults.isDefault;
-    	      this.keys = defaults.keys;
-    	      this.kvTags = defaults.kvTags;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.trafficPercentile = defaults.trafficPercentile;
-    	      this.type = defaults.type;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new EndpointVariantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeType(Output<String> computeType) {
-            this.computeType = Objects.requireNonNull(computeType);
+            $.computeType = computeType;
             return this;
         }
+
         public Builder computeType(String computeType) {
-            this.computeType = Output.of(Objects.requireNonNull(computeType));
-            return this;
+            return computeType(Output.of(computeType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
-            this.environmentImageRequest = environmentImageRequest;
+            $.environmentImageRequest = environmentImageRequest;
             return this;
         }
-        public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
-            this.environmentImageRequest = Codegen.ofNullable(environmentImageRequest);
-            return this;
+
+        public Builder environmentImageRequest(CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
+            return environmentImageRequest(Output.of(environmentImageRequest));
         }
+
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
-            this.isDefault = isDefault;
+            $.isDefault = isDefault;
             return this;
         }
-        public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Codegen.ofNullable(isDefault);
-            return this;
+
+        public Builder isDefault(Boolean isDefault) {
+            return isDefault(Output.of(isDefault));
         }
+
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(CreateServiceRequestKeysArgs keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
-            this.kvTags = kvTags;
+            $.kvTags = kvTags;
             return this;
         }
-        public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = Codegen.ofNullable(kvTags);
-            return this;
+
+        public Builder kvTags(Map<String,String> kvTags) {
+            return kvTags(Output.of(kvTags));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder trafficPercentile(@Nullable Output<Double> trafficPercentile) {
-            this.trafficPercentile = trafficPercentile;
+            $.trafficPercentile = trafficPercentile;
             return this;
         }
-        public Builder trafficPercentile(@Nullable Double trafficPercentile) {
-            this.trafficPercentile = Codegen.ofNullable(trafficPercentile);
-            return this;
+
+        public Builder trafficPercentile(Double trafficPercentile) {
+            return trafficPercentile(Output.of(trafficPercentile));
         }
+
         public Builder type(@Nullable Output<Either<String,VariantType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,VariantType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,VariantType> type) {
+            return type(Output.of(type));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public EndpointVariantArgs build() {
-            return new EndpointVariantArgs(computeType, description, environmentImageRequest, isDefault, keys, kvTags, location, properties, resourceGroupName, serviceName, trafficPercentile, type, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public EndpointVariantArgs build() {
+            $.computeType = Codegen.stringProp("computeType").output().arg($.computeType).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

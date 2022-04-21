@@ -5,11 +5,11 @@ package com.pulumi.gcp.deploymentmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetConfigGetArgs;
 import com.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetImportGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class DeploymentTargetGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="config", required=true)
-      private final Output<DeploymentTargetConfigGetArgs> config;
+    private Output<DeploymentTargetConfigGetArgs> config;
 
     public Output<DeploymentTargetConfigGetArgs> config() {
         return this.config;
@@ -37,66 +37,63 @@ public final class DeploymentTargetGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="imports")
-      private final @Nullable Output<List<DeploymentTargetImportGetArgs>> imports;
+    private @Nullable Output<List<DeploymentTargetImportGetArgs>> imports;
 
-    public Output<List<DeploymentTargetImportGetArgs>> imports() {
-        return this.imports == null ? Codegen.empty() : this.imports;
+    public Optional<Output<List<DeploymentTargetImportGetArgs>>> imports() {
+        return Optional.ofNullable(this.imports);
     }
 
-    public DeploymentTargetGetArgs(
-        Output<DeploymentTargetConfigGetArgs> config,
-        @Nullable Output<List<DeploymentTargetImportGetArgs>> imports) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.imports = imports;
-    }
+    private DeploymentTargetGetArgs() {}
 
-    private DeploymentTargetGetArgs() {
-        this.config = Codegen.empty();
-        this.imports = Codegen.empty();
+    private DeploymentTargetGetArgs(DeploymentTargetGetArgs $) {
+        this.config = $.config;
+        this.imports = $.imports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DeploymentTargetConfigGetArgs> config;
-        private @Nullable Output<List<DeploymentTargetImportGetArgs>> imports;
+        private DeploymentTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentTargetGetArgs();
         }
 
         public Builder(DeploymentTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.imports = defaults.imports;
+            $ = new DeploymentTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(Output<DeploymentTargetConfigGetArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(DeploymentTargetConfigGetArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder imports(@Nullable Output<List<DeploymentTargetImportGetArgs>> imports) {
-            this.imports = imports;
+            $.imports = imports;
             return this;
         }
-        public Builder imports(@Nullable List<DeploymentTargetImportGetArgs> imports) {
-            this.imports = Codegen.ofNullable(imports);
-            return this;
+
+        public Builder imports(List<DeploymentTargetImportGetArgs> imports) {
+            return imports(Output.of(imports));
         }
+
         public Builder imports(DeploymentTargetImportGetArgs... imports) {
             return imports(List.of(imports));
-        }        public DeploymentTargetGetArgs build() {
-            return new DeploymentTargetGetArgs(config, imports);
+        }
+
+        public DeploymentTargetGetArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            return $;
         }
     }
+
 }

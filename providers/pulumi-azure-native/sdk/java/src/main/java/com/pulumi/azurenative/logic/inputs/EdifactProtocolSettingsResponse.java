@@ -34,7 +34,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="acknowledgementSettings", required=true)
-      private final EdifactAcknowledgementSettingsResponse acknowledgementSettings;
+    private EdifactAcknowledgementSettingsResponse acknowledgementSettings;
 
     public EdifactAcknowledgementSettingsResponse acknowledgementSettings() {
         return this.acknowledgementSettings;
@@ -45,10 +45,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="edifactDelimiterOverrides")
-      private final @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides;
+    private @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides;
 
-    public List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides() {
-        return this.edifactDelimiterOverrides == null ? List.of() : this.edifactDelimiterOverrides;
+    public Optional<List<EdifactDelimiterOverrideResponse>> edifactDelimiterOverrides() {
+        return Optional.ofNullable(this.edifactDelimiterOverrides);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="envelopeOverrides")
-      private final @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides;
+    private @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides;
 
-    public List<EdifactEnvelopeOverrideResponse> envelopeOverrides() {
-        return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
+    public Optional<List<EdifactEnvelopeOverrideResponse>> envelopeOverrides() {
+        return Optional.ofNullable(this.envelopeOverrides);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="envelopeSettings", required=true)
-      private final EdifactEnvelopeSettingsResponse envelopeSettings;
+    private EdifactEnvelopeSettingsResponse envelopeSettings;
 
     public EdifactEnvelopeSettingsResponse envelopeSettings() {
         return this.envelopeSettings;
@@ -78,7 +78,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="framingSettings", required=true)
-      private final EdifactFramingSettingsResponse framingSettings;
+    private EdifactFramingSettingsResponse framingSettings;
 
     public EdifactFramingSettingsResponse framingSettings() {
         return this.framingSettings;
@@ -89,7 +89,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="messageFilter", required=true)
-      private final EdifactMessageFilterResponse messageFilter;
+    private EdifactMessageFilterResponse messageFilter;
 
     public EdifactMessageFilterResponse messageFilter() {
         return this.messageFilter;
@@ -100,10 +100,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="messageFilterList")
-      private final @Nullable List<EdifactMessageIdentifierResponse> messageFilterList;
+    private @Nullable List<EdifactMessageIdentifierResponse> messageFilterList;
 
-    public List<EdifactMessageIdentifierResponse> messageFilterList() {
-        return this.messageFilterList == null ? List.of() : this.messageFilterList;
+    public Optional<List<EdifactMessageIdentifierResponse>> messageFilterList() {
+        return Optional.ofNullable(this.messageFilterList);
     }
 
     /**
@@ -111,7 +111,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="processingSettings", required=true)
-      private final EdifactProcessingSettingsResponse processingSettings;
+    private EdifactProcessingSettingsResponse processingSettings;
 
     public EdifactProcessingSettingsResponse processingSettings() {
         return this.processingSettings;
@@ -122,7 +122,7 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="schemaReferences", required=true)
-      private final List<EdifactSchemaReferenceResponse> schemaReferences;
+    private List<EdifactSchemaReferenceResponse> schemaReferences;
 
     public List<EdifactSchemaReferenceResponse> schemaReferences() {
         return this.schemaReferences;
@@ -133,10 +133,10 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="validationOverrides")
-      private final @Nullable List<EdifactValidationOverrideResponse> validationOverrides;
+    private @Nullable List<EdifactValidationOverrideResponse> validationOverrides;
 
-    public List<EdifactValidationOverrideResponse> validationOverrides() {
-        return this.validationOverrides == null ? List.of() : this.validationOverrides;
+    public Optional<List<EdifactValidationOverrideResponse>> validationOverrides() {
+        return Optional.ofNullable(this.validationOverrides);
     }
 
     /**
@@ -144,151 +144,131 @@ public final class EdifactProtocolSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="validationSettings", required=true)
-      private final EdifactValidationSettingsResponse validationSettings;
+    private EdifactValidationSettingsResponse validationSettings;
 
     public EdifactValidationSettingsResponse validationSettings() {
         return this.validationSettings;
     }
 
-    public EdifactProtocolSettingsResponse(
-        EdifactAcknowledgementSettingsResponse acknowledgementSettings,
-        @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides,
-        @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides,
-        EdifactEnvelopeSettingsResponse envelopeSettings,
-        EdifactFramingSettingsResponse framingSettings,
-        EdifactMessageFilterResponse messageFilter,
-        @Nullable List<EdifactMessageIdentifierResponse> messageFilterList,
-        EdifactProcessingSettingsResponse processingSettings,
-        List<EdifactSchemaReferenceResponse> schemaReferences,
-        @Nullable List<EdifactValidationOverrideResponse> validationOverrides,
-        EdifactValidationSettingsResponse validationSettings) {
-        this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings, "expected parameter 'acknowledgementSettings' to be non-null");
-        this.edifactDelimiterOverrides = edifactDelimiterOverrides;
-        this.envelopeOverrides = envelopeOverrides;
-        this.envelopeSettings = Objects.requireNonNull(envelopeSettings, "expected parameter 'envelopeSettings' to be non-null");
-        this.framingSettings = Objects.requireNonNull(framingSettings, "expected parameter 'framingSettings' to be non-null");
-        this.messageFilter = Objects.requireNonNull(messageFilter, "expected parameter 'messageFilter' to be non-null");
-        this.messageFilterList = messageFilterList;
-        this.processingSettings = Objects.requireNonNull(processingSettings, "expected parameter 'processingSettings' to be non-null");
-        this.schemaReferences = Objects.requireNonNull(schemaReferences, "expected parameter 'schemaReferences' to be non-null");
-        this.validationOverrides = validationOverrides;
-        this.validationSettings = Objects.requireNonNull(validationSettings, "expected parameter 'validationSettings' to be non-null");
-    }
+    private EdifactProtocolSettingsResponse() {}
 
-    private EdifactProtocolSettingsResponse() {
-        this.acknowledgementSettings = null;
-        this.edifactDelimiterOverrides = List.of();
-        this.envelopeOverrides = List.of();
-        this.envelopeSettings = null;
-        this.framingSettings = null;
-        this.messageFilter = null;
-        this.messageFilterList = List.of();
-        this.processingSettings = null;
-        this.schemaReferences = List.of();
-        this.validationOverrides = List.of();
-        this.validationSettings = null;
+    private EdifactProtocolSettingsResponse(EdifactProtocolSettingsResponse $) {
+        this.acknowledgementSettings = $.acknowledgementSettings;
+        this.edifactDelimiterOverrides = $.edifactDelimiterOverrides;
+        this.envelopeOverrides = $.envelopeOverrides;
+        this.envelopeSettings = $.envelopeSettings;
+        this.framingSettings = $.framingSettings;
+        this.messageFilter = $.messageFilter;
+        this.messageFilterList = $.messageFilterList;
+        this.processingSettings = $.processingSettings;
+        this.schemaReferences = $.schemaReferences;
+        this.validationOverrides = $.validationOverrides;
+        this.validationSettings = $.validationSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdifactProtocolSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EdifactAcknowledgementSettingsResponse acknowledgementSettings;
-        private @Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides;
-        private @Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides;
-        private EdifactEnvelopeSettingsResponse envelopeSettings;
-        private EdifactFramingSettingsResponse framingSettings;
-        private EdifactMessageFilterResponse messageFilter;
-        private @Nullable List<EdifactMessageIdentifierResponse> messageFilterList;
-        private EdifactProcessingSettingsResponse processingSettings;
-        private List<EdifactSchemaReferenceResponse> schemaReferences;
-        private @Nullable List<EdifactValidationOverrideResponse> validationOverrides;
-        private EdifactValidationSettingsResponse validationSettings;
+        private EdifactProtocolSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdifactProtocolSettingsResponse();
         }
 
         public Builder(EdifactProtocolSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acknowledgementSettings = defaults.acknowledgementSettings;
-    	      this.edifactDelimiterOverrides = defaults.edifactDelimiterOverrides;
-    	      this.envelopeOverrides = defaults.envelopeOverrides;
-    	      this.envelopeSettings = defaults.envelopeSettings;
-    	      this.framingSettings = defaults.framingSettings;
-    	      this.messageFilter = defaults.messageFilter;
-    	      this.messageFilterList = defaults.messageFilterList;
-    	      this.processingSettings = defaults.processingSettings;
-    	      this.schemaReferences = defaults.schemaReferences;
-    	      this.validationOverrides = defaults.validationOverrides;
-    	      this.validationSettings = defaults.validationSettings;
+            $ = new EdifactProtocolSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acknowledgementSettings(EdifactAcknowledgementSettingsResponse acknowledgementSettings) {
-            this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
+            $.acknowledgementSettings = acknowledgementSettings;
             return this;
         }
+
         public Builder edifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideResponse> edifactDelimiterOverrides) {
-            this.edifactDelimiterOverrides = edifactDelimiterOverrides;
+            $.edifactDelimiterOverrides = edifactDelimiterOverrides;
             return this;
         }
+
         public Builder edifactDelimiterOverrides(EdifactDelimiterOverrideResponse... edifactDelimiterOverrides) {
             return edifactDelimiterOverrides(List.of(edifactDelimiterOverrides));
         }
+
         public Builder envelopeOverrides(@Nullable List<EdifactEnvelopeOverrideResponse> envelopeOverrides) {
-            this.envelopeOverrides = envelopeOverrides;
+            $.envelopeOverrides = envelopeOverrides;
             return this;
         }
+
         public Builder envelopeOverrides(EdifactEnvelopeOverrideResponse... envelopeOverrides) {
             return envelopeOverrides(List.of(envelopeOverrides));
         }
+
         public Builder envelopeSettings(EdifactEnvelopeSettingsResponse envelopeSettings) {
-            this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
+            $.envelopeSettings = envelopeSettings;
             return this;
         }
+
         public Builder framingSettings(EdifactFramingSettingsResponse framingSettings) {
-            this.framingSettings = Objects.requireNonNull(framingSettings);
+            $.framingSettings = framingSettings;
             return this;
         }
+
         public Builder messageFilter(EdifactMessageFilterResponse messageFilter) {
-            this.messageFilter = Objects.requireNonNull(messageFilter);
+            $.messageFilter = messageFilter;
             return this;
         }
+
         public Builder messageFilterList(@Nullable List<EdifactMessageIdentifierResponse> messageFilterList) {
-            this.messageFilterList = messageFilterList;
+            $.messageFilterList = messageFilterList;
             return this;
         }
+
         public Builder messageFilterList(EdifactMessageIdentifierResponse... messageFilterList) {
             return messageFilterList(List.of(messageFilterList));
         }
+
         public Builder processingSettings(EdifactProcessingSettingsResponse processingSettings) {
-            this.processingSettings = Objects.requireNonNull(processingSettings);
+            $.processingSettings = processingSettings;
             return this;
         }
+
         public Builder schemaReferences(List<EdifactSchemaReferenceResponse> schemaReferences) {
-            this.schemaReferences = Objects.requireNonNull(schemaReferences);
+            $.schemaReferences = schemaReferences;
             return this;
         }
+
         public Builder schemaReferences(EdifactSchemaReferenceResponse... schemaReferences) {
             return schemaReferences(List.of(schemaReferences));
         }
+
         public Builder validationOverrides(@Nullable List<EdifactValidationOverrideResponse> validationOverrides) {
-            this.validationOverrides = validationOverrides;
+            $.validationOverrides = validationOverrides;
             return this;
         }
+
         public Builder validationOverrides(EdifactValidationOverrideResponse... validationOverrides) {
             return validationOverrides(List.of(validationOverrides));
         }
+
         public Builder validationSettings(EdifactValidationSettingsResponse validationSettings) {
-            this.validationSettings = Objects.requireNonNull(validationSettings);
+            $.validationSettings = validationSettings;
             return this;
-        }        public EdifactProtocolSettingsResponse build() {
-            return new EdifactProtocolSettingsResponse(acknowledgementSettings, edifactDelimiterOverrides, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, validationOverrides, validationSettings);
+        }
+
+        public EdifactProtocolSettingsResponse build() {
+            $.acknowledgementSettings = Objects.requireNonNull($.acknowledgementSettings, "expected parameter 'acknowledgementSettings' to be non-null");
+            $.envelopeSettings = Objects.requireNonNull($.envelopeSettings, "expected parameter 'envelopeSettings' to be non-null");
+            $.framingSettings = Objects.requireNonNull($.framingSettings, "expected parameter 'framingSettings' to be non-null");
+            $.messageFilter = Objects.requireNonNull($.messageFilter, "expected parameter 'messageFilter' to be non-null");
+            $.processingSettings = Objects.requireNonNull($.processingSettings, "expected parameter 'processingSettings' to be non-null");
+            $.schemaReferences = Objects.requireNonNull($.schemaReferences, "expected parameter 'schemaReferences' to be non-null");
+            $.validationSettings = Objects.requireNonNull($.validationSettings, "expected parameter 'validationSettings' to be non-null");
+            return $;
         }
     }
+
 }

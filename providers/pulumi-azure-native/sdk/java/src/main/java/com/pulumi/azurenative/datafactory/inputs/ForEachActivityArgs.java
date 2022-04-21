@@ -52,6 +52,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -68,7 +69,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="activities", required=true)
-      private final Output<List<Object>> activities;
+    private Output<List<Object>> activities;
 
     public Output<List<Object>> activities() {
         return this.activities;
@@ -79,10 +80,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="batchCount")
-      private final @Nullable Output<Integer> batchCount;
+    private @Nullable Output<Integer> batchCount;
 
-    public Output<Integer> batchCount() {
-        return this.batchCount == null ? Codegen.empty() : this.batchCount;
+    public Optional<Output<Integer>> batchCount() {
+        return Optional.ofNullable(this.batchCount);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -101,10 +102,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -112,10 +113,10 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="isSequential")
-      private final @Nullable Output<Boolean> isSequential;
+    private @Nullable Output<Boolean> isSequential;
 
-    public Output<Boolean> isSequential() {
-        return this.isSequential == null ? Codegen.empty() : this.isSequential;
+    public Optional<Output<Boolean>> isSequential() {
+        return Optional.ofNullable(this.isSequential);
     }
 
     /**
@@ -123,7 +124,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="items", required=true)
-      private final Output<ExpressionArgs> items;
+    private Output<ExpressionArgs> items;
 
     public Output<ExpressionArgs> items() {
         return this.items;
@@ -134,7 +135,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -146,7 +147,7 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -157,163 +158,144 @@ public final class ForEachActivityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public ForEachActivityArgs(
-        Output<List<Object>> activities,
-        @Nullable Output<Integer> batchCount,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> isSequential,
-        Output<ExpressionArgs> items,
-        Output<String> name,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.activities = Objects.requireNonNull(activities, "expected parameter 'activities' to be non-null");
-        this.batchCount = batchCount;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.isSequential = isSequential;
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private ForEachActivityArgs() {}
 
-    private ForEachActivityArgs() {
-        this.activities = Codegen.empty();
-        this.batchCount = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.isSequential = Codegen.empty();
-        this.items = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private ForEachActivityArgs(ForEachActivityArgs $) {
+        this.activities = $.activities;
+        this.batchCount = $.batchCount;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.isSequential = $.isSequential;
+        this.items = $.items;
+        this.name = $.name;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ForEachActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Object>> activities;
-        private @Nullable Output<Integer> batchCount;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> isSequential;
-        private Output<ExpressionArgs> items;
-        private Output<String> name;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private ForEachActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ForEachActivityArgs();
         }
 
         public Builder(ForEachActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activities = defaults.activities;
-    	      this.batchCount = defaults.batchCount;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.isSequential = defaults.isSequential;
-    	      this.items = defaults.items;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new ForEachActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activities(Output<List<Object>> activities) {
-            this.activities = Objects.requireNonNull(activities);
+            $.activities = activities;
             return this;
         }
+
         public Builder activities(List<Object> activities) {
-            this.activities = Output.of(Objects.requireNonNull(activities));
-            return this;
+            return activities(Output.of(activities));
         }
+
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
+
         public Builder batchCount(@Nullable Output<Integer> batchCount) {
-            this.batchCount = batchCount;
+            $.batchCount = batchCount;
             return this;
         }
-        public Builder batchCount(@Nullable Integer batchCount) {
-            this.batchCount = Codegen.ofNullable(batchCount);
-            return this;
+
+        public Builder batchCount(Integer batchCount) {
+            return batchCount(Output.of(batchCount));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder isSequential(@Nullable Output<Boolean> isSequential) {
-            this.isSequential = isSequential;
+            $.isSequential = isSequential;
             return this;
         }
-        public Builder isSequential(@Nullable Boolean isSequential) {
-            this.isSequential = Codegen.ofNullable(isSequential);
-            return this;
+
+        public Builder isSequential(Boolean isSequential) {
+            return isSequential(Output.of(isSequential));
         }
+
         public Builder items(Output<ExpressionArgs> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(ExpressionArgs items) {
-            this.items = Output.of(Objects.requireNonNull(items));
-            return this;
+            return items(Output.of(items));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public ForEachActivityArgs build() {
-            return new ForEachActivityArgs(activities, batchCount, dependsOn, description, isSequential, items, name, type, userProperties);
+        }
+
+        public ForEachActivityArgs build() {
+            $.activities = Objects.requireNonNull($.activities, "expected parameter 'activities' to be non-null");
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

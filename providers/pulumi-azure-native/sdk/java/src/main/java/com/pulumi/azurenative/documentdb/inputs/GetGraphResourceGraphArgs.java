@@ -17,7 +17,7 @@ public final class GetGraphResourceGraphArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetGraphResourceGraphArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="graphName", required=true)
-      private final String graphName;
+    private String graphName;
 
     public String graphName() {
         return this.graphName;
@@ -39,64 +39,59 @@ public final class GetGraphResourceGraphArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetGraphResourceGraphArgs(
-        String accountName,
-        String graphName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.graphName = Objects.requireNonNull(graphName, "expected parameter 'graphName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetGraphResourceGraphArgs() {}
 
-    private GetGraphResourceGraphArgs() {
-        this.accountName = null;
-        this.graphName = null;
-        this.resourceGroupName = null;
+    private GetGraphResourceGraphArgs(GetGraphResourceGraphArgs $) {
+        this.accountName = $.accountName;
+        this.graphName = $.graphName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGraphResourceGraphArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String graphName;
-        private String resourceGroupName;
+        private GetGraphResourceGraphArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGraphResourceGraphArgs();
         }
 
         public Builder(GetGraphResourceGraphArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.graphName = defaults.graphName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetGraphResourceGraphArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder graphName(String graphName) {
-            this.graphName = Objects.requireNonNull(graphName);
+            $.graphName = graphName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetGraphResourceGraphArgs build() {
-            return new GetGraphResourceGraphArgs(accountName, graphName, resourceGroupName);
+        }
+
+        public GetGraphResourceGraphArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.graphName = Objects.requireNonNull($.graphName, "expected parameter 'graphName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

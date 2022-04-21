@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kendra.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,52 +15,53 @@ public final class DataSourceWebCrawlerSiteMapsConfigurationArgs extends com.pul
     public static final DataSourceWebCrawlerSiteMapsConfigurationArgs Empty = new DataSourceWebCrawlerSiteMapsConfigurationArgs();
 
     @Import(name="siteMaps", required=true)
-      private final Output<List<String>> siteMaps;
+    private Output<List<String>> siteMaps;
 
     public Output<List<String>> siteMaps() {
         return this.siteMaps;
     }
 
-    public DataSourceWebCrawlerSiteMapsConfigurationArgs(Output<List<String>> siteMaps) {
-        this.siteMaps = Objects.requireNonNull(siteMaps, "expected parameter 'siteMaps' to be non-null");
-    }
+    private DataSourceWebCrawlerSiteMapsConfigurationArgs() {}
 
-    private DataSourceWebCrawlerSiteMapsConfigurationArgs() {
-        this.siteMaps = Codegen.empty();
+    private DataSourceWebCrawlerSiteMapsConfigurationArgs(DataSourceWebCrawlerSiteMapsConfigurationArgs $) {
+        this.siteMaps = $.siteMaps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceWebCrawlerSiteMapsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> siteMaps;
+        private DataSourceWebCrawlerSiteMapsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceWebCrawlerSiteMapsConfigurationArgs();
         }
 
         public Builder(DataSourceWebCrawlerSiteMapsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.siteMaps = defaults.siteMaps;
+            $ = new DataSourceWebCrawlerSiteMapsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder siteMaps(Output<List<String>> siteMaps) {
-            this.siteMaps = Objects.requireNonNull(siteMaps);
+            $.siteMaps = siteMaps;
             return this;
         }
+
         public Builder siteMaps(List<String> siteMaps) {
-            this.siteMaps = Output.of(Objects.requireNonNull(siteMaps));
-            return this;
+            return siteMaps(Output.of(siteMaps));
         }
+
         public Builder siteMaps(String... siteMaps) {
             return siteMaps(List.of(siteMaps));
-        }        public DataSourceWebCrawlerSiteMapsConfigurationArgs build() {
-            return new DataSourceWebCrawlerSiteMapsConfigurationArgs(siteMaps);
+        }
+
+        public DataSourceWebCrawlerSiteMapsConfigurationArgs build() {
+            $.siteMaps = Objects.requireNonNull($.siteMaps, "expected parameter 'siteMaps' to be non-null");
+            return $;
         }
     }
+
 }

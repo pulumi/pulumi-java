@@ -5,9 +5,9 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DocumentationVersionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DocumentationVersionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="restApiId")
-      private final @Nullable Output<String> restApiId;
+    private @Nullable Output<String> restApiId;
 
-    public Output<String> restApiId() {
-        return this.restApiId == null ? Codegen.empty() : this.restApiId;
+    public Optional<Output<String>> restApiId() {
+        return Optional.ofNullable(this.restApiId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class DocumentationVersionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public DocumentationVersionState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> restApiId,
-        @Nullable Output<String> version) {
-        this.description = description;
-        this.restApiId = restApiId;
-        this.version = version;
-    }
+    private DocumentationVersionState() {}
 
-    private DocumentationVersionState() {
-        this.description = Codegen.empty();
-        this.restApiId = Codegen.empty();
-        this.version = Codegen.empty();
+    private DocumentationVersionState(DocumentationVersionState $) {
+        this.description = $.description;
+        this.restApiId = $.restApiId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationVersionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> restApiId;
-        private @Nullable Output<String> version;
+        private DocumentationVersionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationVersionState();
         }
 
         public Builder(DocumentationVersionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.restApiId = defaults.restApiId;
-    	      this.version = defaults.version;
+            $ = new DocumentationVersionState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder restApiId(@Nullable Output<String> restApiId) {
-            this.restApiId = restApiId;
+            $.restApiId = restApiId;
             return this;
         }
-        public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Codegen.ofNullable(restApiId);
-            return this;
+
+        public Builder restApiId(String restApiId) {
+            return restApiId(Output.of(restApiId));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public DocumentationVersionState build() {
-            return new DocumentationVersionState(description, restApiId, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public DocumentationVersionState build() {
+            return $;
         }
     }
+
 }

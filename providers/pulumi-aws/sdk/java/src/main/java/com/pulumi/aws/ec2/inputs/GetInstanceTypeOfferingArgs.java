@@ -21,10 +21,10 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetInstanceTypeOfferingFilter> filters;
+    private @Nullable List<GetInstanceTypeOfferingFilter> filters;
 
-    public List<GetInstanceTypeOfferingFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetInstanceTypeOfferingFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="locationType")
-      private final @Nullable String locationType;
+    private @Nullable String locationType;
 
     public Optional<String> locationType() {
-        return this.locationType == null ? Optional.empty() : Optional.ofNullable(this.locationType);
+        return Optional.ofNullable(this.locationType);
     }
 
     /**
@@ -43,70 +43,64 @@ public final class GetInstanceTypeOfferingArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="preferredInstanceTypes")
-      private final @Nullable List<String> preferredInstanceTypes;
+    private @Nullable List<String> preferredInstanceTypes;
 
-    public List<String> preferredInstanceTypes() {
-        return this.preferredInstanceTypes == null ? List.of() : this.preferredInstanceTypes;
+    public Optional<List<String>> preferredInstanceTypes() {
+        return Optional.ofNullable(this.preferredInstanceTypes);
     }
 
-    public GetInstanceTypeOfferingArgs(
-        @Nullable List<GetInstanceTypeOfferingFilter> filters,
-        @Nullable String locationType,
-        @Nullable List<String> preferredInstanceTypes) {
-        this.filters = filters;
-        this.locationType = locationType;
-        this.preferredInstanceTypes = preferredInstanceTypes;
-    }
+    private GetInstanceTypeOfferingArgs() {}
 
-    private GetInstanceTypeOfferingArgs() {
-        this.filters = List.of();
-        this.locationType = null;
-        this.preferredInstanceTypes = List.of();
+    private GetInstanceTypeOfferingArgs(GetInstanceTypeOfferingArgs $) {
+        this.filters = $.filters;
+        this.locationType = $.locationType;
+        this.preferredInstanceTypes = $.preferredInstanceTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTypeOfferingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetInstanceTypeOfferingFilter> filters;
-        private @Nullable String locationType;
-        private @Nullable List<String> preferredInstanceTypes;
+        private GetInstanceTypeOfferingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTypeOfferingArgs();
         }
 
         public Builder(GetInstanceTypeOfferingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.locationType = defaults.locationType;
-    	      this.preferredInstanceTypes = defaults.preferredInstanceTypes;
+            $ = new GetInstanceTypeOfferingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetInstanceTypeOfferingFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetInstanceTypeOfferingFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder locationType(@Nullable String locationType) {
-            this.locationType = locationType;
+            $.locationType = locationType;
             return this;
         }
+
         public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
-            this.preferredInstanceTypes = preferredInstanceTypes;
+            $.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }
+
         public Builder preferredInstanceTypes(String... preferredInstanceTypes) {
             return preferredInstanceTypes(List.of(preferredInstanceTypes));
-        }        public GetInstanceTypeOfferingArgs build() {
-            return new GetInstanceTypeOfferingArgs(filters, locationType, preferredInstanceTypes);
+        }
+
+        public GetInstanceTypeOfferingArgs build() {
+            return $;
         }
     }
+
 }

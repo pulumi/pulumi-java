@@ -6,10 +6,10 @@ package com.pulumi.azurenative.servicefabric.inputs;
 import com.pulumi.azurenative.servicefabric.inputs.ServiceTypeHealthPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApplicationHealthPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="defaultServiceTypeHealthPolicy")
-      private final @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
+    private @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
 
-    public Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy() {
-        return this.defaultServiceTypeHealthPolicy == null ? Codegen.empty() : this.defaultServiceTypeHealthPolicy;
+    public Optional<Output<ServiceTypeHealthPolicyArgs>> defaultServiceTypeHealthPolicy() {
+        return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class ApplicationHealthPolicyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serviceTypeHealthPolicies")
-      private final @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
+    private @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
 
-    public Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies() {
-        return this.serviceTypeHealthPolicies == null ? Codegen.empty() : this.serviceTypeHealthPolicies;
+    public Optional<Output<Map<String,ServiceTypeHealthPolicyArgs>>> serviceTypeHealthPolicies() {
+        return Optional.ofNullable(this.serviceTypeHealthPolicies);
     }
 
-    public ApplicationHealthPolicyArgs(
-        @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy,
-        @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies) {
-        this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
-        this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
-    }
+    private ApplicationHealthPolicyArgs() {}
 
-    private ApplicationHealthPolicyArgs() {
-        this.defaultServiceTypeHealthPolicy = Codegen.empty();
-        this.serviceTypeHealthPolicies = Codegen.empty();
+    private ApplicationHealthPolicyArgs(ApplicationHealthPolicyArgs $) {
+        this.defaultServiceTypeHealthPolicy = $.defaultServiceTypeHealthPolicy;
+        this.serviceTypeHealthPolicies = $.serviceTypeHealthPolicies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationHealthPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy;
-        private @Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies;
+        private ApplicationHealthPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationHealthPolicyArgs();
         }
 
         public Builder(ApplicationHealthPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultServiceTypeHealthPolicy = defaults.defaultServiceTypeHealthPolicy;
-    	      this.serviceTypeHealthPolicies = defaults.serviceTypeHealthPolicies;
+            $ = new ApplicationHealthPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultServiceTypeHealthPolicy(@Nullable Output<ServiceTypeHealthPolicyArgs> defaultServiceTypeHealthPolicy) {
-            this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
+            $.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
-        public Builder defaultServiceTypeHealthPolicy(@Nullable ServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
-            this.defaultServiceTypeHealthPolicy = Codegen.ofNullable(defaultServiceTypeHealthPolicy);
-            return this;
+
+        public Builder defaultServiceTypeHealthPolicy(ServiceTypeHealthPolicyArgs defaultServiceTypeHealthPolicy) {
+            return defaultServiceTypeHealthPolicy(Output.of(defaultServiceTypeHealthPolicy));
         }
+
         public Builder serviceTypeHealthPolicies(@Nullable Output<Map<String,ServiceTypeHealthPolicyArgs>> serviceTypeHealthPolicies) {
-            this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
+            $.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;
         }
-        public Builder serviceTypeHealthPolicies(@Nullable Map<String,ServiceTypeHealthPolicyArgs> serviceTypeHealthPolicies) {
-            this.serviceTypeHealthPolicies = Codegen.ofNullable(serviceTypeHealthPolicies);
-            return this;
-        }        public ApplicationHealthPolicyArgs build() {
-            return new ApplicationHealthPolicyArgs(defaultServiceTypeHealthPolicy, serviceTypeHealthPolicies);
+
+        public Builder serviceTypeHealthPolicies(Map<String,ServiceTypeHealthPolicyArgs> serviceTypeHealthPolicies) {
+            return serviceTypeHealthPolicies(Output.of(serviceTypeHealthPolicies));
+        }
+
+        public ApplicationHealthPolicyArgs build() {
+            return $;
         }
     }
+
 }

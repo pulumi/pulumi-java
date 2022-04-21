@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="clusterIpv4CidrBlock")
-      private final @Nullable Output<String> clusterIpv4CidrBlock;
+    private @Nullable Output<String> clusterIpv4CidrBlock;
 
-    public Output<String> clusterIpv4CidrBlock() {
-        return this.clusterIpv4CidrBlock == null ? Codegen.empty() : this.clusterIpv4CidrBlock;
+    public Optional<Output<String>> clusterIpv4CidrBlock() {
+        return Optional.ofNullable(this.clusterIpv4CidrBlock);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="clusterSecondaryRangeName")
-      private final @Nullable Output<String> clusterSecondaryRangeName;
+    private @Nullable Output<String> clusterSecondaryRangeName;
 
-    public Output<String> clusterSecondaryRangeName() {
-        return this.clusterSecondaryRangeName == null ? Codegen.empty() : this.clusterSecondaryRangeName;
+    public Optional<Output<String>> clusterSecondaryRangeName() {
+        return Optional.ofNullable(this.clusterSecondaryRangeName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="createSubnetwork")
-      private final @Nullable Output<Boolean> createSubnetwork;
+    private @Nullable Output<Boolean> createSubnetwork;
 
-    public Output<Boolean> createSubnetwork() {
-        return this.createSubnetwork == null ? Codegen.empty() : this.createSubnetwork;
+    public Optional<Output<Boolean>> createSubnetwork() {
+        return Optional.ofNullable(this.createSubnetwork);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="nodeIpv4CidrBlock")
-      private final @Nullable Output<String> nodeIpv4CidrBlock;
+    private @Nullable Output<String> nodeIpv4CidrBlock;
 
-    public Output<String> nodeIpv4CidrBlock() {
-        return this.nodeIpv4CidrBlock == null ? Codegen.empty() : this.nodeIpv4CidrBlock;
+    public Optional<Output<String>> nodeIpv4CidrBlock() {
+        return Optional.ofNullable(this.nodeIpv4CidrBlock);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="servicesIpv4CidrBlock")
-      private final @Nullable Output<String> servicesIpv4CidrBlock;
+    private @Nullable Output<String> servicesIpv4CidrBlock;
 
-    public Output<String> servicesIpv4CidrBlock() {
-        return this.servicesIpv4CidrBlock == null ? Codegen.empty() : this.servicesIpv4CidrBlock;
+    public Optional<Output<String>> servicesIpv4CidrBlock() {
+        return Optional.ofNullable(this.servicesIpv4CidrBlock);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="servicesSecondaryRangeName")
-      private final @Nullable Output<String> servicesSecondaryRangeName;
+    private @Nullable Output<String> servicesSecondaryRangeName;
 
-    public Output<String> servicesSecondaryRangeName() {
-        return this.servicesSecondaryRangeName == null ? Codegen.empty() : this.servicesSecondaryRangeName;
+    public Optional<Output<String>> servicesSecondaryRangeName() {
+        return Optional.ofNullable(this.servicesSecondaryRangeName);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subnetworkName")
-      private final @Nullable Output<String> subnetworkName;
+    private @Nullable Output<String> subnetworkName;
 
-    public Output<String> subnetworkName() {
-        return this.subnetworkName == null ? Codegen.empty() : this.subnetworkName;
+    public Optional<Output<String>> subnetworkName() {
+        return Optional.ofNullable(this.subnetworkName);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tpuIpv4CidrBlock")
-      private final @Nullable Output<String> tpuIpv4CidrBlock;
+    private @Nullable Output<String> tpuIpv4CidrBlock;
 
-    public Output<String> tpuIpv4CidrBlock() {
-        return this.tpuIpv4CidrBlock == null ? Codegen.empty() : this.tpuIpv4CidrBlock;
+    public Optional<Output<String>> tpuIpv4CidrBlock() {
+        return Optional.ofNullable(this.tpuIpv4CidrBlock);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="useIpAliases")
-      private final @Nullable Output<Boolean> useIpAliases;
+    private @Nullable Output<Boolean> useIpAliases;
 
-    public Output<Boolean> useIpAliases() {
-        return this.useIpAliases == null ? Codegen.empty() : this.useIpAliases;
+    public Optional<Output<Boolean>> useIpAliases() {
+        return Optional.ofNullable(this.useIpAliases);
     }
 
     /**
@@ -124,167 +124,138 @@ public final class IPAllocationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="useRoutes")
-      private final @Nullable Output<Boolean> useRoutes;
+    private @Nullable Output<Boolean> useRoutes;
 
-    public Output<Boolean> useRoutes() {
-        return this.useRoutes == null ? Codegen.empty() : this.useRoutes;
+    public Optional<Output<Boolean>> useRoutes() {
+        return Optional.ofNullable(this.useRoutes);
     }
 
-    public IPAllocationPolicyArgs(
-        @Nullable Output<String> clusterIpv4CidrBlock,
-        @Nullable Output<String> clusterSecondaryRangeName,
-        @Nullable Output<Boolean> createSubnetwork,
-        @Nullable Output<String> nodeIpv4CidrBlock,
-        @Nullable Output<String> servicesIpv4CidrBlock,
-        @Nullable Output<String> servicesSecondaryRangeName,
-        @Nullable Output<String> subnetworkName,
-        @Nullable Output<String> tpuIpv4CidrBlock,
-        @Nullable Output<Boolean> useIpAliases,
-        @Nullable Output<Boolean> useRoutes) {
-        this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
-        this.clusterSecondaryRangeName = clusterSecondaryRangeName;
-        this.createSubnetwork = createSubnetwork;
-        this.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
-        this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
-        this.servicesSecondaryRangeName = servicesSecondaryRangeName;
-        this.subnetworkName = subnetworkName;
-        this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
-        this.useIpAliases = useIpAliases;
-        this.useRoutes = useRoutes;
-    }
+    private IPAllocationPolicyArgs() {}
 
-    private IPAllocationPolicyArgs() {
-        this.clusterIpv4CidrBlock = Codegen.empty();
-        this.clusterSecondaryRangeName = Codegen.empty();
-        this.createSubnetwork = Codegen.empty();
-        this.nodeIpv4CidrBlock = Codegen.empty();
-        this.servicesIpv4CidrBlock = Codegen.empty();
-        this.servicesSecondaryRangeName = Codegen.empty();
-        this.subnetworkName = Codegen.empty();
-        this.tpuIpv4CidrBlock = Codegen.empty();
-        this.useIpAliases = Codegen.empty();
-        this.useRoutes = Codegen.empty();
+    private IPAllocationPolicyArgs(IPAllocationPolicyArgs $) {
+        this.clusterIpv4CidrBlock = $.clusterIpv4CidrBlock;
+        this.clusterSecondaryRangeName = $.clusterSecondaryRangeName;
+        this.createSubnetwork = $.createSubnetwork;
+        this.nodeIpv4CidrBlock = $.nodeIpv4CidrBlock;
+        this.servicesIpv4CidrBlock = $.servicesIpv4CidrBlock;
+        this.servicesSecondaryRangeName = $.servicesSecondaryRangeName;
+        this.subnetworkName = $.subnetworkName;
+        this.tpuIpv4CidrBlock = $.tpuIpv4CidrBlock;
+        this.useIpAliases = $.useIpAliases;
+        this.useRoutes = $.useRoutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAllocationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterIpv4CidrBlock;
-        private @Nullable Output<String> clusterSecondaryRangeName;
-        private @Nullable Output<Boolean> createSubnetwork;
-        private @Nullable Output<String> nodeIpv4CidrBlock;
-        private @Nullable Output<String> servicesIpv4CidrBlock;
-        private @Nullable Output<String> servicesSecondaryRangeName;
-        private @Nullable Output<String> subnetworkName;
-        private @Nullable Output<String> tpuIpv4CidrBlock;
-        private @Nullable Output<Boolean> useIpAliases;
-        private @Nullable Output<Boolean> useRoutes;
+        private IPAllocationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAllocationPolicyArgs();
         }
 
         public Builder(IPAllocationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIpv4CidrBlock = defaults.clusterIpv4CidrBlock;
-    	      this.clusterSecondaryRangeName = defaults.clusterSecondaryRangeName;
-    	      this.createSubnetwork = defaults.createSubnetwork;
-    	      this.nodeIpv4CidrBlock = defaults.nodeIpv4CidrBlock;
-    	      this.servicesIpv4CidrBlock = defaults.servicesIpv4CidrBlock;
-    	      this.servicesSecondaryRangeName = defaults.servicesSecondaryRangeName;
-    	      this.subnetworkName = defaults.subnetworkName;
-    	      this.tpuIpv4CidrBlock = defaults.tpuIpv4CidrBlock;
-    	      this.useIpAliases = defaults.useIpAliases;
-    	      this.useRoutes = defaults.useRoutes;
+            $ = new IPAllocationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIpv4CidrBlock(@Nullable Output<String> clusterIpv4CidrBlock) {
-            this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
+            $.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
-        public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
-            this.clusterIpv4CidrBlock = Codegen.ofNullable(clusterIpv4CidrBlock);
-            return this;
+
+        public Builder clusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
+            return clusterIpv4CidrBlock(Output.of(clusterIpv4CidrBlock));
         }
+
         public Builder clusterSecondaryRangeName(@Nullable Output<String> clusterSecondaryRangeName) {
-            this.clusterSecondaryRangeName = clusterSecondaryRangeName;
+            $.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
-        public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
-            this.clusterSecondaryRangeName = Codegen.ofNullable(clusterSecondaryRangeName);
-            return this;
+
+        public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
+            return clusterSecondaryRangeName(Output.of(clusterSecondaryRangeName));
         }
+
         public Builder createSubnetwork(@Nullable Output<Boolean> createSubnetwork) {
-            this.createSubnetwork = createSubnetwork;
+            $.createSubnetwork = createSubnetwork;
             return this;
         }
-        public Builder createSubnetwork(@Nullable Boolean createSubnetwork) {
-            this.createSubnetwork = Codegen.ofNullable(createSubnetwork);
-            return this;
+
+        public Builder createSubnetwork(Boolean createSubnetwork) {
+            return createSubnetwork(Output.of(createSubnetwork));
         }
+
         public Builder nodeIpv4CidrBlock(@Nullable Output<String> nodeIpv4CidrBlock) {
-            this.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
+            $.nodeIpv4CidrBlock = nodeIpv4CidrBlock;
             return this;
         }
-        public Builder nodeIpv4CidrBlock(@Nullable String nodeIpv4CidrBlock) {
-            this.nodeIpv4CidrBlock = Codegen.ofNullable(nodeIpv4CidrBlock);
-            return this;
+
+        public Builder nodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
+            return nodeIpv4CidrBlock(Output.of(nodeIpv4CidrBlock));
         }
+
         public Builder servicesIpv4CidrBlock(@Nullable Output<String> servicesIpv4CidrBlock) {
-            this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
+            $.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
-        public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
-            this.servicesIpv4CidrBlock = Codegen.ofNullable(servicesIpv4CidrBlock);
-            return this;
+
+        public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
+            return servicesIpv4CidrBlock(Output.of(servicesIpv4CidrBlock));
         }
+
         public Builder servicesSecondaryRangeName(@Nullable Output<String> servicesSecondaryRangeName) {
-            this.servicesSecondaryRangeName = servicesSecondaryRangeName;
+            $.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
-        public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
-            this.servicesSecondaryRangeName = Codegen.ofNullable(servicesSecondaryRangeName);
-            return this;
+
+        public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
+            return servicesSecondaryRangeName(Output.of(servicesSecondaryRangeName));
         }
+
         public Builder subnetworkName(@Nullable Output<String> subnetworkName) {
-            this.subnetworkName = subnetworkName;
+            $.subnetworkName = subnetworkName;
             return this;
         }
-        public Builder subnetworkName(@Nullable String subnetworkName) {
-            this.subnetworkName = Codegen.ofNullable(subnetworkName);
-            return this;
+
+        public Builder subnetworkName(String subnetworkName) {
+            return subnetworkName(Output.of(subnetworkName));
         }
+
         public Builder tpuIpv4CidrBlock(@Nullable Output<String> tpuIpv4CidrBlock) {
-            this.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
+            $.tpuIpv4CidrBlock = tpuIpv4CidrBlock;
             return this;
         }
-        public Builder tpuIpv4CidrBlock(@Nullable String tpuIpv4CidrBlock) {
-            this.tpuIpv4CidrBlock = Codegen.ofNullable(tpuIpv4CidrBlock);
-            return this;
+
+        public Builder tpuIpv4CidrBlock(String tpuIpv4CidrBlock) {
+            return tpuIpv4CidrBlock(Output.of(tpuIpv4CidrBlock));
         }
+
         public Builder useIpAliases(@Nullable Output<Boolean> useIpAliases) {
-            this.useIpAliases = useIpAliases;
+            $.useIpAliases = useIpAliases;
             return this;
         }
-        public Builder useIpAliases(@Nullable Boolean useIpAliases) {
-            this.useIpAliases = Codegen.ofNullable(useIpAliases);
-            return this;
+
+        public Builder useIpAliases(Boolean useIpAliases) {
+            return useIpAliases(Output.of(useIpAliases));
         }
+
         public Builder useRoutes(@Nullable Output<Boolean> useRoutes) {
-            this.useRoutes = useRoutes;
+            $.useRoutes = useRoutes;
             return this;
         }
-        public Builder useRoutes(@Nullable Boolean useRoutes) {
-            this.useRoutes = Codegen.ofNullable(useRoutes);
-            return this;
-        }        public IPAllocationPolicyArgs build() {
-            return new IPAllocationPolicyArgs(clusterIpv4CidrBlock, clusterSecondaryRangeName, createSubnetwork, nodeIpv4CidrBlock, servicesIpv4CidrBlock, servicesSecondaryRangeName, subnetworkName, tpuIpv4CidrBlock, useIpAliases, useRoutes);
+
+        public Builder useRoutes(Boolean useRoutes) {
+            return useRoutes(Output.of(useRoutes));
+        }
+
+        public IPAllocationPolicyArgs build() {
+            return $;
         }
     }
+
 }

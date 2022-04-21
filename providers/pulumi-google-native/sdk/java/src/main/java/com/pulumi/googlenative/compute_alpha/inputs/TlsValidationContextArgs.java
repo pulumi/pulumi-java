@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.TlsValidationContextValidationSource;
 import com.pulumi.googlenative.compute_alpha.inputs.SdsConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TlsValidationContextArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="certificatePath")
-      private final @Nullable Output<String> certificatePath;
+    private @Nullable Output<String> certificatePath;
 
-    public Output<String> certificatePath() {
-        return this.certificatePath == null ? Codegen.empty() : this.certificatePath;
+    public Optional<Output<String>> certificatePath() {
+        return Optional.ofNullable(this.certificatePath);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TlsValidationContextArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sdsConfig")
-      private final @Nullable Output<SdsConfigArgs> sdsConfig;
+    private @Nullable Output<SdsConfigArgs> sdsConfig;
 
-    public Output<SdsConfigArgs> sdsConfig() {
-        return this.sdsConfig == null ? Codegen.empty() : this.sdsConfig;
+    public Optional<Output<SdsConfigArgs>> sdsConfig() {
+        return Optional.ofNullable(this.sdsConfig);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class TlsValidationContextArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="validationSource")
-      private final @Nullable Output<TlsValidationContextValidationSource> validationSource;
+    private @Nullable Output<TlsValidationContextValidationSource> validationSource;
 
-    public Output<TlsValidationContextValidationSource> validationSource() {
-        return this.validationSource == null ? Codegen.empty() : this.validationSource;
+    public Optional<Output<TlsValidationContextValidationSource>> validationSource() {
+        return Optional.ofNullable(this.validationSource);
     }
 
-    public TlsValidationContextArgs(
-        @Nullable Output<String> certificatePath,
-        @Nullable Output<SdsConfigArgs> sdsConfig,
-        @Nullable Output<TlsValidationContextValidationSource> validationSource) {
-        this.certificatePath = certificatePath;
-        this.sdsConfig = sdsConfig;
-        this.validationSource = validationSource;
-    }
+    private TlsValidationContextArgs() {}
 
-    private TlsValidationContextArgs() {
-        this.certificatePath = Codegen.empty();
-        this.sdsConfig = Codegen.empty();
-        this.validationSource = Codegen.empty();
+    private TlsValidationContextArgs(TlsValidationContextArgs $) {
+        this.certificatePath = $.certificatePath;
+        this.sdsConfig = $.sdsConfig;
+        this.validationSource = $.validationSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsValidationContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificatePath;
-        private @Nullable Output<SdsConfigArgs> sdsConfig;
-        private @Nullable Output<TlsValidationContextValidationSource> validationSource;
+        private TlsValidationContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsValidationContextArgs();
         }
 
         public Builder(TlsValidationContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificatePath = defaults.certificatePath;
-    	      this.sdsConfig = defaults.sdsConfig;
-    	      this.validationSource = defaults.validationSource;
+            $ = new TlsValidationContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificatePath(@Nullable Output<String> certificatePath) {
-            this.certificatePath = certificatePath;
+            $.certificatePath = certificatePath;
             return this;
         }
-        public Builder certificatePath(@Nullable String certificatePath) {
-            this.certificatePath = Codegen.ofNullable(certificatePath);
-            return this;
+
+        public Builder certificatePath(String certificatePath) {
+            return certificatePath(Output.of(certificatePath));
         }
+
         public Builder sdsConfig(@Nullable Output<SdsConfigArgs> sdsConfig) {
-            this.sdsConfig = sdsConfig;
+            $.sdsConfig = sdsConfig;
             return this;
         }
-        public Builder sdsConfig(@Nullable SdsConfigArgs sdsConfig) {
-            this.sdsConfig = Codegen.ofNullable(sdsConfig);
-            return this;
+
+        public Builder sdsConfig(SdsConfigArgs sdsConfig) {
+            return sdsConfig(Output.of(sdsConfig));
         }
+
         public Builder validationSource(@Nullable Output<TlsValidationContextValidationSource> validationSource) {
-            this.validationSource = validationSource;
+            $.validationSource = validationSource;
             return this;
         }
-        public Builder validationSource(@Nullable TlsValidationContextValidationSource validationSource) {
-            this.validationSource = Codegen.ofNullable(validationSource);
-            return this;
-        }        public TlsValidationContextArgs build() {
-            return new TlsValidationContextArgs(certificatePath, sdsConfig, validationSource);
+
+        public Builder validationSource(TlsValidationContextValidationSource validationSource) {
+            return validationSource(Output.of(validationSource));
+        }
+
+        public TlsValidationContextArgs build() {
+            return $;
         }
     }
+
 }

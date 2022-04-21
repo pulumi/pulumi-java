@@ -17,45 +17,45 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetAssetArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetAssetArgs() {}
 
-    private GetAssetArgs() {
-        this.id = null;
+    private GetAssetArgs(GetAssetArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetAssetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssetArgs();
         }
 
         public Builder(GetAssetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetAssetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetAssetArgs build() {
-            return new GetAssetArgs(id);
+        }
+
+        public GetAssetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

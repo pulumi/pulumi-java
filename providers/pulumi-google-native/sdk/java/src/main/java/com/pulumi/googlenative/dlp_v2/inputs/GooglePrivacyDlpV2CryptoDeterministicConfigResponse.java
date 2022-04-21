@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends c
      * 
      */
     @Import(name="context", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse context;
+    private GooglePrivacyDlpV2FieldIdResponse context;
 
     public GooglePrivacyDlpV2FieldIdResponse context() {
         return this.context;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends c
      * 
      */
     @Import(name="cryptoKey", required=true)
-      private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
+    private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
     public GooglePrivacyDlpV2CryptoKeyResponse cryptoKey() {
         return this.cryptoKey;
@@ -45,64 +45,59 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse extends c
      * 
      */
     @Import(name="surrogateInfoType", required=true)
-      private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
+    private GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType() {
         return this.surrogateInfoType;
     }
 
-    public GooglePrivacyDlpV2CryptoDeterministicConfigResponse(
-        GooglePrivacyDlpV2FieldIdResponse context,
-        GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
-        this.context = Objects.requireNonNull(context, "expected parameter 'context' to be non-null");
-        this.cryptoKey = Objects.requireNonNull(cryptoKey, "expected parameter 'cryptoKey' to be non-null");
-        this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType, "expected parameter 'surrogateInfoType' to be non-null");
-    }
+    private GooglePrivacyDlpV2CryptoDeterministicConfigResponse() {}
 
-    private GooglePrivacyDlpV2CryptoDeterministicConfigResponse() {
-        this.context = null;
-        this.cryptoKey = null;
-        this.surrogateInfoType = null;
+    private GooglePrivacyDlpV2CryptoDeterministicConfigResponse(GooglePrivacyDlpV2CryptoDeterministicConfigResponse $) {
+        this.context = $.context;
+        this.cryptoKey = $.cryptoKey;
+        this.surrogateInfoType = $.surrogateInfoType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CryptoDeterministicConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2FieldIdResponse context;
-        private GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
-        private GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
+        private GooglePrivacyDlpV2CryptoDeterministicConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CryptoDeterministicConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CryptoDeterministicConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.cryptoKey = defaults.cryptoKey;
-    	      this.surrogateInfoType = defaults.surrogateInfoType;
+            $ = new GooglePrivacyDlpV2CryptoDeterministicConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
-            this.context = Objects.requireNonNull(context);
+            $.context = context;
             return this;
         }
+
         public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
-            this.cryptoKey = Objects.requireNonNull(cryptoKey);
+            $.cryptoKey = cryptoKey;
             return this;
         }
+
         public Builder surrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
-            this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
+            $.surrogateInfoType = surrogateInfoType;
             return this;
-        }        public GooglePrivacyDlpV2CryptoDeterministicConfigResponse build() {
-            return new GooglePrivacyDlpV2CryptoDeterministicConfigResponse(context, cryptoKey, surrogateInfoType);
+        }
+
+        public GooglePrivacyDlpV2CryptoDeterministicConfigResponse build() {
+            $.context = Objects.requireNonNull($.context, "expected parameter 'context' to be non-null");
+            $.cryptoKey = Objects.requireNonNull($.cryptoKey, "expected parameter 'cryptoKey' to be non-null");
+            $.surrogateInfoType = Objects.requireNonNull($.surrogateInfoType, "expected parameter 'surrogateInfoType' to be non-null");
+            return $;
         }
     }
+
 }

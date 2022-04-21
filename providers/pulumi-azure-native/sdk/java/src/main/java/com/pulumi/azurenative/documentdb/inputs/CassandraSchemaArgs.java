@@ -8,9 +8,9 @@ import com.pulumi.azurenative.documentdb.inputs.ClusterKeyArgs;
 import com.pulumi.azurenative.documentdb.inputs.ColumnArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clusterKeys")
-      private final @Nullable Output<List<ClusterKeyArgs>> clusterKeys;
+    private @Nullable Output<List<ClusterKeyArgs>> clusterKeys;
 
-    public Output<List<ClusterKeyArgs>> clusterKeys() {
-        return this.clusterKeys == null ? Codegen.empty() : this.clusterKeys;
+    public Optional<Output<List<ClusterKeyArgs>>> clusterKeys() {
+        return Optional.ofNullable(this.clusterKeys);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<List<ColumnArgs>> columns;
+    private @Nullable Output<List<ColumnArgs>> columns;
 
-    public Output<List<ColumnArgs>> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<List<ColumnArgs>>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -49,85 +49,80 @@ public final class CassandraSchemaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="partitionKeys")
-      private final @Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys;
+    private @Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys;
 
-    public Output<List<CassandraPartitionKeyArgs>> partitionKeys() {
-        return this.partitionKeys == null ? Codegen.empty() : this.partitionKeys;
+    public Optional<Output<List<CassandraPartitionKeyArgs>>> partitionKeys() {
+        return Optional.ofNullable(this.partitionKeys);
     }
 
-    public CassandraSchemaArgs(
-        @Nullable Output<List<ClusterKeyArgs>> clusterKeys,
-        @Nullable Output<List<ColumnArgs>> columns,
-        @Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys) {
-        this.clusterKeys = clusterKeys;
-        this.columns = columns;
-        this.partitionKeys = partitionKeys;
-    }
+    private CassandraSchemaArgs() {}
 
-    private CassandraSchemaArgs() {
-        this.clusterKeys = Codegen.empty();
-        this.columns = Codegen.empty();
-        this.partitionKeys = Codegen.empty();
+    private CassandraSchemaArgs(CassandraSchemaArgs $) {
+        this.clusterKeys = $.clusterKeys;
+        this.columns = $.columns;
+        this.partitionKeys = $.partitionKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CassandraSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ClusterKeyArgs>> clusterKeys;
-        private @Nullable Output<List<ColumnArgs>> columns;
-        private @Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys;
+        private CassandraSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CassandraSchemaArgs();
         }
 
         public Builder(CassandraSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterKeys = defaults.clusterKeys;
-    	      this.columns = defaults.columns;
-    	      this.partitionKeys = defaults.partitionKeys;
+            $ = new CassandraSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterKeys(@Nullable Output<List<ClusterKeyArgs>> clusterKeys) {
-            this.clusterKeys = clusterKeys;
+            $.clusterKeys = clusterKeys;
             return this;
         }
-        public Builder clusterKeys(@Nullable List<ClusterKeyArgs> clusterKeys) {
-            this.clusterKeys = Codegen.ofNullable(clusterKeys);
-            return this;
+
+        public Builder clusterKeys(List<ClusterKeyArgs> clusterKeys) {
+            return clusterKeys(Output.of(clusterKeys));
         }
+
         public Builder clusterKeys(ClusterKeyArgs... clusterKeys) {
             return clusterKeys(List.of(clusterKeys));
         }
+
         public Builder columns(@Nullable Output<List<ColumnArgs>> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable List<ColumnArgs> columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(List<ColumnArgs> columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder columns(ColumnArgs... columns) {
             return columns(List.of(columns));
         }
+
         public Builder partitionKeys(@Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys) {
-            this.partitionKeys = partitionKeys;
+            $.partitionKeys = partitionKeys;
             return this;
         }
-        public Builder partitionKeys(@Nullable List<CassandraPartitionKeyArgs> partitionKeys) {
-            this.partitionKeys = Codegen.ofNullable(partitionKeys);
-            return this;
+
+        public Builder partitionKeys(List<CassandraPartitionKeyArgs> partitionKeys) {
+            return partitionKeys(Output.of(partitionKeys));
         }
+
         public Builder partitionKeys(CassandraPartitionKeyArgs... partitionKeys) {
             return partitionKeys(List.of(partitionKeys));
-        }        public CassandraSchemaArgs build() {
-            return new CassandraSchemaArgs(clusterKeys, columns, partitionKeys);
+        }
+
+        public CassandraSchemaArgs build() {
+            return $;
         }
     }
+
 }

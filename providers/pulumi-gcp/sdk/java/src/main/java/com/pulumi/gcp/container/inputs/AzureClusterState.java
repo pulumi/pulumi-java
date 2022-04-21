@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.AzureClusterAuthorizationGetArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterControlPlaneGetArgs;
 import com.pulumi.gcp.container.inputs.AzureClusterFleetGetArgs;
@@ -16,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorization")
-      private final @Nullable Output<AzureClusterAuthorizationGetArgs> authorization;
+    private @Nullable Output<AzureClusterAuthorizationGetArgs> authorization;
 
-    public Output<AzureClusterAuthorizationGetArgs> authorization() {
-        return this.authorization == null ? Codegen.empty() : this.authorization;
+    public Optional<Output<AzureClusterAuthorizationGetArgs>> authorization() {
+        return Optional.ofNullable(this.authorization);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureRegion")
-      private final @Nullable Output<String> azureRegion;
+    private @Nullable Output<String> azureRegion;
 
-    public Output<String> azureRegion() {
-        return this.azureRegion == null ? Codegen.empty() : this.azureRegion;
+    public Optional<Output<String>> azureRegion() {
+        return Optional.ofNullable(this.azureRegion);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="client")
-      private final @Nullable Output<String> client;
+    private @Nullable Output<String> client;
 
-    public Output<String> client() {
-        return this.client == null ? Codegen.empty() : this.client;
+    public Optional<Output<String>> client() {
+        return Optional.ofNullable(this.client);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="controlPlane")
-      private final @Nullable Output<AzureClusterControlPlaneGetArgs> controlPlane;
+    private @Nullable Output<AzureClusterControlPlaneGetArgs> controlPlane;
 
-    public Output<AzureClusterControlPlaneGetArgs> controlPlane() {
-        return this.controlPlane == null ? Codegen.empty() : this.controlPlane;
+    public Optional<Output<AzureClusterControlPlaneGetArgs>> controlPlane() {
+        return Optional.ofNullable(this.controlPlane);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleet")
-      private final @Nullable Output<AzureClusterFleetGetArgs> fleet;
+    private @Nullable Output<AzureClusterFleetGetArgs> fleet;
 
-    public Output<AzureClusterFleetGetArgs> fleet() {
-        return this.fleet == null ? Codegen.empty() : this.fleet;
+    public Optional<Output<AzureClusterFleetGetArgs>> fleet() {
+        return Optional.ofNullable(this.fleet);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networking")
-      private final @Nullable Output<AzureClusterNetworkingGetArgs> networking;
+    private @Nullable Output<AzureClusterNetworkingGetArgs> networking;
 
-    public Output<AzureClusterNetworkingGetArgs> networking() {
-        return this.networking == null ? Codegen.empty() : this.networking;
+    public Optional<Output<AzureClusterNetworkingGetArgs>> networking() {
+        return Optional.ofNullable(this.networking);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reconciling")
-      private final @Nullable Output<Boolean> reconciling;
+    private @Nullable Output<Boolean> reconciling;
 
-    public Output<Boolean> reconciling() {
-        return this.reconciling == null ? Codegen.empty() : this.reconciling;
+    public Optional<Output<Boolean>> reconciling() {
+        return Optional.ofNullable(this.reconciling);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupId")
-      private final @Nullable Output<String> resourceGroupId;
+    private @Nullable Output<String> resourceGroupId;
 
-    public Output<String> resourceGroupId() {
-        return this.resourceGroupId == null ? Codegen.empty() : this.resourceGroupId;
+    public Optional<Output<String>> resourceGroupId() {
+        return Optional.ofNullable(this.resourceGroupId);
     }
 
     /**
@@ -206,10 +206,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -217,10 +217,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
     /**
@@ -228,10 +228,10 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -239,300 +239,242 @@ public final class AzureClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workloadIdentityConfigs")
-      private final @Nullable Output<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs;
+    private @Nullable Output<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs;
 
-    public Output<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs() {
-        return this.workloadIdentityConfigs == null ? Codegen.empty() : this.workloadIdentityConfigs;
+    public Optional<Output<List<AzureClusterWorkloadIdentityConfigGetArgs>>> workloadIdentityConfigs() {
+        return Optional.ofNullable(this.workloadIdentityConfigs);
     }
 
-    public AzureClusterState(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<AzureClusterAuthorizationGetArgs> authorization,
-        @Nullable Output<String> azureRegion,
-        @Nullable Output<String> client,
-        @Nullable Output<AzureClusterControlPlaneGetArgs> controlPlane,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> description,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<String> etag,
-        @Nullable Output<AzureClusterFleetGetArgs> fleet,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<AzureClusterNetworkingGetArgs> networking,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> reconciling,
-        @Nullable Output<String> resourceGroupId,
-        @Nullable Output<String> state,
-        @Nullable Output<String> uid,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs) {
-        this.annotations = annotations;
-        this.authorization = authorization;
-        this.azureRegion = azureRegion;
-        this.client = client;
-        this.controlPlane = controlPlane;
-        this.createTime = createTime;
-        this.description = description;
-        this.endpoint = endpoint;
-        this.etag = etag;
-        this.fleet = fleet;
-        this.location = location;
-        this.name = name;
-        this.networking = networking;
-        this.project = project;
-        this.reconciling = reconciling;
-        this.resourceGroupId = resourceGroupId;
-        this.state = state;
-        this.uid = uid;
-        this.updateTime = updateTime;
-        this.workloadIdentityConfigs = workloadIdentityConfigs;
-    }
+    private AzureClusterState() {}
 
-    private AzureClusterState() {
-        this.annotations = Codegen.empty();
-        this.authorization = Codegen.empty();
-        this.azureRegion = Codegen.empty();
-        this.client = Codegen.empty();
-        this.controlPlane = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.description = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.fleet = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networking = Codegen.empty();
-        this.project = Codegen.empty();
-        this.reconciling = Codegen.empty();
-        this.resourceGroupId = Codegen.empty();
-        this.state = Codegen.empty();
-        this.uid = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.workloadIdentityConfigs = Codegen.empty();
+    private AzureClusterState(AzureClusterState $) {
+        this.annotations = $.annotations;
+        this.authorization = $.authorization;
+        this.azureRegion = $.azureRegion;
+        this.client = $.client;
+        this.controlPlane = $.controlPlane;
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.endpoint = $.endpoint;
+        this.etag = $.etag;
+        this.fleet = $.fleet;
+        this.location = $.location;
+        this.name = $.name;
+        this.networking = $.networking;
+        this.project = $.project;
+        this.reconciling = $.reconciling;
+        this.resourceGroupId = $.resourceGroupId;
+        this.state = $.state;
+        this.uid = $.uid;
+        this.updateTime = $.updateTime;
+        this.workloadIdentityConfigs = $.workloadIdentityConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureClusterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<AzureClusterAuthorizationGetArgs> authorization;
-        private @Nullable Output<String> azureRegion;
-        private @Nullable Output<String> client;
-        private @Nullable Output<AzureClusterControlPlaneGetArgs> controlPlane;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<AzureClusterFleetGetArgs> fleet;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<AzureClusterNetworkingGetArgs> networking;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> reconciling;
-        private @Nullable Output<String> resourceGroupId;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> uid;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs;
+        private AzureClusterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureClusterState();
         }
 
         public Builder(AzureClusterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.authorization = defaults.authorization;
-    	      this.azureRegion = defaults.azureRegion;
-    	      this.client = defaults.client;
-    	      this.controlPlane = defaults.controlPlane;
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.endpoint = defaults.endpoint;
-    	      this.etag = defaults.etag;
-    	      this.fleet = defaults.fleet;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.networking = defaults.networking;
-    	      this.project = defaults.project;
-    	      this.reconciling = defaults.reconciling;
-    	      this.resourceGroupId = defaults.resourceGroupId;
-    	      this.state = defaults.state;
-    	      this.uid = defaults.uid;
-    	      this.updateTime = defaults.updateTime;
-    	      this.workloadIdentityConfigs = defaults.workloadIdentityConfigs;
+            $ = new AzureClusterState(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder authorization(@Nullable Output<AzureClusterAuthorizationGetArgs> authorization) {
-            this.authorization = authorization;
+            $.authorization = authorization;
             return this;
         }
-        public Builder authorization(@Nullable AzureClusterAuthorizationGetArgs authorization) {
-            this.authorization = Codegen.ofNullable(authorization);
-            return this;
+
+        public Builder authorization(AzureClusterAuthorizationGetArgs authorization) {
+            return authorization(Output.of(authorization));
         }
+
         public Builder azureRegion(@Nullable Output<String> azureRegion) {
-            this.azureRegion = azureRegion;
+            $.azureRegion = azureRegion;
             return this;
         }
-        public Builder azureRegion(@Nullable String azureRegion) {
-            this.azureRegion = Codegen.ofNullable(azureRegion);
-            return this;
+
+        public Builder azureRegion(String azureRegion) {
+            return azureRegion(Output.of(azureRegion));
         }
+
         public Builder client(@Nullable Output<String> client) {
-            this.client = client;
+            $.client = client;
             return this;
         }
-        public Builder client(@Nullable String client) {
-            this.client = Codegen.ofNullable(client);
-            return this;
+
+        public Builder client(String client) {
+            return client(Output.of(client));
         }
+
         public Builder controlPlane(@Nullable Output<AzureClusterControlPlaneGetArgs> controlPlane) {
-            this.controlPlane = controlPlane;
+            $.controlPlane = controlPlane;
             return this;
         }
-        public Builder controlPlane(@Nullable AzureClusterControlPlaneGetArgs controlPlane) {
-            this.controlPlane = Codegen.ofNullable(controlPlane);
-            return this;
+
+        public Builder controlPlane(AzureClusterControlPlaneGetArgs controlPlane) {
+            return controlPlane(Output.of(controlPlane));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder fleet(@Nullable Output<AzureClusterFleetGetArgs> fleet) {
-            this.fleet = fleet;
+            $.fleet = fleet;
             return this;
         }
-        public Builder fleet(@Nullable AzureClusterFleetGetArgs fleet) {
-            this.fleet = Codegen.ofNullable(fleet);
-            return this;
+
+        public Builder fleet(AzureClusterFleetGetArgs fleet) {
+            return fleet(Output.of(fleet));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networking(@Nullable Output<AzureClusterNetworkingGetArgs> networking) {
-            this.networking = networking;
+            $.networking = networking;
             return this;
         }
-        public Builder networking(@Nullable AzureClusterNetworkingGetArgs networking) {
-            this.networking = Codegen.ofNullable(networking);
-            return this;
+
+        public Builder networking(AzureClusterNetworkingGetArgs networking) {
+            return networking(Output.of(networking));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
-            this.reconciling = reconciling;
+            $.reconciling = reconciling;
             return this;
         }
-        public Builder reconciling(@Nullable Boolean reconciling) {
-            this.reconciling = Codegen.ofNullable(reconciling);
-            return this;
+
+        public Builder reconciling(Boolean reconciling) {
+            return reconciling(Output.of(reconciling));
         }
+
         public Builder resourceGroupId(@Nullable Output<String> resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+            $.resourceGroupId = resourceGroupId;
             return this;
         }
-        public Builder resourceGroupId(@Nullable String resourceGroupId) {
-            this.resourceGroupId = Codegen.ofNullable(resourceGroupId);
-            return this;
+
+        public Builder resourceGroupId(String resourceGroupId) {
+            return resourceGroupId(Output.of(resourceGroupId));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder workloadIdentityConfigs(@Nullable Output<List<AzureClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs) {
-            this.workloadIdentityConfigs = workloadIdentityConfigs;
+            $.workloadIdentityConfigs = workloadIdentityConfigs;
             return this;
         }
-        public Builder workloadIdentityConfigs(@Nullable List<AzureClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfigs) {
-            this.workloadIdentityConfigs = Codegen.ofNullable(workloadIdentityConfigs);
-            return this;
+
+        public Builder workloadIdentityConfigs(List<AzureClusterWorkloadIdentityConfigGetArgs> workloadIdentityConfigs) {
+            return workloadIdentityConfigs(Output.of(workloadIdentityConfigs));
         }
+
         public Builder workloadIdentityConfigs(AzureClusterWorkloadIdentityConfigGetArgs... workloadIdentityConfigs) {
             return workloadIdentityConfigs(List.of(workloadIdentityConfigs));
-        }        public AzureClusterState build() {
-            return new AzureClusterState(annotations, authorization, azureRegion, client, controlPlane, createTime, description, endpoint, etag, fleet, location, name, networking, project, reconciling, resourceGroupId, state, uid, updateTime, workloadIdentityConfigs);
+        }
+
+        public AzureClusterState build() {
+            return $;
         }
     }
+
 }

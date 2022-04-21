@@ -23,45 +23,44 @@ public final class EnabledConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public EnabledConfigResponse(@Nullable Boolean enabled) {
-        this.enabled = enabled;
-    }
+    private EnabledConfigResponse() {}
 
-    private EnabledConfigResponse() {
-        this.enabled = null;
+    private EnabledConfigResponse(EnabledConfigResponse $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnabledConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
+        private EnabledConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnabledConfigResponse();
         }
 
         public Builder(EnabledConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new EnabledConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public EnabledConfigResponse build() {
-            return new EnabledConfigResponse(enabled);
+        }
+
+        public EnabledConfigResponse build() {
+            return $;
         }
     }
+
 }

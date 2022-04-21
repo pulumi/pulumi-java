@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PipelineElapsedTimeMetricPolicyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<Object> duration;
+    private @Nullable Output<Object> duration;
 
-    public Output<Object> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<Object>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
-    public PipelineElapsedTimeMetricPolicyArgs(@Nullable Output<Object> duration) {
-        this.duration = duration;
-    }
+    private PipelineElapsedTimeMetricPolicyArgs() {}
 
-    private PipelineElapsedTimeMetricPolicyArgs() {
-        this.duration = Codegen.empty();
+    private PipelineElapsedTimeMetricPolicyArgs(PipelineElapsedTimeMetricPolicyArgs $) {
+        this.duration = $.duration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineElapsedTimeMetricPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> duration;
+        private PipelineElapsedTimeMetricPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineElapsedTimeMetricPolicyArgs();
         }
 
         public Builder(PipelineElapsedTimeMetricPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
+            $ = new PipelineElapsedTimeMetricPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable Output<Object> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable Object duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
-        }        public PipelineElapsedTimeMetricPolicyArgs build() {
-            return new PipelineElapsedTimeMetricPolicyArgs(duration);
+
+        public Builder duration(Object duration) {
+            return duration(Output.of(duration));
+        }
+
+        public PipelineElapsedTimeMetricPolicyArgs build() {
+            return $;
         }
     }
+
 }

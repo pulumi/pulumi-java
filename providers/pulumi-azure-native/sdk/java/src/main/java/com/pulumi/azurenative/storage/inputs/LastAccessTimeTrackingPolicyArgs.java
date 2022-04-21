@@ -7,12 +7,12 @@ import com.pulumi.azurenative.storage.enums.Name;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class LastAccessTimeTrackingPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="blobType")
-      private final @Nullable Output<List<String>> blobType;
+    private @Nullable Output<List<String>> blobType;
 
-    public Output<List<String>> blobType() {
-        return this.blobType == null ? Codegen.empty() : this.blobType;
+    public Optional<Output<List<String>>> blobType() {
+        return Optional.ofNullable(this.blobType);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enable", required=true)
-      private final Output<Boolean> enable;
+    private Output<Boolean> enable;
 
     public Output<Boolean> enable() {
         return this.enable;
@@ -51,10 +51,10 @@ public final class LastAccessTimeTrackingPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,Name>> name;
+    private @Nullable Output<Either<String,Name>> name;
 
-    public Output<Either<String,Name>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,Name>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -62,92 +62,83 @@ public final class LastAccessTimeTrackingPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="trackingGranularityInDays")
-      private final @Nullable Output<Integer> trackingGranularityInDays;
+    private @Nullable Output<Integer> trackingGranularityInDays;
 
-    public Output<Integer> trackingGranularityInDays() {
-        return this.trackingGranularityInDays == null ? Codegen.empty() : this.trackingGranularityInDays;
+    public Optional<Output<Integer>> trackingGranularityInDays() {
+        return Optional.ofNullable(this.trackingGranularityInDays);
     }
 
-    public LastAccessTimeTrackingPolicyArgs(
-        @Nullable Output<List<String>> blobType,
-        Output<Boolean> enable,
-        @Nullable Output<Either<String,Name>> name,
-        @Nullable Output<Integer> trackingGranularityInDays) {
-        this.blobType = blobType;
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.name = name;
-        this.trackingGranularityInDays = trackingGranularityInDays;
-    }
+    private LastAccessTimeTrackingPolicyArgs() {}
 
-    private LastAccessTimeTrackingPolicyArgs() {
-        this.blobType = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.name = Codegen.empty();
-        this.trackingGranularityInDays = Codegen.empty();
+    private LastAccessTimeTrackingPolicyArgs(LastAccessTimeTrackingPolicyArgs $) {
+        this.blobType = $.blobType;
+        this.enable = $.enable;
+        this.name = $.name;
+        this.trackingGranularityInDays = $.trackingGranularityInDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LastAccessTimeTrackingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> blobType;
-        private Output<Boolean> enable;
-        private @Nullable Output<Either<String,Name>> name;
-        private @Nullable Output<Integer> trackingGranularityInDays;
+        private LastAccessTimeTrackingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LastAccessTimeTrackingPolicyArgs();
         }
 
         public Builder(LastAccessTimeTrackingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobType = defaults.blobType;
-    	      this.enable = defaults.enable;
-    	      this.name = defaults.name;
-    	      this.trackingGranularityInDays = defaults.trackingGranularityInDays;
+            $ = new LastAccessTimeTrackingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobType(@Nullable Output<List<String>> blobType) {
-            this.blobType = blobType;
+            $.blobType = blobType;
             return this;
         }
-        public Builder blobType(@Nullable List<String> blobType) {
-            this.blobType = Codegen.ofNullable(blobType);
-            return this;
+
+        public Builder blobType(List<String> blobType) {
+            return blobType(Output.of(blobType));
         }
+
         public Builder blobType(String... blobType) {
             return blobType(List.of(blobType));
         }
+
         public Builder enable(Output<Boolean> enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder enable(Boolean enable) {
-            this.enable = Output.of(Objects.requireNonNull(enable));
-            return this;
+            return enable(Output.of(enable));
         }
+
         public Builder name(@Nullable Output<Either<String,Name>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,Name> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Either<String,Name> name) {
+            return name(Output.of(name));
         }
+
         public Builder trackingGranularityInDays(@Nullable Output<Integer> trackingGranularityInDays) {
-            this.trackingGranularityInDays = trackingGranularityInDays;
+            $.trackingGranularityInDays = trackingGranularityInDays;
             return this;
         }
-        public Builder trackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
-            this.trackingGranularityInDays = Codegen.ofNullable(trackingGranularityInDays);
-            return this;
-        }        public LastAccessTimeTrackingPolicyArgs build() {
-            return new LastAccessTimeTrackingPolicyArgs(blobType, enable, name, trackingGranularityInDays);
+
+        public Builder trackingGranularityInDays(Integer trackingGranularityInDays) {
+            return trackingGranularityInDays(Output.of(trackingGranularityInDays));
+        }
+
+        public LastAccessTimeTrackingPolicyArgs build() {
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            return $;
         }
     }
+
 }

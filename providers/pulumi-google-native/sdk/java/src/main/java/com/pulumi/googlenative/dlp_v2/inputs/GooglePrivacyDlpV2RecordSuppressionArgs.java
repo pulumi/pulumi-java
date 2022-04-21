@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordConditionArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends com.pulumi.re
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
+    private @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
-    public Output<GooglePrivacyDlpV2RecordConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<GooglePrivacyDlpV2RecordConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
-    public GooglePrivacyDlpV2RecordSuppressionArgs(@Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition) {
-        this.condition = condition;
-    }
+    private GooglePrivacyDlpV2RecordSuppressionArgs() {}
 
-    private GooglePrivacyDlpV2RecordSuppressionArgs() {
-        this.condition = Codegen.empty();
+    private GooglePrivacyDlpV2RecordSuppressionArgs(GooglePrivacyDlpV2RecordSuppressionArgs $) {
+        this.condition = $.condition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RecordSuppressionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
+        private GooglePrivacyDlpV2RecordSuppressionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RecordSuppressionArgs();
         }
 
         public Builder(GooglePrivacyDlpV2RecordSuppressionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
+            $ = new GooglePrivacyDlpV2RecordSuppressionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
-        }        public GooglePrivacyDlpV2RecordSuppressionArgs build() {
-            return new GooglePrivacyDlpV2RecordSuppressionArgs(condition);
+
+        public Builder condition(GooglePrivacyDlpV2RecordConditionArgs condition) {
+            return condition(Output.of(condition));
+        }
+
+        public GooglePrivacyDlpV2RecordSuppressionArgs build() {
+            return $;
         }
     }
+
 }

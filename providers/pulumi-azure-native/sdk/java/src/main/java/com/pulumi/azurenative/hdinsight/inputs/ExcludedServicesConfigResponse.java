@@ -23,10 +23,10 @@ public final class ExcludedServicesConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="excludedServicesConfigId")
-      private final @Nullable String excludedServicesConfigId;
+    private @Nullable String excludedServicesConfigId;
 
     public Optional<String> excludedServicesConfigId() {
-        return this.excludedServicesConfigId == null ? Optional.empty() : Optional.ofNullable(this.excludedServicesConfigId);
+        return Optional.ofNullable(this.excludedServicesConfigId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ExcludedServicesConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="excludedServicesList")
-      private final @Nullable String excludedServicesList;
+    private @Nullable String excludedServicesList;
 
     public Optional<String> excludedServicesList() {
-        return this.excludedServicesList == null ? Optional.empty() : Optional.ofNullable(this.excludedServicesList);
+        return Optional.ofNullable(this.excludedServicesList);
     }
 
-    public ExcludedServicesConfigResponse(
-        @Nullable String excludedServicesConfigId,
-        @Nullable String excludedServicesList) {
-        this.excludedServicesConfigId = excludedServicesConfigId;
-        this.excludedServicesList = excludedServicesList;
-    }
+    private ExcludedServicesConfigResponse() {}
 
-    private ExcludedServicesConfigResponse() {
-        this.excludedServicesConfigId = null;
-        this.excludedServicesList = null;
+    private ExcludedServicesConfigResponse(ExcludedServicesConfigResponse $) {
+        this.excludedServicesConfigId = $.excludedServicesConfigId;
+        this.excludedServicesList = $.excludedServicesList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExcludedServicesConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String excludedServicesConfigId;
-        private @Nullable String excludedServicesList;
+        private ExcludedServicesConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExcludedServicesConfigResponse();
         }
 
         public Builder(ExcludedServicesConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedServicesConfigId = defaults.excludedServicesConfigId;
-    	      this.excludedServicesList = defaults.excludedServicesList;
+            $ = new ExcludedServicesConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedServicesConfigId(@Nullable String excludedServicesConfigId) {
-            this.excludedServicesConfigId = excludedServicesConfigId;
+            $.excludedServicesConfigId = excludedServicesConfigId;
             return this;
         }
+
         public Builder excludedServicesList(@Nullable String excludedServicesList) {
-            this.excludedServicesList = excludedServicesList;
+            $.excludedServicesList = excludedServicesList;
             return this;
-        }        public ExcludedServicesConfigResponse build() {
-            return new ExcludedServicesConfigResponse(excludedServicesConfigId, excludedServicesList);
+        }
+
+        public ExcludedServicesConfigResponse build() {
+            return $;
         }
     }
+
 }

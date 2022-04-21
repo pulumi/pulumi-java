@@ -5,7 +5,6 @@ package com.pulumi.googlenative.jobs_v4;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.jobs_v4.enums.JobDegreeTypesItem;
 import com.pulumi.googlenative.jobs_v4.enums.JobEmploymentTypesItem;
 import com.pulumi.googlenative.jobs_v4.enums.JobJobBenefitsItem;
@@ -19,6 +18,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addresses")
-      private final @Nullable Output<List<String>> addresses;
+    private @Nullable Output<List<String>> addresses;
 
-    public Output<List<String>> addresses() {
-        return this.addresses == null ? Codegen.empty() : this.addresses;
+    public Optional<Output<List<String>>> addresses() {
+        return Optional.ofNullable(this.addresses);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationInfo")
-      private final @Nullable Output<ApplicationInfoArgs> applicationInfo;
+    private @Nullable Output<ApplicationInfoArgs> applicationInfo;
 
-    public Output<ApplicationInfoArgs> applicationInfo() {
-        return this.applicationInfo == null ? Codegen.empty() : this.applicationInfo;
+    public Optional<Output<ApplicationInfoArgs>> applicationInfo() {
+        return Optional.ofNullable(this.applicationInfo);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="company", required=true)
-      private final Output<String> company;
+    private Output<String> company;
 
     public Output<String> company() {
         return this.company;
@@ -64,10 +64,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compensationInfo")
-      private final @Nullable Output<CompensationInfoArgs> compensationInfo;
+    private @Nullable Output<CompensationInfoArgs> compensationInfo;
 
-    public Output<CompensationInfoArgs> compensationInfo() {
-        return this.compensationInfo == null ? Codegen.empty() : this.compensationInfo;
+    public Optional<Output<CompensationInfoArgs>> compensationInfo() {
+        return Optional.ofNullable(this.compensationInfo);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customAttributes")
-      private final @Nullable Output<Map<String,String>> customAttributes;
+    private @Nullable Output<Map<String,String>> customAttributes;
 
-    public Output<Map<String,String>> customAttributes() {
-        return this.customAttributes == null ? Codegen.empty() : this.customAttributes;
+    public Optional<Output<Map<String,String>>> customAttributes() {
+        return Optional.ofNullable(this.customAttributes);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="degreeTypes")
-      private final @Nullable Output<List<JobDegreeTypesItem>> degreeTypes;
+    private @Nullable Output<List<JobDegreeTypesItem>> degreeTypes;
 
-    public Output<List<JobDegreeTypesItem>> degreeTypes() {
-        return this.degreeTypes == null ? Codegen.empty() : this.degreeTypes;
+    public Optional<Output<List<JobDegreeTypesItem>>> degreeTypes() {
+        return Optional.ofNullable(this.degreeTypes);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="department")
-      private final @Nullable Output<String> department;
+    private @Nullable Output<String> department;
 
-    public Output<String> department() {
-        return this.department == null ? Codegen.empty() : this.department;
+    public Optional<Output<String>> department() {
+        return Optional.ofNullable(this.department);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
@@ -119,10 +119,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="employmentTypes")
-      private final @Nullable Output<List<JobEmploymentTypesItem>> employmentTypes;
+    private @Nullable Output<List<JobEmploymentTypesItem>> employmentTypes;
 
-    public Output<List<JobEmploymentTypesItem>> employmentTypes() {
-        return this.employmentTypes == null ? Codegen.empty() : this.employmentTypes;
+    public Optional<Output<List<JobEmploymentTypesItem>>> employmentTypes() {
+        return Optional.ofNullable(this.employmentTypes);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="incentives")
-      private final @Nullable Output<String> incentives;
+    private @Nullable Output<String> incentives;
 
-    public Output<String> incentives() {
-        return this.incentives == null ? Codegen.empty() : this.incentives;
+    public Optional<Output<String>> incentives() {
+        return Optional.ofNullable(this.incentives);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobBenefits")
-      private final @Nullable Output<List<JobJobBenefitsItem>> jobBenefits;
+    private @Nullable Output<List<JobJobBenefitsItem>> jobBenefits;
 
-    public Output<List<JobJobBenefitsItem>> jobBenefits() {
-        return this.jobBenefits == null ? Codegen.empty() : this.jobBenefits;
+    public Optional<Output<List<JobJobBenefitsItem>>> jobBenefits() {
+        return Optional.ofNullable(this.jobBenefits);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobEndTime")
-      private final @Nullable Output<String> jobEndTime;
+    private @Nullable Output<String> jobEndTime;
 
-    public Output<String> jobEndTime() {
-        return this.jobEndTime == null ? Codegen.empty() : this.jobEndTime;
+    public Optional<Output<String>> jobEndTime() {
+        return Optional.ofNullable(this.jobEndTime);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobLevel")
-      private final @Nullable Output<JobJobLevel> jobLevel;
+    private @Nullable Output<JobJobLevel> jobLevel;
 
-    public Output<JobJobLevel> jobLevel() {
-        return this.jobLevel == null ? Codegen.empty() : this.jobLevel;
+    public Optional<Output<JobJobLevel>> jobLevel() {
+        return Optional.ofNullable(this.jobLevel);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobStartTime")
-      private final @Nullable Output<String> jobStartTime;
+    private @Nullable Output<String> jobStartTime;
 
-    public Output<String> jobStartTime() {
-        return this.jobStartTime == null ? Codegen.empty() : this.jobStartTime;
+    public Optional<Output<String>> jobStartTime() {
+        return Optional.ofNullable(this.jobStartTime);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postingExpireTime")
-      private final @Nullable Output<String> postingExpireTime;
+    private @Nullable Output<String> postingExpireTime;
 
-    public Output<String> postingExpireTime() {
-        return this.postingExpireTime == null ? Codegen.empty() : this.postingExpireTime;
+    public Optional<Output<String>> postingExpireTime() {
+        return Optional.ofNullable(this.postingExpireTime);
     }
 
     /**
@@ -218,10 +218,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postingPublishTime")
-      private final @Nullable Output<String> postingPublishTime;
+    private @Nullable Output<String> postingPublishTime;
 
-    public Output<String> postingPublishTime() {
-        return this.postingPublishTime == null ? Codegen.empty() : this.postingPublishTime;
+    public Optional<Output<String>> postingPublishTime() {
+        return Optional.ofNullable(this.postingPublishTime);
     }
 
     /**
@@ -229,10 +229,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postingRegion")
-      private final @Nullable Output<JobPostingRegion> postingRegion;
+    private @Nullable Output<JobPostingRegion> postingRegion;
 
-    public Output<JobPostingRegion> postingRegion() {
-        return this.postingRegion == null ? Codegen.empty() : this.postingRegion;
+    public Optional<Output<JobPostingRegion>> postingRegion() {
+        return Optional.ofNullable(this.postingRegion);
     }
 
     /**
@@ -240,17 +240,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="processingOptions")
-      private final @Nullable Output<ProcessingOptionsArgs> processingOptions;
+    private @Nullable Output<ProcessingOptionsArgs> processingOptions;
 
-    public Output<ProcessingOptionsArgs> processingOptions() {
-        return this.processingOptions == null ? Codegen.empty() : this.processingOptions;
+    public Optional<Output<ProcessingOptionsArgs>> processingOptions() {
+        return Optional.ofNullable(this.processingOptions);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -258,10 +258,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="promotionValue")
-      private final @Nullable Output<Integer> promotionValue;
+    private @Nullable Output<Integer> promotionValue;
 
-    public Output<Integer> promotionValue() {
-        return this.promotionValue == null ? Codegen.empty() : this.promotionValue;
+    public Optional<Output<Integer>> promotionValue() {
+        return Optional.ofNullable(this.promotionValue);
     }
 
     /**
@@ -269,10 +269,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="qualifications")
-      private final @Nullable Output<String> qualifications;
+    private @Nullable Output<String> qualifications;
 
-    public Output<String> qualifications() {
-        return this.qualifications == null ? Codegen.empty() : this.qualifications;
+    public Optional<Output<String>> qualifications() {
+        return Optional.ofNullable(this.qualifications);
     }
 
     /**
@@ -280,7 +280,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requisitionId", required=true)
-      private final Output<String> requisitionId;
+    private Output<String> requisitionId;
 
     public Output<String> requisitionId() {
         return this.requisitionId;
@@ -291,14 +291,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responsibilities")
-      private final @Nullable Output<String> responsibilities;
+    private @Nullable Output<String> responsibilities;
 
-    public Output<String> responsibilities() {
-        return this.responsibilities == null ? Codegen.empty() : this.responsibilities;
+    public Optional<Output<String>> responsibilities() {
+        return Optional.ofNullable(this.responsibilities);
     }
 
     @Import(name="tenantId", required=true)
-      private final Output<String> tenantId;
+    private Output<String> tenantId;
 
     public Output<String> tenantId() {
         return this.tenantId;
@@ -309,400 +309,329 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public JobArgs(
-        @Nullable Output<List<String>> addresses,
-        @Nullable Output<ApplicationInfoArgs> applicationInfo,
-        Output<String> company,
-        @Nullable Output<CompensationInfoArgs> compensationInfo,
-        @Nullable Output<Map<String,String>> customAttributes,
-        @Nullable Output<List<JobDegreeTypesItem>> degreeTypes,
-        @Nullable Output<String> department,
-        Output<String> description,
-        @Nullable Output<List<JobEmploymentTypesItem>> employmentTypes,
-        @Nullable Output<String> incentives,
-        @Nullable Output<List<JobJobBenefitsItem>> jobBenefits,
-        @Nullable Output<String> jobEndTime,
-        @Nullable Output<JobJobLevel> jobLevel,
-        @Nullable Output<String> jobStartTime,
-        @Nullable Output<String> languageCode,
-        @Nullable Output<String> name,
-        @Nullable Output<String> postingExpireTime,
-        @Nullable Output<String> postingPublishTime,
-        @Nullable Output<JobPostingRegion> postingRegion,
-        @Nullable Output<ProcessingOptionsArgs> processingOptions,
-        @Nullable Output<String> project,
-        @Nullable Output<Integer> promotionValue,
-        @Nullable Output<String> qualifications,
-        Output<String> requisitionId,
-        @Nullable Output<String> responsibilities,
-        Output<String> tenantId,
-        Output<String> title) {
-        this.addresses = addresses;
-        this.applicationInfo = applicationInfo;
-        this.company = Objects.requireNonNull(company, "expected parameter 'company' to be non-null");
-        this.compensationInfo = compensationInfo;
-        this.customAttributes = customAttributes;
-        this.degreeTypes = degreeTypes;
-        this.department = department;
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.employmentTypes = employmentTypes;
-        this.incentives = incentives;
-        this.jobBenefits = jobBenefits;
-        this.jobEndTime = jobEndTime;
-        this.jobLevel = jobLevel;
-        this.jobStartTime = jobStartTime;
-        this.languageCode = languageCode;
-        this.name = name;
-        this.postingExpireTime = postingExpireTime;
-        this.postingPublishTime = postingPublishTime;
-        this.postingRegion = postingRegion;
-        this.processingOptions = processingOptions;
-        this.project = project;
-        this.promotionValue = promotionValue;
-        this.qualifications = qualifications;
-        this.requisitionId = Objects.requireNonNull(requisitionId, "expected parameter 'requisitionId' to be non-null");
-        this.responsibilities = responsibilities;
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.addresses = Codegen.empty();
-        this.applicationInfo = Codegen.empty();
-        this.company = Codegen.empty();
-        this.compensationInfo = Codegen.empty();
-        this.customAttributes = Codegen.empty();
-        this.degreeTypes = Codegen.empty();
-        this.department = Codegen.empty();
-        this.description = Codegen.empty();
-        this.employmentTypes = Codegen.empty();
-        this.incentives = Codegen.empty();
-        this.jobBenefits = Codegen.empty();
-        this.jobEndTime = Codegen.empty();
-        this.jobLevel = Codegen.empty();
-        this.jobStartTime = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.name = Codegen.empty();
-        this.postingExpireTime = Codegen.empty();
-        this.postingPublishTime = Codegen.empty();
-        this.postingRegion = Codegen.empty();
-        this.processingOptions = Codegen.empty();
-        this.project = Codegen.empty();
-        this.promotionValue = Codegen.empty();
-        this.qualifications = Codegen.empty();
-        this.requisitionId = Codegen.empty();
-        this.responsibilities = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.title = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.addresses = $.addresses;
+        this.applicationInfo = $.applicationInfo;
+        this.company = $.company;
+        this.compensationInfo = $.compensationInfo;
+        this.customAttributes = $.customAttributes;
+        this.degreeTypes = $.degreeTypes;
+        this.department = $.department;
+        this.description = $.description;
+        this.employmentTypes = $.employmentTypes;
+        this.incentives = $.incentives;
+        this.jobBenefits = $.jobBenefits;
+        this.jobEndTime = $.jobEndTime;
+        this.jobLevel = $.jobLevel;
+        this.jobStartTime = $.jobStartTime;
+        this.languageCode = $.languageCode;
+        this.name = $.name;
+        this.postingExpireTime = $.postingExpireTime;
+        this.postingPublishTime = $.postingPublishTime;
+        this.postingRegion = $.postingRegion;
+        this.processingOptions = $.processingOptions;
+        this.project = $.project;
+        this.promotionValue = $.promotionValue;
+        this.qualifications = $.qualifications;
+        this.requisitionId = $.requisitionId;
+        this.responsibilities = $.responsibilities;
+        this.tenantId = $.tenantId;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addresses;
-        private @Nullable Output<ApplicationInfoArgs> applicationInfo;
-        private Output<String> company;
-        private @Nullable Output<CompensationInfoArgs> compensationInfo;
-        private @Nullable Output<Map<String,String>> customAttributes;
-        private @Nullable Output<List<JobDegreeTypesItem>> degreeTypes;
-        private @Nullable Output<String> department;
-        private Output<String> description;
-        private @Nullable Output<List<JobEmploymentTypesItem>> employmentTypes;
-        private @Nullable Output<String> incentives;
-        private @Nullable Output<List<JobJobBenefitsItem>> jobBenefits;
-        private @Nullable Output<String> jobEndTime;
-        private @Nullable Output<JobJobLevel> jobLevel;
-        private @Nullable Output<String> jobStartTime;
-        private @Nullable Output<String> languageCode;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> postingExpireTime;
-        private @Nullable Output<String> postingPublishTime;
-        private @Nullable Output<JobPostingRegion> postingRegion;
-        private @Nullable Output<ProcessingOptionsArgs> processingOptions;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Integer> promotionValue;
-        private @Nullable Output<String> qualifications;
-        private Output<String> requisitionId;
-        private @Nullable Output<String> responsibilities;
-        private Output<String> tenantId;
-        private Output<String> title;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addresses = defaults.addresses;
-    	      this.applicationInfo = defaults.applicationInfo;
-    	      this.company = defaults.company;
-    	      this.compensationInfo = defaults.compensationInfo;
-    	      this.customAttributes = defaults.customAttributes;
-    	      this.degreeTypes = defaults.degreeTypes;
-    	      this.department = defaults.department;
-    	      this.description = defaults.description;
-    	      this.employmentTypes = defaults.employmentTypes;
-    	      this.incentives = defaults.incentives;
-    	      this.jobBenefits = defaults.jobBenefits;
-    	      this.jobEndTime = defaults.jobEndTime;
-    	      this.jobLevel = defaults.jobLevel;
-    	      this.jobStartTime = defaults.jobStartTime;
-    	      this.languageCode = defaults.languageCode;
-    	      this.name = defaults.name;
-    	      this.postingExpireTime = defaults.postingExpireTime;
-    	      this.postingPublishTime = defaults.postingPublishTime;
-    	      this.postingRegion = defaults.postingRegion;
-    	      this.processingOptions = defaults.processingOptions;
-    	      this.project = defaults.project;
-    	      this.promotionValue = defaults.promotionValue;
-    	      this.qualifications = defaults.qualifications;
-    	      this.requisitionId = defaults.requisitionId;
-    	      this.responsibilities = defaults.responsibilities;
-    	      this.tenantId = defaults.tenantId;
-    	      this.title = defaults.title;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addresses(@Nullable Output<List<String>> addresses) {
-            this.addresses = addresses;
+            $.addresses = addresses;
             return this;
         }
-        public Builder addresses(@Nullable List<String> addresses) {
-            this.addresses = Codegen.ofNullable(addresses);
-            return this;
+
+        public Builder addresses(List<String> addresses) {
+            return addresses(Output.of(addresses));
         }
+
         public Builder addresses(String... addresses) {
             return addresses(List.of(addresses));
         }
+
         public Builder applicationInfo(@Nullable Output<ApplicationInfoArgs> applicationInfo) {
-            this.applicationInfo = applicationInfo;
+            $.applicationInfo = applicationInfo;
             return this;
         }
-        public Builder applicationInfo(@Nullable ApplicationInfoArgs applicationInfo) {
-            this.applicationInfo = Codegen.ofNullable(applicationInfo);
-            return this;
+
+        public Builder applicationInfo(ApplicationInfoArgs applicationInfo) {
+            return applicationInfo(Output.of(applicationInfo));
         }
+
         public Builder company(Output<String> company) {
-            this.company = Objects.requireNonNull(company);
+            $.company = company;
             return this;
         }
+
         public Builder company(String company) {
-            this.company = Output.of(Objects.requireNonNull(company));
-            return this;
+            return company(Output.of(company));
         }
+
         public Builder compensationInfo(@Nullable Output<CompensationInfoArgs> compensationInfo) {
-            this.compensationInfo = compensationInfo;
+            $.compensationInfo = compensationInfo;
             return this;
         }
-        public Builder compensationInfo(@Nullable CompensationInfoArgs compensationInfo) {
-            this.compensationInfo = Codegen.ofNullable(compensationInfo);
-            return this;
+
+        public Builder compensationInfo(CompensationInfoArgs compensationInfo) {
+            return compensationInfo(Output.of(compensationInfo));
         }
+
         public Builder customAttributes(@Nullable Output<Map<String,String>> customAttributes) {
-            this.customAttributes = customAttributes;
+            $.customAttributes = customAttributes;
             return this;
         }
-        public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
-            this.customAttributes = Codegen.ofNullable(customAttributes);
-            return this;
+
+        public Builder customAttributes(Map<String,String> customAttributes) {
+            return customAttributes(Output.of(customAttributes));
         }
+
         public Builder degreeTypes(@Nullable Output<List<JobDegreeTypesItem>> degreeTypes) {
-            this.degreeTypes = degreeTypes;
+            $.degreeTypes = degreeTypes;
             return this;
         }
-        public Builder degreeTypes(@Nullable List<JobDegreeTypesItem> degreeTypes) {
-            this.degreeTypes = Codegen.ofNullable(degreeTypes);
-            return this;
+
+        public Builder degreeTypes(List<JobDegreeTypesItem> degreeTypes) {
+            return degreeTypes(Output.of(degreeTypes));
         }
+
         public Builder degreeTypes(JobDegreeTypesItem... degreeTypes) {
             return degreeTypes(List.of(degreeTypes));
         }
+
         public Builder department(@Nullable Output<String> department) {
-            this.department = department;
+            $.department = department;
             return this;
         }
-        public Builder department(@Nullable String department) {
-            this.department = Codegen.ofNullable(department);
-            return this;
+
+        public Builder department(String department) {
+            return department(Output.of(department));
         }
+
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder employmentTypes(@Nullable Output<List<JobEmploymentTypesItem>> employmentTypes) {
-            this.employmentTypes = employmentTypes;
+            $.employmentTypes = employmentTypes;
             return this;
         }
-        public Builder employmentTypes(@Nullable List<JobEmploymentTypesItem> employmentTypes) {
-            this.employmentTypes = Codegen.ofNullable(employmentTypes);
-            return this;
+
+        public Builder employmentTypes(List<JobEmploymentTypesItem> employmentTypes) {
+            return employmentTypes(Output.of(employmentTypes));
         }
+
         public Builder employmentTypes(JobEmploymentTypesItem... employmentTypes) {
             return employmentTypes(List.of(employmentTypes));
         }
+
         public Builder incentives(@Nullable Output<String> incentives) {
-            this.incentives = incentives;
+            $.incentives = incentives;
             return this;
         }
-        public Builder incentives(@Nullable String incentives) {
-            this.incentives = Codegen.ofNullable(incentives);
-            return this;
+
+        public Builder incentives(String incentives) {
+            return incentives(Output.of(incentives));
         }
+
         public Builder jobBenefits(@Nullable Output<List<JobJobBenefitsItem>> jobBenefits) {
-            this.jobBenefits = jobBenefits;
+            $.jobBenefits = jobBenefits;
             return this;
         }
-        public Builder jobBenefits(@Nullable List<JobJobBenefitsItem> jobBenefits) {
-            this.jobBenefits = Codegen.ofNullable(jobBenefits);
-            return this;
+
+        public Builder jobBenefits(List<JobJobBenefitsItem> jobBenefits) {
+            return jobBenefits(Output.of(jobBenefits));
         }
+
         public Builder jobBenefits(JobJobBenefitsItem... jobBenefits) {
             return jobBenefits(List.of(jobBenefits));
         }
+
         public Builder jobEndTime(@Nullable Output<String> jobEndTime) {
-            this.jobEndTime = jobEndTime;
+            $.jobEndTime = jobEndTime;
             return this;
         }
-        public Builder jobEndTime(@Nullable String jobEndTime) {
-            this.jobEndTime = Codegen.ofNullable(jobEndTime);
-            return this;
+
+        public Builder jobEndTime(String jobEndTime) {
+            return jobEndTime(Output.of(jobEndTime));
         }
+
         public Builder jobLevel(@Nullable Output<JobJobLevel> jobLevel) {
-            this.jobLevel = jobLevel;
+            $.jobLevel = jobLevel;
             return this;
         }
-        public Builder jobLevel(@Nullable JobJobLevel jobLevel) {
-            this.jobLevel = Codegen.ofNullable(jobLevel);
-            return this;
+
+        public Builder jobLevel(JobJobLevel jobLevel) {
+            return jobLevel(Output.of(jobLevel));
         }
+
         public Builder jobStartTime(@Nullable Output<String> jobStartTime) {
-            this.jobStartTime = jobStartTime;
+            $.jobStartTime = jobStartTime;
             return this;
         }
-        public Builder jobStartTime(@Nullable String jobStartTime) {
-            this.jobStartTime = Codegen.ofNullable(jobStartTime);
-            return this;
+
+        public Builder jobStartTime(String jobStartTime) {
+            return jobStartTime(Output.of(jobStartTime));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder postingExpireTime(@Nullable Output<String> postingExpireTime) {
-            this.postingExpireTime = postingExpireTime;
+            $.postingExpireTime = postingExpireTime;
             return this;
         }
-        public Builder postingExpireTime(@Nullable String postingExpireTime) {
-            this.postingExpireTime = Codegen.ofNullable(postingExpireTime);
-            return this;
+
+        public Builder postingExpireTime(String postingExpireTime) {
+            return postingExpireTime(Output.of(postingExpireTime));
         }
+
         public Builder postingPublishTime(@Nullable Output<String> postingPublishTime) {
-            this.postingPublishTime = postingPublishTime;
+            $.postingPublishTime = postingPublishTime;
             return this;
         }
-        public Builder postingPublishTime(@Nullable String postingPublishTime) {
-            this.postingPublishTime = Codegen.ofNullable(postingPublishTime);
-            return this;
+
+        public Builder postingPublishTime(String postingPublishTime) {
+            return postingPublishTime(Output.of(postingPublishTime));
         }
+
         public Builder postingRegion(@Nullable Output<JobPostingRegion> postingRegion) {
-            this.postingRegion = postingRegion;
+            $.postingRegion = postingRegion;
             return this;
         }
-        public Builder postingRegion(@Nullable JobPostingRegion postingRegion) {
-            this.postingRegion = Codegen.ofNullable(postingRegion);
-            return this;
+
+        public Builder postingRegion(JobPostingRegion postingRegion) {
+            return postingRegion(Output.of(postingRegion));
         }
+
         public Builder processingOptions(@Nullable Output<ProcessingOptionsArgs> processingOptions) {
-            this.processingOptions = processingOptions;
+            $.processingOptions = processingOptions;
             return this;
         }
-        public Builder processingOptions(@Nullable ProcessingOptionsArgs processingOptions) {
-            this.processingOptions = Codegen.ofNullable(processingOptions);
-            return this;
+
+        public Builder processingOptions(ProcessingOptionsArgs processingOptions) {
+            return processingOptions(Output.of(processingOptions));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder promotionValue(@Nullable Output<Integer> promotionValue) {
-            this.promotionValue = promotionValue;
+            $.promotionValue = promotionValue;
             return this;
         }
-        public Builder promotionValue(@Nullable Integer promotionValue) {
-            this.promotionValue = Codegen.ofNullable(promotionValue);
-            return this;
+
+        public Builder promotionValue(Integer promotionValue) {
+            return promotionValue(Output.of(promotionValue));
         }
+
         public Builder qualifications(@Nullable Output<String> qualifications) {
-            this.qualifications = qualifications;
+            $.qualifications = qualifications;
             return this;
         }
-        public Builder qualifications(@Nullable String qualifications) {
-            this.qualifications = Codegen.ofNullable(qualifications);
-            return this;
+
+        public Builder qualifications(String qualifications) {
+            return qualifications(Output.of(qualifications));
         }
+
         public Builder requisitionId(Output<String> requisitionId) {
-            this.requisitionId = Objects.requireNonNull(requisitionId);
+            $.requisitionId = requisitionId;
             return this;
         }
+
         public Builder requisitionId(String requisitionId) {
-            this.requisitionId = Output.of(Objects.requireNonNull(requisitionId));
-            return this;
+            return requisitionId(Output.of(requisitionId));
         }
+
         public Builder responsibilities(@Nullable Output<String> responsibilities) {
-            this.responsibilities = responsibilities;
+            $.responsibilities = responsibilities;
             return this;
         }
-        public Builder responsibilities(@Nullable String responsibilities) {
-            this.responsibilities = Codegen.ofNullable(responsibilities);
-            return this;
+
+        public Builder responsibilities(String responsibilities) {
+            return responsibilities(Output.of(responsibilities));
         }
+
         public Builder tenantId(Output<String> tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
-            return this;
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(addresses, applicationInfo, company, compensationInfo, customAttributes, degreeTypes, department, description, employmentTypes, incentives, jobBenefits, jobEndTime, jobLevel, jobStartTime, languageCode, name, postingExpireTime, postingPublishTime, postingRegion, processingOptions, project, promotionValue, qualifications, requisitionId, responsibilities, tenantId, title);
+            return title(Output.of(title));
+        }
+
+        public JobArgs build() {
+            $.company = Objects.requireNonNull($.company, "expected parameter 'company' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.requisitionId = Objects.requireNonNull($.requisitionId, "expected parameter 'requisitionId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

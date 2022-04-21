@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotevents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DetectorModelClearTimerArgs extends com.pulumi.resources.Reso
     public static final DetectorModelClearTimerArgs Empty = new DetectorModelClearTimerArgs();
 
     @Import(name="timerName", required=true)
-      private final Output<String> timerName;
+    private Output<String> timerName;
 
     public Output<String> timerName() {
         return this.timerName;
     }
 
-    public DetectorModelClearTimerArgs(Output<String> timerName) {
-        this.timerName = Objects.requireNonNull(timerName, "expected parameter 'timerName' to be non-null");
-    }
+    private DetectorModelClearTimerArgs() {}
 
-    private DetectorModelClearTimerArgs() {
-        this.timerName = Codegen.empty();
+    private DetectorModelClearTimerArgs(DetectorModelClearTimerArgs $) {
+        this.timerName = $.timerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelClearTimerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> timerName;
+        private DetectorModelClearTimerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelClearTimerArgs();
         }
 
         public Builder(DetectorModelClearTimerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timerName = defaults.timerName;
+            $ = new DetectorModelClearTimerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder timerName(Output<String> timerName) {
-            this.timerName = Objects.requireNonNull(timerName);
+            $.timerName = timerName;
             return this;
         }
+
         public Builder timerName(String timerName) {
-            this.timerName = Output.of(Objects.requireNonNull(timerName));
-            return this;
-        }        public DetectorModelClearTimerArgs build() {
-            return new DetectorModelClearTimerArgs(timerName);
+            return timerName(Output.of(timerName));
+        }
+
+        public DetectorModelClearTimerArgs build() {
+            $.timerName = Objects.requireNonNull($.timerName, "expected parameter 'timerName' to be non-null");
+            return $;
         }
     }
+
 }

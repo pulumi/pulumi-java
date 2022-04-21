@@ -25,10 +25,10 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends com.pulumi.
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable MHSMPrivateEndpointResponse privateEndpoint;
+    private @Nullable MHSMPrivateEndpointResponse privateEndpoint;
 
     public Optional<MHSMPrivateEndpointResponse> privateEndpoint() {
-        return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends com.pulumi.
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<MHSMPrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class MHSMPrivateEndpointConnectionItemResponse extends com.pulumi.
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public MHSMPrivateEndpointConnectionItemResponse(
-        @Nullable MHSMPrivateEndpointResponse privateEndpoint,
-        @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState) {
-        this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private MHSMPrivateEndpointConnectionItemResponse() {}
 
-    private MHSMPrivateEndpointConnectionItemResponse() {
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
+    private MHSMPrivateEndpointConnectionItemResponse(MHSMPrivateEndpointConnectionItemResponse $) {
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MHSMPrivateEndpointConnectionItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MHSMPrivateEndpointResponse privateEndpoint;
-        private @Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-        private String provisioningState;
+        private MHSMPrivateEndpointConnectionItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MHSMPrivateEndpointConnectionItemResponse();
         }
 
         public Builder(MHSMPrivateEndpointConnectionItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new MHSMPrivateEndpointConnectionItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateEndpoint(@Nullable MHSMPrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable MHSMPrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public MHSMPrivateEndpointConnectionItemResponse build() {
-            return new MHSMPrivateEndpointConnectionItemResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
+        }
+
+        public MHSMPrivateEndpointConnectionItemResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

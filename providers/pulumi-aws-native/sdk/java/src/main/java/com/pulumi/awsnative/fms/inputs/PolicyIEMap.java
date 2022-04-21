@@ -20,68 +20,65 @@ public final class PolicyIEMap extends com.pulumi.resources.InvokeArgs {
     public static final PolicyIEMap Empty = new PolicyIEMap();
 
     @Import(name="aCCOUNT")
-      private final @Nullable List<String> aCCOUNT;
+    private @Nullable List<String> aCCOUNT;
 
-    public List<String> aCCOUNT() {
-        return this.aCCOUNT == null ? List.of() : this.aCCOUNT;
+    public Optional<List<String>> aCCOUNT() {
+        return Optional.ofNullable(this.aCCOUNT);
     }
 
     @Import(name="oRGUNIT")
-      private final @Nullable List<String> oRGUNIT;
+    private @Nullable List<String> oRGUNIT;
 
-    public List<String> oRGUNIT() {
-        return this.oRGUNIT == null ? List.of() : this.oRGUNIT;
+    public Optional<List<String>> oRGUNIT() {
+        return Optional.ofNullable(this.oRGUNIT);
     }
 
-    public PolicyIEMap(
-        @Nullable List<String> aCCOUNT,
-        @Nullable List<String> oRGUNIT) {
-        this.aCCOUNT = aCCOUNT;
-        this.oRGUNIT = oRGUNIT;
-    }
+    private PolicyIEMap() {}
 
-    private PolicyIEMap() {
-        this.aCCOUNT = List.of();
-        this.oRGUNIT = List.of();
+    private PolicyIEMap(PolicyIEMap $) {
+        this.aCCOUNT = $.aCCOUNT;
+        this.oRGUNIT = $.oRGUNIT;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyIEMap defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> aCCOUNT;
-        private @Nullable List<String> oRGUNIT;
+        private PolicyIEMap $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyIEMap();
         }
 
         public Builder(PolicyIEMap defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aCCOUNT = defaults.aCCOUNT;
-    	      this.oRGUNIT = defaults.oRGUNIT;
+            $ = new PolicyIEMap(Objects.requireNonNull(defaults));
         }
 
         public Builder aCCOUNT(@Nullable List<String> aCCOUNT) {
-            this.aCCOUNT = aCCOUNT;
+            $.aCCOUNT = aCCOUNT;
             return this;
         }
+
         public Builder aCCOUNT(String... aCCOUNT) {
             return aCCOUNT(List.of(aCCOUNT));
         }
+
         public Builder oRGUNIT(@Nullable List<String> oRGUNIT) {
-            this.oRGUNIT = oRGUNIT;
+            $.oRGUNIT = oRGUNIT;
             return this;
         }
+
         public Builder oRGUNIT(String... oRGUNIT) {
             return oRGUNIT(List.of(oRGUNIT));
-        }        public PolicyIEMap build() {
-            return new PolicyIEMap(aCCOUNT, oRGUNIT);
+        }
+
+        public PolicyIEMap build() {
+            return $;
         }
     }
+
 }

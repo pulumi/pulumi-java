@@ -5,11 +5,11 @@ package com.pulumi.gcp.datacatalog;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TagFieldArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="column")
-      private final @Nullable Output<String> column;
+    private @Nullable Output<String> column;
 
-    public Output<String> column() {
-        return this.column == null ? Codegen.empty() : this.column;
+    public Optional<Output<String>> column() {
+        return Optional.ofNullable(this.column);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields", required=true)
-      private final Output<List<TagFieldArgs>> fields;
+    private Output<List<TagFieldArgs>> fields;
 
     public Output<List<TagFieldArgs>> fields() {
         return this.fields;
@@ -50,10 +50,10 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -63,92 +63,84 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="template", required=true)
-      private final Output<String> template;
+    private Output<String> template;
 
     public Output<String> template() {
         return this.template;
     }
 
-    public TagArgs(
-        @Nullable Output<String> column,
-        Output<List<TagFieldArgs>> fields,
-        @Nullable Output<String> parent,
-        Output<String> template) {
-        this.column = column;
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.parent = parent;
-        this.template = Objects.requireNonNull(template, "expected parameter 'template' to be non-null");
-    }
+    private TagArgs() {}
 
-    private TagArgs() {
-        this.column = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.template = Codegen.empty();
+    private TagArgs(TagArgs $) {
+        this.column = $.column;
+        this.fields = $.fields;
+        this.parent = $.parent;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> column;
-        private Output<List<TagFieldArgs>> fields;
-        private @Nullable Output<String> parent;
-        private Output<String> template;
+        private TagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagArgs();
         }
 
         public Builder(TagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.column = defaults.column;
-    	      this.fields = defaults.fields;
-    	      this.parent = defaults.parent;
-    	      this.template = defaults.template;
+            $ = new TagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder column(@Nullable Output<String> column) {
-            this.column = column;
+            $.column = column;
             return this;
         }
-        public Builder column(@Nullable String column) {
-            this.column = Codegen.ofNullable(column);
-            return this;
+
+        public Builder column(String column) {
+            return column(Output.of(column));
         }
+
         public Builder fields(Output<List<TagFieldArgs>> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(List<TagFieldArgs> fields) {
-            this.fields = Output.of(Objects.requireNonNull(fields));
-            return this;
+            return fields(Output.of(fields));
         }
+
         public Builder fields(TagFieldArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder template(Output<String> template) {
-            this.template = Objects.requireNonNull(template);
+            $.template = template;
             return this;
         }
+
         public Builder template(String template) {
-            this.template = Output.of(Objects.requireNonNull(template));
-            return this;
-        }        public TagArgs build() {
-            return new TagArgs(column, fields, parent, template);
+            return template(Output.of(template));
+        }
+
+        public TagArgs build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.template = Objects.requireNonNull($.template, "expected parameter 'template' to be non-null");
+            return $;
         }
     }
+
 }

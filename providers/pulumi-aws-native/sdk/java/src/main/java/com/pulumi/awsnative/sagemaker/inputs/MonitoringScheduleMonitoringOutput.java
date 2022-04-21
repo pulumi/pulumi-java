@@ -17,45 +17,45 @@ public final class MonitoringScheduleMonitoringOutput extends com.pulumi.resourc
     public static final MonitoringScheduleMonitoringOutput Empty = new MonitoringScheduleMonitoringOutput();
 
     @Import(name="s3Output", required=true)
-      private final MonitoringScheduleS3Output s3Output;
+    private MonitoringScheduleS3Output s3Output;
 
     public MonitoringScheduleS3Output s3Output() {
         return this.s3Output;
     }
 
-    public MonitoringScheduleMonitoringOutput(MonitoringScheduleS3Output s3Output) {
-        this.s3Output = Objects.requireNonNull(s3Output, "expected parameter 's3Output' to be non-null");
-    }
+    private MonitoringScheduleMonitoringOutput() {}
 
-    private MonitoringScheduleMonitoringOutput() {
-        this.s3Output = null;
+    private MonitoringScheduleMonitoringOutput(MonitoringScheduleMonitoringOutput $) {
+        this.s3Output = $.s3Output;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleMonitoringOutput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MonitoringScheduleS3Output s3Output;
+        private MonitoringScheduleMonitoringOutput $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleMonitoringOutput();
         }
 
         public Builder(MonitoringScheduleMonitoringOutput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Output = defaults.s3Output;
+            $ = new MonitoringScheduleMonitoringOutput(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Output(MonitoringScheduleS3Output s3Output) {
-            this.s3Output = Objects.requireNonNull(s3Output);
+            $.s3Output = s3Output;
             return this;
-        }        public MonitoringScheduleMonitoringOutput build() {
-            return new MonitoringScheduleMonitoringOutput(s3Output);
+        }
+
+        public MonitoringScheduleMonitoringOutput build() {
+            $.s3Output = Objects.requireNonNull($.s3Output, "expected parameter 's3Output' to be non-null");
+            return $;
         }
     }
+
 }

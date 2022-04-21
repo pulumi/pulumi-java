@@ -24,10 +24,10 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executableUsers")
-      private final @Nullable List<String> executableUsers;
+    private @Nullable List<String> executableUsers;
 
-    public List<String> executableUsers() {
-        return this.executableUsers == null ? List.of() : this.executableUsers;
+    public Optional<List<String>> executableUsers() {
+        return Optional.ofNullable(this.executableUsers);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetAmiFilter> filters;
+    private @Nullable List<GetAmiFilter> filters;
 
-    public List<GetAmiFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetAmiFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-      private final @Nullable Boolean mostRecent;
+    private @Nullable Boolean mostRecent;
 
     public Optional<Boolean> mostRecent() {
-        return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameRegex")
-      private final @Nullable String nameRegex;
+    private @Nullable String nameRegex;
 
     public Optional<String> nameRegex() {
-        return this.nameRegex == null ? Optional.empty() : Optional.ofNullable(this.nameRegex);
+        return Optional.ofNullable(this.nameRegex);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owners", required=true)
-      private final List<String> owners;
+    private List<String> owners;
 
     public List<String> owners() {
         return this.owners;
@@ -88,100 +88,87 @@ public final class GetAmiArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetAmiArgs(
-        @Nullable List<String> executableUsers,
-        @Nullable List<GetAmiFilter> filters,
-        @Nullable Boolean mostRecent,
-        @Nullable String nameRegex,
-        List<String> owners,
-        @Nullable Map<String,String> tags) {
-        this.executableUsers = executableUsers;
-        this.filters = filters;
-        this.mostRecent = mostRecent;
-        this.nameRegex = nameRegex;
-        this.owners = Objects.requireNonNull(owners, "expected parameter 'owners' to be non-null");
-        this.tags = tags;
-    }
+    private GetAmiArgs() {}
 
-    private GetAmiArgs() {
-        this.executableUsers = List.of();
-        this.filters = List.of();
-        this.mostRecent = null;
-        this.nameRegex = null;
-        this.owners = List.of();
-        this.tags = Map.of();
+    private GetAmiArgs(GetAmiArgs $) {
+        this.executableUsers = $.executableUsers;
+        this.filters = $.filters;
+        this.mostRecent = $.mostRecent;
+        this.nameRegex = $.nameRegex;
+        this.owners = $.owners;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAmiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> executableUsers;
-        private @Nullable List<GetAmiFilter> filters;
-        private @Nullable Boolean mostRecent;
-        private @Nullable String nameRegex;
-        private List<String> owners;
-        private @Nullable Map<String,String> tags;
+        private GetAmiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAmiArgs();
         }
 
         public Builder(GetAmiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executableUsers = defaults.executableUsers;
-    	      this.filters = defaults.filters;
-    	      this.mostRecent = defaults.mostRecent;
-    	      this.nameRegex = defaults.nameRegex;
-    	      this.owners = defaults.owners;
-    	      this.tags = defaults.tags;
+            $ = new GetAmiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executableUsers(@Nullable List<String> executableUsers) {
-            this.executableUsers = executableUsers;
+            $.executableUsers = executableUsers;
             return this;
         }
+
         public Builder executableUsers(String... executableUsers) {
             return executableUsers(List.of(executableUsers));
         }
+
         public Builder filters(@Nullable List<GetAmiFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetAmiFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            this.mostRecent = mostRecent;
+            $.mostRecent = mostRecent;
             return this;
         }
+
         public Builder nameRegex(@Nullable String nameRegex) {
-            this.nameRegex = nameRegex;
+            $.nameRegex = nameRegex;
             return this;
         }
+
         public Builder owners(List<String> owners) {
-            this.owners = Objects.requireNonNull(owners);
+            $.owners = owners;
             return this;
         }
+
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetAmiArgs build() {
-            return new GetAmiArgs(executableUsers, filters, mostRecent, nameRegex, owners, tags);
+        }
+
+        public GetAmiArgs build() {
+            $.owners = Objects.requireNonNull($.owners, "expected parameter 'owners' to be non-null");
+            return $;
         }
     }
+
 }

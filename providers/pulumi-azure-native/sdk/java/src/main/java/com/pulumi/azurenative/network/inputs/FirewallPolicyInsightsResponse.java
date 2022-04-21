@@ -25,10 +25,10 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Boolean isEnabled;
+    private @Nullable Boolean isEnabled;
 
     public Optional<Boolean> isEnabled() {
-        return this.isEnabled == null ? Optional.empty() : Optional.ofNullable(this.isEnabled);
+        return Optional.ofNullable(this.isEnabled);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="logAnalyticsResources")
-      private final @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources;
+    private @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources;
 
     public Optional<FirewallPolicyLogAnalyticsResourcesResponse> logAnalyticsResources() {
-        return this.logAnalyticsResources == null ? Optional.empty() : Optional.ofNullable(this.logAnalyticsResources);
+        return Optional.ofNullable(this.logAnalyticsResources);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class FirewallPolicyInsightsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="retentionDays")
-      private final @Nullable Integer retentionDays;
+    private @Nullable Integer retentionDays;
 
     public Optional<Integer> retentionDays() {
-        return this.retentionDays == null ? Optional.empty() : Optional.ofNullable(this.retentionDays);
+        return Optional.ofNullable(this.retentionDays);
     }
 
-    public FirewallPolicyInsightsResponse(
-        @Nullable Boolean isEnabled,
-        @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources,
-        @Nullable Integer retentionDays) {
-        this.isEnabled = isEnabled;
-        this.logAnalyticsResources = logAnalyticsResources;
-        this.retentionDays = retentionDays;
-    }
+    private FirewallPolicyInsightsResponse() {}
 
-    private FirewallPolicyInsightsResponse() {
-        this.isEnabled = null;
-        this.logAnalyticsResources = null;
-        this.retentionDays = null;
+    private FirewallPolicyInsightsResponse(FirewallPolicyInsightsResponse $) {
+        this.isEnabled = $.isEnabled;
+        this.logAnalyticsResources = $.logAnalyticsResources;
+        this.retentionDays = $.retentionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyInsightsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean isEnabled;
-        private @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources;
-        private @Nullable Integer retentionDays;
+        private FirewallPolicyInsightsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyInsightsResponse();
         }
 
         public Builder(FirewallPolicyInsightsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.logAnalyticsResources = defaults.logAnalyticsResources;
-    	      this.retentionDays = defaults.retentionDays;
+            $ = new FirewallPolicyInsightsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder logAnalyticsResources(@Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources) {
-            this.logAnalyticsResources = logAnalyticsResources;
+            $.logAnalyticsResources = logAnalyticsResources;
             return this;
         }
+
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = retentionDays;
+            $.retentionDays = retentionDays;
             return this;
-        }        public FirewallPolicyInsightsResponse build() {
-            return new FirewallPolicyInsightsResponse(isEnabled, logAnalyticsResources, retentionDays);
+        }
+
+        public FirewallPolicyInsightsResponse build() {
+            return $;
         }
     }
+
 }

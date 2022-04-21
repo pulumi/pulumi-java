@@ -22,7 +22,7 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="deleted", required=true)
-      private final String deleted;
+    private String deleted;
 
     public String deleted() {
         return this.deleted;
@@ -33,7 +33,7 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="deprecated", required=true)
-      private final String deprecated;
+    private String deprecated;
 
     public String deprecated() {
         return this.deprecated;
@@ -44,7 +44,7 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="obsolete", required=true)
-      private final String obsolete;
+    private String obsolete;
 
     public String obsolete() {
         return this.obsolete;
@@ -55,7 +55,7 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="replacement", required=true)
-      private final String replacement;
+    private String replacement;
 
     public String replacement() {
         return this.replacement;
@@ -66,7 +66,7 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -77,91 +77,80 @@ public final class DeprecationStatusResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="stateOverride", required=true)
-      private final RolloutPolicyResponse stateOverride;
+    private RolloutPolicyResponse stateOverride;
 
     public RolloutPolicyResponse stateOverride() {
         return this.stateOverride;
     }
 
-    public DeprecationStatusResponse(
-        String deleted,
-        String deprecated,
-        String obsolete,
-        String replacement,
-        String state,
-        RolloutPolicyResponse stateOverride) {
-        this.deleted = Objects.requireNonNull(deleted, "expected parameter 'deleted' to be non-null");
-        this.deprecated = Objects.requireNonNull(deprecated, "expected parameter 'deprecated' to be non-null");
-        this.obsolete = Objects.requireNonNull(obsolete, "expected parameter 'obsolete' to be non-null");
-        this.replacement = Objects.requireNonNull(replacement, "expected parameter 'replacement' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.stateOverride = Objects.requireNonNull(stateOverride, "expected parameter 'stateOverride' to be non-null");
-    }
+    private DeprecationStatusResponse() {}
 
-    private DeprecationStatusResponse() {
-        this.deleted = null;
-        this.deprecated = null;
-        this.obsolete = null;
-        this.replacement = null;
-        this.state = null;
-        this.stateOverride = null;
+    private DeprecationStatusResponse(DeprecationStatusResponse $) {
+        this.deleted = $.deleted;
+        this.deprecated = $.deprecated;
+        this.obsolete = $.obsolete;
+        this.replacement = $.replacement;
+        this.state = $.state;
+        this.stateOverride = $.stateOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeprecationStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deleted;
-        private String deprecated;
-        private String obsolete;
-        private String replacement;
-        private String state;
-        private RolloutPolicyResponse stateOverride;
+        private DeprecationStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeprecationStatusResponse();
         }
 
         public Builder(DeprecationStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleted = defaults.deleted;
-    	      this.deprecated = defaults.deprecated;
-    	      this.obsolete = defaults.obsolete;
-    	      this.replacement = defaults.replacement;
-    	      this.state = defaults.state;
-    	      this.stateOverride = defaults.stateOverride;
+            $ = new DeprecationStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleted(String deleted) {
-            this.deleted = Objects.requireNonNull(deleted);
+            $.deleted = deleted;
             return this;
         }
+
         public Builder deprecated(String deprecated) {
-            this.deprecated = Objects.requireNonNull(deprecated);
+            $.deprecated = deprecated;
             return this;
         }
+
         public Builder obsolete(String obsolete) {
-            this.obsolete = Objects.requireNonNull(obsolete);
+            $.obsolete = obsolete;
             return this;
         }
+
         public Builder replacement(String replacement) {
-            this.replacement = Objects.requireNonNull(replacement);
+            $.replacement = replacement;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder stateOverride(RolloutPolicyResponse stateOverride) {
-            this.stateOverride = Objects.requireNonNull(stateOverride);
+            $.stateOverride = stateOverride;
             return this;
-        }        public DeprecationStatusResponse build() {
-            return new DeprecationStatusResponse(deleted, deprecated, obsolete, replacement, state, stateOverride);
+        }
+
+        public DeprecationStatusResponse build() {
+            $.deleted = Objects.requireNonNull($.deleted, "expected parameter 'deleted' to be non-null");
+            $.deprecated = Objects.requireNonNull($.deprecated, "expected parameter 'deprecated' to be non-null");
+            $.obsolete = Objects.requireNonNull($.obsolete, "expected parameter 'obsolete' to be non-null");
+            $.replacement = Objects.requireNonNull($.replacement, "expected parameter 'replacement' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.stateOverride = Objects.requireNonNull($.stateOverride, "expected parameter 'stateOverride' to be non-null");
+            return $;
         }
     }
+
 }

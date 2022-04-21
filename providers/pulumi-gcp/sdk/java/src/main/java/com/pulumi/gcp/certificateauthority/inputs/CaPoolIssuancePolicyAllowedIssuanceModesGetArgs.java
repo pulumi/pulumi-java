@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends com.p
      * 
      */
     @Import(name="allowConfigBasedIssuance", required=true)
-      private final Output<Boolean> allowConfigBasedIssuance;
+    private Output<Boolean> allowConfigBasedIssuance;
 
     public Output<Boolean> allowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
@@ -30,63 +29,60 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends com.p
      * 
      */
     @Import(name="allowCsrBasedIssuance", required=true)
-      private final Output<Boolean> allowCsrBasedIssuance;
+    private Output<Boolean> allowCsrBasedIssuance;
 
     public Output<Boolean> allowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }
 
-    public CaPoolIssuancePolicyAllowedIssuanceModesGetArgs(
-        Output<Boolean> allowConfigBasedIssuance,
-        Output<Boolean> allowCsrBasedIssuance) {
-        this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance, "expected parameter 'allowConfigBasedIssuance' to be non-null");
-        this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance, "expected parameter 'allowCsrBasedIssuance' to be non-null");
-    }
+    private CaPoolIssuancePolicyAllowedIssuanceModesGetArgs() {}
 
-    private CaPoolIssuancePolicyAllowedIssuanceModesGetArgs() {
-        this.allowConfigBasedIssuance = Codegen.empty();
-        this.allowCsrBasedIssuance = Codegen.empty();
+    private CaPoolIssuancePolicyAllowedIssuanceModesGetArgs(CaPoolIssuancePolicyAllowedIssuanceModesGetArgs $) {
+        this.allowConfigBasedIssuance = $.allowConfigBasedIssuance;
+        this.allowCsrBasedIssuance = $.allowCsrBasedIssuance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIssuancePolicyAllowedIssuanceModesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> allowConfigBasedIssuance;
-        private Output<Boolean> allowCsrBasedIssuance;
+        private CaPoolIssuancePolicyAllowedIssuanceModesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIssuancePolicyAllowedIssuanceModesGetArgs();
         }
 
         public Builder(CaPoolIssuancePolicyAllowedIssuanceModesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowConfigBasedIssuance = defaults.allowConfigBasedIssuance;
-    	      this.allowCsrBasedIssuance = defaults.allowCsrBasedIssuance;
+            $ = new CaPoolIssuancePolicyAllowedIssuanceModesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowConfigBasedIssuance(Output<Boolean> allowConfigBasedIssuance) {
-            this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance);
+            $.allowConfigBasedIssuance = allowConfigBasedIssuance;
             return this;
         }
+
         public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
-            this.allowConfigBasedIssuance = Output.of(Objects.requireNonNull(allowConfigBasedIssuance));
-            return this;
+            return allowConfigBasedIssuance(Output.of(allowConfigBasedIssuance));
         }
+
         public Builder allowCsrBasedIssuance(Output<Boolean> allowCsrBasedIssuance) {
-            this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
+            $.allowCsrBasedIssuance = allowCsrBasedIssuance;
             return this;
         }
+
         public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
-            this.allowCsrBasedIssuance = Output.of(Objects.requireNonNull(allowCsrBasedIssuance));
-            return this;
-        }        public CaPoolIssuancePolicyAllowedIssuanceModesGetArgs build() {
-            return new CaPoolIssuancePolicyAllowedIssuanceModesGetArgs(allowConfigBasedIssuance, allowCsrBasedIssuance);
+            return allowCsrBasedIssuance(Output.of(allowCsrBasedIssuance));
+        }
+
+        public CaPoolIssuancePolicyAllowedIssuanceModesGetArgs build() {
+            $.allowConfigBasedIssuance = Objects.requireNonNull($.allowConfigBasedIssuance, "expected parameter 'allowConfigBasedIssuance' to be non-null");
+            $.allowCsrBasedIssuance = Objects.requireNonNull($.allowCsrBasedIssuance, "expected parameter 'allowCsrBasedIssuance' to be non-null");
+            return $;
         }
     }
+
 }

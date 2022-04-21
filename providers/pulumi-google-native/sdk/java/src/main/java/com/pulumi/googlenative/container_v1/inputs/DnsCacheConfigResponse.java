@@ -21,45 +21,45 @@ public final class DnsCacheConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public DnsCacheConfigResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private DnsCacheConfigResponse() {}
 
-    private DnsCacheConfigResponse() {
-        this.enabled = null;
+    private DnsCacheConfigResponse(DnsCacheConfigResponse $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsCacheConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private DnsCacheConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsCacheConfigResponse();
         }
 
         public Builder(DnsCacheConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new DnsCacheConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public DnsCacheConfigResponse build() {
-            return new DnsCacheConfigResponse(enabled);
+        }
+
+        public DnsCacheConfigResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

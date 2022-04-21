@@ -17,126 +17,111 @@ public final class LicenseEntitlement extends com.pulumi.resources.InvokeArgs {
     public static final LicenseEntitlement Empty = new LicenseEntitlement();
 
     @Import(name="allowCheckIn")
-      private final @Nullable Boolean allowCheckIn;
+    private @Nullable Boolean allowCheckIn;
 
     public Optional<Boolean> allowCheckIn() {
-        return this.allowCheckIn == null ? Optional.empty() : Optional.ofNullable(this.allowCheckIn);
+        return Optional.ofNullable(this.allowCheckIn);
     }
 
     @Import(name="maxCount")
-      private final @Nullable Integer maxCount;
+    private @Nullable Integer maxCount;
 
     public Optional<Integer> maxCount() {
-        return this.maxCount == null ? Optional.empty() : Optional.ofNullable(this.maxCount);
+        return Optional.ofNullable(this.maxCount);
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="overage")
-      private final @Nullable Boolean overage;
+    private @Nullable Boolean overage;
 
     public Optional<Boolean> overage() {
-        return this.overage == null ? Optional.empty() : Optional.ofNullable(this.overage);
+        return Optional.ofNullable(this.overage);
     }
 
     @Import(name="unit", required=true)
-      private final String unit;
+    private String unit;
 
     public String unit() {
         return this.unit;
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public LicenseEntitlement(
-        @Nullable Boolean allowCheckIn,
-        @Nullable Integer maxCount,
-        String name,
-        @Nullable Boolean overage,
-        String unit,
-        @Nullable String value) {
-        this.allowCheckIn = allowCheckIn;
-        this.maxCount = maxCount;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.overage = overage;
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-        this.value = value;
-    }
+    private LicenseEntitlement() {}
 
-    private LicenseEntitlement() {
-        this.allowCheckIn = null;
-        this.maxCount = null;
-        this.name = null;
-        this.overage = null;
-        this.unit = null;
-        this.value = null;
+    private LicenseEntitlement(LicenseEntitlement $) {
+        this.allowCheckIn = $.allowCheckIn;
+        this.maxCount = $.maxCount;
+        this.name = $.name;
+        this.overage = $.overage;
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseEntitlement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowCheckIn;
-        private @Nullable Integer maxCount;
-        private String name;
-        private @Nullable Boolean overage;
-        private String unit;
-        private @Nullable String value;
+        private LicenseEntitlement $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseEntitlement();
         }
 
         public Builder(LicenseEntitlement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCheckIn = defaults.allowCheckIn;
-    	      this.maxCount = defaults.maxCount;
-    	      this.name = defaults.name;
-    	      this.overage = defaults.overage;
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new LicenseEntitlement(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCheckIn(@Nullable Boolean allowCheckIn) {
-            this.allowCheckIn = allowCheckIn;
+            $.allowCheckIn = allowCheckIn;
             return this;
         }
+
         public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = maxCount;
+            $.maxCount = maxCount;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder overage(@Nullable Boolean overage) {
-            this.overage = overage;
+            $.overage = overage;
             return this;
         }
+
         public Builder unit(String unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public LicenseEntitlement build() {
-            return new LicenseEntitlement(allowCheckIn, maxCount, name, overage, unit, value);
+        }
+
+        public LicenseEntitlement build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            return $;
         }
     }
+
 }

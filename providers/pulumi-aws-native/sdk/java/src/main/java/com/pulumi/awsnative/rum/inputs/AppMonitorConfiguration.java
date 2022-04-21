@@ -27,10 +27,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="allowCookies")
-      private final @Nullable Boolean allowCookies;
+    private @Nullable Boolean allowCookies;
 
     public Optional<Boolean> allowCookies() {
-        return this.allowCookies == null ? Optional.empty() : Optional.ofNullable(this.allowCookies);
+        return Optional.ofNullable(this.allowCookies);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enableXRay")
-      private final @Nullable Boolean enableXRay;
+    private @Nullable Boolean enableXRay;
 
     public Optional<Boolean> enableXRay() {
-        return this.enableXRay == null ? Optional.empty() : Optional.ofNullable(this.enableXRay);
+        return Optional.ofNullable(this.enableXRay);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="excludedPages")
-      private final @Nullable List<String> excludedPages;
+    private @Nullable List<String> excludedPages;
 
-    public List<String> excludedPages() {
-        return this.excludedPages == null ? List.of() : this.excludedPages;
+    public Optional<List<String>> excludedPages() {
+        return Optional.ofNullable(this.excludedPages);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="favoritePages")
-      private final @Nullable List<String> favoritePages;
+    private @Nullable List<String> favoritePages;
 
-    public List<String> favoritePages() {
-        return this.favoritePages == null ? List.of() : this.favoritePages;
+    public Optional<List<String>> favoritePages() {
+        return Optional.ofNullable(this.favoritePages);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="guestRoleArn")
-      private final @Nullable String guestRoleArn;
+    private @Nullable String guestRoleArn;
 
     public Optional<String> guestRoleArn() {
-        return this.guestRoleArn == null ? Optional.empty() : Optional.ofNullable(this.guestRoleArn);
+        return Optional.ofNullable(this.guestRoleArn);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="identityPoolId")
-      private final @Nullable String identityPoolId;
+    private @Nullable String identityPoolId;
 
     public Optional<String> identityPoolId() {
-        return this.identityPoolId == null ? Optional.empty() : Optional.ofNullable(this.identityPoolId);
+        return Optional.ofNullable(this.identityPoolId);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="includedPages")
-      private final @Nullable List<String> includedPages;
+    private @Nullable List<String> includedPages;
 
-    public List<String> includedPages() {
-        return this.includedPages == null ? List.of() : this.includedPages;
+    public Optional<List<String>> includedPages() {
+        return Optional.ofNullable(this.includedPages);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sessionSampleRate")
-      private final @Nullable Double sessionSampleRate;
+    private @Nullable Double sessionSampleRate;
 
     public Optional<Double> sessionSampleRate() {
-        return this.sessionSampleRate == null ? Optional.empty() : Optional.ofNullable(this.sessionSampleRate);
+        return Optional.ofNullable(this.sessionSampleRate);
     }
 
     /**
@@ -115,130 +115,108 @@ public final class AppMonitorConfiguration extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="telemetries")
-      private final @Nullable List<AppMonitorTelemetry> telemetries;
+    private @Nullable List<AppMonitorTelemetry> telemetries;
 
-    public List<AppMonitorTelemetry> telemetries() {
-        return this.telemetries == null ? List.of() : this.telemetries;
+    public Optional<List<AppMonitorTelemetry>> telemetries() {
+        return Optional.ofNullable(this.telemetries);
     }
 
-    public AppMonitorConfiguration(
-        @Nullable Boolean allowCookies,
-        @Nullable Boolean enableXRay,
-        @Nullable List<String> excludedPages,
-        @Nullable List<String> favoritePages,
-        @Nullable String guestRoleArn,
-        @Nullable String identityPoolId,
-        @Nullable List<String> includedPages,
-        @Nullable Double sessionSampleRate,
-        @Nullable List<AppMonitorTelemetry> telemetries) {
-        this.allowCookies = allowCookies;
-        this.enableXRay = enableXRay;
-        this.excludedPages = excludedPages;
-        this.favoritePages = favoritePages;
-        this.guestRoleArn = guestRoleArn;
-        this.identityPoolId = identityPoolId;
-        this.includedPages = includedPages;
-        this.sessionSampleRate = sessionSampleRate;
-        this.telemetries = telemetries;
-    }
+    private AppMonitorConfiguration() {}
 
-    private AppMonitorConfiguration() {
-        this.allowCookies = null;
-        this.enableXRay = null;
-        this.excludedPages = List.of();
-        this.favoritePages = List.of();
-        this.guestRoleArn = null;
-        this.identityPoolId = null;
-        this.includedPages = List.of();
-        this.sessionSampleRate = null;
-        this.telemetries = List.of();
+    private AppMonitorConfiguration(AppMonitorConfiguration $) {
+        this.allowCookies = $.allowCookies;
+        this.enableXRay = $.enableXRay;
+        this.excludedPages = $.excludedPages;
+        this.favoritePages = $.favoritePages;
+        this.guestRoleArn = $.guestRoleArn;
+        this.identityPoolId = $.identityPoolId;
+        this.includedPages = $.includedPages;
+        this.sessionSampleRate = $.sessionSampleRate;
+        this.telemetries = $.telemetries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppMonitorConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowCookies;
-        private @Nullable Boolean enableXRay;
-        private @Nullable List<String> excludedPages;
-        private @Nullable List<String> favoritePages;
-        private @Nullable String guestRoleArn;
-        private @Nullable String identityPoolId;
-        private @Nullable List<String> includedPages;
-        private @Nullable Double sessionSampleRate;
-        private @Nullable List<AppMonitorTelemetry> telemetries;
+        private AppMonitorConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppMonitorConfiguration();
         }
 
         public Builder(AppMonitorConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowCookies = defaults.allowCookies;
-    	      this.enableXRay = defaults.enableXRay;
-    	      this.excludedPages = defaults.excludedPages;
-    	      this.favoritePages = defaults.favoritePages;
-    	      this.guestRoleArn = defaults.guestRoleArn;
-    	      this.identityPoolId = defaults.identityPoolId;
-    	      this.includedPages = defaults.includedPages;
-    	      this.sessionSampleRate = defaults.sessionSampleRate;
-    	      this.telemetries = defaults.telemetries;
+            $ = new AppMonitorConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder allowCookies(@Nullable Boolean allowCookies) {
-            this.allowCookies = allowCookies;
+            $.allowCookies = allowCookies;
             return this;
         }
+
         public Builder enableXRay(@Nullable Boolean enableXRay) {
-            this.enableXRay = enableXRay;
+            $.enableXRay = enableXRay;
             return this;
         }
+
         public Builder excludedPages(@Nullable List<String> excludedPages) {
-            this.excludedPages = excludedPages;
+            $.excludedPages = excludedPages;
             return this;
         }
+
         public Builder excludedPages(String... excludedPages) {
             return excludedPages(List.of(excludedPages));
         }
+
         public Builder favoritePages(@Nullable List<String> favoritePages) {
-            this.favoritePages = favoritePages;
+            $.favoritePages = favoritePages;
             return this;
         }
+
         public Builder favoritePages(String... favoritePages) {
             return favoritePages(List.of(favoritePages));
         }
+
         public Builder guestRoleArn(@Nullable String guestRoleArn) {
-            this.guestRoleArn = guestRoleArn;
+            $.guestRoleArn = guestRoleArn;
             return this;
         }
+
         public Builder identityPoolId(@Nullable String identityPoolId) {
-            this.identityPoolId = identityPoolId;
+            $.identityPoolId = identityPoolId;
             return this;
         }
+
         public Builder includedPages(@Nullable List<String> includedPages) {
-            this.includedPages = includedPages;
+            $.includedPages = includedPages;
             return this;
         }
+
         public Builder includedPages(String... includedPages) {
             return includedPages(List.of(includedPages));
         }
+
         public Builder sessionSampleRate(@Nullable Double sessionSampleRate) {
-            this.sessionSampleRate = sessionSampleRate;
+            $.sessionSampleRate = sessionSampleRate;
             return this;
         }
+
         public Builder telemetries(@Nullable List<AppMonitorTelemetry> telemetries) {
-            this.telemetries = telemetries;
+            $.telemetries = telemetries;
             return this;
         }
+
         public Builder telemetries(AppMonitorTelemetry... telemetries) {
             return telemetries(List.of(telemetries));
-        }        public AppMonitorConfiguration build() {
-            return new AppMonitorConfiguration(allowCookies, enableXRay, excludedPages, favoritePages, guestRoleArn, identityPoolId, includedPages, sessionSampleRate, telemetries);
+        }
+
+        public AppMonitorConfiguration build() {
+            return $;
         }
     }
+
 }

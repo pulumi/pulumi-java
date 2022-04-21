@@ -22,7 +22,7 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
      * 
      */
     @Import(name="consoleScreenshotBlobUri", required=true)
-      private final String consoleScreenshotBlobUri;
+    private String consoleScreenshotBlobUri;
 
     public String consoleScreenshotBlobUri() {
         return this.consoleScreenshotBlobUri;
@@ -33,7 +33,7 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
      * 
      */
     @Import(name="serialConsoleLogBlobUri", required=true)
-      private final String serialConsoleLogBlobUri;
+    private String serialConsoleLogBlobUri;
 
     public String serialConsoleLogBlobUri() {
         return this.serialConsoleLogBlobUri;
@@ -44,64 +44,59 @@ public final class BootDiagnosticsInstanceViewResponse extends com.pulumi.resour
      * 
      */
     @Import(name="status", required=true)
-      private final InstanceViewStatusResponse status;
+    private InstanceViewStatusResponse status;
 
     public InstanceViewStatusResponse status() {
         return this.status;
     }
 
-    public BootDiagnosticsInstanceViewResponse(
-        String consoleScreenshotBlobUri,
-        String serialConsoleLogBlobUri,
-        InstanceViewStatusResponse status) {
-        this.consoleScreenshotBlobUri = Objects.requireNonNull(consoleScreenshotBlobUri, "expected parameter 'consoleScreenshotBlobUri' to be non-null");
-        this.serialConsoleLogBlobUri = Objects.requireNonNull(serialConsoleLogBlobUri, "expected parameter 'serialConsoleLogBlobUri' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BootDiagnosticsInstanceViewResponse() {}
 
-    private BootDiagnosticsInstanceViewResponse() {
-        this.consoleScreenshotBlobUri = null;
-        this.serialConsoleLogBlobUri = null;
-        this.status = null;
+    private BootDiagnosticsInstanceViewResponse(BootDiagnosticsInstanceViewResponse $) {
+        this.consoleScreenshotBlobUri = $.consoleScreenshotBlobUri;
+        this.serialConsoleLogBlobUri = $.serialConsoleLogBlobUri;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BootDiagnosticsInstanceViewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consoleScreenshotBlobUri;
-        private String serialConsoleLogBlobUri;
-        private InstanceViewStatusResponse status;
+        private BootDiagnosticsInstanceViewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BootDiagnosticsInstanceViewResponse();
         }
 
         public Builder(BootDiagnosticsInstanceViewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consoleScreenshotBlobUri = defaults.consoleScreenshotBlobUri;
-    	      this.serialConsoleLogBlobUri = defaults.serialConsoleLogBlobUri;
-    	      this.status = defaults.status;
+            $ = new BootDiagnosticsInstanceViewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder consoleScreenshotBlobUri(String consoleScreenshotBlobUri) {
-            this.consoleScreenshotBlobUri = Objects.requireNonNull(consoleScreenshotBlobUri);
+            $.consoleScreenshotBlobUri = consoleScreenshotBlobUri;
             return this;
         }
+
         public Builder serialConsoleLogBlobUri(String serialConsoleLogBlobUri) {
-            this.serialConsoleLogBlobUri = Objects.requireNonNull(serialConsoleLogBlobUri);
+            $.serialConsoleLogBlobUri = serialConsoleLogBlobUri;
             return this;
         }
+
         public Builder status(InstanceViewStatusResponse status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public BootDiagnosticsInstanceViewResponse build() {
-            return new BootDiagnosticsInstanceViewResponse(consoleScreenshotBlobUri, serialConsoleLogBlobUri, status);
+        }
+
+        public BootDiagnosticsInstanceViewResponse build() {
+            $.consoleScreenshotBlobUri = Objects.requireNonNull($.consoleScreenshotBlobUri, "expected parameter 'consoleScreenshotBlobUri' to be non-null");
+            $.serialConsoleLogBlobUri = Objects.requireNonNull($.serialConsoleLogBlobUri, "expected parameter 'serialConsoleLogBlobUri' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

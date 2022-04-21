@@ -17,7 +17,7 @@ public final class GetIdentityProviderArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="identityProviderName", required=true)
-      private final String identityProviderName;
+    private String identityProviderName;
 
     public String identityProviderName() {
         return this.identityProviderName;
@@ -28,7 +28,7 @@ public final class GetIdentityProviderArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetIdentityProviderArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetIdentityProviderArgs(
-        String identityProviderName,
-        String resourceGroupName,
-        String serviceName) {
-        this.identityProviderName = Objects.requireNonNull(identityProviderName, "expected parameter 'identityProviderName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetIdentityProviderArgs() {}
 
-    private GetIdentityProviderArgs() {
-        this.identityProviderName = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetIdentityProviderArgs(GetIdentityProviderArgs $) {
+        this.identityProviderName = $.identityProviderName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIdentityProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String identityProviderName;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetIdentityProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIdentityProviderArgs();
         }
 
         public Builder(GetIdentityProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityProviderName = defaults.identityProviderName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetIdentityProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityProviderName(String identityProviderName) {
-            this.identityProviderName = Objects.requireNonNull(identityProviderName);
+            $.identityProviderName = identityProviderName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetIdentityProviderArgs build() {
-            return new GetIdentityProviderArgs(identityProviderName, resourceGroupName, serviceName);
+        }
+
+        public GetIdentityProviderArgs build() {
+            $.identityProviderName = Objects.requireNonNull($.identityProviderName, "expected parameter 'identityProviderName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

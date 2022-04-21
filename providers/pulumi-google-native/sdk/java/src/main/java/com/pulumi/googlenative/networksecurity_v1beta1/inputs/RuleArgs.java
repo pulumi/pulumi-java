@@ -5,11 +5,11 @@ package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.DestinationArgs;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.SourceArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinations")
-      private final @Nullable Output<List<DestinationArgs>> destinations;
+    private @Nullable Output<List<DestinationArgs>> destinations;
 
-    public Output<List<DestinationArgs>> destinations() {
-        return this.destinations == null ? Codegen.empty() : this.destinations;
+    public Optional<Output<List<DestinationArgs>>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sources")
-      private final @Nullable Output<List<SourceArgs>> sources;
+    private @Nullable Output<List<SourceArgs>> sources;
 
-    public Output<List<SourceArgs>> sources() {
-        return this.sources == null ? Codegen.empty() : this.sources;
+    public Optional<Output<List<SourceArgs>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
-    public RuleArgs(
-        @Nullable Output<List<DestinationArgs>> destinations,
-        @Nullable Output<List<SourceArgs>> sources) {
-        this.destinations = destinations;
-        this.sources = sources;
-    }
+    private RuleArgs() {}
 
-    private RuleArgs() {
-        this.destinations = Codegen.empty();
-        this.sources = Codegen.empty();
+    private RuleArgs(RuleArgs $) {
+        this.destinations = $.destinations;
+        this.sources = $.sources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DestinationArgs>> destinations;
-        private @Nullable Output<List<SourceArgs>> sources;
+        private RuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleArgs();
         }
 
         public Builder(RuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.sources = defaults.sources;
+            $ = new RuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(@Nullable Output<List<DestinationArgs>> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
-        public Builder destinations(@Nullable List<DestinationArgs> destinations) {
-            this.destinations = Codegen.ofNullable(destinations);
-            return this;
+
+        public Builder destinations(List<DestinationArgs> destinations) {
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(DestinationArgs... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder sources(@Nullable Output<List<SourceArgs>> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
-        public Builder sources(@Nullable List<SourceArgs> sources) {
-            this.sources = Codegen.ofNullable(sources);
-            return this;
+
+        public Builder sources(List<SourceArgs> sources) {
+            return sources(Output.of(sources));
         }
+
         public Builder sources(SourceArgs... sources) {
             return sources(List.of(sources));
-        }        public RuleArgs build() {
-            return new RuleArgs(destinations, sources);
+        }
+
+        public RuleArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.googlenative.tpu_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.tpu_v1alpha1.enums.NodeHealth;
 import com.pulumi.googlenative.tpu_v1alpha1.inputs.SchedulingConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acceleratorType", required=true)
-      private final Output<String> acceleratorType;
+    private Output<String> acceleratorType;
 
     public Output<String> acceleratorType() {
         return this.acceleratorType;
@@ -35,10 +35,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cidrBlock")
-      private final @Nullable Output<String> cidrBlock;
+    private @Nullable Output<String> cidrBlock;
 
-    public Output<String> cidrBlock() {
-        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="health")
-      private final @Nullable Output<NodeHealth> health;
+    private @Nullable Output<NodeHealth> health;
 
-    public Output<NodeHealth> health() {
-        return this.health == null ? Codegen.empty() : this.health;
+    public Optional<Output<NodeHealth>> health() {
+        return Optional.ofNullable(this.health);
     }
 
     /**
@@ -68,17 +68,17 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -86,31 +86,31 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     @Import(name="nodeId")
-      private final @Nullable Output<String> nodeId;
+    private @Nullable Output<String> nodeId;
 
-    public Output<String> nodeId() {
-        return this.nodeId == null ? Codegen.empty() : this.nodeId;
+    public Optional<Output<String>> nodeId() {
+        return Optional.ofNullable(this.nodeId);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedulingConfig")
-      private final @Nullable Output<SchedulingConfigArgs> schedulingConfig;
+    private @Nullable Output<SchedulingConfigArgs> schedulingConfig;
 
-    public Output<SchedulingConfigArgs> schedulingConfig() {
-        return this.schedulingConfig == null ? Codegen.empty() : this.schedulingConfig;
+    public Optional<Output<SchedulingConfigArgs>> schedulingConfig() {
+        return Optional.ofNullable(this.schedulingConfig);
     }
 
     /**
@@ -129,7 +129,7 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tensorflowVersion", required=true)
-      private final Output<String> tensorflowVersion;
+    private Output<String> tensorflowVersion;
 
     public Output<String> tensorflowVersion() {
         return this.tensorflowVersion;
@@ -140,206 +140,170 @@ public final class NodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useServiceNetworking")
-      private final @Nullable Output<Boolean> useServiceNetworking;
+    private @Nullable Output<Boolean> useServiceNetworking;
 
-    public Output<Boolean> useServiceNetworking() {
-        return this.useServiceNetworking == null ? Codegen.empty() : this.useServiceNetworking;
+    public Optional<Output<Boolean>> useServiceNetworking() {
+        return Optional.ofNullable(this.useServiceNetworking);
     }
 
-    public NodeArgs(
-        Output<String> acceleratorType,
-        @Nullable Output<String> cidrBlock,
-        @Nullable Output<String> description,
-        @Nullable Output<NodeHealth> health,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> network,
-        @Nullable Output<String> nodeId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<SchedulingConfigArgs> schedulingConfig,
-        Output<String> tensorflowVersion,
-        @Nullable Output<Boolean> useServiceNetworking) {
-        this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
-        this.cidrBlock = cidrBlock;
-        this.description = description;
-        this.health = health;
-        this.labels = labels;
-        this.location = location;
-        this.network = network;
-        this.nodeId = nodeId;
-        this.project = project;
-        this.requestId = requestId;
-        this.schedulingConfig = schedulingConfig;
-        this.tensorflowVersion = Objects.requireNonNull(tensorflowVersion, "expected parameter 'tensorflowVersion' to be non-null");
-        this.useServiceNetworking = useServiceNetworking;
-    }
+    private NodeArgs() {}
 
-    private NodeArgs() {
-        this.acceleratorType = Codegen.empty();
-        this.cidrBlock = Codegen.empty();
-        this.description = Codegen.empty();
-        this.health = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.network = Codegen.empty();
-        this.nodeId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.schedulingConfig = Codegen.empty();
-        this.tensorflowVersion = Codegen.empty();
-        this.useServiceNetworking = Codegen.empty();
+    private NodeArgs(NodeArgs $) {
+        this.acceleratorType = $.acceleratorType;
+        this.cidrBlock = $.cidrBlock;
+        this.description = $.description;
+        this.health = $.health;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.network = $.network;
+        this.nodeId = $.nodeId;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.schedulingConfig = $.schedulingConfig;
+        this.tensorflowVersion = $.tensorflowVersion;
+        this.useServiceNetworking = $.useServiceNetworking;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> acceleratorType;
-        private @Nullable Output<String> cidrBlock;
-        private @Nullable Output<String> description;
-        private @Nullable Output<NodeHealth> health;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> nodeId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<SchedulingConfigArgs> schedulingConfig;
-        private Output<String> tensorflowVersion;
-        private @Nullable Output<Boolean> useServiceNetworking;
+        private NodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeArgs();
         }
 
         public Builder(NodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorType = defaults.acceleratorType;
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.description = defaults.description;
-    	      this.health = defaults.health;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.network = defaults.network;
-    	      this.nodeId = defaults.nodeId;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.schedulingConfig = defaults.schedulingConfig;
-    	      this.tensorflowVersion = defaults.tensorflowVersion;
-    	      this.useServiceNetworking = defaults.useServiceNetworking;
+            $ = new NodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorType(Output<String> acceleratorType) {
-            this.acceleratorType = Objects.requireNonNull(acceleratorType);
+            $.acceleratorType = acceleratorType;
             return this;
         }
+
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Output.of(Objects.requireNonNull(acceleratorType));
-            return this;
+            return acceleratorType(Output.of(acceleratorType));
         }
+
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
-            this.cidrBlock = cidrBlock;
+            $.cidrBlock = cidrBlock;
             return this;
         }
-        public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Codegen.ofNullable(cidrBlock);
-            return this;
+
+        public Builder cidrBlock(String cidrBlock) {
+            return cidrBlock(Output.of(cidrBlock));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder health(@Nullable Output<NodeHealth> health) {
-            this.health = health;
+            $.health = health;
             return this;
         }
-        public Builder health(@Nullable NodeHealth health) {
-            this.health = Codegen.ofNullable(health);
-            return this;
+
+        public Builder health(NodeHealth health) {
+            return health(Output.of(health));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder nodeId(@Nullable Output<String> nodeId) {
-            this.nodeId = nodeId;
+            $.nodeId = nodeId;
             return this;
         }
-        public Builder nodeId(@Nullable String nodeId) {
-            this.nodeId = Codegen.ofNullable(nodeId);
-            return this;
+
+        public Builder nodeId(String nodeId) {
+            return nodeId(Output.of(nodeId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder schedulingConfig(@Nullable Output<SchedulingConfigArgs> schedulingConfig) {
-            this.schedulingConfig = schedulingConfig;
+            $.schedulingConfig = schedulingConfig;
             return this;
         }
-        public Builder schedulingConfig(@Nullable SchedulingConfigArgs schedulingConfig) {
-            this.schedulingConfig = Codegen.ofNullable(schedulingConfig);
-            return this;
+
+        public Builder schedulingConfig(SchedulingConfigArgs schedulingConfig) {
+            return schedulingConfig(Output.of(schedulingConfig));
         }
+
         public Builder tensorflowVersion(Output<String> tensorflowVersion) {
-            this.tensorflowVersion = Objects.requireNonNull(tensorflowVersion);
+            $.tensorflowVersion = tensorflowVersion;
             return this;
         }
+
         public Builder tensorflowVersion(String tensorflowVersion) {
-            this.tensorflowVersion = Output.of(Objects.requireNonNull(tensorflowVersion));
-            return this;
+            return tensorflowVersion(Output.of(tensorflowVersion));
         }
+
         public Builder useServiceNetworking(@Nullable Output<Boolean> useServiceNetworking) {
-            this.useServiceNetworking = useServiceNetworking;
+            $.useServiceNetworking = useServiceNetworking;
             return this;
         }
-        public Builder useServiceNetworking(@Nullable Boolean useServiceNetworking) {
-            this.useServiceNetworking = Codegen.ofNullable(useServiceNetworking);
-            return this;
-        }        public NodeArgs build() {
-            return new NodeArgs(acceleratorType, cidrBlock, description, health, labels, location, network, nodeId, project, requestId, schedulingConfig, tensorflowVersion, useServiceNetworking);
+
+        public Builder useServiceNetworking(Boolean useServiceNetworking) {
+            return useServiceNetworking(Output.of(useServiceNetworking));
+        }
+
+        public NodeArgs build() {
+            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
+            $.tensorflowVersion = Objects.requireNonNull($.tensorflowVersion, "expected parameter 'tensorflowVersion' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,6 +21,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actionGroupName")
-      private final @Nullable Output<String> actionGroupName;
+    private @Nullable Output<String> actionGroupName;
 
-    public Output<String> actionGroupName() {
-        return this.actionGroupName == null ? Codegen.empty() : this.actionGroupName;
+    public Optional<Output<String>> actionGroupName() {
+        return Optional.ofNullable(this.actionGroupName);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="armRoleReceivers")
-      private final @Nullable Output<List<ArmRoleReceiverArgs>> armRoleReceivers;
+    private @Nullable Output<List<ArmRoleReceiverArgs>> armRoleReceivers;
 
-    public Output<List<ArmRoleReceiverArgs>> armRoleReceivers() {
-        return this.armRoleReceivers == null ? Codegen.empty() : this.armRoleReceivers;
+    public Optional<Output<List<ArmRoleReceiverArgs>>> armRoleReceivers() {
+        return Optional.ofNullable(this.armRoleReceivers);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automationRunbookReceivers")
-      private final @Nullable Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers;
+    private @Nullable Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers;
 
-    public Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers() {
-        return this.automationRunbookReceivers == null ? Codegen.empty() : this.automationRunbookReceivers;
+    public Optional<Output<List<AutomationRunbookReceiverArgs>>> automationRunbookReceivers() {
+        return Optional.ofNullable(this.automationRunbookReceivers);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureAppPushReceivers")
-      private final @Nullable Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers;
+    private @Nullable Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers;
 
-    public Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers() {
-        return this.azureAppPushReceivers == null ? Codegen.empty() : this.azureAppPushReceivers;
+    public Optional<Output<List<AzureAppPushReceiverArgs>>> azureAppPushReceivers() {
+        return Optional.ofNullable(this.azureAppPushReceivers);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureFunctionReceivers")
-      private final @Nullable Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers;
+    private @Nullable Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers;
 
-    public Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers() {
-        return this.azureFunctionReceivers == null ? Codegen.empty() : this.azureFunctionReceivers;
+    public Optional<Output<List<AzureFunctionReceiverArgs>>> azureFunctionReceivers() {
+        return Optional.ofNullable(this.azureFunctionReceivers);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailReceivers")
-      private final @Nullable Output<List<EmailReceiverArgs>> emailReceivers;
+    private @Nullable Output<List<EmailReceiverArgs>> emailReceivers;
 
-    public Output<List<EmailReceiverArgs>> emailReceivers() {
-        return this.emailReceivers == null ? Codegen.empty() : this.emailReceivers;
+    public Optional<Output<List<EmailReceiverArgs>>> emailReceivers() {
+        return Optional.ofNullable(this.emailReceivers);
     }
 
     /**
@@ -99,7 +100,7 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -110,7 +111,7 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupShortName", required=true)
-      private final Output<String> groupShortName;
+    private Output<String> groupShortName;
 
     public Output<String> groupShortName() {
         return this.groupShortName;
@@ -121,10 +122,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="itsmReceivers")
-      private final @Nullable Output<List<ItsmReceiverArgs>> itsmReceivers;
+    private @Nullable Output<List<ItsmReceiverArgs>> itsmReceivers;
 
-    public Output<List<ItsmReceiverArgs>> itsmReceivers() {
-        return this.itsmReceivers == null ? Codegen.empty() : this.itsmReceivers;
+    public Optional<Output<List<ItsmReceiverArgs>>> itsmReceivers() {
+        return Optional.ofNullable(this.itsmReceivers);
     }
 
     /**
@@ -132,10 +133,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -143,10 +144,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logicAppReceivers")
-      private final @Nullable Output<List<LogicAppReceiverArgs>> logicAppReceivers;
+    private @Nullable Output<List<LogicAppReceiverArgs>> logicAppReceivers;
 
-    public Output<List<LogicAppReceiverArgs>> logicAppReceivers() {
-        return this.logicAppReceivers == null ? Codegen.empty() : this.logicAppReceivers;
+    public Optional<Output<List<LogicAppReceiverArgs>>> logicAppReceivers() {
+        return Optional.ofNullable(this.logicAppReceivers);
     }
 
     /**
@@ -154,7 +155,7 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -165,10 +166,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smsReceivers")
-      private final @Nullable Output<List<SmsReceiverArgs>> smsReceivers;
+    private @Nullable Output<List<SmsReceiverArgs>> smsReceivers;
 
-    public Output<List<SmsReceiverArgs>> smsReceivers() {
-        return this.smsReceivers == null ? Codegen.empty() : this.smsReceivers;
+    public Optional<Output<List<SmsReceiverArgs>>> smsReceivers() {
+        return Optional.ofNullable(this.smsReceivers);
     }
 
     /**
@@ -176,10 +177,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -187,10 +188,10 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="voiceReceivers")
-      private final @Nullable Output<List<VoiceReceiverArgs>> voiceReceivers;
+    private @Nullable Output<List<VoiceReceiverArgs>> voiceReceivers;
 
-    public Output<List<VoiceReceiverArgs>> voiceReceivers() {
-        return this.voiceReceivers == null ? Codegen.empty() : this.voiceReceivers;
+    public Optional<Output<List<VoiceReceiverArgs>>> voiceReceivers() {
+        return Optional.ofNullable(this.voiceReceivers);
     }
 
     /**
@@ -198,275 +199,241 @@ public final class ActionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webhookReceivers")
-      private final @Nullable Output<List<WebhookReceiverArgs>> webhookReceivers;
+    private @Nullable Output<List<WebhookReceiverArgs>> webhookReceivers;
 
-    public Output<List<WebhookReceiverArgs>> webhookReceivers() {
-        return this.webhookReceivers == null ? Codegen.empty() : this.webhookReceivers;
+    public Optional<Output<List<WebhookReceiverArgs>>> webhookReceivers() {
+        return Optional.ofNullable(this.webhookReceivers);
     }
 
-    public ActionGroupArgs(
-        @Nullable Output<String> actionGroupName,
-        @Nullable Output<List<ArmRoleReceiverArgs>> armRoleReceivers,
-        @Nullable Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers,
-        @Nullable Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers,
-        @Nullable Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers,
-        @Nullable Output<List<EmailReceiverArgs>> emailReceivers,
-        Output<Boolean> enabled,
-        Output<String> groupShortName,
-        @Nullable Output<List<ItsmReceiverArgs>> itsmReceivers,
-        @Nullable Output<String> location,
-        @Nullable Output<List<LogicAppReceiverArgs>> logicAppReceivers,
-        Output<String> resourceGroupName,
-        @Nullable Output<List<SmsReceiverArgs>> smsReceivers,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<VoiceReceiverArgs>> voiceReceivers,
-        @Nullable Output<List<WebhookReceiverArgs>> webhookReceivers) {
-        this.actionGroupName = actionGroupName;
-        this.armRoleReceivers = armRoleReceivers;
-        this.automationRunbookReceivers = automationRunbookReceivers;
-        this.azureAppPushReceivers = azureAppPushReceivers;
-        this.azureFunctionReceivers = azureFunctionReceivers;
-        this.emailReceivers = emailReceivers;
-        this.enabled = Codegen.booleanProp("enabled").output().arg(enabled).def(true).require();
-        this.groupShortName = Objects.requireNonNull(groupShortName, "expected parameter 'groupShortName' to be non-null");
-        this.itsmReceivers = itsmReceivers;
-        this.location = location;
-        this.logicAppReceivers = logicAppReceivers;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.smsReceivers = smsReceivers;
-        this.tags = tags;
-        this.voiceReceivers = voiceReceivers;
-        this.webhookReceivers = webhookReceivers;
-    }
+    private ActionGroupArgs() {}
 
-    private ActionGroupArgs() {
-        this.actionGroupName = Codegen.empty();
-        this.armRoleReceivers = Codegen.empty();
-        this.automationRunbookReceivers = Codegen.empty();
-        this.azureAppPushReceivers = Codegen.empty();
-        this.azureFunctionReceivers = Codegen.empty();
-        this.emailReceivers = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.groupShortName = Codegen.empty();
-        this.itsmReceivers = Codegen.empty();
-        this.location = Codegen.empty();
-        this.logicAppReceivers = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.smsReceivers = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.voiceReceivers = Codegen.empty();
-        this.webhookReceivers = Codegen.empty();
+    private ActionGroupArgs(ActionGroupArgs $) {
+        this.actionGroupName = $.actionGroupName;
+        this.armRoleReceivers = $.armRoleReceivers;
+        this.automationRunbookReceivers = $.automationRunbookReceivers;
+        this.azureAppPushReceivers = $.azureAppPushReceivers;
+        this.azureFunctionReceivers = $.azureFunctionReceivers;
+        this.emailReceivers = $.emailReceivers;
+        this.enabled = $.enabled;
+        this.groupShortName = $.groupShortName;
+        this.itsmReceivers = $.itsmReceivers;
+        this.location = $.location;
+        this.logicAppReceivers = $.logicAppReceivers;
+        this.resourceGroupName = $.resourceGroupName;
+        this.smsReceivers = $.smsReceivers;
+        this.tags = $.tags;
+        this.voiceReceivers = $.voiceReceivers;
+        this.webhookReceivers = $.webhookReceivers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionGroupName;
-        private @Nullable Output<List<ArmRoleReceiverArgs>> armRoleReceivers;
-        private @Nullable Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers;
-        private @Nullable Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers;
-        private @Nullable Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers;
-        private @Nullable Output<List<EmailReceiverArgs>> emailReceivers;
-        private Output<Boolean> enabled;
-        private Output<String> groupShortName;
-        private @Nullable Output<List<ItsmReceiverArgs>> itsmReceivers;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<LogicAppReceiverArgs>> logicAppReceivers;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<List<SmsReceiverArgs>> smsReceivers;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<VoiceReceiverArgs>> voiceReceivers;
-        private @Nullable Output<List<WebhookReceiverArgs>> webhookReceivers;
+        private ActionGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionGroupArgs();
         }
 
         public Builder(ActionGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionGroupName = defaults.actionGroupName;
-    	      this.armRoleReceivers = defaults.armRoleReceivers;
-    	      this.automationRunbookReceivers = defaults.automationRunbookReceivers;
-    	      this.azureAppPushReceivers = defaults.azureAppPushReceivers;
-    	      this.azureFunctionReceivers = defaults.azureFunctionReceivers;
-    	      this.emailReceivers = defaults.emailReceivers;
-    	      this.enabled = defaults.enabled;
-    	      this.groupShortName = defaults.groupShortName;
-    	      this.itsmReceivers = defaults.itsmReceivers;
-    	      this.location = defaults.location;
-    	      this.logicAppReceivers = defaults.logicAppReceivers;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.smsReceivers = defaults.smsReceivers;
-    	      this.tags = defaults.tags;
-    	      this.voiceReceivers = defaults.voiceReceivers;
-    	      this.webhookReceivers = defaults.webhookReceivers;
+            $ = new ActionGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionGroupName(@Nullable Output<String> actionGroupName) {
-            this.actionGroupName = actionGroupName;
+            $.actionGroupName = actionGroupName;
             return this;
         }
-        public Builder actionGroupName(@Nullable String actionGroupName) {
-            this.actionGroupName = Codegen.ofNullable(actionGroupName);
-            return this;
+
+        public Builder actionGroupName(String actionGroupName) {
+            return actionGroupName(Output.of(actionGroupName));
         }
+
         public Builder armRoleReceivers(@Nullable Output<List<ArmRoleReceiverArgs>> armRoleReceivers) {
-            this.armRoleReceivers = armRoleReceivers;
+            $.armRoleReceivers = armRoleReceivers;
             return this;
         }
-        public Builder armRoleReceivers(@Nullable List<ArmRoleReceiverArgs> armRoleReceivers) {
-            this.armRoleReceivers = Codegen.ofNullable(armRoleReceivers);
-            return this;
+
+        public Builder armRoleReceivers(List<ArmRoleReceiverArgs> armRoleReceivers) {
+            return armRoleReceivers(Output.of(armRoleReceivers));
         }
+
         public Builder armRoleReceivers(ArmRoleReceiverArgs... armRoleReceivers) {
             return armRoleReceivers(List.of(armRoleReceivers));
         }
+
         public Builder automationRunbookReceivers(@Nullable Output<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers) {
-            this.automationRunbookReceivers = automationRunbookReceivers;
+            $.automationRunbookReceivers = automationRunbookReceivers;
             return this;
         }
-        public Builder automationRunbookReceivers(@Nullable List<AutomationRunbookReceiverArgs> automationRunbookReceivers) {
-            this.automationRunbookReceivers = Codegen.ofNullable(automationRunbookReceivers);
-            return this;
+
+        public Builder automationRunbookReceivers(List<AutomationRunbookReceiverArgs> automationRunbookReceivers) {
+            return automationRunbookReceivers(Output.of(automationRunbookReceivers));
         }
+
         public Builder automationRunbookReceivers(AutomationRunbookReceiverArgs... automationRunbookReceivers) {
             return automationRunbookReceivers(List.of(automationRunbookReceivers));
         }
+
         public Builder azureAppPushReceivers(@Nullable Output<List<AzureAppPushReceiverArgs>> azureAppPushReceivers) {
-            this.azureAppPushReceivers = azureAppPushReceivers;
+            $.azureAppPushReceivers = azureAppPushReceivers;
             return this;
         }
-        public Builder azureAppPushReceivers(@Nullable List<AzureAppPushReceiverArgs> azureAppPushReceivers) {
-            this.azureAppPushReceivers = Codegen.ofNullable(azureAppPushReceivers);
-            return this;
+
+        public Builder azureAppPushReceivers(List<AzureAppPushReceiverArgs> azureAppPushReceivers) {
+            return azureAppPushReceivers(Output.of(azureAppPushReceivers));
         }
+
         public Builder azureAppPushReceivers(AzureAppPushReceiverArgs... azureAppPushReceivers) {
             return azureAppPushReceivers(List.of(azureAppPushReceivers));
         }
+
         public Builder azureFunctionReceivers(@Nullable Output<List<AzureFunctionReceiverArgs>> azureFunctionReceivers) {
-            this.azureFunctionReceivers = azureFunctionReceivers;
+            $.azureFunctionReceivers = azureFunctionReceivers;
             return this;
         }
-        public Builder azureFunctionReceivers(@Nullable List<AzureFunctionReceiverArgs> azureFunctionReceivers) {
-            this.azureFunctionReceivers = Codegen.ofNullable(azureFunctionReceivers);
-            return this;
+
+        public Builder azureFunctionReceivers(List<AzureFunctionReceiverArgs> azureFunctionReceivers) {
+            return azureFunctionReceivers(Output.of(azureFunctionReceivers));
         }
+
         public Builder azureFunctionReceivers(AzureFunctionReceiverArgs... azureFunctionReceivers) {
             return azureFunctionReceivers(List.of(azureFunctionReceivers));
         }
+
         public Builder emailReceivers(@Nullable Output<List<EmailReceiverArgs>> emailReceivers) {
-            this.emailReceivers = emailReceivers;
+            $.emailReceivers = emailReceivers;
             return this;
         }
-        public Builder emailReceivers(@Nullable List<EmailReceiverArgs> emailReceivers) {
-            this.emailReceivers = Codegen.ofNullable(emailReceivers);
-            return this;
+
+        public Builder emailReceivers(List<EmailReceiverArgs> emailReceivers) {
+            return emailReceivers(Output.of(emailReceivers));
         }
+
         public Builder emailReceivers(EmailReceiverArgs... emailReceivers) {
             return emailReceivers(List.of(emailReceivers));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder groupShortName(Output<String> groupShortName) {
-            this.groupShortName = Objects.requireNonNull(groupShortName);
+            $.groupShortName = groupShortName;
             return this;
         }
+
         public Builder groupShortName(String groupShortName) {
-            this.groupShortName = Output.of(Objects.requireNonNull(groupShortName));
-            return this;
+            return groupShortName(Output.of(groupShortName));
         }
+
         public Builder itsmReceivers(@Nullable Output<List<ItsmReceiverArgs>> itsmReceivers) {
-            this.itsmReceivers = itsmReceivers;
+            $.itsmReceivers = itsmReceivers;
             return this;
         }
-        public Builder itsmReceivers(@Nullable List<ItsmReceiverArgs> itsmReceivers) {
-            this.itsmReceivers = Codegen.ofNullable(itsmReceivers);
-            return this;
+
+        public Builder itsmReceivers(List<ItsmReceiverArgs> itsmReceivers) {
+            return itsmReceivers(Output.of(itsmReceivers));
         }
+
         public Builder itsmReceivers(ItsmReceiverArgs... itsmReceivers) {
             return itsmReceivers(List.of(itsmReceivers));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder logicAppReceivers(@Nullable Output<List<LogicAppReceiverArgs>> logicAppReceivers) {
-            this.logicAppReceivers = logicAppReceivers;
+            $.logicAppReceivers = logicAppReceivers;
             return this;
         }
-        public Builder logicAppReceivers(@Nullable List<LogicAppReceiverArgs> logicAppReceivers) {
-            this.logicAppReceivers = Codegen.ofNullable(logicAppReceivers);
-            return this;
+
+        public Builder logicAppReceivers(List<LogicAppReceiverArgs> logicAppReceivers) {
+            return logicAppReceivers(Output.of(logicAppReceivers));
         }
+
         public Builder logicAppReceivers(LogicAppReceiverArgs... logicAppReceivers) {
             return logicAppReceivers(List.of(logicAppReceivers));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder smsReceivers(@Nullable Output<List<SmsReceiverArgs>> smsReceivers) {
-            this.smsReceivers = smsReceivers;
+            $.smsReceivers = smsReceivers;
             return this;
         }
-        public Builder smsReceivers(@Nullable List<SmsReceiverArgs> smsReceivers) {
-            this.smsReceivers = Codegen.ofNullable(smsReceivers);
-            return this;
+
+        public Builder smsReceivers(List<SmsReceiverArgs> smsReceivers) {
+            return smsReceivers(Output.of(smsReceivers));
         }
+
         public Builder smsReceivers(SmsReceiverArgs... smsReceivers) {
             return smsReceivers(List.of(smsReceivers));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder voiceReceivers(@Nullable Output<List<VoiceReceiverArgs>> voiceReceivers) {
-            this.voiceReceivers = voiceReceivers;
+            $.voiceReceivers = voiceReceivers;
             return this;
         }
-        public Builder voiceReceivers(@Nullable List<VoiceReceiverArgs> voiceReceivers) {
-            this.voiceReceivers = Codegen.ofNullable(voiceReceivers);
-            return this;
+
+        public Builder voiceReceivers(List<VoiceReceiverArgs> voiceReceivers) {
+            return voiceReceivers(Output.of(voiceReceivers));
         }
+
         public Builder voiceReceivers(VoiceReceiverArgs... voiceReceivers) {
             return voiceReceivers(List.of(voiceReceivers));
         }
+
         public Builder webhookReceivers(@Nullable Output<List<WebhookReceiverArgs>> webhookReceivers) {
-            this.webhookReceivers = webhookReceivers;
+            $.webhookReceivers = webhookReceivers;
             return this;
         }
-        public Builder webhookReceivers(@Nullable List<WebhookReceiverArgs> webhookReceivers) {
-            this.webhookReceivers = Codegen.ofNullable(webhookReceivers);
-            return this;
+
+        public Builder webhookReceivers(List<WebhookReceiverArgs> webhookReceivers) {
+            return webhookReceivers(Output.of(webhookReceivers));
         }
+
         public Builder webhookReceivers(WebhookReceiverArgs... webhookReceivers) {
             return webhookReceivers(List.of(webhookReceivers));
-        }        public ActionGroupArgs build() {
-            return new ActionGroupArgs(actionGroupName, armRoleReceivers, automationRunbookReceivers, azureAppPushReceivers, azureFunctionReceivers, emailReceivers, enabled, groupShortName, itsmReceivers, location, logicAppReceivers, resourceGroupName, smsReceivers, tags, voiceReceivers, webhookReceivers);
+        }
+
+        public ActionGroupArgs build() {
+            $.enabled = Codegen.booleanProp("enabled").output().arg($.enabled).def(true).require();
+            $.groupShortName = Objects.requireNonNull($.groupShortName, "expected parameter 'groupShortName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

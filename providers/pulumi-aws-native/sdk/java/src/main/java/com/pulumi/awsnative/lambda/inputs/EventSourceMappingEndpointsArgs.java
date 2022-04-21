@@ -5,10 +5,10 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class EventSourceMappingEndpointsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="kafkaBootstrapServers")
-      private final @Nullable Output<List<String>> kafkaBootstrapServers;
+    private @Nullable Output<List<String>> kafkaBootstrapServers;
 
-    public Output<List<String>> kafkaBootstrapServers() {
-        return this.kafkaBootstrapServers == null ? Codegen.empty() : this.kafkaBootstrapServers;
+    public Optional<Output<List<String>>> kafkaBootstrapServers() {
+        return Optional.ofNullable(this.kafkaBootstrapServers);
     }
 
-    public EventSourceMappingEndpointsArgs(@Nullable Output<List<String>> kafkaBootstrapServers) {
-        this.kafkaBootstrapServers = kafkaBootstrapServers;
-    }
+    private EventSourceMappingEndpointsArgs() {}
 
-    private EventSourceMappingEndpointsArgs() {
-        this.kafkaBootstrapServers = Codegen.empty();
+    private EventSourceMappingEndpointsArgs(EventSourceMappingEndpointsArgs $) {
+        this.kafkaBootstrapServers = $.kafkaBootstrapServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingEndpointsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> kafkaBootstrapServers;
+        private EventSourceMappingEndpointsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingEndpointsArgs();
         }
 
         public Builder(EventSourceMappingEndpointsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kafkaBootstrapServers = defaults.kafkaBootstrapServers;
+            $ = new EventSourceMappingEndpointsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kafkaBootstrapServers(@Nullable Output<List<String>> kafkaBootstrapServers) {
-            this.kafkaBootstrapServers = kafkaBootstrapServers;
+            $.kafkaBootstrapServers = kafkaBootstrapServers;
             return this;
         }
-        public Builder kafkaBootstrapServers(@Nullable List<String> kafkaBootstrapServers) {
-            this.kafkaBootstrapServers = Codegen.ofNullable(kafkaBootstrapServers);
-            return this;
+
+        public Builder kafkaBootstrapServers(List<String> kafkaBootstrapServers) {
+            return kafkaBootstrapServers(Output.of(kafkaBootstrapServers));
         }
+
         public Builder kafkaBootstrapServers(String... kafkaBootstrapServers) {
             return kafkaBootstrapServers(List.of(kafkaBootstrapServers));
-        }        public EventSourceMappingEndpointsArgs build() {
-            return new EventSourceMappingEndpointsArgs(kafkaBootstrapServers);
+        }
+
+        public EventSourceMappingEndpointsArgs build() {
+            return $;
         }
     }
+
 }

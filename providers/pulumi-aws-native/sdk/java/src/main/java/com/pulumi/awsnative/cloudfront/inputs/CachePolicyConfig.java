@@ -17,126 +17,114 @@ public final class CachePolicyConfig extends com.pulumi.resources.InvokeArgs {
     public static final CachePolicyConfig Empty = new CachePolicyConfig();
 
     @Import(name="comment")
-      private final @Nullable String comment;
+    private @Nullable String comment;
 
     public Optional<String> comment() {
-        return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
+        return Optional.ofNullable(this.comment);
     }
 
     @Import(name="defaultTTL", required=true)
-      private final Double defaultTTL;
+    private Double defaultTTL;
 
     public Double defaultTTL() {
         return this.defaultTTL;
     }
 
     @Import(name="maxTTL", required=true)
-      private final Double maxTTL;
+    private Double maxTTL;
 
     public Double maxTTL() {
         return this.maxTTL;
     }
 
     @Import(name="minTTL", required=true)
-      private final Double minTTL;
+    private Double minTTL;
 
     public Double minTTL() {
         return this.minTTL;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
-      private final CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin;
+    private CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin;
 
     public CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin() {
         return this.parametersInCacheKeyAndForwardedToOrigin;
     }
 
-    public CachePolicyConfig(
-        @Nullable String comment,
-        Double defaultTTL,
-        Double maxTTL,
-        Double minTTL,
-        String name,
-        CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
-        this.comment = comment;
-        this.defaultTTL = Objects.requireNonNull(defaultTTL, "expected parameter 'defaultTTL' to be non-null");
-        this.maxTTL = Objects.requireNonNull(maxTTL, "expected parameter 'maxTTL' to be non-null");
-        this.minTTL = Objects.requireNonNull(minTTL, "expected parameter 'minTTL' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin, "expected parameter 'parametersInCacheKeyAndForwardedToOrigin' to be non-null");
-    }
+    private CachePolicyConfig() {}
 
-    private CachePolicyConfig() {
-        this.comment = null;
-        this.defaultTTL = null;
-        this.maxTTL = null;
-        this.minTTL = null;
-        this.name = null;
-        this.parametersInCacheKeyAndForwardedToOrigin = null;
+    private CachePolicyConfig(CachePolicyConfig $) {
+        this.comment = $.comment;
+        this.defaultTTL = $.defaultTTL;
+        this.maxTTL = $.maxTTL;
+        this.minTTL = $.minTTL;
+        this.name = $.name;
+        this.parametersInCacheKeyAndForwardedToOrigin = $.parametersInCacheKeyAndForwardedToOrigin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String comment;
-        private Double defaultTTL;
-        private Double maxTTL;
-        private Double minTTL;
-        private String name;
-        private CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin;
+        private CachePolicyConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyConfig();
         }
 
         public Builder(CachePolicyConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.defaultTTL = defaults.defaultTTL;
-    	      this.maxTTL = defaults.maxTTL;
-    	      this.minTTL = defaults.minTTL;
-    	      this.name = defaults.name;
-    	      this.parametersInCacheKeyAndForwardedToOrigin = defaults.parametersInCacheKeyAndForwardedToOrigin;
+            $ = new CachePolicyConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
+
         public Builder defaultTTL(Double defaultTTL) {
-            this.defaultTTL = Objects.requireNonNull(defaultTTL);
+            $.defaultTTL = defaultTTL;
             return this;
         }
+
         public Builder maxTTL(Double maxTTL) {
-            this.maxTTL = Objects.requireNonNull(maxTTL);
+            $.maxTTL = maxTTL;
             return this;
         }
+
         public Builder minTTL(Double minTTL) {
-            this.minTTL = Objects.requireNonNull(minTTL);
+            $.minTTL = minTTL;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
-            this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin);
+            $.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
             return this;
-        }        public CachePolicyConfig build() {
-            return new CachePolicyConfig(comment, defaultTTL, maxTTL, minTTL, name, parametersInCacheKeyAndForwardedToOrigin);
+        }
+
+        public CachePolicyConfig build() {
+            $.defaultTTL = Objects.requireNonNull($.defaultTTL, "expected parameter 'defaultTTL' to be non-null");
+            $.maxTTL = Objects.requireNonNull($.maxTTL, "expected parameter 'maxTTL' to be non-null");
+            $.minTTL = Objects.requireNonNull($.minTTL, "expected parameter 'minTTL' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull($.parametersInCacheKeyAndForwardedToOrigin, "expected parameter 'parametersInCacheKeyAndForwardedToOrigin' to be non-null");
+            return $;
         }
     }
+
 }

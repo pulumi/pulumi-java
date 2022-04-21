@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudwatch.inputs;
 import com.pulumi.aws.cloudwatch.inputs.EventPermissionConditionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<EventPermissionConditionGetArgs> condition;
+    private @Nullable Output<EventPermissionConditionGetArgs> condition;
 
-    public Output<EventPermissionConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<EventPermissionConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="eventBusName")
-      private final @Nullable Output<String> eventBusName;
+    private @Nullable Output<String> eventBusName;
 
-    public Output<String> eventBusName() {
-        return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
+    public Optional<Output<String>> eventBusName() {
+        return Optional.ofNullable(this.eventBusName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="principal")
-      private final @Nullable Output<String> principal;
+    private @Nullable Output<String> principal;
 
-    public Output<String> principal() {
-        return this.principal == null ? Codegen.empty() : this.principal;
+    public Optional<Output<String>> principal() {
+        return Optional.ofNullable(this.principal);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class EventPermissionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="statementId")
-      private final @Nullable Output<String> statementId;
+    private @Nullable Output<String> statementId;
 
-    public Output<String> statementId() {
-        return this.statementId == null ? Codegen.empty() : this.statementId;
+    public Optional<Output<String>> statementId() {
+        return Optional.ofNullable(this.statementId);
     }
 
-    public EventPermissionState(
-        @Nullable Output<String> action,
-        @Nullable Output<EventPermissionConditionGetArgs> condition,
-        @Nullable Output<String> eventBusName,
-        @Nullable Output<String> principal,
-        @Nullable Output<String> statementId) {
-        this.action = action;
-        this.condition = condition;
-        this.eventBusName = eventBusName;
-        this.principal = principal;
-        this.statementId = statementId;
-    }
+    private EventPermissionState() {}
 
-    private EventPermissionState() {
-        this.action = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.eventBusName = Codegen.empty();
-        this.principal = Codegen.empty();
-        this.statementId = Codegen.empty();
+    private EventPermissionState(EventPermissionState $) {
+        this.action = $.action;
+        this.condition = $.condition;
+        this.eventBusName = $.eventBusName;
+        this.principal = $.principal;
+        this.statementId = $.statementId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventPermissionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<EventPermissionConditionGetArgs> condition;
-        private @Nullable Output<String> eventBusName;
-        private @Nullable Output<String> principal;
-        private @Nullable Output<String> statementId;
+        private EventPermissionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventPermissionState();
         }
 
         public Builder(EventPermissionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.condition = defaults.condition;
-    	      this.eventBusName = defaults.eventBusName;
-    	      this.principal = defaults.principal;
-    	      this.statementId = defaults.statementId;
+            $ = new EventPermissionState(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder condition(@Nullable Output<EventPermissionConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable EventPermissionConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(EventPermissionConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
-            this.eventBusName = eventBusName;
+            $.eventBusName = eventBusName;
             return this;
         }
-        public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Codegen.ofNullable(eventBusName);
-            return this;
+
+        public Builder eventBusName(String eventBusName) {
+            return eventBusName(Output.of(eventBusName));
         }
+
         public Builder principal(@Nullable Output<String> principal) {
-            this.principal = principal;
+            $.principal = principal;
             return this;
         }
-        public Builder principal(@Nullable String principal) {
-            this.principal = Codegen.ofNullable(principal);
-            return this;
+
+        public Builder principal(String principal) {
+            return principal(Output.of(principal));
         }
+
         public Builder statementId(@Nullable Output<String> statementId) {
-            this.statementId = statementId;
+            $.statementId = statementId;
             return this;
         }
-        public Builder statementId(@Nullable String statementId) {
-            this.statementId = Codegen.ofNullable(statementId);
-            return this;
-        }        public EventPermissionState build() {
-            return new EventPermissionState(action, condition, eventBusName, principal, statementId);
+
+        public Builder statementId(String statementId) {
+            return statementId(Output.of(statementId));
+        }
+
+        public EventPermissionState build() {
+            return $;
         }
     }
+
 }

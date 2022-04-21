@@ -19,45 +19,44 @@ public final class GetEventSourceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable String namePrefix;
+    private @Nullable String namePrefix;
 
     public Optional<String> namePrefix() {
-        return this.namePrefix == null ? Optional.empty() : Optional.ofNullable(this.namePrefix);
+        return Optional.ofNullable(this.namePrefix);
     }
 
-    public GetEventSourceArgs(@Nullable String namePrefix) {
-        this.namePrefix = namePrefix;
-    }
+    private GetEventSourceArgs() {}
 
-    private GetEventSourceArgs() {
-        this.namePrefix = null;
+    private GetEventSourceArgs(GetEventSourceArgs $) {
+        this.namePrefix = $.namePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String namePrefix;
+        private GetEventSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventSourceArgs();
         }
 
         public Builder(GetEventSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namePrefix = defaults.namePrefix;
+            $ = new GetEventSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
-        }        public GetEventSourceArgs build() {
-            return new GetEventSourceArgs(namePrefix);
+        }
+
+        public GetEventSourceArgs build() {
+            return $;
         }
     }
+
 }

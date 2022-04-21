@@ -27,17 +27,17 @@ public final class PackagingConfigurationDashManifest extends com.pulumi.resourc
      * 
      */
     @Import(name="manifestLayout")
-      private final @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout;
+    private @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout;
 
     public Optional<PackagingConfigurationDashManifestManifestLayout> manifestLayout() {
-        return this.manifestLayout == null ? Optional.empty() : Optional.ofNullable(this.manifestLayout);
+        return Optional.ofNullable(this.manifestLayout);
     }
 
     @Import(name="manifestName")
-      private final @Nullable String manifestName;
+    private @Nullable String manifestName;
 
     public Optional<String> manifestName() {
-        return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
+        return Optional.ofNullable(this.manifestName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PackagingConfigurationDashManifest extends com.pulumi.resourc
      * 
      */
     @Import(name="minBufferTimeSeconds")
-      private final @Nullable Integer minBufferTimeSeconds;
+    private @Nullable Integer minBufferTimeSeconds;
 
     public Optional<Integer> minBufferTimeSeconds() {
-        return this.minBufferTimeSeconds == null ? Optional.empty() : Optional.ofNullable(this.minBufferTimeSeconds);
+        return Optional.ofNullable(this.minBufferTimeSeconds);
     }
 
     /**
@@ -56,89 +56,75 @@ public final class PackagingConfigurationDashManifest extends com.pulumi.resourc
      * 
      */
     @Import(name="profile")
-      private final @Nullable PackagingConfigurationDashManifestProfile profile;
+    private @Nullable PackagingConfigurationDashManifestProfile profile;
 
     public Optional<PackagingConfigurationDashManifestProfile> profile() {
-        return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
+        return Optional.ofNullable(this.profile);
     }
 
     @Import(name="streamSelection")
-      private final @Nullable PackagingConfigurationStreamSelection streamSelection;
+    private @Nullable PackagingConfigurationStreamSelection streamSelection;
 
     public Optional<PackagingConfigurationStreamSelection> streamSelection() {
-        return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
+        return Optional.ofNullable(this.streamSelection);
     }
 
-    public PackagingConfigurationDashManifest(
-        @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout,
-        @Nullable String manifestName,
-        @Nullable Integer minBufferTimeSeconds,
-        @Nullable PackagingConfigurationDashManifestProfile profile,
-        @Nullable PackagingConfigurationStreamSelection streamSelection) {
-        this.manifestLayout = manifestLayout;
-        this.manifestName = manifestName;
-        this.minBufferTimeSeconds = minBufferTimeSeconds;
-        this.profile = profile;
-        this.streamSelection = streamSelection;
-    }
+    private PackagingConfigurationDashManifest() {}
 
-    private PackagingConfigurationDashManifest() {
-        this.manifestLayout = null;
-        this.manifestName = null;
-        this.minBufferTimeSeconds = null;
-        this.profile = null;
-        this.streamSelection = null;
+    private PackagingConfigurationDashManifest(PackagingConfigurationDashManifest $) {
+        this.manifestLayout = $.manifestLayout;
+        this.manifestName = $.manifestName;
+        this.minBufferTimeSeconds = $.minBufferTimeSeconds;
+        this.profile = $.profile;
+        this.streamSelection = $.streamSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationDashManifest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout;
-        private @Nullable String manifestName;
-        private @Nullable Integer minBufferTimeSeconds;
-        private @Nullable PackagingConfigurationDashManifestProfile profile;
-        private @Nullable PackagingConfigurationStreamSelection streamSelection;
+        private PackagingConfigurationDashManifest $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationDashManifest();
         }
 
         public Builder(PackagingConfigurationDashManifest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manifestLayout = defaults.manifestLayout;
-    	      this.manifestName = defaults.manifestName;
-    	      this.minBufferTimeSeconds = defaults.minBufferTimeSeconds;
-    	      this.profile = defaults.profile;
-    	      this.streamSelection = defaults.streamSelection;
+            $ = new PackagingConfigurationDashManifest(Objects.requireNonNull(defaults));
         }
 
         public Builder manifestLayout(@Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout) {
-            this.manifestLayout = manifestLayout;
+            $.manifestLayout = manifestLayout;
             return this;
         }
+
         public Builder manifestName(@Nullable String manifestName) {
-            this.manifestName = manifestName;
+            $.manifestName = manifestName;
             return this;
         }
+
         public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
-            this.minBufferTimeSeconds = minBufferTimeSeconds;
+            $.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
+
         public Builder profile(@Nullable PackagingConfigurationDashManifestProfile profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
+
         public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
-            this.streamSelection = streamSelection;
+            $.streamSelection = streamSelection;
             return this;
-        }        public PackagingConfigurationDashManifest build() {
-            return new PackagingConfigurationDashManifest(manifestLayout, manifestName, minBufferTimeSeconds, profile, streamSelection);
+        }
+
+        public PackagingConfigurationDashManifest build() {
+            return $;
         }
     }
+
 }

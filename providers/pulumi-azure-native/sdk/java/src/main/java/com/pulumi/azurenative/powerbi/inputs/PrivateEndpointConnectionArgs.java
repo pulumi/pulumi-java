@@ -9,9 +9,9 @@ import com.pulumi.azurenative.powerbi.inputs.PrivateEndpointArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
+    private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
-    public Output<PrivateEndpointArgs> privateEndpoint() {
-        return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
+    public Optional<Output<PrivateEndpointArgs>> privateEndpoint() {
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
+    private @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<ConnectionStateArgs> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
+    public Optional<Output<ConnectionStateArgs>> privateLinkServiceConnectionState() {
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
 
-    public Output<Either<String,ResourceProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ResourceProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public PrivateEndpointConnectionArgs(
-        @Nullable Output<PrivateEndpointArgs> privateEndpoint,
-        @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState,
-        @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState) {
-        this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = provisioningState;
-    }
+    private PrivateEndpointConnectionArgs() {}
 
-    private PrivateEndpointConnectionArgs() {
-        this.privateEndpoint = Codegen.empty();
-        this.privateLinkServiceConnectionState = Codegen.empty();
-        this.provisioningState = Codegen.empty();
+    private PrivateEndpointConnectionArgs(PrivateEndpointConnectionArgs $) {
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
-        private @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
-        private @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
+        private PrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionArgs();
         }
 
         public Builder(PrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateEndpoint(@Nullable Output<PrivateEndpointArgs> privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
-        public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
-            this.privateEndpoint = Codegen.ofNullable(privateEndpoint);
-            return this;
+
+        public Builder privateEndpoint(PrivateEndpointArgs privateEndpoint) {
+            return privateEndpoint(Output.of(privateEndpoint));
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-        public Builder privateLinkServiceConnectionState(@Nullable ConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
-            return this;
+
+        public Builder privateLinkServiceConnectionState(ConnectionStateArgs privateLinkServiceConnectionState) {
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,ResourceProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ResourceProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
-        }        public PrivateEndpointConnectionArgs build() {
-            return new PrivateEndpointConnectionArgs(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
+
+        public Builder provisioningState(Either<String,ResourceProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
+        }
+
+        public PrivateEndpointConnectionArgs build() {
+            return $;
         }
     }
+
 }

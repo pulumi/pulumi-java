@@ -7,11 +7,11 @@ import com.pulumi.aws.codepipeline.inputs.WebhookAuthenticationConfigurationGetA
 import com.pulumi.aws.codepipeline.inputs.WebhookFilterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<String> authentication;
+    private @Nullable Output<String> authentication;
 
-    public Output<String> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<String>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationConfiguration")
-      private final @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
+    private @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
 
-    public Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
+    public Optional<Output<WebhookAuthenticationConfigurationGetArgs>> authenticationConfiguration() {
+        return Optional.ofNullable(this.authenticationConfiguration);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable Output<List<WebhookFilterGetArgs>> filters;
+    private @Nullable Output<List<WebhookFilterGetArgs>> filters;
 
-    public Output<List<WebhookFilterGetArgs>> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<List<WebhookFilterGetArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetAction")
-      private final @Nullable Output<String> targetAction;
+    private @Nullable Output<String> targetAction;
 
-    public Output<String> targetAction() {
-        return this.targetAction == null ? Codegen.empty() : this.targetAction;
+    public Optional<Output<String>> targetAction() {
+        return Optional.ofNullable(this.targetAction);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetPipeline")
-      private final @Nullable Output<String> targetPipeline;
+    private @Nullable Output<String> targetPipeline;
 
-    public Output<String> targetPipeline() {
-        return this.targetPipeline == null ? Codegen.empty() : this.targetPipeline;
+    public Optional<Output<String>> targetPipeline() {
+        return Optional.ofNullable(this.targetPipeline);
     }
 
     /**
@@ -123,170 +123,142 @@ public final class WebhookState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public WebhookState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> authentication,
-        @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration,
-        @Nullable Output<List<WebhookFilterGetArgs>> filters,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> targetAction,
-        @Nullable Output<String> targetPipeline,
-        @Nullable Output<String> url) {
-        this.arn = arn;
-        this.authentication = authentication;
-        this.authenticationConfiguration = authenticationConfiguration;
-        this.filters = filters;
-        this.name = name;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.targetAction = targetAction;
-        this.targetPipeline = targetPipeline;
-        this.url = url;
-    }
+    private WebhookState() {}
 
-    private WebhookState() {
-        this.arn = Codegen.empty();
-        this.authentication = Codegen.empty();
-        this.authenticationConfiguration = Codegen.empty();
-        this.filters = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.targetAction = Codegen.empty();
-        this.targetPipeline = Codegen.empty();
-        this.url = Codegen.empty();
+    private WebhookState(WebhookState $) {
+        this.arn = $.arn;
+        this.authentication = $.authentication;
+        this.authenticationConfiguration = $.authenticationConfiguration;
+        this.filters = $.filters;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.targetAction = $.targetAction;
+        this.targetPipeline = $.targetPipeline;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> authentication;
-        private @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
-        private @Nullable Output<List<WebhookFilterGetArgs>> filters;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> targetAction;
-        private @Nullable Output<String> targetPipeline;
-        private @Nullable Output<String> url;
+        private WebhookState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookState();
         }
 
         public Builder(WebhookState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.authentication = defaults.authentication;
-    	      this.authenticationConfiguration = defaults.authenticationConfiguration;
-    	      this.filters = defaults.filters;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.targetAction = defaults.targetAction;
-    	      this.targetPipeline = defaults.targetPipeline;
-    	      this.url = defaults.url;
+            $ = new WebhookState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder authentication(@Nullable Output<String> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable String authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(String authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder authenticationConfiguration(@Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration) {
-            this.authenticationConfiguration = authenticationConfiguration;
+            $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-        public Builder authenticationConfiguration(@Nullable WebhookAuthenticationConfigurationGetArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Codegen.ofNullable(authenticationConfiguration);
-            return this;
+
+        public Builder authenticationConfiguration(WebhookAuthenticationConfigurationGetArgs authenticationConfiguration) {
+            return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
+
         public Builder filters(@Nullable Output<List<WebhookFilterGetArgs>> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable List<WebhookFilterGetArgs> filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(List<WebhookFilterGetArgs> filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder filters(WebhookFilterGetArgs... filters) {
             return filters(List.of(filters));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder targetAction(@Nullable Output<String> targetAction) {
-            this.targetAction = targetAction;
+            $.targetAction = targetAction;
             return this;
         }
-        public Builder targetAction(@Nullable String targetAction) {
-            this.targetAction = Codegen.ofNullable(targetAction);
-            return this;
+
+        public Builder targetAction(String targetAction) {
+            return targetAction(Output.of(targetAction));
         }
+
         public Builder targetPipeline(@Nullable Output<String> targetPipeline) {
-            this.targetPipeline = targetPipeline;
+            $.targetPipeline = targetPipeline;
             return this;
         }
-        public Builder targetPipeline(@Nullable String targetPipeline) {
-            this.targetPipeline = Codegen.ofNullable(targetPipeline);
-            return this;
+
+        public Builder targetPipeline(String targetPipeline) {
+            return targetPipeline(Output.of(targetPipeline));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public WebhookState build() {
-            return new WebhookState(arn, authentication, authenticationConfiguration, filters, name, tags, tagsAll, targetAction, targetPipeline, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public WebhookState build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetPipelineArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPipelineArgs Empty = new GetPipelineArgs();
 
     @Import(name="pipelineId", required=true)
-      private final String pipelineId;
+    private String pipelineId;
 
     public String pipelineId() {
         return this.pipelineId;
     }
 
-    public GetPipelineArgs(String pipelineId) {
-        this.pipelineId = Objects.requireNonNull(pipelineId, "expected parameter 'pipelineId' to be non-null");
-    }
+    private GetPipelineArgs() {}
 
-    private GetPipelineArgs() {
-        this.pipelineId = null;
+    private GetPipelineArgs(GetPipelineArgs $) {
+        this.pipelineId = $.pipelineId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pipelineId;
+        private GetPipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineArgs();
         }
 
         public Builder(GetPipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineId = defaults.pipelineId;
+            $ = new GetPipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineId(String pipelineId) {
-            this.pipelineId = Objects.requireNonNull(pipelineId);
+            $.pipelineId = pipelineId;
             return this;
-        }        public GetPipelineArgs build() {
-            return new GetPipelineArgs(pipelineId);
+        }
+
+        public GetPipelineArgs build() {
+            $.pipelineId = Objects.requireNonNull($.pipelineId, "expected parameter 'pipelineId' to be non-null");
+            return $;
         }
     }
+
 }

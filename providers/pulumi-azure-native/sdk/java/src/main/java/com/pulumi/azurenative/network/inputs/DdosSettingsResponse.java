@@ -25,10 +25,10 @@ public final class DdosSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ddosCustomPolicy")
-      private final @Nullable SubResourceResponse ddosCustomPolicy;
+    private @Nullable SubResourceResponse ddosCustomPolicy;
 
     public Optional<SubResourceResponse> ddosCustomPolicy() {
-        return this.ddosCustomPolicy == null ? Optional.empty() : Optional.ofNullable(this.ddosCustomPolicy);
+        return Optional.ofNullable(this.ddosCustomPolicy);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DdosSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="protectedIP")
-      private final @Nullable Boolean protectedIP;
+    private @Nullable Boolean protectedIP;
 
     public Optional<Boolean> protectedIP() {
-        return this.protectedIP == null ? Optional.empty() : Optional.ofNullable(this.protectedIP);
+        return Optional.ofNullable(this.protectedIP);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class DdosSettingsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="protectionCoverage")
-      private final @Nullable String protectionCoverage;
+    private @Nullable String protectionCoverage;
 
     public Optional<String> protectionCoverage() {
-        return this.protectionCoverage == null ? Optional.empty() : Optional.ofNullable(this.protectionCoverage);
+        return Optional.ofNullable(this.protectionCoverage);
     }
 
-    public DdosSettingsResponse(
-        @Nullable SubResourceResponse ddosCustomPolicy,
-        @Nullable Boolean protectedIP,
-        @Nullable String protectionCoverage) {
-        this.ddosCustomPolicy = ddosCustomPolicy;
-        this.protectedIP = protectedIP;
-        this.protectionCoverage = protectionCoverage;
-    }
+    private DdosSettingsResponse() {}
 
-    private DdosSettingsResponse() {
-        this.ddosCustomPolicy = null;
-        this.protectedIP = null;
-        this.protectionCoverage = null;
+    private DdosSettingsResponse(DdosSettingsResponse $) {
+        this.ddosCustomPolicy = $.ddosCustomPolicy;
+        this.protectedIP = $.protectedIP;
+        this.protectionCoverage = $.protectionCoverage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DdosSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SubResourceResponse ddosCustomPolicy;
-        private @Nullable Boolean protectedIP;
-        private @Nullable String protectionCoverage;
+        private DdosSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DdosSettingsResponse();
         }
 
         public Builder(DdosSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ddosCustomPolicy = defaults.ddosCustomPolicy;
-    	      this.protectedIP = defaults.protectedIP;
-    	      this.protectionCoverage = defaults.protectionCoverage;
+            $ = new DdosSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ddosCustomPolicy(@Nullable SubResourceResponse ddosCustomPolicy) {
-            this.ddosCustomPolicy = ddosCustomPolicy;
+            $.ddosCustomPolicy = ddosCustomPolicy;
             return this;
         }
+
         public Builder protectedIP(@Nullable Boolean protectedIP) {
-            this.protectedIP = protectedIP;
+            $.protectedIP = protectedIP;
             return this;
         }
+
         public Builder protectionCoverage(@Nullable String protectionCoverage) {
-            this.protectionCoverage = protectionCoverage;
+            $.protectionCoverage = protectionCoverage;
             return this;
-        }        public DdosSettingsResponse build() {
-            return new DdosSettingsResponse(ddosCustomPolicy, protectedIP, protectionCoverage);
+        }
+
+        public DdosSettingsResponse build() {
+            return $;
         }
     }
+
 }

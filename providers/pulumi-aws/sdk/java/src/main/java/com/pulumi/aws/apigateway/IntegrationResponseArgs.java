@@ -5,10 +5,10 @@ package com.pulumi.aws.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="contentHandling")
-      private final @Nullable Output<String> contentHandling;
+    private @Nullable Output<String> contentHandling;
 
-    public Output<String> contentHandling() {
-        return this.contentHandling == null ? Codegen.empty() : this.contentHandling;
+    public Optional<Output<String>> contentHandling() {
+        return Optional.ofNullable(this.contentHandling);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="httpMethod", required=true)
-      private final Output<String> httpMethod;
+    private Output<String> httpMethod;
 
     public Output<String> httpMethod() {
         return this.httpMethod;
@@ -43,7 +43,7 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -55,10 +55,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="responseParameters")
-      private final @Nullable Output<Map<String,String>> responseParameters;
+    private @Nullable Output<Map<String,String>> responseParameters;
 
-    public Output<Map<String,String>> responseParameters() {
-        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
+    public Optional<Output<Map<String,String>>> responseParameters() {
+        return Optional.ofNullable(this.responseParameters);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="responseTemplates")
-      private final @Nullable Output<Map<String,String>> responseTemplates;
+    private @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Output<Map<String,String>> responseTemplates() {
-        return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
+    public Optional<Output<Map<String,String>>> responseTemplates() {
+        return Optional.ofNullable(this.responseTemplates);
     }
 
     /**
@@ -77,7 +77,7 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="restApi", required=true)
-      private final Output<String> restApi;
+    private Output<String> restApi;
 
     public Output<String> restApi() {
         return this.restApi;
@@ -91,10 +91,10 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="selectionPattern")
-      private final @Nullable Output<String> selectionPattern;
+    private @Nullable Output<String> selectionPattern;
 
-    public Output<String> selectionPattern() {
-        return this.selectionPattern == null ? Codegen.empty() : this.selectionPattern;
+    public Optional<Output<String>> selectionPattern() {
+        return Optional.ofNullable(this.selectionPattern);
     }
 
     /**
@@ -102,137 +102,122 @@ public final class IntegrationResponseArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="statusCode", required=true)
-      private final Output<String> statusCode;
+    private Output<String> statusCode;
 
     public Output<String> statusCode() {
         return this.statusCode;
     }
 
-    public IntegrationResponseArgs(
-        @Nullable Output<String> contentHandling,
-        Output<String> httpMethod,
-        Output<String> resourceId,
-        @Nullable Output<Map<String,String>> responseParameters,
-        @Nullable Output<Map<String,String>> responseTemplates,
-        Output<String> restApi,
-        @Nullable Output<String> selectionPattern,
-        Output<String> statusCode) {
-        this.contentHandling = contentHandling;
-        this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.responseParameters = responseParameters;
-        this.responseTemplates = responseTemplates;
-        this.restApi = Objects.requireNonNull(restApi, "expected parameter 'restApi' to be non-null");
-        this.selectionPattern = selectionPattern;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private IntegrationResponseArgs() {}
 
-    private IntegrationResponseArgs() {
-        this.contentHandling = Codegen.empty();
-        this.httpMethod = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.responseParameters = Codegen.empty();
-        this.responseTemplates = Codegen.empty();
-        this.restApi = Codegen.empty();
-        this.selectionPattern = Codegen.empty();
-        this.statusCode = Codegen.empty();
+    private IntegrationResponseArgs(IntegrationResponseArgs $) {
+        this.contentHandling = $.contentHandling;
+        this.httpMethod = $.httpMethod;
+        this.resourceId = $.resourceId;
+        this.responseParameters = $.responseParameters;
+        this.responseTemplates = $.responseTemplates;
+        this.restApi = $.restApi;
+        this.selectionPattern = $.selectionPattern;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationResponseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contentHandling;
-        private Output<String> httpMethod;
-        private Output<String> resourceId;
-        private @Nullable Output<Map<String,String>> responseParameters;
-        private @Nullable Output<Map<String,String>> responseTemplates;
-        private Output<String> restApi;
-        private @Nullable Output<String> selectionPattern;
-        private Output<String> statusCode;
+        private IntegrationResponseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationResponseArgs();
         }
 
         public Builder(IntegrationResponseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentHandling = defaults.contentHandling;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.resourceId = defaults.resourceId;
-    	      this.responseParameters = defaults.responseParameters;
-    	      this.responseTemplates = defaults.responseTemplates;
-    	      this.restApi = defaults.restApi;
-    	      this.selectionPattern = defaults.selectionPattern;
-    	      this.statusCode = defaults.statusCode;
+            $ = new IntegrationResponseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentHandling(@Nullable Output<String> contentHandling) {
-            this.contentHandling = contentHandling;
+            $.contentHandling = contentHandling;
             return this;
         }
-        public Builder contentHandling(@Nullable String contentHandling) {
-            this.contentHandling = Codegen.ofNullable(contentHandling);
-            return this;
+
+        public Builder contentHandling(String contentHandling) {
+            return contentHandling(Output.of(contentHandling));
         }
+
         public Builder httpMethod(Output<String> httpMethod) {
-            this.httpMethod = Objects.requireNonNull(httpMethod);
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Output.of(Objects.requireNonNull(httpMethod));
-            return this;
+            return httpMethod(Output.of(httpMethod));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder responseParameters(@Nullable Output<Map<String,String>> responseParameters) {
-            this.responseParameters = responseParameters;
+            $.responseParameters = responseParameters;
             return this;
         }
-        public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
-            this.responseParameters = Codegen.ofNullable(responseParameters);
-            return this;
+
+        public Builder responseParameters(Map<String,String> responseParameters) {
+            return responseParameters(Output.of(responseParameters));
         }
+
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
-            this.responseTemplates = responseTemplates;
+            $.responseTemplates = responseTemplates;
             return this;
         }
-        public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Codegen.ofNullable(responseTemplates);
-            return this;
+
+        public Builder responseTemplates(Map<String,String> responseTemplates) {
+            return responseTemplates(Output.of(responseTemplates));
         }
+
         public Builder restApi(Output<String> restApi) {
-            this.restApi = Objects.requireNonNull(restApi);
+            $.restApi = restApi;
             return this;
         }
+
+        public Builder restApi(String restApi) {
+            return restApi(Output.of(restApi));
+        }
+
         public Builder selectionPattern(@Nullable Output<String> selectionPattern) {
-            this.selectionPattern = selectionPattern;
+            $.selectionPattern = selectionPattern;
             return this;
         }
-        public Builder selectionPattern(@Nullable String selectionPattern) {
-            this.selectionPattern = Codegen.ofNullable(selectionPattern);
-            return this;
+
+        public Builder selectionPattern(String selectionPattern) {
+            return selectionPattern(Output.of(selectionPattern));
         }
+
         public Builder statusCode(Output<String> statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
         }
+
         public Builder statusCode(String statusCode) {
-            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
-            return this;
-        }        public IntegrationResponseArgs build() {
-            return new IntegrationResponseArgs(contentHandling, httpMethod, resourceId, responseParameters, responseTemplates, restApi, selectionPattern, statusCode);
+            return statusCode(Output.of(statusCode));
+        }
+
+        public IntegrationResponseArgs build() {
+            $.httpMethod = Objects.requireNonNull($.httpMethod, "expected parameter 'httpMethod' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.restApi = Objects.requireNonNull($.restApi, "expected parameter 'restApi' to be non-null");
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

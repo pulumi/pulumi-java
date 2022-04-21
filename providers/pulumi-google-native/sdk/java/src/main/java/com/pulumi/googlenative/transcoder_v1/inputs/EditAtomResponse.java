@@ -22,7 +22,7 @@ public final class EditAtomResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTimeOffset", required=true)
-      private final String endTimeOffset;
+    private String endTimeOffset;
 
     public String endTimeOffset() {
         return this.endTimeOffset;
@@ -33,7 +33,7 @@ public final class EditAtomResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputs", required=true)
-      private final List<String> inputs;
+    private List<String> inputs;
 
     public List<String> inputs() {
         return this.inputs;
@@ -44,7 +44,7 @@ public final class EditAtomResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -55,76 +55,70 @@ public final class EditAtomResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTimeOffset", required=true)
-      private final String startTimeOffset;
+    private String startTimeOffset;
 
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
 
-    public EditAtomResponse(
-        String endTimeOffset,
-        List<String> inputs,
-        String key,
-        String startTimeOffset) {
-        this.endTimeOffset = Objects.requireNonNull(endTimeOffset, "expected parameter 'endTimeOffset' to be non-null");
-        this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
-    }
+    private EditAtomResponse() {}
 
-    private EditAtomResponse() {
-        this.endTimeOffset = null;
-        this.inputs = List.of();
-        this.key = null;
-        this.startTimeOffset = null;
+    private EditAtomResponse(EditAtomResponse $) {
+        this.endTimeOffset = $.endTimeOffset;
+        this.inputs = $.inputs;
+        this.key = $.key;
+        this.startTimeOffset = $.startTimeOffset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EditAtomResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTimeOffset;
-        private List<String> inputs;
-        private String key;
-        private String startTimeOffset;
+        private EditAtomResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EditAtomResponse();
         }
 
         public Builder(EditAtomResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTimeOffset = defaults.endTimeOffset;
-    	      this.inputs = defaults.inputs;
-    	      this.key = defaults.key;
-    	      this.startTimeOffset = defaults.startTimeOffset;
+            $ = new EditAtomResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTimeOffset(String endTimeOffset) {
-            this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
+            $.endTimeOffset = endTimeOffset;
             return this;
         }
+
         public Builder inputs(List<String> inputs) {
-            this.inputs = Objects.requireNonNull(inputs);
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(String... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder startTimeOffset(String startTimeOffset) {
-            this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
+            $.startTimeOffset = startTimeOffset;
             return this;
-        }        public EditAtomResponse build() {
-            return new EditAtomResponse(endTimeOffset, inputs, key, startTimeOffset);
+        }
+
+        public EditAtomResponse build() {
+            $.endTimeOffset = Objects.requireNonNull($.endTimeOffset, "expected parameter 'endTimeOffset' to be non-null");
+            $.inputs = Objects.requireNonNull($.inputs, "expected parameter 'inputs' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.startTimeOffset = Objects.requireNonNull($.startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="fieldName", required=true)
-      private final String fieldName;
+    private String fieldName;
 
     public String fieldName() {
         return this.fieldName;
@@ -32,7 +32,7 @@ public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -43,7 +43,7 @@ public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="methodMatch", required=true)
-      private final String methodMatch;
+    private String methodMatch;
 
     public String methodMatch() {
         return this.methodMatch;
@@ -54,73 +54,66 @@ public final class InputMappingResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public InputMappingResponse(
-        String fieldName,
-        String location,
-        String methodMatch,
-        String value) {
-        this.fieldName = Objects.requireNonNull(fieldName, "expected parameter 'fieldName' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.methodMatch = Objects.requireNonNull(methodMatch, "expected parameter 'methodMatch' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private InputMappingResponse() {}
 
-    private InputMappingResponse() {
-        this.fieldName = null;
-        this.location = null;
-        this.methodMatch = null;
-        this.value = null;
+    private InputMappingResponse(InputMappingResponse $) {
+        this.fieldName = $.fieldName;
+        this.location = $.location;
+        this.methodMatch = $.methodMatch;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputMappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fieldName;
-        private String location;
-        private String methodMatch;
-        private String value;
+        private InputMappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputMappingResponse();
         }
 
         public Builder(InputMappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldName = defaults.fieldName;
-    	      this.location = defaults.location;
-    	      this.methodMatch = defaults.methodMatch;
-    	      this.value = defaults.value;
+            $ = new InputMappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldName(String fieldName) {
-            this.fieldName = Objects.requireNonNull(fieldName);
+            $.fieldName = fieldName;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder methodMatch(String methodMatch) {
-            this.methodMatch = Objects.requireNonNull(methodMatch);
+            $.methodMatch = methodMatch;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public InputMappingResponse build() {
-            return new InputMappingResponse(fieldName, location, methodMatch, value);
+        }
+
+        public InputMappingResponse build() {
+            $.fieldName = Objects.requireNonNull($.fieldName, "expected parameter 'fieldName' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.methodMatch = Objects.requireNonNull($.methodMatch, "expected parameter 'methodMatch' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

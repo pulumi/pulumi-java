@@ -13,45 +13,45 @@ public final class CloudFrontOriginAccessIdentityConfig extends com.pulumi.resou
     public static final CloudFrontOriginAccessIdentityConfig Empty = new CloudFrontOriginAccessIdentityConfig();
 
     @Import(name="comment", required=true)
-      private final String comment;
+    private String comment;
 
     public String comment() {
         return this.comment;
     }
 
-    public CloudFrontOriginAccessIdentityConfig(String comment) {
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-    }
+    private CloudFrontOriginAccessIdentityConfig() {}
 
-    private CloudFrontOriginAccessIdentityConfig() {
-        this.comment = null;
+    private CloudFrontOriginAccessIdentityConfig(CloudFrontOriginAccessIdentityConfig $) {
+        this.comment = $.comment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFrontOriginAccessIdentityConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String comment;
+        private CloudFrontOriginAccessIdentityConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFrontOriginAccessIdentityConfig();
         }
 
         public Builder(CloudFrontOriginAccessIdentityConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
+            $ = new CloudFrontOriginAccessIdentityConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(String comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
-        }        public CloudFrontOriginAccessIdentityConfig build() {
-            return new CloudFrontOriginAccessIdentityConfig(comment);
+        }
+
+        public CloudFrontOriginAccessIdentityConfig build() {
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            return $;
         }
     }
+
 }

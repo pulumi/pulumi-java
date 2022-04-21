@@ -21,7 +21,7 @@ public final class OSPolicyResourceExecResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="enforce", required=true)
-      private final OSPolicyResourceExecResourceExecResponse enforce;
+    private OSPolicyResourceExecResourceExecResponse enforce;
 
     public OSPolicyResourceExecResourceExecResponse enforce() {
         return this.enforce;
@@ -32,55 +32,52 @@ public final class OSPolicyResourceExecResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="validate", required=true)
-      private final OSPolicyResourceExecResourceExecResponse validate;
+    private OSPolicyResourceExecResourceExecResponse validate;
 
     public OSPolicyResourceExecResourceExecResponse validate() {
         return this.validate;
     }
 
-    public OSPolicyResourceExecResourceResponse(
-        OSPolicyResourceExecResourceExecResponse enforce,
-        OSPolicyResourceExecResourceExecResponse validate) {
-        this.enforce = Objects.requireNonNull(enforce, "expected parameter 'enforce' to be non-null");
-        this.validate = Objects.requireNonNull(validate, "expected parameter 'validate' to be non-null");
-    }
+    private OSPolicyResourceExecResourceResponse() {}
 
-    private OSPolicyResourceExecResourceResponse() {
-        this.enforce = null;
-        this.validate = null;
+    private OSPolicyResourceExecResourceResponse(OSPolicyResourceExecResourceResponse $) {
+        this.enforce = $.enforce;
+        this.validate = $.validate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceExecResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private OSPolicyResourceExecResourceExecResponse enforce;
-        private OSPolicyResourceExecResourceExecResponse validate;
+        private OSPolicyResourceExecResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceExecResourceResponse();
         }
 
         public Builder(OSPolicyResourceExecResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enforce = defaults.enforce;
-    	      this.validate = defaults.validate;
+            $ = new OSPolicyResourceExecResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enforce(OSPolicyResourceExecResourceExecResponse enforce) {
-            this.enforce = Objects.requireNonNull(enforce);
+            $.enforce = enforce;
             return this;
         }
+
         public Builder validate(OSPolicyResourceExecResourceExecResponse validate) {
-            this.validate = Objects.requireNonNull(validate);
+            $.validate = validate;
             return this;
-        }        public OSPolicyResourceExecResourceResponse build() {
-            return new OSPolicyResourceExecResourceResponse(enforce, validate);
+        }
+
+        public OSPolicyResourceExecResourceResponse build() {
+            $.enforce = Objects.requireNonNull($.enforce, "expected parameter 'enforce' to be non-null");
+            $.validate = Objects.requireNonNull($.validate, "expected parameter 'validate' to be non-null");
+            return $;
         }
     }
+
 }

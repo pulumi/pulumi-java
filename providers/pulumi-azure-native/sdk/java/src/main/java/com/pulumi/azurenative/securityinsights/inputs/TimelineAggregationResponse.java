@@ -22,7 +22,7 @@ public final class TimelineAggregationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -33,55 +33,52 @@ public final class TimelineAggregationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public TimelineAggregationResponse(
-        Integer count,
-        String kind) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private TimelineAggregationResponse() {}
 
-    private TimelineAggregationResponse() {
-        this.count = null;
-        this.kind = null;
+    private TimelineAggregationResponse(TimelineAggregationResponse $) {
+        this.count = $.count;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimelineAggregationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private String kind;
+        private TimelineAggregationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimelineAggregationResponse();
         }
 
         public Builder(TimelineAggregationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.kind = defaults.kind;
+            $ = new TimelineAggregationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public TimelineAggregationResponse build() {
-            return new TimelineAggregationResponse(count, kind);
+        }
+
+        public TimelineAggregationResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

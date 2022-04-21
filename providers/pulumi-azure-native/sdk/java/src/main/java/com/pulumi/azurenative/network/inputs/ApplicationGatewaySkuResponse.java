@@ -24,10 +24,10 @@ public final class ApplicationGatewaySkuResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGatewaySkuResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class ApplicationGatewaySkuResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public ApplicationGatewaySkuResponse(
-        @Nullable Integer capacity,
-        @Nullable String name,
-        @Nullable String tier) {
-        this.capacity = capacity;
-        this.name = name;
-        this.tier = tier;
-    }
+    private ApplicationGatewaySkuResponse() {}
 
-    private ApplicationGatewaySkuResponse() {
-        this.capacity = null;
-        this.name = null;
-        this.tier = null;
+    private ApplicationGatewaySkuResponse(ApplicationGatewaySkuResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewaySkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
-        private @Nullable String name;
-        private @Nullable String tier;
+        private ApplicationGatewaySkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewaySkuResponse();
         }
 
         public Builder(ApplicationGatewaySkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new ApplicationGatewaySkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public ApplicationGatewaySkuResponse build() {
-            return new ApplicationGatewaySkuResponse(capacity, name, tier);
+        }
+
+        public ApplicationGatewaySkuResponse build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class DeadLetterWithResourceIdentityResponse extends com.pulumi.res
      * 
      */
     @Import(name="deadLetterDestination")
-      private final @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination;
+    private @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination;
 
     public Optional<StorageBlobDeadLetterDestinationResponse> deadLetterDestination() {
-        return this.deadLetterDestination == null ? Optional.empty() : Optional.ofNullable(this.deadLetterDestination);
+        return Optional.ofNullable(this.deadLetterDestination);
     }
 
     /**
@@ -36,55 +36,50 @@ public final class DeadLetterWithResourceIdentityResponse extends com.pulumi.res
      * 
      */
     @Import(name="identity")
-      private final @Nullable EventSubscriptionIdentityResponse identity;
+    private @Nullable EventSubscriptionIdentityResponse identity;
 
     public Optional<EventSubscriptionIdentityResponse> identity() {
-        return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
+        return Optional.ofNullable(this.identity);
     }
 
-    public DeadLetterWithResourceIdentityResponse(
-        @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination,
-        @Nullable EventSubscriptionIdentityResponse identity) {
-        this.deadLetterDestination = deadLetterDestination;
-        this.identity = identity;
-    }
+    private DeadLetterWithResourceIdentityResponse() {}
 
-    private DeadLetterWithResourceIdentityResponse() {
-        this.deadLetterDestination = null;
-        this.identity = null;
+    private DeadLetterWithResourceIdentityResponse(DeadLetterWithResourceIdentityResponse $) {
+        this.deadLetterDestination = $.deadLetterDestination;
+        this.identity = $.identity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeadLetterWithResourceIdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination;
-        private @Nullable EventSubscriptionIdentityResponse identity;
+        private DeadLetterWithResourceIdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeadLetterWithResourceIdentityResponse();
         }
 
         public Builder(DeadLetterWithResourceIdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deadLetterDestination = defaults.deadLetterDestination;
-    	      this.identity = defaults.identity;
+            $ = new DeadLetterWithResourceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination) {
-            this.deadLetterDestination = deadLetterDestination;
+            $.deadLetterDestination = deadLetterDestination;
             return this;
         }
+
         public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
-        }        public DeadLetterWithResourceIdentityResponse build() {
-            return new DeadLetterWithResourceIdentityResponse(deadLetterDestination, identity);
+        }
+
+        public DeadLetterWithResourceIdentityResponse build() {
+            return $;
         }
     }
+
 }

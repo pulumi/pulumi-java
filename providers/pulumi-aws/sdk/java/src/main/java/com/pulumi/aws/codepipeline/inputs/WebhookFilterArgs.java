@@ -5,7 +5,6 @@ package com.pulumi.aws.codepipeline.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class WebhookFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jsonPath", required=true)
-      private final Output<String> jsonPath;
+    private Output<String> jsonPath;
 
     public Output<String> jsonPath() {
         return this.jsonPath;
@@ -30,63 +29,60 @@ public final class WebhookFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchEquals", required=true)
-      private final Output<String> matchEquals;
+    private Output<String> matchEquals;
 
     public Output<String> matchEquals() {
         return this.matchEquals;
     }
 
-    public WebhookFilterArgs(
-        Output<String> jsonPath,
-        Output<String> matchEquals) {
-        this.jsonPath = Objects.requireNonNull(jsonPath, "expected parameter 'jsonPath' to be non-null");
-        this.matchEquals = Objects.requireNonNull(matchEquals, "expected parameter 'matchEquals' to be non-null");
-    }
+    private WebhookFilterArgs() {}
 
-    private WebhookFilterArgs() {
-        this.jsonPath = Codegen.empty();
-        this.matchEquals = Codegen.empty();
+    private WebhookFilterArgs(WebhookFilterArgs $) {
+        this.jsonPath = $.jsonPath;
+        this.matchEquals = $.matchEquals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> jsonPath;
-        private Output<String> matchEquals;
+        private WebhookFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookFilterArgs();
         }
 
         public Builder(WebhookFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonPath = defaults.jsonPath;
-    	      this.matchEquals = defaults.matchEquals;
+            $ = new WebhookFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonPath(Output<String> jsonPath) {
-            this.jsonPath = Objects.requireNonNull(jsonPath);
+            $.jsonPath = jsonPath;
             return this;
         }
+
         public Builder jsonPath(String jsonPath) {
-            this.jsonPath = Output.of(Objects.requireNonNull(jsonPath));
-            return this;
+            return jsonPath(Output.of(jsonPath));
         }
+
         public Builder matchEquals(Output<String> matchEquals) {
-            this.matchEquals = Objects.requireNonNull(matchEquals);
+            $.matchEquals = matchEquals;
             return this;
         }
+
         public Builder matchEquals(String matchEquals) {
-            this.matchEquals = Output.of(Objects.requireNonNull(matchEquals));
-            return this;
-        }        public WebhookFilterArgs build() {
-            return new WebhookFilterArgs(jsonPath, matchEquals);
+            return matchEquals(Output.of(matchEquals));
+        }
+
+        public WebhookFilterArgs build() {
+            $.jsonPath = Objects.requireNonNull($.jsonPath, "expected parameter 'jsonPath' to be non-null");
+            $.matchEquals = Objects.requireNonNull($.matchEquals, "expected parameter 'matchEquals' to be non-null");
+            return $;
         }
     }
+
 }

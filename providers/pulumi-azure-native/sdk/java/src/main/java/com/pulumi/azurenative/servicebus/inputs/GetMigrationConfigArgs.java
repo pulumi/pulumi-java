@@ -17,7 +17,7 @@ public final class GetMigrationConfigArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="configName", required=true)
-      private final String configName;
+    private String configName;
 
     public String configName() {
         return this.configName;
@@ -28,7 +28,7 @@ public final class GetMigrationConfigArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,64 +39,59 @@ public final class GetMigrationConfigArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMigrationConfigArgs(
-        String configName,
-        String namespaceName,
-        String resourceGroupName) {
-        this.configName = Objects.requireNonNull(configName, "expected parameter 'configName' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMigrationConfigArgs() {}
 
-    private GetMigrationConfigArgs() {
-        this.configName = null;
-        this.namespaceName = null;
-        this.resourceGroupName = null;
+    private GetMigrationConfigArgs(GetMigrationConfigArgs $) {
+        this.configName = $.configName;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMigrationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configName;
-        private String namespaceName;
-        private String resourceGroupName;
+        private GetMigrationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMigrationConfigArgs();
         }
 
         public Builder(GetMigrationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configName = defaults.configName;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMigrationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configName(String configName) {
-            this.configName = Objects.requireNonNull(configName);
+            $.configName = configName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMigrationConfigArgs build() {
-            return new GetMigrationConfigArgs(configName, namespaceName, resourceGroupName);
+        }
+
+        public GetMigrationConfigArgs build() {
+            $.configName = Objects.requireNonNull($.configName, "expected parameter 'configName' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

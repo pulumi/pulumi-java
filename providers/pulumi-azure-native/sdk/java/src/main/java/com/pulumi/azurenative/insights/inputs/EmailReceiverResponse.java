@@ -25,7 +25,7 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="emailAddress", required=true)
-      private final String emailAddress;
+    private String emailAddress;
 
     public String emailAddress() {
         return this.emailAddress;
@@ -36,7 +36,7 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -47,7 +47,7 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -58,73 +58,66 @@ public final class EmailReceiverResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="useCommonAlertSchema")
-      private final @Nullable Boolean useCommonAlertSchema;
+    private @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> useCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
+        return Optional.ofNullable(this.useCommonAlertSchema);
     }
 
-    public EmailReceiverResponse(
-        String emailAddress,
-        String name,
-        String status,
-        @Nullable Boolean useCommonAlertSchema) {
-        this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg(useCommonAlertSchema).def(false).getNullable();
-    }
+    private EmailReceiverResponse() {}
 
-    private EmailReceiverResponse() {
-        this.emailAddress = null;
-        this.name = null;
-        this.status = null;
-        this.useCommonAlertSchema = null;
+    private EmailReceiverResponse(EmailReceiverResponse $) {
+        this.emailAddress = $.emailAddress;
+        this.name = $.name;
+        this.status = $.status;
+        this.useCommonAlertSchema = $.useCommonAlertSchema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailReceiverResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String emailAddress;
-        private String name;
-        private String status;
-        private @Nullable Boolean useCommonAlertSchema;
+        private EmailReceiverResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailReceiverResponse();
         }
 
         public Builder(EmailReceiverResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.name = defaults.name;
-    	      this.status = defaults.status;
-    	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
+            $ = new EmailReceiverResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Objects.requireNonNull(emailAddress);
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = useCommonAlertSchema;
+            $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
-        }        public EmailReceiverResponse build() {
-            return new EmailReceiverResponse(emailAddress, name, status, useCommonAlertSchema);
+        }
+
+        public EmailReceiverResponse build() {
+            $.emailAddress = Objects.requireNonNull($.emailAddress, "expected parameter 'emailAddress' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg($.useCommonAlertSchema).def(false).getNullable();
+            return $;
         }
     }
+
 }

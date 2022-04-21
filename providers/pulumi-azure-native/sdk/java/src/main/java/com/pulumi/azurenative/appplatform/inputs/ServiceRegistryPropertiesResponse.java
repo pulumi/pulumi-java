@@ -24,7 +24,7 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="instances", required=true)
-      private final List<ServiceRegistryInstanceResponse> instances;
+    private List<ServiceRegistryInstanceResponse> instances;
 
     public List<ServiceRegistryInstanceResponse> instances() {
         return this.instances;
@@ -35,7 +35,7 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -46,67 +46,63 @@ public final class ServiceRegistryPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceRequests", required=true)
-      private final ServiceRegistryResourceRequestsResponse resourceRequests;
+    private ServiceRegistryResourceRequestsResponse resourceRequests;
 
     public ServiceRegistryResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
 
-    public ServiceRegistryPropertiesResponse(
-        List<ServiceRegistryInstanceResponse> instances,
-        String provisioningState,
-        ServiceRegistryResourceRequestsResponse resourceRequests) {
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceRequests = Objects.requireNonNull(resourceRequests, "expected parameter 'resourceRequests' to be non-null");
-    }
+    private ServiceRegistryPropertiesResponse() {}
 
-    private ServiceRegistryPropertiesResponse() {
-        this.instances = List.of();
-        this.provisioningState = null;
-        this.resourceRequests = null;
+    private ServiceRegistryPropertiesResponse(ServiceRegistryPropertiesResponse $) {
+        this.instances = $.instances;
+        this.provisioningState = $.provisioningState;
+        this.resourceRequests = $.resourceRequests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceRegistryPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ServiceRegistryInstanceResponse> instances;
-        private String provisioningState;
-        private ServiceRegistryResourceRequestsResponse resourceRequests;
+        private ServiceRegistryPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceRegistryPropertiesResponse();
         }
 
         public Builder(ServiceRegistryPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceRequests = defaults.resourceRequests;
+            $ = new ServiceRegistryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(List<ServiceRegistryInstanceResponse> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(ServiceRegistryInstanceResponse... instances) {
             return instances(List.of(instances));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceRequests(ServiceRegistryResourceRequestsResponse resourceRequests) {
-            this.resourceRequests = Objects.requireNonNull(resourceRequests);
+            $.resourceRequests = resourceRequests;
             return this;
-        }        public ServiceRegistryPropertiesResponse build() {
-            return new ServiceRegistryPropertiesResponse(instances, provisioningState, resourceRequests);
+        }
+
+        public ServiceRegistryPropertiesResponse build() {
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceRequests = Objects.requireNonNull($.resourceRequests, "expected parameter 'resourceRequests' to be non-null");
+            return $;
         }
     }
+
 }

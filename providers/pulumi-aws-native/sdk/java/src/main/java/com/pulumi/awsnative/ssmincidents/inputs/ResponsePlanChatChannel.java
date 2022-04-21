@@ -20,48 +20,48 @@ public final class ResponsePlanChatChannel extends com.pulumi.resources.InvokeAr
     public static final ResponsePlanChatChannel Empty = new ResponsePlanChatChannel();
 
     @Import(name="chatbotSns")
-      private final @Nullable List<String> chatbotSns;
+    private @Nullable List<String> chatbotSns;
 
-    public List<String> chatbotSns() {
-        return this.chatbotSns == null ? List.of() : this.chatbotSns;
+    public Optional<List<String>> chatbotSns() {
+        return Optional.ofNullable(this.chatbotSns);
     }
 
-    public ResponsePlanChatChannel(@Nullable List<String> chatbotSns) {
-        this.chatbotSns = chatbotSns;
-    }
+    private ResponsePlanChatChannel() {}
 
-    private ResponsePlanChatChannel() {
-        this.chatbotSns = List.of();
+    private ResponsePlanChatChannel(ResponsePlanChatChannel $) {
+        this.chatbotSns = $.chatbotSns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanChatChannel defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> chatbotSns;
+        private ResponsePlanChatChannel $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanChatChannel();
         }
 
         public Builder(ResponsePlanChatChannel defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chatbotSns = defaults.chatbotSns;
+            $ = new ResponsePlanChatChannel(Objects.requireNonNull(defaults));
         }
 
         public Builder chatbotSns(@Nullable List<String> chatbotSns) {
-            this.chatbotSns = chatbotSns;
+            $.chatbotSns = chatbotSns;
             return this;
         }
+
         public Builder chatbotSns(String... chatbotSns) {
             return chatbotSns(List.of(chatbotSns));
-        }        public ResponsePlanChatChannel build() {
-            return new ResponsePlanChatChannel(chatbotSns);
+        }
+
+        public ResponsePlanChatChannel build() {
+            return $;
         }
     }
+
 }

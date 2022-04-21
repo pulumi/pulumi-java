@@ -6,9 +6,9 @@ package com.pulumi.azurenative.notebooks;
 import com.pulumi.azurenative.notebooks.inputs.NotebookResourceSystemDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NotebookProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NotebookProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicDns")
-      private final @Nullable Output<String> publicDns;
+    private @Nullable Output<String> publicDns;
 
-    public Output<String> publicDns() {
-        return this.publicDns == null ? Codegen.empty() : this.publicDns;
+    public Optional<Output<String>> publicDns() {
+        return Optional.ofNullable(this.publicDns);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class NotebookProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<String> publicNetworkAccess;
+    private @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<String>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class NotebookProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class NotebookProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,10 +76,10 @@ public final class NotebookProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class NotebookProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondaryAppId")
-      private final @Nullable Output<String> secondaryAppId;
+    private @Nullable Output<String> secondaryAppId;
 
-    public Output<String> secondaryAppId() {
-        return this.secondaryAppId == null ? Codegen.empty() : this.secondaryAppId;
+    public Optional<Output<String>> secondaryAppId() {
+        return Optional.ofNullable(this.secondaryAppId);
     }
 
     /**
@@ -98,141 +98,119 @@ public final class NotebookProxyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="systemData")
-      private final @Nullable Output<NotebookResourceSystemDataArgs> systemData;
+    private @Nullable Output<NotebookResourceSystemDataArgs> systemData;
 
-    public Output<NotebookResourceSystemDataArgs> systemData() {
-        return this.systemData == null ? Codegen.empty() : this.systemData;
+    public Optional<Output<NotebookResourceSystemDataArgs>> systemData() {
+        return Optional.ofNullable(this.systemData);
     }
 
-    public NotebookProxyArgs(
-        @Nullable Output<String> hostname,
-        @Nullable Output<String> publicDns,
-        @Nullable Output<String> publicNetworkAccess,
-        @Nullable Output<String> region,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<String> secondaryAppId,
-        @Nullable Output<NotebookResourceSystemDataArgs> systemData) {
-        this.hostname = hostname;
-        this.publicDns = publicDns;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.region = region;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.secondaryAppId = secondaryAppId;
-        this.systemData = systemData;
-    }
+    private NotebookProxyArgs() {}
 
-    private NotebookProxyArgs() {
-        this.hostname = Codegen.empty();
-        this.publicDns = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.region = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.secondaryAppId = Codegen.empty();
-        this.systemData = Codegen.empty();
+    private NotebookProxyArgs(NotebookProxyArgs $) {
+        this.hostname = $.hostname;
+        this.publicDns = $.publicDns;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.region = $.region;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.secondaryAppId = $.secondaryAppId;
+        this.systemData = $.systemData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotebookProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<String> publicDns;
-        private @Nullable Output<String> publicNetworkAccess;
-        private @Nullable Output<String> region;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<String> secondaryAppId;
-        private @Nullable Output<NotebookResourceSystemDataArgs> systemData;
+        private NotebookProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotebookProxyArgs();
         }
 
         public Builder(NotebookProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
-    	      this.publicDns = defaults.publicDns;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.region = defaults.region;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.secondaryAppId = defaults.secondaryAppId;
-    	      this.systemData = defaults.systemData;
+            $ = new NotebookProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder publicDns(@Nullable Output<String> publicDns) {
-            this.publicDns = publicDns;
+            $.publicDns = publicDns;
             return this;
         }
-        public Builder publicDns(@Nullable String publicDns) {
-            this.publicDns = Codegen.ofNullable(publicDns);
-            return this;
+
+        public Builder publicDns(String publicDns) {
+            return publicDns(Output.of(publicDns));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder secondaryAppId(@Nullable Output<String> secondaryAppId) {
-            this.secondaryAppId = secondaryAppId;
+            $.secondaryAppId = secondaryAppId;
             return this;
         }
-        public Builder secondaryAppId(@Nullable String secondaryAppId) {
-            this.secondaryAppId = Codegen.ofNullable(secondaryAppId);
-            return this;
+
+        public Builder secondaryAppId(String secondaryAppId) {
+            return secondaryAppId(Output.of(secondaryAppId));
         }
+
         public Builder systemData(@Nullable Output<NotebookResourceSystemDataArgs> systemData) {
-            this.systemData = systemData;
+            $.systemData = systemData;
             return this;
         }
-        public Builder systemData(@Nullable NotebookResourceSystemDataArgs systemData) {
-            this.systemData = Codegen.ofNullable(systemData);
-            return this;
-        }        public NotebookProxyArgs build() {
-            return new NotebookProxyArgs(hostname, publicDns, publicNetworkAccess, region, resourceGroupName, resourceName, secondaryAppId, systemData);
+
+        public Builder systemData(NotebookResourceSystemDataArgs systemData) {
+            return systemData(Output.of(systemData));
+        }
+
+        public NotebookProxyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

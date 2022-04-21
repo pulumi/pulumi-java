@@ -6,9 +6,9 @@ package com.pulumi.aws.quicksight.inputs;
 import com.pulumi.aws.quicksight.inputs.DataSourceCredentialsCredentialPairArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DataSourceCredentialsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="copySourceArn")
-      private final @Nullable Output<String> copySourceArn;
+    private @Nullable Output<String> copySourceArn;
 
-    public Output<String> copySourceArn() {
-        return this.copySourceArn == null ? Codegen.empty() : this.copySourceArn;
+    public Optional<Output<String>> copySourceArn() {
+        return Optional.ofNullable(this.copySourceArn);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class DataSourceCredentialsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="credentialPair")
-      private final @Nullable Output<DataSourceCredentialsCredentialPairArgs> credentialPair;
+    private @Nullable Output<DataSourceCredentialsCredentialPairArgs> credentialPair;
 
-    public Output<DataSourceCredentialsCredentialPairArgs> credentialPair() {
-        return this.credentialPair == null ? Codegen.empty() : this.credentialPair;
+    public Optional<Output<DataSourceCredentialsCredentialPairArgs>> credentialPair() {
+        return Optional.ofNullable(this.credentialPair);
     }
 
-    public DataSourceCredentialsArgs(
-        @Nullable Output<String> copySourceArn,
-        @Nullable Output<DataSourceCredentialsCredentialPairArgs> credentialPair) {
-        this.copySourceArn = copySourceArn;
-        this.credentialPair = credentialPair;
-    }
+    private DataSourceCredentialsArgs() {}
 
-    private DataSourceCredentialsArgs() {
-        this.copySourceArn = Codegen.empty();
-        this.credentialPair = Codegen.empty();
+    private DataSourceCredentialsArgs(DataSourceCredentialsArgs $) {
+        this.copySourceArn = $.copySourceArn;
+        this.credentialPair = $.credentialPair;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> copySourceArn;
-        private @Nullable Output<DataSourceCredentialsCredentialPairArgs> credentialPair;
+        private DataSourceCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceCredentialsArgs();
         }
 
         public Builder(DataSourceCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copySourceArn = defaults.copySourceArn;
-    	      this.credentialPair = defaults.credentialPair;
+            $ = new DataSourceCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder copySourceArn(@Nullable Output<String> copySourceArn) {
-            this.copySourceArn = copySourceArn;
+            $.copySourceArn = copySourceArn;
             return this;
         }
-        public Builder copySourceArn(@Nullable String copySourceArn) {
-            this.copySourceArn = Codegen.ofNullable(copySourceArn);
-            return this;
+
+        public Builder copySourceArn(String copySourceArn) {
+            return copySourceArn(Output.of(copySourceArn));
         }
+
         public Builder credentialPair(@Nullable Output<DataSourceCredentialsCredentialPairArgs> credentialPair) {
-            this.credentialPair = credentialPair;
+            $.credentialPair = credentialPair;
             return this;
         }
-        public Builder credentialPair(@Nullable DataSourceCredentialsCredentialPairArgs credentialPair) {
-            this.credentialPair = Codegen.ofNullable(credentialPair);
-            return this;
-        }        public DataSourceCredentialsArgs build() {
-            return new DataSourceCredentialsArgs(copySourceArn, credentialPair);
+
+        public Builder credentialPair(DataSourceCredentialsCredentialPairArgs credentialPair) {
+            return credentialPair(Output.of(credentialPair));
+        }
+
+        public DataSourceCredentialsArgs build() {
+            return $;
         }
     }
+
 }

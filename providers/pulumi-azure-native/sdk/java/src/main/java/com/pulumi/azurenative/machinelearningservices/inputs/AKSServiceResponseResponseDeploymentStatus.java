@@ -24,10 +24,10 @@ public final class AKSServiceResponseResponseDeploymentStatus extends com.pulumi
      * 
      */
     @Import(name="availableReplicas")
-      private final @Nullable Integer availableReplicas;
+    private @Nullable Integer availableReplicas;
 
     public Optional<Integer> availableReplicas() {
-        return this.availableReplicas == null ? Optional.empty() : Optional.ofNullable(this.availableReplicas);
+        return Optional.ofNullable(this.availableReplicas);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AKSServiceResponseResponseDeploymentStatus extends com.pulumi
      * 
      */
     @Import(name="desiredReplicas")
-      private final @Nullable Integer desiredReplicas;
+    private @Nullable Integer desiredReplicas;
 
     public Optional<Integer> desiredReplicas() {
-        return this.desiredReplicas == null ? Optional.empty() : Optional.ofNullable(this.desiredReplicas);
+        return Optional.ofNullable(this.desiredReplicas);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AKSServiceResponseResponseDeploymentStatus extends com.pulumi
      * 
      */
     @Import(name="error")
-      private final @Nullable AKSReplicaStatusResponseError error;
+    private @Nullable AKSReplicaStatusResponseError error;
 
     public Optional<AKSReplicaStatusResponseError> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class AKSServiceResponseResponseDeploymentStatus extends com.pulumi
      * 
      */
     @Import(name="updatedReplicas")
-      private final @Nullable Integer updatedReplicas;
+    private @Nullable Integer updatedReplicas;
 
     public Optional<Integer> updatedReplicas() {
-        return this.updatedReplicas == null ? Optional.empty() : Optional.ofNullable(this.updatedReplicas);
+        return Optional.ofNullable(this.updatedReplicas);
     }
 
-    public AKSServiceResponseResponseDeploymentStatus(
-        @Nullable Integer availableReplicas,
-        @Nullable Integer desiredReplicas,
-        @Nullable AKSReplicaStatusResponseError error,
-        @Nullable Integer updatedReplicas) {
-        this.availableReplicas = availableReplicas;
-        this.desiredReplicas = desiredReplicas;
-        this.error = error;
-        this.updatedReplicas = updatedReplicas;
-    }
+    private AKSServiceResponseResponseDeploymentStatus() {}
 
-    private AKSServiceResponseResponseDeploymentStatus() {
-        this.availableReplicas = null;
-        this.desiredReplicas = null;
-        this.error = null;
-        this.updatedReplicas = null;
+    private AKSServiceResponseResponseDeploymentStatus(AKSServiceResponseResponseDeploymentStatus $) {
+        this.availableReplicas = $.availableReplicas;
+        this.desiredReplicas = $.desiredReplicas;
+        this.error = $.error;
+        this.updatedReplicas = $.updatedReplicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSServiceResponseResponseDeploymentStatus defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer availableReplicas;
-        private @Nullable Integer desiredReplicas;
-        private @Nullable AKSReplicaStatusResponseError error;
-        private @Nullable Integer updatedReplicas;
+        private AKSServiceResponseResponseDeploymentStatus $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSServiceResponseResponseDeploymentStatus();
         }
 
         public Builder(AKSServiceResponseResponseDeploymentStatus defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availableReplicas = defaults.availableReplicas;
-    	      this.desiredReplicas = defaults.desiredReplicas;
-    	      this.error = defaults.error;
-    	      this.updatedReplicas = defaults.updatedReplicas;
+            $ = new AKSServiceResponseResponseDeploymentStatus(Objects.requireNonNull(defaults));
         }
 
         public Builder availableReplicas(@Nullable Integer availableReplicas) {
-            this.availableReplicas = availableReplicas;
+            $.availableReplicas = availableReplicas;
             return this;
         }
+
         public Builder desiredReplicas(@Nullable Integer desiredReplicas) {
-            this.desiredReplicas = desiredReplicas;
+            $.desiredReplicas = desiredReplicas;
             return this;
         }
+
         public Builder error(@Nullable AKSReplicaStatusResponseError error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
-            this.updatedReplicas = updatedReplicas;
+            $.updatedReplicas = updatedReplicas;
             return this;
-        }        public AKSServiceResponseResponseDeploymentStatus build() {
-            return new AKSServiceResponseResponseDeploymentStatus(availableReplicas, desiredReplicas, error, updatedReplicas);
+        }
+
+        public AKSServiceResponseResponseDeploymentStatus build() {
+            return $;
         }
     }
+
 }

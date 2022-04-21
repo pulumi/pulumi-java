@@ -5,10 +5,10 @@ package com.pulumi.aws.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionGetArgs exte
      * 
      */
     @Import(name="days")
-      private final @Nullable Output<Integer> days;
+    private @Nullable Output<Integer> days;
 
-    public Output<Integer> days() {
-        return this.days == null ? Codegen.empty() : this.days;
+    public Optional<Output<Integer>> days() {
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionGetArgs exte
      * 
      */
     @Import(name="mode", required=true)
-      private final Output<String> mode;
+    private Output<String> mode;
 
     public Output<String> mode() {
         return this.mode;
@@ -43,76 +43,69 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionGetArgs exte
      * 
      */
     @Import(name="years")
-      private final @Nullable Output<Integer> years;
+    private @Nullable Output<Integer> years;
 
-    public Output<Integer> years() {
-        return this.years == null ? Codegen.empty() : this.years;
+    public Optional<Output<Integer>> years() {
+        return Optional.ofNullable(this.years);
     }
 
-    public BucketObjectLockConfigurationRuleDefaultRetentionGetArgs(
-        @Nullable Output<Integer> days,
-        Output<String> mode,
-        @Nullable Output<Integer> years) {
-        this.days = days;
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.years = years;
-    }
+    private BucketObjectLockConfigurationRuleDefaultRetentionGetArgs() {}
 
-    private BucketObjectLockConfigurationRuleDefaultRetentionGetArgs() {
-        this.days = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.years = Codegen.empty();
+    private BucketObjectLockConfigurationRuleDefaultRetentionGetArgs(BucketObjectLockConfigurationRuleDefaultRetentionGetArgs $) {
+        this.days = $.days;
+        this.mode = $.mode;
+        this.years = $.years;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectLockConfigurationRuleDefaultRetentionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> days;
-        private Output<String> mode;
-        private @Nullable Output<Integer> years;
+        private BucketObjectLockConfigurationRuleDefaultRetentionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectLockConfigurationRuleDefaultRetentionGetArgs();
         }
 
         public Builder(BucketObjectLockConfigurationRuleDefaultRetentionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.mode = defaults.mode;
-    	      this.years = defaults.years;
+            $ = new BucketObjectLockConfigurationRuleDefaultRetentionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Output<Integer> days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
-        public Builder days(@Nullable Integer days) {
-            this.days = Codegen.ofNullable(days);
-            return this;
+
+        public Builder days(Integer days) {
+            return days(Output.of(days));
         }
+
         public Builder mode(Output<String> mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Output.of(Objects.requireNonNull(mode));
-            return this;
+            return mode(Output.of(mode));
         }
+
         public Builder years(@Nullable Output<Integer> years) {
-            this.years = years;
+            $.years = years;
             return this;
         }
-        public Builder years(@Nullable Integer years) {
-            this.years = Codegen.ofNullable(years);
-            return this;
-        }        public BucketObjectLockConfigurationRuleDefaultRetentionGetArgs build() {
-            return new BucketObjectLockConfigurationRuleDefaultRetentionGetArgs(days, mode, years);
+
+        public Builder years(Integer years) {
+            return years(Output.of(years));
+        }
+
+        public BucketObjectLockConfigurationRuleDefaultRetentionGetArgs build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

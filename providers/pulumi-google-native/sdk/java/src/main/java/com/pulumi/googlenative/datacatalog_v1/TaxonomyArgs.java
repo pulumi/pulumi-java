@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datacatalog_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datacatalog_v1.enums.TaxonomyActivatedPolicyTypesItem;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TaxonomyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activatedPolicyTypes")
-      private final @Nullable Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes;
+    private @Nullable Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes;
 
-    public Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes() {
-        return this.activatedPolicyTypes == null ? Codegen.empty() : this.activatedPolicyTypes;
+    public Optional<Output<List<TaxonomyActivatedPolicyTypesItem>>> activatedPolicyTypes() {
+        return Optional.ofNullable(this.activatedPolicyTypes);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class TaxonomyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,119 +44,107 @@ public final class TaxonomyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public TaxonomyArgs(
-        @Nullable Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project) {
-        this.activatedPolicyTypes = activatedPolicyTypes;
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.location = location;
-        this.project = project;
-    }
+    private TaxonomyArgs() {}
 
-    private TaxonomyArgs() {
-        this.activatedPolicyTypes = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
+    private TaxonomyArgs(TaxonomyArgs $) {
+        this.activatedPolicyTypes = $.activatedPolicyTypes;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaxonomyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
+        private TaxonomyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaxonomyArgs();
         }
 
         public Builder(TaxonomyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activatedPolicyTypes = defaults.activatedPolicyTypes;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new TaxonomyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activatedPolicyTypes(@Nullable Output<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes) {
-            this.activatedPolicyTypes = activatedPolicyTypes;
+            $.activatedPolicyTypes = activatedPolicyTypes;
             return this;
         }
-        public Builder activatedPolicyTypes(@Nullable List<TaxonomyActivatedPolicyTypesItem> activatedPolicyTypes) {
-            this.activatedPolicyTypes = Codegen.ofNullable(activatedPolicyTypes);
-            return this;
+
+        public Builder activatedPolicyTypes(List<TaxonomyActivatedPolicyTypesItem> activatedPolicyTypes) {
+            return activatedPolicyTypes(Output.of(activatedPolicyTypes));
         }
+
         public Builder activatedPolicyTypes(TaxonomyActivatedPolicyTypesItem... activatedPolicyTypes) {
             return activatedPolicyTypes(List.of(activatedPolicyTypes));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public TaxonomyArgs build() {
-            return new TaxonomyArgs(activatedPolicyTypes, description, displayName, location, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public TaxonomyArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

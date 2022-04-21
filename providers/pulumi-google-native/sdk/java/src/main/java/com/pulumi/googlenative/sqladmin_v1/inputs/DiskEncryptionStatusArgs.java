@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DiskEncryptionStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DiskEncryptionStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="kmsKeyVersionName")
-      private final @Nullable Output<String> kmsKeyVersionName;
+    private @Nullable Output<String> kmsKeyVersionName;
 
-    public Output<String> kmsKeyVersionName() {
-        return this.kmsKeyVersionName == null ? Codegen.empty() : this.kmsKeyVersionName;
+    public Optional<Output<String>> kmsKeyVersionName() {
+        return Optional.ofNullable(this.kmsKeyVersionName);
     }
 
-    public DiskEncryptionStatusArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<String> kmsKeyVersionName) {
-        this.kind = kind;
-        this.kmsKeyVersionName = kmsKeyVersionName;
-    }
+    private DiskEncryptionStatusArgs() {}
 
-    private DiskEncryptionStatusArgs() {
-        this.kind = Codegen.empty();
-        this.kmsKeyVersionName = Codegen.empty();
+    private DiskEncryptionStatusArgs(DiskEncryptionStatusArgs $) {
+        this.kind = $.kind;
+        this.kmsKeyVersionName = $.kmsKeyVersionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskEncryptionStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> kmsKeyVersionName;
+        private DiskEncryptionStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskEncryptionStatusArgs();
         }
 
         public Builder(DiskEncryptionStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.kmsKeyVersionName = defaults.kmsKeyVersionName;
+            $ = new DiskEncryptionStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder kmsKeyVersionName(@Nullable Output<String> kmsKeyVersionName) {
-            this.kmsKeyVersionName = kmsKeyVersionName;
+            $.kmsKeyVersionName = kmsKeyVersionName;
             return this;
         }
-        public Builder kmsKeyVersionName(@Nullable String kmsKeyVersionName) {
-            this.kmsKeyVersionName = Codegen.ofNullable(kmsKeyVersionName);
-            return this;
-        }        public DiskEncryptionStatusArgs build() {
-            return new DiskEncryptionStatusArgs(kind, kmsKeyVersionName);
+
+        public Builder kmsKeyVersionName(String kmsKeyVersionName) {
+            return kmsKeyVersionName(Output.of(kmsKeyVersionName));
+        }
+
+        public DiskEncryptionStatusArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ServicePrincipalProfileResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ServicePrincipalProfileResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable String clientSecret;
+    private @Nullable String clientSecret;
 
     public Optional<String> clientSecret() {
-        return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
+        return Optional.ofNullable(this.clientSecret);
     }
 
-    public ServicePrincipalProfileResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret) {
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-    }
+    private ServicePrincipalProfileResponse() {}
 
-    private ServicePrincipalProfileResponse() {
-        this.clientId = null;
-        this.clientSecret = null;
+    private ServicePrincipalProfileResponse(ServicePrincipalProfileResponse $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientId;
-        private @Nullable String clientSecret;
+        private ServicePrincipalProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalProfileResponse();
         }
 
         public Builder(ServicePrincipalProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
+            $ = new ServicePrincipalProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
-        }        public ServicePrincipalProfileResponse build() {
-            return new ServicePrincipalProfileResponse(clientId, clientSecret);
+        }
+
+        public ServicePrincipalProfileResponse build() {
+            return $;
         }
     }
+
 }

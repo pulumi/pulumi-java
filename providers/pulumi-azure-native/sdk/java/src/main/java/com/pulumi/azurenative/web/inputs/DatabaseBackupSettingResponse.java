@@ -23,10 +23,10 @@ public final class DatabaseBackupSettingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable String connectionString;
+    private @Nullable String connectionString;
 
     public Optional<String> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DatabaseBackupSettingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionStringName")
-      private final @Nullable String connectionStringName;
+    private @Nullable String connectionStringName;
 
     public Optional<String> connectionStringName() {
-        return this.connectionStringName == null ? Optional.empty() : Optional.ofNullable(this.connectionStringName);
+        return Optional.ofNullable(this.connectionStringName);
     }
 
     /**
@@ -46,80 +46,70 @@ public final class DatabaseBackupSettingResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="databaseType", required=true)
-      private final String databaseType;
+    private String databaseType;
 
     public String databaseType() {
         return this.databaseType;
     }
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public DatabaseBackupSettingResponse(
-        @Nullable String connectionString,
-        @Nullable String connectionStringName,
-        String databaseType,
-        @Nullable String name) {
-        this.connectionString = connectionString;
-        this.connectionStringName = connectionStringName;
-        this.databaseType = Objects.requireNonNull(databaseType, "expected parameter 'databaseType' to be non-null");
-        this.name = name;
-    }
+    private DatabaseBackupSettingResponse() {}
 
-    private DatabaseBackupSettingResponse() {
-        this.connectionString = null;
-        this.connectionStringName = null;
-        this.databaseType = null;
-        this.name = null;
+    private DatabaseBackupSettingResponse(DatabaseBackupSettingResponse $) {
+        this.connectionString = $.connectionString;
+        this.connectionStringName = $.connectionStringName;
+        this.databaseType = $.databaseType;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseBackupSettingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String connectionString;
-        private @Nullable String connectionStringName;
-        private String databaseType;
-        private @Nullable String name;
+        private DatabaseBackupSettingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseBackupSettingResponse();
         }
 
         public Builder(DatabaseBackupSettingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionString = defaults.connectionString;
-    	      this.connectionStringName = defaults.connectionStringName;
-    	      this.databaseType = defaults.databaseType;
-    	      this.name = defaults.name;
+            $ = new DatabaseBackupSettingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder connectionStringName(@Nullable String connectionStringName) {
-            this.connectionStringName = connectionStringName;
+            $.connectionStringName = connectionStringName;
             return this;
         }
+
         public Builder databaseType(String databaseType) {
-            this.databaseType = Objects.requireNonNull(databaseType);
+            $.databaseType = databaseType;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public DatabaseBackupSettingResponse build() {
-            return new DatabaseBackupSettingResponse(connectionString, connectionStringName, databaseType, name);
+        }
+
+        public DatabaseBackupSettingResponse build() {
+            $.databaseType = Objects.requireNonNull($.databaseType, "expected parameter 'databaseType' to be non-null");
+            return $;
         }
     }
+
 }

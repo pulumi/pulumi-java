@@ -5,9 +5,9 @@ package com.pulumi.aws.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class DelegationSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="referenceName")
-      private final @Nullable Output<String> referenceName;
+    private @Nullable Output<String> referenceName;
 
-    public Output<String> referenceName() {
-        return this.referenceName == null ? Codegen.empty() : this.referenceName;
+    public Optional<Output<String>> referenceName() {
+        return Optional.ofNullable(this.referenceName);
     }
 
-    public DelegationSetArgs(@Nullable Output<String> referenceName) {
-        this.referenceName = referenceName;
-    }
+    private DelegationSetArgs() {}
 
-    private DelegationSetArgs() {
-        this.referenceName = Codegen.empty();
+    private DelegationSetArgs(DelegationSetArgs $) {
+        this.referenceName = $.referenceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelegationSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> referenceName;
+        private DelegationSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelegationSetArgs();
         }
 
         public Builder(DelegationSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.referenceName = defaults.referenceName;
+            $ = new DelegationSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder referenceName(@Nullable Output<String> referenceName) {
-            this.referenceName = referenceName;
+            $.referenceName = referenceName;
             return this;
         }
-        public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Codegen.ofNullable(referenceName);
-            return this;
-        }        public DelegationSetArgs build() {
-            return new DelegationSetArgs(referenceName);
+
+        public Builder referenceName(String referenceName) {
+            return referenceName(Output.of(referenceName));
+        }
+
+        public DelegationSetArgs build() {
+            return $;
         }
     }
+
 }

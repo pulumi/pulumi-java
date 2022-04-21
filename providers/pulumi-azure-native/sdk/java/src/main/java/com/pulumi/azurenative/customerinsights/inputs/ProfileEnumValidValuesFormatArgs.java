@@ -5,11 +5,11 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ProfileEnumValidValuesFormatArgs extends com.pulumi.resources
      * 
      */
     @Import(name="localizedValueNames")
-      private final @Nullable Output<Map<String,String>> localizedValueNames;
+    private @Nullable Output<Map<String,String>> localizedValueNames;
 
-    public Output<Map<String,String>> localizedValueNames() {
-        return this.localizedValueNames == null ? Codegen.empty() : this.localizedValueNames;
+    public Optional<Output<Map<String,String>>> localizedValueNames() {
+        return Optional.ofNullable(this.localizedValueNames);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class ProfileEnumValidValuesFormatArgs extends com.pulumi.resources
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Integer> value;
+    private @Nullable Output<Integer> value;
 
-    public Output<Integer> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Integer>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ProfileEnumValidValuesFormatArgs(
-        @Nullable Output<Map<String,String>> localizedValueNames,
-        @Nullable Output<Integer> value) {
-        this.localizedValueNames = localizedValueNames;
-        this.value = value;
-    }
+    private ProfileEnumValidValuesFormatArgs() {}
 
-    private ProfileEnumValidValuesFormatArgs() {
-        this.localizedValueNames = Codegen.empty();
-        this.value = Codegen.empty();
+    private ProfileEnumValidValuesFormatArgs(ProfileEnumValidValuesFormatArgs $) {
+        this.localizedValueNames = $.localizedValueNames;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProfileEnumValidValuesFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> localizedValueNames;
-        private @Nullable Output<Integer> value;
+        private ProfileEnumValidValuesFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProfileEnumValidValuesFormatArgs();
         }
 
         public Builder(ProfileEnumValidValuesFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localizedValueNames = defaults.localizedValueNames;
-    	      this.value = defaults.value;
+            $ = new ProfileEnumValidValuesFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder localizedValueNames(@Nullable Output<Map<String,String>> localizedValueNames) {
-            this.localizedValueNames = localizedValueNames;
+            $.localizedValueNames = localizedValueNames;
             return this;
         }
-        public Builder localizedValueNames(@Nullable Map<String,String> localizedValueNames) {
-            this.localizedValueNames = Codegen.ofNullable(localizedValueNames);
-            return this;
+
+        public Builder localizedValueNames(Map<String,String> localizedValueNames) {
+            return localizedValueNames(Output.of(localizedValueNames));
         }
+
         public Builder value(@Nullable Output<Integer> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Integer value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ProfileEnumValidValuesFormatArgs build() {
-            return new ProfileEnumValidValuesFormatArgs(localizedValueNames, value);
+
+        public Builder value(Integer value) {
+            return value(Output.of(value));
+        }
+
+        public ProfileEnumValidValuesFormatArgs build() {
+            return $;
         }
     }
+
 }

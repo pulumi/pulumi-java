@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.enums.JobTemplateJobRetryFailureType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class JobTemplateRetryCriteriaArgs extends com.pulumi.resources.Res
     public static final JobTemplateRetryCriteriaArgs Empty = new JobTemplateRetryCriteriaArgs();
 
     @Import(name="failureType")
-      private final @Nullable Output<JobTemplateJobRetryFailureType> failureType;
+    private @Nullable Output<JobTemplateJobRetryFailureType> failureType;
 
-    public Output<JobTemplateJobRetryFailureType> failureType() {
-        return this.failureType == null ? Codegen.empty() : this.failureType;
+    public Optional<Output<JobTemplateJobRetryFailureType>> failureType() {
+        return Optional.ofNullable(this.failureType);
     }
 
     @Import(name="numberOfRetries")
-      private final @Nullable Output<Integer> numberOfRetries;
+    private @Nullable Output<Integer> numberOfRetries;
 
-    public Output<Integer> numberOfRetries() {
-        return this.numberOfRetries == null ? Codegen.empty() : this.numberOfRetries;
+    public Optional<Output<Integer>> numberOfRetries() {
+        return Optional.ofNullable(this.numberOfRetries);
     }
 
-    public JobTemplateRetryCriteriaArgs(
-        @Nullable Output<JobTemplateJobRetryFailureType> failureType,
-        @Nullable Output<Integer> numberOfRetries) {
-        this.failureType = failureType;
-        this.numberOfRetries = numberOfRetries;
-    }
+    private JobTemplateRetryCriteriaArgs() {}
 
-    private JobTemplateRetryCriteriaArgs() {
-        this.failureType = Codegen.empty();
-        this.numberOfRetries = Codegen.empty();
+    private JobTemplateRetryCriteriaArgs(JobTemplateRetryCriteriaArgs $) {
+        this.failureType = $.failureType;
+        this.numberOfRetries = $.numberOfRetries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobTemplateRetryCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobTemplateJobRetryFailureType> failureType;
-        private @Nullable Output<Integer> numberOfRetries;
+        private JobTemplateRetryCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobTemplateRetryCriteriaArgs();
         }
 
         public Builder(JobTemplateRetryCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureType = defaults.failureType;
-    	      this.numberOfRetries = defaults.numberOfRetries;
+            $ = new JobTemplateRetryCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failureType(@Nullable Output<JobTemplateJobRetryFailureType> failureType) {
-            this.failureType = failureType;
+            $.failureType = failureType;
             return this;
         }
-        public Builder failureType(@Nullable JobTemplateJobRetryFailureType failureType) {
-            this.failureType = Codegen.ofNullable(failureType);
-            return this;
+
+        public Builder failureType(JobTemplateJobRetryFailureType failureType) {
+            return failureType(Output.of(failureType));
         }
+
         public Builder numberOfRetries(@Nullable Output<Integer> numberOfRetries) {
-            this.numberOfRetries = numberOfRetries;
+            $.numberOfRetries = numberOfRetries;
             return this;
         }
-        public Builder numberOfRetries(@Nullable Integer numberOfRetries) {
-            this.numberOfRetries = Codegen.ofNullable(numberOfRetries);
-            return this;
-        }        public JobTemplateRetryCriteriaArgs build() {
-            return new JobTemplateRetryCriteriaArgs(failureType, numberOfRetries);
+
+        public Builder numberOfRetries(Integer numberOfRetries) {
+            return numberOfRetries(Output.of(numberOfRetries));
+        }
+
+        public JobTemplateRetryCriteriaArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs.ServiceReferenceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="caBundle")
-      private final @Nullable Output<String> caBundle;
+    private @Nullable Output<String> caBundle;
 
-    public Output<String> caBundle() {
-        return this.caBundle == null ? Codegen.empty() : this.caBundle;
+    public Optional<Output<String>> caBundle() {
+        return Optional.ofNullable(this.caBundle);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="group")
-      private final @Nullable Output<String> group;
+    private @Nullable Output<String> group;
 
-    public Output<String> group() {
-        return this.group == null ? Codegen.empty() : this.group;
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="groupPriorityMinimum", required=true)
-      private final Output<Integer> groupPriorityMinimum;
+    private Output<Integer> groupPriorityMinimum;
 
     public Output<Integer> groupPriorityMinimum() {
         return this.groupPriorityMinimum;
@@ -60,10 +60,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="insecureSkipTLSVerify")
-      private final @Nullable Output<Boolean> insecureSkipTLSVerify;
+    private @Nullable Output<Boolean> insecureSkipTLSVerify;
 
-    public Output<Boolean> insecureSkipTLSVerify() {
-        return this.insecureSkipTLSVerify == null ? Codegen.empty() : this.insecureSkipTLSVerify;
+    public Optional<Output<Boolean>> insecureSkipTLSVerify() {
+        return Optional.ofNullable(this.insecureSkipTLSVerify);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="service", required=true)
-      private final Output<ServiceReferenceArgs> service;
+    private Output<ServiceReferenceArgs> service;
 
     public Output<ServiceReferenceArgs> service() {
         return this.service;
@@ -82,10 +82,10 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -93,128 +93,111 @@ public final class APIServiceSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="versionPriority", required=true)
-      private final Output<Integer> versionPriority;
+    private Output<Integer> versionPriority;
 
     public Output<Integer> versionPriority() {
         return this.versionPriority;
     }
 
-    public APIServiceSpecArgs(
-        @Nullable Output<String> caBundle,
-        @Nullable Output<String> group,
-        Output<Integer> groupPriorityMinimum,
-        @Nullable Output<Boolean> insecureSkipTLSVerify,
-        Output<ServiceReferenceArgs> service,
-        @Nullable Output<String> version,
-        Output<Integer> versionPriority) {
-        this.caBundle = caBundle;
-        this.group = group;
-        this.groupPriorityMinimum = Objects.requireNonNull(groupPriorityMinimum, "expected parameter 'groupPriorityMinimum' to be non-null");
-        this.insecureSkipTLSVerify = insecureSkipTLSVerify;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.version = version;
-        this.versionPriority = Objects.requireNonNull(versionPriority, "expected parameter 'versionPriority' to be non-null");
-    }
+    private APIServiceSpecArgs() {}
 
-    private APIServiceSpecArgs() {
-        this.caBundle = Codegen.empty();
-        this.group = Codegen.empty();
-        this.groupPriorityMinimum = Codegen.empty();
-        this.insecureSkipTLSVerify = Codegen.empty();
-        this.service = Codegen.empty();
-        this.version = Codegen.empty();
-        this.versionPriority = Codegen.empty();
+    private APIServiceSpecArgs(APIServiceSpecArgs $) {
+        this.caBundle = $.caBundle;
+        this.group = $.group;
+        this.groupPriorityMinimum = $.groupPriorityMinimum;
+        this.insecureSkipTLSVerify = $.insecureSkipTLSVerify;
+        this.service = $.service;
+        this.version = $.version;
+        this.versionPriority = $.versionPriority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(APIServiceSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> caBundle;
-        private @Nullable Output<String> group;
-        private Output<Integer> groupPriorityMinimum;
-        private @Nullable Output<Boolean> insecureSkipTLSVerify;
-        private Output<ServiceReferenceArgs> service;
-        private @Nullable Output<String> version;
-        private Output<Integer> versionPriority;
+        private APIServiceSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new APIServiceSpecArgs();
         }
 
         public Builder(APIServiceSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caBundle = defaults.caBundle;
-    	      this.group = defaults.group;
-    	      this.groupPriorityMinimum = defaults.groupPriorityMinimum;
-    	      this.insecureSkipTLSVerify = defaults.insecureSkipTLSVerify;
-    	      this.service = defaults.service;
-    	      this.version = defaults.version;
-    	      this.versionPriority = defaults.versionPriority;
+            $ = new APIServiceSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caBundle(@Nullable Output<String> caBundle) {
-            this.caBundle = caBundle;
+            $.caBundle = caBundle;
             return this;
         }
-        public Builder caBundle(@Nullable String caBundle) {
-            this.caBundle = Codegen.ofNullable(caBundle);
-            return this;
+
+        public Builder caBundle(String caBundle) {
+            return caBundle(Output.of(caBundle));
         }
+
         public Builder group(@Nullable Output<String> group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
-        public Builder group(@Nullable String group) {
-            this.group = Codegen.ofNullable(group);
-            return this;
+
+        public Builder group(String group) {
+            return group(Output.of(group));
         }
+
         public Builder groupPriorityMinimum(Output<Integer> groupPriorityMinimum) {
-            this.groupPriorityMinimum = Objects.requireNonNull(groupPriorityMinimum);
+            $.groupPriorityMinimum = groupPriorityMinimum;
             return this;
         }
+
         public Builder groupPriorityMinimum(Integer groupPriorityMinimum) {
-            this.groupPriorityMinimum = Output.of(Objects.requireNonNull(groupPriorityMinimum));
-            return this;
+            return groupPriorityMinimum(Output.of(groupPriorityMinimum));
         }
+
         public Builder insecureSkipTLSVerify(@Nullable Output<Boolean> insecureSkipTLSVerify) {
-            this.insecureSkipTLSVerify = insecureSkipTLSVerify;
+            $.insecureSkipTLSVerify = insecureSkipTLSVerify;
             return this;
         }
-        public Builder insecureSkipTLSVerify(@Nullable Boolean insecureSkipTLSVerify) {
-            this.insecureSkipTLSVerify = Codegen.ofNullable(insecureSkipTLSVerify);
-            return this;
+
+        public Builder insecureSkipTLSVerify(Boolean insecureSkipTLSVerify) {
+            return insecureSkipTLSVerify(Output.of(insecureSkipTLSVerify));
         }
+
         public Builder service(Output<ServiceReferenceArgs> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(ServiceReferenceArgs service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
+            return service(Output.of(service));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder versionPriority(Output<Integer> versionPriority) {
-            this.versionPriority = Objects.requireNonNull(versionPriority);
+            $.versionPriority = versionPriority;
             return this;
         }
+
         public Builder versionPriority(Integer versionPriority) {
-            this.versionPriority = Output.of(Objects.requireNonNull(versionPriority));
-            return this;
-        }        public APIServiceSpecArgs build() {
-            return new APIServiceSpecArgs(caBundle, group, groupPriorityMinimum, insecureSkipTLSVerify, service, version, versionPriority);
+            return versionPriority(Output.of(versionPriority));
+        }
+
+        public APIServiceSpecArgs build() {
+            $.groupPriorityMinimum = Objects.requireNonNull($.groupPriorityMinimum, "expected parameter 'groupPriorityMinimum' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.versionPriority = Objects.requireNonNull($.versionPriority, "expected parameter 'versionPriority' to be non-null");
+            return $;
         }
     }
+
 }

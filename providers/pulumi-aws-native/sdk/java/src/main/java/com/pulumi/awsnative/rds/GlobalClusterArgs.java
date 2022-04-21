@@ -6,10 +6,10 @@ package com.pulumi.awsnative.rds;
 import com.pulumi.awsnative.rds.enums.GlobalClusterEngine;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionProtection")
-      private final @Nullable Output<Boolean> deletionProtection;
+    private @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> deletionProtection() {
-        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
+    public Optional<Output<Boolean>> deletionProtection() {
+        return Optional.ofNullable(this.deletionProtection);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engine")
-      private final @Nullable Output<GlobalClusterEngine> engine;
+    private @Nullable Output<GlobalClusterEngine> engine;
 
-    public Output<GlobalClusterEngine> engine() {
-        return this.engine == null ? Codegen.empty() : this.engine;
+    public Optional<Output<GlobalClusterEngine>> engine() {
+        return Optional.ofNullable(this.engine);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engineVersion")
-      private final @Nullable Output<String> engineVersion;
+    private @Nullable Output<String> engineVersion;
 
-    public Output<String> engineVersion() {
-        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
+    public Optional<Output<String>> engineVersion() {
+        return Optional.ofNullable(this.engineVersion);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="globalClusterIdentifier")
-      private final @Nullable Output<String> globalClusterIdentifier;
+    private @Nullable Output<String> globalClusterIdentifier;
 
-    public Output<String> globalClusterIdentifier() {
-        return this.globalClusterIdentifier == null ? Codegen.empty() : this.globalClusterIdentifier;
+    public Optional<Output<String>> globalClusterIdentifier() {
+        return Optional.ofNullable(this.globalClusterIdentifier);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDBClusterIdentifier")
-      private final @Nullable Output<String> sourceDBClusterIdentifier;
+    private @Nullable Output<String> sourceDBClusterIdentifier;
 
-    public Output<String> sourceDBClusterIdentifier() {
-        return this.sourceDBClusterIdentifier == null ? Codegen.empty() : this.sourceDBClusterIdentifier;
+    public Optional<Output<String>> sourceDBClusterIdentifier() {
+        return Optional.ofNullable(this.sourceDBClusterIdentifier);
     }
 
     /**
@@ -79,115 +79,98 @@ public final class GlobalClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageEncrypted")
-      private final @Nullable Output<Boolean> storageEncrypted;
+    private @Nullable Output<Boolean> storageEncrypted;
 
-    public Output<Boolean> storageEncrypted() {
-        return this.storageEncrypted == null ? Codegen.empty() : this.storageEncrypted;
+    public Optional<Output<Boolean>> storageEncrypted() {
+        return Optional.ofNullable(this.storageEncrypted);
     }
 
-    public GlobalClusterArgs(
-        @Nullable Output<Boolean> deletionProtection,
-        @Nullable Output<GlobalClusterEngine> engine,
-        @Nullable Output<String> engineVersion,
-        @Nullable Output<String> globalClusterIdentifier,
-        @Nullable Output<String> sourceDBClusterIdentifier,
-        @Nullable Output<Boolean> storageEncrypted) {
-        this.deletionProtection = deletionProtection;
-        this.engine = engine;
-        this.engineVersion = engineVersion;
-        this.globalClusterIdentifier = globalClusterIdentifier;
-        this.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
-        this.storageEncrypted = storageEncrypted;
-    }
+    private GlobalClusterArgs() {}
 
-    private GlobalClusterArgs() {
-        this.deletionProtection = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.engineVersion = Codegen.empty();
-        this.globalClusterIdentifier = Codegen.empty();
-        this.sourceDBClusterIdentifier = Codegen.empty();
-        this.storageEncrypted = Codegen.empty();
+    private GlobalClusterArgs(GlobalClusterArgs $) {
+        this.deletionProtection = $.deletionProtection;
+        this.engine = $.engine;
+        this.engineVersion = $.engineVersion;
+        this.globalClusterIdentifier = $.globalClusterIdentifier;
+        this.sourceDBClusterIdentifier = $.sourceDBClusterIdentifier;
+        this.storageEncrypted = $.storageEncrypted;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deletionProtection;
-        private @Nullable Output<GlobalClusterEngine> engine;
-        private @Nullable Output<String> engineVersion;
-        private @Nullable Output<String> globalClusterIdentifier;
-        private @Nullable Output<String> sourceDBClusterIdentifier;
-        private @Nullable Output<Boolean> storageEncrypted;
+        private GlobalClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalClusterArgs();
         }
 
         public Builder(GlobalClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.engine = defaults.engine;
-    	      this.engineVersion = defaults.engineVersion;
-    	      this.globalClusterIdentifier = defaults.globalClusterIdentifier;
-    	      this.sourceDBClusterIdentifier = defaults.sourceDBClusterIdentifier;
-    	      this.storageEncrypted = defaults.storageEncrypted;
+            $ = new GlobalClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
-            this.deletionProtection = deletionProtection;
+            $.deletionProtection = deletionProtection;
             return this;
         }
-        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Codegen.ofNullable(deletionProtection);
-            return this;
+
+        public Builder deletionProtection(Boolean deletionProtection) {
+            return deletionProtection(Output.of(deletionProtection));
         }
+
         public Builder engine(@Nullable Output<GlobalClusterEngine> engine) {
-            this.engine = engine;
+            $.engine = engine;
             return this;
         }
-        public Builder engine(@Nullable GlobalClusterEngine engine) {
-            this.engine = Codegen.ofNullable(engine);
-            return this;
+
+        public Builder engine(GlobalClusterEngine engine) {
+            return engine(Output.of(engine));
         }
+
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
-            this.engineVersion = engineVersion;
+            $.engineVersion = engineVersion;
             return this;
         }
-        public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Codegen.ofNullable(engineVersion);
-            return this;
+
+        public Builder engineVersion(String engineVersion) {
+            return engineVersion(Output.of(engineVersion));
         }
+
         public Builder globalClusterIdentifier(@Nullable Output<String> globalClusterIdentifier) {
-            this.globalClusterIdentifier = globalClusterIdentifier;
+            $.globalClusterIdentifier = globalClusterIdentifier;
             return this;
         }
-        public Builder globalClusterIdentifier(@Nullable String globalClusterIdentifier) {
-            this.globalClusterIdentifier = Codegen.ofNullable(globalClusterIdentifier);
-            return this;
+
+        public Builder globalClusterIdentifier(String globalClusterIdentifier) {
+            return globalClusterIdentifier(Output.of(globalClusterIdentifier));
         }
+
         public Builder sourceDBClusterIdentifier(@Nullable Output<String> sourceDBClusterIdentifier) {
-            this.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
+            $.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
             return this;
         }
-        public Builder sourceDBClusterIdentifier(@Nullable String sourceDBClusterIdentifier) {
-            this.sourceDBClusterIdentifier = Codegen.ofNullable(sourceDBClusterIdentifier);
-            return this;
+
+        public Builder sourceDBClusterIdentifier(String sourceDBClusterIdentifier) {
+            return sourceDBClusterIdentifier(Output.of(sourceDBClusterIdentifier));
         }
+
         public Builder storageEncrypted(@Nullable Output<Boolean> storageEncrypted) {
-            this.storageEncrypted = storageEncrypted;
+            $.storageEncrypted = storageEncrypted;
             return this;
         }
-        public Builder storageEncrypted(@Nullable Boolean storageEncrypted) {
-            this.storageEncrypted = Codegen.ofNullable(storageEncrypted);
-            return this;
-        }        public GlobalClusterArgs build() {
-            return new GlobalClusterArgs(deletionProtection, engine, engineVersion, globalClusterIdentifier, sourceDBClusterIdentifier, storageEncrypted);
+
+        public Builder storageEncrypted(Boolean storageEncrypted) {
+            return storageEncrypted(Output.of(storageEncrypted));
+        }
+
+        public GlobalClusterArgs build() {
+            return $;
         }
     }
+
 }

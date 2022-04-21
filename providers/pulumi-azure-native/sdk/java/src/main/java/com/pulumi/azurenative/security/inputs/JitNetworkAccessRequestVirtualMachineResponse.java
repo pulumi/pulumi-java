@@ -19,7 +19,7 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends com.pul
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -30,58 +30,56 @@ public final class JitNetworkAccessRequestVirtualMachineResponse extends com.pul
      * 
      */
     @Import(name="ports", required=true)
-      private final List<JitNetworkAccessRequestPortResponse> ports;
+    private List<JitNetworkAccessRequestPortResponse> ports;
 
     public List<JitNetworkAccessRequestPortResponse> ports() {
         return this.ports;
     }
 
-    public JitNetworkAccessRequestVirtualMachineResponse(
-        String id,
-        List<JitNetworkAccessRequestPortResponse> ports) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private JitNetworkAccessRequestVirtualMachineResponse() {}
 
-    private JitNetworkAccessRequestVirtualMachineResponse() {
-        this.id = null;
-        this.ports = List.of();
+    private JitNetworkAccessRequestVirtualMachineResponse(JitNetworkAccessRequestVirtualMachineResponse $) {
+        this.id = $.id;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitNetworkAccessRequestVirtualMachineResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private List<JitNetworkAccessRequestPortResponse> ports;
+        private JitNetworkAccessRequestVirtualMachineResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitNetworkAccessRequestVirtualMachineResponse();
         }
 
         public Builder(JitNetworkAccessRequestVirtualMachineResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.ports = defaults.ports;
+            $ = new JitNetworkAccessRequestVirtualMachineResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder ports(List<JitNetworkAccessRequestPortResponse> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(JitNetworkAccessRequestPortResponse... ports) {
             return ports(List.of(ports));
-        }        public JitNetworkAccessRequestVirtualMachineResponse build() {
-            return new JitNetworkAccessRequestVirtualMachineResponse(id, ports);
+        }
+
+        public JitNetworkAccessRequestVirtualMachineResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

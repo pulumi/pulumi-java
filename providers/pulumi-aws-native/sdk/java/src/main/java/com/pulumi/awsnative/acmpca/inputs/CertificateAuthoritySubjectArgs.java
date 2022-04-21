@@ -5,9 +5,9 @@ package com.pulumi.awsnative.acmpca.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,310 +20,269 @@ public final class CertificateAuthoritySubjectArgs extends com.pulumi.resources.
     public static final CertificateAuthoritySubjectArgs Empty = new CertificateAuthoritySubjectArgs();
 
     @Import(name="commonName")
-      private final @Nullable Output<String> commonName;
+    private @Nullable Output<String> commonName;
 
-    public Output<String> commonName() {
-        return this.commonName == null ? Codegen.empty() : this.commonName;
+    public Optional<Output<String>> commonName() {
+        return Optional.ofNullable(this.commonName);
     }
 
     @Import(name="country")
-      private final @Nullable Output<String> country;
+    private @Nullable Output<String> country;
 
-    public Output<String> country() {
-        return this.country == null ? Codegen.empty() : this.country;
+    public Optional<Output<String>> country() {
+        return Optional.ofNullable(this.country);
     }
 
     @Import(name="distinguishedNameQualifier")
-      private final @Nullable Output<String> distinguishedNameQualifier;
+    private @Nullable Output<String> distinguishedNameQualifier;
 
-    public Output<String> distinguishedNameQualifier() {
-        return this.distinguishedNameQualifier == null ? Codegen.empty() : this.distinguishedNameQualifier;
+    public Optional<Output<String>> distinguishedNameQualifier() {
+        return Optional.ofNullable(this.distinguishedNameQualifier);
     }
 
     @Import(name="generationQualifier")
-      private final @Nullable Output<String> generationQualifier;
+    private @Nullable Output<String> generationQualifier;
 
-    public Output<String> generationQualifier() {
-        return this.generationQualifier == null ? Codegen.empty() : this.generationQualifier;
+    public Optional<Output<String>> generationQualifier() {
+        return Optional.ofNullable(this.generationQualifier);
     }
 
     @Import(name="givenName")
-      private final @Nullable Output<String> givenName;
+    private @Nullable Output<String> givenName;
 
-    public Output<String> givenName() {
-        return this.givenName == null ? Codegen.empty() : this.givenName;
+    public Optional<Output<String>> givenName() {
+        return Optional.ofNullable(this.givenName);
     }
 
     @Import(name="initials")
-      private final @Nullable Output<String> initials;
+    private @Nullable Output<String> initials;
 
-    public Output<String> initials() {
-        return this.initials == null ? Codegen.empty() : this.initials;
+    public Optional<Output<String>> initials() {
+        return Optional.ofNullable(this.initials);
     }
 
     @Import(name="locality")
-      private final @Nullable Output<String> locality;
+    private @Nullable Output<String> locality;
 
-    public Output<String> locality() {
-        return this.locality == null ? Codegen.empty() : this.locality;
+    public Optional<Output<String>> locality() {
+        return Optional.ofNullable(this.locality);
     }
 
     @Import(name="organization")
-      private final @Nullable Output<String> organization;
+    private @Nullable Output<String> organization;
 
-    public Output<String> organization() {
-        return this.organization == null ? Codegen.empty() : this.organization;
+    public Optional<Output<String>> organization() {
+        return Optional.ofNullable(this.organization);
     }
 
     @Import(name="organizationalUnit")
-      private final @Nullable Output<String> organizationalUnit;
+    private @Nullable Output<String> organizationalUnit;
 
-    public Output<String> organizationalUnit() {
-        return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
+    public Optional<Output<String>> organizationalUnit() {
+        return Optional.ofNullable(this.organizationalUnit);
     }
 
     @Import(name="pseudonym")
-      private final @Nullable Output<String> pseudonym;
+    private @Nullable Output<String> pseudonym;
 
-    public Output<String> pseudonym() {
-        return this.pseudonym == null ? Codegen.empty() : this.pseudonym;
+    public Optional<Output<String>> pseudonym() {
+        return Optional.ofNullable(this.pseudonym);
     }
 
     @Import(name="serialNumber")
-      private final @Nullable Output<String> serialNumber;
+    private @Nullable Output<String> serialNumber;
 
-    public Output<String> serialNumber() {
-        return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
+    public Optional<Output<String>> serialNumber() {
+        return Optional.ofNullable(this.serialNumber);
     }
 
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     @Import(name="surname")
-      private final @Nullable Output<String> surname;
+    private @Nullable Output<String> surname;
 
-    public Output<String> surname() {
-        return this.surname == null ? Codegen.empty() : this.surname;
+    public Optional<Output<String>> surname() {
+        return Optional.ofNullable(this.surname);
     }
 
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public CertificateAuthoritySubjectArgs(
-        @Nullable Output<String> commonName,
-        @Nullable Output<String> country,
-        @Nullable Output<String> distinguishedNameQualifier,
-        @Nullable Output<String> generationQualifier,
-        @Nullable Output<String> givenName,
-        @Nullable Output<String> initials,
-        @Nullable Output<String> locality,
-        @Nullable Output<String> organization,
-        @Nullable Output<String> organizationalUnit,
-        @Nullable Output<String> pseudonym,
-        @Nullable Output<String> serialNumber,
-        @Nullable Output<String> state,
-        @Nullable Output<String> surname,
-        @Nullable Output<String> title) {
-        this.commonName = commonName;
-        this.country = country;
-        this.distinguishedNameQualifier = distinguishedNameQualifier;
-        this.generationQualifier = generationQualifier;
-        this.givenName = givenName;
-        this.initials = initials;
-        this.locality = locality;
-        this.organization = organization;
-        this.organizationalUnit = organizationalUnit;
-        this.pseudonym = pseudonym;
-        this.serialNumber = serialNumber;
-        this.state = state;
-        this.surname = surname;
-        this.title = title;
-    }
+    private CertificateAuthoritySubjectArgs() {}
 
-    private CertificateAuthoritySubjectArgs() {
-        this.commonName = Codegen.empty();
-        this.country = Codegen.empty();
-        this.distinguishedNameQualifier = Codegen.empty();
-        this.generationQualifier = Codegen.empty();
-        this.givenName = Codegen.empty();
-        this.initials = Codegen.empty();
-        this.locality = Codegen.empty();
-        this.organization = Codegen.empty();
-        this.organizationalUnit = Codegen.empty();
-        this.pseudonym = Codegen.empty();
-        this.serialNumber = Codegen.empty();
-        this.state = Codegen.empty();
-        this.surname = Codegen.empty();
-        this.title = Codegen.empty();
+    private CertificateAuthoritySubjectArgs(CertificateAuthoritySubjectArgs $) {
+        this.commonName = $.commonName;
+        this.country = $.country;
+        this.distinguishedNameQualifier = $.distinguishedNameQualifier;
+        this.generationQualifier = $.generationQualifier;
+        this.givenName = $.givenName;
+        this.initials = $.initials;
+        this.locality = $.locality;
+        this.organization = $.organization;
+        this.organizationalUnit = $.organizationalUnit;
+        this.pseudonym = $.pseudonym;
+        this.serialNumber = $.serialNumber;
+        this.state = $.state;
+        this.surname = $.surname;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthoritySubjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> commonName;
-        private @Nullable Output<String> country;
-        private @Nullable Output<String> distinguishedNameQualifier;
-        private @Nullable Output<String> generationQualifier;
-        private @Nullable Output<String> givenName;
-        private @Nullable Output<String> initials;
-        private @Nullable Output<String> locality;
-        private @Nullable Output<String> organization;
-        private @Nullable Output<String> organizationalUnit;
-        private @Nullable Output<String> pseudonym;
-        private @Nullable Output<String> serialNumber;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> surname;
-        private @Nullable Output<String> title;
+        private CertificateAuthoritySubjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthoritySubjectArgs();
         }
 
         public Builder(CertificateAuthoritySubjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.commonName = defaults.commonName;
-    	      this.country = defaults.country;
-    	      this.distinguishedNameQualifier = defaults.distinguishedNameQualifier;
-    	      this.generationQualifier = defaults.generationQualifier;
-    	      this.givenName = defaults.givenName;
-    	      this.initials = defaults.initials;
-    	      this.locality = defaults.locality;
-    	      this.organization = defaults.organization;
-    	      this.organizationalUnit = defaults.organizationalUnit;
-    	      this.pseudonym = defaults.pseudonym;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.state = defaults.state;
-    	      this.surname = defaults.surname;
-    	      this.title = defaults.title;
+            $ = new CertificateAuthoritySubjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder commonName(@Nullable Output<String> commonName) {
-            this.commonName = commonName;
+            $.commonName = commonName;
             return this;
         }
-        public Builder commonName(@Nullable String commonName) {
-            this.commonName = Codegen.ofNullable(commonName);
-            return this;
+
+        public Builder commonName(String commonName) {
+            return commonName(Output.of(commonName));
         }
+
         public Builder country(@Nullable Output<String> country) {
-            this.country = country;
+            $.country = country;
             return this;
         }
-        public Builder country(@Nullable String country) {
-            this.country = Codegen.ofNullable(country);
-            return this;
+
+        public Builder country(String country) {
+            return country(Output.of(country));
         }
+
         public Builder distinguishedNameQualifier(@Nullable Output<String> distinguishedNameQualifier) {
-            this.distinguishedNameQualifier = distinguishedNameQualifier;
+            $.distinguishedNameQualifier = distinguishedNameQualifier;
             return this;
         }
-        public Builder distinguishedNameQualifier(@Nullable String distinguishedNameQualifier) {
-            this.distinguishedNameQualifier = Codegen.ofNullable(distinguishedNameQualifier);
-            return this;
+
+        public Builder distinguishedNameQualifier(String distinguishedNameQualifier) {
+            return distinguishedNameQualifier(Output.of(distinguishedNameQualifier));
         }
+
         public Builder generationQualifier(@Nullable Output<String> generationQualifier) {
-            this.generationQualifier = generationQualifier;
+            $.generationQualifier = generationQualifier;
             return this;
         }
-        public Builder generationQualifier(@Nullable String generationQualifier) {
-            this.generationQualifier = Codegen.ofNullable(generationQualifier);
-            return this;
+
+        public Builder generationQualifier(String generationQualifier) {
+            return generationQualifier(Output.of(generationQualifier));
         }
+
         public Builder givenName(@Nullable Output<String> givenName) {
-            this.givenName = givenName;
+            $.givenName = givenName;
             return this;
         }
-        public Builder givenName(@Nullable String givenName) {
-            this.givenName = Codegen.ofNullable(givenName);
-            return this;
+
+        public Builder givenName(String givenName) {
+            return givenName(Output.of(givenName));
         }
+
         public Builder initials(@Nullable Output<String> initials) {
-            this.initials = initials;
+            $.initials = initials;
             return this;
         }
-        public Builder initials(@Nullable String initials) {
-            this.initials = Codegen.ofNullable(initials);
-            return this;
+
+        public Builder initials(String initials) {
+            return initials(Output.of(initials));
         }
+
         public Builder locality(@Nullable Output<String> locality) {
-            this.locality = locality;
+            $.locality = locality;
             return this;
         }
-        public Builder locality(@Nullable String locality) {
-            this.locality = Codegen.ofNullable(locality);
-            return this;
+
+        public Builder locality(String locality) {
+            return locality(Output.of(locality));
         }
+
         public Builder organization(@Nullable Output<String> organization) {
-            this.organization = organization;
+            $.organization = organization;
             return this;
         }
-        public Builder organization(@Nullable String organization) {
-            this.organization = Codegen.ofNullable(organization);
-            return this;
+
+        public Builder organization(String organization) {
+            return organization(Output.of(organization));
         }
+
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
-            this.organizationalUnit = organizationalUnit;
+            $.organizationalUnit = organizationalUnit;
             return this;
         }
-        public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Codegen.ofNullable(organizationalUnit);
-            return this;
+
+        public Builder organizationalUnit(String organizationalUnit) {
+            return organizationalUnit(Output.of(organizationalUnit));
         }
+
         public Builder pseudonym(@Nullable Output<String> pseudonym) {
-            this.pseudonym = pseudonym;
+            $.pseudonym = pseudonym;
             return this;
         }
-        public Builder pseudonym(@Nullable String pseudonym) {
-            this.pseudonym = Codegen.ofNullable(pseudonym);
-            return this;
+
+        public Builder pseudonym(String pseudonym) {
+            return pseudonym(Output.of(pseudonym));
         }
+
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
-            this.serialNumber = serialNumber;
+            $.serialNumber = serialNumber;
             return this;
         }
-        public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = Codegen.ofNullable(serialNumber);
-            return this;
+
+        public Builder serialNumber(String serialNumber) {
+            return serialNumber(Output.of(serialNumber));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder surname(@Nullable Output<String> surname) {
-            this.surname = surname;
+            $.surname = surname;
             return this;
         }
-        public Builder surname(@Nullable String surname) {
-            this.surname = Codegen.ofNullable(surname);
-            return this;
+
+        public Builder surname(String surname) {
+            return surname(Output.of(surname));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public CertificateAuthoritySubjectArgs build() {
-            return new CertificateAuthoritySubjectArgs(commonName, country, distinguishedNameQualifier, generationQualifier, givenName, initials, locality, organization, organizationalUnit, pseudonym, serialNumber, state, surname, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public CertificateAuthoritySubjectArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="carrierGatewayId")
-      private final @Nullable Output<String> carrierGatewayId;
+    private @Nullable Output<String> carrierGatewayId;
 
-    public Output<String> carrierGatewayId() {
-        return this.carrierGatewayId == null ? Codegen.empty() : this.carrierGatewayId;
+    public Optional<Output<String>> carrierGatewayId() {
+        return Optional.ofNullable(this.carrierGatewayId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationCidrBlock")
-      private final @Nullable Output<String> destinationCidrBlock;
+    private @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> destinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
+    public Optional<Output<String>> destinationCidrBlock() {
+        return Optional.ofNullable(this.destinationCidrBlock);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationIpv6CidrBlock")
-      private final @Nullable Output<String> destinationIpv6CidrBlock;
+    private @Nullable Output<String> destinationIpv6CidrBlock;
 
-    public Output<String> destinationIpv6CidrBlock() {
-        return this.destinationIpv6CidrBlock == null ? Codegen.empty() : this.destinationIpv6CidrBlock;
+    public Optional<Output<String>> destinationIpv6CidrBlock() {
+        return Optional.ofNullable(this.destinationIpv6CidrBlock);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationPrefixListId")
-      private final @Nullable Output<String> destinationPrefixListId;
+    private @Nullable Output<String> destinationPrefixListId;
 
-    public Output<String> destinationPrefixListId() {
-        return this.destinationPrefixListId == null ? Codegen.empty() : this.destinationPrefixListId;
+    public Optional<Output<String>> destinationPrefixListId() {
+        return Optional.ofNullable(this.destinationPrefixListId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="egressOnlyGatewayId")
-      private final @Nullable Output<String> egressOnlyGatewayId;
+    private @Nullable Output<String> egressOnlyGatewayId;
 
-    public Output<String> egressOnlyGatewayId() {
-        return this.egressOnlyGatewayId == null ? Codegen.empty() : this.egressOnlyGatewayId;
+    public Optional<Output<String>> egressOnlyGatewayId() {
+        return Optional.ofNullable(this.egressOnlyGatewayId);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayId")
-      private final @Nullable Output<String> gatewayId;
+    private @Nullable Output<String> gatewayId;
 
-    public Output<String> gatewayId() {
-        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
+    public Optional<Output<String>> gatewayId() {
+        return Optional.ofNullable(this.gatewayId);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceOwnerId")
-      private final @Nullable Output<String> instanceOwnerId;
+    private @Nullable Output<String> instanceOwnerId;
 
-    public Output<String> instanceOwnerId() {
-        return this.instanceOwnerId == null ? Codegen.empty() : this.instanceOwnerId;
+    public Optional<Output<String>> instanceOwnerId() {
+        return Optional.ofNullable(this.instanceOwnerId);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="localGatewayId")
-      private final @Nullable Output<String> localGatewayId;
+    private @Nullable Output<String> localGatewayId;
 
-    public Output<String> localGatewayId() {
-        return this.localGatewayId == null ? Codegen.empty() : this.localGatewayId;
+    public Optional<Output<String>> localGatewayId() {
+        return Optional.ofNullable(this.localGatewayId);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="natGatewayId")
-      private final @Nullable Output<String> natGatewayId;
+    private @Nullable Output<String> natGatewayId;
 
-    public Output<String> natGatewayId() {
-        return this.natGatewayId == null ? Codegen.empty() : this.natGatewayId;
+    public Optional<Output<String>> natGatewayId() {
+        return Optional.ofNullable(this.natGatewayId);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterfaceId")
-      private final @Nullable Output<String> networkInterfaceId;
+    private @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> networkInterfaceId() {
-        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
+    public Optional<Output<String>> networkInterfaceId() {
+        return Optional.ofNullable(this.networkInterfaceId);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="origin")
-      private final @Nullable Output<String> origin;
+    private @Nullable Output<String> origin;
 
-    public Output<String> origin() {
-        return this.origin == null ? Codegen.empty() : this.origin;
+    public Optional<Output<String>> origin() {
+        return Optional.ofNullable(this.origin);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeTableId")
-      private final @Nullable Output<String> routeTableId;
+    private @Nullable Output<String> routeTableId;
 
-    public Output<String> routeTableId() {
-        return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
+    public Optional<Output<String>> routeTableId() {
+        return Optional.ofNullable(this.routeTableId);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitGatewayId")
-      private final @Nullable Output<String> transitGatewayId;
+    private @Nullable Output<String> transitGatewayId;
 
-    public Output<String> transitGatewayId() {
-        return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
+    public Optional<Output<String>> transitGatewayId() {
+        return Optional.ofNullable(this.transitGatewayId);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcEndpointId")
-      private final @Nullable Output<String> vpcEndpointId;
+    private @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> vpcEndpointId() {
-        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
+    public Optional<Output<String>> vpcEndpointId() {
+        return Optional.ofNullable(this.vpcEndpointId);
     }
 
     /**
@@ -196,258 +196,208 @@ public final class RouteState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcPeeringConnectionId")
-      private final @Nullable Output<String> vpcPeeringConnectionId;
+    private @Nullable Output<String> vpcPeeringConnectionId;
 
-    public Output<String> vpcPeeringConnectionId() {
-        return this.vpcPeeringConnectionId == null ? Codegen.empty() : this.vpcPeeringConnectionId;
+    public Optional<Output<String>> vpcPeeringConnectionId() {
+        return Optional.ofNullable(this.vpcPeeringConnectionId);
     }
 
-    public RouteState(
-        @Nullable Output<String> carrierGatewayId,
-        @Nullable Output<String> destinationCidrBlock,
-        @Nullable Output<String> destinationIpv6CidrBlock,
-        @Nullable Output<String> destinationPrefixListId,
-        @Nullable Output<String> egressOnlyGatewayId,
-        @Nullable Output<String> gatewayId,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> instanceOwnerId,
-        @Nullable Output<String> localGatewayId,
-        @Nullable Output<String> natGatewayId,
-        @Nullable Output<String> networkInterfaceId,
-        @Nullable Output<String> origin,
-        @Nullable Output<String> routeTableId,
-        @Nullable Output<String> state,
-        @Nullable Output<String> transitGatewayId,
-        @Nullable Output<String> vpcEndpointId,
-        @Nullable Output<String> vpcPeeringConnectionId) {
-        this.carrierGatewayId = carrierGatewayId;
-        this.destinationCidrBlock = destinationCidrBlock;
-        this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
-        this.destinationPrefixListId = destinationPrefixListId;
-        this.egressOnlyGatewayId = egressOnlyGatewayId;
-        this.gatewayId = gatewayId;
-        this.instanceId = instanceId;
-        this.instanceOwnerId = instanceOwnerId;
-        this.localGatewayId = localGatewayId;
-        this.natGatewayId = natGatewayId;
-        this.networkInterfaceId = networkInterfaceId;
-        this.origin = origin;
-        this.routeTableId = routeTableId;
-        this.state = state;
-        this.transitGatewayId = transitGatewayId;
-        this.vpcEndpointId = vpcEndpointId;
-        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
-    }
+    private RouteState() {}
 
-    private RouteState() {
-        this.carrierGatewayId = Codegen.empty();
-        this.destinationCidrBlock = Codegen.empty();
-        this.destinationIpv6CidrBlock = Codegen.empty();
-        this.destinationPrefixListId = Codegen.empty();
-        this.egressOnlyGatewayId = Codegen.empty();
-        this.gatewayId = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.instanceOwnerId = Codegen.empty();
-        this.localGatewayId = Codegen.empty();
-        this.natGatewayId = Codegen.empty();
-        this.networkInterfaceId = Codegen.empty();
-        this.origin = Codegen.empty();
-        this.routeTableId = Codegen.empty();
-        this.state = Codegen.empty();
-        this.transitGatewayId = Codegen.empty();
-        this.vpcEndpointId = Codegen.empty();
-        this.vpcPeeringConnectionId = Codegen.empty();
+    private RouteState(RouteState $) {
+        this.carrierGatewayId = $.carrierGatewayId;
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.destinationIpv6CidrBlock = $.destinationIpv6CidrBlock;
+        this.destinationPrefixListId = $.destinationPrefixListId;
+        this.egressOnlyGatewayId = $.egressOnlyGatewayId;
+        this.gatewayId = $.gatewayId;
+        this.instanceId = $.instanceId;
+        this.instanceOwnerId = $.instanceOwnerId;
+        this.localGatewayId = $.localGatewayId;
+        this.natGatewayId = $.natGatewayId;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.origin = $.origin;
+        this.routeTableId = $.routeTableId;
+        this.state = $.state;
+        this.transitGatewayId = $.transitGatewayId;
+        this.vpcEndpointId = $.vpcEndpointId;
+        this.vpcPeeringConnectionId = $.vpcPeeringConnectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> carrierGatewayId;
-        private @Nullable Output<String> destinationCidrBlock;
-        private @Nullable Output<String> destinationIpv6CidrBlock;
-        private @Nullable Output<String> destinationPrefixListId;
-        private @Nullable Output<String> egressOnlyGatewayId;
-        private @Nullable Output<String> gatewayId;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> instanceOwnerId;
-        private @Nullable Output<String> localGatewayId;
-        private @Nullable Output<String> natGatewayId;
-        private @Nullable Output<String> networkInterfaceId;
-        private @Nullable Output<String> origin;
-        private @Nullable Output<String> routeTableId;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> transitGatewayId;
-        private @Nullable Output<String> vpcEndpointId;
-        private @Nullable Output<String> vpcPeeringConnectionId;
+        private RouteState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteState();
         }
 
         public Builder(RouteState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.carrierGatewayId = defaults.carrierGatewayId;
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.destinationIpv6CidrBlock = defaults.destinationIpv6CidrBlock;
-    	      this.destinationPrefixListId = defaults.destinationPrefixListId;
-    	      this.egressOnlyGatewayId = defaults.egressOnlyGatewayId;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.instanceOwnerId = defaults.instanceOwnerId;
-    	      this.localGatewayId = defaults.localGatewayId;
-    	      this.natGatewayId = defaults.natGatewayId;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.origin = defaults.origin;
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.state = defaults.state;
-    	      this.transitGatewayId = defaults.transitGatewayId;
-    	      this.vpcEndpointId = defaults.vpcEndpointId;
-    	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
+            $ = new RouteState(Objects.requireNonNull(defaults));
         }
 
         public Builder carrierGatewayId(@Nullable Output<String> carrierGatewayId) {
-            this.carrierGatewayId = carrierGatewayId;
+            $.carrierGatewayId = carrierGatewayId;
             return this;
         }
-        public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
-            this.carrierGatewayId = Codegen.ofNullable(carrierGatewayId);
-            return this;
+
+        public Builder carrierGatewayId(String carrierGatewayId) {
+            return carrierGatewayId(Output.of(carrierGatewayId));
         }
+
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
-            this.destinationCidrBlock = destinationCidrBlock;
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
-            return this;
+
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
+
         public Builder destinationIpv6CidrBlock(@Nullable Output<String> destinationIpv6CidrBlock) {
-            this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
+            $.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
             return this;
         }
-        public Builder destinationIpv6CidrBlock(@Nullable String destinationIpv6CidrBlock) {
-            this.destinationIpv6CidrBlock = Codegen.ofNullable(destinationIpv6CidrBlock);
-            return this;
+
+        public Builder destinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
+            return destinationIpv6CidrBlock(Output.of(destinationIpv6CidrBlock));
         }
+
         public Builder destinationPrefixListId(@Nullable Output<String> destinationPrefixListId) {
-            this.destinationPrefixListId = destinationPrefixListId;
+            $.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
-        public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
-            this.destinationPrefixListId = Codegen.ofNullable(destinationPrefixListId);
-            return this;
+
+        public Builder destinationPrefixListId(String destinationPrefixListId) {
+            return destinationPrefixListId(Output.of(destinationPrefixListId));
         }
+
         public Builder egressOnlyGatewayId(@Nullable Output<String> egressOnlyGatewayId) {
-            this.egressOnlyGatewayId = egressOnlyGatewayId;
+            $.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
-        public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
-            this.egressOnlyGatewayId = Codegen.ofNullable(egressOnlyGatewayId);
-            return this;
+
+        public Builder egressOnlyGatewayId(String egressOnlyGatewayId) {
+            return egressOnlyGatewayId(Output.of(egressOnlyGatewayId));
         }
+
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
-            this.gatewayId = gatewayId;
+            $.gatewayId = gatewayId;
             return this;
         }
-        public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Codegen.ofNullable(gatewayId);
-            return this;
+
+        public Builder gatewayId(String gatewayId) {
+            return gatewayId(Output.of(gatewayId));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder instanceOwnerId(@Nullable Output<String> instanceOwnerId) {
-            this.instanceOwnerId = instanceOwnerId;
+            $.instanceOwnerId = instanceOwnerId;
             return this;
         }
-        public Builder instanceOwnerId(@Nullable String instanceOwnerId) {
-            this.instanceOwnerId = Codegen.ofNullable(instanceOwnerId);
-            return this;
+
+        public Builder instanceOwnerId(String instanceOwnerId) {
+            return instanceOwnerId(Output.of(instanceOwnerId));
         }
+
         public Builder localGatewayId(@Nullable Output<String> localGatewayId) {
-            this.localGatewayId = localGatewayId;
+            $.localGatewayId = localGatewayId;
             return this;
         }
-        public Builder localGatewayId(@Nullable String localGatewayId) {
-            this.localGatewayId = Codegen.ofNullable(localGatewayId);
-            return this;
+
+        public Builder localGatewayId(String localGatewayId) {
+            return localGatewayId(Output.of(localGatewayId));
         }
+
         public Builder natGatewayId(@Nullable Output<String> natGatewayId) {
-            this.natGatewayId = natGatewayId;
+            $.natGatewayId = natGatewayId;
             return this;
         }
-        public Builder natGatewayId(@Nullable String natGatewayId) {
-            this.natGatewayId = Codegen.ofNullable(natGatewayId);
-            return this;
+
+        public Builder natGatewayId(String natGatewayId) {
+            return natGatewayId(Output.of(natGatewayId));
         }
+
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
-        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
-            return this;
+
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            return networkInterfaceId(Output.of(networkInterfaceId));
         }
+
         public Builder origin(@Nullable Output<String> origin) {
-            this.origin = origin;
+            $.origin = origin;
             return this;
         }
-        public Builder origin(@Nullable String origin) {
-            this.origin = Codegen.ofNullable(origin);
-            return this;
+
+        public Builder origin(String origin) {
+            return origin(Output.of(origin));
         }
+
         public Builder routeTableId(@Nullable Output<String> routeTableId) {
-            this.routeTableId = routeTableId;
+            $.routeTableId = routeTableId;
             return this;
         }
-        public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = Codegen.ofNullable(routeTableId);
-            return this;
+
+        public Builder routeTableId(String routeTableId) {
+            return routeTableId(Output.of(routeTableId));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
-            this.transitGatewayId = transitGatewayId;
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
-        public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = Codegen.ofNullable(transitGatewayId);
-            return this;
+
+        public Builder transitGatewayId(String transitGatewayId) {
+            return transitGatewayId(Output.of(transitGatewayId));
         }
+
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
-            this.vpcEndpointId = vpcEndpointId;
+            $.vpcEndpointId = vpcEndpointId;
             return this;
         }
-        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
-            return this;
+
+        public Builder vpcEndpointId(String vpcEndpointId) {
+            return vpcEndpointId(Output.of(vpcEndpointId));
         }
+
         public Builder vpcPeeringConnectionId(@Nullable Output<String> vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+            $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
-        public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = Codegen.ofNullable(vpcPeeringConnectionId);
-            return this;
-        }        public RouteState build() {
-            return new RouteState(carrierGatewayId, destinationCidrBlock, destinationIpv6CidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, instanceOwnerId, localGatewayId, natGatewayId, networkInterfaceId, origin, routeTableId, state, transitGatewayId, vpcEndpointId, vpcPeeringConnectionId);
+
+        public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
+            return vpcPeeringConnectionId(Output.of(vpcPeeringConnectionId));
+        }
+
+        public RouteState build() {
+            return $;
         }
     }
+
 }

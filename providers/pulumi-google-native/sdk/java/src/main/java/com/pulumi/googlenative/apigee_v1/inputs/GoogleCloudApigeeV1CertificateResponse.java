@@ -18,48 +18,49 @@ public final class GoogleCloudApigeeV1CertificateResponse extends com.pulumi.res
      * 
      */
     @Import(name="certInfo", required=true)
-      private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
+    private List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 
     public List<GoogleCloudApigeeV1CertInfoResponse> certInfo() {
         return this.certInfo;
     }
 
-    public GoogleCloudApigeeV1CertificateResponse(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
-        this.certInfo = Objects.requireNonNull(certInfo, "expected parameter 'certInfo' to be non-null");
-    }
+    private GoogleCloudApigeeV1CertificateResponse() {}
 
-    private GoogleCloudApigeeV1CertificateResponse() {
-        this.certInfo = List.of();
+    private GoogleCloudApigeeV1CertificateResponse(GoogleCloudApigeeV1CertificateResponse $) {
+        this.certInfo = $.certInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1CertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
+        private GoogleCloudApigeeV1CertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1CertificateResponse();
         }
 
         public Builder(GoogleCloudApigeeV1CertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certInfo = defaults.certInfo;
+            $ = new GoogleCloudApigeeV1CertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certInfo(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
-            this.certInfo = Objects.requireNonNull(certInfo);
+            $.certInfo = certInfo;
             return this;
         }
+
         public Builder certInfo(GoogleCloudApigeeV1CertInfoResponse... certInfo) {
             return certInfo(List.of(certInfo));
-        }        public GoogleCloudApigeeV1CertificateResponse build() {
-            return new GoogleCloudApigeeV1CertificateResponse(certInfo);
+        }
+
+        public GoogleCloudApigeeV1CertificateResponse build() {
+            $.certInfo = Objects.requireNonNull($.certInfo, "expected parameter 'certInfo' to be non-null");
+            return $;
         }
     }
+
 }

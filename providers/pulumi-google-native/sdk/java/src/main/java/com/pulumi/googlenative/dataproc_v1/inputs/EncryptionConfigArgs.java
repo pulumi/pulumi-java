@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="gcePdKmsKeyName")
-      private final @Nullable Output<String> gcePdKmsKeyName;
+    private @Nullable Output<String> gcePdKmsKeyName;
 
-    public Output<String> gcePdKmsKeyName() {
-        return this.gcePdKmsKeyName == null ? Codegen.empty() : this.gcePdKmsKeyName;
+    public Optional<Output<String>> gcePdKmsKeyName() {
+        return Optional.ofNullable(this.gcePdKmsKeyName);
     }
 
-    public EncryptionConfigArgs(@Nullable Output<String> gcePdKmsKeyName) {
-        this.gcePdKmsKeyName = gcePdKmsKeyName;
-    }
+    private EncryptionConfigArgs() {}
 
-    private EncryptionConfigArgs() {
-        this.gcePdKmsKeyName = Codegen.empty();
+    private EncryptionConfigArgs(EncryptionConfigArgs $) {
+        this.gcePdKmsKeyName = $.gcePdKmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gcePdKmsKeyName;
+        private EncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigArgs();
         }
 
         public Builder(EncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcePdKmsKeyName = defaults.gcePdKmsKeyName;
+            $ = new EncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcePdKmsKeyName(@Nullable Output<String> gcePdKmsKeyName) {
-            this.gcePdKmsKeyName = gcePdKmsKeyName;
+            $.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;
         }
-        public Builder gcePdKmsKeyName(@Nullable String gcePdKmsKeyName) {
-            this.gcePdKmsKeyName = Codegen.ofNullable(gcePdKmsKeyName);
-            return this;
-        }        public EncryptionConfigArgs build() {
-            return new EncryptionConfigArgs(gcePdKmsKeyName);
+
+        public Builder gcePdKmsKeyName(String gcePdKmsKeyName) {
+            return gcePdKmsKeyName(Output.of(gcePdKmsKeyName));
+        }
+
+        public EncryptionConfigArgs build() {
+            return $;
         }
     }
+
 }

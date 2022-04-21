@@ -16,78 +16,71 @@ public final class SkuCostResponse extends com.pulumi.resources.InvokeArgs {
     public static final SkuCostResponse Empty = new SkuCostResponse();
 
     @Import(name="extendedUnit")
-      private final @Nullable String extendedUnit;
+    private @Nullable String extendedUnit;
 
     public Optional<String> extendedUnit() {
-        return this.extendedUnit == null ? Optional.empty() : Optional.ofNullable(this.extendedUnit);
+        return Optional.ofNullable(this.extendedUnit);
     }
 
     @Import(name="meterId", required=true)
-      private final String meterId;
+    private String meterId;
 
     public String meterId() {
         return this.meterId;
     }
 
     @Import(name="quantity")
-      private final @Nullable Integer quantity;
+    private @Nullable Integer quantity;
 
     public Optional<Integer> quantity() {
-        return this.quantity == null ? Optional.empty() : Optional.ofNullable(this.quantity);
+        return Optional.ofNullable(this.quantity);
     }
 
-    public SkuCostResponse(
-        @Nullable String extendedUnit,
-        String meterId,
-        @Nullable Integer quantity) {
-        this.extendedUnit = extendedUnit;
-        this.meterId = Objects.requireNonNull(meterId, "expected parameter 'meterId' to be non-null");
-        this.quantity = quantity;
-    }
+    private SkuCostResponse() {}
 
-    private SkuCostResponse() {
-        this.extendedUnit = null;
-        this.meterId = null;
-        this.quantity = null;
+    private SkuCostResponse(SkuCostResponse $) {
+        this.extendedUnit = $.extendedUnit;
+        this.meterId = $.meterId;
+        this.quantity = $.quantity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkuCostResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String extendedUnit;
-        private String meterId;
-        private @Nullable Integer quantity;
+        private SkuCostResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkuCostResponse();
         }
 
         public Builder(SkuCostResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extendedUnit = defaults.extendedUnit;
-    	      this.meterId = defaults.meterId;
-    	      this.quantity = defaults.quantity;
+            $ = new SkuCostResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extendedUnit(@Nullable String extendedUnit) {
-            this.extendedUnit = extendedUnit;
+            $.extendedUnit = extendedUnit;
             return this;
         }
+
         public Builder meterId(String meterId) {
-            this.meterId = Objects.requireNonNull(meterId);
+            $.meterId = meterId;
             return this;
         }
+
         public Builder quantity(@Nullable Integer quantity) {
-            this.quantity = quantity;
+            $.quantity = quantity;
             return this;
-        }        public SkuCostResponse build() {
-            return new SkuCostResponse(extendedUnit, meterId, quantity);
+        }
+
+        public SkuCostResponse build() {
+            $.meterId = Objects.requireNonNull($.meterId, "expected parameter 'meterId' to be non-null");
+            return $;
         }
     }
+
 }

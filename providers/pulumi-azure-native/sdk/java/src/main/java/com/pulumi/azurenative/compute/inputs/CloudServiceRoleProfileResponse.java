@@ -24,48 +24,48 @@ public final class CloudServiceRoleProfileResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="roles")
-      private final @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
+    private @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
 
-    public List<CloudServiceRoleProfilePropertiesResponse> roles() {
-        return this.roles == null ? List.of() : this.roles;
+    public Optional<List<CloudServiceRoleProfilePropertiesResponse>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
-    public CloudServiceRoleProfileResponse(@Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
-        this.roles = roles;
-    }
+    private CloudServiceRoleProfileResponse() {}
 
-    private CloudServiceRoleProfileResponse() {
-        this.roles = List.of();
+    private CloudServiceRoleProfileResponse(CloudServiceRoleProfileResponse $) {
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceRoleProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<CloudServiceRoleProfilePropertiesResponse> roles;
+        private CloudServiceRoleProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceRoleProfileResponse();
         }
 
         public Builder(CloudServiceRoleProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roles = defaults.roles;
+            $ = new CloudServiceRoleProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder roles(@Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
+
         public Builder roles(CloudServiceRoleProfilePropertiesResponse... roles) {
             return roles(List.of(roles));
-        }        public CloudServiceRoleProfileResponse build() {
-            return new CloudServiceRoleProfileResponse(roles);
+        }
+
+        public CloudServiceRoleProfileResponse build() {
+            return $;
         }
     }
+
 }

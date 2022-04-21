@@ -21,45 +21,45 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse ex
      * 
      */
     @Import(name="caseSensitive", required=true)
-      private final Boolean caseSensitive;
+    private Boolean caseSensitive;
 
     public Boolean caseSensitive() {
         return this.caseSensitive;
     }
 
-    public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(Boolean caseSensitive) {
-        this.caseSensitive = Objects.requireNonNull(caseSensitive, "expected parameter 'caseSensitive' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse() {
-        this.caseSensitive = null;
+    private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse $) {
+        this.caseSensitive = $.caseSensitive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean caseSensitive;
+        private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caseSensitive = defaults.caseSensitive;
+            $ = new GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caseSensitive(Boolean caseSensitive) {
-            this.caseSensitive = Objects.requireNonNull(caseSensitive);
+            $.caseSensitive = caseSensitive;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(caseSensitive);
+        }
+
+        public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse build() {
+            $.caseSensitive = Objects.requireNonNull($.caseSensitive, "expected parameter 'caseSensitive' to be non-null");
+            return $;
         }
     }
+
 }

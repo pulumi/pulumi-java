@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlSourceConfigArgs;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.OracleSourceConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mysqlSourceConfig")
-      private final @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig;
+    private @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig;
 
-    public Output<MysqlSourceConfigArgs> mysqlSourceConfig() {
-        return this.mysqlSourceConfig == null ? Codegen.empty() : this.mysqlSourceConfig;
+    public Optional<Output<MysqlSourceConfigArgs>> mysqlSourceConfig() {
+        return Optional.ofNullable(this.mysqlSourceConfig);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oracleSourceConfig")
-      private final @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig;
+    private @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig;
 
-    public Output<OracleSourceConfigArgs> oracleSourceConfig() {
-        return this.oracleSourceConfig == null ? Codegen.empty() : this.oracleSourceConfig;
+    public Optional<Output<OracleSourceConfigArgs>> oracleSourceConfig() {
+        return Optional.ofNullable(this.oracleSourceConfig);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class SourceConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceConnectionProfileName", required=true)
-      private final Output<String> sourceConnectionProfileName;
+    private Output<String> sourceConnectionProfileName;
 
     public Output<String> sourceConnectionProfileName() {
         return this.sourceConnectionProfileName;
     }
 
-    public SourceConfigArgs(
-        @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig,
-        @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig,
-        Output<String> sourceConnectionProfileName) {
-        this.mysqlSourceConfig = mysqlSourceConfig;
-        this.oracleSourceConfig = oracleSourceConfig;
-        this.sourceConnectionProfileName = Objects.requireNonNull(sourceConnectionProfileName, "expected parameter 'sourceConnectionProfileName' to be non-null");
-    }
+    private SourceConfigArgs() {}
 
-    private SourceConfigArgs() {
-        this.mysqlSourceConfig = Codegen.empty();
-        this.oracleSourceConfig = Codegen.empty();
-        this.sourceConnectionProfileName = Codegen.empty();
+    private SourceConfigArgs(SourceConfigArgs $) {
+        this.mysqlSourceConfig = $.mysqlSourceConfig;
+        this.oracleSourceConfig = $.oracleSourceConfig;
+        this.sourceConnectionProfileName = $.sourceConnectionProfileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig;
-        private @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig;
-        private Output<String> sourceConnectionProfileName;
+        private SourceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceConfigArgs();
         }
 
         public Builder(SourceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mysqlSourceConfig = defaults.mysqlSourceConfig;
-    	      this.oracleSourceConfig = defaults.oracleSourceConfig;
-    	      this.sourceConnectionProfileName = defaults.sourceConnectionProfileName;
+            $ = new SourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mysqlSourceConfig(@Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig) {
-            this.mysqlSourceConfig = mysqlSourceConfig;
+            $.mysqlSourceConfig = mysqlSourceConfig;
             return this;
         }
-        public Builder mysqlSourceConfig(@Nullable MysqlSourceConfigArgs mysqlSourceConfig) {
-            this.mysqlSourceConfig = Codegen.ofNullable(mysqlSourceConfig);
-            return this;
+
+        public Builder mysqlSourceConfig(MysqlSourceConfigArgs mysqlSourceConfig) {
+            return mysqlSourceConfig(Output.of(mysqlSourceConfig));
         }
+
         public Builder oracleSourceConfig(@Nullable Output<OracleSourceConfigArgs> oracleSourceConfig) {
-            this.oracleSourceConfig = oracleSourceConfig;
+            $.oracleSourceConfig = oracleSourceConfig;
             return this;
         }
-        public Builder oracleSourceConfig(@Nullable OracleSourceConfigArgs oracleSourceConfig) {
-            this.oracleSourceConfig = Codegen.ofNullable(oracleSourceConfig);
-            return this;
+
+        public Builder oracleSourceConfig(OracleSourceConfigArgs oracleSourceConfig) {
+            return oracleSourceConfig(Output.of(oracleSourceConfig));
         }
+
         public Builder sourceConnectionProfileName(Output<String> sourceConnectionProfileName) {
-            this.sourceConnectionProfileName = Objects.requireNonNull(sourceConnectionProfileName);
+            $.sourceConnectionProfileName = sourceConnectionProfileName;
             return this;
         }
+
         public Builder sourceConnectionProfileName(String sourceConnectionProfileName) {
-            this.sourceConnectionProfileName = Output.of(Objects.requireNonNull(sourceConnectionProfileName));
-            return this;
-        }        public SourceConfigArgs build() {
-            return new SourceConfigArgs(mysqlSourceConfig, oracleSourceConfig, sourceConnectionProfileName);
+            return sourceConnectionProfileName(Output.of(sourceConnectionProfileName));
+        }
+
+        public SourceConfigArgs build() {
+            $.sourceConnectionProfileName = Objects.requireNonNull($.sourceConnectionProfileName, "expected parameter 'sourceConnectionProfileName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ConnectorMappingCompleteOperationResponse extends com.pulumi.
      * 
      */
     @Import(name="completionOperationType")
-      private final @Nullable String completionOperationType;
+    private @Nullable String completionOperationType;
 
     public Optional<String> completionOperationType() {
-        return this.completionOperationType == null ? Optional.empty() : Optional.ofNullable(this.completionOperationType);
+        return Optional.ofNullable(this.completionOperationType);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ConnectorMappingCompleteOperationResponse extends com.pulumi.
      * 
      */
     @Import(name="destinationFolder")
-      private final @Nullable String destinationFolder;
+    private @Nullable String destinationFolder;
 
     public Optional<String> destinationFolder() {
-        return this.destinationFolder == null ? Optional.empty() : Optional.ofNullable(this.destinationFolder);
+        return Optional.ofNullable(this.destinationFolder);
     }
 
-    public ConnectorMappingCompleteOperationResponse(
-        @Nullable String completionOperationType,
-        @Nullable String destinationFolder) {
-        this.completionOperationType = completionOperationType;
-        this.destinationFolder = destinationFolder;
-    }
+    private ConnectorMappingCompleteOperationResponse() {}
 
-    private ConnectorMappingCompleteOperationResponse() {
-        this.completionOperationType = null;
-        this.destinationFolder = null;
+    private ConnectorMappingCompleteOperationResponse(ConnectorMappingCompleteOperationResponse $) {
+        this.completionOperationType = $.completionOperationType;
+        this.destinationFolder = $.destinationFolder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingCompleteOperationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String completionOperationType;
-        private @Nullable String destinationFolder;
+        private ConnectorMappingCompleteOperationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingCompleteOperationResponse();
         }
 
         public Builder(ConnectorMappingCompleteOperationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completionOperationType = defaults.completionOperationType;
-    	      this.destinationFolder = defaults.destinationFolder;
+            $ = new ConnectorMappingCompleteOperationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder completionOperationType(@Nullable String completionOperationType) {
-            this.completionOperationType = completionOperationType;
+            $.completionOperationType = completionOperationType;
             return this;
         }
+
         public Builder destinationFolder(@Nullable String destinationFolder) {
-            this.destinationFolder = destinationFolder;
+            $.destinationFolder = destinationFolder;
             return this;
-        }        public ConnectorMappingCompleteOperationResponse build() {
-            return new ConnectorMappingCompleteOperationResponse(completionOperationType, destinationFolder);
+        }
+
+        public ConnectorMappingCompleteOperationResponse build() {
+            return $;
         }
     }
+
 }

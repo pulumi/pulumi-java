@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="cloudStoragePath", required=true)
-      private final GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath;
+    private GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath;
 
     public GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath() {
         return this.cloudStoragePath;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2DictionaryResponse extends com.pulumi.resou
      * 
      */
     @Import(name="wordList", required=true)
-      private final GooglePrivacyDlpV2WordListResponse wordList;
+    private GooglePrivacyDlpV2WordListResponse wordList;
 
     public GooglePrivacyDlpV2WordListResponse wordList() {
         return this.wordList;
     }
 
-    public GooglePrivacyDlpV2DictionaryResponse(
-        GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath,
-        GooglePrivacyDlpV2WordListResponse wordList) {
-        this.cloudStoragePath = Objects.requireNonNull(cloudStoragePath, "expected parameter 'cloudStoragePath' to be non-null");
-        this.wordList = Objects.requireNonNull(wordList, "expected parameter 'wordList' to be non-null");
-    }
+    private GooglePrivacyDlpV2DictionaryResponse() {}
 
-    private GooglePrivacyDlpV2DictionaryResponse() {
-        this.cloudStoragePath = null;
-        this.wordList = null;
+    private GooglePrivacyDlpV2DictionaryResponse(GooglePrivacyDlpV2DictionaryResponse $) {
+        this.cloudStoragePath = $.cloudStoragePath;
+        this.wordList = $.wordList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DictionaryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath;
-        private GooglePrivacyDlpV2WordListResponse wordList;
+        private GooglePrivacyDlpV2DictionaryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DictionaryResponse();
         }
 
         public Builder(GooglePrivacyDlpV2DictionaryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudStoragePath = defaults.cloudStoragePath;
-    	      this.wordList = defaults.wordList;
+            $ = new GooglePrivacyDlpV2DictionaryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudStoragePath(GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath) {
-            this.cloudStoragePath = Objects.requireNonNull(cloudStoragePath);
+            $.cloudStoragePath = cloudStoragePath;
             return this;
         }
+
         public Builder wordList(GooglePrivacyDlpV2WordListResponse wordList) {
-            this.wordList = Objects.requireNonNull(wordList);
+            $.wordList = wordList;
             return this;
-        }        public GooglePrivacyDlpV2DictionaryResponse build() {
-            return new GooglePrivacyDlpV2DictionaryResponse(cloudStoragePath, wordList);
+        }
+
+        public GooglePrivacyDlpV2DictionaryResponse build() {
+            $.cloudStoragePath = Objects.requireNonNull($.cloudStoragePath, "expected parameter 'cloudStoragePath' to be non-null");
+            $.wordList = Objects.requireNonNull($.wordList, "expected parameter 'wordList' to be non-null");
+            return $;
         }
     }
+
 }

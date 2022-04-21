@@ -20,78 +20,72 @@ public final class AnomalyDetectorMetric extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="aggregationFunction", required=true)
-      private final AnomalyDetectorMetricAggregationFunction aggregationFunction;
+    private AnomalyDetectorMetricAggregationFunction aggregationFunction;
 
     public AnomalyDetectorMetricAggregationFunction aggregationFunction() {
         return this.aggregationFunction;
     }
 
     @Import(name="metricName", required=true)
-      private final String metricName;
+    private String metricName;
 
     public String metricName() {
         return this.metricName;
     }
 
     @Import(name="namespace")
-      private final @Nullable String namespace;
+    private @Nullable String namespace;
 
     public Optional<String> namespace() {
-        return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
+        return Optional.ofNullable(this.namespace);
     }
 
-    public AnomalyDetectorMetric(
-        AnomalyDetectorMetricAggregationFunction aggregationFunction,
-        String metricName,
-        @Nullable String namespace) {
-        this.aggregationFunction = Objects.requireNonNull(aggregationFunction, "expected parameter 'aggregationFunction' to be non-null");
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.namespace = namespace;
-    }
+    private AnomalyDetectorMetric() {}
 
-    private AnomalyDetectorMetric() {
-        this.aggregationFunction = null;
-        this.metricName = null;
-        this.namespace = null;
+    private AnomalyDetectorMetric(AnomalyDetectorMetric $) {
+        this.aggregationFunction = $.aggregationFunction;
+        this.metricName = $.metricName;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorMetric defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AnomalyDetectorMetricAggregationFunction aggregationFunction;
-        private String metricName;
-        private @Nullable String namespace;
+        private AnomalyDetectorMetric $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorMetric();
         }
 
         public Builder(AnomalyDetectorMetric defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationFunction = defaults.aggregationFunction;
-    	      this.metricName = defaults.metricName;
-    	      this.namespace = defaults.namespace;
+            $ = new AnomalyDetectorMetric(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationFunction(AnomalyDetectorMetricAggregationFunction aggregationFunction) {
-            this.aggregationFunction = Objects.requireNonNull(aggregationFunction);
+            $.aggregationFunction = aggregationFunction;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
-        }        public AnomalyDetectorMetric build() {
-            return new AnomalyDetectorMetric(aggregationFunction, metricName, namespace);
+        }
+
+        public AnomalyDetectorMetric build() {
+            $.aggregationFunction = Objects.requireNonNull($.aggregationFunction, "expected parameter 'aggregationFunction' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            return $;
         }
     }
+
 }

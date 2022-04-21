@@ -17,45 +17,45 @@ public final class GetReplicationConfigurationArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="registryId", required=true)
-      private final String registryId;
+    private String registryId;
 
     public String registryId() {
         return this.registryId;
     }
 
-    public GetReplicationConfigurationArgs(String registryId) {
-        this.registryId = Objects.requireNonNull(registryId, "expected parameter 'registryId' to be non-null");
-    }
+    private GetReplicationConfigurationArgs() {}
 
-    private GetReplicationConfigurationArgs() {
-        this.registryId = null;
+    private GetReplicationConfigurationArgs(GetReplicationConfigurationArgs $) {
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registryId;
+        private GetReplicationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationConfigurationArgs();
         }
 
         public Builder(GetReplicationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryId = defaults.registryId;
+            $ = new GetReplicationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryId(String registryId) {
-            this.registryId = Objects.requireNonNull(registryId);
+            $.registryId = registryId;
             return this;
-        }        public GetReplicationConfigurationArgs build() {
-            return new GetReplicationConfigurationArgs(registryId);
+        }
+
+        public GetReplicationConfigurationArgs build() {
+            $.registryId = Objects.requireNonNull($.registryId, "expected parameter 'registryId' to be non-null");
+            return $;
         }
     }
+
 }

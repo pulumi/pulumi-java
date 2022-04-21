@@ -5,13 +5,13 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataGetArgs;
 import com.pulumi.gcp.cloudrun.inputs.DomainMappingSpecGetArgs;
 import com.pulumi.gcp.cloudrun.inputs.DomainMappingStatusGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<DomainMappingMetadataGetArgs> metadata;
+    private @Nullable Output<DomainMappingMetadataGetArgs> metadata;
 
-    public Output<DomainMappingMetadataGetArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<DomainMappingMetadataGetArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<DomainMappingSpecGetArgs> spec;
+    private @Nullable Output<DomainMappingSpecGetArgs> spec;
 
-    public Output<DomainMappingSpecGetArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<DomainMappingSpecGetArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
     /**
@@ -82,118 +82,102 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="statuses")
-      private final @Nullable Output<List<DomainMappingStatusGetArgs>> statuses;
+    private @Nullable Output<List<DomainMappingStatusGetArgs>> statuses;
 
-    public Output<List<DomainMappingStatusGetArgs>> statuses() {
-        return this.statuses == null ? Codegen.empty() : this.statuses;
+    public Optional<Output<List<DomainMappingStatusGetArgs>>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
-    public DomainMappingState(
-        @Nullable Output<String> location,
-        @Nullable Output<DomainMappingMetadataGetArgs> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<DomainMappingSpecGetArgs> spec,
-        @Nullable Output<List<DomainMappingStatusGetArgs>> statuses) {
-        this.location = location;
-        this.metadata = metadata;
-        this.name = name;
-        this.project = project;
-        this.spec = spec;
-        this.statuses = statuses;
-    }
+    private DomainMappingState() {}
 
-    private DomainMappingState() {
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.spec = Codegen.empty();
-        this.statuses = Codegen.empty();
+    private DomainMappingState(DomainMappingState $) {
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.project = $.project;
+        this.spec = $.spec;
+        this.statuses = $.statuses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<DomainMappingMetadataGetArgs> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<DomainMappingSpecGetArgs> spec;
-        private @Nullable Output<List<DomainMappingStatusGetArgs>> statuses;
+        private DomainMappingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingState();
         }
 
         public Builder(DomainMappingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.spec = defaults.spec;
-    	      this.statuses = defaults.statuses;
+            $ = new DomainMappingState(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<DomainMappingMetadataGetArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable DomainMappingMetadataGetArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(DomainMappingMetadataGetArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder spec(@Nullable Output<DomainMappingSpecGetArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable DomainMappingSpecGetArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
+
+        public Builder spec(DomainMappingSpecGetArgs spec) {
+            return spec(Output.of(spec));
         }
+
         public Builder statuses(@Nullable Output<List<DomainMappingStatusGetArgs>> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
-        public Builder statuses(@Nullable List<DomainMappingStatusGetArgs> statuses) {
-            this.statuses = Codegen.ofNullable(statuses);
-            return this;
+
+        public Builder statuses(List<DomainMappingStatusGetArgs> statuses) {
+            return statuses(Output.of(statuses));
         }
+
         public Builder statuses(DomainMappingStatusGetArgs... statuses) {
             return statuses(List.of(statuses));
-        }        public DomainMappingState build() {
-            return new DomainMappingState(location, metadata, name, project, spec, statuses);
+        }
+
+        public DomainMappingState build() {
+            return $;
         }
     }
+
 }

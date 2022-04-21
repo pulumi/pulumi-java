@@ -31,7 +31,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="correlationId", required=true)
-      private final String correlationId;
+    private String correlationId;
 
     public String correlationId() {
         return this.correlationId;
@@ -42,7 +42,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="debugSetting", required=true)
-      private final DebugSettingResponse debugSetting;
+    private DebugSettingResponse debugSetting;
 
     public DebugSettingResponse debugSetting() {
         return this.debugSetting;
@@ -53,7 +53,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="dependencies", required=true)
-      private final List<DependencyResponse> dependencies;
+    private List<DependencyResponse> dependencies;
 
     public List<DependencyResponse> dependencies() {
         return this.dependencies;
@@ -64,7 +64,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -75,7 +75,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="error", required=true)
-      private final ErrorResponseResponse error;
+    private ErrorResponseResponse error;
 
     public ErrorResponseResponse error() {
         return this.error;
@@ -86,7 +86,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -97,7 +97,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="onErrorDeployment", required=true)
-      private final OnErrorDeploymentExtendedResponse onErrorDeployment;
+    private OnErrorDeploymentExtendedResponse onErrorDeployment;
 
     public OnErrorDeploymentExtendedResponse onErrorDeployment() {
         return this.onErrorDeployment;
@@ -108,7 +108,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="outputResources", required=true)
-      private final List<ResourceReferenceResponse> outputResources;
+    private List<ResourceReferenceResponse> outputResources;
 
     public List<ResourceReferenceResponse> outputResources() {
         return this.outputResources;
@@ -119,7 +119,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="outputs", required=true)
-      private final Object outputs;
+    private Object outputs;
 
     public Object outputs() {
         return this.outputs;
@@ -130,7 +130,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="parameters", required=true)
-      private final Object parameters;
+    private Object parameters;
 
     public Object parameters() {
         return this.parameters;
@@ -141,7 +141,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="parametersLink", required=true)
-      private final ParametersLinkResponse parametersLink;
+    private ParametersLinkResponse parametersLink;
 
     public ParametersLinkResponse parametersLink() {
         return this.parametersLink;
@@ -152,7 +152,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="providers", required=true)
-      private final List<ProviderResponse> providers;
+    private List<ProviderResponse> providers;
 
     public List<ProviderResponse> providers() {
         return this.providers;
@@ -163,7 +163,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -174,7 +174,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="templateHash", required=true)
-      private final String templateHash;
+    private String templateHash;
 
     public String templateHash() {
         return this.templateHash;
@@ -185,7 +185,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="templateLink", required=true)
-      private final TemplateLinkResponse templateLink;
+    private TemplateLinkResponse templateLink;
 
     public TemplateLinkResponse templateLink() {
         return this.templateLink;
@@ -196,7 +196,7 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="timestamp", required=true)
-      private final String timestamp;
+    private String timestamp;
 
     public String timestamp() {
         return this.timestamp;
@@ -207,202 +207,173 @@ public final class DeploymentPropertiesExtendedResponse extends com.pulumi.resou
      * 
      */
     @Import(name="validatedResources", required=true)
-      private final List<ResourceReferenceResponse> validatedResources;
+    private List<ResourceReferenceResponse> validatedResources;
 
     public List<ResourceReferenceResponse> validatedResources() {
         return this.validatedResources;
     }
 
-    public DeploymentPropertiesExtendedResponse(
-        String correlationId,
-        DebugSettingResponse debugSetting,
-        List<DependencyResponse> dependencies,
-        String duration,
-        ErrorResponseResponse error,
-        String mode,
-        OnErrorDeploymentExtendedResponse onErrorDeployment,
-        List<ResourceReferenceResponse> outputResources,
-        Object outputs,
-        Object parameters,
-        ParametersLinkResponse parametersLink,
-        List<ProviderResponse> providers,
-        String provisioningState,
-        String templateHash,
-        TemplateLinkResponse templateLink,
-        String timestamp,
-        List<ResourceReferenceResponse> validatedResources) {
-        this.correlationId = Objects.requireNonNull(correlationId, "expected parameter 'correlationId' to be non-null");
-        this.debugSetting = Objects.requireNonNull(debugSetting, "expected parameter 'debugSetting' to be non-null");
-        this.dependencies = Objects.requireNonNull(dependencies, "expected parameter 'dependencies' to be non-null");
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.onErrorDeployment = Objects.requireNonNull(onErrorDeployment, "expected parameter 'onErrorDeployment' to be non-null");
-        this.outputResources = Objects.requireNonNull(outputResources, "expected parameter 'outputResources' to be non-null");
-        this.outputs = Objects.requireNonNull(outputs, "expected parameter 'outputs' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.parametersLink = Objects.requireNonNull(parametersLink, "expected parameter 'parametersLink' to be non-null");
-        this.providers = Objects.requireNonNull(providers, "expected parameter 'providers' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.templateHash = Objects.requireNonNull(templateHash, "expected parameter 'templateHash' to be non-null");
-        this.templateLink = Objects.requireNonNull(templateLink, "expected parameter 'templateLink' to be non-null");
-        this.timestamp = Objects.requireNonNull(timestamp, "expected parameter 'timestamp' to be non-null");
-        this.validatedResources = Objects.requireNonNull(validatedResources, "expected parameter 'validatedResources' to be non-null");
-    }
+    private DeploymentPropertiesExtendedResponse() {}
 
-    private DeploymentPropertiesExtendedResponse() {
-        this.correlationId = null;
-        this.debugSetting = null;
-        this.dependencies = List.of();
-        this.duration = null;
-        this.error = null;
-        this.mode = null;
-        this.onErrorDeployment = null;
-        this.outputResources = List.of();
-        this.outputs = null;
-        this.parameters = null;
-        this.parametersLink = null;
-        this.providers = List.of();
-        this.provisioningState = null;
-        this.templateHash = null;
-        this.templateLink = null;
-        this.timestamp = null;
-        this.validatedResources = List.of();
+    private DeploymentPropertiesExtendedResponse(DeploymentPropertiesExtendedResponse $) {
+        this.correlationId = $.correlationId;
+        this.debugSetting = $.debugSetting;
+        this.dependencies = $.dependencies;
+        this.duration = $.duration;
+        this.error = $.error;
+        this.mode = $.mode;
+        this.onErrorDeployment = $.onErrorDeployment;
+        this.outputResources = $.outputResources;
+        this.outputs = $.outputs;
+        this.parameters = $.parameters;
+        this.parametersLink = $.parametersLink;
+        this.providers = $.providers;
+        this.provisioningState = $.provisioningState;
+        this.templateHash = $.templateHash;
+        this.templateLink = $.templateLink;
+        this.timestamp = $.timestamp;
+        this.validatedResources = $.validatedResources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentPropertiesExtendedResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String correlationId;
-        private DebugSettingResponse debugSetting;
-        private List<DependencyResponse> dependencies;
-        private String duration;
-        private ErrorResponseResponse error;
-        private String mode;
-        private OnErrorDeploymentExtendedResponse onErrorDeployment;
-        private List<ResourceReferenceResponse> outputResources;
-        private Object outputs;
-        private Object parameters;
-        private ParametersLinkResponse parametersLink;
-        private List<ProviderResponse> providers;
-        private String provisioningState;
-        private String templateHash;
-        private TemplateLinkResponse templateLink;
-        private String timestamp;
-        private List<ResourceReferenceResponse> validatedResources;
+        private DeploymentPropertiesExtendedResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentPropertiesExtendedResponse();
         }
 
         public Builder(DeploymentPropertiesExtendedResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.correlationId = defaults.correlationId;
-    	      this.debugSetting = defaults.debugSetting;
-    	      this.dependencies = defaults.dependencies;
-    	      this.duration = defaults.duration;
-    	      this.error = defaults.error;
-    	      this.mode = defaults.mode;
-    	      this.onErrorDeployment = defaults.onErrorDeployment;
-    	      this.outputResources = defaults.outputResources;
-    	      this.outputs = defaults.outputs;
-    	      this.parameters = defaults.parameters;
-    	      this.parametersLink = defaults.parametersLink;
-    	      this.providers = defaults.providers;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.templateHash = defaults.templateHash;
-    	      this.templateLink = defaults.templateLink;
-    	      this.timestamp = defaults.timestamp;
-    	      this.validatedResources = defaults.validatedResources;
+            $ = new DeploymentPropertiesExtendedResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder correlationId(String correlationId) {
-            this.correlationId = Objects.requireNonNull(correlationId);
+            $.correlationId = correlationId;
             return this;
         }
+
         public Builder debugSetting(DebugSettingResponse debugSetting) {
-            this.debugSetting = Objects.requireNonNull(debugSetting);
+            $.debugSetting = debugSetting;
             return this;
         }
+
         public Builder dependencies(List<DependencyResponse> dependencies) {
-            this.dependencies = Objects.requireNonNull(dependencies);
+            $.dependencies = dependencies;
             return this;
         }
+
         public Builder dependencies(DependencyResponse... dependencies) {
             return dependencies(List.of(dependencies));
         }
+
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder error(ErrorResponseResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder onErrorDeployment(OnErrorDeploymentExtendedResponse onErrorDeployment) {
-            this.onErrorDeployment = Objects.requireNonNull(onErrorDeployment);
+            $.onErrorDeployment = onErrorDeployment;
             return this;
         }
+
         public Builder outputResources(List<ResourceReferenceResponse> outputResources) {
-            this.outputResources = Objects.requireNonNull(outputResources);
+            $.outputResources = outputResources;
             return this;
         }
+
         public Builder outputResources(ResourceReferenceResponse... outputResources) {
             return outputResources(List.of(outputResources));
         }
+
         public Builder outputs(Object outputs) {
-            this.outputs = Objects.requireNonNull(outputs);
+            $.outputs = outputs;
             return this;
         }
+
         public Builder parameters(Object parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parametersLink(ParametersLinkResponse parametersLink) {
-            this.parametersLink = Objects.requireNonNull(parametersLink);
+            $.parametersLink = parametersLink;
             return this;
         }
+
         public Builder providers(List<ProviderResponse> providers) {
-            this.providers = Objects.requireNonNull(providers);
+            $.providers = providers;
             return this;
         }
+
         public Builder providers(ProviderResponse... providers) {
             return providers(List.of(providers));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder templateHash(String templateHash) {
-            this.templateHash = Objects.requireNonNull(templateHash);
+            $.templateHash = templateHash;
             return this;
         }
+
         public Builder templateLink(TemplateLinkResponse templateLink) {
-            this.templateLink = Objects.requireNonNull(templateLink);
+            $.templateLink = templateLink;
             return this;
         }
+
         public Builder timestamp(String timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp);
+            $.timestamp = timestamp;
             return this;
         }
+
         public Builder validatedResources(List<ResourceReferenceResponse> validatedResources) {
-            this.validatedResources = Objects.requireNonNull(validatedResources);
+            $.validatedResources = validatedResources;
             return this;
         }
+
         public Builder validatedResources(ResourceReferenceResponse... validatedResources) {
             return validatedResources(List.of(validatedResources));
-        }        public DeploymentPropertiesExtendedResponse build() {
-            return new DeploymentPropertiesExtendedResponse(correlationId, debugSetting, dependencies, duration, error, mode, onErrorDeployment, outputResources, outputs, parameters, parametersLink, providers, provisioningState, templateHash, templateLink, timestamp, validatedResources);
+        }
+
+        public DeploymentPropertiesExtendedResponse build() {
+            $.correlationId = Objects.requireNonNull($.correlationId, "expected parameter 'correlationId' to be non-null");
+            $.debugSetting = Objects.requireNonNull($.debugSetting, "expected parameter 'debugSetting' to be non-null");
+            $.dependencies = Objects.requireNonNull($.dependencies, "expected parameter 'dependencies' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.onErrorDeployment = Objects.requireNonNull($.onErrorDeployment, "expected parameter 'onErrorDeployment' to be non-null");
+            $.outputResources = Objects.requireNonNull($.outputResources, "expected parameter 'outputResources' to be non-null");
+            $.outputs = Objects.requireNonNull($.outputs, "expected parameter 'outputs' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.parametersLink = Objects.requireNonNull($.parametersLink, "expected parameter 'parametersLink' to be non-null");
+            $.providers = Objects.requireNonNull($.providers, "expected parameter 'providers' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.templateHash = Objects.requireNonNull($.templateHash, "expected parameter 'templateHash' to be non-null");
+            $.templateLink = Objects.requireNonNull($.templateLink, "expected parameter 'templateLink' to be non-null");
+            $.timestamp = Objects.requireNonNull($.timestamp, "expected parameter 'timestamp' to be non-null");
+            $.validatedResources = Objects.requireNonNull($.validatedResources, "expected parameter 'validatedResources' to be non-null");
+            return $;
         }
     }
+
 }

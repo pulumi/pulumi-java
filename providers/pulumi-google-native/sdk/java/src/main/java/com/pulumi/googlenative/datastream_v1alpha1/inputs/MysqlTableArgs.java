@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlColumnArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mysqlColumns")
-      private final @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
+    private @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
 
-    public Output<List<MysqlColumnArgs>> mysqlColumns() {
-        return this.mysqlColumns == null ? Codegen.empty() : this.mysqlColumns;
+    public Optional<Output<List<MysqlColumnArgs>>> mysqlColumns() {
+        return Optional.ofNullable(this.mysqlColumns);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class MysqlTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableName")
-      private final @Nullable Output<String> tableName;
+    private @Nullable Output<String> tableName;
 
-    public Output<String> tableName() {
-        return this.tableName == null ? Codegen.empty() : this.tableName;
+    public Optional<Output<String>> tableName() {
+        return Optional.ofNullable(this.tableName);
     }
 
-    public MysqlTableArgs(
-        @Nullable Output<List<MysqlColumnArgs>> mysqlColumns,
-        @Nullable Output<String> tableName) {
-        this.mysqlColumns = mysqlColumns;
-        this.tableName = tableName;
-    }
+    private MysqlTableArgs() {}
 
-    private MysqlTableArgs() {
-        this.mysqlColumns = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private MysqlTableArgs(MysqlTableArgs $) {
+        this.mysqlColumns = $.mysqlColumns;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
-        private @Nullable Output<String> tableName;
+        private MysqlTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlTableArgs();
         }
 
         public Builder(MysqlTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mysqlColumns = defaults.mysqlColumns;
-    	      this.tableName = defaults.tableName;
+            $ = new MysqlTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mysqlColumns(@Nullable Output<List<MysqlColumnArgs>> mysqlColumns) {
-            this.mysqlColumns = mysqlColumns;
+            $.mysqlColumns = mysqlColumns;
             return this;
         }
-        public Builder mysqlColumns(@Nullable List<MysqlColumnArgs> mysqlColumns) {
-            this.mysqlColumns = Codegen.ofNullable(mysqlColumns);
-            return this;
+
+        public Builder mysqlColumns(List<MysqlColumnArgs> mysqlColumns) {
+            return mysqlColumns(Output.of(mysqlColumns));
         }
+
         public Builder mysqlColumns(MysqlColumnArgs... mysqlColumns) {
             return mysqlColumns(List.of(mysqlColumns));
         }
+
         public Builder tableName(@Nullable Output<String> tableName) {
-            this.tableName = tableName;
+            $.tableName = tableName;
             return this;
         }
-        public Builder tableName(@Nullable String tableName) {
-            this.tableName = Codegen.ofNullable(tableName);
-            return this;
-        }        public MysqlTableArgs build() {
-            return new MysqlTableArgs(mysqlColumns, tableName);
+
+        public Builder tableName(String tableName) {
+            return tableName(Output.of(tableName));
+        }
+
+        public MysqlTableArgs build() {
+            return $;
         }
     }
+
 }

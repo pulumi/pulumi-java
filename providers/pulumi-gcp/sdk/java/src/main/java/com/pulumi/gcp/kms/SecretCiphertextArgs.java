@@ -5,9 +5,9 @@ package com.pulumi.gcp.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecretCiphertextArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="additionalAuthenticatedData")
-      private final @Nullable Output<String> additionalAuthenticatedData;
+    private @Nullable Output<String> additionalAuthenticatedData;
 
-    public Output<String> additionalAuthenticatedData() {
-        return this.additionalAuthenticatedData == null ? Codegen.empty() : this.additionalAuthenticatedData;
+    public Optional<Output<String>> additionalAuthenticatedData() {
+        return Optional.ofNullable(this.additionalAuthenticatedData);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class SecretCiphertextArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cryptoKey", required=true)
-      private final Output<String> cryptoKey;
+    private Output<String> cryptoKey;
 
     public Output<String> cryptoKey() {
         return this.cryptoKey;
@@ -45,76 +45,70 @@ public final class SecretCiphertextArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="plaintext", required=true)
-      private final Output<String> plaintext;
+    private Output<String> plaintext;
 
     public Output<String> plaintext() {
         return this.plaintext;
     }
 
-    public SecretCiphertextArgs(
-        @Nullable Output<String> additionalAuthenticatedData,
-        Output<String> cryptoKey,
-        Output<String> plaintext) {
-        this.additionalAuthenticatedData = additionalAuthenticatedData;
-        this.cryptoKey = Objects.requireNonNull(cryptoKey, "expected parameter 'cryptoKey' to be non-null");
-        this.plaintext = Objects.requireNonNull(plaintext, "expected parameter 'plaintext' to be non-null");
-    }
+    private SecretCiphertextArgs() {}
 
-    private SecretCiphertextArgs() {
-        this.additionalAuthenticatedData = Codegen.empty();
-        this.cryptoKey = Codegen.empty();
-        this.plaintext = Codegen.empty();
+    private SecretCiphertextArgs(SecretCiphertextArgs $) {
+        this.additionalAuthenticatedData = $.additionalAuthenticatedData;
+        this.cryptoKey = $.cryptoKey;
+        this.plaintext = $.plaintext;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretCiphertextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> additionalAuthenticatedData;
-        private Output<String> cryptoKey;
-        private Output<String> plaintext;
+        private SecretCiphertextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretCiphertextArgs();
         }
 
         public Builder(SecretCiphertextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalAuthenticatedData = defaults.additionalAuthenticatedData;
-    	      this.cryptoKey = defaults.cryptoKey;
-    	      this.plaintext = defaults.plaintext;
+            $ = new SecretCiphertextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalAuthenticatedData(@Nullable Output<String> additionalAuthenticatedData) {
-            this.additionalAuthenticatedData = additionalAuthenticatedData;
+            $.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
-        public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
-            this.additionalAuthenticatedData = Codegen.ofNullable(additionalAuthenticatedData);
-            return this;
+
+        public Builder additionalAuthenticatedData(String additionalAuthenticatedData) {
+            return additionalAuthenticatedData(Output.of(additionalAuthenticatedData));
         }
+
         public Builder cryptoKey(Output<String> cryptoKey) {
-            this.cryptoKey = Objects.requireNonNull(cryptoKey);
+            $.cryptoKey = cryptoKey;
             return this;
         }
+
         public Builder cryptoKey(String cryptoKey) {
-            this.cryptoKey = Output.of(Objects.requireNonNull(cryptoKey));
-            return this;
+            return cryptoKey(Output.of(cryptoKey));
         }
+
         public Builder plaintext(Output<String> plaintext) {
-            this.plaintext = Objects.requireNonNull(plaintext);
+            $.plaintext = plaintext;
             return this;
         }
+
         public Builder plaintext(String plaintext) {
-            this.plaintext = Output.of(Objects.requireNonNull(plaintext));
-            return this;
-        }        public SecretCiphertextArgs build() {
-            return new SecretCiphertextArgs(additionalAuthenticatedData, cryptoKey, plaintext);
+            return plaintext(Output.of(plaintext));
+        }
+
+        public SecretCiphertextArgs build() {
+            $.cryptoKey = Objects.requireNonNull($.cryptoKey, "expected parameter 'cryptoKey' to be non-null");
+            $.plaintext = Objects.requireNonNull($.plaintext, "expected parameter 'plaintext' to be non-null");
+            return $;
         }
     }
+
 }

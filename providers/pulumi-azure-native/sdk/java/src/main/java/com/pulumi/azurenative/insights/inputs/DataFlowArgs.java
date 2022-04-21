@@ -7,10 +7,10 @@ import com.pulumi.azurenative.insights.enums.KnownDataFlowStreams;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinations")
-      private final @Nullable Output<List<String>> destinations;
+    private @Nullable Output<List<String>> destinations;
 
-    public Output<List<String>> destinations() {
-        return this.destinations == null ? Codegen.empty() : this.destinations;
+    public Optional<Output<List<String>>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
@@ -38,69 +38,66 @@ public final class DataFlowArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streams")
-      private final @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams;
+    private @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams;
 
-    public Output<List<Either<String,KnownDataFlowStreams>>> streams() {
-        return this.streams == null ? Codegen.empty() : this.streams;
+    public Optional<Output<List<Either<String,KnownDataFlowStreams>>>> streams() {
+        return Optional.ofNullable(this.streams);
     }
 
-    public DataFlowArgs(
-        @Nullable Output<List<String>> destinations,
-        @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams) {
-        this.destinations = destinations;
-        this.streams = streams;
-    }
+    private DataFlowArgs() {}
 
-    private DataFlowArgs() {
-        this.destinations = Codegen.empty();
-        this.streams = Codegen.empty();
+    private DataFlowArgs(DataFlowArgs $) {
+        this.destinations = $.destinations;
+        this.streams = $.streams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataFlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> destinations;
-        private @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams;
+        private DataFlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataFlowArgs();
         }
 
         public Builder(DataFlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.streams = defaults.streams;
+            $ = new DataFlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(@Nullable Output<List<String>> destinations) {
-            this.destinations = destinations;
+            $.destinations = destinations;
             return this;
         }
-        public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = Codegen.ofNullable(destinations);
-            return this;
+
+        public Builder destinations(List<String> destinations) {
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder streams(@Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams) {
-            this.streams = streams;
+            $.streams = streams;
             return this;
         }
-        public Builder streams(@Nullable List<Either<String,KnownDataFlowStreams>> streams) {
-            this.streams = Codegen.ofNullable(streams);
-            return this;
+
+        public Builder streams(List<Either<String,KnownDataFlowStreams>> streams) {
+            return streams(Output.of(streams));
         }
+
         public Builder streams(Either<String,KnownDataFlowStreams>... streams) {
             return streams(List.of(streams));
-        }        public DataFlowArgs build() {
-            return new DataFlowArgs(destinations, streams);
+        }
+
+        public DataFlowArgs build() {
+            return $;
         }
     }
+
 }

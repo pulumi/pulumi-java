@@ -6,9 +6,9 @@ package com.pulumi.aws.glue.inputs;
 import com.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DataCatalogEncryptionSettingsState extends com.pulumi.resourc
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class DataCatalogEncryptionSettingsState extends com.pulumi.resourc
      * 
      */
     @Import(name="dataCatalogEncryptionSettings")
-      private final @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
+    private @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
 
-    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings() {
-        return this.dataCatalogEncryptionSettings == null ? Codegen.empty() : this.dataCatalogEncryptionSettings;
+    public Optional<Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs>> dataCatalogEncryptionSettings() {
+        return Optional.ofNullable(this.dataCatalogEncryptionSettings);
     }
 
-    public DataCatalogEncryptionSettingsState(
-        @Nullable Output<String> catalogId,
-        @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
-        this.catalogId = catalogId;
-        this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
-    }
+    private DataCatalogEncryptionSettingsState() {}
 
-    private DataCatalogEncryptionSettingsState() {
-        this.catalogId = Codegen.empty();
-        this.dataCatalogEncryptionSettings = Codegen.empty();
+    private DataCatalogEncryptionSettingsState(DataCatalogEncryptionSettingsState $) {
+        this.catalogId = $.catalogId;
+        this.dataCatalogEncryptionSettings = $.dataCatalogEncryptionSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCatalogEncryptionSettingsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
+        private DataCatalogEncryptionSettingsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCatalogEncryptionSettingsState();
         }
 
         public Builder(DataCatalogEncryptionSettingsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.dataCatalogEncryptionSettings = defaults.dataCatalogEncryptionSettings;
+            $ = new DataCatalogEncryptionSettingsState(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder dataCatalogEncryptionSettings(@Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
-            this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
+            $.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
             return this;
         }
-        public Builder dataCatalogEncryptionSettings(@Nullable DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs dataCatalogEncryptionSettings) {
-            this.dataCatalogEncryptionSettings = Codegen.ofNullable(dataCatalogEncryptionSettings);
-            return this;
-        }        public DataCatalogEncryptionSettingsState build() {
-            return new DataCatalogEncryptionSettingsState(catalogId, dataCatalogEncryptionSettings);
+
+        public Builder dataCatalogEncryptionSettings(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs dataCatalogEncryptionSettings) {
+            return dataCatalogEncryptionSettings(Output.of(dataCatalogEncryptionSettings));
+        }
+
+        public DataCatalogEncryptionSettingsState build() {
+            return $;
         }
     }
+
 }

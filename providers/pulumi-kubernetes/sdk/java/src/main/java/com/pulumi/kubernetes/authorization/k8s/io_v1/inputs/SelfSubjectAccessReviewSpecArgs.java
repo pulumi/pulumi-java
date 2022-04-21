@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.authorization.k8s.io_v1.inputs.NonResourceAttributesArgs;
 import com.pulumi.kubernetes.authorization.k8s.io_v1.inputs.ResourceAttributesArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SelfSubjectAccessReviewSpecArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="nonResourceAttributes")
-      private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
+    private @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
-    public Output<NonResourceAttributesArgs> nonResourceAttributes() {
-        return this.nonResourceAttributes == null ? Codegen.empty() : this.nonResourceAttributes;
+    public Optional<Output<NonResourceAttributesArgs>> nonResourceAttributes() {
+        return Optional.ofNullable(this.nonResourceAttributes);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SelfSubjectAccessReviewSpecArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceAttributes")
-      private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
+    private @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
-    public Output<ResourceAttributesArgs> resourceAttributes() {
-        return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
+    public Optional<Output<ResourceAttributesArgs>> resourceAttributes() {
+        return Optional.ofNullable(this.resourceAttributes);
     }
 
-    public SelfSubjectAccessReviewSpecArgs(
-        @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes,
-        @Nullable Output<ResourceAttributesArgs> resourceAttributes) {
-        this.nonResourceAttributes = nonResourceAttributes;
-        this.resourceAttributes = resourceAttributes;
-    }
+    private SelfSubjectAccessReviewSpecArgs() {}
 
-    private SelfSubjectAccessReviewSpecArgs() {
-        this.nonResourceAttributes = Codegen.empty();
-        this.resourceAttributes = Codegen.empty();
+    private SelfSubjectAccessReviewSpecArgs(SelfSubjectAccessReviewSpecArgs $) {
+        this.nonResourceAttributes = $.nonResourceAttributes;
+        this.resourceAttributes = $.resourceAttributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelfSubjectAccessReviewSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
-        private @Nullable Output<ResourceAttributesArgs> resourceAttributes;
+        private SelfSubjectAccessReviewSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelfSubjectAccessReviewSpecArgs();
         }
 
         public Builder(SelfSubjectAccessReviewSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nonResourceAttributes = defaults.nonResourceAttributes;
-    	      this.resourceAttributes = defaults.resourceAttributes;
+            $ = new SelfSubjectAccessReviewSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nonResourceAttributes(@Nullable Output<NonResourceAttributesArgs> nonResourceAttributes) {
-            this.nonResourceAttributes = nonResourceAttributes;
+            $.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
-        public Builder nonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
-            this.nonResourceAttributes = Codegen.ofNullable(nonResourceAttributes);
-            return this;
+
+        public Builder nonResourceAttributes(NonResourceAttributesArgs nonResourceAttributes) {
+            return nonResourceAttributes(Output.of(nonResourceAttributes));
         }
+
         public Builder resourceAttributes(@Nullable Output<ResourceAttributesArgs> resourceAttributes) {
-            this.resourceAttributes = resourceAttributes;
+            $.resourceAttributes = resourceAttributes;
             return this;
         }
-        public Builder resourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
-            this.resourceAttributes = Codegen.ofNullable(resourceAttributes);
-            return this;
-        }        public SelfSubjectAccessReviewSpecArgs build() {
-            return new SelfSubjectAccessReviewSpecArgs(nonResourceAttributes, resourceAttributes);
+
+        public Builder resourceAttributes(ResourceAttributesArgs resourceAttributes) {
+            return resourceAttributes(Output.of(resourceAttributes));
+        }
+
+        public SelfSubjectAccessReviewSpecArgs build() {
+            return $;
         }
     }
+
 }

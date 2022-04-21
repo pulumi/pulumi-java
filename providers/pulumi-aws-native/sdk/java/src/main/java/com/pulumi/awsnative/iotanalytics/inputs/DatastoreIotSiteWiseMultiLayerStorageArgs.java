@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatastoreCustomerManagedS3StorageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DatastoreIotSiteWiseMultiLayerStorageArgs extends com.pulumi.
     public static final DatastoreIotSiteWiseMultiLayerStorageArgs Empty = new DatastoreIotSiteWiseMultiLayerStorageArgs();
 
     @Import(name="customerManagedS3Storage")
-      private final @Nullable Output<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage;
+    private @Nullable Output<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage;
 
-    public Output<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage() {
-        return this.customerManagedS3Storage == null ? Codegen.empty() : this.customerManagedS3Storage;
+    public Optional<Output<DatastoreCustomerManagedS3StorageArgs>> customerManagedS3Storage() {
+        return Optional.ofNullable(this.customerManagedS3Storage);
     }
 
-    public DatastoreIotSiteWiseMultiLayerStorageArgs(@Nullable Output<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage) {
-        this.customerManagedS3Storage = customerManagedS3Storage;
-    }
+    private DatastoreIotSiteWiseMultiLayerStorageArgs() {}
 
-    private DatastoreIotSiteWiseMultiLayerStorageArgs() {
-        this.customerManagedS3Storage = Codegen.empty();
+    private DatastoreIotSiteWiseMultiLayerStorageArgs(DatastoreIotSiteWiseMultiLayerStorageArgs $) {
+        this.customerManagedS3Storage = $.customerManagedS3Storage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreIotSiteWiseMultiLayerStorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage;
+        private DatastoreIotSiteWiseMultiLayerStorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreIotSiteWiseMultiLayerStorageArgs();
         }
 
         public Builder(DatastoreIotSiteWiseMultiLayerStorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerManagedS3Storage = defaults.customerManagedS3Storage;
+            $ = new DatastoreIotSiteWiseMultiLayerStorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerManagedS3Storage(@Nullable Output<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage) {
-            this.customerManagedS3Storage = customerManagedS3Storage;
+            $.customerManagedS3Storage = customerManagedS3Storage;
             return this;
         }
-        public Builder customerManagedS3Storage(@Nullable DatastoreCustomerManagedS3StorageArgs customerManagedS3Storage) {
-            this.customerManagedS3Storage = Codegen.ofNullable(customerManagedS3Storage);
-            return this;
-        }        public DatastoreIotSiteWiseMultiLayerStorageArgs build() {
-            return new DatastoreIotSiteWiseMultiLayerStorageArgs(customerManagedS3Storage);
+
+        public Builder customerManagedS3Storage(DatastoreCustomerManagedS3StorageArgs customerManagedS3Storage) {
+            return customerManagedS3Storage(Output.of(customerManagedS3Storage));
+        }
+
+        public DatastoreIotSiteWiseMultiLayerStorageArgs build() {
+            return $;
         }
     }
+
 }

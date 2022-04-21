@@ -33,10 +33,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="accountEndpoint")
-      private final @Nullable Object accountEndpoint;
+    private @Nullable Object accountEndpoint;
 
     public Optional<Object> accountEndpoint() {
-        return this.accountEndpoint == null ? Optional.empty() : Optional.ofNullable(this.accountEndpoint);
+        return Optional.ofNullable(this.accountEndpoint);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey() {
-        return this.accountKey == null ? null : this.accountKey;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> accountKey() {
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="azureCloudType")
-      private final @Nullable Object azureCloudType;
+    private @Nullable Object azureCloudType;
 
     public Optional<Object> azureCloudType() {
-        return this.azureCloudType == null ? Optional.empty() : Optional.ofNullable(this.azureCloudType);
+        return Optional.ofNullable(this.azureCloudType);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionMode")
-      private final @Nullable String connectionMode;
+    private @Nullable String connectionMode;
 
     public Optional<String> connectionMode() {
-        return this.connectionMode == null ? Optional.empty() : Optional.ofNullable(this.connectionMode);
+        return Optional.ofNullable(this.connectionMode);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Object connectionString;
+    private @Nullable Object connectionString;
 
     public Optional<Object> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="database")
-      private final @Nullable Object database;
+    private @Nullable Object database;
 
     public Optional<Object> database() {
-        return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
+        return Optional.ofNullable(this.database);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="servicePrincipalCredential")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential() {
-        return this.servicePrincipalCredential == null ? null : this.servicePrincipalCredential;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalCredential() {
+        return Optional.ofNullable(this.servicePrincipalCredential);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="servicePrincipalCredentialType")
-      private final @Nullable String servicePrincipalCredentialType;
+    private @Nullable String servicePrincipalCredentialType;
 
     public Optional<String> servicePrincipalCredentialType() {
-        return this.servicePrincipalCredentialType == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalCredentialType);
+        return Optional.ofNullable(this.servicePrincipalCredentialType);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="servicePrincipalId")
-      private final @Nullable Object servicePrincipalId;
+    private @Nullable Object servicePrincipalId;
 
     public Optional<Object> servicePrincipalId() {
-        return this.servicePrincipalId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalId);
+        return Optional.ofNullable(this.servicePrincipalId);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Object tenant;
+    private @Nullable Object tenant;
 
     public Optional<Object> tenant() {
-        return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -210,193 +210,145 @@ public final class CosmosDbLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public CosmosDbLinkedServiceResponse(
-        @Nullable Object accountEndpoint,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey,
-        @Nullable List<Object> annotations,
-        @Nullable Object azureCloudType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String connectionMode,
-        @Nullable Object connectionString,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable Object database,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential,
-        @Nullable String servicePrincipalCredentialType,
-        @Nullable Object servicePrincipalId,
-        @Nullable Object tenant,
-        String type) {
-        this.accountEndpoint = accountEndpoint;
-        this.accountKey = accountKey;
-        this.annotations = annotations;
-        this.azureCloudType = azureCloudType;
-        this.connectVia = connectVia;
-        this.connectionMode = connectionMode;
-        this.connectionString = connectionString;
-        this.credential = credential;
-        this.database = database;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.parameters = parameters;
-        this.servicePrincipalCredential = servicePrincipalCredential;
-        this.servicePrincipalCredentialType = servicePrincipalCredentialType;
-        this.servicePrincipalId = servicePrincipalId;
-        this.tenant = tenant;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private CosmosDbLinkedServiceResponse() {}
 
-    private CosmosDbLinkedServiceResponse() {
-        this.accountEndpoint = null;
-        this.accountKey = null;
-        this.annotations = List.of();
-        this.azureCloudType = null;
-        this.connectVia = null;
-        this.connectionMode = null;
-        this.connectionString = null;
-        this.credential = null;
-        this.database = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.parameters = Map.of();
-        this.servicePrincipalCredential = null;
-        this.servicePrincipalCredentialType = null;
-        this.servicePrincipalId = null;
-        this.tenant = null;
-        this.type = null;
+    private CosmosDbLinkedServiceResponse(CosmosDbLinkedServiceResponse $) {
+        this.accountEndpoint = $.accountEndpoint;
+        this.accountKey = $.accountKey;
+        this.annotations = $.annotations;
+        this.azureCloudType = $.azureCloudType;
+        this.connectVia = $.connectVia;
+        this.connectionMode = $.connectionMode;
+        this.connectionString = $.connectionString;
+        this.credential = $.credential;
+        this.database = $.database;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.parameters = $.parameters;
+        this.servicePrincipalCredential = $.servicePrincipalCredential;
+        this.servicePrincipalCredentialType = $.servicePrincipalCredentialType;
+        this.servicePrincipalId = $.servicePrincipalId;
+        this.tenant = $.tenant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CosmosDbLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object accountEndpoint;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey;
-        private @Nullable List<Object> annotations;
-        private @Nullable Object azureCloudType;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String connectionMode;
-        private @Nullable Object connectionString;
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable Object database;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential;
-        private @Nullable String servicePrincipalCredentialType;
-        private @Nullable Object servicePrincipalId;
-        private @Nullable Object tenant;
-        private String type;
+        private CosmosDbLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CosmosDbLinkedServiceResponse();
         }
 
         public Builder(CosmosDbLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountEndpoint = defaults.accountEndpoint;
-    	      this.accountKey = defaults.accountKey;
-    	      this.annotations = defaults.annotations;
-    	      this.azureCloudType = defaults.azureCloudType;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionMode = defaults.connectionMode;
-    	      this.connectionString = defaults.connectionString;
-    	      this.credential = defaults.credential;
-    	      this.database = defaults.database;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.parameters = defaults.parameters;
-    	      this.servicePrincipalCredential = defaults.servicePrincipalCredential;
-    	      this.servicePrincipalCredentialType = defaults.servicePrincipalCredentialType;
-    	      this.servicePrincipalId = defaults.servicePrincipalId;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
+            $ = new CosmosDbLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountEndpoint(@Nullable Object accountEndpoint) {
-            this.accountEndpoint = accountEndpoint;
+            $.accountEndpoint = accountEndpoint;
             return this;
         }
+
         public Builder accountKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = azureCloudType;
+            $.azureCloudType = azureCloudType;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder connectionMode(@Nullable String connectionMode) {
-            this.connectionMode = connectionMode;
+            $.connectionMode = connectionMode;
             return this;
         }
+
         public Builder connectionString(@Nullable Object connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder database(@Nullable Object database) {
-            this.database = database;
+            $.database = database;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential) {
-            this.servicePrincipalCredential = servicePrincipalCredential;
+            $.servicePrincipalCredential = servicePrincipalCredential;
             return this;
         }
+
         public Builder servicePrincipalCredentialType(@Nullable String servicePrincipalCredentialType) {
-            this.servicePrincipalCredentialType = servicePrincipalCredentialType;
+            $.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
         }
+
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = servicePrincipalId;
+            $.servicePrincipalId = servicePrincipalId;
             return this;
         }
+
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public CosmosDbLinkedServiceResponse build() {
-            return new CosmosDbLinkedServiceResponse(accountEndpoint, accountKey, annotations, azureCloudType, connectVia, connectionMode, connectionString, credential, database, description, encryptedCredential, parameters, servicePrincipalCredential, servicePrincipalCredentialType, servicePrincipalId, tenant, type);
+        }
+
+        public CosmosDbLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

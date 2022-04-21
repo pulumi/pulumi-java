@@ -25,7 +25,7 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="creationParameters", required=true)
-      private final ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters;
+    private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters;
 
     public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters() {
         return this.creationParameters;
@@ -36,7 +36,7 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="destinationPath", required=true)
-      private final String destinationPath;
+    private String destinationPath;
 
     public String destinationPath() {
         return this.destinationPath;
@@ -47,7 +47,7 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -58,73 +58,65 @@ public final class ApplicationScopedVolumeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Boolean readOnly;
+    private @Nullable Boolean readOnly;
 
     public Optional<Boolean> readOnly() {
-        return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
+        return Optional.ofNullable(this.readOnly);
     }
 
-    public ApplicationScopedVolumeResponse(
-        ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters,
-        String destinationPath,
-        String name,
-        @Nullable Boolean readOnly) {
-        this.creationParameters = Objects.requireNonNull(creationParameters, "expected parameter 'creationParameters' to be non-null");
-        this.destinationPath = Objects.requireNonNull(destinationPath, "expected parameter 'destinationPath' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.readOnly = readOnly;
-    }
+    private ApplicationScopedVolumeResponse() {}
 
-    private ApplicationScopedVolumeResponse() {
-        this.creationParameters = null;
-        this.destinationPath = null;
-        this.name = null;
-        this.readOnly = null;
+    private ApplicationScopedVolumeResponse(ApplicationScopedVolumeResponse $) {
+        this.creationParameters = $.creationParameters;
+        this.destinationPath = $.destinationPath;
+        this.name = $.name;
+        this.readOnly = $.readOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationScopedVolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters;
-        private String destinationPath;
-        private String name;
-        private @Nullable Boolean readOnly;
+        private ApplicationScopedVolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationScopedVolumeResponse();
         }
 
         public Builder(ApplicationScopedVolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationParameters = defaults.creationParameters;
-    	      this.destinationPath = defaults.destinationPath;
-    	      this.name = defaults.name;
-    	      this.readOnly = defaults.readOnly;
+            $ = new ApplicationScopedVolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder creationParameters(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters) {
-            this.creationParameters = Objects.requireNonNull(creationParameters);
+            $.creationParameters = creationParameters;
             return this;
         }
+
         public Builder destinationPath(String destinationPath) {
-            this.destinationPath = Objects.requireNonNull(destinationPath);
+            $.destinationPath = destinationPath;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
-        }        public ApplicationScopedVolumeResponse build() {
-            return new ApplicationScopedVolumeResponse(creationParameters, destinationPath, name, readOnly);
+        }
+
+        public ApplicationScopedVolumeResponse build() {
+            $.creationParameters = Objects.requireNonNull($.creationParameters, "expected parameter 'creationParameters' to be non-null");
+            $.destinationPath = Objects.requireNonNull($.destinationPath, "expected parameter 'destinationPath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

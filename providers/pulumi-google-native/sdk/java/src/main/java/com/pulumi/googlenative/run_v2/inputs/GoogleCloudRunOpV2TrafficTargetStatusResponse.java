@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
      * 
      */
     @Import(name="percent", required=true)
-      private final Integer percent;
+    private Integer percent;
 
     public Integer percent() {
         return this.percent;
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
      * 
      */
     @Import(name="revision", required=true)
-      private final String revision;
+    private String revision;
 
     public String revision() {
         return this.revision;
@@ -44,7 +44,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
@@ -55,7 +55,7 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -66,82 +66,73 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse extends com.pul
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public GoogleCloudRunOpV2TrafficTargetStatusResponse(
-        Integer percent,
-        String revision,
-        String tag,
-        String type,
-        String uri) {
-        this.percent = Objects.requireNonNull(percent, "expected parameter 'percent' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private GoogleCloudRunOpV2TrafficTargetStatusResponse() {}
 
-    private GoogleCloudRunOpV2TrafficTargetStatusResponse() {
-        this.percent = null;
-        this.revision = null;
-        this.tag = null;
-        this.type = null;
-        this.uri = null;
+    private GoogleCloudRunOpV2TrafficTargetStatusResponse(GoogleCloudRunOpV2TrafficTargetStatusResponse $) {
+        this.percent = $.percent;
+        this.revision = $.revision;
+        this.tag = $.tag;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2TrafficTargetStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer percent;
-        private String revision;
-        private String tag;
-        private String type;
-        private String uri;
+        private GoogleCloudRunOpV2TrafficTargetStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2TrafficTargetStatusResponse();
         }
 
         public Builder(GoogleCloudRunOpV2TrafficTargetStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.percent = defaults.percent;
-    	      this.revision = defaults.revision;
-    	      this.tag = defaults.tag;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new GoogleCloudRunOpV2TrafficTargetStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder percent(Integer percent) {
-            this.percent = Objects.requireNonNull(percent);
+            $.percent = percent;
             return this;
         }
+
         public Builder revision(String revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public GoogleCloudRunOpV2TrafficTargetStatusResponse build() {
-            return new GoogleCloudRunOpV2TrafficTargetStatusResponse(percent, revision, tag, type, uri);
+        }
+
+        public GoogleCloudRunOpV2TrafficTargetStatusResponse build() {
+            $.percent = Objects.requireNonNull($.percent, "expected parameter 'percent' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

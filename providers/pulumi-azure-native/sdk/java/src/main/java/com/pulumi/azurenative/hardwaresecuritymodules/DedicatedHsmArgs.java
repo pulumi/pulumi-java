@@ -7,11 +7,11 @@ import com.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkProfileArgs;
 import com.pulumi.azurenative.hardwaresecuritymodules.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<NetworkProfileArgs> networkProfile;
+    private @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<NetworkProfileArgs>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -68,7 +68,7 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<SkuArgs> sku;
+    private Output<SkuArgs> sku;
 
     public Output<SkuArgs> sku() {
         return this.sku;
@@ -79,10 +79,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stampId")
-      private final @Nullable Output<String> stampId;
+    private @Nullable Output<String> stampId;
 
-    public Output<String> stampId() {
-        return this.stampId == null ? Codegen.empty() : this.stampId;
+    public Optional<Output<String>> stampId() {
+        return Optional.ofNullable(this.stampId);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -101,144 +101,124 @@ public final class DedicatedHsmArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public DedicatedHsmArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<NetworkProfileArgs> networkProfile,
-        Output<String> resourceGroupName,
-        Output<SkuArgs> sku,
-        @Nullable Output<String> stampId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<String>> zones) {
-        this.location = location;
-        this.name = name;
-        this.networkProfile = networkProfile;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.stampId = stampId;
-        this.tags = tags;
-        this.zones = zones;
-    }
+    private DedicatedHsmArgs() {}
 
-    private DedicatedHsmArgs() {
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkProfile = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.stampId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.zones = Codegen.empty();
+    private DedicatedHsmArgs(DedicatedHsmArgs $) {
+        this.location = $.location;
+        this.name = $.name;
+        this.networkProfile = $.networkProfile;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.stampId = $.stampId;
+        this.tags = $.tags;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedHsmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<NetworkProfileArgs> networkProfile;
-        private Output<String> resourceGroupName;
-        private Output<SkuArgs> sku;
-        private @Nullable Output<String> stampId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<String>> zones;
+        private DedicatedHsmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedHsmArgs();
         }
 
         public Builder(DedicatedHsmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.stampId = defaults.stampId;
-    	      this.tags = defaults.tags;
-    	      this.zones = defaults.zones;
+            $ = new DedicatedHsmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
+
+        public Builder networkProfile(NetworkProfileArgs networkProfile) {
+            return networkProfile(Output.of(networkProfile));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(Output<SkuArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(SkuArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder stampId(@Nullable Output<String> stampId) {
-            this.stampId = stampId;
+            $.stampId = stampId;
             return this;
         }
-        public Builder stampId(@Nullable String stampId) {
-            this.stampId = Codegen.ofNullable(stampId);
-            return this;
+
+        public Builder stampId(String stampId) {
+            return stampId(Output.of(stampId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public DedicatedHsmArgs build() {
-            return new DedicatedHsmArgs(location, name, networkProfile, resourceGroupName, sku, stampId, tags, zones);
+        }
+
+        public DedicatedHsmArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

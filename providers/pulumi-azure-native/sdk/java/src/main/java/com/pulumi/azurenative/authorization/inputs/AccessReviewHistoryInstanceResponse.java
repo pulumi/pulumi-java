@@ -23,10 +23,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="downloadUri", required=true)
-      private final String downloadUri;
+    private String downloadUri;
 
     public String downloadUri() {
         return this.downloadUri;
@@ -45,10 +45,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="expiration")
-      private final @Nullable String expiration;
+    private @Nullable String expiration;
 
     public Optional<String> expiration() {
-        return this.expiration == null ? Optional.empty() : Optional.ofNullable(this.expiration);
+        return Optional.ofNullable(this.expiration);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="fulfilledDateTime")
-      private final @Nullable String fulfilledDateTime;
+    private @Nullable String fulfilledDateTime;
 
     public Optional<String> fulfilledDateTime() {
-        return this.fulfilledDateTime == null ? Optional.empty() : Optional.ofNullable(this.fulfilledDateTime);
+        return Optional.ofNullable(this.fulfilledDateTime);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -78,7 +78,7 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -89,10 +89,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="reviewHistoryPeriodEndDateTime")
-      private final @Nullable String reviewHistoryPeriodEndDateTime;
+    private @Nullable String reviewHistoryPeriodEndDateTime;
 
     public Optional<String> reviewHistoryPeriodEndDateTime() {
-        return this.reviewHistoryPeriodEndDateTime == null ? Optional.empty() : Optional.ofNullable(this.reviewHistoryPeriodEndDateTime);
+        return Optional.ofNullable(this.reviewHistoryPeriodEndDateTime);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="reviewHistoryPeriodStartDateTime")
-      private final @Nullable String reviewHistoryPeriodStartDateTime;
+    private @Nullable String reviewHistoryPeriodStartDateTime;
 
     public Optional<String> reviewHistoryPeriodStartDateTime() {
-        return this.reviewHistoryPeriodStartDateTime == null ? Optional.empty() : Optional.ofNullable(this.reviewHistoryPeriodStartDateTime);
+        return Optional.ofNullable(this.reviewHistoryPeriodStartDateTime);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="runDateTime")
-      private final @Nullable String runDateTime;
+    private @Nullable String runDateTime;
 
     public Optional<String> runDateTime() {
-        return this.runDateTime == null ? Optional.empty() : Optional.ofNullable(this.runDateTime);
+        return Optional.ofNullable(this.runDateTime);
     }
 
     /**
@@ -122,7 +122,7 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -133,136 +133,109 @@ public final class AccessReviewHistoryInstanceResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AccessReviewHistoryInstanceResponse(
-        @Nullable String displayName,
-        String downloadUri,
-        @Nullable String expiration,
-        @Nullable String fulfilledDateTime,
-        String id,
-        String name,
-        @Nullable String reviewHistoryPeriodEndDateTime,
-        @Nullable String reviewHistoryPeriodStartDateTime,
-        @Nullable String runDateTime,
-        String status,
-        String type) {
-        this.displayName = displayName;
-        this.downloadUri = Objects.requireNonNull(downloadUri, "expected parameter 'downloadUri' to be non-null");
-        this.expiration = expiration;
-        this.fulfilledDateTime = fulfilledDateTime;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
-        this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
-        this.runDateTime = runDateTime;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AccessReviewHistoryInstanceResponse() {}
 
-    private AccessReviewHistoryInstanceResponse() {
-        this.displayName = null;
-        this.downloadUri = null;
-        this.expiration = null;
-        this.fulfilledDateTime = null;
-        this.id = null;
-        this.name = null;
-        this.reviewHistoryPeriodEndDateTime = null;
-        this.reviewHistoryPeriodStartDateTime = null;
-        this.runDateTime = null;
-        this.status = null;
-        this.type = null;
+    private AccessReviewHistoryInstanceResponse(AccessReviewHistoryInstanceResponse $) {
+        this.displayName = $.displayName;
+        this.downloadUri = $.downloadUri;
+        this.expiration = $.expiration;
+        this.fulfilledDateTime = $.fulfilledDateTime;
+        this.id = $.id;
+        this.name = $.name;
+        this.reviewHistoryPeriodEndDateTime = $.reviewHistoryPeriodEndDateTime;
+        this.reviewHistoryPeriodStartDateTime = $.reviewHistoryPeriodStartDateTime;
+        this.runDateTime = $.runDateTime;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessReviewHistoryInstanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private String downloadUri;
-        private @Nullable String expiration;
-        private @Nullable String fulfilledDateTime;
-        private String id;
-        private String name;
-        private @Nullable String reviewHistoryPeriodEndDateTime;
-        private @Nullable String reviewHistoryPeriodStartDateTime;
-        private @Nullable String runDateTime;
-        private String status;
-        private String type;
+        private AccessReviewHistoryInstanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessReviewHistoryInstanceResponse();
         }
 
         public Builder(AccessReviewHistoryInstanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.downloadUri = defaults.downloadUri;
-    	      this.expiration = defaults.expiration;
-    	      this.fulfilledDateTime = defaults.fulfilledDateTime;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.reviewHistoryPeriodEndDateTime = defaults.reviewHistoryPeriodEndDateTime;
-    	      this.reviewHistoryPeriodStartDateTime = defaults.reviewHistoryPeriodStartDateTime;
-    	      this.runDateTime = defaults.runDateTime;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new AccessReviewHistoryInstanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder downloadUri(String downloadUri) {
-            this.downloadUri = Objects.requireNonNull(downloadUri);
+            $.downloadUri = downloadUri;
             return this;
         }
+
         public Builder expiration(@Nullable String expiration) {
-            this.expiration = expiration;
+            $.expiration = expiration;
             return this;
         }
+
         public Builder fulfilledDateTime(@Nullable String fulfilledDateTime) {
-            this.fulfilledDateTime = fulfilledDateTime;
+            $.fulfilledDateTime = fulfilledDateTime;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder reviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
-            this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
+            $.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
             return this;
         }
+
         public Builder reviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
-            this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
+            $.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
             return this;
         }
+
         public Builder runDateTime(@Nullable String runDateTime) {
-            this.runDateTime = runDateTime;
+            $.runDateTime = runDateTime;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AccessReviewHistoryInstanceResponse build() {
-            return new AccessReviewHistoryInstanceResponse(displayName, downloadUri, expiration, fulfilledDateTime, id, name, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, runDateTime, status, type);
+        }
+
+        public AccessReviewHistoryInstanceResponse build() {
+            $.downloadUri = Objects.requireNonNull($.downloadUri, "expected parameter 'downloadUri' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

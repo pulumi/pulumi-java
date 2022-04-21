@@ -5,9 +5,9 @@ package com.pulumi.awsnative.networkfirewall;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,84 @@ public final class LoggingConfigurationArgs extends com.pulumi.resources.Resourc
     public static final LoggingConfigurationArgs Empty = new LoggingConfigurationArgs();
 
     @Import(name="firewallArn", required=true)
-      private final Output<String> firewallArn;
+    private Output<String> firewallArn;
 
     public Output<String> firewallArn() {
         return this.firewallArn;
     }
 
     @Import(name="firewallName")
-      private final @Nullable Output<String> firewallName;
+    private @Nullable Output<String> firewallName;
 
-    public Output<String> firewallName() {
-        return this.firewallName == null ? Codegen.empty() : this.firewallName;
+    public Optional<Output<String>> firewallName() {
+        return Optional.ofNullable(this.firewallName);
     }
 
     @Import(name="loggingConfiguration", required=true)
-      private final Output<com.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration;
+    private Output<com.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration;
 
     public Output<com.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration() {
         return this.loggingConfiguration;
     }
 
-    public LoggingConfigurationArgs(
-        Output<String> firewallArn,
-        @Nullable Output<String> firewallName,
-        Output<com.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration) {
-        this.firewallArn = Objects.requireNonNull(firewallArn, "expected parameter 'firewallArn' to be non-null");
-        this.firewallName = firewallName;
-        this.loggingConfiguration = Objects.requireNonNull(loggingConfiguration, "expected parameter 'loggingConfiguration' to be non-null");
-    }
+    private LoggingConfigurationArgs() {}
 
-    private LoggingConfigurationArgs() {
-        this.firewallArn = Codegen.empty();
-        this.firewallName = Codegen.empty();
-        this.loggingConfiguration = Codegen.empty();
+    private LoggingConfigurationArgs(LoggingConfigurationArgs $) {
+        this.firewallArn = $.firewallArn;
+        this.firewallName = $.firewallName;
+        this.loggingConfiguration = $.loggingConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> firewallArn;
-        private @Nullable Output<String> firewallName;
-        private Output<com.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration;
+        private LoggingConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationArgs();
         }
 
         public Builder(LoggingConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallArn = defaults.firewallArn;
-    	      this.firewallName = defaults.firewallName;
-    	      this.loggingConfiguration = defaults.loggingConfiguration;
+            $ = new LoggingConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallArn(Output<String> firewallArn) {
-            this.firewallArn = Objects.requireNonNull(firewallArn);
+            $.firewallArn = firewallArn;
             return this;
         }
+
         public Builder firewallArn(String firewallArn) {
-            this.firewallArn = Output.of(Objects.requireNonNull(firewallArn));
-            return this;
+            return firewallArn(Output.of(firewallArn));
         }
+
         public Builder firewallName(@Nullable Output<String> firewallName) {
-            this.firewallName = firewallName;
+            $.firewallName = firewallName;
             return this;
         }
-        public Builder firewallName(@Nullable String firewallName) {
-            this.firewallName = Codegen.ofNullable(firewallName);
-            return this;
+
+        public Builder firewallName(String firewallName) {
+            return firewallName(Output.of(firewallName));
         }
+
         public Builder loggingConfiguration(Output<com.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration) {
-            this.loggingConfiguration = Objects.requireNonNull(loggingConfiguration);
+            $.loggingConfiguration = loggingConfiguration;
             return this;
         }
+
         public Builder loggingConfiguration(com.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs loggingConfiguration) {
-            this.loggingConfiguration = Output.of(Objects.requireNonNull(loggingConfiguration));
-            return this;
-        }        public LoggingConfigurationArgs build() {
-            return new LoggingConfigurationArgs(firewallArn, firewallName, loggingConfiguration);
+            return loggingConfiguration(Output.of(loggingConfiguration));
+        }
+
+        public LoggingConfigurationArgs build() {
+            $.firewallArn = Objects.requireNonNull($.firewallArn, "expected parameter 'firewallArn' to be non-null");
+            $.loggingConfiguration = Objects.requireNonNull($.loggingConfiguration, "expected parameter 'loggingConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

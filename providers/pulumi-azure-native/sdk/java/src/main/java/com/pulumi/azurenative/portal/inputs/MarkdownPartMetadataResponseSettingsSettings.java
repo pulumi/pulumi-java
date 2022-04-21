@@ -24,10 +24,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
      * 
      */
     @Import(name="content")
-      private final @Nullable String content;
+    private @Nullable String content;
 
     public Optional<String> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
      * 
      */
     @Import(name="markdownSource")
-      private final @Nullable Integer markdownSource;
+    private @Nullable Integer markdownSource;
 
     public Optional<Integer> markdownSource() {
-        return this.markdownSource == null ? Optional.empty() : Optional.ofNullable(this.markdownSource);
+        return Optional.ofNullable(this.markdownSource);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
      * 
      */
     @Import(name="markdownUri")
-      private final @Nullable String markdownUri;
+    private @Nullable String markdownUri;
 
     public Optional<String> markdownUri() {
-        return this.markdownUri == null ? Optional.empty() : Optional.ofNullable(this.markdownUri);
+        return Optional.ofNullable(this.markdownUri);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
      * 
      */
     @Import(name="subtitle")
-      private final @Nullable String subtitle;
+    private @Nullable String subtitle;
 
     public Optional<String> subtitle() {
-        return this.subtitle == null ? Optional.empty() : Optional.ofNullable(this.subtitle);
+        return Optional.ofNullable(this.subtitle);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends com.pulu
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
-    public MarkdownPartMetadataResponseSettingsSettings(
-        @Nullable String content,
-        @Nullable Integer markdownSource,
-        @Nullable String markdownUri,
-        @Nullable String subtitle,
-        @Nullable String title) {
-        this.content = content;
-        this.markdownSource = markdownSource;
-        this.markdownUri = markdownUri;
-        this.subtitle = subtitle;
-        this.title = title;
-    }
+    private MarkdownPartMetadataResponseSettingsSettings() {}
 
-    private MarkdownPartMetadataResponseSettingsSettings() {
-        this.content = null;
-        this.markdownSource = null;
-        this.markdownUri = null;
-        this.subtitle = null;
-        this.title = null;
+    private MarkdownPartMetadataResponseSettingsSettings(MarkdownPartMetadataResponseSettingsSettings $) {
+        this.content = $.content;
+        this.markdownSource = $.markdownSource;
+        this.markdownUri = $.markdownUri;
+        this.subtitle = $.subtitle;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MarkdownPartMetadataResponseSettingsSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String content;
-        private @Nullable Integer markdownSource;
-        private @Nullable String markdownUri;
-        private @Nullable String subtitle;
-        private @Nullable String title;
+        private MarkdownPartMetadataResponseSettingsSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new MarkdownPartMetadataResponseSettingsSettings();
         }
 
         public Builder(MarkdownPartMetadataResponseSettingsSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.markdownSource = defaults.markdownSource;
-    	      this.markdownUri = defaults.markdownUri;
-    	      this.subtitle = defaults.subtitle;
-    	      this.title = defaults.title;
+            $ = new MarkdownPartMetadataResponseSettingsSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable String content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
+
         public Builder markdownSource(@Nullable Integer markdownSource) {
-            this.markdownSource = markdownSource;
+            $.markdownSource = markdownSource;
             return this;
         }
+
         public Builder markdownUri(@Nullable String markdownUri) {
-            this.markdownUri = markdownUri;
+            $.markdownUri = markdownUri;
             return this;
         }
+
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = subtitle;
+            $.subtitle = subtitle;
             return this;
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
-        }        public MarkdownPartMetadataResponseSettingsSettings build() {
-            return new MarkdownPartMetadataResponseSettingsSettings(content, markdownSource, markdownUri, subtitle, title);
+        }
+
+        public MarkdownPartMetadataResponseSettingsSettings build() {
+            return $;
         }
     }
+
 }

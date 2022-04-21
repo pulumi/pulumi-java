@@ -17,97 +17,90 @@ public final class ComponentChild extends com.pulumi.resources.InvokeArgs {
     public static final ComponentChild Empty = new ComponentChild();
 
     @Import(name="children")
-      private final @Nullable List<ComponentChild> children;
+    private @Nullable List<ComponentChild> children;
 
-    public List<ComponentChild> children() {
-        return this.children == null ? List.of() : this.children;
+    public Optional<List<ComponentChild>> children() {
+        return Optional.ofNullable(this.children);
     }
 
     @Import(name="componentType", required=true)
-      private final String componentType;
+    private String componentType;
 
     public String componentType() {
         return this.componentType;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="properties", required=true)
-      private final ComponentProperties properties;
+    private ComponentProperties properties;
 
     public ComponentProperties properties() {
         return this.properties;
     }
 
-    public ComponentChild(
-        @Nullable List<ComponentChild> children,
-        String componentType,
-        String name,
-        ComponentProperties properties) {
-        this.children = children;
-        this.componentType = Objects.requireNonNull(componentType, "expected parameter 'componentType' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private ComponentChild() {}
 
-    private ComponentChild() {
-        this.children = List.of();
-        this.componentType = null;
-        this.name = null;
-        this.properties = null;
+    private ComponentChild(ComponentChild $) {
+        this.children = $.children;
+        this.componentType = $.componentType;
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentChild defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ComponentChild> children;
-        private String componentType;
-        private String name;
-        private ComponentProperties properties;
+        private ComponentChild $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentChild();
         }
 
         public Builder(ComponentChild defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.children = defaults.children;
-    	      this.componentType = defaults.componentType;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new ComponentChild(Objects.requireNonNull(defaults));
         }
 
         public Builder children(@Nullable List<ComponentChild> children) {
-            this.children = children;
+            $.children = children;
             return this;
         }
+
         public Builder children(ComponentChild... children) {
             return children(List.of(children));
         }
+
         public Builder componentType(String componentType) {
-            this.componentType = Objects.requireNonNull(componentType);
+            $.componentType = componentType;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder properties(ComponentProperties properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
-        }        public ComponentChild build() {
-            return new ComponentChild(children, componentType, name, properties);
+        }
+
+        public ComponentChild build() {
+            $.componentType = Objects.requireNonNull($.componentType, "expected parameter 'componentType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

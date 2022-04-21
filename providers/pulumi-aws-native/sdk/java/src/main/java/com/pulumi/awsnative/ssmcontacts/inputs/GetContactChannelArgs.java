@@ -17,45 +17,45 @@ public final class GetContactChannelArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetContactChannelArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetContactChannelArgs() {}
 
-    private GetContactChannelArgs() {
-        this.arn = null;
+    private GetContactChannelArgs(GetContactChannelArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContactChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetContactChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContactChannelArgs();
         }
 
         public Builder(GetContactChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetContactChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetContactChannelArgs build() {
-            return new GetContactChannelArgs(arn);
+        }
+
+        public GetContactChannelArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

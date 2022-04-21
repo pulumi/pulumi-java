@@ -25,7 +25,7 @@ public final class LogicAppReceiverResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="callbackUrl", required=true)
-      private final String callbackUrl;
+    private String callbackUrl;
 
     public String callbackUrl() {
         return this.callbackUrl;
@@ -36,7 +36,7 @@ public final class LogicAppReceiverResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -47,7 +47,7 @@ public final class LogicAppReceiverResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -58,73 +58,66 @@ public final class LogicAppReceiverResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="useCommonAlertSchema")
-      private final @Nullable Boolean useCommonAlertSchema;
+    private @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> useCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
+        return Optional.ofNullable(this.useCommonAlertSchema);
     }
 
-    public LogicAppReceiverResponse(
-        String callbackUrl,
-        String name,
-        String resourceId,
-        @Nullable Boolean useCommonAlertSchema) {
-        this.callbackUrl = Objects.requireNonNull(callbackUrl, "expected parameter 'callbackUrl' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg(useCommonAlertSchema).def(false).getNullable();
-    }
+    private LogicAppReceiverResponse() {}
 
-    private LogicAppReceiverResponse() {
-        this.callbackUrl = null;
-        this.name = null;
-        this.resourceId = null;
-        this.useCommonAlertSchema = null;
+    private LogicAppReceiverResponse(LogicAppReceiverResponse $) {
+        this.callbackUrl = $.callbackUrl;
+        this.name = $.name;
+        this.resourceId = $.resourceId;
+        this.useCommonAlertSchema = $.useCommonAlertSchema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogicAppReceiverResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String callbackUrl;
-        private String name;
-        private String resourceId;
-        private @Nullable Boolean useCommonAlertSchema;
+        private LogicAppReceiverResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogicAppReceiverResponse();
         }
 
         public Builder(LogicAppReceiverResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callbackUrl = defaults.callbackUrl;
-    	      this.name = defaults.name;
-    	      this.resourceId = defaults.resourceId;
-    	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
+            $ = new LogicAppReceiverResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder callbackUrl(String callbackUrl) {
-            this.callbackUrl = Objects.requireNonNull(callbackUrl);
+            $.callbackUrl = callbackUrl;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = useCommonAlertSchema;
+            $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
-        }        public LogicAppReceiverResponse build() {
-            return new LogicAppReceiverResponse(callbackUrl, name, resourceId, useCommonAlertSchema);
+        }
+
+        public LogicAppReceiverResponse build() {
+            $.callbackUrl = Objects.requireNonNull($.callbackUrl, "expected parameter 'callbackUrl' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.useCommonAlertSchema = Codegen.booleanProp("useCommonAlertSchema").arg($.useCommonAlertSchema).def(false).getNullable();
+            return $;
         }
     }
+
 }

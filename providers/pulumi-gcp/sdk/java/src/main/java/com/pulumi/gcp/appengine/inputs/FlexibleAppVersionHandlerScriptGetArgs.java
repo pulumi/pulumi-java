@@ -5,7 +5,6 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FlexibleAppVersionHandlerScriptGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="scriptPath", required=true)
-      private final Output<String> scriptPath;
+    private Output<String> scriptPath;
 
     public Output<String> scriptPath() {
         return this.scriptPath;
     }
 
-    public FlexibleAppVersionHandlerScriptGetArgs(Output<String> scriptPath) {
-        this.scriptPath = Objects.requireNonNull(scriptPath, "expected parameter 'scriptPath' to be non-null");
-    }
+    private FlexibleAppVersionHandlerScriptGetArgs() {}
 
-    private FlexibleAppVersionHandlerScriptGetArgs() {
-        this.scriptPath = Codegen.empty();
+    private FlexibleAppVersionHandlerScriptGetArgs(FlexibleAppVersionHandlerScriptGetArgs $) {
+        this.scriptPath = $.scriptPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionHandlerScriptGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> scriptPath;
+        private FlexibleAppVersionHandlerScriptGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionHandlerScriptGetArgs();
         }
 
         public Builder(FlexibleAppVersionHandlerScriptGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scriptPath = defaults.scriptPath;
+            $ = new FlexibleAppVersionHandlerScriptGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scriptPath(Output<String> scriptPath) {
-            this.scriptPath = Objects.requireNonNull(scriptPath);
+            $.scriptPath = scriptPath;
             return this;
         }
+
         public Builder scriptPath(String scriptPath) {
-            this.scriptPath = Output.of(Objects.requireNonNull(scriptPath));
-            return this;
-        }        public FlexibleAppVersionHandlerScriptGetArgs build() {
-            return new FlexibleAppVersionHandlerScriptGetArgs(scriptPath);
+            return scriptPath(Output.of(scriptPath));
+        }
+
+        public FlexibleAppVersionHandlerScriptGetArgs build() {
+            $.scriptPath = Objects.requireNonNull($.scriptPath, "expected parameter 'scriptPath' to be non-null");
+            return $;
         }
     }
+
 }

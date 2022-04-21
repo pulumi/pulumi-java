@@ -23,10 +23,10 @@ public final class RefreshDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="errorManifestFile")
-      private final @Nullable String errorManifestFile;
+    private @Nullable String errorManifestFile;
 
     public Optional<String> errorManifestFile() {
-        return this.errorManifestFile == null ? Optional.empty() : Optional.ofNullable(this.errorManifestFile);
+        return Optional.ofNullable(this.errorManifestFile);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RefreshDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="inProgressRefreshJobId")
-      private final @Nullable String inProgressRefreshJobId;
+    private @Nullable String inProgressRefreshJobId;
 
     public Optional<String> inProgressRefreshJobId() {
-        return this.inProgressRefreshJobId == null ? Optional.empty() : Optional.ofNullable(this.inProgressRefreshJobId);
+        return Optional.ofNullable(this.inProgressRefreshJobId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RefreshDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastCompletedRefreshJobTimeInUTC")
-      private final @Nullable String lastCompletedRefreshJobTimeInUTC;
+    private @Nullable String lastCompletedRefreshJobTimeInUTC;
 
     public Optional<String> lastCompletedRefreshJobTimeInUTC() {
-        return this.lastCompletedRefreshJobTimeInUTC == null ? Optional.empty() : Optional.ofNullable(this.lastCompletedRefreshJobTimeInUTC);
+        return Optional.ofNullable(this.lastCompletedRefreshJobTimeInUTC);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class RefreshDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="lastJob")
-      private final @Nullable String lastJob;
+    private @Nullable String lastJob;
 
     public Optional<String> lastJob() {
-        return this.lastJob == null ? Optional.empty() : Optional.ofNullable(this.lastJob);
+        return Optional.ofNullable(this.lastJob);
     }
 
-    public RefreshDetailsResponse(
-        @Nullable String errorManifestFile,
-        @Nullable String inProgressRefreshJobId,
-        @Nullable String lastCompletedRefreshJobTimeInUTC,
-        @Nullable String lastJob) {
-        this.errorManifestFile = errorManifestFile;
-        this.inProgressRefreshJobId = inProgressRefreshJobId;
-        this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
-        this.lastJob = lastJob;
-    }
+    private RefreshDetailsResponse() {}
 
-    private RefreshDetailsResponse() {
-        this.errorManifestFile = null;
-        this.inProgressRefreshJobId = null;
-        this.lastCompletedRefreshJobTimeInUTC = null;
-        this.lastJob = null;
+    private RefreshDetailsResponse(RefreshDetailsResponse $) {
+        this.errorManifestFile = $.errorManifestFile;
+        this.inProgressRefreshJobId = $.inProgressRefreshJobId;
+        this.lastCompletedRefreshJobTimeInUTC = $.lastCompletedRefreshJobTimeInUTC;
+        this.lastJob = $.lastJob;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RefreshDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String errorManifestFile;
-        private @Nullable String inProgressRefreshJobId;
-        private @Nullable String lastCompletedRefreshJobTimeInUTC;
-        private @Nullable String lastJob;
+        private RefreshDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RefreshDetailsResponse();
         }
 
         public Builder(RefreshDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorManifestFile = defaults.errorManifestFile;
-    	      this.inProgressRefreshJobId = defaults.inProgressRefreshJobId;
-    	      this.lastCompletedRefreshJobTimeInUTC = defaults.lastCompletedRefreshJobTimeInUTC;
-    	      this.lastJob = defaults.lastJob;
+            $ = new RefreshDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorManifestFile(@Nullable String errorManifestFile) {
-            this.errorManifestFile = errorManifestFile;
+            $.errorManifestFile = errorManifestFile;
             return this;
         }
+
         public Builder inProgressRefreshJobId(@Nullable String inProgressRefreshJobId) {
-            this.inProgressRefreshJobId = inProgressRefreshJobId;
+            $.inProgressRefreshJobId = inProgressRefreshJobId;
             return this;
         }
+
         public Builder lastCompletedRefreshJobTimeInUTC(@Nullable String lastCompletedRefreshJobTimeInUTC) {
-            this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
+            $.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
             return this;
         }
+
         public Builder lastJob(@Nullable String lastJob) {
-            this.lastJob = lastJob;
+            $.lastJob = lastJob;
             return this;
-        }        public RefreshDetailsResponse build() {
-            return new RefreshDetailsResponse(errorManifestFile, inProgressRefreshJobId, lastCompletedRefreshJobTimeInUTC, lastJob);
+        }
+
+        public RefreshDetailsResponse build() {
+            return $;
         }
     }
+
 }

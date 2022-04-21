@@ -6,8 +6,8 @@ package com.pulumi.awsnative.networkfirewall.inputs;
 import com.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyPublishMetricActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class FirewallPolicyActionDefinitionArgs extends com.pulumi.resourc
     public static final FirewallPolicyActionDefinitionArgs Empty = new FirewallPolicyActionDefinitionArgs();
 
     @Import(name="publishMetricAction")
-      private final @Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
+    private @Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
 
-    public Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction() {
-        return this.publishMetricAction == null ? Codegen.empty() : this.publishMetricAction;
+    public Optional<Output<FirewallPolicyPublishMetricActionArgs>> publishMetricAction() {
+        return Optional.ofNullable(this.publishMetricAction);
     }
 
-    public FirewallPolicyActionDefinitionArgs(@Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction) {
-        this.publishMetricAction = publishMetricAction;
-    }
+    private FirewallPolicyActionDefinitionArgs() {}
 
-    private FirewallPolicyActionDefinitionArgs() {
-        this.publishMetricAction = Codegen.empty();
+    private FirewallPolicyActionDefinitionArgs(FirewallPolicyActionDefinitionArgs $) {
+        this.publishMetricAction = $.publishMetricAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyActionDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction;
+        private FirewallPolicyActionDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyActionDefinitionArgs();
         }
 
         public Builder(FirewallPolicyActionDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishMetricAction = defaults.publishMetricAction;
+            $ = new FirewallPolicyActionDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publishMetricAction(@Nullable Output<FirewallPolicyPublishMetricActionArgs> publishMetricAction) {
-            this.publishMetricAction = publishMetricAction;
+            $.publishMetricAction = publishMetricAction;
             return this;
         }
-        public Builder publishMetricAction(@Nullable FirewallPolicyPublishMetricActionArgs publishMetricAction) {
-            this.publishMetricAction = Codegen.ofNullable(publishMetricAction);
-            return this;
-        }        public FirewallPolicyActionDefinitionArgs build() {
-            return new FirewallPolicyActionDefinitionArgs(publishMetricAction);
+
+        public Builder publishMetricAction(FirewallPolicyPublishMetricActionArgs publishMetricAction) {
+            return publishMetricAction(Output.of(publishMetricAction));
+        }
+
+        public FirewallPolicyActionDefinitionArgs build() {
+            return $;
         }
     }
+
 }

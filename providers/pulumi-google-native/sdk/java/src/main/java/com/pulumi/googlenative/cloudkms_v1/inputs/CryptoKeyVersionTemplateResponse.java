@@ -21,7 +21,7 @@ public final class CryptoKeyVersionTemplateResponse extends com.pulumi.resources
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -32,55 +32,52 @@ public final class CryptoKeyVersionTemplateResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protectionLevel", required=true)
-      private final String protectionLevel;
+    private String protectionLevel;
 
     public String protectionLevel() {
         return this.protectionLevel;
     }
 
-    public CryptoKeyVersionTemplateResponse(
-        String algorithm,
-        String protectionLevel) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.protectionLevel = Objects.requireNonNull(protectionLevel, "expected parameter 'protectionLevel' to be non-null");
-    }
+    private CryptoKeyVersionTemplateResponse() {}
 
-    private CryptoKeyVersionTemplateResponse() {
-        this.algorithm = null;
-        this.protectionLevel = null;
+    private CryptoKeyVersionTemplateResponse(CryptoKeyVersionTemplateResponse $) {
+        this.algorithm = $.algorithm;
+        this.protectionLevel = $.protectionLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyVersionTemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private String protectionLevel;
+        private CryptoKeyVersionTemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyVersionTemplateResponse();
         }
 
         public Builder(CryptoKeyVersionTemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.protectionLevel = defaults.protectionLevel;
+            $ = new CryptoKeyVersionTemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder protectionLevel(String protectionLevel) {
-            this.protectionLevel = Objects.requireNonNull(protectionLevel);
+            $.protectionLevel = protectionLevel;
             return this;
-        }        public CryptoKeyVersionTemplateResponse build() {
-            return new CryptoKeyVersionTemplateResponse(algorithm, protectionLevel);
+        }
+
+        public CryptoKeyVersionTemplateResponse build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.protectionLevel = Objects.requireNonNull($.protectionLevel, "expected parameter 'protectionLevel' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="peConnectionName", required=true)
-      private final String peConnectionName;
+    private String peConnectionName;
 
     public String peConnectionName() {
         return this.peConnectionName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="siteName", required=true)
-      private final String siteName;
+    private String siteName;
 
     public String siteName() {
         return this.siteName;
     }
 
-    public GetPrivateEndpointConnectionArgs(
-        String peConnectionName,
-        String resourceGroupName,
-        String siteName) {
-        this.peConnectionName = Objects.requireNonNull(peConnectionName, "expected parameter 'peConnectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
-    }
+    private GetPrivateEndpointConnectionArgs() {}
 
-    private GetPrivateEndpointConnectionArgs() {
-        this.peConnectionName = null;
-        this.resourceGroupName = null;
-        this.siteName = null;
+    private GetPrivateEndpointConnectionArgs(GetPrivateEndpointConnectionArgs $) {
+        this.peConnectionName = $.peConnectionName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteName = $.siteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String peConnectionName;
-        private String resourceGroupName;
-        private String siteName;
+        private GetPrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateEndpointConnectionArgs();
         }
 
         public Builder(GetPrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peConnectionName = defaults.peConnectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteName = defaults.siteName;
+            $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peConnectionName(String peConnectionName) {
-            this.peConnectionName = Objects.requireNonNull(peConnectionName);
+            $.peConnectionName = peConnectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder siteName(String siteName) {
-            this.siteName = Objects.requireNonNull(siteName);
+            $.siteName = siteName;
             return this;
-        }        public GetPrivateEndpointConnectionArgs build() {
-            return new GetPrivateEndpointConnectionArgs(peConnectionName, resourceGroupName, siteName);
+        }
+
+        public GetPrivateEndpointConnectionArgs build() {
+            $.peConnectionName = Objects.requireNonNull($.peConnectionName, "expected parameter 'peConnectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.siteName = Objects.requireNonNull($.siteName, "expected parameter 'siteName' to be non-null");
+            return $;
         }
     }
+
 }

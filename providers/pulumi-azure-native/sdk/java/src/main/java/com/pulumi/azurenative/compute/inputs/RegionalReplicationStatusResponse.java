@@ -22,7 +22,7 @@ public final class RegionalReplicationStatusResponse extends com.pulumi.resource
      * 
      */
     @Import(name="details", required=true)
-      private final String details;
+    private String details;
 
     public String details() {
         return this.details;
@@ -33,7 +33,7 @@ public final class RegionalReplicationStatusResponse extends com.pulumi.resource
      * 
      */
     @Import(name="progress", required=true)
-      private final Integer progress;
+    private Integer progress;
 
     public Integer progress() {
         return this.progress;
@@ -44,7 +44,7 @@ public final class RegionalReplicationStatusResponse extends com.pulumi.resource
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -55,73 +55,66 @@ public final class RegionalReplicationStatusResponse extends com.pulumi.resource
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public RegionalReplicationStatusResponse(
-        String details,
-        Integer progress,
-        String region,
-        String state) {
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.progress = Objects.requireNonNull(progress, "expected parameter 'progress' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private RegionalReplicationStatusResponse() {}
 
-    private RegionalReplicationStatusResponse() {
-        this.details = null;
-        this.progress = null;
-        this.region = null;
-        this.state = null;
+    private RegionalReplicationStatusResponse(RegionalReplicationStatusResponse $) {
+        this.details = $.details;
+        this.progress = $.progress;
+        this.region = $.region;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionalReplicationStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String details;
-        private Integer progress;
-        private String region;
-        private String state;
+        private RegionalReplicationStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionalReplicationStatusResponse();
         }
 
         public Builder(RegionalReplicationStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
-    	      this.progress = defaults.progress;
-    	      this.region = defaults.region;
-    	      this.state = defaults.state;
+            $ = new RegionalReplicationStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder details(String details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder progress(Integer progress) {
-            this.progress = Objects.requireNonNull(progress);
+            $.progress = progress;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public RegionalReplicationStatusResponse build() {
-            return new RegionalReplicationStatusResponse(details, progress, region, state);
+        }
+
+        public RegionalReplicationStatusResponse build() {
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.progress = Objects.requireNonNull($.progress, "expected parameter 'progress' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

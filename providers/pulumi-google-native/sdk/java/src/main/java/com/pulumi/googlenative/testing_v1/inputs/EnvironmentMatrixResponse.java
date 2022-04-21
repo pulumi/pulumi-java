@@ -23,7 +23,7 @@ public final class EnvironmentMatrixResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="androidDeviceList", required=true)
-      private final AndroidDeviceListResponse androidDeviceList;
+    private AndroidDeviceListResponse androidDeviceList;
 
     public AndroidDeviceListResponse androidDeviceList() {
         return this.androidDeviceList;
@@ -34,7 +34,7 @@ public final class EnvironmentMatrixResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="androidMatrix", required=true)
-      private final AndroidMatrixResponse androidMatrix;
+    private AndroidMatrixResponse androidMatrix;
 
     public AndroidMatrixResponse androidMatrix() {
         return this.androidMatrix;
@@ -45,64 +45,59 @@ public final class EnvironmentMatrixResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iosDeviceList", required=true)
-      private final IosDeviceListResponse iosDeviceList;
+    private IosDeviceListResponse iosDeviceList;
 
     public IosDeviceListResponse iosDeviceList() {
         return this.iosDeviceList;
     }
 
-    public EnvironmentMatrixResponse(
-        AndroidDeviceListResponse androidDeviceList,
-        AndroidMatrixResponse androidMatrix,
-        IosDeviceListResponse iosDeviceList) {
-        this.androidDeviceList = Objects.requireNonNull(androidDeviceList, "expected parameter 'androidDeviceList' to be non-null");
-        this.androidMatrix = Objects.requireNonNull(androidMatrix, "expected parameter 'androidMatrix' to be non-null");
-        this.iosDeviceList = Objects.requireNonNull(iosDeviceList, "expected parameter 'iosDeviceList' to be non-null");
-    }
+    private EnvironmentMatrixResponse() {}
 
-    private EnvironmentMatrixResponse() {
-        this.androidDeviceList = null;
-        this.androidMatrix = null;
-        this.iosDeviceList = null;
+    private EnvironmentMatrixResponse(EnvironmentMatrixResponse $) {
+        this.androidDeviceList = $.androidDeviceList;
+        this.androidMatrix = $.androidMatrix;
+        this.iosDeviceList = $.iosDeviceList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentMatrixResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AndroidDeviceListResponse androidDeviceList;
-        private AndroidMatrixResponse androidMatrix;
-        private IosDeviceListResponse iosDeviceList;
+        private EnvironmentMatrixResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentMatrixResponse();
         }
 
         public Builder(EnvironmentMatrixResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidDeviceList = defaults.androidDeviceList;
-    	      this.androidMatrix = defaults.androidMatrix;
-    	      this.iosDeviceList = defaults.iosDeviceList;
+            $ = new EnvironmentMatrixResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder androidDeviceList(AndroidDeviceListResponse androidDeviceList) {
-            this.androidDeviceList = Objects.requireNonNull(androidDeviceList);
+            $.androidDeviceList = androidDeviceList;
             return this;
         }
+
         public Builder androidMatrix(AndroidMatrixResponse androidMatrix) {
-            this.androidMatrix = Objects.requireNonNull(androidMatrix);
+            $.androidMatrix = androidMatrix;
             return this;
         }
+
         public Builder iosDeviceList(IosDeviceListResponse iosDeviceList) {
-            this.iosDeviceList = Objects.requireNonNull(iosDeviceList);
+            $.iosDeviceList = iosDeviceList;
             return this;
-        }        public EnvironmentMatrixResponse build() {
-            return new EnvironmentMatrixResponse(androidDeviceList, androidMatrix, iosDeviceList);
+        }
+
+        public EnvironmentMatrixResponse build() {
+            $.androidDeviceList = Objects.requireNonNull($.androidDeviceList, "expected parameter 'androidDeviceList' to be non-null");
+            $.androidMatrix = Objects.requireNonNull($.androidMatrix, "expected parameter 'androidMatrix' to be non-null");
+            $.iosDeviceList = Objects.requireNonNull($.iosDeviceList, "expected parameter 'iosDeviceList' to be non-null");
+            return $;
         }
     }
+
 }

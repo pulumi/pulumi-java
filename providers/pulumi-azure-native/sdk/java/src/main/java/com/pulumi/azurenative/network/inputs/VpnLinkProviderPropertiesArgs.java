@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VpnLinkProviderPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="linkProviderName")
-      private final @Nullable Output<String> linkProviderName;
+    private @Nullable Output<String> linkProviderName;
 
-    public Output<String> linkProviderName() {
-        return this.linkProviderName == null ? Codegen.empty() : this.linkProviderName;
+    public Optional<Output<String>> linkProviderName() {
+        return Optional.ofNullable(this.linkProviderName);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class VpnLinkProviderPropertiesArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="linkSpeedInMbps")
-      private final @Nullable Output<Integer> linkSpeedInMbps;
+    private @Nullable Output<Integer> linkSpeedInMbps;
 
-    public Output<Integer> linkSpeedInMbps() {
-        return this.linkSpeedInMbps == null ? Codegen.empty() : this.linkSpeedInMbps;
+    public Optional<Output<Integer>> linkSpeedInMbps() {
+        return Optional.ofNullable(this.linkSpeedInMbps);
     }
 
-    public VpnLinkProviderPropertiesArgs(
-        @Nullable Output<String> linkProviderName,
-        @Nullable Output<Integer> linkSpeedInMbps) {
-        this.linkProviderName = linkProviderName;
-        this.linkSpeedInMbps = linkSpeedInMbps;
-    }
+    private VpnLinkProviderPropertiesArgs() {}
 
-    private VpnLinkProviderPropertiesArgs() {
-        this.linkProviderName = Codegen.empty();
-        this.linkSpeedInMbps = Codegen.empty();
+    private VpnLinkProviderPropertiesArgs(VpnLinkProviderPropertiesArgs $) {
+        this.linkProviderName = $.linkProviderName;
+        this.linkSpeedInMbps = $.linkSpeedInMbps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnLinkProviderPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> linkProviderName;
-        private @Nullable Output<Integer> linkSpeedInMbps;
+        private VpnLinkProviderPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnLinkProviderPropertiesArgs();
         }
 
         public Builder(VpnLinkProviderPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkProviderName = defaults.linkProviderName;
-    	      this.linkSpeedInMbps = defaults.linkSpeedInMbps;
+            $ = new VpnLinkProviderPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder linkProviderName(@Nullable Output<String> linkProviderName) {
-            this.linkProviderName = linkProviderName;
+            $.linkProviderName = linkProviderName;
             return this;
         }
-        public Builder linkProviderName(@Nullable String linkProviderName) {
-            this.linkProviderName = Codegen.ofNullable(linkProviderName);
-            return this;
+
+        public Builder linkProviderName(String linkProviderName) {
+            return linkProviderName(Output.of(linkProviderName));
         }
+
         public Builder linkSpeedInMbps(@Nullable Output<Integer> linkSpeedInMbps) {
-            this.linkSpeedInMbps = linkSpeedInMbps;
+            $.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }
-        public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
-            this.linkSpeedInMbps = Codegen.ofNullable(linkSpeedInMbps);
-            return this;
-        }        public VpnLinkProviderPropertiesArgs build() {
-            return new VpnLinkProviderPropertiesArgs(linkProviderName, linkSpeedInMbps);
+
+        public Builder linkSpeedInMbps(Integer linkSpeedInMbps) {
+            return linkSpeedInMbps(Output.of(linkSpeedInMbps));
+        }
+
+        public VpnLinkProviderPropertiesArgs build() {
+            return $;
         }
     }
+
 }

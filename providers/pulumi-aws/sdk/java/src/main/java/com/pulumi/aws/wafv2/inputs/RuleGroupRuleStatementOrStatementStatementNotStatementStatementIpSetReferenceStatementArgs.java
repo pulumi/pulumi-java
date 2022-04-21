@@ -6,9 +6,9 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
      * 
      */
     @Import(name="arn", required=true)
-      private final Output<String> arn;
+    private Output<String> arn;
 
     public Output<String> arn() {
         return this.arn;
@@ -32,63 +32,59 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementStateme
      * 
      */
     @Import(name="ipSetForwardedIpConfig")
-      private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
+    private @Nullable Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
 
-    public Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig() {
-        return this.ipSetForwardedIpConfig == null ? Codegen.empty() : this.ipSetForwardedIpConfig;
+    public Optional<Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs>> ipSetForwardedIpConfig() {
+        return Optional.ofNullable(this.ipSetForwardedIpConfig);
     }
 
-    public RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs(
-        Output<String> arn,
-        @Nullable Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
-    }
+    private RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs() {}
 
-    private RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs() {
-        this.arn = Codegen.empty();
-        this.ipSetForwardedIpConfig = Codegen.empty();
+    private RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs(RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs $) {
+        this.arn = $.arn;
+        this.ipSetForwardedIpConfig = $.ipSetForwardedIpConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> arn;
-        private @Nullable Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig;
+        private RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs();
         }
 
         public Builder(RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.ipSetForwardedIpConfig = defaults.ipSetForwardedIpConfig;
+            $ = new RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(Output<String> arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder arn(String arn) {
-            this.arn = Output.of(Objects.requireNonNull(arn));
-            return this;
+            return arn(Output.of(arn));
         }
+
         public Builder ipSetForwardedIpConfig(@Nullable Output<RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs> ipSetForwardedIpConfig) {
-            this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
+            $.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
             return this;
         }
-        public Builder ipSetForwardedIpConfig(@Nullable RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs ipSetForwardedIpConfig) {
-            this.ipSetForwardedIpConfig = Codegen.ofNullable(ipSetForwardedIpConfig);
-            return this;
-        }        public RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs build() {
-            return new RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs(arn, ipSetForwardedIpConfig);
+
+        public Builder ipSetForwardedIpConfig(RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementIpSetForwardedIpConfigArgs ipSetForwardedIpConfig) {
+            return ipSetForwardedIpConfig(Output.of(ipSetForwardedIpConfig));
+        }
+
+        public RuleGroupRuleStatementOrStatementStatementNotStatementStatementIpSetReferenceStatementArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

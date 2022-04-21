@@ -5,10 +5,10 @@ package com.pulumi.googlenative.baremetalsolution_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="crontabSpec")
-      private final @Nullable Output<String> crontabSpec;
+    private @Nullable Output<String> crontabSpec;
 
-    public Output<String> crontabSpec() {
-        return this.crontabSpec == null ? Codegen.empty() : this.crontabSpec;
+    public Optional<Output<String>> crontabSpec() {
+        return Optional.ofNullable(this.crontabSpec);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionCount")
-      private final @Nullable Output<Integer> retentionCount;
+    private @Nullable Output<Integer> retentionCount;
 
-    public Output<Integer> retentionCount() {
-        return this.retentionCount == null ? Codegen.empty() : this.retentionCount;
+    public Optional<Output<Integer>> retentionCount() {
+        return Optional.ofNullable(this.retentionCount);
     }
 
-    public ScheduleArgs(
-        @Nullable Output<String> crontabSpec,
-        @Nullable Output<String> prefix,
-        @Nullable Output<Integer> retentionCount) {
-        this.crontabSpec = crontabSpec;
-        this.prefix = prefix;
-        this.retentionCount = retentionCount;
-    }
+    private ScheduleArgs() {}
 
-    private ScheduleArgs() {
-        this.crontabSpec = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.retentionCount = Codegen.empty();
+    private ScheduleArgs(ScheduleArgs $) {
+        this.crontabSpec = $.crontabSpec;
+        this.prefix = $.prefix;
+        this.retentionCount = $.retentionCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> crontabSpec;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<Integer> retentionCount;
+        private ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleArgs();
         }
 
         public Builder(ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crontabSpec = defaults.crontabSpec;
-    	      this.prefix = defaults.prefix;
-    	      this.retentionCount = defaults.retentionCount;
+            $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crontabSpec(@Nullable Output<String> crontabSpec) {
-            this.crontabSpec = crontabSpec;
+            $.crontabSpec = crontabSpec;
             return this;
         }
-        public Builder crontabSpec(@Nullable String crontabSpec) {
-            this.crontabSpec = Codegen.ofNullable(crontabSpec);
-            return this;
+
+        public Builder crontabSpec(String crontabSpec) {
+            return crontabSpec(Output.of(crontabSpec));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder retentionCount(@Nullable Output<Integer> retentionCount) {
-            this.retentionCount = retentionCount;
+            $.retentionCount = retentionCount;
             return this;
         }
-        public Builder retentionCount(@Nullable Integer retentionCount) {
-            this.retentionCount = Codegen.ofNullable(retentionCount);
-            return this;
-        }        public ScheduleArgs build() {
-            return new ScheduleArgs(crontabSpec, prefix, retentionCount);
+
+        public Builder retentionCount(Integer retentionCount) {
+            return retentionCount(Output.of(retentionCount));
+        }
+
+        public ScheduleArgs build() {
+            return $;
         }
     }
+
 }

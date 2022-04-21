@@ -19,7 +19,7 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
@@ -30,10 +30,10 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domainOwner")
-      private final @Nullable String domainOwner;
+    private @Nullable String domainOwner;
 
     public Optional<String> domainOwner() {
-        return this.domainOwner == null ? Optional.empty() : Optional.ofNullable(this.domainOwner);
+        return Optional.ofNullable(this.domainOwner);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="format", required=true)
-      private final String format;
+    private String format;
 
     public String format() {
         return this.format;
@@ -52,73 +52,65 @@ public final class GetRepositoryEndpointArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="repository", required=true)
-      private final String repository;
+    private String repository;
 
     public String repository() {
         return this.repository;
     }
 
-    public GetRepositoryEndpointArgs(
-        String domain,
-        @Nullable String domainOwner,
-        String format,
-        String repository) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.domainOwner = domainOwner;
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-    }
+    private GetRepositoryEndpointArgs() {}
 
-    private GetRepositoryEndpointArgs() {
-        this.domain = null;
-        this.domainOwner = null;
-        this.format = null;
-        this.repository = null;
+    private GetRepositoryEndpointArgs(GetRepositoryEndpointArgs $) {
+        this.domain = $.domain;
+        this.domainOwner = $.domainOwner;
+        this.format = $.format;
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepositoryEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domain;
-        private @Nullable String domainOwner;
-        private String format;
-        private String repository;
+        private GetRepositoryEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepositoryEndpointArgs();
         }
 
         public Builder(GetRepositoryEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.domainOwner = defaults.domainOwner;
-    	      this.format = defaults.format;
-    	      this.repository = defaults.repository;
+            $ = new GetRepositoryEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = domainOwner;
+            $.domainOwner = domainOwner;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder repository(String repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
-        }        public GetRepositoryEndpointArgs build() {
-            return new GetRepositoryEndpointArgs(domain, domainOwner, format, repository);
+        }
+
+        public GetRepositoryEndpointArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            return $;
         }
     }
+
 }

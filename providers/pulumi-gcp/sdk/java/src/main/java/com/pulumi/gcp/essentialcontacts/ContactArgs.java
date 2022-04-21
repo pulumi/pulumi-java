@@ -5,7 +5,6 @@ package com.pulumi.gcp.essentialcontacts;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -31,7 +30,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageTag", required=true)
-      private final Output<String> languageTag;
+    private Output<String> languageTag;
 
     public Output<String> languageTag() {
         return this.languageTag;
@@ -42,7 +41,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationCategorySubscriptions", required=true)
-      private final Output<List<String>> notificationCategorySubscriptions;
+    private Output<List<String>> notificationCategorySubscriptions;
 
     public Output<List<String>> notificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
@@ -53,92 +52,86 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
     }
 
-    public ContactArgs(
-        Output<String> email,
-        Output<String> languageTag,
-        Output<List<String>> notificationCategorySubscriptions,
-        Output<String> parent) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.languageTag = Objects.requireNonNull(languageTag, "expected parameter 'languageTag' to be non-null");
-        this.notificationCategorySubscriptions = Objects.requireNonNull(notificationCategorySubscriptions, "expected parameter 'notificationCategorySubscriptions' to be non-null");
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-    }
+    private ContactArgs() {}
 
-    private ContactArgs() {
-        this.email = Codegen.empty();
-        this.languageTag = Codegen.empty();
-        this.notificationCategorySubscriptions = Codegen.empty();
-        this.parent = Codegen.empty();
+    private ContactArgs(ContactArgs $) {
+        this.email = $.email;
+        this.languageTag = $.languageTag;
+        this.notificationCategorySubscriptions = $.notificationCategorySubscriptions;
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> email;
-        private Output<String> languageTag;
-        private Output<List<String>> notificationCategorySubscriptions;
-        private Output<String> parent;
+        private ContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactArgs();
         }
 
         public Builder(ContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.languageTag = defaults.languageTag;
-    	      this.notificationCategorySubscriptions = defaults.notificationCategorySubscriptions;
-    	      this.parent = defaults.parent;
+            $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder languageTag(Output<String> languageTag) {
-            this.languageTag = Objects.requireNonNull(languageTag);
+            $.languageTag = languageTag;
             return this;
         }
+
         public Builder languageTag(String languageTag) {
-            this.languageTag = Output.of(Objects.requireNonNull(languageTag));
-            return this;
+            return languageTag(Output.of(languageTag));
         }
+
         public Builder notificationCategorySubscriptions(Output<List<String>> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Objects.requireNonNull(notificationCategorySubscriptions);
+            $.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
+
         public Builder notificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Output.of(Objects.requireNonNull(notificationCategorySubscriptions));
-            return this;
+            return notificationCategorySubscriptions(Output.of(notificationCategorySubscriptions));
         }
+
         public Builder notificationCategorySubscriptions(String... notificationCategorySubscriptions) {
             return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
         }
+
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
-        }        public ContactArgs build() {
-            return new ContactArgs(email, languageTag, notificationCategorySubscriptions, parent);
+            return parent(Output.of(parent));
+        }
+
+        public ContactArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.languageTag = Objects.requireNonNull($.languageTag, "expected parameter 'languageTag' to be non-null");
+            $.notificationCategorySubscriptions = Objects.requireNonNull($.notificationCategorySubscriptions, "expected parameter 'notificationCategorySubscriptions' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="livePipelineName", required=true)
-      private final String livePipelineName;
+    private String livePipelineName;
 
     public String livePipelineName() {
         return this.livePipelineName;
@@ -39,64 +39,59 @@ public final class GetLivePipelineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetLivePipelineArgs(
-        String accountName,
-        String livePipelineName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.livePipelineName = Objects.requireNonNull(livePipelineName, "expected parameter 'livePipelineName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetLivePipelineArgs() {}
 
-    private GetLivePipelineArgs() {
-        this.accountName = null;
-        this.livePipelineName = null;
-        this.resourceGroupName = null;
+    private GetLivePipelineArgs(GetLivePipelineArgs $) {
+        this.accountName = $.accountName;
+        this.livePipelineName = $.livePipelineName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLivePipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String livePipelineName;
-        private String resourceGroupName;
+        private GetLivePipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLivePipelineArgs();
         }
 
         public Builder(GetLivePipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.livePipelineName = defaults.livePipelineName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetLivePipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder livePipelineName(String livePipelineName) {
-            this.livePipelineName = Objects.requireNonNull(livePipelineName);
+            $.livePipelineName = livePipelineName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetLivePipelineArgs build() {
-            return new GetLivePipelineArgs(accountName, livePipelineName, resourceGroupName);
+        }
+
+        public GetLivePipelineArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.livePipelineName = Objects.requireNonNull($.livePipelineName, "expected parameter 'livePipelineName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

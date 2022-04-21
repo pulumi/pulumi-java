@@ -9,9 +9,9 @@ import com.pulumi.awsnative.kendra.inputs.DataSourceServiceNowKnowledgeArticleCo
 import com.pulumi.awsnative.kendra.inputs.DataSourceServiceNowServiceCatalogConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,150 +20,136 @@ public final class DataSourceServiceNowConfigurationArgs extends com.pulumi.reso
     public static final DataSourceServiceNowConfigurationArgs Empty = new DataSourceServiceNowConfigurationArgs();
 
     @Import(name="authenticationType")
-      private final @Nullable Output<DataSourceServiceNowAuthenticationType> authenticationType;
+    private @Nullable Output<DataSourceServiceNowAuthenticationType> authenticationType;
 
-    public Output<DataSourceServiceNowAuthenticationType> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<DataSourceServiceNowAuthenticationType>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     @Import(name="hostUrl", required=true)
-      private final Output<String> hostUrl;
+    private Output<String> hostUrl;
 
     public Output<String> hostUrl() {
         return this.hostUrl;
     }
 
     @Import(name="knowledgeArticleConfiguration")
-      private final @Nullable Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
+    private @Nullable Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
 
-    public Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration() {
-        return this.knowledgeArticleConfiguration == null ? Codegen.empty() : this.knowledgeArticleConfiguration;
+    public Optional<Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs>> knowledgeArticleConfiguration() {
+        return Optional.ofNullable(this.knowledgeArticleConfiguration);
     }
 
     @Import(name="secretArn", required=true)
-      private final Output<String> secretArn;
+    private Output<String> secretArn;
 
     public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serviceCatalogConfiguration")
-      private final @Nullable Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration;
+    private @Nullable Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration;
 
-    public Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration() {
-        return this.serviceCatalogConfiguration == null ? Codegen.empty() : this.serviceCatalogConfiguration;
+    public Optional<Output<DataSourceServiceNowServiceCatalogConfigurationArgs>> serviceCatalogConfiguration() {
+        return Optional.ofNullable(this.serviceCatalogConfiguration);
     }
 
     @Import(name="serviceNowBuildVersion", required=true)
-      private final Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion;
+    private Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion;
 
     public Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion() {
         return this.serviceNowBuildVersion;
     }
 
-    public DataSourceServiceNowConfigurationArgs(
-        @Nullable Output<DataSourceServiceNowAuthenticationType> authenticationType,
-        Output<String> hostUrl,
-        @Nullable Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration,
-        Output<String> secretArn,
-        @Nullable Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration,
-        Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion) {
-        this.authenticationType = authenticationType;
-        this.hostUrl = Objects.requireNonNull(hostUrl, "expected parameter 'hostUrl' to be non-null");
-        this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-        this.serviceCatalogConfiguration = serviceCatalogConfiguration;
-        this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion, "expected parameter 'serviceNowBuildVersion' to be non-null");
-    }
+    private DataSourceServiceNowConfigurationArgs() {}
 
-    private DataSourceServiceNowConfigurationArgs() {
-        this.authenticationType = Codegen.empty();
-        this.hostUrl = Codegen.empty();
-        this.knowledgeArticleConfiguration = Codegen.empty();
-        this.secretArn = Codegen.empty();
-        this.serviceCatalogConfiguration = Codegen.empty();
-        this.serviceNowBuildVersion = Codegen.empty();
+    private DataSourceServiceNowConfigurationArgs(DataSourceServiceNowConfigurationArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.hostUrl = $.hostUrl;
+        this.knowledgeArticleConfiguration = $.knowledgeArticleConfiguration;
+        this.secretArn = $.secretArn;
+        this.serviceCatalogConfiguration = $.serviceCatalogConfiguration;
+        this.serviceNowBuildVersion = $.serviceNowBuildVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceServiceNowConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataSourceServiceNowAuthenticationType> authenticationType;
-        private Output<String> hostUrl;
-        private @Nullable Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
-        private Output<String> secretArn;
-        private @Nullable Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration;
-        private Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion;
+        private DataSourceServiceNowConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceServiceNowConfigurationArgs();
         }
 
         public Builder(DataSourceServiceNowConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.hostUrl = defaults.hostUrl;
-    	      this.knowledgeArticleConfiguration = defaults.knowledgeArticleConfiguration;
-    	      this.secretArn = defaults.secretArn;
-    	      this.serviceCatalogConfiguration = defaults.serviceCatalogConfiguration;
-    	      this.serviceNowBuildVersion = defaults.serviceNowBuildVersion;
+            $ = new DataSourceServiceNowConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable Output<DataSourceServiceNowAuthenticationType> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(DataSourceServiceNowAuthenticationType authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder hostUrl(Output<String> hostUrl) {
-            this.hostUrl = Objects.requireNonNull(hostUrl);
+            $.hostUrl = hostUrl;
             return this;
         }
+
         public Builder hostUrl(String hostUrl) {
-            this.hostUrl = Output.of(Objects.requireNonNull(hostUrl));
-            return this;
+            return hostUrl(Output.of(hostUrl));
         }
+
         public Builder knowledgeArticleConfiguration(@Nullable Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration) {
-            this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
+            $.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
-        public Builder knowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfigurationArgs knowledgeArticleConfiguration) {
-            this.knowledgeArticleConfiguration = Codegen.ofNullable(knowledgeArticleConfiguration);
-            return this;
+
+        public Builder knowledgeArticleConfiguration(DataSourceServiceNowKnowledgeArticleConfigurationArgs knowledgeArticleConfiguration) {
+            return knowledgeArticleConfiguration(Output.of(knowledgeArticleConfiguration));
         }
+
         public Builder secretArn(Output<String> secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
-            return this;
+            return secretArn(Output.of(secretArn));
         }
+
         public Builder serviceCatalogConfiguration(@Nullable Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration) {
-            this.serviceCatalogConfiguration = serviceCatalogConfiguration;
+            $.serviceCatalogConfiguration = serviceCatalogConfiguration;
             return this;
         }
-        public Builder serviceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfigurationArgs serviceCatalogConfiguration) {
-            this.serviceCatalogConfiguration = Codegen.ofNullable(serviceCatalogConfiguration);
-            return this;
+
+        public Builder serviceCatalogConfiguration(DataSourceServiceNowServiceCatalogConfigurationArgs serviceCatalogConfiguration) {
+            return serviceCatalogConfiguration(Output.of(serviceCatalogConfiguration));
         }
+
         public Builder serviceNowBuildVersion(Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion) {
-            this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion);
+            $.serviceNowBuildVersion = serviceNowBuildVersion;
             return this;
         }
+
         public Builder serviceNowBuildVersion(DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
-            this.serviceNowBuildVersion = Output.of(Objects.requireNonNull(serviceNowBuildVersion));
-            return this;
-        }        public DataSourceServiceNowConfigurationArgs build() {
-            return new DataSourceServiceNowConfigurationArgs(authenticationType, hostUrl, knowledgeArticleConfiguration, secretArn, serviceCatalogConfiguration, serviceNowBuildVersion);
+            return serviceNowBuildVersion(Output.of(serviceNowBuildVersion));
+        }
+
+        public DataSourceServiceNowConfigurationArgs build() {
+            $.hostUrl = Objects.requireNonNull($.hostUrl, "expected parameter 'hostUrl' to be non-null");
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            $.serviceNowBuildVersion = Objects.requireNonNull($.serviceNowBuildVersion, "expected parameter 'serviceNowBuildVersion' to be non-null");
+            return $;
         }
     }
+
 }

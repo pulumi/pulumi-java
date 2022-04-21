@@ -6,9 +6,9 @@ package com.pulumi.aws.msk.inputs;
 import com.pulumi.aws.msk.inputs.ClusterEncryptionInfoEncryptionInTransitGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterEncryptionInfoGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="encryptionAtRestKmsKeyArn")
-      private final @Nullable Output<String> encryptionAtRestKmsKeyArn;
+    private @Nullable Output<String> encryptionAtRestKmsKeyArn;
 
-    public Output<String> encryptionAtRestKmsKeyArn() {
-        return this.encryptionAtRestKmsKeyArn == null ? Codegen.empty() : this.encryptionAtRestKmsKeyArn;
+    public Optional<Output<String>> encryptionAtRestKmsKeyArn() {
+        return Optional.ofNullable(this.encryptionAtRestKmsKeyArn);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ClusterEncryptionInfoGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="encryptionInTransit")
-      private final @Nullable Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit;
+    private @Nullable Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit;
 
-    public Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit() {
-        return this.encryptionInTransit == null ? Codegen.empty() : this.encryptionInTransit;
+    public Optional<Output<ClusterEncryptionInfoEncryptionInTransitGetArgs>> encryptionInTransit() {
+        return Optional.ofNullable(this.encryptionInTransit);
     }
 
-    public ClusterEncryptionInfoGetArgs(
-        @Nullable Output<String> encryptionAtRestKmsKeyArn,
-        @Nullable Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit) {
-        this.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
-        this.encryptionInTransit = encryptionInTransit;
-    }
+    private ClusterEncryptionInfoGetArgs() {}
 
-    private ClusterEncryptionInfoGetArgs() {
-        this.encryptionAtRestKmsKeyArn = Codegen.empty();
-        this.encryptionInTransit = Codegen.empty();
+    private ClusterEncryptionInfoGetArgs(ClusterEncryptionInfoGetArgs $) {
+        this.encryptionAtRestKmsKeyArn = $.encryptionAtRestKmsKeyArn;
+        this.encryptionInTransit = $.encryptionInTransit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterEncryptionInfoGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encryptionAtRestKmsKeyArn;
-        private @Nullable Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit;
+        private ClusterEncryptionInfoGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterEncryptionInfoGetArgs();
         }
 
         public Builder(ClusterEncryptionInfoGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAtRestKmsKeyArn = defaults.encryptionAtRestKmsKeyArn;
-    	      this.encryptionInTransit = defaults.encryptionInTransit;
+            $ = new ClusterEncryptionInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAtRestKmsKeyArn(@Nullable Output<String> encryptionAtRestKmsKeyArn) {
-            this.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
+            $.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
             return this;
         }
-        public Builder encryptionAtRestKmsKeyArn(@Nullable String encryptionAtRestKmsKeyArn) {
-            this.encryptionAtRestKmsKeyArn = Codegen.ofNullable(encryptionAtRestKmsKeyArn);
-            return this;
+
+        public Builder encryptionAtRestKmsKeyArn(String encryptionAtRestKmsKeyArn) {
+            return encryptionAtRestKmsKeyArn(Output.of(encryptionAtRestKmsKeyArn));
         }
+
         public Builder encryptionInTransit(@Nullable Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit) {
-            this.encryptionInTransit = encryptionInTransit;
+            $.encryptionInTransit = encryptionInTransit;
             return this;
         }
-        public Builder encryptionInTransit(@Nullable ClusterEncryptionInfoEncryptionInTransitGetArgs encryptionInTransit) {
-            this.encryptionInTransit = Codegen.ofNullable(encryptionInTransit);
-            return this;
-        }        public ClusterEncryptionInfoGetArgs build() {
-            return new ClusterEncryptionInfoGetArgs(encryptionAtRestKmsKeyArn, encryptionInTransit);
+
+        public Builder encryptionInTransit(ClusterEncryptionInfoEncryptionInTransitGetArgs encryptionInTransit) {
+            return encryptionInTransit(Output.of(encryptionInTransit));
+        }
+
+        public ClusterEncryptionInfoGetArgs build() {
+            return $;
         }
     }
+
 }

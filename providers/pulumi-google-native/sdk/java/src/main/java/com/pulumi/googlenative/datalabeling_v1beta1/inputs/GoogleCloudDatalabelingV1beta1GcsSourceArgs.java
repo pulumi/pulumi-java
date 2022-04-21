@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends com.pulum
      * 
      */
     @Import(name="inputUri", required=true)
-      private final Output<String> inputUri;
+    private Output<String> inputUri;
 
     public Output<String> inputUri() {
         return this.inputUri;
@@ -34,63 +33,60 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends com.pulum
      * 
      */
     @Import(name="mimeType", required=true)
-      private final Output<String> mimeType;
+    private Output<String> mimeType;
 
     public Output<String> mimeType() {
         return this.mimeType;
     }
 
-    public GoogleCloudDatalabelingV1beta1GcsSourceArgs(
-        Output<String> inputUri,
-        Output<String> mimeType) {
-        this.inputUri = Objects.requireNonNull(inputUri, "expected parameter 'inputUri' to be non-null");
-        this.mimeType = Objects.requireNonNull(mimeType, "expected parameter 'mimeType' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1GcsSourceArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1GcsSourceArgs() {
-        this.inputUri = Codegen.empty();
-        this.mimeType = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1GcsSourceArgs(GoogleCloudDatalabelingV1beta1GcsSourceArgs $) {
+        this.inputUri = $.inputUri;
+        this.mimeType = $.mimeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1GcsSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> inputUri;
-        private Output<String> mimeType;
+        private GoogleCloudDatalabelingV1beta1GcsSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1GcsSourceArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1GcsSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputUri = defaults.inputUri;
-    	      this.mimeType = defaults.mimeType;
+            $ = new GoogleCloudDatalabelingV1beta1GcsSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputUri(Output<String> inputUri) {
-            this.inputUri = Objects.requireNonNull(inputUri);
+            $.inputUri = inputUri;
             return this;
         }
+
         public Builder inputUri(String inputUri) {
-            this.inputUri = Output.of(Objects.requireNonNull(inputUri));
-            return this;
+            return inputUri(Output.of(inputUri));
         }
+
         public Builder mimeType(Output<String> mimeType) {
-            this.mimeType = Objects.requireNonNull(mimeType);
+            $.mimeType = mimeType;
             return this;
         }
+
         public Builder mimeType(String mimeType) {
-            this.mimeType = Output.of(Objects.requireNonNull(mimeType));
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1GcsSourceArgs build() {
-            return new GoogleCloudDatalabelingV1beta1GcsSourceArgs(inputUri, mimeType);
+            return mimeType(Output.of(mimeType));
+        }
+
+        public GoogleCloudDatalabelingV1beta1GcsSourceArgs build() {
+            $.inputUri = Objects.requireNonNull($.inputUri, "expected parameter 'inputUri' to be non-null");
+            $.mimeType = Objects.requireNonNull($.mimeType, "expected parameter 'mimeType' to be non-null");
+            return $;
         }
     }
+
 }

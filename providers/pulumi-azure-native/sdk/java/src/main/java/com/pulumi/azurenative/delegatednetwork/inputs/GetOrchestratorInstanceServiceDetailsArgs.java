@@ -17,7 +17,7 @@ public final class GetOrchestratorInstanceServiceDetailsArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetOrchestratorInstanceServiceDetailsArgs extends com.pulumi.
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetOrchestratorInstanceServiceDetailsArgs(
-        String resourceGroupName,
-        String resourceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetOrchestratorInstanceServiceDetailsArgs() {}
 
-    private GetOrchestratorInstanceServiceDetailsArgs() {
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetOrchestratorInstanceServiceDetailsArgs(GetOrchestratorInstanceServiceDetailsArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrchestratorInstanceServiceDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceName;
+        private GetOrchestratorInstanceServiceDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrchestratorInstanceServiceDetailsArgs();
         }
 
         public Builder(GetOrchestratorInstanceServiceDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetOrchestratorInstanceServiceDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetOrchestratorInstanceServiceDetailsArgs build() {
-            return new GetOrchestratorInstanceServiceDetailsArgs(resourceGroupName, resourceName);
+        }
+
+        public GetOrchestratorInstanceServiceDetailsArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

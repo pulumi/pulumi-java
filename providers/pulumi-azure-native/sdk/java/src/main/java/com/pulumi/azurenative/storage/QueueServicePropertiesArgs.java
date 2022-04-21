@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storage;
 import com.pulumi.azurenative.storage.inputs.CorsRulesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -32,10 +32,10 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="cors")
-      private final @Nullable Output<CorsRulesArgs> cors;
+    private @Nullable Output<CorsRulesArgs> cors;
 
-    public Output<CorsRulesArgs> cors() {
-        return this.cors == null ? Codegen.empty() : this.cors;
+    public Optional<Output<CorsRulesArgs>> cors() {
+        return Optional.ofNullable(this.cors);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="queueServiceName")
-      private final @Nullable Output<String> queueServiceName;
+    private @Nullable Output<String> queueServiceName;
 
-    public Output<String> queueServiceName() {
-        return this.queueServiceName == null ? Codegen.empty() : this.queueServiceName;
+    public Optional<Output<String>> queueServiceName() {
+        return Optional.ofNullable(this.queueServiceName);
     }
 
     /**
@@ -54,89 +54,80 @@ public final class QueueServicePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public QueueServicePropertiesArgs(
-        Output<String> accountName,
-        @Nullable Output<CorsRulesArgs> cors,
-        @Nullable Output<String> queueServiceName,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.cors = cors;
-        this.queueServiceName = queueServiceName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private QueueServicePropertiesArgs() {}
 
-    private QueueServicePropertiesArgs() {
-        this.accountName = Codegen.empty();
-        this.cors = Codegen.empty();
-        this.queueServiceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private QueueServicePropertiesArgs(QueueServicePropertiesArgs $) {
+        this.accountName = $.accountName;
+        this.cors = $.cors;
+        this.queueServiceName = $.queueServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueServicePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<CorsRulesArgs> cors;
-        private @Nullable Output<String> queueServiceName;
-        private Output<String> resourceGroupName;
+        private QueueServicePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueServicePropertiesArgs();
         }
 
         public Builder(QueueServicePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.cors = defaults.cors;
-    	      this.queueServiceName = defaults.queueServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new QueueServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
-            this.cors = cors;
+            $.cors = cors;
             return this;
         }
-        public Builder cors(@Nullable CorsRulesArgs cors) {
-            this.cors = Codegen.ofNullable(cors);
-            return this;
+
+        public Builder cors(CorsRulesArgs cors) {
+            return cors(Output.of(cors));
         }
+
         public Builder queueServiceName(@Nullable Output<String> queueServiceName) {
-            this.queueServiceName = queueServiceName;
+            $.queueServiceName = queueServiceName;
             return this;
         }
-        public Builder queueServiceName(@Nullable String queueServiceName) {
-            this.queueServiceName = Codegen.ofNullable(queueServiceName);
-            return this;
+
+        public Builder queueServiceName(String queueServiceName) {
+            return queueServiceName(Output.of(queueServiceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public QueueServicePropertiesArgs build() {
-            return new QueueServicePropertiesArgs(accountName, cors, queueServiceName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public QueueServicePropertiesArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

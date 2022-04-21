@@ -32,10 +32,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="host", required=true)
-      private final Object host;
+    private Object host;
 
     public Object host() {
         return this.host;
@@ -87,10 +87,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="port")
-      private final @Nullable Object port;
+    private @Nullable Object port;
 
     public Optional<Object> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -121,7 +121,7 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -132,10 +132,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="useEncryptedEndpoints")
-      private final @Nullable Object useEncryptedEndpoints;
+    private @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> useEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
+        return Optional.ofNullable(this.useEncryptedEndpoints);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="useHostVerification")
-      private final @Nullable Object useHostVerification;
+    private @Nullable Object useHostVerification;
 
     public Optional<Object> useHostVerification() {
-        return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
+        return Optional.ofNullable(this.useHostVerification);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="usePeerVerification")
-      private final @Nullable Object usePeerVerification;
+    private @Nullable Object usePeerVerification;
 
     public Optional<Object> usePeerVerification() {
-        return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
+        return Optional.ofNullable(this.usePeerVerification);
     }
 
     /**
@@ -165,157 +165,123 @@ public final class JiraLinkedServiceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="username", required=true)
-      private final Object username;
+    private Object username;
 
     public Object username() {
         return this.username;
     }
 
-    public JiraLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        String type,
-        @Nullable Object useEncryptedEndpoints,
-        @Nullable Object useHostVerification,
-        @Nullable Object usePeerVerification,
-        Object username) {
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.parameters = parameters;
-        this.password = password;
-        this.port = port;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.useEncryptedEndpoints = useEncryptedEndpoints;
-        this.useHostVerification = useHostVerification;
-        this.usePeerVerification = usePeerVerification;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private JiraLinkedServiceResponse() {}
 
-    private JiraLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.host = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.port = null;
-        this.type = null;
-        this.useEncryptedEndpoints = null;
-        this.useHostVerification = null;
-        this.usePeerVerification = null;
-        this.username = null;
+    private JiraLinkedServiceResponse(JiraLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.host = $.host;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.port = $.port;
+        this.type = $.type;
+        this.useEncryptedEndpoints = $.useEncryptedEndpoints;
+        this.useHostVerification = $.useHostVerification;
+        this.usePeerVerification = $.usePeerVerification;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JiraLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private Object host;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Object port;
-        private String type;
-        private @Nullable Object useEncryptedEndpoints;
-        private @Nullable Object useHostVerification;
-        private @Nullable Object usePeerVerification;
-        private Object username;
+        private JiraLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JiraLinkedServiceResponse();
         }
 
         public Builder(JiraLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.host = defaults.host;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.type = defaults.type;
-    	      this.useEncryptedEndpoints = defaults.useEncryptedEndpoints;
-    	      this.useHostVerification = defaults.useHostVerification;
-    	      this.usePeerVerification = defaults.usePeerVerification;
-    	      this.username = defaults.username;
+            $ = new JiraLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder host(Object host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder port(@Nullable Object port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = useEncryptedEndpoints;
+            $.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
+
         public Builder useHostVerification(@Nullable Object useHostVerification) {
-            this.useHostVerification = useHostVerification;
+            $.useHostVerification = useHostVerification;
             return this;
         }
+
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
-            this.usePeerVerification = usePeerVerification;
+            $.usePeerVerification = usePeerVerification;
             return this;
         }
+
         public Builder username(Object username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public JiraLinkedServiceResponse build() {
-            return new JiraLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, host, parameters, password, port, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
+        }
+
+        public JiraLinkedServiceResponse build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

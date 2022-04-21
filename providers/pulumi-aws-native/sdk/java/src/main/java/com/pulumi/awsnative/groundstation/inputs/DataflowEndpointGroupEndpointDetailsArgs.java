@@ -7,8 +7,8 @@ import com.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupDataflowEn
 import com.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSecurityDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class DataflowEndpointGroupEndpointDetailsArgs extends com.pulumi.r
     public static final DataflowEndpointGroupEndpointDetailsArgs Empty = new DataflowEndpointGroupEndpointDetailsArgs();
 
     @Import(name="endpoint")
-      private final @Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
+    private @Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
 
-    public Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<DataflowEndpointGroupDataflowEndpointArgs>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     @Import(name="securityDetails")
-      private final @Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
+    private @Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
 
-    public Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails() {
-        return this.securityDetails == null ? Codegen.empty() : this.securityDetails;
+    public Optional<Output<DataflowEndpointGroupSecurityDetailsArgs>> securityDetails() {
+        return Optional.ofNullable(this.securityDetails);
     }
 
-    public DataflowEndpointGroupEndpointDetailsArgs(
-        @Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint,
-        @Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails) {
-        this.endpoint = endpoint;
-        this.securityDetails = securityDetails;
-    }
+    private DataflowEndpointGroupEndpointDetailsArgs() {}
 
-    private DataflowEndpointGroupEndpointDetailsArgs() {
-        this.endpoint = Codegen.empty();
-        this.securityDetails = Codegen.empty();
+    private DataflowEndpointGroupEndpointDetailsArgs(DataflowEndpointGroupEndpointDetailsArgs $) {
+        this.endpoint = $.endpoint;
+        this.securityDetails = $.securityDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataflowEndpointGroupEndpointDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint;
-        private @Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails;
+        private DataflowEndpointGroupEndpointDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataflowEndpointGroupEndpointDetailsArgs();
         }
 
         public Builder(DataflowEndpointGroupEndpointDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.securityDetails = defaults.securityDetails;
+            $ = new DataflowEndpointGroupEndpointDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable Output<DataflowEndpointGroupDataflowEndpointArgs> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable DataflowEndpointGroupDataflowEndpointArgs endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(DataflowEndpointGroupDataflowEndpointArgs endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder securityDetails(@Nullable Output<DataflowEndpointGroupSecurityDetailsArgs> securityDetails) {
-            this.securityDetails = securityDetails;
+            $.securityDetails = securityDetails;
             return this;
         }
-        public Builder securityDetails(@Nullable DataflowEndpointGroupSecurityDetailsArgs securityDetails) {
-            this.securityDetails = Codegen.ofNullable(securityDetails);
-            return this;
-        }        public DataflowEndpointGroupEndpointDetailsArgs build() {
-            return new DataflowEndpointGroupEndpointDetailsArgs(endpoint, securityDetails);
+
+        public Builder securityDetails(DataflowEndpointGroupSecurityDetailsArgs securityDetails) {
+            return securityDetails(Output.of(securityDetails));
+        }
+
+        public DataflowEndpointGroupEndpointDetailsArgs build() {
+            return $;
         }
     }
+
 }

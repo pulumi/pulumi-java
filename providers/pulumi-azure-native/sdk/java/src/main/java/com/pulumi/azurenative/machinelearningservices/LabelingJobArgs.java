@@ -6,9 +6,9 @@ package com.pulumi.azurenative.machinelearningservices;
 import com.pulumi.azurenative.machinelearningservices.inputs.LabelingJobPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labelingJobId")
-      private final @Nullable Output<String> labelingJobId;
+    private @Nullable Output<String> labelingJobId;
 
-    public Output<String> labelingJobId() {
-        return this.labelingJobId == null ? Codegen.empty() : this.labelingJobId;
+    public Optional<Output<String>> labelingJobId() {
+        return Optional.ofNullable(this.labelingJobId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<LabelingJobPropertiesArgs> properties;
+    private @Nullable Output<LabelingJobPropertiesArgs> properties;
 
-    public Output<LabelingJobPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<LabelingJobPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,80 @@ public final class LabelingJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public LabelingJobArgs(
-        @Nullable Output<String> labelingJobId,
-        @Nullable Output<LabelingJobPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> workspaceName) {
-        this.labelingJobId = labelingJobId;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private LabelingJobArgs() {}
 
-    private LabelingJobArgs() {
-        this.labelingJobId = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private LabelingJobArgs(LabelingJobArgs $) {
+        this.labelingJobId = $.labelingJobId;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelingJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> labelingJobId;
-        private @Nullable Output<LabelingJobPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> workspaceName;
+        private LabelingJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelingJobArgs();
         }
 
         public Builder(LabelingJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelingJobId = defaults.labelingJobId;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new LabelingJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labelingJobId(@Nullable Output<String> labelingJobId) {
-            this.labelingJobId = labelingJobId;
+            $.labelingJobId = labelingJobId;
             return this;
         }
-        public Builder labelingJobId(@Nullable String labelingJobId) {
-            this.labelingJobId = Codegen.ofNullable(labelingJobId);
-            return this;
+
+        public Builder labelingJobId(String labelingJobId) {
+            return labelingJobId(Output.of(labelingJobId));
         }
+
         public Builder properties(@Nullable Output<LabelingJobPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable LabelingJobPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(LabelingJobPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public LabelingJobArgs build() {
-            return new LabelingJobArgs(labelingJobId, properties, resourceGroupName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public LabelingJobArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

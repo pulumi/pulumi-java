@@ -23,10 +23,10 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
      * 
      */
     @Import(name="contactName")
-      private final @Nullable String contactName;
+    private @Nullable String contactName;
 
     public Optional<String> contactName() {
-        return this.contactName == null ? Optional.empty() : Optional.ofNullable(this.contactName);
+        return Optional.ofNullable(this.contactName);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -45,64 +45,58 @@ public final class ApplicationPackageContactResponse extends com.pulumi.resource
      * 
      */
     @Import(name="phone", required=true)
-      private final String phone;
+    private String phone;
 
     public String phone() {
         return this.phone;
     }
 
-    public ApplicationPackageContactResponse(
-        @Nullable String contactName,
-        String email,
-        String phone) {
-        this.contactName = contactName;
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.phone = Objects.requireNonNull(phone, "expected parameter 'phone' to be non-null");
-    }
+    private ApplicationPackageContactResponse() {}
 
-    private ApplicationPackageContactResponse() {
-        this.contactName = null;
-        this.email = null;
-        this.phone = null;
+    private ApplicationPackageContactResponse(ApplicationPackageContactResponse $) {
+        this.contactName = $.contactName;
+        this.email = $.email;
+        this.phone = $.phone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPackageContactResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contactName;
-        private String email;
-        private String phone;
+        private ApplicationPackageContactResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPackageContactResponse();
         }
 
         public Builder(ApplicationPackageContactResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactName = defaults.contactName;
-    	      this.email = defaults.email;
-    	      this.phone = defaults.phone;
+            $ = new ApplicationPackageContactResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contactName(@Nullable String contactName) {
-            this.contactName = contactName;
+            $.contactName = contactName;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder phone(String phone) {
-            this.phone = Objects.requireNonNull(phone);
+            $.phone = phone;
             return this;
-        }        public ApplicationPackageContactResponse build() {
-            return new ApplicationPackageContactResponse(contactName, email, phone);
+        }
+
+        public ApplicationPackageContactResponse build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.phone = Objects.requireNonNull($.phone, "expected parameter 'phone' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class MonitoringScheduleNetworkConfig extends com.pulumi.resources.
      * 
      */
     @Import(name="enableInterContainerTrafficEncryption")
-      private final @Nullable Boolean enableInterContainerTrafficEncryption;
+    private @Nullable Boolean enableInterContainerTrafficEncryption;
 
     public Optional<Boolean> enableInterContainerTrafficEncryption() {
-        return this.enableInterContainerTrafficEncryption == null ? Optional.empty() : Optional.ofNullable(this.enableInterContainerTrafficEncryption);
+        return Optional.ofNullable(this.enableInterContainerTrafficEncryption);
     }
 
     /**
@@ -35,71 +35,63 @@ public final class MonitoringScheduleNetworkConfig extends com.pulumi.resources.
      * 
      */
     @Import(name="enableNetworkIsolation")
-      private final @Nullable Boolean enableNetworkIsolation;
+    private @Nullable Boolean enableNetworkIsolation;
 
     public Optional<Boolean> enableNetworkIsolation() {
-        return this.enableNetworkIsolation == null ? Optional.empty() : Optional.ofNullable(this.enableNetworkIsolation);
+        return Optional.ofNullable(this.enableNetworkIsolation);
     }
 
     @Import(name="vpcConfig")
-      private final @Nullable MonitoringScheduleVpcConfig vpcConfig;
+    private @Nullable MonitoringScheduleVpcConfig vpcConfig;
 
     public Optional<MonitoringScheduleVpcConfig> vpcConfig() {
-        return this.vpcConfig == null ? Optional.empty() : Optional.ofNullable(this.vpcConfig);
+        return Optional.ofNullable(this.vpcConfig);
     }
 
-    public MonitoringScheduleNetworkConfig(
-        @Nullable Boolean enableInterContainerTrafficEncryption,
-        @Nullable Boolean enableNetworkIsolation,
-        @Nullable MonitoringScheduleVpcConfig vpcConfig) {
-        this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
-        this.enableNetworkIsolation = enableNetworkIsolation;
-        this.vpcConfig = vpcConfig;
-    }
+    private MonitoringScheduleNetworkConfig() {}
 
-    private MonitoringScheduleNetworkConfig() {
-        this.enableInterContainerTrafficEncryption = null;
-        this.enableNetworkIsolation = null;
-        this.vpcConfig = null;
+    private MonitoringScheduleNetworkConfig(MonitoringScheduleNetworkConfig $) {
+        this.enableInterContainerTrafficEncryption = $.enableInterContainerTrafficEncryption;
+        this.enableNetworkIsolation = $.enableNetworkIsolation;
+        this.vpcConfig = $.vpcConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleNetworkConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableInterContainerTrafficEncryption;
-        private @Nullable Boolean enableNetworkIsolation;
-        private @Nullable MonitoringScheduleVpcConfig vpcConfig;
+        private MonitoringScheduleNetworkConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleNetworkConfig();
         }
 
         public Builder(MonitoringScheduleNetworkConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableInterContainerTrafficEncryption = defaults.enableInterContainerTrafficEncryption;
-    	      this.enableNetworkIsolation = defaults.enableNetworkIsolation;
-    	      this.vpcConfig = defaults.vpcConfig;
+            $ = new MonitoringScheduleNetworkConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
-            this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
+            $.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
+
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
-            this.enableNetworkIsolation = enableNetworkIsolation;
+            $.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
+
         public Builder vpcConfig(@Nullable MonitoringScheduleVpcConfig vpcConfig) {
-            this.vpcConfig = vpcConfig;
+            $.vpcConfig = vpcConfig;
             return this;
-        }        public MonitoringScheduleNetworkConfig build() {
-            return new MonitoringScheduleNetworkConfig(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
+        }
+
+        public MonitoringScheduleNetworkConfig build() {
+            return $;
         }
     }
+
 }

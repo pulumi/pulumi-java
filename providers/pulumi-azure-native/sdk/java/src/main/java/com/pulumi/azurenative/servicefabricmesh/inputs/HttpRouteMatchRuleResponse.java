@@ -25,10 +25,10 @@ public final class HttpRouteMatchRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="headers")
-      private final @Nullable List<HttpRouteMatchHeaderResponse> headers;
+    private @Nullable List<HttpRouteMatchHeaderResponse> headers;
 
-    public List<HttpRouteMatchHeaderResponse> headers() {
-        return this.headers == null ? List.of() : this.headers;
+    public Optional<List<HttpRouteMatchHeaderResponse>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -36,58 +36,55 @@ public final class HttpRouteMatchRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="path", required=true)
-      private final HttpRouteMatchPathResponse path;
+    private HttpRouteMatchPathResponse path;
 
     public HttpRouteMatchPathResponse path() {
         return this.path;
     }
 
-    public HttpRouteMatchRuleResponse(
-        @Nullable List<HttpRouteMatchHeaderResponse> headers,
-        HttpRouteMatchPathResponse path) {
-        this.headers = headers;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private HttpRouteMatchRuleResponse() {}
 
-    private HttpRouteMatchRuleResponse() {
-        this.headers = List.of();
-        this.path = null;
+    private HttpRouteMatchRuleResponse(HttpRouteMatchRuleResponse $) {
+        this.headers = $.headers;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteMatchRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<HttpRouteMatchHeaderResponse> headers;
-        private HttpRouteMatchPathResponse path;
+        private HttpRouteMatchRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteMatchRuleResponse();
         }
 
         public Builder(HttpRouteMatchRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headers = defaults.headers;
-    	      this.path = defaults.path;
+            $ = new HttpRouteMatchRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headers(@Nullable List<HttpRouteMatchHeaderResponse> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(HttpRouteMatchHeaderResponse... headers) {
             return headers(List.of(headers));
         }
+
         public Builder path(HttpRouteMatchPathResponse path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public HttpRouteMatchRuleResponse build() {
-            return new HttpRouteMatchRuleResponse(headers, path);
+        }
+
+        public HttpRouteMatchRuleResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

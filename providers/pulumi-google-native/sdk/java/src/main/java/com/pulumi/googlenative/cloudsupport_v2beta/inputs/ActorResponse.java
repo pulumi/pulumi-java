@@ -22,7 +22,7 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -44,7 +44,7 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="googleSupport", required=true)
-      private final Boolean googleSupport;
+    private Boolean googleSupport;
 
     public Boolean googleSupport() {
         return this.googleSupport;
@@ -55,73 +55,66 @@ public final class ActorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
     }
 
-    public ActorResponse(
-        String displayName,
-        String email,
-        Boolean googleSupport,
-        String principalId) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.googleSupport = Objects.requireNonNull(googleSupport, "expected parameter 'googleSupport' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-    }
+    private ActorResponse() {}
 
-    private ActorResponse() {
-        this.displayName = null;
-        this.email = null;
-        this.googleSupport = null;
-        this.principalId = null;
+    private ActorResponse(ActorResponse $) {
+        this.displayName = $.displayName;
+        this.email = $.email;
+        this.googleSupport = $.googleSupport;
+        this.principalId = $.principalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String email;
-        private Boolean googleSupport;
-        private String principalId;
+        private ActorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActorResponse();
         }
 
         public Builder(ActorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.email = defaults.email;
-    	      this.googleSupport = defaults.googleSupport;
-    	      this.principalId = defaults.principalId;
+            $ = new ActorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder googleSupport(Boolean googleSupport) {
-            this.googleSupport = Objects.requireNonNull(googleSupport);
+            $.googleSupport = googleSupport;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
-        }        public ActorResponse build() {
-            return new ActorResponse(displayName, email, googleSupport, principalId);
+        }
+
+        public ActorResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.googleSupport = Objects.requireNonNull($.googleSupport, "expected parameter 'googleSupport' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            return $;
         }
     }
+
 }

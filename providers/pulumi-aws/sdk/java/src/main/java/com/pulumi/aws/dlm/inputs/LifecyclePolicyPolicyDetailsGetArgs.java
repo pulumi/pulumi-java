@@ -6,7 +6,6 @@ package com.pulumi.aws.dlm.inputs;
 import com.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +21,7 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceTypes", required=true)
-      private final Output<List<String>> resourceTypes;
+    private Output<List<String>> resourceTypes;
 
     public Output<List<String>> resourceTypes() {
         return this.resourceTypes;
@@ -33,7 +32,7 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="schedules", required=true)
-      private final Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
+    private Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
 
     public Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules() {
         return this.schedules;
@@ -44,82 +43,79 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="targetTags", required=true)
-      private final Output<Map<String,String>> targetTags;
+    private Output<Map<String,String>> targetTags;
 
     public Output<Map<String,String>> targetTags() {
         return this.targetTags;
     }
 
-    public LifecyclePolicyPolicyDetailsGetArgs(
-        Output<List<String>> resourceTypes,
-        Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules,
-        Output<Map<String,String>> targetTags) {
-        this.resourceTypes = Objects.requireNonNull(resourceTypes, "expected parameter 'resourceTypes' to be non-null");
-        this.schedules = Objects.requireNonNull(schedules, "expected parameter 'schedules' to be non-null");
-        this.targetTags = Objects.requireNonNull(targetTags, "expected parameter 'targetTags' to be non-null");
-    }
+    private LifecyclePolicyPolicyDetailsGetArgs() {}
 
-    private LifecyclePolicyPolicyDetailsGetArgs() {
-        this.resourceTypes = Codegen.empty();
-        this.schedules = Codegen.empty();
-        this.targetTags = Codegen.empty();
+    private LifecyclePolicyPolicyDetailsGetArgs(LifecyclePolicyPolicyDetailsGetArgs $) {
+        this.resourceTypes = $.resourceTypes;
+        this.schedules = $.schedules;
+        this.targetTags = $.targetTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LifecyclePolicyPolicyDetailsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> resourceTypes;
-        private Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
-        private Output<Map<String,String>> targetTags;
+        private LifecyclePolicyPolicyDetailsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LifecyclePolicyPolicyDetailsGetArgs();
         }
 
         public Builder(LifecyclePolicyPolicyDetailsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceTypes = defaults.resourceTypes;
-    	      this.schedules = defaults.schedules;
-    	      this.targetTags = defaults.targetTags;
+            $ = new LifecyclePolicyPolicyDetailsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceTypes(Output<List<String>> resourceTypes) {
-            this.resourceTypes = Objects.requireNonNull(resourceTypes);
+            $.resourceTypes = resourceTypes;
             return this;
         }
+
         public Builder resourceTypes(List<String> resourceTypes) {
-            this.resourceTypes = Output.of(Objects.requireNonNull(resourceTypes));
-            return this;
+            return resourceTypes(Output.of(resourceTypes));
         }
+
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
+
         public Builder schedules(Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules) {
-            this.schedules = Objects.requireNonNull(schedules);
+            $.schedules = schedules;
             return this;
         }
+
         public Builder schedules(List<LifecyclePolicyPolicyDetailsScheduleGetArgs> schedules) {
-            this.schedules = Output.of(Objects.requireNonNull(schedules));
-            return this;
+            return schedules(Output.of(schedules));
         }
+
         public Builder schedules(LifecyclePolicyPolicyDetailsScheduleGetArgs... schedules) {
             return schedules(List.of(schedules));
         }
+
         public Builder targetTags(Output<Map<String,String>> targetTags) {
-            this.targetTags = Objects.requireNonNull(targetTags);
+            $.targetTags = targetTags;
             return this;
         }
+
         public Builder targetTags(Map<String,String> targetTags) {
-            this.targetTags = Output.of(Objects.requireNonNull(targetTags));
-            return this;
-        }        public LifecyclePolicyPolicyDetailsGetArgs build() {
-            return new LifecyclePolicyPolicyDetailsGetArgs(resourceTypes, schedules, targetTags);
+            return targetTags(Output.of(targetTags));
+        }
+
+        public LifecyclePolicyPolicyDetailsGetArgs build() {
+            $.resourceTypes = Objects.requireNonNull($.resourceTypes, "expected parameter 'resourceTypes' to be non-null");
+            $.schedules = Objects.requireNonNull($.schedules, "expected parameter 'schedules' to be non-null");
+            $.targetTags = Objects.requireNonNull($.targetTags, "expected parameter 'targetTags' to be non-null");
+            return $;
         }
     }
+
 }

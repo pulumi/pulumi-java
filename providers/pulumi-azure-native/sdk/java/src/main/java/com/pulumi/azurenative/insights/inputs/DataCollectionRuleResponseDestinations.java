@@ -25,10 +25,10 @@ public final class DataCollectionRuleResponseDestinations extends com.pulumi.res
      * 
      */
     @Import(name="azureMonitorMetrics")
-      private final @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
+    private @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
 
     public Optional<DestinationsSpecResponseAzureMonitorMetrics> azureMonitorMetrics() {
-        return this.azureMonitorMetrics == null ? Optional.empty() : Optional.ofNullable(this.azureMonitorMetrics);
+        return Optional.ofNullable(this.azureMonitorMetrics);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class DataCollectionRuleResponseDestinations extends com.pulumi.res
      * 
      */
     @Import(name="logAnalytics")
-      private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
+    private @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 
-    public List<LogAnalyticsDestinationResponse> logAnalytics() {
-        return this.logAnalytics == null ? List.of() : this.logAnalytics;
+    public Optional<List<LogAnalyticsDestinationResponse>> logAnalytics() {
+        return Optional.ofNullable(this.logAnalytics);
     }
 
-    public DataCollectionRuleResponseDestinations(
-        @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics,
-        @Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
-        this.azureMonitorMetrics = azureMonitorMetrics;
-        this.logAnalytics = logAnalytics;
-    }
+    private DataCollectionRuleResponseDestinations() {}
 
-    private DataCollectionRuleResponseDestinations() {
-        this.azureMonitorMetrics = null;
-        this.logAnalytics = List.of();
+    private DataCollectionRuleResponseDestinations(DataCollectionRuleResponseDestinations $) {
+        this.azureMonitorMetrics = $.azureMonitorMetrics;
+        this.logAnalytics = $.logAnalytics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionRuleResponseDestinations defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics;
-        private @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
+        private DataCollectionRuleResponseDestinations $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionRuleResponseDestinations();
         }
 
         public Builder(DataCollectionRuleResponseDestinations defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureMonitorMetrics = defaults.azureMonitorMetrics;
-    	      this.logAnalytics = defaults.logAnalytics;
+            $ = new DataCollectionRuleResponseDestinations(Objects.requireNonNull(defaults));
         }
 
         public Builder azureMonitorMetrics(@Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics) {
-            this.azureMonitorMetrics = azureMonitorMetrics;
+            $.azureMonitorMetrics = azureMonitorMetrics;
             return this;
         }
+
         public Builder logAnalytics(@Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
-            this.logAnalytics = logAnalytics;
+            $.logAnalytics = logAnalytics;
             return this;
         }
+
         public Builder logAnalytics(LogAnalyticsDestinationResponse... logAnalytics) {
             return logAnalytics(List.of(logAnalytics));
-        }        public DataCollectionRuleResponseDestinations build() {
-            return new DataCollectionRuleResponseDestinations(azureMonitorMetrics, logAnalytics);
+        }
+
+        public DataCollectionRuleResponseDestinations build() {
+            return $;
         }
     }
+
 }

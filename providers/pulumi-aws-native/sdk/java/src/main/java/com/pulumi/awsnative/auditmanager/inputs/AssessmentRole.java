@@ -20,62 +20,57 @@ public final class AssessmentRole extends com.pulumi.resources.InvokeArgs {
     public static final AssessmentRole Empty = new AssessmentRole();
 
     @Import(name="roleArn")
-      private final @Nullable String roleArn;
+    private @Nullable String roleArn;
 
     public Optional<String> roleArn() {
-        return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
+        return Optional.ofNullable(this.roleArn);
     }
 
     @Import(name="roleType")
-      private final @Nullable AssessmentRoleType roleType;
+    private @Nullable AssessmentRoleType roleType;
 
     public Optional<AssessmentRoleType> roleType() {
-        return this.roleType == null ? Optional.empty() : Optional.ofNullable(this.roleType);
+        return Optional.ofNullable(this.roleType);
     }
 
-    public AssessmentRole(
-        @Nullable String roleArn,
-        @Nullable AssessmentRoleType roleType) {
-        this.roleArn = roleArn;
-        this.roleType = roleType;
-    }
+    private AssessmentRole() {}
 
-    private AssessmentRole() {
-        this.roleArn = null;
-        this.roleType = null;
+    private AssessmentRole(AssessmentRole $) {
+        this.roleArn = $.roleArn;
+        this.roleType = $.roleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssessmentRole defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String roleArn;
-        private @Nullable AssessmentRoleType roleType;
+        private AssessmentRole $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssessmentRole();
         }
 
         public Builder(AssessmentRole defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
-    	      this.roleType = defaults.roleType;
+            $ = new AssessmentRole(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleType(@Nullable AssessmentRoleType roleType) {
-            this.roleType = roleType;
+            $.roleType = roleType;
             return this;
-        }        public AssessmentRole build() {
-            return new AssessmentRole(roleArn, roleType);
+        }
+
+        public AssessmentRole build() {
+            return $;
         }
     }
+
 }

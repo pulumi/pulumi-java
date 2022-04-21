@@ -22,7 +22,7 @@ public final class OSPolicyResourcePackageResourceDebResponse extends com.pulumi
      * 
      */
     @Import(name="pullDeps", required=true)
-      private final Boolean pullDeps;
+    private Boolean pullDeps;
 
     public Boolean pullDeps() {
         return this.pullDeps;
@@ -33,55 +33,52 @@ public final class OSPolicyResourcePackageResourceDebResponse extends com.pulumi
      * 
      */
     @Import(name="source", required=true)
-      private final OSPolicyResourceFileResponse source;
+    private OSPolicyResourceFileResponse source;
 
     public OSPolicyResourceFileResponse source() {
         return this.source;
     }
 
-    public OSPolicyResourcePackageResourceDebResponse(
-        Boolean pullDeps,
-        OSPolicyResourceFileResponse source) {
-        this.pullDeps = Objects.requireNonNull(pullDeps, "expected parameter 'pullDeps' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private OSPolicyResourcePackageResourceDebResponse() {}
 
-    private OSPolicyResourcePackageResourceDebResponse() {
-        this.pullDeps = null;
-        this.source = null;
+    private OSPolicyResourcePackageResourceDebResponse(OSPolicyResourcePackageResourceDebResponse $) {
+        this.pullDeps = $.pullDeps;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourcePackageResourceDebResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean pullDeps;
-        private OSPolicyResourceFileResponse source;
+        private OSPolicyResourcePackageResourceDebResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourcePackageResourceDebResponse();
         }
 
         public Builder(OSPolicyResourcePackageResourceDebResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pullDeps = defaults.pullDeps;
-    	      this.source = defaults.source;
+            $ = new OSPolicyResourcePackageResourceDebResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pullDeps(Boolean pullDeps) {
-            this.pullDeps = Objects.requireNonNull(pullDeps);
+            $.pullDeps = pullDeps;
             return this;
         }
+
         public Builder source(OSPolicyResourceFileResponse source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
-        }        public OSPolicyResourcePackageResourceDebResponse build() {
-            return new OSPolicyResourcePackageResourceDebResponse(pullDeps, source);
+        }
+
+        public OSPolicyResourcePackageResourceDebResponse build() {
+            $.pullDeps = Objects.requireNonNull($.pullDeps, "expected parameter 'pullDeps' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

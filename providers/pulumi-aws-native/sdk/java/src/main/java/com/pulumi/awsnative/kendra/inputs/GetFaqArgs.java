@@ -13,7 +13,7 @@ public final class GetFaqArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFaqArgs Empty = new GetFaqArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -24,55 +24,52 @@ public final class GetFaqArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="indexId", required=true)
-      private final String indexId;
+    private String indexId;
 
     public String indexId() {
         return this.indexId;
     }
 
-    public GetFaqArgs(
-        String id,
-        String indexId) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.indexId = Objects.requireNonNull(indexId, "expected parameter 'indexId' to be non-null");
-    }
+    private GetFaqArgs() {}
 
-    private GetFaqArgs() {
-        this.id = null;
-        this.indexId = null;
+    private GetFaqArgs(GetFaqArgs $) {
+        this.id = $.id;
+        this.indexId = $.indexId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFaqArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String indexId;
+        private GetFaqArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFaqArgs();
         }
 
         public Builder(GetFaqArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.indexId = defaults.indexId;
+            $ = new GetFaqArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder indexId(String indexId) {
-            this.indexId = Objects.requireNonNull(indexId);
+            $.indexId = indexId;
             return this;
-        }        public GetFaqArgs build() {
-            return new GetFaqArgs(id, indexId);
+        }
+
+        public GetFaqArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.indexId = Objects.requireNonNull($.indexId, "expected parameter 'indexId' to be non-null");
+            return $;
         }
     }
+
 }

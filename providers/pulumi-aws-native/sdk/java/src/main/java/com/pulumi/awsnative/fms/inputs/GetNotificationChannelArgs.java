@@ -13,45 +13,45 @@ public final class GetNotificationChannelArgs extends com.pulumi.resources.Invok
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
     @Import(name="snsTopicArn", required=true)
-      private final String snsTopicArn;
+    private String snsTopicArn;
 
     public String snsTopicArn() {
         return this.snsTopicArn;
     }
 
-    public GetNotificationChannelArgs(String snsTopicArn) {
-        this.snsTopicArn = Objects.requireNonNull(snsTopicArn, "expected parameter 'snsTopicArn' to be non-null");
-    }
+    private GetNotificationChannelArgs() {}
 
-    private GetNotificationChannelArgs() {
-        this.snsTopicArn = null;
+    private GetNotificationChannelArgs(GetNotificationChannelArgs $) {
+        this.snsTopicArn = $.snsTopicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotificationChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String snsTopicArn;
+        private GetNotificationChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotificationChannelArgs();
         }
 
         public Builder(GetNotificationChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snsTopicArn = defaults.snsTopicArn;
+            $ = new GetNotificationChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder snsTopicArn(String snsTopicArn) {
-            this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
+            $.snsTopicArn = snsTopicArn;
             return this;
-        }        public GetNotificationChannelArgs build() {
-            return new GetNotificationChannelArgs(snsTopicArn);
+        }
+
+        public GetNotificationChannelArgs build() {
+            $.snsTopicArn = Objects.requireNonNull($.snsTopicArn, "expected parameter 'snsTopicArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,150 +17,135 @@ public final class ServiceTaskSpecContainerSpecConfigGetArgs extends com.pulumi.
     public static final ServiceTaskSpecContainerSpecConfigGetArgs Empty = new ServiceTaskSpecContainerSpecConfigGetArgs();
 
     @Import(name="configId", required=true)
-      private final Output<String> configId;
+    private Output<String> configId;
 
     public Output<String> configId() {
         return this.configId;
     }
 
     @Import(name="configName")
-      private final @Nullable Output<String> configName;
+    private @Nullable Output<String> configName;
 
-    public Output<String> configName() {
-        return this.configName == null ? Codegen.empty() : this.configName;
+    public Optional<Output<String>> configName() {
+        return Optional.ofNullable(this.configName);
     }
 
     @Import(name="fileGid")
-      private final @Nullable Output<String> fileGid;
+    private @Nullable Output<String> fileGid;
 
-    public Output<String> fileGid() {
-        return this.fileGid == null ? Codegen.empty() : this.fileGid;
+    public Optional<Output<String>> fileGid() {
+        return Optional.ofNullable(this.fileGid);
     }
 
     @Import(name="fileMode")
-      private final @Nullable Output<Integer> fileMode;
+    private @Nullable Output<Integer> fileMode;
 
-    public Output<Integer> fileMode() {
-        return this.fileMode == null ? Codegen.empty() : this.fileMode;
+    public Optional<Output<Integer>> fileMode() {
+        return Optional.ofNullable(this.fileMode);
     }
 
     @Import(name="fileName", required=true)
-      private final Output<String> fileName;
+    private Output<String> fileName;
 
     public Output<String> fileName() {
         return this.fileName;
     }
 
     @Import(name="fileUid")
-      private final @Nullable Output<String> fileUid;
+    private @Nullable Output<String> fileUid;
 
-    public Output<String> fileUid() {
-        return this.fileUid == null ? Codegen.empty() : this.fileUid;
+    public Optional<Output<String>> fileUid() {
+        return Optional.ofNullable(this.fileUid);
     }
 
-    public ServiceTaskSpecContainerSpecConfigGetArgs(
-        Output<String> configId,
-        @Nullable Output<String> configName,
-        @Nullable Output<String> fileGid,
-        @Nullable Output<Integer> fileMode,
-        Output<String> fileName,
-        @Nullable Output<String> fileUid) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.configName = configName;
-        this.fileGid = fileGid;
-        this.fileMode = fileMode;
-        this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
-        this.fileUid = fileUid;
-    }
+    private ServiceTaskSpecContainerSpecConfigGetArgs() {}
 
-    private ServiceTaskSpecContainerSpecConfigGetArgs() {
-        this.configId = Codegen.empty();
-        this.configName = Codegen.empty();
-        this.fileGid = Codegen.empty();
-        this.fileMode = Codegen.empty();
-        this.fileName = Codegen.empty();
-        this.fileUid = Codegen.empty();
+    private ServiceTaskSpecContainerSpecConfigGetArgs(ServiceTaskSpecContainerSpecConfigGetArgs $) {
+        this.configId = $.configId;
+        this.configName = $.configName;
+        this.fileGid = $.fileGid;
+        this.fileMode = $.fileMode;
+        this.fileName = $.fileName;
+        this.fileUid = $.fileUid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> configId;
-        private @Nullable Output<String> configName;
-        private @Nullable Output<String> fileGid;
-        private @Nullable Output<Integer> fileMode;
-        private Output<String> fileName;
-        private @Nullable Output<String> fileUid;
+        private ServiceTaskSpecContainerSpecConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecConfigGetArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.configName = defaults.configName;
-    	      this.fileGid = defaults.fileGid;
-    	      this.fileMode = defaults.fileMode;
-    	      this.fileName = defaults.fileName;
-    	      this.fileUid = defaults.fileUid;
+            $ = new ServiceTaskSpecContainerSpecConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(Output<String> configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder configId(String configId) {
-            this.configId = Output.of(Objects.requireNonNull(configId));
-            return this;
+            return configId(Output.of(configId));
         }
+
         public Builder configName(@Nullable Output<String> configName) {
-            this.configName = configName;
+            $.configName = configName;
             return this;
         }
-        public Builder configName(@Nullable String configName) {
-            this.configName = Codegen.ofNullable(configName);
-            return this;
+
+        public Builder configName(String configName) {
+            return configName(Output.of(configName));
         }
+
         public Builder fileGid(@Nullable Output<String> fileGid) {
-            this.fileGid = fileGid;
+            $.fileGid = fileGid;
             return this;
         }
-        public Builder fileGid(@Nullable String fileGid) {
-            this.fileGid = Codegen.ofNullable(fileGid);
-            return this;
+
+        public Builder fileGid(String fileGid) {
+            return fileGid(Output.of(fileGid));
         }
+
         public Builder fileMode(@Nullable Output<Integer> fileMode) {
-            this.fileMode = fileMode;
+            $.fileMode = fileMode;
             return this;
         }
-        public Builder fileMode(@Nullable Integer fileMode) {
-            this.fileMode = Codegen.ofNullable(fileMode);
-            return this;
+
+        public Builder fileMode(Integer fileMode) {
+            return fileMode(Output.of(fileMode));
         }
+
         public Builder fileName(Output<String> fileName) {
-            this.fileName = Objects.requireNonNull(fileName);
+            $.fileName = fileName;
             return this;
         }
+
         public Builder fileName(String fileName) {
-            this.fileName = Output.of(Objects.requireNonNull(fileName));
-            return this;
+            return fileName(Output.of(fileName));
         }
+
         public Builder fileUid(@Nullable Output<String> fileUid) {
-            this.fileUid = fileUid;
+            $.fileUid = fileUid;
             return this;
         }
-        public Builder fileUid(@Nullable String fileUid) {
-            this.fileUid = Codegen.ofNullable(fileUid);
-            return this;
-        }        public ServiceTaskSpecContainerSpecConfigGetArgs build() {
-            return new ServiceTaskSpecContainerSpecConfigGetArgs(configId, configName, fileGid, fileMode, fileName, fileUid);
+
+        public Builder fileUid(String fileUid) {
+            return fileUid(Output.of(fileUid));
+        }
+
+        public ServiceTaskSpecContainerSpecConfigGetArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            $.fileName = Objects.requireNonNull($.fileName, "expected parameter 'fileName' to be non-null");
+            return $;
         }
     }
+
 }

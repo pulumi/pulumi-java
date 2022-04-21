@@ -7,10 +7,10 @@ import com.pulumi.azurenative.automation.enums.LinuxUpdateClasses;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="excludedPackageNameMasks")
-      private final @Nullable Output<List<String>> excludedPackageNameMasks;
+    private @Nullable Output<List<String>> excludedPackageNameMasks;
 
-    public Output<List<String>> excludedPackageNameMasks() {
-        return this.excludedPackageNameMasks == null ? Codegen.empty() : this.excludedPackageNameMasks;
+    public Optional<Output<List<String>>> excludedPackageNameMasks() {
+        return Optional.ofNullable(this.excludedPackageNameMasks);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="includedPackageClassifications")
-      private final @Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
+    private @Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
 
-    public Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications() {
-        return this.includedPackageClassifications == null ? Codegen.empty() : this.includedPackageClassifications;
+    public Optional<Output<Either<String,LinuxUpdateClasses>>> includedPackageClassifications() {
+        return Optional.ofNullable(this.includedPackageClassifications);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="includedPackageNameMasks")
-      private final @Nullable Output<List<String>> includedPackageNameMasks;
+    private @Nullable Output<List<String>> includedPackageNameMasks;
 
-    public Output<List<String>> includedPackageNameMasks() {
-        return this.includedPackageNameMasks == null ? Codegen.empty() : this.includedPackageNameMasks;
+    public Optional<Output<List<String>>> includedPackageNameMasks() {
+        return Optional.ofNullable(this.includedPackageNameMasks);
     }
 
     /**
@@ -60,95 +60,86 @@ public final class LinuxPropertiesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rebootSetting")
-      private final @Nullable Output<String> rebootSetting;
+    private @Nullable Output<String> rebootSetting;
 
-    public Output<String> rebootSetting() {
-        return this.rebootSetting == null ? Codegen.empty() : this.rebootSetting;
+    public Optional<Output<String>> rebootSetting() {
+        return Optional.ofNullable(this.rebootSetting);
     }
 
-    public LinuxPropertiesArgs(
-        @Nullable Output<List<String>> excludedPackageNameMasks,
-        @Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications,
-        @Nullable Output<List<String>> includedPackageNameMasks,
-        @Nullable Output<String> rebootSetting) {
-        this.excludedPackageNameMasks = excludedPackageNameMasks;
-        this.includedPackageClassifications = includedPackageClassifications;
-        this.includedPackageNameMasks = includedPackageNameMasks;
-        this.rebootSetting = rebootSetting;
-    }
+    private LinuxPropertiesArgs() {}
 
-    private LinuxPropertiesArgs() {
-        this.excludedPackageNameMasks = Codegen.empty();
-        this.includedPackageClassifications = Codegen.empty();
-        this.includedPackageNameMasks = Codegen.empty();
-        this.rebootSetting = Codegen.empty();
+    private LinuxPropertiesArgs(LinuxPropertiesArgs $) {
+        this.excludedPackageNameMasks = $.excludedPackageNameMasks;
+        this.includedPackageClassifications = $.includedPackageClassifications;
+        this.includedPackageNameMasks = $.includedPackageNameMasks;
+        this.rebootSetting = $.rebootSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludedPackageNameMasks;
-        private @Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
-        private @Nullable Output<List<String>> includedPackageNameMasks;
-        private @Nullable Output<String> rebootSetting;
+        private LinuxPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxPropertiesArgs();
         }
 
         public Builder(LinuxPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedPackageNameMasks = defaults.excludedPackageNameMasks;
-    	      this.includedPackageClassifications = defaults.includedPackageClassifications;
-    	      this.includedPackageNameMasks = defaults.includedPackageNameMasks;
-    	      this.rebootSetting = defaults.rebootSetting;
+            $ = new LinuxPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedPackageNameMasks(@Nullable Output<List<String>> excludedPackageNameMasks) {
-            this.excludedPackageNameMasks = excludedPackageNameMasks;
+            $.excludedPackageNameMasks = excludedPackageNameMasks;
             return this;
         }
-        public Builder excludedPackageNameMasks(@Nullable List<String> excludedPackageNameMasks) {
-            this.excludedPackageNameMasks = Codegen.ofNullable(excludedPackageNameMasks);
-            return this;
+
+        public Builder excludedPackageNameMasks(List<String> excludedPackageNameMasks) {
+            return excludedPackageNameMasks(Output.of(excludedPackageNameMasks));
         }
+
         public Builder excludedPackageNameMasks(String... excludedPackageNameMasks) {
             return excludedPackageNameMasks(List.of(excludedPackageNameMasks));
         }
+
         public Builder includedPackageClassifications(@Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications) {
-            this.includedPackageClassifications = includedPackageClassifications;
+            $.includedPackageClassifications = includedPackageClassifications;
             return this;
         }
-        public Builder includedPackageClassifications(@Nullable Either<String,LinuxUpdateClasses> includedPackageClassifications) {
-            this.includedPackageClassifications = Codegen.ofNullable(includedPackageClassifications);
-            return this;
+
+        public Builder includedPackageClassifications(Either<String,LinuxUpdateClasses> includedPackageClassifications) {
+            return includedPackageClassifications(Output.of(includedPackageClassifications));
         }
+
         public Builder includedPackageNameMasks(@Nullable Output<List<String>> includedPackageNameMasks) {
-            this.includedPackageNameMasks = includedPackageNameMasks;
+            $.includedPackageNameMasks = includedPackageNameMasks;
             return this;
         }
-        public Builder includedPackageNameMasks(@Nullable List<String> includedPackageNameMasks) {
-            this.includedPackageNameMasks = Codegen.ofNullable(includedPackageNameMasks);
-            return this;
+
+        public Builder includedPackageNameMasks(List<String> includedPackageNameMasks) {
+            return includedPackageNameMasks(Output.of(includedPackageNameMasks));
         }
+
         public Builder includedPackageNameMasks(String... includedPackageNameMasks) {
             return includedPackageNameMasks(List.of(includedPackageNameMasks));
         }
+
         public Builder rebootSetting(@Nullable Output<String> rebootSetting) {
-            this.rebootSetting = rebootSetting;
+            $.rebootSetting = rebootSetting;
             return this;
         }
-        public Builder rebootSetting(@Nullable String rebootSetting) {
-            this.rebootSetting = Codegen.ofNullable(rebootSetting);
-            return this;
-        }        public LinuxPropertiesArgs build() {
-            return new LinuxPropertiesArgs(excludedPackageNameMasks, includedPackageClassifications, includedPackageNameMasks, rebootSetting);
+
+        public Builder rebootSetting(String rebootSetting) {
+            return rebootSetting(Output.of(rebootSetting));
+        }
+
+        public LinuxPropertiesArgs build() {
+            return $;
         }
     }
+
 }

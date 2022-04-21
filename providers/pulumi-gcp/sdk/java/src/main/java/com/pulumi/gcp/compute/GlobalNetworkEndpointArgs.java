@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GlobalNetworkEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable Output<String> fqdn;
+    private @Nullable Output<String> fqdn;
 
-    public Output<String> fqdn() {
-        return this.fqdn == null ? Codegen.empty() : this.fqdn;
+    public Optional<Output<String>> fqdn() {
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class GlobalNetworkEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="globalNetworkEndpointGroup", required=true)
-      private final Output<String> globalNetworkEndpointGroup;
+    private Output<String> globalNetworkEndpointGroup;
 
     public Output<String> globalNetworkEndpointGroup() {
         return this.globalNetworkEndpointGroup;
@@ -44,10 +44,10 @@ public final class GlobalNetworkEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class GlobalNetworkEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -67,102 +67,90 @@ public final class GlobalNetworkEndpointArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public GlobalNetworkEndpointArgs(
-        @Nullable Output<String> fqdn,
-        Output<String> globalNetworkEndpointGroup,
-        @Nullable Output<String> ipAddress,
-        Output<Integer> port,
-        @Nullable Output<String> project) {
-        this.fqdn = fqdn;
-        this.globalNetworkEndpointGroup = Objects.requireNonNull(globalNetworkEndpointGroup, "expected parameter 'globalNetworkEndpointGroup' to be non-null");
-        this.ipAddress = ipAddress;
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.project = project;
-    }
+    private GlobalNetworkEndpointArgs() {}
 
-    private GlobalNetworkEndpointArgs() {
-        this.fqdn = Codegen.empty();
-        this.globalNetworkEndpointGroup = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
+    private GlobalNetworkEndpointArgs(GlobalNetworkEndpointArgs $) {
+        this.fqdn = $.fqdn;
+        this.globalNetworkEndpointGroup = $.globalNetworkEndpointGroup;
+        this.ipAddress = $.ipAddress;
+        this.port = $.port;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalNetworkEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fqdn;
-        private Output<String> globalNetworkEndpointGroup;
-        private @Nullable Output<String> ipAddress;
-        private Output<Integer> port;
-        private @Nullable Output<String> project;
+        private GlobalNetworkEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalNetworkEndpointArgs();
         }
 
         public Builder(GlobalNetworkEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdn = defaults.fqdn;
-    	      this.globalNetworkEndpointGroup = defaults.globalNetworkEndpointGroup;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
+            $ = new GlobalNetworkEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdn(@Nullable Output<String> fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
-        public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Codegen.ofNullable(fqdn);
-            return this;
+
+        public Builder fqdn(String fqdn) {
+            return fqdn(Output.of(fqdn));
         }
+
         public Builder globalNetworkEndpointGroup(Output<String> globalNetworkEndpointGroup) {
-            this.globalNetworkEndpointGroup = Objects.requireNonNull(globalNetworkEndpointGroup);
+            $.globalNetworkEndpointGroup = globalNetworkEndpointGroup;
             return this;
         }
+
         public Builder globalNetworkEndpointGroup(String globalNetworkEndpointGroup) {
-            this.globalNetworkEndpointGroup = Output.of(Objects.requireNonNull(globalNetworkEndpointGroup));
-            return this;
+            return globalNetworkEndpointGroup(Output.of(globalNetworkEndpointGroup));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public GlobalNetworkEndpointArgs build() {
-            return new GlobalNetworkEndpointArgs(fqdn, globalNetworkEndpointGroup, ipAddress, port, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public GlobalNetworkEndpointArgs build() {
+            $.globalNetworkEndpointGroup = Objects.requireNonNull($.globalNetworkEndpointGroup, "expected parameter 'globalNetworkEndpointGroup' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

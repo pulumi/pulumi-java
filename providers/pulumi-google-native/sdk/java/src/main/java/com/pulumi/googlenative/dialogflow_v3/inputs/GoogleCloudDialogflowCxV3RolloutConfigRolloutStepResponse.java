@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse ext
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse ext
      * 
      */
     @Import(name="minDuration", required=true)
-      private final String minDuration;
+    private String minDuration;
 
     public String minDuration() {
         return this.minDuration;
@@ -44,64 +44,59 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse ext
      * 
      */
     @Import(name="trafficPercent", required=true)
-      private final Integer trafficPercent;
+    private Integer trafficPercent;
 
     public Integer trafficPercent() {
         return this.trafficPercent;
     }
 
-    public GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse(
-        String displayName,
-        String minDuration,
-        Integer trafficPercent) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.minDuration = Objects.requireNonNull(minDuration, "expected parameter 'minDuration' to be non-null");
-        this.trafficPercent = Objects.requireNonNull(trafficPercent, "expected parameter 'trafficPercent' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse() {}
 
-    private GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse() {
-        this.displayName = null;
-        this.minDuration = null;
-        this.trafficPercent = null;
+    private GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse(GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse $) {
+        this.displayName = $.displayName;
+        this.minDuration = $.minDuration;
+        this.trafficPercent = $.trafficPercent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String minDuration;
-        private Integer trafficPercent;
+        private GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.minDuration = defaults.minDuration;
-    	      this.trafficPercent = defaults.trafficPercent;
+            $ = new GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder minDuration(String minDuration) {
-            this.minDuration = Objects.requireNonNull(minDuration);
+            $.minDuration = minDuration;
             return this;
         }
+
         public Builder trafficPercent(Integer trafficPercent) {
-            this.trafficPercent = Objects.requireNonNull(trafficPercent);
+            $.trafficPercent = trafficPercent;
             return this;
-        }        public GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse build() {
-            return new GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse(displayName, minDuration, trafficPercent);
+        }
+
+        public GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.minDuration = Objects.requireNonNull($.minDuration, "expected parameter 'minDuration' to be non-null");
+            $.trafficPercent = Objects.requireNonNull($.trafficPercent, "expected parameter 'trafficPercent' to be non-null");
+            return $;
         }
     }
+
 }

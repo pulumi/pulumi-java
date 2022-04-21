@@ -5,12 +5,12 @@ package com.pulumi.gcp.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.organizations.inputs.PolicyListPolicyAllowGetArgs;
 import com.pulumi.gcp.organizations.inputs.PolicyListPolicyDenyGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class PolicyListPolicyGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="allow")
-      private final @Nullable Output<PolicyListPolicyAllowGetArgs> allow;
+    private @Nullable Output<PolicyListPolicyAllowGetArgs> allow;
 
-    public Output<PolicyListPolicyAllowGetArgs> allow() {
-        return this.allow == null ? Codegen.empty() : this.allow;
+    public Optional<Output<PolicyListPolicyAllowGetArgs>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
     @Import(name="deny")
-      private final @Nullable Output<PolicyListPolicyDenyGetArgs> deny;
+    private @Nullable Output<PolicyListPolicyDenyGetArgs> deny;
 
-    public Output<PolicyListPolicyDenyGetArgs> deny() {
-        return this.deny == null ? Codegen.empty() : this.deny;
+    public Optional<Output<PolicyListPolicyDenyGetArgs>> deny() {
+        return Optional.ofNullable(this.deny);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PolicyListPolicyGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="inheritFromParent")
-      private final @Nullable Output<Boolean> inheritFromParent;
+    private @Nullable Output<Boolean> inheritFromParent;
 
-    public Output<Boolean> inheritFromParent() {
-        return this.inheritFromParent == null ? Codegen.empty() : this.inheritFromParent;
+    public Optional<Output<Boolean>> inheritFromParent() {
+        return Optional.ofNullable(this.inheritFromParent);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class PolicyListPolicyGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="suggestedValue")
-      private final @Nullable Output<String> suggestedValue;
+    private @Nullable Output<String> suggestedValue;
 
-    public Output<String> suggestedValue() {
-        return this.suggestedValue == null ? Codegen.empty() : this.suggestedValue;
+    public Optional<Output<String>> suggestedValue() {
+        return Optional.ofNullable(this.suggestedValue);
     }
 
-    public PolicyListPolicyGetArgs(
-        @Nullable Output<PolicyListPolicyAllowGetArgs> allow,
-        @Nullable Output<PolicyListPolicyDenyGetArgs> deny,
-        @Nullable Output<Boolean> inheritFromParent,
-        @Nullable Output<String> suggestedValue) {
-        this.allow = allow;
-        this.deny = deny;
-        this.inheritFromParent = inheritFromParent;
-        this.suggestedValue = suggestedValue;
-    }
+    private PolicyListPolicyGetArgs() {}
 
-    private PolicyListPolicyGetArgs() {
-        this.allow = Codegen.empty();
-        this.deny = Codegen.empty();
-        this.inheritFromParent = Codegen.empty();
-        this.suggestedValue = Codegen.empty();
+    private PolicyListPolicyGetArgs(PolicyListPolicyGetArgs $) {
+        this.allow = $.allow;
+        this.deny = $.deny;
+        this.inheritFromParent = $.inheritFromParent;
+        this.suggestedValue = $.suggestedValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyListPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PolicyListPolicyAllowGetArgs> allow;
-        private @Nullable Output<PolicyListPolicyDenyGetArgs> deny;
-        private @Nullable Output<Boolean> inheritFromParent;
-        private @Nullable Output<String> suggestedValue;
+        private PolicyListPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyListPolicyGetArgs();
         }
 
         public Builder(PolicyListPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.deny = defaults.deny;
-    	      this.inheritFromParent = defaults.inheritFromParent;
-    	      this.suggestedValue = defaults.suggestedValue;
+            $ = new PolicyListPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Output<PolicyListPolicyAllowGetArgs> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
-        public Builder allow(@Nullable PolicyListPolicyAllowGetArgs allow) {
-            this.allow = Codegen.ofNullable(allow);
-            return this;
+
+        public Builder allow(PolicyListPolicyAllowGetArgs allow) {
+            return allow(Output.of(allow));
         }
+
         public Builder deny(@Nullable Output<PolicyListPolicyDenyGetArgs> deny) {
-            this.deny = deny;
+            $.deny = deny;
             return this;
         }
-        public Builder deny(@Nullable PolicyListPolicyDenyGetArgs deny) {
-            this.deny = Codegen.ofNullable(deny);
-            return this;
+
+        public Builder deny(PolicyListPolicyDenyGetArgs deny) {
+            return deny(Output.of(deny));
         }
+
         public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
-            this.inheritFromParent = inheritFromParent;
+            $.inheritFromParent = inheritFromParent;
             return this;
         }
-        public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
-            this.inheritFromParent = Codegen.ofNullable(inheritFromParent);
-            return this;
+
+        public Builder inheritFromParent(Boolean inheritFromParent) {
+            return inheritFromParent(Output.of(inheritFromParent));
         }
+
         public Builder suggestedValue(@Nullable Output<String> suggestedValue) {
-            this.suggestedValue = suggestedValue;
+            $.suggestedValue = suggestedValue;
             return this;
         }
-        public Builder suggestedValue(@Nullable String suggestedValue) {
-            this.suggestedValue = Codegen.ofNullable(suggestedValue);
-            return this;
-        }        public PolicyListPolicyGetArgs build() {
-            return new PolicyListPolicyGetArgs(allow, deny, inheritFromParent, suggestedValue);
+
+        public Builder suggestedValue(String suggestedValue) {
+            return suggestedValue(Output.of(suggestedValue));
+        }
+
+        public PolicyListPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

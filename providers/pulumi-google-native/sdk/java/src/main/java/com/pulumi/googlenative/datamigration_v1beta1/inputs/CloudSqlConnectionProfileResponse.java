@@ -22,7 +22,7 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
      * 
      */
     @Import(name="cloudSqlId", required=true)
-      private final String cloudSqlId;
+    private String cloudSqlId;
 
     public String cloudSqlId() {
         return this.cloudSqlId;
@@ -33,7 +33,7 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateIp", required=true)
-      private final String privateIp;
+    private String privateIp;
 
     public String privateIp() {
         return this.privateIp;
@@ -44,7 +44,7 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
      * 
      */
     @Import(name="publicIp", required=true)
-      private final String publicIp;
+    private String publicIp;
 
     public String publicIp() {
         return this.publicIp;
@@ -55,73 +55,66 @@ public final class CloudSqlConnectionProfileResponse extends com.pulumi.resource
      * 
      */
     @Import(name="settings", required=true)
-      private final CloudSqlSettingsResponse settings;
+    private CloudSqlSettingsResponse settings;
 
     public CloudSqlSettingsResponse settings() {
         return this.settings;
     }
 
-    public CloudSqlConnectionProfileResponse(
-        String cloudSqlId,
-        String privateIp,
-        String publicIp,
-        CloudSqlSettingsResponse settings) {
-        this.cloudSqlId = Objects.requireNonNull(cloudSqlId, "expected parameter 'cloudSqlId' to be non-null");
-        this.privateIp = Objects.requireNonNull(privateIp, "expected parameter 'privateIp' to be non-null");
-        this.publicIp = Objects.requireNonNull(publicIp, "expected parameter 'publicIp' to be non-null");
-        this.settings = Objects.requireNonNull(settings, "expected parameter 'settings' to be non-null");
-    }
+    private CloudSqlConnectionProfileResponse() {}
 
-    private CloudSqlConnectionProfileResponse() {
-        this.cloudSqlId = null;
-        this.privateIp = null;
-        this.publicIp = null;
-        this.settings = null;
+    private CloudSqlConnectionProfileResponse(CloudSqlConnectionProfileResponse $) {
+        this.cloudSqlId = $.cloudSqlId;
+        this.privateIp = $.privateIp;
+        this.publicIp = $.publicIp;
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudSqlConnectionProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudSqlId;
-        private String privateIp;
-        private String publicIp;
-        private CloudSqlSettingsResponse settings;
+        private CloudSqlConnectionProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudSqlConnectionProfileResponse();
         }
 
         public Builder(CloudSqlConnectionProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSqlId = defaults.cloudSqlId;
-    	      this.privateIp = defaults.privateIp;
-    	      this.publicIp = defaults.publicIp;
-    	      this.settings = defaults.settings;
+            $ = new CloudSqlConnectionProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSqlId(String cloudSqlId) {
-            this.cloudSqlId = Objects.requireNonNull(cloudSqlId);
+            $.cloudSqlId = cloudSqlId;
             return this;
         }
+
         public Builder privateIp(String privateIp) {
-            this.privateIp = Objects.requireNonNull(privateIp);
+            $.privateIp = privateIp;
             return this;
         }
+
         public Builder publicIp(String publicIp) {
-            this.publicIp = Objects.requireNonNull(publicIp);
+            $.publicIp = publicIp;
             return this;
         }
+
         public Builder settings(CloudSqlSettingsResponse settings) {
-            this.settings = Objects.requireNonNull(settings);
+            $.settings = settings;
             return this;
-        }        public CloudSqlConnectionProfileResponse build() {
-            return new CloudSqlConnectionProfileResponse(cloudSqlId, privateIp, publicIp, settings);
+        }
+
+        public CloudSqlConnectionProfileResponse build() {
+            $.cloudSqlId = Objects.requireNonNull($.cloudSqlId, "expected parameter 'cloudSqlId' to be non-null");
+            $.privateIp = Objects.requireNonNull($.privateIp, "expected parameter 'privateIp' to be non-null");
+            $.publicIp = Objects.requireNonNull($.publicIp, "expected parameter 'publicIp' to be non-null");
+            $.settings = Objects.requireNonNull($.settings, "expected parameter 'settings' to be non-null");
+            return $;
         }
     }
+
 }

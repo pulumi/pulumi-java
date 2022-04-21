@@ -5,7 +5,6 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class FlexibleAppVersionManualScalingGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="instances", required=true)
-      private final Output<Integer> instances;
+    private Output<Integer> instances;
 
     public Output<Integer> instances() {
         return this.instances;
     }
 
-    public FlexibleAppVersionManualScalingGetArgs(Output<Integer> instances) {
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-    }
+    private FlexibleAppVersionManualScalingGetArgs() {}
 
-    private FlexibleAppVersionManualScalingGetArgs() {
-        this.instances = Codegen.empty();
+    private FlexibleAppVersionManualScalingGetArgs(FlexibleAppVersionManualScalingGetArgs $) {
+        this.instances = $.instances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionManualScalingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> instances;
+        private FlexibleAppVersionManualScalingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionManualScalingGetArgs();
         }
 
         public Builder(FlexibleAppVersionManualScalingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
+            $ = new FlexibleAppVersionManualScalingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(Output<Integer> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(Integer instances) {
-            this.instances = Output.of(Objects.requireNonNull(instances));
-            return this;
-        }        public FlexibleAppVersionManualScalingGetArgs build() {
-            return new FlexibleAppVersionManualScalingGetArgs(instances);
+            return instances(Output.of(instances));
+        }
+
+        public FlexibleAppVersionManualScalingGetArgs build() {
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            return $;
         }
     }
+
 }

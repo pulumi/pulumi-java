@@ -23,7 +23,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -34,7 +34,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -45,7 +45,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -56,7 +56,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="firewallRuleType", required=true)
-      private final String firewallRuleType;
+    private String firewallRuleType;
 
     public String firewallRuleType() {
         return this.firewallRuleType;
@@ -67,7 +67,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="networkUri", required=true)
-      private final String networkUri;
+    private String networkUri;
 
     public String networkUri() {
         return this.networkUri;
@@ -78,7 +78,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="policy", required=true)
-      private final String policy;
+    private String policy;
 
     public String policy() {
         return this.policy;
@@ -89,7 +89,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -100,7 +100,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetServiceAccounts", required=true)
-      private final List<String> targetServiceAccounts;
+    private List<String> targetServiceAccounts;
 
     public List<String> targetServiceAccounts() {
         return this.targetServiceAccounts;
@@ -111,7 +111,7 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="targetTags", required=true)
-      private final List<String> targetTags;
+    private List<String> targetTags;
 
     public List<String> targetTags() {
         return this.targetTags;
@@ -122,133 +122,116 @@ public final class FirewallInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public FirewallInfoResponse(
-        String action,
-        String direction,
-        String displayName,
-        String firewallRuleType,
-        String networkUri,
-        String policy,
-        Integer priority,
-        List<String> targetServiceAccounts,
-        List<String> targetTags,
-        String uri) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.firewallRuleType = Objects.requireNonNull(firewallRuleType, "expected parameter 'firewallRuleType' to be non-null");
-        this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts, "expected parameter 'targetServiceAccounts' to be non-null");
-        this.targetTags = Objects.requireNonNull(targetTags, "expected parameter 'targetTags' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private FirewallInfoResponse() {}
 
-    private FirewallInfoResponse() {
-        this.action = null;
-        this.direction = null;
-        this.displayName = null;
-        this.firewallRuleType = null;
-        this.networkUri = null;
-        this.policy = null;
-        this.priority = null;
-        this.targetServiceAccounts = List.of();
-        this.targetTags = List.of();
-        this.uri = null;
+    private FirewallInfoResponse(FirewallInfoResponse $) {
+        this.action = $.action;
+        this.direction = $.direction;
+        this.displayName = $.displayName;
+        this.firewallRuleType = $.firewallRuleType;
+        this.networkUri = $.networkUri;
+        this.policy = $.policy;
+        this.priority = $.priority;
+        this.targetServiceAccounts = $.targetServiceAccounts;
+        this.targetTags = $.targetTags;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private String direction;
-        private String displayName;
-        private String firewallRuleType;
-        private String networkUri;
-        private String policy;
-        private Integer priority;
-        private List<String> targetServiceAccounts;
-        private List<String> targetTags;
-        private String uri;
+        private FirewallInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallInfoResponse();
         }
 
         public Builder(FirewallInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.direction = defaults.direction;
-    	      this.displayName = defaults.displayName;
-    	      this.firewallRuleType = defaults.firewallRuleType;
-    	      this.networkUri = defaults.networkUri;
-    	      this.policy = defaults.policy;
-    	      this.priority = defaults.priority;
-    	      this.targetServiceAccounts = defaults.targetServiceAccounts;
-    	      this.targetTags = defaults.targetTags;
-    	      this.uri = defaults.uri;
+            $ = new FirewallInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder firewallRuleType(String firewallRuleType) {
-            this.firewallRuleType = Objects.requireNonNull(firewallRuleType);
+            $.firewallRuleType = firewallRuleType;
             return this;
         }
+
         public Builder networkUri(String networkUri) {
-            this.networkUri = Objects.requireNonNull(networkUri);
+            $.networkUri = networkUri;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
+            $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
+
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
         }
+
         public Builder targetTags(List<String> targetTags) {
-            this.targetTags = Objects.requireNonNull(targetTags);
+            $.targetTags = targetTags;
             return this;
         }
+
         public Builder targetTags(String... targetTags) {
             return targetTags(List.of(targetTags));
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public FirewallInfoResponse build() {
-            return new FirewallInfoResponse(action, direction, displayName, firewallRuleType, networkUri, policy, priority, targetServiceAccounts, targetTags, uri);
+        }
+
+        public FirewallInfoResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.firewallRuleType = Objects.requireNonNull($.firewallRuleType, "expected parameter 'firewallRuleType' to be non-null");
+            $.networkUri = Objects.requireNonNull($.networkUri, "expected parameter 'networkUri' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.targetServiceAccounts = Objects.requireNonNull($.targetServiceAccounts, "expected parameter 'targetServiceAccounts' to be non-null");
+            $.targetTags = Objects.requireNonNull($.targetTags, "expected parameter 'targetTags' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

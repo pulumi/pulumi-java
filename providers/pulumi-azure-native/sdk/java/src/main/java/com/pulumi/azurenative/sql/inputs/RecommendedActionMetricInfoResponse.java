@@ -22,7 +22,7 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="metricName", required=true)
-      private final String metricName;
+    private String metricName;
 
     public String metricName() {
         return this.metricName;
@@ -33,7 +33,7 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -44,7 +44,7 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="timeGrain", required=true)
-      private final String timeGrain;
+    private String timeGrain;
 
     public String timeGrain() {
         return this.timeGrain;
@@ -55,7 +55,7 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="unit", required=true)
-      private final String unit;
+    private String unit;
 
     public String unit() {
         return this.unit;
@@ -66,82 +66,73 @@ public final class RecommendedActionMetricInfoResponse extends com.pulumi.resour
      * 
      */
     @Import(name="value", required=true)
-      private final Double value;
+    private Double value;
 
     public Double value() {
         return this.value;
     }
 
-    public RecommendedActionMetricInfoResponse(
-        String metricName,
-        String startTime,
-        String timeGrain,
-        String unit,
-        Double value) {
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.timeGrain = Objects.requireNonNull(timeGrain, "expected parameter 'timeGrain' to be non-null");
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private RecommendedActionMetricInfoResponse() {}
 
-    private RecommendedActionMetricInfoResponse() {
-        this.metricName = null;
-        this.startTime = null;
-        this.timeGrain = null;
-        this.unit = null;
-        this.value = null;
+    private RecommendedActionMetricInfoResponse(RecommendedActionMetricInfoResponse $) {
+        this.metricName = $.metricName;
+        this.startTime = $.startTime;
+        this.timeGrain = $.timeGrain;
+        this.unit = $.unit;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendedActionMetricInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metricName;
-        private String startTime;
-        private String timeGrain;
-        private String unit;
-        private Double value;
+        private RecommendedActionMetricInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendedActionMetricInfoResponse();
         }
 
         public Builder(RecommendedActionMetricInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricName = defaults.metricName;
-    	      this.startTime = defaults.startTime;
-    	      this.timeGrain = defaults.timeGrain;
-    	      this.unit = defaults.unit;
-    	      this.value = defaults.value;
+            $ = new RecommendedActionMetricInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metricName(String metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder timeGrain(String timeGrain) {
-            this.timeGrain = Objects.requireNonNull(timeGrain);
+            $.timeGrain = timeGrain;
             return this;
         }
+
         public Builder unit(String unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
         }
+
         public Builder value(Double value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public RecommendedActionMetricInfoResponse build() {
-            return new RecommendedActionMetricInfoResponse(metricName, startTime, timeGrain, unit, value);
+        }
+
+        public RecommendedActionMetricInfoResponse build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.timeGrain = Objects.requireNonNull($.timeGrain, "expected parameter 'timeGrain' to be non-null");
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

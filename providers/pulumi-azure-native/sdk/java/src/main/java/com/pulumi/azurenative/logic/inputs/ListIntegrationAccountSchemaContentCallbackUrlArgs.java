@@ -21,7 +21,7 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -32,10 +32,10 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Either<String,KeyType> keyType;
+    private @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> keyType() {
-        return this.keyType == null ? null : this.keyType;
+    public Optional<Either<String,KeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
      * 
      */
     @Import(name="notAfter")
-      private final @Nullable String notAfter;
+    private @Nullable String notAfter;
 
     public Optional<String> notAfter() {
-        return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
+        return Optional.ofNullable(this.notAfter);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -65,82 +65,71 @@ public final class ListIntegrationAccountSchemaContentCallbackUrlArgs extends co
      * 
      */
     @Import(name="schemaName", required=true)
-      private final String schemaName;
+    private String schemaName;
 
     public String schemaName() {
         return this.schemaName;
     }
 
-    public ListIntegrationAccountSchemaContentCallbackUrlArgs(
-        String integrationAccountName,
-        @Nullable Either<String,KeyType> keyType,
-        @Nullable String notAfter,
-        String resourceGroupName,
-        String schemaName) {
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.keyType = keyType;
-        this.notAfter = notAfter;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-    }
+    private ListIntegrationAccountSchemaContentCallbackUrlArgs() {}
 
-    private ListIntegrationAccountSchemaContentCallbackUrlArgs() {
-        this.integrationAccountName = null;
-        this.keyType = null;
-        this.notAfter = null;
-        this.resourceGroupName = null;
-        this.schemaName = null;
+    private ListIntegrationAccountSchemaContentCallbackUrlArgs(ListIntegrationAccountSchemaContentCallbackUrlArgs $) {
+        this.integrationAccountName = $.integrationAccountName;
+        this.keyType = $.keyType;
+        this.notAfter = $.notAfter;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaName = $.schemaName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListIntegrationAccountSchemaContentCallbackUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationAccountName;
-        private @Nullable Either<String,KeyType> keyType;
-        private @Nullable String notAfter;
-        private String resourceGroupName;
-        private String schemaName;
+        private ListIntegrationAccountSchemaContentCallbackUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListIntegrationAccountSchemaContentCallbackUrlArgs();
         }
 
         public Builder(ListIntegrationAccountSchemaContentCallbackUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.keyType = defaults.keyType;
-    	      this.notAfter = defaults.notAfter;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaName = defaults.schemaName;
+            $ = new ListIntegrationAccountSchemaContentCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
+
         public Builder notAfter(@Nullable String notAfter) {
-            this.notAfter = notAfter;
+            $.notAfter = notAfter;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
-        }        public ListIntegrationAccountSchemaContentCallbackUrlArgs build() {
-            return new ListIntegrationAccountSchemaContentCallbackUrlArgs(integrationAccountName, keyType, notAfter, resourceGroupName, schemaName);
+        }
+
+        public ListIntegrationAccountSchemaContentCallbackUrlArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            return $;
         }
     }
+
 }

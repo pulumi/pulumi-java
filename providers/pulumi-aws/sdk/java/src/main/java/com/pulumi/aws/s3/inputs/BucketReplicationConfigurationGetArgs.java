@@ -6,7 +6,6 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class BucketReplicationConfigurationGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -32,66 +31,64 @@ public final class BucketReplicationConfigurationGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<List<BucketReplicationConfigurationRuleGetArgs>> rules;
+    private Output<List<BucketReplicationConfigurationRuleGetArgs>> rules;
 
     public Output<List<BucketReplicationConfigurationRuleGetArgs>> rules() {
         return this.rules;
     }
 
-    public BucketReplicationConfigurationGetArgs(
-        Output<String> role,
-        Output<List<BucketReplicationConfigurationRuleGetArgs>> rules) {
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private BucketReplicationConfigurationGetArgs() {}
 
-    private BucketReplicationConfigurationGetArgs() {
-        this.role = Codegen.empty();
-        this.rules = Codegen.empty();
+    private BucketReplicationConfigurationGetArgs(BucketReplicationConfigurationGetArgs $) {
+        this.role = $.role;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> role;
-        private Output<List<BucketReplicationConfigurationRuleGetArgs>> rules;
+        private BucketReplicationConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationConfigurationGetArgs();
         }
 
         public Builder(BucketReplicationConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.role = defaults.role;
-    	      this.rules = defaults.rules;
+            $ = new BucketReplicationConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder rules(Output<List<BucketReplicationConfigurationRuleGetArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<BucketReplicationConfigurationRuleGetArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(BucketReplicationConfigurationRuleGetArgs... rules) {
             return rules(List.of(rules));
-        }        public BucketReplicationConfigurationGetArgs build() {
-            return new BucketReplicationConfigurationGetArgs(role, rules);
+        }
+
+        public BucketReplicationConfigurationGetArgs build() {
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

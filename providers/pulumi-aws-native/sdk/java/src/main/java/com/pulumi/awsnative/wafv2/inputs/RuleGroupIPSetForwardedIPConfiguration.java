@@ -15,78 +15,73 @@ public final class RuleGroupIPSetForwardedIPConfiguration extends com.pulumi.res
     public static final RuleGroupIPSetForwardedIPConfiguration Empty = new RuleGroupIPSetForwardedIPConfiguration();
 
     @Import(name="fallbackBehavior", required=true)
-      private final RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior;
+    private RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior;
 
     public RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior() {
         return this.fallbackBehavior;
     }
 
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
     }
 
     @Import(name="position", required=true)
-      private final RuleGroupIPSetForwardedIPConfigurationPosition position;
+    private RuleGroupIPSetForwardedIPConfigurationPosition position;
 
     public RuleGroupIPSetForwardedIPConfigurationPosition position() {
         return this.position;
     }
 
-    public RuleGroupIPSetForwardedIPConfiguration(
-        RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        String headerName,
-        RuleGroupIPSetForwardedIPConfigurationPosition position) {
-        this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-    }
+    private RuleGroupIPSetForwardedIPConfiguration() {}
 
-    private RuleGroupIPSetForwardedIPConfiguration() {
-        this.fallbackBehavior = null;
-        this.headerName = null;
-        this.position = null;
+    private RuleGroupIPSetForwardedIPConfiguration(RuleGroupIPSetForwardedIPConfiguration $) {
+        this.fallbackBehavior = $.fallbackBehavior;
+        this.headerName = $.headerName;
+        this.position = $.position;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupIPSetForwardedIPConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior;
-        private String headerName;
-        private RuleGroupIPSetForwardedIPConfigurationPosition position;
+        private RuleGroupIPSetForwardedIPConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupIPSetForwardedIPConfiguration();
         }
 
         public Builder(RuleGroupIPSetForwardedIPConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fallbackBehavior = defaults.fallbackBehavior;
-    	      this.headerName = defaults.headerName;
-    	      this.position = defaults.position;
+            $ = new RuleGroupIPSetForwardedIPConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder fallbackBehavior(RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
-            this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
+            $.fallbackBehavior = fallbackBehavior;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder position(RuleGroupIPSetForwardedIPConfigurationPosition position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
-        }        public RuleGroupIPSetForwardedIPConfiguration build() {
-            return new RuleGroupIPSetForwardedIPConfiguration(fallbackBehavior, headerName, position);
+        }
+
+        public RuleGroupIPSetForwardedIPConfiguration build() {
+            $.fallbackBehavior = Objects.requireNonNull($.fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ServicePrincipalPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
-    public ServicePrincipalPropertiesArgs(
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> secret) {
-        this.applicationId = applicationId;
-        this.secret = secret;
-    }
+    private ServicePrincipalPropertiesArgs() {}
 
-    private ServicePrincipalPropertiesArgs() {
-        this.applicationId = Codegen.empty();
-        this.secret = Codegen.empty();
+    private ServicePrincipalPropertiesArgs(ServicePrincipalPropertiesArgs $) {
+        this.applicationId = $.applicationId;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> secret;
+        private ServicePrincipalPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalPropertiesArgs();
         }
 
         public Builder(ServicePrincipalPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.secret = defaults.secret;
+            $ = new ServicePrincipalPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
-        }        public ServicePrincipalPropertiesArgs build() {
-            return new ServicePrincipalPropertiesArgs(applicationId, secret);
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
+        }
+
+        public ServicePrincipalPropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -16,62 +16,57 @@ public final class AnomalyDetectorJsonFormatDescriptor extends com.pulumi.resour
     public static final AnomalyDetectorJsonFormatDescriptor Empty = new AnomalyDetectorJsonFormatDescriptor();
 
     @Import(name="charset")
-      private final @Nullable String charset;
+    private @Nullable String charset;
 
     public Optional<String> charset() {
-        return this.charset == null ? Optional.empty() : Optional.ofNullable(this.charset);
+        return Optional.ofNullable(this.charset);
     }
 
     @Import(name="fileCompression")
-      private final @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression;
+    private @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression;
 
     public Optional<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression() {
-        return this.fileCompression == null ? Optional.empty() : Optional.ofNullable(this.fileCompression);
+        return Optional.ofNullable(this.fileCompression);
     }
 
-    public AnomalyDetectorJsonFormatDescriptor(
-        @Nullable String charset,
-        @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
-        this.charset = charset;
-        this.fileCompression = fileCompression;
-    }
+    private AnomalyDetectorJsonFormatDescriptor() {}
 
-    private AnomalyDetectorJsonFormatDescriptor() {
-        this.charset = null;
-        this.fileCompression = null;
+    private AnomalyDetectorJsonFormatDescriptor(AnomalyDetectorJsonFormatDescriptor $) {
+        this.charset = $.charset;
+        this.fileCompression = $.fileCompression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorJsonFormatDescriptor defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String charset;
-        private @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression;
+        private AnomalyDetectorJsonFormatDescriptor $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorJsonFormatDescriptor();
         }
 
         public Builder(AnomalyDetectorJsonFormatDescriptor defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charset = defaults.charset;
-    	      this.fileCompression = defaults.fileCompression;
+            $ = new AnomalyDetectorJsonFormatDescriptor(Objects.requireNonNull(defaults));
         }
 
         public Builder charset(@Nullable String charset) {
-            this.charset = charset;
+            $.charset = charset;
             return this;
         }
+
         public Builder fileCompression(@Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
-            this.fileCompression = fileCompression;
+            $.fileCompression = fileCompression;
             return this;
-        }        public AnomalyDetectorJsonFormatDescriptor build() {
-            return new AnomalyDetectorJsonFormatDescriptor(charset, fileCompression);
+        }
+
+        public AnomalyDetectorJsonFormatDescriptor build() {
+            return $;
         }
     }
+
 }

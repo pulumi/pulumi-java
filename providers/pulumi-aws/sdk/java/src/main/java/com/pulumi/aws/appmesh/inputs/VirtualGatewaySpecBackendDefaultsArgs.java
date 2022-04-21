@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualGatewaySpecBackendDefaultsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="clientPolicy")
-      private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy;
+    private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy() {
-        return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
+    public Optional<Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs>> clientPolicy() {
+        return Optional.ofNullable(this.clientPolicy);
     }
 
-    public VirtualGatewaySpecBackendDefaultsArgs(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy) {
-        this.clientPolicy = clientPolicy;
-    }
+    private VirtualGatewaySpecBackendDefaultsArgs() {}
 
-    private VirtualGatewaySpecBackendDefaultsArgs() {
-        this.clientPolicy = Codegen.empty();
+    private VirtualGatewaySpecBackendDefaultsArgs(VirtualGatewaySpecBackendDefaultsArgs $) {
+        this.clientPolicy = $.clientPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecBackendDefaultsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy;
+        private VirtualGatewaySpecBackendDefaultsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecBackendDefaultsArgs();
         }
 
         public Builder(VirtualGatewaySpecBackendDefaultsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientPolicy = defaults.clientPolicy;
+            $ = new VirtualGatewaySpecBackendDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientPolicy(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyArgs> clientPolicy) {
-            this.clientPolicy = clientPolicy;
+            $.clientPolicy = clientPolicy;
             return this;
         }
-        public Builder clientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyArgs clientPolicy) {
-            this.clientPolicy = Codegen.ofNullable(clientPolicy);
-            return this;
-        }        public VirtualGatewaySpecBackendDefaultsArgs build() {
-            return new VirtualGatewaySpecBackendDefaultsArgs(clientPolicy);
+
+        public Builder clientPolicy(VirtualGatewaySpecBackendDefaultsClientPolicyArgs clientPolicy) {
+            return clientPolicy(Output.of(clientPolicy));
+        }
+
+        public VirtualGatewaySpecBackendDefaultsArgs build() {
+            return $;
         }
     }
+
 }

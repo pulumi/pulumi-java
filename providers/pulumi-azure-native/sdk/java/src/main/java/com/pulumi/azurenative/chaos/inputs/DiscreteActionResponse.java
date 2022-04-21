@@ -24,7 +24,7 @@ public final class DiscreteActionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,7 +35,7 @@ public final class DiscreteActionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="parameters", required=true)
-      private final List<KeyValuePairResponse> parameters;
+    private List<KeyValuePairResponse> parameters;
 
     public List<KeyValuePairResponse> parameters() {
         return this.parameters;
@@ -46,7 +46,7 @@ public final class DiscreteActionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="selectorId", required=true)
-      private final String selectorId;
+    private String selectorId;
 
     public String selectorId() {
         return this.selectorId;
@@ -58,76 +58,70 @@ public final class DiscreteActionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DiscreteActionResponse(
-        String name,
-        List<KeyValuePairResponse> parameters,
-        String selectorId,
-        String type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.selectorId = Objects.requireNonNull(selectorId, "expected parameter 'selectorId' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private DiscreteActionResponse() {}
 
-    private DiscreteActionResponse() {
-        this.name = null;
-        this.parameters = List.of();
-        this.selectorId = null;
-        this.type = null;
+    private DiscreteActionResponse(DiscreteActionResponse $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.selectorId = $.selectorId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscreteActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<KeyValuePairResponse> parameters;
-        private String selectorId;
-        private String type;
+        private DiscreteActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscreteActionResponse();
         }
 
         public Builder(DiscreteActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.selectorId = defaults.selectorId;
-    	      this.type = defaults.type;
+            $ = new DiscreteActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(List<KeyValuePairResponse> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(KeyValuePairResponse... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder selectorId(String selectorId) {
-            this.selectorId = Objects.requireNonNull(selectorId);
+            $.selectorId = selectorId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DiscreteActionResponse build() {
-            return new DiscreteActionResponse(name, parameters, selectorId, type);
+        }
+
+        public DiscreteActionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.selectorId = Objects.requireNonNull($.selectorId, "expected parameter 'selectorId' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

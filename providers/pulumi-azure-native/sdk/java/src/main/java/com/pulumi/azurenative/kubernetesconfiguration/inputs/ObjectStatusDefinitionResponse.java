@@ -27,10 +27,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="appliedBy")
-      private final @Nullable ObjectReferenceDefinitionResponse appliedBy;
+    private @Nullable ObjectReferenceDefinitionResponse appliedBy;
 
     public Optional<ObjectReferenceDefinitionResponse> appliedBy() {
-        return this.appliedBy == null ? Optional.empty() : Optional.ofNullable(this.appliedBy);
+        return Optional.ofNullable(this.appliedBy);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="complianceState")
-      private final @Nullable String complianceState;
+    private @Nullable String complianceState;
 
     public Optional<String> complianceState() {
-        return this.complianceState == null ? Optional.empty() : Optional.ofNullable(this.complianceState);
+        return Optional.ofNullable(this.complianceState);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="helmReleaseProperties")
-      private final @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties;
+    private @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties;
 
     public Optional<HelmReleasePropertiesDefinitionResponse> helmReleaseProperties() {
-        return this.helmReleaseProperties == null ? Optional.empty() : Optional.ofNullable(this.helmReleaseProperties);
+        return Optional.ofNullable(this.helmReleaseProperties);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="namespace")
-      private final @Nullable String namespace;
+    private @Nullable String namespace;
 
     public Optional<String> namespace() {
-        return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -93,103 +93,84 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="statusConditions")
-      private final @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
+    private @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
 
-    public List<ObjectStatusConditionDefinitionResponse> statusConditions() {
-        return this.statusConditions == null ? List.of() : this.statusConditions;
+    public Optional<List<ObjectStatusConditionDefinitionResponse>> statusConditions() {
+        return Optional.ofNullable(this.statusConditions);
     }
 
-    public ObjectStatusDefinitionResponse(
-        @Nullable ObjectReferenceDefinitionResponse appliedBy,
-        @Nullable String complianceState,
-        @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
-        this.appliedBy = appliedBy;
-        this.complianceState = complianceState;
-        this.helmReleaseProperties = helmReleaseProperties;
-        this.kind = kind;
-        this.name = name;
-        this.namespace = namespace;
-        this.statusConditions = statusConditions;
-    }
+    private ObjectStatusDefinitionResponse() {}
 
-    private ObjectStatusDefinitionResponse() {
-        this.appliedBy = null;
-        this.complianceState = null;
-        this.helmReleaseProperties = null;
-        this.kind = null;
-        this.name = null;
-        this.namespace = null;
-        this.statusConditions = List.of();
+    private ObjectStatusDefinitionResponse(ObjectStatusDefinitionResponse $) {
+        this.appliedBy = $.appliedBy;
+        this.complianceState = $.complianceState;
+        this.helmReleaseProperties = $.helmReleaseProperties;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.statusConditions = $.statusConditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectStatusDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ObjectReferenceDefinitionResponse appliedBy;
-        private @Nullable String complianceState;
-        private @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties;
-        private @Nullable String kind;
-        private @Nullable String name;
-        private @Nullable String namespace;
-        private @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
+        private ObjectStatusDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectStatusDefinitionResponse();
         }
 
         public Builder(ObjectStatusDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appliedBy = defaults.appliedBy;
-    	      this.complianceState = defaults.complianceState;
-    	      this.helmReleaseProperties = defaults.helmReleaseProperties;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.statusConditions = defaults.statusConditions;
+            $ = new ObjectStatusDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appliedBy(@Nullable ObjectReferenceDefinitionResponse appliedBy) {
-            this.appliedBy = appliedBy;
+            $.appliedBy = appliedBy;
             return this;
         }
+
         public Builder complianceState(@Nullable String complianceState) {
-            this.complianceState = complianceState;
+            $.complianceState = complianceState;
             return this;
         }
+
         public Builder helmReleaseProperties(@Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties) {
-            this.helmReleaseProperties = helmReleaseProperties;
+            $.helmReleaseProperties = helmReleaseProperties;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
+
         public Builder statusConditions(@Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
-            this.statusConditions = statusConditions;
+            $.statusConditions = statusConditions;
             return this;
         }
+
         public Builder statusConditions(ObjectStatusConditionDefinitionResponse... statusConditions) {
             return statusConditions(List.of(statusConditions));
-        }        public ObjectStatusDefinitionResponse build() {
-            return new ObjectStatusDefinitionResponse(appliedBy, complianceState, helmReleaseProperties, kind, name, namespace, statusConditions);
+        }
+
+        public ObjectStatusDefinitionResponse build() {
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class ContainerConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="containerGroupName")
-      private final @Nullable String containerGroupName;
+    private @Nullable String containerGroupName;
 
     public Optional<String> containerGroupName() {
-        return this.containerGroupName == null ? Optional.empty() : Optional.ofNullable(this.containerGroupName);
+        return Optional.ofNullable(this.containerGroupName);
     }
 
-    public ContainerConfigurationResponse(@Nullable String containerGroupName) {
-        this.containerGroupName = containerGroupName;
-    }
+    private ContainerConfigurationResponse() {}
 
-    private ContainerConfigurationResponse() {
-        this.containerGroupName = null;
+    private ContainerConfigurationResponse(ContainerConfigurationResponse $) {
+        this.containerGroupName = $.containerGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String containerGroupName;
+        private ContainerConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerConfigurationResponse();
         }
 
         public Builder(ContainerConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerGroupName = defaults.containerGroupName;
+            $ = new ContainerConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerGroupName(@Nullable String containerGroupName) {
-            this.containerGroupName = containerGroupName;
+            $.containerGroupName = containerGroupName;
             return this;
-        }        public ContainerConfigurationResponse build() {
-            return new ContainerConfigurationResponse(containerGroupName);
+        }
+
+        public ContainerConfigurationResponse build() {
+            return $;
         }
     }
+
 }

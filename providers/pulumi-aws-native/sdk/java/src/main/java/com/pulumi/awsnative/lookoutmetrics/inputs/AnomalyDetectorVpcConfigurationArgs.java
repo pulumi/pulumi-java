@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,76 +15,75 @@ public final class AnomalyDetectorVpcConfigurationArgs extends com.pulumi.resour
     public static final AnomalyDetectorVpcConfigurationArgs Empty = new AnomalyDetectorVpcConfigurationArgs();
 
     @Import(name="securityGroupIdList", required=true)
-      private final Output<List<String>> securityGroupIdList;
+    private Output<List<String>> securityGroupIdList;
 
     public Output<List<String>> securityGroupIdList() {
         return this.securityGroupIdList;
     }
 
     @Import(name="subnetIdList", required=true)
-      private final Output<List<String>> subnetIdList;
+    private Output<List<String>> subnetIdList;
 
     public Output<List<String>> subnetIdList() {
         return this.subnetIdList;
     }
 
-    public AnomalyDetectorVpcConfigurationArgs(
-        Output<List<String>> securityGroupIdList,
-        Output<List<String>> subnetIdList) {
-        this.securityGroupIdList = Objects.requireNonNull(securityGroupIdList, "expected parameter 'securityGroupIdList' to be non-null");
-        this.subnetIdList = Objects.requireNonNull(subnetIdList, "expected parameter 'subnetIdList' to be non-null");
-    }
+    private AnomalyDetectorVpcConfigurationArgs() {}
 
-    private AnomalyDetectorVpcConfigurationArgs() {
-        this.securityGroupIdList = Codegen.empty();
-        this.subnetIdList = Codegen.empty();
+    private AnomalyDetectorVpcConfigurationArgs(AnomalyDetectorVpcConfigurationArgs $) {
+        this.securityGroupIdList = $.securityGroupIdList;
+        this.subnetIdList = $.subnetIdList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorVpcConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> securityGroupIdList;
-        private Output<List<String>> subnetIdList;
+        private AnomalyDetectorVpcConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorVpcConfigurationArgs();
         }
 
         public Builder(AnomalyDetectorVpcConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIdList = defaults.securityGroupIdList;
-    	      this.subnetIdList = defaults.subnetIdList;
+            $ = new AnomalyDetectorVpcConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIdList(Output<List<String>> securityGroupIdList) {
-            this.securityGroupIdList = Objects.requireNonNull(securityGroupIdList);
+            $.securityGroupIdList = securityGroupIdList;
             return this;
         }
+
         public Builder securityGroupIdList(List<String> securityGroupIdList) {
-            this.securityGroupIdList = Output.of(Objects.requireNonNull(securityGroupIdList));
-            return this;
+            return securityGroupIdList(Output.of(securityGroupIdList));
         }
+
         public Builder securityGroupIdList(String... securityGroupIdList) {
             return securityGroupIdList(List.of(securityGroupIdList));
         }
+
         public Builder subnetIdList(Output<List<String>> subnetIdList) {
-            this.subnetIdList = Objects.requireNonNull(subnetIdList);
+            $.subnetIdList = subnetIdList;
             return this;
         }
+
         public Builder subnetIdList(List<String> subnetIdList) {
-            this.subnetIdList = Output.of(Objects.requireNonNull(subnetIdList));
-            return this;
+            return subnetIdList(Output.of(subnetIdList));
         }
+
         public Builder subnetIdList(String... subnetIdList) {
             return subnetIdList(List.of(subnetIdList));
-        }        public AnomalyDetectorVpcConfigurationArgs build() {
-            return new AnomalyDetectorVpcConfigurationArgs(securityGroupIdList, subnetIdList);
+        }
+
+        public AnomalyDetectorVpcConfigurationArgs build() {
+            $.securityGroupIdList = Objects.requireNonNull($.securityGroupIdList, "expected parameter 'securityGroupIdList' to be non-null");
+            $.subnetIdList = Objects.requireNonNull($.subnetIdList, "expected parameter 'subnetIdList' to be non-null");
+            return $;
         }
     }
+
 }

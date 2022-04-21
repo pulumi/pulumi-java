@@ -5,9 +5,9 @@ package com.pulumi.aws.appsync.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @Import(name="awsSecretStoreArn", required=true)
-      private final Output<String> awsSecretStoreArn;
+    private Output<String> awsSecretStoreArn;
 
     public Output<String> awsSecretStoreArn() {
         return this.awsSecretStoreArn;
@@ -31,10 +31,10 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable Output<String> databaseName;
+    private @Nullable Output<String> databaseName;
 
-    public Output<String> databaseName() {
-        return this.databaseName == null ? Codegen.empty() : this.databaseName;
+    public Optional<Output<String>> databaseName() {
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @Import(name="dbClusterIdentifier", required=true)
-      private final Output<String> dbClusterIdentifier;
+    private Output<String> dbClusterIdentifier;
 
     public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
@@ -53,10 +53,10 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -64,102 +64,90 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<String> schema;
+    private @Nullable Output<String> schema;
 
-    public Output<String> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<String>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
-    public DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs(
-        Output<String> awsSecretStoreArn,
-        @Nullable Output<String> databaseName,
-        Output<String> dbClusterIdentifier,
-        @Nullable Output<String> region,
-        @Nullable Output<String> schema) {
-        this.awsSecretStoreArn = Objects.requireNonNull(awsSecretStoreArn, "expected parameter 'awsSecretStoreArn' to be non-null");
-        this.databaseName = databaseName;
-        this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier, "expected parameter 'dbClusterIdentifier' to be non-null");
-        this.region = region;
-        this.schema = schema;
-    }
+    private DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs() {}
 
-    private DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs() {
-        this.awsSecretStoreArn = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.dbClusterIdentifier = Codegen.empty();
-        this.region = Codegen.empty();
-        this.schema = Codegen.empty();
+    private DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs(DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs $) {
+        this.awsSecretStoreArn = $.awsSecretStoreArn;
+        this.databaseName = $.databaseName;
+        this.dbClusterIdentifier = $.dbClusterIdentifier;
+        this.region = $.region;
+        this.schema = $.schema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> awsSecretStoreArn;
-        private @Nullable Output<String> databaseName;
-        private Output<String> dbClusterIdentifier;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> schema;
+        private DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs();
         }
 
         public Builder(DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsSecretStoreArn = defaults.awsSecretStoreArn;
-    	      this.databaseName = defaults.databaseName;
-    	      this.dbClusterIdentifier = defaults.dbClusterIdentifier;
-    	      this.region = defaults.region;
-    	      this.schema = defaults.schema;
+            $ = new DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsSecretStoreArn(Output<String> awsSecretStoreArn) {
-            this.awsSecretStoreArn = Objects.requireNonNull(awsSecretStoreArn);
+            $.awsSecretStoreArn = awsSecretStoreArn;
             return this;
         }
+
         public Builder awsSecretStoreArn(String awsSecretStoreArn) {
-            this.awsSecretStoreArn = Output.of(Objects.requireNonNull(awsSecretStoreArn));
-            return this;
+            return awsSecretStoreArn(Output.of(awsSecretStoreArn));
         }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
-        public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Codegen.ofNullable(databaseName);
-            return this;
+
+        public Builder databaseName(String databaseName) {
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder dbClusterIdentifier(Output<String> dbClusterIdentifier) {
-            this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
+            $.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
+
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Output.of(Objects.requireNonNull(dbClusterIdentifier));
-            return this;
+            return dbClusterIdentifier(Output.of(dbClusterIdentifier));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder schema(@Nullable Output<String> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable String schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
-        }        public DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs build() {
-            return new DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs(awsSecretStoreArn, databaseName, dbClusterIdentifier, region, schema);
+
+        public Builder schema(String schema) {
+            return schema(Output.of(schema));
+        }
+
+        public DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs build() {
+            $.awsSecretStoreArn = Objects.requireNonNull($.awsSecretStoreArn, "expected parameter 'awsSecretStoreArn' to be non-null");
+            $.dbClusterIdentifier = Objects.requireNonNull($.dbClusterIdentifier, "expected parameter 'dbClusterIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

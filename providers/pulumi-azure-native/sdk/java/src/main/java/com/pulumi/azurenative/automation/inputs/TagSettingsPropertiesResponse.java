@@ -25,10 +25,10 @@ public final class TagSettingsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="filterOperator")
-      private final @Nullable String filterOperator;
+    private @Nullable String filterOperator;
 
     public Optional<String> filterOperator() {
-        return this.filterOperator == null ? Optional.empty() : Optional.ofNullable(this.filterOperator);
+        return Optional.ofNullable(this.filterOperator);
     }
 
     /**
@@ -36,55 +36,50 @@ public final class TagSettingsPropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,List<String>> tags;
+    private @Nullable Map<String,List<String>> tags;
 
-    public Map<String,List<String>> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public TagSettingsPropertiesResponse(
-        @Nullable String filterOperator,
-        @Nullable Map<String,List<String>> tags) {
-        this.filterOperator = filterOperator;
-        this.tags = tags;
-    }
+    private TagSettingsPropertiesResponse() {}
 
-    private TagSettingsPropertiesResponse() {
-        this.filterOperator = null;
-        this.tags = Map.of();
+    private TagSettingsPropertiesResponse(TagSettingsPropertiesResponse $) {
+        this.filterOperator = $.filterOperator;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagSettingsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String filterOperator;
-        private @Nullable Map<String,List<String>> tags;
+        private TagSettingsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagSettingsPropertiesResponse();
         }
 
         public Builder(TagSettingsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterOperator = defaults.filterOperator;
-    	      this.tags = defaults.tags;
+            $ = new TagSettingsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filterOperator(@Nullable String filterOperator) {
-            this.filterOperator = filterOperator;
+            $.filterOperator = filterOperator;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public TagSettingsPropertiesResponse build() {
-            return new TagSettingsPropertiesResponse(filterOperator, tags);
+        }
+
+        public TagSettingsPropertiesResponse build() {
+            return $;
         }
     }
+
 }

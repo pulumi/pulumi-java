@@ -22,7 +22,7 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="argumentKind", required=true)
-      private final String argumentKind;
+    private String argumentKind;
 
     public String argumentKind() {
         return this.argumentKind;
@@ -33,7 +33,7 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataType", required=true)
-      private final StandardSqlDataTypeResponse dataType;
+    private StandardSqlDataTypeResponse dataType;
 
     public StandardSqlDataTypeResponse dataType() {
         return this.dataType;
@@ -44,7 +44,7 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -55,73 +55,66 @@ public final class ArgumentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ArgumentResponse(
-        String argumentKind,
-        StandardSqlDataTypeResponse dataType,
-        String mode,
-        String name) {
-        this.argumentKind = Objects.requireNonNull(argumentKind, "expected parameter 'argumentKind' to be non-null");
-        this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ArgumentResponse() {}
 
-    private ArgumentResponse() {
-        this.argumentKind = null;
-        this.dataType = null;
-        this.mode = null;
-        this.name = null;
+    private ArgumentResponse(ArgumentResponse $) {
+        this.argumentKind = $.argumentKind;
+        this.dataType = $.dataType;
+        this.mode = $.mode;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArgumentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String argumentKind;
-        private StandardSqlDataTypeResponse dataType;
-        private String mode;
-        private String name;
+        private ArgumentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArgumentResponse();
         }
 
         public Builder(ArgumentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.argumentKind = defaults.argumentKind;
-    	      this.dataType = defaults.dataType;
-    	      this.mode = defaults.mode;
-    	      this.name = defaults.name;
+            $ = new ArgumentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder argumentKind(String argumentKind) {
-            this.argumentKind = Objects.requireNonNull(argumentKind);
+            $.argumentKind = argumentKind;
             return this;
         }
+
         public Builder dataType(StandardSqlDataTypeResponse dataType) {
-            this.dataType = Objects.requireNonNull(dataType);
+            $.dataType = dataType;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ArgumentResponse build() {
-            return new ArgumentResponse(argumentKind, dataType, mode, name);
+        }
+
+        public ArgumentResponse build() {
+            $.argumentKind = Objects.requireNonNull($.argumentKind, "expected parameter 'argumentKind' to be non-null");
+            $.dataType = Objects.requireNonNull($.dataType, "expected parameter 'dataType' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

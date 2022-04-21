@@ -27,7 +27,7 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="dataMoverRunAsAccountId", required=true)
-      private final String dataMoverRunAsAccountId;
+    private String dataMoverRunAsAccountId;
 
     public String dataMoverRunAsAccountId() {
         return this.dataMoverRunAsAccountId;
@@ -39,7 +39,7 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -50,7 +50,7 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="lastRecoveryPointReceived", required=true)
-      private final String lastRecoveryPointReceived;
+    private String lastRecoveryPointReceived;
 
     public String lastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
@@ -61,10 +61,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable String licenseType;
+    private @Nullable String licenseType;
 
     public Optional<String> licenseType() {
-        return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="migrationRecoveryPointId", required=true)
-      private final String migrationRecoveryPointId;
+    private String migrationRecoveryPointId;
 
     public String migrationRecoveryPointId() {
         return this.migrationRecoveryPointId;
@@ -83,7 +83,7 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="osType", required=true)
-      private final String osType;
+    private String osType;
 
     public String osType() {
         return this.osType;
@@ -94,10 +94,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="protectedDisks")
-      private final @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
+    private @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
 
-    public List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks() {
-        return this.protectedDisks == null ? List.of() : this.protectedDisks;
+    public Optional<List<VMwareCbtProtectedDiskDetailsResponse>> protectedDisks() {
+        return Optional.ofNullable(this.protectedDisks);
     }
 
     /**
@@ -105,7 +105,7 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="snapshotRunAsAccountId", required=true)
-      private final String snapshotRunAsAccountId;
+    private String snapshotRunAsAccountId;
 
     public String snapshotRunAsAccountId() {
         return this.snapshotRunAsAccountId;
@@ -116,10 +116,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetAvailabilitySetId")
-      private final @Nullable String targetAvailabilitySetId;
+    private @Nullable String targetAvailabilitySetId;
 
     public Optional<String> targetAvailabilitySetId() {
-        return this.targetAvailabilitySetId == null ? Optional.empty() : Optional.ofNullable(this.targetAvailabilitySetId);
+        return Optional.ofNullable(this.targetAvailabilitySetId);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetBootDiagnosticsStorageAccountId")
-      private final @Nullable String targetBootDiagnosticsStorageAccountId;
+    private @Nullable String targetBootDiagnosticsStorageAccountId;
 
     public Optional<String> targetBootDiagnosticsStorageAccountId() {
-        return this.targetBootDiagnosticsStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
+        return Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
 
     /**
@@ -138,7 +138,7 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetLocation", required=true)
-      private final String targetLocation;
+    private String targetLocation;
 
     public String targetLocation() {
         return this.targetLocation;
@@ -149,10 +149,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetNetworkId")
-      private final @Nullable String targetNetworkId;
+    private @Nullable String targetNetworkId;
 
     public Optional<String> targetNetworkId() {
-        return this.targetNetworkId == null ? Optional.empty() : Optional.ofNullable(this.targetNetworkId);
+        return Optional.ofNullable(this.targetNetworkId);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetResourceGroupId")
-      private final @Nullable String targetResourceGroupId;
+    private @Nullable String targetResourceGroupId;
 
     public Optional<String> targetResourceGroupId() {
-        return this.targetResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.targetResourceGroupId);
+        return Optional.ofNullable(this.targetResourceGroupId);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetVmName")
-      private final @Nullable String targetVmName;
+    private @Nullable String targetVmName;
 
     public Optional<String> targetVmName() {
-        return this.targetVmName == null ? Optional.empty() : Optional.ofNullable(this.targetVmName);
+        return Optional.ofNullable(this.targetVmName);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetVmSize")
-      private final @Nullable String targetVmSize;
+    private @Nullable String targetVmSize;
 
     public Optional<String> targetVmSize() {
-        return this.targetVmSize == null ? Optional.empty() : Optional.ofNullable(this.targetVmSize);
+        return Optional.ofNullable(this.targetVmSize);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="vmNics")
-      private final @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
+    private @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
 
-    public List<VMwareCbtNicDetailsResponse> vmNics() {
-        return this.vmNics == null ? List.of() : this.vmNics;
+    public Optional<List<VMwareCbtNicDetailsResponse>> vmNics() {
+        return Optional.ofNullable(this.vmNics);
     }
 
     /**
@@ -204,196 +204,156 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="vmwareMachineId", required=true)
-      private final String vmwareMachineId;
+    private String vmwareMachineId;
 
     public String vmwareMachineId() {
         return this.vmwareMachineId;
     }
 
-    public VMwareCbtMigrationDetailsResponse(
-        String dataMoverRunAsAccountId,
-        String instanceType,
-        String lastRecoveryPointReceived,
-        @Nullable String licenseType,
-        String migrationRecoveryPointId,
-        String osType,
-        @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks,
-        String snapshotRunAsAccountId,
-        @Nullable String targetAvailabilitySetId,
-        @Nullable String targetBootDiagnosticsStorageAccountId,
-        String targetLocation,
-        @Nullable String targetNetworkId,
-        @Nullable String targetResourceGroupId,
-        @Nullable String targetVmName,
-        @Nullable String targetVmSize,
-        @Nullable List<VMwareCbtNicDetailsResponse> vmNics,
-        String vmwareMachineId) {
-        this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId, "expected parameter 'dataMoverRunAsAccountId' to be non-null");
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.lastRecoveryPointReceived = Objects.requireNonNull(lastRecoveryPointReceived, "expected parameter 'lastRecoveryPointReceived' to be non-null");
-        this.licenseType = licenseType;
-        this.migrationRecoveryPointId = Objects.requireNonNull(migrationRecoveryPointId, "expected parameter 'migrationRecoveryPointId' to be non-null");
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.protectedDisks = protectedDisks;
-        this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId, "expected parameter 'snapshotRunAsAccountId' to be non-null");
-        this.targetAvailabilitySetId = targetAvailabilitySetId;
-        this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
-        this.targetLocation = Objects.requireNonNull(targetLocation, "expected parameter 'targetLocation' to be non-null");
-        this.targetNetworkId = targetNetworkId;
-        this.targetResourceGroupId = targetResourceGroupId;
-        this.targetVmName = targetVmName;
-        this.targetVmSize = targetVmSize;
-        this.vmNics = vmNics;
-        this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId, "expected parameter 'vmwareMachineId' to be non-null");
-    }
+    private VMwareCbtMigrationDetailsResponse() {}
 
-    private VMwareCbtMigrationDetailsResponse() {
-        this.dataMoverRunAsAccountId = null;
-        this.instanceType = null;
-        this.lastRecoveryPointReceived = null;
-        this.licenseType = null;
-        this.migrationRecoveryPointId = null;
-        this.osType = null;
-        this.protectedDisks = List.of();
-        this.snapshotRunAsAccountId = null;
-        this.targetAvailabilitySetId = null;
-        this.targetBootDiagnosticsStorageAccountId = null;
-        this.targetLocation = null;
-        this.targetNetworkId = null;
-        this.targetResourceGroupId = null;
-        this.targetVmName = null;
-        this.targetVmSize = null;
-        this.vmNics = List.of();
-        this.vmwareMachineId = null;
+    private VMwareCbtMigrationDetailsResponse(VMwareCbtMigrationDetailsResponse $) {
+        this.dataMoverRunAsAccountId = $.dataMoverRunAsAccountId;
+        this.instanceType = $.instanceType;
+        this.lastRecoveryPointReceived = $.lastRecoveryPointReceived;
+        this.licenseType = $.licenseType;
+        this.migrationRecoveryPointId = $.migrationRecoveryPointId;
+        this.osType = $.osType;
+        this.protectedDisks = $.protectedDisks;
+        this.snapshotRunAsAccountId = $.snapshotRunAsAccountId;
+        this.targetAvailabilitySetId = $.targetAvailabilitySetId;
+        this.targetBootDiagnosticsStorageAccountId = $.targetBootDiagnosticsStorageAccountId;
+        this.targetLocation = $.targetLocation;
+        this.targetNetworkId = $.targetNetworkId;
+        this.targetResourceGroupId = $.targetResourceGroupId;
+        this.targetVmName = $.targetVmName;
+        this.targetVmSize = $.targetVmSize;
+        this.vmNics = $.vmNics;
+        this.vmwareMachineId = $.vmwareMachineId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMwareCbtMigrationDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataMoverRunAsAccountId;
-        private String instanceType;
-        private String lastRecoveryPointReceived;
-        private @Nullable String licenseType;
-        private String migrationRecoveryPointId;
-        private String osType;
-        private @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
-        private String snapshotRunAsAccountId;
-        private @Nullable String targetAvailabilitySetId;
-        private @Nullable String targetBootDiagnosticsStorageAccountId;
-        private String targetLocation;
-        private @Nullable String targetNetworkId;
-        private @Nullable String targetResourceGroupId;
-        private @Nullable String targetVmName;
-        private @Nullable String targetVmSize;
-        private @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
-        private String vmwareMachineId;
+        private VMwareCbtMigrationDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMwareCbtMigrationDetailsResponse();
         }
 
         public Builder(VMwareCbtMigrationDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataMoverRunAsAccountId = defaults.dataMoverRunAsAccountId;
-    	      this.instanceType = defaults.instanceType;
-    	      this.lastRecoveryPointReceived = defaults.lastRecoveryPointReceived;
-    	      this.licenseType = defaults.licenseType;
-    	      this.migrationRecoveryPointId = defaults.migrationRecoveryPointId;
-    	      this.osType = defaults.osType;
-    	      this.protectedDisks = defaults.protectedDisks;
-    	      this.snapshotRunAsAccountId = defaults.snapshotRunAsAccountId;
-    	      this.targetAvailabilitySetId = defaults.targetAvailabilitySetId;
-    	      this.targetBootDiagnosticsStorageAccountId = defaults.targetBootDiagnosticsStorageAccountId;
-    	      this.targetLocation = defaults.targetLocation;
-    	      this.targetNetworkId = defaults.targetNetworkId;
-    	      this.targetResourceGroupId = defaults.targetResourceGroupId;
-    	      this.targetVmName = defaults.targetVmName;
-    	      this.targetVmSize = defaults.targetVmSize;
-    	      this.vmNics = defaults.vmNics;
-    	      this.vmwareMachineId = defaults.vmwareMachineId;
+            $ = new VMwareCbtMigrationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataMoverRunAsAccountId(String dataMoverRunAsAccountId) {
-            this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId);
+            $.dataMoverRunAsAccountId = dataMoverRunAsAccountId;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder lastRecoveryPointReceived(String lastRecoveryPointReceived) {
-            this.lastRecoveryPointReceived = Objects.requireNonNull(lastRecoveryPointReceived);
+            $.lastRecoveryPointReceived = lastRecoveryPointReceived;
             return this;
         }
+
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
+
         public Builder migrationRecoveryPointId(String migrationRecoveryPointId) {
-            this.migrationRecoveryPointId = Objects.requireNonNull(migrationRecoveryPointId);
+            $.migrationRecoveryPointId = migrationRecoveryPointId;
             return this;
         }
+
         public Builder osType(String osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder protectedDisks(@Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks) {
-            this.protectedDisks = protectedDisks;
+            $.protectedDisks = protectedDisks;
             return this;
         }
+
         public Builder protectedDisks(VMwareCbtProtectedDiskDetailsResponse... protectedDisks) {
             return protectedDisks(List.of(protectedDisks));
         }
+
         public Builder snapshotRunAsAccountId(String snapshotRunAsAccountId) {
-            this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId);
+            $.snapshotRunAsAccountId = snapshotRunAsAccountId;
             return this;
         }
+
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = targetAvailabilitySetId;
+            $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
+
         public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
-            this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
+            $.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
+
         public Builder targetLocation(String targetLocation) {
-            this.targetLocation = Objects.requireNonNull(targetLocation);
+            $.targetLocation = targetLocation;
             return this;
         }
+
         public Builder targetNetworkId(@Nullable String targetNetworkId) {
-            this.targetNetworkId = targetNetworkId;
+            $.targetNetworkId = targetNetworkId;
             return this;
         }
+
         public Builder targetResourceGroupId(@Nullable String targetResourceGroupId) {
-            this.targetResourceGroupId = targetResourceGroupId;
+            $.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
+
         public Builder targetVmName(@Nullable String targetVmName) {
-            this.targetVmName = targetVmName;
+            $.targetVmName = targetVmName;
             return this;
         }
+
         public Builder targetVmSize(@Nullable String targetVmSize) {
-            this.targetVmSize = targetVmSize;
+            $.targetVmSize = targetVmSize;
             return this;
         }
+
         public Builder vmNics(@Nullable List<VMwareCbtNicDetailsResponse> vmNics) {
-            this.vmNics = vmNics;
+            $.vmNics = vmNics;
             return this;
         }
+
         public Builder vmNics(VMwareCbtNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
+
         public Builder vmwareMachineId(String vmwareMachineId) {
-            this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
+            $.vmwareMachineId = vmwareMachineId;
             return this;
-        }        public VMwareCbtMigrationDetailsResponse build() {
-            return new VMwareCbtMigrationDetailsResponse(dataMoverRunAsAccountId, instanceType, lastRecoveryPointReceived, licenseType, migrationRecoveryPointId, osType, protectedDisks, snapshotRunAsAccountId, targetAvailabilitySetId, targetBootDiagnosticsStorageAccountId, targetLocation, targetNetworkId, targetResourceGroupId, targetVmName, targetVmSize, vmNics, vmwareMachineId);
+        }
+
+        public VMwareCbtMigrationDetailsResponse build() {
+            $.dataMoverRunAsAccountId = Objects.requireNonNull($.dataMoverRunAsAccountId, "expected parameter 'dataMoverRunAsAccountId' to be non-null");
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            $.lastRecoveryPointReceived = Objects.requireNonNull($.lastRecoveryPointReceived, "expected parameter 'lastRecoveryPointReceived' to be non-null");
+            $.migrationRecoveryPointId = Objects.requireNonNull($.migrationRecoveryPointId, "expected parameter 'migrationRecoveryPointId' to be non-null");
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            $.snapshotRunAsAccountId = Objects.requireNonNull($.snapshotRunAsAccountId, "expected parameter 'snapshotRunAsAccountId' to be non-null");
+            $.targetLocation = Objects.requireNonNull($.targetLocation, "expected parameter 'targetLocation' to be non-null");
+            $.vmwareMachineId = Objects.requireNonNull($.vmwareMachineId, "expected parameter 'vmwareMachineId' to be non-null");
+            return $;
         }
     }
+
 }

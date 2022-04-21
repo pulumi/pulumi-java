@@ -23,7 +23,7 @@ public final class UserAssignedIdentityAuthInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="authType", required=true)
-      private final String authType;
+    private String authType;
 
     public String authType() {
         return this.authType;
@@ -34,7 +34,7 @@ public final class UserAssignedIdentityAuthInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -45,64 +45,59 @@ public final class UserAssignedIdentityAuthInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final String subscriptionId;
+    private String subscriptionId;
 
     public String subscriptionId() {
         return this.subscriptionId;
     }
 
-    public UserAssignedIdentityAuthInfoResponse(
-        String authType,
-        String clientId,
-        String subscriptionId) {
-        this.authType = Codegen.stringProp("authType").arg(authType).require();
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-    }
+    private UserAssignedIdentityAuthInfoResponse() {}
 
-    private UserAssignedIdentityAuthInfoResponse() {
-        this.authType = null;
-        this.clientId = null;
-        this.subscriptionId = null;
+    private UserAssignedIdentityAuthInfoResponse(UserAssignedIdentityAuthInfoResponse $) {
+        this.authType = $.authType;
+        this.clientId = $.clientId;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAssignedIdentityAuthInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authType;
-        private String clientId;
-        private String subscriptionId;
+        private UserAssignedIdentityAuthInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAssignedIdentityAuthInfoResponse();
         }
 
         public Builder(UserAssignedIdentityAuthInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
-    	      this.clientId = defaults.clientId;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new UserAssignedIdentityAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(String authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
-        }        public UserAssignedIdentityAuthInfoResponse build() {
-            return new UserAssignedIdentityAuthInfoResponse(authType, clientId, subscriptionId);
+        }
+
+        public UserAssignedIdentityAuthInfoResponse build() {
+            $.authType = Codegen.stringProp("authType").arg($.authType).require();
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            return $;
         }
     }
+
 }

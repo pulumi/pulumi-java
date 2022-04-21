@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class PeriodicModeBackupPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="periodicModeProperties")
-      private final @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties;
+    private @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties;
 
-    public Output<PeriodicModePropertiesArgs> periodicModeProperties() {
-        return this.periodicModeProperties == null ? Codegen.empty() : this.periodicModeProperties;
+    public Optional<Output<PeriodicModePropertiesArgs>> periodicModeProperties() {
+        return Optional.ofNullable(this.periodicModeProperties);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class PeriodicModeBackupPolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public PeriodicModeBackupPolicyArgs(
-        @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties,
-        Output<String> type) {
-        this.periodicModeProperties = periodicModeProperties;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private PeriodicModeBackupPolicyArgs() {}
 
-    private PeriodicModeBackupPolicyArgs() {
-        this.periodicModeProperties = Codegen.empty();
-        this.type = Codegen.empty();
+    private PeriodicModeBackupPolicyArgs(PeriodicModeBackupPolicyArgs $) {
+        this.periodicModeProperties = $.periodicModeProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeriodicModeBackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties;
-        private Output<String> type;
+        private PeriodicModeBackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeriodicModeBackupPolicyArgs();
         }
 
         public Builder(PeriodicModeBackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.periodicModeProperties = defaults.periodicModeProperties;
-    	      this.type = defaults.type;
+            $ = new PeriodicModeBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder periodicModeProperties(@Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties) {
-            this.periodicModeProperties = periodicModeProperties;
+            $.periodicModeProperties = periodicModeProperties;
             return this;
         }
-        public Builder periodicModeProperties(@Nullable PeriodicModePropertiesArgs periodicModeProperties) {
-            this.periodicModeProperties = Codegen.ofNullable(periodicModeProperties);
-            return this;
+
+        public Builder periodicModeProperties(PeriodicModePropertiesArgs periodicModeProperties) {
+            return periodicModeProperties(Output.of(periodicModeProperties));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public PeriodicModeBackupPolicyArgs build() {
-            return new PeriodicModeBackupPolicyArgs(periodicModeProperties, type);
+            return type(Output.of(type));
+        }
+
+        public PeriodicModeBackupPolicyArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetAppBlockArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAppBlockArgs Empty = new GetAppBlockArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetAppBlockArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetAppBlockArgs() {}
 
-    private GetAppBlockArgs() {
-        this.arn = null;
+    private GetAppBlockArgs(GetAppBlockArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppBlockArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetAppBlockArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppBlockArgs();
         }
 
         public Builder(GetAppBlockArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetAppBlockArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetAppBlockArgs build() {
-            return new GetAppBlockArgs(arn);
+        }
+
+        public GetAppBlockArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.enums.FeatureGroupFeatureDefinitionFeatureType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class FeatureGroupFeatureDefinitionArgs extends com.pulumi.resource
     public static final FeatureGroupFeatureDefinitionArgs Empty = new FeatureGroupFeatureDefinitionArgs();
 
     @Import(name="featureName", required=true)
-      private final Output<String> featureName;
+    private Output<String> featureName;
 
     public Output<String> featureName() {
         return this.featureName;
     }
 
     @Import(name="featureType", required=true)
-      private final Output<FeatureGroupFeatureDefinitionFeatureType> featureType;
+    private Output<FeatureGroupFeatureDefinitionFeatureType> featureType;
 
     public Output<FeatureGroupFeatureDefinitionFeatureType> featureType() {
         return this.featureType;
     }
 
-    public FeatureGroupFeatureDefinitionArgs(
-        Output<String> featureName,
-        Output<FeatureGroupFeatureDefinitionFeatureType> featureType) {
-        this.featureName = Objects.requireNonNull(featureName, "expected parameter 'featureName' to be non-null");
-        this.featureType = Objects.requireNonNull(featureType, "expected parameter 'featureType' to be non-null");
-    }
+    private FeatureGroupFeatureDefinitionArgs() {}
 
-    private FeatureGroupFeatureDefinitionArgs() {
-        this.featureName = Codegen.empty();
-        this.featureType = Codegen.empty();
+    private FeatureGroupFeatureDefinitionArgs(FeatureGroupFeatureDefinitionArgs $) {
+        this.featureName = $.featureName;
+        this.featureType = $.featureType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureGroupFeatureDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> featureName;
-        private Output<FeatureGroupFeatureDefinitionFeatureType> featureType;
+        private FeatureGroupFeatureDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureGroupFeatureDefinitionArgs();
         }
 
         public Builder(FeatureGroupFeatureDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featureName = defaults.featureName;
-    	      this.featureType = defaults.featureType;
+            $ = new FeatureGroupFeatureDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder featureName(Output<String> featureName) {
-            this.featureName = Objects.requireNonNull(featureName);
+            $.featureName = featureName;
             return this;
         }
+
         public Builder featureName(String featureName) {
-            this.featureName = Output.of(Objects.requireNonNull(featureName));
-            return this;
+            return featureName(Output.of(featureName));
         }
+
         public Builder featureType(Output<FeatureGroupFeatureDefinitionFeatureType> featureType) {
-            this.featureType = Objects.requireNonNull(featureType);
+            $.featureType = featureType;
             return this;
         }
+
         public Builder featureType(FeatureGroupFeatureDefinitionFeatureType featureType) {
-            this.featureType = Output.of(Objects.requireNonNull(featureType));
-            return this;
-        }        public FeatureGroupFeatureDefinitionArgs build() {
-            return new FeatureGroupFeatureDefinitionArgs(featureName, featureType);
+            return featureType(Output.of(featureType));
+        }
+
+        public FeatureGroupFeatureDefinitionArgs build() {
+            $.featureName = Objects.requireNonNull($.featureName, "expected parameter 'featureName' to be non-null");
+            $.featureType = Objects.requireNonNull($.featureType, "expected parameter 'featureType' to be non-null");
+            return $;
         }
     }
+
 }

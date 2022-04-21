@@ -5,10 +5,10 @@ package com.pulumi.aws.iot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="active", required=true)
-      private final Output<Boolean> active;
+    private Output<Boolean> active;
 
     public Output<Boolean> active() {
         return this.active;
@@ -36,63 +36,59 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="csr")
-      private final @Nullable Output<String> csr;
+    private @Nullable Output<String> csr;
 
-    public Output<String> csr() {
-        return this.csr == null ? Codegen.empty() : this.csr;
+    public Optional<Output<String>> csr() {
+        return Optional.ofNullable(this.csr);
     }
 
-    public CertificateArgs(
-        Output<Boolean> active,
-        @Nullable Output<String> csr) {
-        this.active = Objects.requireNonNull(active, "expected parameter 'active' to be non-null");
-        this.csr = csr;
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.active = Codegen.empty();
-        this.csr = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.active = $.active;
+        this.csr = $.csr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> active;
-        private @Nullable Output<String> csr;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
-    	      this.csr = defaults.csr;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder active(Output<Boolean> active) {
-            this.active = Objects.requireNonNull(active);
+            $.active = active;
             return this;
         }
+
         public Builder active(Boolean active) {
-            this.active = Output.of(Objects.requireNonNull(active));
-            return this;
+            return active(Output.of(active));
         }
+
         public Builder csr(@Nullable Output<String> csr) {
-            this.csr = csr;
+            $.csr = csr;
             return this;
         }
-        public Builder csr(@Nullable String csr) {
-            this.csr = Codegen.ofNullable(csr);
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(active, csr);
+
+        public Builder csr(String csr) {
+            return csr(Output.of(csr));
+        }
+
+        public CertificateArgs build() {
+            $.active = Objects.requireNonNull($.active, "expected parameter 'active' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetLaunchTemplateHibernationOption extends com.pulumi.resourc
     public static final GetLaunchTemplateHibernationOption Empty = new GetLaunchTemplateHibernationOption();
 
     @Import(name="configured", required=true)
-      private final Boolean configured;
+    private Boolean configured;
 
     public Boolean configured() {
         return this.configured;
     }
 
-    public GetLaunchTemplateHibernationOption(Boolean configured) {
-        this.configured = Objects.requireNonNull(configured, "expected parameter 'configured' to be non-null");
-    }
+    private GetLaunchTemplateHibernationOption() {}
 
-    private GetLaunchTemplateHibernationOption() {
-        this.configured = null;
+    private GetLaunchTemplateHibernationOption(GetLaunchTemplateHibernationOption $) {
+        this.configured = $.configured;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateHibernationOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean configured;
+        private GetLaunchTemplateHibernationOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateHibernationOption();
         }
 
         public Builder(GetLaunchTemplateHibernationOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configured = defaults.configured;
+            $ = new GetLaunchTemplateHibernationOption(Objects.requireNonNull(defaults));
         }
 
         public Builder configured(Boolean configured) {
-            this.configured = Objects.requireNonNull(configured);
+            $.configured = configured;
             return this;
-        }        public GetLaunchTemplateHibernationOption build() {
-            return new GetLaunchTemplateHibernationOption(configured);
+        }
+
+        public GetLaunchTemplateHibernationOption build() {
+            $.configured = Objects.requireNonNull($.configured, "expected parameter 'configured' to be non-null");
+            return $;
         }
     }
+
 }

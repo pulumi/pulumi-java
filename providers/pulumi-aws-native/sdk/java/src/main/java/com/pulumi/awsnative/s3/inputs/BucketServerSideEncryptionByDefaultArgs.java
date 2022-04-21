@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketServerSideEncryptionByDefaultSSEAlgorithm;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,66 @@ public final class BucketServerSideEncryptionByDefaultArgs extends com.pulumi.re
      * 
      */
     @Import(name="kMSMasterKeyID")
-      private final @Nullable Output<String> kMSMasterKeyID;
+    private @Nullable Output<String> kMSMasterKeyID;
 
-    public Output<String> kMSMasterKeyID() {
-        return this.kMSMasterKeyID == null ? Codegen.empty() : this.kMSMasterKeyID;
+    public Optional<Output<String>> kMSMasterKeyID() {
+        return Optional.ofNullable(this.kMSMasterKeyID);
     }
 
     @Import(name="sSEAlgorithm", required=true)
-      private final Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm;
+    private Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm;
 
     public Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm() {
         return this.sSEAlgorithm;
     }
 
-    public BucketServerSideEncryptionByDefaultArgs(
-        @Nullable Output<String> kMSMasterKeyID,
-        Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm) {
-        this.kMSMasterKeyID = kMSMasterKeyID;
-        this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm, "expected parameter 'sSEAlgorithm' to be non-null");
-    }
+    private BucketServerSideEncryptionByDefaultArgs() {}
 
-    private BucketServerSideEncryptionByDefaultArgs() {
-        this.kMSMasterKeyID = Codegen.empty();
-        this.sSEAlgorithm = Codegen.empty();
+    private BucketServerSideEncryptionByDefaultArgs(BucketServerSideEncryptionByDefaultArgs $) {
+        this.kMSMasterKeyID = $.kMSMasterKeyID;
+        this.sSEAlgorithm = $.sSEAlgorithm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketServerSideEncryptionByDefaultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kMSMasterKeyID;
-        private Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm;
+        private BucketServerSideEncryptionByDefaultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketServerSideEncryptionByDefaultArgs();
         }
 
         public Builder(BucketServerSideEncryptionByDefaultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kMSMasterKeyID = defaults.kMSMasterKeyID;
-    	      this.sSEAlgorithm = defaults.sSEAlgorithm;
+            $ = new BucketServerSideEncryptionByDefaultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kMSMasterKeyID(@Nullable Output<String> kMSMasterKeyID) {
-            this.kMSMasterKeyID = kMSMasterKeyID;
+            $.kMSMasterKeyID = kMSMasterKeyID;
             return this;
         }
-        public Builder kMSMasterKeyID(@Nullable String kMSMasterKeyID) {
-            this.kMSMasterKeyID = Codegen.ofNullable(kMSMasterKeyID);
-            return this;
+
+        public Builder kMSMasterKeyID(String kMSMasterKeyID) {
+            return kMSMasterKeyID(Output.of(kMSMasterKeyID));
         }
+
         public Builder sSEAlgorithm(Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm) {
-            this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
+            $.sSEAlgorithm = sSEAlgorithm;
             return this;
         }
+
         public Builder sSEAlgorithm(BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
-            this.sSEAlgorithm = Output.of(Objects.requireNonNull(sSEAlgorithm));
-            return this;
-        }        public BucketServerSideEncryptionByDefaultArgs build() {
-            return new BucketServerSideEncryptionByDefaultArgs(kMSMasterKeyID, sSEAlgorithm);
+            return sSEAlgorithm(Output.of(sSEAlgorithm));
+        }
+
+        public BucketServerSideEncryptionByDefaultArgs build() {
+            $.sSEAlgorithm = Objects.requireNonNull($.sSEAlgorithm, "expected parameter 'sSEAlgorithm' to be non-null");
+            return $;
         }
     }
+
 }

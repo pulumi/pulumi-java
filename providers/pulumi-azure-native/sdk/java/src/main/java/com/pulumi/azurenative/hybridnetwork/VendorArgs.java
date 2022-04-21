@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hybridnetwork;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VendorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vendorName")
-      private final @Nullable Output<String> vendorName;
+    private @Nullable Output<String> vendorName;
 
-    public Output<String> vendorName() {
-        return this.vendorName == null ? Codegen.empty() : this.vendorName;
+    public Optional<Output<String>> vendorName() {
+        return Optional.ofNullable(this.vendorName);
     }
 
-    public VendorArgs(@Nullable Output<String> vendorName) {
-        this.vendorName = vendorName;
-    }
+    private VendorArgs() {}
 
-    private VendorArgs() {
-        this.vendorName = Codegen.empty();
+    private VendorArgs(VendorArgs $) {
+        this.vendorName = $.vendorName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VendorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> vendorName;
+        private VendorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VendorArgs();
         }
 
         public Builder(VendorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vendorName = defaults.vendorName;
+            $ = new VendorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vendorName(@Nullable Output<String> vendorName) {
-            this.vendorName = vendorName;
+            $.vendorName = vendorName;
             return this;
         }
-        public Builder vendorName(@Nullable String vendorName) {
-            this.vendorName = Codegen.ofNullable(vendorName);
-            return this;
-        }        public VendorArgs build() {
-            return new VendorArgs(vendorName);
+
+        public Builder vendorName(String vendorName) {
+            return vendorName(Output.of(vendorName));
+        }
+
+        public VendorArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.azurenative.testbase;
 import com.pulumi.azurenative.testbase.inputs.TestBaseAccountSKUArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -45,10 +45,10 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="restore")
-      private final @Nullable Output<Boolean> restore;
+    private @Nullable Output<Boolean> restore;
 
-    public Output<Boolean> restore() {
-        return this.restore == null ? Codegen.empty() : this.restore;
+    public Optional<Output<Boolean>> restore() {
+        return Optional.ofNullable(this.restore);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sku", required=true)
-      private final Output<TestBaseAccountSKUArgs> sku;
+    private Output<TestBaseAccountSKUArgs> sku;
 
     public Output<TestBaseAccountSKUArgs> sku() {
         return this.sku;
@@ -67,10 +67,10 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,115 +78,100 @@ public final class TestBaseAccountArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="testBaseAccountName")
-      private final @Nullable Output<String> testBaseAccountName;
+    private @Nullable Output<String> testBaseAccountName;
 
-    public Output<String> testBaseAccountName() {
-        return this.testBaseAccountName == null ? Codegen.empty() : this.testBaseAccountName;
+    public Optional<Output<String>> testBaseAccountName() {
+        return Optional.ofNullable(this.testBaseAccountName);
     }
 
-    public TestBaseAccountArgs(
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<Boolean> restore,
-        Output<TestBaseAccountSKUArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> testBaseAccountName) {
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restore = restore;
-        this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.tags = tags;
-        this.testBaseAccountName = testBaseAccountName;
-    }
+    private TestBaseAccountArgs() {}
 
-    private TestBaseAccountArgs() {
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.restore = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.testBaseAccountName = Codegen.empty();
+    private TestBaseAccountArgs(TestBaseAccountArgs $) {
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.restore = $.restore;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.testBaseAccountName = $.testBaseAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestBaseAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Boolean> restore;
-        private Output<TestBaseAccountSKUArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> testBaseAccountName;
+        private TestBaseAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestBaseAccountArgs();
         }
 
         public Builder(TestBaseAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.restore = defaults.restore;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.testBaseAccountName = defaults.testBaseAccountName;
+            $ = new TestBaseAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder restore(@Nullable Output<Boolean> restore) {
-            this.restore = restore;
+            $.restore = restore;
             return this;
         }
-        public Builder restore(@Nullable Boolean restore) {
-            this.restore = Codegen.ofNullable(restore);
-            return this;
+
+        public Builder restore(Boolean restore) {
+            return restore(Output.of(restore));
         }
+
         public Builder sku(Output<TestBaseAccountSKUArgs> sku) {
-            this.sku = Objects.requireNonNull(sku);
+            $.sku = sku;
             return this;
         }
+
         public Builder sku(TestBaseAccountSKUArgs sku) {
-            this.sku = Output.of(Objects.requireNonNull(sku));
-            return this;
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder testBaseAccountName(@Nullable Output<String> testBaseAccountName) {
-            this.testBaseAccountName = testBaseAccountName;
+            $.testBaseAccountName = testBaseAccountName;
             return this;
         }
-        public Builder testBaseAccountName(@Nullable String testBaseAccountName) {
-            this.testBaseAccountName = Codegen.ofNullable(testBaseAccountName);
-            return this;
-        }        public TestBaseAccountArgs build() {
-            return new TestBaseAccountArgs(location, resourceGroupName, restore, sku, tags, testBaseAccountName);
+
+        public Builder testBaseAccountName(String testBaseAccountName) {
+            return testBaseAccountName(Output.of(testBaseAccountName));
+        }
+
+        public TestBaseAccountArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");
+            return $;
         }
     }
+
 }

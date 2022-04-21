@@ -24,10 +24,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
      * 
      */
     @Import(name="applicationCallBackURL")
-      private final @Nullable String applicationCallBackURL;
+    private @Nullable String applicationCallBackURL;
 
     public Optional<String> applicationCallBackURL() {
-        return this.applicationCallBackURL == null ? Optional.empty() : Optional.ofNullable(this.applicationCallBackURL);
+        return Optional.ofNullable(this.applicationCallBackURL);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
      * 
      */
     @Import(name="attributeMap")
-      private final @Nullable Object attributeMap;
+    private @Nullable Object attributeMap;
 
     public Optional<Object> attributeMap() {
-        return this.attributeMap == null ? Optional.empty() : Optional.ofNullable(this.attributeMap);
+        return Optional.ofNullable(this.attributeMap);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
      * 
      */
     @Import(name="federationProviderName")
-      private final @Nullable String federationProviderName;
+    private @Nullable String federationProviderName;
 
     public Optional<String> federationProviderName() {
-        return this.federationProviderName == null ? Optional.empty() : Optional.ofNullable(this.federationProviderName);
+        return Optional.ofNullable(this.federationProviderName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
      * 
      */
     @Import(name="federationURN")
-      private final @Nullable String federationURN;
+    private @Nullable String federationURN;
 
     public Optional<String> federationURN() {
-        return this.federationURN == null ? Optional.empty() : Optional.ofNullable(this.federationURN);
+        return Optional.ofNullable(this.federationURN);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
      * 
      */
     @Import(name="samlMetadataDocument")
-      private final @Nullable String samlMetadataDocument;
+    private @Nullable String samlMetadataDocument;
 
     public Optional<String> samlMetadataDocument() {
-        return this.samlMetadataDocument == null ? Optional.empty() : Optional.ofNullable(this.samlMetadataDocument);
+        return Optional.ofNullable(this.samlMetadataDocument);
     }
 
     /**
@@ -79,91 +79,74 @@ public final class EnvironmentFederationParameters extends com.pulumi.resources.
      * 
      */
     @Import(name="samlMetadataURL")
-      private final @Nullable String samlMetadataURL;
+    private @Nullable String samlMetadataURL;
 
     public Optional<String> samlMetadataURL() {
-        return this.samlMetadataURL == null ? Optional.empty() : Optional.ofNullable(this.samlMetadataURL);
+        return Optional.ofNullable(this.samlMetadataURL);
     }
 
-    public EnvironmentFederationParameters(
-        @Nullable String applicationCallBackURL,
-        @Nullable Object attributeMap,
-        @Nullable String federationProviderName,
-        @Nullable String federationURN,
-        @Nullable String samlMetadataDocument,
-        @Nullable String samlMetadataURL) {
-        this.applicationCallBackURL = applicationCallBackURL;
-        this.attributeMap = attributeMap;
-        this.federationProviderName = federationProviderName;
-        this.federationURN = federationURN;
-        this.samlMetadataDocument = samlMetadataDocument;
-        this.samlMetadataURL = samlMetadataURL;
-    }
+    private EnvironmentFederationParameters() {}
 
-    private EnvironmentFederationParameters() {
-        this.applicationCallBackURL = null;
-        this.attributeMap = null;
-        this.federationProviderName = null;
-        this.federationURN = null;
-        this.samlMetadataDocument = null;
-        this.samlMetadataURL = null;
+    private EnvironmentFederationParameters(EnvironmentFederationParameters $) {
+        this.applicationCallBackURL = $.applicationCallBackURL;
+        this.attributeMap = $.attributeMap;
+        this.federationProviderName = $.federationProviderName;
+        this.federationURN = $.federationURN;
+        this.samlMetadataDocument = $.samlMetadataDocument;
+        this.samlMetadataURL = $.samlMetadataURL;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentFederationParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationCallBackURL;
-        private @Nullable Object attributeMap;
-        private @Nullable String federationProviderName;
-        private @Nullable String federationURN;
-        private @Nullable String samlMetadataDocument;
-        private @Nullable String samlMetadataURL;
+        private EnvironmentFederationParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentFederationParameters();
         }
 
         public Builder(EnvironmentFederationParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationCallBackURL = defaults.applicationCallBackURL;
-    	      this.attributeMap = defaults.attributeMap;
-    	      this.federationProviderName = defaults.federationProviderName;
-    	      this.federationURN = defaults.federationURN;
-    	      this.samlMetadataDocument = defaults.samlMetadataDocument;
-    	      this.samlMetadataURL = defaults.samlMetadataURL;
+            $ = new EnvironmentFederationParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationCallBackURL(@Nullable String applicationCallBackURL) {
-            this.applicationCallBackURL = applicationCallBackURL;
+            $.applicationCallBackURL = applicationCallBackURL;
             return this;
         }
+
         public Builder attributeMap(@Nullable Object attributeMap) {
-            this.attributeMap = attributeMap;
+            $.attributeMap = attributeMap;
             return this;
         }
+
         public Builder federationProviderName(@Nullable String federationProviderName) {
-            this.federationProviderName = federationProviderName;
+            $.federationProviderName = federationProviderName;
             return this;
         }
+
         public Builder federationURN(@Nullable String federationURN) {
-            this.federationURN = federationURN;
+            $.federationURN = federationURN;
             return this;
         }
+
         public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
-            this.samlMetadataDocument = samlMetadataDocument;
+            $.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
+
         public Builder samlMetadataURL(@Nullable String samlMetadataURL) {
-            this.samlMetadataURL = samlMetadataURL;
+            $.samlMetadataURL = samlMetadataURL;
             return this;
-        }        public EnvironmentFederationParameters build() {
-            return new EnvironmentFederationParameters(applicationCallBackURL, attributeMap, federationProviderName, federationURN, samlMetadataDocument, samlMetadataURL);
+        }
+
+        public EnvironmentFederationParameters build() {
+            return $;
         }
     }
+
 }

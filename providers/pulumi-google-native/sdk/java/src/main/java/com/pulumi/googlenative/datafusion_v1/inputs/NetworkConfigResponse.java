@@ -21,7 +21,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipAllocation", required=true)
-      private final String ipAllocation;
+    private String ipAllocation;
 
     public String ipAllocation() {
         return this.ipAllocation;
@@ -32,55 +32,52 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
     }
 
-    public NetworkConfigResponse(
-        String ipAllocation,
-        String network) {
-        this.ipAllocation = Objects.requireNonNull(ipAllocation, "expected parameter 'ipAllocation' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-    }
+    private NetworkConfigResponse() {}
 
-    private NetworkConfigResponse() {
-        this.ipAllocation = null;
-        this.network = null;
+    private NetworkConfigResponse(NetworkConfigResponse $) {
+        this.ipAllocation = $.ipAllocation;
+        this.network = $.network;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipAllocation;
-        private String network;
+        private NetworkConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigResponse();
         }
 
         public Builder(NetworkConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAllocation = defaults.ipAllocation;
-    	      this.network = defaults.network;
+            $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAllocation(String ipAllocation) {
-            this.ipAllocation = Objects.requireNonNull(ipAllocation);
+            $.ipAllocation = ipAllocation;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
-        }        public NetworkConfigResponse build() {
-            return new NetworkConfigResponse(ipAllocation, network);
+        }
+
+        public NetworkConfigResponse build() {
+            $.ipAllocation = Objects.requireNonNull($.ipAllocation, "expected parameter 'ipAllocation' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

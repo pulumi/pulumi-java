@@ -6,10 +6,10 @@ package com.pulumi.aws.chime.inputs;
 import com.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsCredentialGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VoiceConnectorTerminationCredentialsState extends com.pulumi.
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
+    private @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
 
-    public Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class VoiceConnectorTerminationCredentialsState extends com.pulumi.
      * 
      */
     @Import(name="voiceConnectorId")
-      private final @Nullable Output<String> voiceConnectorId;
+    private @Nullable Output<String> voiceConnectorId;
 
-    public Output<String> voiceConnectorId() {
-        return this.voiceConnectorId == null ? Codegen.empty() : this.voiceConnectorId;
+    public Optional<Output<String>> voiceConnectorId() {
+        return Optional.ofNullable(this.voiceConnectorId);
     }
 
-    public VoiceConnectorTerminationCredentialsState(
-        @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials,
-        @Nullable Output<String> voiceConnectorId) {
-        this.credentials = credentials;
-        this.voiceConnectorId = voiceConnectorId;
-    }
+    private VoiceConnectorTerminationCredentialsState() {}
 
-    private VoiceConnectorTerminationCredentialsState() {
-        this.credentials = Codegen.empty();
-        this.voiceConnectorId = Codegen.empty();
+    private VoiceConnectorTerminationCredentialsState(VoiceConnectorTerminationCredentialsState $) {
+        this.credentials = $.credentials;
+        this.voiceConnectorId = $.voiceConnectorId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VoiceConnectorTerminationCredentialsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
-        private @Nullable Output<String> voiceConnectorId;
+        private VoiceConnectorTerminationCredentialsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VoiceConnectorTerminationCredentialsState();
         }
 
         public Builder(VoiceConnectorTerminationCredentialsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.voiceConnectorId = defaults.voiceConnectorId;
+            $ = new VoiceConnectorTerminationCredentialsState(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable List<VoiceConnectorTerminationCredentialsCredentialGetArgs> credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(List<VoiceConnectorTerminationCredentialsCredentialGetArgs> credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder credentials(VoiceConnectorTerminationCredentialsCredentialGetArgs... credentials) {
             return credentials(List.of(credentials));
         }
+
         public Builder voiceConnectorId(@Nullable Output<String> voiceConnectorId) {
-            this.voiceConnectorId = voiceConnectorId;
+            $.voiceConnectorId = voiceConnectorId;
             return this;
         }
-        public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
-            this.voiceConnectorId = Codegen.ofNullable(voiceConnectorId);
-            return this;
-        }        public VoiceConnectorTerminationCredentialsState build() {
-            return new VoiceConnectorTerminationCredentialsState(credentials, voiceConnectorId);
+
+        public Builder voiceConnectorId(String voiceConnectorId) {
+            return voiceConnectorId(Output.of(voiceConnectorId));
+        }
+
+        public VoiceConnectorTerminationCredentialsState build() {
+            return $;
         }
     }
+
 }

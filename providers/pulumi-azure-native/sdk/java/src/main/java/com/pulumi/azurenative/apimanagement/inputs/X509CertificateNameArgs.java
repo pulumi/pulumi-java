@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class X509CertificateNameArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="issuerCertificateThumbprint")
-      private final @Nullable Output<String> issuerCertificateThumbprint;
+    private @Nullable Output<String> issuerCertificateThumbprint;
 
-    public Output<String> issuerCertificateThumbprint() {
-        return this.issuerCertificateThumbprint == null ? Codegen.empty() : this.issuerCertificateThumbprint;
+    public Optional<Output<String>> issuerCertificateThumbprint() {
+        return Optional.ofNullable(this.issuerCertificateThumbprint);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class X509CertificateNameArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public X509CertificateNameArgs(
-        @Nullable Output<String> issuerCertificateThumbprint,
-        @Nullable Output<String> name) {
-        this.issuerCertificateThumbprint = issuerCertificateThumbprint;
-        this.name = name;
-    }
+    private X509CertificateNameArgs() {}
 
-    private X509CertificateNameArgs() {
-        this.issuerCertificateThumbprint = Codegen.empty();
-        this.name = Codegen.empty();
+    private X509CertificateNameArgs(X509CertificateNameArgs $) {
+        this.issuerCertificateThumbprint = $.issuerCertificateThumbprint;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X509CertificateNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> issuerCertificateThumbprint;
-        private @Nullable Output<String> name;
+        private X509CertificateNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X509CertificateNameArgs();
         }
 
         public Builder(X509CertificateNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuerCertificateThumbprint = defaults.issuerCertificateThumbprint;
-    	      this.name = defaults.name;
+            $ = new X509CertificateNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder issuerCertificateThumbprint(@Nullable Output<String> issuerCertificateThumbprint) {
-            this.issuerCertificateThumbprint = issuerCertificateThumbprint;
+            $.issuerCertificateThumbprint = issuerCertificateThumbprint;
             return this;
         }
-        public Builder issuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
-            this.issuerCertificateThumbprint = Codegen.ofNullable(issuerCertificateThumbprint);
-            return this;
+
+        public Builder issuerCertificateThumbprint(String issuerCertificateThumbprint) {
+            return issuerCertificateThumbprint(Output.of(issuerCertificateThumbprint));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public X509CertificateNameArgs build() {
-            return new X509CertificateNameArgs(issuerCertificateThumbprint, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public X509CertificateNameArgs build() {
+            return $;
         }
     }
+
 }

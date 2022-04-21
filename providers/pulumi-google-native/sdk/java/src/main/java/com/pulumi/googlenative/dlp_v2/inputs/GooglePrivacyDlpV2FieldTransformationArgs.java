@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrimitiveTransformationArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordConditionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
+    private @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
 
-    public Output<GooglePrivacyDlpV2RecordConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<GooglePrivacyDlpV2RecordConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
      * 
      */
     @Import(name="fields", required=true)
-      private final Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields;
+    private Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields;
 
     public Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields() {
         return this.fields;
@@ -50,10 +50,10 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
      * 
      */
     @Import(name="infoTypeTransformations")
-      private final @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
+    private @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
 
-    public Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations() {
-        return this.infoTypeTransformations == null ? Codegen.empty() : this.infoTypeTransformations;
+    public Optional<Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs>> infoTypeTransformations() {
+        return Optional.ofNullable(this.infoTypeTransformations);
     }
 
     /**
@@ -61,92 +61,83 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends com.pulumi.
      * 
      */
     @Import(name="primitiveTransformation")
-      private final @Nullable Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
+    private @Nullable Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
-    public Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation() {
-        return this.primitiveTransformation == null ? Codegen.empty() : this.primitiveTransformation;
+    public Optional<Output<GooglePrivacyDlpV2PrimitiveTransformationArgs>> primitiveTransformation() {
+        return Optional.ofNullable(this.primitiveTransformation);
     }
 
-    public GooglePrivacyDlpV2FieldTransformationArgs(
-        @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition,
-        Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields,
-        @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations,
-        @Nullable Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
-        this.condition = condition;
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.infoTypeTransformations = infoTypeTransformations;
-        this.primitiveTransformation = primitiveTransformation;
-    }
+    private GooglePrivacyDlpV2FieldTransformationArgs() {}
 
-    private GooglePrivacyDlpV2FieldTransformationArgs() {
-        this.condition = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.infoTypeTransformations = Codegen.empty();
-        this.primitiveTransformation = Codegen.empty();
+    private GooglePrivacyDlpV2FieldTransformationArgs(GooglePrivacyDlpV2FieldTransformationArgs $) {
+        this.condition = $.condition;
+        this.fields = $.fields;
+        this.infoTypeTransformations = $.infoTypeTransformations;
+        this.primitiveTransformation = $.primitiveTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2FieldTransformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition;
-        private Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields;
-        private @Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations;
-        private @Nullable Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
+        private GooglePrivacyDlpV2FieldTransformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2FieldTransformationArgs();
         }
 
         public Builder(GooglePrivacyDlpV2FieldTransformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.fields = defaults.fields;
-    	      this.infoTypeTransformations = defaults.infoTypeTransformations;
-    	      this.primitiveTransformation = defaults.primitiveTransformation;
+            $ = new GooglePrivacyDlpV2FieldTransformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<GooglePrivacyDlpV2RecordConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(GooglePrivacyDlpV2RecordConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder fields(Output<List<GooglePrivacyDlpV2FieldIdArgs>> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(List<GooglePrivacyDlpV2FieldIdArgs> fields) {
-            this.fields = Output.of(Objects.requireNonNull(fields));
-            return this;
+            return fields(Output.of(fields));
         }
+
         public Builder fields(GooglePrivacyDlpV2FieldIdArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder infoTypeTransformations(@Nullable Output<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
-            this.infoTypeTransformations = infoTypeTransformations;
+            $.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
-        public Builder infoTypeTransformations(@Nullable GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
-            this.infoTypeTransformations = Codegen.ofNullable(infoTypeTransformations);
-            return this;
+
+        public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
+            return infoTypeTransformations(Output.of(infoTypeTransformations));
         }
+
         public Builder primitiveTransformation(@Nullable Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
-            this.primitiveTransformation = primitiveTransformation;
+            $.primitiveTransformation = primitiveTransformation;
             return this;
         }
-        public Builder primitiveTransformation(@Nullable GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
-            this.primitiveTransformation = Codegen.ofNullable(primitiveTransformation);
-            return this;
-        }        public GooglePrivacyDlpV2FieldTransformationArgs build() {
-            return new GooglePrivacyDlpV2FieldTransformationArgs(condition, fields, infoTypeTransformations, primitiveTransformation);
+
+        public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
+            return primitiveTransformation(Output.of(primitiveTransformation));
+        }
+
+        public GooglePrivacyDlpV2FieldTransformationArgs build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            return $;
         }
     }
+
 }

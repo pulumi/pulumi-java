@@ -5,9 +5,9 @@ package com.pulumi.azurenative.m365securityandcompliance.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ServiceExportConfigurationInfoArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="storageAccountName")
-      private final @Nullable Output<String> storageAccountName;
+    private @Nullable Output<String> storageAccountName;
 
-    public Output<String> storageAccountName() {
-        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
+    public Optional<Output<String>> storageAccountName() {
+        return Optional.ofNullable(this.storageAccountName);
     }
 
-    public ServiceExportConfigurationInfoArgs(@Nullable Output<String> storageAccountName) {
-        this.storageAccountName = storageAccountName;
-    }
+    private ServiceExportConfigurationInfoArgs() {}
 
-    private ServiceExportConfigurationInfoArgs() {
-        this.storageAccountName = Codegen.empty();
+    private ServiceExportConfigurationInfoArgs(ServiceExportConfigurationInfoArgs $) {
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceExportConfigurationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> storageAccountName;
+        private ServiceExportConfigurationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceExportConfigurationInfoArgs();
         }
 
         public Builder(ServiceExportConfigurationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new ServiceExportConfigurationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
-            this.storageAccountName = storageAccountName;
+            $.storageAccountName = storageAccountName;
             return this;
         }
-        public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Codegen.ofNullable(storageAccountName);
-            return this;
-        }        public ServiceExportConfigurationInfoArgs build() {
-            return new ServiceExportConfigurationInfoArgs(storageAccountName);
+
+        public Builder storageAccountName(String storageAccountName) {
+            return storageAccountName(Output.of(storageAccountName));
+        }
+
+        public ServiceExportConfigurationInfoArgs build() {
+            return $;
         }
     }
+
 }

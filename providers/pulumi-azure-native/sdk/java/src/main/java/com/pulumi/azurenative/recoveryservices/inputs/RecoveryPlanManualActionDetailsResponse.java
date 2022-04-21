@@ -24,10 +24,10 @@ public final class RecoveryPlanManualActionDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class RecoveryPlanManualActionDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
     }
 
-    public RecoveryPlanManualActionDetailsResponse(
-        @Nullable String description,
-        String instanceType) {
-        this.description = description;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-    }
+    private RecoveryPlanManualActionDetailsResponse() {}
 
-    private RecoveryPlanManualActionDetailsResponse() {
-        this.description = null;
-        this.instanceType = null;
+    private RecoveryPlanManualActionDetailsResponse(RecoveryPlanManualActionDetailsResponse $) {
+        this.description = $.description;
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecoveryPlanManualActionDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String instanceType;
+        private RecoveryPlanManualActionDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecoveryPlanManualActionDetailsResponse();
         }
 
         public Builder(RecoveryPlanManualActionDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.instanceType = defaults.instanceType;
+            $ = new RecoveryPlanManualActionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
-        }        public RecoveryPlanManualActionDetailsResponse build() {
-            return new RecoveryPlanManualActionDetailsResponse(description, instanceType);
+        }
+
+        public RecoveryPlanManualActionDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

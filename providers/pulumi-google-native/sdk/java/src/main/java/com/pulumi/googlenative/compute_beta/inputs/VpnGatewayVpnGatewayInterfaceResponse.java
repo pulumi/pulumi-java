@@ -21,7 +21,7 @@ public final class VpnGatewayVpnGatewayInterfaceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="interconnectAttachment", required=true)
-      private final String interconnectAttachment;
+    private String interconnectAttachment;
 
     public String interconnectAttachment() {
         return this.interconnectAttachment;
@@ -32,55 +32,52 @@ public final class VpnGatewayVpnGatewayInterfaceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
     }
 
-    public VpnGatewayVpnGatewayInterfaceResponse(
-        String interconnectAttachment,
-        String ipAddress) {
-        this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment, "expected parameter 'interconnectAttachment' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-    }
+    private VpnGatewayVpnGatewayInterfaceResponse() {}
 
-    private VpnGatewayVpnGatewayInterfaceResponse() {
-        this.interconnectAttachment = null;
-        this.ipAddress = null;
+    private VpnGatewayVpnGatewayInterfaceResponse(VpnGatewayVpnGatewayInterfaceResponse $) {
+        this.interconnectAttachment = $.interconnectAttachment;
+        this.ipAddress = $.ipAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnGatewayVpnGatewayInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String interconnectAttachment;
-        private String ipAddress;
+        private VpnGatewayVpnGatewayInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnGatewayVpnGatewayInterfaceResponse();
         }
 
         public Builder(VpnGatewayVpnGatewayInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interconnectAttachment = defaults.interconnectAttachment;
-    	      this.ipAddress = defaults.ipAddress;
+            $ = new VpnGatewayVpnGatewayInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder interconnectAttachment(String interconnectAttachment) {
-            this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
+            $.interconnectAttachment = interconnectAttachment;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
-        }        public VpnGatewayVpnGatewayInterfaceResponse build() {
-            return new VpnGatewayVpnGatewayInterfaceResponse(interconnectAttachment, ipAddress);
+        }
+
+        public VpnGatewayVpnGatewayInterfaceResponse build() {
+            $.interconnectAttachment = Objects.requireNonNull($.interconnectAttachment, "expected parameter 'interconnectAttachment' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            return $;
         }
     }
+
 }

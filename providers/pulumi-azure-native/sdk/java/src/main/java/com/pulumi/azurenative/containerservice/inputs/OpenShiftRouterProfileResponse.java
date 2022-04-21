@@ -23,7 +23,7 @@ public final class OpenShiftRouterProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="fqdn", required=true)
-      private final String fqdn;
+    private String fqdn;
 
     public String fqdn() {
         return this.fqdn;
@@ -34,10 +34,10 @@ public final class OpenShiftRouterProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,64 +45,58 @@ public final class OpenShiftRouterProfileResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="publicSubdomain", required=true)
-      private final String publicSubdomain;
+    private String publicSubdomain;
 
     public String publicSubdomain() {
         return this.publicSubdomain;
     }
 
-    public OpenShiftRouterProfileResponse(
-        String fqdn,
-        @Nullable String name,
-        String publicSubdomain) {
-        this.fqdn = Objects.requireNonNull(fqdn, "expected parameter 'fqdn' to be non-null");
-        this.name = name;
-        this.publicSubdomain = Objects.requireNonNull(publicSubdomain, "expected parameter 'publicSubdomain' to be non-null");
-    }
+    private OpenShiftRouterProfileResponse() {}
 
-    private OpenShiftRouterProfileResponse() {
-        this.fqdn = null;
-        this.name = null;
-        this.publicSubdomain = null;
+    private OpenShiftRouterProfileResponse(OpenShiftRouterProfileResponse $) {
+        this.fqdn = $.fqdn;
+        this.name = $.name;
+        this.publicSubdomain = $.publicSubdomain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OpenShiftRouterProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fqdn;
-        private @Nullable String name;
-        private String publicSubdomain;
+        private OpenShiftRouterProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OpenShiftRouterProfileResponse();
         }
 
         public Builder(OpenShiftRouterProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdn = defaults.fqdn;
-    	      this.name = defaults.name;
-    	      this.publicSubdomain = defaults.publicSubdomain;
+            $ = new OpenShiftRouterProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdn(String fqdn) {
-            this.fqdn = Objects.requireNonNull(fqdn);
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder publicSubdomain(String publicSubdomain) {
-            this.publicSubdomain = Objects.requireNonNull(publicSubdomain);
+            $.publicSubdomain = publicSubdomain;
             return this;
-        }        public OpenShiftRouterProfileResponse build() {
-            return new OpenShiftRouterProfileResponse(fqdn, name, publicSubdomain);
+        }
+
+        public OpenShiftRouterProfileResponse build() {
+            $.fqdn = Objects.requireNonNull($.fqdn, "expected parameter 'fqdn' to be non-null");
+            $.publicSubdomain = Objects.requireNonNull($.publicSubdomain, "expected parameter 'publicSubdomain' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse extends co
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowCxV3TestRunDifferenceResponse extends co
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudDialogflowCxV3TestRunDifferenceResponse(
-        String description,
-        String type) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3TestRunDifferenceResponse() {}
 
-    private GoogleCloudDialogflowCxV3TestRunDifferenceResponse() {
-        this.description = null;
-        this.type = null;
+    private GoogleCloudDialogflowCxV3TestRunDifferenceResponse(GoogleCloudDialogflowCxV3TestRunDifferenceResponse $) {
+        this.description = $.description;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3TestRunDifferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String type;
+        private GoogleCloudDialogflowCxV3TestRunDifferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3TestRunDifferenceResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3TestRunDifferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDialogflowCxV3TestRunDifferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudDialogflowCxV3TestRunDifferenceResponse build() {
-            return new GoogleCloudDialogflowCxV3TestRunDifferenceResponse(description, type);
+        }
+
+        public GoogleCloudDialogflowCxV3TestRunDifferenceResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

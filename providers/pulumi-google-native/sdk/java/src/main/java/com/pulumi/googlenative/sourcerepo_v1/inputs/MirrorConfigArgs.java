@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sourcerepo_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MirrorConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deployKeyId")
-      private final @Nullable Output<String> deployKeyId;
+    private @Nullable Output<String> deployKeyId;
 
-    public Output<String> deployKeyId() {
-        return this.deployKeyId == null ? Codegen.empty() : this.deployKeyId;
+    public Optional<Output<String>> deployKeyId() {
+        return Optional.ofNullable(this.deployKeyId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MirrorConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class MirrorConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webhookId")
-      private final @Nullable Output<String> webhookId;
+    private @Nullable Output<String> webhookId;
 
-    public Output<String> webhookId() {
-        return this.webhookId == null ? Codegen.empty() : this.webhookId;
+    public Optional<Output<String>> webhookId() {
+        return Optional.ofNullable(this.webhookId);
     }
 
-    public MirrorConfigArgs(
-        @Nullable Output<String> deployKeyId,
-        @Nullable Output<String> url,
-        @Nullable Output<String> webhookId) {
-        this.deployKeyId = deployKeyId;
-        this.url = url;
-        this.webhookId = webhookId;
-    }
+    private MirrorConfigArgs() {}
 
-    private MirrorConfigArgs() {
-        this.deployKeyId = Codegen.empty();
-        this.url = Codegen.empty();
-        this.webhookId = Codegen.empty();
+    private MirrorConfigArgs(MirrorConfigArgs $) {
+        this.deployKeyId = $.deployKeyId;
+        this.url = $.url;
+        this.webhookId = $.webhookId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MirrorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deployKeyId;
-        private @Nullable Output<String> url;
-        private @Nullable Output<String> webhookId;
+        private MirrorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MirrorConfigArgs();
         }
 
         public Builder(MirrorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deployKeyId = defaults.deployKeyId;
-    	      this.url = defaults.url;
-    	      this.webhookId = defaults.webhookId;
+            $ = new MirrorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deployKeyId(@Nullable Output<String> deployKeyId) {
-            this.deployKeyId = deployKeyId;
+            $.deployKeyId = deployKeyId;
             return this;
         }
-        public Builder deployKeyId(@Nullable String deployKeyId) {
-            this.deployKeyId = Codegen.ofNullable(deployKeyId);
-            return this;
+
+        public Builder deployKeyId(String deployKeyId) {
+            return deployKeyId(Output.of(deployKeyId));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
+
+        public Builder url(String url) {
+            return url(Output.of(url));
         }
+
         public Builder webhookId(@Nullable Output<String> webhookId) {
-            this.webhookId = webhookId;
+            $.webhookId = webhookId;
             return this;
         }
-        public Builder webhookId(@Nullable String webhookId) {
-            this.webhookId = Codegen.ofNullable(webhookId);
-            return this;
-        }        public MirrorConfigArgs build() {
-            return new MirrorConfigArgs(deployKeyId, url, webhookId);
+
+        public Builder webhookId(String webhookId) {
+            return webhookId(Output.of(webhookId));
+        }
+
+        public MirrorConfigArgs build() {
+            return $;
         }
     }
+
 }

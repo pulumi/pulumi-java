@@ -21,45 +21,45 @@ public final class RoleSinkInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="roleId", required=true)
-      private final String roleId;
+    private String roleId;
 
     public String roleId() {
         return this.roleId;
     }
 
-    public RoleSinkInfoResponse(String roleId) {
-        this.roleId = Objects.requireNonNull(roleId, "expected parameter 'roleId' to be non-null");
-    }
+    private RoleSinkInfoResponse() {}
 
-    private RoleSinkInfoResponse() {
-        this.roleId = null;
+    private RoleSinkInfoResponse(RoleSinkInfoResponse $) {
+        this.roleId = $.roleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleSinkInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String roleId;
+        private RoleSinkInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleSinkInfoResponse();
         }
 
         public Builder(RoleSinkInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleId = defaults.roleId;
+            $ = new RoleSinkInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder roleId(String roleId) {
-            this.roleId = Objects.requireNonNull(roleId);
+            $.roleId = roleId;
             return this;
-        }        public RoleSinkInfoResponse build() {
-            return new RoleSinkInfoResponse(roleId);
+        }
+
+        public RoleSinkInfoResponse build() {
+            $.roleId = Objects.requireNonNull($.roleId, "expected parameter 'roleId' to be non-null");
+            return $;
         }
     }
+
 }

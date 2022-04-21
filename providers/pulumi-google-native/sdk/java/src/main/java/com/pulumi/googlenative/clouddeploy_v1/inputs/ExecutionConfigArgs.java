@@ -5,13 +5,13 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.clouddeploy_v1.enums.ExecutionConfigUsagesItem;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.DefaultPoolArgs;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.PrivatePoolArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="artifactStorage")
-      private final @Nullable Output<String> artifactStorage;
+    private @Nullable Output<String> artifactStorage;
 
-    public Output<String> artifactStorage() {
-        return this.artifactStorage == null ? Codegen.empty() : this.artifactStorage;
+    public Optional<Output<String>> artifactStorage() {
+        return Optional.ofNullable(this.artifactStorage);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="defaultPool")
-      private final @Nullable Output<DefaultPoolArgs> defaultPool;
+    private @Nullable Output<DefaultPoolArgs> defaultPool;
 
-    public Output<DefaultPoolArgs> defaultPool() {
-        return this.defaultPool == null ? Codegen.empty() : this.defaultPool;
+    public Optional<Output<DefaultPoolArgs>> defaultPool() {
+        return Optional.ofNullable(this.defaultPool);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="privatePool")
-      private final @Nullable Output<PrivatePoolArgs> privatePool;
+    private @Nullable Output<PrivatePoolArgs> privatePool;
 
-    public Output<PrivatePoolArgs> privatePool() {
-        return this.privatePool == null ? Codegen.empty() : this.privatePool;
+    public Optional<Output<PrivatePoolArgs>> privatePool() {
+        return Optional.ofNullable(this.privatePool);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="usages", required=true)
-      private final Output<List<ExecutionConfigUsagesItem>> usages;
+    private Output<List<ExecutionConfigUsagesItem>> usages;
 
     public Output<List<ExecutionConfigUsagesItem>> usages() {
         return this.usages;
@@ -83,118 +83,103 @@ public final class ExecutionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="workerPool")
-      private final @Nullable Output<String> workerPool;
+    private @Nullable Output<String> workerPool;
 
-    public Output<String> workerPool() {
-        return this.workerPool == null ? Codegen.empty() : this.workerPool;
+    public Optional<Output<String>> workerPool() {
+        return Optional.ofNullable(this.workerPool);
     }
 
-    public ExecutionConfigArgs(
-        @Nullable Output<String> artifactStorage,
-        @Nullable Output<DefaultPoolArgs> defaultPool,
-        @Nullable Output<PrivatePoolArgs> privatePool,
-        @Nullable Output<String> serviceAccount,
-        Output<List<ExecutionConfigUsagesItem>> usages,
-        @Nullable Output<String> workerPool) {
-        this.artifactStorage = artifactStorage;
-        this.defaultPool = defaultPool;
-        this.privatePool = privatePool;
-        this.serviceAccount = serviceAccount;
-        this.usages = Objects.requireNonNull(usages, "expected parameter 'usages' to be non-null");
-        this.workerPool = workerPool;
-    }
+    private ExecutionConfigArgs() {}
 
-    private ExecutionConfigArgs() {
-        this.artifactStorage = Codegen.empty();
-        this.defaultPool = Codegen.empty();
-        this.privatePool = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.usages = Codegen.empty();
-        this.workerPool = Codegen.empty();
+    private ExecutionConfigArgs(ExecutionConfigArgs $) {
+        this.artifactStorage = $.artifactStorage;
+        this.defaultPool = $.defaultPool;
+        this.privatePool = $.privatePool;
+        this.serviceAccount = $.serviceAccount;
+        this.usages = $.usages;
+        this.workerPool = $.workerPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> artifactStorage;
-        private @Nullable Output<DefaultPoolArgs> defaultPool;
-        private @Nullable Output<PrivatePoolArgs> privatePool;
-        private @Nullable Output<String> serviceAccount;
-        private Output<List<ExecutionConfigUsagesItem>> usages;
-        private @Nullable Output<String> workerPool;
+        private ExecutionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionConfigArgs();
         }
 
         public Builder(ExecutionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactStorage = defaults.artifactStorage;
-    	      this.defaultPool = defaults.defaultPool;
-    	      this.privatePool = defaults.privatePool;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.usages = defaults.usages;
-    	      this.workerPool = defaults.workerPool;
+            $ = new ExecutionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactStorage(@Nullable Output<String> artifactStorage) {
-            this.artifactStorage = artifactStorage;
+            $.artifactStorage = artifactStorage;
             return this;
         }
-        public Builder artifactStorage(@Nullable String artifactStorage) {
-            this.artifactStorage = Codegen.ofNullable(artifactStorage);
-            return this;
+
+        public Builder artifactStorage(String artifactStorage) {
+            return artifactStorage(Output.of(artifactStorage));
         }
+
         public Builder defaultPool(@Nullable Output<DefaultPoolArgs> defaultPool) {
-            this.defaultPool = defaultPool;
+            $.defaultPool = defaultPool;
             return this;
         }
-        public Builder defaultPool(@Nullable DefaultPoolArgs defaultPool) {
-            this.defaultPool = Codegen.ofNullable(defaultPool);
-            return this;
+
+        public Builder defaultPool(DefaultPoolArgs defaultPool) {
+            return defaultPool(Output.of(defaultPool));
         }
+
         public Builder privatePool(@Nullable Output<PrivatePoolArgs> privatePool) {
-            this.privatePool = privatePool;
+            $.privatePool = privatePool;
             return this;
         }
-        public Builder privatePool(@Nullable PrivatePoolArgs privatePool) {
-            this.privatePool = Codegen.ofNullable(privatePool);
-            return this;
+
+        public Builder privatePool(PrivatePoolArgs privatePool) {
+            return privatePool(Output.of(privatePool));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder usages(Output<List<ExecutionConfigUsagesItem>> usages) {
-            this.usages = Objects.requireNonNull(usages);
+            $.usages = usages;
             return this;
         }
+
         public Builder usages(List<ExecutionConfigUsagesItem> usages) {
-            this.usages = Output.of(Objects.requireNonNull(usages));
-            return this;
+            return usages(Output.of(usages));
         }
+
         public Builder usages(ExecutionConfigUsagesItem... usages) {
             return usages(List.of(usages));
         }
+
         public Builder workerPool(@Nullable Output<String> workerPool) {
-            this.workerPool = workerPool;
+            $.workerPool = workerPool;
             return this;
         }
-        public Builder workerPool(@Nullable String workerPool) {
-            this.workerPool = Codegen.ofNullable(workerPool);
-            return this;
-        }        public ExecutionConfigArgs build() {
-            return new ExecutionConfigArgs(artifactStorage, defaultPool, privatePool, serviceAccount, usages, workerPool);
+
+        public Builder workerPool(String workerPool) {
+            return workerPool(Output.of(workerPool));
+        }
+
+        public ExecutionConfigArgs build() {
+            $.usages = Objects.requireNonNull($.usages, "expected parameter 'usages' to be non-null");
+            return $;
         }
     }
+
 }

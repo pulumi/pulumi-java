@@ -5,11 +5,11 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs
      * 
      */
     @Import(name="classification")
-      private final @Nullable Output<String> classification;
+    private @Nullable Output<String> classification;
 
-    public Output<String> classification() {
-        return this.classification == null ? Codegen.empty() : this.classification;
+    public Optional<Output<String>> classification() {
+        return Optional.ofNullable(this.classification);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,Object>> properties;
+    private @Nullable Output<Map<String,Object>> properties;
 
-    public Output<Map<String,Object>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,Object>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs(
-        @Nullable Output<String> classification,
-        @Nullable Output<Map<String,Object>> properties) {
-        this.classification = classification;
-        this.properties = properties;
-    }
+    private ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs() {}
 
-    private ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs() {
-        this.classification = Codegen.empty();
-        this.properties = Codegen.empty();
+    private ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs(ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs $) {
+        this.classification = $.classification;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> classification;
-        private @Nullable Output<Map<String,Object>> properties;
+        private ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs();
         }
 
         public Builder(ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classification = defaults.classification;
-    	      this.properties = defaults.properties;
+            $ = new ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classification(@Nullable Output<String> classification) {
-            this.classification = classification;
+            $.classification = classification;
             return this;
         }
-        public Builder classification(@Nullable String classification) {
-            this.classification = Codegen.ofNullable(classification);
-            return this;
+
+        public Builder classification(String classification) {
+            return classification(Output.of(classification));
         }
+
         public Builder properties(@Nullable Output<Map<String,Object>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,Object> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs build() {
-            return new ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs(classification, properties);
+
+        public Builder properties(Map<String,Object> properties) {
+            return properties(Output.of(properties));
+        }
+
+        public ClusterMasterInstanceFleetInstanceTypeConfigConfigurationArgs build() {
+            return $;
         }
     }
+
 }

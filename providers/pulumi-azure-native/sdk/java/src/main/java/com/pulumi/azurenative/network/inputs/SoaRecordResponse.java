@@ -24,10 +24,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Double expireTime;
+    private @Nullable Double expireTime;
 
     public Optional<Double> expireTime() {
-        return this.expireTime == null ? Optional.empty() : Optional.ofNullable(this.expireTime);
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable String host;
+    private @Nullable String host;
 
     public Optional<String> host() {
-        return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minimumTtl")
-      private final @Nullable Double minimumTtl;
+    private @Nullable Double minimumTtl;
 
     public Optional<Double> minimumTtl() {
-        return this.minimumTtl == null ? Optional.empty() : Optional.ofNullable(this.minimumTtl);
+        return Optional.ofNullable(this.minimumTtl);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="refreshTime")
-      private final @Nullable Double refreshTime;
+    private @Nullable Double refreshTime;
 
     public Optional<Double> refreshTime() {
-        return this.refreshTime == null ? Optional.empty() : Optional.ofNullable(this.refreshTime);
+        return Optional.ofNullable(this.refreshTime);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retryTime")
-      private final @Nullable Double retryTime;
+    private @Nullable Double retryTime;
 
     public Optional<Double> retryTime() {
-        return this.retryTime == null ? Optional.empty() : Optional.ofNullable(this.retryTime);
+        return Optional.ofNullable(this.retryTime);
     }
 
     /**
@@ -90,100 +90,80 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serialNumber")
-      private final @Nullable Double serialNumber;
+    private @Nullable Double serialNumber;
 
     public Optional<Double> serialNumber() {
-        return this.serialNumber == null ? Optional.empty() : Optional.ofNullable(this.serialNumber);
+        return Optional.ofNullable(this.serialNumber);
     }
 
-    public SoaRecordResponse(
-        @Nullable String email,
-        @Nullable Double expireTime,
-        @Nullable String host,
-        @Nullable Double minimumTtl,
-        @Nullable Double refreshTime,
-        @Nullable Double retryTime,
-        @Nullable Double serialNumber) {
-        this.email = email;
-        this.expireTime = expireTime;
-        this.host = host;
-        this.minimumTtl = minimumTtl;
-        this.refreshTime = refreshTime;
-        this.retryTime = retryTime;
-        this.serialNumber = serialNumber;
-    }
+    private SoaRecordResponse() {}
 
-    private SoaRecordResponse() {
-        this.email = null;
-        this.expireTime = null;
-        this.host = null;
-        this.minimumTtl = null;
-        this.refreshTime = null;
-        this.retryTime = null;
-        this.serialNumber = null;
+    private SoaRecordResponse(SoaRecordResponse $) {
+        this.email = $.email;
+        this.expireTime = $.expireTime;
+        this.host = $.host;
+        this.minimumTtl = $.minimumTtl;
+        this.refreshTime = $.refreshTime;
+        this.retryTime = $.retryTime;
+        this.serialNumber = $.serialNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoaRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String email;
-        private @Nullable Double expireTime;
-        private @Nullable String host;
-        private @Nullable Double minimumTtl;
-        private @Nullable Double refreshTime;
-        private @Nullable Double retryTime;
-        private @Nullable Double serialNumber;
+        private SoaRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoaRecordResponse();
         }
 
         public Builder(SoaRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.expireTime = defaults.expireTime;
-    	      this.host = defaults.host;
-    	      this.minimumTtl = defaults.minimumTtl;
-    	      this.refreshTime = defaults.refreshTime;
-    	      this.retryTime = defaults.retryTime;
-    	      this.serialNumber = defaults.serialNumber;
+            $ = new SoaRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder expireTime(@Nullable Double expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
+
         public Builder host(@Nullable String host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
+
         public Builder minimumTtl(@Nullable Double minimumTtl) {
-            this.minimumTtl = minimumTtl;
+            $.minimumTtl = minimumTtl;
             return this;
         }
+
         public Builder refreshTime(@Nullable Double refreshTime) {
-            this.refreshTime = refreshTime;
+            $.refreshTime = refreshTime;
             return this;
         }
+
         public Builder retryTime(@Nullable Double retryTime) {
-            this.retryTime = retryTime;
+            $.retryTime = retryTime;
             return this;
         }
+
         public Builder serialNumber(@Nullable Double serialNumber) {
-            this.serialNumber = serialNumber;
+            $.serialNumber = serialNumber;
             return this;
-        }        public SoaRecordResponse build() {
-            return new SoaRecordResponse(email, expireTime, host, minimumTtl, refreshTime, retryTime, serialNumber);
+        }
+
+        public SoaRecordResponse build() {
+            return $;
         }
     }
+
 }

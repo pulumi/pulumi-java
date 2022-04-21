@@ -8,10 +8,10 @@ import com.pulumi.awsnative.servicecatalog.enums.ServiceActionDefinitionType;
 import com.pulumi.awsnative.servicecatalog.inputs.ServiceActionDefinitionParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,133 +20,122 @@ public final class ServiceActionArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServiceActionArgs Empty = new ServiceActionArgs();
 
     @Import(name="acceptLanguage")
-      private final @Nullable Output<ServiceActionAcceptLanguage> acceptLanguage;
+    private @Nullable Output<ServiceActionAcceptLanguage> acceptLanguage;
 
-    public Output<ServiceActionAcceptLanguage> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<ServiceActionAcceptLanguage>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     @Import(name="definition", required=true)
-      private final Output<List<ServiceActionDefinitionParameterArgs>> definition;
+    private Output<List<ServiceActionDefinitionParameterArgs>> definition;
 
     public Output<List<ServiceActionDefinitionParameterArgs>> definition() {
         return this.definition;
     }
 
     @Import(name="definitionType", required=true)
-      private final Output<ServiceActionDefinitionType> definitionType;
+    private Output<ServiceActionDefinitionType> definitionType;
 
     public Output<ServiceActionDefinitionType> definitionType() {
         return this.definitionType;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ServiceActionArgs(
-        @Nullable Output<ServiceActionAcceptLanguage> acceptLanguage,
-        Output<List<ServiceActionDefinitionParameterArgs>> definition,
-        Output<ServiceActionDefinitionType> definitionType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name) {
-        this.acceptLanguage = acceptLanguage;
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.definitionType = Objects.requireNonNull(definitionType, "expected parameter 'definitionType' to be non-null");
-        this.description = description;
-        this.name = name;
-    }
+    private ServiceActionArgs() {}
 
-    private ServiceActionArgs() {
-        this.acceptLanguage = Codegen.empty();
-        this.definition = Codegen.empty();
-        this.definitionType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
+    private ServiceActionArgs(ServiceActionArgs $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.definition = $.definition;
+        this.definitionType = $.definitionType;
+        this.description = $.description;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceActionAcceptLanguage> acceptLanguage;
-        private Output<List<ServiceActionDefinitionParameterArgs>> definition;
-        private Output<ServiceActionDefinitionType> definitionType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
+        private ServiceActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceActionArgs();
         }
 
         public Builder(ServiceActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.definition = defaults.definition;
-    	      this.definitionType = defaults.definitionType;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
+            $ = new ServiceActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<ServiceActionAcceptLanguage> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable ServiceActionAcceptLanguage acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(ServiceActionAcceptLanguage acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder definition(Output<List<ServiceActionDefinitionParameterArgs>> definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder definition(List<ServiceActionDefinitionParameterArgs> definition) {
-            this.definition = Output.of(Objects.requireNonNull(definition));
-            return this;
+            return definition(Output.of(definition));
         }
+
         public Builder definition(ServiceActionDefinitionParameterArgs... definition) {
             return definition(List.of(definition));
         }
+
         public Builder definitionType(Output<ServiceActionDefinitionType> definitionType) {
-            this.definitionType = Objects.requireNonNull(definitionType);
+            $.definitionType = definitionType;
             return this;
         }
+
         public Builder definitionType(ServiceActionDefinitionType definitionType) {
-            this.definitionType = Output.of(Objects.requireNonNull(definitionType));
-            return this;
+            return definitionType(Output.of(definitionType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ServiceActionArgs build() {
-            return new ServiceActionArgs(acceptLanguage, definition, definitionType, description, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ServiceActionArgs build() {
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            $.definitionType = Objects.requireNonNull($.definitionType, "expected parameter 'definitionType' to be non-null");
+            return $;
         }
     }
+
 }

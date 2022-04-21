@@ -17,7 +17,7 @@ public final class GetRuleSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -28,7 +28,7 @@ public final class GetRuleSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetRuleSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ruleSetName", required=true)
-      private final String ruleSetName;
+    private String ruleSetName;
 
     public String ruleSetName() {
         return this.ruleSetName;
     }
 
-    public GetRuleSetArgs(
-        String profileName,
-        String resourceGroupName,
-        String ruleSetName) {
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleSetName = Objects.requireNonNull(ruleSetName, "expected parameter 'ruleSetName' to be non-null");
-    }
+    private GetRuleSetArgs() {}
 
-    private GetRuleSetArgs() {
-        this.profileName = null;
-        this.resourceGroupName = null;
-        this.ruleSetName = null;
+    private GetRuleSetArgs(GetRuleSetArgs $) {
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String profileName;
-        private String resourceGroupName;
-        private String ruleSetName;
+        private GetRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRuleSetArgs();
         }
 
         public Builder(GetRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new GetRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleSetName(String ruleSetName) {
-            this.ruleSetName = Objects.requireNonNull(ruleSetName);
+            $.ruleSetName = ruleSetName;
             return this;
-        }        public GetRuleSetArgs build() {
-            return new GetRuleSetArgs(profileName, resourceGroupName, ruleSetName);
+        }
+
+        public GetRuleSetArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleSetName = Objects.requireNonNull($.ruleSetName, "expected parameter 'ruleSetName' to be non-null");
+            return $;
         }
     }
+
 }

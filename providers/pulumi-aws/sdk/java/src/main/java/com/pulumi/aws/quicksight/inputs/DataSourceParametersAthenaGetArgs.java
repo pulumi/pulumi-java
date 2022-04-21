@@ -5,9 +5,9 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DataSourceParametersAthenaGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="workGroup")
-      private final @Nullable Output<String> workGroup;
+    private @Nullable Output<String> workGroup;
 
-    public Output<String> workGroup() {
-        return this.workGroup == null ? Codegen.empty() : this.workGroup;
+    public Optional<Output<String>> workGroup() {
+        return Optional.ofNullable(this.workGroup);
     }
 
-    public DataSourceParametersAthenaGetArgs(@Nullable Output<String> workGroup) {
-        this.workGroup = workGroup;
-    }
+    private DataSourceParametersAthenaGetArgs() {}
 
-    private DataSourceParametersAthenaGetArgs() {
-        this.workGroup = Codegen.empty();
+    private DataSourceParametersAthenaGetArgs(DataSourceParametersAthenaGetArgs $) {
+        this.workGroup = $.workGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersAthenaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> workGroup;
+        private DataSourceParametersAthenaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersAthenaGetArgs();
         }
 
         public Builder(DataSourceParametersAthenaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workGroup = defaults.workGroup;
+            $ = new DataSourceParametersAthenaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder workGroup(@Nullable Output<String> workGroup) {
-            this.workGroup = workGroup;
+            $.workGroup = workGroup;
             return this;
         }
-        public Builder workGroup(@Nullable String workGroup) {
-            this.workGroup = Codegen.ofNullable(workGroup);
-            return this;
-        }        public DataSourceParametersAthenaGetArgs build() {
-            return new DataSourceParametersAthenaGetArgs(workGroup);
+
+        public Builder workGroup(String workGroup) {
+            return workGroup(Output.of(workGroup));
+        }
+
+        public DataSourceParametersAthenaGetArgs build() {
+            return $;
         }
     }
+
 }

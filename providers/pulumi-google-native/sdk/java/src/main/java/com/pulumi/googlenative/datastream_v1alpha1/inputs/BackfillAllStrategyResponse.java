@@ -22,7 +22,7 @@ public final class BackfillAllStrategyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="mysqlExcludedObjects", required=true)
-      private final MysqlRdbmsResponse mysqlExcludedObjects;
+    private MysqlRdbmsResponse mysqlExcludedObjects;
 
     public MysqlRdbmsResponse mysqlExcludedObjects() {
         return this.mysqlExcludedObjects;
@@ -33,55 +33,52 @@ public final class BackfillAllStrategyResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="oracleExcludedObjects", required=true)
-      private final OracleRdbmsResponse oracleExcludedObjects;
+    private OracleRdbmsResponse oracleExcludedObjects;
 
     public OracleRdbmsResponse oracleExcludedObjects() {
         return this.oracleExcludedObjects;
     }
 
-    public BackfillAllStrategyResponse(
-        MysqlRdbmsResponse mysqlExcludedObjects,
-        OracleRdbmsResponse oracleExcludedObjects) {
-        this.mysqlExcludedObjects = Objects.requireNonNull(mysqlExcludedObjects, "expected parameter 'mysqlExcludedObjects' to be non-null");
-        this.oracleExcludedObjects = Objects.requireNonNull(oracleExcludedObjects, "expected parameter 'oracleExcludedObjects' to be non-null");
-    }
+    private BackfillAllStrategyResponse() {}
 
-    private BackfillAllStrategyResponse() {
-        this.mysqlExcludedObjects = null;
-        this.oracleExcludedObjects = null;
+    private BackfillAllStrategyResponse(BackfillAllStrategyResponse $) {
+        this.mysqlExcludedObjects = $.mysqlExcludedObjects;
+        this.oracleExcludedObjects = $.oracleExcludedObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackfillAllStrategyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MysqlRdbmsResponse mysqlExcludedObjects;
-        private OracleRdbmsResponse oracleExcludedObjects;
+        private BackfillAllStrategyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackfillAllStrategyResponse();
         }
 
         public Builder(BackfillAllStrategyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mysqlExcludedObjects = defaults.mysqlExcludedObjects;
-    	      this.oracleExcludedObjects = defaults.oracleExcludedObjects;
+            $ = new BackfillAllStrategyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mysqlExcludedObjects(MysqlRdbmsResponse mysqlExcludedObjects) {
-            this.mysqlExcludedObjects = Objects.requireNonNull(mysqlExcludedObjects);
+            $.mysqlExcludedObjects = mysqlExcludedObjects;
             return this;
         }
+
         public Builder oracleExcludedObjects(OracleRdbmsResponse oracleExcludedObjects) {
-            this.oracleExcludedObjects = Objects.requireNonNull(oracleExcludedObjects);
+            $.oracleExcludedObjects = oracleExcludedObjects;
             return this;
-        }        public BackfillAllStrategyResponse build() {
-            return new BackfillAllStrategyResponse(mysqlExcludedObjects, oracleExcludedObjects);
+        }
+
+        public BackfillAllStrategyResponse build() {
+            $.mysqlExcludedObjects = Objects.requireNonNull($.mysqlExcludedObjects, "expected parameter 'mysqlExcludedObjects' to be non-null");
+            $.oracleExcludedObjects = Objects.requireNonNull($.oracleExcludedObjects, "expected parameter 'oracleExcludedObjects' to be non-null");
+            return $;
         }
     }
+
 }

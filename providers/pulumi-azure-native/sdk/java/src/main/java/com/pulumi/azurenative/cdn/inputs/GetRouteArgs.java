@@ -17,7 +17,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
@@ -28,7 +28,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -39,7 +39,7 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeName", required=true)
-      private final String routeName;
+    private String routeName;
 
     public String routeName() {
         return this.routeName;
     }
 
-    public GetRouteArgs(
-        String endpointName,
-        String profileName,
-        String resourceGroupName,
-        String routeName) {
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeName = Objects.requireNonNull(routeName, "expected parameter 'routeName' to be non-null");
-    }
+    private GetRouteArgs() {}
 
-    private GetRouteArgs() {
-        this.endpointName = null;
-        this.profileName = null;
-        this.resourceGroupName = null;
-        this.routeName = null;
+    private GetRouteArgs(GetRouteArgs $) {
+        this.endpointName = $.endpointName;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeName = $.routeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointName;
-        private String profileName;
-        private String resourceGroupName;
-        private String routeName;
+        private GetRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteArgs();
         }
 
         public Builder(GetRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointName = defaults.endpointName;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeName = defaults.routeName;
+            $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder routeName(String routeName) {
-            this.routeName = Objects.requireNonNull(routeName);
+            $.routeName = routeName;
             return this;
-        }        public GetRouteArgs build() {
-            return new GetRouteArgs(endpointName, profileName, resourceGroupName, routeName);
+        }
+
+        public GetRouteArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.routeName = Objects.requireNonNull($.routeName, "expected parameter 'routeName' to be non-null");
+            return $;
         }
     }
+
 }

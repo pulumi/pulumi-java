@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ConfigMapKeySelectorArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -36,10 +36,10 @@ public final class ConfigMapKeySelectorArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class ConfigMapKeySelectorArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="optional")
-      private final @Nullable Output<Boolean> optional;
+    private @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> optional() {
-        return this.optional == null ? Codegen.empty() : this.optional;
+    public Optional<Output<Boolean>> optional() {
+        return Optional.ofNullable(this.optional);
     }
 
-    public ConfigMapKeySelectorArgs(
-        Output<String> key,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> optional) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.name = name;
-        this.optional = optional;
-    }
+    private ConfigMapKeySelectorArgs() {}
 
-    private ConfigMapKeySelectorArgs() {
-        this.key = Codegen.empty();
-        this.name = Codegen.empty();
-        this.optional = Codegen.empty();
+    private ConfigMapKeySelectorArgs(ConfigMapKeySelectorArgs $) {
+        this.key = $.key;
+        this.name = $.name;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigMapKeySelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> optional;
+        private ConfigMapKeySelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigMapKeySelectorArgs();
         }
 
         public Builder(ConfigMapKeySelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.name = defaults.name;
-    	      this.optional = defaults.optional;
+            $ = new ConfigMapKeySelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder optional(@Nullable Output<Boolean> optional) {
-            this.optional = optional;
+            $.optional = optional;
             return this;
         }
-        public Builder optional(@Nullable Boolean optional) {
-            this.optional = Codegen.ofNullable(optional);
-            return this;
-        }        public ConfigMapKeySelectorArgs build() {
-            return new ConfigMapKeySelectorArgs(key, name, optional);
+
+        public Builder optional(Boolean optional) {
+            return optional(Output.of(optional));
+        }
+
+        public ConfigMapKeySelectorArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

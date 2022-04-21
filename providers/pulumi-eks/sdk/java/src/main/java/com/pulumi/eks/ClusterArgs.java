@@ -23,6 +23,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +36,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterSecurityGroup")
-      private final @Nullable Output<SecurityGroup> clusterSecurityGroup;
+    private @Nullable Output<SecurityGroup> clusterSecurityGroup;
 
-    public Output<SecurityGroup> clusterSecurityGroup() {
-        return this.clusterSecurityGroup == null ? Codegen.empty() : this.clusterSecurityGroup;
+    public Optional<Output<SecurityGroup>> clusterSecurityGroup() {
+        return Optional.ofNullable(this.clusterSecurityGroup);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterSecurityGroupTags")
-      private final @Nullable Output<Map<String,String>> clusterSecurityGroupTags;
+    private @Nullable Output<Map<String,String>> clusterSecurityGroupTags;
 
-    public Output<Map<String,String>> clusterSecurityGroupTags() {
-        return this.clusterSecurityGroupTags == null ? Codegen.empty() : this.clusterSecurityGroupTags;
+    public Optional<Output<Map<String,String>>> clusterSecurityGroupTags() {
+        return Optional.ofNullable(this.clusterSecurityGroupTags);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterTags")
-      private final @Nullable Output<Map<String,String>> clusterTags;
+    private @Nullable Output<Map<String,String>> clusterTags;
 
-    public Output<Map<String,String>> clusterTags() {
-        return this.clusterTags == null ? Codegen.empty() : this.clusterTags;
+    public Optional<Output<Map<String,String>>> clusterTags() {
+        return Optional.ofNullable(this.clusterTags);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createOidcProvider")
-      private final @Nullable Output<Boolean> createOidcProvider;
+    private @Nullable Output<Boolean> createOidcProvider;
 
-    public Output<Boolean> createOidcProvider() {
-        return this.createOidcProvider == null ? Codegen.empty() : this.createOidcProvider;
+    public Optional<Output<Boolean>> createOidcProvider() {
+        return Optional.ofNullable(this.createOidcProvider);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationRoleProvider")
-      private final @Nullable Output<CreationRoleProviderArgs> creationRoleProvider;
+    private @Nullable Output<CreationRoleProviderArgs> creationRoleProvider;
 
-    public Output<CreationRoleProviderArgs> creationRoleProvider() {
-        return this.creationRoleProvider == null ? Codegen.empty() : this.creationRoleProvider;
+    public Optional<Output<CreationRoleProviderArgs>> creationRoleProvider() {
+        return Optional.ofNullable(this.creationRoleProvider);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="desiredCapacity")
-      private final @Nullable Output<Integer> desiredCapacity;
+    private @Nullable Output<Integer> desiredCapacity;
 
-    public Output<Integer> desiredCapacity() {
-        return this.desiredCapacity == null ? Codegen.empty() : this.desiredCapacity;
+    public Optional<Output<Integer>> desiredCapacity() {
+        return Optional.ofNullable(this.desiredCapacity);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledClusterLogTypes")
-      private final @Nullable Output<List<String>> enabledClusterLogTypes;
+    private @Nullable Output<List<String>> enabledClusterLogTypes;
 
-    public Output<List<String>> enabledClusterLogTypes() {
-        return this.enabledClusterLogTypes == null ? Codegen.empty() : this.enabledClusterLogTypes;
+    public Optional<Output<List<String>>> enabledClusterLogTypes() {
+        return Optional.ofNullable(this.enabledClusterLogTypes);
     }
 
     /**
@@ -120,10 +121,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptRootBlockDevice")
-      private final @Nullable Output<Boolean> encryptRootBlockDevice;
+    private @Nullable Output<Boolean> encryptRootBlockDevice;
 
-    public Output<Boolean> encryptRootBlockDevice() {
-        return this.encryptRootBlockDevice == null ? Codegen.empty() : this.encryptRootBlockDevice;
+    public Optional<Output<Boolean>> encryptRootBlockDevice() {
+        return Optional.ofNullable(this.encryptRootBlockDevice);
     }
 
     /**
@@ -135,10 +136,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfigKeyArn")
-      private final @Nullable Output<String> encryptionConfigKeyArn;
+    private @Nullable Output<String> encryptionConfigKeyArn;
 
-    public Output<String> encryptionConfigKeyArn() {
-        return this.encryptionConfigKeyArn == null ? Codegen.empty() : this.encryptionConfigKeyArn;
+    public Optional<Output<String>> encryptionConfigKeyArn() {
+        return Optional.ofNullable(this.encryptionConfigKeyArn);
     }
 
     /**
@@ -146,10 +147,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointPrivateAccess")
-      private final @Nullable Output<Boolean> endpointPrivateAccess;
+    private @Nullable Output<Boolean> endpointPrivateAccess;
 
-    public Output<Boolean> endpointPrivateAccess() {
-        return this.endpointPrivateAccess == null ? Codegen.empty() : this.endpointPrivateAccess;
+    public Optional<Output<Boolean>> endpointPrivateAccess() {
+        return Optional.ofNullable(this.endpointPrivateAccess);
     }
 
     /**
@@ -157,10 +158,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointPublicAccess")
-      private final @Nullable Output<Boolean> endpointPublicAccess;
+    private @Nullable Output<Boolean> endpointPublicAccess;
 
-    public Output<Boolean> endpointPublicAccess() {
-        return this.endpointPublicAccess == null ? Codegen.empty() : this.endpointPublicAccess;
+    public Optional<Output<Boolean>> endpointPublicAccess() {
+        return Optional.ofNullable(this.endpointPublicAccess);
     }
 
     /**
@@ -168,10 +169,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fargate")
-      private final @Nullable Output<Either<Boolean,FargateProfileArgs>> fargate;
+    private @Nullable Output<Either<Boolean,FargateProfileArgs>> fargate;
 
-    public Output<Either<Boolean,FargateProfileArgs>> fargate() {
-        return this.fargate == null ? Codegen.empty() : this.fargate;
+    public Optional<Output<Either<Boolean,FargateProfileArgs>>> fargate() {
+        return Optional.ofNullable(this.fargate);
     }
 
     /**
@@ -187,10 +188,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gpu")
-      private final @Nullable Output<Boolean> gpu;
+    private @Nullable Output<Boolean> gpu;
 
-    public Output<Boolean> gpu() {
-        return this.gpu == null ? Codegen.empty() : this.gpu;
+    public Optional<Output<Boolean>> gpu() {
+        return Optional.ofNullable(this.gpu);
     }
 
     /**
@@ -198,10 +199,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceProfileName")
-      private final @Nullable Output<String> instanceProfileName;
+    private @Nullable Output<String> instanceProfileName;
 
-    public Output<String> instanceProfileName() {
-        return this.instanceProfileName == null ? Codegen.empty() : this.instanceProfileName;
+    public Optional<Output<String>> instanceProfileName() {
+        return Optional.ofNullable(this.instanceProfileName);
     }
 
     /**
@@ -211,10 +212,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceRole")
-      private final @Nullable Output<Role> instanceRole;
+    private @Nullable Output<Role> instanceRole;
 
-    public Output<Role> instanceRole() {
-        return this.instanceRole == null ? Codegen.empty() : this.instanceRole;
+    public Optional<Output<Role>> instanceRole() {
+        return Optional.ofNullable(this.instanceRole);
     }
 
     /**
@@ -224,10 +225,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceRoles")
-      private final @Nullable Output<List<Role>> instanceRoles;
+    private @Nullable Output<List<Role>> instanceRoles;
 
-    public Output<List<Role>> instanceRoles() {
-        return this.instanceRoles == null ? Codegen.empty() : this.instanceRoles;
+    public Optional<Output<List<Role>>> instanceRoles() {
+        return Optional.ofNullable(this.instanceRoles);
     }
 
     /**
@@ -235,10 +236,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -255,10 +256,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kubernetesServiceIpAddressRange")
-      private final @Nullable Output<String> kubernetesServiceIpAddressRange;
+    private @Nullable Output<String> kubernetesServiceIpAddressRange;
 
-    public Output<String> kubernetesServiceIpAddressRange() {
-        return this.kubernetesServiceIpAddressRange == null ? Codegen.empty() : this.kubernetesServiceIpAddressRange;
+    public Optional<Output<String>> kubernetesServiceIpAddressRange() {
+        return Optional.ofNullable(this.kubernetesServiceIpAddressRange);
     }
 
     /**
@@ -266,10 +267,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSize")
-      private final @Nullable Output<Integer> maxSize;
+    private @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> maxSize() {
-        return this.maxSize == null ? Codegen.empty() : this.maxSize;
+    public Optional<Output<Integer>> maxSize() {
+        return Optional.ofNullable(this.maxSize);
     }
 
     /**
@@ -277,10 +278,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minSize")
-      private final @Nullable Output<Integer> minSize;
+    private @Nullable Output<Integer> minSize;
 
-    public Output<Integer> minSize() {
-        return this.minSize == null ? Codegen.empty() : this.minSize;
+    public Optional<Output<Integer>> minSize() {
+        return Optional.ofNullable(this.minSize);
     }
 
     /**
@@ -292,10 +293,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -310,10 +311,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeAmiId")
-      private final @Nullable Output<String> nodeAmiId;
+    private @Nullable Output<String> nodeAmiId;
 
-    public Output<String> nodeAmiId() {
-        return this.nodeAmiId == null ? Codegen.empty() : this.nodeAmiId;
+    public Optional<Output<String>> nodeAmiId() {
+        return Optional.ofNullable(this.nodeAmiId);
     }
 
     /**
@@ -321,10 +322,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeAssociatePublicIpAddress")
-      private final @Nullable Output<Boolean> nodeAssociatePublicIpAddress;
+    private @Nullable Output<Boolean> nodeAssociatePublicIpAddress;
 
-    public Output<Boolean> nodeAssociatePublicIpAddress() {
-        return this.nodeAssociatePublicIpAddress == null ? Codegen.empty() : this.nodeAssociatePublicIpAddress;
+    public Optional<Output<Boolean>> nodeAssociatePublicIpAddress() {
+        return Optional.ofNullable(this.nodeAssociatePublicIpAddress);
     }
 
     /**
@@ -332,10 +333,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeGroupOptions")
-      private final @Nullable Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions;
+    private @Nullable Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions;
 
-    public Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions() {
-        return this.nodeGroupOptions == null ? Codegen.empty() : this.nodeGroupOptions;
+    public Optional<Output<ClusterNodeGroupOptionsArgs>> nodeGroupOptions() {
+        return Optional.ofNullable(this.nodeGroupOptions);
     }
 
     /**
@@ -345,10 +346,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodePublicKey")
-      private final @Nullable Output<String> nodePublicKey;
+    private @Nullable Output<String> nodePublicKey;
 
-    public Output<String> nodePublicKey() {
-        return this.nodePublicKey == null ? Codegen.empty() : this.nodePublicKey;
+    public Optional<Output<String>> nodePublicKey() {
+        return Optional.ofNullable(this.nodePublicKey);
     }
 
     /**
@@ -356,10 +357,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeRootVolumeDeleteOnTermination")
-      private final @Nullable Output<Boolean> nodeRootVolumeDeleteOnTermination;
+    private @Nullable Output<Boolean> nodeRootVolumeDeleteOnTermination;
 
-    public Output<Boolean> nodeRootVolumeDeleteOnTermination() {
-        return this.nodeRootVolumeDeleteOnTermination == null ? Codegen.empty() : this.nodeRootVolumeDeleteOnTermination;
+    public Optional<Output<Boolean>> nodeRootVolumeDeleteOnTermination() {
+        return Optional.ofNullable(this.nodeRootVolumeDeleteOnTermination);
     }
 
     /**
@@ -367,10 +368,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeRootVolumeEncrypted")
-      private final @Nullable Output<Boolean> nodeRootVolumeEncrypted;
+    private @Nullable Output<Boolean> nodeRootVolumeEncrypted;
 
-    public Output<Boolean> nodeRootVolumeEncrypted() {
-        return this.nodeRootVolumeEncrypted == null ? Codegen.empty() : this.nodeRootVolumeEncrypted;
+    public Optional<Output<Boolean>> nodeRootVolumeEncrypted() {
+        return Optional.ofNullable(this.nodeRootVolumeEncrypted);
     }
 
     /**
@@ -378,10 +379,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeRootVolumeIops")
-      private final @Nullable Output<Integer> nodeRootVolumeIops;
+    private @Nullable Output<Integer> nodeRootVolumeIops;
 
-    public Output<Integer> nodeRootVolumeIops() {
-        return this.nodeRootVolumeIops == null ? Codegen.empty() : this.nodeRootVolumeIops;
+    public Optional<Output<Integer>> nodeRootVolumeIops() {
+        return Optional.ofNullable(this.nodeRootVolumeIops);
     }
 
     /**
@@ -389,10 +390,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeRootVolumeSize")
-      private final @Nullable Output<Integer> nodeRootVolumeSize;
+    private @Nullable Output<Integer> nodeRootVolumeSize;
 
-    public Output<Integer> nodeRootVolumeSize() {
-        return this.nodeRootVolumeSize == null ? Codegen.empty() : this.nodeRootVolumeSize;
+    public Optional<Output<Integer>> nodeRootVolumeSize() {
+        return Optional.ofNullable(this.nodeRootVolumeSize);
     }
 
     /**
@@ -400,10 +401,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeRootVolumeThroughput")
-      private final @Nullable Output<Integer> nodeRootVolumeThroughput;
+    private @Nullable Output<Integer> nodeRootVolumeThroughput;
 
-    public Output<Integer> nodeRootVolumeThroughput() {
-        return this.nodeRootVolumeThroughput == null ? Codegen.empty() : this.nodeRootVolumeThroughput;
+    public Optional<Output<Integer>> nodeRootVolumeThroughput() {
+        return Optional.ofNullable(this.nodeRootVolumeThroughput);
     }
 
     /**
@@ -411,10 +412,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeRootVolumeType")
-      private final @Nullable Output<String> nodeRootVolumeType;
+    private @Nullable Output<String> nodeRootVolumeType;
 
-    public Output<String> nodeRootVolumeType() {
-        return this.nodeRootVolumeType == null ? Codegen.empty() : this.nodeRootVolumeType;
+    public Optional<Output<String>> nodeRootVolumeType() {
+        return Optional.ofNullable(this.nodeRootVolumeType);
     }
 
     /**
@@ -424,10 +425,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeSecurityGroupTags")
-      private final @Nullable Output<Map<String,String>> nodeSecurityGroupTags;
+    private @Nullable Output<Map<String,String>> nodeSecurityGroupTags;
 
-    public Output<Map<String,String>> nodeSecurityGroupTags() {
-        return this.nodeSecurityGroupTags == null ? Codegen.empty() : this.nodeSecurityGroupTags;
+    public Optional<Output<Map<String,String>>> nodeSecurityGroupTags() {
+        return Optional.ofNullable(this.nodeSecurityGroupTags);
     }
 
     /**
@@ -435,10 +436,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeSubnetIds")
-      private final @Nullable Output<List<String>> nodeSubnetIds;
+    private @Nullable Output<List<String>> nodeSubnetIds;
 
-    public Output<List<String>> nodeSubnetIds() {
-        return this.nodeSubnetIds == null ? Codegen.empty() : this.nodeSubnetIds;
+    public Optional<Output<List<String>>> nodeSubnetIds() {
+        return Optional.ofNullable(this.nodeSubnetIds);
     }
 
     /**
@@ -446,10 +447,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeUserData")
-      private final @Nullable Output<String> nodeUserData;
+    private @Nullable Output<String> nodeUserData;
 
-    public Output<String> nodeUserData() {
-        return this.nodeUserData == null ? Codegen.empty() : this.nodeUserData;
+    public Optional<Output<String>> nodeUserData() {
+        return Optional.ofNullable(this.nodeUserData);
     }
 
     /**
@@ -471,10 +472,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateSubnetIds")
-      private final @Nullable Output<List<String>> privateSubnetIds;
+    private @Nullable Output<List<String>> privateSubnetIds;
 
-    public Output<List<String>> privateSubnetIds() {
-        return this.privateSubnetIds == null ? Codegen.empty() : this.privateSubnetIds;
+    public Optional<Output<List<String>>> privateSubnetIds() {
+        return Optional.ofNullable(this.privateSubnetIds);
     }
 
     /**
@@ -494,10 +495,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="providerCredentialOpts")
-      private final @Nullable Output<KubeconfigOptionsArgs> providerCredentialOpts;
+    private @Nullable Output<KubeconfigOptionsArgs> providerCredentialOpts;
 
-    public Output<KubeconfigOptionsArgs> providerCredentialOpts() {
-        return this.providerCredentialOpts == null ? Codegen.empty() : this.providerCredentialOpts;
+    public Optional<Output<KubeconfigOptionsArgs>> providerCredentialOpts() {
+        return Optional.ofNullable(this.providerCredentialOpts);
     }
 
     /**
@@ -519,10 +520,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="proxy")
-      private final @Nullable Output<String> proxy;
+    private @Nullable Output<String> proxy;
 
-    public Output<String> proxy() {
-        return this.proxy == null ? Codegen.empty() : this.proxy;
+    public Optional<Output<String>> proxy() {
+        return Optional.ofNullable(this.proxy);
     }
 
     /**
@@ -530,10 +531,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicAccessCidrs")
-      private final @Nullable Output<List<String>> publicAccessCidrs;
+    private @Nullable Output<List<String>> publicAccessCidrs;
 
-    public Output<List<String>> publicAccessCidrs() {
-        return this.publicAccessCidrs == null ? Codegen.empty() : this.publicAccessCidrs;
+    public Optional<Output<List<String>>> publicAccessCidrs() {
+        return Optional.ofNullable(this.publicAccessCidrs);
     }
 
     /**
@@ -553,10 +554,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicSubnetIds")
-      private final @Nullable Output<List<String>> publicSubnetIds;
+    private @Nullable Output<List<String>> publicSubnetIds;
 
-    public Output<List<String>> publicSubnetIds() {
-        return this.publicSubnetIds == null ? Codegen.empty() : this.publicSubnetIds;
+    public Optional<Output<List<String>>> publicSubnetIds() {
+        return Optional.ofNullable(this.publicSubnetIds);
     }
 
     /**
@@ -564,10 +565,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleMappings")
-      private final @Nullable Output<List<RoleMappingArgs>> roleMappings;
+    private @Nullable Output<List<RoleMappingArgs>> roleMappings;
 
-    public Output<List<RoleMappingArgs>> roleMappings() {
-        return this.roleMappings == null ? Codegen.empty() : this.roleMappings;
+    public Optional<Output<List<RoleMappingArgs>>> roleMappings() {
+        return Optional.ofNullable(this.roleMappings);
     }
 
     /**
@@ -575,10 +576,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRole")
-      private final @Nullable Output<Role> serviceRole;
+    private @Nullable Output<Role> serviceRole;
 
-    public Output<Role> serviceRole() {
-        return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
+    public Optional<Output<Role>> serviceRole() {
+        return Optional.ofNullable(this.serviceRole);
     }
 
     /**
@@ -586,10 +587,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipDefaultNodeGroup")
-      private final @Nullable Output<Boolean> skipDefaultNodeGroup;
+    private @Nullable Output<Boolean> skipDefaultNodeGroup;
 
-    public Output<Boolean> skipDefaultNodeGroup() {
-        return this.skipDefaultNodeGroup == null ? Codegen.empty() : this.skipDefaultNodeGroup;
+    public Optional<Output<Boolean>> skipDefaultNodeGroup() {
+        return Optional.ofNullable(this.skipDefaultNodeGroup);
     }
 
     /**
@@ -599,10 +600,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageClasses")
-      private final @Nullable Output<Either<String,Map<String,StorageClassArgs>>> storageClasses;
+    private @Nullable Output<Either<String,Map<String,StorageClassArgs>>> storageClasses;
 
-    public Output<Either<String,Map<String,StorageClassArgs>>> storageClasses() {
-        return this.storageClasses == null ? Codegen.empty() : this.storageClasses;
+    public Optional<Output<Either<String,Map<String,StorageClassArgs>>>> storageClasses() {
+        return Optional.ofNullable(this.storageClasses);
     }
 
     /**
@@ -618,10 +619,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     /**
@@ -629,10 +630,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -640,10 +641,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useDefaultVpcCni")
-      private final @Nullable Output<Boolean> useDefaultVpcCni;
+    private @Nullable Output<Boolean> useDefaultVpcCni;
 
-    public Output<Boolean> useDefaultVpcCni() {
-        return this.useDefaultVpcCni == null ? Codegen.empty() : this.useDefaultVpcCni;
+    public Optional<Output<Boolean>> useDefaultVpcCni() {
+        return Optional.ofNullable(this.useDefaultVpcCni);
     }
 
     /**
@@ -651,10 +652,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userMappings")
-      private final @Nullable Output<List<UserMappingArgs>> userMappings;
+    private @Nullable Output<List<UserMappingArgs>> userMappings;
 
-    public Output<List<UserMappingArgs>> userMappings() {
-        return this.userMappings == null ? Codegen.empty() : this.userMappings;
+    public Optional<Output<List<UserMappingArgs>>> userMappings() {
+        return Optional.ofNullable(this.userMappings);
     }
 
     /**
@@ -662,10 +663,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -673,10 +674,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcCniOptions")
-      private final @Nullable Output<VpcCniOptionsArgs> vpcCniOptions;
+    private @Nullable Output<VpcCniOptionsArgs> vpcCniOptions;
 
-    public Output<VpcCniOptionsArgs> vpcCniOptions() {
-        return this.vpcCniOptions == null ? Codegen.empty() : this.vpcCniOptions;
+    public Optional<Output<VpcCniOptionsArgs>> vpcCniOptions() {
+        return Optional.ofNullable(this.vpcCniOptions);
     }
 
     /**
@@ -684,714 +685,578 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public ClusterArgs(
-        @Nullable Output<SecurityGroup> clusterSecurityGroup,
-        @Nullable Output<Map<String,String>> clusterSecurityGroupTags,
-        @Nullable Output<Map<String,String>> clusterTags,
-        @Nullable Output<Boolean> createOidcProvider,
-        @Nullable Output<CreationRoleProviderArgs> creationRoleProvider,
-        @Nullable Output<Integer> desiredCapacity,
-        @Nullable Output<List<String>> enabledClusterLogTypes,
-        @Nullable Output<Boolean> encryptRootBlockDevice,
-        @Nullable Output<String> encryptionConfigKeyArn,
-        @Nullable Output<Boolean> endpointPrivateAccess,
-        @Nullable Output<Boolean> endpointPublicAccess,
-        @Nullable Output<Either<Boolean,FargateProfileArgs>> fargate,
-        @Nullable Output<Boolean> gpu,
-        @Nullable Output<String> instanceProfileName,
-        @Nullable Output<Role> instanceRole,
-        @Nullable Output<List<Role>> instanceRoles,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> kubernetesServiceIpAddressRange,
-        @Nullable Output<Integer> maxSize,
-        @Nullable Output<Integer> minSize,
-        @Nullable Output<String> name,
-        @Nullable Output<String> nodeAmiId,
-        @Nullable Output<Boolean> nodeAssociatePublicIpAddress,
-        @Nullable Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions,
-        @Nullable Output<String> nodePublicKey,
-        @Nullable Output<Boolean> nodeRootVolumeDeleteOnTermination,
-        @Nullable Output<Boolean> nodeRootVolumeEncrypted,
-        @Nullable Output<Integer> nodeRootVolumeIops,
-        @Nullable Output<Integer> nodeRootVolumeSize,
-        @Nullable Output<Integer> nodeRootVolumeThroughput,
-        @Nullable Output<String> nodeRootVolumeType,
-        @Nullable Output<Map<String,String>> nodeSecurityGroupTags,
-        @Nullable Output<List<String>> nodeSubnetIds,
-        @Nullable Output<String> nodeUserData,
-        @Nullable Output<List<String>> privateSubnetIds,
-        @Nullable Output<KubeconfigOptionsArgs> providerCredentialOpts,
-        @Nullable Output<String> proxy,
-        @Nullable Output<List<String>> publicAccessCidrs,
-        @Nullable Output<List<String>> publicSubnetIds,
-        @Nullable Output<List<RoleMappingArgs>> roleMappings,
-        @Nullable Output<Role> serviceRole,
-        @Nullable Output<Boolean> skipDefaultNodeGroup,
-        @Nullable Output<Either<String,Map<String,StorageClassArgs>>> storageClasses,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Boolean> useDefaultVpcCni,
-        @Nullable Output<List<UserMappingArgs>> userMappings,
-        @Nullable Output<String> version,
-        @Nullable Output<VpcCniOptionsArgs> vpcCniOptions,
-        @Nullable Output<String> vpcId) {
-        this.clusterSecurityGroup = clusterSecurityGroup;
-        this.clusterSecurityGroupTags = clusterSecurityGroupTags;
-        this.clusterTags = clusterTags;
-        this.createOidcProvider = createOidcProvider;
-        this.creationRoleProvider = creationRoleProvider;
-        this.desiredCapacity = desiredCapacity;
-        this.enabledClusterLogTypes = enabledClusterLogTypes;
-        this.encryptRootBlockDevice = encryptRootBlockDevice;
-        this.encryptionConfigKeyArn = encryptionConfigKeyArn;
-        this.endpointPrivateAccess = endpointPrivateAccess;
-        this.endpointPublicAccess = endpointPublicAccess;
-        this.fargate = fargate;
-        this.gpu = gpu;
-        this.instanceProfileName = instanceProfileName;
-        this.instanceRole = instanceRole;
-        this.instanceRoles = instanceRoles;
-        this.instanceType = instanceType;
-        this.kubernetesServiceIpAddressRange = kubernetesServiceIpAddressRange;
-        this.maxSize = maxSize;
-        this.minSize = minSize;
-        this.name = name;
-        this.nodeAmiId = nodeAmiId;
-        this.nodeAssociatePublicIpAddress = nodeAssociatePublicIpAddress;
-        this.nodeGroupOptions = nodeGroupOptions;
-        this.nodePublicKey = nodePublicKey;
-        this.nodeRootVolumeDeleteOnTermination = Codegen.booleanProp("nodeRootVolumeDeleteOnTermination").output().arg(nodeRootVolumeDeleteOnTermination).def(true).getNullable();
-        this.nodeRootVolumeEncrypted = Codegen.booleanProp("nodeRootVolumeEncrypted").output().arg(nodeRootVolumeEncrypted).def(false).getNullable();
-        this.nodeRootVolumeIops = nodeRootVolumeIops;
-        this.nodeRootVolumeSize = Codegen.integerProp("nodeRootVolumeSize").output().arg(nodeRootVolumeSize).def(20).getNullable();
-        this.nodeRootVolumeThroughput = nodeRootVolumeThroughput;
-        this.nodeRootVolumeType = Codegen.stringProp("nodeRootVolumeType").output().arg(nodeRootVolumeType).def("gp2").getNullable();
-        this.nodeSecurityGroupTags = nodeSecurityGroupTags;
-        this.nodeSubnetIds = nodeSubnetIds;
-        this.nodeUserData = nodeUserData;
-        this.privateSubnetIds = privateSubnetIds;
-        this.providerCredentialOpts = providerCredentialOpts;
-        this.proxy = proxy;
-        this.publicAccessCidrs = publicAccessCidrs;
-        this.publicSubnetIds = publicSubnetIds;
-        this.roleMappings = roleMappings;
-        this.serviceRole = serviceRole;
-        this.skipDefaultNodeGroup = skipDefaultNodeGroup;
-        this.storageClasses = storageClasses;
-        this.subnetIds = subnetIds;
-        this.tags = tags;
-        this.useDefaultVpcCni = useDefaultVpcCni;
-        this.userMappings = userMappings;
-        this.version = version;
-        this.vpcCniOptions = vpcCniOptions;
-        this.vpcId = vpcId;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.clusterSecurityGroup = Codegen.empty();
-        this.clusterSecurityGroupTags = Codegen.empty();
-        this.clusterTags = Codegen.empty();
-        this.createOidcProvider = Codegen.empty();
-        this.creationRoleProvider = Codegen.empty();
-        this.desiredCapacity = Codegen.empty();
-        this.enabledClusterLogTypes = Codegen.empty();
-        this.encryptRootBlockDevice = Codegen.empty();
-        this.encryptionConfigKeyArn = Codegen.empty();
-        this.endpointPrivateAccess = Codegen.empty();
-        this.endpointPublicAccess = Codegen.empty();
-        this.fargate = Codegen.empty();
-        this.gpu = Codegen.empty();
-        this.instanceProfileName = Codegen.empty();
-        this.instanceRole = Codegen.empty();
-        this.instanceRoles = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.kubernetesServiceIpAddressRange = Codegen.empty();
-        this.maxSize = Codegen.empty();
-        this.minSize = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodeAmiId = Codegen.empty();
-        this.nodeAssociatePublicIpAddress = Codegen.empty();
-        this.nodeGroupOptions = Codegen.empty();
-        this.nodePublicKey = Codegen.empty();
-        this.nodeRootVolumeDeleteOnTermination = Codegen.empty();
-        this.nodeRootVolumeEncrypted = Codegen.empty();
-        this.nodeRootVolumeIops = Codegen.empty();
-        this.nodeRootVolumeSize = Codegen.empty();
-        this.nodeRootVolumeThroughput = Codegen.empty();
-        this.nodeRootVolumeType = Codegen.empty();
-        this.nodeSecurityGroupTags = Codegen.empty();
-        this.nodeSubnetIds = Codegen.empty();
-        this.nodeUserData = Codegen.empty();
-        this.privateSubnetIds = Codegen.empty();
-        this.providerCredentialOpts = Codegen.empty();
-        this.proxy = Codegen.empty();
-        this.publicAccessCidrs = Codegen.empty();
-        this.publicSubnetIds = Codegen.empty();
-        this.roleMappings = Codegen.empty();
-        this.serviceRole = Codegen.empty();
-        this.skipDefaultNodeGroup = Codegen.empty();
-        this.storageClasses = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.useDefaultVpcCni = Codegen.empty();
-        this.userMappings = Codegen.empty();
-        this.version = Codegen.empty();
-        this.vpcCniOptions = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.clusterSecurityGroup = $.clusterSecurityGroup;
+        this.clusterSecurityGroupTags = $.clusterSecurityGroupTags;
+        this.clusterTags = $.clusterTags;
+        this.createOidcProvider = $.createOidcProvider;
+        this.creationRoleProvider = $.creationRoleProvider;
+        this.desiredCapacity = $.desiredCapacity;
+        this.enabledClusterLogTypes = $.enabledClusterLogTypes;
+        this.encryptRootBlockDevice = $.encryptRootBlockDevice;
+        this.encryptionConfigKeyArn = $.encryptionConfigKeyArn;
+        this.endpointPrivateAccess = $.endpointPrivateAccess;
+        this.endpointPublicAccess = $.endpointPublicAccess;
+        this.fargate = $.fargate;
+        this.gpu = $.gpu;
+        this.instanceProfileName = $.instanceProfileName;
+        this.instanceRole = $.instanceRole;
+        this.instanceRoles = $.instanceRoles;
+        this.instanceType = $.instanceType;
+        this.kubernetesServiceIpAddressRange = $.kubernetesServiceIpAddressRange;
+        this.maxSize = $.maxSize;
+        this.minSize = $.minSize;
+        this.name = $.name;
+        this.nodeAmiId = $.nodeAmiId;
+        this.nodeAssociatePublicIpAddress = $.nodeAssociatePublicIpAddress;
+        this.nodeGroupOptions = $.nodeGroupOptions;
+        this.nodePublicKey = $.nodePublicKey;
+        this.nodeRootVolumeDeleteOnTermination = $.nodeRootVolumeDeleteOnTermination;
+        this.nodeRootVolumeEncrypted = $.nodeRootVolumeEncrypted;
+        this.nodeRootVolumeIops = $.nodeRootVolumeIops;
+        this.nodeRootVolumeSize = $.nodeRootVolumeSize;
+        this.nodeRootVolumeThroughput = $.nodeRootVolumeThroughput;
+        this.nodeRootVolumeType = $.nodeRootVolumeType;
+        this.nodeSecurityGroupTags = $.nodeSecurityGroupTags;
+        this.nodeSubnetIds = $.nodeSubnetIds;
+        this.nodeUserData = $.nodeUserData;
+        this.privateSubnetIds = $.privateSubnetIds;
+        this.providerCredentialOpts = $.providerCredentialOpts;
+        this.proxy = $.proxy;
+        this.publicAccessCidrs = $.publicAccessCidrs;
+        this.publicSubnetIds = $.publicSubnetIds;
+        this.roleMappings = $.roleMappings;
+        this.serviceRole = $.serviceRole;
+        this.skipDefaultNodeGroup = $.skipDefaultNodeGroup;
+        this.storageClasses = $.storageClasses;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.useDefaultVpcCni = $.useDefaultVpcCni;
+        this.userMappings = $.userMappings;
+        this.version = $.version;
+        this.vpcCniOptions = $.vpcCniOptions;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityGroup> clusterSecurityGroup;
-        private @Nullable Output<Map<String,String>> clusterSecurityGroupTags;
-        private @Nullable Output<Map<String,String>> clusterTags;
-        private @Nullable Output<Boolean> createOidcProvider;
-        private @Nullable Output<CreationRoleProviderArgs> creationRoleProvider;
-        private @Nullable Output<Integer> desiredCapacity;
-        private @Nullable Output<List<String>> enabledClusterLogTypes;
-        private @Nullable Output<Boolean> encryptRootBlockDevice;
-        private @Nullable Output<String> encryptionConfigKeyArn;
-        private @Nullable Output<Boolean> endpointPrivateAccess;
-        private @Nullable Output<Boolean> endpointPublicAccess;
-        private @Nullable Output<Either<Boolean,FargateProfileArgs>> fargate;
-        private @Nullable Output<Boolean> gpu;
-        private @Nullable Output<String> instanceProfileName;
-        private @Nullable Output<Role> instanceRole;
-        private @Nullable Output<List<Role>> instanceRoles;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> kubernetesServiceIpAddressRange;
-        private @Nullable Output<Integer> maxSize;
-        private @Nullable Output<Integer> minSize;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> nodeAmiId;
-        private @Nullable Output<Boolean> nodeAssociatePublicIpAddress;
-        private @Nullable Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions;
-        private @Nullable Output<String> nodePublicKey;
-        private @Nullable Output<Boolean> nodeRootVolumeDeleteOnTermination;
-        private @Nullable Output<Boolean> nodeRootVolumeEncrypted;
-        private @Nullable Output<Integer> nodeRootVolumeIops;
-        private @Nullable Output<Integer> nodeRootVolumeSize;
-        private @Nullable Output<Integer> nodeRootVolumeThroughput;
-        private @Nullable Output<String> nodeRootVolumeType;
-        private @Nullable Output<Map<String,String>> nodeSecurityGroupTags;
-        private @Nullable Output<List<String>> nodeSubnetIds;
-        private @Nullable Output<String> nodeUserData;
-        private @Nullable Output<List<String>> privateSubnetIds;
-        private @Nullable Output<KubeconfigOptionsArgs> providerCredentialOpts;
-        private @Nullable Output<String> proxy;
-        private @Nullable Output<List<String>> publicAccessCidrs;
-        private @Nullable Output<List<String>> publicSubnetIds;
-        private @Nullable Output<List<RoleMappingArgs>> roleMappings;
-        private @Nullable Output<Role> serviceRole;
-        private @Nullable Output<Boolean> skipDefaultNodeGroup;
-        private @Nullable Output<Either<String,Map<String,StorageClassArgs>>> storageClasses;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Boolean> useDefaultVpcCni;
-        private @Nullable Output<List<UserMappingArgs>> userMappings;
-        private @Nullable Output<String> version;
-        private @Nullable Output<VpcCniOptionsArgs> vpcCniOptions;
-        private @Nullable Output<String> vpcId;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterSecurityGroup = defaults.clusterSecurityGroup;
-    	      this.clusterSecurityGroupTags = defaults.clusterSecurityGroupTags;
-    	      this.clusterTags = defaults.clusterTags;
-    	      this.createOidcProvider = defaults.createOidcProvider;
-    	      this.creationRoleProvider = defaults.creationRoleProvider;
-    	      this.desiredCapacity = defaults.desiredCapacity;
-    	      this.enabledClusterLogTypes = defaults.enabledClusterLogTypes;
-    	      this.encryptRootBlockDevice = defaults.encryptRootBlockDevice;
-    	      this.encryptionConfigKeyArn = defaults.encryptionConfigKeyArn;
-    	      this.endpointPrivateAccess = defaults.endpointPrivateAccess;
-    	      this.endpointPublicAccess = defaults.endpointPublicAccess;
-    	      this.fargate = defaults.fargate;
-    	      this.gpu = defaults.gpu;
-    	      this.instanceProfileName = defaults.instanceProfileName;
-    	      this.instanceRole = defaults.instanceRole;
-    	      this.instanceRoles = defaults.instanceRoles;
-    	      this.instanceType = defaults.instanceType;
-    	      this.kubernetesServiceIpAddressRange = defaults.kubernetesServiceIpAddressRange;
-    	      this.maxSize = defaults.maxSize;
-    	      this.minSize = defaults.minSize;
-    	      this.name = defaults.name;
-    	      this.nodeAmiId = defaults.nodeAmiId;
-    	      this.nodeAssociatePublicIpAddress = defaults.nodeAssociatePublicIpAddress;
-    	      this.nodeGroupOptions = defaults.nodeGroupOptions;
-    	      this.nodePublicKey = defaults.nodePublicKey;
-    	      this.nodeRootVolumeDeleteOnTermination = defaults.nodeRootVolumeDeleteOnTermination;
-    	      this.nodeRootVolumeEncrypted = defaults.nodeRootVolumeEncrypted;
-    	      this.nodeRootVolumeIops = defaults.nodeRootVolumeIops;
-    	      this.nodeRootVolumeSize = defaults.nodeRootVolumeSize;
-    	      this.nodeRootVolumeThroughput = defaults.nodeRootVolumeThroughput;
-    	      this.nodeRootVolumeType = defaults.nodeRootVolumeType;
-    	      this.nodeSecurityGroupTags = defaults.nodeSecurityGroupTags;
-    	      this.nodeSubnetIds = defaults.nodeSubnetIds;
-    	      this.nodeUserData = defaults.nodeUserData;
-    	      this.privateSubnetIds = defaults.privateSubnetIds;
-    	      this.providerCredentialOpts = defaults.providerCredentialOpts;
-    	      this.proxy = defaults.proxy;
-    	      this.publicAccessCidrs = defaults.publicAccessCidrs;
-    	      this.publicSubnetIds = defaults.publicSubnetIds;
-    	      this.roleMappings = defaults.roleMappings;
-    	      this.serviceRole = defaults.serviceRole;
-    	      this.skipDefaultNodeGroup = defaults.skipDefaultNodeGroup;
-    	      this.storageClasses = defaults.storageClasses;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.useDefaultVpcCni = defaults.useDefaultVpcCni;
-    	      this.userMappings = defaults.userMappings;
-    	      this.version = defaults.version;
-    	      this.vpcCniOptions = defaults.vpcCniOptions;
-    	      this.vpcId = defaults.vpcId;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterSecurityGroup(@Nullable Output<SecurityGroup> clusterSecurityGroup) {
-            this.clusterSecurityGroup = clusterSecurityGroup;
+            $.clusterSecurityGroup = clusterSecurityGroup;
             return this;
         }
-        public Builder clusterSecurityGroup(@Nullable SecurityGroup clusterSecurityGroup) {
-            this.clusterSecurityGroup = Codegen.ofNullable(clusterSecurityGroup);
-            return this;
+
+        public Builder clusterSecurityGroup(SecurityGroup clusterSecurityGroup) {
+            return clusterSecurityGroup(Output.of(clusterSecurityGroup));
         }
+
         public Builder clusterSecurityGroupTags(@Nullable Output<Map<String,String>> clusterSecurityGroupTags) {
-            this.clusterSecurityGroupTags = clusterSecurityGroupTags;
+            $.clusterSecurityGroupTags = clusterSecurityGroupTags;
             return this;
         }
-        public Builder clusterSecurityGroupTags(@Nullable Map<String,String> clusterSecurityGroupTags) {
-            this.clusterSecurityGroupTags = Codegen.ofNullable(clusterSecurityGroupTags);
-            return this;
+
+        public Builder clusterSecurityGroupTags(Map<String,String> clusterSecurityGroupTags) {
+            return clusterSecurityGroupTags(Output.of(clusterSecurityGroupTags));
         }
+
         public Builder clusterTags(@Nullable Output<Map<String,String>> clusterTags) {
-            this.clusterTags = clusterTags;
+            $.clusterTags = clusterTags;
             return this;
         }
-        public Builder clusterTags(@Nullable Map<String,String> clusterTags) {
-            this.clusterTags = Codegen.ofNullable(clusterTags);
-            return this;
+
+        public Builder clusterTags(Map<String,String> clusterTags) {
+            return clusterTags(Output.of(clusterTags));
         }
+
         public Builder createOidcProvider(@Nullable Output<Boolean> createOidcProvider) {
-            this.createOidcProvider = createOidcProvider;
+            $.createOidcProvider = createOidcProvider;
             return this;
         }
-        public Builder createOidcProvider(@Nullable Boolean createOidcProvider) {
-            this.createOidcProvider = Codegen.ofNullable(createOidcProvider);
-            return this;
+
+        public Builder createOidcProvider(Boolean createOidcProvider) {
+            return createOidcProvider(Output.of(createOidcProvider));
         }
+
         public Builder creationRoleProvider(@Nullable Output<CreationRoleProviderArgs> creationRoleProvider) {
-            this.creationRoleProvider = creationRoleProvider;
+            $.creationRoleProvider = creationRoleProvider;
             return this;
         }
-        public Builder creationRoleProvider(@Nullable CreationRoleProviderArgs creationRoleProvider) {
-            this.creationRoleProvider = Codegen.ofNullable(creationRoleProvider);
-            return this;
+
+        public Builder creationRoleProvider(CreationRoleProviderArgs creationRoleProvider) {
+            return creationRoleProvider(Output.of(creationRoleProvider));
         }
+
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
-            this.desiredCapacity = desiredCapacity;
+            $.desiredCapacity = desiredCapacity;
             return this;
         }
-        public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
-            this.desiredCapacity = Codegen.ofNullable(desiredCapacity);
-            return this;
+
+        public Builder desiredCapacity(Integer desiredCapacity) {
+            return desiredCapacity(Output.of(desiredCapacity));
         }
+
         public Builder enabledClusterLogTypes(@Nullable Output<List<String>> enabledClusterLogTypes) {
-            this.enabledClusterLogTypes = enabledClusterLogTypes;
+            $.enabledClusterLogTypes = enabledClusterLogTypes;
             return this;
         }
-        public Builder enabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
-            this.enabledClusterLogTypes = Codegen.ofNullable(enabledClusterLogTypes);
-            return this;
+
+        public Builder enabledClusterLogTypes(List<String> enabledClusterLogTypes) {
+            return enabledClusterLogTypes(Output.of(enabledClusterLogTypes));
         }
+
         public Builder enabledClusterLogTypes(String... enabledClusterLogTypes) {
             return enabledClusterLogTypes(List.of(enabledClusterLogTypes));
         }
+
         public Builder encryptRootBlockDevice(@Nullable Output<Boolean> encryptRootBlockDevice) {
-            this.encryptRootBlockDevice = encryptRootBlockDevice;
+            $.encryptRootBlockDevice = encryptRootBlockDevice;
             return this;
         }
-        public Builder encryptRootBlockDevice(@Nullable Boolean encryptRootBlockDevice) {
-            this.encryptRootBlockDevice = Codegen.ofNullable(encryptRootBlockDevice);
-            return this;
+
+        public Builder encryptRootBlockDevice(Boolean encryptRootBlockDevice) {
+            return encryptRootBlockDevice(Output.of(encryptRootBlockDevice));
         }
+
         public Builder encryptionConfigKeyArn(@Nullable Output<String> encryptionConfigKeyArn) {
-            this.encryptionConfigKeyArn = encryptionConfigKeyArn;
+            $.encryptionConfigKeyArn = encryptionConfigKeyArn;
             return this;
         }
-        public Builder encryptionConfigKeyArn(@Nullable String encryptionConfigKeyArn) {
-            this.encryptionConfigKeyArn = Codegen.ofNullable(encryptionConfigKeyArn);
-            return this;
+
+        public Builder encryptionConfigKeyArn(String encryptionConfigKeyArn) {
+            return encryptionConfigKeyArn(Output.of(encryptionConfigKeyArn));
         }
+
         public Builder endpointPrivateAccess(@Nullable Output<Boolean> endpointPrivateAccess) {
-            this.endpointPrivateAccess = endpointPrivateAccess;
+            $.endpointPrivateAccess = endpointPrivateAccess;
             return this;
         }
-        public Builder endpointPrivateAccess(@Nullable Boolean endpointPrivateAccess) {
-            this.endpointPrivateAccess = Codegen.ofNullable(endpointPrivateAccess);
-            return this;
+
+        public Builder endpointPrivateAccess(Boolean endpointPrivateAccess) {
+            return endpointPrivateAccess(Output.of(endpointPrivateAccess));
         }
+
         public Builder endpointPublicAccess(@Nullable Output<Boolean> endpointPublicAccess) {
-            this.endpointPublicAccess = endpointPublicAccess;
+            $.endpointPublicAccess = endpointPublicAccess;
             return this;
         }
-        public Builder endpointPublicAccess(@Nullable Boolean endpointPublicAccess) {
-            this.endpointPublicAccess = Codegen.ofNullable(endpointPublicAccess);
-            return this;
+
+        public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
+            return endpointPublicAccess(Output.of(endpointPublicAccess));
         }
+
         public Builder fargate(@Nullable Output<Either<Boolean,FargateProfileArgs>> fargate) {
-            this.fargate = fargate;
+            $.fargate = fargate;
             return this;
         }
-        public Builder fargate(@Nullable Either<Boolean,FargateProfileArgs> fargate) {
-            this.fargate = Codegen.ofNullable(fargate);
-            return this;
+
+        public Builder fargate(Either<Boolean,FargateProfileArgs> fargate) {
+            return fargate(Output.of(fargate));
         }
+
         public Builder gpu(@Nullable Output<Boolean> gpu) {
-            this.gpu = gpu;
+            $.gpu = gpu;
             return this;
         }
-        public Builder gpu(@Nullable Boolean gpu) {
-            this.gpu = Codegen.ofNullable(gpu);
-            return this;
+
+        public Builder gpu(Boolean gpu) {
+            return gpu(Output.of(gpu));
         }
+
         public Builder instanceProfileName(@Nullable Output<String> instanceProfileName) {
-            this.instanceProfileName = instanceProfileName;
+            $.instanceProfileName = instanceProfileName;
             return this;
         }
-        public Builder instanceProfileName(@Nullable String instanceProfileName) {
-            this.instanceProfileName = Codegen.ofNullable(instanceProfileName);
-            return this;
+
+        public Builder instanceProfileName(String instanceProfileName) {
+            return instanceProfileName(Output.of(instanceProfileName));
         }
+
         public Builder instanceRole(@Nullable Output<Role> instanceRole) {
-            this.instanceRole = instanceRole;
+            $.instanceRole = instanceRole;
             return this;
         }
-        public Builder instanceRole(@Nullable Role instanceRole) {
-            this.instanceRole = Codegen.ofNullable(instanceRole);
-            return this;
+
+        public Builder instanceRole(Role instanceRole) {
+            return instanceRole(Output.of(instanceRole));
         }
+
         public Builder instanceRoles(@Nullable Output<List<Role>> instanceRoles) {
-            this.instanceRoles = instanceRoles;
+            $.instanceRoles = instanceRoles;
             return this;
         }
-        public Builder instanceRoles(@Nullable List<Role> instanceRoles) {
-            this.instanceRoles = Codegen.ofNullable(instanceRoles);
-            return this;
+
+        public Builder instanceRoles(List<Role> instanceRoles) {
+            return instanceRoles(Output.of(instanceRoles));
         }
+
         public Builder instanceRoles(Role... instanceRoles) {
             return instanceRoles(List.of(instanceRoles));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder kubernetesServiceIpAddressRange(@Nullable Output<String> kubernetesServiceIpAddressRange) {
-            this.kubernetesServiceIpAddressRange = kubernetesServiceIpAddressRange;
+            $.kubernetesServiceIpAddressRange = kubernetesServiceIpAddressRange;
             return this;
         }
-        public Builder kubernetesServiceIpAddressRange(@Nullable String kubernetesServiceIpAddressRange) {
-            this.kubernetesServiceIpAddressRange = Codegen.ofNullable(kubernetesServiceIpAddressRange);
-            return this;
+
+        public Builder kubernetesServiceIpAddressRange(String kubernetesServiceIpAddressRange) {
+            return kubernetesServiceIpAddressRange(Output.of(kubernetesServiceIpAddressRange));
         }
+
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
-            this.maxSize = maxSize;
+            $.maxSize = maxSize;
             return this;
         }
-        public Builder maxSize(@Nullable Integer maxSize) {
-            this.maxSize = Codegen.ofNullable(maxSize);
-            return this;
+
+        public Builder maxSize(Integer maxSize) {
+            return maxSize(Output.of(maxSize));
         }
+
         public Builder minSize(@Nullable Output<Integer> minSize) {
-            this.minSize = minSize;
+            $.minSize = minSize;
             return this;
         }
-        public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Codegen.ofNullable(minSize);
-            return this;
+
+        public Builder minSize(Integer minSize) {
+            return minSize(Output.of(minSize));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nodeAmiId(@Nullable Output<String> nodeAmiId) {
-            this.nodeAmiId = nodeAmiId;
+            $.nodeAmiId = nodeAmiId;
             return this;
         }
-        public Builder nodeAmiId(@Nullable String nodeAmiId) {
-            this.nodeAmiId = Codegen.ofNullable(nodeAmiId);
-            return this;
+
+        public Builder nodeAmiId(String nodeAmiId) {
+            return nodeAmiId(Output.of(nodeAmiId));
         }
+
         public Builder nodeAssociatePublicIpAddress(@Nullable Output<Boolean> nodeAssociatePublicIpAddress) {
-            this.nodeAssociatePublicIpAddress = nodeAssociatePublicIpAddress;
+            $.nodeAssociatePublicIpAddress = nodeAssociatePublicIpAddress;
             return this;
         }
-        public Builder nodeAssociatePublicIpAddress(@Nullable Boolean nodeAssociatePublicIpAddress) {
-            this.nodeAssociatePublicIpAddress = Codegen.ofNullable(nodeAssociatePublicIpAddress);
-            return this;
+
+        public Builder nodeAssociatePublicIpAddress(Boolean nodeAssociatePublicIpAddress) {
+            return nodeAssociatePublicIpAddress(Output.of(nodeAssociatePublicIpAddress));
         }
+
         public Builder nodeGroupOptions(@Nullable Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions) {
-            this.nodeGroupOptions = nodeGroupOptions;
+            $.nodeGroupOptions = nodeGroupOptions;
             return this;
         }
-        public Builder nodeGroupOptions(@Nullable ClusterNodeGroupOptionsArgs nodeGroupOptions) {
-            this.nodeGroupOptions = Codegen.ofNullable(nodeGroupOptions);
-            return this;
+
+        public Builder nodeGroupOptions(ClusterNodeGroupOptionsArgs nodeGroupOptions) {
+            return nodeGroupOptions(Output.of(nodeGroupOptions));
         }
+
         public Builder nodePublicKey(@Nullable Output<String> nodePublicKey) {
-            this.nodePublicKey = nodePublicKey;
+            $.nodePublicKey = nodePublicKey;
             return this;
         }
-        public Builder nodePublicKey(@Nullable String nodePublicKey) {
-            this.nodePublicKey = Codegen.ofNullable(nodePublicKey);
-            return this;
+
+        public Builder nodePublicKey(String nodePublicKey) {
+            return nodePublicKey(Output.of(nodePublicKey));
         }
+
         public Builder nodeRootVolumeDeleteOnTermination(@Nullable Output<Boolean> nodeRootVolumeDeleteOnTermination) {
-            this.nodeRootVolumeDeleteOnTermination = nodeRootVolumeDeleteOnTermination;
+            $.nodeRootVolumeDeleteOnTermination = nodeRootVolumeDeleteOnTermination;
             return this;
         }
-        public Builder nodeRootVolumeDeleteOnTermination(@Nullable Boolean nodeRootVolumeDeleteOnTermination) {
-            this.nodeRootVolumeDeleteOnTermination = Codegen.ofNullable(nodeRootVolumeDeleteOnTermination);
-            return this;
+
+        public Builder nodeRootVolumeDeleteOnTermination(Boolean nodeRootVolumeDeleteOnTermination) {
+            return nodeRootVolumeDeleteOnTermination(Output.of(nodeRootVolumeDeleteOnTermination));
         }
+
         public Builder nodeRootVolumeEncrypted(@Nullable Output<Boolean> nodeRootVolumeEncrypted) {
-            this.nodeRootVolumeEncrypted = nodeRootVolumeEncrypted;
+            $.nodeRootVolumeEncrypted = nodeRootVolumeEncrypted;
             return this;
         }
-        public Builder nodeRootVolumeEncrypted(@Nullable Boolean nodeRootVolumeEncrypted) {
-            this.nodeRootVolumeEncrypted = Codegen.ofNullable(nodeRootVolumeEncrypted);
-            return this;
+
+        public Builder nodeRootVolumeEncrypted(Boolean nodeRootVolumeEncrypted) {
+            return nodeRootVolumeEncrypted(Output.of(nodeRootVolumeEncrypted));
         }
+
         public Builder nodeRootVolumeIops(@Nullable Output<Integer> nodeRootVolumeIops) {
-            this.nodeRootVolumeIops = nodeRootVolumeIops;
+            $.nodeRootVolumeIops = nodeRootVolumeIops;
             return this;
         }
-        public Builder nodeRootVolumeIops(@Nullable Integer nodeRootVolumeIops) {
-            this.nodeRootVolumeIops = Codegen.ofNullable(nodeRootVolumeIops);
-            return this;
+
+        public Builder nodeRootVolumeIops(Integer nodeRootVolumeIops) {
+            return nodeRootVolumeIops(Output.of(nodeRootVolumeIops));
         }
+
         public Builder nodeRootVolumeSize(@Nullable Output<Integer> nodeRootVolumeSize) {
-            this.nodeRootVolumeSize = nodeRootVolumeSize;
+            $.nodeRootVolumeSize = nodeRootVolumeSize;
             return this;
         }
-        public Builder nodeRootVolumeSize(@Nullable Integer nodeRootVolumeSize) {
-            this.nodeRootVolumeSize = Codegen.ofNullable(nodeRootVolumeSize);
-            return this;
+
+        public Builder nodeRootVolumeSize(Integer nodeRootVolumeSize) {
+            return nodeRootVolumeSize(Output.of(nodeRootVolumeSize));
         }
+
         public Builder nodeRootVolumeThroughput(@Nullable Output<Integer> nodeRootVolumeThroughput) {
-            this.nodeRootVolumeThroughput = nodeRootVolumeThroughput;
+            $.nodeRootVolumeThroughput = nodeRootVolumeThroughput;
             return this;
         }
-        public Builder nodeRootVolumeThroughput(@Nullable Integer nodeRootVolumeThroughput) {
-            this.nodeRootVolumeThroughput = Codegen.ofNullable(nodeRootVolumeThroughput);
-            return this;
+
+        public Builder nodeRootVolumeThroughput(Integer nodeRootVolumeThroughput) {
+            return nodeRootVolumeThroughput(Output.of(nodeRootVolumeThroughput));
         }
+
         public Builder nodeRootVolumeType(@Nullable Output<String> nodeRootVolumeType) {
-            this.nodeRootVolumeType = nodeRootVolumeType;
+            $.nodeRootVolumeType = nodeRootVolumeType;
             return this;
         }
-        public Builder nodeRootVolumeType(@Nullable String nodeRootVolumeType) {
-            this.nodeRootVolumeType = Codegen.ofNullable(nodeRootVolumeType);
-            return this;
+
+        public Builder nodeRootVolumeType(String nodeRootVolumeType) {
+            return nodeRootVolumeType(Output.of(nodeRootVolumeType));
         }
+
         public Builder nodeSecurityGroupTags(@Nullable Output<Map<String,String>> nodeSecurityGroupTags) {
-            this.nodeSecurityGroupTags = nodeSecurityGroupTags;
+            $.nodeSecurityGroupTags = nodeSecurityGroupTags;
             return this;
         }
-        public Builder nodeSecurityGroupTags(@Nullable Map<String,String> nodeSecurityGroupTags) {
-            this.nodeSecurityGroupTags = Codegen.ofNullable(nodeSecurityGroupTags);
-            return this;
+
+        public Builder nodeSecurityGroupTags(Map<String,String> nodeSecurityGroupTags) {
+            return nodeSecurityGroupTags(Output.of(nodeSecurityGroupTags));
         }
+
         public Builder nodeSubnetIds(@Nullable Output<List<String>> nodeSubnetIds) {
-            this.nodeSubnetIds = nodeSubnetIds;
+            $.nodeSubnetIds = nodeSubnetIds;
             return this;
         }
-        public Builder nodeSubnetIds(@Nullable List<String> nodeSubnetIds) {
-            this.nodeSubnetIds = Codegen.ofNullable(nodeSubnetIds);
-            return this;
+
+        public Builder nodeSubnetIds(List<String> nodeSubnetIds) {
+            return nodeSubnetIds(Output.of(nodeSubnetIds));
         }
+
         public Builder nodeSubnetIds(String... nodeSubnetIds) {
             return nodeSubnetIds(List.of(nodeSubnetIds));
         }
+
         public Builder nodeUserData(@Nullable Output<String> nodeUserData) {
-            this.nodeUserData = nodeUserData;
+            $.nodeUserData = nodeUserData;
             return this;
         }
-        public Builder nodeUserData(@Nullable String nodeUserData) {
-            this.nodeUserData = Codegen.ofNullable(nodeUserData);
-            return this;
+
+        public Builder nodeUserData(String nodeUserData) {
+            return nodeUserData(Output.of(nodeUserData));
         }
+
         public Builder privateSubnetIds(@Nullable Output<List<String>> privateSubnetIds) {
-            this.privateSubnetIds = privateSubnetIds;
+            $.privateSubnetIds = privateSubnetIds;
             return this;
         }
-        public Builder privateSubnetIds(@Nullable List<String> privateSubnetIds) {
-            this.privateSubnetIds = Codegen.ofNullable(privateSubnetIds);
-            return this;
+
+        public Builder privateSubnetIds(List<String> privateSubnetIds) {
+            return privateSubnetIds(Output.of(privateSubnetIds));
         }
+
         public Builder privateSubnetIds(String... privateSubnetIds) {
             return privateSubnetIds(List.of(privateSubnetIds));
         }
+
         public Builder providerCredentialOpts(@Nullable Output<KubeconfigOptionsArgs> providerCredentialOpts) {
-            this.providerCredentialOpts = providerCredentialOpts;
+            $.providerCredentialOpts = providerCredentialOpts;
             return this;
         }
-        public Builder providerCredentialOpts(@Nullable KubeconfigOptionsArgs providerCredentialOpts) {
-            this.providerCredentialOpts = Codegen.ofNullable(providerCredentialOpts);
-            return this;
+
+        public Builder providerCredentialOpts(KubeconfigOptionsArgs providerCredentialOpts) {
+            return providerCredentialOpts(Output.of(providerCredentialOpts));
         }
+
         public Builder proxy(@Nullable Output<String> proxy) {
-            this.proxy = proxy;
+            $.proxy = proxy;
             return this;
         }
-        public Builder proxy(@Nullable String proxy) {
-            this.proxy = Codegen.ofNullable(proxy);
-            return this;
+
+        public Builder proxy(String proxy) {
+            return proxy(Output.of(proxy));
         }
+
         public Builder publicAccessCidrs(@Nullable Output<List<String>> publicAccessCidrs) {
-            this.publicAccessCidrs = publicAccessCidrs;
+            $.publicAccessCidrs = publicAccessCidrs;
             return this;
         }
-        public Builder publicAccessCidrs(@Nullable List<String> publicAccessCidrs) {
-            this.publicAccessCidrs = Codegen.ofNullable(publicAccessCidrs);
-            return this;
+
+        public Builder publicAccessCidrs(List<String> publicAccessCidrs) {
+            return publicAccessCidrs(Output.of(publicAccessCidrs));
         }
+
         public Builder publicAccessCidrs(String... publicAccessCidrs) {
             return publicAccessCidrs(List.of(publicAccessCidrs));
         }
+
         public Builder publicSubnetIds(@Nullable Output<List<String>> publicSubnetIds) {
-            this.publicSubnetIds = publicSubnetIds;
+            $.publicSubnetIds = publicSubnetIds;
             return this;
         }
-        public Builder publicSubnetIds(@Nullable List<String> publicSubnetIds) {
-            this.publicSubnetIds = Codegen.ofNullable(publicSubnetIds);
-            return this;
+
+        public Builder publicSubnetIds(List<String> publicSubnetIds) {
+            return publicSubnetIds(Output.of(publicSubnetIds));
         }
+
         public Builder publicSubnetIds(String... publicSubnetIds) {
             return publicSubnetIds(List.of(publicSubnetIds));
         }
+
         public Builder roleMappings(@Nullable Output<List<RoleMappingArgs>> roleMappings) {
-            this.roleMappings = roleMappings;
+            $.roleMappings = roleMappings;
             return this;
         }
-        public Builder roleMappings(@Nullable List<RoleMappingArgs> roleMappings) {
-            this.roleMappings = Codegen.ofNullable(roleMappings);
-            return this;
+
+        public Builder roleMappings(List<RoleMappingArgs> roleMappings) {
+            return roleMappings(Output.of(roleMappings));
         }
+
         public Builder roleMappings(RoleMappingArgs... roleMappings) {
             return roleMappings(List.of(roleMappings));
         }
+
         public Builder serviceRole(@Nullable Output<Role> serviceRole) {
-            this.serviceRole = serviceRole;
+            $.serviceRole = serviceRole;
             return this;
         }
-        public Builder serviceRole(@Nullable Role serviceRole) {
-            this.serviceRole = Codegen.ofNullable(serviceRole);
-            return this;
+
+        public Builder serviceRole(Role serviceRole) {
+            return serviceRole(Output.of(serviceRole));
         }
+
         public Builder skipDefaultNodeGroup(@Nullable Output<Boolean> skipDefaultNodeGroup) {
-            this.skipDefaultNodeGroup = skipDefaultNodeGroup;
+            $.skipDefaultNodeGroup = skipDefaultNodeGroup;
             return this;
         }
-        public Builder skipDefaultNodeGroup(@Nullable Boolean skipDefaultNodeGroup) {
-            this.skipDefaultNodeGroup = Codegen.ofNullable(skipDefaultNodeGroup);
-            return this;
+
+        public Builder skipDefaultNodeGroup(Boolean skipDefaultNodeGroup) {
+            return skipDefaultNodeGroup(Output.of(skipDefaultNodeGroup));
         }
+
         public Builder storageClasses(@Nullable Output<Either<String,Map<String,StorageClassArgs>>> storageClasses) {
-            this.storageClasses = storageClasses;
+            $.storageClasses = storageClasses;
             return this;
         }
-        public Builder storageClasses(@Nullable Either<String,Map<String,StorageClassArgs>> storageClasses) {
-            this.storageClasses = Codegen.ofNullable(storageClasses);
-            return this;
+
+        public Builder storageClasses(Either<String,Map<String,StorageClassArgs>> storageClasses) {
+            return storageClasses(Output.of(storageClasses));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder useDefaultVpcCni(@Nullable Output<Boolean> useDefaultVpcCni) {
-            this.useDefaultVpcCni = useDefaultVpcCni;
+            $.useDefaultVpcCni = useDefaultVpcCni;
             return this;
         }
-        public Builder useDefaultVpcCni(@Nullable Boolean useDefaultVpcCni) {
-            this.useDefaultVpcCni = Codegen.ofNullable(useDefaultVpcCni);
-            return this;
+
+        public Builder useDefaultVpcCni(Boolean useDefaultVpcCni) {
+            return useDefaultVpcCni(Output.of(useDefaultVpcCni));
         }
+
         public Builder userMappings(@Nullable Output<List<UserMappingArgs>> userMappings) {
-            this.userMappings = userMappings;
+            $.userMappings = userMappings;
             return this;
         }
-        public Builder userMappings(@Nullable List<UserMappingArgs> userMappings) {
-            this.userMappings = Codegen.ofNullable(userMappings);
-            return this;
+
+        public Builder userMappings(List<UserMappingArgs> userMappings) {
+            return userMappings(Output.of(userMappings));
         }
+
         public Builder userMappings(UserMappingArgs... userMappings) {
             return userMappings(List.of(userMappings));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder vpcCniOptions(@Nullable Output<VpcCniOptionsArgs> vpcCniOptions) {
-            this.vpcCniOptions = vpcCniOptions;
+            $.vpcCniOptions = vpcCniOptions;
             return this;
         }
-        public Builder vpcCniOptions(@Nullable VpcCniOptionsArgs vpcCniOptions) {
-            this.vpcCniOptions = Codegen.ofNullable(vpcCniOptions);
-            return this;
+
+        public Builder vpcCniOptions(VpcCniOptionsArgs vpcCniOptions) {
+            return vpcCniOptions(Output.of(vpcCniOptions));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public ClusterArgs build() {
-            return new ClusterArgs(clusterSecurityGroup, clusterSecurityGroupTags, clusterTags, createOidcProvider, creationRoleProvider, desiredCapacity, enabledClusterLogTypes, encryptRootBlockDevice, encryptionConfigKeyArn, endpointPrivateAccess, endpointPublicAccess, fargate, gpu, instanceProfileName, instanceRole, instanceRoles, instanceType, kubernetesServiceIpAddressRange, maxSize, minSize, name, nodeAmiId, nodeAssociatePublicIpAddress, nodeGroupOptions, nodePublicKey, nodeRootVolumeDeleteOnTermination, nodeRootVolumeEncrypted, nodeRootVolumeIops, nodeRootVolumeSize, nodeRootVolumeThroughput, nodeRootVolumeType, nodeSecurityGroupTags, nodeSubnetIds, nodeUserData, privateSubnetIds, providerCredentialOpts, proxy, publicAccessCidrs, publicSubnetIds, roleMappings, serviceRole, skipDefaultNodeGroup, storageClasses, subnetIds, tags, useDefaultVpcCni, userMappings, version, vpcCniOptions, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public ClusterArgs build() {
+            $.nodeRootVolumeDeleteOnTermination = Codegen.booleanProp("nodeRootVolumeDeleteOnTermination").output().arg($.nodeRootVolumeDeleteOnTermination).def(true).getNullable();
+            $.nodeRootVolumeEncrypted = Codegen.booleanProp("nodeRootVolumeEncrypted").output().arg($.nodeRootVolumeEncrypted).def(false).getNullable();
+            $.nodeRootVolumeSize = Codegen.integerProp("nodeRootVolumeSize").output().arg($.nodeRootVolumeSize).def(20).getNullable();
+            $.nodeRootVolumeType = Codegen.stringProp("nodeRootVolumeType").output().arg($.nodeRootVolumeType).def("gp2").getNullable();
+            return $;
         }
     }
+
 }

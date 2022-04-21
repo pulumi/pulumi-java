@@ -5,10 +5,10 @@ package com.pulumi.googlenative.gkehub_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OnPremClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adminCluster")
-      private final @Nullable Output<Boolean> adminCluster;
+    private @Nullable Output<Boolean> adminCluster;
 
-    public Output<Boolean> adminCluster() {
-        return this.adminCluster == null ? Codegen.empty() : this.adminCluster;
+    public Optional<Output<Boolean>> adminCluster() {
+        return Optional.ofNullable(this.adminCluster);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class OnPremClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceLink")
-      private final @Nullable Output<String> resourceLink;
+    private @Nullable Output<String> resourceLink;
 
-    public Output<String> resourceLink() {
-        return this.resourceLink == null ? Codegen.empty() : this.resourceLink;
+    public Optional<Output<String>> resourceLink() {
+        return Optional.ofNullable(this.resourceLink);
     }
 
-    public OnPremClusterArgs(
-        @Nullable Output<Boolean> adminCluster,
-        @Nullable Output<String> resourceLink) {
-        this.adminCluster = adminCluster;
-        this.resourceLink = resourceLink;
-    }
+    private OnPremClusterArgs() {}
 
-    private OnPremClusterArgs() {
-        this.adminCluster = Codegen.empty();
-        this.resourceLink = Codegen.empty();
+    private OnPremClusterArgs(OnPremClusterArgs $) {
+        this.adminCluster = $.adminCluster;
+        this.resourceLink = $.resourceLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnPremClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> adminCluster;
-        private @Nullable Output<String> resourceLink;
+        private OnPremClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnPremClusterArgs();
         }
 
         public Builder(OnPremClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminCluster = defaults.adminCluster;
-    	      this.resourceLink = defaults.resourceLink;
+            $ = new OnPremClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminCluster(@Nullable Output<Boolean> adminCluster) {
-            this.adminCluster = adminCluster;
+            $.adminCluster = adminCluster;
             return this;
         }
-        public Builder adminCluster(@Nullable Boolean adminCluster) {
-            this.adminCluster = Codegen.ofNullable(adminCluster);
-            return this;
+
+        public Builder adminCluster(Boolean adminCluster) {
+            return adminCluster(Output.of(adminCluster));
         }
+
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
-            this.resourceLink = resourceLink;
+            $.resourceLink = resourceLink;
             return this;
         }
-        public Builder resourceLink(@Nullable String resourceLink) {
-            this.resourceLink = Codegen.ofNullable(resourceLink);
-            return this;
-        }        public OnPremClusterArgs build() {
-            return new OnPremClusterArgs(adminCluster, resourceLink);
+
+        public Builder resourceLink(String resourceLink) {
+            return resourceLink(Output.of(resourceLink));
+        }
+
+        public OnPremClusterArgs build() {
+            return $;
         }
     }
+
 }

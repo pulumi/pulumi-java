@@ -22,7 +22,7 @@ public final class PrivateClusterConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="enablePrivateEndpoint", required=true)
-      private final Boolean enablePrivateEndpoint;
+    private Boolean enablePrivateEndpoint;
 
     public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
@@ -33,7 +33,7 @@ public final class PrivateClusterConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="masterIpv4CidrBlock", required=true)
-      private final String masterIpv4CidrBlock;
+    private String masterIpv4CidrBlock;
 
     public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
@@ -44,64 +44,59 @@ public final class PrivateClusterConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="masterIpv4ReservedRange", required=true)
-      private final String masterIpv4ReservedRange;
+    private String masterIpv4ReservedRange;
 
     public String masterIpv4ReservedRange() {
         return this.masterIpv4ReservedRange;
     }
 
-    public PrivateClusterConfigResponse(
-        Boolean enablePrivateEndpoint,
-        String masterIpv4CidrBlock,
-        String masterIpv4ReservedRange) {
-        this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint, "expected parameter 'enablePrivateEndpoint' to be non-null");
-        this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock, "expected parameter 'masterIpv4CidrBlock' to be non-null");
-        this.masterIpv4ReservedRange = Objects.requireNonNull(masterIpv4ReservedRange, "expected parameter 'masterIpv4ReservedRange' to be non-null");
-    }
+    private PrivateClusterConfigResponse() {}
 
-    private PrivateClusterConfigResponse() {
-        this.enablePrivateEndpoint = null;
-        this.masterIpv4CidrBlock = null;
-        this.masterIpv4ReservedRange = null;
+    private PrivateClusterConfigResponse(PrivateClusterConfigResponse $) {
+        this.enablePrivateEndpoint = $.enablePrivateEndpoint;
+        this.masterIpv4CidrBlock = $.masterIpv4CidrBlock;
+        this.masterIpv4ReservedRange = $.masterIpv4ReservedRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateClusterConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enablePrivateEndpoint;
-        private String masterIpv4CidrBlock;
-        private String masterIpv4ReservedRange;
+        private PrivateClusterConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateClusterConfigResponse();
         }
 
         public Builder(PrivateClusterConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enablePrivateEndpoint = defaults.enablePrivateEndpoint;
-    	      this.masterIpv4CidrBlock = defaults.masterIpv4CidrBlock;
-    	      this.masterIpv4ReservedRange = defaults.masterIpv4ReservedRange;
+            $ = new PrivateClusterConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
-            this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
+            $.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
+
         public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
-            this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
+            $.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
+
         public Builder masterIpv4ReservedRange(String masterIpv4ReservedRange) {
-            this.masterIpv4ReservedRange = Objects.requireNonNull(masterIpv4ReservedRange);
+            $.masterIpv4ReservedRange = masterIpv4ReservedRange;
             return this;
-        }        public PrivateClusterConfigResponse build() {
-            return new PrivateClusterConfigResponse(enablePrivateEndpoint, masterIpv4CidrBlock, masterIpv4ReservedRange);
+        }
+
+        public PrivateClusterConfigResponse build() {
+            $.enablePrivateEndpoint = Objects.requireNonNull($.enablePrivateEndpoint, "expected parameter 'enablePrivateEndpoint' to be non-null");
+            $.masterIpv4CidrBlock = Objects.requireNonNull($.masterIpv4CidrBlock, "expected parameter 'masterIpv4CidrBlock' to be non-null");
+            $.masterIpv4ReservedRange = Objects.requireNonNull($.masterIpv4ReservedRange, "expected parameter 'masterIpv4ReservedRange' to be non-null");
+            return $;
         }
     }
+
 }

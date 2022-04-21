@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+    private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Output<Either<String,BackupManagementType>> backupManagementType() {
-        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
+    public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -44,7 +45,7 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="containerType", required=true)
-      private final Output<String> containerType;
+    private Output<String> containerType;
 
     public Output<String> containerType() {
         return this.containerType;
@@ -55,10 +56,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="extendedInfo")
-      private final @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
+    private @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
 
-    public Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo() {
-        return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
+    public Optional<Output<AzureWorkloadContainerExtendedInfoArgs>> extendedInfo() {
+        return Optional.ofNullable(this.extendedInfo);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable Output<String> healthStatus;
+    private @Nullable Output<String> healthStatus;
 
-    public Output<String> healthStatus() {
-        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
+    public Optional<Output<String>> healthStatus() {
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable Output<String> lastUpdatedTime;
+    private @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
+    public Optional<Output<String>> lastUpdatedTime() {
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     /**
@@ -99,10 +100,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="operationType")
-      private final @Nullable Output<Either<String,OperationType>> operationType;
+    private @Nullable Output<Either<String,OperationType>> operationType;
 
-    public Output<Either<String,OperationType>> operationType() {
-        return this.operationType == null ? Codegen.empty() : this.operationType;
+    public Optional<Output<Either<String,OperationType>>> operationType() {
+        return Optional.ofNullable(this.operationType);
     }
 
     /**
@@ -110,10 +111,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable Output<String> registrationStatus;
+    private @Nullable Output<String> registrationStatus;
 
-    public Output<String> registrationStatus() {
-        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
+    public Optional<Output<String>> registrationStatus() {
+        return Optional.ofNullable(this.registrationStatus);
     }
 
     /**
@@ -121,10 +122,10 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable Output<String> sourceResourceId;
+    private @Nullable Output<String> sourceResourceId;
 
-    public Output<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
+    public Optional<Output<String>> sourceResourceId() {
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
     /**
@@ -132,167 +133,139 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerArgs extends co
      * 
      */
     @Import(name="workloadType")
-      private final @Nullable Output<Either<String,WorkloadType>> workloadType;
+    private @Nullable Output<Either<String,WorkloadType>> workloadType;
 
-    public Output<Either<String,WorkloadType>> workloadType() {
-        return this.workloadType == null ? Codegen.empty() : this.workloadType;
+    public Optional<Output<Either<String,WorkloadType>>> workloadType() {
+        return Optional.ofNullable(this.workloadType);
     }
 
-    public AzureSQLAGWorkloadContainerProtectionContainerArgs(
-        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
-        Output<String> containerType,
-        @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> healthStatus,
-        @Nullable Output<String> lastUpdatedTime,
-        @Nullable Output<Either<String,OperationType>> operationType,
-        @Nullable Output<String> registrationStatus,
-        @Nullable Output<String> sourceResourceId,
-        @Nullable Output<Either<String,WorkloadType>> workloadType) {
-        this.backupManagementType = backupManagementType;
-        this.containerType = Codegen.stringProp("containerType").output().arg(containerType).require();
-        this.extendedInfo = extendedInfo;
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.operationType = operationType;
-        this.registrationStatus = registrationStatus;
-        this.sourceResourceId = sourceResourceId;
-        this.workloadType = workloadType;
-    }
+    private AzureSQLAGWorkloadContainerProtectionContainerArgs() {}
 
-    private AzureSQLAGWorkloadContainerProtectionContainerArgs() {
-        this.backupManagementType = Codegen.empty();
-        this.containerType = Codegen.empty();
-        this.extendedInfo = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.healthStatus = Codegen.empty();
-        this.lastUpdatedTime = Codegen.empty();
-        this.operationType = Codegen.empty();
-        this.registrationStatus = Codegen.empty();
-        this.sourceResourceId = Codegen.empty();
-        this.workloadType = Codegen.empty();
+    private AzureSQLAGWorkloadContainerProtectionContainerArgs(AzureSQLAGWorkloadContainerProtectionContainerArgs $) {
+        this.backupManagementType = $.backupManagementType;
+        this.containerType = $.containerType;
+        this.extendedInfo = $.extendedInfo;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.operationType = $.operationType;
+        this.registrationStatus = $.registrationStatus;
+        this.sourceResourceId = $.sourceResourceId;
+        this.workloadType = $.workloadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSQLAGWorkloadContainerProtectionContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
-        private Output<String> containerType;
-        private @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> healthStatus;
-        private @Nullable Output<String> lastUpdatedTime;
-        private @Nullable Output<Either<String,OperationType>> operationType;
-        private @Nullable Output<String> registrationStatus;
-        private @Nullable Output<String> sourceResourceId;
-        private @Nullable Output<Either<String,WorkloadType>> workloadType;
+        private AzureSQLAGWorkloadContainerProtectionContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSQLAGWorkloadContainerProtectionContainerArgs();
         }
 
         public Builder(AzureSQLAGWorkloadContainerProtectionContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.containerType = defaults.containerType;
-    	      this.extendedInfo = defaults.extendedInfo;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.operationType = defaults.operationType;
-    	      this.registrationStatus = defaults.registrationStatus;
-    	      this.sourceResourceId = defaults.sourceResourceId;
-    	      this.workloadType = defaults.workloadType;
+            $ = new AzureSQLAGWorkloadContainerProtectionContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
-        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Codegen.ofNullable(backupManagementType);
-            return this;
+
+        public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
+            return backupManagementType(Output.of(backupManagementType));
         }
+
         public Builder containerType(Output<String> containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Output.of(Objects.requireNonNull(containerType));
-            return this;
+            return containerType(Output.of(containerType));
         }
+
         public Builder extendedInfo(@Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo) {
-            this.extendedInfo = extendedInfo;
+            $.extendedInfo = extendedInfo;
             return this;
         }
-        public Builder extendedInfo(@Nullable AzureWorkloadContainerExtendedInfoArgs extendedInfo) {
-            this.extendedInfo = Codegen.ofNullable(extendedInfo);
-            return this;
+
+        public Builder extendedInfo(AzureWorkloadContainerExtendedInfoArgs extendedInfo) {
+            return extendedInfo(Output.of(extendedInfo));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
-        public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Codegen.ofNullable(healthStatus);
-            return this;
+
+        public Builder healthStatus(String healthStatus) {
+            return healthStatus(Output.of(healthStatus));
         }
+
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
-            return this;
+
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
+            return lastUpdatedTime(Output.of(lastUpdatedTime));
         }
+
         public Builder operationType(@Nullable Output<Either<String,OperationType>> operationType) {
-            this.operationType = operationType;
+            $.operationType = operationType;
             return this;
         }
-        public Builder operationType(@Nullable Either<String,OperationType> operationType) {
-            this.operationType = Codegen.ofNullable(operationType);
-            return this;
+
+        public Builder operationType(Either<String,OperationType> operationType) {
+            return operationType(Output.of(operationType));
         }
+
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
         }
-        public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Codegen.ofNullable(registrationStatus);
-            return this;
+
+        public Builder registrationStatus(String registrationStatus) {
+            return registrationStatus(Output.of(registrationStatus));
         }
+
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
-        public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
-            return this;
+
+        public Builder sourceResourceId(String sourceResourceId) {
+            return sourceResourceId(Output.of(sourceResourceId));
         }
+
         public Builder workloadType(@Nullable Output<Either<String,WorkloadType>> workloadType) {
-            this.workloadType = workloadType;
+            $.workloadType = workloadType;
             return this;
         }
-        public Builder workloadType(@Nullable Either<String,WorkloadType> workloadType) {
-            this.workloadType = Codegen.ofNullable(workloadType);
-            return this;
-        }        public AzureSQLAGWorkloadContainerProtectionContainerArgs build() {
-            return new AzureSQLAGWorkloadContainerProtectionContainerArgs(backupManagementType, containerType, extendedInfo, friendlyName, healthStatus, lastUpdatedTime, operationType, registrationStatus, sourceResourceId, workloadType);
+
+        public Builder workloadType(Either<String,WorkloadType> workloadType) {
+            return workloadType(Output.of(workloadType));
+        }
+
+        public AzureSQLAGWorkloadContainerProtectionContainerArgs build() {
+            $.containerType = Codegen.stringProp("containerType").output().arg($.containerType).require();
+            return $;
         }
     }
+
 }

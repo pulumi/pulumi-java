@@ -22,7 +22,7 @@ public final class BasisResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fingerprint", required=true)
-      private final FingerprintResponse fingerprint;
+    private FingerprintResponse fingerprint;
 
     public FingerprintResponse fingerprint() {
         return this.fingerprint;
@@ -33,55 +33,52 @@ public final class BasisResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUrl", required=true)
-      private final String resourceUrl;
+    private String resourceUrl;
 
     public String resourceUrl() {
         return this.resourceUrl;
     }
 
-    public BasisResponse(
-        FingerprintResponse fingerprint,
-        String resourceUrl) {
-        this.fingerprint = Objects.requireNonNull(fingerprint, "expected parameter 'fingerprint' to be non-null");
-        this.resourceUrl = Objects.requireNonNull(resourceUrl, "expected parameter 'resourceUrl' to be non-null");
-    }
+    private BasisResponse() {}
 
-    private BasisResponse() {
-        this.fingerprint = null;
-        this.resourceUrl = null;
+    private BasisResponse(BasisResponse $) {
+        this.fingerprint = $.fingerprint;
+        this.resourceUrl = $.resourceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasisResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FingerprintResponse fingerprint;
-        private String resourceUrl;
+        private BasisResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasisResponse();
         }
 
         public Builder(BasisResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.resourceUrl = defaults.resourceUrl;
+            $ = new BasisResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fingerprint(FingerprintResponse fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint);
+            $.fingerprint = fingerprint;
             return this;
         }
+
         public Builder resourceUrl(String resourceUrl) {
-            this.resourceUrl = Objects.requireNonNull(resourceUrl);
+            $.resourceUrl = resourceUrl;
             return this;
-        }        public BasisResponse build() {
-            return new BasisResponse(fingerprint, resourceUrl);
+        }
+
+        public BasisResponse build() {
+            $.fingerprint = Objects.requireNonNull($.fingerprint, "expected parameter 'fingerprint' to be non-null");
+            $.resourceUrl = Objects.requireNonNull($.resourceUrl, "expected parameter 'resourceUrl' to be non-null");
+            return $;
         }
     }
+
 }

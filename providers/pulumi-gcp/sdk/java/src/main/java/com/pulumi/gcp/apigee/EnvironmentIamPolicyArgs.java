@@ -5,7 +5,6 @@ package com.pulumi.gcp.apigee;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,14 +18,14 @@ public final class EnvironmentIamPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="envId", required=true)
-      private final Output<String> envId;
+    private Output<String> envId;
 
     public Output<String> envId() {
         return this.envId;
     }
 
     @Import(name="orgId", required=true)
-      private final Output<String> orgId;
+    private Output<String> orgId;
 
     public Output<String> orgId() {
         return this.orgId;
@@ -38,76 +37,71 @@ public final class EnvironmentIamPolicyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public EnvironmentIamPolicyArgs(
-        Output<String> envId,
-        Output<String> orgId,
-        Output<String> policyData) {
-        this.envId = Objects.requireNonNull(envId, "expected parameter 'envId' to be non-null");
-        this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private EnvironmentIamPolicyArgs() {}
 
-    private EnvironmentIamPolicyArgs() {
-        this.envId = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private EnvironmentIamPolicyArgs(EnvironmentIamPolicyArgs $) {
+        this.envId = $.envId;
+        this.orgId = $.orgId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> envId;
-        private Output<String> orgId;
-        private Output<String> policyData;
+        private EnvironmentIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentIamPolicyArgs();
         }
 
         public Builder(EnvironmentIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.envId = defaults.envId;
-    	      this.orgId = defaults.orgId;
-    	      this.policyData = defaults.policyData;
+            $ = new EnvironmentIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder envId(Output<String> envId) {
-            this.envId = Objects.requireNonNull(envId);
+            $.envId = envId;
             return this;
         }
+
         public Builder envId(String envId) {
-            this.envId = Output.of(Objects.requireNonNull(envId));
-            return this;
+            return envId(Output.of(envId));
         }
+
         public Builder orgId(Output<String> orgId) {
-            this.orgId = Objects.requireNonNull(orgId);
+            $.orgId = orgId;
             return this;
         }
+
         public Builder orgId(String orgId) {
-            this.orgId = Output.of(Objects.requireNonNull(orgId));
-            return this;
+            return orgId(Output.of(orgId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public EnvironmentIamPolicyArgs build() {
-            return new EnvironmentIamPolicyArgs(envId, orgId, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public EnvironmentIamPolicyArgs build() {
+            $.envId = Objects.requireNonNull($.envId, "expected parameter 'envId' to be non-null");
+            $.orgId = Objects.requireNonNull($.orgId, "expected parameter 'orgId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

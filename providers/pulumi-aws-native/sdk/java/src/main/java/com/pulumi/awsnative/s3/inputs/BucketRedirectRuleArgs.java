@@ -6,9 +6,9 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketRedirectRuleProtocol;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="hostName")
-      private final @Nullable Output<String> hostName;
+    private @Nullable Output<String> hostName;
 
-    public Output<String> hostName() {
-        return this.hostName == null ? Codegen.empty() : this.hostName;
+    public Optional<Output<String>> hostName() {
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="httpRedirectCode")
-      private final @Nullable Output<String> httpRedirectCode;
+    private @Nullable Output<String> httpRedirectCode;
 
-    public Output<String> httpRedirectCode() {
-        return this.httpRedirectCode == null ? Codegen.empty() : this.httpRedirectCode;
+    public Optional<Output<String>> httpRedirectCode() {
+        return Optional.ofNullable(this.httpRedirectCode);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<BucketRedirectRuleProtocol> protocol;
+    private @Nullable Output<BucketRedirectRuleProtocol> protocol;
 
-    public Output<BucketRedirectRuleProtocol> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<BucketRedirectRuleProtocol>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="replaceKeyPrefixWith")
-      private final @Nullable Output<String> replaceKeyPrefixWith;
+    private @Nullable Output<String> replaceKeyPrefixWith;
 
-    public Output<String> replaceKeyPrefixWith() {
-        return this.replaceKeyPrefixWith == null ? Codegen.empty() : this.replaceKeyPrefixWith;
+    public Optional<Output<String>> replaceKeyPrefixWith() {
+        return Optional.ofNullable(this.replaceKeyPrefixWith);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class BucketRedirectRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="replaceKeyWith")
-      private final @Nullable Output<String> replaceKeyWith;
+    private @Nullable Output<String> replaceKeyWith;
 
-    public Output<String> replaceKeyWith() {
-        return this.replaceKeyWith == null ? Codegen.empty() : this.replaceKeyWith;
+    public Optional<Output<String>> replaceKeyWith() {
+        return Optional.ofNullable(this.replaceKeyWith);
     }
 
-    public BucketRedirectRuleArgs(
-        @Nullable Output<String> hostName,
-        @Nullable Output<String> httpRedirectCode,
-        @Nullable Output<BucketRedirectRuleProtocol> protocol,
-        @Nullable Output<String> replaceKeyPrefixWith,
-        @Nullable Output<String> replaceKeyWith) {
-        this.hostName = hostName;
-        this.httpRedirectCode = httpRedirectCode;
-        this.protocol = protocol;
-        this.replaceKeyPrefixWith = replaceKeyPrefixWith;
-        this.replaceKeyWith = replaceKeyWith;
-    }
+    private BucketRedirectRuleArgs() {}
 
-    private BucketRedirectRuleArgs() {
-        this.hostName = Codegen.empty();
-        this.httpRedirectCode = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.replaceKeyPrefixWith = Codegen.empty();
-        this.replaceKeyWith = Codegen.empty();
+    private BucketRedirectRuleArgs(BucketRedirectRuleArgs $) {
+        this.hostName = $.hostName;
+        this.httpRedirectCode = $.httpRedirectCode;
+        this.protocol = $.protocol;
+        this.replaceKeyPrefixWith = $.replaceKeyPrefixWith;
+        this.replaceKeyWith = $.replaceKeyWith;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRedirectRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostName;
-        private @Nullable Output<String> httpRedirectCode;
-        private @Nullable Output<BucketRedirectRuleProtocol> protocol;
-        private @Nullable Output<String> replaceKeyPrefixWith;
-        private @Nullable Output<String> replaceKeyWith;
+        private BucketRedirectRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRedirectRuleArgs();
         }
 
         public Builder(BucketRedirectRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostName = defaults.hostName;
-    	      this.httpRedirectCode = defaults.httpRedirectCode;
-    	      this.protocol = defaults.protocol;
-    	      this.replaceKeyPrefixWith = defaults.replaceKeyPrefixWith;
-    	      this.replaceKeyWith = defaults.replaceKeyWith;
+            $ = new BucketRedirectRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostName(@Nullable Output<String> hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
-        public Builder hostName(@Nullable String hostName) {
-            this.hostName = Codegen.ofNullable(hostName);
-            return this;
+
+        public Builder hostName(String hostName) {
+            return hostName(Output.of(hostName));
         }
+
         public Builder httpRedirectCode(@Nullable Output<String> httpRedirectCode) {
-            this.httpRedirectCode = httpRedirectCode;
+            $.httpRedirectCode = httpRedirectCode;
             return this;
         }
-        public Builder httpRedirectCode(@Nullable String httpRedirectCode) {
-            this.httpRedirectCode = Codegen.ofNullable(httpRedirectCode);
-            return this;
+
+        public Builder httpRedirectCode(String httpRedirectCode) {
+            return httpRedirectCode(Output.of(httpRedirectCode));
         }
+
         public Builder protocol(@Nullable Output<BucketRedirectRuleProtocol> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable BucketRedirectRuleProtocol protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(BucketRedirectRuleProtocol protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder replaceKeyPrefixWith(@Nullable Output<String> replaceKeyPrefixWith) {
-            this.replaceKeyPrefixWith = replaceKeyPrefixWith;
+            $.replaceKeyPrefixWith = replaceKeyPrefixWith;
             return this;
         }
-        public Builder replaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
-            this.replaceKeyPrefixWith = Codegen.ofNullable(replaceKeyPrefixWith);
-            return this;
+
+        public Builder replaceKeyPrefixWith(String replaceKeyPrefixWith) {
+            return replaceKeyPrefixWith(Output.of(replaceKeyPrefixWith));
         }
+
         public Builder replaceKeyWith(@Nullable Output<String> replaceKeyWith) {
-            this.replaceKeyWith = replaceKeyWith;
+            $.replaceKeyWith = replaceKeyWith;
             return this;
         }
-        public Builder replaceKeyWith(@Nullable String replaceKeyWith) {
-            this.replaceKeyWith = Codegen.ofNullable(replaceKeyWith);
-            return this;
-        }        public BucketRedirectRuleArgs build() {
-            return new BucketRedirectRuleArgs(hostName, httpRedirectCode, protocol, replaceKeyPrefixWith, replaceKeyWith);
+
+        public Builder replaceKeyWith(String replaceKeyWith) {
+            return replaceKeyWith(Output.of(replaceKeyWith));
+        }
+
+        public BucketRedirectRuleArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.RangePartitioningRangeArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RangePartitioningArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<String> field;
+    private @Nullable Output<String> field;
 
-    public Output<String> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<String>> field() {
+        return Optional.ofNullable(this.field);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class RangePartitioningArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="range")
-      private final @Nullable Output<RangePartitioningRangeArgs> range;
+    private @Nullable Output<RangePartitioningRangeArgs> range;
 
-    public Output<RangePartitioningRangeArgs> range() {
-        return this.range == null ? Codegen.empty() : this.range;
+    public Optional<Output<RangePartitioningRangeArgs>> range() {
+        return Optional.ofNullable(this.range);
     }
 
-    public RangePartitioningArgs(
-        @Nullable Output<String> field,
-        @Nullable Output<RangePartitioningRangeArgs> range) {
-        this.field = field;
-        this.range = range;
-    }
+    private RangePartitioningArgs() {}
 
-    private RangePartitioningArgs() {
-        this.field = Codegen.empty();
-        this.range = Codegen.empty();
+    private RangePartitioningArgs(RangePartitioningArgs $) {
+        this.field = $.field;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RangePartitioningArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> field;
-        private @Nullable Output<RangePartitioningRangeArgs> range;
+        private RangePartitioningArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RangePartitioningArgs();
         }
 
         public Builder(RangePartitioningArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.range = defaults.range;
+            $ = new RangePartitioningArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable Output<String> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable String field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
+
+        public Builder field(String field) {
+            return field(Output.of(field));
         }
+
         public Builder range(@Nullable Output<RangePartitioningRangeArgs> range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
-        public Builder range(@Nullable RangePartitioningRangeArgs range) {
-            this.range = Codegen.ofNullable(range);
-            return this;
-        }        public RangePartitioningArgs build() {
-            return new RangePartitioningArgs(field, range);
+
+        public Builder range(RangePartitioningRangeArgs range) {
+            return range(Output.of(range));
+        }
+
+        public RangePartitioningArgs build() {
+            return $;
         }
     }
+
 }

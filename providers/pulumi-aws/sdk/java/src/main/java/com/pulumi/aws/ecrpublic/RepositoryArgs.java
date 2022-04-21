@@ -6,10 +6,10 @@ package com.pulumi.aws.ecrpublic;
 import com.pulumi.aws.ecrpublic.inputs.RepositoryCatalogDataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +22,17 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="catalogData")
-      private final @Nullable Output<RepositoryCatalogDataArgs> catalogData;
+    private @Nullable Output<RepositoryCatalogDataArgs> catalogData;
 
-    public Output<RepositoryCatalogDataArgs> catalogData() {
-        return this.catalogData == null ? Codegen.empty() : this.catalogData;
+    public Optional<Output<RepositoryCatalogDataArgs>> catalogData() {
+        return Optional.ofNullable(this.catalogData);
     }
 
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -40,76 +40,69 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repositoryName", required=true)
-      private final Output<String> repositoryName;
+    private Output<String> repositoryName;
 
     public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
-    public RepositoryArgs(
-        @Nullable Output<RepositoryCatalogDataArgs> catalogData,
-        @Nullable Output<Boolean> forceDestroy,
-        Output<String> repositoryName) {
-        this.catalogData = catalogData;
-        this.forceDestroy = forceDestroy;
-        this.repositoryName = Objects.requireNonNull(repositoryName, "expected parameter 'repositoryName' to be non-null");
-    }
+    private RepositoryArgs() {}
 
-    private RepositoryArgs() {
-        this.catalogData = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.repositoryName = Codegen.empty();
+    private RepositoryArgs(RepositoryArgs $) {
+        this.catalogData = $.catalogData;
+        this.forceDestroy = $.forceDestroy;
+        this.repositoryName = $.repositoryName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RepositoryCatalogDataArgs> catalogData;
-        private @Nullable Output<Boolean> forceDestroy;
-        private Output<String> repositoryName;
+        private RepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryArgs();
         }
 
         public Builder(RepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogData = defaults.catalogData;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.repositoryName = defaults.repositoryName;
+            $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogData(@Nullable Output<RepositoryCatalogDataArgs> catalogData) {
-            this.catalogData = catalogData;
+            $.catalogData = catalogData;
             return this;
         }
-        public Builder catalogData(@Nullable RepositoryCatalogDataArgs catalogData) {
-            this.catalogData = Codegen.ofNullable(catalogData);
-            return this;
+
+        public Builder catalogData(RepositoryCatalogDataArgs catalogData) {
+            return catalogData(Output.of(catalogData));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder repositoryName(Output<String> repositoryName) {
-            this.repositoryName = Objects.requireNonNull(repositoryName);
+            $.repositoryName = repositoryName;
             return this;
         }
+
         public Builder repositoryName(String repositoryName) {
-            this.repositoryName = Output.of(Objects.requireNonNull(repositoryName));
-            return this;
-        }        public RepositoryArgs build() {
-            return new RepositoryArgs(catalogData, forceDestroy, repositoryName);
+            return repositoryName(Output.of(repositoryName));
+        }
+
+        public RepositoryArgs build() {
+            $.repositoryName = Objects.requireNonNull($.repositoryName, "expected parameter 'repositoryName' to be non-null");
+            return $;
         }
     }
+
 }

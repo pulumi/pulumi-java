@@ -15,126 +15,115 @@ public final class GetEnvironmentConfigSoftwareConfig extends com.pulumi.resourc
     public static final GetEnvironmentConfigSoftwareConfig Empty = new GetEnvironmentConfigSoftwareConfig();
 
     @Import(name="airflowConfigOverrides", required=true)
-      private final Map<String,String> airflowConfigOverrides;
+    private Map<String,String> airflowConfigOverrides;
 
     public Map<String,String> airflowConfigOverrides() {
         return this.airflowConfigOverrides;
     }
 
     @Import(name="envVariables", required=true)
-      private final Map<String,String> envVariables;
+    private Map<String,String> envVariables;
 
     public Map<String,String> envVariables() {
         return this.envVariables;
     }
 
     @Import(name="imageVersion", required=true)
-      private final String imageVersion;
+    private String imageVersion;
 
     public String imageVersion() {
         return this.imageVersion;
     }
 
     @Import(name="pypiPackages", required=true)
-      private final Map<String,String> pypiPackages;
+    private Map<String,String> pypiPackages;
 
     public Map<String,String> pypiPackages() {
         return this.pypiPackages;
     }
 
     @Import(name="pythonVersion", required=true)
-      private final String pythonVersion;
+    private String pythonVersion;
 
     public String pythonVersion() {
         return this.pythonVersion;
     }
 
     @Import(name="schedulerCount", required=true)
-      private final Integer schedulerCount;
+    private Integer schedulerCount;
 
     public Integer schedulerCount() {
         return this.schedulerCount;
     }
 
-    public GetEnvironmentConfigSoftwareConfig(
-        Map<String,String> airflowConfigOverrides,
-        Map<String,String> envVariables,
-        String imageVersion,
-        Map<String,String> pypiPackages,
-        String pythonVersion,
-        Integer schedulerCount) {
-        this.airflowConfigOverrides = Objects.requireNonNull(airflowConfigOverrides, "expected parameter 'airflowConfigOverrides' to be non-null");
-        this.envVariables = Objects.requireNonNull(envVariables, "expected parameter 'envVariables' to be non-null");
-        this.imageVersion = Objects.requireNonNull(imageVersion, "expected parameter 'imageVersion' to be non-null");
-        this.pypiPackages = Objects.requireNonNull(pypiPackages, "expected parameter 'pypiPackages' to be non-null");
-        this.pythonVersion = Objects.requireNonNull(pythonVersion, "expected parameter 'pythonVersion' to be non-null");
-        this.schedulerCount = Objects.requireNonNull(schedulerCount, "expected parameter 'schedulerCount' to be non-null");
-    }
+    private GetEnvironmentConfigSoftwareConfig() {}
 
-    private GetEnvironmentConfigSoftwareConfig() {
-        this.airflowConfigOverrides = Map.of();
-        this.envVariables = Map.of();
-        this.imageVersion = null;
-        this.pypiPackages = Map.of();
-        this.pythonVersion = null;
-        this.schedulerCount = null;
+    private GetEnvironmentConfigSoftwareConfig(GetEnvironmentConfigSoftwareConfig $) {
+        this.airflowConfigOverrides = $.airflowConfigOverrides;
+        this.envVariables = $.envVariables;
+        this.imageVersion = $.imageVersion;
+        this.pypiPackages = $.pypiPackages;
+        this.pythonVersion = $.pythonVersion;
+        this.schedulerCount = $.schedulerCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigSoftwareConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> airflowConfigOverrides;
-        private Map<String,String> envVariables;
-        private String imageVersion;
-        private Map<String,String> pypiPackages;
-        private String pythonVersion;
-        private Integer schedulerCount;
+        private GetEnvironmentConfigSoftwareConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigSoftwareConfig();
         }
 
         public Builder(GetEnvironmentConfigSoftwareConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.airflowConfigOverrides = defaults.airflowConfigOverrides;
-    	      this.envVariables = defaults.envVariables;
-    	      this.imageVersion = defaults.imageVersion;
-    	      this.pypiPackages = defaults.pypiPackages;
-    	      this.pythonVersion = defaults.pythonVersion;
-    	      this.schedulerCount = defaults.schedulerCount;
+            $ = new GetEnvironmentConfigSoftwareConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder airflowConfigOverrides(Map<String,String> airflowConfigOverrides) {
-            this.airflowConfigOverrides = Objects.requireNonNull(airflowConfigOverrides);
+            $.airflowConfigOverrides = airflowConfigOverrides;
             return this;
         }
+
         public Builder envVariables(Map<String,String> envVariables) {
-            this.envVariables = Objects.requireNonNull(envVariables);
+            $.envVariables = envVariables;
             return this;
         }
+
         public Builder imageVersion(String imageVersion) {
-            this.imageVersion = Objects.requireNonNull(imageVersion);
+            $.imageVersion = imageVersion;
             return this;
         }
+
         public Builder pypiPackages(Map<String,String> pypiPackages) {
-            this.pypiPackages = Objects.requireNonNull(pypiPackages);
+            $.pypiPackages = pypiPackages;
             return this;
         }
+
         public Builder pythonVersion(String pythonVersion) {
-            this.pythonVersion = Objects.requireNonNull(pythonVersion);
+            $.pythonVersion = pythonVersion;
             return this;
         }
+
         public Builder schedulerCount(Integer schedulerCount) {
-            this.schedulerCount = Objects.requireNonNull(schedulerCount);
+            $.schedulerCount = schedulerCount;
             return this;
-        }        public GetEnvironmentConfigSoftwareConfig build() {
-            return new GetEnvironmentConfigSoftwareConfig(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
+        }
+
+        public GetEnvironmentConfigSoftwareConfig build() {
+            $.airflowConfigOverrides = Objects.requireNonNull($.airflowConfigOverrides, "expected parameter 'airflowConfigOverrides' to be non-null");
+            $.envVariables = Objects.requireNonNull($.envVariables, "expected parameter 'envVariables' to be non-null");
+            $.imageVersion = Objects.requireNonNull($.imageVersion, "expected parameter 'imageVersion' to be non-null");
+            $.pypiPackages = Objects.requireNonNull($.pypiPackages, "expected parameter 'pypiPackages' to be non-null");
+            $.pythonVersion = Objects.requireNonNull($.pythonVersion, "expected parameter 'pythonVersion' to be non-null");
+            $.schedulerCount = Objects.requireNonNull($.schedulerCount, "expected parameter 'schedulerCount' to be non-null");
+            return $;
         }
     }
+
 }

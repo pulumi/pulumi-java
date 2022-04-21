@@ -21,7 +21,7 @@ public final class AssignmentReportResourceComplianceReasonResponse extends com.
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,55 +32,52 @@ public final class AssignmentReportResourceComplianceReasonResponse extends com.
      * 
      */
     @Import(name="phrase", required=true)
-      private final String phrase;
+    private String phrase;
 
     public String phrase() {
         return this.phrase;
     }
 
-    public AssignmentReportResourceComplianceReasonResponse(
-        String code,
-        String phrase) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.phrase = Objects.requireNonNull(phrase, "expected parameter 'phrase' to be non-null");
-    }
+    private AssignmentReportResourceComplianceReasonResponse() {}
 
-    private AssignmentReportResourceComplianceReasonResponse() {
-        this.code = null;
-        this.phrase = null;
+    private AssignmentReportResourceComplianceReasonResponse(AssignmentReportResourceComplianceReasonResponse $) {
+        this.code = $.code;
+        this.phrase = $.phrase;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentReportResourceComplianceReasonResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String phrase;
+        private AssignmentReportResourceComplianceReasonResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentReportResourceComplianceReasonResponse();
         }
 
         public Builder(AssignmentReportResourceComplianceReasonResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.phrase = defaults.phrase;
+            $ = new AssignmentReportResourceComplianceReasonResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder phrase(String phrase) {
-            this.phrase = Objects.requireNonNull(phrase);
+            $.phrase = phrase;
             return this;
-        }        public AssignmentReportResourceComplianceReasonResponse build() {
-            return new AssignmentReportResourceComplianceReasonResponse(code, phrase);
+        }
+
+        public AssignmentReportResourceComplianceReasonResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.phrase = Objects.requireNonNull($.phrase, "expected parameter 'phrase' to be non-null");
+            return $;
         }
     }
+
 }

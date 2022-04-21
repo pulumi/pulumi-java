@@ -23,45 +23,44 @@ public final class ApplicationHAClusterPrometheusExporter extends com.pulumi.res
      * 
      */
     @Import(name="prometheusPort")
-      private final @Nullable String prometheusPort;
+    private @Nullable String prometheusPort;
 
     public Optional<String> prometheusPort() {
-        return this.prometheusPort == null ? Optional.empty() : Optional.ofNullable(this.prometheusPort);
+        return Optional.ofNullable(this.prometheusPort);
     }
 
-    public ApplicationHAClusterPrometheusExporter(@Nullable String prometheusPort) {
-        this.prometheusPort = prometheusPort;
-    }
+    private ApplicationHAClusterPrometheusExporter() {}
 
-    private ApplicationHAClusterPrometheusExporter() {
-        this.prometheusPort = null;
+    private ApplicationHAClusterPrometheusExporter(ApplicationHAClusterPrometheusExporter $) {
+        this.prometheusPort = $.prometheusPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationHAClusterPrometheusExporter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String prometheusPort;
+        private ApplicationHAClusterPrometheusExporter $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationHAClusterPrometheusExporter();
         }
 
         public Builder(ApplicationHAClusterPrometheusExporter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.prometheusPort = defaults.prometheusPort;
+            $ = new ApplicationHAClusterPrometheusExporter(Objects.requireNonNull(defaults));
         }
 
         public Builder prometheusPort(@Nullable String prometheusPort) {
-            this.prometheusPort = prometheusPort;
+            $.prometheusPort = prometheusPort;
             return this;
-        }        public ApplicationHAClusterPrometheusExporter build() {
-            return new ApplicationHAClusterPrometheusExporter(prometheusPort);
+        }
+
+        public ApplicationHAClusterPrometheusExporter build() {
+            return $;
         }
     }
+
 }

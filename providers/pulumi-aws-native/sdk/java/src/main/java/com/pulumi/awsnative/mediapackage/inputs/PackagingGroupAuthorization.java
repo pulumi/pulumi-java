@@ -17,7 +17,7 @@ public final class PackagingGroupAuthorization extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cdnIdentifierSecret", required=true)
-      private final String cdnIdentifierSecret;
+    private String cdnIdentifierSecret;
 
     public String cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
@@ -28,55 +28,52 @@ public final class PackagingGroupAuthorization extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="secretsRoleArn", required=true)
-      private final String secretsRoleArn;
+    private String secretsRoleArn;
 
     public String secretsRoleArn() {
         return this.secretsRoleArn;
     }
 
-    public PackagingGroupAuthorization(
-        String cdnIdentifierSecret,
-        String secretsRoleArn) {
-        this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret, "expected parameter 'cdnIdentifierSecret' to be non-null");
-        this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn, "expected parameter 'secretsRoleArn' to be non-null");
-    }
+    private PackagingGroupAuthorization() {}
 
-    private PackagingGroupAuthorization() {
-        this.cdnIdentifierSecret = null;
-        this.secretsRoleArn = null;
+    private PackagingGroupAuthorization(PackagingGroupAuthorization $) {
+        this.cdnIdentifierSecret = $.cdnIdentifierSecret;
+        this.secretsRoleArn = $.secretsRoleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingGroupAuthorization defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cdnIdentifierSecret;
-        private String secretsRoleArn;
+        private PackagingGroupAuthorization $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingGroupAuthorization();
         }
 
         public Builder(PackagingGroupAuthorization defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cdnIdentifierSecret = defaults.cdnIdentifierSecret;
-    	      this.secretsRoleArn = defaults.secretsRoleArn;
+            $ = new PackagingGroupAuthorization(Objects.requireNonNull(defaults));
         }
 
         public Builder cdnIdentifierSecret(String cdnIdentifierSecret) {
-            this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret);
+            $.cdnIdentifierSecret = cdnIdentifierSecret;
             return this;
         }
+
         public Builder secretsRoleArn(String secretsRoleArn) {
-            this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
+            $.secretsRoleArn = secretsRoleArn;
             return this;
-        }        public PackagingGroupAuthorization build() {
-            return new PackagingGroupAuthorization(cdnIdentifierSecret, secretsRoleArn);
+        }
+
+        public PackagingGroupAuthorization build() {
+            $.cdnIdentifierSecret = Objects.requireNonNull($.cdnIdentifierSecret, "expected parameter 'cdnIdentifierSecret' to be non-null");
+            $.secretsRoleArn = Objects.requireNonNull($.secretsRoleArn, "expected parameter 'secretsRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

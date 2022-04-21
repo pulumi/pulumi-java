@@ -7,7 +7,6 @@ import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteActionArgs;
 import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteMatchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +19,7 @@ public final class GatewayRouteSpecGrpcRouteArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="action", required=true)
-      private final Output<GatewayRouteSpecGrpcRouteActionArgs> action;
+    private Output<GatewayRouteSpecGrpcRouteActionArgs> action;
 
     public Output<GatewayRouteSpecGrpcRouteActionArgs> action() {
         return this.action;
@@ -31,63 +30,60 @@ public final class GatewayRouteSpecGrpcRouteArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="match", required=true)
-      private final Output<GatewayRouteSpecGrpcRouteMatchArgs> match;
+    private Output<GatewayRouteSpecGrpcRouteMatchArgs> match;
 
     public Output<GatewayRouteSpecGrpcRouteMatchArgs> match() {
         return this.match;
     }
 
-    public GatewayRouteSpecGrpcRouteArgs(
-        Output<GatewayRouteSpecGrpcRouteActionArgs> action,
-        Output<GatewayRouteSpecGrpcRouteMatchArgs> match) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-    }
+    private GatewayRouteSpecGrpcRouteArgs() {}
 
-    private GatewayRouteSpecGrpcRouteArgs() {
-        this.action = Codegen.empty();
-        this.match = Codegen.empty();
+    private GatewayRouteSpecGrpcRouteArgs(GatewayRouteSpecGrpcRouteArgs $) {
+        this.action = $.action;
+        this.match = $.match;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteSpecGrpcRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GatewayRouteSpecGrpcRouteActionArgs> action;
-        private Output<GatewayRouteSpecGrpcRouteMatchArgs> match;
+        private GatewayRouteSpecGrpcRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteSpecGrpcRouteArgs();
         }
 
         public Builder(GatewayRouteSpecGrpcRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.match = defaults.match;
+            $ = new GatewayRouteSpecGrpcRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<GatewayRouteSpecGrpcRouteActionArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(GatewayRouteSpecGrpcRouteActionArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder match(Output<GatewayRouteSpecGrpcRouteMatchArgs> match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder match(GatewayRouteSpecGrpcRouteMatchArgs match) {
-            this.match = Output.of(Objects.requireNonNull(match));
-            return this;
-        }        public GatewayRouteSpecGrpcRouteArgs build() {
-            return new GatewayRouteSpecGrpcRouteArgs(action, match);
+            return match(Output.of(match));
+        }
+
+        public GatewayRouteSpecGrpcRouteArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            return $;
         }
     }
+
 }

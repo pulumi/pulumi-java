@@ -5,9 +5,9 @@ package com.pulumi.googlenative.privateca_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IssuanceModesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowConfigBasedIssuance")
-      private final @Nullable Output<Boolean> allowConfigBasedIssuance;
+    private @Nullable Output<Boolean> allowConfigBasedIssuance;
 
-    public Output<Boolean> allowConfigBasedIssuance() {
-        return this.allowConfigBasedIssuance == null ? Codegen.empty() : this.allowConfigBasedIssuance;
+    public Optional<Output<Boolean>> allowConfigBasedIssuance() {
+        return Optional.ofNullable(this.allowConfigBasedIssuance);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class IssuanceModesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowCsrBasedIssuance")
-      private final @Nullable Output<Boolean> allowCsrBasedIssuance;
+    private @Nullable Output<Boolean> allowCsrBasedIssuance;
 
-    public Output<Boolean> allowCsrBasedIssuance() {
-        return this.allowCsrBasedIssuance == null ? Codegen.empty() : this.allowCsrBasedIssuance;
+    public Optional<Output<Boolean>> allowCsrBasedIssuance() {
+        return Optional.ofNullable(this.allowCsrBasedIssuance);
     }
 
-    public IssuanceModesArgs(
-        @Nullable Output<Boolean> allowConfigBasedIssuance,
-        @Nullable Output<Boolean> allowCsrBasedIssuance) {
-        this.allowConfigBasedIssuance = allowConfigBasedIssuance;
-        this.allowCsrBasedIssuance = allowCsrBasedIssuance;
-    }
+    private IssuanceModesArgs() {}
 
-    private IssuanceModesArgs() {
-        this.allowConfigBasedIssuance = Codegen.empty();
-        this.allowCsrBasedIssuance = Codegen.empty();
+    private IssuanceModesArgs(IssuanceModesArgs $) {
+        this.allowConfigBasedIssuance = $.allowConfigBasedIssuance;
+        this.allowCsrBasedIssuance = $.allowCsrBasedIssuance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IssuanceModesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowConfigBasedIssuance;
-        private @Nullable Output<Boolean> allowCsrBasedIssuance;
+        private IssuanceModesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IssuanceModesArgs();
         }
 
         public Builder(IssuanceModesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowConfigBasedIssuance = defaults.allowConfigBasedIssuance;
-    	      this.allowCsrBasedIssuance = defaults.allowCsrBasedIssuance;
+            $ = new IssuanceModesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowConfigBasedIssuance(@Nullable Output<Boolean> allowConfigBasedIssuance) {
-            this.allowConfigBasedIssuance = allowConfigBasedIssuance;
+            $.allowConfigBasedIssuance = allowConfigBasedIssuance;
             return this;
         }
-        public Builder allowConfigBasedIssuance(@Nullable Boolean allowConfigBasedIssuance) {
-            this.allowConfigBasedIssuance = Codegen.ofNullable(allowConfigBasedIssuance);
-            return this;
+
+        public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
+            return allowConfigBasedIssuance(Output.of(allowConfigBasedIssuance));
         }
+
         public Builder allowCsrBasedIssuance(@Nullable Output<Boolean> allowCsrBasedIssuance) {
-            this.allowCsrBasedIssuance = allowCsrBasedIssuance;
+            $.allowCsrBasedIssuance = allowCsrBasedIssuance;
             return this;
         }
-        public Builder allowCsrBasedIssuance(@Nullable Boolean allowCsrBasedIssuance) {
-            this.allowCsrBasedIssuance = Codegen.ofNullable(allowCsrBasedIssuance);
-            return this;
-        }        public IssuanceModesArgs build() {
-            return new IssuanceModesArgs(allowConfigBasedIssuance, allowCsrBasedIssuance);
+
+        public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
+            return allowCsrBasedIssuance(Output.of(allowCsrBasedIssuance));
+        }
+
+        public IssuanceModesArgs build() {
+            return $;
         }
     }
+
 }

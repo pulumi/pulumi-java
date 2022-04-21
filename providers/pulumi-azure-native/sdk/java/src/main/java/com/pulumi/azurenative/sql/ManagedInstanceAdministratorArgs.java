@@ -7,9 +7,9 @@ import com.pulumi.azurenative.sql.enums.ManagedInstanceAdministratorType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
     public static final ManagedInstanceAdministratorArgs Empty = new ManagedInstanceAdministratorArgs();
 
     @Import(name="administratorName")
-      private final @Nullable Output<String> administratorName;
+    private @Nullable Output<String> administratorName;
 
-    public Output<String> administratorName() {
-        return this.administratorName == null ? Codegen.empty() : this.administratorName;
+    public Optional<Output<String>> administratorName() {
+        return Optional.ofNullable(this.administratorName);
     }
 
     /**
@@ -29,7 +29,7 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
      * 
      */
     @Import(name="administratorType", required=true)
-      private final Output<Either<String,ManagedInstanceAdministratorType>> administratorType;
+    private Output<Either<String,ManagedInstanceAdministratorType>> administratorType;
 
     public Output<Either<String,ManagedInstanceAdministratorType>> administratorType() {
         return this.administratorType;
@@ -40,7 +40,7 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
      * 
      */
     @Import(name="login", required=true)
-      private final Output<String> login;
+    private Output<String> login;
 
     public Output<String> login() {
         return this.login;
@@ -51,7 +51,7 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final Output<String> managedInstanceName;
+    private Output<String> managedInstanceName;
 
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
@@ -62,7 +62,7 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -73,7 +73,7 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sid", required=true)
-      private final Output<String> sid;
+    private Output<String> sid;
 
     public Output<String> sid() {
         return this.sid;
@@ -84,128 +84,113 @@ public final class ManagedInstanceAdministratorArgs extends com.pulumi.resources
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ManagedInstanceAdministratorArgs(
-        @Nullable Output<String> administratorName,
-        Output<Either<String,ManagedInstanceAdministratorType>> administratorType,
-        Output<String> login,
-        Output<String> managedInstanceName,
-        Output<String> resourceGroupName,
-        Output<String> sid,
-        @Nullable Output<String> tenantId) {
-        this.administratorName = administratorName;
-        this.administratorType = Objects.requireNonNull(administratorType, "expected parameter 'administratorType' to be non-null");
-        this.login = Objects.requireNonNull(login, "expected parameter 'login' to be non-null");
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sid = Objects.requireNonNull(sid, "expected parameter 'sid' to be non-null");
-        this.tenantId = tenantId;
-    }
+    private ManagedInstanceAdministratorArgs() {}
 
-    private ManagedInstanceAdministratorArgs() {
-        this.administratorName = Codegen.empty();
-        this.administratorType = Codegen.empty();
-        this.login = Codegen.empty();
-        this.managedInstanceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sid = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private ManagedInstanceAdministratorArgs(ManagedInstanceAdministratorArgs $) {
+        this.administratorName = $.administratorName;
+        this.administratorType = $.administratorType;
+        this.login = $.login;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sid = $.sid;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstanceAdministratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> administratorName;
-        private Output<Either<String,ManagedInstanceAdministratorType>> administratorType;
-        private Output<String> login;
-        private Output<String> managedInstanceName;
-        private Output<String> resourceGroupName;
-        private Output<String> sid;
-        private @Nullable Output<String> tenantId;
+        private ManagedInstanceAdministratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstanceAdministratorArgs();
         }
 
         public Builder(ManagedInstanceAdministratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorName = defaults.administratorName;
-    	      this.administratorType = defaults.administratorType;
-    	      this.login = defaults.login;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sid = defaults.sid;
-    	      this.tenantId = defaults.tenantId;
+            $ = new ManagedInstanceAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorName(@Nullable Output<String> administratorName) {
-            this.administratorName = administratorName;
+            $.administratorName = administratorName;
             return this;
         }
-        public Builder administratorName(@Nullable String administratorName) {
-            this.administratorName = Codegen.ofNullable(administratorName);
-            return this;
+
+        public Builder administratorName(String administratorName) {
+            return administratorName(Output.of(administratorName));
         }
+
         public Builder administratorType(Output<Either<String,ManagedInstanceAdministratorType>> administratorType) {
-            this.administratorType = Objects.requireNonNull(administratorType);
+            $.administratorType = administratorType;
             return this;
         }
+
         public Builder administratorType(Either<String,ManagedInstanceAdministratorType> administratorType) {
-            this.administratorType = Output.of(Objects.requireNonNull(administratorType));
-            return this;
+            return administratorType(Output.of(administratorType));
         }
+
         public Builder login(Output<String> login) {
-            this.login = Objects.requireNonNull(login);
+            $.login = login;
             return this;
         }
+
         public Builder login(String login) {
-            this.login = Output.of(Objects.requireNonNull(login));
-            return this;
+            return login(Output.of(login));
         }
+
         public Builder managedInstanceName(Output<String> managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
-            return this;
+            return managedInstanceName(Output.of(managedInstanceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sid(Output<String> sid) {
-            this.sid = Objects.requireNonNull(sid);
+            $.sid = sid;
             return this;
         }
+
         public Builder sid(String sid) {
-            this.sid = Output.of(Objects.requireNonNull(sid));
-            return this;
+            return sid(Output.of(sid));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public ManagedInstanceAdministratorArgs build() {
-            return new ManagedInstanceAdministratorArgs(administratorName, administratorType, login, managedInstanceName, resourceGroupName, sid, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public ManagedInstanceAdministratorArgs build() {
+            $.administratorType = Objects.requireNonNull($.administratorType, "expected parameter 'administratorType' to be non-null");
+            $.login = Objects.requireNonNull($.login, "expected parameter 'login' to be non-null");
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sid = Objects.requireNonNull($.sid, "expected parameter 'sid' to be non-null");
+            return $;
         }
     }
+
 }

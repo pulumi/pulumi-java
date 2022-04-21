@@ -17,45 +17,45 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskName", required=true)
-      private final String diskName;
+    private String diskName;
 
     public String diskName() {
         return this.diskName;
     }
 
-    public GetDiskArgs(String diskName) {
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-    }
+    private GetDiskArgs() {}
 
-    private GetDiskArgs() {
-        this.diskName = null;
+    private GetDiskArgs(GetDiskArgs $) {
+        this.diskName = $.diskName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskName;
+        private GetDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDiskArgs();
         }
 
         public Builder(GetDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskName = defaults.diskName;
+            $ = new GetDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskName(String diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
-        }        public GetDiskArgs build() {
-            return new GetDiskArgs(diskName);
+        }
+
+        public GetDiskArgs build() {
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            return $;
         }
     }
+
 }

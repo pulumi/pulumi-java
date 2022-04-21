@@ -6,10 +6,10 @@ package com.pulumi.aws.eks.inputs;
 import com.pulumi.aws.eks.inputs.NodeGroupResourceAutoscalingGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class NodeGroupResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="autoscalingGroups")
-      private final @Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
+    private @Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
 
-    public Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups() {
-        return this.autoscalingGroups == null ? Codegen.empty() : this.autoscalingGroups;
+    public Optional<Output<List<NodeGroupResourceAutoscalingGroupArgs>>> autoscalingGroups() {
+        return Optional.ofNullable(this.autoscalingGroups);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class NodeGroupResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="remoteAccessSecurityGroupId")
-      private final @Nullable Output<String> remoteAccessSecurityGroupId;
+    private @Nullable Output<String> remoteAccessSecurityGroupId;
 
-    public Output<String> remoteAccessSecurityGroupId() {
-        return this.remoteAccessSecurityGroupId == null ? Codegen.empty() : this.remoteAccessSecurityGroupId;
+    public Optional<Output<String>> remoteAccessSecurityGroupId() {
+        return Optional.ofNullable(this.remoteAccessSecurityGroupId);
     }
 
-    public NodeGroupResourceArgs(
-        @Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups,
-        @Nullable Output<String> remoteAccessSecurityGroupId) {
-        this.autoscalingGroups = autoscalingGroups;
-        this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
-    }
+    private NodeGroupResourceArgs() {}
 
-    private NodeGroupResourceArgs() {
-        this.autoscalingGroups = Codegen.empty();
-        this.remoteAccessSecurityGroupId = Codegen.empty();
+    private NodeGroupResourceArgs(NodeGroupResourceArgs $) {
+        this.autoscalingGroups = $.autoscalingGroups;
+        this.remoteAccessSecurityGroupId = $.remoteAccessSecurityGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups;
-        private @Nullable Output<String> remoteAccessSecurityGroupId;
+        private NodeGroupResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupResourceArgs();
         }
 
         public Builder(NodeGroupResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingGroups = defaults.autoscalingGroups;
-    	      this.remoteAccessSecurityGroupId = defaults.remoteAccessSecurityGroupId;
+            $ = new NodeGroupResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingGroups(@Nullable Output<List<NodeGroupResourceAutoscalingGroupArgs>> autoscalingGroups) {
-            this.autoscalingGroups = autoscalingGroups;
+            $.autoscalingGroups = autoscalingGroups;
             return this;
         }
-        public Builder autoscalingGroups(@Nullable List<NodeGroupResourceAutoscalingGroupArgs> autoscalingGroups) {
-            this.autoscalingGroups = Codegen.ofNullable(autoscalingGroups);
-            return this;
+
+        public Builder autoscalingGroups(List<NodeGroupResourceAutoscalingGroupArgs> autoscalingGroups) {
+            return autoscalingGroups(Output.of(autoscalingGroups));
         }
+
         public Builder autoscalingGroups(NodeGroupResourceAutoscalingGroupArgs... autoscalingGroups) {
             return autoscalingGroups(List.of(autoscalingGroups));
         }
+
         public Builder remoteAccessSecurityGroupId(@Nullable Output<String> remoteAccessSecurityGroupId) {
-            this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
+            $.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
             return this;
         }
-        public Builder remoteAccessSecurityGroupId(@Nullable String remoteAccessSecurityGroupId) {
-            this.remoteAccessSecurityGroupId = Codegen.ofNullable(remoteAccessSecurityGroupId);
-            return this;
-        }        public NodeGroupResourceArgs build() {
-            return new NodeGroupResourceArgs(autoscalingGroups, remoteAccessSecurityGroupId);
+
+        public Builder remoteAccessSecurityGroupId(String remoteAccessSecurityGroupId) {
+            return remoteAccessSecurityGroupId(Output.of(remoteAccessSecurityGroupId));
+        }
+
+        public NodeGroupResourceArgs build() {
+            return $;
         }
     }
+
 }

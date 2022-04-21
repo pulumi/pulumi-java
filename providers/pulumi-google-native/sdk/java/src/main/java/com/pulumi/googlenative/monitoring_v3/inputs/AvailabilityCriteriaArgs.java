@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.monitoring_v3.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class AvailabilityCriteriaArgs extends com.pulumi.resources.Resourc
 
     public static final AvailabilityCriteriaArgs Empty = new AvailabilityCriteriaArgs();
 
-    public AvailabilityCriteriaArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AvailabilityCriteriaArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AvailabilityCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AvailabilityCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AvailabilityCriteriaArgs();
         }
         public AvailabilityCriteriaArgs build() {
-            return new AvailabilityCriteriaArgs();
+            return $;
         }
     }
+
 }

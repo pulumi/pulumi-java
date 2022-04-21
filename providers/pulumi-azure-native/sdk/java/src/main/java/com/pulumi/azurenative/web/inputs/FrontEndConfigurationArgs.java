@@ -6,8 +6,8 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.enums.FrontEndServiceType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class FrontEndConfigurationArgs extends com.pulumi.resources.Resour
     public static final FrontEndConfigurationArgs Empty = new FrontEndConfigurationArgs();
 
     @Import(name="kind")
-      private final @Nullable Output<FrontEndServiceType> kind;
+    private @Nullable Output<FrontEndServiceType> kind;
 
-    public Output<FrontEndServiceType> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<FrontEndServiceType>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public FrontEndConfigurationArgs(@Nullable Output<FrontEndServiceType> kind) {
-        this.kind = kind;
-    }
+    private FrontEndConfigurationArgs() {}
 
-    private FrontEndConfigurationArgs() {
-        this.kind = Codegen.empty();
+    private FrontEndConfigurationArgs(FrontEndConfigurationArgs $) {
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontEndConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FrontEndServiceType> kind;
+        private FrontEndConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontEndConfigurationArgs();
         }
 
         public Builder(FrontEndConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
+            $ = new FrontEndConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<FrontEndServiceType> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable FrontEndServiceType kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public FrontEndConfigurationArgs build() {
-            return new FrontEndConfigurationArgs(kind);
+
+        public Builder kind(FrontEndServiceType kind) {
+            return kind(Output.of(kind));
+        }
+
+        public FrontEndConfigurationArgs build() {
+            return $;
         }
     }
+
 }

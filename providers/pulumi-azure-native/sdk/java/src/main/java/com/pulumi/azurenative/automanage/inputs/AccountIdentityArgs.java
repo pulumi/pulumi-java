@@ -6,8 +6,8 @@ package com.pulumi.azurenative.automanage.inputs;
 import com.pulumi.azurenative.automanage.enums.ResourceIdentityType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AccountIdentityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<ResourceIdentityType> type;
+    private @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<ResourceIdentityType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public AccountIdentityArgs(@Nullable Output<ResourceIdentityType> type) {
-        this.type = type;
-    }
+    private AccountIdentityArgs() {}
 
-    private AccountIdentityArgs() {
-        this.type = Codegen.empty();
+    private AccountIdentityArgs(AccountIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceIdentityType> type;
+        private AccountIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountIdentityArgs();
         }
 
         public Builder(AccountIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new AccountIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public AccountIdentityArgs build() {
-            return new AccountIdentityArgs(type);
+
+        public Builder type(ResourceIdentityType type) {
+            return type(Output.of(type));
+        }
+
+        public AccountIdentityArgs build() {
+            return $;
         }
     }
+
 }

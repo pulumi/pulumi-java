@@ -22,7 +22,7 @@ public final class GrafeasV1beta1BuildDetailsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="provenance", required=true)
-      private final BuildProvenanceResponse provenance;
+    private BuildProvenanceResponse provenance;
 
     public BuildProvenanceResponse provenance() {
         return this.provenance;
@@ -33,55 +33,52 @@ public final class GrafeasV1beta1BuildDetailsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="provenanceBytes", required=true)
-      private final String provenanceBytes;
+    private String provenanceBytes;
 
     public String provenanceBytes() {
         return this.provenanceBytes;
     }
 
-    public GrafeasV1beta1BuildDetailsResponse(
-        BuildProvenanceResponse provenance,
-        String provenanceBytes) {
-        this.provenance = Objects.requireNonNull(provenance, "expected parameter 'provenance' to be non-null");
-        this.provenanceBytes = Objects.requireNonNull(provenanceBytes, "expected parameter 'provenanceBytes' to be non-null");
-    }
+    private GrafeasV1beta1BuildDetailsResponse() {}
 
-    private GrafeasV1beta1BuildDetailsResponse() {
-        this.provenance = null;
-        this.provenanceBytes = null;
+    private GrafeasV1beta1BuildDetailsResponse(GrafeasV1beta1BuildDetailsResponse $) {
+        this.provenance = $.provenance;
+        this.provenanceBytes = $.provenanceBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1BuildDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BuildProvenanceResponse provenance;
-        private String provenanceBytes;
+        private GrafeasV1beta1BuildDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1BuildDetailsResponse();
         }
 
         public Builder(GrafeasV1beta1BuildDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provenance = defaults.provenance;
-    	      this.provenanceBytes = defaults.provenanceBytes;
+            $ = new GrafeasV1beta1BuildDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder provenance(BuildProvenanceResponse provenance) {
-            this.provenance = Objects.requireNonNull(provenance);
+            $.provenance = provenance;
             return this;
         }
+
         public Builder provenanceBytes(String provenanceBytes) {
-            this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
+            $.provenanceBytes = provenanceBytes;
             return this;
-        }        public GrafeasV1beta1BuildDetailsResponse build() {
-            return new GrafeasV1beta1BuildDetailsResponse(provenance, provenanceBytes);
+        }
+
+        public GrafeasV1beta1BuildDetailsResponse build() {
+            $.provenance = Objects.requireNonNull($.provenance, "expected parameter 'provenance' to be non-null");
+            $.provenanceBytes = Objects.requireNonNull($.provenanceBytes, "expected parameter 'provenanceBytes' to be non-null");
+            return $;
         }
     }
+
 }

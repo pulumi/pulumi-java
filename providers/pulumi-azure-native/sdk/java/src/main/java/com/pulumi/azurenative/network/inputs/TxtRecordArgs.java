@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class TxtRecordArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<List<String>> value;
+    private @Nullable Output<List<String>> value;
 
-    public Output<List<String>> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<List<String>>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TxtRecordArgs(@Nullable Output<List<String>> value) {
-        this.value = value;
-    }
+    private TxtRecordArgs() {}
 
-    private TxtRecordArgs() {
-        this.value = Codegen.empty();
+    private TxtRecordArgs(TxtRecordArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TxtRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> value;
+        private TxtRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TxtRecordArgs();
         }
 
         public Builder(TxtRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new TxtRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable Output<List<String>> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable List<String> value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(List<String> value) {
+            return value(Output.of(value));
         }
+
         public Builder value(String... value) {
             return value(List.of(value));
-        }        public TxtRecordArgs build() {
-            return new TxtRecordArgs(value);
+        }
+
+        public TxtRecordArgs build() {
+            return $;
         }
     }
+
 }

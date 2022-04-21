@@ -5,10 +5,10 @@ package com.pulumi.aws.mq.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BrokerEncryptionOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class BrokerEncryptionOptionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="useAwsOwnedKey")
-      private final @Nullable Output<Boolean> useAwsOwnedKey;
+    private @Nullable Output<Boolean> useAwsOwnedKey;
 
-    public Output<Boolean> useAwsOwnedKey() {
-        return this.useAwsOwnedKey == null ? Codegen.empty() : this.useAwsOwnedKey;
+    public Optional<Output<Boolean>> useAwsOwnedKey() {
+        return Optional.ofNullable(this.useAwsOwnedKey);
     }
 
-    public BrokerEncryptionOptionsArgs(
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<Boolean> useAwsOwnedKey) {
-        this.kmsKeyId = kmsKeyId;
-        this.useAwsOwnedKey = useAwsOwnedKey;
-    }
+    private BrokerEncryptionOptionsArgs() {}
 
-    private BrokerEncryptionOptionsArgs() {
-        this.kmsKeyId = Codegen.empty();
-        this.useAwsOwnedKey = Codegen.empty();
+    private BrokerEncryptionOptionsArgs(BrokerEncryptionOptionsArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.useAwsOwnedKey = $.useAwsOwnedKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BrokerEncryptionOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<Boolean> useAwsOwnedKey;
+        private BrokerEncryptionOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BrokerEncryptionOptionsArgs();
         }
 
         public Builder(BrokerEncryptionOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.useAwsOwnedKey = defaults.useAwsOwnedKey;
+            $ = new BrokerEncryptionOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder useAwsOwnedKey(@Nullable Output<Boolean> useAwsOwnedKey) {
-            this.useAwsOwnedKey = useAwsOwnedKey;
+            $.useAwsOwnedKey = useAwsOwnedKey;
             return this;
         }
-        public Builder useAwsOwnedKey(@Nullable Boolean useAwsOwnedKey) {
-            this.useAwsOwnedKey = Codegen.ofNullable(useAwsOwnedKey);
-            return this;
-        }        public BrokerEncryptionOptionsArgs build() {
-            return new BrokerEncryptionOptionsArgs(kmsKeyId, useAwsOwnedKey);
+
+        public Builder useAwsOwnedKey(Boolean useAwsOwnedKey) {
+            return useAwsOwnedKey(Output.of(useAwsOwnedKey));
+        }
+
+        public BrokerEncryptionOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      * 
      */
     @Import(name="cookieBehavior", required=true)
-      private final String cookieBehavior;
+    private String cookieBehavior;
 
     public String cookieBehavior() {
         return this.cookieBehavior;
@@ -30,58 +30,56 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      * 
      */
     @Import(name="cookies", required=true)
-      private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies;
+    private List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies;
 
     public List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies() {
         return this.cookies;
     }
 
-    public GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(
-        String cookieBehavior,
-        List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
-        this.cookies = Objects.requireNonNull(cookies, "expected parameter 'cookies' to be non-null");
-    }
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig() {}
 
-    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig() {
-        this.cookieBehavior = null;
-        this.cookies = List.of();
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig $) {
+        this.cookieBehavior = $.cookieBehavior;
+        this.cookies = $.cookies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cookieBehavior;
-        private List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies;
+        private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig();
         }
 
         public Builder(GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieBehavior = defaults.cookieBehavior;
-    	      this.cookies = defaults.cookies;
+            $ = new GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieBehavior(String cookieBehavior) {
-            this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
+            $.cookieBehavior = cookieBehavior;
             return this;
         }
+
         public Builder cookies(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie> cookies) {
-            this.cookies = Objects.requireNonNull(cookies);
+            $.cookies = cookies;
             return this;
         }
+
         public Builder cookies(GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie... cookies) {
             return cookies(List.of(cookies));
-        }        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig build() {
-            return new GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig(cookieBehavior, cookies);
+        }
+
+        public GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig build() {
+            $.cookieBehavior = Objects.requireNonNull($.cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
+            $.cookies = Objects.requireNonNull($.cookies, "expected parameter 'cookies' to be non-null");
+            return $;
         }
     }
+
 }

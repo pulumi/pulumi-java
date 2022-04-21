@@ -6,10 +6,10 @@ package com.pulumi.awsnative.aps;
 import com.pulumi.awsnative.aps.inputs.RuleGroupsNamespaceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="data", required=true)
-      private final Output<String> data;
+    private Output<String> data;
 
     public Output<String> data() {
         return this.data;
@@ -33,10 +33,10 @@ public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags;
+    private @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags;
 
-    public Output<List<RuleGroupsNamespaceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RuleGroupsNamespaceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -55,92 +55,84 @@ public final class RuleGroupsNamespaceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="workspace", required=true)
-      private final Output<String> workspace;
+    private Output<String> workspace;
 
     public Output<String> workspace() {
         return this.workspace;
     }
 
-    public RuleGroupsNamespaceArgs(
-        Output<String> data,
-        @Nullable Output<String> name,
-        @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags,
-        Output<String> workspace) {
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.name = name;
-        this.tags = tags;
-        this.workspace = Objects.requireNonNull(workspace, "expected parameter 'workspace' to be non-null");
-    }
+    private RuleGroupsNamespaceArgs() {}
 
-    private RuleGroupsNamespaceArgs() {
-        this.data = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspace = Codegen.empty();
+    private RuleGroupsNamespaceArgs(RuleGroupsNamespaceArgs $) {
+        this.data = $.data;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.workspace = $.workspace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupsNamespaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> data;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags;
-        private Output<String> workspace;
+        private RuleGroupsNamespaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupsNamespaceArgs();
         }
 
         public Builder(RuleGroupsNamespaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.workspace = defaults.workspace;
+            $ = new RuleGroupsNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(Output<String> data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder data(String data) {
-            this.data = Output.of(Objects.requireNonNull(data));
-            return this;
+            return data(Output.of(data));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RuleGroupsNamespaceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RuleGroupsNamespaceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RuleGroupsNamespaceTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder workspace(Output<String> workspace) {
-            this.workspace = Objects.requireNonNull(workspace);
+            $.workspace = workspace;
             return this;
         }
+
         public Builder workspace(String workspace) {
-            this.workspace = Output.of(Objects.requireNonNull(workspace));
-            return this;
-        }        public RuleGroupsNamespaceArgs build() {
-            return new RuleGroupsNamespaceArgs(data, name, tags, workspace);
+            return workspace(Output.of(workspace));
+        }
+
+        public RuleGroupsNamespaceArgs build() {
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            $.workspace = Objects.requireNonNull($.workspace, "expected parameter 'workspace' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.binaryauthorization;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNoteArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attestationAuthorityNote", required=true)
-      private final Output<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote;
+    private Output<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote;
 
     public Output<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote() {
         return this.attestationAuthorityNote;
@@ -34,10 +34,10 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,89 +57,79 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public AttestorArgs(
-        Output<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.attestationAuthorityNote = Objects.requireNonNull(attestationAuthorityNote, "expected parameter 'attestationAuthorityNote' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.project = project;
-    }
+    private AttestorArgs() {}
 
-    private AttestorArgs() {
-        this.attestationAuthorityNote = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private AttestorArgs(AttestorArgs $) {
+        this.attestationAuthorityNote = $.attestationAuthorityNote;
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private AttestorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestorArgs();
         }
 
         public Builder(AttestorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestationAuthorityNote = defaults.attestationAuthorityNote;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new AttestorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestationAuthorityNote(Output<AttestorAttestationAuthorityNoteArgs> attestationAuthorityNote) {
-            this.attestationAuthorityNote = Objects.requireNonNull(attestationAuthorityNote);
+            $.attestationAuthorityNote = attestationAuthorityNote;
             return this;
         }
+
         public Builder attestationAuthorityNote(AttestorAttestationAuthorityNoteArgs attestationAuthorityNote) {
-            this.attestationAuthorityNote = Output.of(Objects.requireNonNull(attestationAuthorityNote));
-            return this;
+            return attestationAuthorityNote(Output.of(attestationAuthorityNote));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public AttestorArgs build() {
-            return new AttestorArgs(attestationAuthorityNote, description, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public AttestorArgs build() {
+            $.attestationAuthorityNote = Objects.requireNonNull($.attestationAuthorityNote, "expected parameter 'attestationAuthorityNote' to be non-null");
+            return $;
         }
     }
+
 }

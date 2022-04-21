@@ -23,45 +23,44 @@ public final class ApiPortalCustomDomainPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public ApiPortalCustomDomainPropertiesResponse(@Nullable String thumbprint) {
-        this.thumbprint = thumbprint;
-    }
+    private ApiPortalCustomDomainPropertiesResponse() {}
 
-    private ApiPortalCustomDomainPropertiesResponse() {
-        this.thumbprint = null;
+    private ApiPortalCustomDomainPropertiesResponse(ApiPortalCustomDomainPropertiesResponse $) {
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiPortalCustomDomainPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String thumbprint;
+        private ApiPortalCustomDomainPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiPortalCustomDomainPropertiesResponse();
         }
 
         public Builder(ApiPortalCustomDomainPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new ApiPortalCustomDomainPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
-        }        public ApiPortalCustomDomainPropertiesResponse build() {
-            return new ApiPortalCustomDomainPropertiesResponse(thumbprint);
+        }
+
+        public ApiPortalCustomDomainPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskNode")
-      private final @Nullable String diskNode;
+    private @Nullable String diskNode;
 
     public Optional<String> diskNode() {
-        return this.diskNode == null ? Optional.empty() : Optional.ofNullable(this.diskNode);
+        return Optional.ofNullable(this.diskNode);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskPath")
-      private final @Nullable String diskPath;
+    private @Nullable String diskPath;
 
     public Optional<String> diskPath() {
-        return this.diskPath == null ? Optional.empty() : Optional.ofNullable(this.diskPath);
+        return Optional.ofNullable(this.diskPath);
     }
 
     /**
@@ -41,64 +41,57 @@ public final class GetLocalDiskArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayArn", required=true)
-      private final String gatewayArn;
+    private String gatewayArn;
 
     public String gatewayArn() {
         return this.gatewayArn;
     }
 
-    public GetLocalDiskArgs(
-        @Nullable String diskNode,
-        @Nullable String diskPath,
-        String gatewayArn) {
-        this.diskNode = diskNode;
-        this.diskPath = diskPath;
-        this.gatewayArn = Objects.requireNonNull(gatewayArn, "expected parameter 'gatewayArn' to be non-null");
-    }
+    private GetLocalDiskArgs() {}
 
-    private GetLocalDiskArgs() {
-        this.diskNode = null;
-        this.diskPath = null;
-        this.gatewayArn = null;
+    private GetLocalDiskArgs(GetLocalDiskArgs $) {
+        this.diskNode = $.diskNode;
+        this.diskPath = $.diskPath;
+        this.gatewayArn = $.gatewayArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocalDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String diskNode;
-        private @Nullable String diskPath;
-        private String gatewayArn;
+        private GetLocalDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocalDiskArgs();
         }
 
         public Builder(GetLocalDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskNode = defaults.diskNode;
-    	      this.diskPath = defaults.diskPath;
-    	      this.gatewayArn = defaults.gatewayArn;
+            $ = new GetLocalDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskNode(@Nullable String diskNode) {
-            this.diskNode = diskNode;
+            $.diskNode = diskNode;
             return this;
         }
+
         public Builder diskPath(@Nullable String diskPath) {
-            this.diskPath = diskPath;
+            $.diskPath = diskPath;
             return this;
         }
+
         public Builder gatewayArn(String gatewayArn) {
-            this.gatewayArn = Objects.requireNonNull(gatewayArn);
+            $.gatewayArn = gatewayArn;
             return this;
-        }        public GetLocalDiskArgs build() {
-            return new GetLocalDiskArgs(diskNode, diskPath, gatewayArn);
+        }
+
+        public GetLocalDiskArgs build() {
+            $.gatewayArn = Objects.requireNonNull($.gatewayArn, "expected parameter 'gatewayArn' to be non-null");
+            return $;
         }
     }
+
 }

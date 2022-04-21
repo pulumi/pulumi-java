@@ -21,7 +21,7 @@ public final class NetworkEndpointGroupCloudRunResponse extends com.pulumi.resou
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
@@ -32,7 +32,7 @@ public final class NetworkEndpointGroupCloudRunResponse extends com.pulumi.resou
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
@@ -43,64 +43,59 @@ public final class NetworkEndpointGroupCloudRunResponse extends com.pulumi.resou
      * 
      */
     @Import(name="urlMask", required=true)
-      private final String urlMask;
+    private String urlMask;
 
     public String urlMask() {
         return this.urlMask;
     }
 
-    public NetworkEndpointGroupCloudRunResponse(
-        String service,
-        String tag,
-        String urlMask) {
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-        this.urlMask = Objects.requireNonNull(urlMask, "expected parameter 'urlMask' to be non-null");
-    }
+    private NetworkEndpointGroupCloudRunResponse() {}
 
-    private NetworkEndpointGroupCloudRunResponse() {
-        this.service = null;
-        this.tag = null;
-        this.urlMask = null;
+    private NetworkEndpointGroupCloudRunResponse(NetworkEndpointGroupCloudRunResponse $) {
+        this.service = $.service;
+        this.tag = $.tag;
+        this.urlMask = $.urlMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointGroupCloudRunResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String service;
-        private String tag;
-        private String urlMask;
+        private NetworkEndpointGroupCloudRunResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointGroupCloudRunResponse();
         }
 
         public Builder(NetworkEndpointGroupCloudRunResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.service = defaults.service;
-    	      this.tag = defaults.tag;
-    	      this.urlMask = defaults.urlMask;
+            $ = new NetworkEndpointGroupCloudRunResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
         }
+
         public Builder urlMask(String urlMask) {
-            this.urlMask = Objects.requireNonNull(urlMask);
+            $.urlMask = urlMask;
             return this;
-        }        public NetworkEndpointGroupCloudRunResponse build() {
-            return new NetworkEndpointGroupCloudRunResponse(service, tag, urlMask);
+        }
+
+        public NetworkEndpointGroupCloudRunResponse build() {
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            $.urlMask = Objects.requireNonNull($.urlMask, "expected parameter 'urlMask' to be non-null");
+            return $;
         }
     }
+
 }

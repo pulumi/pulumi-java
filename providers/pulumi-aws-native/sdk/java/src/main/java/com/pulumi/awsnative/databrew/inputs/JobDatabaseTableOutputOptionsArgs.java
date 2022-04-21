@@ -6,9 +6,9 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class JobDatabaseTableOutputOptionsArgs extends com.pulumi.resource
     public static final JobDatabaseTableOutputOptionsArgs Empty = new JobDatabaseTableOutputOptionsArgs();
 
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
     @Import(name="tempDirectory")
-      private final @Nullable Output<JobS3LocationArgs> tempDirectory;
+    private @Nullable Output<JobS3LocationArgs> tempDirectory;
 
-    public Output<JobS3LocationArgs> tempDirectory() {
-        return this.tempDirectory == null ? Codegen.empty() : this.tempDirectory;
+    public Optional<Output<JobS3LocationArgs>> tempDirectory() {
+        return Optional.ofNullable(this.tempDirectory);
     }
 
-    public JobDatabaseTableOutputOptionsArgs(
-        Output<String> tableName,
-        @Nullable Output<JobS3LocationArgs> tempDirectory) {
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.tempDirectory = tempDirectory;
-    }
+    private JobDatabaseTableOutputOptionsArgs() {}
 
-    private JobDatabaseTableOutputOptionsArgs() {
-        this.tableName = Codegen.empty();
-        this.tempDirectory = Codegen.empty();
+    private JobDatabaseTableOutputOptionsArgs(JobDatabaseTableOutputOptionsArgs $) {
+        this.tableName = $.tableName;
+        this.tempDirectory = $.tempDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDatabaseTableOutputOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> tableName;
-        private @Nullable Output<JobS3LocationArgs> tempDirectory;
+        private JobDatabaseTableOutputOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDatabaseTableOutputOptionsArgs();
         }
 
         public Builder(JobDatabaseTableOutputOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableName = defaults.tableName;
-    	      this.tempDirectory = defaults.tempDirectory;
+            $ = new JobDatabaseTableOutputOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
+            return tableName(Output.of(tableName));
         }
+
         public Builder tempDirectory(@Nullable Output<JobS3LocationArgs> tempDirectory) {
-            this.tempDirectory = tempDirectory;
+            $.tempDirectory = tempDirectory;
             return this;
         }
-        public Builder tempDirectory(@Nullable JobS3LocationArgs tempDirectory) {
-            this.tempDirectory = Codegen.ofNullable(tempDirectory);
-            return this;
-        }        public JobDatabaseTableOutputOptionsArgs build() {
-            return new JobDatabaseTableOutputOptionsArgs(tableName, tempDirectory);
+
+        public Builder tempDirectory(JobS3LocationArgs tempDirectory) {
+            return tempDirectory(Output.of(tempDirectory));
+        }
+
+        public JobDatabaseTableOutputOptionsArgs build() {
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

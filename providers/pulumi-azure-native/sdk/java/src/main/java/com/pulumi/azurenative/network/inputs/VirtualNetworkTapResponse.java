@@ -29,10 +29,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="destinationLoadBalancerFrontEndIPConfiguration")
-      private final @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration;
+    private @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration;
 
     public Optional<FrontendIPConfigurationResponse> destinationLoadBalancerFrontEndIPConfiguration() {
-        return this.destinationLoadBalancerFrontEndIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.destinationLoadBalancerFrontEndIPConfiguration);
+        return Optional.ofNullable(this.destinationLoadBalancerFrontEndIPConfiguration);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="destinationNetworkInterfaceIPConfiguration")
-      private final @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration;
+    private @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration;
 
     public Optional<NetworkInterfaceIPConfigurationResponse> destinationNetworkInterfaceIPConfiguration() {
-        return this.destinationNetworkInterfaceIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.destinationNetworkInterfaceIPConfiguration);
+        return Optional.ofNullable(this.destinationNetworkInterfaceIPConfiguration);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="destinationPort")
-      private final @Nullable Integer destinationPort;
+    private @Nullable Integer destinationPort;
 
     public Optional<Integer> destinationPort() {
-        return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
+        return Optional.ofNullable(this.destinationPort);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -73,10 +73,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -95,7 +95,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -106,7 +106,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="networkInterfaceTapConfigurations", required=true)
-      private final List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations;
+    private List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations;
 
     public List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations() {
         return this.networkInterfaceTapConfigurations;
@@ -117,7 +117,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -128,7 +128,7 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGuid", required=true)
-      private final String resourceGuid;
+    private String resourceGuid;
 
     public String resourceGuid() {
         return this.resourceGuid;
@@ -139,10 +139,10 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -150,148 +150,120 @@ public final class VirtualNetworkTapResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public VirtualNetworkTapResponse(
-        @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration,
-        @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration,
-        @Nullable Integer destinationPort,
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
-        this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
-        this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
-        this.destinationPort = destinationPort;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkInterfaceTapConfigurations = Objects.requireNonNull(networkInterfaceTapConfigurations, "expected parameter 'networkInterfaceTapConfigurations' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.resourceGuid = Objects.requireNonNull(resourceGuid, "expected parameter 'resourceGuid' to be non-null");
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private VirtualNetworkTapResponse() {}
 
-    private VirtualNetworkTapResponse() {
-        this.destinationLoadBalancerFrontEndIPConfiguration = null;
-        this.destinationNetworkInterfaceIPConfiguration = null;
-        this.destinationPort = null;
-        this.etag = null;
-        this.id = null;
-        this.location = null;
-        this.name = null;
-        this.networkInterfaceTapConfigurations = List.of();
-        this.provisioningState = null;
-        this.resourceGuid = null;
-        this.tags = Map.of();
-        this.type = null;
+    private VirtualNetworkTapResponse(VirtualNetworkTapResponse $) {
+        this.destinationLoadBalancerFrontEndIPConfiguration = $.destinationLoadBalancerFrontEndIPConfiguration;
+        this.destinationNetworkInterfaceIPConfiguration = $.destinationNetworkInterfaceIPConfiguration;
+        this.destinationPort = $.destinationPort;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.networkInterfaceTapConfigurations = $.networkInterfaceTapConfigurations;
+        this.provisioningState = $.provisioningState;
+        this.resourceGuid = $.resourceGuid;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkTapResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration;
-        private @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration;
-        private @Nullable Integer destinationPort;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String location;
-        private String name;
-        private List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations;
-        private String provisioningState;
-        private String resourceGuid;
-        private @Nullable Map<String,String> tags;
-        private String type;
+        private VirtualNetworkTapResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkTapResponse();
         }
 
         public Builder(VirtualNetworkTapResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationLoadBalancerFrontEndIPConfiguration = defaults.destinationLoadBalancerFrontEndIPConfiguration;
-    	      this.destinationNetworkInterfaceIPConfiguration = defaults.destinationNetworkInterfaceIPConfiguration;
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.networkInterfaceTapConfigurations = defaults.networkInterfaceTapConfigurations;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGuid = defaults.resourceGuid;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new VirtualNetworkTapResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration) {
-            this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
+            $.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
             return this;
         }
+
         public Builder destinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration) {
-            this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
+            $.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
             return this;
         }
+
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = destinationPort;
+            $.destinationPort = destinationPort;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder networkInterfaceTapConfigurations(List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations) {
-            this.networkInterfaceTapConfigurations = Objects.requireNonNull(networkInterfaceTapConfigurations);
+            $.networkInterfaceTapConfigurations = networkInterfaceTapConfigurations;
             return this;
         }
+
         public Builder networkInterfaceTapConfigurations(NetworkInterfaceTapConfigurationResponse... networkInterfaceTapConfigurations) {
             return networkInterfaceTapConfigurations(List.of(networkInterfaceTapConfigurations));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder resourceGuid(String resourceGuid) {
-            this.resourceGuid = Objects.requireNonNull(resourceGuid);
+            $.resourceGuid = resourceGuid;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public VirtualNetworkTapResponse build() {
-            return new VirtualNetworkTapResponse(destinationLoadBalancerFrontEndIPConfiguration, destinationNetworkInterfaceIPConfiguration, destinationPort, etag, id, location, name, networkInterfaceTapConfigurations, provisioningState, resourceGuid, tags, type);
+        }
+
+        public VirtualNetworkTapResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.networkInterfaceTapConfigurations = Objects.requireNonNull($.networkInterfaceTapConfigurations, "expected parameter 'networkInterfaceTapConfigurations' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.resourceGuid = Objects.requireNonNull($.resourceGuid, "expected parameter 'resourceGuid' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

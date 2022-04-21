@@ -5,10 +5,10 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FunctionInputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<String> dataType;
+    private @Nullable Output<String> dataType;
 
-    public Output<String> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<String>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class FunctionInputArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isConfigurationParameter")
-      private final @Nullable Output<Boolean> isConfigurationParameter;
+    private @Nullable Output<Boolean> isConfigurationParameter;
 
-    public Output<Boolean> isConfigurationParameter() {
-        return this.isConfigurationParameter == null ? Codegen.empty() : this.isConfigurationParameter;
+    public Optional<Output<Boolean>> isConfigurationParameter() {
+        return Optional.ofNullable(this.isConfigurationParameter);
     }
 
-    public FunctionInputArgs(
-        @Nullable Output<String> dataType,
-        @Nullable Output<Boolean> isConfigurationParameter) {
-        this.dataType = dataType;
-        this.isConfigurationParameter = isConfigurationParameter;
-    }
+    private FunctionInputArgs() {}
 
-    private FunctionInputArgs() {
-        this.dataType = Codegen.empty();
-        this.isConfigurationParameter = Codegen.empty();
+    private FunctionInputArgs(FunctionInputArgs $) {
+        this.dataType = $.dataType;
+        this.isConfigurationParameter = $.isConfigurationParameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataType;
-        private @Nullable Output<Boolean> isConfigurationParameter;
+        private FunctionInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionInputArgs();
         }
 
         public Builder(FunctionInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.isConfigurationParameter = defaults.isConfigurationParameter;
+            $ = new FunctionInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable Output<String> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable String dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(String dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder isConfigurationParameter(@Nullable Output<Boolean> isConfigurationParameter) {
-            this.isConfigurationParameter = isConfigurationParameter;
+            $.isConfigurationParameter = isConfigurationParameter;
             return this;
         }
-        public Builder isConfigurationParameter(@Nullable Boolean isConfigurationParameter) {
-            this.isConfigurationParameter = Codegen.ofNullable(isConfigurationParameter);
-            return this;
-        }        public FunctionInputArgs build() {
-            return new FunctionInputArgs(dataType, isConfigurationParameter);
+
+        public Builder isConfigurationParameter(Boolean isConfigurationParameter) {
+            return isConfigurationParameter(Output.of(isConfigurationParameter));
+        }
+
+        public FunctionInputArgs build() {
+            return $;
         }
     }
+
 }

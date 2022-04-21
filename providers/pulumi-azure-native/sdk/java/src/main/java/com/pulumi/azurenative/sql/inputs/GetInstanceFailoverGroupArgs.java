@@ -17,7 +17,7 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="failoverGroupName", required=true)
-      private final String failoverGroupName;
+    private String failoverGroupName;
 
     public String failoverGroupName() {
         return this.failoverGroupName;
@@ -28,7 +28,7 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="locationName", required=true)
-      private final String locationName;
+    private String locationName;
 
     public String locationName() {
         return this.locationName;
@@ -39,64 +39,59 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetInstanceFailoverGroupArgs(
-        String failoverGroupName,
-        String locationName,
-        String resourceGroupName) {
-        this.failoverGroupName = Objects.requireNonNull(failoverGroupName, "expected parameter 'failoverGroupName' to be non-null");
-        this.locationName = Objects.requireNonNull(locationName, "expected parameter 'locationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetInstanceFailoverGroupArgs() {}
 
-    private GetInstanceFailoverGroupArgs() {
-        this.failoverGroupName = null;
-        this.locationName = null;
-        this.resourceGroupName = null;
+    private GetInstanceFailoverGroupArgs(GetInstanceFailoverGroupArgs $) {
+        this.failoverGroupName = $.failoverGroupName;
+        this.locationName = $.locationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceFailoverGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String failoverGroupName;
-        private String locationName;
-        private String resourceGroupName;
+        private GetInstanceFailoverGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceFailoverGroupArgs();
         }
 
         public Builder(GetInstanceFailoverGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverGroupName = defaults.failoverGroupName;
-    	      this.locationName = defaults.locationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetInstanceFailoverGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverGroupName(String failoverGroupName) {
-            this.failoverGroupName = Objects.requireNonNull(failoverGroupName);
+            $.failoverGroupName = failoverGroupName;
             return this;
         }
+
         public Builder locationName(String locationName) {
-            this.locationName = Objects.requireNonNull(locationName);
+            $.locationName = locationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetInstanceFailoverGroupArgs build() {
-            return new GetInstanceFailoverGroupArgs(failoverGroupName, locationName, resourceGroupName);
+        }
+
+        public GetInstanceFailoverGroupArgs build() {
+            $.failoverGroupName = Objects.requireNonNull($.failoverGroupName, "expected parameter 'failoverGroupName' to be non-null");
+            $.locationName = Objects.requireNonNull($.locationName, "expected parameter 'locationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

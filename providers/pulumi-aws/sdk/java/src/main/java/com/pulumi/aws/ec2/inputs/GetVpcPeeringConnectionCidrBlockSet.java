@@ -17,45 +17,45 @@ public final class GetVpcPeeringConnectionCidrBlockSet extends com.pulumi.resour
      * 
      */
     @Import(name="cidrBlock", required=true)
-      private final String cidrBlock;
+    private String cidrBlock;
 
     public String cidrBlock() {
         return this.cidrBlock;
     }
 
-    public GetVpcPeeringConnectionCidrBlockSet(String cidrBlock) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
-    }
+    private GetVpcPeeringConnectionCidrBlockSet() {}
 
-    private GetVpcPeeringConnectionCidrBlockSet() {
-        this.cidrBlock = null;
+    private GetVpcPeeringConnectionCidrBlockSet(GetVpcPeeringConnectionCidrBlockSet $) {
+        this.cidrBlock = $.cidrBlock;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcPeeringConnectionCidrBlockSet defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cidrBlock;
+        private GetVpcPeeringConnectionCidrBlockSet $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcPeeringConnectionCidrBlockSet();
         }
 
         public Builder(GetVpcPeeringConnectionCidrBlockSet defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
+            $ = new GetVpcPeeringConnectionCidrBlockSet(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            $.cidrBlock = cidrBlock;
             return this;
-        }        public GetVpcPeeringConnectionCidrBlockSet build() {
-            return new GetVpcPeeringConnectionCidrBlockSet(cidrBlock);
+        }
+
+        public GetVpcPeeringConnectionCidrBlockSet build() {
+            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
+            return $;
         }
     }
+
 }

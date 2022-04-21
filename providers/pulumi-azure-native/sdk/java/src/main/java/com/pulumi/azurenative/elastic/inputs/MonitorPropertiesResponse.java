@@ -25,14 +25,14 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="elasticProperties")
-      private final @Nullable ElasticPropertiesResponse elasticProperties;
+    private @Nullable ElasticPropertiesResponse elasticProperties;
 
     public Optional<ElasticPropertiesResponse> elasticProperties() {
-        return this.elasticProperties == null ? Optional.empty() : Optional.ofNullable(this.elasticProperties);
+        return Optional.ofNullable(this.elasticProperties);
     }
 
     @Import(name="liftrResourceCategory", required=true)
-      private final String liftrResourceCategory;
+    private String liftrResourceCategory;
 
     public String liftrResourceCategory() {
         return this.liftrResourceCategory;
@@ -43,7 +43,7 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="liftrResourcePreference", required=true)
-      private final Integer liftrResourcePreference;
+    private Integer liftrResourcePreference;
 
     public Integer liftrResourcePreference() {
         return this.liftrResourcePreference;
@@ -54,10 +54,10 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="monitoringStatus")
-      private final @Nullable String monitoringStatus;
+    private @Nullable String monitoringStatus;
 
     public Optional<String> monitoringStatus() {
-        return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
+        return Optional.ofNullable(this.monitoringStatus);
     }
 
     /**
@@ -65,82 +65,70 @@ public final class MonitorPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public MonitorPropertiesResponse(
-        @Nullable ElasticPropertiesResponse elasticProperties,
-        String liftrResourceCategory,
-        Integer liftrResourcePreference,
-        @Nullable String monitoringStatus,
-        @Nullable String provisioningState) {
-        this.elasticProperties = elasticProperties;
-        this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory, "expected parameter 'liftrResourceCategory' to be non-null");
-        this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference, "expected parameter 'liftrResourcePreference' to be non-null");
-        this.monitoringStatus = monitoringStatus;
-        this.provisioningState = provisioningState;
-    }
+    private MonitorPropertiesResponse() {}
 
-    private MonitorPropertiesResponse() {
-        this.elasticProperties = null;
-        this.liftrResourceCategory = null;
-        this.liftrResourcePreference = null;
-        this.monitoringStatus = null;
-        this.provisioningState = null;
+    private MonitorPropertiesResponse(MonitorPropertiesResponse $) {
+        this.elasticProperties = $.elasticProperties;
+        this.liftrResourceCategory = $.liftrResourceCategory;
+        this.liftrResourcePreference = $.liftrResourcePreference;
+        this.monitoringStatus = $.monitoringStatus;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitorPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ElasticPropertiesResponse elasticProperties;
-        private String liftrResourceCategory;
-        private Integer liftrResourcePreference;
-        private @Nullable String monitoringStatus;
-        private @Nullable String provisioningState;
+        private MonitorPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitorPropertiesResponse();
         }
 
         public Builder(MonitorPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elasticProperties = defaults.elasticProperties;
-    	      this.liftrResourceCategory = defaults.liftrResourceCategory;
-    	      this.liftrResourcePreference = defaults.liftrResourcePreference;
-    	      this.monitoringStatus = defaults.monitoringStatus;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new MonitorPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder elasticProperties(@Nullable ElasticPropertiesResponse elasticProperties) {
-            this.elasticProperties = elasticProperties;
+            $.elasticProperties = elasticProperties;
             return this;
         }
+
         public Builder liftrResourceCategory(String liftrResourceCategory) {
-            this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
+            $.liftrResourceCategory = liftrResourceCategory;
             return this;
         }
+
         public Builder liftrResourcePreference(Integer liftrResourcePreference) {
-            this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
+            $.liftrResourcePreference = liftrResourcePreference;
             return this;
         }
+
         public Builder monitoringStatus(@Nullable String monitoringStatus) {
-            this.monitoringStatus = monitoringStatus;
+            $.monitoringStatus = monitoringStatus;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
-        }        public MonitorPropertiesResponse build() {
-            return new MonitorPropertiesResponse(elasticProperties, liftrResourceCategory, liftrResourcePreference, monitoringStatus, provisioningState);
+        }
+
+        public MonitorPropertiesResponse build() {
+            $.liftrResourceCategory = Objects.requireNonNull($.liftrResourceCategory, "expected parameter 'liftrResourceCategory' to be non-null");
+            $.liftrResourcePreference = Objects.requireNonNull($.liftrResourcePreference, "expected parameter 'liftrResourcePreference' to be non-null");
+            return $;
         }
     }
+
 }

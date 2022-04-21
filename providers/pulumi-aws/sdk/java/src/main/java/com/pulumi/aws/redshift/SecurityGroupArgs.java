@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +23,10 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingress", required=true)
-      private final Output<List<SecurityGroupIngressArgs>> ingress;
+    private Output<List<SecurityGroupIngressArgs>> ingress;
 
     public Output<List<SecurityGroupIngressArgs>> ingress() {
         return this.ingress;
@@ -44,79 +45,74 @@ public final class SecurityGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SecurityGroupArgs(
-        @Nullable Output<String> description,
-        Output<List<SecurityGroupIngressArgs>> ingress,
-        @Nullable Output<String> name) {
-        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
-        this.ingress = Objects.requireNonNull(ingress, "expected parameter 'ingress' to be non-null");
-        this.name = name;
-    }
+    private SecurityGroupArgs() {}
 
-    private SecurityGroupArgs() {
-        this.description = Codegen.empty();
-        this.ingress = Codegen.empty();
-        this.name = Codegen.empty();
+    private SecurityGroupArgs(SecurityGroupArgs $) {
+        this.description = $.description;
+        this.ingress = $.ingress;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<SecurityGroupIngressArgs>> ingress;
-        private @Nullable Output<String> name;
+        private SecurityGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityGroupArgs();
         }
 
         public Builder(SecurityGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.ingress = defaults.ingress;
-    	      this.name = defaults.name;
+            $ = new SecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ingress(Output<List<SecurityGroupIngressArgs>> ingress) {
-            this.ingress = Objects.requireNonNull(ingress);
+            $.ingress = ingress;
             return this;
         }
+
         public Builder ingress(List<SecurityGroupIngressArgs> ingress) {
-            this.ingress = Output.of(Objects.requireNonNull(ingress));
-            return this;
+            return ingress(Output.of(ingress));
         }
+
         public Builder ingress(SecurityGroupIngressArgs... ingress) {
             return ingress(List.of(ingress));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SecurityGroupArgs build() {
-            return new SecurityGroupArgs(description, ingress, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public SecurityGroupArgs build() {
+            $.description = Codegen.stringProp("description").output().arg($.description).def("Managed by Pulumi").getNullable();
+            $.ingress = Objects.requireNonNull($.ingress, "expected parameter 'ingress' to be non-null");
+            return $;
         }
     }
+
 }

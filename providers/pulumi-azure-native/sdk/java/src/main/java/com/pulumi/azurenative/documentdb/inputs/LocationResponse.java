@@ -25,7 +25,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="documentEndpoint", required=true)
-      private final String documentEndpoint;
+    private String documentEndpoint;
 
     public String documentEndpoint() {
         return this.documentEndpoint;
@@ -36,10 +36,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="failoverPriority")
-      private final @Nullable Integer failoverPriority;
+    private @Nullable Integer failoverPriority;
 
     public Optional<Integer> failoverPriority() {
-        return this.failoverPriority == null ? Optional.empty() : Optional.ofNullable(this.failoverPriority);
+        return Optional.ofNullable(this.failoverPriority);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -58,10 +58,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isZoneRedundant")
-      private final @Nullable Boolean isZoneRedundant;
+    private @Nullable Boolean isZoneRedundant;
 
     public Optional<Boolean> isZoneRedundant() {
-        return this.isZoneRedundant == null ? Optional.empty() : Optional.ofNullable(this.isZoneRedundant);
+        return Optional.ofNullable(this.isZoneRedundant);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationName")
-      private final @Nullable String locationName;
+    private @Nullable String locationName;
 
     public Optional<String> locationName() {
-        return this.locationName == null ? Optional.empty() : Optional.ofNullable(this.locationName);
+        return Optional.ofNullable(this.locationName);
     }
 
     /**
@@ -80,91 +80,77 @@ public final class LocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public LocationResponse(
-        String documentEndpoint,
-        @Nullable Integer failoverPriority,
-        String id,
-        @Nullable Boolean isZoneRedundant,
-        @Nullable String locationName,
-        String provisioningState) {
-        this.documentEndpoint = Objects.requireNonNull(documentEndpoint, "expected parameter 'documentEndpoint' to be non-null");
-        this.failoverPriority = failoverPriority;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.isZoneRedundant = isZoneRedundant;
-        this.locationName = locationName;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private LocationResponse() {}
 
-    private LocationResponse() {
-        this.documentEndpoint = null;
-        this.failoverPriority = null;
-        this.id = null;
-        this.isZoneRedundant = null;
-        this.locationName = null;
-        this.provisioningState = null;
+    private LocationResponse(LocationResponse $) {
+        this.documentEndpoint = $.documentEndpoint;
+        this.failoverPriority = $.failoverPriority;
+        this.id = $.id;
+        this.isZoneRedundant = $.isZoneRedundant;
+        this.locationName = $.locationName;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String documentEndpoint;
-        private @Nullable Integer failoverPriority;
-        private String id;
-        private @Nullable Boolean isZoneRedundant;
-        private @Nullable String locationName;
-        private String provisioningState;
+        private LocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationResponse();
         }
 
         public Builder(LocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentEndpoint = defaults.documentEndpoint;
-    	      this.failoverPriority = defaults.failoverPriority;
-    	      this.id = defaults.id;
-    	      this.isZoneRedundant = defaults.isZoneRedundant;
-    	      this.locationName = defaults.locationName;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new LocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder documentEndpoint(String documentEndpoint) {
-            this.documentEndpoint = Objects.requireNonNull(documentEndpoint);
+            $.documentEndpoint = documentEndpoint;
             return this;
         }
+
         public Builder failoverPriority(@Nullable Integer failoverPriority) {
-            this.failoverPriority = failoverPriority;
+            $.failoverPriority = failoverPriority;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder isZoneRedundant(@Nullable Boolean isZoneRedundant) {
-            this.isZoneRedundant = isZoneRedundant;
+            $.isZoneRedundant = isZoneRedundant;
             return this;
         }
+
         public Builder locationName(@Nullable String locationName) {
-            this.locationName = locationName;
+            $.locationName = locationName;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public LocationResponse build() {
-            return new LocationResponse(documentEndpoint, failoverPriority, id, isZoneRedundant, locationName, provisioningState);
+        }
+
+        public LocationResponse build() {
+            $.documentEndpoint = Objects.requireNonNull($.documentEndpoint, "expected parameter 'documentEndpoint' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends c
      * 
      */
     @Import(name="audioUri", required=true)
-      private final String audioUri;
+    private String audioUri;
 
     public String audioUri() {
         return this.audioUri;
@@ -32,55 +32,52 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends c
      * 
      */
     @Import(name="transcriptUri", required=true)
-      private final String transcriptUri;
+    private String transcriptUri;
 
     public String transcriptUri() {
         return this.transcriptUri;
     }
 
-    public GoogleCloudContactcenterinsightsV1GcsSourceResponse(
-        String audioUri,
-        String transcriptUri) {
-        this.audioUri = Objects.requireNonNull(audioUri, "expected parameter 'audioUri' to be non-null");
-        this.transcriptUri = Objects.requireNonNull(transcriptUri, "expected parameter 'transcriptUri' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1GcsSourceResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1GcsSourceResponse() {
-        this.audioUri = null;
-        this.transcriptUri = null;
+    private GoogleCloudContactcenterinsightsV1GcsSourceResponse(GoogleCloudContactcenterinsightsV1GcsSourceResponse $) {
+        this.audioUri = $.audioUri;
+        this.transcriptUri = $.transcriptUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1GcsSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String audioUri;
-        private String transcriptUri;
+        private GoogleCloudContactcenterinsightsV1GcsSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1GcsSourceResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1GcsSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioUri = defaults.audioUri;
-    	      this.transcriptUri = defaults.transcriptUri;
+            $ = new GoogleCloudContactcenterinsightsV1GcsSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioUri(String audioUri) {
-            this.audioUri = Objects.requireNonNull(audioUri);
+            $.audioUri = audioUri;
             return this;
         }
+
         public Builder transcriptUri(String transcriptUri) {
-            this.transcriptUri = Objects.requireNonNull(transcriptUri);
+            $.transcriptUri = transcriptUri;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1GcsSourceResponse build() {
-            return new GoogleCloudContactcenterinsightsV1GcsSourceResponse(audioUri, transcriptUri);
+        }
+
+        public GoogleCloudContactcenterinsightsV1GcsSourceResponse build() {
+            $.audioUri = Objects.requireNonNull($.audioUri, "expected parameter 'audioUri' to be non-null");
+            $.transcriptUri = Objects.requireNonNull($.transcriptUri, "expected parameter 'transcriptUri' to be non-null");
+            return $;
         }
     }
+
 }

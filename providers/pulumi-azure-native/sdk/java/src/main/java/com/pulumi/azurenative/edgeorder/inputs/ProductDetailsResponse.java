@@ -28,7 +28,7 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -39,7 +39,7 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="deviceDetails", required=true)
-      private final List<DeviceDetailsResponse> deviceDetails;
+    private List<DeviceDetailsResponse> deviceDetails;
 
     public List<DeviceDetailsResponse> deviceDetails() {
         return this.deviceDetails;
@@ -50,10 +50,10 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="displayInfo")
-      private final @Nullable DisplayInfoResponse displayInfo;
+    private @Nullable DisplayInfoResponse displayInfo;
 
     public Optional<DisplayInfoResponse> displayInfo() {
-        return this.displayInfo == null ? Optional.empty() : Optional.ofNullable(this.displayInfo);
+        return Optional.ofNullable(this.displayInfo);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="hierarchyInformation", required=true)
-      private final HierarchyInformationResponse hierarchyInformation;
+    private HierarchyInformationResponse hierarchyInformation;
 
     public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
@@ -72,85 +72,76 @@ public final class ProductDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="productDoubleEncryptionStatus", required=true)
-      private final String productDoubleEncryptionStatus;
+    private String productDoubleEncryptionStatus;
 
     public String productDoubleEncryptionStatus() {
         return this.productDoubleEncryptionStatus;
     }
 
-    public ProductDetailsResponse(
-        Integer count,
-        List<DeviceDetailsResponse> deviceDetails,
-        @Nullable DisplayInfoResponse displayInfo,
-        HierarchyInformationResponse hierarchyInformation,
-        String productDoubleEncryptionStatus) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.deviceDetails = Objects.requireNonNull(deviceDetails, "expected parameter 'deviceDetails' to be non-null");
-        this.displayInfo = displayInfo;
-        this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
-        this.productDoubleEncryptionStatus = Objects.requireNonNull(productDoubleEncryptionStatus, "expected parameter 'productDoubleEncryptionStatus' to be non-null");
-    }
+    private ProductDetailsResponse() {}
 
-    private ProductDetailsResponse() {
-        this.count = null;
-        this.deviceDetails = List.of();
-        this.displayInfo = null;
-        this.hierarchyInformation = null;
-        this.productDoubleEncryptionStatus = null;
+    private ProductDetailsResponse(ProductDetailsResponse $) {
+        this.count = $.count;
+        this.deviceDetails = $.deviceDetails;
+        this.displayInfo = $.displayInfo;
+        this.hierarchyInformation = $.hierarchyInformation;
+        this.productDoubleEncryptionStatus = $.productDoubleEncryptionStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private List<DeviceDetailsResponse> deviceDetails;
-        private @Nullable DisplayInfoResponse displayInfo;
-        private HierarchyInformationResponse hierarchyInformation;
-        private String productDoubleEncryptionStatus;
+        private ProductDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductDetailsResponse();
         }
 
         public Builder(ProductDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.deviceDetails = defaults.deviceDetails;
-    	      this.displayInfo = defaults.displayInfo;
-    	      this.hierarchyInformation = defaults.hierarchyInformation;
-    	      this.productDoubleEncryptionStatus = defaults.productDoubleEncryptionStatus;
+            $ = new ProductDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder deviceDetails(List<DeviceDetailsResponse> deviceDetails) {
-            this.deviceDetails = Objects.requireNonNull(deviceDetails);
+            $.deviceDetails = deviceDetails;
             return this;
         }
+
         public Builder deviceDetails(DeviceDetailsResponse... deviceDetails) {
             return deviceDetails(List.of(deviceDetails));
         }
+
         public Builder displayInfo(@Nullable DisplayInfoResponse displayInfo) {
-            this.displayInfo = displayInfo;
+            $.displayInfo = displayInfo;
             return this;
         }
+
         public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
-            this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
+            $.hierarchyInformation = hierarchyInformation;
             return this;
         }
+
         public Builder productDoubleEncryptionStatus(String productDoubleEncryptionStatus) {
-            this.productDoubleEncryptionStatus = Objects.requireNonNull(productDoubleEncryptionStatus);
+            $.productDoubleEncryptionStatus = productDoubleEncryptionStatus;
             return this;
-        }        public ProductDetailsResponse build() {
-            return new ProductDetailsResponse(count, deviceDetails, displayInfo, hierarchyInformation, productDoubleEncryptionStatus);
+        }
+
+        public ProductDetailsResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.deviceDetails = Objects.requireNonNull($.deviceDetails, "expected parameter 'deviceDetails' to be non-null");
+            $.hierarchyInformation = Objects.requireNonNull($.hierarchyInformation, "expected parameter 'hierarchyInformation' to be non-null");
+            $.productDoubleEncryptionStatus = Objects.requireNonNull($.productDoubleEncryptionStatus, "expected parameter 'productDoubleEncryptionStatus' to be non-null");
+            return $;
         }
     }
+
 }

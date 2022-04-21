@@ -5,7 +5,6 @@ package com.pulumi.aws.efs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class AccessPointRootDirectoryCreationInfoGetArgs extends com.pulum
      * 
      */
     @Import(name="ownerGid", required=true)
-      private final Output<Integer> ownerGid;
+    private Output<Integer> ownerGid;
 
     public Output<Integer> ownerGid() {
         return this.ownerGid;
@@ -31,7 +30,7 @@ public final class AccessPointRootDirectoryCreationInfoGetArgs extends com.pulum
      * 
      */
     @Import(name="ownerUid", required=true)
-      private final Output<Integer> ownerUid;
+    private Output<Integer> ownerUid;
 
     public Output<Integer> ownerUid() {
         return this.ownerUid;
@@ -42,76 +41,71 @@ public final class AccessPointRootDirectoryCreationInfoGetArgs extends com.pulum
      * 
      */
     @Import(name="permissions", required=true)
-      private final Output<String> permissions;
+    private Output<String> permissions;
 
     public Output<String> permissions() {
         return this.permissions;
     }
 
-    public AccessPointRootDirectoryCreationInfoGetArgs(
-        Output<Integer> ownerGid,
-        Output<Integer> ownerUid,
-        Output<String> permissions) {
-        this.ownerGid = Objects.requireNonNull(ownerGid, "expected parameter 'ownerGid' to be non-null");
-        this.ownerUid = Objects.requireNonNull(ownerUid, "expected parameter 'ownerUid' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-    }
+    private AccessPointRootDirectoryCreationInfoGetArgs() {}
 
-    private AccessPointRootDirectoryCreationInfoGetArgs() {
-        this.ownerGid = Codegen.empty();
-        this.ownerUid = Codegen.empty();
-        this.permissions = Codegen.empty();
+    private AccessPointRootDirectoryCreationInfoGetArgs(AccessPointRootDirectoryCreationInfoGetArgs $) {
+        this.ownerGid = $.ownerGid;
+        this.ownerUid = $.ownerUid;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointRootDirectoryCreationInfoGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> ownerGid;
-        private Output<Integer> ownerUid;
-        private Output<String> permissions;
+        private AccessPointRootDirectoryCreationInfoGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointRootDirectoryCreationInfoGetArgs();
         }
 
         public Builder(AccessPointRootDirectoryCreationInfoGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ownerGid = defaults.ownerGid;
-    	      this.ownerUid = defaults.ownerUid;
-    	      this.permissions = defaults.permissions;
+            $ = new AccessPointRootDirectoryCreationInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ownerGid(Output<Integer> ownerGid) {
-            this.ownerGid = Objects.requireNonNull(ownerGid);
+            $.ownerGid = ownerGid;
             return this;
         }
+
         public Builder ownerGid(Integer ownerGid) {
-            this.ownerGid = Output.of(Objects.requireNonNull(ownerGid));
-            return this;
+            return ownerGid(Output.of(ownerGid));
         }
+
         public Builder ownerUid(Output<Integer> ownerUid) {
-            this.ownerUid = Objects.requireNonNull(ownerUid);
+            $.ownerUid = ownerUid;
             return this;
         }
+
         public Builder ownerUid(Integer ownerUid) {
-            this.ownerUid = Output.of(Objects.requireNonNull(ownerUid));
-            return this;
+            return ownerUid(Output.of(ownerUid));
         }
+
         public Builder permissions(Output<String> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder permissions(String permissions) {
-            this.permissions = Output.of(Objects.requireNonNull(permissions));
-            return this;
-        }        public AccessPointRootDirectoryCreationInfoGetArgs build() {
-            return new AccessPointRootDirectoryCreationInfoGetArgs(ownerGid, ownerUid, permissions);
+            return permissions(Output.of(permissions));
+        }
+
+        public AccessPointRootDirectoryCreationInfoGetArgs build() {
+            $.ownerGid = Objects.requireNonNull($.ownerGid, "expected parameter 'ownerGid' to be non-null");
+            $.ownerUid = Objects.requireNonNull($.ownerUid, "expected parameter 'ownerUid' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class ConnectorScaleInPolicy extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="cpuUtilizationPercentage", required=true)
-      private final Integer cpuUtilizationPercentage;
+    private Integer cpuUtilizationPercentage;
 
     public Integer cpuUtilizationPercentage() {
         return this.cpuUtilizationPercentage;
     }
 
-    public ConnectorScaleInPolicy(Integer cpuUtilizationPercentage) {
-        this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage, "expected parameter 'cpuUtilizationPercentage' to be non-null");
-    }
+    private ConnectorScaleInPolicy() {}
 
-    private ConnectorScaleInPolicy() {
-        this.cpuUtilizationPercentage = null;
+    private ConnectorScaleInPolicy(ConnectorScaleInPolicy $) {
+        this.cpuUtilizationPercentage = $.cpuUtilizationPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorScaleInPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer cpuUtilizationPercentage;
+        private ConnectorScaleInPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorScaleInPolicy();
         }
 
         public Builder(ConnectorScaleInPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuUtilizationPercentage = defaults.cpuUtilizationPercentage;
+            $ = new ConnectorScaleInPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
-            this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
+            $.cpuUtilizationPercentage = cpuUtilizationPercentage;
             return this;
-        }        public ConnectorScaleInPolicy build() {
-            return new ConnectorScaleInPolicy(cpuUtilizationPercentage);
+        }
+
+        public ConnectorScaleInPolicy build() {
+            $.cpuUtilizationPercentage = Objects.requireNonNull($.cpuUtilizationPercentage, "expected parameter 'cpuUtilizationPercentage' to be non-null");
+            return $;
         }
     }
+
 }

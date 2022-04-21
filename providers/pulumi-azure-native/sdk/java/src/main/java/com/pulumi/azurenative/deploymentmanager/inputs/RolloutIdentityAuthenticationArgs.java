@@ -24,49 +24,49 @@ public final class RolloutIdentityAuthenticationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public RolloutIdentityAuthenticationArgs(Output<String> type) {
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private RolloutIdentityAuthenticationArgs() {}
 
-    private RolloutIdentityAuthenticationArgs() {
-        this.type = Codegen.empty();
+    private RolloutIdentityAuthenticationArgs(RolloutIdentityAuthenticationArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolloutIdentityAuthenticationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private RolloutIdentityAuthenticationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolloutIdentityAuthenticationArgs();
         }
 
         public Builder(RolloutIdentityAuthenticationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new RolloutIdentityAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RolloutIdentityAuthenticationArgs build() {
-            return new RolloutIdentityAuthenticationArgs(type);
+            return type(Output.of(type));
+        }
+
+        public RolloutIdentityAuthenticationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

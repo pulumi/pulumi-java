@@ -25,10 +25,10 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keySource")
-      private final @Nullable String keySource;
+    private @Nullable String keySource;
 
     public Optional<String> keySource() {
-        return this.keySource == null ? Optional.empty() : Optional.ofNullable(this.keySource);
+        return Optional.ofNullable(this.keySource);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class EncryptionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+    private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
-    public EncryptionResponse(
-        @Nullable String keySource,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
-        this.keySource = Codegen.stringProp("keySource").arg(keySource).def("Microsoft.KeyVault").getNullable();
-        this.keyVaultProperties = keyVaultProperties;
-    }
+    private EncryptionResponse() {}
 
-    private EncryptionResponse() {
-        this.keySource = null;
-        this.keyVaultProperties = null;
+    private EncryptionResponse(EncryptionResponse $) {
+        this.keySource = $.keySource;
+        this.keyVaultProperties = $.keyVaultProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keySource;
-        private @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+        private EncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionResponse();
         }
 
         public Builder(EncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keySource = defaults.keySource;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
+            $ = new EncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keySource(@Nullable String keySource) {
-            this.keySource = keySource;
+            $.keySource = keySource;
             return this;
         }
+
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
-        }        public EncryptionResponse build() {
-            return new EncryptionResponse(keySource, keyVaultProperties);
+        }
+
+        public EncryptionResponse build() {
+            $.keySource = Codegen.stringProp("keySource").arg($.keySource).def("Microsoft.KeyVault").getNullable();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.offazure.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="aadAuthority")
-      private final @Nullable Output<String> aadAuthority;
+    private @Nullable Output<String> aadAuthority;
 
-    public Output<String> aadAuthority() {
-        return this.aadAuthority == null ? Codegen.empty() : this.aadAuthority;
+    public Optional<Output<String>> aadAuthority() {
+        return Optional.ofNullable(this.aadAuthority);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable Output<String> applicationId;
+    private @Nullable Output<String> applicationId;
 
-    public Output<String> applicationId() {
-        return this.applicationId == null ? Codegen.empty() : this.applicationId;
+    public Optional<Output<String>> applicationId() {
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<String> audience;
+    private @Nullable Output<String> audience;
 
-    public Output<String> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<String>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="rawCertData")
-      private final @Nullable Output<String> rawCertData;
+    private @Nullable Output<String> rawCertData;
 
-    public Output<String> rawCertData() {
-        return this.rawCertData == null ? Codegen.empty() : this.rawCertData;
+    public Optional<Output<String>> rawCertData() {
+        return Optional.ofNullable(this.rawCertData);
     }
 
     /**
@@ -79,115 +79,98 @@ public final class SiteSpnPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public SiteSpnPropertiesArgs(
-        @Nullable Output<String> aadAuthority,
-        @Nullable Output<String> applicationId,
-        @Nullable Output<String> audience,
-        @Nullable Output<String> objectId,
-        @Nullable Output<String> rawCertData,
-        @Nullable Output<String> tenantId) {
-        this.aadAuthority = aadAuthority;
-        this.applicationId = applicationId;
-        this.audience = audience;
-        this.objectId = objectId;
-        this.rawCertData = rawCertData;
-        this.tenantId = tenantId;
-    }
+    private SiteSpnPropertiesArgs() {}
 
-    private SiteSpnPropertiesArgs() {
-        this.aadAuthority = Codegen.empty();
-        this.applicationId = Codegen.empty();
-        this.audience = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.rawCertData = Codegen.empty();
-        this.tenantId = Codegen.empty();
+    private SiteSpnPropertiesArgs(SiteSpnPropertiesArgs $) {
+        this.aadAuthority = $.aadAuthority;
+        this.applicationId = $.applicationId;
+        this.audience = $.audience;
+        this.objectId = $.objectId;
+        this.rawCertData = $.rawCertData;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteSpnPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aadAuthority;
-        private @Nullable Output<String> applicationId;
-        private @Nullable Output<String> audience;
-        private @Nullable Output<String> objectId;
-        private @Nullable Output<String> rawCertData;
-        private @Nullable Output<String> tenantId;
+        private SiteSpnPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteSpnPropertiesArgs();
         }
 
         public Builder(SiteSpnPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadAuthority = defaults.aadAuthority;
-    	      this.applicationId = defaults.applicationId;
-    	      this.audience = defaults.audience;
-    	      this.objectId = defaults.objectId;
-    	      this.rawCertData = defaults.rawCertData;
-    	      this.tenantId = defaults.tenantId;
+            $ = new SiteSpnPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aadAuthority(@Nullable Output<String> aadAuthority) {
-            this.aadAuthority = aadAuthority;
+            $.aadAuthority = aadAuthority;
             return this;
         }
-        public Builder aadAuthority(@Nullable String aadAuthority) {
-            this.aadAuthority = Codegen.ofNullable(aadAuthority);
-            return this;
+
+        public Builder aadAuthority(String aadAuthority) {
+            return aadAuthority(Output.of(aadAuthority));
         }
+
         public Builder applicationId(@Nullable Output<String> applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
-        public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Codegen.ofNullable(applicationId);
-            return this;
+
+        public Builder applicationId(String applicationId) {
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder audience(@Nullable Output<String> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable String audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(String audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
+
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
         }
+
         public Builder rawCertData(@Nullable Output<String> rawCertData) {
-            this.rawCertData = rawCertData;
+            $.rawCertData = rawCertData;
             return this;
         }
-        public Builder rawCertData(@Nullable String rawCertData) {
-            this.rawCertData = Codegen.ofNullable(rawCertData);
-            return this;
+
+        public Builder rawCertData(String rawCertData) {
+            return rawCertData(Output.of(rawCertData));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public SiteSpnPropertiesArgs build() {
-            return new SiteSpnPropertiesArgs(aadAuthority, applicationId, audience, objectId, rawCertData, tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public SiteSpnPropertiesArgs build() {
+            return $;
         }
     }
+
 }

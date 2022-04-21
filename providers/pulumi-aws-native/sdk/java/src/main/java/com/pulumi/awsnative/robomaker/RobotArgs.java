@@ -7,9 +7,9 @@ import com.pulumi.awsnative.robomaker.enums.RobotArchitecture;
 import com.pulumi.awsnative.robomaker.inputs.RobotTagsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class RobotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="architecture", required=true)
-      private final Output<RobotArchitecture> architecture;
+    private Output<RobotArchitecture> architecture;
 
     public Output<RobotArchitecture> architecture() {
         return this.architecture;
@@ -33,10 +33,10 @@ public final class RobotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleet")
-      private final @Nullable Output<String> fleet;
+    private @Nullable Output<String> fleet;
 
-    public Output<String> fleet() {
-        return this.fleet == null ? Codegen.empty() : this.fleet;
+    public Optional<Output<String>> fleet() {
+        return Optional.ofNullable(this.fleet);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class RobotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="greengrassGroupId", required=true)
-      private final Output<String> greengrassGroupId;
+    private Output<String> greengrassGroupId;
 
     public Output<String> greengrassGroupId() {
         return this.greengrassGroupId;
@@ -55,109 +55,97 @@ public final class RobotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<RobotTagsArgs> tags;
+    private @Nullable Output<RobotTagsArgs> tags;
 
-    public Output<RobotTagsArgs> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<RobotTagsArgs>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RobotArgs(
-        Output<RobotArchitecture> architecture,
-        @Nullable Output<String> fleet,
-        Output<String> greengrassGroupId,
-        @Nullable Output<String> name,
-        @Nullable Output<RobotTagsArgs> tags) {
-        this.architecture = Objects.requireNonNull(architecture, "expected parameter 'architecture' to be non-null");
-        this.fleet = fleet;
-        this.greengrassGroupId = Objects.requireNonNull(greengrassGroupId, "expected parameter 'greengrassGroupId' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private RobotArgs() {}
 
-    private RobotArgs() {
-        this.architecture = Codegen.empty();
-        this.fleet = Codegen.empty();
-        this.greengrassGroupId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RobotArgs(RobotArgs $) {
+        this.architecture = $.architecture;
+        this.fleet = $.fleet;
+        this.greengrassGroupId = $.greengrassGroupId;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RobotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RobotArchitecture> architecture;
-        private @Nullable Output<String> fleet;
-        private Output<String> greengrassGroupId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<RobotTagsArgs> tags;
+        private RobotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RobotArgs();
         }
 
         public Builder(RobotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.fleet = defaults.fleet;
-    	      this.greengrassGroupId = defaults.greengrassGroupId;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new RobotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(Output<RobotArchitecture> architecture) {
-            this.architecture = Objects.requireNonNull(architecture);
+            $.architecture = architecture;
             return this;
         }
+
         public Builder architecture(RobotArchitecture architecture) {
-            this.architecture = Output.of(Objects.requireNonNull(architecture));
-            return this;
+            return architecture(Output.of(architecture));
         }
+
         public Builder fleet(@Nullable Output<String> fleet) {
-            this.fleet = fleet;
+            $.fleet = fleet;
             return this;
         }
-        public Builder fleet(@Nullable String fleet) {
-            this.fleet = Codegen.ofNullable(fleet);
-            return this;
+
+        public Builder fleet(String fleet) {
+            return fleet(Output.of(fleet));
         }
+
         public Builder greengrassGroupId(Output<String> greengrassGroupId) {
-            this.greengrassGroupId = Objects.requireNonNull(greengrassGroupId);
+            $.greengrassGroupId = greengrassGroupId;
             return this;
         }
+
         public Builder greengrassGroupId(String greengrassGroupId) {
-            this.greengrassGroupId = Output.of(Objects.requireNonNull(greengrassGroupId));
-            return this;
+            return greengrassGroupId(Output.of(greengrassGroupId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<RobotTagsArgs> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable RobotTagsArgs tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public RobotArgs build() {
-            return new RobotArgs(architecture, fleet, greengrassGroupId, name, tags);
+
+        public Builder tags(RobotTagsArgs tags) {
+            return tags(Output.of(tags));
+        }
+
+        public RobotArgs build() {
+            $.architecture = Objects.requireNonNull($.architecture, "expected parameter 'architecture' to be non-null");
+            $.greengrassGroupId = Objects.requireNonNull($.greengrassGroupId, "expected parameter 'greengrassGroupId' to be non-null");
+            return $;
         }
     }
+
 }

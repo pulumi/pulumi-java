@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class PolicyAlternativeNameServerConfigArgs extends com.pulumi.reso
     public static final PolicyAlternativeNameServerConfigArgs Empty = new PolicyAlternativeNameServerConfigArgs();
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -29,66 +29,62 @@ public final class PolicyAlternativeNameServerConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="targetNameServers")
-      private final @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+    private @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
-    public Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers() {
-        return this.targetNameServers == null ? Codegen.empty() : this.targetNameServers;
+    public Optional<Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>>> targetNameServers() {
+        return Optional.ofNullable(this.targetNameServers);
     }
 
-    public PolicyAlternativeNameServerConfigArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
-        this.kind = kind;
-        this.targetNameServers = targetNameServers;
-    }
+    private PolicyAlternativeNameServerConfigArgs() {}
 
-    private PolicyAlternativeNameServerConfigArgs() {
-        this.kind = Codegen.empty();
-        this.targetNameServers = Codegen.empty();
+    private PolicyAlternativeNameServerConfigArgs(PolicyAlternativeNameServerConfigArgs $) {
+        this.kind = $.kind;
+        this.targetNameServers = $.targetNameServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAlternativeNameServerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+        private PolicyAlternativeNameServerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAlternativeNameServerConfigArgs();
         }
 
         public Builder(PolicyAlternativeNameServerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.targetNameServers = defaults.targetNameServers;
+            $ = new PolicyAlternativeNameServerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder targetNameServers(@Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
-            this.targetNameServers = targetNameServers;
+            $.targetNameServers = targetNameServers;
             return this;
         }
-        public Builder targetNameServers(@Nullable List<PolicyAlternativeNameServerConfigTargetNameServerArgs> targetNameServers) {
-            this.targetNameServers = Codegen.ofNullable(targetNameServers);
-            return this;
+
+        public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerArgs> targetNameServers) {
+            return targetNameServers(Output.of(targetNameServers));
         }
+
         public Builder targetNameServers(PolicyAlternativeNameServerConfigTargetNameServerArgs... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
-        }        public PolicyAlternativeNameServerConfigArgs build() {
-            return new PolicyAlternativeNameServerConfigArgs(kind, targetNameServers);
+        }
+
+        public PolicyAlternativeNameServerConfigArgs build() {
+            return $;
         }
     }
+
 }

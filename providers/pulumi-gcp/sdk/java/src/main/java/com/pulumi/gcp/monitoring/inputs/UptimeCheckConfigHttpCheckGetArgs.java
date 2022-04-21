@@ -5,13 +5,13 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.UptimeCheckConfigHttpCheckAuthInfoGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="authInfo")
-      private final @Nullable Output<UptimeCheckConfigHttpCheckAuthInfoGetArgs> authInfo;
+    private @Nullable Output<UptimeCheckConfigHttpCheckAuthInfoGetArgs> authInfo;
 
-    public Output<UptimeCheckConfigHttpCheckAuthInfoGetArgs> authInfo() {
-        return this.authInfo == null ? Codegen.empty() : this.authInfo;
+    public Optional<Output<UptimeCheckConfigHttpCheckAuthInfoGetArgs>> authInfo() {
+        return Optional.ofNullable(this.authInfo);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<Map<String,String>> headers;
+    private @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<Map<String,String>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="maskHeaders")
-      private final @Nullable Output<Boolean> maskHeaders;
+    private @Nullable Output<Boolean> maskHeaders;
 
-    public Output<Boolean> maskHeaders() {
-        return this.maskHeaders == null ? Codegen.empty() : this.maskHeaders;
+    public Optional<Output<Boolean>> maskHeaders() {
+        return Optional.ofNullable(this.maskHeaders);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="requestMethod")
-      private final @Nullable Output<String> requestMethod;
+    private @Nullable Output<String> requestMethod;
 
-    public Output<String> requestMethod() {
-        return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
+    public Optional<Output<String>> requestMethod() {
+        return Optional.ofNullable(this.requestMethod);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="useSsl")
-      private final @Nullable Output<Boolean> useSsl;
+    private @Nullable Output<Boolean> useSsl;
 
-    public Output<Boolean> useSsl() {
-        return this.useSsl == null ? Codegen.empty() : this.useSsl;
+    public Optional<Output<Boolean>> useSsl() {
+        return Optional.ofNullable(this.useSsl);
     }
 
     /**
@@ -127,167 +127,138 @@ public final class UptimeCheckConfigHttpCheckGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="validateSsl")
-      private final @Nullable Output<Boolean> validateSsl;
+    private @Nullable Output<Boolean> validateSsl;
 
-    public Output<Boolean> validateSsl() {
-        return this.validateSsl == null ? Codegen.empty() : this.validateSsl;
+    public Optional<Output<Boolean>> validateSsl() {
+        return Optional.ofNullable(this.validateSsl);
     }
 
-    public UptimeCheckConfigHttpCheckGetArgs(
-        @Nullable Output<UptimeCheckConfigHttpCheckAuthInfoGetArgs> authInfo,
-        @Nullable Output<String> body,
-        @Nullable Output<String> contentType,
-        @Nullable Output<Map<String,String>> headers,
-        @Nullable Output<Boolean> maskHeaders,
-        @Nullable Output<String> path,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> requestMethod,
-        @Nullable Output<Boolean> useSsl,
-        @Nullable Output<Boolean> validateSsl) {
-        this.authInfo = authInfo;
-        this.body = body;
-        this.contentType = contentType;
-        this.headers = headers;
-        this.maskHeaders = maskHeaders;
-        this.path = path;
-        this.port = port;
-        this.requestMethod = requestMethod;
-        this.useSsl = useSsl;
-        this.validateSsl = validateSsl;
-    }
+    private UptimeCheckConfigHttpCheckGetArgs() {}
 
-    private UptimeCheckConfigHttpCheckGetArgs() {
-        this.authInfo = Codegen.empty();
-        this.body = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.maskHeaders = Codegen.empty();
-        this.path = Codegen.empty();
-        this.port = Codegen.empty();
-        this.requestMethod = Codegen.empty();
-        this.useSsl = Codegen.empty();
-        this.validateSsl = Codegen.empty();
+    private UptimeCheckConfigHttpCheckGetArgs(UptimeCheckConfigHttpCheckGetArgs $) {
+        this.authInfo = $.authInfo;
+        this.body = $.body;
+        this.contentType = $.contentType;
+        this.headers = $.headers;
+        this.maskHeaders = $.maskHeaders;
+        this.path = $.path;
+        this.port = $.port;
+        this.requestMethod = $.requestMethod;
+        this.useSsl = $.useSsl;
+        this.validateSsl = $.validateSsl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UptimeCheckConfigHttpCheckGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<UptimeCheckConfigHttpCheckAuthInfoGetArgs> authInfo;
-        private @Nullable Output<String> body;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<Map<String,String>> headers;
-        private @Nullable Output<Boolean> maskHeaders;
-        private @Nullable Output<String> path;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> requestMethod;
-        private @Nullable Output<Boolean> useSsl;
-        private @Nullable Output<Boolean> validateSsl;
+        private UptimeCheckConfigHttpCheckGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UptimeCheckConfigHttpCheckGetArgs();
         }
 
         public Builder(UptimeCheckConfigHttpCheckGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authInfo = defaults.authInfo;
-    	      this.body = defaults.body;
-    	      this.contentType = defaults.contentType;
-    	      this.headers = defaults.headers;
-    	      this.maskHeaders = defaults.maskHeaders;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.requestMethod = defaults.requestMethod;
-    	      this.useSsl = defaults.useSsl;
-    	      this.validateSsl = defaults.validateSsl;
+            $ = new UptimeCheckConfigHttpCheckGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authInfo(@Nullable Output<UptimeCheckConfigHttpCheckAuthInfoGetArgs> authInfo) {
-            this.authInfo = authInfo;
+            $.authInfo = authInfo;
             return this;
         }
-        public Builder authInfo(@Nullable UptimeCheckConfigHttpCheckAuthInfoGetArgs authInfo) {
-            this.authInfo = Codegen.ofNullable(authInfo);
-            return this;
+
+        public Builder authInfo(UptimeCheckConfigHttpCheckAuthInfoGetArgs authInfo) {
+            return authInfo(Output.of(authInfo));
         }
+
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(Map<String,String> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder maskHeaders(@Nullable Output<Boolean> maskHeaders) {
-            this.maskHeaders = maskHeaders;
+            $.maskHeaders = maskHeaders;
             return this;
         }
-        public Builder maskHeaders(@Nullable Boolean maskHeaders) {
-            this.maskHeaders = Codegen.ofNullable(maskHeaders);
-            return this;
+
+        public Builder maskHeaders(Boolean maskHeaders) {
+            return maskHeaders(Output.of(maskHeaders));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder requestMethod(@Nullable Output<String> requestMethod) {
-            this.requestMethod = requestMethod;
+            $.requestMethod = requestMethod;
             return this;
         }
-        public Builder requestMethod(@Nullable String requestMethod) {
-            this.requestMethod = Codegen.ofNullable(requestMethod);
-            return this;
+
+        public Builder requestMethod(String requestMethod) {
+            return requestMethod(Output.of(requestMethod));
         }
+
         public Builder useSsl(@Nullable Output<Boolean> useSsl) {
-            this.useSsl = useSsl;
+            $.useSsl = useSsl;
             return this;
         }
-        public Builder useSsl(@Nullable Boolean useSsl) {
-            this.useSsl = Codegen.ofNullable(useSsl);
-            return this;
+
+        public Builder useSsl(Boolean useSsl) {
+            return useSsl(Output.of(useSsl));
         }
+
         public Builder validateSsl(@Nullable Output<Boolean> validateSsl) {
-            this.validateSsl = validateSsl;
+            $.validateSsl = validateSsl;
             return this;
         }
-        public Builder validateSsl(@Nullable Boolean validateSsl) {
-            this.validateSsl = Codegen.ofNullable(validateSsl);
-            return this;
-        }        public UptimeCheckConfigHttpCheckGetArgs build() {
-            return new UptimeCheckConfigHttpCheckGetArgs(authInfo, body, contentType, headers, maskHeaders, path, port, requestMethod, useSsl, validateSsl);
+
+        public Builder validateSsl(Boolean validateSsl) {
+            return validateSsl(Output.of(validateSsl));
+        }
+
+        public UptimeCheckConfigHttpCheckGetArgs build() {
+            return $;
         }
     }
+
 }

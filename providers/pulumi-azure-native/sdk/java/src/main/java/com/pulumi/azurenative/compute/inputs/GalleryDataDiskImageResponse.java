@@ -25,10 +25,10 @@ public final class GalleryDataDiskImageResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="hostCaching")
-      private final @Nullable String hostCaching;
+    private @Nullable String hostCaching;
 
     public Optional<String> hostCaching() {
-        return this.hostCaching == null ? Optional.empty() : Optional.ofNullable(this.hostCaching);
+        return Optional.ofNullable(this.hostCaching);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class GalleryDataDiskImageResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="lun", required=true)
-      private final Integer lun;
+    private Integer lun;
 
     public Integer lun() {
         return this.lun;
@@ -47,7 +47,7 @@ public final class GalleryDataDiskImageResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="sizeInGB", required=true)
-      private final Integer sizeInGB;
+    private Integer sizeInGB;
 
     public Integer sizeInGB() {
         return this.sizeInGB;
@@ -58,73 +58,64 @@ public final class GalleryDataDiskImageResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="source")
-      private final @Nullable GalleryArtifactVersionSourceResponse source;
+    private @Nullable GalleryArtifactVersionSourceResponse source;
 
     public Optional<GalleryArtifactVersionSourceResponse> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
-    public GalleryDataDiskImageResponse(
-        @Nullable String hostCaching,
-        Integer lun,
-        Integer sizeInGB,
-        @Nullable GalleryArtifactVersionSourceResponse source) {
-        this.hostCaching = hostCaching;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.sizeInGB = Objects.requireNonNull(sizeInGB, "expected parameter 'sizeInGB' to be non-null");
-        this.source = source;
-    }
+    private GalleryDataDiskImageResponse() {}
 
-    private GalleryDataDiskImageResponse() {
-        this.hostCaching = null;
-        this.lun = null;
-        this.sizeInGB = null;
-        this.source = null;
+    private GalleryDataDiskImageResponse(GalleryDataDiskImageResponse $) {
+        this.hostCaching = $.hostCaching;
+        this.lun = $.lun;
+        this.sizeInGB = $.sizeInGB;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryDataDiskImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String hostCaching;
-        private Integer lun;
-        private Integer sizeInGB;
-        private @Nullable GalleryArtifactVersionSourceResponse source;
+        private GalleryDataDiskImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryDataDiskImageResponse();
         }
 
         public Builder(GalleryDataDiskImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostCaching = defaults.hostCaching;
-    	      this.lun = defaults.lun;
-    	      this.sizeInGB = defaults.sizeInGB;
-    	      this.source = defaults.source;
+            $ = new GalleryDataDiskImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostCaching(@Nullable String hostCaching) {
-            this.hostCaching = hostCaching;
+            $.hostCaching = hostCaching;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder sizeInGB(Integer sizeInGB) {
-            this.sizeInGB = Objects.requireNonNull(sizeInGB);
+            $.sizeInGB = sizeInGB;
             return this;
         }
+
         public Builder source(@Nullable GalleryArtifactVersionSourceResponse source) {
-            this.source = source;
+            $.source = source;
             return this;
-        }        public GalleryDataDiskImageResponse build() {
-            return new GalleryDataDiskImageResponse(hostCaching, lun, sizeInGB, source);
+        }
+
+        public GalleryDataDiskImageResponse build() {
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            $.sizeInGB = Objects.requireNonNull($.sizeInGB, "expected parameter 'sizeInGB' to be non-null");
+            return $;
         }
     }
+
 }

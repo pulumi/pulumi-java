@@ -23,10 +23,10 @@ public final class ImageDescriptorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="digest")
-      private final @Nullable String digest;
+    private @Nullable String digest;
 
     public Optional<String> digest() {
-        return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
+        return Optional.ofNullable(this.digest);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ImageDescriptorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="registry")
-      private final @Nullable String registry;
+    private @Nullable String registry;
 
     public Optional<String> registry() {
-        return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
+        return Optional.ofNullable(this.registry);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ImageDescriptorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="repository")
-      private final @Nullable String repository;
+    private @Nullable String repository;
 
     public Optional<String> repository() {
-        return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
+        return Optional.ofNullable(this.repository);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ImageDescriptorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="tag")
-      private final @Nullable String tag;
+    private @Nullable String tag;
 
     public Optional<String> tag() {
-        return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
+        return Optional.ofNullable(this.tag);
     }
 
-    public ImageDescriptorResponse(
-        @Nullable String digest,
-        @Nullable String registry,
-        @Nullable String repository,
-        @Nullable String tag) {
-        this.digest = digest;
-        this.registry = registry;
-        this.repository = repository;
-        this.tag = tag;
-    }
+    private ImageDescriptorResponse() {}
 
-    private ImageDescriptorResponse() {
-        this.digest = null;
-        this.registry = null;
-        this.repository = null;
-        this.tag = null;
+    private ImageDescriptorResponse(ImageDescriptorResponse $) {
+        this.digest = $.digest;
+        this.registry = $.registry;
+        this.repository = $.repository;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String digest;
-        private @Nullable String registry;
-        private @Nullable String repository;
-        private @Nullable String tag;
+        private ImageDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageDescriptorResponse();
         }
 
         public Builder(ImageDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digest = defaults.digest;
-    	      this.registry = defaults.registry;
-    	      this.repository = defaults.repository;
-    	      this.tag = defaults.tag;
+            $ = new ImageDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder digest(@Nullable String digest) {
-            this.digest = digest;
+            $.digest = digest;
             return this;
         }
+
         public Builder registry(@Nullable String registry) {
-            this.registry = registry;
+            $.registry = registry;
             return this;
         }
+
         public Builder repository(@Nullable String repository) {
-            this.repository = repository;
+            $.repository = repository;
             return this;
         }
+
         public Builder tag(@Nullable String tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
-        }        public ImageDescriptorResponse build() {
-            return new ImageDescriptorResponse(digest, registry, repository, tag);
+        }
+
+        public ImageDescriptorResponse build() {
+            return $;
         }
     }
+
 }

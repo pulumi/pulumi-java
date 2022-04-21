@@ -6,11 +6,11 @@ package com.pulumi.azurenative.network;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class VirtualNetworkLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class VirtualNetworkLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privateZoneName", required=true)
-      private final Output<String> privateZoneName;
+    private Output<String> privateZoneName;
 
     public Output<String> privateZoneName() {
         return this.privateZoneName;
@@ -45,10 +45,10 @@ public final class VirtualNetworkLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="registrationEnabled")
-      private final @Nullable Output<Boolean> registrationEnabled;
+    private @Nullable Output<Boolean> registrationEnabled;
 
-    public Output<Boolean> registrationEnabled() {
-        return this.registrationEnabled == null ? Codegen.empty() : this.registrationEnabled;
+    public Optional<Output<Boolean>> registrationEnabled() {
+        return Optional.ofNullable(this.registrationEnabled);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class VirtualNetworkLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,10 +67,10 @@ public final class VirtualNetworkLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class VirtualNetworkLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualNetwork")
-      private final @Nullable Output<SubResourceArgs> virtualNetwork;
+    private @Nullable Output<SubResourceArgs> virtualNetwork;
 
-    public Output<SubResourceArgs> virtualNetwork() {
-        return this.virtualNetwork == null ? Codegen.empty() : this.virtualNetwork;
+    public Optional<Output<SubResourceArgs>> virtualNetwork() {
+        return Optional.ofNullable(this.virtualNetwork);
     }
 
     /**
@@ -89,128 +89,110 @@ public final class VirtualNetworkLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="virtualNetworkLinkName")
-      private final @Nullable Output<String> virtualNetworkLinkName;
+    private @Nullable Output<String> virtualNetworkLinkName;
 
-    public Output<String> virtualNetworkLinkName() {
-        return this.virtualNetworkLinkName == null ? Codegen.empty() : this.virtualNetworkLinkName;
+    public Optional<Output<String>> virtualNetworkLinkName() {
+        return Optional.ofNullable(this.virtualNetworkLinkName);
     }
 
-    public VirtualNetworkLinkArgs(
-        @Nullable Output<String> location,
-        Output<String> privateZoneName,
-        @Nullable Output<Boolean> registrationEnabled,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<SubResourceArgs> virtualNetwork,
-        @Nullable Output<String> virtualNetworkLinkName) {
-        this.location = location;
-        this.privateZoneName = Objects.requireNonNull(privateZoneName, "expected parameter 'privateZoneName' to be non-null");
-        this.registrationEnabled = registrationEnabled;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.virtualNetwork = virtualNetwork;
-        this.virtualNetworkLinkName = virtualNetworkLinkName;
-    }
+    private VirtualNetworkLinkArgs() {}
 
-    private VirtualNetworkLinkArgs() {
-        this.location = Codegen.empty();
-        this.privateZoneName = Codegen.empty();
-        this.registrationEnabled = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.virtualNetwork = Codegen.empty();
-        this.virtualNetworkLinkName = Codegen.empty();
+    private VirtualNetworkLinkArgs(VirtualNetworkLinkArgs $) {
+        this.location = $.location;
+        this.privateZoneName = $.privateZoneName;
+        this.registrationEnabled = $.registrationEnabled;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.virtualNetwork = $.virtualNetwork;
+        this.virtualNetworkLinkName = $.virtualNetworkLinkName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private Output<String> privateZoneName;
-        private @Nullable Output<Boolean> registrationEnabled;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<SubResourceArgs> virtualNetwork;
-        private @Nullable Output<String> virtualNetworkLinkName;
+        private VirtualNetworkLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkLinkArgs();
         }
 
         public Builder(VirtualNetworkLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.privateZoneName = defaults.privateZoneName;
-    	      this.registrationEnabled = defaults.registrationEnabled;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.virtualNetwork = defaults.virtualNetwork;
-    	      this.virtualNetworkLinkName = defaults.virtualNetworkLinkName;
+            $ = new VirtualNetworkLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder privateZoneName(Output<String> privateZoneName) {
-            this.privateZoneName = Objects.requireNonNull(privateZoneName);
+            $.privateZoneName = privateZoneName;
             return this;
         }
+
         public Builder privateZoneName(String privateZoneName) {
-            this.privateZoneName = Output.of(Objects.requireNonNull(privateZoneName));
-            return this;
+            return privateZoneName(Output.of(privateZoneName));
         }
+
         public Builder registrationEnabled(@Nullable Output<Boolean> registrationEnabled) {
-            this.registrationEnabled = registrationEnabled;
+            $.registrationEnabled = registrationEnabled;
             return this;
         }
-        public Builder registrationEnabled(@Nullable Boolean registrationEnabled) {
-            this.registrationEnabled = Codegen.ofNullable(registrationEnabled);
-            return this;
+
+        public Builder registrationEnabled(Boolean registrationEnabled) {
+            return registrationEnabled(Output.of(registrationEnabled));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder virtualNetwork(@Nullable Output<SubResourceArgs> virtualNetwork) {
-            this.virtualNetwork = virtualNetwork;
+            $.virtualNetwork = virtualNetwork;
             return this;
         }
-        public Builder virtualNetwork(@Nullable SubResourceArgs virtualNetwork) {
-            this.virtualNetwork = Codegen.ofNullable(virtualNetwork);
-            return this;
+
+        public Builder virtualNetwork(SubResourceArgs virtualNetwork) {
+            return virtualNetwork(Output.of(virtualNetwork));
         }
+
         public Builder virtualNetworkLinkName(@Nullable Output<String> virtualNetworkLinkName) {
-            this.virtualNetworkLinkName = virtualNetworkLinkName;
+            $.virtualNetworkLinkName = virtualNetworkLinkName;
             return this;
         }
-        public Builder virtualNetworkLinkName(@Nullable String virtualNetworkLinkName) {
-            this.virtualNetworkLinkName = Codegen.ofNullable(virtualNetworkLinkName);
-            return this;
-        }        public VirtualNetworkLinkArgs build() {
-            return new VirtualNetworkLinkArgs(location, privateZoneName, registrationEnabled, resourceGroupName, tags, virtualNetwork, virtualNetworkLinkName);
+
+        public Builder virtualNetworkLinkName(String virtualNetworkLinkName) {
+            return virtualNetworkLinkName(Output.of(virtualNetworkLinkName));
+        }
+
+        public VirtualNetworkLinkArgs build() {
+            $.privateZoneName = Objects.requireNonNull($.privateZoneName, "expected parameter 'privateZoneName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

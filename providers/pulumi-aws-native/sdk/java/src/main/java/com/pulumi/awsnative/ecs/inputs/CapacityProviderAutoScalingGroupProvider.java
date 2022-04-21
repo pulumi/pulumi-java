@@ -17,78 +17,71 @@ public final class CapacityProviderAutoScalingGroupProvider extends com.pulumi.r
     public static final CapacityProviderAutoScalingGroupProvider Empty = new CapacityProviderAutoScalingGroupProvider();
 
     @Import(name="autoScalingGroupArn", required=true)
-      private final String autoScalingGroupArn;
+    private String autoScalingGroupArn;
 
     public String autoScalingGroupArn() {
         return this.autoScalingGroupArn;
     }
 
     @Import(name="managedScaling")
-      private final @Nullable CapacityProviderManagedScaling managedScaling;
+    private @Nullable CapacityProviderManagedScaling managedScaling;
 
     public Optional<CapacityProviderManagedScaling> managedScaling() {
-        return this.managedScaling == null ? Optional.empty() : Optional.ofNullable(this.managedScaling);
+        return Optional.ofNullable(this.managedScaling);
     }
 
     @Import(name="managedTerminationProtection")
-      private final @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection;
+    private @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection;
 
     public Optional<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection() {
-        return this.managedTerminationProtection == null ? Optional.empty() : Optional.ofNullable(this.managedTerminationProtection);
+        return Optional.ofNullable(this.managedTerminationProtection);
     }
 
-    public CapacityProviderAutoScalingGroupProvider(
-        String autoScalingGroupArn,
-        @Nullable CapacityProviderManagedScaling managedScaling,
-        @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection) {
-        this.autoScalingGroupArn = Objects.requireNonNull(autoScalingGroupArn, "expected parameter 'autoScalingGroupArn' to be non-null");
-        this.managedScaling = managedScaling;
-        this.managedTerminationProtection = managedTerminationProtection;
-    }
+    private CapacityProviderAutoScalingGroupProvider() {}
 
-    private CapacityProviderAutoScalingGroupProvider() {
-        this.autoScalingGroupArn = null;
-        this.managedScaling = null;
-        this.managedTerminationProtection = null;
+    private CapacityProviderAutoScalingGroupProvider(CapacityProviderAutoScalingGroupProvider $) {
+        this.autoScalingGroupArn = $.autoScalingGroupArn;
+        this.managedScaling = $.managedScaling;
+        this.managedTerminationProtection = $.managedTerminationProtection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CapacityProviderAutoScalingGroupProvider defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoScalingGroupArn;
-        private @Nullable CapacityProviderManagedScaling managedScaling;
-        private @Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection;
+        private CapacityProviderAutoScalingGroupProvider $;
 
         public Builder() {
-    	      // Empty
+            $ = new CapacityProviderAutoScalingGroupProvider();
         }
 
         public Builder(CapacityProviderAutoScalingGroupProvider defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScalingGroupArn = defaults.autoScalingGroupArn;
-    	      this.managedScaling = defaults.managedScaling;
-    	      this.managedTerminationProtection = defaults.managedTerminationProtection;
+            $ = new CapacityProviderAutoScalingGroupProvider(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScalingGroupArn(String autoScalingGroupArn) {
-            this.autoScalingGroupArn = Objects.requireNonNull(autoScalingGroupArn);
+            $.autoScalingGroupArn = autoScalingGroupArn;
             return this;
         }
+
         public Builder managedScaling(@Nullable CapacityProviderManagedScaling managedScaling) {
-            this.managedScaling = managedScaling;
+            $.managedScaling = managedScaling;
             return this;
         }
+
         public Builder managedTerminationProtection(@Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection) {
-            this.managedTerminationProtection = managedTerminationProtection;
+            $.managedTerminationProtection = managedTerminationProtection;
             return this;
-        }        public CapacityProviderAutoScalingGroupProvider build() {
-            return new CapacityProviderAutoScalingGroupProvider(autoScalingGroupArn, managedScaling, managedTerminationProtection);
+        }
+
+        public CapacityProviderAutoScalingGroupProvider build() {
+            $.autoScalingGroupArn = Objects.requireNonNull($.autoScalingGroupArn, "expected parameter 'autoScalingGroupArn' to be non-null");
+            return $;
         }
     }
+
 }

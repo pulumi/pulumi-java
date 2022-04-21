@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apikeys_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class V2BrowserKeyRestrictionsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="allowedReferrers")
-      private final @Nullable Output<List<String>> allowedReferrers;
+    private @Nullable Output<List<String>> allowedReferrers;
 
-    public Output<List<String>> allowedReferrers() {
-        return this.allowedReferrers == null ? Codegen.empty() : this.allowedReferrers;
+    public Optional<Output<List<String>>> allowedReferrers() {
+        return Optional.ofNullable(this.allowedReferrers);
     }
 
-    public V2BrowserKeyRestrictionsArgs(@Nullable Output<List<String>> allowedReferrers) {
-        this.allowedReferrers = allowedReferrers;
-    }
+    private V2BrowserKeyRestrictionsArgs() {}
 
-    private V2BrowserKeyRestrictionsArgs() {
-        this.allowedReferrers = Codegen.empty();
+    private V2BrowserKeyRestrictionsArgs(V2BrowserKeyRestrictionsArgs $) {
+        this.allowedReferrers = $.allowedReferrers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2BrowserKeyRestrictionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedReferrers;
+        private V2BrowserKeyRestrictionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2BrowserKeyRestrictionsArgs();
         }
 
         public Builder(V2BrowserKeyRestrictionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedReferrers = defaults.allowedReferrers;
+            $ = new V2BrowserKeyRestrictionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedReferrers(@Nullable Output<List<String>> allowedReferrers) {
-            this.allowedReferrers = allowedReferrers;
+            $.allowedReferrers = allowedReferrers;
             return this;
         }
-        public Builder allowedReferrers(@Nullable List<String> allowedReferrers) {
-            this.allowedReferrers = Codegen.ofNullable(allowedReferrers);
-            return this;
+
+        public Builder allowedReferrers(List<String> allowedReferrers) {
+            return allowedReferrers(Output.of(allowedReferrers));
         }
+
         public Builder allowedReferrers(String... allowedReferrers) {
             return allowedReferrers(List.of(allowedReferrers));
-        }        public V2BrowserKeyRestrictionsArgs build() {
-            return new V2BrowserKeyRestrictionsArgs(allowedReferrers);
+        }
+
+        public V2BrowserKeyRestrictionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class UniformShardingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numShards", required=true)
-      private final Output<Integer> numShards;
+    private Output<Integer> numShards;
 
     public Output<Integer> numShards() {
         return this.numShards;
     }
 
-    public UniformShardingArgs(Output<Integer> numShards) {
-        this.numShards = Objects.requireNonNull(numShards, "expected parameter 'numShards' to be non-null");
-    }
+    private UniformShardingArgs() {}
 
-    private UniformShardingArgs() {
-        this.numShards = Codegen.empty();
+    private UniformShardingArgs(UniformShardingArgs $) {
+        this.numShards = $.numShards;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UniformShardingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> numShards;
+        private UniformShardingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UniformShardingArgs();
         }
 
         public Builder(UniformShardingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numShards = defaults.numShards;
+            $ = new UniformShardingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numShards(Output<Integer> numShards) {
-            this.numShards = Objects.requireNonNull(numShards);
+            $.numShards = numShards;
             return this;
         }
+
         public Builder numShards(Integer numShards) {
-            this.numShards = Output.of(Objects.requireNonNull(numShards));
-            return this;
-        }        public UniformShardingArgs build() {
-            return new UniformShardingArgs(numShards);
+            return numShards(Output.of(numShards));
+        }
+
+        public UniformShardingArgs build() {
+            $.numShards = Objects.requireNonNull($.numShards, "expected parameter 'numShards' to be non-null");
+            return $;
         }
     }
+
 }

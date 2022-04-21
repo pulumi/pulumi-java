@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apps_v1beta1.inputs.RollingUpdateStatefulSetStrategyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StatefulSetUpdateStrategyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rollingUpdate")
-      private final @Nullable Output<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
+    private @Nullable Output<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
 
-    public Output<RollingUpdateStatefulSetStrategyArgs> rollingUpdate() {
-        return this.rollingUpdate == null ? Codegen.empty() : this.rollingUpdate;
+    public Optional<Output<RollingUpdateStatefulSetStrategyArgs>> rollingUpdate() {
+        return Optional.ofNullable(this.rollingUpdate);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class StatefulSetUpdateStrategyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public StatefulSetUpdateStrategyArgs(
-        @Nullable Output<RollingUpdateStatefulSetStrategyArgs> rollingUpdate,
-        @Nullable Output<String> type) {
-        this.rollingUpdate = rollingUpdate;
-        this.type = type;
-    }
+    private StatefulSetUpdateStrategyArgs() {}
 
-    private StatefulSetUpdateStrategyArgs() {
-        this.rollingUpdate = Codegen.empty();
-        this.type = Codegen.empty();
+    private StatefulSetUpdateStrategyArgs(StatefulSetUpdateStrategyArgs $) {
+        this.rollingUpdate = $.rollingUpdate;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulSetUpdateStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
-        private @Nullable Output<String> type;
+        private StatefulSetUpdateStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulSetUpdateStrategyArgs();
         }
 
         public Builder(StatefulSetUpdateStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rollingUpdate = defaults.rollingUpdate;
-    	      this.type = defaults.type;
+            $ = new StatefulSetUpdateStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rollingUpdate(@Nullable Output<RollingUpdateStatefulSetStrategyArgs> rollingUpdate) {
-            this.rollingUpdate = rollingUpdate;
+            $.rollingUpdate = rollingUpdate;
             return this;
         }
-        public Builder rollingUpdate(@Nullable RollingUpdateStatefulSetStrategyArgs rollingUpdate) {
-            this.rollingUpdate = Codegen.ofNullable(rollingUpdate);
-            return this;
+
+        public Builder rollingUpdate(RollingUpdateStatefulSetStrategyArgs rollingUpdate) {
+            return rollingUpdate(Output.of(rollingUpdate));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public StatefulSetUpdateStrategyArgs build() {
-            return new StatefulSetUpdateStrategyArgs(rollingUpdate, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public StatefulSetUpdateStrategyArgs build() {
+            return $;
         }
     }
+
 }

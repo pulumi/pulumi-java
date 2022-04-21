@@ -5,9 +5,9 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ActionTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ActionTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ActionTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identifier")
-      private final @Nullable Output<String> identifier;
+    private @Nullable Output<String> identifier;
 
-    public Output<String> identifier() {
-        return this.identifier == null ? Codegen.empty() : this.identifier;
+    public Optional<Output<String>> identifier() {
+        return Optional.ofNullable(this.identifier);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class ActionTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ActionTargetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<String> identifier,
-        @Nullable Output<String> name) {
-        this.arn = arn;
-        this.description = description;
-        this.identifier = identifier;
-        this.name = name;
-    }
+    private ActionTargetState() {}
 
-    private ActionTargetState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.identifier = Codegen.empty();
-        this.name = Codegen.empty();
+    private ActionTargetState(ActionTargetState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.identifier = $.identifier;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActionTargetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> identifier;
-        private @Nullable Output<String> name;
+        private ActionTargetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActionTargetState();
         }
 
         public Builder(ActionTargetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.identifier = defaults.identifier;
-    	      this.name = defaults.name;
+            $ = new ActionTargetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder identifier(@Nullable Output<String> identifier) {
-            this.identifier = identifier;
+            $.identifier = identifier;
             return this;
         }
-        public Builder identifier(@Nullable String identifier) {
-            this.identifier = Codegen.ofNullable(identifier);
-            return this;
+
+        public Builder identifier(String identifier) {
+            return identifier(Output.of(identifier));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ActionTargetState build() {
-            return new ActionTargetState(arn, description, identifier, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ActionTargetState build() {
+            return $;
         }
     }
+
 }

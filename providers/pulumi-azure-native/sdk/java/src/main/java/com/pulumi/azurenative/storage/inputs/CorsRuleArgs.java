@@ -5,7 +5,6 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +24,7 @@ public final class CorsRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedHeaders", required=true)
-      private final Output<List<String>> allowedHeaders;
+    private Output<List<String>> allowedHeaders;
 
     public Output<List<String>> allowedHeaders() {
         return this.allowedHeaders;
@@ -36,7 +35,7 @@ public final class CorsRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedMethods", required=true)
-      private final Output<List<String>> allowedMethods;
+    private Output<List<String>> allowedMethods;
 
     public Output<List<String>> allowedMethods() {
         return this.allowedMethods;
@@ -47,7 +46,7 @@ public final class CorsRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedOrigins", required=true)
-      private final Output<List<String>> allowedOrigins;
+    private Output<List<String>> allowedOrigins;
 
     public Output<List<String>> allowedOrigins() {
         return this.allowedOrigins;
@@ -58,7 +57,7 @@ public final class CorsRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exposedHeaders", required=true)
-      private final Output<List<String>> exposedHeaders;
+    private Output<List<String>> exposedHeaders;
 
     public Output<List<String>> exposedHeaders() {
         return this.exposedHeaders;
@@ -69,114 +68,109 @@ public final class CorsRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxAgeInSeconds", required=true)
-      private final Output<Integer> maxAgeInSeconds;
+    private Output<Integer> maxAgeInSeconds;
 
     public Output<Integer> maxAgeInSeconds() {
         return this.maxAgeInSeconds;
     }
 
-    public CorsRuleArgs(
-        Output<List<String>> allowedHeaders,
-        Output<List<String>> allowedMethods,
-        Output<List<String>> allowedOrigins,
-        Output<List<String>> exposedHeaders,
-        Output<Integer> maxAgeInSeconds) {
-        this.allowedHeaders = Objects.requireNonNull(allowedHeaders, "expected parameter 'allowedHeaders' to be non-null");
-        this.allowedMethods = Objects.requireNonNull(allowedMethods, "expected parameter 'allowedMethods' to be non-null");
-        this.allowedOrigins = Objects.requireNonNull(allowedOrigins, "expected parameter 'allowedOrigins' to be non-null");
-        this.exposedHeaders = Objects.requireNonNull(exposedHeaders, "expected parameter 'exposedHeaders' to be non-null");
-        this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds, "expected parameter 'maxAgeInSeconds' to be non-null");
-    }
+    private CorsRuleArgs() {}
 
-    private CorsRuleArgs() {
-        this.allowedHeaders = Codegen.empty();
-        this.allowedMethods = Codegen.empty();
-        this.allowedOrigins = Codegen.empty();
-        this.exposedHeaders = Codegen.empty();
-        this.maxAgeInSeconds = Codegen.empty();
+    private CorsRuleArgs(CorsRuleArgs $) {
+        this.allowedHeaders = $.allowedHeaders;
+        this.allowedMethods = $.allowedMethods;
+        this.allowedOrigins = $.allowedOrigins;
+        this.exposedHeaders = $.exposedHeaders;
+        this.maxAgeInSeconds = $.maxAgeInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CorsRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> allowedHeaders;
-        private Output<List<String>> allowedMethods;
-        private Output<List<String>> allowedOrigins;
-        private Output<List<String>> exposedHeaders;
-        private Output<Integer> maxAgeInSeconds;
+        private CorsRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CorsRuleArgs();
         }
 
         public Builder(CorsRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedHeaders = defaults.allowedHeaders;
-    	      this.allowedMethods = defaults.allowedMethods;
-    	      this.allowedOrigins = defaults.allowedOrigins;
-    	      this.exposedHeaders = defaults.exposedHeaders;
-    	      this.maxAgeInSeconds = defaults.maxAgeInSeconds;
+            $ = new CorsRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedHeaders(Output<List<String>> allowedHeaders) {
-            this.allowedHeaders = Objects.requireNonNull(allowedHeaders);
+            $.allowedHeaders = allowedHeaders;
             return this;
         }
+
         public Builder allowedHeaders(List<String> allowedHeaders) {
-            this.allowedHeaders = Output.of(Objects.requireNonNull(allowedHeaders));
-            return this;
+            return allowedHeaders(Output.of(allowedHeaders));
         }
+
         public Builder allowedHeaders(String... allowedHeaders) {
             return allowedHeaders(List.of(allowedHeaders));
         }
+
         public Builder allowedMethods(Output<List<String>> allowedMethods) {
-            this.allowedMethods = Objects.requireNonNull(allowedMethods);
+            $.allowedMethods = allowedMethods;
             return this;
         }
+
         public Builder allowedMethods(List<String> allowedMethods) {
-            this.allowedMethods = Output.of(Objects.requireNonNull(allowedMethods));
-            return this;
+            return allowedMethods(Output.of(allowedMethods));
         }
+
         public Builder allowedMethods(String... allowedMethods) {
             return allowedMethods(List.of(allowedMethods));
         }
+
         public Builder allowedOrigins(Output<List<String>> allowedOrigins) {
-            this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
+            $.allowedOrigins = allowedOrigins;
             return this;
         }
+
         public Builder allowedOrigins(List<String> allowedOrigins) {
-            this.allowedOrigins = Output.of(Objects.requireNonNull(allowedOrigins));
-            return this;
+            return allowedOrigins(Output.of(allowedOrigins));
         }
+
         public Builder allowedOrigins(String... allowedOrigins) {
             return allowedOrigins(List.of(allowedOrigins));
         }
+
         public Builder exposedHeaders(Output<List<String>> exposedHeaders) {
-            this.exposedHeaders = Objects.requireNonNull(exposedHeaders);
+            $.exposedHeaders = exposedHeaders;
             return this;
         }
+
         public Builder exposedHeaders(List<String> exposedHeaders) {
-            this.exposedHeaders = Output.of(Objects.requireNonNull(exposedHeaders));
-            return this;
+            return exposedHeaders(Output.of(exposedHeaders));
         }
+
         public Builder exposedHeaders(String... exposedHeaders) {
             return exposedHeaders(List.of(exposedHeaders));
         }
+
         public Builder maxAgeInSeconds(Output<Integer> maxAgeInSeconds) {
-            this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds);
+            $.maxAgeInSeconds = maxAgeInSeconds;
             return this;
         }
+
         public Builder maxAgeInSeconds(Integer maxAgeInSeconds) {
-            this.maxAgeInSeconds = Output.of(Objects.requireNonNull(maxAgeInSeconds));
-            return this;
-        }        public CorsRuleArgs build() {
-            return new CorsRuleArgs(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);
+            return maxAgeInSeconds(Output.of(maxAgeInSeconds));
+        }
+
+        public CorsRuleArgs build() {
+            $.allowedHeaders = Objects.requireNonNull($.allowedHeaders, "expected parameter 'allowedHeaders' to be non-null");
+            $.allowedMethods = Objects.requireNonNull($.allowedMethods, "expected parameter 'allowedMethods' to be non-null");
+            $.allowedOrigins = Objects.requireNonNull($.allowedOrigins, "expected parameter 'allowedOrigins' to be non-null");
+            $.exposedHeaders = Objects.requireNonNull($.exposedHeaders, "expected parameter 'exposedHeaders' to be non-null");
+            $.maxAgeInSeconds = Objects.requireNonNull($.maxAgeInSeconds, "expected parameter 'maxAgeInSeconds' to be non-null");
+            return $;
         }
     }
+
 }

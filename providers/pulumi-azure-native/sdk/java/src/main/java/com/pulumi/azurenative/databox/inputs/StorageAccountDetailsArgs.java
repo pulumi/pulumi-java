@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class StorageAccountDetailsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dataAccountType", required=true)
-      private final Output<String> dataAccountType;
+    private Output<String> dataAccountType;
 
     public Output<String> dataAccountType() {
         return this.dataAccountType;
@@ -36,10 +37,10 @@ public final class StorageAccountDetailsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sharePassword")
-      private final @Nullable Output<String> sharePassword;
+    private @Nullable Output<String> sharePassword;
 
-    public Output<String> sharePassword() {
-        return this.sharePassword == null ? Codegen.empty() : this.sharePassword;
+    public Optional<Output<String>> sharePassword() {
+        return Optional.ofNullable(this.sharePassword);
     }
 
     /**
@@ -47,76 +48,70 @@ public final class StorageAccountDetailsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="storageAccountId", required=true)
-      private final Output<String> storageAccountId;
+    private Output<String> storageAccountId;
 
     public Output<String> storageAccountId() {
         return this.storageAccountId;
     }
 
-    public StorageAccountDetailsArgs(
-        Output<String> dataAccountType,
-        @Nullable Output<String> sharePassword,
-        Output<String> storageAccountId) {
-        this.dataAccountType = Codegen.stringProp("dataAccountType").output().arg(dataAccountType).def("StorageAccount").require();
-        this.sharePassword = sharePassword;
-        this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
-    }
+    private StorageAccountDetailsArgs() {}
 
-    private StorageAccountDetailsArgs() {
-        this.dataAccountType = Codegen.empty();
-        this.sharePassword = Codegen.empty();
-        this.storageAccountId = Codegen.empty();
+    private StorageAccountDetailsArgs(StorageAccountDetailsArgs $) {
+        this.dataAccountType = $.dataAccountType;
+        this.sharePassword = $.sharePassword;
+        this.storageAccountId = $.storageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataAccountType;
-        private @Nullable Output<String> sharePassword;
-        private Output<String> storageAccountId;
+        private StorageAccountDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountDetailsArgs();
         }
 
         public Builder(StorageAccountDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataAccountType = defaults.dataAccountType;
-    	      this.sharePassword = defaults.sharePassword;
-    	      this.storageAccountId = defaults.storageAccountId;
+            $ = new StorageAccountDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataAccountType(Output<String> dataAccountType) {
-            this.dataAccountType = Objects.requireNonNull(dataAccountType);
+            $.dataAccountType = dataAccountType;
             return this;
         }
+
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Output.of(Objects.requireNonNull(dataAccountType));
-            return this;
+            return dataAccountType(Output.of(dataAccountType));
         }
+
         public Builder sharePassword(@Nullable Output<String> sharePassword) {
-            this.sharePassword = sharePassword;
+            $.sharePassword = sharePassword;
             return this;
         }
-        public Builder sharePassword(@Nullable String sharePassword) {
-            this.sharePassword = Codegen.ofNullable(sharePassword);
-            return this;
+
+        public Builder sharePassword(String sharePassword) {
+            return sharePassword(Output.of(sharePassword));
         }
+
         public Builder storageAccountId(Output<String> storageAccountId) {
-            this.storageAccountId = Objects.requireNonNull(storageAccountId);
+            $.storageAccountId = storageAccountId;
             return this;
         }
+
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
-            return this;
-        }        public StorageAccountDetailsArgs build() {
-            return new StorageAccountDetailsArgs(dataAccountType, sharePassword, storageAccountId);
+            return storageAccountId(Output.of(storageAccountId));
+        }
+
+        public StorageAccountDetailsArgs build() {
+            $.dataAccountType = Codegen.stringProp("dataAccountType").output().arg($.dataAccountType).def("StorageAccount").require();
+            $.storageAccountId = Objects.requireNonNull($.storageAccountId, "expected parameter 'storageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudidentity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ExpiryDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
-    public ExpiryDetailArgs(@Nullable Output<String> expireTime) {
-        this.expireTime = expireTime;
-    }
+    private ExpiryDetailArgs() {}
 
-    private ExpiryDetailArgs() {
-        this.expireTime = Codegen.empty();
+    private ExpiryDetailArgs(ExpiryDetailArgs $) {
+        this.expireTime = $.expireTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpiryDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expireTime;
+        private ExpiryDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpiryDetailArgs();
         }
 
         public Builder(ExpiryDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expireTime = defaults.expireTime;
+            $ = new ExpiryDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
-        }        public ExpiryDetailArgs build() {
-            return new ExpiryDetailArgs(expireTime);
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
+        }
+
+        public ExpiryDetailArgs build() {
+            return $;
         }
     }
+
 }

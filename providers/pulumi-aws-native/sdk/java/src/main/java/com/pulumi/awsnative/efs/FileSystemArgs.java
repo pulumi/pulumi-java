@@ -8,13 +8,13 @@ import com.pulumi.awsnative.efs.inputs.FileSystemElasticFileSystemTagArgs;
 import com.pulumi.awsnative.efs.inputs.FileSystemLifecyclePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     public static final FileSystemArgs Empty = new FileSystemArgs();
 
     @Import(name="availabilityZoneName")
-      private final @Nullable Output<String> availabilityZoneName;
+    private @Nullable Output<String> availabilityZoneName;
 
-    public Output<String> availabilityZoneName() {
-        return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
+    public Optional<Output<String>> availabilityZoneName() {
+        return Optional.ofNullable(this.availabilityZoneName);
     }
 
     @Import(name="backupPolicy")
-      private final @Nullable Output<FileSystemBackupPolicyArgs> backupPolicy;
+    private @Nullable Output<FileSystemBackupPolicyArgs> backupPolicy;
 
-    public Output<FileSystemBackupPolicyArgs> backupPolicy() {
-        return this.backupPolicy == null ? Codegen.empty() : this.backupPolicy;
+    public Optional<Output<FileSystemBackupPolicyArgs>> backupPolicy() {
+        return Optional.ofNullable(this.backupPolicy);
     }
 
     /**
@@ -41,242 +41,212 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bypassPolicyLockoutSafetyCheck")
-      private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
+    private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Optional<Output<Boolean>> bypassPolicyLockoutSafetyCheck() {
+        return Optional.ofNullable(this.bypassPolicyLockoutSafetyCheck);
     }
 
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     @Import(name="fileSystemPolicy")
-      private final @Nullable Output<Object> fileSystemPolicy;
+    private @Nullable Output<Object> fileSystemPolicy;
 
-    public Output<Object> fileSystemPolicy() {
-        return this.fileSystemPolicy == null ? Codegen.empty() : this.fileSystemPolicy;
+    public Optional<Output<Object>> fileSystemPolicy() {
+        return Optional.ofNullable(this.fileSystemPolicy);
     }
 
     @Import(name="fileSystemTags")
-      private final @Nullable Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags;
+    private @Nullable Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags;
 
-    public Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags() {
-        return this.fileSystemTags == null ? Codegen.empty() : this.fileSystemTags;
+    public Optional<Output<List<FileSystemElasticFileSystemTagArgs>>> fileSystemTags() {
+        return Optional.ofNullable(this.fileSystemTags);
     }
 
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     @Import(name="lifecyclePolicies")
-      private final @Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies;
+    private @Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies;
 
-    public Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies() {
-        return this.lifecyclePolicies == null ? Codegen.empty() : this.lifecyclePolicies;
+    public Optional<Output<List<FileSystemLifecyclePolicyArgs>>> lifecyclePolicies() {
+        return Optional.ofNullable(this.lifecyclePolicies);
     }
 
     @Import(name="performanceMode")
-      private final @Nullable Output<String> performanceMode;
+    private @Nullable Output<String> performanceMode;
 
-    public Output<String> performanceMode() {
-        return this.performanceMode == null ? Codegen.empty() : this.performanceMode;
+    public Optional<Output<String>> performanceMode() {
+        return Optional.ofNullable(this.performanceMode);
     }
 
     @Import(name="provisionedThroughputInMibps")
-      private final @Nullable Output<Double> provisionedThroughputInMibps;
+    private @Nullable Output<Double> provisionedThroughputInMibps;
 
-    public Output<Double> provisionedThroughputInMibps() {
-        return this.provisionedThroughputInMibps == null ? Codegen.empty() : this.provisionedThroughputInMibps;
+    public Optional<Output<Double>> provisionedThroughputInMibps() {
+        return Optional.ofNullable(this.provisionedThroughputInMibps);
     }
 
     @Import(name="throughputMode")
-      private final @Nullable Output<String> throughputMode;
+    private @Nullable Output<String> throughputMode;
 
-    public Output<String> throughputMode() {
-        return this.throughputMode == null ? Codegen.empty() : this.throughputMode;
+    public Optional<Output<String>> throughputMode() {
+        return Optional.ofNullable(this.throughputMode);
     }
 
-    public FileSystemArgs(
-        @Nullable Output<String> availabilityZoneName,
-        @Nullable Output<FileSystemBackupPolicyArgs> backupPolicy,
-        @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<Object> fileSystemPolicy,
-        @Nullable Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies,
-        @Nullable Output<String> performanceMode,
-        @Nullable Output<Double> provisionedThroughputInMibps,
-        @Nullable Output<String> throughputMode) {
-        this.availabilityZoneName = availabilityZoneName;
-        this.backupPolicy = backupPolicy;
-        this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
-        this.encrypted = encrypted;
-        this.fileSystemPolicy = fileSystemPolicy;
-        this.fileSystemTags = fileSystemTags;
-        this.kmsKeyId = kmsKeyId;
-        this.lifecyclePolicies = lifecyclePolicies;
-        this.performanceMode = performanceMode;
-        this.provisionedThroughputInMibps = provisionedThroughputInMibps;
-        this.throughputMode = throughputMode;
-    }
+    private FileSystemArgs() {}
 
-    private FileSystemArgs() {
-        this.availabilityZoneName = Codegen.empty();
-        this.backupPolicy = Codegen.empty();
-        this.bypassPolicyLockoutSafetyCheck = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.fileSystemPolicy = Codegen.empty();
-        this.fileSystemTags = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.lifecyclePolicies = Codegen.empty();
-        this.performanceMode = Codegen.empty();
-        this.provisionedThroughputInMibps = Codegen.empty();
-        this.throughputMode = Codegen.empty();
+    private FileSystemArgs(FileSystemArgs $) {
+        this.availabilityZoneName = $.availabilityZoneName;
+        this.backupPolicy = $.backupPolicy;
+        this.bypassPolicyLockoutSafetyCheck = $.bypassPolicyLockoutSafetyCheck;
+        this.encrypted = $.encrypted;
+        this.fileSystemPolicy = $.fileSystemPolicy;
+        this.fileSystemTags = $.fileSystemTags;
+        this.kmsKeyId = $.kmsKeyId;
+        this.lifecyclePolicies = $.lifecyclePolicies;
+        this.performanceMode = $.performanceMode;
+        this.provisionedThroughputInMibps = $.provisionedThroughputInMibps;
+        this.throughputMode = $.throughputMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> availabilityZoneName;
-        private @Nullable Output<FileSystemBackupPolicyArgs> backupPolicy;
-        private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<Object> fileSystemPolicy;
-        private @Nullable Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies;
-        private @Nullable Output<String> performanceMode;
-        private @Nullable Output<Double> provisionedThroughputInMibps;
-        private @Nullable Output<String> throughputMode;
+        private FileSystemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemArgs();
         }
 
         public Builder(FileSystemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityZoneName = defaults.availabilityZoneName;
-    	      this.backupPolicy = defaults.backupPolicy;
-    	      this.bypassPolicyLockoutSafetyCheck = defaults.bypassPolicyLockoutSafetyCheck;
-    	      this.encrypted = defaults.encrypted;
-    	      this.fileSystemPolicy = defaults.fileSystemPolicy;
-    	      this.fileSystemTags = defaults.fileSystemTags;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.lifecyclePolicies = defaults.lifecyclePolicies;
-    	      this.performanceMode = defaults.performanceMode;
-    	      this.provisionedThroughputInMibps = defaults.provisionedThroughputInMibps;
-    	      this.throughputMode = defaults.throughputMode;
+            $ = new FileSystemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
-            this.availabilityZoneName = availabilityZoneName;
+            $.availabilityZoneName = availabilityZoneName;
             return this;
         }
-        public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
-            this.availabilityZoneName = Codegen.ofNullable(availabilityZoneName);
-            return this;
+
+        public Builder availabilityZoneName(String availabilityZoneName) {
+            return availabilityZoneName(Output.of(availabilityZoneName));
         }
+
         public Builder backupPolicy(@Nullable Output<FileSystemBackupPolicyArgs> backupPolicy) {
-            this.backupPolicy = backupPolicy;
+            $.backupPolicy = backupPolicy;
             return this;
         }
-        public Builder backupPolicy(@Nullable FileSystemBackupPolicyArgs backupPolicy) {
-            this.backupPolicy = Codegen.ofNullable(backupPolicy);
-            return this;
+
+        public Builder backupPolicy(FileSystemBackupPolicyArgs backupPolicy) {
+            return backupPolicy(Output.of(backupPolicy));
         }
+
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
+            $.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
-        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Codegen.ofNullable(bypassPolicyLockoutSafetyCheck);
-            return this;
+
+        public Builder bypassPolicyLockoutSafetyCheck(Boolean bypassPolicyLockoutSafetyCheck) {
+            return bypassPolicyLockoutSafetyCheck(Output.of(bypassPolicyLockoutSafetyCheck));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder fileSystemPolicy(@Nullable Output<Object> fileSystemPolicy) {
-            this.fileSystemPolicy = fileSystemPolicy;
+            $.fileSystemPolicy = fileSystemPolicy;
             return this;
         }
-        public Builder fileSystemPolicy(@Nullable Object fileSystemPolicy) {
-            this.fileSystemPolicy = Codegen.ofNullable(fileSystemPolicy);
-            return this;
+
+        public Builder fileSystemPolicy(Object fileSystemPolicy) {
+            return fileSystemPolicy(Output.of(fileSystemPolicy));
         }
+
         public Builder fileSystemTags(@Nullable Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags) {
-            this.fileSystemTags = fileSystemTags;
+            $.fileSystemTags = fileSystemTags;
             return this;
         }
-        public Builder fileSystemTags(@Nullable List<FileSystemElasticFileSystemTagArgs> fileSystemTags) {
-            this.fileSystemTags = Codegen.ofNullable(fileSystemTags);
-            return this;
+
+        public Builder fileSystemTags(List<FileSystemElasticFileSystemTagArgs> fileSystemTags) {
+            return fileSystemTags(Output.of(fileSystemTags));
         }
+
         public Builder fileSystemTags(FileSystemElasticFileSystemTagArgs... fileSystemTags) {
             return fileSystemTags(List.of(fileSystemTags));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder lifecyclePolicies(@Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies) {
-            this.lifecyclePolicies = lifecyclePolicies;
+            $.lifecyclePolicies = lifecyclePolicies;
             return this;
         }
-        public Builder lifecyclePolicies(@Nullable List<FileSystemLifecyclePolicyArgs> lifecyclePolicies) {
-            this.lifecyclePolicies = Codegen.ofNullable(lifecyclePolicies);
-            return this;
+
+        public Builder lifecyclePolicies(List<FileSystemLifecyclePolicyArgs> lifecyclePolicies) {
+            return lifecyclePolicies(Output.of(lifecyclePolicies));
         }
+
         public Builder lifecyclePolicies(FileSystemLifecyclePolicyArgs... lifecyclePolicies) {
             return lifecyclePolicies(List.of(lifecyclePolicies));
         }
+
         public Builder performanceMode(@Nullable Output<String> performanceMode) {
-            this.performanceMode = performanceMode;
+            $.performanceMode = performanceMode;
             return this;
         }
-        public Builder performanceMode(@Nullable String performanceMode) {
-            this.performanceMode = Codegen.ofNullable(performanceMode);
-            return this;
+
+        public Builder performanceMode(String performanceMode) {
+            return performanceMode(Output.of(performanceMode));
         }
+
         public Builder provisionedThroughputInMibps(@Nullable Output<Double> provisionedThroughputInMibps) {
-            this.provisionedThroughputInMibps = provisionedThroughputInMibps;
+            $.provisionedThroughputInMibps = provisionedThroughputInMibps;
             return this;
         }
-        public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
-            this.provisionedThroughputInMibps = Codegen.ofNullable(provisionedThroughputInMibps);
-            return this;
+
+        public Builder provisionedThroughputInMibps(Double provisionedThroughputInMibps) {
+            return provisionedThroughputInMibps(Output.of(provisionedThroughputInMibps));
         }
+
         public Builder throughputMode(@Nullable Output<String> throughputMode) {
-            this.throughputMode = throughputMode;
+            $.throughputMode = throughputMode;
             return this;
         }
-        public Builder throughputMode(@Nullable String throughputMode) {
-            this.throughputMode = Codegen.ofNullable(throughputMode);
-            return this;
-        }        public FileSystemArgs build() {
-            return new FileSystemArgs(availabilityZoneName, backupPolicy, bypassPolicyLockoutSafetyCheck, encrypted, fileSystemPolicy, fileSystemTags, kmsKeyId, lifecyclePolicies, performanceMode, provisionedThroughputInMibps, throughputMode);
+
+        public Builder throughputMode(String throughputMode) {
+            return throughputMode(Output.of(throughputMode));
+        }
+
+        public FileSystemArgs build() {
+            return $;
         }
     }
+
 }

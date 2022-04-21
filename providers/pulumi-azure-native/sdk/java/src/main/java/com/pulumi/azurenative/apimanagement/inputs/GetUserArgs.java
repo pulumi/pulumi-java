@@ -17,7 +17,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -39,64 +39,59 @@ public final class GetUserArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
     }
 
-    public GetUserArgs(
-        String resourceGroupName,
-        String serviceName,
-        String userId) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private GetUserArgs() {}
 
-    private GetUserArgs() {
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.userId = null;
+    private GetUserArgs(GetUserArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetUserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String serviceName;
-        private String userId;
+        private GetUserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetUserArgs();
         }
 
         public Builder(GetUserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.userId = defaults.userId;
+            $ = new GetUserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
-        }        public GetUserArgs build() {
-            return new GetUserArgs(resourceGroupName, serviceName, userId);
+        }
+
+        public GetUserArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

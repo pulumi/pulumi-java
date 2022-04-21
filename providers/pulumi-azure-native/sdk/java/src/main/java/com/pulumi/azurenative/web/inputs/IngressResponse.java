@@ -28,10 +28,10 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowInsecure")
-      private final @Nullable Boolean allowInsecure;
+    private @Nullable Boolean allowInsecure;
 
     public Optional<Boolean> allowInsecure() {
-        return this.allowInsecure == null ? Optional.empty() : Optional.ofNullable(this.allowInsecure);
+        return Optional.ofNullable(this.allowInsecure);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="external")
-      private final @Nullable Boolean external;
+    private @Nullable Boolean external;
 
     public Optional<Boolean> external() {
-        return this.external == null ? Optional.empty() : Optional.ofNullable(this.external);
+        return Optional.ofNullable(this.external);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fqdn", required=true)
-      private final String fqdn;
+    private String fqdn;
 
     public String fqdn() {
         return this.fqdn;
@@ -61,17 +61,17 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetPort")
-      private final @Nullable Integer targetPort;
+    private @Nullable Integer targetPort;
 
     public Optional<Integer> targetPort() {
-        return this.targetPort == null ? Optional.empty() : Optional.ofNullable(this.targetPort);
+        return Optional.ofNullable(this.targetPort);
     }
 
     @Import(name="traffic")
-      private final @Nullable List<TrafficWeightResponse> traffic;
+    private @Nullable List<TrafficWeightResponse> traffic;
 
-    public List<TrafficWeightResponse> traffic() {
-        return this.traffic == null ? List.of() : this.traffic;
+    public Optional<List<TrafficWeightResponse>> traffic() {
+        return Optional.ofNullable(this.traffic);
     }
 
     /**
@@ -79,94 +79,80 @@ public final class IngressResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transport")
-      private final @Nullable String transport;
+    private @Nullable String transport;
 
     public Optional<String> transport() {
-        return this.transport == null ? Optional.empty() : Optional.ofNullable(this.transport);
+        return Optional.ofNullable(this.transport);
     }
 
-    public IngressResponse(
-        @Nullable Boolean allowInsecure,
-        @Nullable Boolean external,
-        String fqdn,
-        @Nullable Integer targetPort,
-        @Nullable List<TrafficWeightResponse> traffic,
-        @Nullable String transport) {
-        this.allowInsecure = allowInsecure;
-        this.external = Codegen.booleanProp("external").arg(external).def(false).getNullable();
-        this.fqdn = Objects.requireNonNull(fqdn, "expected parameter 'fqdn' to be non-null");
-        this.targetPort = targetPort;
-        this.traffic = traffic;
-        this.transport = transport;
-    }
+    private IngressResponse() {}
 
-    private IngressResponse() {
-        this.allowInsecure = null;
-        this.external = null;
-        this.fqdn = null;
-        this.targetPort = null;
-        this.traffic = List.of();
-        this.transport = null;
+    private IngressResponse(IngressResponse $) {
+        this.allowInsecure = $.allowInsecure;
+        this.external = $.external;
+        this.fqdn = $.fqdn;
+        this.targetPort = $.targetPort;
+        this.traffic = $.traffic;
+        this.transport = $.transport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowInsecure;
-        private @Nullable Boolean external;
-        private String fqdn;
-        private @Nullable Integer targetPort;
-        private @Nullable List<TrafficWeightResponse> traffic;
-        private @Nullable String transport;
+        private IngressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressResponse();
         }
 
         public Builder(IngressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowInsecure = defaults.allowInsecure;
-    	      this.external = defaults.external;
-    	      this.fqdn = defaults.fqdn;
-    	      this.targetPort = defaults.targetPort;
-    	      this.traffic = defaults.traffic;
-    	      this.transport = defaults.transport;
+            $ = new IngressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = allowInsecure;
+            $.allowInsecure = allowInsecure;
             return this;
         }
+
         public Builder external(@Nullable Boolean external) {
-            this.external = external;
+            $.external = external;
             return this;
         }
+
         public Builder fqdn(String fqdn) {
-            this.fqdn = Objects.requireNonNull(fqdn);
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder targetPort(@Nullable Integer targetPort) {
-            this.targetPort = targetPort;
+            $.targetPort = targetPort;
             return this;
         }
+
         public Builder traffic(@Nullable List<TrafficWeightResponse> traffic) {
-            this.traffic = traffic;
+            $.traffic = traffic;
             return this;
         }
+
         public Builder traffic(TrafficWeightResponse... traffic) {
             return traffic(List.of(traffic));
         }
+
         public Builder transport(@Nullable String transport) {
-            this.transport = transport;
+            $.transport = transport;
             return this;
-        }        public IngressResponse build() {
-            return new IngressResponse(allowInsecure, external, fqdn, targetPort, traffic, transport);
+        }
+
+        public IngressResponse build() {
+            $.external = Codegen.booleanProp("external").arg($.external).def(false).getNullable();
+            $.fqdn = Objects.requireNonNull($.fqdn, "expected parameter 'fqdn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends com.pulumi.resou
      * 
      */
     @Import(name="galleries")
-      private final @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries;
+    private @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
-    public Output<List<WorkbookTemplateGalleryArgs>> galleries() {
-        return this.galleries == null ? Codegen.empty() : this.galleries;
+    public Optional<Output<List<WorkbookTemplateGalleryArgs>>> galleries() {
+        return Optional.ofNullable(this.galleries);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends com.pulumi.resou
      * 
      */
     @Import(name="templateData")
-      private final @Nullable Output<Object> templateData;
+    private @Nullable Output<Object> templateData;
 
-    public Output<Object> templateData() {
-        return this.templateData == null ? Codegen.empty() : this.templateData;
+    public Optional<Output<Object>> templateData() {
+        return Optional.ofNullable(this.templateData);
     }
 
-    public WorkbookTemplateLocalizedGalleryArgs(
-        @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries,
-        @Nullable Output<Object> templateData) {
-        this.galleries = galleries;
-        this.templateData = templateData;
-    }
+    private WorkbookTemplateLocalizedGalleryArgs() {}
 
-    private WorkbookTemplateLocalizedGalleryArgs() {
-        this.galleries = Codegen.empty();
-        this.templateData = Codegen.empty();
+    private WorkbookTemplateLocalizedGalleryArgs(WorkbookTemplateLocalizedGalleryArgs $) {
+        this.galleries = $.galleries;
+        this.templateData = $.templateData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkbookTemplateLocalizedGalleryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries;
-        private @Nullable Output<Object> templateData;
+        private WorkbookTemplateLocalizedGalleryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkbookTemplateLocalizedGalleryArgs();
         }
 
         public Builder(WorkbookTemplateLocalizedGalleryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.galleries = defaults.galleries;
-    	      this.templateData = defaults.templateData;
+            $ = new WorkbookTemplateLocalizedGalleryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder galleries(@Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries) {
-            this.galleries = galleries;
+            $.galleries = galleries;
             return this;
         }
-        public Builder galleries(@Nullable List<WorkbookTemplateGalleryArgs> galleries) {
-            this.galleries = Codegen.ofNullable(galleries);
-            return this;
+
+        public Builder galleries(List<WorkbookTemplateGalleryArgs> galleries) {
+            return galleries(Output.of(galleries));
         }
+
         public Builder galleries(WorkbookTemplateGalleryArgs... galleries) {
             return galleries(List.of(galleries));
         }
+
         public Builder templateData(@Nullable Output<Object> templateData) {
-            this.templateData = templateData;
+            $.templateData = templateData;
             return this;
         }
-        public Builder templateData(@Nullable Object templateData) {
-            this.templateData = Codegen.ofNullable(templateData);
-            return this;
-        }        public WorkbookTemplateLocalizedGalleryArgs build() {
-            return new WorkbookTemplateLocalizedGalleryArgs(galleries, templateData);
+
+        public Builder templateData(Object templateData) {
+            return templateData(Output.of(templateData));
+        }
+
+        public WorkbookTemplateLocalizedGalleryArgs build() {
+            return $;
         }
     }
+
 }

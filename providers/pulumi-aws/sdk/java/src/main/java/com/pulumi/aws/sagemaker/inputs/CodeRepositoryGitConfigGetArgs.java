@@ -5,9 +5,9 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CodeRepositoryGitConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="branch")
-      private final @Nullable Output<String> branch;
+    private @Nullable Output<String> branch;
 
-    public Output<String> branch() {
-        return this.branch == null ? Codegen.empty() : this.branch;
+    public Optional<Output<String>> branch() {
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class CodeRepositoryGitConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="repositoryUrl", required=true)
-      private final Output<String> repositoryUrl;
+    private Output<String> repositoryUrl;
 
     public Output<String> repositoryUrl() {
         return this.repositoryUrl;
@@ -42,76 +42,69 @@ public final class CodeRepositoryGitConfigGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="secretArn")
-      private final @Nullable Output<String> secretArn;
+    private @Nullable Output<String> secretArn;
 
-    public Output<String> secretArn() {
-        return this.secretArn == null ? Codegen.empty() : this.secretArn;
+    public Optional<Output<String>> secretArn() {
+        return Optional.ofNullable(this.secretArn);
     }
 
-    public CodeRepositoryGitConfigGetArgs(
-        @Nullable Output<String> branch,
-        Output<String> repositoryUrl,
-        @Nullable Output<String> secretArn) {
-        this.branch = branch;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
-        this.secretArn = secretArn;
-    }
+    private CodeRepositoryGitConfigGetArgs() {}
 
-    private CodeRepositoryGitConfigGetArgs() {
-        this.branch = Codegen.empty();
-        this.repositoryUrl = Codegen.empty();
-        this.secretArn = Codegen.empty();
+    private CodeRepositoryGitConfigGetArgs(CodeRepositoryGitConfigGetArgs $) {
+        this.branch = $.branch;
+        this.repositoryUrl = $.repositoryUrl;
+        this.secretArn = $.secretArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CodeRepositoryGitConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branch;
-        private Output<String> repositoryUrl;
-        private @Nullable Output<String> secretArn;
+        private CodeRepositoryGitConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CodeRepositoryGitConfigGetArgs();
         }
 
         public Builder(CodeRepositoryGitConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.repositoryUrl = defaults.repositoryUrl;
-    	      this.secretArn = defaults.secretArn;
+            $ = new CodeRepositoryGitConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(@Nullable Output<String> branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
-        public Builder branch(@Nullable String branch) {
-            this.branch = Codegen.ofNullable(branch);
-            return this;
+
+        public Builder branch(String branch) {
+            return branch(Output.of(branch));
         }
+
         public Builder repositoryUrl(Output<String> repositoryUrl) {
-            this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
+            $.repositoryUrl = repositoryUrl;
             return this;
         }
+
         public Builder repositoryUrl(String repositoryUrl) {
-            this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
-            return this;
+            return repositoryUrl(Output.of(repositoryUrl));
         }
+
         public Builder secretArn(@Nullable Output<String> secretArn) {
-            this.secretArn = secretArn;
+            $.secretArn = secretArn;
             return this;
         }
-        public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Codegen.ofNullable(secretArn);
-            return this;
-        }        public CodeRepositoryGitConfigGetArgs build() {
-            return new CodeRepositoryGitConfigGetArgs(branch, repositoryUrl, secretArn);
+
+        public Builder secretArn(String secretArn) {
+            return secretArn(Output.of(secretArn));
+        }
+
+        public CodeRepositoryGitConfigGetArgs build() {
+            $.repositoryUrl = Objects.requireNonNull($.repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="primaryKey", required=true)
-      private final String primaryKey;
+    private String primaryKey;
 
     public String primaryKey() {
         return this.primaryKey;
@@ -32,7 +32,7 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -43,64 +43,59 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="secondaryKey", required=true)
-      private final String secondaryKey;
+    private String secondaryKey;
 
     public String secondaryKey() {
         return this.secondaryKey;
     }
 
-    public StorageAccountCredentialsResponse(
-        String primaryKey,
-        String resourceId,
-        String secondaryKey) {
-        this.primaryKey = Objects.requireNonNull(primaryKey, "expected parameter 'primaryKey' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.secondaryKey = Objects.requireNonNull(secondaryKey, "expected parameter 'secondaryKey' to be non-null");
-    }
+    private StorageAccountCredentialsResponse() {}
 
-    private StorageAccountCredentialsResponse() {
-        this.primaryKey = null;
-        this.resourceId = null;
-        this.secondaryKey = null;
+    private StorageAccountCredentialsResponse(StorageAccountCredentialsResponse $) {
+        this.primaryKey = $.primaryKey;
+        this.resourceId = $.resourceId;
+        this.secondaryKey = $.secondaryKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String primaryKey;
-        private String resourceId;
-        private String secondaryKey;
+        private StorageAccountCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountCredentialsResponse();
         }
 
         public Builder(StorageAccountCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primaryKey = defaults.primaryKey;
-    	      this.resourceId = defaults.resourceId;
-    	      this.secondaryKey = defaults.secondaryKey;
+            $ = new StorageAccountCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder primaryKey(String primaryKey) {
-            this.primaryKey = Objects.requireNonNull(primaryKey);
+            $.primaryKey = primaryKey;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder secondaryKey(String secondaryKey) {
-            this.secondaryKey = Objects.requireNonNull(secondaryKey);
+            $.secondaryKey = secondaryKey;
             return this;
-        }        public StorageAccountCredentialsResponse build() {
-            return new StorageAccountCredentialsResponse(primaryKey, resourceId, secondaryKey);
+        }
+
+        public StorageAccountCredentialsResponse build() {
+            $.primaryKey = Objects.requireNonNull($.primaryKey, "expected parameter 'primaryKey' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.secondaryKey = Objects.requireNonNull($.secondaryKey, "expected parameter 'secondaryKey' to be non-null");
+            return $;
         }
     }
+
 }

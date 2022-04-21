@@ -5,10 +5,10 @@ package com.pulumi.azurenative.powerbidedicated.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DedicatedCapacityAdministratorsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
-    public DedicatedCapacityAdministratorsArgs(@Nullable Output<List<String>> members) {
-        this.members = members;
-    }
+    private DedicatedCapacityAdministratorsArgs() {}
 
-    private DedicatedCapacityAdministratorsArgs() {
-        this.members = Codegen.empty();
+    private DedicatedCapacityAdministratorsArgs(DedicatedCapacityAdministratorsArgs $) {
+        this.members = $.members;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedCapacityAdministratorsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> members;
+        private DedicatedCapacityAdministratorsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedCapacityAdministratorsArgs();
         }
 
         public Builder(DedicatedCapacityAdministratorsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.members = defaults.members;
+            $ = new DedicatedCapacityAdministratorsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
-        }        public DedicatedCapacityAdministratorsArgs build() {
-            return new DedicatedCapacityAdministratorsArgs(members);
+        }
+
+        public DedicatedCapacityAdministratorsArgs build() {
+            return $;
         }
     }
+
 }

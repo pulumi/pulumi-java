@@ -23,7 +23,7 @@ public final class PackageOccurrenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="location", required=true)
-      private final List<LocationResponse> location;
+    private List<LocationResponse> location;
 
     public List<LocationResponse> location() {
         return this.location;
@@ -34,58 +34,56 @@ public final class PackageOccurrenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public PackageOccurrenceResponse(
-        List<LocationResponse> location,
-        String name) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PackageOccurrenceResponse() {}
 
-    private PackageOccurrenceResponse() {
-        this.location = List.of();
-        this.name = null;
+    private PackageOccurrenceResponse(PackageOccurrenceResponse $) {
+        this.location = $.location;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<LocationResponse> location;
-        private String name;
+        private PackageOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageOccurrenceResponse();
         }
 
         public Builder(PackageOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
+            $ = new PackageOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(List<LocationResponse> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(LocationResponse... location) {
             return location(List.of(location));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public PackageOccurrenceResponse build() {
-            return new PackageOccurrenceResponse(location, name);
+        }
+
+        public PackageOccurrenceResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

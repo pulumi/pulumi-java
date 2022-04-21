@@ -18,7 +18,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executionCount", required=true)
-      private final Integer executionCount;
+    private Integer executionCount;
 
     public Integer executionCount() {
         return this.executionCount;
@@ -29,7 +29,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="failureCount", required=true)
-      private final Integer failureCount;
+    private Integer failureCount;
 
     public Integer failureCount() {
         return this.failureCount;
@@ -40,7 +40,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="faultedCount", required=true)
-      private final Integer faultedCount;
+    private Integer faultedCount;
 
     public Integer faultedCount() {
         return this.faultedCount;
@@ -51,7 +51,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastExecutionTime", required=true)
-      private final String lastExecutionTime;
+    private String lastExecutionTime;
 
     public String lastExecutionTime() {
         return this.lastExecutionTime;
@@ -62,82 +62,73 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nextExecutionTime", required=true)
-      private final String nextExecutionTime;
+    private String nextExecutionTime;
 
     public String nextExecutionTime() {
         return this.nextExecutionTime;
     }
 
-    public JobStatusResponse(
-        Integer executionCount,
-        Integer failureCount,
-        Integer faultedCount,
-        String lastExecutionTime,
-        String nextExecutionTime) {
-        this.executionCount = Objects.requireNonNull(executionCount, "expected parameter 'executionCount' to be non-null");
-        this.failureCount = Objects.requireNonNull(failureCount, "expected parameter 'failureCount' to be non-null");
-        this.faultedCount = Objects.requireNonNull(faultedCount, "expected parameter 'faultedCount' to be non-null");
-        this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime, "expected parameter 'lastExecutionTime' to be non-null");
-        this.nextExecutionTime = Objects.requireNonNull(nextExecutionTime, "expected parameter 'nextExecutionTime' to be non-null");
-    }
+    private JobStatusResponse() {}
 
-    private JobStatusResponse() {
-        this.executionCount = null;
-        this.failureCount = null;
-        this.faultedCount = null;
-        this.lastExecutionTime = null;
-        this.nextExecutionTime = null;
+    private JobStatusResponse(JobStatusResponse $) {
+        this.executionCount = $.executionCount;
+        this.failureCount = $.failureCount;
+        this.faultedCount = $.faultedCount;
+        this.lastExecutionTime = $.lastExecutionTime;
+        this.nextExecutionTime = $.nextExecutionTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer executionCount;
-        private Integer failureCount;
-        private Integer faultedCount;
-        private String lastExecutionTime;
-        private String nextExecutionTime;
+        private JobStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatusResponse();
         }
 
         public Builder(JobStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionCount = defaults.executionCount;
-    	      this.failureCount = defaults.failureCount;
-    	      this.faultedCount = defaults.faultedCount;
-    	      this.lastExecutionTime = defaults.lastExecutionTime;
-    	      this.nextExecutionTime = defaults.nextExecutionTime;
+            $ = new JobStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder executionCount(Integer executionCount) {
-            this.executionCount = Objects.requireNonNull(executionCount);
+            $.executionCount = executionCount;
             return this;
         }
+
         public Builder failureCount(Integer failureCount) {
-            this.failureCount = Objects.requireNonNull(failureCount);
+            $.failureCount = failureCount;
             return this;
         }
+
         public Builder faultedCount(Integer faultedCount) {
-            this.faultedCount = Objects.requireNonNull(faultedCount);
+            $.faultedCount = faultedCount;
             return this;
         }
+
         public Builder lastExecutionTime(String lastExecutionTime) {
-            this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime);
+            $.lastExecutionTime = lastExecutionTime;
             return this;
         }
+
         public Builder nextExecutionTime(String nextExecutionTime) {
-            this.nextExecutionTime = Objects.requireNonNull(nextExecutionTime);
+            $.nextExecutionTime = nextExecutionTime;
             return this;
-        }        public JobStatusResponse build() {
-            return new JobStatusResponse(executionCount, failureCount, faultedCount, lastExecutionTime, nextExecutionTime);
+        }
+
+        public JobStatusResponse build() {
+            $.executionCount = Objects.requireNonNull($.executionCount, "expected parameter 'executionCount' to be non-null");
+            $.failureCount = Objects.requireNonNull($.failureCount, "expected parameter 'failureCount' to be non-null");
+            $.faultedCount = Objects.requireNonNull($.faultedCount, "expected parameter 'faultedCount' to be non-null");
+            $.lastExecutionTime = Objects.requireNonNull($.lastExecutionTime, "expected parameter 'lastExecutionTime' to be non-null");
+            $.nextExecutionTime = Objects.requireNonNull($.nextExecutionTime, "expected parameter 'nextExecutionTime' to be non-null");
+            return $;
         }
     }
+
 }

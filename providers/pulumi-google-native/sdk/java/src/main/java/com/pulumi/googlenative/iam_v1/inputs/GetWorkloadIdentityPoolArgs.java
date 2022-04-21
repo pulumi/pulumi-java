@@ -15,78 +15,72 @@ public final class GetWorkloadIdentityPoolArgs extends com.pulumi.resources.Invo
     public static final GetWorkloadIdentityPoolArgs Empty = new GetWorkloadIdentityPoolArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="workloadIdentityPoolId", required=true)
-      private final String workloadIdentityPoolId;
+    private String workloadIdentityPoolId;
 
     public String workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 
-    public GetWorkloadIdentityPoolArgs(
-        String location,
-        @Nullable String project,
-        String workloadIdentityPoolId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
-    }
+    private GetWorkloadIdentityPoolArgs() {}
 
-    private GetWorkloadIdentityPoolArgs() {
-        this.location = null;
-        this.project = null;
-        this.workloadIdentityPoolId = null;
+    private GetWorkloadIdentityPoolArgs(GetWorkloadIdentityPoolArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.workloadIdentityPoolId = $.workloadIdentityPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadIdentityPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String workloadIdentityPoolId;
+        private GetWorkloadIdentityPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadIdentityPoolArgs();
         }
 
         public Builder(GetWorkloadIdentityPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.workloadIdentityPoolId = defaults.workloadIdentityPoolId;
+            $ = new GetWorkloadIdentityPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
+            $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
-        }        public GetWorkloadIdentityPoolArgs build() {
-            return new GetWorkloadIdentityPoolArgs(location, project, workloadIdentityPoolId);
+        }
+
+        public GetWorkloadIdentityPoolArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.workloadIdentityPoolId = Objects.requireNonNull($.workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
+            return $;
         }
     }
+
 }

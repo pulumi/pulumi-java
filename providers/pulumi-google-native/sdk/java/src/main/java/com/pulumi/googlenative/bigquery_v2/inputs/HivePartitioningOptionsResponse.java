@@ -18,7 +18,7 @@ public final class HivePartitioningOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -29,7 +29,7 @@ public final class HivePartitioningOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="requirePartitionFilter", required=true)
-      private final Boolean requirePartitionFilter;
+    private Boolean requirePartitionFilter;
 
     public Boolean requirePartitionFilter() {
         return this.requirePartitionFilter;
@@ -40,64 +40,59 @@ public final class HivePartitioningOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceUriPrefix", required=true)
-      private final String sourceUriPrefix;
+    private String sourceUriPrefix;
 
     public String sourceUriPrefix() {
         return this.sourceUriPrefix;
     }
 
-    public HivePartitioningOptionsResponse(
-        String mode,
-        Boolean requirePartitionFilter,
-        String sourceUriPrefix) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter, "expected parameter 'requirePartitionFilter' to be non-null");
-        this.sourceUriPrefix = Objects.requireNonNull(sourceUriPrefix, "expected parameter 'sourceUriPrefix' to be non-null");
-    }
+    private HivePartitioningOptionsResponse() {}
 
-    private HivePartitioningOptionsResponse() {
-        this.mode = null;
-        this.requirePartitionFilter = null;
-        this.sourceUriPrefix = null;
+    private HivePartitioningOptionsResponse(HivePartitioningOptionsResponse $) {
+        this.mode = $.mode;
+        this.requirePartitionFilter = $.requirePartitionFilter;
+        this.sourceUriPrefix = $.sourceUriPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HivePartitioningOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mode;
-        private Boolean requirePartitionFilter;
-        private String sourceUriPrefix;
+        private HivePartitioningOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HivePartitioningOptionsResponse();
         }
 
         public Builder(HivePartitioningOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.requirePartitionFilter = defaults.requirePartitionFilter;
-    	      this.sourceUriPrefix = defaults.sourceUriPrefix;
+            $ = new HivePartitioningOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
+            $.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
+
         public Builder sourceUriPrefix(String sourceUriPrefix) {
-            this.sourceUriPrefix = Objects.requireNonNull(sourceUriPrefix);
+            $.sourceUriPrefix = sourceUriPrefix;
             return this;
-        }        public HivePartitioningOptionsResponse build() {
-            return new HivePartitioningOptionsResponse(mode, requirePartitionFilter, sourceUriPrefix);
+        }
+
+        public HivePartitioningOptionsResponse build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.requirePartitionFilter = Objects.requireNonNull($.requirePartitionFilter, "expected parameter 'requirePartitionFilter' to be non-null");
+            $.sourceUriPrefix = Objects.requireNonNull($.sourceUriPrefix, "expected parameter 'sourceUriPrefix' to be non-null");
+            return $;
         }
     }
+
 }

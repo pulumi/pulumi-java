@@ -25,7 +25,7 @@ public final class LegalHoldPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hasLegalHold", required=true)
-      private final Boolean hasLegalHold;
+    private Boolean hasLegalHold;
 
     public Boolean hasLegalHold() {
         return this.hasLegalHold;
@@ -36,58 +36,55 @@ public final class LegalHoldPropertiesResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tags")
-      private final @Nullable List<TagPropertyResponse> tags;
+    private @Nullable List<TagPropertyResponse> tags;
 
-    public List<TagPropertyResponse> tags() {
-        return this.tags == null ? List.of() : this.tags;
+    public Optional<List<TagPropertyResponse>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LegalHoldPropertiesResponse(
-        Boolean hasLegalHold,
-        @Nullable List<TagPropertyResponse> tags) {
-        this.hasLegalHold = Objects.requireNonNull(hasLegalHold, "expected parameter 'hasLegalHold' to be non-null");
-        this.tags = tags;
-    }
+    private LegalHoldPropertiesResponse() {}
 
-    private LegalHoldPropertiesResponse() {
-        this.hasLegalHold = null;
-        this.tags = List.of();
+    private LegalHoldPropertiesResponse(LegalHoldPropertiesResponse $) {
+        this.hasLegalHold = $.hasLegalHold;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LegalHoldPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean hasLegalHold;
-        private @Nullable List<TagPropertyResponse> tags;
+        private LegalHoldPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LegalHoldPropertiesResponse();
         }
 
         public Builder(LegalHoldPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hasLegalHold = defaults.hasLegalHold;
-    	      this.tags = defaults.tags;
+            $ = new LegalHoldPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hasLegalHold(Boolean hasLegalHold) {
-            this.hasLegalHold = Objects.requireNonNull(hasLegalHold);
+            $.hasLegalHold = hasLegalHold;
             return this;
         }
+
         public Builder tags(@Nullable List<TagPropertyResponse> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(TagPropertyResponse... tags) {
             return tags(List.of(tags));
-        }        public LegalHoldPropertiesResponse build() {
-            return new LegalHoldPropertiesResponse(hasLegalHold, tags);
+        }
+
+        public LegalHoldPropertiesResponse build() {
+            $.hasLegalHold = Objects.requireNonNull($.hasLegalHold, "expected parameter 'hasLegalHold' to be non-null");
+            return $;
         }
     }
+
 }

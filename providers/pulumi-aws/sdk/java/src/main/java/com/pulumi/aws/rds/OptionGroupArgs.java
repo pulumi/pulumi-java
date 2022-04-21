@@ -11,6 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +24,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engineName", required=true)
-      private final Output<String> engineName;
+    private Output<String> engineName;
 
     public Output<String> engineName() {
         return this.engineName;
@@ -34,7 +35,7 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="majorEngineVersion", required=true)
-      private final Output<String> majorEngineVersion;
+    private Output<String> majorEngineVersion;
 
     public Output<String> majorEngineVersion() {
         return this.majorEngineVersion;
@@ -45,10 +46,10 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="optionGroupDescription")
-      private final @Nullable Output<String> optionGroupDescription;
+    private @Nullable Output<String> optionGroupDescription;
 
-    public Output<String> optionGroupDescription() {
-        return this.optionGroupDescription == null ? Codegen.empty() : this.optionGroupDescription;
+    public Optional<Output<String>> optionGroupDescription() {
+        return Optional.ofNullable(this.optionGroupDescription);
     }
 
     /**
@@ -78,10 +79,10 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<List<OptionGroupOptionArgs>> options;
+    private @Nullable Output<List<OptionGroupOptionArgs>> options;
 
-    public Output<List<OptionGroupOptionArgs>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<List<OptionGroupOptionArgs>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -89,131 +90,115 @@ public final class OptionGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public OptionGroupArgs(
-        Output<String> engineName,
-        Output<String> majorEngineVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> optionGroupDescription,
-        @Nullable Output<List<OptionGroupOptionArgs>> options,
-        @Nullable Output<Map<String,String>> tags) {
-        this.engineName = Objects.requireNonNull(engineName, "expected parameter 'engineName' to be non-null");
-        this.majorEngineVersion = Objects.requireNonNull(majorEngineVersion, "expected parameter 'majorEngineVersion' to be non-null");
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.optionGroupDescription = Codegen.stringProp("optionGroupDescription").output().arg(optionGroupDescription).def("Managed by Pulumi").getNullable();
-        this.options = options;
-        this.tags = tags;
-    }
+    private OptionGroupArgs() {}
 
-    private OptionGroupArgs() {
-        this.engineName = Codegen.empty();
-        this.majorEngineVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.optionGroupDescription = Codegen.empty();
-        this.options = Codegen.empty();
-        this.tags = Codegen.empty();
+    private OptionGroupArgs(OptionGroupArgs $) {
+        this.engineName = $.engineName;
+        this.majorEngineVersion = $.majorEngineVersion;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.optionGroupDescription = $.optionGroupDescription;
+        this.options = $.options;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OptionGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> engineName;
-        private Output<String> majorEngineVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> optionGroupDescription;
-        private @Nullable Output<List<OptionGroupOptionArgs>> options;
-        private @Nullable Output<Map<String,String>> tags;
+        private OptionGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OptionGroupArgs();
         }
 
         public Builder(OptionGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.engineName = defaults.engineName;
-    	      this.majorEngineVersion = defaults.majorEngineVersion;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.optionGroupDescription = defaults.optionGroupDescription;
-    	      this.options = defaults.options;
-    	      this.tags = defaults.tags;
+            $ = new OptionGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder engineName(Output<String> engineName) {
-            this.engineName = Objects.requireNonNull(engineName);
+            $.engineName = engineName;
             return this;
         }
+
         public Builder engineName(String engineName) {
-            this.engineName = Output.of(Objects.requireNonNull(engineName));
-            return this;
+            return engineName(Output.of(engineName));
         }
+
         public Builder majorEngineVersion(Output<String> majorEngineVersion) {
-            this.majorEngineVersion = Objects.requireNonNull(majorEngineVersion);
+            $.majorEngineVersion = majorEngineVersion;
             return this;
         }
+
         public Builder majorEngineVersion(String majorEngineVersion) {
-            this.majorEngineVersion = Output.of(Objects.requireNonNull(majorEngineVersion));
-            return this;
+            return majorEngineVersion(Output.of(majorEngineVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder optionGroupDescription(@Nullable Output<String> optionGroupDescription) {
-            this.optionGroupDescription = optionGroupDescription;
+            $.optionGroupDescription = optionGroupDescription;
             return this;
         }
-        public Builder optionGroupDescription(@Nullable String optionGroupDescription) {
-            this.optionGroupDescription = Codegen.ofNullable(optionGroupDescription);
-            return this;
+
+        public Builder optionGroupDescription(String optionGroupDescription) {
+            return optionGroupDescription(Output.of(optionGroupDescription));
         }
+
         public Builder options(@Nullable Output<List<OptionGroupOptionArgs>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable List<OptionGroupOptionArgs> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(List<OptionGroupOptionArgs> options) {
+            return options(Output.of(options));
         }
+
         public Builder options(OptionGroupOptionArgs... options) {
             return options(List.of(options));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public OptionGroupArgs build() {
-            return new OptionGroupArgs(engineName, majorEngineVersion, name, namePrefix, optionGroupDescription, options, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public OptionGroupArgs build() {
+            $.engineName = Objects.requireNonNull($.engineName, "expected parameter 'engineName' to be non-null");
+            $.majorEngineVersion = Objects.requireNonNull($.majorEngineVersion, "expected parameter 'majorEngineVersion' to be non-null");
+            $.optionGroupDescription = Codegen.stringProp("optionGroupDescription").output().arg($.optionGroupDescription).def("Managed by Pulumi").getNullable();
+            return $;
         }
     }
+
 }

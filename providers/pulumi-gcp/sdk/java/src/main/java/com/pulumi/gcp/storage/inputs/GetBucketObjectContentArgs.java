@@ -19,7 +19,7 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
@@ -30,10 +30,10 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="content")
-      private final @Nullable String content;
+    private @Nullable String content;
 
     public Optional<String> content() {
-        return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -41,64 +41,58 @@ public final class GetBucketObjectContentArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetBucketObjectContentArgs(
-        String bucket,
-        @Nullable String content,
-        String name) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.content = content;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetBucketObjectContentArgs() {}
 
-    private GetBucketObjectContentArgs() {
-        this.bucket = null;
-        this.content = null;
-        this.name = null;
+    private GetBucketObjectContentArgs(GetBucketObjectContentArgs $) {
+        this.bucket = $.bucket;
+        this.content = $.content;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketObjectContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String content;
-        private String name;
+        private GetBucketObjectContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketObjectContentArgs();
         }
 
         public Builder(GetBucketObjectContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.content = defaults.content;
-    	      this.name = defaults.name;
+            $ = new GetBucketObjectContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder content(@Nullable String content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetBucketObjectContentArgs build() {
-            return new GetBucketObjectContentArgs(bucket, content, name);
+        }
+
+        public GetBucketObjectContentArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

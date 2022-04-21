@@ -21,12 +21,12 @@ import com.pulumi.azurenative.compute.inputs.VirtualMachineIdentityArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,10 +39,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="additionalCapabilities")
-      private final @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
+    private @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
 
-    public Output<AdditionalCapabilitiesArgs> additionalCapabilities() {
-        return this.additionalCapabilities == null ? Codegen.empty() : this.additionalCapabilities;
+    public Optional<Output<AdditionalCapabilitiesArgs>> additionalCapabilities() {
+        return Optional.ofNullable(this.additionalCapabilities);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="availabilitySet")
-      private final @Nullable Output<SubResourceArgs> availabilitySet;
+    private @Nullable Output<SubResourceArgs> availabilitySet;
 
-    public Output<SubResourceArgs> availabilitySet() {
-        return this.availabilitySet == null ? Codegen.empty() : this.availabilitySet;
+    public Optional<Output<SubResourceArgs>> availabilitySet() {
+        return Optional.ofNullable(this.availabilitySet);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="billingProfile")
-      private final @Nullable Output<BillingProfileArgs> billingProfile;
+    private @Nullable Output<BillingProfileArgs> billingProfile;
 
-    public Output<BillingProfileArgs> billingProfile() {
-        return this.billingProfile == null ? Codegen.empty() : this.billingProfile;
+    public Optional<Output<BillingProfileArgs>> billingProfile() {
+        return Optional.ofNullable(this.billingProfile);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="diagnosticsProfile")
-      private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
+    private @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
-    public Output<DiagnosticsProfileArgs> diagnosticsProfile() {
-        return this.diagnosticsProfile == null ? Codegen.empty() : this.diagnosticsProfile;
+    public Optional<Output<DiagnosticsProfileArgs>> diagnosticsProfile() {
+        return Optional.ofNullable(this.diagnosticsProfile);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="evictionPolicy")
-      private final @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
+    private @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
-    public Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy() {
-        return this.evictionPolicy == null ? Codegen.empty() : this.evictionPolicy;
+    public Optional<Output<Either<String,VirtualMachineEvictionPolicyTypes>>> evictionPolicy() {
+        return Optional.ofNullable(this.evictionPolicy);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="extensionsTimeBudget")
-      private final @Nullable Output<String> extensionsTimeBudget;
+    private @Nullable Output<String> extensionsTimeBudget;
 
-    public Output<String> extensionsTimeBudget() {
-        return this.extensionsTimeBudget == null ? Codegen.empty() : this.extensionsTimeBudget;
+    public Optional<Output<String>> extensionsTimeBudget() {
+        return Optional.ofNullable(this.extensionsTimeBudget);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hardwareProfile")
-      private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
+    private @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Output<HardwareProfileArgs> hardwareProfile() {
-        return this.hardwareProfile == null ? Codegen.empty() : this.hardwareProfile;
+    public Optional<Output<HardwareProfileArgs>> hardwareProfile() {
+        return Optional.ofNullable(this.hardwareProfile);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<SubResourceArgs> host;
+    private @Nullable Output<SubResourceArgs> host;
 
-    public Output<SubResourceArgs> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<SubResourceArgs>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hostGroup")
-      private final @Nullable Output<SubResourceArgs> hostGroup;
+    private @Nullable Output<SubResourceArgs> hostGroup;
 
-    public Output<SubResourceArgs> hostGroup() {
-        return this.hostGroup == null ? Codegen.empty() : this.hostGroup;
+    public Optional<Output<SubResourceArgs>> hostGroup() {
+        return Optional.ofNullable(this.hostGroup);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<VirtualMachineIdentityArgs> identity;
+    private @Nullable Output<VirtualMachineIdentityArgs> identity;
 
-    public Output<VirtualMachineIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<VirtualMachineIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="licenseType")
-      private final @Nullable Output<String> licenseType;
+    private @Nullable Output<String> licenseType;
 
-    public Output<String> licenseType() {
-        return this.licenseType == null ? Codegen.empty() : this.licenseType;
+    public Optional<Output<String>> licenseType() {
+        return Optional.ofNullable(this.licenseType);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<NetworkProfileArgs> networkProfile;
+    private @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<NetworkProfileArgs>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable Output<OSProfileArgs> osProfile;
+    private @Nullable Output<OSProfileArgs> osProfile;
 
-    public Output<OSProfileArgs> osProfile() {
-        return this.osProfile == null ? Codegen.empty() : this.osProfile;
+    public Optional<Output<OSProfileArgs>> osProfile() {
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="plan")
-      private final @Nullable Output<PlanArgs> plan;
+    private @Nullable Output<PlanArgs> plan;
 
-    public Output<PlanArgs> plan() {
-        return this.plan == null ? Codegen.empty() : this.plan;
+    public Optional<Output<PlanArgs>> plan() {
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -215,10 +215,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="platformFaultDomain")
-      private final @Nullable Output<Integer> platformFaultDomain;
+    private @Nullable Output<Integer> platformFaultDomain;
 
-    public Output<Integer> platformFaultDomain() {
-        return this.platformFaultDomain == null ? Codegen.empty() : this.platformFaultDomain;
+    public Optional<Output<Integer>> platformFaultDomain() {
+        return Optional.ofNullable(this.platformFaultDomain);
     }
 
     /**
@@ -226,10 +226,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
+    private @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
 
-    public Output<Either<String,VirtualMachinePriorityTypes>> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Either<String,VirtualMachinePriorityTypes>>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -237,10 +237,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="proximityPlacementGroup")
-      private final @Nullable Output<SubResourceArgs> proximityPlacementGroup;
+    private @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
-    public Output<SubResourceArgs> proximityPlacementGroup() {
-        return this.proximityPlacementGroup == null ? Codegen.empty() : this.proximityPlacementGroup;
+    public Optional<Output<SubResourceArgs>> proximityPlacementGroup() {
+        return Optional.ofNullable(this.proximityPlacementGroup);
     }
 
     /**
@@ -248,7 +248,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -259,10 +259,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scheduledEventsProfile")
-      private final @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
+    private @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
-    public Output<ScheduledEventsProfileArgs> scheduledEventsProfile() {
-        return this.scheduledEventsProfile == null ? Codegen.empty() : this.scheduledEventsProfile;
+    public Optional<Output<ScheduledEventsProfileArgs>> scheduledEventsProfile() {
+        return Optional.ofNullable(this.scheduledEventsProfile);
     }
 
     /**
@@ -270,10 +270,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="securityProfile")
-      private final @Nullable Output<SecurityProfileArgs> securityProfile;
+    private @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Output<SecurityProfileArgs> securityProfile() {
-        return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
+    public Optional<Output<SecurityProfileArgs>> securityProfile() {
+        return Optional.ofNullable(this.securityProfile);
     }
 
     /**
@@ -281,10 +281,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable Output<StorageProfileArgs> storageProfile;
+    private @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> storageProfile() {
-        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
+    public Optional<Output<StorageProfileArgs>> storageProfile() {
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -292,10 +292,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -303,10 +303,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userData")
-      private final @Nullable Output<String> userData;
+    private @Nullable Output<String> userData;
 
-    public Output<String> userData() {
-        return this.userData == null ? Codegen.empty() : this.userData;
+    public Optional<Output<String>> userData() {
+        return Optional.ofNullable(this.userData);
     }
 
     /**
@@ -314,10 +314,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="virtualMachineScaleSet")
-      private final @Nullable Output<SubResourceArgs> virtualMachineScaleSet;
+    private @Nullable Output<SubResourceArgs> virtualMachineScaleSet;
 
-    public Output<SubResourceArgs> virtualMachineScaleSet() {
-        return this.virtualMachineScaleSet == null ? Codegen.empty() : this.virtualMachineScaleSet;
+    public Optional<Output<SubResourceArgs>> virtualMachineScaleSet() {
+        return Optional.ofNullable(this.virtualMachineScaleSet);
     }
 
     /**
@@ -325,10 +325,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="vmName")
-      private final @Nullable Output<String> vmName;
+    private @Nullable Output<String> vmName;
 
-    public Output<String> vmName() {
-        return this.vmName == null ? Codegen.empty() : this.vmName;
+    public Optional<Output<String>> vmName() {
+        return Optional.ofNullable(this.vmName);
     }
 
     /**
@@ -336,404 +336,323 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public VirtualMachineArgs(
-        @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities,
-        @Nullable Output<SubResourceArgs> availabilitySet,
-        @Nullable Output<BillingProfileArgs> billingProfile,
-        @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile,
-        @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy,
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<String> extensionsTimeBudget,
-        @Nullable Output<HardwareProfileArgs> hardwareProfile,
-        @Nullable Output<SubResourceArgs> host,
-        @Nullable Output<SubResourceArgs> hostGroup,
-        @Nullable Output<VirtualMachineIdentityArgs> identity,
-        @Nullable Output<String> licenseType,
-        @Nullable Output<String> location,
-        @Nullable Output<NetworkProfileArgs> networkProfile,
-        @Nullable Output<OSProfileArgs> osProfile,
-        @Nullable Output<PlanArgs> plan,
-        @Nullable Output<Integer> platformFaultDomain,
-        @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority,
-        @Nullable Output<SubResourceArgs> proximityPlacementGroup,
-        Output<String> resourceGroupName,
-        @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile,
-        @Nullable Output<SecurityProfileArgs> securityProfile,
-        @Nullable Output<StorageProfileArgs> storageProfile,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> userData,
-        @Nullable Output<SubResourceArgs> virtualMachineScaleSet,
-        @Nullable Output<String> vmName,
-        @Nullable Output<List<String>> zones) {
-        this.additionalCapabilities = additionalCapabilities;
-        this.availabilitySet = availabilitySet;
-        this.billingProfile = billingProfile;
-        this.diagnosticsProfile = diagnosticsProfile;
-        this.evictionPolicy = evictionPolicy;
-        this.extendedLocation = extendedLocation;
-        this.extensionsTimeBudget = extensionsTimeBudget;
-        this.hardwareProfile = hardwareProfile;
-        this.host = host;
-        this.hostGroup = hostGroup;
-        this.identity = identity;
-        this.licenseType = licenseType;
-        this.location = location;
-        this.networkProfile = networkProfile;
-        this.osProfile = osProfile;
-        this.plan = plan;
-        this.platformFaultDomain = platformFaultDomain;
-        this.priority = priority;
-        this.proximityPlacementGroup = proximityPlacementGroup;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scheduledEventsProfile = scheduledEventsProfile;
-        this.securityProfile = securityProfile;
-        this.storageProfile = storageProfile;
-        this.tags = tags;
-        this.userData = userData;
-        this.virtualMachineScaleSet = virtualMachineScaleSet;
-        this.vmName = vmName;
-        this.zones = zones;
-    }
+    private VirtualMachineArgs() {}
 
-    private VirtualMachineArgs() {
-        this.additionalCapabilities = Codegen.empty();
-        this.availabilitySet = Codegen.empty();
-        this.billingProfile = Codegen.empty();
-        this.diagnosticsProfile = Codegen.empty();
-        this.evictionPolicy = Codegen.empty();
-        this.extendedLocation = Codegen.empty();
-        this.extensionsTimeBudget = Codegen.empty();
-        this.hardwareProfile = Codegen.empty();
-        this.host = Codegen.empty();
-        this.hostGroup = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.licenseType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkProfile = Codegen.empty();
-        this.osProfile = Codegen.empty();
-        this.plan = Codegen.empty();
-        this.platformFaultDomain = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.proximityPlacementGroup = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scheduledEventsProfile = Codegen.empty();
-        this.securityProfile = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userData = Codegen.empty();
-        this.virtualMachineScaleSet = Codegen.empty();
-        this.vmName = Codegen.empty();
-        this.zones = Codegen.empty();
+    private VirtualMachineArgs(VirtualMachineArgs $) {
+        this.additionalCapabilities = $.additionalCapabilities;
+        this.availabilitySet = $.availabilitySet;
+        this.billingProfile = $.billingProfile;
+        this.diagnosticsProfile = $.diagnosticsProfile;
+        this.evictionPolicy = $.evictionPolicy;
+        this.extendedLocation = $.extendedLocation;
+        this.extensionsTimeBudget = $.extensionsTimeBudget;
+        this.hardwareProfile = $.hardwareProfile;
+        this.host = $.host;
+        this.hostGroup = $.hostGroup;
+        this.identity = $.identity;
+        this.licenseType = $.licenseType;
+        this.location = $.location;
+        this.networkProfile = $.networkProfile;
+        this.osProfile = $.osProfile;
+        this.plan = $.plan;
+        this.platformFaultDomain = $.platformFaultDomain;
+        this.priority = $.priority;
+        this.proximityPlacementGroup = $.proximityPlacementGroup;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scheduledEventsProfile = $.scheduledEventsProfile;
+        this.securityProfile = $.securityProfile;
+        this.storageProfile = $.storageProfile;
+        this.tags = $.tags;
+        this.userData = $.userData;
+        this.virtualMachineScaleSet = $.virtualMachineScaleSet;
+        this.vmName = $.vmName;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
-        private @Nullable Output<SubResourceArgs> availabilitySet;
-        private @Nullable Output<BillingProfileArgs> billingProfile;
-        private @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
-        private @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<String> extensionsTimeBudget;
-        private @Nullable Output<HardwareProfileArgs> hardwareProfile;
-        private @Nullable Output<SubResourceArgs> host;
-        private @Nullable Output<SubResourceArgs> hostGroup;
-        private @Nullable Output<VirtualMachineIdentityArgs> identity;
-        private @Nullable Output<String> licenseType;
-        private @Nullable Output<String> location;
-        private @Nullable Output<NetworkProfileArgs> networkProfile;
-        private @Nullable Output<OSProfileArgs> osProfile;
-        private @Nullable Output<PlanArgs> plan;
-        private @Nullable Output<Integer> platformFaultDomain;
-        private @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
-        private @Nullable Output<SubResourceArgs> proximityPlacementGroup;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
-        private @Nullable Output<SecurityProfileArgs> securityProfile;
-        private @Nullable Output<StorageProfileArgs> storageProfile;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> userData;
-        private @Nullable Output<SubResourceArgs> virtualMachineScaleSet;
-        private @Nullable Output<String> vmName;
-        private @Nullable Output<List<String>> zones;
+        private VirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineArgs();
         }
 
         public Builder(VirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalCapabilities = defaults.additionalCapabilities;
-    	      this.availabilitySet = defaults.availabilitySet;
-    	      this.billingProfile = defaults.billingProfile;
-    	      this.diagnosticsProfile = defaults.diagnosticsProfile;
-    	      this.evictionPolicy = defaults.evictionPolicy;
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.extensionsTimeBudget = defaults.extensionsTimeBudget;
-    	      this.hardwareProfile = defaults.hardwareProfile;
-    	      this.host = defaults.host;
-    	      this.hostGroup = defaults.hostGroup;
-    	      this.identity = defaults.identity;
-    	      this.licenseType = defaults.licenseType;
-    	      this.location = defaults.location;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.osProfile = defaults.osProfile;
-    	      this.plan = defaults.plan;
-    	      this.platformFaultDomain = defaults.platformFaultDomain;
-    	      this.priority = defaults.priority;
-    	      this.proximityPlacementGroup = defaults.proximityPlacementGroup;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scheduledEventsProfile = defaults.scheduledEventsProfile;
-    	      this.securityProfile = defaults.securityProfile;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.tags = defaults.tags;
-    	      this.userData = defaults.userData;
-    	      this.virtualMachineScaleSet = defaults.virtualMachineScaleSet;
-    	      this.vmName = defaults.vmName;
-    	      this.zones = defaults.zones;
+            $ = new VirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalCapabilities(@Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities) {
-            this.additionalCapabilities = additionalCapabilities;
+            $.additionalCapabilities = additionalCapabilities;
             return this;
         }
-        public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesArgs additionalCapabilities) {
-            this.additionalCapabilities = Codegen.ofNullable(additionalCapabilities);
-            return this;
+
+        public Builder additionalCapabilities(AdditionalCapabilitiesArgs additionalCapabilities) {
+            return additionalCapabilities(Output.of(additionalCapabilities));
         }
+
         public Builder availabilitySet(@Nullable Output<SubResourceArgs> availabilitySet) {
-            this.availabilitySet = availabilitySet;
+            $.availabilitySet = availabilitySet;
             return this;
         }
-        public Builder availabilitySet(@Nullable SubResourceArgs availabilitySet) {
-            this.availabilitySet = Codegen.ofNullable(availabilitySet);
-            return this;
+
+        public Builder availabilitySet(SubResourceArgs availabilitySet) {
+            return availabilitySet(Output.of(availabilitySet));
         }
+
         public Builder billingProfile(@Nullable Output<BillingProfileArgs> billingProfile) {
-            this.billingProfile = billingProfile;
+            $.billingProfile = billingProfile;
             return this;
         }
-        public Builder billingProfile(@Nullable BillingProfileArgs billingProfile) {
-            this.billingProfile = Codegen.ofNullable(billingProfile);
-            return this;
+
+        public Builder billingProfile(BillingProfileArgs billingProfile) {
+            return billingProfile(Output.of(billingProfile));
         }
+
         public Builder diagnosticsProfile(@Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile) {
-            this.diagnosticsProfile = diagnosticsProfile;
+            $.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
-        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
-            this.diagnosticsProfile = Codegen.ofNullable(diagnosticsProfile);
-            return this;
+
+        public Builder diagnosticsProfile(DiagnosticsProfileArgs diagnosticsProfile) {
+            return diagnosticsProfile(Output.of(diagnosticsProfile));
         }
+
         public Builder evictionPolicy(@Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
-            this.evictionPolicy = evictionPolicy;
+            $.evictionPolicy = evictionPolicy;
             return this;
         }
-        public Builder evictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
-            this.evictionPolicy = Codegen.ofNullable(evictionPolicy);
-            return this;
+
+        public Builder evictionPolicy(Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
+            return evictionPolicy(Output.of(evictionPolicy));
         }
+
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder extensionsTimeBudget(@Nullable Output<String> extensionsTimeBudget) {
-            this.extensionsTimeBudget = extensionsTimeBudget;
+            $.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
-        public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
-            this.extensionsTimeBudget = Codegen.ofNullable(extensionsTimeBudget);
-            return this;
+
+        public Builder extensionsTimeBudget(String extensionsTimeBudget) {
+            return extensionsTimeBudget(Output.of(extensionsTimeBudget));
         }
+
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
-            this.hardwareProfile = hardwareProfile;
+            $.hardwareProfile = hardwareProfile;
             return this;
         }
-        public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
-            this.hardwareProfile = Codegen.ofNullable(hardwareProfile);
-            return this;
+
+        public Builder hardwareProfile(HardwareProfileArgs hardwareProfile) {
+            return hardwareProfile(Output.of(hardwareProfile));
         }
+
         public Builder host(@Nullable Output<SubResourceArgs> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable SubResourceArgs host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(SubResourceArgs host) {
+            return host(Output.of(host));
         }
+
         public Builder hostGroup(@Nullable Output<SubResourceArgs> hostGroup) {
-            this.hostGroup = hostGroup;
+            $.hostGroup = hostGroup;
             return this;
         }
-        public Builder hostGroup(@Nullable SubResourceArgs hostGroup) {
-            this.hostGroup = Codegen.ofNullable(hostGroup);
-            return this;
+
+        public Builder hostGroup(SubResourceArgs hostGroup) {
+            return hostGroup(Output.of(hostGroup));
         }
+
         public Builder identity(@Nullable Output<VirtualMachineIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable VirtualMachineIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(VirtualMachineIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder licenseType(@Nullable Output<String> licenseType) {
-            this.licenseType = licenseType;
+            $.licenseType = licenseType;
             return this;
         }
-        public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Codegen.ofNullable(licenseType);
-            return this;
+
+        public Builder licenseType(String licenseType) {
+            return licenseType(Output.of(licenseType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
+
+        public Builder networkProfile(NetworkProfileArgs networkProfile) {
+            return networkProfile(Output.of(networkProfile));
         }
+
         public Builder osProfile(@Nullable Output<OSProfileArgs> osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
-        public Builder osProfile(@Nullable OSProfileArgs osProfile) {
-            this.osProfile = Codegen.ofNullable(osProfile);
-            return this;
+
+        public Builder osProfile(OSProfileArgs osProfile) {
+            return osProfile(Output.of(osProfile));
         }
+
         public Builder plan(@Nullable Output<PlanArgs> plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
-        public Builder plan(@Nullable PlanArgs plan) {
-            this.plan = Codegen.ofNullable(plan);
-            return this;
+
+        public Builder plan(PlanArgs plan) {
+            return plan(Output.of(plan));
         }
+
         public Builder platformFaultDomain(@Nullable Output<Integer> platformFaultDomain) {
-            this.platformFaultDomain = platformFaultDomain;
+            $.platformFaultDomain = platformFaultDomain;
             return this;
         }
-        public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
-            this.platformFaultDomain = Codegen.ofNullable(platformFaultDomain);
-            return this;
+
+        public Builder platformFaultDomain(Integer platformFaultDomain) {
+            return platformFaultDomain(Output.of(platformFaultDomain));
         }
+
         public Builder priority(@Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Either<String,VirtualMachinePriorityTypes> priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder proximityPlacementGroup(@Nullable Output<SubResourceArgs> proximityPlacementGroup) {
-            this.proximityPlacementGroup = proximityPlacementGroup;
+            $.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
-        public Builder proximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
-            this.proximityPlacementGroup = Codegen.ofNullable(proximityPlacementGroup);
-            return this;
+
+        public Builder proximityPlacementGroup(SubResourceArgs proximityPlacementGroup) {
+            return proximityPlacementGroup(Output.of(proximityPlacementGroup));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scheduledEventsProfile(@Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile) {
-            this.scheduledEventsProfile = scheduledEventsProfile;
+            $.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
-        public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
-            this.scheduledEventsProfile = Codegen.ofNullable(scheduledEventsProfile);
-            return this;
+
+        public Builder scheduledEventsProfile(ScheduledEventsProfileArgs scheduledEventsProfile) {
+            return scheduledEventsProfile(Output.of(scheduledEventsProfile));
         }
+
         public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
-            this.securityProfile = securityProfile;
+            $.securityProfile = securityProfile;
             return this;
         }
-        public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
-            this.securityProfile = Codegen.ofNullable(securityProfile);
-            return this;
+
+        public Builder securityProfile(SecurityProfileArgs securityProfile) {
+            return securityProfile(Output.of(securityProfile));
         }
+
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
-        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Codegen.ofNullable(storageProfile);
-            return this;
+
+        public Builder storageProfile(StorageProfileArgs storageProfile) {
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userData(@Nullable Output<String> userData) {
-            this.userData = userData;
+            $.userData = userData;
             return this;
         }
-        public Builder userData(@Nullable String userData) {
-            this.userData = Codegen.ofNullable(userData);
-            return this;
+
+        public Builder userData(String userData) {
+            return userData(Output.of(userData));
         }
+
         public Builder virtualMachineScaleSet(@Nullable Output<SubResourceArgs> virtualMachineScaleSet) {
-            this.virtualMachineScaleSet = virtualMachineScaleSet;
+            $.virtualMachineScaleSet = virtualMachineScaleSet;
             return this;
         }
-        public Builder virtualMachineScaleSet(@Nullable SubResourceArgs virtualMachineScaleSet) {
-            this.virtualMachineScaleSet = Codegen.ofNullable(virtualMachineScaleSet);
-            return this;
+
+        public Builder virtualMachineScaleSet(SubResourceArgs virtualMachineScaleSet) {
+            return virtualMachineScaleSet(Output.of(virtualMachineScaleSet));
         }
+
         public Builder vmName(@Nullable Output<String> vmName) {
-            this.vmName = vmName;
+            $.vmName = vmName;
             return this;
         }
-        public Builder vmName(@Nullable String vmName) {
-            this.vmName = Codegen.ofNullable(vmName);
-            return this;
+
+        public Builder vmName(String vmName) {
+            return vmName(Output.of(vmName));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public VirtualMachineArgs build() {
-            return new VirtualMachineArgs(additionalCapabilities, availabilitySet, billingProfile, diagnosticsProfile, evictionPolicy, extendedLocation, extensionsTimeBudget, hardwareProfile, host, hostGroup, identity, licenseType, location, networkProfile, osProfile, plan, platformFaultDomain, priority, proximityPlacementGroup, resourceGroupName, scheduledEventsProfile, securityProfile, storageProfile, tags, userData, virtualMachineScaleSet, vmName, zones);
+        }
+
+        public VirtualMachineArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

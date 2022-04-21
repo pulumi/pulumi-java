@@ -26,10 +26,10 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
+    private @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
-    public List<ManagedRuleExclusionResponse> exclusions() {
-        return this.exclusions == null ? List.of() : this.exclusions;
+    public Optional<List<ManagedRuleExclusionResponse>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
      * 
      */
     @Import(name="ruleGroupName", required=true)
-      private final String ruleGroupName;
+    private String ruleGroupName;
 
     public String ruleGroupName() {
         return this.ruleGroupName;
@@ -48,70 +48,65 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
+    private @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
 
-    public List<FrontDoorManagedRuleOverrideResponse> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<FrontDoorManagedRuleOverrideResponse>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public FrontDoorManagedRuleGroupOverrideResponse(
-        @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        String ruleGroupName,
-        @Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
-        this.exclusions = exclusions;
-        this.ruleGroupName = Objects.requireNonNull(ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
-        this.rules = rules;
-    }
+    private FrontDoorManagedRuleGroupOverrideResponse() {}
 
-    private FrontDoorManagedRuleGroupOverrideResponse() {
-        this.exclusions = List.of();
-        this.ruleGroupName = null;
-        this.rules = List.of();
+    private FrontDoorManagedRuleGroupOverrideResponse(FrontDoorManagedRuleGroupOverrideResponse $) {
+        this.exclusions = $.exclusions;
+        this.ruleGroupName = $.ruleGroupName;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrontDoorManagedRuleGroupOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ManagedRuleExclusionResponse> exclusions;
-        private String ruleGroupName;
-        private @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
+        private FrontDoorManagedRuleGroupOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrontDoorManagedRuleGroupOverrideResponse();
         }
 
         public Builder(FrontDoorManagedRuleGroupOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclusions = defaults.exclusions;
-    	      this.ruleGroupName = defaults.ruleGroupName;
-    	      this.rules = defaults.rules;
+            $ = new FrontDoorManagedRuleGroupOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
+
         public Builder exclusions(ManagedRuleExclusionResponse... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder ruleGroupName(String ruleGroupName) {
-            this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
+            $.ruleGroupName = ruleGroupName;
             return this;
         }
+
         public Builder rules(@Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(FrontDoorManagedRuleOverrideResponse... rules) {
             return rules(List.of(rules));
-        }        public FrontDoorManagedRuleGroupOverrideResponse build() {
-            return new FrontDoorManagedRuleGroupOverrideResponse(exclusions, ruleGroupName, rules);
+        }
+
+        public FrontDoorManagedRuleGroupOverrideResponse build() {
+            $.ruleGroupName = Objects.requireNonNull($.ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
+            return $;
         }
     }
+
 }

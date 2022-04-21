@@ -5,10 +5,10 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DataSetIngestionWaitPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="ingestionWaitTimeInHours")
-      private final @Nullable Output<Double> ingestionWaitTimeInHours;
+    private @Nullable Output<Double> ingestionWaitTimeInHours;
 
-    public Output<Double> ingestionWaitTimeInHours() {
-        return this.ingestionWaitTimeInHours == null ? Codegen.empty() : this.ingestionWaitTimeInHours;
+    public Optional<Output<Double>> ingestionWaitTimeInHours() {
+        return Optional.ofNullable(this.ingestionWaitTimeInHours);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class DataSetIngestionWaitPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="waitForSpiceIngestion")
-      private final @Nullable Output<Boolean> waitForSpiceIngestion;
+    private @Nullable Output<Boolean> waitForSpiceIngestion;
 
-    public Output<Boolean> waitForSpiceIngestion() {
-        return this.waitForSpiceIngestion == null ? Codegen.empty() : this.waitForSpiceIngestion;
+    public Optional<Output<Boolean>> waitForSpiceIngestion() {
+        return Optional.ofNullable(this.waitForSpiceIngestion);
     }
 
-    public DataSetIngestionWaitPolicyArgs(
-        @Nullable Output<Double> ingestionWaitTimeInHours,
-        @Nullable Output<Boolean> waitForSpiceIngestion) {
-        this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
-        this.waitForSpiceIngestion = waitForSpiceIngestion;
-    }
+    private DataSetIngestionWaitPolicyArgs() {}
 
-    private DataSetIngestionWaitPolicyArgs() {
-        this.ingestionWaitTimeInHours = Codegen.empty();
-        this.waitForSpiceIngestion = Codegen.empty();
+    private DataSetIngestionWaitPolicyArgs(DataSetIngestionWaitPolicyArgs $) {
+        this.ingestionWaitTimeInHours = $.ingestionWaitTimeInHours;
+        this.waitForSpiceIngestion = $.waitForSpiceIngestion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSetIngestionWaitPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> ingestionWaitTimeInHours;
-        private @Nullable Output<Boolean> waitForSpiceIngestion;
+        private DataSetIngestionWaitPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSetIngestionWaitPolicyArgs();
         }
 
         public Builder(DataSetIngestionWaitPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestionWaitTimeInHours = defaults.ingestionWaitTimeInHours;
-    	      this.waitForSpiceIngestion = defaults.waitForSpiceIngestion;
+            $ = new DataSetIngestionWaitPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestionWaitTimeInHours(@Nullable Output<Double> ingestionWaitTimeInHours) {
-            this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
+            $.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
             return this;
         }
-        public Builder ingestionWaitTimeInHours(@Nullable Double ingestionWaitTimeInHours) {
-            this.ingestionWaitTimeInHours = Codegen.ofNullable(ingestionWaitTimeInHours);
-            return this;
+
+        public Builder ingestionWaitTimeInHours(Double ingestionWaitTimeInHours) {
+            return ingestionWaitTimeInHours(Output.of(ingestionWaitTimeInHours));
         }
+
         public Builder waitForSpiceIngestion(@Nullable Output<Boolean> waitForSpiceIngestion) {
-            this.waitForSpiceIngestion = waitForSpiceIngestion;
+            $.waitForSpiceIngestion = waitForSpiceIngestion;
             return this;
         }
-        public Builder waitForSpiceIngestion(@Nullable Boolean waitForSpiceIngestion) {
-            this.waitForSpiceIngestion = Codegen.ofNullable(waitForSpiceIngestion);
-            return this;
-        }        public DataSetIngestionWaitPolicyArgs build() {
-            return new DataSetIngestionWaitPolicyArgs(ingestionWaitTimeInHours, waitForSpiceIngestion);
+
+        public Builder waitForSpiceIngestion(Boolean waitForSpiceIngestion) {
+            return waitForSpiceIngestion(Output.of(waitForSpiceIngestion));
+        }
+
+        public DataSetIngestionWaitPolicyArgs build() {
+            return $;
         }
     }
+
 }

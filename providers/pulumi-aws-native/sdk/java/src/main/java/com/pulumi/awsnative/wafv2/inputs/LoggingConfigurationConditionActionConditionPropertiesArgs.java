@@ -6,7 +6,6 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.enums.LoggingConfigurationConditionActionConditionPropertiesAction;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
      * 
      */
     @Import(name="action", required=true)
-      private final Output<LoggingConfigurationConditionActionConditionPropertiesAction> action;
+    private Output<LoggingConfigurationConditionActionConditionPropertiesAction> action;
 
     public Output<LoggingConfigurationConditionActionConditionPropertiesAction> action() {
         return this.action;
     }
 
-    public LoggingConfigurationConditionActionConditionPropertiesArgs(Output<LoggingConfigurationConditionActionConditionPropertiesAction> action) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-    }
+    private LoggingConfigurationConditionActionConditionPropertiesArgs() {}
 
-    private LoggingConfigurationConditionActionConditionPropertiesArgs() {
-        this.action = Codegen.empty();
+    private LoggingConfigurationConditionActionConditionPropertiesArgs(LoggingConfigurationConditionActionConditionPropertiesArgs $) {
+        this.action = $.action;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationConditionActionConditionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<LoggingConfigurationConditionActionConditionPropertiesAction> action;
+        private LoggingConfigurationConditionActionConditionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationConditionActionConditionPropertiesArgs();
         }
 
         public Builder(LoggingConfigurationConditionActionConditionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
+            $ = new LoggingConfigurationConditionActionConditionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<LoggingConfigurationConditionActionConditionPropertiesAction> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(LoggingConfigurationConditionActionConditionPropertiesAction action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
-        }        public LoggingConfigurationConditionActionConditionPropertiesArgs build() {
-            return new LoggingConfigurationConditionActionConditionPropertiesArgs(action);
+            return action(Output.of(action));
+        }
+
+        public LoggingConfigurationConditionActionConditionPropertiesArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            return $;
         }
     }
+
 }

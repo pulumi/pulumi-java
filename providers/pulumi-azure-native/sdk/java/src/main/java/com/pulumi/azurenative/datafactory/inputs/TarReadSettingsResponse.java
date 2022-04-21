@@ -25,10 +25,10 @@ public final class TarReadSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="preserveCompressionFileNameAsFolder")
-      private final @Nullable Object preserveCompressionFileNameAsFolder;
+    private @Nullable Object preserveCompressionFileNameAsFolder;
 
     public Optional<Object> preserveCompressionFileNameAsFolder() {
-        return this.preserveCompressionFileNameAsFolder == null ? Optional.empty() : Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
+        return Optional.ofNullable(this.preserveCompressionFileNameAsFolder);
     }
 
     /**
@@ -37,55 +37,51 @@ public final class TarReadSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TarReadSettingsResponse(
-        @Nullable Object preserveCompressionFileNameAsFolder,
-        String type) {
-        this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private TarReadSettingsResponse() {}
 
-    private TarReadSettingsResponse() {
-        this.preserveCompressionFileNameAsFolder = null;
-        this.type = null;
+    private TarReadSettingsResponse(TarReadSettingsResponse $) {
+        this.preserveCompressionFileNameAsFolder = $.preserveCompressionFileNameAsFolder;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TarReadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object preserveCompressionFileNameAsFolder;
-        private String type;
+        private TarReadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TarReadSettingsResponse();
         }
 
         public Builder(TarReadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preserveCompressionFileNameAsFolder = defaults.preserveCompressionFileNameAsFolder;
-    	      this.type = defaults.type;
+            $ = new TarReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder preserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
-            this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
+            $.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TarReadSettingsResponse build() {
-            return new TarReadSettingsResponse(preserveCompressionFileNameAsFolder, type);
+        }
+
+        public TarReadSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

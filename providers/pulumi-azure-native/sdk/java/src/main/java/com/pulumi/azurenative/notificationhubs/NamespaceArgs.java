@@ -7,11 +7,11 @@ import com.pulumi.azurenative.notificationhubs.enums.NamespaceType;
 import com.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="critical")
-      private final @Nullable Output<Boolean> critical;
+    private @Nullable Output<Boolean> critical;
 
-    public Output<Boolean> critical() {
-        return this.critical == null ? Codegen.empty() : this.critical;
+    public Optional<Output<Boolean>> critical() {
+        return Optional.ofNullable(this.critical);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataCenter")
-      private final @Nullable Output<String> dataCenter;
+    private @Nullable Output<String> dataCenter;
 
-    public Output<String> dataCenter() {
-        return this.dataCenter == null ? Codegen.empty() : this.dataCenter;
+    public Optional<Output<String>> dataCenter() {
+        return Optional.ofNullable(this.dataCenter);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceName")
-      private final @Nullable Output<String> namespaceName;
+    private @Nullable Output<String> namespaceName;
 
-    public Output<String> namespaceName() {
-        return this.namespaceName == null ? Codegen.empty() : this.namespaceName;
+    public Optional<Output<String>> namespaceName() {
+        return Optional.ofNullable(this.namespaceName);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceType")
-      private final @Nullable Output<NamespaceType> namespaceType;
+    private @Nullable Output<NamespaceType> namespaceType;
 
-    public Output<NamespaceType> namespaceType() {
-        return this.namespaceType == null ? Codegen.empty() : this.namespaceType;
+    public Optional<Output<NamespaceType>> namespaceType() {
+        return Optional.ofNullable(this.namespaceType);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<String> provisioningState;
+    private @Nullable Output<String> provisioningState;
 
-    public Output<String> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<String>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -134,7 +134,7 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -145,10 +145,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scaleUnit")
-      private final @Nullable Output<String> scaleUnit;
+    private @Nullable Output<String> scaleUnit;
 
-    public Output<String> scaleUnit() {
-        return this.scaleUnit == null ? Codegen.empty() : this.scaleUnit;
+    public Optional<Output<String>> scaleUnit() {
+        return Optional.ofNullable(this.scaleUnit);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceBusEndpoint")
-      private final @Nullable Output<String> serviceBusEndpoint;
+    private @Nullable Output<String> serviceBusEndpoint;
 
-    public Output<String> serviceBusEndpoint() {
-        return this.serviceBusEndpoint == null ? Codegen.empty() : this.serviceBusEndpoint;
+    public Optional<Output<String>> serviceBusEndpoint() {
+        return Optional.ofNullable(this.serviceBusEndpoint);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable Output<String> subscriptionId;
+    private @Nullable Output<String> subscriptionId;
 
-    public Output<String> subscriptionId() {
-        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
+    public Optional<Output<String>> subscriptionId() {
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -211,271 +211,219 @@ public final class NamespaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updatedAt")
-      private final @Nullable Output<String> updatedAt;
+    private @Nullable Output<String> updatedAt;
 
-    public Output<String> updatedAt() {
-        return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
+    public Optional<Output<String>> updatedAt() {
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    public NamespaceArgs(
-        @Nullable Output<String> createdAt,
-        @Nullable Output<Boolean> critical,
-        @Nullable Output<String> dataCenter,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespaceName,
-        @Nullable Output<NamespaceType> namespaceType,
-        @Nullable Output<String> provisioningState,
-        @Nullable Output<String> region,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> scaleUnit,
-        @Nullable Output<String> serviceBusEndpoint,
-        @Nullable Output<SkuArgs> sku,
-        @Nullable Output<String> status,
-        @Nullable Output<String> subscriptionId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> updatedAt) {
-        this.createdAt = createdAt;
-        this.critical = critical;
-        this.dataCenter = dataCenter;
-        this.enabled = enabled;
-        this.location = location;
-        this.name = name;
-        this.namespaceName = namespaceName;
-        this.namespaceType = namespaceType;
-        this.provisioningState = provisioningState;
-        this.region = region;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.scaleUnit = scaleUnit;
-        this.serviceBusEndpoint = serviceBusEndpoint;
-        this.sku = sku;
-        this.status = status;
-        this.subscriptionId = subscriptionId;
-        this.tags = tags;
-        this.updatedAt = updatedAt;
-    }
+    private NamespaceArgs() {}
 
-    private NamespaceArgs() {
-        this.createdAt = Codegen.empty();
-        this.critical = Codegen.empty();
-        this.dataCenter = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.namespaceType = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.region = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.scaleUnit = Codegen.empty();
-        this.serviceBusEndpoint = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.status = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.updatedAt = Codegen.empty();
+    private NamespaceArgs(NamespaceArgs $) {
+        this.createdAt = $.createdAt;
+        this.critical = $.critical;
+        this.dataCenter = $.dataCenter;
+        this.enabled = $.enabled;
+        this.location = $.location;
+        this.name = $.name;
+        this.namespaceName = $.namespaceName;
+        this.namespaceType = $.namespaceType;
+        this.provisioningState = $.provisioningState;
+        this.region = $.region;
+        this.resourceGroupName = $.resourceGroupName;
+        this.scaleUnit = $.scaleUnit;
+        this.serviceBusEndpoint = $.serviceBusEndpoint;
+        this.sku = $.sku;
+        this.status = $.status;
+        this.subscriptionId = $.subscriptionId;
+        this.tags = $.tags;
+        this.updatedAt = $.updatedAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<Boolean> critical;
-        private @Nullable Output<String> dataCenter;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespaceName;
-        private @Nullable Output<NamespaceType> namespaceType;
-        private @Nullable Output<String> provisioningState;
-        private @Nullable Output<String> region;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> scaleUnit;
-        private @Nullable Output<String> serviceBusEndpoint;
-        private @Nullable Output<SkuArgs> sku;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> subscriptionId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> updatedAt;
+        private NamespaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceArgs();
         }
 
         public Builder(NamespaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.critical = defaults.critical;
-    	      this.dataCenter = defaults.dataCenter;
-    	      this.enabled = defaults.enabled;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.namespaceType = defaults.namespaceType;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.region = defaults.region;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.scaleUnit = defaults.scaleUnit;
-    	      this.serviceBusEndpoint = defaults.serviceBusEndpoint;
-    	      this.sku = defaults.sku;
-    	      this.status = defaults.status;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tags = defaults.tags;
-    	      this.updatedAt = defaults.updatedAt;
+            $ = new NamespaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder critical(@Nullable Output<Boolean> critical) {
-            this.critical = critical;
+            $.critical = critical;
             return this;
         }
-        public Builder critical(@Nullable Boolean critical) {
-            this.critical = Codegen.ofNullable(critical);
-            return this;
+
+        public Builder critical(Boolean critical) {
+            return critical(Output.of(critical));
         }
+
         public Builder dataCenter(@Nullable Output<String> dataCenter) {
-            this.dataCenter = dataCenter;
+            $.dataCenter = dataCenter;
             return this;
         }
-        public Builder dataCenter(@Nullable String dataCenter) {
-            this.dataCenter = Codegen.ofNullable(dataCenter);
-            return this;
+
+        public Builder dataCenter(String dataCenter) {
+            return dataCenter(Output.of(dataCenter));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespaceName(@Nullable Output<String> namespaceName) {
-            this.namespaceName = namespaceName;
+            $.namespaceName = namespaceName;
             return this;
         }
-        public Builder namespaceName(@Nullable String namespaceName) {
-            this.namespaceName = Codegen.ofNullable(namespaceName);
-            return this;
+
+        public Builder namespaceName(String namespaceName) {
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder namespaceType(@Nullable Output<NamespaceType> namespaceType) {
-            this.namespaceType = namespaceType;
+            $.namespaceType = namespaceType;
             return this;
         }
-        public Builder namespaceType(@Nullable NamespaceType namespaceType) {
-            this.namespaceType = Codegen.ofNullable(namespaceType);
-            return this;
+
+        public Builder namespaceType(NamespaceType namespaceType) {
+            return namespaceType(Output.of(namespaceType));
         }
+
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder scaleUnit(@Nullable Output<String> scaleUnit) {
-            this.scaleUnit = scaleUnit;
+            $.scaleUnit = scaleUnit;
             return this;
         }
-        public Builder scaleUnit(@Nullable String scaleUnit) {
-            this.scaleUnit = Codegen.ofNullable(scaleUnit);
-            return this;
+
+        public Builder scaleUnit(String scaleUnit) {
+            return scaleUnit(Output.of(scaleUnit));
         }
+
         public Builder serviceBusEndpoint(@Nullable Output<String> serviceBusEndpoint) {
-            this.serviceBusEndpoint = serviceBusEndpoint;
+            $.serviceBusEndpoint = serviceBusEndpoint;
             return this;
         }
-        public Builder serviceBusEndpoint(@Nullable String serviceBusEndpoint) {
-            this.serviceBusEndpoint = Codegen.ofNullable(serviceBusEndpoint);
-            return this;
+
+        public Builder serviceBusEndpoint(String serviceBusEndpoint) {
+            return serviceBusEndpoint(Output.of(serviceBusEndpoint));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
-        public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Codegen.ofNullable(subscriptionId);
-            return this;
+
+        public Builder subscriptionId(String subscriptionId) {
+            return subscriptionId(Output.of(subscriptionId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
-            this.updatedAt = updatedAt;
+            $.updatedAt = updatedAt;
             return this;
         }
-        public Builder updatedAt(@Nullable String updatedAt) {
-            this.updatedAt = Codegen.ofNullable(updatedAt);
-            return this;
-        }        public NamespaceArgs build() {
-            return new NamespaceArgs(createdAt, critical, dataCenter, enabled, location, name, namespaceName, namespaceType, provisioningState, region, resourceGroupName, scaleUnit, serviceBusEndpoint, sku, status, subscriptionId, tags, updatedAt);
+
+        public Builder updatedAt(String updatedAt) {
+            return updatedAt(Output.of(updatedAt));
+        }
+
+        public NamespaceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,8 +7,8 @@ import com.pulumi.azurenative.compute.inputs.KeyVaultAndKeyReferenceArgs;
 import com.pulumi.azurenative.compute.inputs.KeyVaultAndSecretReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EncryptionSettingsElementArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="diskEncryptionKey")
-      private final @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
+    private @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
 
-    public Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
+    public Optional<Output<KeyVaultAndSecretReferenceArgs>> diskEncryptionKey() {
+        return Optional.ofNullable(this.diskEncryptionKey);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class EncryptionSettingsElementArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="keyEncryptionKey")
-      private final @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
+    private @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
 
-    public Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
+    public Optional<Output<KeyVaultAndKeyReferenceArgs>> keyEncryptionKey() {
+        return Optional.ofNullable(this.keyEncryptionKey);
     }
 
-    public EncryptionSettingsElementArgs(
-        @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey,
-        @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
-        this.diskEncryptionKey = diskEncryptionKey;
-        this.keyEncryptionKey = keyEncryptionKey;
-    }
+    private EncryptionSettingsElementArgs() {}
 
-    private EncryptionSettingsElementArgs() {
-        this.diskEncryptionKey = Codegen.empty();
-        this.keyEncryptionKey = Codegen.empty();
+    private EncryptionSettingsElementArgs(EncryptionSettingsElementArgs $) {
+        this.diskEncryptionKey = $.diskEncryptionKey;
+        this.keyEncryptionKey = $.keyEncryptionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionSettingsElementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
-        private @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
+        private EncryptionSettingsElementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionSettingsElementArgs();
         }
 
         public Builder(EncryptionSettingsElementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.keyEncryptionKey = defaults.keyEncryptionKey;
+            $ = new EncryptionSettingsElementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionKey(@Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey) {
-            this.diskEncryptionKey = diskEncryptionKey;
+            $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-        public Builder diskEncryptionKey(@Nullable KeyVaultAndSecretReferenceArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
-            return this;
+
+        public Builder diskEncryptionKey(KeyVaultAndSecretReferenceArgs diskEncryptionKey) {
+            return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
+
         public Builder keyEncryptionKey(@Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
-            this.keyEncryptionKey = keyEncryptionKey;
+            $.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-        public Builder keyEncryptionKey(@Nullable KeyVaultAndKeyReferenceArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Codegen.ofNullable(keyEncryptionKey);
-            return this;
-        }        public EncryptionSettingsElementArgs build() {
-            return new EncryptionSettingsElementArgs(diskEncryptionKey, keyEncryptionKey);
+
+        public Builder keyEncryptionKey(KeyVaultAndKeyReferenceArgs keyEncryptionKey) {
+            return keyEncryptionKey(Output.of(keyEncryptionKey));
+        }
+
+        public EncryptionSettingsElementArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.osconfig_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1.enums.PatchConfigRebootConfig;
 import com.pulumi.googlenative.osconfig_v1.inputs.AptSettingsArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.ExecStepArgs;
@@ -15,6 +14,7 @@ import com.pulumi.googlenative.osconfig_v1.inputs.YumSettingsArgs;
 import com.pulumi.googlenative.osconfig_v1.inputs.ZypperSettingsArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apt")
-      private final @Nullable Output<AptSettingsArgs> apt;
+    private @Nullable Output<AptSettingsArgs> apt;
 
-    public Output<AptSettingsArgs> apt() {
-        return this.apt == null ? Codegen.empty() : this.apt;
+    public Optional<Output<AptSettingsArgs>> apt() {
+        return Optional.ofNullable(this.apt);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="goo")
-      private final @Nullable Output<GooSettingsArgs> goo;
+    private @Nullable Output<GooSettingsArgs> goo;
 
-    public Output<GooSettingsArgs> goo() {
-        return this.goo == null ? Codegen.empty() : this.goo;
+    public Optional<Output<GooSettingsArgs>> goo() {
+        return Optional.ofNullable(this.goo);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="migInstancesAllowed")
-      private final @Nullable Output<Boolean> migInstancesAllowed;
+    private @Nullable Output<Boolean> migInstancesAllowed;
 
-    public Output<Boolean> migInstancesAllowed() {
-        return this.migInstancesAllowed == null ? Codegen.empty() : this.migInstancesAllowed;
+    public Optional<Output<Boolean>> migInstancesAllowed() {
+        return Optional.ofNullable(this.migInstancesAllowed);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postStep")
-      private final @Nullable Output<ExecStepArgs> postStep;
+    private @Nullable Output<ExecStepArgs> postStep;
 
-    public Output<ExecStepArgs> postStep() {
-        return this.postStep == null ? Codegen.empty() : this.postStep;
+    public Optional<Output<ExecStepArgs>> postStep() {
+        return Optional.ofNullable(this.postStep);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preStep")
-      private final @Nullable Output<ExecStepArgs> preStep;
+    private @Nullable Output<ExecStepArgs> preStep;
 
-    public Output<ExecStepArgs> preStep() {
-        return this.preStep == null ? Codegen.empty() : this.preStep;
+    public Optional<Output<ExecStepArgs>> preStep() {
+        return Optional.ofNullable(this.preStep);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rebootConfig")
-      private final @Nullable Output<PatchConfigRebootConfig> rebootConfig;
+    private @Nullable Output<PatchConfigRebootConfig> rebootConfig;
 
-    public Output<PatchConfigRebootConfig> rebootConfig() {
-        return this.rebootConfig == null ? Codegen.empty() : this.rebootConfig;
+    public Optional<Output<PatchConfigRebootConfig>> rebootConfig() {
+        return Optional.ofNullable(this.rebootConfig);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowsUpdate")
-      private final @Nullable Output<WindowsUpdateSettingsArgs> windowsUpdate;
+    private @Nullable Output<WindowsUpdateSettingsArgs> windowsUpdate;
 
-    public Output<WindowsUpdateSettingsArgs> windowsUpdate() {
-        return this.windowsUpdate == null ? Codegen.empty() : this.windowsUpdate;
+    public Optional<Output<WindowsUpdateSettingsArgs>> windowsUpdate() {
+        return Optional.ofNullable(this.windowsUpdate);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="yum")
-      private final @Nullable Output<YumSettingsArgs> yum;
+    private @Nullable Output<YumSettingsArgs> yum;
 
-    public Output<YumSettingsArgs> yum() {
-        return this.yum == null ? Codegen.empty() : this.yum;
+    public Optional<Output<YumSettingsArgs>> yum() {
+        return Optional.ofNullable(this.yum);
     }
 
     /**
@@ -119,154 +119,128 @@ public final class PatchConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zypper")
-      private final @Nullable Output<ZypperSettingsArgs> zypper;
+    private @Nullable Output<ZypperSettingsArgs> zypper;
 
-    public Output<ZypperSettingsArgs> zypper() {
-        return this.zypper == null ? Codegen.empty() : this.zypper;
+    public Optional<Output<ZypperSettingsArgs>> zypper() {
+        return Optional.ofNullable(this.zypper);
     }
 
-    public PatchConfigArgs(
-        @Nullable Output<AptSettingsArgs> apt,
-        @Nullable Output<GooSettingsArgs> goo,
-        @Nullable Output<Boolean> migInstancesAllowed,
-        @Nullable Output<ExecStepArgs> postStep,
-        @Nullable Output<ExecStepArgs> preStep,
-        @Nullable Output<PatchConfigRebootConfig> rebootConfig,
-        @Nullable Output<WindowsUpdateSettingsArgs> windowsUpdate,
-        @Nullable Output<YumSettingsArgs> yum,
-        @Nullable Output<ZypperSettingsArgs> zypper) {
-        this.apt = apt;
-        this.goo = goo;
-        this.migInstancesAllowed = migInstancesAllowed;
-        this.postStep = postStep;
-        this.preStep = preStep;
-        this.rebootConfig = rebootConfig;
-        this.windowsUpdate = windowsUpdate;
-        this.yum = yum;
-        this.zypper = zypper;
-    }
+    private PatchConfigArgs() {}
 
-    private PatchConfigArgs() {
-        this.apt = Codegen.empty();
-        this.goo = Codegen.empty();
-        this.migInstancesAllowed = Codegen.empty();
-        this.postStep = Codegen.empty();
-        this.preStep = Codegen.empty();
-        this.rebootConfig = Codegen.empty();
-        this.windowsUpdate = Codegen.empty();
-        this.yum = Codegen.empty();
-        this.zypper = Codegen.empty();
+    private PatchConfigArgs(PatchConfigArgs $) {
+        this.apt = $.apt;
+        this.goo = $.goo;
+        this.migInstancesAllowed = $.migInstancesAllowed;
+        this.postStep = $.postStep;
+        this.preStep = $.preStep;
+        this.rebootConfig = $.rebootConfig;
+        this.windowsUpdate = $.windowsUpdate;
+        this.yum = $.yum;
+        this.zypper = $.zypper;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AptSettingsArgs> apt;
-        private @Nullable Output<GooSettingsArgs> goo;
-        private @Nullable Output<Boolean> migInstancesAllowed;
-        private @Nullable Output<ExecStepArgs> postStep;
-        private @Nullable Output<ExecStepArgs> preStep;
-        private @Nullable Output<PatchConfigRebootConfig> rebootConfig;
-        private @Nullable Output<WindowsUpdateSettingsArgs> windowsUpdate;
-        private @Nullable Output<YumSettingsArgs> yum;
-        private @Nullable Output<ZypperSettingsArgs> zypper;
+        private PatchConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchConfigArgs();
         }
 
         public Builder(PatchConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apt = defaults.apt;
-    	      this.goo = defaults.goo;
-    	      this.migInstancesAllowed = defaults.migInstancesAllowed;
-    	      this.postStep = defaults.postStep;
-    	      this.preStep = defaults.preStep;
-    	      this.rebootConfig = defaults.rebootConfig;
-    	      this.windowsUpdate = defaults.windowsUpdate;
-    	      this.yum = defaults.yum;
-    	      this.zypper = defaults.zypper;
+            $ = new PatchConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apt(@Nullable Output<AptSettingsArgs> apt) {
-            this.apt = apt;
+            $.apt = apt;
             return this;
         }
-        public Builder apt(@Nullable AptSettingsArgs apt) {
-            this.apt = Codegen.ofNullable(apt);
-            return this;
+
+        public Builder apt(AptSettingsArgs apt) {
+            return apt(Output.of(apt));
         }
+
         public Builder goo(@Nullable Output<GooSettingsArgs> goo) {
-            this.goo = goo;
+            $.goo = goo;
             return this;
         }
-        public Builder goo(@Nullable GooSettingsArgs goo) {
-            this.goo = Codegen.ofNullable(goo);
-            return this;
+
+        public Builder goo(GooSettingsArgs goo) {
+            return goo(Output.of(goo));
         }
+
         public Builder migInstancesAllowed(@Nullable Output<Boolean> migInstancesAllowed) {
-            this.migInstancesAllowed = migInstancesAllowed;
+            $.migInstancesAllowed = migInstancesAllowed;
             return this;
         }
-        public Builder migInstancesAllowed(@Nullable Boolean migInstancesAllowed) {
-            this.migInstancesAllowed = Codegen.ofNullable(migInstancesAllowed);
-            return this;
+
+        public Builder migInstancesAllowed(Boolean migInstancesAllowed) {
+            return migInstancesAllowed(Output.of(migInstancesAllowed));
         }
+
         public Builder postStep(@Nullable Output<ExecStepArgs> postStep) {
-            this.postStep = postStep;
+            $.postStep = postStep;
             return this;
         }
-        public Builder postStep(@Nullable ExecStepArgs postStep) {
-            this.postStep = Codegen.ofNullable(postStep);
-            return this;
+
+        public Builder postStep(ExecStepArgs postStep) {
+            return postStep(Output.of(postStep));
         }
+
         public Builder preStep(@Nullable Output<ExecStepArgs> preStep) {
-            this.preStep = preStep;
+            $.preStep = preStep;
             return this;
         }
-        public Builder preStep(@Nullable ExecStepArgs preStep) {
-            this.preStep = Codegen.ofNullable(preStep);
-            return this;
+
+        public Builder preStep(ExecStepArgs preStep) {
+            return preStep(Output.of(preStep));
         }
+
         public Builder rebootConfig(@Nullable Output<PatchConfigRebootConfig> rebootConfig) {
-            this.rebootConfig = rebootConfig;
+            $.rebootConfig = rebootConfig;
             return this;
         }
-        public Builder rebootConfig(@Nullable PatchConfigRebootConfig rebootConfig) {
-            this.rebootConfig = Codegen.ofNullable(rebootConfig);
-            return this;
+
+        public Builder rebootConfig(PatchConfigRebootConfig rebootConfig) {
+            return rebootConfig(Output.of(rebootConfig));
         }
+
         public Builder windowsUpdate(@Nullable Output<WindowsUpdateSettingsArgs> windowsUpdate) {
-            this.windowsUpdate = windowsUpdate;
+            $.windowsUpdate = windowsUpdate;
             return this;
         }
-        public Builder windowsUpdate(@Nullable WindowsUpdateSettingsArgs windowsUpdate) {
-            this.windowsUpdate = Codegen.ofNullable(windowsUpdate);
-            return this;
+
+        public Builder windowsUpdate(WindowsUpdateSettingsArgs windowsUpdate) {
+            return windowsUpdate(Output.of(windowsUpdate));
         }
+
         public Builder yum(@Nullable Output<YumSettingsArgs> yum) {
-            this.yum = yum;
+            $.yum = yum;
             return this;
         }
-        public Builder yum(@Nullable YumSettingsArgs yum) {
-            this.yum = Codegen.ofNullable(yum);
-            return this;
+
+        public Builder yum(YumSettingsArgs yum) {
+            return yum(Output.of(yum));
         }
+
         public Builder zypper(@Nullable Output<ZypperSettingsArgs> zypper) {
-            this.zypper = zypper;
+            $.zypper = zypper;
             return this;
         }
-        public Builder zypper(@Nullable ZypperSettingsArgs zypper) {
-            this.zypper = Codegen.ofNullable(zypper);
-            return this;
-        }        public PatchConfigArgs build() {
-            return new PatchConfigArgs(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
+
+        public Builder zypper(ZypperSettingsArgs zypper) {
+            return zypper(Output.of(zypper));
+        }
+
+        public PatchConfigArgs build() {
+            return $;
         }
     }
+
 }

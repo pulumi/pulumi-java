@@ -25,10 +25,10 @@ public final class AzureBlobFSLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Object fileName;
+    private @Nullable Object fileName;
 
     public Optional<Object> fileName() {
-        return this.fileName == null ? Optional.empty() : Optional.ofNullable(this.fileName);
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AzureBlobFSLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="fileSystem")
-      private final @Nullable Object fileSystem;
+    private @Nullable Object fileSystem;
 
     public Optional<Object> fileSystem() {
-        return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
+        return Optional.ofNullable(this.fileSystem);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AzureBlobFSLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="folderPath")
-      private final @Nullable Object folderPath;
+    private @Nullable Object folderPath;
 
     public Optional<Object> folderPath() {
-        return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
+        return Optional.ofNullable(this.folderPath);
     }
 
     /**
@@ -59,73 +59,63 @@ public final class AzureBlobFSLocationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AzureBlobFSLocationResponse(
-        @Nullable Object fileName,
-        @Nullable Object fileSystem,
-        @Nullable Object folderPath,
-        String type) {
-        this.fileName = fileName;
-        this.fileSystem = fileSystem;
-        this.folderPath = folderPath;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private AzureBlobFSLocationResponse() {}
 
-    private AzureBlobFSLocationResponse() {
-        this.fileName = null;
-        this.fileSystem = null;
-        this.folderPath = null;
-        this.type = null;
+    private AzureBlobFSLocationResponse(AzureBlobFSLocationResponse $) {
+        this.fileName = $.fileName;
+        this.fileSystem = $.fileSystem;
+        this.folderPath = $.folderPath;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBlobFSLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object fileName;
-        private @Nullable Object fileSystem;
-        private @Nullable Object folderPath;
-        private String type;
+        private AzureBlobFSLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBlobFSLocationResponse();
         }
 
         public Builder(AzureBlobFSLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
-    	      this.fileSystem = defaults.fileSystem;
-    	      this.folderPath = defaults.folderPath;
-    	      this.type = defaults.type;
+            $ = new AzureBlobFSLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
+
         public Builder fileSystem(@Nullable Object fileSystem) {
-            this.fileSystem = fileSystem;
+            $.fileSystem = fileSystem;
             return this;
         }
+
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = folderPath;
+            $.folderPath = folderPath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AzureBlobFSLocationResponse build() {
-            return new AzureBlobFSLocationResponse(fileName, fileSystem, folderPath, type);
+        }
+
+        public AzureBlobFSLocationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

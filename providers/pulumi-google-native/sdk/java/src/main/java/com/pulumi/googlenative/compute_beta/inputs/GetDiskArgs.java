@@ -15,78 +15,72 @@ public final class GetDiskArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDiskArgs Empty = new GetDiskArgs();
 
     @Import(name="disk", required=true)
-      private final String disk;
+    private String disk;
 
     public String disk() {
         return this.disk;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetDiskArgs(
-        String disk,
-        @Nullable String project,
-        String zone) {
-        this.disk = Objects.requireNonNull(disk, "expected parameter 'disk' to be non-null");
-        this.project = project;
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetDiskArgs() {}
 
-    private GetDiskArgs() {
-        this.disk = null;
-        this.project = null;
-        this.zone = null;
+    private GetDiskArgs(GetDiskArgs $) {
+        this.disk = $.disk;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String disk;
-        private @Nullable String project;
-        private String zone;
+        private GetDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDiskArgs();
         }
 
         public Builder(GetDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disk = defaults.disk;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new GetDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disk(String disk) {
-            this.disk = Objects.requireNonNull(disk);
+            $.disk = disk;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetDiskArgs build() {
-            return new GetDiskArgs(disk, project, zone);
+        }
+
+        public GetDiskArgs build() {
+            $.disk = Objects.requireNonNull($.disk, "expected parameter 'disk' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

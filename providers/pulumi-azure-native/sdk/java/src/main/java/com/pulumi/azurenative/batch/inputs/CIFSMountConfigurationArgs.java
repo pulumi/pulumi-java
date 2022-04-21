@@ -5,9 +5,9 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class CIFSMountConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="mountOptions")
-      private final @Nullable Output<String> mountOptions;
+    private @Nullable Output<String> mountOptions;
 
-    public Output<String> mountOptions() {
-        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
+    public Optional<Output<String>> mountOptions() {
+        return Optional.ofNullable(this.mountOptions);
     }
 
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -38,116 +38,106 @@ public final class CIFSMountConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="relativeMountPath", required=true)
-      private final Output<String> relativeMountPath;
+    private Output<String> relativeMountPath;
 
     public Output<String> relativeMountPath() {
         return this.relativeMountPath;
     }
 
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
     }
 
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public CIFSMountConfigurationArgs(
-        @Nullable Output<String> mountOptions,
-        Output<String> password,
-        Output<String> relativeMountPath,
-        Output<String> source,
-        Output<String> username) {
-        this.mountOptions = mountOptions;
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.relativeMountPath = Objects.requireNonNull(relativeMountPath, "expected parameter 'relativeMountPath' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private CIFSMountConfigurationArgs() {}
 
-    private CIFSMountConfigurationArgs() {
-        this.mountOptions = Codegen.empty();
-        this.password = Codegen.empty();
-        this.relativeMountPath = Codegen.empty();
-        this.source = Codegen.empty();
-        this.username = Codegen.empty();
+    private CIFSMountConfigurationArgs(CIFSMountConfigurationArgs $) {
+        this.mountOptions = $.mountOptions;
+        this.password = $.password;
+        this.relativeMountPath = $.relativeMountPath;
+        this.source = $.source;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CIFSMountConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mountOptions;
-        private Output<String> password;
-        private Output<String> relativeMountPath;
-        private Output<String> source;
-        private Output<String> username;
+        private CIFSMountConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CIFSMountConfigurationArgs();
         }
 
         public Builder(CIFSMountConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.password = defaults.password;
-    	      this.relativeMountPath = defaults.relativeMountPath;
-    	      this.source = defaults.source;
-    	      this.username = defaults.username;
+            $ = new CIFSMountConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mountOptions(@Nullable Output<String> mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
-        public Builder mountOptions(@Nullable String mountOptions) {
-            this.mountOptions = Codegen.ofNullable(mountOptions);
-            return this;
+
+        public Builder mountOptions(String mountOptions) {
+            return mountOptions(Output.of(mountOptions));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder relativeMountPath(Output<String> relativeMountPath) {
-            this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
+            $.relativeMountPath = relativeMountPath;
             return this;
         }
+
         public Builder relativeMountPath(String relativeMountPath) {
-            this.relativeMountPath = Output.of(Objects.requireNonNull(relativeMountPath));
-            return this;
+            return relativeMountPath(Output.of(relativeMountPath));
         }
+
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
+            return source(Output.of(source));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public CIFSMountConfigurationArgs build() {
-            return new CIFSMountConfigurationArgs(mountOptions, password, relativeMountPath, source, username);
+            return username(Output.of(username));
+        }
+
+        public CIFSMountConfigurationArgs build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.relativeMountPath = Objects.requireNonNull($.relativeMountPath, "expected parameter 'relativeMountPath' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

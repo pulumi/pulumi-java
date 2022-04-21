@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="height")
-      private final @Nullable Output<Integer> height;
+    private @Nullable Output<Integer> height;
 
-    public Output<Integer> height() {
-        return this.height == null ? Codegen.empty() : this.height;
+    public Optional<Output<Integer>> height() {
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="widget")
-      private final @Nullable Output<WidgetArgs> widget;
+    private @Nullable Output<WidgetArgs> widget;
 
-    public Output<WidgetArgs> widget() {
-        return this.widget == null ? Codegen.empty() : this.widget;
+    public Optional<Output<WidgetArgs>> widget() {
+        return Optional.ofNullable(this.widget);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="width")
-      private final @Nullable Output<Integer> width;
+    private @Nullable Output<Integer> width;
 
-    public Output<Integer> width() {
-        return this.width == null ? Codegen.empty() : this.width;
+    public Optional<Output<Integer>> width() {
+        return Optional.ofNullable(this.width);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xPos")
-      private final @Nullable Output<Integer> xPos;
+    private @Nullable Output<Integer> xPos;
 
-    public Output<Integer> xPos() {
-        return this.xPos == null ? Codegen.empty() : this.xPos;
+    public Optional<Output<Integer>> xPos() {
+        return Optional.ofNullable(this.xPos);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class TileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="yPos")
-      private final @Nullable Output<Integer> yPos;
+    private @Nullable Output<Integer> yPos;
 
-    public Output<Integer> yPos() {
-        return this.yPos == null ? Codegen.empty() : this.yPos;
+    public Optional<Output<Integer>> yPos() {
+        return Optional.ofNullable(this.yPos);
     }
 
-    public TileArgs(
-        @Nullable Output<Integer> height,
-        @Nullable Output<WidgetArgs> widget,
-        @Nullable Output<Integer> width,
-        @Nullable Output<Integer> xPos,
-        @Nullable Output<Integer> yPos) {
-        this.height = height;
-        this.widget = widget;
-        this.width = width;
-        this.xPos = xPos;
-        this.yPos = yPos;
-    }
+    private TileArgs() {}
 
-    private TileArgs() {
-        this.height = Codegen.empty();
-        this.widget = Codegen.empty();
-        this.width = Codegen.empty();
-        this.xPos = Codegen.empty();
-        this.yPos = Codegen.empty();
+    private TileArgs(TileArgs $) {
+        this.height = $.height;
+        this.widget = $.widget;
+        this.width = $.width;
+        this.xPos = $.xPos;
+        this.yPos = $.yPos;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> height;
-        private @Nullable Output<WidgetArgs> widget;
-        private @Nullable Output<Integer> width;
-        private @Nullable Output<Integer> xPos;
-        private @Nullable Output<Integer> yPos;
+        private TileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TileArgs();
         }
 
         public Builder(TileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.widget = defaults.widget;
-    	      this.width = defaults.width;
-    	      this.xPos = defaults.xPos;
-    	      this.yPos = defaults.yPos;
+            $ = new TileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder height(@Nullable Output<Integer> height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
-        public Builder height(@Nullable Integer height) {
-            this.height = Codegen.ofNullable(height);
-            return this;
+
+        public Builder height(Integer height) {
+            return height(Output.of(height));
         }
+
         public Builder widget(@Nullable Output<WidgetArgs> widget) {
-            this.widget = widget;
+            $.widget = widget;
             return this;
         }
-        public Builder widget(@Nullable WidgetArgs widget) {
-            this.widget = Codegen.ofNullable(widget);
-            return this;
+
+        public Builder widget(WidgetArgs widget) {
+            return widget(Output.of(widget));
         }
+
         public Builder width(@Nullable Output<Integer> width) {
-            this.width = width;
+            $.width = width;
             return this;
         }
-        public Builder width(@Nullable Integer width) {
-            this.width = Codegen.ofNullable(width);
-            return this;
+
+        public Builder width(Integer width) {
+            return width(Output.of(width));
         }
+
         public Builder xPos(@Nullable Output<Integer> xPos) {
-            this.xPos = xPos;
+            $.xPos = xPos;
             return this;
         }
-        public Builder xPos(@Nullable Integer xPos) {
-            this.xPos = Codegen.ofNullable(xPos);
-            return this;
+
+        public Builder xPos(Integer xPos) {
+            return xPos(Output.of(xPos));
         }
+
         public Builder yPos(@Nullable Output<Integer> yPos) {
-            this.yPos = yPos;
+            $.yPos = yPos;
             return this;
         }
-        public Builder yPos(@Nullable Integer yPos) {
-            this.yPos = Codegen.ofNullable(yPos);
-            return this;
-        }        public TileArgs build() {
-            return new TileArgs(height, widget, width, xPos, yPos);
+
+        public Builder yPos(Integer yPos) {
+            return yPos(Output.of(yPos));
+        }
+
+        public TileArgs build() {
+            return $;
         }
     }
+
 }

@@ -31,7 +31,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="details", required=true)
-      private final Map<String,Object> details;
+    private Map<String,Object> details;
 
     public Map<String,Object> details() {
         return this.details;
@@ -42,7 +42,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="errorDetails", required=true)
-      private final RecommendedActionErrorInfoResponse errorDetails;
+    private RecommendedActionErrorInfoResponse errorDetails;
 
     public RecommendedActionErrorInfoResponse errorDetails() {
         return this.errorDetails;
@@ -53,7 +53,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="estimatedImpact", required=true)
-      private final List<RecommendedActionImpactRecordResponse> estimatedImpact;
+    private List<RecommendedActionImpactRecordResponse> estimatedImpact;
 
     public List<RecommendedActionImpactRecordResponse> estimatedImpact() {
         return this.estimatedImpact;
@@ -64,7 +64,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="executeActionDuration", required=true)
-      private final String executeActionDuration;
+    private String executeActionDuration;
 
     public String executeActionDuration() {
         return this.executeActionDuration;
@@ -75,7 +75,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="executeActionInitiatedBy", required=true)
-      private final String executeActionInitiatedBy;
+    private String executeActionInitiatedBy;
 
     public String executeActionInitiatedBy() {
         return this.executeActionInitiatedBy;
@@ -86,7 +86,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="executeActionInitiatedTime", required=true)
-      private final String executeActionInitiatedTime;
+    private String executeActionInitiatedTime;
 
     public String executeActionInitiatedTime() {
         return this.executeActionInitiatedTime;
@@ -97,7 +97,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="executeActionStartTime", required=true)
-      private final String executeActionStartTime;
+    private String executeActionStartTime;
 
     public String executeActionStartTime() {
         return this.executeActionStartTime;
@@ -108,7 +108,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -119,7 +119,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="implementationDetails", required=true)
-      private final RecommendedActionImplementationInfoResponse implementationDetails;
+    private RecommendedActionImplementationInfoResponse implementationDetails;
 
     public RecommendedActionImplementationInfoResponse implementationDetails() {
         return this.implementationDetails;
@@ -130,7 +130,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="isArchivedAction", required=true)
-      private final Boolean isArchivedAction;
+    private Boolean isArchivedAction;
 
     public Boolean isArchivedAction() {
         return this.isArchivedAction;
@@ -141,7 +141,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="isExecutableAction", required=true)
-      private final Boolean isExecutableAction;
+    private Boolean isExecutableAction;
 
     public Boolean isExecutableAction() {
         return this.isExecutableAction;
@@ -152,7 +152,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="isRevertableAction", required=true)
-      private final Boolean isRevertableAction;
+    private Boolean isRevertableAction;
 
     public Boolean isRevertableAction() {
         return this.isRevertableAction;
@@ -163,7 +163,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -174,7 +174,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="lastRefresh", required=true)
-      private final String lastRefresh;
+    private String lastRefresh;
 
     public String lastRefresh() {
         return this.lastRefresh;
@@ -185,7 +185,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="linkedObjects", required=true)
-      private final List<String> linkedObjects;
+    private List<String> linkedObjects;
 
     public List<String> linkedObjects() {
         return this.linkedObjects;
@@ -196,7 +196,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -207,7 +207,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -218,7 +218,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="observedImpact", required=true)
-      private final List<RecommendedActionImpactRecordResponse> observedImpact;
+    private List<RecommendedActionImpactRecordResponse> observedImpact;
 
     public List<RecommendedActionImpactRecordResponse> observedImpact() {
         return this.observedImpact;
@@ -229,7 +229,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="recommendationReason", required=true)
-      private final String recommendationReason;
+    private String recommendationReason;
 
     public String recommendationReason() {
         return this.recommendationReason;
@@ -240,7 +240,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="revertActionDuration", required=true)
-      private final String revertActionDuration;
+    private String revertActionDuration;
 
     public String revertActionDuration() {
         return this.revertActionDuration;
@@ -251,7 +251,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="revertActionInitiatedBy", required=true)
-      private final String revertActionInitiatedBy;
+    private String revertActionInitiatedBy;
 
     public String revertActionInitiatedBy() {
         return this.revertActionInitiatedBy;
@@ -262,7 +262,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="revertActionInitiatedTime", required=true)
-      private final String revertActionInitiatedTime;
+    private String revertActionInitiatedTime;
 
     public String revertActionInitiatedTime() {
         return this.revertActionInitiatedTime;
@@ -273,7 +273,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="revertActionStartTime", required=true)
-      private final String revertActionStartTime;
+    private String revertActionStartTime;
 
     public String revertActionStartTime() {
         return this.revertActionStartTime;
@@ -284,7 +284,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="score", required=true)
-      private final Integer score;
+    private Integer score;
 
     public Integer score() {
         return this.score;
@@ -295,7 +295,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="state", required=true)
-      private final RecommendedActionStateInfoResponse state;
+    private RecommendedActionStateInfoResponse state;
 
     public RecommendedActionStateInfoResponse state() {
         return this.state;
@@ -306,7 +306,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="timeSeries", required=true)
-      private final List<RecommendedActionMetricInfoResponse> timeSeries;
+    private List<RecommendedActionMetricInfoResponse> timeSeries;
 
     public List<RecommendedActionMetricInfoResponse> timeSeries() {
         return this.timeSeries;
@@ -317,7 +317,7 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -328,301 +328,250 @@ public final class RecommendedActionResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="validSince", required=true)
-      private final String validSince;
+    private String validSince;
 
     public String validSince() {
         return this.validSince;
     }
 
-    public RecommendedActionResponse(
-        Map<String,Object> details,
-        RecommendedActionErrorInfoResponse errorDetails,
-        List<RecommendedActionImpactRecordResponse> estimatedImpact,
-        String executeActionDuration,
-        String executeActionInitiatedBy,
-        String executeActionInitiatedTime,
-        String executeActionStartTime,
-        String id,
-        RecommendedActionImplementationInfoResponse implementationDetails,
-        Boolean isArchivedAction,
-        Boolean isExecutableAction,
-        Boolean isRevertableAction,
-        String kind,
-        String lastRefresh,
-        List<String> linkedObjects,
-        String location,
-        String name,
-        List<RecommendedActionImpactRecordResponse> observedImpact,
-        String recommendationReason,
-        String revertActionDuration,
-        String revertActionInitiatedBy,
-        String revertActionInitiatedTime,
-        String revertActionStartTime,
-        Integer score,
-        RecommendedActionStateInfoResponse state,
-        List<RecommendedActionMetricInfoResponse> timeSeries,
-        String type,
-        String validSince) {
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.errorDetails = Objects.requireNonNull(errorDetails, "expected parameter 'errorDetails' to be non-null");
-        this.estimatedImpact = Objects.requireNonNull(estimatedImpact, "expected parameter 'estimatedImpact' to be non-null");
-        this.executeActionDuration = Objects.requireNonNull(executeActionDuration, "expected parameter 'executeActionDuration' to be non-null");
-        this.executeActionInitiatedBy = Objects.requireNonNull(executeActionInitiatedBy, "expected parameter 'executeActionInitiatedBy' to be non-null");
-        this.executeActionInitiatedTime = Objects.requireNonNull(executeActionInitiatedTime, "expected parameter 'executeActionInitiatedTime' to be non-null");
-        this.executeActionStartTime = Objects.requireNonNull(executeActionStartTime, "expected parameter 'executeActionStartTime' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.implementationDetails = Objects.requireNonNull(implementationDetails, "expected parameter 'implementationDetails' to be non-null");
-        this.isArchivedAction = Objects.requireNonNull(isArchivedAction, "expected parameter 'isArchivedAction' to be non-null");
-        this.isExecutableAction = Objects.requireNonNull(isExecutableAction, "expected parameter 'isExecutableAction' to be non-null");
-        this.isRevertableAction = Objects.requireNonNull(isRevertableAction, "expected parameter 'isRevertableAction' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.lastRefresh = Objects.requireNonNull(lastRefresh, "expected parameter 'lastRefresh' to be non-null");
-        this.linkedObjects = Objects.requireNonNull(linkedObjects, "expected parameter 'linkedObjects' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.observedImpact = Objects.requireNonNull(observedImpact, "expected parameter 'observedImpact' to be non-null");
-        this.recommendationReason = Objects.requireNonNull(recommendationReason, "expected parameter 'recommendationReason' to be non-null");
-        this.revertActionDuration = Objects.requireNonNull(revertActionDuration, "expected parameter 'revertActionDuration' to be non-null");
-        this.revertActionInitiatedBy = Objects.requireNonNull(revertActionInitiatedBy, "expected parameter 'revertActionInitiatedBy' to be non-null");
-        this.revertActionInitiatedTime = Objects.requireNonNull(revertActionInitiatedTime, "expected parameter 'revertActionInitiatedTime' to be non-null");
-        this.revertActionStartTime = Objects.requireNonNull(revertActionStartTime, "expected parameter 'revertActionStartTime' to be non-null");
-        this.score = Objects.requireNonNull(score, "expected parameter 'score' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.timeSeries = Objects.requireNonNull(timeSeries, "expected parameter 'timeSeries' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.validSince = Objects.requireNonNull(validSince, "expected parameter 'validSince' to be non-null");
-    }
+    private RecommendedActionResponse() {}
 
-    private RecommendedActionResponse() {
-        this.details = Map.of();
-        this.errorDetails = null;
-        this.estimatedImpact = List.of();
-        this.executeActionDuration = null;
-        this.executeActionInitiatedBy = null;
-        this.executeActionInitiatedTime = null;
-        this.executeActionStartTime = null;
-        this.id = null;
-        this.implementationDetails = null;
-        this.isArchivedAction = null;
-        this.isExecutableAction = null;
-        this.isRevertableAction = null;
-        this.kind = null;
-        this.lastRefresh = null;
-        this.linkedObjects = List.of();
-        this.location = null;
-        this.name = null;
-        this.observedImpact = List.of();
-        this.recommendationReason = null;
-        this.revertActionDuration = null;
-        this.revertActionInitiatedBy = null;
-        this.revertActionInitiatedTime = null;
-        this.revertActionStartTime = null;
-        this.score = null;
-        this.state = null;
-        this.timeSeries = List.of();
-        this.type = null;
-        this.validSince = null;
+    private RecommendedActionResponse(RecommendedActionResponse $) {
+        this.details = $.details;
+        this.errorDetails = $.errorDetails;
+        this.estimatedImpact = $.estimatedImpact;
+        this.executeActionDuration = $.executeActionDuration;
+        this.executeActionInitiatedBy = $.executeActionInitiatedBy;
+        this.executeActionInitiatedTime = $.executeActionInitiatedTime;
+        this.executeActionStartTime = $.executeActionStartTime;
+        this.id = $.id;
+        this.implementationDetails = $.implementationDetails;
+        this.isArchivedAction = $.isArchivedAction;
+        this.isExecutableAction = $.isExecutableAction;
+        this.isRevertableAction = $.isRevertableAction;
+        this.kind = $.kind;
+        this.lastRefresh = $.lastRefresh;
+        this.linkedObjects = $.linkedObjects;
+        this.location = $.location;
+        this.name = $.name;
+        this.observedImpact = $.observedImpact;
+        this.recommendationReason = $.recommendationReason;
+        this.revertActionDuration = $.revertActionDuration;
+        this.revertActionInitiatedBy = $.revertActionInitiatedBy;
+        this.revertActionInitiatedTime = $.revertActionInitiatedTime;
+        this.revertActionStartTime = $.revertActionStartTime;
+        this.score = $.score;
+        this.state = $.state;
+        this.timeSeries = $.timeSeries;
+        this.type = $.type;
+        this.validSince = $.validSince;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecommendedActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,Object> details;
-        private RecommendedActionErrorInfoResponse errorDetails;
-        private List<RecommendedActionImpactRecordResponse> estimatedImpact;
-        private String executeActionDuration;
-        private String executeActionInitiatedBy;
-        private String executeActionInitiatedTime;
-        private String executeActionStartTime;
-        private String id;
-        private RecommendedActionImplementationInfoResponse implementationDetails;
-        private Boolean isArchivedAction;
-        private Boolean isExecutableAction;
-        private Boolean isRevertableAction;
-        private String kind;
-        private String lastRefresh;
-        private List<String> linkedObjects;
-        private String location;
-        private String name;
-        private List<RecommendedActionImpactRecordResponse> observedImpact;
-        private String recommendationReason;
-        private String revertActionDuration;
-        private String revertActionInitiatedBy;
-        private String revertActionInitiatedTime;
-        private String revertActionStartTime;
-        private Integer score;
-        private RecommendedActionStateInfoResponse state;
-        private List<RecommendedActionMetricInfoResponse> timeSeries;
-        private String type;
-        private String validSince;
+        private RecommendedActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecommendedActionResponse();
         }
 
         public Builder(RecommendedActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
-    	      this.errorDetails = defaults.errorDetails;
-    	      this.estimatedImpact = defaults.estimatedImpact;
-    	      this.executeActionDuration = defaults.executeActionDuration;
-    	      this.executeActionInitiatedBy = defaults.executeActionInitiatedBy;
-    	      this.executeActionInitiatedTime = defaults.executeActionInitiatedTime;
-    	      this.executeActionStartTime = defaults.executeActionStartTime;
-    	      this.id = defaults.id;
-    	      this.implementationDetails = defaults.implementationDetails;
-    	      this.isArchivedAction = defaults.isArchivedAction;
-    	      this.isExecutableAction = defaults.isExecutableAction;
-    	      this.isRevertableAction = defaults.isRevertableAction;
-    	      this.kind = defaults.kind;
-    	      this.lastRefresh = defaults.lastRefresh;
-    	      this.linkedObjects = defaults.linkedObjects;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.observedImpact = defaults.observedImpact;
-    	      this.recommendationReason = defaults.recommendationReason;
-    	      this.revertActionDuration = defaults.revertActionDuration;
-    	      this.revertActionInitiatedBy = defaults.revertActionInitiatedBy;
-    	      this.revertActionInitiatedTime = defaults.revertActionInitiatedTime;
-    	      this.revertActionStartTime = defaults.revertActionStartTime;
-    	      this.score = defaults.score;
-    	      this.state = defaults.state;
-    	      this.timeSeries = defaults.timeSeries;
-    	      this.type = defaults.type;
-    	      this.validSince = defaults.validSince;
+            $ = new RecommendedActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder details(Map<String,Object> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder errorDetails(RecommendedActionErrorInfoResponse errorDetails) {
-            this.errorDetails = Objects.requireNonNull(errorDetails);
+            $.errorDetails = errorDetails;
             return this;
         }
+
         public Builder estimatedImpact(List<RecommendedActionImpactRecordResponse> estimatedImpact) {
-            this.estimatedImpact = Objects.requireNonNull(estimatedImpact);
+            $.estimatedImpact = estimatedImpact;
             return this;
         }
+
         public Builder estimatedImpact(RecommendedActionImpactRecordResponse... estimatedImpact) {
             return estimatedImpact(List.of(estimatedImpact));
         }
+
         public Builder executeActionDuration(String executeActionDuration) {
-            this.executeActionDuration = Objects.requireNonNull(executeActionDuration);
+            $.executeActionDuration = executeActionDuration;
             return this;
         }
+
         public Builder executeActionInitiatedBy(String executeActionInitiatedBy) {
-            this.executeActionInitiatedBy = Objects.requireNonNull(executeActionInitiatedBy);
+            $.executeActionInitiatedBy = executeActionInitiatedBy;
             return this;
         }
+
         public Builder executeActionInitiatedTime(String executeActionInitiatedTime) {
-            this.executeActionInitiatedTime = Objects.requireNonNull(executeActionInitiatedTime);
+            $.executeActionInitiatedTime = executeActionInitiatedTime;
             return this;
         }
+
         public Builder executeActionStartTime(String executeActionStartTime) {
-            this.executeActionStartTime = Objects.requireNonNull(executeActionStartTime);
+            $.executeActionStartTime = executeActionStartTime;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder implementationDetails(RecommendedActionImplementationInfoResponse implementationDetails) {
-            this.implementationDetails = Objects.requireNonNull(implementationDetails);
+            $.implementationDetails = implementationDetails;
             return this;
         }
+
         public Builder isArchivedAction(Boolean isArchivedAction) {
-            this.isArchivedAction = Objects.requireNonNull(isArchivedAction);
+            $.isArchivedAction = isArchivedAction;
             return this;
         }
+
         public Builder isExecutableAction(Boolean isExecutableAction) {
-            this.isExecutableAction = Objects.requireNonNull(isExecutableAction);
+            $.isExecutableAction = isExecutableAction;
             return this;
         }
+
         public Builder isRevertableAction(Boolean isRevertableAction) {
-            this.isRevertableAction = Objects.requireNonNull(isRevertableAction);
+            $.isRevertableAction = isRevertableAction;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder lastRefresh(String lastRefresh) {
-            this.lastRefresh = Objects.requireNonNull(lastRefresh);
+            $.lastRefresh = lastRefresh;
             return this;
         }
+
         public Builder linkedObjects(List<String> linkedObjects) {
-            this.linkedObjects = Objects.requireNonNull(linkedObjects);
+            $.linkedObjects = linkedObjects;
             return this;
         }
+
         public Builder linkedObjects(String... linkedObjects) {
             return linkedObjects(List.of(linkedObjects));
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder observedImpact(List<RecommendedActionImpactRecordResponse> observedImpact) {
-            this.observedImpact = Objects.requireNonNull(observedImpact);
+            $.observedImpact = observedImpact;
             return this;
         }
+
         public Builder observedImpact(RecommendedActionImpactRecordResponse... observedImpact) {
             return observedImpact(List.of(observedImpact));
         }
+
         public Builder recommendationReason(String recommendationReason) {
-            this.recommendationReason = Objects.requireNonNull(recommendationReason);
+            $.recommendationReason = recommendationReason;
             return this;
         }
+
         public Builder revertActionDuration(String revertActionDuration) {
-            this.revertActionDuration = Objects.requireNonNull(revertActionDuration);
+            $.revertActionDuration = revertActionDuration;
             return this;
         }
+
         public Builder revertActionInitiatedBy(String revertActionInitiatedBy) {
-            this.revertActionInitiatedBy = Objects.requireNonNull(revertActionInitiatedBy);
+            $.revertActionInitiatedBy = revertActionInitiatedBy;
             return this;
         }
+
         public Builder revertActionInitiatedTime(String revertActionInitiatedTime) {
-            this.revertActionInitiatedTime = Objects.requireNonNull(revertActionInitiatedTime);
+            $.revertActionInitiatedTime = revertActionInitiatedTime;
             return this;
         }
+
         public Builder revertActionStartTime(String revertActionStartTime) {
-            this.revertActionStartTime = Objects.requireNonNull(revertActionStartTime);
+            $.revertActionStartTime = revertActionStartTime;
             return this;
         }
+
         public Builder score(Integer score) {
-            this.score = Objects.requireNonNull(score);
+            $.score = score;
             return this;
         }
+
         public Builder state(RecommendedActionStateInfoResponse state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder timeSeries(List<RecommendedActionMetricInfoResponse> timeSeries) {
-            this.timeSeries = Objects.requireNonNull(timeSeries);
+            $.timeSeries = timeSeries;
             return this;
         }
+
         public Builder timeSeries(RecommendedActionMetricInfoResponse... timeSeries) {
             return timeSeries(List.of(timeSeries));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder validSince(String validSince) {
-            this.validSince = Objects.requireNonNull(validSince);
+            $.validSince = validSince;
             return this;
-        }        public RecommendedActionResponse build() {
-            return new RecommendedActionResponse(details, errorDetails, estimatedImpact, executeActionDuration, executeActionInitiatedBy, executeActionInitiatedTime, executeActionStartTime, id, implementationDetails, isArchivedAction, isExecutableAction, isRevertableAction, kind, lastRefresh, linkedObjects, location, name, observedImpact, recommendationReason, revertActionDuration, revertActionInitiatedBy, revertActionInitiatedTime, revertActionStartTime, score, state, timeSeries, type, validSince);
+        }
+
+        public RecommendedActionResponse build() {
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.errorDetails = Objects.requireNonNull($.errorDetails, "expected parameter 'errorDetails' to be non-null");
+            $.estimatedImpact = Objects.requireNonNull($.estimatedImpact, "expected parameter 'estimatedImpact' to be non-null");
+            $.executeActionDuration = Objects.requireNonNull($.executeActionDuration, "expected parameter 'executeActionDuration' to be non-null");
+            $.executeActionInitiatedBy = Objects.requireNonNull($.executeActionInitiatedBy, "expected parameter 'executeActionInitiatedBy' to be non-null");
+            $.executeActionInitiatedTime = Objects.requireNonNull($.executeActionInitiatedTime, "expected parameter 'executeActionInitiatedTime' to be non-null");
+            $.executeActionStartTime = Objects.requireNonNull($.executeActionStartTime, "expected parameter 'executeActionStartTime' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.implementationDetails = Objects.requireNonNull($.implementationDetails, "expected parameter 'implementationDetails' to be non-null");
+            $.isArchivedAction = Objects.requireNonNull($.isArchivedAction, "expected parameter 'isArchivedAction' to be non-null");
+            $.isExecutableAction = Objects.requireNonNull($.isExecutableAction, "expected parameter 'isExecutableAction' to be non-null");
+            $.isRevertableAction = Objects.requireNonNull($.isRevertableAction, "expected parameter 'isRevertableAction' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.lastRefresh = Objects.requireNonNull($.lastRefresh, "expected parameter 'lastRefresh' to be non-null");
+            $.linkedObjects = Objects.requireNonNull($.linkedObjects, "expected parameter 'linkedObjects' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.observedImpact = Objects.requireNonNull($.observedImpact, "expected parameter 'observedImpact' to be non-null");
+            $.recommendationReason = Objects.requireNonNull($.recommendationReason, "expected parameter 'recommendationReason' to be non-null");
+            $.revertActionDuration = Objects.requireNonNull($.revertActionDuration, "expected parameter 'revertActionDuration' to be non-null");
+            $.revertActionInitiatedBy = Objects.requireNonNull($.revertActionInitiatedBy, "expected parameter 'revertActionInitiatedBy' to be non-null");
+            $.revertActionInitiatedTime = Objects.requireNonNull($.revertActionInitiatedTime, "expected parameter 'revertActionInitiatedTime' to be non-null");
+            $.revertActionStartTime = Objects.requireNonNull($.revertActionStartTime, "expected parameter 'revertActionStartTime' to be non-null");
+            $.score = Objects.requireNonNull($.score, "expected parameter 'score' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.timeSeries = Objects.requireNonNull($.timeSeries, "expected parameter 'timeSeries' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.validSince = Objects.requireNonNull($.validSince, "expected parameter 'validSince' to be non-null");
+            return $;
         }
     }
+
 }

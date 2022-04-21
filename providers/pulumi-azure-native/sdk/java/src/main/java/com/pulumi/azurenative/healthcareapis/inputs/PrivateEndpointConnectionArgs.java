@@ -6,7 +6,6 @@ package com.pulumi.azurenative.healthcareapis.inputs;
 import com.pulumi.azurenative.healthcareapis.inputs.PrivateLinkServiceConnectionStateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,49 +22,49 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateLinkServiceConnectionState", required=true)
-      private final Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+    private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
     }
 
-    public PrivateEndpointConnectionArgs(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
-        this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
-    }
+    private PrivateEndpointConnectionArgs() {}
 
-    private PrivateEndpointConnectionArgs() {
-        this.privateLinkServiceConnectionState = Codegen.empty();
+    private PrivateEndpointConnectionArgs(PrivateEndpointConnectionArgs $) {
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private PrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionArgs();
         }
 
         public Builder(PrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
+            $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.of(Objects.requireNonNull(privateLinkServiceConnectionState));
-            return this;
-        }        public PrivateEndpointConnectionArgs build() {
-            return new PrivateEndpointConnectionArgs(privateLinkServiceConnectionState);
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
+        }
+
+        public PrivateEndpointConnectionArgs build() {
+            $.privateLinkServiceConnectionState = Objects.requireNonNull($.privateLinkServiceConnectionState, "expected parameter 'privateLinkServiceConnectionState' to be non-null");
+            return $;
         }
     }
+
 }

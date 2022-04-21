@@ -5,7 +5,6 @@ package com.pulumi.azurenative.virtualmachineimages.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="planName", required=true)
-      private final Output<String> planName;
+    private Output<String> planName;
 
     public Output<String> planName() {
         return this.planName;
@@ -34,7 +33,7 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="planProduct", required=true)
-      private final Output<String> planProduct;
+    private Output<String> planProduct;
 
     public Output<String> planProduct() {
         return this.planProduct;
@@ -45,76 +44,71 @@ public final class PlatformImagePurchasePlanArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="planPublisher", required=true)
-      private final Output<String> planPublisher;
+    private Output<String> planPublisher;
 
     public Output<String> planPublisher() {
         return this.planPublisher;
     }
 
-    public PlatformImagePurchasePlanArgs(
-        Output<String> planName,
-        Output<String> planProduct,
-        Output<String> planPublisher) {
-        this.planName = Objects.requireNonNull(planName, "expected parameter 'planName' to be non-null");
-        this.planProduct = Objects.requireNonNull(planProduct, "expected parameter 'planProduct' to be non-null");
-        this.planPublisher = Objects.requireNonNull(planPublisher, "expected parameter 'planPublisher' to be non-null");
-    }
+    private PlatformImagePurchasePlanArgs() {}
 
-    private PlatformImagePurchasePlanArgs() {
-        this.planName = Codegen.empty();
-        this.planProduct = Codegen.empty();
-        this.planPublisher = Codegen.empty();
+    private PlatformImagePurchasePlanArgs(PlatformImagePurchasePlanArgs $) {
+        this.planName = $.planName;
+        this.planProduct = $.planProduct;
+        this.planPublisher = $.planPublisher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlatformImagePurchasePlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> planName;
-        private Output<String> planProduct;
-        private Output<String> planPublisher;
+        private PlatformImagePurchasePlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlatformImagePurchasePlanArgs();
         }
 
         public Builder(PlatformImagePurchasePlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.planName = defaults.planName;
-    	      this.planProduct = defaults.planProduct;
-    	      this.planPublisher = defaults.planPublisher;
+            $ = new PlatformImagePurchasePlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder planName(Output<String> planName) {
-            this.planName = Objects.requireNonNull(planName);
+            $.planName = planName;
             return this;
         }
+
         public Builder planName(String planName) {
-            this.planName = Output.of(Objects.requireNonNull(planName));
-            return this;
+            return planName(Output.of(planName));
         }
+
         public Builder planProduct(Output<String> planProduct) {
-            this.planProduct = Objects.requireNonNull(planProduct);
+            $.planProduct = planProduct;
             return this;
         }
+
         public Builder planProduct(String planProduct) {
-            this.planProduct = Output.of(Objects.requireNonNull(planProduct));
-            return this;
+            return planProduct(Output.of(planProduct));
         }
+
         public Builder planPublisher(Output<String> planPublisher) {
-            this.planPublisher = Objects.requireNonNull(planPublisher);
+            $.planPublisher = planPublisher;
             return this;
         }
+
         public Builder planPublisher(String planPublisher) {
-            this.planPublisher = Output.of(Objects.requireNonNull(planPublisher));
-            return this;
-        }        public PlatformImagePurchasePlanArgs build() {
-            return new PlatformImagePurchasePlanArgs(planName, planProduct, planPublisher);
+            return planPublisher(Output.of(planPublisher));
+        }
+
+        public PlatformImagePurchasePlanArgs build() {
+            $.planName = Objects.requireNonNull($.planName, "expected parameter 'planName' to be non-null");
+            $.planProduct = Objects.requireNonNull($.planProduct, "expected parameter 'planProduct' to be non-null");
+            $.planPublisher = Objects.requireNonNull($.planPublisher, "expected parameter 'planPublisher' to be non-null");
+            return $;
         }
     }
+
 }

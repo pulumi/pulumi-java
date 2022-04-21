@@ -5,10 +5,10 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ImageTestsConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="imageTestsEnabled")
-      private final @Nullable Output<Boolean> imageTestsEnabled;
+    private @Nullable Output<Boolean> imageTestsEnabled;
 
-    public Output<Boolean> imageTestsEnabled() {
-        return this.imageTestsEnabled == null ? Codegen.empty() : this.imageTestsEnabled;
+    public Optional<Output<Boolean>> imageTestsEnabled() {
+        return Optional.ofNullable(this.imageTestsEnabled);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ImageTestsConfigurationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="timeoutMinutes")
-      private final @Nullable Output<Integer> timeoutMinutes;
+    private @Nullable Output<Integer> timeoutMinutes;
 
-    public Output<Integer> timeoutMinutes() {
-        return this.timeoutMinutes == null ? Codegen.empty() : this.timeoutMinutes;
+    public Optional<Output<Integer>> timeoutMinutes() {
+        return Optional.ofNullable(this.timeoutMinutes);
     }
 
-    public ImageTestsConfigurationArgs(
-        @Nullable Output<Boolean> imageTestsEnabled,
-        @Nullable Output<Integer> timeoutMinutes) {
-        this.imageTestsEnabled = imageTestsEnabled;
-        this.timeoutMinutes = timeoutMinutes;
-    }
+    private ImageTestsConfigurationArgs() {}
 
-    private ImageTestsConfigurationArgs() {
-        this.imageTestsEnabled = Codegen.empty();
-        this.timeoutMinutes = Codegen.empty();
+    private ImageTestsConfigurationArgs(ImageTestsConfigurationArgs $) {
+        this.imageTestsEnabled = $.imageTestsEnabled;
+        this.timeoutMinutes = $.timeoutMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTestsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> imageTestsEnabled;
-        private @Nullable Output<Integer> timeoutMinutes;
+        private ImageTestsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTestsConfigurationArgs();
         }
 
         public Builder(ImageTestsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageTestsEnabled = defaults.imageTestsEnabled;
-    	      this.timeoutMinutes = defaults.timeoutMinutes;
+            $ = new ImageTestsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageTestsEnabled(@Nullable Output<Boolean> imageTestsEnabled) {
-            this.imageTestsEnabled = imageTestsEnabled;
+            $.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
-        public Builder imageTestsEnabled(@Nullable Boolean imageTestsEnabled) {
-            this.imageTestsEnabled = Codegen.ofNullable(imageTestsEnabled);
-            return this;
+
+        public Builder imageTestsEnabled(Boolean imageTestsEnabled) {
+            return imageTestsEnabled(Output.of(imageTestsEnabled));
         }
+
         public Builder timeoutMinutes(@Nullable Output<Integer> timeoutMinutes) {
-            this.timeoutMinutes = timeoutMinutes;
+            $.timeoutMinutes = timeoutMinutes;
             return this;
         }
-        public Builder timeoutMinutes(@Nullable Integer timeoutMinutes) {
-            this.timeoutMinutes = Codegen.ofNullable(timeoutMinutes);
-            return this;
-        }        public ImageTestsConfigurationArgs build() {
-            return new ImageTestsConfigurationArgs(imageTestsEnabled, timeoutMinutes);
+
+        public Builder timeoutMinutes(Integer timeoutMinutes) {
+            return timeoutMinutes(Output.of(timeoutMinutes));
+        }
+
+        public ImageTestsConfigurationArgs build() {
+            return $;
         }
     }
+
 }

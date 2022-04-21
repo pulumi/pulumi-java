@@ -5,11 +5,11 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disableFhirpathValidation")
-      private final @Nullable Output<Boolean> disableFhirpathValidation;
+    private @Nullable Output<Boolean> disableFhirpathValidation;
 
-    public Output<Boolean> disableFhirpathValidation() {
-        return this.disableFhirpathValidation == null ? Codegen.empty() : this.disableFhirpathValidation;
+    public Optional<Output<Boolean>> disableFhirpathValidation() {
+        return Optional.ofNullable(this.disableFhirpathValidation);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disableProfileValidation")
-      private final @Nullable Output<Boolean> disableProfileValidation;
+    private @Nullable Output<Boolean> disableProfileValidation;
 
-    public Output<Boolean> disableProfileValidation() {
-        return this.disableProfileValidation == null ? Codegen.empty() : this.disableProfileValidation;
+    public Optional<Output<Boolean>> disableProfileValidation() {
+        return Optional.ofNullable(this.disableProfileValidation);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disableReferenceTypeValidation")
-      private final @Nullable Output<Boolean> disableReferenceTypeValidation;
+    private @Nullable Output<Boolean> disableReferenceTypeValidation;
 
-    public Output<Boolean> disableReferenceTypeValidation() {
-        return this.disableReferenceTypeValidation == null ? Codegen.empty() : this.disableReferenceTypeValidation;
+    public Optional<Output<Boolean>> disableReferenceTypeValidation() {
+        return Optional.ofNullable(this.disableReferenceTypeValidation);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disableRequiredFieldValidation")
-      private final @Nullable Output<Boolean> disableRequiredFieldValidation;
+    private @Nullable Output<Boolean> disableRequiredFieldValidation;
 
-    public Output<Boolean> disableRequiredFieldValidation() {
-        return this.disableRequiredFieldValidation == null ? Codegen.empty() : this.disableRequiredFieldValidation;
+    public Optional<Output<Boolean>> disableRequiredFieldValidation() {
+        return Optional.ofNullable(this.disableRequiredFieldValidation);
     }
 
     /**
@@ -70,105 +70,92 @@ public final class ValidationConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enabledImplementationGuides")
-      private final @Nullable Output<List<String>> enabledImplementationGuides;
+    private @Nullable Output<List<String>> enabledImplementationGuides;
 
-    public Output<List<String>> enabledImplementationGuides() {
-        return this.enabledImplementationGuides == null ? Codegen.empty() : this.enabledImplementationGuides;
+    public Optional<Output<List<String>>> enabledImplementationGuides() {
+        return Optional.ofNullable(this.enabledImplementationGuides);
     }
 
-    public ValidationConfigArgs(
-        @Nullable Output<Boolean> disableFhirpathValidation,
-        @Nullable Output<Boolean> disableProfileValidation,
-        @Nullable Output<Boolean> disableReferenceTypeValidation,
-        @Nullable Output<Boolean> disableRequiredFieldValidation,
-        @Nullable Output<List<String>> enabledImplementationGuides) {
-        this.disableFhirpathValidation = disableFhirpathValidation;
-        this.disableProfileValidation = disableProfileValidation;
-        this.disableReferenceTypeValidation = disableReferenceTypeValidation;
-        this.disableRequiredFieldValidation = disableRequiredFieldValidation;
-        this.enabledImplementationGuides = enabledImplementationGuides;
-    }
+    private ValidationConfigArgs() {}
 
-    private ValidationConfigArgs() {
-        this.disableFhirpathValidation = Codegen.empty();
-        this.disableProfileValidation = Codegen.empty();
-        this.disableReferenceTypeValidation = Codegen.empty();
-        this.disableRequiredFieldValidation = Codegen.empty();
-        this.enabledImplementationGuides = Codegen.empty();
+    private ValidationConfigArgs(ValidationConfigArgs $) {
+        this.disableFhirpathValidation = $.disableFhirpathValidation;
+        this.disableProfileValidation = $.disableProfileValidation;
+        this.disableReferenceTypeValidation = $.disableReferenceTypeValidation;
+        this.disableRequiredFieldValidation = $.disableRequiredFieldValidation;
+        this.enabledImplementationGuides = $.enabledImplementationGuides;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableFhirpathValidation;
-        private @Nullable Output<Boolean> disableProfileValidation;
-        private @Nullable Output<Boolean> disableReferenceTypeValidation;
-        private @Nullable Output<Boolean> disableRequiredFieldValidation;
-        private @Nullable Output<List<String>> enabledImplementationGuides;
+        private ValidationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidationConfigArgs();
         }
 
         public Builder(ValidationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableFhirpathValidation = defaults.disableFhirpathValidation;
-    	      this.disableProfileValidation = defaults.disableProfileValidation;
-    	      this.disableReferenceTypeValidation = defaults.disableReferenceTypeValidation;
-    	      this.disableRequiredFieldValidation = defaults.disableRequiredFieldValidation;
-    	      this.enabledImplementationGuides = defaults.enabledImplementationGuides;
+            $ = new ValidationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableFhirpathValidation(@Nullable Output<Boolean> disableFhirpathValidation) {
-            this.disableFhirpathValidation = disableFhirpathValidation;
+            $.disableFhirpathValidation = disableFhirpathValidation;
             return this;
         }
-        public Builder disableFhirpathValidation(@Nullable Boolean disableFhirpathValidation) {
-            this.disableFhirpathValidation = Codegen.ofNullable(disableFhirpathValidation);
-            return this;
+
+        public Builder disableFhirpathValidation(Boolean disableFhirpathValidation) {
+            return disableFhirpathValidation(Output.of(disableFhirpathValidation));
         }
+
         public Builder disableProfileValidation(@Nullable Output<Boolean> disableProfileValidation) {
-            this.disableProfileValidation = disableProfileValidation;
+            $.disableProfileValidation = disableProfileValidation;
             return this;
         }
-        public Builder disableProfileValidation(@Nullable Boolean disableProfileValidation) {
-            this.disableProfileValidation = Codegen.ofNullable(disableProfileValidation);
-            return this;
+
+        public Builder disableProfileValidation(Boolean disableProfileValidation) {
+            return disableProfileValidation(Output.of(disableProfileValidation));
         }
+
         public Builder disableReferenceTypeValidation(@Nullable Output<Boolean> disableReferenceTypeValidation) {
-            this.disableReferenceTypeValidation = disableReferenceTypeValidation;
+            $.disableReferenceTypeValidation = disableReferenceTypeValidation;
             return this;
         }
-        public Builder disableReferenceTypeValidation(@Nullable Boolean disableReferenceTypeValidation) {
-            this.disableReferenceTypeValidation = Codegen.ofNullable(disableReferenceTypeValidation);
-            return this;
+
+        public Builder disableReferenceTypeValidation(Boolean disableReferenceTypeValidation) {
+            return disableReferenceTypeValidation(Output.of(disableReferenceTypeValidation));
         }
+
         public Builder disableRequiredFieldValidation(@Nullable Output<Boolean> disableRequiredFieldValidation) {
-            this.disableRequiredFieldValidation = disableRequiredFieldValidation;
+            $.disableRequiredFieldValidation = disableRequiredFieldValidation;
             return this;
         }
-        public Builder disableRequiredFieldValidation(@Nullable Boolean disableRequiredFieldValidation) {
-            this.disableRequiredFieldValidation = Codegen.ofNullable(disableRequiredFieldValidation);
-            return this;
+
+        public Builder disableRequiredFieldValidation(Boolean disableRequiredFieldValidation) {
+            return disableRequiredFieldValidation(Output.of(disableRequiredFieldValidation));
         }
+
         public Builder enabledImplementationGuides(@Nullable Output<List<String>> enabledImplementationGuides) {
-            this.enabledImplementationGuides = enabledImplementationGuides;
+            $.enabledImplementationGuides = enabledImplementationGuides;
             return this;
         }
-        public Builder enabledImplementationGuides(@Nullable List<String> enabledImplementationGuides) {
-            this.enabledImplementationGuides = Codegen.ofNullable(enabledImplementationGuides);
-            return this;
+
+        public Builder enabledImplementationGuides(List<String> enabledImplementationGuides) {
+            return enabledImplementationGuides(Output.of(enabledImplementationGuides));
         }
+
         public Builder enabledImplementationGuides(String... enabledImplementationGuides) {
             return enabledImplementationGuides(List.of(enabledImplementationGuides));
-        }        public ValidationConfigArgs build() {
-            return new ValidationConfigArgs(disableFhirpathValidation, disableProfileValidation, disableReferenceTypeValidation, disableRequiredFieldValidation, enabledImplementationGuides);
+        }
+
+        public ValidationConfigArgs build() {
+            return $;
         }
     }
+
 }

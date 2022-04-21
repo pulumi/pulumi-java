@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioRe
      * 
      */
     @Import(name="audioUri", required=true)
-      private final String audioUri;
+    private String audioUri;
 
     public String audioUri() {
         return this.audioUri;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse(String audioUri) {
-        this.audioUri = Objects.requireNonNull(audioUri, "expected parameter 'audioUri' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse() {
-        this.audioUri = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse $) {
+        this.audioUri = $.audioUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String audioUri;
+        private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioUri = defaults.audioUri;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audioUri(String audioUri) {
-            this.audioUri = Objects.requireNonNull(audioUri);
+            $.audioUri = audioUri;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse(audioUri);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse build() {
+            $.audioUri = Objects.requireNonNull($.audioUri, "expected parameter 'audioUri' to be non-null");
+            return $;
         }
     }
+
 }

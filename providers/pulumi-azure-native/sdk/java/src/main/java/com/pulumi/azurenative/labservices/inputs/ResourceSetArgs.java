@@ -5,9 +5,9 @@ package com.pulumi.azurenative.labservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceSettingId")
-      private final @Nullable Output<String> resourceSettingId;
+    private @Nullable Output<String> resourceSettingId;
 
-    public Output<String> resourceSettingId() {
-        return this.resourceSettingId == null ? Codegen.empty() : this.resourceSettingId;
+    public Optional<Output<String>> resourceSettingId() {
+        return Optional.ofNullable(this.resourceSettingId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ResourceSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmResourceId")
-      private final @Nullable Output<String> vmResourceId;
+    private @Nullable Output<String> vmResourceId;
 
-    public Output<String> vmResourceId() {
-        return this.vmResourceId == null ? Codegen.empty() : this.vmResourceId;
+    public Optional<Output<String>> vmResourceId() {
+        return Optional.ofNullable(this.vmResourceId);
     }
 
-    public ResourceSetArgs(
-        @Nullable Output<String> resourceSettingId,
-        @Nullable Output<String> vmResourceId) {
-        this.resourceSettingId = resourceSettingId;
-        this.vmResourceId = vmResourceId;
-    }
+    private ResourceSetArgs() {}
 
-    private ResourceSetArgs() {
-        this.resourceSettingId = Codegen.empty();
-        this.vmResourceId = Codegen.empty();
+    private ResourceSetArgs(ResourceSetArgs $) {
+        this.resourceSettingId = $.resourceSettingId;
+        this.vmResourceId = $.vmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceSettingId;
-        private @Nullable Output<String> vmResourceId;
+        private ResourceSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetArgs();
         }
 
         public Builder(ResourceSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceSettingId = defaults.resourceSettingId;
-    	      this.vmResourceId = defaults.vmResourceId;
+            $ = new ResourceSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceSettingId(@Nullable Output<String> resourceSettingId) {
-            this.resourceSettingId = resourceSettingId;
+            $.resourceSettingId = resourceSettingId;
             return this;
         }
-        public Builder resourceSettingId(@Nullable String resourceSettingId) {
-            this.resourceSettingId = Codegen.ofNullable(resourceSettingId);
-            return this;
+
+        public Builder resourceSettingId(String resourceSettingId) {
+            return resourceSettingId(Output.of(resourceSettingId));
         }
+
         public Builder vmResourceId(@Nullable Output<String> vmResourceId) {
-            this.vmResourceId = vmResourceId;
+            $.vmResourceId = vmResourceId;
             return this;
         }
-        public Builder vmResourceId(@Nullable String vmResourceId) {
-            this.vmResourceId = Codegen.ofNullable(vmResourceId);
-            return this;
-        }        public ResourceSetArgs build() {
-            return new ResourceSetArgs(resourceSettingId, vmResourceId);
+
+        public Builder vmResourceId(String vmResourceId) {
+            return vmResourceId(Output.of(vmResourceId));
+        }
+
+        public ResourceSetArgs build() {
+            return $;
         }
     }
+
 }

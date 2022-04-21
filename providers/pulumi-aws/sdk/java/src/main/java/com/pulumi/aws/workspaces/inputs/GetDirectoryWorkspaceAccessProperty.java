@@ -17,7 +17,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
      * 
      */
     @Import(name="deviceTypeAndroid", required=true)
-      private final String deviceTypeAndroid;
+    private String deviceTypeAndroid;
 
     public String deviceTypeAndroid() {
         return this.deviceTypeAndroid;
@@ -28,7 +28,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
      * 
      */
     @Import(name="deviceTypeChromeos", required=true)
-      private final String deviceTypeChromeos;
+    private String deviceTypeChromeos;
 
     public String deviceTypeChromeos() {
         return this.deviceTypeChromeos;
@@ -39,7 +39,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
      * 
      */
     @Import(name="deviceTypeIos", required=true)
-      private final String deviceTypeIos;
+    private String deviceTypeIos;
 
     public String deviceTypeIos() {
         return this.deviceTypeIos;
@@ -50,7 +50,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
      * 
      */
     @Import(name="deviceTypeLinux", required=true)
-      private final String deviceTypeLinux;
+    private String deviceTypeLinux;
 
     public String deviceTypeLinux() {
         return this.deviceTypeLinux;
@@ -61,7 +61,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
      * 
      */
     @Import(name="deviceTypeOsx", required=true)
-      private final String deviceTypeOsx;
+    private String deviceTypeOsx;
 
     public String deviceTypeOsx() {
         return this.deviceTypeOsx;
@@ -72,7 +72,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
      * 
      */
     @Import(name="deviceTypeWeb", required=true)
-      private final String deviceTypeWeb;
+    private String deviceTypeWeb;
 
     public String deviceTypeWeb() {
         return this.deviceTypeWeb;
@@ -83,7 +83,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
      * 
      */
     @Import(name="deviceTypeWindows", required=true)
-      private final String deviceTypeWindows;
+    private String deviceTypeWindows;
 
     public String deviceTypeWindows() {
         return this.deviceTypeWindows;
@@ -94,109 +94,94 @@ public final class GetDirectoryWorkspaceAccessProperty extends com.pulumi.resour
      * 
      */
     @Import(name="deviceTypeZeroclient", required=true)
-      private final String deviceTypeZeroclient;
+    private String deviceTypeZeroclient;
 
     public String deviceTypeZeroclient() {
         return this.deviceTypeZeroclient;
     }
 
-    public GetDirectoryWorkspaceAccessProperty(
-        String deviceTypeAndroid,
-        String deviceTypeChromeos,
-        String deviceTypeIos,
-        String deviceTypeLinux,
-        String deviceTypeOsx,
-        String deviceTypeWeb,
-        String deviceTypeWindows,
-        String deviceTypeZeroclient) {
-        this.deviceTypeAndroid = Objects.requireNonNull(deviceTypeAndroid, "expected parameter 'deviceTypeAndroid' to be non-null");
-        this.deviceTypeChromeos = Objects.requireNonNull(deviceTypeChromeos, "expected parameter 'deviceTypeChromeos' to be non-null");
-        this.deviceTypeIos = Objects.requireNonNull(deviceTypeIos, "expected parameter 'deviceTypeIos' to be non-null");
-        this.deviceTypeLinux = Objects.requireNonNull(deviceTypeLinux, "expected parameter 'deviceTypeLinux' to be non-null");
-        this.deviceTypeOsx = Objects.requireNonNull(deviceTypeOsx, "expected parameter 'deviceTypeOsx' to be non-null");
-        this.deviceTypeWeb = Objects.requireNonNull(deviceTypeWeb, "expected parameter 'deviceTypeWeb' to be non-null");
-        this.deviceTypeWindows = Objects.requireNonNull(deviceTypeWindows, "expected parameter 'deviceTypeWindows' to be non-null");
-        this.deviceTypeZeroclient = Objects.requireNonNull(deviceTypeZeroclient, "expected parameter 'deviceTypeZeroclient' to be non-null");
-    }
+    private GetDirectoryWorkspaceAccessProperty() {}
 
-    private GetDirectoryWorkspaceAccessProperty() {
-        this.deviceTypeAndroid = null;
-        this.deviceTypeChromeos = null;
-        this.deviceTypeIos = null;
-        this.deviceTypeLinux = null;
-        this.deviceTypeOsx = null;
-        this.deviceTypeWeb = null;
-        this.deviceTypeWindows = null;
-        this.deviceTypeZeroclient = null;
+    private GetDirectoryWorkspaceAccessProperty(GetDirectoryWorkspaceAccessProperty $) {
+        this.deviceTypeAndroid = $.deviceTypeAndroid;
+        this.deviceTypeChromeos = $.deviceTypeChromeos;
+        this.deviceTypeIos = $.deviceTypeIos;
+        this.deviceTypeLinux = $.deviceTypeLinux;
+        this.deviceTypeOsx = $.deviceTypeOsx;
+        this.deviceTypeWeb = $.deviceTypeWeb;
+        this.deviceTypeWindows = $.deviceTypeWindows;
+        this.deviceTypeZeroclient = $.deviceTypeZeroclient;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDirectoryWorkspaceAccessProperty defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceTypeAndroid;
-        private String deviceTypeChromeos;
-        private String deviceTypeIos;
-        private String deviceTypeLinux;
-        private String deviceTypeOsx;
-        private String deviceTypeWeb;
-        private String deviceTypeWindows;
-        private String deviceTypeZeroclient;
+        private GetDirectoryWorkspaceAccessProperty $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDirectoryWorkspaceAccessProperty();
         }
 
         public Builder(GetDirectoryWorkspaceAccessProperty defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceTypeAndroid = defaults.deviceTypeAndroid;
-    	      this.deviceTypeChromeos = defaults.deviceTypeChromeos;
-    	      this.deviceTypeIos = defaults.deviceTypeIos;
-    	      this.deviceTypeLinux = defaults.deviceTypeLinux;
-    	      this.deviceTypeOsx = defaults.deviceTypeOsx;
-    	      this.deviceTypeWeb = defaults.deviceTypeWeb;
-    	      this.deviceTypeWindows = defaults.deviceTypeWindows;
-    	      this.deviceTypeZeroclient = defaults.deviceTypeZeroclient;
+            $ = new GetDirectoryWorkspaceAccessProperty(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceTypeAndroid(String deviceTypeAndroid) {
-            this.deviceTypeAndroid = Objects.requireNonNull(deviceTypeAndroid);
+            $.deviceTypeAndroid = deviceTypeAndroid;
             return this;
         }
+
         public Builder deviceTypeChromeos(String deviceTypeChromeos) {
-            this.deviceTypeChromeos = Objects.requireNonNull(deviceTypeChromeos);
+            $.deviceTypeChromeos = deviceTypeChromeos;
             return this;
         }
+
         public Builder deviceTypeIos(String deviceTypeIos) {
-            this.deviceTypeIos = Objects.requireNonNull(deviceTypeIos);
+            $.deviceTypeIos = deviceTypeIos;
             return this;
         }
+
         public Builder deviceTypeLinux(String deviceTypeLinux) {
-            this.deviceTypeLinux = Objects.requireNonNull(deviceTypeLinux);
+            $.deviceTypeLinux = deviceTypeLinux;
             return this;
         }
+
         public Builder deviceTypeOsx(String deviceTypeOsx) {
-            this.deviceTypeOsx = Objects.requireNonNull(deviceTypeOsx);
+            $.deviceTypeOsx = deviceTypeOsx;
             return this;
         }
+
         public Builder deviceTypeWeb(String deviceTypeWeb) {
-            this.deviceTypeWeb = Objects.requireNonNull(deviceTypeWeb);
+            $.deviceTypeWeb = deviceTypeWeb;
             return this;
         }
+
         public Builder deviceTypeWindows(String deviceTypeWindows) {
-            this.deviceTypeWindows = Objects.requireNonNull(deviceTypeWindows);
+            $.deviceTypeWindows = deviceTypeWindows;
             return this;
         }
+
         public Builder deviceTypeZeroclient(String deviceTypeZeroclient) {
-            this.deviceTypeZeroclient = Objects.requireNonNull(deviceTypeZeroclient);
+            $.deviceTypeZeroclient = deviceTypeZeroclient;
             return this;
-        }        public GetDirectoryWorkspaceAccessProperty build() {
-            return new GetDirectoryWorkspaceAccessProperty(deviceTypeAndroid, deviceTypeChromeos, deviceTypeIos, deviceTypeLinux, deviceTypeOsx, deviceTypeWeb, deviceTypeWindows, deviceTypeZeroclient);
+        }
+
+        public GetDirectoryWorkspaceAccessProperty build() {
+            $.deviceTypeAndroid = Objects.requireNonNull($.deviceTypeAndroid, "expected parameter 'deviceTypeAndroid' to be non-null");
+            $.deviceTypeChromeos = Objects.requireNonNull($.deviceTypeChromeos, "expected parameter 'deviceTypeChromeos' to be non-null");
+            $.deviceTypeIos = Objects.requireNonNull($.deviceTypeIos, "expected parameter 'deviceTypeIos' to be non-null");
+            $.deviceTypeLinux = Objects.requireNonNull($.deviceTypeLinux, "expected parameter 'deviceTypeLinux' to be non-null");
+            $.deviceTypeOsx = Objects.requireNonNull($.deviceTypeOsx, "expected parameter 'deviceTypeOsx' to be non-null");
+            $.deviceTypeWeb = Objects.requireNonNull($.deviceTypeWeb, "expected parameter 'deviceTypeWeb' to be non-null");
+            $.deviceTypeWindows = Objects.requireNonNull($.deviceTypeWindows, "expected parameter 'deviceTypeWindows' to be non-null");
+            $.deviceTypeZeroclient = Objects.requireNonNull($.deviceTypeZeroclient, "expected parameter 'deviceTypeZeroclient' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1beta.inputs.WeekDayOfMonthArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="monthDay", required=true)
-      private final Output<Integer> monthDay;
+    private Output<Integer> monthDay;
 
     public Output<Integer> monthDay() {
         return this.monthDay;
@@ -35,63 +34,60 @@ public final class MonthlyScheduleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="weekDayOfMonth", required=true)
-      private final Output<WeekDayOfMonthArgs> weekDayOfMonth;
+    private Output<WeekDayOfMonthArgs> weekDayOfMonth;
 
     public Output<WeekDayOfMonthArgs> weekDayOfMonth() {
         return this.weekDayOfMonth;
     }
 
-    public MonthlyScheduleArgs(
-        Output<Integer> monthDay,
-        Output<WeekDayOfMonthArgs> weekDayOfMonth) {
-        this.monthDay = Objects.requireNonNull(monthDay, "expected parameter 'monthDay' to be non-null");
-        this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth, "expected parameter 'weekDayOfMonth' to be non-null");
-    }
+    private MonthlyScheduleArgs() {}
 
-    private MonthlyScheduleArgs() {
-        this.monthDay = Codegen.empty();
-        this.weekDayOfMonth = Codegen.empty();
+    private MonthlyScheduleArgs(MonthlyScheduleArgs $) {
+        this.monthDay = $.monthDay;
+        this.weekDayOfMonth = $.weekDayOfMonth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonthlyScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> monthDay;
-        private Output<WeekDayOfMonthArgs> weekDayOfMonth;
+        private MonthlyScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonthlyScheduleArgs();
         }
 
         public Builder(MonthlyScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monthDay = defaults.monthDay;
-    	      this.weekDayOfMonth = defaults.weekDayOfMonth;
+            $ = new MonthlyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monthDay(Output<Integer> monthDay) {
-            this.monthDay = Objects.requireNonNull(monthDay);
+            $.monthDay = monthDay;
             return this;
         }
+
         public Builder monthDay(Integer monthDay) {
-            this.monthDay = Output.of(Objects.requireNonNull(monthDay));
-            return this;
+            return monthDay(Output.of(monthDay));
         }
+
         public Builder weekDayOfMonth(Output<WeekDayOfMonthArgs> weekDayOfMonth) {
-            this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth);
+            $.weekDayOfMonth = weekDayOfMonth;
             return this;
         }
+
         public Builder weekDayOfMonth(WeekDayOfMonthArgs weekDayOfMonth) {
-            this.weekDayOfMonth = Output.of(Objects.requireNonNull(weekDayOfMonth));
-            return this;
-        }        public MonthlyScheduleArgs build() {
-            return new MonthlyScheduleArgs(monthDay, weekDayOfMonth);
+            return weekDayOfMonth(Output.of(weekDayOfMonth));
+        }
+
+        public MonthlyScheduleArgs build() {
+            $.monthDay = Objects.requireNonNull($.monthDay, "expected parameter 'monthDay' to be non-null");
+            $.weekDayOfMonth = Objects.requireNonNull($.weekDayOfMonth, "expected parameter 'weekDayOfMonth' to be non-null");
+            return $;
         }
     }
+
 }

@@ -28,7 +28,7 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alertChart", required=true)
-      private final AlertChartResponse alertChart;
+    private AlertChartResponse alertChart;
 
     public AlertChartResponse alertChart() {
         return this.alertChart;
@@ -39,7 +39,7 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blank", required=true)
-      private final EmptyResponse blank;
+    private EmptyResponse blank;
 
     public EmptyResponse blank() {
         return this.blank;
@@ -50,7 +50,7 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logsPanel", required=true)
-      private final LogsPanelResponse logsPanel;
+    private LogsPanelResponse logsPanel;
 
     public LogsPanelResponse logsPanel() {
         return this.logsPanel;
@@ -61,7 +61,7 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scorecard", required=true)
-      private final ScorecardResponse scorecard;
+    private ScorecardResponse scorecard;
 
     public ScorecardResponse scorecard() {
         return this.scorecard;
@@ -72,7 +72,7 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="text", required=true)
-      private final TextResponse text;
+    private TextResponse text;
 
     public TextResponse text() {
         return this.text;
@@ -83,7 +83,7 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeSeriesTable", required=true)
-      private final TimeSeriesTableResponse timeSeriesTable;
+    private TimeSeriesTableResponse timeSeriesTable;
 
     public TimeSeriesTableResponse timeSeriesTable() {
         return this.timeSeriesTable;
@@ -94,7 +94,7 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
@@ -105,109 +105,94 @@ public final class WidgetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xyChart", required=true)
-      private final XyChartResponse xyChart;
+    private XyChartResponse xyChart;
 
     public XyChartResponse xyChart() {
         return this.xyChart;
     }
 
-    public WidgetResponse(
-        AlertChartResponse alertChart,
-        EmptyResponse blank,
-        LogsPanelResponse logsPanel,
-        ScorecardResponse scorecard,
-        TextResponse text,
-        TimeSeriesTableResponse timeSeriesTable,
-        String title,
-        XyChartResponse xyChart) {
-        this.alertChart = Objects.requireNonNull(alertChart, "expected parameter 'alertChart' to be non-null");
-        this.blank = Objects.requireNonNull(blank, "expected parameter 'blank' to be non-null");
-        this.logsPanel = Objects.requireNonNull(logsPanel, "expected parameter 'logsPanel' to be non-null");
-        this.scorecard = Objects.requireNonNull(scorecard, "expected parameter 'scorecard' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-        this.timeSeriesTable = Objects.requireNonNull(timeSeriesTable, "expected parameter 'timeSeriesTable' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.xyChart = Objects.requireNonNull(xyChart, "expected parameter 'xyChart' to be non-null");
-    }
+    private WidgetResponse() {}
 
-    private WidgetResponse() {
-        this.alertChart = null;
-        this.blank = null;
-        this.logsPanel = null;
-        this.scorecard = null;
-        this.text = null;
-        this.timeSeriesTable = null;
-        this.title = null;
-        this.xyChart = null;
+    private WidgetResponse(WidgetResponse $) {
+        this.alertChart = $.alertChart;
+        this.blank = $.blank;
+        this.logsPanel = $.logsPanel;
+        this.scorecard = $.scorecard;
+        this.text = $.text;
+        this.timeSeriesTable = $.timeSeriesTable;
+        this.title = $.title;
+        this.xyChart = $.xyChart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WidgetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AlertChartResponse alertChart;
-        private EmptyResponse blank;
-        private LogsPanelResponse logsPanel;
-        private ScorecardResponse scorecard;
-        private TextResponse text;
-        private TimeSeriesTableResponse timeSeriesTable;
-        private String title;
-        private XyChartResponse xyChart;
+        private WidgetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WidgetResponse();
         }
 
         public Builder(WidgetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertChart = defaults.alertChart;
-    	      this.blank = defaults.blank;
-    	      this.logsPanel = defaults.logsPanel;
-    	      this.scorecard = defaults.scorecard;
-    	      this.text = defaults.text;
-    	      this.timeSeriesTable = defaults.timeSeriesTable;
-    	      this.title = defaults.title;
-    	      this.xyChart = defaults.xyChart;
+            $ = new WidgetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alertChart(AlertChartResponse alertChart) {
-            this.alertChart = Objects.requireNonNull(alertChart);
+            $.alertChart = alertChart;
             return this;
         }
+
         public Builder blank(EmptyResponse blank) {
-            this.blank = Objects.requireNonNull(blank);
+            $.blank = blank;
             return this;
         }
+
         public Builder logsPanel(LogsPanelResponse logsPanel) {
-            this.logsPanel = Objects.requireNonNull(logsPanel);
+            $.logsPanel = logsPanel;
             return this;
         }
+
         public Builder scorecard(ScorecardResponse scorecard) {
-            this.scorecard = Objects.requireNonNull(scorecard);
+            $.scorecard = scorecard;
             return this;
         }
+
         public Builder text(TextResponse text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder timeSeriesTable(TimeSeriesTableResponse timeSeriesTable) {
-            this.timeSeriesTable = Objects.requireNonNull(timeSeriesTable);
+            $.timeSeriesTable = timeSeriesTable;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder xyChart(XyChartResponse xyChart) {
-            this.xyChart = Objects.requireNonNull(xyChart);
+            $.xyChart = xyChart;
             return this;
-        }        public WidgetResponse build() {
-            return new WidgetResponse(alertChart, blank, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);
+        }
+
+        public WidgetResponse build() {
+            $.alertChart = Objects.requireNonNull($.alertChart, "expected parameter 'alertChart' to be non-null");
+            $.blank = Objects.requireNonNull($.blank, "expected parameter 'blank' to be non-null");
+            $.logsPanel = Objects.requireNonNull($.logsPanel, "expected parameter 'logsPanel' to be non-null");
+            $.scorecard = Objects.requireNonNull($.scorecard, "expected parameter 'scorecard' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            $.timeSeriesTable = Objects.requireNonNull($.timeSeriesTable, "expected parameter 'timeSeriesTable' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            $.xyChart = Objects.requireNonNull($.xyChart, "expected parameter 'xyChart' to be non-null");
+            return $;
         }
     }
+
 }

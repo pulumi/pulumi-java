@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactHashesArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends com.pulumi.resources
     public static final GrafeasV1beta1IntotoArtifactArgs Empty = new GrafeasV1beta1IntotoArtifactArgs();
 
     @Import(name="hashes")
-      private final @Nullable Output<ArtifactHashesArgs> hashes;
+    private @Nullable Output<ArtifactHashesArgs> hashes;
 
-    public Output<ArtifactHashesArgs> hashes() {
-        return this.hashes == null ? Codegen.empty() : this.hashes;
+    public Optional<Output<ArtifactHashesArgs>> hashes() {
+        return Optional.ofNullable(this.hashes);
     }
 
     @Import(name="resourceUri")
-      private final @Nullable Output<String> resourceUri;
+    private @Nullable Output<String> resourceUri;
 
-    public Output<String> resourceUri() {
-        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
+    public Optional<Output<String>> resourceUri() {
+        return Optional.ofNullable(this.resourceUri);
     }
 
-    public GrafeasV1beta1IntotoArtifactArgs(
-        @Nullable Output<ArtifactHashesArgs> hashes,
-        @Nullable Output<String> resourceUri) {
-        this.hashes = hashes;
-        this.resourceUri = resourceUri;
-    }
+    private GrafeasV1beta1IntotoArtifactArgs() {}
 
-    private GrafeasV1beta1IntotoArtifactArgs() {
-        this.hashes = Codegen.empty();
-        this.resourceUri = Codegen.empty();
+    private GrafeasV1beta1IntotoArtifactArgs(GrafeasV1beta1IntotoArtifactArgs $) {
+        this.hashes = $.hashes;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1IntotoArtifactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ArtifactHashesArgs> hashes;
-        private @Nullable Output<String> resourceUri;
+        private GrafeasV1beta1IntotoArtifactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1IntotoArtifactArgs();
         }
 
         public Builder(GrafeasV1beta1IntotoArtifactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hashes = defaults.hashes;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new GrafeasV1beta1IntotoArtifactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hashes(@Nullable Output<ArtifactHashesArgs> hashes) {
-            this.hashes = hashes;
+            $.hashes = hashes;
             return this;
         }
-        public Builder hashes(@Nullable ArtifactHashesArgs hashes) {
-            this.hashes = Codegen.ofNullable(hashes);
-            return this;
+
+        public Builder hashes(ArtifactHashesArgs hashes) {
+            return hashes(Output.of(hashes));
         }
+
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
         }
-        public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Codegen.ofNullable(resourceUri);
-            return this;
-        }        public GrafeasV1beta1IntotoArtifactArgs build() {
-            return new GrafeasV1beta1IntotoArtifactArgs(hashes, resourceUri);
+
+        public Builder resourceUri(String resourceUri) {
+            return resourceUri(Output.of(resourceUri));
+        }
+
+        public GrafeasV1beta1IntotoArtifactArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class LinkedVpnTunnelsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="siteToSiteDataTransfer", required=true)
-      private final Boolean siteToSiteDataTransfer;
+    private Boolean siteToSiteDataTransfer;
 
     public Boolean siteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
@@ -34,58 +34,56 @@ public final class LinkedVpnTunnelsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="uris", required=true)
-      private final List<String> uris;
+    private List<String> uris;
 
     public List<String> uris() {
         return this.uris;
     }
 
-    public LinkedVpnTunnelsResponse(
-        Boolean siteToSiteDataTransfer,
-        List<String> uris) {
-        this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
-        this.uris = Objects.requireNonNull(uris, "expected parameter 'uris' to be non-null");
-    }
+    private LinkedVpnTunnelsResponse() {}
 
-    private LinkedVpnTunnelsResponse() {
-        this.siteToSiteDataTransfer = null;
-        this.uris = List.of();
+    private LinkedVpnTunnelsResponse(LinkedVpnTunnelsResponse $) {
+        this.siteToSiteDataTransfer = $.siteToSiteDataTransfer;
+        this.uris = $.uris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedVpnTunnelsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean siteToSiteDataTransfer;
-        private List<String> uris;
+        private LinkedVpnTunnelsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedVpnTunnelsResponse();
         }
 
         public Builder(LinkedVpnTunnelsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
-    	      this.uris = defaults.uris;
+            $ = new LinkedVpnTunnelsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
+            $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
+
         public Builder uris(List<String> uris) {
-            this.uris = Objects.requireNonNull(uris);
+            $.uris = uris;
             return this;
         }
+
         public Builder uris(String... uris) {
             return uris(List.of(uris));
-        }        public LinkedVpnTunnelsResponse build() {
-            return new LinkedVpnTunnelsResponse(siteToSiteDataTransfer, uris);
+        }
+
+        public LinkedVpnTunnelsResponse build() {
+            $.siteToSiteDataTransfer = Objects.requireNonNull($.siteToSiteDataTransfer, "expected parameter 'siteToSiteDataTransfer' to be non-null");
+            $.uris = Objects.requireNonNull($.uris, "expected parameter 'uris' to be non-null");
+            return $;
         }
     }
+
 }

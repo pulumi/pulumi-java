@@ -8,10 +8,10 @@ import com.pulumi.azurenative.hanaonazure.inputs.OSProfileArgs;
 import com.pulumi.azurenative.hanaonazure.inputs.StorageProfileArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hanaInstanceName")
-      private final @Nullable Output<String> hanaInstanceName;
+    private @Nullable Output<String> hanaInstanceName;
 
-    public Output<String> hanaInstanceName() {
-        return this.hanaInstanceName == null ? Codegen.empty() : this.hanaInstanceName;
+    public Optional<Output<String>> hanaInstanceName() {
+        return Optional.ofNullable(this.hanaInstanceName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<NetworkProfileArgs> networkProfile;
+    private @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<NetworkProfileArgs>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable Output<OSProfileArgs> osProfile;
+    private @Nullable Output<OSProfileArgs> osProfile;
 
-    public Output<OSProfileArgs> osProfile() {
-        return this.osProfile == null ? Codegen.empty() : this.osProfile;
+    public Optional<Output<OSProfileArgs>> osProfile() {
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partnerNodeId")
-      private final @Nullable Output<String> partnerNodeId;
+    private @Nullable Output<String> partnerNodeId;
 
-    public Output<String> partnerNodeId() {
-        return this.partnerNodeId == null ? Codegen.empty() : this.partnerNodeId;
+    public Optional<Output<String>> partnerNodeId() {
+        return Optional.ofNullable(this.partnerNodeId);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,10 +90,10 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable Output<StorageProfileArgs> storageProfile;
+    private @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> storageProfile() {
-        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
+    public Optional<Output<StorageProfileArgs>> storageProfile() {
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -101,141 +101,119 @@ public final class HanaInstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public HanaInstanceArgs(
-        @Nullable Output<String> hanaInstanceName,
-        @Nullable Output<String> location,
-        @Nullable Output<NetworkProfileArgs> networkProfile,
-        @Nullable Output<OSProfileArgs> osProfile,
-        @Nullable Output<String> partnerNodeId,
-        Output<String> resourceGroupName,
-        @Nullable Output<StorageProfileArgs> storageProfile,
-        @Nullable Output<Map<String,String>> tags) {
-        this.hanaInstanceName = hanaInstanceName;
-        this.location = location;
-        this.networkProfile = networkProfile;
-        this.osProfile = osProfile;
-        this.partnerNodeId = partnerNodeId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageProfile = storageProfile;
-        this.tags = tags;
-    }
+    private HanaInstanceArgs() {}
 
-    private HanaInstanceArgs() {
-        this.hanaInstanceName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkProfile = Codegen.empty();
-        this.osProfile = Codegen.empty();
-        this.partnerNodeId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.tags = Codegen.empty();
+    private HanaInstanceArgs(HanaInstanceArgs $) {
+        this.hanaInstanceName = $.hanaInstanceName;
+        this.location = $.location;
+        this.networkProfile = $.networkProfile;
+        this.osProfile = $.osProfile;
+        this.partnerNodeId = $.partnerNodeId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageProfile = $.storageProfile;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HanaInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hanaInstanceName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<NetworkProfileArgs> networkProfile;
-        private @Nullable Output<OSProfileArgs> osProfile;
-        private @Nullable Output<String> partnerNodeId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<StorageProfileArgs> storageProfile;
-        private @Nullable Output<Map<String,String>> tags;
+        private HanaInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HanaInstanceArgs();
         }
 
         public Builder(HanaInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hanaInstanceName = defaults.hanaInstanceName;
-    	      this.location = defaults.location;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.osProfile = defaults.osProfile;
-    	      this.partnerNodeId = defaults.partnerNodeId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.tags = defaults.tags;
+            $ = new HanaInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hanaInstanceName(@Nullable Output<String> hanaInstanceName) {
-            this.hanaInstanceName = hanaInstanceName;
+            $.hanaInstanceName = hanaInstanceName;
             return this;
         }
-        public Builder hanaInstanceName(@Nullable String hanaInstanceName) {
-            this.hanaInstanceName = Codegen.ofNullable(hanaInstanceName);
-            return this;
+
+        public Builder hanaInstanceName(String hanaInstanceName) {
+            return hanaInstanceName(Output.of(hanaInstanceName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
+
+        public Builder networkProfile(NetworkProfileArgs networkProfile) {
+            return networkProfile(Output.of(networkProfile));
         }
+
         public Builder osProfile(@Nullable Output<OSProfileArgs> osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
-        public Builder osProfile(@Nullable OSProfileArgs osProfile) {
-            this.osProfile = Codegen.ofNullable(osProfile);
-            return this;
+
+        public Builder osProfile(OSProfileArgs osProfile) {
+            return osProfile(Output.of(osProfile));
         }
+
         public Builder partnerNodeId(@Nullable Output<String> partnerNodeId) {
-            this.partnerNodeId = partnerNodeId;
+            $.partnerNodeId = partnerNodeId;
             return this;
         }
-        public Builder partnerNodeId(@Nullable String partnerNodeId) {
-            this.partnerNodeId = Codegen.ofNullable(partnerNodeId);
-            return this;
+
+        public Builder partnerNodeId(String partnerNodeId) {
+            return partnerNodeId(Output.of(partnerNodeId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
-        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Codegen.ofNullable(storageProfile);
-            return this;
+
+        public Builder storageProfile(StorageProfileArgs storageProfile) {
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public HanaInstanceArgs build() {
-            return new HanaInstanceArgs(hanaInstanceName, location, networkProfile, osProfile, partnerNodeId, resourceGroupName, storageProfile, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public HanaInstanceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

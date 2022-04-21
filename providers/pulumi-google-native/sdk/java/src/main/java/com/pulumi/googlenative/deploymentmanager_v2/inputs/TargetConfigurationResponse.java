@@ -19,7 +19,7 @@ public final class TargetConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="config", required=true)
-      private final ConfigFileResponse config;
+    private ConfigFileResponse config;
 
     public ConfigFileResponse config() {
         return this.config;
@@ -30,58 +30,56 @@ public final class TargetConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="imports", required=true)
-      private final List<ImportFileResponse> imports;
+    private List<ImportFileResponse> imports;
 
     public List<ImportFileResponse> imports() {
         return this.imports;
     }
 
-    public TargetConfigurationResponse(
-        ConfigFileResponse config,
-        List<ImportFileResponse> imports) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.imports = Objects.requireNonNull(imports, "expected parameter 'imports' to be non-null");
-    }
+    private TargetConfigurationResponse() {}
 
-    private TargetConfigurationResponse() {
-        this.config = null;
-        this.imports = List.of();
+    private TargetConfigurationResponse(TargetConfigurationResponse $) {
+        this.config = $.config;
+        this.imports = $.imports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ConfigFileResponse config;
-        private List<ImportFileResponse> imports;
+        private TargetConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetConfigurationResponse();
         }
 
         public Builder(TargetConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.imports = defaults.imports;
+            $ = new TargetConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder config(ConfigFileResponse config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder imports(List<ImportFileResponse> imports) {
-            this.imports = Objects.requireNonNull(imports);
+            $.imports = imports;
             return this;
         }
+
         public Builder imports(ImportFileResponse... imports) {
             return imports(List.of(imports));
-        }        public TargetConfigurationResponse build() {
-            return new TargetConfigurationResponse(config, imports);
+        }
+
+        public TargetConfigurationResponse build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.imports = Objects.requireNonNull($.imports, "expected parameter 'imports' to be non-null");
+            return $;
         }
     }
+
 }

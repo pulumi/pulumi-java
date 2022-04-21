@@ -25,10 +25,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable String fqdn;
+    private @Nullable String fqdn;
 
     public Optional<String> fqdn() {
-        return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable List<String> ipAddresses;
+    private @Nullable List<String> ipAddresses;
 
-    public List<String> ipAddresses() {
-        return this.ipAddresses == null ? List.of() : this.ipAddresses;
+    public Optional<List<String>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -58,10 +58,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recordSetName")
-      private final @Nullable String recordSetName;
+    private @Nullable String recordSetName;
 
     public Optional<String> recordSetName() {
-        return this.recordSetName == null ? Optional.empty() : Optional.ofNullable(this.recordSetName);
+        return Optional.ofNullable(this.recordSetName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="recordType")
-      private final @Nullable String recordType;
+    private @Nullable String recordType;
 
     public Optional<String> recordType() {
-        return this.recordType == null ? Optional.empty() : Optional.ofNullable(this.recordType);
+        return Optional.ofNullable(this.recordType);
     }
 
     /**
@@ -80,94 +80,79 @@ public final class RecordSetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Integer ttl;
+    private @Nullable Integer ttl;
 
     public Optional<Integer> ttl() {
-        return this.ttl == null ? Optional.empty() : Optional.ofNullable(this.ttl);
+        return Optional.ofNullable(this.ttl);
     }
 
-    public RecordSetResponse(
-        @Nullable String fqdn,
-        @Nullable List<String> ipAddresses,
-        String provisioningState,
-        @Nullable String recordSetName,
-        @Nullable String recordType,
-        @Nullable Integer ttl) {
-        this.fqdn = fqdn;
-        this.ipAddresses = ipAddresses;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.recordSetName = recordSetName;
-        this.recordType = recordType;
-        this.ttl = ttl;
-    }
+    private RecordSetResponse() {}
 
-    private RecordSetResponse() {
-        this.fqdn = null;
-        this.ipAddresses = List.of();
-        this.provisioningState = null;
-        this.recordSetName = null;
-        this.recordType = null;
-        this.ttl = null;
+    private RecordSetResponse(RecordSetResponse $) {
+        this.fqdn = $.fqdn;
+        this.ipAddresses = $.ipAddresses;
+        this.provisioningState = $.provisioningState;
+        this.recordSetName = $.recordSetName;
+        this.recordType = $.recordType;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecordSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String fqdn;
-        private @Nullable List<String> ipAddresses;
-        private String provisioningState;
-        private @Nullable String recordSetName;
-        private @Nullable String recordType;
-        private @Nullable Integer ttl;
+        private RecordSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecordSetResponse();
         }
 
         public Builder(RecordSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fqdn = defaults.fqdn;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.recordSetName = defaults.recordSetName;
-    	      this.recordType = defaults.recordType;
-    	      this.ttl = defaults.ttl;
+            $ = new RecordSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder recordSetName(@Nullable String recordSetName) {
-            this.recordSetName = recordSetName;
+            $.recordSetName = recordSetName;
             return this;
         }
+
         public Builder recordType(@Nullable String recordType) {
-            this.recordType = recordType;
+            $.recordType = recordType;
             return this;
         }
+
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
-        }        public RecordSetResponse build() {
-            return new RecordSetResponse(fqdn, ipAddresses, provisioningState, recordSetName, recordType, ttl);
+        }
+
+        public RecordSetResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

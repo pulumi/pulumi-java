@@ -17,45 +17,45 @@ public final class GetLocalGatewayRouteTableVPCAssociationArgs extends com.pulum
      * 
      */
     @Import(name="localGatewayRouteTableVpcAssociationId", required=true)
-      private final String localGatewayRouteTableVpcAssociationId;
+    private String localGatewayRouteTableVpcAssociationId;
 
     public String localGatewayRouteTableVpcAssociationId() {
         return this.localGatewayRouteTableVpcAssociationId;
     }
 
-    public GetLocalGatewayRouteTableVPCAssociationArgs(String localGatewayRouteTableVpcAssociationId) {
-        this.localGatewayRouteTableVpcAssociationId = Objects.requireNonNull(localGatewayRouteTableVpcAssociationId, "expected parameter 'localGatewayRouteTableVpcAssociationId' to be non-null");
-    }
+    private GetLocalGatewayRouteTableVPCAssociationArgs() {}
 
-    private GetLocalGatewayRouteTableVPCAssociationArgs() {
-        this.localGatewayRouteTableVpcAssociationId = null;
+    private GetLocalGatewayRouteTableVPCAssociationArgs(GetLocalGatewayRouteTableVPCAssociationArgs $) {
+        this.localGatewayRouteTableVpcAssociationId = $.localGatewayRouteTableVpcAssociationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocalGatewayRouteTableVPCAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String localGatewayRouteTableVpcAssociationId;
+        private GetLocalGatewayRouteTableVPCAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocalGatewayRouteTableVPCAssociationArgs();
         }
 
         public Builder(GetLocalGatewayRouteTableVPCAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localGatewayRouteTableVpcAssociationId = defaults.localGatewayRouteTableVpcAssociationId;
+            $ = new GetLocalGatewayRouteTableVPCAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder localGatewayRouteTableVpcAssociationId(String localGatewayRouteTableVpcAssociationId) {
-            this.localGatewayRouteTableVpcAssociationId = Objects.requireNonNull(localGatewayRouteTableVpcAssociationId);
+            $.localGatewayRouteTableVpcAssociationId = localGatewayRouteTableVpcAssociationId;
             return this;
-        }        public GetLocalGatewayRouteTableVPCAssociationArgs build() {
-            return new GetLocalGatewayRouteTableVPCAssociationArgs(localGatewayRouteTableVpcAssociationId);
+        }
+
+        public GetLocalGatewayRouteTableVPCAssociationArgs build() {
+            $.localGatewayRouteTableVpcAssociationId = Objects.requireNonNull($.localGatewayRouteTableVpcAssociationId, "expected parameter 'localGatewayRouteTableVpcAssociationId' to be non-null");
+            return $;
         }
     }
+
 }

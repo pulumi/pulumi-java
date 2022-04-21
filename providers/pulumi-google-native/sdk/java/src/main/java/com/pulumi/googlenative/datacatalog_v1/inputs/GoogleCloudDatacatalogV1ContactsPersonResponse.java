@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends com.pu
      * 
      */
     @Import(name="designation", required=true)
-      private final String designation;
+    private String designation;
 
     public String designation() {
         return this.designation;
@@ -32,55 +32,52 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse extends com.pu
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
     }
 
-    public GoogleCloudDatacatalogV1ContactsPersonResponse(
-        String designation,
-        String email) {
-        this.designation = Objects.requireNonNull(designation, "expected parameter 'designation' to be non-null");
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1ContactsPersonResponse() {}
 
-    private GoogleCloudDatacatalogV1ContactsPersonResponse() {
-        this.designation = null;
-        this.email = null;
+    private GoogleCloudDatacatalogV1ContactsPersonResponse(GoogleCloudDatacatalogV1ContactsPersonResponse $) {
+        this.designation = $.designation;
+        this.email = $.email;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1ContactsPersonResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String designation;
-        private String email;
+        private GoogleCloudDatacatalogV1ContactsPersonResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1ContactsPersonResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1ContactsPersonResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.designation = defaults.designation;
-    	      this.email = defaults.email;
+            $ = new GoogleCloudDatacatalogV1ContactsPersonResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder designation(String designation) {
-            this.designation = Objects.requireNonNull(designation);
+            $.designation = designation;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
-        }        public GoogleCloudDatacatalogV1ContactsPersonResponse build() {
-            return new GoogleCloudDatacatalogV1ContactsPersonResponse(designation, email);
+        }
+
+        public GoogleCloudDatacatalogV1ContactsPersonResponse build() {
+            $.designation = Objects.requireNonNull($.designation, "expected parameter 'designation' to be non-null");
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            return $;
         }
     }
+
 }

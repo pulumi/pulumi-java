@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.FingerprintArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BasisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<FingerprintArgs> fingerprint;
+    private @Nullable Output<FingerprintArgs> fingerprint;
 
-    public Output<FingerprintArgs> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<FingerprintArgs>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class BasisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUrl")
-      private final @Nullable Output<String> resourceUrl;
+    private @Nullable Output<String> resourceUrl;
 
-    public Output<String> resourceUrl() {
-        return this.resourceUrl == null ? Codegen.empty() : this.resourceUrl;
+    public Optional<Output<String>> resourceUrl() {
+        return Optional.ofNullable(this.resourceUrl);
     }
 
-    public BasisArgs(
-        @Nullable Output<FingerprintArgs> fingerprint,
-        @Nullable Output<String> resourceUrl) {
-        this.fingerprint = fingerprint;
-        this.resourceUrl = resourceUrl;
-    }
+    private BasisArgs() {}
 
-    private BasisArgs() {
-        this.fingerprint = Codegen.empty();
-        this.resourceUrl = Codegen.empty();
+    private BasisArgs(BasisArgs $) {
+        this.fingerprint = $.fingerprint;
+        this.resourceUrl = $.resourceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FingerprintArgs> fingerprint;
-        private @Nullable Output<String> resourceUrl;
+        private BasisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasisArgs();
         }
 
         public Builder(BasisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.resourceUrl = defaults.resourceUrl;
+            $ = new BasisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fingerprint(@Nullable Output<FingerprintArgs> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable FingerprintArgs fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(FingerprintArgs fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder resourceUrl(@Nullable Output<String> resourceUrl) {
-            this.resourceUrl = resourceUrl;
+            $.resourceUrl = resourceUrl;
             return this;
         }
-        public Builder resourceUrl(@Nullable String resourceUrl) {
-            this.resourceUrl = Codegen.ofNullable(resourceUrl);
-            return this;
-        }        public BasisArgs build() {
-            return new BasisArgs(fingerprint, resourceUrl);
+
+        public Builder resourceUrl(String resourceUrl) {
+            return resourceUrl(Output.of(resourceUrl));
+        }
+
+        public BasisArgs build() {
+            return $;
         }
     }
+
 }

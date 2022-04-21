@@ -6,7 +6,6 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteActionTargetGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class GatewayRouteSpecGrpcRouteActionGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="target", required=true)
-      private final Output<GatewayRouteSpecGrpcRouteActionTargetGetArgs> target;
+    private Output<GatewayRouteSpecGrpcRouteActionTargetGetArgs> target;
 
     public Output<GatewayRouteSpecGrpcRouteActionTargetGetArgs> target() {
         return this.target;
     }
 
-    public GatewayRouteSpecGrpcRouteActionGetArgs(Output<GatewayRouteSpecGrpcRouteActionTargetGetArgs> target) {
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private GatewayRouteSpecGrpcRouteActionGetArgs() {}
 
-    private GatewayRouteSpecGrpcRouteActionGetArgs() {
-        this.target = Codegen.empty();
+    private GatewayRouteSpecGrpcRouteActionGetArgs(GatewayRouteSpecGrpcRouteActionGetArgs $) {
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteSpecGrpcRouteActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GatewayRouteSpecGrpcRouteActionTargetGetArgs> target;
+        private GatewayRouteSpecGrpcRouteActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteSpecGrpcRouteActionGetArgs();
         }
 
         public Builder(GatewayRouteSpecGrpcRouteActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
+            $ = new GatewayRouteSpecGrpcRouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder target(Output<GatewayRouteSpecGrpcRouteActionTargetGetArgs> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(GatewayRouteSpecGrpcRouteActionTargetGetArgs target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public GatewayRouteSpecGrpcRouteActionGetArgs build() {
-            return new GatewayRouteSpecGrpcRouteActionGetArgs(target);
+            return target(Output.of(target));
+        }
+
+        public GatewayRouteSpecGrpcRouteActionGetArgs build() {
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

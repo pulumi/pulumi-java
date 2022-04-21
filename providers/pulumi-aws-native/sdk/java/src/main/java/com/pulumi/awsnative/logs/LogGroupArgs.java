@@ -6,11 +6,11 @@ package com.pulumi.awsnative.logs;
 import com.pulumi.awsnative.logs.inputs.LogGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable Output<String> logGroupName;
+    private @Nullable Output<String> logGroupName;
 
-    public Output<String> logGroupName() {
-        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
+    public Optional<Output<String>> logGroupName() {
+        return Optional.ofNullable(this.logGroupName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionInDays")
-      private final @Nullable Output<Integer> retentionInDays;
+    private @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> retentionInDays() {
-        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
+    public Optional<Output<Integer>> retentionInDays() {
+        return Optional.ofNullable(this.retentionInDays);
     }
 
     /**
@@ -56,92 +56,82 @@ public final class LogGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<LogGroupTagArgs>> tags;
+    private @Nullable Output<List<LogGroupTagArgs>> tags;
 
-    public Output<List<LogGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<LogGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LogGroupArgs(
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> logGroupName,
-        @Nullable Output<Integer> retentionInDays,
-        @Nullable Output<List<LogGroupTagArgs>> tags) {
-        this.kmsKeyId = kmsKeyId;
-        this.logGroupName = logGroupName;
-        this.retentionInDays = retentionInDays;
-        this.tags = tags;
-    }
+    private LogGroupArgs() {}
 
-    private LogGroupArgs() {
-        this.kmsKeyId = Codegen.empty();
-        this.logGroupName = Codegen.empty();
-        this.retentionInDays = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LogGroupArgs(LogGroupArgs $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.logGroupName = $.logGroupName;
+        this.retentionInDays = $.retentionInDays;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> logGroupName;
-        private @Nullable Output<Integer> retentionInDays;
-        private @Nullable Output<List<LogGroupTagArgs>> tags;
+        private LogGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogGroupArgs();
         }
 
         public Builder(LogGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.retentionInDays = defaults.retentionInDays;
-    	      this.tags = defaults.tags;
+            $ = new LogGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
-        public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Codegen.ofNullable(logGroupName);
-            return this;
+
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
-            this.retentionInDays = retentionInDays;
+            $.retentionInDays = retentionInDays;
             return this;
         }
-        public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Codegen.ofNullable(retentionInDays);
-            return this;
+
+        public Builder retentionInDays(Integer retentionInDays) {
+            return retentionInDays(Output.of(retentionInDays));
         }
+
         public Builder tags(@Nullable Output<List<LogGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<LogGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<LogGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(LogGroupTagArgs... tags) {
             return tags(List.of(tags));
-        }        public LogGroupArgs build() {
-            return new LogGroupArgs(kmsKeyId, logGroupName, retentionInDays, tags);
+        }
+
+        public LogGroupArgs build() {
+            return $;
         }
     }
+
 }

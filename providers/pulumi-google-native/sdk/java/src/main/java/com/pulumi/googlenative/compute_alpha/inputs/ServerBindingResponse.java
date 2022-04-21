@@ -13,45 +13,45 @@ public final class ServerBindingResponse extends com.pulumi.resources.InvokeArgs
     public static final ServerBindingResponse Empty = new ServerBindingResponse();
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ServerBindingResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ServerBindingResponse() {}
 
-    private ServerBindingResponse() {
-        this.type = null;
+    private ServerBindingResponse(ServerBindingResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerBindingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private ServerBindingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerBindingResponse();
         }
 
         public Builder(ServerBindingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ServerBindingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ServerBindingResponse build() {
-            return new ServerBindingResponse(type);
+        }
+
+        public ServerBindingResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

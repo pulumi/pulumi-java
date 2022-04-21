@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AvroWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="fileNamePrefix")
-      private final @Nullable Output<Object> fileNamePrefix;
+    private @Nullable Output<Object> fileNamePrefix;
 
-    public Output<Object> fileNamePrefix() {
-        return this.fileNamePrefix == null ? Codegen.empty() : this.fileNamePrefix;
+    public Optional<Output<Object>> fileNamePrefix() {
+        return Optional.ofNullable(this.fileNamePrefix);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AvroWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxRowsPerFile")
-      private final @Nullable Output<Object> maxRowsPerFile;
+    private @Nullable Output<Object> maxRowsPerFile;
 
-    public Output<Object> maxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Codegen.empty() : this.maxRowsPerFile;
+    public Optional<Output<Object>> maxRowsPerFile() {
+        return Optional.ofNullable(this.maxRowsPerFile);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class AvroWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="recordName")
-      private final @Nullable Output<String> recordName;
+    private @Nullable Output<String> recordName;
 
-    public Output<String> recordName() {
-        return this.recordName == null ? Codegen.empty() : this.recordName;
+    public Optional<Output<String>> recordName() {
+        return Optional.ofNullable(this.recordName);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class AvroWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="recordNamespace")
-      private final @Nullable Output<String> recordNamespace;
+    private @Nullable Output<String> recordNamespace;
 
-    public Output<String> recordNamespace() {
-        return this.recordNamespace == null ? Codegen.empty() : this.recordNamespace;
+    public Optional<Output<String>> recordNamespace() {
+        return Optional.ofNullable(this.recordNamespace);
     }
 
     /**
@@ -70,102 +71,89 @@ public final class AvroWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AvroWriteSettingsArgs(
-        @Nullable Output<Object> fileNamePrefix,
-        @Nullable Output<Object> maxRowsPerFile,
-        @Nullable Output<String> recordName,
-        @Nullable Output<String> recordNamespace,
-        Output<String> type) {
-        this.fileNamePrefix = fileNamePrefix;
-        this.maxRowsPerFile = maxRowsPerFile;
-        this.recordName = recordName;
-        this.recordNamespace = recordNamespace;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AvroWriteSettingsArgs() {}
 
-    private AvroWriteSettingsArgs() {
-        this.fileNamePrefix = Codegen.empty();
-        this.maxRowsPerFile = Codegen.empty();
-        this.recordName = Codegen.empty();
-        this.recordNamespace = Codegen.empty();
-        this.type = Codegen.empty();
+    private AvroWriteSettingsArgs(AvroWriteSettingsArgs $) {
+        this.fileNamePrefix = $.fileNamePrefix;
+        this.maxRowsPerFile = $.maxRowsPerFile;
+        this.recordName = $.recordName;
+        this.recordNamespace = $.recordNamespace;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvroWriteSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> fileNamePrefix;
-        private @Nullable Output<Object> maxRowsPerFile;
-        private @Nullable Output<String> recordName;
-        private @Nullable Output<String> recordNamespace;
-        private Output<String> type;
+        private AvroWriteSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvroWriteSettingsArgs();
         }
 
         public Builder(AvroWriteSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileNamePrefix = defaults.fileNamePrefix;
-    	      this.maxRowsPerFile = defaults.maxRowsPerFile;
-    	      this.recordName = defaults.recordName;
-    	      this.recordNamespace = defaults.recordNamespace;
-    	      this.type = defaults.type;
+            $ = new AvroWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileNamePrefix(@Nullable Output<Object> fileNamePrefix) {
-            this.fileNamePrefix = fileNamePrefix;
+            $.fileNamePrefix = fileNamePrefix;
             return this;
         }
-        public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = Codegen.ofNullable(fileNamePrefix);
-            return this;
+
+        public Builder fileNamePrefix(Object fileNamePrefix) {
+            return fileNamePrefix(Output.of(fileNamePrefix));
         }
+
         public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
-            this.maxRowsPerFile = maxRowsPerFile;
+            $.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
-        public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = Codegen.ofNullable(maxRowsPerFile);
-            return this;
+
+        public Builder maxRowsPerFile(Object maxRowsPerFile) {
+            return maxRowsPerFile(Output.of(maxRowsPerFile));
         }
+
         public Builder recordName(@Nullable Output<String> recordName) {
-            this.recordName = recordName;
+            $.recordName = recordName;
             return this;
         }
-        public Builder recordName(@Nullable String recordName) {
-            this.recordName = Codegen.ofNullable(recordName);
-            return this;
+
+        public Builder recordName(String recordName) {
+            return recordName(Output.of(recordName));
         }
+
         public Builder recordNamespace(@Nullable Output<String> recordNamespace) {
-            this.recordNamespace = recordNamespace;
+            $.recordNamespace = recordNamespace;
             return this;
         }
-        public Builder recordNamespace(@Nullable String recordNamespace) {
-            this.recordNamespace = Codegen.ofNullable(recordNamespace);
-            return this;
+
+        public Builder recordNamespace(String recordNamespace) {
+            return recordNamespace(Output.of(recordNamespace));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AvroWriteSettingsArgs build() {
-            return new AvroWriteSettingsArgs(fileNamePrefix, maxRowsPerFile, recordName, recordNamespace, type);
+            return type(Output.of(type));
+        }
+
+        public AvroWriteSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

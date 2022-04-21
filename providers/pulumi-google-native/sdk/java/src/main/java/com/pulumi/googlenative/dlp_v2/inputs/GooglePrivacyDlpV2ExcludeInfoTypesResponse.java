@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse extends com.pulumi
      * 
      */
     @Import(name="infoTypes", required=true)
-      private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
+    private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
     public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
     }
 
-    public GooglePrivacyDlpV2ExcludeInfoTypesResponse(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
-        this.infoTypes = Objects.requireNonNull(infoTypes, "expected parameter 'infoTypes' to be non-null");
-    }
+    private GooglePrivacyDlpV2ExcludeInfoTypesResponse() {}
 
-    private GooglePrivacyDlpV2ExcludeInfoTypesResponse() {
-        this.infoTypes = List.of();
+    private GooglePrivacyDlpV2ExcludeInfoTypesResponse(GooglePrivacyDlpV2ExcludeInfoTypesResponse $) {
+        this.infoTypes = $.infoTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ExcludeInfoTypesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
+        private GooglePrivacyDlpV2ExcludeInfoTypesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ExcludeInfoTypesResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ExcludeInfoTypesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypes = defaults.infoTypes;
+            $ = new GooglePrivacyDlpV2ExcludeInfoTypesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
-            this.infoTypes = Objects.requireNonNull(infoTypes);
+            $.infoTypes = infoTypes;
             return this;
         }
+
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
             return infoTypes(List.of(infoTypes));
-        }        public GooglePrivacyDlpV2ExcludeInfoTypesResponse build() {
-            return new GooglePrivacyDlpV2ExcludeInfoTypesResponse(infoTypes);
+        }
+
+        public GooglePrivacyDlpV2ExcludeInfoTypesResponse build() {
+            $.infoTypes = Objects.requireNonNull($.infoTypes, "expected parameter 'infoTypes' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class X12ProcessingSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="convertImpliedDecimal", required=true)
-      private final Boolean convertImpliedDecimal;
+    private Boolean convertImpliedDecimal;
 
     public Boolean convertImpliedDecimal() {
         return this.convertImpliedDecimal;
@@ -32,7 +32,7 @@ public final class X12ProcessingSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="createEmptyXmlTagsForTrailingSeparators", required=true)
-      private final Boolean createEmptyXmlTagsForTrailingSeparators;
+    private Boolean createEmptyXmlTagsForTrailingSeparators;
 
     public Boolean createEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
@@ -43,7 +43,7 @@ public final class X12ProcessingSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="maskSecurityInfo", required=true)
-      private final Boolean maskSecurityInfo;
+    private Boolean maskSecurityInfo;
 
     public Boolean maskSecurityInfo() {
         return this.maskSecurityInfo;
@@ -54,7 +54,7 @@ public final class X12ProcessingSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="preserveInterchange", required=true)
-      private final Boolean preserveInterchange;
+    private Boolean preserveInterchange;
 
     public Boolean preserveInterchange() {
         return this.preserveInterchange;
@@ -65,7 +65,7 @@ public final class X12ProcessingSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="suspendInterchangeOnError", required=true)
-      private final Boolean suspendInterchangeOnError;
+    private Boolean suspendInterchangeOnError;
 
     public Boolean suspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
@@ -76,91 +76,80 @@ public final class X12ProcessingSettingsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="useDotAsDecimalSeparator", required=true)
-      private final Boolean useDotAsDecimalSeparator;
+    private Boolean useDotAsDecimalSeparator;
 
     public Boolean useDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
     }
 
-    public X12ProcessingSettingsResponse(
-        Boolean convertImpliedDecimal,
-        Boolean createEmptyXmlTagsForTrailingSeparators,
-        Boolean maskSecurityInfo,
-        Boolean preserveInterchange,
-        Boolean suspendInterchangeOnError,
-        Boolean useDotAsDecimalSeparator) {
-        this.convertImpliedDecimal = Objects.requireNonNull(convertImpliedDecimal, "expected parameter 'convertImpliedDecimal' to be non-null");
-        this.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators, "expected parameter 'createEmptyXmlTagsForTrailingSeparators' to be non-null");
-        this.maskSecurityInfo = Objects.requireNonNull(maskSecurityInfo, "expected parameter 'maskSecurityInfo' to be non-null");
-        this.preserveInterchange = Objects.requireNonNull(preserveInterchange, "expected parameter 'preserveInterchange' to be non-null");
-        this.suspendInterchangeOnError = Objects.requireNonNull(suspendInterchangeOnError, "expected parameter 'suspendInterchangeOnError' to be non-null");
-        this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator, "expected parameter 'useDotAsDecimalSeparator' to be non-null");
-    }
+    private X12ProcessingSettingsResponse() {}
 
-    private X12ProcessingSettingsResponse() {
-        this.convertImpliedDecimal = null;
-        this.createEmptyXmlTagsForTrailingSeparators = null;
-        this.maskSecurityInfo = null;
-        this.preserveInterchange = null;
-        this.suspendInterchangeOnError = null;
-        this.useDotAsDecimalSeparator = null;
+    private X12ProcessingSettingsResponse(X12ProcessingSettingsResponse $) {
+        this.convertImpliedDecimal = $.convertImpliedDecimal;
+        this.createEmptyXmlTagsForTrailingSeparators = $.createEmptyXmlTagsForTrailingSeparators;
+        this.maskSecurityInfo = $.maskSecurityInfo;
+        this.preserveInterchange = $.preserveInterchange;
+        this.suspendInterchangeOnError = $.suspendInterchangeOnError;
+        this.useDotAsDecimalSeparator = $.useDotAsDecimalSeparator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12ProcessingSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean convertImpliedDecimal;
-        private Boolean createEmptyXmlTagsForTrailingSeparators;
-        private Boolean maskSecurityInfo;
-        private Boolean preserveInterchange;
-        private Boolean suspendInterchangeOnError;
-        private Boolean useDotAsDecimalSeparator;
+        private X12ProcessingSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12ProcessingSettingsResponse();
         }
 
         public Builder(X12ProcessingSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.convertImpliedDecimal = defaults.convertImpliedDecimal;
-    	      this.createEmptyXmlTagsForTrailingSeparators = defaults.createEmptyXmlTagsForTrailingSeparators;
-    	      this.maskSecurityInfo = defaults.maskSecurityInfo;
-    	      this.preserveInterchange = defaults.preserveInterchange;
-    	      this.suspendInterchangeOnError = defaults.suspendInterchangeOnError;
-    	      this.useDotAsDecimalSeparator = defaults.useDotAsDecimalSeparator;
+            $ = new X12ProcessingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder convertImpliedDecimal(Boolean convertImpliedDecimal) {
-            this.convertImpliedDecimal = Objects.requireNonNull(convertImpliedDecimal);
+            $.convertImpliedDecimal = convertImpliedDecimal;
             return this;
         }
+
         public Builder createEmptyXmlTagsForTrailingSeparators(Boolean createEmptyXmlTagsForTrailingSeparators) {
-            this.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators);
+            $.createEmptyXmlTagsForTrailingSeparators = createEmptyXmlTagsForTrailingSeparators;
             return this;
         }
+
         public Builder maskSecurityInfo(Boolean maskSecurityInfo) {
-            this.maskSecurityInfo = Objects.requireNonNull(maskSecurityInfo);
+            $.maskSecurityInfo = maskSecurityInfo;
             return this;
         }
+
         public Builder preserveInterchange(Boolean preserveInterchange) {
-            this.preserveInterchange = Objects.requireNonNull(preserveInterchange);
+            $.preserveInterchange = preserveInterchange;
             return this;
         }
+
         public Builder suspendInterchangeOnError(Boolean suspendInterchangeOnError) {
-            this.suspendInterchangeOnError = Objects.requireNonNull(suspendInterchangeOnError);
+            $.suspendInterchangeOnError = suspendInterchangeOnError;
             return this;
         }
+
         public Builder useDotAsDecimalSeparator(Boolean useDotAsDecimalSeparator) {
-            this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
+            $.useDotAsDecimalSeparator = useDotAsDecimalSeparator;
             return this;
-        }        public X12ProcessingSettingsResponse build() {
-            return new X12ProcessingSettingsResponse(convertImpliedDecimal, createEmptyXmlTagsForTrailingSeparators, maskSecurityInfo, preserveInterchange, suspendInterchangeOnError, useDotAsDecimalSeparator);
+        }
+
+        public X12ProcessingSettingsResponse build() {
+            $.convertImpliedDecimal = Objects.requireNonNull($.convertImpliedDecimal, "expected parameter 'convertImpliedDecimal' to be non-null");
+            $.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull($.createEmptyXmlTagsForTrailingSeparators, "expected parameter 'createEmptyXmlTagsForTrailingSeparators' to be non-null");
+            $.maskSecurityInfo = Objects.requireNonNull($.maskSecurityInfo, "expected parameter 'maskSecurityInfo' to be non-null");
+            $.preserveInterchange = Objects.requireNonNull($.preserveInterchange, "expected parameter 'preserveInterchange' to be non-null");
+            $.suspendInterchangeOnError = Objects.requireNonNull($.suspendInterchangeOnError, "expected parameter 'suspendInterchangeOnError' to be non-null");
+            $.useDotAsDecimalSeparator = Objects.requireNonNull($.useDotAsDecimalSeparator, "expected parameter 'useDotAsDecimalSeparator' to be non-null");
+            return $;
         }
     }
+
 }

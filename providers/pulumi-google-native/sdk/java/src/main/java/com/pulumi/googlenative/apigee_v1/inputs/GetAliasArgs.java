@@ -13,94 +13,87 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAliasArgs Empty = new GetAliasArgs();
 
     @Import(name="aliasId", required=true)
-      private final String aliasId;
+    private String aliasId;
 
     public String aliasId() {
         return this.aliasId;
     }
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="keystoreId", required=true)
-      private final String keystoreId;
+    private String keystoreId;
 
     public String keystoreId() {
         return this.keystoreId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetAliasArgs(
-        String aliasId,
-        String environmentId,
-        String keystoreId,
-        String organizationId) {
-        this.aliasId = Objects.requireNonNull(aliasId, "expected parameter 'aliasId' to be non-null");
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.keystoreId = Objects.requireNonNull(keystoreId, "expected parameter 'keystoreId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetAliasArgs() {}
 
-    private GetAliasArgs() {
-        this.aliasId = null;
-        this.environmentId = null;
-        this.keystoreId = null;
-        this.organizationId = null;
+    private GetAliasArgs(GetAliasArgs $) {
+        this.aliasId = $.aliasId;
+        this.environmentId = $.environmentId;
+        this.keystoreId = $.keystoreId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String aliasId;
-        private String environmentId;
-        private String keystoreId;
-        private String organizationId;
+        private GetAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAliasArgs();
         }
 
         public Builder(GetAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasId = defaults.aliasId;
-    	      this.environmentId = defaults.environmentId;
-    	      this.keystoreId = defaults.keystoreId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasId(String aliasId) {
-            this.aliasId = Objects.requireNonNull(aliasId);
+            $.aliasId = aliasId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder keystoreId(String keystoreId) {
-            this.keystoreId = Objects.requireNonNull(keystoreId);
+            $.keystoreId = keystoreId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetAliasArgs build() {
-            return new GetAliasArgs(aliasId, environmentId, keystoreId, organizationId);
+        }
+
+        public GetAliasArgs build() {
+            $.aliasId = Objects.requireNonNull($.aliasId, "expected parameter 'aliasId' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.keystoreId = Objects.requireNonNull($.keystoreId, "expected parameter 'keystoreId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

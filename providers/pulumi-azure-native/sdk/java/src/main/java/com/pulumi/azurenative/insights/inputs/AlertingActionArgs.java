@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="aznsAction")
-      private final @Nullable Output<AzNsActionGroupArgs> aznsAction;
+    private @Nullable Output<AzNsActionGroupArgs> aznsAction;
 
-    public Output<AzNsActionGroupArgs> aznsAction() {
-        return this.aznsAction == null ? Codegen.empty() : this.aznsAction;
+    public Optional<Output<AzNsActionGroupArgs>> aznsAction() {
+        return Optional.ofNullable(this.aznsAction);
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -52,7 +53,7 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="severity", required=true)
-      private final Output<Either<String,AlertSeverity>> severity;
+    private Output<Either<String,AlertSeverity>> severity;
 
     public Output<Either<String,AlertSeverity>> severity() {
         return this.severity;
@@ -63,10 +64,10 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="throttlingInMin")
-      private final @Nullable Output<Integer> throttlingInMin;
+    private @Nullable Output<Integer> throttlingInMin;
 
-    public Output<Integer> throttlingInMin() {
-        return this.throttlingInMin == null ? Codegen.empty() : this.throttlingInMin;
+    public Optional<Output<Integer>> throttlingInMin() {
+        return Optional.ofNullable(this.throttlingInMin);
     }
 
     /**
@@ -74,102 +75,91 @@ public final class AlertingActionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="trigger", required=true)
-      private final Output<TriggerConditionArgs> trigger;
+    private Output<TriggerConditionArgs> trigger;
 
     public Output<TriggerConditionArgs> trigger() {
         return this.trigger;
     }
 
-    public AlertingActionArgs(
-        @Nullable Output<AzNsActionGroupArgs> aznsAction,
-        Output<String> odataType,
-        Output<Either<String,AlertSeverity>> severity,
-        @Nullable Output<Integer> throttlingInMin,
-        Output<TriggerConditionArgs> trigger) {
-        this.aznsAction = aznsAction;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.throttlingInMin = throttlingInMin;
-        this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");
-    }
+    private AlertingActionArgs() {}
 
-    private AlertingActionArgs() {
-        this.aznsAction = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.throttlingInMin = Codegen.empty();
-        this.trigger = Codegen.empty();
+    private AlertingActionArgs(AlertingActionArgs $) {
+        this.aznsAction = $.aznsAction;
+        this.odataType = $.odataType;
+        this.severity = $.severity;
+        this.throttlingInMin = $.throttlingInMin;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertingActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AzNsActionGroupArgs> aznsAction;
-        private Output<String> odataType;
-        private Output<Either<String,AlertSeverity>> severity;
-        private @Nullable Output<Integer> throttlingInMin;
-        private Output<TriggerConditionArgs> trigger;
+        private AlertingActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertingActionArgs();
         }
 
         public Builder(AlertingActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aznsAction = defaults.aznsAction;
-    	      this.odataType = defaults.odataType;
-    	      this.severity = defaults.severity;
-    	      this.throttlingInMin = defaults.throttlingInMin;
-    	      this.trigger = defaults.trigger;
+            $ = new AlertingActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aznsAction(@Nullable Output<AzNsActionGroupArgs> aznsAction) {
-            this.aznsAction = aznsAction;
+            $.aznsAction = aznsAction;
             return this;
         }
-        public Builder aznsAction(@Nullable AzNsActionGroupArgs aznsAction) {
-            this.aznsAction = Codegen.ofNullable(aznsAction);
-            return this;
+
+        public Builder aznsAction(AzNsActionGroupArgs aznsAction) {
+            return aznsAction(Output.of(aznsAction));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder severity(Output<Either<String,AlertSeverity>> severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder severity(Either<String,AlertSeverity> severity) {
-            this.severity = Output.of(Objects.requireNonNull(severity));
-            return this;
+            return severity(Output.of(severity));
         }
+
         public Builder throttlingInMin(@Nullable Output<Integer> throttlingInMin) {
-            this.throttlingInMin = throttlingInMin;
+            $.throttlingInMin = throttlingInMin;
             return this;
         }
-        public Builder throttlingInMin(@Nullable Integer throttlingInMin) {
-            this.throttlingInMin = Codegen.ofNullable(throttlingInMin);
-            return this;
+
+        public Builder throttlingInMin(Integer throttlingInMin) {
+            return throttlingInMin(Output.of(throttlingInMin));
         }
+
         public Builder trigger(Output<TriggerConditionArgs> trigger) {
-            this.trigger = Objects.requireNonNull(trigger);
+            $.trigger = trigger;
             return this;
         }
+
         public Builder trigger(TriggerConditionArgs trigger) {
-            this.trigger = Output.of(Objects.requireNonNull(trigger));
-            return this;
-        }        public AlertingActionArgs build() {
-            return new AlertingActionArgs(aznsAction, odataType, severity, throttlingInMin, trigger);
+            return trigger(Output.of(trigger));
+        }
+
+        public AlertingActionArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.trigger = Objects.requireNonNull($.trigger, "expected parameter 'trigger' to be non-null");
+            return $;
         }
     }
+
 }

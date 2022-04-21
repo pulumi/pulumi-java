@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends c
      * 
      */
     @Import(name="allOf")
-      private final @Nullable Output<List<MetricCriteriaArgs>> allOf;
+    private @Nullable Output<List<MetricCriteriaArgs>> allOf;
 
-    public Output<List<MetricCriteriaArgs>> allOf() {
-        return this.allOf == null ? Codegen.empty() : this.allOf;
+    public Optional<Output<List<MetricCriteriaArgs>>> allOf() {
+        return Optional.ofNullable(this.allOf);
     }
 
     /**
@@ -38,66 +39,63 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends c
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
     }
 
-    public MetricAlertSingleResourceMultipleMetricCriteriaArgs(
-        @Nullable Output<List<MetricCriteriaArgs>> allOf,
-        Output<String> odataType) {
-        this.allOf = allOf;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-    }
+    private MetricAlertSingleResourceMultipleMetricCriteriaArgs() {}
 
-    private MetricAlertSingleResourceMultipleMetricCriteriaArgs() {
-        this.allOf = Codegen.empty();
-        this.odataType = Codegen.empty();
+    private MetricAlertSingleResourceMultipleMetricCriteriaArgs(MetricAlertSingleResourceMultipleMetricCriteriaArgs $) {
+        this.allOf = $.allOf;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAlertSingleResourceMultipleMetricCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MetricCriteriaArgs>> allOf;
-        private Output<String> odataType;
+        private MetricAlertSingleResourceMultipleMetricCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAlertSingleResourceMultipleMetricCriteriaArgs();
         }
 
         public Builder(MetricAlertSingleResourceMultipleMetricCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allOf = defaults.allOf;
-    	      this.odataType = defaults.odataType;
+            $ = new MetricAlertSingleResourceMultipleMetricCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allOf(@Nullable Output<List<MetricCriteriaArgs>> allOf) {
-            this.allOf = allOf;
+            $.allOf = allOf;
             return this;
         }
-        public Builder allOf(@Nullable List<MetricCriteriaArgs> allOf) {
-            this.allOf = Codegen.ofNullable(allOf);
-            return this;
+
+        public Builder allOf(List<MetricCriteriaArgs> allOf) {
+            return allOf(Output.of(allOf));
         }
+
         public Builder allOf(MetricCriteriaArgs... allOf) {
             return allOf(List.of(allOf));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
-        }        public MetricAlertSingleResourceMultipleMetricCriteriaArgs build() {
-            return new MetricAlertSingleResourceMultipleMetricCriteriaArgs(allOf, odataType);
+            return odataType(Output.of(odataType));
+        }
+
+        public MetricAlertSingleResourceMultipleMetricCriteriaArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

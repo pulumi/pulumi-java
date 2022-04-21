@@ -17,7 +17,7 @@ public final class GetObjectTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -28,55 +28,52 @@ public final class GetObjectTypeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectTypeName", required=true)
-      private final String objectTypeName;
+    private String objectTypeName;
 
     public String objectTypeName() {
         return this.objectTypeName;
     }
 
-    public GetObjectTypeArgs(
-        String domainName,
-        String objectTypeName) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.objectTypeName = Objects.requireNonNull(objectTypeName, "expected parameter 'objectTypeName' to be non-null");
-    }
+    private GetObjectTypeArgs() {}
 
-    private GetObjectTypeArgs() {
-        this.domainName = null;
-        this.objectTypeName = null;
+    private GetObjectTypeArgs(GetObjectTypeArgs $) {
+        this.domainName = $.domainName;
+        this.objectTypeName = $.objectTypeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetObjectTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private String objectTypeName;
+        private GetObjectTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetObjectTypeArgs();
         }
 
         public Builder(GetObjectTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.objectTypeName = defaults.objectTypeName;
+            $ = new GetObjectTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder objectTypeName(String objectTypeName) {
-            this.objectTypeName = Objects.requireNonNull(objectTypeName);
+            $.objectTypeName = objectTypeName;
             return this;
-        }        public GetObjectTypeArgs build() {
-            return new GetObjectTypeArgs(domainName, objectTypeName);
+        }
+
+        public GetObjectTypeArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.objectTypeName = Objects.requireNonNull($.objectTypeName, "expected parameter 'objectTypeName' to be non-null");
+            return $;
         }
     }
+
 }

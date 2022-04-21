@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iam;
 import com.pulumi.awsnative.iam.inputs.VirtualMFADeviceTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,116 +18,108 @@ public final class VirtualMFADeviceArgs extends com.pulumi.resources.ResourceArg
     public static final VirtualMFADeviceArgs Empty = new VirtualMFADeviceArgs();
 
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<VirtualMFADeviceTagArgs>> tags;
+    private @Nullable Output<List<VirtualMFADeviceTagArgs>> tags;
 
-    public Output<List<VirtualMFADeviceTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<VirtualMFADeviceTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="users", required=true)
-      private final Output<List<String>> users;
+    private Output<List<String>> users;
 
     public Output<List<String>> users() {
         return this.users;
     }
 
     @Import(name="virtualMfaDeviceName")
-      private final @Nullable Output<String> virtualMfaDeviceName;
+    private @Nullable Output<String> virtualMfaDeviceName;
 
-    public Output<String> virtualMfaDeviceName() {
-        return this.virtualMfaDeviceName == null ? Codegen.empty() : this.virtualMfaDeviceName;
+    public Optional<Output<String>> virtualMfaDeviceName() {
+        return Optional.ofNullable(this.virtualMfaDeviceName);
     }
 
-    public VirtualMFADeviceArgs(
-        @Nullable Output<String> path,
-        @Nullable Output<List<VirtualMFADeviceTagArgs>> tags,
-        Output<List<String>> users,
-        @Nullable Output<String> virtualMfaDeviceName) {
-        this.path = path;
-        this.tags = tags;
-        this.users = Objects.requireNonNull(users, "expected parameter 'users' to be non-null");
-        this.virtualMfaDeviceName = virtualMfaDeviceName;
-    }
+    private VirtualMFADeviceArgs() {}
 
-    private VirtualMFADeviceArgs() {
-        this.path = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.users = Codegen.empty();
-        this.virtualMfaDeviceName = Codegen.empty();
+    private VirtualMFADeviceArgs(VirtualMFADeviceArgs $) {
+        this.path = $.path;
+        this.tags = $.tags;
+        this.users = $.users;
+        this.virtualMfaDeviceName = $.virtualMfaDeviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMFADeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> path;
-        private @Nullable Output<List<VirtualMFADeviceTagArgs>> tags;
-        private Output<List<String>> users;
-        private @Nullable Output<String> virtualMfaDeviceName;
+        private VirtualMFADeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMFADeviceArgs();
         }
 
         public Builder(VirtualMFADeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.tags = defaults.tags;
-    	      this.users = defaults.users;
-    	      this.virtualMfaDeviceName = defaults.virtualMfaDeviceName;
+            $ = new VirtualMFADeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder tags(@Nullable Output<List<VirtualMFADeviceTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<VirtualMFADeviceTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<VirtualMFADeviceTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(VirtualMFADeviceTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder users(Output<List<String>> users) {
-            this.users = Objects.requireNonNull(users);
+            $.users = users;
             return this;
         }
+
         public Builder users(List<String> users) {
-            this.users = Output.of(Objects.requireNonNull(users));
-            return this;
+            return users(Output.of(users));
         }
+
         public Builder users(String... users) {
             return users(List.of(users));
         }
+
         public Builder virtualMfaDeviceName(@Nullable Output<String> virtualMfaDeviceName) {
-            this.virtualMfaDeviceName = virtualMfaDeviceName;
+            $.virtualMfaDeviceName = virtualMfaDeviceName;
             return this;
         }
-        public Builder virtualMfaDeviceName(@Nullable String virtualMfaDeviceName) {
-            this.virtualMfaDeviceName = Codegen.ofNullable(virtualMfaDeviceName);
-            return this;
-        }        public VirtualMFADeviceArgs build() {
-            return new VirtualMFADeviceArgs(path, tags, users, virtualMfaDeviceName);
+
+        public Builder virtualMfaDeviceName(String virtualMfaDeviceName) {
+            return virtualMfaDeviceName(Output.of(virtualMfaDeviceName));
+        }
+
+        public VirtualMFADeviceArgs build() {
+            $.users = Objects.requireNonNull($.users, "expected parameter 'users' to be non-null");
+            return $;
         }
     }
+
 }

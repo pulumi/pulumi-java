@@ -22,7 +22,7 @@ public final class SingleClusterRoutingResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="allowTransactionalWrites", required=true)
-      private final Boolean allowTransactionalWrites;
+    private Boolean allowTransactionalWrites;
 
     public Boolean allowTransactionalWrites() {
         return this.allowTransactionalWrites;
@@ -33,55 +33,52 @@ public final class SingleClusterRoutingResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="clusterId", required=true)
-      private final String clusterId;
+    private String clusterId;
 
     public String clusterId() {
         return this.clusterId;
     }
 
-    public SingleClusterRoutingResponse(
-        Boolean allowTransactionalWrites,
-        String clusterId) {
-        this.allowTransactionalWrites = Objects.requireNonNull(allowTransactionalWrites, "expected parameter 'allowTransactionalWrites' to be non-null");
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-    }
+    private SingleClusterRoutingResponse() {}
 
-    private SingleClusterRoutingResponse() {
-        this.allowTransactionalWrites = null;
-        this.clusterId = null;
+    private SingleClusterRoutingResponse(SingleClusterRoutingResponse $) {
+        this.allowTransactionalWrites = $.allowTransactionalWrites;
+        this.clusterId = $.clusterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SingleClusterRoutingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowTransactionalWrites;
-        private String clusterId;
+        private SingleClusterRoutingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SingleClusterRoutingResponse();
         }
 
         public Builder(SingleClusterRoutingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowTransactionalWrites = defaults.allowTransactionalWrites;
-    	      this.clusterId = defaults.clusterId;
+            $ = new SingleClusterRoutingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowTransactionalWrites(Boolean allowTransactionalWrites) {
-            this.allowTransactionalWrites = Objects.requireNonNull(allowTransactionalWrites);
+            $.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
+
         public Builder clusterId(String clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
-        }        public SingleClusterRoutingResponse build() {
-            return new SingleClusterRoutingResponse(allowTransactionalWrites, clusterId);
+        }
+
+        public SingleClusterRoutingResponse build() {
+            $.allowTransactionalWrites = Objects.requireNonNull($.allowTransactionalWrites, "expected parameter 'allowTransactionalWrites' to be non-null");
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -14,10 +14,10 @@ import com.pulumi.azurenative.connectedvmwarevsphere.inputs.StorageProfileArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="firmwareType")
-      private final @Nullable Output<Either<String,FirmwareType>> firmwareType;
+    private @Nullable Output<Either<String,FirmwareType>> firmwareType;
 
-    public Output<Either<String,FirmwareType>> firmwareType() {
-        return this.firmwareType == null ? Codegen.empty() : this.firmwareType;
+    public Optional<Output<Either<String,FirmwareType>>> firmwareType() {
+        return Optional.ofNullable(this.firmwareType);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hardwareProfile")
-      private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
+    private @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
-    public Output<HardwareProfileArgs> hardwareProfile() {
-        return this.hardwareProfile == null ? Codegen.empty() : this.hardwareProfile;
+    public Optional<Output<HardwareProfileArgs>> hardwareProfile() {
+        return Optional.ofNullable(this.hardwareProfile);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityArgs> identity;
+    private @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="inventoryItemId")
-      private final @Nullable Output<String> inventoryItemId;
+    private @Nullable Output<String> inventoryItemId;
 
-    public Output<String> inventoryItemId() {
-        return this.inventoryItemId == null ? Codegen.empty() : this.inventoryItemId;
+    public Optional<Output<String>> inventoryItemId() {
+        return Optional.ofNullable(this.inventoryItemId);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="moRefId")
-      private final @Nullable Output<String> moRefId;
+    private @Nullable Output<String> moRefId;
 
-    public Output<String> moRefId() {
-        return this.moRefId == null ? Codegen.empty() : this.moRefId;
+    public Optional<Output<String>> moRefId() {
+        return Optional.ofNullable(this.moRefId);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable Output<NetworkProfileArgs> networkProfile;
+    private @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> networkProfile() {
-        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
+    public Optional<Output<NetworkProfileArgs>> networkProfile() {
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable Output<OsProfileArgs> osProfile;
+    private @Nullable Output<OsProfileArgs> osProfile;
 
-    public Output<OsProfileArgs> osProfile() {
-        return this.osProfile == null ? Codegen.empty() : this.osProfile;
+    public Optional<Output<OsProfileArgs>> osProfile() {
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="placementProfile")
-      private final @Nullable Output<PlacementProfileArgs> placementProfile;
+    private @Nullable Output<PlacementProfileArgs> placementProfile;
 
-    public Output<PlacementProfileArgs> placementProfile() {
-        return this.placementProfile == null ? Codegen.empty() : this.placementProfile;
+    public Optional<Output<PlacementProfileArgs>> placementProfile() {
+        return Optional.ofNullable(this.placementProfile);
     }
 
     /**
@@ -151,7 +151,7 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -163,10 +163,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourcePoolId")
-      private final @Nullable Output<String> resourcePoolId;
+    private @Nullable Output<String> resourcePoolId;
 
-    public Output<String> resourcePoolId() {
-        return this.resourcePoolId == null ? Codegen.empty() : this.resourcePoolId;
+    public Optional<Output<String>> resourcePoolId() {
+        return Optional.ofNullable(this.resourcePoolId);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="smbiosUuid")
-      private final @Nullable Output<String> smbiosUuid;
+    private @Nullable Output<String> smbiosUuid;
 
-    public Output<String> smbiosUuid() {
-        return this.smbiosUuid == null ? Codegen.empty() : this.smbiosUuid;
+    public Optional<Output<String>> smbiosUuid() {
+        return Optional.ofNullable(this.smbiosUuid);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable Output<StorageProfileArgs> storageProfile;
+    private @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> storageProfile() {
-        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
+    public Optional<Output<StorageProfileArgs>> storageProfile() {
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
     /**
@@ -218,10 +218,10 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="vCenterId")
-      private final @Nullable Output<String> vCenterId;
+    private @Nullable Output<String> vCenterId;
 
-    public Output<String> vCenterId() {
-        return this.vCenterId == null ? Codegen.empty() : this.vCenterId;
+    public Optional<Output<String>> vCenterId() {
+        return Optional.ofNullable(this.vCenterId);
     }
 
     /**
@@ -229,284 +229,229 @@ public final class VirtualMachineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="virtualMachineName")
-      private final @Nullable Output<String> virtualMachineName;
+    private @Nullable Output<String> virtualMachineName;
 
-    public Output<String> virtualMachineName() {
-        return this.virtualMachineName == null ? Codegen.empty() : this.virtualMachineName;
+    public Optional<Output<String>> virtualMachineName() {
+        return Optional.ofNullable(this.virtualMachineName);
     }
 
-    public VirtualMachineArgs(
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<Either<String,FirmwareType>> firmwareType,
-        @Nullable Output<HardwareProfileArgs> hardwareProfile,
-        @Nullable Output<IdentityArgs> identity,
-        @Nullable Output<String> inventoryItemId,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        @Nullable Output<String> moRefId,
-        @Nullable Output<NetworkProfileArgs> networkProfile,
-        @Nullable Output<OsProfileArgs> osProfile,
-        @Nullable Output<PlacementProfileArgs> placementProfile,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourcePoolId,
-        @Nullable Output<String> smbiosUuid,
-        @Nullable Output<StorageProfileArgs> storageProfile,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> templateId,
-        @Nullable Output<String> vCenterId,
-        @Nullable Output<String> virtualMachineName) {
-        this.extendedLocation = extendedLocation;
-        this.firmwareType = firmwareType;
-        this.hardwareProfile = hardwareProfile;
-        this.identity = identity;
-        this.inventoryItemId = inventoryItemId;
-        this.kind = kind;
-        this.location = location;
-        this.moRefId = moRefId;
-        this.networkProfile = networkProfile;
-        this.osProfile = osProfile;
-        this.placementProfile = placementProfile;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourcePoolId = resourcePoolId;
-        this.smbiosUuid = smbiosUuid;
-        this.storageProfile = storageProfile;
-        this.tags = tags;
-        this.templateId = templateId;
-        this.vCenterId = vCenterId;
-        this.virtualMachineName = virtualMachineName;
-    }
+    private VirtualMachineArgs() {}
 
-    private VirtualMachineArgs() {
-        this.extendedLocation = Codegen.empty();
-        this.firmwareType = Codegen.empty();
-        this.hardwareProfile = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.inventoryItemId = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.moRefId = Codegen.empty();
-        this.networkProfile = Codegen.empty();
-        this.osProfile = Codegen.empty();
-        this.placementProfile = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourcePoolId = Codegen.empty();
-        this.smbiosUuid = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateId = Codegen.empty();
-        this.vCenterId = Codegen.empty();
-        this.virtualMachineName = Codegen.empty();
+    private VirtualMachineArgs(VirtualMachineArgs $) {
+        this.extendedLocation = $.extendedLocation;
+        this.firmwareType = $.firmwareType;
+        this.hardwareProfile = $.hardwareProfile;
+        this.identity = $.identity;
+        this.inventoryItemId = $.inventoryItemId;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.moRefId = $.moRefId;
+        this.networkProfile = $.networkProfile;
+        this.osProfile = $.osProfile;
+        this.placementProfile = $.placementProfile;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourcePoolId = $.resourcePoolId;
+        this.smbiosUuid = $.smbiosUuid;
+        this.storageProfile = $.storageProfile;
+        this.tags = $.tags;
+        this.templateId = $.templateId;
+        this.vCenterId = $.vCenterId;
+        this.virtualMachineName = $.virtualMachineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<Either<String,FirmwareType>> firmwareType;
-        private @Nullable Output<HardwareProfileArgs> hardwareProfile;
-        private @Nullable Output<IdentityArgs> identity;
-        private @Nullable Output<String> inventoryItemId;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> moRefId;
-        private @Nullable Output<NetworkProfileArgs> networkProfile;
-        private @Nullable Output<OsProfileArgs> osProfile;
-        private @Nullable Output<PlacementProfileArgs> placementProfile;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourcePoolId;
-        private @Nullable Output<String> smbiosUuid;
-        private @Nullable Output<StorageProfileArgs> storageProfile;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> templateId;
-        private @Nullable Output<String> vCenterId;
-        private @Nullable Output<String> virtualMachineName;
+        private VirtualMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineArgs();
         }
 
         public Builder(VirtualMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.firmwareType = defaults.firmwareType;
-    	      this.hardwareProfile = defaults.hardwareProfile;
-    	      this.identity = defaults.identity;
-    	      this.inventoryItemId = defaults.inventoryItemId;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.moRefId = defaults.moRefId;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.osProfile = defaults.osProfile;
-    	      this.placementProfile = defaults.placementProfile;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourcePoolId = defaults.resourcePoolId;
-    	      this.smbiosUuid = defaults.smbiosUuid;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.tags = defaults.tags;
-    	      this.templateId = defaults.templateId;
-    	      this.vCenterId = defaults.vCenterId;
-    	      this.virtualMachineName = defaults.virtualMachineName;
+            $ = new VirtualMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder firmwareType(@Nullable Output<Either<String,FirmwareType>> firmwareType) {
-            this.firmwareType = firmwareType;
+            $.firmwareType = firmwareType;
             return this;
         }
-        public Builder firmwareType(@Nullable Either<String,FirmwareType> firmwareType) {
-            this.firmwareType = Codegen.ofNullable(firmwareType);
-            return this;
+
+        public Builder firmwareType(Either<String,FirmwareType> firmwareType) {
+            return firmwareType(Output.of(firmwareType));
         }
+
         public Builder hardwareProfile(@Nullable Output<HardwareProfileArgs> hardwareProfile) {
-            this.hardwareProfile = hardwareProfile;
+            $.hardwareProfile = hardwareProfile;
             return this;
         }
-        public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
-            this.hardwareProfile = Codegen.ofNullable(hardwareProfile);
-            return this;
+
+        public Builder hardwareProfile(HardwareProfileArgs hardwareProfile) {
+            return hardwareProfile(Output.of(hardwareProfile));
         }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder inventoryItemId(@Nullable Output<String> inventoryItemId) {
-            this.inventoryItemId = inventoryItemId;
+            $.inventoryItemId = inventoryItemId;
             return this;
         }
-        public Builder inventoryItemId(@Nullable String inventoryItemId) {
-            this.inventoryItemId = Codegen.ofNullable(inventoryItemId);
-            return this;
+
+        public Builder inventoryItemId(String inventoryItemId) {
+            return inventoryItemId(Output.of(inventoryItemId));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder moRefId(@Nullable Output<String> moRefId) {
-            this.moRefId = moRefId;
+            $.moRefId = moRefId;
             return this;
         }
-        public Builder moRefId(@Nullable String moRefId) {
-            this.moRefId = Codegen.ofNullable(moRefId);
-            return this;
+
+        public Builder moRefId(String moRefId) {
+            return moRefId(Output.of(moRefId));
         }
+
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
-        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Codegen.ofNullable(networkProfile);
-            return this;
+
+        public Builder networkProfile(NetworkProfileArgs networkProfile) {
+            return networkProfile(Output.of(networkProfile));
         }
+
         public Builder osProfile(@Nullable Output<OsProfileArgs> osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
-        public Builder osProfile(@Nullable OsProfileArgs osProfile) {
-            this.osProfile = Codegen.ofNullable(osProfile);
-            return this;
+
+        public Builder osProfile(OsProfileArgs osProfile) {
+            return osProfile(Output.of(osProfile));
         }
+
         public Builder placementProfile(@Nullable Output<PlacementProfileArgs> placementProfile) {
-            this.placementProfile = placementProfile;
+            $.placementProfile = placementProfile;
             return this;
         }
-        public Builder placementProfile(@Nullable PlacementProfileArgs placementProfile) {
-            this.placementProfile = Codegen.ofNullable(placementProfile);
-            return this;
+
+        public Builder placementProfile(PlacementProfileArgs placementProfile) {
+            return placementProfile(Output.of(placementProfile));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourcePoolId(@Nullable Output<String> resourcePoolId) {
-            this.resourcePoolId = resourcePoolId;
+            $.resourcePoolId = resourcePoolId;
             return this;
         }
-        public Builder resourcePoolId(@Nullable String resourcePoolId) {
-            this.resourcePoolId = Codegen.ofNullable(resourcePoolId);
-            return this;
+
+        public Builder resourcePoolId(String resourcePoolId) {
+            return resourcePoolId(Output.of(resourcePoolId));
         }
+
         public Builder smbiosUuid(@Nullable Output<String> smbiosUuid) {
-            this.smbiosUuid = smbiosUuid;
+            $.smbiosUuid = smbiosUuid;
             return this;
         }
-        public Builder smbiosUuid(@Nullable String smbiosUuid) {
-            this.smbiosUuid = Codegen.ofNullable(smbiosUuid);
-            return this;
+
+        public Builder smbiosUuid(String smbiosUuid) {
+            return smbiosUuid(Output.of(smbiosUuid));
         }
+
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
-        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Codegen.ofNullable(storageProfile);
-            return this;
+
+        public Builder storageProfile(StorageProfileArgs storageProfile) {
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
+
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
         }
+
         public Builder vCenterId(@Nullable Output<String> vCenterId) {
-            this.vCenterId = vCenterId;
+            $.vCenterId = vCenterId;
             return this;
         }
-        public Builder vCenterId(@Nullable String vCenterId) {
-            this.vCenterId = Codegen.ofNullable(vCenterId);
-            return this;
+
+        public Builder vCenterId(String vCenterId) {
+            return vCenterId(Output.of(vCenterId));
         }
+
         public Builder virtualMachineName(@Nullable Output<String> virtualMachineName) {
-            this.virtualMachineName = virtualMachineName;
+            $.virtualMachineName = virtualMachineName;
             return this;
         }
-        public Builder virtualMachineName(@Nullable String virtualMachineName) {
-            this.virtualMachineName = Codegen.ofNullable(virtualMachineName);
-            return this;
-        }        public VirtualMachineArgs build() {
-            return new VirtualMachineArgs(extendedLocation, firmwareType, hardwareProfile, identity, inventoryItemId, kind, location, moRefId, networkProfile, osProfile, placementProfile, resourceGroupName, resourcePoolId, smbiosUuid, storageProfile, tags, templateId, vCenterId, virtualMachineName);
+
+        public Builder virtualMachineName(String virtualMachineName) {
+            return virtualMachineName(Output.of(virtualMachineName));
+        }
+
+        public VirtualMachineArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

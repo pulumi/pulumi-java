@@ -26,10 +26,10 @@ public final class ExampleRequestResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="globalParameters")
-      private final @Nullable Map<String,Object> globalParameters;
+    private @Nullable Map<String,Object> globalParameters;
 
-    public Map<String,Object> globalParameters() {
-        return this.globalParameters == null ? Map.of() : this.globalParameters;
+    public Optional<Map<String,Object>> globalParameters() {
+        return Optional.ofNullable(this.globalParameters);
     }
 
     /**
@@ -37,55 +37,50 @@ public final class ExampleRequestResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="inputs")
-      private final @Nullable Map<String,List<List<Object>>> inputs;
+    private @Nullable Map<String,List<List<Object>>> inputs;
 
-    public Map<String,List<List<Object>>> inputs() {
-        return this.inputs == null ? Map.of() : this.inputs;
+    public Optional<Map<String,List<List<Object>>>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
-    public ExampleRequestResponse(
-        @Nullable Map<String,Object> globalParameters,
-        @Nullable Map<String,List<List<Object>>> inputs) {
-        this.globalParameters = globalParameters;
-        this.inputs = inputs;
-    }
+    private ExampleRequestResponse() {}
 
-    private ExampleRequestResponse() {
-        this.globalParameters = Map.of();
-        this.inputs = Map.of();
+    private ExampleRequestResponse(ExampleRequestResponse $) {
+        this.globalParameters = $.globalParameters;
+        this.inputs = $.inputs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExampleRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,Object> globalParameters;
-        private @Nullable Map<String,List<List<Object>>> inputs;
+        private ExampleRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExampleRequestResponse();
         }
 
         public Builder(ExampleRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalParameters = defaults.globalParameters;
-    	      this.inputs = defaults.inputs;
+            $ = new ExampleRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
-            this.globalParameters = globalParameters;
+            $.globalParameters = globalParameters;
             return this;
         }
+
         public Builder inputs(@Nullable Map<String,List<List<Object>>> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
-        }        public ExampleRequestResponse build() {
-            return new ExampleRequestResponse(globalParameters, inputs);
+        }
+
+        public ExampleRequestResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ScopeNamespaceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="targetNamespace")
-      private final @Nullable Output<String> targetNamespace;
+    private @Nullable Output<String> targetNamespace;
 
-    public Output<String> targetNamespace() {
-        return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
+    public Optional<Output<String>> targetNamespace() {
+        return Optional.ofNullable(this.targetNamespace);
     }
 
-    public ScopeNamespaceArgs(@Nullable Output<String> targetNamespace) {
-        this.targetNamespace = targetNamespace;
-    }
+    private ScopeNamespaceArgs() {}
 
-    private ScopeNamespaceArgs() {
-        this.targetNamespace = Codegen.empty();
+    private ScopeNamespaceArgs(ScopeNamespaceArgs $) {
+        this.targetNamespace = $.targetNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScopeNamespaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> targetNamespace;
+        private ScopeNamespaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScopeNamespaceArgs();
         }
 
         public Builder(ScopeNamespaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetNamespace = defaults.targetNamespace;
+            $ = new ScopeNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
-            this.targetNamespace = targetNamespace;
+            $.targetNamespace = targetNamespace;
             return this;
         }
-        public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Codegen.ofNullable(targetNamespace);
-            return this;
-        }        public ScopeNamespaceArgs build() {
-            return new ScopeNamespaceArgs(targetNamespace);
+
+        public Builder targetNamespace(String targetNamespace) {
+            return targetNamespace(Output.of(targetNamespace));
+        }
+
+        public ScopeNamespaceArgs build() {
+            return $;
         }
     }
+
 }

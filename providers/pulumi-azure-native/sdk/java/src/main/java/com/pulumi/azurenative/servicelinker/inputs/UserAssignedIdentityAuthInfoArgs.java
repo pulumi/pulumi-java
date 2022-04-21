@@ -24,7 +24,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="authType", required=true)
-      private final Output<String> authType;
+    private Output<String> authType;
 
     public Output<String> authType() {
         return this.authType;
@@ -35,7 +35,7 @@ public final class UserAssignedIdentityAuthInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -46,76 +46,71 @@ public final class UserAssignedIdentityAuthInfoArgs extends com.pulumi.resources
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final Output<String> subscriptionId;
+    private Output<String> subscriptionId;
 
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
 
-    public UserAssignedIdentityAuthInfoArgs(
-        Output<String> authType,
-        Output<String> clientId,
-        Output<String> subscriptionId) {
-        this.authType = Codegen.stringProp("authType").output().arg(authType).require();
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-    }
+    private UserAssignedIdentityAuthInfoArgs() {}
 
-    private UserAssignedIdentityAuthInfoArgs() {
-        this.authType = Codegen.empty();
-        this.clientId = Codegen.empty();
-        this.subscriptionId = Codegen.empty();
+    private UserAssignedIdentityAuthInfoArgs(UserAssignedIdentityAuthInfoArgs $) {
+        this.authType = $.authType;
+        this.clientId = $.clientId;
+        this.subscriptionId = $.subscriptionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserAssignedIdentityAuthInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authType;
-        private Output<String> clientId;
-        private Output<String> subscriptionId;
+        private UserAssignedIdentityAuthInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserAssignedIdentityAuthInfoArgs();
         }
 
         public Builder(UserAssignedIdentityAuthInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
-    	      this.clientId = defaults.clientId;
-    	      this.subscriptionId = defaults.subscriptionId;
+            $ = new UserAssignedIdentityAuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(Output<String> authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder authType(String authType) {
-            this.authType = Output.of(Objects.requireNonNull(authType));
-            return this;
+            return authType(Output.of(authType));
         }
+
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder subscriptionId(Output<String> subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
-            return this;
-        }        public UserAssignedIdentityAuthInfoArgs build() {
-            return new UserAssignedIdentityAuthInfoArgs(authType, clientId, subscriptionId);
+            return subscriptionId(Output.of(subscriptionId));
+        }
+
+        public UserAssignedIdentityAuthInfoArgs build() {
+            $.authType = Codegen.stringProp("authType").output().arg($.authType).require();
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            return $;
         }
     }
+
 }

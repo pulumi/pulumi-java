@@ -5,7 +5,6 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class RelationshipTypeFieldMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="profileFieldName", required=true)
-      private final Output<String> profileFieldName;
+    private Output<String> profileFieldName;
 
     public Output<String> profileFieldName() {
         return this.profileFieldName;
@@ -34,63 +33,60 @@ public final class RelationshipTypeFieldMappingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="relatedProfileKeyProperty", required=true)
-      private final Output<String> relatedProfileKeyProperty;
+    private Output<String> relatedProfileKeyProperty;
 
     public Output<String> relatedProfileKeyProperty() {
         return this.relatedProfileKeyProperty;
     }
 
-    public RelationshipTypeFieldMappingArgs(
-        Output<String> profileFieldName,
-        Output<String> relatedProfileKeyProperty) {
-        this.profileFieldName = Objects.requireNonNull(profileFieldName, "expected parameter 'profileFieldName' to be non-null");
-        this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty, "expected parameter 'relatedProfileKeyProperty' to be non-null");
-    }
+    private RelationshipTypeFieldMappingArgs() {}
 
-    private RelationshipTypeFieldMappingArgs() {
-        this.profileFieldName = Codegen.empty();
-        this.relatedProfileKeyProperty = Codegen.empty();
+    private RelationshipTypeFieldMappingArgs(RelationshipTypeFieldMappingArgs $) {
+        this.profileFieldName = $.profileFieldName;
+        this.relatedProfileKeyProperty = $.relatedProfileKeyProperty;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipTypeFieldMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> profileFieldName;
-        private Output<String> relatedProfileKeyProperty;
+        private RelationshipTypeFieldMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipTypeFieldMappingArgs();
         }
 
         public Builder(RelationshipTypeFieldMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileFieldName = defaults.profileFieldName;
-    	      this.relatedProfileKeyProperty = defaults.relatedProfileKeyProperty;
+            $ = new RelationshipTypeFieldMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileFieldName(Output<String> profileFieldName) {
-            this.profileFieldName = Objects.requireNonNull(profileFieldName);
+            $.profileFieldName = profileFieldName;
             return this;
         }
+
         public Builder profileFieldName(String profileFieldName) {
-            this.profileFieldName = Output.of(Objects.requireNonNull(profileFieldName));
-            return this;
+            return profileFieldName(Output.of(profileFieldName));
         }
+
         public Builder relatedProfileKeyProperty(Output<String> relatedProfileKeyProperty) {
-            this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
+            $.relatedProfileKeyProperty = relatedProfileKeyProperty;
             return this;
         }
+
         public Builder relatedProfileKeyProperty(String relatedProfileKeyProperty) {
-            this.relatedProfileKeyProperty = Output.of(Objects.requireNonNull(relatedProfileKeyProperty));
-            return this;
-        }        public RelationshipTypeFieldMappingArgs build() {
-            return new RelationshipTypeFieldMappingArgs(profileFieldName, relatedProfileKeyProperty);
+            return relatedProfileKeyProperty(Output.of(relatedProfileKeyProperty));
+        }
+
+        public RelationshipTypeFieldMappingArgs build() {
+            $.profileFieldName = Objects.requireNonNull($.profileFieldName, "expected parameter 'profileFieldName' to be non-null");
+            $.relatedProfileKeyProperty = Objects.requireNonNull($.relatedProfileKeyProperty, "expected parameter 'relatedProfileKeyProperty' to be non-null");
+            return $;
         }
     }
+
 }

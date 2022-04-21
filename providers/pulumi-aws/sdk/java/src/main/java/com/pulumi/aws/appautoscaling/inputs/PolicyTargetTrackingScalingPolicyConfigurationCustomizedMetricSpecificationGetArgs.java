@@ -6,10 +6,10 @@ package com.pulumi.aws.appautoscaling.inputs;
 import com.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs>> dimensions;
+    private @Nullable Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs>> dimensions;
 
-    public Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -44,7 +44,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * 
      */
     @Import(name="namespace", required=true)
-      private final Output<String> namespace;
+    private Output<String> namespace;
 
     public Output<String> namespace() {
         return this.namespace;
@@ -55,7 +55,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * 
      */
     @Import(name="statistic", required=true)
-      private final Output<String> statistic;
+    private Output<String> statistic;
 
     public Output<String> statistic() {
         return this.statistic;
@@ -66,105 +66,95 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      * 
      */
     @Import(name="unit")
-      private final @Nullable Output<String> unit;
+    private @Nullable Output<String> unit;
 
-    public Output<String> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<String>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
-    public PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs(
-        @Nullable Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs>> dimensions,
-        Output<String> metricName,
-        Output<String> namespace,
-        Output<String> statistic,
-        @Nullable Output<String> unit) {
-        this.dimensions = dimensions;
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.statistic = Objects.requireNonNull(statistic, "expected parameter 'statistic' to be non-null");
-        this.unit = unit;
-    }
+    private PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs() {}
 
-    private PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs() {
-        this.dimensions = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.statistic = Codegen.empty();
-        this.unit = Codegen.empty();
+    private PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs(PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs $) {
+        this.dimensions = $.dimensions;
+        this.metricName = $.metricName;
+        this.namespace = $.namespace;
+        this.statistic = $.statistic;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs>> dimensions;
-        private Output<String> metricName;
-        private Output<String> namespace;
-        private Output<String> statistic;
-        private @Nullable Output<String> unit;
+        private PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs();
         }
 
         public Builder(PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.metricName = defaults.metricName;
-    	      this.namespace = defaults.namespace;
-    	      this.statistic = defaults.statistic;
-    	      this.unit = defaults.unit;
+            $ = new PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(@Nullable Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder dimensions(PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs... dimensions) {
             return dimensions(List.of(dimensions));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder namespace(Output<String> namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Output.of(Objects.requireNonNull(namespace));
-            return this;
+            return namespace(Output.of(namespace));
         }
+
         public Builder statistic(Output<String> statistic) {
-            this.statistic = Objects.requireNonNull(statistic);
+            $.statistic = statistic;
             return this;
         }
+
         public Builder statistic(String statistic) {
-            this.statistic = Output.of(Objects.requireNonNull(statistic));
-            return this;
+            return statistic(Output.of(statistic));
         }
+
         public Builder unit(@Nullable Output<String> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable String unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
-        }        public PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs build() {
-            return new PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs(dimensions, metricName, namespace, statistic, unit);
+
+        public Builder unit(String unit) {
+            return unit(Output.of(unit));
+        }
+
+        public PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.statistic = Objects.requireNonNull($.statistic, "expected parameter 'statistic' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class OptionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Map<String,String>> value;
+    private @Nullable Output<Map<String,String>> value;
 
-    public Output<Map<String,String>> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Map<String,String>>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public OptionArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> value) {
-        this.name = name;
-        this.value = value;
-    }
+    private OptionArgs() {}
 
-    private OptionArgs() {
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private OptionArgs(OptionArgs $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> value;
+        private OptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OptionArgs();
         }
 
         public Builder(OptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new OptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder value(@Nullable Output<Map<String,String>> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Map<String,String> value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public OptionArgs build() {
-            return new OptionArgs(name, value);
+
+        public Builder value(Map<String,String> value) {
+            return value(Output.of(value));
+        }
+
+        public OptionArgs build() {
+            return $;
         }
     }
+
 }

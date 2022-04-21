@@ -22,48 +22,49 @@ public final class LatencyDistributionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="latencyPercentiles", required=true)
-      private final List<LatencyPercentileResponse> latencyPercentiles;
+    private List<LatencyPercentileResponse> latencyPercentiles;
 
     public List<LatencyPercentileResponse> latencyPercentiles() {
         return this.latencyPercentiles;
     }
 
-    public LatencyDistributionResponse(List<LatencyPercentileResponse> latencyPercentiles) {
-        this.latencyPercentiles = Objects.requireNonNull(latencyPercentiles, "expected parameter 'latencyPercentiles' to be non-null");
-    }
+    private LatencyDistributionResponse() {}
 
-    private LatencyDistributionResponse() {
-        this.latencyPercentiles = List.of();
+    private LatencyDistributionResponse(LatencyDistributionResponse $) {
+        this.latencyPercentiles = $.latencyPercentiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LatencyDistributionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<LatencyPercentileResponse> latencyPercentiles;
+        private LatencyDistributionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LatencyDistributionResponse();
         }
 
         public Builder(LatencyDistributionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.latencyPercentiles = defaults.latencyPercentiles;
+            $ = new LatencyDistributionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder latencyPercentiles(List<LatencyPercentileResponse> latencyPercentiles) {
-            this.latencyPercentiles = Objects.requireNonNull(latencyPercentiles);
+            $.latencyPercentiles = latencyPercentiles;
             return this;
         }
+
         public Builder latencyPercentiles(LatencyPercentileResponse... latencyPercentiles) {
             return latencyPercentiles(List.of(latencyPercentiles));
-        }        public LatencyDistributionResponse build() {
-            return new LatencyDistributionResponse(latencyPercentiles);
+        }
+
+        public LatencyDistributionResponse build() {
+            $.latencyPercentiles = Objects.requireNonNull($.latencyPercentiles, "expected parameter 'latencyPercentiles' to be non-null");
+            return $;
         }
     }
+
 }

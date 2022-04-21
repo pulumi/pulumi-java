@@ -21,6 +21,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,7 +38,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="algorithm", required=true)
-      private final Output<Either<String,SamplingAlgorithm>> algorithm;
+    private Output<Either<String,SamplingAlgorithm>> algorithm;
 
     public Output<Either<String,SamplingAlgorithm>> algorithm() {
         return this.algorithm;
@@ -48,7 +49,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compute", required=true)
-      private final Output<ComputeConfigurationArgs> compute;
+    private Output<ComputeConfigurationArgs> compute;
 
     public Output<ComputeConfigurationArgs> compute() {
         return this.compute;
@@ -59,10 +60,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="earlyTermination")
-      private final @Nullable Output<Object> earlyTermination;
+    private @Nullable Output<Object> earlyTermination;
 
-    public Output<Object> earlyTermination() {
-        return this.earlyTermination == null ? Codegen.empty() : this.earlyTermination;
+    public Optional<Output<Object>> earlyTermination() {
+        return Optional.ofNullable(this.earlyTermination);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="experimentName")
-      private final @Nullable Output<String> experimentName;
+    private @Nullable Output<String> experimentName;
 
-    public Output<String> experimentName() {
-        return this.experimentName == null ? Codegen.empty() : this.experimentName;
+    public Optional<Output<String>> experimentName() {
+        return Optional.ofNullable(this.experimentName);
     }
 
     /**
@@ -93,10 +94,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
+    private @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
-    public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<Either<AmlTokenArgs,ManagedIdentityArgs>>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -105,7 +106,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobType", required=true)
-      private final Output<String> jobType;
+    private Output<String> jobType;
 
     public Output<String> jobType() {
         return this.jobType;
@@ -116,10 +117,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxConcurrentTrials")
-      private final @Nullable Output<Integer> maxConcurrentTrials;
+    private @Nullable Output<Integer> maxConcurrentTrials;
 
-    public Output<Integer> maxConcurrentTrials() {
-        return this.maxConcurrentTrials == null ? Codegen.empty() : this.maxConcurrentTrials;
+    public Optional<Output<Integer>> maxConcurrentTrials() {
+        return Optional.ofNullable(this.maxConcurrentTrials);
     }
 
     /**
@@ -127,10 +128,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxTotalTrials")
-      private final @Nullable Output<Integer> maxTotalTrials;
+    private @Nullable Output<Integer> maxTotalTrials;
 
-    public Output<Integer> maxTotalTrials() {
-        return this.maxTotalTrials == null ? Codegen.empty() : this.maxTotalTrials;
+    public Optional<Output<Integer>> maxTotalTrials() {
+        return Optional.ofNullable(this.maxTotalTrials);
     }
 
     /**
@@ -138,7 +139,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objective", required=true)
-      private final Output<ObjectiveArgs> objective;
+    private Output<ObjectiveArgs> objective;
 
     public Output<ObjectiveArgs> objective() {
         return this.objective;
@@ -150,10 +151,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -161,10 +162,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -172,7 +173,7 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="searchSpace", required=true)
-      private final Output<Map<String,Object>> searchSpace;
+    private Output<Map<String,Object>> searchSpace;
 
     public Output<Map<String,Object>> searchSpace() {
         return this.searchSpace;
@@ -183,10 +184,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -194,10 +195,10 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -205,245 +206,203 @@ public final class SweepJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trial")
-      private final @Nullable Output<TrialComponentArgs> trial;
+    private @Nullable Output<TrialComponentArgs> trial;
 
-    public Output<TrialComponentArgs> trial() {
-        return this.trial == null ? Codegen.empty() : this.trial;
+    public Optional<Output<TrialComponentArgs>> trial() {
+        return Optional.ofNullable(this.trial);
     }
 
-    public SweepJobArgs(
-        Output<Either<String,SamplingAlgorithm>> algorithm,
-        Output<ComputeConfigurationArgs> compute,
-        @Nullable Output<String> description,
-        @Nullable Output<Object> earlyTermination,
-        @Nullable Output<String> experimentName,
-        @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity,
-        Output<String> jobType,
-        @Nullable Output<Integer> maxConcurrentTrials,
-        @Nullable Output<Integer> maxTotalTrials,
-        Output<ObjectiveArgs> objective,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<Map<String,String>> properties,
-        Output<Map<String,Object>> searchSpace,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> timeout,
-        @Nullable Output<TrialComponentArgs> trial) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.compute = Objects.requireNonNull(compute, "expected parameter 'compute' to be non-null");
-        this.description = description;
-        this.earlyTermination = earlyTermination;
-        this.experimentName = experimentName;
-        this.identity = identity;
-        this.jobType = Codegen.stringProp("jobType").output().arg(jobType).require();
-        this.maxConcurrentTrials = maxConcurrentTrials;
-        this.maxTotalTrials = maxTotalTrials;
-        this.objective = Objects.requireNonNull(objective, "expected parameter 'objective' to be non-null");
-        this.priority = priority;
-        this.properties = properties;
-        this.searchSpace = Objects.requireNonNull(searchSpace, "expected parameter 'searchSpace' to be non-null");
-        this.tags = tags;
-        this.timeout = timeout;
-        this.trial = trial;
-    }
+    private SweepJobArgs() {}
 
-    private SweepJobArgs() {
-        this.algorithm = Codegen.empty();
-        this.compute = Codegen.empty();
-        this.description = Codegen.empty();
-        this.earlyTermination = Codegen.empty();
-        this.experimentName = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.jobType = Codegen.empty();
-        this.maxConcurrentTrials = Codegen.empty();
-        this.maxTotalTrials = Codegen.empty();
-        this.objective = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.searchSpace = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.trial = Codegen.empty();
+    private SweepJobArgs(SweepJobArgs $) {
+        this.algorithm = $.algorithm;
+        this.compute = $.compute;
+        this.description = $.description;
+        this.earlyTermination = $.earlyTermination;
+        this.experimentName = $.experimentName;
+        this.identity = $.identity;
+        this.jobType = $.jobType;
+        this.maxConcurrentTrials = $.maxConcurrentTrials;
+        this.maxTotalTrials = $.maxTotalTrials;
+        this.objective = $.objective;
+        this.priority = $.priority;
+        this.properties = $.properties;
+        this.searchSpace = $.searchSpace;
+        this.tags = $.tags;
+        this.timeout = $.timeout;
+        this.trial = $.trial;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SweepJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,SamplingAlgorithm>> algorithm;
-        private Output<ComputeConfigurationArgs> compute;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Object> earlyTermination;
-        private @Nullable Output<String> experimentName;
-        private @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
-        private Output<String> jobType;
-        private @Nullable Output<Integer> maxConcurrentTrials;
-        private @Nullable Output<Integer> maxTotalTrials;
-        private Output<ObjectiveArgs> objective;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<Map<String,String>> properties;
-        private Output<Map<String,Object>> searchSpace;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> timeout;
-        private @Nullable Output<TrialComponentArgs> trial;
+        private SweepJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SweepJobArgs();
         }
 
         public Builder(SweepJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.compute = defaults.compute;
-    	      this.description = defaults.description;
-    	      this.earlyTermination = defaults.earlyTermination;
-    	      this.experimentName = defaults.experimentName;
-    	      this.identity = defaults.identity;
-    	      this.jobType = defaults.jobType;
-    	      this.maxConcurrentTrials = defaults.maxConcurrentTrials;
-    	      this.maxTotalTrials = defaults.maxTotalTrials;
-    	      this.objective = defaults.objective;
-    	      this.priority = defaults.priority;
-    	      this.properties = defaults.properties;
-    	      this.searchSpace = defaults.searchSpace;
-    	      this.tags = defaults.tags;
-    	      this.timeout = defaults.timeout;
-    	      this.trial = defaults.trial;
+            $ = new SweepJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(Output<Either<String,SamplingAlgorithm>> algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder algorithm(Either<String,SamplingAlgorithm> algorithm) {
-            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
-            return this;
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder compute(Output<ComputeConfigurationArgs> compute) {
-            this.compute = Objects.requireNonNull(compute);
+            $.compute = compute;
             return this;
         }
+
         public Builder compute(ComputeConfigurationArgs compute) {
-            this.compute = Output.of(Objects.requireNonNull(compute));
-            return this;
+            return compute(Output.of(compute));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder earlyTermination(@Nullable Output<Object> earlyTermination) {
-            this.earlyTermination = earlyTermination;
+            $.earlyTermination = earlyTermination;
             return this;
         }
-        public Builder earlyTermination(@Nullable Object earlyTermination) {
-            this.earlyTermination = Codegen.ofNullable(earlyTermination);
-            return this;
+
+        public Builder earlyTermination(Object earlyTermination) {
+            return earlyTermination(Output.of(earlyTermination));
         }
+
         public Builder experimentName(@Nullable Output<String> experimentName) {
-            this.experimentName = experimentName;
+            $.experimentName = experimentName;
             return this;
         }
-        public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Codegen.ofNullable(experimentName);
-            return this;
+
+        public Builder experimentName(String experimentName) {
+            return experimentName(Output.of(experimentName));
         }
+
         public Builder identity(@Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder jobType(Output<String> jobType) {
-            this.jobType = Objects.requireNonNull(jobType);
+            $.jobType = jobType;
             return this;
         }
+
         public Builder jobType(String jobType) {
-            this.jobType = Output.of(Objects.requireNonNull(jobType));
-            return this;
+            return jobType(Output.of(jobType));
         }
+
         public Builder maxConcurrentTrials(@Nullable Output<Integer> maxConcurrentTrials) {
-            this.maxConcurrentTrials = maxConcurrentTrials;
+            $.maxConcurrentTrials = maxConcurrentTrials;
             return this;
         }
-        public Builder maxConcurrentTrials(@Nullable Integer maxConcurrentTrials) {
-            this.maxConcurrentTrials = Codegen.ofNullable(maxConcurrentTrials);
-            return this;
+
+        public Builder maxConcurrentTrials(Integer maxConcurrentTrials) {
+            return maxConcurrentTrials(Output.of(maxConcurrentTrials));
         }
+
         public Builder maxTotalTrials(@Nullable Output<Integer> maxTotalTrials) {
-            this.maxTotalTrials = maxTotalTrials;
+            $.maxTotalTrials = maxTotalTrials;
             return this;
         }
-        public Builder maxTotalTrials(@Nullable Integer maxTotalTrials) {
-            this.maxTotalTrials = Codegen.ofNullable(maxTotalTrials);
-            return this;
+
+        public Builder maxTotalTrials(Integer maxTotalTrials) {
+            return maxTotalTrials(Output.of(maxTotalTrials));
         }
+
         public Builder objective(Output<ObjectiveArgs> objective) {
-            this.objective = Objects.requireNonNull(objective);
+            $.objective = objective;
             return this;
         }
+
         public Builder objective(ObjectiveArgs objective) {
-            this.objective = Output.of(Objects.requireNonNull(objective));
-            return this;
+            return objective(Output.of(objective));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder searchSpace(Output<Map<String,Object>> searchSpace) {
-            this.searchSpace = Objects.requireNonNull(searchSpace);
+            $.searchSpace = searchSpace;
             return this;
         }
+
         public Builder searchSpace(Map<String,Object> searchSpace) {
-            this.searchSpace = Output.of(Objects.requireNonNull(searchSpace));
-            return this;
+            return searchSpace(Output.of(searchSpace));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder trial(@Nullable Output<TrialComponentArgs> trial) {
-            this.trial = trial;
+            $.trial = trial;
             return this;
         }
-        public Builder trial(@Nullable TrialComponentArgs trial) {
-            this.trial = Codegen.ofNullable(trial);
-            return this;
-        }        public SweepJobArgs build() {
-            return new SweepJobArgs(algorithm, compute, description, earlyTermination, experimentName, identity, jobType, maxConcurrentTrials, maxTotalTrials, objective, priority, properties, searchSpace, tags, timeout, trial);
+
+        public Builder trial(TrialComponentArgs trial) {
+            return trial(Output.of(trial));
+        }
+
+        public SweepJobArgs build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.compute = Objects.requireNonNull($.compute, "expected parameter 'compute' to be non-null");
+            $.jobType = Codegen.stringProp("jobType").output().arg($.jobType).require();
+            $.objective = Objects.requireNonNull($.objective, "expected parameter 'objective' to be non-null");
+            $.searchSpace = Objects.requireNonNull($.searchSpace, "expected parameter 'searchSpace' to be non-null");
+            return $;
         }
     }
+
 }

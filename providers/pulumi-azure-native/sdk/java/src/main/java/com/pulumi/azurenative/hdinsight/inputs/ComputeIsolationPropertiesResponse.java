@@ -25,10 +25,10 @@ public final class ComputeIsolationPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enableComputeIsolation")
-      private final @Nullable Boolean enableComputeIsolation;
+    private @Nullable Boolean enableComputeIsolation;
 
     public Optional<Boolean> enableComputeIsolation() {
-        return this.enableComputeIsolation == null ? Optional.empty() : Optional.ofNullable(this.enableComputeIsolation);
+        return Optional.ofNullable(this.enableComputeIsolation);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class ComputeIsolationPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="hostSku")
-      private final @Nullable String hostSku;
+    private @Nullable String hostSku;
 
     public Optional<String> hostSku() {
-        return this.hostSku == null ? Optional.empty() : Optional.ofNullable(this.hostSku);
+        return Optional.ofNullable(this.hostSku);
     }
 
-    public ComputeIsolationPropertiesResponse(
-        @Nullable Boolean enableComputeIsolation,
-        @Nullable String hostSku) {
-        this.enableComputeIsolation = Codegen.booleanProp("enableComputeIsolation").arg(enableComputeIsolation).def(false).getNullable();
-        this.hostSku = hostSku;
-    }
+    private ComputeIsolationPropertiesResponse() {}
 
-    private ComputeIsolationPropertiesResponse() {
-        this.enableComputeIsolation = null;
-        this.hostSku = null;
+    private ComputeIsolationPropertiesResponse(ComputeIsolationPropertiesResponse $) {
+        this.enableComputeIsolation = $.enableComputeIsolation;
+        this.hostSku = $.hostSku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeIsolationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableComputeIsolation;
-        private @Nullable String hostSku;
+        private ComputeIsolationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeIsolationPropertiesResponse();
         }
 
         public Builder(ComputeIsolationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableComputeIsolation = defaults.enableComputeIsolation;
-    	      this.hostSku = defaults.hostSku;
+            $ = new ComputeIsolationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableComputeIsolation(@Nullable Boolean enableComputeIsolation) {
-            this.enableComputeIsolation = enableComputeIsolation;
+            $.enableComputeIsolation = enableComputeIsolation;
             return this;
         }
+
         public Builder hostSku(@Nullable String hostSku) {
-            this.hostSku = hostSku;
+            $.hostSku = hostSku;
             return this;
-        }        public ComputeIsolationPropertiesResponse build() {
-            return new ComputeIsolationPropertiesResponse(enableComputeIsolation, hostSku);
+        }
+
+        public ComputeIsolationPropertiesResponse build() {
+            $.enableComputeIsolation = Codegen.booleanProp("enableComputeIsolation").arg($.enableComputeIsolation).def(false).getNullable();
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class WindowsDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cpeUri", required=true)
-      private final String cpeUri;
+    private String cpeUri;
 
     public String cpeUri() {
         return this.cpeUri;
@@ -30,7 +30,7 @@ public final class WindowsDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -41,7 +41,7 @@ public final class WindowsDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fixingKbs", required=true)
-      private final List<KnowledgeBaseResponse> fixingKbs;
+    private List<KnowledgeBaseResponse> fixingKbs;
 
     public List<KnowledgeBaseResponse> fixingKbs() {
         return this.fixingKbs;
@@ -52,76 +52,70 @@ public final class WindowsDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public WindowsDetailResponse(
-        String cpeUri,
-        String description,
-        List<KnowledgeBaseResponse> fixingKbs,
-        String name) {
-        this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.fixingKbs = Objects.requireNonNull(fixingKbs, "expected parameter 'fixingKbs' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private WindowsDetailResponse() {}
 
-    private WindowsDetailResponse() {
-        this.cpeUri = null;
-        this.description = null;
-        this.fixingKbs = List.of();
-        this.name = null;
+    private WindowsDetailResponse(WindowsDetailResponse $) {
+        this.cpeUri = $.cpeUri;
+        this.description = $.description;
+        this.fixingKbs = $.fixingKbs;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cpeUri;
-        private String description;
-        private List<KnowledgeBaseResponse> fixingKbs;
-        private String name;
+        private WindowsDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsDetailResponse();
         }
 
         public Builder(WindowsDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.description = defaults.description;
-    	      this.fixingKbs = defaults.fixingKbs;
-    	      this.name = defaults.name;
+            $ = new WindowsDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Objects.requireNonNull(cpeUri);
+            $.cpeUri = cpeUri;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder fixingKbs(List<KnowledgeBaseResponse> fixingKbs) {
-            this.fixingKbs = Objects.requireNonNull(fixingKbs);
+            $.fixingKbs = fixingKbs;
             return this;
         }
+
         public Builder fixingKbs(KnowledgeBaseResponse... fixingKbs) {
             return fixingKbs(List.of(fixingKbs));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public WindowsDetailResponse build() {
-            return new WindowsDetailResponse(cpeUri, description, fixingKbs, name);
+        }
+
+        public WindowsDetailResponse build() {
+            $.cpeUri = Objects.requireNonNull($.cpeUri, "expected parameter 'cpeUri' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.fixingKbs = Objects.requireNonNull($.fixingKbs, "expected parameter 'fixingKbs' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

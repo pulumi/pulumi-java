@@ -6,9 +6,9 @@ package com.pulumi.awsnative.kendra.inputs;
 import com.pulumi.awsnative.kendra.inputs.DataSourceConfluenceBlogToIndexFieldMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class DataSourceConfluenceBlogConfigurationArgs extends com.pulumi.
     public static final DataSourceConfluenceBlogConfigurationArgs Empty = new DataSourceConfluenceBlogConfigurationArgs();
 
     @Import(name="blogFieldMappings")
-      private final @Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
+    private @Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
 
-    public Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings() {
-        return this.blogFieldMappings == null ? Codegen.empty() : this.blogFieldMappings;
+    public Optional<Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>>> blogFieldMappings() {
+        return Optional.ofNullable(this.blogFieldMappings);
     }
 
-    public DataSourceConfluenceBlogConfigurationArgs(@Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings) {
-        this.blogFieldMappings = blogFieldMappings;
-    }
+    private DataSourceConfluenceBlogConfigurationArgs() {}
 
-    private DataSourceConfluenceBlogConfigurationArgs() {
-        this.blogFieldMappings = Codegen.empty();
+    private DataSourceConfluenceBlogConfigurationArgs(DataSourceConfluenceBlogConfigurationArgs $) {
+        this.blogFieldMappings = $.blogFieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluenceBlogConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
+        private DataSourceConfluenceBlogConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluenceBlogConfigurationArgs();
         }
 
         public Builder(DataSourceConfluenceBlogConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blogFieldMappings = defaults.blogFieldMappings;
+            $ = new DataSourceConfluenceBlogConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blogFieldMappings(@Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings) {
-            this.blogFieldMappings = blogFieldMappings;
+            $.blogFieldMappings = blogFieldMappings;
             return this;
         }
-        public Builder blogFieldMappings(@Nullable List<DataSourceConfluenceBlogToIndexFieldMappingArgs> blogFieldMappings) {
-            this.blogFieldMappings = Codegen.ofNullable(blogFieldMappings);
-            return this;
+
+        public Builder blogFieldMappings(List<DataSourceConfluenceBlogToIndexFieldMappingArgs> blogFieldMappings) {
+            return blogFieldMappings(Output.of(blogFieldMappings));
         }
+
         public Builder blogFieldMappings(DataSourceConfluenceBlogToIndexFieldMappingArgs... blogFieldMappings) {
             return blogFieldMappings(List.of(blogFieldMappings));
-        }        public DataSourceConfluenceBlogConfigurationArgs build() {
-            return new DataSourceConfluenceBlogConfigurationArgs(blogFieldMappings);
+        }
+
+        public DataSourceConfluenceBlogConfigurationArgs build() {
+            return $;
         }
     }
+
 }

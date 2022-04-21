@@ -9,11 +9,11 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="backendAddressPool")
-      private final @Nullable Output<SubResourceArgs> backendAddressPool;
+    private @Nullable Output<SubResourceArgs> backendAddressPool;
 
-    public Output<SubResourceArgs> backendAddressPool() {
-        return this.backendAddressPool == null ? Codegen.empty() : this.backendAddressPool;
+    public Optional<Output<SubResourceArgs>> backendAddressPool() {
+        return Optional.ofNullable(this.backendAddressPool);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="backendPort")
-      private final @Nullable Output<Integer> backendPort;
+    private @Nullable Output<Integer> backendPort;
 
-    public Output<Integer> backendPort() {
-        return this.backendPort == null ? Codegen.empty() : this.backendPort;
+    public Optional<Output<Integer>> backendPort() {
+        return Optional.ofNullable(this.backendPort);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="disableOutboundSnat")
-      private final @Nullable Output<Boolean> disableOutboundSnat;
+    private @Nullable Output<Boolean> disableOutboundSnat;
 
-    public Output<Boolean> disableOutboundSnat() {
-        return this.disableOutboundSnat == null ? Codegen.empty() : this.disableOutboundSnat;
+    public Optional<Output<Boolean>> disableOutboundSnat() {
+        return Optional.ofNullable(this.disableOutboundSnat);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enableFloatingIP")
-      private final @Nullable Output<Boolean> enableFloatingIP;
+    private @Nullable Output<Boolean> enableFloatingIP;
 
-    public Output<Boolean> enableFloatingIP() {
-        return this.enableFloatingIP == null ? Codegen.empty() : this.enableFloatingIP;
+    public Optional<Output<Boolean>> enableFloatingIP() {
+        return Optional.ofNullable(this.enableFloatingIP);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enableTcpReset")
-      private final @Nullable Output<Boolean> enableTcpReset;
+    private @Nullable Output<Boolean> enableTcpReset;
 
-    public Output<Boolean> enableTcpReset() {
-        return this.enableTcpReset == null ? Codegen.empty() : this.enableTcpReset;
+    public Optional<Output<Boolean>> enableTcpReset() {
+        return Optional.ofNullable(this.enableTcpReset);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="frontendIPConfiguration")
-      private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
+    private @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
-    public Output<SubResourceArgs> frontendIPConfiguration() {
-        return this.frontendIPConfiguration == null ? Codegen.empty() : this.frontendIPConfiguration;
+    public Optional<Output<SubResourceArgs>> frontendIPConfiguration() {
+        return Optional.ofNullable(this.frontendIPConfiguration);
     }
 
     /**
@@ -96,7 +96,7 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="frontendPort", required=true)
-      private final Output<Integer> frontendPort;
+    private Output<Integer> frontendPort;
 
     public Output<Integer> frontendPort() {
         return this.frontendPort;
@@ -107,10 +107,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="idleTimeoutInMinutes")
-      private final @Nullable Output<Integer> idleTimeoutInMinutes;
+    private @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
+    public Optional<Output<Integer>> idleTimeoutInMinutes() {
+        return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="loadDistribution")
-      private final @Nullable Output<Either<String,LoadDistribution>> loadDistribution;
+    private @Nullable Output<Either<String,LoadDistribution>> loadDistribution;
 
-    public Output<Either<String,LoadDistribution>> loadDistribution() {
-        return this.loadDistribution == null ? Codegen.empty() : this.loadDistribution;
+    public Optional<Output<Either<String,LoadDistribution>>> loadDistribution() {
+        return Optional.ofNullable(this.loadDistribution);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="probe")
-      private final @Nullable Output<SubResourceArgs> probe;
+    private @Nullable Output<SubResourceArgs> probe;
 
-    public Output<SubResourceArgs> probe() {
-        return this.probe == null ? Codegen.empty() : this.probe;
+    public Optional<Output<SubResourceArgs>> probe() {
+        return Optional.ofNullable(this.probe);
     }
 
     /**
@@ -162,206 +162,170 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<Either<String,TransportProtocol>> protocol;
+    private Output<Either<String,TransportProtocol>> protocol;
 
     public Output<Either<String,TransportProtocol>> protocol() {
         return this.protocol;
     }
 
-    public LoadBalancingRuleArgs(
-        @Nullable Output<SubResourceArgs> backendAddressPool,
-        @Nullable Output<Integer> backendPort,
-        @Nullable Output<Boolean> disableOutboundSnat,
-        @Nullable Output<Boolean> enableFloatingIP,
-        @Nullable Output<Boolean> enableTcpReset,
-        @Nullable Output<SubResourceArgs> frontendIPConfiguration,
-        Output<Integer> frontendPort,
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> idleTimeoutInMinutes,
-        @Nullable Output<Either<String,LoadDistribution>> loadDistribution,
-        @Nullable Output<String> name,
-        @Nullable Output<SubResourceArgs> probe,
-        Output<Either<String,TransportProtocol>> protocol) {
-        this.backendAddressPool = backendAddressPool;
-        this.backendPort = backendPort;
-        this.disableOutboundSnat = disableOutboundSnat;
-        this.enableFloatingIP = enableFloatingIP;
-        this.enableTcpReset = enableTcpReset;
-        this.frontendIPConfiguration = frontendIPConfiguration;
-        this.frontendPort = Objects.requireNonNull(frontendPort, "expected parameter 'frontendPort' to be non-null");
-        this.id = id;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes;
-        this.loadDistribution = loadDistribution;
-        this.name = name;
-        this.probe = probe;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private LoadBalancingRuleArgs() {}
 
-    private LoadBalancingRuleArgs() {
-        this.backendAddressPool = Codegen.empty();
-        this.backendPort = Codegen.empty();
-        this.disableOutboundSnat = Codegen.empty();
-        this.enableFloatingIP = Codegen.empty();
-        this.enableTcpReset = Codegen.empty();
-        this.frontendIPConfiguration = Codegen.empty();
-        this.frontendPort = Codegen.empty();
-        this.id = Codegen.empty();
-        this.idleTimeoutInMinutes = Codegen.empty();
-        this.loadDistribution = Codegen.empty();
-        this.name = Codegen.empty();
-        this.probe = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private LoadBalancingRuleArgs(LoadBalancingRuleArgs $) {
+        this.backendAddressPool = $.backendAddressPool;
+        this.backendPort = $.backendPort;
+        this.disableOutboundSnat = $.disableOutboundSnat;
+        this.enableFloatingIP = $.enableFloatingIP;
+        this.enableTcpReset = $.enableTcpReset;
+        this.frontendIPConfiguration = $.frontendIPConfiguration;
+        this.frontendPort = $.frontendPort;
+        this.id = $.id;
+        this.idleTimeoutInMinutes = $.idleTimeoutInMinutes;
+        this.loadDistribution = $.loadDistribution;
+        this.name = $.name;
+        this.probe = $.probe;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubResourceArgs> backendAddressPool;
-        private @Nullable Output<Integer> backendPort;
-        private @Nullable Output<Boolean> disableOutboundSnat;
-        private @Nullable Output<Boolean> enableFloatingIP;
-        private @Nullable Output<Boolean> enableTcpReset;
-        private @Nullable Output<SubResourceArgs> frontendIPConfiguration;
-        private Output<Integer> frontendPort;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> idleTimeoutInMinutes;
-        private @Nullable Output<Either<String,LoadDistribution>> loadDistribution;
-        private @Nullable Output<String> name;
-        private @Nullable Output<SubResourceArgs> probe;
-        private Output<Either<String,TransportProtocol>> protocol;
+        private LoadBalancingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancingRuleArgs();
         }
 
         public Builder(LoadBalancingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddressPool = defaults.backendAddressPool;
-    	      this.backendPort = defaults.backendPort;
-    	      this.disableOutboundSnat = defaults.disableOutboundSnat;
-    	      this.enableFloatingIP = defaults.enableFloatingIP;
-    	      this.enableTcpReset = defaults.enableTcpReset;
-    	      this.frontendIPConfiguration = defaults.frontendIPConfiguration;
-    	      this.frontendPort = defaults.frontendPort;
-    	      this.id = defaults.id;
-    	      this.idleTimeoutInMinutes = defaults.idleTimeoutInMinutes;
-    	      this.loadDistribution = defaults.loadDistribution;
-    	      this.name = defaults.name;
-    	      this.probe = defaults.probe;
-    	      this.protocol = defaults.protocol;
+            $ = new LoadBalancingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddressPool(@Nullable Output<SubResourceArgs> backendAddressPool) {
-            this.backendAddressPool = backendAddressPool;
+            $.backendAddressPool = backendAddressPool;
             return this;
         }
-        public Builder backendAddressPool(@Nullable SubResourceArgs backendAddressPool) {
-            this.backendAddressPool = Codegen.ofNullable(backendAddressPool);
-            return this;
+
+        public Builder backendAddressPool(SubResourceArgs backendAddressPool) {
+            return backendAddressPool(Output.of(backendAddressPool));
         }
+
         public Builder backendPort(@Nullable Output<Integer> backendPort) {
-            this.backendPort = backendPort;
+            $.backendPort = backendPort;
             return this;
         }
-        public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = Codegen.ofNullable(backendPort);
-            return this;
+
+        public Builder backendPort(Integer backendPort) {
+            return backendPort(Output.of(backendPort));
         }
+
         public Builder disableOutboundSnat(@Nullable Output<Boolean> disableOutboundSnat) {
-            this.disableOutboundSnat = disableOutboundSnat;
+            $.disableOutboundSnat = disableOutboundSnat;
             return this;
         }
-        public Builder disableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
-            this.disableOutboundSnat = Codegen.ofNullable(disableOutboundSnat);
-            return this;
+
+        public Builder disableOutboundSnat(Boolean disableOutboundSnat) {
+            return disableOutboundSnat(Output.of(disableOutboundSnat));
         }
+
         public Builder enableFloatingIP(@Nullable Output<Boolean> enableFloatingIP) {
-            this.enableFloatingIP = enableFloatingIP;
+            $.enableFloatingIP = enableFloatingIP;
             return this;
         }
-        public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
-            this.enableFloatingIP = Codegen.ofNullable(enableFloatingIP);
-            return this;
+
+        public Builder enableFloatingIP(Boolean enableFloatingIP) {
+            return enableFloatingIP(Output.of(enableFloatingIP));
         }
+
         public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
-            this.enableTcpReset = enableTcpReset;
+            $.enableTcpReset = enableTcpReset;
             return this;
         }
-        public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
-            this.enableTcpReset = Codegen.ofNullable(enableTcpReset);
-            return this;
+
+        public Builder enableTcpReset(Boolean enableTcpReset) {
+            return enableTcpReset(Output.of(enableTcpReset));
         }
+
         public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
-            this.frontendIPConfiguration = frontendIPConfiguration;
+            $.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
-        public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
-            this.frontendIPConfiguration = Codegen.ofNullable(frontendIPConfiguration);
-            return this;
+
+        public Builder frontendIPConfiguration(SubResourceArgs frontendIPConfiguration) {
+            return frontendIPConfiguration(Output.of(frontendIPConfiguration));
         }
+
         public Builder frontendPort(Output<Integer> frontendPort) {
-            this.frontendPort = Objects.requireNonNull(frontendPort);
+            $.frontendPort = frontendPort;
             return this;
         }
+
         public Builder frontendPort(Integer frontendPort) {
-            this.frontendPort = Output.of(Objects.requireNonNull(frontendPort));
-            return this;
+            return frontendPort(Output.of(frontendPort));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = idleTimeoutInMinutes;
+            $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
-        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Codegen.ofNullable(idleTimeoutInMinutes);
-            return this;
+
+        public Builder idleTimeoutInMinutes(Integer idleTimeoutInMinutes) {
+            return idleTimeoutInMinutes(Output.of(idleTimeoutInMinutes));
         }
+
         public Builder loadDistribution(@Nullable Output<Either<String,LoadDistribution>> loadDistribution) {
-            this.loadDistribution = loadDistribution;
+            $.loadDistribution = loadDistribution;
             return this;
         }
-        public Builder loadDistribution(@Nullable Either<String,LoadDistribution> loadDistribution) {
-            this.loadDistribution = Codegen.ofNullable(loadDistribution);
-            return this;
+
+        public Builder loadDistribution(Either<String,LoadDistribution> loadDistribution) {
+            return loadDistribution(Output.of(loadDistribution));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder probe(@Nullable Output<SubResourceArgs> probe) {
-            this.probe = probe;
+            $.probe = probe;
             return this;
         }
-        public Builder probe(@Nullable SubResourceArgs probe) {
-            this.probe = Codegen.ofNullable(probe);
-            return this;
+
+        public Builder probe(SubResourceArgs probe) {
+            return probe(Output.of(probe));
         }
+
         public Builder protocol(Output<Either<String,TransportProtocol>> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(Either<String,TransportProtocol> protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
-        }        public LoadBalancingRuleArgs build() {
-            return new LoadBalancingRuleArgs(backendAddressPool, backendPort, disableOutboundSnat, enableFloatingIP, enableTcpReset, frontendIPConfiguration, frontendPort, id, idleTimeoutInMinutes, loadDistribution, name, probe, protocol);
+            return protocol(Output.of(protocol));
+        }
+
+        public LoadBalancingRuleArgs build() {
+            $.frontendPort = Objects.requireNonNull($.frontendPort, "expected parameter 'frontendPort' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

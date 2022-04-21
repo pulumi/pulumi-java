@@ -5,9 +5,9 @@ package com.pulumi.googlenative.billingbudgets_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.billingbudgets_v1.inputs.GoogleTypeDateArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodArgs extends com.pulum
      * 
      */
     @Import(name="endDate")
-      private final @Nullable Output<GoogleTypeDateArgs> endDate;
+    private @Nullable Output<GoogleTypeDateArgs> endDate;
 
-    public Output<GoogleTypeDateArgs> endDate() {
-        return this.endDate == null ? Codegen.empty() : this.endDate;
+    public Optional<Output<GoogleTypeDateArgs>> endDate() {
+        return Optional.ofNullable(this.endDate);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodArgs extends com.pulum
      * 
      */
     @Import(name="startDate", required=true)
-      private final Output<GoogleTypeDateArgs> startDate;
+    private Output<GoogleTypeDateArgs> startDate;
 
     public Output<GoogleTypeDateArgs> startDate() {
         return this.startDate;
     }
 
-    public GoogleCloudBillingBudgetsV1CustomPeriodArgs(
-        @Nullable Output<GoogleTypeDateArgs> endDate,
-        Output<GoogleTypeDateArgs> startDate) {
-        this.endDate = endDate;
-        this.startDate = Objects.requireNonNull(startDate, "expected parameter 'startDate' to be non-null");
-    }
+    private GoogleCloudBillingBudgetsV1CustomPeriodArgs() {}
 
-    private GoogleCloudBillingBudgetsV1CustomPeriodArgs() {
-        this.endDate = Codegen.empty();
-        this.startDate = Codegen.empty();
+    private GoogleCloudBillingBudgetsV1CustomPeriodArgs(GoogleCloudBillingBudgetsV1CustomPeriodArgs $) {
+        this.endDate = $.endDate;
+        this.startDate = $.startDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1CustomPeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleTypeDateArgs> endDate;
-        private Output<GoogleTypeDateArgs> startDate;
+        private GoogleCloudBillingBudgetsV1CustomPeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1CustomPeriodArgs();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1CustomPeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.startDate = defaults.startDate;
+            $ = new GoogleCloudBillingBudgetsV1CustomPeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(@Nullable Output<GoogleTypeDateArgs> endDate) {
-            this.endDate = endDate;
+            $.endDate = endDate;
             return this;
         }
-        public Builder endDate(@Nullable GoogleTypeDateArgs endDate) {
-            this.endDate = Codegen.ofNullable(endDate);
-            return this;
+
+        public Builder endDate(GoogleTypeDateArgs endDate) {
+            return endDate(Output.of(endDate));
         }
+
         public Builder startDate(Output<GoogleTypeDateArgs> startDate) {
-            this.startDate = Objects.requireNonNull(startDate);
+            $.startDate = startDate;
             return this;
         }
+
         public Builder startDate(GoogleTypeDateArgs startDate) {
-            this.startDate = Output.of(Objects.requireNonNull(startDate));
-            return this;
-        }        public GoogleCloudBillingBudgetsV1CustomPeriodArgs build() {
-            return new GoogleCloudBillingBudgetsV1CustomPeriodArgs(endDate, startDate);
+            return startDate(Output.of(startDate));
+        }
+
+        public GoogleCloudBillingBudgetsV1CustomPeriodArgs build() {
+            $.startDate = Objects.requireNonNull($.startDate, "expected parameter 'startDate' to be non-null");
+            return $;
         }
     }
+
 }

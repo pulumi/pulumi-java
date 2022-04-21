@@ -13,78 +13,73 @@ public final class GetCustomerArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCustomerArgs Empty = new GetCustomerArgs();
 
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
     }
 
     @Import(name="channelPartnerLinkId", required=true)
-      private final String channelPartnerLinkId;
+    private String channelPartnerLinkId;
 
     public String channelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
     @Import(name="customerId", required=true)
-      private final String customerId;
+    private String customerId;
 
     public String customerId() {
         return this.customerId;
     }
 
-    public GetCustomerArgs(
-        String accountId,
-        String channelPartnerLinkId,
-        String customerId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId, "expected parameter 'channelPartnerLinkId' to be non-null");
-        this.customerId = Objects.requireNonNull(customerId, "expected parameter 'customerId' to be non-null");
-    }
+    private GetCustomerArgs() {}
 
-    private GetCustomerArgs() {
-        this.accountId = null;
-        this.channelPartnerLinkId = null;
-        this.customerId = null;
+    private GetCustomerArgs(GetCustomerArgs $) {
+        this.accountId = $.accountId;
+        this.channelPartnerLinkId = $.channelPartnerLinkId;
+        this.customerId = $.customerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
-        private String channelPartnerLinkId;
-        private String customerId;
+        private GetCustomerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomerArgs();
         }
 
         public Builder(GetCustomerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.channelPartnerLinkId = defaults.channelPartnerLinkId;
-    	      this.customerId = defaults.customerId;
+            $ = new GetCustomerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder channelPartnerLinkId(String channelPartnerLinkId) {
-            this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId);
+            $.channelPartnerLinkId = channelPartnerLinkId;
             return this;
         }
+
         public Builder customerId(String customerId) {
-            this.customerId = Objects.requireNonNull(customerId);
+            $.customerId = customerId;
             return this;
-        }        public GetCustomerArgs build() {
-            return new GetCustomerArgs(accountId, channelPartnerLinkId, customerId);
+        }
+
+        public GetCustomerArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.channelPartnerLinkId = Objects.requireNonNull($.channelPartnerLinkId, "expected parameter 'channelPartnerLinkId' to be non-null");
+            $.customerId = Objects.requireNonNull($.customerId, "expected parameter 'customerId' to be non-null");
+            return $;
         }
     }
+
 }

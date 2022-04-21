@@ -24,48 +24,48 @@ public final class IPAccessControlResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="allow")
-      private final @Nullable List<IPRangeResponse> allow;
+    private @Nullable List<IPRangeResponse> allow;
 
-    public List<IPRangeResponse> allow() {
-        return this.allow == null ? List.of() : this.allow;
+    public Optional<List<IPRangeResponse>> allow() {
+        return Optional.ofNullable(this.allow);
     }
 
-    public IPAccessControlResponse(@Nullable List<IPRangeResponse> allow) {
-        this.allow = allow;
-    }
+    private IPAccessControlResponse() {}
 
-    private IPAccessControlResponse() {
-        this.allow = List.of();
+    private IPAccessControlResponse(IPAccessControlResponse $) {
+        this.allow = $.allow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPAccessControlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<IPRangeResponse> allow;
+        private IPAccessControlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPAccessControlResponse();
         }
 
         public Builder(IPAccessControlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
+            $ = new IPAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable List<IPRangeResponse> allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
+
         public Builder allow(IPRangeResponse... allow) {
             return allow(List.of(allow));
-        }        public IPAccessControlResponse build() {
-            return new IPAccessControlResponse(allow);
+        }
+
+        public IPAccessControlResponse build() {
+            return $;
         }
     }
+
 }

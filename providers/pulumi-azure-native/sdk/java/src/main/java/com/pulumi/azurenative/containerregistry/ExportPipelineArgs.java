@@ -9,10 +9,10 @@ import com.pulumi.azurenative.containerregistry.inputs.IdentityPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="exportPipelineName")
-      private final @Nullable Output<String> exportPipelineName;
+    private @Nullable Output<String> exportPipelineName;
 
-    public Output<String> exportPipelineName() {
-        return this.exportPipelineName == null ? Codegen.empty() : this.exportPipelineName;
+    public Optional<Output<String>> exportPipelineName() {
+        return Optional.ofNullable(this.exportPipelineName);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityPropertiesArgs> identity;
+    private @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Output<IdentityPropertiesArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityPropertiesArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<List<Either<String,PipelineOptions>>> options;
+    private @Nullable Output<List<Either<String,PipelineOptions>>> options;
 
-    public Output<List<Either<String,PipelineOptions>>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<List<Either<String,PipelineOptions>>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="registryName", required=true)
-      private final Output<String> registryName;
+    private Output<String> registryName;
 
     public Output<String> registryName() {
         return this.registryName;
@@ -80,7 +80,7 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,131 +91,115 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="target", required=true)
-      private final Output<ExportPipelineTargetPropertiesArgs> target;
+    private Output<ExportPipelineTargetPropertiesArgs> target;
 
     public Output<ExportPipelineTargetPropertiesArgs> target() {
         return this.target;
     }
 
-    public ExportPipelineArgs(
-        @Nullable Output<String> exportPipelineName,
-        @Nullable Output<IdentityPropertiesArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<List<Either<String,PipelineOptions>>> options,
-        Output<String> registryName,
-        Output<String> resourceGroupName,
-        Output<ExportPipelineTargetPropertiesArgs> target) {
-        this.exportPipelineName = exportPipelineName;
-        this.identity = identity;
-        this.location = location;
-        this.options = options;
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-    }
+    private ExportPipelineArgs() {}
 
-    private ExportPipelineArgs() {
-        this.exportPipelineName = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.options = Codegen.empty();
-        this.registryName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.target = Codegen.empty();
+    private ExportPipelineArgs(ExportPipelineArgs $) {
+        this.exportPipelineName = $.exportPipelineName;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.options = $.options;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportPipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exportPipelineName;
-        private @Nullable Output<IdentityPropertiesArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<Either<String,PipelineOptions>>> options;
-        private Output<String> registryName;
-        private Output<String> resourceGroupName;
-        private Output<ExportPipelineTargetPropertiesArgs> target;
+        private ExportPipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportPipelineArgs();
         }
 
         public Builder(ExportPipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exportPipelineName = defaults.exportPipelineName;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.options = defaults.options;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.target = defaults.target;
+            $ = new ExportPipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exportPipelineName(@Nullable Output<String> exportPipelineName) {
-            this.exportPipelineName = exportPipelineName;
+            $.exportPipelineName = exportPipelineName;
             return this;
         }
-        public Builder exportPipelineName(@Nullable String exportPipelineName) {
-            this.exportPipelineName = Codegen.ofNullable(exportPipelineName);
-            return this;
+
+        public Builder exportPipelineName(String exportPipelineName) {
+            return exportPipelineName(Output.of(exportPipelineName));
         }
+
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityPropertiesArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder options(@Nullable Output<List<Either<String,PipelineOptions>>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable List<Either<String,PipelineOptions>> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(List<Either<String,PipelineOptions>> options) {
+            return options(Output.of(options));
         }
+
         public Builder options(Either<String,PipelineOptions>... options) {
             return options(List.of(options));
         }
+
         public Builder registryName(Output<String> registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Output.of(Objects.requireNonNull(registryName));
-            return this;
+            return registryName(Output.of(registryName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder target(Output<ExportPipelineTargetPropertiesArgs> target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder target(ExportPipelineTargetPropertiesArgs target) {
-            this.target = Output.of(Objects.requireNonNull(target));
-            return this;
-        }        public ExportPipelineArgs build() {
-            return new ExportPipelineArgs(exportPipelineName, identity, location, options, registryName, resourceGroupName, target);
+            return target(Output.of(target));
+        }
+
+        public ExportPipelineArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            return $;
         }
     }
+
 }

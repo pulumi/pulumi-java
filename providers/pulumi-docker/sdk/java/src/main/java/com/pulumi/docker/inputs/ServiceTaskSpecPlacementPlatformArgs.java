@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class ServiceTaskSpecPlacementPlatformArgs extends com.pulumi.resou
     public static final ServiceTaskSpecPlacementPlatformArgs Empty = new ServiceTaskSpecPlacementPlatformArgs();
 
     @Import(name="architecture", required=true)
-      private final Output<String> architecture;
+    private Output<String> architecture;
 
     public Output<String> architecture() {
         return this.architecture;
     }
 
     @Import(name="os", required=true)
-      private final Output<String> os;
+    private Output<String> os;
 
     public Output<String> os() {
         return this.os;
     }
 
-    public ServiceTaskSpecPlacementPlatformArgs(
-        Output<String> architecture,
-        Output<String> os) {
-        this.architecture = Objects.requireNonNull(architecture, "expected parameter 'architecture' to be non-null");
-        this.os = Objects.requireNonNull(os, "expected parameter 'os' to be non-null");
-    }
+    private ServiceTaskSpecPlacementPlatformArgs() {}
 
-    private ServiceTaskSpecPlacementPlatformArgs() {
-        this.architecture = Codegen.empty();
-        this.os = Codegen.empty();
+    private ServiceTaskSpecPlacementPlatformArgs(ServiceTaskSpecPlacementPlatformArgs $) {
+        this.architecture = $.architecture;
+        this.os = $.os;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecPlacementPlatformArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> architecture;
-        private Output<String> os;
+        private ServiceTaskSpecPlacementPlatformArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecPlacementPlatformArgs();
         }
 
         public Builder(ServiceTaskSpecPlacementPlatformArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.os = defaults.os;
+            $ = new ServiceTaskSpecPlacementPlatformArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(Output<String> architecture) {
-            this.architecture = Objects.requireNonNull(architecture);
+            $.architecture = architecture;
             return this;
         }
+
         public Builder architecture(String architecture) {
-            this.architecture = Output.of(Objects.requireNonNull(architecture));
-            return this;
+            return architecture(Output.of(architecture));
         }
+
         public Builder os(Output<String> os) {
-            this.os = Objects.requireNonNull(os);
+            $.os = os;
             return this;
         }
+
         public Builder os(String os) {
-            this.os = Output.of(Objects.requireNonNull(os));
-            return this;
-        }        public ServiceTaskSpecPlacementPlatformArgs build() {
-            return new ServiceTaskSpecPlacementPlatformArgs(architecture, os);
+            return os(Output.of(os));
+        }
+
+        public ServiceTaskSpecPlacementPlatformArgs build() {
+            $.architecture = Objects.requireNonNull($.architecture, "expected parameter 'architecture' to be non-null");
+            $.os = Objects.requireNonNull($.os, "expected parameter 'os' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,11 +9,11 @@ import com.pulumi.awsnative.frauddetector.enums.EventTypeEventVariableVariableTy
 import com.pulumi.awsnative.frauddetector.inputs.EventTypeTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
     public static final EventTypeEventVariableArgs Empty = new EventTypeEventVariableArgs();
 
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,31 +33,31 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     @Import(name="dataSource")
-      private final @Nullable Output<EventTypeEventVariableDataSource> dataSource;
+    private @Nullable Output<EventTypeEventVariableDataSource> dataSource;
 
-    public Output<EventTypeEventVariableDataSource> dataSource() {
-        return this.dataSource == null ? Codegen.empty() : this.dataSource;
+    public Optional<Output<EventTypeEventVariableDataSource>> dataSource() {
+        return Optional.ofNullable(this.dataSource);
     }
 
     @Import(name="dataType")
-      private final @Nullable Output<EventTypeEventVariableDataType> dataType;
+    private @Nullable Output<EventTypeEventVariableDataType> dataType;
 
-    public Output<EventTypeEventVariableDataType> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<EventTypeEventVariableDataType>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     @Import(name="defaultValue")
-      private final @Nullable Output<String> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
-    public Output<String> defaultValue() {
-        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
+    public Optional<Output<String>> defaultValue() {
+        return Optional.ofNullable(this.defaultValue);
     }
 
     /**
@@ -65,17 +65,17 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="inline")
-      private final @Nullable Output<Boolean> inline;
+    private @Nullable Output<Boolean> inline;
 
-    public Output<Boolean> inline() {
-        return this.inline == null ? Codegen.empty() : this.inline;
+    public Optional<Output<Boolean>> inline() {
+        return Optional.ofNullable(this.inline);
     }
 
     /**
@@ -83,17 +83,17 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="lastUpdatedTime")
-      private final @Nullable Output<String> lastUpdatedTime;
+    private @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> lastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
+    public Optional<Output<String>> lastUpdatedTime() {
+        return Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -101,190 +101,159 @@ public final class EventTypeEventVariableArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<EventTypeTagArgs>> tags;
+    private @Nullable Output<List<EventTypeTagArgs>> tags;
 
-    public Output<List<EventTypeTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<EventTypeTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="variableType")
-      private final @Nullable Output<EventTypeEventVariableVariableType> variableType;
+    private @Nullable Output<EventTypeEventVariableVariableType> variableType;
 
-    public Output<EventTypeEventVariableVariableType> variableType() {
-        return this.variableType == null ? Codegen.empty() : this.variableType;
+    public Optional<Output<EventTypeEventVariableVariableType>> variableType() {
+        return Optional.ofNullable(this.variableType);
     }
 
-    public EventTypeEventVariableArgs(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<EventTypeEventVariableDataSource> dataSource,
-        @Nullable Output<EventTypeEventVariableDataType> dataType,
-        @Nullable Output<String> defaultValue,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> inline,
-        @Nullable Output<String> lastUpdatedTime,
-        @Nullable Output<String> name,
-        @Nullable Output<List<EventTypeTagArgs>> tags,
-        @Nullable Output<EventTypeEventVariableVariableType> variableType) {
-        this.arn = arn;
-        this.createdTime = createdTime;
-        this.dataSource = dataSource;
-        this.dataType = dataType;
-        this.defaultValue = defaultValue;
-        this.description = description;
-        this.inline = inline;
-        this.lastUpdatedTime = lastUpdatedTime;
-        this.name = name;
-        this.tags = tags;
-        this.variableType = variableType;
-    }
+    private EventTypeEventVariableArgs() {}
 
-    private EventTypeEventVariableArgs() {
-        this.arn = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.dataSource = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.defaultValue = Codegen.empty();
-        this.description = Codegen.empty();
-        this.inline = Codegen.empty();
-        this.lastUpdatedTime = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.variableType = Codegen.empty();
+    private EventTypeEventVariableArgs(EventTypeEventVariableArgs $) {
+        this.arn = $.arn;
+        this.createdTime = $.createdTime;
+        this.dataSource = $.dataSource;
+        this.dataType = $.dataType;
+        this.defaultValue = $.defaultValue;
+        this.description = $.description;
+        this.inline = $.inline;
+        this.lastUpdatedTime = $.lastUpdatedTime;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.variableType = $.variableType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTypeEventVariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<EventTypeEventVariableDataSource> dataSource;
-        private @Nullable Output<EventTypeEventVariableDataType> dataType;
-        private @Nullable Output<String> defaultValue;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> inline;
-        private @Nullable Output<String> lastUpdatedTime;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<EventTypeTagArgs>> tags;
-        private @Nullable Output<EventTypeEventVariableVariableType> variableType;
+        private EventTypeEventVariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTypeEventVariableArgs();
         }
 
         public Builder(EventTypeEventVariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdTime = defaults.createdTime;
-    	      this.dataSource = defaults.dataSource;
-    	      this.dataType = defaults.dataType;
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.description = defaults.description;
-    	      this.inline = defaults.inline;
-    	      this.lastUpdatedTime = defaults.lastUpdatedTime;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.variableType = defaults.variableType;
+            $ = new EventTypeEventVariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder dataSource(@Nullable Output<EventTypeEventVariableDataSource> dataSource) {
-            this.dataSource = dataSource;
+            $.dataSource = dataSource;
             return this;
         }
-        public Builder dataSource(@Nullable EventTypeEventVariableDataSource dataSource) {
-            this.dataSource = Codegen.ofNullable(dataSource);
-            return this;
+
+        public Builder dataSource(EventTypeEventVariableDataSource dataSource) {
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder dataType(@Nullable Output<EventTypeEventVariableDataType> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable EventTypeEventVariableDataType dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(EventTypeEventVariableDataType dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
         }
-        public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Codegen.ofNullable(defaultValue);
-            return this;
+
+        public Builder defaultValue(String defaultValue) {
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder inline(@Nullable Output<Boolean> inline) {
-            this.inline = inline;
+            $.inline = inline;
             return this;
         }
-        public Builder inline(@Nullable Boolean inline) {
-            this.inline = Codegen.ofNullable(inline);
-            return this;
+
+        public Builder inline(Boolean inline) {
+            return inline(Output.of(inline));
         }
+
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
-            this.lastUpdatedTime = lastUpdatedTime;
+            $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
-        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
-            return this;
+
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
+            return lastUpdatedTime(Output.of(lastUpdatedTime));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<EventTypeTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<EventTypeTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<EventTypeTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(EventTypeTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder variableType(@Nullable Output<EventTypeEventVariableVariableType> variableType) {
-            this.variableType = variableType;
+            $.variableType = variableType;
             return this;
         }
-        public Builder variableType(@Nullable EventTypeEventVariableVariableType variableType) {
-            this.variableType = Codegen.ofNullable(variableType);
-            return this;
-        }        public EventTypeEventVariableArgs build() {
-            return new EventTypeEventVariableArgs(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
+
+        public Builder variableType(EventTypeEventVariableVariableType variableType) {
+            return variableType(Output.of(variableType));
+        }
+
+        public EventTypeEventVariableArgs build() {
+            return $;
         }
     }
+
 }

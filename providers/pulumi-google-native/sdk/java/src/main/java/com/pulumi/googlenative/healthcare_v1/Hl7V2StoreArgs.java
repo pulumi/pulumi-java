@@ -5,7 +5,6 @@ package com.pulumi.googlenative.healthcare_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.inputs.Hl7V2NotificationConfigArgs;
 import com.pulumi.googlenative.healthcare_v1.inputs.ParserConfigArgs;
 import java.lang.Boolean;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class Hl7V2StoreArgs extends com.pulumi.resources.ResourceArgs {
     public static final Hl7V2StoreArgs Empty = new Hl7V2StoreArgs();
 
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="hl7V2StoreId")
-      private final @Nullable Output<String> hl7V2StoreId;
+    private @Nullable Output<String> hl7V2StoreId;
 
-    public Output<String> hl7V2StoreId() {
-        return this.hl7V2StoreId == null ? Codegen.empty() : this.hl7V2StoreId;
+    public Optional<Output<String>> hl7V2StoreId() {
+        return Optional.ofNullable(this.hl7V2StoreId);
     }
 
     /**
@@ -39,17 +39,17 @@ public final class Hl7V2StoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class Hl7V2StoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class Hl7V2StoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfigs")
-      private final @Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
+    private @Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
 
-    public Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs() {
-        return this.notificationConfigs == null ? Codegen.empty() : this.notificationConfigs;
+    public Optional<Output<List<Hl7V2NotificationConfigArgs>>> notificationConfigs() {
+        return Optional.ofNullable(this.notificationConfigs);
     }
 
     /**
@@ -79,17 +79,17 @@ public final class Hl7V2StoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parserConfig")
-      private final @Nullable Output<ParserConfigArgs> parserConfig;
+    private @Nullable Output<ParserConfigArgs> parserConfig;
 
-    public Output<ParserConfigArgs> parserConfig() {
-        return this.parserConfig == null ? Codegen.empty() : this.parserConfig;
+    public Optional<Output<ParserConfigArgs>> parserConfig() {
+        return Optional.ofNullable(this.parserConfig);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -97,157 +97,133 @@ public final class Hl7V2StoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rejectDuplicateMessage")
-      private final @Nullable Output<Boolean> rejectDuplicateMessage;
+    private @Nullable Output<Boolean> rejectDuplicateMessage;
 
-    public Output<Boolean> rejectDuplicateMessage() {
-        return this.rejectDuplicateMessage == null ? Codegen.empty() : this.rejectDuplicateMessage;
+    public Optional<Output<Boolean>> rejectDuplicateMessage() {
+        return Optional.ofNullable(this.rejectDuplicateMessage);
     }
 
-    public Hl7V2StoreArgs(
-        Output<String> datasetId,
-        @Nullable Output<String> hl7V2StoreId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs,
-        @Nullable Output<ParserConfigArgs> parserConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> rejectDuplicateMessage) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.hl7V2StoreId = hl7V2StoreId;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.notificationConfigs = notificationConfigs;
-        this.parserConfig = parserConfig;
-        this.project = project;
-        this.rejectDuplicateMessage = rejectDuplicateMessage;
-    }
+    private Hl7V2StoreArgs() {}
 
-    private Hl7V2StoreArgs() {
-        this.datasetId = Codegen.empty();
-        this.hl7V2StoreId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationConfigs = Codegen.empty();
-        this.parserConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rejectDuplicateMessage = Codegen.empty();
+    private Hl7V2StoreArgs(Hl7V2StoreArgs $) {
+        this.datasetId = $.datasetId;
+        this.hl7V2StoreId = $.hl7V2StoreId;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.notificationConfigs = $.notificationConfigs;
+        this.parserConfig = $.parserConfig;
+        this.project = $.project;
+        this.rejectDuplicateMessage = $.rejectDuplicateMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7V2StoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> datasetId;
-        private @Nullable Output<String> hl7V2StoreId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs;
-        private @Nullable Output<ParserConfigArgs> parserConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> rejectDuplicateMessage;
+        private Hl7V2StoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7V2StoreArgs();
         }
 
         public Builder(Hl7V2StoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.hl7V2StoreId = defaults.hl7V2StoreId;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.notificationConfigs = defaults.notificationConfigs;
-    	      this.parserConfig = defaults.parserConfig;
-    	      this.project = defaults.project;
-    	      this.rejectDuplicateMessage = defaults.rejectDuplicateMessage;
+            $ = new Hl7V2StoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder hl7V2StoreId(@Nullable Output<String> hl7V2StoreId) {
-            this.hl7V2StoreId = hl7V2StoreId;
+            $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
-        public Builder hl7V2StoreId(@Nullable String hl7V2StoreId) {
-            this.hl7V2StoreId = Codegen.ofNullable(hl7V2StoreId);
-            return this;
+
+        public Builder hl7V2StoreId(String hl7V2StoreId) {
+            return hl7V2StoreId(Output.of(hl7V2StoreId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationConfigs(@Nullable Output<List<Hl7V2NotificationConfigArgs>> notificationConfigs) {
-            this.notificationConfigs = notificationConfigs;
+            $.notificationConfigs = notificationConfigs;
             return this;
         }
-        public Builder notificationConfigs(@Nullable List<Hl7V2NotificationConfigArgs> notificationConfigs) {
-            this.notificationConfigs = Codegen.ofNullable(notificationConfigs);
-            return this;
+
+        public Builder notificationConfigs(List<Hl7V2NotificationConfigArgs> notificationConfigs) {
+            return notificationConfigs(Output.of(notificationConfigs));
         }
+
         public Builder notificationConfigs(Hl7V2NotificationConfigArgs... notificationConfigs) {
             return notificationConfigs(List.of(notificationConfigs));
         }
+
         public Builder parserConfig(@Nullable Output<ParserConfigArgs> parserConfig) {
-            this.parserConfig = parserConfig;
+            $.parserConfig = parserConfig;
             return this;
         }
-        public Builder parserConfig(@Nullable ParserConfigArgs parserConfig) {
-            this.parserConfig = Codegen.ofNullable(parserConfig);
-            return this;
+
+        public Builder parserConfig(ParserConfigArgs parserConfig) {
+            return parserConfig(Output.of(parserConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rejectDuplicateMessage(@Nullable Output<Boolean> rejectDuplicateMessage) {
-            this.rejectDuplicateMessage = rejectDuplicateMessage;
+            $.rejectDuplicateMessage = rejectDuplicateMessage;
             return this;
         }
-        public Builder rejectDuplicateMessage(@Nullable Boolean rejectDuplicateMessage) {
-            this.rejectDuplicateMessage = Codegen.ofNullable(rejectDuplicateMessage);
-            return this;
-        }        public Hl7V2StoreArgs build() {
-            return new Hl7V2StoreArgs(datasetId, hl7V2StoreId, labels, location, name, notificationConfigs, parserConfig, project, rejectDuplicateMessage);
+
+        public Builder rejectDuplicateMessage(Boolean rejectDuplicateMessage) {
+            return rejectDuplicateMessage(Output.of(rejectDuplicateMessage));
+        }
+
+        public Hl7V2StoreArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,62 +15,58 @@ public final class GetSslPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSslPolicyArgs Empty = new GetSslPolicyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="sslPolicy", required=true)
-      private final String sslPolicy;
+    private String sslPolicy;
 
     public String sslPolicy() {
         return this.sslPolicy;
     }
 
-    public GetSslPolicyArgs(
-        @Nullable String project,
-        String sslPolicy) {
-        this.project = project;
-        this.sslPolicy = Objects.requireNonNull(sslPolicy, "expected parameter 'sslPolicy' to be non-null");
-    }
+    private GetSslPolicyArgs() {}
 
-    private GetSslPolicyArgs() {
-        this.project = null;
-        this.sslPolicy = null;
+    private GetSslPolicyArgs(GetSslPolicyArgs $) {
+        this.project = $.project;
+        this.sslPolicy = $.sslPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSslPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String sslPolicy;
+        private GetSslPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSslPolicyArgs();
         }
 
         public Builder(GetSslPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.sslPolicy = defaults.sslPolicy;
+            $ = new GetSslPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder sslPolicy(String sslPolicy) {
-            this.sslPolicy = Objects.requireNonNull(sslPolicy);
+            $.sslPolicy = sslPolicy;
             return this;
-        }        public GetSslPolicyArgs build() {
-            return new GetSslPolicyArgs(project, sslPolicy);
+        }
+
+        public GetSslPolicyArgs build() {
+            $.sslPolicy = Objects.requireNonNull($.sslPolicy, "expected parameter 'sslPolicy' to be non-null");
+            return $;
         }
     }
+
 }

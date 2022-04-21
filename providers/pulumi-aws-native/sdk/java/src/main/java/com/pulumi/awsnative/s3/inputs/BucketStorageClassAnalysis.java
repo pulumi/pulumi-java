@@ -19,45 +19,44 @@ public final class BucketStorageClassAnalysis extends com.pulumi.resources.Invok
     public static final BucketStorageClassAnalysis Empty = new BucketStorageClassAnalysis();
 
     @Import(name="dataExport")
-      private final @Nullable BucketDataExport dataExport;
+    private @Nullable BucketDataExport dataExport;
 
     public Optional<BucketDataExport> dataExport() {
-        return this.dataExport == null ? Optional.empty() : Optional.ofNullable(this.dataExport);
+        return Optional.ofNullable(this.dataExport);
     }
 
-    public BucketStorageClassAnalysis(@Nullable BucketDataExport dataExport) {
-        this.dataExport = dataExport;
-    }
+    private BucketStorageClassAnalysis() {}
 
-    private BucketStorageClassAnalysis() {
-        this.dataExport = null;
+    private BucketStorageClassAnalysis(BucketStorageClassAnalysis $) {
+        this.dataExport = $.dataExport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketStorageClassAnalysis defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BucketDataExport dataExport;
+        private BucketStorageClassAnalysis $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketStorageClassAnalysis();
         }
 
         public Builder(BucketStorageClassAnalysis defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataExport = defaults.dataExport;
+            $ = new BucketStorageClassAnalysis(Objects.requireNonNull(defaults));
         }
 
         public Builder dataExport(@Nullable BucketDataExport dataExport) {
-            this.dataExport = dataExport;
+            $.dataExport = dataExport;
             return this;
-        }        public BucketStorageClassAnalysis build() {
-            return new BucketStorageClassAnalysis(dataExport);
+        }
+
+        public BucketStorageClassAnalysis build() {
+            return $;
         }
     }
+
 }

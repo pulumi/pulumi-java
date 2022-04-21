@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ModelContainerImageConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="repositoryAccessMode", required=true)
-      private final Output<String> repositoryAccessMode;
+    private Output<String> repositoryAccessMode;
 
     public Output<String> repositoryAccessMode() {
         return this.repositoryAccessMode;
     }
 
-    public ModelContainerImageConfigArgs(Output<String> repositoryAccessMode) {
-        this.repositoryAccessMode = Objects.requireNonNull(repositoryAccessMode, "expected parameter 'repositoryAccessMode' to be non-null");
-    }
+    private ModelContainerImageConfigArgs() {}
 
-    private ModelContainerImageConfigArgs() {
-        this.repositoryAccessMode = Codegen.empty();
+    private ModelContainerImageConfigArgs(ModelContainerImageConfigArgs $) {
+        this.repositoryAccessMode = $.repositoryAccessMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelContainerImageConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> repositoryAccessMode;
+        private ModelContainerImageConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelContainerImageConfigArgs();
         }
 
         public Builder(ModelContainerImageConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositoryAccessMode = defaults.repositoryAccessMode;
+            $ = new ModelContainerImageConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repositoryAccessMode(Output<String> repositoryAccessMode) {
-            this.repositoryAccessMode = Objects.requireNonNull(repositoryAccessMode);
+            $.repositoryAccessMode = repositoryAccessMode;
             return this;
         }
+
         public Builder repositoryAccessMode(String repositoryAccessMode) {
-            this.repositoryAccessMode = Output.of(Objects.requireNonNull(repositoryAccessMode));
-            return this;
-        }        public ModelContainerImageConfigArgs build() {
-            return new ModelContainerImageConfigArgs(repositoryAccessMode);
+            return repositoryAccessMode(Output.of(repositoryAccessMode));
+        }
+
+        public ModelContainerImageConfigArgs build() {
+            $.repositoryAccessMode = Objects.requireNonNull($.repositoryAccessMode, "expected parameter 'repositoryAccessMode' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.mwaa.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class EnvironmentLastUpdatedErrorArgs extends com.pulumi.resources.
     public static final EnvironmentLastUpdatedErrorArgs Empty = new EnvironmentLastUpdatedErrorArgs();
 
     @Import(name="errorCode")
-      private final @Nullable Output<String> errorCode;
+    private @Nullable Output<String> errorCode;
 
-    public Output<String> errorCode() {
-        return this.errorCode == null ? Codegen.empty() : this.errorCode;
+    public Optional<Output<String>> errorCode() {
+        return Optional.ofNullable(this.errorCode);
     }
 
     @Import(name="errorMessage")
-      private final @Nullable Output<String> errorMessage;
+    private @Nullable Output<String> errorMessage;
 
-    public Output<String> errorMessage() {
-        return this.errorMessage == null ? Codegen.empty() : this.errorMessage;
+    public Optional<Output<String>> errorMessage() {
+        return Optional.ofNullable(this.errorMessage);
     }
 
-    public EnvironmentLastUpdatedErrorArgs(
-        @Nullable Output<String> errorCode,
-        @Nullable Output<String> errorMessage) {
-        this.errorCode = errorCode;
-        this.errorMessage = errorMessage;
-    }
+    private EnvironmentLastUpdatedErrorArgs() {}
 
-    private EnvironmentLastUpdatedErrorArgs() {
-        this.errorCode = Codegen.empty();
-        this.errorMessage = Codegen.empty();
+    private EnvironmentLastUpdatedErrorArgs(EnvironmentLastUpdatedErrorArgs $) {
+        this.errorCode = $.errorCode;
+        this.errorMessage = $.errorMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentLastUpdatedErrorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> errorCode;
-        private @Nullable Output<String> errorMessage;
+        private EnvironmentLastUpdatedErrorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentLastUpdatedErrorArgs();
         }
 
         public Builder(EnvironmentLastUpdatedErrorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCode = defaults.errorCode;
-    	      this.errorMessage = defaults.errorMessage;
+            $ = new EnvironmentLastUpdatedErrorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCode(@Nullable Output<String> errorCode) {
-            this.errorCode = errorCode;
+            $.errorCode = errorCode;
             return this;
         }
-        public Builder errorCode(@Nullable String errorCode) {
-            this.errorCode = Codegen.ofNullable(errorCode);
-            return this;
+
+        public Builder errorCode(String errorCode) {
+            return errorCode(Output.of(errorCode));
         }
+
         public Builder errorMessage(@Nullable Output<String> errorMessage) {
-            this.errorMessage = errorMessage;
+            $.errorMessage = errorMessage;
             return this;
         }
-        public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = Codegen.ofNullable(errorMessage);
-            return this;
-        }        public EnvironmentLastUpdatedErrorArgs build() {
-            return new EnvironmentLastUpdatedErrorArgs(errorCode, errorMessage);
+
+        public Builder errorMessage(String errorMessage) {
+            return errorMessage(Output.of(errorMessage));
+        }
+
+        public EnvironmentLastUpdatedErrorArgs build() {
+            return $;
         }
     }
+
 }

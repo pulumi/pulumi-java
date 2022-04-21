@@ -26,10 +26,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="contentType")
-      private final @Nullable String contentType;
+    private @Nullable String contentType;
 
     public Optional<String> contentType() {
-        return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="correlationId")
-      private final @Nullable String correlationId;
+    private @Nullable String correlationId;
 
     public Optional<String> correlationId() {
-        return this.correlationId == null ? Optional.empty() : Optional.ofNullable(this.correlationId);
+        return Optional.ofNullable(this.correlationId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="messageId")
-      private final @Nullable String messageId;
+    private @Nullable String messageId;
 
     public Optional<String> messageId() {
-        return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
+        return Optional.ofNullable(this.messageId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="replyTo")
-      private final @Nullable String replyTo;
+    private @Nullable String replyTo;
 
     public Optional<String> replyTo() {
-        return this.replyTo == null ? Optional.empty() : Optional.ofNullable(this.replyTo);
+        return Optional.ofNullable(this.replyTo);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="replyToSessionId")
-      private final @Nullable String replyToSessionId;
+    private @Nullable String replyToSessionId;
 
     public Optional<String> replyToSessionId() {
-        return this.replyToSessionId == null ? Optional.empty() : Optional.ofNullable(this.replyToSessionId);
+        return Optional.ofNullable(this.replyToSessionId);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="requiresPreprocessing")
-      private final @Nullable Boolean requiresPreprocessing;
+    private @Nullable Boolean requiresPreprocessing;
 
     public Optional<Boolean> requiresPreprocessing() {
-        return this.requiresPreprocessing == null ? Optional.empty() : Optional.ofNullable(this.requiresPreprocessing);
+        return Optional.ofNullable(this.requiresPreprocessing);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sessionId")
-      private final @Nullable String sessionId;
+    private @Nullable String sessionId;
 
     public Optional<String> sessionId() {
-        return this.sessionId == null ? Optional.empty() : Optional.ofNullable(this.sessionId);
+        return Optional.ofNullable(this.sessionId);
     }
 
     /**
@@ -125,127 +125,99 @@ public final class CorrelationFilterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="to")
-      private final @Nullable String to;
+    private @Nullable String to;
 
     public Optional<String> to() {
-        return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
+        return Optional.ofNullable(this.to);
     }
 
-    public CorrelationFilterResponse(
-        @Nullable String contentType,
-        @Nullable String correlationId,
-        @Nullable String label,
-        @Nullable String messageId,
-        @Nullable Map<String,String> properties,
-        @Nullable String replyTo,
-        @Nullable String replyToSessionId,
-        @Nullable Boolean requiresPreprocessing,
-        @Nullable String sessionId,
-        @Nullable String to) {
-        this.contentType = contentType;
-        this.correlationId = correlationId;
-        this.label = label;
-        this.messageId = messageId;
-        this.properties = properties;
-        this.replyTo = replyTo;
-        this.replyToSessionId = replyToSessionId;
-        this.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").arg(requiresPreprocessing).def(true).getNullable();
-        this.sessionId = sessionId;
-        this.to = to;
-    }
+    private CorrelationFilterResponse() {}
 
-    private CorrelationFilterResponse() {
-        this.contentType = null;
-        this.correlationId = null;
-        this.label = null;
-        this.messageId = null;
-        this.properties = Map.of();
-        this.replyTo = null;
-        this.replyToSessionId = null;
-        this.requiresPreprocessing = null;
-        this.sessionId = null;
-        this.to = null;
+    private CorrelationFilterResponse(CorrelationFilterResponse $) {
+        this.contentType = $.contentType;
+        this.correlationId = $.correlationId;
+        this.label = $.label;
+        this.messageId = $.messageId;
+        this.properties = $.properties;
+        this.replyTo = $.replyTo;
+        this.replyToSessionId = $.replyToSessionId;
+        this.requiresPreprocessing = $.requiresPreprocessing;
+        this.sessionId = $.sessionId;
+        this.to = $.to;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CorrelationFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contentType;
-        private @Nullable String correlationId;
-        private @Nullable String label;
-        private @Nullable String messageId;
-        private @Nullable Map<String,String> properties;
-        private @Nullable String replyTo;
-        private @Nullable String replyToSessionId;
-        private @Nullable Boolean requiresPreprocessing;
-        private @Nullable String sessionId;
-        private @Nullable String to;
+        private CorrelationFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CorrelationFilterResponse();
         }
 
         public Builder(CorrelationFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.correlationId = defaults.correlationId;
-    	      this.label = defaults.label;
-    	      this.messageId = defaults.messageId;
-    	      this.properties = defaults.properties;
-    	      this.replyTo = defaults.replyTo;
-    	      this.replyToSessionId = defaults.replyToSessionId;
-    	      this.requiresPreprocessing = defaults.requiresPreprocessing;
-    	      this.sessionId = defaults.sessionId;
-    	      this.to = defaults.to;
+            $ = new CorrelationFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
+
         public Builder correlationId(@Nullable String correlationId) {
-            this.correlationId = correlationId;
+            $.correlationId = correlationId;
             return this;
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = messageId;
+            $.messageId = messageId;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder replyTo(@Nullable String replyTo) {
-            this.replyTo = replyTo;
+            $.replyTo = replyTo;
             return this;
         }
+
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
-            this.replyToSessionId = replyToSessionId;
+            $.replyToSessionId = replyToSessionId;
             return this;
         }
+
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
-            this.requiresPreprocessing = requiresPreprocessing;
+            $.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
+
         public Builder sessionId(@Nullable String sessionId) {
-            this.sessionId = sessionId;
+            $.sessionId = sessionId;
             return this;
         }
+
         public Builder to(@Nullable String to) {
-            this.to = to;
+            $.to = to;
             return this;
-        }        public CorrelationFilterResponse build() {
-            return new CorrelationFilterResponse(contentType, correlationId, label, messageId, properties, replyTo, replyToSessionId, requiresPreprocessing, sessionId, to);
+        }
+
+        public CorrelationFilterResponse build() {
+            $.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").arg($.requiresPreprocessing).def(true).getNullable();
+            return $;
         }
     }
+
 }

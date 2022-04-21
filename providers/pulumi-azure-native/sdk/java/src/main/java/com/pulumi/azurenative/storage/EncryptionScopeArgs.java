@@ -9,10 +9,10 @@ import com.pulumi.azurenative.storage.inputs.EncryptionScopeKeyVaultPropertiesAr
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -36,10 +36,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="encryptionScopeName")
-      private final @Nullable Output<String> encryptionScopeName;
+    private @Nullable Output<String> encryptionScopeName;
 
-    public Output<String> encryptionScopeName() {
-        return this.encryptionScopeName == null ? Codegen.empty() : this.encryptionScopeName;
+    public Optional<Output<String>> encryptionScopeName() {
+        return Optional.ofNullable(this.encryptionScopeName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties;
+    private @Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
+    public Optional<Output<EncryptionScopeKeyVaultPropertiesArgs>> keyVaultProperties() {
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="requireInfrastructureEncryption")
-      private final @Nullable Output<Boolean> requireInfrastructureEncryption;
+    private @Nullable Output<Boolean> requireInfrastructureEncryption;
 
-    public Output<Boolean> requireInfrastructureEncryption() {
-        return this.requireInfrastructureEncryption == null ? Codegen.empty() : this.requireInfrastructureEncryption;
+    public Optional<Output<Boolean>> requireInfrastructureEncryption() {
+        return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -80,10 +80,10 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<Either<String,EncryptionScopeSource>> source;
+    private @Nullable Output<Either<String,EncryptionScopeSource>> source;
 
-    public Output<Either<String,EncryptionScopeSource>> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<Either<String,EncryptionScopeSource>>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -91,128 +91,110 @@ public final class EncryptionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,EncryptionScopeState>> state;
+    private @Nullable Output<Either<String,EncryptionScopeState>> state;
 
-    public Output<Either<String,EncryptionScopeState>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,EncryptionScopeState>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public EncryptionScopeArgs(
-        Output<String> accountName,
-        @Nullable Output<String> encryptionScopeName,
-        @Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties,
-        @Nullable Output<Boolean> requireInfrastructureEncryption,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,EncryptionScopeSource>> source,
-        @Nullable Output<Either<String,EncryptionScopeState>> state) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.encryptionScopeName = encryptionScopeName;
-        this.keyVaultProperties = keyVaultProperties;
-        this.requireInfrastructureEncryption = requireInfrastructureEncryption;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.source = source;
-        this.state = state;
-    }
+    private EncryptionScopeArgs() {}
 
-    private EncryptionScopeArgs() {
-        this.accountName = Codegen.empty();
-        this.encryptionScopeName = Codegen.empty();
-        this.keyVaultProperties = Codegen.empty();
-        this.requireInfrastructureEncryption = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.state = Codegen.empty();
+    private EncryptionScopeArgs(EncryptionScopeArgs $) {
+        this.accountName = $.accountName;
+        this.encryptionScopeName = $.encryptionScopeName;
+        this.keyVaultProperties = $.keyVaultProperties;
+        this.requireInfrastructureEncryption = $.requireInfrastructureEncryption;
+        this.resourceGroupName = $.resourceGroupName;
+        this.source = $.source;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> encryptionScopeName;
-        private @Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties;
-        private @Nullable Output<Boolean> requireInfrastructureEncryption;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,EncryptionScopeSource>> source;
-        private @Nullable Output<Either<String,EncryptionScopeState>> state;
+        private EncryptionScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionScopeArgs();
         }
 
         public Builder(EncryptionScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.encryptionScopeName = defaults.encryptionScopeName;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
-    	      this.requireInfrastructureEncryption = defaults.requireInfrastructureEncryption;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.source = defaults.source;
-    	      this.state = defaults.state;
+            $ = new EncryptionScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder encryptionScopeName(@Nullable Output<String> encryptionScopeName) {
-            this.encryptionScopeName = encryptionScopeName;
+            $.encryptionScopeName = encryptionScopeName;
             return this;
         }
-        public Builder encryptionScopeName(@Nullable String encryptionScopeName) {
-            this.encryptionScopeName = Codegen.ofNullable(encryptionScopeName);
-            return this;
+
+        public Builder encryptionScopeName(String encryptionScopeName) {
+            return encryptionScopeName(Output.of(encryptionScopeName));
         }
+
         public Builder keyVaultProperties(@Nullable Output<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
-        public Builder keyVaultProperties(@Nullable EncryptionScopeKeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
-            return this;
+
+        public Builder keyVaultProperties(EncryptionScopeKeyVaultPropertiesArgs keyVaultProperties) {
+            return keyVaultProperties(Output.of(keyVaultProperties));
         }
+
         public Builder requireInfrastructureEncryption(@Nullable Output<Boolean> requireInfrastructureEncryption) {
-            this.requireInfrastructureEncryption = requireInfrastructureEncryption;
+            $.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
-        public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
-            this.requireInfrastructureEncryption = Codegen.ofNullable(requireInfrastructureEncryption);
-            return this;
+
+        public Builder requireInfrastructureEncryption(Boolean requireInfrastructureEncryption) {
+            return requireInfrastructureEncryption(Output.of(requireInfrastructureEncryption));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder source(@Nullable Output<Either<String,EncryptionScopeSource>> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable Either<String,EncryptionScopeSource> source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(Either<String,EncryptionScopeSource> source) {
+            return source(Output.of(source));
         }
+
         public Builder state(@Nullable Output<Either<String,EncryptionScopeState>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,EncryptionScopeState> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public EncryptionScopeArgs build() {
-            return new EncryptionScopeArgs(accountName, encryptionScopeName, keyVaultProperties, requireInfrastructureEncryption, resourceGroupName, source, state);
+
+        public Builder state(Either<String,EncryptionScopeState> state) {
+            return state(Output.of(state));
+        }
+
+        public EncryptionScopeArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

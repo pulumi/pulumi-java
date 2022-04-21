@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public TCPSocketActionArgs(
-        @Nullable Output<String> host,
-        @Nullable Output<Integer> port) {
-        this.host = host;
-        this.port = port;
-    }
+    private TCPSocketActionArgs() {}
 
-    private TCPSocketActionArgs() {
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
+    private TCPSocketActionArgs(TCPSocketActionArgs $) {
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TCPSocketActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> host;
-        private @Nullable Output<Integer> port;
+        private TCPSocketActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TCPSocketActionArgs();
         }
 
         public Builder(TCPSocketActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new TCPSocketActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public TCPSocketActionArgs build() {
-            return new TCPSocketActionArgs(host, port);
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        public TCPSocketActionArgs build() {
+            return $;
         }
     }
+
 }

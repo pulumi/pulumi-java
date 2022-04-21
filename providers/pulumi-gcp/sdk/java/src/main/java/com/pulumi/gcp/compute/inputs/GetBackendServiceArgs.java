@@ -19,7 +19,7 @@ public final class GetBackendServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -30,55 +30,51 @@ public final class GetBackendServiceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetBackendServiceArgs(
-        String name,
-        @Nullable String project) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-    }
+    private GetBackendServiceArgs() {}
 
-    private GetBackendServiceArgs() {
-        this.name = null;
-        this.project = null;
+    private GetBackendServiceArgs(GetBackendServiceArgs $) {
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String project;
+        private GetBackendServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceArgs();
         }
 
         public Builder(GetBackendServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new GetBackendServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetBackendServiceArgs build() {
-            return new GetBackendServiceArgs(name, project);
+        }
+
+        public GetBackendServiceArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

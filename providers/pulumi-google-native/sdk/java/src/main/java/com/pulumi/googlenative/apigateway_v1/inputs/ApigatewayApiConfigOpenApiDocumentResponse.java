@@ -21,45 +21,45 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse extends com.pulumi
      * 
      */
     @Import(name="document", required=true)
-      private final ApigatewayApiConfigFileResponse document;
+    private ApigatewayApiConfigFileResponse document;
 
     public ApigatewayApiConfigFileResponse document() {
         return this.document;
     }
 
-    public ApigatewayApiConfigOpenApiDocumentResponse(ApigatewayApiConfigFileResponse document) {
-        this.document = Objects.requireNonNull(document, "expected parameter 'document' to be non-null");
-    }
+    private ApigatewayApiConfigOpenApiDocumentResponse() {}
 
-    private ApigatewayApiConfigOpenApiDocumentResponse() {
-        this.document = null;
+    private ApigatewayApiConfigOpenApiDocumentResponse(ApigatewayApiConfigOpenApiDocumentResponse $) {
+        this.document = $.document;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayApiConfigOpenApiDocumentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ApigatewayApiConfigFileResponse document;
+        private ApigatewayApiConfigOpenApiDocumentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayApiConfigOpenApiDocumentResponse();
         }
 
         public Builder(ApigatewayApiConfigOpenApiDocumentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.document = defaults.document;
+            $ = new ApigatewayApiConfigOpenApiDocumentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder document(ApigatewayApiConfigFileResponse document) {
-            this.document = Objects.requireNonNull(document);
+            $.document = document;
             return this;
-        }        public ApigatewayApiConfigOpenApiDocumentResponse build() {
-            return new ApigatewayApiConfigOpenApiDocumentResponse(document);
+        }
+
+        public ApigatewayApiConfigOpenApiDocumentResponse build() {
+            $.document = Objects.requireNonNull($.document, "expected parameter 'document' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetMigrationJobArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMigrationJobArgs Empty = new GetMigrationJobArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="migrationJobId", required=true)
-      private final String migrationJobId;
+    private String migrationJobId;
 
     public String migrationJobId() {
         return this.migrationJobId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetMigrationJobArgs(
-        String location,
-        String migrationJobId,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.migrationJobId = Objects.requireNonNull(migrationJobId, "expected parameter 'migrationJobId' to be non-null");
-        this.project = project;
-    }
+    private GetMigrationJobArgs() {}
 
-    private GetMigrationJobArgs() {
-        this.location = null;
-        this.migrationJobId = null;
-        this.project = null;
+    private GetMigrationJobArgs(GetMigrationJobArgs $) {
+        this.location = $.location;
+        this.migrationJobId = $.migrationJobId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMigrationJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String migrationJobId;
-        private @Nullable String project;
+        private GetMigrationJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMigrationJobArgs();
         }
 
         public Builder(GetMigrationJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.migrationJobId = defaults.migrationJobId;
-    	      this.project = defaults.project;
+            $ = new GetMigrationJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder migrationJobId(String migrationJobId) {
-            this.migrationJobId = Objects.requireNonNull(migrationJobId);
+            $.migrationJobId = migrationJobId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetMigrationJobArgs build() {
-            return new GetMigrationJobArgs(location, migrationJobId, project);
+        }
+
+        public GetMigrationJobArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.migrationJobId = Objects.requireNonNull($.migrationJobId, "expected parameter 'migrationJobId' to be non-null");
+            return $;
         }
     }
+
 }

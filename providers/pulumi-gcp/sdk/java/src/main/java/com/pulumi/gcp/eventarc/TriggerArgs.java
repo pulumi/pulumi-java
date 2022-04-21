@@ -5,7 +5,6 @@ package com.pulumi.gcp.eventarc;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.eventarc.inputs.TriggerDestinationArgs;
 import com.pulumi.gcp.eventarc.inputs.TriggerMatchingCriteriaArgs;
 import com.pulumi.gcp.eventarc.inputs.TriggerTransportArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<TriggerDestinationArgs> destination;
+    private Output<TriggerDestinationArgs> destination;
 
     public Output<TriggerDestinationArgs> destination() {
         return this.destination;
@@ -36,10 +36,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -58,7 +58,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchingCriterias", required=true)
-      private final Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias;
+    private Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias;
 
     public Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias() {
         return this.matchingCriterias;
@@ -69,10 +69,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -102,147 +102,129 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transports")
-      private final @Nullable Output<List<TriggerTransportArgs>> transports;
+    private @Nullable Output<List<TriggerTransportArgs>> transports;
 
-    public Output<List<TriggerTransportArgs>> transports() {
-        return this.transports == null ? Codegen.empty() : this.transports;
+    public Optional<Output<List<TriggerTransportArgs>>> transports() {
+        return Optional.ofNullable(this.transports);
     }
 
-    public TriggerArgs(
-        Output<TriggerDestinationArgs> destination,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> location,
-        Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<List<TriggerTransportArgs>> transports) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.labels = labels;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.matchingCriterias = Objects.requireNonNull(matchingCriterias, "expected parameter 'matchingCriterias' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.serviceAccount = serviceAccount;
-        this.transports = transports;
-    }
+    private TriggerArgs() {}
 
-    private TriggerArgs() {
-        this.destination = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.matchingCriterias = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.transports = Codegen.empty();
+    private TriggerArgs(TriggerArgs $) {
+        this.destination = $.destination;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.matchingCriterias = $.matchingCriterias;
+        this.name = $.name;
+        this.project = $.project;
+        this.serviceAccount = $.serviceAccount;
+        this.transports = $.transports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<TriggerDestinationArgs> destination;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> location;
-        private Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<List<TriggerTransportArgs>> transports;
+        private TriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerArgs();
         }
 
         public Builder(TriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.matchingCriterias = defaults.matchingCriterias;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.transports = defaults.transports;
+            $ = new TriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<TriggerDestinationArgs> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(TriggerDestinationArgs destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder matchingCriterias(Output<List<TriggerMatchingCriteriaArgs>> matchingCriterias) {
-            this.matchingCriterias = Objects.requireNonNull(matchingCriterias);
+            $.matchingCriterias = matchingCriterias;
             return this;
         }
+
         public Builder matchingCriterias(List<TriggerMatchingCriteriaArgs> matchingCriterias) {
-            this.matchingCriterias = Output.of(Objects.requireNonNull(matchingCriterias));
-            return this;
+            return matchingCriterias(Output.of(matchingCriterias));
         }
+
         public Builder matchingCriterias(TriggerMatchingCriteriaArgs... matchingCriterias) {
             return matchingCriterias(List.of(matchingCriterias));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder transports(@Nullable Output<List<TriggerTransportArgs>> transports) {
-            this.transports = transports;
+            $.transports = transports;
             return this;
         }
-        public Builder transports(@Nullable List<TriggerTransportArgs> transports) {
-            this.transports = Codegen.ofNullable(transports);
-            return this;
+
+        public Builder transports(List<TriggerTransportArgs> transports) {
+            return transports(Output.of(transports));
         }
+
         public Builder transports(TriggerTransportArgs... transports) {
             return transports(List.of(transports));
-        }        public TriggerArgs build() {
-            return new TriggerArgs(destination, labels, location, matchingCriterias, name, project, serviceAccount, transports);
+        }
+
+        public TriggerArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.matchingCriterias = Objects.requireNonNull($.matchingCriterias, "expected parameter 'matchingCriterias' to be non-null");
+            return $;
         }
     }
+
 }

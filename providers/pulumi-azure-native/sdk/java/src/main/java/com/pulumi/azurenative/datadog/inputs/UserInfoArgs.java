@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datadog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailAddress")
-      private final @Nullable Output<String> emailAddress;
+    private @Nullable Output<String> emailAddress;
 
-    public Output<String> emailAddress() {
-        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
+    public Optional<Output<String>> emailAddress() {
+        return Optional.ofNullable(this.emailAddress);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phoneNumber")
-      private final @Nullable Output<String> phoneNumber;
+    private @Nullable Output<String> phoneNumber;
 
-    public Output<String> phoneNumber() {
-        return this.phoneNumber == null ? Codegen.empty() : this.phoneNumber;
+    public Optional<Output<String>> phoneNumber() {
+        return Optional.ofNullable(this.phoneNumber);
     }
 
-    public UserInfoArgs(
-        @Nullable Output<String> emailAddress,
-        @Nullable Output<String> name,
-        @Nullable Output<String> phoneNumber) {
-        this.emailAddress = emailAddress;
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-    }
+    private UserInfoArgs() {}
 
-    private UserInfoArgs() {
-        this.emailAddress = Codegen.empty();
-        this.name = Codegen.empty();
-        this.phoneNumber = Codegen.empty();
+    private UserInfoArgs(UserInfoArgs $) {
+        this.emailAddress = $.emailAddress;
+        this.name = $.name;
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> emailAddress;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> phoneNumber;
+        private UserInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserInfoArgs();
         }
 
         public Builder(UserInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.name = defaults.name;
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new UserInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
-            this.emailAddress = emailAddress;
+            $.emailAddress = emailAddress;
             return this;
         }
-        public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Codegen.ofNullable(emailAddress);
-            return this;
+
+        public Builder emailAddress(String emailAddress) {
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
-            this.phoneNumber = phoneNumber;
+            $.phoneNumber = phoneNumber;
             return this;
         }
-        public Builder phoneNumber(@Nullable String phoneNumber) {
-            this.phoneNumber = Codegen.ofNullable(phoneNumber);
-            return this;
-        }        public UserInfoArgs build() {
-            return new UserInfoArgs(emailAddress, name, phoneNumber);
+
+        public Builder phoneNumber(String phoneNumber) {
+            return phoneNumber(Output.of(phoneNumber));
+        }
+
+        public UserInfoArgs build() {
+            return $;
         }
     }
+
 }

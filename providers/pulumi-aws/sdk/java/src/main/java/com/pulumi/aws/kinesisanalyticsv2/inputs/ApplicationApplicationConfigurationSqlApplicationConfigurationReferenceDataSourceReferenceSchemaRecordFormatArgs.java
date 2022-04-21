@@ -6,7 +6,6 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="mappingParameters", required=true)
-      private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters;
+    private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters() {
         return this.mappingParameters;
@@ -31,63 +30,60 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="recordFormatType", required=true)
-      private final Output<String> recordFormatType;
+    private Output<String> recordFormatType;
 
     public Output<String> recordFormatType() {
         return this.recordFormatType;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs(
-        Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters,
-        Output<String> recordFormatType) {
-        this.mappingParameters = Objects.requireNonNull(mappingParameters, "expected parameter 'mappingParameters' to be non-null");
-        this.recordFormatType = Objects.requireNonNull(recordFormatType, "expected parameter 'recordFormatType' to be non-null");
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs() {
-        this.mappingParameters = Codegen.empty();
-        this.recordFormatType = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs $) {
+        this.mappingParameters = $.mappingParameters;
+        this.recordFormatType = $.recordFormatType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters;
-        private Output<String> recordFormatType;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mappingParameters = defaults.mappingParameters;
-    	      this.recordFormatType = defaults.recordFormatType;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mappingParameters(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs> mappingParameters) {
-            this.mappingParameters = Objects.requireNonNull(mappingParameters);
+            $.mappingParameters = mappingParameters;
             return this;
         }
+
         public Builder mappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs mappingParameters) {
-            this.mappingParameters = Output.of(Objects.requireNonNull(mappingParameters));
-            return this;
+            return mappingParameters(Output.of(mappingParameters));
         }
+
         public Builder recordFormatType(Output<String> recordFormatType) {
-            this.recordFormatType = Objects.requireNonNull(recordFormatType);
+            $.recordFormatType = recordFormatType;
             return this;
         }
+
         public Builder recordFormatType(String recordFormatType) {
-            this.recordFormatType = Output.of(Objects.requireNonNull(recordFormatType));
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs(mappingParameters, recordFormatType);
+            return recordFormatType(Output.of(recordFormatType));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs build() {
+            $.mappingParameters = Objects.requireNonNull($.mappingParameters, "expected parameter 'mappingParameters' to be non-null");
+            $.recordFormatType = Objects.requireNonNull($.recordFormatType, "expected parameter 'recordFormatType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.enums.TextFormat;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class TextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<TextFormat> format;
+    private @Nullable Output<TextFormat> format;
 
-    public Output<TextFormat> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<TextFormat>> format() {
+        return Optional.ofNullable(this.format);
     }
 
-    public TextArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<TextFormat> format) {
-        this.content = content;
-        this.format = format;
-    }
+    private TextArgs() {}
 
-    private TextArgs() {
-        this.content = Codegen.empty();
-        this.format = Codegen.empty();
+    private TextArgs(TextArgs $) {
+        this.content = $.content;
+        this.format = $.format;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<TextFormat> format;
+        private TextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TextArgs();
         }
 
         public Builder(TextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.format = defaults.format;
+            $ = new TextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder format(@Nullable Output<TextFormat> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable TextFormat format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
-        }        public TextArgs build() {
-            return new TextArgs(content, format);
+
+        public Builder format(TextFormat format) {
+            return format(Output.of(format));
+        }
+
+        public TextArgs build() {
+            return $;
         }
     }
+
 }

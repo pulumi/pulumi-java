@@ -24,10 +24,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable String databaseName;
+    private @Nullable String databaseName;
 
     public Optional<String> databaseName() {
-        return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fileType")
-      private final @Nullable String fileType;
+    private @Nullable String fileType;
 
     public Optional<String> fileType() {
-        return this.fileType == null ? Optional.empty() : Optional.ofNullable(this.fileType);
+        return Optional.ofNullable(this.fileType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="logicalName")
-      private final @Nullable String logicalName;
+    private @Nullable String logicalName;
 
     public Optional<String> logicalName() {
-        return this.logicalName == null ? Optional.empty() : Optional.ofNullable(this.logicalName);
+        return Optional.ofNullable(this.logicalName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="physicalFullName")
-      private final @Nullable String physicalFullName;
+    private @Nullable String physicalFullName;
 
     public Optional<String> physicalFullName() {
-        return this.physicalFullName == null ? Optional.empty() : Optional.ofNullable(this.physicalFullName);
+        return Optional.ofNullable(this.physicalFullName);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="restoreFullName")
-      private final @Nullable String restoreFullName;
+    private @Nullable String restoreFullName;
 
     public Optional<String> restoreFullName() {
-        return this.restoreFullName == null ? Optional.empty() : Optional.ofNullable(this.restoreFullName);
+        return Optional.ofNullable(this.restoreFullName);
     }
 
     /**
@@ -90,100 +90,80 @@ public final class DatabaseFileInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sizeMB")
-      private final @Nullable Double sizeMB;
+    private @Nullable Double sizeMB;
 
     public Optional<Double> sizeMB() {
-        return this.sizeMB == null ? Optional.empty() : Optional.ofNullable(this.sizeMB);
+        return Optional.ofNullable(this.sizeMB);
     }
 
-    public DatabaseFileInfoResponse(
-        @Nullable String databaseName,
-        @Nullable String fileType,
-        @Nullable String id,
-        @Nullable String logicalName,
-        @Nullable String physicalFullName,
-        @Nullable String restoreFullName,
-        @Nullable Double sizeMB) {
-        this.databaseName = databaseName;
-        this.fileType = fileType;
-        this.id = id;
-        this.logicalName = logicalName;
-        this.physicalFullName = physicalFullName;
-        this.restoreFullName = restoreFullName;
-        this.sizeMB = sizeMB;
-    }
+    private DatabaseFileInfoResponse() {}
 
-    private DatabaseFileInfoResponse() {
-        this.databaseName = null;
-        this.fileType = null;
-        this.id = null;
-        this.logicalName = null;
-        this.physicalFullName = null;
-        this.restoreFullName = null;
-        this.sizeMB = null;
+    private DatabaseFileInfoResponse(DatabaseFileInfoResponse $) {
+        this.databaseName = $.databaseName;
+        this.fileType = $.fileType;
+        this.id = $.id;
+        this.logicalName = $.logicalName;
+        this.physicalFullName = $.physicalFullName;
+        this.restoreFullName = $.restoreFullName;
+        this.sizeMB = $.sizeMB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseFileInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String databaseName;
-        private @Nullable String fileType;
-        private @Nullable String id;
-        private @Nullable String logicalName;
-        private @Nullable String physicalFullName;
-        private @Nullable String restoreFullName;
-        private @Nullable Double sizeMB;
+        private DatabaseFileInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseFileInfoResponse();
         }
 
         public Builder(DatabaseFileInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.fileType = defaults.fileType;
-    	      this.id = defaults.id;
-    	      this.logicalName = defaults.logicalName;
-    	      this.physicalFullName = defaults.physicalFullName;
-    	      this.restoreFullName = defaults.restoreFullName;
-    	      this.sizeMB = defaults.sizeMB;
+            $ = new DatabaseFileInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder fileType(@Nullable String fileType) {
-            this.fileType = fileType;
+            $.fileType = fileType;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder logicalName(@Nullable String logicalName) {
-            this.logicalName = logicalName;
+            $.logicalName = logicalName;
             return this;
         }
+
         public Builder physicalFullName(@Nullable String physicalFullName) {
-            this.physicalFullName = physicalFullName;
+            $.physicalFullName = physicalFullName;
             return this;
         }
+
         public Builder restoreFullName(@Nullable String restoreFullName) {
-            this.restoreFullName = restoreFullName;
+            $.restoreFullName = restoreFullName;
             return this;
         }
+
         public Builder sizeMB(@Nullable Double sizeMB) {
-            this.sizeMB = sizeMB;
+            $.sizeMB = sizeMB;
             return this;
-        }        public DatabaseFileInfoResponse build() {
-            return new DatabaseFileInfoResponse(databaseName, fileType, id, logicalName, physicalFullName, restoreFullName, sizeMB);
+        }
+
+        public DatabaseFileInfoResponse build() {
+            return $;
         }
     }
+
 }

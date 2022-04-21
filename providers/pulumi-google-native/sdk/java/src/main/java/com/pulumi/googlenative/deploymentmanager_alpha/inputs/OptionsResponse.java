@@ -25,7 +25,7 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="asyncOptions", required=true)
-      private final List<AsyncOptionsResponse> asyncOptions;
+    private List<AsyncOptionsResponse> asyncOptions;
 
     public List<AsyncOptionsResponse> asyncOptions() {
         return this.asyncOptions;
@@ -36,7 +36,7 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputMappings", required=true)
-      private final List<InputMappingResponse> inputMappings;
+    private List<InputMappingResponse> inputMappings;
 
     public List<InputMappingResponse> inputMappings() {
         return this.inputMappings;
@@ -47,7 +47,7 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nameProperty", required=true)
-      private final String nameProperty;
+    private String nameProperty;
 
     public String nameProperty() {
         return this.nameProperty;
@@ -58,79 +58,74 @@ public final class OptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="validationOptions", required=true)
-      private final ValidationOptionsResponse validationOptions;
+    private ValidationOptionsResponse validationOptions;
 
     public ValidationOptionsResponse validationOptions() {
         return this.validationOptions;
     }
 
-    public OptionsResponse(
-        List<AsyncOptionsResponse> asyncOptions,
-        List<InputMappingResponse> inputMappings,
-        String nameProperty,
-        ValidationOptionsResponse validationOptions) {
-        this.asyncOptions = Objects.requireNonNull(asyncOptions, "expected parameter 'asyncOptions' to be non-null");
-        this.inputMappings = Objects.requireNonNull(inputMappings, "expected parameter 'inputMappings' to be non-null");
-        this.nameProperty = Objects.requireNonNull(nameProperty, "expected parameter 'nameProperty' to be non-null");
-        this.validationOptions = Objects.requireNonNull(validationOptions, "expected parameter 'validationOptions' to be non-null");
-    }
+    private OptionsResponse() {}
 
-    private OptionsResponse() {
-        this.asyncOptions = List.of();
-        this.inputMappings = List.of();
-        this.nameProperty = null;
-        this.validationOptions = null;
+    private OptionsResponse(OptionsResponse $) {
+        this.asyncOptions = $.asyncOptions;
+        this.inputMappings = $.inputMappings;
+        this.nameProperty = $.nameProperty;
+        this.validationOptions = $.validationOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AsyncOptionsResponse> asyncOptions;
-        private List<InputMappingResponse> inputMappings;
-        private String nameProperty;
-        private ValidationOptionsResponse validationOptions;
+        private OptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OptionsResponse();
         }
 
         public Builder(OptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asyncOptions = defaults.asyncOptions;
-    	      this.inputMappings = defaults.inputMappings;
-    	      this.nameProperty = defaults.nameProperty;
-    	      this.validationOptions = defaults.validationOptions;
+            $ = new OptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder asyncOptions(List<AsyncOptionsResponse> asyncOptions) {
-            this.asyncOptions = Objects.requireNonNull(asyncOptions);
+            $.asyncOptions = asyncOptions;
             return this;
         }
+
         public Builder asyncOptions(AsyncOptionsResponse... asyncOptions) {
             return asyncOptions(List.of(asyncOptions));
         }
+
         public Builder inputMappings(List<InputMappingResponse> inputMappings) {
-            this.inputMappings = Objects.requireNonNull(inputMappings);
+            $.inputMappings = inputMappings;
             return this;
         }
+
         public Builder inputMappings(InputMappingResponse... inputMappings) {
             return inputMappings(List.of(inputMappings));
         }
+
         public Builder nameProperty(String nameProperty) {
-            this.nameProperty = Objects.requireNonNull(nameProperty);
+            $.nameProperty = nameProperty;
             return this;
         }
+
         public Builder validationOptions(ValidationOptionsResponse validationOptions) {
-            this.validationOptions = Objects.requireNonNull(validationOptions);
+            $.validationOptions = validationOptions;
             return this;
-        }        public OptionsResponse build() {
-            return new OptionsResponse(asyncOptions, inputMappings, nameProperty, validationOptions);
+        }
+
+        public OptionsResponse build() {
+            $.asyncOptions = Objects.requireNonNull($.asyncOptions, "expected parameter 'asyncOptions' to be non-null");
+            $.inputMappings = Objects.requireNonNull($.inputMappings, "expected parameter 'inputMappings' to be non-null");
+            $.nameProperty = Objects.requireNonNull($.nameProperty, "expected parameter 'nameProperty' to be non-null");
+            $.validationOptions = Objects.requireNonNull($.validationOptions, "expected parameter 'validationOptions' to be non-null");
+            return $;
         }
     }
+
 }

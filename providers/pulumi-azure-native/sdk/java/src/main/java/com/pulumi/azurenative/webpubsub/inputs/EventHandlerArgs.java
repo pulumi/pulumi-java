@@ -6,10 +6,10 @@ package com.pulumi.azurenative.webpubsub.inputs;
 import com.pulumi.azurenative.webpubsub.inputs.UpstreamAuthSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EventHandlerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auth")
-      private final @Nullable Output<UpstreamAuthSettingsArgs> auth;
+    private @Nullable Output<UpstreamAuthSettingsArgs> auth;
 
-    public Output<UpstreamAuthSettingsArgs> auth() {
-        return this.auth == null ? Codegen.empty() : this.auth;
+    public Optional<Output<UpstreamAuthSettingsArgs>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EventHandlerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="systemEvents")
-      private final @Nullable Output<List<String>> systemEvents;
+    private @Nullable Output<List<String>> systemEvents;
 
-    public Output<List<String>> systemEvents() {
-        return this.systemEvents == null ? Codegen.empty() : this.systemEvents;
+    public Optional<Output<List<String>>> systemEvents() {
+        return Optional.ofNullable(this.systemEvents);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class EventHandlerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlTemplate", required=true)
-      private final Output<String> urlTemplate;
+    private Output<String> urlTemplate;
 
     public Output<String> urlTemplate() {
         return this.urlTemplate;
@@ -64,92 +64,83 @@ public final class EventHandlerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userEventPattern")
-      private final @Nullable Output<String> userEventPattern;
+    private @Nullable Output<String> userEventPattern;
 
-    public Output<String> userEventPattern() {
-        return this.userEventPattern == null ? Codegen.empty() : this.userEventPattern;
+    public Optional<Output<String>> userEventPattern() {
+        return Optional.ofNullable(this.userEventPattern);
     }
 
-    public EventHandlerArgs(
-        @Nullable Output<UpstreamAuthSettingsArgs> auth,
-        @Nullable Output<List<String>> systemEvents,
-        Output<String> urlTemplate,
-        @Nullable Output<String> userEventPattern) {
-        this.auth = auth;
-        this.systemEvents = systemEvents;
-        this.urlTemplate = Objects.requireNonNull(urlTemplate, "expected parameter 'urlTemplate' to be non-null");
-        this.userEventPattern = userEventPattern;
-    }
+    private EventHandlerArgs() {}
 
-    private EventHandlerArgs() {
-        this.auth = Codegen.empty();
-        this.systemEvents = Codegen.empty();
-        this.urlTemplate = Codegen.empty();
-        this.userEventPattern = Codegen.empty();
+    private EventHandlerArgs(EventHandlerArgs $) {
+        this.auth = $.auth;
+        this.systemEvents = $.systemEvents;
+        this.urlTemplate = $.urlTemplate;
+        this.userEventPattern = $.userEventPattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHandlerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<UpstreamAuthSettingsArgs> auth;
-        private @Nullable Output<List<String>> systemEvents;
-        private Output<String> urlTemplate;
-        private @Nullable Output<String> userEventPattern;
+        private EventHandlerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHandlerArgs();
         }
 
         public Builder(EventHandlerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.systemEvents = defaults.systemEvents;
-    	      this.urlTemplate = defaults.urlTemplate;
-    	      this.userEventPattern = defaults.userEventPattern;
+            $ = new EventHandlerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable Output<UpstreamAuthSettingsArgs> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
-        public Builder auth(@Nullable UpstreamAuthSettingsArgs auth) {
-            this.auth = Codegen.ofNullable(auth);
-            return this;
+
+        public Builder auth(UpstreamAuthSettingsArgs auth) {
+            return auth(Output.of(auth));
         }
+
         public Builder systemEvents(@Nullable Output<List<String>> systemEvents) {
-            this.systemEvents = systemEvents;
+            $.systemEvents = systemEvents;
             return this;
         }
-        public Builder systemEvents(@Nullable List<String> systemEvents) {
-            this.systemEvents = Codegen.ofNullable(systemEvents);
-            return this;
+
+        public Builder systemEvents(List<String> systemEvents) {
+            return systemEvents(Output.of(systemEvents));
         }
+
         public Builder systemEvents(String... systemEvents) {
             return systemEvents(List.of(systemEvents));
         }
+
         public Builder urlTemplate(Output<String> urlTemplate) {
-            this.urlTemplate = Objects.requireNonNull(urlTemplate);
+            $.urlTemplate = urlTemplate;
             return this;
         }
+
         public Builder urlTemplate(String urlTemplate) {
-            this.urlTemplate = Output.of(Objects.requireNonNull(urlTemplate));
-            return this;
+            return urlTemplate(Output.of(urlTemplate));
         }
+
         public Builder userEventPattern(@Nullable Output<String> userEventPattern) {
-            this.userEventPattern = userEventPattern;
+            $.userEventPattern = userEventPattern;
             return this;
         }
-        public Builder userEventPattern(@Nullable String userEventPattern) {
-            this.userEventPattern = Codegen.ofNullable(userEventPattern);
-            return this;
-        }        public EventHandlerArgs build() {
-            return new EventHandlerArgs(auth, systemEvents, urlTemplate, userEventPattern);
+
+        public Builder userEventPattern(String userEventPattern) {
+            return userEventPattern(Output.of(userEventPattern));
+        }
+
+        public EventHandlerArgs build() {
+            $.urlTemplate = Objects.requireNonNull($.urlTemplate, "expected parameter 'urlTemplate' to be non-null");
+            return $;
         }
     }
+
 }

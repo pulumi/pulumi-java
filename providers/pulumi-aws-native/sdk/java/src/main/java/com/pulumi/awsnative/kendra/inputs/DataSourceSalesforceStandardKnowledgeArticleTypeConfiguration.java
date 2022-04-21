@@ -17,81 +17,75 @@ public final class DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration
     public static final DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration Empty = new DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration();
 
     @Import(name="documentDataFieldName", required=true)
-      private final String documentDataFieldName;
+    private String documentDataFieldName;
 
     public String documentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @Import(name="documentTitleFieldName")
-      private final @Nullable String documentTitleFieldName;
+    private @Nullable String documentTitleFieldName;
 
     public Optional<String> documentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
+        return Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+    private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> fieldMappings() {
-        return this.fieldMappings == null ? List.of() : this.fieldMappings;
+    public Optional<List<DataSourceToIndexFieldMapping>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
-    public DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration(
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-        this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
-        this.documentTitleFieldName = documentTitleFieldName;
-        this.fieldMappings = fieldMappings;
-    }
+    private DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration() {}
 
-    private DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration() {
-        this.documentDataFieldName = null;
-        this.documentTitleFieldName = null;
-        this.fieldMappings = List.of();
+    private DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration(DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration $) {
+        this.documentDataFieldName = $.documentDataFieldName;
+        this.documentTitleFieldName = $.documentTitleFieldName;
+        this.fieldMappings = $.fieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String documentDataFieldName;
-        private @Nullable String documentTitleFieldName;
-        private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+        private DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration();
         }
 
         public Builder(DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentDataFieldName = defaults.documentDataFieldName;
-    	      this.documentTitleFieldName = defaults.documentTitleFieldName;
-    	      this.fieldMappings = defaults.fieldMappings;
+            $ = new DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder documentDataFieldName(String documentDataFieldName) {
-            this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
+            $.documentDataFieldName = documentDataFieldName;
             return this;
         }
+
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = documentTitleFieldName;
+            $.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
+
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
-        }        public DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration build() {
-            return new DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings);
+        }
+
+        public DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration build() {
+            $.documentDataFieldName = Objects.requireNonNull($.documentDataFieldName, "expected parameter 'documentDataFieldName' to be non-null");
+            return $;
         }
     }
+
 }

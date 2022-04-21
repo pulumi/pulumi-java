@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * 
      */
     @Import(name="fileUri", required=true)
-      private final Output<String> fileUri;
+    private Output<String> fileUri;
 
     public Output<String> fileUri() {
         return this.fileUri;
@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * 
      */
     @Import(name="height")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height() {
-        return this.height == null ? Codegen.empty() : this.height;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight>> height() {
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * 
      */
     @Import(name="thumbnailUri")
-      private final @Nullable Output<String> thumbnailUri;
+    private @Nullable Output<String> thumbnailUri;
 
-    public Output<String> thumbnailUri() {
-        return this.thumbnailUri == null ? Codegen.empty() : this.thumbnailUri;
+    public Optional<Output<String>> thumbnailUri() {
+        return Optional.ofNullable(this.thumbnailUri);
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs(
-        Output<String> fileUri,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height,
-        @Nullable Output<String> thumbnailUri) {
-        this.fileUri = Objects.requireNonNull(fileUri, "expected parameter 'fileUri' to be non-null");
-        this.height = height;
-        this.thumbnailUri = thumbnailUri;
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs() {
-        this.fileUri = Codegen.empty();
-        this.height = Codegen.empty();
-        this.thumbnailUri = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs $) {
+        this.fileUri = $.fileUri;
+        this.height = $.height;
+        this.thumbnailUri = $.thumbnailUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fileUri;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height;
-        private @Nullable Output<String> thumbnailUri;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileUri = defaults.fileUri;
-    	      this.height = defaults.height;
-    	      this.thumbnailUri = defaults.thumbnailUri;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileUri(Output<String> fileUri) {
-            this.fileUri = Objects.requireNonNull(fileUri);
+            $.fileUri = fileUri;
             return this;
         }
+
         public Builder fileUri(String fileUri) {
-            this.fileUri = Output.of(Objects.requireNonNull(fileUri));
-            return this;
+            return fileUri(Output.of(fileUri));
         }
+
         public Builder height(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
-        public Builder height(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight height) {
-            this.height = Codegen.ofNullable(height);
-            return this;
+
+        public Builder height(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight height) {
+            return height(Output.of(height));
         }
+
         public Builder thumbnailUri(@Nullable Output<String> thumbnailUri) {
-            this.thumbnailUri = thumbnailUri;
+            $.thumbnailUri = thumbnailUri;
             return this;
         }
-        public Builder thumbnailUri(@Nullable String thumbnailUri) {
-            this.thumbnailUri = Codegen.ofNullable(thumbnailUri);
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs(fileUri, height, thumbnailUri);
+
+        public Builder thumbnailUri(String thumbnailUri) {
+            return thumbnailUri(Output.of(thumbnailUri));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs build() {
+            $.fileUri = Objects.requireNonNull($.fileUri, "expected parameter 'fileUri' to be non-null");
+            return $;
         }
     }
+
 }

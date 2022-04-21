@@ -28,10 +28,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="arguments")
-      private final @Nullable List<ArgumentResponse> arguments;
+    private @Nullable List<ArgumentResponse> arguments;
 
-    public List<ArgumentResponse> arguments() {
-        return this.arguments == null ? List.of() : this.arguments;
+    public Optional<List<ArgumentResponse>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="baseImageDependencies", required=true)
-      private final List<BaseImageDependencyResponse> baseImageDependencies;
+    private List<BaseImageDependencyResponse> baseImageDependencies;
 
     public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
@@ -50,10 +50,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="contextAccessToken")
-      private final @Nullable String contextAccessToken;
+    private @Nullable String contextAccessToken;
 
     public Optional<String> contextAccessToken() {
-        return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
+        return Optional.ofNullable(this.contextAccessToken);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="contextPath")
-      private final @Nullable String contextPath;
+    private @Nullable String contextPath;
 
     public Optional<String> contextPath() {
-        return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
+        return Optional.ofNullable(this.contextPath);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dockerFilePath", required=true)
-      private final String dockerFilePath;
+    private String dockerFilePath;
 
     public String dockerFilePath() {
         return this.dockerFilePath;
@@ -83,10 +83,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="imageNames")
-      private final @Nullable List<String> imageNames;
+    private @Nullable List<String> imageNames;
 
-    public List<String> imageNames() {
-        return this.imageNames == null ? List.of() : this.imageNames;
+    public Optional<List<String>> imageNames() {
+        return Optional.ofNullable(this.imageNames);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="isPushEnabled")
-      private final @Nullable Boolean isPushEnabled;
+    private @Nullable Boolean isPushEnabled;
 
     public Optional<Boolean> isPushEnabled() {
-        return this.isPushEnabled == null ? Optional.empty() : Optional.ofNullable(this.isPushEnabled);
+        return Optional.ofNullable(this.isPushEnabled);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="noCache")
-      private final @Nullable Boolean noCache;
+    private @Nullable Boolean noCache;
 
     public Optional<Boolean> noCache() {
-        return this.noCache == null ? Optional.empty() : Optional.ofNullable(this.noCache);
+        return Optional.ofNullable(this.noCache);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="target")
-      private final @Nullable String target;
+    private @Nullable String target;
 
     public Optional<String> target() {
-        return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -128,136 +128,115 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DockerBuildStepResponse(
-        @Nullable List<ArgumentResponse> arguments,
-        List<BaseImageDependencyResponse> baseImageDependencies,
-        @Nullable String contextAccessToken,
-        @Nullable String contextPath,
-        String dockerFilePath,
-        @Nullable List<String> imageNames,
-        @Nullable Boolean isPushEnabled,
-        @Nullable Boolean noCache,
-        @Nullable String target,
-        String type) {
-        this.arguments = arguments;
-        this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies, "expected parameter 'baseImageDependencies' to be non-null");
-        this.contextAccessToken = contextAccessToken;
-        this.contextPath = contextPath;
-        this.dockerFilePath = Objects.requireNonNull(dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
-        this.imageNames = imageNames;
-        this.isPushEnabled = Codegen.booleanProp("isPushEnabled").arg(isPushEnabled).def(true).getNullable();
-        this.noCache = Codegen.booleanProp("noCache").arg(noCache).def(false).getNullable();
-        this.target = target;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private DockerBuildStepResponse() {}
 
-    private DockerBuildStepResponse() {
-        this.arguments = List.of();
-        this.baseImageDependencies = List.of();
-        this.contextAccessToken = null;
-        this.contextPath = null;
-        this.dockerFilePath = null;
-        this.imageNames = List.of();
-        this.isPushEnabled = null;
-        this.noCache = null;
-        this.target = null;
-        this.type = null;
+    private DockerBuildStepResponse(DockerBuildStepResponse $) {
+        this.arguments = $.arguments;
+        this.baseImageDependencies = $.baseImageDependencies;
+        this.contextAccessToken = $.contextAccessToken;
+        this.contextPath = $.contextPath;
+        this.dockerFilePath = $.dockerFilePath;
+        this.imageNames = $.imageNames;
+        this.isPushEnabled = $.isPushEnabled;
+        this.noCache = $.noCache;
+        this.target = $.target;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DockerBuildStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ArgumentResponse> arguments;
-        private List<BaseImageDependencyResponse> baseImageDependencies;
-        private @Nullable String contextAccessToken;
-        private @Nullable String contextPath;
-        private String dockerFilePath;
-        private @Nullable List<String> imageNames;
-        private @Nullable Boolean isPushEnabled;
-        private @Nullable Boolean noCache;
-        private @Nullable String target;
-        private String type;
+        private DockerBuildStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DockerBuildStepResponse();
         }
 
         public Builder(DockerBuildStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.baseImageDependencies = defaults.baseImageDependencies;
-    	      this.contextAccessToken = defaults.contextAccessToken;
-    	      this.contextPath = defaults.contextPath;
-    	      this.dockerFilePath = defaults.dockerFilePath;
-    	      this.imageNames = defaults.imageNames;
-    	      this.isPushEnabled = defaults.isPushEnabled;
-    	      this.noCache = defaults.noCache;
-    	      this.target = defaults.target;
-    	      this.type = defaults.type;
+            $ = new DockerBuildStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable List<ArgumentResponse> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
+
         public Builder arguments(ArgumentResponse... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
-            this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
+            $.baseImageDependencies = baseImageDependencies;
             return this;
         }
+
         public Builder baseImageDependencies(BaseImageDependencyResponse... baseImageDependencies) {
             return baseImageDependencies(List.of(baseImageDependencies));
         }
+
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
-            this.contextAccessToken = contextAccessToken;
+            $.contextAccessToken = contextAccessToken;
             return this;
         }
+
         public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = contextPath;
+            $.contextPath = contextPath;
             return this;
         }
+
         public Builder dockerFilePath(String dockerFilePath) {
-            this.dockerFilePath = Objects.requireNonNull(dockerFilePath);
+            $.dockerFilePath = dockerFilePath;
             return this;
         }
+
         public Builder imageNames(@Nullable List<String> imageNames) {
-            this.imageNames = imageNames;
+            $.imageNames = imageNames;
             return this;
         }
+
         public Builder imageNames(String... imageNames) {
             return imageNames(List.of(imageNames));
         }
+
         public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
-            this.isPushEnabled = isPushEnabled;
+            $.isPushEnabled = isPushEnabled;
             return this;
         }
+
         public Builder noCache(@Nullable Boolean noCache) {
-            this.noCache = noCache;
+            $.noCache = noCache;
             return this;
         }
+
         public Builder target(@Nullable String target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DockerBuildStepResponse build() {
-            return new DockerBuildStepResponse(arguments, baseImageDependencies, contextAccessToken, contextPath, dockerFilePath, imageNames, isPushEnabled, noCache, target, type);
+        }
+
+        public DockerBuildStepResponse build() {
+            $.baseImageDependencies = Objects.requireNonNull($.baseImageDependencies, "expected parameter 'baseImageDependencies' to be non-null");
+            $.dockerFilePath = Objects.requireNonNull($.dockerFilePath, "expected parameter 'dockerFilePath' to be non-null");
+            $.isPushEnabled = Codegen.booleanProp("isPushEnabled").arg($.isPushEnabled).def(true).getNullable();
+            $.noCache = Codegen.booleanProp("noCache").arg($.noCache).def(false).getNullable();
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

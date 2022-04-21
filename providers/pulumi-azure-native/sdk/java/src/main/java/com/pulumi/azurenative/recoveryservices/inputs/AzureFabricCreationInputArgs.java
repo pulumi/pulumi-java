@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AzureFabricCreationInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -36,63 +37,59 @@ public final class AzureFabricCreationInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
-    public AzureFabricCreationInputArgs(
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> location) {
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.location = location;
-    }
+    private AzureFabricCreationInputArgs() {}
 
-    private AzureFabricCreationInputArgs() {
-        this.instanceType = Codegen.empty();
-        this.location = Codegen.empty();
+    private AzureFabricCreationInputArgs(AzureFabricCreationInputArgs $) {
+        this.instanceType = $.instanceType;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFabricCreationInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> location;
+        private AzureFabricCreationInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFabricCreationInputArgs();
         }
 
         public Builder(AzureFabricCreationInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.location = defaults.location;
+            $ = new AzureFabricCreationInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
-        }        public AzureFabricCreationInputArgs build() {
-            return new AzureFabricCreationInputArgs(instanceType, location);
+
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public AzureFabricCreationInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.MethodMapArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.OptionsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CollectionOverrideArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="collection")
-      private final @Nullable Output<String> collection;
+    private @Nullable Output<String> collection;
 
-    public Output<String> collection() {
-        return this.collection == null ? Codegen.empty() : this.collection;
+    public Optional<Output<String>> collection() {
+        return Optional.ofNullable(this.collection);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CollectionOverrideArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="methodMap")
-      private final @Nullable Output<MethodMapArgs> methodMap;
+    private @Nullable Output<MethodMapArgs> methodMap;
 
-    public Output<MethodMapArgs> methodMap() {
-        return this.methodMap == null ? Codegen.empty() : this.methodMap;
+    public Optional<Output<MethodMapArgs>> methodMap() {
+        return Optional.ofNullable(this.methodMap);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class CollectionOverrideArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<OptionsArgs> options;
+    private @Nullable Output<OptionsArgs> options;
 
-    public Output<OptionsArgs> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<OptionsArgs>> options() {
+        return Optional.ofNullable(this.options);
     }
 
-    public CollectionOverrideArgs(
-        @Nullable Output<String> collection,
-        @Nullable Output<MethodMapArgs> methodMap,
-        @Nullable Output<OptionsArgs> options) {
-        this.collection = collection;
-        this.methodMap = methodMap;
-        this.options = options;
-    }
+    private CollectionOverrideArgs() {}
 
-    private CollectionOverrideArgs() {
-        this.collection = Codegen.empty();
-        this.methodMap = Codegen.empty();
-        this.options = Codegen.empty();
+    private CollectionOverrideArgs(CollectionOverrideArgs $) {
+        this.collection = $.collection;
+        this.methodMap = $.methodMap;
+        this.options = $.options;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CollectionOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> collection;
-        private @Nullable Output<MethodMapArgs> methodMap;
-        private @Nullable Output<OptionsArgs> options;
+        private CollectionOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CollectionOverrideArgs();
         }
 
         public Builder(CollectionOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collection = defaults.collection;
-    	      this.methodMap = defaults.methodMap;
-    	      this.options = defaults.options;
+            $ = new CollectionOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder collection(@Nullable Output<String> collection) {
-            this.collection = collection;
+            $.collection = collection;
             return this;
         }
-        public Builder collection(@Nullable String collection) {
-            this.collection = Codegen.ofNullable(collection);
-            return this;
+
+        public Builder collection(String collection) {
+            return collection(Output.of(collection));
         }
+
         public Builder methodMap(@Nullable Output<MethodMapArgs> methodMap) {
-            this.methodMap = methodMap;
+            $.methodMap = methodMap;
             return this;
         }
-        public Builder methodMap(@Nullable MethodMapArgs methodMap) {
-            this.methodMap = Codegen.ofNullable(methodMap);
-            return this;
+
+        public Builder methodMap(MethodMapArgs methodMap) {
+            return methodMap(Output.of(methodMap));
         }
+
         public Builder options(@Nullable Output<OptionsArgs> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable OptionsArgs options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
-        }        public CollectionOverrideArgs build() {
-            return new CollectionOverrideArgs(collection, methodMap, options);
+
+        public Builder options(OptionsArgs options) {
+            return options(Output.of(options));
+        }
+
+        public CollectionOverrideArgs build() {
+            return $;
         }
     }
+
 }

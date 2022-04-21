@@ -26,10 +26,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="diskStorageUsedInBytes")
-      private final @Nullable String diskStorageUsedInBytes;
+    private @Nullable String diskStorageUsedInBytes;
 
     public Optional<String> diskStorageUsedInBytes() {
-        return this.diskStorageUsedInBytes == null ? Optional.empty() : Optional.ofNullable(this.diskStorageUsedInBytes);
+        return Optional.ofNullable(this.diskStorageUsedInBytes);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="isCollocated")
-      private final @Nullable Boolean isCollocated;
+    private @Nullable Boolean isCollocated;
 
     public Optional<Boolean> isCollocated() {
-        return this.isCollocated == null ? Optional.empty() : Optional.ofNullable(this.isCollocated);
+        return Optional.ofNullable(this.isCollocated);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="isPresentOnCloud")
-      private final @Nullable Boolean isPresentOnCloud;
+    private @Nullable Boolean isPresentOnCloud;
 
     public Optional<Boolean> isPresentOnCloud() {
-        return this.isPresentOnCloud == null ? Optional.empty() : Optional.ofNullable(this.isPresentOnCloud);
+        return Optional.ofNullable(this.isPresentOnCloud);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="lastBackupStatus")
-      private final @Nullable String lastBackupStatus;
+    private @Nullable String lastBackupStatus;
 
     public Optional<String> lastBackupStatus() {
-        return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
+        return Optional.ofNullable(this.lastBackupStatus);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="lastRefreshedAt")
-      private final @Nullable String lastRefreshedAt;
+    private @Nullable String lastRefreshedAt;
 
     public Optional<String> lastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
+        return Optional.ofNullable(this.lastRefreshedAt);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="oldestRecoveryPoint")
-      private final @Nullable String oldestRecoveryPoint;
+    private @Nullable String oldestRecoveryPoint;
 
     public Optional<String> oldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.oldestRecoveryPoint);
+        return Optional.ofNullable(this.oldestRecoveryPoint);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="onPremiseLatestRecoveryPoint")
-      private final @Nullable String onPremiseLatestRecoveryPoint;
+    private @Nullable String onPremiseLatestRecoveryPoint;
 
     public Optional<String> onPremiseLatestRecoveryPoint() {
-        return this.onPremiseLatestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.onPremiseLatestRecoveryPoint);
+        return Optional.ofNullable(this.onPremiseLatestRecoveryPoint);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="onPremiseOldestRecoveryPoint")
-      private final @Nullable String onPremiseOldestRecoveryPoint;
+    private @Nullable String onPremiseOldestRecoveryPoint;
 
     public Optional<String> onPremiseOldestRecoveryPoint() {
-        return this.onPremiseOldestRecoveryPoint == null ? Optional.empty() : Optional.ofNullable(this.onPremiseOldestRecoveryPoint);
+        return Optional.ofNullable(this.onPremiseOldestRecoveryPoint);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="onPremiseRecoveryPointCount")
-      private final @Nullable Integer onPremiseRecoveryPointCount;
+    private @Nullable Integer onPremiseRecoveryPointCount;
 
     public Optional<Integer> onPremiseRecoveryPointCount() {
-        return this.onPremiseRecoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.onPremiseRecoveryPointCount);
+        return Optional.ofNullable(this.onPremiseRecoveryPointCount);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="protectableObjectLoadPath")
-      private final @Nullable Map<String,String> protectableObjectLoadPath;
+    private @Nullable Map<String,String> protectableObjectLoadPath;
 
-    public Map<String,String> protectableObjectLoadPath() {
-        return this.protectableObjectLoadPath == null ? Map.of() : this.protectableObjectLoadPath;
+    public Optional<Map<String,String>> protectableObjectLoadPath() {
+        return Optional.ofNullable(this.protectableObjectLoadPath);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="protected")
-      private final @Nullable Boolean protected_;
+    private @Nullable Boolean protected_;
 
     public Optional<Boolean> protected_() {
-        return this.protected_ == null ? Optional.empty() : Optional.ofNullable(this.protected_);
+        return Optional.ofNullable(this.protected_);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="protectionGroupName")
-      private final @Nullable String protectionGroupName;
+    private @Nullable String protectionGroupName;
 
     public Optional<String> protectionGroupName() {
-        return this.protectionGroupName == null ? Optional.empty() : Optional.ofNullable(this.protectionGroupName);
+        return Optional.ofNullable(this.protectionGroupName);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="recoveryPointCount")
-      private final @Nullable Integer recoveryPointCount;
+    private @Nullable Integer recoveryPointCount;
 
     public Optional<Integer> recoveryPointCount() {
-        return this.recoveryPointCount == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointCount);
+        return Optional.ofNullable(this.recoveryPointCount);
     }
 
     /**
@@ -169,163 +169,122 @@ public final class DPMProtectedItemExtendedInfoResponse extends com.pulumi.resou
      * 
      */
     @Import(name="totalDiskStorageSizeInBytes")
-      private final @Nullable String totalDiskStorageSizeInBytes;
+    private @Nullable String totalDiskStorageSizeInBytes;
 
     public Optional<String> totalDiskStorageSizeInBytes() {
-        return this.totalDiskStorageSizeInBytes == null ? Optional.empty() : Optional.ofNullable(this.totalDiskStorageSizeInBytes);
+        return Optional.ofNullable(this.totalDiskStorageSizeInBytes);
     }
 
-    public DPMProtectedItemExtendedInfoResponse(
-        @Nullable String diskStorageUsedInBytes,
-        @Nullable Boolean isCollocated,
-        @Nullable Boolean isPresentOnCloud,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastRefreshedAt,
-        @Nullable String oldestRecoveryPoint,
-        @Nullable String onPremiseLatestRecoveryPoint,
-        @Nullable String onPremiseOldestRecoveryPoint,
-        @Nullable Integer onPremiseRecoveryPointCount,
-        @Nullable Map<String,String> protectableObjectLoadPath,
-        @Nullable Boolean protected_,
-        @Nullable String protectionGroupName,
-        @Nullable Integer recoveryPointCount,
-        @Nullable String totalDiskStorageSizeInBytes) {
-        this.diskStorageUsedInBytes = diskStorageUsedInBytes;
-        this.isCollocated = isCollocated;
-        this.isPresentOnCloud = isPresentOnCloud;
-        this.lastBackupStatus = lastBackupStatus;
-        this.lastRefreshedAt = lastRefreshedAt;
-        this.oldestRecoveryPoint = oldestRecoveryPoint;
-        this.onPremiseLatestRecoveryPoint = onPremiseLatestRecoveryPoint;
-        this.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
-        this.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
-        this.protectableObjectLoadPath = protectableObjectLoadPath;
-        this.protected_ = protected_;
-        this.protectionGroupName = protectionGroupName;
-        this.recoveryPointCount = recoveryPointCount;
-        this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
-    }
+    private DPMProtectedItemExtendedInfoResponse() {}
 
-    private DPMProtectedItemExtendedInfoResponse() {
-        this.diskStorageUsedInBytes = null;
-        this.isCollocated = null;
-        this.isPresentOnCloud = null;
-        this.lastBackupStatus = null;
-        this.lastRefreshedAt = null;
-        this.oldestRecoveryPoint = null;
-        this.onPremiseLatestRecoveryPoint = null;
-        this.onPremiseOldestRecoveryPoint = null;
-        this.onPremiseRecoveryPointCount = null;
-        this.protectableObjectLoadPath = Map.of();
-        this.protected_ = null;
-        this.protectionGroupName = null;
-        this.recoveryPointCount = null;
-        this.totalDiskStorageSizeInBytes = null;
+    private DPMProtectedItemExtendedInfoResponse(DPMProtectedItemExtendedInfoResponse $) {
+        this.diskStorageUsedInBytes = $.diskStorageUsedInBytes;
+        this.isCollocated = $.isCollocated;
+        this.isPresentOnCloud = $.isPresentOnCloud;
+        this.lastBackupStatus = $.lastBackupStatus;
+        this.lastRefreshedAt = $.lastRefreshedAt;
+        this.oldestRecoveryPoint = $.oldestRecoveryPoint;
+        this.onPremiseLatestRecoveryPoint = $.onPremiseLatestRecoveryPoint;
+        this.onPremiseOldestRecoveryPoint = $.onPremiseOldestRecoveryPoint;
+        this.onPremiseRecoveryPointCount = $.onPremiseRecoveryPointCount;
+        this.protectableObjectLoadPath = $.protectableObjectLoadPath;
+        this.protected_ = $.protected_;
+        this.protectionGroupName = $.protectionGroupName;
+        this.recoveryPointCount = $.recoveryPointCount;
+        this.totalDiskStorageSizeInBytes = $.totalDiskStorageSizeInBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DPMProtectedItemExtendedInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String diskStorageUsedInBytes;
-        private @Nullable Boolean isCollocated;
-        private @Nullable Boolean isPresentOnCloud;
-        private @Nullable String lastBackupStatus;
-        private @Nullable String lastRefreshedAt;
-        private @Nullable String oldestRecoveryPoint;
-        private @Nullable String onPremiseLatestRecoveryPoint;
-        private @Nullable String onPremiseOldestRecoveryPoint;
-        private @Nullable Integer onPremiseRecoveryPointCount;
-        private @Nullable Map<String,String> protectableObjectLoadPath;
-        private @Nullable Boolean protected_;
-        private @Nullable String protectionGroupName;
-        private @Nullable Integer recoveryPointCount;
-        private @Nullable String totalDiskStorageSizeInBytes;
+        private DPMProtectedItemExtendedInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DPMProtectedItemExtendedInfoResponse();
         }
 
         public Builder(DPMProtectedItemExtendedInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskStorageUsedInBytes = defaults.diskStorageUsedInBytes;
-    	      this.isCollocated = defaults.isCollocated;
-    	      this.isPresentOnCloud = defaults.isPresentOnCloud;
-    	      this.lastBackupStatus = defaults.lastBackupStatus;
-    	      this.lastRefreshedAt = defaults.lastRefreshedAt;
-    	      this.oldestRecoveryPoint = defaults.oldestRecoveryPoint;
-    	      this.onPremiseLatestRecoveryPoint = defaults.onPremiseLatestRecoveryPoint;
-    	      this.onPremiseOldestRecoveryPoint = defaults.onPremiseOldestRecoveryPoint;
-    	      this.onPremiseRecoveryPointCount = defaults.onPremiseRecoveryPointCount;
-    	      this.protectableObjectLoadPath = defaults.protectableObjectLoadPath;
-    	      this.protected_ = defaults.protected_;
-    	      this.protectionGroupName = defaults.protectionGroupName;
-    	      this.recoveryPointCount = defaults.recoveryPointCount;
-    	      this.totalDiskStorageSizeInBytes = defaults.totalDiskStorageSizeInBytes;
+            $ = new DPMProtectedItemExtendedInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskStorageUsedInBytes(@Nullable String diskStorageUsedInBytes) {
-            this.diskStorageUsedInBytes = diskStorageUsedInBytes;
+            $.diskStorageUsedInBytes = diskStorageUsedInBytes;
             return this;
         }
+
         public Builder isCollocated(@Nullable Boolean isCollocated) {
-            this.isCollocated = isCollocated;
+            $.isCollocated = isCollocated;
             return this;
         }
+
         public Builder isPresentOnCloud(@Nullable Boolean isPresentOnCloud) {
-            this.isPresentOnCloud = isPresentOnCloud;
+            $.isPresentOnCloud = isPresentOnCloud;
             return this;
         }
+
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
-            this.lastBackupStatus = lastBackupStatus;
+            $.lastBackupStatus = lastBackupStatus;
             return this;
         }
+
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = lastRefreshedAt;
+            $.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
+
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = oldestRecoveryPoint;
+            $.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
+
         public Builder onPremiseLatestRecoveryPoint(@Nullable String onPremiseLatestRecoveryPoint) {
-            this.onPremiseLatestRecoveryPoint = onPremiseLatestRecoveryPoint;
+            $.onPremiseLatestRecoveryPoint = onPremiseLatestRecoveryPoint;
             return this;
         }
+
         public Builder onPremiseOldestRecoveryPoint(@Nullable String onPremiseOldestRecoveryPoint) {
-            this.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
+            $.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
             return this;
         }
+
         public Builder onPremiseRecoveryPointCount(@Nullable Integer onPremiseRecoveryPointCount) {
-            this.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
+            $.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
             return this;
         }
+
         public Builder protectableObjectLoadPath(@Nullable Map<String,String> protectableObjectLoadPath) {
-            this.protectableObjectLoadPath = protectableObjectLoadPath;
+            $.protectableObjectLoadPath = protectableObjectLoadPath;
             return this;
         }
+
         public Builder protected_(@Nullable Boolean protected_) {
-            this.protected_ = protected_;
+            $.protected_ = protected_;
             return this;
         }
+
         public Builder protectionGroupName(@Nullable String protectionGroupName) {
-            this.protectionGroupName = protectionGroupName;
+            $.protectionGroupName = protectionGroupName;
             return this;
         }
+
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = recoveryPointCount;
+            $.recoveryPointCount = recoveryPointCount;
             return this;
         }
+
         public Builder totalDiskStorageSizeInBytes(@Nullable String totalDiskStorageSizeInBytes) {
-            this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
+            $.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
-        }        public DPMProtectedItemExtendedInfoResponse build() {
-            return new DPMProtectedItemExtendedInfoResponse(diskStorageUsedInBytes, isCollocated, isPresentOnCloud, lastBackupStatus, lastRefreshedAt, oldestRecoveryPoint, onPremiseLatestRecoveryPoint, onPremiseOldestRecoveryPoint, onPremiseRecoveryPointCount, protectableObjectLoadPath, protected_, protectionGroupName, recoveryPointCount, totalDiskStorageSizeInBytes);
+        }
+
+        public DPMProtectedItemExtendedInfoResponse build() {
+            return $;
         }
     }
+
 }

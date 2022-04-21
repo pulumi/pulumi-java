@@ -5,10 +5,10 @@ package com.pulumi.gcp.appengine;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.DomainMappingSslSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -35,10 +35,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overrideStrategy")
-      private final @Nullable Output<String> overrideStrategy;
+    private @Nullable Output<String> overrideStrategy;
 
-    public Output<String> overrideStrategy() {
-        return this.overrideStrategy == null ? Codegen.empty() : this.overrideStrategy;
+    public Optional<Output<String>> overrideStrategy() {
+        return Optional.ofNullable(this.overrideStrategy);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -59,89 +59,79 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslSettings")
-      private final @Nullable Output<DomainMappingSslSettingsArgs> sslSettings;
+    private @Nullable Output<DomainMappingSslSettingsArgs> sslSettings;
 
-    public Output<DomainMappingSslSettingsArgs> sslSettings() {
-        return this.sslSettings == null ? Codegen.empty() : this.sslSettings;
+    public Optional<Output<DomainMappingSslSettingsArgs>> sslSettings() {
+        return Optional.ofNullable(this.sslSettings);
     }
 
-    public DomainMappingArgs(
-        Output<String> domainName,
-        @Nullable Output<String> overrideStrategy,
-        @Nullable Output<String> project,
-        @Nullable Output<DomainMappingSslSettingsArgs> sslSettings) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.overrideStrategy = overrideStrategy;
-        this.project = project;
-        this.sslSettings = sslSettings;
-    }
+    private DomainMappingArgs() {}
 
-    private DomainMappingArgs() {
-        this.domainName = Codegen.empty();
-        this.overrideStrategy = Codegen.empty();
-        this.project = Codegen.empty();
-        this.sslSettings = Codegen.empty();
+    private DomainMappingArgs(DomainMappingArgs $) {
+        this.domainName = $.domainName;
+        this.overrideStrategy = $.overrideStrategy;
+        this.project = $.project;
+        this.sslSettings = $.sslSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domainName;
-        private @Nullable Output<String> overrideStrategy;
-        private @Nullable Output<String> project;
-        private @Nullable Output<DomainMappingSslSettingsArgs> sslSettings;
+        private DomainMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingArgs();
         }
 
         public Builder(DomainMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.overrideStrategy = defaults.overrideStrategy;
-    	      this.project = defaults.project;
-    	      this.sslSettings = defaults.sslSettings;
+            $ = new DomainMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
-            this.overrideStrategy = overrideStrategy;
+            $.overrideStrategy = overrideStrategy;
             return this;
         }
-        public Builder overrideStrategy(@Nullable String overrideStrategy) {
-            this.overrideStrategy = Codegen.ofNullable(overrideStrategy);
-            return this;
+
+        public Builder overrideStrategy(String overrideStrategy) {
+            return overrideStrategy(Output.of(overrideStrategy));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder sslSettings(@Nullable Output<DomainMappingSslSettingsArgs> sslSettings) {
-            this.sslSettings = sslSettings;
+            $.sslSettings = sslSettings;
             return this;
         }
-        public Builder sslSettings(@Nullable DomainMappingSslSettingsArgs sslSettings) {
-            this.sslSettings = Codegen.ofNullable(sslSettings);
-            return this;
-        }        public DomainMappingArgs build() {
-            return new DomainMappingArgs(domainName, overrideStrategy, project, sslSettings);
+
+        public Builder sslSettings(DomainMappingSslSettingsArgs sslSettings) {
+            return sslSettings(Output.of(sslSettings));
+        }
+
+        public DomainMappingArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

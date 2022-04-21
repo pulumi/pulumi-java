@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class EventTargetBatchTargetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="arraySize")
-      private final @Nullable Output<Integer> arraySize;
+    private @Nullable Output<Integer> arraySize;
 
-    public Output<Integer> arraySize() {
-        return this.arraySize == null ? Codegen.empty() : this.arraySize;
+    public Optional<Output<Integer>> arraySize() {
+        return Optional.ofNullable(this.arraySize);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EventTargetBatchTargetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="jobAttempts")
-      private final @Nullable Output<Integer> jobAttempts;
+    private @Nullable Output<Integer> jobAttempts;
 
-    public Output<Integer> jobAttempts() {
-        return this.jobAttempts == null ? Codegen.empty() : this.jobAttempts;
+    public Optional<Output<Integer>> jobAttempts() {
+        return Optional.ofNullable(this.jobAttempts);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class EventTargetBatchTargetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="jobDefinition", required=true)
-      private final Output<String> jobDefinition;
+    private Output<String> jobDefinition;
 
     public Output<String> jobDefinition() {
         return this.jobDefinition;
@@ -54,89 +54,80 @@ public final class EventTargetBatchTargetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="jobName", required=true)
-      private final Output<String> jobName;
+    private Output<String> jobName;
 
     public Output<String> jobName() {
         return this.jobName;
     }
 
-    public EventTargetBatchTargetArgs(
-        @Nullable Output<Integer> arraySize,
-        @Nullable Output<Integer> jobAttempts,
-        Output<String> jobDefinition,
-        Output<String> jobName) {
-        this.arraySize = arraySize;
-        this.jobAttempts = jobAttempts;
-        this.jobDefinition = Objects.requireNonNull(jobDefinition, "expected parameter 'jobDefinition' to be non-null");
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-    }
+    private EventTargetBatchTargetArgs() {}
 
-    private EventTargetBatchTargetArgs() {
-        this.arraySize = Codegen.empty();
-        this.jobAttempts = Codegen.empty();
-        this.jobDefinition = Codegen.empty();
-        this.jobName = Codegen.empty();
+    private EventTargetBatchTargetArgs(EventTargetBatchTargetArgs $) {
+        this.arraySize = $.arraySize;
+        this.jobAttempts = $.jobAttempts;
+        this.jobDefinition = $.jobDefinition;
+        this.jobName = $.jobName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTargetBatchTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> arraySize;
-        private @Nullable Output<Integer> jobAttempts;
-        private Output<String> jobDefinition;
-        private Output<String> jobName;
+        private EventTargetBatchTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTargetBatchTargetArgs();
         }
 
         public Builder(EventTargetBatchTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arraySize = defaults.arraySize;
-    	      this.jobAttempts = defaults.jobAttempts;
-    	      this.jobDefinition = defaults.jobDefinition;
-    	      this.jobName = defaults.jobName;
+            $ = new EventTargetBatchTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arraySize(@Nullable Output<Integer> arraySize) {
-            this.arraySize = arraySize;
+            $.arraySize = arraySize;
             return this;
         }
-        public Builder arraySize(@Nullable Integer arraySize) {
-            this.arraySize = Codegen.ofNullable(arraySize);
-            return this;
+
+        public Builder arraySize(Integer arraySize) {
+            return arraySize(Output.of(arraySize));
         }
+
         public Builder jobAttempts(@Nullable Output<Integer> jobAttempts) {
-            this.jobAttempts = jobAttempts;
+            $.jobAttempts = jobAttempts;
             return this;
         }
-        public Builder jobAttempts(@Nullable Integer jobAttempts) {
-            this.jobAttempts = Codegen.ofNullable(jobAttempts);
-            return this;
+
+        public Builder jobAttempts(Integer jobAttempts) {
+            return jobAttempts(Output.of(jobAttempts));
         }
+
         public Builder jobDefinition(Output<String> jobDefinition) {
-            this.jobDefinition = Objects.requireNonNull(jobDefinition);
+            $.jobDefinition = jobDefinition;
             return this;
         }
+
         public Builder jobDefinition(String jobDefinition) {
-            this.jobDefinition = Output.of(Objects.requireNonNull(jobDefinition));
-            return this;
+            return jobDefinition(Output.of(jobDefinition));
         }
+
         public Builder jobName(Output<String> jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder jobName(String jobName) {
-            this.jobName = Output.of(Objects.requireNonNull(jobName));
-            return this;
-        }        public EventTargetBatchTargetArgs build() {
-            return new EventTargetBatchTargetArgs(arraySize, jobAttempts, jobDefinition, jobName);
+            return jobName(Output.of(jobName));
+        }
+
+        public EventTargetBatchTargetArgs build() {
+            $.jobDefinition = Objects.requireNonNull($.jobDefinition, "expected parameter 'jobDefinition' to be non-null");
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            return $;
         }
     }
+
 }

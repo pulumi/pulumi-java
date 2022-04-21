@@ -23,7 +23,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="authProviderX509CertUrl", required=true)
-      private final String authProviderX509CertUrl;
+    private String authProviderX509CertUrl;
 
     public String authProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
@@ -34,7 +34,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="authUri", required=true)
-      private final String authUri;
+    private String authUri;
 
     public String authUri() {
         return this.authUri;
@@ -45,7 +45,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="authenticationProvisioningState", required=true)
-      private final String authenticationProvisioningState;
+    private String authenticationProvisioningState;
 
     public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
@@ -57,7 +57,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final String authenticationType;
+    private String authenticationType;
 
     public String authenticationType() {
         return this.authenticationType;
@@ -68,7 +68,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="clientEmail", required=true)
-      private final String clientEmail;
+    private String clientEmail;
 
     public String clientEmail() {
         return this.clientEmail;
@@ -79,7 +79,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -90,7 +90,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="clientX509CertUrl", required=true)
-      private final String clientX509CertUrl;
+    private String clientX509CertUrl;
 
     public String clientX509CertUrl() {
         return this.clientX509CertUrl;
@@ -101,7 +101,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="grantedPermissions", required=true)
-      private final List<String> grantedPermissions;
+    private List<String> grantedPermissions;
 
     public List<String> grantedPermissions() {
         return this.grantedPermissions;
@@ -112,7 +112,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
@@ -123,7 +123,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="privateKey", required=true)
-      private final String privateKey;
+    private String privateKey;
 
     public String privateKey() {
         return this.privateKey;
@@ -134,7 +134,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="privateKeyId", required=true)
-      private final String privateKeyId;
+    private String privateKeyId;
 
     public String privateKeyId() {
         return this.privateKeyId;
@@ -145,7 +145,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="projectId", required=true)
-      private final String projectId;
+    private String projectId;
 
     public String projectId() {
         return this.projectId;
@@ -156,7 +156,7 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="tokenUri", required=true)
-      private final String tokenUri;
+    private String tokenUri;
 
     public String tokenUri() {
         return this.tokenUri;
@@ -167,166 +167,140 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GcpCredentialsDetailsPropertiesResponse(
-        String authProviderX509CertUrl,
-        String authUri,
-        String authenticationProvisioningState,
-        String authenticationType,
-        String clientEmail,
-        String clientId,
-        String clientX509CertUrl,
-        List<String> grantedPermissions,
-        String organizationId,
-        String privateKey,
-        String privateKeyId,
-        String projectId,
-        String tokenUri,
-        String type) {
-        this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl, "expected parameter 'authProviderX509CertUrl' to be non-null");
-        this.authUri = Objects.requireNonNull(authUri, "expected parameter 'authUri' to be non-null");
-        this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState, "expected parameter 'authenticationProvisioningState' to be non-null");
-        this.authenticationType = Codegen.stringProp("authenticationType").arg(authenticationType).require();
-        this.clientEmail = Objects.requireNonNull(clientEmail, "expected parameter 'clientEmail' to be non-null");
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl, "expected parameter 'clientX509CertUrl' to be non-null");
-        this.grantedPermissions = Objects.requireNonNull(grantedPermissions, "expected parameter 'grantedPermissions' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.privateKey = Objects.requireNonNull(privateKey, "expected parameter 'privateKey' to be non-null");
-        this.privateKeyId = Objects.requireNonNull(privateKeyId, "expected parameter 'privateKeyId' to be non-null");
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-        this.tokenUri = Objects.requireNonNull(tokenUri, "expected parameter 'tokenUri' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GcpCredentialsDetailsPropertiesResponse() {}
 
-    private GcpCredentialsDetailsPropertiesResponse() {
-        this.authProviderX509CertUrl = null;
-        this.authUri = null;
-        this.authenticationProvisioningState = null;
-        this.authenticationType = null;
-        this.clientEmail = null;
-        this.clientId = null;
-        this.clientX509CertUrl = null;
-        this.grantedPermissions = List.of();
-        this.organizationId = null;
-        this.privateKey = null;
-        this.privateKeyId = null;
-        this.projectId = null;
-        this.tokenUri = null;
-        this.type = null;
+    private GcpCredentialsDetailsPropertiesResponse(GcpCredentialsDetailsPropertiesResponse $) {
+        this.authProviderX509CertUrl = $.authProviderX509CertUrl;
+        this.authUri = $.authUri;
+        this.authenticationProvisioningState = $.authenticationProvisioningState;
+        this.authenticationType = $.authenticationType;
+        this.clientEmail = $.clientEmail;
+        this.clientId = $.clientId;
+        this.clientX509CertUrl = $.clientX509CertUrl;
+        this.grantedPermissions = $.grantedPermissions;
+        this.organizationId = $.organizationId;
+        this.privateKey = $.privateKey;
+        this.privateKeyId = $.privateKeyId;
+        this.projectId = $.projectId;
+        this.tokenUri = $.tokenUri;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcpCredentialsDetailsPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authProviderX509CertUrl;
-        private String authUri;
-        private String authenticationProvisioningState;
-        private String authenticationType;
-        private String clientEmail;
-        private String clientId;
-        private String clientX509CertUrl;
-        private List<String> grantedPermissions;
-        private String organizationId;
-        private String privateKey;
-        private String privateKeyId;
-        private String projectId;
-        private String tokenUri;
-        private String type;
+        private GcpCredentialsDetailsPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcpCredentialsDetailsPropertiesResponse();
         }
 
         public Builder(GcpCredentialsDetailsPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authProviderX509CertUrl = defaults.authProviderX509CertUrl;
-    	      this.authUri = defaults.authUri;
-    	      this.authenticationProvisioningState = defaults.authenticationProvisioningState;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.clientEmail = defaults.clientEmail;
-    	      this.clientId = defaults.clientId;
-    	      this.clientX509CertUrl = defaults.clientX509CertUrl;
-    	      this.grantedPermissions = defaults.grantedPermissions;
-    	      this.organizationId = defaults.organizationId;
-    	      this.privateKey = defaults.privateKey;
-    	      this.privateKeyId = defaults.privateKeyId;
-    	      this.projectId = defaults.projectId;
-    	      this.tokenUri = defaults.tokenUri;
-    	      this.type = defaults.type;
+            $ = new GcpCredentialsDetailsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authProviderX509CertUrl(String authProviderX509CertUrl) {
-            this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl);
+            $.authProviderX509CertUrl = authProviderX509CertUrl;
             return this;
         }
+
         public Builder authUri(String authUri) {
-            this.authUri = Objects.requireNonNull(authUri);
+            $.authUri = authUri;
             return this;
         }
+
         public Builder authenticationProvisioningState(String authenticationProvisioningState) {
-            this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
+            $.authenticationProvisioningState = authenticationProvisioningState;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder clientEmail(String clientEmail) {
-            this.clientEmail = Objects.requireNonNull(clientEmail);
+            $.clientEmail = clientEmail;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientX509CertUrl(String clientX509CertUrl) {
-            this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl);
+            $.clientX509CertUrl = clientX509CertUrl;
             return this;
         }
+
         public Builder grantedPermissions(List<String> grantedPermissions) {
-            this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
+            $.grantedPermissions = grantedPermissions;
             return this;
         }
+
         public Builder grantedPermissions(String... grantedPermissions) {
             return grantedPermissions(List.of(grantedPermissions));
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder privateKey(String privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey);
+            $.privateKey = privateKey;
             return this;
         }
+
         public Builder privateKeyId(String privateKeyId) {
-            this.privateKeyId = Objects.requireNonNull(privateKeyId);
+            $.privateKeyId = privateKeyId;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
         }
+
         public Builder tokenUri(String tokenUri) {
-            this.tokenUri = Objects.requireNonNull(tokenUri);
+            $.tokenUri = tokenUri;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GcpCredentialsDetailsPropertiesResponse build() {
-            return new GcpCredentialsDetailsPropertiesResponse(authProviderX509CertUrl, authUri, authenticationProvisioningState, authenticationType, clientEmail, clientId, clientX509CertUrl, grantedPermissions, organizationId, privateKey, privateKeyId, projectId, tokenUri, type);
+        }
+
+        public GcpCredentialsDetailsPropertiesResponse build() {
+            $.authProviderX509CertUrl = Objects.requireNonNull($.authProviderX509CertUrl, "expected parameter 'authProviderX509CertUrl' to be non-null");
+            $.authUri = Objects.requireNonNull($.authUri, "expected parameter 'authUri' to be non-null");
+            $.authenticationProvisioningState = Objects.requireNonNull($.authenticationProvisioningState, "expected parameter 'authenticationProvisioningState' to be non-null");
+            $.authenticationType = Codegen.stringProp("authenticationType").arg($.authenticationType).require();
+            $.clientEmail = Objects.requireNonNull($.clientEmail, "expected parameter 'clientEmail' to be non-null");
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientX509CertUrl = Objects.requireNonNull($.clientX509CertUrl, "expected parameter 'clientX509CertUrl' to be non-null");
+            $.grantedPermissions = Objects.requireNonNull($.grantedPermissions, "expected parameter 'grantedPermissions' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.privateKey = Objects.requireNonNull($.privateKey, "expected parameter 'privateKey' to be non-null");
+            $.privateKeyId = Objects.requireNonNull($.privateKeyId, "expected parameter 'privateKeyId' to be non-null");
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            $.tokenUri = Objects.requireNonNull($.tokenUri, "expected parameter 'tokenUri' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,7 +19,7 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="configStoreName", required=true)
-      private final String configStoreName;
+    private String configStoreName;
 
     public String configStoreName() {
         return this.configStoreName;
@@ -30,7 +30,7 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -41,10 +41,10 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -52,73 +52,65 @@ public final class ListConfigurationStoreKeyValueArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListConfigurationStoreKeyValueArgs(
-        String configStoreName,
-        String key,
-        @Nullable String label,
-        String resourceGroupName) {
-        this.configStoreName = Objects.requireNonNull(configStoreName, "expected parameter 'configStoreName' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.label = label;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListConfigurationStoreKeyValueArgs() {}
 
-    private ListConfigurationStoreKeyValueArgs() {
-        this.configStoreName = null;
-        this.key = null;
-        this.label = null;
-        this.resourceGroupName = null;
+    private ListConfigurationStoreKeyValueArgs(ListConfigurationStoreKeyValueArgs $) {
+        this.configStoreName = $.configStoreName;
+        this.key = $.key;
+        this.label = $.label;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListConfigurationStoreKeyValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configStoreName;
-        private String key;
-        private @Nullable String label;
-        private String resourceGroupName;
+        private ListConfigurationStoreKeyValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListConfigurationStoreKeyValueArgs();
         }
 
         public Builder(ListConfigurationStoreKeyValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configStoreName = defaults.configStoreName;
-    	      this.key = defaults.key;
-    	      this.label = defaults.label;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListConfigurationStoreKeyValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configStoreName(String configStoreName) {
-            this.configStoreName = Objects.requireNonNull(configStoreName);
+            $.configStoreName = configStoreName;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListConfigurationStoreKeyValueArgs build() {
-            return new ListConfigurationStoreKeyValueArgs(configStoreName, key, label, resourceGroupName);
+        }
+
+        public ListConfigurationStoreKeyValueArgs build() {
+            $.configStoreName = Objects.requireNonNull($.configStoreName, "expected parameter 'configStoreName' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

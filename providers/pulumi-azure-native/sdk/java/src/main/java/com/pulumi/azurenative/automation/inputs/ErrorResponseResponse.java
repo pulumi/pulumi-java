@@ -23,10 +23,10 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ErrorResponseResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
-    public ErrorResponseResponse(
-        @Nullable String code,
-        @Nullable String message) {
-        this.code = code;
-        this.message = message;
-    }
+    private ErrorResponseResponse() {}
 
-    private ErrorResponseResponse() {
-        this.code = null;
-        this.message = null;
+    private ErrorResponseResponse(ErrorResponseResponse $) {
+        this.code = $.code;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String code;
-        private @Nullable String message;
+        private ErrorResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorResponseResponse();
         }
 
         public Builder(ErrorResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.message = defaults.message;
+            $ = new ErrorResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
-        }        public ErrorResponseResponse build() {
-            return new ErrorResponseResponse(code, message);
+        }
+
+        public ErrorResponseResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,100 +17,95 @@ public final class GetOrganizationPolicyListPolicy extends com.pulumi.resources.
     public static final GetOrganizationPolicyListPolicy Empty = new GetOrganizationPolicyListPolicy();
 
     @Import(name="allows", required=true)
-      private final List<GetOrganizationPolicyListPolicyAllow> allows;
+    private List<GetOrganizationPolicyListPolicyAllow> allows;
 
     public List<GetOrganizationPolicyListPolicyAllow> allows() {
         return this.allows;
     }
 
     @Import(name="denies", required=true)
-      private final List<GetOrganizationPolicyListPolicyDeny> denies;
+    private List<GetOrganizationPolicyListPolicyDeny> denies;
 
     public List<GetOrganizationPolicyListPolicyDeny> denies() {
         return this.denies;
     }
 
     @Import(name="inheritFromParent", required=true)
-      private final Boolean inheritFromParent;
+    private Boolean inheritFromParent;
 
     public Boolean inheritFromParent() {
         return this.inheritFromParent;
     }
 
     @Import(name="suggestedValue", required=true)
-      private final String suggestedValue;
+    private String suggestedValue;
 
     public String suggestedValue() {
         return this.suggestedValue;
     }
 
-    public GetOrganizationPolicyListPolicy(
-        List<GetOrganizationPolicyListPolicyAllow> allows,
-        List<GetOrganizationPolicyListPolicyDeny> denies,
-        Boolean inheritFromParent,
-        String suggestedValue) {
-        this.allows = Objects.requireNonNull(allows, "expected parameter 'allows' to be non-null");
-        this.denies = Objects.requireNonNull(denies, "expected parameter 'denies' to be non-null");
-        this.inheritFromParent = Objects.requireNonNull(inheritFromParent, "expected parameter 'inheritFromParent' to be non-null");
-        this.suggestedValue = Objects.requireNonNull(suggestedValue, "expected parameter 'suggestedValue' to be non-null");
-    }
+    private GetOrganizationPolicyListPolicy() {}
 
-    private GetOrganizationPolicyListPolicy() {
-        this.allows = List.of();
-        this.denies = List.of();
-        this.inheritFromParent = null;
-        this.suggestedValue = null;
+    private GetOrganizationPolicyListPolicy(GetOrganizationPolicyListPolicy $) {
+        this.allows = $.allows;
+        this.denies = $.denies;
+        this.inheritFromParent = $.inheritFromParent;
+        this.suggestedValue = $.suggestedValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationPolicyListPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetOrganizationPolicyListPolicyAllow> allows;
-        private List<GetOrganizationPolicyListPolicyDeny> denies;
-        private Boolean inheritFromParent;
-        private String suggestedValue;
+        private GetOrganizationPolicyListPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationPolicyListPolicy();
         }
 
         public Builder(GetOrganizationPolicyListPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allows = defaults.allows;
-    	      this.denies = defaults.denies;
-    	      this.inheritFromParent = defaults.inheritFromParent;
-    	      this.suggestedValue = defaults.suggestedValue;
+            $ = new GetOrganizationPolicyListPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder allows(List<GetOrganizationPolicyListPolicyAllow> allows) {
-            this.allows = Objects.requireNonNull(allows);
+            $.allows = allows;
             return this;
         }
+
         public Builder allows(GetOrganizationPolicyListPolicyAllow... allows) {
             return allows(List.of(allows));
         }
+
         public Builder denies(List<GetOrganizationPolicyListPolicyDeny> denies) {
-            this.denies = Objects.requireNonNull(denies);
+            $.denies = denies;
             return this;
         }
+
         public Builder denies(GetOrganizationPolicyListPolicyDeny... denies) {
             return denies(List.of(denies));
         }
+
         public Builder inheritFromParent(Boolean inheritFromParent) {
-            this.inheritFromParent = Objects.requireNonNull(inheritFromParent);
+            $.inheritFromParent = inheritFromParent;
             return this;
         }
+
         public Builder suggestedValue(String suggestedValue) {
-            this.suggestedValue = Objects.requireNonNull(suggestedValue);
+            $.suggestedValue = suggestedValue;
             return this;
-        }        public GetOrganizationPolicyListPolicy build() {
-            return new GetOrganizationPolicyListPolicy(allows, denies, inheritFromParent, suggestedValue);
+        }
+
+        public GetOrganizationPolicyListPolicy build() {
+            $.allows = Objects.requireNonNull($.allows, "expected parameter 'allows' to be non-null");
+            $.denies = Objects.requireNonNull($.denies, "expected parameter 'denies' to be non-null");
+            $.inheritFromParent = Objects.requireNonNull($.inheritFromParent, "expected parameter 'inheritFromParent' to be non-null");
+            $.suggestedValue = Objects.requireNonNull($.suggestedValue, "expected parameter 'suggestedValue' to be non-null");
+            return $;
         }
     }
+
 }

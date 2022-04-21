@@ -14,62 +14,59 @@ public final class MaterialResponse extends com.pulumi.resources.InvokeArgs {
     public static final MaterialResponse Empty = new MaterialResponse();
 
     @Import(name="digest", required=true)
-      private final Map<String,String> digest;
+    private Map<String,String> digest;
 
     public Map<String,String> digest() {
         return this.digest;
     }
 
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public MaterialResponse(
-        Map<String,String> digest,
-        String uri) {
-        this.digest = Objects.requireNonNull(digest, "expected parameter 'digest' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private MaterialResponse() {}
 
-    private MaterialResponse() {
-        this.digest = Map.of();
-        this.uri = null;
+    private MaterialResponse(MaterialResponse $) {
+        this.digest = $.digest;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaterialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> digest;
-        private String uri;
+        private MaterialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaterialResponse();
         }
 
         public Builder(MaterialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digest = defaults.digest;
-    	      this.uri = defaults.uri;
+            $ = new MaterialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder digest(Map<String,String> digest) {
-            this.digest = Objects.requireNonNull(digest);
+            $.digest = digest;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public MaterialResponse build() {
-            return new MaterialResponse(digest, uri);
+        }
+
+        public MaterialResponse build() {
+            $.digest = Objects.requireNonNull($.digest, "expected parameter 'digest' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

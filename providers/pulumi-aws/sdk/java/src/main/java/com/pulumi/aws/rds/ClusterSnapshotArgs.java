@@ -5,10 +5,10 @@ package com.pulumi.aws.rds;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ClusterSnapshotArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dbClusterIdentifier", required=true)
-      private final Output<String> dbClusterIdentifier;
+    private Output<String> dbClusterIdentifier;
 
     public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
@@ -32,7 +32,7 @@ public final class ClusterSnapshotArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dbClusterSnapshotIdentifier", required=true)
-      private final Output<String> dbClusterSnapshotIdentifier;
+    private Output<String> dbClusterSnapshotIdentifier;
 
     public Output<String> dbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier;
@@ -43,76 +43,70 @@ public final class ClusterSnapshotArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ClusterSnapshotArgs(
-        Output<String> dbClusterIdentifier,
-        Output<String> dbClusterSnapshotIdentifier,
-        @Nullable Output<Map<String,String>> tags) {
-        this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier, "expected parameter 'dbClusterIdentifier' to be non-null");
-        this.dbClusterSnapshotIdentifier = Objects.requireNonNull(dbClusterSnapshotIdentifier, "expected parameter 'dbClusterSnapshotIdentifier' to be non-null");
-        this.tags = tags;
-    }
+    private ClusterSnapshotArgs() {}
 
-    private ClusterSnapshotArgs() {
-        this.dbClusterIdentifier = Codegen.empty();
-        this.dbClusterSnapshotIdentifier = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ClusterSnapshotArgs(ClusterSnapshotArgs $) {
+        this.dbClusterIdentifier = $.dbClusterIdentifier;
+        this.dbClusterSnapshotIdentifier = $.dbClusterSnapshotIdentifier;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterSnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dbClusterIdentifier;
-        private Output<String> dbClusterSnapshotIdentifier;
-        private @Nullable Output<Map<String,String>> tags;
+        private ClusterSnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterSnapshotArgs();
         }
 
         public Builder(ClusterSnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dbClusterIdentifier = defaults.dbClusterIdentifier;
-    	      this.dbClusterSnapshotIdentifier = defaults.dbClusterSnapshotIdentifier;
-    	      this.tags = defaults.tags;
+            $ = new ClusterSnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dbClusterIdentifier(Output<String> dbClusterIdentifier) {
-            this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
+            $.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
+
         public Builder dbClusterIdentifier(String dbClusterIdentifier) {
-            this.dbClusterIdentifier = Output.of(Objects.requireNonNull(dbClusterIdentifier));
-            return this;
+            return dbClusterIdentifier(Output.of(dbClusterIdentifier));
         }
+
         public Builder dbClusterSnapshotIdentifier(Output<String> dbClusterSnapshotIdentifier) {
-            this.dbClusterSnapshotIdentifier = Objects.requireNonNull(dbClusterSnapshotIdentifier);
+            $.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
             return this;
         }
+
         public Builder dbClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
-            this.dbClusterSnapshotIdentifier = Output.of(Objects.requireNonNull(dbClusterSnapshotIdentifier));
-            return this;
+            return dbClusterSnapshotIdentifier(Output.of(dbClusterSnapshotIdentifier));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ClusterSnapshotArgs build() {
-            return new ClusterSnapshotArgs(dbClusterIdentifier, dbClusterSnapshotIdentifier, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ClusterSnapshotArgs build() {
+            $.dbClusterIdentifier = Objects.requireNonNull($.dbClusterIdentifier, "expected parameter 'dbClusterIdentifier' to be non-null");
+            $.dbClusterSnapshotIdentifier = Objects.requireNonNull($.dbClusterSnapshotIdentifier, "expected parameter 'dbClusterSnapshotIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

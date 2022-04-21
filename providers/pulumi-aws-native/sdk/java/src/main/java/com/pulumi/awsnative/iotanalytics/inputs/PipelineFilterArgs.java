@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,84 @@ public final class PipelineFilterArgs extends com.pulumi.resources.ResourceArgs 
     public static final PipelineFilterArgs Empty = new PipelineFilterArgs();
 
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
     }
 
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable Output<String> next;
+    private @Nullable Output<String> next;
 
-    public Output<String> next() {
-        return this.next == null ? Codegen.empty() : this.next;
+    public Optional<Output<String>> next() {
+        return Optional.ofNullable(this.next);
     }
 
-    public PipelineFilterArgs(
-        Output<String> filter,
-        Output<String> name,
-        @Nullable Output<String> next) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-    }
+    private PipelineFilterArgs() {}
 
-    private PipelineFilterArgs() {
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.next = Codegen.empty();
+    private PipelineFilterArgs(PipelineFilterArgs $) {
+        this.filter = $.filter;
+        this.name = $.name;
+        this.next = $.next;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> filter;
-        private Output<String> name;
-        private @Nullable Output<String> next;
+        private PipelineFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineFilterArgs();
         }
 
         public Builder(PipelineFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
+            $ = new PipelineFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder next(@Nullable Output<String> next) {
-            this.next = next;
+            $.next = next;
             return this;
         }
-        public Builder next(@Nullable String next) {
-            this.next = Codegen.ofNullable(next);
-            return this;
-        }        public PipelineFilterArgs build() {
-            return new PipelineFilterArgs(filter, name, next);
+
+        public Builder next(String next) {
+            return next(Output.of(next));
+        }
+
+        public PipelineFilterArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

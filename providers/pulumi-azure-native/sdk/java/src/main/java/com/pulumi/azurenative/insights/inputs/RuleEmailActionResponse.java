@@ -26,10 +26,10 @@ public final class RuleEmailActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="customEmails")
-      private final @Nullable List<String> customEmails;
+    private @Nullable List<String> customEmails;
 
-    public List<String> customEmails() {
-        return this.customEmails == null ? List.of() : this.customEmails;
+    public Optional<List<String>> customEmails() {
+        return Optional.ofNullable(this.customEmails);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class RuleEmailActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -49,67 +49,61 @@ public final class RuleEmailActionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sendToServiceOwners")
-      private final @Nullable Boolean sendToServiceOwners;
+    private @Nullable Boolean sendToServiceOwners;
 
     public Optional<Boolean> sendToServiceOwners() {
-        return this.sendToServiceOwners == null ? Optional.empty() : Optional.ofNullable(this.sendToServiceOwners);
+        return Optional.ofNullable(this.sendToServiceOwners);
     }
 
-    public RuleEmailActionResponse(
-        @Nullable List<String> customEmails,
-        String odataType,
-        @Nullable Boolean sendToServiceOwners) {
-        this.customEmails = customEmails;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.sendToServiceOwners = sendToServiceOwners;
-    }
+    private RuleEmailActionResponse() {}
 
-    private RuleEmailActionResponse() {
-        this.customEmails = List.of();
-        this.odataType = null;
-        this.sendToServiceOwners = null;
+    private RuleEmailActionResponse(RuleEmailActionResponse $) {
+        this.customEmails = $.customEmails;
+        this.odataType = $.odataType;
+        this.sendToServiceOwners = $.sendToServiceOwners;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleEmailActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> customEmails;
-        private String odataType;
-        private @Nullable Boolean sendToServiceOwners;
+        private RuleEmailActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleEmailActionResponse();
         }
 
         public Builder(RuleEmailActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customEmails = defaults.customEmails;
-    	      this.odataType = defaults.odataType;
-    	      this.sendToServiceOwners = defaults.sendToServiceOwners;
+            $ = new RuleEmailActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customEmails(@Nullable List<String> customEmails) {
-            this.customEmails = customEmails;
+            $.customEmails = customEmails;
             return this;
         }
+
         public Builder customEmails(String... customEmails) {
             return customEmails(List.of(customEmails));
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder sendToServiceOwners(@Nullable Boolean sendToServiceOwners) {
-            this.sendToServiceOwners = sendToServiceOwners;
+            $.sendToServiceOwners = sendToServiceOwners;
             return this;
-        }        public RuleEmailActionResponse build() {
-            return new RuleEmailActionResponse(customEmails, odataType, sendToServiceOwners);
+        }
+
+        public RuleEmailActionResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

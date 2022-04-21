@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class UptimeCheckConfigContentMatcherArgs extends com.pulumi.resour
      * 
      */
     @Import(name="content", required=true)
-      private final Output<String> content;
+    private Output<String> content;
 
     public Output<String> content() {
         return this.content;
@@ -33,63 +33,59 @@ public final class UptimeCheckConfigContentMatcherArgs extends com.pulumi.resour
      * 
      */
     @Import(name="matcher")
-      private final @Nullable Output<String> matcher;
+    private @Nullable Output<String> matcher;
 
-    public Output<String> matcher() {
-        return this.matcher == null ? Codegen.empty() : this.matcher;
+    public Optional<Output<String>> matcher() {
+        return Optional.ofNullable(this.matcher);
     }
 
-    public UptimeCheckConfigContentMatcherArgs(
-        Output<String> content,
-        @Nullable Output<String> matcher) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.matcher = matcher;
-    }
+    private UptimeCheckConfigContentMatcherArgs() {}
 
-    private UptimeCheckConfigContentMatcherArgs() {
-        this.content = Codegen.empty();
-        this.matcher = Codegen.empty();
+    private UptimeCheckConfigContentMatcherArgs(UptimeCheckConfigContentMatcherArgs $) {
+        this.content = $.content;
+        this.matcher = $.matcher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UptimeCheckConfigContentMatcherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> content;
-        private @Nullable Output<String> matcher;
+        private UptimeCheckConfigContentMatcherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UptimeCheckConfigContentMatcherArgs();
         }
 
         public Builder(UptimeCheckConfigContentMatcherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.matcher = defaults.matcher;
+            $ = new UptimeCheckConfigContentMatcherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(Output<String> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder matcher(@Nullable Output<String> matcher) {
-            this.matcher = matcher;
+            $.matcher = matcher;
             return this;
         }
-        public Builder matcher(@Nullable String matcher) {
-            this.matcher = Codegen.ofNullable(matcher);
-            return this;
-        }        public UptimeCheckConfigContentMatcherArgs build() {
-            return new UptimeCheckConfigContentMatcherArgs(content, matcher);
+
+        public Builder matcher(String matcher) {
+            return matcher(Output.of(matcher));
+        }
+
+        public UptimeCheckConfigContentMatcherArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            return $;
         }
     }
+
 }

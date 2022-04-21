@@ -13,45 +13,45 @@ public final class GetDomainNameArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDomainNameArgs Empty = new GetDomainNameArgs();
 
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
     }
 
-    public GetDomainNameArgs(String domainName) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-    }
+    private GetDomainNameArgs() {}
 
-    private GetDomainNameArgs() {
-        this.domainName = null;
+    private GetDomainNameArgs(GetDomainNameArgs $) {
+        this.domainName = $.domainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
+        private GetDomainNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainNameArgs();
         }
 
         public Builder(GetDomainNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
+            $ = new GetDomainNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
-        }        public GetDomainNameArgs build() {
-            return new GetDomainNameArgs(domainName);
+        }
+
+        public GetDomainNameArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

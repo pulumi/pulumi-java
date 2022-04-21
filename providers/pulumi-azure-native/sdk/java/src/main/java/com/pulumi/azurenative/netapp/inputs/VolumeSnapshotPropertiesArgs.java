@@ -5,9 +5,9 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VolumeSnapshotPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="snapshotPolicyId")
-      private final @Nullable Output<String> snapshotPolicyId;
+    private @Nullable Output<String> snapshotPolicyId;
 
-    public Output<String> snapshotPolicyId() {
-        return this.snapshotPolicyId == null ? Codegen.empty() : this.snapshotPolicyId;
+    public Optional<Output<String>> snapshotPolicyId() {
+        return Optional.ofNullable(this.snapshotPolicyId);
     }
 
-    public VolumeSnapshotPropertiesArgs(@Nullable Output<String> snapshotPolicyId) {
-        this.snapshotPolicyId = snapshotPolicyId;
-    }
+    private VolumeSnapshotPropertiesArgs() {}
 
-    private VolumeSnapshotPropertiesArgs() {
-        this.snapshotPolicyId = Codegen.empty();
+    private VolumeSnapshotPropertiesArgs(VolumeSnapshotPropertiesArgs $) {
+        this.snapshotPolicyId = $.snapshotPolicyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeSnapshotPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> snapshotPolicyId;
+        private VolumeSnapshotPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeSnapshotPropertiesArgs();
         }
 
         public Builder(VolumeSnapshotPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snapshotPolicyId = defaults.snapshotPolicyId;
+            $ = new VolumeSnapshotPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder snapshotPolicyId(@Nullable Output<String> snapshotPolicyId) {
-            this.snapshotPolicyId = snapshotPolicyId;
+            $.snapshotPolicyId = snapshotPolicyId;
             return this;
         }
-        public Builder snapshotPolicyId(@Nullable String snapshotPolicyId) {
-            this.snapshotPolicyId = Codegen.ofNullable(snapshotPolicyId);
-            return this;
-        }        public VolumeSnapshotPropertiesArgs build() {
-            return new VolumeSnapshotPropertiesArgs(snapshotPolicyId);
+
+        public Builder snapshotPolicyId(String snapshotPolicyId) {
+            return snapshotPolicyId(Output.of(snapshotPolicyId));
+        }
+
+        public VolumeSnapshotPropertiesArgs build() {
+            return $;
         }
     }
+
 }

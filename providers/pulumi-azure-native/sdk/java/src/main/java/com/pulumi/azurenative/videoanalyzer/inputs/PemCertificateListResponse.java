@@ -23,7 +23,7 @@ public final class PemCertificateListResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="certificates", required=true)
-      private final List<String> certificates;
+    private List<String> certificates;
 
     public List<String> certificates() {
         return this.certificates;
@@ -35,58 +35,56 @@ public final class PemCertificateListResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PemCertificateListResponse(
-        List<String> certificates,
-        String type) {
-        this.certificates = Objects.requireNonNull(certificates, "expected parameter 'certificates' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private PemCertificateListResponse() {}
 
-    private PemCertificateListResponse() {
-        this.certificates = List.of();
-        this.type = null;
+    private PemCertificateListResponse(PemCertificateListResponse $) {
+        this.certificates = $.certificates;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PemCertificateListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> certificates;
-        private String type;
+        private PemCertificateListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PemCertificateListResponse();
         }
 
         public Builder(PemCertificateListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificates = defaults.certificates;
-    	      this.type = defaults.type;
+            $ = new PemCertificateListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificates(List<String> certificates) {
-            this.certificates = Objects.requireNonNull(certificates);
+            $.certificates = certificates;
             return this;
         }
+
         public Builder certificates(String... certificates) {
             return certificates(List.of(certificates));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PemCertificateListResponse build() {
-            return new PemCertificateListResponse(certificates, type);
+        }
+
+        public PemCertificateListResponse build() {
+            $.certificates = Objects.requireNonNull($.certificates, "expected parameter 'certificates' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

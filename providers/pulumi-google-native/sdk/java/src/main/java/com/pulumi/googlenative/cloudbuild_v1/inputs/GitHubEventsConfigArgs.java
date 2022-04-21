@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.PullRequestFilterArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.PushFilterArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enterpriseConfigResourceName")
-      private final @Nullable Output<String> enterpriseConfigResourceName;
+    private @Nullable Output<String> enterpriseConfigResourceName;
 
-    public Output<String> enterpriseConfigResourceName() {
-        return this.enterpriseConfigResourceName == null ? Codegen.empty() : this.enterpriseConfigResourceName;
+    public Optional<Output<String>> enterpriseConfigResourceName() {
+        return Optional.ofNullable(this.enterpriseConfigResourceName);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="installationId")
-      private final @Nullable Output<String> installationId;
+    private @Nullable Output<String> installationId;
 
-    public Output<String> installationId() {
-        return this.installationId == null ? Codegen.empty() : this.installationId;
+    public Optional<Output<String>> installationId() {
+        return Optional.ofNullable(this.installationId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<String> owner;
+    private @Nullable Output<String> owner;
 
-    public Output<String> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="pullRequest")
-      private final @Nullable Output<PullRequestFilterArgs> pullRequest;
+    private @Nullable Output<PullRequestFilterArgs> pullRequest;
 
-    public Output<PullRequestFilterArgs> pullRequest() {
-        return this.pullRequest == null ? Codegen.empty() : this.pullRequest;
+    public Optional<Output<PullRequestFilterArgs>> pullRequest() {
+        return Optional.ofNullable(this.pullRequest);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class GitHubEventsConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="push")
-      private final @Nullable Output<PushFilterArgs> push;
+    private @Nullable Output<PushFilterArgs> push;
 
-    public Output<PushFilterArgs> push() {
-        return this.push == null ? Codegen.empty() : this.push;
+    public Optional<Output<PushFilterArgs>> push() {
+        return Optional.ofNullable(this.push);
     }
 
-    public GitHubEventsConfigArgs(
-        @Nullable Output<String> enterpriseConfigResourceName,
-        @Nullable Output<String> installationId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> owner,
-        @Nullable Output<PullRequestFilterArgs> pullRequest,
-        @Nullable Output<PushFilterArgs> push) {
-        this.enterpriseConfigResourceName = enterpriseConfigResourceName;
-        this.installationId = installationId;
-        this.name = name;
-        this.owner = owner;
-        this.pullRequest = pullRequest;
-        this.push = push;
-    }
+    private GitHubEventsConfigArgs() {}
 
-    private GitHubEventsConfigArgs() {
-        this.enterpriseConfigResourceName = Codegen.empty();
-        this.installationId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.pullRequest = Codegen.empty();
-        this.push = Codegen.empty();
+    private GitHubEventsConfigArgs(GitHubEventsConfigArgs $) {
+        this.enterpriseConfigResourceName = $.enterpriseConfigResourceName;
+        this.installationId = $.installationId;
+        this.name = $.name;
+        this.owner = $.owner;
+        this.pullRequest = $.pullRequest;
+        this.push = $.push;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubEventsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> enterpriseConfigResourceName;
-        private @Nullable Output<String> installationId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> owner;
-        private @Nullable Output<PullRequestFilterArgs> pullRequest;
-        private @Nullable Output<PushFilterArgs> push;
+        private GitHubEventsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubEventsConfigArgs();
         }
 
         public Builder(GitHubEventsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enterpriseConfigResourceName = defaults.enterpriseConfigResourceName;
-    	      this.installationId = defaults.installationId;
-    	      this.name = defaults.name;
-    	      this.owner = defaults.owner;
-    	      this.pullRequest = defaults.pullRequest;
-    	      this.push = defaults.push;
+            $ = new GitHubEventsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enterpriseConfigResourceName(@Nullable Output<String> enterpriseConfigResourceName) {
-            this.enterpriseConfigResourceName = enterpriseConfigResourceName;
+            $.enterpriseConfigResourceName = enterpriseConfigResourceName;
             return this;
         }
-        public Builder enterpriseConfigResourceName(@Nullable String enterpriseConfigResourceName) {
-            this.enterpriseConfigResourceName = Codegen.ofNullable(enterpriseConfigResourceName);
-            return this;
+
+        public Builder enterpriseConfigResourceName(String enterpriseConfigResourceName) {
+            return enterpriseConfigResourceName(Output.of(enterpriseConfigResourceName));
         }
+
         public Builder installationId(@Nullable Output<String> installationId) {
-            this.installationId = installationId;
+            $.installationId = installationId;
             return this;
         }
-        public Builder installationId(@Nullable String installationId) {
-            this.installationId = Codegen.ofNullable(installationId);
-            return this;
+
+        public Builder installationId(String installationId) {
+            return installationId(Output.of(installationId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder owner(@Nullable Output<String> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable String owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(String owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder pullRequest(@Nullable Output<PullRequestFilterArgs> pullRequest) {
-            this.pullRequest = pullRequest;
+            $.pullRequest = pullRequest;
             return this;
         }
-        public Builder pullRequest(@Nullable PullRequestFilterArgs pullRequest) {
-            this.pullRequest = Codegen.ofNullable(pullRequest);
-            return this;
+
+        public Builder pullRequest(PullRequestFilterArgs pullRequest) {
+            return pullRequest(Output.of(pullRequest));
         }
+
         public Builder push(@Nullable Output<PushFilterArgs> push) {
-            this.push = push;
+            $.push = push;
             return this;
         }
-        public Builder push(@Nullable PushFilterArgs push) {
-            this.push = Codegen.ofNullable(push);
-            return this;
-        }        public GitHubEventsConfigArgs build() {
-            return new GitHubEventsConfigArgs(enterpriseConfigResourceName, installationId, name, owner, pullRequest, push);
+
+        public Builder push(PushFilterArgs push) {
+            return push(Output.of(push));
+        }
+
+        public GitHubEventsConfigArgs build() {
+            return $;
         }
     }
+
 }

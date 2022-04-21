@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PropagatedRouteTableArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="ids")
-      private final @Nullable Output<List<SubResourceArgs>> ids;
+    private @Nullable Output<List<SubResourceArgs>> ids;
 
-    public Output<List<SubResourceArgs>> ids() {
-        return this.ids == null ? Codegen.empty() : this.ids;
+    public Optional<Output<List<SubResourceArgs>>> ids() {
+        return Optional.ofNullable(this.ids);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class PropagatedRouteTableArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<String>> labels;
+    private @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
-    public PropagatedRouteTableArgs(
-        @Nullable Output<List<SubResourceArgs>> ids,
-        @Nullable Output<List<String>> labels) {
-        this.ids = ids;
-        this.labels = labels;
-    }
+    private PropagatedRouteTableArgs() {}
 
-    private PropagatedRouteTableArgs() {
-        this.ids = Codegen.empty();
-        this.labels = Codegen.empty();
+    private PropagatedRouteTableArgs(PropagatedRouteTableArgs $) {
+        this.ids = $.ids;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropagatedRouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SubResourceArgs>> ids;
-        private @Nullable Output<List<String>> labels;
+        private PropagatedRouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropagatedRouteTableArgs();
         }
 
         public Builder(PropagatedRouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ids = defaults.ids;
-    	      this.labels = defaults.labels;
+            $ = new PropagatedRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ids(@Nullable Output<List<SubResourceArgs>> ids) {
-            this.ids = ids;
+            $.ids = ids;
             return this;
         }
-        public Builder ids(@Nullable List<SubResourceArgs> ids) {
-            this.ids = Codegen.ofNullable(ids);
-            return this;
+
+        public Builder ids(List<SubResourceArgs> ids) {
+            return ids(Output.of(ids));
         }
+
         public Builder ids(SubResourceArgs... ids) {
             return ids(List.of(ids));
         }
+
         public Builder labels(@Nullable Output<List<String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(String... labels) {
             return labels(List.of(labels));
-        }        public PropagatedRouteTableArgs build() {
-            return new PropagatedRouteTableArgs(ids, labels);
+        }
+
+        public PropagatedRouteTableArgs build() {
+            return $;
         }
     }
+
 }

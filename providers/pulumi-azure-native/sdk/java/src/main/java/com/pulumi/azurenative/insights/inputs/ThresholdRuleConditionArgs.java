@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +31,10 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dataSource")
-      private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+    private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
-    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource() {
-        return this.dataSource == null ? Codegen.empty() : this.dataSource;
+    public Optional<Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>>> dataSource() {
+        return Optional.ofNullable(this.dataSource);
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -53,7 +54,7 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="operator", required=true)
-      private final Output<ConditionOperator> operator;
+    private Output<ConditionOperator> operator;
 
     public Output<ConditionOperator> operator() {
         return this.operator;
@@ -64,7 +65,7 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="threshold", required=true)
-      private final Output<Double> threshold;
+    private Output<Double> threshold;
 
     public Output<Double> threshold() {
         return this.threshold;
@@ -75,10 +76,10 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="timeAggregation")
-      private final @Nullable Output<TimeAggregationOperator> timeAggregation;
+    private @Nullable Output<TimeAggregationOperator> timeAggregation;
 
-    public Output<TimeAggregationOperator> timeAggregation() {
-        return this.timeAggregation == null ? Codegen.empty() : this.timeAggregation;
+    public Optional<Output<TimeAggregationOperator>> timeAggregation() {
+        return Optional.ofNullable(this.timeAggregation);
     }
 
     /**
@@ -86,115 +87,101 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="windowSize")
-      private final @Nullable Output<String> windowSize;
+    private @Nullable Output<String> windowSize;
 
-    public Output<String> windowSize() {
-        return this.windowSize == null ? Codegen.empty() : this.windowSize;
+    public Optional<Output<String>> windowSize() {
+        return Optional.ofNullable(this.windowSize);
     }
 
-    public ThresholdRuleConditionArgs(
-        @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource,
-        Output<String> odataType,
-        Output<ConditionOperator> operator,
-        Output<Double> threshold,
-        @Nullable Output<TimeAggregationOperator> timeAggregation,
-        @Nullable Output<String> windowSize) {
-        this.dataSource = dataSource;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-        this.timeAggregation = timeAggregation;
-        this.windowSize = windowSize;
-    }
+    private ThresholdRuleConditionArgs() {}
 
-    private ThresholdRuleConditionArgs() {
-        this.dataSource = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.threshold = Codegen.empty();
-        this.timeAggregation = Codegen.empty();
-        this.windowSize = Codegen.empty();
+    private ThresholdRuleConditionArgs(ThresholdRuleConditionArgs $) {
+        this.dataSource = $.dataSource;
+        this.odataType = $.odataType;
+        this.operator = $.operator;
+        this.threshold = $.threshold;
+        this.timeAggregation = $.timeAggregation;
+        this.windowSize = $.windowSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThresholdRuleConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
-        private Output<String> odataType;
-        private Output<ConditionOperator> operator;
-        private Output<Double> threshold;
-        private @Nullable Output<TimeAggregationOperator> timeAggregation;
-        private @Nullable Output<String> windowSize;
+        private ThresholdRuleConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThresholdRuleConditionArgs();
         }
 
         public Builder(ThresholdRuleConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSource = defaults.dataSource;
-    	      this.odataType = defaults.odataType;
-    	      this.operator = defaults.operator;
-    	      this.threshold = defaults.threshold;
-    	      this.timeAggregation = defaults.timeAggregation;
-    	      this.windowSize = defaults.windowSize;
+            $ = new ThresholdRuleConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSource(@Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
-            this.dataSource = dataSource;
+            $.dataSource = dataSource;
             return this;
         }
-        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
-            this.dataSource = Codegen.ofNullable(dataSource);
-            return this;
+
+        public Builder dataSource(Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder operator(Output<ConditionOperator> operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder operator(ConditionOperator operator) {
-            this.operator = Output.of(Objects.requireNonNull(operator));
-            return this;
+            return operator(Output.of(operator));
         }
+
         public Builder threshold(Output<Double> threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
         }
+
         public Builder threshold(Double threshold) {
-            this.threshold = Output.of(Objects.requireNonNull(threshold));
-            return this;
+            return threshold(Output.of(threshold));
         }
+
         public Builder timeAggregation(@Nullable Output<TimeAggregationOperator> timeAggregation) {
-            this.timeAggregation = timeAggregation;
+            $.timeAggregation = timeAggregation;
             return this;
         }
-        public Builder timeAggregation(@Nullable TimeAggregationOperator timeAggregation) {
-            this.timeAggregation = Codegen.ofNullable(timeAggregation);
-            return this;
+
+        public Builder timeAggregation(TimeAggregationOperator timeAggregation) {
+            return timeAggregation(Output.of(timeAggregation));
         }
+
         public Builder windowSize(@Nullable Output<String> windowSize) {
-            this.windowSize = windowSize;
+            $.windowSize = windowSize;
             return this;
         }
-        public Builder windowSize(@Nullable String windowSize) {
-            this.windowSize = Codegen.ofNullable(windowSize);
-            return this;
-        }        public ThresholdRuleConditionArgs build() {
-            return new ThresholdRuleConditionArgs(dataSource, odataType, operator, threshold, timeAggregation, windowSize);
+
+        public Builder windowSize(String windowSize) {
+            return windowSize(Output.of(windowSize));
+        }
+
+        public ThresholdRuleConditionArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            return $;
         }
     }
+
 }

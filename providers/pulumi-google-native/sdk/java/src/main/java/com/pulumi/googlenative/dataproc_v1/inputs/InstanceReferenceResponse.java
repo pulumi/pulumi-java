@@ -21,7 +21,7 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -32,7 +32,7 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="instanceName", required=true)
-      private final String instanceName;
+    private String instanceName;
 
     public String instanceName() {
         return this.instanceName;
@@ -43,7 +43,7 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publicEciesKey", required=true)
-      private final String publicEciesKey;
+    private String publicEciesKey;
 
     public String publicEciesKey() {
         return this.publicEciesKey;
@@ -54,73 +54,66 @@ public final class InstanceReferenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publicKey", required=true)
-      private final String publicKey;
+    private String publicKey;
 
     public String publicKey() {
         return this.publicKey;
     }
 
-    public InstanceReferenceResponse(
-        String instanceId,
-        String instanceName,
-        String publicEciesKey,
-        String publicKey) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
-        this.publicEciesKey = Objects.requireNonNull(publicEciesKey, "expected parameter 'publicEciesKey' to be non-null");
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-    }
+    private InstanceReferenceResponse() {}
 
-    private InstanceReferenceResponse() {
-        this.instanceId = null;
-        this.instanceName = null;
-        this.publicEciesKey = null;
-        this.publicKey = null;
+    private InstanceReferenceResponse(InstanceReferenceResponse $) {
+        this.instanceId = $.instanceId;
+        this.instanceName = $.instanceName;
+        this.publicEciesKey = $.publicEciesKey;
+        this.publicKey = $.publicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private String instanceName;
-        private String publicEciesKey;
-        private String publicKey;
+        private InstanceReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceReferenceResponse();
         }
 
         public Builder(InstanceReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.instanceName = defaults.instanceName;
-    	      this.publicEciesKey = defaults.publicEciesKey;
-    	      this.publicKey = defaults.publicKey;
+            $ = new InstanceReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceName(String instanceName) {
-            this.instanceName = Objects.requireNonNull(instanceName);
+            $.instanceName = instanceName;
             return this;
         }
+
         public Builder publicEciesKey(String publicEciesKey) {
-            this.publicEciesKey = Objects.requireNonNull(publicEciesKey);
+            $.publicEciesKey = publicEciesKey;
             return this;
         }
+
         public Builder publicKey(String publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
-        }        public InstanceReferenceResponse build() {
-            return new InstanceReferenceResponse(instanceId, instanceName, publicEciesKey, publicKey);
+        }
+
+        public InstanceReferenceResponse build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.instanceName = Objects.requireNonNull($.instanceName, "expected parameter 'instanceName' to be non-null");
+            $.publicEciesKey = Objects.requireNonNull($.publicEciesKey, "expected parameter 'publicEciesKey' to be non-null");
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            return $;
         }
     }
+
 }

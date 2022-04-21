@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.enums.PickTimeSeriesFilterDirection;
 import com.pulumi.googlenative.monitoring_v1.enums.PickTimeSeriesFilterRankingMethod;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PickTimeSeriesFilterArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<PickTimeSeriesFilterDirection> direction;
+    private @Nullable Output<PickTimeSeriesFilterDirection> direction;
 
-    public Output<PickTimeSeriesFilterDirection> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<PickTimeSeriesFilterDirection>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PickTimeSeriesFilterArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="numTimeSeries")
-      private final @Nullable Output<Integer> numTimeSeries;
+    private @Nullable Output<Integer> numTimeSeries;
 
-    public Output<Integer> numTimeSeries() {
-        return this.numTimeSeries == null ? Codegen.empty() : this.numTimeSeries;
+    public Optional<Output<Integer>> numTimeSeries() {
+        return Optional.ofNullable(this.numTimeSeries);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class PickTimeSeriesFilterArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="rankingMethod")
-      private final @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod;
+    private @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod;
 
-    public Output<PickTimeSeriesFilterRankingMethod> rankingMethod() {
-        return this.rankingMethod == null ? Codegen.empty() : this.rankingMethod;
+    public Optional<Output<PickTimeSeriesFilterRankingMethod>> rankingMethod() {
+        return Optional.ofNullable(this.rankingMethod);
     }
 
-    public PickTimeSeriesFilterArgs(
-        @Nullable Output<PickTimeSeriesFilterDirection> direction,
-        @Nullable Output<Integer> numTimeSeries,
-        @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod) {
-        this.direction = direction;
-        this.numTimeSeries = numTimeSeries;
-        this.rankingMethod = rankingMethod;
-    }
+    private PickTimeSeriesFilterArgs() {}
 
-    private PickTimeSeriesFilterArgs() {
-        this.direction = Codegen.empty();
-        this.numTimeSeries = Codegen.empty();
-        this.rankingMethod = Codegen.empty();
+    private PickTimeSeriesFilterArgs(PickTimeSeriesFilterArgs $) {
+        this.direction = $.direction;
+        this.numTimeSeries = $.numTimeSeries;
+        this.rankingMethod = $.rankingMethod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PickTimeSeriesFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PickTimeSeriesFilterDirection> direction;
-        private @Nullable Output<Integer> numTimeSeries;
-        private @Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod;
+        private PickTimeSeriesFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PickTimeSeriesFilterArgs();
         }
 
         public Builder(PickTimeSeriesFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.direction = defaults.direction;
-    	      this.numTimeSeries = defaults.numTimeSeries;
-    	      this.rankingMethod = defaults.rankingMethod;
+            $ = new PickTimeSeriesFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder direction(@Nullable Output<PickTimeSeriesFilterDirection> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable PickTimeSeriesFilterDirection direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(PickTimeSeriesFilterDirection direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder numTimeSeries(@Nullable Output<Integer> numTimeSeries) {
-            this.numTimeSeries = numTimeSeries;
+            $.numTimeSeries = numTimeSeries;
             return this;
         }
-        public Builder numTimeSeries(@Nullable Integer numTimeSeries) {
-            this.numTimeSeries = Codegen.ofNullable(numTimeSeries);
-            return this;
+
+        public Builder numTimeSeries(Integer numTimeSeries) {
+            return numTimeSeries(Output.of(numTimeSeries));
         }
+
         public Builder rankingMethod(@Nullable Output<PickTimeSeriesFilterRankingMethod> rankingMethod) {
-            this.rankingMethod = rankingMethod;
+            $.rankingMethod = rankingMethod;
             return this;
         }
-        public Builder rankingMethod(@Nullable PickTimeSeriesFilterRankingMethod rankingMethod) {
-            this.rankingMethod = Codegen.ofNullable(rankingMethod);
-            return this;
-        }        public PickTimeSeriesFilterArgs build() {
-            return new PickTimeSeriesFilterArgs(direction, numTimeSeries, rankingMethod);
+
+        public Builder rankingMethod(PickTimeSeriesFilterRankingMethod rankingMethod) {
+            return rankingMethod(Output.of(rankingMethod));
+        }
+
+        public PickTimeSeriesFilterArgs build() {
+            return $;
         }
     }
+
 }

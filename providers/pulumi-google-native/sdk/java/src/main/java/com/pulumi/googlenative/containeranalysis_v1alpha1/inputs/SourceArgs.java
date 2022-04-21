@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RepoSourceArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.StorageSourceArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalContexts")
-      private final @Nullable Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts;
+    private @Nullable Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts;
 
-    public Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts() {
-        return this.additionalContexts == null ? Codegen.empty() : this.additionalContexts;
+    public Optional<Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>>> additionalContexts() {
+        return Optional.ofNullable(this.additionalContexts);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="artifactStorageSource")
-      private final @Nullable Output<StorageSourceArgs> artifactStorageSource;
+    private @Nullable Output<StorageSourceArgs> artifactStorageSource;
 
-    public Output<StorageSourceArgs> artifactStorageSource() {
-        return this.artifactStorageSource == null ? Codegen.empty() : this.artifactStorageSource;
+    public Optional<Output<StorageSourceArgs>> artifactStorageSource() {
+        return Optional.ofNullable(this.artifactStorageSource);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context;
+    private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileHashes")
-      private final @Nullable Output<Map<String,String>> fileHashes;
+    private @Nullable Output<Map<String,String>> fileHashes;
 
-    public Output<Map<String,String>> fileHashes() {
-        return this.fileHashes == null ? Codegen.empty() : this.fileHashes;
+    public Optional<Output<Map<String,String>>> fileHashes() {
+        return Optional.ofNullable(this.fileHashes);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repoSource")
-      private final @Nullable Output<RepoSourceArgs> repoSource;
+    private @Nullable Output<RepoSourceArgs> repoSource;
 
-    public Output<RepoSourceArgs> repoSource() {
-        return this.repoSource == null ? Codegen.empty() : this.repoSource;
+    public Optional<Output<RepoSourceArgs>> repoSource() {
+        return Optional.ofNullable(this.repoSource);
     }
 
     /**
@@ -84,118 +84,102 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageSource")
-      private final @Nullable Output<StorageSourceArgs> storageSource;
+    private @Nullable Output<StorageSourceArgs> storageSource;
 
-    public Output<StorageSourceArgs> storageSource() {
-        return this.storageSource == null ? Codegen.empty() : this.storageSource;
+    public Optional<Output<StorageSourceArgs>> storageSource() {
+        return Optional.ofNullable(this.storageSource);
     }
 
-    public SourceArgs(
-        @Nullable Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts,
-        @Nullable Output<StorageSourceArgs> artifactStorageSource,
-        @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context,
-        @Nullable Output<Map<String,String>> fileHashes,
-        @Nullable Output<RepoSourceArgs> repoSource,
-        @Nullable Output<StorageSourceArgs> storageSource) {
-        this.additionalContexts = additionalContexts;
-        this.artifactStorageSource = artifactStorageSource;
-        this.context = context;
-        this.fileHashes = fileHashes;
-        this.repoSource = repoSource;
-        this.storageSource = storageSource;
-    }
+    private SourceArgs() {}
 
-    private SourceArgs() {
-        this.additionalContexts = Codegen.empty();
-        this.artifactStorageSource = Codegen.empty();
-        this.context = Codegen.empty();
-        this.fileHashes = Codegen.empty();
-        this.repoSource = Codegen.empty();
-        this.storageSource = Codegen.empty();
+    private SourceArgs(SourceArgs $) {
+        this.additionalContexts = $.additionalContexts;
+        this.artifactStorageSource = $.artifactStorageSource;
+        this.context = $.context;
+        this.fileHashes = $.fileHashes;
+        this.repoSource = $.repoSource;
+        this.storageSource = $.storageSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts;
-        private @Nullable Output<StorageSourceArgs> artifactStorageSource;
-        private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context;
-        private @Nullable Output<Map<String,String>> fileHashes;
-        private @Nullable Output<RepoSourceArgs> repoSource;
-        private @Nullable Output<StorageSourceArgs> storageSource;
+        private SourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceArgs();
         }
 
         public Builder(SourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalContexts = defaults.additionalContexts;
-    	      this.artifactStorageSource = defaults.artifactStorageSource;
-    	      this.context = defaults.context;
-    	      this.fileHashes = defaults.fileHashes;
-    	      this.repoSource = defaults.repoSource;
-    	      this.storageSource = defaults.storageSource;
+            $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalContexts(@Nullable Output<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts) {
-            this.additionalContexts = additionalContexts;
+            $.additionalContexts = additionalContexts;
             return this;
         }
-        public Builder additionalContexts(@Nullable List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> additionalContexts) {
-            this.additionalContexts = Codegen.ofNullable(additionalContexts);
-            return this;
+
+        public Builder additionalContexts(List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> additionalContexts) {
+            return additionalContexts(Output.of(additionalContexts));
         }
+
         public Builder additionalContexts(GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs... additionalContexts) {
             return additionalContexts(List.of(additionalContexts));
         }
+
         public Builder artifactStorageSource(@Nullable Output<StorageSourceArgs> artifactStorageSource) {
-            this.artifactStorageSource = artifactStorageSource;
+            $.artifactStorageSource = artifactStorageSource;
             return this;
         }
-        public Builder artifactStorageSource(@Nullable StorageSourceArgs artifactStorageSource) {
-            this.artifactStorageSource = Codegen.ofNullable(artifactStorageSource);
-            return this;
+
+        public Builder artifactStorageSource(StorageSourceArgs artifactStorageSource) {
+            return artifactStorageSource(Output.of(artifactStorageSource));
         }
+
         public Builder context(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs context) {
+            return context(Output.of(context));
         }
+
         public Builder fileHashes(@Nullable Output<Map<String,String>> fileHashes) {
-            this.fileHashes = fileHashes;
+            $.fileHashes = fileHashes;
             return this;
         }
-        public Builder fileHashes(@Nullable Map<String,String> fileHashes) {
-            this.fileHashes = Codegen.ofNullable(fileHashes);
-            return this;
+
+        public Builder fileHashes(Map<String,String> fileHashes) {
+            return fileHashes(Output.of(fileHashes));
         }
+
         public Builder repoSource(@Nullable Output<RepoSourceArgs> repoSource) {
-            this.repoSource = repoSource;
+            $.repoSource = repoSource;
             return this;
         }
-        public Builder repoSource(@Nullable RepoSourceArgs repoSource) {
-            this.repoSource = Codegen.ofNullable(repoSource);
-            return this;
+
+        public Builder repoSource(RepoSourceArgs repoSource) {
+            return repoSource(Output.of(repoSource));
         }
+
         public Builder storageSource(@Nullable Output<StorageSourceArgs> storageSource) {
-            this.storageSource = storageSource;
+            $.storageSource = storageSource;
             return this;
         }
-        public Builder storageSource(@Nullable StorageSourceArgs storageSource) {
-            this.storageSource = Codegen.ofNullable(storageSource);
-            return this;
-        }        public SourceArgs build() {
-            return new SourceArgs(additionalContexts, artifactStorageSource, context, fileHashes, repoSource, storageSource);
+
+        public Builder storageSource(StorageSourceArgs storageSource) {
+            return storageSource(Output.of(storageSource));
+        }
+
+        public SourceArgs build() {
+            return $;
         }
     }
+
 }

@@ -10,11 +10,11 @@ import com.pulumi.awsnative.ec2.inputs.DestinationOptionsPropertiesArgs;
 import com.pulumi.awsnative.ec2.inputs.FlowLogTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,17 +27,17 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deliverLogsPermissionArn")
-      private final @Nullable Output<String> deliverLogsPermissionArn;
+    private @Nullable Output<String> deliverLogsPermissionArn;
 
-    public Output<String> deliverLogsPermissionArn() {
-        return this.deliverLogsPermissionArn == null ? Codegen.empty() : this.deliverLogsPermissionArn;
+    public Optional<Output<String>> deliverLogsPermissionArn() {
+        return Optional.ofNullable(this.deliverLogsPermissionArn);
     }
 
     @Import(name="destinationOptions")
-      private final @Nullable Output<DestinationOptionsPropertiesArgs> destinationOptions;
+    private @Nullable Output<DestinationOptionsPropertiesArgs> destinationOptions;
 
-    public Output<DestinationOptionsPropertiesArgs> destinationOptions() {
-        return this.destinationOptions == null ? Codegen.empty() : this.destinationOptions;
+    public Optional<Output<DestinationOptionsPropertiesArgs>> destinationOptions() {
+        return Optional.ofNullable(this.destinationOptions);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logDestination")
-      private final @Nullable Output<String> logDestination;
+    private @Nullable Output<String> logDestination;
 
-    public Output<String> logDestination() {
-        return this.logDestination == null ? Codegen.empty() : this.logDestination;
+    public Optional<Output<String>> logDestination() {
+        return Optional.ofNullable(this.logDestination);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logDestinationType")
-      private final @Nullable Output<FlowLogLogDestinationType> logDestinationType;
+    private @Nullable Output<FlowLogLogDestinationType> logDestinationType;
 
-    public Output<FlowLogLogDestinationType> logDestinationType() {
-        return this.logDestinationType == null ? Codegen.empty() : this.logDestinationType;
+    public Optional<Output<FlowLogLogDestinationType>> logDestinationType() {
+        return Optional.ofNullable(this.logDestinationType);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logFormat")
-      private final @Nullable Output<String> logFormat;
+    private @Nullable Output<String> logFormat;
 
-    public Output<String> logFormat() {
-        return this.logFormat == null ? Codegen.empty() : this.logFormat;
+    public Optional<Output<String>> logFormat() {
+        return Optional.ofNullable(this.logFormat);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logGroupName")
-      private final @Nullable Output<String> logGroupName;
+    private @Nullable Output<String> logGroupName;
 
-    public Output<String> logGroupName() {
-        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
+    public Optional<Output<String>> logGroupName() {
+        return Optional.ofNullable(this.logGroupName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxAggregationInterval")
-      private final @Nullable Output<Integer> maxAggregationInterval;
+    private @Nullable Output<Integer> maxAggregationInterval;
 
-    public Output<Integer> maxAggregationInterval() {
-        return this.maxAggregationInterval == null ? Codegen.empty() : this.maxAggregationInterval;
+    public Optional<Output<Integer>> maxAggregationInterval() {
+        return Optional.ofNullable(this.maxAggregationInterval);
     }
 
     /**
@@ -100,7 +100,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -111,7 +111,7 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<FlowLogResourceType> resourceType;
+    private Output<FlowLogResourceType> resourceType;
 
     public Output<FlowLogResourceType> resourceType() {
         return this.resourceType;
@@ -122,10 +122,10 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<FlowLogTagArgs>> tags;
+    private @Nullable Output<List<FlowLogTagArgs>> tags;
 
-    public Output<List<FlowLogTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<FlowLogTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -133,183 +133,155 @@ public final class FlowLogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficType", required=true)
-      private final Output<FlowLogTrafficType> trafficType;
+    private Output<FlowLogTrafficType> trafficType;
 
     public Output<FlowLogTrafficType> trafficType() {
         return this.trafficType;
     }
 
-    public FlowLogArgs(
-        @Nullable Output<String> deliverLogsPermissionArn,
-        @Nullable Output<DestinationOptionsPropertiesArgs> destinationOptions,
-        @Nullable Output<String> logDestination,
-        @Nullable Output<FlowLogLogDestinationType> logDestinationType,
-        @Nullable Output<String> logFormat,
-        @Nullable Output<String> logGroupName,
-        @Nullable Output<Integer> maxAggregationInterval,
-        Output<String> resourceId,
-        Output<FlowLogResourceType> resourceType,
-        @Nullable Output<List<FlowLogTagArgs>> tags,
-        Output<FlowLogTrafficType> trafficType) {
-        this.deliverLogsPermissionArn = deliverLogsPermissionArn;
-        this.destinationOptions = destinationOptions;
-        this.logDestination = logDestination;
-        this.logDestinationType = logDestinationType;
-        this.logFormat = logFormat;
-        this.logGroupName = logGroupName;
-        this.maxAggregationInterval = maxAggregationInterval;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-        this.tags = tags;
-        this.trafficType = Objects.requireNonNull(trafficType, "expected parameter 'trafficType' to be non-null");
-    }
+    private FlowLogArgs() {}
 
-    private FlowLogArgs() {
-        this.deliverLogsPermissionArn = Codegen.empty();
-        this.destinationOptions = Codegen.empty();
-        this.logDestination = Codegen.empty();
-        this.logDestinationType = Codegen.empty();
-        this.logFormat = Codegen.empty();
-        this.logGroupName = Codegen.empty();
-        this.maxAggregationInterval = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.trafficType = Codegen.empty();
+    private FlowLogArgs(FlowLogArgs $) {
+        this.deliverLogsPermissionArn = $.deliverLogsPermissionArn;
+        this.destinationOptions = $.destinationOptions;
+        this.logDestination = $.logDestination;
+        this.logDestinationType = $.logDestinationType;
+        this.logFormat = $.logFormat;
+        this.logGroupName = $.logGroupName;
+        this.maxAggregationInterval = $.maxAggregationInterval;
+        this.resourceId = $.resourceId;
+        this.resourceType = $.resourceType;
+        this.tags = $.tags;
+        this.trafficType = $.trafficType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowLogArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deliverLogsPermissionArn;
-        private @Nullable Output<DestinationOptionsPropertiesArgs> destinationOptions;
-        private @Nullable Output<String> logDestination;
-        private @Nullable Output<FlowLogLogDestinationType> logDestinationType;
-        private @Nullable Output<String> logFormat;
-        private @Nullable Output<String> logGroupName;
-        private @Nullable Output<Integer> maxAggregationInterval;
-        private Output<String> resourceId;
-        private Output<FlowLogResourceType> resourceType;
-        private @Nullable Output<List<FlowLogTagArgs>> tags;
-        private Output<FlowLogTrafficType> trafficType;
+        private FlowLogArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowLogArgs();
         }
 
         public Builder(FlowLogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliverLogsPermissionArn = defaults.deliverLogsPermissionArn;
-    	      this.destinationOptions = defaults.destinationOptions;
-    	      this.logDestination = defaults.logDestination;
-    	      this.logDestinationType = defaults.logDestinationType;
-    	      this.logFormat = defaults.logFormat;
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.maxAggregationInterval = defaults.maxAggregationInterval;
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceType = defaults.resourceType;
-    	      this.tags = defaults.tags;
-    	      this.trafficType = defaults.trafficType;
+            $ = new FlowLogArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliverLogsPermissionArn(@Nullable Output<String> deliverLogsPermissionArn) {
-            this.deliverLogsPermissionArn = deliverLogsPermissionArn;
+            $.deliverLogsPermissionArn = deliverLogsPermissionArn;
             return this;
         }
-        public Builder deliverLogsPermissionArn(@Nullable String deliverLogsPermissionArn) {
-            this.deliverLogsPermissionArn = Codegen.ofNullable(deliverLogsPermissionArn);
-            return this;
+
+        public Builder deliverLogsPermissionArn(String deliverLogsPermissionArn) {
+            return deliverLogsPermissionArn(Output.of(deliverLogsPermissionArn));
         }
+
         public Builder destinationOptions(@Nullable Output<DestinationOptionsPropertiesArgs> destinationOptions) {
-            this.destinationOptions = destinationOptions;
+            $.destinationOptions = destinationOptions;
             return this;
         }
-        public Builder destinationOptions(@Nullable DestinationOptionsPropertiesArgs destinationOptions) {
-            this.destinationOptions = Codegen.ofNullable(destinationOptions);
-            return this;
+
+        public Builder destinationOptions(DestinationOptionsPropertiesArgs destinationOptions) {
+            return destinationOptions(Output.of(destinationOptions));
         }
+
         public Builder logDestination(@Nullable Output<String> logDestination) {
-            this.logDestination = logDestination;
+            $.logDestination = logDestination;
             return this;
         }
-        public Builder logDestination(@Nullable String logDestination) {
-            this.logDestination = Codegen.ofNullable(logDestination);
-            return this;
+
+        public Builder logDestination(String logDestination) {
+            return logDestination(Output.of(logDestination));
         }
+
         public Builder logDestinationType(@Nullable Output<FlowLogLogDestinationType> logDestinationType) {
-            this.logDestinationType = logDestinationType;
+            $.logDestinationType = logDestinationType;
             return this;
         }
-        public Builder logDestinationType(@Nullable FlowLogLogDestinationType logDestinationType) {
-            this.logDestinationType = Codegen.ofNullable(logDestinationType);
-            return this;
+
+        public Builder logDestinationType(FlowLogLogDestinationType logDestinationType) {
+            return logDestinationType(Output.of(logDestinationType));
         }
+
         public Builder logFormat(@Nullable Output<String> logFormat) {
-            this.logFormat = logFormat;
+            $.logFormat = logFormat;
             return this;
         }
-        public Builder logFormat(@Nullable String logFormat) {
-            this.logFormat = Codegen.ofNullable(logFormat);
-            return this;
+
+        public Builder logFormat(String logFormat) {
+            return logFormat(Output.of(logFormat));
         }
+
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
-        public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Codegen.ofNullable(logGroupName);
-            return this;
+
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder maxAggregationInterval(@Nullable Output<Integer> maxAggregationInterval) {
-            this.maxAggregationInterval = maxAggregationInterval;
+            $.maxAggregationInterval = maxAggregationInterval;
             return this;
         }
-        public Builder maxAggregationInterval(@Nullable Integer maxAggregationInterval) {
-            this.maxAggregationInterval = Codegen.ofNullable(maxAggregationInterval);
-            return this;
+
+        public Builder maxAggregationInterval(Integer maxAggregationInterval) {
+            return maxAggregationInterval(Output.of(maxAggregationInterval));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder resourceType(Output<FlowLogResourceType> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(FlowLogResourceType resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder tags(@Nullable Output<List<FlowLogTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<FlowLogTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<FlowLogTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(FlowLogTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder trafficType(Output<FlowLogTrafficType> trafficType) {
-            this.trafficType = Objects.requireNonNull(trafficType);
+            $.trafficType = trafficType;
             return this;
         }
+
         public Builder trafficType(FlowLogTrafficType trafficType) {
-            this.trafficType = Output.of(Objects.requireNonNull(trafficType));
-            return this;
-        }        public FlowLogArgs build() {
-            return new FlowLogArgs(deliverLogsPermissionArn, destinationOptions, logDestination, logDestinationType, logFormat, logGroupName, maxAggregationInterval, resourceId, resourceType, tags, trafficType);
+            return trafficType(Output.of(trafficType));
+        }
+
+        public FlowLogArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            $.trafficType = Objects.requireNonNull($.trafficType, "expected parameter 'trafficType' to be non-null");
+            return $;
         }
     }
+
 }

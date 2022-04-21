@@ -17,45 +17,45 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="transitGatewayAttachmentId", required=true)
-      private final String transitGatewayAttachmentId;
+    private String transitGatewayAttachmentId;
 
     public String transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
 
-    public GetTransitGatewayPeeringAttachmentArgs(String transitGatewayAttachmentId) {
-        this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
-    }
+    private GetTransitGatewayPeeringAttachmentArgs() {}
 
-    private GetTransitGatewayPeeringAttachmentArgs() {
-        this.transitGatewayAttachmentId = null;
+    private GetTransitGatewayPeeringAttachmentArgs(GetTransitGatewayPeeringAttachmentArgs $) {
+        this.transitGatewayAttachmentId = $.transitGatewayAttachmentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitGatewayPeeringAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String transitGatewayAttachmentId;
+        private GetTransitGatewayPeeringAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitGatewayPeeringAttachmentArgs();
         }
 
         public Builder(GetTransitGatewayPeeringAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
+            $ = new GetTransitGatewayPeeringAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
+            $.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
-        }        public GetTransitGatewayPeeringAttachmentArgs build() {
-            return new GetTransitGatewayPeeringAttachmentArgs(transitGatewayAttachmentId);
+        }
+
+        public GetTransitGatewayPeeringAttachmentArgs build() {
+            $.transitGatewayAttachmentId = Objects.requireNonNull($.transitGatewayAttachmentId, "expected parameter 'transitGatewayAttachmentId' to be non-null");
+            return $;
         }
     }
+
 }

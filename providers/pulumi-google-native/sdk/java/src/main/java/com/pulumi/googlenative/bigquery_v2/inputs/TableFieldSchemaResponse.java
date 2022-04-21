@@ -20,7 +20,7 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="categories", required=true)
-      private final TableFieldSchemaCategoriesResponse categories;
+    private TableFieldSchemaCategoriesResponse categories;
 
     public TableFieldSchemaCategoriesResponse categories() {
         return this.categories;
@@ -31,7 +31,7 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="collationSpec", required=true)
-      private final String collationSpec;
+    private String collationSpec;
 
     public String collationSpec() {
         return this.collationSpec;
@@ -42,7 +42,7 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -53,7 +53,7 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fields", required=true)
-      private final List<TableFieldSchemaResponse> fields;
+    private List<TableFieldSchemaResponse> fields;
 
     public List<TableFieldSchemaResponse> fields() {
         return this.fields;
@@ -64,7 +64,7 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxLength", required=true)
-      private final String maxLength;
+    private String maxLength;
 
     public String maxLength() {
         return this.maxLength;
@@ -75,7 +75,7 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -86,14 +86,14 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="policyTags", required=true)
-      private final TableFieldSchemaPolicyTagsResponse policyTags;
+    private TableFieldSchemaPolicyTagsResponse policyTags;
 
     public TableFieldSchemaPolicyTagsResponse policyTags() {
         return this.policyTags;
@@ -104,7 +104,7 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="precision", required=true)
-      private final String precision;
+    private String precision;
 
     public String precision() {
         return this.precision;
@@ -115,7 +115,7 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="scale", required=true)
-      private final String scale;
+    private String scale;
 
     public String scale() {
         return this.scale;
@@ -126,139 +126,119 @@ public final class TableFieldSchemaResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TableFieldSchemaResponse(
-        TableFieldSchemaCategoriesResponse categories,
-        String collationSpec,
-        String description,
-        List<TableFieldSchemaResponse> fields,
-        String maxLength,
-        String mode,
-        String name,
-        TableFieldSchemaPolicyTagsResponse policyTags,
-        String precision,
-        String scale,
-        String type) {
-        this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
-        this.collationSpec = Objects.requireNonNull(collationSpec, "expected parameter 'collationSpec' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.maxLength = Objects.requireNonNull(maxLength, "expected parameter 'maxLength' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policyTags = Objects.requireNonNull(policyTags, "expected parameter 'policyTags' to be non-null");
-        this.precision = Objects.requireNonNull(precision, "expected parameter 'precision' to be non-null");
-        this.scale = Objects.requireNonNull(scale, "expected parameter 'scale' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TableFieldSchemaResponse() {}
 
-    private TableFieldSchemaResponse() {
-        this.categories = null;
-        this.collationSpec = null;
-        this.description = null;
-        this.fields = List.of();
-        this.maxLength = null;
-        this.mode = null;
-        this.name = null;
-        this.policyTags = null;
-        this.precision = null;
-        this.scale = null;
-        this.type = null;
+    private TableFieldSchemaResponse(TableFieldSchemaResponse $) {
+        this.categories = $.categories;
+        this.collationSpec = $.collationSpec;
+        this.description = $.description;
+        this.fields = $.fields;
+        this.maxLength = $.maxLength;
+        this.mode = $.mode;
+        this.name = $.name;
+        this.policyTags = $.policyTags;
+        this.precision = $.precision;
+        this.scale = $.scale;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableFieldSchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TableFieldSchemaCategoriesResponse categories;
-        private String collationSpec;
-        private String description;
-        private List<TableFieldSchemaResponse> fields;
-        private String maxLength;
-        private String mode;
-        private String name;
-        private TableFieldSchemaPolicyTagsResponse policyTags;
-        private String precision;
-        private String scale;
-        private String type;
+        private TableFieldSchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableFieldSchemaResponse();
         }
 
         public Builder(TableFieldSchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.collationSpec = defaults.collationSpec;
-    	      this.description = defaults.description;
-    	      this.fields = defaults.fields;
-    	      this.maxLength = defaults.maxLength;
-    	      this.mode = defaults.mode;
-    	      this.name = defaults.name;
-    	      this.policyTags = defaults.policyTags;
-    	      this.precision = defaults.precision;
-    	      this.scale = defaults.scale;
-    	      this.type = defaults.type;
+            $ = new TableFieldSchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(TableFieldSchemaCategoriesResponse categories) {
-            this.categories = Objects.requireNonNull(categories);
+            $.categories = categories;
             return this;
         }
+
         public Builder collationSpec(String collationSpec) {
-            this.collationSpec = Objects.requireNonNull(collationSpec);
+            $.collationSpec = collationSpec;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder fields(List<TableFieldSchemaResponse> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(TableFieldSchemaResponse... fields) {
             return fields(List.of(fields));
         }
+
         public Builder maxLength(String maxLength) {
-            this.maxLength = Objects.requireNonNull(maxLength);
+            $.maxLength = maxLength;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policyTags(TableFieldSchemaPolicyTagsResponse policyTags) {
-            this.policyTags = Objects.requireNonNull(policyTags);
+            $.policyTags = policyTags;
             return this;
         }
+
         public Builder precision(String precision) {
-            this.precision = Objects.requireNonNull(precision);
+            $.precision = precision;
             return this;
         }
+
         public Builder scale(String scale) {
-            this.scale = Objects.requireNonNull(scale);
+            $.scale = scale;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TableFieldSchemaResponse build() {
-            return new TableFieldSchemaResponse(categories, collationSpec, description, fields, maxLength, mode, name, policyTags, precision, scale, type);
+        }
+
+        public TableFieldSchemaResponse build() {
+            $.categories = Objects.requireNonNull($.categories, "expected parameter 'categories' to be non-null");
+            $.collationSpec = Objects.requireNonNull($.collationSpec, "expected parameter 'collationSpec' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.maxLength = Objects.requireNonNull($.maxLength, "expected parameter 'maxLength' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.policyTags = Objects.requireNonNull($.policyTags, "expected parameter 'policyTags' to be non-null");
+            $.precision = Objects.requireNonNull($.precision, "expected parameter 'precision' to be non-null");
+            $.scale = Objects.requireNonNull($.scale, "expected parameter 'scale' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,44 @@ public final class ManagementResourcePreferencesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="preferredManagementResourceId")
-      private final @Nullable String preferredManagementResourceId;
+    private @Nullable String preferredManagementResourceId;
 
     public Optional<String> preferredManagementResourceId() {
-        return this.preferredManagementResourceId == null ? Optional.empty() : Optional.ofNullable(this.preferredManagementResourceId);
+        return Optional.ofNullable(this.preferredManagementResourceId);
     }
 
-    public ManagementResourcePreferencesResponse(@Nullable String preferredManagementResourceId) {
-        this.preferredManagementResourceId = preferredManagementResourceId;
-    }
+    private ManagementResourcePreferencesResponse() {}
 
-    private ManagementResourcePreferencesResponse() {
-        this.preferredManagementResourceId = null;
+    private ManagementResourcePreferencesResponse(ManagementResourcePreferencesResponse $) {
+        this.preferredManagementResourceId = $.preferredManagementResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementResourcePreferencesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String preferredManagementResourceId;
+        private ManagementResourcePreferencesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementResourcePreferencesResponse();
         }
 
         public Builder(ManagementResourcePreferencesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preferredManagementResourceId = defaults.preferredManagementResourceId;
+            $ = new ManagementResourcePreferencesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder preferredManagementResourceId(@Nullable String preferredManagementResourceId) {
-            this.preferredManagementResourceId = preferredManagementResourceId;
+            $.preferredManagementResourceId = preferredManagementResourceId;
             return this;
-        }        public ManagementResourcePreferencesResponse build() {
-            return new ManagementResourcePreferencesResponse(preferredManagementResourceId);
+        }
+
+        public ManagementResourcePreferencesResponse build() {
+            return $;
         }
     }
+
 }

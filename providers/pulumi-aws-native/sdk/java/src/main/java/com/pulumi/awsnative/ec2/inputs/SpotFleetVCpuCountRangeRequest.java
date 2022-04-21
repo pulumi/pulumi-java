@@ -15,62 +15,57 @@ public final class SpotFleetVCpuCountRangeRequest extends com.pulumi.resources.I
     public static final SpotFleetVCpuCountRangeRequest Empty = new SpotFleetVCpuCountRangeRequest();
 
     @Import(name="max")
-      private final @Nullable Integer max;
+    private @Nullable Integer max;
 
     public Optional<Integer> max() {
-        return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
+        return Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
-      private final @Nullable Integer min;
+    private @Nullable Integer min;
 
     public Optional<Integer> min() {
-        return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
+        return Optional.ofNullable(this.min);
     }
 
-    public SpotFleetVCpuCountRangeRequest(
-        @Nullable Integer max,
-        @Nullable Integer min) {
-        this.max = max;
-        this.min = min;
-    }
+    private SpotFleetVCpuCountRangeRequest() {}
 
-    private SpotFleetVCpuCountRangeRequest() {
-        this.max = null;
-        this.min = null;
+    private SpotFleetVCpuCountRangeRequest(SpotFleetVCpuCountRangeRequest $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetVCpuCountRangeRequest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer max;
-        private @Nullable Integer min;
+        private SpotFleetVCpuCountRangeRequest $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetVCpuCountRangeRequest();
         }
 
         public Builder(SpotFleetVCpuCountRangeRequest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new SpotFleetVCpuCountRangeRequest(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Integer max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
+
         public Builder min(@Nullable Integer min) {
-            this.min = min;
+            $.min = min;
             return this;
-        }        public SpotFleetVCpuCountRangeRequest build() {
-            return new SpotFleetVCpuCountRangeRequest(max, min);
+        }
+
+        public SpotFleetVCpuCountRangeRequest build() {
+            return $;
         }
     }
+
 }

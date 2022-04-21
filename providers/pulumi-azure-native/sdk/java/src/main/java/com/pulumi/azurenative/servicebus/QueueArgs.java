@@ -6,11 +6,11 @@ package com.pulumi.azurenative.servicebus;
 import com.pulumi.azurenative.servicebus.enums.EntityStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoDeleteOnIdle")
-      private final @Nullable Output<String> autoDeleteOnIdle;
+    private @Nullable Output<String> autoDeleteOnIdle;
 
-    public Output<String> autoDeleteOnIdle() {
-        return this.autoDeleteOnIdle == null ? Codegen.empty() : this.autoDeleteOnIdle;
+    public Optional<Output<String>> autoDeleteOnIdle() {
+        return Optional.ofNullable(this.autoDeleteOnIdle);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetteringOnMessageExpiration")
-      private final @Nullable Output<Boolean> deadLetteringOnMessageExpiration;
+    private @Nullable Output<Boolean> deadLetteringOnMessageExpiration;
 
-    public Output<Boolean> deadLetteringOnMessageExpiration() {
-        return this.deadLetteringOnMessageExpiration == null ? Codegen.empty() : this.deadLetteringOnMessageExpiration;
+    public Optional<Output<Boolean>> deadLetteringOnMessageExpiration() {
+        return Optional.ofNullable(this.deadLetteringOnMessageExpiration);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultMessageTimeToLive")
-      private final @Nullable Output<String> defaultMessageTimeToLive;
+    private @Nullable Output<String> defaultMessageTimeToLive;
 
-    public Output<String> defaultMessageTimeToLive() {
-        return this.defaultMessageTimeToLive == null ? Codegen.empty() : this.defaultMessageTimeToLive;
+    public Optional<Output<String>> defaultMessageTimeToLive() {
+        return Optional.ofNullable(this.defaultMessageTimeToLive);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="duplicateDetectionHistoryTimeWindow")
-      private final @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
+    private @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
 
-    public Output<String> duplicateDetectionHistoryTimeWindow() {
-        return this.duplicateDetectionHistoryTimeWindow == null ? Codegen.empty() : this.duplicateDetectionHistoryTimeWindow;
+    public Optional<Output<String>> duplicateDetectionHistoryTimeWindow() {
+        return Optional.ofNullable(this.duplicateDetectionHistoryTimeWindow);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableBatchedOperations")
-      private final @Nullable Output<Boolean> enableBatchedOperations;
+    private @Nullable Output<Boolean> enableBatchedOperations;
 
-    public Output<Boolean> enableBatchedOperations() {
-        return this.enableBatchedOperations == null ? Codegen.empty() : this.enableBatchedOperations;
+    public Optional<Output<Boolean>> enableBatchedOperations() {
+        return Optional.ofNullable(this.enableBatchedOperations);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableExpress")
-      private final @Nullable Output<Boolean> enableExpress;
+    private @Nullable Output<Boolean> enableExpress;
 
-    public Output<Boolean> enableExpress() {
-        return this.enableExpress == null ? Codegen.empty() : this.enableExpress;
+    public Optional<Output<Boolean>> enableExpress() {
+        return Optional.ofNullable(this.enableExpress);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enablePartitioning")
-      private final @Nullable Output<Boolean> enablePartitioning;
+    private @Nullable Output<Boolean> enablePartitioning;
 
-    public Output<Boolean> enablePartitioning() {
-        return this.enablePartitioning == null ? Codegen.empty() : this.enablePartitioning;
+    public Optional<Output<Boolean>> enablePartitioning() {
+        return Optional.ofNullable(this.enablePartitioning);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forwardDeadLetteredMessagesTo")
-      private final @Nullable Output<String> forwardDeadLetteredMessagesTo;
+    private @Nullable Output<String> forwardDeadLetteredMessagesTo;
 
-    public Output<String> forwardDeadLetteredMessagesTo() {
-        return this.forwardDeadLetteredMessagesTo == null ? Codegen.empty() : this.forwardDeadLetteredMessagesTo;
+    public Optional<Output<String>> forwardDeadLetteredMessagesTo() {
+        return Optional.ofNullable(this.forwardDeadLetteredMessagesTo);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forwardTo")
-      private final @Nullable Output<String> forwardTo;
+    private @Nullable Output<String> forwardTo;
 
-    public Output<String> forwardTo() {
-        return this.forwardTo == null ? Codegen.empty() : this.forwardTo;
+    public Optional<Output<String>> forwardTo() {
+        return Optional.ofNullable(this.forwardTo);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lockDuration")
-      private final @Nullable Output<String> lockDuration;
+    private @Nullable Output<String> lockDuration;
 
-    public Output<String> lockDuration() {
-        return this.lockDuration == null ? Codegen.empty() : this.lockDuration;
+    public Optional<Output<String>> lockDuration() {
+        return Optional.ofNullable(this.lockDuration);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxDeliveryCount")
-      private final @Nullable Output<Integer> maxDeliveryCount;
+    private @Nullable Output<Integer> maxDeliveryCount;
 
-    public Output<Integer> maxDeliveryCount() {
-        return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
+    public Optional<Output<Integer>> maxDeliveryCount() {
+        return Optional.ofNullable(this.maxDeliveryCount);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSizeInMegabytes")
-      private final @Nullable Output<Integer> maxSizeInMegabytes;
+    private @Nullable Output<Integer> maxSizeInMegabytes;
 
-    public Output<Integer> maxSizeInMegabytes() {
-        return this.maxSizeInMegabytes == null ? Codegen.empty() : this.maxSizeInMegabytes;
+    public Optional<Output<Integer>> maxSizeInMegabytes() {
+        return Optional.ofNullable(this.maxSizeInMegabytes);
     }
 
     /**
@@ -155,7 +155,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -166,10 +166,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queueName")
-      private final @Nullable Output<String> queueName;
+    private @Nullable Output<String> queueName;
 
-    public Output<String> queueName() {
-        return this.queueName == null ? Codegen.empty() : this.queueName;
+    public Optional<Output<String>> queueName() {
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requiresDuplicateDetection")
-      private final @Nullable Output<Boolean> requiresDuplicateDetection;
+    private @Nullable Output<Boolean> requiresDuplicateDetection;
 
-    public Output<Boolean> requiresDuplicateDetection() {
-        return this.requiresDuplicateDetection == null ? Codegen.empty() : this.requiresDuplicateDetection;
+    public Optional<Output<Boolean>> requiresDuplicateDetection() {
+        return Optional.ofNullable(this.requiresDuplicateDetection);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requiresSession")
-      private final @Nullable Output<Boolean> requiresSession;
+    private @Nullable Output<Boolean> requiresSession;
 
-    public Output<Boolean> requiresSession() {
-        return this.requiresSession == null ? Codegen.empty() : this.requiresSession;
+    public Optional<Output<Boolean>> requiresSession() {
+        return Optional.ofNullable(this.requiresSession);
     }
 
     /**
@@ -199,7 +199,7 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -210,271 +210,220 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<EntityStatus> status;
+    private @Nullable Output<EntityStatus> status;
 
-    public Output<EntityStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<EntityStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public QueueArgs(
-        @Nullable Output<String> autoDeleteOnIdle,
-        @Nullable Output<Boolean> deadLetteringOnMessageExpiration,
-        @Nullable Output<String> defaultMessageTimeToLive,
-        @Nullable Output<String> duplicateDetectionHistoryTimeWindow,
-        @Nullable Output<Boolean> enableBatchedOperations,
-        @Nullable Output<Boolean> enableExpress,
-        @Nullable Output<Boolean> enablePartitioning,
-        @Nullable Output<String> forwardDeadLetteredMessagesTo,
-        @Nullable Output<String> forwardTo,
-        @Nullable Output<String> lockDuration,
-        @Nullable Output<Integer> maxDeliveryCount,
-        @Nullable Output<Integer> maxSizeInMegabytes,
-        Output<String> namespaceName,
-        @Nullable Output<String> queueName,
-        @Nullable Output<Boolean> requiresDuplicateDetection,
-        @Nullable Output<Boolean> requiresSession,
-        Output<String> resourceGroupName,
-        @Nullable Output<EntityStatus> status) {
-        this.autoDeleteOnIdle = autoDeleteOnIdle;
-        this.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
-        this.defaultMessageTimeToLive = defaultMessageTimeToLive;
-        this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
-        this.enableBatchedOperations = enableBatchedOperations;
-        this.enableExpress = enableExpress;
-        this.enablePartitioning = enablePartitioning;
-        this.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
-        this.forwardTo = forwardTo;
-        this.lockDuration = lockDuration;
-        this.maxDeliveryCount = maxDeliveryCount;
-        this.maxSizeInMegabytes = maxSizeInMegabytes;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.queueName = queueName;
-        this.requiresDuplicateDetection = requiresDuplicateDetection;
-        this.requiresSession = requiresSession;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.status = status;
-    }
+    private QueueArgs() {}
 
-    private QueueArgs() {
-        this.autoDeleteOnIdle = Codegen.empty();
-        this.deadLetteringOnMessageExpiration = Codegen.empty();
-        this.defaultMessageTimeToLive = Codegen.empty();
-        this.duplicateDetectionHistoryTimeWindow = Codegen.empty();
-        this.enableBatchedOperations = Codegen.empty();
-        this.enableExpress = Codegen.empty();
-        this.enablePartitioning = Codegen.empty();
-        this.forwardDeadLetteredMessagesTo = Codegen.empty();
-        this.forwardTo = Codegen.empty();
-        this.lockDuration = Codegen.empty();
-        this.maxDeliveryCount = Codegen.empty();
-        this.maxSizeInMegabytes = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.queueName = Codegen.empty();
-        this.requiresDuplicateDetection = Codegen.empty();
-        this.requiresSession = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.status = Codegen.empty();
+    private QueueArgs(QueueArgs $) {
+        this.autoDeleteOnIdle = $.autoDeleteOnIdle;
+        this.deadLetteringOnMessageExpiration = $.deadLetteringOnMessageExpiration;
+        this.defaultMessageTimeToLive = $.defaultMessageTimeToLive;
+        this.duplicateDetectionHistoryTimeWindow = $.duplicateDetectionHistoryTimeWindow;
+        this.enableBatchedOperations = $.enableBatchedOperations;
+        this.enableExpress = $.enableExpress;
+        this.enablePartitioning = $.enablePartitioning;
+        this.forwardDeadLetteredMessagesTo = $.forwardDeadLetteredMessagesTo;
+        this.forwardTo = $.forwardTo;
+        this.lockDuration = $.lockDuration;
+        this.maxDeliveryCount = $.maxDeliveryCount;
+        this.maxSizeInMegabytes = $.maxSizeInMegabytes;
+        this.namespaceName = $.namespaceName;
+        this.queueName = $.queueName;
+        this.requiresDuplicateDetection = $.requiresDuplicateDetection;
+        this.requiresSession = $.requiresSession;
+        this.resourceGroupName = $.resourceGroupName;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoDeleteOnIdle;
-        private @Nullable Output<Boolean> deadLetteringOnMessageExpiration;
-        private @Nullable Output<String> defaultMessageTimeToLive;
-        private @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
-        private @Nullable Output<Boolean> enableBatchedOperations;
-        private @Nullable Output<Boolean> enableExpress;
-        private @Nullable Output<Boolean> enablePartitioning;
-        private @Nullable Output<String> forwardDeadLetteredMessagesTo;
-        private @Nullable Output<String> forwardTo;
-        private @Nullable Output<String> lockDuration;
-        private @Nullable Output<Integer> maxDeliveryCount;
-        private @Nullable Output<Integer> maxSizeInMegabytes;
-        private Output<String> namespaceName;
-        private @Nullable Output<String> queueName;
-        private @Nullable Output<Boolean> requiresDuplicateDetection;
-        private @Nullable Output<Boolean> requiresSession;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<EntityStatus> status;
+        private QueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueArgs();
         }
 
         public Builder(QueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDeleteOnIdle = defaults.autoDeleteOnIdle;
-    	      this.deadLetteringOnMessageExpiration = defaults.deadLetteringOnMessageExpiration;
-    	      this.defaultMessageTimeToLive = defaults.defaultMessageTimeToLive;
-    	      this.duplicateDetectionHistoryTimeWindow = defaults.duplicateDetectionHistoryTimeWindow;
-    	      this.enableBatchedOperations = defaults.enableBatchedOperations;
-    	      this.enableExpress = defaults.enableExpress;
-    	      this.enablePartitioning = defaults.enablePartitioning;
-    	      this.forwardDeadLetteredMessagesTo = defaults.forwardDeadLetteredMessagesTo;
-    	      this.forwardTo = defaults.forwardTo;
-    	      this.lockDuration = defaults.lockDuration;
-    	      this.maxDeliveryCount = defaults.maxDeliveryCount;
-    	      this.maxSizeInMegabytes = defaults.maxSizeInMegabytes;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.queueName = defaults.queueName;
-    	      this.requiresDuplicateDetection = defaults.requiresDuplicateDetection;
-    	      this.requiresSession = defaults.requiresSession;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.status = defaults.status;
+            $ = new QueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDeleteOnIdle(@Nullable Output<String> autoDeleteOnIdle) {
-            this.autoDeleteOnIdle = autoDeleteOnIdle;
+            $.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
-        public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
-            this.autoDeleteOnIdle = Codegen.ofNullable(autoDeleteOnIdle);
-            return this;
+
+        public Builder autoDeleteOnIdle(String autoDeleteOnIdle) {
+            return autoDeleteOnIdle(Output.of(autoDeleteOnIdle));
         }
+
         public Builder deadLetteringOnMessageExpiration(@Nullable Output<Boolean> deadLetteringOnMessageExpiration) {
-            this.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
+            $.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
             return this;
         }
-        public Builder deadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
-            this.deadLetteringOnMessageExpiration = Codegen.ofNullable(deadLetteringOnMessageExpiration);
-            return this;
+
+        public Builder deadLetteringOnMessageExpiration(Boolean deadLetteringOnMessageExpiration) {
+            return deadLetteringOnMessageExpiration(Output.of(deadLetteringOnMessageExpiration));
         }
+
         public Builder defaultMessageTimeToLive(@Nullable Output<String> defaultMessageTimeToLive) {
-            this.defaultMessageTimeToLive = defaultMessageTimeToLive;
+            $.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
-        public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
-            this.defaultMessageTimeToLive = Codegen.ofNullable(defaultMessageTimeToLive);
-            return this;
+
+        public Builder defaultMessageTimeToLive(String defaultMessageTimeToLive) {
+            return defaultMessageTimeToLive(Output.of(defaultMessageTimeToLive));
         }
+
         public Builder duplicateDetectionHistoryTimeWindow(@Nullable Output<String> duplicateDetectionHistoryTimeWindow) {
-            this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
+            $.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
-        public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
-            this.duplicateDetectionHistoryTimeWindow = Codegen.ofNullable(duplicateDetectionHistoryTimeWindow);
-            return this;
+
+        public Builder duplicateDetectionHistoryTimeWindow(String duplicateDetectionHistoryTimeWindow) {
+            return duplicateDetectionHistoryTimeWindow(Output.of(duplicateDetectionHistoryTimeWindow));
         }
+
         public Builder enableBatchedOperations(@Nullable Output<Boolean> enableBatchedOperations) {
-            this.enableBatchedOperations = enableBatchedOperations;
+            $.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
-        public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
-            this.enableBatchedOperations = Codegen.ofNullable(enableBatchedOperations);
-            return this;
+
+        public Builder enableBatchedOperations(Boolean enableBatchedOperations) {
+            return enableBatchedOperations(Output.of(enableBatchedOperations));
         }
+
         public Builder enableExpress(@Nullable Output<Boolean> enableExpress) {
-            this.enableExpress = enableExpress;
+            $.enableExpress = enableExpress;
             return this;
         }
-        public Builder enableExpress(@Nullable Boolean enableExpress) {
-            this.enableExpress = Codegen.ofNullable(enableExpress);
-            return this;
+
+        public Builder enableExpress(Boolean enableExpress) {
+            return enableExpress(Output.of(enableExpress));
         }
+
         public Builder enablePartitioning(@Nullable Output<Boolean> enablePartitioning) {
-            this.enablePartitioning = enablePartitioning;
+            $.enablePartitioning = enablePartitioning;
             return this;
         }
-        public Builder enablePartitioning(@Nullable Boolean enablePartitioning) {
-            this.enablePartitioning = Codegen.ofNullable(enablePartitioning);
-            return this;
+
+        public Builder enablePartitioning(Boolean enablePartitioning) {
+            return enablePartitioning(Output.of(enablePartitioning));
         }
+
         public Builder forwardDeadLetteredMessagesTo(@Nullable Output<String> forwardDeadLetteredMessagesTo) {
-            this.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
+            $.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
             return this;
         }
-        public Builder forwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
-            this.forwardDeadLetteredMessagesTo = Codegen.ofNullable(forwardDeadLetteredMessagesTo);
-            return this;
+
+        public Builder forwardDeadLetteredMessagesTo(String forwardDeadLetteredMessagesTo) {
+            return forwardDeadLetteredMessagesTo(Output.of(forwardDeadLetteredMessagesTo));
         }
+
         public Builder forwardTo(@Nullable Output<String> forwardTo) {
-            this.forwardTo = forwardTo;
+            $.forwardTo = forwardTo;
             return this;
         }
-        public Builder forwardTo(@Nullable String forwardTo) {
-            this.forwardTo = Codegen.ofNullable(forwardTo);
-            return this;
+
+        public Builder forwardTo(String forwardTo) {
+            return forwardTo(Output.of(forwardTo));
         }
+
         public Builder lockDuration(@Nullable Output<String> lockDuration) {
-            this.lockDuration = lockDuration;
+            $.lockDuration = lockDuration;
             return this;
         }
-        public Builder lockDuration(@Nullable String lockDuration) {
-            this.lockDuration = Codegen.ofNullable(lockDuration);
-            return this;
+
+        public Builder lockDuration(String lockDuration) {
+            return lockDuration(Output.of(lockDuration));
         }
+
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
-            this.maxDeliveryCount = maxDeliveryCount;
+            $.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
-            this.maxDeliveryCount = Codegen.ofNullable(maxDeliveryCount);
-            return this;
+
+        public Builder maxDeliveryCount(Integer maxDeliveryCount) {
+            return maxDeliveryCount(Output.of(maxDeliveryCount));
         }
+
         public Builder maxSizeInMegabytes(@Nullable Output<Integer> maxSizeInMegabytes) {
-            this.maxSizeInMegabytes = maxSizeInMegabytes;
+            $.maxSizeInMegabytes = maxSizeInMegabytes;
             return this;
         }
-        public Builder maxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
-            this.maxSizeInMegabytes = Codegen.ofNullable(maxSizeInMegabytes);
-            return this;
+
+        public Builder maxSizeInMegabytes(Integer maxSizeInMegabytes) {
+            return maxSizeInMegabytes(Output.of(maxSizeInMegabytes));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder queueName(@Nullable Output<String> queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
         }
-        public Builder queueName(@Nullable String queueName) {
-            this.queueName = Codegen.ofNullable(queueName);
-            return this;
+
+        public Builder queueName(String queueName) {
+            return queueName(Output.of(queueName));
         }
+
         public Builder requiresDuplicateDetection(@Nullable Output<Boolean> requiresDuplicateDetection) {
-            this.requiresDuplicateDetection = requiresDuplicateDetection;
+            $.requiresDuplicateDetection = requiresDuplicateDetection;
             return this;
         }
-        public Builder requiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
-            this.requiresDuplicateDetection = Codegen.ofNullable(requiresDuplicateDetection);
-            return this;
+
+        public Builder requiresDuplicateDetection(Boolean requiresDuplicateDetection) {
+            return requiresDuplicateDetection(Output.of(requiresDuplicateDetection));
         }
+
         public Builder requiresSession(@Nullable Output<Boolean> requiresSession) {
-            this.requiresSession = requiresSession;
+            $.requiresSession = requiresSession;
             return this;
         }
-        public Builder requiresSession(@Nullable Boolean requiresSession) {
-            this.requiresSession = Codegen.ofNullable(requiresSession);
-            return this;
+
+        public Builder requiresSession(Boolean requiresSession) {
+            return requiresSession(Output.of(requiresSession));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder status(@Nullable Output<EntityStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable EntityStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public QueueArgs build() {
-            return new QueueArgs(autoDeleteOnIdle, deadLetteringOnMessageExpiration, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, forwardDeadLetteredMessagesTo, forwardTo, lockDuration, maxDeliveryCount, maxSizeInMegabytes, namespaceName, queueName, requiresDuplicateDetection, requiresSession, resourceGroupName, status);
+
+        public Builder status(EntityStatus status) {
+            return status(Output.of(status));
+        }
+
+        public QueueArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

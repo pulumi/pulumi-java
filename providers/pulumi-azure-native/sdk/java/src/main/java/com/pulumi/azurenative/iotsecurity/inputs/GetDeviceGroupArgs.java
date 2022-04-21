@@ -17,7 +17,7 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deviceGroupName", required=true)
-      private final String deviceGroupName;
+    private String deviceGroupName;
 
     public String deviceGroupName() {
         return this.deviceGroupName;
@@ -28,55 +28,52 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iotDefenderLocation", required=true)
-      private final String iotDefenderLocation;
+    private String iotDefenderLocation;
 
     public String iotDefenderLocation() {
         return this.iotDefenderLocation;
     }
 
-    public GetDeviceGroupArgs(
-        String deviceGroupName,
-        String iotDefenderLocation) {
-        this.deviceGroupName = Objects.requireNonNull(deviceGroupName, "expected parameter 'deviceGroupName' to be non-null");
-        this.iotDefenderLocation = Objects.requireNonNull(iotDefenderLocation, "expected parameter 'iotDefenderLocation' to be non-null");
-    }
+    private GetDeviceGroupArgs() {}
 
-    private GetDeviceGroupArgs() {
-        this.deviceGroupName = null;
-        this.iotDefenderLocation = null;
+    private GetDeviceGroupArgs(GetDeviceGroupArgs $) {
+        this.deviceGroupName = $.deviceGroupName;
+        this.iotDefenderLocation = $.iotDefenderLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeviceGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceGroupName;
-        private String iotDefenderLocation;
+        private GetDeviceGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeviceGroupArgs();
         }
 
         public Builder(GetDeviceGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceGroupName = defaults.deviceGroupName;
-    	      this.iotDefenderLocation = defaults.iotDefenderLocation;
+            $ = new GetDeviceGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceGroupName(String deviceGroupName) {
-            this.deviceGroupName = Objects.requireNonNull(deviceGroupName);
+            $.deviceGroupName = deviceGroupName;
             return this;
         }
+
         public Builder iotDefenderLocation(String iotDefenderLocation) {
-            this.iotDefenderLocation = Objects.requireNonNull(iotDefenderLocation);
+            $.iotDefenderLocation = iotDefenderLocation;
             return this;
-        }        public GetDeviceGroupArgs build() {
-            return new GetDeviceGroupArgs(deviceGroupName, iotDefenderLocation);
+        }
+
+        public GetDeviceGroupArgs build() {
+            $.deviceGroupName = Objects.requireNonNull($.deviceGroupName, "expected parameter 'deviceGroupName' to be non-null");
+            $.iotDefenderLocation = Objects.requireNonNull($.iotDefenderLocation, "expected parameter 'iotDefenderLocation' to be non-null");
+            return $;
         }
     }
+
 }

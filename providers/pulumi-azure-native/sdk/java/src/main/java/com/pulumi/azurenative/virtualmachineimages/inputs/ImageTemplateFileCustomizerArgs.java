@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sha256Checksum")
-      private final @Nullable Output<String> sha256Checksum;
+    private @Nullable Output<String> sha256Checksum;
 
-    public Output<String> sha256Checksum() {
-        return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
+    public Optional<Output<String>> sha256Checksum() {
+        return Optional.ofNullable(this.sha256Checksum);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceUri")
-      private final @Nullable Output<String> sourceUri;
+    private @Nullable Output<String> sourceUri;
 
-    public Output<String> sourceUri() {
-        return this.sourceUri == null ? Codegen.empty() : this.sourceUri;
+    public Optional<Output<String>> sourceUri() {
+        return Optional.ofNullable(this.sourceUri);
     }
 
     /**
@@ -69,102 +70,90 @@ public final class ImageTemplateFileCustomizerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ImageTemplateFileCustomizerArgs(
-        @Nullable Output<String> destination,
-        @Nullable Output<String> name,
-        @Nullable Output<String> sha256Checksum,
-        @Nullable Output<String> sourceUri,
-        Output<String> type) {
-        this.destination = destination;
-        this.name = name;
-        this.sha256Checksum = Codegen.stringProp("sha256Checksum").output().arg(sha256Checksum).def("").getNullable();
-        this.sourceUri = sourceUri;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ImageTemplateFileCustomizerArgs() {}
 
-    private ImageTemplateFileCustomizerArgs() {
-        this.destination = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sha256Checksum = Codegen.empty();
-        this.sourceUri = Codegen.empty();
-        this.type = Codegen.empty();
+    private ImageTemplateFileCustomizerArgs(ImageTemplateFileCustomizerArgs $) {
+        this.destination = $.destination;
+        this.name = $.name;
+        this.sha256Checksum = $.sha256Checksum;
+        this.sourceUri = $.sourceUri;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateFileCustomizerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destination;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> sha256Checksum;
-        private @Nullable Output<String> sourceUri;
-        private Output<String> type;
+        private ImageTemplateFileCustomizerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateFileCustomizerArgs();
         }
 
         public Builder(ImageTemplateFileCustomizerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.name = defaults.name;
-    	      this.sha256Checksum = defaults.sha256Checksum;
-    	      this.sourceUri = defaults.sourceUri;
-    	      this.type = defaults.type;
+            $ = new ImageTemplateFileCustomizerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
-            this.sha256Checksum = sha256Checksum;
+            $.sha256Checksum = sha256Checksum;
             return this;
         }
-        public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = Codegen.ofNullable(sha256Checksum);
-            return this;
+
+        public Builder sha256Checksum(String sha256Checksum) {
+            return sha256Checksum(Output.of(sha256Checksum));
         }
+
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
-            this.sourceUri = sourceUri;
+            $.sourceUri = sourceUri;
             return this;
         }
-        public Builder sourceUri(@Nullable String sourceUri) {
-            this.sourceUri = Codegen.ofNullable(sourceUri);
-            return this;
+
+        public Builder sourceUri(String sourceUri) {
+            return sourceUri(Output.of(sourceUri));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ImageTemplateFileCustomizerArgs build() {
-            return new ImageTemplateFileCustomizerArgs(destination, name, sha256Checksum, sourceUri, type);
+            return type(Output.of(type));
+        }
+
+        public ImageTemplateFileCustomizerArgs build() {
+            $.sha256Checksum = Codegen.stringProp("sha256Checksum").output().arg($.sha256Checksum).def("").getNullable();
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

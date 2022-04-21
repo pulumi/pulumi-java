@@ -23,7 +23,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
      * 
      */
     @Import(name="contentSecurityPolicies", required=true)
-      private final List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies;
+    private List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies() {
         return this.contentSecurityPolicies;
@@ -34,7 +34,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
      * 
      */
     @Import(name="contentTypeOptions", required=true)
-      private final List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions;
+    private List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions() {
         return this.contentTypeOptions;
@@ -45,7 +45,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
      * 
      */
     @Import(name="frameOptions", required=true)
-      private final List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions;
+    private List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions() {
         return this.frameOptions;
@@ -56,7 +56,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
      * 
      */
     @Import(name="referrerPolicies", required=true)
-      private final List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies;
+    private List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies() {
         return this.referrerPolicies;
@@ -67,7 +67,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
      * 
      */
     @Import(name="strictTransportSecurities", required=true)
-      private final List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities;
+    private List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities() {
         return this.strictTransportSecurities;
@@ -78,109 +78,104 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends com.pul
      * 
      */
     @Import(name="xssProtections", required=true)
-      private final List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
+    private List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections() {
         return this.xssProtections;
     }
 
-    public GetResponseHeadersPolicySecurityHeadersConfig(
-        List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies,
-        List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions,
-        List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions,
-        List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies,
-        List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities,
-        List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
-        this.contentSecurityPolicies = Objects.requireNonNull(contentSecurityPolicies, "expected parameter 'contentSecurityPolicies' to be non-null");
-        this.contentTypeOptions = Objects.requireNonNull(contentTypeOptions, "expected parameter 'contentTypeOptions' to be non-null");
-        this.frameOptions = Objects.requireNonNull(frameOptions, "expected parameter 'frameOptions' to be non-null");
-        this.referrerPolicies = Objects.requireNonNull(referrerPolicies, "expected parameter 'referrerPolicies' to be non-null");
-        this.strictTransportSecurities = Objects.requireNonNull(strictTransportSecurities, "expected parameter 'strictTransportSecurities' to be non-null");
-        this.xssProtections = Objects.requireNonNull(xssProtections, "expected parameter 'xssProtections' to be non-null");
-    }
+    private GetResponseHeadersPolicySecurityHeadersConfig() {}
 
-    private GetResponseHeadersPolicySecurityHeadersConfig() {
-        this.contentSecurityPolicies = List.of();
-        this.contentTypeOptions = List.of();
-        this.frameOptions = List.of();
-        this.referrerPolicies = List.of();
-        this.strictTransportSecurities = List.of();
-        this.xssProtections = List.of();
+    private GetResponseHeadersPolicySecurityHeadersConfig(GetResponseHeadersPolicySecurityHeadersConfig $) {
+        this.contentSecurityPolicies = $.contentSecurityPolicies;
+        this.contentTypeOptions = $.contentTypeOptions;
+        this.frameOptions = $.frameOptions;
+        this.referrerPolicies = $.referrerPolicies;
+        this.strictTransportSecurities = $.strictTransportSecurities;
+        this.xssProtections = $.xssProtections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponseHeadersPolicySecurityHeadersConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies;
-        private List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions;
-        private List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions;
-        private List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies;
-        private List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities;
-        private List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
+        private GetResponseHeadersPolicySecurityHeadersConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponseHeadersPolicySecurityHeadersConfig();
         }
 
         public Builder(GetResponseHeadersPolicySecurityHeadersConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentSecurityPolicies = defaults.contentSecurityPolicies;
-    	      this.contentTypeOptions = defaults.contentTypeOptions;
-    	      this.frameOptions = defaults.frameOptions;
-    	      this.referrerPolicies = defaults.referrerPolicies;
-    	      this.strictTransportSecurities = defaults.strictTransportSecurities;
-    	      this.xssProtections = defaults.xssProtections;
+            $ = new GetResponseHeadersPolicySecurityHeadersConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder contentSecurityPolicies(List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies) {
-            this.contentSecurityPolicies = Objects.requireNonNull(contentSecurityPolicies);
+            $.contentSecurityPolicies = contentSecurityPolicies;
             return this;
         }
+
         public Builder contentSecurityPolicies(GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy... contentSecurityPolicies) {
             return contentSecurityPolicies(List.of(contentSecurityPolicies));
         }
+
         public Builder contentTypeOptions(List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions) {
-            this.contentTypeOptions = Objects.requireNonNull(contentTypeOptions);
+            $.contentTypeOptions = contentTypeOptions;
             return this;
         }
+
         public Builder contentTypeOptions(GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption... contentTypeOptions) {
             return contentTypeOptions(List.of(contentTypeOptions));
         }
+
         public Builder frameOptions(List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions) {
-            this.frameOptions = Objects.requireNonNull(frameOptions);
+            $.frameOptions = frameOptions;
             return this;
         }
+
         public Builder frameOptions(GetResponseHeadersPolicySecurityHeadersConfigFrameOption... frameOptions) {
             return frameOptions(List.of(frameOptions));
         }
+
         public Builder referrerPolicies(List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies) {
-            this.referrerPolicies = Objects.requireNonNull(referrerPolicies);
+            $.referrerPolicies = referrerPolicies;
             return this;
         }
+
         public Builder referrerPolicies(GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy... referrerPolicies) {
             return referrerPolicies(List.of(referrerPolicies));
         }
+
         public Builder strictTransportSecurities(List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities) {
-            this.strictTransportSecurities = Objects.requireNonNull(strictTransportSecurities);
+            $.strictTransportSecurities = strictTransportSecurities;
             return this;
         }
+
         public Builder strictTransportSecurities(GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity... strictTransportSecurities) {
             return strictTransportSecurities(List.of(strictTransportSecurities));
         }
+
         public Builder xssProtections(List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
-            this.xssProtections = Objects.requireNonNull(xssProtections);
+            $.xssProtections = xssProtections;
             return this;
         }
+
         public Builder xssProtections(GetResponseHeadersPolicySecurityHeadersConfigXssProtection... xssProtections) {
             return xssProtections(List.of(xssProtections));
-        }        public GetResponseHeadersPolicySecurityHeadersConfig build() {
-            return new GetResponseHeadersPolicySecurityHeadersConfig(contentSecurityPolicies, contentTypeOptions, frameOptions, referrerPolicies, strictTransportSecurities, xssProtections);
+        }
+
+        public GetResponseHeadersPolicySecurityHeadersConfig build() {
+            $.contentSecurityPolicies = Objects.requireNonNull($.contentSecurityPolicies, "expected parameter 'contentSecurityPolicies' to be non-null");
+            $.contentTypeOptions = Objects.requireNonNull($.contentTypeOptions, "expected parameter 'contentTypeOptions' to be non-null");
+            $.frameOptions = Objects.requireNonNull($.frameOptions, "expected parameter 'frameOptions' to be non-null");
+            $.referrerPolicies = Objects.requireNonNull($.referrerPolicies, "expected parameter 'referrerPolicies' to be non-null");
+            $.strictTransportSecurities = Objects.requireNonNull($.strictTransportSecurities, "expected parameter 'strictTransportSecurities' to be non-null");
+            $.xssProtections = Objects.requireNonNull($.xssProtections, "expected parameter 'xssProtections' to be non-null");
+            return $;
         }
     }
+
 }

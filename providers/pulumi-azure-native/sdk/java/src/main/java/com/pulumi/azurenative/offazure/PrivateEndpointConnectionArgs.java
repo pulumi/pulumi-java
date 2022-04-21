@@ -5,9 +5,9 @@ package com.pulumi.azurenative.offazure;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="peConnectionName")
-      private final @Nullable Output<String> peConnectionName;
+    private @Nullable Output<String> peConnectionName;
 
-    public Output<String> peConnectionName() {
-        return this.peConnectionName == null ? Codegen.empty() : this.peConnectionName;
+    public Optional<Output<String>> peConnectionName() {
+        return Optional.ofNullable(this.peConnectionName);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,76 +42,70 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="siteName", required=true)
-      private final Output<String> siteName;
+    private Output<String> siteName;
 
     public Output<String> siteName() {
         return this.siteName;
     }
 
-    public PrivateEndpointConnectionArgs(
-        @Nullable Output<String> peConnectionName,
-        Output<String> resourceGroupName,
-        Output<String> siteName) {
-        this.peConnectionName = peConnectionName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
-    }
+    private PrivateEndpointConnectionArgs() {}
 
-    private PrivateEndpointConnectionArgs() {
-        this.peConnectionName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.siteName = Codegen.empty();
+    private PrivateEndpointConnectionArgs(PrivateEndpointConnectionArgs $) {
+        this.peConnectionName = $.peConnectionName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteName = $.siteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> peConnectionName;
-        private Output<String> resourceGroupName;
-        private Output<String> siteName;
+        private PrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionArgs();
         }
 
         public Builder(PrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peConnectionName = defaults.peConnectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteName = defaults.siteName;
+            $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peConnectionName(@Nullable Output<String> peConnectionName) {
-            this.peConnectionName = peConnectionName;
+            $.peConnectionName = peConnectionName;
             return this;
         }
-        public Builder peConnectionName(@Nullable String peConnectionName) {
-            this.peConnectionName = Codegen.ofNullable(peConnectionName);
-            return this;
+
+        public Builder peConnectionName(String peConnectionName) {
+            return peConnectionName(Output.of(peConnectionName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder siteName(Output<String> siteName) {
-            this.siteName = Objects.requireNonNull(siteName);
+            $.siteName = siteName;
             return this;
         }
+
         public Builder siteName(String siteName) {
-            this.siteName = Output.of(Objects.requireNonNull(siteName));
-            return this;
-        }        public PrivateEndpointConnectionArgs build() {
-            return new PrivateEndpointConnectionArgs(peConnectionName, resourceGroupName, siteName);
+            return siteName(Output.of(siteName));
+        }
+
+        public PrivateEndpointConnectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.siteName = Objects.requireNonNull($.siteName, "expected parameter 'siteName' to be non-null");
+            return $;
         }
     }
+
 }

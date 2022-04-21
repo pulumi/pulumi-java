@@ -25,10 +25,10 @@ public final class SizeInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeSize")
-      private final @Nullable String computeSize;
+    private @Nullable String computeSize;
 
     public Optional<String> computeSize() {
-        return this.computeSize == null ? Optional.empty() : Optional.ofNullable(this.computeSize);
+        return Optional.ofNullable(this.computeSize);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SizeInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="memory")
-      private final @Nullable Double memory;
+    private @Nullable Double memory;
 
     public Optional<Double> memory() {
-        return this.memory == null ? Optional.empty() : Optional.ofNullable(this.memory);
+        return Optional.ofNullable(this.memory);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SizeInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="numberOfCores")
-      private final @Nullable Integer numberOfCores;
+    private @Nullable Integer numberOfCores;
 
     public Optional<Integer> numberOfCores() {
-        return this.numberOfCores == null ? Optional.empty() : Optional.ofNullable(this.numberOfCores);
+        return Optional.ofNullable(this.numberOfCores);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class SizeInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="price")
-      private final @Nullable Double price;
+    private @Nullable Double price;
 
     public Optional<Double> price() {
-        return this.price == null ? Optional.empty() : Optional.ofNullable(this.price);
+        return Optional.ofNullable(this.price);
     }
 
-    public SizeInfoResponse(
-        @Nullable String computeSize,
-        @Nullable Double memory,
-        @Nullable Integer numberOfCores,
-        @Nullable Double price) {
-        this.computeSize = computeSize;
-        this.memory = memory;
-        this.numberOfCores = numberOfCores;
-        this.price = price;
-    }
+    private SizeInfoResponse() {}
 
-    private SizeInfoResponse() {
-        this.computeSize = null;
-        this.memory = null;
-        this.numberOfCores = null;
-        this.price = null;
+    private SizeInfoResponse(SizeInfoResponse $) {
+        this.computeSize = $.computeSize;
+        this.memory = $.memory;
+        this.numberOfCores = $.numberOfCores;
+        this.price = $.price;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SizeInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String computeSize;
-        private @Nullable Double memory;
-        private @Nullable Integer numberOfCores;
-        private @Nullable Double price;
+        private SizeInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SizeInfoResponse();
         }
 
         public Builder(SizeInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeSize = defaults.computeSize;
-    	      this.memory = defaults.memory;
-    	      this.numberOfCores = defaults.numberOfCores;
-    	      this.price = defaults.price;
+            $ = new SizeInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computeSize(@Nullable String computeSize) {
-            this.computeSize = computeSize;
+            $.computeSize = computeSize;
             return this;
         }
+
         public Builder memory(@Nullable Double memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
+
         public Builder numberOfCores(@Nullable Integer numberOfCores) {
-            this.numberOfCores = numberOfCores;
+            $.numberOfCores = numberOfCores;
             return this;
         }
+
         public Builder price(@Nullable Double price) {
-            this.price = price;
+            $.price = price;
             return this;
-        }        public SizeInfoResponse build() {
-            return new SizeInfoResponse(computeSize, memory, numberOfCores, price);
+        }
+
+        public SizeInfoResponse build() {
+            return $;
         }
     }
+
 }

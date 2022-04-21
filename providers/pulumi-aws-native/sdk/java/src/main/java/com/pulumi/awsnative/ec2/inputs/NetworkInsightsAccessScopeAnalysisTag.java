@@ -15,62 +15,58 @@ public final class NetworkInsightsAccessScopeAnalysisTag extends com.pulumi.reso
     public static final NetworkInsightsAccessScopeAnalysisTag Empty = new NetworkInsightsAccessScopeAnalysisTag();
 
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public NetworkInsightsAccessScopeAnalysisTag(
-        String key,
-        @Nullable String value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = value;
-    }
+    private NetworkInsightsAccessScopeAnalysisTag() {}
 
-    private NetworkInsightsAccessScopeAnalysisTag() {
-        this.key = null;
-        this.value = null;
+    private NetworkInsightsAccessScopeAnalysisTag(NetworkInsightsAccessScopeAnalysisTag $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAccessScopeAnalysisTag defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private @Nullable String value;
+        private NetworkInsightsAccessScopeAnalysisTag $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAccessScopeAnalysisTag();
         }
 
         public Builder(NetworkInsightsAccessScopeAnalysisTag defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new NetworkInsightsAccessScopeAnalysisTag(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public NetworkInsightsAccessScopeAnalysisTag build() {
-            return new NetworkInsightsAccessScopeAnalysisTag(key, value);
+        }
+
+        public NetworkInsightsAccessScopeAnalysisTag build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

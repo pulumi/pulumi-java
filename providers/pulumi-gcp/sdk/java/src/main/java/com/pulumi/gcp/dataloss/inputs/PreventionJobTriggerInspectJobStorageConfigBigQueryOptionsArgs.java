@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArg
      * 
      */
     @Import(name="tableReference", required=true)
-      private final Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference;
+    private Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference() {
         return this.tableReference;
     }
 
-    public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs(Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference) {
-        this.tableReference = Objects.requireNonNull(tableReference, "expected parameter 'tableReference' to be non-null");
-    }
+    private PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs() {}
 
-    private PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs() {
-        this.tableReference = Codegen.empty();
+    private PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs $) {
+        this.tableReference = $.tableReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference;
+        private PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs();
         }
 
         public Builder(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableReference = defaults.tableReference;
+            $ = new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tableReference(Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference) {
-            this.tableReference = Objects.requireNonNull(tableReference);
+            $.tableReference = tableReference;
             return this;
         }
+
         public Builder tableReference(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs tableReference) {
-            this.tableReference = Output.of(Objects.requireNonNull(tableReference));
-            return this;
-        }        public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs build() {
-            return new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs(tableReference);
+            return tableReference(Output.of(tableReference));
+        }
+
+        public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs build() {
+            $.tableReference = Objects.requireNonNull($.tableReference, "expected parameter 'tableReference' to be non-null");
+            return $;
         }
     }
+
 }

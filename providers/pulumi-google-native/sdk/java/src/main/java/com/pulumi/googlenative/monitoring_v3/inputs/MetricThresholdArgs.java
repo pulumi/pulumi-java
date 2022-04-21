@@ -5,7 +5,6 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.enums.MetricThresholdComparison;
 import com.pulumi.googlenative.monitoring_v3.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
@@ -13,6 +12,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="aggregations")
-      private final @Nullable Output<List<AggregationArgs>> aggregations;
+    private @Nullable Output<List<AggregationArgs>> aggregations;
 
-    public Output<List<AggregationArgs>> aggregations() {
-        return this.aggregations == null ? Codegen.empty() : this.aggregations;
+    public Optional<Output<List<AggregationArgs>>> aggregations() {
+        return Optional.ofNullable(this.aggregations);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="comparison")
-      private final @Nullable Output<MetricThresholdComparison> comparison;
+    private @Nullable Output<MetricThresholdComparison> comparison;
 
-    public Output<MetricThresholdComparison> comparison() {
-        return this.comparison == null ? Codegen.empty() : this.comparison;
+    public Optional<Output<MetricThresholdComparison>> comparison() {
+        return Optional.ofNullable(this.comparison);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="denominatorAggregations")
-      private final @Nullable Output<List<AggregationArgs>> denominatorAggregations;
+    private @Nullable Output<List<AggregationArgs>> denominatorAggregations;
 
-    public Output<List<AggregationArgs>> denominatorAggregations() {
-        return this.denominatorAggregations == null ? Codegen.empty() : this.denominatorAggregations;
+    public Optional<Output<List<AggregationArgs>>> denominatorAggregations() {
+        return Optional.ofNullable(this.denominatorAggregations);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="denominatorFilter")
-      private final @Nullable Output<String> denominatorFilter;
+    private @Nullable Output<String> denominatorFilter;
 
-    public Output<String> denominatorFilter() {
-        return this.denominatorFilter == null ? Codegen.empty() : this.denominatorFilter;
+    public Optional<Output<String>> denominatorFilter() {
+        return Optional.ofNullable(this.denominatorFilter);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -84,7 +84,7 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
@@ -95,10 +95,10 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="thresholdValue")
-      private final @Nullable Output<Double> thresholdValue;
+    private @Nullable Output<Double> thresholdValue;
 
-    public Output<Double> thresholdValue() {
-        return this.thresholdValue == null ? Codegen.empty() : this.thresholdValue;
+    public Optional<Output<Double>> thresholdValue() {
+        return Optional.ofNullable(this.thresholdValue);
     }
 
     /**
@@ -106,147 +106,127 @@ public final class MetricThresholdArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="trigger")
-      private final @Nullable Output<TriggerArgs> trigger;
+    private @Nullable Output<TriggerArgs> trigger;
 
-    public Output<TriggerArgs> trigger() {
-        return this.trigger == null ? Codegen.empty() : this.trigger;
+    public Optional<Output<TriggerArgs>> trigger() {
+        return Optional.ofNullable(this.trigger);
     }
 
-    public MetricThresholdArgs(
-        @Nullable Output<List<AggregationArgs>> aggregations,
-        @Nullable Output<MetricThresholdComparison> comparison,
-        @Nullable Output<List<AggregationArgs>> denominatorAggregations,
-        @Nullable Output<String> denominatorFilter,
-        @Nullable Output<String> duration,
-        Output<String> filter,
-        @Nullable Output<Double> thresholdValue,
-        @Nullable Output<TriggerArgs> trigger) {
-        this.aggregations = aggregations;
-        this.comparison = comparison;
-        this.denominatorAggregations = denominatorAggregations;
-        this.denominatorFilter = denominatorFilter;
-        this.duration = duration;
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.thresholdValue = thresholdValue;
-        this.trigger = trigger;
-    }
+    private MetricThresholdArgs() {}
 
-    private MetricThresholdArgs() {
-        this.aggregations = Codegen.empty();
-        this.comparison = Codegen.empty();
-        this.denominatorAggregations = Codegen.empty();
-        this.denominatorFilter = Codegen.empty();
-        this.duration = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.thresholdValue = Codegen.empty();
-        this.trigger = Codegen.empty();
+    private MetricThresholdArgs(MetricThresholdArgs $) {
+        this.aggregations = $.aggregations;
+        this.comparison = $.comparison;
+        this.denominatorAggregations = $.denominatorAggregations;
+        this.denominatorFilter = $.denominatorFilter;
+        this.duration = $.duration;
+        this.filter = $.filter;
+        this.thresholdValue = $.thresholdValue;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AggregationArgs>> aggregations;
-        private @Nullable Output<MetricThresholdComparison> comparison;
-        private @Nullable Output<List<AggregationArgs>> denominatorAggregations;
-        private @Nullable Output<String> denominatorFilter;
-        private @Nullable Output<String> duration;
-        private Output<String> filter;
-        private @Nullable Output<Double> thresholdValue;
-        private @Nullable Output<TriggerArgs> trigger;
+        private MetricThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricThresholdArgs();
         }
 
         public Builder(MetricThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregations = defaults.aggregations;
-    	      this.comparison = defaults.comparison;
-    	      this.denominatorAggregations = defaults.denominatorAggregations;
-    	      this.denominatorFilter = defaults.denominatorFilter;
-    	      this.duration = defaults.duration;
-    	      this.filter = defaults.filter;
-    	      this.thresholdValue = defaults.thresholdValue;
-    	      this.trigger = defaults.trigger;
+            $ = new MetricThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregations(@Nullable Output<List<AggregationArgs>> aggregations) {
-            this.aggregations = aggregations;
+            $.aggregations = aggregations;
             return this;
         }
-        public Builder aggregations(@Nullable List<AggregationArgs> aggregations) {
-            this.aggregations = Codegen.ofNullable(aggregations);
-            return this;
+
+        public Builder aggregations(List<AggregationArgs> aggregations) {
+            return aggregations(Output.of(aggregations));
         }
+
         public Builder aggregations(AggregationArgs... aggregations) {
             return aggregations(List.of(aggregations));
         }
+
         public Builder comparison(@Nullable Output<MetricThresholdComparison> comparison) {
-            this.comparison = comparison;
+            $.comparison = comparison;
             return this;
         }
-        public Builder comparison(@Nullable MetricThresholdComparison comparison) {
-            this.comparison = Codegen.ofNullable(comparison);
-            return this;
+
+        public Builder comparison(MetricThresholdComparison comparison) {
+            return comparison(Output.of(comparison));
         }
+
         public Builder denominatorAggregations(@Nullable Output<List<AggregationArgs>> denominatorAggregations) {
-            this.denominatorAggregations = denominatorAggregations;
+            $.denominatorAggregations = denominatorAggregations;
             return this;
         }
-        public Builder denominatorAggregations(@Nullable List<AggregationArgs> denominatorAggregations) {
-            this.denominatorAggregations = Codegen.ofNullable(denominatorAggregations);
-            return this;
+
+        public Builder denominatorAggregations(List<AggregationArgs> denominatorAggregations) {
+            return denominatorAggregations(Output.of(denominatorAggregations));
         }
+
         public Builder denominatorAggregations(AggregationArgs... denominatorAggregations) {
             return denominatorAggregations(List.of(denominatorAggregations));
         }
+
         public Builder denominatorFilter(@Nullable Output<String> denominatorFilter) {
-            this.denominatorFilter = denominatorFilter;
+            $.denominatorFilter = denominatorFilter;
             return this;
         }
-        public Builder denominatorFilter(@Nullable String denominatorFilter) {
-            this.denominatorFilter = Codegen.ofNullable(denominatorFilter);
-            return this;
+
+        public Builder denominatorFilter(String denominatorFilter) {
+            return denominatorFilter(Output.of(denominatorFilter));
         }
+
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder thresholdValue(@Nullable Output<Double> thresholdValue) {
-            this.thresholdValue = thresholdValue;
+            $.thresholdValue = thresholdValue;
             return this;
         }
-        public Builder thresholdValue(@Nullable Double thresholdValue) {
-            this.thresholdValue = Codegen.ofNullable(thresholdValue);
-            return this;
+
+        public Builder thresholdValue(Double thresholdValue) {
+            return thresholdValue(Output.of(thresholdValue));
         }
+
         public Builder trigger(@Nullable Output<TriggerArgs> trigger) {
-            this.trigger = trigger;
+            $.trigger = trigger;
             return this;
         }
-        public Builder trigger(@Nullable TriggerArgs trigger) {
-            this.trigger = Codegen.ofNullable(trigger);
-            return this;
-        }        public MetricThresholdArgs build() {
-            return new MetricThresholdArgs(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
+
+        public Builder trigger(TriggerArgs trigger) {
+            return trigger(Output.of(trigger));
+        }
+
+        public MetricThresholdArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class KnowledgeBaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class KnowledgeBaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public KnowledgeBaseArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> url) {
-        this.name = name;
-        this.url = url;
-    }
+    private KnowledgeBaseArgs() {}
 
-    private KnowledgeBaseArgs() {
-        this.name = Codegen.empty();
-        this.url = Codegen.empty();
+    private KnowledgeBaseArgs(KnowledgeBaseArgs $) {
+        this.name = $.name;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KnowledgeBaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> url;
+        private KnowledgeBaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KnowledgeBaseArgs();
         }
 
         public Builder(KnowledgeBaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.url = defaults.url;
+            $ = new KnowledgeBaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public KnowledgeBaseArgs build() {
-            return new KnowledgeBaseArgs(name, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public KnowledgeBaseArgs build() {
+            return $;
         }
     }
+
 }

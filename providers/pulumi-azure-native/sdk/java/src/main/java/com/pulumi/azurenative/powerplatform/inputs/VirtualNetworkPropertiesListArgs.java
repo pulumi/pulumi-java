@@ -6,10 +6,10 @@ package com.pulumi.azurenative.powerplatform.inputs;
 import com.pulumi.azurenative.powerplatform.inputs.VirtualNetworkPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VirtualNetworkPropertiesListArgs extends com.pulumi.resources
      * 
      */
     @Import(name="nextLink")
-      private final @Nullable Output<String> nextLink;
+    private @Nullable Output<String> nextLink;
 
-    public Output<String> nextLink() {
-        return this.nextLink == null ? Codegen.empty() : this.nextLink;
+    public Optional<Output<String>> nextLink() {
+        return Optional.ofNullable(this.nextLink);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class VirtualNetworkPropertiesListArgs extends com.pulumi.resources
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<List<VirtualNetworkPropertiesArgs>> value;
+    private @Nullable Output<List<VirtualNetworkPropertiesArgs>> value;
 
-    public Output<List<VirtualNetworkPropertiesArgs>> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<List<VirtualNetworkPropertiesArgs>>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public VirtualNetworkPropertiesListArgs(
-        @Nullable Output<String> nextLink,
-        @Nullable Output<List<VirtualNetworkPropertiesArgs>> value) {
-        this.nextLink = nextLink;
-        this.value = value;
-    }
+    private VirtualNetworkPropertiesListArgs() {}
 
-    private VirtualNetworkPropertiesListArgs() {
-        this.nextLink = Codegen.empty();
-        this.value = Codegen.empty();
+    private VirtualNetworkPropertiesListArgs(VirtualNetworkPropertiesListArgs $) {
+        this.nextLink = $.nextLink;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkPropertiesListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> nextLink;
-        private @Nullable Output<List<VirtualNetworkPropertiesArgs>> value;
+        private VirtualNetworkPropertiesListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkPropertiesListArgs();
         }
 
         public Builder(VirtualNetworkPropertiesListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nextLink = defaults.nextLink;
-    	      this.value = defaults.value;
+            $ = new VirtualNetworkPropertiesListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nextLink(@Nullable Output<String> nextLink) {
-            this.nextLink = nextLink;
+            $.nextLink = nextLink;
             return this;
         }
-        public Builder nextLink(@Nullable String nextLink) {
-            this.nextLink = Codegen.ofNullable(nextLink);
-            return this;
+
+        public Builder nextLink(String nextLink) {
+            return nextLink(Output.of(nextLink));
         }
+
         public Builder value(@Nullable Output<List<VirtualNetworkPropertiesArgs>> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable List<VirtualNetworkPropertiesArgs> value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(List<VirtualNetworkPropertiesArgs> value) {
+            return value(Output.of(value));
         }
+
         public Builder value(VirtualNetworkPropertiesArgs... value) {
             return value(List.of(value));
-        }        public VirtualNetworkPropertiesListArgs build() {
-            return new VirtualNetworkPropertiesListArgs(nextLink, value);
+        }
+
+        public VirtualNetworkPropertiesListArgs build() {
+            return $;
         }
     }
+
 }

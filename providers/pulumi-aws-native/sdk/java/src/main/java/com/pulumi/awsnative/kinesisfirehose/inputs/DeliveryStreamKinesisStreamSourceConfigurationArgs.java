@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends co
     public static final DeliveryStreamKinesisStreamSourceConfigurationArgs Empty = new DeliveryStreamKinesisStreamSourceConfigurationArgs();
 
     @Import(name="kinesisStreamARN", required=true)
-      private final Output<String> kinesisStreamARN;
+    private Output<String> kinesisStreamARN;
 
     public Output<String> kinesisStreamARN() {
         return this.kinesisStreamARN;
     }
 
     @Import(name="roleARN", required=true)
-      private final Output<String> roleARN;
+    private Output<String> roleARN;
 
     public Output<String> roleARN() {
         return this.roleARN;
     }
 
-    public DeliveryStreamKinesisStreamSourceConfigurationArgs(
-        Output<String> kinesisStreamARN,
-        Output<String> roleARN) {
-        this.kinesisStreamARN = Objects.requireNonNull(kinesisStreamARN, "expected parameter 'kinesisStreamARN' to be non-null");
-        this.roleARN = Objects.requireNonNull(roleARN, "expected parameter 'roleARN' to be non-null");
-    }
+    private DeliveryStreamKinesisStreamSourceConfigurationArgs() {}
 
-    private DeliveryStreamKinesisStreamSourceConfigurationArgs() {
-        this.kinesisStreamARN = Codegen.empty();
-        this.roleARN = Codegen.empty();
+    private DeliveryStreamKinesisStreamSourceConfigurationArgs(DeliveryStreamKinesisStreamSourceConfigurationArgs $) {
+        this.kinesisStreamARN = $.kinesisStreamARN;
+        this.roleARN = $.roleARN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamKinesisStreamSourceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kinesisStreamARN;
-        private Output<String> roleARN;
+        private DeliveryStreamKinesisStreamSourceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamKinesisStreamSourceConfigurationArgs();
         }
 
         public Builder(DeliveryStreamKinesisStreamSourceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kinesisStreamARN = defaults.kinesisStreamARN;
-    	      this.roleARN = defaults.roleARN;
+            $ = new DeliveryStreamKinesisStreamSourceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kinesisStreamARN(Output<String> kinesisStreamARN) {
-            this.kinesisStreamARN = Objects.requireNonNull(kinesisStreamARN);
+            $.kinesisStreamARN = kinesisStreamARN;
             return this;
         }
+
         public Builder kinesisStreamARN(String kinesisStreamARN) {
-            this.kinesisStreamARN = Output.of(Objects.requireNonNull(kinesisStreamARN));
-            return this;
+            return kinesisStreamARN(Output.of(kinesisStreamARN));
         }
+
         public Builder roleARN(Output<String> roleARN) {
-            this.roleARN = Objects.requireNonNull(roleARN);
+            $.roleARN = roleARN;
             return this;
         }
+
         public Builder roleARN(String roleARN) {
-            this.roleARN = Output.of(Objects.requireNonNull(roleARN));
-            return this;
-        }        public DeliveryStreamKinesisStreamSourceConfigurationArgs build() {
-            return new DeliveryStreamKinesisStreamSourceConfigurationArgs(kinesisStreamARN, roleARN);
+            return roleARN(Output.of(roleARN));
+        }
+
+        public DeliveryStreamKinesisStreamSourceConfigurationArgs build() {
+            $.kinesisStreamARN = Objects.requireNonNull($.kinesisStreamARN, "expected parameter 'kinesisStreamARN' to be non-null");
+            $.roleARN = Objects.requireNonNull($.roleARN, "expected parameter 'roleARN' to be non-null");
+            return $;
         }
     }
+
 }

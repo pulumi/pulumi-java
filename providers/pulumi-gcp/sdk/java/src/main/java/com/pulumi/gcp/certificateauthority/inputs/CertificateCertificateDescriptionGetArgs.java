@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionAuthorityKeyIdGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionCertFingerprintGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueGetArgs;
@@ -15,6 +14,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescript
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,38 +23,38 @@ public final class CertificateCertificateDescriptionGetArgs extends com.pulumi.r
     public static final CertificateCertificateDescriptionGetArgs Empty = new CertificateCertificateDescriptionGetArgs();
 
     @Import(name="aiaIssuingCertificateUrls")
-      private final @Nullable Output<List<String>> aiaIssuingCertificateUrls;
+    private @Nullable Output<List<String>> aiaIssuingCertificateUrls;
 
-    public Output<List<String>> aiaIssuingCertificateUrls() {
-        return this.aiaIssuingCertificateUrls == null ? Codegen.empty() : this.aiaIssuingCertificateUrls;
+    public Optional<Output<List<String>>> aiaIssuingCertificateUrls() {
+        return Optional.ofNullable(this.aiaIssuingCertificateUrls);
     }
 
     @Import(name="authorityKeyIds")
-      private final @Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> authorityKeyIds;
+    private @Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> authorityKeyIds;
 
-    public Output<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> authorityKeyIds() {
-        return this.authorityKeyIds == null ? Codegen.empty() : this.authorityKeyIds;
+    public Optional<Output<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>>> authorityKeyIds() {
+        return Optional.ofNullable(this.authorityKeyIds);
     }
 
     @Import(name="certFingerprints")
-      private final @Nullable Output<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> certFingerprints;
+    private @Nullable Output<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> certFingerprints;
 
-    public Output<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> certFingerprints() {
-        return this.certFingerprints == null ? Codegen.empty() : this.certFingerprints;
+    public Optional<Output<List<CertificateCertificateDescriptionCertFingerprintGetArgs>>> certFingerprints() {
+        return Optional.ofNullable(this.certFingerprints);
     }
 
     @Import(name="configValues")
-      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueGetArgs>> configValues;
+    private @Nullable Output<List<CertificateCertificateDescriptionConfigValueGetArgs>> configValues;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueGetArgs>> configValues() {
-        return this.configValues == null ? Codegen.empty() : this.configValues;
+    public Optional<Output<List<CertificateCertificateDescriptionConfigValueGetArgs>>> configValues() {
+        return Optional.ofNullable(this.configValues);
     }
 
     @Import(name="crlDistributionPoints")
-      private final @Nullable Output<List<String>> crlDistributionPoints;
+    private @Nullable Output<List<String>> crlDistributionPoints;
 
-    public Output<List<String>> crlDistributionPoints() {
-        return this.crlDistributionPoints == null ? Codegen.empty() : this.crlDistributionPoints;
+    public Optional<Output<List<String>>> crlDistributionPoints() {
+        return Optional.ofNullable(this.crlDistributionPoints);
     }
 
     /**
@@ -63,179 +63,164 @@ public final class CertificateCertificateDescriptionGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="publicKeys")
-      private final @Nullable Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys;
+    private @Nullable Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys;
 
-    public Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys() {
-        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
+    public Optional<Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>>> publicKeys() {
+        return Optional.ofNullable(this.publicKeys);
     }
 
     @Import(name="subjectDescriptions")
-      private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> subjectDescriptions;
+    private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> subjectDescriptions;
 
-    public Output<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> subjectDescriptions() {
-        return this.subjectDescriptions == null ? Codegen.empty() : this.subjectDescriptions;
+    public Optional<Output<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>>> subjectDescriptions() {
+        return Optional.ofNullable(this.subjectDescriptions);
     }
 
     @Import(name="subjectKeyIds")
-      private final @Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> subjectKeyIds;
+    private @Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> subjectKeyIds;
 
-    public Output<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> subjectKeyIds() {
-        return this.subjectKeyIds == null ? Codegen.empty() : this.subjectKeyIds;
+    public Optional<Output<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>>> subjectKeyIds() {
+        return Optional.ofNullable(this.subjectKeyIds);
     }
 
-    public CertificateCertificateDescriptionGetArgs(
-        @Nullable Output<List<String>> aiaIssuingCertificateUrls,
-        @Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> authorityKeyIds,
-        @Nullable Output<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> certFingerprints,
-        @Nullable Output<List<CertificateCertificateDescriptionConfigValueGetArgs>> configValues,
-        @Nullable Output<List<String>> crlDistributionPoints,
-        @Nullable Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys,
-        @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> subjectDescriptions,
-        @Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> subjectKeyIds) {
-        this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
-        this.authorityKeyIds = authorityKeyIds;
-        this.certFingerprints = certFingerprints;
-        this.configValues = configValues;
-        this.crlDistributionPoints = crlDistributionPoints;
-        this.publicKeys = publicKeys;
-        this.subjectDescriptions = subjectDescriptions;
-        this.subjectKeyIds = subjectKeyIds;
-    }
+    private CertificateCertificateDescriptionGetArgs() {}
 
-    private CertificateCertificateDescriptionGetArgs() {
-        this.aiaIssuingCertificateUrls = Codegen.empty();
-        this.authorityKeyIds = Codegen.empty();
-        this.certFingerprints = Codegen.empty();
-        this.configValues = Codegen.empty();
-        this.crlDistributionPoints = Codegen.empty();
-        this.publicKeys = Codegen.empty();
-        this.subjectDescriptions = Codegen.empty();
-        this.subjectKeyIds = Codegen.empty();
+    private CertificateCertificateDescriptionGetArgs(CertificateCertificateDescriptionGetArgs $) {
+        this.aiaIssuingCertificateUrls = $.aiaIssuingCertificateUrls;
+        this.authorityKeyIds = $.authorityKeyIds;
+        this.certFingerprints = $.certFingerprints;
+        this.configValues = $.configValues;
+        this.crlDistributionPoints = $.crlDistributionPoints;
+        this.publicKeys = $.publicKeys;
+        this.subjectDescriptions = $.subjectDescriptions;
+        this.subjectKeyIds = $.subjectKeyIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> aiaIssuingCertificateUrls;
-        private @Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> authorityKeyIds;
-        private @Nullable Output<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> certFingerprints;
-        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueGetArgs>> configValues;
-        private @Nullable Output<List<String>> crlDistributionPoints;
-        private @Nullable Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys;
-        private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> subjectDescriptions;
-        private @Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> subjectKeyIds;
+        private CertificateCertificateDescriptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionGetArgs();
         }
 
         public Builder(CertificateCertificateDescriptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aiaIssuingCertificateUrls = defaults.aiaIssuingCertificateUrls;
-    	      this.authorityKeyIds = defaults.authorityKeyIds;
-    	      this.certFingerprints = defaults.certFingerprints;
-    	      this.configValues = defaults.configValues;
-    	      this.crlDistributionPoints = defaults.crlDistributionPoints;
-    	      this.publicKeys = defaults.publicKeys;
-    	      this.subjectDescriptions = defaults.subjectDescriptions;
-    	      this.subjectKeyIds = defaults.subjectKeyIds;
+            $ = new CertificateCertificateDescriptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aiaIssuingCertificateUrls(@Nullable Output<List<String>> aiaIssuingCertificateUrls) {
-            this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
+            $.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
             return this;
         }
-        public Builder aiaIssuingCertificateUrls(@Nullable List<String> aiaIssuingCertificateUrls) {
-            this.aiaIssuingCertificateUrls = Codegen.ofNullable(aiaIssuingCertificateUrls);
-            return this;
+
+        public Builder aiaIssuingCertificateUrls(List<String> aiaIssuingCertificateUrls) {
+            return aiaIssuingCertificateUrls(Output.of(aiaIssuingCertificateUrls));
         }
+
         public Builder aiaIssuingCertificateUrls(String... aiaIssuingCertificateUrls) {
             return aiaIssuingCertificateUrls(List.of(aiaIssuingCertificateUrls));
         }
+
         public Builder authorityKeyIds(@Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> authorityKeyIds) {
-            this.authorityKeyIds = authorityKeyIds;
+            $.authorityKeyIds = authorityKeyIds;
             return this;
         }
-        public Builder authorityKeyIds(@Nullable List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs> authorityKeyIds) {
-            this.authorityKeyIds = Codegen.ofNullable(authorityKeyIds);
-            return this;
+
+        public Builder authorityKeyIds(List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs> authorityKeyIds) {
+            return authorityKeyIds(Output.of(authorityKeyIds));
         }
+
         public Builder authorityKeyIds(CertificateCertificateDescriptionAuthorityKeyIdGetArgs... authorityKeyIds) {
             return authorityKeyIds(List.of(authorityKeyIds));
         }
+
         public Builder certFingerprints(@Nullable Output<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> certFingerprints) {
-            this.certFingerprints = certFingerprints;
+            $.certFingerprints = certFingerprints;
             return this;
         }
-        public Builder certFingerprints(@Nullable List<CertificateCertificateDescriptionCertFingerprintGetArgs> certFingerprints) {
-            this.certFingerprints = Codegen.ofNullable(certFingerprints);
-            return this;
+
+        public Builder certFingerprints(List<CertificateCertificateDescriptionCertFingerprintGetArgs> certFingerprints) {
+            return certFingerprints(Output.of(certFingerprints));
         }
+
         public Builder certFingerprints(CertificateCertificateDescriptionCertFingerprintGetArgs... certFingerprints) {
             return certFingerprints(List.of(certFingerprints));
         }
+
         public Builder configValues(@Nullable Output<List<CertificateCertificateDescriptionConfigValueGetArgs>> configValues) {
-            this.configValues = configValues;
+            $.configValues = configValues;
             return this;
         }
-        public Builder configValues(@Nullable List<CertificateCertificateDescriptionConfigValueGetArgs> configValues) {
-            this.configValues = Codegen.ofNullable(configValues);
-            return this;
+
+        public Builder configValues(List<CertificateCertificateDescriptionConfigValueGetArgs> configValues) {
+            return configValues(Output.of(configValues));
         }
+
         public Builder configValues(CertificateCertificateDescriptionConfigValueGetArgs... configValues) {
             return configValues(List.of(configValues));
         }
+
         public Builder crlDistributionPoints(@Nullable Output<List<String>> crlDistributionPoints) {
-            this.crlDistributionPoints = crlDistributionPoints;
+            $.crlDistributionPoints = crlDistributionPoints;
             return this;
         }
-        public Builder crlDistributionPoints(@Nullable List<String> crlDistributionPoints) {
-            this.crlDistributionPoints = Codegen.ofNullable(crlDistributionPoints);
-            return this;
+
+        public Builder crlDistributionPoints(List<String> crlDistributionPoints) {
+            return crlDistributionPoints(Output.of(crlDistributionPoints));
         }
+
         public Builder crlDistributionPoints(String... crlDistributionPoints) {
             return crlDistributionPoints(List.of(crlDistributionPoints));
         }
+
         public Builder publicKeys(@Nullable Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys) {
-            this.publicKeys = publicKeys;
+            $.publicKeys = publicKeys;
             return this;
         }
-        public Builder publicKeys(@Nullable List<CertificateCertificateDescriptionPublicKeyGetArgs> publicKeys) {
-            this.publicKeys = Codegen.ofNullable(publicKeys);
-            return this;
+
+        public Builder publicKeys(List<CertificateCertificateDescriptionPublicKeyGetArgs> publicKeys) {
+            return publicKeys(Output.of(publicKeys));
         }
+
         public Builder publicKeys(CertificateCertificateDescriptionPublicKeyGetArgs... publicKeys) {
             return publicKeys(List.of(publicKeys));
         }
+
         public Builder subjectDescriptions(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> subjectDescriptions) {
-            this.subjectDescriptions = subjectDescriptions;
+            $.subjectDescriptions = subjectDescriptions;
             return this;
         }
-        public Builder subjectDescriptions(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionGetArgs> subjectDescriptions) {
-            this.subjectDescriptions = Codegen.ofNullable(subjectDescriptions);
-            return this;
+
+        public Builder subjectDescriptions(List<CertificateCertificateDescriptionSubjectDescriptionGetArgs> subjectDescriptions) {
+            return subjectDescriptions(Output.of(subjectDescriptions));
         }
+
         public Builder subjectDescriptions(CertificateCertificateDescriptionSubjectDescriptionGetArgs... subjectDescriptions) {
             return subjectDescriptions(List.of(subjectDescriptions));
         }
+
         public Builder subjectKeyIds(@Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> subjectKeyIds) {
-            this.subjectKeyIds = subjectKeyIds;
+            $.subjectKeyIds = subjectKeyIds;
             return this;
         }
-        public Builder subjectKeyIds(@Nullable List<CertificateCertificateDescriptionSubjectKeyIdGetArgs> subjectKeyIds) {
-            this.subjectKeyIds = Codegen.ofNullable(subjectKeyIds);
-            return this;
+
+        public Builder subjectKeyIds(List<CertificateCertificateDescriptionSubjectKeyIdGetArgs> subjectKeyIds) {
+            return subjectKeyIds(Output.of(subjectKeyIds));
         }
+
         public Builder subjectKeyIds(CertificateCertificateDescriptionSubjectKeyIdGetArgs... subjectKeyIds) {
             return subjectKeyIds(List.of(subjectKeyIds));
-        }        public CertificateCertificateDescriptionGetArgs build() {
-            return new CertificateCertificateDescriptionGetArgs(aiaIssuingCertificateUrls, authorityKeyIds, certFingerprints, configValues, crlDistributionPoints, publicKeys, subjectDescriptions, subjectKeyIds);
+        }
+
+        public CertificateCertificateDescriptionGetArgs build() {
+            return $;
         }
     }
+
 }

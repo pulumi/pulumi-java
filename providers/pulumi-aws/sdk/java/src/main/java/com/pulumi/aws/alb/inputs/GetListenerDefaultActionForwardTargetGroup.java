@@ -18,62 +18,59 @@ public final class GetListenerDefaultActionForwardTargetGroup extends com.pulumi
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
     @Import(name="weight", required=true)
-      private final Integer weight;
+    private Integer weight;
 
     public Integer weight() {
         return this.weight;
     }
 
-    public GetListenerDefaultActionForwardTargetGroup(
-        String arn,
-        Integer weight) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private GetListenerDefaultActionForwardTargetGroup() {}
 
-    private GetListenerDefaultActionForwardTargetGroup() {
-        this.arn = null;
-        this.weight = null;
+    private GetListenerDefaultActionForwardTargetGroup(GetListenerDefaultActionForwardTargetGroup $) {
+        this.arn = $.arn;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetListenerDefaultActionForwardTargetGroup defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private Integer weight;
+        private GetListenerDefaultActionForwardTargetGroup $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetListenerDefaultActionForwardTargetGroup();
         }
 
         public Builder(GetListenerDefaultActionForwardTargetGroup defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.weight = defaults.weight;
+            $ = new GetListenerDefaultActionForwardTargetGroup(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
-        }        public GetListenerDefaultActionForwardTargetGroup build() {
-            return new GetListenerDefaultActionForwardTargetGroup(arn, weight);
+        }
+
+        public GetListenerDefaultActionForwardTargetGroup build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

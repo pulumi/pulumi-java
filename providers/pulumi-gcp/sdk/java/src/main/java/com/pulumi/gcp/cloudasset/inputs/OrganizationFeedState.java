@@ -5,12 +5,12 @@ package com.pulumi.gcp.cloudasset.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudasset.inputs.OrganizationFeedConditionGetArgs;
 import com.pulumi.gcp.cloudasset.inputs.OrganizationFeedFeedOutputConfigGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="assetNames")
-      private final @Nullable Output<List<String>> assetNames;
+    private @Nullable Output<List<String>> assetNames;
 
-    public Output<List<String>> assetNames() {
-        return this.assetNames == null ? Codegen.empty() : this.assetNames;
+    public Optional<Output<List<String>>> assetNames() {
+        return Optional.ofNullable(this.assetNames);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="assetTypes")
-      private final @Nullable Output<List<String>> assetTypes;
+    private @Nullable Output<List<String>> assetTypes;
 
-    public Output<List<String>> assetTypes() {
-        return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
+    public Optional<Output<List<String>>> assetTypes() {
+        return Optional.ofNullable(this.assetTypes);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="billingProject")
-      private final @Nullable Output<String> billingProject;
+    private @Nullable Output<String> billingProject;
 
-    public Output<String> billingProject() {
-        return this.billingProject == null ? Codegen.empty() : this.billingProject;
+    public Optional<Output<String>> billingProject() {
+        return Optional.ofNullable(this.billingProject);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<OrganizationFeedConditionGetArgs> condition;
+    private @Nullable Output<OrganizationFeedConditionGetArgs> condition;
 
-    public Output<OrganizationFeedConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<OrganizationFeedConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="feedId")
-      private final @Nullable Output<String> feedId;
+    private @Nullable Output<String> feedId;
 
-    public Output<String> feedId() {
-        return this.feedId == null ? Codegen.empty() : this.feedId;
+    public Optional<Output<String>> feedId() {
+        return Optional.ofNullable(this.feedId);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="feedOutputConfig")
-      private final @Nullable Output<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig;
+    private @Nullable Output<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig;
 
-    public Output<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig() {
-        return this.feedOutputConfig == null ? Codegen.empty() : this.feedOutputConfig;
+    public Optional<Output<OrganizationFeedFeedOutputConfigGetArgs>> feedOutputConfig() {
+        return Optional.ofNullable(this.feedOutputConfig);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -127,160 +127,136 @@ public final class OrganizationFeedState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="orgId")
-      private final @Nullable Output<String> orgId;
+    private @Nullable Output<String> orgId;
 
-    public Output<String> orgId() {
-        return this.orgId == null ? Codegen.empty() : this.orgId;
+    public Optional<Output<String>> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
-    public OrganizationFeedState(
-        @Nullable Output<List<String>> assetNames,
-        @Nullable Output<List<String>> assetTypes,
-        @Nullable Output<String> billingProject,
-        @Nullable Output<OrganizationFeedConditionGetArgs> condition,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> feedId,
-        @Nullable Output<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> orgId) {
-        this.assetNames = assetNames;
-        this.assetTypes = assetTypes;
-        this.billingProject = billingProject;
-        this.condition = condition;
-        this.contentType = contentType;
-        this.feedId = feedId;
-        this.feedOutputConfig = feedOutputConfig;
-        this.name = name;
-        this.orgId = orgId;
-    }
+    private OrganizationFeedState() {}
 
-    private OrganizationFeedState() {
-        this.assetNames = Codegen.empty();
-        this.assetTypes = Codegen.empty();
-        this.billingProject = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.feedId = Codegen.empty();
-        this.feedOutputConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.orgId = Codegen.empty();
+    private OrganizationFeedState(OrganizationFeedState $) {
+        this.assetNames = $.assetNames;
+        this.assetTypes = $.assetTypes;
+        this.billingProject = $.billingProject;
+        this.condition = $.condition;
+        this.contentType = $.contentType;
+        this.feedId = $.feedId;
+        this.feedOutputConfig = $.feedOutputConfig;
+        this.name = $.name;
+        this.orgId = $.orgId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationFeedState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> assetNames;
-        private @Nullable Output<List<String>> assetTypes;
-        private @Nullable Output<String> billingProject;
-        private @Nullable Output<OrganizationFeedConditionGetArgs> condition;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> feedId;
-        private @Nullable Output<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> orgId;
+        private OrganizationFeedState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationFeedState();
         }
 
         public Builder(OrganizationFeedState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetNames = defaults.assetNames;
-    	      this.assetTypes = defaults.assetTypes;
-    	      this.billingProject = defaults.billingProject;
-    	      this.condition = defaults.condition;
-    	      this.contentType = defaults.contentType;
-    	      this.feedId = defaults.feedId;
-    	      this.feedOutputConfig = defaults.feedOutputConfig;
-    	      this.name = defaults.name;
-    	      this.orgId = defaults.orgId;
+            $ = new OrganizationFeedState(Objects.requireNonNull(defaults));
         }
 
         public Builder assetNames(@Nullable Output<List<String>> assetNames) {
-            this.assetNames = assetNames;
+            $.assetNames = assetNames;
             return this;
         }
-        public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Codegen.ofNullable(assetNames);
-            return this;
+
+        public Builder assetNames(List<String> assetNames) {
+            return assetNames(Output.of(assetNames));
         }
+
         public Builder assetNames(String... assetNames) {
             return assetNames(List.of(assetNames));
         }
+
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
-            this.assetTypes = assetTypes;
+            $.assetTypes = assetTypes;
             return this;
         }
-        public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Codegen.ofNullable(assetTypes);
-            return this;
+
+        public Builder assetTypes(List<String> assetTypes) {
+            return assetTypes(Output.of(assetTypes));
         }
+
         public Builder assetTypes(String... assetTypes) {
             return assetTypes(List.of(assetTypes));
         }
+
         public Builder billingProject(@Nullable Output<String> billingProject) {
-            this.billingProject = billingProject;
+            $.billingProject = billingProject;
             return this;
         }
-        public Builder billingProject(@Nullable String billingProject) {
-            this.billingProject = Codegen.ofNullable(billingProject);
-            return this;
+
+        public Builder billingProject(String billingProject) {
+            return billingProject(Output.of(billingProject));
         }
+
         public Builder condition(@Nullable Output<OrganizationFeedConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable OrganizationFeedConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(OrganizationFeedConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder feedId(@Nullable Output<String> feedId) {
-            this.feedId = feedId;
+            $.feedId = feedId;
             return this;
         }
-        public Builder feedId(@Nullable String feedId) {
-            this.feedId = Codegen.ofNullable(feedId);
-            return this;
+
+        public Builder feedId(String feedId) {
+            return feedId(Output.of(feedId));
         }
+
         public Builder feedOutputConfig(@Nullable Output<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig) {
-            this.feedOutputConfig = feedOutputConfig;
+            $.feedOutputConfig = feedOutputConfig;
             return this;
         }
-        public Builder feedOutputConfig(@Nullable OrganizationFeedFeedOutputConfigGetArgs feedOutputConfig) {
-            this.feedOutputConfig = Codegen.ofNullable(feedOutputConfig);
-            return this;
+
+        public Builder feedOutputConfig(OrganizationFeedFeedOutputConfigGetArgs feedOutputConfig) {
+            return feedOutputConfig(Output.of(feedOutputConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder orgId(@Nullable Output<String> orgId) {
-            this.orgId = orgId;
+            $.orgId = orgId;
             return this;
         }
-        public Builder orgId(@Nullable String orgId) {
-            this.orgId = Codegen.ofNullable(orgId);
-            return this;
-        }        public OrganizationFeedState build() {
-            return new OrganizationFeedState(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, name, orgId);
+
+        public Builder orgId(String orgId) {
+            return orgId(Output.of(orgId));
+        }
+
+        public OrganizationFeedState build() {
+            return $;
         }
     }
+
 }

@@ -7,7 +7,6 @@ import com.pulumi.azurenative.media.enums.ManagedIdentityType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class MediaServiceIdentityArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ManagedIdentityType>> type;
+    private Output<Either<String,ManagedIdentityType>> type;
 
     public Output<Either<String,ManagedIdentityType>> type() {
         return this.type;
     }
 
-    public MediaServiceIdentityArgs(Output<Either<String,ManagedIdentityType>> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private MediaServiceIdentityArgs() {}
 
-    private MediaServiceIdentityArgs() {
-        this.type = Codegen.empty();
+    private MediaServiceIdentityArgs(MediaServiceIdentityArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MediaServiceIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ManagedIdentityType>> type;
+        private MediaServiceIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MediaServiceIdentityArgs();
         }
 
         public Builder(MediaServiceIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new MediaServiceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<Either<String,ManagedIdentityType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ManagedIdentityType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public MediaServiceIdentityArgs build() {
-            return new MediaServiceIdentityArgs(type);
+            return type(Output.of(type));
+        }
+
+        public MediaServiceIdentityArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

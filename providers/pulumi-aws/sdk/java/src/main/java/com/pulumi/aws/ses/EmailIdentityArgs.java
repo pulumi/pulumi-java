@@ -5,7 +5,6 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class EmailIdentityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
     }
 
-    public EmailIdentityArgs(Output<String> email) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-    }
+    private EmailIdentityArgs() {}
 
-    private EmailIdentityArgs() {
-        this.email = Codegen.empty();
+    private EmailIdentityArgs(EmailIdentityArgs $) {
+        this.email = $.email;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> email;
+        private EmailIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailIdentityArgs();
         }
 
         public Builder(EmailIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
+            $ = new EmailIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
-        }        public EmailIdentityArgs build() {
-            return new EmailIdentityArgs(email);
+            return email(Output.of(email));
+        }
+
+        public EmailIdentityArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            return $;
         }
     }
+
 }

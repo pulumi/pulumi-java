@@ -18,7 +18,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends com.pul
      * 
      */
     @Import(name="healthCheck", required=true)
-      private final String healthCheck;
+    private String healthCheck;
 
     public String healthCheck() {
         return this.healthCheck;
@@ -29,55 +29,52 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends com.pul
      * 
      */
     @Import(name="initialDelaySec", required=true)
-      private final Integer initialDelaySec;
+    private Integer initialDelaySec;
 
     public Integer initialDelaySec() {
         return this.initialDelaySec;
     }
 
-    public InstanceGroupManagerAutoHealingPolicyResponse(
-        String healthCheck,
-        Integer initialDelaySec) {
-        this.healthCheck = Objects.requireNonNull(healthCheck, "expected parameter 'healthCheck' to be non-null");
-        this.initialDelaySec = Objects.requireNonNull(initialDelaySec, "expected parameter 'initialDelaySec' to be non-null");
-    }
+    private InstanceGroupManagerAutoHealingPolicyResponse() {}
 
-    private InstanceGroupManagerAutoHealingPolicyResponse() {
-        this.healthCheck = null;
-        this.initialDelaySec = null;
+    private InstanceGroupManagerAutoHealingPolicyResponse(InstanceGroupManagerAutoHealingPolicyResponse $) {
+        this.healthCheck = $.healthCheck;
+        this.initialDelaySec = $.initialDelaySec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerAutoHealingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String healthCheck;
-        private Integer initialDelaySec;
+        private InstanceGroupManagerAutoHealingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerAutoHealingPolicyResponse();
         }
 
         public Builder(InstanceGroupManagerAutoHealingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthCheck = defaults.healthCheck;
-    	      this.initialDelaySec = defaults.initialDelaySec;
+            $ = new InstanceGroupManagerAutoHealingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder healthCheck(String healthCheck) {
-            this.healthCheck = Objects.requireNonNull(healthCheck);
+            $.healthCheck = healthCheck;
             return this;
         }
+
         public Builder initialDelaySec(Integer initialDelaySec) {
-            this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
+            $.initialDelaySec = initialDelaySec;
             return this;
-        }        public InstanceGroupManagerAutoHealingPolicyResponse build() {
-            return new InstanceGroupManagerAutoHealingPolicyResponse(healthCheck, initialDelaySec);
+        }
+
+        public InstanceGroupManagerAutoHealingPolicyResponse build() {
+            $.healthCheck = Objects.requireNonNull($.healthCheck, "expected parameter 'healthCheck' to be non-null");
+            $.initialDelaySec = Objects.requireNonNull($.initialDelaySec, "expected parameter 'initialDelaySec' to be non-null");
+            return $;
         }
     }
+
 }

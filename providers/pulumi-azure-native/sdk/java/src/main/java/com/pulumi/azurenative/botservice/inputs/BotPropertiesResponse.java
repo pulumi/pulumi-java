@@ -27,10 +27,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="allSettings")
-      private final @Nullable Map<String,String> allSettings;
+    private @Nullable Map<String,String> allSettings;
 
-    public Map<String,String> allSettings() {
-        return this.allSettings == null ? Map.of() : this.allSettings;
+    public Optional<Map<String,String>> allSettings() {
+        return Optional.ofNullable(this.allSettings);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="appPasswordHint")
-      private final @Nullable String appPasswordHint;
+    private @Nullable String appPasswordHint;
 
     public Optional<String> appPasswordHint() {
-        return this.appPasswordHint == null ? Optional.empty() : Optional.ofNullable(this.appPasswordHint);
+        return Optional.ofNullable(this.appPasswordHint);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cmekEncryptionStatus", required=true)
-      private final String cmekEncryptionStatus;
+    private String cmekEncryptionStatus;
 
     public String cmekEncryptionStatus() {
         return this.cmekEncryptionStatus;
@@ -60,10 +60,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="cmekKeyVaultUrl")
-      private final @Nullable String cmekKeyVaultUrl;
+    private @Nullable String cmekKeyVaultUrl;
 
     public Optional<String> cmekKeyVaultUrl() {
-        return this.cmekKeyVaultUrl == null ? Optional.empty() : Optional.ofNullable(this.cmekKeyVaultUrl);
+        return Optional.ofNullable(this.cmekKeyVaultUrl);
     }
 
     /**
@@ -71,7 +71,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="configuredChannels", required=true)
-      private final List<String> configuredChannels;
+    private List<String> configuredChannels;
 
     public List<String> configuredChannels() {
         return this.configuredChannels;
@@ -82,10 +82,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="developerAppInsightKey")
-      private final @Nullable String developerAppInsightKey;
+    private @Nullable String developerAppInsightKey;
 
     public Optional<String> developerAppInsightKey() {
-        return this.developerAppInsightKey == null ? Optional.empty() : Optional.ofNullable(this.developerAppInsightKey);
+        return Optional.ofNullable(this.developerAppInsightKey);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="developerAppInsightsApiKey")
-      private final @Nullable String developerAppInsightsApiKey;
+    private @Nullable String developerAppInsightsApiKey;
 
     public Optional<String> developerAppInsightsApiKey() {
-        return this.developerAppInsightsApiKey == null ? Optional.empty() : Optional.ofNullable(this.developerAppInsightsApiKey);
+        return Optional.ofNullable(this.developerAppInsightsApiKey);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="developerAppInsightsApplicationId")
-      private final @Nullable String developerAppInsightsApplicationId;
+    private @Nullable String developerAppInsightsApplicationId;
 
     public Optional<String> developerAppInsightsApplicationId() {
-        return this.developerAppInsightsApplicationId == null ? Optional.empty() : Optional.ofNullable(this.developerAppInsightsApplicationId);
+        return Optional.ofNullable(this.developerAppInsightsApplicationId);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="disableLocalAuth")
-      private final @Nullable Boolean disableLocalAuth;
+    private @Nullable Boolean disableLocalAuth;
 
     public Optional<Boolean> disableLocalAuth() {
-        return this.disableLocalAuth == null ? Optional.empty() : Optional.ofNullable(this.disableLocalAuth);
+        return Optional.ofNullable(this.disableLocalAuth);
     }
 
     /**
@@ -137,7 +137,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -148,7 +148,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enabledChannels", required=true)
-      private final List<String> enabledChannels;
+    private List<String> enabledChannels;
 
     public List<String> enabledChannels() {
         return this.enabledChannels;
@@ -159,7 +159,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endpoint", required=true)
-      private final String endpoint;
+    private String endpoint;
 
     public String endpoint() {
         return this.endpoint;
@@ -170,7 +170,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endpointVersion", required=true)
-      private final String endpointVersion;
+    private String endpointVersion;
 
     public String endpointVersion() {
         return this.endpointVersion;
@@ -181,10 +181,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="iconUrl")
-      private final @Nullable String iconUrl;
+    private @Nullable String iconUrl;
 
     public Optional<String> iconUrl() {
-        return this.iconUrl == null ? Optional.empty() : Optional.ofNullable(this.iconUrl);
+        return Optional.ofNullable(this.iconUrl);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isCmekEnabled")
-      private final @Nullable Boolean isCmekEnabled;
+    private @Nullable Boolean isCmekEnabled;
 
     public Optional<Boolean> isCmekEnabled() {
-        return this.isCmekEnabled == null ? Optional.empty() : Optional.ofNullable(this.isCmekEnabled);
+        return Optional.ofNullable(this.isCmekEnabled);
     }
 
     /**
@@ -203,7 +203,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isDeveloperAppInsightsApiKeySet", required=true)
-      private final Boolean isDeveloperAppInsightsApiKeySet;
+    private Boolean isDeveloperAppInsightsApiKeySet;
 
     public Boolean isDeveloperAppInsightsApiKeySet() {
         return this.isDeveloperAppInsightsApiKeySet;
@@ -214,10 +214,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="isStreamingSupported")
-      private final @Nullable Boolean isStreamingSupported;
+    private @Nullable Boolean isStreamingSupported;
 
     public Optional<Boolean> isStreamingSupported() {
-        return this.isStreamingSupported == null ? Optional.empty() : Optional.ofNullable(this.isStreamingSupported);
+        return Optional.ofNullable(this.isStreamingSupported);
     }
 
     /**
@@ -225,10 +225,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="luisAppIds")
-      private final @Nullable List<String> luisAppIds;
+    private @Nullable List<String> luisAppIds;
 
-    public List<String> luisAppIds() {
-        return this.luisAppIds == null ? List.of() : this.luisAppIds;
+    public Optional<List<String>> luisAppIds() {
+        return Optional.ofNullable(this.luisAppIds);
     }
 
     /**
@@ -236,10 +236,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="luisKey")
-      private final @Nullable String luisKey;
+    private @Nullable String luisKey;
 
     public Optional<String> luisKey() {
-        return this.luisKey == null ? Optional.empty() : Optional.ofNullable(this.luisKey);
+        return Optional.ofNullable(this.luisKey);
     }
 
     /**
@@ -247,10 +247,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="manifestUrl")
-      private final @Nullable String manifestUrl;
+    private @Nullable String manifestUrl;
 
     public Optional<String> manifestUrl() {
-        return this.manifestUrl == null ? Optional.empty() : Optional.ofNullable(this.manifestUrl);
+        return Optional.ofNullable(this.manifestUrl);
     }
 
     /**
@@ -258,7 +258,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="migrationToken", required=true)
-      private final String migrationToken;
+    private String migrationToken;
 
     public String migrationToken() {
         return this.migrationToken;
@@ -269,7 +269,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="msaAppId", required=true)
-      private final String msaAppId;
+    private String msaAppId;
 
     public String msaAppId() {
         return this.msaAppId;
@@ -280,10 +280,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="msaAppMSIResourceId")
-      private final @Nullable String msaAppMSIResourceId;
+    private @Nullable String msaAppMSIResourceId;
 
     public Optional<String> msaAppMSIResourceId() {
-        return this.msaAppMSIResourceId == null ? Optional.empty() : Optional.ofNullable(this.msaAppMSIResourceId);
+        return Optional.ofNullable(this.msaAppMSIResourceId);
     }
 
     /**
@@ -291,10 +291,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="msaAppTenantId")
-      private final @Nullable String msaAppTenantId;
+    private @Nullable String msaAppTenantId;
 
     public Optional<String> msaAppTenantId() {
-        return this.msaAppTenantId == null ? Optional.empty() : Optional.ofNullable(this.msaAppTenantId);
+        return Optional.ofNullable(this.msaAppTenantId);
     }
 
     /**
@@ -302,10 +302,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="msaAppType")
-      private final @Nullable String msaAppType;
+    private @Nullable String msaAppType;
 
     public Optional<String> msaAppType() {
-        return this.msaAppType == null ? Optional.empty() : Optional.ofNullable(this.msaAppType);
+        return Optional.ofNullable(this.msaAppType);
     }
 
     /**
@@ -313,10 +313,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="openWithHint")
-      private final @Nullable String openWithHint;
+    private @Nullable String openWithHint;
 
     public Optional<String> openWithHint() {
-        return this.openWithHint == null ? Optional.empty() : Optional.ofNullable(this.openWithHint);
+        return Optional.ofNullable(this.openWithHint);
     }
 
     /**
@@ -324,10 +324,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,String> parameters;
+    private @Nullable Map<String,String> parameters;
 
-    public Map<String,String> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -335,7 +335,7 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -346,10 +346,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable String publicNetworkAccess;
+    private @Nullable String publicNetworkAccess;
 
     public Optional<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -357,10 +357,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="publishingCredentials")
-      private final @Nullable String publishingCredentials;
+    private @Nullable String publishingCredentials;
 
     public Optional<String> publishingCredentials() {
-        return this.publishingCredentials == null ? Optional.empty() : Optional.ofNullable(this.publishingCredentials);
+        return Optional.ofNullable(this.publishingCredentials);
     }
 
     /**
@@ -368,10 +368,10 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="schemaTransformationVersion")
-      private final @Nullable String schemaTransformationVersion;
+    private @Nullable String schemaTransformationVersion;
 
     public Optional<String> schemaTransformationVersion() {
-        return this.schemaTransformationVersion == null ? Optional.empty() : Optional.ofNullable(this.schemaTransformationVersion);
+        return Optional.ofNullable(this.schemaTransformationVersion);
     }
 
     /**
@@ -379,343 +379,260 @@ public final class BotPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="storageResourceId")
-      private final @Nullable String storageResourceId;
+    private @Nullable String storageResourceId;
 
     public Optional<String> storageResourceId() {
-        return this.storageResourceId == null ? Optional.empty() : Optional.ofNullable(this.storageResourceId);
+        return Optional.ofNullable(this.storageResourceId);
     }
 
-    public BotPropertiesResponse(
-        @Nullable Map<String,String> allSettings,
-        @Nullable String appPasswordHint,
-        String cmekEncryptionStatus,
-        @Nullable String cmekKeyVaultUrl,
-        List<String> configuredChannels,
-        @Nullable String description,
-        @Nullable String developerAppInsightKey,
-        @Nullable String developerAppInsightsApiKey,
-        @Nullable String developerAppInsightsApplicationId,
-        @Nullable Boolean disableLocalAuth,
-        String displayName,
-        List<String> enabledChannels,
-        String endpoint,
-        String endpointVersion,
-        @Nullable String iconUrl,
-        @Nullable Boolean isCmekEnabled,
-        Boolean isDeveloperAppInsightsApiKeySet,
-        @Nullable Boolean isStreamingSupported,
-        @Nullable List<String> luisAppIds,
-        @Nullable String luisKey,
-        @Nullable String manifestUrl,
-        String migrationToken,
-        String msaAppId,
-        @Nullable String msaAppMSIResourceId,
-        @Nullable String msaAppTenantId,
-        @Nullable String msaAppType,
-        @Nullable String openWithHint,
-        @Nullable Map<String,String> parameters,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable String publishingCredentials,
-        @Nullable String schemaTransformationVersion,
-        @Nullable String storageResourceId) {
-        this.allSettings = allSettings;
-        this.appPasswordHint = appPasswordHint;
-        this.cmekEncryptionStatus = Objects.requireNonNull(cmekEncryptionStatus, "expected parameter 'cmekEncryptionStatus' to be non-null");
-        this.cmekKeyVaultUrl = cmekKeyVaultUrl;
-        this.configuredChannels = Objects.requireNonNull(configuredChannels, "expected parameter 'configuredChannels' to be non-null");
-        this.description = description;
-        this.developerAppInsightKey = developerAppInsightKey;
-        this.developerAppInsightsApiKey = developerAppInsightsApiKey;
-        this.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
-        this.disableLocalAuth = disableLocalAuth;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enabledChannels = Objects.requireNonNull(enabledChannels, "expected parameter 'enabledChannels' to be non-null");
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.endpointVersion = Objects.requireNonNull(endpointVersion, "expected parameter 'endpointVersion' to be non-null");
-        this.iconUrl = iconUrl;
-        this.isCmekEnabled = isCmekEnabled;
-        this.isDeveloperAppInsightsApiKeySet = Objects.requireNonNull(isDeveloperAppInsightsApiKeySet, "expected parameter 'isDeveloperAppInsightsApiKeySet' to be non-null");
-        this.isStreamingSupported = Codegen.booleanProp("isStreamingSupported").arg(isStreamingSupported).def(false).getNullable();
-        this.luisAppIds = luisAppIds;
-        this.luisKey = luisKey;
-        this.manifestUrl = manifestUrl;
-        this.migrationToken = Objects.requireNonNull(migrationToken, "expected parameter 'migrationToken' to be non-null");
-        this.msaAppId = Objects.requireNonNull(msaAppId, "expected parameter 'msaAppId' to be non-null");
-        this.msaAppMSIResourceId = msaAppMSIResourceId;
-        this.msaAppTenantId = msaAppTenantId;
-        this.msaAppType = msaAppType;
-        this.openWithHint = openWithHint;
-        this.parameters = parameters;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").arg(publicNetworkAccess).def("Enabled").getNullable();
-        this.publishingCredentials = publishingCredentials;
-        this.schemaTransformationVersion = schemaTransformationVersion;
-        this.storageResourceId = storageResourceId;
-    }
+    private BotPropertiesResponse() {}
 
-    private BotPropertiesResponse() {
-        this.allSettings = Map.of();
-        this.appPasswordHint = null;
-        this.cmekEncryptionStatus = null;
-        this.cmekKeyVaultUrl = null;
-        this.configuredChannels = List.of();
-        this.description = null;
-        this.developerAppInsightKey = null;
-        this.developerAppInsightsApiKey = null;
-        this.developerAppInsightsApplicationId = null;
-        this.disableLocalAuth = null;
-        this.displayName = null;
-        this.enabledChannels = List.of();
-        this.endpoint = null;
-        this.endpointVersion = null;
-        this.iconUrl = null;
-        this.isCmekEnabled = null;
-        this.isDeveloperAppInsightsApiKeySet = null;
-        this.isStreamingSupported = null;
-        this.luisAppIds = List.of();
-        this.luisKey = null;
-        this.manifestUrl = null;
-        this.migrationToken = null;
-        this.msaAppId = null;
-        this.msaAppMSIResourceId = null;
-        this.msaAppTenantId = null;
-        this.msaAppType = null;
-        this.openWithHint = null;
-        this.parameters = Map.of();
-        this.provisioningState = null;
-        this.publicNetworkAccess = null;
-        this.publishingCredentials = null;
-        this.schemaTransformationVersion = null;
-        this.storageResourceId = null;
+    private BotPropertiesResponse(BotPropertiesResponse $) {
+        this.allSettings = $.allSettings;
+        this.appPasswordHint = $.appPasswordHint;
+        this.cmekEncryptionStatus = $.cmekEncryptionStatus;
+        this.cmekKeyVaultUrl = $.cmekKeyVaultUrl;
+        this.configuredChannels = $.configuredChannels;
+        this.description = $.description;
+        this.developerAppInsightKey = $.developerAppInsightKey;
+        this.developerAppInsightsApiKey = $.developerAppInsightsApiKey;
+        this.developerAppInsightsApplicationId = $.developerAppInsightsApplicationId;
+        this.disableLocalAuth = $.disableLocalAuth;
+        this.displayName = $.displayName;
+        this.enabledChannels = $.enabledChannels;
+        this.endpoint = $.endpoint;
+        this.endpointVersion = $.endpointVersion;
+        this.iconUrl = $.iconUrl;
+        this.isCmekEnabled = $.isCmekEnabled;
+        this.isDeveloperAppInsightsApiKeySet = $.isDeveloperAppInsightsApiKeySet;
+        this.isStreamingSupported = $.isStreamingSupported;
+        this.luisAppIds = $.luisAppIds;
+        this.luisKey = $.luisKey;
+        this.manifestUrl = $.manifestUrl;
+        this.migrationToken = $.migrationToken;
+        this.msaAppId = $.msaAppId;
+        this.msaAppMSIResourceId = $.msaAppMSIResourceId;
+        this.msaAppTenantId = $.msaAppTenantId;
+        this.msaAppType = $.msaAppType;
+        this.openWithHint = $.openWithHint;
+        this.parameters = $.parameters;
+        this.provisioningState = $.provisioningState;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.publishingCredentials = $.publishingCredentials;
+        this.schemaTransformationVersion = $.schemaTransformationVersion;
+        this.storageResourceId = $.storageResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> allSettings;
-        private @Nullable String appPasswordHint;
-        private String cmekEncryptionStatus;
-        private @Nullable String cmekKeyVaultUrl;
-        private List<String> configuredChannels;
-        private @Nullable String description;
-        private @Nullable String developerAppInsightKey;
-        private @Nullable String developerAppInsightsApiKey;
-        private @Nullable String developerAppInsightsApplicationId;
-        private @Nullable Boolean disableLocalAuth;
-        private String displayName;
-        private List<String> enabledChannels;
-        private String endpoint;
-        private String endpointVersion;
-        private @Nullable String iconUrl;
-        private @Nullable Boolean isCmekEnabled;
-        private Boolean isDeveloperAppInsightsApiKeySet;
-        private @Nullable Boolean isStreamingSupported;
-        private @Nullable List<String> luisAppIds;
-        private @Nullable String luisKey;
-        private @Nullable String manifestUrl;
-        private String migrationToken;
-        private String msaAppId;
-        private @Nullable String msaAppMSIResourceId;
-        private @Nullable String msaAppTenantId;
-        private @Nullable String msaAppType;
-        private @Nullable String openWithHint;
-        private @Nullable Map<String,String> parameters;
-        private String provisioningState;
-        private @Nullable String publicNetworkAccess;
-        private @Nullable String publishingCredentials;
-        private @Nullable String schemaTransformationVersion;
-        private @Nullable String storageResourceId;
+        private BotPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotPropertiesResponse();
         }
 
         public Builder(BotPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allSettings = defaults.allSettings;
-    	      this.appPasswordHint = defaults.appPasswordHint;
-    	      this.cmekEncryptionStatus = defaults.cmekEncryptionStatus;
-    	      this.cmekKeyVaultUrl = defaults.cmekKeyVaultUrl;
-    	      this.configuredChannels = defaults.configuredChannels;
-    	      this.description = defaults.description;
-    	      this.developerAppInsightKey = defaults.developerAppInsightKey;
-    	      this.developerAppInsightsApiKey = defaults.developerAppInsightsApiKey;
-    	      this.developerAppInsightsApplicationId = defaults.developerAppInsightsApplicationId;
-    	      this.disableLocalAuth = defaults.disableLocalAuth;
-    	      this.displayName = defaults.displayName;
-    	      this.enabledChannels = defaults.enabledChannels;
-    	      this.endpoint = defaults.endpoint;
-    	      this.endpointVersion = defaults.endpointVersion;
-    	      this.iconUrl = defaults.iconUrl;
-    	      this.isCmekEnabled = defaults.isCmekEnabled;
-    	      this.isDeveloperAppInsightsApiKeySet = defaults.isDeveloperAppInsightsApiKeySet;
-    	      this.isStreamingSupported = defaults.isStreamingSupported;
-    	      this.luisAppIds = defaults.luisAppIds;
-    	      this.luisKey = defaults.luisKey;
-    	      this.manifestUrl = defaults.manifestUrl;
-    	      this.migrationToken = defaults.migrationToken;
-    	      this.msaAppId = defaults.msaAppId;
-    	      this.msaAppMSIResourceId = defaults.msaAppMSIResourceId;
-    	      this.msaAppTenantId = defaults.msaAppTenantId;
-    	      this.msaAppType = defaults.msaAppType;
-    	      this.openWithHint = defaults.openWithHint;
-    	      this.parameters = defaults.parameters;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.publishingCredentials = defaults.publishingCredentials;
-    	      this.schemaTransformationVersion = defaults.schemaTransformationVersion;
-    	      this.storageResourceId = defaults.storageResourceId;
+            $ = new BotPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allSettings(@Nullable Map<String,String> allSettings) {
-            this.allSettings = allSettings;
+            $.allSettings = allSettings;
             return this;
         }
+
         public Builder appPasswordHint(@Nullable String appPasswordHint) {
-            this.appPasswordHint = appPasswordHint;
+            $.appPasswordHint = appPasswordHint;
             return this;
         }
+
         public Builder cmekEncryptionStatus(String cmekEncryptionStatus) {
-            this.cmekEncryptionStatus = Objects.requireNonNull(cmekEncryptionStatus);
+            $.cmekEncryptionStatus = cmekEncryptionStatus;
             return this;
         }
+
         public Builder cmekKeyVaultUrl(@Nullable String cmekKeyVaultUrl) {
-            this.cmekKeyVaultUrl = cmekKeyVaultUrl;
+            $.cmekKeyVaultUrl = cmekKeyVaultUrl;
             return this;
         }
+
         public Builder configuredChannels(List<String> configuredChannels) {
-            this.configuredChannels = Objects.requireNonNull(configuredChannels);
+            $.configuredChannels = configuredChannels;
             return this;
         }
+
         public Builder configuredChannels(String... configuredChannels) {
             return configuredChannels(List.of(configuredChannels));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder developerAppInsightKey(@Nullable String developerAppInsightKey) {
-            this.developerAppInsightKey = developerAppInsightKey;
+            $.developerAppInsightKey = developerAppInsightKey;
             return this;
         }
+
         public Builder developerAppInsightsApiKey(@Nullable String developerAppInsightsApiKey) {
-            this.developerAppInsightsApiKey = developerAppInsightsApiKey;
+            $.developerAppInsightsApiKey = developerAppInsightsApiKey;
             return this;
         }
+
         public Builder developerAppInsightsApplicationId(@Nullable String developerAppInsightsApplicationId) {
-            this.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
+            $.developerAppInsightsApplicationId = developerAppInsightsApplicationId;
             return this;
         }
+
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = disableLocalAuth;
+            $.disableLocalAuth = disableLocalAuth;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder enabledChannels(List<String> enabledChannels) {
-            this.enabledChannels = Objects.requireNonNull(enabledChannels);
+            $.enabledChannels = enabledChannels;
             return this;
         }
+
         public Builder enabledChannels(String... enabledChannels) {
             return enabledChannels(List.of(enabledChannels));
         }
+
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder endpointVersion(String endpointVersion) {
-            this.endpointVersion = Objects.requireNonNull(endpointVersion);
+            $.endpointVersion = endpointVersion;
             return this;
         }
+
         public Builder iconUrl(@Nullable String iconUrl) {
-            this.iconUrl = iconUrl;
+            $.iconUrl = iconUrl;
             return this;
         }
+
         public Builder isCmekEnabled(@Nullable Boolean isCmekEnabled) {
-            this.isCmekEnabled = isCmekEnabled;
+            $.isCmekEnabled = isCmekEnabled;
             return this;
         }
+
         public Builder isDeveloperAppInsightsApiKeySet(Boolean isDeveloperAppInsightsApiKeySet) {
-            this.isDeveloperAppInsightsApiKeySet = Objects.requireNonNull(isDeveloperAppInsightsApiKeySet);
+            $.isDeveloperAppInsightsApiKeySet = isDeveloperAppInsightsApiKeySet;
             return this;
         }
+
         public Builder isStreamingSupported(@Nullable Boolean isStreamingSupported) {
-            this.isStreamingSupported = isStreamingSupported;
+            $.isStreamingSupported = isStreamingSupported;
             return this;
         }
+
         public Builder luisAppIds(@Nullable List<String> luisAppIds) {
-            this.luisAppIds = luisAppIds;
+            $.luisAppIds = luisAppIds;
             return this;
         }
+
         public Builder luisAppIds(String... luisAppIds) {
             return luisAppIds(List.of(luisAppIds));
         }
+
         public Builder luisKey(@Nullable String luisKey) {
-            this.luisKey = luisKey;
+            $.luisKey = luisKey;
             return this;
         }
+
         public Builder manifestUrl(@Nullable String manifestUrl) {
-            this.manifestUrl = manifestUrl;
+            $.manifestUrl = manifestUrl;
             return this;
         }
+
         public Builder migrationToken(String migrationToken) {
-            this.migrationToken = Objects.requireNonNull(migrationToken);
+            $.migrationToken = migrationToken;
             return this;
         }
+
         public Builder msaAppId(String msaAppId) {
-            this.msaAppId = Objects.requireNonNull(msaAppId);
+            $.msaAppId = msaAppId;
             return this;
         }
+
         public Builder msaAppMSIResourceId(@Nullable String msaAppMSIResourceId) {
-            this.msaAppMSIResourceId = msaAppMSIResourceId;
+            $.msaAppMSIResourceId = msaAppMSIResourceId;
             return this;
         }
+
         public Builder msaAppTenantId(@Nullable String msaAppTenantId) {
-            this.msaAppTenantId = msaAppTenantId;
+            $.msaAppTenantId = msaAppTenantId;
             return this;
         }
+
         public Builder msaAppType(@Nullable String msaAppType) {
-            this.msaAppType = msaAppType;
+            $.msaAppType = msaAppType;
             return this;
         }
+
         public Builder openWithHint(@Nullable String openWithHint) {
-            this.openWithHint = openWithHint;
+            $.openWithHint = openWithHint;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
+
         public Builder publishingCredentials(@Nullable String publishingCredentials) {
-            this.publishingCredentials = publishingCredentials;
+            $.publishingCredentials = publishingCredentials;
             return this;
         }
+
         public Builder schemaTransformationVersion(@Nullable String schemaTransformationVersion) {
-            this.schemaTransformationVersion = schemaTransformationVersion;
+            $.schemaTransformationVersion = schemaTransformationVersion;
             return this;
         }
+
         public Builder storageResourceId(@Nullable String storageResourceId) {
-            this.storageResourceId = storageResourceId;
+            $.storageResourceId = storageResourceId;
             return this;
-        }        public BotPropertiesResponse build() {
-            return new BotPropertiesResponse(allSettings, appPasswordHint, cmekEncryptionStatus, cmekKeyVaultUrl, configuredChannels, description, developerAppInsightKey, developerAppInsightsApiKey, developerAppInsightsApplicationId, disableLocalAuth, displayName, enabledChannels, endpoint, endpointVersion, iconUrl, isCmekEnabled, isDeveloperAppInsightsApiKeySet, isStreamingSupported, luisAppIds, luisKey, manifestUrl, migrationToken, msaAppId, msaAppMSIResourceId, msaAppTenantId, msaAppType, openWithHint, parameters, provisioningState, publicNetworkAccess, publishingCredentials, schemaTransformationVersion, storageResourceId);
+        }
+
+        public BotPropertiesResponse build() {
+            $.cmekEncryptionStatus = Objects.requireNonNull($.cmekEncryptionStatus, "expected parameter 'cmekEncryptionStatus' to be non-null");
+            $.configuredChannels = Objects.requireNonNull($.configuredChannels, "expected parameter 'configuredChannels' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.enabledChannels = Objects.requireNonNull($.enabledChannels, "expected parameter 'enabledChannels' to be non-null");
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.endpointVersion = Objects.requireNonNull($.endpointVersion, "expected parameter 'endpointVersion' to be non-null");
+            $.isDeveloperAppInsightsApiKeySet = Objects.requireNonNull($.isDeveloperAppInsightsApiKeySet, "expected parameter 'isDeveloperAppInsightsApiKeySet' to be non-null");
+            $.isStreamingSupported = Codegen.booleanProp("isStreamingSupported").arg($.isStreamingSupported).def(false).getNullable();
+            $.migrationToken = Objects.requireNonNull($.migrationToken, "expected parameter 'migrationToken' to be non-null");
+            $.msaAppId = Objects.requireNonNull($.msaAppId, "expected parameter 'msaAppId' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").arg($.publicNetworkAccess).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

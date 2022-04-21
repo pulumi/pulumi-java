@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SharedVPCServiceProjectArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="hostProject", required=true)
-      private final Output<String> hostProject;
+    private Output<String> hostProject;
 
     public Output<String> hostProject() {
         return this.hostProject;
@@ -30,63 +29,60 @@ public final class SharedVPCServiceProjectArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serviceProject", required=true)
-      private final Output<String> serviceProject;
+    private Output<String> serviceProject;
 
     public Output<String> serviceProject() {
         return this.serviceProject;
     }
 
-    public SharedVPCServiceProjectArgs(
-        Output<String> hostProject,
-        Output<String> serviceProject) {
-        this.hostProject = Objects.requireNonNull(hostProject, "expected parameter 'hostProject' to be non-null");
-        this.serviceProject = Objects.requireNonNull(serviceProject, "expected parameter 'serviceProject' to be non-null");
-    }
+    private SharedVPCServiceProjectArgs() {}
 
-    private SharedVPCServiceProjectArgs() {
-        this.hostProject = Codegen.empty();
-        this.serviceProject = Codegen.empty();
+    private SharedVPCServiceProjectArgs(SharedVPCServiceProjectArgs $) {
+        this.hostProject = $.hostProject;
+        this.serviceProject = $.serviceProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedVPCServiceProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hostProject;
-        private Output<String> serviceProject;
+        private SharedVPCServiceProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedVPCServiceProjectArgs();
         }
 
         public Builder(SharedVPCServiceProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostProject = defaults.hostProject;
-    	      this.serviceProject = defaults.serviceProject;
+            $ = new SharedVPCServiceProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostProject(Output<String> hostProject) {
-            this.hostProject = Objects.requireNonNull(hostProject);
+            $.hostProject = hostProject;
             return this;
         }
+
         public Builder hostProject(String hostProject) {
-            this.hostProject = Output.of(Objects.requireNonNull(hostProject));
-            return this;
+            return hostProject(Output.of(hostProject));
         }
+
         public Builder serviceProject(Output<String> serviceProject) {
-            this.serviceProject = Objects.requireNonNull(serviceProject);
+            $.serviceProject = serviceProject;
             return this;
         }
+
         public Builder serviceProject(String serviceProject) {
-            this.serviceProject = Output.of(Objects.requireNonNull(serviceProject));
-            return this;
-        }        public SharedVPCServiceProjectArgs build() {
-            return new SharedVPCServiceProjectArgs(hostProject, serviceProject);
+            return serviceProject(Output.of(serviceProject));
+        }
+
+        public SharedVPCServiceProjectArgs build() {
+            $.hostProject = Objects.requireNonNull($.hostProject, "expected parameter 'hostProject' to be non-null");
+            $.serviceProject = Objects.requireNonNull($.serviceProject, "expected parameter 'serviceProject' to be non-null");
+            return $;
         }
     }
+
 }

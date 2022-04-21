@@ -5,9 +5,9 @@ package com.pulumi.aws.resourcegroups.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class GroupResourceQueryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="query", required=true)
-      private final Output<String> query;
+    private Output<String> query;
 
     public Output<String> query() {
         return this.query;
@@ -31,63 +31,59 @@ public final class GroupResourceQueryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public GroupResourceQueryArgs(
-        Output<String> query,
-        @Nullable Output<String> type) {
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.type = type;
-    }
+    private GroupResourceQueryArgs() {}
 
-    private GroupResourceQueryArgs() {
-        this.query = Codegen.empty();
-        this.type = Codegen.empty();
+    private GroupResourceQueryArgs(GroupResourceQueryArgs $) {
+        this.query = $.query;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupResourceQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> query;
-        private @Nullable Output<String> type;
+        private GroupResourceQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupResourceQueryArgs();
         }
 
         public Builder(GroupResourceQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.query = defaults.query;
-    	      this.type = defaults.type;
+            $ = new GroupResourceQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder query(Output<String> query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Output.of(Objects.requireNonNull(query));
-            return this;
+            return query(Output.of(query));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public GroupResourceQueryArgs build() {
-            return new GroupResourceQueryArgs(query, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public GroupResourceQueryArgs build() {
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            return $;
         }
     }
+
 }

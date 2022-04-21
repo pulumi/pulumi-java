@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="offer")
-      private final @Nullable Output<String> offer;
+    private @Nullable Output<String> offer;
 
-    public Output<String> offer() {
-        return this.offer == null ? Codegen.empty() : this.offer;
+    public Optional<Output<String>> offer() {
+        return Optional.ofNullable(this.offer);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="planInfo")
-      private final @Nullable Output<PlatformImagePurchasePlanArgs> planInfo;
+    private @Nullable Output<PlatformImagePurchasePlanArgs> planInfo;
 
-    public Output<PlatformImagePurchasePlanArgs> planInfo() {
-        return this.planInfo == null ? Codegen.empty() : this.planInfo;
+    public Optional<Output<PlatformImagePurchasePlanArgs>> planInfo() {
+        return Optional.ofNullable(this.planInfo);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="publisher")
-      private final @Nullable Output<String> publisher;
+    private @Nullable Output<String> publisher;
 
-    public Output<String> publisher() {
-        return this.publisher == null ? Codegen.empty() : this.publisher;
+    public Optional<Output<String>> publisher() {
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<String> sku;
+    private @Nullable Output<String> sku;
 
-    public Output<String> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<String>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -81,115 +82,99 @@ public final class ImageTemplatePlatformImageSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ImageTemplatePlatformImageSourceArgs(
-        @Nullable Output<String> offer,
-        @Nullable Output<PlatformImagePurchasePlanArgs> planInfo,
-        @Nullable Output<String> publisher,
-        @Nullable Output<String> sku,
-        Output<String> type,
-        @Nullable Output<String> version) {
-        this.offer = offer;
-        this.planInfo = planInfo;
-        this.publisher = publisher;
-        this.sku = sku;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.version = version;
-    }
+    private ImageTemplatePlatformImageSourceArgs() {}
 
-    private ImageTemplatePlatformImageSourceArgs() {
-        this.offer = Codegen.empty();
-        this.planInfo = Codegen.empty();
-        this.publisher = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.type = Codegen.empty();
-        this.version = Codegen.empty();
+    private ImageTemplatePlatformImageSourceArgs(ImageTemplatePlatformImageSourceArgs $) {
+        this.offer = $.offer;
+        this.planInfo = $.planInfo;
+        this.publisher = $.publisher;
+        this.sku = $.sku;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplatePlatformImageSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> offer;
-        private @Nullable Output<PlatformImagePurchasePlanArgs> planInfo;
-        private @Nullable Output<String> publisher;
-        private @Nullable Output<String> sku;
-        private Output<String> type;
-        private @Nullable Output<String> version;
+        private ImageTemplatePlatformImageSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplatePlatformImageSourceArgs();
         }
 
         public Builder(ImageTemplatePlatformImageSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.offer = defaults.offer;
-    	      this.planInfo = defaults.planInfo;
-    	      this.publisher = defaults.publisher;
-    	      this.sku = defaults.sku;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new ImageTemplatePlatformImageSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder offer(@Nullable Output<String> offer) {
-            this.offer = offer;
+            $.offer = offer;
             return this;
         }
-        public Builder offer(@Nullable String offer) {
-            this.offer = Codegen.ofNullable(offer);
-            return this;
+
+        public Builder offer(String offer) {
+            return offer(Output.of(offer));
         }
+
         public Builder planInfo(@Nullable Output<PlatformImagePurchasePlanArgs> planInfo) {
-            this.planInfo = planInfo;
+            $.planInfo = planInfo;
             return this;
         }
-        public Builder planInfo(@Nullable PlatformImagePurchasePlanArgs planInfo) {
-            this.planInfo = Codegen.ofNullable(planInfo);
-            return this;
+
+        public Builder planInfo(PlatformImagePurchasePlanArgs planInfo) {
+            return planInfo(Output.of(planInfo));
         }
+
         public Builder publisher(@Nullable Output<String> publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
-        public Builder publisher(@Nullable String publisher) {
-            this.publisher = Codegen.ofNullable(publisher);
-            return this;
+
+        public Builder publisher(String publisher) {
+            return publisher(Output.of(publisher));
         }
+
         public Builder sku(@Nullable Output<String> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable String sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(String sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ImageTemplatePlatformImageSourceArgs build() {
-            return new ImageTemplatePlatformImageSourceArgs(offer, planInfo, publisher, sku, type, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ImageTemplatePlatformImageSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

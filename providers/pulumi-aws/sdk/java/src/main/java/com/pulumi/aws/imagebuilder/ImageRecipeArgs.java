@@ -7,11 +7,11 @@ import com.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingArgs;
 import com.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blockDeviceMappings")
-      private final @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
+    private @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
+    public Optional<Output<List<ImageRecipeBlockDeviceMappingArgs>>> blockDeviceMappings() {
+        return Optional.ofNullable(this.blockDeviceMappings);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="components", required=true)
-      private final Output<List<ImageRecipeComponentArgs>> components;
+    private Output<List<ImageRecipeComponentArgs>> components;
 
     public Output<List<ImageRecipeComponentArgs>> components() {
         return this.components;
@@ -46,10 +46,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentImage", required=true)
-      private final Output<String> parentImage;
+    private Output<String> parentImage;
 
     public Output<String> parentImage() {
         return this.parentImage;
@@ -79,10 +79,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userDataBase64")
-      private final @Nullable Output<String> userDataBase64;
+    private @Nullable Output<String> userDataBase64;
 
-    public Output<String> userDataBase64() {
-        return this.userDataBase64 == null ? Codegen.empty() : this.userDataBase64;
+    public Optional<Output<String>> userDataBase64() {
+        return Optional.ofNullable(this.userDataBase64);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
@@ -112,160 +112,139 @@ public final class ImageRecipeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workingDirectory")
-      private final @Nullable Output<String> workingDirectory;
+    private @Nullable Output<String> workingDirectory;
 
-    public Output<String> workingDirectory() {
-        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
+    public Optional<Output<String>> workingDirectory() {
+        return Optional.ofNullable(this.workingDirectory);
     }
 
-    public ImageRecipeArgs(
-        @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings,
-        Output<List<ImageRecipeComponentArgs>> components,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        Output<String> parentImage,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> userDataBase64,
-        Output<String> version,
-        @Nullable Output<String> workingDirectory) {
-        this.blockDeviceMappings = blockDeviceMappings;
-        this.components = Objects.requireNonNull(components, "expected parameter 'components' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.parentImage = Objects.requireNonNull(parentImage, "expected parameter 'parentImage' to be non-null");
-        this.tags = tags;
-        this.userDataBase64 = userDataBase64;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-        this.workingDirectory = workingDirectory;
-    }
+    private ImageRecipeArgs() {}
 
-    private ImageRecipeArgs() {
-        this.blockDeviceMappings = Codegen.empty();
-        this.components = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentImage = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userDataBase64 = Codegen.empty();
-        this.version = Codegen.empty();
-        this.workingDirectory = Codegen.empty();
+    private ImageRecipeArgs(ImageRecipeArgs $) {
+        this.blockDeviceMappings = $.blockDeviceMappings;
+        this.components = $.components;
+        this.description = $.description;
+        this.name = $.name;
+        this.parentImage = $.parentImage;
+        this.tags = $.tags;
+        this.userDataBase64 = $.userDataBase64;
+        this.version = $.version;
+        this.workingDirectory = $.workingDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRecipeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
-        private Output<List<ImageRecipeComponentArgs>> components;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private Output<String> parentImage;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> userDataBase64;
-        private Output<String> version;
-        private @Nullable Output<String> workingDirectory;
+        private ImageRecipeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRecipeArgs();
         }
 
         public Builder(ImageRecipeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockDeviceMappings = defaults.blockDeviceMappings;
-    	      this.components = defaults.components;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.parentImage = defaults.parentImage;
-    	      this.tags = defaults.tags;
-    	      this.userDataBase64 = defaults.userDataBase64;
-    	      this.version = defaults.version;
-    	      this.workingDirectory = defaults.workingDirectory;
+            $ = new ImageRecipeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blockDeviceMappings(@Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings) {
-            this.blockDeviceMappings = blockDeviceMappings;
+            $.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
-        public Builder blockDeviceMappings(@Nullable List<ImageRecipeBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Codegen.ofNullable(blockDeviceMappings);
-            return this;
+
+        public Builder blockDeviceMappings(List<ImageRecipeBlockDeviceMappingArgs> blockDeviceMappings) {
+            return blockDeviceMappings(Output.of(blockDeviceMappings));
         }
+
         public Builder blockDeviceMappings(ImageRecipeBlockDeviceMappingArgs... blockDeviceMappings) {
             return blockDeviceMappings(List.of(blockDeviceMappings));
         }
+
         public Builder components(Output<List<ImageRecipeComponentArgs>> components) {
-            this.components = Objects.requireNonNull(components);
+            $.components = components;
             return this;
         }
+
         public Builder components(List<ImageRecipeComponentArgs> components) {
-            this.components = Output.of(Objects.requireNonNull(components));
-            return this;
+            return components(Output.of(components));
         }
+
         public Builder components(ImageRecipeComponentArgs... components) {
             return components(List.of(components));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentImage(Output<String> parentImage) {
-            this.parentImage = Objects.requireNonNull(parentImage);
+            $.parentImage = parentImage;
             return this;
         }
+
         public Builder parentImage(String parentImage) {
-            this.parentImage = Output.of(Objects.requireNonNull(parentImage));
-            return this;
+            return parentImage(Output.of(parentImage));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
-            this.userDataBase64 = userDataBase64;
+            $.userDataBase64 = userDataBase64;
             return this;
         }
-        public Builder userDataBase64(@Nullable String userDataBase64) {
-            this.userDataBase64 = Codegen.ofNullable(userDataBase64);
-            return this;
+
+        public Builder userDataBase64(String userDataBase64) {
+            return userDataBase64(Output.of(userDataBase64));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
+            return version(Output.of(version));
         }
+
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
-            this.workingDirectory = workingDirectory;
+            $.workingDirectory = workingDirectory;
             return this;
         }
-        public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Codegen.ofNullable(workingDirectory);
-            return this;
-        }        public ImageRecipeArgs build() {
-            return new ImageRecipeArgs(blockDeviceMappings, components, description, name, parentImage, tags, userDataBase64, version, workingDirectory);
+
+        public Builder workingDirectory(String workingDirectory) {
+            return workingDirectory(Output.of(workingDirectory));
+        }
+
+        public ImageRecipeArgs build() {
+            $.components = Objects.requireNonNull($.components, "expected parameter 'components' to be non-null");
+            $.parentImage = Objects.requireNonNull($.parentImage, "expected parameter 'parentImage' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

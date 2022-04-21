@@ -23,7 +23,7 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends com.pulumi
      * 
      */
     @Import(name="targetServerBrandVersion", required=true)
-      private final String targetServerBrandVersion;
+    private String targetServerBrandVersion;
 
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
@@ -34,7 +34,7 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends com.pulumi
      * 
      */
     @Import(name="targetServerVersion", required=true)
-      private final String targetServerVersion;
+    private String targetServerVersion;
 
     public String targetServerVersion() {
         return this.targetServerVersion;
@@ -45,67 +45,63 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends com.pulumi
      * 
      */
     @Import(name="validationErrors", required=true)
-      private final List<ReportableExceptionResponse> validationErrors;
+    private List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 
-    public ConnectToTargetSqlMISyncTaskOutputResponse(
-        String targetServerBrandVersion,
-        String targetServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
-        this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
-        this.targetServerVersion = Objects.requireNonNull(targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
-        this.validationErrors = Objects.requireNonNull(validationErrors, "expected parameter 'validationErrors' to be non-null");
-    }
+    private ConnectToTargetSqlMISyncTaskOutputResponse() {}
 
-    private ConnectToTargetSqlMISyncTaskOutputResponse() {
-        this.targetServerBrandVersion = null;
-        this.targetServerVersion = null;
-        this.validationErrors = List.of();
+    private ConnectToTargetSqlMISyncTaskOutputResponse(ConnectToTargetSqlMISyncTaskOutputResponse $) {
+        this.targetServerBrandVersion = $.targetServerBrandVersion;
+        this.targetServerVersion = $.targetServerVersion;
+        this.validationErrors = $.validationErrors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetSqlMISyncTaskOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String targetServerBrandVersion;
-        private String targetServerVersion;
-        private List<ReportableExceptionResponse> validationErrors;
+        private ConnectToTargetSqlMISyncTaskOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetSqlMISyncTaskOutputResponse();
         }
 
         public Builder(ConnectToTargetSqlMISyncTaskOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetServerBrandVersion = defaults.targetServerBrandVersion;
-    	      this.targetServerVersion = defaults.targetServerVersion;
-    	      this.validationErrors = defaults.validationErrors;
+            $ = new ConnectToTargetSqlMISyncTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
-            this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
+            $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
+
         public Builder targetServerVersion(String targetServerVersion) {
-            this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
+            $.targetServerVersion = targetServerVersion;
             return this;
         }
+
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
-            this.validationErrors = Objects.requireNonNull(validationErrors);
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
-        }        public ConnectToTargetSqlMISyncTaskOutputResponse build() {
-            return new ConnectToTargetSqlMISyncTaskOutputResponse(targetServerBrandVersion, targetServerVersion, validationErrors);
+        }
+
+        public ConnectToTargetSqlMISyncTaskOutputResponse build() {
+            $.targetServerBrandVersion = Objects.requireNonNull($.targetServerBrandVersion, "expected parameter 'targetServerBrandVersion' to be non-null");
+            $.targetServerVersion = Objects.requireNonNull($.targetServerVersion, "expected parameter 'targetServerVersion' to be non-null");
+            $.validationErrors = Objects.requireNonNull($.validationErrors, "expected parameter 'validationErrors' to be non-null");
+            return $;
         }
     }
+
 }

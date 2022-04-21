@@ -19,7 +19,7 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -31,10 +31,10 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -43,64 +43,57 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public GetFunctionArgs(
-        String name,
-        @Nullable String project,
-        @Nullable String region) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-        this.region = region;
-    }
+    private GetFunctionArgs() {}
 
-    private GetFunctionArgs() {
-        this.name = null;
-        this.project = null;
-        this.region = null;
+    private GetFunctionArgs(GetFunctionArgs $) {
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String project;
-        private @Nullable String region;
+        private GetFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionArgs();
         }
 
         public Builder(GetFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public GetFunctionArgs build() {
-            return new GetFunctionArgs(name, project, region);
+        }
+
+        public GetFunctionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

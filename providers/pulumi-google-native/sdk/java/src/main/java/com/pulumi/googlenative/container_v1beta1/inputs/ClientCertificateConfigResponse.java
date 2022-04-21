@@ -21,45 +21,45 @@ public final class ClientCertificateConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="issueClientCertificate", required=true)
-      private final Boolean issueClientCertificate;
+    private Boolean issueClientCertificate;
 
     public Boolean issueClientCertificate() {
         return this.issueClientCertificate;
     }
 
-    public ClientCertificateConfigResponse(Boolean issueClientCertificate) {
-        this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate, "expected parameter 'issueClientCertificate' to be non-null");
-    }
+    private ClientCertificateConfigResponse() {}
 
-    private ClientCertificateConfigResponse() {
-        this.issueClientCertificate = null;
+    private ClientCertificateConfigResponse(ClientCertificateConfigResponse $) {
+        this.issueClientCertificate = $.issueClientCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientCertificateConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean issueClientCertificate;
+        private ClientCertificateConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientCertificateConfigResponse();
         }
 
         public Builder(ClientCertificateConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issueClientCertificate = defaults.issueClientCertificate;
+            $ = new ClientCertificateConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
-            this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
+            $.issueClientCertificate = issueClientCertificate;
             return this;
-        }        public ClientCertificateConfigResponse build() {
-            return new ClientCertificateConfigResponse(issueClientCertificate);
+        }
+
+        public ClientCertificateConfigResponse build() {
+            $.issueClientCertificate = Objects.requireNonNull($.issueClientCertificate, "expected parameter 'issueClientCertificate' to be non-null");
+            return $;
         }
     }
+
 }

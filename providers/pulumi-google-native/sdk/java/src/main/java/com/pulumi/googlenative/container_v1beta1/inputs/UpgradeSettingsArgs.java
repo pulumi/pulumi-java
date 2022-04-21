@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class UpgradeSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxSurge")
-      private final @Nullable Output<Integer> maxSurge;
+    private @Nullable Output<Integer> maxSurge;
 
-    public Output<Integer> maxSurge() {
-        return this.maxSurge == null ? Codegen.empty() : this.maxSurge;
+    public Optional<Output<Integer>> maxSurge() {
+        return Optional.ofNullable(this.maxSurge);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class UpgradeSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxUnavailable")
-      private final @Nullable Output<Integer> maxUnavailable;
+    private @Nullable Output<Integer> maxUnavailable;
 
-    public Output<Integer> maxUnavailable() {
-        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
+    public Optional<Output<Integer>> maxUnavailable() {
+        return Optional.ofNullable(this.maxUnavailable);
     }
 
-    public UpgradeSettingsArgs(
-        @Nullable Output<Integer> maxSurge,
-        @Nullable Output<Integer> maxUnavailable) {
-        this.maxSurge = maxSurge;
-        this.maxUnavailable = maxUnavailable;
-    }
+    private UpgradeSettingsArgs() {}
 
-    private UpgradeSettingsArgs() {
-        this.maxSurge = Codegen.empty();
-        this.maxUnavailable = Codegen.empty();
+    private UpgradeSettingsArgs(UpgradeSettingsArgs $) {
+        this.maxSurge = $.maxSurge;
+        this.maxUnavailable = $.maxUnavailable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxSurge;
-        private @Nullable Output<Integer> maxUnavailable;
+        private UpgradeSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeSettingsArgs();
         }
 
         public Builder(UpgradeSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSurge = defaults.maxSurge;
-    	      this.maxUnavailable = defaults.maxUnavailable;
+            $ = new UpgradeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSurge(@Nullable Output<Integer> maxSurge) {
-            this.maxSurge = maxSurge;
+            $.maxSurge = maxSurge;
             return this;
         }
-        public Builder maxSurge(@Nullable Integer maxSurge) {
-            this.maxSurge = Codegen.ofNullable(maxSurge);
-            return this;
+
+        public Builder maxSurge(Integer maxSurge) {
+            return maxSurge(Output.of(maxSurge));
         }
+
         public Builder maxUnavailable(@Nullable Output<Integer> maxUnavailable) {
-            this.maxUnavailable = maxUnavailable;
+            $.maxUnavailable = maxUnavailable;
             return this;
         }
-        public Builder maxUnavailable(@Nullable Integer maxUnavailable) {
-            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
-            return this;
-        }        public UpgradeSettingsArgs build() {
-            return new UpgradeSettingsArgs(maxSurge, maxUnavailable);
+
+        public Builder maxUnavailable(Integer maxUnavailable) {
+            return maxUnavailable(Output.of(maxUnavailable));
+        }
+
+        public UpgradeSettingsArgs build() {
+            return $;
         }
     }
+
 }

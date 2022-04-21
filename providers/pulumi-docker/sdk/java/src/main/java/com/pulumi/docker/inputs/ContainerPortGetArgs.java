@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,110 +17,100 @@ public final class ContainerPortGetArgs extends com.pulumi.resources.ResourceArg
     public static final ContainerPortGetArgs Empty = new ContainerPortGetArgs();
 
     @Import(name="external")
-      private final @Nullable Output<Integer> external;
+    private @Nullable Output<Integer> external;
 
-    public Output<Integer> external() {
-        return this.external == null ? Codegen.empty() : this.external;
+    public Optional<Output<Integer>> external() {
+        return Optional.ofNullable(this.external);
     }
 
     @Import(name="internal", required=true)
-      private final Output<Integer> internal;
+    private Output<Integer> internal;
 
     public Output<Integer> internal() {
         return this.internal;
     }
 
     @Import(name="ip")
-      private final @Nullable Output<String> ip;
+    private @Nullable Output<String> ip;
 
-    public Output<String> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public ContainerPortGetArgs(
-        @Nullable Output<Integer> external,
-        Output<Integer> internal,
-        @Nullable Output<String> ip,
-        @Nullable Output<String> protocol) {
-        this.external = external;
-        this.internal = Objects.requireNonNull(internal, "expected parameter 'internal' to be non-null");
-        this.ip = ip;
-        this.protocol = protocol;
-    }
+    private ContainerPortGetArgs() {}
 
-    private ContainerPortGetArgs() {
-        this.external = Codegen.empty();
-        this.internal = Codegen.empty();
-        this.ip = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private ContainerPortGetArgs(ContainerPortGetArgs $) {
+        this.external = $.external;
+        this.internal = $.internal;
+        this.ip = $.ip;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPortGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> external;
-        private Output<Integer> internal;
-        private @Nullable Output<String> ip;
-        private @Nullable Output<String> protocol;
+        private ContainerPortGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPortGetArgs();
         }
 
         public Builder(ContainerPortGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.external = defaults.external;
-    	      this.internal = defaults.internal;
-    	      this.ip = defaults.ip;
-    	      this.protocol = defaults.protocol;
+            $ = new ContainerPortGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder external(@Nullable Output<Integer> external) {
-            this.external = external;
+            $.external = external;
             return this;
         }
-        public Builder external(@Nullable Integer external) {
-            this.external = Codegen.ofNullable(external);
-            return this;
+
+        public Builder external(Integer external) {
+            return external(Output.of(external));
         }
+
         public Builder internal(Output<Integer> internal) {
-            this.internal = Objects.requireNonNull(internal);
+            $.internal = internal;
             return this;
         }
+
         public Builder internal(Integer internal) {
-            this.internal = Output.of(Objects.requireNonNull(internal));
-            return this;
+            return internal(Output.of(internal));
         }
+
         public Builder ip(@Nullable Output<String> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable String ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
+
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public ContainerPortGetArgs build() {
-            return new ContainerPortGetArgs(external, internal, ip, protocol);
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public ContainerPortGetArgs build() {
+            $.internal = Objects.requireNonNull($.internal, "expected parameter 'internal' to be non-null");
+            return $;
         }
     }
+
 }

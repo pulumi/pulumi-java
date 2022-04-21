@@ -5,10 +5,10 @@ package com.pulumi.gcp.filestore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstanceNetworkArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="connectMode")
-      private final @Nullable Output<String> connectMode;
+    private @Nullable Output<String> connectMode;
 
-    public Output<String> connectMode() {
-        return this.connectMode == null ? Codegen.empty() : this.connectMode;
+    public Optional<Output<String>> connectMode() {
+        return Optional.ofNullable(this.connectMode);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InstanceNetworkArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<String>> ipAddresses;
+    private @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<String>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class InstanceNetworkArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="modes", required=true)
-      private final Output<List<String>> modes;
+    private Output<List<String>> modes;
 
     public Output<List<String>> modes() {
         return this.modes;
@@ -62,7 +62,7 @@ public final class InstanceNetworkArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="network", required=true)
-      private final Output<String> network;
+    private Output<String> network;
 
     public Output<String> network() {
         return this.network;
@@ -74,108 +74,98 @@ public final class InstanceNetworkArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="reservedIpRange")
-      private final @Nullable Output<String> reservedIpRange;
+    private @Nullable Output<String> reservedIpRange;
 
-    public Output<String> reservedIpRange() {
-        return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
+    public Optional<Output<String>> reservedIpRange() {
+        return Optional.ofNullable(this.reservedIpRange);
     }
 
-    public InstanceNetworkArgs(
-        @Nullable Output<String> connectMode,
-        @Nullable Output<List<String>> ipAddresses,
-        Output<List<String>> modes,
-        Output<String> network,
-        @Nullable Output<String> reservedIpRange) {
-        this.connectMode = connectMode;
-        this.ipAddresses = ipAddresses;
-        this.modes = Objects.requireNonNull(modes, "expected parameter 'modes' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.reservedIpRange = reservedIpRange;
-    }
+    private InstanceNetworkArgs() {}
 
-    private InstanceNetworkArgs() {
-        this.connectMode = Codegen.empty();
-        this.ipAddresses = Codegen.empty();
-        this.modes = Codegen.empty();
-        this.network = Codegen.empty();
-        this.reservedIpRange = Codegen.empty();
+    private InstanceNetworkArgs(InstanceNetworkArgs $) {
+        this.connectMode = $.connectMode;
+        this.ipAddresses = $.ipAddresses;
+        this.modes = $.modes;
+        this.network = $.network;
+        this.reservedIpRange = $.reservedIpRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectMode;
-        private @Nullable Output<List<String>> ipAddresses;
-        private Output<List<String>> modes;
-        private Output<String> network;
-        private @Nullable Output<String> reservedIpRange;
+        private InstanceNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceNetworkArgs();
         }
 
         public Builder(InstanceNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectMode = defaults.connectMode;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.modes = defaults.modes;
-    	      this.network = defaults.network;
-    	      this.reservedIpRange = defaults.reservedIpRange;
+            $ = new InstanceNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectMode(@Nullable Output<String> connectMode) {
-            this.connectMode = connectMode;
+            $.connectMode = connectMode;
             return this;
         }
-        public Builder connectMode(@Nullable String connectMode) {
-            this.connectMode = Codegen.ofNullable(connectMode);
-            return this;
+
+        public Builder connectMode(String connectMode) {
+            return connectMode(Output.of(connectMode));
         }
+
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<String> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder modes(Output<List<String>> modes) {
-            this.modes = Objects.requireNonNull(modes);
+            $.modes = modes;
             return this;
         }
+
         public Builder modes(List<String> modes) {
-            this.modes = Output.of(Objects.requireNonNull(modes));
-            return this;
+            return modes(Output.of(modes));
         }
+
         public Builder modes(String... modes) {
             return modes(List.of(modes));
         }
+
         public Builder network(Output<String> network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Output.of(Objects.requireNonNull(network));
-            return this;
+            return network(Output.of(network));
         }
+
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
-            this.reservedIpRange = reservedIpRange;
+            $.reservedIpRange = reservedIpRange;
             return this;
         }
-        public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Codegen.ofNullable(reservedIpRange);
-            return this;
-        }        public InstanceNetworkArgs build() {
-            return new InstanceNetworkArgs(connectMode, ipAddresses, modes, network, reservedIpRange);
+
+        public Builder reservedIpRange(String reservedIpRange) {
+            return reservedIpRange(Output.of(reservedIpRange));
+        }
+
+        public InstanceNetworkArgs build() {
+            $.modes = Objects.requireNonNull($.modes, "expected parameter 'modes' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

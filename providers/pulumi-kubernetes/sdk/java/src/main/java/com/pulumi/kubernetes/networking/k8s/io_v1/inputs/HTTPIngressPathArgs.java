@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressBackendArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class HTTPIngressPathArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="backend", required=true)
-      private final Output<IngressBackendArgs> backend;
+    private Output<IngressBackendArgs> backend;
 
     public Output<IngressBackendArgs> backend() {
         return this.backend;
@@ -36,10 +36,10 @@ public final class HTTPIngressPathArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -57,76 +57,70 @@ public final class HTTPIngressPathArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="pathType", required=true)
-      private final Output<String> pathType;
+    private Output<String> pathType;
 
     public Output<String> pathType() {
         return this.pathType;
     }
 
-    public HTTPIngressPathArgs(
-        Output<IngressBackendArgs> backend,
-        @Nullable Output<String> path,
-        Output<String> pathType) {
-        this.backend = Objects.requireNonNull(backend, "expected parameter 'backend' to be non-null");
-        this.path = path;
-        this.pathType = Objects.requireNonNull(pathType, "expected parameter 'pathType' to be non-null");
-    }
+    private HTTPIngressPathArgs() {}
 
-    private HTTPIngressPathArgs() {
-        this.backend = Codegen.empty();
-        this.path = Codegen.empty();
-        this.pathType = Codegen.empty();
+    private HTTPIngressPathArgs(HTTPIngressPathArgs $) {
+        this.backend = $.backend;
+        this.path = $.path;
+        this.pathType = $.pathType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HTTPIngressPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<IngressBackendArgs> backend;
-        private @Nullable Output<String> path;
-        private Output<String> pathType;
+        private HTTPIngressPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HTTPIngressPathArgs();
         }
 
         public Builder(HTTPIngressPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backend = defaults.backend;
-    	      this.path = defaults.path;
-    	      this.pathType = defaults.pathType;
+            $ = new HTTPIngressPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backend(Output<IngressBackendArgs> backend) {
-            this.backend = Objects.requireNonNull(backend);
+            $.backend = backend;
             return this;
         }
+
         public Builder backend(IngressBackendArgs backend) {
-            this.backend = Output.of(Objects.requireNonNull(backend));
-            return this;
+            return backend(Output.of(backend));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder pathType(Output<String> pathType) {
-            this.pathType = Objects.requireNonNull(pathType);
+            $.pathType = pathType;
             return this;
         }
+
         public Builder pathType(String pathType) {
-            this.pathType = Output.of(Objects.requireNonNull(pathType));
-            return this;
-        }        public HTTPIngressPathArgs build() {
-            return new HTTPIngressPathArgs(backend, path, pathType);
+            return pathType(Output.of(pathType));
+        }
+
+        public HTTPIngressPathArgs build() {
+            $.backend = Objects.requireNonNull($.backend, "expected parameter 'backend' to be non-null");
+            $.pathType = Objects.requireNonNull($.pathType, "expected parameter 'pathType' to be non-null");
+            return $;
         }
     }
+
 }

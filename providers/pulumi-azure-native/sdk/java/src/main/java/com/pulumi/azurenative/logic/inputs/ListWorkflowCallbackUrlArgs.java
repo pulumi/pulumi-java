@@ -21,10 +21,10 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Either<String,KeyType> keyType;
+    private @Nullable Either<String,KeyType> keyType;
 
-    public Either<String,KeyType> keyType() {
-        return this.keyType == null ? null : this.keyType;
+    public Optional<Either<String,KeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="notAfter")
-      private final @Nullable String notAfter;
+    private @Nullable String notAfter;
 
     public Optional<String> notAfter() {
-        return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
+        return Optional.ofNullable(this.notAfter);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -54,73 +54,64 @@ public final class ListWorkflowCallbackUrlArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workflowName", required=true)
-      private final String workflowName;
+    private String workflowName;
 
     public String workflowName() {
         return this.workflowName;
     }
 
-    public ListWorkflowCallbackUrlArgs(
-        @Nullable Either<String,KeyType> keyType,
-        @Nullable String notAfter,
-        String resourceGroupName,
-        String workflowName) {
-        this.keyType = keyType;
-        this.notAfter = notAfter;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workflowName = Objects.requireNonNull(workflowName, "expected parameter 'workflowName' to be non-null");
-    }
+    private ListWorkflowCallbackUrlArgs() {}
 
-    private ListWorkflowCallbackUrlArgs() {
-        this.keyType = null;
-        this.notAfter = null;
-        this.resourceGroupName = null;
-        this.workflowName = null;
+    private ListWorkflowCallbackUrlArgs(ListWorkflowCallbackUrlArgs $) {
+        this.keyType = $.keyType;
+        this.notAfter = $.notAfter;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workflowName = $.workflowName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListWorkflowCallbackUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Either<String,KeyType> keyType;
-        private @Nullable String notAfter;
-        private String resourceGroupName;
-        private String workflowName;
+        private ListWorkflowCallbackUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListWorkflowCallbackUrlArgs();
         }
 
         public Builder(ListWorkflowCallbackUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyType = defaults.keyType;
-    	      this.notAfter = defaults.notAfter;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workflowName = defaults.workflowName;
+            $ = new ListWorkflowCallbackUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
+
         public Builder notAfter(@Nullable String notAfter) {
-            this.notAfter = notAfter;
+            $.notAfter = notAfter;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workflowName(String workflowName) {
-            this.workflowName = Objects.requireNonNull(workflowName);
+            $.workflowName = workflowName;
             return this;
-        }        public ListWorkflowCallbackUrlArgs build() {
-            return new ListWorkflowCallbackUrlArgs(keyType, notAfter, resourceGroupName, workflowName);
+        }
+
+        public ListWorkflowCallbackUrlArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workflowName = Objects.requireNonNull($.workflowName, "expected parameter 'workflowName' to be non-null");
+            return $;
         }
     }
+
 }

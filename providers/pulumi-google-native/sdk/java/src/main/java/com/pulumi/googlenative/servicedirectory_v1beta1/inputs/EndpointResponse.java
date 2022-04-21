@@ -23,7 +23,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="address", required=true)
-      private final String address;
+    private String address;
 
     public String address() {
         return this.address;
@@ -34,7 +34,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -45,7 +45,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
@@ -56,7 +56,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,7 +67,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -78,7 +78,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -89,100 +89,87 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public EndpointResponse(
-        String address,
-        String createTime,
-        Map<String,String> metadata,
-        String name,
-        String network,
-        Integer port,
-        String updateTime) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private EndpointResponse() {}
 
-    private EndpointResponse() {
-        this.address = null;
-        this.createTime = null;
-        this.metadata = Map.of();
-        this.name = null;
-        this.network = null;
-        this.port = null;
-        this.updateTime = null;
+    private EndpointResponse(EndpointResponse $) {
+        this.address = $.address;
+        this.createTime = $.createTime;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.network = $.network;
+        this.port = $.port;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String address;
-        private String createTime;
-        private Map<String,String> metadata;
-        private String name;
-        private String network;
-        private Integer port;
-        private String updateTime;
+        private EndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointResponse();
         }
 
         public Builder(EndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.createTime = defaults.createTime;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.port = defaults.port;
-    	      this.updateTime = defaults.updateTime;
+            $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(String address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public EndpointResponse build() {
-            return new EndpointResponse(address, createTime, metadata, name, network, port, updateTime);
+        }
+
+        public EndpointResponse build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

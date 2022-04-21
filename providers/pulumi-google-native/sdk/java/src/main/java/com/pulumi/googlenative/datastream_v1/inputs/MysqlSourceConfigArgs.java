@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.inputs.MysqlRdbmsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MysqlSourceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="excludeObjects")
-      private final @Nullable Output<MysqlRdbmsArgs> excludeObjects;
+    private @Nullable Output<MysqlRdbmsArgs> excludeObjects;
 
-    public Output<MysqlRdbmsArgs> excludeObjects() {
-        return this.excludeObjects == null ? Codegen.empty() : this.excludeObjects;
+    public Optional<Output<MysqlRdbmsArgs>> excludeObjects() {
+        return Optional.ofNullable(this.excludeObjects);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class MysqlSourceConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="includeObjects")
-      private final @Nullable Output<MysqlRdbmsArgs> includeObjects;
+    private @Nullable Output<MysqlRdbmsArgs> includeObjects;
 
-    public Output<MysqlRdbmsArgs> includeObjects() {
-        return this.includeObjects == null ? Codegen.empty() : this.includeObjects;
+    public Optional<Output<MysqlRdbmsArgs>> includeObjects() {
+        return Optional.ofNullable(this.includeObjects);
     }
 
-    public MysqlSourceConfigArgs(
-        @Nullable Output<MysqlRdbmsArgs> excludeObjects,
-        @Nullable Output<MysqlRdbmsArgs> includeObjects) {
-        this.excludeObjects = excludeObjects;
-        this.includeObjects = includeObjects;
-    }
+    private MysqlSourceConfigArgs() {}
 
-    private MysqlSourceConfigArgs() {
-        this.excludeObjects = Codegen.empty();
-        this.includeObjects = Codegen.empty();
+    private MysqlSourceConfigArgs(MysqlSourceConfigArgs $) {
+        this.excludeObjects = $.excludeObjects;
+        this.includeObjects = $.includeObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlSourceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MysqlRdbmsArgs> excludeObjects;
-        private @Nullable Output<MysqlRdbmsArgs> includeObjects;
+        private MysqlSourceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlSourceConfigArgs();
         }
 
         public Builder(MysqlSourceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludeObjects = defaults.excludeObjects;
-    	      this.includeObjects = defaults.includeObjects;
+            $ = new MysqlSourceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludeObjects(@Nullable Output<MysqlRdbmsArgs> excludeObjects) {
-            this.excludeObjects = excludeObjects;
+            $.excludeObjects = excludeObjects;
             return this;
         }
-        public Builder excludeObjects(@Nullable MysqlRdbmsArgs excludeObjects) {
-            this.excludeObjects = Codegen.ofNullable(excludeObjects);
-            return this;
+
+        public Builder excludeObjects(MysqlRdbmsArgs excludeObjects) {
+            return excludeObjects(Output.of(excludeObjects));
         }
+
         public Builder includeObjects(@Nullable Output<MysqlRdbmsArgs> includeObjects) {
-            this.includeObjects = includeObjects;
+            $.includeObjects = includeObjects;
             return this;
         }
-        public Builder includeObjects(@Nullable MysqlRdbmsArgs includeObjects) {
-            this.includeObjects = Codegen.ofNullable(includeObjects);
-            return this;
-        }        public MysqlSourceConfigArgs build() {
-            return new MysqlSourceConfigArgs(excludeObjects, includeObjects);
+
+        public Builder includeObjects(MysqlRdbmsArgs includeObjects) {
+            return includeObjects(Output.of(includeObjects));
+        }
+
+        public MysqlSourceConfigArgs build() {
+            return $;
         }
     }
+
 }

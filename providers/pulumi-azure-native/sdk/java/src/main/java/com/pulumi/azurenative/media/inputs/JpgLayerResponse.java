@@ -25,10 +25,10 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="height")
-      private final @Nullable String height;
+    private @Nullable String height;
 
     public Optional<String> height() {
-        return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
+        return Optional.ofNullable(this.height);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -59,10 +59,10 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quality")
-      private final @Nullable Integer quality;
+    private @Nullable Integer quality;
 
     public Optional<Integer> quality() {
-        return this.quality == null ? Optional.empty() : Optional.ofNullable(this.quality);
+        return Optional.ofNullable(this.quality);
     }
 
     /**
@@ -70,82 +70,69 @@ public final class JpgLayerResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="width")
-      private final @Nullable String width;
+    private @Nullable String width;
 
     public Optional<String> width() {
-        return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
+        return Optional.ofNullable(this.width);
     }
 
-    public JpgLayerResponse(
-        @Nullable String height,
-        @Nullable String label,
-        String odataType,
-        @Nullable Integer quality,
-        @Nullable String width) {
-        this.height = height;
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.quality = quality;
-        this.width = width;
-    }
+    private JpgLayerResponse() {}
 
-    private JpgLayerResponse() {
-        this.height = null;
-        this.label = null;
-        this.odataType = null;
-        this.quality = null;
-        this.width = null;
+    private JpgLayerResponse(JpgLayerResponse $) {
+        this.height = $.height;
+        this.label = $.label;
+        this.odataType = $.odataType;
+        this.quality = $.quality;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JpgLayerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String height;
-        private @Nullable String label;
-        private String odataType;
-        private @Nullable Integer quality;
-        private @Nullable String width;
+        private JpgLayerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JpgLayerResponse();
         }
 
         public Builder(JpgLayerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
-    	      this.quality = defaults.quality;
-    	      this.width = defaults.width;
+            $ = new JpgLayerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder height(@Nullable String height) {
-            this.height = height;
+            $.height = height;
             return this;
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder quality(@Nullable Integer quality) {
-            this.quality = quality;
+            $.quality = quality;
             return this;
         }
+
         public Builder width(@Nullable String width) {
-            this.width = width;
+            $.width = width;
             return this;
-        }        public JpgLayerResponse build() {
-            return new JpgLayerResponse(height, label, odataType, quality, width);
+        }
+
+        public JpgLayerResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

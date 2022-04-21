@@ -6,8 +6,8 @@ package com.pulumi.awsnative.wisdom.inputs;
 import com.pulumi.awsnative.wisdom.inputs.KnowledgeBaseAppIntegrationsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class KnowledgeBaseSourceConfigurationArgs extends com.pulumi.resou
     public static final KnowledgeBaseSourceConfigurationArgs Empty = new KnowledgeBaseSourceConfigurationArgs();
 
     @Import(name="appIntegrations")
-      private final @Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
+    private @Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
 
-    public Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations() {
-        return this.appIntegrations == null ? Codegen.empty() : this.appIntegrations;
+    public Optional<Output<KnowledgeBaseAppIntegrationsConfigurationArgs>> appIntegrations() {
+        return Optional.ofNullable(this.appIntegrations);
     }
 
-    public KnowledgeBaseSourceConfigurationArgs(@Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations) {
-        this.appIntegrations = appIntegrations;
-    }
+    private KnowledgeBaseSourceConfigurationArgs() {}
 
-    private KnowledgeBaseSourceConfigurationArgs() {
-        this.appIntegrations = Codegen.empty();
+    private KnowledgeBaseSourceConfigurationArgs(KnowledgeBaseSourceConfigurationArgs $) {
+        this.appIntegrations = $.appIntegrations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KnowledgeBaseSourceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
+        private KnowledgeBaseSourceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KnowledgeBaseSourceConfigurationArgs();
         }
 
         public Builder(KnowledgeBaseSourceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appIntegrations = defaults.appIntegrations;
+            $ = new KnowledgeBaseSourceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appIntegrations(@Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations) {
-            this.appIntegrations = appIntegrations;
+            $.appIntegrations = appIntegrations;
             return this;
         }
-        public Builder appIntegrations(@Nullable KnowledgeBaseAppIntegrationsConfigurationArgs appIntegrations) {
-            this.appIntegrations = Codegen.ofNullable(appIntegrations);
-            return this;
-        }        public KnowledgeBaseSourceConfigurationArgs build() {
-            return new KnowledgeBaseSourceConfigurationArgs(appIntegrations);
+
+        public Builder appIntegrations(KnowledgeBaseAppIntegrationsConfigurationArgs appIntegrations) {
+            return appIntegrations(Output.of(appIntegrations));
+        }
+
+        public KnowledgeBaseSourceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

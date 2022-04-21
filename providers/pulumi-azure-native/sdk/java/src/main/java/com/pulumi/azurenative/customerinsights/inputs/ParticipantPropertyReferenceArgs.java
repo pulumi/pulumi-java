@@ -5,7 +5,6 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ParticipantPropertyReferenceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sourcePropertyName", required=true)
-      private final Output<String> sourcePropertyName;
+    private Output<String> sourcePropertyName;
 
     public Output<String> sourcePropertyName() {
         return this.sourcePropertyName;
@@ -34,63 +33,60 @@ public final class ParticipantPropertyReferenceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="targetPropertyName", required=true)
-      private final Output<String> targetPropertyName;
+    private Output<String> targetPropertyName;
 
     public Output<String> targetPropertyName() {
         return this.targetPropertyName;
     }
 
-    public ParticipantPropertyReferenceArgs(
-        Output<String> sourcePropertyName,
-        Output<String> targetPropertyName) {
-        this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
-        this.targetPropertyName = Objects.requireNonNull(targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
-    }
+    private ParticipantPropertyReferenceArgs() {}
 
-    private ParticipantPropertyReferenceArgs() {
-        this.sourcePropertyName = Codegen.empty();
-        this.targetPropertyName = Codegen.empty();
+    private ParticipantPropertyReferenceArgs(ParticipantPropertyReferenceArgs $) {
+        this.sourcePropertyName = $.sourcePropertyName;
+        this.targetPropertyName = $.targetPropertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParticipantPropertyReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sourcePropertyName;
-        private Output<String> targetPropertyName;
+        private ParticipantPropertyReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParticipantPropertyReferenceArgs();
         }
 
         public Builder(ParticipantPropertyReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourcePropertyName = defaults.sourcePropertyName;
-    	      this.targetPropertyName = defaults.targetPropertyName;
+            $ = new ParticipantPropertyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourcePropertyName(Output<String> sourcePropertyName) {
-            this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
+            $.sourcePropertyName = sourcePropertyName;
             return this;
         }
+
         public Builder sourcePropertyName(String sourcePropertyName) {
-            this.sourcePropertyName = Output.of(Objects.requireNonNull(sourcePropertyName));
-            return this;
+            return sourcePropertyName(Output.of(sourcePropertyName));
         }
+
         public Builder targetPropertyName(Output<String> targetPropertyName) {
-            this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
+            $.targetPropertyName = targetPropertyName;
             return this;
         }
+
         public Builder targetPropertyName(String targetPropertyName) {
-            this.targetPropertyName = Output.of(Objects.requireNonNull(targetPropertyName));
-            return this;
-        }        public ParticipantPropertyReferenceArgs build() {
-            return new ParticipantPropertyReferenceArgs(sourcePropertyName, targetPropertyName);
+            return targetPropertyName(Output.of(targetPropertyName));
+        }
+
+        public ParticipantPropertyReferenceArgs build() {
+            $.sourcePropertyName = Objects.requireNonNull($.sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
+            $.targetPropertyName = Objects.requireNonNull($.targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
+            return $;
         }
     }
+
 }

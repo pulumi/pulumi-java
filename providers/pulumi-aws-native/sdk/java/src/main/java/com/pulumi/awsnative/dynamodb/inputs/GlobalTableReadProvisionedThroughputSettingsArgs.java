@@ -6,9 +6,9 @@ package com.pulumi.awsnative.dynamodb.inputs;
 import com.pulumi.awsnative.dynamodb.inputs.GlobalTableCapacityAutoScalingSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class GlobalTableReadProvisionedThroughputSettingsArgs extends com.
     public static final GlobalTableReadProvisionedThroughputSettingsArgs Empty = new GlobalTableReadProvisionedThroughputSettingsArgs();
 
     @Import(name="readCapacityAutoScalingSettings")
-      private final @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
+    private @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
 
-    public Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings() {
-        return this.readCapacityAutoScalingSettings == null ? Codegen.empty() : this.readCapacityAutoScalingSettings;
+    public Optional<Output<GlobalTableCapacityAutoScalingSettingsArgs>> readCapacityAutoScalingSettings() {
+        return Optional.ofNullable(this.readCapacityAutoScalingSettings);
     }
 
     @Import(name="readCapacityUnits")
-      private final @Nullable Output<Integer> readCapacityUnits;
+    private @Nullable Output<Integer> readCapacityUnits;
 
-    public Output<Integer> readCapacityUnits() {
-        return this.readCapacityUnits == null ? Codegen.empty() : this.readCapacityUnits;
+    public Optional<Output<Integer>> readCapacityUnits() {
+        return Optional.ofNullable(this.readCapacityUnits);
     }
 
-    public GlobalTableReadProvisionedThroughputSettingsArgs(
-        @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings,
-        @Nullable Output<Integer> readCapacityUnits) {
-        this.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
-        this.readCapacityUnits = readCapacityUnits;
-    }
+    private GlobalTableReadProvisionedThroughputSettingsArgs() {}
 
-    private GlobalTableReadProvisionedThroughputSettingsArgs() {
-        this.readCapacityAutoScalingSettings = Codegen.empty();
-        this.readCapacityUnits = Codegen.empty();
+    private GlobalTableReadProvisionedThroughputSettingsArgs(GlobalTableReadProvisionedThroughputSettingsArgs $) {
+        this.readCapacityAutoScalingSettings = $.readCapacityAutoScalingSettings;
+        this.readCapacityUnits = $.readCapacityUnits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableReadProvisionedThroughputSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
-        private @Nullable Output<Integer> readCapacityUnits;
+        private GlobalTableReadProvisionedThroughputSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableReadProvisionedThroughputSettingsArgs();
         }
 
         public Builder(GlobalTableReadProvisionedThroughputSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readCapacityAutoScalingSettings = defaults.readCapacityAutoScalingSettings;
-    	      this.readCapacityUnits = defaults.readCapacityUnits;
+            $ = new GlobalTableReadProvisionedThroughputSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder readCapacityAutoScalingSettings(@Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings) {
-            this.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
+            $.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
             return this;
         }
-        public Builder readCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettingsArgs readCapacityAutoScalingSettings) {
-            this.readCapacityAutoScalingSettings = Codegen.ofNullable(readCapacityAutoScalingSettings);
-            return this;
+
+        public Builder readCapacityAutoScalingSettings(GlobalTableCapacityAutoScalingSettingsArgs readCapacityAutoScalingSettings) {
+            return readCapacityAutoScalingSettings(Output.of(readCapacityAutoScalingSettings));
         }
+
         public Builder readCapacityUnits(@Nullable Output<Integer> readCapacityUnits) {
-            this.readCapacityUnits = readCapacityUnits;
+            $.readCapacityUnits = readCapacityUnits;
             return this;
         }
-        public Builder readCapacityUnits(@Nullable Integer readCapacityUnits) {
-            this.readCapacityUnits = Codegen.ofNullable(readCapacityUnits);
-            return this;
-        }        public GlobalTableReadProvisionedThroughputSettingsArgs build() {
-            return new GlobalTableReadProvisionedThroughputSettingsArgs(readCapacityAutoScalingSettings, readCapacityUnits);
+
+        public Builder readCapacityUnits(Integer readCapacityUnits) {
+            return readCapacityUnits(Output.of(readCapacityUnits));
+        }
+
+        public GlobalTableReadProvisionedThroughputSettingsArgs build() {
+            return $;
         }
     }
+
 }

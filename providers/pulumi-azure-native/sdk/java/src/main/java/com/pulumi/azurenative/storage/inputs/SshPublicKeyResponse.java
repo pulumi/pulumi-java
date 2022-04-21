@@ -19,10 +19,10 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class SshPublicKeyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
-    public SshPublicKeyResponse(
-        @Nullable String description,
-        @Nullable String key) {
-        this.description = description;
-        this.key = key;
-    }
+    private SshPublicKeyResponse() {}
 
-    private SshPublicKeyResponse() {
-        this.description = null;
-        this.key = null;
+    private SshPublicKeyResponse(SshPublicKeyResponse $) {
+        this.description = $.description;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshPublicKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String key;
+        private SshPublicKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshPublicKeyResponse();
         }
 
         public Builder(SshPublicKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.key = defaults.key;
+            $ = new SshPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
-        }        public SshPublicKeyResponse build() {
-            return new SshPublicKeyResponse(description, key);
+        }
+
+        public SshPublicKeyResponse build() {
+            return $;
         }
     }
+
 }

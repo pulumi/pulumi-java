@@ -6,11 +6,11 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 import com.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorCsvFormatDescriptorFileCompression;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,153 +19,137 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends com.pulumi.res
     public static final AnomalyDetectorCsvFormatDescriptorArgs Empty = new AnomalyDetectorCsvFormatDescriptorArgs();
 
     @Import(name="charset")
-      private final @Nullable Output<String> charset;
+    private @Nullable Output<String> charset;
 
-    public Output<String> charset() {
-        return this.charset == null ? Codegen.empty() : this.charset;
+    public Optional<Output<String>> charset() {
+        return Optional.ofNullable(this.charset);
     }
 
     @Import(name="containsHeader")
-      private final @Nullable Output<Boolean> containsHeader;
+    private @Nullable Output<Boolean> containsHeader;
 
-    public Output<Boolean> containsHeader() {
-        return this.containsHeader == null ? Codegen.empty() : this.containsHeader;
+    public Optional<Output<Boolean>> containsHeader() {
+        return Optional.ofNullable(this.containsHeader);
     }
 
     @Import(name="delimiter")
-      private final @Nullable Output<String> delimiter;
+    private @Nullable Output<String> delimiter;
 
-    public Output<String> delimiter() {
-        return this.delimiter == null ? Codegen.empty() : this.delimiter;
+    public Optional<Output<String>> delimiter() {
+        return Optional.ofNullable(this.delimiter);
     }
 
     @Import(name="fileCompression")
-      private final @Nullable Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression;
+    private @Nullable Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression;
 
-    public Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression() {
-        return this.fileCompression == null ? Codegen.empty() : this.fileCompression;
+    public Optional<Output<AnomalyDetectorCsvFormatDescriptorFileCompression>> fileCompression() {
+        return Optional.ofNullable(this.fileCompression);
     }
 
     @Import(name="headerList")
-      private final @Nullable Output<List<String>> headerList;
+    private @Nullable Output<List<String>> headerList;
 
-    public Output<List<String>> headerList() {
-        return this.headerList == null ? Codegen.empty() : this.headerList;
+    public Optional<Output<List<String>>> headerList() {
+        return Optional.ofNullable(this.headerList);
     }
 
     @Import(name="quoteSymbol")
-      private final @Nullable Output<String> quoteSymbol;
+    private @Nullable Output<String> quoteSymbol;
 
-    public Output<String> quoteSymbol() {
-        return this.quoteSymbol == null ? Codegen.empty() : this.quoteSymbol;
+    public Optional<Output<String>> quoteSymbol() {
+        return Optional.ofNullable(this.quoteSymbol);
     }
 
-    public AnomalyDetectorCsvFormatDescriptorArgs(
-        @Nullable Output<String> charset,
-        @Nullable Output<Boolean> containsHeader,
-        @Nullable Output<String> delimiter,
-        @Nullable Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression,
-        @Nullable Output<List<String>> headerList,
-        @Nullable Output<String> quoteSymbol) {
-        this.charset = charset;
-        this.containsHeader = containsHeader;
-        this.delimiter = delimiter;
-        this.fileCompression = fileCompression;
-        this.headerList = headerList;
-        this.quoteSymbol = quoteSymbol;
-    }
+    private AnomalyDetectorCsvFormatDescriptorArgs() {}
 
-    private AnomalyDetectorCsvFormatDescriptorArgs() {
-        this.charset = Codegen.empty();
-        this.containsHeader = Codegen.empty();
-        this.delimiter = Codegen.empty();
-        this.fileCompression = Codegen.empty();
-        this.headerList = Codegen.empty();
-        this.quoteSymbol = Codegen.empty();
+    private AnomalyDetectorCsvFormatDescriptorArgs(AnomalyDetectorCsvFormatDescriptorArgs $) {
+        this.charset = $.charset;
+        this.containsHeader = $.containsHeader;
+        this.delimiter = $.delimiter;
+        this.fileCompression = $.fileCompression;
+        this.headerList = $.headerList;
+        this.quoteSymbol = $.quoteSymbol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorCsvFormatDescriptorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> charset;
-        private @Nullable Output<Boolean> containsHeader;
-        private @Nullable Output<String> delimiter;
-        private @Nullable Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression;
-        private @Nullable Output<List<String>> headerList;
-        private @Nullable Output<String> quoteSymbol;
+        private AnomalyDetectorCsvFormatDescriptorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorCsvFormatDescriptorArgs();
         }
 
         public Builder(AnomalyDetectorCsvFormatDescriptorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charset = defaults.charset;
-    	      this.containsHeader = defaults.containsHeader;
-    	      this.delimiter = defaults.delimiter;
-    	      this.fileCompression = defaults.fileCompression;
-    	      this.headerList = defaults.headerList;
-    	      this.quoteSymbol = defaults.quoteSymbol;
+            $ = new AnomalyDetectorCsvFormatDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder charset(@Nullable Output<String> charset) {
-            this.charset = charset;
+            $.charset = charset;
             return this;
         }
-        public Builder charset(@Nullable String charset) {
-            this.charset = Codegen.ofNullable(charset);
-            return this;
+
+        public Builder charset(String charset) {
+            return charset(Output.of(charset));
         }
+
         public Builder containsHeader(@Nullable Output<Boolean> containsHeader) {
-            this.containsHeader = containsHeader;
+            $.containsHeader = containsHeader;
             return this;
         }
-        public Builder containsHeader(@Nullable Boolean containsHeader) {
-            this.containsHeader = Codegen.ofNullable(containsHeader);
-            return this;
+
+        public Builder containsHeader(Boolean containsHeader) {
+            return containsHeader(Output.of(containsHeader));
         }
+
         public Builder delimiter(@Nullable Output<String> delimiter) {
-            this.delimiter = delimiter;
+            $.delimiter = delimiter;
             return this;
         }
-        public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Codegen.ofNullable(delimiter);
-            return this;
+
+        public Builder delimiter(String delimiter) {
+            return delimiter(Output.of(delimiter));
         }
+
         public Builder fileCompression(@Nullable Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression) {
-            this.fileCompression = fileCompression;
+            $.fileCompression = fileCompression;
             return this;
         }
-        public Builder fileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
-            this.fileCompression = Codegen.ofNullable(fileCompression);
-            return this;
+
+        public Builder fileCompression(AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
+            return fileCompression(Output.of(fileCompression));
         }
+
         public Builder headerList(@Nullable Output<List<String>> headerList) {
-            this.headerList = headerList;
+            $.headerList = headerList;
             return this;
         }
-        public Builder headerList(@Nullable List<String> headerList) {
-            this.headerList = Codegen.ofNullable(headerList);
-            return this;
+
+        public Builder headerList(List<String> headerList) {
+            return headerList(Output.of(headerList));
         }
+
         public Builder headerList(String... headerList) {
             return headerList(List.of(headerList));
         }
+
         public Builder quoteSymbol(@Nullable Output<String> quoteSymbol) {
-            this.quoteSymbol = quoteSymbol;
+            $.quoteSymbol = quoteSymbol;
             return this;
         }
-        public Builder quoteSymbol(@Nullable String quoteSymbol) {
-            this.quoteSymbol = Codegen.ofNullable(quoteSymbol);
-            return this;
-        }        public AnomalyDetectorCsvFormatDescriptorArgs build() {
-            return new AnomalyDetectorCsvFormatDescriptorArgs(charset, containsHeader, delimiter, fileCompression, headerList, quoteSymbol);
+
+        public Builder quoteSymbol(String quoteSymbol) {
+            return quoteSymbol(Output.of(quoteSymbol));
+        }
+
+        public AnomalyDetectorCsvFormatDescriptorArgs build() {
+            return $;
         }
     }
+
 }

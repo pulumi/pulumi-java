@@ -17,7 +17,7 @@ public final class GetAutoscaleSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="autoscaleSettingName", required=true)
-      private final String autoscaleSettingName;
+    private String autoscaleSettingName;
 
     public String autoscaleSettingName() {
         return this.autoscaleSettingName;
@@ -28,55 +28,52 @@ public final class GetAutoscaleSettingArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAutoscaleSettingArgs(
-        String autoscaleSettingName,
-        String resourceGroupName) {
-        this.autoscaleSettingName = Objects.requireNonNull(autoscaleSettingName, "expected parameter 'autoscaleSettingName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAutoscaleSettingArgs() {}
 
-    private GetAutoscaleSettingArgs() {
-        this.autoscaleSettingName = null;
-        this.resourceGroupName = null;
+    private GetAutoscaleSettingArgs(GetAutoscaleSettingArgs $) {
+        this.autoscaleSettingName = $.autoscaleSettingName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAutoscaleSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoscaleSettingName;
-        private String resourceGroupName;
+        private GetAutoscaleSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAutoscaleSettingArgs();
         }
 
         public Builder(GetAutoscaleSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaleSettingName = defaults.autoscaleSettingName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAutoscaleSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaleSettingName(String autoscaleSettingName) {
-            this.autoscaleSettingName = Objects.requireNonNull(autoscaleSettingName);
+            $.autoscaleSettingName = autoscaleSettingName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAutoscaleSettingArgs build() {
-            return new GetAutoscaleSettingArgs(autoscaleSettingName, resourceGroupName);
+        }
+
+        public GetAutoscaleSettingArgs build() {
+            $.autoscaleSettingName = Objects.requireNonNull($.autoscaleSettingName, "expected parameter 'autoscaleSettingName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

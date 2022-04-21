@@ -17,7 +17,7 @@ public final class GetRequestValidatorArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="requestValidatorId", required=true)
-      private final String requestValidatorId;
+    private String requestValidatorId;
 
     public String requestValidatorId() {
         return this.requestValidatorId;
@@ -28,55 +28,52 @@ public final class GetRequestValidatorArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="restApiId", required=true)
-      private final String restApiId;
+    private String restApiId;
 
     public String restApiId() {
         return this.restApiId;
     }
 
-    public GetRequestValidatorArgs(
-        String requestValidatorId,
-        String restApiId) {
-        this.requestValidatorId = Objects.requireNonNull(requestValidatorId, "expected parameter 'requestValidatorId' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private GetRequestValidatorArgs() {}
 
-    private GetRequestValidatorArgs() {
-        this.requestValidatorId = null;
-        this.restApiId = null;
+    private GetRequestValidatorArgs(GetRequestValidatorArgs $) {
+        this.requestValidatorId = $.requestValidatorId;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRequestValidatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String requestValidatorId;
-        private String restApiId;
+        private GetRequestValidatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRequestValidatorArgs();
         }
 
         public Builder(GetRequestValidatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestValidatorId = defaults.requestValidatorId;
-    	      this.restApiId = defaults.restApiId;
+            $ = new GetRequestValidatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder requestValidatorId(String requestValidatorId) {
-            this.requestValidatorId = Objects.requireNonNull(requestValidatorId);
+            $.requestValidatorId = requestValidatorId;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
-        }        public GetRequestValidatorArgs build() {
-            return new GetRequestValidatorArgs(requestValidatorId, restApiId);
+        }
+
+        public GetRequestValidatorArgs build() {
+            $.requestValidatorId = Objects.requireNonNull($.requestValidatorId, "expected parameter 'requestValidatorId' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

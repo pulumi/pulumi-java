@@ -6,10 +6,10 @@ package com.pulumi.awsnative.memorydb;
 import com.pulumi.awsnative.memorydb.inputs.ACLTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aCLName")
-      private final @Nullable Output<String> aCLName;
+    private @Nullable Output<String> aCLName;
 
-    public Output<String> aCLName() {
-        return this.aCLName == null ? Codegen.empty() : this.aCLName;
+    public Optional<Output<String>> aCLName() {
+        return Optional.ofNullable(this.aCLName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ACLTagArgs>> tags;
+    private @Nullable Output<List<ACLTagArgs>> tags;
 
-    public Output<List<ACLTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ACLTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -44,82 +44,76 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userNames")
-      private final @Nullable Output<List<String>> userNames;
+    private @Nullable Output<List<String>> userNames;
 
-    public Output<List<String>> userNames() {
-        return this.userNames == null ? Codegen.empty() : this.userNames;
+    public Optional<Output<List<String>>> userNames() {
+        return Optional.ofNullable(this.userNames);
     }
 
-    public ACLArgs(
-        @Nullable Output<String> aCLName,
-        @Nullable Output<List<ACLTagArgs>> tags,
-        @Nullable Output<List<String>> userNames) {
-        this.aCLName = aCLName;
-        this.tags = tags;
-        this.userNames = userNames;
-    }
+    private ACLArgs() {}
 
-    private ACLArgs() {
-        this.aCLName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userNames = Codegen.empty();
+    private ACLArgs(ACLArgs $) {
+        this.aCLName = $.aCLName;
+        this.tags = $.tags;
+        this.userNames = $.userNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ACLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aCLName;
-        private @Nullable Output<List<ACLTagArgs>> tags;
-        private @Nullable Output<List<String>> userNames;
+        private ACLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ACLArgs();
         }
 
         public Builder(ACLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aCLName = defaults.aCLName;
-    	      this.tags = defaults.tags;
-    	      this.userNames = defaults.userNames;
+            $ = new ACLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aCLName(@Nullable Output<String> aCLName) {
-            this.aCLName = aCLName;
+            $.aCLName = aCLName;
             return this;
         }
-        public Builder aCLName(@Nullable String aCLName) {
-            this.aCLName = Codegen.ofNullable(aCLName);
-            return this;
+
+        public Builder aCLName(String aCLName) {
+            return aCLName(Output.of(aCLName));
         }
+
         public Builder tags(@Nullable Output<List<ACLTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ACLTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ACLTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ACLTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder userNames(@Nullable Output<List<String>> userNames) {
-            this.userNames = userNames;
+            $.userNames = userNames;
             return this;
         }
-        public Builder userNames(@Nullable List<String> userNames) {
-            this.userNames = Codegen.ofNullable(userNames);
-            return this;
+
+        public Builder userNames(List<String> userNames) {
+            return userNames(Output.of(userNames));
         }
+
         public Builder userNames(String... userNames) {
             return userNames(List.of(userNames));
-        }        public ACLArgs build() {
-            return new ACLArgs(aCLName, tags, userNames);
+        }
+
+        public ACLArgs build() {
+            return $;
         }
     }
+
 }

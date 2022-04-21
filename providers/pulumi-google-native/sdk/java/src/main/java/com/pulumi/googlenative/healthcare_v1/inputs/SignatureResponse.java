@@ -23,7 +23,7 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="image", required=true)
-      private final ImageResponse image;
+    private ImageResponse image;
 
     public ImageResponse image() {
         return this.image;
@@ -34,7 +34,7 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
@@ -45,7 +45,7 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="signatureTime", required=true)
-      private final String signatureTime;
+    private String signatureTime;
 
     public String signatureTime() {
         return this.signatureTime;
@@ -56,73 +56,66 @@ public final class SignatureResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
     }
 
-    public SignatureResponse(
-        ImageResponse image,
-        Map<String,String> metadata,
-        String signatureTime,
-        String userId) {
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.signatureTime = Objects.requireNonNull(signatureTime, "expected parameter 'signatureTime' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private SignatureResponse() {}
 
-    private SignatureResponse() {
-        this.image = null;
-        this.metadata = Map.of();
-        this.signatureTime = null;
-        this.userId = null;
+    private SignatureResponse(SignatureResponse $) {
+        this.image = $.image;
+        this.metadata = $.metadata;
+        this.signatureTime = $.signatureTime;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SignatureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ImageResponse image;
-        private Map<String,String> metadata;
-        private String signatureTime;
-        private String userId;
+        private SignatureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SignatureResponse();
         }
 
         public Builder(SignatureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
-    	      this.metadata = defaults.metadata;
-    	      this.signatureTime = defaults.signatureTime;
-    	      this.userId = defaults.userId;
+            $ = new SignatureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder image(ImageResponse image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder signatureTime(String signatureTime) {
-            this.signatureTime = Objects.requireNonNull(signatureTime);
+            $.signatureTime = signatureTime;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
-        }        public SignatureResponse build() {
-            return new SignatureResponse(image, metadata, signatureTime, userId);
+        }
+
+        public SignatureResponse build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.signatureTime = Objects.requireNonNull($.signatureTime, "expected parameter 'signatureTime' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

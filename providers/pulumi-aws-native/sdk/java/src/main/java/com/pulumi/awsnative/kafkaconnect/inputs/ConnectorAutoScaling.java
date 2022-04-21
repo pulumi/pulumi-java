@@ -23,7 +23,7 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="maxWorkerCount", required=true)
-      private final Integer maxWorkerCount;
+    private Integer maxWorkerCount;
 
     public Integer maxWorkerCount() {
         return this.maxWorkerCount;
@@ -34,7 +34,7 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mcuCount", required=true)
-      private final Integer mcuCount;
+    private Integer mcuCount;
 
     public Integer mcuCount() {
         return this.mcuCount;
@@ -45,96 +45,87 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="minWorkerCount", required=true)
-      private final Integer minWorkerCount;
+    private Integer minWorkerCount;
 
     public Integer minWorkerCount() {
         return this.minWorkerCount;
     }
 
     @Import(name="scaleInPolicy", required=true)
-      private final ConnectorScaleInPolicy scaleInPolicy;
+    private ConnectorScaleInPolicy scaleInPolicy;
 
     public ConnectorScaleInPolicy scaleInPolicy() {
         return this.scaleInPolicy;
     }
 
     @Import(name="scaleOutPolicy", required=true)
-      private final ConnectorScaleOutPolicy scaleOutPolicy;
+    private ConnectorScaleOutPolicy scaleOutPolicy;
 
     public ConnectorScaleOutPolicy scaleOutPolicy() {
         return this.scaleOutPolicy;
     }
 
-    public ConnectorAutoScaling(
-        Integer maxWorkerCount,
-        Integer mcuCount,
-        Integer minWorkerCount,
-        ConnectorScaleInPolicy scaleInPolicy,
-        ConnectorScaleOutPolicy scaleOutPolicy) {
-        this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount, "expected parameter 'maxWorkerCount' to be non-null");
-        this.mcuCount = Objects.requireNonNull(mcuCount, "expected parameter 'mcuCount' to be non-null");
-        this.minWorkerCount = Objects.requireNonNull(minWorkerCount, "expected parameter 'minWorkerCount' to be non-null");
-        this.scaleInPolicy = Objects.requireNonNull(scaleInPolicy, "expected parameter 'scaleInPolicy' to be non-null");
-        this.scaleOutPolicy = Objects.requireNonNull(scaleOutPolicy, "expected parameter 'scaleOutPolicy' to be non-null");
-    }
+    private ConnectorAutoScaling() {}
 
-    private ConnectorAutoScaling() {
-        this.maxWorkerCount = null;
-        this.mcuCount = null;
-        this.minWorkerCount = null;
-        this.scaleInPolicy = null;
-        this.scaleOutPolicy = null;
+    private ConnectorAutoScaling(ConnectorAutoScaling $) {
+        this.maxWorkerCount = $.maxWorkerCount;
+        this.mcuCount = $.mcuCount;
+        this.minWorkerCount = $.minWorkerCount;
+        this.scaleInPolicy = $.scaleInPolicy;
+        this.scaleOutPolicy = $.scaleOutPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorAutoScaling defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxWorkerCount;
-        private Integer mcuCount;
-        private Integer minWorkerCount;
-        private ConnectorScaleInPolicy scaleInPolicy;
-        private ConnectorScaleOutPolicy scaleOutPolicy;
+        private ConnectorAutoScaling $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorAutoScaling();
         }
 
         public Builder(ConnectorAutoScaling defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxWorkerCount = defaults.maxWorkerCount;
-    	      this.mcuCount = defaults.mcuCount;
-    	      this.minWorkerCount = defaults.minWorkerCount;
-    	      this.scaleInPolicy = defaults.scaleInPolicy;
-    	      this.scaleOutPolicy = defaults.scaleOutPolicy;
+            $ = new ConnectorAutoScaling(Objects.requireNonNull(defaults));
         }
 
         public Builder maxWorkerCount(Integer maxWorkerCount) {
-            this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
+            $.maxWorkerCount = maxWorkerCount;
             return this;
         }
+
         public Builder mcuCount(Integer mcuCount) {
-            this.mcuCount = Objects.requireNonNull(mcuCount);
+            $.mcuCount = mcuCount;
             return this;
         }
+
         public Builder minWorkerCount(Integer minWorkerCount) {
-            this.minWorkerCount = Objects.requireNonNull(minWorkerCount);
+            $.minWorkerCount = minWorkerCount;
             return this;
         }
+
         public Builder scaleInPolicy(ConnectorScaleInPolicy scaleInPolicy) {
-            this.scaleInPolicy = Objects.requireNonNull(scaleInPolicy);
+            $.scaleInPolicy = scaleInPolicy;
             return this;
         }
+
         public Builder scaleOutPolicy(ConnectorScaleOutPolicy scaleOutPolicy) {
-            this.scaleOutPolicy = Objects.requireNonNull(scaleOutPolicy);
+            $.scaleOutPolicy = scaleOutPolicy;
             return this;
-        }        public ConnectorAutoScaling build() {
-            return new ConnectorAutoScaling(maxWorkerCount, mcuCount, minWorkerCount, scaleInPolicy, scaleOutPolicy);
+        }
+
+        public ConnectorAutoScaling build() {
+            $.maxWorkerCount = Objects.requireNonNull($.maxWorkerCount, "expected parameter 'maxWorkerCount' to be non-null");
+            $.mcuCount = Objects.requireNonNull($.mcuCount, "expected parameter 'mcuCount' to be non-null");
+            $.minWorkerCount = Objects.requireNonNull($.minWorkerCount, "expected parameter 'minWorkerCount' to be non-null");
+            $.scaleInPolicy = Objects.requireNonNull($.scaleInPolicy, "expected parameter 'scaleInPolicy' to be non-null");
+            $.scaleOutPolicy = Objects.requireNonNull($.scaleOutPolicy, "expected parameter 'scaleOutPolicy' to be non-null");
+            return $;
         }
     }
+
 }

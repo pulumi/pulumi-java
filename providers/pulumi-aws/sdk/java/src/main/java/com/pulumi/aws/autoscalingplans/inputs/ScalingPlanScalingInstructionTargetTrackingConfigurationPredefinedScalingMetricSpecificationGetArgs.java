@@ -5,9 +5,9 @@ package com.pulumi.aws.autoscalingplans.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      * 
      */
     @Import(name="predefinedScalingMetricType", required=true)
-      private final Output<String> predefinedScalingMetricType;
+    private Output<String> predefinedScalingMetricType;
 
     public Output<String> predefinedScalingMetricType() {
         return this.predefinedScalingMetricType;
@@ -31,63 +31,59 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      * 
      */
     @Import(name="resourceLabel")
-      private final @Nullable Output<String> resourceLabel;
+    private @Nullable Output<String> resourceLabel;
 
-    public Output<String> resourceLabel() {
-        return this.resourceLabel == null ? Codegen.empty() : this.resourceLabel;
+    public Optional<Output<String>> resourceLabel() {
+        return Optional.ofNullable(this.resourceLabel);
     }
 
-    public ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs(
-        Output<String> predefinedScalingMetricType,
-        @Nullable Output<String> resourceLabel) {
-        this.predefinedScalingMetricType = Objects.requireNonNull(predefinedScalingMetricType, "expected parameter 'predefinedScalingMetricType' to be non-null");
-        this.resourceLabel = resourceLabel;
-    }
+    private ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs() {}
 
-    private ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs() {
-        this.predefinedScalingMetricType = Codegen.empty();
-        this.resourceLabel = Codegen.empty();
+    private ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs(ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs $) {
+        this.predefinedScalingMetricType = $.predefinedScalingMetricType;
+        this.resourceLabel = $.resourceLabel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> predefinedScalingMetricType;
-        private @Nullable Output<String> resourceLabel;
+        private ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs();
         }
 
         public Builder(ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.predefinedScalingMetricType = defaults.predefinedScalingMetricType;
-    	      this.resourceLabel = defaults.resourceLabel;
+            $ = new ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder predefinedScalingMetricType(Output<String> predefinedScalingMetricType) {
-            this.predefinedScalingMetricType = Objects.requireNonNull(predefinedScalingMetricType);
+            $.predefinedScalingMetricType = predefinedScalingMetricType;
             return this;
         }
+
         public Builder predefinedScalingMetricType(String predefinedScalingMetricType) {
-            this.predefinedScalingMetricType = Output.of(Objects.requireNonNull(predefinedScalingMetricType));
-            return this;
+            return predefinedScalingMetricType(Output.of(predefinedScalingMetricType));
         }
+
         public Builder resourceLabel(@Nullable Output<String> resourceLabel) {
-            this.resourceLabel = resourceLabel;
+            $.resourceLabel = resourceLabel;
             return this;
         }
-        public Builder resourceLabel(@Nullable String resourceLabel) {
-            this.resourceLabel = Codegen.ofNullable(resourceLabel);
-            return this;
-        }        public ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs build() {
-            return new ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs(predefinedScalingMetricType, resourceLabel);
+
+        public Builder resourceLabel(String resourceLabel) {
+            return resourceLabel(Output.of(resourceLabel));
+        }
+
+        public ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs build() {
+            $.predefinedScalingMetricType = Objects.requireNonNull($.predefinedScalingMetricType, "expected parameter 'predefinedScalingMetricType' to be non-null");
+            return $;
         }
     }
+
 }

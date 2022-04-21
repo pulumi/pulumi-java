@@ -26,10 +26,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="amlWorkspaceId")
-      private final @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId;
+    private @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId;
 
     public Optional<WorkspaceCustomStringParameterResponse> amlWorkspaceId() {
-        return this.amlWorkspaceId == null ? Optional.empty() : Optional.ofNullable(this.amlWorkspaceId);
+        return Optional.ofNullable(this.amlWorkspaceId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="customPrivateSubnetName")
-      private final @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName;
+    private @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName;
 
     public Optional<WorkspaceCustomStringParameterResponse> customPrivateSubnetName() {
-        return this.customPrivateSubnetName == null ? Optional.empty() : Optional.ofNullable(this.customPrivateSubnetName);
+        return Optional.ofNullable(this.customPrivateSubnetName);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="customPublicSubnetName")
-      private final @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName;
+    private @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName;
 
     public Optional<WorkspaceCustomStringParameterResponse> customPublicSubnetName() {
-        return this.customPublicSubnetName == null ? Optional.empty() : Optional.ofNullable(this.customPublicSubnetName);
+        return Optional.ofNullable(this.customPublicSubnetName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="customVirtualNetworkId")
-      private final @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId;
+    private @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId;
 
     public Optional<WorkspaceCustomStringParameterResponse> customVirtualNetworkId() {
-        return this.customVirtualNetworkId == null ? Optional.empty() : Optional.ofNullable(this.customVirtualNetworkId);
+        return Optional.ofNullable(this.customVirtualNetworkId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="enableNoPublicIp")
-      private final @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp;
+    private @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp;
 
     public Optional<WorkspaceCustomBooleanParameterResponse> enableNoPublicIp() {
-        return this.enableNoPublicIp == null ? Optional.empty() : Optional.ofNullable(this.enableNoPublicIp);
+        return Optional.ofNullable(this.enableNoPublicIp);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="encryption")
-      private final @Nullable WorkspaceEncryptionParameterResponse encryption;
+    private @Nullable WorkspaceEncryptionParameterResponse encryption;
 
     public Optional<WorkspaceEncryptionParameterResponse> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="loadBalancerBackendPoolName")
-      private final @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName;
+    private @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName;
 
     public Optional<WorkspaceCustomStringParameterResponse> loadBalancerBackendPoolName() {
-        return this.loadBalancerBackendPoolName == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerBackendPoolName);
+        return Optional.ofNullable(this.loadBalancerBackendPoolName);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="loadBalancerId")
-      private final @Nullable WorkspaceCustomStringParameterResponse loadBalancerId;
+    private @Nullable WorkspaceCustomStringParameterResponse loadBalancerId;
 
     public Optional<WorkspaceCustomStringParameterResponse> loadBalancerId() {
-        return this.loadBalancerId == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerId);
+        return Optional.ofNullable(this.loadBalancerId);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="natGatewayName")
-      private final @Nullable WorkspaceCustomStringParameterResponse natGatewayName;
+    private @Nullable WorkspaceCustomStringParameterResponse natGatewayName;
 
     public Optional<WorkspaceCustomStringParameterResponse> natGatewayName() {
-        return this.natGatewayName == null ? Optional.empty() : Optional.ofNullable(this.natGatewayName);
+        return Optional.ofNullable(this.natGatewayName);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="prepareEncryption")
-      private final @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption;
+    private @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption;
 
     public Optional<WorkspaceCustomBooleanParameterResponse> prepareEncryption() {
-        return this.prepareEncryption == null ? Optional.empty() : Optional.ofNullable(this.prepareEncryption);
+        return Optional.ofNullable(this.prepareEncryption);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="publicIpName")
-      private final @Nullable WorkspaceCustomStringParameterResponse publicIpName;
+    private @Nullable WorkspaceCustomStringParameterResponse publicIpName;
 
     public Optional<WorkspaceCustomStringParameterResponse> publicIpName() {
-        return this.publicIpName == null ? Optional.empty() : Optional.ofNullable(this.publicIpName);
+        return Optional.ofNullable(this.publicIpName);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="requireInfrastructureEncryption")
-      private final @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption;
+    private @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption;
 
     public Optional<WorkspaceCustomBooleanParameterResponse> requireInfrastructureEncryption() {
-        return this.requireInfrastructureEncryption == null ? Optional.empty() : Optional.ofNullable(this.requireInfrastructureEncryption);
+        return Optional.ofNullable(this.requireInfrastructureEncryption);
     }
 
     /**
@@ -158,7 +158,7 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceTags", required=true)
-      private final WorkspaceCustomObjectParameterResponse resourceTags;
+    private WorkspaceCustomObjectParameterResponse resourceTags;
 
     public WorkspaceCustomObjectParameterResponse resourceTags() {
         return this.resourceTags;
@@ -169,10 +169,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="storageAccountName")
-      private final @Nullable WorkspaceCustomStringParameterResponse storageAccountName;
+    private @Nullable WorkspaceCustomStringParameterResponse storageAccountName;
 
     public Optional<WorkspaceCustomStringParameterResponse> storageAccountName() {
-        return this.storageAccountName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountName);
+        return Optional.ofNullable(this.storageAccountName);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="storageAccountSkuName")
-      private final @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName;
+    private @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName;
 
     public Optional<WorkspaceCustomStringParameterResponse> storageAccountSkuName() {
-        return this.storageAccountSkuName == null ? Optional.empty() : Optional.ofNullable(this.storageAccountSkuName);
+        return Optional.ofNullable(this.storageAccountSkuName);
     }
 
     /**
@@ -191,181 +191,135 @@ public final class WorkspaceCustomParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="vnetAddressPrefix")
-      private final @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix;
+    private @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix;
 
     public Optional<WorkspaceCustomStringParameterResponse> vnetAddressPrefix() {
-        return this.vnetAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.vnetAddressPrefix);
+        return Optional.ofNullable(this.vnetAddressPrefix);
     }
 
-    public WorkspaceCustomParametersResponse(
-        @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId,
-        @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName,
-        @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName,
-        @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId,
-        @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp,
-        @Nullable WorkspaceEncryptionParameterResponse encryption,
-        @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName,
-        @Nullable WorkspaceCustomStringParameterResponse loadBalancerId,
-        @Nullable WorkspaceCustomStringParameterResponse natGatewayName,
-        @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption,
-        @Nullable WorkspaceCustomStringParameterResponse publicIpName,
-        @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption,
-        WorkspaceCustomObjectParameterResponse resourceTags,
-        @Nullable WorkspaceCustomStringParameterResponse storageAccountName,
-        @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName,
-        @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
-        this.amlWorkspaceId = amlWorkspaceId;
-        this.customPrivateSubnetName = customPrivateSubnetName;
-        this.customPublicSubnetName = customPublicSubnetName;
-        this.customVirtualNetworkId = customVirtualNetworkId;
-        this.enableNoPublicIp = enableNoPublicIp;
-        this.encryption = encryption;
-        this.loadBalancerBackendPoolName = loadBalancerBackendPoolName;
-        this.loadBalancerId = loadBalancerId;
-        this.natGatewayName = natGatewayName;
-        this.prepareEncryption = prepareEncryption;
-        this.publicIpName = publicIpName;
-        this.requireInfrastructureEncryption = requireInfrastructureEncryption;
-        this.resourceTags = Objects.requireNonNull(resourceTags, "expected parameter 'resourceTags' to be non-null");
-        this.storageAccountName = storageAccountName;
-        this.storageAccountSkuName = storageAccountSkuName;
-        this.vnetAddressPrefix = vnetAddressPrefix;
-    }
+    private WorkspaceCustomParametersResponse() {}
 
-    private WorkspaceCustomParametersResponse() {
-        this.amlWorkspaceId = null;
-        this.customPrivateSubnetName = null;
-        this.customPublicSubnetName = null;
-        this.customVirtualNetworkId = null;
-        this.enableNoPublicIp = null;
-        this.encryption = null;
-        this.loadBalancerBackendPoolName = null;
-        this.loadBalancerId = null;
-        this.natGatewayName = null;
-        this.prepareEncryption = null;
-        this.publicIpName = null;
-        this.requireInfrastructureEncryption = null;
-        this.resourceTags = null;
-        this.storageAccountName = null;
-        this.storageAccountSkuName = null;
-        this.vnetAddressPrefix = null;
+    private WorkspaceCustomParametersResponse(WorkspaceCustomParametersResponse $) {
+        this.amlWorkspaceId = $.amlWorkspaceId;
+        this.customPrivateSubnetName = $.customPrivateSubnetName;
+        this.customPublicSubnetName = $.customPublicSubnetName;
+        this.customVirtualNetworkId = $.customVirtualNetworkId;
+        this.enableNoPublicIp = $.enableNoPublicIp;
+        this.encryption = $.encryption;
+        this.loadBalancerBackendPoolName = $.loadBalancerBackendPoolName;
+        this.loadBalancerId = $.loadBalancerId;
+        this.natGatewayName = $.natGatewayName;
+        this.prepareEncryption = $.prepareEncryption;
+        this.publicIpName = $.publicIpName;
+        this.requireInfrastructureEncryption = $.requireInfrastructureEncryption;
+        this.resourceTags = $.resourceTags;
+        this.storageAccountName = $.storageAccountName;
+        this.storageAccountSkuName = $.storageAccountSkuName;
+        this.vnetAddressPrefix = $.vnetAddressPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceCustomParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId;
-        private @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName;
-        private @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName;
-        private @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId;
-        private @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp;
-        private @Nullable WorkspaceEncryptionParameterResponse encryption;
-        private @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName;
-        private @Nullable WorkspaceCustomStringParameterResponse loadBalancerId;
-        private @Nullable WorkspaceCustomStringParameterResponse natGatewayName;
-        private @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption;
-        private @Nullable WorkspaceCustomStringParameterResponse publicIpName;
-        private @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption;
-        private WorkspaceCustomObjectParameterResponse resourceTags;
-        private @Nullable WorkspaceCustomStringParameterResponse storageAccountName;
-        private @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName;
-        private @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix;
+        private WorkspaceCustomParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceCustomParametersResponse();
         }
 
         public Builder(WorkspaceCustomParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amlWorkspaceId = defaults.amlWorkspaceId;
-    	      this.customPrivateSubnetName = defaults.customPrivateSubnetName;
-    	      this.customPublicSubnetName = defaults.customPublicSubnetName;
-    	      this.customVirtualNetworkId = defaults.customVirtualNetworkId;
-    	      this.enableNoPublicIp = defaults.enableNoPublicIp;
-    	      this.encryption = defaults.encryption;
-    	      this.loadBalancerBackendPoolName = defaults.loadBalancerBackendPoolName;
-    	      this.loadBalancerId = defaults.loadBalancerId;
-    	      this.natGatewayName = defaults.natGatewayName;
-    	      this.prepareEncryption = defaults.prepareEncryption;
-    	      this.publicIpName = defaults.publicIpName;
-    	      this.requireInfrastructureEncryption = defaults.requireInfrastructureEncryption;
-    	      this.resourceTags = defaults.resourceTags;
-    	      this.storageAccountName = defaults.storageAccountName;
-    	      this.storageAccountSkuName = defaults.storageAccountSkuName;
-    	      this.vnetAddressPrefix = defaults.vnetAddressPrefix;
+            $ = new WorkspaceCustomParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder amlWorkspaceId(@Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId) {
-            this.amlWorkspaceId = amlWorkspaceId;
+            $.amlWorkspaceId = amlWorkspaceId;
             return this;
         }
+
         public Builder customPrivateSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName) {
-            this.customPrivateSubnetName = customPrivateSubnetName;
+            $.customPrivateSubnetName = customPrivateSubnetName;
             return this;
         }
+
         public Builder customPublicSubnetName(@Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName) {
-            this.customPublicSubnetName = customPublicSubnetName;
+            $.customPublicSubnetName = customPublicSubnetName;
             return this;
         }
+
         public Builder customVirtualNetworkId(@Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId) {
-            this.customVirtualNetworkId = customVirtualNetworkId;
+            $.customVirtualNetworkId = customVirtualNetworkId;
             return this;
         }
+
         public Builder enableNoPublicIp(@Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp) {
-            this.enableNoPublicIp = enableNoPublicIp;
+            $.enableNoPublicIp = enableNoPublicIp;
             return this;
         }
+
         public Builder encryption(@Nullable WorkspaceEncryptionParameterResponse encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder loadBalancerBackendPoolName(@Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName) {
-            this.loadBalancerBackendPoolName = loadBalancerBackendPoolName;
+            $.loadBalancerBackendPoolName = loadBalancerBackendPoolName;
             return this;
         }
+
         public Builder loadBalancerId(@Nullable WorkspaceCustomStringParameterResponse loadBalancerId) {
-            this.loadBalancerId = loadBalancerId;
+            $.loadBalancerId = loadBalancerId;
             return this;
         }
+
         public Builder natGatewayName(@Nullable WorkspaceCustomStringParameterResponse natGatewayName) {
-            this.natGatewayName = natGatewayName;
+            $.natGatewayName = natGatewayName;
             return this;
         }
+
         public Builder prepareEncryption(@Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption) {
-            this.prepareEncryption = prepareEncryption;
+            $.prepareEncryption = prepareEncryption;
             return this;
         }
+
         public Builder publicIpName(@Nullable WorkspaceCustomStringParameterResponse publicIpName) {
-            this.publicIpName = publicIpName;
+            $.publicIpName = publicIpName;
             return this;
         }
+
         public Builder requireInfrastructureEncryption(@Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption) {
-            this.requireInfrastructureEncryption = requireInfrastructureEncryption;
+            $.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
+
         public Builder resourceTags(WorkspaceCustomObjectParameterResponse resourceTags) {
-            this.resourceTags = Objects.requireNonNull(resourceTags);
+            $.resourceTags = resourceTags;
             return this;
         }
+
         public Builder storageAccountName(@Nullable WorkspaceCustomStringParameterResponse storageAccountName) {
-            this.storageAccountName = storageAccountName;
+            $.storageAccountName = storageAccountName;
             return this;
         }
+
         public Builder storageAccountSkuName(@Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName) {
-            this.storageAccountSkuName = storageAccountSkuName;
+            $.storageAccountSkuName = storageAccountSkuName;
             return this;
         }
+
         public Builder vnetAddressPrefix(@Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
-            this.vnetAddressPrefix = vnetAddressPrefix;
+            $.vnetAddressPrefix = vnetAddressPrefix;
             return this;
-        }        public WorkspaceCustomParametersResponse build() {
-            return new WorkspaceCustomParametersResponse(amlWorkspaceId, customPrivateSubnetName, customPublicSubnetName, customVirtualNetworkId, enableNoPublicIp, encryption, loadBalancerBackendPoolName, loadBalancerId, natGatewayName, prepareEncryption, publicIpName, requireInfrastructureEncryption, resourceTags, storageAccountName, storageAccountSkuName, vnetAddressPrefix);
+        }
+
+        public WorkspaceCustomParametersResponse build() {
+            $.resourceTags = Objects.requireNonNull($.resourceTags, "expected parameter 'resourceTags' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class RelatedUrlResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -32,55 +32,52 @@ public final class RelatedUrlResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public RelatedUrlResponse(
-        String label,
-        String url) {
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private RelatedUrlResponse() {}
 
-    private RelatedUrlResponse() {
-        this.label = null;
-        this.url = null;
+    private RelatedUrlResponse(RelatedUrlResponse $) {
+        this.label = $.label;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelatedUrlResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String label;
-        private String url;
+        private RelatedUrlResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelatedUrlResponse();
         }
 
         public Builder(RelatedUrlResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.url = defaults.url;
+            $ = new RelatedUrlResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public RelatedUrlResponse build() {
-            return new RelatedUrlResponse(label, url);
+        }
+
+        public RelatedUrlResponse build() {
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

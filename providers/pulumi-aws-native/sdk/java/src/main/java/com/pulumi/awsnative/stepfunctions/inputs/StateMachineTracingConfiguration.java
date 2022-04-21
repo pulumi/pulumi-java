@@ -15,45 +15,44 @@ public final class StateMachineTracingConfiguration extends com.pulumi.resources
     public static final StateMachineTracingConfiguration Empty = new StateMachineTracingConfiguration();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public StateMachineTracingConfiguration(@Nullable Boolean enabled) {
-        this.enabled = enabled;
-    }
+    private StateMachineTracingConfiguration() {}
 
-    private StateMachineTracingConfiguration() {
-        this.enabled = null;
+    private StateMachineTracingConfiguration(StateMachineTracingConfiguration $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateMachineTracingConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
+        private StateMachineTracingConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateMachineTracingConfiguration();
         }
 
         public Builder(StateMachineTracingConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new StateMachineTracingConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public StateMachineTracingConfiguration build() {
-            return new StateMachineTracingConfiguration(enabled);
+        }
+
+        public StateMachineTracingConfiguration build() {
+            return $;
         }
     }
+
 }

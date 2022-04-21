@@ -22,7 +22,7 @@ public final class SchedulerResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -33,7 +33,7 @@ public final class SchedulerResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="cpu", required=true)
-      private final Double cpu;
+    private Double cpu;
 
     public Double cpu() {
         return this.cpu;
@@ -44,7 +44,7 @@ public final class SchedulerResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="memoryGb", required=true)
-      private final Double memoryGb;
+    private Double memoryGb;
 
     public Double memoryGb() {
         return this.memoryGb;
@@ -55,73 +55,66 @@ public final class SchedulerResourceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="storageGb", required=true)
-      private final Double storageGb;
+    private Double storageGb;
 
     public Double storageGb() {
         return this.storageGb;
     }
 
-    public SchedulerResourceResponse(
-        Integer count,
-        Double cpu,
-        Double memoryGb,
-        Double storageGb) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.memoryGb = Objects.requireNonNull(memoryGb, "expected parameter 'memoryGb' to be non-null");
-        this.storageGb = Objects.requireNonNull(storageGb, "expected parameter 'storageGb' to be non-null");
-    }
+    private SchedulerResourceResponse() {}
 
-    private SchedulerResourceResponse() {
-        this.count = null;
-        this.cpu = null;
-        this.memoryGb = null;
-        this.storageGb = null;
+    private SchedulerResourceResponse(SchedulerResourceResponse $) {
+        this.count = $.count;
+        this.cpu = $.cpu;
+        this.memoryGb = $.memoryGb;
+        this.storageGb = $.storageGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulerResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private Double cpu;
-        private Double memoryGb;
-        private Double storageGb;
+        private SchedulerResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulerResourceResponse();
         }
 
         public Builder(SchedulerResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.cpu = defaults.cpu;
-    	      this.memoryGb = defaults.memoryGb;
-    	      this.storageGb = defaults.storageGb;
+            $ = new SchedulerResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder cpu(Double cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder memoryGb(Double memoryGb) {
-            this.memoryGb = Objects.requireNonNull(memoryGb);
+            $.memoryGb = memoryGb;
             return this;
         }
+
         public Builder storageGb(Double storageGb) {
-            this.storageGb = Objects.requireNonNull(storageGb);
+            $.storageGb = storageGb;
             return this;
-        }        public SchedulerResourceResponse build() {
-            return new SchedulerResourceResponse(count, cpu, memoryGb, storageGb);
+        }
+
+        public SchedulerResourceResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.memoryGb = Objects.requireNonNull($.memoryGb, "expected parameter 'memoryGb' to be non-null");
+            $.storageGb = Objects.requireNonNull($.storageGb, "expected parameter 'storageGb' to be non-null");
+            return $;
         }
     }
+
 }

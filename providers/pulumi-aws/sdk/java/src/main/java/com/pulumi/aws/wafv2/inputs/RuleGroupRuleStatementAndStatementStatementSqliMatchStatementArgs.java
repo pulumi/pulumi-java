@@ -7,9 +7,9 @@ import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementSq
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RuleGroupRuleStatementAndStatementStatementSqliMatchStatement
      * 
      */
     @Import(name="fieldToMatch")
-      private final @Nullable Output<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
+    private @Nullable Output<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
 
-    public Output<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch() {
-        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
+    public Optional<Output<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs>> fieldToMatch() {
+        return Optional.ofNullable(this.fieldToMatch);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class RuleGroupRuleStatementAndStatementStatementSqliMatchStatement
      * 
      */
     @Import(name="textTransformations", required=true)
-      private final Output<List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
+    private Output<List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
 
     public Output<List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
-    public RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs(
-        @Nullable Output<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch,
-        Output<List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations) {
-        this.fieldToMatch = fieldToMatch;
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs() {}
 
-    private RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.textTransformations = Codegen.empty();
+    private RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs(RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch;
-        private Output<List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations;
+        private RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs();
         }
 
         public Builder(RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(@Nullable Output<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = fieldToMatch;
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
-        public Builder fieldToMatch(@Nullable RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
-            return this;
+
+        public Builder fieldToMatch(RuleGroupRuleStatementAndStatementStatementSqliMatchStatementFieldToMatchArgs fieldToMatch) {
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder textTransformations(Output<List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs>> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(List<RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs> textTransformations) {
-            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
-            return this;
+            return textTransformations(Output.of(textTransformations));
         }
+
         public Builder textTransformations(RuleGroupRuleStatementAndStatementStatementSqliMatchStatementTextTransformationArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs build() {
-            return new RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs(fieldToMatch, textTransformations);
+        }
+
+        public RuleGroupRuleStatementAndStatementStatementSqliMatchStatementArgs build() {
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

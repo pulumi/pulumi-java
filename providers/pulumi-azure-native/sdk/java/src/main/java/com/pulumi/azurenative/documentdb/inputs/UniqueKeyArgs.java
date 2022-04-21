@@ -5,10 +5,10 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class UniqueKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="paths")
-      private final @Nullable Output<List<String>> paths;
+    private @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> paths() {
-        return this.paths == null ? Codegen.empty() : this.paths;
+    public Optional<Output<List<String>>> paths() {
+        return Optional.ofNullable(this.paths);
     }
 
-    public UniqueKeyArgs(@Nullable Output<List<String>> paths) {
-        this.paths = paths;
-    }
+    private UniqueKeyArgs() {}
 
-    private UniqueKeyArgs() {
-        this.paths = Codegen.empty();
+    private UniqueKeyArgs(UniqueKeyArgs $) {
+        this.paths = $.paths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UniqueKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> paths;
+        private UniqueKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UniqueKeyArgs();
         }
 
         public Builder(UniqueKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.paths = defaults.paths;
+            $ = new UniqueKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder paths(@Nullable Output<List<String>> paths) {
-            this.paths = paths;
+            $.paths = paths;
             return this;
         }
-        public Builder paths(@Nullable List<String> paths) {
-            this.paths = Codegen.ofNullable(paths);
-            return this;
+
+        public Builder paths(List<String> paths) {
+            return paths(Output.of(paths));
         }
+
         public Builder paths(String... paths) {
             return paths(List.of(paths));
-        }        public UniqueKeyArgs build() {
-            return new UniqueKeyArgs(paths);
+        }
+
+        public UniqueKeyArgs build() {
+            return $;
         }
     }
+
 }

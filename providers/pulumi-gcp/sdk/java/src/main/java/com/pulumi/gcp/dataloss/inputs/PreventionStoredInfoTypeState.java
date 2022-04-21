@@ -5,12 +5,12 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryGetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryGetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeRegexGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="dictionary")
-      private final @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
+    private @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
 
-    public Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary() {
-        return this.dictionary == null ? Codegen.empty() : this.dictionary;
+    public Optional<Output<PreventionStoredInfoTypeDictionaryGetArgs>> dictionary() {
+        return Optional.ofNullable(this.dictionary);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="largeCustomDictionary")
-      private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
+    private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
 
-    public Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary() {
-        return this.largeCustomDictionary == null ? Codegen.empty() : this.largeCustomDictionary;
+    public Optional<Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs>> largeCustomDictionary() {
+        return Optional.ofNullable(this.largeCustomDictionary);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -96,128 +96,108 @@ public final class PreventionStoredInfoTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="regex")
-      private final @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex;
+    private @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex;
 
-    public Output<PreventionStoredInfoTypeRegexGetArgs> regex() {
-        return this.regex == null ? Codegen.empty() : this.regex;
+    public Optional<Output<PreventionStoredInfoTypeRegexGetArgs>> regex() {
+        return Optional.ofNullable(this.regex);
     }
 
-    public PreventionStoredInfoTypeState(
-        @Nullable Output<String> description,
-        @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary,
-        @Nullable Output<String> displayName,
-        @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parent,
-        @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex) {
-        this.description = description;
-        this.dictionary = dictionary;
-        this.displayName = displayName;
-        this.largeCustomDictionary = largeCustomDictionary;
-        this.name = name;
-        this.parent = parent;
-        this.regex = regex;
-    }
+    private PreventionStoredInfoTypeState() {}
 
-    private PreventionStoredInfoTypeState() {
-        this.description = Codegen.empty();
-        this.dictionary = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.largeCustomDictionary = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.regex = Codegen.empty();
+    private PreventionStoredInfoTypeState(PreventionStoredInfoTypeState $) {
+        this.description = $.description;
+        this.dictionary = $.dictionary;
+        this.displayName = $.displayName;
+        this.largeCustomDictionary = $.largeCustomDictionary;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.regex = $.regex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionStoredInfoTypeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex;
+        private PreventionStoredInfoTypeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionStoredInfoTypeState();
         }
 
         public Builder(PreventionStoredInfoTypeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.dictionary = defaults.dictionary;
-    	      this.displayName = defaults.displayName;
-    	      this.largeCustomDictionary = defaults.largeCustomDictionary;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.regex = defaults.regex;
+            $ = new PreventionStoredInfoTypeState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dictionary(@Nullable Output<PreventionStoredInfoTypeDictionaryGetArgs> dictionary) {
-            this.dictionary = dictionary;
+            $.dictionary = dictionary;
             return this;
         }
-        public Builder dictionary(@Nullable PreventionStoredInfoTypeDictionaryGetArgs dictionary) {
-            this.dictionary = Codegen.ofNullable(dictionary);
-            return this;
+
+        public Builder dictionary(PreventionStoredInfoTypeDictionaryGetArgs dictionary) {
+            return dictionary(Output.of(dictionary));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder largeCustomDictionary(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary) {
-            this.largeCustomDictionary = largeCustomDictionary;
+            $.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
-        public Builder largeCustomDictionary(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryGetArgs largeCustomDictionary) {
-            this.largeCustomDictionary = Codegen.ofNullable(largeCustomDictionary);
-            return this;
+
+        public Builder largeCustomDictionary(PreventionStoredInfoTypeLargeCustomDictionaryGetArgs largeCustomDictionary) {
+            return largeCustomDictionary(Output.of(largeCustomDictionary));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder regex(@Nullable Output<PreventionStoredInfoTypeRegexGetArgs> regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
         }
-        public Builder regex(@Nullable PreventionStoredInfoTypeRegexGetArgs regex) {
-            this.regex = Codegen.ofNullable(regex);
-            return this;
-        }        public PreventionStoredInfoTypeState build() {
-            return new PreventionStoredInfoTypeState(description, dictionary, displayName, largeCustomDictionary, name, parent, regex);
+
+        public Builder regex(PreventionStoredInfoTypeRegexGetArgs regex) {
+            return regex(Output.of(regex));
+        }
+
+        public PreventionStoredInfoTypeState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.azurenative.cognitiveservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CommitmentPeriodArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CommitmentPeriodArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public CommitmentPeriodArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<String> tier) {
-        this.count = count;
-        this.tier = tier;
-    }
+    private CommitmentPeriodArgs() {}
 
-    private CommitmentPeriodArgs() {
-        this.count = Codegen.empty();
-        this.tier = Codegen.empty();
+    private CommitmentPeriodArgs(CommitmentPeriodArgs $) {
+        this.count = $.count;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommitmentPeriodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<String> tier;
+        private CommitmentPeriodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommitmentPeriodArgs();
         }
 
         public Builder(CommitmentPeriodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.tier = defaults.tier;
+            $ = new CommitmentPeriodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public CommitmentPeriodArgs build() {
-            return new CommitmentPeriodArgs(count, tier);
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
+        }
+
+        public CommitmentPeriodArgs build() {
+            return $;
         }
     }
+
 }

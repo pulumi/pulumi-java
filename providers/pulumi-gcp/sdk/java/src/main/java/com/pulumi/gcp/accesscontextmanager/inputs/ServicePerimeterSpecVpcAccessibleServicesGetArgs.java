@@ -5,11 +5,11 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ServicePerimeterSpecVpcAccessibleServicesGetArgs extends com.
      * 
      */
     @Import(name="allowedServices")
-      private final @Nullable Output<List<String>> allowedServices;
+    private @Nullable Output<List<String>> allowedServices;
 
-    public Output<List<String>> allowedServices() {
-        return this.allowedServices == null ? Codegen.empty() : this.allowedServices;
+    public Optional<Output<List<String>>> allowedServices() {
+        return Optional.ofNullable(this.allowedServices);
     }
 
     /**
@@ -35,66 +35,62 @@ public final class ServicePerimeterSpecVpcAccessibleServicesGetArgs extends com.
      * 
      */
     @Import(name="enableRestriction")
-      private final @Nullable Output<Boolean> enableRestriction;
+    private @Nullable Output<Boolean> enableRestriction;
 
-    public Output<Boolean> enableRestriction() {
-        return this.enableRestriction == null ? Codegen.empty() : this.enableRestriction;
+    public Optional<Output<Boolean>> enableRestriction() {
+        return Optional.ofNullable(this.enableRestriction);
     }
 
-    public ServicePerimeterSpecVpcAccessibleServicesGetArgs(
-        @Nullable Output<List<String>> allowedServices,
-        @Nullable Output<Boolean> enableRestriction) {
-        this.allowedServices = allowedServices;
-        this.enableRestriction = enableRestriction;
-    }
+    private ServicePerimeterSpecVpcAccessibleServicesGetArgs() {}
 
-    private ServicePerimeterSpecVpcAccessibleServicesGetArgs() {
-        this.allowedServices = Codegen.empty();
-        this.enableRestriction = Codegen.empty();
+    private ServicePerimeterSpecVpcAccessibleServicesGetArgs(ServicePerimeterSpecVpcAccessibleServicesGetArgs $) {
+        this.allowedServices = $.allowedServices;
+        this.enableRestriction = $.enableRestriction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimeterSpecVpcAccessibleServicesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedServices;
-        private @Nullable Output<Boolean> enableRestriction;
+        private ServicePerimeterSpecVpcAccessibleServicesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimeterSpecVpcAccessibleServicesGetArgs();
         }
 
         public Builder(ServicePerimeterSpecVpcAccessibleServicesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedServices = defaults.allowedServices;
-    	      this.enableRestriction = defaults.enableRestriction;
+            $ = new ServicePerimeterSpecVpcAccessibleServicesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedServices(@Nullable Output<List<String>> allowedServices) {
-            this.allowedServices = allowedServices;
+            $.allowedServices = allowedServices;
             return this;
         }
-        public Builder allowedServices(@Nullable List<String> allowedServices) {
-            this.allowedServices = Codegen.ofNullable(allowedServices);
-            return this;
+
+        public Builder allowedServices(List<String> allowedServices) {
+            return allowedServices(Output.of(allowedServices));
         }
+
         public Builder allowedServices(String... allowedServices) {
             return allowedServices(List.of(allowedServices));
         }
+
         public Builder enableRestriction(@Nullable Output<Boolean> enableRestriction) {
-            this.enableRestriction = enableRestriction;
+            $.enableRestriction = enableRestriction;
             return this;
         }
-        public Builder enableRestriction(@Nullable Boolean enableRestriction) {
-            this.enableRestriction = Codegen.ofNullable(enableRestriction);
-            return this;
-        }        public ServicePerimeterSpecVpcAccessibleServicesGetArgs build() {
-            return new ServicePerimeterSpecVpcAccessibleServicesGetArgs(allowedServices, enableRestriction);
+
+        public Builder enableRestriction(Boolean enableRestriction) {
+            return enableRestriction(Output.of(enableRestriction));
+        }
+
+        public ServicePerimeterSpecVpcAccessibleServicesGetArgs build() {
+            return $;
         }
     }
+
 }

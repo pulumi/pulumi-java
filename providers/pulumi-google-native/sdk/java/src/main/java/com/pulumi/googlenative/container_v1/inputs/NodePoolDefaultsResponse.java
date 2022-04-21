@@ -21,45 +21,45 @@ public final class NodePoolDefaultsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nodeConfigDefaults", required=true)
-      private final NodeConfigDefaultsResponse nodeConfigDefaults;
+    private NodeConfigDefaultsResponse nodeConfigDefaults;
 
     public NodeConfigDefaultsResponse nodeConfigDefaults() {
         return this.nodeConfigDefaults;
     }
 
-    public NodePoolDefaultsResponse(NodeConfigDefaultsResponse nodeConfigDefaults) {
-        this.nodeConfigDefaults = Objects.requireNonNull(nodeConfigDefaults, "expected parameter 'nodeConfigDefaults' to be non-null");
-    }
+    private NodePoolDefaultsResponse() {}
 
-    private NodePoolDefaultsResponse() {
-        this.nodeConfigDefaults = null;
+    private NodePoolDefaultsResponse(NodePoolDefaultsResponse $) {
+        this.nodeConfigDefaults = $.nodeConfigDefaults;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolDefaultsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private NodeConfigDefaultsResponse nodeConfigDefaults;
+        private NodePoolDefaultsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolDefaultsResponse();
         }
 
         public Builder(NodePoolDefaultsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeConfigDefaults = defaults.nodeConfigDefaults;
+            $ = new NodePoolDefaultsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeConfigDefaults(NodeConfigDefaultsResponse nodeConfigDefaults) {
-            this.nodeConfigDefaults = Objects.requireNonNull(nodeConfigDefaults);
+            $.nodeConfigDefaults = nodeConfigDefaults;
             return this;
-        }        public NodePoolDefaultsResponse build() {
-            return new NodePoolDefaultsResponse(nodeConfigDefaults);
+        }
+
+        public NodePoolDefaultsResponse build() {
+            $.nodeConfigDefaults = Objects.requireNonNull($.nodeConfigDefaults, "expected parameter 'nodeConfigDefaults' to be non-null");
+            return $;
         }
     }
+
 }

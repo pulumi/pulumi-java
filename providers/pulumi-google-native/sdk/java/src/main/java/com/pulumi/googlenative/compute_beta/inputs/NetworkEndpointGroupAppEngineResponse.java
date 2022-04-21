@@ -21,7 +21,7 @@ public final class NetworkEndpointGroupAppEngineResponse extends com.pulumi.reso
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
@@ -32,7 +32,7 @@ public final class NetworkEndpointGroupAppEngineResponse extends com.pulumi.reso
      * 
      */
     @Import(name="urlMask", required=true)
-      private final String urlMask;
+    private String urlMask;
 
     public String urlMask() {
         return this.urlMask;
@@ -43,64 +43,59 @@ public final class NetworkEndpointGroupAppEngineResponse extends com.pulumi.reso
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public NetworkEndpointGroupAppEngineResponse(
-        String service,
-        String urlMask,
-        String version) {
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.urlMask = Objects.requireNonNull(urlMask, "expected parameter 'urlMask' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private NetworkEndpointGroupAppEngineResponse() {}
 
-    private NetworkEndpointGroupAppEngineResponse() {
-        this.service = null;
-        this.urlMask = null;
-        this.version = null;
+    private NetworkEndpointGroupAppEngineResponse(NetworkEndpointGroupAppEngineResponse $) {
+        this.service = $.service;
+        this.urlMask = $.urlMask;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointGroupAppEngineResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String service;
-        private String urlMask;
-        private String version;
+        private NetworkEndpointGroupAppEngineResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointGroupAppEngineResponse();
         }
 
         public Builder(NetworkEndpointGroupAppEngineResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.service = defaults.service;
-    	      this.urlMask = defaults.urlMask;
-    	      this.version = defaults.version;
+            $ = new NetworkEndpointGroupAppEngineResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder urlMask(String urlMask) {
-            this.urlMask = Objects.requireNonNull(urlMask);
+            $.urlMask = urlMask;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public NetworkEndpointGroupAppEngineResponse build() {
-            return new NetworkEndpointGroupAppEngineResponse(service, urlMask, version);
+        }
+
+        public NetworkEndpointGroupAppEngineResponse build() {
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.urlMask = Objects.requireNonNull($.urlMask, "expected parameter 'urlMask' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

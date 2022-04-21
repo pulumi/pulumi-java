@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 
      */
     @Import(name="abort")
-      private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs> abort;
+    private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs> abort;
 
-    public Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs> abort() {
-        return this.abort == null ? Codegen.empty() : this.abort;
+    public Optional<Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs>> abort() {
+        return Optional.ofNullable(this.abort);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      * 
      */
     @Import(name="delay")
-      private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs> delay;
+    private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs> delay;
 
-    public Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs> delay() {
-        return this.delay == null ? Codegen.empty() : this.delay;
+    public Optional<Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs>> delay() {
+        return Optional.ofNullable(this.delay);
     }
 
-    public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs(
-        @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs> abort,
-        @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs> delay) {
-        this.abort = abort;
-        this.delay = delay;
-    }
+    private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs() {}
 
-    private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs() {
-        this.abort = Codegen.empty();
-        this.delay = Codegen.empty();
+    private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs $) {
+        this.abort = $.abort;
+        this.delay = $.delay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs> abort;
-        private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs> delay;
+        private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs();
         }
 
         public Builder(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abort = defaults.abort;
-    	      this.delay = defaults.delay;
+            $ = new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder abort(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs> abort) {
-            this.abort = abort;
+            $.abort = abort;
             return this;
         }
-        public Builder abort(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs abort) {
-            this.abort = Codegen.ofNullable(abort);
-            return this;
+
+        public Builder abort(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs abort) {
+            return abort(Output.of(abort));
         }
+
         public Builder delay(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs> delay) {
-            this.delay = delay;
+            $.delay = delay;
             return this;
         }
-        public Builder delay(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs delay) {
-            this.delay = Codegen.ofNullable(delay);
-            return this;
-        }        public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs build() {
-            return new RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs(abort, delay);
+
+        public Builder delay(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs delay) {
+            return delay(Output.of(delay));
+        }
+
+        public RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class InstanceIAMPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="instanceName", required=true)
-      private final Output<String> instanceName;
+    private Output<String> instanceName;
 
     public Output<String> instanceName() {
         return this.instanceName;
@@ -32,7 +32,7 @@ public final class InstanceIAMPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -44,10 +44,10 @@ public final class InstanceIAMPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -57,89 +57,80 @@ public final class InstanceIAMPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceIAMPolicyArgs(
-        Output<String> instanceName,
-        Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> zone) {
-        this.instanceName = Objects.requireNonNull(instanceName, "expected parameter 'instanceName' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-        this.zone = zone;
-    }
+    private InstanceIAMPolicyArgs() {}
 
-    private InstanceIAMPolicyArgs() {
-        this.instanceName = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceIAMPolicyArgs(InstanceIAMPolicyArgs $) {
+        this.instanceName = $.instanceName;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceIAMPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceName;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> zone;
+        private InstanceIAMPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceIAMPolicyArgs();
         }
 
         public Builder(InstanceIAMPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceName = defaults.instanceName;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new InstanceIAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceName(Output<String> instanceName) {
-            this.instanceName = Objects.requireNonNull(instanceName);
+            $.instanceName = instanceName;
             return this;
         }
+
         public Builder instanceName(String instanceName) {
-            this.instanceName = Output.of(Objects.requireNonNull(instanceName));
-            return this;
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceIAMPolicyArgs build() {
-            return new InstanceIAMPolicyArgs(instanceName, policyData, project, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceIAMPolicyArgs build() {
+            $.instanceName = Objects.requireNonNull($.instanceName, "expected parameter 'instanceName' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monitorName", required=true)
-      private final String monitorName;
+    private String monitorName;
 
     public String monitorName() {
         return this.monitorName;
@@ -28,14 +28,14 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName", required=true)
-      private final String ruleSetName;
+    private String ruleSetName;
 
     public String ruleSetName() {
         return this.ruleSetName;
@@ -46,73 +46,66 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subAccountName", required=true)
-      private final String subAccountName;
+    private String subAccountName;
 
     public String subAccountName() {
         return this.subAccountName;
     }
 
-    public GetSubAccountTagRuleArgs(
-        String monitorName,
-        String resourceGroupName,
-        String ruleSetName,
-        String subAccountName) {
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleSetName = Objects.requireNonNull(ruleSetName, "expected parameter 'ruleSetName' to be non-null");
-        this.subAccountName = Objects.requireNonNull(subAccountName, "expected parameter 'subAccountName' to be non-null");
-    }
+    private GetSubAccountTagRuleArgs() {}
 
-    private GetSubAccountTagRuleArgs() {
-        this.monitorName = null;
-        this.resourceGroupName = null;
-        this.ruleSetName = null;
-        this.subAccountName = null;
+    private GetSubAccountTagRuleArgs(GetSubAccountTagRuleArgs $) {
+        this.monitorName = $.monitorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleSetName = $.ruleSetName;
+        this.subAccountName = $.subAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSubAccountTagRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String monitorName;
-        private String resourceGroupName;
-        private String ruleSetName;
-        private String subAccountName;
+        private GetSubAccountTagRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSubAccountTagRuleArgs();
         }
 
         public Builder(GetSubAccountTagRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitorName = defaults.monitorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleSetName = defaults.ruleSetName;
-    	      this.subAccountName = defaults.subAccountName;
+            $ = new GetSubAccountTagRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monitorName(String monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleSetName(String ruleSetName) {
-            this.ruleSetName = Objects.requireNonNull(ruleSetName);
+            $.ruleSetName = ruleSetName;
             return this;
         }
+
         public Builder subAccountName(String subAccountName) {
-            this.subAccountName = Objects.requireNonNull(subAccountName);
+            $.subAccountName = subAccountName;
             return this;
-        }        public GetSubAccountTagRuleArgs build() {
-            return new GetSubAccountTagRuleArgs(monitorName, resourceGroupName, ruleSetName, subAccountName);
+        }
+
+        public GetSubAccountTagRuleArgs build() {
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleSetName = Objects.requireNonNull($.ruleSetName, "expected parameter 'ruleSetName' to be non-null");
+            $.subAccountName = Objects.requireNonNull($.subAccountName, "expected parameter 'subAccountName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,8 +8,8 @@ import com.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTyp
 import com.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesTeamsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OfficeDataConnectorDataTypesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="exchange")
-      private final @Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange;
+    private @Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange;
 
-    public Output<OfficeDataConnectorDataTypesExchangeArgs> exchange() {
-        return this.exchange == null ? Codegen.empty() : this.exchange;
+    public Optional<Output<OfficeDataConnectorDataTypesExchangeArgs>> exchange() {
+        return Optional.ofNullable(this.exchange);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OfficeDataConnectorDataTypesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sharePoint")
-      private final @Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
+    private @Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
 
-    public Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint() {
-        return this.sharePoint == null ? Codegen.empty() : this.sharePoint;
+    public Optional<Output<OfficeDataConnectorDataTypesSharePointArgs>> sharePoint() {
+        return Optional.ofNullable(this.sharePoint);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class OfficeDataConnectorDataTypesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="teams")
-      private final @Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams;
+    private @Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams;
 
-    public Output<OfficeDataConnectorDataTypesTeamsArgs> teams() {
-        return this.teams == null ? Codegen.empty() : this.teams;
+    public Optional<Output<OfficeDataConnectorDataTypesTeamsArgs>> teams() {
+        return Optional.ofNullable(this.teams);
     }
 
-    public OfficeDataConnectorDataTypesArgs(
-        @Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange,
-        @Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint,
-        @Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams) {
-        this.exchange = exchange;
-        this.sharePoint = sharePoint;
-        this.teams = teams;
-    }
+    private OfficeDataConnectorDataTypesArgs() {}
 
-    private OfficeDataConnectorDataTypesArgs() {
-        this.exchange = Codegen.empty();
-        this.sharePoint = Codegen.empty();
-        this.teams = Codegen.empty();
+    private OfficeDataConnectorDataTypesArgs(OfficeDataConnectorDataTypesArgs $) {
+        this.exchange = $.exchange;
+        this.sharePoint = $.sharePoint;
+        this.teams = $.teams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OfficeDataConnectorDataTypesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange;
-        private @Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
-        private @Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams;
+        private OfficeDataConnectorDataTypesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OfficeDataConnectorDataTypesArgs();
         }
 
         public Builder(OfficeDataConnectorDataTypesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exchange = defaults.exchange;
-    	      this.sharePoint = defaults.sharePoint;
-    	      this.teams = defaults.teams;
+            $ = new OfficeDataConnectorDataTypesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exchange(@Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange) {
-            this.exchange = exchange;
+            $.exchange = exchange;
             return this;
         }
-        public Builder exchange(@Nullable OfficeDataConnectorDataTypesExchangeArgs exchange) {
-            this.exchange = Codegen.ofNullable(exchange);
-            return this;
+
+        public Builder exchange(OfficeDataConnectorDataTypesExchangeArgs exchange) {
+            return exchange(Output.of(exchange));
         }
+
         public Builder sharePoint(@Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint) {
-            this.sharePoint = sharePoint;
+            $.sharePoint = sharePoint;
             return this;
         }
-        public Builder sharePoint(@Nullable OfficeDataConnectorDataTypesSharePointArgs sharePoint) {
-            this.sharePoint = Codegen.ofNullable(sharePoint);
-            return this;
+
+        public Builder sharePoint(OfficeDataConnectorDataTypesSharePointArgs sharePoint) {
+            return sharePoint(Output.of(sharePoint));
         }
+
         public Builder teams(@Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams) {
-            this.teams = teams;
+            $.teams = teams;
             return this;
         }
-        public Builder teams(@Nullable OfficeDataConnectorDataTypesTeamsArgs teams) {
-            this.teams = Codegen.ofNullable(teams);
-            return this;
-        }        public OfficeDataConnectorDataTypesArgs build() {
-            return new OfficeDataConnectorDataTypesArgs(exchange, sharePoint, teams);
+
+        public Builder teams(OfficeDataConnectorDataTypesTeamsArgs teams) {
+            return teams(Output.of(teams));
+        }
+
+        public OfficeDataConnectorDataTypesArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class SpotFleetGroupIdentifier extends com.pulumi.resources.InvokeA
     public static final SpotFleetGroupIdentifier Empty = new SpotFleetGroupIdentifier();
 
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
     }
 
-    public SpotFleetGroupIdentifier(String groupId) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-    }
+    private SpotFleetGroupIdentifier() {}
 
-    private SpotFleetGroupIdentifier() {
-        this.groupId = null;
+    private SpotFleetGroupIdentifier(SpotFleetGroupIdentifier $) {
+        this.groupId = $.groupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetGroupIdentifier defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupId;
+        private SpotFleetGroupIdentifier $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetGroupIdentifier();
         }
 
         public Builder(SpotFleetGroupIdentifier defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
+            $ = new SpotFleetGroupIdentifier(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
-        }        public SpotFleetGroupIdentifier build() {
-            return new SpotFleetGroupIdentifier(groupId);
+        }
+
+        public SpotFleetGroupIdentifier build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            return $;
         }
     }
+
 }

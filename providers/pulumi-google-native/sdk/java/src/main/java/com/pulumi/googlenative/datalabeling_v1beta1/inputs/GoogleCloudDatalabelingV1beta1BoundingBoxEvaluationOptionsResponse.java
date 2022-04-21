@@ -21,45 +21,45 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsRes
      * 
      */
     @Import(name="iouThreshold", required=true)
-      private final Double iouThreshold;
+    private Double iouThreshold;
 
     public Double iouThreshold() {
         return this.iouThreshold;
     }
 
-    public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse(Double iouThreshold) {
-        this.iouThreshold = Objects.requireNonNull(iouThreshold, "expected parameter 'iouThreshold' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse() {
-        this.iouThreshold = null;
+    private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse $) {
+        this.iouThreshold = $.iouThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double iouThreshold;
+        private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iouThreshold = defaults.iouThreshold;
+            $ = new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder iouThreshold(Double iouThreshold) {
-            this.iouThreshold = Objects.requireNonNull(iouThreshold);
+            $.iouThreshold = iouThreshold;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse build() {
-            return new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse(iouThreshold);
+        }
+
+        public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse build() {
+            $.iouThreshold = Objects.requireNonNull($.iouThreshold, "expected parameter 'iouThreshold' to be non-null");
+            return $;
         }
     }
+
 }

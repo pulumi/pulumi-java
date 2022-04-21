@@ -15,45 +15,44 @@ public final class AssociationInstanceAssociationOutputLocation extends com.pulu
     public static final AssociationInstanceAssociationOutputLocation Empty = new AssociationInstanceAssociationOutputLocation();
 
     @Import(name="s3Location")
-      private final @Nullable AssociationS3OutputLocation s3Location;
+    private @Nullable AssociationS3OutputLocation s3Location;
 
     public Optional<AssociationS3OutputLocation> s3Location() {
-        return this.s3Location == null ? Optional.empty() : Optional.ofNullable(this.s3Location);
+        return Optional.ofNullable(this.s3Location);
     }
 
-    public AssociationInstanceAssociationOutputLocation(@Nullable AssociationS3OutputLocation s3Location) {
-        this.s3Location = s3Location;
-    }
+    private AssociationInstanceAssociationOutputLocation() {}
 
-    private AssociationInstanceAssociationOutputLocation() {
-        this.s3Location = null;
+    private AssociationInstanceAssociationOutputLocation(AssociationInstanceAssociationOutputLocation $) {
+        this.s3Location = $.s3Location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssociationInstanceAssociationOutputLocation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AssociationS3OutputLocation s3Location;
+        private AssociationInstanceAssociationOutputLocation $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssociationInstanceAssociationOutputLocation();
         }
 
         public Builder(AssociationInstanceAssociationOutputLocation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Location = defaults.s3Location;
+            $ = new AssociationInstanceAssociationOutputLocation(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Location(@Nullable AssociationS3OutputLocation s3Location) {
-            this.s3Location = s3Location;
+            $.s3Location = s3Location;
             return this;
-        }        public AssociationInstanceAssociationOutputLocation build() {
-            return new AssociationInstanceAssociationOutputLocation(s3Location);
+        }
+
+        public AssociationInstanceAssociationOutputLocation build() {
+            return $;
         }
     }
+
 }

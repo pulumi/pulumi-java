@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class BinaryReadSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="compressionProperties")
-      private final @Nullable Output<Object> compressionProperties;
+    private @Nullable Output<Object> compressionProperties;
 
-    public Output<Object> compressionProperties() {
-        return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
+    public Optional<Output<Object>> compressionProperties() {
+        return Optional.ofNullable(this.compressionProperties);
     }
 
     /**
@@ -40,63 +41,59 @@ public final class BinaryReadSettingsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public BinaryReadSettingsArgs(
-        @Nullable Output<Object> compressionProperties,
-        Output<String> type) {
-        this.compressionProperties = compressionProperties;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private BinaryReadSettingsArgs() {}
 
-    private BinaryReadSettingsArgs() {
-        this.compressionProperties = Codegen.empty();
-        this.type = Codegen.empty();
+    private BinaryReadSettingsArgs(BinaryReadSettingsArgs $) {
+        this.compressionProperties = $.compressionProperties;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BinaryReadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> compressionProperties;
-        private Output<String> type;
+        private BinaryReadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BinaryReadSettingsArgs();
         }
 
         public Builder(BinaryReadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compressionProperties = defaults.compressionProperties;
-    	      this.type = defaults.type;
+            $ = new BinaryReadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compressionProperties(@Nullable Output<Object> compressionProperties) {
-            this.compressionProperties = compressionProperties;
+            $.compressionProperties = compressionProperties;
             return this;
         }
-        public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = Codegen.ofNullable(compressionProperties);
-            return this;
+
+        public Builder compressionProperties(Object compressionProperties) {
+            return compressionProperties(Output.of(compressionProperties));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public BinaryReadSettingsArgs build() {
-            return new BinaryReadSettingsArgs(compressionProperties, type);
+            return type(Output.of(type));
+        }
+
+        public BinaryReadSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

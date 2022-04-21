@@ -23,10 +23,10 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse extends co
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse extends co
      * 
      */
     @Import(name="publicCertData")
-      private final @Nullable String publicCertData;
+    private @Nullable String publicCertData;
 
     public Optional<String> publicCertData() {
-        return this.publicCertData == null ? Optional.empty() : Optional.ofNullable(this.publicCertData);
+        return Optional.ofNullable(this.publicCertData);
     }
 
-    public VpnServerConfigRadiusServerRootCertificateResponse(
-        @Nullable String name,
-        @Nullable String publicCertData) {
-        this.name = name;
-        this.publicCertData = publicCertData;
-    }
+    private VpnServerConfigRadiusServerRootCertificateResponse() {}
 
-    private VpnServerConfigRadiusServerRootCertificateResponse() {
-        this.name = null;
-        this.publicCertData = null;
+    private VpnServerConfigRadiusServerRootCertificateResponse(VpnServerConfigRadiusServerRootCertificateResponse $) {
+        this.name = $.name;
+        this.publicCertData = $.publicCertData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnServerConfigRadiusServerRootCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String publicCertData;
+        private VpnServerConfigRadiusServerRootCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnServerConfigRadiusServerRootCertificateResponse();
         }
 
         public Builder(VpnServerConfigRadiusServerRootCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.publicCertData = defaults.publicCertData;
+            $ = new VpnServerConfigRadiusServerRootCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder publicCertData(@Nullable String publicCertData) {
-            this.publicCertData = publicCertData;
+            $.publicCertData = publicCertData;
             return this;
-        }        public VpnServerConfigRadiusServerRootCertificateResponse build() {
-            return new VpnServerConfigRadiusServerRootCertificateResponse(name, publicCertData);
+        }
+
+        public VpnServerConfigRadiusServerRootCertificateResponse build() {
+            return $;
         }
     }
+
 }

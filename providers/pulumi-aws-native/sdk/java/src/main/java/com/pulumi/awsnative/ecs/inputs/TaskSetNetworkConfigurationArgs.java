@@ -6,8 +6,8 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.inputs.TaskSetAwsVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class TaskSetNetworkConfigurationArgs extends com.pulumi.resources.
     public static final TaskSetNetworkConfigurationArgs Empty = new TaskSetNetworkConfigurationArgs();
 
     @Import(name="awsVpcConfiguration")
-      private final @Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
+    private @Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
 
-    public Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration() {
-        return this.awsVpcConfiguration == null ? Codegen.empty() : this.awsVpcConfiguration;
+    public Optional<Output<TaskSetAwsVpcConfigurationArgs>> awsVpcConfiguration() {
+        return Optional.ofNullable(this.awsVpcConfiguration);
     }
 
-    public TaskSetNetworkConfigurationArgs(@Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration) {
-        this.awsVpcConfiguration = awsVpcConfiguration;
-    }
+    private TaskSetNetworkConfigurationArgs() {}
 
-    private TaskSetNetworkConfigurationArgs() {
-        this.awsVpcConfiguration = Codegen.empty();
+    private TaskSetNetworkConfigurationArgs(TaskSetNetworkConfigurationArgs $) {
+        this.awsVpcConfiguration = $.awsVpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSetNetworkConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
+        private TaskSetNetworkConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSetNetworkConfigurationArgs();
         }
 
         public Builder(TaskSetNetworkConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsVpcConfiguration = defaults.awsVpcConfiguration;
+            $ = new TaskSetNetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsVpcConfiguration(@Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration) {
-            this.awsVpcConfiguration = awsVpcConfiguration;
+            $.awsVpcConfiguration = awsVpcConfiguration;
             return this;
         }
-        public Builder awsVpcConfiguration(@Nullable TaskSetAwsVpcConfigurationArgs awsVpcConfiguration) {
-            this.awsVpcConfiguration = Codegen.ofNullable(awsVpcConfiguration);
-            return this;
-        }        public TaskSetNetworkConfigurationArgs build() {
-            return new TaskSetNetworkConfigurationArgs(awsVpcConfiguration);
+
+        public Builder awsVpcConfiguration(TaskSetAwsVpcConfigurationArgs awsVpcConfiguration) {
+            return awsVpcConfiguration(Output.of(awsVpcConfiguration));
+        }
+
+        public TaskSetNetworkConfigurationArgs build() {
+            return $;
         }
     }
+
 }

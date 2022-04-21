@@ -21,45 +21,45 @@ public final class StackdriverLoggingConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="samplingRatio", required=true)
-      private final Double samplingRatio;
+    private Double samplingRatio;
 
     public Double samplingRatio() {
         return this.samplingRatio;
     }
 
-    public StackdriverLoggingConfigResponse(Double samplingRatio) {
-        this.samplingRatio = Objects.requireNonNull(samplingRatio, "expected parameter 'samplingRatio' to be non-null");
-    }
+    private StackdriverLoggingConfigResponse() {}
 
-    private StackdriverLoggingConfigResponse() {
-        this.samplingRatio = null;
+    private StackdriverLoggingConfigResponse(StackdriverLoggingConfigResponse $) {
+        this.samplingRatio = $.samplingRatio;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackdriverLoggingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double samplingRatio;
+        private StackdriverLoggingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackdriverLoggingConfigResponse();
         }
 
         public Builder(StackdriverLoggingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.samplingRatio = defaults.samplingRatio;
+            $ = new StackdriverLoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder samplingRatio(Double samplingRatio) {
-            this.samplingRatio = Objects.requireNonNull(samplingRatio);
+            $.samplingRatio = samplingRatio;
             return this;
-        }        public StackdriverLoggingConfigResponse build() {
-            return new StackdriverLoggingConfigResponse(samplingRatio);
+        }
+
+        public StackdriverLoggingConfigResponse build() {
+            $.samplingRatio = Objects.requireNonNull($.samplingRatio, "expected parameter 'samplingRatio' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.fms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PolicyIncludeMapGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accounts")
-      private final @Nullable Output<List<String>> accounts;
+    private @Nullable Output<List<String>> accounts;
 
-    public Output<List<String>> accounts() {
-        return this.accounts == null ? Codegen.empty() : this.accounts;
+    public Optional<Output<List<String>>> accounts() {
+        return Optional.ofNullable(this.accounts);
     }
 
     /**
@@ -32,69 +32,66 @@ public final class PolicyIncludeMapGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="orgunits")
-      private final @Nullable Output<List<String>> orgunits;
+    private @Nullable Output<List<String>> orgunits;
 
-    public Output<List<String>> orgunits() {
-        return this.orgunits == null ? Codegen.empty() : this.orgunits;
+    public Optional<Output<List<String>>> orgunits() {
+        return Optional.ofNullable(this.orgunits);
     }
 
-    public PolicyIncludeMapGetArgs(
-        @Nullable Output<List<String>> accounts,
-        @Nullable Output<List<String>> orgunits) {
-        this.accounts = accounts;
-        this.orgunits = orgunits;
-    }
+    private PolicyIncludeMapGetArgs() {}
 
-    private PolicyIncludeMapGetArgs() {
-        this.accounts = Codegen.empty();
-        this.orgunits = Codegen.empty();
+    private PolicyIncludeMapGetArgs(PolicyIncludeMapGetArgs $) {
+        this.accounts = $.accounts;
+        this.orgunits = $.orgunits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyIncludeMapGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> accounts;
-        private @Nullable Output<List<String>> orgunits;
+        private PolicyIncludeMapGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyIncludeMapGetArgs();
         }
 
         public Builder(PolicyIncludeMapGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accounts = defaults.accounts;
-    	      this.orgunits = defaults.orgunits;
+            $ = new PolicyIncludeMapGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accounts(@Nullable Output<List<String>> accounts) {
-            this.accounts = accounts;
+            $.accounts = accounts;
             return this;
         }
-        public Builder accounts(@Nullable List<String> accounts) {
-            this.accounts = Codegen.ofNullable(accounts);
-            return this;
+
+        public Builder accounts(List<String> accounts) {
+            return accounts(Output.of(accounts));
         }
+
         public Builder accounts(String... accounts) {
             return accounts(List.of(accounts));
         }
+
         public Builder orgunits(@Nullable Output<List<String>> orgunits) {
-            this.orgunits = orgunits;
+            $.orgunits = orgunits;
             return this;
         }
-        public Builder orgunits(@Nullable List<String> orgunits) {
-            this.orgunits = Codegen.ofNullable(orgunits);
-            return this;
+
+        public Builder orgunits(List<String> orgunits) {
+            return orgunits(Output.of(orgunits));
         }
+
         public Builder orgunits(String... orgunits) {
             return orgunits(List.of(orgunits));
-        }        public PolicyIncludeMapGetArgs build() {
-            return new PolicyIncludeMapGetArgs(accounts, orgunits);
+        }
+
+        public PolicyIncludeMapGetArgs build() {
+            return $;
         }
     }
+
 }

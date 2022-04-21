@@ -24,10 +24,10 @@ public final class AssignmentInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="configuration")
-      private final @Nullable ConfigurationInfoResponse configuration;
+    private @Nullable ConfigurationInfoResponse configuration;
 
     public Optional<ConfigurationInfoResponse> configuration() {
-        return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -35,55 +35,51 @@ public final class AssignmentInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public AssignmentInfoResponse(
-        @Nullable ConfigurationInfoResponse configuration,
-        String name) {
-        this.configuration = configuration;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private AssignmentInfoResponse() {}
 
-    private AssignmentInfoResponse() {
-        this.configuration = null;
-        this.name = null;
+    private AssignmentInfoResponse(AssignmentInfoResponse $) {
+        this.configuration = $.configuration;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigurationInfoResponse configuration;
-        private String name;
+        private AssignmentInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentInfoResponse();
         }
 
         public Builder(AssignmentInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.name = defaults.name;
+            $ = new AssignmentInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable ConfigurationInfoResponse configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public AssignmentInfoResponse build() {
-            return new AssignmentInfoResponse(configuration, name);
+        }
+
+        public AssignmentInfoResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

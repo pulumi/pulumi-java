@@ -21,45 +21,45 @@ public final class GcsSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="inputUri", required=true)
-      private final String inputUri;
+    private String inputUri;
 
     public String inputUri() {
         return this.inputUri;
     }
 
-    public GcsSourceResponse(String inputUri) {
-        this.inputUri = Objects.requireNonNull(inputUri, "expected parameter 'inputUri' to be non-null");
-    }
+    private GcsSourceResponse() {}
 
-    private GcsSourceResponse() {
-        this.inputUri = null;
+    private GcsSourceResponse(GcsSourceResponse $) {
+        this.inputUri = $.inputUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcsSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String inputUri;
+        private GcsSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcsSourceResponse();
         }
 
         public Builder(GcsSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputUri = defaults.inputUri;
+            $ = new GcsSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inputUri(String inputUri) {
-            this.inputUri = Objects.requireNonNull(inputUri);
+            $.inputUri = inputUri;
             return this;
-        }        public GcsSourceResponse build() {
-            return new GcsSourceResponse(inputUri);
+        }
+
+        public GcsSourceResponse build() {
+            $.inputUri = Objects.requireNonNull($.inputUri, "expected parameter 'inputUri' to be non-null");
+            return $;
         }
     }
+
 }

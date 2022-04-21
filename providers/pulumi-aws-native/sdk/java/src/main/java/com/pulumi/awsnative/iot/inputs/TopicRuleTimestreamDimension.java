@@ -13,62 +13,59 @@ public final class TopicRuleTimestreamDimension extends com.pulumi.resources.Inv
     public static final TopicRuleTimestreamDimension Empty = new TopicRuleTimestreamDimension();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public TopicRuleTimestreamDimension(
-        String name,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TopicRuleTimestreamDimension() {}
 
-    private TopicRuleTimestreamDimension() {
-        this.name = null;
-        this.value = null;
+    private TopicRuleTimestreamDimension(TopicRuleTimestreamDimension $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleTimestreamDimension defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
+        private TopicRuleTimestreamDimension $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleTimestreamDimension();
         }
 
         public Builder(TopicRuleTimestreamDimension defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new TopicRuleTimestreamDimension(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public TopicRuleTimestreamDimension build() {
-            return new TopicRuleTimestreamDimension(name, value);
+        }
+
+        public TopicRuleTimestreamDimension build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

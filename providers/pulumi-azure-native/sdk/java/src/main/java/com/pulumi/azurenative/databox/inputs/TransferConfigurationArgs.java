@@ -9,9 +9,9 @@ import com.pulumi.azurenative.databox.inputs.TransferConfigurationTransferFilter
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class TransferConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="transferAllDetails")
-      private final @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
+    private @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
 
-    public Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails() {
-        return this.transferAllDetails == null ? Codegen.empty() : this.transferAllDetails;
+    public Optional<Output<TransferConfigurationTransferAllDetailsArgs>> transferAllDetails() {
+        return Optional.ofNullable(this.transferAllDetails);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class TransferConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="transferConfigurationType", required=true)
-      private final Output<Either<String,TransferConfigurationType>> transferConfigurationType;
+    private Output<Either<String,TransferConfigurationType>> transferConfigurationType;
 
     public Output<Either<String,TransferConfigurationType>> transferConfigurationType() {
         return this.transferConfigurationType;
@@ -50,76 +50,69 @@ public final class TransferConfigurationArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="transferFilterDetails")
-      private final @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
+    private @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
 
-    public Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails() {
-        return this.transferFilterDetails == null ? Codegen.empty() : this.transferFilterDetails;
+    public Optional<Output<TransferConfigurationTransferFilterDetailsArgs>> transferFilterDetails() {
+        return Optional.ofNullable(this.transferFilterDetails);
     }
 
-    public TransferConfigurationArgs(
-        @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails,
-        Output<Either<String,TransferConfigurationType>> transferConfigurationType,
-        @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
-        this.transferAllDetails = transferAllDetails;
-        this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType, "expected parameter 'transferConfigurationType' to be non-null");
-        this.transferFilterDetails = transferFilterDetails;
-    }
+    private TransferConfigurationArgs() {}
 
-    private TransferConfigurationArgs() {
-        this.transferAllDetails = Codegen.empty();
-        this.transferConfigurationType = Codegen.empty();
-        this.transferFilterDetails = Codegen.empty();
+    private TransferConfigurationArgs(TransferConfigurationArgs $) {
+        this.transferAllDetails = $.transferAllDetails;
+        this.transferConfigurationType = $.transferConfigurationType;
+        this.transferFilterDetails = $.transferFilterDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
-        private Output<Either<String,TransferConfigurationType>> transferConfigurationType;
-        private @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
+        private TransferConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferConfigurationArgs();
         }
 
         public Builder(TransferConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transferAllDetails = defaults.transferAllDetails;
-    	      this.transferConfigurationType = defaults.transferConfigurationType;
-    	      this.transferFilterDetails = defaults.transferFilterDetails;
+            $ = new TransferConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder transferAllDetails(@Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails) {
-            this.transferAllDetails = transferAllDetails;
+            $.transferAllDetails = transferAllDetails;
             return this;
         }
-        public Builder transferAllDetails(@Nullable TransferConfigurationTransferAllDetailsArgs transferAllDetails) {
-            this.transferAllDetails = Codegen.ofNullable(transferAllDetails);
-            return this;
+
+        public Builder transferAllDetails(TransferConfigurationTransferAllDetailsArgs transferAllDetails) {
+            return transferAllDetails(Output.of(transferAllDetails));
         }
+
         public Builder transferConfigurationType(Output<Either<String,TransferConfigurationType>> transferConfigurationType) {
-            this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType);
+            $.transferConfigurationType = transferConfigurationType;
             return this;
         }
+
         public Builder transferConfigurationType(Either<String,TransferConfigurationType> transferConfigurationType) {
-            this.transferConfigurationType = Output.of(Objects.requireNonNull(transferConfigurationType));
-            return this;
+            return transferConfigurationType(Output.of(transferConfigurationType));
         }
+
         public Builder transferFilterDetails(@Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
-            this.transferFilterDetails = transferFilterDetails;
+            $.transferFilterDetails = transferFilterDetails;
             return this;
         }
-        public Builder transferFilterDetails(@Nullable TransferConfigurationTransferFilterDetailsArgs transferFilterDetails) {
-            this.transferFilterDetails = Codegen.ofNullable(transferFilterDetails);
-            return this;
-        }        public TransferConfigurationArgs build() {
-            return new TransferConfigurationArgs(transferAllDetails, transferConfigurationType, transferFilterDetails);
+
+        public Builder transferFilterDetails(TransferConfigurationTransferFilterDetailsArgs transferFilterDetails) {
+            return transferFilterDetails(Output.of(transferFilterDetails));
+        }
+
+        public TransferConfigurationArgs build() {
+            $.transferConfigurationType = Objects.requireNonNull($.transferConfigurationType, "expected parameter 'transferConfigurationType' to be non-null");
+            return $;
         }
     }
+
 }

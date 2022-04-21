@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.CustomErrorRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CustomErrorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<CustomErrorRuleArgs>> rules;
+    private @Nullable Output<List<CustomErrorRuleArgs>> rules;
 
-    public Output<List<CustomErrorRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<CustomErrorRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class CustomErrorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="types")
-      private final @Nullable Output<List<String>> types;
+    private @Nullable Output<List<String>> types;
 
-    public Output<List<String>> types() {
-        return this.types == null ? Codegen.empty() : this.types;
+    public Optional<Output<List<String>>> types() {
+        return Optional.ofNullable(this.types);
     }
 
-    public CustomErrorArgs(
-        @Nullable Output<List<CustomErrorRuleArgs>> rules,
-        @Nullable Output<List<String>> types) {
-        this.rules = rules;
-        this.types = types;
-    }
+    private CustomErrorArgs() {}
 
-    private CustomErrorArgs() {
-        this.rules = Codegen.empty();
-        this.types = Codegen.empty();
+    private CustomErrorArgs(CustomErrorArgs $) {
+        this.rules = $.rules;
+        this.types = $.types;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomErrorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CustomErrorRuleArgs>> rules;
-        private @Nullable Output<List<String>> types;
+        private CustomErrorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomErrorArgs();
         }
 
         public Builder(CustomErrorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
-    	      this.types = defaults.types;
+            $ = new CustomErrorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<CustomErrorRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<CustomErrorRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<CustomErrorRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(CustomErrorRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder types(@Nullable Output<List<String>> types) {
-            this.types = types;
+            $.types = types;
             return this;
         }
-        public Builder types(@Nullable List<String> types) {
-            this.types = Codegen.ofNullable(types);
-            return this;
+
+        public Builder types(List<String> types) {
+            return types(Output.of(types));
         }
+
         public Builder types(String... types) {
             return types(List.of(types));
-        }        public CustomErrorArgs build() {
-            return new CustomErrorArgs(rules, types);
+        }
+
+        public CustomErrorArgs build() {
+            return $;
         }
     }
+
 }

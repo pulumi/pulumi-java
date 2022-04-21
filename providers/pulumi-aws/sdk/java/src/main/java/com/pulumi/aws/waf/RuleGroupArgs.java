@@ -6,11 +6,11 @@ package com.pulumi.aws.waf;
 import com.pulumi.aws.waf.inputs.RuleGroupActivatedRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activatedRules")
-      private final @Nullable Output<List<RuleGroupActivatedRuleArgs>> activatedRules;
+    private @Nullable Output<List<RuleGroupActivatedRuleArgs>> activatedRules;
 
-    public Output<List<RuleGroupActivatedRuleArgs>> activatedRules() {
-        return this.activatedRules == null ? Codegen.empty() : this.activatedRules;
+    public Optional<Output<List<RuleGroupActivatedRuleArgs>>> activatedRules() {
+        return Optional.ofNullable(this.activatedRules);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -45,10 +45,10 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,92 +56,83 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RuleGroupArgs(
-        @Nullable Output<List<RuleGroupActivatedRuleArgs>> activatedRules,
-        Output<String> metricName,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> tags) {
-        this.activatedRules = activatedRules;
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private RuleGroupArgs() {}
 
-    private RuleGroupArgs() {
-        this.activatedRules = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RuleGroupArgs(RuleGroupArgs $) {
+        this.activatedRules = $.activatedRules;
+        this.metricName = $.metricName;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RuleGroupActivatedRuleArgs>> activatedRules;
-        private Output<String> metricName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> tags;
+        private RuleGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupArgs();
         }
 
         public Builder(RuleGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activatedRules = defaults.activatedRules;
-    	      this.metricName = defaults.metricName;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new RuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activatedRules(@Nullable Output<List<RuleGroupActivatedRuleArgs>> activatedRules) {
-            this.activatedRules = activatedRules;
+            $.activatedRules = activatedRules;
             return this;
         }
-        public Builder activatedRules(@Nullable List<RuleGroupActivatedRuleArgs> activatedRules) {
-            this.activatedRules = Codegen.ofNullable(activatedRules);
-            return this;
+
+        public Builder activatedRules(List<RuleGroupActivatedRuleArgs> activatedRules) {
+            return activatedRules(Output.of(activatedRules));
         }
+
         public Builder activatedRules(RuleGroupActivatedRuleArgs... activatedRules) {
             return activatedRules(List.of(activatedRules));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public RuleGroupArgs build() {
-            return new RuleGroupArgs(activatedRules, metricName, name, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public RuleGroupArgs build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            return $;
         }
     }
+
 }

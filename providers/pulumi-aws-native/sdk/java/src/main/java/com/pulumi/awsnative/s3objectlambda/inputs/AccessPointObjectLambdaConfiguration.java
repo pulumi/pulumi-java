@@ -22,100 +22,93 @@ public final class AccessPointObjectLambdaConfiguration extends com.pulumi.resou
     public static final AccessPointObjectLambdaConfiguration Empty = new AccessPointObjectLambdaConfiguration();
 
     @Import(name="allowedFeatures")
-      private final @Nullable List<String> allowedFeatures;
+    private @Nullable List<String> allowedFeatures;
 
-    public List<String> allowedFeatures() {
-        return this.allowedFeatures == null ? List.of() : this.allowedFeatures;
+    public Optional<List<String>> allowedFeatures() {
+        return Optional.ofNullable(this.allowedFeatures);
     }
 
     @Import(name="cloudWatchMetricsEnabled")
-      private final @Nullable Boolean cloudWatchMetricsEnabled;
+    private @Nullable Boolean cloudWatchMetricsEnabled;
 
     public Optional<Boolean> cloudWatchMetricsEnabled() {
-        return this.cloudWatchMetricsEnabled == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchMetricsEnabled);
+        return Optional.ofNullable(this.cloudWatchMetricsEnabled);
     }
 
     @Import(name="supportingAccessPoint", required=true)
-      private final String supportingAccessPoint;
+    private String supportingAccessPoint;
 
     public String supportingAccessPoint() {
         return this.supportingAccessPoint;
     }
 
     @Import(name="transformationConfigurations", required=true)
-      private final List<AccessPointTransformationConfiguration> transformationConfigurations;
+    private List<AccessPointTransformationConfiguration> transformationConfigurations;
 
     public List<AccessPointTransformationConfiguration> transformationConfigurations() {
         return this.transformationConfigurations;
     }
 
-    public AccessPointObjectLambdaConfiguration(
-        @Nullable List<String> allowedFeatures,
-        @Nullable Boolean cloudWatchMetricsEnabled,
-        String supportingAccessPoint,
-        List<AccessPointTransformationConfiguration> transformationConfigurations) {
-        this.allowedFeatures = allowedFeatures;
-        this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
-        this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint, "expected parameter 'supportingAccessPoint' to be non-null");
-        this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations, "expected parameter 'transformationConfigurations' to be non-null");
-    }
+    private AccessPointObjectLambdaConfiguration() {}
 
-    private AccessPointObjectLambdaConfiguration() {
-        this.allowedFeatures = List.of();
-        this.cloudWatchMetricsEnabled = null;
-        this.supportingAccessPoint = null;
-        this.transformationConfigurations = List.of();
+    private AccessPointObjectLambdaConfiguration(AccessPointObjectLambdaConfiguration $) {
+        this.allowedFeatures = $.allowedFeatures;
+        this.cloudWatchMetricsEnabled = $.cloudWatchMetricsEnabled;
+        this.supportingAccessPoint = $.supportingAccessPoint;
+        this.transformationConfigurations = $.transformationConfigurations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointObjectLambdaConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> allowedFeatures;
-        private @Nullable Boolean cloudWatchMetricsEnabled;
-        private String supportingAccessPoint;
-        private List<AccessPointTransformationConfiguration> transformationConfigurations;
+        private AccessPointObjectLambdaConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointObjectLambdaConfiguration();
         }
 
         public Builder(AccessPointObjectLambdaConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedFeatures = defaults.allowedFeatures;
-    	      this.cloudWatchMetricsEnabled = defaults.cloudWatchMetricsEnabled;
-    	      this.supportingAccessPoint = defaults.supportingAccessPoint;
-    	      this.transformationConfigurations = defaults.transformationConfigurations;
+            $ = new AccessPointObjectLambdaConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedFeatures(@Nullable List<String> allowedFeatures) {
-            this.allowedFeatures = allowedFeatures;
+            $.allowedFeatures = allowedFeatures;
             return this;
         }
+
         public Builder allowedFeatures(String... allowedFeatures) {
             return allowedFeatures(List.of(allowedFeatures));
         }
+
         public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
-            this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
+            $.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
+
         public Builder supportingAccessPoint(String supportingAccessPoint) {
-            this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint);
+            $.supportingAccessPoint = supportingAccessPoint;
             return this;
         }
+
         public Builder transformationConfigurations(List<AccessPointTransformationConfiguration> transformationConfigurations) {
-            this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
+            $.transformationConfigurations = transformationConfigurations;
             return this;
         }
+
         public Builder transformationConfigurations(AccessPointTransformationConfiguration... transformationConfigurations) {
             return transformationConfigurations(List.of(transformationConfigurations));
-        }        public AccessPointObjectLambdaConfiguration build() {
-            return new AccessPointObjectLambdaConfiguration(allowedFeatures, cloudWatchMetricsEnabled, supportingAccessPoint, transformationConfigurations);
+        }
+
+        public AccessPointObjectLambdaConfiguration build() {
+            $.supportingAccessPoint = Objects.requireNonNull($.supportingAccessPoint, "expected parameter 'supportingAccessPoint' to be non-null");
+            $.transformationConfigurations = Objects.requireNonNull($.transformationConfigurations, "expected parameter 'transformationConfigurations' to be non-null");
+            return $;
         }
     }
+
 }

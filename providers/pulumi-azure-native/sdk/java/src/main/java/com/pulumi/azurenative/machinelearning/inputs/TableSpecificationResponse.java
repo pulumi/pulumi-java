@@ -26,10 +26,10 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="format")
-      private final @Nullable String format;
+    private @Nullable String format;
 
     public Optional<String> format() {
-        return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,ColumnSpecificationResponse> properties;
+    private @Nullable Map<String,ColumnSpecificationResponse> properties;
 
-    public Map<String,ColumnSpecificationResponse> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,ColumnSpecificationResponse>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -70,82 +70,69 @@ public final class TableSpecificationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TableSpecificationResponse(
-        @Nullable String description,
-        @Nullable String format,
-        @Nullable Map<String,ColumnSpecificationResponse> properties,
-        @Nullable String title,
-        String type) {
-        this.description = description;
-        this.format = format;
-        this.properties = properties;
-        this.title = title;
-        this.type = Codegen.stringProp("type").arg(type).def("object").require();
-    }
+    private TableSpecificationResponse() {}
 
-    private TableSpecificationResponse() {
-        this.description = null;
-        this.format = null;
-        this.properties = Map.of();
-        this.title = null;
-        this.type = null;
+    private TableSpecificationResponse(TableSpecificationResponse $) {
+        this.description = $.description;
+        this.format = $.format;
+        this.properties = $.properties;
+        this.title = $.title;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableSpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String format;
-        private @Nullable Map<String,ColumnSpecificationResponse> properties;
-        private @Nullable String title;
-        private String type;
+        private TableSpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableSpecificationResponse();
         }
 
         public Builder(TableSpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.format = defaults.format;
-    	      this.properties = defaults.properties;
-    	      this.title = defaults.title;
-    	      this.type = defaults.type;
+            $ = new TableSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder format(@Nullable String format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,ColumnSpecificationResponse> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TableSpecificationResponse build() {
-            return new TableSpecificationResponse(description, format, properties, title, type);
+        }
+
+        public TableSpecificationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).def("object").require();
+            return $;
         }
     }
+
 }

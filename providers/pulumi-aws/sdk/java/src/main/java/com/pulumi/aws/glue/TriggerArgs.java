@@ -7,12 +7,12 @@ import com.pulumi.aws.glue.inputs.TriggerActionArgs;
 import com.pulumi.aws.glue.inputs.TriggerPredicateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<TriggerActionArgs>> actions;
+    private Output<List<TriggerActionArgs>> actions;
 
     public Output<List<TriggerActionArgs>> actions() {
         return this.actions;
@@ -36,10 +36,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predicate")
-      private final @Nullable Output<TriggerPredicateArgs> predicate;
+    private @Nullable Output<TriggerPredicateArgs> predicate;
 
-    public Output<TriggerPredicateArgs> predicate() {
-        return this.predicate == null ? Codegen.empty() : this.predicate;
+    public Optional<Output<TriggerPredicateArgs>> predicate() {
+        return Optional.ofNullable(this.predicate);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startOnCreation")
-      private final @Nullable Output<Boolean> startOnCreation;
+    private @Nullable Output<Boolean> startOnCreation;
 
-    public Output<Boolean> startOnCreation() {
-        return this.startOnCreation == null ? Codegen.empty() : this.startOnCreation;
+    public Optional<Output<Boolean>> startOnCreation() {
+        return Optional.ofNullable(this.startOnCreation);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -113,7 +113,7 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -124,170 +124,144 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workflowName")
-      private final @Nullable Output<String> workflowName;
+    private @Nullable Output<String> workflowName;
 
-    public Output<String> workflowName() {
-        return this.workflowName == null ? Codegen.empty() : this.workflowName;
+    public Optional<Output<String>> workflowName() {
+        return Optional.ofNullable(this.workflowName);
     }
 
-    public TriggerArgs(
-        Output<List<TriggerActionArgs>> actions,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> name,
-        @Nullable Output<TriggerPredicateArgs> predicate,
-        @Nullable Output<String> schedule,
-        @Nullable Output<Boolean> startOnCreation,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> type,
-        @Nullable Output<String> workflowName) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.description = description;
-        this.enabled = enabled;
-        this.name = name;
-        this.predicate = predicate;
-        this.schedule = schedule;
-        this.startOnCreation = startOnCreation;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.workflowName = workflowName;
-    }
+    private TriggerArgs() {}
 
-    private TriggerArgs() {
-        this.actions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.name = Codegen.empty();
-        this.predicate = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.startOnCreation = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
-        this.workflowName = Codegen.empty();
+    private TriggerArgs(TriggerArgs $) {
+        this.actions = $.actions;
+        this.description = $.description;
+        this.enabled = $.enabled;
+        this.name = $.name;
+        this.predicate = $.predicate;
+        this.schedule = $.schedule;
+        this.startOnCreation = $.startOnCreation;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.workflowName = $.workflowName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<TriggerActionArgs>> actions;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> name;
-        private @Nullable Output<TriggerPredicateArgs> predicate;
-        private @Nullable Output<String> schedule;
-        private @Nullable Output<Boolean> startOnCreation;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> type;
-        private @Nullable Output<String> workflowName;
+        private TriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerArgs();
         }
 
         public Builder(TriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.description = defaults.description;
-    	      this.enabled = defaults.enabled;
-    	      this.name = defaults.name;
-    	      this.predicate = defaults.predicate;
-    	      this.schedule = defaults.schedule;
-    	      this.startOnCreation = defaults.startOnCreation;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.workflowName = defaults.workflowName;
+            $ = new TriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<TriggerActionArgs>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<TriggerActionArgs> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(TriggerActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder predicate(@Nullable Output<TriggerPredicateArgs> predicate) {
-            this.predicate = predicate;
+            $.predicate = predicate;
             return this;
         }
-        public Builder predicate(@Nullable TriggerPredicateArgs predicate) {
-            this.predicate = Codegen.ofNullable(predicate);
-            return this;
+
+        public Builder predicate(TriggerPredicateArgs predicate) {
+            return predicate(Output.of(predicate));
         }
+
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder startOnCreation(@Nullable Output<Boolean> startOnCreation) {
-            this.startOnCreation = startOnCreation;
+            $.startOnCreation = startOnCreation;
             return this;
         }
-        public Builder startOnCreation(@Nullable Boolean startOnCreation) {
-            this.startOnCreation = Codegen.ofNullable(startOnCreation);
-            return this;
+
+        public Builder startOnCreation(Boolean startOnCreation) {
+            return startOnCreation(Output.of(startOnCreation));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder workflowName(@Nullable Output<String> workflowName) {
-            this.workflowName = workflowName;
+            $.workflowName = workflowName;
             return this;
         }
-        public Builder workflowName(@Nullable String workflowName) {
-            this.workflowName = Codegen.ofNullable(workflowName);
-            return this;
-        }        public TriggerArgs build() {
-            return new TriggerArgs(actions, description, enabled, name, predicate, schedule, startOnCreation, tags, type, workflowName);
+
+        public Builder workflowName(String workflowName) {
+            return workflowName(Output.of(workflowName));
+        }
+
+        public TriggerArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

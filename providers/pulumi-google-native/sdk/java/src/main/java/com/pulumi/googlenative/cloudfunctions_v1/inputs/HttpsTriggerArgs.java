@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudfunctions_v1.enums.HttpsTriggerSecurityLevel;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class HttpsTriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityLevel")
-      private final @Nullable Output<HttpsTriggerSecurityLevel> securityLevel;
+    private @Nullable Output<HttpsTriggerSecurityLevel> securityLevel;
 
-    public Output<HttpsTriggerSecurityLevel> securityLevel() {
-        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
+    public Optional<Output<HttpsTriggerSecurityLevel>> securityLevel() {
+        return Optional.ofNullable(this.securityLevel);
     }
 
-    public HttpsTriggerArgs(@Nullable Output<HttpsTriggerSecurityLevel> securityLevel) {
-        this.securityLevel = securityLevel;
-    }
+    private HttpsTriggerArgs() {}
 
-    private HttpsTriggerArgs() {
-        this.securityLevel = Codegen.empty();
+    private HttpsTriggerArgs(HttpsTriggerArgs $) {
+        this.securityLevel = $.securityLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpsTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HttpsTriggerSecurityLevel> securityLevel;
+        private HttpsTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpsTriggerArgs();
         }
 
         public Builder(HttpsTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityLevel = defaults.securityLevel;
+            $ = new HttpsTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder securityLevel(@Nullable Output<HttpsTriggerSecurityLevel> securityLevel) {
-            this.securityLevel = securityLevel;
+            $.securityLevel = securityLevel;
             return this;
         }
-        public Builder securityLevel(@Nullable HttpsTriggerSecurityLevel securityLevel) {
-            this.securityLevel = Codegen.ofNullable(securityLevel);
-            return this;
-        }        public HttpsTriggerArgs build() {
-            return new HttpsTriggerArgs(securityLevel);
+
+        public Builder securityLevel(HttpsTriggerSecurityLevel securityLevel) {
+            return securityLevel(Output.of(securityLevel));
+        }
+
+        public HttpsTriggerArgs build() {
+            return $;
         }
     }
+
 }

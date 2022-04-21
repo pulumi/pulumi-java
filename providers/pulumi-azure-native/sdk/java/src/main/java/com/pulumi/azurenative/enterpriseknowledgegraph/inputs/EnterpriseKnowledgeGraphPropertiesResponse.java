@@ -24,10 +24,10 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Object metadata;
+    private @Nullable Object metadata;
 
     public Optional<Object> metadata() {
-        return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable String provisioningState;
+    private @Nullable String provisioningState;
 
     public Optional<String> provisioningState() {
-        return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
+        return Optional.ofNullable(this.provisioningState);
     }
 
-    public EnterpriseKnowledgeGraphPropertiesResponse(
-        @Nullable String description,
-        @Nullable Object metadata,
-        @Nullable String provisioningState) {
-        this.description = description;
-        this.metadata = metadata;
-        this.provisioningState = provisioningState;
-    }
+    private EnterpriseKnowledgeGraphPropertiesResponse() {}
 
-    private EnterpriseKnowledgeGraphPropertiesResponse() {
-        this.description = null;
-        this.metadata = null;
-        this.provisioningState = null;
+    private EnterpriseKnowledgeGraphPropertiesResponse(EnterpriseKnowledgeGraphPropertiesResponse $) {
+        this.description = $.description;
+        this.metadata = $.metadata;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseKnowledgeGraphPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable Object metadata;
-        private @Nullable String provisioningState;
+        private EnterpriseKnowledgeGraphPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseKnowledgeGraphPropertiesResponse();
         }
 
         public Builder(EnterpriseKnowledgeGraphPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.metadata = defaults.metadata;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new EnterpriseKnowledgeGraphPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
-        }        public EnterpriseKnowledgeGraphPropertiesResponse build() {
-            return new EnterpriseKnowledgeGraphPropertiesResponse(description, metadata, provisioningState);
+        }
+
+        public EnterpriseKnowledgeGraphPropertiesResponse build() {
+            return $;
         }
     }
+
 }

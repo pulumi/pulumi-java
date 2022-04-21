@@ -23,10 +23,10 @@ public final class KeyPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class KeyPropertiesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public KeyPropertiesResponse(
-        @Nullable String name,
-        @Nullable String version) {
-        this.name = name;
-        this.version = version;
-    }
+    private KeyPropertiesResponse() {}
 
-    private KeyPropertiesResponse() {
-        this.name = null;
-        this.version = null;
+    private KeyPropertiesResponse(KeyPropertiesResponse $) {
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String version;
+        private KeyPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyPropertiesResponse();
         }
 
         public Builder(KeyPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new KeyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public KeyPropertiesResponse build() {
-            return new KeyPropertiesResponse(name, version);
+        }
+
+        public KeyPropertiesResponse build() {
+            return $;
         }
     }
+
 }

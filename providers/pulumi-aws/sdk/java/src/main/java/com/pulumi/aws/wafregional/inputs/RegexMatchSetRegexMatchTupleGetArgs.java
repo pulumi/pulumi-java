@@ -6,7 +6,6 @@ package com.pulumi.aws.wafregional.inputs;
 import com.pulumi.aws.wafregional.inputs.RegexMatchSetRegexMatchTupleFieldToMatchGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class RegexMatchSetRegexMatchTupleGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="fieldToMatch", required=true)
-      private final Output<RegexMatchSetRegexMatchTupleFieldToMatchGetArgs> fieldToMatch;
+    private Output<RegexMatchSetRegexMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
     public Output<RegexMatchSetRegexMatchTupleFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch;
@@ -31,7 +30,7 @@ public final class RegexMatchSetRegexMatchTupleGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="regexPatternSetId", required=true)
-      private final Output<String> regexPatternSetId;
+    private Output<String> regexPatternSetId;
 
     public Output<String> regexPatternSetId() {
         return this.regexPatternSetId;
@@ -45,76 +44,71 @@ public final class RegexMatchSetRegexMatchTupleGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="textTransformation", required=true)
-      private final Output<String> textTransformation;
+    private Output<String> textTransformation;
 
     public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
-    public RegexMatchSetRegexMatchTupleGetArgs(
-        Output<RegexMatchSetRegexMatchTupleFieldToMatchGetArgs> fieldToMatch,
-        Output<String> regexPatternSetId,
-        Output<String> textTransformation) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.regexPatternSetId = Objects.requireNonNull(regexPatternSetId, "expected parameter 'regexPatternSetId' to be non-null");
-        this.textTransformation = Objects.requireNonNull(textTransformation, "expected parameter 'textTransformation' to be non-null");
-    }
+    private RegexMatchSetRegexMatchTupleGetArgs() {}
 
-    private RegexMatchSetRegexMatchTupleGetArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.regexPatternSetId = Codegen.empty();
-        this.textTransformation = Codegen.empty();
+    private RegexMatchSetRegexMatchTupleGetArgs(RegexMatchSetRegexMatchTupleGetArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.regexPatternSetId = $.regexPatternSetId;
+        this.textTransformation = $.textTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegexMatchSetRegexMatchTupleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RegexMatchSetRegexMatchTupleFieldToMatchGetArgs> fieldToMatch;
-        private Output<String> regexPatternSetId;
-        private Output<String> textTransformation;
+        private RegexMatchSetRegexMatchTupleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegexMatchSetRegexMatchTupleGetArgs();
         }
 
         public Builder(RegexMatchSetRegexMatchTupleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.regexPatternSetId = defaults.regexPatternSetId;
-    	      this.textTransformation = defaults.textTransformation;
+            $ = new RegexMatchSetRegexMatchTupleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(Output<RegexMatchSetRegexMatchTupleFieldToMatchGetArgs> fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder fieldToMatch(RegexMatchSetRegexMatchTupleFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
-            return this;
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder regexPatternSetId(Output<String> regexPatternSetId) {
-            this.regexPatternSetId = Objects.requireNonNull(regexPatternSetId);
+            $.regexPatternSetId = regexPatternSetId;
             return this;
         }
+
         public Builder regexPatternSetId(String regexPatternSetId) {
-            this.regexPatternSetId = Output.of(Objects.requireNonNull(regexPatternSetId));
-            return this;
+            return regexPatternSetId(Output.of(regexPatternSetId));
         }
+
         public Builder textTransformation(Output<String> textTransformation) {
-            this.textTransformation = Objects.requireNonNull(textTransformation);
+            $.textTransformation = textTransformation;
             return this;
         }
+
         public Builder textTransformation(String textTransformation) {
-            this.textTransformation = Output.of(Objects.requireNonNull(textTransformation));
-            return this;
-        }        public RegexMatchSetRegexMatchTupleGetArgs build() {
-            return new RegexMatchSetRegexMatchTupleGetArgs(fieldToMatch, regexPatternSetId, textTransformation);
+            return textTransformation(Output.of(textTransformation));
+        }
+
+        public RegexMatchSetRegexMatchTupleGetArgs build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.regexPatternSetId = Objects.requireNonNull($.regexPatternSetId, "expected parameter 'regexPatternSetId' to be non-null");
+            $.textTransformation = Objects.requireNonNull($.textTransformation, "expected parameter 'textTransformation' to be non-null");
+            return $;
         }
     }
+
 }

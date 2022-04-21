@@ -5,7 +5,6 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class SinkConfigurationArgs extends com.pulumi.resources.ResourceAr
     public static final SinkConfigurationArgs Empty = new SinkConfigurationArgs();
 
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
     }
 
-    public SinkConfigurationArgs(Output<String> kind) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private SinkConfigurationArgs() {}
 
-    private SinkConfigurationArgs() {
-        this.kind = Codegen.empty();
+    private SinkConfigurationArgs(SinkConfigurationArgs $) {
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SinkConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kind;
+        private SinkConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SinkConfigurationArgs();
         }
 
         public Builder(SinkConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
+            $ = new SinkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
-        }        public SinkConfigurationArgs build() {
-            return new SinkConfigurationArgs(kind);
+            return kind(Output.of(kind));
+        }
+
+        public SinkConfigurationArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

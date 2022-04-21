@@ -7,9 +7,9 @@ import com.pulumi.azurenative.containerservice.enums.UpgradeChannel;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends com.pulumi.resou
      * 
      */
     @Import(name="upgradeChannel")
-      private final @Nullable Output<Either<String,UpgradeChannel>> upgradeChannel;
+    private @Nullable Output<Either<String,UpgradeChannel>> upgradeChannel;
 
-    public Output<Either<String,UpgradeChannel>> upgradeChannel() {
-        return this.upgradeChannel == null ? Codegen.empty() : this.upgradeChannel;
+    public Optional<Output<Either<String,UpgradeChannel>>> upgradeChannel() {
+        return Optional.ofNullable(this.upgradeChannel);
     }
 
-    public ManagedClusterAutoUpgradeProfileArgs(@Nullable Output<Either<String,UpgradeChannel>> upgradeChannel) {
-        this.upgradeChannel = upgradeChannel;
-    }
+    private ManagedClusterAutoUpgradeProfileArgs() {}
 
-    private ManagedClusterAutoUpgradeProfileArgs() {
-        this.upgradeChannel = Codegen.empty();
+    private ManagedClusterAutoUpgradeProfileArgs(ManagedClusterAutoUpgradeProfileArgs $) {
+        this.upgradeChannel = $.upgradeChannel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterAutoUpgradeProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,UpgradeChannel>> upgradeChannel;
+        private ManagedClusterAutoUpgradeProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterAutoUpgradeProfileArgs();
         }
 
         public Builder(ManagedClusterAutoUpgradeProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.upgradeChannel = defaults.upgradeChannel;
+            $ = new ManagedClusterAutoUpgradeProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder upgradeChannel(@Nullable Output<Either<String,UpgradeChannel>> upgradeChannel) {
-            this.upgradeChannel = upgradeChannel;
+            $.upgradeChannel = upgradeChannel;
             return this;
         }
-        public Builder upgradeChannel(@Nullable Either<String,UpgradeChannel> upgradeChannel) {
-            this.upgradeChannel = Codegen.ofNullable(upgradeChannel);
-            return this;
-        }        public ManagedClusterAutoUpgradeProfileArgs build() {
-            return new ManagedClusterAutoUpgradeProfileArgs(upgradeChannel);
+
+        public Builder upgradeChannel(Either<String,UpgradeChannel> upgradeChannel) {
+            return upgradeChannel(Output.of(upgradeChannel));
+        }
+
+        public ManagedClusterAutoUpgradeProfileArgs build() {
+            return $;
         }
     }
+
 }

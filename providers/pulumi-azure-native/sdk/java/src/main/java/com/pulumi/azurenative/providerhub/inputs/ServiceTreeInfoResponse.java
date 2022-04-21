@@ -15,62 +15,57 @@ public final class ServiceTreeInfoResponse extends com.pulumi.resources.InvokeAr
     public static final ServiceTreeInfoResponse Empty = new ServiceTreeInfoResponse();
 
     @Import(name="componentId")
-      private final @Nullable String componentId;
+    private @Nullable String componentId;
 
     public Optional<String> componentId() {
-        return this.componentId == null ? Optional.empty() : Optional.ofNullable(this.componentId);
+        return Optional.ofNullable(this.componentId);
     }
 
     @Import(name="serviceId")
-      private final @Nullable String serviceId;
+    private @Nullable String serviceId;
 
     public Optional<String> serviceId() {
-        return this.serviceId == null ? Optional.empty() : Optional.ofNullable(this.serviceId);
+        return Optional.ofNullable(this.serviceId);
     }
 
-    public ServiceTreeInfoResponse(
-        @Nullable String componentId,
-        @Nullable String serviceId) {
-        this.componentId = componentId;
-        this.serviceId = serviceId;
-    }
+    private ServiceTreeInfoResponse() {}
 
-    private ServiceTreeInfoResponse() {
-        this.componentId = null;
-        this.serviceId = null;
+    private ServiceTreeInfoResponse(ServiceTreeInfoResponse $) {
+        this.componentId = $.componentId;
+        this.serviceId = $.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTreeInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String componentId;
-        private @Nullable String serviceId;
+        private ServiceTreeInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTreeInfoResponse();
         }
 
         public Builder(ServiceTreeInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentId = defaults.componentId;
-    	      this.serviceId = defaults.serviceId;
+            $ = new ServiceTreeInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder componentId(@Nullable String componentId) {
-            this.componentId = componentId;
+            $.componentId = componentId;
             return this;
         }
+
         public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = serviceId;
+            $.serviceId = serviceId;
             return this;
-        }        public ServiceTreeInfoResponse build() {
-            return new ServiceTreeInfoResponse(componentId, serviceId);
+        }
+
+        public ServiceTreeInfoResponse build() {
+            return $;
         }
     }
+
 }

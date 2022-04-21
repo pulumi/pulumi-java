@@ -5,9 +5,9 @@ package com.pulumi.awsnative.opensearchservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class DomainMasterUserOptionsArgs extends com.pulumi.resources.Reso
     public static final DomainMasterUserOptionsArgs Empty = new DomainMasterUserOptionsArgs();
 
     @Import(name="masterUserARN")
-      private final @Nullable Output<String> masterUserARN;
+    private @Nullable Output<String> masterUserARN;
 
-    public Output<String> masterUserARN() {
-        return this.masterUserARN == null ? Codegen.empty() : this.masterUserARN;
+    public Optional<Output<String>> masterUserARN() {
+        return Optional.ofNullable(this.masterUserARN);
     }
 
     @Import(name="masterUserName")
-      private final @Nullable Output<String> masterUserName;
+    private @Nullable Output<String> masterUserName;
 
-    public Output<String> masterUserName() {
-        return this.masterUserName == null ? Codegen.empty() : this.masterUserName;
+    public Optional<Output<String>> masterUserName() {
+        return Optional.ofNullable(this.masterUserName);
     }
 
     @Import(name="masterUserPassword")
-      private final @Nullable Output<String> masterUserPassword;
+    private @Nullable Output<String> masterUserPassword;
 
-    public Output<String> masterUserPassword() {
-        return this.masterUserPassword == null ? Codegen.empty() : this.masterUserPassword;
+    public Optional<Output<String>> masterUserPassword() {
+        return Optional.ofNullable(this.masterUserPassword);
     }
 
-    public DomainMasterUserOptionsArgs(
-        @Nullable Output<String> masterUserARN,
-        @Nullable Output<String> masterUserName,
-        @Nullable Output<String> masterUserPassword) {
-        this.masterUserARN = masterUserARN;
-        this.masterUserName = masterUserName;
-        this.masterUserPassword = masterUserPassword;
-    }
+    private DomainMasterUserOptionsArgs() {}
 
-    private DomainMasterUserOptionsArgs() {
-        this.masterUserARN = Codegen.empty();
-        this.masterUserName = Codegen.empty();
-        this.masterUserPassword = Codegen.empty();
+    private DomainMasterUserOptionsArgs(DomainMasterUserOptionsArgs $) {
+        this.masterUserARN = $.masterUserARN;
+        this.masterUserName = $.masterUserName;
+        this.masterUserPassword = $.masterUserPassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMasterUserOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> masterUserARN;
-        private @Nullable Output<String> masterUserName;
-        private @Nullable Output<String> masterUserPassword;
+        private DomainMasterUserOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMasterUserOptionsArgs();
         }
 
         public Builder(DomainMasterUserOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.masterUserARN = defaults.masterUserARN;
-    	      this.masterUserName = defaults.masterUserName;
-    	      this.masterUserPassword = defaults.masterUserPassword;
+            $ = new DomainMasterUserOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder masterUserARN(@Nullable Output<String> masterUserARN) {
-            this.masterUserARN = masterUserARN;
+            $.masterUserARN = masterUserARN;
             return this;
         }
-        public Builder masterUserARN(@Nullable String masterUserARN) {
-            this.masterUserARN = Codegen.ofNullable(masterUserARN);
-            return this;
+
+        public Builder masterUserARN(String masterUserARN) {
+            return masterUserARN(Output.of(masterUserARN));
         }
+
         public Builder masterUserName(@Nullable Output<String> masterUserName) {
-            this.masterUserName = masterUserName;
+            $.masterUserName = masterUserName;
             return this;
         }
-        public Builder masterUserName(@Nullable String masterUserName) {
-            this.masterUserName = Codegen.ofNullable(masterUserName);
-            return this;
+
+        public Builder masterUserName(String masterUserName) {
+            return masterUserName(Output.of(masterUserName));
         }
+
         public Builder masterUserPassword(@Nullable Output<String> masterUserPassword) {
-            this.masterUserPassword = masterUserPassword;
+            $.masterUserPassword = masterUserPassword;
             return this;
         }
-        public Builder masterUserPassword(@Nullable String masterUserPassword) {
-            this.masterUserPassword = Codegen.ofNullable(masterUserPassword);
-            return this;
-        }        public DomainMasterUserOptionsArgs build() {
-            return new DomainMasterUserOptionsArgs(masterUserARN, masterUserName, masterUserPassword);
+
+        public Builder masterUserPassword(String masterUserPassword) {
+            return masterUserPassword(Output.of(masterUserPassword));
+        }
+
+        public DomainMasterUserOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AmiLaunchPermissionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="accountId")
-      private final @Nullable Output<String> accountId;
+    private @Nullable Output<String> accountId;
 
-    public Output<String> accountId() {
-        return this.accountId == null ? Codegen.empty() : this.accountId;
+    public Optional<Output<String>> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class AmiLaunchPermissionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="imageId")
-      private final @Nullable Output<String> imageId;
+    private @Nullable Output<String> imageId;
 
-    public Output<String> imageId() {
-        return this.imageId == null ? Codegen.empty() : this.imageId;
+    public Optional<Output<String>> imageId() {
+        return Optional.ofNullable(this.imageId);
     }
 
-    public AmiLaunchPermissionState(
-        @Nullable Output<String> accountId,
-        @Nullable Output<String> imageId) {
-        this.accountId = accountId;
-        this.imageId = imageId;
-    }
+    private AmiLaunchPermissionState() {}
 
-    private AmiLaunchPermissionState() {
-        this.accountId = Codegen.empty();
-        this.imageId = Codegen.empty();
+    private AmiLaunchPermissionState(AmiLaunchPermissionState $) {
+        this.accountId = $.accountId;
+        this.imageId = $.imageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmiLaunchPermissionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accountId;
-        private @Nullable Output<String> imageId;
+        private AmiLaunchPermissionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmiLaunchPermissionState();
         }
 
         public Builder(AmiLaunchPermissionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.imageId = defaults.imageId;
+            $ = new AmiLaunchPermissionState(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(@Nullable Output<String> accountId) {
-            this.accountId = accountId;
+            $.accountId = accountId;
             return this;
         }
-        public Builder accountId(@Nullable String accountId) {
-            this.accountId = Codegen.ofNullable(accountId);
-            return this;
+
+        public Builder accountId(String accountId) {
+            return accountId(Output.of(accountId));
         }
+
         public Builder imageId(@Nullable Output<String> imageId) {
-            this.imageId = imageId;
+            $.imageId = imageId;
             return this;
         }
-        public Builder imageId(@Nullable String imageId) {
-            this.imageId = Codegen.ofNullable(imageId);
-            return this;
-        }        public AmiLaunchPermissionState build() {
-            return new AmiLaunchPermissionState(accountId, imageId);
+
+        public Builder imageId(String imageId) {
+            return imageId(Output.of(imageId));
+        }
+
+        public AmiLaunchPermissionState build() {
+            return $;
         }
     }
+
 }

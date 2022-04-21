@@ -6,9 +6,9 @@ package com.pulumi.aws.mskconnect;
 import com.pulumi.aws.mskconnect.inputs.CustomPluginLocationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class CustomPluginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType", required=true)
-      private final Output<String> contentType;
+    private Output<String> contentType;
 
     public Output<String> contentType() {
         return this.contentType;
@@ -32,10 +32,10 @@ public final class CustomPluginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class CustomPluginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<CustomPluginLocationArgs> location;
+    private Output<CustomPluginLocationArgs> location;
 
     public Output<CustomPluginLocationArgs> location() {
         return this.location;
@@ -54,89 +54,80 @@ public final class CustomPluginArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public CustomPluginArgs(
-        Output<String> contentType,
-        @Nullable Output<String> description,
-        Output<CustomPluginLocationArgs> location,
-        @Nullable Output<String> name) {
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.description = description;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-    }
+    private CustomPluginArgs() {}
 
-    private CustomPluginArgs() {
-        this.contentType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
+    private CustomPluginArgs(CustomPluginArgs $) {
+        this.contentType = $.contentType;
+        this.description = $.description;
+        this.location = $.location;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomPluginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> contentType;
-        private @Nullable Output<String> description;
-        private Output<CustomPluginLocationArgs> location;
-        private @Nullable Output<String> name;
+        private CustomPluginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomPluginArgs();
         }
 
         public Builder(CustomPluginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.description = defaults.description;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
+            $ = new CustomPluginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(Output<String> contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Output.of(Objects.requireNonNull(contentType));
-            return this;
+            return contentType(Output.of(contentType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder location(Output<CustomPluginLocationArgs> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(CustomPluginLocationArgs location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public CustomPluginArgs build() {
-            return new CustomPluginArgs(contentType, description, location, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public CustomPluginArgs build() {
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

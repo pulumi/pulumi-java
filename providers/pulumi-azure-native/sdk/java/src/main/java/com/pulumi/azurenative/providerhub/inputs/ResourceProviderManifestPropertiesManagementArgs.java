@@ -6,11 +6,11 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.ServiceTreeInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,202 +19,183 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends com.
     public static final ResourceProviderManifestPropertiesManagementArgs Empty = new ResourceProviderManifestPropertiesManagementArgs();
 
     @Import(name="incidentContactEmail")
-      private final @Nullable Output<String> incidentContactEmail;
+    private @Nullable Output<String> incidentContactEmail;
 
-    public Output<String> incidentContactEmail() {
-        return this.incidentContactEmail == null ? Codegen.empty() : this.incidentContactEmail;
+    public Optional<Output<String>> incidentContactEmail() {
+        return Optional.ofNullable(this.incidentContactEmail);
     }
 
     @Import(name="incidentRoutingService")
-      private final @Nullable Output<String> incidentRoutingService;
+    private @Nullable Output<String> incidentRoutingService;
 
-    public Output<String> incidentRoutingService() {
-        return this.incidentRoutingService == null ? Codegen.empty() : this.incidentRoutingService;
+    public Optional<Output<String>> incidentRoutingService() {
+        return Optional.ofNullable(this.incidentRoutingService);
     }
 
     @Import(name="incidentRoutingTeam")
-      private final @Nullable Output<String> incidentRoutingTeam;
+    private @Nullable Output<String> incidentRoutingTeam;
 
-    public Output<String> incidentRoutingTeam() {
-        return this.incidentRoutingTeam == null ? Codegen.empty() : this.incidentRoutingTeam;
+    public Optional<Output<String>> incidentRoutingTeam() {
+        return Optional.ofNullable(this.incidentRoutingTeam);
     }
 
     @Import(name="manifestOwners")
-      private final @Nullable Output<List<String>> manifestOwners;
+    private @Nullable Output<List<String>> manifestOwners;
 
-    public Output<List<String>> manifestOwners() {
-        return this.manifestOwners == null ? Codegen.empty() : this.manifestOwners;
+    public Optional<Output<List<String>>> manifestOwners() {
+        return Optional.ofNullable(this.manifestOwners);
     }
 
     @Import(name="resourceAccessPolicy")
-      private final @Nullable Output<String> resourceAccessPolicy;
+    private @Nullable Output<String> resourceAccessPolicy;
 
-    public Output<String> resourceAccessPolicy() {
-        return this.resourceAccessPolicy == null ? Codegen.empty() : this.resourceAccessPolicy;
+    public Optional<Output<String>> resourceAccessPolicy() {
+        return Optional.ofNullable(this.resourceAccessPolicy);
     }
 
     @Import(name="resourceAccessRoles")
-      private final @Nullable Output<List<Object>> resourceAccessRoles;
+    private @Nullable Output<List<Object>> resourceAccessRoles;
 
-    public Output<List<Object>> resourceAccessRoles() {
-        return this.resourceAccessRoles == null ? Codegen.empty() : this.resourceAccessRoles;
+    public Optional<Output<List<Object>>> resourceAccessRoles() {
+        return Optional.ofNullable(this.resourceAccessRoles);
     }
 
     @Import(name="schemaOwners")
-      private final @Nullable Output<List<String>> schemaOwners;
+    private @Nullable Output<List<String>> schemaOwners;
 
-    public Output<List<String>> schemaOwners() {
-        return this.schemaOwners == null ? Codegen.empty() : this.schemaOwners;
+    public Optional<Output<List<String>>> schemaOwners() {
+        return Optional.ofNullable(this.schemaOwners);
     }
 
     @Import(name="serviceTreeInfos")
-      private final @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos;
+    private @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
-    public Output<List<ServiceTreeInfoArgs>> serviceTreeInfos() {
-        return this.serviceTreeInfos == null ? Codegen.empty() : this.serviceTreeInfos;
+    public Optional<Output<List<ServiceTreeInfoArgs>>> serviceTreeInfos() {
+        return Optional.ofNullable(this.serviceTreeInfos);
     }
 
-    public ResourceProviderManifestPropertiesManagementArgs(
-        @Nullable Output<String> incidentContactEmail,
-        @Nullable Output<String> incidentRoutingService,
-        @Nullable Output<String> incidentRoutingTeam,
-        @Nullable Output<List<String>> manifestOwners,
-        @Nullable Output<String> resourceAccessPolicy,
-        @Nullable Output<List<Object>> resourceAccessRoles,
-        @Nullable Output<List<String>> schemaOwners,
-        @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
-        this.incidentContactEmail = incidentContactEmail;
-        this.incidentRoutingService = incidentRoutingService;
-        this.incidentRoutingTeam = incidentRoutingTeam;
-        this.manifestOwners = manifestOwners;
-        this.resourceAccessPolicy = resourceAccessPolicy;
-        this.resourceAccessRoles = resourceAccessRoles;
-        this.schemaOwners = schemaOwners;
-        this.serviceTreeInfos = serviceTreeInfos;
-    }
+    private ResourceProviderManifestPropertiesManagementArgs() {}
 
-    private ResourceProviderManifestPropertiesManagementArgs() {
-        this.incidentContactEmail = Codegen.empty();
-        this.incidentRoutingService = Codegen.empty();
-        this.incidentRoutingTeam = Codegen.empty();
-        this.manifestOwners = Codegen.empty();
-        this.resourceAccessPolicy = Codegen.empty();
-        this.resourceAccessRoles = Codegen.empty();
-        this.schemaOwners = Codegen.empty();
-        this.serviceTreeInfos = Codegen.empty();
+    private ResourceProviderManifestPropertiesManagementArgs(ResourceProviderManifestPropertiesManagementArgs $) {
+        this.incidentContactEmail = $.incidentContactEmail;
+        this.incidentRoutingService = $.incidentRoutingService;
+        this.incidentRoutingTeam = $.incidentRoutingTeam;
+        this.manifestOwners = $.manifestOwners;
+        this.resourceAccessPolicy = $.resourceAccessPolicy;
+        this.resourceAccessRoles = $.resourceAccessRoles;
+        this.schemaOwners = $.schemaOwners;
+        this.serviceTreeInfos = $.serviceTreeInfos;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceProviderManifestPropertiesManagementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> incidentContactEmail;
-        private @Nullable Output<String> incidentRoutingService;
-        private @Nullable Output<String> incidentRoutingTeam;
-        private @Nullable Output<List<String>> manifestOwners;
-        private @Nullable Output<String> resourceAccessPolicy;
-        private @Nullable Output<List<Object>> resourceAccessRoles;
-        private @Nullable Output<List<String>> schemaOwners;
-        private @Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos;
+        private ResourceProviderManifestPropertiesManagementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceProviderManifestPropertiesManagementArgs();
         }
 
         public Builder(ResourceProviderManifestPropertiesManagementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.incidentContactEmail = defaults.incidentContactEmail;
-    	      this.incidentRoutingService = defaults.incidentRoutingService;
-    	      this.incidentRoutingTeam = defaults.incidentRoutingTeam;
-    	      this.manifestOwners = defaults.manifestOwners;
-    	      this.resourceAccessPolicy = defaults.resourceAccessPolicy;
-    	      this.resourceAccessRoles = defaults.resourceAccessRoles;
-    	      this.schemaOwners = defaults.schemaOwners;
-    	      this.serviceTreeInfos = defaults.serviceTreeInfos;
+            $ = new ResourceProviderManifestPropertiesManagementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder incidentContactEmail(@Nullable Output<String> incidentContactEmail) {
-            this.incidentContactEmail = incidentContactEmail;
+            $.incidentContactEmail = incidentContactEmail;
             return this;
         }
-        public Builder incidentContactEmail(@Nullable String incidentContactEmail) {
-            this.incidentContactEmail = Codegen.ofNullable(incidentContactEmail);
-            return this;
+
+        public Builder incidentContactEmail(String incidentContactEmail) {
+            return incidentContactEmail(Output.of(incidentContactEmail));
         }
+
         public Builder incidentRoutingService(@Nullable Output<String> incidentRoutingService) {
-            this.incidentRoutingService = incidentRoutingService;
+            $.incidentRoutingService = incidentRoutingService;
             return this;
         }
-        public Builder incidentRoutingService(@Nullable String incidentRoutingService) {
-            this.incidentRoutingService = Codegen.ofNullable(incidentRoutingService);
-            return this;
+
+        public Builder incidentRoutingService(String incidentRoutingService) {
+            return incidentRoutingService(Output.of(incidentRoutingService));
         }
+
         public Builder incidentRoutingTeam(@Nullable Output<String> incidentRoutingTeam) {
-            this.incidentRoutingTeam = incidentRoutingTeam;
+            $.incidentRoutingTeam = incidentRoutingTeam;
             return this;
         }
-        public Builder incidentRoutingTeam(@Nullable String incidentRoutingTeam) {
-            this.incidentRoutingTeam = Codegen.ofNullable(incidentRoutingTeam);
-            return this;
+
+        public Builder incidentRoutingTeam(String incidentRoutingTeam) {
+            return incidentRoutingTeam(Output.of(incidentRoutingTeam));
         }
+
         public Builder manifestOwners(@Nullable Output<List<String>> manifestOwners) {
-            this.manifestOwners = manifestOwners;
+            $.manifestOwners = manifestOwners;
             return this;
         }
-        public Builder manifestOwners(@Nullable List<String> manifestOwners) {
-            this.manifestOwners = Codegen.ofNullable(manifestOwners);
-            return this;
+
+        public Builder manifestOwners(List<String> manifestOwners) {
+            return manifestOwners(Output.of(manifestOwners));
         }
+
         public Builder manifestOwners(String... manifestOwners) {
             return manifestOwners(List.of(manifestOwners));
         }
+
         public Builder resourceAccessPolicy(@Nullable Output<String> resourceAccessPolicy) {
-            this.resourceAccessPolicy = resourceAccessPolicy;
+            $.resourceAccessPolicy = resourceAccessPolicy;
             return this;
         }
-        public Builder resourceAccessPolicy(@Nullable String resourceAccessPolicy) {
-            this.resourceAccessPolicy = Codegen.ofNullable(resourceAccessPolicy);
-            return this;
+
+        public Builder resourceAccessPolicy(String resourceAccessPolicy) {
+            return resourceAccessPolicy(Output.of(resourceAccessPolicy));
         }
+
         public Builder resourceAccessRoles(@Nullable Output<List<Object>> resourceAccessRoles) {
-            this.resourceAccessRoles = resourceAccessRoles;
+            $.resourceAccessRoles = resourceAccessRoles;
             return this;
         }
-        public Builder resourceAccessRoles(@Nullable List<Object> resourceAccessRoles) {
-            this.resourceAccessRoles = Codegen.ofNullable(resourceAccessRoles);
-            return this;
+
+        public Builder resourceAccessRoles(List<Object> resourceAccessRoles) {
+            return resourceAccessRoles(Output.of(resourceAccessRoles));
         }
+
         public Builder resourceAccessRoles(Object... resourceAccessRoles) {
             return resourceAccessRoles(List.of(resourceAccessRoles));
         }
+
         public Builder schemaOwners(@Nullable Output<List<String>> schemaOwners) {
-            this.schemaOwners = schemaOwners;
+            $.schemaOwners = schemaOwners;
             return this;
         }
-        public Builder schemaOwners(@Nullable List<String> schemaOwners) {
-            this.schemaOwners = Codegen.ofNullable(schemaOwners);
-            return this;
+
+        public Builder schemaOwners(List<String> schemaOwners) {
+            return schemaOwners(Output.of(schemaOwners));
         }
+
         public Builder schemaOwners(String... schemaOwners) {
             return schemaOwners(List.of(schemaOwners));
         }
+
         public Builder serviceTreeInfos(@Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
-            this.serviceTreeInfos = serviceTreeInfos;
+            $.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
-        public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoArgs> serviceTreeInfos) {
-            this.serviceTreeInfos = Codegen.ofNullable(serviceTreeInfos);
-            return this;
+
+        public Builder serviceTreeInfos(List<ServiceTreeInfoArgs> serviceTreeInfos) {
+            return serviceTreeInfos(Output.of(serviceTreeInfos));
         }
+
         public Builder serviceTreeInfos(ServiceTreeInfoArgs... serviceTreeInfos) {
             return serviceTreeInfos(List.of(serviceTreeInfos));
-        }        public ResourceProviderManifestPropertiesManagementArgs build() {
-            return new ResourceProviderManifestPropertiesManagementArgs(incidentContactEmail, incidentRoutingService, incidentRoutingTeam, manifestOwners, resourceAccessPolicy, resourceAccessRoles, schemaOwners, serviceTreeInfos);
+        }
+
+        public ResourceProviderManifestPropertiesManagementArgs build() {
+            return $;
         }
     }
+
 }

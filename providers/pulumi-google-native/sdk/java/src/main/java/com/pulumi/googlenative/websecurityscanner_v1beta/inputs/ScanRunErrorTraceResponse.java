@@ -23,7 +23,7 @@ public final class ScanRunErrorTraceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -34,7 +34,7 @@ public final class ScanRunErrorTraceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="mostCommonHttpErrorCode", required=true)
-      private final Integer mostCommonHttpErrorCode;
+    private Integer mostCommonHttpErrorCode;
 
     public Integer mostCommonHttpErrorCode() {
         return this.mostCommonHttpErrorCode;
@@ -45,64 +45,59 @@ public final class ScanRunErrorTraceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="scanConfigError", required=true)
-      private final ScanConfigErrorResponse scanConfigError;
+    private ScanConfigErrorResponse scanConfigError;
 
     public ScanConfigErrorResponse scanConfigError() {
         return this.scanConfigError;
     }
 
-    public ScanRunErrorTraceResponse(
-        String code,
-        Integer mostCommonHttpErrorCode,
-        ScanConfigErrorResponse scanConfigError) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.mostCommonHttpErrorCode = Objects.requireNonNull(mostCommonHttpErrorCode, "expected parameter 'mostCommonHttpErrorCode' to be non-null");
-        this.scanConfigError = Objects.requireNonNull(scanConfigError, "expected parameter 'scanConfigError' to be non-null");
-    }
+    private ScanRunErrorTraceResponse() {}
 
-    private ScanRunErrorTraceResponse() {
-        this.code = null;
-        this.mostCommonHttpErrorCode = null;
-        this.scanConfigError = null;
+    private ScanRunErrorTraceResponse(ScanRunErrorTraceResponse $) {
+        this.code = $.code;
+        this.mostCommonHttpErrorCode = $.mostCommonHttpErrorCode;
+        this.scanConfigError = $.scanConfigError;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScanRunErrorTraceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private Integer mostCommonHttpErrorCode;
-        private ScanConfigErrorResponse scanConfigError;
+        private ScanRunErrorTraceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScanRunErrorTraceResponse();
         }
 
         public Builder(ScanRunErrorTraceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.mostCommonHttpErrorCode = defaults.mostCommonHttpErrorCode;
-    	      this.scanConfigError = defaults.scanConfigError;
+            $ = new ScanRunErrorTraceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder mostCommonHttpErrorCode(Integer mostCommonHttpErrorCode) {
-            this.mostCommonHttpErrorCode = Objects.requireNonNull(mostCommonHttpErrorCode);
+            $.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
             return this;
         }
+
         public Builder scanConfigError(ScanConfigErrorResponse scanConfigError) {
-            this.scanConfigError = Objects.requireNonNull(scanConfigError);
+            $.scanConfigError = scanConfigError;
             return this;
-        }        public ScanRunErrorTraceResponse build() {
-            return new ScanRunErrorTraceResponse(code, mostCommonHttpErrorCode, scanConfigError);
+        }
+
+        public ScanRunErrorTraceResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.mostCommonHttpErrorCode = Objects.requireNonNull($.mostCommonHttpErrorCode, "expected parameter 'mostCommonHttpErrorCode' to be non-null");
+            $.scanConfigError = Objects.requireNonNull($.scanConfigError, "expected parameter 'scanConfigError' to be non-null");
+            return $;
         }
     }
+
 }

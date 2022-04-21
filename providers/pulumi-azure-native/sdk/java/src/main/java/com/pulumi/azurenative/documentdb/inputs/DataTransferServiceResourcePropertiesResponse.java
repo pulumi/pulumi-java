@@ -27,7 +27,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
      * 
      */
     @Import(name="creationTime", required=true)
-      private final String creationTime;
+    private String creationTime;
 
     public String creationTime() {
         return this.creationTime;
@@ -38,10 +38,10 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Integer instanceCount;
+    private @Nullable Integer instanceCount;
 
     public Optional<Integer> instanceCount() {
-        return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
+        return Optional.ofNullable(this.instanceCount);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
      * 
      */
     @Import(name="instanceSize")
-      private final @Nullable String instanceSize;
+    private @Nullable String instanceSize;
 
     public Optional<String> instanceSize() {
-        return this.instanceSize == null ? Optional.empty() : Optional.ofNullable(this.instanceSize);
+        return Optional.ofNullable(this.instanceSize);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
      * 
      */
     @Import(name="locations", required=true)
-      private final List<DataTransferRegionalServiceResourceResponse> locations;
+    private List<DataTransferRegionalServiceResourceResponse> locations;
 
     public List<DataTransferRegionalServiceResourceResponse> locations() {
         return this.locations;
@@ -72,7 +72,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
      * 
      */
     @Import(name="serviceType", required=true)
-      private final String serviceType;
+    private String serviceType;
 
     public String serviceType() {
         return this.serviceType;
@@ -83,94 +83,82 @@ public final class DataTransferServiceResourcePropertiesResponse extends com.pul
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public DataTransferServiceResourcePropertiesResponse(
-        String creationTime,
-        @Nullable Integer instanceCount,
-        @Nullable String instanceSize,
-        List<DataTransferRegionalServiceResourceResponse> locations,
-        String serviceType,
-        String status) {
-        this.creationTime = Objects.requireNonNull(creationTime, "expected parameter 'creationTime' to be non-null");
-        this.instanceCount = instanceCount;
-        this.instanceSize = instanceSize;
-        this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-        this.serviceType = Codegen.stringProp("serviceType").arg(serviceType).require();
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private DataTransferServiceResourcePropertiesResponse() {}
 
-    private DataTransferServiceResourcePropertiesResponse() {
-        this.creationTime = null;
-        this.instanceCount = null;
-        this.instanceSize = null;
-        this.locations = List.of();
-        this.serviceType = null;
-        this.status = null;
+    private DataTransferServiceResourcePropertiesResponse(DataTransferServiceResourcePropertiesResponse $) {
+        this.creationTime = $.creationTime;
+        this.instanceCount = $.instanceCount;
+        this.instanceSize = $.instanceSize;
+        this.locations = $.locations;
+        this.serviceType = $.serviceType;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataTransferServiceResourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String creationTime;
-        private @Nullable Integer instanceCount;
-        private @Nullable String instanceSize;
-        private List<DataTransferRegionalServiceResourceResponse> locations;
-        private String serviceType;
-        private String status;
+        private DataTransferServiceResourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataTransferServiceResourcePropertiesResponse();
         }
 
         public Builder(DataTransferServiceResourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceSize = defaults.instanceSize;
-    	      this.locations = defaults.locations;
-    	      this.serviceType = defaults.serviceType;
-    	      this.status = defaults.status;
+            $ = new DataTransferServiceResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(String creationTime) {
-            this.creationTime = Objects.requireNonNull(creationTime);
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
+
         public Builder instanceSize(@Nullable String instanceSize) {
-            this.instanceSize = instanceSize;
+            $.instanceSize = instanceSize;
             return this;
         }
+
         public Builder locations(List<DataTransferRegionalServiceResourceResponse> locations) {
-            this.locations = Objects.requireNonNull(locations);
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(DataTransferRegionalServiceResourceResponse... locations) {
             return locations(List.of(locations));
         }
+
         public Builder serviceType(String serviceType) {
-            this.serviceType = Objects.requireNonNull(serviceType);
+            $.serviceType = serviceType;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public DataTransferServiceResourcePropertiesResponse build() {
-            return new DataTransferServiceResourcePropertiesResponse(creationTime, instanceCount, instanceSize, locations, serviceType, status);
+        }
+
+        public DataTransferServiceResourcePropertiesResponse build() {
+            $.creationTime = Objects.requireNonNull($.creationTime, "expected parameter 'creationTime' to be non-null");
+            $.locations = Objects.requireNonNull($.locations, "expected parameter 'locations' to be non-null");
+            $.serviceType = Codegen.stringProp("serviceType").arg($.serviceType).require();
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

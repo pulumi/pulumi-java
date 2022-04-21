@@ -5,10 +5,10 @@ package com.pulumi.gcp.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiConfig", required=true)
-      private final Output<String> apiConfig;
+    private Output<String> apiConfig;
 
     public Output<String> apiConfig() {
         return this.apiConfig;
@@ -33,10 +33,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final Output<String> gatewayId;
+    private Output<String> gatewayId;
 
     public Output<String> gatewayId() {
         return this.gatewayId;
@@ -55,10 +55,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -78,115 +78,100 @@ public final class GatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public GatewayArgs(
-        Output<String> apiConfig,
-        @Nullable Output<String> displayName,
-        Output<String> gatewayId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.apiConfig = Objects.requireNonNull(apiConfig, "expected parameter 'apiConfig' to be non-null");
-        this.displayName = displayName;
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-        this.labels = labels;
-        this.project = project;
-        this.region = region;
-    }
+    private GatewayArgs() {}
 
-    private GatewayArgs() {
-        this.apiConfig = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.gatewayId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private GatewayArgs(GatewayArgs $) {
+        this.apiConfig = $.apiConfig;
+        this.displayName = $.displayName;
+        this.gatewayId = $.gatewayId;
+        this.labels = $.labels;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiConfig;
-        private @Nullable Output<String> displayName;
-        private Output<String> gatewayId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private GatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayArgs();
         }
 
         public Builder(GatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiConfig = defaults.apiConfig;
-    	      this.displayName = defaults.displayName;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.labels = defaults.labels;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiConfig(Output<String> apiConfig) {
-            this.apiConfig = Objects.requireNonNull(apiConfig);
+            $.apiConfig = apiConfig;
             return this;
         }
+
         public Builder apiConfig(String apiConfig) {
-            this.apiConfig = Output.of(Objects.requireNonNull(apiConfig));
-            return this;
+            return apiConfig(Output.of(apiConfig));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder gatewayId(Output<String> gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
-            return this;
+            return gatewayId(Output.of(gatewayId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public GatewayArgs build() {
-            return new GatewayArgs(apiConfig, displayName, gatewayId, labels, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public GatewayArgs build() {
+            $.apiConfig = Objects.requireNonNull($.apiConfig, "expected parameter 'apiConfig' to be non-null");
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,10 +22,10 @@ public final class GetVpcsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpcsFilter> filters;
+    private @Nullable List<GetVpcsFilter> filters;
 
-    public List<GetVpcsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpcsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,58 +34,54 @@ public final class GetVpcsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVpcsArgs(
-        @Nullable List<GetVpcsFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetVpcsArgs() {}
 
-    private GetVpcsArgs() {
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetVpcsArgs(GetVpcsArgs $) {
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetVpcsFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetVpcsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcsArgs();
         }
 
         public Builder(GetVpcsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetVpcsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetVpcsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpcsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVpcsArgs build() {
-            return new GetVpcsArgs(filters, tags);
+        }
+
+        public GetVpcsArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,73 +26,70 @@ public final class BotResponseSpecificationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="allowInterrupt")
-      private final @Nullable Output<Boolean> allowInterrupt;
+    private @Nullable Output<Boolean> allowInterrupt;
 
-    public Output<Boolean> allowInterrupt() {
-        return this.allowInterrupt == null ? Codegen.empty() : this.allowInterrupt;
+    public Optional<Output<Boolean>> allowInterrupt() {
+        return Optional.ofNullable(this.allowInterrupt);
     }
 
     @Import(name="messageGroupsList", required=true)
-      private final Output<List<BotMessageGroupArgs>> messageGroupsList;
+    private Output<List<BotMessageGroupArgs>> messageGroupsList;
 
     public Output<List<BotMessageGroupArgs>> messageGroupsList() {
         return this.messageGroupsList;
     }
 
-    public BotResponseSpecificationArgs(
-        @Nullable Output<Boolean> allowInterrupt,
-        Output<List<BotMessageGroupArgs>> messageGroupsList) {
-        this.allowInterrupt = allowInterrupt;
-        this.messageGroupsList = Objects.requireNonNull(messageGroupsList, "expected parameter 'messageGroupsList' to be non-null");
-    }
+    private BotResponseSpecificationArgs() {}
 
-    private BotResponseSpecificationArgs() {
-        this.allowInterrupt = Codegen.empty();
-        this.messageGroupsList = Codegen.empty();
+    private BotResponseSpecificationArgs(BotResponseSpecificationArgs $) {
+        this.allowInterrupt = $.allowInterrupt;
+        this.messageGroupsList = $.messageGroupsList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotResponseSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowInterrupt;
-        private Output<List<BotMessageGroupArgs>> messageGroupsList;
+        private BotResponseSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotResponseSpecificationArgs();
         }
 
         public Builder(BotResponseSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowInterrupt = defaults.allowInterrupt;
-    	      this.messageGroupsList = defaults.messageGroupsList;
+            $ = new BotResponseSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowInterrupt(@Nullable Output<Boolean> allowInterrupt) {
-            this.allowInterrupt = allowInterrupt;
+            $.allowInterrupt = allowInterrupt;
             return this;
         }
-        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
-            this.allowInterrupt = Codegen.ofNullable(allowInterrupt);
-            return this;
+
+        public Builder allowInterrupt(Boolean allowInterrupt) {
+            return allowInterrupt(Output.of(allowInterrupt));
         }
+
         public Builder messageGroupsList(Output<List<BotMessageGroupArgs>> messageGroupsList) {
-            this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
+            $.messageGroupsList = messageGroupsList;
             return this;
         }
+
         public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
-            this.messageGroupsList = Output.of(Objects.requireNonNull(messageGroupsList));
-            return this;
+            return messageGroupsList(Output.of(messageGroupsList));
         }
+
         public Builder messageGroupsList(BotMessageGroupArgs... messageGroupsList) {
             return messageGroupsList(List.of(messageGroupsList));
-        }        public BotResponseSpecificationArgs build() {
-            return new BotResponseSpecificationArgs(allowInterrupt, messageGroupsList);
+        }
+
+        public BotResponseSpecificationArgs build() {
+            $.messageGroupsList = Objects.requireNonNull($.messageGroupsList, "expected parameter 'messageGroupsList' to be non-null");
+            return $;
         }
     }
+
 }

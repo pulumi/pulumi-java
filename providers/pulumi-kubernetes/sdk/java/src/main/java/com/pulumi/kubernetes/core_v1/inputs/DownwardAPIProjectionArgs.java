@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.DownwardAPIVolumeFileArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DownwardAPIProjectionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
+    private @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
-    public Output<List<DownwardAPIVolumeFileArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<DownwardAPIVolumeFileArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public DownwardAPIProjectionArgs(@Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
-        this.items = items;
-    }
+    private DownwardAPIProjectionArgs() {}
 
-    private DownwardAPIProjectionArgs() {
-        this.items = Codegen.empty();
+    private DownwardAPIProjectionArgs(DownwardAPIProjectionArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DownwardAPIProjectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
+        private DownwardAPIProjectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DownwardAPIProjectionArgs();
         }
 
         public Builder(DownwardAPIProjectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new DownwardAPIProjectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<DownwardAPIVolumeFileArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<DownwardAPIVolumeFileArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<DownwardAPIVolumeFileArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(DownwardAPIVolumeFileArgs... items) {
             return items(List.of(items));
-        }        public DownwardAPIProjectionArgs build() {
-            return new DownwardAPIProjectionArgs(items);
+        }
+
+        public DownwardAPIProjectionArgs build() {
+            return $;
         }
     }
+
 }

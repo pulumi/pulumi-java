@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storage_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storage_v1.inputs.DefaultObjectAccessControlProjectTeamArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -32,10 +32,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="entity")
-      private final @Nullable Output<String> entity;
+    private @Nullable Output<String> entity;
 
-    public Output<String> entity() {
-        return this.entity == null ? Codegen.empty() : this.entity;
+    public Optional<Output<String>> entity() {
+        return Optional.ofNullable(this.entity);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="entityId")
-      private final @Nullable Output<String> entityId;
+    private @Nullable Output<String> entityId;
 
-    public Output<String> entityId() {
-        return this.entityId == null ? Codegen.empty() : this.entityId;
+    public Optional<Output<String>> entityId() {
+        return Optional.ofNullable(this.entityId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="generation")
-      private final @Nullable Output<String> generation;
+    private @Nullable Output<String> generation;
 
-    public Output<String> generation() {
-        return this.generation == null ? Codegen.empty() : this.generation;
+    public Optional<Output<String>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="object")
-      private final @Nullable Output<String> object;
+    private @Nullable Output<String> object;
 
-    public Output<String> object() {
-        return this.object == null ? Codegen.empty() : this.object;
+    public Optional<Output<String>> object() {
+        return Optional.ofNullable(this.object);
     }
 
     /**
@@ -142,17 +142,17 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="projectTeam")
-      private final @Nullable Output<DefaultObjectAccessControlProjectTeamArgs> projectTeam;
+    private @Nullable Output<DefaultObjectAccessControlProjectTeamArgs> projectTeam;
 
-    public Output<DefaultObjectAccessControlProjectTeamArgs> projectTeam() {
-        return this.projectTeam == null ? Codegen.empty() : this.projectTeam;
+    public Optional<Output<DefaultObjectAccessControlProjectTeamArgs>> projectTeam() {
+        return Optional.ofNullable(this.projectTeam);
     }
 
     @Import(name="provisionalUserProject")
-      private final @Nullable Output<String> provisionalUserProject;
+    private @Nullable Output<String> provisionalUserProject;
 
-    public Output<String> provisionalUserProject() {
-        return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
+    public Optional<Output<String>> provisionalUserProject() {
+        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -171,239 +171,196 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     @Import(name="userProject")
-      private final @Nullable Output<String> userProject;
+    private @Nullable Output<String> userProject;
 
-    public Output<String> userProject() {
-        return this.userProject == null ? Codegen.empty() : this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
-    public DefaultObjectAccessControlArgs(
-        Output<String> bucket,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> email,
-        @Nullable Output<String> entity,
-        @Nullable Output<String> entityId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> generation,
-        @Nullable Output<String> id,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> object,
-        @Nullable Output<DefaultObjectAccessControlProjectTeamArgs> projectTeam,
-        @Nullable Output<String> provisionalUserProject,
-        @Nullable Output<String> role,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> userProject) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.domain = domain;
-        this.email = email;
-        this.entity = entity;
-        this.entityId = entityId;
-        this.etag = etag;
-        this.generation = generation;
-        this.id = id;
-        this.kind = kind;
-        this.object = object;
-        this.projectTeam = projectTeam;
-        this.provisionalUserProject = provisionalUserProject;
-        this.role = role;
-        this.selfLink = selfLink;
-        this.userProject = userProject;
-    }
+    private DefaultObjectAccessControlArgs() {}
 
-    private DefaultObjectAccessControlArgs() {
-        this.bucket = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.email = Codegen.empty();
-        this.entity = Codegen.empty();
-        this.entityId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.generation = Codegen.empty();
-        this.id = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.object = Codegen.empty();
-        this.projectTeam = Codegen.empty();
-        this.provisionalUserProject = Codegen.empty();
-        this.role = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.userProject = Codegen.empty();
+    private DefaultObjectAccessControlArgs(DefaultObjectAccessControlArgs $) {
+        this.bucket = $.bucket;
+        this.domain = $.domain;
+        this.email = $.email;
+        this.entity = $.entity;
+        this.entityId = $.entityId;
+        this.etag = $.etag;
+        this.generation = $.generation;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.object = $.object;
+        this.projectTeam = $.projectTeam;
+        this.provisionalUserProject = $.provisionalUserProject;
+        this.role = $.role;
+        this.selfLink = $.selfLink;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultObjectAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> entity;
-        private @Nullable Output<String> entityId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> generation;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> object;
-        private @Nullable Output<DefaultObjectAccessControlProjectTeamArgs> projectTeam;
-        private @Nullable Output<String> provisionalUserProject;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> userProject;
+        private DefaultObjectAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultObjectAccessControlArgs();
         }
 
         public Builder(DefaultObjectAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.domain = defaults.domain;
-    	      this.email = defaults.email;
-    	      this.entity = defaults.entity;
-    	      this.entityId = defaults.entityId;
-    	      this.etag = defaults.etag;
-    	      this.generation = defaults.generation;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.object = defaults.object;
-    	      this.projectTeam = defaults.projectTeam;
-    	      this.provisionalUserProject = defaults.provisionalUserProject;
-    	      this.role = defaults.role;
-    	      this.selfLink = defaults.selfLink;
-    	      this.userProject = defaults.userProject;
+            $ = new DefaultObjectAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder entity(@Nullable Output<String> entity) {
-            this.entity = entity;
+            $.entity = entity;
             return this;
         }
-        public Builder entity(@Nullable String entity) {
-            this.entity = Codegen.ofNullable(entity);
-            return this;
+
+        public Builder entity(String entity) {
+            return entity(Output.of(entity));
         }
+
         public Builder entityId(@Nullable Output<String> entityId) {
-            this.entityId = entityId;
+            $.entityId = entityId;
             return this;
         }
-        public Builder entityId(@Nullable String entityId) {
-            this.entityId = Codegen.ofNullable(entityId);
-            return this;
+
+        public Builder entityId(String entityId) {
+            return entityId(Output.of(entityId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder generation(@Nullable Output<String> generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
-        public Builder generation(@Nullable String generation) {
-            this.generation = Codegen.ofNullable(generation);
-            return this;
+
+        public Builder generation(String generation) {
+            return generation(Output.of(generation));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder object(@Nullable Output<String> object) {
-            this.object = object;
+            $.object = object;
             return this;
         }
-        public Builder object(@Nullable String object) {
-            this.object = Codegen.ofNullable(object);
-            return this;
+
+        public Builder object(String object) {
+            return object(Output.of(object));
         }
+
         public Builder projectTeam(@Nullable Output<DefaultObjectAccessControlProjectTeamArgs> projectTeam) {
-            this.projectTeam = projectTeam;
+            $.projectTeam = projectTeam;
             return this;
         }
-        public Builder projectTeam(@Nullable DefaultObjectAccessControlProjectTeamArgs projectTeam) {
-            this.projectTeam = Codegen.ofNullable(projectTeam);
-            return this;
+
+        public Builder projectTeam(DefaultObjectAccessControlProjectTeamArgs projectTeam) {
+            return projectTeam(Output.of(projectTeam));
         }
+
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
-            this.provisionalUserProject = provisionalUserProject;
+            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
-        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = Codegen.ofNullable(provisionalUserProject);
-            return this;
+
+        public Builder provisionalUserProject(String provisionalUserProject) {
+            return provisionalUserProject(Output.of(provisionalUserProject));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder userProject(@Nullable Output<String> userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
         }
-        public Builder userProject(@Nullable String userProject) {
-            this.userProject = Codegen.ofNullable(userProject);
-            return this;
-        }        public DefaultObjectAccessControlArgs build() {
-            return new DefaultObjectAccessControlArgs(bucket, domain, email, entity, entityId, etag, generation, id, kind, object, projectTeam, provisionalUserProject, role, selfLink, userProject);
+
+        public Builder userProject(String userProject) {
+            return userProject(Output.of(userProject));
+        }
+
+        public DefaultObjectAccessControlArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

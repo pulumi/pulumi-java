@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.enums.WebhookConfigState;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class WebhookConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret", required=true)
-      private final Output<String> secret;
+    private Output<String> secret;
 
     public Output<String> secret() {
         return this.secret;
@@ -36,63 +36,59 @@ public final class WebhookConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<WebhookConfigState> state;
+    private @Nullable Output<WebhookConfigState> state;
 
-    public Output<WebhookConfigState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<WebhookConfigState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public WebhookConfigArgs(
-        Output<String> secret,
-        @Nullable Output<WebhookConfigState> state) {
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-        this.state = state;
-    }
+    private WebhookConfigArgs() {}
 
-    private WebhookConfigArgs() {
-        this.secret = Codegen.empty();
-        this.state = Codegen.empty();
+    private WebhookConfigArgs(WebhookConfigArgs $) {
+        this.secret = $.secret;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebhookConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> secret;
-        private @Nullable Output<WebhookConfigState> state;
+        private WebhookConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebhookConfigArgs();
         }
 
         public Builder(WebhookConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secret = defaults.secret;
-    	      this.state = defaults.state;
+            $ = new WebhookConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secret(Output<String> secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Output.of(Objects.requireNonNull(secret));
-            return this;
+            return secret(Output.of(secret));
         }
+
         public Builder state(@Nullable Output<WebhookConfigState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable WebhookConfigState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public WebhookConfigArgs build() {
-            return new WebhookConfigArgs(secret, state);
+
+        public Builder state(WebhookConfigState state) {
+            return state(Output.of(state));
+        }
+
+        public WebhookConfigArgs build() {
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

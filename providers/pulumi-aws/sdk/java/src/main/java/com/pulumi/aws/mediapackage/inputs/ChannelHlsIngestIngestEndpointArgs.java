@@ -5,9 +5,9 @@ package com.pulumi.aws.mediapackage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ChannelHlsIngestIngestEndpointArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ChannelHlsIngestIngestEndpointArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class ChannelHlsIngestIngestEndpointArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public ChannelHlsIngestIngestEndpointArgs(
-        @Nullable Output<String> password,
-        @Nullable Output<String> url,
-        @Nullable Output<String> username) {
-        this.password = password;
-        this.url = url;
-        this.username = username;
-    }
+    private ChannelHlsIngestIngestEndpointArgs() {}
 
-    private ChannelHlsIngestIngestEndpointArgs() {
-        this.password = Codegen.empty();
-        this.url = Codegen.empty();
-        this.username = Codegen.empty();
+    private ChannelHlsIngestIngestEndpointArgs(ChannelHlsIngestIngestEndpointArgs $) {
+        this.password = $.password;
+        this.url = $.url;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelHlsIngestIngestEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> url;
-        private @Nullable Output<String> username;
+        private ChannelHlsIngestIngestEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelHlsIngestIngestEndpointArgs();
         }
 
         public Builder(ChannelHlsIngestIngestEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.url = defaults.url;
-    	      this.username = defaults.username;
+            $ = new ChannelHlsIngestIngestEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
+
+        public Builder url(String url) {
+            return url(Output.of(url));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public ChannelHlsIngestIngestEndpointArgs build() {
-            return new ChannelHlsIngestIngestEndpointArgs(password, url, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public ChannelHlsIngestIngestEndpointArgs build() {
+            return $;
         }
     }
+
 }

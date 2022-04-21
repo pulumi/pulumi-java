@@ -22,7 +22,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="bootOption", required=true)
-      private final String bootOption;
+    private String bootOption;
 
     public String bootOption() {
         return this.bootOption;
@@ -33,7 +33,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="committedStorageMb", required=true)
-      private final String committedStorageMb;
+    private String committedStorageMb;
 
     public String committedStorageMb() {
         return this.committedStorageMb;
@@ -44,7 +44,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="cpuCount", required=true)
-      private final Integer cpuCount;
+    private Integer cpuCount;
 
     public Integer cpuCount() {
         return this.cpuCount;
@@ -55,7 +55,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="datacenterDescription", required=true)
-      private final String datacenterDescription;
+    private String datacenterDescription;
 
     public String datacenterDescription() {
         return this.datacenterDescription;
@@ -66,7 +66,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="datacenterId", required=true)
-      private final String datacenterId;
+    private String datacenterId;
 
     public String datacenterId() {
         return this.datacenterId;
@@ -77,7 +77,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="diskCount", required=true)
-      private final Integer diskCount;
+    private Integer diskCount;
 
     public Integer diskCount() {
         return this.diskCount;
@@ -88,7 +88,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -99,7 +99,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="guestDescription", required=true)
-      private final String guestDescription;
+    private String guestDescription;
 
     public String guestDescription() {
         return this.guestDescription;
@@ -110,7 +110,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="memoryMb", required=true)
-      private final Integer memoryMb;
+    private Integer memoryMb;
 
     public Integer memoryMb() {
         return this.memoryMb;
@@ -121,7 +121,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="powerState", required=true)
-      private final String powerState;
+    private String powerState;
 
     public String powerState() {
         return this.powerState;
@@ -132,7 +132,7 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="uuid", required=true)
-      private final String uuid;
+    private String uuid;
 
     public String uuid() {
         return this.uuid;
@@ -143,145 +143,122 @@ public final class VmwareVmDetailsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="vmId", required=true)
-      private final String vmId;
+    private String vmId;
 
     public String vmId() {
         return this.vmId;
     }
 
-    public VmwareVmDetailsResponse(
-        String bootOption,
-        String committedStorageMb,
-        Integer cpuCount,
-        String datacenterDescription,
-        String datacenterId,
-        Integer diskCount,
-        String displayName,
-        String guestDescription,
-        Integer memoryMb,
-        String powerState,
-        String uuid,
-        String vmId) {
-        this.bootOption = Objects.requireNonNull(bootOption, "expected parameter 'bootOption' to be non-null");
-        this.committedStorageMb = Objects.requireNonNull(committedStorageMb, "expected parameter 'committedStorageMb' to be non-null");
-        this.cpuCount = Objects.requireNonNull(cpuCount, "expected parameter 'cpuCount' to be non-null");
-        this.datacenterDescription = Objects.requireNonNull(datacenterDescription, "expected parameter 'datacenterDescription' to be non-null");
-        this.datacenterId = Objects.requireNonNull(datacenterId, "expected parameter 'datacenterId' to be non-null");
-        this.diskCount = Objects.requireNonNull(diskCount, "expected parameter 'diskCount' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.guestDescription = Objects.requireNonNull(guestDescription, "expected parameter 'guestDescription' to be non-null");
-        this.memoryMb = Objects.requireNonNull(memoryMb, "expected parameter 'memoryMb' to be non-null");
-        this.powerState = Objects.requireNonNull(powerState, "expected parameter 'powerState' to be non-null");
-        this.uuid = Objects.requireNonNull(uuid, "expected parameter 'uuid' to be non-null");
-        this.vmId = Objects.requireNonNull(vmId, "expected parameter 'vmId' to be non-null");
-    }
+    private VmwareVmDetailsResponse() {}
 
-    private VmwareVmDetailsResponse() {
-        this.bootOption = null;
-        this.committedStorageMb = null;
-        this.cpuCount = null;
-        this.datacenterDescription = null;
-        this.datacenterId = null;
-        this.diskCount = null;
-        this.displayName = null;
-        this.guestDescription = null;
-        this.memoryMb = null;
-        this.powerState = null;
-        this.uuid = null;
-        this.vmId = null;
+    private VmwareVmDetailsResponse(VmwareVmDetailsResponse $) {
+        this.bootOption = $.bootOption;
+        this.committedStorageMb = $.committedStorageMb;
+        this.cpuCount = $.cpuCount;
+        this.datacenterDescription = $.datacenterDescription;
+        this.datacenterId = $.datacenterId;
+        this.diskCount = $.diskCount;
+        this.displayName = $.displayName;
+        this.guestDescription = $.guestDescription;
+        this.memoryMb = $.memoryMb;
+        this.powerState = $.powerState;
+        this.uuid = $.uuid;
+        this.vmId = $.vmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmwareVmDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bootOption;
-        private String committedStorageMb;
-        private Integer cpuCount;
-        private String datacenterDescription;
-        private String datacenterId;
-        private Integer diskCount;
-        private String displayName;
-        private String guestDescription;
-        private Integer memoryMb;
-        private String powerState;
-        private String uuid;
-        private String vmId;
+        private VmwareVmDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmwareVmDetailsResponse();
         }
 
         public Builder(VmwareVmDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootOption = defaults.bootOption;
-    	      this.committedStorageMb = defaults.committedStorageMb;
-    	      this.cpuCount = defaults.cpuCount;
-    	      this.datacenterDescription = defaults.datacenterDescription;
-    	      this.datacenterId = defaults.datacenterId;
-    	      this.diskCount = defaults.diskCount;
-    	      this.displayName = defaults.displayName;
-    	      this.guestDescription = defaults.guestDescription;
-    	      this.memoryMb = defaults.memoryMb;
-    	      this.powerState = defaults.powerState;
-    	      this.uuid = defaults.uuid;
-    	      this.vmId = defaults.vmId;
+            $ = new VmwareVmDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bootOption(String bootOption) {
-            this.bootOption = Objects.requireNonNull(bootOption);
+            $.bootOption = bootOption;
             return this;
         }
+
         public Builder committedStorageMb(String committedStorageMb) {
-            this.committedStorageMb = Objects.requireNonNull(committedStorageMb);
+            $.committedStorageMb = committedStorageMb;
             return this;
         }
+
         public Builder cpuCount(Integer cpuCount) {
-            this.cpuCount = Objects.requireNonNull(cpuCount);
+            $.cpuCount = cpuCount;
             return this;
         }
+
         public Builder datacenterDescription(String datacenterDescription) {
-            this.datacenterDescription = Objects.requireNonNull(datacenterDescription);
+            $.datacenterDescription = datacenterDescription;
             return this;
         }
+
         public Builder datacenterId(String datacenterId) {
-            this.datacenterId = Objects.requireNonNull(datacenterId);
+            $.datacenterId = datacenterId;
             return this;
         }
+
         public Builder diskCount(Integer diskCount) {
-            this.diskCount = Objects.requireNonNull(diskCount);
+            $.diskCount = diskCount;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder guestDescription(String guestDescription) {
-            this.guestDescription = Objects.requireNonNull(guestDescription);
+            $.guestDescription = guestDescription;
             return this;
         }
+
         public Builder memoryMb(Integer memoryMb) {
-            this.memoryMb = Objects.requireNonNull(memoryMb);
+            $.memoryMb = memoryMb;
             return this;
         }
+
         public Builder powerState(String powerState) {
-            this.powerState = Objects.requireNonNull(powerState);
+            $.powerState = powerState;
             return this;
         }
+
         public Builder uuid(String uuid) {
-            this.uuid = Objects.requireNonNull(uuid);
+            $.uuid = uuid;
             return this;
         }
+
         public Builder vmId(String vmId) {
-            this.vmId = Objects.requireNonNull(vmId);
+            $.vmId = vmId;
             return this;
-        }        public VmwareVmDetailsResponse build() {
-            return new VmwareVmDetailsResponse(bootOption, committedStorageMb, cpuCount, datacenterDescription, datacenterId, diskCount, displayName, guestDescription, memoryMb, powerState, uuid, vmId);
+        }
+
+        public VmwareVmDetailsResponse build() {
+            $.bootOption = Objects.requireNonNull($.bootOption, "expected parameter 'bootOption' to be non-null");
+            $.committedStorageMb = Objects.requireNonNull($.committedStorageMb, "expected parameter 'committedStorageMb' to be non-null");
+            $.cpuCount = Objects.requireNonNull($.cpuCount, "expected parameter 'cpuCount' to be non-null");
+            $.datacenterDescription = Objects.requireNonNull($.datacenterDescription, "expected parameter 'datacenterDescription' to be non-null");
+            $.datacenterId = Objects.requireNonNull($.datacenterId, "expected parameter 'datacenterId' to be non-null");
+            $.diskCount = Objects.requireNonNull($.diskCount, "expected parameter 'diskCount' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.guestDescription = Objects.requireNonNull($.guestDescription, "expected parameter 'guestDescription' to be non-null");
+            $.memoryMb = Objects.requireNonNull($.memoryMb, "expected parameter 'memoryMb' to be non-null");
+            $.powerState = Objects.requireNonNull($.powerState, "expected parameter 'powerState' to be non-null");
+            $.uuid = Objects.requireNonNull($.uuid, "expected parameter 'uuid' to be non-null");
+            $.vmId = Objects.requireNonNull($.vmId, "expected parameter 'vmId' to be non-null");
+            return $;
         }
     }
+
 }

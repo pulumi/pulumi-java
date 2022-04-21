@@ -23,10 +23,10 @@ public final class ResourceGroupValueResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ResourceGroupValueResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public ResourceGroupValueResponse(
-        @Nullable String location,
-        @Nullable String name) {
-        this.location = location;
-        this.name = name;
-    }
+    private ResourceGroupValueResponse() {}
 
-    private ResourceGroupValueResponse() {
-        this.location = null;
-        this.name = null;
+    private ResourceGroupValueResponse(ResourceGroupValueResponse $) {
+        this.location = $.location;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceGroupValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String location;
-        private @Nullable String name;
+        private ResourceGroupValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceGroupValueResponse();
         }
 
         public Builder(ResourceGroupValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
+            $ = new ResourceGroupValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public ResourceGroupValueResponse build() {
-            return new ResourceGroupValueResponse(location, name);
+        }
+
+        public ResourceGroupValueResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends com.p
      * 
      */
     @Import(name="diskConfig")
-      private final @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig;
+    private @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig;
 
-    public Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig() {
-        return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
+    public Optional<Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs>> diskConfig() {
+        return Optional.ofNullable(this.diskConfig);
     }
 
     @Import(name="instanceNames")
-      private final @Nullable Output<List<String>> instanceNames;
+    private @Nullable Output<List<String>> instanceNames;
 
-    public Output<List<String>> instanceNames() {
-        return this.instanceNames == null ? Codegen.empty() : this.instanceNames;
+    public Optional<Output<List<String>>> instanceNames() {
+        return Optional.ofNullable(this.instanceNames);
     }
 
     /**
@@ -42,79 +42,72 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends com.p
      * 
      */
     @Import(name="numInstances")
-      private final @Nullable Output<Integer> numInstances;
+    private @Nullable Output<Integer> numInstances;
 
-    public Output<Integer> numInstances() {
-        return this.numInstances == null ? Codegen.empty() : this.numInstances;
+    public Optional<Output<Integer>> numInstances() {
+        return Optional.ofNullable(this.numInstances);
     }
 
-    public ClusterClusterConfigPreemptibleWorkerConfigArgs(
-        @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig,
-        @Nullable Output<List<String>> instanceNames,
-        @Nullable Output<Integer> numInstances) {
-        this.diskConfig = diskConfig;
-        this.instanceNames = instanceNames;
-        this.numInstances = numInstances;
-    }
+    private ClusterClusterConfigPreemptibleWorkerConfigArgs() {}
 
-    private ClusterClusterConfigPreemptibleWorkerConfigArgs() {
-        this.diskConfig = Codegen.empty();
-        this.instanceNames = Codegen.empty();
-        this.numInstances = Codegen.empty();
+    private ClusterClusterConfigPreemptibleWorkerConfigArgs(ClusterClusterConfigPreemptibleWorkerConfigArgs $) {
+        this.diskConfig = $.diskConfig;
+        this.instanceNames = $.instanceNames;
+        this.numInstances = $.numInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigPreemptibleWorkerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig;
-        private @Nullable Output<List<String>> instanceNames;
-        private @Nullable Output<Integer> numInstances;
+        private ClusterClusterConfigPreemptibleWorkerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigPreemptibleWorkerConfigArgs();
         }
 
         public Builder(ClusterClusterConfigPreemptibleWorkerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskConfig = defaults.diskConfig;
-    	      this.instanceNames = defaults.instanceNames;
-    	      this.numInstances = defaults.numInstances;
+            $ = new ClusterClusterConfigPreemptibleWorkerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskConfig(@Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig) {
-            this.diskConfig = diskConfig;
+            $.diskConfig = diskConfig;
             return this;
         }
-        public Builder diskConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs diskConfig) {
-            this.diskConfig = Codegen.ofNullable(diskConfig);
-            return this;
+
+        public Builder diskConfig(ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs diskConfig) {
+            return diskConfig(Output.of(diskConfig));
         }
+
         public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
-            this.instanceNames = instanceNames;
+            $.instanceNames = instanceNames;
             return this;
         }
-        public Builder instanceNames(@Nullable List<String> instanceNames) {
-            this.instanceNames = Codegen.ofNullable(instanceNames);
-            return this;
+
+        public Builder instanceNames(List<String> instanceNames) {
+            return instanceNames(Output.of(instanceNames));
         }
+
         public Builder instanceNames(String... instanceNames) {
             return instanceNames(List.of(instanceNames));
         }
+
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
-            this.numInstances = numInstances;
+            $.numInstances = numInstances;
             return this;
         }
-        public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Codegen.ofNullable(numInstances);
-            return this;
-        }        public ClusterClusterConfigPreemptibleWorkerConfigArgs build() {
-            return new ClusterClusterConfigPreemptibleWorkerConfigArgs(diskConfig, instanceNames, numInstances);
+
+        public Builder numInstances(Integer numInstances) {
+            return numInstances(Output.of(numInstances));
+        }
+
+        public ClusterClusterConfigPreemptibleWorkerConfigArgs build() {
+            return $;
         }
     }
+
 }

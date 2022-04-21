@@ -22,7 +22,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="displayNameHint", required=true)
-      private final String displayNameHint;
+    private String displayNameHint;
 
     public String displayNameHint() {
         return this.displayNameHint;
@@ -33,7 +33,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -45,7 +45,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -56,7 +56,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,7 +67,7 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="osFamilyHint", required=true)
-      private final String osFamilyHint;
+    private String osFamilyHint;
 
     public String osFamilyHint() {
         return this.osFamilyHint;
@@ -78,91 +78,80 @@ public final class MachineReferenceWithHintsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public MachineReferenceWithHintsResponse(
-        String displayNameHint,
-        String id,
-        String kind,
-        String name,
-        String osFamilyHint,
-        String type) {
-        this.displayNameHint = Objects.requireNonNull(displayNameHint, "expected parameter 'displayNameHint' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.osFamilyHint = Objects.requireNonNull(osFamilyHint, "expected parameter 'osFamilyHint' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private MachineReferenceWithHintsResponse() {}
 
-    private MachineReferenceWithHintsResponse() {
-        this.displayNameHint = null;
-        this.id = null;
-        this.kind = null;
-        this.name = null;
-        this.osFamilyHint = null;
-        this.type = null;
+    private MachineReferenceWithHintsResponse(MachineReferenceWithHintsResponse $) {
+        this.displayNameHint = $.displayNameHint;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.osFamilyHint = $.osFamilyHint;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineReferenceWithHintsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayNameHint;
-        private String id;
-        private String kind;
-        private String name;
-        private String osFamilyHint;
-        private String type;
+        private MachineReferenceWithHintsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineReferenceWithHintsResponse();
         }
 
         public Builder(MachineReferenceWithHintsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayNameHint = defaults.displayNameHint;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.osFamilyHint = defaults.osFamilyHint;
-    	      this.type = defaults.type;
+            $ = new MachineReferenceWithHintsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayNameHint(String displayNameHint) {
-            this.displayNameHint = Objects.requireNonNull(displayNameHint);
+            $.displayNameHint = displayNameHint;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder osFamilyHint(String osFamilyHint) {
-            this.osFamilyHint = Objects.requireNonNull(osFamilyHint);
+            $.osFamilyHint = osFamilyHint;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public MachineReferenceWithHintsResponse build() {
-            return new MachineReferenceWithHintsResponse(displayNameHint, id, kind, name, osFamilyHint, type);
+        }
+
+        public MachineReferenceWithHintsResponse build() {
+            $.displayNameHint = Objects.requireNonNull($.displayNameHint, "expected parameter 'displayNameHint' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.osFamilyHint = Objects.requireNonNull($.osFamilyHint, "expected parameter 'osFamilyHint' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.gcp.logging;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.logging.inputs.OrganizationSinkBigqueryOptionsArgs;
 import com.pulumi.gcp.logging.inputs.OrganizationSinkExclusionArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OrganizationSinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bigqueryOptions")
-      private final @Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
+    private @Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
 
-    public Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions() {
-        return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
+    public Optional<Output<OrganizationSinkBigqueryOptionsArgs>> bigqueryOptions() {
+        return Optional.ofNullable(this.bigqueryOptions);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OrganizationSinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class OrganizationSinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
@@ -60,10 +60,10 @@ public final class OrganizationSinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class OrganizationSinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions;
+    private @Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions;
 
-    public Output<List<OrganizationSinkExclusionArgs>> exclusions() {
-        return this.exclusions == null ? Codegen.empty() : this.exclusions;
+    public Optional<Output<List<OrganizationSinkExclusionArgs>>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class OrganizationSinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class OrganizationSinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="includeChildren")
-      private final @Nullable Output<Boolean> includeChildren;
+    private @Nullable Output<Boolean> includeChildren;
 
-    public Output<Boolean> includeChildren() {
-        return this.includeChildren == null ? Codegen.empty() : this.includeChildren;
+    public Optional<Output<Boolean>> includeChildren() {
+        return Optional.ofNullable(this.includeChildren);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class OrganizationSinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -117,157 +117,134 @@ public final class OrganizationSinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="orgId", required=true)
-      private final Output<String> orgId;
+    private Output<String> orgId;
 
     public Output<String> orgId() {
         return this.orgId;
     }
 
-    public OrganizationSinkArgs(
-        @Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions,
-        @Nullable Output<String> description,
-        Output<String> destination,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions,
-        @Nullable Output<String> filter,
-        @Nullable Output<Boolean> includeChildren,
-        @Nullable Output<String> name,
-        Output<String> orgId) {
-        this.bigqueryOptions = bigqueryOptions;
-        this.description = description;
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.disabled = disabled;
-        this.exclusions = exclusions;
-        this.filter = filter;
-        this.includeChildren = includeChildren;
-        this.name = name;
-        this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
-    }
+    private OrganizationSinkArgs() {}
 
-    private OrganizationSinkArgs() {
-        this.bigqueryOptions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.exclusions = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.includeChildren = Codegen.empty();
-        this.name = Codegen.empty();
-        this.orgId = Codegen.empty();
+    private OrganizationSinkArgs(OrganizationSinkArgs $) {
+        this.bigqueryOptions = $.bigqueryOptions;
+        this.description = $.description;
+        this.destination = $.destination;
+        this.disabled = $.disabled;
+        this.exclusions = $.exclusions;
+        this.filter = $.filter;
+        this.includeChildren = $.includeChildren;
+        this.name = $.name;
+        this.orgId = $.orgId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
-        private @Nullable Output<String> description;
-        private Output<String> destination;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<Boolean> includeChildren;
-        private @Nullable Output<String> name;
-        private Output<String> orgId;
+        private OrganizationSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationSinkArgs();
         }
 
         public Builder(OrganizationSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryOptions = defaults.bigqueryOptions;
-    	      this.description = defaults.description;
-    	      this.destination = defaults.destination;
-    	      this.disabled = defaults.disabled;
-    	      this.exclusions = defaults.exclusions;
-    	      this.filter = defaults.filter;
-    	      this.includeChildren = defaults.includeChildren;
-    	      this.name = defaults.name;
-    	      this.orgId = defaults.orgId;
+            $ = new OrganizationSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryOptions(@Nullable Output<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions) {
-            this.bigqueryOptions = bigqueryOptions;
+            $.bigqueryOptions = bigqueryOptions;
             return this;
         }
-        public Builder bigqueryOptions(@Nullable OrganizationSinkBigqueryOptionsArgs bigqueryOptions) {
-            this.bigqueryOptions = Codegen.ofNullable(bigqueryOptions);
-            return this;
+
+        public Builder bigqueryOptions(OrganizationSinkBigqueryOptionsArgs bigqueryOptions) {
+            return bigqueryOptions(Output.of(bigqueryOptions));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder exclusions(@Nullable Output<List<OrganizationSinkExclusionArgs>> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
-        public Builder exclusions(@Nullable List<OrganizationSinkExclusionArgs> exclusions) {
-            this.exclusions = Codegen.ofNullable(exclusions);
-            return this;
+
+        public Builder exclusions(List<OrganizationSinkExclusionArgs> exclusions) {
+            return exclusions(Output.of(exclusions));
         }
+
         public Builder exclusions(OrganizationSinkExclusionArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder includeChildren(@Nullable Output<Boolean> includeChildren) {
-            this.includeChildren = includeChildren;
+            $.includeChildren = includeChildren;
             return this;
         }
-        public Builder includeChildren(@Nullable Boolean includeChildren) {
-            this.includeChildren = Codegen.ofNullable(includeChildren);
-            return this;
+
+        public Builder includeChildren(Boolean includeChildren) {
+            return includeChildren(Output.of(includeChildren));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder orgId(Output<String> orgId) {
-            this.orgId = Objects.requireNonNull(orgId);
+            $.orgId = orgId;
             return this;
         }
+
         public Builder orgId(String orgId) {
-            this.orgId = Output.of(Objects.requireNonNull(orgId));
-            return this;
-        }        public OrganizationSinkArgs build() {
-            return new OrganizationSinkArgs(bigqueryOptions, description, destination, disabled, exclusions, filter, includeChildren, name, orgId);
+            return orgId(Output.of(orgId));
+        }
+
+        public OrganizationSinkArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.orgId = Objects.requireNonNull($.orgId, "expected parameter 'orgId' to be non-null");
+            return $;
         }
     }
+
 }

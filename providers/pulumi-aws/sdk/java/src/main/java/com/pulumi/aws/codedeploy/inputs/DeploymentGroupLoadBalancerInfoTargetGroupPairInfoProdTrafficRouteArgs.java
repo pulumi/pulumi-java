@@ -5,7 +5,6 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
      * 
      */
     @Import(name="listenerArns", required=true)
-      private final Output<List<String>> listenerArns;
+    private Output<List<String>> listenerArns;
 
     public Output<List<String>> listenerArns() {
         return this.listenerArns;
     }
 
-    public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs(Output<List<String>> listenerArns) {
-        this.listenerArns = Objects.requireNonNull(listenerArns, "expected parameter 'listenerArns' to be non-null");
-    }
+    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs() {}
 
-    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs() {
-        this.listenerArns = Codegen.empty();
+    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs $) {
+        this.listenerArns = $.listenerArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> listenerArns;
+        private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs();
         }
 
         public Builder(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.listenerArns = defaults.listenerArns;
+            $ = new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder listenerArns(Output<List<String>> listenerArns) {
-            this.listenerArns = Objects.requireNonNull(listenerArns);
+            $.listenerArns = listenerArns;
             return this;
         }
+
         public Builder listenerArns(List<String> listenerArns) {
-            this.listenerArns = Output.of(Objects.requireNonNull(listenerArns));
-            return this;
+            return listenerArns(Output.of(listenerArns));
         }
+
         public Builder listenerArns(String... listenerArns) {
             return listenerArns(List.of(listenerArns));
-        }        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs build() {
-            return new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs(listenerArns);
+        }
+
+        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs build() {
+            $.listenerArns = Objects.requireNonNull($.listenerArns, "expected parameter 'listenerArns' to be non-null");
+            return $;
         }
     }
+
 }

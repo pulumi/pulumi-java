@@ -23,10 +23,10 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="aadTenantId")
-      private final @Nullable String aadTenantId;
+    private @Nullable String aadTenantId;
 
     public Optional<String> aadTenantId() {
-        return this.aadTenantId == null ? Optional.empty() : Optional.ofNullable(this.aadTenantId);
+        return Optional.ofNullable(this.aadTenantId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="audience")
-      private final @Nullable String audience;
+    private @Nullable String audience;
 
     public Optional<String> audience() {
-        return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="servicePrincipalClientId")
-      private final @Nullable String servicePrincipalClientId;
+    private @Nullable String servicePrincipalClientId;
 
     public Optional<String> servicePrincipalClientId() {
-        return this.servicePrincipalClientId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalClientId);
+        return Optional.ofNullable(this.servicePrincipalClientId);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ContainerIdentityInfoResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="uniqueName")
-      private final @Nullable String uniqueName;
+    private @Nullable String uniqueName;
 
     public Optional<String> uniqueName() {
-        return this.uniqueName == null ? Optional.empty() : Optional.ofNullable(this.uniqueName);
+        return Optional.ofNullable(this.uniqueName);
     }
 
-    public ContainerIdentityInfoResponse(
-        @Nullable String aadTenantId,
-        @Nullable String audience,
-        @Nullable String servicePrincipalClientId,
-        @Nullable String uniqueName) {
-        this.aadTenantId = aadTenantId;
-        this.audience = audience;
-        this.servicePrincipalClientId = servicePrincipalClientId;
-        this.uniqueName = uniqueName;
-    }
+    private ContainerIdentityInfoResponse() {}
 
-    private ContainerIdentityInfoResponse() {
-        this.aadTenantId = null;
-        this.audience = null;
-        this.servicePrincipalClientId = null;
-        this.uniqueName = null;
+    private ContainerIdentityInfoResponse(ContainerIdentityInfoResponse $) {
+        this.aadTenantId = $.aadTenantId;
+        this.audience = $.audience;
+        this.servicePrincipalClientId = $.servicePrincipalClientId;
+        this.uniqueName = $.uniqueName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerIdentityInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String aadTenantId;
-        private @Nullable String audience;
-        private @Nullable String servicePrincipalClientId;
-        private @Nullable String uniqueName;
+        private ContainerIdentityInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerIdentityInfoResponse();
         }
 
         public Builder(ContainerIdentityInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadTenantId = defaults.aadTenantId;
-    	      this.audience = defaults.audience;
-    	      this.servicePrincipalClientId = defaults.servicePrincipalClientId;
-    	      this.uniqueName = defaults.uniqueName;
+            $ = new ContainerIdentityInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aadTenantId(@Nullable String aadTenantId) {
-            this.aadTenantId = aadTenantId;
+            $.aadTenantId = aadTenantId;
             return this;
         }
+
         public Builder audience(@Nullable String audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
+
         public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
-            this.servicePrincipalClientId = servicePrincipalClientId;
+            $.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
+
         public Builder uniqueName(@Nullable String uniqueName) {
-            this.uniqueName = uniqueName;
+            $.uniqueName = uniqueName;
             return this;
-        }        public ContainerIdentityInfoResponse build() {
-            return new ContainerIdentityInfoResponse(aadTenantId, audience, servicePrincipalClientId, uniqueName);
+        }
+
+        public ContainerIdentityInfoResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.azurenative.datamigration.inputs;
 import com.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,7 +22,7 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends com.pulumi.r
      * 
      */
     @Import(name="sourceConnectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
+    private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -34,63 +33,60 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends com.pulumi.r
      * 
      */
     @Import(name="targetConnectionInfo", required=true)
-      private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
+    private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
-    public ConnectToTargetSqlSqlDbSyncTaskInputArgs(
-        Output<SqlConnectionInfoArgs> sourceConnectionInfo,
-        Output<SqlConnectionInfoArgs> targetConnectionInfo) {
-        this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
-        this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
-    }
+    private ConnectToTargetSqlSqlDbSyncTaskInputArgs() {}
 
-    private ConnectToTargetSqlSqlDbSyncTaskInputArgs() {
-        this.sourceConnectionInfo = Codegen.empty();
-        this.targetConnectionInfo = Codegen.empty();
+    private ConnectToTargetSqlSqlDbSyncTaskInputArgs(ConnectToTargetSqlSqlDbSyncTaskInputArgs $) {
+        this.sourceConnectionInfo = $.sourceConnectionInfo;
+        this.targetConnectionInfo = $.targetConnectionInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectToTargetSqlSqlDbSyncTaskInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
-        private Output<SqlConnectionInfoArgs> targetConnectionInfo;
+        private ConnectToTargetSqlSqlDbSyncTaskInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectToTargetSqlSqlDbSyncTaskInputArgs();
         }
 
         public Builder(ConnectToTargetSqlSqlDbSyncTaskInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
-    	      this.targetConnectionInfo = defaults.targetConnectionInfo;
+            $ = new ConnectToTargetSqlSqlDbSyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
-            this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
+            $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
+
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
-            this.sourceConnectionInfo = Output.of(Objects.requireNonNull(sourceConnectionInfo));
-            return this;
+            return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
+
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
-            this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
+            $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
+
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
-            this.targetConnectionInfo = Output.of(Objects.requireNonNull(targetConnectionInfo));
-            return this;
-        }        public ConnectToTargetSqlSqlDbSyncTaskInputArgs build() {
-            return new ConnectToTargetSqlSqlDbSyncTaskInputArgs(sourceConnectionInfo, targetConnectionInfo);
+            return targetConnectionInfo(Output.of(targetConnectionInfo));
+        }
+
+        public ConnectToTargetSqlSqlDbSyncTaskInputArgs build() {
+            $.sourceConnectionInfo = Objects.requireNonNull($.sourceConnectionInfo, "expected parameter 'sourceConnectionInfo' to be non-null");
+            $.targetConnectionInfo = Objects.requireNonNull($.targetConnectionInfo, "expected parameter 'targetConnectionInfo' to be non-null");
+            return $;
         }
     }
+
 }

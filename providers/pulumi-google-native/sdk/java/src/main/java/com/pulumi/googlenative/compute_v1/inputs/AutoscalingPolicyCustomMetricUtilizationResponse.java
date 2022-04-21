@@ -22,7 +22,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends com.
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -33,7 +33,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends com.
      * 
      */
     @Import(name="metric", required=true)
-      private final String metric;
+    private String metric;
 
     public String metric() {
         return this.metric;
@@ -44,7 +44,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends com.
      * 
      */
     @Import(name="singleInstanceAssignment", required=true)
-      private final Double singleInstanceAssignment;
+    private Double singleInstanceAssignment;
 
     public Double singleInstanceAssignment() {
         return this.singleInstanceAssignment;
@@ -55,7 +55,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends com.
      * 
      */
     @Import(name="utilizationTarget", required=true)
-      private final Double utilizationTarget;
+    private Double utilizationTarget;
 
     public Double utilizationTarget() {
         return this.utilizationTarget;
@@ -66,82 +66,73 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse extends com.
      * 
      */
     @Import(name="utilizationTargetType", required=true)
-      private final String utilizationTargetType;
+    private String utilizationTargetType;
 
     public String utilizationTargetType() {
         return this.utilizationTargetType;
     }
 
-    public AutoscalingPolicyCustomMetricUtilizationResponse(
-        String filter,
-        String metric,
-        Double singleInstanceAssignment,
-        Double utilizationTarget,
-        String utilizationTargetType) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-        this.singleInstanceAssignment = Objects.requireNonNull(singleInstanceAssignment, "expected parameter 'singleInstanceAssignment' to be non-null");
-        this.utilizationTarget = Objects.requireNonNull(utilizationTarget, "expected parameter 'utilizationTarget' to be non-null");
-        this.utilizationTargetType = Objects.requireNonNull(utilizationTargetType, "expected parameter 'utilizationTargetType' to be non-null");
-    }
+    private AutoscalingPolicyCustomMetricUtilizationResponse() {}
 
-    private AutoscalingPolicyCustomMetricUtilizationResponse() {
-        this.filter = null;
-        this.metric = null;
-        this.singleInstanceAssignment = null;
-        this.utilizationTarget = null;
-        this.utilizationTargetType = null;
+    private AutoscalingPolicyCustomMetricUtilizationResponse(AutoscalingPolicyCustomMetricUtilizationResponse $) {
+        this.filter = $.filter;
+        this.metric = $.metric;
+        this.singleInstanceAssignment = $.singleInstanceAssignment;
+        this.utilizationTarget = $.utilizationTarget;
+        this.utilizationTargetType = $.utilizationTargetType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyCustomMetricUtilizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
-        private String metric;
-        private Double singleInstanceAssignment;
-        private Double utilizationTarget;
-        private String utilizationTargetType;
+        private AutoscalingPolicyCustomMetricUtilizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyCustomMetricUtilizationResponse();
         }
 
         public Builder(AutoscalingPolicyCustomMetricUtilizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.metric = defaults.metric;
-    	      this.singleInstanceAssignment = defaults.singleInstanceAssignment;
-    	      this.utilizationTarget = defaults.utilizationTarget;
-    	      this.utilizationTargetType = defaults.utilizationTargetType;
+            $ = new AutoscalingPolicyCustomMetricUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder metric(String metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder singleInstanceAssignment(Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Objects.requireNonNull(singleInstanceAssignment);
+            $.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
+
         public Builder utilizationTarget(Double utilizationTarget) {
-            this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
+            $.utilizationTarget = utilizationTarget;
             return this;
         }
+
         public Builder utilizationTargetType(String utilizationTargetType) {
-            this.utilizationTargetType = Objects.requireNonNull(utilizationTargetType);
+            $.utilizationTargetType = utilizationTargetType;
             return this;
-        }        public AutoscalingPolicyCustomMetricUtilizationResponse build() {
-            return new AutoscalingPolicyCustomMetricUtilizationResponse(filter, metric, singleInstanceAssignment, utilizationTarget, utilizationTargetType);
+        }
+
+        public AutoscalingPolicyCustomMetricUtilizationResponse build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            $.singleInstanceAssignment = Objects.requireNonNull($.singleInstanceAssignment, "expected parameter 'singleInstanceAssignment' to be non-null");
+            $.utilizationTarget = Objects.requireNonNull($.utilizationTarget, "expected parameter 'utilizationTarget' to be non-null");
+            $.utilizationTargetType = Objects.requireNonNull($.utilizationTargetType, "expected parameter 'utilizationTargetType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotMessageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BotMessageGroupArgs extends com.pulumi.resources.ResourceArgs
     public static final BotMessageGroupArgs Empty = new BotMessageGroupArgs();
 
     @Import(name="message", required=true)
-      private final Output<BotMessageArgs> message;
+    private Output<BotMessageArgs> message;
 
     public Output<BotMessageArgs> message() {
         return this.message;
@@ -32,66 +32,63 @@ public final class BotMessageGroupArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="variations")
-      private final @Nullable Output<List<BotMessageArgs>> variations;
+    private @Nullable Output<List<BotMessageArgs>> variations;
 
-    public Output<List<BotMessageArgs>> variations() {
-        return this.variations == null ? Codegen.empty() : this.variations;
+    public Optional<Output<List<BotMessageArgs>>> variations() {
+        return Optional.ofNullable(this.variations);
     }
 
-    public BotMessageGroupArgs(
-        Output<BotMessageArgs> message,
-        @Nullable Output<List<BotMessageArgs>> variations) {
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.variations = variations;
-    }
+    private BotMessageGroupArgs() {}
 
-    private BotMessageGroupArgs() {
-        this.message = Codegen.empty();
-        this.variations = Codegen.empty();
+    private BotMessageGroupArgs(BotMessageGroupArgs $) {
+        this.message = $.message;
+        this.variations = $.variations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotMessageGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BotMessageArgs> message;
-        private @Nullable Output<List<BotMessageArgs>> variations;
+        private BotMessageGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotMessageGroupArgs();
         }
 
         public Builder(BotMessageGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.variations = defaults.variations;
+            $ = new BotMessageGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(Output<BotMessageArgs> message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder message(BotMessageArgs message) {
-            this.message = Output.of(Objects.requireNonNull(message));
-            return this;
+            return message(Output.of(message));
         }
+
         public Builder variations(@Nullable Output<List<BotMessageArgs>> variations) {
-            this.variations = variations;
+            $.variations = variations;
             return this;
         }
-        public Builder variations(@Nullable List<BotMessageArgs> variations) {
-            this.variations = Codegen.ofNullable(variations);
-            return this;
+
+        public Builder variations(List<BotMessageArgs> variations) {
+            return variations(Output.of(variations));
         }
+
         public Builder variations(BotMessageArgs... variations) {
             return variations(List.of(variations));
-        }        public BotMessageGroupArgs build() {
-            return new BotMessageGroupArgs(message, variations);
+        }
+
+        public BotMessageGroupArgs build() {
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

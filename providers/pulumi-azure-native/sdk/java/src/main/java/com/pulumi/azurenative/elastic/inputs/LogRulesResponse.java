@@ -25,10 +25,10 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filteringTags")
-      private final @Nullable List<FilteringTagResponse> filteringTags;
+    private @Nullable List<FilteringTagResponse> filteringTags;
 
-    public List<FilteringTagResponse> filteringTags() {
-        return this.filteringTags == null ? List.of() : this.filteringTags;
+    public Optional<List<FilteringTagResponse>> filteringTags() {
+        return Optional.ofNullable(this.filteringTags);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sendAadLogs")
-      private final @Nullable Boolean sendAadLogs;
+    private @Nullable Boolean sendAadLogs;
 
     public Optional<Boolean> sendAadLogs() {
-        return this.sendAadLogs == null ? Optional.empty() : Optional.ofNullable(this.sendAadLogs);
+        return Optional.ofNullable(this.sendAadLogs);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sendActivityLogs")
-      private final @Nullable Boolean sendActivityLogs;
+    private @Nullable Boolean sendActivityLogs;
 
     public Optional<Boolean> sendActivityLogs() {
-        return this.sendActivityLogs == null ? Optional.empty() : Optional.ofNullable(this.sendActivityLogs);
+        return Optional.ofNullable(this.sendActivityLogs);
     }
 
     /**
@@ -58,76 +58,66 @@ public final class LogRulesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sendSubscriptionLogs")
-      private final @Nullable Boolean sendSubscriptionLogs;
+    private @Nullable Boolean sendSubscriptionLogs;
 
     public Optional<Boolean> sendSubscriptionLogs() {
-        return this.sendSubscriptionLogs == null ? Optional.empty() : Optional.ofNullable(this.sendSubscriptionLogs);
+        return Optional.ofNullable(this.sendSubscriptionLogs);
     }
 
-    public LogRulesResponse(
-        @Nullable List<FilteringTagResponse> filteringTags,
-        @Nullable Boolean sendAadLogs,
-        @Nullable Boolean sendActivityLogs,
-        @Nullable Boolean sendSubscriptionLogs) {
-        this.filteringTags = filteringTags;
-        this.sendAadLogs = sendAadLogs;
-        this.sendActivityLogs = sendActivityLogs;
-        this.sendSubscriptionLogs = sendSubscriptionLogs;
-    }
+    private LogRulesResponse() {}
 
-    private LogRulesResponse() {
-        this.filteringTags = List.of();
-        this.sendAadLogs = null;
-        this.sendActivityLogs = null;
-        this.sendSubscriptionLogs = null;
+    private LogRulesResponse(LogRulesResponse $) {
+        this.filteringTags = $.filteringTags;
+        this.sendAadLogs = $.sendAadLogs;
+        this.sendActivityLogs = $.sendActivityLogs;
+        this.sendSubscriptionLogs = $.sendSubscriptionLogs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogRulesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<FilteringTagResponse> filteringTags;
-        private @Nullable Boolean sendAadLogs;
-        private @Nullable Boolean sendActivityLogs;
-        private @Nullable Boolean sendSubscriptionLogs;
+        private LogRulesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogRulesResponse();
         }
 
         public Builder(LogRulesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filteringTags = defaults.filteringTags;
-    	      this.sendAadLogs = defaults.sendAadLogs;
-    	      this.sendActivityLogs = defaults.sendActivityLogs;
-    	      this.sendSubscriptionLogs = defaults.sendSubscriptionLogs;
+            $ = new LogRulesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
-            this.filteringTags = filteringTags;
+            $.filteringTags = filteringTags;
             return this;
         }
+
         public Builder filteringTags(FilteringTagResponse... filteringTags) {
             return filteringTags(List.of(filteringTags));
         }
+
         public Builder sendAadLogs(@Nullable Boolean sendAadLogs) {
-            this.sendAadLogs = sendAadLogs;
+            $.sendAadLogs = sendAadLogs;
             return this;
         }
+
         public Builder sendActivityLogs(@Nullable Boolean sendActivityLogs) {
-            this.sendActivityLogs = sendActivityLogs;
+            $.sendActivityLogs = sendActivityLogs;
             return this;
         }
+
         public Builder sendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
-            this.sendSubscriptionLogs = sendSubscriptionLogs;
+            $.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;
-        }        public LogRulesResponse build() {
-            return new LogRulesResponse(filteringTags, sendAadLogs, sendActivityLogs, sendSubscriptionLogs);
+        }
+
+        public LogRulesResponse build() {
+            return $;
         }
     }
+
 }

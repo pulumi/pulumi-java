@@ -17,7 +17,7 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="solutionName", required=true)
-      private final String solutionName;
+    private String solutionName;
 
     public String solutionName() {
         return this.solutionName;
     }
 
-    public GetSolutionArgs(
-        String resourceGroupName,
-        String solutionName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.solutionName = Objects.requireNonNull(solutionName, "expected parameter 'solutionName' to be non-null");
-    }
+    private GetSolutionArgs() {}
 
-    private GetSolutionArgs() {
-        this.resourceGroupName = null;
-        this.solutionName = null;
+    private GetSolutionArgs(GetSolutionArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.solutionName = $.solutionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSolutionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String solutionName;
+        private GetSolutionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSolutionArgs();
         }
 
         public Builder(GetSolutionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.solutionName = defaults.solutionName;
+            $ = new GetSolutionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder solutionName(String solutionName) {
-            this.solutionName = Objects.requireNonNull(solutionName);
+            $.solutionName = solutionName;
             return this;
-        }        public GetSolutionArgs build() {
-            return new GetSolutionArgs(resourceGroupName, solutionName);
+        }
+
+        public GetSolutionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.solutionName = Objects.requireNonNull($.solutionName, "expected parameter 'solutionName' to be non-null");
+            return $;
         }
     }
+
 }

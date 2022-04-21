@@ -26,10 +26,10 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="authorization")
-      private final @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
+    private @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
 
     public Optional<BackendAuthorizationHeaderCredentialsResponse> authorization() {
-        return this.authorization == null ? Optional.empty() : Optional.ofNullable(this.authorization);
+        return Optional.ofNullable(this.authorization);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="certificate")
-      private final @Nullable List<String> certificate;
+    private @Nullable List<String> certificate;
 
-    public List<String> certificate() {
-        return this.certificate == null ? List.of() : this.certificate;
+    public Optional<List<String>> certificate() {
+        return Optional.ofNullable(this.certificate);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="certificateIds")
-      private final @Nullable List<String> certificateIds;
+    private @Nullable List<String> certificateIds;
 
-    public List<String> certificateIds() {
-        return this.certificateIds == null ? List.of() : this.certificateIds;
+    public Optional<List<String>> certificateIds() {
+        return Optional.ofNullable(this.certificateIds);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="header")
-      private final @Nullable Map<String,List<String>> header;
+    private @Nullable Map<String,List<String>> header;
 
-    public Map<String,List<String>> header() {
-        return this.header == null ? Map.of() : this.header;
+    public Optional<Map<String,List<String>>> header() {
+        return Optional.ofNullable(this.header);
     }
 
     /**
@@ -70,88 +70,76 @@ public final class BackendCredentialsContractResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="query")
-      private final @Nullable Map<String,List<String>> query;
+    private @Nullable Map<String,List<String>> query;
 
-    public Map<String,List<String>> query() {
-        return this.query == null ? Map.of() : this.query;
+    public Optional<Map<String,List<String>>> query() {
+        return Optional.ofNullable(this.query);
     }
 
-    public BackendCredentialsContractResponse(
-        @Nullable BackendAuthorizationHeaderCredentialsResponse authorization,
-        @Nullable List<String> certificate,
-        @Nullable List<String> certificateIds,
-        @Nullable Map<String,List<String>> header,
-        @Nullable Map<String,List<String>> query) {
-        this.authorization = authorization;
-        this.certificate = certificate;
-        this.certificateIds = certificateIds;
-        this.header = header;
-        this.query = query;
-    }
+    private BackendCredentialsContractResponse() {}
 
-    private BackendCredentialsContractResponse() {
-        this.authorization = null;
-        this.certificate = List.of();
-        this.certificateIds = List.of();
-        this.header = Map.of();
-        this.query = Map.of();
+    private BackendCredentialsContractResponse(BackendCredentialsContractResponse $) {
+        this.authorization = $.authorization;
+        this.certificate = $.certificate;
+        this.certificateIds = $.certificateIds;
+        this.header = $.header;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendCredentialsContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BackendAuthorizationHeaderCredentialsResponse authorization;
-        private @Nullable List<String> certificate;
-        private @Nullable List<String> certificateIds;
-        private @Nullable Map<String,List<String>> header;
-        private @Nullable Map<String,List<String>> query;
+        private BackendCredentialsContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendCredentialsContractResponse();
         }
 
         public Builder(BackendCredentialsContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorization = defaults.authorization;
-    	      this.certificate = defaults.certificate;
-    	      this.certificateIds = defaults.certificateIds;
-    	      this.header = defaults.header;
-    	      this.query = defaults.query;
+            $ = new BackendCredentialsContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorization(@Nullable BackendAuthorizationHeaderCredentialsResponse authorization) {
-            this.authorization = authorization;
+            $.authorization = authorization;
             return this;
         }
+
         public Builder certificate(@Nullable List<String> certificate) {
-            this.certificate = certificate;
+            $.certificate = certificate;
             return this;
         }
+
         public Builder certificate(String... certificate) {
             return certificate(List.of(certificate));
         }
+
         public Builder certificateIds(@Nullable List<String> certificateIds) {
-            this.certificateIds = certificateIds;
+            $.certificateIds = certificateIds;
             return this;
         }
+
         public Builder certificateIds(String... certificateIds) {
             return certificateIds(List.of(certificateIds));
         }
+
         public Builder header(@Nullable Map<String,List<String>> header) {
-            this.header = header;
+            $.header = header;
             return this;
         }
+
         public Builder query(@Nullable Map<String,List<String>> query) {
-            this.query = query;
+            $.query = query;
             return this;
-        }        public BackendCredentialsContractResponse build() {
-            return new BackendCredentialsContractResponse(authorization, certificate, certificateIds, header, query);
+        }
+
+        public BackendCredentialsContractResponse build() {
+            return $;
         }
     }
+
 }

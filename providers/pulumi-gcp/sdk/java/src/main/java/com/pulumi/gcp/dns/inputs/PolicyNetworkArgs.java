@@ -5,7 +5,6 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class PolicyNetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkUrl", required=true)
-      private final Output<String> networkUrl;
+    private Output<String> networkUrl;
 
     public Output<String> networkUrl() {
         return this.networkUrl;
     }
 
-    public PolicyNetworkArgs(Output<String> networkUrl) {
-        this.networkUrl = Objects.requireNonNull(networkUrl, "expected parameter 'networkUrl' to be non-null");
-    }
+    private PolicyNetworkArgs() {}
 
-    private PolicyNetworkArgs() {
-        this.networkUrl = Codegen.empty();
+    private PolicyNetworkArgs(PolicyNetworkArgs $) {
+        this.networkUrl = $.networkUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> networkUrl;
+        private PolicyNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyNetworkArgs();
         }
 
         public Builder(PolicyNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkUrl = defaults.networkUrl;
+            $ = new PolicyNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkUrl(Output<String> networkUrl) {
-            this.networkUrl = Objects.requireNonNull(networkUrl);
+            $.networkUrl = networkUrl;
             return this;
         }
+
         public Builder networkUrl(String networkUrl) {
-            this.networkUrl = Output.of(Objects.requireNonNull(networkUrl));
-            return this;
-        }        public PolicyNetworkArgs build() {
-            return new PolicyNetworkArgs(networkUrl);
+            return networkUrl(Output.of(networkUrl));
+        }
+
+        public PolicyNetworkArgs build() {
+            $.networkUrl = Objects.requireNonNull($.networkUrl, "expected parameter 'networkUrl' to be non-null");
+            return $;
         }
     }
+
 }

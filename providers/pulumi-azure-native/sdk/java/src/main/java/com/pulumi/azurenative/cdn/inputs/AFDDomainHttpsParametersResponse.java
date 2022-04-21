@@ -24,7 +24,7 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
      * 
      */
     @Import(name="certificateType", required=true)
-      private final String certificateType;
+    private String certificateType;
 
     public String certificateType() {
         return this.certificateType;
@@ -35,10 +35,10 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
      * 
      */
     @Import(name="minimumTlsVersion")
-      private final @Nullable String minimumTlsVersion;
+    private @Nullable String minimumTlsVersion;
 
     public Optional<String> minimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Optional.empty() : Optional.ofNullable(this.minimumTlsVersion);
+        return Optional.ofNullable(this.minimumTlsVersion);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class AFDDomainHttpsParametersResponse extends com.pulumi.resources
      * 
      */
     @Import(name="secret")
-      private final @Nullable ResourceReferenceResponse secret;
+    private @Nullable ResourceReferenceResponse secret;
 
     public Optional<ResourceReferenceResponse> secret() {
-        return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
+        return Optional.ofNullable(this.secret);
     }
 
-    public AFDDomainHttpsParametersResponse(
-        String certificateType,
-        @Nullable String minimumTlsVersion,
-        @Nullable ResourceReferenceResponse secret) {
-        this.certificateType = Objects.requireNonNull(certificateType, "expected parameter 'certificateType' to be non-null");
-        this.minimumTlsVersion = minimumTlsVersion;
-        this.secret = secret;
-    }
+    private AFDDomainHttpsParametersResponse() {}
 
-    private AFDDomainHttpsParametersResponse() {
-        this.certificateType = null;
-        this.minimumTlsVersion = null;
-        this.secret = null;
+    private AFDDomainHttpsParametersResponse(AFDDomainHttpsParametersResponse $) {
+        this.certificateType = $.certificateType;
+        this.minimumTlsVersion = $.minimumTlsVersion;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AFDDomainHttpsParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateType;
-        private @Nullable String minimumTlsVersion;
-        private @Nullable ResourceReferenceResponse secret;
+        private AFDDomainHttpsParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AFDDomainHttpsParametersResponse();
         }
 
         public Builder(AFDDomainHttpsParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateType = defaults.certificateType;
-    	      this.minimumTlsVersion = defaults.minimumTlsVersion;
-    	      this.secret = defaults.secret;
+            $ = new AFDDomainHttpsParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateType(String certificateType) {
-            this.certificateType = Objects.requireNonNull(certificateType);
+            $.certificateType = certificateType;
             return this;
         }
+
         public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
-            this.minimumTlsVersion = minimumTlsVersion;
+            $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
+
         public Builder secret(@Nullable ResourceReferenceResponse secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
-        }        public AFDDomainHttpsParametersResponse build() {
-            return new AFDDomainHttpsParametersResponse(certificateType, minimumTlsVersion, secret);
+        }
+
+        public AFDDomainHttpsParametersResponse build() {
+            $.certificateType = Objects.requireNonNull($.certificateType, "expected parameter 'certificateType' to be non-null");
+            return $;
         }
     }
+
 }

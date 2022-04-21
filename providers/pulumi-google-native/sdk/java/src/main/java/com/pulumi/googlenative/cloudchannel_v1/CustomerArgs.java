@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudchannel_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ContactInfoArgs;
 import com.pulumi.googlenative.cloudchannel_v1.inputs.GoogleTypePostalAddressArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
     public static final CustomerArgs Empty = new CustomerArgs();
 
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -29,10 +29,10 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alternateEmail")
-      private final @Nullable Output<String> alternateEmail;
+    private @Nullable Output<String> alternateEmail;
 
-    public Output<String> alternateEmail() {
-        return this.alternateEmail == null ? Codegen.empty() : this.alternateEmail;
+    public Optional<Output<String>> alternateEmail() {
+        return Optional.ofNullable(this.alternateEmail);
     }
 
     /**
@@ -40,14 +40,14 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="channelPartnerId")
-      private final @Nullable Output<String> channelPartnerId;
+    private @Nullable Output<String> channelPartnerId;
 
-    public Output<String> channelPartnerId() {
-        return this.channelPartnerId == null ? Codegen.empty() : this.channelPartnerId;
+    public Optional<Output<String>> channelPartnerId() {
+        return Optional.ofNullable(this.channelPartnerId);
     }
 
     @Import(name="channelPartnerLinkId", required=true)
-      private final Output<String> channelPartnerLinkId;
+    private Output<String> channelPartnerLinkId;
 
     public Output<String> channelPartnerLinkId() {
         return this.channelPartnerLinkId;
@@ -58,7 +58,7 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domain", required=true)
-      private final Output<String> domain;
+    private Output<String> domain;
 
     public Output<String> domain() {
         return this.domain;
@@ -69,10 +69,10 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgDisplayName", required=true)
-      private final Output<String> orgDisplayName;
+    private Output<String> orgDisplayName;
 
     public Output<String> orgDisplayName() {
         return this.orgDisplayName;
@@ -91,7 +91,7 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgPostalAddress", required=true)
-      private final Output<GoogleTypePostalAddressArgs> orgPostalAddress;
+    private Output<GoogleTypePostalAddressArgs> orgPostalAddress;
 
     public Output<GoogleTypePostalAddressArgs> orgPostalAddress() {
         return this.orgPostalAddress;
@@ -102,154 +102,133 @@ public final class CustomerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="primaryContactInfo")
-      private final @Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
+    private @Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
 
-    public Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo() {
-        return this.primaryContactInfo == null ? Codegen.empty() : this.primaryContactInfo;
+    public Optional<Output<GoogleCloudChannelV1ContactInfoArgs>> primaryContactInfo() {
+        return Optional.ofNullable(this.primaryContactInfo);
     }
 
-    public CustomerArgs(
-        Output<String> accountId,
-        @Nullable Output<String> alternateEmail,
-        @Nullable Output<String> channelPartnerId,
-        Output<String> channelPartnerLinkId,
-        Output<String> domain,
-        @Nullable Output<String> languageCode,
-        Output<String> orgDisplayName,
-        Output<GoogleTypePostalAddressArgs> orgPostalAddress,
-        @Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.alternateEmail = alternateEmail;
-        this.channelPartnerId = channelPartnerId;
-        this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId, "expected parameter 'channelPartnerLinkId' to be non-null");
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.languageCode = languageCode;
-        this.orgDisplayName = Objects.requireNonNull(orgDisplayName, "expected parameter 'orgDisplayName' to be non-null");
-        this.orgPostalAddress = Objects.requireNonNull(orgPostalAddress, "expected parameter 'orgPostalAddress' to be non-null");
-        this.primaryContactInfo = primaryContactInfo;
-    }
+    private CustomerArgs() {}
 
-    private CustomerArgs() {
-        this.accountId = Codegen.empty();
-        this.alternateEmail = Codegen.empty();
-        this.channelPartnerId = Codegen.empty();
-        this.channelPartnerLinkId = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.orgDisplayName = Codegen.empty();
-        this.orgPostalAddress = Codegen.empty();
-        this.primaryContactInfo = Codegen.empty();
+    private CustomerArgs(CustomerArgs $) {
+        this.accountId = $.accountId;
+        this.alternateEmail = $.alternateEmail;
+        this.channelPartnerId = $.channelPartnerId;
+        this.channelPartnerLinkId = $.channelPartnerLinkId;
+        this.domain = $.domain;
+        this.languageCode = $.languageCode;
+        this.orgDisplayName = $.orgDisplayName;
+        this.orgPostalAddress = $.orgPostalAddress;
+        this.primaryContactInfo = $.primaryContactInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private @Nullable Output<String> alternateEmail;
-        private @Nullable Output<String> channelPartnerId;
-        private Output<String> channelPartnerLinkId;
-        private Output<String> domain;
-        private @Nullable Output<String> languageCode;
-        private Output<String> orgDisplayName;
-        private Output<GoogleTypePostalAddressArgs> orgPostalAddress;
-        private @Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
+        private CustomerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerArgs();
         }
 
         public Builder(CustomerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.alternateEmail = defaults.alternateEmail;
-    	      this.channelPartnerId = defaults.channelPartnerId;
-    	      this.channelPartnerLinkId = defaults.channelPartnerLinkId;
-    	      this.domain = defaults.domain;
-    	      this.languageCode = defaults.languageCode;
-    	      this.orgDisplayName = defaults.orgDisplayName;
-    	      this.orgPostalAddress = defaults.orgPostalAddress;
-    	      this.primaryContactInfo = defaults.primaryContactInfo;
+            $ = new CustomerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder alternateEmail(@Nullable Output<String> alternateEmail) {
-            this.alternateEmail = alternateEmail;
+            $.alternateEmail = alternateEmail;
             return this;
         }
-        public Builder alternateEmail(@Nullable String alternateEmail) {
-            this.alternateEmail = Codegen.ofNullable(alternateEmail);
-            return this;
+
+        public Builder alternateEmail(String alternateEmail) {
+            return alternateEmail(Output.of(alternateEmail));
         }
+
         public Builder channelPartnerId(@Nullable Output<String> channelPartnerId) {
-            this.channelPartnerId = channelPartnerId;
+            $.channelPartnerId = channelPartnerId;
             return this;
         }
-        public Builder channelPartnerId(@Nullable String channelPartnerId) {
-            this.channelPartnerId = Codegen.ofNullable(channelPartnerId);
-            return this;
+
+        public Builder channelPartnerId(String channelPartnerId) {
+            return channelPartnerId(Output.of(channelPartnerId));
         }
+
         public Builder channelPartnerLinkId(Output<String> channelPartnerLinkId) {
-            this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId);
+            $.channelPartnerLinkId = channelPartnerLinkId;
             return this;
         }
+
         public Builder channelPartnerLinkId(String channelPartnerLinkId) {
-            this.channelPartnerLinkId = Output.of(Objects.requireNonNull(channelPartnerLinkId));
-            return this;
+            return channelPartnerLinkId(Output.of(channelPartnerLinkId));
         }
+
         public Builder domain(Output<String> domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Output.of(Objects.requireNonNull(domain));
-            return this;
+            return domain(Output.of(domain));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder orgDisplayName(Output<String> orgDisplayName) {
-            this.orgDisplayName = Objects.requireNonNull(orgDisplayName);
+            $.orgDisplayName = orgDisplayName;
             return this;
         }
+
         public Builder orgDisplayName(String orgDisplayName) {
-            this.orgDisplayName = Output.of(Objects.requireNonNull(orgDisplayName));
-            return this;
+            return orgDisplayName(Output.of(orgDisplayName));
         }
+
         public Builder orgPostalAddress(Output<GoogleTypePostalAddressArgs> orgPostalAddress) {
-            this.orgPostalAddress = Objects.requireNonNull(orgPostalAddress);
+            $.orgPostalAddress = orgPostalAddress;
             return this;
         }
+
         public Builder orgPostalAddress(GoogleTypePostalAddressArgs orgPostalAddress) {
-            this.orgPostalAddress = Output.of(Objects.requireNonNull(orgPostalAddress));
-            return this;
+            return orgPostalAddress(Output.of(orgPostalAddress));
         }
+
         public Builder primaryContactInfo(@Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo) {
-            this.primaryContactInfo = primaryContactInfo;
+            $.primaryContactInfo = primaryContactInfo;
             return this;
         }
-        public Builder primaryContactInfo(@Nullable GoogleCloudChannelV1ContactInfoArgs primaryContactInfo) {
-            this.primaryContactInfo = Codegen.ofNullable(primaryContactInfo);
-            return this;
-        }        public CustomerArgs build() {
-            return new CustomerArgs(accountId, alternateEmail, channelPartnerId, channelPartnerLinkId, domain, languageCode, orgDisplayName, orgPostalAddress, primaryContactInfo);
+
+        public Builder primaryContactInfo(GoogleCloudChannelV1ContactInfoArgs primaryContactInfo) {
+            return primaryContactInfo(Output.of(primaryContactInfo));
+        }
+
+        public CustomerArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.channelPartnerLinkId = Objects.requireNonNull($.channelPartnerLinkId, "expected parameter 'channelPartnerLinkId' to be non-null");
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.orgDisplayName = Objects.requireNonNull($.orgDisplayName, "expected parameter 'orgDisplayName' to be non-null");
+            $.orgPostalAddress = Objects.requireNonNull($.orgPostalAddress, "expected parameter 'orgPostalAddress' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.securityinsights.enums.IncidentSeverity;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="incidentId")
-      private final @Nullable Output<String> incidentId;
+    private @Nullable Output<String> incidentId;
 
-    public Output<String> incidentId() {
-        return this.incidentId == null ? Codegen.empty() : this.incidentId;
+    public Optional<Output<String>> incidentId() {
+        return Optional.ofNullable(this.incidentId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="relationName")
-      private final @Nullable Output<String> relationName;
+    private @Nullable Output<String> relationName;
 
-    public Output<String> relationName() {
-        return this.relationName == null ? Codegen.empty() : this.relationName;
+    public Optional<Output<String>> relationName() {
+        return Optional.ofNullable(this.relationName);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="severity")
-      private final @Nullable Output<Either<String,IncidentSeverity>> severity;
+    private @Nullable Output<Either<String,IncidentSeverity>> severity;
 
-    public Output<Either<String,IncidentSeverity>> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<Either<String,IncidentSeverity>>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public IncidentInfoArgs(
-        @Nullable Output<String> incidentId,
-        @Nullable Output<String> relationName,
-        @Nullable Output<Either<String,IncidentSeverity>> severity,
-        @Nullable Output<String> title) {
-        this.incidentId = incidentId;
-        this.relationName = relationName;
-        this.severity = severity;
-        this.title = title;
-    }
+    private IncidentInfoArgs() {}
 
-    private IncidentInfoArgs() {
-        this.incidentId = Codegen.empty();
-        this.relationName = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.title = Codegen.empty();
+    private IncidentInfoArgs(IncidentInfoArgs $) {
+        this.incidentId = $.incidentId;
+        this.relationName = $.relationName;
+        this.severity = $.severity;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncidentInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> incidentId;
-        private @Nullable Output<String> relationName;
-        private @Nullable Output<Either<String,IncidentSeverity>> severity;
-        private @Nullable Output<String> title;
+        private IncidentInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncidentInfoArgs();
         }
 
         public Builder(IncidentInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.incidentId = defaults.incidentId;
-    	      this.relationName = defaults.relationName;
-    	      this.severity = defaults.severity;
-    	      this.title = defaults.title;
+            $ = new IncidentInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder incidentId(@Nullable Output<String> incidentId) {
-            this.incidentId = incidentId;
+            $.incidentId = incidentId;
             return this;
         }
-        public Builder incidentId(@Nullable String incidentId) {
-            this.incidentId = Codegen.ofNullable(incidentId);
-            return this;
+
+        public Builder incidentId(String incidentId) {
+            return incidentId(Output.of(incidentId));
         }
+
         public Builder relationName(@Nullable Output<String> relationName) {
-            this.relationName = relationName;
+            $.relationName = relationName;
             return this;
         }
-        public Builder relationName(@Nullable String relationName) {
-            this.relationName = Codegen.ofNullable(relationName);
-            return this;
+
+        public Builder relationName(String relationName) {
+            return relationName(Output.of(relationName));
         }
+
         public Builder severity(@Nullable Output<Either<String,IncidentSeverity>> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable Either<String,IncidentSeverity> severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
+
+        public Builder severity(Either<String,IncidentSeverity> severity) {
+            return severity(Output.of(severity));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public IncidentInfoArgs build() {
-            return new IncidentInfoArgs(incidentId, relationName, severity, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public IncidentInfoArgs build() {
+            return $;
         }
     }
+
 }

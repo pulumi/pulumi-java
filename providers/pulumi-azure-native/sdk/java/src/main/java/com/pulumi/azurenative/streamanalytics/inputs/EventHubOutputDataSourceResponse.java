@@ -24,10 +24,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="eventHubName")
-      private final @Nullable String eventHubName;
+    private @Nullable String eventHubName;
 
     public Optional<String> eventHubName() {
-        return this.eventHubName == null ? Optional.empty() : Optional.ofNullable(this.eventHubName);
+        return Optional.ofNullable(this.eventHubName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="partitionKey")
-      private final @Nullable String partitionKey;
+    private @Nullable String partitionKey;
 
     public Optional<String> partitionKey() {
-        return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
+        return Optional.ofNullable(this.partitionKey);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="serviceBusNamespace")
-      private final @Nullable String serviceBusNamespace;
+    private @Nullable String serviceBusNamespace;
 
     public Optional<String> serviceBusNamespace() {
-        return this.serviceBusNamespace == null ? Optional.empty() : Optional.ofNullable(this.serviceBusNamespace);
+        return Optional.ofNullable(this.serviceBusNamespace);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sharedAccessPolicyKey")
-      private final @Nullable String sharedAccessPolicyKey;
+    private @Nullable String sharedAccessPolicyKey;
 
     public Optional<String> sharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
+        return Optional.ofNullable(this.sharedAccessPolicyKey);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sharedAccessPolicyName")
-      private final @Nullable String sharedAccessPolicyName;
+    private @Nullable String sharedAccessPolicyName;
 
     public Optional<String> sharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
+        return Optional.ofNullable(this.sharedAccessPolicyName);
     }
 
     /**
@@ -80,91 +80,75 @@ public final class EventHubOutputDataSourceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public EventHubOutputDataSourceResponse(
-        @Nullable String eventHubName,
-        @Nullable String partitionKey,
-        @Nullable String serviceBusNamespace,
-        @Nullable String sharedAccessPolicyKey,
-        @Nullable String sharedAccessPolicyName,
-        String type) {
-        this.eventHubName = eventHubName;
-        this.partitionKey = partitionKey;
-        this.serviceBusNamespace = serviceBusNamespace;
-        this.sharedAccessPolicyKey = sharedAccessPolicyKey;
-        this.sharedAccessPolicyName = sharedAccessPolicyName;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private EventHubOutputDataSourceResponse() {}
 
-    private EventHubOutputDataSourceResponse() {
-        this.eventHubName = null;
-        this.partitionKey = null;
-        this.serviceBusNamespace = null;
-        this.sharedAccessPolicyKey = null;
-        this.sharedAccessPolicyName = null;
-        this.type = null;
+    private EventHubOutputDataSourceResponse(EventHubOutputDataSourceResponse $) {
+        this.eventHubName = $.eventHubName;
+        this.partitionKey = $.partitionKey;
+        this.serviceBusNamespace = $.serviceBusNamespace;
+        this.sharedAccessPolicyKey = $.sharedAccessPolicyKey;
+        this.sharedAccessPolicyName = $.sharedAccessPolicyName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHubOutputDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String eventHubName;
-        private @Nullable String partitionKey;
-        private @Nullable String serviceBusNamespace;
-        private @Nullable String sharedAccessPolicyKey;
-        private @Nullable String sharedAccessPolicyName;
-        private String type;
+        private EventHubOutputDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHubOutputDataSourceResponse();
         }
 
         public Builder(EventHubOutputDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.partitionKey = defaults.partitionKey;
-    	      this.serviceBusNamespace = defaults.serviceBusNamespace;
-    	      this.sharedAccessPolicyKey = defaults.sharedAccessPolicyKey;
-    	      this.sharedAccessPolicyName = defaults.sharedAccessPolicyName;
-    	      this.type = defaults.type;
+            $ = new EventHubOutputDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = eventHubName;
+            $.eventHubName = eventHubName;
             return this;
         }
+
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = partitionKey;
+            $.partitionKey = partitionKey;
             return this;
         }
+
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
-            this.serviceBusNamespace = serviceBusNamespace;
+            $.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
+
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = sharedAccessPolicyKey;
+            $.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
+
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = sharedAccessPolicyName;
+            $.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public EventHubOutputDataSourceResponse build() {
-            return new EventHubOutputDataSourceResponse(eventHubName, partitionKey, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
+        }
+
+        public EventHubOutputDataSourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

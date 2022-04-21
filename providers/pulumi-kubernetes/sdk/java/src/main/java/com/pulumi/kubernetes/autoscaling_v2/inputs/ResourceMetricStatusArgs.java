@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.MetricValueStatusArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ResourceMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="current", required=true)
-      private final Output<MetricValueStatusArgs> current;
+    private Output<MetricValueStatusArgs> current;
 
     public Output<MetricValueStatusArgs> current() {
         return this.current;
@@ -35,63 +34,60 @@ public final class ResourceMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public ResourceMetricStatusArgs(
-        Output<MetricValueStatusArgs> current,
-        Output<String> name) {
-        this.current = Objects.requireNonNull(current, "expected parameter 'current' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ResourceMetricStatusArgs() {}
 
-    private ResourceMetricStatusArgs() {
-        this.current = Codegen.empty();
-        this.name = Codegen.empty();
+    private ResourceMetricStatusArgs(ResourceMetricStatusArgs $) {
+        this.current = $.current;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceMetricStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MetricValueStatusArgs> current;
-        private Output<String> name;
+        private ResourceMetricStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceMetricStatusArgs();
         }
 
         public Builder(ResourceMetricStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.current = defaults.current;
-    	      this.name = defaults.name;
+            $ = new ResourceMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder current(Output<MetricValueStatusArgs> current) {
-            this.current = Objects.requireNonNull(current);
+            $.current = current;
             return this;
         }
+
         public Builder current(MetricValueStatusArgs current) {
-            this.current = Output.of(Objects.requireNonNull(current));
-            return this;
+            return current(Output.of(current));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ResourceMetricStatusArgs build() {
-            return new ResourceMetricStatusArgs(current, name);
+            return name(Output.of(name));
+        }
+
+        public ResourceMetricStatusArgs build() {
+            $.current = Objects.requireNonNull($.current, "expected parameter 'current' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

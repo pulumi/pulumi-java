@@ -26,10 +26,10 @@ public final class CustomScaleRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="auth")
-      private final @Nullable List<ScaleRuleAuthResponse> auth;
+    private @Nullable List<ScaleRuleAuthResponse> auth;
 
-    public List<ScaleRuleAuthResponse> auth() {
-        return this.auth == null ? List.of() : this.auth;
+    public Optional<List<ScaleRuleAuthResponse>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CustomScaleRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Map<String,String> metadata;
+    private @Nullable Map<String,String> metadata;
 
-    public Map<String,String> metadata() {
-        return this.metadata == null ? Map.of() : this.metadata;
+    public Optional<Map<String,String>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -49,67 +49,60 @@ public final class CustomScaleRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public CustomScaleRuleResponse(
-        @Nullable List<ScaleRuleAuthResponse> auth,
-        @Nullable Map<String,String> metadata,
-        @Nullable String type) {
-        this.auth = auth;
-        this.metadata = metadata;
-        this.type = type;
-    }
+    private CustomScaleRuleResponse() {}
 
-    private CustomScaleRuleResponse() {
-        this.auth = List.of();
-        this.metadata = Map.of();
-        this.type = null;
+    private CustomScaleRuleResponse(CustomScaleRuleResponse $) {
+        this.auth = $.auth;
+        this.metadata = $.metadata;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomScaleRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ScaleRuleAuthResponse> auth;
-        private @Nullable Map<String,String> metadata;
-        private @Nullable String type;
+        private CustomScaleRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomScaleRuleResponse();
         }
 
         public Builder(CustomScaleRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.metadata = defaults.metadata;
-    	      this.type = defaults.type;
+            $ = new CustomScaleRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable List<ScaleRuleAuthResponse> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
+
         public Builder auth(ScaleRuleAuthResponse... auth) {
             return auth(List.of(auth));
         }
+
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public CustomScaleRuleResponse build() {
-            return new CustomScaleRuleResponse(auth, metadata, type);
+        }
+
+        public CustomScaleRuleResponse build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class CustomErrorRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="isErrorType", required=true)
-      private final Boolean isErrorType;
+    private Boolean isErrorType;
 
     public Boolean isErrorType() {
         return this.isErrorType;
@@ -33,55 +33,52 @@ public final class CustomErrorRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
     }
 
-    public CustomErrorRuleResponse(
-        Boolean isErrorType,
-        String selector) {
-        this.isErrorType = Objects.requireNonNull(isErrorType, "expected parameter 'isErrorType' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-    }
+    private CustomErrorRuleResponse() {}
 
-    private CustomErrorRuleResponse() {
-        this.isErrorType = null;
-        this.selector = null;
+    private CustomErrorRuleResponse(CustomErrorRuleResponse $) {
+        this.isErrorType = $.isErrorType;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomErrorRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isErrorType;
-        private String selector;
+        private CustomErrorRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomErrorRuleResponse();
         }
 
         public Builder(CustomErrorRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isErrorType = defaults.isErrorType;
-    	      this.selector = defaults.selector;
+            $ = new CustomErrorRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isErrorType(Boolean isErrorType) {
-            this.isErrorType = Objects.requireNonNull(isErrorType);
+            $.isErrorType = isErrorType;
             return this;
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
-        }        public CustomErrorRuleResponse build() {
-            return new CustomErrorRuleResponse(isErrorType, selector);
+        }
+
+        public CustomErrorRuleResponse build() {
+            $.isErrorType = Objects.requireNonNull($.isErrorType, "expected parameter 'isErrorType' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            return $;
         }
     }
+
 }

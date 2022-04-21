@@ -25,10 +25,10 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
      * 
      */
     @Import(name="jsonBody")
-      private final @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody;
+    private @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody;
 
     public Optional<LoggingConfigurationFieldToMatchJsonBodyProperties> jsonBody() {
-        return this.jsonBody == null ? Optional.empty() : Optional.ofNullable(this.jsonBody);
+        return Optional.ofNullable(this.jsonBody);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
      * 
      */
     @Import(name="method")
-      private final @Nullable Object method;
+    private @Nullable Object method;
 
     public Optional<Object> method() {
-        return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
      * 
      */
     @Import(name="queryString")
-      private final @Nullable Object queryString;
+    private @Nullable Object queryString;
 
     public Optional<Object> queryString() {
-        return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
+        return Optional.ofNullable(this.queryString);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
      * 
      */
     @Import(name="singleHeader")
-      private final @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader;
+    private @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader;
 
     public Optional<LoggingConfigurationFieldToMatchSingleHeaderProperties> singleHeader() {
-        return this.singleHeader == null ? Optional.empty() : Optional.ofNullable(this.singleHeader);
+        return Optional.ofNullable(this.singleHeader);
     }
 
     /**
@@ -69,82 +69,68 @@ public final class LoggingConfigurationFieldToMatch extends com.pulumi.resources
      * 
      */
     @Import(name="uriPath")
-      private final @Nullable Object uriPath;
+    private @Nullable Object uriPath;
 
     public Optional<Object> uriPath() {
-        return this.uriPath == null ? Optional.empty() : Optional.ofNullable(this.uriPath);
+        return Optional.ofNullable(this.uriPath);
     }
 
-    public LoggingConfigurationFieldToMatch(
-        @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody,
-        @Nullable Object method,
-        @Nullable Object queryString,
-        @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader,
-        @Nullable Object uriPath) {
-        this.jsonBody = jsonBody;
-        this.method = method;
-        this.queryString = queryString;
-        this.singleHeader = singleHeader;
-        this.uriPath = uriPath;
-    }
+    private LoggingConfigurationFieldToMatch() {}
 
-    private LoggingConfigurationFieldToMatch() {
-        this.jsonBody = null;
-        this.method = null;
-        this.queryString = null;
-        this.singleHeader = null;
-        this.uriPath = null;
+    private LoggingConfigurationFieldToMatch(LoggingConfigurationFieldToMatch $) {
+        this.jsonBody = $.jsonBody;
+        this.method = $.method;
+        this.queryString = $.queryString;
+        this.singleHeader = $.singleHeader;
+        this.uriPath = $.uriPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationFieldToMatch defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody;
-        private @Nullable Object method;
-        private @Nullable Object queryString;
-        private @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader;
-        private @Nullable Object uriPath;
+        private LoggingConfigurationFieldToMatch $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationFieldToMatch();
         }
 
         public Builder(LoggingConfigurationFieldToMatch defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jsonBody = defaults.jsonBody;
-    	      this.method = defaults.method;
-    	      this.queryString = defaults.queryString;
-    	      this.singleHeader = defaults.singleHeader;
-    	      this.uriPath = defaults.uriPath;
+            $ = new LoggingConfigurationFieldToMatch(Objects.requireNonNull(defaults));
         }
 
         public Builder jsonBody(@Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody) {
-            this.jsonBody = jsonBody;
+            $.jsonBody = jsonBody;
             return this;
         }
+
         public Builder method(@Nullable Object method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
+
         public Builder queryString(@Nullable Object queryString) {
-            this.queryString = queryString;
+            $.queryString = queryString;
             return this;
         }
+
         public Builder singleHeader(@Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader) {
-            this.singleHeader = singleHeader;
+            $.singleHeader = singleHeader;
             return this;
         }
+
         public Builder uriPath(@Nullable Object uriPath) {
-            this.uriPath = uriPath;
+            $.uriPath = uriPath;
             return this;
-        }        public LoggingConfigurationFieldToMatch build() {
-            return new LoggingConfigurationFieldToMatch(jsonBody, method, queryString, singleHeader, uriPath);
+        }
+
+        public LoggingConfigurationFieldToMatch build() {
+            return $;
         }
     }
+
 }

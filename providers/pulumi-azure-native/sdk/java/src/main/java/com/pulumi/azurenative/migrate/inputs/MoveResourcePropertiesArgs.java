@@ -19,11 +19,11 @@ import com.pulumi.azurenative.migrate.inputs.VirtualMachineResourceSettingsArgs;
 import com.pulumi.azurenative.migrate.inputs.VirtualNetworkResourceSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -40,10 +40,10 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="dependsOnOverrides")
-      private final @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
+    private @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
 
-    public Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides() {
-        return this.dependsOnOverrides == null ? Codegen.empty() : this.dependsOnOverrides;
+    public Optional<Output<List<MoveResourceDependencyOverrideArgs>>> dependsOnOverrides() {
+        return Optional.ofNullable(this.dependsOnOverrides);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="existingTargetId")
-      private final @Nullable Output<String> existingTargetId;
+    private @Nullable Output<String> existingTargetId;
 
-    public Output<String> existingTargetId() {
-        return this.existingTargetId == null ? Codegen.empty() : this.existingTargetId;
+    public Optional<Output<String>> existingTargetId() {
+        return Optional.ofNullable(this.existingTargetId);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceSettings")
-      private final @Nullable Output<Object> resourceSettings;
+    private @Nullable Output<Object> resourceSettings;
 
-    public Output<Object> resourceSettings() {
-        return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
+    public Optional<Output<Object>> resourceSettings() {
+        return Optional.ofNullable(this.resourceSettings);
     }
 
     /**
@@ -73,92 +73,83 @@ public final class MoveResourcePropertiesArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="sourceId", required=true)
-      private final Output<String> sourceId;
+    private Output<String> sourceId;
 
     public Output<String> sourceId() {
         return this.sourceId;
     }
 
-    public MoveResourcePropertiesArgs(
-        @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides,
-        @Nullable Output<String> existingTargetId,
-        @Nullable Output<Object> resourceSettings,
-        Output<String> sourceId) {
-        this.dependsOnOverrides = dependsOnOverrides;
-        this.existingTargetId = existingTargetId;
-        this.resourceSettings = resourceSettings;
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-    }
+    private MoveResourcePropertiesArgs() {}
 
-    private MoveResourcePropertiesArgs() {
-        this.dependsOnOverrides = Codegen.empty();
-        this.existingTargetId = Codegen.empty();
-        this.resourceSettings = Codegen.empty();
-        this.sourceId = Codegen.empty();
+    private MoveResourcePropertiesArgs(MoveResourcePropertiesArgs $) {
+        this.dependsOnOverrides = $.dependsOnOverrides;
+        this.existingTargetId = $.existingTargetId;
+        this.resourceSettings = $.resourceSettings;
+        this.sourceId = $.sourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
-        private @Nullable Output<String> existingTargetId;
-        private @Nullable Output<Object> resourceSettings;
-        private Output<String> sourceId;
+        private MoveResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveResourcePropertiesArgs();
         }
 
         public Builder(MoveResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOnOverrides = defaults.dependsOnOverrides;
-    	      this.existingTargetId = defaults.existingTargetId;
-    	      this.resourceSettings = defaults.resourceSettings;
-    	      this.sourceId = defaults.sourceId;
+            $ = new MoveResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOnOverrides(@Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides) {
-            this.dependsOnOverrides = dependsOnOverrides;
+            $.dependsOnOverrides = dependsOnOverrides;
             return this;
         }
-        public Builder dependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideArgs> dependsOnOverrides) {
-            this.dependsOnOverrides = Codegen.ofNullable(dependsOnOverrides);
-            return this;
+
+        public Builder dependsOnOverrides(List<MoveResourceDependencyOverrideArgs> dependsOnOverrides) {
+            return dependsOnOverrides(Output.of(dependsOnOverrides));
         }
+
         public Builder dependsOnOverrides(MoveResourceDependencyOverrideArgs... dependsOnOverrides) {
             return dependsOnOverrides(List.of(dependsOnOverrides));
         }
+
         public Builder existingTargetId(@Nullable Output<String> existingTargetId) {
-            this.existingTargetId = existingTargetId;
+            $.existingTargetId = existingTargetId;
             return this;
         }
-        public Builder existingTargetId(@Nullable String existingTargetId) {
-            this.existingTargetId = Codegen.ofNullable(existingTargetId);
-            return this;
+
+        public Builder existingTargetId(String existingTargetId) {
+            return existingTargetId(Output.of(existingTargetId));
         }
+
         public Builder resourceSettings(@Nullable Output<Object> resourceSettings) {
-            this.resourceSettings = resourceSettings;
+            $.resourceSettings = resourceSettings;
             return this;
         }
-        public Builder resourceSettings(@Nullable Object resourceSettings) {
-            this.resourceSettings = Codegen.ofNullable(resourceSettings);
-            return this;
+
+        public Builder resourceSettings(Object resourceSettings) {
+            return resourceSettings(Output.of(resourceSettings));
         }
+
         public Builder sourceId(Output<String> sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Output.of(Objects.requireNonNull(sourceId));
-            return this;
-        }        public MoveResourcePropertiesArgs build() {
-            return new MoveResourcePropertiesArgs(dependsOnOverrides, existingTargetId, resourceSettings, sourceId);
+            return sourceId(Output.of(sourceId));
+        }
+
+        public MoveResourcePropertiesArgs build() {
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            return $;
         }
     }
+
 }

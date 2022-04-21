@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class DirectLineSpeechChannelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="channelName", required=true)
-      private final Output<String> channelName;
+    private Output<String> channelName;
 
     public Output<String> channelName() {
         return this.channelName;
@@ -37,10 +38,10 @@ public final class DirectLineSpeechChannelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class DirectLineSpeechChannelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -59,89 +60,80 @@ public final class DirectLineSpeechChannelArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<DirectLineSpeechChannelPropertiesArgs> properties;
+    private @Nullable Output<DirectLineSpeechChannelPropertiesArgs> properties;
 
-    public Output<DirectLineSpeechChannelPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<DirectLineSpeechChannelPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public DirectLineSpeechChannelArgs(
-        Output<String> channelName,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> location,
-        @Nullable Output<DirectLineSpeechChannelPropertiesArgs> properties) {
-        this.channelName = Codegen.stringProp("channelName").output().arg(channelName).require();
-        this.etag = etag;
-        this.location = Codegen.stringProp("location").output().arg(location).def("global").getNullable();
-        this.properties = properties;
-    }
+    private DirectLineSpeechChannelArgs() {}
 
-    private DirectLineSpeechChannelArgs() {
-        this.channelName = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
+    private DirectLineSpeechChannelArgs(DirectLineSpeechChannelArgs $) {
+        this.channelName = $.channelName;
+        this.etag = $.etag;
+        this.location = $.location;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectLineSpeechChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> channelName;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> location;
-        private @Nullable Output<DirectLineSpeechChannelPropertiesArgs> properties;
+        private DirectLineSpeechChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectLineSpeechChannelArgs();
         }
 
         public Builder(DirectLineSpeechChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelName = defaults.channelName;
-    	      this.etag = defaults.etag;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
+            $ = new DirectLineSpeechChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelName(Output<String> channelName) {
-            this.channelName = Objects.requireNonNull(channelName);
+            $.channelName = channelName;
             return this;
         }
+
         public Builder channelName(String channelName) {
-            this.channelName = Output.of(Objects.requireNonNull(channelName));
-            return this;
+            return channelName(Output.of(channelName));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<DirectLineSpeechChannelPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable DirectLineSpeechChannelPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public DirectLineSpeechChannelArgs build() {
-            return new DirectLineSpeechChannelArgs(channelName, etag, location, properties);
+
+        public Builder properties(DirectLineSpeechChannelPropertiesArgs properties) {
+            return properties(Output.of(properties));
+        }
+
+        public DirectLineSpeechChannelArgs build() {
+            $.channelName = Codegen.stringProp("channelName").output().arg($.channelName).require();
+            $.location = Codegen.stringProp("location").output().arg($.location).def("global").getNullable();
+            return $;
         }
     }
+
 }

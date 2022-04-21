@@ -13,45 +13,45 @@ public final class TaskSchedulingPolicyResponse extends com.pulumi.resources.Inv
     public static final TaskSchedulingPolicyResponse Empty = new TaskSchedulingPolicyResponse();
 
     @Import(name="nodeFillType", required=true)
-      private final String nodeFillType;
+    private String nodeFillType;
 
     public String nodeFillType() {
         return this.nodeFillType;
     }
 
-    public TaskSchedulingPolicyResponse(String nodeFillType) {
-        this.nodeFillType = Objects.requireNonNull(nodeFillType, "expected parameter 'nodeFillType' to be non-null");
-    }
+    private TaskSchedulingPolicyResponse() {}
 
-    private TaskSchedulingPolicyResponse() {
-        this.nodeFillType = null;
+    private TaskSchedulingPolicyResponse(TaskSchedulingPolicyResponse $) {
+        this.nodeFillType = $.nodeFillType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskSchedulingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nodeFillType;
+        private TaskSchedulingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskSchedulingPolicyResponse();
         }
 
         public Builder(TaskSchedulingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeFillType = defaults.nodeFillType;
+            $ = new TaskSchedulingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeFillType(String nodeFillType) {
-            this.nodeFillType = Objects.requireNonNull(nodeFillType);
+            $.nodeFillType = nodeFillType;
             return this;
-        }        public TaskSchedulingPolicyResponse build() {
-            return new TaskSchedulingPolicyResponse(nodeFillType);
+        }
+
+        public TaskSchedulingPolicyResponse build() {
+            $.nodeFillType = Objects.requireNonNull($.nodeFillType, "expected parameter 'nodeFillType' to be non-null");
+            return $;
         }
     }
+
 }

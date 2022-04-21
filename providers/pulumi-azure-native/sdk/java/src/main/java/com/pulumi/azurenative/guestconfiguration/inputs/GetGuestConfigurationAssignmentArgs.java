@@ -17,7 +17,7 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="guestConfigurationAssignmentName", required=true)
-      private final String guestConfigurationAssignmentName;
+    private String guestConfigurationAssignmentName;
 
     public String guestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName;
@@ -28,7 +28,7 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetGuestConfigurationAssignmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="vmName", required=true)
-      private final String vmName;
+    private String vmName;
 
     public String vmName() {
         return this.vmName;
     }
 
-    public GetGuestConfigurationAssignmentArgs(
-        String guestConfigurationAssignmentName,
-        String resourceGroupName,
-        String vmName) {
-        this.guestConfigurationAssignmentName = Objects.requireNonNull(guestConfigurationAssignmentName, "expected parameter 'guestConfigurationAssignmentName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vmName = Objects.requireNonNull(vmName, "expected parameter 'vmName' to be non-null");
-    }
+    private GetGuestConfigurationAssignmentArgs() {}
 
-    private GetGuestConfigurationAssignmentArgs() {
-        this.guestConfigurationAssignmentName = null;
-        this.resourceGroupName = null;
-        this.vmName = null;
+    private GetGuestConfigurationAssignmentArgs(GetGuestConfigurationAssignmentArgs $) {
+        this.guestConfigurationAssignmentName = $.guestConfigurationAssignmentName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vmName = $.vmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGuestConfigurationAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String guestConfigurationAssignmentName;
-        private String resourceGroupName;
-        private String vmName;
+        private GetGuestConfigurationAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGuestConfigurationAssignmentArgs();
         }
 
         public Builder(GetGuestConfigurationAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.guestConfigurationAssignmentName = defaults.guestConfigurationAssignmentName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vmName = defaults.vmName;
+            $ = new GetGuestConfigurationAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder guestConfigurationAssignmentName(String guestConfigurationAssignmentName) {
-            this.guestConfigurationAssignmentName = Objects.requireNonNull(guestConfigurationAssignmentName);
+            $.guestConfigurationAssignmentName = guestConfigurationAssignmentName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder vmName(String vmName) {
-            this.vmName = Objects.requireNonNull(vmName);
+            $.vmName = vmName;
             return this;
-        }        public GetGuestConfigurationAssignmentArgs build() {
-            return new GetGuestConfigurationAssignmentArgs(guestConfigurationAssignmentName, resourceGroupName, vmName);
+        }
+
+        public GetGuestConfigurationAssignmentArgs build() {
+            $.guestConfigurationAssignmentName = Objects.requireNonNull($.guestConfigurationAssignmentName, "expected parameter 'guestConfigurationAssignmentName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmName = Objects.requireNonNull($.vmName, "expected parameter 'vmName' to be non-null");
+            return $;
         }
     }
+
 }

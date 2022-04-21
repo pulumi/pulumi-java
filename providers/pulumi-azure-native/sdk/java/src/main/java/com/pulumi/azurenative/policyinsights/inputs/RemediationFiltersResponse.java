@@ -24,48 +24,48 @@ public final class RemediationFiltersResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="locations")
-      private final @Nullable List<String> locations;
+    private @Nullable List<String> locations;
 
-    public List<String> locations() {
-        return this.locations == null ? List.of() : this.locations;
+    public Optional<List<String>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
-    public RemediationFiltersResponse(@Nullable List<String> locations) {
-        this.locations = locations;
-    }
+    private RemediationFiltersResponse() {}
 
-    private RemediationFiltersResponse() {
-        this.locations = List.of();
+    private RemediationFiltersResponse(RemediationFiltersResponse $) {
+        this.locations = $.locations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationFiltersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> locations;
+        private RemediationFiltersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationFiltersResponse();
         }
 
         public Builder(RemediationFiltersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
+            $ = new RemediationFiltersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
-        }        public RemediationFiltersResponse build() {
-            return new RemediationFiltersResponse(locations);
+        }
+
+        public RemediationFiltersResponse build() {
+            return $;
         }
     }
+
 }

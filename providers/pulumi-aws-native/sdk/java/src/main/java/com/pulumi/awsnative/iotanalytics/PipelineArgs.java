@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iotanalytics.inputs.PipelineActivityArgs;
 import com.pulumi.awsnative.iotanalytics.inputs.PipelineTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,96 +19,91 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
     public static final PipelineArgs Empty = new PipelineArgs();
 
     @Import(name="pipelineActivities", required=true)
-      private final Output<List<PipelineActivityArgs>> pipelineActivities;
+    private Output<List<PipelineActivityArgs>> pipelineActivities;
 
     public Output<List<PipelineActivityArgs>> pipelineActivities() {
         return this.pipelineActivities;
     }
 
     @Import(name="pipelineName")
-      private final @Nullable Output<String> pipelineName;
+    private @Nullable Output<String> pipelineName;
 
-    public Output<String> pipelineName() {
-        return this.pipelineName == null ? Codegen.empty() : this.pipelineName;
+    public Optional<Output<String>> pipelineName() {
+        return Optional.ofNullable(this.pipelineName);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<PipelineTagArgs>> tags;
+    private @Nullable Output<List<PipelineTagArgs>> tags;
 
-    public Output<List<PipelineTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<PipelineTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PipelineArgs(
-        Output<List<PipelineActivityArgs>> pipelineActivities,
-        @Nullable Output<String> pipelineName,
-        @Nullable Output<List<PipelineTagArgs>> tags) {
-        this.pipelineActivities = Objects.requireNonNull(pipelineActivities, "expected parameter 'pipelineActivities' to be non-null");
-        this.pipelineName = pipelineName;
-        this.tags = tags;
-    }
+    private PipelineArgs() {}
 
-    private PipelineArgs() {
-        this.pipelineActivities = Codegen.empty();
-        this.pipelineName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PipelineArgs(PipelineArgs $) {
+        this.pipelineActivities = $.pipelineActivities;
+        this.pipelineName = $.pipelineName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<PipelineActivityArgs>> pipelineActivities;
-        private @Nullable Output<String> pipelineName;
-        private @Nullable Output<List<PipelineTagArgs>> tags;
+        private PipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineArgs();
         }
 
         public Builder(PipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pipelineActivities = defaults.pipelineActivities;
-    	      this.pipelineName = defaults.pipelineName;
-    	      this.tags = defaults.tags;
+            $ = new PipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pipelineActivities(Output<List<PipelineActivityArgs>> pipelineActivities) {
-            this.pipelineActivities = Objects.requireNonNull(pipelineActivities);
+            $.pipelineActivities = pipelineActivities;
             return this;
         }
+
         public Builder pipelineActivities(List<PipelineActivityArgs> pipelineActivities) {
-            this.pipelineActivities = Output.of(Objects.requireNonNull(pipelineActivities));
-            return this;
+            return pipelineActivities(Output.of(pipelineActivities));
         }
+
         public Builder pipelineActivities(PipelineActivityArgs... pipelineActivities) {
             return pipelineActivities(List.of(pipelineActivities));
         }
+
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
-            this.pipelineName = pipelineName;
+            $.pipelineName = pipelineName;
             return this;
         }
-        public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Codegen.ofNullable(pipelineName);
-            return this;
+
+        public Builder pipelineName(String pipelineName) {
+            return pipelineName(Output.of(pipelineName));
         }
+
         public Builder tags(@Nullable Output<List<PipelineTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<PipelineTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<PipelineTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(PipelineTagArgs... tags) {
             return tags(List.of(tags));
-        }        public PipelineArgs build() {
-            return new PipelineArgs(pipelineActivities, pipelineName, tags);
+        }
+
+        public PipelineArgs build() {
+            $.pipelineActivities = Objects.requireNonNull($.pipelineActivities, "expected parameter 'pipelineActivities' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetStreamStreamModeDetail extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="streamMode", required=true)
-      private final String streamMode;
+    private String streamMode;
 
     public String streamMode() {
         return this.streamMode;
     }
 
-    public GetStreamStreamModeDetail(String streamMode) {
-        this.streamMode = Objects.requireNonNull(streamMode, "expected parameter 'streamMode' to be non-null");
-    }
+    private GetStreamStreamModeDetail() {}
 
-    private GetStreamStreamModeDetail() {
-        this.streamMode = null;
+    private GetStreamStreamModeDetail(GetStreamStreamModeDetail $) {
+        this.streamMode = $.streamMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStreamStreamModeDetail defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String streamMode;
+        private GetStreamStreamModeDetail $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStreamStreamModeDetail();
         }
 
         public Builder(GetStreamStreamModeDetail defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.streamMode = defaults.streamMode;
+            $ = new GetStreamStreamModeDetail(Objects.requireNonNull(defaults));
         }
 
         public Builder streamMode(String streamMode) {
-            this.streamMode = Objects.requireNonNull(streamMode);
+            $.streamMode = streamMode;
             return this;
-        }        public GetStreamStreamModeDetail build() {
-            return new GetStreamStreamModeDetail(streamMode);
+        }
+
+        public GetStreamStreamModeDetail build() {
+            $.streamMode = Objects.requireNonNull($.streamMode, "expected parameter 'streamMode' to be non-null");
+            return $;
         }
     }
+
 }

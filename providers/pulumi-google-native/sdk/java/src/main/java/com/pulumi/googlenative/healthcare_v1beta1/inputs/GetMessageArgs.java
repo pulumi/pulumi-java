@@ -15,126 +15,113 @@ public final class GetMessageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMessageArgs Empty = new GetMessageArgs();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="hl7V2StoreId", required=true)
-      private final String hl7V2StoreId;
+    private String hl7V2StoreId;
 
     public String hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="messageId", required=true)
-      private final String messageId;
+    private String messageId;
 
     public String messageId() {
         return this.messageId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetMessageArgs(
-        String datasetId,
-        String hl7V2StoreId,
-        String location,
-        String messageId,
-        @Nullable String project,
-        @Nullable String view) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-        this.project = project;
-        this.view = view;
-    }
+    private GetMessageArgs() {}
 
-    private GetMessageArgs() {
-        this.datasetId = null;
-        this.hl7V2StoreId = null;
-        this.location = null;
-        this.messageId = null;
-        this.project = null;
-        this.view = null;
+    private GetMessageArgs(GetMessageArgs $) {
+        this.datasetId = $.datasetId;
+        this.hl7V2StoreId = $.hl7V2StoreId;
+        this.location = $.location;
+        this.messageId = $.messageId;
+        this.project = $.project;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private String hl7V2StoreId;
-        private String location;
-        private String messageId;
-        private @Nullable String project;
-        private @Nullable String view;
+        private GetMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMessageArgs();
         }
 
         public Builder(GetMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.hl7V2StoreId = defaults.hl7V2StoreId;
-    	      this.location = defaults.location;
-    	      this.messageId = defaults.messageId;
-    	      this.project = defaults.project;
-    	      this.view = defaults.view;
+            $ = new GetMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
+            $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder messageId(String messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetMessageArgs build() {
-            return new GetMessageArgs(datasetId, hl7V2StoreId, location, messageId, project, view);
+        }
+
+        public GetMessageArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.hl7V2StoreId = Objects.requireNonNull($.hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            return $;
         }
     }
+
 }

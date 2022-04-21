@@ -23,7 +23,7 @@ public final class PackageNoteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="distribution", required=true)
-      private final List<DistributionResponse> distribution;
+    private List<DistributionResponse> distribution;
 
     public List<DistributionResponse> distribution() {
         return this.distribution;
@@ -34,58 +34,56 @@ public final class PackageNoteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public PackageNoteResponse(
-        List<DistributionResponse> distribution,
-        String name) {
-        this.distribution = Objects.requireNonNull(distribution, "expected parameter 'distribution' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PackageNoteResponse() {}
 
-    private PackageNoteResponse() {
-        this.distribution = List.of();
-        this.name = null;
+    private PackageNoteResponse(PackageNoteResponse $) {
+        this.distribution = $.distribution;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DistributionResponse> distribution;
-        private String name;
+        private PackageNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageNoteResponse();
         }
 
         public Builder(PackageNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distribution = defaults.distribution;
-    	      this.name = defaults.name;
+            $ = new PackageNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distribution(List<DistributionResponse> distribution) {
-            this.distribution = Objects.requireNonNull(distribution);
+            $.distribution = distribution;
             return this;
         }
+
         public Builder distribution(DistributionResponse... distribution) {
             return distribution(List.of(distribution));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public PackageNoteResponse build() {
-            return new PackageNoteResponse(distribution, name);
+        }
+
+        public PackageNoteResponse build() {
+            $.distribution = Objects.requireNonNull($.distribution, "expected parameter 'distribution' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

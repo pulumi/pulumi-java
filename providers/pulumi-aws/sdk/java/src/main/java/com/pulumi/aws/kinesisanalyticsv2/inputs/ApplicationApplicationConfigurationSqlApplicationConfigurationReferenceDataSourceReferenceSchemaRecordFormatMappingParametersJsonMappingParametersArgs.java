@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="recordRowPath", required=true)
-      private final Output<String> recordRowPath;
+    private Output<String> recordRowPath;
 
     public Output<String> recordRowPath() {
         return this.recordRowPath;
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs(Output<String> recordRowPath) {
-        this.recordRowPath = Objects.requireNonNull(recordRowPath, "expected parameter 'recordRowPath' to be non-null");
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs() {
-        this.recordRowPath = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs $) {
+        this.recordRowPath = $.recordRowPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> recordRowPath;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recordRowPath = defaults.recordRowPath;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recordRowPath(Output<String> recordRowPath) {
-            this.recordRowPath = Objects.requireNonNull(recordRowPath);
+            $.recordRowPath = recordRowPath;
             return this;
         }
+
         public Builder recordRowPath(String recordRowPath) {
-            this.recordRowPath = Output.of(Objects.requireNonNull(recordRowPath));
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs(recordRowPath);
+            return recordRowPath(Output.of(recordRowPath));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs build() {
+            $.recordRowPath = Objects.requireNonNull($.recordRowPath, "expected parameter 'recordRowPath' to be non-null");
+            return $;
         }
     }
+
 }

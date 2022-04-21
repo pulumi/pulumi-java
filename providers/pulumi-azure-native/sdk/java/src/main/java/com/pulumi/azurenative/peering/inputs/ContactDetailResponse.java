@@ -23,10 +23,10 @@ public final class ContactDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="email")
-      private final @Nullable String email;
+    private @Nullable String email;
 
     public Optional<String> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ContactDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="phone")
-      private final @Nullable String phone;
+    private @Nullable String phone;
 
     public Optional<String> phone() {
-        return this.phone == null ? Optional.empty() : Optional.ofNullable(this.phone);
+        return Optional.ofNullable(this.phone);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class ContactDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="role")
-      private final @Nullable String role;
+    private @Nullable String role;
 
     public Optional<String> role() {
-        return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
+        return Optional.ofNullable(this.role);
     }
 
-    public ContactDetailResponse(
-        @Nullable String email,
-        @Nullable String phone,
-        @Nullable String role) {
-        this.email = email;
-        this.phone = phone;
-        this.role = role;
-    }
+    private ContactDetailResponse() {}
 
-    private ContactDetailResponse() {
-        this.email = null;
-        this.phone = null;
-        this.role = null;
+    private ContactDetailResponse(ContactDetailResponse $) {
+        this.email = $.email;
+        this.phone = $.phone;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String email;
-        private @Nullable String phone;
-        private @Nullable String role;
+        private ContactDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactDetailResponse();
         }
 
         public Builder(ContactDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.phone = defaults.phone;
-    	      this.role = defaults.role;
+            $ = new ContactDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable String email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder phone(@Nullable String phone) {
-            this.phone = phone;
+            $.phone = phone;
             return this;
         }
+
         public Builder role(@Nullable String role) {
-            this.role = role;
+            $.role = role;
             return this;
-        }        public ContactDetailResponse build() {
-            return new ContactDetailResponse(email, phone, role);
+        }
+
+        public ContactDetailResponse build() {
+            return $;
         }
     }
+
 }

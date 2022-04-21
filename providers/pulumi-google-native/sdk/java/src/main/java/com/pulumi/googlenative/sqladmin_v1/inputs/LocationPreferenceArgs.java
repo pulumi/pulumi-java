@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="followGaeApplication")
-      private final @Nullable Output<String> followGaeApplication;
+    private @Nullable Output<String> followGaeApplication;
 
-    public Output<String> followGaeApplication() {
-        return this.followGaeApplication == null ? Codegen.empty() : this.followGaeApplication;
+    public Optional<Output<String>> followGaeApplication() {
+        return Optional.ofNullable(this.followGaeApplication);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="secondaryZone")
-      private final @Nullable Output<String> secondaryZone;
+    private @Nullable Output<String> secondaryZone;
 
-    public Output<String> secondaryZone() {
-        return this.secondaryZone == null ? Codegen.empty() : this.secondaryZone;
+    public Optional<Output<String>> secondaryZone() {
+        return Optional.ofNullable(this.secondaryZone);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class LocationPreferenceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public LocationPreferenceArgs(
-        @Nullable Output<String> followGaeApplication,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> secondaryZone,
-        @Nullable Output<String> zone) {
-        this.followGaeApplication = followGaeApplication;
-        this.kind = kind;
-        this.secondaryZone = secondaryZone;
-        this.zone = zone;
-    }
+    private LocationPreferenceArgs() {}
 
-    private LocationPreferenceArgs() {
-        this.followGaeApplication = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.secondaryZone = Codegen.empty();
-        this.zone = Codegen.empty();
+    private LocationPreferenceArgs(LocationPreferenceArgs $) {
+        this.followGaeApplication = $.followGaeApplication;
+        this.kind = $.kind;
+        this.secondaryZone = $.secondaryZone;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationPreferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> followGaeApplication;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> secondaryZone;
-        private @Nullable Output<String> zone;
+        private LocationPreferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationPreferenceArgs();
         }
 
         public Builder(LocationPreferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.followGaeApplication = defaults.followGaeApplication;
-    	      this.kind = defaults.kind;
-    	      this.secondaryZone = defaults.secondaryZone;
-    	      this.zone = defaults.zone;
+            $ = new LocationPreferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder followGaeApplication(@Nullable Output<String> followGaeApplication) {
-            this.followGaeApplication = followGaeApplication;
+            $.followGaeApplication = followGaeApplication;
             return this;
         }
-        public Builder followGaeApplication(@Nullable String followGaeApplication) {
-            this.followGaeApplication = Codegen.ofNullable(followGaeApplication);
-            return this;
+
+        public Builder followGaeApplication(String followGaeApplication) {
+            return followGaeApplication(Output.of(followGaeApplication));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder secondaryZone(@Nullable Output<String> secondaryZone) {
-            this.secondaryZone = secondaryZone;
+            $.secondaryZone = secondaryZone;
             return this;
         }
-        public Builder secondaryZone(@Nullable String secondaryZone) {
-            this.secondaryZone = Codegen.ofNullable(secondaryZone);
-            return this;
+
+        public Builder secondaryZone(String secondaryZone) {
+            return secondaryZone(Output.of(secondaryZone));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public LocationPreferenceArgs build() {
-            return new LocationPreferenceArgs(followGaeApplication, kind, secondaryZone, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public LocationPreferenceArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class URLMapDefaultRouteActionRequestMirrorPolicyGetArgs extends co
      * 
      */
     @Import(name="backendService", required=true)
-      private final Output<String> backendService;
+    private Output<String> backendService;
 
     public Output<String> backendService() {
         return this.backendService;
     }
 
-    public URLMapDefaultRouteActionRequestMirrorPolicyGetArgs(Output<String> backendService) {
-        this.backendService = Objects.requireNonNull(backendService, "expected parameter 'backendService' to be non-null");
-    }
+    private URLMapDefaultRouteActionRequestMirrorPolicyGetArgs() {}
 
-    private URLMapDefaultRouteActionRequestMirrorPolicyGetArgs() {
-        this.backendService = Codegen.empty();
+    private URLMapDefaultRouteActionRequestMirrorPolicyGetArgs(URLMapDefaultRouteActionRequestMirrorPolicyGetArgs $) {
+        this.backendService = $.backendService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapDefaultRouteActionRequestMirrorPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backendService;
+        private URLMapDefaultRouteActionRequestMirrorPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapDefaultRouteActionRequestMirrorPolicyGetArgs();
         }
 
         public Builder(URLMapDefaultRouteActionRequestMirrorPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendService = defaults.backendService;
+            $ = new URLMapDefaultRouteActionRequestMirrorPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendService(Output<String> backendService) {
-            this.backendService = Objects.requireNonNull(backendService);
+            $.backendService = backendService;
             return this;
         }
+
         public Builder backendService(String backendService) {
-            this.backendService = Output.of(Objects.requireNonNull(backendService));
-            return this;
-        }        public URLMapDefaultRouteActionRequestMirrorPolicyGetArgs build() {
-            return new URLMapDefaultRouteActionRequestMirrorPolicyGetArgs(backendService);
+            return backendService(Output.of(backendService));
+        }
+
+        public URLMapDefaultRouteActionRequestMirrorPolicyGetArgs build() {
+            $.backendService = Objects.requireNonNull($.backendService, "expected parameter 'backendService' to be non-null");
+            return $;
         }
     }
+
 }

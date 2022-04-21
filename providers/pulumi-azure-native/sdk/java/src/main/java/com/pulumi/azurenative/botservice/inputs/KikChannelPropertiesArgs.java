@@ -5,10 +5,10 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class KikChannelPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="apiKey")
-      private final @Nullable Output<String> apiKey;
+    private @Nullable Output<String> apiKey;
 
-    public Output<String> apiKey() {
-        return this.apiKey == null ? Codegen.empty() : this.apiKey;
+    public Optional<Output<String>> apiKey() {
+        return Optional.ofNullable(this.apiKey);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class KikChannelPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -47,10 +47,10 @@ public final class KikChannelPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isValidated")
-      private final @Nullable Output<Boolean> isValidated;
+    private @Nullable Output<Boolean> isValidated;
 
-    public Output<Boolean> isValidated() {
-        return this.isValidated == null ? Codegen.empty() : this.isValidated;
+    public Optional<Output<Boolean>> isValidated() {
+        return Optional.ofNullable(this.isValidated);
     }
 
     /**
@@ -58,89 +58,80 @@ public final class KikChannelPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="userName", required=true)
-      private final Output<String> userName;
+    private Output<String> userName;
 
     public Output<String> userName() {
         return this.userName;
     }
 
-    public KikChannelPropertiesArgs(
-        @Nullable Output<String> apiKey,
-        Output<Boolean> isEnabled,
-        @Nullable Output<Boolean> isValidated,
-        Output<String> userName) {
-        this.apiKey = apiKey;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isValidated = isValidated;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private KikChannelPropertiesArgs() {}
 
-    private KikChannelPropertiesArgs() {
-        this.apiKey = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.isValidated = Codegen.empty();
-        this.userName = Codegen.empty();
+    private KikChannelPropertiesArgs(KikChannelPropertiesArgs $) {
+        this.apiKey = $.apiKey;
+        this.isEnabled = $.isEnabled;
+        this.isValidated = $.isValidated;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KikChannelPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiKey;
-        private Output<Boolean> isEnabled;
-        private @Nullable Output<Boolean> isValidated;
-        private Output<String> userName;
+        private KikChannelPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KikChannelPropertiesArgs();
         }
 
         public Builder(KikChannelPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiKey = defaults.apiKey;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.isValidated = defaults.isValidated;
-    	      this.userName = defaults.userName;
+            $ = new KikChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiKey(@Nullable Output<String> apiKey) {
-            this.apiKey = apiKey;
+            $.apiKey = apiKey;
             return this;
         }
-        public Builder apiKey(@Nullable String apiKey) {
-            this.apiKey = Codegen.ofNullable(apiKey);
-            return this;
+
+        public Builder apiKey(String apiKey) {
+            return apiKey(Output.of(apiKey));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder isValidated(@Nullable Output<Boolean> isValidated) {
-            this.isValidated = isValidated;
+            $.isValidated = isValidated;
             return this;
         }
-        public Builder isValidated(@Nullable Boolean isValidated) {
-            this.isValidated = Codegen.ofNullable(isValidated);
-            return this;
+
+        public Builder isValidated(Boolean isValidated) {
+            return isValidated(Output.of(isValidated));
         }
+
         public Builder userName(Output<String> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
-        }        public KikChannelPropertiesArgs build() {
-            return new KikChannelPropertiesArgs(apiKey, isEnabled, isValidated, userName);
+            return userName(Output.of(userName));
+        }
+
+        public KikChannelPropertiesArgs build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

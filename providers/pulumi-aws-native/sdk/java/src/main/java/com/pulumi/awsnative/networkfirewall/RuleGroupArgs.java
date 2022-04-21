@@ -7,11 +7,11 @@ import com.pulumi.awsnative.networkfirewall.enums.RuleGroupTypeEnum;
 import com.pulumi.awsnative.networkfirewall.inputs.RuleGroupTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,153 +20,139 @@ public final class RuleGroupArgs extends com.pulumi.resources.ResourceArgs {
     public static final RuleGroupArgs Empty = new RuleGroupArgs();
 
     @Import(name="capacity", required=true)
-      private final Output<Integer> capacity;
+    private Output<Integer> capacity;
 
     public Output<Integer> capacity() {
         return this.capacity;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="ruleGroup")
-      private final @Nullable Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
+    private @Nullable Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
 
-    public Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup() {
-        return this.ruleGroup == null ? Codegen.empty() : this.ruleGroup;
+    public Optional<Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs>> ruleGroup() {
+        return Optional.ofNullable(this.ruleGroup);
     }
 
     @Import(name="ruleGroupName")
-      private final @Nullable Output<String> ruleGroupName;
+    private @Nullable Output<String> ruleGroupName;
 
-    public Output<String> ruleGroupName() {
-        return this.ruleGroupName == null ? Codegen.empty() : this.ruleGroupName;
+    public Optional<Output<String>> ruleGroupName() {
+        return Optional.ofNullable(this.ruleGroupName);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<RuleGroupTagArgs>> tags;
+    private @Nullable Output<List<RuleGroupTagArgs>> tags;
 
-    public Output<List<RuleGroupTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RuleGroupTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="type", required=true)
-      private final Output<RuleGroupTypeEnum> type;
+    private Output<RuleGroupTypeEnum> type;
 
     public Output<RuleGroupTypeEnum> type() {
         return this.type;
     }
 
-    public RuleGroupArgs(
-        Output<Integer> capacity,
-        @Nullable Output<String> description,
-        @Nullable Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup,
-        @Nullable Output<String> ruleGroupName,
-        @Nullable Output<List<RuleGroupTagArgs>> tags,
-        Output<RuleGroupTypeEnum> type) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.description = description;
-        this.ruleGroup = ruleGroup;
-        this.ruleGroupName = ruleGroupName;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RuleGroupArgs() {}
 
-    private RuleGroupArgs() {
-        this.capacity = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ruleGroup = Codegen.empty();
-        this.ruleGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private RuleGroupArgs(RuleGroupArgs $) {
+        this.capacity = $.capacity;
+        this.description = $.description;
+        this.ruleGroup = $.ruleGroup;
+        this.ruleGroupName = $.ruleGroupName;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> capacity;
-        private @Nullable Output<String> description;
-        private @Nullable Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup;
-        private @Nullable Output<String> ruleGroupName;
-        private @Nullable Output<List<RuleGroupTagArgs>> tags;
-        private Output<RuleGroupTypeEnum> type;
+        private RuleGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupArgs();
         }
 
         public Builder(RuleGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.description = defaults.description;
-    	      this.ruleGroup = defaults.ruleGroup;
-    	      this.ruleGroupName = defaults.ruleGroupName;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new RuleGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(Output<Integer> capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder capacity(Integer capacity) {
-            this.capacity = Output.of(Objects.requireNonNull(capacity));
-            return this;
+            return capacity(Output.of(capacity));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ruleGroup(@Nullable Output<com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup) {
-            this.ruleGroup = ruleGroup;
+            $.ruleGroup = ruleGroup;
             return this;
         }
-        public Builder ruleGroup(@Nullable com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs ruleGroup) {
-            this.ruleGroup = Codegen.ofNullable(ruleGroup);
-            return this;
+
+        public Builder ruleGroup(com.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs ruleGroup) {
+            return ruleGroup(Output.of(ruleGroup));
         }
+
         public Builder ruleGroupName(@Nullable Output<String> ruleGroupName) {
-            this.ruleGroupName = ruleGroupName;
+            $.ruleGroupName = ruleGroupName;
             return this;
         }
-        public Builder ruleGroupName(@Nullable String ruleGroupName) {
-            this.ruleGroupName = Codegen.ofNullable(ruleGroupName);
-            return this;
+
+        public Builder ruleGroupName(String ruleGroupName) {
+            return ruleGroupName(Output.of(ruleGroupName));
         }
+
         public Builder tags(@Nullable Output<List<RuleGroupTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RuleGroupTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RuleGroupTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RuleGroupTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(Output<RuleGroupTypeEnum> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(RuleGroupTypeEnum type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RuleGroupArgs build() {
-            return new RuleGroupArgs(capacity, description, ruleGroup, ruleGroupName, tags, type);
+            return type(Output.of(type));
+        }
+
+        public RuleGroupArgs build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

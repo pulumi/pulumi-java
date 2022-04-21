@@ -5,7 +5,6 @@ package com.pulumi.aws.waf.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class GeoMatchSetGeoMatchConstraintArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -32,63 +31,60 @@ public final class GeoMatchSetGeoMatchConstraintArgs extends com.pulumi.resource
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public GeoMatchSetGeoMatchConstraintArgs(
-        Output<String> type,
-        Output<String> value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GeoMatchSetGeoMatchConstraintArgs() {}
 
-    private GeoMatchSetGeoMatchConstraintArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private GeoMatchSetGeoMatchConstraintArgs(GeoMatchSetGeoMatchConstraintArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GeoMatchSetGeoMatchConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
-        private Output<String> value;
+        private GeoMatchSetGeoMatchConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GeoMatchSetGeoMatchConstraintArgs();
         }
 
         public Builder(GeoMatchSetGeoMatchConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new GeoMatchSetGeoMatchConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public GeoMatchSetGeoMatchConstraintArgs build() {
-            return new GeoMatchSetGeoMatchConstraintArgs(type, value);
+            return value(Output.of(value));
+        }
+
+        public GeoMatchSetGeoMatchConstraintArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

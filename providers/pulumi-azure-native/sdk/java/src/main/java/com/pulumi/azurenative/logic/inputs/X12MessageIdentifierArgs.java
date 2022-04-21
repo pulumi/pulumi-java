@@ -5,7 +5,6 @@ package com.pulumi.azurenative.logic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class X12MessageIdentifierArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="messageId", required=true)
-      private final Output<String> messageId;
+    private Output<String> messageId;
 
     public Output<String> messageId() {
         return this.messageId;
     }
 
-    public X12MessageIdentifierArgs(Output<String> messageId) {
-        this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
-    }
+    private X12MessageIdentifierArgs() {}
 
-    private X12MessageIdentifierArgs() {
-        this.messageId = Codegen.empty();
+    private X12MessageIdentifierArgs(X12MessageIdentifierArgs $) {
+        this.messageId = $.messageId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12MessageIdentifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> messageId;
+        private X12MessageIdentifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12MessageIdentifierArgs();
         }
 
         public Builder(X12MessageIdentifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageId = defaults.messageId;
+            $ = new X12MessageIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageId(Output<String> messageId) {
-            this.messageId = Objects.requireNonNull(messageId);
+            $.messageId = messageId;
             return this;
         }
+
         public Builder messageId(String messageId) {
-            this.messageId = Output.of(Objects.requireNonNull(messageId));
-            return this;
-        }        public X12MessageIdentifierArgs build() {
-            return new X12MessageIdentifierArgs(messageId);
+            return messageId(Output.of(messageId));
+        }
+
+        public X12MessageIdentifierArgs build() {
+            $.messageId = Objects.requireNonNull($.messageId, "expected parameter 'messageId' to be non-null");
+            return $;
         }
     }
+
 }

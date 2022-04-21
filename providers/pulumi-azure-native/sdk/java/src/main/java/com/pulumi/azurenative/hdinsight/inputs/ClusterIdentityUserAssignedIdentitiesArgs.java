@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ClusterIdentityUserAssignedIdentitiesArgs extends com.pulumi.
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public ClusterIdentityUserAssignedIdentitiesArgs(@Nullable Output<String> tenantId) {
-        this.tenantId = tenantId;
-    }
+    private ClusterIdentityUserAssignedIdentitiesArgs() {}
 
-    private ClusterIdentityUserAssignedIdentitiesArgs() {
-        this.tenantId = Codegen.empty();
+    private ClusterIdentityUserAssignedIdentitiesArgs(ClusterIdentityUserAssignedIdentitiesArgs $) {
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterIdentityUserAssignedIdentitiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> tenantId;
+        private ClusterIdentityUserAssignedIdentitiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterIdentityUserAssignedIdentitiesArgs();
         }
 
         public Builder(ClusterIdentityUserAssignedIdentitiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tenantId = defaults.tenantId;
+            $ = new ClusterIdentityUserAssignedIdentitiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
-        }        public ClusterIdentityUserAssignedIdentitiesArgs build() {
-            return new ClusterIdentityUserAssignedIdentitiesArgs(tenantId);
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
+        }
+
+        public ClusterIdentityUserAssignedIdentitiesArgs build() {
+            return $;
         }
     }
+
 }

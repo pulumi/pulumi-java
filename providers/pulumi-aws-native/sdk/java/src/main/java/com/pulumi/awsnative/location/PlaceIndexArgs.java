@@ -7,9 +7,9 @@ import com.pulumi.awsnative.location.enums.PlaceIndexPricingPlan;
 import com.pulumi.awsnative.location.inputs.PlaceIndexDataSourceConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,130 +18,118 @@ public final class PlaceIndexArgs extends com.pulumi.resources.ResourceArgs {
     public static final PlaceIndexArgs Empty = new PlaceIndexArgs();
 
     @Import(name="dataSource", required=true)
-      private final Output<String> dataSource;
+    private Output<String> dataSource;
 
     public Output<String> dataSource() {
         return this.dataSource;
     }
 
     @Import(name="dataSourceConfiguration")
-      private final @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
+    private @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
 
-    public Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration() {
-        return this.dataSourceConfiguration == null ? Codegen.empty() : this.dataSourceConfiguration;
+    public Optional<Output<PlaceIndexDataSourceConfigurationArgs>> dataSourceConfiguration() {
+        return Optional.ofNullable(this.dataSourceConfiguration);
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="indexName", required=true)
-      private final Output<String> indexName;
+    private Output<String> indexName;
 
     public Output<String> indexName() {
         return this.indexName;
     }
 
     @Import(name="pricingPlan")
-      private final @Nullable Output<PlaceIndexPricingPlan> pricingPlan;
+    private @Nullable Output<PlaceIndexPricingPlan> pricingPlan;
 
-    public Output<PlaceIndexPricingPlan> pricingPlan() {
-        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
+    public Optional<Output<PlaceIndexPricingPlan>> pricingPlan() {
+        return Optional.ofNullable(this.pricingPlan);
     }
 
-    public PlaceIndexArgs(
-        Output<String> dataSource,
-        @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration,
-        @Nullable Output<String> description,
-        Output<String> indexName,
-        @Nullable Output<PlaceIndexPricingPlan> pricingPlan) {
-        this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
-        this.dataSourceConfiguration = dataSourceConfiguration;
-        this.description = description;
-        this.indexName = Objects.requireNonNull(indexName, "expected parameter 'indexName' to be non-null");
-        this.pricingPlan = pricingPlan;
-    }
+    private PlaceIndexArgs() {}
 
-    private PlaceIndexArgs() {
-        this.dataSource = Codegen.empty();
-        this.dataSourceConfiguration = Codegen.empty();
-        this.description = Codegen.empty();
-        this.indexName = Codegen.empty();
-        this.pricingPlan = Codegen.empty();
+    private PlaceIndexArgs(PlaceIndexArgs $) {
+        this.dataSource = $.dataSource;
+        this.dataSourceConfiguration = $.dataSourceConfiguration;
+        this.description = $.description;
+        this.indexName = $.indexName;
+        this.pricingPlan = $.pricingPlan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlaceIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataSource;
-        private @Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
-        private @Nullable Output<String> description;
-        private Output<String> indexName;
-        private @Nullable Output<PlaceIndexPricingPlan> pricingPlan;
+        private PlaceIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlaceIndexArgs();
         }
 
         public Builder(PlaceIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSource = defaults.dataSource;
-    	      this.dataSourceConfiguration = defaults.dataSourceConfiguration;
-    	      this.description = defaults.description;
-    	      this.indexName = defaults.indexName;
-    	      this.pricingPlan = defaults.pricingPlan;
+            $ = new PlaceIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSource(Output<String> dataSource) {
-            this.dataSource = Objects.requireNonNull(dataSource);
+            $.dataSource = dataSource;
             return this;
         }
+
         public Builder dataSource(String dataSource) {
-            this.dataSource = Output.of(Objects.requireNonNull(dataSource));
-            return this;
+            return dataSource(Output.of(dataSource));
         }
+
         public Builder dataSourceConfiguration(@Nullable Output<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration) {
-            this.dataSourceConfiguration = dataSourceConfiguration;
+            $.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
-        public Builder dataSourceConfiguration(@Nullable PlaceIndexDataSourceConfigurationArgs dataSourceConfiguration) {
-            this.dataSourceConfiguration = Codegen.ofNullable(dataSourceConfiguration);
-            return this;
+
+        public Builder dataSourceConfiguration(PlaceIndexDataSourceConfigurationArgs dataSourceConfiguration) {
+            return dataSourceConfiguration(Output.of(dataSourceConfiguration));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder indexName(Output<String> indexName) {
-            this.indexName = Objects.requireNonNull(indexName);
+            $.indexName = indexName;
             return this;
         }
+
         public Builder indexName(String indexName) {
-            this.indexName = Output.of(Objects.requireNonNull(indexName));
-            return this;
+            return indexName(Output.of(indexName));
         }
+
         public Builder pricingPlan(@Nullable Output<PlaceIndexPricingPlan> pricingPlan) {
-            this.pricingPlan = pricingPlan;
+            $.pricingPlan = pricingPlan;
             return this;
         }
-        public Builder pricingPlan(@Nullable PlaceIndexPricingPlan pricingPlan) {
-            this.pricingPlan = Codegen.ofNullable(pricingPlan);
-            return this;
-        }        public PlaceIndexArgs build() {
-            return new PlaceIndexArgs(dataSource, dataSourceConfiguration, description, indexName, pricingPlan);
+
+        public Builder pricingPlan(PlaceIndexPricingPlan pricingPlan) {
+            return pricingPlan(Output.of(pricingPlan));
+        }
+
+        public PlaceIndexArgs build() {
+            $.dataSource = Objects.requireNonNull($.dataSource, "expected parameter 'dataSource' to be non-null");
+            $.indexName = Objects.requireNonNull($.indexName, "expected parameter 'indexName' to be non-null");
+            return $;
         }
     }
+
 }

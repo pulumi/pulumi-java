@@ -15,62 +15,57 @@ public final class SpotFleetMemoryGiBPerVCpuRequest extends com.pulumi.resources
     public static final SpotFleetMemoryGiBPerVCpuRequest Empty = new SpotFleetMemoryGiBPerVCpuRequest();
 
     @Import(name="max")
-      private final @Nullable Double max;
+    private @Nullable Double max;
 
     public Optional<Double> max() {
-        return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
+        return Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
-      private final @Nullable Double min;
+    private @Nullable Double min;
 
     public Optional<Double> min() {
-        return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
+        return Optional.ofNullable(this.min);
     }
 
-    public SpotFleetMemoryGiBPerVCpuRequest(
-        @Nullable Double max,
-        @Nullable Double min) {
-        this.max = max;
-        this.min = min;
-    }
+    private SpotFleetMemoryGiBPerVCpuRequest() {}
 
-    private SpotFleetMemoryGiBPerVCpuRequest() {
-        this.max = null;
-        this.min = null;
+    private SpotFleetMemoryGiBPerVCpuRequest(SpotFleetMemoryGiBPerVCpuRequest $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetMemoryGiBPerVCpuRequest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double max;
-        private @Nullable Double min;
+        private SpotFleetMemoryGiBPerVCpuRequest $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetMemoryGiBPerVCpuRequest();
         }
 
         public Builder(SpotFleetMemoryGiBPerVCpuRequest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new SpotFleetMemoryGiBPerVCpuRequest(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Double max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
+
         public Builder min(@Nullable Double min) {
-            this.min = min;
+            $.min = min;
             return this;
-        }        public SpotFleetMemoryGiBPerVCpuRequest build() {
-            return new SpotFleetMemoryGiBPerVCpuRequest(max, min);
+        }
+
+        public SpotFleetMemoryGiBPerVCpuRequest build() {
+            return $;
         }
     }
+
 }

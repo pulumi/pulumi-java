@@ -7,10 +7,10 @@ import com.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesAr
 import com.pulumi.aws.timestreamwrite.inputs.TableRetentionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -34,10 +34,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="magneticStoreWriteProperties")
-      private final @Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties;
+    private @Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties;
 
-    public Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties() {
-        return this.magneticStoreWriteProperties == null ? Codegen.empty() : this.magneticStoreWriteProperties;
+    public Optional<Output<TableMagneticStoreWritePropertiesArgs>> magneticStoreWriteProperties() {
+        return Optional.ofNullable(this.magneticStoreWriteProperties);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionProperties")
-      private final @Nullable Output<TableRetentionPropertiesArgs> retentionProperties;
+    private @Nullable Output<TableRetentionPropertiesArgs> retentionProperties;
 
-    public Output<TableRetentionPropertiesArgs> retentionProperties() {
-        return this.retentionProperties == null ? Codegen.empty() : this.retentionProperties;
+    public Optional<Output<TableRetentionPropertiesArgs>> retentionProperties() {
+        return Optional.ofNullable(this.retentionProperties);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
@@ -67,102 +67,90 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public TableArgs(
-        Output<String> databaseName,
-        @Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties,
-        @Nullable Output<TableRetentionPropertiesArgs> retentionProperties,
-        Output<String> tableName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.magneticStoreWriteProperties = magneticStoreWriteProperties;
-        this.retentionProperties = retentionProperties;
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.tags = tags;
-    }
+    private TableArgs() {}
 
-    private TableArgs() {
-        this.databaseName = Codegen.empty();
-        this.magneticStoreWriteProperties = Codegen.empty();
-        this.retentionProperties = Codegen.empty();
-        this.tableName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private TableArgs(TableArgs $) {
+        this.databaseName = $.databaseName;
+        this.magneticStoreWriteProperties = $.magneticStoreWriteProperties;
+        this.retentionProperties = $.retentionProperties;
+        this.tableName = $.tableName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> databaseName;
-        private @Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties;
-        private @Nullable Output<TableRetentionPropertiesArgs> retentionProperties;
-        private Output<String> tableName;
-        private @Nullable Output<Map<String,String>> tags;
+        private TableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableArgs();
         }
 
         public Builder(TableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.magneticStoreWriteProperties = defaults.magneticStoreWriteProperties;
-    	      this.retentionProperties = defaults.retentionProperties;
-    	      this.tableName = defaults.tableName;
-    	      this.tags = defaults.tags;
+            $ = new TableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder magneticStoreWriteProperties(@Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties) {
-            this.magneticStoreWriteProperties = magneticStoreWriteProperties;
+            $.magneticStoreWriteProperties = magneticStoreWriteProperties;
             return this;
         }
-        public Builder magneticStoreWriteProperties(@Nullable TableMagneticStoreWritePropertiesArgs magneticStoreWriteProperties) {
-            this.magneticStoreWriteProperties = Codegen.ofNullable(magneticStoreWriteProperties);
-            return this;
+
+        public Builder magneticStoreWriteProperties(TableMagneticStoreWritePropertiesArgs magneticStoreWriteProperties) {
+            return magneticStoreWriteProperties(Output.of(magneticStoreWriteProperties));
         }
+
         public Builder retentionProperties(@Nullable Output<TableRetentionPropertiesArgs> retentionProperties) {
-            this.retentionProperties = retentionProperties;
+            $.retentionProperties = retentionProperties;
             return this;
         }
-        public Builder retentionProperties(@Nullable TableRetentionPropertiesArgs retentionProperties) {
-            this.retentionProperties = Codegen.ofNullable(retentionProperties);
-            return this;
+
+        public Builder retentionProperties(TableRetentionPropertiesArgs retentionProperties) {
+            return retentionProperties(Output.of(retentionProperties));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
+            return tableName(Output.of(tableName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public TableArgs build() {
-            return new TableArgs(databaseName, magneticStoreWriteProperties, retentionProperties, tableName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public TableArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

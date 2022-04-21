@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.DistributionPolicyTargetShape;
 import com.pulumi.googlenative.compute_beta.inputs.DistributionPolicyZoneConfigurationArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DistributionPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetShape")
-      private final @Nullable Output<DistributionPolicyTargetShape> targetShape;
+    private @Nullable Output<DistributionPolicyTargetShape> targetShape;
 
-    public Output<DistributionPolicyTargetShape> targetShape() {
-        return this.targetShape == null ? Codegen.empty() : this.targetShape;
+    public Optional<Output<DistributionPolicyTargetShape>> targetShape() {
+        return Optional.ofNullable(this.targetShape);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class DistributionPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones;
+    private @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones;
 
-    public Output<List<DistributionPolicyZoneConfigurationArgs>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<DistributionPolicyZoneConfigurationArgs>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public DistributionPolicyArgs(
-        @Nullable Output<DistributionPolicyTargetShape> targetShape,
-        @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones) {
-        this.targetShape = targetShape;
-        this.zones = zones;
-    }
+    private DistributionPolicyArgs() {}
 
-    private DistributionPolicyArgs() {
-        this.targetShape = Codegen.empty();
-        this.zones = Codegen.empty();
+    private DistributionPolicyArgs(DistributionPolicyArgs $) {
+        this.targetShape = $.targetShape;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DistributionPolicyTargetShape> targetShape;
-        private @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones;
+        private DistributionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionPolicyArgs();
         }
 
         public Builder(DistributionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetShape = defaults.targetShape;
-    	      this.zones = defaults.zones;
+            $ = new DistributionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetShape(@Nullable Output<DistributionPolicyTargetShape> targetShape) {
-            this.targetShape = targetShape;
+            $.targetShape = targetShape;
             return this;
         }
-        public Builder targetShape(@Nullable DistributionPolicyTargetShape targetShape) {
-            this.targetShape = Codegen.ofNullable(targetShape);
-            return this;
+
+        public Builder targetShape(DistributionPolicyTargetShape targetShape) {
+            return targetShape(Output.of(targetShape));
         }
+
         public Builder zones(@Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<DistributionPolicyZoneConfigurationArgs> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<DistributionPolicyZoneConfigurationArgs> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(DistributionPolicyZoneConfigurationArgs... zones) {
             return zones(List.of(zones));
-        }        public DistributionPolicyArgs build() {
-            return new DistributionPolicyArgs(targetShape, zones);
+        }
+
+        public DistributionPolicyArgs build() {
+            return $;
         }
     }
+
 }

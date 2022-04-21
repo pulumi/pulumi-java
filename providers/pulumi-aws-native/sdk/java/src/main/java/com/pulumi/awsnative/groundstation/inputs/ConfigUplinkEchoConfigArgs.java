@@ -5,10 +5,10 @@ package com.pulumi.awsnative.groundstation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ConfigUplinkEchoConfigArgs extends com.pulumi.resources.Resou
     public static final ConfigUplinkEchoConfigArgs Empty = new ConfigUplinkEchoConfigArgs();
 
     @Import(name="antennaUplinkConfigArn")
-      private final @Nullable Output<String> antennaUplinkConfigArn;
+    private @Nullable Output<String> antennaUplinkConfigArn;
 
-    public Output<String> antennaUplinkConfigArn() {
-        return this.antennaUplinkConfigArn == null ? Codegen.empty() : this.antennaUplinkConfigArn;
+    public Optional<Output<String>> antennaUplinkConfigArn() {
+        return Optional.ofNullable(this.antennaUplinkConfigArn);
     }
 
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public ConfigUplinkEchoConfigArgs(
-        @Nullable Output<String> antennaUplinkConfigArn,
-        @Nullable Output<Boolean> enabled) {
-        this.antennaUplinkConfigArn = antennaUplinkConfigArn;
-        this.enabled = enabled;
-    }
+    private ConfigUplinkEchoConfigArgs() {}
 
-    private ConfigUplinkEchoConfigArgs() {
-        this.antennaUplinkConfigArn = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private ConfigUplinkEchoConfigArgs(ConfigUplinkEchoConfigArgs $) {
+        this.antennaUplinkConfigArn = $.antennaUplinkConfigArn;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigUplinkEchoConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> antennaUplinkConfigArn;
-        private @Nullable Output<Boolean> enabled;
+        private ConfigUplinkEchoConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigUplinkEchoConfigArgs();
         }
 
         public Builder(ConfigUplinkEchoConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.antennaUplinkConfigArn = defaults.antennaUplinkConfigArn;
-    	      this.enabled = defaults.enabled;
+            $ = new ConfigUplinkEchoConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder antennaUplinkConfigArn(@Nullable Output<String> antennaUplinkConfigArn) {
-            this.antennaUplinkConfigArn = antennaUplinkConfigArn;
+            $.antennaUplinkConfigArn = antennaUplinkConfigArn;
             return this;
         }
-        public Builder antennaUplinkConfigArn(@Nullable String antennaUplinkConfigArn) {
-            this.antennaUplinkConfigArn = Codegen.ofNullable(antennaUplinkConfigArn);
-            return this;
+
+        public Builder antennaUplinkConfigArn(String antennaUplinkConfigArn) {
+            return antennaUplinkConfigArn(Output.of(antennaUplinkConfigArn));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public ConfigUplinkEchoConfigArgs build() {
-            return new ConfigUplinkEchoConfigArgs(antennaUplinkConfigArn, enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public ConfigUplinkEchoConfigArgs build() {
+            return $;
         }
     }
+
 }

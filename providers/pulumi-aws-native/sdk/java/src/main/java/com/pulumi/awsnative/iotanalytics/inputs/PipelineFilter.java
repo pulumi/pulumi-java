@@ -15,78 +15,72 @@ public final class PipelineFilter extends com.pulumi.resources.InvokeArgs {
     public static final PipelineFilter Empty = new PipelineFilter();
 
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="next")
-      private final @Nullable String next;
+    private @Nullable String next;
 
     public Optional<String> next() {
-        return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
+        return Optional.ofNullable(this.next);
     }
 
-    public PipelineFilter(
-        String filter,
-        String name,
-        @Nullable String next) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.next = next;
-    }
+    private PipelineFilter() {}
 
-    private PipelineFilter() {
-        this.filter = null;
-        this.name = null;
-        this.next = null;
+    private PipelineFilter(PipelineFilter $) {
+        this.filter = $.filter;
+        this.name = $.name;
+        this.next = $.next;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
-        private String name;
-        private @Nullable String next;
+        private PipelineFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineFilter();
         }
 
         public Builder(PipelineFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.next = defaults.next;
+            $ = new PipelineFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder next(@Nullable String next) {
-            this.next = next;
+            $.next = next;
             return this;
-        }        public PipelineFilter build() {
-            return new PipelineFilter(filter, name, next);
+        }
+
+        public PipelineFilter build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

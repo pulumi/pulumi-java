@@ -8,9 +8,9 @@ import com.pulumi.azurenative.databoxedge.enums.StorageAccountStatus;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dataPolicy", required=true)
-      private final Output<Either<String,DataPolicy>> dataPolicy;
+    private Output<Either<String,DataPolicy>> dataPolicy;
 
     public Output<Either<String,DataPolicy>> dataPolicy() {
         return this.dataPolicy;
@@ -34,10 +34,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -56,7 +56,7 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -67,10 +67,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storageAccountCredentialId")
-      private final @Nullable Output<String> storageAccountCredentialId;
+    private @Nullable Output<String> storageAccountCredentialId;
 
-    public Output<String> storageAccountCredentialId() {
-        return this.storageAccountCredentialId == null ? Codegen.empty() : this.storageAccountCredentialId;
+    public Optional<Output<String>> storageAccountCredentialId() {
+        return Optional.ofNullable(this.storageAccountCredentialId);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storageAccountName")
-      private final @Nullable Output<String> storageAccountName;
+    private @Nullable Output<String> storageAccountName;
 
-    public Output<String> storageAccountName() {
-        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
+    public Optional<Output<String>> storageAccountName() {
+        return Optional.ofNullable(this.storageAccountName);
     }
 
     /**
@@ -89,128 +89,111 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storageAccountStatus")
-      private final @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;
+    private @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;
 
-    public Output<Either<String,StorageAccountStatus>> storageAccountStatus() {
-        return this.storageAccountStatus == null ? Codegen.empty() : this.storageAccountStatus;
+    public Optional<Output<Either<String,StorageAccountStatus>>> storageAccountStatus() {
+        return Optional.ofNullable(this.storageAccountStatus);
     }
 
-    public StorageAccountArgs(
-        Output<Either<String,DataPolicy>> dataPolicy,
-        @Nullable Output<String> description,
-        Output<String> deviceName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> storageAccountCredentialId,
-        @Nullable Output<String> storageAccountName,
-        @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus) {
-        this.dataPolicy = Objects.requireNonNull(dataPolicy, "expected parameter 'dataPolicy' to be non-null");
-        this.description = description;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountCredentialId = storageAccountCredentialId;
-        this.storageAccountName = storageAccountName;
-        this.storageAccountStatus = storageAccountStatus;
-    }
+    private StorageAccountArgs() {}
 
-    private StorageAccountArgs() {
-        this.dataPolicy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccountCredentialId = Codegen.empty();
-        this.storageAccountName = Codegen.empty();
-        this.storageAccountStatus = Codegen.empty();
+    private StorageAccountArgs(StorageAccountArgs $) {
+        this.dataPolicy = $.dataPolicy;
+        this.description = $.description;
+        this.deviceName = $.deviceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountCredentialId = $.storageAccountCredentialId;
+        this.storageAccountName = $.storageAccountName;
+        this.storageAccountStatus = $.storageAccountStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,DataPolicy>> dataPolicy;
-        private @Nullable Output<String> description;
-        private Output<String> deviceName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> storageAccountCredentialId;
-        private @Nullable Output<String> storageAccountName;
-        private @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;
+        private StorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageAccountArgs();
         }
 
         public Builder(StorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataPolicy = defaults.dataPolicy;
-    	      this.description = defaults.description;
-    	      this.deviceName = defaults.deviceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountCredentialId = defaults.storageAccountCredentialId;
-    	      this.storageAccountName = defaults.storageAccountName;
-    	      this.storageAccountStatus = defaults.storageAccountStatus;
+            $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataPolicy(Output<Either<String,DataPolicy>> dataPolicy) {
-            this.dataPolicy = Objects.requireNonNull(dataPolicy);
+            $.dataPolicy = dataPolicy;
             return this;
         }
+
         public Builder dataPolicy(Either<String,DataPolicy> dataPolicy) {
-            this.dataPolicy = Output.of(Objects.requireNonNull(dataPolicy));
-            return this;
+            return dataPolicy(Output.of(dataPolicy));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccountCredentialId(@Nullable Output<String> storageAccountCredentialId) {
-            this.storageAccountCredentialId = storageAccountCredentialId;
+            $.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
-        public Builder storageAccountCredentialId(@Nullable String storageAccountCredentialId) {
-            this.storageAccountCredentialId = Codegen.ofNullable(storageAccountCredentialId);
-            return this;
+
+        public Builder storageAccountCredentialId(String storageAccountCredentialId) {
+            return storageAccountCredentialId(Output.of(storageAccountCredentialId));
         }
+
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
-            this.storageAccountName = storageAccountName;
+            $.storageAccountName = storageAccountName;
             return this;
         }
-        public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Codegen.ofNullable(storageAccountName);
-            return this;
+
+        public Builder storageAccountName(String storageAccountName) {
+            return storageAccountName(Output.of(storageAccountName));
         }
+
         public Builder storageAccountStatus(@Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus) {
-            this.storageAccountStatus = storageAccountStatus;
+            $.storageAccountStatus = storageAccountStatus;
             return this;
         }
-        public Builder storageAccountStatus(@Nullable Either<String,StorageAccountStatus> storageAccountStatus) {
-            this.storageAccountStatus = Codegen.ofNullable(storageAccountStatus);
-            return this;
-        }        public StorageAccountArgs build() {
-            return new StorageAccountArgs(dataPolicy, description, deviceName, resourceGroupName, storageAccountCredentialId, storageAccountName, storageAccountStatus);
+
+        public Builder storageAccountStatus(Either<String,StorageAccountStatus> storageAccountStatus) {
+            return storageAccountStatus(Output.of(storageAccountStatus));
+        }
+
+        public StorageAccountArgs build() {
+            $.dataPolicy = Objects.requireNonNull($.dataPolicy, "expected parameter 'dataPolicy' to be non-null");
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetGlossaryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetGlossaryArgs Empty = new GetGlossaryArgs();
 
     @Import(name="glossaryId", required=true)
-      private final String glossaryId;
+    private String glossaryId;
 
     public String glossaryId() {
         return this.glossaryId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetGlossaryArgs(
-        String glossaryId,
-        String location,
-        @Nullable String project) {
-        this.glossaryId = Objects.requireNonNull(glossaryId, "expected parameter 'glossaryId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetGlossaryArgs() {}
 
-    private GetGlossaryArgs() {
-        this.glossaryId = null;
-        this.location = null;
-        this.project = null;
+    private GetGlossaryArgs(GetGlossaryArgs $) {
+        this.glossaryId = $.glossaryId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlossaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String glossaryId;
-        private String location;
-        private @Nullable String project;
+        private GetGlossaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlossaryArgs();
         }
 
         public Builder(GetGlossaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.glossaryId = defaults.glossaryId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetGlossaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder glossaryId(String glossaryId) {
-            this.glossaryId = Objects.requireNonNull(glossaryId);
+            $.glossaryId = glossaryId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetGlossaryArgs build() {
-            return new GetGlossaryArgs(glossaryId, location, project);
+        }
+
+        public GetGlossaryArgs build() {
+            $.glossaryId = Objects.requireNonNull($.glossaryId, "expected parameter 'glossaryId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

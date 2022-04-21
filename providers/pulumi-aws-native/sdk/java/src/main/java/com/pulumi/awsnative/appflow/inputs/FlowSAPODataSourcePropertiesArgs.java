@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class FlowSAPODataSourcePropertiesArgs extends com.pulumi.resources
     public static final FlowSAPODataSourcePropertiesArgs Empty = new FlowSAPODataSourcePropertiesArgs();
 
     @Import(name="objectPath", required=true)
-      private final Output<String> objectPath;
+    private Output<String> objectPath;
 
     public Output<String> objectPath() {
         return this.objectPath;
     }
 
-    public FlowSAPODataSourcePropertiesArgs(Output<String> objectPath) {
-        this.objectPath = Objects.requireNonNull(objectPath, "expected parameter 'objectPath' to be non-null");
-    }
+    private FlowSAPODataSourcePropertiesArgs() {}
 
-    private FlowSAPODataSourcePropertiesArgs() {
-        this.objectPath = Codegen.empty();
+    private FlowSAPODataSourcePropertiesArgs(FlowSAPODataSourcePropertiesArgs $) {
+        this.objectPath = $.objectPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSAPODataSourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> objectPath;
+        private FlowSAPODataSourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSAPODataSourcePropertiesArgs();
         }
 
         public Builder(FlowSAPODataSourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectPath = defaults.objectPath;
+            $ = new FlowSAPODataSourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectPath(Output<String> objectPath) {
-            this.objectPath = Objects.requireNonNull(objectPath);
+            $.objectPath = objectPath;
             return this;
         }
+
         public Builder objectPath(String objectPath) {
-            this.objectPath = Output.of(Objects.requireNonNull(objectPath));
-            return this;
-        }        public FlowSAPODataSourcePropertiesArgs build() {
-            return new FlowSAPODataSourcePropertiesArgs(objectPath);
+            return objectPath(Output.of(objectPath));
+        }
+
+        public FlowSAPODataSourcePropertiesArgs build() {
+            $.objectPath = Objects.requireNonNull($.objectPath, "expected parameter 'objectPath' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.appplatform.inputs.DeploymentResourcePropertiesArg
 import com.pulumi.azurenative.appplatform.inputs.SkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appName", required=true)
-      private final Output<String> appName;
+    private Output<String> appName;
 
     public Output<String> appName() {
         return this.appName;
@@ -33,10 +33,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deploymentName")
-      private final @Nullable Output<String> deploymentName;
+    private @Nullable Output<String> deploymentName;
 
-    public Output<String> deploymentName() {
-        return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
+    public Optional<Output<String>> deploymentName() {
+        return Optional.ofNullable(this.deploymentName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<DeploymentResourcePropertiesArgs> properties;
+    private @Nullable Output<DeploymentResourcePropertiesArgs> properties;
 
-    public Output<DeploymentResourcePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<DeploymentResourcePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -77,115 +77,101 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<SkuArgs> sku;
+    private @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<SkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
-    public DeploymentArgs(
-        Output<String> appName,
-        @Nullable Output<String> deploymentName,
-        @Nullable Output<DeploymentResourcePropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName,
-        @Nullable Output<SkuArgs> sku) {
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.deploymentName = deploymentName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.sku = sku;
-    }
+    private DeploymentArgs() {}
 
-    private DeploymentArgs() {
-        this.appName = Codegen.empty();
-        this.deploymentName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.sku = Codegen.empty();
+    private DeploymentArgs(DeploymentArgs $) {
+        this.appName = $.appName;
+        this.deploymentName = $.deploymentName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appName;
-        private @Nullable Output<String> deploymentName;
-        private @Nullable Output<DeploymentResourcePropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
-        private @Nullable Output<SkuArgs> sku;
+        private DeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentArgs();
         }
 
         public Builder(DeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.deploymentName = defaults.deploymentName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.sku = defaults.sku;
+            $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(Output<String> appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder appName(String appName) {
-            this.appName = Output.of(Objects.requireNonNull(appName));
-            return this;
+            return appName(Output.of(appName));
         }
+
         public Builder deploymentName(@Nullable Output<String> deploymentName) {
-            this.deploymentName = deploymentName;
+            $.deploymentName = deploymentName;
             return this;
         }
-        public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Codegen.ofNullable(deploymentName);
-            return this;
+
+        public Builder deploymentName(String deploymentName) {
+            return deploymentName(Output.of(deploymentName));
         }
+
         public Builder properties(@Nullable Output<DeploymentResourcePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable DeploymentResourcePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(DeploymentResourcePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder sku(@Nullable Output<SkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
-        }        public DeploymentArgs build() {
-            return new DeploymentArgs(appName, deploymentName, properties, resourceGroupName, serviceName, sku);
+
+        public Builder sku(SkuArgs sku) {
+            return sku(Output.of(sku));
+        }
+
+        public DeploymentArgs build() {
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

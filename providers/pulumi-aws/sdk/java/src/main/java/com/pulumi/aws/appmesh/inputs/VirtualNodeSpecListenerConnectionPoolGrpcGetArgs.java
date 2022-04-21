@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualNodeSpecListenerConnectionPoolGrpcGetArgs extends com.
      * 
      */
     @Import(name="maxRequests", required=true)
-      private final Output<Integer> maxRequests;
+    private Output<Integer> maxRequests;
 
     public Output<Integer> maxRequests() {
         return this.maxRequests;
     }
 
-    public VirtualNodeSpecListenerConnectionPoolGrpcGetArgs(Output<Integer> maxRequests) {
-        this.maxRequests = Objects.requireNonNull(maxRequests, "expected parameter 'maxRequests' to be non-null");
-    }
+    private VirtualNodeSpecListenerConnectionPoolGrpcGetArgs() {}
 
-    private VirtualNodeSpecListenerConnectionPoolGrpcGetArgs() {
-        this.maxRequests = Codegen.empty();
+    private VirtualNodeSpecListenerConnectionPoolGrpcGetArgs(VirtualNodeSpecListenerConnectionPoolGrpcGetArgs $) {
+        this.maxRequests = $.maxRequests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecListenerConnectionPoolGrpcGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxRequests;
+        private VirtualNodeSpecListenerConnectionPoolGrpcGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecListenerConnectionPoolGrpcGetArgs();
         }
 
         public Builder(VirtualNodeSpecListenerConnectionPoolGrpcGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRequests = defaults.maxRequests;
+            $ = new VirtualNodeSpecListenerConnectionPoolGrpcGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRequests(Output<Integer> maxRequests) {
-            this.maxRequests = Objects.requireNonNull(maxRequests);
+            $.maxRequests = maxRequests;
             return this;
         }
+
         public Builder maxRequests(Integer maxRequests) {
-            this.maxRequests = Output.of(Objects.requireNonNull(maxRequests));
-            return this;
-        }        public VirtualNodeSpecListenerConnectionPoolGrpcGetArgs build() {
-            return new VirtualNodeSpecListenerConnectionPoolGrpcGetArgs(maxRequests);
+            return maxRequests(Output.of(maxRequests));
+        }
+
+        public VirtualNodeSpecListenerConnectionPoolGrpcGetArgs build() {
+            $.maxRequests = Objects.requireNonNull($.maxRequests, "expected parameter 'maxRequests' to be non-null");
+            return $;
         }
     }
+
 }

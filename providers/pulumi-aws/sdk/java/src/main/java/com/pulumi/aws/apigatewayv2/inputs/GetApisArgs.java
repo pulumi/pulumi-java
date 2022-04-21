@@ -20,10 +20,10 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="protocolType")
-      private final @Nullable String protocolType;
+    private @Nullable String protocolType;
 
     public Optional<String> protocolType() {
-        return this.protocolType == null ? Optional.empty() : Optional.ofNullable(this.protocolType);
+        return Optional.ofNullable(this.protocolType);
     }
 
     /**
@@ -43,64 +43,56 @@ public final class GetApisArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetApisArgs(
-        @Nullable String name,
-        @Nullable String protocolType,
-        @Nullable Map<String,String> tags) {
-        this.name = name;
-        this.protocolType = protocolType;
-        this.tags = tags;
-    }
+    private GetApisArgs() {}
 
-    private GetApisArgs() {
-        this.name = null;
-        this.protocolType = null;
-        this.tags = Map.of();
+    private GetApisArgs(GetApisArgs $) {
+        this.name = $.name;
+        this.protocolType = $.protocolType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetApisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String protocolType;
-        private @Nullable Map<String,String> tags;
+        private GetApisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetApisArgs();
         }
 
         public Builder(GetApisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.protocolType = defaults.protocolType;
-    	      this.tags = defaults.tags;
+            $ = new GetApisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder protocolType(@Nullable String protocolType) {
-            this.protocolType = protocolType;
+            $.protocolType = protocolType;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetApisArgs build() {
-            return new GetApisArgs(name, protocolType, tags);
+        }
+
+        public GetApisArgs build() {
+            return $;
         }
     }
+
 }

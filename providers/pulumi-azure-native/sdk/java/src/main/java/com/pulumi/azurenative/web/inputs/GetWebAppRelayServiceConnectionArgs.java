@@ -17,7 +17,7 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="entityName", required=true)
-      private final String entityName;
+    private String entityName;
 
     public String entityName() {
         return this.entityName;
@@ -28,7 +28,7 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class GetWebAppRelayServiceConnectionArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetWebAppRelayServiceConnectionArgs(
-        String entityName,
-        String name,
-        String resourceGroupName) {
-        this.entityName = Objects.requireNonNull(entityName, "expected parameter 'entityName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetWebAppRelayServiceConnectionArgs() {}
 
-    private GetWebAppRelayServiceConnectionArgs() {
-        this.entityName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetWebAppRelayServiceConnectionArgs(GetWebAppRelayServiceConnectionArgs $) {
+        this.entityName = $.entityName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppRelayServiceConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String entityName;
-        private String name;
-        private String resourceGroupName;
+        private GetWebAppRelayServiceConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppRelayServiceConnectionArgs();
         }
 
         public Builder(GetWebAppRelayServiceConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityName = defaults.entityName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetWebAppRelayServiceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entityName(String entityName) {
-            this.entityName = Objects.requireNonNull(entityName);
+            $.entityName = entityName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetWebAppRelayServiceConnectionArgs build() {
-            return new GetWebAppRelayServiceConnectionArgs(entityName, name, resourceGroupName);
+        }
+
+        public GetWebAppRelayServiceConnectionArgs build() {
+            $.entityName = Objects.requireNonNull($.entityName, "expected parameter 'entityName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

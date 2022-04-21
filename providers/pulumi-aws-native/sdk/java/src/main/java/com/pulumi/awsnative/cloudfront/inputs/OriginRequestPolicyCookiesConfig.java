@@ -16,65 +16,62 @@ public final class OriginRequestPolicyCookiesConfig extends com.pulumi.resources
     public static final OriginRequestPolicyCookiesConfig Empty = new OriginRequestPolicyCookiesConfig();
 
     @Import(name="cookieBehavior", required=true)
-      private final String cookieBehavior;
+    private String cookieBehavior;
 
     public String cookieBehavior() {
         return this.cookieBehavior;
     }
 
     @Import(name="cookies")
-      private final @Nullable List<String> cookies;
+    private @Nullable List<String> cookies;
 
-    public List<String> cookies() {
-        return this.cookies == null ? List.of() : this.cookies;
+    public Optional<List<String>> cookies() {
+        return Optional.ofNullable(this.cookies);
     }
 
-    public OriginRequestPolicyCookiesConfig(
-        String cookieBehavior,
-        @Nullable List<String> cookies) {
-        this.cookieBehavior = Objects.requireNonNull(cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
-        this.cookies = cookies;
-    }
+    private OriginRequestPolicyCookiesConfig() {}
 
-    private OriginRequestPolicyCookiesConfig() {
-        this.cookieBehavior = null;
-        this.cookies = List.of();
+    private OriginRequestPolicyCookiesConfig(OriginRequestPolicyCookiesConfig $) {
+        this.cookieBehavior = $.cookieBehavior;
+        this.cookies = $.cookies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginRequestPolicyCookiesConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cookieBehavior;
-        private @Nullable List<String> cookies;
+        private OriginRequestPolicyCookiesConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginRequestPolicyCookiesConfig();
         }
 
         public Builder(OriginRequestPolicyCookiesConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieBehavior = defaults.cookieBehavior;
-    	      this.cookies = defaults.cookies;
+            $ = new OriginRequestPolicyCookiesConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieBehavior(String cookieBehavior) {
-            this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
+            $.cookieBehavior = cookieBehavior;
             return this;
         }
+
         public Builder cookies(@Nullable List<String> cookies) {
-            this.cookies = cookies;
+            $.cookies = cookies;
             return this;
         }
+
         public Builder cookies(String... cookies) {
             return cookies(List.of(cookies));
-        }        public OriginRequestPolicyCookiesConfig build() {
-            return new OriginRequestPolicyCookiesConfig(cookieBehavior, cookies);
+        }
+
+        public OriginRequestPolicyCookiesConfig build() {
+            $.cookieBehavior = Objects.requireNonNull($.cookieBehavior, "expected parameter 'cookieBehavior' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="action")
-      private final @Nullable String action;
+    private @Nullable String action;
 
     public Optional<String> action() {
-        return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -35,55 +35,52 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="virtualNetworkResourceId", required=true)
-      private final String virtualNetworkResourceId;
+    private String virtualNetworkResourceId;
 
     public String virtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
     }
 
-    public VirtualNetworkRuleResponse(
-        @Nullable String action,
-        String virtualNetworkResourceId) {
-        this.action = Codegen.stringProp("action").arg(action).def("Allow").getNullable();
-        this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId, "expected parameter 'virtualNetworkResourceId' to be non-null");
-    }
+    private VirtualNetworkRuleResponse() {}
 
-    private VirtualNetworkRuleResponse() {
-        this.action = null;
-        this.virtualNetworkResourceId = null;
+    private VirtualNetworkRuleResponse(VirtualNetworkRuleResponse $) {
+        this.action = $.action;
+        this.virtualNetworkResourceId = $.virtualNetworkResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String action;
-        private String virtualNetworkResourceId;
+        private VirtualNetworkRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkRuleResponse();
         }
 
         public Builder(VirtualNetworkRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.virtualNetworkResourceId = defaults.virtualNetworkResourceId;
+            $ = new VirtualNetworkRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable String action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
+
         public Builder virtualNetworkResourceId(String virtualNetworkResourceId) {
-            this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
+            $.virtualNetworkResourceId = virtualNetworkResourceId;
             return this;
-        }        public VirtualNetworkRuleResponse build() {
-            return new VirtualNetworkRuleResponse(action, virtualNetworkResourceId);
+        }
+
+        public VirtualNetworkRuleResponse build() {
+            $.action = Codegen.stringProp("action").arg($.action).def("Allow").getNullable();
+            $.virtualNetworkResourceId = Objects.requireNonNull($.virtualNetworkResourceId, "expected parameter 'virtualNetworkResourceId' to be non-null");
+            return $;
         }
     }
+
 }

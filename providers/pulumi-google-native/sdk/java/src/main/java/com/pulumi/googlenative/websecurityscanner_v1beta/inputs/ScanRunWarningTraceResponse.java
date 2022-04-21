@@ -21,45 +21,45 @@ public final class ScanRunWarningTraceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
     }
 
-    public ScanRunWarningTraceResponse(String code) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-    }
+    private ScanRunWarningTraceResponse() {}
 
-    private ScanRunWarningTraceResponse() {
-        this.code = null;
+    private ScanRunWarningTraceResponse(ScanRunWarningTraceResponse $) {
+        this.code = $.code;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScanRunWarningTraceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
+        private ScanRunWarningTraceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScanRunWarningTraceResponse();
         }
 
         public Builder(ScanRunWarningTraceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
+            $ = new ScanRunWarningTraceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
-        }        public ScanRunWarningTraceResponse build() {
-            return new ScanRunWarningTraceResponse(code);
+        }
+
+        public ScanRunWarningTraceResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            return $;
         }
     }
+
 }

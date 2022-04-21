@@ -32,10 +32,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Object clientId;
+    private @Nullable Object clientId;
 
     public Optional<Object> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="language")
-      private final @Nullable Object language;
+    private @Nullable Object language;
 
     public Optional<Object> language() {
-        return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
+        return Optional.ofNullable(this.language);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="logonGroup")
-      private final @Nullable Object logonGroup;
+    private @Nullable Object logonGroup;
 
     public Optional<Object> logonGroup() {
-        return this.logonGroup == null ? Optional.empty() : Optional.ofNullable(this.logonGroup);
+        return Optional.ofNullable(this.logonGroup);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="messageServer")
-      private final @Nullable Object messageServer;
+    private @Nullable Object messageServer;
 
     public Optional<Object> messageServer() {
-        return this.messageServer == null ? Optional.empty() : Optional.ofNullable(this.messageServer);
+        return Optional.ofNullable(this.messageServer);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="messageServerService")
-      private final @Nullable Object messageServerService;
+    private @Nullable Object messageServerService;
 
     public Optional<Object> messageServerService() {
-        return this.messageServerService == null ? Optional.empty() : Optional.ofNullable(this.messageServerService);
+        return Optional.ofNullable(this.messageServerService);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="server")
-      private final @Nullable Object server;
+    private @Nullable Object server;
 
     public Optional<Object> server() {
-        return this.server == null ? Optional.empty() : Optional.ofNullable(this.server);
+        return Optional.ofNullable(this.server);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sncLibraryPath")
-      private final @Nullable Object sncLibraryPath;
+    private @Nullable Object sncLibraryPath;
 
     public Optional<Object> sncLibraryPath() {
-        return this.sncLibraryPath == null ? Optional.empty() : Optional.ofNullable(this.sncLibraryPath);
+        return Optional.ofNullable(this.sncLibraryPath);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sncMode")
-      private final @Nullable Object sncMode;
+    private @Nullable Object sncMode;
 
     public Optional<Object> sncMode() {
-        return this.sncMode == null ? Optional.empty() : Optional.ofNullable(this.sncMode);
+        return Optional.ofNullable(this.sncMode);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sncMyName")
-      private final @Nullable Object sncMyName;
+    private @Nullable Object sncMyName;
 
     public Optional<Object> sncMyName() {
-        return this.sncMyName == null ? Optional.empty() : Optional.ofNullable(this.sncMyName);
+        return Optional.ofNullable(this.sncMyName);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sncPartnerName")
-      private final @Nullable Object sncPartnerName;
+    private @Nullable Object sncPartnerName;
 
     public Optional<Object> sncPartnerName() {
-        return this.sncPartnerName == null ? Optional.empty() : Optional.ofNullable(this.sncPartnerName);
+        return Optional.ofNullable(this.sncPartnerName);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sncQop")
-      private final @Nullable Object sncQop;
+    private @Nullable Object sncQop;
 
     public Optional<Object> sncQop() {
-        return this.sncQop == null ? Optional.empty() : Optional.ofNullable(this.sncQop);
+        return Optional.ofNullable(this.sncQop);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="systemId")
-      private final @Nullable Object systemId;
+    private @Nullable Object systemId;
 
     public Optional<Object> systemId() {
-        return this.systemId == null ? Optional.empty() : Optional.ofNullable(this.systemId);
+        return Optional.ofNullable(this.systemId);
     }
 
     /**
@@ -230,10 +230,10 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="systemNumber")
-      private final @Nullable Object systemNumber;
+    private @Nullable Object systemNumber;
 
     public Optional<Object> systemNumber() {
-        return this.systemNumber == null ? Optional.empty() : Optional.ofNullable(this.systemNumber);
+        return Optional.ofNullable(this.systemNumber);
     }
 
     /**
@@ -242,7 +242,7 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -253,229 +253,169 @@ public final class SapTableLinkedServiceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="userName")
-      private final @Nullable Object userName;
+    private @Nullable Object userName;
 
     public Optional<Object> userName() {
-        return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
+        return Optional.ofNullable(this.userName);
     }
 
-    public SapTableLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object clientId,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object language,
-        @Nullable Object logonGroup,
-        @Nullable Object messageServer,
-        @Nullable Object messageServerService,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object server,
-        @Nullable Object sncLibraryPath,
-        @Nullable Object sncMode,
-        @Nullable Object sncMyName,
-        @Nullable Object sncPartnerName,
-        @Nullable Object sncQop,
-        @Nullable Object systemId,
-        @Nullable Object systemNumber,
-        String type,
-        @Nullable Object userName) {
-        this.annotations = annotations;
-        this.clientId = clientId;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.language = language;
-        this.logonGroup = logonGroup;
-        this.messageServer = messageServer;
-        this.messageServerService = messageServerService;
-        this.parameters = parameters;
-        this.password = password;
-        this.server = server;
-        this.sncLibraryPath = sncLibraryPath;
-        this.sncMode = sncMode;
-        this.sncMyName = sncMyName;
-        this.sncPartnerName = sncPartnerName;
-        this.sncQop = sncQop;
-        this.systemId = systemId;
-        this.systemNumber = systemNumber;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userName = userName;
-    }
+    private SapTableLinkedServiceResponse() {}
 
-    private SapTableLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.clientId = null;
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.language = null;
-        this.logonGroup = null;
-        this.messageServer = null;
-        this.messageServerService = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.server = null;
-        this.sncLibraryPath = null;
-        this.sncMode = null;
-        this.sncMyName = null;
-        this.sncPartnerName = null;
-        this.sncQop = null;
-        this.systemId = null;
-        this.systemNumber = null;
-        this.type = null;
-        this.userName = null;
+    private SapTableLinkedServiceResponse(SapTableLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.clientId = $.clientId;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.language = $.language;
+        this.logonGroup = $.logonGroup;
+        this.messageServer = $.messageServer;
+        this.messageServerService = $.messageServerService;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.server = $.server;
+        this.sncLibraryPath = $.sncLibraryPath;
+        this.sncMode = $.sncMode;
+        this.sncMyName = $.sncMyName;
+        this.sncPartnerName = $.sncPartnerName;
+        this.sncQop = $.sncQop;
+        this.systemId = $.systemId;
+        this.systemNumber = $.systemNumber;
+        this.type = $.type;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SapTableLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable Object clientId;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object language;
-        private @Nullable Object logonGroup;
-        private @Nullable Object messageServer;
-        private @Nullable Object messageServerService;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Object server;
-        private @Nullable Object sncLibraryPath;
-        private @Nullable Object sncMode;
-        private @Nullable Object sncMyName;
-        private @Nullable Object sncPartnerName;
-        private @Nullable Object sncQop;
-        private @Nullable Object systemId;
-        private @Nullable Object systemNumber;
-        private String type;
-        private @Nullable Object userName;
+        private SapTableLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SapTableLinkedServiceResponse();
         }
 
         public Builder(SapTableLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.clientId = defaults.clientId;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.language = defaults.language;
-    	      this.logonGroup = defaults.logonGroup;
-    	      this.messageServer = defaults.messageServer;
-    	      this.messageServerService = defaults.messageServerService;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.server = defaults.server;
-    	      this.sncLibraryPath = defaults.sncLibraryPath;
-    	      this.sncMode = defaults.sncMode;
-    	      this.sncMyName = defaults.sncMyName;
-    	      this.sncPartnerName = defaults.sncPartnerName;
-    	      this.sncQop = defaults.sncQop;
-    	      this.systemId = defaults.systemId;
-    	      this.systemNumber = defaults.systemNumber;
-    	      this.type = defaults.type;
-    	      this.userName = defaults.userName;
+            $ = new SapTableLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder clientId(@Nullable Object clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder language(@Nullable Object language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
+
         public Builder logonGroup(@Nullable Object logonGroup) {
-            this.logonGroup = logonGroup;
+            $.logonGroup = logonGroup;
             return this;
         }
+
         public Builder messageServer(@Nullable Object messageServer) {
-            this.messageServer = messageServer;
+            $.messageServer = messageServer;
             return this;
         }
+
         public Builder messageServerService(@Nullable Object messageServerService) {
-            this.messageServerService = messageServerService;
+            $.messageServerService = messageServerService;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder server(@Nullable Object server) {
-            this.server = server;
+            $.server = server;
             return this;
         }
+
         public Builder sncLibraryPath(@Nullable Object sncLibraryPath) {
-            this.sncLibraryPath = sncLibraryPath;
+            $.sncLibraryPath = sncLibraryPath;
             return this;
         }
+
         public Builder sncMode(@Nullable Object sncMode) {
-            this.sncMode = sncMode;
+            $.sncMode = sncMode;
             return this;
         }
+
         public Builder sncMyName(@Nullable Object sncMyName) {
-            this.sncMyName = sncMyName;
+            $.sncMyName = sncMyName;
             return this;
         }
+
         public Builder sncPartnerName(@Nullable Object sncPartnerName) {
-            this.sncPartnerName = sncPartnerName;
+            $.sncPartnerName = sncPartnerName;
             return this;
         }
+
         public Builder sncQop(@Nullable Object sncQop) {
-            this.sncQop = sncQop;
+            $.sncQop = sncQop;
             return this;
         }
+
         public Builder systemId(@Nullable Object systemId) {
-            this.systemId = systemId;
+            $.systemId = systemId;
             return this;
         }
+
         public Builder systemNumber(@Nullable Object systemNumber) {
-            this.systemNumber = systemNumber;
+            $.systemNumber = systemNumber;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userName(@Nullable Object userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
-        }        public SapTableLinkedServiceResponse build() {
-            return new SapTableLinkedServiceResponse(annotations, clientId, connectVia, description, encryptedCredential, language, logonGroup, messageServer, messageServerService, parameters, password, server, sncLibraryPath, sncMode, sncMyName, sncPartnerName, sncQop, systemId, systemNumber, type, userName);
+        }
+
+        public SapTableLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

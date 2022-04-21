@@ -5,10 +5,10 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FlexibleAppVersionDeploymentZipArgs extends com.pulumi.resour
      * 
      */
     @Import(name="filesCount")
-      private final @Nullable Output<Integer> filesCount;
+    private @Nullable Output<Integer> filesCount;
 
-    public Output<Integer> filesCount() {
-        return this.filesCount == null ? Codegen.empty() : this.filesCount;
+    public Optional<Output<Integer>> filesCount() {
+        return Optional.ofNullable(this.filesCount);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class FlexibleAppVersionDeploymentZipArgs extends com.pulumi.resour
      * 
      */
     @Import(name="sourceUrl", required=true)
-      private final Output<String> sourceUrl;
+    private Output<String> sourceUrl;
 
     public Output<String> sourceUrl() {
         return this.sourceUrl;
     }
 
-    public FlexibleAppVersionDeploymentZipArgs(
-        @Nullable Output<Integer> filesCount,
-        Output<String> sourceUrl) {
-        this.filesCount = filesCount;
-        this.sourceUrl = Objects.requireNonNull(sourceUrl, "expected parameter 'sourceUrl' to be non-null");
-    }
+    private FlexibleAppVersionDeploymentZipArgs() {}
 
-    private FlexibleAppVersionDeploymentZipArgs() {
-        this.filesCount = Codegen.empty();
-        this.sourceUrl = Codegen.empty();
+    private FlexibleAppVersionDeploymentZipArgs(FlexibleAppVersionDeploymentZipArgs $) {
+        this.filesCount = $.filesCount;
+        this.sourceUrl = $.sourceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionDeploymentZipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> filesCount;
-        private Output<String> sourceUrl;
+        private FlexibleAppVersionDeploymentZipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionDeploymentZipArgs();
         }
 
         public Builder(FlexibleAppVersionDeploymentZipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filesCount = defaults.filesCount;
-    	      this.sourceUrl = defaults.sourceUrl;
+            $ = new FlexibleAppVersionDeploymentZipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filesCount(@Nullable Output<Integer> filesCount) {
-            this.filesCount = filesCount;
+            $.filesCount = filesCount;
             return this;
         }
-        public Builder filesCount(@Nullable Integer filesCount) {
-            this.filesCount = Codegen.ofNullable(filesCount);
-            return this;
+
+        public Builder filesCount(Integer filesCount) {
+            return filesCount(Output.of(filesCount));
         }
+
         public Builder sourceUrl(Output<String> sourceUrl) {
-            this.sourceUrl = Objects.requireNonNull(sourceUrl);
+            $.sourceUrl = sourceUrl;
             return this;
         }
+
         public Builder sourceUrl(String sourceUrl) {
-            this.sourceUrl = Output.of(Objects.requireNonNull(sourceUrl));
-            return this;
-        }        public FlexibleAppVersionDeploymentZipArgs build() {
-            return new FlexibleAppVersionDeploymentZipArgs(filesCount, sourceUrl);
+            return sourceUrl(Output.of(sourceUrl));
+        }
+
+        public FlexibleAppVersionDeploymentZipArgs build() {
+            $.sourceUrl = Objects.requireNonNull($.sourceUrl, "expected parameter 'sourceUrl' to be non-null");
+            return $;
         }
     }
+
 }

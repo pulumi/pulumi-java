@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class EnvgroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostnames", required=true)
-      private final Output<List<String>> hostnames;
+    private Output<List<String>> hostnames;
 
     public Output<List<String>> hostnames() {
         return this.hostnames;
@@ -32,86 +32,81 @@ public final class EnvgroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
-    public EnvgroupArgs(
-        Output<List<String>> hostnames,
-        @Nullable Output<String> name,
-        Output<String> organizationId) {
-        this.hostnames = Objects.requireNonNull(hostnames, "expected parameter 'hostnames' to be non-null");
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private EnvgroupArgs() {}
 
-    private EnvgroupArgs() {
-        this.hostnames = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
+    private EnvgroupArgs(EnvgroupArgs $) {
+        this.hostnames = $.hostnames;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvgroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> hostnames;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
+        private EnvgroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvgroupArgs();
         }
 
         public Builder(EnvgroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostnames = defaults.hostnames;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
+            $ = new EnvgroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostnames(Output<List<String>> hostnames) {
-            this.hostnames = Objects.requireNonNull(hostnames);
+            $.hostnames = hostnames;
             return this;
         }
+
         public Builder hostnames(List<String> hostnames) {
-            this.hostnames = Output.of(Objects.requireNonNull(hostnames));
-            return this;
+            return hostnames(Output.of(hostnames));
         }
+
         public Builder hostnames(String... hostnames) {
             return hostnames(List.of(hostnames));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
-        }        public EnvgroupArgs build() {
-            return new EnvgroupArgs(hostnames, name, organizationId);
+            return organizationId(Output.of(organizationId));
+        }
+
+        public EnvgroupArgs build() {
+            $.hostnames = Objects.requireNonNull($.hostnames, "expected parameter 'hostnames' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

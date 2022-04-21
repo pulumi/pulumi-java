@@ -19,10 +19,10 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="created")
-      private final @Nullable String created;
+    private @Nullable String created;
 
     public Optional<String> created() {
-        return this.created == null ? Optional.empty() : Optional.ofNullable(this.created);
+        return Optional.ofNullable(this.created);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="createdBy")
-      private final @Nullable String createdBy;
+    private @Nullable String createdBy;
 
     public Optional<String> createdBy() {
-        return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
+        return Optional.ofNullable(this.createdBy);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -52,73 +52,63 @@ public final class DatadogApiKeyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public DatadogApiKeyResponse(
-        @Nullable String created,
-        @Nullable String createdBy,
-        String key,
-        @Nullable String name) {
-        this.created = created;
-        this.createdBy = createdBy;
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.name = name;
-    }
+    private DatadogApiKeyResponse() {}
 
-    private DatadogApiKeyResponse() {
-        this.created = null;
-        this.createdBy = null;
-        this.key = null;
-        this.name = null;
+    private DatadogApiKeyResponse(DatadogApiKeyResponse $) {
+        this.created = $.created;
+        this.createdBy = $.createdBy;
+        this.key = $.key;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatadogApiKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String created;
-        private @Nullable String createdBy;
-        private String key;
-        private @Nullable String name;
+        private DatadogApiKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatadogApiKeyResponse();
         }
 
         public Builder(DatadogApiKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.created = defaults.created;
-    	      this.createdBy = defaults.createdBy;
-    	      this.key = defaults.key;
-    	      this.name = defaults.name;
+            $ = new DatadogApiKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder created(@Nullable String created) {
-            this.created = created;
+            $.created = created;
             return this;
         }
+
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public DatadogApiKeyResponse build() {
-            return new DatadogApiKeyResponse(created, createdBy, key, name);
+        }
+
+        public DatadogApiKeyResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

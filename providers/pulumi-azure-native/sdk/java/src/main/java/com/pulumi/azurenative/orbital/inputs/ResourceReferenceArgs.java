@@ -5,9 +5,9 @@ package com.pulumi.azurenative.orbital.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ResourceReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public ResourceReferenceArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private ResourceReferenceArgs() {}
 
-    private ResourceReferenceArgs() {
-        this.id = Codegen.empty();
+    private ResourceReferenceArgs(ResourceReferenceArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private ResourceReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceReferenceArgs();
         }
 
         public Builder(ResourceReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ResourceReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public ResourceReferenceArgs build() {
-            return new ResourceReferenceArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public ResourceReferenceArgs build() {
+            return $;
         }
     }
+
 }

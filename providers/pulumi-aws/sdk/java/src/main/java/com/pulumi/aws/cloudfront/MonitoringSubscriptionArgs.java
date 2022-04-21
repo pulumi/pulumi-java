@@ -6,7 +6,6 @@ package com.pulumi.aws.cloudfront;
 import com.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class MonitoringSubscriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="distributionId", required=true)
-      private final Output<String> distributionId;
+    private Output<String> distributionId;
 
     public Output<String> distributionId() {
         return this.distributionId;
@@ -31,63 +30,60 @@ public final class MonitoringSubscriptionArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="monitoringSubscription", required=true)
-      private final Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
+    private Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
 
     public Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription() {
         return this.monitoringSubscription;
     }
 
-    public MonitoringSubscriptionArgs(
-        Output<String> distributionId,
-        Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription) {
-        this.distributionId = Objects.requireNonNull(distributionId, "expected parameter 'distributionId' to be non-null");
-        this.monitoringSubscription = Objects.requireNonNull(monitoringSubscription, "expected parameter 'monitoringSubscription' to be non-null");
-    }
+    private MonitoringSubscriptionArgs() {}
 
-    private MonitoringSubscriptionArgs() {
-        this.distributionId = Codegen.empty();
-        this.monitoringSubscription = Codegen.empty();
+    private MonitoringSubscriptionArgs(MonitoringSubscriptionArgs $) {
+        this.distributionId = $.distributionId;
+        this.monitoringSubscription = $.monitoringSubscription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> distributionId;
-        private Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
+        private MonitoringSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringSubscriptionArgs();
         }
 
         public Builder(MonitoringSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionId = defaults.distributionId;
-    	      this.monitoringSubscription = defaults.monitoringSubscription;
+            $ = new MonitoringSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionId(Output<String> distributionId) {
-            this.distributionId = Objects.requireNonNull(distributionId);
+            $.distributionId = distributionId;
             return this;
         }
+
         public Builder distributionId(String distributionId) {
-            this.distributionId = Output.of(Objects.requireNonNull(distributionId));
-            return this;
+            return distributionId(Output.of(distributionId));
         }
+
         public Builder monitoringSubscription(Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription) {
-            this.monitoringSubscription = Objects.requireNonNull(monitoringSubscription);
+            $.monitoringSubscription = monitoringSubscription;
             return this;
         }
+
         public Builder monitoringSubscription(MonitoringSubscriptionMonitoringSubscriptionArgs monitoringSubscription) {
-            this.monitoringSubscription = Output.of(Objects.requireNonNull(monitoringSubscription));
-            return this;
-        }        public MonitoringSubscriptionArgs build() {
-            return new MonitoringSubscriptionArgs(distributionId, monitoringSubscription);
+            return monitoringSubscription(Output.of(monitoringSubscription));
+        }
+
+        public MonitoringSubscriptionArgs build() {
+            $.distributionId = Objects.requireNonNull($.distributionId, "expected parameter 'distributionId' to be non-null");
+            $.monitoringSubscription = Objects.requireNonNull($.monitoringSubscription, "expected parameter 'monitoringSubscription' to be non-null");
+            return $;
         }
     }
+
 }

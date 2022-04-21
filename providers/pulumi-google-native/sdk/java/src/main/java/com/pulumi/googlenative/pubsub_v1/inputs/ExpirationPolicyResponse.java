@@ -21,45 +21,45 @@ public final class ExpirationPolicyResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ttl", required=true)
-      private final String ttl;
+    private String ttl;
 
     public String ttl() {
         return this.ttl;
     }
 
-    public ExpirationPolicyResponse(String ttl) {
-        this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
-    }
+    private ExpirationPolicyResponse() {}
 
-    private ExpirationPolicyResponse() {
-        this.ttl = null;
+    private ExpirationPolicyResponse(ExpirationPolicyResponse $) {
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpirationPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ttl;
+        private ExpirationPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpirationPolicyResponse();
         }
 
         public Builder(ExpirationPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ttl = defaults.ttl;
+            $ = new ExpirationPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ttl(String ttl) {
-            this.ttl = Objects.requireNonNull(ttl);
+            $.ttl = ttl;
             return this;
-        }        public ExpirationPolicyResponse build() {
-            return new ExpirationPolicyResponse(ttl);
+        }
+
+        public ExpirationPolicyResponse build() {
+            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
+            return $;
         }
     }
+
 }

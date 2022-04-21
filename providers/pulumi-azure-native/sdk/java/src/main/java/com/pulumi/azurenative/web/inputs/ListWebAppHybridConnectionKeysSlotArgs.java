@@ -17,7 +17,7 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final String namespaceName;
+    private String namespaceName;
 
     public String namespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
      * 
      */
     @Import(name="relayName", required=true)
-      private final String relayName;
+    private String relayName;
 
     public String relayName() {
         return this.relayName;
@@ -50,7 +50,7 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class ListWebAppHybridConnectionKeysSlotArgs extends com.pulumi.res
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
     }
 
-    public ListWebAppHybridConnectionKeysSlotArgs(
-        String name,
-        String namespaceName,
-        String relayName,
-        String resourceGroupName,
-        String slot) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.relayName = Objects.requireNonNull(relayName, "expected parameter 'relayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private ListWebAppHybridConnectionKeysSlotArgs() {}
 
-    private ListWebAppHybridConnectionKeysSlotArgs() {
-        this.name = null;
-        this.namespaceName = null;
-        this.relayName = null;
-        this.resourceGroupName = null;
-        this.slot = null;
+    private ListWebAppHybridConnectionKeysSlotArgs(ListWebAppHybridConnectionKeysSlotArgs $) {
+        this.name = $.name;
+        this.namespaceName = $.namespaceName;
+        this.relayName = $.relayName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListWebAppHybridConnectionKeysSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String namespaceName;
-        private String relayName;
-        private String resourceGroupName;
-        private String slot;
+        private ListWebAppHybridConnectionKeysSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListWebAppHybridConnectionKeysSlotArgs();
         }
 
         public Builder(ListWebAppHybridConnectionKeysSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.relayName = defaults.relayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new ListWebAppHybridConnectionKeysSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder relayName(String relayName) {
-            this.relayName = Objects.requireNonNull(relayName);
+            $.relayName = relayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
-        }        public ListWebAppHybridConnectionKeysSlotArgs build() {
-            return new ListWebAppHybridConnectionKeysSlotArgs(name, namespaceName, relayName, resourceGroupName, slot);
+        }
+
+        public ListWebAppHybridConnectionKeysSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.relayName = Objects.requireNonNull($.relayName, "expected parameter 'relayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

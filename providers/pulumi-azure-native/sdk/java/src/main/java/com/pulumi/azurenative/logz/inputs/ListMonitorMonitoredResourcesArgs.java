@@ -17,7 +17,7 @@ public final class ListMonitorMonitoredResourcesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="monitorName", required=true)
-      private final String monitorName;
+    private String monitorName;
 
     public String monitorName() {
         return this.monitorName;
@@ -28,55 +28,52 @@ public final class ListMonitorMonitoredResourcesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListMonitorMonitoredResourcesArgs(
-        String monitorName,
-        String resourceGroupName) {
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListMonitorMonitoredResourcesArgs() {}
 
-    private ListMonitorMonitoredResourcesArgs() {
-        this.monitorName = null;
-        this.resourceGroupName = null;
+    private ListMonitorMonitoredResourcesArgs(ListMonitorMonitoredResourcesArgs $) {
+        this.monitorName = $.monitorName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListMonitorMonitoredResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String monitorName;
-        private String resourceGroupName;
+        private ListMonitorMonitoredResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListMonitorMonitoredResourcesArgs();
         }
 
         public Builder(ListMonitorMonitoredResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitorName = defaults.monitorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListMonitorMonitoredResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monitorName(String monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListMonitorMonitoredResourcesArgs build() {
-            return new ListMonitorMonitoredResourcesArgs(monitorName, resourceGroupName);
+        }
+
+        public ListMonitorMonitoredResourcesArgs build() {
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

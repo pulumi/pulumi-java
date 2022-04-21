@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
      * 
      */
     @Import(name="framework", required=true)
-      private final String framework;
+    private String framework;
 
     public String framework() {
         return this.framework;
@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
      * 
      */
     @Import(name="modelPath", required=true)
-      private final String modelPath;
+    private String modelPath;
 
     public String modelPath() {
         return this.modelPath;
@@ -43,7 +43,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
      * 
      */
     @Import(name="pythonVersion", required=true)
-      private final String pythonVersion;
+    private String pythonVersion;
 
     public String pythonVersion() {
         return this.pythonVersion;
@@ -54,73 +54,66 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse extends com.p
      * 
      */
     @Import(name="runtimeVersion", required=true)
-      private final String runtimeVersion;
+    private String runtimeVersion;
 
     public String runtimeVersion() {
         return this.runtimeVersion;
     }
 
-    public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(
-        String framework,
-        String modelPath,
-        String pythonVersion,
-        String runtimeVersion) {
-        this.framework = Objects.requireNonNull(framework, "expected parameter 'framework' to be non-null");
-        this.modelPath = Objects.requireNonNull(modelPath, "expected parameter 'modelPath' to be non-null");
-        this.pythonVersion = Objects.requireNonNull(pythonVersion, "expected parameter 'pythonVersion' to be non-null");
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
-    }
+    private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse() {}
 
-    private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse() {
-        this.framework = null;
-        this.modelPath = null;
-        this.pythonVersion = null;
-        this.runtimeVersion = null;
+    private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse $) {
+        this.framework = $.framework;
+        this.modelPath = $.modelPath;
+        this.pythonVersion = $.pythonVersion;
+        this.runtimeVersion = $.runtimeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String framework;
-        private String modelPath;
-        private String pythonVersion;
-        private String runtimeVersion;
+        private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__BuiltInAlgorithmOutputResponse();
         }
 
         public Builder(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.framework = defaults.framework;
-    	      this.modelPath = defaults.modelPath;
-    	      this.pythonVersion = defaults.pythonVersion;
-    	      this.runtimeVersion = defaults.runtimeVersion;
+            $ = new GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder framework(String framework) {
-            this.framework = Objects.requireNonNull(framework);
+            $.framework = framework;
             return this;
         }
+
         public Builder modelPath(String modelPath) {
-            this.modelPath = Objects.requireNonNull(modelPath);
+            $.modelPath = modelPath;
             return this;
         }
+
         public Builder pythonVersion(String pythonVersion) {
-            this.pythonVersion = Objects.requireNonNull(pythonVersion);
+            $.pythonVersion = pythonVersion;
             return this;
         }
+
         public Builder runtimeVersion(String runtimeVersion) {
-            this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
+            $.runtimeVersion = runtimeVersion;
             return this;
-        }        public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse build() {
-            return new GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(framework, modelPath, pythonVersion, runtimeVersion);
+        }
+
+        public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse build() {
+            $.framework = Objects.requireNonNull($.framework, "expected parameter 'framework' to be non-null");
+            $.modelPath = Objects.requireNonNull($.modelPath, "expected parameter 'modelPath' to be non-null");
+            $.pythonVersion = Objects.requireNonNull($.pythonVersion, "expected parameter 'pythonVersion' to be non-null");
+            $.runtimeVersion = Objects.requireNonNull($.runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
+            return $;
         }
     }
+
 }

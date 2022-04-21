@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="destinationArn")
-      private final @Nullable Output<String> destinationArn;
+    private @Nullable Output<String> destinationArn;
 
-    public Output<String> destinationArn() {
-        return this.destinationArn == null ? Codegen.empty() : this.destinationArn;
+    public Optional<Output<String>> destinationArn() {
+        return Optional.ofNullable(this.destinationArn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="distribution")
-      private final @Nullable Output<String> distribution;
+    private @Nullable Output<String> distribution;
 
-    public Output<String> distribution() {
-        return this.distribution == null ? Codegen.empty() : this.distribution;
+    public Optional<Output<String>> distribution() {
+        return Optional.ofNullable(this.distribution);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="filterPattern")
-      private final @Nullable Output<String> filterPattern;
+    private @Nullable Output<String> filterPattern;
 
-    public Output<String> filterPattern() {
-        return this.filterPattern == null ? Codegen.empty() : this.filterPattern;
+    public Optional<Output<String>> filterPattern() {
+        return Optional.ofNullable(this.filterPattern);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="logGroup")
-      private final @Nullable Output<String> logGroup;
+    private @Nullable Output<String> logGroup;
 
-    public Output<String> logGroup() {
-        return this.logGroup == null ? Codegen.empty() : this.logGroup;
+    public Optional<Output<String>> logGroup() {
+        return Optional.ofNullable(this.logGroup);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,111 +75,98 @@ public final class LogSubscriptionFilterState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public LogSubscriptionFilterState(
-        @Nullable Output<String> destinationArn,
-        @Nullable Output<String> distribution,
-        @Nullable Output<String> filterPattern,
-        @Nullable Output<String> logGroup,
-        @Nullable Output<String> name,
-        @Nullable Output<String> roleArn) {
-        this.destinationArn = destinationArn;
-        this.distribution = distribution;
-        this.filterPattern = filterPattern;
-        this.logGroup = logGroup;
-        this.name = name;
-        this.roleArn = roleArn;
-    }
+    private LogSubscriptionFilterState() {}
 
-    private LogSubscriptionFilterState() {
-        this.destinationArn = Codegen.empty();
-        this.distribution = Codegen.empty();
-        this.filterPattern = Codegen.empty();
-        this.logGroup = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private LogSubscriptionFilterState(LogSubscriptionFilterState $) {
+        this.destinationArn = $.destinationArn;
+        this.distribution = $.distribution;
+        this.filterPattern = $.filterPattern;
+        this.logGroup = $.logGroup;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogSubscriptionFilterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationArn;
-        private @Nullable Output<String> distribution;
-        private @Nullable Output<String> filterPattern;
-        private @Nullable Output<String> logGroup;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> roleArn;
+        private LogSubscriptionFilterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogSubscriptionFilterState();
         }
 
         public Builder(LogSubscriptionFilterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationArn = defaults.destinationArn;
-    	      this.distribution = defaults.distribution;
-    	      this.filterPattern = defaults.filterPattern;
-    	      this.logGroup = defaults.logGroup;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
+            $ = new LogSubscriptionFilterState(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationArn(@Nullable Output<String> destinationArn) {
-            this.destinationArn = destinationArn;
+            $.destinationArn = destinationArn;
             return this;
         }
-        public Builder destinationArn(@Nullable String destinationArn) {
-            this.destinationArn = Codegen.ofNullable(destinationArn);
-            return this;
+
+        public Builder destinationArn(String destinationArn) {
+            return destinationArn(Output.of(destinationArn));
         }
+
         public Builder distribution(@Nullable Output<String> distribution) {
-            this.distribution = distribution;
+            $.distribution = distribution;
             return this;
         }
-        public Builder distribution(@Nullable String distribution) {
-            this.distribution = Codegen.ofNullable(distribution);
-            return this;
+
+        public Builder distribution(String distribution) {
+            return distribution(Output.of(distribution));
         }
+
         public Builder filterPattern(@Nullable Output<String> filterPattern) {
-            this.filterPattern = filterPattern;
+            $.filterPattern = filterPattern;
             return this;
         }
-        public Builder filterPattern(@Nullable String filterPattern) {
-            this.filterPattern = Codegen.ofNullable(filterPattern);
-            return this;
+
+        public Builder filterPattern(String filterPattern) {
+            return filterPattern(Output.of(filterPattern));
         }
+
         public Builder logGroup(@Nullable Output<String> logGroup) {
-            this.logGroup = logGroup;
+            $.logGroup = logGroup;
             return this;
         }
+
+        public Builder logGroup(String logGroup) {
+            return logGroup(Output.of(logGroup));
+        }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public LogSubscriptionFilterState build() {
-            return new LogSubscriptionFilterState(destinationArn, distribution, filterPattern, logGroup, name, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public LogSubscriptionFilterState build() {
+            return $;
         }
     }
+
 }

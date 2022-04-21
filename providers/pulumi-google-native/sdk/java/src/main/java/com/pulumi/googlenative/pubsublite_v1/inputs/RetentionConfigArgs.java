@@ -5,9 +5,9 @@ package com.pulumi.googlenative.pubsublite_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RetentionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="perPartitionBytes")
-      private final @Nullable Output<String> perPartitionBytes;
+    private @Nullable Output<String> perPartitionBytes;
 
-    public Output<String> perPartitionBytes() {
-        return this.perPartitionBytes == null ? Codegen.empty() : this.perPartitionBytes;
+    public Optional<Output<String>> perPartitionBytes() {
+        return Optional.ofNullable(this.perPartitionBytes);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class RetentionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="period")
-      private final @Nullable Output<String> period;
+    private @Nullable Output<String> period;
 
-    public Output<String> period() {
-        return this.period == null ? Codegen.empty() : this.period;
+    public Optional<Output<String>> period() {
+        return Optional.ofNullable(this.period);
     }
 
-    public RetentionConfigArgs(
-        @Nullable Output<String> perPartitionBytes,
-        @Nullable Output<String> period) {
-        this.perPartitionBytes = perPartitionBytes;
-        this.period = period;
-    }
+    private RetentionConfigArgs() {}
 
-    private RetentionConfigArgs() {
-        this.perPartitionBytes = Codegen.empty();
-        this.period = Codegen.empty();
+    private RetentionConfigArgs(RetentionConfigArgs $) {
+        this.perPartitionBytes = $.perPartitionBytes;
+        this.period = $.period;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> perPartitionBytes;
-        private @Nullable Output<String> period;
+        private RetentionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionConfigArgs();
         }
 
         public Builder(RetentionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.perPartitionBytes = defaults.perPartitionBytes;
-    	      this.period = defaults.period;
+            $ = new RetentionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder perPartitionBytes(@Nullable Output<String> perPartitionBytes) {
-            this.perPartitionBytes = perPartitionBytes;
+            $.perPartitionBytes = perPartitionBytes;
             return this;
         }
-        public Builder perPartitionBytes(@Nullable String perPartitionBytes) {
-            this.perPartitionBytes = Codegen.ofNullable(perPartitionBytes);
-            return this;
+
+        public Builder perPartitionBytes(String perPartitionBytes) {
+            return perPartitionBytes(Output.of(perPartitionBytes));
         }
+
         public Builder period(@Nullable Output<String> period) {
-            this.period = period;
+            $.period = period;
             return this;
         }
-        public Builder period(@Nullable String period) {
-            this.period = Codegen.ofNullable(period);
-            return this;
-        }        public RetentionConfigArgs build() {
-            return new RetentionConfigArgs(perPartitionBytes, period);
+
+        public Builder period(String period) {
+            return period(Output.of(period));
+        }
+
+        public RetentionConfigArgs build() {
+            return $;
         }
     }
+
 }

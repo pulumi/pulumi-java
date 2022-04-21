@@ -6,7 +6,6 @@ package com.pulumi.aws.networkfirewall.inputs;
 import com.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
      * 
      */
     @Import(name="publishMetricAction", required=true)
-      private final Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
+    private Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
 
     public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction() {
         return this.publishMetricAction;
     }
 
-    public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs(Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction) {
-        this.publishMetricAction = Objects.requireNonNull(publishMetricAction, "expected parameter 'publishMetricAction' to be non-null");
-    }
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs() {}
 
-    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs() {
-        this.publishMetricAction = Codegen.empty();
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs $) {
+        this.publishMetricAction = $.publishMetricAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction;
+        private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs();
         }
 
         public Builder(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishMetricAction = defaults.publishMetricAction;
+            $ = new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publishMetricAction(Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs> publishMetricAction) {
-            this.publishMetricAction = Objects.requireNonNull(publishMetricAction);
+            $.publishMetricAction = publishMetricAction;
             return this;
         }
+
         public Builder publishMetricAction(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs publishMetricAction) {
-            this.publishMetricAction = Output.of(Objects.requireNonNull(publishMetricAction));
-            return this;
-        }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs build() {
-            return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs(publishMetricAction);
+            return publishMetricAction(Output.of(publishMetricAction));
+        }
+
+        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs build() {
+            $.publishMetricAction = Objects.requireNonNull($.publishMetricAction, "expected parameter 'publishMetricAction' to be non-null");
+            return $;
         }
     }
+
 }

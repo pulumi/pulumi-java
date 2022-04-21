@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionClusterConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class DataQualityJobDefinitionMonitoringResourcesArgs extends com.p
     public static final DataQualityJobDefinitionMonitoringResourcesArgs Empty = new DataQualityJobDefinitionMonitoringResourcesArgs();
 
     @Import(name="clusterConfig", required=true)
-      private final Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig;
+    private Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
     public Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig() {
         return this.clusterConfig;
     }
 
-    public DataQualityJobDefinitionMonitoringResourcesArgs(Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
-    }
+    private DataQualityJobDefinitionMonitoringResourcesArgs() {}
 
-    private DataQualityJobDefinitionMonitoringResourcesArgs() {
-        this.clusterConfig = Codegen.empty();
+    private DataQualityJobDefinitionMonitoringResourcesArgs(DataQualityJobDefinitionMonitoringResourcesArgs $) {
+        this.clusterConfig = $.clusterConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataQualityJobDefinitionMonitoringResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig;
+        private DataQualityJobDefinitionMonitoringResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataQualityJobDefinitionMonitoringResourcesArgs();
         }
 
         public Builder(DataQualityJobDefinitionMonitoringResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterConfig = defaults.clusterConfig;
+            $ = new DataQualityJobDefinitionMonitoringResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterConfig(Output<DataQualityJobDefinitionClusterConfigArgs> clusterConfig) {
-            this.clusterConfig = Objects.requireNonNull(clusterConfig);
+            $.clusterConfig = clusterConfig;
             return this;
         }
+
         public Builder clusterConfig(DataQualityJobDefinitionClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
-            return this;
-        }        public DataQualityJobDefinitionMonitoringResourcesArgs build() {
-            return new DataQualityJobDefinitionMonitoringResourcesArgs(clusterConfig);
+            return clusterConfig(Output.of(clusterConfig));
+        }
+
+        public DataQualityJobDefinitionMonitoringResourcesArgs build() {
+            $.clusterConfig = Objects.requireNonNull($.clusterConfig, "expected parameter 'clusterConfig' to be non-null");
+            return $;
         }
     }
+
 }

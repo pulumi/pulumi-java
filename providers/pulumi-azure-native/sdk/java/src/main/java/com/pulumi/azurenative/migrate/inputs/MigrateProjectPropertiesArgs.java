@@ -7,10 +7,10 @@ import com.pulumi.azurenative.migrate.enums.ProvisioningState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class MigrateProjectPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Output<Either<String,ProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -38,66 +38,62 @@ public final class MigrateProjectPropertiesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="registeredTools")
-      private final @Nullable Output<List<String>> registeredTools;
+    private @Nullable Output<List<String>> registeredTools;
 
-    public Output<List<String>> registeredTools() {
-        return this.registeredTools == null ? Codegen.empty() : this.registeredTools;
+    public Optional<Output<List<String>>> registeredTools() {
+        return Optional.ofNullable(this.registeredTools);
     }
 
-    public MigrateProjectPropertiesArgs(
-        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
-        @Nullable Output<List<String>> registeredTools) {
-        this.provisioningState = provisioningState;
-        this.registeredTools = registeredTools;
-    }
+    private MigrateProjectPropertiesArgs() {}
 
-    private MigrateProjectPropertiesArgs() {
-        this.provisioningState = Codegen.empty();
-        this.registeredTools = Codegen.empty();
+    private MigrateProjectPropertiesArgs(MigrateProjectPropertiesArgs $) {
+        this.provisioningState = $.provisioningState;
+        this.registeredTools = $.registeredTools;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateProjectPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
-        private @Nullable Output<List<String>> registeredTools;
+        private MigrateProjectPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateProjectPropertiesArgs();
         }
 
         public Builder(MigrateProjectPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.registeredTools = defaults.registeredTools;
+            $ = new MigrateProjectPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,ProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder registeredTools(@Nullable Output<List<String>> registeredTools) {
-            this.registeredTools = registeredTools;
+            $.registeredTools = registeredTools;
             return this;
         }
-        public Builder registeredTools(@Nullable List<String> registeredTools) {
-            this.registeredTools = Codegen.ofNullable(registeredTools);
-            return this;
+
+        public Builder registeredTools(List<String> registeredTools) {
+            return registeredTools(Output.of(registeredTools));
         }
+
         public Builder registeredTools(String... registeredTools) {
             return registeredTools(List.of(registeredTools));
-        }        public MigrateProjectPropertiesArgs build() {
-            return new MigrateProjectPropertiesArgs(provisioningState, registeredTools);
+        }
+
+        public MigrateProjectPropertiesArgs build() {
+            return $;
         }
     }
+
 }

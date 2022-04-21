@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="secretName", required=true)
-      private final Output<String> secretName;
+    private Output<String> secretName;
 
     public Output<String> secretName() {
         return this.secretName;
@@ -47,10 +47,10 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="secretNamespace")
-      private final @Nullable Output<String> secretNamespace;
+    private @Nullable Output<String> secretNamespace;
 
-    public Output<String> secretNamespace() {
-        return this.secretNamespace == null ? Codegen.empty() : this.secretNamespace;
+    public Optional<Output<String>> secretNamespace() {
+        return Optional.ofNullable(this.secretNamespace);
     }
 
     /**
@@ -58,89 +58,80 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="shareName", required=true)
-      private final Output<String> shareName;
+    private Output<String> shareName;
 
     public Output<String> shareName() {
         return this.shareName;
     }
 
-    public AzureFilePersistentVolumeSourceArgs(
-        @Nullable Output<Boolean> readOnly,
-        Output<String> secretName,
-        @Nullable Output<String> secretNamespace,
-        Output<String> shareName) {
-        this.readOnly = readOnly;
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-        this.secretNamespace = secretNamespace;
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-    }
+    private AzureFilePersistentVolumeSourceArgs() {}
 
-    private AzureFilePersistentVolumeSourceArgs() {
-        this.readOnly = Codegen.empty();
-        this.secretName = Codegen.empty();
-        this.secretNamespace = Codegen.empty();
-        this.shareName = Codegen.empty();
+    private AzureFilePersistentVolumeSourceArgs(AzureFilePersistentVolumeSourceArgs $) {
+        this.readOnly = $.readOnly;
+        this.secretName = $.secretName;
+        this.secretNamespace = $.secretNamespace;
+        this.shareName = $.shareName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFilePersistentVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> readOnly;
-        private Output<String> secretName;
-        private @Nullable Output<String> secretNamespace;
-        private Output<String> shareName;
+        private AzureFilePersistentVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFilePersistentVolumeSourceArgs();
         }
 
         public Builder(AzureFilePersistentVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readOnly = defaults.readOnly;
-    	      this.secretName = defaults.secretName;
-    	      this.secretNamespace = defaults.secretNamespace;
-    	      this.shareName = defaults.shareName;
+            $ = new AzureFilePersistentVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder secretName(Output<String> secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Output.of(Objects.requireNonNull(secretName));
-            return this;
+            return secretName(Output.of(secretName));
         }
+
         public Builder secretNamespace(@Nullable Output<String> secretNamespace) {
-            this.secretNamespace = secretNamespace;
+            $.secretNamespace = secretNamespace;
             return this;
         }
-        public Builder secretNamespace(@Nullable String secretNamespace) {
-            this.secretNamespace = Codegen.ofNullable(secretNamespace);
-            return this;
+
+        public Builder secretNamespace(String secretNamespace) {
+            return secretNamespace(Output.of(secretNamespace));
         }
+
         public Builder shareName(Output<String> shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Output.of(Objects.requireNonNull(shareName));
-            return this;
-        }        public AzureFilePersistentVolumeSourceArgs build() {
-            return new AzureFilePersistentVolumeSourceArgs(readOnly, secretName, secretNamespace, shareName);
+            return shareName(Output.of(shareName));
+        }
+
+        public AzureFilePersistentVolumeSourceArgs build() {
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

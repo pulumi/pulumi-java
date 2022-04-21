@@ -7,11 +7,11 @@ import com.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import com.pulumi.azurenative.apimanagement.inputs.RepresentationContractArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ResponseContractArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ResponseContractArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<List<ParameterContractArgs>> headers;
+    private @Nullable Output<List<ParameterContractArgs>> headers;
 
-    public Output<List<ParameterContractArgs>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<List<ParameterContractArgs>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ResponseContractArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="representations")
-      private final @Nullable Output<List<RepresentationContractArgs>> representations;
+    private @Nullable Output<List<RepresentationContractArgs>> representations;
 
-    public Output<List<RepresentationContractArgs>> representations() {
-        return this.representations == null ? Codegen.empty() : this.representations;
+    public Optional<Output<List<RepresentationContractArgs>>> representations() {
+        return Optional.ofNullable(this.representations);
     }
 
     /**
@@ -61,95 +61,87 @@ public final class ResponseContractArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="statusCode", required=true)
-      private final Output<Integer> statusCode;
+    private Output<Integer> statusCode;
 
     public Output<Integer> statusCode() {
         return this.statusCode;
     }
 
-    public ResponseContractArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<List<ParameterContractArgs>> headers,
-        @Nullable Output<List<RepresentationContractArgs>> representations,
-        Output<Integer> statusCode) {
-        this.description = description;
-        this.headers = headers;
-        this.representations = representations;
-        this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
-    }
+    private ResponseContractArgs() {}
 
-    private ResponseContractArgs() {
-        this.description = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.representations = Codegen.empty();
-        this.statusCode = Codegen.empty();
+    private ResponseContractArgs(ResponseContractArgs $) {
+        this.description = $.description;
+        this.headers = $.headers;
+        this.representations = $.representations;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<ParameterContractArgs>> headers;
-        private @Nullable Output<List<RepresentationContractArgs>> representations;
-        private Output<Integer> statusCode;
+        private ResponseContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseContractArgs();
         }
 
         public Builder(ResponseContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.headers = defaults.headers;
-    	      this.representations = defaults.representations;
-    	      this.statusCode = defaults.statusCode;
+            $ = new ResponseContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder headers(@Nullable Output<List<ParameterContractArgs>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable List<ParameterContractArgs> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(List<ParameterContractArgs> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder headers(ParameterContractArgs... headers) {
             return headers(List.of(headers));
         }
+
         public Builder representations(@Nullable Output<List<RepresentationContractArgs>> representations) {
-            this.representations = representations;
+            $.representations = representations;
             return this;
         }
-        public Builder representations(@Nullable List<RepresentationContractArgs> representations) {
-            this.representations = Codegen.ofNullable(representations);
-            return this;
+
+        public Builder representations(List<RepresentationContractArgs> representations) {
+            return representations(Output.of(representations));
         }
+
         public Builder representations(RepresentationContractArgs... representations) {
             return representations(List.of(representations));
         }
+
         public Builder statusCode(Output<Integer> statusCode) {
-            this.statusCode = Objects.requireNonNull(statusCode);
+            $.statusCode = statusCode;
             return this;
         }
+
         public Builder statusCode(Integer statusCode) {
-            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
-            return this;
-        }        public ResponseContractArgs build() {
-            return new ResponseContractArgs(description, headers, representations, statusCode);
+            return statusCode(Output.of(statusCode));
+        }
+
+        public ResponseContractArgs build() {
+            $.statusCode = Objects.requireNonNull($.statusCode, "expected parameter 'statusCode' to be non-null");
+            return $;
         }
     }
+
 }

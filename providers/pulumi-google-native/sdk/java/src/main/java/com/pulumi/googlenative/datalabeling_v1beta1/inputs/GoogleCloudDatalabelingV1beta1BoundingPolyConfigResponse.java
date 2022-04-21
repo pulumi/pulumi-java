@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
      * 
      */
     @Import(name="annotationSpecSet", required=true)
-      private final String annotationSpecSet;
+    private String annotationSpecSet;
 
     public String annotationSpecSet() {
         return this.annotationSpecSet;
@@ -32,55 +32,52 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse exte
      * 
      */
     @Import(name="instructionMessage", required=true)
-      private final String instructionMessage;
+    private String instructionMessage;
 
     public String instructionMessage() {
         return this.instructionMessage;
     }
 
-    public GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(
-        String annotationSpecSet,
-        String instructionMessage) {
-        this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
-        this.instructionMessage = Objects.requireNonNull(instructionMessage, "expected parameter 'instructionMessage' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse() {
-        this.annotationSpecSet = null;
-        this.instructionMessage = null;
+    private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse $) {
+        this.annotationSpecSet = $.annotationSpecSet;
+        this.instructionMessage = $.instructionMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String annotationSpecSet;
-        private String instructionMessage;
+        private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationSpecSet = defaults.annotationSpecSet;
-    	      this.instructionMessage = defaults.instructionMessage;
+            $ = new GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationSpecSet(String annotationSpecSet) {
-            this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
+            $.annotationSpecSet = annotationSpecSet;
             return this;
         }
+
         public Builder instructionMessage(String instructionMessage) {
-            this.instructionMessage = Objects.requireNonNull(instructionMessage);
+            $.instructionMessage = instructionMessage;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse build() {
-            return new GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(annotationSpecSet, instructionMessage);
+        }
+
+        public GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse build() {
+            $.annotationSpecSet = Objects.requireNonNull($.annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
+            $.instructionMessage = Objects.requireNonNull($.instructionMessage, "expected parameter 'instructionMessage' to be non-null");
+            return $;
         }
     }
+
 }

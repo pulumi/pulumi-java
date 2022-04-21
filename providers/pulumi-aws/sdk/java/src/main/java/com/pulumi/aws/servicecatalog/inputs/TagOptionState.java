@@ -5,10 +5,10 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TagOptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="active")
-      private final @Nullable Output<Boolean> active;
+    private @Nullable Output<Boolean> active;
 
-    public Output<Boolean> active() {
-        return this.active == null ? Codegen.empty() : this.active;
+    public Optional<Output<Boolean>> active() {
+        return Optional.ofNullable(this.active);
     }
 
     /**
@@ -32,17 +32,17 @@ public final class TagOptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="owner")
-      private final @Nullable Output<String> owner;
+    private @Nullable Output<String> owner;
 
-    public Output<String> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -50,89 +50,78 @@ public final class TagOptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public TagOptionState(
-        @Nullable Output<Boolean> active,
-        @Nullable Output<String> key,
-        @Nullable Output<String> owner,
-        @Nullable Output<String> value) {
-        this.active = active;
-        this.key = key;
-        this.owner = owner;
-        this.value = value;
-    }
+    private TagOptionState() {}
 
-    private TagOptionState() {
-        this.active = Codegen.empty();
-        this.key = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.value = Codegen.empty();
+    private TagOptionState(TagOptionState $) {
+        this.active = $.active;
+        this.key = $.key;
+        this.owner = $.owner;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagOptionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> active;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> owner;
-        private @Nullable Output<String> value;
+        private TagOptionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagOptionState();
         }
 
         public Builder(TagOptionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
-    	      this.key = defaults.key;
-    	      this.owner = defaults.owner;
-    	      this.value = defaults.value;
+            $ = new TagOptionState(Objects.requireNonNull(defaults));
         }
 
         public Builder active(@Nullable Output<Boolean> active) {
-            this.active = active;
+            $.active = active;
             return this;
         }
-        public Builder active(@Nullable Boolean active) {
-            this.active = Codegen.ofNullable(active);
-            return this;
+
+        public Builder active(Boolean active) {
+            return active(Output.of(active));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder owner(@Nullable Output<String> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable String owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(String owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public TagOptionState build() {
-            return new TagOptionState(active, key, owner, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public TagOptionState build() {
+            return $;
         }
     }
+
 }

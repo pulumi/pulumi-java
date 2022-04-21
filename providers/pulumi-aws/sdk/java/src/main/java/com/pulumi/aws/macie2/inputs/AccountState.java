@@ -5,9 +5,9 @@ package com.pulumi.aws.macie2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="findingPublishingFrequency")
-      private final @Nullable Output<String> findingPublishingFrequency;
+    private @Nullable Output<String> findingPublishingFrequency;
 
-    public Output<String> findingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
+    public Optional<Output<String>> findingPublishingFrequency() {
+        return Optional.ofNullable(this.findingPublishingFrequency);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRole")
-      private final @Nullable Output<String> serviceRole;
+    private @Nullable Output<String> serviceRole;
 
-    public Output<String> serviceRole() {
-        return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
+    public Optional<Output<String>> serviceRole() {
+        return Optional.ofNullable(this.serviceRole);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class AccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updatedAt")
-      private final @Nullable Output<String> updatedAt;
+    private @Nullable Output<String> updatedAt;
 
-    public Output<String> updatedAt() {
-        return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
+    public Optional<Output<String>> updatedAt() {
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    public AccountState(
-        @Nullable Output<String> createdAt,
-        @Nullable Output<String> findingPublishingFrequency,
-        @Nullable Output<String> serviceRole,
-        @Nullable Output<String> status,
-        @Nullable Output<String> updatedAt) {
-        this.createdAt = createdAt;
-        this.findingPublishingFrequency = findingPublishingFrequency;
-        this.serviceRole = serviceRole;
-        this.status = status;
-        this.updatedAt = updatedAt;
-    }
+    private AccountState() {}
 
-    private AccountState() {
-        this.createdAt = Codegen.empty();
-        this.findingPublishingFrequency = Codegen.empty();
-        this.serviceRole = Codegen.empty();
-        this.status = Codegen.empty();
-        this.updatedAt = Codegen.empty();
+    private AccountState(AccountState $) {
+        this.createdAt = $.createdAt;
+        this.findingPublishingFrequency = $.findingPublishingFrequency;
+        this.serviceRole = $.serviceRole;
+        this.status = $.status;
+        this.updatedAt = $.updatedAt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<String> findingPublishingFrequency;
-        private @Nullable Output<String> serviceRole;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> updatedAt;
+        private AccountState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountState();
         }
 
         public Builder(AccountState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.findingPublishingFrequency = defaults.findingPublishingFrequency;
-    	      this.serviceRole = defaults.serviceRole;
-    	      this.status = defaults.status;
-    	      this.updatedAt = defaults.updatedAt;
+            $ = new AccountState(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
-            this.findingPublishingFrequency = findingPublishingFrequency;
+            $.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
-        public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Codegen.ofNullable(findingPublishingFrequency);
-            return this;
+
+        public Builder findingPublishingFrequency(String findingPublishingFrequency) {
+            return findingPublishingFrequency(Output.of(findingPublishingFrequency));
         }
+
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
-            this.serviceRole = serviceRole;
+            $.serviceRole = serviceRole;
             return this;
         }
-        public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Codegen.ofNullable(serviceRole);
-            return this;
+
+        public Builder serviceRole(String serviceRole) {
+            return serviceRole(Output.of(serviceRole));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
-            this.updatedAt = updatedAt;
+            $.updatedAt = updatedAt;
             return this;
         }
-        public Builder updatedAt(@Nullable String updatedAt) {
-            this.updatedAt = Codegen.ofNullable(updatedAt);
-            return this;
-        }        public AccountState build() {
-            return new AccountState(createdAt, findingPublishingFrequency, serviceRole, status, updatedAt);
+
+        public Builder updatedAt(String updatedAt) {
+            return updatedAt(Output.of(updatedAt));
+        }
+
+        public AccountState build() {
+            return $;
         }
     }
+
 }

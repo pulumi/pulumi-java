@@ -22,7 +22,7 @@ public final class NodeGroupMaintenanceWindowResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -33,7 +33,7 @@ public final class NodeGroupMaintenanceWindowResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="maintenanceDuration", required=true)
-      private final DurationResponse maintenanceDuration;
+    private DurationResponse maintenanceDuration;
 
     public DurationResponse maintenanceDuration() {
         return this.maintenanceDuration;
@@ -44,64 +44,59 @@ public final class NodeGroupMaintenanceWindowResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public NodeGroupMaintenanceWindowResponse(
-        String duration,
-        DurationResponse maintenanceDuration,
-        String startTime) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.maintenanceDuration = Objects.requireNonNull(maintenanceDuration, "expected parameter 'maintenanceDuration' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private NodeGroupMaintenanceWindowResponse() {}
 
-    private NodeGroupMaintenanceWindowResponse() {
-        this.duration = null;
-        this.maintenanceDuration = null;
-        this.startTime = null;
+    private NodeGroupMaintenanceWindowResponse(NodeGroupMaintenanceWindowResponse $) {
+        this.duration = $.duration;
+        this.maintenanceDuration = $.maintenanceDuration;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupMaintenanceWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String duration;
-        private DurationResponse maintenanceDuration;
-        private String startTime;
+        private NodeGroupMaintenanceWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupMaintenanceWindowResponse();
         }
 
         public Builder(NodeGroupMaintenanceWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.maintenanceDuration = defaults.maintenanceDuration;
-    	      this.startTime = defaults.startTime;
+            $ = new NodeGroupMaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder maintenanceDuration(DurationResponse maintenanceDuration) {
-            this.maintenanceDuration = Objects.requireNonNull(maintenanceDuration);
+            $.maintenanceDuration = maintenanceDuration;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public NodeGroupMaintenanceWindowResponse build() {
-            return new NodeGroupMaintenanceWindowResponse(duration, maintenanceDuration, startTime);
+        }
+
+        public NodeGroupMaintenanceWindowResponse build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.maintenanceDuration = Objects.requireNonNull($.maintenanceDuration, "expected parameter 'maintenanceDuration' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

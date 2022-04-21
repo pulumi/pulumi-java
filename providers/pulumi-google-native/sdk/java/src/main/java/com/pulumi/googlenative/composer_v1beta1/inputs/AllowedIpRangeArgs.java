@@ -5,9 +5,9 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AllowedIpRangeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AllowedIpRangeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public AllowedIpRangeArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> value) {
-        this.description = description;
-        this.value = value;
-    }
+    private AllowedIpRangeArgs() {}
 
-    private AllowedIpRangeArgs() {
-        this.description = Codegen.empty();
-        this.value = Codegen.empty();
+    private AllowedIpRangeArgs(AllowedIpRangeArgs $) {
+        this.description = $.description;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllowedIpRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> value;
+        private AllowedIpRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllowedIpRangeArgs();
         }
 
         public Builder(AllowedIpRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.value = defaults.value;
+            $ = new AllowedIpRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public AllowedIpRangeArgs build() {
-            return new AllowedIpRangeArgs(description, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public AllowedIpRangeArgs build() {
+            return $;
         }
     }
+
 }

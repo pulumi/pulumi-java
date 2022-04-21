@@ -15,78 +15,72 @@ public final class GetEkmConnectionArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetEkmConnectionArgs Empty = new GetEkmConnectionArgs();
 
     @Import(name="ekmConnectionId", required=true)
-      private final String ekmConnectionId;
+    private String ekmConnectionId;
 
     public String ekmConnectionId() {
         return this.ekmConnectionId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetEkmConnectionArgs(
-        String ekmConnectionId,
-        String location,
-        @Nullable String project) {
-        this.ekmConnectionId = Objects.requireNonNull(ekmConnectionId, "expected parameter 'ekmConnectionId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetEkmConnectionArgs() {}
 
-    private GetEkmConnectionArgs() {
-        this.ekmConnectionId = null;
-        this.location = null;
-        this.project = null;
+    private GetEkmConnectionArgs(GetEkmConnectionArgs $) {
+        this.ekmConnectionId = $.ekmConnectionId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEkmConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ekmConnectionId;
-        private String location;
-        private @Nullable String project;
+        private GetEkmConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEkmConnectionArgs();
         }
 
         public Builder(GetEkmConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ekmConnectionId = defaults.ekmConnectionId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetEkmConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ekmConnectionId(String ekmConnectionId) {
-            this.ekmConnectionId = Objects.requireNonNull(ekmConnectionId);
+            $.ekmConnectionId = ekmConnectionId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetEkmConnectionArgs build() {
-            return new GetEkmConnectionArgs(ekmConnectionId, location, project);
+        }
+
+        public GetEkmConnectionArgs build() {
+            $.ekmConnectionId = Objects.requireNonNull($.ekmConnectionId, "expected parameter 'ekmConnectionId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.apigateway.inputs.GatewayIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class GatewayIamMemberState extends com.pulumi.resources.ResourceAr
     public static final GatewayIamMemberState Empty = new GatewayIamMemberState();
 
     @Import(name="condition")
-      private final @Nullable Output<GatewayIamMemberConditionGetArgs> condition;
+    private @Nullable Output<GatewayIamMemberConditionGetArgs> condition;
 
-    public Output<GatewayIamMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<GatewayIamMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,24 +28,24 @@ public final class GatewayIamMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="gateway")
-      private final @Nullable Output<String> gateway;
+    private @Nullable Output<String> gateway;
 
-    public Output<String> gateway() {
-        return this.gateway == null ? Codegen.empty() : this.gateway;
+    public Optional<Output<String>> gateway() {
+        return Optional.ofNullable(this.gateway);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GatewayIamMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GatewayIamMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -81,128 +81,108 @@ public final class GatewayIamMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public GatewayIamMemberState(
-        @Nullable Output<GatewayIamMemberConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> gateway,
-        @Nullable Output<String> member,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> role) {
-        this.condition = condition;
-        this.etag = etag;
-        this.gateway = gateway;
-        this.member = member;
-        this.project = project;
-        this.region = region;
-        this.role = role;
-    }
+    private GatewayIamMemberState() {}
 
-    private GatewayIamMemberState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.gateway = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.role = Codegen.empty();
+    private GatewayIamMemberState(GatewayIamMemberState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.gateway = $.gateway;
+        this.member = $.member;
+        this.project = $.project;
+        this.region = $.region;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayIamMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GatewayIamMemberConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> gateway;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> role;
+        private GatewayIamMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayIamMemberState();
         }
 
         public Builder(GatewayIamMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.gateway = defaults.gateway;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.role = defaults.role;
+            $ = new GatewayIamMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<GatewayIamMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable GatewayIamMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(GatewayIamMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder gateway(@Nullable Output<String> gateway) {
-            this.gateway = gateway;
+            $.gateway = gateway;
             return this;
         }
-        public Builder gateway(@Nullable String gateway) {
-            this.gateway = Codegen.ofNullable(gateway);
-            return this;
+
+        public Builder gateway(String gateway) {
+            return gateway(Output.of(gateway));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public GatewayIamMemberState build() {
-            return new GatewayIamMemberState(condition, etag, gateway, member, project, region, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public GatewayIamMemberState build() {
+            return $;
         }
     }
+
 }

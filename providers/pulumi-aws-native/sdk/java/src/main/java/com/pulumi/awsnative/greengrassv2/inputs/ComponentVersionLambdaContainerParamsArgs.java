@@ -7,11 +7,11 @@ import com.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaDeviceMoun
 import com.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaVolumeMountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,116 +20,107 @@ public final class ComponentVersionLambdaContainerParamsArgs extends com.pulumi.
     public static final ComponentVersionLambdaContainerParamsArgs Empty = new ComponentVersionLambdaContainerParamsArgs();
 
     @Import(name="devices")
-      private final @Nullable Output<List<ComponentVersionLambdaDeviceMountArgs>> devices;
+    private @Nullable Output<List<ComponentVersionLambdaDeviceMountArgs>> devices;
 
-    public Output<List<ComponentVersionLambdaDeviceMountArgs>> devices() {
-        return this.devices == null ? Codegen.empty() : this.devices;
+    public Optional<Output<List<ComponentVersionLambdaDeviceMountArgs>>> devices() {
+        return Optional.ofNullable(this.devices);
     }
 
     @Import(name="memorySizeInKB")
-      private final @Nullable Output<Integer> memorySizeInKB;
+    private @Nullable Output<Integer> memorySizeInKB;
 
-    public Output<Integer> memorySizeInKB() {
-        return this.memorySizeInKB == null ? Codegen.empty() : this.memorySizeInKB;
+    public Optional<Output<Integer>> memorySizeInKB() {
+        return Optional.ofNullable(this.memorySizeInKB);
     }
 
     @Import(name="mountROSysfs")
-      private final @Nullable Output<Boolean> mountROSysfs;
+    private @Nullable Output<Boolean> mountROSysfs;
 
-    public Output<Boolean> mountROSysfs() {
-        return this.mountROSysfs == null ? Codegen.empty() : this.mountROSysfs;
+    public Optional<Output<Boolean>> mountROSysfs() {
+        return Optional.ofNullable(this.mountROSysfs);
     }
 
     @Import(name="volumes")
-      private final @Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes;
+    private @Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes;
 
-    public Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<ComponentVersionLambdaVolumeMountArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public ComponentVersionLambdaContainerParamsArgs(
-        @Nullable Output<List<ComponentVersionLambdaDeviceMountArgs>> devices,
-        @Nullable Output<Integer> memorySizeInKB,
-        @Nullable Output<Boolean> mountROSysfs,
-        @Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes) {
-        this.devices = devices;
-        this.memorySizeInKB = memorySizeInKB;
-        this.mountROSysfs = mountROSysfs;
-        this.volumes = volumes;
-    }
+    private ComponentVersionLambdaContainerParamsArgs() {}
 
-    private ComponentVersionLambdaContainerParamsArgs() {
-        this.devices = Codegen.empty();
-        this.memorySizeInKB = Codegen.empty();
-        this.mountROSysfs = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private ComponentVersionLambdaContainerParamsArgs(ComponentVersionLambdaContainerParamsArgs $) {
+        this.devices = $.devices;
+        this.memorySizeInKB = $.memorySizeInKB;
+        this.mountROSysfs = $.mountROSysfs;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentVersionLambdaContainerParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ComponentVersionLambdaDeviceMountArgs>> devices;
-        private @Nullable Output<Integer> memorySizeInKB;
-        private @Nullable Output<Boolean> mountROSysfs;
-        private @Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes;
+        private ComponentVersionLambdaContainerParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentVersionLambdaContainerParamsArgs();
         }
 
         public Builder(ComponentVersionLambdaContainerParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.devices = defaults.devices;
-    	      this.memorySizeInKB = defaults.memorySizeInKB;
-    	      this.mountROSysfs = defaults.mountROSysfs;
-    	      this.volumes = defaults.volumes;
+            $ = new ComponentVersionLambdaContainerParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder devices(@Nullable Output<List<ComponentVersionLambdaDeviceMountArgs>> devices) {
-            this.devices = devices;
+            $.devices = devices;
             return this;
         }
-        public Builder devices(@Nullable List<ComponentVersionLambdaDeviceMountArgs> devices) {
-            this.devices = Codegen.ofNullable(devices);
-            return this;
+
+        public Builder devices(List<ComponentVersionLambdaDeviceMountArgs> devices) {
+            return devices(Output.of(devices));
         }
+
         public Builder devices(ComponentVersionLambdaDeviceMountArgs... devices) {
             return devices(List.of(devices));
         }
+
         public Builder memorySizeInKB(@Nullable Output<Integer> memorySizeInKB) {
-            this.memorySizeInKB = memorySizeInKB;
+            $.memorySizeInKB = memorySizeInKB;
             return this;
         }
-        public Builder memorySizeInKB(@Nullable Integer memorySizeInKB) {
-            this.memorySizeInKB = Codegen.ofNullable(memorySizeInKB);
-            return this;
+
+        public Builder memorySizeInKB(Integer memorySizeInKB) {
+            return memorySizeInKB(Output.of(memorySizeInKB));
         }
+
         public Builder mountROSysfs(@Nullable Output<Boolean> mountROSysfs) {
-            this.mountROSysfs = mountROSysfs;
+            $.mountROSysfs = mountROSysfs;
             return this;
         }
-        public Builder mountROSysfs(@Nullable Boolean mountROSysfs) {
-            this.mountROSysfs = Codegen.ofNullable(mountROSysfs);
-            return this;
+
+        public Builder mountROSysfs(Boolean mountROSysfs) {
+            return mountROSysfs(Output.of(mountROSysfs));
         }
+
         public Builder volumes(@Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<ComponentVersionLambdaVolumeMountArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<ComponentVersionLambdaVolumeMountArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(ComponentVersionLambdaVolumeMountArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public ComponentVersionLambdaContainerParamsArgs build() {
-            return new ComponentVersionLambdaContainerParamsArgs(devices, memorySizeInKB, mountROSysfs, volumes);
+        }
+
+        public ComponentVersionLambdaContainerParamsArgs build() {
+            return $;
         }
     }
+
 }

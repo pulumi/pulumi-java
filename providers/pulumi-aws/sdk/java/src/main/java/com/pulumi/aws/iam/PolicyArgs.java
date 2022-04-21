@@ -5,10 +5,10 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
@@ -77,111 +77,99 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PolicyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<String> path,
-        Output<String> policy,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.path = path;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.tags = tags;
-    }
+    private PolicyArgs() {}
 
-    private PolicyArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.path = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PolicyArgs(PolicyArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.path = $.path;
+        this.policy = $.policy;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<String> path;
-        private Output<String> policy;
-        private @Nullable Output<Map<String,String>> tags;
+        private PolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyArgs();
         }
 
         public Builder(PolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.path = defaults.path;
-    	      this.policy = defaults.policy;
-    	      this.tags = defaults.tags;
+            $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PolicyArgs build() {
-            return new PolicyArgs(description, name, namePrefix, path, policy, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

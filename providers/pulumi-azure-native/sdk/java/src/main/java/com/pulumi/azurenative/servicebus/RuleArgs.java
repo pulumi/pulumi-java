@@ -9,9 +9,9 @@ import com.pulumi.azurenative.servicebus.inputs.CorrelationFilterArgs;
 import com.pulumi.azurenative.servicebus.inputs.SqlFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<ActionArgs> action;
+    private @Nullable Output<ActionArgs> action;
 
-    public Output<ActionArgs> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<ActionArgs>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="correlationFilter")
-      private final @Nullable Output<CorrelationFilterArgs> correlationFilter;
+    private @Nullable Output<CorrelationFilterArgs> correlationFilter;
 
-    public Output<CorrelationFilterArgs> correlationFilter() {
-        return this.correlationFilter == null ? Codegen.empty() : this.correlationFilter;
+    public Optional<Output<CorrelationFilterArgs>> correlationFilter() {
+        return Optional.ofNullable(this.correlationFilter);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filterType")
-      private final @Nullable Output<FilterType> filterType;
+    private @Nullable Output<FilterType> filterType;
 
-    public Output<FilterType> filterType() {
-        return this.filterType == null ? Codegen.empty() : this.filterType;
+    public Optional<Output<FilterType>> filterType() {
+        return Optional.ofNullable(this.filterType);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -68,7 +68,7 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -79,10 +79,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqlFilter")
-      private final @Nullable Output<SqlFilterArgs> sqlFilter;
+    private @Nullable Output<SqlFilterArgs> sqlFilter;
 
-    public Output<SqlFilterArgs> sqlFilter() {
-        return this.sqlFilter == null ? Codegen.empty() : this.sqlFilter;
+    public Optional<Output<SqlFilterArgs>> sqlFilter() {
+        return Optional.ofNullable(this.sqlFilter);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscriptionName", required=true)
-      private final Output<String> subscriptionName;
+    private Output<String> subscriptionName;
 
     public Output<String> subscriptionName() {
         return this.subscriptionName;
@@ -112,154 +112,132 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topicName", required=true)
-      private final Output<String> topicName;
+    private Output<String> topicName;
 
     public Output<String> topicName() {
         return this.topicName;
     }
 
-    public RuleArgs(
-        @Nullable Output<ActionArgs> action,
-        @Nullable Output<CorrelationFilterArgs> correlationFilter,
-        @Nullable Output<FilterType> filterType,
-        Output<String> namespaceName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleName,
-        @Nullable Output<SqlFilterArgs> sqlFilter,
-        Output<String> subscriptionName,
-        Output<String> topicName) {
-        this.action = action;
-        this.correlationFilter = correlationFilter;
-        this.filterType = filterType;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleName = ruleName;
-        this.sqlFilter = sqlFilter;
-        this.subscriptionName = Objects.requireNonNull(subscriptionName, "expected parameter 'subscriptionName' to be non-null");
-        this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
-    }
+    private RuleArgs() {}
 
-    private RuleArgs() {
-        this.action = Codegen.empty();
-        this.correlationFilter = Codegen.empty();
-        this.filterType = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.sqlFilter = Codegen.empty();
-        this.subscriptionName = Codegen.empty();
-        this.topicName = Codegen.empty();
+    private RuleArgs(RuleArgs $) {
+        this.action = $.action;
+        this.correlationFilter = $.correlationFilter;
+        this.filterType = $.filterType;
+        this.namespaceName = $.namespaceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleName = $.ruleName;
+        this.sqlFilter = $.sqlFilter;
+        this.subscriptionName = $.subscriptionName;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ActionArgs> action;
-        private @Nullable Output<CorrelationFilterArgs> correlationFilter;
-        private @Nullable Output<FilterType> filterType;
-        private Output<String> namespaceName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleName;
-        private @Nullable Output<SqlFilterArgs> sqlFilter;
-        private Output<String> subscriptionName;
-        private Output<String> topicName;
+        private RuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleArgs();
         }
 
         public Builder(RuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.correlationFilter = defaults.correlationFilter;
-    	      this.filterType = defaults.filterType;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleName = defaults.ruleName;
-    	      this.sqlFilter = defaults.sqlFilter;
-    	      this.subscriptionName = defaults.subscriptionName;
-    	      this.topicName = defaults.topicName;
+            $ = new RuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<ActionArgs> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable ActionArgs action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(ActionArgs action) {
+            return action(Output.of(action));
         }
+
         public Builder correlationFilter(@Nullable Output<CorrelationFilterArgs> correlationFilter) {
-            this.correlationFilter = correlationFilter;
+            $.correlationFilter = correlationFilter;
             return this;
         }
-        public Builder correlationFilter(@Nullable CorrelationFilterArgs correlationFilter) {
-            this.correlationFilter = Codegen.ofNullable(correlationFilter);
-            return this;
+
+        public Builder correlationFilter(CorrelationFilterArgs correlationFilter) {
+            return correlationFilter(Output.of(correlationFilter));
         }
+
         public Builder filterType(@Nullable Output<FilterType> filterType) {
-            this.filterType = filterType;
+            $.filterType = filterType;
             return this;
         }
-        public Builder filterType(@Nullable FilterType filterType) {
-            this.filterType = Codegen.ofNullable(filterType);
-            return this;
+
+        public Builder filterType(FilterType filterType) {
+            return filterType(Output.of(filterType));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder sqlFilter(@Nullable Output<SqlFilterArgs> sqlFilter) {
-            this.sqlFilter = sqlFilter;
+            $.sqlFilter = sqlFilter;
             return this;
         }
-        public Builder sqlFilter(@Nullable SqlFilterArgs sqlFilter) {
-            this.sqlFilter = Codegen.ofNullable(sqlFilter);
-            return this;
+
+        public Builder sqlFilter(SqlFilterArgs sqlFilter) {
+            return sqlFilter(Output.of(sqlFilter));
         }
+
         public Builder subscriptionName(Output<String> subscriptionName) {
-            this.subscriptionName = Objects.requireNonNull(subscriptionName);
+            $.subscriptionName = subscriptionName;
             return this;
         }
+
         public Builder subscriptionName(String subscriptionName) {
-            this.subscriptionName = Output.of(Objects.requireNonNull(subscriptionName));
-            return this;
+            return subscriptionName(Output.of(subscriptionName));
         }
+
         public Builder topicName(Output<String> topicName) {
-            this.topicName = Objects.requireNonNull(topicName);
+            $.topicName = topicName;
             return this;
         }
+
         public Builder topicName(String topicName) {
-            this.topicName = Output.of(Objects.requireNonNull(topicName));
-            return this;
-        }        public RuleArgs build() {
-            return new RuleArgs(action, correlationFilter, filterType, namespaceName, resourceGroupName, ruleName, sqlFilter, subscriptionName, topicName);
+            return topicName(Output.of(topicName));
+        }
+
+        public RuleArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.subscriptionName = Objects.requireNonNull($.subscriptionName, "expected parameter 'subscriptionName' to be non-null");
+            $.topicName = Objects.requireNonNull($.topicName, "expected parameter 'topicName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,11 +23,11 @@ import com.pulumi.awsnative.s3.inputs.BucketVersioningConfigurationArgs;
 import com.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -40,10 +40,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accelerateConfiguration")
-      private final @Nullable Output<BucketAccelerateConfigurationArgs> accelerateConfiguration;
+    private @Nullable Output<BucketAccelerateConfigurationArgs> accelerateConfiguration;
 
-    public Output<BucketAccelerateConfigurationArgs> accelerateConfiguration() {
-        return this.accelerateConfiguration == null ? Codegen.empty() : this.accelerateConfiguration;
+    public Optional<Output<BucketAccelerateConfigurationArgs>> accelerateConfiguration() {
+        return Optional.ofNullable(this.accelerateConfiguration);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessControl")
-      private final @Nullable Output<BucketAccessControl> accessControl;
+    private @Nullable Output<BucketAccessControl> accessControl;
 
-    public Output<BucketAccessControl> accessControl() {
-        return this.accessControl == null ? Codegen.empty() : this.accessControl;
+    public Optional<Output<BucketAccessControl>> accessControl() {
+        return Optional.ofNullable(this.accessControl);
     }
 
     /**
@@ -62,17 +62,17 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analyticsConfigurations")
-      private final @Nullable Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations;
+    private @Nullable Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations;
 
-    public Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations() {
-        return this.analyticsConfigurations == null ? Codegen.empty() : this.analyticsConfigurations;
+    public Optional<Output<List<BucketAnalyticsConfigurationArgs>>> analyticsConfigurations() {
+        return Optional.ofNullable(this.analyticsConfigurations);
     }
 
     @Import(name="bucketEncryption")
-      private final @Nullable Output<BucketEncryptionArgs> bucketEncryption;
+    private @Nullable Output<BucketEncryptionArgs> bucketEncryption;
 
-    public Output<BucketEncryptionArgs> bucketEncryption() {
-        return this.bucketEncryption == null ? Codegen.empty() : this.bucketEncryption;
+    public Optional<Output<BucketEncryptionArgs>> bucketEncryption() {
+        return Optional.ofNullable(this.bucketEncryption);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="corsConfiguration")
-      private final @Nullable Output<BucketCorsConfigurationArgs> corsConfiguration;
+    private @Nullable Output<BucketCorsConfigurationArgs> corsConfiguration;
 
-    public Output<BucketCorsConfigurationArgs> corsConfiguration() {
-        return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
+    public Optional<Output<BucketCorsConfigurationArgs>> corsConfiguration() {
+        return Optional.ofNullable(this.corsConfiguration);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="intelligentTieringConfigurations")
-      private final @Nullable Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations;
+    private @Nullable Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations;
 
-    public Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations() {
-        return this.intelligentTieringConfigurations == null ? Codegen.empty() : this.intelligentTieringConfigurations;
+    public Optional<Output<List<BucketIntelligentTieringConfigurationArgs>>> intelligentTieringConfigurations() {
+        return Optional.ofNullable(this.intelligentTieringConfigurations);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inventoryConfigurations")
-      private final @Nullable Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations;
+    private @Nullable Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations;
 
-    public Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations() {
-        return this.inventoryConfigurations == null ? Codegen.empty() : this.inventoryConfigurations;
+    public Optional<Output<List<BucketInventoryConfigurationArgs>>> inventoryConfigurations() {
+        return Optional.ofNullable(this.inventoryConfigurations);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecycleConfiguration")
-      private final @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
+    private @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
-    public Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration() {
-        return this.lifecycleConfiguration == null ? Codegen.empty() : this.lifecycleConfiguration;
+    public Optional<Output<BucketLifecycleConfigurationArgs>> lifecycleConfiguration() {
+        return Optional.ofNullable(this.lifecycleConfiguration);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loggingConfiguration")
-      private final @Nullable Output<BucketLoggingConfigurationArgs> loggingConfiguration;
+    private @Nullable Output<BucketLoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<BucketLoggingConfigurationArgs> loggingConfiguration() {
-        return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
+    public Optional<Output<BucketLoggingConfigurationArgs>> loggingConfiguration() {
+        return Optional.ofNullable(this.loggingConfiguration);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricsConfigurations")
-      private final @Nullable Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations;
+    private @Nullable Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations;
 
-    public Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations() {
-        return this.metricsConfigurations == null ? Codegen.empty() : this.metricsConfigurations;
+    public Optional<Output<List<BucketMetricsConfigurationArgs>>> metricsConfigurations() {
+        return Optional.ofNullable(this.metricsConfigurations);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfiguration")
-      private final @Nullable Output<BucketNotificationConfigurationArgs> notificationConfiguration;
+    private @Nullable Output<BucketNotificationConfigurationArgs> notificationConfiguration;
 
-    public Output<BucketNotificationConfigurationArgs> notificationConfiguration() {
-        return this.notificationConfiguration == null ? Codegen.empty() : this.notificationConfiguration;
+    public Optional<Output<BucketNotificationConfigurationArgs>> notificationConfiguration() {
+        return Optional.ofNullable(this.notificationConfiguration);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectLockConfiguration")
-      private final @Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration;
+    private @Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration;
 
-    public Output<BucketObjectLockConfigurationArgs> objectLockConfiguration() {
-        return this.objectLockConfiguration == null ? Codegen.empty() : this.objectLockConfiguration;
+    public Optional<Output<BucketObjectLockConfigurationArgs>> objectLockConfiguration() {
+        return Optional.ofNullable(this.objectLockConfiguration);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectLockEnabled")
-      private final @Nullable Output<Boolean> objectLockEnabled;
+    private @Nullable Output<Boolean> objectLockEnabled;
 
-    public Output<Boolean> objectLockEnabled() {
-        return this.objectLockEnabled == null ? Codegen.empty() : this.objectLockEnabled;
+    public Optional<Output<Boolean>> objectLockEnabled() {
+        return Optional.ofNullable(this.objectLockEnabled);
     }
 
     /**
@@ -190,17 +190,17 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownershipControls")
-      private final @Nullable Output<BucketOwnershipControlsArgs> ownershipControls;
+    private @Nullable Output<BucketOwnershipControlsArgs> ownershipControls;
 
-    public Output<BucketOwnershipControlsArgs> ownershipControls() {
-        return this.ownershipControls == null ? Codegen.empty() : this.ownershipControls;
+    public Optional<Output<BucketOwnershipControlsArgs>> ownershipControls() {
+        return Optional.ofNullable(this.ownershipControls);
     }
 
     @Import(name="publicAccessBlockConfiguration")
-      private final @Nullable Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
+    private @Nullable Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
-    public Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration == null ? Codegen.empty() : this.publicAccessBlockConfiguration;
+    public Optional<Output<BucketPublicAccessBlockConfigurationArgs>> publicAccessBlockConfiguration() {
+        return Optional.ofNullable(this.publicAccessBlockConfiguration);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicationConfiguration")
-      private final @Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration;
+    private @Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration;
 
-    public Output<BucketReplicationConfigurationArgs> replicationConfiguration() {
-        return this.replicationConfiguration == null ? Codegen.empty() : this.replicationConfiguration;
+    public Optional<Output<BucketReplicationConfigurationArgs>> replicationConfiguration() {
+        return Optional.ofNullable(this.replicationConfiguration);
     }
 
     /**
@@ -219,326 +219,272 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<BucketTagArgs>> tags;
+    private @Nullable Output<List<BucketTagArgs>> tags;
 
-    public Output<List<BucketTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<BucketTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="versioningConfiguration")
-      private final @Nullable Output<BucketVersioningConfigurationArgs> versioningConfiguration;
+    private @Nullable Output<BucketVersioningConfigurationArgs> versioningConfiguration;
 
-    public Output<BucketVersioningConfigurationArgs> versioningConfiguration() {
-        return this.versioningConfiguration == null ? Codegen.empty() : this.versioningConfiguration;
+    public Optional<Output<BucketVersioningConfigurationArgs>> versioningConfiguration() {
+        return Optional.ofNullable(this.versioningConfiguration);
     }
 
     @Import(name="websiteConfiguration")
-      private final @Nullable Output<BucketWebsiteConfigurationArgs> websiteConfiguration;
+    private @Nullable Output<BucketWebsiteConfigurationArgs> websiteConfiguration;
 
-    public Output<BucketWebsiteConfigurationArgs> websiteConfiguration() {
-        return this.websiteConfiguration == null ? Codegen.empty() : this.websiteConfiguration;
+    public Optional<Output<BucketWebsiteConfigurationArgs>> websiteConfiguration() {
+        return Optional.ofNullable(this.websiteConfiguration);
     }
 
-    public BucketArgs(
-        @Nullable Output<BucketAccelerateConfigurationArgs> accelerateConfiguration,
-        @Nullable Output<BucketAccessControl> accessControl,
-        @Nullable Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations,
-        @Nullable Output<BucketEncryptionArgs> bucketEncryption,
-        @Nullable Output<String> bucketName,
-        @Nullable Output<BucketCorsConfigurationArgs> corsConfiguration,
-        @Nullable Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations,
-        @Nullable Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations,
-        @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration,
-        @Nullable Output<BucketLoggingConfigurationArgs> loggingConfiguration,
-        @Nullable Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations,
-        @Nullable Output<BucketNotificationConfigurationArgs> notificationConfiguration,
-        @Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration,
-        @Nullable Output<Boolean> objectLockEnabled,
-        @Nullable Output<BucketOwnershipControlsArgs> ownershipControls,
-        @Nullable Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration,
-        @Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration,
-        @Nullable Output<List<BucketTagArgs>> tags,
-        @Nullable Output<BucketVersioningConfigurationArgs> versioningConfiguration,
-        @Nullable Output<BucketWebsiteConfigurationArgs> websiteConfiguration) {
-        this.accelerateConfiguration = accelerateConfiguration;
-        this.accessControl = accessControl;
-        this.analyticsConfigurations = analyticsConfigurations;
-        this.bucketEncryption = bucketEncryption;
-        this.bucketName = bucketName;
-        this.corsConfiguration = corsConfiguration;
-        this.intelligentTieringConfigurations = intelligentTieringConfigurations;
-        this.inventoryConfigurations = inventoryConfigurations;
-        this.lifecycleConfiguration = lifecycleConfiguration;
-        this.loggingConfiguration = loggingConfiguration;
-        this.metricsConfigurations = metricsConfigurations;
-        this.notificationConfiguration = notificationConfiguration;
-        this.objectLockConfiguration = objectLockConfiguration;
-        this.objectLockEnabled = objectLockEnabled;
-        this.ownershipControls = ownershipControls;
-        this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
-        this.replicationConfiguration = replicationConfiguration;
-        this.tags = tags;
-        this.versioningConfiguration = versioningConfiguration;
-        this.websiteConfiguration = websiteConfiguration;
-    }
+    private BucketArgs() {}
 
-    private BucketArgs() {
-        this.accelerateConfiguration = Codegen.empty();
-        this.accessControl = Codegen.empty();
-        this.analyticsConfigurations = Codegen.empty();
-        this.bucketEncryption = Codegen.empty();
-        this.bucketName = Codegen.empty();
-        this.corsConfiguration = Codegen.empty();
-        this.intelligentTieringConfigurations = Codegen.empty();
-        this.inventoryConfigurations = Codegen.empty();
-        this.lifecycleConfiguration = Codegen.empty();
-        this.loggingConfiguration = Codegen.empty();
-        this.metricsConfigurations = Codegen.empty();
-        this.notificationConfiguration = Codegen.empty();
-        this.objectLockConfiguration = Codegen.empty();
-        this.objectLockEnabled = Codegen.empty();
-        this.ownershipControls = Codegen.empty();
-        this.publicAccessBlockConfiguration = Codegen.empty();
-        this.replicationConfiguration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.versioningConfiguration = Codegen.empty();
-        this.websiteConfiguration = Codegen.empty();
+    private BucketArgs(BucketArgs $) {
+        this.accelerateConfiguration = $.accelerateConfiguration;
+        this.accessControl = $.accessControl;
+        this.analyticsConfigurations = $.analyticsConfigurations;
+        this.bucketEncryption = $.bucketEncryption;
+        this.bucketName = $.bucketName;
+        this.corsConfiguration = $.corsConfiguration;
+        this.intelligentTieringConfigurations = $.intelligentTieringConfigurations;
+        this.inventoryConfigurations = $.inventoryConfigurations;
+        this.lifecycleConfiguration = $.lifecycleConfiguration;
+        this.loggingConfiguration = $.loggingConfiguration;
+        this.metricsConfigurations = $.metricsConfigurations;
+        this.notificationConfiguration = $.notificationConfiguration;
+        this.objectLockConfiguration = $.objectLockConfiguration;
+        this.objectLockEnabled = $.objectLockEnabled;
+        this.ownershipControls = $.ownershipControls;
+        this.publicAccessBlockConfiguration = $.publicAccessBlockConfiguration;
+        this.replicationConfiguration = $.replicationConfiguration;
+        this.tags = $.tags;
+        this.versioningConfiguration = $.versioningConfiguration;
+        this.websiteConfiguration = $.websiteConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketAccelerateConfigurationArgs> accelerateConfiguration;
-        private @Nullable Output<BucketAccessControl> accessControl;
-        private @Nullable Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations;
-        private @Nullable Output<BucketEncryptionArgs> bucketEncryption;
-        private @Nullable Output<String> bucketName;
-        private @Nullable Output<BucketCorsConfigurationArgs> corsConfiguration;
-        private @Nullable Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations;
-        private @Nullable Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations;
-        private @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
-        private @Nullable Output<BucketLoggingConfigurationArgs> loggingConfiguration;
-        private @Nullable Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations;
-        private @Nullable Output<BucketNotificationConfigurationArgs> notificationConfiguration;
-        private @Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration;
-        private @Nullable Output<Boolean> objectLockEnabled;
-        private @Nullable Output<BucketOwnershipControlsArgs> ownershipControls;
-        private @Nullable Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
-        private @Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration;
-        private @Nullable Output<List<BucketTagArgs>> tags;
-        private @Nullable Output<BucketVersioningConfigurationArgs> versioningConfiguration;
-        private @Nullable Output<BucketWebsiteConfigurationArgs> websiteConfiguration;
+        private BucketArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketArgs();
         }
 
         public Builder(BucketArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accelerateConfiguration = defaults.accelerateConfiguration;
-    	      this.accessControl = defaults.accessControl;
-    	      this.analyticsConfigurations = defaults.analyticsConfigurations;
-    	      this.bucketEncryption = defaults.bucketEncryption;
-    	      this.bucketName = defaults.bucketName;
-    	      this.corsConfiguration = defaults.corsConfiguration;
-    	      this.intelligentTieringConfigurations = defaults.intelligentTieringConfigurations;
-    	      this.inventoryConfigurations = defaults.inventoryConfigurations;
-    	      this.lifecycleConfiguration = defaults.lifecycleConfiguration;
-    	      this.loggingConfiguration = defaults.loggingConfiguration;
-    	      this.metricsConfigurations = defaults.metricsConfigurations;
-    	      this.notificationConfiguration = defaults.notificationConfiguration;
-    	      this.objectLockConfiguration = defaults.objectLockConfiguration;
-    	      this.objectLockEnabled = defaults.objectLockEnabled;
-    	      this.ownershipControls = defaults.ownershipControls;
-    	      this.publicAccessBlockConfiguration = defaults.publicAccessBlockConfiguration;
-    	      this.replicationConfiguration = defaults.replicationConfiguration;
-    	      this.tags = defaults.tags;
-    	      this.versioningConfiguration = defaults.versioningConfiguration;
-    	      this.websiteConfiguration = defaults.websiteConfiguration;
+            $ = new BucketArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accelerateConfiguration(@Nullable Output<BucketAccelerateConfigurationArgs> accelerateConfiguration) {
-            this.accelerateConfiguration = accelerateConfiguration;
+            $.accelerateConfiguration = accelerateConfiguration;
             return this;
         }
-        public Builder accelerateConfiguration(@Nullable BucketAccelerateConfigurationArgs accelerateConfiguration) {
-            this.accelerateConfiguration = Codegen.ofNullable(accelerateConfiguration);
-            return this;
+
+        public Builder accelerateConfiguration(BucketAccelerateConfigurationArgs accelerateConfiguration) {
+            return accelerateConfiguration(Output.of(accelerateConfiguration));
         }
+
         public Builder accessControl(@Nullable Output<BucketAccessControl> accessControl) {
-            this.accessControl = accessControl;
+            $.accessControl = accessControl;
             return this;
         }
-        public Builder accessControl(@Nullable BucketAccessControl accessControl) {
-            this.accessControl = Codegen.ofNullable(accessControl);
-            return this;
+
+        public Builder accessControl(BucketAccessControl accessControl) {
+            return accessControl(Output.of(accessControl));
         }
+
         public Builder analyticsConfigurations(@Nullable Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations) {
-            this.analyticsConfigurations = analyticsConfigurations;
+            $.analyticsConfigurations = analyticsConfigurations;
             return this;
         }
-        public Builder analyticsConfigurations(@Nullable List<BucketAnalyticsConfigurationArgs> analyticsConfigurations) {
-            this.analyticsConfigurations = Codegen.ofNullable(analyticsConfigurations);
-            return this;
+
+        public Builder analyticsConfigurations(List<BucketAnalyticsConfigurationArgs> analyticsConfigurations) {
+            return analyticsConfigurations(Output.of(analyticsConfigurations));
         }
+
         public Builder analyticsConfigurations(BucketAnalyticsConfigurationArgs... analyticsConfigurations) {
             return analyticsConfigurations(List.of(analyticsConfigurations));
         }
+
         public Builder bucketEncryption(@Nullable Output<BucketEncryptionArgs> bucketEncryption) {
-            this.bucketEncryption = bucketEncryption;
+            $.bucketEncryption = bucketEncryption;
             return this;
         }
-        public Builder bucketEncryption(@Nullable BucketEncryptionArgs bucketEncryption) {
-            this.bucketEncryption = Codegen.ofNullable(bucketEncryption);
-            return this;
+
+        public Builder bucketEncryption(BucketEncryptionArgs bucketEncryption) {
+            return bucketEncryption(Output.of(bucketEncryption));
         }
+
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder corsConfiguration(@Nullable Output<BucketCorsConfigurationArgs> corsConfiguration) {
-            this.corsConfiguration = corsConfiguration;
+            $.corsConfiguration = corsConfiguration;
             return this;
         }
-        public Builder corsConfiguration(@Nullable BucketCorsConfigurationArgs corsConfiguration) {
-            this.corsConfiguration = Codegen.ofNullable(corsConfiguration);
-            return this;
+
+        public Builder corsConfiguration(BucketCorsConfigurationArgs corsConfiguration) {
+            return corsConfiguration(Output.of(corsConfiguration));
         }
+
         public Builder intelligentTieringConfigurations(@Nullable Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations) {
-            this.intelligentTieringConfigurations = intelligentTieringConfigurations;
+            $.intelligentTieringConfigurations = intelligentTieringConfigurations;
             return this;
         }
-        public Builder intelligentTieringConfigurations(@Nullable List<BucketIntelligentTieringConfigurationArgs> intelligentTieringConfigurations) {
-            this.intelligentTieringConfigurations = Codegen.ofNullable(intelligentTieringConfigurations);
-            return this;
+
+        public Builder intelligentTieringConfigurations(List<BucketIntelligentTieringConfigurationArgs> intelligentTieringConfigurations) {
+            return intelligentTieringConfigurations(Output.of(intelligentTieringConfigurations));
         }
+
         public Builder intelligentTieringConfigurations(BucketIntelligentTieringConfigurationArgs... intelligentTieringConfigurations) {
             return intelligentTieringConfigurations(List.of(intelligentTieringConfigurations));
         }
+
         public Builder inventoryConfigurations(@Nullable Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations) {
-            this.inventoryConfigurations = inventoryConfigurations;
+            $.inventoryConfigurations = inventoryConfigurations;
             return this;
         }
-        public Builder inventoryConfigurations(@Nullable List<BucketInventoryConfigurationArgs> inventoryConfigurations) {
-            this.inventoryConfigurations = Codegen.ofNullable(inventoryConfigurations);
-            return this;
+
+        public Builder inventoryConfigurations(List<BucketInventoryConfigurationArgs> inventoryConfigurations) {
+            return inventoryConfigurations(Output.of(inventoryConfigurations));
         }
+
         public Builder inventoryConfigurations(BucketInventoryConfigurationArgs... inventoryConfigurations) {
             return inventoryConfigurations(List.of(inventoryConfigurations));
         }
+
         public Builder lifecycleConfiguration(@Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
-            this.lifecycleConfiguration = lifecycleConfiguration;
+            $.lifecycleConfiguration = lifecycleConfiguration;
             return this;
         }
-        public Builder lifecycleConfiguration(@Nullable BucketLifecycleConfigurationArgs lifecycleConfiguration) {
-            this.lifecycleConfiguration = Codegen.ofNullable(lifecycleConfiguration);
-            return this;
+
+        public Builder lifecycleConfiguration(BucketLifecycleConfigurationArgs lifecycleConfiguration) {
+            return lifecycleConfiguration(Output.of(lifecycleConfiguration));
         }
+
         public Builder loggingConfiguration(@Nullable Output<BucketLoggingConfigurationArgs> loggingConfiguration) {
-            this.loggingConfiguration = loggingConfiguration;
+            $.loggingConfiguration = loggingConfiguration;
             return this;
         }
-        public Builder loggingConfiguration(@Nullable BucketLoggingConfigurationArgs loggingConfiguration) {
-            this.loggingConfiguration = Codegen.ofNullable(loggingConfiguration);
-            return this;
+
+        public Builder loggingConfiguration(BucketLoggingConfigurationArgs loggingConfiguration) {
+            return loggingConfiguration(Output.of(loggingConfiguration));
         }
+
         public Builder metricsConfigurations(@Nullable Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations) {
-            this.metricsConfigurations = metricsConfigurations;
+            $.metricsConfigurations = metricsConfigurations;
             return this;
         }
-        public Builder metricsConfigurations(@Nullable List<BucketMetricsConfigurationArgs> metricsConfigurations) {
-            this.metricsConfigurations = Codegen.ofNullable(metricsConfigurations);
-            return this;
+
+        public Builder metricsConfigurations(List<BucketMetricsConfigurationArgs> metricsConfigurations) {
+            return metricsConfigurations(Output.of(metricsConfigurations));
         }
+
         public Builder metricsConfigurations(BucketMetricsConfigurationArgs... metricsConfigurations) {
             return metricsConfigurations(List.of(metricsConfigurations));
         }
+
         public Builder notificationConfiguration(@Nullable Output<BucketNotificationConfigurationArgs> notificationConfiguration) {
-            this.notificationConfiguration = notificationConfiguration;
+            $.notificationConfiguration = notificationConfiguration;
             return this;
         }
-        public Builder notificationConfiguration(@Nullable BucketNotificationConfigurationArgs notificationConfiguration) {
-            this.notificationConfiguration = Codegen.ofNullable(notificationConfiguration);
-            return this;
+
+        public Builder notificationConfiguration(BucketNotificationConfigurationArgs notificationConfiguration) {
+            return notificationConfiguration(Output.of(notificationConfiguration));
         }
+
         public Builder objectLockConfiguration(@Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration) {
-            this.objectLockConfiguration = objectLockConfiguration;
+            $.objectLockConfiguration = objectLockConfiguration;
             return this;
         }
-        public Builder objectLockConfiguration(@Nullable BucketObjectLockConfigurationArgs objectLockConfiguration) {
-            this.objectLockConfiguration = Codegen.ofNullable(objectLockConfiguration);
-            return this;
+
+        public Builder objectLockConfiguration(BucketObjectLockConfigurationArgs objectLockConfiguration) {
+            return objectLockConfiguration(Output.of(objectLockConfiguration));
         }
+
         public Builder objectLockEnabled(@Nullable Output<Boolean> objectLockEnabled) {
-            this.objectLockEnabled = objectLockEnabled;
+            $.objectLockEnabled = objectLockEnabled;
             return this;
         }
-        public Builder objectLockEnabled(@Nullable Boolean objectLockEnabled) {
-            this.objectLockEnabled = Codegen.ofNullable(objectLockEnabled);
-            return this;
+
+        public Builder objectLockEnabled(Boolean objectLockEnabled) {
+            return objectLockEnabled(Output.of(objectLockEnabled));
         }
+
         public Builder ownershipControls(@Nullable Output<BucketOwnershipControlsArgs> ownershipControls) {
-            this.ownershipControls = ownershipControls;
+            $.ownershipControls = ownershipControls;
             return this;
         }
-        public Builder ownershipControls(@Nullable BucketOwnershipControlsArgs ownershipControls) {
-            this.ownershipControls = Codegen.ofNullable(ownershipControls);
-            return this;
+
+        public Builder ownershipControls(BucketOwnershipControlsArgs ownershipControls) {
+            return ownershipControls(Output.of(ownershipControls));
         }
+
         public Builder publicAccessBlockConfiguration(@Nullable Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
-            this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
+            $.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
-        public Builder publicAccessBlockConfiguration(@Nullable BucketPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
-            this.publicAccessBlockConfiguration = Codegen.ofNullable(publicAccessBlockConfiguration);
-            return this;
+
+        public Builder publicAccessBlockConfiguration(BucketPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
+            return publicAccessBlockConfiguration(Output.of(publicAccessBlockConfiguration));
         }
+
         public Builder replicationConfiguration(@Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration) {
-            this.replicationConfiguration = replicationConfiguration;
+            $.replicationConfiguration = replicationConfiguration;
             return this;
         }
-        public Builder replicationConfiguration(@Nullable BucketReplicationConfigurationArgs replicationConfiguration) {
-            this.replicationConfiguration = Codegen.ofNullable(replicationConfiguration);
-            return this;
+
+        public Builder replicationConfiguration(BucketReplicationConfigurationArgs replicationConfiguration) {
+            return replicationConfiguration(Output.of(replicationConfiguration));
         }
+
         public Builder tags(@Nullable Output<List<BucketTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<BucketTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<BucketTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(BucketTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder versioningConfiguration(@Nullable Output<BucketVersioningConfigurationArgs> versioningConfiguration) {
-            this.versioningConfiguration = versioningConfiguration;
+            $.versioningConfiguration = versioningConfiguration;
             return this;
         }
-        public Builder versioningConfiguration(@Nullable BucketVersioningConfigurationArgs versioningConfiguration) {
-            this.versioningConfiguration = Codegen.ofNullable(versioningConfiguration);
-            return this;
+
+        public Builder versioningConfiguration(BucketVersioningConfigurationArgs versioningConfiguration) {
+            return versioningConfiguration(Output.of(versioningConfiguration));
         }
+
         public Builder websiteConfiguration(@Nullable Output<BucketWebsiteConfigurationArgs> websiteConfiguration) {
-            this.websiteConfiguration = websiteConfiguration;
+            $.websiteConfiguration = websiteConfiguration;
             return this;
         }
-        public Builder websiteConfiguration(@Nullable BucketWebsiteConfigurationArgs websiteConfiguration) {
-            this.websiteConfiguration = Codegen.ofNullable(websiteConfiguration);
-            return this;
-        }        public BucketArgs build() {
-            return new BucketArgs(accelerateConfiguration, accessControl, analyticsConfigurations, bucketEncryption, bucketName, corsConfiguration, intelligentTieringConfigurations, inventoryConfigurations, lifecycleConfiguration, loggingConfiguration, metricsConfigurations, notificationConfiguration, objectLockConfiguration, objectLockEnabled, ownershipControls, publicAccessBlockConfiguration, replicationConfiguration, tags, versioningConfiguration, websiteConfiguration);
+
+        public Builder websiteConfiguration(BucketWebsiteConfigurationArgs websiteConfiguration) {
+            return websiteConfiguration(Output.of(websiteConfiguration));
+        }
+
+        public BucketArgs build() {
+            return $;
         }
     }
+
 }

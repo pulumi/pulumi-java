@@ -21,7 +21,7 @@ public final class Int64RangeMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rangeEnd", required=true)
-      private final String rangeEnd;
+    private String rangeEnd;
 
     public String rangeEnd() {
         return this.rangeEnd;
@@ -32,55 +32,52 @@ public final class Int64RangeMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rangeStart", required=true)
-      private final String rangeStart;
+    private String rangeStart;
 
     public String rangeStart() {
         return this.rangeStart;
     }
 
-    public Int64RangeMatchResponse(
-        String rangeEnd,
-        String rangeStart) {
-        this.rangeEnd = Objects.requireNonNull(rangeEnd, "expected parameter 'rangeEnd' to be non-null");
-        this.rangeStart = Objects.requireNonNull(rangeStart, "expected parameter 'rangeStart' to be non-null");
-    }
+    private Int64RangeMatchResponse() {}
 
-    private Int64RangeMatchResponse() {
-        this.rangeEnd = null;
-        this.rangeStart = null;
+    private Int64RangeMatchResponse(Int64RangeMatchResponse $) {
+        this.rangeEnd = $.rangeEnd;
+        this.rangeStart = $.rangeStart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Int64RangeMatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String rangeEnd;
-        private String rangeStart;
+        private Int64RangeMatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Int64RangeMatchResponse();
         }
 
         public Builder(Int64RangeMatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rangeEnd = defaults.rangeEnd;
-    	      this.rangeStart = defaults.rangeStart;
+            $ = new Int64RangeMatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rangeEnd(String rangeEnd) {
-            this.rangeEnd = Objects.requireNonNull(rangeEnd);
+            $.rangeEnd = rangeEnd;
             return this;
         }
+
         public Builder rangeStart(String rangeStart) {
-            this.rangeStart = Objects.requireNonNull(rangeStart);
+            $.rangeStart = rangeStart;
             return this;
-        }        public Int64RangeMatchResponse build() {
-            return new Int64RangeMatchResponse(rangeEnd, rangeStart);
+        }
+
+        public Int64RangeMatchResponse build() {
+            $.rangeEnd = Objects.requireNonNull($.rangeEnd, "expected parameter 'rangeEnd' to be non-null");
+            $.rangeStart = Objects.requireNonNull($.rangeStart, "expected parameter 'rangeStart' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class PackagingConfigurationCmafPackage extends com.pulumi.resource
     public static final PackagingConfigurationCmafPackage Empty = new PackagingConfigurationCmafPackage();
 
     @Import(name="encryption")
-      private final @Nullable PackagingConfigurationCmafEncryption encryption;
+    private @Nullable PackagingConfigurationCmafEncryption encryption;
 
     public Optional<PackagingConfigurationCmafEncryption> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class PackagingConfigurationCmafPackage extends com.pulumi.resource
      * 
      */
     @Import(name="hlsManifests", required=true)
-      private final List<PackagingConfigurationHlsManifest> hlsManifests;
+    private List<PackagingConfigurationHlsManifest> hlsManifests;
 
     public List<PackagingConfigurationHlsManifest> hlsManifests() {
         return this.hlsManifests;
@@ -45,83 +45,74 @@ public final class PackagingConfigurationCmafPackage extends com.pulumi.resource
      * 
      */
     @Import(name="includeEncoderConfigurationInSegments")
-      private final @Nullable Boolean includeEncoderConfigurationInSegments;
+    private @Nullable Boolean includeEncoderConfigurationInSegments;
 
     public Optional<Boolean> includeEncoderConfigurationInSegments() {
-        return this.includeEncoderConfigurationInSegments == null ? Optional.empty() : Optional.ofNullable(this.includeEncoderConfigurationInSegments);
+        return Optional.ofNullable(this.includeEncoderConfigurationInSegments);
     }
 
     @Import(name="segmentDurationSeconds")
-      private final @Nullable Integer segmentDurationSeconds;
+    private @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> segmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
+        return Optional.ofNullable(this.segmentDurationSeconds);
     }
 
-    public PackagingConfigurationCmafPackage(
-        @Nullable PackagingConfigurationCmafEncryption encryption,
-        List<PackagingConfigurationHlsManifest> hlsManifests,
-        @Nullable Boolean includeEncoderConfigurationInSegments,
-        @Nullable Integer segmentDurationSeconds) {
-        this.encryption = encryption;
-        this.hlsManifests = Objects.requireNonNull(hlsManifests, "expected parameter 'hlsManifests' to be non-null");
-        this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
-        this.segmentDurationSeconds = segmentDurationSeconds;
-    }
+    private PackagingConfigurationCmafPackage() {}
 
-    private PackagingConfigurationCmafPackage() {
-        this.encryption = null;
-        this.hlsManifests = List.of();
-        this.includeEncoderConfigurationInSegments = null;
-        this.segmentDurationSeconds = null;
+    private PackagingConfigurationCmafPackage(PackagingConfigurationCmafPackage $) {
+        this.encryption = $.encryption;
+        this.hlsManifests = $.hlsManifests;
+        this.includeEncoderConfigurationInSegments = $.includeEncoderConfigurationInSegments;
+        this.segmentDurationSeconds = $.segmentDurationSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationCmafPackage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable PackagingConfigurationCmafEncryption encryption;
-        private List<PackagingConfigurationHlsManifest> hlsManifests;
-        private @Nullable Boolean includeEncoderConfigurationInSegments;
-        private @Nullable Integer segmentDurationSeconds;
+        private PackagingConfigurationCmafPackage $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationCmafPackage();
         }
 
         public Builder(PackagingConfigurationCmafPackage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.hlsManifests = defaults.hlsManifests;
-    	      this.includeEncoderConfigurationInSegments = defaults.includeEncoderConfigurationInSegments;
-    	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
+            $ = new PackagingConfigurationCmafPackage(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable PackagingConfigurationCmafEncryption encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder hlsManifests(List<PackagingConfigurationHlsManifest> hlsManifests) {
-            this.hlsManifests = Objects.requireNonNull(hlsManifests);
+            $.hlsManifests = hlsManifests;
             return this;
         }
+
         public Builder hlsManifests(PackagingConfigurationHlsManifest... hlsManifests) {
             return hlsManifests(List.of(hlsManifests));
         }
+
         public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
-            this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
+            $.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
+
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = segmentDurationSeconds;
+            $.segmentDurationSeconds = segmentDurationSeconds;
             return this;
-        }        public PackagingConfigurationCmafPackage build() {
-            return new PackagingConfigurationCmafPackage(encryption, hlsManifests, includeEncoderConfigurationInSegments, segmentDurationSeconds);
+        }
+
+        public PackagingConfigurationCmafPackage build() {
+            $.hlsManifests = Objects.requireNonNull($.hlsManifests, "expected parameter 'hlsManifests' to be non-null");
+            return $;
         }
     }
+
 }

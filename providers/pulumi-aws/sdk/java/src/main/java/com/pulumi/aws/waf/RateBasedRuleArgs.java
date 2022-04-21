@@ -6,12 +6,12 @@ package com.pulumi.aws.waf;
 import com.pulumi.aws.waf.inputs.RateBasedRulePredicateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class RateBasedRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -35,10 +35,10 @@ public final class RateBasedRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RateBasedRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predicates")
-      private final @Nullable Output<List<RateBasedRulePredicateArgs>> predicates;
+    private @Nullable Output<List<RateBasedRulePredicateArgs>> predicates;
 
-    public Output<List<RateBasedRulePredicateArgs>> predicates() {
-        return this.predicates == null ? Codegen.empty() : this.predicates;
+    public Optional<Output<List<RateBasedRulePredicateArgs>>> predicates() {
+        return Optional.ofNullable(this.predicates);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class RateBasedRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rateKey", required=true)
-      private final Output<String> rateKey;
+    private Output<String> rateKey;
 
     public Output<String> rateKey() {
         return this.rateKey;
@@ -68,7 +68,7 @@ public final class RateBasedRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rateLimit", required=true)
-      private final Output<Integer> rateLimit;
+    private Output<Integer> rateLimit;
 
     public Output<Integer> rateLimit() {
         return this.rateLimit;
@@ -79,118 +79,105 @@ public final class RateBasedRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public RateBasedRuleArgs(
-        Output<String> metricName,
-        @Nullable Output<String> name,
-        @Nullable Output<List<RateBasedRulePredicateArgs>> predicates,
-        Output<String> rateKey,
-        Output<Integer> rateLimit,
-        @Nullable Output<Map<String,String>> tags) {
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.name = name;
-        this.predicates = predicates;
-        this.rateKey = Objects.requireNonNull(rateKey, "expected parameter 'rateKey' to be non-null");
-        this.rateLimit = Objects.requireNonNull(rateLimit, "expected parameter 'rateLimit' to be non-null");
-        this.tags = tags;
-    }
+    private RateBasedRuleArgs() {}
 
-    private RateBasedRuleArgs() {
-        this.metricName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.predicates = Codegen.empty();
-        this.rateKey = Codegen.empty();
-        this.rateLimit = Codegen.empty();
-        this.tags = Codegen.empty();
+    private RateBasedRuleArgs(RateBasedRuleArgs $) {
+        this.metricName = $.metricName;
+        this.name = $.name;
+        this.predicates = $.predicates;
+        this.rateKey = $.rateKey;
+        this.rateLimit = $.rateLimit;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RateBasedRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> metricName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<RateBasedRulePredicateArgs>> predicates;
-        private Output<String> rateKey;
-        private Output<Integer> rateLimit;
-        private @Nullable Output<Map<String,String>> tags;
+        private RateBasedRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RateBasedRuleArgs();
         }
 
         public Builder(RateBasedRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricName = defaults.metricName;
-    	      this.name = defaults.name;
-    	      this.predicates = defaults.predicates;
-    	      this.rateKey = defaults.rateKey;
-    	      this.rateLimit = defaults.rateLimit;
-    	      this.tags = defaults.tags;
+            $ = new RateBasedRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder predicates(@Nullable Output<List<RateBasedRulePredicateArgs>> predicates) {
-            this.predicates = predicates;
+            $.predicates = predicates;
             return this;
         }
-        public Builder predicates(@Nullable List<RateBasedRulePredicateArgs> predicates) {
-            this.predicates = Codegen.ofNullable(predicates);
-            return this;
+
+        public Builder predicates(List<RateBasedRulePredicateArgs> predicates) {
+            return predicates(Output.of(predicates));
         }
+
         public Builder predicates(RateBasedRulePredicateArgs... predicates) {
             return predicates(List.of(predicates));
         }
+
         public Builder rateKey(Output<String> rateKey) {
-            this.rateKey = Objects.requireNonNull(rateKey);
+            $.rateKey = rateKey;
             return this;
         }
+
         public Builder rateKey(String rateKey) {
-            this.rateKey = Output.of(Objects.requireNonNull(rateKey));
-            return this;
+            return rateKey(Output.of(rateKey));
         }
+
         public Builder rateLimit(Output<Integer> rateLimit) {
-            this.rateLimit = Objects.requireNonNull(rateLimit);
+            $.rateLimit = rateLimit;
             return this;
         }
+
         public Builder rateLimit(Integer rateLimit) {
-            this.rateLimit = Output.of(Objects.requireNonNull(rateLimit));
-            return this;
+            return rateLimit(Output.of(rateLimit));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public RateBasedRuleArgs build() {
-            return new RateBasedRuleArgs(metricName, name, predicates, rateKey, rateLimit, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public RateBasedRuleArgs build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.rateKey = Objects.requireNonNull($.rateKey, "expected parameter 'rateKey' to be non-null");
+            $.rateLimit = Objects.requireNonNull($.rateLimit, "expected parameter 'rateLimit' to be non-null");
+            return $;
         }
     }
+
 }

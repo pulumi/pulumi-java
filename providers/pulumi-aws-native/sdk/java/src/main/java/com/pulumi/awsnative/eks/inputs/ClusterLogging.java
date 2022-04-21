@@ -22,45 +22,44 @@ public final class ClusterLogging extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterLogging")
-      private final @Nullable ClusterLogging clusterLogging;
+    private @Nullable ClusterLogging clusterLogging;
 
     public Optional<ClusterLogging> clusterLogging() {
-        return this.clusterLogging == null ? Optional.empty() : Optional.ofNullable(this.clusterLogging);
+        return Optional.ofNullable(this.clusterLogging);
     }
 
-    public ClusterLogging(@Nullable ClusterLogging clusterLogging) {
-        this.clusterLogging = clusterLogging;
-    }
+    private ClusterLogging() {}
 
-    private ClusterLogging() {
-        this.clusterLogging = null;
+    private ClusterLogging(ClusterLogging $) {
+        this.clusterLogging = $.clusterLogging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterLogging defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ClusterLogging clusterLogging;
+        private ClusterLogging $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterLogging();
         }
 
         public Builder(ClusterLogging defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterLogging = defaults.clusterLogging;
+            $ = new ClusterLogging(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterLogging(@Nullable ClusterLogging clusterLogging) {
-            this.clusterLogging = clusterLogging;
+            $.clusterLogging = clusterLogging;
             return this;
-        }        public ClusterLogging build() {
-            return new ClusterLogging(clusterLogging);
+        }
+
+        public ClusterLogging build() {
+            return $;
         }
     }
+
 }

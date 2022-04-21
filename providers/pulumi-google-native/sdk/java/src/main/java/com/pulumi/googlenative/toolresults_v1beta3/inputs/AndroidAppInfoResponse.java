@@ -21,7 +21,7 @@ public final class AndroidAppInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class AndroidAppInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="packageName", required=true)
-      private final String packageName;
+    private String packageName;
 
     public String packageName() {
         return this.packageName;
@@ -43,7 +43,7 @@ public final class AndroidAppInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="versionCode", required=true)
-      private final String versionCode;
+    private String versionCode;
 
     public String versionCode() {
         return this.versionCode;
@@ -54,73 +54,66 @@ public final class AndroidAppInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="versionName", required=true)
-      private final String versionName;
+    private String versionName;
 
     public String versionName() {
         return this.versionName;
     }
 
-    public AndroidAppInfoResponse(
-        String name,
-        String packageName,
-        String versionCode,
-        String versionName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.packageName = Objects.requireNonNull(packageName, "expected parameter 'packageName' to be non-null");
-        this.versionCode = Objects.requireNonNull(versionCode, "expected parameter 'versionCode' to be non-null");
-        this.versionName = Objects.requireNonNull(versionName, "expected parameter 'versionName' to be non-null");
-    }
+    private AndroidAppInfoResponse() {}
 
-    private AndroidAppInfoResponse() {
-        this.name = null;
-        this.packageName = null;
-        this.versionCode = null;
-        this.versionName = null;
+    private AndroidAppInfoResponse(AndroidAppInfoResponse $) {
+        this.name = $.name;
+        this.packageName = $.packageName;
+        this.versionCode = $.versionCode;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidAppInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String packageName;
-        private String versionCode;
-        private String versionName;
+        private AndroidAppInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidAppInfoResponse();
         }
 
         public Builder(AndroidAppInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.packageName = defaults.packageName;
-    	      this.versionCode = defaults.versionCode;
-    	      this.versionName = defaults.versionName;
+            $ = new AndroidAppInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder packageName(String packageName) {
-            this.packageName = Objects.requireNonNull(packageName);
+            $.packageName = packageName;
             return this;
         }
+
         public Builder versionCode(String versionCode) {
-            this.versionCode = Objects.requireNonNull(versionCode);
+            $.versionCode = versionCode;
             return this;
         }
+
         public Builder versionName(String versionName) {
-            this.versionName = Objects.requireNonNull(versionName);
+            $.versionName = versionName;
             return this;
-        }        public AndroidAppInfoResponse build() {
-            return new AndroidAppInfoResponse(name, packageName, versionCode, versionName);
+        }
+
+        public AndroidAppInfoResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.packageName = Objects.requireNonNull($.packageName, "expected parameter 'packageName' to be non-null");
+            $.versionCode = Objects.requireNonNull($.versionCode, "expected parameter 'versionCode' to be non-null");
+            $.versionName = Objects.requireNonNull($.versionName, "expected parameter 'versionName' to be non-null");
+            return $;
         }
     }
+
 }

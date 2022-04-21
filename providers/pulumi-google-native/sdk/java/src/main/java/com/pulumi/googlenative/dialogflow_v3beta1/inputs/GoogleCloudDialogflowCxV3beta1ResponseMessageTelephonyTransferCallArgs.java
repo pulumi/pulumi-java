@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
      * 
      */
     @Import(name="phoneNumber")
-      private final @Nullable Output<String> phoneNumber;
+    private @Nullable Output<String> phoneNumber;
 
-    public Output<String> phoneNumber() {
-        return this.phoneNumber == null ? Codegen.empty() : this.phoneNumber;
+    public Optional<Output<String>> phoneNumber() {
+        return Optional.ofNullable(this.phoneNumber);
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs(@Nullable Output<String> phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs() {
-        this.phoneNumber = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs(GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs $) {
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> phoneNumber;
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
-            this.phoneNumber = phoneNumber;
+            $.phoneNumber = phoneNumber;
             return this;
         }
-        public Builder phoneNumber(@Nullable String phoneNumber) {
-            this.phoneNumber = Codegen.ofNullable(phoneNumber);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs(phoneNumber);
+
+        public Builder phoneNumber(String phoneNumber) {
+            return phoneNumber(Output.of(phoneNumber));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="keyVaultId")
-      private final @Nullable String keyVaultId;
+    private @Nullable String keyVaultId;
 
     public Optional<String> keyVaultId() {
-        return this.keyVaultId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultId);
+        return Optional.ofNullable(this.keyVaultId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class UserSecretStoreResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="keyVaultUri")
-      private final @Nullable String keyVaultUri;
+    private @Nullable String keyVaultUri;
 
     public Optional<String> keyVaultUri() {
-        return this.keyVaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultUri);
+        return Optional.ofNullable(this.keyVaultUri);
     }
 
-    public UserSecretStoreResponse(
-        @Nullable String keyVaultId,
-        @Nullable String keyVaultUri) {
-        this.keyVaultId = keyVaultId;
-        this.keyVaultUri = keyVaultUri;
-    }
+    private UserSecretStoreResponse() {}
 
-    private UserSecretStoreResponse() {
-        this.keyVaultId = null;
-        this.keyVaultUri = null;
+    private UserSecretStoreResponse(UserSecretStoreResponse $) {
+        this.keyVaultId = $.keyVaultId;
+        this.keyVaultUri = $.keyVaultUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserSecretStoreResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyVaultId;
-        private @Nullable String keyVaultUri;
+        private UserSecretStoreResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserSecretStoreResponse();
         }
 
         public Builder(UserSecretStoreResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultId = defaults.keyVaultId;
-    	      this.keyVaultUri = defaults.keyVaultUri;
+            $ = new UserSecretStoreResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = keyVaultId;
+            $.keyVaultId = keyVaultId;
             return this;
         }
+
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = keyVaultUri;
+            $.keyVaultUri = keyVaultUri;
             return this;
-        }        public UserSecretStoreResponse build() {
-            return new UserSecretStoreResponse(keyVaultId, keyVaultUri);
+        }
+
+        public UserSecretStoreResponse build() {
+            return $;
         }
     }
+
 }

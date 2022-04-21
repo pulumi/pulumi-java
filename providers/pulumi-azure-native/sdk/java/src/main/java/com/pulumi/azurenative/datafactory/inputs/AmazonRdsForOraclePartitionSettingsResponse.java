@@ -24,10 +24,10 @@ public final class AmazonRdsForOraclePartitionSettingsResponse extends com.pulum
      * 
      */
     @Import(name="partitionColumnName")
-      private final @Nullable Object partitionColumnName;
+    private @Nullable Object partitionColumnName;
 
     public Optional<Object> partitionColumnName() {
-        return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
+        return Optional.ofNullable(this.partitionColumnName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AmazonRdsForOraclePartitionSettingsResponse extends com.pulum
      * 
      */
     @Import(name="partitionLowerBound")
-      private final @Nullable Object partitionLowerBound;
+    private @Nullable Object partitionLowerBound;
 
     public Optional<Object> partitionLowerBound() {
-        return this.partitionLowerBound == null ? Optional.empty() : Optional.ofNullable(this.partitionLowerBound);
+        return Optional.ofNullable(this.partitionLowerBound);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AmazonRdsForOraclePartitionSettingsResponse extends com.pulum
      * 
      */
     @Import(name="partitionNames")
-      private final @Nullable List<Object> partitionNames;
+    private @Nullable List<Object> partitionNames;
 
-    public List<Object> partitionNames() {
-        return this.partitionNames == null ? List.of() : this.partitionNames;
+    public Optional<List<Object>> partitionNames() {
+        return Optional.ofNullable(this.partitionNames);
     }
 
     /**
@@ -57,76 +57,66 @@ public final class AmazonRdsForOraclePartitionSettingsResponse extends com.pulum
      * 
      */
     @Import(name="partitionUpperBound")
-      private final @Nullable Object partitionUpperBound;
+    private @Nullable Object partitionUpperBound;
 
     public Optional<Object> partitionUpperBound() {
-        return this.partitionUpperBound == null ? Optional.empty() : Optional.ofNullable(this.partitionUpperBound);
+        return Optional.ofNullable(this.partitionUpperBound);
     }
 
-    public AmazonRdsForOraclePartitionSettingsResponse(
-        @Nullable Object partitionColumnName,
-        @Nullable Object partitionLowerBound,
-        @Nullable List<Object> partitionNames,
-        @Nullable Object partitionUpperBound) {
-        this.partitionColumnName = partitionColumnName;
-        this.partitionLowerBound = partitionLowerBound;
-        this.partitionNames = partitionNames;
-        this.partitionUpperBound = partitionUpperBound;
-    }
+    private AmazonRdsForOraclePartitionSettingsResponse() {}
 
-    private AmazonRdsForOraclePartitionSettingsResponse() {
-        this.partitionColumnName = null;
-        this.partitionLowerBound = null;
-        this.partitionNames = List.of();
-        this.partitionUpperBound = null;
+    private AmazonRdsForOraclePartitionSettingsResponse(AmazonRdsForOraclePartitionSettingsResponse $) {
+        this.partitionColumnName = $.partitionColumnName;
+        this.partitionLowerBound = $.partitionLowerBound;
+        this.partitionNames = $.partitionNames;
+        this.partitionUpperBound = $.partitionUpperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AmazonRdsForOraclePartitionSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object partitionColumnName;
-        private @Nullable Object partitionLowerBound;
-        private @Nullable List<Object> partitionNames;
-        private @Nullable Object partitionUpperBound;
+        private AmazonRdsForOraclePartitionSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AmazonRdsForOraclePartitionSettingsResponse();
         }
 
         public Builder(AmazonRdsForOraclePartitionSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partitionColumnName = defaults.partitionColumnName;
-    	      this.partitionLowerBound = defaults.partitionLowerBound;
-    	      this.partitionNames = defaults.partitionNames;
-    	      this.partitionUpperBound = defaults.partitionUpperBound;
+            $ = new AmazonRdsForOraclePartitionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = partitionColumnName;
+            $.partitionColumnName = partitionColumnName;
             return this;
         }
+
         public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
-            this.partitionLowerBound = partitionLowerBound;
+            $.partitionLowerBound = partitionLowerBound;
             return this;
         }
+
         public Builder partitionNames(@Nullable List<Object> partitionNames) {
-            this.partitionNames = partitionNames;
+            $.partitionNames = partitionNames;
             return this;
         }
+
         public Builder partitionNames(Object... partitionNames) {
             return partitionNames(List.of(partitionNames));
         }
+
         public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
-            this.partitionUpperBound = partitionUpperBound;
+            $.partitionUpperBound = partitionUpperBound;
             return this;
-        }        public AmazonRdsForOraclePartitionSettingsResponse build() {
-            return new AmazonRdsForOraclePartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionNames, partitionUpperBound);
+        }
+
+        public AmazonRdsForOraclePartitionSettingsResponse build() {
+            return $;
         }
     }
+
 }

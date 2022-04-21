@@ -22,7 +22,7 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="eventTypes", required=true)
-      private final List<String> eventTypes;
+    private List<String> eventTypes;
 
     public List<String> eventTypes() {
         return this.eventTypes;
@@ -33,7 +33,7 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="payloadFormat", required=true)
-      private final String payloadFormat;
+    private String payloadFormat;
 
     public String payloadFormat() {
         return this.payloadFormat;
@@ -44,67 +44,63 @@ public final class NotificationConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="pubsubTopic", required=true)
-      private final String pubsubTopic;
+    private String pubsubTopic;
 
     public String pubsubTopic() {
         return this.pubsubTopic;
     }
 
-    public NotificationConfigResponse(
-        List<String> eventTypes,
-        String payloadFormat,
-        String pubsubTopic) {
-        this.eventTypes = Objects.requireNonNull(eventTypes, "expected parameter 'eventTypes' to be non-null");
-        this.payloadFormat = Objects.requireNonNull(payloadFormat, "expected parameter 'payloadFormat' to be non-null");
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
-    }
+    private NotificationConfigResponse() {}
 
-    private NotificationConfigResponse() {
-        this.eventTypes = List.of();
-        this.payloadFormat = null;
-        this.pubsubTopic = null;
+    private NotificationConfigResponse(NotificationConfigResponse $) {
+        this.eventTypes = $.eventTypes;
+        this.payloadFormat = $.payloadFormat;
+        this.pubsubTopic = $.pubsubTopic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> eventTypes;
-        private String payloadFormat;
-        private String pubsubTopic;
+        private NotificationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigResponse();
         }
 
         public Builder(NotificationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventTypes = defaults.eventTypes;
-    	      this.payloadFormat = defaults.payloadFormat;
-    	      this.pubsubTopic = defaults.pubsubTopic;
+            $ = new NotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventTypes(List<String> eventTypes) {
-            this.eventTypes = Objects.requireNonNull(eventTypes);
+            $.eventTypes = eventTypes;
             return this;
         }
+
         public Builder eventTypes(String... eventTypes) {
             return eventTypes(List.of(eventTypes));
         }
+
         public Builder payloadFormat(String payloadFormat) {
-            this.payloadFormat = Objects.requireNonNull(payloadFormat);
+            $.payloadFormat = payloadFormat;
             return this;
         }
+
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+            $.pubsubTopic = pubsubTopic;
             return this;
-        }        public NotificationConfigResponse build() {
-            return new NotificationConfigResponse(eventTypes, payloadFormat, pubsubTopic);
+        }
+
+        public NotificationConfigResponse build() {
+            $.eventTypes = Objects.requireNonNull($.eventTypes, "expected parameter 'eventTypes' to be non-null");
+            $.payloadFormat = Objects.requireNonNull($.payloadFormat, "expected parameter 'payloadFormat' to be non-null");
+            $.pubsubTopic = Objects.requireNonNull($.pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
+            return $;
         }
     }
+
 }

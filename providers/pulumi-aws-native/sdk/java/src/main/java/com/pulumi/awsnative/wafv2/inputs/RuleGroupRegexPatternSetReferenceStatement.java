@@ -16,81 +16,77 @@ public final class RuleGroupRegexPatternSetReferenceStatement extends com.pulumi
     public static final RuleGroupRegexPatternSetReferenceStatement Empty = new RuleGroupRegexPatternSetReferenceStatement();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
     @Import(name="fieldToMatch", required=true)
-      private final RuleGroupFieldToMatch fieldToMatch;
+    private RuleGroupFieldToMatch fieldToMatch;
 
     public RuleGroupFieldToMatch fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
-      private final List<RuleGroupTextTransformation> textTransformations;
+    private List<RuleGroupTextTransformation> textTransformations;
 
     public List<RuleGroupTextTransformation> textTransformations() {
         return this.textTransformations;
     }
 
-    public RuleGroupRegexPatternSetReferenceStatement(
-        String arn,
-        RuleGroupFieldToMatch fieldToMatch,
-        List<RuleGroupTextTransformation> textTransformations) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private RuleGroupRegexPatternSetReferenceStatement() {}
 
-    private RuleGroupRegexPatternSetReferenceStatement() {
-        this.arn = null;
-        this.fieldToMatch = null;
-        this.textTransformations = List.of();
+    private RuleGroupRegexPatternSetReferenceStatement(RuleGroupRegexPatternSetReferenceStatement $) {
+        this.arn = $.arn;
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRegexPatternSetReferenceStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
-        private RuleGroupFieldToMatch fieldToMatch;
-        private List<RuleGroupTextTransformation> textTransformations;
+        private RuleGroupRegexPatternSetReferenceStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRegexPatternSetReferenceStatement();
         }
 
         public Builder(RuleGroupRegexPatternSetReferenceStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new RuleGroupRegexPatternSetReferenceStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
         }
+
         public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(RuleGroupTextTransformation... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public RuleGroupRegexPatternSetReferenceStatement build() {
-            return new RuleGroupRegexPatternSetReferenceStatement(arn, fieldToMatch, textTransformations);
+        }
+
+        public RuleGroupRegexPatternSetReferenceStatement build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

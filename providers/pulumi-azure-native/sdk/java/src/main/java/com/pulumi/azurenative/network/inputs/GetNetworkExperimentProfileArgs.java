@@ -17,7 +17,7 @@ public final class GetNetworkExperimentProfileArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="profileName", required=true)
-      private final String profileName;
+    private String profileName;
 
     public String profileName() {
         return this.profileName;
@@ -28,55 +28,52 @@ public final class GetNetworkExperimentProfileArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNetworkExperimentProfileArgs(
-        String profileName,
-        String resourceGroupName) {
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNetworkExperimentProfileArgs() {}
 
-    private GetNetworkExperimentProfileArgs() {
-        this.profileName = null;
-        this.resourceGroupName = null;
+    private GetNetworkExperimentProfileArgs(GetNetworkExperimentProfileArgs $) {
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkExperimentProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String profileName;
-        private String resourceGroupName;
+        private GetNetworkExperimentProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkExperimentProfileArgs();
         }
 
         public Builder(GetNetworkExperimentProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNetworkExperimentProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNetworkExperimentProfileArgs build() {
-            return new GetNetworkExperimentProfileArgs(profileName, resourceGroupName);
+        }
+
+        public GetNetworkExperimentProfileArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

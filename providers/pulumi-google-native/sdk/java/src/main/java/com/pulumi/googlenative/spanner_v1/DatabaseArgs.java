@@ -5,12 +5,12 @@ package com.pulumi.googlenative.spanner_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.spanner_v1.enums.DatabaseDatabaseDialect;
 import com.pulumi.googlenative.spanner_v1.inputs.EncryptionConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createStatement", required=true)
-      private final Output<String> createStatement;
+    private Output<String> createStatement;
 
     public Output<String> createStatement() {
         return this.createStatement;
@@ -34,10 +34,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseDialect")
-      private final @Nullable Output<DatabaseDatabaseDialect> databaseDialect;
+    private @Nullable Output<DatabaseDatabaseDialect> databaseDialect;
 
-    public Output<DatabaseDatabaseDialect> databaseDialect() {
-        return this.databaseDialect == null ? Codegen.empty() : this.databaseDialect;
+    public Optional<Output<DatabaseDatabaseDialect>> databaseDialect() {
+        return Optional.ofNullable(this.databaseDialect);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfig")
-      private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
+    private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> encryptionConfig() {
-        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
+    public Optional<Output<EncryptionConfigArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     /**
@@ -56,132 +56,118 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extraStatements")
-      private final @Nullable Output<List<String>> extraStatements;
+    private @Nullable Output<List<String>> extraStatements;
 
-    public Output<List<String>> extraStatements() {
-        return this.extraStatements == null ? Codegen.empty() : this.extraStatements;
+    public Optional<Output<List<String>>> extraStatements() {
+        return Optional.ofNullable(this.extraStatements);
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DatabaseArgs(
-        Output<String> createStatement,
-        @Nullable Output<DatabaseDatabaseDialect> databaseDialect,
-        @Nullable Output<EncryptionConfigArgs> encryptionConfig,
-        @Nullable Output<List<String>> extraStatements,
-        Output<String> instanceId,
-        @Nullable Output<String> project) {
-        this.createStatement = Objects.requireNonNull(createStatement, "expected parameter 'createStatement' to be non-null");
-        this.databaseDialect = databaseDialect;
-        this.encryptionConfig = encryptionConfig;
-        this.extraStatements = extraStatements;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = project;
-    }
+    private DatabaseArgs() {}
 
-    private DatabaseArgs() {
-        this.createStatement = Codegen.empty();
-        this.databaseDialect = Codegen.empty();
-        this.encryptionConfig = Codegen.empty();
-        this.extraStatements = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.project = Codegen.empty();
+    private DatabaseArgs(DatabaseArgs $) {
+        this.createStatement = $.createStatement;
+        this.databaseDialect = $.databaseDialect;
+        this.encryptionConfig = $.encryptionConfig;
+        this.extraStatements = $.extraStatements;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> createStatement;
-        private @Nullable Output<DatabaseDatabaseDialect> databaseDialect;
-        private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
-        private @Nullable Output<List<String>> extraStatements;
-        private Output<String> instanceId;
-        private @Nullable Output<String> project;
+        private DatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseArgs();
         }
 
         public Builder(DatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createStatement = defaults.createStatement;
-    	      this.databaseDialect = defaults.databaseDialect;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.extraStatements = defaults.extraStatements;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createStatement(Output<String> createStatement) {
-            this.createStatement = Objects.requireNonNull(createStatement);
+            $.createStatement = createStatement;
             return this;
         }
+
         public Builder createStatement(String createStatement) {
-            this.createStatement = Output.of(Objects.requireNonNull(createStatement));
-            return this;
+            return createStatement(Output.of(createStatement));
         }
+
         public Builder databaseDialect(@Nullable Output<DatabaseDatabaseDialect> databaseDialect) {
-            this.databaseDialect = databaseDialect;
+            $.databaseDialect = databaseDialect;
             return this;
         }
-        public Builder databaseDialect(@Nullable DatabaseDatabaseDialect databaseDialect) {
-            this.databaseDialect = Codegen.ofNullable(databaseDialect);
-            return this;
+
+        public Builder databaseDialect(DatabaseDatabaseDialect databaseDialect) {
+            return databaseDialect(Output.of(databaseDialect));
         }
+
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
-            this.encryptionConfig = encryptionConfig;
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
-        public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
-            return this;
+
+        public Builder encryptionConfig(EncryptionConfigArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
+
         public Builder extraStatements(@Nullable Output<List<String>> extraStatements) {
-            this.extraStatements = extraStatements;
+            $.extraStatements = extraStatements;
             return this;
         }
-        public Builder extraStatements(@Nullable List<String> extraStatements) {
-            this.extraStatements = Codegen.ofNullable(extraStatements);
-            return this;
+
+        public Builder extraStatements(List<String> extraStatements) {
+            return extraStatements(Output.of(extraStatements));
         }
+
         public Builder extraStatements(String... extraStatements) {
             return extraStatements(List.of(extraStatements));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DatabaseArgs build() {
-            return new DatabaseArgs(createStatement, databaseDialect, encryptionConfig, extraStatements, instanceId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DatabaseArgs build() {
+            $.createStatement = Objects.requireNonNull($.createStatement, "expected parameter 'createStatement' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

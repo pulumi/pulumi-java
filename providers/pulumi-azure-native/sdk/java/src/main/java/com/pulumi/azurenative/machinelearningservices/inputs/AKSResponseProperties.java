@@ -29,10 +29,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="agentCount")
-      private final @Nullable Integer agentCount;
+    private @Nullable Integer agentCount;
 
     public Optional<Integer> agentCount() {
-        return this.agentCount == null ? Optional.empty() : Optional.ofNullable(this.agentCount);
+        return Optional.ofNullable(this.agentCount);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="agentVmSize")
-      private final @Nullable String agentVmSize;
+    private @Nullable String agentVmSize;
 
     public Optional<String> agentVmSize() {
-        return this.agentVmSize == null ? Optional.empty() : Optional.ofNullable(this.agentVmSize);
+        return Optional.ofNullable(this.agentVmSize);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="aksNetworkingConfiguration")
-      private final @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration;
+    private @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration;
 
     public Optional<AksNetworkingConfigurationResponse> aksNetworkingConfiguration() {
-        return this.aksNetworkingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.aksNetworkingConfiguration);
+        return Optional.ofNullable(this.aksNetworkingConfiguration);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clusterFqdn")
-      private final @Nullable String clusterFqdn;
+    private @Nullable String clusterFqdn;
 
     public Optional<String> clusterFqdn() {
-        return this.clusterFqdn == null ? Optional.empty() : Optional.ofNullable(this.clusterFqdn);
+        return Optional.ofNullable(this.clusterFqdn);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clusterPurpose")
-      private final @Nullable String clusterPurpose;
+    private @Nullable String clusterPurpose;
 
     public Optional<String> clusterPurpose() {
-        return this.clusterPurpose == null ? Optional.empty() : Optional.ofNullable(this.clusterPurpose);
+        return Optional.ofNullable(this.clusterPurpose);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sslConfiguration")
-      private final @Nullable SslConfigurationResponse sslConfiguration;
+    private @Nullable SslConfigurationResponse sslConfiguration;
 
     public Optional<SslConfigurationResponse> sslConfiguration() {
-        return this.sslConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sslConfiguration);
+        return Optional.ofNullable(this.sslConfiguration);
     }
 
     /**
@@ -95,103 +95,86 @@ public final class AKSResponseProperties extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="systemServices", required=true)
-      private final List<SystemServiceResponse> systemServices;
+    private List<SystemServiceResponse> systemServices;
 
     public List<SystemServiceResponse> systemServices() {
         return this.systemServices;
     }
 
-    public AKSResponseProperties(
-        @Nullable Integer agentCount,
-        @Nullable String agentVmSize,
-        @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration,
-        @Nullable String clusterFqdn,
-        @Nullable String clusterPurpose,
-        @Nullable SslConfigurationResponse sslConfiguration,
-        List<SystemServiceResponse> systemServices) {
-        this.agentCount = agentCount;
-        this.agentVmSize = agentVmSize;
-        this.aksNetworkingConfiguration = aksNetworkingConfiguration;
-        this.clusterFqdn = clusterFqdn;
-        this.clusterPurpose = Codegen.stringProp("clusterPurpose").arg(clusterPurpose).def("FastProd").getNullable();
-        this.sslConfiguration = sslConfiguration;
-        this.systemServices = Objects.requireNonNull(systemServices, "expected parameter 'systemServices' to be non-null");
-    }
+    private AKSResponseProperties() {}
 
-    private AKSResponseProperties() {
-        this.agentCount = null;
-        this.agentVmSize = null;
-        this.aksNetworkingConfiguration = null;
-        this.clusterFqdn = null;
-        this.clusterPurpose = null;
-        this.sslConfiguration = null;
-        this.systemServices = List.of();
+    private AKSResponseProperties(AKSResponseProperties $) {
+        this.agentCount = $.agentCount;
+        this.agentVmSize = $.agentVmSize;
+        this.aksNetworkingConfiguration = $.aksNetworkingConfiguration;
+        this.clusterFqdn = $.clusterFqdn;
+        this.clusterPurpose = $.clusterPurpose;
+        this.sslConfiguration = $.sslConfiguration;
+        this.systemServices = $.systemServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer agentCount;
-        private @Nullable String agentVmSize;
-        private @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration;
-        private @Nullable String clusterFqdn;
-        private @Nullable String clusterPurpose;
-        private @Nullable SslConfigurationResponse sslConfiguration;
-        private List<SystemServiceResponse> systemServices;
+        private AKSResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSResponseProperties();
         }
 
         public Builder(AKSResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentCount = defaults.agentCount;
-    	      this.agentVmSize = defaults.agentVmSize;
-    	      this.aksNetworkingConfiguration = defaults.aksNetworkingConfiguration;
-    	      this.clusterFqdn = defaults.clusterFqdn;
-    	      this.clusterPurpose = defaults.clusterPurpose;
-    	      this.sslConfiguration = defaults.sslConfiguration;
-    	      this.systemServices = defaults.systemServices;
+            $ = new AKSResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder agentCount(@Nullable Integer agentCount) {
-            this.agentCount = agentCount;
+            $.agentCount = agentCount;
             return this;
         }
+
         public Builder agentVmSize(@Nullable String agentVmSize) {
-            this.agentVmSize = agentVmSize;
+            $.agentVmSize = agentVmSize;
             return this;
         }
+
         public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration) {
-            this.aksNetworkingConfiguration = aksNetworkingConfiguration;
+            $.aksNetworkingConfiguration = aksNetworkingConfiguration;
             return this;
         }
+
         public Builder clusterFqdn(@Nullable String clusterFqdn) {
-            this.clusterFqdn = clusterFqdn;
+            $.clusterFqdn = clusterFqdn;
             return this;
         }
+
         public Builder clusterPurpose(@Nullable String clusterPurpose) {
-            this.clusterPurpose = clusterPurpose;
+            $.clusterPurpose = clusterPurpose;
             return this;
         }
+
         public Builder sslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
-            this.sslConfiguration = sslConfiguration;
+            $.sslConfiguration = sslConfiguration;
             return this;
         }
+
         public Builder systemServices(List<SystemServiceResponse> systemServices) {
-            this.systemServices = Objects.requireNonNull(systemServices);
+            $.systemServices = systemServices;
             return this;
         }
+
         public Builder systemServices(SystemServiceResponse... systemServices) {
             return systemServices(List.of(systemServices));
-        }        public AKSResponseProperties build() {
-            return new AKSResponseProperties(agentCount, agentVmSize, aksNetworkingConfiguration, clusterFqdn, clusterPurpose, sslConfiguration, systemServices);
+        }
+
+        public AKSResponseProperties build() {
+            $.clusterPurpose = Codegen.stringProp("clusterPurpose").arg($.clusterPurpose).def("FastProd").getNullable();
+            $.systemServices = Objects.requireNonNull($.systemServices, "expected parameter 'systemServices' to be non-null");
+            return $;
         }
     }
+
 }

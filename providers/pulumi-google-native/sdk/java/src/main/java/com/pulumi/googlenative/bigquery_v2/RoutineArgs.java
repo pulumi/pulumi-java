@@ -5,7 +5,6 @@ package com.pulumi.googlenative.bigquery_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.enums.RoutineDeterminismLevel;
 import com.pulumi.googlenative.bigquery_v2.enums.RoutineLanguage;
 import com.pulumi.googlenative.bigquery_v2.enums.RoutineRoutineType;
@@ -17,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,14 +29,14 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<List<ArgumentArgs>> arguments;
+    private @Nullable Output<List<ArgumentArgs>> arguments;
 
-    public Output<List<ArgumentArgs>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<List<ArgumentArgs>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
@@ -47,7 +47,7 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definitionBody", required=true)
-      private final Output<String> definitionBody;
+    private Output<String> definitionBody;
 
     public Output<String> definitionBody() {
         return this.definitionBody;
@@ -58,10 +58,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="determinismLevel")
-      private final @Nullable Output<RoutineDeterminismLevel> determinismLevel;
+    private @Nullable Output<RoutineDeterminismLevel> determinismLevel;
 
-    public Output<RoutineDeterminismLevel> determinismLevel() {
-        return this.determinismLevel == null ? Codegen.empty() : this.determinismLevel;
+    public Optional<Output<RoutineDeterminismLevel>> determinismLevel() {
+        return Optional.ofNullable(this.determinismLevel);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="importedLibraries")
-      private final @Nullable Output<List<String>> importedLibraries;
+    private @Nullable Output<List<String>> importedLibraries;
 
-    public Output<List<String>> importedLibraries() {
-        return this.importedLibraries == null ? Codegen.empty() : this.importedLibraries;
+    public Optional<Output<List<String>>> importedLibraries() {
+        return Optional.ofNullable(this.importedLibraries);
     }
 
     /**
@@ -91,17 +91,17 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="language")
-      private final @Nullable Output<RoutineLanguage> language;
+    private @Nullable Output<RoutineLanguage> language;
 
-    public Output<RoutineLanguage> language() {
-        return this.language == null ? Codegen.empty() : this.language;
+    public Optional<Output<RoutineLanguage>> language() {
+        return Optional.ofNullable(this.language);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="returnTableType")
-      private final @Nullable Output<StandardSqlTableTypeArgs> returnTableType;
+    private @Nullable Output<StandardSqlTableTypeArgs> returnTableType;
 
-    public Output<StandardSqlTableTypeArgs> returnTableType() {
-        return this.returnTableType == null ? Codegen.empty() : this.returnTableType;
+    public Optional<Output<StandardSqlTableTypeArgs>> returnTableType() {
+        return Optional.ofNullable(this.returnTableType);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="returnType")
-      private final @Nullable Output<StandardSqlDataTypeArgs> returnType;
+    private @Nullable Output<StandardSqlDataTypeArgs> returnType;
 
-    public Output<StandardSqlDataTypeArgs> returnType() {
-        return this.returnType == null ? Codegen.empty() : this.returnType;
+    public Optional<Output<StandardSqlDataTypeArgs>> returnType() {
+        return Optional.ofNullable(this.returnType);
     }
 
     /**
@@ -131,7 +131,7 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routineReference", required=true)
-      private final Output<RoutineReferenceArgs> routineReference;
+    private Output<RoutineReferenceArgs> routineReference;
 
     public Output<RoutineReferenceArgs> routineReference() {
         return this.routineReference;
@@ -142,7 +142,7 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routineType", required=true)
-      private final Output<RoutineRoutineType> routineType;
+    private Output<RoutineRoutineType> routineType;
 
     public Output<RoutineRoutineType> routineType() {
         return this.routineType;
@@ -153,212 +153,180 @@ public final class RoutineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="strictMode")
-      private final @Nullable Output<Boolean> strictMode;
+    private @Nullable Output<Boolean> strictMode;
 
-    public Output<Boolean> strictMode() {
-        return this.strictMode == null ? Codegen.empty() : this.strictMode;
+    public Optional<Output<Boolean>> strictMode() {
+        return Optional.ofNullable(this.strictMode);
     }
 
-    public RoutineArgs(
-        @Nullable Output<List<ArgumentArgs>> arguments,
-        Output<String> datasetId,
-        Output<String> definitionBody,
-        @Nullable Output<String> description,
-        @Nullable Output<RoutineDeterminismLevel> determinismLevel,
-        @Nullable Output<List<String>> importedLibraries,
-        @Nullable Output<RoutineLanguage> language,
-        @Nullable Output<String> project,
-        @Nullable Output<StandardSqlTableTypeArgs> returnTableType,
-        @Nullable Output<StandardSqlDataTypeArgs> returnType,
-        Output<RoutineReferenceArgs> routineReference,
-        Output<RoutineRoutineType> routineType,
-        @Nullable Output<Boolean> strictMode) {
-        this.arguments = arguments;
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.definitionBody = Objects.requireNonNull(definitionBody, "expected parameter 'definitionBody' to be non-null");
-        this.description = description;
-        this.determinismLevel = determinismLevel;
-        this.importedLibraries = importedLibraries;
-        this.language = language;
-        this.project = project;
-        this.returnTableType = returnTableType;
-        this.returnType = returnType;
-        this.routineReference = Objects.requireNonNull(routineReference, "expected parameter 'routineReference' to be non-null");
-        this.routineType = Objects.requireNonNull(routineType, "expected parameter 'routineType' to be non-null");
-        this.strictMode = strictMode;
-    }
+    private RoutineArgs() {}
 
-    private RoutineArgs() {
-        this.arguments = Codegen.empty();
-        this.datasetId = Codegen.empty();
-        this.definitionBody = Codegen.empty();
-        this.description = Codegen.empty();
-        this.determinismLevel = Codegen.empty();
-        this.importedLibraries = Codegen.empty();
-        this.language = Codegen.empty();
-        this.project = Codegen.empty();
-        this.returnTableType = Codegen.empty();
-        this.returnType = Codegen.empty();
-        this.routineReference = Codegen.empty();
-        this.routineType = Codegen.empty();
-        this.strictMode = Codegen.empty();
+    private RoutineArgs(RoutineArgs $) {
+        this.arguments = $.arguments;
+        this.datasetId = $.datasetId;
+        this.definitionBody = $.definitionBody;
+        this.description = $.description;
+        this.determinismLevel = $.determinismLevel;
+        this.importedLibraries = $.importedLibraries;
+        this.language = $.language;
+        this.project = $.project;
+        this.returnTableType = $.returnTableType;
+        this.returnType = $.returnType;
+        this.routineReference = $.routineReference;
+        this.routineType = $.routineType;
+        this.strictMode = $.strictMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ArgumentArgs>> arguments;
-        private Output<String> datasetId;
-        private Output<String> definitionBody;
-        private @Nullable Output<String> description;
-        private @Nullable Output<RoutineDeterminismLevel> determinismLevel;
-        private @Nullable Output<List<String>> importedLibraries;
-        private @Nullable Output<RoutineLanguage> language;
-        private @Nullable Output<String> project;
-        private @Nullable Output<StandardSqlTableTypeArgs> returnTableType;
-        private @Nullable Output<StandardSqlDataTypeArgs> returnType;
-        private Output<RoutineReferenceArgs> routineReference;
-        private Output<RoutineRoutineType> routineType;
-        private @Nullable Output<Boolean> strictMode;
+        private RoutineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutineArgs();
         }
 
         public Builder(RoutineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.datasetId = defaults.datasetId;
-    	      this.definitionBody = defaults.definitionBody;
-    	      this.description = defaults.description;
-    	      this.determinismLevel = defaults.determinismLevel;
-    	      this.importedLibraries = defaults.importedLibraries;
-    	      this.language = defaults.language;
-    	      this.project = defaults.project;
-    	      this.returnTableType = defaults.returnTableType;
-    	      this.returnType = defaults.returnType;
-    	      this.routineReference = defaults.routineReference;
-    	      this.routineType = defaults.routineType;
-    	      this.strictMode = defaults.strictMode;
+            $ = new RoutineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<List<ArgumentArgs>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable List<ArgumentArgs> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(List<ArgumentArgs> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder arguments(ArgumentArgs... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder definitionBody(Output<String> definitionBody) {
-            this.definitionBody = Objects.requireNonNull(definitionBody);
+            $.definitionBody = definitionBody;
             return this;
         }
+
         public Builder definitionBody(String definitionBody) {
-            this.definitionBody = Output.of(Objects.requireNonNull(definitionBody));
-            return this;
+            return definitionBody(Output.of(definitionBody));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder determinismLevel(@Nullable Output<RoutineDeterminismLevel> determinismLevel) {
-            this.determinismLevel = determinismLevel;
+            $.determinismLevel = determinismLevel;
             return this;
         }
-        public Builder determinismLevel(@Nullable RoutineDeterminismLevel determinismLevel) {
-            this.determinismLevel = Codegen.ofNullable(determinismLevel);
-            return this;
+
+        public Builder determinismLevel(RoutineDeterminismLevel determinismLevel) {
+            return determinismLevel(Output.of(determinismLevel));
         }
+
         public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
-            this.importedLibraries = importedLibraries;
+            $.importedLibraries = importedLibraries;
             return this;
         }
-        public Builder importedLibraries(@Nullable List<String> importedLibraries) {
-            this.importedLibraries = Codegen.ofNullable(importedLibraries);
-            return this;
+
+        public Builder importedLibraries(List<String> importedLibraries) {
+            return importedLibraries(Output.of(importedLibraries));
         }
+
         public Builder importedLibraries(String... importedLibraries) {
             return importedLibraries(List.of(importedLibraries));
         }
+
         public Builder language(@Nullable Output<RoutineLanguage> language) {
-            this.language = language;
+            $.language = language;
             return this;
         }
-        public Builder language(@Nullable RoutineLanguage language) {
-            this.language = Codegen.ofNullable(language);
-            return this;
+
+        public Builder language(RoutineLanguage language) {
+            return language(Output.of(language));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder returnTableType(@Nullable Output<StandardSqlTableTypeArgs> returnTableType) {
-            this.returnTableType = returnTableType;
+            $.returnTableType = returnTableType;
             return this;
         }
-        public Builder returnTableType(@Nullable StandardSqlTableTypeArgs returnTableType) {
-            this.returnTableType = Codegen.ofNullable(returnTableType);
-            return this;
+
+        public Builder returnTableType(StandardSqlTableTypeArgs returnTableType) {
+            return returnTableType(Output.of(returnTableType));
         }
+
         public Builder returnType(@Nullable Output<StandardSqlDataTypeArgs> returnType) {
-            this.returnType = returnType;
+            $.returnType = returnType;
             return this;
         }
-        public Builder returnType(@Nullable StandardSqlDataTypeArgs returnType) {
-            this.returnType = Codegen.ofNullable(returnType);
-            return this;
+
+        public Builder returnType(StandardSqlDataTypeArgs returnType) {
+            return returnType(Output.of(returnType));
         }
+
         public Builder routineReference(Output<RoutineReferenceArgs> routineReference) {
-            this.routineReference = Objects.requireNonNull(routineReference);
+            $.routineReference = routineReference;
             return this;
         }
+
         public Builder routineReference(RoutineReferenceArgs routineReference) {
-            this.routineReference = Output.of(Objects.requireNonNull(routineReference));
-            return this;
+            return routineReference(Output.of(routineReference));
         }
+
         public Builder routineType(Output<RoutineRoutineType> routineType) {
-            this.routineType = Objects.requireNonNull(routineType);
+            $.routineType = routineType;
             return this;
         }
+
         public Builder routineType(RoutineRoutineType routineType) {
-            this.routineType = Output.of(Objects.requireNonNull(routineType));
-            return this;
+            return routineType(Output.of(routineType));
         }
+
         public Builder strictMode(@Nullable Output<Boolean> strictMode) {
-            this.strictMode = strictMode;
+            $.strictMode = strictMode;
             return this;
         }
-        public Builder strictMode(@Nullable Boolean strictMode) {
-            this.strictMode = Codegen.ofNullable(strictMode);
-            return this;
-        }        public RoutineArgs build() {
-            return new RoutineArgs(arguments, datasetId, definitionBody, description, determinismLevel, importedLibraries, language, project, returnTableType, returnType, routineReference, routineType, strictMode);
+
+        public Builder strictMode(Boolean strictMode) {
+            return strictMode(Output.of(strictMode));
+        }
+
+        public RoutineArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.definitionBody = Objects.requireNonNull($.definitionBody, "expected parameter 'definitionBody' to be non-null");
+            $.routineReference = Objects.requireNonNull($.routineReference, "expected parameter 'routineReference' to be non-null");
+            $.routineType = Objects.requireNonNull($.routineType, "expected parameter 'routineType' to be non-null");
+            return $;
         }
     }
+
 }

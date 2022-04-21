@@ -24,45 +24,45 @@ public final class ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs e
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
-    public ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(@Nullable Integer count) {
-        this.count = Codegen.integerProp("count").arg(count).def(1).getNullable();
-    }
+    private ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs() {}
 
-    private ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs() {
-        this.count = null;
+    private ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs $) {
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
+        private ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs();
         }
 
         public Builder(ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
+            $ = new ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
-        }        public ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs build() {
-            return new ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs(count);
+        }
+
+        public ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs build() {
+            $.count = Codegen.integerProp("count").arg($.count).def(1).getNullable();
+            return $;
         }
     }
+
 }

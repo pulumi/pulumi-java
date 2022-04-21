@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobHadoopJobArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobHiveJobArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPigJobArgs;
@@ -19,6 +18,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="hadoopJob")
-      private final @Nullable Output<WorkflowTemplateJobHadoopJobArgs> hadoopJob;
+    private @Nullable Output<WorkflowTemplateJobHadoopJobArgs> hadoopJob;
 
-    public Output<WorkflowTemplateJobHadoopJobArgs> hadoopJob() {
-        return this.hadoopJob == null ? Codegen.empty() : this.hadoopJob;
+    public Optional<Output<WorkflowTemplateJobHadoopJobArgs>> hadoopJob() {
+        return Optional.ofNullable(this.hadoopJob);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="hiveJob")
-      private final @Nullable Output<WorkflowTemplateJobHiveJobArgs> hiveJob;
+    private @Nullable Output<WorkflowTemplateJobHiveJobArgs> hiveJob;
 
-    public Output<WorkflowTemplateJobHiveJobArgs> hiveJob() {
-        return this.hiveJob == null ? Codegen.empty() : this.hiveJob;
+    public Optional<Output<WorkflowTemplateJobHiveJobArgs>> hiveJob() {
+        return Optional.ofNullable(this.hiveJob);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pigJob")
-      private final @Nullable Output<WorkflowTemplateJobPigJobArgs> pigJob;
+    private @Nullable Output<WorkflowTemplateJobPigJobArgs> pigJob;
 
-    public Output<WorkflowTemplateJobPigJobArgs> pigJob() {
-        return this.pigJob == null ? Codegen.empty() : this.pigJob;
+    public Optional<Output<WorkflowTemplateJobPigJobArgs>> pigJob() {
+        return Optional.ofNullable(this.pigJob);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="prerequisiteStepIds")
-      private final @Nullable Output<List<String>> prerequisiteStepIds;
+    private @Nullable Output<List<String>> prerequisiteStepIds;
 
-    public Output<List<String>> prerequisiteStepIds() {
-        return this.prerequisiteStepIds == null ? Codegen.empty() : this.prerequisiteStepIds;
+    public Optional<Output<List<String>>> prerequisiteStepIds() {
+        return Optional.ofNullable(this.prerequisiteStepIds);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="prestoJob")
-      private final @Nullable Output<WorkflowTemplateJobPrestoJobArgs> prestoJob;
+    private @Nullable Output<WorkflowTemplateJobPrestoJobArgs> prestoJob;
 
-    public Output<WorkflowTemplateJobPrestoJobArgs> prestoJob() {
-        return this.prestoJob == null ? Codegen.empty() : this.prestoJob;
+    public Optional<Output<WorkflowTemplateJobPrestoJobArgs>> prestoJob() {
+        return Optional.ofNullable(this.prestoJob);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pysparkJob")
-      private final @Nullable Output<WorkflowTemplateJobPysparkJobArgs> pysparkJob;
+    private @Nullable Output<WorkflowTemplateJobPysparkJobArgs> pysparkJob;
 
-    public Output<WorkflowTemplateJobPysparkJobArgs> pysparkJob() {
-        return this.pysparkJob == null ? Codegen.empty() : this.pysparkJob;
+    public Optional<Output<WorkflowTemplateJobPysparkJobArgs>> pysparkJob() {
+        return Optional.ofNullable(this.pysparkJob);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="scheduling")
-      private final @Nullable Output<WorkflowTemplateJobSchedulingArgs> scheduling;
+    private @Nullable Output<WorkflowTemplateJobSchedulingArgs> scheduling;
 
-    public Output<WorkflowTemplateJobSchedulingArgs> scheduling() {
-        return this.scheduling == null ? Codegen.empty() : this.scheduling;
+    public Optional<Output<WorkflowTemplateJobSchedulingArgs>> scheduling() {
+        return Optional.ofNullable(this.scheduling);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sparkJob")
-      private final @Nullable Output<WorkflowTemplateJobSparkJobArgs> sparkJob;
+    private @Nullable Output<WorkflowTemplateJobSparkJobArgs> sparkJob;
 
-    public Output<WorkflowTemplateJobSparkJobArgs> sparkJob() {
-        return this.sparkJob == null ? Codegen.empty() : this.sparkJob;
+    public Optional<Output<WorkflowTemplateJobSparkJobArgs>> sparkJob() {
+        return Optional.ofNullable(this.sparkJob);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sparkRJob")
-      private final @Nullable Output<WorkflowTemplateJobSparkRJobArgs> sparkRJob;
+    private @Nullable Output<WorkflowTemplateJobSparkRJobArgs> sparkRJob;
 
-    public Output<WorkflowTemplateJobSparkRJobArgs> sparkRJob() {
-        return this.sparkRJob == null ? Codegen.empty() : this.sparkRJob;
+    public Optional<Output<WorkflowTemplateJobSparkRJobArgs>> sparkRJob() {
+        return Optional.ofNullable(this.sparkRJob);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sparkSqlJob")
-      private final @Nullable Output<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob;
+    private @Nullable Output<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob;
 
-    public Output<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob() {
-        return this.sparkSqlJob == null ? Codegen.empty() : this.sparkSqlJob;
+    public Optional<Output<WorkflowTemplateJobSparkSqlJobArgs>> sparkSqlJob() {
+        return Optional.ofNullable(this.sparkSqlJob);
     }
 
     /**
@@ -152,196 +152,163 @@ public final class WorkflowTemplateJobArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="stepId", required=true)
-      private final Output<String> stepId;
+    private Output<String> stepId;
 
     public Output<String> stepId() {
         return this.stepId;
     }
 
-    public WorkflowTemplateJobArgs(
-        @Nullable Output<WorkflowTemplateJobHadoopJobArgs> hadoopJob,
-        @Nullable Output<WorkflowTemplateJobHiveJobArgs> hiveJob,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<WorkflowTemplateJobPigJobArgs> pigJob,
-        @Nullable Output<List<String>> prerequisiteStepIds,
-        @Nullable Output<WorkflowTemplateJobPrestoJobArgs> prestoJob,
-        @Nullable Output<WorkflowTemplateJobPysparkJobArgs> pysparkJob,
-        @Nullable Output<WorkflowTemplateJobSchedulingArgs> scheduling,
-        @Nullable Output<WorkflowTemplateJobSparkJobArgs> sparkJob,
-        @Nullable Output<WorkflowTemplateJobSparkRJobArgs> sparkRJob,
-        @Nullable Output<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob,
-        Output<String> stepId) {
-        this.hadoopJob = hadoopJob;
-        this.hiveJob = hiveJob;
-        this.labels = labels;
-        this.pigJob = pigJob;
-        this.prerequisiteStepIds = prerequisiteStepIds;
-        this.prestoJob = prestoJob;
-        this.pysparkJob = pysparkJob;
-        this.scheduling = scheduling;
-        this.sparkJob = sparkJob;
-        this.sparkRJob = sparkRJob;
-        this.sparkSqlJob = sparkSqlJob;
-        this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
-    }
+    private WorkflowTemplateJobArgs() {}
 
-    private WorkflowTemplateJobArgs() {
-        this.hadoopJob = Codegen.empty();
-        this.hiveJob = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.pigJob = Codegen.empty();
-        this.prerequisiteStepIds = Codegen.empty();
-        this.prestoJob = Codegen.empty();
-        this.pysparkJob = Codegen.empty();
-        this.scheduling = Codegen.empty();
-        this.sparkJob = Codegen.empty();
-        this.sparkRJob = Codegen.empty();
-        this.sparkSqlJob = Codegen.empty();
-        this.stepId = Codegen.empty();
+    private WorkflowTemplateJobArgs(WorkflowTemplateJobArgs $) {
+        this.hadoopJob = $.hadoopJob;
+        this.hiveJob = $.hiveJob;
+        this.labels = $.labels;
+        this.pigJob = $.pigJob;
+        this.prerequisiteStepIds = $.prerequisiteStepIds;
+        this.prestoJob = $.prestoJob;
+        this.pysparkJob = $.pysparkJob;
+        this.scheduling = $.scheduling;
+        this.sparkJob = $.sparkJob;
+        this.sparkRJob = $.sparkRJob;
+        this.sparkSqlJob = $.sparkSqlJob;
+        this.stepId = $.stepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkflowTemplateJobHadoopJobArgs> hadoopJob;
-        private @Nullable Output<WorkflowTemplateJobHiveJobArgs> hiveJob;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<WorkflowTemplateJobPigJobArgs> pigJob;
-        private @Nullable Output<List<String>> prerequisiteStepIds;
-        private @Nullable Output<WorkflowTemplateJobPrestoJobArgs> prestoJob;
-        private @Nullable Output<WorkflowTemplateJobPysparkJobArgs> pysparkJob;
-        private @Nullable Output<WorkflowTemplateJobSchedulingArgs> scheduling;
-        private @Nullable Output<WorkflowTemplateJobSparkJobArgs> sparkJob;
-        private @Nullable Output<WorkflowTemplateJobSparkRJobArgs> sparkRJob;
-        private @Nullable Output<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob;
-        private Output<String> stepId;
+        private WorkflowTemplateJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateJobArgs();
         }
 
         public Builder(WorkflowTemplateJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hadoopJob = defaults.hadoopJob;
-    	      this.hiveJob = defaults.hiveJob;
-    	      this.labels = defaults.labels;
-    	      this.pigJob = defaults.pigJob;
-    	      this.prerequisiteStepIds = defaults.prerequisiteStepIds;
-    	      this.prestoJob = defaults.prestoJob;
-    	      this.pysparkJob = defaults.pysparkJob;
-    	      this.scheduling = defaults.scheduling;
-    	      this.sparkJob = defaults.sparkJob;
-    	      this.sparkRJob = defaults.sparkRJob;
-    	      this.sparkSqlJob = defaults.sparkSqlJob;
-    	      this.stepId = defaults.stepId;
+            $ = new WorkflowTemplateJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hadoopJob(@Nullable Output<WorkflowTemplateJobHadoopJobArgs> hadoopJob) {
-            this.hadoopJob = hadoopJob;
+            $.hadoopJob = hadoopJob;
             return this;
         }
-        public Builder hadoopJob(@Nullable WorkflowTemplateJobHadoopJobArgs hadoopJob) {
-            this.hadoopJob = Codegen.ofNullable(hadoopJob);
-            return this;
+
+        public Builder hadoopJob(WorkflowTemplateJobHadoopJobArgs hadoopJob) {
+            return hadoopJob(Output.of(hadoopJob));
         }
+
         public Builder hiveJob(@Nullable Output<WorkflowTemplateJobHiveJobArgs> hiveJob) {
-            this.hiveJob = hiveJob;
+            $.hiveJob = hiveJob;
             return this;
         }
-        public Builder hiveJob(@Nullable WorkflowTemplateJobHiveJobArgs hiveJob) {
-            this.hiveJob = Codegen.ofNullable(hiveJob);
-            return this;
+
+        public Builder hiveJob(WorkflowTemplateJobHiveJobArgs hiveJob) {
+            return hiveJob(Output.of(hiveJob));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder pigJob(@Nullable Output<WorkflowTemplateJobPigJobArgs> pigJob) {
-            this.pigJob = pigJob;
+            $.pigJob = pigJob;
             return this;
         }
-        public Builder pigJob(@Nullable WorkflowTemplateJobPigJobArgs pigJob) {
-            this.pigJob = Codegen.ofNullable(pigJob);
-            return this;
+
+        public Builder pigJob(WorkflowTemplateJobPigJobArgs pigJob) {
+            return pigJob(Output.of(pigJob));
         }
+
         public Builder prerequisiteStepIds(@Nullable Output<List<String>> prerequisiteStepIds) {
-            this.prerequisiteStepIds = prerequisiteStepIds;
+            $.prerequisiteStepIds = prerequisiteStepIds;
             return this;
         }
-        public Builder prerequisiteStepIds(@Nullable List<String> prerequisiteStepIds) {
-            this.prerequisiteStepIds = Codegen.ofNullable(prerequisiteStepIds);
-            return this;
+
+        public Builder prerequisiteStepIds(List<String> prerequisiteStepIds) {
+            return prerequisiteStepIds(Output.of(prerequisiteStepIds));
         }
+
         public Builder prerequisiteStepIds(String... prerequisiteStepIds) {
             return prerequisiteStepIds(List.of(prerequisiteStepIds));
         }
+
         public Builder prestoJob(@Nullable Output<WorkflowTemplateJobPrestoJobArgs> prestoJob) {
-            this.prestoJob = prestoJob;
+            $.prestoJob = prestoJob;
             return this;
         }
-        public Builder prestoJob(@Nullable WorkflowTemplateJobPrestoJobArgs prestoJob) {
-            this.prestoJob = Codegen.ofNullable(prestoJob);
-            return this;
+
+        public Builder prestoJob(WorkflowTemplateJobPrestoJobArgs prestoJob) {
+            return prestoJob(Output.of(prestoJob));
         }
+
         public Builder pysparkJob(@Nullable Output<WorkflowTemplateJobPysparkJobArgs> pysparkJob) {
-            this.pysparkJob = pysparkJob;
+            $.pysparkJob = pysparkJob;
             return this;
         }
-        public Builder pysparkJob(@Nullable WorkflowTemplateJobPysparkJobArgs pysparkJob) {
-            this.pysparkJob = Codegen.ofNullable(pysparkJob);
-            return this;
+
+        public Builder pysparkJob(WorkflowTemplateJobPysparkJobArgs pysparkJob) {
+            return pysparkJob(Output.of(pysparkJob));
         }
+
         public Builder scheduling(@Nullable Output<WorkflowTemplateJobSchedulingArgs> scheduling) {
-            this.scheduling = scheduling;
+            $.scheduling = scheduling;
             return this;
         }
-        public Builder scheduling(@Nullable WorkflowTemplateJobSchedulingArgs scheduling) {
-            this.scheduling = Codegen.ofNullable(scheduling);
-            return this;
+
+        public Builder scheduling(WorkflowTemplateJobSchedulingArgs scheduling) {
+            return scheduling(Output.of(scheduling));
         }
+
         public Builder sparkJob(@Nullable Output<WorkflowTemplateJobSparkJobArgs> sparkJob) {
-            this.sparkJob = sparkJob;
+            $.sparkJob = sparkJob;
             return this;
         }
-        public Builder sparkJob(@Nullable WorkflowTemplateJobSparkJobArgs sparkJob) {
-            this.sparkJob = Codegen.ofNullable(sparkJob);
-            return this;
+
+        public Builder sparkJob(WorkflowTemplateJobSparkJobArgs sparkJob) {
+            return sparkJob(Output.of(sparkJob));
         }
+
         public Builder sparkRJob(@Nullable Output<WorkflowTemplateJobSparkRJobArgs> sparkRJob) {
-            this.sparkRJob = sparkRJob;
+            $.sparkRJob = sparkRJob;
             return this;
         }
-        public Builder sparkRJob(@Nullable WorkflowTemplateJobSparkRJobArgs sparkRJob) {
-            this.sparkRJob = Codegen.ofNullable(sparkRJob);
-            return this;
+
+        public Builder sparkRJob(WorkflowTemplateJobSparkRJobArgs sparkRJob) {
+            return sparkRJob(Output.of(sparkRJob));
         }
+
         public Builder sparkSqlJob(@Nullable Output<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob) {
-            this.sparkSqlJob = sparkSqlJob;
+            $.sparkSqlJob = sparkSqlJob;
             return this;
         }
-        public Builder sparkSqlJob(@Nullable WorkflowTemplateJobSparkSqlJobArgs sparkSqlJob) {
-            this.sparkSqlJob = Codegen.ofNullable(sparkSqlJob);
-            return this;
+
+        public Builder sparkSqlJob(WorkflowTemplateJobSparkSqlJobArgs sparkSqlJob) {
+            return sparkSqlJob(Output.of(sparkSqlJob));
         }
+
         public Builder stepId(Output<String> stepId) {
-            this.stepId = Objects.requireNonNull(stepId);
+            $.stepId = stepId;
             return this;
         }
+
         public Builder stepId(String stepId) {
-            this.stepId = Output.of(Objects.requireNonNull(stepId));
-            return this;
-        }        public WorkflowTemplateJobArgs build() {
-            return new WorkflowTemplateJobArgs(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
+            return stepId(Output.of(stepId));
+        }
+
+        public WorkflowTemplateJobArgs build() {
+            $.stepId = Objects.requireNonNull($.stepId, "expected parameter 'stepId' to be non-null");
+            return $;
         }
     }
+
 }

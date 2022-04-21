@@ -23,7 +23,7 @@ public final class MysqlDatabaseResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="database", required=true)
-      private final String database;
+    private String database;
 
     public String database() {
         return this.database;
@@ -34,58 +34,56 @@ public final class MysqlDatabaseResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mysqlTables", required=true)
-      private final List<MysqlTableResponse> mysqlTables;
+    private List<MysqlTableResponse> mysqlTables;
 
     public List<MysqlTableResponse> mysqlTables() {
         return this.mysqlTables;
     }
 
-    public MysqlDatabaseResponse(
-        String database,
-        List<MysqlTableResponse> mysqlTables) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.mysqlTables = Objects.requireNonNull(mysqlTables, "expected parameter 'mysqlTables' to be non-null");
-    }
+    private MysqlDatabaseResponse() {}
 
-    private MysqlDatabaseResponse() {
-        this.database = null;
-        this.mysqlTables = List.of();
+    private MysqlDatabaseResponse(MysqlDatabaseResponse $) {
+        this.database = $.database;
+        this.mysqlTables = $.mysqlTables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlDatabaseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String database;
-        private List<MysqlTableResponse> mysqlTables;
+        private MysqlDatabaseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlDatabaseResponse();
         }
 
         public Builder(MysqlDatabaseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.mysqlTables = defaults.mysqlTables;
+            $ = new MysqlDatabaseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder database(String database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder mysqlTables(List<MysqlTableResponse> mysqlTables) {
-            this.mysqlTables = Objects.requireNonNull(mysqlTables);
+            $.mysqlTables = mysqlTables;
             return this;
         }
+
         public Builder mysqlTables(MysqlTableResponse... mysqlTables) {
             return mysqlTables(List.of(mysqlTables));
-        }        public MysqlDatabaseResponse build() {
-            return new MysqlDatabaseResponse(database, mysqlTables);
+        }
+
+        public MysqlDatabaseResponse build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.mysqlTables = Objects.requireNonNull($.mysqlTables, "expected parameter 'mysqlTables' to be non-null");
+            return $;
         }
     }
+
 }

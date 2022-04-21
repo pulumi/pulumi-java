@@ -47,13 +47,13 @@ import com.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import com.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -66,10 +66,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activities")
-      private final @Nullable Output<List<Object>> activities;
+    private @Nullable Output<List<Object>> activities;
 
-    public Output<List<Object>> activities() {
-        return this.activities == null ? Codegen.empty() : this.activities;
+    public Optional<Output<List<Object>>> activities() {
+        return Optional.ofNullable(this.activities);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="concurrency")
-      private final @Nullable Output<Integer> concurrency;
+    private @Nullable Output<Integer> concurrency;
 
-    public Output<Integer> concurrency() {
-        return this.concurrency == null ? Codegen.empty() : this.concurrency;
+    public Optional<Output<Integer>> concurrency() {
+        return Optional.ofNullable(this.concurrency);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -110,7 +110,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="factoryName", required=true)
-      private final Output<String> factoryName;
+    private Output<String> factoryName;
 
     public Output<String> factoryName() {
         return this.factoryName;
@@ -121,10 +121,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="folder")
-      private final @Nullable Output<PipelineFolderArgs> folder;
+    private @Nullable Output<PipelineFolderArgs> folder;
 
-    public Output<PipelineFolderArgs> folder() {
-        return this.folder == null ? Codegen.empty() : this.folder;
+    public Optional<Output<PipelineFolderArgs>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pipelineName")
-      private final @Nullable Output<String> pipelineName;
+    private @Nullable Output<String> pipelineName;
 
-    public Output<String> pipelineName() {
-        return this.pipelineName == null ? Codegen.empty() : this.pipelineName;
+    public Optional<Output<String>> pipelineName() {
+        return Optional.ofNullable(this.pipelineName);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<PipelinePolicyArgs> policy;
+    private @Nullable Output<PipelinePolicyArgs> policy;
 
-    public Output<PipelinePolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<PipelinePolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -165,7 +165,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -176,10 +176,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runDimensions")
-      private final @Nullable Output<Map<String,Object>> runDimensions;
+    private @Nullable Output<Map<String,Object>> runDimensions;
 
-    public Output<Map<String,Object>> runDimensions() {
-        return this.runDimensions == null ? Codegen.empty() : this.runDimensions;
+    public Optional<Output<Map<String,Object>>> runDimensions() {
+        return Optional.ofNullable(this.runDimensions);
     }
 
     /**
@@ -187,199 +187,168 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="variables")
-      private final @Nullable Output<Map<String,VariableSpecificationArgs>> variables;
+    private @Nullable Output<Map<String,VariableSpecificationArgs>> variables;
 
-    public Output<Map<String,VariableSpecificationArgs>> variables() {
-        return this.variables == null ? Codegen.empty() : this.variables;
+    public Optional<Output<Map<String,VariableSpecificationArgs>>> variables() {
+        return Optional.ofNullable(this.variables);
     }
 
-    public PipelineArgs(
-        @Nullable Output<List<Object>> activities,
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<Integer> concurrency,
-        @Nullable Output<String> description,
-        Output<String> factoryName,
-        @Nullable Output<PipelineFolderArgs> folder,
-        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Output<String> pipelineName,
-        @Nullable Output<PipelinePolicyArgs> policy,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,Object>> runDimensions,
-        @Nullable Output<Map<String,VariableSpecificationArgs>> variables) {
-        this.activities = activities;
-        this.annotations = annotations;
-        this.concurrency = concurrency;
-        this.description = description;
-        this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
-        this.folder = folder;
-        this.parameters = parameters;
-        this.pipelineName = pipelineName;
-        this.policy = policy;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runDimensions = runDimensions;
-        this.variables = variables;
-    }
+    private PipelineArgs() {}
 
-    private PipelineArgs() {
-        this.activities = Codegen.empty();
-        this.annotations = Codegen.empty();
-        this.concurrency = Codegen.empty();
-        this.description = Codegen.empty();
-        this.factoryName = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.pipelineName = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.runDimensions = Codegen.empty();
-        this.variables = Codegen.empty();
+    private PipelineArgs(PipelineArgs $) {
+        this.activities = $.activities;
+        this.annotations = $.annotations;
+        this.concurrency = $.concurrency;
+        this.description = $.description;
+        this.factoryName = $.factoryName;
+        this.folder = $.folder;
+        this.parameters = $.parameters;
+        this.pipelineName = $.pipelineName;
+        this.policy = $.policy;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runDimensions = $.runDimensions;
+        this.variables = $.variables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> activities;
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<Integer> concurrency;
-        private @Nullable Output<String> description;
-        private Output<String> factoryName;
-        private @Nullable Output<PipelineFolderArgs> folder;
-        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Output<String> pipelineName;
-        private @Nullable Output<PipelinePolicyArgs> policy;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,Object>> runDimensions;
-        private @Nullable Output<Map<String,VariableSpecificationArgs>> variables;
+        private PipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineArgs();
         }
 
         public Builder(PipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activities = defaults.activities;
-    	      this.annotations = defaults.annotations;
-    	      this.concurrency = defaults.concurrency;
-    	      this.description = defaults.description;
-    	      this.factoryName = defaults.factoryName;
-    	      this.folder = defaults.folder;
-    	      this.parameters = defaults.parameters;
-    	      this.pipelineName = defaults.pipelineName;
-    	      this.policy = defaults.policy;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runDimensions = defaults.runDimensions;
-    	      this.variables = defaults.variables;
+            $ = new PipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activities(@Nullable Output<List<Object>> activities) {
-            this.activities = activities;
+            $.activities = activities;
             return this;
         }
-        public Builder activities(@Nullable List<Object> activities) {
-            this.activities = Codegen.ofNullable(activities);
-            return this;
+
+        public Builder activities(List<Object> activities) {
+            return activities(Output.of(activities));
         }
+
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder concurrency(@Nullable Output<Integer> concurrency) {
-            this.concurrency = concurrency;
+            $.concurrency = concurrency;
             return this;
         }
-        public Builder concurrency(@Nullable Integer concurrency) {
-            this.concurrency = Codegen.ofNullable(concurrency);
-            return this;
+
+        public Builder concurrency(Integer concurrency) {
+            return concurrency(Output.of(concurrency));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder factoryName(Output<String> factoryName) {
-            this.factoryName = Objects.requireNonNull(factoryName);
+            $.factoryName = factoryName;
             return this;
         }
+
         public Builder factoryName(String factoryName) {
-            this.factoryName = Output.of(Objects.requireNonNull(factoryName));
-            return this;
+            return factoryName(Output.of(factoryName));
         }
+
         public Builder folder(@Nullable Output<PipelineFolderArgs> folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
-        public Builder folder(@Nullable PipelineFolderArgs folder) {
-            this.folder = Codegen.ofNullable(folder);
-            return this;
+
+        public Builder folder(PipelineFolderArgs folder) {
+            return folder(Output.of(folder));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
-            this.pipelineName = pipelineName;
+            $.pipelineName = pipelineName;
             return this;
         }
-        public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Codegen.ofNullable(pipelineName);
-            return this;
+
+        public Builder pipelineName(String pipelineName) {
+            return pipelineName(Output.of(pipelineName));
         }
+
         public Builder policy(@Nullable Output<PipelinePolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable PipelinePolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(PipelinePolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder runDimensions(@Nullable Output<Map<String,Object>> runDimensions) {
-            this.runDimensions = runDimensions;
+            $.runDimensions = runDimensions;
             return this;
         }
-        public Builder runDimensions(@Nullable Map<String,Object> runDimensions) {
-            this.runDimensions = Codegen.ofNullable(runDimensions);
-            return this;
+
+        public Builder runDimensions(Map<String,Object> runDimensions) {
+            return runDimensions(Output.of(runDimensions));
         }
+
         public Builder variables(@Nullable Output<Map<String,VariableSpecificationArgs>> variables) {
-            this.variables = variables;
+            $.variables = variables;
             return this;
         }
-        public Builder variables(@Nullable Map<String,VariableSpecificationArgs> variables) {
-            this.variables = Codegen.ofNullable(variables);
-            return this;
-        }        public PipelineArgs build() {
-            return new PipelineArgs(activities, annotations, concurrency, description, factoryName, folder, parameters, pipelineName, policy, resourceGroupName, runDimensions, variables);
+
+        public Builder variables(Map<String,VariableSpecificationArgs> variables) {
+            return variables(Output.of(variables));
+        }
+
+        public PipelineArgs build() {
+            $.factoryName = Objects.requireNonNull($.factoryName, "expected parameter 'factoryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

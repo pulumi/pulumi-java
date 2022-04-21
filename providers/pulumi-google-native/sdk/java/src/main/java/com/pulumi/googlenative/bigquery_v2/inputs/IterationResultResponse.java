@@ -19,7 +19,7 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="durationMs", required=true)
-      private final String durationMs;
+    private String durationMs;
 
     public String durationMs() {
         return this.durationMs;
@@ -30,7 +30,7 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="evalLoss", required=true)
-      private final Double evalLoss;
+    private Double evalLoss;
 
     public Double evalLoss() {
         return this.evalLoss;
@@ -41,7 +41,7 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="index", required=true)
-      private final Integer index;
+    private Integer index;
 
     public Integer index() {
         return this.index;
@@ -52,7 +52,7 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="learnRate", required=true)
-      private final Double learnRate;
+    private Double learnRate;
 
     public Double learnRate() {
         return this.learnRate;
@@ -63,82 +63,73 @@ public final class IterationResultResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="trainingLoss", required=true)
-      private final Double trainingLoss;
+    private Double trainingLoss;
 
     public Double trainingLoss() {
         return this.trainingLoss;
     }
 
-    public IterationResultResponse(
-        String durationMs,
-        Double evalLoss,
-        Integer index,
-        Double learnRate,
-        Double trainingLoss) {
-        this.durationMs = Objects.requireNonNull(durationMs, "expected parameter 'durationMs' to be non-null");
-        this.evalLoss = Objects.requireNonNull(evalLoss, "expected parameter 'evalLoss' to be non-null");
-        this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
-        this.learnRate = Objects.requireNonNull(learnRate, "expected parameter 'learnRate' to be non-null");
-        this.trainingLoss = Objects.requireNonNull(trainingLoss, "expected parameter 'trainingLoss' to be non-null");
-    }
+    private IterationResultResponse() {}
 
-    private IterationResultResponse() {
-        this.durationMs = null;
-        this.evalLoss = null;
-        this.index = null;
-        this.learnRate = null;
-        this.trainingLoss = null;
+    private IterationResultResponse(IterationResultResponse $) {
+        this.durationMs = $.durationMs;
+        this.evalLoss = $.evalLoss;
+        this.index = $.index;
+        this.learnRate = $.learnRate;
+        this.trainingLoss = $.trainingLoss;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IterationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String durationMs;
-        private Double evalLoss;
-        private Integer index;
-        private Double learnRate;
-        private Double trainingLoss;
+        private IterationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IterationResultResponse();
         }
 
         public Builder(IterationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationMs = defaults.durationMs;
-    	      this.evalLoss = defaults.evalLoss;
-    	      this.index = defaults.index;
-    	      this.learnRate = defaults.learnRate;
-    	      this.trainingLoss = defaults.trainingLoss;
+            $ = new IterationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder durationMs(String durationMs) {
-            this.durationMs = Objects.requireNonNull(durationMs);
+            $.durationMs = durationMs;
             return this;
         }
+
         public Builder evalLoss(Double evalLoss) {
-            this.evalLoss = Objects.requireNonNull(evalLoss);
+            $.evalLoss = evalLoss;
             return this;
         }
+
         public Builder index(Integer index) {
-            this.index = Objects.requireNonNull(index);
+            $.index = index;
             return this;
         }
+
         public Builder learnRate(Double learnRate) {
-            this.learnRate = Objects.requireNonNull(learnRate);
+            $.learnRate = learnRate;
             return this;
         }
+
         public Builder trainingLoss(Double trainingLoss) {
-            this.trainingLoss = Objects.requireNonNull(trainingLoss);
+            $.trainingLoss = trainingLoss;
             return this;
-        }        public IterationResultResponse build() {
-            return new IterationResultResponse(durationMs, evalLoss, index, learnRate, trainingLoss);
+        }
+
+        public IterationResultResponse build() {
+            $.durationMs = Objects.requireNonNull($.durationMs, "expected parameter 'durationMs' to be non-null");
+            $.evalLoss = Objects.requireNonNull($.evalLoss, "expected parameter 'evalLoss' to be non-null");
+            $.index = Objects.requireNonNull($.index, "expected parameter 'index' to be non-null");
+            $.learnRate = Objects.requireNonNull($.learnRate, "expected parameter 'learnRate' to be non-null");
+            $.trainingLoss = Objects.requireNonNull($.trainingLoss, "expected parameter 'trainingLoss' to be non-null");
+            return $;
         }
     }
+
 }

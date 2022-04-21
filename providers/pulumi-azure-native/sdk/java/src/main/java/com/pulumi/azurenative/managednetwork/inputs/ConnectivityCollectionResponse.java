@@ -23,7 +23,7 @@ public final class ConnectivityCollectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="groups", required=true)
-      private final List<ManagedNetworkGroupResponse> groups;
+    private List<ManagedNetworkGroupResponse> groups;
 
     public List<ManagedNetworkGroupResponse> groups() {
         return this.groups;
@@ -34,61 +34,60 @@ public final class ConnectivityCollectionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="peerings", required=true)
-      private final List<ManagedNetworkPeeringPolicyResponse> peerings;
+    private List<ManagedNetworkPeeringPolicyResponse> peerings;
 
     public List<ManagedNetworkPeeringPolicyResponse> peerings() {
         return this.peerings;
     }
 
-    public ConnectivityCollectionResponse(
-        List<ManagedNetworkGroupResponse> groups,
-        List<ManagedNetworkPeeringPolicyResponse> peerings) {
-        this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
-        this.peerings = Objects.requireNonNull(peerings, "expected parameter 'peerings' to be non-null");
-    }
+    private ConnectivityCollectionResponse() {}
 
-    private ConnectivityCollectionResponse() {
-        this.groups = List.of();
-        this.peerings = List.of();
+    private ConnectivityCollectionResponse(ConnectivityCollectionResponse $) {
+        this.groups = $.groups;
+        this.peerings = $.peerings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectivityCollectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ManagedNetworkGroupResponse> groups;
-        private List<ManagedNetworkPeeringPolicyResponse> peerings;
+        private ConnectivityCollectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectivityCollectionResponse();
         }
 
         public Builder(ConnectivityCollectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groups = defaults.groups;
-    	      this.peerings = defaults.peerings;
+            $ = new ConnectivityCollectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groups(List<ManagedNetworkGroupResponse> groups) {
-            this.groups = Objects.requireNonNull(groups);
+            $.groups = groups;
             return this;
         }
+
         public Builder groups(ManagedNetworkGroupResponse... groups) {
             return groups(List.of(groups));
         }
+
         public Builder peerings(List<ManagedNetworkPeeringPolicyResponse> peerings) {
-            this.peerings = Objects.requireNonNull(peerings);
+            $.peerings = peerings;
             return this;
         }
+
         public Builder peerings(ManagedNetworkPeeringPolicyResponse... peerings) {
             return peerings(List.of(peerings));
-        }        public ConnectivityCollectionResponse build() {
-            return new ConnectivityCollectionResponse(groups, peerings);
+        }
+
+        public ConnectivityCollectionResponse build() {
+            $.groups = Objects.requireNonNull($.groups, "expected parameter 'groups' to be non-null");
+            $.peerings = Objects.requireNonNull($.peerings, "expected parameter 'peerings' to be non-null");
+            return $;
         }
     }
+
 }

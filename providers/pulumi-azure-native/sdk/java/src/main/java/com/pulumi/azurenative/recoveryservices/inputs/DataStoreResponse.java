@@ -23,10 +23,10 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable String capacity;
+    private @Nullable String capacity;
 
     public Optional<String> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="freeSpace")
-      private final @Nullable String freeSpace;
+    private @Nullable String freeSpace;
 
     public Optional<String> freeSpace() {
-        return this.freeSpace == null ? Optional.empty() : Optional.ofNullable(this.freeSpace);
+        return Optional.ofNullable(this.freeSpace);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="symbolicName")
-      private final @Nullable String symbolicName;
+    private @Nullable String symbolicName;
 
     public Optional<String> symbolicName() {
-        return this.symbolicName == null ? Optional.empty() : Optional.ofNullable(this.symbolicName);
+        return Optional.ofNullable(this.symbolicName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class DataStoreResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uuid")
-      private final @Nullable String uuid;
+    private @Nullable String uuid;
 
     public Optional<String> uuid() {
-        return this.uuid == null ? Optional.empty() : Optional.ofNullable(this.uuid);
+        return Optional.ofNullable(this.uuid);
     }
 
-    public DataStoreResponse(
-        @Nullable String capacity,
-        @Nullable String freeSpace,
-        @Nullable String symbolicName,
-        @Nullable String type,
-        @Nullable String uuid) {
-        this.capacity = capacity;
-        this.freeSpace = freeSpace;
-        this.symbolicName = symbolicName;
-        this.type = type;
-        this.uuid = uuid;
-    }
+    private DataStoreResponse() {}
 
-    private DataStoreResponse() {
-        this.capacity = null;
-        this.freeSpace = null;
-        this.symbolicName = null;
-        this.type = null;
-        this.uuid = null;
+    private DataStoreResponse(DataStoreResponse $) {
+        this.capacity = $.capacity;
+        this.freeSpace = $.freeSpace;
+        this.symbolicName = $.symbolicName;
+        this.type = $.type;
+        this.uuid = $.uuid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataStoreResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String capacity;
-        private @Nullable String freeSpace;
-        private @Nullable String symbolicName;
-        private @Nullable String type;
-        private @Nullable String uuid;
+        private DataStoreResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataStoreResponse();
         }
 
         public Builder(DataStoreResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.freeSpace = defaults.freeSpace;
-    	      this.symbolicName = defaults.symbolicName;
-    	      this.type = defaults.type;
-    	      this.uuid = defaults.uuid;
+            $ = new DataStoreResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable String capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder freeSpace(@Nullable String freeSpace) {
-            this.freeSpace = freeSpace;
+            $.freeSpace = freeSpace;
             return this;
         }
+
         public Builder symbolicName(@Nullable String symbolicName) {
-            this.symbolicName = symbolicName;
+            $.symbolicName = symbolicName;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder uuid(@Nullable String uuid) {
-            this.uuid = uuid;
+            $.uuid = uuid;
             return this;
-        }        public DataStoreResponse build() {
-            return new DataStoreResponse(capacity, freeSpace, symbolicName, type, uuid);
+        }
+
+        public DataStoreResponse build() {
+            return $;
         }
     }
+
 }

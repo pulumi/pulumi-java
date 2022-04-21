@@ -21,7 +21,7 @@ public final class GitFileSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -32,7 +32,7 @@ public final class GitFileSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="repoType", required=true)
-      private final String repoType;
+    private String repoType;
 
     public String repoType() {
         return this.repoType;
@@ -43,7 +43,7 @@ public final class GitFileSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="revision", required=true)
-      private final String revision;
+    private String revision;
 
     public String revision() {
         return this.revision;
@@ -54,73 +54,66 @@ public final class GitFileSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public GitFileSourceResponse(
-        String path,
-        String repoType,
-        String revision,
-        String uri) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.repoType = Objects.requireNonNull(repoType, "expected parameter 'repoType' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private GitFileSourceResponse() {}
 
-    private GitFileSourceResponse() {
-        this.path = null;
-        this.repoType = null;
-        this.revision = null;
-        this.uri = null;
+    private GitFileSourceResponse(GitFileSourceResponse $) {
+        this.path = $.path;
+        this.repoType = $.repoType;
+        this.revision = $.revision;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitFileSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String path;
-        private String repoType;
-        private String revision;
-        private String uri;
+        private GitFileSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitFileSourceResponse();
         }
 
         public Builder(GitFileSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.repoType = defaults.repoType;
-    	      this.revision = defaults.revision;
-    	      this.uri = defaults.uri;
+            $ = new GitFileSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder repoType(String repoType) {
-            this.repoType = Objects.requireNonNull(repoType);
+            $.repoType = repoType;
             return this;
         }
+
         public Builder revision(String revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public GitFileSourceResponse build() {
-            return new GitFileSourceResponse(path, repoType, revision, uri);
+        }
+
+        public GitFileSourceResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.repoType = Objects.requireNonNull($.repoType, "expected parameter 'repoType' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

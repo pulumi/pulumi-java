@@ -7,7 +7,6 @@ import com.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import com.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,73 +20,71 @@ public final class RuleGroupXssMatchStatementArgs extends com.pulumi.resources.R
     public static final RuleGroupXssMatchStatementArgs Empty = new RuleGroupXssMatchStatementArgs();
 
     @Import(name="fieldToMatch", required=true)
-      private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
+    private Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Output<RuleGroupFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
-      private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
+    private Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Output<List<RuleGroupTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
-    public RuleGroupXssMatchStatementArgs(
-        Output<RuleGroupFieldToMatchArgs> fieldToMatch,
-        Output<List<RuleGroupTextTransformationArgs>> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private RuleGroupXssMatchStatementArgs() {}
 
-    private RuleGroupXssMatchStatementArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.textTransformations = Codegen.empty();
+    private RuleGroupXssMatchStatementArgs(RuleGroupXssMatchStatementArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupXssMatchStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RuleGroupFieldToMatchArgs> fieldToMatch;
-        private Output<List<RuleGroupTextTransformationArgs>> textTransformations;
+        private RuleGroupXssMatchStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupXssMatchStatementArgs();
         }
 
         public Builder(RuleGroupXssMatchStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new RuleGroupXssMatchStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(Output<RuleGroupFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder fieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
-            return this;
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder textTransformations(Output<List<RuleGroupTextTransformationArgs>> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
-            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
-            return this;
+            return textTransformations(Output.of(textTransformations));
         }
+
         public Builder textTransformations(RuleGroupTextTransformationArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public RuleGroupXssMatchStatementArgs build() {
-            return new RuleGroupXssMatchStatementArgs(fieldToMatch, textTransformations);
+        }
+
+        public RuleGroupXssMatchStatementArgs build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

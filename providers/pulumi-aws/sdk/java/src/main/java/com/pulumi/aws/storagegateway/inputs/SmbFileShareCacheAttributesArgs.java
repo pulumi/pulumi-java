@@ -5,9 +5,9 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class SmbFileShareCacheAttributesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="cacheStaleTimeoutInSeconds")
-      private final @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
+    private @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
 
-    public Output<Integer> cacheStaleTimeoutInSeconds() {
-        return this.cacheStaleTimeoutInSeconds == null ? Codegen.empty() : this.cacheStaleTimeoutInSeconds;
+    public Optional<Output<Integer>> cacheStaleTimeoutInSeconds() {
+        return Optional.ofNullable(this.cacheStaleTimeoutInSeconds);
     }
 
-    public SmbFileShareCacheAttributesArgs(@Nullable Output<Integer> cacheStaleTimeoutInSeconds) {
-        this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
-    }
+    private SmbFileShareCacheAttributesArgs() {}
 
-    private SmbFileShareCacheAttributesArgs() {
-        this.cacheStaleTimeoutInSeconds = Codegen.empty();
+    private SmbFileShareCacheAttributesArgs(SmbFileShareCacheAttributesArgs $) {
+        this.cacheStaleTimeoutInSeconds = $.cacheStaleTimeoutInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SmbFileShareCacheAttributesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cacheStaleTimeoutInSeconds;
+        private SmbFileShareCacheAttributesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SmbFileShareCacheAttributesArgs();
         }
 
         public Builder(SmbFileShareCacheAttributesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheStaleTimeoutInSeconds = defaults.cacheStaleTimeoutInSeconds;
+            $ = new SmbFileShareCacheAttributesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheStaleTimeoutInSeconds(@Nullable Output<Integer> cacheStaleTimeoutInSeconds) {
-            this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
+            $.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
             return this;
         }
-        public Builder cacheStaleTimeoutInSeconds(@Nullable Integer cacheStaleTimeoutInSeconds) {
-            this.cacheStaleTimeoutInSeconds = Codegen.ofNullable(cacheStaleTimeoutInSeconds);
-            return this;
-        }        public SmbFileShareCacheAttributesArgs build() {
-            return new SmbFileShareCacheAttributesArgs(cacheStaleTimeoutInSeconds);
+
+        public Builder cacheStaleTimeoutInSeconds(Integer cacheStaleTimeoutInSeconds) {
+            return cacheStaleTimeoutInSeconds(Output.of(cacheStaleTimeoutInSeconds));
+        }
+
+        public SmbFileShareCacheAttributesArgs build() {
+            return $;
         }
     }
+
 }

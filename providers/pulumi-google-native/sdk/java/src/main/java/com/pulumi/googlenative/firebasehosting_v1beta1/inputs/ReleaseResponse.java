@@ -23,7 +23,7 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -34,7 +34,7 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,7 +45,7 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="releaseTime", required=true)
-      private final String releaseTime;
+    private String releaseTime;
 
     public String releaseTime() {
         return this.releaseTime;
@@ -56,7 +56,7 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="releaseUser", required=true)
-      private final ActingUserResponse releaseUser;
+    private ActingUserResponse releaseUser;
 
     public ActingUserResponse releaseUser() {
         return this.releaseUser;
@@ -67,7 +67,7 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -78,91 +78,80 @@ public final class ReleaseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final VersionResponse version;
+    private VersionResponse version;
 
     public VersionResponse version() {
         return this.version;
     }
 
-    public ReleaseResponse(
-        String message,
-        String name,
-        String releaseTime,
-        ActingUserResponse releaseUser,
-        String type,
-        VersionResponse version) {
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.releaseTime = Objects.requireNonNull(releaseTime, "expected parameter 'releaseTime' to be non-null");
-        this.releaseUser = Objects.requireNonNull(releaseUser, "expected parameter 'releaseUser' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private ReleaseResponse() {}
 
-    private ReleaseResponse() {
-        this.message = null;
-        this.name = null;
-        this.releaseTime = null;
-        this.releaseUser = null;
-        this.type = null;
-        this.version = null;
+    private ReleaseResponse(ReleaseResponse $) {
+        this.message = $.message;
+        this.name = $.name;
+        this.releaseTime = $.releaseTime;
+        this.releaseUser = $.releaseUser;
+        this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReleaseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String message;
-        private String name;
-        private String releaseTime;
-        private ActingUserResponse releaseUser;
-        private String type;
-        private VersionResponse version;
+        private ReleaseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReleaseResponse();
         }
 
         public Builder(ReleaseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.name = defaults.name;
-    	      this.releaseTime = defaults.releaseTime;
-    	      this.releaseUser = defaults.releaseUser;
-    	      this.type = defaults.type;
-    	      this.version = defaults.version;
+            $ = new ReleaseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder releaseTime(String releaseTime) {
-            this.releaseTime = Objects.requireNonNull(releaseTime);
+            $.releaseTime = releaseTime;
             return this;
         }
+
         public Builder releaseUser(ActingUserResponse releaseUser) {
-            this.releaseUser = Objects.requireNonNull(releaseUser);
+            $.releaseUser = releaseUser;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder version(VersionResponse version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public ReleaseResponse build() {
-            return new ReleaseResponse(message, name, releaseTime, releaseUser, type, version);
+        }
+
+        public ReleaseResponse build() {
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.releaseTime = Objects.requireNonNull($.releaseTime, "expected parameter 'releaseTime' to be non-null");
+            $.releaseUser = Objects.requireNonNull($.releaseUser, "expected parameter 'releaseUser' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

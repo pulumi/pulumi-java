@@ -23,45 +23,44 @@ public final class ThrottlingInformationResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="duration")
-      private final @Nullable String duration;
+    private @Nullable String duration;
 
     public Optional<String> duration() {
-        return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
+        return Optional.ofNullable(this.duration);
     }
 
-    public ThrottlingInformationResponse(@Nullable String duration) {
-        this.duration = duration;
-    }
+    private ThrottlingInformationResponse() {}
 
-    private ThrottlingInformationResponse() {
-        this.duration = null;
+    private ThrottlingInformationResponse(ThrottlingInformationResponse $) {
+        this.duration = $.duration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThrottlingInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String duration;
+        private ThrottlingInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThrottlingInformationResponse();
         }
 
         public Builder(ThrottlingInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
+            $ = new ThrottlingInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
-        }        public ThrottlingInformationResponse build() {
-            return new ThrottlingInformationResponse(duration);
+        }
+
+        public ThrottlingInformationResponse build() {
+            return $;
         }
     }
+
 }

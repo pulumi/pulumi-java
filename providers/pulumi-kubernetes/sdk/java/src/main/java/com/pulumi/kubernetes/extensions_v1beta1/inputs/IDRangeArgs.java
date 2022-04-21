@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class IDRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="max", required=true)
-      private final Output<Integer> max;
+    private Output<Integer> max;
 
     public Output<Integer> max() {
         return this.max;
@@ -34,63 +33,60 @@ public final class IDRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="min", required=true)
-      private final Output<Integer> min;
+    private Output<Integer> min;
 
     public Output<Integer> min() {
         return this.min;
     }
 
-    public IDRangeArgs(
-        Output<Integer> max,
-        Output<Integer> min) {
-        this.max = Objects.requireNonNull(max, "expected parameter 'max' to be non-null");
-        this.min = Objects.requireNonNull(min, "expected parameter 'min' to be non-null");
-    }
+    private IDRangeArgs() {}
 
-    private IDRangeArgs() {
-        this.max = Codegen.empty();
-        this.min = Codegen.empty();
+    private IDRangeArgs(IDRangeArgs $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IDRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> max;
-        private Output<Integer> min;
+        private IDRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IDRangeArgs();
         }
 
         public Builder(IDRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new IDRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder max(Output<Integer> max) {
-            this.max = Objects.requireNonNull(max);
+            $.max = max;
             return this;
         }
+
         public Builder max(Integer max) {
-            this.max = Output.of(Objects.requireNonNull(max));
-            return this;
+            return max(Output.of(max));
         }
+
         public Builder min(Output<Integer> min) {
-            this.min = Objects.requireNonNull(min);
+            $.min = min;
             return this;
         }
+
         public Builder min(Integer min) {
-            this.min = Output.of(Objects.requireNonNull(min));
-            return this;
-        }        public IDRangeArgs build() {
-            return new IDRangeArgs(max, min);
+            return min(Output.of(min));
+        }
+
+        public IDRangeArgs build() {
+            $.max = Objects.requireNonNull($.max, "expected parameter 'max' to be non-null");
+            $.min = Objects.requireNonNull($.min, "expected parameter 'min' to be non-null");
+            return $;
         }
     }
+
 }

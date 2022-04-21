@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storage;
 import com.pulumi.azurenative.storage.inputs.BlobInventoryPolicySchemaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -32,10 +32,10 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="blobInventoryPolicyName")
-      private final @Nullable Output<String> blobInventoryPolicyName;
+    private @Nullable Output<String> blobInventoryPolicyName;
 
-    public Output<String> blobInventoryPolicyName() {
-        return this.blobInventoryPolicyName == null ? Codegen.empty() : this.blobInventoryPolicyName;
+    public Optional<Output<String>> blobInventoryPolicyName() {
+        return Optional.ofNullable(this.blobInventoryPolicyName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<BlobInventoryPolicySchemaArgs> policy;
+    private Output<BlobInventoryPolicySchemaArgs> policy;
 
     public Output<BlobInventoryPolicySchemaArgs> policy() {
         return this.policy;
@@ -54,89 +54,81 @@ public final class BlobInventoryPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public BlobInventoryPolicyArgs(
-        Output<String> accountName,
-        @Nullable Output<String> blobInventoryPolicyName,
-        Output<BlobInventoryPolicySchemaArgs> policy,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.blobInventoryPolicyName = blobInventoryPolicyName;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private BlobInventoryPolicyArgs() {}
 
-    private BlobInventoryPolicyArgs() {
-        this.accountName = Codegen.empty();
-        this.blobInventoryPolicyName = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private BlobInventoryPolicyArgs(BlobInventoryPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.blobInventoryPolicyName = $.blobInventoryPolicyName;
+        this.policy = $.policy;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobInventoryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> blobInventoryPolicyName;
-        private Output<BlobInventoryPolicySchemaArgs> policy;
-        private Output<String> resourceGroupName;
+        private BlobInventoryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobInventoryPolicyArgs();
         }
 
         public Builder(BlobInventoryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.blobInventoryPolicyName = defaults.blobInventoryPolicyName;
-    	      this.policy = defaults.policy;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new BlobInventoryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder blobInventoryPolicyName(@Nullable Output<String> blobInventoryPolicyName) {
-            this.blobInventoryPolicyName = blobInventoryPolicyName;
+            $.blobInventoryPolicyName = blobInventoryPolicyName;
             return this;
         }
-        public Builder blobInventoryPolicyName(@Nullable String blobInventoryPolicyName) {
-            this.blobInventoryPolicyName = Codegen.ofNullable(blobInventoryPolicyName);
-            return this;
+
+        public Builder blobInventoryPolicyName(String blobInventoryPolicyName) {
+            return blobInventoryPolicyName(Output.of(blobInventoryPolicyName));
         }
+
         public Builder policy(Output<BlobInventoryPolicySchemaArgs> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(BlobInventoryPolicySchemaArgs policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
+            return policy(Output.of(policy));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public BlobInventoryPolicyArgs build() {
-            return new BlobInventoryPolicyArgs(accountName, blobInventoryPolicyName, policy, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public BlobInventoryPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

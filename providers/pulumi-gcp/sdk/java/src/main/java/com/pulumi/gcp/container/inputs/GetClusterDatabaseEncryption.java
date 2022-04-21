@@ -13,62 +13,59 @@ public final class GetClusterDatabaseEncryption extends com.pulumi.resources.Inv
     public static final GetClusterDatabaseEncryption Empty = new GetClusterDatabaseEncryption();
 
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
     }
 
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public GetClusterDatabaseEncryption(
-        String keyName,
-        String state) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private GetClusterDatabaseEncryption() {}
 
-    private GetClusterDatabaseEncryption() {
-        this.keyName = null;
-        this.state = null;
+    private GetClusterDatabaseEncryption(GetClusterDatabaseEncryption $) {
+        this.keyName = $.keyName;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterDatabaseEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private String state;
+        private GetClusterDatabaseEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterDatabaseEncryption();
         }
 
         public Builder(GetClusterDatabaseEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.state = defaults.state;
+            $ = new GetClusterDatabaseEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public GetClusterDatabaseEncryption build() {
-            return new GetClusterDatabaseEncryption(keyName, state);
+        }
+
+        public GetClusterDatabaseEncryption build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VaultPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupVaultArn")
-      private final @Nullable Output<String> backupVaultArn;
+    private @Nullable Output<String> backupVaultArn;
 
-    public Output<String> backupVaultArn() {
-        return this.backupVaultArn == null ? Codegen.empty() : this.backupVaultArn;
+    public Optional<Output<String>> backupVaultArn() {
+        return Optional.ofNullable(this.backupVaultArn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VaultPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backupVaultName")
-      private final @Nullable Output<String> backupVaultName;
+    private @Nullable Output<String> backupVaultName;
 
-    public Output<String> backupVaultName() {
-        return this.backupVaultName == null ? Codegen.empty() : this.backupVaultName;
+    public Optional<Output<String>> backupVaultName() {
+        return Optional.ofNullable(this.backupVaultName);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class VaultPolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public VaultPolicyState(
-        @Nullable Output<String> backupVaultArn,
-        @Nullable Output<String> backupVaultName,
-        @Nullable Output<String> policy) {
-        this.backupVaultArn = backupVaultArn;
-        this.backupVaultName = backupVaultName;
-        this.policy = policy;
-    }
+    private VaultPolicyState() {}
 
-    private VaultPolicyState() {
-        this.backupVaultArn = Codegen.empty();
-        this.backupVaultName = Codegen.empty();
-        this.policy = Codegen.empty();
+    private VaultPolicyState(VaultPolicyState $) {
+        this.backupVaultArn = $.backupVaultArn;
+        this.backupVaultName = $.backupVaultName;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backupVaultArn;
-        private @Nullable Output<String> backupVaultName;
-        private @Nullable Output<String> policy;
+        private VaultPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultPolicyState();
         }
 
         public Builder(VaultPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupVaultArn = defaults.backupVaultArn;
-    	      this.backupVaultName = defaults.backupVaultName;
-    	      this.policy = defaults.policy;
+            $ = new VaultPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder backupVaultArn(@Nullable Output<String> backupVaultArn) {
-            this.backupVaultArn = backupVaultArn;
+            $.backupVaultArn = backupVaultArn;
             return this;
         }
-        public Builder backupVaultArn(@Nullable String backupVaultArn) {
-            this.backupVaultArn = Codegen.ofNullable(backupVaultArn);
-            return this;
+
+        public Builder backupVaultArn(String backupVaultArn) {
+            return backupVaultArn(Output.of(backupVaultArn));
         }
+
         public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
-            this.backupVaultName = backupVaultName;
+            $.backupVaultName = backupVaultName;
             return this;
         }
-        public Builder backupVaultName(@Nullable String backupVaultName) {
-            this.backupVaultName = Codegen.ofNullable(backupVaultName);
-            return this;
+
+        public Builder backupVaultName(String backupVaultName) {
+            return backupVaultName(Output.of(backupVaultName));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public VaultPolicyState build() {
-            return new VaultPolicyState(backupVaultArn, backupVaultName, policy);
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public VaultPolicyState build() {
+            return $;
         }
     }
+
 }

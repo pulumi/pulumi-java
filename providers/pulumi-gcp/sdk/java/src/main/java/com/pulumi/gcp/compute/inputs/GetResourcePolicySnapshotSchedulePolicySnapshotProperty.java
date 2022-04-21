@@ -16,81 +16,77 @@ public final class GetResourcePolicySnapshotSchedulePolicySnapshotProperty exten
     public static final GetResourcePolicySnapshotSchedulePolicySnapshotProperty Empty = new GetResourcePolicySnapshotSchedulePolicySnapshotProperty();
 
     @Import(name="guestFlush", required=true)
-      private final Boolean guestFlush;
+    private Boolean guestFlush;
 
     public Boolean guestFlush() {
         return this.guestFlush;
     }
 
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
     @Import(name="storageLocations", required=true)
-      private final List<String> storageLocations;
+    private List<String> storageLocations;
 
     public List<String> storageLocations() {
         return this.storageLocations;
     }
 
-    public GetResourcePolicySnapshotSchedulePolicySnapshotProperty(
-        Boolean guestFlush,
-        Map<String,String> labels,
-        List<String> storageLocations) {
-        this.guestFlush = Objects.requireNonNull(guestFlush, "expected parameter 'guestFlush' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.storageLocations = Objects.requireNonNull(storageLocations, "expected parameter 'storageLocations' to be non-null");
-    }
+    private GetResourcePolicySnapshotSchedulePolicySnapshotProperty() {}
 
-    private GetResourcePolicySnapshotSchedulePolicySnapshotProperty() {
-        this.guestFlush = null;
-        this.labels = Map.of();
-        this.storageLocations = List.of();
+    private GetResourcePolicySnapshotSchedulePolicySnapshotProperty(GetResourcePolicySnapshotSchedulePolicySnapshotProperty $) {
+        this.guestFlush = $.guestFlush;
+        this.labels = $.labels;
+        this.storageLocations = $.storageLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePolicySnapshotSchedulePolicySnapshotProperty defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean guestFlush;
-        private Map<String,String> labels;
-        private List<String> storageLocations;
+        private GetResourcePolicySnapshotSchedulePolicySnapshotProperty $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePolicySnapshotSchedulePolicySnapshotProperty();
         }
 
         public Builder(GetResourcePolicySnapshotSchedulePolicySnapshotProperty defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.guestFlush = defaults.guestFlush;
-    	      this.labels = defaults.labels;
-    	      this.storageLocations = defaults.storageLocations;
+            $ = new GetResourcePolicySnapshotSchedulePolicySnapshotProperty(Objects.requireNonNull(defaults));
         }
 
         public Builder guestFlush(Boolean guestFlush) {
-            this.guestFlush = Objects.requireNonNull(guestFlush);
+            $.guestFlush = guestFlush;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder storageLocations(List<String> storageLocations) {
-            this.storageLocations = Objects.requireNonNull(storageLocations);
+            $.storageLocations = storageLocations;
             return this;
         }
+
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
-        }        public GetResourcePolicySnapshotSchedulePolicySnapshotProperty build() {
-            return new GetResourcePolicySnapshotSchedulePolicySnapshotProperty(guestFlush, labels, storageLocations);
+        }
+
+        public GetResourcePolicySnapshotSchedulePolicySnapshotProperty build() {
+            $.guestFlush = Objects.requireNonNull($.guestFlush, "expected parameter 'guestFlush' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.storageLocations = Objects.requireNonNull($.storageLocations, "expected parameter 'storageLocations' to be non-null");
+            return $;
         }
     }
+
 }

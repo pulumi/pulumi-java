@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LogDescriptorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class LogDescriptorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class LogDescriptorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<LabelDescriptorArgs>> labels;
+    private @Nullable Output<List<LabelDescriptorArgs>> labels;
 
-    public Output<List<LabelDescriptorArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<LabelDescriptorArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class LogDescriptorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public LogDescriptorArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<LabelDescriptorArgs>> labels,
-        @Nullable Output<String> name) {
-        this.description = description;
-        this.displayName = displayName;
-        this.labels = labels;
-        this.name = name;
-    }
+    private LogDescriptorArgs() {}
 
-    private LogDescriptorArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
+    private LogDescriptorArgs(LogDescriptorArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogDescriptorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<LabelDescriptorArgs>> labels;
-        private @Nullable Output<String> name;
+        private LogDescriptorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogDescriptorArgs();
         }
 
         public Builder(LogDescriptorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
+            $ = new LogDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder labels(@Nullable Output<List<LabelDescriptorArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<LabelDescriptorArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<LabelDescriptorArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(LabelDescriptorArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public LogDescriptorArgs build() {
-            return new LogDescriptorArgs(description, displayName, labels, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public LogDescriptorArgs build() {
+            return $;
         }
     }
+
 }

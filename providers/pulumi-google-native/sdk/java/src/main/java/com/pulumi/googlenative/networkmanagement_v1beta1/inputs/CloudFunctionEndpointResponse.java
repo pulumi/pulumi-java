@@ -21,45 +21,45 @@ public final class CloudFunctionEndpointResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public CloudFunctionEndpointResponse(String uri) {
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private CloudFunctionEndpointResponse() {}
 
-    private CloudFunctionEndpointResponse() {
-        this.uri = null;
+    private CloudFunctionEndpointResponse(CloudFunctionEndpointResponse $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFunctionEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String uri;
+        private CloudFunctionEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFunctionEndpointResponse();
         }
 
         public Builder(CloudFunctionEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new CloudFunctionEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public CloudFunctionEndpointResponse build() {
-            return new CloudFunctionEndpointResponse(uri);
+        }
+
+        public CloudFunctionEndpointResponse build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * 
      */
     @Import(name="aliasContext", required=true)
-      private final GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
+    private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
 
     public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext() {
         return this.aliasContext;
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * 
      */
     @Import(name="repoId", required=true)
-      private final GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId;
+    private GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId;
 
     public GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId() {
         return this.repoId;
@@ -45,64 +45,59 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      * 
      */
     @Import(name="revisionId", required=true)
-      private final String revisionId;
+    private String revisionId;
 
     public String revisionId() {
         return this.revisionId;
     }
 
-    public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(
-        GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
-        GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId,
-        String revisionId) {
-        this.aliasContext = Objects.requireNonNull(aliasContext, "expected parameter 'aliasContext' to be non-null");
-        this.repoId = Objects.requireNonNull(repoId, "expected parameter 'repoId' to be non-null");
-        this.revisionId = Objects.requireNonNull(revisionId, "expected parameter 'revisionId' to be non-null");
-    }
+    private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse() {}
 
-    private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse() {
-        this.aliasContext = null;
-        this.repoId = null;
-        this.revisionId = null;
+    private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse $) {
+        this.aliasContext = $.aliasContext;
+        this.repoId = $.repoId;
+        this.revisionId = $.revisionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext;
-        private GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId;
-        private String revisionId;
+        private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse();
         }
 
         public Builder(GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasContext = defaults.aliasContext;
-    	      this.repoId = defaults.repoId;
-    	      this.revisionId = defaults.revisionId;
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext) {
-            this.aliasContext = Objects.requireNonNull(aliasContext);
+            $.aliasContext = aliasContext;
             return this;
         }
+
         public Builder repoId(GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId) {
-            this.repoId = Objects.requireNonNull(repoId);
+            $.repoId = repoId;
             return this;
         }
+
         public Builder revisionId(String revisionId) {
-            this.revisionId = Objects.requireNonNull(revisionId);
+            $.revisionId = revisionId;
             return this;
-        }        public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse build() {
-            return new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
+        }
+
+        public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse build() {
+            $.aliasContext = Objects.requireNonNull($.aliasContext, "expected parameter 'aliasContext' to be non-null");
+            $.repoId = Objects.requireNonNull($.repoId, "expected parameter 'repoId' to be non-null");
+            $.revisionId = Objects.requireNonNull($.revisionId, "expected parameter 'revisionId' to be non-null");
+            return $;
         }
     }
+
 }

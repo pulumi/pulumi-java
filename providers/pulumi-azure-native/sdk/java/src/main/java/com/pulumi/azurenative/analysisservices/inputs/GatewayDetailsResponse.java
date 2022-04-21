@@ -23,7 +23,7 @@ public final class GatewayDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dmtsClusterUri", required=true)
-      private final String dmtsClusterUri;
+    private String dmtsClusterUri;
 
     public String dmtsClusterUri() {
         return this.dmtsClusterUri;
@@ -34,7 +34,7 @@ public final class GatewayDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="gatewayObjectId", required=true)
-      private final String gatewayObjectId;
+    private String gatewayObjectId;
 
     public String gatewayObjectId() {
         return this.gatewayObjectId;
@@ -45,64 +45,58 @@ public final class GatewayDetailsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="gatewayResourceId")
-      private final @Nullable String gatewayResourceId;
+    private @Nullable String gatewayResourceId;
 
     public Optional<String> gatewayResourceId() {
-        return this.gatewayResourceId == null ? Optional.empty() : Optional.ofNullable(this.gatewayResourceId);
+        return Optional.ofNullable(this.gatewayResourceId);
     }
 
-    public GatewayDetailsResponse(
-        String dmtsClusterUri,
-        String gatewayObjectId,
-        @Nullable String gatewayResourceId) {
-        this.dmtsClusterUri = Objects.requireNonNull(dmtsClusterUri, "expected parameter 'dmtsClusterUri' to be non-null");
-        this.gatewayObjectId = Objects.requireNonNull(gatewayObjectId, "expected parameter 'gatewayObjectId' to be non-null");
-        this.gatewayResourceId = gatewayResourceId;
-    }
+    private GatewayDetailsResponse() {}
 
-    private GatewayDetailsResponse() {
-        this.dmtsClusterUri = null;
-        this.gatewayObjectId = null;
-        this.gatewayResourceId = null;
+    private GatewayDetailsResponse(GatewayDetailsResponse $) {
+        this.dmtsClusterUri = $.dmtsClusterUri;
+        this.gatewayObjectId = $.gatewayObjectId;
+        this.gatewayResourceId = $.gatewayResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dmtsClusterUri;
-        private String gatewayObjectId;
-        private @Nullable String gatewayResourceId;
+        private GatewayDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayDetailsResponse();
         }
 
         public Builder(GatewayDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dmtsClusterUri = defaults.dmtsClusterUri;
-    	      this.gatewayObjectId = defaults.gatewayObjectId;
-    	      this.gatewayResourceId = defaults.gatewayResourceId;
+            $ = new GatewayDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dmtsClusterUri(String dmtsClusterUri) {
-            this.dmtsClusterUri = Objects.requireNonNull(dmtsClusterUri);
+            $.dmtsClusterUri = dmtsClusterUri;
             return this;
         }
+
         public Builder gatewayObjectId(String gatewayObjectId) {
-            this.gatewayObjectId = Objects.requireNonNull(gatewayObjectId);
+            $.gatewayObjectId = gatewayObjectId;
             return this;
         }
+
         public Builder gatewayResourceId(@Nullable String gatewayResourceId) {
-            this.gatewayResourceId = gatewayResourceId;
+            $.gatewayResourceId = gatewayResourceId;
             return this;
-        }        public GatewayDetailsResponse build() {
-            return new GatewayDetailsResponse(dmtsClusterUri, gatewayObjectId, gatewayResourceId);
+        }
+
+        public GatewayDetailsResponse build() {
+            $.dmtsClusterUri = Objects.requireNonNull($.dmtsClusterUri, "expected parameter 'dmtsClusterUri' to be non-null");
+            $.gatewayObjectId = Objects.requireNonNull($.gatewayObjectId, "expected parameter 'gatewayObjectId' to be non-null");
+            return $;
         }
     }
+
 }

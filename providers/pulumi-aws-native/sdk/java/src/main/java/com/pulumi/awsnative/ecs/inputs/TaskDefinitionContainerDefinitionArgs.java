@@ -21,13 +21,13 @@ import com.pulumi.awsnative.ecs.inputs.TaskDefinitionUlimitArgs;
 import com.pulumi.awsnative.ecs.inputs.TaskDefinitionVolumeFromArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -40,66 +40,66 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
     public static final TaskDefinitionContainerDefinitionArgs Empty = new TaskDefinitionContainerDefinitionArgs();
 
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     @Import(name="cpu")
-      private final @Nullable Output<Integer> cpu;
+    private @Nullable Output<Integer> cpu;
 
-    public Output<Integer> cpu() {
-        return this.cpu == null ? Codegen.empty() : this.cpu;
+    public Optional<Output<Integer>> cpu() {
+        return Optional.ofNullable(this.cpu);
     }
 
     @Import(name="dependsOn")
-      private final @Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn;
+    private @Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn;
 
-    public Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<TaskDefinitionContainerDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     @Import(name="disableNetworking")
-      private final @Nullable Output<Boolean> disableNetworking;
+    private @Nullable Output<Boolean> disableNetworking;
 
-    public Output<Boolean> disableNetworking() {
-        return this.disableNetworking == null ? Codegen.empty() : this.disableNetworking;
+    public Optional<Output<Boolean>> disableNetworking() {
+        return Optional.ofNullable(this.disableNetworking);
     }
 
     @Import(name="dnsSearchDomains")
-      private final @Nullable Output<List<String>> dnsSearchDomains;
+    private @Nullable Output<List<String>> dnsSearchDomains;
 
-    public Output<List<String>> dnsSearchDomains() {
-        return this.dnsSearchDomains == null ? Codegen.empty() : this.dnsSearchDomains;
+    public Optional<Output<List<String>>> dnsSearchDomains() {
+        return Optional.ofNullable(this.dnsSearchDomains);
     }
 
     @Import(name="dnsServers")
-      private final @Nullable Output<List<String>> dnsServers;
+    private @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> dnsServers() {
-        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
+    public Optional<Output<List<String>>> dnsServers() {
+        return Optional.ofNullable(this.dnsServers);
     }
 
     @Import(name="dockerLabels")
-      private final @Nullable Output<Object> dockerLabels;
+    private @Nullable Output<Object> dockerLabels;
 
-    public Output<Object> dockerLabels() {
-        return this.dockerLabels == null ? Codegen.empty() : this.dockerLabels;
+    public Optional<Output<Object>> dockerLabels() {
+        return Optional.ofNullable(this.dockerLabels);
     }
 
     @Import(name="dockerSecurityOptions")
-      private final @Nullable Output<List<String>> dockerSecurityOptions;
+    private @Nullable Output<List<String>> dockerSecurityOptions;
 
-    public Output<List<String>> dockerSecurityOptions() {
-        return this.dockerSecurityOptions == null ? Codegen.empty() : this.dockerSecurityOptions;
+    public Optional<Output<List<String>>> dockerSecurityOptions() {
+        return Optional.ofNullable(this.dockerSecurityOptions);
     }
 
     @Import(name="entryPoint")
-      private final @Nullable Output<List<String>> entryPoint;
+    private @Nullable Output<List<String>> entryPoint;
 
-    public Output<List<String>> entryPoint() {
-        return this.entryPoint == null ? Codegen.empty() : this.entryPoint;
+    public Optional<Output<List<String>>> entryPoint() {
+        return Optional.ofNullable(this.entryPoint);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment;
+    private @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment;
 
-    public Output<List<TaskDefinitionKeyValuePairArgs>> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<List<TaskDefinitionKeyValuePairArgs>>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -118,45 +118,45 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="environmentFiles")
-      private final @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
+    private @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
 
-    public Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles() {
-        return this.environmentFiles == null ? Codegen.empty() : this.environmentFiles;
+    public Optional<Output<List<TaskDefinitionEnvironmentFileArgs>>> environmentFiles() {
+        return Optional.ofNullable(this.environmentFiles);
     }
 
     @Import(name="essential")
-      private final @Nullable Output<Boolean> essential;
+    private @Nullable Output<Boolean> essential;
 
-    public Output<Boolean> essential() {
-        return this.essential == null ? Codegen.empty() : this.essential;
+    public Optional<Output<Boolean>> essential() {
+        return Optional.ofNullable(this.essential);
     }
 
     @Import(name="extraHosts")
-      private final @Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts;
+    private @Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts;
 
-    public Output<List<TaskDefinitionHostEntryArgs>> extraHosts() {
-        return this.extraHosts == null ? Codegen.empty() : this.extraHosts;
+    public Optional<Output<List<TaskDefinitionHostEntryArgs>>> extraHosts() {
+        return Optional.ofNullable(this.extraHosts);
     }
 
     @Import(name="firelensConfiguration")
-      private final @Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration;
+    private @Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration;
 
-    public Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration() {
-        return this.firelensConfiguration == null ? Codegen.empty() : this.firelensConfiguration;
+    public Optional<Output<TaskDefinitionFirelensConfigurationArgs>> firelensConfiguration() {
+        return Optional.ofNullable(this.firelensConfiguration);
     }
 
     @Import(name="healthCheck")
-      private final @Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck;
+    private @Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck;
 
-    public Output<TaskDefinitionHealthCheckArgs> healthCheck() {
-        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
+    public Optional<Output<TaskDefinitionHealthCheckArgs>> healthCheck() {
+        return Optional.ofNullable(this.healthCheck);
     }
 
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -164,38 +164,38 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     @Import(name="interactive")
-      private final @Nullable Output<Boolean> interactive;
+    private @Nullable Output<Boolean> interactive;
 
-    public Output<Boolean> interactive() {
-        return this.interactive == null ? Codegen.empty() : this.interactive;
+    public Optional<Output<Boolean>> interactive() {
+        return Optional.ofNullable(this.interactive);
     }
 
     @Import(name="links")
-      private final @Nullable Output<List<String>> links;
+    private @Nullable Output<List<String>> links;
 
-    public Output<List<String>> links() {
-        return this.links == null ? Codegen.empty() : this.links;
+    public Optional<Output<List<String>>> links() {
+        return Optional.ofNullable(this.links);
     }
 
     @Import(name="linuxParameters")
-      private final @Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters;
+    private @Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters;
 
-    public Output<TaskDefinitionLinuxParametersArgs> linuxParameters() {
-        return this.linuxParameters == null ? Codegen.empty() : this.linuxParameters;
+    public Optional<Output<TaskDefinitionLinuxParametersArgs>> linuxParameters() {
+        return Optional.ofNullable(this.linuxParameters);
     }
 
     @Import(name="logConfiguration")
-      private final @Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration;
+    private @Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration;
 
-    public Output<TaskDefinitionLogConfigurationArgs> logConfiguration() {
-        return this.logConfiguration == null ? Codegen.empty() : this.logConfiguration;
+    public Optional<Output<TaskDefinitionLogConfigurationArgs>> logConfiguration() {
+        return Optional.ofNullable(this.logConfiguration);
     }
 
     /**
@@ -203,24 +203,24 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="memory")
-      private final @Nullable Output<Integer> memory;
+    private @Nullable Output<Integer> memory;
 
-    public Output<Integer> memory() {
-        return this.memory == null ? Codegen.empty() : this.memory;
+    public Optional<Output<Integer>> memory() {
+        return Optional.ofNullable(this.memory);
     }
 
     @Import(name="memoryReservation")
-      private final @Nullable Output<Integer> memoryReservation;
+    private @Nullable Output<Integer> memoryReservation;
 
-    public Output<Integer> memoryReservation() {
-        return this.memoryReservation == null ? Codegen.empty() : this.memoryReservation;
+    public Optional<Output<Integer>> memoryReservation() {
+        return Optional.ofNullable(this.memoryReservation);
     }
 
     @Import(name="mountPoints")
-      private final @Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints;
+    private @Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints;
 
-    public Output<List<TaskDefinitionMountPointArgs>> mountPoints() {
-        return this.mountPoints == null ? Codegen.empty() : this.mountPoints;
+    public Optional<Output<List<TaskDefinitionMountPointArgs>>> mountPoints() {
+        return Optional.ofNullable(this.mountPoints);
     }
 
     /**
@@ -228,10 +228,10 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -239,686 +239,587 @@ public final class TaskDefinitionContainerDefinitionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="portMappings")
-      private final @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings;
+    private @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings;
 
-    public Output<List<TaskDefinitionPortMappingArgs>> portMappings() {
-        return this.portMappings == null ? Codegen.empty() : this.portMappings;
+    public Optional<Output<List<TaskDefinitionPortMappingArgs>>> portMappings() {
+        return Optional.ofNullable(this.portMappings);
     }
 
     @Import(name="privileged")
-      private final @Nullable Output<Boolean> privileged;
+    private @Nullable Output<Boolean> privileged;
 
-    public Output<Boolean> privileged() {
-        return this.privileged == null ? Codegen.empty() : this.privileged;
+    public Optional<Output<Boolean>> privileged() {
+        return Optional.ofNullable(this.privileged);
     }
 
     @Import(name="pseudoTerminal")
-      private final @Nullable Output<Boolean> pseudoTerminal;
+    private @Nullable Output<Boolean> pseudoTerminal;
 
-    public Output<Boolean> pseudoTerminal() {
-        return this.pseudoTerminal == null ? Codegen.empty() : this.pseudoTerminal;
+    public Optional<Output<Boolean>> pseudoTerminal() {
+        return Optional.ofNullable(this.pseudoTerminal);
     }
 
     @Import(name="readonlyRootFilesystem")
-      private final @Nullable Output<Boolean> readonlyRootFilesystem;
+    private @Nullable Output<Boolean> readonlyRootFilesystem;
 
-    public Output<Boolean> readonlyRootFilesystem() {
-        return this.readonlyRootFilesystem == null ? Codegen.empty() : this.readonlyRootFilesystem;
+    public Optional<Output<Boolean>> readonlyRootFilesystem() {
+        return Optional.ofNullable(this.readonlyRootFilesystem);
     }
 
     @Import(name="repositoryCredentials")
-      private final @Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials;
+    private @Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials;
 
-    public Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials() {
-        return this.repositoryCredentials == null ? Codegen.empty() : this.repositoryCredentials;
+    public Optional<Output<TaskDefinitionRepositoryCredentialsArgs>> repositoryCredentials() {
+        return Optional.ofNullable(this.repositoryCredentials);
     }
 
     @Import(name="resourceRequirements")
-      private final @Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements;
+    private @Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements;
 
-    public Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements() {
-        return this.resourceRequirements == null ? Codegen.empty() : this.resourceRequirements;
+    public Optional<Output<List<TaskDefinitionResourceRequirementArgs>>> resourceRequirements() {
+        return Optional.ofNullable(this.resourceRequirements);
     }
 
     @Import(name="secrets")
-      private final @Nullable Output<List<TaskDefinitionSecretArgs>> secrets;
+    private @Nullable Output<List<TaskDefinitionSecretArgs>> secrets;
 
-    public Output<List<TaskDefinitionSecretArgs>> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<List<TaskDefinitionSecretArgs>>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     @Import(name="startTimeout")
-      private final @Nullable Output<Integer> startTimeout;
+    private @Nullable Output<Integer> startTimeout;
 
-    public Output<Integer> startTimeout() {
-        return this.startTimeout == null ? Codegen.empty() : this.startTimeout;
+    public Optional<Output<Integer>> startTimeout() {
+        return Optional.ofNullable(this.startTimeout);
     }
 
     @Import(name="stopTimeout")
-      private final @Nullable Output<Integer> stopTimeout;
+    private @Nullable Output<Integer> stopTimeout;
 
-    public Output<Integer> stopTimeout() {
-        return this.stopTimeout == null ? Codegen.empty() : this.stopTimeout;
+    public Optional<Output<Integer>> stopTimeout() {
+        return Optional.ofNullable(this.stopTimeout);
     }
 
     @Import(name="systemControls")
-      private final @Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls;
+    private @Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls;
 
-    public Output<List<TaskDefinitionSystemControlArgs>> systemControls() {
-        return this.systemControls == null ? Codegen.empty() : this.systemControls;
+    public Optional<Output<List<TaskDefinitionSystemControlArgs>>> systemControls() {
+        return Optional.ofNullable(this.systemControls);
     }
 
     @Import(name="ulimits")
-      private final @Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits;
+    private @Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits;
 
-    public Output<List<TaskDefinitionUlimitArgs>> ulimits() {
-        return this.ulimits == null ? Codegen.empty() : this.ulimits;
+    public Optional<Output<List<TaskDefinitionUlimitArgs>>> ulimits() {
+        return Optional.ofNullable(this.ulimits);
     }
 
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
     @Import(name="volumesFrom")
-      private final @Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom;
+    private @Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom;
 
-    public Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom() {
-        return this.volumesFrom == null ? Codegen.empty() : this.volumesFrom;
+    public Optional<Output<List<TaskDefinitionVolumeFromArgs>>> volumesFrom() {
+        return Optional.ofNullable(this.volumesFrom);
     }
 
     @Import(name="workingDirectory")
-      private final @Nullable Output<String> workingDirectory;
+    private @Nullable Output<String> workingDirectory;
 
-    public Output<String> workingDirectory() {
-        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
+    public Optional<Output<String>> workingDirectory() {
+        return Optional.ofNullable(this.workingDirectory);
     }
 
-    public TaskDefinitionContainerDefinitionArgs(
-        @Nullable Output<List<String>> command,
-        @Nullable Output<Integer> cpu,
-        @Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn,
-        @Nullable Output<Boolean> disableNetworking,
-        @Nullable Output<List<String>> dnsSearchDomains,
-        @Nullable Output<List<String>> dnsServers,
-        @Nullable Output<Object> dockerLabels,
-        @Nullable Output<List<String>> dockerSecurityOptions,
-        @Nullable Output<List<String>> entryPoint,
-        @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment,
-        @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles,
-        @Nullable Output<Boolean> essential,
-        @Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts,
-        @Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration,
-        @Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck,
-        @Nullable Output<String> hostname,
-        @Nullable Output<String> image,
-        @Nullable Output<Boolean> interactive,
-        @Nullable Output<List<String>> links,
-        @Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters,
-        @Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration,
-        @Nullable Output<Integer> memory,
-        @Nullable Output<Integer> memoryReservation,
-        @Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints,
-        @Nullable Output<String> name,
-        @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings,
-        @Nullable Output<Boolean> privileged,
-        @Nullable Output<Boolean> pseudoTerminal,
-        @Nullable Output<Boolean> readonlyRootFilesystem,
-        @Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials,
-        @Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements,
-        @Nullable Output<List<TaskDefinitionSecretArgs>> secrets,
-        @Nullable Output<Integer> startTimeout,
-        @Nullable Output<Integer> stopTimeout,
-        @Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls,
-        @Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits,
-        @Nullable Output<String> user,
-        @Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom,
-        @Nullable Output<String> workingDirectory) {
-        this.command = command;
-        this.cpu = cpu;
-        this.dependsOn = dependsOn;
-        this.disableNetworking = disableNetworking;
-        this.dnsSearchDomains = dnsSearchDomains;
-        this.dnsServers = dnsServers;
-        this.dockerLabels = dockerLabels;
-        this.dockerSecurityOptions = dockerSecurityOptions;
-        this.entryPoint = entryPoint;
-        this.environment = environment;
-        this.environmentFiles = environmentFiles;
-        this.essential = essential;
-        this.extraHosts = extraHosts;
-        this.firelensConfiguration = firelensConfiguration;
-        this.healthCheck = healthCheck;
-        this.hostname = hostname;
-        this.image = image;
-        this.interactive = interactive;
-        this.links = links;
-        this.linuxParameters = linuxParameters;
-        this.logConfiguration = logConfiguration;
-        this.memory = memory;
-        this.memoryReservation = memoryReservation;
-        this.mountPoints = mountPoints;
-        this.name = name;
-        this.portMappings = portMappings;
-        this.privileged = privileged;
-        this.pseudoTerminal = pseudoTerminal;
-        this.readonlyRootFilesystem = readonlyRootFilesystem;
-        this.repositoryCredentials = repositoryCredentials;
-        this.resourceRequirements = resourceRequirements;
-        this.secrets = secrets;
-        this.startTimeout = startTimeout;
-        this.stopTimeout = stopTimeout;
-        this.systemControls = systemControls;
-        this.ulimits = ulimits;
-        this.user = user;
-        this.volumesFrom = volumesFrom;
-        this.workingDirectory = workingDirectory;
-    }
+    private TaskDefinitionContainerDefinitionArgs() {}
 
-    private TaskDefinitionContainerDefinitionArgs() {
-        this.command = Codegen.empty();
-        this.cpu = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.disableNetworking = Codegen.empty();
-        this.dnsSearchDomains = Codegen.empty();
-        this.dnsServers = Codegen.empty();
-        this.dockerLabels = Codegen.empty();
-        this.dockerSecurityOptions = Codegen.empty();
-        this.entryPoint = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.environmentFiles = Codegen.empty();
-        this.essential = Codegen.empty();
-        this.extraHosts = Codegen.empty();
-        this.firelensConfiguration = Codegen.empty();
-        this.healthCheck = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.image = Codegen.empty();
-        this.interactive = Codegen.empty();
-        this.links = Codegen.empty();
-        this.linuxParameters = Codegen.empty();
-        this.logConfiguration = Codegen.empty();
-        this.memory = Codegen.empty();
-        this.memoryReservation = Codegen.empty();
-        this.mountPoints = Codegen.empty();
-        this.name = Codegen.empty();
-        this.portMappings = Codegen.empty();
-        this.privileged = Codegen.empty();
-        this.pseudoTerminal = Codegen.empty();
-        this.readonlyRootFilesystem = Codegen.empty();
-        this.repositoryCredentials = Codegen.empty();
-        this.resourceRequirements = Codegen.empty();
-        this.secrets = Codegen.empty();
-        this.startTimeout = Codegen.empty();
-        this.stopTimeout = Codegen.empty();
-        this.systemControls = Codegen.empty();
-        this.ulimits = Codegen.empty();
-        this.user = Codegen.empty();
-        this.volumesFrom = Codegen.empty();
-        this.workingDirectory = Codegen.empty();
+    private TaskDefinitionContainerDefinitionArgs(TaskDefinitionContainerDefinitionArgs $) {
+        this.command = $.command;
+        this.cpu = $.cpu;
+        this.dependsOn = $.dependsOn;
+        this.disableNetworking = $.disableNetworking;
+        this.dnsSearchDomains = $.dnsSearchDomains;
+        this.dnsServers = $.dnsServers;
+        this.dockerLabels = $.dockerLabels;
+        this.dockerSecurityOptions = $.dockerSecurityOptions;
+        this.entryPoint = $.entryPoint;
+        this.environment = $.environment;
+        this.environmentFiles = $.environmentFiles;
+        this.essential = $.essential;
+        this.extraHosts = $.extraHosts;
+        this.firelensConfiguration = $.firelensConfiguration;
+        this.healthCheck = $.healthCheck;
+        this.hostname = $.hostname;
+        this.image = $.image;
+        this.interactive = $.interactive;
+        this.links = $.links;
+        this.linuxParameters = $.linuxParameters;
+        this.logConfiguration = $.logConfiguration;
+        this.memory = $.memory;
+        this.memoryReservation = $.memoryReservation;
+        this.mountPoints = $.mountPoints;
+        this.name = $.name;
+        this.portMappings = $.portMappings;
+        this.privileged = $.privileged;
+        this.pseudoTerminal = $.pseudoTerminal;
+        this.readonlyRootFilesystem = $.readonlyRootFilesystem;
+        this.repositoryCredentials = $.repositoryCredentials;
+        this.resourceRequirements = $.resourceRequirements;
+        this.secrets = $.secrets;
+        this.startTimeout = $.startTimeout;
+        this.stopTimeout = $.stopTimeout;
+        this.systemControls = $.systemControls;
+        this.ulimits = $.ulimits;
+        this.user = $.user;
+        this.volumesFrom = $.volumesFrom;
+        this.workingDirectory = $.workingDirectory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionContainerDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<Integer> cpu;
-        private @Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn;
-        private @Nullable Output<Boolean> disableNetworking;
-        private @Nullable Output<List<String>> dnsSearchDomains;
-        private @Nullable Output<List<String>> dnsServers;
-        private @Nullable Output<Object> dockerLabels;
-        private @Nullable Output<List<String>> dockerSecurityOptions;
-        private @Nullable Output<List<String>> entryPoint;
-        private @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment;
-        private @Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles;
-        private @Nullable Output<Boolean> essential;
-        private @Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts;
-        private @Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration;
-        private @Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck;
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<String> image;
-        private @Nullable Output<Boolean> interactive;
-        private @Nullable Output<List<String>> links;
-        private @Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters;
-        private @Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration;
-        private @Nullable Output<Integer> memory;
-        private @Nullable Output<Integer> memoryReservation;
-        private @Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings;
-        private @Nullable Output<Boolean> privileged;
-        private @Nullable Output<Boolean> pseudoTerminal;
-        private @Nullable Output<Boolean> readonlyRootFilesystem;
-        private @Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials;
-        private @Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements;
-        private @Nullable Output<List<TaskDefinitionSecretArgs>> secrets;
-        private @Nullable Output<Integer> startTimeout;
-        private @Nullable Output<Integer> stopTimeout;
-        private @Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls;
-        private @Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits;
-        private @Nullable Output<String> user;
-        private @Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom;
-        private @Nullable Output<String> workingDirectory;
+        private TaskDefinitionContainerDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionContainerDefinitionArgs();
         }
 
         public Builder(TaskDefinitionContainerDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
-    	      this.cpu = defaults.cpu;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.disableNetworking = defaults.disableNetworking;
-    	      this.dnsSearchDomains = defaults.dnsSearchDomains;
-    	      this.dnsServers = defaults.dnsServers;
-    	      this.dockerLabels = defaults.dockerLabels;
-    	      this.dockerSecurityOptions = defaults.dockerSecurityOptions;
-    	      this.entryPoint = defaults.entryPoint;
-    	      this.environment = defaults.environment;
-    	      this.environmentFiles = defaults.environmentFiles;
-    	      this.essential = defaults.essential;
-    	      this.extraHosts = defaults.extraHosts;
-    	      this.firelensConfiguration = defaults.firelensConfiguration;
-    	      this.healthCheck = defaults.healthCheck;
-    	      this.hostname = defaults.hostname;
-    	      this.image = defaults.image;
-    	      this.interactive = defaults.interactive;
-    	      this.links = defaults.links;
-    	      this.linuxParameters = defaults.linuxParameters;
-    	      this.logConfiguration = defaults.logConfiguration;
-    	      this.memory = defaults.memory;
-    	      this.memoryReservation = defaults.memoryReservation;
-    	      this.mountPoints = defaults.mountPoints;
-    	      this.name = defaults.name;
-    	      this.portMappings = defaults.portMappings;
-    	      this.privileged = defaults.privileged;
-    	      this.pseudoTerminal = defaults.pseudoTerminal;
-    	      this.readonlyRootFilesystem = defaults.readonlyRootFilesystem;
-    	      this.repositoryCredentials = defaults.repositoryCredentials;
-    	      this.resourceRequirements = defaults.resourceRequirements;
-    	      this.secrets = defaults.secrets;
-    	      this.startTimeout = defaults.startTimeout;
-    	      this.stopTimeout = defaults.stopTimeout;
-    	      this.systemControls = defaults.systemControls;
-    	      this.ulimits = defaults.ulimits;
-    	      this.user = defaults.user;
-    	      this.volumesFrom = defaults.volumesFrom;
-    	      this.workingDirectory = defaults.workingDirectory;
+            $ = new TaskDefinitionContainerDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder cpu(@Nullable Output<Integer> cpu) {
-            this.cpu = cpu;
+            $.cpu = cpu;
             return this;
         }
-        public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Codegen.ofNullable(cpu);
-            return this;
+
+        public Builder cpu(Integer cpu) {
+            return cpu(Output.of(cpu));
         }
+
         public Builder dependsOn(@Nullable Output<List<TaskDefinitionContainerDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<TaskDefinitionContainerDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<TaskDefinitionContainerDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(TaskDefinitionContainerDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder disableNetworking(@Nullable Output<Boolean> disableNetworking) {
-            this.disableNetworking = disableNetworking;
+            $.disableNetworking = disableNetworking;
             return this;
         }
-        public Builder disableNetworking(@Nullable Boolean disableNetworking) {
-            this.disableNetworking = Codegen.ofNullable(disableNetworking);
-            return this;
+
+        public Builder disableNetworking(Boolean disableNetworking) {
+            return disableNetworking(Output.of(disableNetworking));
         }
+
         public Builder dnsSearchDomains(@Nullable Output<List<String>> dnsSearchDomains) {
-            this.dnsSearchDomains = dnsSearchDomains;
+            $.dnsSearchDomains = dnsSearchDomains;
             return this;
         }
-        public Builder dnsSearchDomains(@Nullable List<String> dnsSearchDomains) {
-            this.dnsSearchDomains = Codegen.ofNullable(dnsSearchDomains);
-            return this;
+
+        public Builder dnsSearchDomains(List<String> dnsSearchDomains) {
+            return dnsSearchDomains(Output.of(dnsSearchDomains));
         }
+
         public Builder dnsSearchDomains(String... dnsSearchDomains) {
             return dnsSearchDomains(List.of(dnsSearchDomains));
         }
+
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
-            this.dnsServers = dnsServers;
+            $.dnsServers = dnsServers;
             return this;
         }
-        public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Codegen.ofNullable(dnsServers);
-            return this;
+
+        public Builder dnsServers(List<String> dnsServers) {
+            return dnsServers(Output.of(dnsServers));
         }
+
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
+
         public Builder dockerLabels(@Nullable Output<Object> dockerLabels) {
-            this.dockerLabels = dockerLabels;
+            $.dockerLabels = dockerLabels;
             return this;
         }
-        public Builder dockerLabels(@Nullable Object dockerLabels) {
-            this.dockerLabels = Codegen.ofNullable(dockerLabels);
-            return this;
+
+        public Builder dockerLabels(Object dockerLabels) {
+            return dockerLabels(Output.of(dockerLabels));
         }
+
         public Builder dockerSecurityOptions(@Nullable Output<List<String>> dockerSecurityOptions) {
-            this.dockerSecurityOptions = dockerSecurityOptions;
+            $.dockerSecurityOptions = dockerSecurityOptions;
             return this;
         }
-        public Builder dockerSecurityOptions(@Nullable List<String> dockerSecurityOptions) {
-            this.dockerSecurityOptions = Codegen.ofNullable(dockerSecurityOptions);
-            return this;
+
+        public Builder dockerSecurityOptions(List<String> dockerSecurityOptions) {
+            return dockerSecurityOptions(Output.of(dockerSecurityOptions));
         }
+
         public Builder dockerSecurityOptions(String... dockerSecurityOptions) {
             return dockerSecurityOptions(List.of(dockerSecurityOptions));
         }
+
         public Builder entryPoint(@Nullable Output<List<String>> entryPoint) {
-            this.entryPoint = entryPoint;
+            $.entryPoint = entryPoint;
             return this;
         }
-        public Builder entryPoint(@Nullable List<String> entryPoint) {
-            this.entryPoint = Codegen.ofNullable(entryPoint);
-            return this;
+
+        public Builder entryPoint(List<String> entryPoint) {
+            return entryPoint(Output.of(entryPoint));
         }
+
         public Builder entryPoint(String... entryPoint) {
             return entryPoint(List.of(entryPoint));
         }
+
         public Builder environment(@Nullable Output<List<TaskDefinitionKeyValuePairArgs>> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable List<TaskDefinitionKeyValuePairArgs> environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(List<TaskDefinitionKeyValuePairArgs> environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder environment(TaskDefinitionKeyValuePairArgs... environment) {
             return environment(List.of(environment));
         }
+
         public Builder environmentFiles(@Nullable Output<List<TaskDefinitionEnvironmentFileArgs>> environmentFiles) {
-            this.environmentFiles = environmentFiles;
+            $.environmentFiles = environmentFiles;
             return this;
         }
-        public Builder environmentFiles(@Nullable List<TaskDefinitionEnvironmentFileArgs> environmentFiles) {
-            this.environmentFiles = Codegen.ofNullable(environmentFiles);
-            return this;
+
+        public Builder environmentFiles(List<TaskDefinitionEnvironmentFileArgs> environmentFiles) {
+            return environmentFiles(Output.of(environmentFiles));
         }
+
         public Builder environmentFiles(TaskDefinitionEnvironmentFileArgs... environmentFiles) {
             return environmentFiles(List.of(environmentFiles));
         }
+
         public Builder essential(@Nullable Output<Boolean> essential) {
-            this.essential = essential;
+            $.essential = essential;
             return this;
         }
-        public Builder essential(@Nullable Boolean essential) {
-            this.essential = Codegen.ofNullable(essential);
-            return this;
+
+        public Builder essential(Boolean essential) {
+            return essential(Output.of(essential));
         }
+
         public Builder extraHosts(@Nullable Output<List<TaskDefinitionHostEntryArgs>> extraHosts) {
-            this.extraHosts = extraHosts;
+            $.extraHosts = extraHosts;
             return this;
         }
-        public Builder extraHosts(@Nullable List<TaskDefinitionHostEntryArgs> extraHosts) {
-            this.extraHosts = Codegen.ofNullable(extraHosts);
-            return this;
+
+        public Builder extraHosts(List<TaskDefinitionHostEntryArgs> extraHosts) {
+            return extraHosts(Output.of(extraHosts));
         }
+
         public Builder extraHosts(TaskDefinitionHostEntryArgs... extraHosts) {
             return extraHosts(List.of(extraHosts));
         }
+
         public Builder firelensConfiguration(@Nullable Output<TaskDefinitionFirelensConfigurationArgs> firelensConfiguration) {
-            this.firelensConfiguration = firelensConfiguration;
+            $.firelensConfiguration = firelensConfiguration;
             return this;
         }
-        public Builder firelensConfiguration(@Nullable TaskDefinitionFirelensConfigurationArgs firelensConfiguration) {
-            this.firelensConfiguration = Codegen.ofNullable(firelensConfiguration);
-            return this;
+
+        public Builder firelensConfiguration(TaskDefinitionFirelensConfigurationArgs firelensConfiguration) {
+            return firelensConfiguration(Output.of(firelensConfiguration));
         }
+
         public Builder healthCheck(@Nullable Output<TaskDefinitionHealthCheckArgs> healthCheck) {
-            this.healthCheck = healthCheck;
+            $.healthCheck = healthCheck;
             return this;
         }
-        public Builder healthCheck(@Nullable TaskDefinitionHealthCheckArgs healthCheck) {
-            this.healthCheck = Codegen.ofNullable(healthCheck);
-            return this;
+
+        public Builder healthCheck(TaskDefinitionHealthCheckArgs healthCheck) {
+            return healthCheck(Output.of(healthCheck));
         }
+
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder interactive(@Nullable Output<Boolean> interactive) {
-            this.interactive = interactive;
+            $.interactive = interactive;
             return this;
         }
-        public Builder interactive(@Nullable Boolean interactive) {
-            this.interactive = Codegen.ofNullable(interactive);
-            return this;
+
+        public Builder interactive(Boolean interactive) {
+            return interactive(Output.of(interactive));
         }
+
         public Builder links(@Nullable Output<List<String>> links) {
-            this.links = links;
+            $.links = links;
             return this;
         }
-        public Builder links(@Nullable List<String> links) {
-            this.links = Codegen.ofNullable(links);
-            return this;
+
+        public Builder links(List<String> links) {
+            return links(Output.of(links));
         }
+
         public Builder links(String... links) {
             return links(List.of(links));
         }
+
         public Builder linuxParameters(@Nullable Output<TaskDefinitionLinuxParametersArgs> linuxParameters) {
-            this.linuxParameters = linuxParameters;
+            $.linuxParameters = linuxParameters;
             return this;
         }
-        public Builder linuxParameters(@Nullable TaskDefinitionLinuxParametersArgs linuxParameters) {
-            this.linuxParameters = Codegen.ofNullable(linuxParameters);
-            return this;
+
+        public Builder linuxParameters(TaskDefinitionLinuxParametersArgs linuxParameters) {
+            return linuxParameters(Output.of(linuxParameters));
         }
+
         public Builder logConfiguration(@Nullable Output<TaskDefinitionLogConfigurationArgs> logConfiguration) {
-            this.logConfiguration = logConfiguration;
+            $.logConfiguration = logConfiguration;
             return this;
         }
-        public Builder logConfiguration(@Nullable TaskDefinitionLogConfigurationArgs logConfiguration) {
-            this.logConfiguration = Codegen.ofNullable(logConfiguration);
-            return this;
+
+        public Builder logConfiguration(TaskDefinitionLogConfigurationArgs logConfiguration) {
+            return logConfiguration(Output.of(logConfiguration));
         }
+
         public Builder memory(@Nullable Output<Integer> memory) {
-            this.memory = memory;
+            $.memory = memory;
             return this;
         }
-        public Builder memory(@Nullable Integer memory) {
-            this.memory = Codegen.ofNullable(memory);
-            return this;
+
+        public Builder memory(Integer memory) {
+            return memory(Output.of(memory));
         }
+
         public Builder memoryReservation(@Nullable Output<Integer> memoryReservation) {
-            this.memoryReservation = memoryReservation;
+            $.memoryReservation = memoryReservation;
             return this;
         }
-        public Builder memoryReservation(@Nullable Integer memoryReservation) {
-            this.memoryReservation = Codegen.ofNullable(memoryReservation);
-            return this;
+
+        public Builder memoryReservation(Integer memoryReservation) {
+            return memoryReservation(Output.of(memoryReservation));
         }
+
         public Builder mountPoints(@Nullable Output<List<TaskDefinitionMountPointArgs>> mountPoints) {
-            this.mountPoints = mountPoints;
+            $.mountPoints = mountPoints;
             return this;
         }
-        public Builder mountPoints(@Nullable List<TaskDefinitionMountPointArgs> mountPoints) {
-            this.mountPoints = Codegen.ofNullable(mountPoints);
-            return this;
+
+        public Builder mountPoints(List<TaskDefinitionMountPointArgs> mountPoints) {
+            return mountPoints(Output.of(mountPoints));
         }
+
         public Builder mountPoints(TaskDefinitionMountPointArgs... mountPoints) {
             return mountPoints(List.of(mountPoints));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder portMappings(@Nullable Output<List<TaskDefinitionPortMappingArgs>> portMappings) {
-            this.portMappings = portMappings;
+            $.portMappings = portMappings;
             return this;
         }
-        public Builder portMappings(@Nullable List<TaskDefinitionPortMappingArgs> portMappings) {
-            this.portMappings = Codegen.ofNullable(portMappings);
-            return this;
+
+        public Builder portMappings(List<TaskDefinitionPortMappingArgs> portMappings) {
+            return portMappings(Output.of(portMappings));
         }
+
         public Builder portMappings(TaskDefinitionPortMappingArgs... portMappings) {
             return portMappings(List.of(portMappings));
         }
+
         public Builder privileged(@Nullable Output<Boolean> privileged) {
-            this.privileged = privileged;
+            $.privileged = privileged;
             return this;
         }
-        public Builder privileged(@Nullable Boolean privileged) {
-            this.privileged = Codegen.ofNullable(privileged);
-            return this;
+
+        public Builder privileged(Boolean privileged) {
+            return privileged(Output.of(privileged));
         }
+
         public Builder pseudoTerminal(@Nullable Output<Boolean> pseudoTerminal) {
-            this.pseudoTerminal = pseudoTerminal;
+            $.pseudoTerminal = pseudoTerminal;
             return this;
         }
-        public Builder pseudoTerminal(@Nullable Boolean pseudoTerminal) {
-            this.pseudoTerminal = Codegen.ofNullable(pseudoTerminal);
-            return this;
+
+        public Builder pseudoTerminal(Boolean pseudoTerminal) {
+            return pseudoTerminal(Output.of(pseudoTerminal));
         }
+
         public Builder readonlyRootFilesystem(@Nullable Output<Boolean> readonlyRootFilesystem) {
-            this.readonlyRootFilesystem = readonlyRootFilesystem;
+            $.readonlyRootFilesystem = readonlyRootFilesystem;
             return this;
         }
-        public Builder readonlyRootFilesystem(@Nullable Boolean readonlyRootFilesystem) {
-            this.readonlyRootFilesystem = Codegen.ofNullable(readonlyRootFilesystem);
-            return this;
+
+        public Builder readonlyRootFilesystem(Boolean readonlyRootFilesystem) {
+            return readonlyRootFilesystem(Output.of(readonlyRootFilesystem));
         }
+
         public Builder repositoryCredentials(@Nullable Output<TaskDefinitionRepositoryCredentialsArgs> repositoryCredentials) {
-            this.repositoryCredentials = repositoryCredentials;
+            $.repositoryCredentials = repositoryCredentials;
             return this;
         }
-        public Builder repositoryCredentials(@Nullable TaskDefinitionRepositoryCredentialsArgs repositoryCredentials) {
-            this.repositoryCredentials = Codegen.ofNullable(repositoryCredentials);
-            return this;
+
+        public Builder repositoryCredentials(TaskDefinitionRepositoryCredentialsArgs repositoryCredentials) {
+            return repositoryCredentials(Output.of(repositoryCredentials));
         }
+
         public Builder resourceRequirements(@Nullable Output<List<TaskDefinitionResourceRequirementArgs>> resourceRequirements) {
-            this.resourceRequirements = resourceRequirements;
+            $.resourceRequirements = resourceRequirements;
             return this;
         }
-        public Builder resourceRequirements(@Nullable List<TaskDefinitionResourceRequirementArgs> resourceRequirements) {
-            this.resourceRequirements = Codegen.ofNullable(resourceRequirements);
-            return this;
+
+        public Builder resourceRequirements(List<TaskDefinitionResourceRequirementArgs> resourceRequirements) {
+            return resourceRequirements(Output.of(resourceRequirements));
         }
+
         public Builder resourceRequirements(TaskDefinitionResourceRequirementArgs... resourceRequirements) {
             return resourceRequirements(List.of(resourceRequirements));
         }
+
         public Builder secrets(@Nullable Output<List<TaskDefinitionSecretArgs>> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable List<TaskDefinitionSecretArgs> secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(List<TaskDefinitionSecretArgs> secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder secrets(TaskDefinitionSecretArgs... secrets) {
             return secrets(List.of(secrets));
         }
+
         public Builder startTimeout(@Nullable Output<Integer> startTimeout) {
-            this.startTimeout = startTimeout;
+            $.startTimeout = startTimeout;
             return this;
         }
-        public Builder startTimeout(@Nullable Integer startTimeout) {
-            this.startTimeout = Codegen.ofNullable(startTimeout);
-            return this;
+
+        public Builder startTimeout(Integer startTimeout) {
+            return startTimeout(Output.of(startTimeout));
         }
+
         public Builder stopTimeout(@Nullable Output<Integer> stopTimeout) {
-            this.stopTimeout = stopTimeout;
+            $.stopTimeout = stopTimeout;
             return this;
         }
-        public Builder stopTimeout(@Nullable Integer stopTimeout) {
-            this.stopTimeout = Codegen.ofNullable(stopTimeout);
-            return this;
+
+        public Builder stopTimeout(Integer stopTimeout) {
+            return stopTimeout(Output.of(stopTimeout));
         }
+
         public Builder systemControls(@Nullable Output<List<TaskDefinitionSystemControlArgs>> systemControls) {
-            this.systemControls = systemControls;
+            $.systemControls = systemControls;
             return this;
         }
-        public Builder systemControls(@Nullable List<TaskDefinitionSystemControlArgs> systemControls) {
-            this.systemControls = Codegen.ofNullable(systemControls);
-            return this;
+
+        public Builder systemControls(List<TaskDefinitionSystemControlArgs> systemControls) {
+            return systemControls(Output.of(systemControls));
         }
+
         public Builder systemControls(TaskDefinitionSystemControlArgs... systemControls) {
             return systemControls(List.of(systemControls));
         }
+
         public Builder ulimits(@Nullable Output<List<TaskDefinitionUlimitArgs>> ulimits) {
-            this.ulimits = ulimits;
+            $.ulimits = ulimits;
             return this;
         }
-        public Builder ulimits(@Nullable List<TaskDefinitionUlimitArgs> ulimits) {
-            this.ulimits = Codegen.ofNullable(ulimits);
-            return this;
+
+        public Builder ulimits(List<TaskDefinitionUlimitArgs> ulimits) {
+            return ulimits(Output.of(ulimits));
         }
+
         public Builder ulimits(TaskDefinitionUlimitArgs... ulimits) {
             return ulimits(List.of(ulimits));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
+
+        public Builder user(String user) {
+            return user(Output.of(user));
         }
+
         public Builder volumesFrom(@Nullable Output<List<TaskDefinitionVolumeFromArgs>> volumesFrom) {
-            this.volumesFrom = volumesFrom;
+            $.volumesFrom = volumesFrom;
             return this;
         }
-        public Builder volumesFrom(@Nullable List<TaskDefinitionVolumeFromArgs> volumesFrom) {
-            this.volumesFrom = Codegen.ofNullable(volumesFrom);
-            return this;
+
+        public Builder volumesFrom(List<TaskDefinitionVolumeFromArgs> volumesFrom) {
+            return volumesFrom(Output.of(volumesFrom));
         }
+
         public Builder volumesFrom(TaskDefinitionVolumeFromArgs... volumesFrom) {
             return volumesFrom(List.of(volumesFrom));
         }
+
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
-            this.workingDirectory = workingDirectory;
+            $.workingDirectory = workingDirectory;
             return this;
         }
-        public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Codegen.ofNullable(workingDirectory);
-            return this;
-        }        public TaskDefinitionContainerDefinitionArgs build() {
-            return new TaskDefinitionContainerDefinitionArgs(command, cpu, dependsOn, disableNetworking, dnsSearchDomains, dnsServers, dockerLabels, dockerSecurityOptions, entryPoint, environment, environmentFiles, essential, extraHosts, firelensConfiguration, healthCheck, hostname, image, interactive, links, linuxParameters, logConfiguration, memory, memoryReservation, mountPoints, name, portMappings, privileged, pseudoTerminal, readonlyRootFilesystem, repositoryCredentials, resourceRequirements, secrets, startTimeout, stopTimeout, systemControls, ulimits, user, volumesFrom, workingDirectory);
+
+        public Builder workingDirectory(String workingDirectory) {
+            return workingDirectory(Output.of(workingDirectory));
+        }
+
+        public TaskDefinitionContainerDefinitionArgs build() {
+            return $;
         }
     }
+
 }

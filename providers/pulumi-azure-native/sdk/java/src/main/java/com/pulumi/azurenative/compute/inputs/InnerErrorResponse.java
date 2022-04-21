@@ -23,10 +23,10 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errordetail")
-      private final @Nullable String errordetail;
+    private @Nullable String errordetail;
 
     public Optional<String> errordetail() {
-        return this.errordetail == null ? Optional.empty() : Optional.ofNullable(this.errordetail);
+        return Optional.ofNullable(this.errordetail);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exceptiontype")
-      private final @Nullable String exceptiontype;
+    private @Nullable String exceptiontype;
 
     public Optional<String> exceptiontype() {
-        return this.exceptiontype == null ? Optional.empty() : Optional.ofNullable(this.exceptiontype);
+        return Optional.ofNullable(this.exceptiontype);
     }
 
-    public InnerErrorResponse(
-        @Nullable String errordetail,
-        @Nullable String exceptiontype) {
-        this.errordetail = errordetail;
-        this.exceptiontype = exceptiontype;
-    }
+    private InnerErrorResponse() {}
 
-    private InnerErrorResponse() {
-        this.errordetail = null;
-        this.exceptiontype = null;
+    private InnerErrorResponse(InnerErrorResponse $) {
+        this.errordetail = $.errordetail;
+        this.exceptiontype = $.exceptiontype;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InnerErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String errordetail;
-        private @Nullable String exceptiontype;
+        private InnerErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InnerErrorResponse();
         }
 
         public Builder(InnerErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errordetail = defaults.errordetail;
-    	      this.exceptiontype = defaults.exceptiontype;
+            $ = new InnerErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errordetail(@Nullable String errordetail) {
-            this.errordetail = errordetail;
+            $.errordetail = errordetail;
             return this;
         }
+
         public Builder exceptiontype(@Nullable String exceptiontype) {
-            this.exceptiontype = exceptiontype;
+            $.exceptiontype = exceptiontype;
             return this;
-        }        public InnerErrorResponse build() {
-            return new InnerErrorResponse(errordetail, exceptiontype);
+        }
+
+        public InnerErrorResponse build() {
+            return $;
         }
     }
+
 }

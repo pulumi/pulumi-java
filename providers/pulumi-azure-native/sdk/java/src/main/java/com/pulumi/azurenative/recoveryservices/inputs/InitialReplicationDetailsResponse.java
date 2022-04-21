@@ -23,10 +23,10 @@ public final class InitialReplicationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="initialReplicationProgressPercentage")
-      private final @Nullable String initialReplicationProgressPercentage;
+    private @Nullable String initialReplicationProgressPercentage;
 
     public Optional<String> initialReplicationProgressPercentage() {
-        return this.initialReplicationProgressPercentage == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationProgressPercentage);
+        return Optional.ofNullable(this.initialReplicationProgressPercentage);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class InitialReplicationDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="initialReplicationType")
-      private final @Nullable String initialReplicationType;
+    private @Nullable String initialReplicationType;
 
     public Optional<String> initialReplicationType() {
-        return this.initialReplicationType == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationType);
+        return Optional.ofNullable(this.initialReplicationType);
     }
 
-    public InitialReplicationDetailsResponse(
-        @Nullable String initialReplicationProgressPercentage,
-        @Nullable String initialReplicationType) {
-        this.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
-        this.initialReplicationType = initialReplicationType;
-    }
+    private InitialReplicationDetailsResponse() {}
 
-    private InitialReplicationDetailsResponse() {
-        this.initialReplicationProgressPercentage = null;
-        this.initialReplicationType = null;
+    private InitialReplicationDetailsResponse(InitialReplicationDetailsResponse $) {
+        this.initialReplicationProgressPercentage = $.initialReplicationProgressPercentage;
+        this.initialReplicationType = $.initialReplicationType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InitialReplicationDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String initialReplicationProgressPercentage;
-        private @Nullable String initialReplicationType;
+        private InitialReplicationDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InitialReplicationDetailsResponse();
         }
 
         public Builder(InitialReplicationDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initialReplicationProgressPercentage = defaults.initialReplicationProgressPercentage;
-    	      this.initialReplicationType = defaults.initialReplicationType;
+            $ = new InitialReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder initialReplicationProgressPercentage(@Nullable String initialReplicationProgressPercentage) {
-            this.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
+            $.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
             return this;
         }
+
         public Builder initialReplicationType(@Nullable String initialReplicationType) {
-            this.initialReplicationType = initialReplicationType;
+            $.initialReplicationType = initialReplicationType;
             return this;
-        }        public InitialReplicationDetailsResponse build() {
-            return new InitialReplicationDetailsResponse(initialReplicationProgressPercentage, initialReplicationType);
+        }
+
+        public InitialReplicationDetailsResponse build() {
+            return $;
         }
     }
+
 }

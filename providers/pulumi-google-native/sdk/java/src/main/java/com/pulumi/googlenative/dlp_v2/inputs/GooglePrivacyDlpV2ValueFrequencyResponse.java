@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends com.pulumi.r
      * 
      */
     @Import(name="count", required=true)
-      private final String count;
+    private String count;
 
     public String count() {
         return this.count;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends com.pulumi.r
      * 
      */
     @Import(name="value", required=true)
-      private final GooglePrivacyDlpV2ValueResponse value;
+    private GooglePrivacyDlpV2ValueResponse value;
 
     public GooglePrivacyDlpV2ValueResponse value() {
         return this.value;
     }
 
-    public GooglePrivacyDlpV2ValueFrequencyResponse(
-        String count,
-        GooglePrivacyDlpV2ValueResponse value) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GooglePrivacyDlpV2ValueFrequencyResponse() {}
 
-    private GooglePrivacyDlpV2ValueFrequencyResponse() {
-        this.count = null;
-        this.value = null;
+    private GooglePrivacyDlpV2ValueFrequencyResponse(GooglePrivacyDlpV2ValueFrequencyResponse $) {
+        this.count = $.count;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ValueFrequencyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String count;
-        private GooglePrivacyDlpV2ValueResponse value;
+        private GooglePrivacyDlpV2ValueFrequencyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ValueFrequencyResponse();
         }
 
         public Builder(GooglePrivacyDlpV2ValueFrequencyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.value = defaults.value;
+            $ = new GooglePrivacyDlpV2ValueFrequencyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(String count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder value(GooglePrivacyDlpV2ValueResponse value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GooglePrivacyDlpV2ValueFrequencyResponse build() {
-            return new GooglePrivacyDlpV2ValueFrequencyResponse(count, value);
+        }
+
+        public GooglePrivacyDlpV2ValueFrequencyResponse build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

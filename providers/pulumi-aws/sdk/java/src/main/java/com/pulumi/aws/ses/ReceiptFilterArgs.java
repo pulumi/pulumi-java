@@ -5,9 +5,9 @@ package com.pulumi.aws.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ReceiptFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cidr", required=true)
-      private final Output<String> cidr;
+    private Output<String> cidr;
 
     public Output<String> cidr() {
         return this.cidr;
@@ -31,10 +31,10 @@ public final class ReceiptFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class ReceiptFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
     }
 
-    public ReceiptFilterArgs(
-        Output<String> cidr,
-        @Nullable Output<String> name,
-        Output<String> policy) {
-        this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
-        this.name = name;
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-    }
+    private ReceiptFilterArgs() {}
 
-    private ReceiptFilterArgs() {
-        this.cidr = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
+    private ReceiptFilterArgs(ReceiptFilterArgs $) {
+        this.cidr = $.cidr;
+        this.name = $.name;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReceiptFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cidr;
-        private @Nullable Output<String> name;
-        private Output<String> policy;
+        private ReceiptFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReceiptFilterArgs();
         }
 
         public Builder(ReceiptFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
+            $ = new ReceiptFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(Output<String> cidr) {
-            this.cidr = Objects.requireNonNull(cidr);
+            $.cidr = cidr;
             return this;
         }
+
         public Builder cidr(String cidr) {
-            this.cidr = Output.of(Objects.requireNonNull(cidr));
-            return this;
+            return cidr(Output.of(cidr));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(String policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
-        }        public ReceiptFilterArgs build() {
-            return new ReceiptFilterArgs(cidr, name, policy);
+            return policy(Output.of(policy));
+        }
+
+        public ReceiptFilterArgs build() {
+            $.cidr = Objects.requireNonNull($.cidr, "expected parameter 'cidr' to be non-null");
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            return $;
         }
     }
+
 }

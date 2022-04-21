@@ -25,10 +25,10 @@ public final class VaultPropertiesResponseEncryption extends com.pulumi.resource
      * 
      */
     @Import(name="infrastructureEncryption")
-      private final @Nullable String infrastructureEncryption;
+    private @Nullable String infrastructureEncryption;
 
     public Optional<String> infrastructureEncryption() {
-        return this.infrastructureEncryption == null ? Optional.empty() : Optional.ofNullable(this.infrastructureEncryption);
+        return Optional.ofNullable(this.infrastructureEncryption);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VaultPropertiesResponseEncryption extends com.pulumi.resource
      * 
      */
     @Import(name="kekIdentity")
-      private final @Nullable CmkKekIdentityResponse kekIdentity;
+    private @Nullable CmkKekIdentityResponse kekIdentity;
 
     public Optional<CmkKekIdentityResponse> kekIdentity() {
-        return this.kekIdentity == null ? Optional.empty() : Optional.ofNullable(this.kekIdentity);
+        return Optional.ofNullable(this.kekIdentity);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class VaultPropertiesResponseEncryption extends com.pulumi.resource
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
+    private @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<CmkKeyVaultPropertiesResponse> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
-    public VaultPropertiesResponseEncryption(
-        @Nullable String infrastructureEncryption,
-        @Nullable CmkKekIdentityResponse kekIdentity,
-        @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
-        this.infrastructureEncryption = infrastructureEncryption;
-        this.kekIdentity = kekIdentity;
-        this.keyVaultProperties = keyVaultProperties;
-    }
+    private VaultPropertiesResponseEncryption() {}
 
-    private VaultPropertiesResponseEncryption() {
-        this.infrastructureEncryption = null;
-        this.kekIdentity = null;
-        this.keyVaultProperties = null;
+    private VaultPropertiesResponseEncryption(VaultPropertiesResponseEncryption $) {
+        this.infrastructureEncryption = $.infrastructureEncryption;
+        this.kekIdentity = $.kekIdentity;
+        this.keyVaultProperties = $.keyVaultProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultPropertiesResponseEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String infrastructureEncryption;
-        private @Nullable CmkKekIdentityResponse kekIdentity;
-        private @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
+        private VaultPropertiesResponseEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultPropertiesResponseEncryption();
         }
 
         public Builder(VaultPropertiesResponseEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infrastructureEncryption = defaults.infrastructureEncryption;
-    	      this.kekIdentity = defaults.kekIdentity;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
+            $ = new VaultPropertiesResponseEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder infrastructureEncryption(@Nullable String infrastructureEncryption) {
-            this.infrastructureEncryption = infrastructureEncryption;
+            $.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
+
         public Builder kekIdentity(@Nullable CmkKekIdentityResponse kekIdentity) {
-            this.kekIdentity = kekIdentity;
+            $.kekIdentity = kekIdentity;
             return this;
         }
+
         public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
-        }        public VaultPropertiesResponseEncryption build() {
-            return new VaultPropertiesResponseEncryption(infrastructureEncryption, kekIdentity, keyVaultProperties);
+        }
+
+        public VaultPropertiesResponseEncryption build() {
+            return $;
         }
     }
+
 }

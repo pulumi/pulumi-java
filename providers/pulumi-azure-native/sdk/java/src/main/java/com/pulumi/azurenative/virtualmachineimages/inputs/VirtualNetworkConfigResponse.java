@@ -23,45 +23,44 @@ public final class VirtualNetworkConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
-    public VirtualNetworkConfigResponse(@Nullable String subnetId) {
-        this.subnetId = subnetId;
-    }
+    private VirtualNetworkConfigResponse() {}
 
-    private VirtualNetworkConfigResponse() {
-        this.subnetId = null;
+    private VirtualNetworkConfigResponse(VirtualNetworkConfigResponse $) {
+        this.subnetId = $.subnetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String subnetId;
+        private VirtualNetworkConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkConfigResponse();
         }
 
         public Builder(VirtualNetworkConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
+            $ = new VirtualNetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
-        }        public VirtualNetworkConfigResponse build() {
-            return new VirtualNetworkConfigResponse(subnetId);
+        }
+
+        public VirtualNetworkConfigResponse build() {
+            return $;
         }
     }
+
 }

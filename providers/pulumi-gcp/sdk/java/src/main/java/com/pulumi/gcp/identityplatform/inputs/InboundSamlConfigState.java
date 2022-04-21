@@ -5,12 +5,12 @@ package com.pulumi.gcp.identityplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigGetArgs;
 import com.pulumi.gcp.identityplatform.inputs.InboundSamlConfigSpConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="idpConfig")
-      private final @Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig;
+    private @Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig;
 
-    public Output<InboundSamlConfigIdpConfigGetArgs> idpConfig() {
-        return this.idpConfig == null ? Codegen.empty() : this.idpConfig;
+    public Optional<Output<InboundSamlConfigIdpConfigGetArgs>> idpConfig() {
+        return Optional.ofNullable(this.idpConfig);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -84,115 +84,98 @@ public final class InboundSamlConfigState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="spConfig")
-      private final @Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig;
+    private @Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig;
 
-    public Output<InboundSamlConfigSpConfigGetArgs> spConfig() {
-        return this.spConfig == null ? Codegen.empty() : this.spConfig;
+    public Optional<Output<InboundSamlConfigSpConfigGetArgs>> spConfig() {
+        return Optional.ofNullable(this.spConfig);
     }
 
-    public InboundSamlConfigState(
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig) {
-        this.displayName = displayName;
-        this.enabled = enabled;
-        this.idpConfig = idpConfig;
-        this.name = name;
-        this.project = project;
-        this.spConfig = spConfig;
-    }
+    private InboundSamlConfigState() {}
 
-    private InboundSamlConfigState() {
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.idpConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.spConfig = Codegen.empty();
+    private InboundSamlConfigState(InboundSamlConfigState $) {
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.idpConfig = $.idpConfig;
+        this.name = $.name;
+        this.project = $.project;
+        this.spConfig = $.spConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InboundSamlConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig;
+        private InboundSamlConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InboundSamlConfigState();
         }
 
         public Builder(InboundSamlConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.idpConfig = defaults.idpConfig;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.spConfig = defaults.spConfig;
+            $ = new InboundSamlConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder idpConfig(@Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig) {
-            this.idpConfig = idpConfig;
+            $.idpConfig = idpConfig;
             return this;
         }
-        public Builder idpConfig(@Nullable InboundSamlConfigIdpConfigGetArgs idpConfig) {
-            this.idpConfig = Codegen.ofNullable(idpConfig);
-            return this;
+
+        public Builder idpConfig(InboundSamlConfigIdpConfigGetArgs idpConfig) {
+            return idpConfig(Output.of(idpConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder spConfig(@Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig) {
-            this.spConfig = spConfig;
+            $.spConfig = spConfig;
             return this;
         }
-        public Builder spConfig(@Nullable InboundSamlConfigSpConfigGetArgs spConfig) {
-            this.spConfig = Codegen.ofNullable(spConfig);
-            return this;
-        }        public InboundSamlConfigState build() {
-            return new InboundSamlConfigState(displayName, enabled, idpConfig, name, project, spConfig);
+
+        public Builder spConfig(InboundSamlConfigSpConfigGetArgs spConfig) {
+            return spConfig(Output.of(spConfig));
+        }
+
+        public InboundSamlConfigState build() {
+            return $;
         }
     }
+
 }

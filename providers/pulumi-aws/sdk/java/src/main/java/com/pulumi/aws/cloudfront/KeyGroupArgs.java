@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class KeyGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class KeyGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="items", required=true)
-      private final Output<List<String>> items;
+    private Output<List<String>> items;
 
     public Output<List<String>> items() {
         return this.items;
@@ -43,79 +43,73 @@ public final class KeyGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public KeyGroupArgs(
-        @Nullable Output<String> comment,
-        Output<List<String>> items,
-        @Nullable Output<String> name) {
-        this.comment = comment;
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.name = name;
-    }
+    private KeyGroupArgs() {}
 
-    private KeyGroupArgs() {
-        this.comment = Codegen.empty();
-        this.items = Codegen.empty();
-        this.name = Codegen.empty();
+    private KeyGroupArgs(KeyGroupArgs $) {
+        this.comment = $.comment;
+        this.items = $.items;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private Output<List<String>> items;
-        private @Nullable Output<String> name;
+        private KeyGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyGroupArgs();
         }
 
         public Builder(KeyGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.items = defaults.items;
-    	      this.name = defaults.name;
+            $ = new KeyGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder items(Output<List<String>> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(List<String> items) {
-            this.items = Output.of(Objects.requireNonNull(items));
-            return this;
+            return items(Output.of(items));
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public KeyGroupArgs build() {
-            return new KeyGroupArgs(comment, items, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public KeyGroupArgs build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

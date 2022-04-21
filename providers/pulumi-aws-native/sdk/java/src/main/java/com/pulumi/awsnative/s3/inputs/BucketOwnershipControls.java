@@ -14,48 +14,49 @@ public final class BucketOwnershipControls extends com.pulumi.resources.InvokeAr
     public static final BucketOwnershipControls Empty = new BucketOwnershipControls();
 
     @Import(name="rules", required=true)
-      private final List<BucketOwnershipControlsRule> rules;
+    private List<BucketOwnershipControlsRule> rules;
 
     public List<BucketOwnershipControlsRule> rules() {
         return this.rules;
     }
 
-    public BucketOwnershipControls(List<BucketOwnershipControlsRule> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private BucketOwnershipControls() {}
 
-    private BucketOwnershipControls() {
-        this.rules = List.of();
+    private BucketOwnershipControls(BucketOwnershipControls $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketOwnershipControls defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BucketOwnershipControlsRule> rules;
+        private BucketOwnershipControls $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketOwnershipControls();
         }
 
         public Builder(BucketOwnershipControls defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new BucketOwnershipControls(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(List<BucketOwnershipControlsRule> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(BucketOwnershipControlsRule... rules) {
             return rules(List.of(rules));
-        }        public BucketOwnershipControls build() {
-            return new BucketOwnershipControls(rules);
+        }
+
+        public BucketOwnershipControls build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

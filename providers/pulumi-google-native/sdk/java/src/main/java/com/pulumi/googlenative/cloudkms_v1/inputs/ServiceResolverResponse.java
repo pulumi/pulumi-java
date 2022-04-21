@@ -23,7 +23,7 @@ public final class ServiceResolverResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="endpointFilter", required=true)
-      private final String endpointFilter;
+    private String endpointFilter;
 
     public String endpointFilter() {
         return this.endpointFilter;
@@ -34,7 +34,7 @@ public final class ServiceResolverResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hostname", required=true)
-      private final String hostname;
+    private String hostname;
 
     public String hostname() {
         return this.hostname;
@@ -45,7 +45,7 @@ public final class ServiceResolverResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serverCertificates", required=true)
-      private final List<CertificateResponse> serverCertificates;
+    private List<CertificateResponse> serverCertificates;
 
     public List<CertificateResponse> serverCertificates() {
         return this.serverCertificates;
@@ -56,76 +56,70 @@ public final class ServiceResolverResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="serviceDirectoryService", required=true)
-      private final String serviceDirectoryService;
+    private String serviceDirectoryService;
 
     public String serviceDirectoryService() {
         return this.serviceDirectoryService;
     }
 
-    public ServiceResolverResponse(
-        String endpointFilter,
-        String hostname,
-        List<CertificateResponse> serverCertificates,
-        String serviceDirectoryService) {
-        this.endpointFilter = Objects.requireNonNull(endpointFilter, "expected parameter 'endpointFilter' to be non-null");
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-        this.serverCertificates = Objects.requireNonNull(serverCertificates, "expected parameter 'serverCertificates' to be non-null");
-        this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService, "expected parameter 'serviceDirectoryService' to be non-null");
-    }
+    private ServiceResolverResponse() {}
 
-    private ServiceResolverResponse() {
-        this.endpointFilter = null;
-        this.hostname = null;
-        this.serverCertificates = List.of();
-        this.serviceDirectoryService = null;
+    private ServiceResolverResponse(ServiceResolverResponse $) {
+        this.endpointFilter = $.endpointFilter;
+        this.hostname = $.hostname;
+        this.serverCertificates = $.serverCertificates;
+        this.serviceDirectoryService = $.serviceDirectoryService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceResolverResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointFilter;
-        private String hostname;
-        private List<CertificateResponse> serverCertificates;
-        private String serviceDirectoryService;
+        private ServiceResolverResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceResolverResponse();
         }
 
         public Builder(ServiceResolverResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointFilter = defaults.endpointFilter;
-    	      this.hostname = defaults.hostname;
-    	      this.serverCertificates = defaults.serverCertificates;
-    	      this.serviceDirectoryService = defaults.serviceDirectoryService;
+            $ = new ServiceResolverResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointFilter(String endpointFilter) {
-            this.endpointFilter = Objects.requireNonNull(endpointFilter);
+            $.endpointFilter = endpointFilter;
             return this;
         }
+
         public Builder hostname(String hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder serverCertificates(List<CertificateResponse> serverCertificates) {
-            this.serverCertificates = Objects.requireNonNull(serverCertificates);
+            $.serverCertificates = serverCertificates;
             return this;
         }
+
         public Builder serverCertificates(CertificateResponse... serverCertificates) {
             return serverCertificates(List.of(serverCertificates));
         }
+
         public Builder serviceDirectoryService(String serviceDirectoryService) {
-            this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
+            $.serviceDirectoryService = serviceDirectoryService;
             return this;
-        }        public ServiceResolverResponse build() {
-            return new ServiceResolverResponse(endpointFilter, hostname, serverCertificates, serviceDirectoryService);
+        }
+
+        public ServiceResolverResponse build() {
+            $.endpointFilter = Objects.requireNonNull($.endpointFilter, "expected parameter 'endpointFilter' to be non-null");
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            $.serverCertificates = Objects.requireNonNull($.serverCertificates, "expected parameter 'serverCertificates' to be non-null");
+            $.serviceDirectoryService = Objects.requireNonNull($.serviceDirectoryService, "expected parameter 'serviceDirectoryService' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.redis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.redis_v1beta1.enums.WeeklyMaintenanceWindowDay;
 import com.pulumi.googlenative.redis_v1beta1.inputs.TimeOfDayArgs;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class WeeklyMaintenanceWindowArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="day", required=true)
-      private final Output<WeeklyMaintenanceWindowDay> day;
+    private Output<WeeklyMaintenanceWindowDay> day;
 
     public Output<WeeklyMaintenanceWindowDay> day() {
         return this.day;
@@ -35,63 +34,60 @@ public final class WeeklyMaintenanceWindowArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<TimeOfDayArgs> startTime;
+    private Output<TimeOfDayArgs> startTime;
 
     public Output<TimeOfDayArgs> startTime() {
         return this.startTime;
     }
 
-    public WeeklyMaintenanceWindowArgs(
-        Output<WeeklyMaintenanceWindowDay> day,
-        Output<TimeOfDayArgs> startTime) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private WeeklyMaintenanceWindowArgs() {}
 
-    private WeeklyMaintenanceWindowArgs() {
-        this.day = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private WeeklyMaintenanceWindowArgs(WeeklyMaintenanceWindowArgs $) {
+        this.day = $.day;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeeklyMaintenanceWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<WeeklyMaintenanceWindowDay> day;
-        private Output<TimeOfDayArgs> startTime;
+        private WeeklyMaintenanceWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeeklyMaintenanceWindowArgs();
         }
 
         public Builder(WeeklyMaintenanceWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.startTime = defaults.startTime;
+            $ = new WeeklyMaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(Output<WeeklyMaintenanceWindowDay> day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder day(WeeklyMaintenanceWindowDay day) {
-            this.day = Output.of(Objects.requireNonNull(day));
-            return this;
+            return day(Output.of(day));
         }
+
         public Builder startTime(Output<TimeOfDayArgs> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(TimeOfDayArgs startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
-        }        public WeeklyMaintenanceWindowArgs build() {
-            return new WeeklyMaintenanceWindowArgs(day, startTime);
+            return startTime(Output.of(startTime));
+        }
+
+        public WeeklyMaintenanceWindowArgs build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

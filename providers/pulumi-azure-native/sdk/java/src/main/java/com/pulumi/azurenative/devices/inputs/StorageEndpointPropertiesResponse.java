@@ -23,10 +23,10 @@ public final class StorageEndpointPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable String authenticationType;
+    private @Nullable String authenticationType;
 
     public Optional<String> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class StorageEndpointPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="connectionString", required=true)
-      private final String connectionString;
+    private String connectionString;
 
     public String connectionString() {
         return this.connectionString;
@@ -45,7 +45,7 @@ public final class StorageEndpointPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -56,73 +56,64 @@ public final class StorageEndpointPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sasTtlAsIso8601")
-      private final @Nullable String sasTtlAsIso8601;
+    private @Nullable String sasTtlAsIso8601;
 
     public Optional<String> sasTtlAsIso8601() {
-        return this.sasTtlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.sasTtlAsIso8601);
+        return Optional.ofNullable(this.sasTtlAsIso8601);
     }
 
-    public StorageEndpointPropertiesResponse(
-        @Nullable String authenticationType,
-        String connectionString,
-        String containerName,
-        @Nullable String sasTtlAsIso8601) {
-        this.authenticationType = authenticationType;
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.sasTtlAsIso8601 = sasTtlAsIso8601;
-    }
+    private StorageEndpointPropertiesResponse() {}
 
-    private StorageEndpointPropertiesResponse() {
-        this.authenticationType = null;
-        this.connectionString = null;
-        this.containerName = null;
-        this.sasTtlAsIso8601 = null;
+    private StorageEndpointPropertiesResponse(StorageEndpointPropertiesResponse $) {
+        this.authenticationType = $.authenticationType;
+        this.connectionString = $.connectionString;
+        this.containerName = $.containerName;
+        this.sasTtlAsIso8601 = $.sasTtlAsIso8601;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageEndpointPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String authenticationType;
-        private String connectionString;
-        private String containerName;
-        private @Nullable String sasTtlAsIso8601;
+        private StorageEndpointPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageEndpointPropertiesResponse();
         }
 
         public Builder(StorageEndpointPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.connectionString = defaults.connectionString;
-    	      this.containerName = defaults.containerName;
-    	      this.sasTtlAsIso8601 = defaults.sasTtlAsIso8601;
+            $ = new StorageEndpointPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder connectionString(String connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder sasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
-            this.sasTtlAsIso8601 = sasTtlAsIso8601;
+            $.sasTtlAsIso8601 = sasTtlAsIso8601;
             return this;
-        }        public StorageEndpointPropertiesResponse build() {
-            return new StorageEndpointPropertiesResponse(authenticationType, connectionString, containerName, sasTtlAsIso8601);
+        }
+
+        public StorageEndpointPropertiesResponse build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            return $;
         }
     }
+
 }

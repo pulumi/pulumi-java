@@ -24,10 +24,10 @@ public final class ApplicationGetEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="destinationPort")
-      private final @Nullable Integer destinationPort;
+    private @Nullable Integer destinationPort;
 
     public Optional<Integer> destinationPort() {
-        return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
+        return Optional.ofNullable(this.destinationPort);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationGetEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationGetEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable String privateIPAddress;
+    private @Nullable String privateIPAddress;
 
     public Optional<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class ApplicationGetEndpointResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="publicPort")
-      private final @Nullable Integer publicPort;
+    private @Nullable Integer publicPort;
 
     public Optional<Integer> publicPort() {
-        return this.publicPort == null ? Optional.empty() : Optional.ofNullable(this.publicPort);
+        return Optional.ofNullable(this.publicPort);
     }
 
-    public ApplicationGetEndpointResponse(
-        @Nullable Integer destinationPort,
-        @Nullable String location,
-        @Nullable String privateIPAddress,
-        @Nullable Integer publicPort) {
-        this.destinationPort = destinationPort;
-        this.location = location;
-        this.privateIPAddress = privateIPAddress;
-        this.publicPort = publicPort;
-    }
+    private ApplicationGetEndpointResponse() {}
 
-    private ApplicationGetEndpointResponse() {
-        this.destinationPort = null;
-        this.location = null;
-        this.privateIPAddress = null;
-        this.publicPort = null;
+    private ApplicationGetEndpointResponse(ApplicationGetEndpointResponse $) {
+        this.destinationPort = $.destinationPort;
+        this.location = $.location;
+        this.privateIPAddress = $.privateIPAddress;
+        this.publicPort = $.publicPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGetEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer destinationPort;
-        private @Nullable String location;
-        private @Nullable String privateIPAddress;
-        private @Nullable Integer publicPort;
+        private ApplicationGetEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGetEndpointResponse();
         }
 
         public Builder(ApplicationGetEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.location = defaults.location;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.publicPort = defaults.publicPort;
+            $ = new ApplicationGetEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = destinationPort;
+            $.destinationPort = destinationPort;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder publicPort(@Nullable Integer publicPort) {
-            this.publicPort = publicPort;
+            $.publicPort = publicPort;
             return this;
-        }        public ApplicationGetEndpointResponse build() {
-            return new ApplicationGetEndpointResponse(destinationPort, location, privateIPAddress, publicPort);
+        }
+
+        public ApplicationGetEndpointResponse build() {
+            return $;
         }
     }
+
 }

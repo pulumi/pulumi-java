@@ -5,7 +5,6 @@ package com.pulumi.gcp.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,70 +18,67 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgId", required=true)
-      private final Output<String> orgId;
+    private Output<String> orgId;
 
     public Output<String> orgId() {
         return this.orgId;
     }
 
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public IAMPolicyArgs(
-        Output<String> orgId,
-        Output<String> policyData) {
-        this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private IAMPolicyArgs() {}
 
-    private IAMPolicyArgs() {
-        this.orgId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private IAMPolicyArgs(IAMPolicyArgs $) {
+        this.orgId = $.orgId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> orgId;
-        private Output<String> policyData;
+        private IAMPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMPolicyArgs();
         }
 
         public Builder(IAMPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.orgId = defaults.orgId;
-    	      this.policyData = defaults.policyData;
+            $ = new IAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder orgId(Output<String> orgId) {
-            this.orgId = Objects.requireNonNull(orgId);
+            $.orgId = orgId;
             return this;
         }
+
         public Builder orgId(String orgId) {
-            this.orgId = Output.of(Objects.requireNonNull(orgId));
-            return this;
+            return orgId(Output.of(orgId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public IAMPolicyArgs build() {
-            return new IAMPolicyArgs(orgId, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public IAMPolicyArgs build() {
+            $.orgId = Objects.requireNonNull($.orgId, "expected parameter 'orgId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

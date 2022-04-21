@@ -29,10 +29,10 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="audiences")
-      private final @Nullable List<String> audiences;
+    private @Nullable List<String> audiences;
 
-    public List<String> audiences() {
-        return this.audiences == null ? List.of() : this.audiences;
+    public Optional<List<String>> audiences() {
+        return Optional.ofNullable(this.audiences);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="claims")
-      private final @Nullable List<TokenClaimResponse> claims;
+    private @Nullable List<TokenClaimResponse> claims;
 
-    public List<TokenClaimResponse> claims() {
-        return this.claims == null ? List.of() : this.claims;
+    public Optional<List<TokenClaimResponse>> claims() {
+        return Optional.ofNullable(this.claims);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="issuers")
-      private final @Nullable List<String> issuers;
+    private @Nullable List<String> issuers;
 
-    public List<String> issuers() {
-        return this.issuers == null ? List.of() : this.issuers;
+    public Optional<List<String>> issuers() {
+        return Optional.ofNullable(this.issuers);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="keys")
-      private final @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
+    private @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
 
-    public List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys() {
-        return this.keys == null ? List.of() : this.keys;
+    public Optional<List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -74,94 +74,85 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public JwtAuthenticationResponse(
-        @Nullable List<String> audiences,
-        @Nullable List<TokenClaimResponse> claims,
-        @Nullable List<String> issuers,
-        @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys,
-        String type) {
-        this.audiences = audiences;
-        this.claims = claims;
-        this.issuers = issuers;
-        this.keys = keys;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private JwtAuthenticationResponse() {}
 
-    private JwtAuthenticationResponse() {
-        this.audiences = List.of();
-        this.claims = List.of();
-        this.issuers = List.of();
-        this.keys = List.of();
-        this.type = null;
+    private JwtAuthenticationResponse(JwtAuthenticationResponse $) {
+        this.audiences = $.audiences;
+        this.claims = $.claims;
+        this.issuers = $.issuers;
+        this.keys = $.keys;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JwtAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> audiences;
-        private @Nullable List<TokenClaimResponse> claims;
-        private @Nullable List<String> issuers;
-        private @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
-        private String type;
+        private JwtAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JwtAuthenticationResponse();
         }
 
         public Builder(JwtAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audiences = defaults.audiences;
-    	      this.claims = defaults.claims;
-    	      this.issuers = defaults.issuers;
-    	      this.keys = defaults.keys;
-    	      this.type = defaults.type;
+            $ = new JwtAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = audiences;
+            $.audiences = audiences;
             return this;
         }
+
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
+
         public Builder claims(@Nullable List<TokenClaimResponse> claims) {
-            this.claims = claims;
+            $.claims = claims;
             return this;
         }
+
         public Builder claims(TokenClaimResponse... claims) {
             return claims(List.of(claims));
         }
+
         public Builder issuers(@Nullable List<String> issuers) {
-            this.issuers = issuers;
+            $.issuers = issuers;
             return this;
         }
+
         public Builder issuers(String... issuers) {
             return issuers(List.of(issuers));
         }
+
         public Builder keys(@Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
+
         public Builder keys(Either<EccTokenKeyResponse,RsaTokenKeyResponse>... keys) {
             return keys(List.of(keys));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public JwtAuthenticationResponse build() {
-            return new JwtAuthenticationResponse(audiences, claims, issuers, keys, type);
+        }
+
+        public JwtAuthenticationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

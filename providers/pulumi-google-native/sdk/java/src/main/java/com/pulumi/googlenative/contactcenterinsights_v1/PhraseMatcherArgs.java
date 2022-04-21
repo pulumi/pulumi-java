@@ -5,7 +5,6 @@ package com.pulumi.googlenative.contactcenterinsights_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherRoleMatch;
 import com.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherType;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs;
@@ -13,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="active")
-      private final @Nullable Output<Boolean> active;
+    private @Nullable Output<Boolean> active;
 
-    public Output<Boolean> active() {
-        return this.active == null ? Codegen.empty() : this.active;
+    public Optional<Output<Boolean>> active() {
+        return Optional.ofNullable(this.active);
     }
 
     /**
@@ -36,17 +36,17 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,17 +65,17 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phraseMatchRuleGroups")
-      private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
+    private @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
 
-    public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups() {
-        return this.phraseMatchRuleGroups == null ? Codegen.empty() : this.phraseMatchRuleGroups;
+    public Optional<Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>>> phraseMatchRuleGroups() {
+        return Optional.ofNullable(this.phraseMatchRuleGroups);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleMatch")
-      private final @Nullable Output<PhraseMatcherRoleMatch> roleMatch;
+    private @Nullable Output<PhraseMatcherRoleMatch> roleMatch;
 
-    public Output<PhraseMatcherRoleMatch> roleMatch() {
-        return this.roleMatch == null ? Codegen.empty() : this.roleMatch;
+    public Optional<Output<PhraseMatcherRoleMatch>> roleMatch() {
+        return Optional.ofNullable(this.roleMatch);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<PhraseMatcherType> type;
+    private Output<PhraseMatcherType> type;
 
     public Output<PhraseMatcherType> type() {
         return this.type;
@@ -105,157 +105,133 @@ public final class PhraseMatcherArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="versionTag")
-      private final @Nullable Output<String> versionTag;
+    private @Nullable Output<String> versionTag;
 
-    public Output<String> versionTag() {
-        return this.versionTag == null ? Codegen.empty() : this.versionTag;
+    public Optional<Output<String>> versionTag() {
+        return Optional.ofNullable(this.versionTag);
     }
 
-    public PhraseMatcherArgs(
-        @Nullable Output<Boolean> active,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups,
-        @Nullable Output<String> project,
-        @Nullable Output<PhraseMatcherRoleMatch> roleMatch,
-        Output<PhraseMatcherType> type,
-        @Nullable Output<String> versionTag) {
-        this.active = active;
-        this.displayName = displayName;
-        this.location = location;
-        this.name = name;
-        this.phraseMatchRuleGroups = phraseMatchRuleGroups;
-        this.project = project;
-        this.roleMatch = roleMatch;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.versionTag = versionTag;
-    }
+    private PhraseMatcherArgs() {}
 
-    private PhraseMatcherArgs() {
-        this.active = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.phraseMatchRuleGroups = Codegen.empty();
-        this.project = Codegen.empty();
-        this.roleMatch = Codegen.empty();
-        this.type = Codegen.empty();
-        this.versionTag = Codegen.empty();
+    private PhraseMatcherArgs(PhraseMatcherArgs $) {
+        this.active = $.active;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.name = $.name;
+        this.phraseMatchRuleGroups = $.phraseMatchRuleGroups;
+        this.project = $.project;
+        this.roleMatch = $.roleMatch;
+        this.type = $.type;
+        this.versionTag = $.versionTag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PhraseMatcherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> active;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
-        private @Nullable Output<String> project;
-        private @Nullable Output<PhraseMatcherRoleMatch> roleMatch;
-        private Output<PhraseMatcherType> type;
-        private @Nullable Output<String> versionTag;
+        private PhraseMatcherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PhraseMatcherArgs();
         }
 
         public Builder(PhraseMatcherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.phraseMatchRuleGroups = defaults.phraseMatchRuleGroups;
-    	      this.project = defaults.project;
-    	      this.roleMatch = defaults.roleMatch;
-    	      this.type = defaults.type;
-    	      this.versionTag = defaults.versionTag;
+            $ = new PhraseMatcherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder active(@Nullable Output<Boolean> active) {
-            this.active = active;
+            $.active = active;
             return this;
         }
-        public Builder active(@Nullable Boolean active) {
-            this.active = Codegen.ofNullable(active);
-            return this;
+
+        public Builder active(Boolean active) {
+            return active(Output.of(active));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder phraseMatchRuleGroups(@Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups) {
-            this.phraseMatchRuleGroups = phraseMatchRuleGroups;
+            $.phraseMatchRuleGroups = phraseMatchRuleGroups;
             return this;
         }
-        public Builder phraseMatchRuleGroups(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs> phraseMatchRuleGroups) {
-            this.phraseMatchRuleGroups = Codegen.ofNullable(phraseMatchRuleGroups);
-            return this;
+
+        public Builder phraseMatchRuleGroups(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs> phraseMatchRuleGroups) {
+            return phraseMatchRuleGroups(Output.of(phraseMatchRuleGroups));
         }
+
         public Builder phraseMatchRuleGroups(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs... phraseMatchRuleGroups) {
             return phraseMatchRuleGroups(List.of(phraseMatchRuleGroups));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder roleMatch(@Nullable Output<PhraseMatcherRoleMatch> roleMatch) {
-            this.roleMatch = roleMatch;
+            $.roleMatch = roleMatch;
             return this;
         }
-        public Builder roleMatch(@Nullable PhraseMatcherRoleMatch roleMatch) {
-            this.roleMatch = Codegen.ofNullable(roleMatch);
-            return this;
+
+        public Builder roleMatch(PhraseMatcherRoleMatch roleMatch) {
+            return roleMatch(Output.of(roleMatch));
         }
+
         public Builder type(Output<PhraseMatcherType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(PhraseMatcherType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder versionTag(@Nullable Output<String> versionTag) {
-            this.versionTag = versionTag;
+            $.versionTag = versionTag;
             return this;
         }
-        public Builder versionTag(@Nullable String versionTag) {
-            this.versionTag = Codegen.ofNullable(versionTag);
-            return this;
-        }        public PhraseMatcherArgs build() {
-            return new PhraseMatcherArgs(active, displayName, location, name, phraseMatchRuleGroups, project, roleMatch, type, versionTag);
+
+        public Builder versionTag(String versionTag) {
+            return versionTag(Output.of(versionTag));
+        }
+
+        public PhraseMatcherArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

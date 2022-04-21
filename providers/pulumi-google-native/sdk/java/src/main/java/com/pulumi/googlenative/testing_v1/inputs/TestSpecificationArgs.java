@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.AndroidInstrumentationTestArgs;
 import com.pulumi.googlenative.testing_v1.inputs.AndroidRoboTestArgs;
 import com.pulumi.googlenative.testing_v1.inputs.AndroidTestLoopArgs;
@@ -16,6 +15,7 @@ import com.pulumi.googlenative.testing_v1.inputs.TestSetupArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="androidInstrumentationTest")
-      private final @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
+    private @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
-    public Output<AndroidInstrumentationTestArgs> androidInstrumentationTest() {
-        return this.androidInstrumentationTest == null ? Codegen.empty() : this.androidInstrumentationTest;
+    public Optional<Output<AndroidInstrumentationTestArgs>> androidInstrumentationTest() {
+        return Optional.ofNullable(this.androidInstrumentationTest);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="androidRoboTest")
-      private final @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
+    private @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
 
-    public Output<AndroidRoboTestArgs> androidRoboTest() {
-        return this.androidRoboTest == null ? Codegen.empty() : this.androidRoboTest;
+    public Optional<Output<AndroidRoboTestArgs>> androidRoboTest() {
+        return Optional.ofNullable(this.androidRoboTest);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="androidTestLoop")
-      private final @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
+    private @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
 
-    public Output<AndroidTestLoopArgs> androidTestLoop() {
-        return this.androidTestLoop == null ? Codegen.empty() : this.androidTestLoop;
+    public Optional<Output<AndroidTestLoopArgs>> androidTestLoop() {
+        return Optional.ofNullable(this.androidTestLoop);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="disablePerformanceMetrics")
-      private final @Nullable Output<Boolean> disablePerformanceMetrics;
+    private @Nullable Output<Boolean> disablePerformanceMetrics;
 
-    public Output<Boolean> disablePerformanceMetrics() {
-        return this.disablePerformanceMetrics == null ? Codegen.empty() : this.disablePerformanceMetrics;
+    public Optional<Output<Boolean>> disablePerformanceMetrics() {
+        return Optional.ofNullable(this.disablePerformanceMetrics);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="disableVideoRecording")
-      private final @Nullable Output<Boolean> disableVideoRecording;
+    private @Nullable Output<Boolean> disableVideoRecording;
 
-    public Output<Boolean> disableVideoRecording() {
-        return this.disableVideoRecording == null ? Codegen.empty() : this.disableVideoRecording;
+    public Optional<Output<Boolean>> disableVideoRecording() {
+        return Optional.ofNullable(this.disableVideoRecording);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="iosTestLoop")
-      private final @Nullable Output<IosTestLoopArgs> iosTestLoop;
+    private @Nullable Output<IosTestLoopArgs> iosTestLoop;
 
-    public Output<IosTestLoopArgs> iosTestLoop() {
-        return this.iosTestLoop == null ? Codegen.empty() : this.iosTestLoop;
+    public Optional<Output<IosTestLoopArgs>> iosTestLoop() {
+        return Optional.ofNullable(this.iosTestLoop);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="iosTestSetup")
-      private final @Nullable Output<IosTestSetupArgs> iosTestSetup;
+    private @Nullable Output<IosTestSetupArgs> iosTestSetup;
 
-    public Output<IosTestSetupArgs> iosTestSetup() {
-        return this.iosTestSetup == null ? Codegen.empty() : this.iosTestSetup;
+    public Optional<Output<IosTestSetupArgs>> iosTestSetup() {
+        return Optional.ofNullable(this.iosTestSetup);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="iosXcTest")
-      private final @Nullable Output<IosXcTestArgs> iosXcTest;
+    private @Nullable Output<IosXcTestArgs> iosXcTest;
 
-    public Output<IosXcTestArgs> iosXcTest() {
-        return this.iosXcTest == null ? Codegen.empty() : this.iosXcTest;
+    public Optional<Output<IosXcTestArgs>> iosXcTest() {
+        return Optional.ofNullable(this.iosXcTest);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="testSetup")
-      private final @Nullable Output<TestSetupArgs> testSetup;
+    private @Nullable Output<TestSetupArgs> testSetup;
 
-    public Output<TestSetupArgs> testSetup() {
-        return this.testSetup == null ? Codegen.empty() : this.testSetup;
+    public Optional<Output<TestSetupArgs>> testSetup() {
+        return Optional.ofNullable(this.testSetup);
     }
 
     /**
@@ -131,167 +131,138 @@ public final class TestSpecificationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="testTimeout")
-      private final @Nullable Output<String> testTimeout;
+    private @Nullable Output<String> testTimeout;
 
-    public Output<String> testTimeout() {
-        return this.testTimeout == null ? Codegen.empty() : this.testTimeout;
+    public Optional<Output<String>> testTimeout() {
+        return Optional.ofNullable(this.testTimeout);
     }
 
-    public TestSpecificationArgs(
-        @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest,
-        @Nullable Output<AndroidRoboTestArgs> androidRoboTest,
-        @Nullable Output<AndroidTestLoopArgs> androidTestLoop,
-        @Nullable Output<Boolean> disablePerformanceMetrics,
-        @Nullable Output<Boolean> disableVideoRecording,
-        @Nullable Output<IosTestLoopArgs> iosTestLoop,
-        @Nullable Output<IosTestSetupArgs> iosTestSetup,
-        @Nullable Output<IosXcTestArgs> iosXcTest,
-        @Nullable Output<TestSetupArgs> testSetup,
-        @Nullable Output<String> testTimeout) {
-        this.androidInstrumentationTest = androidInstrumentationTest;
-        this.androidRoboTest = androidRoboTest;
-        this.androidTestLoop = androidTestLoop;
-        this.disablePerformanceMetrics = disablePerformanceMetrics;
-        this.disableVideoRecording = disableVideoRecording;
-        this.iosTestLoop = iosTestLoop;
-        this.iosTestSetup = iosTestSetup;
-        this.iosXcTest = iosXcTest;
-        this.testSetup = testSetup;
-        this.testTimeout = testTimeout;
-    }
+    private TestSpecificationArgs() {}
 
-    private TestSpecificationArgs() {
-        this.androidInstrumentationTest = Codegen.empty();
-        this.androidRoboTest = Codegen.empty();
-        this.androidTestLoop = Codegen.empty();
-        this.disablePerformanceMetrics = Codegen.empty();
-        this.disableVideoRecording = Codegen.empty();
-        this.iosTestLoop = Codegen.empty();
-        this.iosTestSetup = Codegen.empty();
-        this.iosXcTest = Codegen.empty();
-        this.testSetup = Codegen.empty();
-        this.testTimeout = Codegen.empty();
+    private TestSpecificationArgs(TestSpecificationArgs $) {
+        this.androidInstrumentationTest = $.androidInstrumentationTest;
+        this.androidRoboTest = $.androidRoboTest;
+        this.androidTestLoop = $.androidTestLoop;
+        this.disablePerformanceMetrics = $.disablePerformanceMetrics;
+        this.disableVideoRecording = $.disableVideoRecording;
+        this.iosTestLoop = $.iosTestLoop;
+        this.iosTestSetup = $.iosTestSetup;
+        this.iosXcTest = $.iosXcTest;
+        this.testSetup = $.testSetup;
+        this.testTimeout = $.testTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
-        private @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
-        private @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
-        private @Nullable Output<Boolean> disablePerformanceMetrics;
-        private @Nullable Output<Boolean> disableVideoRecording;
-        private @Nullable Output<IosTestLoopArgs> iosTestLoop;
-        private @Nullable Output<IosTestSetupArgs> iosTestSetup;
-        private @Nullable Output<IosXcTestArgs> iosXcTest;
-        private @Nullable Output<TestSetupArgs> testSetup;
-        private @Nullable Output<String> testTimeout;
+        private TestSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestSpecificationArgs();
         }
 
         public Builder(TestSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidInstrumentationTest = defaults.androidInstrumentationTest;
-    	      this.androidRoboTest = defaults.androidRoboTest;
-    	      this.androidTestLoop = defaults.androidTestLoop;
-    	      this.disablePerformanceMetrics = defaults.disablePerformanceMetrics;
-    	      this.disableVideoRecording = defaults.disableVideoRecording;
-    	      this.iosTestLoop = defaults.iosTestLoop;
-    	      this.iosTestSetup = defaults.iosTestSetup;
-    	      this.iosXcTest = defaults.iosXcTest;
-    	      this.testSetup = defaults.testSetup;
-    	      this.testTimeout = defaults.testTimeout;
+            $ = new TestSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder androidInstrumentationTest(@Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest) {
-            this.androidInstrumentationTest = androidInstrumentationTest;
+            $.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
-        public Builder androidInstrumentationTest(@Nullable AndroidInstrumentationTestArgs androidInstrumentationTest) {
-            this.androidInstrumentationTest = Codegen.ofNullable(androidInstrumentationTest);
-            return this;
+
+        public Builder androidInstrumentationTest(AndroidInstrumentationTestArgs androidInstrumentationTest) {
+            return androidInstrumentationTest(Output.of(androidInstrumentationTest));
         }
+
         public Builder androidRoboTest(@Nullable Output<AndroidRoboTestArgs> androidRoboTest) {
-            this.androidRoboTest = androidRoboTest;
+            $.androidRoboTest = androidRoboTest;
             return this;
         }
-        public Builder androidRoboTest(@Nullable AndroidRoboTestArgs androidRoboTest) {
-            this.androidRoboTest = Codegen.ofNullable(androidRoboTest);
-            return this;
+
+        public Builder androidRoboTest(AndroidRoboTestArgs androidRoboTest) {
+            return androidRoboTest(Output.of(androidRoboTest));
         }
+
         public Builder androidTestLoop(@Nullable Output<AndroidTestLoopArgs> androidTestLoop) {
-            this.androidTestLoop = androidTestLoop;
+            $.androidTestLoop = androidTestLoop;
             return this;
         }
-        public Builder androidTestLoop(@Nullable AndroidTestLoopArgs androidTestLoop) {
-            this.androidTestLoop = Codegen.ofNullable(androidTestLoop);
-            return this;
+
+        public Builder androidTestLoop(AndroidTestLoopArgs androidTestLoop) {
+            return androidTestLoop(Output.of(androidTestLoop));
         }
+
         public Builder disablePerformanceMetrics(@Nullable Output<Boolean> disablePerformanceMetrics) {
-            this.disablePerformanceMetrics = disablePerformanceMetrics;
+            $.disablePerformanceMetrics = disablePerformanceMetrics;
             return this;
         }
-        public Builder disablePerformanceMetrics(@Nullable Boolean disablePerformanceMetrics) {
-            this.disablePerformanceMetrics = Codegen.ofNullable(disablePerformanceMetrics);
-            return this;
+
+        public Builder disablePerformanceMetrics(Boolean disablePerformanceMetrics) {
+            return disablePerformanceMetrics(Output.of(disablePerformanceMetrics));
         }
+
         public Builder disableVideoRecording(@Nullable Output<Boolean> disableVideoRecording) {
-            this.disableVideoRecording = disableVideoRecording;
+            $.disableVideoRecording = disableVideoRecording;
             return this;
         }
-        public Builder disableVideoRecording(@Nullable Boolean disableVideoRecording) {
-            this.disableVideoRecording = Codegen.ofNullable(disableVideoRecording);
-            return this;
+
+        public Builder disableVideoRecording(Boolean disableVideoRecording) {
+            return disableVideoRecording(Output.of(disableVideoRecording));
         }
+
         public Builder iosTestLoop(@Nullable Output<IosTestLoopArgs> iosTestLoop) {
-            this.iosTestLoop = iosTestLoop;
+            $.iosTestLoop = iosTestLoop;
             return this;
         }
-        public Builder iosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
-            this.iosTestLoop = Codegen.ofNullable(iosTestLoop);
-            return this;
+
+        public Builder iosTestLoop(IosTestLoopArgs iosTestLoop) {
+            return iosTestLoop(Output.of(iosTestLoop));
         }
+
         public Builder iosTestSetup(@Nullable Output<IosTestSetupArgs> iosTestSetup) {
-            this.iosTestSetup = iosTestSetup;
+            $.iosTestSetup = iosTestSetup;
             return this;
         }
-        public Builder iosTestSetup(@Nullable IosTestSetupArgs iosTestSetup) {
-            this.iosTestSetup = Codegen.ofNullable(iosTestSetup);
-            return this;
+
+        public Builder iosTestSetup(IosTestSetupArgs iosTestSetup) {
+            return iosTestSetup(Output.of(iosTestSetup));
         }
+
         public Builder iosXcTest(@Nullable Output<IosXcTestArgs> iosXcTest) {
-            this.iosXcTest = iosXcTest;
+            $.iosXcTest = iosXcTest;
             return this;
         }
-        public Builder iosXcTest(@Nullable IosXcTestArgs iosXcTest) {
-            this.iosXcTest = Codegen.ofNullable(iosXcTest);
-            return this;
+
+        public Builder iosXcTest(IosXcTestArgs iosXcTest) {
+            return iosXcTest(Output.of(iosXcTest));
         }
+
         public Builder testSetup(@Nullable Output<TestSetupArgs> testSetup) {
-            this.testSetup = testSetup;
+            $.testSetup = testSetup;
             return this;
         }
-        public Builder testSetup(@Nullable TestSetupArgs testSetup) {
-            this.testSetup = Codegen.ofNullable(testSetup);
-            return this;
+
+        public Builder testSetup(TestSetupArgs testSetup) {
+            return testSetup(Output.of(testSetup));
         }
+
         public Builder testTimeout(@Nullable Output<String> testTimeout) {
-            this.testTimeout = testTimeout;
+            $.testTimeout = testTimeout;
             return this;
         }
-        public Builder testTimeout(@Nullable String testTimeout) {
-            this.testTimeout = Codegen.ofNullable(testTimeout);
-            return this;
-        }        public TestSpecificationArgs build() {
-            return new TestSpecificationArgs(androidInstrumentationTest, androidRoboTest, androidTestLoop, disablePerformanceMetrics, disableVideoRecording, iosTestLoop, iosTestSetup, iosXcTest, testSetup, testTimeout);
+
+        public Builder testTimeout(String testTimeout) {
+            return testTimeout(Output.of(testTimeout));
+        }
+
+        public TestSpecificationArgs build() {
+            return $;
         }
     }
+
 }

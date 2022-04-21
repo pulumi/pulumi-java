@@ -24,10 +24,10 @@ public final class AzureFileFilterDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="filePathList")
-      private final @Nullable List<String> filePathList;
+    private @Nullable List<String> filePathList;
 
-    public List<String> filePathList() {
-        return this.filePathList == null ? List.of() : this.filePathList;
+    public Optional<List<String>> filePathList() {
+        return Optional.ofNullable(this.filePathList);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureFileFilterDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="filePrefixList")
-      private final @Nullable List<String> filePrefixList;
+    private @Nullable List<String> filePrefixList;
 
-    public List<String> filePrefixList() {
-        return this.filePrefixList == null ? List.of() : this.filePrefixList;
+    public Optional<List<String>> filePrefixList() {
+        return Optional.ofNullable(this.filePrefixList);
     }
 
     /**
@@ -46,73 +46,68 @@ public final class AzureFileFilterDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="fileShareList")
-      private final @Nullable List<String> fileShareList;
+    private @Nullable List<String> fileShareList;
 
-    public List<String> fileShareList() {
-        return this.fileShareList == null ? List.of() : this.fileShareList;
+    public Optional<List<String>> fileShareList() {
+        return Optional.ofNullable(this.fileShareList);
     }
 
-    public AzureFileFilterDetailsResponse(
-        @Nullable List<String> filePathList,
-        @Nullable List<String> filePrefixList,
-        @Nullable List<String> fileShareList) {
-        this.filePathList = filePathList;
-        this.filePrefixList = filePrefixList;
-        this.fileShareList = fileShareList;
-    }
+    private AzureFileFilterDetailsResponse() {}
 
-    private AzureFileFilterDetailsResponse() {
-        this.filePathList = List.of();
-        this.filePrefixList = List.of();
-        this.fileShareList = List.of();
+    private AzureFileFilterDetailsResponse(AzureFileFilterDetailsResponse $) {
+        this.filePathList = $.filePathList;
+        this.filePrefixList = $.filePrefixList;
+        this.fileShareList = $.fileShareList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFileFilterDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> filePathList;
-        private @Nullable List<String> filePrefixList;
-        private @Nullable List<String> fileShareList;
+        private AzureFileFilterDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFileFilterDetailsResponse();
         }
 
         public Builder(AzureFileFilterDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePathList = defaults.filePathList;
-    	      this.filePrefixList = defaults.filePrefixList;
-    	      this.fileShareList = defaults.fileShareList;
+            $ = new AzureFileFilterDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filePathList(@Nullable List<String> filePathList) {
-            this.filePathList = filePathList;
+            $.filePathList = filePathList;
             return this;
         }
+
         public Builder filePathList(String... filePathList) {
             return filePathList(List.of(filePathList));
         }
+
         public Builder filePrefixList(@Nullable List<String> filePrefixList) {
-            this.filePrefixList = filePrefixList;
+            $.filePrefixList = filePrefixList;
             return this;
         }
+
         public Builder filePrefixList(String... filePrefixList) {
             return filePrefixList(List.of(filePrefixList));
         }
+
         public Builder fileShareList(@Nullable List<String> fileShareList) {
-            this.fileShareList = fileShareList;
+            $.fileShareList = fileShareList;
             return this;
         }
+
         public Builder fileShareList(String... fileShareList) {
             return fileShareList(List.of(fileShareList));
-        }        public AzureFileFilterDetailsResponse build() {
-            return new AzureFileFilterDetailsResponse(filePathList, filePrefixList, fileShareList);
+        }
+
+        public AzureFileFilterDetailsResponse build() {
+            return $;
         }
     }
+
 }

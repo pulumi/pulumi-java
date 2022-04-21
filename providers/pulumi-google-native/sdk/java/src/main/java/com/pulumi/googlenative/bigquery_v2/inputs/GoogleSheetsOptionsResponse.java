@@ -17,7 +17,7 @@ public final class GoogleSheetsOptionsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="range", required=true)
-      private final String range;
+    private String range;
 
     public String range() {
         return this.range;
@@ -28,55 +28,52 @@ public final class GoogleSheetsOptionsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="skipLeadingRows", required=true)
-      private final String skipLeadingRows;
+    private String skipLeadingRows;
 
     public String skipLeadingRows() {
         return this.skipLeadingRows;
     }
 
-    public GoogleSheetsOptionsResponse(
-        String range,
-        String skipLeadingRows) {
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-        this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows, "expected parameter 'skipLeadingRows' to be non-null");
-    }
+    private GoogleSheetsOptionsResponse() {}
 
-    private GoogleSheetsOptionsResponse() {
-        this.range = null;
-        this.skipLeadingRows = null;
+    private GoogleSheetsOptionsResponse(GoogleSheetsOptionsResponse $) {
+        this.range = $.range;
+        this.skipLeadingRows = $.skipLeadingRows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleSheetsOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String range;
-        private String skipLeadingRows;
+        private GoogleSheetsOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleSheetsOptionsResponse();
         }
 
         public Builder(GoogleSheetsOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.range = defaults.range;
-    	      this.skipLeadingRows = defaults.skipLeadingRows;
+            $ = new GoogleSheetsOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder range(String range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder skipLeadingRows(String skipLeadingRows) {
-            this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
+            $.skipLeadingRows = skipLeadingRows;
             return this;
-        }        public GoogleSheetsOptionsResponse build() {
-            return new GoogleSheetsOptionsResponse(range, skipLeadingRows);
+        }
+
+        public GoogleSheetsOptionsResponse build() {
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            $.skipLeadingRows = Objects.requireNonNull($.skipLeadingRows, "expected parameter 'skipLeadingRows' to be non-null");
+            return $;
         }
     }
+
 }

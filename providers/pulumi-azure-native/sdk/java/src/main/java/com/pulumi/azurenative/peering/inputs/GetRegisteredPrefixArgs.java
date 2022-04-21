@@ -17,7 +17,7 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="peeringName", required=true)
-      private final String peeringName;
+    private String peeringName;
 
     public String peeringName() {
         return this.peeringName;
@@ -28,7 +28,7 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="registeredPrefixName", required=true)
-      private final String registeredPrefixName;
+    private String registeredPrefixName;
 
     public String registeredPrefixName() {
         return this.registeredPrefixName;
@@ -39,64 +39,59 @@ public final class GetRegisteredPrefixArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetRegisteredPrefixArgs(
-        String peeringName,
-        String registeredPrefixName,
-        String resourceGroupName) {
-        this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
-        this.registeredPrefixName = Objects.requireNonNull(registeredPrefixName, "expected parameter 'registeredPrefixName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetRegisteredPrefixArgs() {}
 
-    private GetRegisteredPrefixArgs() {
-        this.peeringName = null;
-        this.registeredPrefixName = null;
-        this.resourceGroupName = null;
+    private GetRegisteredPrefixArgs(GetRegisteredPrefixArgs $) {
+        this.peeringName = $.peeringName;
+        this.registeredPrefixName = $.registeredPrefixName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegisteredPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String peeringName;
-        private String registeredPrefixName;
-        private String resourceGroupName;
+        private GetRegisteredPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegisteredPrefixArgs();
         }
 
         public Builder(GetRegisteredPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peeringName = defaults.peeringName;
-    	      this.registeredPrefixName = defaults.registeredPrefixName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetRegisteredPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peeringName(String peeringName) {
-            this.peeringName = Objects.requireNonNull(peeringName);
+            $.peeringName = peeringName;
             return this;
         }
+
         public Builder registeredPrefixName(String registeredPrefixName) {
-            this.registeredPrefixName = Objects.requireNonNull(registeredPrefixName);
+            $.registeredPrefixName = registeredPrefixName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetRegisteredPrefixArgs build() {
-            return new GetRegisteredPrefixArgs(peeringName, registeredPrefixName, resourceGroupName);
+        }
+
+        public GetRegisteredPrefixArgs build() {
+            $.peeringName = Objects.requireNonNull($.peeringName, "expected parameter 'peeringName' to be non-null");
+            $.registeredPrefixName = Objects.requireNonNull($.registeredPrefixName, "expected parameter 'registeredPrefixName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

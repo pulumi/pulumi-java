@@ -5,10 +5,10 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class ServiceCapacityProviderStrategyItemArgs extends com.pulumi.re
     public static final ServiceCapacityProviderStrategyItemArgs Empty = new ServiceCapacityProviderStrategyItemArgs();
 
     @Import(name="base")
-      private final @Nullable Output<Integer> base;
+    private @Nullable Output<Integer> base;
 
-    public Output<Integer> base() {
-        return this.base == null ? Codegen.empty() : this.base;
+    public Optional<Output<Integer>> base() {
+        return Optional.ofNullable(this.base);
     }
 
     @Import(name="capacityProvider")
-      private final @Nullable Output<String> capacityProvider;
+    private @Nullable Output<String> capacityProvider;
 
-    public Output<String> capacityProvider() {
-        return this.capacityProvider == null ? Codegen.empty() : this.capacityProvider;
+    public Optional<Output<String>> capacityProvider() {
+        return Optional.ofNullable(this.capacityProvider);
     }
 
     @Import(name="weight")
-      private final @Nullable Output<Integer> weight;
+    private @Nullable Output<Integer> weight;
 
-    public Output<Integer> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<Integer>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
-    public ServiceCapacityProviderStrategyItemArgs(
-        @Nullable Output<Integer> base,
-        @Nullable Output<String> capacityProvider,
-        @Nullable Output<Integer> weight) {
-        this.base = base;
-        this.capacityProvider = capacityProvider;
-        this.weight = weight;
-    }
+    private ServiceCapacityProviderStrategyItemArgs() {}
 
-    private ServiceCapacityProviderStrategyItemArgs() {
-        this.base = Codegen.empty();
-        this.capacityProvider = Codegen.empty();
-        this.weight = Codegen.empty();
+    private ServiceCapacityProviderStrategyItemArgs(ServiceCapacityProviderStrategyItemArgs $) {
+        this.base = $.base;
+        this.capacityProvider = $.capacityProvider;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCapacityProviderStrategyItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> base;
-        private @Nullable Output<String> capacityProvider;
-        private @Nullable Output<Integer> weight;
+        private ServiceCapacityProviderStrategyItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCapacityProviderStrategyItemArgs();
         }
 
         public Builder(ServiceCapacityProviderStrategyItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.base = defaults.base;
-    	      this.capacityProvider = defaults.capacityProvider;
-    	      this.weight = defaults.weight;
+            $ = new ServiceCapacityProviderStrategyItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder base(@Nullable Output<Integer> base) {
-            this.base = base;
+            $.base = base;
             return this;
         }
-        public Builder base(@Nullable Integer base) {
-            this.base = Codegen.ofNullable(base);
-            return this;
+
+        public Builder base(Integer base) {
+            return base(Output.of(base));
         }
+
         public Builder capacityProvider(@Nullable Output<String> capacityProvider) {
-            this.capacityProvider = capacityProvider;
+            $.capacityProvider = capacityProvider;
             return this;
         }
-        public Builder capacityProvider(@Nullable String capacityProvider) {
-            this.capacityProvider = Codegen.ofNullable(capacityProvider);
-            return this;
+
+        public Builder capacityProvider(String capacityProvider) {
+            return capacityProvider(Output.of(capacityProvider));
         }
+
         public Builder weight(@Nullable Output<Integer> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable Integer weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
-        }        public ServiceCapacityProviderStrategyItemArgs build() {
-            return new ServiceCapacityProviderStrategyItemArgs(base, capacityProvider, weight);
+
+        public Builder weight(Integer weight) {
+            return weight(Output.of(weight));
+        }
+
+        public ServiceCapacityProviderStrategyItemArgs build() {
+            return $;
         }
     }
+
 }

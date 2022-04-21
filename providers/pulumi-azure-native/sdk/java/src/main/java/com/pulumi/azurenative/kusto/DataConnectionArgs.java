@@ -7,9 +7,9 @@ import com.pulumi.azurenative.kusto.enums.DataConnectionKind;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -33,10 +33,10 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dataConnectionName")
-      private final @Nullable Output<String> dataConnectionName;
+    private @Nullable Output<String> dataConnectionName;
 
-    public Output<String> dataConnectionName() {
-        return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
+    public Optional<Output<String>> dataConnectionName() {
+        return Optional.ofNullable(this.dataConnectionName);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="databaseName", required=true)
-      private final Output<String> databaseName;
+    private Output<String> databaseName;
 
     public Output<String> databaseName() {
         return this.databaseName;
@@ -55,7 +55,7 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,DataConnectionKind>> kind;
+    private Output<Either<String,DataConnectionKind>> kind;
 
     public Output<Either<String,DataConnectionKind>> kind() {
         return this.kind;
@@ -66,10 +66,10 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -77,115 +77,102 @@ public final class DataConnectionArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public DataConnectionArgs(
-        Output<String> clusterName,
-        @Nullable Output<String> dataConnectionName,
-        Output<String> databaseName,
-        Output<Either<String,DataConnectionKind>> kind,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.dataConnectionName = dataConnectionName;
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private DataConnectionArgs() {}
 
-    private DataConnectionArgs() {
-        this.clusterName = Codegen.empty();
-        this.dataConnectionName = Codegen.empty();
-        this.databaseName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private DataConnectionArgs(DataConnectionArgs $) {
+        this.clusterName = $.clusterName;
+        this.dataConnectionName = $.dataConnectionName;
+        this.databaseName = $.databaseName;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private @Nullable Output<String> dataConnectionName;
-        private Output<String> databaseName;
-        private Output<Either<String,DataConnectionKind>> kind;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
+        private DataConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataConnectionArgs();
         }
 
         public Builder(DataConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.dataConnectionName = defaults.dataConnectionName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new DataConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder dataConnectionName(@Nullable Output<String> dataConnectionName) {
-            this.dataConnectionName = dataConnectionName;
+            $.dataConnectionName = dataConnectionName;
             return this;
         }
-        public Builder dataConnectionName(@Nullable String dataConnectionName) {
-            this.dataConnectionName = Codegen.ofNullable(dataConnectionName);
-            return this;
+
+        public Builder dataConnectionName(String dataConnectionName) {
+            return dataConnectionName(Output.of(dataConnectionName));
         }
+
         public Builder databaseName(Output<String> databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
-            return this;
+            return databaseName(Output.of(databaseName));
         }
+
         public Builder kind(Output<Either<String,DataConnectionKind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,DataConnectionKind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public DataConnectionArgs build() {
-            return new DataConnectionArgs(clusterName, dataConnectionName, databaseName, kind, location, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public DataConnectionArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

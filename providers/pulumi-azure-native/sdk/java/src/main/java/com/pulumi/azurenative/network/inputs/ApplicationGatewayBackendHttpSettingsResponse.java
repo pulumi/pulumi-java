@@ -28,10 +28,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="affinityCookieName")
-      private final @Nullable String affinityCookieName;
+    private @Nullable String affinityCookieName;
 
     public Optional<String> affinityCookieName() {
-        return this.affinityCookieName == null ? Optional.empty() : Optional.ofNullable(this.affinityCookieName);
+        return Optional.ofNullable(this.affinityCookieName);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="authenticationCertificates")
-      private final @Nullable List<SubResourceResponse> authenticationCertificates;
+    private @Nullable List<SubResourceResponse> authenticationCertificates;
 
-    public List<SubResourceResponse> authenticationCertificates() {
-        return this.authenticationCertificates == null ? List.of() : this.authenticationCertificates;
+    public Optional<List<SubResourceResponse>> authenticationCertificates() {
+        return Optional.ofNullable(this.authenticationCertificates);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="connectionDraining")
-      private final @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining;
+    private @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining;
 
     public Optional<ApplicationGatewayConnectionDrainingResponse> connectionDraining() {
-        return this.connectionDraining == null ? Optional.empty() : Optional.ofNullable(this.connectionDraining);
+        return Optional.ofNullable(this.connectionDraining);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="cookieBasedAffinity")
-      private final @Nullable String cookieBasedAffinity;
+    private @Nullable String cookieBasedAffinity;
 
     public Optional<String> cookieBasedAffinity() {
-        return this.cookieBasedAffinity == null ? Optional.empty() : Optional.ofNullable(this.cookieBasedAffinity);
+        return Optional.ofNullable(this.cookieBasedAffinity);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -83,10 +83,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="hostName")
-      private final @Nullable String hostName;
+    private @Nullable String hostName;
 
     public Optional<String> hostName() {
-        return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
+        return Optional.ofNullable(this.hostName);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="pickHostNameFromBackendAddress")
-      private final @Nullable Boolean pickHostNameFromBackendAddress;
+    private @Nullable Boolean pickHostNameFromBackendAddress;
 
     public Optional<Boolean> pickHostNameFromBackendAddress() {
-        return this.pickHostNameFromBackendAddress == null ? Optional.empty() : Optional.ofNullable(this.pickHostNameFromBackendAddress);
+        return Optional.ofNullable(this.pickHostNameFromBackendAddress);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="port")
-      private final @Nullable Integer port;
+    private @Nullable Integer port;
 
     public Optional<Integer> port() {
-        return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="probe")
-      private final @Nullable SubResourceResponse probe;
+    private @Nullable SubResourceResponse probe;
 
     public Optional<SubResourceResponse> probe() {
-        return this.probe == null ? Optional.empty() : Optional.ofNullable(this.probe);
+        return Optional.ofNullable(this.probe);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="probeEnabled")
-      private final @Nullable Boolean probeEnabled;
+    private @Nullable Boolean probeEnabled;
 
     public Optional<Boolean> probeEnabled() {
-        return this.probeEnabled == null ? Optional.empty() : Optional.ofNullable(this.probeEnabled);
+        return Optional.ofNullable(this.probeEnabled);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -182,7 +182,7 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -193,10 +193,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="requestTimeout")
-      private final @Nullable Integer requestTimeout;
+    private @Nullable Integer requestTimeout;
 
     public Optional<Integer> requestTimeout() {
-        return this.requestTimeout == null ? Optional.empty() : Optional.ofNullable(this.requestTimeout);
+        return Optional.ofNullable(this.requestTimeout);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="trustedRootCertificates")
-      private final @Nullable List<SubResourceResponse> trustedRootCertificates;
+    private @Nullable List<SubResourceResponse> trustedRootCertificates;
 
-    public List<SubResourceResponse> trustedRootCertificates() {
-        return this.trustedRootCertificates == null ? List.of() : this.trustedRootCertificates;
+    public Optional<List<SubResourceResponse>> trustedRootCertificates() {
+        return Optional.ofNullable(this.trustedRootCertificates);
     }
 
     /**
@@ -215,205 +215,157 @@ public final class ApplicationGatewayBackendHttpSettingsResponse extends com.pul
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewayBackendHttpSettingsResponse(
-        @Nullable String affinityCookieName,
-        @Nullable List<SubResourceResponse> authenticationCertificates,
-        @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining,
-        @Nullable String cookieBasedAffinity,
-        String etag,
-        @Nullable String hostName,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable Boolean pickHostNameFromBackendAddress,
-        @Nullable Integer port,
-        @Nullable SubResourceResponse probe,
-        @Nullable Boolean probeEnabled,
-        @Nullable String protocol,
-        String provisioningState,
-        @Nullable Integer requestTimeout,
-        @Nullable List<SubResourceResponse> trustedRootCertificates,
-        String type) {
-        this.affinityCookieName = affinityCookieName;
-        this.authenticationCertificates = authenticationCertificates;
-        this.connectionDraining = connectionDraining;
-        this.cookieBasedAffinity = cookieBasedAffinity;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.hostName = hostName;
-        this.id = id;
-        this.name = name;
-        this.path = path;
-        this.pickHostNameFromBackendAddress = pickHostNameFromBackendAddress;
-        this.port = port;
-        this.probe = probe;
-        this.probeEnabled = probeEnabled;
-        this.protocol = protocol;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.requestTimeout = requestTimeout;
-        this.trustedRootCertificates = trustedRootCertificates;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewayBackendHttpSettingsResponse() {}
 
-    private ApplicationGatewayBackendHttpSettingsResponse() {
-        this.affinityCookieName = null;
-        this.authenticationCertificates = List.of();
-        this.connectionDraining = null;
-        this.cookieBasedAffinity = null;
-        this.etag = null;
-        this.hostName = null;
-        this.id = null;
-        this.name = null;
-        this.path = null;
-        this.pickHostNameFromBackendAddress = null;
-        this.port = null;
-        this.probe = null;
-        this.probeEnabled = null;
-        this.protocol = null;
-        this.provisioningState = null;
-        this.requestTimeout = null;
-        this.trustedRootCertificates = List.of();
-        this.type = null;
+    private ApplicationGatewayBackendHttpSettingsResponse(ApplicationGatewayBackendHttpSettingsResponse $) {
+        this.affinityCookieName = $.affinityCookieName;
+        this.authenticationCertificates = $.authenticationCertificates;
+        this.connectionDraining = $.connectionDraining;
+        this.cookieBasedAffinity = $.cookieBasedAffinity;
+        this.etag = $.etag;
+        this.hostName = $.hostName;
+        this.id = $.id;
+        this.name = $.name;
+        this.path = $.path;
+        this.pickHostNameFromBackendAddress = $.pickHostNameFromBackendAddress;
+        this.port = $.port;
+        this.probe = $.probe;
+        this.probeEnabled = $.probeEnabled;
+        this.protocol = $.protocol;
+        this.provisioningState = $.provisioningState;
+        this.requestTimeout = $.requestTimeout;
+        this.trustedRootCertificates = $.trustedRootCertificates;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayBackendHttpSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String affinityCookieName;
-        private @Nullable List<SubResourceResponse> authenticationCertificates;
-        private @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining;
-        private @Nullable String cookieBasedAffinity;
-        private String etag;
-        private @Nullable String hostName;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String path;
-        private @Nullable Boolean pickHostNameFromBackendAddress;
-        private @Nullable Integer port;
-        private @Nullable SubResourceResponse probe;
-        private @Nullable Boolean probeEnabled;
-        private @Nullable String protocol;
-        private String provisioningState;
-        private @Nullable Integer requestTimeout;
-        private @Nullable List<SubResourceResponse> trustedRootCertificates;
-        private String type;
+        private ApplicationGatewayBackendHttpSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayBackendHttpSettingsResponse();
         }
 
         public Builder(ApplicationGatewayBackendHttpSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affinityCookieName = defaults.affinityCookieName;
-    	      this.authenticationCertificates = defaults.authenticationCertificates;
-    	      this.connectionDraining = defaults.connectionDraining;
-    	      this.cookieBasedAffinity = defaults.cookieBasedAffinity;
-    	      this.etag = defaults.etag;
-    	      this.hostName = defaults.hostName;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.pickHostNameFromBackendAddress = defaults.pickHostNameFromBackendAddress;
-    	      this.port = defaults.port;
-    	      this.probe = defaults.probe;
-    	      this.probeEnabled = defaults.probeEnabled;
-    	      this.protocol = defaults.protocol;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.requestTimeout = defaults.requestTimeout;
-    	      this.trustedRootCertificates = defaults.trustedRootCertificates;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewayBackendHttpSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder affinityCookieName(@Nullable String affinityCookieName) {
-            this.affinityCookieName = affinityCookieName;
+            $.affinityCookieName = affinityCookieName;
             return this;
         }
+
         public Builder authenticationCertificates(@Nullable List<SubResourceResponse> authenticationCertificates) {
-            this.authenticationCertificates = authenticationCertificates;
+            $.authenticationCertificates = authenticationCertificates;
             return this;
         }
+
         public Builder authenticationCertificates(SubResourceResponse... authenticationCertificates) {
             return authenticationCertificates(List.of(authenticationCertificates));
         }
+
         public Builder connectionDraining(@Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining) {
-            this.connectionDraining = connectionDraining;
+            $.connectionDraining = connectionDraining;
             return this;
         }
+
         public Builder cookieBasedAffinity(@Nullable String cookieBasedAffinity) {
-            this.cookieBasedAffinity = cookieBasedAffinity;
+            $.cookieBasedAffinity = cookieBasedAffinity;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = hostName;
+            $.hostName = hostName;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder pickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
-            this.pickHostNameFromBackendAddress = pickHostNameFromBackendAddress;
+            $.pickHostNameFromBackendAddress = pickHostNameFromBackendAddress;
             return this;
         }
+
         public Builder port(@Nullable Integer port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
+
         public Builder probe(@Nullable SubResourceResponse probe) {
-            this.probe = probe;
+            $.probe = probe;
             return this;
         }
+
         public Builder probeEnabled(@Nullable Boolean probeEnabled) {
-            this.probeEnabled = probeEnabled;
+            $.probeEnabled = probeEnabled;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder requestTimeout(@Nullable Integer requestTimeout) {
-            this.requestTimeout = requestTimeout;
+            $.requestTimeout = requestTimeout;
             return this;
         }
+
         public Builder trustedRootCertificates(@Nullable List<SubResourceResponse> trustedRootCertificates) {
-            this.trustedRootCertificates = trustedRootCertificates;
+            $.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
+
         public Builder trustedRootCertificates(SubResourceResponse... trustedRootCertificates) {
             return trustedRootCertificates(List.of(trustedRootCertificates));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewayBackendHttpSettingsResponse build() {
-            return new ApplicationGatewayBackendHttpSettingsResponse(affinityCookieName, authenticationCertificates, connectionDraining, cookieBasedAffinity, etag, hostName, id, name, path, pickHostNameFromBackendAddress, port, probe, probeEnabled, protocol, provisioningState, requestTimeout, trustedRootCertificates, type);
+        }
+
+        public ApplicationGatewayBackendHttpSettingsResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

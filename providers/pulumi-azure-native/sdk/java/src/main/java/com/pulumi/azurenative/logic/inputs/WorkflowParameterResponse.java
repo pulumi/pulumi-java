@@ -24,10 +24,10 @@ public final class WorkflowParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkflowParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Object metadata;
+    private @Nullable Object metadata;
 
     public Optional<Object> metadata() {
-        return this.metadata == null ? Optional.empty() : Optional.ofNullable(this.metadata);
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkflowParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class WorkflowParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="value")
-      private final @Nullable Object value;
+    private @Nullable Object value;
 
     public Optional<Object> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public WorkflowParameterResponse(
-        @Nullable String description,
-        @Nullable Object metadata,
-        @Nullable String type,
-        @Nullable Object value) {
-        this.description = description;
-        this.metadata = metadata;
-        this.type = type;
-        this.value = value;
-    }
+    private WorkflowParameterResponse() {}
 
-    private WorkflowParameterResponse() {
-        this.description = null;
-        this.metadata = null;
-        this.type = null;
-        this.value = null;
+    private WorkflowParameterResponse(WorkflowParameterResponse $) {
+        this.description = $.description;
+        this.metadata = $.metadata;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable Object metadata;
-        private @Nullable String type;
-        private @Nullable Object value;
+        private WorkflowParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowParameterResponse();
         }
 
         public Builder(WorkflowParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.metadata = defaults.metadata;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new WorkflowParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable Object value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public WorkflowParameterResponse build() {
-            return new WorkflowParameterResponse(description, metadata, type, value);
+        }
+
+        public WorkflowParameterResponse build() {
+            return $;
         }
     }
+
 }

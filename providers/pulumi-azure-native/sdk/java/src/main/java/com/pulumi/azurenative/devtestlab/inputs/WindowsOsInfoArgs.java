@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devtestlab.enums.WindowsOsState;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class WindowsOsInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="windowsOsState")
-      private final @Nullable Output<Either<String,WindowsOsState>> windowsOsState;
+    private @Nullable Output<Either<String,WindowsOsState>> windowsOsState;
 
-    public Output<Either<String,WindowsOsState>> windowsOsState() {
-        return this.windowsOsState == null ? Codegen.empty() : this.windowsOsState;
+    public Optional<Output<Either<String,WindowsOsState>>> windowsOsState() {
+        return Optional.ofNullable(this.windowsOsState);
     }
 
-    public WindowsOsInfoArgs(@Nullable Output<Either<String,WindowsOsState>> windowsOsState) {
-        this.windowsOsState = windowsOsState;
-    }
+    private WindowsOsInfoArgs() {}
 
-    private WindowsOsInfoArgs() {
-        this.windowsOsState = Codegen.empty();
+    private WindowsOsInfoArgs(WindowsOsInfoArgs $) {
+        this.windowsOsState = $.windowsOsState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsOsInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,WindowsOsState>> windowsOsState;
+        private WindowsOsInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsOsInfoArgs();
         }
 
         public Builder(WindowsOsInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.windowsOsState = defaults.windowsOsState;
+            $ = new WindowsOsInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder windowsOsState(@Nullable Output<Either<String,WindowsOsState>> windowsOsState) {
-            this.windowsOsState = windowsOsState;
+            $.windowsOsState = windowsOsState;
             return this;
         }
-        public Builder windowsOsState(@Nullable Either<String,WindowsOsState> windowsOsState) {
-            this.windowsOsState = Codegen.ofNullable(windowsOsState);
-            return this;
-        }        public WindowsOsInfoArgs build() {
-            return new WindowsOsInfoArgs(windowsOsState);
+
+        public Builder windowsOsState(Either<String,WindowsOsState> windowsOsState) {
+            return windowsOsState(Output.of(windowsOsState));
+        }
+
+        public WindowsOsInfoArgs build() {
+            return $;
         }
     }
+
 }

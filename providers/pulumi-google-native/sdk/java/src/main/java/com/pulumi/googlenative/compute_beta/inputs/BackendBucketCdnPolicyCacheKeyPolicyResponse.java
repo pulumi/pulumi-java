@@ -22,7 +22,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends com.pulu
      * 
      */
     @Import(name="includeHttpHeaders", required=true)
-      private final List<String> includeHttpHeaders;
+    private List<String> includeHttpHeaders;
 
     public List<String> includeHttpHeaders() {
         return this.includeHttpHeaders;
@@ -33,61 +33,60 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends com.pulu
      * 
      */
     @Import(name="queryStringWhitelist", required=true)
-      private final List<String> queryStringWhitelist;
+    private List<String> queryStringWhitelist;
 
     public List<String> queryStringWhitelist() {
         return this.queryStringWhitelist;
     }
 
-    public BackendBucketCdnPolicyCacheKeyPolicyResponse(
-        List<String> includeHttpHeaders,
-        List<String> queryStringWhitelist) {
-        this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders, "expected parameter 'includeHttpHeaders' to be non-null");
-        this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist, "expected parameter 'queryStringWhitelist' to be non-null");
-    }
+    private BackendBucketCdnPolicyCacheKeyPolicyResponse() {}
 
-    private BackendBucketCdnPolicyCacheKeyPolicyResponse() {
-        this.includeHttpHeaders = List.of();
-        this.queryStringWhitelist = List.of();
+    private BackendBucketCdnPolicyCacheKeyPolicyResponse(BackendBucketCdnPolicyCacheKeyPolicyResponse $) {
+        this.includeHttpHeaders = $.includeHttpHeaders;
+        this.queryStringWhitelist = $.queryStringWhitelist;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendBucketCdnPolicyCacheKeyPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> includeHttpHeaders;
-        private List<String> queryStringWhitelist;
+        private BackendBucketCdnPolicyCacheKeyPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendBucketCdnPolicyCacheKeyPolicyResponse();
         }
 
         public Builder(BackendBucketCdnPolicyCacheKeyPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeHttpHeaders = defaults.includeHttpHeaders;
-    	      this.queryStringWhitelist = defaults.queryStringWhitelist;
+            $ = new BackendBucketCdnPolicyCacheKeyPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder includeHttpHeaders(List<String> includeHttpHeaders) {
-            this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders);
+            $.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
+
         public Builder includeHttpHeaders(String... includeHttpHeaders) {
             return includeHttpHeaders(List.of(includeHttpHeaders));
         }
+
         public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
-            this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
+            $.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
+
         public Builder queryStringWhitelist(String... queryStringWhitelist) {
             return queryStringWhitelist(List.of(queryStringWhitelist));
-        }        public BackendBucketCdnPolicyCacheKeyPolicyResponse build() {
-            return new BackendBucketCdnPolicyCacheKeyPolicyResponse(includeHttpHeaders, queryStringWhitelist);
+        }
+
+        public BackendBucketCdnPolicyCacheKeyPolicyResponse build() {
+            $.includeHttpHeaders = Objects.requireNonNull($.includeHttpHeaders, "expected parameter 'includeHttpHeaders' to be non-null");
+            $.queryStringWhitelist = Objects.requireNonNull($.queryStringWhitelist, "expected parameter 'queryStringWhitelist' to be non-null");
+            return $;
         }
     }
+
 }

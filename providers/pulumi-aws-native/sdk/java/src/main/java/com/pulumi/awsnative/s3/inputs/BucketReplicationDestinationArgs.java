@@ -10,9 +10,9 @@ import com.pulumi.awsnative.s3.inputs.BucketMetricsArgs;
 import com.pulumi.awsnative.s3.inputs.BucketReplicationTimeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,45 +25,45 @@ public final class BucketReplicationDestinationArgs extends com.pulumi.resources
     public static final BucketReplicationDestinationArgs Empty = new BucketReplicationDestinationArgs();
 
     @Import(name="accessControlTranslation")
-      private final @Nullable Output<BucketAccessControlTranslationArgs> accessControlTranslation;
+    private @Nullable Output<BucketAccessControlTranslationArgs> accessControlTranslation;
 
-    public Output<BucketAccessControlTranslationArgs> accessControlTranslation() {
-        return this.accessControlTranslation == null ? Codegen.empty() : this.accessControlTranslation;
+    public Optional<Output<BucketAccessControlTranslationArgs>> accessControlTranslation() {
+        return Optional.ofNullable(this.accessControlTranslation);
     }
 
     @Import(name="account")
-      private final @Nullable Output<String> account;
+    private @Nullable Output<String> account;
 
-    public Output<String> account() {
-        return this.account == null ? Codegen.empty() : this.account;
+    public Optional<Output<String>> account() {
+        return Optional.ofNullable(this.account);
     }
 
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="encryptionConfiguration")
-      private final @Nullable Output<BucketEncryptionConfigurationArgs> encryptionConfiguration;
+    private @Nullable Output<BucketEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<BucketEncryptionConfigurationArgs> encryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
+    public Optional<Output<BucketEncryptionConfigurationArgs>> encryptionConfiguration() {
+        return Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="metrics")
-      private final @Nullable Output<BucketMetricsArgs> metrics;
+    private @Nullable Output<BucketMetricsArgs> metrics;
 
-    public Output<BucketMetricsArgs> metrics() {
-        return this.metrics == null ? Codegen.empty() : this.metrics;
+    public Optional<Output<BucketMetricsArgs>> metrics() {
+        return Optional.ofNullable(this.metrics);
     }
 
     @Import(name="replicationTime")
-      private final @Nullable Output<BucketReplicationTimeArgs> replicationTime;
+    private @Nullable Output<BucketReplicationTimeArgs> replicationTime;
 
-    public Output<BucketReplicationTimeArgs> replicationTime() {
-        return this.replicationTime == null ? Codegen.empty() : this.replicationTime;
+    public Optional<Output<BucketReplicationTimeArgs>> replicationTime() {
+        return Optional.ofNullable(this.replicationTime);
     }
 
     /**
@@ -71,128 +71,109 @@ public final class BucketReplicationDestinationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="storageClass")
-      private final @Nullable Output<BucketReplicationDestinationStorageClass> storageClass;
+    private @Nullable Output<BucketReplicationDestinationStorageClass> storageClass;
 
-    public Output<BucketReplicationDestinationStorageClass> storageClass() {
-        return this.storageClass == null ? Codegen.empty() : this.storageClass;
+    public Optional<Output<BucketReplicationDestinationStorageClass>> storageClass() {
+        return Optional.ofNullable(this.storageClass);
     }
 
-    public BucketReplicationDestinationArgs(
-        @Nullable Output<BucketAccessControlTranslationArgs> accessControlTranslation,
-        @Nullable Output<String> account,
-        Output<String> bucket,
-        @Nullable Output<BucketEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Output<BucketMetricsArgs> metrics,
-        @Nullable Output<BucketReplicationTimeArgs> replicationTime,
-        @Nullable Output<BucketReplicationDestinationStorageClass> storageClass) {
-        this.accessControlTranslation = accessControlTranslation;
-        this.account = account;
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.encryptionConfiguration = encryptionConfiguration;
-        this.metrics = metrics;
-        this.replicationTime = replicationTime;
-        this.storageClass = storageClass;
-    }
+    private BucketReplicationDestinationArgs() {}
 
-    private BucketReplicationDestinationArgs() {
-        this.accessControlTranslation = Codegen.empty();
-        this.account = Codegen.empty();
-        this.bucket = Codegen.empty();
-        this.encryptionConfiguration = Codegen.empty();
-        this.metrics = Codegen.empty();
-        this.replicationTime = Codegen.empty();
-        this.storageClass = Codegen.empty();
+    private BucketReplicationDestinationArgs(BucketReplicationDestinationArgs $) {
+        this.accessControlTranslation = $.accessControlTranslation;
+        this.account = $.account;
+        this.bucket = $.bucket;
+        this.encryptionConfiguration = $.encryptionConfiguration;
+        this.metrics = $.metrics;
+        this.replicationTime = $.replicationTime;
+        this.storageClass = $.storageClass;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicationDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketAccessControlTranslationArgs> accessControlTranslation;
-        private @Nullable Output<String> account;
-        private Output<String> bucket;
-        private @Nullable Output<BucketEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Output<BucketMetricsArgs> metrics;
-        private @Nullable Output<BucketReplicationTimeArgs> replicationTime;
-        private @Nullable Output<BucketReplicationDestinationStorageClass> storageClass;
+        private BucketReplicationDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicationDestinationArgs();
         }
 
         public Builder(BucketReplicationDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlTranslation = defaults.accessControlTranslation;
-    	      this.account = defaults.account;
-    	      this.bucket = defaults.bucket;
-    	      this.encryptionConfiguration = defaults.encryptionConfiguration;
-    	      this.metrics = defaults.metrics;
-    	      this.replicationTime = defaults.replicationTime;
-    	      this.storageClass = defaults.storageClass;
+            $ = new BucketReplicationDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlTranslation(@Nullable Output<BucketAccessControlTranslationArgs> accessControlTranslation) {
-            this.accessControlTranslation = accessControlTranslation;
+            $.accessControlTranslation = accessControlTranslation;
             return this;
         }
-        public Builder accessControlTranslation(@Nullable BucketAccessControlTranslationArgs accessControlTranslation) {
-            this.accessControlTranslation = Codegen.ofNullable(accessControlTranslation);
-            return this;
+
+        public Builder accessControlTranslation(BucketAccessControlTranslationArgs accessControlTranslation) {
+            return accessControlTranslation(Output.of(accessControlTranslation));
         }
+
         public Builder account(@Nullable Output<String> account) {
-            this.account = account;
+            $.account = account;
             return this;
         }
-        public Builder account(@Nullable String account) {
-            this.account = Codegen.ofNullable(account);
-            return this;
+
+        public Builder account(String account) {
+            return account(Output.of(account));
         }
+
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder encryptionConfiguration(@Nullable Output<BucketEncryptionConfigurationArgs> encryptionConfiguration) {
-            this.encryptionConfiguration = encryptionConfiguration;
+            $.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
-        public Builder encryptionConfiguration(@Nullable BucketEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
-            return this;
+
+        public Builder encryptionConfiguration(BucketEncryptionConfigurationArgs encryptionConfiguration) {
+            return encryptionConfiguration(Output.of(encryptionConfiguration));
         }
+
         public Builder metrics(@Nullable Output<BucketMetricsArgs> metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
-        public Builder metrics(@Nullable BucketMetricsArgs metrics) {
-            this.metrics = Codegen.ofNullable(metrics);
-            return this;
+
+        public Builder metrics(BucketMetricsArgs metrics) {
+            return metrics(Output.of(metrics));
         }
+
         public Builder replicationTime(@Nullable Output<BucketReplicationTimeArgs> replicationTime) {
-            this.replicationTime = replicationTime;
+            $.replicationTime = replicationTime;
             return this;
         }
-        public Builder replicationTime(@Nullable BucketReplicationTimeArgs replicationTime) {
-            this.replicationTime = Codegen.ofNullable(replicationTime);
-            return this;
+
+        public Builder replicationTime(BucketReplicationTimeArgs replicationTime) {
+            return replicationTime(Output.of(replicationTime));
         }
+
         public Builder storageClass(@Nullable Output<BucketReplicationDestinationStorageClass> storageClass) {
-            this.storageClass = storageClass;
+            $.storageClass = storageClass;
             return this;
         }
-        public Builder storageClass(@Nullable BucketReplicationDestinationStorageClass storageClass) {
-            this.storageClass = Codegen.ofNullable(storageClass);
-            return this;
-        }        public BucketReplicationDestinationArgs build() {
-            return new BucketReplicationDestinationArgs(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);
+
+        public Builder storageClass(BucketReplicationDestinationStorageClass storageClass) {
+            return storageClass(Output.of(storageClass));
+        }
+
+        public BucketReplicationDestinationArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

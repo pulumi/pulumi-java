@@ -5,7 +5,6 @@ package com.pulumi.gcp.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class KeyRingIAMPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="keyRingId", required=true)
-      private final Output<String> keyRingId;
+    private Output<String> keyRingId;
 
     public Output<String> keyRingId() {
         return this.keyRingId;
@@ -34,63 +33,60 @@ public final class KeyRingIAMPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public KeyRingIAMPolicyArgs(
-        Output<String> keyRingId,
-        Output<String> policyData) {
-        this.keyRingId = Objects.requireNonNull(keyRingId, "expected parameter 'keyRingId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private KeyRingIAMPolicyArgs() {}
 
-    private KeyRingIAMPolicyArgs() {
-        this.keyRingId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private KeyRingIAMPolicyArgs(KeyRingIAMPolicyArgs $) {
+        this.keyRingId = $.keyRingId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyRingIAMPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> keyRingId;
-        private Output<String> policyData;
+        private KeyRingIAMPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyRingIAMPolicyArgs();
         }
 
         public Builder(KeyRingIAMPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyRingId = defaults.keyRingId;
-    	      this.policyData = defaults.policyData;
+            $ = new KeyRingIAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyRingId(Output<String> keyRingId) {
-            this.keyRingId = Objects.requireNonNull(keyRingId);
+            $.keyRingId = keyRingId;
             return this;
         }
+
         public Builder keyRingId(String keyRingId) {
-            this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
-            return this;
+            return keyRingId(Output.of(keyRingId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public KeyRingIAMPolicyArgs build() {
-            return new KeyRingIAMPolicyArgs(keyRingId, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public KeyRingIAMPolicyArgs build() {
+            $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

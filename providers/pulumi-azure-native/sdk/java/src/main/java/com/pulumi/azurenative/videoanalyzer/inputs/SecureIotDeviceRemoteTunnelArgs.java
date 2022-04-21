@@ -23,7 +23,7 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="deviceId", required=true)
-      private final Output<String> deviceId;
+    private Output<String> deviceId;
 
     public Output<String> deviceId() {
         return this.deviceId;
@@ -34,7 +34,7 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="iotHubName", required=true)
-      private final Output<String> iotHubName;
+    private Output<String> iotHubName;
 
     public Output<String> iotHubName() {
         return this.iotHubName;
@@ -46,76 +46,71 @@ public final class SecureIotDeviceRemoteTunnelArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public SecureIotDeviceRemoteTunnelArgs(
-        Output<String> deviceId,
-        Output<String> iotHubName,
-        Output<String> type) {
-        this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
-        this.iotHubName = Objects.requireNonNull(iotHubName, "expected parameter 'iotHubName' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private SecureIotDeviceRemoteTunnelArgs() {}
 
-    private SecureIotDeviceRemoteTunnelArgs() {
-        this.deviceId = Codegen.empty();
-        this.iotHubName = Codegen.empty();
-        this.type = Codegen.empty();
+    private SecureIotDeviceRemoteTunnelArgs(SecureIotDeviceRemoteTunnelArgs $) {
+        this.deviceId = $.deviceId;
+        this.iotHubName = $.iotHubName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecureIotDeviceRemoteTunnelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceId;
-        private Output<String> iotHubName;
-        private Output<String> type;
+        private SecureIotDeviceRemoteTunnelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecureIotDeviceRemoteTunnelArgs();
         }
 
         public Builder(SecureIotDeviceRemoteTunnelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceId = defaults.deviceId;
-    	      this.iotHubName = defaults.iotHubName;
-    	      this.type = defaults.type;
+            $ = new SecureIotDeviceRemoteTunnelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceId(Output<String> deviceId) {
-            this.deviceId = Objects.requireNonNull(deviceId);
+            $.deviceId = deviceId;
             return this;
         }
+
         public Builder deviceId(String deviceId) {
-            this.deviceId = Output.of(Objects.requireNonNull(deviceId));
-            return this;
+            return deviceId(Output.of(deviceId));
         }
+
         public Builder iotHubName(Output<String> iotHubName) {
-            this.iotHubName = Objects.requireNonNull(iotHubName);
+            $.iotHubName = iotHubName;
             return this;
         }
+
         public Builder iotHubName(String iotHubName) {
-            this.iotHubName = Output.of(Objects.requireNonNull(iotHubName));
-            return this;
+            return iotHubName(Output.of(iotHubName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public SecureIotDeviceRemoteTunnelArgs build() {
-            return new SecureIotDeviceRemoteTunnelArgs(deviceId, iotHubName, type);
+            return type(Output.of(type));
+        }
+
+        public SecureIotDeviceRemoteTunnelArgs build() {
+            $.deviceId = Objects.requireNonNull($.deviceId, "expected parameter 'deviceId' to be non-null");
+            $.iotHubName = Objects.requireNonNull($.iotHubName, "expected parameter 'iotHubName' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

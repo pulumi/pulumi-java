@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConnectionDrainingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="drainingTimeoutSec")
-      private final @Nullable Output<Integer> drainingTimeoutSec;
+    private @Nullable Output<Integer> drainingTimeoutSec;
 
-    public Output<Integer> drainingTimeoutSec() {
-        return this.drainingTimeoutSec == null ? Codegen.empty() : this.drainingTimeoutSec;
+    public Optional<Output<Integer>> drainingTimeoutSec() {
+        return Optional.ofNullable(this.drainingTimeoutSec);
     }
 
-    public ConnectionDrainingArgs(@Nullable Output<Integer> drainingTimeoutSec) {
-        this.drainingTimeoutSec = drainingTimeoutSec;
-    }
+    private ConnectionDrainingArgs() {}
 
-    private ConnectionDrainingArgs() {
-        this.drainingTimeoutSec = Codegen.empty();
+    private ConnectionDrainingArgs(ConnectionDrainingArgs $) {
+        this.drainingTimeoutSec = $.drainingTimeoutSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionDrainingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> drainingTimeoutSec;
+        private ConnectionDrainingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionDrainingArgs();
         }
 
         public Builder(ConnectionDrainingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.drainingTimeoutSec = defaults.drainingTimeoutSec;
+            $ = new ConnectionDrainingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder drainingTimeoutSec(@Nullable Output<Integer> drainingTimeoutSec) {
-            this.drainingTimeoutSec = drainingTimeoutSec;
+            $.drainingTimeoutSec = drainingTimeoutSec;
             return this;
         }
-        public Builder drainingTimeoutSec(@Nullable Integer drainingTimeoutSec) {
-            this.drainingTimeoutSec = Codegen.ofNullable(drainingTimeoutSec);
-            return this;
-        }        public ConnectionDrainingArgs build() {
-            return new ConnectionDrainingArgs(drainingTimeoutSec);
+
+        public Builder drainingTimeoutSec(Integer drainingTimeoutSec) {
+            return drainingTimeoutSec(Output.of(drainingTimeoutSec));
+        }
+
+        public ConnectionDrainingArgs build() {
+            return $;
         }
     }
+
 }

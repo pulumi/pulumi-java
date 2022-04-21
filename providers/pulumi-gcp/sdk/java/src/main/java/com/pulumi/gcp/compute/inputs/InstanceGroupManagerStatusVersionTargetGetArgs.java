@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class InstanceGroupManagerStatusVersionTargetGetArgs extends com.pu
     public static final InstanceGroupManagerStatusVersionTargetGetArgs Empty = new InstanceGroupManagerStatusVersionTargetGetArgs();
 
     @Import(name="isReached")
-      private final @Nullable Output<Boolean> isReached;
+    private @Nullable Output<Boolean> isReached;
 
-    public Output<Boolean> isReached() {
-        return this.isReached == null ? Codegen.empty() : this.isReached;
+    public Optional<Output<Boolean>> isReached() {
+        return Optional.ofNullable(this.isReached);
     }
 
-    public InstanceGroupManagerStatusVersionTargetGetArgs(@Nullable Output<Boolean> isReached) {
-        this.isReached = isReached;
-    }
+    private InstanceGroupManagerStatusVersionTargetGetArgs() {}
 
-    private InstanceGroupManagerStatusVersionTargetGetArgs() {
-        this.isReached = Codegen.empty();
+    private InstanceGroupManagerStatusVersionTargetGetArgs(InstanceGroupManagerStatusVersionTargetGetArgs $) {
+        this.isReached = $.isReached;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStatusVersionTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isReached;
+        private InstanceGroupManagerStatusVersionTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStatusVersionTargetGetArgs();
         }
 
         public Builder(InstanceGroupManagerStatusVersionTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isReached = defaults.isReached;
+            $ = new InstanceGroupManagerStatusVersionTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isReached(@Nullable Output<Boolean> isReached) {
-            this.isReached = isReached;
+            $.isReached = isReached;
             return this;
         }
-        public Builder isReached(@Nullable Boolean isReached) {
-            this.isReached = Codegen.ofNullable(isReached);
-            return this;
-        }        public InstanceGroupManagerStatusVersionTargetGetArgs build() {
-            return new InstanceGroupManagerStatusVersionTargetGetArgs(isReached);
+
+        public Builder isReached(Boolean isReached) {
+            return isReached(Output.of(isReached));
+        }
+
+        public InstanceGroupManagerStatusVersionTargetGetArgs build() {
+            return $;
         }
     }
+
 }

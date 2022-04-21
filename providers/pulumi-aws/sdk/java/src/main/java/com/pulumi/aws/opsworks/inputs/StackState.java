@@ -6,12 +6,12 @@ package com.pulumi.aws.opsworks.inputs;
 import com.pulumi.aws.opsworks.inputs.StackCustomCookbooksSourceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable Output<String> agentVersion;
+    private @Nullable Output<String> agentVersion;
 
-    public Output<String> agentVersion() {
-        return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
+    public Optional<Output<String>> agentVersion() {
+        return Optional.ofNullable(this.agentVersion);
     }
 
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="berkshelfVersion")
-      private final @Nullable Output<String> berkshelfVersion;
+    private @Nullable Output<String> berkshelfVersion;
 
-    public Output<String> berkshelfVersion() {
-        return this.berkshelfVersion == null ? Codegen.empty() : this.berkshelfVersion;
+    public Optional<Output<String>> berkshelfVersion() {
+        return Optional.ofNullable(this.berkshelfVersion);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="color")
-      private final @Nullable Output<String> color;
+    private @Nullable Output<String> color;
 
-    public Output<String> color() {
-        return this.color == null ? Codegen.empty() : this.color;
+    public Optional<Output<String>> color() {
+        return Optional.ofNullable(this.color);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationManagerName")
-      private final @Nullable Output<String> configurationManagerName;
+    private @Nullable Output<String> configurationManagerName;
 
-    public Output<String> configurationManagerName() {
-        return this.configurationManagerName == null ? Codegen.empty() : this.configurationManagerName;
+    public Optional<Output<String>> configurationManagerName() {
+        return Optional.ofNullable(this.configurationManagerName);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationManagerVersion")
-      private final @Nullable Output<String> configurationManagerVersion;
+    private @Nullable Output<String> configurationManagerVersion;
 
-    public Output<String> configurationManagerVersion() {
-        return this.configurationManagerVersion == null ? Codegen.empty() : this.configurationManagerVersion;
+    public Optional<Output<String>> configurationManagerVersion() {
+        return Optional.ofNullable(this.configurationManagerVersion);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customCookbooksSources")
-      private final @Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources;
+    private @Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources;
 
-    public Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources() {
-        return this.customCookbooksSources == null ? Codegen.empty() : this.customCookbooksSources;
+    public Optional<Output<List<StackCustomCookbooksSourceGetArgs>>> customCookbooksSources() {
+        return Optional.ofNullable(this.customCookbooksSources);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customJson")
-      private final @Nullable Output<String> customJson;
+    private @Nullable Output<String> customJson;
 
-    public Output<String> customJson() {
-        return this.customJson == null ? Codegen.empty() : this.customJson;
+    public Optional<Output<String>> customJson() {
+        return Optional.ofNullable(this.customJson);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultAvailabilityZone")
-      private final @Nullable Output<String> defaultAvailabilityZone;
+    private @Nullable Output<String> defaultAvailabilityZone;
 
-    public Output<String> defaultAvailabilityZone() {
-        return this.defaultAvailabilityZone == null ? Codegen.empty() : this.defaultAvailabilityZone;
+    public Optional<Output<String>> defaultAvailabilityZone() {
+        return Optional.ofNullable(this.defaultAvailabilityZone);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultInstanceProfileArn")
-      private final @Nullable Output<String> defaultInstanceProfileArn;
+    private @Nullable Output<String> defaultInstanceProfileArn;
 
-    public Output<String> defaultInstanceProfileArn() {
-        return this.defaultInstanceProfileArn == null ? Codegen.empty() : this.defaultInstanceProfileArn;
+    public Optional<Output<String>> defaultInstanceProfileArn() {
+        return Optional.ofNullable(this.defaultInstanceProfileArn);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultOs")
-      private final @Nullable Output<String> defaultOs;
+    private @Nullable Output<String> defaultOs;
 
-    public Output<String> defaultOs() {
-        return this.defaultOs == null ? Codegen.empty() : this.defaultOs;
+    public Optional<Output<String>> defaultOs() {
+        return Optional.ofNullable(this.defaultOs);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultRootDeviceType")
-      private final @Nullable Output<String> defaultRootDeviceType;
+    private @Nullable Output<String> defaultRootDeviceType;
 
-    public Output<String> defaultRootDeviceType() {
-        return this.defaultRootDeviceType == null ? Codegen.empty() : this.defaultRootDeviceType;
+    public Optional<Output<String>> defaultRootDeviceType() {
+        return Optional.ofNullable(this.defaultRootDeviceType);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultSshKeyName")
-      private final @Nullable Output<String> defaultSshKeyName;
+    private @Nullable Output<String> defaultSshKeyName;
 
-    public Output<String> defaultSshKeyName() {
-        return this.defaultSshKeyName == null ? Codegen.empty() : this.defaultSshKeyName;
+    public Optional<Output<String>> defaultSshKeyName() {
+        return Optional.ofNullable(this.defaultSshKeyName);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultSubnetId")
-      private final @Nullable Output<String> defaultSubnetId;
+    private @Nullable Output<String> defaultSubnetId;
 
-    public Output<String> defaultSubnetId() {
-        return this.defaultSubnetId == null ? Codegen.empty() : this.defaultSubnetId;
+    public Optional<Output<String>> defaultSubnetId() {
+        return Optional.ofNullable(this.defaultSubnetId);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostnameTheme")
-      private final @Nullable Output<String> hostnameTheme;
+    private @Nullable Output<String> hostnameTheme;
 
-    public Output<String> hostnameTheme() {
-        return this.hostnameTheme == null ? Codegen.empty() : this.hostnameTheme;
+    public Optional<Output<String>> hostnameTheme() {
+        return Optional.ofNullable(this.hostnameTheme);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manageBerkshelf")
-      private final @Nullable Output<Boolean> manageBerkshelf;
+    private @Nullable Output<Boolean> manageBerkshelf;
 
-    public Output<Boolean> manageBerkshelf() {
-        return this.manageBerkshelf == null ? Codegen.empty() : this.manageBerkshelf;
+    public Optional<Output<Boolean>> manageBerkshelf() {
+        return Optional.ofNullable(this.manageBerkshelf);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -223,17 +223,17 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceRoleArn")
-      private final @Nullable Output<String> serviceRoleArn;
+    private @Nullable Output<String> serviceRoleArn;
 
-    public Output<String> serviceRoleArn() {
-        return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
+    public Optional<Output<String>> serviceRoleArn() {
+        return Optional.ofNullable(this.serviceRoleArn);
     }
 
     @Import(name="stackEndpoint")
-      private final @Nullable Output<String> stackEndpoint;
+    private @Nullable Output<String> stackEndpoint;
 
-    public Output<String> stackEndpoint() {
-        return this.stackEndpoint == null ? Codegen.empty() : this.stackEndpoint;
+    public Optional<Output<String>> stackEndpoint() {
+        return Optional.ofNullable(this.stackEndpoint);
     }
 
     /**
@@ -241,10 +241,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -252,10 +252,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useCustomCookbooks")
-      private final @Nullable Output<Boolean> useCustomCookbooks;
+    private @Nullable Output<Boolean> useCustomCookbooks;
 
-    public Output<Boolean> useCustomCookbooks() {
-        return this.useCustomCookbooks == null ? Codegen.empty() : this.useCustomCookbooks;
+    public Optional<Output<Boolean>> useCustomCookbooks() {
+        return Optional.ofNullable(this.useCustomCookbooks);
     }
 
     /**
@@ -276,10 +276,10 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useOpsworksSecurityGroups")
-      private final @Nullable Output<Boolean> useOpsworksSecurityGroups;
+    private @Nullable Output<Boolean> useOpsworksSecurityGroups;
 
-    public Output<Boolean> useOpsworksSecurityGroups() {
-        return this.useOpsworksSecurityGroups == null ? Codegen.empty() : this.useOpsworksSecurityGroups;
+    public Optional<Output<Boolean>> useOpsworksSecurityGroups() {
+        return Optional.ofNullable(this.useOpsworksSecurityGroups);
     }
 
     /**
@@ -287,365 +287,292 @@ public final class StackState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public StackState(
-        @Nullable Output<String> agentVersion,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> berkshelfVersion,
-        @Nullable Output<String> color,
-        @Nullable Output<String> configurationManagerName,
-        @Nullable Output<String> configurationManagerVersion,
-        @Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources,
-        @Nullable Output<String> customJson,
-        @Nullable Output<String> defaultAvailabilityZone,
-        @Nullable Output<String> defaultInstanceProfileArn,
-        @Nullable Output<String> defaultOs,
-        @Nullable Output<String> defaultRootDeviceType,
-        @Nullable Output<String> defaultSshKeyName,
-        @Nullable Output<String> defaultSubnetId,
-        @Nullable Output<String> hostnameTheme,
-        @Nullable Output<Boolean> manageBerkshelf,
-        @Nullable Output<String> name,
-        @Nullable Output<String> region,
-        @Nullable Output<String> serviceRoleArn,
-        @Nullable Output<String> stackEndpoint,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Boolean> useCustomCookbooks,
-        @Nullable Output<Boolean> useOpsworksSecurityGroups,
-        @Nullable Output<String> vpcId) {
-        this.agentVersion = agentVersion;
-        this.arn = arn;
-        this.berkshelfVersion = berkshelfVersion;
-        this.color = color;
-        this.configurationManagerName = configurationManagerName;
-        this.configurationManagerVersion = configurationManagerVersion;
-        this.customCookbooksSources = customCookbooksSources;
-        this.customJson = customJson;
-        this.defaultAvailabilityZone = defaultAvailabilityZone;
-        this.defaultInstanceProfileArn = defaultInstanceProfileArn;
-        this.defaultOs = defaultOs;
-        this.defaultRootDeviceType = defaultRootDeviceType;
-        this.defaultSshKeyName = defaultSshKeyName;
-        this.defaultSubnetId = defaultSubnetId;
-        this.hostnameTheme = hostnameTheme;
-        this.manageBerkshelf = manageBerkshelf;
-        this.name = name;
-        this.region = region;
-        this.serviceRoleArn = serviceRoleArn;
-        this.stackEndpoint = stackEndpoint;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.useCustomCookbooks = useCustomCookbooks;
-        this.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
-        this.vpcId = vpcId;
-    }
+    private StackState() {}
 
-    private StackState() {
-        this.agentVersion = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.berkshelfVersion = Codegen.empty();
-        this.color = Codegen.empty();
-        this.configurationManagerName = Codegen.empty();
-        this.configurationManagerVersion = Codegen.empty();
-        this.customCookbooksSources = Codegen.empty();
-        this.customJson = Codegen.empty();
-        this.defaultAvailabilityZone = Codegen.empty();
-        this.defaultInstanceProfileArn = Codegen.empty();
-        this.defaultOs = Codegen.empty();
-        this.defaultRootDeviceType = Codegen.empty();
-        this.defaultSshKeyName = Codegen.empty();
-        this.defaultSubnetId = Codegen.empty();
-        this.hostnameTheme = Codegen.empty();
-        this.manageBerkshelf = Codegen.empty();
-        this.name = Codegen.empty();
-        this.region = Codegen.empty();
-        this.serviceRoleArn = Codegen.empty();
-        this.stackEndpoint = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.useCustomCookbooks = Codegen.empty();
-        this.useOpsworksSecurityGroups = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private StackState(StackState $) {
+        this.agentVersion = $.agentVersion;
+        this.arn = $.arn;
+        this.berkshelfVersion = $.berkshelfVersion;
+        this.color = $.color;
+        this.configurationManagerName = $.configurationManagerName;
+        this.configurationManagerVersion = $.configurationManagerVersion;
+        this.customCookbooksSources = $.customCookbooksSources;
+        this.customJson = $.customJson;
+        this.defaultAvailabilityZone = $.defaultAvailabilityZone;
+        this.defaultInstanceProfileArn = $.defaultInstanceProfileArn;
+        this.defaultOs = $.defaultOs;
+        this.defaultRootDeviceType = $.defaultRootDeviceType;
+        this.defaultSshKeyName = $.defaultSshKeyName;
+        this.defaultSubnetId = $.defaultSubnetId;
+        this.hostnameTheme = $.hostnameTheme;
+        this.manageBerkshelf = $.manageBerkshelf;
+        this.name = $.name;
+        this.region = $.region;
+        this.serviceRoleArn = $.serviceRoleArn;
+        this.stackEndpoint = $.stackEndpoint;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.useCustomCookbooks = $.useCustomCookbooks;
+        this.useOpsworksSecurityGroups = $.useOpsworksSecurityGroups;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> agentVersion;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> berkshelfVersion;
-        private @Nullable Output<String> color;
-        private @Nullable Output<String> configurationManagerName;
-        private @Nullable Output<String> configurationManagerVersion;
-        private @Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources;
-        private @Nullable Output<String> customJson;
-        private @Nullable Output<String> defaultAvailabilityZone;
-        private @Nullable Output<String> defaultInstanceProfileArn;
-        private @Nullable Output<String> defaultOs;
-        private @Nullable Output<String> defaultRootDeviceType;
-        private @Nullable Output<String> defaultSshKeyName;
-        private @Nullable Output<String> defaultSubnetId;
-        private @Nullable Output<String> hostnameTheme;
-        private @Nullable Output<Boolean> manageBerkshelf;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> serviceRoleArn;
-        private @Nullable Output<String> stackEndpoint;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Boolean> useCustomCookbooks;
-        private @Nullable Output<Boolean> useOpsworksSecurityGroups;
-        private @Nullable Output<String> vpcId;
+        private StackState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackState();
         }
 
         public Builder(StackState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.arn = defaults.arn;
-    	      this.berkshelfVersion = defaults.berkshelfVersion;
-    	      this.color = defaults.color;
-    	      this.configurationManagerName = defaults.configurationManagerName;
-    	      this.configurationManagerVersion = defaults.configurationManagerVersion;
-    	      this.customCookbooksSources = defaults.customCookbooksSources;
-    	      this.customJson = defaults.customJson;
-    	      this.defaultAvailabilityZone = defaults.defaultAvailabilityZone;
-    	      this.defaultInstanceProfileArn = defaults.defaultInstanceProfileArn;
-    	      this.defaultOs = defaults.defaultOs;
-    	      this.defaultRootDeviceType = defaults.defaultRootDeviceType;
-    	      this.defaultSshKeyName = defaults.defaultSshKeyName;
-    	      this.defaultSubnetId = defaults.defaultSubnetId;
-    	      this.hostnameTheme = defaults.hostnameTheme;
-    	      this.manageBerkshelf = defaults.manageBerkshelf;
-    	      this.name = defaults.name;
-    	      this.region = defaults.region;
-    	      this.serviceRoleArn = defaults.serviceRoleArn;
-    	      this.stackEndpoint = defaults.stackEndpoint;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.useCustomCookbooks = defaults.useCustomCookbooks;
-    	      this.useOpsworksSecurityGroups = defaults.useOpsworksSecurityGroups;
-    	      this.vpcId = defaults.vpcId;
+            $ = new StackState(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersion(@Nullable Output<String> agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
-        public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Codegen.ofNullable(agentVersion);
-            return this;
+
+        public Builder agentVersion(String agentVersion) {
+            return agentVersion(Output.of(agentVersion));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder berkshelfVersion(@Nullable Output<String> berkshelfVersion) {
-            this.berkshelfVersion = berkshelfVersion;
+            $.berkshelfVersion = berkshelfVersion;
             return this;
         }
-        public Builder berkshelfVersion(@Nullable String berkshelfVersion) {
-            this.berkshelfVersion = Codegen.ofNullable(berkshelfVersion);
-            return this;
+
+        public Builder berkshelfVersion(String berkshelfVersion) {
+            return berkshelfVersion(Output.of(berkshelfVersion));
         }
+
         public Builder color(@Nullable Output<String> color) {
-            this.color = color;
+            $.color = color;
             return this;
         }
-        public Builder color(@Nullable String color) {
-            this.color = Codegen.ofNullable(color);
-            return this;
+
+        public Builder color(String color) {
+            return color(Output.of(color));
         }
+
         public Builder configurationManagerName(@Nullable Output<String> configurationManagerName) {
-            this.configurationManagerName = configurationManagerName;
+            $.configurationManagerName = configurationManagerName;
             return this;
         }
-        public Builder configurationManagerName(@Nullable String configurationManagerName) {
-            this.configurationManagerName = Codegen.ofNullable(configurationManagerName);
-            return this;
+
+        public Builder configurationManagerName(String configurationManagerName) {
+            return configurationManagerName(Output.of(configurationManagerName));
         }
+
         public Builder configurationManagerVersion(@Nullable Output<String> configurationManagerVersion) {
-            this.configurationManagerVersion = configurationManagerVersion;
+            $.configurationManagerVersion = configurationManagerVersion;
             return this;
         }
-        public Builder configurationManagerVersion(@Nullable String configurationManagerVersion) {
-            this.configurationManagerVersion = Codegen.ofNullable(configurationManagerVersion);
-            return this;
+
+        public Builder configurationManagerVersion(String configurationManagerVersion) {
+            return configurationManagerVersion(Output.of(configurationManagerVersion));
         }
+
         public Builder customCookbooksSources(@Nullable Output<List<StackCustomCookbooksSourceGetArgs>> customCookbooksSources) {
-            this.customCookbooksSources = customCookbooksSources;
+            $.customCookbooksSources = customCookbooksSources;
             return this;
         }
-        public Builder customCookbooksSources(@Nullable List<StackCustomCookbooksSourceGetArgs> customCookbooksSources) {
-            this.customCookbooksSources = Codegen.ofNullable(customCookbooksSources);
-            return this;
+
+        public Builder customCookbooksSources(List<StackCustomCookbooksSourceGetArgs> customCookbooksSources) {
+            return customCookbooksSources(Output.of(customCookbooksSources));
         }
+
         public Builder customCookbooksSources(StackCustomCookbooksSourceGetArgs... customCookbooksSources) {
             return customCookbooksSources(List.of(customCookbooksSources));
         }
+
         public Builder customJson(@Nullable Output<String> customJson) {
-            this.customJson = customJson;
+            $.customJson = customJson;
             return this;
         }
-        public Builder customJson(@Nullable String customJson) {
-            this.customJson = Codegen.ofNullable(customJson);
-            return this;
+
+        public Builder customJson(String customJson) {
+            return customJson(Output.of(customJson));
         }
+
         public Builder defaultAvailabilityZone(@Nullable Output<String> defaultAvailabilityZone) {
-            this.defaultAvailabilityZone = defaultAvailabilityZone;
+            $.defaultAvailabilityZone = defaultAvailabilityZone;
             return this;
         }
-        public Builder defaultAvailabilityZone(@Nullable String defaultAvailabilityZone) {
-            this.defaultAvailabilityZone = Codegen.ofNullable(defaultAvailabilityZone);
-            return this;
+
+        public Builder defaultAvailabilityZone(String defaultAvailabilityZone) {
+            return defaultAvailabilityZone(Output.of(defaultAvailabilityZone));
         }
+
         public Builder defaultInstanceProfileArn(@Nullable Output<String> defaultInstanceProfileArn) {
-            this.defaultInstanceProfileArn = defaultInstanceProfileArn;
+            $.defaultInstanceProfileArn = defaultInstanceProfileArn;
             return this;
         }
-        public Builder defaultInstanceProfileArn(@Nullable String defaultInstanceProfileArn) {
-            this.defaultInstanceProfileArn = Codegen.ofNullable(defaultInstanceProfileArn);
-            return this;
+
+        public Builder defaultInstanceProfileArn(String defaultInstanceProfileArn) {
+            return defaultInstanceProfileArn(Output.of(defaultInstanceProfileArn));
         }
+
         public Builder defaultOs(@Nullable Output<String> defaultOs) {
-            this.defaultOs = defaultOs;
+            $.defaultOs = defaultOs;
             return this;
         }
-        public Builder defaultOs(@Nullable String defaultOs) {
-            this.defaultOs = Codegen.ofNullable(defaultOs);
-            return this;
+
+        public Builder defaultOs(String defaultOs) {
+            return defaultOs(Output.of(defaultOs));
         }
+
         public Builder defaultRootDeviceType(@Nullable Output<String> defaultRootDeviceType) {
-            this.defaultRootDeviceType = defaultRootDeviceType;
+            $.defaultRootDeviceType = defaultRootDeviceType;
             return this;
         }
-        public Builder defaultRootDeviceType(@Nullable String defaultRootDeviceType) {
-            this.defaultRootDeviceType = Codegen.ofNullable(defaultRootDeviceType);
-            return this;
+
+        public Builder defaultRootDeviceType(String defaultRootDeviceType) {
+            return defaultRootDeviceType(Output.of(defaultRootDeviceType));
         }
+
         public Builder defaultSshKeyName(@Nullable Output<String> defaultSshKeyName) {
-            this.defaultSshKeyName = defaultSshKeyName;
+            $.defaultSshKeyName = defaultSshKeyName;
             return this;
         }
-        public Builder defaultSshKeyName(@Nullable String defaultSshKeyName) {
-            this.defaultSshKeyName = Codegen.ofNullable(defaultSshKeyName);
-            return this;
+
+        public Builder defaultSshKeyName(String defaultSshKeyName) {
+            return defaultSshKeyName(Output.of(defaultSshKeyName));
         }
+
         public Builder defaultSubnetId(@Nullable Output<String> defaultSubnetId) {
-            this.defaultSubnetId = defaultSubnetId;
+            $.defaultSubnetId = defaultSubnetId;
             return this;
         }
-        public Builder defaultSubnetId(@Nullable String defaultSubnetId) {
-            this.defaultSubnetId = Codegen.ofNullable(defaultSubnetId);
-            return this;
+
+        public Builder defaultSubnetId(String defaultSubnetId) {
+            return defaultSubnetId(Output.of(defaultSubnetId));
         }
+
         public Builder hostnameTheme(@Nullable Output<String> hostnameTheme) {
-            this.hostnameTheme = hostnameTheme;
+            $.hostnameTheme = hostnameTheme;
             return this;
         }
-        public Builder hostnameTheme(@Nullable String hostnameTheme) {
-            this.hostnameTheme = Codegen.ofNullable(hostnameTheme);
-            return this;
+
+        public Builder hostnameTheme(String hostnameTheme) {
+            return hostnameTheme(Output.of(hostnameTheme));
         }
+
         public Builder manageBerkshelf(@Nullable Output<Boolean> manageBerkshelf) {
-            this.manageBerkshelf = manageBerkshelf;
+            $.manageBerkshelf = manageBerkshelf;
             return this;
         }
-        public Builder manageBerkshelf(@Nullable Boolean manageBerkshelf) {
-            this.manageBerkshelf = Codegen.ofNullable(manageBerkshelf);
-            return this;
+
+        public Builder manageBerkshelf(Boolean manageBerkshelf) {
+            return manageBerkshelf(Output.of(manageBerkshelf));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
-            this.serviceRoleArn = serviceRoleArn;
+            $.serviceRoleArn = serviceRoleArn;
             return this;
         }
-        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
-            this.serviceRoleArn = Codegen.ofNullable(serviceRoleArn);
-            return this;
+
+        public Builder serviceRoleArn(String serviceRoleArn) {
+            return serviceRoleArn(Output.of(serviceRoleArn));
         }
+
         public Builder stackEndpoint(@Nullable Output<String> stackEndpoint) {
-            this.stackEndpoint = stackEndpoint;
+            $.stackEndpoint = stackEndpoint;
             return this;
         }
-        public Builder stackEndpoint(@Nullable String stackEndpoint) {
-            this.stackEndpoint = Codegen.ofNullable(stackEndpoint);
-            return this;
+
+        public Builder stackEndpoint(String stackEndpoint) {
+            return stackEndpoint(Output.of(stackEndpoint));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder useCustomCookbooks(@Nullable Output<Boolean> useCustomCookbooks) {
-            this.useCustomCookbooks = useCustomCookbooks;
+            $.useCustomCookbooks = useCustomCookbooks;
             return this;
         }
-        public Builder useCustomCookbooks(@Nullable Boolean useCustomCookbooks) {
-            this.useCustomCookbooks = Codegen.ofNullable(useCustomCookbooks);
-            return this;
+
+        public Builder useCustomCookbooks(Boolean useCustomCookbooks) {
+            return useCustomCookbooks(Output.of(useCustomCookbooks));
         }
+
         public Builder useOpsworksSecurityGroups(@Nullable Output<Boolean> useOpsworksSecurityGroups) {
-            this.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
+            $.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
             return this;
         }
-        public Builder useOpsworksSecurityGroups(@Nullable Boolean useOpsworksSecurityGroups) {
-            this.useOpsworksSecurityGroups = Codegen.ofNullable(useOpsworksSecurityGroups);
-            return this;
+
+        public Builder useOpsworksSecurityGroups(Boolean useOpsworksSecurityGroups) {
+            return useOpsworksSecurityGroups(Output.of(useOpsworksSecurityGroups));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public StackState build() {
-            return new StackState(agentVersion, arn, berkshelfVersion, color, configurationManagerName, configurationManagerVersion, customCookbooksSources, customJson, defaultAvailabilityZone, defaultInstanceProfileArn, defaultOs, defaultRootDeviceType, defaultSshKeyName, defaultSubnetId, hostnameTheme, manageBerkshelf, name, region, serviceRoleArn, stackEndpoint, tags, tagsAll, useCustomCookbooks, useOpsworksSecurityGroups, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public StackState build() {
+            return $;
         }
     }
+
 }

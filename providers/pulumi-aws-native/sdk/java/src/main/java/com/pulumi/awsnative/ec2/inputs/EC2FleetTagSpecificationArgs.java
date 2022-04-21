@@ -7,9 +7,9 @@ import com.pulumi.awsnative.ec2.enums.EC2FleetTagSpecificationResourceType;
 import com.pulumi.awsnative.ec2.inputs.EC2FleetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class EC2FleetTagSpecificationArgs extends com.pulumi.resources.Res
     public static final EC2FleetTagSpecificationArgs Empty = new EC2FleetTagSpecificationArgs();
 
     @Import(name="resourceType")
-      private final @Nullable Output<EC2FleetTagSpecificationResourceType> resourceType;
+    private @Nullable Output<EC2FleetTagSpecificationResourceType> resourceType;
 
-    public Output<EC2FleetTagSpecificationResourceType> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<EC2FleetTagSpecificationResourceType>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<EC2FleetTagArgs>> tags;
+    private @Nullable Output<List<EC2FleetTagArgs>> tags;
 
-    public Output<List<EC2FleetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<EC2FleetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public EC2FleetTagSpecificationArgs(
-        @Nullable Output<EC2FleetTagSpecificationResourceType> resourceType,
-        @Nullable Output<List<EC2FleetTagArgs>> tags) {
-        this.resourceType = resourceType;
-        this.tags = tags;
-    }
+    private EC2FleetTagSpecificationArgs() {}
 
-    private EC2FleetTagSpecificationArgs() {
-        this.resourceType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private EC2FleetTagSpecificationArgs(EC2FleetTagSpecificationArgs $) {
+        this.resourceType = $.resourceType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetTagSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EC2FleetTagSpecificationResourceType> resourceType;
-        private @Nullable Output<List<EC2FleetTagArgs>> tags;
+        private EC2FleetTagSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetTagSpecificationArgs();
         }
 
         public Builder(EC2FleetTagSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.tags = defaults.tags;
+            $ = new EC2FleetTagSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(@Nullable Output<EC2FleetTagSpecificationResourceType> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable EC2FleetTagSpecificationResourceType resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(EC2FleetTagSpecificationResourceType resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder tags(@Nullable Output<List<EC2FleetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<EC2FleetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<EC2FleetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(EC2FleetTagArgs... tags) {
             return tags(List.of(tags));
-        }        public EC2FleetTagSpecificationArgs build() {
-            return new EC2FleetTagSpecificationArgs(resourceType, tags);
+        }
+
+        public EC2FleetTagSpecificationArgs build() {
+            return $;
         }
     }
+
 }

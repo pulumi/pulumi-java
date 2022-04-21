@@ -17,45 +17,45 @@ public final class ListLocationConsortiumsArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="locationName", required=true)
-      private final String locationName;
+    private String locationName;
 
     public String locationName() {
         return this.locationName;
     }
 
-    public ListLocationConsortiumsArgs(String locationName) {
-        this.locationName = Objects.requireNonNull(locationName, "expected parameter 'locationName' to be non-null");
-    }
+    private ListLocationConsortiumsArgs() {}
 
-    private ListLocationConsortiumsArgs() {
-        this.locationName = null;
+    private ListLocationConsortiumsArgs(ListLocationConsortiumsArgs $) {
+        this.locationName = $.locationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListLocationConsortiumsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String locationName;
+        private ListLocationConsortiumsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListLocationConsortiumsArgs();
         }
 
         public Builder(ListLocationConsortiumsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locationName = defaults.locationName;
+            $ = new ListLocationConsortiumsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locationName(String locationName) {
-            this.locationName = Objects.requireNonNull(locationName);
+            $.locationName = locationName;
             return this;
-        }        public ListLocationConsortiumsArgs build() {
-            return new ListLocationConsortiumsArgs(locationName);
+        }
+
+        public ListLocationConsortiumsArgs build() {
+            $.locationName = Objects.requireNonNull($.locationName, "expected parameter 'locationName' to be non-null");
+            return $;
         }
     }
+
 }

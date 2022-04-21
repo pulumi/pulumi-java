@@ -6,12 +6,12 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.VpcEndpointDnsEntryGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoAccept")
-      private final @Nullable Output<Boolean> autoAccept;
+    private @Nullable Output<Boolean> autoAccept;
 
-    public Output<Boolean> autoAccept() {
-        return this.autoAccept == null ? Codegen.empty() : this.autoAccept;
+    public Optional<Output<Boolean>> autoAccept() {
+        return Optional.ofNullable(this.autoAccept);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cidrBlocks")
-      private final @Nullable Output<List<String>> cidrBlocks;
+    private @Nullable Output<List<String>> cidrBlocks;
 
-    public Output<List<String>> cidrBlocks() {
-        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
+    public Optional<Output<List<String>>> cidrBlocks() {
+        return Optional.ofNullable(this.cidrBlocks);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsEntries")
-      private final @Nullable Output<List<VpcEndpointDnsEntryGetArgs>> dnsEntries;
+    private @Nullable Output<List<VpcEndpointDnsEntryGetArgs>> dnsEntries;
 
-    public Output<List<VpcEndpointDnsEntryGetArgs>> dnsEntries() {
-        return this.dnsEntries == null ? Codegen.empty() : this.dnsEntries;
+    public Optional<Output<List<VpcEndpointDnsEntryGetArgs>>> dnsEntries() {
+        return Optional.ofNullable(this.dnsEntries);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkInterfaceIds")
-      private final @Nullable Output<List<String>> networkInterfaceIds;
+    private @Nullable Output<List<String>> networkInterfaceIds;
 
-    public Output<List<String>> networkInterfaceIds() {
-        return this.networkInterfaceIds == null ? Codegen.empty() : this.networkInterfaceIds;
+    public Optional<Output<List<String>>> networkInterfaceIds() {
+        return Optional.ofNullable(this.networkInterfaceIds);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable Output<String> ownerId;
+    private @Nullable Output<String> ownerId;
 
-    public Output<String> ownerId() {
-        return this.ownerId == null ? Codegen.empty() : this.ownerId;
+    public Optional<Output<String>> ownerId() {
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefixListId")
-      private final @Nullable Output<String> prefixListId;
+    private @Nullable Output<String> prefixListId;
 
-    public Output<String> prefixListId() {
-        return this.prefixListId == null ? Codegen.empty() : this.prefixListId;
+    public Optional<Output<String>> prefixListId() {
+        return Optional.ofNullable(this.prefixListId);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateDnsEnabled")
-      private final @Nullable Output<Boolean> privateDnsEnabled;
+    private @Nullable Output<Boolean> privateDnsEnabled;
 
-    public Output<Boolean> privateDnsEnabled() {
-        return this.privateDnsEnabled == null ? Codegen.empty() : this.privateDnsEnabled;
+    public Optional<Output<Boolean>> privateDnsEnabled() {
+        return Optional.ofNullable(this.privateDnsEnabled);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requesterManaged")
-      private final @Nullable Output<Boolean> requesterManaged;
+    private @Nullable Output<Boolean> requesterManaged;
 
-    public Output<Boolean> requesterManaged() {
-        return this.requesterManaged == null ? Codegen.empty() : this.requesterManaged;
+    public Optional<Output<Boolean>> requesterManaged() {
+        return Optional.ofNullable(this.requesterManaged);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeTableIds")
-      private final @Nullable Output<List<String>> routeTableIds;
+    private @Nullable Output<List<String>> routeTableIds;
 
-    public Output<List<String>> routeTableIds() {
-        return this.routeTableIds == null ? Codegen.empty() : this.routeTableIds;
+    public Optional<Output<List<String>>> routeTableIds() {
+        return Optional.ofNullable(this.routeTableIds);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcEndpointType")
-      private final @Nullable Output<String> vpcEndpointType;
+    private @Nullable Output<String> vpcEndpointType;
 
-    public Output<String> vpcEndpointType() {
-        return this.vpcEndpointType == null ? Codegen.empty() : this.vpcEndpointType;
+    public Optional<Output<String>> vpcEndpointType() {
+        return Optional.ofNullable(this.vpcEndpointType);
     }
 
     /**
@@ -223,302 +223,252 @@ public final class VpcEndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public VpcEndpointState(
-        @Nullable Output<String> arn,
-        @Nullable Output<Boolean> autoAccept,
-        @Nullable Output<List<String>> cidrBlocks,
-        @Nullable Output<List<VpcEndpointDnsEntryGetArgs>> dnsEntries,
-        @Nullable Output<List<String>> networkInterfaceIds,
-        @Nullable Output<String> ownerId,
-        @Nullable Output<String> policy,
-        @Nullable Output<String> prefixListId,
-        @Nullable Output<Boolean> privateDnsEnabled,
-        @Nullable Output<Boolean> requesterManaged,
-        @Nullable Output<List<String>> routeTableIds,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<String> serviceName,
-        @Nullable Output<String> state,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> vpcEndpointType,
-        @Nullable Output<String> vpcId) {
-        this.arn = arn;
-        this.autoAccept = autoAccept;
-        this.cidrBlocks = cidrBlocks;
-        this.dnsEntries = dnsEntries;
-        this.networkInterfaceIds = networkInterfaceIds;
-        this.ownerId = ownerId;
-        this.policy = policy;
-        this.prefixListId = prefixListId;
-        this.privateDnsEnabled = privateDnsEnabled;
-        this.requesterManaged = requesterManaged;
-        this.routeTableIds = routeTableIds;
-        this.securityGroupIds = securityGroupIds;
-        this.serviceName = serviceName;
-        this.state = state;
-        this.subnetIds = subnetIds;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcEndpointType = vpcEndpointType;
-        this.vpcId = vpcId;
-    }
+    private VpcEndpointState() {}
 
-    private VpcEndpointState() {
-        this.arn = Codegen.empty();
-        this.autoAccept = Codegen.empty();
-        this.cidrBlocks = Codegen.empty();
-        this.dnsEntries = Codegen.empty();
-        this.networkInterfaceIds = Codegen.empty();
-        this.ownerId = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.prefixListId = Codegen.empty();
-        this.privateDnsEnabled = Codegen.empty();
-        this.requesterManaged = Codegen.empty();
-        this.routeTableIds = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.state = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcEndpointType = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private VpcEndpointState(VpcEndpointState $) {
+        this.arn = $.arn;
+        this.autoAccept = $.autoAccept;
+        this.cidrBlocks = $.cidrBlocks;
+        this.dnsEntries = $.dnsEntries;
+        this.networkInterfaceIds = $.networkInterfaceIds;
+        this.ownerId = $.ownerId;
+        this.policy = $.policy;
+        this.prefixListId = $.prefixListId;
+        this.privateDnsEnabled = $.privateDnsEnabled;
+        this.requesterManaged = $.requesterManaged;
+        this.routeTableIds = $.routeTableIds;
+        this.securityGroupIds = $.securityGroupIds;
+        this.serviceName = $.serviceName;
+        this.state = $.state;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcEndpointType = $.vpcEndpointType;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Boolean> autoAccept;
-        private @Nullable Output<List<String>> cidrBlocks;
-        private @Nullable Output<List<VpcEndpointDnsEntryGetArgs>> dnsEntries;
-        private @Nullable Output<List<String>> networkInterfaceIds;
-        private @Nullable Output<String> ownerId;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> prefixListId;
-        private @Nullable Output<Boolean> privateDnsEnabled;
-        private @Nullable Output<Boolean> requesterManaged;
-        private @Nullable Output<List<String>> routeTableIds;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<String> serviceName;
-        private @Nullable Output<String> state;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> vpcEndpointType;
-        private @Nullable Output<String> vpcId;
+        private VpcEndpointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointState();
         }
 
         public Builder(VpcEndpointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.autoAccept = defaults.autoAccept;
-    	      this.cidrBlocks = defaults.cidrBlocks;
-    	      this.dnsEntries = defaults.dnsEntries;
-    	      this.networkInterfaceIds = defaults.networkInterfaceIds;
-    	      this.ownerId = defaults.ownerId;
-    	      this.policy = defaults.policy;
-    	      this.prefixListId = defaults.prefixListId;
-    	      this.privateDnsEnabled = defaults.privateDnsEnabled;
-    	      this.requesterManaged = defaults.requesterManaged;
-    	      this.routeTableIds = defaults.routeTableIds;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.serviceName = defaults.serviceName;
-    	      this.state = defaults.state;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcEndpointType = defaults.vpcEndpointType;
-    	      this.vpcId = defaults.vpcId;
+            $ = new VpcEndpointState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
-            this.autoAccept = autoAccept;
+            $.autoAccept = autoAccept;
             return this;
         }
-        public Builder autoAccept(@Nullable Boolean autoAccept) {
-            this.autoAccept = Codegen.ofNullable(autoAccept);
-            return this;
+
+        public Builder autoAccept(Boolean autoAccept) {
+            return autoAccept(Output.of(autoAccept));
         }
+
         public Builder cidrBlocks(@Nullable Output<List<String>> cidrBlocks) {
-            this.cidrBlocks = cidrBlocks;
+            $.cidrBlocks = cidrBlocks;
             return this;
         }
-        public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
-            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
-            return this;
+
+        public Builder cidrBlocks(List<String> cidrBlocks) {
+            return cidrBlocks(Output.of(cidrBlocks));
         }
+
         public Builder cidrBlocks(String... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
+
         public Builder dnsEntries(@Nullable Output<List<VpcEndpointDnsEntryGetArgs>> dnsEntries) {
-            this.dnsEntries = dnsEntries;
+            $.dnsEntries = dnsEntries;
             return this;
         }
-        public Builder dnsEntries(@Nullable List<VpcEndpointDnsEntryGetArgs> dnsEntries) {
-            this.dnsEntries = Codegen.ofNullable(dnsEntries);
-            return this;
+
+        public Builder dnsEntries(List<VpcEndpointDnsEntryGetArgs> dnsEntries) {
+            return dnsEntries(Output.of(dnsEntries));
         }
+
         public Builder dnsEntries(VpcEndpointDnsEntryGetArgs... dnsEntries) {
             return dnsEntries(List.of(dnsEntries));
         }
+
         public Builder networkInterfaceIds(@Nullable Output<List<String>> networkInterfaceIds) {
-            this.networkInterfaceIds = networkInterfaceIds;
+            $.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
-        public Builder networkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
-            this.networkInterfaceIds = Codegen.ofNullable(networkInterfaceIds);
-            return this;
+
+        public Builder networkInterfaceIds(List<String> networkInterfaceIds) {
+            return networkInterfaceIds(Output.of(networkInterfaceIds));
         }
+
         public Builder networkInterfaceIds(String... networkInterfaceIds) {
             return networkInterfaceIds(List.of(networkInterfaceIds));
         }
+
         public Builder ownerId(@Nullable Output<String> ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
-        public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Codegen.ofNullable(ownerId);
-            return this;
+
+        public Builder ownerId(String ownerId) {
+            return ownerId(Output.of(ownerId));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder prefixListId(@Nullable Output<String> prefixListId) {
-            this.prefixListId = prefixListId;
+            $.prefixListId = prefixListId;
             return this;
         }
-        public Builder prefixListId(@Nullable String prefixListId) {
-            this.prefixListId = Codegen.ofNullable(prefixListId);
-            return this;
+
+        public Builder prefixListId(String prefixListId) {
+            return prefixListId(Output.of(prefixListId));
         }
+
         public Builder privateDnsEnabled(@Nullable Output<Boolean> privateDnsEnabled) {
-            this.privateDnsEnabled = privateDnsEnabled;
+            $.privateDnsEnabled = privateDnsEnabled;
             return this;
         }
-        public Builder privateDnsEnabled(@Nullable Boolean privateDnsEnabled) {
-            this.privateDnsEnabled = Codegen.ofNullable(privateDnsEnabled);
-            return this;
+
+        public Builder privateDnsEnabled(Boolean privateDnsEnabled) {
+            return privateDnsEnabled(Output.of(privateDnsEnabled));
         }
+
         public Builder requesterManaged(@Nullable Output<Boolean> requesterManaged) {
-            this.requesterManaged = requesterManaged;
+            $.requesterManaged = requesterManaged;
             return this;
         }
-        public Builder requesterManaged(@Nullable Boolean requesterManaged) {
-            this.requesterManaged = Codegen.ofNullable(requesterManaged);
-            return this;
+
+        public Builder requesterManaged(Boolean requesterManaged) {
+            return requesterManaged(Output.of(requesterManaged));
         }
+
         public Builder routeTableIds(@Nullable Output<List<String>> routeTableIds) {
-            this.routeTableIds = routeTableIds;
+            $.routeTableIds = routeTableIds;
             return this;
         }
-        public Builder routeTableIds(@Nullable List<String> routeTableIds) {
-            this.routeTableIds = Codegen.ofNullable(routeTableIds);
-            return this;
+
+        public Builder routeTableIds(List<String> routeTableIds) {
+            return routeTableIds(Output.of(routeTableIds));
         }
+
         public Builder routeTableIds(String... routeTableIds) {
             return routeTableIds(List.of(routeTableIds));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcEndpointType(@Nullable Output<String> vpcEndpointType) {
-            this.vpcEndpointType = vpcEndpointType;
+            $.vpcEndpointType = vpcEndpointType;
             return this;
         }
-        public Builder vpcEndpointType(@Nullable String vpcEndpointType) {
-            this.vpcEndpointType = Codegen.ofNullable(vpcEndpointType);
-            return this;
+
+        public Builder vpcEndpointType(String vpcEndpointType) {
+            return vpcEndpointType(Output.of(vpcEndpointType));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public VpcEndpointState build() {
-            return new VpcEndpointState(arn, autoAccept, cidrBlocks, dnsEntries, networkInterfaceIds, ownerId, policy, prefixListId, privateDnsEnabled, requesterManaged, routeTableIds, securityGroupIds, serviceName, state, subnetIds, tags, tagsAll, vpcEndpointType, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public VpcEndpointState build() {
+            return $;
         }
     }
+
 }

@@ -10,10 +10,10 @@ import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blobUri")
-      private final @Nullable Output<String> blobUri;
+    private @Nullable Output<String> blobUri;
 
-    public Output<String> blobUri() {
-        return this.blobUri == null ? Codegen.empty() : this.blobUri;
+    public Optional<Output<String>> blobUri() {
+        return Optional.ofNullable(this.blobUri);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caching")
-      private final @Nullable Output<CachingTypes> caching;
+    private @Nullable Output<CachingTypes> caching;
 
-    public Output<CachingTypes> caching() {
-        return this.caching == null ? Codegen.empty() : this.caching;
+    public Optional<Output<CachingTypes>> caching() {
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionSet")
-      private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
+    private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
-    public Output<DiskEncryptionSetParametersArgs> diskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
+    public Optional<Output<DiskEncryptionSetParametersArgs>> diskEncryptionSet() {
+        return Optional.ofNullable(this.diskEncryptionSet);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -74,7 +74,7 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lun", required=true)
-      private final Output<Integer> lun;
+    private Output<Integer> lun;
 
     public Output<Integer> lun() {
         return this.lun;
@@ -85,10 +85,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable Output<SubResourceArgs> managedDisk;
+    private @Nullable Output<SubResourceArgs> managedDisk;
 
-    public Output<SubResourceArgs> managedDisk() {
-        return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
+    public Optional<Output<SubResourceArgs>> managedDisk() {
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable Output<SubResourceArgs> snapshot;
+    private @Nullable Output<SubResourceArgs> snapshot;
 
-    public Output<SubResourceArgs> snapshot() {
-        return this.snapshot == null ? Codegen.empty() : this.snapshot;
+    public Optional<Output<SubResourceArgs>> snapshot() {
+        return Optional.ofNullable(this.snapshot);
     }
 
     /**
@@ -107,141 +107,119 @@ public final class ImageDataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
+    private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
-    public Output<Either<String,StorageAccountTypes>> storageAccountType() {
-        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
+    public Optional<Output<Either<String,StorageAccountTypes>>> storageAccountType() {
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public ImageDataDiskArgs(
-        @Nullable Output<String> blobUri,
-        @Nullable Output<CachingTypes> caching,
-        @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet,
-        @Nullable Output<Integer> diskSizeGB,
-        Output<Integer> lun,
-        @Nullable Output<SubResourceArgs> managedDisk,
-        @Nullable Output<SubResourceArgs> snapshot,
-        @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
-        this.blobUri = blobUri;
-        this.caching = caching;
-        this.diskEncryptionSet = diskEncryptionSet;
-        this.diskSizeGB = diskSizeGB;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.managedDisk = managedDisk;
-        this.snapshot = snapshot;
-        this.storageAccountType = storageAccountType;
-    }
+    private ImageDataDiskArgs() {}
 
-    private ImageDataDiskArgs() {
-        this.blobUri = Codegen.empty();
-        this.caching = Codegen.empty();
-        this.diskEncryptionSet = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.lun = Codegen.empty();
-        this.managedDisk = Codegen.empty();
-        this.snapshot = Codegen.empty();
-        this.storageAccountType = Codegen.empty();
+    private ImageDataDiskArgs(ImageDataDiskArgs $) {
+        this.blobUri = $.blobUri;
+        this.caching = $.caching;
+        this.diskEncryptionSet = $.diskEncryptionSet;
+        this.diskSizeGB = $.diskSizeGB;
+        this.lun = $.lun;
+        this.managedDisk = $.managedDisk;
+        this.snapshot = $.snapshot;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageDataDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> blobUri;
-        private @Nullable Output<CachingTypes> caching;
-        private @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
-        private @Nullable Output<Integer> diskSizeGB;
-        private Output<Integer> lun;
-        private @Nullable Output<SubResourceArgs> managedDisk;
-        private @Nullable Output<SubResourceArgs> snapshot;
-        private @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
+        private ImageDataDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageDataDiskArgs();
         }
 
         public Builder(ImageDataDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobUri = defaults.blobUri;
-    	      this.caching = defaults.caching;
-    	      this.diskEncryptionSet = defaults.diskEncryptionSet;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.lun = defaults.lun;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.snapshot = defaults.snapshot;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new ImageDataDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobUri(@Nullable Output<String> blobUri) {
-            this.blobUri = blobUri;
+            $.blobUri = blobUri;
             return this;
         }
-        public Builder blobUri(@Nullable String blobUri) {
-            this.blobUri = Codegen.ofNullable(blobUri);
-            return this;
+
+        public Builder blobUri(String blobUri) {
+            return blobUri(Output.of(blobUri));
         }
+
         public Builder caching(@Nullable Output<CachingTypes> caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
-        public Builder caching(@Nullable CachingTypes caching) {
-            this.caching = Codegen.ofNullable(caching);
-            return this;
+
+        public Builder caching(CachingTypes caching) {
+            return caching(Output.of(caching));
         }
+
         public Builder diskEncryptionSet(@Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
-            this.diskEncryptionSet = diskEncryptionSet;
+            $.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
-        public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
-            this.diskEncryptionSet = Codegen.ofNullable(diskEncryptionSet);
-            return this;
+
+        public Builder diskEncryptionSet(DiskEncryptionSetParametersArgs diskEncryptionSet) {
+            return diskEncryptionSet(Output.of(diskEncryptionSet));
         }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder lun(Output<Integer> lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Output.of(Objects.requireNonNull(lun));
-            return this;
+            return lun(Output.of(lun));
         }
+
         public Builder managedDisk(@Nullable Output<SubResourceArgs> managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
-        public Builder managedDisk(@Nullable SubResourceArgs managedDisk) {
-            this.managedDisk = Codegen.ofNullable(managedDisk);
-            return this;
+
+        public Builder managedDisk(SubResourceArgs managedDisk) {
+            return managedDisk(Output.of(managedDisk));
         }
+
         public Builder snapshot(@Nullable Output<SubResourceArgs> snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
         }
-        public Builder snapshot(@Nullable SubResourceArgs snapshot) {
-            this.snapshot = Codegen.ofNullable(snapshot);
-            return this;
+
+        public Builder snapshot(SubResourceArgs snapshot) {
+            return snapshot(Output.of(snapshot));
         }
+
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
-        public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
-            this.storageAccountType = Codegen.ofNullable(storageAccountType);
-            return this;
-        }        public ImageDataDiskArgs build() {
-            return new ImageDataDiskArgs(blobUri, caching, diskEncryptionSet, diskSizeGB, lun, managedDisk, snapshot, storageAccountType);
+
+        public Builder storageAccountType(Either<String,StorageAccountTypes> storageAccountType) {
+            return storageAccountType(Output.of(storageAccountType));
+        }
+
+        public ImageDataDiskArgs build() {
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

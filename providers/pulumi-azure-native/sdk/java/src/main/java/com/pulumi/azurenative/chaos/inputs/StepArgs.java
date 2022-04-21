@@ -6,7 +6,6 @@ package com.pulumi.azurenative.chaos.inputs;
 import com.pulumi.azurenative.chaos.inputs.BranchArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="branches", required=true)
-      private final Output<List<BranchArgs>> branches;
+    private Output<List<BranchArgs>> branches;
 
     public Output<List<BranchArgs>> branches() {
         return this.branches;
@@ -36,66 +35,64 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public StepArgs(
-        Output<List<BranchArgs>> branches,
-        Output<String> name) {
-        this.branches = Objects.requireNonNull(branches, "expected parameter 'branches' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private StepArgs() {}
 
-    private StepArgs() {
-        this.branches = Codegen.empty();
-        this.name = Codegen.empty();
+    private StepArgs(StepArgs $) {
+        this.branches = $.branches;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<BranchArgs>> branches;
-        private Output<String> name;
+        private StepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StepArgs();
         }
 
         public Builder(StepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branches = defaults.branches;
-    	      this.name = defaults.name;
+            $ = new StepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branches(Output<List<BranchArgs>> branches) {
-            this.branches = Objects.requireNonNull(branches);
+            $.branches = branches;
             return this;
         }
+
         public Builder branches(List<BranchArgs> branches) {
-            this.branches = Output.of(Objects.requireNonNull(branches));
-            return this;
+            return branches(Output.of(branches));
         }
+
         public Builder branches(BranchArgs... branches) {
             return branches(List.of(branches));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public StepArgs build() {
-            return new StepArgs(branches, name);
+            return name(Output.of(name));
+        }
+
+        public StepArgs build() {
+            $.branches = Objects.requireNonNull($.branches, "expected parameter 'branches' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

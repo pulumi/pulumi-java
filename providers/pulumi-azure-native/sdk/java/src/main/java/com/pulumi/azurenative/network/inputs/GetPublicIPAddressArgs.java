@@ -19,10 +19,10 @@ public final class GetPublicIPAddressArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetPublicIPAddressArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="publicIpAddressName", required=true)
-      private final String publicIpAddressName;
+    private String publicIpAddressName;
 
     public String publicIpAddressName() {
         return this.publicIpAddressName;
@@ -41,64 +41,58 @@ public final class GetPublicIPAddressArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPublicIPAddressArgs(
-        @Nullable String expand,
-        String publicIpAddressName,
-        String resourceGroupName) {
-        this.expand = expand;
-        this.publicIpAddressName = Objects.requireNonNull(publicIpAddressName, "expected parameter 'publicIpAddressName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPublicIPAddressArgs() {}
 
-    private GetPublicIPAddressArgs() {
-        this.expand = null;
-        this.publicIpAddressName = null;
-        this.resourceGroupName = null;
+    private GetPublicIPAddressArgs(GetPublicIPAddressArgs $) {
+        this.expand = $.expand;
+        this.publicIpAddressName = $.publicIpAddressName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPublicIPAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String publicIpAddressName;
-        private String resourceGroupName;
+        private GetPublicIPAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPublicIPAddressArgs();
         }
 
         public Builder(GetPublicIPAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.publicIpAddressName = defaults.publicIpAddressName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPublicIPAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder publicIpAddressName(String publicIpAddressName) {
-            this.publicIpAddressName = Objects.requireNonNull(publicIpAddressName);
+            $.publicIpAddressName = publicIpAddressName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPublicIPAddressArgs build() {
-            return new GetPublicIPAddressArgs(expand, publicIpAddressName, resourceGroupName);
+        }
+
+        public GetPublicIPAddressArgs build() {
+            $.publicIpAddressName = Objects.requireNonNull($.publicIpAddressName, "expected parameter 'publicIpAddressName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

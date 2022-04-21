@@ -5,10 +5,10 @@ package com.pulumi.azurenative.machinelearning;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyVaultIdentifierId")
-      private final @Nullable Output<String> keyVaultIdentifierId;
+    private @Nullable Output<String> keyVaultIdentifierId;
 
-    public Output<String> keyVaultIdentifierId() {
-        return this.keyVaultIdentifierId == null ? Codegen.empty() : this.keyVaultIdentifierId;
+    public Optional<Output<String>> keyVaultIdentifierId() {
+        return Optional.ofNullable(this.keyVaultIdentifierId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ownerEmail", required=true)
-      private final Output<String> ownerEmail;
+    private Output<String> ownerEmail;
 
     public Output<String> ownerEmail() {
         return this.ownerEmail;
@@ -54,7 +54,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,10 +65,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userStorageAccountId", required=true)
-      private final Output<String> userStorageAccountId;
+    private Output<String> userStorageAccountId;
 
     public Output<String> userStorageAccountId() {
         return this.userStorageAccountId;
@@ -87,128 +87,111 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName")
-      private final @Nullable Output<String> workspaceName;
+    private @Nullable Output<String> workspaceName;
 
-    public Output<String> workspaceName() {
-        return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
+    public Optional<Output<String>> workspaceName() {
+        return Optional.ofNullable(this.workspaceName);
     }
 
-    public WorkspaceArgs(
-        @Nullable Output<String> keyVaultIdentifierId,
-        @Nullable Output<String> location,
-        Output<String> ownerEmail,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> userStorageAccountId,
-        @Nullable Output<String> workspaceName) {
-        this.keyVaultIdentifierId = keyVaultIdentifierId;
-        this.location = location;
-        this.ownerEmail = Objects.requireNonNull(ownerEmail, "expected parameter 'ownerEmail' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.userStorageAccountId = Objects.requireNonNull(userStorageAccountId, "expected parameter 'userStorageAccountId' to be non-null");
-        this.workspaceName = workspaceName;
-    }
+    private WorkspaceArgs() {}
 
-    private WorkspaceArgs() {
-        this.keyVaultIdentifierId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.ownerEmail = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.userStorageAccountId = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private WorkspaceArgs(WorkspaceArgs $) {
+        this.keyVaultIdentifierId = $.keyVaultIdentifierId;
+        this.location = $.location;
+        this.ownerEmail = $.ownerEmail;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.userStorageAccountId = $.userStorageAccountId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyVaultIdentifierId;
-        private @Nullable Output<String> location;
-        private Output<String> ownerEmail;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> userStorageAccountId;
-        private @Nullable Output<String> workspaceName;
+        private WorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceArgs();
         }
 
         public Builder(WorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultIdentifierId = defaults.keyVaultIdentifierId;
-    	      this.location = defaults.location;
-    	      this.ownerEmail = defaults.ownerEmail;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.userStorageAccountId = defaults.userStorageAccountId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultIdentifierId(@Nullable Output<String> keyVaultIdentifierId) {
-            this.keyVaultIdentifierId = keyVaultIdentifierId;
+            $.keyVaultIdentifierId = keyVaultIdentifierId;
             return this;
         }
-        public Builder keyVaultIdentifierId(@Nullable String keyVaultIdentifierId) {
-            this.keyVaultIdentifierId = Codegen.ofNullable(keyVaultIdentifierId);
-            return this;
+
+        public Builder keyVaultIdentifierId(String keyVaultIdentifierId) {
+            return keyVaultIdentifierId(Output.of(keyVaultIdentifierId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder ownerEmail(Output<String> ownerEmail) {
-            this.ownerEmail = Objects.requireNonNull(ownerEmail);
+            $.ownerEmail = ownerEmail;
             return this;
         }
+
         public Builder ownerEmail(String ownerEmail) {
-            this.ownerEmail = Output.of(Objects.requireNonNull(ownerEmail));
-            return this;
+            return ownerEmail(Output.of(ownerEmail));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder userStorageAccountId(Output<String> userStorageAccountId) {
-            this.userStorageAccountId = Objects.requireNonNull(userStorageAccountId);
+            $.userStorageAccountId = userStorageAccountId;
             return this;
         }
+
         public Builder userStorageAccountId(String userStorageAccountId) {
-            this.userStorageAccountId = Output.of(Objects.requireNonNull(userStorageAccountId));
-            return this;
+            return userStorageAccountId(Output.of(userStorageAccountId));
         }
+
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
-            this.workspaceName = workspaceName;
+            $.workspaceName = workspaceName;
             return this;
         }
-        public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Codegen.ofNullable(workspaceName);
-            return this;
-        }        public WorkspaceArgs build() {
-            return new WorkspaceArgs(keyVaultIdentifierId, location, ownerEmail, resourceGroupName, tags, userStorageAccountId, workspaceName);
+
+        public Builder workspaceName(String workspaceName) {
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public WorkspaceArgs build() {
+            $.ownerEmail = Objects.requireNonNull($.ownerEmail, "expected parameter 'ownerEmail' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.userStorageAccountId = Objects.requireNonNull($.userStorageAccountId, "expected parameter 'userStorageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

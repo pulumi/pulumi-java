@@ -5,7 +5,6 @@ package com.pulumi.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class RoleMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groups", required=true)
-      private final Output<List<String>> groups;
+    private Output<List<String>> groups;
 
     public Output<List<String>> groups() {
         return this.groups;
@@ -35,7 +34,7 @@ public final class RoleMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -46,79 +45,75 @@ public final class RoleMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public RoleMappingArgs(
-        Output<List<String>> groups,
-        Output<String> roleArn,
-        Output<String> username) {
-        this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private RoleMappingArgs() {}
 
-    private RoleMappingArgs() {
-        this.groups = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.username = Codegen.empty();
+    private RoleMappingArgs(RoleMappingArgs $) {
+        this.groups = $.groups;
+        this.roleArn = $.roleArn;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> groups;
-        private Output<String> roleArn;
-        private Output<String> username;
+        private RoleMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleMappingArgs();
         }
 
         public Builder(RoleMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groups = defaults.groups;
-    	      this.roleArn = defaults.roleArn;
-    	      this.username = defaults.username;
+            $ = new RoleMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groups(Output<List<String>> groups) {
-            this.groups = Objects.requireNonNull(groups);
+            $.groups = groups;
             return this;
         }
+
         public Builder groups(List<String> groups) {
-            this.groups = Output.of(Objects.requireNonNull(groups));
-            return this;
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public RoleMappingArgs build() {
-            return new RoleMappingArgs(groups, roleArn, username);
+            return username(Output.of(username));
+        }
+
+        public RoleMappingArgs build() {
+            $.groups = Objects.requireNonNull($.groups, "expected parameter 'groups' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

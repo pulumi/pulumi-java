@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.enums.GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ConversationTurnArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultArgs extends com.
      * 
      */
     @Import(name="conversationTurns")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> conversationTurns;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> conversationTurns;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> conversationTurns() {
-        return this.conversationTurns == null ? Codegen.empty() : this.conversationTurns;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>>> conversationTurns() {
+        return Optional.ofNullable(this.conversationTurns);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultArgs extends com.
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<String> environment;
+    private @Nullable Output<String> environment;
 
-    public Output<String> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<String>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultArgs extends com.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultArgs extends com.
      * 
      */
     @Import(name="testResult")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult> testResult;
+    private @Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult> testResult;
 
-    public Output<GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult> testResult() {
-        return this.testResult == null ? Codegen.empty() : this.testResult;
+    public Optional<Output<GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult>> testResult() {
+        return Optional.ofNullable(this.testResult);
     }
 
     /**
@@ -71,105 +71,92 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResultArgs extends com.
      * 
      */
     @Import(name="testTime")
-      private final @Nullable Output<String> testTime;
+    private @Nullable Output<String> testTime;
 
-    public Output<String> testTime() {
-        return this.testTime == null ? Codegen.empty() : this.testTime;
+    public Optional<Output<String>> testTime() {
+        return Optional.ofNullable(this.testTime);
     }
 
-    public GoogleCloudDialogflowCxV3beta1TestCaseResultArgs(
-        @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> conversationTurns,
-        @Nullable Output<String> environment,
-        @Nullable Output<String> name,
-        @Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult> testResult,
-        @Nullable Output<String> testTime) {
-        this.conversationTurns = conversationTurns;
-        this.environment = environment;
-        this.name = name;
-        this.testResult = testResult;
-        this.testTime = testTime;
-    }
+    private GoogleCloudDialogflowCxV3beta1TestCaseResultArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1TestCaseResultArgs() {
-        this.conversationTurns = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.name = Codegen.empty();
-        this.testResult = Codegen.empty();
-        this.testTime = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1TestCaseResultArgs(GoogleCloudDialogflowCxV3beta1TestCaseResultArgs $) {
+        this.conversationTurns = $.conversationTurns;
+        this.environment = $.environment;
+        this.name = $.name;
+        this.testResult = $.testResult;
+        this.testTime = $.testTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1TestCaseResultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> conversationTurns;
-        private @Nullable Output<String> environment;
-        private @Nullable Output<String> name;
-        private @Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult> testResult;
-        private @Nullable Output<String> testTime;
+        private GoogleCloudDialogflowCxV3beta1TestCaseResultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1TestCaseResultArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1TestCaseResultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversationTurns = defaults.conversationTurns;
-    	      this.environment = defaults.environment;
-    	      this.name = defaults.name;
-    	      this.testResult = defaults.testResult;
-    	      this.testTime = defaults.testTime;
+            $ = new GoogleCloudDialogflowCxV3beta1TestCaseResultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conversationTurns(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs>> conversationTurns) {
-            this.conversationTurns = conversationTurns;
+            $.conversationTurns = conversationTurns;
             return this;
         }
-        public Builder conversationTurns(@Nullable List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs> conversationTurns) {
-            this.conversationTurns = Codegen.ofNullable(conversationTurns);
-            return this;
+
+        public Builder conversationTurns(List<GoogleCloudDialogflowCxV3beta1ConversationTurnArgs> conversationTurns) {
+            return conversationTurns(Output.of(conversationTurns));
         }
+
         public Builder conversationTurns(GoogleCloudDialogflowCxV3beta1ConversationTurnArgs... conversationTurns) {
             return conversationTurns(List.of(conversationTurns));
         }
+
         public Builder environment(@Nullable Output<String> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable String environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(String environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder testResult(@Nullable Output<GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult> testResult) {
-            this.testResult = testResult;
+            $.testResult = testResult;
             return this;
         }
-        public Builder testResult(@Nullable GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult testResult) {
-            this.testResult = Codegen.ofNullable(testResult);
-            return this;
+
+        public Builder testResult(GoogleCloudDialogflowCxV3beta1TestCaseResultTestResult testResult) {
+            return testResult(Output.of(testResult));
         }
+
         public Builder testTime(@Nullable Output<String> testTime) {
-            this.testTime = testTime;
+            $.testTime = testTime;
             return this;
         }
-        public Builder testTime(@Nullable String testTime) {
-            this.testTime = Codegen.ofNullable(testTime);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1TestCaseResultArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1TestCaseResultArgs(conversationTurns, environment, name, testResult, testTime);
+
+        public Builder testTime(String testTime) {
+            return testTime(Output.of(testTime));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1TestCaseResultArgs build() {
+            return $;
         }
     }
+
 }

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<Either<String,JobStepActionSource>> source;
+    private @Nullable Output<Either<String,JobStepActionSource>> source;
 
-    public Output<Either<String,JobStepActionSource>> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<Either<String,JobStepActionSource>>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,JobStepActionType>> type;
+    private @Nullable Output<Either<String,JobStepActionType>> type;
 
-    public Output<Either<String,JobStepActionType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,JobStepActionType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -49,76 +50,71 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public JobStepActionArgs(
-        @Nullable Output<Either<String,JobStepActionSource>> source,
-        @Nullable Output<Either<String,JobStepActionType>> type,
-        Output<String> value) {
-        this.source = Codegen.stringProp("source").left(JobStepActionSource.class).output().arg(source).def("Inline").getNullable();
-        this.type = Codegen.stringProp("type").left(JobStepActionType.class).output().arg(type).def("TSql").getNullable();
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private JobStepActionArgs() {}
 
-    private JobStepActionArgs() {
-        this.source = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private JobStepActionArgs(JobStepActionArgs $) {
+        this.source = $.source;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStepActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,JobStepActionSource>> source;
-        private @Nullable Output<Either<String,JobStepActionType>> type;
-        private Output<String> value;
+        private JobStepActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStepActionArgs();
         }
 
         public Builder(JobStepActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new JobStepActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder source(@Nullable Output<Either<String,JobStepActionSource>> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable Either<String,JobStepActionSource> source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(Either<String,JobStepActionSource> source) {
+            return source(Output.of(source));
         }
+
         public Builder type(@Nullable Output<Either<String,JobStepActionType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,JobStepActionType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,JobStepActionType> type) {
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public JobStepActionArgs build() {
-            return new JobStepActionArgs(source, type, value);
+            return value(Output.of(value));
+        }
+
+        public JobStepActionArgs build() {
+            $.source = Codegen.stringProp("source").left(JobStepActionSource.class).output().arg($.source).def("Inline").getNullable();
+            $.type = Codegen.stringProp("type").left(JobStepActionType.class).output().arg($.type).def("TSql").getNullable();
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

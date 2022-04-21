@@ -20,10 +20,10 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxJobCount")
-      private final @Nullable Integer maxJobCount;
+    private @Nullable Integer maxJobCount;
 
     public Optional<Integer> maxJobCount() {
-        return this.maxJobCount == null ? Optional.empty() : Optional.ofNullable(this.maxJobCount);
+        return Optional.ofNullable(this.maxJobCount);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxJobOccurrence")
-      private final @Nullable Integer maxJobOccurrence;
+    private @Nullable Integer maxJobOccurrence;
 
     public Optional<Integer> maxJobOccurrence() {
-        return this.maxJobOccurrence == null ? Optional.empty() : Optional.ofNullable(this.maxJobOccurrence);
+        return Optional.ofNullable(this.maxJobOccurrence);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class JobCollectionQuotaResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxRecurrence")
-      private final @Nullable JobMaxRecurrenceResponse maxRecurrence;
+    private @Nullable JobMaxRecurrenceResponse maxRecurrence;
 
     public Optional<JobMaxRecurrenceResponse> maxRecurrence() {
-        return this.maxRecurrence == null ? Optional.empty() : Optional.ofNullable(this.maxRecurrence);
+        return Optional.ofNullable(this.maxRecurrence);
     }
 
-    public JobCollectionQuotaResponse(
-        @Nullable Integer maxJobCount,
-        @Nullable Integer maxJobOccurrence,
-        @Nullable JobMaxRecurrenceResponse maxRecurrence) {
-        this.maxJobCount = maxJobCount;
-        this.maxJobOccurrence = maxJobOccurrence;
-        this.maxRecurrence = maxRecurrence;
-    }
+    private JobCollectionQuotaResponse() {}
 
-    private JobCollectionQuotaResponse() {
-        this.maxJobCount = null;
-        this.maxJobOccurrence = null;
-        this.maxRecurrence = null;
+    private JobCollectionQuotaResponse(JobCollectionQuotaResponse $) {
+        this.maxJobCount = $.maxJobCount;
+        this.maxJobOccurrence = $.maxJobOccurrence;
+        this.maxRecurrence = $.maxRecurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobCollectionQuotaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxJobCount;
-        private @Nullable Integer maxJobOccurrence;
-        private @Nullable JobMaxRecurrenceResponse maxRecurrence;
+        private JobCollectionQuotaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobCollectionQuotaResponse();
         }
 
         public Builder(JobCollectionQuotaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxJobCount = defaults.maxJobCount;
-    	      this.maxJobOccurrence = defaults.maxJobOccurrence;
-    	      this.maxRecurrence = defaults.maxRecurrence;
+            $ = new JobCollectionQuotaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxJobCount(@Nullable Integer maxJobCount) {
-            this.maxJobCount = maxJobCount;
+            $.maxJobCount = maxJobCount;
             return this;
         }
+
         public Builder maxJobOccurrence(@Nullable Integer maxJobOccurrence) {
-            this.maxJobOccurrence = maxJobOccurrence;
+            $.maxJobOccurrence = maxJobOccurrence;
             return this;
         }
+
         public Builder maxRecurrence(@Nullable JobMaxRecurrenceResponse maxRecurrence) {
-            this.maxRecurrence = maxRecurrence;
+            $.maxRecurrence = maxRecurrence;
             return this;
-        }        public JobCollectionQuotaResponse build() {
-            return new JobCollectionQuotaResponse(maxJobCount, maxJobOccurrence, maxRecurrence);
+        }
+
+        public JobCollectionQuotaResponse build() {
+            return $;
         }
     }
+
 }

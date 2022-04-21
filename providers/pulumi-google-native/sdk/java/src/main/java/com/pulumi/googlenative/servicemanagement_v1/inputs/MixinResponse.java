@@ -21,7 +21,7 @@ public final class MixinResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class MixinResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="root", required=true)
-      private final String root;
+    private String root;
 
     public String root() {
         return this.root;
     }
 
-    public MixinResponse(
-        String name,
-        String root) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.root = Objects.requireNonNull(root, "expected parameter 'root' to be non-null");
-    }
+    private MixinResponse() {}
 
-    private MixinResponse() {
-        this.name = null;
-        this.root = null;
+    private MixinResponse(MixinResponse $) {
+        this.name = $.name;
+        this.root = $.root;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MixinResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String root;
+        private MixinResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MixinResponse();
         }
 
         public Builder(MixinResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.root = defaults.root;
+            $ = new MixinResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder root(String root) {
-            this.root = Objects.requireNonNull(root);
+            $.root = root;
             return this;
-        }        public MixinResponse build() {
-            return new MixinResponse(name, root);
+        }
+
+        public MixinResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.root = Objects.requireNonNull($.root, "expected parameter 'root' to be non-null");
+            return $;
         }
     }
+
 }

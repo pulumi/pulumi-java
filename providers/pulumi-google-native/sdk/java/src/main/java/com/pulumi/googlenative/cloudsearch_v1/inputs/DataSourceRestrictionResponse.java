@@ -23,7 +23,7 @@ public final class DataSourceRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="filterOptions", required=true)
-      private final List<FilterOptionsResponse> filterOptions;
+    private List<FilterOptionsResponse> filterOptions;
 
     public List<FilterOptionsResponse> filterOptions() {
         return this.filterOptions;
@@ -34,58 +34,56 @@ public final class DataSourceRestrictionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="source", required=true)
-      private final SourceResponse source;
+    private SourceResponse source;
 
     public SourceResponse source() {
         return this.source;
     }
 
-    public DataSourceRestrictionResponse(
-        List<FilterOptionsResponse> filterOptions,
-        SourceResponse source) {
-        this.filterOptions = Objects.requireNonNull(filterOptions, "expected parameter 'filterOptions' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private DataSourceRestrictionResponse() {}
 
-    private DataSourceRestrictionResponse() {
-        this.filterOptions = List.of();
-        this.source = null;
+    private DataSourceRestrictionResponse(DataSourceRestrictionResponse $) {
+        this.filterOptions = $.filterOptions;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceRestrictionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<FilterOptionsResponse> filterOptions;
-        private SourceResponse source;
+        private DataSourceRestrictionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceRestrictionResponse();
         }
 
         public Builder(DataSourceRestrictionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterOptions = defaults.filterOptions;
-    	      this.source = defaults.source;
+            $ = new DataSourceRestrictionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filterOptions(List<FilterOptionsResponse> filterOptions) {
-            this.filterOptions = Objects.requireNonNull(filterOptions);
+            $.filterOptions = filterOptions;
             return this;
         }
+
         public Builder filterOptions(FilterOptionsResponse... filterOptions) {
             return filterOptions(List.of(filterOptions));
         }
+
         public Builder source(SourceResponse source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
-        }        public DataSourceRestrictionResponse build() {
-            return new DataSourceRestrictionResponse(filterOptions, source);
+        }
+
+        public DataSourceRestrictionResponse build() {
+            $.filterOptions = Objects.requireNonNull($.filterOptions, "expected parameter 'filterOptions' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

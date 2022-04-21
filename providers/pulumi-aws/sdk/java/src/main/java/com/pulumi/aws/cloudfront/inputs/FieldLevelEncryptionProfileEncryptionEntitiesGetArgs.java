@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
     public static final FieldLevelEncryptionProfileEncryptionEntitiesGetArgs Empty = new FieldLevelEncryptionProfileEncryptionEntitiesGetArgs();
 
     @Import(name="items")
-      private final @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
+    private @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
 
-    public Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public FieldLevelEncryptionProfileEncryptionEntitiesGetArgs(@Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items) {
-        this.items = items;
-    }
+    private FieldLevelEncryptionProfileEncryptionEntitiesGetArgs() {}
 
-    private FieldLevelEncryptionProfileEncryptionEntitiesGetArgs() {
-        this.items = Codegen.empty();
+    private FieldLevelEncryptionProfileEncryptionEntitiesGetArgs(FieldLevelEncryptionProfileEncryptionEntitiesGetArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionProfileEncryptionEntitiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
+        private FieldLevelEncryptionProfileEncryptionEntitiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionProfileEncryptionEntitiesGetArgs();
         }
 
         public Builder(FieldLevelEncryptionProfileEncryptionEntitiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new FieldLevelEncryptionProfileEncryptionEntitiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs... items) {
             return items(List.of(items));
-        }        public FieldLevelEncryptionProfileEncryptionEntitiesGetArgs build() {
-            return new FieldLevelEncryptionProfileEncryptionEntitiesGetArgs(items);
+        }
+
+        public FieldLevelEncryptionProfileEncryptionEntitiesGetArgs build() {
+            return $;
         }
     }
+
 }

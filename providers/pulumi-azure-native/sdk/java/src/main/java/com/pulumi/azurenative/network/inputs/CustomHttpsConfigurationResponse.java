@@ -24,7 +24,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="certificateSource", required=true)
-      private final String certificateSource;
+    private String certificateSource;
 
     public String certificateSource() {
         return this.certificateSource;
@@ -35,10 +35,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="certificateType")
-      private final @Nullable String certificateType;
+    private @Nullable String certificateType;
 
     public Optional<String> certificateType() {
-        return this.certificateType == null ? Optional.empty() : Optional.ofNullable(this.certificateType);
+        return Optional.ofNullable(this.certificateType);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="minimumTlsVersion", required=true)
-      private final String minimumTlsVersion;
+    private String minimumTlsVersion;
 
     public String minimumTlsVersion() {
         return this.minimumTlsVersion;
@@ -57,7 +57,7 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protocolType", required=true)
-      private final String protocolType;
+    private String protocolType;
 
     public String protocolType() {
         return this.protocolType;
@@ -68,10 +68,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="secretName")
-      private final @Nullable String secretName;
+    private @Nullable String secretName;
 
     public Optional<String> secretName() {
-        return this.secretName == null ? Optional.empty() : Optional.ofNullable(this.secretName);
+        return Optional.ofNullable(this.secretName);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="secretVersion")
-      private final @Nullable String secretVersion;
+    private @Nullable String secretVersion;
 
     public Optional<String> secretVersion() {
-        return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
+        return Optional.ofNullable(this.secretVersion);
     }
 
     /**
@@ -90,100 +90,83 @@ public final class CustomHttpsConfigurationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="vault")
-      private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
+    private @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
     public Optional<KeyVaultCertificateSourceParametersResponseVault> vault() {
-        return this.vault == null ? Optional.empty() : Optional.ofNullable(this.vault);
+        return Optional.ofNullable(this.vault);
     }
 
-    public CustomHttpsConfigurationResponse(
-        String certificateSource,
-        @Nullable String certificateType,
-        String minimumTlsVersion,
-        String protocolType,
-        @Nullable String secretName,
-        @Nullable String secretVersion,
-        @Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
-        this.certificateSource = Objects.requireNonNull(certificateSource, "expected parameter 'certificateSource' to be non-null");
-        this.certificateType = certificateType;
-        this.minimumTlsVersion = Objects.requireNonNull(minimumTlsVersion, "expected parameter 'minimumTlsVersion' to be non-null");
-        this.protocolType = Objects.requireNonNull(protocolType, "expected parameter 'protocolType' to be non-null");
-        this.secretName = secretName;
-        this.secretVersion = secretVersion;
-        this.vault = vault;
-    }
+    private CustomHttpsConfigurationResponse() {}
 
-    private CustomHttpsConfigurationResponse() {
-        this.certificateSource = null;
-        this.certificateType = null;
-        this.minimumTlsVersion = null;
-        this.protocolType = null;
-        this.secretName = null;
-        this.secretVersion = null;
-        this.vault = null;
+    private CustomHttpsConfigurationResponse(CustomHttpsConfigurationResponse $) {
+        this.certificateSource = $.certificateSource;
+        this.certificateType = $.certificateType;
+        this.minimumTlsVersion = $.minimumTlsVersion;
+        this.protocolType = $.protocolType;
+        this.secretName = $.secretName;
+        this.secretVersion = $.secretVersion;
+        this.vault = $.vault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomHttpsConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateSource;
-        private @Nullable String certificateType;
-        private String minimumTlsVersion;
-        private String protocolType;
-        private @Nullable String secretName;
-        private @Nullable String secretVersion;
-        private @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
+        private CustomHttpsConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomHttpsConfigurationResponse();
         }
 
         public Builder(CustomHttpsConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateSource = defaults.certificateSource;
-    	      this.certificateType = defaults.certificateType;
-    	      this.minimumTlsVersion = defaults.minimumTlsVersion;
-    	      this.protocolType = defaults.protocolType;
-    	      this.secretName = defaults.secretName;
-    	      this.secretVersion = defaults.secretVersion;
-    	      this.vault = defaults.vault;
+            $ = new CustomHttpsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateSource(String certificateSource) {
-            this.certificateSource = Objects.requireNonNull(certificateSource);
+            $.certificateSource = certificateSource;
             return this;
         }
+
         public Builder certificateType(@Nullable String certificateType) {
-            this.certificateType = certificateType;
+            $.certificateType = certificateType;
             return this;
         }
+
         public Builder minimumTlsVersion(String minimumTlsVersion) {
-            this.minimumTlsVersion = Objects.requireNonNull(minimumTlsVersion);
+            $.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
+
         public Builder protocolType(String protocolType) {
-            this.protocolType = Objects.requireNonNull(protocolType);
+            $.protocolType = protocolType;
             return this;
         }
+
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = secretName;
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = secretVersion;
+            $.secretVersion = secretVersion;
             return this;
         }
+
         public Builder vault(@Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
-            this.vault = vault;
+            $.vault = vault;
             return this;
-        }        public CustomHttpsConfigurationResponse build() {
-            return new CustomHttpsConfigurationResponse(certificateSource, certificateType, minimumTlsVersion, protocolType, secretName, secretVersion, vault);
+        }
+
+        public CustomHttpsConfigurationResponse build() {
+            $.certificateSource = Objects.requireNonNull($.certificateSource, "expected parameter 'certificateSource' to be non-null");
+            $.minimumTlsVersion = Objects.requireNonNull($.minimumTlsVersion, "expected parameter 'minimumTlsVersion' to be non-null");
+            $.protocolType = Objects.requireNonNull($.protocolType, "expected parameter 'protocolType' to be non-null");
+            return $;
         }
     }
+
 }

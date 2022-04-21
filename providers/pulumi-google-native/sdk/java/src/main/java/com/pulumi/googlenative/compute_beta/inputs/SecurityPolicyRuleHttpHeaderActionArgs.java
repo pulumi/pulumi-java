@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends com.pulumi.res
      * 
      */
     @Import(name="requestHeadersToAdds")
-      private final @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
+    private @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
 
-    public Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds() {
-        return this.requestHeadersToAdds == null ? Codegen.empty() : this.requestHeadersToAdds;
+    public Optional<Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>>> requestHeadersToAdds() {
+        return Optional.ofNullable(this.requestHeadersToAdds);
     }
 
-    public SecurityPolicyRuleHttpHeaderActionArgs(@Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
-        this.requestHeadersToAdds = requestHeadersToAdds;
-    }
+    private SecurityPolicyRuleHttpHeaderActionArgs() {}
 
-    private SecurityPolicyRuleHttpHeaderActionArgs() {
-        this.requestHeadersToAdds = Codegen.empty();
+    private SecurityPolicyRuleHttpHeaderActionArgs(SecurityPolicyRuleHttpHeaderActionArgs $) {
+        this.requestHeadersToAdds = $.requestHeadersToAdds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleHttpHeaderActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
+        private SecurityPolicyRuleHttpHeaderActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleHttpHeaderActionArgs();
         }
 
         public Builder(SecurityPolicyRuleHttpHeaderActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestHeadersToAdds = defaults.requestHeadersToAdds;
+            $ = new SecurityPolicyRuleHttpHeaderActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder requestHeadersToAdds(@Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
-            this.requestHeadersToAdds = requestHeadersToAdds;
+            $.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
-        public Builder requestHeadersToAdds(@Nullable List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs> requestHeadersToAdds) {
-            this.requestHeadersToAdds = Codegen.ofNullable(requestHeadersToAdds);
-            return this;
+
+        public Builder requestHeadersToAdds(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs> requestHeadersToAdds) {
+            return requestHeadersToAdds(Output.of(requestHeadersToAdds));
         }
+
         public Builder requestHeadersToAdds(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs... requestHeadersToAdds) {
             return requestHeadersToAdds(List.of(requestHeadersToAdds));
-        }        public SecurityPolicyRuleHttpHeaderActionArgs build() {
-            return new SecurityPolicyRuleHttpHeaderActionArgs(requestHeadersToAdds);
+        }
+
+        public SecurityPolicyRuleHttpHeaderActionArgs build() {
+            return $;
         }
     }
+
 }

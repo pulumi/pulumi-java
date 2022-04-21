@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datafusion_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAllocation")
-      private final @Nullable Output<String> ipAllocation;
+    private @Nullable Output<String> ipAllocation;
 
-    public Output<String> ipAllocation() {
-        return this.ipAllocation == null ? Codegen.empty() : this.ipAllocation;
+    public Optional<Output<String>> ipAllocation() {
+        return Optional.ofNullable(this.ipAllocation);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
-    public NetworkConfigArgs(
-        @Nullable Output<String> ipAllocation,
-        @Nullable Output<String> network) {
-        this.ipAllocation = ipAllocation;
-        this.network = network;
-    }
+    private NetworkConfigArgs() {}
 
-    private NetworkConfigArgs() {
-        this.ipAllocation = Codegen.empty();
-        this.network = Codegen.empty();
+    private NetworkConfigArgs(NetworkConfigArgs $) {
+        this.ipAllocation = $.ipAllocation;
+        this.network = $.network;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipAllocation;
-        private @Nullable Output<String> network;
+        private NetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigArgs();
         }
 
         public Builder(NetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAllocation = defaults.ipAllocation;
-    	      this.network = defaults.network;
+            $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAllocation(@Nullable Output<String> ipAllocation) {
-            this.ipAllocation = ipAllocation;
+            $.ipAllocation = ipAllocation;
             return this;
         }
-        public Builder ipAllocation(@Nullable String ipAllocation) {
-            this.ipAllocation = Codegen.ofNullable(ipAllocation);
-            return this;
+
+        public Builder ipAllocation(String ipAllocation) {
+            return ipAllocation(Output.of(ipAllocation));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
-        }        public NetworkConfigArgs build() {
-            return new NetworkConfigArgs(ipAllocation, network);
+
+        public Builder network(String network) {
+            return network(Output.of(network));
+        }
+
+        public NetworkConfigArgs build() {
+            return $;
         }
     }
+
 }

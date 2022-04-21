@@ -13,62 +13,59 @@ public final class GetAnalysisArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAnalysisArgs Empty = new GetAnalysisArgs();
 
     @Import(name="analysisId", required=true)
-      private final String analysisId;
+    private String analysisId;
 
     public String analysisId() {
         return this.analysisId;
     }
 
     @Import(name="awsAccountId", required=true)
-      private final String awsAccountId;
+    private String awsAccountId;
 
     public String awsAccountId() {
         return this.awsAccountId;
     }
 
-    public GetAnalysisArgs(
-        String analysisId,
-        String awsAccountId) {
-        this.analysisId = Objects.requireNonNull(analysisId, "expected parameter 'analysisId' to be non-null");
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-    }
+    private GetAnalysisArgs() {}
 
-    private GetAnalysisArgs() {
-        this.analysisId = null;
-        this.awsAccountId = null;
+    private GetAnalysisArgs(GetAnalysisArgs $) {
+        this.analysisId = $.analysisId;
+        this.awsAccountId = $.awsAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAnalysisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String analysisId;
-        private String awsAccountId;
+        private GetAnalysisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAnalysisArgs();
         }
 
         public Builder(GetAnalysisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisId = defaults.analysisId;
-    	      this.awsAccountId = defaults.awsAccountId;
+            $ = new GetAnalysisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisId(String analysisId) {
-            this.analysisId = Objects.requireNonNull(analysisId);
+            $.analysisId = analysisId;
             return this;
         }
+
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
-        }        public GetAnalysisArgs build() {
-            return new GetAnalysisArgs(analysisId, awsAccountId);
+        }
+
+        public GetAnalysisArgs build() {
+            $.analysisId = Objects.requireNonNull($.analysisId, "expected parameter 'analysisId' to be non-null");
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            return $;
         }
     }
+
 }

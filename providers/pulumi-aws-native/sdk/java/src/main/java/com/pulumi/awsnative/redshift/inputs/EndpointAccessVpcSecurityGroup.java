@@ -23,10 +23,10 @@ public final class EndpointAccessVpcSecurityGroup extends com.pulumi.resources.I
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class EndpointAccessVpcSecurityGroup extends com.pulumi.resources.I
      * 
      */
     @Import(name="vpcSecurityGroupId")
-      private final @Nullable String vpcSecurityGroupId;
+    private @Nullable String vpcSecurityGroupId;
 
     public Optional<String> vpcSecurityGroupId() {
-        return this.vpcSecurityGroupId == null ? Optional.empty() : Optional.ofNullable(this.vpcSecurityGroupId);
+        return Optional.ofNullable(this.vpcSecurityGroupId);
     }
 
-    public EndpointAccessVpcSecurityGroup(
-        @Nullable String status,
-        @Nullable String vpcSecurityGroupId) {
-        this.status = status;
-        this.vpcSecurityGroupId = vpcSecurityGroupId;
-    }
+    private EndpointAccessVpcSecurityGroup() {}
 
-    private EndpointAccessVpcSecurityGroup() {
-        this.status = null;
-        this.vpcSecurityGroupId = null;
+    private EndpointAccessVpcSecurityGroup(EndpointAccessVpcSecurityGroup $) {
+        this.status = $.status;
+        this.vpcSecurityGroupId = $.vpcSecurityGroupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointAccessVpcSecurityGroup defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String status;
-        private @Nullable String vpcSecurityGroupId;
+        private EndpointAccessVpcSecurityGroup $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointAccessVpcSecurityGroup();
         }
 
         public Builder(EndpointAccessVpcSecurityGroup defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
-    	      this.vpcSecurityGroupId = defaults.vpcSecurityGroupId;
+            $ = new EndpointAccessVpcSecurityGroup(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder vpcSecurityGroupId(@Nullable String vpcSecurityGroupId) {
-            this.vpcSecurityGroupId = vpcSecurityGroupId;
+            $.vpcSecurityGroupId = vpcSecurityGroupId;
             return this;
-        }        public EndpointAccessVpcSecurityGroup build() {
-            return new EndpointAccessVpcSecurityGroup(status, vpcSecurityGroupId);
+        }
+
+        public EndpointAccessVpcSecurityGroup build() {
+            return $;
         }
     }
+
 }

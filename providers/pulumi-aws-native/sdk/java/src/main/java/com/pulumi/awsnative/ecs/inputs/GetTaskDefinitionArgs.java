@@ -17,45 +17,45 @@ public final class GetTaskDefinitionArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="taskDefinitionArn", required=true)
-      private final String taskDefinitionArn;
+    private String taskDefinitionArn;
 
     public String taskDefinitionArn() {
         return this.taskDefinitionArn;
     }
 
-    public GetTaskDefinitionArgs(String taskDefinitionArn) {
-        this.taskDefinitionArn = Objects.requireNonNull(taskDefinitionArn, "expected parameter 'taskDefinitionArn' to be non-null");
-    }
+    private GetTaskDefinitionArgs() {}
 
-    private GetTaskDefinitionArgs() {
-        this.taskDefinitionArn = null;
+    private GetTaskDefinitionArgs(GetTaskDefinitionArgs $) {
+        this.taskDefinitionArn = $.taskDefinitionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTaskDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String taskDefinitionArn;
+        private GetTaskDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTaskDefinitionArgs();
         }
 
         public Builder(GetTaskDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.taskDefinitionArn = defaults.taskDefinitionArn;
+            $ = new GetTaskDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder taskDefinitionArn(String taskDefinitionArn) {
-            this.taskDefinitionArn = Objects.requireNonNull(taskDefinitionArn);
+            $.taskDefinitionArn = taskDefinitionArn;
             return this;
-        }        public GetTaskDefinitionArgs build() {
-            return new GetTaskDefinitionArgs(taskDefinitionArn);
+        }
+
+        public GetTaskDefinitionArgs build() {
+            $.taskDefinitionArn = Objects.requireNonNull($.taskDefinitionArn, "expected parameter 'taskDefinitionArn' to be non-null");
+            return $;
         }
     }
+
 }

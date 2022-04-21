@@ -6,8 +6,8 @@ package com.pulumi.awsnative.databrew.inputs;
 import com.pulumi.awsnative.databrew.inputs.JobCsvOutputOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class JobOutputFormatOptionsArgs extends com.pulumi.resources.Resou
     public static final JobOutputFormatOptionsArgs Empty = new JobOutputFormatOptionsArgs();
 
     @Import(name="csv")
-      private final @Nullable Output<JobCsvOutputOptionsArgs> csv;
+    private @Nullable Output<JobCsvOutputOptionsArgs> csv;
 
-    public Output<JobCsvOutputOptionsArgs> csv() {
-        return this.csv == null ? Codegen.empty() : this.csv;
+    public Optional<Output<JobCsvOutputOptionsArgs>> csv() {
+        return Optional.ofNullable(this.csv);
     }
 
-    public JobOutputFormatOptionsArgs(@Nullable Output<JobCsvOutputOptionsArgs> csv) {
-        this.csv = csv;
-    }
+    private JobOutputFormatOptionsArgs() {}
 
-    private JobOutputFormatOptionsArgs() {
-        this.csv = Codegen.empty();
+    private JobOutputFormatOptionsArgs(JobOutputFormatOptionsArgs $) {
+        this.csv = $.csv;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobOutputFormatOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobCsvOutputOptionsArgs> csv;
+        private JobOutputFormatOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobOutputFormatOptionsArgs();
         }
 
         public Builder(JobOutputFormatOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csv = defaults.csv;
+            $ = new JobOutputFormatOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder csv(@Nullable Output<JobCsvOutputOptionsArgs> csv) {
-            this.csv = csv;
+            $.csv = csv;
             return this;
         }
-        public Builder csv(@Nullable JobCsvOutputOptionsArgs csv) {
-            this.csv = Codegen.ofNullable(csv);
-            return this;
-        }        public JobOutputFormatOptionsArgs build() {
-            return new JobOutputFormatOptionsArgs(csv);
+
+        public Builder csv(JobCsvOutputOptionsArgs csv) {
+            return csv(Output.of(csv));
+        }
+
+        public JobOutputFormatOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CMKIdentityDefinitionArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="userAssignedIdentity")
-      private final @Nullable Output<String> userAssignedIdentity;
+    private @Nullable Output<String> userAssignedIdentity;
 
-    public Output<String> userAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
+    public Optional<Output<String>> userAssignedIdentity() {
+        return Optional.ofNullable(this.userAssignedIdentity);
     }
 
-    public CMKIdentityDefinitionArgs(@Nullable Output<String> userAssignedIdentity) {
-        this.userAssignedIdentity = userAssignedIdentity;
-    }
+    private CMKIdentityDefinitionArgs() {}
 
-    private CMKIdentityDefinitionArgs() {
-        this.userAssignedIdentity = Codegen.empty();
+    private CMKIdentityDefinitionArgs(CMKIdentityDefinitionArgs $) {
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CMKIdentityDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> userAssignedIdentity;
+        private CMKIdentityDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CMKIdentityDefinitionArgs();
         }
 
         public Builder(CMKIdentityDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new CMKIdentityDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
-            this.userAssignedIdentity = userAssignedIdentity;
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
-            return this;
-        }        public CMKIdentityDefinitionArgs build() {
-            return new CMKIdentityDefinitionArgs(userAssignedIdentity);
+
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
+            return userAssignedIdentity(Output.of(userAssignedIdentity));
+        }
+
+        public CMKIdentityDefinitionArgs build() {
+            return $;
         }
     }
+
 }

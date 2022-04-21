@@ -5,7 +5,6 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class AzureAppPushReceiverArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="emailAddress", required=true)
-      private final Output<String> emailAddress;
+    private Output<String> emailAddress;
 
     public Output<String> emailAddress() {
         return this.emailAddress;
@@ -34,63 +33,60 @@ public final class AzureAppPushReceiverArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public AzureAppPushReceiverArgs(
-        Output<String> emailAddress,
-        Output<String> name) {
-        this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private AzureAppPushReceiverArgs() {}
 
-    private AzureAppPushReceiverArgs() {
-        this.emailAddress = Codegen.empty();
-        this.name = Codegen.empty();
+    private AzureAppPushReceiverArgs(AzureAppPushReceiverArgs $) {
+        this.emailAddress = $.emailAddress;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureAppPushReceiverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> emailAddress;
-        private Output<String> name;
+        private AzureAppPushReceiverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureAppPushReceiverArgs();
         }
 
         public Builder(AzureAppPushReceiverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.name = defaults.name;
+            $ = new AzureAppPushReceiverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder emailAddress(Output<String> emailAddress) {
-            this.emailAddress = Objects.requireNonNull(emailAddress);
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
-            return this;
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public AzureAppPushReceiverArgs build() {
-            return new AzureAppPushReceiverArgs(emailAddress, name);
+            return name(Output.of(name));
+        }
+
+        public AzureAppPushReceiverArgs build() {
+            $.emailAddress = Objects.requireNonNull($.emailAddress, "expected parameter 'emailAddress' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

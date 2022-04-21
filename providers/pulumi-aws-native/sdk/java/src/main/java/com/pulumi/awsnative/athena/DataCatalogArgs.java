@@ -7,11 +7,11 @@ import com.pulumi.awsnative.athena.enums.DataCatalogType;
 import com.pulumi.awsnative.athena.inputs.DataCatalogTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Object> parameters;
+    private @Nullable Output<Object> parameters;
 
-    public Output<Object> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DataCatalogTagArgs>> tags;
+    private @Nullable Output<List<DataCatalogTagArgs>> tags;
 
-    public Output<List<DataCatalogTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DataCatalogTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -68,105 +68,93 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<DataCatalogType> type;
+    private Output<DataCatalogType> type;
 
     public Output<DataCatalogType> type() {
         return this.type;
     }
 
-    public DataCatalogArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<Object> parameters,
-        @Nullable Output<List<DataCatalogTagArgs>> tags,
-        Output<DataCatalogType> type) {
-        this.description = description;
-        this.name = name;
-        this.parameters = parameters;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DataCatalogArgs() {}
 
-    private DataCatalogArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private DataCatalogArgs(DataCatalogArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCatalogArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Object> parameters;
-        private @Nullable Output<List<DataCatalogTagArgs>> tags;
-        private Output<DataCatalogType> type;
+        private DataCatalogArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCatalogArgs();
         }
 
         public Builder(DataCatalogArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new DataCatalogArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Object parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder tags(@Nullable Output<List<DataCatalogTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DataCatalogTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DataCatalogTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DataCatalogTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder type(Output<DataCatalogType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(DataCatalogType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DataCatalogArgs build() {
-            return new DataCatalogArgs(description, name, parameters, tags, type);
+            return type(Output.of(type));
+        }
+
+        public DataCatalogArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

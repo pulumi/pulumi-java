@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
@@ -36,7 +36,7 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final Output<String> ipAddress;
+    private Output<String> ipAddress;
 
     public Output<String> ipAddress() {
         return this.ipAddress;
@@ -47,7 +47,7 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="networkEndpointGroup", required=true)
-      private final Output<String> networkEndpointGroup;
+    private Output<String> networkEndpointGroup;
 
     public Output<String> networkEndpointGroup() {
         return this.networkEndpointGroup;
@@ -58,7 +58,7 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -70,10 +70,10 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -81,115 +81,102 @@ public final class NetworkEndpointArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public NetworkEndpointArgs(
-        Output<String> instance,
-        Output<String> ipAddress,
-        Output<String> networkEndpointGroup,
-        Output<Integer> port,
-        @Nullable Output<String> project,
-        @Nullable Output<String> zone) {
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.networkEndpointGroup = Objects.requireNonNull(networkEndpointGroup, "expected parameter 'networkEndpointGroup' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.project = project;
-        this.zone = zone;
-    }
+    private NetworkEndpointArgs() {}
 
-    private NetworkEndpointArgs() {
-        this.instance = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.networkEndpointGroup = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.zone = Codegen.empty();
+    private NetworkEndpointArgs(NetworkEndpointArgs $) {
+        this.instance = $.instance;
+        this.ipAddress = $.ipAddress;
+        this.networkEndpointGroup = $.networkEndpointGroup;
+        this.port = $.port;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instance;
-        private Output<String> ipAddress;
-        private Output<String> networkEndpointGroup;
-        private Output<Integer> port;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> zone;
+        private NetworkEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointArgs();
         }
 
         public Builder(NetworkEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instance = defaults.instance;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.networkEndpointGroup = defaults.networkEndpointGroup;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new NetworkEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder ipAddress(Output<String> ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Output.of(Objects.requireNonNull(ipAddress));
-            return this;
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder networkEndpointGroup(Output<String> networkEndpointGroup) {
-            this.networkEndpointGroup = Objects.requireNonNull(networkEndpointGroup);
+            $.networkEndpointGroup = networkEndpointGroup;
             return this;
         }
+
         public Builder networkEndpointGroup(String networkEndpointGroup) {
-            this.networkEndpointGroup = Output.of(Objects.requireNonNull(networkEndpointGroup));
-            return this;
+            return networkEndpointGroup(Output.of(networkEndpointGroup));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public NetworkEndpointArgs build() {
-            return new NetworkEndpointArgs(instance, ipAddress, networkEndpointGroup, port, project, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public NetworkEndpointArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.networkEndpointGroup = Objects.requireNonNull($.networkEndpointGroup, "expected parameter 'networkEndpointGroup' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

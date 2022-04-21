@@ -5,9 +5,9 @@ package com.pulumi.aws.dms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EndpointMongodbSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="authMechanism")
-      private final @Nullable Output<String> authMechanism;
+    private @Nullable Output<String> authMechanism;
 
-    public Output<String> authMechanism() {
-        return this.authMechanism == null ? Codegen.empty() : this.authMechanism;
+    public Optional<Output<String>> authMechanism() {
+        return Optional.ofNullable(this.authMechanism);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EndpointMongodbSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="authSource")
-      private final @Nullable Output<String> authSource;
+    private @Nullable Output<String> authSource;
 
-    public Output<String> authSource() {
-        return this.authSource == null ? Codegen.empty() : this.authSource;
+    public Optional<Output<String>> authSource() {
+        return Optional.ofNullable(this.authSource);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EndpointMongodbSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="authType")
-      private final @Nullable Output<String> authType;
+    private @Nullable Output<String> authType;
 
-    public Output<String> authType() {
-        return this.authType == null ? Codegen.empty() : this.authType;
+    public Optional<Output<String>> authType() {
+        return Optional.ofNullable(this.authType);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EndpointMongodbSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="docsToInvestigate")
-      private final @Nullable Output<String> docsToInvestigate;
+    private @Nullable Output<String> docsToInvestigate;
 
-    public Output<String> docsToInvestigate() {
-        return this.docsToInvestigate == null ? Codegen.empty() : this.docsToInvestigate;
+    public Optional<Output<String>> docsToInvestigate() {
+        return Optional.ofNullable(this.docsToInvestigate);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class EndpointMongodbSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="extractDocId")
-      private final @Nullable Output<String> extractDocId;
+    private @Nullable Output<String> extractDocId;
 
-    public Output<String> extractDocId() {
-        return this.extractDocId == null ? Codegen.empty() : this.extractDocId;
+    public Optional<Output<String>> extractDocId() {
+        return Optional.ofNullable(this.extractDocId);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class EndpointMongodbSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="nestingLevel")
-      private final @Nullable Output<String> nestingLevel;
+    private @Nullable Output<String> nestingLevel;
 
-    public Output<String> nestingLevel() {
-        return this.nestingLevel == null ? Codegen.empty() : this.nestingLevel;
+    public Optional<Output<String>> nestingLevel() {
+        return Optional.ofNullable(this.nestingLevel);
     }
 
-    public EndpointMongodbSettingsArgs(
-        @Nullable Output<String> authMechanism,
-        @Nullable Output<String> authSource,
-        @Nullable Output<String> authType,
-        @Nullable Output<String> docsToInvestigate,
-        @Nullable Output<String> extractDocId,
-        @Nullable Output<String> nestingLevel) {
-        this.authMechanism = authMechanism;
-        this.authSource = authSource;
-        this.authType = authType;
-        this.docsToInvestigate = docsToInvestigate;
-        this.extractDocId = extractDocId;
-        this.nestingLevel = nestingLevel;
-    }
+    private EndpointMongodbSettingsArgs() {}
 
-    private EndpointMongodbSettingsArgs() {
-        this.authMechanism = Codegen.empty();
-        this.authSource = Codegen.empty();
-        this.authType = Codegen.empty();
-        this.docsToInvestigate = Codegen.empty();
-        this.extractDocId = Codegen.empty();
-        this.nestingLevel = Codegen.empty();
+    private EndpointMongodbSettingsArgs(EndpointMongodbSettingsArgs $) {
+        this.authMechanism = $.authMechanism;
+        this.authSource = $.authSource;
+        this.authType = $.authType;
+        this.docsToInvestigate = $.docsToInvestigate;
+        this.extractDocId = $.extractDocId;
+        this.nestingLevel = $.nestingLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointMongodbSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authMechanism;
-        private @Nullable Output<String> authSource;
-        private @Nullable Output<String> authType;
-        private @Nullable Output<String> docsToInvestigate;
-        private @Nullable Output<String> extractDocId;
-        private @Nullable Output<String> nestingLevel;
+        private EndpointMongodbSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointMongodbSettingsArgs();
         }
 
         public Builder(EndpointMongodbSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authMechanism = defaults.authMechanism;
-    	      this.authSource = defaults.authSource;
-    	      this.authType = defaults.authType;
-    	      this.docsToInvestigate = defaults.docsToInvestigate;
-    	      this.extractDocId = defaults.extractDocId;
-    	      this.nestingLevel = defaults.nestingLevel;
+            $ = new EndpointMongodbSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authMechanism(@Nullable Output<String> authMechanism) {
-            this.authMechanism = authMechanism;
+            $.authMechanism = authMechanism;
             return this;
         }
-        public Builder authMechanism(@Nullable String authMechanism) {
-            this.authMechanism = Codegen.ofNullable(authMechanism);
-            return this;
+
+        public Builder authMechanism(String authMechanism) {
+            return authMechanism(Output.of(authMechanism));
         }
+
         public Builder authSource(@Nullable Output<String> authSource) {
-            this.authSource = authSource;
+            $.authSource = authSource;
             return this;
         }
-        public Builder authSource(@Nullable String authSource) {
-            this.authSource = Codegen.ofNullable(authSource);
-            return this;
+
+        public Builder authSource(String authSource) {
+            return authSource(Output.of(authSource));
         }
+
         public Builder authType(@Nullable Output<String> authType) {
-            this.authType = authType;
+            $.authType = authType;
             return this;
         }
-        public Builder authType(@Nullable String authType) {
-            this.authType = Codegen.ofNullable(authType);
-            return this;
+
+        public Builder authType(String authType) {
+            return authType(Output.of(authType));
         }
+
         public Builder docsToInvestigate(@Nullable Output<String> docsToInvestigate) {
-            this.docsToInvestigate = docsToInvestigate;
+            $.docsToInvestigate = docsToInvestigate;
             return this;
         }
-        public Builder docsToInvestigate(@Nullable String docsToInvestigate) {
-            this.docsToInvestigate = Codegen.ofNullable(docsToInvestigate);
-            return this;
+
+        public Builder docsToInvestigate(String docsToInvestigate) {
+            return docsToInvestigate(Output.of(docsToInvestigate));
         }
+
         public Builder extractDocId(@Nullable Output<String> extractDocId) {
-            this.extractDocId = extractDocId;
+            $.extractDocId = extractDocId;
             return this;
         }
-        public Builder extractDocId(@Nullable String extractDocId) {
-            this.extractDocId = Codegen.ofNullable(extractDocId);
-            return this;
+
+        public Builder extractDocId(String extractDocId) {
+            return extractDocId(Output.of(extractDocId));
         }
+
         public Builder nestingLevel(@Nullable Output<String> nestingLevel) {
-            this.nestingLevel = nestingLevel;
+            $.nestingLevel = nestingLevel;
             return this;
         }
-        public Builder nestingLevel(@Nullable String nestingLevel) {
-            this.nestingLevel = Codegen.ofNullable(nestingLevel);
-            return this;
-        }        public EndpointMongodbSettingsArgs build() {
-            return new EndpointMongodbSettingsArgs(authMechanism, authSource, authType, docsToInvestigate, extractDocId, nestingLevel);
+
+        public Builder nestingLevel(String nestingLevel) {
+            return nestingLevel(Output.of(nestingLevel));
+        }
+
+        public EndpointMongodbSettingsArgs build() {
+            return $;
         }
     }
+
 }

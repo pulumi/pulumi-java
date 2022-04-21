@@ -21,7 +21,7 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="publicIpAddress", required=true)
-      private final String publicIpAddress;
+    private String publicIpAddress;
 
     public String publicIpAddress() {
         return this.publicIpAddress;
@@ -32,7 +32,7 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="systemServiceType", required=true)
-      private final String systemServiceType;
+    private String systemServiceType;
 
     public String systemServiceType() {
         return this.systemServiceType;
@@ -43,64 +43,59 @@ public final class SystemServiceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public SystemServiceResponse(
-        String publicIpAddress,
-        String systemServiceType,
-        String version) {
-        this.publicIpAddress = Objects.requireNonNull(publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
-        this.systemServiceType = Objects.requireNonNull(systemServiceType, "expected parameter 'systemServiceType' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SystemServiceResponse() {}
 
-    private SystemServiceResponse() {
-        this.publicIpAddress = null;
-        this.systemServiceType = null;
-        this.version = null;
+    private SystemServiceResponse(SystemServiceResponse $) {
+        this.publicIpAddress = $.publicIpAddress;
+        this.systemServiceType = $.systemServiceType;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String publicIpAddress;
-        private String systemServiceType;
-        private String version;
+        private SystemServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemServiceResponse();
         }
 
         public Builder(SystemServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicIpAddress = defaults.publicIpAddress;
-    	      this.systemServiceType = defaults.systemServiceType;
-    	      this.version = defaults.version;
+            $ = new SystemServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publicIpAddress(String publicIpAddress) {
-            this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
+            $.publicIpAddress = publicIpAddress;
             return this;
         }
+
         public Builder systemServiceType(String systemServiceType) {
-            this.systemServiceType = Objects.requireNonNull(systemServiceType);
+            $.systemServiceType = systemServiceType;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public SystemServiceResponse build() {
-            return new SystemServiceResponse(publicIpAddress, systemServiceType, version);
+        }
+
+        public SystemServiceResponse build() {
+            $.publicIpAddress = Objects.requireNonNull($.publicIpAddress, "expected parameter 'publicIpAddress' to be non-null");
+            $.systemServiceType = Objects.requireNonNull($.systemServiceType, "expected parameter 'systemServiceType' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.LaunchTemplateInstanceMarketOptionsSpotOptionsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends com.pulumi.re
      * 
      */
     @Import(name="marketType")
-      private final @Nullable Output<String> marketType;
+    private @Nullable Output<String> marketType;
 
-    public Output<String> marketType() {
-        return this.marketType == null ? Codegen.empty() : this.marketType;
+    public Optional<Output<String>> marketType() {
+        return Optional.ofNullable(this.marketType);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class LaunchTemplateInstanceMarketOptionsArgs extends com.pulumi.re
      * 
      */
     @Import(name="spotOptions")
-      private final @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions;
+    private @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions;
 
-    public Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions() {
-        return this.spotOptions == null ? Codegen.empty() : this.spotOptions;
+    public Optional<Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs>> spotOptions() {
+        return Optional.ofNullable(this.spotOptions);
     }
 
-    public LaunchTemplateInstanceMarketOptionsArgs(
-        @Nullable Output<String> marketType,
-        @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions) {
-        this.marketType = marketType;
-        this.spotOptions = spotOptions;
-    }
+    private LaunchTemplateInstanceMarketOptionsArgs() {}
 
-    private LaunchTemplateInstanceMarketOptionsArgs() {
-        this.marketType = Codegen.empty();
-        this.spotOptions = Codegen.empty();
+    private LaunchTemplateInstanceMarketOptionsArgs(LaunchTemplateInstanceMarketOptionsArgs $) {
+        this.marketType = $.marketType;
+        this.spotOptions = $.spotOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateInstanceMarketOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> marketType;
-        private @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions;
+        private LaunchTemplateInstanceMarketOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateInstanceMarketOptionsArgs();
         }
 
         public Builder(LaunchTemplateInstanceMarketOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.marketType = defaults.marketType;
-    	      this.spotOptions = defaults.spotOptions;
+            $ = new LaunchTemplateInstanceMarketOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder marketType(@Nullable Output<String> marketType) {
-            this.marketType = marketType;
+            $.marketType = marketType;
             return this;
         }
-        public Builder marketType(@Nullable String marketType) {
-            this.marketType = Codegen.ofNullable(marketType);
-            return this;
+
+        public Builder marketType(String marketType) {
+            return marketType(Output.of(marketType));
         }
+
         public Builder spotOptions(@Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsArgs> spotOptions) {
-            this.spotOptions = spotOptions;
+            $.spotOptions = spotOptions;
             return this;
         }
-        public Builder spotOptions(@Nullable LaunchTemplateInstanceMarketOptionsSpotOptionsArgs spotOptions) {
-            this.spotOptions = Codegen.ofNullable(spotOptions);
-            return this;
-        }        public LaunchTemplateInstanceMarketOptionsArgs build() {
-            return new LaunchTemplateInstanceMarketOptionsArgs(marketType, spotOptions);
+
+        public Builder spotOptions(LaunchTemplateInstanceMarketOptionsSpotOptionsArgs spotOptions) {
+            return spotOptions(Output.of(spotOptions));
+        }
+
+        public LaunchTemplateInstanceMarketOptionsArgs build() {
+            return $;
         }
     }
+
 }

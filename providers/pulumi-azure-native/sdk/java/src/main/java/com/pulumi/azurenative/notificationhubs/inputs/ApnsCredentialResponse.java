@@ -23,10 +23,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="apnsCertificate")
-      private final @Nullable String apnsCertificate;
+    private @Nullable String apnsCertificate;
 
     public Optional<String> apnsCertificate() {
-        return this.apnsCertificate == null ? Optional.empty() : Optional.ofNullable(this.apnsCertificate);
+        return Optional.ofNullable(this.apnsCertificate);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="appId")
-      private final @Nullable String appId;
+    private @Nullable String appId;
 
     public Optional<String> appId() {
-        return this.appId == null ? Optional.empty() : Optional.ofNullable(this.appId);
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="appName")
-      private final @Nullable String appName;
+    private @Nullable String appName;
 
     public Optional<String> appName() {
-        return this.appName == null ? Optional.empty() : Optional.ofNullable(this.appName);
+        return Optional.ofNullable(this.appName);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="certificateKey")
-      private final @Nullable String certificateKey;
+    private @Nullable String certificateKey;
 
     public Optional<String> certificateKey() {
-        return this.certificateKey == null ? Optional.empty() : Optional.ofNullable(this.certificateKey);
+        return Optional.ofNullable(this.certificateKey);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable String endpoint;
+    private @Nullable String endpoint;
 
     public Optional<String> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keyId")
-      private final @Nullable String keyId;
+    private @Nullable String keyId;
 
     public Optional<String> keyId() {
-        return this.keyId == null ? Optional.empty() : Optional.ofNullable(this.keyId);
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
     /**
@@ -100,109 +100,86 @@ public final class ApnsCredentialResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="token")
-      private final @Nullable String token;
+    private @Nullable String token;
 
     public Optional<String> token() {
-        return this.token == null ? Optional.empty() : Optional.ofNullable(this.token);
+        return Optional.ofNullable(this.token);
     }
 
-    public ApnsCredentialResponse(
-        @Nullable String apnsCertificate,
-        @Nullable String appId,
-        @Nullable String appName,
-        @Nullable String certificateKey,
-        @Nullable String endpoint,
-        @Nullable String keyId,
-        @Nullable String thumbprint,
-        @Nullable String token) {
-        this.apnsCertificate = apnsCertificate;
-        this.appId = appId;
-        this.appName = appName;
-        this.certificateKey = certificateKey;
-        this.endpoint = endpoint;
-        this.keyId = keyId;
-        this.thumbprint = thumbprint;
-        this.token = token;
-    }
+    private ApnsCredentialResponse() {}
 
-    private ApnsCredentialResponse() {
-        this.apnsCertificate = null;
-        this.appId = null;
-        this.appName = null;
-        this.certificateKey = null;
-        this.endpoint = null;
-        this.keyId = null;
-        this.thumbprint = null;
-        this.token = null;
+    private ApnsCredentialResponse(ApnsCredentialResponse $) {
+        this.apnsCertificate = $.apnsCertificate;
+        this.appId = $.appId;
+        this.appName = $.appName;
+        this.certificateKey = $.certificateKey;
+        this.endpoint = $.endpoint;
+        this.keyId = $.keyId;
+        this.thumbprint = $.thumbprint;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApnsCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String apnsCertificate;
-        private @Nullable String appId;
-        private @Nullable String appName;
-        private @Nullable String certificateKey;
-        private @Nullable String endpoint;
-        private @Nullable String keyId;
-        private @Nullable String thumbprint;
-        private @Nullable String token;
+        private ApnsCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApnsCredentialResponse();
         }
 
         public Builder(ApnsCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apnsCertificate = defaults.apnsCertificate;
-    	      this.appId = defaults.appId;
-    	      this.appName = defaults.appName;
-    	      this.certificateKey = defaults.certificateKey;
-    	      this.endpoint = defaults.endpoint;
-    	      this.keyId = defaults.keyId;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.token = defaults.token;
+            $ = new ApnsCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apnsCertificate(@Nullable String apnsCertificate) {
-            this.apnsCertificate = apnsCertificate;
+            $.apnsCertificate = apnsCertificate;
             return this;
         }
+
         public Builder appId(@Nullable String appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
+
         public Builder appName(@Nullable String appName) {
-            this.appName = appName;
+            $.appName = appName;
             return this;
         }
+
         public Builder certificateKey(@Nullable String certificateKey) {
-            this.certificateKey = certificateKey;
+            $.certificateKey = certificateKey;
             return this;
         }
+
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
+
         public Builder token(@Nullable String token) {
-            this.token = token;
+            $.token = token;
             return this;
-        }        public ApnsCredentialResponse build() {
-            return new ApnsCredentialResponse(apnsCertificate, appId, appName, certificateKey, endpoint, keyId, thumbprint, token);
+        }
+
+        public ApnsCredentialResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectionRuleArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends com.pulumi.re
      * 
      */
     @Import(name="infoTypes")
-      private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+    private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
-    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes() {
-        return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
+    public Optional<Output<List<GooglePrivacyDlpV2InfoTypeArgs>>> infoTypes() {
+        return Optional.ofNullable(this.infoTypes);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends com.pulumi.re
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules;
+    private @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules;
 
-    public Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<GooglePrivacyDlpV2InspectionRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public GooglePrivacyDlpV2InspectionRuleSetArgs(
-        @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes,
-        @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules) {
-        this.infoTypes = infoTypes;
-        this.rules = rules;
-    }
+    private GooglePrivacyDlpV2InspectionRuleSetArgs() {}
 
-    private GooglePrivacyDlpV2InspectionRuleSetArgs() {
-        this.infoTypes = Codegen.empty();
-        this.rules = Codegen.empty();
+    private GooglePrivacyDlpV2InspectionRuleSetArgs(GooglePrivacyDlpV2InspectionRuleSetArgs $) {
+        this.infoTypes = $.infoTypes;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InspectionRuleSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
-        private @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules;
+        private GooglePrivacyDlpV2InspectionRuleSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InspectionRuleSetArgs();
         }
 
         public Builder(GooglePrivacyDlpV2InspectionRuleSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypes = defaults.infoTypes;
-    	      this.rules = defaults.rules;
+            $ = new GooglePrivacyDlpV2InspectionRuleSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypes(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
-            this.infoTypes = infoTypes;
+            $.infoTypes = infoTypes;
             return this;
         }
-        public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
-            this.infoTypes = Codegen.ofNullable(infoTypes);
-            return this;
+
+        public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
+            return infoTypes(Output.of(infoTypes));
         }
+
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
+
         public Builder rules(@Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<GooglePrivacyDlpV2InspectionRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<GooglePrivacyDlpV2InspectionRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(GooglePrivacyDlpV2InspectionRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public GooglePrivacyDlpV2InspectionRuleSetArgs build() {
-            return new GooglePrivacyDlpV2InspectionRuleSetArgs(infoTypes, rules);
+        }
+
+        public GooglePrivacyDlpV2InspectionRuleSetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EventTargetHttpTargetGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="headerParameters")
-      private final @Nullable Output<Map<String,String>> headerParameters;
+    private @Nullable Output<Map<String,String>> headerParameters;
 
-    public Output<Map<String,String>> headerParameters() {
-        return this.headerParameters == null ? Codegen.empty() : this.headerParameters;
+    public Optional<Output<Map<String,String>>> headerParameters() {
+        return Optional.ofNullable(this.headerParameters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EventTargetHttpTargetGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="pathParameterValues")
-      private final @Nullable Output<List<String>> pathParameterValues;
+    private @Nullable Output<List<String>> pathParameterValues;
 
-    public Output<List<String>> pathParameterValues() {
-        return this.pathParameterValues == null ? Codegen.empty() : this.pathParameterValues;
+    public Optional<Output<List<String>>> pathParameterValues() {
+        return Optional.ofNullable(this.pathParameterValues);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class EventTargetHttpTargetGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="queryStringParameters")
-      private final @Nullable Output<Map<String,String>> queryStringParameters;
+    private @Nullable Output<Map<String,String>> queryStringParameters;
 
-    public Output<Map<String,String>> queryStringParameters() {
-        return this.queryStringParameters == null ? Codegen.empty() : this.queryStringParameters;
+    public Optional<Output<Map<String,String>>> queryStringParameters() {
+        return Optional.ofNullable(this.queryStringParameters);
     }
 
-    public EventTargetHttpTargetGetArgs(
-        @Nullable Output<Map<String,String>> headerParameters,
-        @Nullable Output<List<String>> pathParameterValues,
-        @Nullable Output<Map<String,String>> queryStringParameters) {
-        this.headerParameters = headerParameters;
-        this.pathParameterValues = pathParameterValues;
-        this.queryStringParameters = queryStringParameters;
-    }
+    private EventTargetHttpTargetGetArgs() {}
 
-    private EventTargetHttpTargetGetArgs() {
-        this.headerParameters = Codegen.empty();
-        this.pathParameterValues = Codegen.empty();
-        this.queryStringParameters = Codegen.empty();
+    private EventTargetHttpTargetGetArgs(EventTargetHttpTargetGetArgs $) {
+        this.headerParameters = $.headerParameters;
+        this.pathParameterValues = $.pathParameterValues;
+        this.queryStringParameters = $.queryStringParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTargetHttpTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> headerParameters;
-        private @Nullable Output<List<String>> pathParameterValues;
-        private @Nullable Output<Map<String,String>> queryStringParameters;
+        private EventTargetHttpTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTargetHttpTargetGetArgs();
         }
 
         public Builder(EventTargetHttpTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerParameters = defaults.headerParameters;
-    	      this.pathParameterValues = defaults.pathParameterValues;
-    	      this.queryStringParameters = defaults.queryStringParameters;
+            $ = new EventTargetHttpTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerParameters(@Nullable Output<Map<String,String>> headerParameters) {
-            this.headerParameters = headerParameters;
+            $.headerParameters = headerParameters;
             return this;
         }
-        public Builder headerParameters(@Nullable Map<String,String> headerParameters) {
-            this.headerParameters = Codegen.ofNullable(headerParameters);
-            return this;
+
+        public Builder headerParameters(Map<String,String> headerParameters) {
+            return headerParameters(Output.of(headerParameters));
         }
+
         public Builder pathParameterValues(@Nullable Output<List<String>> pathParameterValues) {
-            this.pathParameterValues = pathParameterValues;
+            $.pathParameterValues = pathParameterValues;
             return this;
         }
-        public Builder pathParameterValues(@Nullable List<String> pathParameterValues) {
-            this.pathParameterValues = Codegen.ofNullable(pathParameterValues);
-            return this;
+
+        public Builder pathParameterValues(List<String> pathParameterValues) {
+            return pathParameterValues(Output.of(pathParameterValues));
         }
+
         public Builder pathParameterValues(String... pathParameterValues) {
             return pathParameterValues(List.of(pathParameterValues));
         }
+
         public Builder queryStringParameters(@Nullable Output<Map<String,String>> queryStringParameters) {
-            this.queryStringParameters = queryStringParameters;
+            $.queryStringParameters = queryStringParameters;
             return this;
         }
-        public Builder queryStringParameters(@Nullable Map<String,String> queryStringParameters) {
-            this.queryStringParameters = Codegen.ofNullable(queryStringParameters);
-            return this;
-        }        public EventTargetHttpTargetGetArgs build() {
-            return new EventTargetHttpTargetGetArgs(headerParameters, pathParameterValues, queryStringParameters);
+
+        public Builder queryStringParameters(Map<String,String> queryStringParameters) {
+            return queryStringParameters(Output.of(queryStringParameters));
+        }
+
+        public EventTargetHttpTargetGetArgs build() {
+            return $;
         }
     }
+
 }

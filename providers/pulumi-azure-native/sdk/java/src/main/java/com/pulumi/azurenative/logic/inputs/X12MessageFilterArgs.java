@@ -7,7 +7,6 @@ import com.pulumi.azurenative.logic.enums.MessageFilterType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class X12MessageFilterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="messageFilterType", required=true)
-      private final Output<Either<String,MessageFilterType>> messageFilterType;
+    private Output<Either<String,MessageFilterType>> messageFilterType;
 
     public Output<Either<String,MessageFilterType>> messageFilterType() {
         return this.messageFilterType;
     }
 
-    public X12MessageFilterArgs(Output<Either<String,MessageFilterType>> messageFilterType) {
-        this.messageFilterType = Objects.requireNonNull(messageFilterType, "expected parameter 'messageFilterType' to be non-null");
-    }
+    private X12MessageFilterArgs() {}
 
-    private X12MessageFilterArgs() {
-        this.messageFilterType = Codegen.empty();
+    private X12MessageFilterArgs(X12MessageFilterArgs $) {
+        this.messageFilterType = $.messageFilterType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X12MessageFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,MessageFilterType>> messageFilterType;
+        private X12MessageFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new X12MessageFilterArgs();
         }
 
         public Builder(X12MessageFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFilterType = defaults.messageFilterType;
+            $ = new X12MessageFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFilterType(Output<Either<String,MessageFilterType>> messageFilterType) {
-            this.messageFilterType = Objects.requireNonNull(messageFilterType);
+            $.messageFilterType = messageFilterType;
             return this;
         }
+
         public Builder messageFilterType(Either<String,MessageFilterType> messageFilterType) {
-            this.messageFilterType = Output.of(Objects.requireNonNull(messageFilterType));
-            return this;
-        }        public X12MessageFilterArgs build() {
-            return new X12MessageFilterArgs(messageFilterType);
+            return messageFilterType(Output.of(messageFilterType));
+        }
+
+        public X12MessageFilterArgs build() {
+            $.messageFilterType = Objects.requireNonNull($.messageFilterType, "expected parameter 'messageFilterType' to be non-null");
+            return $;
         }
     }
+
 }

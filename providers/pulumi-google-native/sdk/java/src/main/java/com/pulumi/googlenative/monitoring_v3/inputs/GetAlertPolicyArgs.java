@@ -15,62 +15,58 @@ public final class GetAlertPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAlertPolicyArgs Empty = new GetAlertPolicyArgs();
 
     @Import(name="alertPolicyId", required=true)
-      private final String alertPolicyId;
+    private String alertPolicyId;
 
     public String alertPolicyId() {
         return this.alertPolicyId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAlertPolicyArgs(
-        String alertPolicyId,
-        @Nullable String project) {
-        this.alertPolicyId = Objects.requireNonNull(alertPolicyId, "expected parameter 'alertPolicyId' to be non-null");
-        this.project = project;
-    }
+    private GetAlertPolicyArgs() {}
 
-    private GetAlertPolicyArgs() {
-        this.alertPolicyId = null;
-        this.project = null;
+    private GetAlertPolicyArgs(GetAlertPolicyArgs $) {
+        this.alertPolicyId = $.alertPolicyId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAlertPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alertPolicyId;
-        private @Nullable String project;
+        private GetAlertPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAlertPolicyArgs();
         }
 
         public Builder(GetAlertPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertPolicyId = defaults.alertPolicyId;
-    	      this.project = defaults.project;
+            $ = new GetAlertPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertPolicyId(String alertPolicyId) {
-            this.alertPolicyId = Objects.requireNonNull(alertPolicyId);
+            $.alertPolicyId = alertPolicyId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAlertPolicyArgs build() {
-            return new GetAlertPolicyArgs(alertPolicyId, project);
+        }
+
+        public GetAlertPolicyArgs build() {
+            $.alertPolicyId = Objects.requireNonNull($.alertPolicyId, "expected parameter 'alertPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

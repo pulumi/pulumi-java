@@ -23,10 +23,10 @@ public final class WsfcDomainCredentialsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="clusterBootstrapAccountPassword")
-      private final @Nullable String clusterBootstrapAccountPassword;
+    private @Nullable String clusterBootstrapAccountPassword;
 
     public Optional<String> clusterBootstrapAccountPassword() {
-        return this.clusterBootstrapAccountPassword == null ? Optional.empty() : Optional.ofNullable(this.clusterBootstrapAccountPassword);
+        return Optional.ofNullable(this.clusterBootstrapAccountPassword);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WsfcDomainCredentialsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="clusterOperatorAccountPassword")
-      private final @Nullable String clusterOperatorAccountPassword;
+    private @Nullable String clusterOperatorAccountPassword;
 
     public Optional<String> clusterOperatorAccountPassword() {
-        return this.clusterOperatorAccountPassword == null ? Optional.empty() : Optional.ofNullable(this.clusterOperatorAccountPassword);
+        return Optional.ofNullable(this.clusterOperatorAccountPassword);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class WsfcDomainCredentialsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sqlServiceAccountPassword")
-      private final @Nullable String sqlServiceAccountPassword;
+    private @Nullable String sqlServiceAccountPassword;
 
     public Optional<String> sqlServiceAccountPassword() {
-        return this.sqlServiceAccountPassword == null ? Optional.empty() : Optional.ofNullable(this.sqlServiceAccountPassword);
+        return Optional.ofNullable(this.sqlServiceAccountPassword);
     }
 
-    public WsfcDomainCredentialsResponse(
-        @Nullable String clusterBootstrapAccountPassword,
-        @Nullable String clusterOperatorAccountPassword,
-        @Nullable String sqlServiceAccountPassword) {
-        this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
-        this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
-        this.sqlServiceAccountPassword = sqlServiceAccountPassword;
-    }
+    private WsfcDomainCredentialsResponse() {}
 
-    private WsfcDomainCredentialsResponse() {
-        this.clusterBootstrapAccountPassword = null;
-        this.clusterOperatorAccountPassword = null;
-        this.sqlServiceAccountPassword = null;
+    private WsfcDomainCredentialsResponse(WsfcDomainCredentialsResponse $) {
+        this.clusterBootstrapAccountPassword = $.clusterBootstrapAccountPassword;
+        this.clusterOperatorAccountPassword = $.clusterOperatorAccountPassword;
+        this.sqlServiceAccountPassword = $.sqlServiceAccountPassword;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WsfcDomainCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clusterBootstrapAccountPassword;
-        private @Nullable String clusterOperatorAccountPassword;
-        private @Nullable String sqlServiceAccountPassword;
+        private WsfcDomainCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WsfcDomainCredentialsResponse();
         }
 
         public Builder(WsfcDomainCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterBootstrapAccountPassword = defaults.clusterBootstrapAccountPassword;
-    	      this.clusterOperatorAccountPassword = defaults.clusterOperatorAccountPassword;
-    	      this.sqlServiceAccountPassword = defaults.sqlServiceAccountPassword;
+            $ = new WsfcDomainCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
-            this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
+            $.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
             return this;
         }
+
         public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
-            this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
+            $.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
             return this;
         }
+
         public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
-            this.sqlServiceAccountPassword = sqlServiceAccountPassword;
+            $.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
-        }        public WsfcDomainCredentialsResponse build() {
-            return new WsfcDomainCredentialsResponse(clusterBootstrapAccountPassword, clusterOperatorAccountPassword, sqlServiceAccountPassword);
+        }
+
+        public WsfcDomainCredentialsResponse build() {
+            return $;
         }
     }
+
 }

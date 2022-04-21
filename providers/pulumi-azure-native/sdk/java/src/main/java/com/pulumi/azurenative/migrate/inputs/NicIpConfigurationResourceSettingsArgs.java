@@ -9,11 +9,11 @@ import com.pulumi.azurenative.migrate.inputs.PublicIpReferenceArgs;
 import com.pulumi.azurenative.migrate.inputs.SubnetReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
      * 
      */
     @Import(name="loadBalancerBackendAddressPools")
-      private final @Nullable Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools;
+    private @Nullable Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools;
 
-    public Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools() {
-        return this.loadBalancerBackendAddressPools == null ? Codegen.empty() : this.loadBalancerBackendAddressPools;
+    public Optional<Output<List<LoadBalancerBackendAddressPoolReferenceArgs>>> loadBalancerBackendAddressPools() {
+        return Optional.ofNullable(this.loadBalancerBackendAddressPools);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
      * 
      */
     @Import(name="loadBalancerNatRules")
-      private final @Nullable Output<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules;
+    private @Nullable Output<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules;
 
-    public Output<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules() {
-        return this.loadBalancerNatRules == null ? Codegen.empty() : this.loadBalancerNatRules;
+    public Optional<Output<List<LoadBalancerNatRuleReferenceArgs>>> loadBalancerNatRules() {
+        return Optional.ofNullable(this.loadBalancerNatRules);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
      * 
      */
     @Import(name="primary")
-      private final @Nullable Output<Boolean> primary;
+    private @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> primary() {
-        return this.primary == null ? Codegen.empty() : this.primary;
+    public Optional<Output<Boolean>> primary() {
+        return Optional.ofNullable(this.primary);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
      * 
      */
     @Import(name="privateIpAddress")
-      private final @Nullable Output<String> privateIpAddress;
+    private @Nullable Output<String> privateIpAddress;
 
-    public Output<String> privateIpAddress() {
-        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
+    public Optional<Output<String>> privateIpAddress() {
+        return Optional.ofNullable(this.privateIpAddress);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
      * 
      */
     @Import(name="privateIpAllocationMethod")
-      private final @Nullable Output<String> privateIpAllocationMethod;
+    private @Nullable Output<String> privateIpAllocationMethod;
 
-    public Output<String> privateIpAllocationMethod() {
-        return this.privateIpAllocationMethod == null ? Codegen.empty() : this.privateIpAllocationMethod;
+    public Optional<Output<String>> privateIpAllocationMethod() {
+        return Optional.ofNullable(this.privateIpAllocationMethod);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
      * 
      */
     @Import(name="publicIp")
-      private final @Nullable Output<PublicIpReferenceArgs> publicIp;
+    private @Nullable Output<PublicIpReferenceArgs> publicIp;
 
-    public Output<PublicIpReferenceArgs> publicIp() {
-        return this.publicIp == null ? Codegen.empty() : this.publicIp;
+    public Optional<Output<PublicIpReferenceArgs>> publicIp() {
+        return Optional.ofNullable(this.publicIp);
     }
 
     /**
@@ -107,147 +107,126 @@ public final class NicIpConfigurationResourceSettingsArgs extends com.pulumi.res
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<SubnetReferenceArgs> subnet;
+    private @Nullable Output<SubnetReferenceArgs> subnet;
 
-    public Output<SubnetReferenceArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<SubnetReferenceArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
-    public NicIpConfigurationResourceSettingsArgs(
-        @Nullable Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools,
-        @Nullable Output<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> primary,
-        @Nullable Output<String> privateIpAddress,
-        @Nullable Output<String> privateIpAllocationMethod,
-        @Nullable Output<PublicIpReferenceArgs> publicIp,
-        @Nullable Output<SubnetReferenceArgs> subnet) {
-        this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
-        this.loadBalancerNatRules = loadBalancerNatRules;
-        this.name = name;
-        this.primary = primary;
-        this.privateIpAddress = privateIpAddress;
-        this.privateIpAllocationMethod = privateIpAllocationMethod;
-        this.publicIp = publicIp;
-        this.subnet = subnet;
-    }
+    private NicIpConfigurationResourceSettingsArgs() {}
 
-    private NicIpConfigurationResourceSettingsArgs() {
-        this.loadBalancerBackendAddressPools = Codegen.empty();
-        this.loadBalancerNatRules = Codegen.empty();
-        this.name = Codegen.empty();
-        this.primary = Codegen.empty();
-        this.privateIpAddress = Codegen.empty();
-        this.privateIpAllocationMethod = Codegen.empty();
-        this.publicIp = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private NicIpConfigurationResourceSettingsArgs(NicIpConfigurationResourceSettingsArgs $) {
+        this.loadBalancerBackendAddressPools = $.loadBalancerBackendAddressPools;
+        this.loadBalancerNatRules = $.loadBalancerNatRules;
+        this.name = $.name;
+        this.primary = $.primary;
+        this.privateIpAddress = $.privateIpAddress;
+        this.privateIpAllocationMethod = $.privateIpAllocationMethod;
+        this.publicIp = $.publicIp;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NicIpConfigurationResourceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools;
-        private @Nullable Output<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> primary;
-        private @Nullable Output<String> privateIpAddress;
-        private @Nullable Output<String> privateIpAllocationMethod;
-        private @Nullable Output<PublicIpReferenceArgs> publicIp;
-        private @Nullable Output<SubnetReferenceArgs> subnet;
+        private NicIpConfigurationResourceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NicIpConfigurationResourceSettingsArgs();
         }
 
         public Builder(NicIpConfigurationResourceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loadBalancerBackendAddressPools = defaults.loadBalancerBackendAddressPools;
-    	      this.loadBalancerNatRules = defaults.loadBalancerNatRules;
-    	      this.name = defaults.name;
-    	      this.primary = defaults.primary;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.privateIpAllocationMethod = defaults.privateIpAllocationMethod;
-    	      this.publicIp = defaults.publicIp;
-    	      this.subnet = defaults.subnet;
+            $ = new NicIpConfigurationResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loadBalancerBackendAddressPools(@Nullable Output<List<LoadBalancerBackendAddressPoolReferenceArgs>> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
+            $.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
-        public Builder loadBalancerBackendAddressPools(@Nullable List<LoadBalancerBackendAddressPoolReferenceArgs> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = Codegen.ofNullable(loadBalancerBackendAddressPools);
-            return this;
+
+        public Builder loadBalancerBackendAddressPools(List<LoadBalancerBackendAddressPoolReferenceArgs> loadBalancerBackendAddressPools) {
+            return loadBalancerBackendAddressPools(Output.of(loadBalancerBackendAddressPools));
         }
+
         public Builder loadBalancerBackendAddressPools(LoadBalancerBackendAddressPoolReferenceArgs... loadBalancerBackendAddressPools) {
             return loadBalancerBackendAddressPools(List.of(loadBalancerBackendAddressPools));
         }
+
         public Builder loadBalancerNatRules(@Nullable Output<List<LoadBalancerNatRuleReferenceArgs>> loadBalancerNatRules) {
-            this.loadBalancerNatRules = loadBalancerNatRules;
+            $.loadBalancerNatRules = loadBalancerNatRules;
             return this;
         }
-        public Builder loadBalancerNatRules(@Nullable List<LoadBalancerNatRuleReferenceArgs> loadBalancerNatRules) {
-            this.loadBalancerNatRules = Codegen.ofNullable(loadBalancerNatRules);
-            return this;
+
+        public Builder loadBalancerNatRules(List<LoadBalancerNatRuleReferenceArgs> loadBalancerNatRules) {
+            return loadBalancerNatRules(Output.of(loadBalancerNatRules));
         }
+
         public Builder loadBalancerNatRules(LoadBalancerNatRuleReferenceArgs... loadBalancerNatRules) {
             return loadBalancerNatRules(List.of(loadBalancerNatRules));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder primary(@Nullable Output<Boolean> primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
-        public Builder primary(@Nullable Boolean primary) {
-            this.primary = Codegen.ofNullable(primary);
-            return this;
+
+        public Builder primary(Boolean primary) {
+            return primary(Output.of(primary));
         }
+
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
-            this.privateIpAddress = privateIpAddress;
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
-        public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
-            return this;
+
+        public Builder privateIpAddress(String privateIpAddress) {
+            return privateIpAddress(Output.of(privateIpAddress));
         }
+
         public Builder privateIpAllocationMethod(@Nullable Output<String> privateIpAllocationMethod) {
-            this.privateIpAllocationMethod = privateIpAllocationMethod;
+            $.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
-        public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
-            this.privateIpAllocationMethod = Codegen.ofNullable(privateIpAllocationMethod);
-            return this;
+
+        public Builder privateIpAllocationMethod(String privateIpAllocationMethod) {
+            return privateIpAllocationMethod(Output.of(privateIpAllocationMethod));
         }
+
         public Builder publicIp(@Nullable Output<PublicIpReferenceArgs> publicIp) {
-            this.publicIp = publicIp;
+            $.publicIp = publicIp;
             return this;
         }
-        public Builder publicIp(@Nullable PublicIpReferenceArgs publicIp) {
-            this.publicIp = Codegen.ofNullable(publicIp);
-            return this;
+
+        public Builder publicIp(PublicIpReferenceArgs publicIp) {
+            return publicIp(Output.of(publicIp));
         }
+
         public Builder subnet(@Nullable Output<SubnetReferenceArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable SubnetReferenceArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
-        }        public NicIpConfigurationResourceSettingsArgs build() {
-            return new NicIpConfigurationResourceSettingsArgs(loadBalancerBackendAddressPools, loadBalancerNatRules, name, primary, privateIpAddress, privateIpAllocationMethod, publicIp, subnet);
+
+        public Builder subnet(SubnetReferenceArgs subnet) {
+            return subnet(Output.of(subnet));
+        }
+
+        public NicIpConfigurationResourceSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
+    private @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
-    public Output<Either<String,NetworkRuleIPAction>> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<Either<String,NetworkRuleIPAction>>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class NWRuleSetIpRulesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipMask")
-      private final @Nullable Output<String> ipMask;
+    private @Nullable Output<String> ipMask;
 
-    public Output<String> ipMask() {
-        return this.ipMask == null ? Codegen.empty() : this.ipMask;
+    public Optional<Output<String>> ipMask() {
+        return Optional.ofNullable(this.ipMask);
     }
 
-    public NWRuleSetIpRulesArgs(
-        @Nullable Output<Either<String,NetworkRuleIPAction>> action,
-        @Nullable Output<String> ipMask) {
-        this.action = Codegen.stringProp("action").left(NetworkRuleIPAction.class).output().arg(action).def("Allow").getNullable();
-        this.ipMask = ipMask;
-    }
+    private NWRuleSetIpRulesArgs() {}
 
-    private NWRuleSetIpRulesArgs() {
-        this.action = Codegen.empty();
-        this.ipMask = Codegen.empty();
+    private NWRuleSetIpRulesArgs(NWRuleSetIpRulesArgs $) {
+        this.action = $.action;
+        this.ipMask = $.ipMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NWRuleSetIpRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,NetworkRuleIPAction>> action;
-        private @Nullable Output<String> ipMask;
+        private NWRuleSetIpRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NWRuleSetIpRulesArgs();
         }
 
         public Builder(NWRuleSetIpRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.ipMask = defaults.ipMask;
+            $ = new NWRuleSetIpRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<Either<String,NetworkRuleIPAction>> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable Either<String,NetworkRuleIPAction> action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(Either<String,NetworkRuleIPAction> action) {
+            return action(Output.of(action));
         }
+
         public Builder ipMask(@Nullable Output<String> ipMask) {
-            this.ipMask = ipMask;
+            $.ipMask = ipMask;
             return this;
         }
-        public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = Codegen.ofNullable(ipMask);
-            return this;
-        }        public NWRuleSetIpRulesArgs build() {
-            return new NWRuleSetIpRulesArgs(action, ipMask);
+
+        public Builder ipMask(String ipMask) {
+            return ipMask(Output.of(ipMask));
+        }
+
+        public NWRuleSetIpRulesArgs build() {
+            $.action = Codegen.stringProp("action").left(NetworkRuleIPAction.class).output().arg($.action).def("Allow").getNullable();
+            return $;
         }
     }
+
 }

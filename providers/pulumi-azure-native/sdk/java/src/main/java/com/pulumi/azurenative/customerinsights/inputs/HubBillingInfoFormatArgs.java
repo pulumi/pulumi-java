@@ -5,10 +5,10 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HubBillingInfoFormatArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maxUnits")
-      private final @Nullable Output<Integer> maxUnits;
+    private @Nullable Output<Integer> maxUnits;
 
-    public Output<Integer> maxUnits() {
-        return this.maxUnits == null ? Codegen.empty() : this.maxUnits;
+    public Optional<Output<Integer>> maxUnits() {
+        return Optional.ofNullable(this.maxUnits);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HubBillingInfoFormatArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="minUnits")
-      private final @Nullable Output<Integer> minUnits;
+    private @Nullable Output<Integer> minUnits;
 
-    public Output<Integer> minUnits() {
-        return this.minUnits == null ? Codegen.empty() : this.minUnits;
+    public Optional<Output<Integer>> minUnits() {
+        return Optional.ofNullable(this.minUnits);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class HubBillingInfoFormatArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="skuName")
-      private final @Nullable Output<String> skuName;
+    private @Nullable Output<String> skuName;
 
-    public Output<String> skuName() {
-        return this.skuName == null ? Codegen.empty() : this.skuName;
+    public Optional<Output<String>> skuName() {
+        return Optional.ofNullable(this.skuName);
     }
 
-    public HubBillingInfoFormatArgs(
-        @Nullable Output<Integer> maxUnits,
-        @Nullable Output<Integer> minUnits,
-        @Nullable Output<String> skuName) {
-        this.maxUnits = maxUnits;
-        this.minUnits = minUnits;
-        this.skuName = skuName;
-    }
+    private HubBillingInfoFormatArgs() {}
 
-    private HubBillingInfoFormatArgs() {
-        this.maxUnits = Codegen.empty();
-        this.minUnits = Codegen.empty();
-        this.skuName = Codegen.empty();
+    private HubBillingInfoFormatArgs(HubBillingInfoFormatArgs $) {
+        this.maxUnits = $.maxUnits;
+        this.minUnits = $.minUnits;
+        this.skuName = $.skuName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubBillingInfoFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxUnits;
-        private @Nullable Output<Integer> minUnits;
-        private @Nullable Output<String> skuName;
+        private HubBillingInfoFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubBillingInfoFormatArgs();
         }
 
         public Builder(HubBillingInfoFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxUnits = defaults.maxUnits;
-    	      this.minUnits = defaults.minUnits;
-    	      this.skuName = defaults.skuName;
+            $ = new HubBillingInfoFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxUnits(@Nullable Output<Integer> maxUnits) {
-            this.maxUnits = maxUnits;
+            $.maxUnits = maxUnits;
             return this;
         }
-        public Builder maxUnits(@Nullable Integer maxUnits) {
-            this.maxUnits = Codegen.ofNullable(maxUnits);
-            return this;
+
+        public Builder maxUnits(Integer maxUnits) {
+            return maxUnits(Output.of(maxUnits));
         }
+
         public Builder minUnits(@Nullable Output<Integer> minUnits) {
-            this.minUnits = minUnits;
+            $.minUnits = minUnits;
             return this;
         }
-        public Builder minUnits(@Nullable Integer minUnits) {
-            this.minUnits = Codegen.ofNullable(minUnits);
-            return this;
+
+        public Builder minUnits(Integer minUnits) {
+            return minUnits(Output.of(minUnits));
         }
+
         public Builder skuName(@Nullable Output<String> skuName) {
-            this.skuName = skuName;
+            $.skuName = skuName;
             return this;
         }
-        public Builder skuName(@Nullable String skuName) {
-            this.skuName = Codegen.ofNullable(skuName);
-            return this;
-        }        public HubBillingInfoFormatArgs build() {
-            return new HubBillingInfoFormatArgs(maxUnits, minUnits, skuName);
+
+        public Builder skuName(String skuName) {
+            return skuName(Output.of(skuName));
+        }
+
+        public HubBillingInfoFormatArgs build() {
+            return $;
         }
     }
+
 }

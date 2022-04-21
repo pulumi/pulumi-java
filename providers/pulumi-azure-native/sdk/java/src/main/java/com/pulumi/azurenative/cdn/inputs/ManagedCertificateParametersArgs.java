@@ -24,49 +24,49 @@ public final class ManagedCertificateParametersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ManagedCertificateParametersArgs(Output<String> type) {
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ManagedCertificateParametersArgs() {}
 
-    private ManagedCertificateParametersArgs() {
-        this.type = Codegen.empty();
+    private ManagedCertificateParametersArgs(ManagedCertificateParametersArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedCertificateParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private ManagedCertificateParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedCertificateParametersArgs();
         }
 
         public Builder(ManagedCertificateParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ManagedCertificateParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ManagedCertificateParametersArgs build() {
-            return new ManagedCertificateParametersArgs(type);
+            return type(Output.of(type));
+        }
+
+        public ManagedCertificateParametersArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class GoogleRpcStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="code", required=true)
-      private final Integer code;
+    private Integer code;
 
     public Integer code() {
         return this.code;
@@ -35,7 +35,7 @@ public final class GoogleRpcStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="details", required=true)
-      private final List<Map<String,String>> details;
+    private List<Map<String,String>> details;
 
     public List<Map<String,String>> details() {
         return this.details;
@@ -46,64 +46,63 @@ public final class GoogleRpcStatusResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
-    public GoogleRpcStatusResponse(
-        Integer code,
-        List<Map<String,String>> details,
-        String message) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-    }
+    private GoogleRpcStatusResponse() {}
 
-    private GoogleRpcStatusResponse() {
-        this.code = null;
-        this.details = List.of();
-        this.message = null;
+    private GoogleRpcStatusResponse(GoogleRpcStatusResponse $) {
+        this.code = $.code;
+        this.details = $.details;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleRpcStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer code;
-        private List<Map<String,String>> details;
-        private String message;
+        private GoogleRpcStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleRpcStatusResponse();
         }
 
         public Builder(GoogleRpcStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.details = defaults.details;
-    	      this.message = defaults.message;
+            $ = new GoogleRpcStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(Integer code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder details(List<Map<String,String>> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
+        public Builder details(Map<String,String>... details) {
+            return details(List.of(details));
+        }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
-        }        public GoogleRpcStatusResponse build() {
-            return new GoogleRpcStatusResponse(code, details, message);
+        }
+
+        public GoogleRpcStatusResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            return $;
         }
     }
+
 }

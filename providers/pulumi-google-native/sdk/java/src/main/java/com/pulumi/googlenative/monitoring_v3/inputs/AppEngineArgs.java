@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AppEngineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="moduleId")
-      private final @Nullable Output<String> moduleId;
+    private @Nullable Output<String> moduleId;
 
-    public Output<String> moduleId() {
-        return this.moduleId == null ? Codegen.empty() : this.moduleId;
+    public Optional<Output<String>> moduleId() {
+        return Optional.ofNullable(this.moduleId);
     }
 
-    public AppEngineArgs(@Nullable Output<String> moduleId) {
-        this.moduleId = moduleId;
-    }
+    private AppEngineArgs() {}
 
-    private AppEngineArgs() {
-        this.moduleId = Codegen.empty();
+    private AppEngineArgs(AppEngineArgs $) {
+        this.moduleId = $.moduleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> moduleId;
+        private AppEngineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineArgs();
         }
 
         public Builder(AppEngineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.moduleId = defaults.moduleId;
+            $ = new AppEngineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder moduleId(@Nullable Output<String> moduleId) {
-            this.moduleId = moduleId;
+            $.moduleId = moduleId;
             return this;
         }
-        public Builder moduleId(@Nullable String moduleId) {
-            this.moduleId = Codegen.ofNullable(moduleId);
-            return this;
-        }        public AppEngineArgs build() {
-            return new AppEngineArgs(moduleId);
+
+        public Builder moduleId(String moduleId) {
+            return moduleId(Output.of(moduleId));
+        }
+
+        public AppEngineArgs build() {
+            return $;
         }
     }
+
 }

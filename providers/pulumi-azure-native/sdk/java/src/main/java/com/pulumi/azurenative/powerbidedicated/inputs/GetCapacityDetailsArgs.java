@@ -17,7 +17,7 @@ public final class GetCapacityDetailsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dedicatedCapacityName", required=true)
-      private final String dedicatedCapacityName;
+    private String dedicatedCapacityName;
 
     public String dedicatedCapacityName() {
         return this.dedicatedCapacityName;
@@ -28,55 +28,52 @@ public final class GetCapacityDetailsArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCapacityDetailsArgs(
-        String dedicatedCapacityName,
-        String resourceGroupName) {
-        this.dedicatedCapacityName = Objects.requireNonNull(dedicatedCapacityName, "expected parameter 'dedicatedCapacityName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCapacityDetailsArgs() {}
 
-    private GetCapacityDetailsArgs() {
-        this.dedicatedCapacityName = null;
-        this.resourceGroupName = null;
+    private GetCapacityDetailsArgs(GetCapacityDetailsArgs $) {
+        this.dedicatedCapacityName = $.dedicatedCapacityName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCapacityDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dedicatedCapacityName;
-        private String resourceGroupName;
+        private GetCapacityDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCapacityDetailsArgs();
         }
 
         public Builder(GetCapacityDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dedicatedCapacityName = defaults.dedicatedCapacityName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCapacityDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dedicatedCapacityName(String dedicatedCapacityName) {
-            this.dedicatedCapacityName = Objects.requireNonNull(dedicatedCapacityName);
+            $.dedicatedCapacityName = dedicatedCapacityName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCapacityDetailsArgs build() {
-            return new GetCapacityDetailsArgs(dedicatedCapacityName, resourceGroupName);
+        }
+
+        public GetCapacityDetailsArgs build() {
+            $.dedicatedCapacityName = Objects.requireNonNull($.dedicatedCapacityName, "expected parameter 'dedicatedCapacityName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

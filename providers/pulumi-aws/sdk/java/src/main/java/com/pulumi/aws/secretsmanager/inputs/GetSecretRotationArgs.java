@@ -17,45 +17,45 @@ public final class GetSecretRotationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="secretId", required=true)
-      private final String secretId;
+    private String secretId;
 
     public String secretId() {
         return this.secretId;
     }
 
-    public GetSecretRotationArgs(String secretId) {
-        this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
-    }
+    private GetSecretRotationArgs() {}
 
-    private GetSecretRotationArgs() {
-        this.secretId = null;
+    private GetSecretRotationArgs(GetSecretRotationArgs $) {
+        this.secretId = $.secretId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretRotationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String secretId;
+        private GetSecretRotationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretRotationArgs();
         }
 
         public Builder(GetSecretRotationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretId = defaults.secretId;
+            $ = new GetSecretRotationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretId(String secretId) {
-            this.secretId = Objects.requireNonNull(secretId);
+            $.secretId = secretId;
             return this;
-        }        public GetSecretRotationArgs build() {
-            return new GetSecretRotationArgs(secretId);
+        }
+
+        public GetSecretRotationArgs build() {
+            $.secretId = Objects.requireNonNull($.secretId, "expected parameter 'secretId' to be non-null");
+            return $;
         }
     }
+
 }

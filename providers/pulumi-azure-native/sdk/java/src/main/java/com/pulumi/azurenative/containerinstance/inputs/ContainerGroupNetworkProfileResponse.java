@@ -21,45 +21,45 @@ public final class ContainerGroupNetworkProfileResponse extends com.pulumi.resou
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public ContainerGroupNetworkProfileResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private ContainerGroupNetworkProfileResponse() {}
 
-    private ContainerGroupNetworkProfileResponse() {
-        this.id = null;
+    private ContainerGroupNetworkProfileResponse(ContainerGroupNetworkProfileResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerGroupNetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private ContainerGroupNetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerGroupNetworkProfileResponse();
         }
 
         public Builder(ContainerGroupNetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new ContainerGroupNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public ContainerGroupNetworkProfileResponse build() {
-            return new ContainerGroupNetworkProfileResponse(id);
+        }
+
+        public ContainerGroupNetworkProfileResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

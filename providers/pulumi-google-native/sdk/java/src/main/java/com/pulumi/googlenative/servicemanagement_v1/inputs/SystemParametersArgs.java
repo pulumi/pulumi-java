@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterRuleArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class SystemParametersArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<SystemParameterRuleArgs>> rules;
+    private @Nullable Output<List<SystemParameterRuleArgs>> rules;
 
-    public Output<List<SystemParameterRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<SystemParameterRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public SystemParametersArgs(@Nullable Output<List<SystemParameterRuleArgs>> rules) {
-        this.rules = rules;
-    }
+    private SystemParametersArgs() {}
 
-    private SystemParametersArgs() {
-        this.rules = Codegen.empty();
+    private SystemParametersArgs(SystemParametersArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SystemParameterRuleArgs>> rules;
+        private SystemParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemParametersArgs();
         }
 
         public Builder(SystemParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new SystemParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<SystemParameterRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<SystemParameterRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<SystemParameterRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(SystemParameterRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public SystemParametersArgs build() {
-            return new SystemParametersArgs(rules);
+        }
+
+        public SystemParametersArgs build() {
+            return $;
         }
     }
+
 }

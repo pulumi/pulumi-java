@@ -5,13 +5,13 @@ package com.pulumi.googlenative.cloudtasks_v2beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudtasks_v2beta2.inputs.AppEngineHttpTargetArgs;
 import com.pulumi.googlenative.cloudtasks_v2beta2.inputs.PullTargetArgs;
 import com.pulumi.googlenative.cloudtasks_v2beta2.inputs.RateLimitsArgs;
 import com.pulumi.googlenative.cloudtasks_v2beta2.inputs.RetryConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appEngineHttpTarget")
-      private final @Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget;
+    private @Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget;
 
-    public Output<AppEngineHttpTargetArgs> appEngineHttpTarget() {
-        return this.appEngineHttpTarget == null ? Codegen.empty() : this.appEngineHttpTarget;
+    public Optional<Output<AppEngineHttpTargetArgs>> appEngineHttpTarget() {
+        return Optional.ofNullable(this.appEngineHttpTarget);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -42,17 +42,17 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pullTarget")
-      private final @Nullable Output<PullTargetArgs> pullTarget;
+    private @Nullable Output<PullTargetArgs> pullTarget;
 
-    public Output<PullTargetArgs> pullTarget() {
-        return this.pullTarget == null ? Codegen.empty() : this.pullTarget;
+    public Optional<Output<PullTargetArgs>> pullTarget() {
+        return Optional.ofNullable(this.pullTarget);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rateLimits")
-      private final @Nullable Output<RateLimitsArgs> rateLimits;
+    private @Nullable Output<RateLimitsArgs> rateLimits;
 
-    public Output<RateLimitsArgs> rateLimits() {
-        return this.rateLimits == null ? Codegen.empty() : this.rateLimits;
+    public Optional<Output<RateLimitsArgs>> rateLimits() {
+        return Optional.ofNullable(this.rateLimits);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryConfig")
-      private final @Nullable Output<RetryConfigArgs> retryConfig;
+    private @Nullable Output<RetryConfigArgs> retryConfig;
 
-    public Output<RetryConfigArgs> retryConfig() {
-        return this.retryConfig == null ? Codegen.empty() : this.retryConfig;
+    public Optional<Output<RetryConfigArgs>> retryConfig() {
+        return Optional.ofNullable(this.retryConfig);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskTtl")
-      private final @Nullable Output<String> taskTtl;
+    private @Nullable Output<String> taskTtl;
 
-    public Output<String> taskTtl() {
-        return this.taskTtl == null ? Codegen.empty() : this.taskTtl;
+    public Optional<Output<String>> taskTtl() {
+        return Optional.ofNullable(this.taskTtl);
     }
 
     /**
@@ -104,154 +104,128 @@ public final class QueueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tombstoneTtl")
-      private final @Nullable Output<String> tombstoneTtl;
+    private @Nullable Output<String> tombstoneTtl;
 
-    public Output<String> tombstoneTtl() {
-        return this.tombstoneTtl == null ? Codegen.empty() : this.tombstoneTtl;
+    public Optional<Output<String>> tombstoneTtl() {
+        return Optional.ofNullable(this.tombstoneTtl);
     }
 
-    public QueueArgs(
-        @Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<PullTargetArgs> pullTarget,
-        @Nullable Output<RateLimitsArgs> rateLimits,
-        @Nullable Output<RetryConfigArgs> retryConfig,
-        @Nullable Output<String> taskTtl,
-        @Nullable Output<String> tombstoneTtl) {
-        this.appEngineHttpTarget = appEngineHttpTarget;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.pullTarget = pullTarget;
-        this.rateLimits = rateLimits;
-        this.retryConfig = retryConfig;
-        this.taskTtl = taskTtl;
-        this.tombstoneTtl = tombstoneTtl;
-    }
+    private QueueArgs() {}
 
-    private QueueArgs() {
-        this.appEngineHttpTarget = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pullTarget = Codegen.empty();
-        this.rateLimits = Codegen.empty();
-        this.retryConfig = Codegen.empty();
-        this.taskTtl = Codegen.empty();
-        this.tombstoneTtl = Codegen.empty();
+    private QueueArgs(QueueArgs $) {
+        this.appEngineHttpTarget = $.appEngineHttpTarget;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.pullTarget = $.pullTarget;
+        this.rateLimits = $.rateLimits;
+        this.retryConfig = $.retryConfig;
+        this.taskTtl = $.taskTtl;
+        this.tombstoneTtl = $.tombstoneTtl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<PullTargetArgs> pullTarget;
-        private @Nullable Output<RateLimitsArgs> rateLimits;
-        private @Nullable Output<RetryConfigArgs> retryConfig;
-        private @Nullable Output<String> taskTtl;
-        private @Nullable Output<String> tombstoneTtl;
+        private QueueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueArgs();
         }
 
         public Builder(QueueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngineHttpTarget = defaults.appEngineHttpTarget;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.pullTarget = defaults.pullTarget;
-    	      this.rateLimits = defaults.rateLimits;
-    	      this.retryConfig = defaults.retryConfig;
-    	      this.taskTtl = defaults.taskTtl;
-    	      this.tombstoneTtl = defaults.tombstoneTtl;
+            $ = new QueueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngineHttpTarget(@Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget) {
-            this.appEngineHttpTarget = appEngineHttpTarget;
+            $.appEngineHttpTarget = appEngineHttpTarget;
             return this;
         }
-        public Builder appEngineHttpTarget(@Nullable AppEngineHttpTargetArgs appEngineHttpTarget) {
-            this.appEngineHttpTarget = Codegen.ofNullable(appEngineHttpTarget);
-            return this;
+
+        public Builder appEngineHttpTarget(AppEngineHttpTargetArgs appEngineHttpTarget) {
+            return appEngineHttpTarget(Output.of(appEngineHttpTarget));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pullTarget(@Nullable Output<PullTargetArgs> pullTarget) {
-            this.pullTarget = pullTarget;
+            $.pullTarget = pullTarget;
             return this;
         }
-        public Builder pullTarget(@Nullable PullTargetArgs pullTarget) {
-            this.pullTarget = Codegen.ofNullable(pullTarget);
-            return this;
+
+        public Builder pullTarget(PullTargetArgs pullTarget) {
+            return pullTarget(Output.of(pullTarget));
         }
+
         public Builder rateLimits(@Nullable Output<RateLimitsArgs> rateLimits) {
-            this.rateLimits = rateLimits;
+            $.rateLimits = rateLimits;
             return this;
         }
-        public Builder rateLimits(@Nullable RateLimitsArgs rateLimits) {
-            this.rateLimits = Codegen.ofNullable(rateLimits);
-            return this;
+
+        public Builder rateLimits(RateLimitsArgs rateLimits) {
+            return rateLimits(Output.of(rateLimits));
         }
+
         public Builder retryConfig(@Nullable Output<RetryConfigArgs> retryConfig) {
-            this.retryConfig = retryConfig;
+            $.retryConfig = retryConfig;
             return this;
         }
-        public Builder retryConfig(@Nullable RetryConfigArgs retryConfig) {
-            this.retryConfig = Codegen.ofNullable(retryConfig);
-            return this;
+
+        public Builder retryConfig(RetryConfigArgs retryConfig) {
+            return retryConfig(Output.of(retryConfig));
         }
+
         public Builder taskTtl(@Nullable Output<String> taskTtl) {
-            this.taskTtl = taskTtl;
+            $.taskTtl = taskTtl;
             return this;
         }
-        public Builder taskTtl(@Nullable String taskTtl) {
-            this.taskTtl = Codegen.ofNullable(taskTtl);
-            return this;
+
+        public Builder taskTtl(String taskTtl) {
+            return taskTtl(Output.of(taskTtl));
         }
+
         public Builder tombstoneTtl(@Nullable Output<String> tombstoneTtl) {
-            this.tombstoneTtl = tombstoneTtl;
+            $.tombstoneTtl = tombstoneTtl;
             return this;
         }
-        public Builder tombstoneTtl(@Nullable String tombstoneTtl) {
-            this.tombstoneTtl = Codegen.ofNullable(tombstoneTtl);
-            return this;
-        }        public QueueArgs build() {
-            return new QueueArgs(appEngineHttpTarget, location, name, project, pullTarget, rateLimits, retryConfig, taskTtl, tombstoneTtl);
+
+        public Builder tombstoneTtl(String tombstoneTtl) {
+            return tombstoneTtl(Output.of(tombstoneTtl));
+        }
+
+        public QueueArgs build() {
+            return $;
         }
     }
+
 }

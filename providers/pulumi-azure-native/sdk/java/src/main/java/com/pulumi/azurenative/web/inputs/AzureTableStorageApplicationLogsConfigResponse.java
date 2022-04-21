@@ -23,10 +23,10 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends com.pu
      * 
      */
     @Import(name="level")
-      private final @Nullable String level;
+    private @Nullable String level;
 
     public Optional<String> level() {
-        return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
+        return Optional.ofNullable(this.level);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends com.pu
      * 
      */
     @Import(name="sasUrl", required=true)
-      private final String sasUrl;
+    private String sasUrl;
 
     public String sasUrl() {
         return this.sasUrl;
     }
 
-    public AzureTableStorageApplicationLogsConfigResponse(
-        @Nullable String level,
-        String sasUrl) {
-        this.level = level;
-        this.sasUrl = Objects.requireNonNull(sasUrl, "expected parameter 'sasUrl' to be non-null");
-    }
+    private AzureTableStorageApplicationLogsConfigResponse() {}
 
-    private AzureTableStorageApplicationLogsConfigResponse() {
-        this.level = null;
-        this.sasUrl = null;
+    private AzureTableStorageApplicationLogsConfigResponse(AzureTableStorageApplicationLogsConfigResponse $) {
+        this.level = $.level;
+        this.sasUrl = $.sasUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureTableStorageApplicationLogsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String level;
-        private String sasUrl;
+        private AzureTableStorageApplicationLogsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureTableStorageApplicationLogsConfigResponse();
         }
 
         public Builder(AzureTableStorageApplicationLogsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
-    	      this.sasUrl = defaults.sasUrl;
+            $ = new AzureTableStorageApplicationLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder level(@Nullable String level) {
-            this.level = level;
+            $.level = level;
             return this;
         }
+
         public Builder sasUrl(String sasUrl) {
-            this.sasUrl = Objects.requireNonNull(sasUrl);
+            $.sasUrl = sasUrl;
             return this;
-        }        public AzureTableStorageApplicationLogsConfigResponse build() {
-            return new AzureTableStorageApplicationLogsConfigResponse(level, sasUrl);
+        }
+
+        public AzureTableStorageApplicationLogsConfigResponse build() {
+            $.sasUrl = Objects.requireNonNull($.sasUrl, "expected parameter 'sasUrl' to be non-null");
+            return $;
         }
     }
+
 }

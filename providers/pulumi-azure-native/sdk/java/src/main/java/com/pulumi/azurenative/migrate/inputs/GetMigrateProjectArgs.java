@@ -17,7 +17,7 @@ public final class GetMigrateProjectArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="migrateProjectName", required=true)
-      private final String migrateProjectName;
+    private String migrateProjectName;
 
     public String migrateProjectName() {
         return this.migrateProjectName;
@@ -28,55 +28,52 @@ public final class GetMigrateProjectArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMigrateProjectArgs(
-        String migrateProjectName,
-        String resourceGroupName) {
-        this.migrateProjectName = Objects.requireNonNull(migrateProjectName, "expected parameter 'migrateProjectName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMigrateProjectArgs() {}
 
-    private GetMigrateProjectArgs() {
-        this.migrateProjectName = null;
-        this.resourceGroupName = null;
+    private GetMigrateProjectArgs(GetMigrateProjectArgs $) {
+        this.migrateProjectName = $.migrateProjectName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMigrateProjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String migrateProjectName;
-        private String resourceGroupName;
+        private GetMigrateProjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMigrateProjectArgs();
         }
 
         public Builder(GetMigrateProjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.migrateProjectName = defaults.migrateProjectName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMigrateProjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder migrateProjectName(String migrateProjectName) {
-            this.migrateProjectName = Objects.requireNonNull(migrateProjectName);
+            $.migrateProjectName = migrateProjectName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMigrateProjectArgs build() {
-            return new GetMigrateProjectArgs(migrateProjectName, resourceGroupName);
+        }
+
+        public GetMigrateProjectArgs build() {
+            $.migrateProjectName = Objects.requireNonNull($.migrateProjectName, "expected parameter 'migrateProjectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

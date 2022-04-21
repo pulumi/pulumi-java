@@ -16,84 +16,80 @@ public final class CanaryVPCConfig extends com.pulumi.resources.InvokeArgs {
     public static final CanaryVPCConfig Empty = new CanaryVPCConfig();
 
     @Import(name="securityGroupIds", required=true)
-      private final List<String> securityGroupIds;
+    private List<String> securityGroupIds;
 
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
-      private final List<String> subnetIds;
+    private List<String> subnetIds;
 
     public List<String> subnetIds() {
         return this.subnetIds;
     }
 
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public CanaryVPCConfig(
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        @Nullable String vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.vpcId = vpcId;
-    }
+    private CanaryVPCConfig() {}
 
-    private CanaryVPCConfig() {
-        this.securityGroupIds = List.of();
-        this.subnetIds = List.of();
-        this.vpcId = null;
+    private CanaryVPCConfig(CanaryVPCConfig $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryVPCConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> securityGroupIds;
-        private List<String> subnetIds;
-        private @Nullable String vpcId;
+        private CanaryVPCConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryVPCConfig();
         }
 
         public Builder(CanaryVPCConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new CanaryVPCConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
-        }        public CanaryVPCConfig build() {
-            return new CanaryVPCConfig(securityGroupIds, subnetIds, vpcId);
+        }
+
+        public CanaryVPCConfig build() {
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            return $;
         }
     }
+
 }

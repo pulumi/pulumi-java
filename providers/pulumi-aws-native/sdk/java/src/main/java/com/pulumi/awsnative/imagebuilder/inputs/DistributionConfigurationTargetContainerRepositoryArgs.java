@@ -6,9 +6,9 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.enums.DistributionConfigurationTargetContainerRepositoryService;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
      * 
      */
     @Import(name="repositoryName")
-      private final @Nullable Output<String> repositoryName;
+    private @Nullable Output<String> repositoryName;
 
-    public Output<String> repositoryName() {
-        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
+    public Optional<Output<String>> repositoryName() {
+        return Optional.ofNullable(this.repositoryName);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service;
+    private @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service;
 
-    public Output<DistributionConfigurationTargetContainerRepositoryService> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<DistributionConfigurationTargetContainerRepositoryService>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public DistributionConfigurationTargetContainerRepositoryArgs(
-        @Nullable Output<String> repositoryName,
-        @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service) {
-        this.repositoryName = repositoryName;
-        this.service = service;
-    }
+    private DistributionConfigurationTargetContainerRepositoryArgs() {}
 
-    private DistributionConfigurationTargetContainerRepositoryArgs() {
-        this.repositoryName = Codegen.empty();
-        this.service = Codegen.empty();
+    private DistributionConfigurationTargetContainerRepositoryArgs(DistributionConfigurationTargetContainerRepositoryArgs $) {
+        this.repositoryName = $.repositoryName;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationTargetContainerRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> repositoryName;
-        private @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service;
+        private DistributionConfigurationTargetContainerRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationTargetContainerRepositoryArgs();
         }
 
         public Builder(DistributionConfigurationTargetContainerRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.service = defaults.service;
+            $ = new DistributionConfigurationTargetContainerRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
-            this.repositoryName = repositoryName;
+            $.repositoryName = repositoryName;
             return this;
         }
-        public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Codegen.ofNullable(repositoryName);
-            return this;
+
+        public Builder repositoryName(String repositoryName) {
+            return repositoryName(Output.of(repositoryName));
         }
+
         public Builder service(@Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public DistributionConfigurationTargetContainerRepositoryArgs build() {
-            return new DistributionConfigurationTargetContainerRepositoryArgs(repositoryName, service);
+
+        public Builder service(DistributionConfigurationTargetContainerRepositoryService service) {
+            return service(Output.of(service));
+        }
+
+        public DistributionConfigurationTargetContainerRepositoryArgs build() {
+            return $;
         }
     }
+
 }

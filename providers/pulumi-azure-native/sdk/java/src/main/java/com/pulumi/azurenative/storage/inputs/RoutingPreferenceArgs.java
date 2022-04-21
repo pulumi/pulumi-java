@@ -7,10 +7,10 @@ import com.pulumi.azurenative.storage.enums.RoutingChoice;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class RoutingPreferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publishInternetEndpoints")
-      private final @Nullable Output<Boolean> publishInternetEndpoints;
+    private @Nullable Output<Boolean> publishInternetEndpoints;
 
-    public Output<Boolean> publishInternetEndpoints() {
-        return this.publishInternetEndpoints == null ? Codegen.empty() : this.publishInternetEndpoints;
+    public Optional<Output<Boolean>> publishInternetEndpoints() {
+        return Optional.ofNullable(this.publishInternetEndpoints);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RoutingPreferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="publishMicrosoftEndpoints")
-      private final @Nullable Output<Boolean> publishMicrosoftEndpoints;
+    private @Nullable Output<Boolean> publishMicrosoftEndpoints;
 
-    public Output<Boolean> publishMicrosoftEndpoints() {
-        return this.publishMicrosoftEndpoints == null ? Codegen.empty() : this.publishMicrosoftEndpoints;
+    public Optional<Output<Boolean>> publishMicrosoftEndpoints() {
+        return Optional.ofNullable(this.publishMicrosoftEndpoints);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class RoutingPreferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="routingChoice")
-      private final @Nullable Output<Either<String,RoutingChoice>> routingChoice;
+    private @Nullable Output<Either<String,RoutingChoice>> routingChoice;
 
-    public Output<Either<String,RoutingChoice>> routingChoice() {
-        return this.routingChoice == null ? Codegen.empty() : this.routingChoice;
+    public Optional<Output<Either<String,RoutingChoice>>> routingChoice() {
+        return Optional.ofNullable(this.routingChoice);
     }
 
-    public RoutingPreferenceArgs(
-        @Nullable Output<Boolean> publishInternetEndpoints,
-        @Nullable Output<Boolean> publishMicrosoftEndpoints,
-        @Nullable Output<Either<String,RoutingChoice>> routingChoice) {
-        this.publishInternetEndpoints = publishInternetEndpoints;
-        this.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
-        this.routingChoice = routingChoice;
-    }
+    private RoutingPreferenceArgs() {}
 
-    private RoutingPreferenceArgs() {
-        this.publishInternetEndpoints = Codegen.empty();
-        this.publishMicrosoftEndpoints = Codegen.empty();
-        this.routingChoice = Codegen.empty();
+    private RoutingPreferenceArgs(RoutingPreferenceArgs $) {
+        this.publishInternetEndpoints = $.publishInternetEndpoints;
+        this.publishMicrosoftEndpoints = $.publishMicrosoftEndpoints;
+        this.routingChoice = $.routingChoice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingPreferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> publishInternetEndpoints;
-        private @Nullable Output<Boolean> publishMicrosoftEndpoints;
-        private @Nullable Output<Either<String,RoutingChoice>> routingChoice;
+        private RoutingPreferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingPreferenceArgs();
         }
 
         public Builder(RoutingPreferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publishInternetEndpoints = defaults.publishInternetEndpoints;
-    	      this.publishMicrosoftEndpoints = defaults.publishMicrosoftEndpoints;
-    	      this.routingChoice = defaults.routingChoice;
+            $ = new RoutingPreferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publishInternetEndpoints(@Nullable Output<Boolean> publishInternetEndpoints) {
-            this.publishInternetEndpoints = publishInternetEndpoints;
+            $.publishInternetEndpoints = publishInternetEndpoints;
             return this;
         }
-        public Builder publishInternetEndpoints(@Nullable Boolean publishInternetEndpoints) {
-            this.publishInternetEndpoints = Codegen.ofNullable(publishInternetEndpoints);
-            return this;
+
+        public Builder publishInternetEndpoints(Boolean publishInternetEndpoints) {
+            return publishInternetEndpoints(Output.of(publishInternetEndpoints));
         }
+
         public Builder publishMicrosoftEndpoints(@Nullable Output<Boolean> publishMicrosoftEndpoints) {
-            this.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
+            $.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
             return this;
         }
-        public Builder publishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
-            this.publishMicrosoftEndpoints = Codegen.ofNullable(publishMicrosoftEndpoints);
-            return this;
+
+        public Builder publishMicrosoftEndpoints(Boolean publishMicrosoftEndpoints) {
+            return publishMicrosoftEndpoints(Output.of(publishMicrosoftEndpoints));
         }
+
         public Builder routingChoice(@Nullable Output<Either<String,RoutingChoice>> routingChoice) {
-            this.routingChoice = routingChoice;
+            $.routingChoice = routingChoice;
             return this;
         }
-        public Builder routingChoice(@Nullable Either<String,RoutingChoice> routingChoice) {
-            this.routingChoice = Codegen.ofNullable(routingChoice);
-            return this;
-        }        public RoutingPreferenceArgs build() {
-            return new RoutingPreferenceArgs(publishInternetEndpoints, publishMicrosoftEndpoints, routingChoice);
+
+        public Builder routingChoice(Either<String,RoutingChoice> routingChoice) {
+            return routingChoice(Output.of(routingChoice));
+        }
+
+        public RoutingPreferenceArgs build() {
+            return $;
         }
     }
+
 }

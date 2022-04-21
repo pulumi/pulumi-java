@@ -5,10 +5,10 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,66 @@ public final class GlobalTableSSESpecificationArgs extends com.pulumi.resources.
     public static final GlobalTableSSESpecificationArgs Empty = new GlobalTableSSESpecificationArgs();
 
     @Import(name="sSEEnabled", required=true)
-      private final Output<Boolean> sSEEnabled;
+    private Output<Boolean> sSEEnabled;
 
     public Output<Boolean> sSEEnabled() {
         return this.sSEEnabled;
     }
 
     @Import(name="sSEType")
-      private final @Nullable Output<String> sSEType;
+    private @Nullable Output<String> sSEType;
 
-    public Output<String> sSEType() {
-        return this.sSEType == null ? Codegen.empty() : this.sSEType;
+    public Optional<Output<String>> sSEType() {
+        return Optional.ofNullable(this.sSEType);
     }
 
-    public GlobalTableSSESpecificationArgs(
-        Output<Boolean> sSEEnabled,
-        @Nullable Output<String> sSEType) {
-        this.sSEEnabled = Objects.requireNonNull(sSEEnabled, "expected parameter 'sSEEnabled' to be non-null");
-        this.sSEType = sSEType;
-    }
+    private GlobalTableSSESpecificationArgs() {}
 
-    private GlobalTableSSESpecificationArgs() {
-        this.sSEEnabled = Codegen.empty();
-        this.sSEType = Codegen.empty();
+    private GlobalTableSSESpecificationArgs(GlobalTableSSESpecificationArgs $) {
+        this.sSEEnabled = $.sSEEnabled;
+        this.sSEType = $.sSEType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableSSESpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> sSEEnabled;
-        private @Nullable Output<String> sSEType;
+        private GlobalTableSSESpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableSSESpecificationArgs();
         }
 
         public Builder(GlobalTableSSESpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sSEEnabled = defaults.sSEEnabled;
-    	      this.sSEType = defaults.sSEType;
+            $ = new GlobalTableSSESpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sSEEnabled(Output<Boolean> sSEEnabled) {
-            this.sSEEnabled = Objects.requireNonNull(sSEEnabled);
+            $.sSEEnabled = sSEEnabled;
             return this;
         }
+
         public Builder sSEEnabled(Boolean sSEEnabled) {
-            this.sSEEnabled = Output.of(Objects.requireNonNull(sSEEnabled));
-            return this;
+            return sSEEnabled(Output.of(sSEEnabled));
         }
+
         public Builder sSEType(@Nullable Output<String> sSEType) {
-            this.sSEType = sSEType;
+            $.sSEType = sSEType;
             return this;
         }
-        public Builder sSEType(@Nullable String sSEType) {
-            this.sSEType = Codegen.ofNullable(sSEType);
-            return this;
-        }        public GlobalTableSSESpecificationArgs build() {
-            return new GlobalTableSSESpecificationArgs(sSEEnabled, sSEType);
+
+        public Builder sSEType(String sSEType) {
+            return sSEType(Output.of(sSEType));
+        }
+
+        public GlobalTableSSESpecificationArgs build() {
+            $.sSEEnabled = Objects.requireNonNull($.sSEEnabled, "expected parameter 'sSEEnabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.aws.efs.inputs;
 import com.pulumi.aws.efs.inputs.AccessPointRootDirectoryCreationInfoGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccessPointRootDirectoryGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="creationInfo")
-      private final @Nullable Output<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo;
+    private @Nullable Output<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo;
 
-    public Output<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo() {
-        return this.creationInfo == null ? Codegen.empty() : this.creationInfo;
+    public Optional<Output<AccessPointRootDirectoryCreationInfoGetArgs>> creationInfo() {
+        return Optional.ofNullable(this.creationInfo);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class AccessPointRootDirectoryGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public AccessPointRootDirectoryGetArgs(
-        @Nullable Output<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo,
-        @Nullable Output<String> path) {
-        this.creationInfo = creationInfo;
-        this.path = path;
-    }
+    private AccessPointRootDirectoryGetArgs() {}
 
-    private AccessPointRootDirectoryGetArgs() {
-        this.creationInfo = Codegen.empty();
-        this.path = Codegen.empty();
+    private AccessPointRootDirectoryGetArgs(AccessPointRootDirectoryGetArgs $) {
+        this.creationInfo = $.creationInfo;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointRootDirectoryGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo;
-        private @Nullable Output<String> path;
+        private AccessPointRootDirectoryGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointRootDirectoryGetArgs();
         }
 
         public Builder(AccessPointRootDirectoryGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationInfo = defaults.creationInfo;
-    	      this.path = defaults.path;
+            $ = new AccessPointRootDirectoryGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder creationInfo(@Nullable Output<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo) {
-            this.creationInfo = creationInfo;
+            $.creationInfo = creationInfo;
             return this;
         }
-        public Builder creationInfo(@Nullable AccessPointRootDirectoryCreationInfoGetArgs creationInfo) {
-            this.creationInfo = Codegen.ofNullable(creationInfo);
-            return this;
+
+        public Builder creationInfo(AccessPointRootDirectoryCreationInfoGetArgs creationInfo) {
+            return creationInfo(Output.of(creationInfo));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public AccessPointRootDirectoryGetArgs build() {
-            return new AccessPointRootDirectoryGetArgs(creationInfo, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public AccessPointRootDirectoryGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetTagKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTagKeyArgs Empty = new GetTagKeyArgs();
 
     @Import(name="tagKeyId", required=true)
-      private final String tagKeyId;
+    private String tagKeyId;
 
     public String tagKeyId() {
         return this.tagKeyId;
     }
 
-    public GetTagKeyArgs(String tagKeyId) {
-        this.tagKeyId = Objects.requireNonNull(tagKeyId, "expected parameter 'tagKeyId' to be non-null");
-    }
+    private GetTagKeyArgs() {}
 
-    private GetTagKeyArgs() {
-        this.tagKeyId = null;
+    private GetTagKeyArgs(GetTagKeyArgs $) {
+        this.tagKeyId = $.tagKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTagKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String tagKeyId;
+        private GetTagKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTagKeyArgs();
         }
 
         public Builder(GetTagKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tagKeyId = defaults.tagKeyId;
+            $ = new GetTagKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tagKeyId(String tagKeyId) {
-            this.tagKeyId = Objects.requireNonNull(tagKeyId);
+            $.tagKeyId = tagKeyId;
             return this;
-        }        public GetTagKeyArgs build() {
-            return new GetTagKeyArgs(tagKeyId);
+        }
+
+        public GetTagKeyArgs build() {
+            $.tagKeyId = Objects.requireNonNull($.tagKeyId, "expected parameter 'tagKeyId' to be non-null");
+            return $;
         }
     }
+
 }

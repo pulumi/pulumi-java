@@ -6,10 +6,10 @@ package com.pulumi.aws.mwaa.inputs;
 import com.pulumi.aws.mwaa.inputs.EnvironmentLastUpdatedErrorGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class EnvironmentLastUpdatedGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable Output<String> createdAt;
+    private @Nullable Output<String> createdAt;
 
-    public Output<String> createdAt() {
-        return this.createdAt == null ? Codegen.empty() : this.createdAt;
+    public Optional<Output<String>> createdAt() {
+        return Optional.ofNullable(this.createdAt);
     }
 
     @Import(name="errors")
-      private final @Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors;
+    private @Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors;
 
-    public Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors() {
-        return this.errors == null ? Codegen.empty() : this.errors;
+    public Optional<Output<List<EnvironmentLastUpdatedErrorGetArgs>>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -41,79 +41,72 @@ public final class EnvironmentLastUpdatedGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public EnvironmentLastUpdatedGetArgs(
-        @Nullable Output<String> createdAt,
-        @Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors,
-        @Nullable Output<String> status) {
-        this.createdAt = createdAt;
-        this.errors = errors;
-        this.status = status;
-    }
+    private EnvironmentLastUpdatedGetArgs() {}
 
-    private EnvironmentLastUpdatedGetArgs() {
-        this.createdAt = Codegen.empty();
-        this.errors = Codegen.empty();
-        this.status = Codegen.empty();
+    private EnvironmentLastUpdatedGetArgs(EnvironmentLastUpdatedGetArgs $) {
+        this.createdAt = $.createdAt;
+        this.errors = $.errors;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentLastUpdatedGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createdAt;
-        private @Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors;
-        private @Nullable Output<String> status;
+        private EnvironmentLastUpdatedGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentLastUpdatedGetArgs();
         }
 
         public Builder(EnvironmentLastUpdatedGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.errors = defaults.errors;
-    	      this.status = defaults.status;
+            $ = new EnvironmentLastUpdatedGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(@Nullable Output<String> createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
-        public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Codegen.ofNullable(createdAt);
-            return this;
+
+        public Builder createdAt(String createdAt) {
+            return createdAt(Output.of(createdAt));
         }
+
         public Builder errors(@Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
-        public Builder errors(@Nullable List<EnvironmentLastUpdatedErrorGetArgs> errors) {
-            this.errors = Codegen.ofNullable(errors);
-            return this;
+
+        public Builder errors(List<EnvironmentLastUpdatedErrorGetArgs> errors) {
+            return errors(Output.of(errors));
         }
+
         public Builder errors(EnvironmentLastUpdatedErrorGetArgs... errors) {
             return errors(List.of(errors));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public EnvironmentLastUpdatedGetArgs build() {
-            return new EnvironmentLastUpdatedGetArgs(createdAt, errors, status);
+
+        public Builder status(String status) {
+            return status(Output.of(status));
+        }
+
+        public EnvironmentLastUpdatedGetArgs build() {
+            return $;
         }
     }
+
 }

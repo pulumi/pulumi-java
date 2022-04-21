@@ -17,45 +17,45 @@ public final class GetAlertsSuppressionRuleArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="alertsSuppressionRuleName", required=true)
-      private final String alertsSuppressionRuleName;
+    private String alertsSuppressionRuleName;
 
     public String alertsSuppressionRuleName() {
         return this.alertsSuppressionRuleName;
     }
 
-    public GetAlertsSuppressionRuleArgs(String alertsSuppressionRuleName) {
-        this.alertsSuppressionRuleName = Objects.requireNonNull(alertsSuppressionRuleName, "expected parameter 'alertsSuppressionRuleName' to be non-null");
-    }
+    private GetAlertsSuppressionRuleArgs() {}
 
-    private GetAlertsSuppressionRuleArgs() {
-        this.alertsSuppressionRuleName = null;
+    private GetAlertsSuppressionRuleArgs(GetAlertsSuppressionRuleArgs $) {
+        this.alertsSuppressionRuleName = $.alertsSuppressionRuleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAlertsSuppressionRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alertsSuppressionRuleName;
+        private GetAlertsSuppressionRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAlertsSuppressionRuleArgs();
         }
 
         public Builder(GetAlertsSuppressionRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertsSuppressionRuleName = defaults.alertsSuppressionRuleName;
+            $ = new GetAlertsSuppressionRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertsSuppressionRuleName(String alertsSuppressionRuleName) {
-            this.alertsSuppressionRuleName = Objects.requireNonNull(alertsSuppressionRuleName);
+            $.alertsSuppressionRuleName = alertsSuppressionRuleName;
             return this;
-        }        public GetAlertsSuppressionRuleArgs build() {
-            return new GetAlertsSuppressionRuleArgs(alertsSuppressionRuleName);
+        }
+
+        public GetAlertsSuppressionRuleArgs build() {
+            $.alertsSuppressionRuleName = Objects.requireNonNull($.alertsSuppressionRuleName, "expected parameter 'alertsSuppressionRuleName' to be non-null");
+            return $;
         }
     }
+
 }

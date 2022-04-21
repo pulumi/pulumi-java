@@ -21,7 +21,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      * 
      */
     @Import(name="max", required=true)
-      private final Double max;
+    private Double max;
 
     public Double max() {
         return this.max;
@@ -32,55 +32,52 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      * 
      */
     @Import(name="min", required=true)
-      private final Double min;
+    private Double min;
 
     public Double min() {
         return this.min;
     }
 
-    public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(
-        Double max,
-        Double min) {
-        this.max = Objects.requireNonNull(max, "expected parameter 'max' to be non-null");
-        this.min = Objects.requireNonNull(min, "expected parameter 'min' to be non-null");
-    }
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse() {}
 
-    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse() {
-        this.max = null;
-        this.min = null;
+    private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double max;
-        private Double min;
+        private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse();
         }
 
         public Builder(GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder max(Double max) {
-            this.max = Objects.requireNonNull(max);
+            $.max = max;
             return this;
         }
+
         public Builder min(Double min) {
-            this.min = Objects.requireNonNull(min);
+            $.min = min;
             return this;
-        }        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse build() {
-            return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(max, min);
+        }
+
+        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse build() {
+            $.max = Objects.requireNonNull($.max, "expected parameter 'max' to be non-null");
+            $.min = Objects.requireNonNull($.min, "expected parameter 'min' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetStackSetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stackSetId", required=true)
-      private final String stackSetId;
+    private String stackSetId;
 
     public String stackSetId() {
         return this.stackSetId;
     }
 
-    public GetStackSetArgs(String stackSetId) {
-        this.stackSetId = Objects.requireNonNull(stackSetId, "expected parameter 'stackSetId' to be non-null");
-    }
+    private GetStackSetArgs() {}
 
-    private GetStackSetArgs() {
-        this.stackSetId = null;
+    private GetStackSetArgs(GetStackSetArgs $) {
+        this.stackSetId = $.stackSetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStackSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String stackSetId;
+        private GetStackSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStackSetArgs();
         }
 
         public Builder(GetStackSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.stackSetId = defaults.stackSetId;
+            $ = new GetStackSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder stackSetId(String stackSetId) {
-            this.stackSetId = Objects.requireNonNull(stackSetId);
+            $.stackSetId = stackSetId;
             return this;
-        }        public GetStackSetArgs build() {
-            return new GetStackSetArgs(stackSetId);
+        }
+
+        public GetStackSetArgs build() {
+            $.stackSetId = Objects.requireNonNull($.stackSetId, "expected parameter 'stackSetId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ConfigMapProjectionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.DownwardAPIProjectionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SecretProjectionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ServiceAccountTokenProjectionArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="configMap")
-      private final @Nullable Output<ConfigMapProjectionArgs> configMap;
+    private @Nullable Output<ConfigMapProjectionArgs> configMap;
 
-    public Output<ConfigMapProjectionArgs> configMap() {
-        return this.configMap == null ? Codegen.empty() : this.configMap;
+    public Optional<Output<ConfigMapProjectionArgs>> configMap() {
+        return Optional.ofNullable(this.configMap);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="downwardAPI")
-      private final @Nullable Output<DownwardAPIProjectionArgs> downwardAPI;
+    private @Nullable Output<DownwardAPIProjectionArgs> downwardAPI;
 
-    public Output<DownwardAPIProjectionArgs> downwardAPI() {
-        return this.downwardAPI == null ? Codegen.empty() : this.downwardAPI;
+    public Optional<Output<DownwardAPIProjectionArgs>> downwardAPI() {
+        return Optional.ofNullable(this.downwardAPI);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<SecretProjectionArgs> secret;
+    private @Nullable Output<SecretProjectionArgs> secret;
 
-    public Output<SecretProjectionArgs> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<SecretProjectionArgs>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class VolumeProjectionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serviceAccountToken")
-      private final @Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken;
+    private @Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken;
 
-    public Output<ServiceAccountTokenProjectionArgs> serviceAccountToken() {
-        return this.serviceAccountToken == null ? Codegen.empty() : this.serviceAccountToken;
+    public Optional<Output<ServiceAccountTokenProjectionArgs>> serviceAccountToken() {
+        return Optional.ofNullable(this.serviceAccountToken);
     }
 
-    public VolumeProjectionArgs(
-        @Nullable Output<ConfigMapProjectionArgs> configMap,
-        @Nullable Output<DownwardAPIProjectionArgs> downwardAPI,
-        @Nullable Output<SecretProjectionArgs> secret,
-        @Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken) {
-        this.configMap = configMap;
-        this.downwardAPI = downwardAPI;
-        this.secret = secret;
-        this.serviceAccountToken = serviceAccountToken;
-    }
+    private VolumeProjectionArgs() {}
 
-    private VolumeProjectionArgs() {
-        this.configMap = Codegen.empty();
-        this.downwardAPI = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.serviceAccountToken = Codegen.empty();
+    private VolumeProjectionArgs(VolumeProjectionArgs $) {
+        this.configMap = $.configMap;
+        this.downwardAPI = $.downwardAPI;
+        this.secret = $.secret;
+        this.serviceAccountToken = $.serviceAccountToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeProjectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigMapProjectionArgs> configMap;
-        private @Nullable Output<DownwardAPIProjectionArgs> downwardAPI;
-        private @Nullable Output<SecretProjectionArgs> secret;
-        private @Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken;
+        private VolumeProjectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeProjectionArgs();
         }
 
         public Builder(VolumeProjectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMap = defaults.configMap;
-    	      this.downwardAPI = defaults.downwardAPI;
-    	      this.secret = defaults.secret;
-    	      this.serviceAccountToken = defaults.serviceAccountToken;
+            $ = new VolumeProjectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configMap(@Nullable Output<ConfigMapProjectionArgs> configMap) {
-            this.configMap = configMap;
+            $.configMap = configMap;
             return this;
         }
-        public Builder configMap(@Nullable ConfigMapProjectionArgs configMap) {
-            this.configMap = Codegen.ofNullable(configMap);
-            return this;
+
+        public Builder configMap(ConfigMapProjectionArgs configMap) {
+            return configMap(Output.of(configMap));
         }
+
         public Builder downwardAPI(@Nullable Output<DownwardAPIProjectionArgs> downwardAPI) {
-            this.downwardAPI = downwardAPI;
+            $.downwardAPI = downwardAPI;
             return this;
         }
-        public Builder downwardAPI(@Nullable DownwardAPIProjectionArgs downwardAPI) {
-            this.downwardAPI = Codegen.ofNullable(downwardAPI);
-            return this;
+
+        public Builder downwardAPI(DownwardAPIProjectionArgs downwardAPI) {
+            return downwardAPI(Output.of(downwardAPI));
         }
+
         public Builder secret(@Nullable Output<SecretProjectionArgs> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable SecretProjectionArgs secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(SecretProjectionArgs secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder serviceAccountToken(@Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken) {
-            this.serviceAccountToken = serviceAccountToken;
+            $.serviceAccountToken = serviceAccountToken;
             return this;
         }
-        public Builder serviceAccountToken(@Nullable ServiceAccountTokenProjectionArgs serviceAccountToken) {
-            this.serviceAccountToken = Codegen.ofNullable(serviceAccountToken);
-            return this;
-        }        public VolumeProjectionArgs build() {
-            return new VolumeProjectionArgs(configMap, downwardAPI, secret, serviceAccountToken);
+
+        public Builder serviceAccountToken(ServiceAccountTokenProjectionArgs serviceAccountToken) {
+            return serviceAccountToken(Output.of(serviceAccountToken));
+        }
+
+        public VolumeProjectionArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="customAssessmentAutomationName", required=true)
-      private final String customAssessmentAutomationName;
+    private String customAssessmentAutomationName;
 
     public String customAssessmentAutomationName() {
         return this.customAssessmentAutomationName;
@@ -28,55 +28,52 @@ public final class GetCustomAssessmentAutomationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCustomAssessmentAutomationArgs(
-        String customAssessmentAutomationName,
-        String resourceGroupName) {
-        this.customAssessmentAutomationName = Objects.requireNonNull(customAssessmentAutomationName, "expected parameter 'customAssessmentAutomationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCustomAssessmentAutomationArgs() {}
 
-    private GetCustomAssessmentAutomationArgs() {
-        this.customAssessmentAutomationName = null;
-        this.resourceGroupName = null;
+    private GetCustomAssessmentAutomationArgs(GetCustomAssessmentAutomationArgs $) {
+        this.customAssessmentAutomationName = $.customAssessmentAutomationName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCustomAssessmentAutomationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customAssessmentAutomationName;
-        private String resourceGroupName;
+        private GetCustomAssessmentAutomationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCustomAssessmentAutomationArgs();
         }
 
         public Builder(GetCustomAssessmentAutomationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customAssessmentAutomationName = defaults.customAssessmentAutomationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCustomAssessmentAutomationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customAssessmentAutomationName(String customAssessmentAutomationName) {
-            this.customAssessmentAutomationName = Objects.requireNonNull(customAssessmentAutomationName);
+            $.customAssessmentAutomationName = customAssessmentAutomationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCustomAssessmentAutomationArgs build() {
-            return new GetCustomAssessmentAutomationArgs(customAssessmentAutomationName, resourceGroupName);
+        }
+
+        public GetCustomAssessmentAutomationArgs build() {
+            $.customAssessmentAutomationName = Objects.requireNonNull($.customAssessmentAutomationName, "expected parameter 'customAssessmentAutomationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

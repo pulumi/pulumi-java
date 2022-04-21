@@ -5,7 +5,6 @@ package com.pulumi.aws.backup.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SelectionConditionStringLikeGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -30,63 +29,60 @@ public final class SelectionConditionStringLikeGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public SelectionConditionStringLikeGetArgs(
-        Output<String> key,
-        Output<String> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SelectionConditionStringLikeGetArgs() {}
 
-    private SelectionConditionStringLikeGetArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private SelectionConditionStringLikeGetArgs(SelectionConditionStringLikeGetArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectionConditionStringLikeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private Output<String> value;
+        private SelectionConditionStringLikeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectionConditionStringLikeGetArgs();
         }
 
         public Builder(SelectionConditionStringLikeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new SelectionConditionStringLikeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public SelectionConditionStringLikeGetArgs build() {
-            return new SelectionConditionStringLikeGetArgs(key, value);
+            return value(Output.of(value));
+        }
+
+        public SelectionConditionStringLikeGetArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class WorkspaceCappingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dailyQuotaGb")
-      private final @Nullable Double dailyQuotaGb;
+    private @Nullable Double dailyQuotaGb;
 
     public Optional<Double> dailyQuotaGb() {
-        return this.dailyQuotaGb == null ? Optional.empty() : Optional.ofNullable(this.dailyQuotaGb);
+        return Optional.ofNullable(this.dailyQuotaGb);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class WorkspaceCappingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataIngestionStatus", required=true)
-      private final String dataIngestionStatus;
+    private String dataIngestionStatus;
 
     public String dataIngestionStatus() {
         return this.dataIngestionStatus;
@@ -46,64 +46,58 @@ public final class WorkspaceCappingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="quotaNextResetTime", required=true)
-      private final String quotaNextResetTime;
+    private String quotaNextResetTime;
 
     public String quotaNextResetTime() {
         return this.quotaNextResetTime;
     }
 
-    public WorkspaceCappingResponse(
-        @Nullable Double dailyQuotaGb,
-        String dataIngestionStatus,
-        String quotaNextResetTime) {
-        this.dailyQuotaGb = dailyQuotaGb;
-        this.dataIngestionStatus = Objects.requireNonNull(dataIngestionStatus, "expected parameter 'dataIngestionStatus' to be non-null");
-        this.quotaNextResetTime = Objects.requireNonNull(quotaNextResetTime, "expected parameter 'quotaNextResetTime' to be non-null");
-    }
+    private WorkspaceCappingResponse() {}
 
-    private WorkspaceCappingResponse() {
-        this.dailyQuotaGb = null;
-        this.dataIngestionStatus = null;
-        this.quotaNextResetTime = null;
+    private WorkspaceCappingResponse(WorkspaceCappingResponse $) {
+        this.dailyQuotaGb = $.dailyQuotaGb;
+        this.dataIngestionStatus = $.dataIngestionStatus;
+        this.quotaNextResetTime = $.quotaNextResetTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceCappingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double dailyQuotaGb;
-        private String dataIngestionStatus;
-        private String quotaNextResetTime;
+        private WorkspaceCappingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceCappingResponse();
         }
 
         public Builder(WorkspaceCappingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailyQuotaGb = defaults.dailyQuotaGb;
-    	      this.dataIngestionStatus = defaults.dataIngestionStatus;
-    	      this.quotaNextResetTime = defaults.quotaNextResetTime;
+            $ = new WorkspaceCappingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dailyQuotaGb(@Nullable Double dailyQuotaGb) {
-            this.dailyQuotaGb = dailyQuotaGb;
+            $.dailyQuotaGb = dailyQuotaGb;
             return this;
         }
+
         public Builder dataIngestionStatus(String dataIngestionStatus) {
-            this.dataIngestionStatus = Objects.requireNonNull(dataIngestionStatus);
+            $.dataIngestionStatus = dataIngestionStatus;
             return this;
         }
+
         public Builder quotaNextResetTime(String quotaNextResetTime) {
-            this.quotaNextResetTime = Objects.requireNonNull(quotaNextResetTime);
+            $.quotaNextResetTime = quotaNextResetTime;
             return this;
-        }        public WorkspaceCappingResponse build() {
-            return new WorkspaceCappingResponse(dailyQuotaGb, dataIngestionStatus, quotaNextResetTime);
+        }
+
+        public WorkspaceCappingResponse build() {
+            $.dataIngestionStatus = Objects.requireNonNull($.dataIngestionStatus, "expected parameter 'dataIngestionStatus' to be non-null");
+            $.quotaNextResetTime = Objects.requireNonNull($.quotaNextResetTime, "expected parameter 'quotaNextResetTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class FilesNotTieringErrorResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="errorCode", required=true)
-      private final Integer errorCode;
+    private Integer errorCode;
 
     public Integer errorCode() {
         return this.errorCode;
@@ -33,55 +33,52 @@ public final class FilesNotTieringErrorResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="fileCount", required=true)
-      private final Double fileCount;
+    private Double fileCount;
 
     public Double fileCount() {
         return this.fileCount;
     }
 
-    public FilesNotTieringErrorResponse(
-        Integer errorCode,
-        Double fileCount) {
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.fileCount = Objects.requireNonNull(fileCount, "expected parameter 'fileCount' to be non-null");
-    }
+    private FilesNotTieringErrorResponse() {}
 
-    private FilesNotTieringErrorResponse() {
-        this.errorCode = null;
-        this.fileCount = null;
+    private FilesNotTieringErrorResponse(FilesNotTieringErrorResponse $) {
+        this.errorCode = $.errorCode;
+        this.fileCount = $.fileCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilesNotTieringErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer errorCode;
-        private Double fileCount;
+        private FilesNotTieringErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilesNotTieringErrorResponse();
         }
 
         public Builder(FilesNotTieringErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCode = defaults.errorCode;
-    	      this.fileCount = defaults.fileCount;
+            $ = new FilesNotTieringErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCode(Integer errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder fileCount(Double fileCount) {
-            this.fileCount = Objects.requireNonNull(fileCount);
+            $.fileCount = fileCount;
             return this;
-        }        public FilesNotTieringErrorResponse build() {
-            return new FilesNotTieringErrorResponse(errorCode, fileCount);
+        }
+
+        public FilesNotTieringErrorResponse build() {
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            $.fileCount = Objects.requireNonNull($.fileCount, "expected parameter 'fileCount' to be non-null");
+            return $;
         }
     }
+
 }

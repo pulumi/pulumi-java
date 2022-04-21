@@ -17,45 +17,45 @@ public final class GetImagePipelineArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetImagePipelineArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetImagePipelineArgs() {}
 
-    private GetImagePipelineArgs() {
-        this.arn = null;
+    private GetImagePipelineArgs(GetImagePipelineArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImagePipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetImagePipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImagePipelineArgs();
         }
 
         public Builder(GetImagePipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetImagePipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetImagePipelineArgs build() {
-            return new GetImagePipelineArgs(arn);
+        }
+
+        public GetImagePipelineArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

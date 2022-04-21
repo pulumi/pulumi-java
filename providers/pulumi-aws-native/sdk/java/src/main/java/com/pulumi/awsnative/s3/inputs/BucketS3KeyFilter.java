@@ -18,48 +18,49 @@ public final class BucketS3KeyFilter extends com.pulumi.resources.InvokeArgs {
     public static final BucketS3KeyFilter Empty = new BucketS3KeyFilter();
 
     @Import(name="rules", required=true)
-      private final List<BucketFilterRule> rules;
+    private List<BucketFilterRule> rules;
 
     public List<BucketFilterRule> rules() {
         return this.rules;
     }
 
-    public BucketS3KeyFilter(List<BucketFilterRule> rules) {
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private BucketS3KeyFilter() {}
 
-    private BucketS3KeyFilter() {
-        this.rules = List.of();
+    private BucketS3KeyFilter(BucketS3KeyFilter $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketS3KeyFilter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BucketFilterRule> rules;
+        private BucketS3KeyFilter $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketS3KeyFilter();
         }
 
         public Builder(BucketS3KeyFilter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new BucketS3KeyFilter(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(List<BucketFilterRule> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(BucketFilterRule... rules) {
             return rules(List.of(rules));
-        }        public BucketS3KeyFilter build() {
-            return new BucketS3KeyFilter(rules);
+        }
+
+        public BucketS3KeyFilter build() {
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

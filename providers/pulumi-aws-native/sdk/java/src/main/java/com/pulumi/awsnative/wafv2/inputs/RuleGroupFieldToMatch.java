@@ -26,10 +26,10 @@ public final class RuleGroupFieldToMatch extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="allQueryArguments")
-      private final @Nullable Object allQueryArguments;
+    private @Nullable Object allQueryArguments;
 
     public Optional<Object> allQueryArguments() {
-        return this.allQueryArguments == null ? Optional.empty() : Optional.ofNullable(this.allQueryArguments);
+        return Optional.ofNullable(this.allQueryArguments);
     }
 
     /**
@@ -37,17 +37,17 @@ public final class RuleGroupFieldToMatch extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="body")
-      private final @Nullable Object body;
+    private @Nullable Object body;
 
     public Optional<Object> body() {
-        return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
+        return Optional.ofNullable(this.body);
     }
 
     @Import(name="jsonBody")
-      private final @Nullable RuleGroupJsonBody jsonBody;
+    private @Nullable RuleGroupJsonBody jsonBody;
 
     public Optional<RuleGroupJsonBody> jsonBody() {
-        return this.jsonBody == null ? Optional.empty() : Optional.ofNullable(this.jsonBody);
+        return Optional.ofNullable(this.jsonBody);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RuleGroupFieldToMatch extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="method")
-      private final @Nullable Object method;
+    private @Nullable Object method;
 
     public Optional<Object> method() {
-        return this.method == null ? Optional.empty() : Optional.ofNullable(this.method);
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -66,17 +66,17 @@ public final class RuleGroupFieldToMatch extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="queryString")
-      private final @Nullable Object queryString;
+    private @Nullable Object queryString;
 
     public Optional<Object> queryString() {
-        return this.queryString == null ? Optional.empty() : Optional.ofNullable(this.queryString);
+        return Optional.ofNullable(this.queryString);
     }
 
     @Import(name="singleHeader")
-      private final @Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader;
+    private @Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader;
 
     public Optional<RuleGroupFieldToMatchSingleHeaderProperties> singleHeader() {
-        return this.singleHeader == null ? Optional.empty() : Optional.ofNullable(this.singleHeader);
+        return Optional.ofNullable(this.singleHeader);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class RuleGroupFieldToMatch extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="singleQueryArgument")
-      private final @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
+    private @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
 
     public Optional<RuleGroupFieldToMatchSingleQueryArgumentProperties> singleQueryArgument() {
-        return this.singleQueryArgument == null ? Optional.empty() : Optional.ofNullable(this.singleQueryArgument);
+        return Optional.ofNullable(this.singleQueryArgument);
     }
 
     /**
@@ -95,109 +95,86 @@ public final class RuleGroupFieldToMatch extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="uriPath")
-      private final @Nullable Object uriPath;
+    private @Nullable Object uriPath;
 
     public Optional<Object> uriPath() {
-        return this.uriPath == null ? Optional.empty() : Optional.ofNullable(this.uriPath);
+        return Optional.ofNullable(this.uriPath);
     }
 
-    public RuleGroupFieldToMatch(
-        @Nullable Object allQueryArguments,
-        @Nullable Object body,
-        @Nullable RuleGroupJsonBody jsonBody,
-        @Nullable Object method,
-        @Nullable Object queryString,
-        @Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader,
-        @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
-        @Nullable Object uriPath) {
-        this.allQueryArguments = allQueryArguments;
-        this.body = body;
-        this.jsonBody = jsonBody;
-        this.method = method;
-        this.queryString = queryString;
-        this.singleHeader = singleHeader;
-        this.singleQueryArgument = singleQueryArgument;
-        this.uriPath = uriPath;
-    }
+    private RuleGroupFieldToMatch() {}
 
-    private RuleGroupFieldToMatch() {
-        this.allQueryArguments = null;
-        this.body = null;
-        this.jsonBody = null;
-        this.method = null;
-        this.queryString = null;
-        this.singleHeader = null;
-        this.singleQueryArgument = null;
-        this.uriPath = null;
+    private RuleGroupFieldToMatch(RuleGroupFieldToMatch $) {
+        this.allQueryArguments = $.allQueryArguments;
+        this.body = $.body;
+        this.jsonBody = $.jsonBody;
+        this.method = $.method;
+        this.queryString = $.queryString;
+        this.singleHeader = $.singleHeader;
+        this.singleQueryArgument = $.singleQueryArgument;
+        this.uriPath = $.uriPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupFieldToMatch defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object allQueryArguments;
-        private @Nullable Object body;
-        private @Nullable RuleGroupJsonBody jsonBody;
-        private @Nullable Object method;
-        private @Nullable Object queryString;
-        private @Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader;
-        private @Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument;
-        private @Nullable Object uriPath;
+        private RuleGroupFieldToMatch $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupFieldToMatch();
         }
 
         public Builder(RuleGroupFieldToMatch defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allQueryArguments = defaults.allQueryArguments;
-    	      this.body = defaults.body;
-    	      this.jsonBody = defaults.jsonBody;
-    	      this.method = defaults.method;
-    	      this.queryString = defaults.queryString;
-    	      this.singleHeader = defaults.singleHeader;
-    	      this.singleQueryArgument = defaults.singleQueryArgument;
-    	      this.uriPath = defaults.uriPath;
+            $ = new RuleGroupFieldToMatch(Objects.requireNonNull(defaults));
         }
 
         public Builder allQueryArguments(@Nullable Object allQueryArguments) {
-            this.allQueryArguments = allQueryArguments;
+            $.allQueryArguments = allQueryArguments;
             return this;
         }
+
         public Builder body(@Nullable Object body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
+
         public Builder jsonBody(@Nullable RuleGroupJsonBody jsonBody) {
-            this.jsonBody = jsonBody;
+            $.jsonBody = jsonBody;
             return this;
         }
+
         public Builder method(@Nullable Object method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
+
         public Builder queryString(@Nullable Object queryString) {
-            this.queryString = queryString;
+            $.queryString = queryString;
             return this;
         }
+
         public Builder singleHeader(@Nullable RuleGroupFieldToMatchSingleHeaderProperties singleHeader) {
-            this.singleHeader = singleHeader;
+            $.singleHeader = singleHeader;
             return this;
         }
+
         public Builder singleQueryArgument(@Nullable RuleGroupFieldToMatchSingleQueryArgumentProperties singleQueryArgument) {
-            this.singleQueryArgument = singleQueryArgument;
+            $.singleQueryArgument = singleQueryArgument;
             return this;
         }
+
         public Builder uriPath(@Nullable Object uriPath) {
-            this.uriPath = uriPath;
+            $.uriPath = uriPath;
             return this;
-        }        public RuleGroupFieldToMatch build() {
-            return new RuleGroupFieldToMatch(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
+        }
+
+        public RuleGroupFieldToMatch build() {
+            return $;
         }
     }
+
 }

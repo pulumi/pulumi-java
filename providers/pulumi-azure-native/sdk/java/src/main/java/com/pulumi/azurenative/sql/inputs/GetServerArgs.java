@@ -19,10 +19,10 @@ public final class GetServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetServerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetServerArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String serverName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetServerArgs() {}
 
-    private GetServerArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetServerArgs(GetServerArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String serverName;
+        private GetServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerArgs();
         }
 
         public Builder(GetServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetServerArgs build() {
-            return new GetServerArgs(expand, resourceGroupName, serverName);
+        }
+
+        public GetServerArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

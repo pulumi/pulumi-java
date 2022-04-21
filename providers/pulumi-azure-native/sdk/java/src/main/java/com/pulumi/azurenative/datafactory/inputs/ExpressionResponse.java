@@ -21,7 +21,7 @@ public final class ExpressionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -32,55 +32,52 @@ public final class ExpressionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ExpressionResponse(
-        String type,
-        String value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ExpressionResponse() {}
 
-    private ExpressionResponse() {
-        this.type = null;
-        this.value = null;
+    private ExpressionResponse(ExpressionResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private String value;
+        private ExpressionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressionResponse();
         }
 
         public Builder(ExpressionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ExpressionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ExpressionResponse build() {
-            return new ExpressionResponse(type, value);
+        }
+
+        public ExpressionResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

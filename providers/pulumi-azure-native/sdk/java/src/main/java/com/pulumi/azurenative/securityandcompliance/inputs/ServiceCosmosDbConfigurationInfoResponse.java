@@ -24,10 +24,10 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends com.pulumi.r
      * 
      */
     @Import(name="keyVaultKeyUri")
-      private final @Nullable String keyVaultKeyUri;
+    private @Nullable String keyVaultKeyUri;
 
     public Optional<String> keyVaultKeyUri() {
-        return this.keyVaultKeyUri == null ? Optional.empty() : Optional.ofNullable(this.keyVaultKeyUri);
+        return Optional.ofNullable(this.keyVaultKeyUri);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ServiceCosmosDbConfigurationInfoResponse extends com.pulumi.r
      * 
      */
     @Import(name="offerThroughput")
-      private final @Nullable Double offerThroughput;
+    private @Nullable Double offerThroughput;
 
     public Optional<Double> offerThroughput() {
-        return this.offerThroughput == null ? Optional.empty() : Optional.ofNullable(this.offerThroughput);
+        return Optional.ofNullable(this.offerThroughput);
     }
 
-    public ServiceCosmosDbConfigurationInfoResponse(
-        @Nullable String keyVaultKeyUri,
-        @Nullable Double offerThroughput) {
-        this.keyVaultKeyUri = keyVaultKeyUri;
-        this.offerThroughput = offerThroughput;
-    }
+    private ServiceCosmosDbConfigurationInfoResponse() {}
 
-    private ServiceCosmosDbConfigurationInfoResponse() {
-        this.keyVaultKeyUri = null;
-        this.offerThroughput = null;
+    private ServiceCosmosDbConfigurationInfoResponse(ServiceCosmosDbConfigurationInfoResponse $) {
+        this.keyVaultKeyUri = $.keyVaultKeyUri;
+        this.offerThroughput = $.offerThroughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCosmosDbConfigurationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyVaultKeyUri;
-        private @Nullable Double offerThroughput;
+        private ServiceCosmosDbConfigurationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCosmosDbConfigurationInfoResponse();
         }
 
         public Builder(ServiceCosmosDbConfigurationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultKeyUri = defaults.keyVaultKeyUri;
-    	      this.offerThroughput = defaults.offerThroughput;
+            $ = new ServiceCosmosDbConfigurationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
-            this.keyVaultKeyUri = keyVaultKeyUri;
+            $.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
+
         public Builder offerThroughput(@Nullable Double offerThroughput) {
-            this.offerThroughput = offerThroughput;
+            $.offerThroughput = offerThroughput;
             return this;
-        }        public ServiceCosmosDbConfigurationInfoResponse build() {
-            return new ServiceCosmosDbConfigurationInfoResponse(keyVaultKeyUri, offerThroughput);
+        }
+
+        public ServiceCosmosDbConfigurationInfoResponse build() {
+            return $;
         }
     }
+
 }

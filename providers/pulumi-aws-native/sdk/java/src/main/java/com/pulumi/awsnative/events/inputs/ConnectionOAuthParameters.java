@@ -18,94 +18,86 @@ public final class ConnectionOAuthParameters extends com.pulumi.resources.Invoke
     public static final ConnectionOAuthParameters Empty = new ConnectionOAuthParameters();
 
     @Import(name="authorizationEndpoint", required=true)
-      private final String authorizationEndpoint;
+    private String authorizationEndpoint;
 
     public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @Import(name="clientParameters", required=true)
-      private final ConnectionClientParameters clientParameters;
+    private ConnectionClientParameters clientParameters;
 
     public ConnectionClientParameters clientParameters() {
         return this.clientParameters;
     }
 
     @Import(name="httpMethod", required=true)
-      private final ConnectionOAuthParametersHttpMethod httpMethod;
+    private ConnectionOAuthParametersHttpMethod httpMethod;
 
     public ConnectionOAuthParametersHttpMethod httpMethod() {
         return this.httpMethod;
     }
 
     @Import(name="oAuthHttpParameters")
-      private final @Nullable ConnectionHttpParameters oAuthHttpParameters;
+    private @Nullable ConnectionHttpParameters oAuthHttpParameters;
 
     public Optional<ConnectionHttpParameters> oAuthHttpParameters() {
-        return this.oAuthHttpParameters == null ? Optional.empty() : Optional.ofNullable(this.oAuthHttpParameters);
+        return Optional.ofNullable(this.oAuthHttpParameters);
     }
 
-    public ConnectionOAuthParameters(
-        String authorizationEndpoint,
-        ConnectionClientParameters clientParameters,
-        ConnectionOAuthParametersHttpMethod httpMethod,
-        @Nullable ConnectionHttpParameters oAuthHttpParameters) {
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
-        this.clientParameters = Objects.requireNonNull(clientParameters, "expected parameter 'clientParameters' to be non-null");
-        this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
-        this.oAuthHttpParameters = oAuthHttpParameters;
-    }
+    private ConnectionOAuthParameters() {}
 
-    private ConnectionOAuthParameters() {
-        this.authorizationEndpoint = null;
-        this.clientParameters = null;
-        this.httpMethod = null;
-        this.oAuthHttpParameters = null;
+    private ConnectionOAuthParameters(ConnectionOAuthParameters $) {
+        this.authorizationEndpoint = $.authorizationEndpoint;
+        this.clientParameters = $.clientParameters;
+        this.httpMethod = $.httpMethod;
+        this.oAuthHttpParameters = $.oAuthHttpParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionOAuthParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationEndpoint;
-        private ConnectionClientParameters clientParameters;
-        private ConnectionOAuthParametersHttpMethod httpMethod;
-        private @Nullable ConnectionHttpParameters oAuthHttpParameters;
+        private ConnectionOAuthParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionOAuthParameters();
         }
 
         public Builder(ConnectionOAuthParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationEndpoint = defaults.authorizationEndpoint;
-    	      this.clientParameters = defaults.clientParameters;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.oAuthHttpParameters = defaults.oAuthHttpParameters;
+            $ = new ConnectionOAuthParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationEndpoint(String authorizationEndpoint) {
-            this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
+            $.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
+
         public Builder clientParameters(ConnectionClientParameters clientParameters) {
-            this.clientParameters = Objects.requireNonNull(clientParameters);
+            $.clientParameters = clientParameters;
             return this;
         }
+
         public Builder httpMethod(ConnectionOAuthParametersHttpMethod httpMethod) {
-            this.httpMethod = Objects.requireNonNull(httpMethod);
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder oAuthHttpParameters(@Nullable ConnectionHttpParameters oAuthHttpParameters) {
-            this.oAuthHttpParameters = oAuthHttpParameters;
+            $.oAuthHttpParameters = oAuthHttpParameters;
             return this;
-        }        public ConnectionOAuthParameters build() {
-            return new ConnectionOAuthParameters(authorizationEndpoint, clientParameters, httpMethod, oAuthHttpParameters);
+        }
+
+        public ConnectionOAuthParameters build() {
+            $.authorizationEndpoint = Objects.requireNonNull($.authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
+            $.clientParameters = Objects.requireNonNull($.clientParameters, "expected parameter 'clientParameters' to be non-null");
+            $.httpMethod = Objects.requireNonNull($.httpMethod, "expected parameter 'httpMethod' to be non-null");
+            return $;
         }
     }
+
 }

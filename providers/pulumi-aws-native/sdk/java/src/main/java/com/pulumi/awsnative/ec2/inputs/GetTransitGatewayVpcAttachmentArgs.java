@@ -13,45 +13,45 @@ public final class GetTransitGatewayVpcAttachmentArgs extends com.pulumi.resourc
     public static final GetTransitGatewayVpcAttachmentArgs Empty = new GetTransitGatewayVpcAttachmentArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetTransitGatewayVpcAttachmentArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetTransitGatewayVpcAttachmentArgs() {}
 
-    private GetTransitGatewayVpcAttachmentArgs() {
-        this.id = null;
+    private GetTransitGatewayVpcAttachmentArgs(GetTransitGatewayVpcAttachmentArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTransitGatewayVpcAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetTransitGatewayVpcAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTransitGatewayVpcAttachmentArgs();
         }
 
         public Builder(GetTransitGatewayVpcAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetTransitGatewayVpcAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetTransitGatewayVpcAttachmentArgs build() {
-            return new GetTransitGatewayVpcAttachmentArgs(id);
+        }
+
+        public GetTransitGatewayVpcAttachmentArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

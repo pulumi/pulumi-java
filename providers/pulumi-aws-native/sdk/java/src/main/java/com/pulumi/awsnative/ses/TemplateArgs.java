@@ -5,8 +5,8 @@ package com.pulumi.awsnative.ses;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -15,49 +15,48 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     public static final TemplateArgs Empty = new TemplateArgs();
 
     @Import(name="template")
-      private final @Nullable Output<com.pulumi.awsnative.ses.inputs.TemplateArgs> template;
+    private @Nullable Output<com.pulumi.awsnative.ses.inputs.TemplateArgs> template;
 
-    public Output<com.pulumi.awsnative.ses.inputs.TemplateArgs> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<com.pulumi.awsnative.ses.inputs.TemplateArgs>> template() {
+        return Optional.ofNullable(this.template);
     }
 
-    public TemplateArgs(@Nullable Output<com.pulumi.awsnative.ses.inputs.TemplateArgs> template) {
-        this.template = template;
-    }
+    private TemplateArgs() {}
 
-    private TemplateArgs() {
-        this.template = Codegen.empty();
+    private TemplateArgs(TemplateArgs $) {
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<com.pulumi.awsnative.ses.inputs.TemplateArgs> template;
+        private TemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateArgs();
         }
 
         public Builder(TemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.template = defaults.template;
+            $ = new TemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder template(@Nullable Output<com.pulumi.awsnative.ses.inputs.TemplateArgs> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable com.pulumi.awsnative.ses.inputs.TemplateArgs template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
-        }        public TemplateArgs build() {
-            return new TemplateArgs(template);
+
+        public Builder template(com.pulumi.awsnative.ses.inputs.TemplateArgs template) {
+            return template(Output.of(template));
+        }
+
+        public TemplateArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.awsnative.detective;
 import com.pulumi.awsnative.detective.inputs.GraphTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class GraphArgs extends com.pulumi.resources.ResourceArgs {
     public static final GraphArgs Empty = new GraphArgs();
 
     @Import(name="tags")
-      private final @Nullable Output<List<GraphTagArgs>> tags;
+    private @Nullable Output<List<GraphTagArgs>> tags;
 
-    public Output<List<GraphTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<GraphTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GraphArgs(@Nullable Output<List<GraphTagArgs>> tags) {
-        this.tags = tags;
-    }
+    private GraphArgs() {}
 
-    private GraphArgs() {
-        this.tags = Codegen.empty();
+    private GraphArgs(GraphArgs $) {
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GraphTagArgs>> tags;
+        private GraphArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphArgs();
         }
 
         public Builder(GraphArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tags = defaults.tags;
+            $ = new GraphArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tags(@Nullable Output<List<GraphTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<GraphTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<GraphTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(GraphTagArgs... tags) {
             return tags(List.of(tags));
-        }        public GraphArgs build() {
-            return new GraphArgs(tags);
+        }
+
+        public GraphArgs build() {
+            return $;
         }
     }
+
 }

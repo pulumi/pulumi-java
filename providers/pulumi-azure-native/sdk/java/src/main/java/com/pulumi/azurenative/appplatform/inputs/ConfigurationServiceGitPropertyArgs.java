@@ -6,9 +6,9 @@ package com.pulumi.azurenative.appplatform.inputs;
 import com.pulumi.azurenative.appplatform.inputs.ConfigurationServiceGitRepositoryArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ConfigurationServiceGitPropertyArgs extends com.pulumi.resour
      * 
      */
     @Import(name="repositories")
-      private final @Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories;
+    private @Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories;
 
-    public Output<List<ConfigurationServiceGitRepositoryArgs>> repositories() {
-        return this.repositories == null ? Codegen.empty() : this.repositories;
+    public Optional<Output<List<ConfigurationServiceGitRepositoryArgs>>> repositories() {
+        return Optional.ofNullable(this.repositories);
     }
 
-    public ConfigurationServiceGitPropertyArgs(@Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories) {
-        this.repositories = repositories;
-    }
+    private ConfigurationServiceGitPropertyArgs() {}
 
-    private ConfigurationServiceGitPropertyArgs() {
-        this.repositories = Codegen.empty();
+    private ConfigurationServiceGitPropertyArgs(ConfigurationServiceGitPropertyArgs $) {
+        this.repositories = $.repositories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationServiceGitPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories;
+        private ConfigurationServiceGitPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationServiceGitPropertyArgs();
         }
 
         public Builder(ConfigurationServiceGitPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositories = defaults.repositories;
+            $ = new ConfigurationServiceGitPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repositories(@Nullable Output<List<ConfigurationServiceGitRepositoryArgs>> repositories) {
-            this.repositories = repositories;
+            $.repositories = repositories;
             return this;
         }
-        public Builder repositories(@Nullable List<ConfigurationServiceGitRepositoryArgs> repositories) {
-            this.repositories = Codegen.ofNullable(repositories);
-            return this;
+
+        public Builder repositories(List<ConfigurationServiceGitRepositoryArgs> repositories) {
+            return repositories(Output.of(repositories));
         }
+
         public Builder repositories(ConfigurationServiceGitRepositoryArgs... repositories) {
             return repositories(List.of(repositories));
-        }        public ConfigurationServiceGitPropertyArgs build() {
-            return new ConfigurationServiceGitPropertyArgs(repositories);
+        }
+
+        public ConfigurationServiceGitPropertyArgs build() {
+            return $;
         }
     }
+
 }

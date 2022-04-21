@@ -5,13 +5,13 @@ package com.pulumi.gcp.container;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.AzureNodePoolAutoscalingArgs;
 import com.pulumi.gcp.container.inputs.AzureNodePoolConfigArgs;
 import com.pulumi.gcp.container.inputs.AzureNodePoolMaxPodsConstraintArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscaling", required=true)
-      private final Output<AzureNodePoolAutoscalingArgs> autoscaling;
+    private Output<AzureNodePoolAutoscalingArgs> autoscaling;
 
     public Output<AzureNodePoolAutoscalingArgs> autoscaling() {
         return this.autoscaling;
@@ -46,10 +46,10 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureAvailabilityZone")
-      private final @Nullable Output<String> azureAvailabilityZone;
+    private @Nullable Output<String> azureAvailabilityZone;
 
-    public Output<String> azureAvailabilityZone() {
-        return this.azureAvailabilityZone == null ? Codegen.empty() : this.azureAvailabilityZone;
+    public Optional<Output<String>> azureAvailabilityZone() {
+        return Optional.ofNullable(this.azureAvailabilityZone);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cluster", required=true)
-      private final Output<String> cluster;
+    private Output<String> cluster;
 
     public Output<String> cluster() {
         return this.cluster;
@@ -68,7 +68,7 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config", required=true)
-      private final Output<AzureNodePoolConfigArgs> config;
+    private Output<AzureNodePoolConfigArgs> config;
 
     public Output<AzureNodePoolConfigArgs> config() {
         return this.config;
@@ -79,7 +79,7 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -90,7 +90,7 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxPodsConstraint", required=true)
-      private final Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
+    private Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
 
     public Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint() {
         return this.maxPodsConstraint;
@@ -101,10 +101,10 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -123,7 +123,7 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
@@ -134,180 +134,155 @@ public final class AzureNodePoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public AzureNodePoolArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        Output<AzureNodePoolAutoscalingArgs> autoscaling,
-        @Nullable Output<String> azureAvailabilityZone,
-        Output<String> cluster,
-        Output<AzureNodePoolConfigArgs> config,
-        Output<String> location,
-        Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> subnetId,
-        Output<String> version) {
-        this.annotations = annotations;
-        this.autoscaling = Objects.requireNonNull(autoscaling, "expected parameter 'autoscaling' to be non-null");
-        this.azureAvailabilityZone = azureAvailabilityZone;
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint, "expected parameter 'maxPodsConstraint' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private AzureNodePoolArgs() {}
 
-    private AzureNodePoolArgs() {
-        this.annotations = Codegen.empty();
-        this.autoscaling = Codegen.empty();
-        this.azureAvailabilityZone = Codegen.empty();
-        this.cluster = Codegen.empty();
-        this.config = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maxPodsConstraint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.version = Codegen.empty();
+    private AzureNodePoolArgs(AzureNodePoolArgs $) {
+        this.annotations = $.annotations;
+        this.autoscaling = $.autoscaling;
+        this.azureAvailabilityZone = $.azureAvailabilityZone;
+        this.cluster = $.cluster;
+        this.config = $.config;
+        this.location = $.location;
+        this.maxPodsConstraint = $.maxPodsConstraint;
+        this.name = $.name;
+        this.project = $.project;
+        this.subnetId = $.subnetId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureNodePoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private Output<AzureNodePoolAutoscalingArgs> autoscaling;
-        private @Nullable Output<String> azureAvailabilityZone;
-        private Output<String> cluster;
-        private Output<AzureNodePoolConfigArgs> config;
-        private Output<String> location;
-        private Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> subnetId;
-        private Output<String> version;
+        private AzureNodePoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureNodePoolArgs();
         }
 
         public Builder(AzureNodePoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.autoscaling = defaults.autoscaling;
-    	      this.azureAvailabilityZone = defaults.azureAvailabilityZone;
-    	      this.cluster = defaults.cluster;
-    	      this.config = defaults.config;
-    	      this.location = defaults.location;
-    	      this.maxPodsConstraint = defaults.maxPodsConstraint;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.subnetId = defaults.subnetId;
-    	      this.version = defaults.version;
+            $ = new AzureNodePoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder autoscaling(Output<AzureNodePoolAutoscalingArgs> autoscaling) {
-            this.autoscaling = Objects.requireNonNull(autoscaling);
+            $.autoscaling = autoscaling;
             return this;
         }
+
         public Builder autoscaling(AzureNodePoolAutoscalingArgs autoscaling) {
-            this.autoscaling = Output.of(Objects.requireNonNull(autoscaling));
-            return this;
+            return autoscaling(Output.of(autoscaling));
         }
+
         public Builder azureAvailabilityZone(@Nullable Output<String> azureAvailabilityZone) {
-            this.azureAvailabilityZone = azureAvailabilityZone;
+            $.azureAvailabilityZone = azureAvailabilityZone;
             return this;
         }
-        public Builder azureAvailabilityZone(@Nullable String azureAvailabilityZone) {
-            this.azureAvailabilityZone = Codegen.ofNullable(azureAvailabilityZone);
-            return this;
+
+        public Builder azureAvailabilityZone(String azureAvailabilityZone) {
+            return azureAvailabilityZone(Output.of(azureAvailabilityZone));
         }
+
         public Builder cluster(Output<String> cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder cluster(String cluster) {
-            this.cluster = Output.of(Objects.requireNonNull(cluster));
-            return this;
+            return cluster(Output.of(cluster));
         }
+
         public Builder config(Output<AzureNodePoolConfigArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(AzureNodePoolConfigArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder maxPodsConstraint(Output<AzureNodePoolMaxPodsConstraintArgs> maxPodsConstraint) {
-            this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint);
+            $.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
+
         public Builder maxPodsConstraint(AzureNodePoolMaxPodsConstraintArgs maxPodsConstraint) {
-            this.maxPodsConstraint = Output.of(Objects.requireNonNull(maxPodsConstraint));
-            return this;
+            return maxPodsConstraint(Output.of(maxPodsConstraint));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public AzureNodePoolArgs build() {
-            return new AzureNodePoolArgs(annotations, autoscaling, azureAvailabilityZone, cluster, config, location, maxPodsConstraint, name, project, subnetId, version);
+            return version(Output.of(version));
+        }
+
+        public AzureNodePoolArgs build() {
+            $.autoscaling = Objects.requireNonNull($.autoscaling, "expected parameter 'autoscaling' to be non-null");
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.maxPodsConstraint = Objects.requireNonNull($.maxPodsConstraint, "expected parameter 'maxPodsConstraint' to be non-null");
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

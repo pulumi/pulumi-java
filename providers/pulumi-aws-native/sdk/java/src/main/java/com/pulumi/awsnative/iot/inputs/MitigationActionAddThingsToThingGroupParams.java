@@ -25,10 +25,10 @@ public final class MitigationActionAddThingsToThingGroupParams extends com.pulum
      * 
      */
     @Import(name="overrideDynamicGroups")
-      private final @Nullable Boolean overrideDynamicGroups;
+    private @Nullable Boolean overrideDynamicGroups;
 
     public Optional<Boolean> overrideDynamicGroups() {
-        return this.overrideDynamicGroups == null ? Optional.empty() : Optional.ofNullable(this.overrideDynamicGroups);
+        return Optional.ofNullable(this.overrideDynamicGroups);
     }
 
     /**
@@ -36,58 +36,55 @@ public final class MitigationActionAddThingsToThingGroupParams extends com.pulum
      * 
      */
     @Import(name="thingGroupNames", required=true)
-      private final List<String> thingGroupNames;
+    private List<String> thingGroupNames;
 
     public List<String> thingGroupNames() {
         return this.thingGroupNames;
     }
 
-    public MitigationActionAddThingsToThingGroupParams(
-        @Nullable Boolean overrideDynamicGroups,
-        List<String> thingGroupNames) {
-        this.overrideDynamicGroups = overrideDynamicGroups;
-        this.thingGroupNames = Objects.requireNonNull(thingGroupNames, "expected parameter 'thingGroupNames' to be non-null");
-    }
+    private MitigationActionAddThingsToThingGroupParams() {}
 
-    private MitigationActionAddThingsToThingGroupParams() {
-        this.overrideDynamicGroups = null;
-        this.thingGroupNames = List.of();
+    private MitigationActionAddThingsToThingGroupParams(MitigationActionAddThingsToThingGroupParams $) {
+        this.overrideDynamicGroups = $.overrideDynamicGroups;
+        this.thingGroupNames = $.thingGroupNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MitigationActionAddThingsToThingGroupParams defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean overrideDynamicGroups;
-        private List<String> thingGroupNames;
+        private MitigationActionAddThingsToThingGroupParams $;
 
         public Builder() {
-    	      // Empty
+            $ = new MitigationActionAddThingsToThingGroupParams();
         }
 
         public Builder(MitigationActionAddThingsToThingGroupParams defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.overrideDynamicGroups = defaults.overrideDynamicGroups;
-    	      this.thingGroupNames = defaults.thingGroupNames;
+            $ = new MitigationActionAddThingsToThingGroupParams(Objects.requireNonNull(defaults));
         }
 
         public Builder overrideDynamicGroups(@Nullable Boolean overrideDynamicGroups) {
-            this.overrideDynamicGroups = overrideDynamicGroups;
+            $.overrideDynamicGroups = overrideDynamicGroups;
             return this;
         }
+
         public Builder thingGroupNames(List<String> thingGroupNames) {
-            this.thingGroupNames = Objects.requireNonNull(thingGroupNames);
+            $.thingGroupNames = thingGroupNames;
             return this;
         }
+
         public Builder thingGroupNames(String... thingGroupNames) {
             return thingGroupNames(List.of(thingGroupNames));
-        }        public MitigationActionAddThingsToThingGroupParams build() {
-            return new MitigationActionAddThingsToThingGroupParams(overrideDynamicGroups, thingGroupNames);
+        }
+
+        public MitigationActionAddThingsToThingGroupParams build() {
+            $.thingGroupNames = Objects.requireNonNull($.thingGroupNames, "expected parameter 'thingGroupNames' to be non-null");
+            return $;
         }
     }
+
 }

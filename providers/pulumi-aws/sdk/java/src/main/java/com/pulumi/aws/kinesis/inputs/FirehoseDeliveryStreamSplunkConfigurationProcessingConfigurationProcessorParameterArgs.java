@@ -5,7 +5,6 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      * 
      */
     @Import(name="parameterName", required=true)
-      private final Output<String> parameterName;
+    private Output<String> parameterName;
 
     public Output<String> parameterName() {
         return this.parameterName;
@@ -30,63 +29,60 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      * 
      */
     @Import(name="parameterValue", required=true)
-      private final Output<String> parameterValue;
+    private Output<String> parameterValue;
 
     public Output<String> parameterValue() {
         return this.parameterValue;
     }
 
-    public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs(
-        Output<String> parameterName,
-        Output<String> parameterValue) {
-        this.parameterName = Objects.requireNonNull(parameterName, "expected parameter 'parameterName' to be non-null");
-        this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
-    }
+    private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs() {}
 
-    private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs() {
-        this.parameterName = Codegen.empty();
-        this.parameterValue = Codegen.empty();
+    private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs $) {
+        this.parameterName = $.parameterName;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> parameterName;
-        private Output<String> parameterValue;
+        private FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs();
         }
 
         public Builder(FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterName = defaults.parameterName;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterName(Output<String> parameterName) {
-            this.parameterName = Objects.requireNonNull(parameterName);
+            $.parameterName = parameterName;
             return this;
         }
+
         public Builder parameterName(String parameterName) {
-            this.parameterName = Output.of(Objects.requireNonNull(parameterName));
-            return this;
+            return parameterName(Output.of(parameterName));
         }
+
         public Builder parameterValue(Output<String> parameterValue) {
-            this.parameterValue = Objects.requireNonNull(parameterValue);
+            $.parameterValue = parameterValue;
             return this;
         }
+
         public Builder parameterValue(String parameterValue) {
-            this.parameterValue = Output.of(Objects.requireNonNull(parameterValue));
-            return this;
-        }        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs build() {
-            return new FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs(parameterName, parameterValue);
+            return parameterValue(Output.of(parameterValue));
+        }
+
+        public FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameterArgs build() {
+            $.parameterName = Objects.requireNonNull($.parameterName, "expected parameter 'parameterName' to be non-null");
+            $.parameterValue = Objects.requireNonNull($.parameterValue, "expected parameter 'parameterValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class GetInsightsResultsMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="errors")
-      private final @Nullable List<GetInsightsErrorResponse> errors;
+    private @Nullable List<GetInsightsErrorResponse> errors;
 
-    public List<GetInsightsErrorResponse> errors() {
-        return this.errors == null ? List.of() : this.errors;
+    public Optional<List<GetInsightsErrorResponse>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     /**
@@ -36,58 +36,55 @@ public final class GetInsightsResultsMetadataResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="totalCount", required=true)
-      private final Integer totalCount;
+    private Integer totalCount;
 
     public Integer totalCount() {
         return this.totalCount;
     }
 
-    public GetInsightsResultsMetadataResponse(
-        @Nullable List<GetInsightsErrorResponse> errors,
-        Integer totalCount) {
-        this.errors = errors;
-        this.totalCount = Objects.requireNonNull(totalCount, "expected parameter 'totalCount' to be non-null");
-    }
+    private GetInsightsResultsMetadataResponse() {}
 
-    private GetInsightsResultsMetadataResponse() {
-        this.errors = List.of();
-        this.totalCount = null;
+    private GetInsightsResultsMetadataResponse(GetInsightsResultsMetadataResponse $) {
+        this.errors = $.errors;
+        this.totalCount = $.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInsightsResultsMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetInsightsErrorResponse> errors;
-        private Integer totalCount;
+        private GetInsightsResultsMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInsightsResultsMetadataResponse();
         }
 
         public Builder(GetInsightsResultsMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errors = defaults.errors;
-    	      this.totalCount = defaults.totalCount;
+            $ = new GetInsightsResultsMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errors(@Nullable List<GetInsightsErrorResponse> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(GetInsightsErrorResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder totalCount(Integer totalCount) {
-            this.totalCount = Objects.requireNonNull(totalCount);
+            $.totalCount = totalCount;
             return this;
-        }        public GetInsightsResultsMetadataResponse build() {
-            return new GetInsightsResultsMetadataResponse(errors, totalCount);
+        }
+
+        public GetInsightsResultsMetadataResponse build() {
+            $.totalCount = Objects.requireNonNull($.totalCount, "expected parameter 'totalCount' to be non-null");
+            return $;
         }
     }
+
 }

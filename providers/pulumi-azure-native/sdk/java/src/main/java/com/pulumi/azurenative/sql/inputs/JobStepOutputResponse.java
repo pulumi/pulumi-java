@@ -24,7 +24,7 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="credential", required=true)
-      private final String credential;
+    private String credential;
 
     public String credential() {
         return this.credential;
@@ -35,7 +35,7 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -46,10 +46,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName")
-      private final @Nullable String resourceGroupName;
+    private @Nullable String resourceGroupName;
 
     public Optional<String> resourceGroupName() {
-        return this.resourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.resourceGroupName);
+        return Optional.ofNullable(this.resourceGroupName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="schemaName")
-      private final @Nullable String schemaName;
+    private @Nullable String schemaName;
 
     public Optional<String> schemaName() {
-        return this.schemaName == null ? Optional.empty() : Optional.ofNullable(this.schemaName);
+        return Optional.ofNullable(this.schemaName);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -79,10 +79,10 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subscriptionId")
-      private final @Nullable String subscriptionId;
+    private @Nullable String subscriptionId;
 
     public Optional<String> subscriptionId() {
-        return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
+        return Optional.ofNullable(this.subscriptionId);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
@@ -101,109 +101,92 @@ public final class JobStepOutputResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public JobStepOutputResponse(
-        String credential,
-        String databaseName,
-        @Nullable String resourceGroupName,
-        @Nullable String schemaName,
-        String serverName,
-        @Nullable String subscriptionId,
-        String tableName,
-        @Nullable String type) {
-        this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = resourceGroupName;
-        this.schemaName = Codegen.stringProp("schemaName").arg(schemaName).def("dbo").getNullable();
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.subscriptionId = subscriptionId;
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).def("SqlDatabase").getNullable();
-    }
+    private JobStepOutputResponse() {}
 
-    private JobStepOutputResponse() {
-        this.credential = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.schemaName = null;
-        this.serverName = null;
-        this.subscriptionId = null;
-        this.tableName = null;
-        this.type = null;
+    private JobStepOutputResponse(JobStepOutputResponse $) {
+        this.credential = $.credential;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaName = $.schemaName;
+        this.serverName = $.serverName;
+        this.subscriptionId = $.subscriptionId;
+        this.tableName = $.tableName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStepOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String credential;
-        private String databaseName;
-        private @Nullable String resourceGroupName;
-        private @Nullable String schemaName;
-        private String serverName;
-        private @Nullable String subscriptionId;
-        private String tableName;
-        private @Nullable String type;
+        private JobStepOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStepOutputResponse();
         }
 
         public Builder(JobStepOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credential = defaults.credential;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaName = defaults.schemaName;
-    	      this.serverName = defaults.serverName;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.tableName = defaults.tableName;
-    	      this.type = defaults.type;
+            $ = new JobStepOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder credential(String credential) {
-            this.credential = Objects.requireNonNull(credential);
+            $.credential = credential;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = resourceGroupName;
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = schemaName;
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = subscriptionId;
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public JobStepOutputResponse build() {
-            return new JobStepOutputResponse(credential, databaseName, resourceGroupName, schemaName, serverName, subscriptionId, tableName, type);
+        }
+
+        public JobStepOutputResponse build() {
+            $.credential = Objects.requireNonNull($.credential, "expected parameter 'credential' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.schemaName = Codegen.stringProp("schemaName").arg($.schemaName).def("dbo").getNullable();
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).def("SqlDatabase").getNullable();
+            return $;
         }
     }
+
 }

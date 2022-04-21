@@ -17,7 +17,7 @@ public final class GetConnectedRegistryArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="connectedRegistryName", required=true)
-      private final String connectedRegistryName;
+    private String connectedRegistryName;
 
     public String connectedRegistryName() {
         return this.connectedRegistryName;
@@ -28,7 +28,7 @@ public final class GetConnectedRegistryArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -39,64 +39,59 @@ public final class GetConnectedRegistryArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetConnectedRegistryArgs(
-        String connectedRegistryName,
-        String registryName,
-        String resourceGroupName) {
-        this.connectedRegistryName = Objects.requireNonNull(connectedRegistryName, "expected parameter 'connectedRegistryName' to be non-null");
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetConnectedRegistryArgs() {}
 
-    private GetConnectedRegistryArgs() {
-        this.connectedRegistryName = null;
-        this.registryName = null;
-        this.resourceGroupName = null;
+    private GetConnectedRegistryArgs(GetConnectedRegistryArgs $) {
+        this.connectedRegistryName = $.connectedRegistryName;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConnectedRegistryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectedRegistryName;
-        private String registryName;
-        private String resourceGroupName;
+        private GetConnectedRegistryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConnectedRegistryArgs();
         }
 
         public Builder(GetConnectedRegistryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectedRegistryName = defaults.connectedRegistryName;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetConnectedRegistryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectedRegistryName(String connectedRegistryName) {
-            this.connectedRegistryName = Objects.requireNonNull(connectedRegistryName);
+            $.connectedRegistryName = connectedRegistryName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetConnectedRegistryArgs build() {
-            return new GetConnectedRegistryArgs(connectedRegistryName, registryName, resourceGroupName);
+        }
+
+        public GetConnectedRegistryArgs build() {
+            $.connectedRegistryName = Objects.requireNonNull($.connectedRegistryName, "expected parameter 'connectedRegistryName' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

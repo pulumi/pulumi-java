@@ -15,110 +15,99 @@ public final class GetAppArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAppArgs Empty = new GetAppArgs();
 
     @Import(name="appId", required=true)
-      private final String appId;
+    private String appId;
 
     public String appId() {
         return this.appId;
     }
 
     @Import(name="developerId", required=true)
-      private final String developerId;
+    private String developerId;
 
     public String developerId() {
         return this.developerId;
     }
 
     @Import(name="entity")
-      private final @Nullable String entity;
+    private @Nullable String entity;
 
     public Optional<String> entity() {
-        return this.entity == null ? Optional.empty() : Optional.ofNullable(this.entity);
+        return Optional.ofNullable(this.entity);
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="query")
-      private final @Nullable String query;
+    private @Nullable String query;
 
     public Optional<String> query() {
-        return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
+        return Optional.ofNullable(this.query);
     }
 
-    public GetAppArgs(
-        String appId,
-        String developerId,
-        @Nullable String entity,
-        String organizationId,
-        @Nullable String query) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.developerId = Objects.requireNonNull(developerId, "expected parameter 'developerId' to be non-null");
-        this.entity = entity;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.query = query;
-    }
+    private GetAppArgs() {}
 
-    private GetAppArgs() {
-        this.appId = null;
-        this.developerId = null;
-        this.entity = null;
-        this.organizationId = null;
-        this.query = null;
+    private GetAppArgs(GetAppArgs $) {
+        this.appId = $.appId;
+        this.developerId = $.developerId;
+        this.entity = $.entity;
+        this.organizationId = $.organizationId;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appId;
-        private String developerId;
-        private @Nullable String entity;
-        private String organizationId;
-        private @Nullable String query;
+        private GetAppArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppArgs();
         }
 
         public Builder(GetAppArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.developerId = defaults.developerId;
-    	      this.entity = defaults.entity;
-    	      this.organizationId = defaults.organizationId;
-    	      this.query = defaults.query;
+            $ = new GetAppArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(String appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder developerId(String developerId) {
-            this.developerId = Objects.requireNonNull(developerId);
+            $.developerId = developerId;
             return this;
         }
+
         public Builder entity(@Nullable String entity) {
-            this.entity = entity;
+            $.entity = entity;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder query(@Nullable String query) {
-            this.query = query;
+            $.query = query;
             return this;
-        }        public GetAppArgs build() {
-            return new GetAppArgs(appId, developerId, entity, organizationId, query);
+        }
+
+        public GetAppArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.developerId = Objects.requireNonNull($.developerId, "expected parameter 'developerId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class ListBotConnectionWithSecretsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="connectionName", required=true)
-      private final String connectionName;
+    private String connectionName;
 
     public String connectionName() {
         return this.connectionName;
@@ -28,7 +28,7 @@ public final class ListBotConnectionWithSecretsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListBotConnectionWithSecretsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public ListBotConnectionWithSecretsArgs(
-        String connectionName,
-        String resourceGroupName,
-        String resourceName) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ListBotConnectionWithSecretsArgs() {}
 
-    private ListBotConnectionWithSecretsArgs() {
-        this.connectionName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private ListBotConnectionWithSecretsArgs(ListBotConnectionWithSecretsArgs $) {
+        this.connectionName = $.connectionName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListBotConnectionWithSecretsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionName;
-        private String resourceGroupName;
-        private String resourceName;
+        private ListBotConnectionWithSecretsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListBotConnectionWithSecretsArgs();
         }
 
         public Builder(ListBotConnectionWithSecretsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ListBotConnectionWithSecretsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public ListBotConnectionWithSecretsArgs build() {
-            return new ListBotConnectionWithSecretsArgs(connectionName, resourceGroupName, resourceName);
+        }
+
+        public ListBotConnectionWithSecretsArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,10 +9,10 @@ import com.pulumi.azurenative.eventgrid.inputs.PrivateEndpointArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="groupIds")
-      private final @Nullable Output<List<String>> groupIds;
+    private @Nullable Output<List<String>> groupIds;
 
-    public Output<List<String>> groupIds() {
-        return this.groupIds == null ? Codegen.empty() : this.groupIds;
+    public Optional<Output<List<String>>> groupIds() {
+        return Optional.ofNullable(this.groupIds);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="parentName", required=true)
-      private final Output<String> parentName;
+    private Output<String> parentName;
 
     public Output<String> parentName() {
         return this.parentName;
@@ -47,7 +47,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="parentType", required=true)
-      private final Output<String> parentType;
+    private Output<String> parentType;
 
     public Output<String> parentType() {
         return this.parentType;
@@ -58,10 +58,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
+    private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
-    public Output<PrivateEndpointArgs> privateEndpoint() {
-        return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
+    public Optional<Output<PrivateEndpointArgs>> privateEndpoint() {
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateEndpointConnectionName")
-      private final @Nullable Output<String> privateEndpointConnectionName;
+    private @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> privateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
+    public Optional<Output<String>> privateEndpointConnectionName() {
+        return Optional.ofNullable(this.privateEndpointConnectionName);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
+    private @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<ConnectionStateArgs> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
+    public Optional<Output<ConnectionStateArgs>> privateLinkServiceConnectionState() {
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="provisioningState")
-      private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
+    private @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
 
-    public Output<Either<String,ResourceProvisioningState>> provisioningState() {
-        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
+    public Optional<Output<Either<String,ResourceProvisioningState>>> provisioningState() {
+        return Optional.ofNullable(this.provisioningState);
     }
 
     /**
@@ -102,144 +102,125 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public PrivateEndpointConnectionArgs(
-        @Nullable Output<List<String>> groupIds,
-        Output<String> parentName,
-        Output<String> parentType,
-        @Nullable Output<PrivateEndpointArgs> privateEndpoint,
-        @Nullable Output<String> privateEndpointConnectionName,
-        @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState,
-        @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState,
-        Output<String> resourceGroupName) {
-        this.groupIds = groupIds;
-        this.parentName = Objects.requireNonNull(parentName, "expected parameter 'parentName' to be non-null");
-        this.parentType = Objects.requireNonNull(parentType, "expected parameter 'parentType' to be non-null");
-        this.privateEndpoint = privateEndpoint;
-        this.privateEndpointConnectionName = privateEndpointConnectionName;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = provisioningState;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private PrivateEndpointConnectionArgs() {}
 
-    private PrivateEndpointConnectionArgs() {
-        this.groupIds = Codegen.empty();
-        this.parentName = Codegen.empty();
-        this.parentType = Codegen.empty();
-        this.privateEndpoint = Codegen.empty();
-        this.privateEndpointConnectionName = Codegen.empty();
-        this.privateLinkServiceConnectionState = Codegen.empty();
-        this.provisioningState = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private PrivateEndpointConnectionArgs(PrivateEndpointConnectionArgs $) {
+        this.groupIds = $.groupIds;
+        this.parentName = $.parentName;
+        this.parentType = $.parentType;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> groupIds;
-        private Output<String> parentName;
-        private Output<String> parentType;
-        private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
-        private @Nullable Output<String> privateEndpointConnectionName;
-        private @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
-        private @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
-        private Output<String> resourceGroupName;
+        private PrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionArgs();
         }
 
         public Builder(PrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupIds = defaults.groupIds;
-    	      this.parentName = defaults.parentName;
-    	      this.parentType = defaults.parentType;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupIds(@Nullable Output<List<String>> groupIds) {
-            this.groupIds = groupIds;
+            $.groupIds = groupIds;
             return this;
         }
-        public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = Codegen.ofNullable(groupIds);
-            return this;
+
+        public Builder groupIds(List<String> groupIds) {
+            return groupIds(Output.of(groupIds));
         }
+
         public Builder groupIds(String... groupIds) {
             return groupIds(List.of(groupIds));
         }
+
         public Builder parentName(Output<String> parentName) {
-            this.parentName = Objects.requireNonNull(parentName);
+            $.parentName = parentName;
             return this;
         }
+
         public Builder parentName(String parentName) {
-            this.parentName = Output.of(Objects.requireNonNull(parentName));
-            return this;
+            return parentName(Output.of(parentName));
         }
+
         public Builder parentType(Output<String> parentType) {
-            this.parentType = Objects.requireNonNull(parentType);
+            $.parentType = parentType;
             return this;
         }
+
         public Builder parentType(String parentType) {
-            this.parentType = Output.of(Objects.requireNonNull(parentType));
-            return this;
+            return parentType(Output.of(parentType));
         }
+
         public Builder privateEndpoint(@Nullable Output<PrivateEndpointArgs> privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
-        public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
-            this.privateEndpoint = Codegen.ofNullable(privateEndpoint);
-            return this;
+
+        public Builder privateEndpoint(PrivateEndpointArgs privateEndpoint) {
+            return privateEndpoint(Output.of(privateEndpoint));
         }
+
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = privateEndpointConnectionName;
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-        public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
-            return this;
+
+        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-        public Builder privateLinkServiceConnectionState(@Nullable ConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
-            return this;
+
+        public Builder privateLinkServiceConnectionState(ConnectionStateArgs privateLinkServiceConnectionState) {
+            return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
+
         public Builder provisioningState(@Nullable Output<Either<String,ResourceProvisioningState>> provisioningState) {
-            this.provisioningState = provisioningState;
+            $.provisioningState = provisioningState;
             return this;
         }
-        public Builder provisioningState(@Nullable Either<String,ResourceProvisioningState> provisioningState) {
-            this.provisioningState = Codegen.ofNullable(provisioningState);
-            return this;
+
+        public Builder provisioningState(Either<String,ResourceProvisioningState> provisioningState) {
+            return provisioningState(Output.of(provisioningState));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public PrivateEndpointConnectionArgs build() {
-            return new PrivateEndpointConnectionArgs(groupIds, parentName, parentType, privateEndpoint, privateEndpointConnectionName, privateLinkServiceConnectionState, provisioningState, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public PrivateEndpointConnectionArgs build() {
+            $.parentName = Objects.requireNonNull($.parentName, "expected parameter 'parentName' to be non-null");
+            $.parentType = Objects.requireNonNull($.parentType, "expected parameter 'parentType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

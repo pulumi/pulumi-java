@@ -19,8 +19,8 @@ import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementSqliMatchStatementArgs;
 import com.pulumi.aws.wafv2.inputs.WebAclRuleStatementXssMatchStatementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="andStatement")
-      private final @Nullable Output<WebAclRuleStatementAndStatementArgs> andStatement;
+    private @Nullable Output<WebAclRuleStatementAndStatementArgs> andStatement;
 
-    public Output<WebAclRuleStatementAndStatementArgs> andStatement() {
-        return this.andStatement == null ? Codegen.empty() : this.andStatement;
+    public Optional<Output<WebAclRuleStatementAndStatementArgs>> andStatement() {
+        return Optional.ofNullable(this.andStatement);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="byteMatchStatement")
-      private final @Nullable Output<WebAclRuleStatementByteMatchStatementArgs> byteMatchStatement;
+    private @Nullable Output<WebAclRuleStatementByteMatchStatementArgs> byteMatchStatement;
 
-    public Output<WebAclRuleStatementByteMatchStatementArgs> byteMatchStatement() {
-        return this.byteMatchStatement == null ? Codegen.empty() : this.byteMatchStatement;
+    public Optional<Output<WebAclRuleStatementByteMatchStatementArgs>> byteMatchStatement() {
+        return Optional.ofNullable(this.byteMatchStatement);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="geoMatchStatement")
-      private final @Nullable Output<WebAclRuleStatementGeoMatchStatementArgs> geoMatchStatement;
+    private @Nullable Output<WebAclRuleStatementGeoMatchStatementArgs> geoMatchStatement;
 
-    public Output<WebAclRuleStatementGeoMatchStatementArgs> geoMatchStatement() {
-        return this.geoMatchStatement == null ? Codegen.empty() : this.geoMatchStatement;
+    public Optional<Output<WebAclRuleStatementGeoMatchStatementArgs>> geoMatchStatement() {
+        return Optional.ofNullable(this.geoMatchStatement);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ipSetReferenceStatement")
-      private final @Nullable Output<WebAclRuleStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
+    private @Nullable Output<WebAclRuleStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
 
-    public Output<WebAclRuleStatementIpSetReferenceStatementArgs> ipSetReferenceStatement() {
-        return this.ipSetReferenceStatement == null ? Codegen.empty() : this.ipSetReferenceStatement;
+    public Optional<Output<WebAclRuleStatementIpSetReferenceStatementArgs>> ipSetReferenceStatement() {
+        return Optional.ofNullable(this.ipSetReferenceStatement);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="labelMatchStatement")
-      private final @Nullable Output<WebAclRuleStatementLabelMatchStatementArgs> labelMatchStatement;
+    private @Nullable Output<WebAclRuleStatementLabelMatchStatementArgs> labelMatchStatement;
 
-    public Output<WebAclRuleStatementLabelMatchStatementArgs> labelMatchStatement() {
-        return this.labelMatchStatement == null ? Codegen.empty() : this.labelMatchStatement;
+    public Optional<Output<WebAclRuleStatementLabelMatchStatementArgs>> labelMatchStatement() {
+        return Optional.ofNullable(this.labelMatchStatement);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="managedRuleGroupStatement")
-      private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementArgs> managedRuleGroupStatement;
+    private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementArgs> managedRuleGroupStatement;
 
-    public Output<WebAclRuleStatementManagedRuleGroupStatementArgs> managedRuleGroupStatement() {
-        return this.managedRuleGroupStatement == null ? Codegen.empty() : this.managedRuleGroupStatement;
+    public Optional<Output<WebAclRuleStatementManagedRuleGroupStatementArgs>> managedRuleGroupStatement() {
+        return Optional.ofNullable(this.managedRuleGroupStatement);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="notStatement")
-      private final @Nullable Output<WebAclRuleStatementNotStatementArgs> notStatement;
+    private @Nullable Output<WebAclRuleStatementNotStatementArgs> notStatement;
 
-    public Output<WebAclRuleStatementNotStatementArgs> notStatement() {
-        return this.notStatement == null ? Codegen.empty() : this.notStatement;
+    public Optional<Output<WebAclRuleStatementNotStatementArgs>> notStatement() {
+        return Optional.ofNullable(this.notStatement);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="orStatement")
-      private final @Nullable Output<WebAclRuleStatementOrStatementArgs> orStatement;
+    private @Nullable Output<WebAclRuleStatementOrStatementArgs> orStatement;
 
-    public Output<WebAclRuleStatementOrStatementArgs> orStatement() {
-        return this.orStatement == null ? Codegen.empty() : this.orStatement;
+    public Optional<Output<WebAclRuleStatementOrStatementArgs>> orStatement() {
+        return Optional.ofNullable(this.orStatement);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="rateBasedStatement")
-      private final @Nullable Output<WebAclRuleStatementRateBasedStatementArgs> rateBasedStatement;
+    private @Nullable Output<WebAclRuleStatementRateBasedStatementArgs> rateBasedStatement;
 
-    public Output<WebAclRuleStatementRateBasedStatementArgs> rateBasedStatement() {
-        return this.rateBasedStatement == null ? Codegen.empty() : this.rateBasedStatement;
+    public Optional<Output<WebAclRuleStatementRateBasedStatementArgs>> rateBasedStatement() {
+        return Optional.ofNullable(this.rateBasedStatement);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="regexPatternSetReferenceStatement")
-      private final @Nullable Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
+    private @Nullable Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
-    public Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement() {
-        return this.regexPatternSetReferenceStatement == null ? Codegen.empty() : this.regexPatternSetReferenceStatement;
+    public Optional<Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs>> regexPatternSetReferenceStatement() {
+        return Optional.ofNullable(this.regexPatternSetReferenceStatement);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ruleGroupReferenceStatement")
-      private final @Nullable Output<WebAclRuleStatementRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement;
+    private @Nullable Output<WebAclRuleStatementRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement;
 
-    public Output<WebAclRuleStatementRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement() {
-        return this.ruleGroupReferenceStatement == null ? Codegen.empty() : this.ruleGroupReferenceStatement;
+    public Optional<Output<WebAclRuleStatementRuleGroupReferenceStatementArgs>> ruleGroupReferenceStatement() {
+        return Optional.ofNullable(this.ruleGroupReferenceStatement);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sizeConstraintStatement")
-      private final @Nullable Output<WebAclRuleStatementSizeConstraintStatementArgs> sizeConstraintStatement;
+    private @Nullable Output<WebAclRuleStatementSizeConstraintStatementArgs> sizeConstraintStatement;
 
-    public Output<WebAclRuleStatementSizeConstraintStatementArgs> sizeConstraintStatement() {
-        return this.sizeConstraintStatement == null ? Codegen.empty() : this.sizeConstraintStatement;
+    public Optional<Output<WebAclRuleStatementSizeConstraintStatementArgs>> sizeConstraintStatement() {
+        return Optional.ofNullable(this.sizeConstraintStatement);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sqliMatchStatement")
-      private final @Nullable Output<WebAclRuleStatementSqliMatchStatementArgs> sqliMatchStatement;
+    private @Nullable Output<WebAclRuleStatementSqliMatchStatementArgs> sqliMatchStatement;
 
-    public Output<WebAclRuleStatementSqliMatchStatementArgs> sqliMatchStatement() {
-        return this.sqliMatchStatement == null ? Codegen.empty() : this.sqliMatchStatement;
+    public Optional<Output<WebAclRuleStatementSqliMatchStatementArgs>> sqliMatchStatement() {
+        return Optional.ofNullable(this.sqliMatchStatement);
     }
 
     /**
@@ -176,219 +176,178 @@ public final class WebAclRuleStatementArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="xssMatchStatement")
-      private final @Nullable Output<WebAclRuleStatementXssMatchStatementArgs> xssMatchStatement;
+    private @Nullable Output<WebAclRuleStatementXssMatchStatementArgs> xssMatchStatement;
 
-    public Output<WebAclRuleStatementXssMatchStatementArgs> xssMatchStatement() {
-        return this.xssMatchStatement == null ? Codegen.empty() : this.xssMatchStatement;
+    public Optional<Output<WebAclRuleStatementXssMatchStatementArgs>> xssMatchStatement() {
+        return Optional.ofNullable(this.xssMatchStatement);
     }
 
-    public WebAclRuleStatementArgs(
-        @Nullable Output<WebAclRuleStatementAndStatementArgs> andStatement,
-        @Nullable Output<WebAclRuleStatementByteMatchStatementArgs> byteMatchStatement,
-        @Nullable Output<WebAclRuleStatementGeoMatchStatementArgs> geoMatchStatement,
-        @Nullable Output<WebAclRuleStatementIpSetReferenceStatementArgs> ipSetReferenceStatement,
-        @Nullable Output<WebAclRuleStatementLabelMatchStatementArgs> labelMatchStatement,
-        @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementArgs> managedRuleGroupStatement,
-        @Nullable Output<WebAclRuleStatementNotStatementArgs> notStatement,
-        @Nullable Output<WebAclRuleStatementOrStatementArgs> orStatement,
-        @Nullable Output<WebAclRuleStatementRateBasedStatementArgs> rateBasedStatement,
-        @Nullable Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement,
-        @Nullable Output<WebAclRuleStatementRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement,
-        @Nullable Output<WebAclRuleStatementSizeConstraintStatementArgs> sizeConstraintStatement,
-        @Nullable Output<WebAclRuleStatementSqliMatchStatementArgs> sqliMatchStatement,
-        @Nullable Output<WebAclRuleStatementXssMatchStatementArgs> xssMatchStatement) {
-        this.andStatement = andStatement;
-        this.byteMatchStatement = byteMatchStatement;
-        this.geoMatchStatement = geoMatchStatement;
-        this.ipSetReferenceStatement = ipSetReferenceStatement;
-        this.labelMatchStatement = labelMatchStatement;
-        this.managedRuleGroupStatement = managedRuleGroupStatement;
-        this.notStatement = notStatement;
-        this.orStatement = orStatement;
-        this.rateBasedStatement = rateBasedStatement;
-        this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
-        this.ruleGroupReferenceStatement = ruleGroupReferenceStatement;
-        this.sizeConstraintStatement = sizeConstraintStatement;
-        this.sqliMatchStatement = sqliMatchStatement;
-        this.xssMatchStatement = xssMatchStatement;
-    }
+    private WebAclRuleStatementArgs() {}
 
-    private WebAclRuleStatementArgs() {
-        this.andStatement = Codegen.empty();
-        this.byteMatchStatement = Codegen.empty();
-        this.geoMatchStatement = Codegen.empty();
-        this.ipSetReferenceStatement = Codegen.empty();
-        this.labelMatchStatement = Codegen.empty();
-        this.managedRuleGroupStatement = Codegen.empty();
-        this.notStatement = Codegen.empty();
-        this.orStatement = Codegen.empty();
-        this.rateBasedStatement = Codegen.empty();
-        this.regexPatternSetReferenceStatement = Codegen.empty();
-        this.ruleGroupReferenceStatement = Codegen.empty();
-        this.sizeConstraintStatement = Codegen.empty();
-        this.sqliMatchStatement = Codegen.empty();
-        this.xssMatchStatement = Codegen.empty();
+    private WebAclRuleStatementArgs(WebAclRuleStatementArgs $) {
+        this.andStatement = $.andStatement;
+        this.byteMatchStatement = $.byteMatchStatement;
+        this.geoMatchStatement = $.geoMatchStatement;
+        this.ipSetReferenceStatement = $.ipSetReferenceStatement;
+        this.labelMatchStatement = $.labelMatchStatement;
+        this.managedRuleGroupStatement = $.managedRuleGroupStatement;
+        this.notStatement = $.notStatement;
+        this.orStatement = $.orStatement;
+        this.rateBasedStatement = $.rateBasedStatement;
+        this.regexPatternSetReferenceStatement = $.regexPatternSetReferenceStatement;
+        this.ruleGroupReferenceStatement = $.ruleGroupReferenceStatement;
+        this.sizeConstraintStatement = $.sizeConstraintStatement;
+        this.sqliMatchStatement = $.sqliMatchStatement;
+        this.xssMatchStatement = $.xssMatchStatement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclRuleStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebAclRuleStatementAndStatementArgs> andStatement;
-        private @Nullable Output<WebAclRuleStatementByteMatchStatementArgs> byteMatchStatement;
-        private @Nullable Output<WebAclRuleStatementGeoMatchStatementArgs> geoMatchStatement;
-        private @Nullable Output<WebAclRuleStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
-        private @Nullable Output<WebAclRuleStatementLabelMatchStatementArgs> labelMatchStatement;
-        private @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementArgs> managedRuleGroupStatement;
-        private @Nullable Output<WebAclRuleStatementNotStatementArgs> notStatement;
-        private @Nullable Output<WebAclRuleStatementOrStatementArgs> orStatement;
-        private @Nullable Output<WebAclRuleStatementRateBasedStatementArgs> rateBasedStatement;
-        private @Nullable Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
-        private @Nullable Output<WebAclRuleStatementRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement;
-        private @Nullable Output<WebAclRuleStatementSizeConstraintStatementArgs> sizeConstraintStatement;
-        private @Nullable Output<WebAclRuleStatementSqliMatchStatementArgs> sqliMatchStatement;
-        private @Nullable Output<WebAclRuleStatementXssMatchStatementArgs> xssMatchStatement;
+        private WebAclRuleStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclRuleStatementArgs();
         }
 
         public Builder(WebAclRuleStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.andStatement = defaults.andStatement;
-    	      this.byteMatchStatement = defaults.byteMatchStatement;
-    	      this.geoMatchStatement = defaults.geoMatchStatement;
-    	      this.ipSetReferenceStatement = defaults.ipSetReferenceStatement;
-    	      this.labelMatchStatement = defaults.labelMatchStatement;
-    	      this.managedRuleGroupStatement = defaults.managedRuleGroupStatement;
-    	      this.notStatement = defaults.notStatement;
-    	      this.orStatement = defaults.orStatement;
-    	      this.rateBasedStatement = defaults.rateBasedStatement;
-    	      this.regexPatternSetReferenceStatement = defaults.regexPatternSetReferenceStatement;
-    	      this.ruleGroupReferenceStatement = defaults.ruleGroupReferenceStatement;
-    	      this.sizeConstraintStatement = defaults.sizeConstraintStatement;
-    	      this.sqliMatchStatement = defaults.sqliMatchStatement;
-    	      this.xssMatchStatement = defaults.xssMatchStatement;
+            $ = new WebAclRuleStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder andStatement(@Nullable Output<WebAclRuleStatementAndStatementArgs> andStatement) {
-            this.andStatement = andStatement;
+            $.andStatement = andStatement;
             return this;
         }
-        public Builder andStatement(@Nullable WebAclRuleStatementAndStatementArgs andStatement) {
-            this.andStatement = Codegen.ofNullable(andStatement);
-            return this;
+
+        public Builder andStatement(WebAclRuleStatementAndStatementArgs andStatement) {
+            return andStatement(Output.of(andStatement));
         }
+
         public Builder byteMatchStatement(@Nullable Output<WebAclRuleStatementByteMatchStatementArgs> byteMatchStatement) {
-            this.byteMatchStatement = byteMatchStatement;
+            $.byteMatchStatement = byteMatchStatement;
             return this;
         }
-        public Builder byteMatchStatement(@Nullable WebAclRuleStatementByteMatchStatementArgs byteMatchStatement) {
-            this.byteMatchStatement = Codegen.ofNullable(byteMatchStatement);
-            return this;
+
+        public Builder byteMatchStatement(WebAclRuleStatementByteMatchStatementArgs byteMatchStatement) {
+            return byteMatchStatement(Output.of(byteMatchStatement));
         }
+
         public Builder geoMatchStatement(@Nullable Output<WebAclRuleStatementGeoMatchStatementArgs> geoMatchStatement) {
-            this.geoMatchStatement = geoMatchStatement;
+            $.geoMatchStatement = geoMatchStatement;
             return this;
         }
-        public Builder geoMatchStatement(@Nullable WebAclRuleStatementGeoMatchStatementArgs geoMatchStatement) {
-            this.geoMatchStatement = Codegen.ofNullable(geoMatchStatement);
-            return this;
+
+        public Builder geoMatchStatement(WebAclRuleStatementGeoMatchStatementArgs geoMatchStatement) {
+            return geoMatchStatement(Output.of(geoMatchStatement));
         }
+
         public Builder ipSetReferenceStatement(@Nullable Output<WebAclRuleStatementIpSetReferenceStatementArgs> ipSetReferenceStatement) {
-            this.ipSetReferenceStatement = ipSetReferenceStatement;
+            $.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
-        public Builder ipSetReferenceStatement(@Nullable WebAclRuleStatementIpSetReferenceStatementArgs ipSetReferenceStatement) {
-            this.ipSetReferenceStatement = Codegen.ofNullable(ipSetReferenceStatement);
-            return this;
+
+        public Builder ipSetReferenceStatement(WebAclRuleStatementIpSetReferenceStatementArgs ipSetReferenceStatement) {
+            return ipSetReferenceStatement(Output.of(ipSetReferenceStatement));
         }
+
         public Builder labelMatchStatement(@Nullable Output<WebAclRuleStatementLabelMatchStatementArgs> labelMatchStatement) {
-            this.labelMatchStatement = labelMatchStatement;
+            $.labelMatchStatement = labelMatchStatement;
             return this;
         }
-        public Builder labelMatchStatement(@Nullable WebAclRuleStatementLabelMatchStatementArgs labelMatchStatement) {
-            this.labelMatchStatement = Codegen.ofNullable(labelMatchStatement);
-            return this;
+
+        public Builder labelMatchStatement(WebAclRuleStatementLabelMatchStatementArgs labelMatchStatement) {
+            return labelMatchStatement(Output.of(labelMatchStatement));
         }
+
         public Builder managedRuleGroupStatement(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementArgs> managedRuleGroupStatement) {
-            this.managedRuleGroupStatement = managedRuleGroupStatement;
+            $.managedRuleGroupStatement = managedRuleGroupStatement;
             return this;
         }
-        public Builder managedRuleGroupStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementArgs managedRuleGroupStatement) {
-            this.managedRuleGroupStatement = Codegen.ofNullable(managedRuleGroupStatement);
-            return this;
+
+        public Builder managedRuleGroupStatement(WebAclRuleStatementManagedRuleGroupStatementArgs managedRuleGroupStatement) {
+            return managedRuleGroupStatement(Output.of(managedRuleGroupStatement));
         }
+
         public Builder notStatement(@Nullable Output<WebAclRuleStatementNotStatementArgs> notStatement) {
-            this.notStatement = notStatement;
+            $.notStatement = notStatement;
             return this;
         }
-        public Builder notStatement(@Nullable WebAclRuleStatementNotStatementArgs notStatement) {
-            this.notStatement = Codegen.ofNullable(notStatement);
-            return this;
+
+        public Builder notStatement(WebAclRuleStatementNotStatementArgs notStatement) {
+            return notStatement(Output.of(notStatement));
         }
+
         public Builder orStatement(@Nullable Output<WebAclRuleStatementOrStatementArgs> orStatement) {
-            this.orStatement = orStatement;
+            $.orStatement = orStatement;
             return this;
         }
-        public Builder orStatement(@Nullable WebAclRuleStatementOrStatementArgs orStatement) {
-            this.orStatement = Codegen.ofNullable(orStatement);
-            return this;
+
+        public Builder orStatement(WebAclRuleStatementOrStatementArgs orStatement) {
+            return orStatement(Output.of(orStatement));
         }
+
         public Builder rateBasedStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementArgs> rateBasedStatement) {
-            this.rateBasedStatement = rateBasedStatement;
+            $.rateBasedStatement = rateBasedStatement;
             return this;
         }
-        public Builder rateBasedStatement(@Nullable WebAclRuleStatementRateBasedStatementArgs rateBasedStatement) {
-            this.rateBasedStatement = Codegen.ofNullable(rateBasedStatement);
-            return this;
+
+        public Builder rateBasedStatement(WebAclRuleStatementRateBasedStatementArgs rateBasedStatement) {
+            return rateBasedStatement(Output.of(rateBasedStatement));
         }
+
         public Builder regexPatternSetReferenceStatement(@Nullable Output<WebAclRuleStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement) {
-            this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
+            $.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
-        public Builder regexPatternSetReferenceStatement(@Nullable WebAclRuleStatementRegexPatternSetReferenceStatementArgs regexPatternSetReferenceStatement) {
-            this.regexPatternSetReferenceStatement = Codegen.ofNullable(regexPatternSetReferenceStatement);
-            return this;
+
+        public Builder regexPatternSetReferenceStatement(WebAclRuleStatementRegexPatternSetReferenceStatementArgs regexPatternSetReferenceStatement) {
+            return regexPatternSetReferenceStatement(Output.of(regexPatternSetReferenceStatement));
         }
+
         public Builder ruleGroupReferenceStatement(@Nullable Output<WebAclRuleStatementRuleGroupReferenceStatementArgs> ruleGroupReferenceStatement) {
-            this.ruleGroupReferenceStatement = ruleGroupReferenceStatement;
+            $.ruleGroupReferenceStatement = ruleGroupReferenceStatement;
             return this;
         }
-        public Builder ruleGroupReferenceStatement(@Nullable WebAclRuleStatementRuleGroupReferenceStatementArgs ruleGroupReferenceStatement) {
-            this.ruleGroupReferenceStatement = Codegen.ofNullable(ruleGroupReferenceStatement);
-            return this;
+
+        public Builder ruleGroupReferenceStatement(WebAclRuleStatementRuleGroupReferenceStatementArgs ruleGroupReferenceStatement) {
+            return ruleGroupReferenceStatement(Output.of(ruleGroupReferenceStatement));
         }
+
         public Builder sizeConstraintStatement(@Nullable Output<WebAclRuleStatementSizeConstraintStatementArgs> sizeConstraintStatement) {
-            this.sizeConstraintStatement = sizeConstraintStatement;
+            $.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
-        public Builder sizeConstraintStatement(@Nullable WebAclRuleStatementSizeConstraintStatementArgs sizeConstraintStatement) {
-            this.sizeConstraintStatement = Codegen.ofNullable(sizeConstraintStatement);
-            return this;
+
+        public Builder sizeConstraintStatement(WebAclRuleStatementSizeConstraintStatementArgs sizeConstraintStatement) {
+            return sizeConstraintStatement(Output.of(sizeConstraintStatement));
         }
+
         public Builder sqliMatchStatement(@Nullable Output<WebAclRuleStatementSqliMatchStatementArgs> sqliMatchStatement) {
-            this.sqliMatchStatement = sqliMatchStatement;
+            $.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
-        public Builder sqliMatchStatement(@Nullable WebAclRuleStatementSqliMatchStatementArgs sqliMatchStatement) {
-            this.sqliMatchStatement = Codegen.ofNullable(sqliMatchStatement);
-            return this;
+
+        public Builder sqliMatchStatement(WebAclRuleStatementSqliMatchStatementArgs sqliMatchStatement) {
+            return sqliMatchStatement(Output.of(sqliMatchStatement));
         }
+
         public Builder xssMatchStatement(@Nullable Output<WebAclRuleStatementXssMatchStatementArgs> xssMatchStatement) {
-            this.xssMatchStatement = xssMatchStatement;
+            $.xssMatchStatement = xssMatchStatement;
             return this;
         }
-        public Builder xssMatchStatement(@Nullable WebAclRuleStatementXssMatchStatementArgs xssMatchStatement) {
-            this.xssMatchStatement = Codegen.ofNullable(xssMatchStatement);
-            return this;
-        }        public WebAclRuleStatementArgs build() {
-            return new WebAclRuleStatementArgs(andStatement, byteMatchStatement, geoMatchStatement, ipSetReferenceStatement, labelMatchStatement, managedRuleGroupStatement, notStatement, orStatement, rateBasedStatement, regexPatternSetReferenceStatement, ruleGroupReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);
+
+        public Builder xssMatchStatement(WebAclRuleStatementXssMatchStatementArgs xssMatchStatement) {
+            return xssMatchStatement(Output.of(xssMatchStatement));
+        }
+
+        public WebAclRuleStatementArgs build() {
+            return $;
         }
     }
+
 }

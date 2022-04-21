@@ -7,11 +7,11 @@ import com.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionGetArgs;
 import com.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memberDefinitions")
-      private final @Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions;
+    private @Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions;
 
-    public Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions() {
-        return this.memberDefinitions == null ? Codegen.empty() : this.memberDefinitions;
+    public Optional<Output<List<WorkteamMemberDefinitionGetArgs>>> memberDefinitions() {
+        return Optional.ofNullable(this.memberDefinitions);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfiguration")
-      private final @Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration;
+    private @Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration;
 
-    public Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration() {
-        return this.notificationConfiguration == null ? Codegen.empty() : this.notificationConfiguration;
+    public Optional<Output<WorkteamNotificationConfigurationGetArgs>> notificationConfiguration() {
+        return Optional.ofNullable(this.notificationConfiguration);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subdomain")
-      private final @Nullable Output<String> subdomain;
+    private @Nullable Output<String> subdomain;
 
-    public Output<String> subdomain() {
-        return this.subdomain == null ? Codegen.empty() : this.subdomain;
+    public Optional<Output<String>> subdomain() {
+        return Optional.ofNullable(this.subdomain);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workforceName")
-      private final @Nullable Output<String> workforceName;
+    private @Nullable Output<String> workforceName;
 
-    public Output<String> workforceName() {
-        return this.workforceName == null ? Codegen.empty() : this.workforceName;
+    public Optional<Output<String>> workforceName() {
+        return Optional.ofNullable(this.workforceName);
     }
 
     /**
@@ -112,157 +112,132 @@ public final class WorkteamState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workteamName")
-      private final @Nullable Output<String> workteamName;
+    private @Nullable Output<String> workteamName;
 
-    public Output<String> workteamName() {
-        return this.workteamName == null ? Codegen.empty() : this.workteamName;
+    public Optional<Output<String>> workteamName() {
+        return Optional.ofNullable(this.workteamName);
     }
 
-    public WorkteamState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions,
-        @Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration,
-        @Nullable Output<String> subdomain,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> workforceName,
-        @Nullable Output<String> workteamName) {
-        this.arn = arn;
-        this.description = description;
-        this.memberDefinitions = memberDefinitions;
-        this.notificationConfiguration = notificationConfiguration;
-        this.subdomain = subdomain;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.workforceName = workforceName;
-        this.workteamName = workteamName;
-    }
+    private WorkteamState() {}
 
-    private WorkteamState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.memberDefinitions = Codegen.empty();
-        this.notificationConfiguration = Codegen.empty();
-        this.subdomain = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.workforceName = Codegen.empty();
-        this.workteamName = Codegen.empty();
+    private WorkteamState(WorkteamState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.memberDefinitions = $.memberDefinitions;
+        this.notificationConfiguration = $.notificationConfiguration;
+        this.subdomain = $.subdomain;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.workforceName = $.workforceName;
+        this.workteamName = $.workteamName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkteamState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions;
-        private @Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration;
-        private @Nullable Output<String> subdomain;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> workforceName;
-        private @Nullable Output<String> workteamName;
+        private WorkteamState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkteamState();
         }
 
         public Builder(WorkteamState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.memberDefinitions = defaults.memberDefinitions;
-    	      this.notificationConfiguration = defaults.notificationConfiguration;
-    	      this.subdomain = defaults.subdomain;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.workforceName = defaults.workforceName;
-    	      this.workteamName = defaults.workteamName;
+            $ = new WorkteamState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder memberDefinitions(@Nullable Output<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions) {
-            this.memberDefinitions = memberDefinitions;
+            $.memberDefinitions = memberDefinitions;
             return this;
         }
-        public Builder memberDefinitions(@Nullable List<WorkteamMemberDefinitionGetArgs> memberDefinitions) {
-            this.memberDefinitions = Codegen.ofNullable(memberDefinitions);
-            return this;
+
+        public Builder memberDefinitions(List<WorkteamMemberDefinitionGetArgs> memberDefinitions) {
+            return memberDefinitions(Output.of(memberDefinitions));
         }
+
         public Builder memberDefinitions(WorkteamMemberDefinitionGetArgs... memberDefinitions) {
             return memberDefinitions(List.of(memberDefinitions));
         }
+
         public Builder notificationConfiguration(@Nullable Output<WorkteamNotificationConfigurationGetArgs> notificationConfiguration) {
-            this.notificationConfiguration = notificationConfiguration;
+            $.notificationConfiguration = notificationConfiguration;
             return this;
         }
-        public Builder notificationConfiguration(@Nullable WorkteamNotificationConfigurationGetArgs notificationConfiguration) {
-            this.notificationConfiguration = Codegen.ofNullable(notificationConfiguration);
-            return this;
+
+        public Builder notificationConfiguration(WorkteamNotificationConfigurationGetArgs notificationConfiguration) {
+            return notificationConfiguration(Output.of(notificationConfiguration));
         }
+
         public Builder subdomain(@Nullable Output<String> subdomain) {
-            this.subdomain = subdomain;
+            $.subdomain = subdomain;
             return this;
         }
-        public Builder subdomain(@Nullable String subdomain) {
-            this.subdomain = Codegen.ofNullable(subdomain);
-            return this;
+
+        public Builder subdomain(String subdomain) {
+            return subdomain(Output.of(subdomain));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder workforceName(@Nullable Output<String> workforceName) {
-            this.workforceName = workforceName;
+            $.workforceName = workforceName;
             return this;
         }
-        public Builder workforceName(@Nullable String workforceName) {
-            this.workforceName = Codegen.ofNullable(workforceName);
-            return this;
+
+        public Builder workforceName(String workforceName) {
+            return workforceName(Output.of(workforceName));
         }
+
         public Builder workteamName(@Nullable Output<String> workteamName) {
-            this.workteamName = workteamName;
+            $.workteamName = workteamName;
             return this;
         }
-        public Builder workteamName(@Nullable String workteamName) {
-            this.workteamName = Codegen.ofNullable(workteamName);
-            return this;
-        }        public WorkteamState build() {
-            return new WorkteamState(arn, description, memberDefinitions, notificationConfiguration, subdomain, tags, tagsAll, workforceName, workteamName);
+
+        public Builder workteamName(String workteamName) {
+            return workteamName(Output.of(workteamName));
+        }
+
+        public WorkteamState build() {
+            return $;
         }
     }
+
 }

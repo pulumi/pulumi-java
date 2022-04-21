@@ -14,62 +14,59 @@ public final class GetClusterNotificationConfigPubsub extends com.pulumi.resourc
     public static final GetClusterNotificationConfigPubsub Empty = new GetClusterNotificationConfigPubsub();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public GetClusterNotificationConfigPubsub(
-        Boolean enabled,
-        String topic) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private GetClusterNotificationConfigPubsub() {}
 
-    private GetClusterNotificationConfigPubsub() {
-        this.enabled = null;
-        this.topic = null;
+    private GetClusterNotificationConfigPubsub(GetClusterNotificationConfigPubsub $) {
+        this.enabled = $.enabled;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNotificationConfigPubsub defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String topic;
+        private GetClusterNotificationConfigPubsub $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNotificationConfigPubsub();
         }
 
         public Builder(GetClusterNotificationConfigPubsub defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.topic = defaults.topic;
+            $ = new GetClusterNotificationConfigPubsub(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public GetClusterNotificationConfigPubsub build() {
-            return new GetClusterNotificationConfigPubsub(enabled, topic);
+        }
+
+        public GetClusterNotificationConfigPubsub build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

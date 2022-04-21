@@ -5,7 +5,6 @@ package com.pulumi.googlenative.domains_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.domains_v1alpha2.enums.ContactSettingsPrivacy;
 import com.pulumi.googlenative.domains_v1alpha2.inputs.ContactArgs;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="adminContact", required=true)
-      private final Output<ContactArgs> adminContact;
+    private Output<ContactArgs> adminContact;
 
     public Output<ContactArgs> adminContact() {
         return this.adminContact;
@@ -35,7 +34,7 @@ public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="privacy", required=true)
-      private final Output<ContactSettingsPrivacy> privacy;
+    private Output<ContactSettingsPrivacy> privacy;
 
     public Output<ContactSettingsPrivacy> privacy() {
         return this.privacy;
@@ -46,7 +45,7 @@ public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="registrantContact", required=true)
-      private final Output<ContactArgs> registrantContact;
+    private Output<ContactArgs> registrantContact;
 
     public Output<ContactArgs> registrantContact() {
         return this.registrantContact;
@@ -57,89 +56,82 @@ public final class ContactSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="technicalContact", required=true)
-      private final Output<ContactArgs> technicalContact;
+    private Output<ContactArgs> technicalContact;
 
     public Output<ContactArgs> technicalContact() {
         return this.technicalContact;
     }
 
-    public ContactSettingsArgs(
-        Output<ContactArgs> adminContact,
-        Output<ContactSettingsPrivacy> privacy,
-        Output<ContactArgs> registrantContact,
-        Output<ContactArgs> technicalContact) {
-        this.adminContact = Objects.requireNonNull(adminContact, "expected parameter 'adminContact' to be non-null");
-        this.privacy = Objects.requireNonNull(privacy, "expected parameter 'privacy' to be non-null");
-        this.registrantContact = Objects.requireNonNull(registrantContact, "expected parameter 'registrantContact' to be non-null");
-        this.technicalContact = Objects.requireNonNull(technicalContact, "expected parameter 'technicalContact' to be non-null");
-    }
+    private ContactSettingsArgs() {}
 
-    private ContactSettingsArgs() {
-        this.adminContact = Codegen.empty();
-        this.privacy = Codegen.empty();
-        this.registrantContact = Codegen.empty();
-        this.technicalContact = Codegen.empty();
+    private ContactSettingsArgs(ContactSettingsArgs $) {
+        this.adminContact = $.adminContact;
+        this.privacy = $.privacy;
+        this.registrantContact = $.registrantContact;
+        this.technicalContact = $.technicalContact;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ContactArgs> adminContact;
-        private Output<ContactSettingsPrivacy> privacy;
-        private Output<ContactArgs> registrantContact;
-        private Output<ContactArgs> technicalContact;
+        private ContactSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactSettingsArgs();
         }
 
         public Builder(ContactSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminContact = defaults.adminContact;
-    	      this.privacy = defaults.privacy;
-    	      this.registrantContact = defaults.registrantContact;
-    	      this.technicalContact = defaults.technicalContact;
+            $ = new ContactSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminContact(Output<ContactArgs> adminContact) {
-            this.adminContact = Objects.requireNonNull(adminContact);
+            $.adminContact = adminContact;
             return this;
         }
+
         public Builder adminContact(ContactArgs adminContact) {
-            this.adminContact = Output.of(Objects.requireNonNull(adminContact));
-            return this;
+            return adminContact(Output.of(adminContact));
         }
+
         public Builder privacy(Output<ContactSettingsPrivacy> privacy) {
-            this.privacy = Objects.requireNonNull(privacy);
+            $.privacy = privacy;
             return this;
         }
+
         public Builder privacy(ContactSettingsPrivacy privacy) {
-            this.privacy = Output.of(Objects.requireNonNull(privacy));
-            return this;
+            return privacy(Output.of(privacy));
         }
+
         public Builder registrantContact(Output<ContactArgs> registrantContact) {
-            this.registrantContact = Objects.requireNonNull(registrantContact);
+            $.registrantContact = registrantContact;
             return this;
         }
+
         public Builder registrantContact(ContactArgs registrantContact) {
-            this.registrantContact = Output.of(Objects.requireNonNull(registrantContact));
-            return this;
+            return registrantContact(Output.of(registrantContact));
         }
+
         public Builder technicalContact(Output<ContactArgs> technicalContact) {
-            this.technicalContact = Objects.requireNonNull(technicalContact);
+            $.technicalContact = technicalContact;
             return this;
         }
+
         public Builder technicalContact(ContactArgs technicalContact) {
-            this.technicalContact = Output.of(Objects.requireNonNull(technicalContact));
-            return this;
-        }        public ContactSettingsArgs build() {
-            return new ContactSettingsArgs(adminContact, privacy, registrantContact, technicalContact);
+            return technicalContact(Output.of(technicalContact));
+        }
+
+        public ContactSettingsArgs build() {
+            $.adminContact = Objects.requireNonNull($.adminContact, "expected parameter 'adminContact' to be non-null");
+            $.privacy = Objects.requireNonNull($.privacy, "expected parameter 'privacy' to be non-null");
+            $.registrantContact = Objects.requireNonNull($.registrantContact, "expected parameter 'registrantContact' to be non-null");
+            $.technicalContact = Objects.requireNonNull($.technicalContact, "expected parameter 'technicalContact' to be non-null");
+            return $;
         }
     }
+
 }

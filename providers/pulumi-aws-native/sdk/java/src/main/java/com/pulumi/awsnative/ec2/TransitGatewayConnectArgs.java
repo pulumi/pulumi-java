@@ -7,10 +7,10 @@ import com.pulumi.awsnative.ec2.inputs.TransitGatewayConnectOptionsArgs;
 import com.pulumi.awsnative.ec2.inputs.TransitGatewayConnectTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class TransitGatewayConnectArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="options", required=true)
-      private final Output<TransitGatewayConnectOptionsArgs> options;
+    private Output<TransitGatewayConnectOptionsArgs> options;
 
     public Output<TransitGatewayConnectOptionsArgs> options() {
         return this.options;
@@ -34,10 +34,10 @@ public final class TransitGatewayConnectArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<TransitGatewayConnectTagArgs>> tags;
+    private @Nullable Output<List<TransitGatewayConnectTagArgs>> tags;
 
-    public Output<List<TransitGatewayConnectTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TransitGatewayConnectTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -45,79 +45,74 @@ public final class TransitGatewayConnectArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="transportTransitGatewayAttachmentId", required=true)
-      private final Output<String> transportTransitGatewayAttachmentId;
+    private Output<String> transportTransitGatewayAttachmentId;
 
     public Output<String> transportTransitGatewayAttachmentId() {
         return this.transportTransitGatewayAttachmentId;
     }
 
-    public TransitGatewayConnectArgs(
-        Output<TransitGatewayConnectOptionsArgs> options,
-        @Nullable Output<List<TransitGatewayConnectTagArgs>> tags,
-        Output<String> transportTransitGatewayAttachmentId) {
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-        this.tags = tags;
-        this.transportTransitGatewayAttachmentId = Objects.requireNonNull(transportTransitGatewayAttachmentId, "expected parameter 'transportTransitGatewayAttachmentId' to be non-null");
-    }
+    private TransitGatewayConnectArgs() {}
 
-    private TransitGatewayConnectArgs() {
-        this.options = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transportTransitGatewayAttachmentId = Codegen.empty();
+    private TransitGatewayConnectArgs(TransitGatewayConnectArgs $) {
+        this.options = $.options;
+        this.tags = $.tags;
+        this.transportTransitGatewayAttachmentId = $.transportTransitGatewayAttachmentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayConnectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<TransitGatewayConnectOptionsArgs> options;
-        private @Nullable Output<List<TransitGatewayConnectTagArgs>> tags;
-        private Output<String> transportTransitGatewayAttachmentId;
+        private TransitGatewayConnectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayConnectArgs();
         }
 
         public Builder(TransitGatewayConnectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.options = defaults.options;
-    	      this.tags = defaults.tags;
-    	      this.transportTransitGatewayAttachmentId = defaults.transportTransitGatewayAttachmentId;
+            $ = new TransitGatewayConnectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder options(Output<TransitGatewayConnectOptionsArgs> options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder options(TransitGatewayConnectOptionsArgs options) {
-            this.options = Output.of(Objects.requireNonNull(options));
-            return this;
+            return options(Output.of(options));
         }
+
         public Builder tags(@Nullable Output<List<TransitGatewayConnectTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TransitGatewayConnectTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TransitGatewayConnectTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TransitGatewayConnectTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder transportTransitGatewayAttachmentId(Output<String> transportTransitGatewayAttachmentId) {
-            this.transportTransitGatewayAttachmentId = Objects.requireNonNull(transportTransitGatewayAttachmentId);
+            $.transportTransitGatewayAttachmentId = transportTransitGatewayAttachmentId;
             return this;
         }
+
         public Builder transportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
-            this.transportTransitGatewayAttachmentId = Output.of(Objects.requireNonNull(transportTransitGatewayAttachmentId));
-            return this;
-        }        public TransitGatewayConnectArgs build() {
-            return new TransitGatewayConnectArgs(options, tags, transportTransitGatewayAttachmentId);
+            return transportTransitGatewayAttachmentId(Output.of(transportTransitGatewayAttachmentId));
+        }
+
+        public TransitGatewayConnectArgs build() {
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            $.transportTransitGatewayAttachmentId = Objects.requireNonNull($.transportTransitGatewayAttachmentId, "expected parameter 'transportTransitGatewayAttachmentId' to be non-null");
+            return $;
         }
     }
+
 }

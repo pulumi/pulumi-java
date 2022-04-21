@@ -7,9 +7,9 @@ import com.pulumi.azurenative.sql.enums.ServerKeyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="managedInstanceName", required=true)
-      private final Output<String> managedInstanceName;
+    private Output<String> managedInstanceName;
 
     public Output<String> managedInstanceName() {
         return this.managedInstanceName;
@@ -44,7 +44,7 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="serverKeyType", required=true)
-      private final Output<Either<String,ServerKeyType>> serverKeyType;
+    private Output<Either<String,ServerKeyType>> serverKeyType;
 
     public Output<Either<String,ServerKeyType>> serverKeyType() {
         return this.serverKeyType;
@@ -66,102 +66,91 @@ public final class ManagedInstanceKeyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public ManagedInstanceKeyArgs(
-        @Nullable Output<String> keyName,
-        Output<String> managedInstanceName,
-        Output<String> resourceGroupName,
-        Output<Either<String,ServerKeyType>> serverKeyType,
-        @Nullable Output<String> uri) {
-        this.keyName = keyName;
-        this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverKeyType = Objects.requireNonNull(serverKeyType, "expected parameter 'serverKeyType' to be non-null");
-        this.uri = uri;
-    }
+    private ManagedInstanceKeyArgs() {}
 
-    private ManagedInstanceKeyArgs() {
-        this.keyName = Codegen.empty();
-        this.managedInstanceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serverKeyType = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ManagedInstanceKeyArgs(ManagedInstanceKeyArgs $) {
+        this.keyName = $.keyName;
+        this.managedInstanceName = $.managedInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverKeyType = $.serverKeyType;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedInstanceKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyName;
-        private Output<String> managedInstanceName;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,ServerKeyType>> serverKeyType;
-        private @Nullable Output<String> uri;
+        private ManagedInstanceKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedInstanceKeyArgs();
         }
 
         public Builder(ManagedInstanceKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.managedInstanceName = defaults.managedInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverKeyType = defaults.serverKeyType;
-    	      this.uri = defaults.uri;
+            $ = new ManagedInstanceKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder managedInstanceName(Output<String> managedInstanceName) {
-            this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
+            $.managedInstanceName = managedInstanceName;
             return this;
         }
+
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
-            return this;
+            return managedInstanceName(Output.of(managedInstanceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serverKeyType(Output<Either<String,ServerKeyType>> serverKeyType) {
-            this.serverKeyType = Objects.requireNonNull(serverKeyType);
+            $.serverKeyType = serverKeyType;
             return this;
         }
+
         public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
-            this.serverKeyType = Output.of(Objects.requireNonNull(serverKeyType));
-            return this;
+            return serverKeyType(Output.of(serverKeyType));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public ManagedInstanceKeyArgs build() {
-            return new ManagedInstanceKeyArgs(keyName, managedInstanceName, resourceGroupName, serverKeyType, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public ManagedInstanceKeyArgs build() {
+            $.managedInstanceName = Objects.requireNonNull($.managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverKeyType = Objects.requireNonNull($.serverKeyType, "expected parameter 'serverKeyType' to be non-null");
+            return $;
         }
     }
+
 }

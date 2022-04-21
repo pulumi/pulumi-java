@@ -5,9 +5,9 @@ package com.pulumi.azurenative.peering;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="peeringName", required=true)
-      private final Output<String> peeringName;
+    private Output<String> peeringName;
 
     public Output<String> peeringName() {
         return this.peeringName;
@@ -31,10 +31,10 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="registeredPrefixName")
-      private final @Nullable Output<String> registeredPrefixName;
+    private @Nullable Output<String> registeredPrefixName;
 
-    public Output<String> registeredPrefixName() {
-        return this.registeredPrefixName == null ? Codegen.empty() : this.registeredPrefixName;
+    public Optional<Output<String>> registeredPrefixName() {
+        return Optional.ofNullable(this.registeredPrefixName);
     }
 
     /**
@@ -53,89 +53,80 @@ public final class RegisteredPrefixArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public RegisteredPrefixArgs(
-        Output<String> peeringName,
-        @Nullable Output<String> prefix,
-        @Nullable Output<String> registeredPrefixName,
-        Output<String> resourceGroupName) {
-        this.peeringName = Objects.requireNonNull(peeringName, "expected parameter 'peeringName' to be non-null");
-        this.prefix = prefix;
-        this.registeredPrefixName = registeredPrefixName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private RegisteredPrefixArgs() {}
 
-    private RegisteredPrefixArgs() {
-        this.peeringName = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.registeredPrefixName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private RegisteredPrefixArgs(RegisteredPrefixArgs $) {
+        this.peeringName = $.peeringName;
+        this.prefix = $.prefix;
+        this.registeredPrefixName = $.registeredPrefixName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegisteredPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> peeringName;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<String> registeredPrefixName;
-        private Output<String> resourceGroupName;
+        private RegisteredPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegisteredPrefixArgs();
         }
 
         public Builder(RegisteredPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peeringName = defaults.peeringName;
-    	      this.prefix = defaults.prefix;
-    	      this.registeredPrefixName = defaults.registeredPrefixName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new RegisteredPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peeringName(Output<String> peeringName) {
-            this.peeringName = Objects.requireNonNull(peeringName);
+            $.peeringName = peeringName;
             return this;
         }
+
         public Builder peeringName(String peeringName) {
-            this.peeringName = Output.of(Objects.requireNonNull(peeringName));
-            return this;
+            return peeringName(Output.of(peeringName));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder registeredPrefixName(@Nullable Output<String> registeredPrefixName) {
-            this.registeredPrefixName = registeredPrefixName;
+            $.registeredPrefixName = registeredPrefixName;
             return this;
         }
-        public Builder registeredPrefixName(@Nullable String registeredPrefixName) {
-            this.registeredPrefixName = Codegen.ofNullable(registeredPrefixName);
-            return this;
+
+        public Builder registeredPrefixName(String registeredPrefixName) {
+            return registeredPrefixName(Output.of(registeredPrefixName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public RegisteredPrefixArgs build() {
-            return new RegisteredPrefixArgs(peeringName, prefix, registeredPrefixName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public RegisteredPrefixArgs build() {
+            $.peeringName = Objects.requireNonNull($.peeringName, "expected parameter 'peeringName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

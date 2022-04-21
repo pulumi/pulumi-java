@@ -27,10 +27,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="enableAcceleratedNetworkingOnRecovery")
-      private final @Nullable Boolean enableAcceleratedNetworkingOnRecovery;
+    private @Nullable Boolean enableAcceleratedNetworkingOnRecovery;
 
     public Optional<Boolean> enableAcceleratedNetworkingOnRecovery() {
-        return this.enableAcceleratedNetworkingOnRecovery == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworkingOnRecovery);
+        return Optional.ofNullable(this.enableAcceleratedNetworkingOnRecovery);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="enableAcceleratedNetworkingOnTfo")
-      private final @Nullable Boolean enableAcceleratedNetworkingOnTfo;
+    private @Nullable Boolean enableAcceleratedNetworkingOnTfo;
 
     public Optional<Boolean> enableAcceleratedNetworkingOnTfo() {
-        return this.enableAcceleratedNetworkingOnTfo == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworkingOnTfo);
+        return Optional.ofNullable(this.enableAcceleratedNetworkingOnTfo);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="ipAddressType")
-      private final @Nullable String ipAddressType;
+    private @Nullable String ipAddressType;
 
     public Optional<String> ipAddressType() {
-        return this.ipAddressType == null ? Optional.empty() : Optional.ofNullable(this.ipAddressType);
+        return Optional.ofNullable(this.ipAddressType);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="nicId")
-      private final @Nullable String nicId;
+    private @Nullable String nicId;
 
     public Optional<String> nicId() {
-        return this.nicId == null ? Optional.empty() : Optional.ofNullable(this.nicId);
+        return Optional.ofNullable(this.nicId);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="primaryNicStaticIPAddress")
-      private final @Nullable String primaryNicStaticIPAddress;
+    private @Nullable String primaryNicStaticIPAddress;
 
     public Optional<String> primaryNicStaticIPAddress() {
-        return this.primaryNicStaticIPAddress == null ? Optional.empty() : Optional.ofNullable(this.primaryNicStaticIPAddress);
+        return Optional.ofNullable(this.primaryNicStaticIPAddress);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryLBBackendAddressPoolIds")
-      private final @Nullable List<String> recoveryLBBackendAddressPoolIds;
+    private @Nullable List<String> recoveryLBBackendAddressPoolIds;
 
-    public List<String> recoveryLBBackendAddressPoolIds() {
-        return this.recoveryLBBackendAddressPoolIds == null ? List.of() : this.recoveryLBBackendAddressPoolIds;
+    public Optional<List<String>> recoveryLBBackendAddressPoolIds() {
+        return Optional.ofNullable(this.recoveryLBBackendAddressPoolIds);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryNetworkSecurityGroupId")
-      private final @Nullable String recoveryNetworkSecurityGroupId;
+    private @Nullable String recoveryNetworkSecurityGroupId;
 
     public Optional<String> recoveryNetworkSecurityGroupId() {
-        return this.recoveryNetworkSecurityGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryNetworkSecurityGroupId);
+        return Optional.ofNullable(this.recoveryNetworkSecurityGroupId);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryNicIpAddressType")
-      private final @Nullable String recoveryNicIpAddressType;
+    private @Nullable String recoveryNicIpAddressType;
 
     public Optional<String> recoveryNicIpAddressType() {
-        return this.recoveryNicIpAddressType == null ? Optional.empty() : Optional.ofNullable(this.recoveryNicIpAddressType);
+        return Optional.ofNullable(this.recoveryNicIpAddressType);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryNicName")
-      private final @Nullable String recoveryNicName;
+    private @Nullable String recoveryNicName;
 
     public Optional<String> recoveryNicName() {
-        return this.recoveryNicName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNicName);
+        return Optional.ofNullable(this.recoveryNicName);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryNicResourceGroupName")
-      private final @Nullable String recoveryNicResourceGroupName;
+    private @Nullable String recoveryNicResourceGroupName;
 
     public Optional<String> recoveryNicResourceGroupName() {
-        return this.recoveryNicResourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.recoveryNicResourceGroupName);
+        return Optional.ofNullable(this.recoveryNicResourceGroupName);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryPublicIpAddressId")
-      private final @Nullable String recoveryPublicIpAddressId;
+    private @Nullable String recoveryPublicIpAddressId;
 
     public Optional<String> recoveryPublicIpAddressId() {
-        return this.recoveryPublicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.recoveryPublicIpAddressId);
+        return Optional.ofNullable(this.recoveryPublicIpAddressId);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryVMNetworkId")
-      private final @Nullable String recoveryVMNetworkId;
+    private @Nullable String recoveryVMNetworkId;
 
     public Optional<String> recoveryVMNetworkId() {
-        return this.recoveryVMNetworkId == null ? Optional.empty() : Optional.ofNullable(this.recoveryVMNetworkId);
+        return Optional.ofNullable(this.recoveryVMNetworkId);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="recoveryVMSubnetName")
-      private final @Nullable String recoveryVMSubnetName;
+    private @Nullable String recoveryVMSubnetName;
 
     public Optional<String> recoveryVMSubnetName() {
-        return this.recoveryVMSubnetName == null ? Optional.empty() : Optional.ofNullable(this.recoveryVMSubnetName);
+        return Optional.ofNullable(this.recoveryVMSubnetName);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="replicaNicId")
-      private final @Nullable String replicaNicId;
+    private @Nullable String replicaNicId;
 
     public Optional<String> replicaNicId() {
-        return this.replicaNicId == null ? Optional.empty() : Optional.ofNullable(this.replicaNicId);
+        return Optional.ofNullable(this.replicaNicId);
     }
 
     /**
@@ -181,10 +181,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="replicaNicStaticIPAddress")
-      private final @Nullable String replicaNicStaticIPAddress;
+    private @Nullable String replicaNicStaticIPAddress;
 
     public Optional<String> replicaNicStaticIPAddress() {
-        return this.replicaNicStaticIPAddress == null ? Optional.empty() : Optional.ofNullable(this.replicaNicStaticIPAddress);
+        return Optional.ofNullable(this.replicaNicStaticIPAddress);
     }
 
     /**
@@ -192,10 +192,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="reuseExistingNic")
-      private final @Nullable Boolean reuseExistingNic;
+    private @Nullable Boolean reuseExistingNic;
 
     public Optional<Boolean> reuseExistingNic() {
-        return this.reuseExistingNic == null ? Optional.empty() : Optional.ofNullable(this.reuseExistingNic);
+        return Optional.ofNullable(this.reuseExistingNic);
     }
 
     /**
@@ -203,10 +203,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="selectionType")
-      private final @Nullable String selectionType;
+    private @Nullable String selectionType;
 
     public Optional<String> selectionType() {
-        return this.selectionType == null ? Optional.empty() : Optional.ofNullable(this.selectionType);
+        return Optional.ofNullable(this.selectionType);
     }
 
     /**
@@ -214,10 +214,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceNicArmId")
-      private final @Nullable String sourceNicArmId;
+    private @Nullable String sourceNicArmId;
 
     public Optional<String> sourceNicArmId() {
-        return this.sourceNicArmId == null ? Optional.empty() : Optional.ofNullable(this.sourceNicArmId);
+        return Optional.ofNullable(this.sourceNicArmId);
     }
 
     /**
@@ -225,10 +225,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tfoIPConfigs")
-      private final @Nullable List<IPConfigResponse> tfoIPConfigs;
+    private @Nullable List<IPConfigResponse> tfoIPConfigs;
 
-    public List<IPConfigResponse> tfoIPConfigs() {
-        return this.tfoIPConfigs == null ? List.of() : this.tfoIPConfigs;
+    public Optional<List<IPConfigResponse>> tfoIPConfigs() {
+        return Optional.ofNullable(this.tfoIPConfigs);
     }
 
     /**
@@ -236,10 +236,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tfoNetworkSecurityGroupId")
-      private final @Nullable String tfoNetworkSecurityGroupId;
+    private @Nullable String tfoNetworkSecurityGroupId;
 
     public Optional<String> tfoNetworkSecurityGroupId() {
-        return this.tfoNetworkSecurityGroupId == null ? Optional.empty() : Optional.ofNullable(this.tfoNetworkSecurityGroupId);
+        return Optional.ofNullable(this.tfoNetworkSecurityGroupId);
     }
 
     /**
@@ -247,10 +247,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tfoRecoveryNicName")
-      private final @Nullable String tfoRecoveryNicName;
+    private @Nullable String tfoRecoveryNicName;
 
     public Optional<String> tfoRecoveryNicName() {
-        return this.tfoRecoveryNicName == null ? Optional.empty() : Optional.ofNullable(this.tfoRecoveryNicName);
+        return Optional.ofNullable(this.tfoRecoveryNicName);
     }
 
     /**
@@ -258,10 +258,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tfoRecoveryNicResourceGroupName")
-      private final @Nullable String tfoRecoveryNicResourceGroupName;
+    private @Nullable String tfoRecoveryNicResourceGroupName;
 
     public Optional<String> tfoRecoveryNicResourceGroupName() {
-        return this.tfoRecoveryNicResourceGroupName == null ? Optional.empty() : Optional.ofNullable(this.tfoRecoveryNicResourceGroupName);
+        return Optional.ofNullable(this.tfoRecoveryNicResourceGroupName);
     }
 
     /**
@@ -269,10 +269,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tfoReuseExistingNic")
-      private final @Nullable Boolean tfoReuseExistingNic;
+    private @Nullable Boolean tfoReuseExistingNic;
 
     public Optional<Boolean> tfoReuseExistingNic() {
-        return this.tfoReuseExistingNic == null ? Optional.empty() : Optional.ofNullable(this.tfoReuseExistingNic);
+        return Optional.ofNullable(this.tfoReuseExistingNic);
     }
 
     /**
@@ -280,10 +280,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tfoVMNetworkId")
-      private final @Nullable String tfoVMNetworkId;
+    private @Nullable String tfoVMNetworkId;
 
     public Optional<String> tfoVMNetworkId() {
-        return this.tfoVMNetworkId == null ? Optional.empty() : Optional.ofNullable(this.tfoVMNetworkId);
+        return Optional.ofNullable(this.tfoVMNetworkId);
     }
 
     /**
@@ -291,10 +291,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tfoVMSubnetName")
-      private final @Nullable String tfoVMSubnetName;
+    private @Nullable String tfoVMSubnetName;
 
     public Optional<String> tfoVMSubnetName() {
-        return this.tfoVMSubnetName == null ? Optional.empty() : Optional.ofNullable(this.tfoVMSubnetName);
+        return Optional.ofNullable(this.tfoVMSubnetName);
     }
 
     /**
@@ -302,10 +302,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vMNetworkName")
-      private final @Nullable String vMNetworkName;
+    private @Nullable String vMNetworkName;
 
     public Optional<String> vMNetworkName() {
-        return this.vMNetworkName == null ? Optional.empty() : Optional.ofNullable(this.vMNetworkName);
+        return Optional.ofNullable(this.vMNetworkName);
     }
 
     /**
@@ -313,286 +313,210 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vMSubnetName")
-      private final @Nullable String vMSubnetName;
+    private @Nullable String vMSubnetName;
 
     public Optional<String> vMSubnetName() {
-        return this.vMSubnetName == null ? Optional.empty() : Optional.ofNullable(this.vMSubnetName);
+        return Optional.ofNullable(this.vMSubnetName);
     }
 
-    public VMNicDetailsResponse(
-        @Nullable Boolean enableAcceleratedNetworkingOnRecovery,
-        @Nullable Boolean enableAcceleratedNetworkingOnTfo,
-        @Nullable String ipAddressType,
-        @Nullable String nicId,
-        @Nullable String primaryNicStaticIPAddress,
-        @Nullable List<String> recoveryLBBackendAddressPoolIds,
-        @Nullable String recoveryNetworkSecurityGroupId,
-        @Nullable String recoveryNicIpAddressType,
-        @Nullable String recoveryNicName,
-        @Nullable String recoveryNicResourceGroupName,
-        @Nullable String recoveryPublicIpAddressId,
-        @Nullable String recoveryVMNetworkId,
-        @Nullable String recoveryVMSubnetName,
-        @Nullable String replicaNicId,
-        @Nullable String replicaNicStaticIPAddress,
-        @Nullable Boolean reuseExistingNic,
-        @Nullable String selectionType,
-        @Nullable String sourceNicArmId,
-        @Nullable List<IPConfigResponse> tfoIPConfigs,
-        @Nullable String tfoNetworkSecurityGroupId,
-        @Nullable String tfoRecoveryNicName,
-        @Nullable String tfoRecoveryNicResourceGroupName,
-        @Nullable Boolean tfoReuseExistingNic,
-        @Nullable String tfoVMNetworkId,
-        @Nullable String tfoVMSubnetName,
-        @Nullable String vMNetworkName,
-        @Nullable String vMSubnetName) {
-        this.enableAcceleratedNetworkingOnRecovery = enableAcceleratedNetworkingOnRecovery;
-        this.enableAcceleratedNetworkingOnTfo = enableAcceleratedNetworkingOnTfo;
-        this.ipAddressType = ipAddressType;
-        this.nicId = nicId;
-        this.primaryNicStaticIPAddress = primaryNicStaticIPAddress;
-        this.recoveryLBBackendAddressPoolIds = recoveryLBBackendAddressPoolIds;
-        this.recoveryNetworkSecurityGroupId = recoveryNetworkSecurityGroupId;
-        this.recoveryNicIpAddressType = recoveryNicIpAddressType;
-        this.recoveryNicName = recoveryNicName;
-        this.recoveryNicResourceGroupName = recoveryNicResourceGroupName;
-        this.recoveryPublicIpAddressId = recoveryPublicIpAddressId;
-        this.recoveryVMNetworkId = recoveryVMNetworkId;
-        this.recoveryVMSubnetName = recoveryVMSubnetName;
-        this.replicaNicId = replicaNicId;
-        this.replicaNicStaticIPAddress = replicaNicStaticIPAddress;
-        this.reuseExistingNic = Codegen.booleanProp("reuseExistingNic").arg(reuseExistingNic).def(false).getNullable();
-        this.selectionType = selectionType;
-        this.sourceNicArmId = sourceNicArmId;
-        this.tfoIPConfigs = tfoIPConfigs;
-        this.tfoNetworkSecurityGroupId = tfoNetworkSecurityGroupId;
-        this.tfoRecoveryNicName = tfoRecoveryNicName;
-        this.tfoRecoveryNicResourceGroupName = tfoRecoveryNicResourceGroupName;
-        this.tfoReuseExistingNic = Codegen.booleanProp("tfoReuseExistingNic").arg(tfoReuseExistingNic).def(false).getNullable();
-        this.tfoVMNetworkId = tfoVMNetworkId;
-        this.tfoVMSubnetName = tfoVMSubnetName;
-        this.vMNetworkName = vMNetworkName;
-        this.vMSubnetName = vMSubnetName;
-    }
+    private VMNicDetailsResponse() {}
 
-    private VMNicDetailsResponse() {
-        this.enableAcceleratedNetworkingOnRecovery = null;
-        this.enableAcceleratedNetworkingOnTfo = null;
-        this.ipAddressType = null;
-        this.nicId = null;
-        this.primaryNicStaticIPAddress = null;
-        this.recoveryLBBackendAddressPoolIds = List.of();
-        this.recoveryNetworkSecurityGroupId = null;
-        this.recoveryNicIpAddressType = null;
-        this.recoveryNicName = null;
-        this.recoveryNicResourceGroupName = null;
-        this.recoveryPublicIpAddressId = null;
-        this.recoveryVMNetworkId = null;
-        this.recoveryVMSubnetName = null;
-        this.replicaNicId = null;
-        this.replicaNicStaticIPAddress = null;
-        this.reuseExistingNic = null;
-        this.selectionType = null;
-        this.sourceNicArmId = null;
-        this.tfoIPConfigs = List.of();
-        this.tfoNetworkSecurityGroupId = null;
-        this.tfoRecoveryNicName = null;
-        this.tfoRecoveryNicResourceGroupName = null;
-        this.tfoReuseExistingNic = null;
-        this.tfoVMNetworkId = null;
-        this.tfoVMSubnetName = null;
-        this.vMNetworkName = null;
-        this.vMSubnetName = null;
+    private VMNicDetailsResponse(VMNicDetailsResponse $) {
+        this.enableAcceleratedNetworkingOnRecovery = $.enableAcceleratedNetworkingOnRecovery;
+        this.enableAcceleratedNetworkingOnTfo = $.enableAcceleratedNetworkingOnTfo;
+        this.ipAddressType = $.ipAddressType;
+        this.nicId = $.nicId;
+        this.primaryNicStaticIPAddress = $.primaryNicStaticIPAddress;
+        this.recoveryLBBackendAddressPoolIds = $.recoveryLBBackendAddressPoolIds;
+        this.recoveryNetworkSecurityGroupId = $.recoveryNetworkSecurityGroupId;
+        this.recoveryNicIpAddressType = $.recoveryNicIpAddressType;
+        this.recoveryNicName = $.recoveryNicName;
+        this.recoveryNicResourceGroupName = $.recoveryNicResourceGroupName;
+        this.recoveryPublicIpAddressId = $.recoveryPublicIpAddressId;
+        this.recoveryVMNetworkId = $.recoveryVMNetworkId;
+        this.recoveryVMSubnetName = $.recoveryVMSubnetName;
+        this.replicaNicId = $.replicaNicId;
+        this.replicaNicStaticIPAddress = $.replicaNicStaticIPAddress;
+        this.reuseExistingNic = $.reuseExistingNic;
+        this.selectionType = $.selectionType;
+        this.sourceNicArmId = $.sourceNicArmId;
+        this.tfoIPConfigs = $.tfoIPConfigs;
+        this.tfoNetworkSecurityGroupId = $.tfoNetworkSecurityGroupId;
+        this.tfoRecoveryNicName = $.tfoRecoveryNicName;
+        this.tfoRecoveryNicResourceGroupName = $.tfoRecoveryNicResourceGroupName;
+        this.tfoReuseExistingNic = $.tfoReuseExistingNic;
+        this.tfoVMNetworkId = $.tfoVMNetworkId;
+        this.tfoVMSubnetName = $.tfoVMSubnetName;
+        this.vMNetworkName = $.vMNetworkName;
+        this.vMSubnetName = $.vMSubnetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMNicDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enableAcceleratedNetworkingOnRecovery;
-        private @Nullable Boolean enableAcceleratedNetworkingOnTfo;
-        private @Nullable String ipAddressType;
-        private @Nullable String nicId;
-        private @Nullable String primaryNicStaticIPAddress;
-        private @Nullable List<String> recoveryLBBackendAddressPoolIds;
-        private @Nullable String recoveryNetworkSecurityGroupId;
-        private @Nullable String recoveryNicIpAddressType;
-        private @Nullable String recoveryNicName;
-        private @Nullable String recoveryNicResourceGroupName;
-        private @Nullable String recoveryPublicIpAddressId;
-        private @Nullable String recoveryVMNetworkId;
-        private @Nullable String recoveryVMSubnetName;
-        private @Nullable String replicaNicId;
-        private @Nullable String replicaNicStaticIPAddress;
-        private @Nullable Boolean reuseExistingNic;
-        private @Nullable String selectionType;
-        private @Nullable String sourceNicArmId;
-        private @Nullable List<IPConfigResponse> tfoIPConfigs;
-        private @Nullable String tfoNetworkSecurityGroupId;
-        private @Nullable String tfoRecoveryNicName;
-        private @Nullable String tfoRecoveryNicResourceGroupName;
-        private @Nullable Boolean tfoReuseExistingNic;
-        private @Nullable String tfoVMNetworkId;
-        private @Nullable String tfoVMSubnetName;
-        private @Nullable String vMNetworkName;
-        private @Nullable String vMSubnetName;
+        private VMNicDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMNicDetailsResponse();
         }
 
         public Builder(VMNicDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableAcceleratedNetworkingOnRecovery = defaults.enableAcceleratedNetworkingOnRecovery;
-    	      this.enableAcceleratedNetworkingOnTfo = defaults.enableAcceleratedNetworkingOnTfo;
-    	      this.ipAddressType = defaults.ipAddressType;
-    	      this.nicId = defaults.nicId;
-    	      this.primaryNicStaticIPAddress = defaults.primaryNicStaticIPAddress;
-    	      this.recoveryLBBackendAddressPoolIds = defaults.recoveryLBBackendAddressPoolIds;
-    	      this.recoveryNetworkSecurityGroupId = defaults.recoveryNetworkSecurityGroupId;
-    	      this.recoveryNicIpAddressType = defaults.recoveryNicIpAddressType;
-    	      this.recoveryNicName = defaults.recoveryNicName;
-    	      this.recoveryNicResourceGroupName = defaults.recoveryNicResourceGroupName;
-    	      this.recoveryPublicIpAddressId = defaults.recoveryPublicIpAddressId;
-    	      this.recoveryVMNetworkId = defaults.recoveryVMNetworkId;
-    	      this.recoveryVMSubnetName = defaults.recoveryVMSubnetName;
-    	      this.replicaNicId = defaults.replicaNicId;
-    	      this.replicaNicStaticIPAddress = defaults.replicaNicStaticIPAddress;
-    	      this.reuseExistingNic = defaults.reuseExistingNic;
-    	      this.selectionType = defaults.selectionType;
-    	      this.sourceNicArmId = defaults.sourceNicArmId;
-    	      this.tfoIPConfigs = defaults.tfoIPConfigs;
-    	      this.tfoNetworkSecurityGroupId = defaults.tfoNetworkSecurityGroupId;
-    	      this.tfoRecoveryNicName = defaults.tfoRecoveryNicName;
-    	      this.tfoRecoveryNicResourceGroupName = defaults.tfoRecoveryNicResourceGroupName;
-    	      this.tfoReuseExistingNic = defaults.tfoReuseExistingNic;
-    	      this.tfoVMNetworkId = defaults.tfoVMNetworkId;
-    	      this.tfoVMSubnetName = defaults.tfoVMSubnetName;
-    	      this.vMNetworkName = defaults.vMNetworkName;
-    	      this.vMSubnetName = defaults.vMSubnetName;
+            $ = new VMNicDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableAcceleratedNetworkingOnRecovery(@Nullable Boolean enableAcceleratedNetworkingOnRecovery) {
-            this.enableAcceleratedNetworkingOnRecovery = enableAcceleratedNetworkingOnRecovery;
+            $.enableAcceleratedNetworkingOnRecovery = enableAcceleratedNetworkingOnRecovery;
             return this;
         }
+
         public Builder enableAcceleratedNetworkingOnTfo(@Nullable Boolean enableAcceleratedNetworkingOnTfo) {
-            this.enableAcceleratedNetworkingOnTfo = enableAcceleratedNetworkingOnTfo;
+            $.enableAcceleratedNetworkingOnTfo = enableAcceleratedNetworkingOnTfo;
             return this;
         }
+
         public Builder ipAddressType(@Nullable String ipAddressType) {
-            this.ipAddressType = ipAddressType;
+            $.ipAddressType = ipAddressType;
             return this;
         }
+
         public Builder nicId(@Nullable String nicId) {
-            this.nicId = nicId;
+            $.nicId = nicId;
             return this;
         }
+
         public Builder primaryNicStaticIPAddress(@Nullable String primaryNicStaticIPAddress) {
-            this.primaryNicStaticIPAddress = primaryNicStaticIPAddress;
+            $.primaryNicStaticIPAddress = primaryNicStaticIPAddress;
             return this;
         }
+
         public Builder recoveryLBBackendAddressPoolIds(@Nullable List<String> recoveryLBBackendAddressPoolIds) {
-            this.recoveryLBBackendAddressPoolIds = recoveryLBBackendAddressPoolIds;
+            $.recoveryLBBackendAddressPoolIds = recoveryLBBackendAddressPoolIds;
             return this;
         }
+
         public Builder recoveryLBBackendAddressPoolIds(String... recoveryLBBackendAddressPoolIds) {
             return recoveryLBBackendAddressPoolIds(List.of(recoveryLBBackendAddressPoolIds));
         }
+
         public Builder recoveryNetworkSecurityGroupId(@Nullable String recoveryNetworkSecurityGroupId) {
-            this.recoveryNetworkSecurityGroupId = recoveryNetworkSecurityGroupId;
+            $.recoveryNetworkSecurityGroupId = recoveryNetworkSecurityGroupId;
             return this;
         }
+
         public Builder recoveryNicIpAddressType(@Nullable String recoveryNicIpAddressType) {
-            this.recoveryNicIpAddressType = recoveryNicIpAddressType;
+            $.recoveryNicIpAddressType = recoveryNicIpAddressType;
             return this;
         }
+
         public Builder recoveryNicName(@Nullable String recoveryNicName) {
-            this.recoveryNicName = recoveryNicName;
+            $.recoveryNicName = recoveryNicName;
             return this;
         }
+
         public Builder recoveryNicResourceGroupName(@Nullable String recoveryNicResourceGroupName) {
-            this.recoveryNicResourceGroupName = recoveryNicResourceGroupName;
+            $.recoveryNicResourceGroupName = recoveryNicResourceGroupName;
             return this;
         }
+
         public Builder recoveryPublicIpAddressId(@Nullable String recoveryPublicIpAddressId) {
-            this.recoveryPublicIpAddressId = recoveryPublicIpAddressId;
+            $.recoveryPublicIpAddressId = recoveryPublicIpAddressId;
             return this;
         }
+
         public Builder recoveryVMNetworkId(@Nullable String recoveryVMNetworkId) {
-            this.recoveryVMNetworkId = recoveryVMNetworkId;
+            $.recoveryVMNetworkId = recoveryVMNetworkId;
             return this;
         }
+
         public Builder recoveryVMSubnetName(@Nullable String recoveryVMSubnetName) {
-            this.recoveryVMSubnetName = recoveryVMSubnetName;
+            $.recoveryVMSubnetName = recoveryVMSubnetName;
             return this;
         }
+
         public Builder replicaNicId(@Nullable String replicaNicId) {
-            this.replicaNicId = replicaNicId;
+            $.replicaNicId = replicaNicId;
             return this;
         }
+
         public Builder replicaNicStaticIPAddress(@Nullable String replicaNicStaticIPAddress) {
-            this.replicaNicStaticIPAddress = replicaNicStaticIPAddress;
+            $.replicaNicStaticIPAddress = replicaNicStaticIPAddress;
             return this;
         }
+
         public Builder reuseExistingNic(@Nullable Boolean reuseExistingNic) {
-            this.reuseExistingNic = reuseExistingNic;
+            $.reuseExistingNic = reuseExistingNic;
             return this;
         }
+
         public Builder selectionType(@Nullable String selectionType) {
-            this.selectionType = selectionType;
+            $.selectionType = selectionType;
             return this;
         }
+
         public Builder sourceNicArmId(@Nullable String sourceNicArmId) {
-            this.sourceNicArmId = sourceNicArmId;
+            $.sourceNicArmId = sourceNicArmId;
             return this;
         }
+
         public Builder tfoIPConfigs(@Nullable List<IPConfigResponse> tfoIPConfigs) {
-            this.tfoIPConfigs = tfoIPConfigs;
+            $.tfoIPConfigs = tfoIPConfigs;
             return this;
         }
+
         public Builder tfoIPConfigs(IPConfigResponse... tfoIPConfigs) {
             return tfoIPConfigs(List.of(tfoIPConfigs));
         }
+
         public Builder tfoNetworkSecurityGroupId(@Nullable String tfoNetworkSecurityGroupId) {
-            this.tfoNetworkSecurityGroupId = tfoNetworkSecurityGroupId;
+            $.tfoNetworkSecurityGroupId = tfoNetworkSecurityGroupId;
             return this;
         }
+
         public Builder tfoRecoveryNicName(@Nullable String tfoRecoveryNicName) {
-            this.tfoRecoveryNicName = tfoRecoveryNicName;
+            $.tfoRecoveryNicName = tfoRecoveryNicName;
             return this;
         }
+
         public Builder tfoRecoveryNicResourceGroupName(@Nullable String tfoRecoveryNicResourceGroupName) {
-            this.tfoRecoveryNicResourceGroupName = tfoRecoveryNicResourceGroupName;
+            $.tfoRecoveryNicResourceGroupName = tfoRecoveryNicResourceGroupName;
             return this;
         }
+
         public Builder tfoReuseExistingNic(@Nullable Boolean tfoReuseExistingNic) {
-            this.tfoReuseExistingNic = tfoReuseExistingNic;
+            $.tfoReuseExistingNic = tfoReuseExistingNic;
             return this;
         }
+
         public Builder tfoVMNetworkId(@Nullable String tfoVMNetworkId) {
-            this.tfoVMNetworkId = tfoVMNetworkId;
+            $.tfoVMNetworkId = tfoVMNetworkId;
             return this;
         }
+
         public Builder tfoVMSubnetName(@Nullable String tfoVMSubnetName) {
-            this.tfoVMSubnetName = tfoVMSubnetName;
+            $.tfoVMSubnetName = tfoVMSubnetName;
             return this;
         }
+
         public Builder vMNetworkName(@Nullable String vMNetworkName) {
-            this.vMNetworkName = vMNetworkName;
+            $.vMNetworkName = vMNetworkName;
             return this;
         }
+
         public Builder vMSubnetName(@Nullable String vMSubnetName) {
-            this.vMSubnetName = vMSubnetName;
+            $.vMSubnetName = vMSubnetName;
             return this;
-        }        public VMNicDetailsResponse build() {
-            return new VMNicDetailsResponse(enableAcceleratedNetworkingOnRecovery, enableAcceleratedNetworkingOnTfo, ipAddressType, nicId, primaryNicStaticIPAddress, recoveryLBBackendAddressPoolIds, recoveryNetworkSecurityGroupId, recoveryNicIpAddressType, recoveryNicName, recoveryNicResourceGroupName, recoveryPublicIpAddressId, recoveryVMNetworkId, recoveryVMSubnetName, replicaNicId, replicaNicStaticIPAddress, reuseExistingNic, selectionType, sourceNicArmId, tfoIPConfigs, tfoNetworkSecurityGroupId, tfoRecoveryNicName, tfoRecoveryNicResourceGroupName, tfoReuseExistingNic, tfoVMNetworkId, tfoVMSubnetName, vMNetworkName, vMSubnetName);
+        }
+
+        public VMNicDetailsResponse build() {
+            $.reuseExistingNic = Codegen.booleanProp("reuseExistingNic").arg($.reuseExistingNic).def(false).getNullable();
+            $.tfoReuseExistingNic = Codegen.booleanProp("tfoReuseExistingNic").arg($.tfoReuseExistingNic).def(false).getNullable();
+            return $;
         }
     }
+
 }

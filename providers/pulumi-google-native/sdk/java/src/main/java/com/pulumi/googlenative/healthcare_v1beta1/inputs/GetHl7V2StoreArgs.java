@@ -15,94 +15,86 @@ public final class GetHl7V2StoreArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHl7V2StoreArgs Empty = new GetHl7V2StoreArgs();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="hl7V2StoreId", required=true)
-      private final String hl7V2StoreId;
+    private String hl7V2StoreId;
 
     public String hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetHl7V2StoreArgs(
-        String datasetId,
-        String hl7V2StoreId,
-        String location,
-        @Nullable String project) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetHl7V2StoreArgs() {}
 
-    private GetHl7V2StoreArgs() {
-        this.datasetId = null;
-        this.hl7V2StoreId = null;
-        this.location = null;
-        this.project = null;
+    private GetHl7V2StoreArgs(GetHl7V2StoreArgs $) {
+        this.datasetId = $.datasetId;
+        this.hl7V2StoreId = $.hl7V2StoreId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHl7V2StoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private String hl7V2StoreId;
-        private String location;
-        private @Nullable String project;
+        private GetHl7V2StoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHl7V2StoreArgs();
         }
 
         public Builder(GetHl7V2StoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.hl7V2StoreId = defaults.hl7V2StoreId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetHl7V2StoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
+            $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetHl7V2StoreArgs build() {
-            return new GetHl7V2StoreArgs(datasetId, hl7V2StoreId, location, project);
+        }
+
+        public GetHl7V2StoreArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.hl7V2StoreId = Objects.requireNonNull($.hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

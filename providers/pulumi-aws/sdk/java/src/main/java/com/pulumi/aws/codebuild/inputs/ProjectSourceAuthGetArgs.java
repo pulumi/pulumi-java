@@ -5,9 +5,9 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,11 +24,11 @@ public final class ProjectSourceAuthGetArgs extends com.pulumi.resources.Resourc
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @Import(name="resource")
-      private final @Nullable Output<String> resource;
+    private @Nullable Output<String> resource;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
-    public Output<String> resource() {
-        return this.resource == null ? Codegen.empty() : this.resource;
+    public Optional<Output<String>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
     /**
@@ -40,64 +40,60 @@ public final class ProjectSourceAuthGetArgs extends com.pulumi.resources.Resourc
      */
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     public Output<String> type() {
         return this.type;
     }
 
-    public ProjectSourceAuthGetArgs(
-        @Nullable Output<String> resource,
-        Output<String> type) {
-        this.resource = resource;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ProjectSourceAuthGetArgs() {}
 
-    private ProjectSourceAuthGetArgs() {
-        this.resource = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProjectSourceAuthGetArgs(ProjectSourceAuthGetArgs $) {
+        this.resource = $.resource;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectSourceAuthGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resource;
-        private Output<String> type;
+        private ProjectSourceAuthGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectSourceAuthGetArgs();
         }
 
         public Builder(ProjectSourceAuthGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resource = defaults.resource;
-    	      this.type = defaults.type;
+            $ = new ProjectSourceAuthGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resource(@Nullable Output<String> resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
-        public Builder resource(@Nullable String resource) {
-            this.resource = Codegen.ofNullable(resource);
-            return this;
+
+        public Builder resource(String resource) {
+            return resource(Output.of(resource));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ProjectSourceAuthGetArgs build() {
-            return new ProjectSourceAuthGetArgs(resource, type);
+            return type(Output.of(type));
+        }
+
+        public ProjectSourceAuthGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

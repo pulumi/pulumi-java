@@ -5,7 +5,6 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class TextMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="atomKey", required=true)
-      private final Output<String> atomKey;
+    private Output<String> atomKey;
 
     public Output<String> atomKey() {
         return this.atomKey;
@@ -35,7 +34,7 @@ public final class TextMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputKey", required=true)
-      private final Output<String> inputKey;
+    private Output<String> inputKey;
 
     public Output<String> inputKey() {
         return this.inputKey;
@@ -46,76 +45,71 @@ public final class TextMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputTrack", required=true)
-      private final Output<Integer> inputTrack;
+    private Output<Integer> inputTrack;
 
     public Output<Integer> inputTrack() {
         return this.inputTrack;
     }
 
-    public TextMappingArgs(
-        Output<String> atomKey,
-        Output<String> inputKey,
-        Output<Integer> inputTrack) {
-        this.atomKey = Objects.requireNonNull(atomKey, "expected parameter 'atomKey' to be non-null");
-        this.inputKey = Objects.requireNonNull(inputKey, "expected parameter 'inputKey' to be non-null");
-        this.inputTrack = Objects.requireNonNull(inputTrack, "expected parameter 'inputTrack' to be non-null");
-    }
+    private TextMappingArgs() {}
 
-    private TextMappingArgs() {
-        this.atomKey = Codegen.empty();
-        this.inputKey = Codegen.empty();
-        this.inputTrack = Codegen.empty();
+    private TextMappingArgs(TextMappingArgs $) {
+        this.atomKey = $.atomKey;
+        this.inputKey = $.inputKey;
+        this.inputTrack = $.inputTrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TextMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> atomKey;
-        private Output<String> inputKey;
-        private Output<Integer> inputTrack;
+        private TextMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TextMappingArgs();
         }
 
         public Builder(TextMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.atomKey = defaults.atomKey;
-    	      this.inputKey = defaults.inputKey;
-    	      this.inputTrack = defaults.inputTrack;
+            $ = new TextMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder atomKey(Output<String> atomKey) {
-            this.atomKey = Objects.requireNonNull(atomKey);
+            $.atomKey = atomKey;
             return this;
         }
+
         public Builder atomKey(String atomKey) {
-            this.atomKey = Output.of(Objects.requireNonNull(atomKey));
-            return this;
+            return atomKey(Output.of(atomKey));
         }
+
         public Builder inputKey(Output<String> inputKey) {
-            this.inputKey = Objects.requireNonNull(inputKey);
+            $.inputKey = inputKey;
             return this;
         }
+
         public Builder inputKey(String inputKey) {
-            this.inputKey = Output.of(Objects.requireNonNull(inputKey));
-            return this;
+            return inputKey(Output.of(inputKey));
         }
+
         public Builder inputTrack(Output<Integer> inputTrack) {
-            this.inputTrack = Objects.requireNonNull(inputTrack);
+            $.inputTrack = inputTrack;
             return this;
         }
+
         public Builder inputTrack(Integer inputTrack) {
-            this.inputTrack = Output.of(Objects.requireNonNull(inputTrack));
-            return this;
-        }        public TextMappingArgs build() {
-            return new TextMappingArgs(atomKey, inputKey, inputTrack);
+            return inputTrack(Output.of(inputTrack));
+        }
+
+        public TextMappingArgs build() {
+            $.atomKey = Objects.requireNonNull($.atomKey, "expected parameter 'atomKey' to be non-null");
+            $.inputKey = Objects.requireNonNull($.inputKey, "expected parameter 'inputKey' to be non-null");
+            $.inputTrack = Objects.requireNonNull($.inputTrack, "expected parameter 'inputTrack' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="filePattern")
-      private final @Nullable Output<Object> filePattern;
+    private @Nullable Output<Object> filePattern;
 
-    public Output<Object> filePattern() {
-        return this.filePattern == null ? Codegen.empty() : this.filePattern;
+    public Optional<Output<Object>> filePattern() {
+        return Optional.ofNullable(this.filePattern);
     }
 
     /**
@@ -37,63 +38,59 @@ public final class JsonWriteSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JsonWriteSettingsArgs(
-        @Nullable Output<Object> filePattern,
-        Output<String> type) {
-        this.filePattern = filePattern;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private JsonWriteSettingsArgs() {}
 
-    private JsonWriteSettingsArgs() {
-        this.filePattern = Codegen.empty();
-        this.type = Codegen.empty();
+    private JsonWriteSettingsArgs(JsonWriteSettingsArgs $) {
+        this.filePattern = $.filePattern;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonWriteSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> filePattern;
-        private Output<String> type;
+        private JsonWriteSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonWriteSettingsArgs();
         }
 
         public Builder(JsonWriteSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePattern = defaults.filePattern;
-    	      this.type = defaults.type;
+            $ = new JsonWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filePattern(@Nullable Output<Object> filePattern) {
-            this.filePattern = filePattern;
+            $.filePattern = filePattern;
             return this;
         }
-        public Builder filePattern(@Nullable Object filePattern) {
-            this.filePattern = Codegen.ofNullable(filePattern);
-            return this;
+
+        public Builder filePattern(Object filePattern) {
+            return filePattern(Output.of(filePattern));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JsonWriteSettingsArgs build() {
-            return new JsonWriteSettingsArgs(filePattern, type);
+            return type(Output.of(type));
+        }
+
+        public JsonWriteSettingsArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

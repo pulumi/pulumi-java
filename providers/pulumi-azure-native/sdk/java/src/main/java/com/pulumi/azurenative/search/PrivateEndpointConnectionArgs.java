@@ -6,9 +6,9 @@ package com.pulumi.azurenative.search;
 import com.pulumi.azurenative.search.inputs.PrivateEndpointConnectionPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="privateEndpointConnectionName")
-      private final @Nullable Output<String> privateEndpointConnectionName;
+    private @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> privateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
+    public Optional<Output<String>> privateEndpointConnectionName() {
+        return Optional.ofNullable(this.privateEndpointConnectionName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
+    private @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
-    public Output<PrivateEndpointConnectionPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<PrivateEndpointConnectionPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,80 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="searchServiceName", required=true)
-      private final Output<String> searchServiceName;
+    private Output<String> searchServiceName;
 
     public Output<String> searchServiceName() {
         return this.searchServiceName;
     }
 
-    public PrivateEndpointConnectionArgs(
-        @Nullable Output<String> privateEndpointConnectionName,
-        @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> searchServiceName) {
-        this.privateEndpointConnectionName = privateEndpointConnectionName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.searchServiceName = Objects.requireNonNull(searchServiceName, "expected parameter 'searchServiceName' to be non-null");
-    }
+    private PrivateEndpointConnectionArgs() {}
 
-    private PrivateEndpointConnectionArgs() {
-        this.privateEndpointConnectionName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.searchServiceName = Codegen.empty();
+    private PrivateEndpointConnectionArgs(PrivateEndpointConnectionArgs $) {
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.searchServiceName = $.searchServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> privateEndpointConnectionName;
-        private @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> searchServiceName;
+        private PrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionArgs();
         }
 
         public Builder(PrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.searchServiceName = defaults.searchServiceName;
+            $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = privateEndpointConnectionName;
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-        public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
-            return this;
+
+        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
+
         public Builder properties(@Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable PrivateEndpointConnectionPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(PrivateEndpointConnectionPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder searchServiceName(Output<String> searchServiceName) {
-            this.searchServiceName = Objects.requireNonNull(searchServiceName);
+            $.searchServiceName = searchServiceName;
             return this;
         }
+
         public Builder searchServiceName(String searchServiceName) {
-            this.searchServiceName = Output.of(Objects.requireNonNull(searchServiceName));
-            return this;
-        }        public PrivateEndpointConnectionArgs build() {
-            return new PrivateEndpointConnectionArgs(privateEndpointConnectionName, properties, resourceGroupName, searchServiceName);
+            return searchServiceName(Output.of(searchServiceName));
+        }
+
+        public PrivateEndpointConnectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.searchServiceName = Objects.requireNonNull($.searchServiceName, "expected parameter 'searchServiceName' to be non-null");
+            return $;
         }
     }
+
 }

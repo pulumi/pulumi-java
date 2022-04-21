@@ -11,6 +11,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class UebaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataSources")
-      private final @Nullable Output<List<Either<String,UebaDataSources>>> dataSources;
+    private @Nullable Output<List<Either<String,UebaDataSources>>> dataSources;
 
-    public Output<List<Either<String,UebaDataSources>>> dataSources() {
-        return this.dataSources == null ? Codegen.empty() : this.dataSources;
+    public Optional<Output<List<Either<String,UebaDataSources>>>> dataSources() {
+        return Optional.ofNullable(this.dataSources);
     }
 
     /**
@@ -35,7 +36,7 @@ public final class UebaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -46,7 +47,7 @@ public final class UebaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final Output<String> operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -57,7 +58,7 @@ public final class UebaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -68,10 +69,10 @@ public final class UebaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="settingsName")
-      private final @Nullable Output<String> settingsName;
+    private @Nullable Output<String> settingsName;
 
-    public Output<String> settingsName() {
-        return this.settingsName == null ? Codegen.empty() : this.settingsName;
+    public Optional<Output<String>> settingsName() {
+        return Optional.ofNullable(this.settingsName);
     }
 
     /**
@@ -79,118 +80,106 @@ public final class UebaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public UebaArgs(
-        @Nullable Output<List<Either<String,UebaDataSources>>> dataSources,
-        Output<String> kind,
-        Output<String> operationalInsightsResourceProvider,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> settingsName,
-        Output<String> workspaceName) {
-        this.dataSources = dataSources;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.settingsName = settingsName;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private UebaArgs() {}
 
-    private UebaArgs() {
-        this.dataSources = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.operationalInsightsResourceProvider = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.settingsName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private UebaArgs(UebaArgs $) {
+        this.dataSources = $.dataSources;
+        this.kind = $.kind;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.settingsName = $.settingsName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UebaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,UebaDataSources>>> dataSources;
-        private Output<String> kind;
-        private Output<String> operationalInsightsResourceProvider;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> settingsName;
-        private Output<String> workspaceName;
+        private UebaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UebaArgs();
         }
 
         public Builder(UebaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSources = defaults.dataSources;
-    	      this.kind = defaults.kind;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.settingsName = defaults.settingsName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new UebaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSources(@Nullable Output<List<Either<String,UebaDataSources>>> dataSources) {
-            this.dataSources = dataSources;
+            $.dataSources = dataSources;
             return this;
         }
-        public Builder dataSources(@Nullable List<Either<String,UebaDataSources>> dataSources) {
-            this.dataSources = Codegen.ofNullable(dataSources);
-            return this;
+
+        public Builder dataSources(List<Either<String,UebaDataSources>> dataSources) {
+            return dataSources(Output.of(dataSources));
         }
+
         public Builder dataSources(Either<String,UebaDataSources>... dataSources) {
             return dataSources(List.of(dataSources));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
-            return this;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder settingsName(@Nullable Output<String> settingsName) {
-            this.settingsName = settingsName;
+            $.settingsName = settingsName;
             return this;
         }
-        public Builder settingsName(@Nullable String settingsName) {
-            this.settingsName = Codegen.ofNullable(settingsName);
-            return this;
+
+        public Builder settingsName(String settingsName) {
+            return settingsName(Output.of(settingsName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public UebaArgs build() {
-            return new UebaArgs(dataSources, kind, operationalInsightsResourceProvider, resourceGroupName, settingsName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public UebaArgs build() {
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

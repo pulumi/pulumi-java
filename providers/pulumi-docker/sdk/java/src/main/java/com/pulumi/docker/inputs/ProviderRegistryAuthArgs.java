@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,130 +16,117 @@ public final class ProviderRegistryAuthArgs extends com.pulumi.resources.Resourc
     public static final ProviderRegistryAuthArgs Empty = new ProviderRegistryAuthArgs();
 
     @Import(name="address", required=true)
-      private final Output<String> address;
+    private Output<String> address;
 
     public Output<String> address() {
         return this.address;
     }
 
     @Import(name="configFile")
-      private final @Nullable Output<String> configFile;
+    private @Nullable Output<String> configFile;
 
-    public Output<String> configFile() {
-        return this.configFile == null ? Codegen.empty() : this.configFile;
+    public Optional<Output<String>> configFile() {
+        return Optional.ofNullable(this.configFile);
     }
 
     @Import(name="configFileContent")
-      private final @Nullable Output<String> configFileContent;
+    private @Nullable Output<String> configFileContent;
 
-    public Output<String> configFileContent() {
-        return this.configFileContent == null ? Codegen.empty() : this.configFileContent;
+    public Optional<Output<String>> configFileContent() {
+        return Optional.ofNullable(this.configFileContent);
     }
 
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public ProviderRegistryAuthArgs(
-        Output<String> address,
-        @Nullable Output<String> configFile,
-        @Nullable Output<String> configFileContent,
-        @Nullable Output<String> password,
-        @Nullable Output<String> username) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.configFile = configFile;
-        this.configFileContent = configFileContent;
-        this.password = password;
-        this.username = username;
-    }
+    private ProviderRegistryAuthArgs() {}
 
-    private ProviderRegistryAuthArgs() {
-        this.address = Codegen.empty();
-        this.configFile = Codegen.empty();
-        this.configFileContent = Codegen.empty();
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private ProviderRegistryAuthArgs(ProviderRegistryAuthArgs $) {
+        this.address = $.address;
+        this.configFile = $.configFile;
+        this.configFileContent = $.configFileContent;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderRegistryAuthArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> address;
-        private @Nullable Output<String> configFile;
-        private @Nullable Output<String> configFileContent;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> username;
+        private ProviderRegistryAuthArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderRegistryAuthArgs();
         }
 
         public Builder(ProviderRegistryAuthArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.configFile = defaults.configFile;
-    	      this.configFileContent = defaults.configFileContent;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new ProviderRegistryAuthArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(Output<String> address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder address(String address) {
-            this.address = Output.of(Objects.requireNonNull(address));
-            return this;
+            return address(Output.of(address));
         }
+
         public Builder configFile(@Nullable Output<String> configFile) {
-            this.configFile = configFile;
+            $.configFile = configFile;
             return this;
         }
-        public Builder configFile(@Nullable String configFile) {
-            this.configFile = Codegen.ofNullable(configFile);
-            return this;
+
+        public Builder configFile(String configFile) {
+            return configFile(Output.of(configFile));
         }
+
         public Builder configFileContent(@Nullable Output<String> configFileContent) {
-            this.configFileContent = configFileContent;
+            $.configFileContent = configFileContent;
             return this;
         }
-        public Builder configFileContent(@Nullable String configFileContent) {
-            this.configFileContent = Codegen.ofNullable(configFileContent);
-            return this;
+
+        public Builder configFileContent(String configFileContent) {
+            return configFileContent(Output.of(configFileContent));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public ProviderRegistryAuthArgs build() {
-            return new ProviderRegistryAuthArgs(address, configFile, configFileContent, password, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public ProviderRegistryAuthArgs build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            return $;
         }
     }
+
 }

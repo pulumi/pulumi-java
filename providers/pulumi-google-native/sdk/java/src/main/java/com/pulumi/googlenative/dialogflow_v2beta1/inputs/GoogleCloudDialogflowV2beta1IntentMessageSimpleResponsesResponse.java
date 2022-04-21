@@ -22,48 +22,49 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
      * 
      */
     @Import(name="simpleResponses", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses() {
         return this.simpleResponses;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse(List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses) {
-        this.simpleResponses = Objects.requireNonNull(simpleResponses, "expected parameter 'simpleResponses' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse() {
-        this.simpleResponses = List.of();
+    private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse $) {
+        this.simpleResponses = $.simpleResponses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses;
+        private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.simpleResponses = defaults.simpleResponses;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder simpleResponses(List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses) {
-            this.simpleResponses = Objects.requireNonNull(simpleResponses);
+            $.simpleResponses = simpleResponses;
             return this;
         }
+
         public Builder simpleResponses(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse... simpleResponses) {
             return simpleResponses(List.of(simpleResponses));
-        }        public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse(simpleResponses);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse build() {
+            $.simpleResponses = Objects.requireNonNull($.simpleResponses, "expected parameter 'simpleResponses' to be non-null");
+            return $;
         }
     }
+
 }

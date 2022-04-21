@@ -23,10 +23,10 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class FirewallPolicyIntrusionDetectionSignatureSpecificationRespons
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
-    public FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(
-        @Nullable String id,
-        @Nullable String mode) {
-        this.id = id;
-        this.mode = mode;
-    }
+    private FirewallPolicyIntrusionDetectionSignatureSpecificationResponse() {}
 
-    private FirewallPolicyIntrusionDetectionSignatureSpecificationResponse() {
-        this.id = null;
-        this.mode = null;
+    private FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(FirewallPolicyIntrusionDetectionSignatureSpecificationResponse $) {
+        this.id = $.id;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyIntrusionDetectionSignatureSpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String mode;
+        private FirewallPolicyIntrusionDetectionSignatureSpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyIntrusionDetectionSignatureSpecificationResponse();
         }
 
         public Builder(FirewallPolicyIntrusionDetectionSignatureSpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.mode = defaults.mode;
+            $ = new FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
-        }        public FirewallPolicyIntrusionDetectionSignatureSpecificationResponse build() {
-            return new FirewallPolicyIntrusionDetectionSignatureSpecificationResponse(id, mode);
+        }
+
+        public FirewallPolicyIntrusionDetectionSignatureSpecificationResponse build() {
+            return $;
         }
     }
+
 }

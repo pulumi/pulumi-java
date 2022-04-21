@@ -5,10 +5,10 @@ package com.pulumi.aws.workspaces.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="computeTypeName")
-      private final @Nullable Output<String> computeTypeName;
+    private @Nullable Output<String> computeTypeName;
 
-    public Output<String> computeTypeName() {
-        return this.computeTypeName == null ? Codegen.empty() : this.computeTypeName;
+    public Optional<Output<String>> computeTypeName() {
+        return Optional.ofNullable(this.computeTypeName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="rootVolumeSizeGib")
-      private final @Nullable Output<Integer> rootVolumeSizeGib;
+    private @Nullable Output<Integer> rootVolumeSizeGib;
 
-    public Output<Integer> rootVolumeSizeGib() {
-        return this.rootVolumeSizeGib == null ? Codegen.empty() : this.rootVolumeSizeGib;
+    public Optional<Output<Integer>> rootVolumeSizeGib() {
+        return Optional.ofNullable(this.rootVolumeSizeGib);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="runningMode")
-      private final @Nullable Output<String> runningMode;
+    private @Nullable Output<String> runningMode;
 
-    public Output<String> runningMode() {
-        return this.runningMode == null ? Codegen.empty() : this.runningMode;
+    public Optional<Output<String>> runningMode() {
+        return Optional.ofNullable(this.runningMode);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="runningModeAutoStopTimeoutInMinutes")
-      private final @Nullable Output<Integer> runningModeAutoStopTimeoutInMinutes;
+    private @Nullable Output<Integer> runningModeAutoStopTimeoutInMinutes;
 
-    public Output<Integer> runningModeAutoStopTimeoutInMinutes() {
-        return this.runningModeAutoStopTimeoutInMinutes == null ? Codegen.empty() : this.runningModeAutoStopTimeoutInMinutes;
+    public Optional<Output<Integer>> runningModeAutoStopTimeoutInMinutes() {
+        return Optional.ofNullable(this.runningModeAutoStopTimeoutInMinutes);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="userVolumeSizeGib")
-      private final @Nullable Output<Integer> userVolumeSizeGib;
+    private @Nullable Output<Integer> userVolumeSizeGib;
 
-    public Output<Integer> userVolumeSizeGib() {
-        return this.userVolumeSizeGib == null ? Codegen.empty() : this.userVolumeSizeGib;
+    public Optional<Output<Integer>> userVolumeSizeGib() {
+        return Optional.ofNullable(this.userVolumeSizeGib);
     }
 
-    public WorkspaceWorkspacePropertiesGetArgs(
-        @Nullable Output<String> computeTypeName,
-        @Nullable Output<Integer> rootVolumeSizeGib,
-        @Nullable Output<String> runningMode,
-        @Nullable Output<Integer> runningModeAutoStopTimeoutInMinutes,
-        @Nullable Output<Integer> userVolumeSizeGib) {
-        this.computeTypeName = computeTypeName;
-        this.rootVolumeSizeGib = rootVolumeSizeGib;
-        this.runningMode = runningMode;
-        this.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
-        this.userVolumeSizeGib = userVolumeSizeGib;
-    }
+    private WorkspaceWorkspacePropertiesGetArgs() {}
 
-    private WorkspaceWorkspacePropertiesGetArgs() {
-        this.computeTypeName = Codegen.empty();
-        this.rootVolumeSizeGib = Codegen.empty();
-        this.runningMode = Codegen.empty();
-        this.runningModeAutoStopTimeoutInMinutes = Codegen.empty();
-        this.userVolumeSizeGib = Codegen.empty();
+    private WorkspaceWorkspacePropertiesGetArgs(WorkspaceWorkspacePropertiesGetArgs $) {
+        this.computeTypeName = $.computeTypeName;
+        this.rootVolumeSizeGib = $.rootVolumeSizeGib;
+        this.runningMode = $.runningMode;
+        this.runningModeAutoStopTimeoutInMinutes = $.runningModeAutoStopTimeoutInMinutes;
+        this.userVolumeSizeGib = $.userVolumeSizeGib;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceWorkspacePropertiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> computeTypeName;
-        private @Nullable Output<Integer> rootVolumeSizeGib;
-        private @Nullable Output<String> runningMode;
-        private @Nullable Output<Integer> runningModeAutoStopTimeoutInMinutes;
-        private @Nullable Output<Integer> userVolumeSizeGib;
+        private WorkspaceWorkspacePropertiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceWorkspacePropertiesGetArgs();
         }
 
         public Builder(WorkspaceWorkspacePropertiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeTypeName = defaults.computeTypeName;
-    	      this.rootVolumeSizeGib = defaults.rootVolumeSizeGib;
-    	      this.runningMode = defaults.runningMode;
-    	      this.runningModeAutoStopTimeoutInMinutes = defaults.runningModeAutoStopTimeoutInMinutes;
-    	      this.userVolumeSizeGib = defaults.userVolumeSizeGib;
+            $ = new WorkspaceWorkspacePropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeTypeName(@Nullable Output<String> computeTypeName) {
-            this.computeTypeName = computeTypeName;
+            $.computeTypeName = computeTypeName;
             return this;
         }
-        public Builder computeTypeName(@Nullable String computeTypeName) {
-            this.computeTypeName = Codegen.ofNullable(computeTypeName);
-            return this;
+
+        public Builder computeTypeName(String computeTypeName) {
+            return computeTypeName(Output.of(computeTypeName));
         }
+
         public Builder rootVolumeSizeGib(@Nullable Output<Integer> rootVolumeSizeGib) {
-            this.rootVolumeSizeGib = rootVolumeSizeGib;
+            $.rootVolumeSizeGib = rootVolumeSizeGib;
             return this;
         }
-        public Builder rootVolumeSizeGib(@Nullable Integer rootVolumeSizeGib) {
-            this.rootVolumeSizeGib = Codegen.ofNullable(rootVolumeSizeGib);
-            return this;
+
+        public Builder rootVolumeSizeGib(Integer rootVolumeSizeGib) {
+            return rootVolumeSizeGib(Output.of(rootVolumeSizeGib));
         }
+
         public Builder runningMode(@Nullable Output<String> runningMode) {
-            this.runningMode = runningMode;
+            $.runningMode = runningMode;
             return this;
         }
-        public Builder runningMode(@Nullable String runningMode) {
-            this.runningMode = Codegen.ofNullable(runningMode);
-            return this;
+
+        public Builder runningMode(String runningMode) {
+            return runningMode(Output.of(runningMode));
         }
+
         public Builder runningModeAutoStopTimeoutInMinutes(@Nullable Output<Integer> runningModeAutoStopTimeoutInMinutes) {
-            this.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
+            $.runningModeAutoStopTimeoutInMinutes = runningModeAutoStopTimeoutInMinutes;
             return this;
         }
-        public Builder runningModeAutoStopTimeoutInMinutes(@Nullable Integer runningModeAutoStopTimeoutInMinutes) {
-            this.runningModeAutoStopTimeoutInMinutes = Codegen.ofNullable(runningModeAutoStopTimeoutInMinutes);
-            return this;
+
+        public Builder runningModeAutoStopTimeoutInMinutes(Integer runningModeAutoStopTimeoutInMinutes) {
+            return runningModeAutoStopTimeoutInMinutes(Output.of(runningModeAutoStopTimeoutInMinutes));
         }
+
         public Builder userVolumeSizeGib(@Nullable Output<Integer> userVolumeSizeGib) {
-            this.userVolumeSizeGib = userVolumeSizeGib;
+            $.userVolumeSizeGib = userVolumeSizeGib;
             return this;
         }
-        public Builder userVolumeSizeGib(@Nullable Integer userVolumeSizeGib) {
-            this.userVolumeSizeGib = Codegen.ofNullable(userVolumeSizeGib);
-            return this;
-        }        public WorkspaceWorkspacePropertiesGetArgs build() {
-            return new WorkspaceWorkspacePropertiesGetArgs(computeTypeName, rootVolumeSizeGib, runningMode, runningModeAutoStopTimeoutInMinutes, userVolumeSizeGib);
+
+        public Builder userVolumeSizeGib(Integer userVolumeSizeGib) {
+            return userVolumeSizeGib(Output.of(userVolumeSizeGib));
+        }
+
+        public WorkspaceWorkspacePropertiesGetArgs build() {
+            return $;
         }
     }
+
 }

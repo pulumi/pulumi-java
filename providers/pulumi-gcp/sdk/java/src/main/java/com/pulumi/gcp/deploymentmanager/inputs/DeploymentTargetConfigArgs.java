@@ -5,7 +5,6 @@ package com.pulumi.gcp.deploymentmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DeploymentTargetConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="content", required=true)
-      private final Output<String> content;
+    private Output<String> content;
 
     public Output<String> content() {
         return this.content;
     }
 
-    public DeploymentTargetConfigArgs(Output<String> content) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-    }
+    private DeploymentTargetConfigArgs() {}
 
-    private DeploymentTargetConfigArgs() {
-        this.content = Codegen.empty();
+    private DeploymentTargetConfigArgs(DeploymentTargetConfigArgs $) {
+        this.content = $.content;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentTargetConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> content;
+        private DeploymentTargetConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentTargetConfigArgs();
         }
 
         public Builder(DeploymentTargetConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
+            $ = new DeploymentTargetConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(Output<String> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
-        }        public DeploymentTargetConfigArgs build() {
-            return new DeploymentTargetConfigArgs(content);
+            return content(Output.of(content));
+        }
+
+        public DeploymentTargetConfigArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            return $;
         }
     }
+
 }

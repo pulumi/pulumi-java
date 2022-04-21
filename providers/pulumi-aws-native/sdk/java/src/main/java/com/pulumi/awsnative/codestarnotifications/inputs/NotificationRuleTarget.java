@@ -13,62 +13,59 @@ public final class NotificationRuleTarget extends com.pulumi.resources.InvokeArg
     public static final NotificationRuleTarget Empty = new NotificationRuleTarget();
 
     @Import(name="targetAddress", required=true)
-      private final String targetAddress;
+    private String targetAddress;
 
     public String targetAddress() {
         return this.targetAddress;
     }
 
     @Import(name="targetType", required=true)
-      private final String targetType;
+    private String targetType;
 
     public String targetType() {
         return this.targetType;
     }
 
-    public NotificationRuleTarget(
-        String targetAddress,
-        String targetType) {
-        this.targetAddress = Objects.requireNonNull(targetAddress, "expected parameter 'targetAddress' to be non-null");
-        this.targetType = Objects.requireNonNull(targetType, "expected parameter 'targetType' to be non-null");
-    }
+    private NotificationRuleTarget() {}
 
-    private NotificationRuleTarget() {
-        this.targetAddress = null;
-        this.targetType = null;
+    private NotificationRuleTarget(NotificationRuleTarget $) {
+        this.targetAddress = $.targetAddress;
+        this.targetType = $.targetType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRuleTarget defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String targetAddress;
-        private String targetType;
+        private NotificationRuleTarget $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRuleTarget();
         }
 
         public Builder(NotificationRuleTarget defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetAddress = defaults.targetAddress;
-    	      this.targetType = defaults.targetType;
+            $ = new NotificationRuleTarget(Objects.requireNonNull(defaults));
         }
 
         public Builder targetAddress(String targetAddress) {
-            this.targetAddress = Objects.requireNonNull(targetAddress);
+            $.targetAddress = targetAddress;
             return this;
         }
+
         public Builder targetType(String targetType) {
-            this.targetType = Objects.requireNonNull(targetType);
+            $.targetType = targetType;
             return this;
-        }        public NotificationRuleTarget build() {
-            return new NotificationRuleTarget(targetAddress, targetType);
+        }
+
+        public NotificationRuleTarget build() {
+            $.targetAddress = Objects.requireNonNull($.targetAddress, "expected parameter 'targetAddress' to be non-null");
+            $.targetType = Objects.requireNonNull($.targetType, "expected parameter 'targetType' to be non-null");
+            return $;
         }
     }
+
 }

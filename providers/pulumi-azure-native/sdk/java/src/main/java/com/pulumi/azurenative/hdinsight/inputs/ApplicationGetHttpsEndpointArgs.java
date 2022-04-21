@@ -5,12 +5,12 @@ package com.pulumi.azurenative.hdinsight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="accessModes")
-      private final @Nullable Output<List<String>> accessModes;
+    private @Nullable Output<List<String>> accessModes;
 
-    public Output<List<String>> accessModes() {
-        return this.accessModes == null ? Codegen.empty() : this.accessModes;
+    public Optional<Output<List<String>>> accessModes() {
+        return Optional.ofNullable(this.accessModes);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="destinationPort")
-      private final @Nullable Output<Integer> destinationPort;
+    private @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> destinationPort() {
-        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
+    public Optional<Output<Integer>> destinationPort() {
+        return Optional.ofNullable(this.destinationPort);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="disableGatewayAuth")
-      private final @Nullable Output<Boolean> disableGatewayAuth;
+    private @Nullable Output<Boolean> disableGatewayAuth;
 
-    public Output<Boolean> disableGatewayAuth() {
-        return this.disableGatewayAuth == null ? Codegen.empty() : this.disableGatewayAuth;
+    public Optional<Output<Boolean>> disableGatewayAuth() {
+        return Optional.ofNullable(this.disableGatewayAuth);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable Output<String> privateIPAddress;
+    private @Nullable Output<String> privateIPAddress;
 
-    public Output<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
+    public Optional<Output<String>> privateIPAddress() {
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -71,105 +71,92 @@ public final class ApplicationGetHttpsEndpointArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="subDomainSuffix")
-      private final @Nullable Output<String> subDomainSuffix;
+    private @Nullable Output<String> subDomainSuffix;
 
-    public Output<String> subDomainSuffix() {
-        return this.subDomainSuffix == null ? Codegen.empty() : this.subDomainSuffix;
+    public Optional<Output<String>> subDomainSuffix() {
+        return Optional.ofNullable(this.subDomainSuffix);
     }
 
-    public ApplicationGetHttpsEndpointArgs(
-        @Nullable Output<List<String>> accessModes,
-        @Nullable Output<Integer> destinationPort,
-        @Nullable Output<Boolean> disableGatewayAuth,
-        @Nullable Output<String> privateIPAddress,
-        @Nullable Output<String> subDomainSuffix) {
-        this.accessModes = accessModes;
-        this.destinationPort = destinationPort;
-        this.disableGatewayAuth = disableGatewayAuth;
-        this.privateIPAddress = privateIPAddress;
-        this.subDomainSuffix = subDomainSuffix;
-    }
+    private ApplicationGetHttpsEndpointArgs() {}
 
-    private ApplicationGetHttpsEndpointArgs() {
-        this.accessModes = Codegen.empty();
-        this.destinationPort = Codegen.empty();
-        this.disableGatewayAuth = Codegen.empty();
-        this.privateIPAddress = Codegen.empty();
-        this.subDomainSuffix = Codegen.empty();
+    private ApplicationGetHttpsEndpointArgs(ApplicationGetHttpsEndpointArgs $) {
+        this.accessModes = $.accessModes;
+        this.destinationPort = $.destinationPort;
+        this.disableGatewayAuth = $.disableGatewayAuth;
+        this.privateIPAddress = $.privateIPAddress;
+        this.subDomainSuffix = $.subDomainSuffix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGetHttpsEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> accessModes;
-        private @Nullable Output<Integer> destinationPort;
-        private @Nullable Output<Boolean> disableGatewayAuth;
-        private @Nullable Output<String> privateIPAddress;
-        private @Nullable Output<String> subDomainSuffix;
+        private ApplicationGetHttpsEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGetHttpsEndpointArgs();
         }
 
         public Builder(ApplicationGetHttpsEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessModes = defaults.accessModes;
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.disableGatewayAuth = defaults.disableGatewayAuth;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.subDomainSuffix = defaults.subDomainSuffix;
+            $ = new ApplicationGetHttpsEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessModes(@Nullable Output<List<String>> accessModes) {
-            this.accessModes = accessModes;
+            $.accessModes = accessModes;
             return this;
         }
-        public Builder accessModes(@Nullable List<String> accessModes) {
-            this.accessModes = Codegen.ofNullable(accessModes);
-            return this;
+
+        public Builder accessModes(List<String> accessModes) {
+            return accessModes(Output.of(accessModes));
         }
+
         public Builder accessModes(String... accessModes) {
             return accessModes(List.of(accessModes));
         }
+
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
-            this.destinationPort = destinationPort;
+            $.destinationPort = destinationPort;
             return this;
         }
-        public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Codegen.ofNullable(destinationPort);
-            return this;
+
+        public Builder destinationPort(Integer destinationPort) {
+            return destinationPort(Output.of(destinationPort));
         }
+
         public Builder disableGatewayAuth(@Nullable Output<Boolean> disableGatewayAuth) {
-            this.disableGatewayAuth = disableGatewayAuth;
+            $.disableGatewayAuth = disableGatewayAuth;
             return this;
         }
-        public Builder disableGatewayAuth(@Nullable Boolean disableGatewayAuth) {
-            this.disableGatewayAuth = Codegen.ofNullable(disableGatewayAuth);
-            return this;
+
+        public Builder disableGatewayAuth(Boolean disableGatewayAuth) {
+            return disableGatewayAuth(Output.of(disableGatewayAuth));
         }
+
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
-        public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
-            return this;
+
+        public Builder privateIPAddress(String privateIPAddress) {
+            return privateIPAddress(Output.of(privateIPAddress));
         }
+
         public Builder subDomainSuffix(@Nullable Output<String> subDomainSuffix) {
-            this.subDomainSuffix = subDomainSuffix;
+            $.subDomainSuffix = subDomainSuffix;
             return this;
         }
-        public Builder subDomainSuffix(@Nullable String subDomainSuffix) {
-            this.subDomainSuffix = Codegen.ofNullable(subDomainSuffix);
-            return this;
-        }        public ApplicationGetHttpsEndpointArgs build() {
-            return new ApplicationGetHttpsEndpointArgs(accessModes, destinationPort, disableGatewayAuth, privateIPAddress, subDomainSuffix);
+
+        public Builder subDomainSuffix(String subDomainSuffix) {
+            return subDomainSuffix(Output.of(subDomainSuffix));
+        }
+
+        public ApplicationGetHttpsEndpointArgs build() {
+            return $;
         }
     }
+
 }

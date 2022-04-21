@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends com.pulumi.
      * 
      */
     @Import(name="maxModulusSize")
-      private final @Nullable Output<String> maxModulusSize;
+    private @Nullable Output<String> maxModulusSize;
 
-    public Output<String> maxModulusSize() {
-        return this.maxModulusSize == null ? Codegen.empty() : this.maxModulusSize;
+    public Optional<Output<String>> maxModulusSize() {
+        return Optional.ofNullable(this.maxModulusSize);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends com.pulumi.
      * 
      */
     @Import(name="minModulusSize")
-      private final @Nullable Output<String> minModulusSize;
+    private @Nullable Output<String> minModulusSize;
 
-    public Output<String> minModulusSize() {
-        return this.minModulusSize == null ? Codegen.empty() : this.minModulusSize;
+    public Optional<Output<String>> minModulusSize() {
+        return Optional.ofNullable(this.minModulusSize);
     }
 
-    public CaPoolIssuancePolicyAllowedKeyTypeRsaArgs(
-        @Nullable Output<String> maxModulusSize,
-        @Nullable Output<String> minModulusSize) {
-        this.maxModulusSize = maxModulusSize;
-        this.minModulusSize = minModulusSize;
-    }
+    private CaPoolIssuancePolicyAllowedKeyTypeRsaArgs() {}
 
-    private CaPoolIssuancePolicyAllowedKeyTypeRsaArgs() {
-        this.maxModulusSize = Codegen.empty();
-        this.minModulusSize = Codegen.empty();
+    private CaPoolIssuancePolicyAllowedKeyTypeRsaArgs(CaPoolIssuancePolicyAllowedKeyTypeRsaArgs $) {
+        this.maxModulusSize = $.maxModulusSize;
+        this.minModulusSize = $.minModulusSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIssuancePolicyAllowedKeyTypeRsaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> maxModulusSize;
-        private @Nullable Output<String> minModulusSize;
+        private CaPoolIssuancePolicyAllowedKeyTypeRsaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIssuancePolicyAllowedKeyTypeRsaArgs();
         }
 
         public Builder(CaPoolIssuancePolicyAllowedKeyTypeRsaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxModulusSize = defaults.maxModulusSize;
-    	      this.minModulusSize = defaults.minModulusSize;
+            $ = new CaPoolIssuancePolicyAllowedKeyTypeRsaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxModulusSize(@Nullable Output<String> maxModulusSize) {
-            this.maxModulusSize = maxModulusSize;
+            $.maxModulusSize = maxModulusSize;
             return this;
         }
-        public Builder maxModulusSize(@Nullable String maxModulusSize) {
-            this.maxModulusSize = Codegen.ofNullable(maxModulusSize);
-            return this;
+
+        public Builder maxModulusSize(String maxModulusSize) {
+            return maxModulusSize(Output.of(maxModulusSize));
         }
+
         public Builder minModulusSize(@Nullable Output<String> minModulusSize) {
-            this.minModulusSize = minModulusSize;
+            $.minModulusSize = minModulusSize;
             return this;
         }
-        public Builder minModulusSize(@Nullable String minModulusSize) {
-            this.minModulusSize = Codegen.ofNullable(minModulusSize);
-            return this;
-        }        public CaPoolIssuancePolicyAllowedKeyTypeRsaArgs build() {
-            return new CaPoolIssuancePolicyAllowedKeyTypeRsaArgs(maxModulusSize, minModulusSize);
+
+        public Builder minModulusSize(String minModulusSize) {
+            return minModulusSize(Output.of(minModulusSize));
+        }
+
+        public CaPoolIssuancePolicyAllowedKeyTypeRsaArgs build() {
+            return $;
         }
     }
+
 }

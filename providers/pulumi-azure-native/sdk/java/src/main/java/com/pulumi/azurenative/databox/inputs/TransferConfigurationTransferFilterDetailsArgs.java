@@ -6,8 +6,8 @@ package com.pulumi.azurenative.databox.inputs;
 import com.pulumi.azurenative.databox.inputs.TransferFilterDetailsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends com.pu
      * 
      */
     @Import(name="include")
-      private final @Nullable Output<TransferFilterDetailsArgs> include;
+    private @Nullable Output<TransferFilterDetailsArgs> include;
 
-    public Output<TransferFilterDetailsArgs> include() {
-        return this.include == null ? Codegen.empty() : this.include;
+    public Optional<Output<TransferFilterDetailsArgs>> include() {
+        return Optional.ofNullable(this.include);
     }
 
-    public TransferConfigurationTransferFilterDetailsArgs(@Nullable Output<TransferFilterDetailsArgs> include) {
-        this.include = include;
-    }
+    private TransferConfigurationTransferFilterDetailsArgs() {}
 
-    private TransferConfigurationTransferFilterDetailsArgs() {
-        this.include = Codegen.empty();
+    private TransferConfigurationTransferFilterDetailsArgs(TransferConfigurationTransferFilterDetailsArgs $) {
+        this.include = $.include;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferConfigurationTransferFilterDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TransferFilterDetailsArgs> include;
+        private TransferConfigurationTransferFilterDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferConfigurationTransferFilterDetailsArgs();
         }
 
         public Builder(TransferConfigurationTransferFilterDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.include = defaults.include;
+            $ = new TransferConfigurationTransferFilterDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder include(@Nullable Output<TransferFilterDetailsArgs> include) {
-            this.include = include;
+            $.include = include;
             return this;
         }
-        public Builder include(@Nullable TransferFilterDetailsArgs include) {
-            this.include = Codegen.ofNullable(include);
-            return this;
-        }        public TransferConfigurationTransferFilterDetailsArgs build() {
-            return new TransferConfigurationTransferFilterDetailsArgs(include);
+
+        public Builder include(TransferFilterDetailsArgs include) {
+            return include(Output.of(include));
+        }
+
+        public TransferConfigurationTransferFilterDetailsArgs build() {
+            return $;
         }
     }
+
 }

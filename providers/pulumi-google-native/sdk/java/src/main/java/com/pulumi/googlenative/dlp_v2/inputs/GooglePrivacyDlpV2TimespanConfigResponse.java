@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="enableAutoPopulationOfTimespanConfig", required=true)
-      private final Boolean enableAutoPopulationOfTimespanConfig;
+    private Boolean enableAutoPopulationOfTimespanConfig;
 
     public Boolean enableAutoPopulationOfTimespanConfig() {
         return this.enableAutoPopulationOfTimespanConfig;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -56,73 +56,66 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse extends com.pulumi.r
      * 
      */
     @Import(name="timestampField", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse timestampField;
+    private GooglePrivacyDlpV2FieldIdResponse timestampField;
 
     public GooglePrivacyDlpV2FieldIdResponse timestampField() {
         return this.timestampField;
     }
 
-    public GooglePrivacyDlpV2TimespanConfigResponse(
-        Boolean enableAutoPopulationOfTimespanConfig,
-        String endTime,
-        String startTime,
-        GooglePrivacyDlpV2FieldIdResponse timestampField) {
-        this.enableAutoPopulationOfTimespanConfig = Objects.requireNonNull(enableAutoPopulationOfTimespanConfig, "expected parameter 'enableAutoPopulationOfTimespanConfig' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.timestampField = Objects.requireNonNull(timestampField, "expected parameter 'timestampField' to be non-null");
-    }
+    private GooglePrivacyDlpV2TimespanConfigResponse() {}
 
-    private GooglePrivacyDlpV2TimespanConfigResponse() {
-        this.enableAutoPopulationOfTimespanConfig = null;
-        this.endTime = null;
-        this.startTime = null;
-        this.timestampField = null;
+    private GooglePrivacyDlpV2TimespanConfigResponse(GooglePrivacyDlpV2TimespanConfigResponse $) {
+        this.enableAutoPopulationOfTimespanConfig = $.enableAutoPopulationOfTimespanConfig;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
+        this.timestampField = $.timestampField;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TimespanConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableAutoPopulationOfTimespanConfig;
-        private String endTime;
-        private String startTime;
-        private GooglePrivacyDlpV2FieldIdResponse timestampField;
+        private GooglePrivacyDlpV2TimespanConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TimespanConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2TimespanConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableAutoPopulationOfTimespanConfig = defaults.enableAutoPopulationOfTimespanConfig;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
-    	      this.timestampField = defaults.timestampField;
+            $ = new GooglePrivacyDlpV2TimespanConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableAutoPopulationOfTimespanConfig(Boolean enableAutoPopulationOfTimespanConfig) {
-            this.enableAutoPopulationOfTimespanConfig = Objects.requireNonNull(enableAutoPopulationOfTimespanConfig);
+            $.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder timestampField(GooglePrivacyDlpV2FieldIdResponse timestampField) {
-            this.timestampField = Objects.requireNonNull(timestampField);
+            $.timestampField = timestampField;
             return this;
-        }        public GooglePrivacyDlpV2TimespanConfigResponse build() {
-            return new GooglePrivacyDlpV2TimespanConfigResponse(enableAutoPopulationOfTimespanConfig, endTime, startTime, timestampField);
+        }
+
+        public GooglePrivacyDlpV2TimespanConfigResponse build() {
+            $.enableAutoPopulationOfTimespanConfig = Objects.requireNonNull($.enableAutoPopulationOfTimespanConfig, "expected parameter 'enableAutoPopulationOfTimespanConfig' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.timestampField = Objects.requireNonNull($.timestampField, "expected parameter 'timestampField' to be non-null");
+            return $;
         }
     }
+
 }

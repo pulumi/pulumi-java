@@ -24,10 +24,10 @@ public final class BootDiagnosticsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class BootDiagnosticsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="storageUri")
-      private final @Nullable String storageUri;
+    private @Nullable String storageUri;
 
     public Optional<String> storageUri() {
-        return this.storageUri == null ? Optional.empty() : Optional.ofNullable(this.storageUri);
+        return Optional.ofNullable(this.storageUri);
     }
 
-    public BootDiagnosticsResponse(
-        @Nullable Boolean enabled,
-        @Nullable String storageUri) {
-        this.enabled = enabled;
-        this.storageUri = storageUri;
-    }
+    private BootDiagnosticsResponse() {}
 
-    private BootDiagnosticsResponse() {
-        this.enabled = null;
-        this.storageUri = null;
+    private BootDiagnosticsResponse(BootDiagnosticsResponse $) {
+        this.enabled = $.enabled;
+        this.storageUri = $.storageUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BootDiagnosticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable String storageUri;
+        private BootDiagnosticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BootDiagnosticsResponse();
         }
 
         public Builder(BootDiagnosticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.storageUri = defaults.storageUri;
+            $ = new BootDiagnosticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder storageUri(@Nullable String storageUri) {
-            this.storageUri = storageUri;
+            $.storageUri = storageUri;
             return this;
-        }        public BootDiagnosticsResponse build() {
-            return new BootDiagnosticsResponse(enabled, storageUri);
+        }
+
+        public BootDiagnosticsResponse build() {
+            return $;
         }
     }
+
 }

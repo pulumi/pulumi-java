@@ -19,10 +19,10 @@ public final class VmUptimeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="daysPerMonth")
-      private final @Nullable Double daysPerMonth;
+    private @Nullable Double daysPerMonth;
 
     public Optional<Double> daysPerMonth() {
-        return this.daysPerMonth == null ? Optional.empty() : Optional.ofNullable(this.daysPerMonth);
+        return Optional.ofNullable(this.daysPerMonth);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class VmUptimeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hoursPerDay")
-      private final @Nullable Double hoursPerDay;
+    private @Nullable Double hoursPerDay;
 
     public Optional<Double> hoursPerDay() {
-        return this.hoursPerDay == null ? Optional.empty() : Optional.ofNullable(this.hoursPerDay);
+        return Optional.ofNullable(this.hoursPerDay);
     }
 
-    public VmUptimeResponse(
-        @Nullable Double daysPerMonth,
-        @Nullable Double hoursPerDay) {
-        this.daysPerMonth = daysPerMonth;
-        this.hoursPerDay = hoursPerDay;
-    }
+    private VmUptimeResponse() {}
 
-    private VmUptimeResponse() {
-        this.daysPerMonth = null;
-        this.hoursPerDay = null;
+    private VmUptimeResponse(VmUptimeResponse $) {
+        this.daysPerMonth = $.daysPerMonth;
+        this.hoursPerDay = $.hoursPerDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmUptimeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double daysPerMonth;
-        private @Nullable Double hoursPerDay;
+        private VmUptimeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmUptimeResponse();
         }
 
         public Builder(VmUptimeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysPerMonth = defaults.daysPerMonth;
-    	      this.hoursPerDay = defaults.hoursPerDay;
+            $ = new VmUptimeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder daysPerMonth(@Nullable Double daysPerMonth) {
-            this.daysPerMonth = daysPerMonth;
+            $.daysPerMonth = daysPerMonth;
             return this;
         }
+
         public Builder hoursPerDay(@Nullable Double hoursPerDay) {
-            this.hoursPerDay = hoursPerDay;
+            $.hoursPerDay = hoursPerDay;
             return this;
-        }        public VmUptimeResponse build() {
-            return new VmUptimeResponse(daysPerMonth, hoursPerDay);
+        }
+
+        public VmUptimeResponse build() {
+            return $;
         }
     }
+
 }

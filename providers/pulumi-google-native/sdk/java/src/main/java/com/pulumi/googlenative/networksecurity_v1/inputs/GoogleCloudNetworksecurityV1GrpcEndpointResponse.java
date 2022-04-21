@@ -21,45 +21,45 @@ public final class GoogleCloudNetworksecurityV1GrpcEndpointResponse extends com.
      * 
      */
     @Import(name="targetUri", required=true)
-      private final String targetUri;
+    private String targetUri;
 
     public String targetUri() {
         return this.targetUri;
     }
 
-    public GoogleCloudNetworksecurityV1GrpcEndpointResponse(String targetUri) {
-        this.targetUri = Objects.requireNonNull(targetUri, "expected parameter 'targetUri' to be non-null");
-    }
+    private GoogleCloudNetworksecurityV1GrpcEndpointResponse() {}
 
-    private GoogleCloudNetworksecurityV1GrpcEndpointResponse() {
-        this.targetUri = null;
+    private GoogleCloudNetworksecurityV1GrpcEndpointResponse(GoogleCloudNetworksecurityV1GrpcEndpointResponse $) {
+        this.targetUri = $.targetUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudNetworksecurityV1GrpcEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String targetUri;
+        private GoogleCloudNetworksecurityV1GrpcEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudNetworksecurityV1GrpcEndpointResponse();
         }
 
         public Builder(GoogleCloudNetworksecurityV1GrpcEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetUri = defaults.targetUri;
+            $ = new GoogleCloudNetworksecurityV1GrpcEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetUri(String targetUri) {
-            this.targetUri = Objects.requireNonNull(targetUri);
+            $.targetUri = targetUri;
             return this;
-        }        public GoogleCloudNetworksecurityV1GrpcEndpointResponse build() {
-            return new GoogleCloudNetworksecurityV1GrpcEndpointResponse(targetUri);
+        }
+
+        public GoogleCloudNetworksecurityV1GrpcEndpointResponse build() {
+            $.targetUri = Objects.requireNonNull($.targetUri, "expected parameter 'targetUri' to be non-null");
+            return $;
         }
     }
+
 }

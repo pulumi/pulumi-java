@@ -17,7 +17,7 @@ public final class GetDigitalTwinsEndpointArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endpointName", required=true)
-      private final String endpointName;
+    private String endpointName;
 
     public String endpointName() {
         return this.endpointName;
@@ -28,7 +28,7 @@ public final class GetDigitalTwinsEndpointArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetDigitalTwinsEndpointArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetDigitalTwinsEndpointArgs(
-        String endpointName,
-        String resourceGroupName,
-        String resourceName) {
-        this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetDigitalTwinsEndpointArgs() {}
 
-    private GetDigitalTwinsEndpointArgs() {
-        this.endpointName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetDigitalTwinsEndpointArgs(GetDigitalTwinsEndpointArgs $) {
+        this.endpointName = $.endpointName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDigitalTwinsEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetDigitalTwinsEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDigitalTwinsEndpointArgs();
         }
 
         public Builder(GetDigitalTwinsEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointName = defaults.endpointName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetDigitalTwinsEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Objects.requireNonNull(endpointName);
+            $.endpointName = endpointName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetDigitalTwinsEndpointArgs build() {
-            return new GetDigitalTwinsEndpointArgs(endpointName, resourceGroupName, resourceName);
+        }
+
+        public GetDigitalTwinsEndpointArgs build() {
+            $.endpointName = Objects.requireNonNull($.endpointName, "expected parameter 'endpointName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

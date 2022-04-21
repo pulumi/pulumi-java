@@ -17,7 +17,7 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends com.pulumi.re
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -28,7 +28,7 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends com.pulumi.re
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -39,64 +39,59 @@ public final class GetManagerDevicePublicEncryptionKeyArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetManagerDevicePublicEncryptionKeyArgs(
-        String deviceName,
-        String managerName,
-        String resourceGroupName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetManagerDevicePublicEncryptionKeyArgs() {}
 
-    private GetManagerDevicePublicEncryptionKeyArgs() {
-        this.deviceName = null;
-        this.managerName = null;
-        this.resourceGroupName = null;
+    private GetManagerDevicePublicEncryptionKeyArgs(GetManagerDevicePublicEncryptionKeyArgs $) {
+        this.deviceName = $.deviceName;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetManagerDevicePublicEncryptionKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private String managerName;
-        private String resourceGroupName;
+        private GetManagerDevicePublicEncryptionKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetManagerDevicePublicEncryptionKeyArgs();
         }
 
         public Builder(GetManagerDevicePublicEncryptionKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetManagerDevicePublicEncryptionKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetManagerDevicePublicEncryptionKeyArgs build() {
-            return new GetManagerDevicePublicEncryptionKeyArgs(deviceName, managerName, resourceGroupName);
+        }
+
+        public GetManagerDevicePublicEncryptionKeyArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

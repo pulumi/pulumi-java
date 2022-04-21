@@ -5,9 +5,9 @@ package com.pulumi.azurenative.appplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="documentation")
-      private final @Nullable Output<String> documentation;
+    private @Nullable Output<String> documentation;
 
-    public Output<String> documentation() {
-        return this.documentation == null ? Codegen.empty() : this.documentation;
+    public Optional<Output<String>> documentation() {
+        return Optional.ofNullable(this.documentation);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="serverUrl")
-      private final @Nullable Output<String> serverUrl;
+    private @Nullable Output<String> serverUrl;
 
-    public Output<String> serverUrl() {
-        return this.serverUrl == null ? Codegen.empty() : this.serverUrl;
+    public Optional<Output<String>> serverUrl() {
+        return Optional.ofNullable(this.serverUrl);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class GatewayApiMetadataPropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public GatewayApiMetadataPropertiesArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> documentation,
-        @Nullable Output<String> serverUrl,
-        @Nullable Output<String> title,
-        @Nullable Output<String> version) {
-        this.description = description;
-        this.documentation = documentation;
-        this.serverUrl = serverUrl;
-        this.title = title;
-        this.version = version;
-    }
+    private GatewayApiMetadataPropertiesArgs() {}
 
-    private GatewayApiMetadataPropertiesArgs() {
-        this.description = Codegen.empty();
-        this.documentation = Codegen.empty();
-        this.serverUrl = Codegen.empty();
-        this.title = Codegen.empty();
-        this.version = Codegen.empty();
+    private GatewayApiMetadataPropertiesArgs(GatewayApiMetadataPropertiesArgs $) {
+        this.description = $.description;
+        this.documentation = $.documentation;
+        this.serverUrl = $.serverUrl;
+        this.title = $.title;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayApiMetadataPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> documentation;
-        private @Nullable Output<String> serverUrl;
-        private @Nullable Output<String> title;
-        private @Nullable Output<String> version;
+        private GatewayApiMetadataPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayApiMetadataPropertiesArgs();
         }
 
         public Builder(GatewayApiMetadataPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.documentation = defaults.documentation;
-    	      this.serverUrl = defaults.serverUrl;
-    	      this.title = defaults.title;
-    	      this.version = defaults.version;
+            $ = new GatewayApiMetadataPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder documentation(@Nullable Output<String> documentation) {
-            this.documentation = documentation;
+            $.documentation = documentation;
             return this;
         }
-        public Builder documentation(@Nullable String documentation) {
-            this.documentation = Codegen.ofNullable(documentation);
-            return this;
+
+        public Builder documentation(String documentation) {
+            return documentation(Output.of(documentation));
         }
+
         public Builder serverUrl(@Nullable Output<String> serverUrl) {
-            this.serverUrl = serverUrl;
+            $.serverUrl = serverUrl;
             return this;
         }
-        public Builder serverUrl(@Nullable String serverUrl) {
-            this.serverUrl = Codegen.ofNullable(serverUrl);
-            return this;
+
+        public Builder serverUrl(String serverUrl) {
+            return serverUrl(Output.of(serverUrl));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public GatewayApiMetadataPropertiesArgs build() {
-            return new GatewayApiMetadataPropertiesArgs(description, documentation, serverUrl, title, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public GatewayApiMetadataPropertiesArgs build() {
+            return $;
         }
     }
+
 }

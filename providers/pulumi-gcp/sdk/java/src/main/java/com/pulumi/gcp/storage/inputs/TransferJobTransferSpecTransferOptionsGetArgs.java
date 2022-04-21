@@ -5,9 +5,9 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends com.pul
      * 
      */
     @Import(name="deleteObjectsFromSourceAfterTransfer")
-      private final @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
+    private @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
 
-    public Output<Boolean> deleteObjectsFromSourceAfterTransfer() {
-        return this.deleteObjectsFromSourceAfterTransfer == null ? Codegen.empty() : this.deleteObjectsFromSourceAfterTransfer;
+    public Optional<Output<Boolean>> deleteObjectsFromSourceAfterTransfer() {
+        return Optional.ofNullable(this.deleteObjectsFromSourceAfterTransfer);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends com.pul
      * 
      */
     @Import(name="deleteObjectsUniqueInSink")
-      private final @Nullable Output<Boolean> deleteObjectsUniqueInSink;
+    private @Nullable Output<Boolean> deleteObjectsUniqueInSink;
 
-    public Output<Boolean> deleteObjectsUniqueInSink() {
-        return this.deleteObjectsUniqueInSink == null ? Codegen.empty() : this.deleteObjectsUniqueInSink;
+    public Optional<Output<Boolean>> deleteObjectsUniqueInSink() {
+        return Optional.ofNullable(this.deleteObjectsUniqueInSink);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends com.pul
      * 
      */
     @Import(name="overwriteObjectsAlreadyExistingInSink")
-      private final @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
+    private @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
 
-    public Output<Boolean> overwriteObjectsAlreadyExistingInSink() {
-        return this.overwriteObjectsAlreadyExistingInSink == null ? Codegen.empty() : this.overwriteObjectsAlreadyExistingInSink;
+    public Optional<Output<Boolean>> overwriteObjectsAlreadyExistingInSink() {
+        return Optional.ofNullable(this.overwriteObjectsAlreadyExistingInSink);
     }
 
-    public TransferJobTransferSpecTransferOptionsGetArgs(
-        @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer,
-        @Nullable Output<Boolean> deleteObjectsUniqueInSink,
-        @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink) {
-        this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
-        this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
-        this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
-    }
+    private TransferJobTransferSpecTransferOptionsGetArgs() {}
 
-    private TransferJobTransferSpecTransferOptionsGetArgs() {
-        this.deleteObjectsFromSourceAfterTransfer = Codegen.empty();
-        this.deleteObjectsUniqueInSink = Codegen.empty();
-        this.overwriteObjectsAlreadyExistingInSink = Codegen.empty();
+    private TransferJobTransferSpecTransferOptionsGetArgs(TransferJobTransferSpecTransferOptionsGetArgs $) {
+        this.deleteObjectsFromSourceAfterTransfer = $.deleteObjectsFromSourceAfterTransfer;
+        this.deleteObjectsUniqueInSink = $.deleteObjectsUniqueInSink;
+        this.overwriteObjectsAlreadyExistingInSink = $.overwriteObjectsAlreadyExistingInSink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferJobTransferSpecTransferOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
-        private @Nullable Output<Boolean> deleteObjectsUniqueInSink;
-        private @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
+        private TransferJobTransferSpecTransferOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferJobTransferSpecTransferOptionsGetArgs();
         }
 
         public Builder(TransferJobTransferSpecTransferOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteObjectsFromSourceAfterTransfer = defaults.deleteObjectsFromSourceAfterTransfer;
-    	      this.deleteObjectsUniqueInSink = defaults.deleteObjectsUniqueInSink;
-    	      this.overwriteObjectsAlreadyExistingInSink = defaults.overwriteObjectsAlreadyExistingInSink;
+            $ = new TransferJobTransferSpecTransferOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer) {
-            this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
+            $.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
             return this;
         }
-        public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Boolean deleteObjectsFromSourceAfterTransfer) {
-            this.deleteObjectsFromSourceAfterTransfer = Codegen.ofNullable(deleteObjectsFromSourceAfterTransfer);
-            return this;
+
+        public Builder deleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
+            return deleteObjectsFromSourceAfterTransfer(Output.of(deleteObjectsFromSourceAfterTransfer));
         }
+
         public Builder deleteObjectsUniqueInSink(@Nullable Output<Boolean> deleteObjectsUniqueInSink) {
-            this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
+            $.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
             return this;
         }
-        public Builder deleteObjectsUniqueInSink(@Nullable Boolean deleteObjectsUniqueInSink) {
-            this.deleteObjectsUniqueInSink = Codegen.ofNullable(deleteObjectsUniqueInSink);
-            return this;
+
+        public Builder deleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
+            return deleteObjectsUniqueInSink(Output.of(deleteObjectsUniqueInSink));
         }
+
         public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink) {
-            this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
+            $.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;
         }
-        public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
-            this.overwriteObjectsAlreadyExistingInSink = Codegen.ofNullable(overwriteObjectsAlreadyExistingInSink);
-            return this;
-        }        public TransferJobTransferSpecTransferOptionsGetArgs build() {
-            return new TransferJobTransferSpecTransferOptionsGetArgs(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, overwriteObjectsAlreadyExistingInSink);
+
+        public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
+            return overwriteObjectsAlreadyExistingInSink(Output.of(overwriteObjectsAlreadyExistingInSink));
+        }
+
+        public TransferJobTransferSpecTransferOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

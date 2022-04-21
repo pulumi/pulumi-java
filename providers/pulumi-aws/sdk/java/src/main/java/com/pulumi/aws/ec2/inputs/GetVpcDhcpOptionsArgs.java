@@ -22,10 +22,10 @@ public final class GetVpcDhcpOptionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="dhcpOptionsId")
-      private final @Nullable String dhcpOptionsId;
+    private @Nullable String dhcpOptionsId;
 
     public Optional<String> dhcpOptionsId() {
-        return this.dhcpOptionsId == null ? Optional.empty() : Optional.ofNullable(this.dhcpOptionsId);
+        return Optional.ofNullable(this.dhcpOptionsId);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetVpcDhcpOptionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpcDhcpOptionsFilter> filters;
+    private @Nullable List<GetVpcDhcpOptionsFilter> filters;
 
-    public List<GetVpcDhcpOptionsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpcDhcpOptionsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,67 +44,60 @@ public final class GetVpcDhcpOptionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVpcDhcpOptionsArgs(
-        @Nullable String dhcpOptionsId,
-        @Nullable List<GetVpcDhcpOptionsFilter> filters,
-        @Nullable Map<String,String> tags) {
-        this.dhcpOptionsId = dhcpOptionsId;
-        this.filters = filters;
-        this.tags = tags;
-    }
+    private GetVpcDhcpOptionsArgs() {}
 
-    private GetVpcDhcpOptionsArgs() {
-        this.dhcpOptionsId = null;
-        this.filters = List.of();
-        this.tags = Map.of();
+    private GetVpcDhcpOptionsArgs(GetVpcDhcpOptionsArgs $) {
+        this.dhcpOptionsId = $.dhcpOptionsId;
+        this.filters = $.filters;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcDhcpOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dhcpOptionsId;
-        private @Nullable List<GetVpcDhcpOptionsFilter> filters;
-        private @Nullable Map<String,String> tags;
+        private GetVpcDhcpOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcDhcpOptionsArgs();
         }
 
         public Builder(GetVpcDhcpOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dhcpOptionsId = defaults.dhcpOptionsId;
-    	      this.filters = defaults.filters;
-    	      this.tags = defaults.tags;
+            $ = new GetVpcDhcpOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
-            this.dhcpOptionsId = dhcpOptionsId;
+            $.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
+
         public Builder filters(@Nullable List<GetVpcDhcpOptionsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpcDhcpOptionsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVpcDhcpOptionsArgs build() {
-            return new GetVpcDhcpOptionsArgs(dhcpOptionsId, filters, tags);
+        }
+
+        public GetVpcDhcpOptionsArgs build() {
+            return $;
         }
     }
+
 }

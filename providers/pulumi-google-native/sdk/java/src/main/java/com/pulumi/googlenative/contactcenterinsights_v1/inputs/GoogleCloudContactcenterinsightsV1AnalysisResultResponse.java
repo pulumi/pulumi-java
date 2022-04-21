@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
      * 
      */
     @Import(name="callAnalysisMetadata", required=true)
-      private final GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata;
+    private GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata;
 
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata() {
         return this.callAnalysisMetadata;
@@ -33,55 +33,52 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
     }
 
-    public GoogleCloudContactcenterinsightsV1AnalysisResultResponse(
-        GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata,
-        String endTime) {
-        this.callAnalysisMetadata = Objects.requireNonNull(callAnalysisMetadata, "expected parameter 'callAnalysisMetadata' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1AnalysisResultResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1AnalysisResultResponse() {
-        this.callAnalysisMetadata = null;
-        this.endTime = null;
+    private GoogleCloudContactcenterinsightsV1AnalysisResultResponse(GoogleCloudContactcenterinsightsV1AnalysisResultResponse $) {
+        this.callAnalysisMetadata = $.callAnalysisMetadata;
+        this.endTime = $.endTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1AnalysisResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata;
-        private String endTime;
+        private GoogleCloudContactcenterinsightsV1AnalysisResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1AnalysisResultResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1AnalysisResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callAnalysisMetadata = defaults.callAnalysisMetadata;
-    	      this.endTime = defaults.endTime;
+            $ = new GoogleCloudContactcenterinsightsV1AnalysisResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder callAnalysisMetadata(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata) {
-            this.callAnalysisMetadata = Objects.requireNonNull(callAnalysisMetadata);
+            $.callAnalysisMetadata = callAnalysisMetadata;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1AnalysisResultResponse build() {
-            return new GoogleCloudContactcenterinsightsV1AnalysisResultResponse(callAnalysisMetadata, endTime);
+        }
+
+        public GoogleCloudContactcenterinsightsV1AnalysisResultResponse build() {
+            $.callAnalysisMetadata = Objects.requireNonNull($.callAnalysisMetadata, "expected parameter 'callAnalysisMetadata' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            return $;
         }
     }
+
 }

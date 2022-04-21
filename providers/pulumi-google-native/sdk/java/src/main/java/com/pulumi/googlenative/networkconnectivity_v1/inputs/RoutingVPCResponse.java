@@ -22,7 +22,7 @@ public final class RoutingVPCResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requiredForNewSiteToSiteDataTransferSpokes", required=true)
-      private final Boolean requiredForNewSiteToSiteDataTransferSpokes;
+    private Boolean requiredForNewSiteToSiteDataTransferSpokes;
 
     public Boolean requiredForNewSiteToSiteDataTransferSpokes() {
         return this.requiredForNewSiteToSiteDataTransferSpokes;
@@ -33,55 +33,52 @@ public final class RoutingVPCResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public RoutingVPCResponse(
-        Boolean requiredForNewSiteToSiteDataTransferSpokes,
-        String uri) {
-        this.requiredForNewSiteToSiteDataTransferSpokes = Objects.requireNonNull(requiredForNewSiteToSiteDataTransferSpokes, "expected parameter 'requiredForNewSiteToSiteDataTransferSpokes' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private RoutingVPCResponse() {}
 
-    private RoutingVPCResponse() {
-        this.requiredForNewSiteToSiteDataTransferSpokes = null;
-        this.uri = null;
+    private RoutingVPCResponse(RoutingVPCResponse $) {
+        this.requiredForNewSiteToSiteDataTransferSpokes = $.requiredForNewSiteToSiteDataTransferSpokes;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutingVPCResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean requiredForNewSiteToSiteDataTransferSpokes;
-        private String uri;
+        private RoutingVPCResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutingVPCResponse();
         }
 
         public Builder(RoutingVPCResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requiredForNewSiteToSiteDataTransferSpokes = defaults.requiredForNewSiteToSiteDataTransferSpokes;
-    	      this.uri = defaults.uri;
+            $ = new RoutingVPCResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder requiredForNewSiteToSiteDataTransferSpokes(Boolean requiredForNewSiteToSiteDataTransferSpokes) {
-            this.requiredForNewSiteToSiteDataTransferSpokes = Objects.requireNonNull(requiredForNewSiteToSiteDataTransferSpokes);
+            $.requiredForNewSiteToSiteDataTransferSpokes = requiredForNewSiteToSiteDataTransferSpokes;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public RoutingVPCResponse build() {
-            return new RoutingVPCResponse(requiredForNewSiteToSiteDataTransferSpokes, uri);
+        }
+
+        public RoutingVPCResponse build() {
+            $.requiredForNewSiteToSiteDataTransferSpokes = Objects.requireNonNull($.requiredForNewSiteToSiteDataTransferSpokes, "expected parameter 'requiredForNewSiteToSiteDataTransferSpokes' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

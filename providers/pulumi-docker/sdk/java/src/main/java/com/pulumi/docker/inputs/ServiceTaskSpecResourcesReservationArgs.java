@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ServiceTaskSpecResourcesReservationGenericResourcesArgs;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,82 @@ public final class ServiceTaskSpecResourcesReservationArgs extends com.pulumi.re
     public static final ServiceTaskSpecResourcesReservationArgs Empty = new ServiceTaskSpecResourcesReservationArgs();
 
     @Import(name="genericResources")
-      private final @Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesArgs> genericResources;
+    private @Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesArgs> genericResources;
 
-    public Output<ServiceTaskSpecResourcesReservationGenericResourcesArgs> genericResources() {
-        return this.genericResources == null ? Codegen.empty() : this.genericResources;
+    public Optional<Output<ServiceTaskSpecResourcesReservationGenericResourcesArgs>> genericResources() {
+        return Optional.ofNullable(this.genericResources);
     }
 
     @Import(name="memoryBytes")
-      private final @Nullable Output<Integer> memoryBytes;
+    private @Nullable Output<Integer> memoryBytes;
 
-    public Output<Integer> memoryBytes() {
-        return this.memoryBytes == null ? Codegen.empty() : this.memoryBytes;
+    public Optional<Output<Integer>> memoryBytes() {
+        return Optional.ofNullable(this.memoryBytes);
     }
 
     @Import(name="nanoCpus")
-      private final @Nullable Output<Integer> nanoCpus;
+    private @Nullable Output<Integer> nanoCpus;
 
-    public Output<Integer> nanoCpus() {
-        return this.nanoCpus == null ? Codegen.empty() : this.nanoCpus;
+    public Optional<Output<Integer>> nanoCpus() {
+        return Optional.ofNullable(this.nanoCpus);
     }
 
-    public ServiceTaskSpecResourcesReservationArgs(
-        @Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesArgs> genericResources,
-        @Nullable Output<Integer> memoryBytes,
-        @Nullable Output<Integer> nanoCpus) {
-        this.genericResources = genericResources;
-        this.memoryBytes = memoryBytes;
-        this.nanoCpus = nanoCpus;
-    }
+    private ServiceTaskSpecResourcesReservationArgs() {}
 
-    private ServiceTaskSpecResourcesReservationArgs() {
-        this.genericResources = Codegen.empty();
-        this.memoryBytes = Codegen.empty();
-        this.nanoCpus = Codegen.empty();
+    private ServiceTaskSpecResourcesReservationArgs(ServiceTaskSpecResourcesReservationArgs $) {
+        this.genericResources = $.genericResources;
+        this.memoryBytes = $.memoryBytes;
+        this.nanoCpus = $.nanoCpus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecResourcesReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesArgs> genericResources;
-        private @Nullable Output<Integer> memoryBytes;
-        private @Nullable Output<Integer> nanoCpus;
+        private ServiceTaskSpecResourcesReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecResourcesReservationArgs();
         }
 
         public Builder(ServiceTaskSpecResourcesReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.genericResources = defaults.genericResources;
-    	      this.memoryBytes = defaults.memoryBytes;
-    	      this.nanoCpus = defaults.nanoCpus;
+            $ = new ServiceTaskSpecResourcesReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder genericResources(@Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesArgs> genericResources) {
-            this.genericResources = genericResources;
+            $.genericResources = genericResources;
             return this;
         }
-        public Builder genericResources(@Nullable ServiceTaskSpecResourcesReservationGenericResourcesArgs genericResources) {
-            this.genericResources = Codegen.ofNullable(genericResources);
-            return this;
+
+        public Builder genericResources(ServiceTaskSpecResourcesReservationGenericResourcesArgs genericResources) {
+            return genericResources(Output.of(genericResources));
         }
+
         public Builder memoryBytes(@Nullable Output<Integer> memoryBytes) {
-            this.memoryBytes = memoryBytes;
+            $.memoryBytes = memoryBytes;
             return this;
         }
-        public Builder memoryBytes(@Nullable Integer memoryBytes) {
-            this.memoryBytes = Codegen.ofNullable(memoryBytes);
-            return this;
+
+        public Builder memoryBytes(Integer memoryBytes) {
+            return memoryBytes(Output.of(memoryBytes));
         }
+
         public Builder nanoCpus(@Nullable Output<Integer> nanoCpus) {
-            this.nanoCpus = nanoCpus;
+            $.nanoCpus = nanoCpus;
             return this;
         }
-        public Builder nanoCpus(@Nullable Integer nanoCpus) {
-            this.nanoCpus = Codegen.ofNullable(nanoCpus);
-            return this;
-        }        public ServiceTaskSpecResourcesReservationArgs build() {
-            return new ServiceTaskSpecResourcesReservationArgs(genericResources, memoryBytes, nanoCpus);
+
+        public Builder nanoCpus(Integer nanoCpus) {
+            return nanoCpus(Output.of(nanoCpus));
+        }
+
+        public ServiceTaskSpecResourcesReservationArgs build() {
+            return $;
         }
     }
+
 }

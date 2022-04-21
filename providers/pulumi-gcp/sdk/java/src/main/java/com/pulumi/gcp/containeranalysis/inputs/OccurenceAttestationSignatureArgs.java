@@ -5,9 +5,9 @@ package com.pulumi.gcp.containeranalysis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class OccurenceAttestationSignatureArgs extends com.pulumi.resource
      * 
      */
     @Import(name="publicKeyId", required=true)
-      private final Output<String> publicKeyId;
+    private Output<String> publicKeyId;
 
     public Output<String> publicKeyId() {
         return this.publicKeyId;
@@ -46,63 +46,59 @@ public final class OccurenceAttestationSignatureArgs extends com.pulumi.resource
      * 
      */
     @Import(name="signature")
-      private final @Nullable Output<String> signature;
+    private @Nullable Output<String> signature;
 
-    public Output<String> signature() {
-        return this.signature == null ? Codegen.empty() : this.signature;
+    public Optional<Output<String>> signature() {
+        return Optional.ofNullable(this.signature);
     }
 
-    public OccurenceAttestationSignatureArgs(
-        Output<String> publicKeyId,
-        @Nullable Output<String> signature) {
-        this.publicKeyId = Objects.requireNonNull(publicKeyId, "expected parameter 'publicKeyId' to be non-null");
-        this.signature = signature;
-    }
+    private OccurenceAttestationSignatureArgs() {}
 
-    private OccurenceAttestationSignatureArgs() {
-        this.publicKeyId = Codegen.empty();
-        this.signature = Codegen.empty();
+    private OccurenceAttestationSignatureArgs(OccurenceAttestationSignatureArgs $) {
+        this.publicKeyId = $.publicKeyId;
+        this.signature = $.signature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OccurenceAttestationSignatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> publicKeyId;
-        private @Nullable Output<String> signature;
+        private OccurenceAttestationSignatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OccurenceAttestationSignatureArgs();
         }
 
         public Builder(OccurenceAttestationSignatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeyId = defaults.publicKeyId;
-    	      this.signature = defaults.signature;
+            $ = new OccurenceAttestationSignatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeyId(Output<String> publicKeyId) {
-            this.publicKeyId = Objects.requireNonNull(publicKeyId);
+            $.publicKeyId = publicKeyId;
             return this;
         }
+
         public Builder publicKeyId(String publicKeyId) {
-            this.publicKeyId = Output.of(Objects.requireNonNull(publicKeyId));
-            return this;
+            return publicKeyId(Output.of(publicKeyId));
         }
+
         public Builder signature(@Nullable Output<String> signature) {
-            this.signature = signature;
+            $.signature = signature;
             return this;
         }
-        public Builder signature(@Nullable String signature) {
-            this.signature = Codegen.ofNullable(signature);
-            return this;
-        }        public OccurenceAttestationSignatureArgs build() {
-            return new OccurenceAttestationSignatureArgs(publicKeyId, signature);
+
+        public Builder signature(String signature) {
+            return signature(Output.of(signature));
+        }
+
+        public OccurenceAttestationSignatureArgs build() {
+            $.publicKeyId = Objects.requireNonNull($.publicKeyId, "expected parameter 'publicKeyId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columnCount")
-      private final @Nullable Output<Integer> columnCount;
+    private @Nullable Output<Integer> columnCount;
 
-    public Output<Integer> columnCount() {
-        return this.columnCount == null ? Codegen.empty() : this.columnCount;
+    public Optional<Output<Integer>> columnCount() {
+        return Optional.ofNullable(this.columnCount);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTimeOffset")
-      private final @Nullable Output<String> endTimeOffset;
+    private @Nullable Output<String> endTimeOffset;
 
-    public Output<String> endTimeOffset() {
-        return this.endTimeOffset == null ? Codegen.empty() : this.endTimeOffset;
+    public Optional<Output<String>> endTimeOffset() {
+        return Optional.ofNullable(this.endTimeOffset);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filePrefix", required=true)
-      private final Output<String> filePrefix;
+    private Output<String> filePrefix;
 
     public Output<String> filePrefix() {
         return this.filePrefix;
@@ -58,10 +58,10 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<String> format;
+    private @Nullable Output<String> format;
 
-    public Output<String> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<String> interval;
+    private @Nullable Output<String> interval;
 
-    public Output<String> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<String>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quality")
-      private final @Nullable Output<Integer> quality;
+    private @Nullable Output<Integer> quality;
 
-    public Output<Integer> quality() {
-        return this.quality == null ? Codegen.empty() : this.quality;
+    public Optional<Output<Integer>> quality() {
+        return Optional.ofNullable(this.quality);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rowCount")
-      private final @Nullable Output<Integer> rowCount;
+    private @Nullable Output<Integer> rowCount;
 
-    public Output<Integer> rowCount() {
-        return this.rowCount == null ? Codegen.empty() : this.rowCount;
+    public Optional<Output<Integer>> rowCount() {
+        return Optional.ofNullable(this.rowCount);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spriteHeightPixels", required=true)
-      private final Output<Integer> spriteHeightPixels;
+    private Output<Integer> spriteHeightPixels;
 
     public Output<Integer> spriteHeightPixels() {
         return this.spriteHeightPixels;
@@ -113,7 +113,7 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spriteWidthPixels", required=true)
-      private final Output<Integer> spriteWidthPixels;
+    private Output<Integer> spriteWidthPixels;
 
     public Output<Integer> spriteWidthPixels() {
         return this.spriteWidthPixels;
@@ -124,10 +124,10 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTimeOffset")
-      private final @Nullable Output<String> startTimeOffset;
+    private @Nullable Output<String> startTimeOffset;
 
-    public Output<String> startTimeOffset() {
-        return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
+    public Optional<Output<String>> startTimeOffset() {
+        return Optional.ofNullable(this.startTimeOffset);
     }
 
     /**
@@ -135,180 +135,151 @@ public final class SpriteSheetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="totalCount")
-      private final @Nullable Output<Integer> totalCount;
+    private @Nullable Output<Integer> totalCount;
 
-    public Output<Integer> totalCount() {
-        return this.totalCount == null ? Codegen.empty() : this.totalCount;
+    public Optional<Output<Integer>> totalCount() {
+        return Optional.ofNullable(this.totalCount);
     }
 
-    public SpriteSheetArgs(
-        @Nullable Output<Integer> columnCount,
-        @Nullable Output<String> endTimeOffset,
-        Output<String> filePrefix,
-        @Nullable Output<String> format,
-        @Nullable Output<String> interval,
-        @Nullable Output<Integer> quality,
-        @Nullable Output<Integer> rowCount,
-        Output<Integer> spriteHeightPixels,
-        Output<Integer> spriteWidthPixels,
-        @Nullable Output<String> startTimeOffset,
-        @Nullable Output<Integer> totalCount) {
-        this.columnCount = columnCount;
-        this.endTimeOffset = endTimeOffset;
-        this.filePrefix = Objects.requireNonNull(filePrefix, "expected parameter 'filePrefix' to be non-null");
-        this.format = format;
-        this.interval = interval;
-        this.quality = quality;
-        this.rowCount = rowCount;
-        this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels, "expected parameter 'spriteHeightPixels' to be non-null");
-        this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels, "expected parameter 'spriteWidthPixels' to be non-null");
-        this.startTimeOffset = startTimeOffset;
-        this.totalCount = totalCount;
-    }
+    private SpriteSheetArgs() {}
 
-    private SpriteSheetArgs() {
-        this.columnCount = Codegen.empty();
-        this.endTimeOffset = Codegen.empty();
-        this.filePrefix = Codegen.empty();
-        this.format = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.quality = Codegen.empty();
-        this.rowCount = Codegen.empty();
-        this.spriteHeightPixels = Codegen.empty();
-        this.spriteWidthPixels = Codegen.empty();
-        this.startTimeOffset = Codegen.empty();
-        this.totalCount = Codegen.empty();
+    private SpriteSheetArgs(SpriteSheetArgs $) {
+        this.columnCount = $.columnCount;
+        this.endTimeOffset = $.endTimeOffset;
+        this.filePrefix = $.filePrefix;
+        this.format = $.format;
+        this.interval = $.interval;
+        this.quality = $.quality;
+        this.rowCount = $.rowCount;
+        this.spriteHeightPixels = $.spriteHeightPixels;
+        this.spriteWidthPixels = $.spriteWidthPixels;
+        this.startTimeOffset = $.startTimeOffset;
+        this.totalCount = $.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpriteSheetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> columnCount;
-        private @Nullable Output<String> endTimeOffset;
-        private Output<String> filePrefix;
-        private @Nullable Output<String> format;
-        private @Nullable Output<String> interval;
-        private @Nullable Output<Integer> quality;
-        private @Nullable Output<Integer> rowCount;
-        private Output<Integer> spriteHeightPixels;
-        private Output<Integer> spriteWidthPixels;
-        private @Nullable Output<String> startTimeOffset;
-        private @Nullable Output<Integer> totalCount;
+        private SpriteSheetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpriteSheetArgs();
         }
 
         public Builder(SpriteSheetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnCount = defaults.columnCount;
-    	      this.endTimeOffset = defaults.endTimeOffset;
-    	      this.filePrefix = defaults.filePrefix;
-    	      this.format = defaults.format;
-    	      this.interval = defaults.interval;
-    	      this.quality = defaults.quality;
-    	      this.rowCount = defaults.rowCount;
-    	      this.spriteHeightPixels = defaults.spriteHeightPixels;
-    	      this.spriteWidthPixels = defaults.spriteWidthPixels;
-    	      this.startTimeOffset = defaults.startTimeOffset;
-    	      this.totalCount = defaults.totalCount;
+            $ = new SpriteSheetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnCount(@Nullable Output<Integer> columnCount) {
-            this.columnCount = columnCount;
+            $.columnCount = columnCount;
             return this;
         }
-        public Builder columnCount(@Nullable Integer columnCount) {
-            this.columnCount = Codegen.ofNullable(columnCount);
-            return this;
+
+        public Builder columnCount(Integer columnCount) {
+            return columnCount(Output.of(columnCount));
         }
+
         public Builder endTimeOffset(@Nullable Output<String> endTimeOffset) {
-            this.endTimeOffset = endTimeOffset;
+            $.endTimeOffset = endTimeOffset;
             return this;
         }
-        public Builder endTimeOffset(@Nullable String endTimeOffset) {
-            this.endTimeOffset = Codegen.ofNullable(endTimeOffset);
-            return this;
+
+        public Builder endTimeOffset(String endTimeOffset) {
+            return endTimeOffset(Output.of(endTimeOffset));
         }
+
         public Builder filePrefix(Output<String> filePrefix) {
-            this.filePrefix = Objects.requireNonNull(filePrefix);
+            $.filePrefix = filePrefix;
             return this;
         }
+
         public Builder filePrefix(String filePrefix) {
-            this.filePrefix = Output.of(Objects.requireNonNull(filePrefix));
-            return this;
+            return filePrefix(Output.of(filePrefix));
         }
+
         public Builder format(@Nullable Output<String> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable String format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(String format) {
+            return format(Output.of(format));
         }
+
         public Builder interval(@Nullable Output<String> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable String interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(String interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder quality(@Nullable Output<Integer> quality) {
-            this.quality = quality;
+            $.quality = quality;
             return this;
         }
-        public Builder quality(@Nullable Integer quality) {
-            this.quality = Codegen.ofNullable(quality);
-            return this;
+
+        public Builder quality(Integer quality) {
+            return quality(Output.of(quality));
         }
+
         public Builder rowCount(@Nullable Output<Integer> rowCount) {
-            this.rowCount = rowCount;
+            $.rowCount = rowCount;
             return this;
         }
-        public Builder rowCount(@Nullable Integer rowCount) {
-            this.rowCount = Codegen.ofNullable(rowCount);
-            return this;
+
+        public Builder rowCount(Integer rowCount) {
+            return rowCount(Output.of(rowCount));
         }
+
         public Builder spriteHeightPixels(Output<Integer> spriteHeightPixels) {
-            this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels);
+            $.spriteHeightPixels = spriteHeightPixels;
             return this;
         }
+
         public Builder spriteHeightPixels(Integer spriteHeightPixels) {
-            this.spriteHeightPixels = Output.of(Objects.requireNonNull(spriteHeightPixels));
-            return this;
+            return spriteHeightPixels(Output.of(spriteHeightPixels));
         }
+
         public Builder spriteWidthPixels(Output<Integer> spriteWidthPixels) {
-            this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels);
+            $.spriteWidthPixels = spriteWidthPixels;
             return this;
         }
+
         public Builder spriteWidthPixels(Integer spriteWidthPixels) {
-            this.spriteWidthPixels = Output.of(Objects.requireNonNull(spriteWidthPixels));
-            return this;
+            return spriteWidthPixels(Output.of(spriteWidthPixels));
         }
+
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
-            this.startTimeOffset = startTimeOffset;
+            $.startTimeOffset = startTimeOffset;
             return this;
         }
-        public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Codegen.ofNullable(startTimeOffset);
-            return this;
+
+        public Builder startTimeOffset(String startTimeOffset) {
+            return startTimeOffset(Output.of(startTimeOffset));
         }
+
         public Builder totalCount(@Nullable Output<Integer> totalCount) {
-            this.totalCount = totalCount;
+            $.totalCount = totalCount;
             return this;
         }
-        public Builder totalCount(@Nullable Integer totalCount) {
-            this.totalCount = Codegen.ofNullable(totalCount);
-            return this;
-        }        public SpriteSheetArgs build() {
-            return new SpriteSheetArgs(columnCount, endTimeOffset, filePrefix, format, interval, quality, rowCount, spriteHeightPixels, spriteWidthPixels, startTimeOffset, totalCount);
+
+        public Builder totalCount(Integer totalCount) {
+            return totalCount(Output.of(totalCount));
+        }
+
+        public SpriteSheetArgs build() {
+            $.filePrefix = Objects.requireNonNull($.filePrefix, "expected parameter 'filePrefix' to be non-null");
+            $.spriteHeightPixels = Objects.requireNonNull($.spriteHeightPixels, "expected parameter 'spriteHeightPixels' to be non-null");
+            $.spriteWidthPixels = Objects.requireNonNull($.spriteWidthPixels, "expected parameter 'spriteWidthPixels' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class VpcPeeringConnectivityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vpc", required=true)
-      private final String vpc;
+    private String vpc;
 
     public String vpc() {
         return this.vpc;
     }
 
-    public VpcPeeringConnectivityResponse(String vpc) {
-        this.vpc = Objects.requireNonNull(vpc, "expected parameter 'vpc' to be non-null");
-    }
+    private VpcPeeringConnectivityResponse() {}
 
-    private VpcPeeringConnectivityResponse() {
-        this.vpc = null;
+    private VpcPeeringConnectivityResponse(VpcPeeringConnectivityResponse $) {
+        this.vpc = $.vpc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcPeeringConnectivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String vpc;
+        private VpcPeeringConnectivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcPeeringConnectivityResponse();
         }
 
         public Builder(VpcPeeringConnectivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpc = defaults.vpc;
+            $ = new VpcPeeringConnectivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder vpc(String vpc) {
-            this.vpc = Objects.requireNonNull(vpc);
+            $.vpc = vpc;
             return this;
-        }        public VpcPeeringConnectivityResponse build() {
-            return new VpcPeeringConnectivityResponse(vpc);
+        }
+
+        public VpcPeeringConnectivityResponse build() {
+            $.vpc = Objects.requireNonNull($.vpc, "expected parameter 'vpc' to be non-null");
+            return $;
         }
     }
+
 }

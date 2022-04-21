@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v2beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,7 +18,7 @@ public final class ContextArgs extends com.pulumi.resources.ResourceArgs {
     public static final ContextArgs Empty = new ContextArgs();
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -29,17 +29,17 @@ public final class ContextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifespanCount")
-      private final @Nullable Output<Integer> lifespanCount;
+    private @Nullable Output<Integer> lifespanCount;
 
-    public Output<Integer> lifespanCount() {
-        return this.lifespanCount == null ? Codegen.empty() : this.lifespanCount;
+    public Optional<Output<Integer>> lifespanCount() {
+        return Optional.ofNullable(this.lifespanCount);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ContextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -58,162 +58,143 @@ public final class ContextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="sessionId", required=true)
-      private final Output<String> sessionId;
+    private Output<String> sessionId;
 
     public Output<String> sessionId() {
         return this.sessionId;
     }
 
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public ContextArgs(
-        Output<String> environmentId,
-        @Nullable Output<Integer> lifespanCount,
-        @Nullable Output<String> location,
-        Output<String> name,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> project,
-        Output<String> sessionId,
-        Output<String> userId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.lifespanCount = lifespanCount;
-        this.location = location;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-        this.project = project;
-        this.sessionId = Objects.requireNonNull(sessionId, "expected parameter 'sessionId' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private ContextArgs() {}
 
-    private ContextArgs() {
-        this.environmentId = Codegen.empty();
-        this.lifespanCount = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.project = Codegen.empty();
-        this.sessionId = Codegen.empty();
-        this.userId = Codegen.empty();
+    private ContextArgs(ContextArgs $) {
+        this.environmentId = $.environmentId;
+        this.lifespanCount = $.lifespanCount;
+        this.location = $.location;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.project = $.project;
+        this.sessionId = $.sessionId;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> environmentId;
-        private @Nullable Output<Integer> lifespanCount;
-        private @Nullable Output<String> location;
-        private Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> project;
-        private Output<String> sessionId;
-        private Output<String> userId;
+        private ContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContextArgs();
         }
 
         public Builder(ContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.lifespanCount = defaults.lifespanCount;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.project = defaults.project;
-    	      this.sessionId = defaults.sessionId;
-    	      this.userId = defaults.userId;
+            $ = new ContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder lifespanCount(@Nullable Output<Integer> lifespanCount) {
-            this.lifespanCount = lifespanCount;
+            $.lifespanCount = lifespanCount;
             return this;
         }
-        public Builder lifespanCount(@Nullable Integer lifespanCount) {
-            this.lifespanCount = Codegen.ofNullable(lifespanCount);
-            return this;
+
+        public Builder lifespanCount(Integer lifespanCount) {
+            return lifespanCount(Output.of(lifespanCount));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder sessionId(Output<String> sessionId) {
-            this.sessionId = Objects.requireNonNull(sessionId);
+            $.sessionId = sessionId;
             return this;
         }
+
         public Builder sessionId(String sessionId) {
-            this.sessionId = Output.of(Objects.requireNonNull(sessionId));
-            return this;
+            return sessionId(Output.of(sessionId));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public ContextArgs build() {
-            return new ContextArgs(environmentId, lifespanCount, location, name, parameters, project, sessionId, userId);
+            return userId(Output.of(userId));
+        }
+
+        public ContextArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sessionId = Objects.requireNonNull($.sessionId, "expected parameter 'sessionId' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

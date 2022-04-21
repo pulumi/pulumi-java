@@ -5,10 +5,10 @@ package com.pulumi.googlenative.iam_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WorkloadIdentityPoolArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkloadIdentityPoolArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -43,136 +43,120 @@ public final class WorkloadIdentityPoolArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="workloadIdentityPoolId", required=true)
-      private final Output<String> workloadIdentityPoolId;
+    private Output<String> workloadIdentityPoolId;
 
     public Output<String> workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 
-    public WorkloadIdentityPoolArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        Output<String> workloadIdentityPoolId) {
-        this.description = description;
-        this.disabled = disabled;
-        this.displayName = displayName;
-        this.location = location;
-        this.project = project;
-        this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
-    }
+    private WorkloadIdentityPoolArgs() {}
 
-    private WorkloadIdentityPoolArgs() {
-        this.description = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.workloadIdentityPoolId = Codegen.empty();
+    private WorkloadIdentityPoolArgs(WorkloadIdentityPoolArgs $) {
+        this.description = $.description;
+        this.disabled = $.disabled;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.project = $.project;
+        this.workloadIdentityPoolId = $.workloadIdentityPoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadIdentityPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private Output<String> workloadIdentityPoolId;
+        private WorkloadIdentityPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadIdentityPoolArgs();
         }
 
         public Builder(WorkloadIdentityPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.disabled = defaults.disabled;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.workloadIdentityPoolId = defaults.workloadIdentityPoolId;
+            $ = new WorkloadIdentityPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder workloadIdentityPoolId(Output<String> workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
+            $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
+
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Output.of(Objects.requireNonNull(workloadIdentityPoolId));
-            return this;
-        }        public WorkloadIdentityPoolArgs build() {
-            return new WorkloadIdentityPoolArgs(description, disabled, displayName, location, project, workloadIdentityPoolId);
+            return workloadIdentityPoolId(Output.of(workloadIdentityPoolId));
+        }
+
+        public WorkloadIdentityPoolArgs build() {
+            $.workloadIdentityPoolId = Objects.requireNonNull($.workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
+            return $;
         }
     }
+
 }

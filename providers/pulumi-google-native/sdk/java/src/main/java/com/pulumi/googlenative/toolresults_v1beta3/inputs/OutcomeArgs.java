@@ -5,13 +5,13 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.OutcomeSummary;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.FailureDetailArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.InconclusiveDetailArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.SkippedDetailArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.SuccessDetailArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failureDetail")
-      private final @Nullable Output<FailureDetailArgs> failureDetail;
+    private @Nullable Output<FailureDetailArgs> failureDetail;
 
-    public Output<FailureDetailArgs> failureDetail() {
-        return this.failureDetail == null ? Codegen.empty() : this.failureDetail;
+    public Optional<Output<FailureDetailArgs>> failureDetail() {
+        return Optional.ofNullable(this.failureDetail);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inconclusiveDetail")
-      private final @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail;
+    private @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail;
 
-    public Output<InconclusiveDetailArgs> inconclusiveDetail() {
-        return this.inconclusiveDetail == null ? Codegen.empty() : this.inconclusiveDetail;
+    public Optional<Output<InconclusiveDetailArgs>> inconclusiveDetail() {
+        return Optional.ofNullable(this.inconclusiveDetail);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skippedDetail")
-      private final @Nullable Output<SkippedDetailArgs> skippedDetail;
+    private @Nullable Output<SkippedDetailArgs> skippedDetail;
 
-    public Output<SkippedDetailArgs> skippedDetail() {
-        return this.skippedDetail == null ? Codegen.empty() : this.skippedDetail;
+    public Optional<Output<SkippedDetailArgs>> skippedDetail() {
+        return Optional.ofNullable(this.skippedDetail);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="successDetail")
-      private final @Nullable Output<SuccessDetailArgs> successDetail;
+    private @Nullable Output<SuccessDetailArgs> successDetail;
 
-    public Output<SuccessDetailArgs> successDetail() {
-        return this.successDetail == null ? Codegen.empty() : this.successDetail;
+    public Optional<Output<SuccessDetailArgs>> successDetail() {
+        return Optional.ofNullable(this.successDetail);
     }
 
     /**
@@ -72,102 +72,88 @@ public final class OutcomeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="summary")
-      private final @Nullable Output<OutcomeSummary> summary;
+    private @Nullable Output<OutcomeSummary> summary;
 
-    public Output<OutcomeSummary> summary() {
-        return this.summary == null ? Codegen.empty() : this.summary;
+    public Optional<Output<OutcomeSummary>> summary() {
+        return Optional.ofNullable(this.summary);
     }
 
-    public OutcomeArgs(
-        @Nullable Output<FailureDetailArgs> failureDetail,
-        @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail,
-        @Nullable Output<SkippedDetailArgs> skippedDetail,
-        @Nullable Output<SuccessDetailArgs> successDetail,
-        @Nullable Output<OutcomeSummary> summary) {
-        this.failureDetail = failureDetail;
-        this.inconclusiveDetail = inconclusiveDetail;
-        this.skippedDetail = skippedDetail;
-        this.successDetail = successDetail;
-        this.summary = summary;
-    }
+    private OutcomeArgs() {}
 
-    private OutcomeArgs() {
-        this.failureDetail = Codegen.empty();
-        this.inconclusiveDetail = Codegen.empty();
-        this.skippedDetail = Codegen.empty();
-        this.successDetail = Codegen.empty();
-        this.summary = Codegen.empty();
+    private OutcomeArgs(OutcomeArgs $) {
+        this.failureDetail = $.failureDetail;
+        this.inconclusiveDetail = $.inconclusiveDetail;
+        this.skippedDetail = $.skippedDetail;
+        this.successDetail = $.successDetail;
+        this.summary = $.summary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutcomeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FailureDetailArgs> failureDetail;
-        private @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail;
-        private @Nullable Output<SkippedDetailArgs> skippedDetail;
-        private @Nullable Output<SuccessDetailArgs> successDetail;
-        private @Nullable Output<OutcomeSummary> summary;
+        private OutcomeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutcomeArgs();
         }
 
         public Builder(OutcomeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureDetail = defaults.failureDetail;
-    	      this.inconclusiveDetail = defaults.inconclusiveDetail;
-    	      this.skippedDetail = defaults.skippedDetail;
-    	      this.successDetail = defaults.successDetail;
-    	      this.summary = defaults.summary;
+            $ = new OutcomeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failureDetail(@Nullable Output<FailureDetailArgs> failureDetail) {
-            this.failureDetail = failureDetail;
+            $.failureDetail = failureDetail;
             return this;
         }
-        public Builder failureDetail(@Nullable FailureDetailArgs failureDetail) {
-            this.failureDetail = Codegen.ofNullable(failureDetail);
-            return this;
+
+        public Builder failureDetail(FailureDetailArgs failureDetail) {
+            return failureDetail(Output.of(failureDetail));
         }
+
         public Builder inconclusiveDetail(@Nullable Output<InconclusiveDetailArgs> inconclusiveDetail) {
-            this.inconclusiveDetail = inconclusiveDetail;
+            $.inconclusiveDetail = inconclusiveDetail;
             return this;
         }
-        public Builder inconclusiveDetail(@Nullable InconclusiveDetailArgs inconclusiveDetail) {
-            this.inconclusiveDetail = Codegen.ofNullable(inconclusiveDetail);
-            return this;
+
+        public Builder inconclusiveDetail(InconclusiveDetailArgs inconclusiveDetail) {
+            return inconclusiveDetail(Output.of(inconclusiveDetail));
         }
+
         public Builder skippedDetail(@Nullable Output<SkippedDetailArgs> skippedDetail) {
-            this.skippedDetail = skippedDetail;
+            $.skippedDetail = skippedDetail;
             return this;
         }
-        public Builder skippedDetail(@Nullable SkippedDetailArgs skippedDetail) {
-            this.skippedDetail = Codegen.ofNullable(skippedDetail);
-            return this;
+
+        public Builder skippedDetail(SkippedDetailArgs skippedDetail) {
+            return skippedDetail(Output.of(skippedDetail));
         }
+
         public Builder successDetail(@Nullable Output<SuccessDetailArgs> successDetail) {
-            this.successDetail = successDetail;
+            $.successDetail = successDetail;
             return this;
         }
-        public Builder successDetail(@Nullable SuccessDetailArgs successDetail) {
-            this.successDetail = Codegen.ofNullable(successDetail);
-            return this;
+
+        public Builder successDetail(SuccessDetailArgs successDetail) {
+            return successDetail(Output.of(successDetail));
         }
+
         public Builder summary(@Nullable Output<OutcomeSummary> summary) {
-            this.summary = summary;
+            $.summary = summary;
             return this;
         }
-        public Builder summary(@Nullable OutcomeSummary summary) {
-            this.summary = Codegen.ofNullable(summary);
-            return this;
-        }        public OutcomeArgs build() {
-            return new OutcomeArgs(failureDetail, inconclusiveDetail, skippedDetail, successDetail, summary);
+
+        public Builder summary(OutcomeSummary summary) {
+            return summary(Output.of(summary));
+        }
+
+        public OutcomeArgs build() {
+            return $;
         }
     }
+
 }

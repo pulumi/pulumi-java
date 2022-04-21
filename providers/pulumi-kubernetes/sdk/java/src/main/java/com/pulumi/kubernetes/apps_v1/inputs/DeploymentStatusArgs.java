@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apps_v1.inputs.DeploymentConditionArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="availableReplicas")
-      private final @Nullable Output<Integer> availableReplicas;
+    private @Nullable Output<Integer> availableReplicas;
 
-    public Output<Integer> availableReplicas() {
-        return this.availableReplicas == null ? Codegen.empty() : this.availableReplicas;
+    public Optional<Output<Integer>> availableReplicas() {
+        return Optional.ofNullable(this.availableReplicas);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="collisionCount")
-      private final @Nullable Output<Integer> collisionCount;
+    private @Nullable Output<Integer> collisionCount;
 
-    public Output<Integer> collisionCount() {
-        return this.collisionCount == null ? Codegen.empty() : this.collisionCount;
+    public Optional<Output<Integer>> collisionCount() {
+        return Optional.ofNullable(this.collisionCount);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<DeploymentConditionArgs>> conditions;
+    private @Nullable Output<List<DeploymentConditionArgs>> conditions;
 
-    public Output<List<DeploymentConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<DeploymentConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="observedGeneration")
-      private final @Nullable Output<Integer> observedGeneration;
+    private @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> observedGeneration() {
-        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
+    public Optional<Output<Integer>> observedGeneration() {
+        return Optional.ofNullable(this.observedGeneration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="readyReplicas")
-      private final @Nullable Output<Integer> readyReplicas;
+    private @Nullable Output<Integer> readyReplicas;
 
-    public Output<Integer> readyReplicas() {
-        return this.readyReplicas == null ? Codegen.empty() : this.readyReplicas;
+    public Optional<Output<Integer>> readyReplicas() {
+        return Optional.ofNullable(this.readyReplicas);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="replicas")
-      private final @Nullable Output<Integer> replicas;
+    private @Nullable Output<Integer> replicas;
 
-    public Output<Integer> replicas() {
-        return this.replicas == null ? Codegen.empty() : this.replicas;
+    public Optional<Output<Integer>> replicas() {
+        return Optional.ofNullable(this.replicas);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="unavailableReplicas")
-      private final @Nullable Output<Integer> unavailableReplicas;
+    private @Nullable Output<Integer> unavailableReplicas;
 
-    public Output<Integer> unavailableReplicas() {
-        return this.unavailableReplicas == null ? Codegen.empty() : this.unavailableReplicas;
+    public Optional<Output<Integer>> unavailableReplicas() {
+        return Optional.ofNullable(this.unavailableReplicas);
     }
 
     /**
@@ -103,144 +103,122 @@ public final class DeploymentStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="updatedReplicas")
-      private final @Nullable Output<Integer> updatedReplicas;
+    private @Nullable Output<Integer> updatedReplicas;
 
-    public Output<Integer> updatedReplicas() {
-        return this.updatedReplicas == null ? Codegen.empty() : this.updatedReplicas;
+    public Optional<Output<Integer>> updatedReplicas() {
+        return Optional.ofNullable(this.updatedReplicas);
     }
 
-    public DeploymentStatusArgs(
-        @Nullable Output<Integer> availableReplicas,
-        @Nullable Output<Integer> collisionCount,
-        @Nullable Output<List<DeploymentConditionArgs>> conditions,
-        @Nullable Output<Integer> observedGeneration,
-        @Nullable Output<Integer> readyReplicas,
-        @Nullable Output<Integer> replicas,
-        @Nullable Output<Integer> unavailableReplicas,
-        @Nullable Output<Integer> updatedReplicas) {
-        this.availableReplicas = availableReplicas;
-        this.collisionCount = collisionCount;
-        this.conditions = conditions;
-        this.observedGeneration = observedGeneration;
-        this.readyReplicas = readyReplicas;
-        this.replicas = replicas;
-        this.unavailableReplicas = unavailableReplicas;
-        this.updatedReplicas = updatedReplicas;
-    }
+    private DeploymentStatusArgs() {}
 
-    private DeploymentStatusArgs() {
-        this.availableReplicas = Codegen.empty();
-        this.collisionCount = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.observedGeneration = Codegen.empty();
-        this.readyReplicas = Codegen.empty();
-        this.replicas = Codegen.empty();
-        this.unavailableReplicas = Codegen.empty();
-        this.updatedReplicas = Codegen.empty();
+    private DeploymentStatusArgs(DeploymentStatusArgs $) {
+        this.availableReplicas = $.availableReplicas;
+        this.collisionCount = $.collisionCount;
+        this.conditions = $.conditions;
+        this.observedGeneration = $.observedGeneration;
+        this.readyReplicas = $.readyReplicas;
+        this.replicas = $.replicas;
+        this.unavailableReplicas = $.unavailableReplicas;
+        this.updatedReplicas = $.updatedReplicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> availableReplicas;
-        private @Nullable Output<Integer> collisionCount;
-        private @Nullable Output<List<DeploymentConditionArgs>> conditions;
-        private @Nullable Output<Integer> observedGeneration;
-        private @Nullable Output<Integer> readyReplicas;
-        private @Nullable Output<Integer> replicas;
-        private @Nullable Output<Integer> unavailableReplicas;
-        private @Nullable Output<Integer> updatedReplicas;
+        private DeploymentStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentStatusArgs();
         }
 
         public Builder(DeploymentStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availableReplicas = defaults.availableReplicas;
-    	      this.collisionCount = defaults.collisionCount;
-    	      this.conditions = defaults.conditions;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.readyReplicas = defaults.readyReplicas;
-    	      this.replicas = defaults.replicas;
-    	      this.unavailableReplicas = defaults.unavailableReplicas;
-    	      this.updatedReplicas = defaults.updatedReplicas;
+            $ = new DeploymentStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availableReplicas(@Nullable Output<Integer> availableReplicas) {
-            this.availableReplicas = availableReplicas;
+            $.availableReplicas = availableReplicas;
             return this;
         }
-        public Builder availableReplicas(@Nullable Integer availableReplicas) {
-            this.availableReplicas = Codegen.ofNullable(availableReplicas);
-            return this;
+
+        public Builder availableReplicas(Integer availableReplicas) {
+            return availableReplicas(Output.of(availableReplicas));
         }
+
         public Builder collisionCount(@Nullable Output<Integer> collisionCount) {
-            this.collisionCount = collisionCount;
+            $.collisionCount = collisionCount;
             return this;
         }
-        public Builder collisionCount(@Nullable Integer collisionCount) {
-            this.collisionCount = Codegen.ofNullable(collisionCount);
-            return this;
+
+        public Builder collisionCount(Integer collisionCount) {
+            return collisionCount(Output.of(collisionCount));
         }
+
         public Builder conditions(@Nullable Output<List<DeploymentConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<DeploymentConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<DeploymentConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(DeploymentConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
-            this.observedGeneration = observedGeneration;
+            $.observedGeneration = observedGeneration;
             return this;
         }
-        public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Codegen.ofNullable(observedGeneration);
-            return this;
+
+        public Builder observedGeneration(Integer observedGeneration) {
+            return observedGeneration(Output.of(observedGeneration));
         }
+
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
-            this.readyReplicas = readyReplicas;
+            $.readyReplicas = readyReplicas;
             return this;
         }
-        public Builder readyReplicas(@Nullable Integer readyReplicas) {
-            this.readyReplicas = Codegen.ofNullable(readyReplicas);
-            return this;
+
+        public Builder readyReplicas(Integer readyReplicas) {
+            return readyReplicas(Output.of(readyReplicas));
         }
+
         public Builder replicas(@Nullable Output<Integer> replicas) {
-            this.replicas = replicas;
+            $.replicas = replicas;
             return this;
         }
-        public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Codegen.ofNullable(replicas);
-            return this;
+
+        public Builder replicas(Integer replicas) {
+            return replicas(Output.of(replicas));
         }
+
         public Builder unavailableReplicas(@Nullable Output<Integer> unavailableReplicas) {
-            this.unavailableReplicas = unavailableReplicas;
+            $.unavailableReplicas = unavailableReplicas;
             return this;
         }
-        public Builder unavailableReplicas(@Nullable Integer unavailableReplicas) {
-            this.unavailableReplicas = Codegen.ofNullable(unavailableReplicas);
-            return this;
+
+        public Builder unavailableReplicas(Integer unavailableReplicas) {
+            return unavailableReplicas(Output.of(unavailableReplicas));
         }
+
         public Builder updatedReplicas(@Nullable Output<Integer> updatedReplicas) {
-            this.updatedReplicas = updatedReplicas;
+            $.updatedReplicas = updatedReplicas;
             return this;
         }
-        public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
-            this.updatedReplicas = Codegen.ofNullable(updatedReplicas);
-            return this;
-        }        public DeploymentStatusArgs build() {
-            return new DeploymentStatusArgs(availableReplicas, collisionCount, conditions, observedGeneration, readyReplicas, replicas, unavailableReplicas, updatedReplicas);
+
+        public Builder updatedReplicas(Integer updatedReplicas) {
+            return updatedReplicas(Output.of(updatedReplicas));
+        }
+
+        public DeploymentStatusArgs build() {
+            return $;
         }
     }
+
 }

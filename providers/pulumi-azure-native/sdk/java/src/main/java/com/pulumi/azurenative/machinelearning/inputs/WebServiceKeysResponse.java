@@ -23,10 +23,10 @@ public final class WebServiceKeysResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="primary")
-      private final @Nullable String primary;
+    private @Nullable String primary;
 
     public Optional<String> primary() {
-        return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
+        return Optional.ofNullable(this.primary);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class WebServiceKeysResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="secondary")
-      private final @Nullable String secondary;
+    private @Nullable String secondary;
 
     public Optional<String> secondary() {
-        return this.secondary == null ? Optional.empty() : Optional.ofNullable(this.secondary);
+        return Optional.ofNullable(this.secondary);
     }
 
-    public WebServiceKeysResponse(
-        @Nullable String primary,
-        @Nullable String secondary) {
-        this.primary = primary;
-        this.secondary = secondary;
-    }
+    private WebServiceKeysResponse() {}
 
-    private WebServiceKeysResponse() {
-        this.primary = null;
-        this.secondary = null;
+    private WebServiceKeysResponse(WebServiceKeysResponse $) {
+        this.primary = $.primary;
+        this.secondary = $.secondary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServiceKeysResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String primary;
-        private @Nullable String secondary;
+        private WebServiceKeysResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServiceKeysResponse();
         }
 
         public Builder(WebServiceKeysResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.primary = defaults.primary;
-    	      this.secondary = defaults.secondary;
+            $ = new WebServiceKeysResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder primary(@Nullable String primary) {
-            this.primary = primary;
+            $.primary = primary;
             return this;
         }
+
         public Builder secondary(@Nullable String secondary) {
-            this.secondary = secondary;
+            $.secondary = secondary;
             return this;
-        }        public WebServiceKeysResponse build() {
-            return new WebServiceKeysResponse(primary, secondary);
+        }
+
+        public WebServiceKeysResponse build() {
+            return $;
         }
     }
+
 }

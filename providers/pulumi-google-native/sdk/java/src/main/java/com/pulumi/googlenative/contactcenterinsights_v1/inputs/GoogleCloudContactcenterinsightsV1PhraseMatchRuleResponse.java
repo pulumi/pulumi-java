@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
      * 
      */
     @Import(name="config", required=true)
-      private final GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config;
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config;
 
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config() {
         return this.config;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
      * 
      */
     @Import(name="negated", required=true)
-      private final Boolean negated;
+    private Boolean negated;
 
     public Boolean negated() {
         return this.negated;
@@ -45,64 +45,59 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
      * 
      */
     @Import(name="query", required=true)
-      private final String query;
+    private String query;
 
     public String query() {
         return this.query;
     }
 
-    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(
-        GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config,
-        Boolean negated,
-        String query) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.negated = Objects.requireNonNull(negated, "expected parameter 'negated' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse() {
-        this.config = null;
-        this.negated = null;
-        this.query = null;
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse $) {
+        this.config = $.config;
+        this.negated = $.negated;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config;
-        private Boolean negated;
-        private String query;
+        private GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.negated = defaults.negated;
-    	      this.query = defaults.query;
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder config(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder negated(Boolean negated) {
-            this.negated = Objects.requireNonNull(negated);
+            $.negated = negated;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse build() {
-            return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(config, negated, query);
+        }
+
+        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.negated = Objects.requireNonNull($.negated, "expected parameter 'negated' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            return $;
         }
     }
+
 }

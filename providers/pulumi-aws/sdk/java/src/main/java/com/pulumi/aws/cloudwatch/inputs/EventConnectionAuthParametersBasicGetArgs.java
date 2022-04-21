@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class EventConnectionAuthParametersBasicGetArgs extends com.pulumi.
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -30,63 +29,60 @@ public final class EventConnectionAuthParametersBasicGetArgs extends com.pulumi.
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public EventConnectionAuthParametersBasicGetArgs(
-        Output<String> password,
-        Output<String> username) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private EventConnectionAuthParametersBasicGetArgs() {}
 
-    private EventConnectionAuthParametersBasicGetArgs() {
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private EventConnectionAuthParametersBasicGetArgs(EventConnectionAuthParametersBasicGetArgs $) {
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventConnectionAuthParametersBasicGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> password;
-        private Output<String> username;
+        private EventConnectionAuthParametersBasicGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventConnectionAuthParametersBasicGetArgs();
         }
 
         public Builder(EventConnectionAuthParametersBasicGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new EventConnectionAuthParametersBasicGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public EventConnectionAuthParametersBasicGetArgs build() {
-            return new EventConnectionAuthParametersBasicGetArgs(password, username);
+            return username(Output.of(username));
+        }
+
+        public EventConnectionAuthParametersBasicGetArgs build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

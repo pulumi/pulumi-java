@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RouterPeerAdvertisedIpRangeGetArgs;
 import com.pulumi.gcp.compute.inputs.RouterPeerBfdGetArgs;
 import java.lang.Boolean;
@@ -13,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertiseMode")
-      private final @Nullable Output<String> advertiseMode;
+    private @Nullable Output<String> advertiseMode;
 
-    public Output<String> advertiseMode() {
-        return this.advertiseMode == null ? Codegen.empty() : this.advertiseMode;
+    public Optional<Output<String>> advertiseMode() {
+        return Optional.ofNullable(this.advertiseMode);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertisedGroups")
-      private final @Nullable Output<List<String>> advertisedGroups;
+    private @Nullable Output<List<String>> advertisedGroups;
 
-    public Output<List<String>> advertisedGroups() {
-        return this.advertisedGroups == null ? Codegen.empty() : this.advertisedGroups;
+    public Optional<Output<List<String>>> advertisedGroups() {
+        return Optional.ofNullable(this.advertisedGroups);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertisedIpRanges")
-      private final @Nullable Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges;
+    private @Nullable Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges;
 
-    public Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges() {
-        return this.advertisedIpRanges == null ? Codegen.empty() : this.advertisedIpRanges;
+    public Optional<Output<List<RouterPeerAdvertisedIpRangeGetArgs>>> advertisedIpRanges() {
+        return Optional.ofNullable(this.advertisedIpRanges);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advertisedRoutePriority")
-      private final @Nullable Output<Integer> advertisedRoutePriority;
+    private @Nullable Output<Integer> advertisedRoutePriority;
 
-    public Output<Integer> advertisedRoutePriority() {
-        return this.advertisedRoutePriority == null ? Codegen.empty() : this.advertisedRoutePriority;
+    public Optional<Output<Integer>> advertisedRoutePriority() {
+        return Optional.ofNullable(this.advertisedRoutePriority);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bfd")
-      private final @Nullable Output<RouterPeerBfdGetArgs> bfd;
+    private @Nullable Output<RouterPeerBfdGetArgs> bfd;
 
-    public Output<RouterPeerBfdGetArgs> bfd() {
-        return this.bfd == null ? Codegen.empty() : this.bfd;
+    public Optional<Output<RouterPeerBfdGetArgs>> bfd() {
+        return Optional.ofNullable(this.bfd);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<String> interface_;
+    private @Nullable Output<String> interface_;
 
-    public Output<String> interface_() {
-        return this.interface_ == null ? Codegen.empty() : this.interface_;
+    public Optional<Output<String>> interface_() {
+        return Optional.ofNullable(this.interface_);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managementType")
-      private final @Nullable Output<String> managementType;
+    private @Nullable Output<String> managementType;
 
-    public Output<String> managementType() {
-        return this.managementType == null ? Codegen.empty() : this.managementType;
+    public Optional<Output<String>> managementType() {
+        return Optional.ofNullable(this.managementType);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerAsn")
-      private final @Nullable Output<Integer> peerAsn;
+    private @Nullable Output<Integer> peerAsn;
 
-    public Output<Integer> peerAsn() {
-        return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
+    public Optional<Output<Integer>> peerAsn() {
+        return Optional.ofNullable(this.peerAsn);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerIpAddress")
-      private final @Nullable Output<String> peerIpAddress;
+    private @Nullable Output<String> peerIpAddress;
 
-    public Output<String> peerIpAddress() {
-        return this.peerIpAddress == null ? Codegen.empty() : this.peerIpAddress;
+    public Optional<Output<String>> peerIpAddress() {
+        return Optional.ofNullable(this.peerIpAddress);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -199,10 +199,10 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -210,238 +210,196 @@ public final class RouterPeerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="router")
-      private final @Nullable Output<String> router;
+    private @Nullable Output<String> router;
 
-    public Output<String> router() {
-        return this.router == null ? Codegen.empty() : this.router;
+    public Optional<Output<String>> router() {
+        return Optional.ofNullable(this.router);
     }
 
-    public RouterPeerState(
-        @Nullable Output<String> advertiseMode,
-        @Nullable Output<List<String>> advertisedGroups,
-        @Nullable Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges,
-        @Nullable Output<Integer> advertisedRoutePriority,
-        @Nullable Output<RouterPeerBfdGetArgs> bfd,
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<String> interface_,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> managementType,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> peerAsn,
-        @Nullable Output<String> peerIpAddress,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> router) {
-        this.advertiseMode = advertiseMode;
-        this.advertisedGroups = advertisedGroups;
-        this.advertisedIpRanges = advertisedIpRanges;
-        this.advertisedRoutePriority = advertisedRoutePriority;
-        this.bfd = bfd;
-        this.enable = enable;
-        this.interface_ = interface_;
-        this.ipAddress = ipAddress;
-        this.managementType = managementType;
-        this.name = name;
-        this.peerAsn = peerAsn;
-        this.peerIpAddress = peerIpAddress;
-        this.project = project;
-        this.region = region;
-        this.router = router;
-    }
+    private RouterPeerState() {}
 
-    private RouterPeerState() {
-        this.advertiseMode = Codegen.empty();
-        this.advertisedGroups = Codegen.empty();
-        this.advertisedIpRanges = Codegen.empty();
-        this.advertisedRoutePriority = Codegen.empty();
-        this.bfd = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.interface_ = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.managementType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.peerAsn = Codegen.empty();
-        this.peerIpAddress = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.router = Codegen.empty();
+    private RouterPeerState(RouterPeerState $) {
+        this.advertiseMode = $.advertiseMode;
+        this.advertisedGroups = $.advertisedGroups;
+        this.advertisedIpRanges = $.advertisedIpRanges;
+        this.advertisedRoutePriority = $.advertisedRoutePriority;
+        this.bfd = $.bfd;
+        this.enable = $.enable;
+        this.interface_ = $.interface_;
+        this.ipAddress = $.ipAddress;
+        this.managementType = $.managementType;
+        this.name = $.name;
+        this.peerAsn = $.peerAsn;
+        this.peerIpAddress = $.peerIpAddress;
+        this.project = $.project;
+        this.region = $.region;
+        this.router = $.router;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterPeerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> advertiseMode;
-        private @Nullable Output<List<String>> advertisedGroups;
-        private @Nullable Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges;
-        private @Nullable Output<Integer> advertisedRoutePriority;
-        private @Nullable Output<RouterPeerBfdGetArgs> bfd;
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<String> interface_;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> managementType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> peerAsn;
-        private @Nullable Output<String> peerIpAddress;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> router;
+        private RouterPeerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterPeerState();
         }
 
         public Builder(RouterPeerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advertiseMode = defaults.advertiseMode;
-    	      this.advertisedGroups = defaults.advertisedGroups;
-    	      this.advertisedIpRanges = defaults.advertisedIpRanges;
-    	      this.advertisedRoutePriority = defaults.advertisedRoutePriority;
-    	      this.bfd = defaults.bfd;
-    	      this.enable = defaults.enable;
-    	      this.interface_ = defaults.interface_;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.managementType = defaults.managementType;
-    	      this.name = defaults.name;
-    	      this.peerAsn = defaults.peerAsn;
-    	      this.peerIpAddress = defaults.peerIpAddress;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.router = defaults.router;
+            $ = new RouterPeerState(Objects.requireNonNull(defaults));
         }
 
         public Builder advertiseMode(@Nullable Output<String> advertiseMode) {
-            this.advertiseMode = advertiseMode;
+            $.advertiseMode = advertiseMode;
             return this;
         }
-        public Builder advertiseMode(@Nullable String advertiseMode) {
-            this.advertiseMode = Codegen.ofNullable(advertiseMode);
-            return this;
+
+        public Builder advertiseMode(String advertiseMode) {
+            return advertiseMode(Output.of(advertiseMode));
         }
+
         public Builder advertisedGroups(@Nullable Output<List<String>> advertisedGroups) {
-            this.advertisedGroups = advertisedGroups;
+            $.advertisedGroups = advertisedGroups;
             return this;
         }
-        public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
-            this.advertisedGroups = Codegen.ofNullable(advertisedGroups);
-            return this;
+
+        public Builder advertisedGroups(List<String> advertisedGroups) {
+            return advertisedGroups(Output.of(advertisedGroups));
         }
+
         public Builder advertisedGroups(String... advertisedGroups) {
             return advertisedGroups(List.of(advertisedGroups));
         }
+
         public Builder advertisedIpRanges(@Nullable Output<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges) {
-            this.advertisedIpRanges = advertisedIpRanges;
+            $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
-        public Builder advertisedIpRanges(@Nullable List<RouterPeerAdvertisedIpRangeGetArgs> advertisedIpRanges) {
-            this.advertisedIpRanges = Codegen.ofNullable(advertisedIpRanges);
-            return this;
+
+        public Builder advertisedIpRanges(List<RouterPeerAdvertisedIpRangeGetArgs> advertisedIpRanges) {
+            return advertisedIpRanges(Output.of(advertisedIpRanges));
         }
+
         public Builder advertisedIpRanges(RouterPeerAdvertisedIpRangeGetArgs... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
+
         public Builder advertisedRoutePriority(@Nullable Output<Integer> advertisedRoutePriority) {
-            this.advertisedRoutePriority = advertisedRoutePriority;
+            $.advertisedRoutePriority = advertisedRoutePriority;
             return this;
         }
-        public Builder advertisedRoutePriority(@Nullable Integer advertisedRoutePriority) {
-            this.advertisedRoutePriority = Codegen.ofNullable(advertisedRoutePriority);
-            return this;
+
+        public Builder advertisedRoutePriority(Integer advertisedRoutePriority) {
+            return advertisedRoutePriority(Output.of(advertisedRoutePriority));
         }
+
         public Builder bfd(@Nullable Output<RouterPeerBfdGetArgs> bfd) {
-            this.bfd = bfd;
+            $.bfd = bfd;
             return this;
         }
-        public Builder bfd(@Nullable RouterPeerBfdGetArgs bfd) {
-            this.bfd = Codegen.ofNullable(bfd);
-            return this;
+
+        public Builder bfd(RouterPeerBfdGetArgs bfd) {
+            return bfd(Output.of(bfd));
         }
+
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder interface_(@Nullable Output<String> interface_) {
-            this.interface_ = interface_;
+            $.interface_ = interface_;
             return this;
         }
-        public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Codegen.ofNullable(interface_);
-            return this;
+
+        public Builder interface_(String interface_) {
+            return interface_(Output.of(interface_));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder managementType(@Nullable Output<String> managementType) {
-            this.managementType = managementType;
+            $.managementType = managementType;
             return this;
         }
-        public Builder managementType(@Nullable String managementType) {
-            this.managementType = Codegen.ofNullable(managementType);
-            return this;
+
+        public Builder managementType(String managementType) {
+            return managementType(Output.of(managementType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder peerAsn(@Nullable Output<Integer> peerAsn) {
-            this.peerAsn = peerAsn;
+            $.peerAsn = peerAsn;
             return this;
         }
-        public Builder peerAsn(@Nullable Integer peerAsn) {
-            this.peerAsn = Codegen.ofNullable(peerAsn);
-            return this;
+
+        public Builder peerAsn(Integer peerAsn) {
+            return peerAsn(Output.of(peerAsn));
         }
+
         public Builder peerIpAddress(@Nullable Output<String> peerIpAddress) {
-            this.peerIpAddress = peerIpAddress;
+            $.peerIpAddress = peerIpAddress;
             return this;
         }
-        public Builder peerIpAddress(@Nullable String peerIpAddress) {
-            this.peerIpAddress = Codegen.ofNullable(peerIpAddress);
-            return this;
+
+        public Builder peerIpAddress(String peerIpAddress) {
+            return peerIpAddress(Output.of(peerIpAddress));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder router(@Nullable Output<String> router) {
-            this.router = router;
+            $.router = router;
             return this;
         }
-        public Builder router(@Nullable String router) {
-            this.router = Codegen.ofNullable(router);
-            return this;
-        }        public RouterPeerState build() {
-            return new RouterPeerState(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, interface_, ipAddress, managementType, name, peerAsn, peerIpAddress, project, region, router);
+
+        public Builder router(String router) {
+            return router(Output.of(router));
+        }
+
+        public RouterPeerState build() {
+            return $;
         }
     }
+
 }

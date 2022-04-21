@@ -25,7 +25,7 @@ public final class KubernetesRoleResourcesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="compute", required=true)
-      private final KubernetesRoleComputeResponse compute;
+    private KubernetesRoleComputeResponse compute;
 
     public KubernetesRoleComputeResponse compute() {
         return this.compute;
@@ -36,7 +36,7 @@ public final class KubernetesRoleResourcesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="network", required=true)
-      private final KubernetesRoleNetworkResponse network;
+    private KubernetesRoleNetworkResponse network;
 
     public KubernetesRoleNetworkResponse network() {
         return this.network;
@@ -47,64 +47,58 @@ public final class KubernetesRoleResourcesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="storage")
-      private final @Nullable KubernetesRoleStorageResponse storage;
+    private @Nullable KubernetesRoleStorageResponse storage;
 
     public Optional<KubernetesRoleStorageResponse> storage() {
-        return this.storage == null ? Optional.empty() : Optional.ofNullable(this.storage);
+        return Optional.ofNullable(this.storage);
     }
 
-    public KubernetesRoleResourcesResponse(
-        KubernetesRoleComputeResponse compute,
-        KubernetesRoleNetworkResponse network,
-        @Nullable KubernetesRoleStorageResponse storage) {
-        this.compute = Objects.requireNonNull(compute, "expected parameter 'compute' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.storage = storage;
-    }
+    private KubernetesRoleResourcesResponse() {}
 
-    private KubernetesRoleResourcesResponse() {
-        this.compute = null;
-        this.network = null;
-        this.storage = null;
+    private KubernetesRoleResourcesResponse(KubernetesRoleResourcesResponse $) {
+        this.compute = $.compute;
+        this.network = $.network;
+        this.storage = $.storage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesRoleResourcesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private KubernetesRoleComputeResponse compute;
-        private KubernetesRoleNetworkResponse network;
-        private @Nullable KubernetesRoleStorageResponse storage;
+        private KubernetesRoleResourcesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesRoleResourcesResponse();
         }
 
         public Builder(KubernetesRoleResourcesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compute = defaults.compute;
-    	      this.network = defaults.network;
-    	      this.storage = defaults.storage;
+            $ = new KubernetesRoleResourcesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compute(KubernetesRoleComputeResponse compute) {
-            this.compute = Objects.requireNonNull(compute);
+            $.compute = compute;
             return this;
         }
+
         public Builder network(KubernetesRoleNetworkResponse network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder storage(@Nullable KubernetesRoleStorageResponse storage) {
-            this.storage = storage;
+            $.storage = storage;
             return this;
-        }        public KubernetesRoleResourcesResponse build() {
-            return new KubernetesRoleResourcesResponse(compute, network, storage);
+        }
+
+        public KubernetesRoleResourcesResponse build() {
+            $.compute = Objects.requireNonNull($.compute, "expected parameter 'compute' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.JobSparksqlConfigLoggingConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,17 +23,17 @@ public final class JobSparksqlConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="jarFileUris")
-      private final @Nullable Output<List<String>> jarFileUris;
+    private @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> jarFileUris() {
-        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
+    public Optional<Output<List<String>>> jarFileUris() {
+        return Optional.ofNullable(this.jarFileUris);
     }
 
     @Import(name="loggingConfig")
-      private final @Nullable Output<JobSparksqlConfigLoggingConfigArgs> loggingConfig;
+    private @Nullable Output<JobSparksqlConfigLoggingConfigArgs> loggingConfig;
 
-    public Output<JobSparksqlConfigLoggingConfigArgs> loggingConfig() {
-        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
+    public Optional<Output<JobSparksqlConfigLoggingConfigArgs>> loggingConfig() {
+        return Optional.ofNullable(this.loggingConfig);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class JobSparksqlConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class JobSparksqlConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="queryFileUri")
-      private final @Nullable Output<String> queryFileUri;
+    private @Nullable Output<String> queryFileUri;
 
-    public Output<String> queryFileUri() {
-        return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
+    public Optional<Output<String>> queryFileUri() {
+        return Optional.ofNullable(this.queryFileUri);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class JobSparksqlConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="queryLists")
-      private final @Nullable Output<List<String>> queryLists;
+    private @Nullable Output<List<String>> queryLists;
 
-    public Output<List<String>> queryLists() {
-        return this.queryLists == null ? Codegen.empty() : this.queryLists;
+    public Optional<Output<List<String>>> queryLists() {
+        return Optional.ofNullable(this.queryLists);
     }
 
     /**
@@ -76,121 +76,106 @@ public final class JobSparksqlConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scriptVariables")
-      private final @Nullable Output<Map<String,String>> scriptVariables;
+    private @Nullable Output<Map<String,String>> scriptVariables;
 
-    public Output<Map<String,String>> scriptVariables() {
-        return this.scriptVariables == null ? Codegen.empty() : this.scriptVariables;
+    public Optional<Output<Map<String,String>>> scriptVariables() {
+        return Optional.ofNullable(this.scriptVariables);
     }
 
-    public JobSparksqlConfigArgs(
-        @Nullable Output<List<String>> jarFileUris,
-        @Nullable Output<JobSparksqlConfigLoggingConfigArgs> loggingConfig,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<String> queryFileUri,
-        @Nullable Output<List<String>> queryLists,
-        @Nullable Output<Map<String,String>> scriptVariables) {
-        this.jarFileUris = jarFileUris;
-        this.loggingConfig = loggingConfig;
-        this.properties = properties;
-        this.queryFileUri = queryFileUri;
-        this.queryLists = queryLists;
-        this.scriptVariables = scriptVariables;
-    }
+    private JobSparksqlConfigArgs() {}
 
-    private JobSparksqlConfigArgs() {
-        this.jarFileUris = Codegen.empty();
-        this.loggingConfig = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.queryFileUri = Codegen.empty();
-        this.queryLists = Codegen.empty();
-        this.scriptVariables = Codegen.empty();
+    private JobSparksqlConfigArgs(JobSparksqlConfigArgs $) {
+        this.jarFileUris = $.jarFileUris;
+        this.loggingConfig = $.loggingConfig;
+        this.properties = $.properties;
+        this.queryFileUri = $.queryFileUri;
+        this.queryLists = $.queryLists;
+        this.scriptVariables = $.scriptVariables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobSparksqlConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> jarFileUris;
-        private @Nullable Output<JobSparksqlConfigLoggingConfigArgs> loggingConfig;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<String> queryFileUri;
-        private @Nullable Output<List<String>> queryLists;
-        private @Nullable Output<Map<String,String>> scriptVariables;
+        private JobSparksqlConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobSparksqlConfigArgs();
         }
 
         public Builder(JobSparksqlConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.properties = defaults.properties;
-    	      this.queryFileUri = defaults.queryFileUri;
-    	      this.queryLists = defaults.queryLists;
-    	      this.scriptVariables = defaults.scriptVariables;
+            $ = new JobSparksqlConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
-            this.jarFileUris = jarFileUris;
+            $.jarFileUris = jarFileUris;
             return this;
         }
-        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Codegen.ofNullable(jarFileUris);
-            return this;
+
+        public Builder jarFileUris(List<String> jarFileUris) {
+            return jarFileUris(Output.of(jarFileUris));
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder loggingConfig(@Nullable Output<JobSparksqlConfigLoggingConfigArgs> loggingConfig) {
-            this.loggingConfig = loggingConfig;
+            $.loggingConfig = loggingConfig;
             return this;
         }
-        public Builder loggingConfig(@Nullable JobSparksqlConfigLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Codegen.ofNullable(loggingConfig);
-            return this;
+
+        public Builder loggingConfig(JobSparksqlConfigLoggingConfigArgs loggingConfig) {
+            return loggingConfig(Output.of(loggingConfig));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
-            this.queryFileUri = queryFileUri;
+            $.queryFileUri = queryFileUri;
             return this;
         }
-        public Builder queryFileUri(@Nullable String queryFileUri) {
-            this.queryFileUri = Codegen.ofNullable(queryFileUri);
-            return this;
+
+        public Builder queryFileUri(String queryFileUri) {
+            return queryFileUri(Output.of(queryFileUri));
         }
+
         public Builder queryLists(@Nullable Output<List<String>> queryLists) {
-            this.queryLists = queryLists;
+            $.queryLists = queryLists;
             return this;
         }
-        public Builder queryLists(@Nullable List<String> queryLists) {
-            this.queryLists = Codegen.ofNullable(queryLists);
-            return this;
+
+        public Builder queryLists(List<String> queryLists) {
+            return queryLists(Output.of(queryLists));
         }
+
         public Builder queryLists(String... queryLists) {
             return queryLists(List.of(queryLists));
         }
+
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
-            this.scriptVariables = scriptVariables;
+            $.scriptVariables = scriptVariables;
             return this;
         }
-        public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
-            this.scriptVariables = Codegen.ofNullable(scriptVariables);
-            return this;
-        }        public JobSparksqlConfigArgs build() {
-            return new JobSparksqlConfigArgs(jarFileUris, loggingConfig, properties, queryFileUri, queryLists, scriptVariables);
+
+        public Builder scriptVariables(Map<String,String> scriptVariables) {
+            return scriptVariables(Output.of(scriptVariables));
+        }
+
+        public JobSparksqlConfigArgs build() {
+            return $;
         }
     }
+
 }

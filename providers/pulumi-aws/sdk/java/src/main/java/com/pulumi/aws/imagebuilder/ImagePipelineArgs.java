@@ -7,11 +7,11 @@ import com.pulumi.aws.imagebuilder.inputs.ImagePipelineImageTestsConfigurationAr
 import com.pulumi.aws.imagebuilder.inputs.ImagePipelineScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distributionConfigurationArn")
-      private final @Nullable Output<String> distributionConfigurationArn;
+    private @Nullable Output<String> distributionConfigurationArn;
 
-    public Output<String> distributionConfigurationArn() {
-        return this.distributionConfigurationArn == null ? Codegen.empty() : this.distributionConfigurationArn;
+    public Optional<Output<String>> distributionConfigurationArn() {
+        return Optional.ofNullable(this.distributionConfigurationArn);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enhancedImageMetadataEnabled")
-      private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
+    private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Output<Boolean> enhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled == null ? Codegen.empty() : this.enhancedImageMetadataEnabled;
+    public Optional<Output<Boolean>> enhancedImageMetadataEnabled() {
+        return Optional.ofNullable(this.enhancedImageMetadataEnabled);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageRecipeArn", required=true)
-      private final Output<String> imageRecipeArn;
+    private Output<String> imageRecipeArn;
 
     public Output<String> imageRecipeArn() {
         return this.imageRecipeArn;
@@ -68,10 +68,10 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="imageTestsConfiguration")
-      private final @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
+    private @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
 
-    public Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration() {
-        return this.imageTestsConfiguration == null ? Codegen.empty() : this.imageTestsConfiguration;
+    public Optional<Output<ImagePipelineImageTestsConfigurationArgs>> imageTestsConfiguration() {
+        return Optional.ofNullable(this.imageTestsConfiguration);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="infrastructureConfigurationArn", required=true)
-      private final Output<String> infrastructureConfigurationArn;
+    private Output<String> infrastructureConfigurationArn;
 
     public Output<String> infrastructureConfigurationArn() {
         return this.infrastructureConfigurationArn;
@@ -90,10 +90,10 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<ImagePipelineScheduleArgs> schedule;
+    private @Nullable Output<ImagePipelineScheduleArgs> schedule;
 
-    public Output<ImagePipelineScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<ImagePipelineScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -123,167 +123,140 @@ public final class ImagePipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ImagePipelineArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> distributionConfigurationArn,
-        @Nullable Output<Boolean> enhancedImageMetadataEnabled,
-        Output<String> imageRecipeArn,
-        @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration,
-        Output<String> infrastructureConfigurationArn,
-        @Nullable Output<String> name,
-        @Nullable Output<ImagePipelineScheduleArgs> schedule,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.distributionConfigurationArn = distributionConfigurationArn;
-        this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
-        this.imageRecipeArn = Objects.requireNonNull(imageRecipeArn, "expected parameter 'imageRecipeArn' to be non-null");
-        this.imageTestsConfiguration = imageTestsConfiguration;
-        this.infrastructureConfigurationArn = Objects.requireNonNull(infrastructureConfigurationArn, "expected parameter 'infrastructureConfigurationArn' to be non-null");
-        this.name = name;
-        this.schedule = schedule;
-        this.status = status;
-        this.tags = tags;
-    }
+    private ImagePipelineArgs() {}
 
-    private ImagePipelineArgs() {
-        this.description = Codegen.empty();
-        this.distributionConfigurationArn = Codegen.empty();
-        this.enhancedImageMetadataEnabled = Codegen.empty();
-        this.imageRecipeArn = Codegen.empty();
-        this.imageTestsConfiguration = Codegen.empty();
-        this.infrastructureConfigurationArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ImagePipelineArgs(ImagePipelineArgs $) {
+        this.description = $.description;
+        this.distributionConfigurationArn = $.distributionConfigurationArn;
+        this.enhancedImageMetadataEnabled = $.enhancedImageMetadataEnabled;
+        this.imageRecipeArn = $.imageRecipeArn;
+        this.imageTestsConfiguration = $.imageTestsConfiguration;
+        this.infrastructureConfigurationArn = $.infrastructureConfigurationArn;
+        this.name = $.name;
+        this.schedule = $.schedule;
+        this.status = $.status;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImagePipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> distributionConfigurationArn;
-        private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
-        private Output<String> imageRecipeArn;
-        private @Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration;
-        private Output<String> infrastructureConfigurationArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ImagePipelineScheduleArgs> schedule;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
+        private ImagePipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImagePipelineArgs();
         }
 
         public Builder(ImagePipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.distributionConfigurationArn = defaults.distributionConfigurationArn;
-    	      this.enhancedImageMetadataEnabled = defaults.enhancedImageMetadataEnabled;
-    	      this.imageRecipeArn = defaults.imageRecipeArn;
-    	      this.imageTestsConfiguration = defaults.imageTestsConfiguration;
-    	      this.infrastructureConfigurationArn = defaults.infrastructureConfigurationArn;
-    	      this.name = defaults.name;
-    	      this.schedule = defaults.schedule;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
+            $ = new ImagePipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
-            this.distributionConfigurationArn = distributionConfigurationArn;
+            $.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
-        public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
-            this.distributionConfigurationArn = Codegen.ofNullable(distributionConfigurationArn);
-            return this;
+
+        public Builder distributionConfigurationArn(String distributionConfigurationArn) {
+            return distributionConfigurationArn(Output.of(distributionConfigurationArn));
         }
+
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
+            $.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
-        public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = Codegen.ofNullable(enhancedImageMetadataEnabled);
-            return this;
+
+        public Builder enhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
+            return enhancedImageMetadataEnabled(Output.of(enhancedImageMetadataEnabled));
         }
+
         public Builder imageRecipeArn(Output<String> imageRecipeArn) {
-            this.imageRecipeArn = Objects.requireNonNull(imageRecipeArn);
+            $.imageRecipeArn = imageRecipeArn;
             return this;
         }
+
         public Builder imageRecipeArn(String imageRecipeArn) {
-            this.imageRecipeArn = Output.of(Objects.requireNonNull(imageRecipeArn));
-            return this;
+            return imageRecipeArn(Output.of(imageRecipeArn));
         }
+
         public Builder imageTestsConfiguration(@Nullable Output<ImagePipelineImageTestsConfigurationArgs> imageTestsConfiguration) {
-            this.imageTestsConfiguration = imageTestsConfiguration;
+            $.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
-        public Builder imageTestsConfiguration(@Nullable ImagePipelineImageTestsConfigurationArgs imageTestsConfiguration) {
-            this.imageTestsConfiguration = Codegen.ofNullable(imageTestsConfiguration);
-            return this;
+
+        public Builder imageTestsConfiguration(ImagePipelineImageTestsConfigurationArgs imageTestsConfiguration) {
+            return imageTestsConfiguration(Output.of(imageTestsConfiguration));
         }
+
         public Builder infrastructureConfigurationArn(Output<String> infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = Objects.requireNonNull(infrastructureConfigurationArn);
+            $.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
+
         public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = Output.of(Objects.requireNonNull(infrastructureConfigurationArn));
-            return this;
+            return infrastructureConfigurationArn(Output.of(infrastructureConfigurationArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder schedule(@Nullable Output<ImagePipelineScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable ImagePipelineScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(ImagePipelineScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ImagePipelineArgs build() {
-            return new ImagePipelineArgs(description, distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, name, schedule, status, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ImagePipelineArgs build() {
+            $.imageRecipeArn = Objects.requireNonNull($.imageRecipeArn, "expected parameter 'imageRecipeArn' to be non-null");
+            $.infrastructureConfigurationArn = Objects.requireNonNull($.infrastructureConfigurationArn, "expected parameter 'infrastructureConfigurationArn' to be non-null");
+            return $;
         }
     }
+
 }

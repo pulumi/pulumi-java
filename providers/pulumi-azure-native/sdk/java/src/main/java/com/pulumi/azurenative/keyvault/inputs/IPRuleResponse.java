@@ -21,45 +21,45 @@ public final class IPRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public IPRuleResponse(String value) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private IPRuleResponse() {}
 
-    private IPRuleResponse() {
-        this.value = null;
+    private IPRuleResponse(IPRuleResponse $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
+        private IPRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPRuleResponse();
         }
 
         public Builder(IPRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new IPRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public IPRuleResponse build() {
-            return new IPRuleResponse(value);
+        }
+
+        public IPRuleResponse build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

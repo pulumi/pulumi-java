@@ -5,10 +5,10 @@ package com.pulumi.aws.apigatewayv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RouteResponseState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RouteResponseState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="modelSelectionExpression")
-      private final @Nullable Output<String> modelSelectionExpression;
+    private @Nullable Output<String> modelSelectionExpression;
 
-    public Output<String> modelSelectionExpression() {
-        return this.modelSelectionExpression == null ? Codegen.empty() : this.modelSelectionExpression;
+    public Optional<Output<String>> modelSelectionExpression() {
+        return Optional.ofNullable(this.modelSelectionExpression);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RouteResponseState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="responseModels")
-      private final @Nullable Output<Map<String,String>> responseModels;
+    private @Nullable Output<Map<String,String>> responseModels;
 
-    public Output<Map<String,String>> responseModels() {
-        return this.responseModels == null ? Codegen.empty() : this.responseModels;
+    public Optional<Output<Map<String,String>>> responseModels() {
+        return Optional.ofNullable(this.responseModels);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class RouteResponseState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="routeId")
-      private final @Nullable Output<String> routeId;
+    private @Nullable Output<String> routeId;
 
-    public Output<String> routeId() {
-        return this.routeId == null ? Codegen.empty() : this.routeId;
+    public Optional<Output<String>> routeId() {
+        return Optional.ofNullable(this.routeId);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class RouteResponseState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="routeResponseKey")
-      private final @Nullable Output<String> routeResponseKey;
+    private @Nullable Output<String> routeResponseKey;
 
-    public Output<String> routeResponseKey() {
-        return this.routeResponseKey == null ? Codegen.empty() : this.routeResponseKey;
+    public Optional<Output<String>> routeResponseKey() {
+        return Optional.ofNullable(this.routeResponseKey);
     }
 
-    public RouteResponseState(
-        @Nullable Output<String> apiId,
-        @Nullable Output<String> modelSelectionExpression,
-        @Nullable Output<Map<String,String>> responseModels,
-        @Nullable Output<String> routeId,
-        @Nullable Output<String> routeResponseKey) {
-        this.apiId = apiId;
-        this.modelSelectionExpression = modelSelectionExpression;
-        this.responseModels = responseModels;
-        this.routeId = routeId;
-        this.routeResponseKey = routeResponseKey;
-    }
+    private RouteResponseState() {}
 
-    private RouteResponseState() {
-        this.apiId = Codegen.empty();
-        this.modelSelectionExpression = Codegen.empty();
-        this.responseModels = Codegen.empty();
-        this.routeId = Codegen.empty();
-        this.routeResponseKey = Codegen.empty();
+    private RouteResponseState(RouteResponseState $) {
+        this.apiId = $.apiId;
+        this.modelSelectionExpression = $.modelSelectionExpression;
+        this.responseModels = $.responseModels;
+        this.routeId = $.routeId;
+        this.routeResponseKey = $.routeResponseKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteResponseState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private @Nullable Output<String> modelSelectionExpression;
-        private @Nullable Output<Map<String,String>> responseModels;
-        private @Nullable Output<String> routeId;
-        private @Nullable Output<String> routeResponseKey;
+        private RouteResponseState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteResponseState();
         }
 
         public Builder(RouteResponseState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.modelSelectionExpression = defaults.modelSelectionExpression;
-    	      this.responseModels = defaults.responseModels;
-    	      this.routeId = defaults.routeId;
-    	      this.routeResponseKey = defaults.routeResponseKey;
+            $ = new RouteResponseState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder modelSelectionExpression(@Nullable Output<String> modelSelectionExpression) {
-            this.modelSelectionExpression = modelSelectionExpression;
+            $.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
-        public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
-            this.modelSelectionExpression = Codegen.ofNullable(modelSelectionExpression);
-            return this;
+
+        public Builder modelSelectionExpression(String modelSelectionExpression) {
+            return modelSelectionExpression(Output.of(modelSelectionExpression));
         }
+
         public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
-            this.responseModels = responseModels;
+            $.responseModels = responseModels;
             return this;
         }
-        public Builder responseModels(@Nullable Map<String,String> responseModels) {
-            this.responseModels = Codegen.ofNullable(responseModels);
-            return this;
+
+        public Builder responseModels(Map<String,String> responseModels) {
+            return responseModels(Output.of(responseModels));
         }
+
         public Builder routeId(@Nullable Output<String> routeId) {
-            this.routeId = routeId;
+            $.routeId = routeId;
             return this;
         }
-        public Builder routeId(@Nullable String routeId) {
-            this.routeId = Codegen.ofNullable(routeId);
-            return this;
+
+        public Builder routeId(String routeId) {
+            return routeId(Output.of(routeId));
         }
+
         public Builder routeResponseKey(@Nullable Output<String> routeResponseKey) {
-            this.routeResponseKey = routeResponseKey;
+            $.routeResponseKey = routeResponseKey;
             return this;
         }
-        public Builder routeResponseKey(@Nullable String routeResponseKey) {
-            this.routeResponseKey = Codegen.ofNullable(routeResponseKey);
-            return this;
-        }        public RouteResponseState build() {
-            return new RouteResponseState(apiId, modelSelectionExpression, responseModels, routeId, routeResponseKey);
+
+        public Builder routeResponseKey(String routeResponseKey) {
+            return routeResponseKey(Output.of(routeResponseKey));
+        }
+
+        public RouteResponseState build() {
+            return $;
         }
     }
+
 }

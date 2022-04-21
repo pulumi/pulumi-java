@@ -5,9 +5,9 @@ package com.pulumi.azurenative.synapse.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LibraryInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerName")
-      private final @Nullable Output<String> containerName;
+    private @Nullable Output<String> containerName;
 
-    public Output<String> containerName() {
-        return this.containerName == null ? Codegen.empty() : this.containerName;
+    public Optional<Output<String>> containerName() {
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LibraryInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LibraryInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class LibraryInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public LibraryInfoArgs(
-        @Nullable Output<String> containerName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> path,
-        @Nullable Output<String> type) {
-        this.containerName = containerName;
-        this.name = name;
-        this.path = path;
-        this.type = type;
-    }
+    private LibraryInfoArgs() {}
 
-    private LibraryInfoArgs() {
-        this.containerName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.path = Codegen.empty();
-        this.type = Codegen.empty();
+    private LibraryInfoArgs(LibraryInfoArgs $) {
+        this.containerName = $.containerName;
+        this.name = $.name;
+        this.path = $.path;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LibraryInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> type;
+        private LibraryInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LibraryInfoArgs();
         }
 
         public Builder(LibraryInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.type = defaults.type;
+            $ = new LibraryInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(@Nullable Output<String> containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
-        public Builder containerName(@Nullable String containerName) {
-            this.containerName = Codegen.ofNullable(containerName);
-            return this;
+
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public LibraryInfoArgs build() {
-            return new LibraryInfoArgs(containerName, name, path, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public LibraryInfoArgs build() {
+            return $;
         }
     }
+
 }

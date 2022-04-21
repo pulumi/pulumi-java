@@ -21,7 +21,7 @@ public final class ResourceRecordResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ResourceRecordResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rrdata", required=true)
-      private final String rrdata;
+    private String rrdata;
 
     public String rrdata() {
         return this.rrdata;
@@ -43,64 +43,59 @@ public final class ResourceRecordResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ResourceRecordResponse(
-        String name,
-        String rrdata,
-        String type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.rrdata = Objects.requireNonNull(rrdata, "expected parameter 'rrdata' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ResourceRecordResponse() {}
 
-    private ResourceRecordResponse() {
-        this.name = null;
-        this.rrdata = null;
-        this.type = null;
+    private ResourceRecordResponse(ResourceRecordResponse $) {
+        this.name = $.name;
+        this.rrdata = $.rrdata;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String rrdata;
-        private String type;
+        private ResourceRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRecordResponse();
         }
 
         public Builder(ResourceRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.rrdata = defaults.rrdata;
-    	      this.type = defaults.type;
+            $ = new ResourceRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder rrdata(String rrdata) {
-            this.rrdata = Objects.requireNonNull(rrdata);
+            $.rrdata = rrdata;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ResourceRecordResponse build() {
-            return new ResourceRecordResponse(name, rrdata, type);
+        }
+
+        public ResourceRecordResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.rrdata = Objects.requireNonNull($.rrdata, "expected parameter 'rrdata' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

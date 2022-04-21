@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ClusterDatabaseEncryptionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class ClusterDatabaseEncryptionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="state", required=true)
-      private final Output<String> state;
+    private Output<String> state;
 
     public Output<String> state() {
         return this.state;
     }
 
-    public ClusterDatabaseEncryptionGetArgs(
-        @Nullable Output<String> keyName,
-        Output<String> state) {
-        this.keyName = keyName;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private ClusterDatabaseEncryptionGetArgs() {}
 
-    private ClusterDatabaseEncryptionGetArgs() {
-        this.keyName = Codegen.empty();
-        this.state = Codegen.empty();
+    private ClusterDatabaseEncryptionGetArgs(ClusterDatabaseEncryptionGetArgs $) {
+        this.keyName = $.keyName;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterDatabaseEncryptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyName;
-        private Output<String> state;
+        private ClusterDatabaseEncryptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterDatabaseEncryptionGetArgs();
         }
 
         public Builder(ClusterDatabaseEncryptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.state = defaults.state;
+            $ = new ClusterDatabaseEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder state(Output<String> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
-        }        public ClusterDatabaseEncryptionGetArgs build() {
-            return new ClusterDatabaseEncryptionGetArgs(keyName, state);
+            return state(Output.of(state));
+        }
+
+        public ClusterDatabaseEncryptionGetArgs build() {
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricMeanInRangeRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class SloWindowsBasedSliMetricMeanInRangeArgs extends com.pulumi.re
      * 
      */
     @Import(name="range", required=true)
-      private final Output<SloWindowsBasedSliMetricMeanInRangeRangeArgs> range;
+    private Output<SloWindowsBasedSliMetricMeanInRangeRangeArgs> range;
 
     public Output<SloWindowsBasedSliMetricMeanInRangeRangeArgs> range() {
         return this.range;
@@ -43,63 +42,60 @@ public final class SloWindowsBasedSliMetricMeanInRangeArgs extends com.pulumi.re
      * 
      */
     @Import(name="timeSeries", required=true)
-      private final Output<String> timeSeries;
+    private Output<String> timeSeries;
 
     public Output<String> timeSeries() {
         return this.timeSeries;
     }
 
-    public SloWindowsBasedSliMetricMeanInRangeArgs(
-        Output<SloWindowsBasedSliMetricMeanInRangeRangeArgs> range,
-        Output<String> timeSeries) {
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-        this.timeSeries = Objects.requireNonNull(timeSeries, "expected parameter 'timeSeries' to be non-null");
-    }
+    private SloWindowsBasedSliMetricMeanInRangeArgs() {}
 
-    private SloWindowsBasedSliMetricMeanInRangeArgs() {
-        this.range = Codegen.empty();
-        this.timeSeries = Codegen.empty();
+    private SloWindowsBasedSliMetricMeanInRangeArgs(SloWindowsBasedSliMetricMeanInRangeArgs $) {
+        this.range = $.range;
+        this.timeSeries = $.timeSeries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloWindowsBasedSliMetricMeanInRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SloWindowsBasedSliMetricMeanInRangeRangeArgs> range;
-        private Output<String> timeSeries;
+        private SloWindowsBasedSliMetricMeanInRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloWindowsBasedSliMetricMeanInRangeArgs();
         }
 
         public Builder(SloWindowsBasedSliMetricMeanInRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.range = defaults.range;
-    	      this.timeSeries = defaults.timeSeries;
+            $ = new SloWindowsBasedSliMetricMeanInRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder range(Output<SloWindowsBasedSliMetricMeanInRangeRangeArgs> range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
         }
+
         public Builder range(SloWindowsBasedSliMetricMeanInRangeRangeArgs range) {
-            this.range = Output.of(Objects.requireNonNull(range));
-            return this;
+            return range(Output.of(range));
         }
+
         public Builder timeSeries(Output<String> timeSeries) {
-            this.timeSeries = Objects.requireNonNull(timeSeries);
+            $.timeSeries = timeSeries;
             return this;
         }
+
         public Builder timeSeries(String timeSeries) {
-            this.timeSeries = Output.of(Objects.requireNonNull(timeSeries));
-            return this;
-        }        public SloWindowsBasedSliMetricMeanInRangeArgs build() {
-            return new SloWindowsBasedSliMetricMeanInRangeArgs(range, timeSeries);
+            return timeSeries(Output.of(timeSeries));
+        }
+
+        public SloWindowsBasedSliMetricMeanInRangeArgs build() {
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            $.timeSeries = Objects.requireNonNull($.timeSeries, "expected parameter 'timeSeries' to be non-null");
+            return $;
         }
     }
+
 }

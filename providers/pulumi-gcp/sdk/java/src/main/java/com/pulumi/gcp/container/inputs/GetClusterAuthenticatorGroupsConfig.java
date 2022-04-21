@@ -13,45 +13,45 @@ public final class GetClusterAuthenticatorGroupsConfig extends com.pulumi.resour
     public static final GetClusterAuthenticatorGroupsConfig Empty = new GetClusterAuthenticatorGroupsConfig();
 
     @Import(name="securityGroup", required=true)
-      private final String securityGroup;
+    private String securityGroup;
 
     public String securityGroup() {
         return this.securityGroup;
     }
 
-    public GetClusterAuthenticatorGroupsConfig(String securityGroup) {
-        this.securityGroup = Objects.requireNonNull(securityGroup, "expected parameter 'securityGroup' to be non-null");
-    }
+    private GetClusterAuthenticatorGroupsConfig() {}
 
-    private GetClusterAuthenticatorGroupsConfig() {
-        this.securityGroup = null;
+    private GetClusterAuthenticatorGroupsConfig(GetClusterAuthenticatorGroupsConfig $) {
+        this.securityGroup = $.securityGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterAuthenticatorGroupsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String securityGroup;
+        private GetClusterAuthenticatorGroupsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterAuthenticatorGroupsConfig();
         }
 
         public Builder(GetClusterAuthenticatorGroupsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroup = defaults.securityGroup;
+            $ = new GetClusterAuthenticatorGroupsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroup(String securityGroup) {
-            this.securityGroup = Objects.requireNonNull(securityGroup);
+            $.securityGroup = securityGroup;
             return this;
-        }        public GetClusterAuthenticatorGroupsConfig build() {
-            return new GetClusterAuthenticatorGroupsConfig(securityGroup);
+        }
+
+        public GetClusterAuthenticatorGroupsConfig build() {
+            $.securityGroup = Objects.requireNonNull($.securityGroup, "expected parameter 'securityGroup' to be non-null");
+            return $;
         }
     }
+
 }

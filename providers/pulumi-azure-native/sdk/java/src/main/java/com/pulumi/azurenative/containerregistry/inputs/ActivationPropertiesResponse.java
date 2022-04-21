@@ -21,45 +21,45 @@ public final class ActivationPropertiesResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public ActivationPropertiesResponse(String status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private ActivationPropertiesResponse() {}
 
-    private ActivationPropertiesResponse() {
-        this.status = null;
+    private ActivationPropertiesResponse(ActivationPropertiesResponse $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActivationPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String status;
+        private ActivationPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActivationPropertiesResponse();
         }
 
         public Builder(ActivationPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new ActivationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public ActivationPropertiesResponse build() {
-            return new ActivationPropertiesResponse(status);
+        }
+
+        public ActivationPropertiesResponse build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

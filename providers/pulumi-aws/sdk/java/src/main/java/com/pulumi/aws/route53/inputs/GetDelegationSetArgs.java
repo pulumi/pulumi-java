@@ -17,45 +17,45 @@ public final class GetDelegationSetArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetDelegationSetArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetDelegationSetArgs() {}
 
-    private GetDelegationSetArgs() {
-        this.id = null;
+    private GetDelegationSetArgs(GetDelegationSetArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDelegationSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetDelegationSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDelegationSetArgs();
         }
 
         public Builder(GetDelegationSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetDelegationSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetDelegationSetArgs build() {
-            return new GetDelegationSetArgs(id);
+        }
+
+        public GetDelegationSetArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

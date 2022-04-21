@@ -23,10 +23,10 @@ public final class SiteMachineKeyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="decryption")
-      private final @Nullable String decryption;
+    private @Nullable String decryption;
 
     public Optional<String> decryption() {
-        return this.decryption == null ? Optional.empty() : Optional.ofNullable(this.decryption);
+        return Optional.ofNullable(this.decryption);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SiteMachineKeyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="decryptionKey")
-      private final @Nullable String decryptionKey;
+    private @Nullable String decryptionKey;
 
     public Optional<String> decryptionKey() {
-        return this.decryptionKey == null ? Optional.empty() : Optional.ofNullable(this.decryptionKey);
+        return Optional.ofNullable(this.decryptionKey);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SiteMachineKeyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="validation")
-      private final @Nullable String validation;
+    private @Nullable String validation;
 
     public Optional<String> validation() {
-        return this.validation == null ? Optional.empty() : Optional.ofNullable(this.validation);
+        return Optional.ofNullable(this.validation);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class SiteMachineKeyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="validationKey")
-      private final @Nullable String validationKey;
+    private @Nullable String validationKey;
 
     public Optional<String> validationKey() {
-        return this.validationKey == null ? Optional.empty() : Optional.ofNullable(this.validationKey);
+        return Optional.ofNullable(this.validationKey);
     }
 
-    public SiteMachineKeyResponse(
-        @Nullable String decryption,
-        @Nullable String decryptionKey,
-        @Nullable String validation,
-        @Nullable String validationKey) {
-        this.decryption = decryption;
-        this.decryptionKey = decryptionKey;
-        this.validation = validation;
-        this.validationKey = validationKey;
-    }
+    private SiteMachineKeyResponse() {}
 
-    private SiteMachineKeyResponse() {
-        this.decryption = null;
-        this.decryptionKey = null;
-        this.validation = null;
-        this.validationKey = null;
+    private SiteMachineKeyResponse(SiteMachineKeyResponse $) {
+        this.decryption = $.decryption;
+        this.decryptionKey = $.decryptionKey;
+        this.validation = $.validation;
+        this.validationKey = $.validationKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SiteMachineKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String decryption;
-        private @Nullable String decryptionKey;
-        private @Nullable String validation;
-        private @Nullable String validationKey;
+        private SiteMachineKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SiteMachineKeyResponse();
         }
 
         public Builder(SiteMachineKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.decryption = defaults.decryption;
-    	      this.decryptionKey = defaults.decryptionKey;
-    	      this.validation = defaults.validation;
-    	      this.validationKey = defaults.validationKey;
+            $ = new SiteMachineKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder decryption(@Nullable String decryption) {
-            this.decryption = decryption;
+            $.decryption = decryption;
             return this;
         }
+
         public Builder decryptionKey(@Nullable String decryptionKey) {
-            this.decryptionKey = decryptionKey;
+            $.decryptionKey = decryptionKey;
             return this;
         }
+
         public Builder validation(@Nullable String validation) {
-            this.validation = validation;
+            $.validation = validation;
             return this;
         }
+
         public Builder validationKey(@Nullable String validationKey) {
-            this.validationKey = validationKey;
+            $.validationKey = validationKey;
             return this;
-        }        public SiteMachineKeyResponse build() {
-            return new SiteMachineKeyResponse(decryption, decryptionKey, validation, validationKey);
+        }
+
+        public SiteMachineKeyResponse build() {
+            return $;
         }
     }
+
 }

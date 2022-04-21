@@ -22,6 +22,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +35,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentConfiguration")
-      private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
+    private @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
-    public Output<AgentPropertiesArgs> agentConfiguration() {
-        return this.agentConfiguration == null ? Codegen.empty() : this.agentConfiguration;
+    public Optional<Output<AgentPropertiesArgs>> agentConfiguration() {
+        return Optional.ofNullable(this.agentConfiguration);
     }
 
     /**
@@ -45,10 +46,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentPoolName")
-      private final @Nullable Output<String> agentPoolName;
+    private @Nullable Output<String> agentPoolName;
 
-    public Output<String> agentPoolName() {
-        return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
+    public Optional<Output<String>> agentPoolName() {
+        return Optional.ofNullable(this.agentPoolName);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<CredentialsArgs> credentials;
+    private @Nullable Output<CredentialsArgs> credentials;
 
-    public Output<CredentialsArgs> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<CredentialsArgs>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<IdentityPropertiesArgs> identity;
+    private @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Output<IdentityPropertiesArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<IdentityPropertiesArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -78,10 +79,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isSystemTask")
-      private final @Nullable Output<Boolean> isSystemTask;
+    private @Nullable Output<Boolean> isSystemTask;
 
-    public Output<Boolean> isSystemTask() {
-        return this.isSystemTask == null ? Codegen.empty() : this.isSystemTask;
+    public Optional<Output<Boolean>> isSystemTask() {
+        return Optional.ofNullable(this.isSystemTask);
     }
 
     /**
@@ -89,10 +90,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -100,10 +101,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logTemplate")
-      private final @Nullable Output<String> logTemplate;
+    private @Nullable Output<String> logTemplate;
 
-    public Output<String> logTemplate() {
-        return this.logTemplate == null ? Codegen.empty() : this.logTemplate;
+    public Optional<Output<String>> logTemplate() {
+        return Optional.ofNullable(this.logTemplate);
     }
 
     /**
@@ -111,10 +112,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<PlatformPropertiesArgs> platform;
+    private @Nullable Output<PlatformPropertiesArgs> platform;
 
-    public Output<PlatformPropertiesArgs> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<PlatformPropertiesArgs>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -122,7 +123,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final Output<String> registryName;
+    private Output<String> registryName;
 
     public Output<String> registryName() {
         return this.registryName;
@@ -133,7 +134,7 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -144,10 +145,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,TaskStatus>> status;
+    private @Nullable Output<Either<String,TaskStatus>> status;
 
-    public Output<Either<String,TaskStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,TaskStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -155,10 +156,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="step")
-      private final @Nullable Output<Object> step;
+    private @Nullable Output<Object> step;
 
-    public Output<Object> step() {
-        return this.step == null ? Codegen.empty() : this.step;
+    public Optional<Output<Object>> step() {
+        return Optional.ofNullable(this.step);
     }
 
     /**
@@ -166,10 +167,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -177,10 +178,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskName")
-      private final @Nullable Output<String> taskName;
+    private @Nullable Output<String> taskName;
 
-    public Output<String> taskName() {
-        return this.taskName == null ? Codegen.empty() : this.taskName;
+    public Optional<Output<String>> taskName() {
+        return Optional.ofNullable(this.taskName);
     }
 
     /**
@@ -188,10 +189,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Integer> timeout;
+    private @Nullable Output<Integer> timeout;
 
-    public Output<Integer> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Integer>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -199,245 +200,202 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trigger")
-      private final @Nullable Output<TriggerPropertiesArgs> trigger;
+    private @Nullable Output<TriggerPropertiesArgs> trigger;
 
-    public Output<TriggerPropertiesArgs> trigger() {
-        return this.trigger == null ? Codegen.empty() : this.trigger;
+    public Optional<Output<TriggerPropertiesArgs>> trigger() {
+        return Optional.ofNullable(this.trigger);
     }
 
-    public TaskArgs(
-        @Nullable Output<AgentPropertiesArgs> agentConfiguration,
-        @Nullable Output<String> agentPoolName,
-        @Nullable Output<CredentialsArgs> credentials,
-        @Nullable Output<IdentityPropertiesArgs> identity,
-        @Nullable Output<Boolean> isSystemTask,
-        @Nullable Output<String> location,
-        @Nullable Output<String> logTemplate,
-        @Nullable Output<PlatformPropertiesArgs> platform,
-        Output<String> registryName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,TaskStatus>> status,
-        @Nullable Output<Object> step,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> taskName,
-        @Nullable Output<Integer> timeout,
-        @Nullable Output<TriggerPropertiesArgs> trigger) {
-        this.agentConfiguration = agentConfiguration;
-        this.agentPoolName = agentPoolName;
-        this.credentials = credentials;
-        this.identity = identity;
-        this.isSystemTask = Codegen.booleanProp("isSystemTask").output().arg(isSystemTask).def(false).getNullable();
-        this.location = location;
-        this.logTemplate = logTemplate;
-        this.platform = platform;
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.status = status;
-        this.step = step;
-        this.tags = tags;
-        this.taskName = taskName;
-        this.timeout = Codegen.integerProp("timeout").output().arg(timeout).def(3600).getNullable();
-        this.trigger = trigger;
-    }
+    private TaskArgs() {}
 
-    private TaskArgs() {
-        this.agentConfiguration = Codegen.empty();
-        this.agentPoolName = Codegen.empty();
-        this.credentials = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.isSystemTask = Codegen.empty();
-        this.location = Codegen.empty();
-        this.logTemplate = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.registryName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.status = Codegen.empty();
-        this.step = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.taskName = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.trigger = Codegen.empty();
+    private TaskArgs(TaskArgs $) {
+        this.agentConfiguration = $.agentConfiguration;
+        this.agentPoolName = $.agentPoolName;
+        this.credentials = $.credentials;
+        this.identity = $.identity;
+        this.isSystemTask = $.isSystemTask;
+        this.location = $.location;
+        this.logTemplate = $.logTemplate;
+        this.platform = $.platform;
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.status = $.status;
+        this.step = $.step;
+        this.tags = $.tags;
+        this.taskName = $.taskName;
+        this.timeout = $.timeout;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AgentPropertiesArgs> agentConfiguration;
-        private @Nullable Output<String> agentPoolName;
-        private @Nullable Output<CredentialsArgs> credentials;
-        private @Nullable Output<IdentityPropertiesArgs> identity;
-        private @Nullable Output<Boolean> isSystemTask;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> logTemplate;
-        private @Nullable Output<PlatformPropertiesArgs> platform;
-        private Output<String> registryName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,TaskStatus>> status;
-        private @Nullable Output<Object> step;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> taskName;
-        private @Nullable Output<Integer> timeout;
-        private @Nullable Output<TriggerPropertiesArgs> trigger;
+        private TaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskArgs();
         }
 
         public Builder(TaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentConfiguration = defaults.agentConfiguration;
-    	      this.agentPoolName = defaults.agentPoolName;
-    	      this.credentials = defaults.credentials;
-    	      this.identity = defaults.identity;
-    	      this.isSystemTask = defaults.isSystemTask;
-    	      this.location = defaults.location;
-    	      this.logTemplate = defaults.logTemplate;
-    	      this.platform = defaults.platform;
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.status = defaults.status;
-    	      this.step = defaults.step;
-    	      this.tags = defaults.tags;
-    	      this.taskName = defaults.taskName;
-    	      this.timeout = defaults.timeout;
-    	      this.trigger = defaults.trigger;
+            $ = new TaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentConfiguration(@Nullable Output<AgentPropertiesArgs> agentConfiguration) {
-            this.agentConfiguration = agentConfiguration;
+            $.agentConfiguration = agentConfiguration;
             return this;
         }
-        public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
-            this.agentConfiguration = Codegen.ofNullable(agentConfiguration);
-            return this;
+
+        public Builder agentConfiguration(AgentPropertiesArgs agentConfiguration) {
+            return agentConfiguration(Output.of(agentConfiguration));
         }
+
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
-            this.agentPoolName = agentPoolName;
+            $.agentPoolName = agentPoolName;
             return this;
         }
-        public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Codegen.ofNullable(agentPoolName);
-            return this;
+
+        public Builder agentPoolName(String agentPoolName) {
+            return agentPoolName(Output.of(agentPoolName));
         }
+
         public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable CredentialsArgs credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(CredentialsArgs credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(IdentityPropertiesArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder isSystemTask(@Nullable Output<Boolean> isSystemTask) {
-            this.isSystemTask = isSystemTask;
+            $.isSystemTask = isSystemTask;
             return this;
         }
-        public Builder isSystemTask(@Nullable Boolean isSystemTask) {
-            this.isSystemTask = Codegen.ofNullable(isSystemTask);
-            return this;
+
+        public Builder isSystemTask(Boolean isSystemTask) {
+            return isSystemTask(Output.of(isSystemTask));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
-            this.logTemplate = logTemplate;
+            $.logTemplate = logTemplate;
             return this;
         }
-        public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = Codegen.ofNullable(logTemplate);
-            return this;
+
+        public Builder logTemplate(String logTemplate) {
+            return logTemplate(Output.of(logTemplate));
         }
+
         public Builder platform(@Nullable Output<PlatformPropertiesArgs> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable PlatformPropertiesArgs platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(PlatformPropertiesArgs platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder registryName(Output<String> registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Output.of(Objects.requireNonNull(registryName));
-            return this;
+            return registryName(Output.of(registryName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder status(@Nullable Output<Either<String,TaskStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,TaskStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(Either<String,TaskStatus> status) {
+            return status(Output.of(status));
         }
+
         public Builder step(@Nullable Output<Object> step) {
-            this.step = step;
+            $.step = step;
             return this;
         }
-        public Builder step(@Nullable Object step) {
-            this.step = Codegen.ofNullable(step);
-            return this;
+
+        public Builder step(Object step) {
+            return step(Output.of(step));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder taskName(@Nullable Output<String> taskName) {
-            this.taskName = taskName;
+            $.taskName = taskName;
             return this;
         }
-        public Builder taskName(@Nullable String taskName) {
-            this.taskName = Codegen.ofNullable(taskName);
-            return this;
+
+        public Builder taskName(String taskName) {
+            return taskName(Output.of(taskName));
         }
+
         public Builder timeout(@Nullable Output<Integer> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(Integer timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder trigger(@Nullable Output<TriggerPropertiesArgs> trigger) {
-            this.trigger = trigger;
+            $.trigger = trigger;
             return this;
         }
-        public Builder trigger(@Nullable TriggerPropertiesArgs trigger) {
-            this.trigger = Codegen.ofNullable(trigger);
-            return this;
-        }        public TaskArgs build() {
-            return new TaskArgs(agentConfiguration, agentPoolName, credentials, identity, isSystemTask, location, logTemplate, platform, registryName, resourceGroupName, status, step, tags, taskName, timeout, trigger);
+
+        public Builder trigger(TriggerPropertiesArgs trigger) {
+            return trigger(Output.of(trigger));
+        }
+
+        public TaskArgs build() {
+            $.isSystemTask = Codegen.booleanProp("isSystemTask").output().arg($.isSystemTask).def(false).getNullable();
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.timeout = Codegen.integerProp("timeout").output().arg($.timeout).def(3600).getNullable();
+            return $;
         }
     }
+
 }

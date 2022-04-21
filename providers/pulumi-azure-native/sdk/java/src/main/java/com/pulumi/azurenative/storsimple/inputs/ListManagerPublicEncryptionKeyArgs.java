@@ -17,7 +17,7 @@ public final class ListManagerPublicEncryptionKeyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="managerName", required=true)
-      private final String managerName;
+    private String managerName;
 
     public String managerName() {
         return this.managerName;
@@ -28,55 +28,52 @@ public final class ListManagerPublicEncryptionKeyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListManagerPublicEncryptionKeyArgs(
-        String managerName,
-        String resourceGroupName) {
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListManagerPublicEncryptionKeyArgs() {}
 
-    private ListManagerPublicEncryptionKeyArgs() {
-        this.managerName = null;
-        this.resourceGroupName = null;
+    private ListManagerPublicEncryptionKeyArgs(ListManagerPublicEncryptionKeyArgs $) {
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListManagerPublicEncryptionKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String managerName;
-        private String resourceGroupName;
+        private ListManagerPublicEncryptionKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListManagerPublicEncryptionKeyArgs();
         }
 
         public Builder(ListManagerPublicEncryptionKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListManagerPublicEncryptionKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListManagerPublicEncryptionKeyArgs build() {
-            return new ListManagerPublicEncryptionKeyArgs(managerName, resourceGroupName);
+        }
+
+        public ListManagerPublicEncryptionKeyArgs build() {
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

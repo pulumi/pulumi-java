@@ -15,94 +15,85 @@ public final class GetRegistrationIamPolicyArgs extends com.pulumi.resources.Inv
     public static final GetRegistrationIamPolicyArgs Empty = new GetRegistrationIamPolicyArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="registrationId", required=true)
-      private final String registrationId;
+    private String registrationId;
 
     public String registrationId() {
         return this.registrationId;
     }
 
-    public GetRegistrationIamPolicyArgs(
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String registrationId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.registrationId = Objects.requireNonNull(registrationId, "expected parameter 'registrationId' to be non-null");
-    }
+    private GetRegistrationIamPolicyArgs() {}
 
-    private GetRegistrationIamPolicyArgs() {
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.registrationId = null;
+    private GetRegistrationIamPolicyArgs(GetRegistrationIamPolicyArgs $) {
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.registrationId = $.registrationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistrationIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String registrationId;
+        private GetRegistrationIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistrationIamPolicyArgs();
         }
 
         public Builder(GetRegistrationIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.registrationId = defaults.registrationId;
+            $ = new GetRegistrationIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder registrationId(String registrationId) {
-            this.registrationId = Objects.requireNonNull(registrationId);
+            $.registrationId = registrationId;
             return this;
-        }        public GetRegistrationIamPolicyArgs build() {
-            return new GetRegistrationIamPolicyArgs(location, optionsRequestedPolicyVersion, project, registrationId);
+        }
+
+        public GetRegistrationIamPolicyArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.registrationId = Objects.requireNonNull($.registrationId, "expected parameter 'registrationId' to be non-null");
+            return $;
         }
     }
+
 }

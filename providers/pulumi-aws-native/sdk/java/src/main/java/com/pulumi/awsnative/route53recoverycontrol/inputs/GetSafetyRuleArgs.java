@@ -17,45 +17,45 @@ public final class GetSafetyRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="safetyRuleArn", required=true)
-      private final String safetyRuleArn;
+    private String safetyRuleArn;
 
     public String safetyRuleArn() {
         return this.safetyRuleArn;
     }
 
-    public GetSafetyRuleArgs(String safetyRuleArn) {
-        this.safetyRuleArn = Objects.requireNonNull(safetyRuleArn, "expected parameter 'safetyRuleArn' to be non-null");
-    }
+    private GetSafetyRuleArgs() {}
 
-    private GetSafetyRuleArgs() {
-        this.safetyRuleArn = null;
+    private GetSafetyRuleArgs(GetSafetyRuleArgs $) {
+        this.safetyRuleArn = $.safetyRuleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSafetyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String safetyRuleArn;
+        private GetSafetyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSafetyRuleArgs();
         }
 
         public Builder(GetSafetyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.safetyRuleArn = defaults.safetyRuleArn;
+            $ = new GetSafetyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder safetyRuleArn(String safetyRuleArn) {
-            this.safetyRuleArn = Objects.requireNonNull(safetyRuleArn);
+            $.safetyRuleArn = safetyRuleArn;
             return this;
-        }        public GetSafetyRuleArgs build() {
-            return new GetSafetyRuleArgs(safetyRuleArn);
+        }
+
+        public GetSafetyRuleArgs build() {
+            $.safetyRuleArn = Objects.requireNonNull($.safetyRuleArn, "expected parameter 'safetyRuleArn' to be non-null");
+            return $;
         }
     }
+
 }

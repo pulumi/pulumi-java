@@ -23,7 +23,7 @@ public final class TldLegalAgreementResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="agreementKey", required=true)
-      private final String agreementKey;
+    private String agreementKey;
 
     public String agreementKey() {
         return this.agreementKey;
@@ -34,7 +34,7 @@ public final class TldLegalAgreementResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -45,7 +45,7 @@ public final class TldLegalAgreementResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
@@ -56,73 +56,65 @@ public final class TldLegalAgreementResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public TldLegalAgreementResponse(
-        String agreementKey,
-        String content,
-        String title,
-        @Nullable String url) {
-        this.agreementKey = Objects.requireNonNull(agreementKey, "expected parameter 'agreementKey' to be non-null");
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.url = url;
-    }
+    private TldLegalAgreementResponse() {}
 
-    private TldLegalAgreementResponse() {
-        this.agreementKey = null;
-        this.content = null;
-        this.title = null;
-        this.url = null;
+    private TldLegalAgreementResponse(TldLegalAgreementResponse $) {
+        this.agreementKey = $.agreementKey;
+        this.content = $.content;
+        this.title = $.title;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TldLegalAgreementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agreementKey;
-        private String content;
-        private String title;
-        private @Nullable String url;
+        private TldLegalAgreementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TldLegalAgreementResponse();
         }
 
         public Builder(TldLegalAgreementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agreementKey = defaults.agreementKey;
-    	      this.content = defaults.content;
-    	      this.title = defaults.title;
-    	      this.url = defaults.url;
+            $ = new TldLegalAgreementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agreementKey(String agreementKey) {
-            this.agreementKey = Objects.requireNonNull(agreementKey);
+            $.agreementKey = agreementKey;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public TldLegalAgreementResponse build() {
-            return new TldLegalAgreementResponse(agreementKey, content, title, url);
+        }
+
+        public TldLegalAgreementResponse build() {
+            $.agreementKey = Objects.requireNonNull($.agreementKey, "expected parameter 'agreementKey' to be non-null");
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

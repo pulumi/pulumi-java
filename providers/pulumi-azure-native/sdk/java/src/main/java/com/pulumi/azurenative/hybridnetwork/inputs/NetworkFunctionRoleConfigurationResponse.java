@@ -29,10 +29,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="customProfile")
-      private final @Nullable CustomProfileResponse customProfile;
+    private @Nullable CustomProfileResponse customProfile;
 
     public Optional<CustomProfileResponse> customProfile() {
-        return this.customProfile == null ? Optional.empty() : Optional.ofNullable(this.customProfile);
+        return Optional.ofNullable(this.customProfile);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
+    private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> networkInterfaces() {
-        return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
+    public Optional<List<NetworkInterfaceResponse>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable OsProfileResponse osProfile;
+    private @Nullable OsProfileResponse osProfile;
 
     public Optional<OsProfileResponse> osProfile() {
-        return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="roleName")
-      private final @Nullable String roleName;
+    private @Nullable String roleName;
 
     public Optional<String> roleName() {
-        return this.roleName == null ? Optional.empty() : Optional.ofNullable(this.roleName);
+        return Optional.ofNullable(this.roleName);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="roleType")
-      private final @Nullable String roleType;
+    private @Nullable String roleType;
 
     public Optional<String> roleType() {
-        return this.roleType == null ? Optional.empty() : Optional.ofNullable(this.roleType);
+        return Optional.ofNullable(this.roleType);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable StorageProfileResponse storageProfile;
+    private @Nullable StorageProfileResponse storageProfile;
 
     public Optional<StorageProfileResponse> storageProfile() {
-        return this.storageProfile == null ? Optional.empty() : Optional.ofNullable(this.storageProfile);
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="userDataParameters")
-      private final @Nullable Object userDataParameters;
+    private @Nullable Object userDataParameters;
 
     public Optional<Object> userDataParameters() {
-        return this.userDataParameters == null ? Optional.empty() : Optional.ofNullable(this.userDataParameters);
+        return Optional.ofNullable(this.userDataParameters);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="userDataTemplate")
-      private final @Nullable Object userDataTemplate;
+    private @Nullable Object userDataTemplate;
 
     public Optional<Object> userDataTemplate() {
-        return this.userDataTemplate == null ? Optional.empty() : Optional.ofNullable(this.userDataTemplate);
+        return Optional.ofNullable(this.userDataTemplate);
     }
 
     /**
@@ -117,121 +117,96 @@ public final class NetworkFunctionRoleConfigurationResponse extends com.pulumi.r
      * 
      */
     @Import(name="virtualMachineSize")
-      private final @Nullable String virtualMachineSize;
+    private @Nullable String virtualMachineSize;
 
     public Optional<String> virtualMachineSize() {
-        return this.virtualMachineSize == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineSize);
+        return Optional.ofNullable(this.virtualMachineSize);
     }
 
-    public NetworkFunctionRoleConfigurationResponse(
-        @Nullable CustomProfileResponse customProfile,
-        @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable OsProfileResponse osProfile,
-        @Nullable String roleName,
-        @Nullable String roleType,
-        @Nullable StorageProfileResponse storageProfile,
-        @Nullable Object userDataParameters,
-        @Nullable Object userDataTemplate,
-        @Nullable String virtualMachineSize) {
-        this.customProfile = customProfile;
-        this.networkInterfaces = networkInterfaces;
-        this.osProfile = osProfile;
-        this.roleName = roleName;
-        this.roleType = roleType;
-        this.storageProfile = storageProfile;
-        this.userDataParameters = userDataParameters;
-        this.userDataTemplate = userDataTemplate;
-        this.virtualMachineSize = virtualMachineSize;
-    }
+    private NetworkFunctionRoleConfigurationResponse() {}
 
-    private NetworkFunctionRoleConfigurationResponse() {
-        this.customProfile = null;
-        this.networkInterfaces = List.of();
-        this.osProfile = null;
-        this.roleName = null;
-        this.roleType = null;
-        this.storageProfile = null;
-        this.userDataParameters = null;
-        this.userDataTemplate = null;
-        this.virtualMachineSize = null;
+    private NetworkFunctionRoleConfigurationResponse(NetworkFunctionRoleConfigurationResponse $) {
+        this.customProfile = $.customProfile;
+        this.networkInterfaces = $.networkInterfaces;
+        this.osProfile = $.osProfile;
+        this.roleName = $.roleName;
+        this.roleType = $.roleType;
+        this.storageProfile = $.storageProfile;
+        this.userDataParameters = $.userDataParameters;
+        this.userDataTemplate = $.userDataTemplate;
+        this.virtualMachineSize = $.virtualMachineSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkFunctionRoleConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CustomProfileResponse customProfile;
-        private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
-        private @Nullable OsProfileResponse osProfile;
-        private @Nullable String roleName;
-        private @Nullable String roleType;
-        private @Nullable StorageProfileResponse storageProfile;
-        private @Nullable Object userDataParameters;
-        private @Nullable Object userDataTemplate;
-        private @Nullable String virtualMachineSize;
+        private NetworkFunctionRoleConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkFunctionRoleConfigurationResponse();
         }
 
         public Builder(NetworkFunctionRoleConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customProfile = defaults.customProfile;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.osProfile = defaults.osProfile;
-    	      this.roleName = defaults.roleName;
-    	      this.roleType = defaults.roleType;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.userDataParameters = defaults.userDataParameters;
-    	      this.userDataTemplate = defaults.userDataTemplate;
-    	      this.virtualMachineSize = defaults.virtualMachineSize;
+            $ = new NetworkFunctionRoleConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customProfile(@Nullable CustomProfileResponse customProfile) {
-            this.customProfile = customProfile;
+            $.customProfile = customProfile;
             return this;
         }
+
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder osProfile(@Nullable OsProfileResponse osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
+
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = roleName;
+            $.roleName = roleName;
             return this;
         }
+
         public Builder roleType(@Nullable String roleType) {
-            this.roleType = roleType;
+            $.roleType = roleType;
             return this;
         }
+
         public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
+
         public Builder userDataParameters(@Nullable Object userDataParameters) {
-            this.userDataParameters = userDataParameters;
+            $.userDataParameters = userDataParameters;
             return this;
         }
+
         public Builder userDataTemplate(@Nullable Object userDataTemplate) {
-            this.userDataTemplate = userDataTemplate;
+            $.userDataTemplate = userDataTemplate;
             return this;
         }
+
         public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
-            this.virtualMachineSize = virtualMachineSize;
+            $.virtualMachineSize = virtualMachineSize;
             return this;
-        }        public NetworkFunctionRoleConfigurationResponse build() {
-            return new NetworkFunctionRoleConfigurationResponse(customProfile, networkInterfaces, osProfile, roleName, roleType, storageProfile, userDataParameters, userDataTemplate, virtualMachineSize);
+        }
+
+        public NetworkFunctionRoleConfigurationResponse build() {
+            return $;
         }
     }
+
 }

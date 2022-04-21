@@ -22,7 +22,7 @@ public final class RecurringTimeWindowResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="recurrence", required=true)
-      private final String recurrence;
+    private String recurrence;
 
     public String recurrence() {
         return this.recurrence;
@@ -33,55 +33,52 @@ public final class RecurringTimeWindowResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="window", required=true)
-      private final TimeWindowResponse window;
+    private TimeWindowResponse window;
 
     public TimeWindowResponse window() {
         return this.window;
     }
 
-    public RecurringTimeWindowResponse(
-        String recurrence,
-        TimeWindowResponse window) {
-        this.recurrence = Objects.requireNonNull(recurrence, "expected parameter 'recurrence' to be non-null");
-        this.window = Objects.requireNonNull(window, "expected parameter 'window' to be non-null");
-    }
+    private RecurringTimeWindowResponse() {}
 
-    private RecurringTimeWindowResponse() {
-        this.recurrence = null;
-        this.window = null;
+    private RecurringTimeWindowResponse(RecurringTimeWindowResponse $) {
+        this.recurrence = $.recurrence;
+        this.window = $.window;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecurringTimeWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String recurrence;
-        private TimeWindowResponse window;
+        private RecurringTimeWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecurringTimeWindowResponse();
         }
 
         public Builder(RecurringTimeWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrence = defaults.recurrence;
-    	      this.window = defaults.window;
+            $ = new RecurringTimeWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrence(String recurrence) {
-            this.recurrence = Objects.requireNonNull(recurrence);
+            $.recurrence = recurrence;
             return this;
         }
+
         public Builder window(TimeWindowResponse window) {
-            this.window = Objects.requireNonNull(window);
+            $.window = window;
             return this;
-        }        public RecurringTimeWindowResponse build() {
-            return new RecurringTimeWindowResponse(recurrence, window);
+        }
+
+        public RecurringTimeWindowResponse build() {
+            $.recurrence = Objects.requireNonNull($.recurrence, "expected parameter 'recurrence' to be non-null");
+            $.window = Objects.requireNonNull($.window, "expected parameter 'window' to be non-null");
+            return $;
         }
     }
+
 }

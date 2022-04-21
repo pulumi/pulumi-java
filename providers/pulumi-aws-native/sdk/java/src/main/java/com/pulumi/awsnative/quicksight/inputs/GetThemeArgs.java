@@ -13,62 +13,59 @@ public final class GetThemeArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetThemeArgs Empty = new GetThemeArgs();
 
     @Import(name="awsAccountId", required=true)
-      private final String awsAccountId;
+    private String awsAccountId;
 
     public String awsAccountId() {
         return this.awsAccountId;
     }
 
     @Import(name="themeId", required=true)
-      private final String themeId;
+    private String themeId;
 
     public String themeId() {
         return this.themeId;
     }
 
-    public GetThemeArgs(
-        String awsAccountId,
-        String themeId) {
-        this.awsAccountId = Objects.requireNonNull(awsAccountId, "expected parameter 'awsAccountId' to be non-null");
-        this.themeId = Objects.requireNonNull(themeId, "expected parameter 'themeId' to be non-null");
-    }
+    private GetThemeArgs() {}
 
-    private GetThemeArgs() {
-        this.awsAccountId = null;
-        this.themeId = null;
+    private GetThemeArgs(GetThemeArgs $) {
+        this.awsAccountId = $.awsAccountId;
+        this.themeId = $.themeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetThemeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String awsAccountId;
-        private String themeId;
+        private GetThemeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetThemeArgs();
         }
 
         public Builder(GetThemeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.themeId = defaults.themeId;
+            $ = new GetThemeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(String awsAccountId) {
-            this.awsAccountId = Objects.requireNonNull(awsAccountId);
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder themeId(String themeId) {
-            this.themeId = Objects.requireNonNull(themeId);
+            $.themeId = themeId;
             return this;
-        }        public GetThemeArgs build() {
-            return new GetThemeArgs(awsAccountId, themeId);
+        }
+
+        public GetThemeArgs build() {
+            $.awsAccountId = Objects.requireNonNull($.awsAccountId, "expected parameter 'awsAccountId' to be non-null");
+            $.themeId = Objects.requireNonNull($.themeId, "expected parameter 'themeId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
      * 
      */
     @Import(name="availabilityGroupListenerName", required=true)
-      private final String availabilityGroupListenerName;
+    private String availabilityGroupListenerName;
 
     public String availabilityGroupListenerName() {
         return this.availabilityGroupListenerName;
@@ -28,7 +28,7 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetAvailabilityGroupListenerArgs extends com.pulumi.resources
      * 
      */
     @Import(name="sqlVirtualMachineGroupName", required=true)
-      private final String sqlVirtualMachineGroupName;
+    private String sqlVirtualMachineGroupName;
 
     public String sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
 
-    public GetAvailabilityGroupListenerArgs(
-        String availabilityGroupListenerName,
-        String resourceGroupName,
-        String sqlVirtualMachineGroupName) {
-        this.availabilityGroupListenerName = Objects.requireNonNull(availabilityGroupListenerName, "expected parameter 'availabilityGroupListenerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName, "expected parameter 'sqlVirtualMachineGroupName' to be non-null");
-    }
+    private GetAvailabilityGroupListenerArgs() {}
 
-    private GetAvailabilityGroupListenerArgs() {
-        this.availabilityGroupListenerName = null;
-        this.resourceGroupName = null;
-        this.sqlVirtualMachineGroupName = null;
+    private GetAvailabilityGroupListenerArgs(GetAvailabilityGroupListenerArgs $) {
+        this.availabilityGroupListenerName = $.availabilityGroupListenerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlVirtualMachineGroupName = $.sqlVirtualMachineGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAvailabilityGroupListenerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String availabilityGroupListenerName;
-        private String resourceGroupName;
-        private String sqlVirtualMachineGroupName;
+        private GetAvailabilityGroupListenerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAvailabilityGroupListenerArgs();
         }
 
         public Builder(GetAvailabilityGroupListenerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityGroupListenerName = defaults.availabilityGroupListenerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlVirtualMachineGroupName = defaults.sqlVirtualMachineGroupName;
+            $ = new GetAvailabilityGroupListenerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityGroupListenerName(String availabilityGroupListenerName) {
-            this.availabilityGroupListenerName = Objects.requireNonNull(availabilityGroupListenerName);
+            $.availabilityGroupListenerName = availabilityGroupListenerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
-            this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName);
+            $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;
-        }        public GetAvailabilityGroupListenerArgs build() {
-            return new GetAvailabilityGroupListenerArgs(availabilityGroupListenerName, resourceGroupName, sqlVirtualMachineGroupName);
+        }
+
+        public GetAvailabilityGroupListenerArgs build() {
+            $.availabilityGroupListenerName = Objects.requireNonNull($.availabilityGroupListenerName, "expected parameter 'availabilityGroupListenerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlVirtualMachineGroupName = Objects.requireNonNull($.sqlVirtualMachineGroupName, "expected parameter 'sqlVirtualMachineGroupName' to be non-null");
+            return $;
         }
     }
+
 }

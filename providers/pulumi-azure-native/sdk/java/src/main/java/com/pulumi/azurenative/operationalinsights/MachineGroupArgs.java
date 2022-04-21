@@ -13,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -36,7 +37,7 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -47,10 +48,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupType")
-      private final @Nullable Output<Either<String,MachineGroupType>> groupType;
+    private @Nullable Output<Either<String,MachineGroupType>> groupType;
 
-    public Output<Either<String,MachineGroupType>> groupType() {
-        return this.groupType == null ? Codegen.empty() : this.groupType;
+    public Optional<Output<Either<String,MachineGroupType>>> groupType() {
+        return Optional.ofNullable(this.groupType);
     }
 
     /**
@@ -59,7 +60,7 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -70,10 +71,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineGroupName")
-      private final @Nullable Output<String> machineGroupName;
+    private @Nullable Output<String> machineGroupName;
 
-    public Output<String> machineGroupName() {
-        return this.machineGroupName == null ? Codegen.empty() : this.machineGroupName;
+    public Optional<Output<String>> machineGroupName() {
+        return Optional.ofNullable(this.machineGroupName);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machines")
-      private final @Nullable Output<List<MachineReferenceWithHintsArgs>> machines;
+    private @Nullable Output<List<MachineReferenceWithHintsArgs>> machines;
 
-    public Output<List<MachineReferenceWithHintsArgs>> machines() {
-        return this.machines == null ? Codegen.empty() : this.machines;
+    public Optional<Output<List<MachineReferenceWithHintsArgs>>> machines() {
+        return Optional.ofNullable(this.machines);
     }
 
     /**
@@ -92,7 +93,7 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -103,144 +104,126 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public MachineGroupArgs(
-        @Nullable Output<Integer> count,
-        Output<String> displayName,
-        @Nullable Output<Either<String,MachineGroupType>> groupType,
-        Output<String> kind,
-        @Nullable Output<String> machineGroupName,
-        @Nullable Output<List<MachineReferenceWithHintsArgs>> machines,
-        Output<String> resourceGroupName,
-        Output<String> workspaceName) {
-        this.count = count;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.groupType = groupType;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).require();
-        this.machineGroupName = machineGroupName;
-        this.machines = machines;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private MachineGroupArgs() {}
 
-    private MachineGroupArgs() {
-        this.count = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.groupType = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.machineGroupName = Codegen.empty();
-        this.machines = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private MachineGroupArgs(MachineGroupArgs $) {
+        this.count = $.count;
+        this.displayName = $.displayName;
+        this.groupType = $.groupType;
+        this.kind = $.kind;
+        this.machineGroupName = $.machineGroupName;
+        this.machines = $.machines;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private Output<String> displayName;
-        private @Nullable Output<Either<String,MachineGroupType>> groupType;
-        private Output<String> kind;
-        private @Nullable Output<String> machineGroupName;
-        private @Nullable Output<List<MachineReferenceWithHintsArgs>> machines;
-        private Output<String> resourceGroupName;
-        private Output<String> workspaceName;
+        private MachineGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineGroupArgs();
         }
 
         public Builder(MachineGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.displayName = defaults.displayName;
-    	      this.groupType = defaults.groupType;
-    	      this.kind = defaults.kind;
-    	      this.machineGroupName = defaults.machineGroupName;
-    	      this.machines = defaults.machines;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new MachineGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder groupType(@Nullable Output<Either<String,MachineGroupType>> groupType) {
-            this.groupType = groupType;
+            $.groupType = groupType;
             return this;
         }
-        public Builder groupType(@Nullable Either<String,MachineGroupType> groupType) {
-            this.groupType = Codegen.ofNullable(groupType);
-            return this;
+
+        public Builder groupType(Either<String,MachineGroupType> groupType) {
+            return groupType(Output.of(groupType));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder machineGroupName(@Nullable Output<String> machineGroupName) {
-            this.machineGroupName = machineGroupName;
+            $.machineGroupName = machineGroupName;
             return this;
         }
-        public Builder machineGroupName(@Nullable String machineGroupName) {
-            this.machineGroupName = Codegen.ofNullable(machineGroupName);
-            return this;
+
+        public Builder machineGroupName(String machineGroupName) {
+            return machineGroupName(Output.of(machineGroupName));
         }
+
         public Builder machines(@Nullable Output<List<MachineReferenceWithHintsArgs>> machines) {
-            this.machines = machines;
+            $.machines = machines;
             return this;
         }
-        public Builder machines(@Nullable List<MachineReferenceWithHintsArgs> machines) {
-            this.machines = Codegen.ofNullable(machines);
-            return this;
+
+        public Builder machines(List<MachineReferenceWithHintsArgs> machines) {
+            return machines(Output.of(machines));
         }
+
         public Builder machines(MachineReferenceWithHintsArgs... machines) {
             return machines(List.of(machines));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public MachineGroupArgs build() {
-            return new MachineGroupArgs(count, displayName, groupType, kind, machineGroupName, machines, resourceGroupName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public MachineGroupArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

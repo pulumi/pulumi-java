@@ -29,7 +29,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="coolDownPeriod", required=true)
-      private final String coolDownPeriod;
+    private String coolDownPeriod;
 
     public String coolDownPeriod() {
         return this.coolDownPeriod;
@@ -40,7 +40,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cpuUtilization", required=true)
-      private final CpuUtilizationResponse cpuUtilization;
+    private CpuUtilizationResponse cpuUtilization;
 
     public CpuUtilizationResponse cpuUtilization() {
         return this.cpuUtilization;
@@ -51,7 +51,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="customMetrics", required=true)
-      private final List<CustomMetricResponse> customMetrics;
+    private List<CustomMetricResponse> customMetrics;
 
     public List<CustomMetricResponse> customMetrics() {
         return this.customMetrics;
@@ -62,7 +62,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="diskUtilization", required=true)
-      private final DiskUtilizationResponse diskUtilization;
+    private DiskUtilizationResponse diskUtilization;
 
     public DiskUtilizationResponse diskUtilization() {
         return this.diskUtilization;
@@ -73,7 +73,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxConcurrentRequests", required=true)
-      private final Integer maxConcurrentRequests;
+    private Integer maxConcurrentRequests;
 
     public Integer maxConcurrentRequests() {
         return this.maxConcurrentRequests;
@@ -84,7 +84,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxIdleInstances", required=true)
-      private final Integer maxIdleInstances;
+    private Integer maxIdleInstances;
 
     public Integer maxIdleInstances() {
         return this.maxIdleInstances;
@@ -95,7 +95,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxPendingLatency", required=true)
-      private final String maxPendingLatency;
+    private String maxPendingLatency;
 
     public String maxPendingLatency() {
         return this.maxPendingLatency;
@@ -106,7 +106,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="maxTotalInstances", required=true)
-      private final Integer maxTotalInstances;
+    private Integer maxTotalInstances;
 
     public Integer maxTotalInstances() {
         return this.maxTotalInstances;
@@ -117,7 +117,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="minIdleInstances", required=true)
-      private final Integer minIdleInstances;
+    private Integer minIdleInstances;
 
     public Integer minIdleInstances() {
         return this.minIdleInstances;
@@ -128,7 +128,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="minPendingLatency", required=true)
-      private final String minPendingLatency;
+    private String minPendingLatency;
 
     public String minPendingLatency() {
         return this.minPendingLatency;
@@ -139,7 +139,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="minTotalInstances", required=true)
-      private final Integer minTotalInstances;
+    private Integer minTotalInstances;
 
     public Integer minTotalInstances() {
         return this.minTotalInstances;
@@ -150,7 +150,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkUtilization", required=true)
-      private final NetworkUtilizationResponse networkUtilization;
+    private NetworkUtilizationResponse networkUtilization;
 
     public NetworkUtilizationResponse networkUtilization() {
         return this.networkUtilization;
@@ -161,7 +161,7 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="requestUtilization", required=true)
-      private final RequestUtilizationResponse requestUtilization;
+    private RequestUtilizationResponse requestUtilization;
 
     public RequestUtilizationResponse requestUtilization() {
         return this.requestUtilization;
@@ -172,166 +172,140 @@ public final class AutomaticScalingResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="standardSchedulerSettings", required=true)
-      private final StandardSchedulerSettingsResponse standardSchedulerSettings;
+    private StandardSchedulerSettingsResponse standardSchedulerSettings;
 
     public StandardSchedulerSettingsResponse standardSchedulerSettings() {
         return this.standardSchedulerSettings;
     }
 
-    public AutomaticScalingResponse(
-        String coolDownPeriod,
-        CpuUtilizationResponse cpuUtilization,
-        List<CustomMetricResponse> customMetrics,
-        DiskUtilizationResponse diskUtilization,
-        Integer maxConcurrentRequests,
-        Integer maxIdleInstances,
-        String maxPendingLatency,
-        Integer maxTotalInstances,
-        Integer minIdleInstances,
-        String minPendingLatency,
-        Integer minTotalInstances,
-        NetworkUtilizationResponse networkUtilization,
-        RequestUtilizationResponse requestUtilization,
-        StandardSchedulerSettingsResponse standardSchedulerSettings) {
-        this.coolDownPeriod = Objects.requireNonNull(coolDownPeriod, "expected parameter 'coolDownPeriod' to be non-null");
-        this.cpuUtilization = Objects.requireNonNull(cpuUtilization, "expected parameter 'cpuUtilization' to be non-null");
-        this.customMetrics = Objects.requireNonNull(customMetrics, "expected parameter 'customMetrics' to be non-null");
-        this.diskUtilization = Objects.requireNonNull(diskUtilization, "expected parameter 'diskUtilization' to be non-null");
-        this.maxConcurrentRequests = Objects.requireNonNull(maxConcurrentRequests, "expected parameter 'maxConcurrentRequests' to be non-null");
-        this.maxIdleInstances = Objects.requireNonNull(maxIdleInstances, "expected parameter 'maxIdleInstances' to be non-null");
-        this.maxPendingLatency = Objects.requireNonNull(maxPendingLatency, "expected parameter 'maxPendingLatency' to be non-null");
-        this.maxTotalInstances = Objects.requireNonNull(maxTotalInstances, "expected parameter 'maxTotalInstances' to be non-null");
-        this.minIdleInstances = Objects.requireNonNull(minIdleInstances, "expected parameter 'minIdleInstances' to be non-null");
-        this.minPendingLatency = Objects.requireNonNull(minPendingLatency, "expected parameter 'minPendingLatency' to be non-null");
-        this.minTotalInstances = Objects.requireNonNull(minTotalInstances, "expected parameter 'minTotalInstances' to be non-null");
-        this.networkUtilization = Objects.requireNonNull(networkUtilization, "expected parameter 'networkUtilization' to be non-null");
-        this.requestUtilization = Objects.requireNonNull(requestUtilization, "expected parameter 'requestUtilization' to be non-null");
-        this.standardSchedulerSettings = Objects.requireNonNull(standardSchedulerSettings, "expected parameter 'standardSchedulerSettings' to be non-null");
-    }
+    private AutomaticScalingResponse() {}
 
-    private AutomaticScalingResponse() {
-        this.coolDownPeriod = null;
-        this.cpuUtilization = null;
-        this.customMetrics = List.of();
-        this.diskUtilization = null;
-        this.maxConcurrentRequests = null;
-        this.maxIdleInstances = null;
-        this.maxPendingLatency = null;
-        this.maxTotalInstances = null;
-        this.minIdleInstances = null;
-        this.minPendingLatency = null;
-        this.minTotalInstances = null;
-        this.networkUtilization = null;
-        this.requestUtilization = null;
-        this.standardSchedulerSettings = null;
+    private AutomaticScalingResponse(AutomaticScalingResponse $) {
+        this.coolDownPeriod = $.coolDownPeriod;
+        this.cpuUtilization = $.cpuUtilization;
+        this.customMetrics = $.customMetrics;
+        this.diskUtilization = $.diskUtilization;
+        this.maxConcurrentRequests = $.maxConcurrentRequests;
+        this.maxIdleInstances = $.maxIdleInstances;
+        this.maxPendingLatency = $.maxPendingLatency;
+        this.maxTotalInstances = $.maxTotalInstances;
+        this.minIdleInstances = $.minIdleInstances;
+        this.minPendingLatency = $.minPendingLatency;
+        this.minTotalInstances = $.minTotalInstances;
+        this.networkUtilization = $.networkUtilization;
+        this.requestUtilization = $.requestUtilization;
+        this.standardSchedulerSettings = $.standardSchedulerSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomaticScalingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String coolDownPeriod;
-        private CpuUtilizationResponse cpuUtilization;
-        private List<CustomMetricResponse> customMetrics;
-        private DiskUtilizationResponse diskUtilization;
-        private Integer maxConcurrentRequests;
-        private Integer maxIdleInstances;
-        private String maxPendingLatency;
-        private Integer maxTotalInstances;
-        private Integer minIdleInstances;
-        private String minPendingLatency;
-        private Integer minTotalInstances;
-        private NetworkUtilizationResponse networkUtilization;
-        private RequestUtilizationResponse requestUtilization;
-        private StandardSchedulerSettingsResponse standardSchedulerSettings;
+        private AutomaticScalingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomaticScalingResponse();
         }
 
         public Builder(AutomaticScalingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coolDownPeriod = defaults.coolDownPeriod;
-    	      this.cpuUtilization = defaults.cpuUtilization;
-    	      this.customMetrics = defaults.customMetrics;
-    	      this.diskUtilization = defaults.diskUtilization;
-    	      this.maxConcurrentRequests = defaults.maxConcurrentRequests;
-    	      this.maxIdleInstances = defaults.maxIdleInstances;
-    	      this.maxPendingLatency = defaults.maxPendingLatency;
-    	      this.maxTotalInstances = defaults.maxTotalInstances;
-    	      this.minIdleInstances = defaults.minIdleInstances;
-    	      this.minPendingLatency = defaults.minPendingLatency;
-    	      this.minTotalInstances = defaults.minTotalInstances;
-    	      this.networkUtilization = defaults.networkUtilization;
-    	      this.requestUtilization = defaults.requestUtilization;
-    	      this.standardSchedulerSettings = defaults.standardSchedulerSettings;
+            $ = new AutomaticScalingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder coolDownPeriod(String coolDownPeriod) {
-            this.coolDownPeriod = Objects.requireNonNull(coolDownPeriod);
+            $.coolDownPeriod = coolDownPeriod;
             return this;
         }
+
         public Builder cpuUtilization(CpuUtilizationResponse cpuUtilization) {
-            this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
+            $.cpuUtilization = cpuUtilization;
             return this;
         }
+
         public Builder customMetrics(List<CustomMetricResponse> customMetrics) {
-            this.customMetrics = Objects.requireNonNull(customMetrics);
+            $.customMetrics = customMetrics;
             return this;
         }
+
         public Builder customMetrics(CustomMetricResponse... customMetrics) {
             return customMetrics(List.of(customMetrics));
         }
+
         public Builder diskUtilization(DiskUtilizationResponse diskUtilization) {
-            this.diskUtilization = Objects.requireNonNull(diskUtilization);
+            $.diskUtilization = diskUtilization;
             return this;
         }
+
         public Builder maxConcurrentRequests(Integer maxConcurrentRequests) {
-            this.maxConcurrentRequests = Objects.requireNonNull(maxConcurrentRequests);
+            $.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
+
         public Builder maxIdleInstances(Integer maxIdleInstances) {
-            this.maxIdleInstances = Objects.requireNonNull(maxIdleInstances);
+            $.maxIdleInstances = maxIdleInstances;
             return this;
         }
+
         public Builder maxPendingLatency(String maxPendingLatency) {
-            this.maxPendingLatency = Objects.requireNonNull(maxPendingLatency);
+            $.maxPendingLatency = maxPendingLatency;
             return this;
         }
+
         public Builder maxTotalInstances(Integer maxTotalInstances) {
-            this.maxTotalInstances = Objects.requireNonNull(maxTotalInstances);
+            $.maxTotalInstances = maxTotalInstances;
             return this;
         }
+
         public Builder minIdleInstances(Integer minIdleInstances) {
-            this.minIdleInstances = Objects.requireNonNull(minIdleInstances);
+            $.minIdleInstances = minIdleInstances;
             return this;
         }
+
         public Builder minPendingLatency(String minPendingLatency) {
-            this.minPendingLatency = Objects.requireNonNull(minPendingLatency);
+            $.minPendingLatency = minPendingLatency;
             return this;
         }
+
         public Builder minTotalInstances(Integer minTotalInstances) {
-            this.minTotalInstances = Objects.requireNonNull(minTotalInstances);
+            $.minTotalInstances = minTotalInstances;
             return this;
         }
+
         public Builder networkUtilization(NetworkUtilizationResponse networkUtilization) {
-            this.networkUtilization = Objects.requireNonNull(networkUtilization);
+            $.networkUtilization = networkUtilization;
             return this;
         }
+
         public Builder requestUtilization(RequestUtilizationResponse requestUtilization) {
-            this.requestUtilization = Objects.requireNonNull(requestUtilization);
+            $.requestUtilization = requestUtilization;
             return this;
         }
+
         public Builder standardSchedulerSettings(StandardSchedulerSettingsResponse standardSchedulerSettings) {
-            this.standardSchedulerSettings = Objects.requireNonNull(standardSchedulerSettings);
+            $.standardSchedulerSettings = standardSchedulerSettings;
             return this;
-        }        public AutomaticScalingResponse build() {
-            return new AutomaticScalingResponse(coolDownPeriod, cpuUtilization, customMetrics, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization, standardSchedulerSettings);
+        }
+
+        public AutomaticScalingResponse build() {
+            $.coolDownPeriod = Objects.requireNonNull($.coolDownPeriod, "expected parameter 'coolDownPeriod' to be non-null");
+            $.cpuUtilization = Objects.requireNonNull($.cpuUtilization, "expected parameter 'cpuUtilization' to be non-null");
+            $.customMetrics = Objects.requireNonNull($.customMetrics, "expected parameter 'customMetrics' to be non-null");
+            $.diskUtilization = Objects.requireNonNull($.diskUtilization, "expected parameter 'diskUtilization' to be non-null");
+            $.maxConcurrentRequests = Objects.requireNonNull($.maxConcurrentRequests, "expected parameter 'maxConcurrentRequests' to be non-null");
+            $.maxIdleInstances = Objects.requireNonNull($.maxIdleInstances, "expected parameter 'maxIdleInstances' to be non-null");
+            $.maxPendingLatency = Objects.requireNonNull($.maxPendingLatency, "expected parameter 'maxPendingLatency' to be non-null");
+            $.maxTotalInstances = Objects.requireNonNull($.maxTotalInstances, "expected parameter 'maxTotalInstances' to be non-null");
+            $.minIdleInstances = Objects.requireNonNull($.minIdleInstances, "expected parameter 'minIdleInstances' to be non-null");
+            $.minPendingLatency = Objects.requireNonNull($.minPendingLatency, "expected parameter 'minPendingLatency' to be non-null");
+            $.minTotalInstances = Objects.requireNonNull($.minTotalInstances, "expected parameter 'minTotalInstances' to be non-null");
+            $.networkUtilization = Objects.requireNonNull($.networkUtilization, "expected parameter 'networkUtilization' to be non-null");
+            $.requestUtilization = Objects.requireNonNull($.requestUtilization, "expected parameter 'requestUtilization' to be non-null");
+            $.standardSchedulerSettings = Objects.requireNonNull($.standardSchedulerSettings, "expected parameter 'standardSchedulerSettings' to be non-null");
+            return $;
         }
     }
+
 }

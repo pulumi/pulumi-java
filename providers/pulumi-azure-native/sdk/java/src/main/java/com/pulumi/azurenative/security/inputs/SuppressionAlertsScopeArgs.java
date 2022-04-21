@@ -6,7 +6,6 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.azurenative.security.inputs.ScopeElementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,52 +19,53 @@ public final class SuppressionAlertsScopeArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="allOf", required=true)
-      private final Output<List<ScopeElementArgs>> allOf;
+    private Output<List<ScopeElementArgs>> allOf;
 
     public Output<List<ScopeElementArgs>> allOf() {
         return this.allOf;
     }
 
-    public SuppressionAlertsScopeArgs(Output<List<ScopeElementArgs>> allOf) {
-        this.allOf = Objects.requireNonNull(allOf, "expected parameter 'allOf' to be non-null");
-    }
+    private SuppressionAlertsScopeArgs() {}
 
-    private SuppressionAlertsScopeArgs() {
-        this.allOf = Codegen.empty();
+    private SuppressionAlertsScopeArgs(SuppressionAlertsScopeArgs $) {
+        this.allOf = $.allOf;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuppressionAlertsScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ScopeElementArgs>> allOf;
+        private SuppressionAlertsScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuppressionAlertsScopeArgs();
         }
 
         public Builder(SuppressionAlertsScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allOf = defaults.allOf;
+            $ = new SuppressionAlertsScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allOf(Output<List<ScopeElementArgs>> allOf) {
-            this.allOf = Objects.requireNonNull(allOf);
+            $.allOf = allOf;
             return this;
         }
+
         public Builder allOf(List<ScopeElementArgs> allOf) {
-            this.allOf = Output.of(Objects.requireNonNull(allOf));
-            return this;
+            return allOf(Output.of(allOf));
         }
+
         public Builder allOf(ScopeElementArgs... allOf) {
             return allOf(List.of(allOf));
-        }        public SuppressionAlertsScopeArgs build() {
-            return new SuppressionAlertsScopeArgs(allOf);
+        }
+
+        public SuppressionAlertsScopeArgs build() {
+            $.allOf = Objects.requireNonNull($.allOf, "expected parameter 'allOf' to be non-null");
+            return $;
         }
     }
+
 }

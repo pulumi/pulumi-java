@@ -21,45 +21,45 @@ public final class PrePostStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stepId", required=true)
-      private final String stepId;
+    private String stepId;
 
     public String stepId() {
         return this.stepId;
     }
 
-    public PrePostStepResponse(String stepId) {
-        this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
-    }
+    private PrePostStepResponse() {}
 
-    private PrePostStepResponse() {
-        this.stepId = null;
+    private PrePostStepResponse(PrePostStepResponse $) {
+        this.stepId = $.stepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrePostStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String stepId;
+        private PrePostStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrePostStepResponse();
         }
 
         public Builder(PrePostStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.stepId = defaults.stepId;
+            $ = new PrePostStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder stepId(String stepId) {
-            this.stepId = Objects.requireNonNull(stepId);
+            $.stepId = stepId;
             return this;
-        }        public PrePostStepResponse build() {
-            return new PrePostStepResponse(stepId);
+        }
+
+        public PrePostStepResponse build() {
+            $.stepId = Objects.requireNonNull($.stepId, "expected parameter 'stepId' to be non-null");
+            return $;
         }
     }
+
 }

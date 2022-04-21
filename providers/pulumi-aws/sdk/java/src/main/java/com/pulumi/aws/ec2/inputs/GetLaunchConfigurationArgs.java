@@ -17,45 +17,45 @@ public final class GetLaunchConfigurationArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetLaunchConfigurationArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetLaunchConfigurationArgs() {}
 
-    private GetLaunchConfigurationArgs() {
-        this.name = null;
+    private GetLaunchConfigurationArgs(GetLaunchConfigurationArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetLaunchConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchConfigurationArgs();
         }
 
         public Builder(GetLaunchConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetLaunchConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetLaunchConfigurationArgs build() {
-            return new GetLaunchConfigurationArgs(name);
+        }
+
+        public GetLaunchConfigurationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

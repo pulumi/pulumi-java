@@ -5,9 +5,9 @@ package com.pulumi.azurenative.logz.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PlanDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingCycle")
-      private final @Nullable Output<String> billingCycle;
+    private @Nullable Output<String> billingCycle;
 
-    public Output<String> billingCycle() {
-        return this.billingCycle == null ? Codegen.empty() : this.billingCycle;
+    public Optional<Output<String>> billingCycle() {
+        return Optional.ofNullable(this.billingCycle);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PlanDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="effectiveDate")
-      private final @Nullable Output<String> effectiveDate;
+    private @Nullable Output<String> effectiveDate;
 
-    public Output<String> effectiveDate() {
-        return this.effectiveDate == null ? Codegen.empty() : this.effectiveDate;
+    public Optional<Output<String>> effectiveDate() {
+        return Optional.ofNullable(this.effectiveDate);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PlanDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="planDetails")
-      private final @Nullable Output<String> planDetails;
+    private @Nullable Output<String> planDetails;
 
-    public Output<String> planDetails() {
-        return this.planDetails == null ? Codegen.empty() : this.planDetails;
+    public Optional<Output<String>> planDetails() {
+        return Optional.ofNullable(this.planDetails);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class PlanDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="usageType")
-      private final @Nullable Output<String> usageType;
+    private @Nullable Output<String> usageType;
 
-    public Output<String> usageType() {
-        return this.usageType == null ? Codegen.empty() : this.usageType;
+    public Optional<Output<String>> usageType() {
+        return Optional.ofNullable(this.usageType);
     }
 
-    public PlanDataArgs(
-        @Nullable Output<String> billingCycle,
-        @Nullable Output<String> effectiveDate,
-        @Nullable Output<String> planDetails,
-        @Nullable Output<String> usageType) {
-        this.billingCycle = billingCycle;
-        this.effectiveDate = effectiveDate;
-        this.planDetails = planDetails;
-        this.usageType = usageType;
-    }
+    private PlanDataArgs() {}
 
-    private PlanDataArgs() {
-        this.billingCycle = Codegen.empty();
-        this.effectiveDate = Codegen.empty();
-        this.planDetails = Codegen.empty();
-        this.usageType = Codegen.empty();
+    private PlanDataArgs(PlanDataArgs $) {
+        this.billingCycle = $.billingCycle;
+        this.effectiveDate = $.effectiveDate;
+        this.planDetails = $.planDetails;
+        this.usageType = $.usageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlanDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> billingCycle;
-        private @Nullable Output<String> effectiveDate;
-        private @Nullable Output<String> planDetails;
-        private @Nullable Output<String> usageType;
+        private PlanDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlanDataArgs();
         }
 
         public Builder(PlanDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingCycle = defaults.billingCycle;
-    	      this.effectiveDate = defaults.effectiveDate;
-    	      this.planDetails = defaults.planDetails;
-    	      this.usageType = defaults.usageType;
+            $ = new PlanDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingCycle(@Nullable Output<String> billingCycle) {
-            this.billingCycle = billingCycle;
+            $.billingCycle = billingCycle;
             return this;
         }
-        public Builder billingCycle(@Nullable String billingCycle) {
-            this.billingCycle = Codegen.ofNullable(billingCycle);
-            return this;
+
+        public Builder billingCycle(String billingCycle) {
+            return billingCycle(Output.of(billingCycle));
         }
+
         public Builder effectiveDate(@Nullable Output<String> effectiveDate) {
-            this.effectiveDate = effectiveDate;
+            $.effectiveDate = effectiveDate;
             return this;
         }
-        public Builder effectiveDate(@Nullable String effectiveDate) {
-            this.effectiveDate = Codegen.ofNullable(effectiveDate);
-            return this;
+
+        public Builder effectiveDate(String effectiveDate) {
+            return effectiveDate(Output.of(effectiveDate));
         }
+
         public Builder planDetails(@Nullable Output<String> planDetails) {
-            this.planDetails = planDetails;
+            $.planDetails = planDetails;
             return this;
         }
-        public Builder planDetails(@Nullable String planDetails) {
-            this.planDetails = Codegen.ofNullable(planDetails);
-            return this;
+
+        public Builder planDetails(String planDetails) {
+            return planDetails(Output.of(planDetails));
         }
+
         public Builder usageType(@Nullable Output<String> usageType) {
-            this.usageType = usageType;
+            $.usageType = usageType;
             return this;
         }
-        public Builder usageType(@Nullable String usageType) {
-            this.usageType = Codegen.ofNullable(usageType);
-            return this;
-        }        public PlanDataArgs build() {
-            return new PlanDataArgs(billingCycle, effectiveDate, planDetails, usageType);
+
+        public Builder usageType(String usageType) {
+            return usageType(Output.of(usageType));
+        }
+
+        public PlanDataArgs build() {
+            return $;
         }
     }
+
 }

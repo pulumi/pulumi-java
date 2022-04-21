@@ -17,45 +17,45 @@ public final class GetDomainIdentityArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
     }
 
-    public GetDomainIdentityArgs(String domain) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-    }
+    private GetDomainIdentityArgs() {}
 
-    private GetDomainIdentityArgs() {
-        this.domain = null;
+    private GetDomainIdentityArgs(GetDomainIdentityArgs $) {
+        this.domain = $.domain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domain;
+        private GetDomainIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainIdentityArgs();
         }
 
         public Builder(GetDomainIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
+            $ = new GetDomainIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
-        }        public GetDomainIdentityArgs build() {
-            return new GetDomainIdentityArgs(domain);
+        }
+
+        public GetDomainIdentityArgs build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            return $;
         }
     }
+
 }

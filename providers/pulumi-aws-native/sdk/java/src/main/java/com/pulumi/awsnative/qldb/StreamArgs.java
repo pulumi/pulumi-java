@@ -7,10 +7,10 @@ import com.pulumi.awsnative.qldb.inputs.StreamKinesisConfigurationArgs;
 import com.pulumi.awsnative.qldb.inputs.StreamTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,45 +19,45 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
     public static final StreamArgs Empty = new StreamArgs();
 
     @Import(name="exclusiveEndTime")
-      private final @Nullable Output<String> exclusiveEndTime;
+    private @Nullable Output<String> exclusiveEndTime;
 
-    public Output<String> exclusiveEndTime() {
-        return this.exclusiveEndTime == null ? Codegen.empty() : this.exclusiveEndTime;
+    public Optional<Output<String>> exclusiveEndTime() {
+        return Optional.ofNullable(this.exclusiveEndTime);
     }
 
     @Import(name="inclusiveStartTime", required=true)
-      private final Output<String> inclusiveStartTime;
+    private Output<String> inclusiveStartTime;
 
     public Output<String> inclusiveStartTime() {
         return this.inclusiveStartTime;
     }
 
     @Import(name="kinesisConfiguration", required=true)
-      private final Output<StreamKinesisConfigurationArgs> kinesisConfiguration;
+    private Output<StreamKinesisConfigurationArgs> kinesisConfiguration;
 
     public Output<StreamKinesisConfigurationArgs> kinesisConfiguration() {
         return this.kinesisConfiguration;
     }
 
     @Import(name="ledgerName", required=true)
-      private final Output<String> ledgerName;
+    private Output<String> ledgerName;
 
     public Output<String> ledgerName() {
         return this.ledgerName;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="streamName")
-      private final @Nullable Output<String> streamName;
+    private @Nullable Output<String> streamName;
 
-    public Output<String> streamName() {
-        return this.streamName == null ? Codegen.empty() : this.streamName;
+    public Optional<Output<String>> streamName() {
+        return Optional.ofNullable(this.streamName);
     }
 
     /**
@@ -65,131 +65,116 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<StreamTagArgs>> tags;
+    private @Nullable Output<List<StreamTagArgs>> tags;
 
-    public Output<List<StreamTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<StreamTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public StreamArgs(
-        @Nullable Output<String> exclusiveEndTime,
-        Output<String> inclusiveStartTime,
-        Output<StreamKinesisConfigurationArgs> kinesisConfiguration,
-        Output<String> ledgerName,
-        Output<String> roleArn,
-        @Nullable Output<String> streamName,
-        @Nullable Output<List<StreamTagArgs>> tags) {
-        this.exclusiveEndTime = exclusiveEndTime;
-        this.inclusiveStartTime = Objects.requireNonNull(inclusiveStartTime, "expected parameter 'inclusiveStartTime' to be non-null");
-        this.kinesisConfiguration = Objects.requireNonNull(kinesisConfiguration, "expected parameter 'kinesisConfiguration' to be non-null");
-        this.ledgerName = Objects.requireNonNull(ledgerName, "expected parameter 'ledgerName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.streamName = streamName;
-        this.tags = tags;
-    }
+    private StreamArgs() {}
 
-    private StreamArgs() {
-        this.exclusiveEndTime = Codegen.empty();
-        this.inclusiveStartTime = Codegen.empty();
-        this.kinesisConfiguration = Codegen.empty();
-        this.ledgerName = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.streamName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private StreamArgs(StreamArgs $) {
+        this.exclusiveEndTime = $.exclusiveEndTime;
+        this.inclusiveStartTime = $.inclusiveStartTime;
+        this.kinesisConfiguration = $.kinesisConfiguration;
+        this.ledgerName = $.ledgerName;
+        this.roleArn = $.roleArn;
+        this.streamName = $.streamName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exclusiveEndTime;
-        private Output<String> inclusiveStartTime;
-        private Output<StreamKinesisConfigurationArgs> kinesisConfiguration;
-        private Output<String> ledgerName;
-        private Output<String> roleArn;
-        private @Nullable Output<String> streamName;
-        private @Nullable Output<List<StreamTagArgs>> tags;
+        private StreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamArgs();
         }
 
         public Builder(StreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclusiveEndTime = defaults.exclusiveEndTime;
-    	      this.inclusiveStartTime = defaults.inclusiveStartTime;
-    	      this.kinesisConfiguration = defaults.kinesisConfiguration;
-    	      this.ledgerName = defaults.ledgerName;
-    	      this.roleArn = defaults.roleArn;
-    	      this.streamName = defaults.streamName;
-    	      this.tags = defaults.tags;
+            $ = new StreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exclusiveEndTime(@Nullable Output<String> exclusiveEndTime) {
-            this.exclusiveEndTime = exclusiveEndTime;
+            $.exclusiveEndTime = exclusiveEndTime;
             return this;
         }
-        public Builder exclusiveEndTime(@Nullable String exclusiveEndTime) {
-            this.exclusiveEndTime = Codegen.ofNullable(exclusiveEndTime);
-            return this;
+
+        public Builder exclusiveEndTime(String exclusiveEndTime) {
+            return exclusiveEndTime(Output.of(exclusiveEndTime));
         }
+
         public Builder inclusiveStartTime(Output<String> inclusiveStartTime) {
-            this.inclusiveStartTime = Objects.requireNonNull(inclusiveStartTime);
+            $.inclusiveStartTime = inclusiveStartTime;
             return this;
         }
+
         public Builder inclusiveStartTime(String inclusiveStartTime) {
-            this.inclusiveStartTime = Output.of(Objects.requireNonNull(inclusiveStartTime));
-            return this;
+            return inclusiveStartTime(Output.of(inclusiveStartTime));
         }
+
         public Builder kinesisConfiguration(Output<StreamKinesisConfigurationArgs> kinesisConfiguration) {
-            this.kinesisConfiguration = Objects.requireNonNull(kinesisConfiguration);
+            $.kinesisConfiguration = kinesisConfiguration;
             return this;
         }
+
         public Builder kinesisConfiguration(StreamKinesisConfigurationArgs kinesisConfiguration) {
-            this.kinesisConfiguration = Output.of(Objects.requireNonNull(kinesisConfiguration));
-            return this;
+            return kinesisConfiguration(Output.of(kinesisConfiguration));
         }
+
         public Builder ledgerName(Output<String> ledgerName) {
-            this.ledgerName = Objects.requireNonNull(ledgerName);
+            $.ledgerName = ledgerName;
             return this;
         }
+
         public Builder ledgerName(String ledgerName) {
-            this.ledgerName = Output.of(Objects.requireNonNull(ledgerName));
-            return this;
+            return ledgerName(Output.of(ledgerName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder streamName(@Nullable Output<String> streamName) {
-            this.streamName = streamName;
+            $.streamName = streamName;
             return this;
         }
-        public Builder streamName(@Nullable String streamName) {
-            this.streamName = Codegen.ofNullable(streamName);
-            return this;
+
+        public Builder streamName(String streamName) {
+            return streamName(Output.of(streamName));
         }
+
         public Builder tags(@Nullable Output<List<StreamTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<StreamTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<StreamTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(StreamTagArgs... tags) {
             return tags(List.of(tags));
-        }        public StreamArgs build() {
-            return new StreamArgs(exclusiveEndTime, inclusiveStartTime, kinesisConfiguration, ledgerName, roleArn, streamName, tags);
+        }
+
+        public StreamArgs build() {
+            $.inclusiveStartTime = Objects.requireNonNull($.inclusiveStartTime, "expected parameter 'inclusiveStartTime' to be non-null");
+            $.kinesisConfiguration = Objects.requireNonNull($.kinesisConfiguration, "expected parameter 'kinesisConfiguration' to be non-null");
+            $.ledgerName = Objects.requireNonNull($.ledgerName, "expected parameter 'ledgerName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

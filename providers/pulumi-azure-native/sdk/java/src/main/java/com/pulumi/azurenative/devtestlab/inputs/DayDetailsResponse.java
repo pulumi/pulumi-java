@@ -23,45 +23,44 @@ public final class DayDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="time")
-      private final @Nullable String time;
+    private @Nullable String time;
 
     public Optional<String> time() {
-        return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
+        return Optional.ofNullable(this.time);
     }
 
-    public DayDetailsResponse(@Nullable String time) {
-        this.time = time;
-    }
+    private DayDetailsResponse() {}
 
-    private DayDetailsResponse() {
-        this.time = null;
+    private DayDetailsResponse(DayDetailsResponse $) {
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DayDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String time;
+        private DayDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DayDetailsResponse();
         }
 
         public Builder(DayDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.time = defaults.time;
+            $ = new DayDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder time(@Nullable String time) {
-            this.time = time;
+            $.time = time;
             return this;
-        }        public DayDetailsResponse build() {
-            return new DayDetailsResponse(time);
+        }
+
+        public DayDetailsResponse build() {
+            return $;
         }
     }
+
 }

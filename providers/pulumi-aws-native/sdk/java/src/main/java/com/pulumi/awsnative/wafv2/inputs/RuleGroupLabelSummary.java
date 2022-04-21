@@ -15,45 +15,44 @@ public final class RuleGroupLabelSummary extends com.pulumi.resources.InvokeArgs
     public static final RuleGroupLabelSummary Empty = new RuleGroupLabelSummary();
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public RuleGroupLabelSummary(@Nullable String name) {
-        this.name = name;
-    }
+    private RuleGroupLabelSummary() {}
 
-    private RuleGroupLabelSummary() {
-        this.name = null;
+    private RuleGroupLabelSummary(RuleGroupLabelSummary $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupLabelSummary defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private RuleGroupLabelSummary $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupLabelSummary();
         }
 
         public Builder(RuleGroupLabelSummary defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new RuleGroupLabelSummary(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public RuleGroupLabelSummary build() {
-            return new RuleGroupLabelSummary(name);
+        }
+
+        public RuleGroupLabelSummary build() {
+            return $;
         }
     }
+
 }

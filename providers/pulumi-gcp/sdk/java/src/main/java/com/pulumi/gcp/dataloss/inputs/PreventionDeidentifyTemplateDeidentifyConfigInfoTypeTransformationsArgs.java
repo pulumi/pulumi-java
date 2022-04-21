@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,52 +20,53 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="transformations", required=true)
-      private final Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> transformations;
+    private Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> transformations;
 
     public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> transformations() {
         return this.transformations;
     }
 
-    public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs(Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> transformations) {
-        this.transformations = Objects.requireNonNull(transformations, "expected parameter 'transformations' to be non-null");
-    }
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs() {}
 
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs() {
-        this.transformations = Codegen.empty();
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs $) {
+        this.transformations = $.transformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> transformations;
+        private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs();
         }
 
         public Builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transformations = defaults.transformations;
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder transformations(Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> transformations) {
-            this.transformations = Objects.requireNonNull(transformations);
+            $.transformations = transformations;
             return this;
         }
+
         public Builder transformations(List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs> transformations) {
-            this.transformations = Output.of(Objects.requireNonNull(transformations));
-            return this;
+            return transformations(Output.of(transformations));
         }
+
         public Builder transformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs... transformations) {
             return transformations(List.of(transformations));
-        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs build() {
-            return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs(transformations);
+        }
+
+        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs build() {
+            $.transformations = Objects.requireNonNull($.transformations, "expected parameter 'transformations' to be non-null");
+            return $;
         }
     }
+
 }

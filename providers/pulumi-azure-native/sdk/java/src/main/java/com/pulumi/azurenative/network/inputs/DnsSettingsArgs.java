@@ -5,11 +5,11 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableProxy")
-      private final @Nullable Output<Boolean> enableProxy;
+    private @Nullable Output<Boolean> enableProxy;
 
-    public Output<Boolean> enableProxy() {
-        return this.enableProxy == null ? Codegen.empty() : this.enableProxy;
+    public Optional<Output<Boolean>> enableProxy() {
+        return Optional.ofNullable(this.enableProxy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requireProxyForNetworkRules")
-      private final @Nullable Output<Boolean> requireProxyForNetworkRules;
+    private @Nullable Output<Boolean> requireProxyForNetworkRules;
 
-    public Output<Boolean> requireProxyForNetworkRules() {
-        return this.requireProxyForNetworkRules == null ? Codegen.empty() : this.requireProxyForNetworkRules;
+    public Optional<Output<Boolean>> requireProxyForNetworkRules() {
+        return Optional.ofNullable(this.requireProxyForNetworkRules);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class DnsSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="servers")
-      private final @Nullable Output<List<String>> servers;
+    private @Nullable Output<List<String>> servers;
 
-    public Output<List<String>> servers() {
-        return this.servers == null ? Codegen.empty() : this.servers;
+    public Optional<Output<List<String>>> servers() {
+        return Optional.ofNullable(this.servers);
     }
 
-    public DnsSettingsArgs(
-        @Nullable Output<Boolean> enableProxy,
-        @Nullable Output<Boolean> requireProxyForNetworkRules,
-        @Nullable Output<List<String>> servers) {
-        this.enableProxy = enableProxy;
-        this.requireProxyForNetworkRules = requireProxyForNetworkRules;
-        this.servers = servers;
-    }
+    private DnsSettingsArgs() {}
 
-    private DnsSettingsArgs() {
-        this.enableProxy = Codegen.empty();
-        this.requireProxyForNetworkRules = Codegen.empty();
-        this.servers = Codegen.empty();
+    private DnsSettingsArgs(DnsSettingsArgs $) {
+        this.enableProxy = $.enableProxy;
+        this.requireProxyForNetworkRules = $.requireProxyForNetworkRules;
+        this.servers = $.servers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DnsSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableProxy;
-        private @Nullable Output<Boolean> requireProxyForNetworkRules;
-        private @Nullable Output<List<String>> servers;
+        private DnsSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DnsSettingsArgs();
         }
 
         public Builder(DnsSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableProxy = defaults.enableProxy;
-    	      this.requireProxyForNetworkRules = defaults.requireProxyForNetworkRules;
-    	      this.servers = defaults.servers;
+            $ = new DnsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableProxy(@Nullable Output<Boolean> enableProxy) {
-            this.enableProxy = enableProxy;
+            $.enableProxy = enableProxy;
             return this;
         }
-        public Builder enableProxy(@Nullable Boolean enableProxy) {
-            this.enableProxy = Codegen.ofNullable(enableProxy);
-            return this;
+
+        public Builder enableProxy(Boolean enableProxy) {
+            return enableProxy(Output.of(enableProxy));
         }
+
         public Builder requireProxyForNetworkRules(@Nullable Output<Boolean> requireProxyForNetworkRules) {
-            this.requireProxyForNetworkRules = requireProxyForNetworkRules;
+            $.requireProxyForNetworkRules = requireProxyForNetworkRules;
             return this;
         }
-        public Builder requireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
-            this.requireProxyForNetworkRules = Codegen.ofNullable(requireProxyForNetworkRules);
-            return this;
+
+        public Builder requireProxyForNetworkRules(Boolean requireProxyForNetworkRules) {
+            return requireProxyForNetworkRules(Output.of(requireProxyForNetworkRules));
         }
+
         public Builder servers(@Nullable Output<List<String>> servers) {
-            this.servers = servers;
+            $.servers = servers;
             return this;
         }
-        public Builder servers(@Nullable List<String> servers) {
-            this.servers = Codegen.ofNullable(servers);
-            return this;
+
+        public Builder servers(List<String> servers) {
+            return servers(Output.of(servers));
         }
+
         public Builder servers(String... servers) {
             return servers(List.of(servers));
-        }        public DnsSettingsArgs build() {
-            return new DnsSettingsArgs(enableProxy, requireProxyForNetworkRules, servers);
+        }
+
+        public DnsSettingsArgs build() {
+            return $;
         }
     }
+
 }

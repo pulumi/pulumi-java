@@ -17,7 +17,7 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="globalNetworkId", required=true)
-      private final String globalNetworkId;
+    private String globalNetworkId;
 
     public String globalNetworkId() {
         return this.globalNetworkId;
@@ -28,55 +28,52 @@ public final class GetLinkArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkId", required=true)
-      private final String linkId;
+    private String linkId;
 
     public String linkId() {
         return this.linkId;
     }
 
-    public GetLinkArgs(
-        String globalNetworkId,
-        String linkId) {
-        this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
-        this.linkId = Objects.requireNonNull(linkId, "expected parameter 'linkId' to be non-null");
-    }
+    private GetLinkArgs() {}
 
-    private GetLinkArgs() {
-        this.globalNetworkId = null;
-        this.linkId = null;
+    private GetLinkArgs(GetLinkArgs $) {
+        this.globalNetworkId = $.globalNetworkId;
+        this.linkId = $.linkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String globalNetworkId;
-        private String linkId;
+        private GetLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLinkArgs();
         }
 
         public Builder(GetLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalNetworkId = defaults.globalNetworkId;
-    	      this.linkId = defaults.linkId;
+            $ = new GetLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
+            $.globalNetworkId = globalNetworkId;
             return this;
         }
+
         public Builder linkId(String linkId) {
-            this.linkId = Objects.requireNonNull(linkId);
+            $.linkId = linkId;
             return this;
-        }        public GetLinkArgs build() {
-            return new GetLinkArgs(globalNetworkId, linkId);
+        }
+
+        public GetLinkArgs build() {
+            $.globalNetworkId = Objects.requireNonNull($.globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
+            $.linkId = Objects.requireNonNull($.linkId, "expected parameter 'linkId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetLaunchTemplateElasticGpuSpecification extends com.pulumi.r
     public static final GetLaunchTemplateElasticGpuSpecification Empty = new GetLaunchTemplateElasticGpuSpecification();
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetLaunchTemplateElasticGpuSpecification(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetLaunchTemplateElasticGpuSpecification() {}
 
-    private GetLaunchTemplateElasticGpuSpecification() {
-        this.type = null;
+    private GetLaunchTemplateElasticGpuSpecification(GetLaunchTemplateElasticGpuSpecification $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateElasticGpuSpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private GetLaunchTemplateElasticGpuSpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateElasticGpuSpecification();
         }
 
         public Builder(GetLaunchTemplateElasticGpuSpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GetLaunchTemplateElasticGpuSpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetLaunchTemplateElasticGpuSpecification build() {
-            return new GetLaunchTemplateElasticGpuSpecification(type);
+        }
+
+        public GetLaunchTemplateElasticGpuSpecification build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

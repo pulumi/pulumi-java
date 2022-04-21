@@ -5,12 +5,12 @@ package com.pulumi.googlenative.file_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.file_v1beta1.enums.NetworkConfigConnectMode;
 import com.pulumi.googlenative.file_v1beta1.enums.NetworkConfigModesItem;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectMode")
-      private final @Nullable Output<NetworkConfigConnectMode> connectMode;
+    private @Nullable Output<NetworkConfigConnectMode> connectMode;
 
-    public Output<NetworkConfigConnectMode> connectMode() {
-        return this.connectMode == null ? Codegen.empty() : this.connectMode;
+    public Optional<Output<NetworkConfigConnectMode>> connectMode() {
+        return Optional.ofNullable(this.connectMode);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="modes")
-      private final @Nullable Output<List<NetworkConfigModesItem>> modes;
+    private @Nullable Output<List<NetworkConfigModesItem>> modes;
 
-    public Output<List<NetworkConfigModesItem>> modes() {
-        return this.modes == null ? Codegen.empty() : this.modes;
+    public Optional<Output<List<NetworkConfigModesItem>>> modes() {
+        return Optional.ofNullable(this.modes);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -60,92 +60,82 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservedIpRange")
-      private final @Nullable Output<String> reservedIpRange;
+    private @Nullable Output<String> reservedIpRange;
 
-    public Output<String> reservedIpRange() {
-        return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
+    public Optional<Output<String>> reservedIpRange() {
+        return Optional.ofNullable(this.reservedIpRange);
     }
 
-    public NetworkConfigArgs(
-        @Nullable Output<NetworkConfigConnectMode> connectMode,
-        @Nullable Output<List<NetworkConfigModesItem>> modes,
-        @Nullable Output<String> network,
-        @Nullable Output<String> reservedIpRange) {
-        this.connectMode = connectMode;
-        this.modes = modes;
-        this.network = network;
-        this.reservedIpRange = reservedIpRange;
-    }
+    private NetworkConfigArgs() {}
 
-    private NetworkConfigArgs() {
-        this.connectMode = Codegen.empty();
-        this.modes = Codegen.empty();
-        this.network = Codegen.empty();
-        this.reservedIpRange = Codegen.empty();
+    private NetworkConfigArgs(NetworkConfigArgs $) {
+        this.connectMode = $.connectMode;
+        this.modes = $.modes;
+        this.network = $.network;
+        this.reservedIpRange = $.reservedIpRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkConfigConnectMode> connectMode;
-        private @Nullable Output<List<NetworkConfigModesItem>> modes;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> reservedIpRange;
+        private NetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigArgs();
         }
 
         public Builder(NetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectMode = defaults.connectMode;
-    	      this.modes = defaults.modes;
-    	      this.network = defaults.network;
-    	      this.reservedIpRange = defaults.reservedIpRange;
+            $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectMode(@Nullable Output<NetworkConfigConnectMode> connectMode) {
-            this.connectMode = connectMode;
+            $.connectMode = connectMode;
             return this;
         }
-        public Builder connectMode(@Nullable NetworkConfigConnectMode connectMode) {
-            this.connectMode = Codegen.ofNullable(connectMode);
-            return this;
+
+        public Builder connectMode(NetworkConfigConnectMode connectMode) {
+            return connectMode(Output.of(connectMode));
         }
+
         public Builder modes(@Nullable Output<List<NetworkConfigModesItem>> modes) {
-            this.modes = modes;
+            $.modes = modes;
             return this;
         }
-        public Builder modes(@Nullable List<NetworkConfigModesItem> modes) {
-            this.modes = Codegen.ofNullable(modes);
-            return this;
+
+        public Builder modes(List<NetworkConfigModesItem> modes) {
+            return modes(Output.of(modes));
         }
+
         public Builder modes(NetworkConfigModesItem... modes) {
             return modes(List.of(modes));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
-            this.reservedIpRange = reservedIpRange;
+            $.reservedIpRange = reservedIpRange;
             return this;
         }
-        public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Codegen.ofNullable(reservedIpRange);
-            return this;
-        }        public NetworkConfigArgs build() {
-            return new NetworkConfigArgs(connectMode, modes, network, reservedIpRange);
+
+        public Builder reservedIpRange(String reservedIpRange) {
+            return reservedIpRange(Output.of(reservedIpRange));
+        }
+
+        public NetworkConfigArgs build() {
+            return $;
         }
     }
+
 }

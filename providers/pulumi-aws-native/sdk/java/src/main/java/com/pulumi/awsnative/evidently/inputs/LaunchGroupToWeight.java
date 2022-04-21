@@ -14,62 +14,59 @@ public final class LaunchGroupToWeight extends com.pulumi.resources.InvokeArgs {
     public static final LaunchGroupToWeight Empty = new LaunchGroupToWeight();
 
     @Import(name="groupName", required=true)
-      private final String groupName;
+    private String groupName;
 
     public String groupName() {
         return this.groupName;
     }
 
     @Import(name="splitWeight", required=true)
-      private final Integer splitWeight;
+    private Integer splitWeight;
 
     public Integer splitWeight() {
         return this.splitWeight;
     }
 
-    public LaunchGroupToWeight(
-        String groupName,
-        Integer splitWeight) {
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.splitWeight = Objects.requireNonNull(splitWeight, "expected parameter 'splitWeight' to be non-null");
-    }
+    private LaunchGroupToWeight() {}
 
-    private LaunchGroupToWeight() {
-        this.groupName = null;
-        this.splitWeight = null;
+    private LaunchGroupToWeight(LaunchGroupToWeight $) {
+        this.groupName = $.groupName;
+        this.splitWeight = $.splitWeight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchGroupToWeight defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupName;
-        private Integer splitWeight;
+        private LaunchGroupToWeight $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchGroupToWeight();
         }
 
         public Builder(LaunchGroupToWeight defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupName = defaults.groupName;
-    	      this.splitWeight = defaults.splitWeight;
+            $ = new LaunchGroupToWeight(Objects.requireNonNull(defaults));
         }
 
         public Builder groupName(String groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder splitWeight(Integer splitWeight) {
-            this.splitWeight = Objects.requireNonNull(splitWeight);
+            $.splitWeight = splitWeight;
             return this;
-        }        public LaunchGroupToWeight build() {
-            return new LaunchGroupToWeight(groupName, splitWeight);
+        }
+
+        public LaunchGroupToWeight build() {
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.splitWeight = Objects.requireNonNull($.splitWeight, "expected parameter 'splitWeight' to be non-null");
+            return $;
         }
     }
+
 }

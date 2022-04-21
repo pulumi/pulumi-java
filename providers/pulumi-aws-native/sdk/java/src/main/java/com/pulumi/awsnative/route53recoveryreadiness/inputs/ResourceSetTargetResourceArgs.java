@@ -7,8 +7,8 @@ import com.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetNLBResour
 import com.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetR53ResourceRecordArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class ResourceSetTargetResourceArgs extends com.pulumi.resources.Re
     public static final ResourceSetTargetResourceArgs Empty = new ResourceSetTargetResourceArgs();
 
     @Import(name="nLBResource")
-      private final @Nullable Output<ResourceSetNLBResourceArgs> nLBResource;
+    private @Nullable Output<ResourceSetNLBResourceArgs> nLBResource;
 
-    public Output<ResourceSetNLBResourceArgs> nLBResource() {
-        return this.nLBResource == null ? Codegen.empty() : this.nLBResource;
+    public Optional<Output<ResourceSetNLBResourceArgs>> nLBResource() {
+        return Optional.ofNullable(this.nLBResource);
     }
 
     @Import(name="r53Resource")
-      private final @Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource;
+    private @Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource;
 
-    public Output<ResourceSetR53ResourceRecordArgs> r53Resource() {
-        return this.r53Resource == null ? Codegen.empty() : this.r53Resource;
+    public Optional<Output<ResourceSetR53ResourceRecordArgs>> r53Resource() {
+        return Optional.ofNullable(this.r53Resource);
     }
 
-    public ResourceSetTargetResourceArgs(
-        @Nullable Output<ResourceSetNLBResourceArgs> nLBResource,
-        @Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource) {
-        this.nLBResource = nLBResource;
-        this.r53Resource = r53Resource;
-    }
+    private ResourceSetTargetResourceArgs() {}
 
-    private ResourceSetTargetResourceArgs() {
-        this.nLBResource = Codegen.empty();
-        this.r53Resource = Codegen.empty();
+    private ResourceSetTargetResourceArgs(ResourceSetTargetResourceArgs $) {
+        this.nLBResource = $.nLBResource;
+        this.r53Resource = $.r53Resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetTargetResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourceSetNLBResourceArgs> nLBResource;
-        private @Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource;
+        private ResourceSetTargetResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetTargetResourceArgs();
         }
 
         public Builder(ResourceSetTargetResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nLBResource = defaults.nLBResource;
-    	      this.r53Resource = defaults.r53Resource;
+            $ = new ResourceSetTargetResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nLBResource(@Nullable Output<ResourceSetNLBResourceArgs> nLBResource) {
-            this.nLBResource = nLBResource;
+            $.nLBResource = nLBResource;
             return this;
         }
-        public Builder nLBResource(@Nullable ResourceSetNLBResourceArgs nLBResource) {
-            this.nLBResource = Codegen.ofNullable(nLBResource);
-            return this;
+
+        public Builder nLBResource(ResourceSetNLBResourceArgs nLBResource) {
+            return nLBResource(Output.of(nLBResource));
         }
+
         public Builder r53Resource(@Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource) {
-            this.r53Resource = r53Resource;
+            $.r53Resource = r53Resource;
             return this;
         }
-        public Builder r53Resource(@Nullable ResourceSetR53ResourceRecordArgs r53Resource) {
-            this.r53Resource = Codegen.ofNullable(r53Resource);
-            return this;
-        }        public ResourceSetTargetResourceArgs build() {
-            return new ResourceSetTargetResourceArgs(nLBResource, r53Resource);
+
+        public Builder r53Resource(ResourceSetR53ResourceRecordArgs r53Resource) {
+            return r53Resource(Output.of(r53Resource));
+        }
+
+        public ResourceSetTargetResourceArgs build() {
+            return $;
         }
     }
+
 }

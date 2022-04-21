@@ -6,9 +6,9 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.HubPublicIPAddressesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HubIPAddressesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable Output<String> privateIPAddress;
+    private @Nullable Output<String> privateIPAddress;
 
-    public Output<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
+    public Optional<Output<String>> privateIPAddress() {
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class HubIPAddressesArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="publicIPs")
-      private final @Nullable Output<HubPublicIPAddressesArgs> publicIPs;
+    private @Nullable Output<HubPublicIPAddressesArgs> publicIPs;
 
-    public Output<HubPublicIPAddressesArgs> publicIPs() {
-        return this.publicIPs == null ? Codegen.empty() : this.publicIPs;
+    public Optional<Output<HubPublicIPAddressesArgs>> publicIPs() {
+        return Optional.ofNullable(this.publicIPs);
     }
 
-    public HubIPAddressesArgs(
-        @Nullable Output<String> privateIPAddress,
-        @Nullable Output<HubPublicIPAddressesArgs> publicIPs) {
-        this.privateIPAddress = privateIPAddress;
-        this.publicIPs = publicIPs;
-    }
+    private HubIPAddressesArgs() {}
 
-    private HubIPAddressesArgs() {
-        this.privateIPAddress = Codegen.empty();
-        this.publicIPs = Codegen.empty();
+    private HubIPAddressesArgs(HubIPAddressesArgs $) {
+        this.privateIPAddress = $.privateIPAddress;
+        this.publicIPs = $.publicIPs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubIPAddressesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> privateIPAddress;
-        private @Nullable Output<HubPublicIPAddressesArgs> publicIPs;
+        private HubIPAddressesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubIPAddressesArgs();
         }
 
         public Builder(HubIPAddressesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.publicIPs = defaults.publicIPs;
+            $ = new HubIPAddressesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
-        public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
-            return this;
+
+        public Builder privateIPAddress(String privateIPAddress) {
+            return privateIPAddress(Output.of(privateIPAddress));
         }
+
         public Builder publicIPs(@Nullable Output<HubPublicIPAddressesArgs> publicIPs) {
-            this.publicIPs = publicIPs;
+            $.publicIPs = publicIPs;
             return this;
         }
-        public Builder publicIPs(@Nullable HubPublicIPAddressesArgs publicIPs) {
-            this.publicIPs = Codegen.ofNullable(publicIPs);
-            return this;
-        }        public HubIPAddressesArgs build() {
-            return new HubIPAddressesArgs(privateIPAddress, publicIPs);
+
+        public Builder publicIPs(HubPublicIPAddressesArgs publicIPs) {
+            return publicIPs(Output.of(publicIPs));
+        }
+
+        public HubIPAddressesArgs build() {
+            return $;
         }
     }
+
 }

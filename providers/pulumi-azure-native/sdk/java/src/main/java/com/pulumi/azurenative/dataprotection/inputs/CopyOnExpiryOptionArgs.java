@@ -24,49 +24,49 @@ public final class CopyOnExpiryOptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
     }
 
-    public CopyOnExpiryOptionArgs(Output<String> objectType) {
-        this.objectType = Codegen.stringProp("objectType").output().arg(objectType).require();
-    }
+    private CopyOnExpiryOptionArgs() {}
 
-    private CopyOnExpiryOptionArgs() {
-        this.objectType = Codegen.empty();
+    private CopyOnExpiryOptionArgs(CopyOnExpiryOptionArgs $) {
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CopyOnExpiryOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> objectType;
+        private CopyOnExpiryOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CopyOnExpiryOptionArgs();
         }
 
         public Builder(CopyOnExpiryOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectType = defaults.objectType;
+            $ = new CopyOnExpiryOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
-        }        public CopyOnExpiryOptionArgs build() {
-            return new CopyOnExpiryOptionArgs(objectType);
+            return objectType(Output.of(objectType));
+        }
+
+        public CopyOnExpiryOptionArgs build() {
+            $.objectType = Codegen.stringProp("objectType").output().arg($.objectType).require();
+            return $;
         }
     }
+
 }

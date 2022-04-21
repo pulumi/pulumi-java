@@ -13,6 +13,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -47,7 +48,7 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="managementGroupId", required=true)
-      private final Output<String> managementGroupId;
+    private Output<String> managementGroupId;
 
     public Output<String> managementGroupId() {
         return this.managementGroupId;
@@ -58,10 +59,10 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Object> metadata;
+    private @Nullable Output<Object> metadata;
 
-    public Output<Object> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
+    private @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
 
-    public Output<Map<String,ParameterDefinitionsValueArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,ParameterDefinitionsValueArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="policyDefinitionName")
-      private final @Nullable Output<String> policyDefinitionName;
+    private @Nullable Output<String> policyDefinitionName;
 
-    public Output<String> policyDefinitionName() {
-        return this.policyDefinitionName == null ? Codegen.empty() : this.policyDefinitionName;
+    public Optional<Output<String>> policyDefinitionName() {
+        return Optional.ofNullable(this.policyDefinitionName);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="policyRule")
-      private final @Nullable Output<Object> policyRule;
+    private @Nullable Output<Object> policyRule;
 
-    public Output<Object> policyRule() {
-        return this.policyRule == null ? Codegen.empty() : this.policyRule;
+    public Optional<Output<Object>> policyRule() {
+        return Optional.ofNullable(this.policyRule);
     }
 
     /**
@@ -113,154 +114,130 @@ public final class PolicyDefinitionAtManagementGroupArgs extends com.pulumi.reso
      * 
      */
     @Import(name="policyType")
-      private final @Nullable Output<Either<String,PolicyType>> policyType;
+    private @Nullable Output<Either<String,PolicyType>> policyType;
 
-    public Output<Either<String,PolicyType>> policyType() {
-        return this.policyType == null ? Codegen.empty() : this.policyType;
+    public Optional<Output<Either<String,PolicyType>>> policyType() {
+        return Optional.ofNullable(this.policyType);
     }
 
-    public PolicyDefinitionAtManagementGroupArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> managementGroupId,
-        @Nullable Output<Object> metadata,
-        @Nullable Output<String> mode,
-        @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters,
-        @Nullable Output<String> policyDefinitionName,
-        @Nullable Output<Object> policyRule,
-        @Nullable Output<Either<String,PolicyType>> policyType) {
-        this.description = description;
-        this.displayName = displayName;
-        this.managementGroupId = Objects.requireNonNull(managementGroupId, "expected parameter 'managementGroupId' to be non-null");
-        this.metadata = metadata;
-        this.mode = Codegen.stringProp("mode").output().arg(mode).def("Indexed").getNullable();
-        this.parameters = parameters;
-        this.policyDefinitionName = policyDefinitionName;
-        this.policyRule = policyRule;
-        this.policyType = policyType;
-    }
+    private PolicyDefinitionAtManagementGroupArgs() {}
 
-    private PolicyDefinitionAtManagementGroupArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.managementGroupId = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.policyDefinitionName = Codegen.empty();
-        this.policyRule = Codegen.empty();
-        this.policyType = Codegen.empty();
+    private PolicyDefinitionAtManagementGroupArgs(PolicyDefinitionAtManagementGroupArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.managementGroupId = $.managementGroupId;
+        this.metadata = $.metadata;
+        this.mode = $.mode;
+        this.parameters = $.parameters;
+        this.policyDefinitionName = $.policyDefinitionName;
+        this.policyRule = $.policyRule;
+        this.policyType = $.policyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyDefinitionAtManagementGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> managementGroupId;
-        private @Nullable Output<Object> metadata;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters;
-        private @Nullable Output<String> policyDefinitionName;
-        private @Nullable Output<Object> policyRule;
-        private @Nullable Output<Either<String,PolicyType>> policyType;
+        private PolicyDefinitionAtManagementGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyDefinitionAtManagementGroupArgs();
         }
 
         public Builder(PolicyDefinitionAtManagementGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.managementGroupId = defaults.managementGroupId;
-    	      this.metadata = defaults.metadata;
-    	      this.mode = defaults.mode;
-    	      this.parameters = defaults.parameters;
-    	      this.policyDefinitionName = defaults.policyDefinitionName;
-    	      this.policyRule = defaults.policyRule;
-    	      this.policyType = defaults.policyType;
+            $ = new PolicyDefinitionAtManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder managementGroupId(Output<String> managementGroupId) {
-            this.managementGroupId = Objects.requireNonNull(managementGroupId);
+            $.managementGroupId = managementGroupId;
             return this;
         }
+
         public Builder managementGroupId(String managementGroupId) {
-            this.managementGroupId = Output.of(Objects.requireNonNull(managementGroupId));
-            return this;
+            return managementGroupId(Output.of(managementGroupId));
         }
+
         public Builder metadata(@Nullable Output<Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Object metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterDefinitionsValueArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,ParameterDefinitionsValueArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,ParameterDefinitionsValueArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder policyDefinitionName(@Nullable Output<String> policyDefinitionName) {
-            this.policyDefinitionName = policyDefinitionName;
+            $.policyDefinitionName = policyDefinitionName;
             return this;
         }
-        public Builder policyDefinitionName(@Nullable String policyDefinitionName) {
-            this.policyDefinitionName = Codegen.ofNullable(policyDefinitionName);
-            return this;
+
+        public Builder policyDefinitionName(String policyDefinitionName) {
+            return policyDefinitionName(Output.of(policyDefinitionName));
         }
+
         public Builder policyRule(@Nullable Output<Object> policyRule) {
-            this.policyRule = policyRule;
+            $.policyRule = policyRule;
             return this;
         }
-        public Builder policyRule(@Nullable Object policyRule) {
-            this.policyRule = Codegen.ofNullable(policyRule);
-            return this;
+
+        public Builder policyRule(Object policyRule) {
+            return policyRule(Output.of(policyRule));
         }
+
         public Builder policyType(@Nullable Output<Either<String,PolicyType>> policyType) {
-            this.policyType = policyType;
+            $.policyType = policyType;
             return this;
         }
-        public Builder policyType(@Nullable Either<String,PolicyType> policyType) {
-            this.policyType = Codegen.ofNullable(policyType);
-            return this;
-        }        public PolicyDefinitionAtManagementGroupArgs build() {
-            return new PolicyDefinitionAtManagementGroupArgs(description, displayName, managementGroupId, metadata, mode, parameters, policyDefinitionName, policyRule, policyType);
+
+        public Builder policyType(Either<String,PolicyType> policyType) {
+            return policyType(Output.of(policyType));
+        }
+
+        public PolicyDefinitionAtManagementGroupArgs build() {
+            $.managementGroupId = Objects.requireNonNull($.managementGroupId, "expected parameter 'managementGroupId' to be non-null");
+            $.mode = Codegen.stringProp("mode").output().arg($.mode).def("Indexed").getNullable();
+            return $;
         }
     }
+
 }

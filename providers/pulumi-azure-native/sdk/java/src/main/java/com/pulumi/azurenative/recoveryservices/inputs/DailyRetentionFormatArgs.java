@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices.inputs;
 import com.pulumi.azurenative.recoveryservices.inputs.DayArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DailyRetentionFormatArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="daysOfTheMonth")
-      private final @Nullable Output<List<DayArgs>> daysOfTheMonth;
+    private @Nullable Output<List<DayArgs>> daysOfTheMonth;
 
-    public Output<List<DayArgs>> daysOfTheMonth() {
-        return this.daysOfTheMonth == null ? Codegen.empty() : this.daysOfTheMonth;
+    public Optional<Output<List<DayArgs>>> daysOfTheMonth() {
+        return Optional.ofNullable(this.daysOfTheMonth);
     }
 
-    public DailyRetentionFormatArgs(@Nullable Output<List<DayArgs>> daysOfTheMonth) {
-        this.daysOfTheMonth = daysOfTheMonth;
-    }
+    private DailyRetentionFormatArgs() {}
 
-    private DailyRetentionFormatArgs() {
-        this.daysOfTheMonth = Codegen.empty();
+    private DailyRetentionFormatArgs(DailyRetentionFormatArgs $) {
+        this.daysOfTheMonth = $.daysOfTheMonth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DailyRetentionFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DayArgs>> daysOfTheMonth;
+        private DailyRetentionFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DailyRetentionFormatArgs();
         }
 
         public Builder(DailyRetentionFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysOfTheMonth = defaults.daysOfTheMonth;
+            $ = new DailyRetentionFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysOfTheMonth(@Nullable Output<List<DayArgs>> daysOfTheMonth) {
-            this.daysOfTheMonth = daysOfTheMonth;
+            $.daysOfTheMonth = daysOfTheMonth;
             return this;
         }
-        public Builder daysOfTheMonth(@Nullable List<DayArgs> daysOfTheMonth) {
-            this.daysOfTheMonth = Codegen.ofNullable(daysOfTheMonth);
-            return this;
+
+        public Builder daysOfTheMonth(List<DayArgs> daysOfTheMonth) {
+            return daysOfTheMonth(Output.of(daysOfTheMonth));
         }
+
         public Builder daysOfTheMonth(DayArgs... daysOfTheMonth) {
             return daysOfTheMonth(List.of(daysOfTheMonth));
-        }        public DailyRetentionFormatArgs build() {
-            return new DailyRetentionFormatArgs(daysOfTheMonth);
+        }
+
+        public DailyRetentionFormatArgs build() {
+            return $;
         }
     }
+
 }

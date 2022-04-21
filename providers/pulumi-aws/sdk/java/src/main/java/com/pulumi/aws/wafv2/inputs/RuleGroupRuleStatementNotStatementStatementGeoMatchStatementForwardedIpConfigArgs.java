@@ -5,7 +5,6 @@ package com.pulumi.aws.wafv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RuleGroupRuleStatementNotStatementStatementGeoMatchStatementF
      * 
      */
     @Import(name="fallbackBehavior", required=true)
-      private final Output<String> fallbackBehavior;
+    private Output<String> fallbackBehavior;
 
     public Output<String> fallbackBehavior() {
         return this.fallbackBehavior;
@@ -30,63 +29,60 @@ public final class RuleGroupRuleStatementNotStatementStatementGeoMatchStatementF
      * 
      */
     @Import(name="headerName", required=true)
-      private final Output<String> headerName;
+    private Output<String> headerName;
 
     public Output<String> headerName() {
         return this.headerName;
     }
 
-    public RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs(
-        Output<String> fallbackBehavior,
-        Output<String> headerName) {
-        this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-    }
+    private RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs() {}
 
-    private RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs() {
-        this.fallbackBehavior = Codegen.empty();
-        this.headerName = Codegen.empty();
+    private RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs(RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs $) {
+        this.fallbackBehavior = $.fallbackBehavior;
+        this.headerName = $.headerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fallbackBehavior;
-        private Output<String> headerName;
+        private RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs();
         }
 
         public Builder(RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fallbackBehavior = defaults.fallbackBehavior;
-    	      this.headerName = defaults.headerName;
+            $ = new RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fallbackBehavior(Output<String> fallbackBehavior) {
-            this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
+            $.fallbackBehavior = fallbackBehavior;
             return this;
         }
+
         public Builder fallbackBehavior(String fallbackBehavior) {
-            this.fallbackBehavior = Output.of(Objects.requireNonNull(fallbackBehavior));
-            return this;
+            return fallbackBehavior(Output.of(fallbackBehavior));
         }
+
         public Builder headerName(Output<String> headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Output.of(Objects.requireNonNull(headerName));
-            return this;
-        }        public RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs build() {
-            return new RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs(fallbackBehavior, headerName);
+            return headerName(Output.of(headerName));
+        }
+
+        public RuleGroupRuleStatementNotStatementStatementGeoMatchStatementForwardedIpConfigArgs build() {
+            $.fallbackBehavior = Objects.requireNonNull($.fallbackBehavior, "expected parameter 'fallbackBehavior' to be non-null");
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            return $;
         }
     }
+
 }

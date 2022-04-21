@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class ServiceTaskSpecContainerSpecLabelArgs extends com.pulumi.reso
     public static final ServiceTaskSpecContainerSpecLabelArgs Empty = new ServiceTaskSpecContainerSpecLabelArgs();
 
     @Import(name="label", required=true)
-      private final Output<String> label;
+    private Output<String> label;
 
     public Output<String> label() {
         return this.label;
     }
 
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ServiceTaskSpecContainerSpecLabelArgs(
-        Output<String> label,
-        Output<String> value) {
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ServiceTaskSpecContainerSpecLabelArgs() {}
 
-    private ServiceTaskSpecContainerSpecLabelArgs() {
-        this.label = Codegen.empty();
-        this.value = Codegen.empty();
+    private ServiceTaskSpecContainerSpecLabelArgs(ServiceTaskSpecContainerSpecLabelArgs $) {
+        this.label = $.label;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecLabelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> label;
-        private Output<String> value;
+        private ServiceTaskSpecContainerSpecLabelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecLabelArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecLabelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.value = defaults.value;
+            $ = new ServiceTaskSpecContainerSpecLabelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder label(Output<String> label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Output.of(Objects.requireNonNull(label));
-            return this;
+            return label(Output.of(label));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ServiceTaskSpecContainerSpecLabelArgs build() {
-            return new ServiceTaskSpecContainerSpecLabelArgs(label, value);
+            return value(Output.of(value));
+        }
+
+        public ServiceTaskSpecContainerSpecLabelArgs build() {
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

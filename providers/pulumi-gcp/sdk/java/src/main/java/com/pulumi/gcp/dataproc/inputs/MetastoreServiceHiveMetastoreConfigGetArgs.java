@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends com.pulumi
      * 
      */
     @Import(name="configOverrides")
-      private final @Nullable Output<Map<String,String>> configOverrides;
+    private @Nullable Output<Map<String,String>> configOverrides;
 
-    public Output<Map<String,String>> configOverrides() {
-        return this.configOverrides == null ? Codegen.empty() : this.configOverrides;
+    public Optional<Output<Map<String,String>>> configOverrides() {
+        return Optional.ofNullable(this.configOverrides);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends com.pulumi
      * 
      */
     @Import(name="kerberosConfig")
-      private final @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig;
+    private @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig;
 
-    public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig() {
-        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
+    public Optional<Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs>> kerberosConfig() {
+        return Optional.ofNullable(this.kerberosConfig);
     }
 
     /**
@@ -46,76 +46,69 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends com.pulumi
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public MetastoreServiceHiveMetastoreConfigGetArgs(
-        @Nullable Output<Map<String,String>> configOverrides,
-        @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig,
-        Output<String> version) {
-        this.configOverrides = configOverrides;
-        this.kerberosConfig = kerberosConfig;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private MetastoreServiceHiveMetastoreConfigGetArgs() {}
 
-    private MetastoreServiceHiveMetastoreConfigGetArgs() {
-        this.configOverrides = Codegen.empty();
-        this.kerberosConfig = Codegen.empty();
-        this.version = Codegen.empty();
+    private MetastoreServiceHiveMetastoreConfigGetArgs(MetastoreServiceHiveMetastoreConfigGetArgs $) {
+        this.configOverrides = $.configOverrides;
+        this.kerberosConfig = $.kerberosConfig;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetastoreServiceHiveMetastoreConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> configOverrides;
-        private @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig;
-        private Output<String> version;
+        private MetastoreServiceHiveMetastoreConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetastoreServiceHiveMetastoreConfigGetArgs();
         }
 
         public Builder(MetastoreServiceHiveMetastoreConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configOverrides = defaults.configOverrides;
-    	      this.kerberosConfig = defaults.kerberosConfig;
-    	      this.version = defaults.version;
+            $ = new MetastoreServiceHiveMetastoreConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configOverrides(@Nullable Output<Map<String,String>> configOverrides) {
-            this.configOverrides = configOverrides;
+            $.configOverrides = configOverrides;
             return this;
         }
-        public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
-            this.configOverrides = Codegen.ofNullable(configOverrides);
-            return this;
+
+        public Builder configOverrides(Map<String,String> configOverrides) {
+            return configOverrides(Output.of(configOverrides));
         }
+
         public Builder kerberosConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig) {
-            this.kerberosConfig = kerberosConfig;
+            $.kerberosConfig = kerberosConfig;
             return this;
         }
-        public Builder kerberosConfig(@Nullable MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs kerberosConfig) {
-            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
-            return this;
+
+        public Builder kerberosConfig(MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs kerberosConfig) {
+            return kerberosConfig(Output.of(kerberosConfig));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public MetastoreServiceHiveMetastoreConfigGetArgs build() {
-            return new MetastoreServiceHiveMetastoreConfigGetArgs(configOverrides, kerberosConfig, version);
+            return version(Output.of(version));
+        }
+
+        public MetastoreServiceHiveMetastoreConfigGetArgs build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

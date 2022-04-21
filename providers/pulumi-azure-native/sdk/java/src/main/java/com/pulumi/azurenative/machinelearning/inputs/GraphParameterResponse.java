@@ -25,10 +25,10 @@ public final class GraphParameterResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class GraphParameterResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="links", required=true)
-      private final List<GraphParameterLinkResponse> links;
+    private List<GraphParameterLinkResponse> links;
 
     public List<GraphParameterLinkResponse> links() {
         return this.links;
@@ -47,67 +47,62 @@ public final class GraphParameterResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GraphParameterResponse(
-        @Nullable String description,
-        List<GraphParameterLinkResponse> links,
-        String type) {
-        this.description = description;
-        this.links = Objects.requireNonNull(links, "expected parameter 'links' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GraphParameterResponse() {}
 
-    private GraphParameterResponse() {
-        this.description = null;
-        this.links = List.of();
-        this.type = null;
+    private GraphParameterResponse(GraphParameterResponse $) {
+        this.description = $.description;
+        this.links = $.links;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private List<GraphParameterLinkResponse> links;
-        private String type;
+        private GraphParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphParameterResponse();
         }
 
         public Builder(GraphParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.links = defaults.links;
-    	      this.type = defaults.type;
+            $ = new GraphParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder links(List<GraphParameterLinkResponse> links) {
-            this.links = Objects.requireNonNull(links);
+            $.links = links;
             return this;
         }
+
         public Builder links(GraphParameterLinkResponse... links) {
             return links(List.of(links));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GraphParameterResponse build() {
-            return new GraphParameterResponse(description, links, type);
+        }
+
+        public GraphParameterResponse build() {
+            $.links = Objects.requireNonNull($.links, "expected parameter 'links' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

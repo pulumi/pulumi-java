@@ -19,45 +19,44 @@ public final class GetEndpointArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointType")
-      private final @Nullable String endpointType;
+    private @Nullable String endpointType;
 
     public Optional<String> endpointType() {
-        return this.endpointType == null ? Optional.empty() : Optional.ofNullable(this.endpointType);
+        return Optional.ofNullable(this.endpointType);
     }
 
-    public GetEndpointArgs(@Nullable String endpointType) {
-        this.endpointType = endpointType;
-    }
+    private GetEndpointArgs() {}
 
-    private GetEndpointArgs() {
-        this.endpointType = null;
+    private GetEndpointArgs(GetEndpointArgs $) {
+        this.endpointType = $.endpointType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endpointType;
+        private GetEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEndpointArgs();
         }
 
         public Builder(GetEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
+            $ = new GetEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(@Nullable String endpointType) {
-            this.endpointType = endpointType;
+            $.endpointType = endpointType;
             return this;
-        }        public GetEndpointArgs build() {
-            return new GetEndpointArgs(endpointType);
+        }
+
+        public GetEndpointArgs build() {
+            return $;
         }
     }
+
 }

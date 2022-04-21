@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.FingerprintArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class BasisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fingerprint", required=true)
-      private final Output<FingerprintArgs> fingerprint;
+    private Output<FingerprintArgs> fingerprint;
 
     public Output<FingerprintArgs> fingerprint() {
         return this.fingerprint;
@@ -35,63 +34,60 @@ public final class BasisArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUrl", required=true)
-      private final Output<String> resourceUrl;
+    private Output<String> resourceUrl;
 
     public Output<String> resourceUrl() {
         return this.resourceUrl;
     }
 
-    public BasisArgs(
-        Output<FingerprintArgs> fingerprint,
-        Output<String> resourceUrl) {
-        this.fingerprint = Objects.requireNonNull(fingerprint, "expected parameter 'fingerprint' to be non-null");
-        this.resourceUrl = Objects.requireNonNull(resourceUrl, "expected parameter 'resourceUrl' to be non-null");
-    }
+    private BasisArgs() {}
 
-    private BasisArgs() {
-        this.fingerprint = Codegen.empty();
-        this.resourceUrl = Codegen.empty();
+    private BasisArgs(BasisArgs $) {
+        this.fingerprint = $.fingerprint;
+        this.resourceUrl = $.resourceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasisArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FingerprintArgs> fingerprint;
-        private Output<String> resourceUrl;
+        private BasisArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasisArgs();
         }
 
         public Builder(BasisArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.resourceUrl = defaults.resourceUrl;
+            $ = new BasisArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fingerprint(Output<FingerprintArgs> fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint);
+            $.fingerprint = fingerprint;
             return this;
         }
+
         public Builder fingerprint(FingerprintArgs fingerprint) {
-            this.fingerprint = Output.of(Objects.requireNonNull(fingerprint));
-            return this;
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder resourceUrl(Output<String> resourceUrl) {
-            this.resourceUrl = Objects.requireNonNull(resourceUrl);
+            $.resourceUrl = resourceUrl;
             return this;
         }
+
         public Builder resourceUrl(String resourceUrl) {
-            this.resourceUrl = Output.of(Objects.requireNonNull(resourceUrl));
-            return this;
-        }        public BasisArgs build() {
-            return new BasisArgs(fingerprint, resourceUrl);
+            return resourceUrl(Output.of(resourceUrl));
+        }
+
+        public BasisArgs build() {
+            $.fingerprint = Objects.requireNonNull($.fingerprint, "expected parameter 'fingerprint' to be non-null");
+            $.resourceUrl = Objects.requireNonNull($.resourceUrl, "expected parameter 'resourceUrl' to be non-null");
+            return $;
         }
     }
+
 }

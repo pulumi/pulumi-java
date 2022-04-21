@@ -5,9 +5,9 @@ package com.pulumi.awsnative.gamelift.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,66 @@ public final class GameServerGroupInstanceDefinitionArgs extends com.pulumi.reso
     public static final GameServerGroupInstanceDefinitionArgs Empty = new GameServerGroupInstanceDefinitionArgs();
 
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
     }
 
     @Import(name="weightedCapacity")
-      private final @Nullable Output<String> weightedCapacity;
+    private @Nullable Output<String> weightedCapacity;
 
-    public Output<String> weightedCapacity() {
-        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
+    public Optional<Output<String>> weightedCapacity() {
+        return Optional.ofNullable(this.weightedCapacity);
     }
 
-    public GameServerGroupInstanceDefinitionArgs(
-        Output<String> instanceType,
-        @Nullable Output<String> weightedCapacity) {
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.weightedCapacity = weightedCapacity;
-    }
+    private GameServerGroupInstanceDefinitionArgs() {}
 
-    private GameServerGroupInstanceDefinitionArgs() {
-        this.instanceType = Codegen.empty();
-        this.weightedCapacity = Codegen.empty();
+    private GameServerGroupInstanceDefinitionArgs(GameServerGroupInstanceDefinitionArgs $) {
+        this.instanceType = $.instanceType;
+        this.weightedCapacity = $.weightedCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerGroupInstanceDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> instanceType;
-        private @Nullable Output<String> weightedCapacity;
+        private GameServerGroupInstanceDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerGroupInstanceDefinitionArgs();
         }
 
         public Builder(GameServerGroupInstanceDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.weightedCapacity = defaults.weightedCapacity;
+            $ = new GameServerGroupInstanceDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder weightedCapacity(@Nullable Output<String> weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
+            $.weightedCapacity = weightedCapacity;
             return this;
         }
-        public Builder weightedCapacity(@Nullable String weightedCapacity) {
-            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
-            return this;
-        }        public GameServerGroupInstanceDefinitionArgs build() {
-            return new GameServerGroupInstanceDefinitionArgs(instanceType, weightedCapacity);
+
+        public Builder weightedCapacity(String weightedCapacity) {
+            return weightedCapacity(Output.of(weightedCapacity));
+        }
+
+        public GameServerGroupInstanceDefinitionArgs build() {
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

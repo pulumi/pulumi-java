@@ -17,7 +17,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parentName", required=true)
-      private final String parentName;
+    private String parentName;
 
     public String parentName() {
         return this.parentName;
@@ -28,7 +28,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parentType", required=true)
-      private final String parentType;
+    private String parentType;
 
     public String parentType() {
         return this.parentType;
@@ -39,7 +39,7 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="privateEndpointConnectionName", required=true)
-      private final String privateEndpointConnectionName;
+    private String privateEndpointConnectionName;
 
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
@@ -50,73 +50,66 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPrivateEndpointConnectionArgs(
-        String parentName,
-        String parentType,
-        String privateEndpointConnectionName,
-        String resourceGroupName) {
-        this.parentName = Objects.requireNonNull(parentName, "expected parameter 'parentName' to be non-null");
-        this.parentType = Objects.requireNonNull(parentType, "expected parameter 'parentType' to be non-null");
-        this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName, "expected parameter 'privateEndpointConnectionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPrivateEndpointConnectionArgs() {}
 
-    private GetPrivateEndpointConnectionArgs() {
-        this.parentName = null;
-        this.parentType = null;
-        this.privateEndpointConnectionName = null;
-        this.resourceGroupName = null;
+    private GetPrivateEndpointConnectionArgs(GetPrivateEndpointConnectionArgs $) {
+        this.parentName = $.parentName;
+        this.parentType = $.parentType;
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateEndpointConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parentName;
-        private String parentType;
-        private String privateEndpointConnectionName;
-        private String resourceGroupName;
+        private GetPrivateEndpointConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateEndpointConnectionArgs();
         }
 
         public Builder(GetPrivateEndpointConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parentName = defaults.parentName;
-    	      this.parentType = defaults.parentType;
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parentName(String parentName) {
-            this.parentName = Objects.requireNonNull(parentName);
+            $.parentName = parentName;
             return this;
         }
+
         public Builder parentType(String parentType) {
-            this.parentType = Objects.requireNonNull(parentType);
+            $.parentType = parentType;
             return this;
         }
+
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPrivateEndpointConnectionArgs build() {
-            return new GetPrivateEndpointConnectionArgs(parentName, parentType, privateEndpointConnectionName, resourceGroupName);
+        }
+
+        public GetPrivateEndpointConnectionArgs build() {
+            $.parentName = Objects.requireNonNull($.parentName, "expected parameter 'parentName' to be non-null");
+            $.parentType = Objects.requireNonNull($.parentType, "expected parameter 'parentType' to be non-null");
+            $.privateEndpointConnectionName = Objects.requireNonNull($.privateEndpointConnectionName, "expected parameter 'privateEndpointConnectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetImageRecipeArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetImageRecipeArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetImageRecipeArgs() {}
 
-    private GetImageRecipeArgs() {
-        this.arn = null;
+    private GetImageRecipeArgs(GetImageRecipeArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageRecipeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetImageRecipeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageRecipeArgs();
         }
 
         public Builder(GetImageRecipeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetImageRecipeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetImageRecipeArgs build() {
-            return new GetImageRecipeArgs(arn);
+        }
+
+        public GetImageRecipeArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices;
 import com.pulumi.azurenative.recoveryservices.inputs.CreateNetworkMappingInputPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="fabricName", required=true)
-      private final Output<String> fabricName;
+    private Output<String> fabricName;
 
     public Output<String> fabricName() {
         return this.fabricName;
@@ -32,10 +32,10 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="networkMappingName")
-      private final @Nullable Output<String> networkMappingName;
+    private @Nullable Output<String> networkMappingName;
 
-    public Output<String> networkMappingName() {
-        return this.networkMappingName == null ? Codegen.empty() : this.networkMappingName;
+    public Optional<Output<String>> networkMappingName() {
+        return Optional.ofNullable(this.networkMappingName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="networkName", required=true)
-      private final Output<String> networkName;
+    private Output<String> networkName;
 
     public Output<String> networkName() {
         return this.networkName;
@@ -54,10 +54,10 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
+    private @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
 
-    public Output<CreateNetworkMappingInputPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<CreateNetworkMappingInputPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,115 +76,102 @@ public final class ReplicationNetworkMappingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public ReplicationNetworkMappingArgs(
-        Output<String> fabricName,
-        @Nullable Output<String> networkMappingName,
-        Output<String> networkName,
-        @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.networkMappingName = networkMappingName;
-        this.networkName = Objects.requireNonNull(networkName, "expected parameter 'networkName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ReplicationNetworkMappingArgs() {}
 
-    private ReplicationNetworkMappingArgs() {
-        this.fabricName = Codegen.empty();
-        this.networkMappingName = Codegen.empty();
-        this.networkName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private ReplicationNetworkMappingArgs(ReplicationNetworkMappingArgs $) {
+        this.fabricName = $.fabricName;
+        this.networkMappingName = $.networkMappingName;
+        this.networkName = $.networkName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationNetworkMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fabricName;
-        private @Nullable Output<String> networkMappingName;
-        private Output<String> networkName;
-        private @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private ReplicationNetworkMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationNetworkMappingArgs();
         }
 
         public Builder(ReplicationNetworkMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.networkMappingName = defaults.networkMappingName;
-    	      this.networkName = defaults.networkName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ReplicationNetworkMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(Output<String> fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder fabricName(String fabricName) {
-            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
-            return this;
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder networkMappingName(@Nullable Output<String> networkMappingName) {
-            this.networkMappingName = networkMappingName;
+            $.networkMappingName = networkMappingName;
             return this;
         }
-        public Builder networkMappingName(@Nullable String networkMappingName) {
-            this.networkMappingName = Codegen.ofNullable(networkMappingName);
-            return this;
+
+        public Builder networkMappingName(String networkMappingName) {
+            return networkMappingName(Output.of(networkMappingName));
         }
+
         public Builder networkName(Output<String> networkName) {
-            this.networkName = Objects.requireNonNull(networkName);
+            $.networkName = networkName;
             return this;
         }
+
         public Builder networkName(String networkName) {
-            this.networkName = Output.of(Objects.requireNonNull(networkName));
-            return this;
+            return networkName(Output.of(networkName));
         }
+
         public Builder properties(@Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable CreateNetworkMappingInputPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(CreateNetworkMappingInputPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public ReplicationNetworkMappingArgs build() {
-            return new ReplicationNetworkMappingArgs(fabricName, networkMappingName, networkName, properties, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public ReplicationNetworkMappingArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.networkName = Objects.requireNonNull($.networkName, "expected parameter 'networkName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

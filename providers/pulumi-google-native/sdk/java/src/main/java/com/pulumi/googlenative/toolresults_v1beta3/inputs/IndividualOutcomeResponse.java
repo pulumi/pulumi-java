@@ -23,14 +23,14 @@ public final class IndividualOutcomeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="multistepNumber", required=true)
-      private final Integer multistepNumber;
+    private Integer multistepNumber;
 
     public Integer multistepNumber() {
         return this.multistepNumber;
     }
 
     @Import(name="outcomeSummary", required=true)
-      private final String outcomeSummary;
+    private String outcomeSummary;
 
     public String outcomeSummary() {
         return this.outcomeSummary;
@@ -41,80 +41,73 @@ public final class IndividualOutcomeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="runDuration", required=true)
-      private final DurationResponse runDuration;
+    private DurationResponse runDuration;
 
     public DurationResponse runDuration() {
         return this.runDuration;
     }
 
     @Import(name="stepId", required=true)
-      private final String stepId;
+    private String stepId;
 
     public String stepId() {
         return this.stepId;
     }
 
-    public IndividualOutcomeResponse(
-        Integer multistepNumber,
-        String outcomeSummary,
-        DurationResponse runDuration,
-        String stepId) {
-        this.multistepNumber = Objects.requireNonNull(multistepNumber, "expected parameter 'multistepNumber' to be non-null");
-        this.outcomeSummary = Objects.requireNonNull(outcomeSummary, "expected parameter 'outcomeSummary' to be non-null");
-        this.runDuration = Objects.requireNonNull(runDuration, "expected parameter 'runDuration' to be non-null");
-        this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
-    }
+    private IndividualOutcomeResponse() {}
 
-    private IndividualOutcomeResponse() {
-        this.multistepNumber = null;
-        this.outcomeSummary = null;
-        this.runDuration = null;
-        this.stepId = null;
+    private IndividualOutcomeResponse(IndividualOutcomeResponse $) {
+        this.multistepNumber = $.multistepNumber;
+        this.outcomeSummary = $.outcomeSummary;
+        this.runDuration = $.runDuration;
+        this.stepId = $.stepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndividualOutcomeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer multistepNumber;
-        private String outcomeSummary;
-        private DurationResponse runDuration;
-        private String stepId;
+        private IndividualOutcomeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndividualOutcomeResponse();
         }
 
         public Builder(IndividualOutcomeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.multistepNumber = defaults.multistepNumber;
-    	      this.outcomeSummary = defaults.outcomeSummary;
-    	      this.runDuration = defaults.runDuration;
-    	      this.stepId = defaults.stepId;
+            $ = new IndividualOutcomeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder multistepNumber(Integer multistepNumber) {
-            this.multistepNumber = Objects.requireNonNull(multistepNumber);
+            $.multistepNumber = multistepNumber;
             return this;
         }
+
         public Builder outcomeSummary(String outcomeSummary) {
-            this.outcomeSummary = Objects.requireNonNull(outcomeSummary);
+            $.outcomeSummary = outcomeSummary;
             return this;
         }
+
         public Builder runDuration(DurationResponse runDuration) {
-            this.runDuration = Objects.requireNonNull(runDuration);
+            $.runDuration = runDuration;
             return this;
         }
+
         public Builder stepId(String stepId) {
-            this.stepId = Objects.requireNonNull(stepId);
+            $.stepId = stepId;
             return this;
-        }        public IndividualOutcomeResponse build() {
-            return new IndividualOutcomeResponse(multistepNumber, outcomeSummary, runDuration, stepId);
+        }
+
+        public IndividualOutcomeResponse build() {
+            $.multistepNumber = Objects.requireNonNull($.multistepNumber, "expected parameter 'multistepNumber' to be non-null");
+            $.outcomeSummary = Objects.requireNonNull($.outcomeSummary, "expected parameter 'outcomeSummary' to be non-null");
+            $.runDuration = Objects.requireNonNull($.runDuration, "expected parameter 'runDuration' to be non-null");
+            $.stepId = Objects.requireNonNull($.stepId, "expected parameter 'stepId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -3,35 +3,26 @@
 
 package com.pulumi.awsnative.quicksight.inputs;
 
-import java.util.Objects;
+
 
 
 public final class DataSetLogicalTableMap extends com.pulumi.resources.InvokeArgs {
 
     public static final DataSetLogicalTableMap Empty = new DataSetLogicalTableMap();
 
-    public DataSetLogicalTableMap() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(DataSetLogicalTableMap defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private DataSetLogicalTableMap $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(DataSetLogicalTableMap defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new DataSetLogicalTableMap();
         }
         public DataSetLogicalTableMap build() {
-            return new DataSetLogicalTableMap();
+            return $;
         }
     }
+
 }

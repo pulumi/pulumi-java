@@ -5,10 +5,10 @@ package com.pulumi.gcp.apigee.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.apigee.inputs.EnvironmentIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class EnvironmentIamMemberState extends com.pulumi.resources.Resour
     public static final EnvironmentIamMemberState Empty = new EnvironmentIamMemberState();
 
     @Import(name="condition")
-      private final @Nullable Output<EnvironmentIamMemberConditionGetArgs> condition;
+    private @Nullable Output<EnvironmentIamMemberConditionGetArgs> condition;
 
-    public Output<EnvironmentIamMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<EnvironmentIamMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class EnvironmentIamMemberState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="envId")
-      private final @Nullable Output<String> envId;
+    private @Nullable Output<String> envId;
 
-    public Output<String> envId() {
-        return this.envId == null ? Codegen.empty() : this.envId;
+    public Optional<Output<String>> envId() {
+        return Optional.ofNullable(this.envId);
     }
 
     /**
@@ -39,24 +39,24 @@ public final class EnvironmentIamMemberState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     @Import(name="orgId")
-      private final @Nullable Output<String> orgId;
+    private @Nullable Output<String> orgId;
 
-    public Output<String> orgId() {
-        return this.orgId == null ? Codegen.empty() : this.orgId;
+    public Optional<Output<String>> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -66,115 +66,98 @@ public final class EnvironmentIamMemberState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public EnvironmentIamMemberState(
-        @Nullable Output<EnvironmentIamMemberConditionGetArgs> condition,
-        @Nullable Output<String> envId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> member,
-        @Nullable Output<String> orgId,
-        @Nullable Output<String> role) {
-        this.condition = condition;
-        this.envId = envId;
-        this.etag = etag;
-        this.member = member;
-        this.orgId = orgId;
-        this.role = role;
-    }
+    private EnvironmentIamMemberState() {}
 
-    private EnvironmentIamMemberState() {
-        this.condition = Codegen.empty();
-        this.envId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.member = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.role = Codegen.empty();
+    private EnvironmentIamMemberState(EnvironmentIamMemberState $) {
+        this.condition = $.condition;
+        this.envId = $.envId;
+        this.etag = $.etag;
+        this.member = $.member;
+        this.orgId = $.orgId;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentIamMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EnvironmentIamMemberConditionGetArgs> condition;
-        private @Nullable Output<String> envId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> orgId;
-        private @Nullable Output<String> role;
+        private EnvironmentIamMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentIamMemberState();
         }
 
         public Builder(EnvironmentIamMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.envId = defaults.envId;
-    	      this.etag = defaults.etag;
-    	      this.member = defaults.member;
-    	      this.orgId = defaults.orgId;
-    	      this.role = defaults.role;
+            $ = new EnvironmentIamMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<EnvironmentIamMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable EnvironmentIamMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(EnvironmentIamMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder envId(@Nullable Output<String> envId) {
-            this.envId = envId;
+            $.envId = envId;
             return this;
         }
-        public Builder envId(@Nullable String envId) {
-            this.envId = Codegen.ofNullable(envId);
-            return this;
+
+        public Builder envId(String envId) {
+            return envId(Output.of(envId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder orgId(@Nullable Output<String> orgId) {
-            this.orgId = orgId;
+            $.orgId = orgId;
             return this;
         }
-        public Builder orgId(@Nullable String orgId) {
-            this.orgId = Codegen.ofNullable(orgId);
-            return this;
+
+        public Builder orgId(String orgId) {
+            return orgId(Output.of(orgId));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public EnvironmentIamMemberState build() {
-            return new EnvironmentIamMemberState(condition, envId, etag, member, orgId, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public EnvironmentIamMemberState build() {
+            return $;
         }
     }
+
 }

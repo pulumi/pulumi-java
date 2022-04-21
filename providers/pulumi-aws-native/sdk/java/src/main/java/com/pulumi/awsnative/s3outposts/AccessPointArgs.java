@@ -6,10 +6,10 @@ package com.pulumi.awsnative.s3outposts;
 import com.pulumi.awsnative.s3outposts.inputs.AccessPointVpcConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -33,10 +33,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<Object> policy;
+    private @Nullable Output<Object> policy;
 
-    public Output<Object> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<Object>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -55,89 +55,80 @@ public final class AccessPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcConfiguration", required=true)
-      private final Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
+    private Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
     public Output<AccessPointVpcConfigurationArgs> vpcConfiguration() {
         return this.vpcConfiguration;
     }
 
-    public AccessPointArgs(
-        Output<String> bucket,
-        @Nullable Output<String> name,
-        @Nullable Output<Object> policy,
-        Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.name = name;
-        this.policy = policy;
-        this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration, "expected parameter 'vpcConfiguration' to be non-null");
-    }
+    private AccessPointArgs() {}
 
-    private AccessPointArgs() {
-        this.bucket = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.vpcConfiguration = Codegen.empty();
+    private AccessPointArgs(AccessPointArgs $) {
+        this.bucket = $.bucket;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.vpcConfiguration = $.vpcConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Object> policy;
-        private Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
+        private AccessPointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPointArgs();
         }
 
         public Builder(AccessPointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.vpcConfiguration = defaults.vpcConfiguration;
+            $ = new AccessPointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<Object> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable Object policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(Object policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder vpcConfiguration(Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {
-            this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
+            $.vpcConfiguration = vpcConfiguration;
             return this;
         }
+
         public Builder vpcConfiguration(AccessPointVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Output.of(Objects.requireNonNull(vpcConfiguration));
-            return this;
-        }        public AccessPointArgs build() {
-            return new AccessPointArgs(bucket, name, policy, vpcConfiguration);
+            return vpcConfiguration(Output.of(vpcConfiguration));
+        }
+
+        public AccessPointArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.vpcConfiguration = Objects.requireNonNull($.vpcConfiguration, "expected parameter 'vpcConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

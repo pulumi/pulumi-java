@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iot.inputs;
 import com.pulumi.awsnative.iot.inputs.JobTemplateRetryCriteriaArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class JobExecutionsRetryConfigPropertiesArgs extends com.pulumi.res
     public static final JobExecutionsRetryConfigPropertiesArgs Empty = new JobExecutionsRetryConfigPropertiesArgs();
 
     @Import(name="retryCriteriaList")
-      private final @Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
+    private @Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
 
-    public Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList() {
-        return this.retryCriteriaList == null ? Codegen.empty() : this.retryCriteriaList;
+    public Optional<Output<List<JobTemplateRetryCriteriaArgs>>> retryCriteriaList() {
+        return Optional.ofNullable(this.retryCriteriaList);
     }
 
-    public JobExecutionsRetryConfigPropertiesArgs(@Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList) {
-        this.retryCriteriaList = retryCriteriaList;
-    }
+    private JobExecutionsRetryConfigPropertiesArgs() {}
 
-    private JobExecutionsRetryConfigPropertiesArgs() {
-        this.retryCriteriaList = Codegen.empty();
+    private JobExecutionsRetryConfigPropertiesArgs(JobExecutionsRetryConfigPropertiesArgs $) {
+        this.retryCriteriaList = $.retryCriteriaList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobExecutionsRetryConfigPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList;
+        private JobExecutionsRetryConfigPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobExecutionsRetryConfigPropertiesArgs();
         }
 
         public Builder(JobExecutionsRetryConfigPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retryCriteriaList = defaults.retryCriteriaList;
+            $ = new JobExecutionsRetryConfigPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retryCriteriaList(@Nullable Output<List<JobTemplateRetryCriteriaArgs>> retryCriteriaList) {
-            this.retryCriteriaList = retryCriteriaList;
+            $.retryCriteriaList = retryCriteriaList;
             return this;
         }
-        public Builder retryCriteriaList(@Nullable List<JobTemplateRetryCriteriaArgs> retryCriteriaList) {
-            this.retryCriteriaList = Codegen.ofNullable(retryCriteriaList);
-            return this;
+
+        public Builder retryCriteriaList(List<JobTemplateRetryCriteriaArgs> retryCriteriaList) {
+            return retryCriteriaList(Output.of(retryCriteriaList));
         }
+
         public Builder retryCriteriaList(JobTemplateRetryCriteriaArgs... retryCriteriaList) {
             return retryCriteriaList(List.of(retryCriteriaList));
-        }        public JobExecutionsRetryConfigPropertiesArgs build() {
-            return new JobExecutionsRetryConfigPropertiesArgs(retryCriteriaList);
+        }
+
+        public JobExecutionsRetryConfigPropertiesArgs build() {
+            return $;
         }
     }
+
 }

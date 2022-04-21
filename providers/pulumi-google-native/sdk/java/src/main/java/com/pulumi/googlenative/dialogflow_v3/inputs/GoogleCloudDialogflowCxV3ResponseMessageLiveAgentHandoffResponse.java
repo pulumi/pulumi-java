@@ -22,45 +22,45 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffRespo
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
     }
 
-    public GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse(Map<String,String> metadata) {
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse() {}
 
-    private GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse() {
-        this.metadata = Map.of();
+    private GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse(GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse $) {
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> metadata;
+        private GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
+            $ = new GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
-        }        public GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse build() {
-            return new GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse(metadata);
+        }
+
+        public GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse build() {
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            return $;
         }
     }
+
 }

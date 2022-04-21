@@ -18,7 +18,7 @@ public final class ExplainQueryStepResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -29,58 +29,56 @@ public final class ExplainQueryStepResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="substeps", required=true)
-      private final List<String> substeps;
+    private List<String> substeps;
 
     public List<String> substeps() {
         return this.substeps;
     }
 
-    public ExplainQueryStepResponse(
-        String kind,
-        List<String> substeps) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.substeps = Objects.requireNonNull(substeps, "expected parameter 'substeps' to be non-null");
-    }
+    private ExplainQueryStepResponse() {}
 
-    private ExplainQueryStepResponse() {
-        this.kind = null;
-        this.substeps = List.of();
+    private ExplainQueryStepResponse(ExplainQueryStepResponse $) {
+        this.kind = $.kind;
+        this.substeps = $.substeps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExplainQueryStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private List<String> substeps;
+        private ExplainQueryStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExplainQueryStepResponse();
         }
 
         public Builder(ExplainQueryStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.substeps = defaults.substeps;
+            $ = new ExplainQueryStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder substeps(List<String> substeps) {
-            this.substeps = Objects.requireNonNull(substeps);
+            $.substeps = substeps;
             return this;
         }
+
         public Builder substeps(String... substeps) {
             return substeps(List.of(substeps));
-        }        public ExplainQueryStepResponse build() {
-            return new ExplainQueryStepResponse(kind, substeps);
+        }
+
+        public ExplainQueryStepResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.substeps = Objects.requireNonNull($.substeps, "expected parameter 'substeps' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigAdditionalExtensionGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigCaOptionsGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageGetArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigPolic
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="additionalExtensions")
-      private final @Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions;
+    private @Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions;
 
-    public Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions() {
-        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
+    public Optional<Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>>> additionalExtensions() {
+        return Optional.ofNullable(this.additionalExtensions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="aiaOcspServers")
-      private final @Nullable Output<List<String>> aiaOcspServers;
+    private @Nullable Output<List<String>> aiaOcspServers;
 
-    public Output<List<String>> aiaOcspServers() {
-        return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
+    public Optional<Output<List<String>>> aiaOcspServers() {
+        return Optional.ofNullable(this.aiaOcspServers);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="caOptions", required=true)
-      private final Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions;
+    private Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions;
 
     public Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions() {
         return this.caOptions;
@@ -62,7 +62,7 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="keyUsage", required=true)
-      private final Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage;
+    private Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage;
 
     public Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage() {
         return this.keyUsage;
@@ -74,111 +74,102 @@ public final class AuthorityConfigX509ConfigGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="policyIds")
-      private final @Nullable Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds;
+    private @Nullable Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds;
 
-    public Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds() {
-        return this.policyIds == null ? Codegen.empty() : this.policyIds;
+    public Optional<Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>>> policyIds() {
+        return Optional.ofNullable(this.policyIds);
     }
 
-    public AuthorityConfigX509ConfigGetArgs(
-        @Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions,
-        @Nullable Output<List<String>> aiaOcspServers,
-        Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions,
-        Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage,
-        @Nullable Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds) {
-        this.additionalExtensions = additionalExtensions;
-        this.aiaOcspServers = aiaOcspServers;
-        this.caOptions = Objects.requireNonNull(caOptions, "expected parameter 'caOptions' to be non-null");
-        this.keyUsage = Objects.requireNonNull(keyUsage, "expected parameter 'keyUsage' to be non-null");
-        this.policyIds = policyIds;
-    }
+    private AuthorityConfigX509ConfigGetArgs() {}
 
-    private AuthorityConfigX509ConfigGetArgs() {
-        this.additionalExtensions = Codegen.empty();
-        this.aiaOcspServers = Codegen.empty();
-        this.caOptions = Codegen.empty();
-        this.keyUsage = Codegen.empty();
-        this.policyIds = Codegen.empty();
+    private AuthorityConfigX509ConfigGetArgs(AuthorityConfigX509ConfigGetArgs $) {
+        this.additionalExtensions = $.additionalExtensions;
+        this.aiaOcspServers = $.aiaOcspServers;
+        this.caOptions = $.caOptions;
+        this.keyUsage = $.keyUsage;
+        this.policyIds = $.policyIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityConfigX509ConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions;
-        private @Nullable Output<List<String>> aiaOcspServers;
-        private Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions;
-        private Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage;
-        private @Nullable Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds;
+        private AuthorityConfigX509ConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityConfigX509ConfigGetArgs();
         }
 
         public Builder(AuthorityConfigX509ConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExtensions = defaults.additionalExtensions;
-    	      this.aiaOcspServers = defaults.aiaOcspServers;
-    	      this.caOptions = defaults.caOptions;
-    	      this.keyUsage = defaults.keyUsage;
-    	      this.policyIds = defaults.policyIds;
+            $ = new AuthorityConfigX509ConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExtensions(@Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs>> additionalExtensions) {
-            this.additionalExtensions = additionalExtensions;
+            $.additionalExtensions = additionalExtensions;
             return this;
         }
-        public Builder additionalExtensions(@Nullable List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs> additionalExtensions) {
-            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
-            return this;
+
+        public Builder additionalExtensions(List<AuthorityConfigX509ConfigAdditionalExtensionGetArgs> additionalExtensions) {
+            return additionalExtensions(Output.of(additionalExtensions));
         }
+
         public Builder additionalExtensions(AuthorityConfigX509ConfigAdditionalExtensionGetArgs... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
+
         public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
-            this.aiaOcspServers = aiaOcspServers;
+            $.aiaOcspServers = aiaOcspServers;
             return this;
         }
-        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Codegen.ofNullable(aiaOcspServers);
-            return this;
+
+        public Builder aiaOcspServers(List<String> aiaOcspServers) {
+            return aiaOcspServers(Output.of(aiaOcspServers));
         }
+
         public Builder aiaOcspServers(String... aiaOcspServers) {
             return aiaOcspServers(List.of(aiaOcspServers));
         }
+
         public Builder caOptions(Output<AuthorityConfigX509ConfigCaOptionsGetArgs> caOptions) {
-            this.caOptions = Objects.requireNonNull(caOptions);
+            $.caOptions = caOptions;
             return this;
         }
+
         public Builder caOptions(AuthorityConfigX509ConfigCaOptionsGetArgs caOptions) {
-            this.caOptions = Output.of(Objects.requireNonNull(caOptions));
-            return this;
+            return caOptions(Output.of(caOptions));
         }
+
         public Builder keyUsage(Output<AuthorityConfigX509ConfigKeyUsageGetArgs> keyUsage) {
-            this.keyUsage = Objects.requireNonNull(keyUsage);
+            $.keyUsage = keyUsage;
             return this;
         }
+
         public Builder keyUsage(AuthorityConfigX509ConfigKeyUsageGetArgs keyUsage) {
-            this.keyUsage = Output.of(Objects.requireNonNull(keyUsage));
-            return this;
+            return keyUsage(Output.of(keyUsage));
         }
+
         public Builder policyIds(@Nullable Output<List<AuthorityConfigX509ConfigPolicyIdGetArgs>> policyIds) {
-            this.policyIds = policyIds;
+            $.policyIds = policyIds;
             return this;
         }
-        public Builder policyIds(@Nullable List<AuthorityConfigX509ConfigPolicyIdGetArgs> policyIds) {
-            this.policyIds = Codegen.ofNullable(policyIds);
-            return this;
+
+        public Builder policyIds(List<AuthorityConfigX509ConfigPolicyIdGetArgs> policyIds) {
+            return policyIds(Output.of(policyIds));
         }
+
         public Builder policyIds(AuthorityConfigX509ConfigPolicyIdGetArgs... policyIds) {
             return policyIds(List.of(policyIds));
-        }        public AuthorityConfigX509ConfigGetArgs build() {
-            return new AuthorityConfigX509ConfigGetArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
+        }
+
+        public AuthorityConfigX509ConfigGetArgs build() {
+            $.caOptions = Objects.requireNonNull($.caOptions, "expected parameter 'caOptions' to be non-null");
+            $.keyUsage = Objects.requireNonNull($.keyUsage, "expected parameter 'keyUsage' to be non-null");
+            return $;
         }
     }
+
 }

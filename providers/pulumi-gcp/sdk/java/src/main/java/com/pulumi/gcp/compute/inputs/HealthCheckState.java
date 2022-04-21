@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.HealthCheckGrpcHealthCheckGetArgs;
 import com.pulumi.gcp.compute.inputs.HealthCheckHttp2HealthCheckGetArgs;
 import com.pulumi.gcp.compute.inputs.HealthCheckHttpHealthCheckGetArgs;
@@ -16,6 +15,7 @@ import com.pulumi.gcp.compute.inputs.HealthCheckTcpHealthCheckGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="checkIntervalSec")
-      private final @Nullable Output<Integer> checkIntervalSec;
+    private @Nullable Output<Integer> checkIntervalSec;
 
-    public Output<Integer> checkIntervalSec() {
-        return this.checkIntervalSec == null ? Codegen.empty() : this.checkIntervalSec;
+    public Optional<Output<Integer>> checkIntervalSec() {
+        return Optional.ofNullable(this.checkIntervalSec);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grpcHealthCheck")
-      private final @Nullable Output<HealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck;
+    private @Nullable Output<HealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck;
 
-    public Output<HealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck() {
-        return this.grpcHealthCheck == null ? Codegen.empty() : this.grpcHealthCheck;
+    public Optional<Output<HealthCheckGrpcHealthCheckGetArgs>> grpcHealthCheck() {
+        return Optional.ofNullable(this.grpcHealthCheck);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthyThreshold")
-      private final @Nullable Output<Integer> healthyThreshold;
+    private @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> healthyThreshold() {
-        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
+    public Optional<Output<Integer>> healthyThreshold() {
+        return Optional.ofNullable(this.healthyThreshold);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="http2HealthCheck")
-      private final @Nullable Output<HealthCheckHttp2HealthCheckGetArgs> http2HealthCheck;
+    private @Nullable Output<HealthCheckHttp2HealthCheckGetArgs> http2HealthCheck;
 
-    public Output<HealthCheckHttp2HealthCheckGetArgs> http2HealthCheck() {
-        return this.http2HealthCheck == null ? Codegen.empty() : this.http2HealthCheck;
+    public Optional<Output<HealthCheckHttp2HealthCheckGetArgs>> http2HealthCheck() {
+        return Optional.ofNullable(this.http2HealthCheck);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpHealthCheck")
-      private final @Nullable Output<HealthCheckHttpHealthCheckGetArgs> httpHealthCheck;
+    private @Nullable Output<HealthCheckHttpHealthCheckGetArgs> httpHealthCheck;
 
-    public Output<HealthCheckHttpHealthCheckGetArgs> httpHealthCheck() {
-        return this.httpHealthCheck == null ? Codegen.empty() : this.httpHealthCheck;
+    public Optional<Output<HealthCheckHttpHealthCheckGetArgs>> httpHealthCheck() {
+        return Optional.ofNullable(this.httpHealthCheck);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpsHealthCheck")
-      private final @Nullable Output<HealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck;
+    private @Nullable Output<HealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck;
 
-    public Output<HealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck() {
-        return this.httpsHealthCheck == null ? Codegen.empty() : this.httpsHealthCheck;
+    public Optional<Output<HealthCheckHttpsHealthCheckGetArgs>> httpsHealthCheck() {
+        return Optional.ofNullable(this.httpsHealthCheck);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logConfig")
-      private final @Nullable Output<HealthCheckLogConfigGetArgs> logConfig;
+    private @Nullable Output<HealthCheckLogConfigGetArgs> logConfig;
 
-    public Output<HealthCheckLogConfigGetArgs> logConfig() {
-        return this.logConfig == null ? Codegen.empty() : this.logConfig;
+    public Optional<Output<HealthCheckLogConfigGetArgs>> logConfig() {
+        return Optional.ofNullable(this.logConfig);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslHealthCheck")
-      private final @Nullable Output<HealthCheckSslHealthCheckGetArgs> sslHealthCheck;
+    private @Nullable Output<HealthCheckSslHealthCheckGetArgs> sslHealthCheck;
 
-    public Output<HealthCheckSslHealthCheckGetArgs> sslHealthCheck() {
-        return this.sslHealthCheck == null ? Codegen.empty() : this.sslHealthCheck;
+    public Optional<Output<HealthCheckSslHealthCheckGetArgs>> sslHealthCheck() {
+        return Optional.ofNullable(this.sslHealthCheck);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tcpHealthCheck")
-      private final @Nullable Output<HealthCheckTcpHealthCheckGetArgs> tcpHealthCheck;
+    private @Nullable Output<HealthCheckTcpHealthCheckGetArgs> tcpHealthCheck;
 
-    public Output<HealthCheckTcpHealthCheckGetArgs> tcpHealthCheck() {
-        return this.tcpHealthCheck == null ? Codegen.empty() : this.tcpHealthCheck;
+    public Optional<Output<HealthCheckTcpHealthCheckGetArgs>> tcpHealthCheck() {
+        return Optional.ofNullable(this.tcpHealthCheck);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeoutSec")
-      private final @Nullable Output<Integer> timeoutSec;
+    private @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> timeoutSec() {
-        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
+    public Optional<Output<Integer>> timeoutSec() {
+        return Optional.ofNullable(this.timeoutSec);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -224,258 +224,208 @@ public final class HealthCheckState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unhealthyThreshold")
-      private final @Nullable Output<Integer> unhealthyThreshold;
+    private @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
+    public Optional<Output<Integer>> unhealthyThreshold() {
+        return Optional.ofNullable(this.unhealthyThreshold);
     }
 
-    public HealthCheckState(
-        @Nullable Output<Integer> checkIntervalSec,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<HealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck,
-        @Nullable Output<Integer> healthyThreshold,
-        @Nullable Output<HealthCheckHttp2HealthCheckGetArgs> http2HealthCheck,
-        @Nullable Output<HealthCheckHttpHealthCheckGetArgs> httpHealthCheck,
-        @Nullable Output<HealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck,
-        @Nullable Output<HealthCheckLogConfigGetArgs> logConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<HealthCheckSslHealthCheckGetArgs> sslHealthCheck,
-        @Nullable Output<HealthCheckTcpHealthCheckGetArgs> tcpHealthCheck,
-        @Nullable Output<Integer> timeoutSec,
-        @Nullable Output<String> type,
-        @Nullable Output<Integer> unhealthyThreshold) {
-        this.checkIntervalSec = checkIntervalSec;
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.grpcHealthCheck = grpcHealthCheck;
-        this.healthyThreshold = healthyThreshold;
-        this.http2HealthCheck = http2HealthCheck;
-        this.httpHealthCheck = httpHealthCheck;
-        this.httpsHealthCheck = httpsHealthCheck;
-        this.logConfig = logConfig;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.sslHealthCheck = sslHealthCheck;
-        this.tcpHealthCheck = tcpHealthCheck;
-        this.timeoutSec = timeoutSec;
-        this.type = type;
-        this.unhealthyThreshold = unhealthyThreshold;
-    }
+    private HealthCheckState() {}
 
-    private HealthCheckState() {
-        this.checkIntervalSec = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.grpcHealthCheck = Codegen.empty();
-        this.healthyThreshold = Codegen.empty();
-        this.http2HealthCheck = Codegen.empty();
-        this.httpHealthCheck = Codegen.empty();
-        this.httpsHealthCheck = Codegen.empty();
-        this.logConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.sslHealthCheck = Codegen.empty();
-        this.tcpHealthCheck = Codegen.empty();
-        this.timeoutSec = Codegen.empty();
-        this.type = Codegen.empty();
-        this.unhealthyThreshold = Codegen.empty();
+    private HealthCheckState(HealthCheckState $) {
+        this.checkIntervalSec = $.checkIntervalSec;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.grpcHealthCheck = $.grpcHealthCheck;
+        this.healthyThreshold = $.healthyThreshold;
+        this.http2HealthCheck = $.http2HealthCheck;
+        this.httpHealthCheck = $.httpHealthCheck;
+        this.httpsHealthCheck = $.httpsHealthCheck;
+        this.logConfig = $.logConfig;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.sslHealthCheck = $.sslHealthCheck;
+        this.tcpHealthCheck = $.tcpHealthCheck;
+        this.timeoutSec = $.timeoutSec;
+        this.type = $.type;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> checkIntervalSec;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<HealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck;
-        private @Nullable Output<Integer> healthyThreshold;
-        private @Nullable Output<HealthCheckHttp2HealthCheckGetArgs> http2HealthCheck;
-        private @Nullable Output<HealthCheckHttpHealthCheckGetArgs> httpHealthCheck;
-        private @Nullable Output<HealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck;
-        private @Nullable Output<HealthCheckLogConfigGetArgs> logConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<HealthCheckSslHealthCheckGetArgs> sslHealthCheck;
-        private @Nullable Output<HealthCheckTcpHealthCheckGetArgs> tcpHealthCheck;
-        private @Nullable Output<Integer> timeoutSec;
-        private @Nullable Output<String> type;
-        private @Nullable Output<Integer> unhealthyThreshold;
+        private HealthCheckState $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckState();
         }
 
         public Builder(HealthCheckState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkIntervalSec = defaults.checkIntervalSec;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.grpcHealthCheck = defaults.grpcHealthCheck;
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.http2HealthCheck = defaults.http2HealthCheck;
-    	      this.httpHealthCheck = defaults.httpHealthCheck;
-    	      this.httpsHealthCheck = defaults.httpsHealthCheck;
-    	      this.logConfig = defaults.logConfig;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.sslHealthCheck = defaults.sslHealthCheck;
-    	      this.tcpHealthCheck = defaults.tcpHealthCheck;
-    	      this.timeoutSec = defaults.timeoutSec;
-    	      this.type = defaults.type;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new HealthCheckState(Objects.requireNonNull(defaults));
         }
 
         public Builder checkIntervalSec(@Nullable Output<Integer> checkIntervalSec) {
-            this.checkIntervalSec = checkIntervalSec;
+            $.checkIntervalSec = checkIntervalSec;
             return this;
         }
-        public Builder checkIntervalSec(@Nullable Integer checkIntervalSec) {
-            this.checkIntervalSec = Codegen.ofNullable(checkIntervalSec);
-            return this;
+
+        public Builder checkIntervalSec(Integer checkIntervalSec) {
+            return checkIntervalSec(Output.of(checkIntervalSec));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder grpcHealthCheck(@Nullable Output<HealthCheckGrpcHealthCheckGetArgs> grpcHealthCheck) {
-            this.grpcHealthCheck = grpcHealthCheck;
+            $.grpcHealthCheck = grpcHealthCheck;
             return this;
         }
-        public Builder grpcHealthCheck(@Nullable HealthCheckGrpcHealthCheckGetArgs grpcHealthCheck) {
-            this.grpcHealthCheck = Codegen.ofNullable(grpcHealthCheck);
-            return this;
+
+        public Builder grpcHealthCheck(HealthCheckGrpcHealthCheckGetArgs grpcHealthCheck) {
+            return grpcHealthCheck(Output.of(grpcHealthCheck));
         }
+
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
-            this.healthyThreshold = healthyThreshold;
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
-        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
-            return this;
+
+        public Builder healthyThreshold(Integer healthyThreshold) {
+            return healthyThreshold(Output.of(healthyThreshold));
         }
+
         public Builder http2HealthCheck(@Nullable Output<HealthCheckHttp2HealthCheckGetArgs> http2HealthCheck) {
-            this.http2HealthCheck = http2HealthCheck;
+            $.http2HealthCheck = http2HealthCheck;
             return this;
         }
-        public Builder http2HealthCheck(@Nullable HealthCheckHttp2HealthCheckGetArgs http2HealthCheck) {
-            this.http2HealthCheck = Codegen.ofNullable(http2HealthCheck);
-            return this;
+
+        public Builder http2HealthCheck(HealthCheckHttp2HealthCheckGetArgs http2HealthCheck) {
+            return http2HealthCheck(Output.of(http2HealthCheck));
         }
+
         public Builder httpHealthCheck(@Nullable Output<HealthCheckHttpHealthCheckGetArgs> httpHealthCheck) {
-            this.httpHealthCheck = httpHealthCheck;
+            $.httpHealthCheck = httpHealthCheck;
             return this;
         }
-        public Builder httpHealthCheck(@Nullable HealthCheckHttpHealthCheckGetArgs httpHealthCheck) {
-            this.httpHealthCheck = Codegen.ofNullable(httpHealthCheck);
-            return this;
+
+        public Builder httpHealthCheck(HealthCheckHttpHealthCheckGetArgs httpHealthCheck) {
+            return httpHealthCheck(Output.of(httpHealthCheck));
         }
+
         public Builder httpsHealthCheck(@Nullable Output<HealthCheckHttpsHealthCheckGetArgs> httpsHealthCheck) {
-            this.httpsHealthCheck = httpsHealthCheck;
+            $.httpsHealthCheck = httpsHealthCheck;
             return this;
         }
-        public Builder httpsHealthCheck(@Nullable HealthCheckHttpsHealthCheckGetArgs httpsHealthCheck) {
-            this.httpsHealthCheck = Codegen.ofNullable(httpsHealthCheck);
-            return this;
+
+        public Builder httpsHealthCheck(HealthCheckHttpsHealthCheckGetArgs httpsHealthCheck) {
+            return httpsHealthCheck(Output.of(httpsHealthCheck));
         }
+
         public Builder logConfig(@Nullable Output<HealthCheckLogConfigGetArgs> logConfig) {
-            this.logConfig = logConfig;
+            $.logConfig = logConfig;
             return this;
         }
-        public Builder logConfig(@Nullable HealthCheckLogConfigGetArgs logConfig) {
-            this.logConfig = Codegen.ofNullable(logConfig);
-            return this;
+
+        public Builder logConfig(HealthCheckLogConfigGetArgs logConfig) {
+            return logConfig(Output.of(logConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder sslHealthCheck(@Nullable Output<HealthCheckSslHealthCheckGetArgs> sslHealthCheck) {
-            this.sslHealthCheck = sslHealthCheck;
+            $.sslHealthCheck = sslHealthCheck;
             return this;
         }
-        public Builder sslHealthCheck(@Nullable HealthCheckSslHealthCheckGetArgs sslHealthCheck) {
-            this.sslHealthCheck = Codegen.ofNullable(sslHealthCheck);
-            return this;
+
+        public Builder sslHealthCheck(HealthCheckSslHealthCheckGetArgs sslHealthCheck) {
+            return sslHealthCheck(Output.of(sslHealthCheck));
         }
+
         public Builder tcpHealthCheck(@Nullable Output<HealthCheckTcpHealthCheckGetArgs> tcpHealthCheck) {
-            this.tcpHealthCheck = tcpHealthCheck;
+            $.tcpHealthCheck = tcpHealthCheck;
             return this;
         }
-        public Builder tcpHealthCheck(@Nullable HealthCheckTcpHealthCheckGetArgs tcpHealthCheck) {
-            this.tcpHealthCheck = Codegen.ofNullable(tcpHealthCheck);
-            return this;
+
+        public Builder tcpHealthCheck(HealthCheckTcpHealthCheckGetArgs tcpHealthCheck) {
+            return tcpHealthCheck(Output.of(tcpHealthCheck));
         }
+
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
-            this.timeoutSec = timeoutSec;
+            $.timeoutSec = timeoutSec;
             return this;
         }
-        public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Codegen.ofNullable(timeoutSec);
-            return this;
+
+        public Builder timeoutSec(Integer timeoutSec) {
+            return timeoutSec(Output.of(timeoutSec));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
-            this.unhealthyThreshold = unhealthyThreshold;
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
-            return this;
-        }        public HealthCheckState build() {
-            return new HealthCheckState(checkIntervalSec, creationTimestamp, description, grpcHealthCheck, healthyThreshold, http2HealthCheck, httpHealthCheck, httpsHealthCheck, logConfig, name, project, selfLink, sslHealthCheck, tcpHealthCheck, timeoutSec, type, unhealthyThreshold);
+
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
+            return unhealthyThreshold(Output.of(unhealthyThreshold));
+        }
+
+        public HealthCheckState build() {
+            return $;
         }
     }
+
 }

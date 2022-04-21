@@ -24,10 +24,10 @@ public final class OutputPathAssetReferenceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="jobId")
-      private final @Nullable String jobId;
+    private @Nullable String jobId;
 
     public Optional<String> jobId() {
-        return this.jobId == null ? Optional.empty() : Optional.ofNullable(this.jobId);
+        return Optional.ofNullable(this.jobId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OutputPathAssetReferenceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class OutputPathAssetReferenceResponse extends com.pulumi.resources
      * 
      */
     @Import(name="referenceType", required=true)
-      private final String referenceType;
+    private String referenceType;
 
     public String referenceType() {
         return this.referenceType;
     }
 
-    public OutputPathAssetReferenceResponse(
-        @Nullable String jobId,
-        @Nullable String path,
-        String referenceType) {
-        this.jobId = jobId;
-        this.path = path;
-        this.referenceType = Codegen.stringProp("referenceType").arg(referenceType).require();
-    }
+    private OutputPathAssetReferenceResponse() {}
 
-    private OutputPathAssetReferenceResponse() {
-        this.jobId = null;
-        this.path = null;
-        this.referenceType = null;
+    private OutputPathAssetReferenceResponse(OutputPathAssetReferenceResponse $) {
+        this.jobId = $.jobId;
+        this.path = $.path;
+        this.referenceType = $.referenceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputPathAssetReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String jobId;
-        private @Nullable String path;
-        private String referenceType;
+        private OutputPathAssetReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputPathAssetReferenceResponse();
         }
 
         public Builder(OutputPathAssetReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobId = defaults.jobId;
-    	      this.path = defaults.path;
-    	      this.referenceType = defaults.referenceType;
+            $ = new OutputPathAssetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = jobId;
+            $.jobId = jobId;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder referenceType(String referenceType) {
-            this.referenceType = Objects.requireNonNull(referenceType);
+            $.referenceType = referenceType;
             return this;
-        }        public OutputPathAssetReferenceResponse build() {
-            return new OutputPathAssetReferenceResponse(jobId, path, referenceType);
+        }
+
+        public OutputPathAssetReferenceResponse build() {
+            $.referenceType = Codegen.stringProp("referenceType").arg($.referenceType).require();
+            return $;
         }
     }
+
 }

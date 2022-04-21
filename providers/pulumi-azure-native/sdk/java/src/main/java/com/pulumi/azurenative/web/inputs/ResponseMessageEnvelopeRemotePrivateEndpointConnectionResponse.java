@@ -30,10 +30,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="error")
-      private final @Nullable ErrorEntityResponse error;
+    private @Nullable ErrorEntityResponse error;
 
     public Optional<ErrorEntityResponse> error() {
-        return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="identity")
-      private final @Nullable ManagedServiceIdentityResponse identity;
+    private @Nullable ManagedServiceIdentityResponse identity;
 
     public Optional<ManagedServiceIdentityResponse> identity() {
-        return this.identity == null ? Optional.empty() : Optional.ofNullable(this.identity);
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="plan")
-      private final @Nullable ArmPlanResponse plan;
+    private @Nullable ArmPlanResponse plan;
 
     public Optional<ArmPlanResponse> plan() {
-        return this.plan == null ? Optional.empty() : Optional.ofNullable(this.plan);
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="properties")
-      private final @Nullable RemotePrivateEndpointConnectionResponse properties;
+    private @Nullable RemotePrivateEndpointConnectionResponse properties;
 
     public Optional<RemotePrivateEndpointConnectionResponse> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="sku")
-      private final @Nullable SkuDescriptionResponse sku;
+    private @Nullable SkuDescriptionResponse sku;
 
     public Optional<SkuDescriptionResponse> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -153,148 +153,114 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      * 
      */
     @Import(name="zones")
-      private final @Nullable List<String> zones;
+    private @Nullable List<String> zones;
 
-    public List<String> zones() {
-        return this.zones == null ? List.of() : this.zones;
+    public Optional<List<String>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(
-        @Nullable ErrorEntityResponse error,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable ArmPlanResponse plan,
-        @Nullable RemotePrivateEndpointConnectionResponse properties,
-        @Nullable SkuDescriptionResponse sku,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String type,
-        @Nullable List<String> zones) {
-        this.error = error;
-        this.id = id;
-        this.identity = identity;
-        this.location = location;
-        this.name = name;
-        this.plan = plan;
-        this.properties = properties;
-        this.sku = sku;
-        this.status = status;
-        this.tags = tags;
-        this.type = type;
-        this.zones = zones;
-    }
+    private ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse() {}
 
-    private ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse() {
-        this.error = null;
-        this.id = null;
-        this.identity = null;
-        this.location = null;
-        this.name = null;
-        this.plan = null;
-        this.properties = null;
-        this.sku = null;
-        this.status = null;
-        this.tags = Map.of();
-        this.type = null;
-        this.zones = List.of();
+    private ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse $) {
+        this.error = $.error;
+        this.id = $.id;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.name = $.name;
+        this.plan = $.plan;
+        this.properties = $.properties;
+        this.sku = $.sku;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ErrorEntityResponse error;
-        private @Nullable String id;
-        private @Nullable ManagedServiceIdentityResponse identity;
-        private @Nullable String location;
-        private @Nullable String name;
-        private @Nullable ArmPlanResponse plan;
-        private @Nullable RemotePrivateEndpointConnectionResponse properties;
-        private @Nullable SkuDescriptionResponse sku;
-        private @Nullable String status;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String type;
-        private @Nullable List<String> zones;
+        private ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse();
         }
 
         public Builder(ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.id = defaults.id;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.plan = defaults.plan;
-    	      this.properties = defaults.properties;
-    	      this.sku = defaults.sku;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.zones = defaults.zones;
+            $ = new ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(@Nullable ErrorEntityResponse error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder plan(@Nullable ArmPlanResponse plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
+
         public Builder properties(@Nullable RemotePrivateEndpointConnectionResponse properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder sku(@Nullable SkuDescriptionResponse sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse build() {
-            return new ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(error, id, identity, location, name, plan, properties, sku, status, tags, type, zones);
+        }
+
+        public ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse build() {
+            return $;
         }
     }
+
 }

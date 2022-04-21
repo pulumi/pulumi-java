@@ -5,9 +5,9 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
      * 
      */
     @Import(name="method")
-      private final @Nullable Output<String> method;
+    private @Nullable Output<String> method;
 
-    public Output<String> method() {
-        return this.method == null ? Codegen.empty() : this.method;
+    public Optional<Output<String>> method() {
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class ServicePerimeterStatusEgressPolicyEgressToOperationMethodSele
      * 
      */
     @Import(name="permission")
-      private final @Nullable Output<String> permission;
+    private @Nullable Output<String> permission;
 
-    public Output<String> permission() {
-        return this.permission == null ? Codegen.empty() : this.permission;
+    public Optional<Output<String>> permission() {
+        return Optional.ofNullable(this.permission);
     }
 
-    public ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs(
-        @Nullable Output<String> method,
-        @Nullable Output<String> permission) {
-        this.method = method;
-        this.permission = permission;
-    }
+    private ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs() {}
 
-    private ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs() {
-        this.method = Codegen.empty();
-        this.permission = Codegen.empty();
+    private ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs(ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs $) {
+        this.method = $.method;
+        this.permission = $.permission;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> method;
-        private @Nullable Output<String> permission;
+        private ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs();
         }
 
         public Builder(ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.method = defaults.method;
-    	      this.permission = defaults.permission;
+            $ = new ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder method(@Nullable Output<String> method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
-        public Builder method(@Nullable String method) {
-            this.method = Codegen.ofNullable(method);
-            return this;
+
+        public Builder method(String method) {
+            return method(Output.of(method));
         }
+
         public Builder permission(@Nullable Output<String> permission) {
-            this.permission = permission;
+            $.permission = permission;
             return this;
         }
-        public Builder permission(@Nullable String permission) {
-            this.permission = Codegen.ofNullable(permission);
-            return this;
-        }        public ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs build() {
-            return new ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs(method, permission);
+
+        public Builder permission(String permission) {
+            return permission(Output.of(permission));
+        }
+
+        public ServicePerimeterStatusEgressPolicyEgressToOperationMethodSelectorArgs build() {
+            return $;
         }
     }
+
 }

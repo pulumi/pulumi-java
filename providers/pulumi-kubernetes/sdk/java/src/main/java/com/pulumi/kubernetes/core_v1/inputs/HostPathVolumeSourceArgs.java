@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -35,63 +35,59 @@ public final class HostPathVolumeSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public HostPathVolumeSourceArgs(
-        Output<String> path,
-        @Nullable Output<String> type) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.type = type;
-    }
+    private HostPathVolumeSourceArgs() {}
 
-    private HostPathVolumeSourceArgs() {
-        this.path = Codegen.empty();
-        this.type = Codegen.empty();
+    private HostPathVolumeSourceArgs(HostPathVolumeSourceArgs $) {
+        this.path = $.path;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostPathVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> path;
-        private @Nullable Output<String> type;
+        private HostPathVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostPathVolumeSourceArgs();
         }
 
         public Builder(HostPathVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.type = defaults.type;
+            $ = new HostPathVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public HostPathVolumeSourceArgs build() {
-            return new HostPathVolumeSourceArgs(path, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public HostPathVolumeSourceArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

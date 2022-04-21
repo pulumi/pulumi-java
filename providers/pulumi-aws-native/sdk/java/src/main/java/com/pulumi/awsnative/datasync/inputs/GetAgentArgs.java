@@ -17,45 +17,45 @@ public final class GetAgentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="agentArn", required=true)
-      private final String agentArn;
+    private String agentArn;
 
     public String agentArn() {
         return this.agentArn;
     }
 
-    public GetAgentArgs(String agentArn) {
-        this.agentArn = Objects.requireNonNull(agentArn, "expected parameter 'agentArn' to be non-null");
-    }
+    private GetAgentArgs() {}
 
-    private GetAgentArgs() {
-        this.agentArn = null;
+    private GetAgentArgs(GetAgentArgs $) {
+        this.agentArn = $.agentArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentArn;
+        private GetAgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAgentArgs();
         }
 
         public Builder(GetAgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentArn = defaults.agentArn;
+            $ = new GetAgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentArn(String agentArn) {
-            this.agentArn = Objects.requireNonNull(agentArn);
+            $.agentArn = agentArn;
             return this;
-        }        public GetAgentArgs build() {
-            return new GetAgentArgs(agentArn);
+        }
+
+        public GetAgentArgs build() {
+            $.agentArn = Objects.requireNonNull($.agentArn, "expected parameter 'agentArn' to be non-null");
+            return $;
         }
     }
+
 }

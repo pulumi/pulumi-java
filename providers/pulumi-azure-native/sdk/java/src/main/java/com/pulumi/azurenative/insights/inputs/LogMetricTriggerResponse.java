@@ -24,10 +24,10 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="metricColumn")
-      private final @Nullable String metricColumn;
+    private @Nullable String metricColumn;
 
     public Optional<String> metricColumn() {
-        return this.metricColumn == null ? Optional.empty() : Optional.ofNullable(this.metricColumn);
+        return Optional.ofNullable(this.metricColumn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="metricTriggerType")
-      private final @Nullable String metricTriggerType;
+    private @Nullable String metricTriggerType;
 
     public Optional<String> metricTriggerType() {
-        return this.metricTriggerType == null ? Optional.empty() : Optional.ofNullable(this.metricTriggerType);
+        return Optional.ofNullable(this.metricTriggerType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="threshold")
-      private final @Nullable Double threshold;
+    private @Nullable Double threshold;
 
     public Optional<Double> threshold() {
-        return this.threshold == null ? Optional.empty() : Optional.ofNullable(this.threshold);
+        return Optional.ofNullable(this.threshold);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class LogMetricTriggerResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="thresholdOperator")
-      private final @Nullable String thresholdOperator;
+    private @Nullable String thresholdOperator;
 
     public Optional<String> thresholdOperator() {
-        return this.thresholdOperator == null ? Optional.empty() : Optional.ofNullable(this.thresholdOperator);
+        return Optional.ofNullable(this.thresholdOperator);
     }
 
-    public LogMetricTriggerResponse(
-        @Nullable String metricColumn,
-        @Nullable String metricTriggerType,
-        @Nullable Double threshold,
-        @Nullable String thresholdOperator) {
-        this.metricColumn = metricColumn;
-        this.metricTriggerType = metricTriggerType;
-        this.threshold = threshold;
-        this.thresholdOperator = thresholdOperator;
-    }
+    private LogMetricTriggerResponse() {}
 
-    private LogMetricTriggerResponse() {
-        this.metricColumn = null;
-        this.metricTriggerType = null;
-        this.threshold = null;
-        this.thresholdOperator = null;
+    private LogMetricTriggerResponse(LogMetricTriggerResponse $) {
+        this.metricColumn = $.metricColumn;
+        this.metricTriggerType = $.metricTriggerType;
+        this.threshold = $.threshold;
+        this.thresholdOperator = $.thresholdOperator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogMetricTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String metricColumn;
-        private @Nullable String metricTriggerType;
-        private @Nullable Double threshold;
-        private @Nullable String thresholdOperator;
+        private LogMetricTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogMetricTriggerResponse();
         }
 
         public Builder(LogMetricTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricColumn = defaults.metricColumn;
-    	      this.metricTriggerType = defaults.metricTriggerType;
-    	      this.threshold = defaults.threshold;
-    	      this.thresholdOperator = defaults.thresholdOperator;
+            $ = new LogMetricTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metricColumn(@Nullable String metricColumn) {
-            this.metricColumn = metricColumn;
+            $.metricColumn = metricColumn;
             return this;
         }
+
         public Builder metricTriggerType(@Nullable String metricTriggerType) {
-            this.metricTriggerType = metricTriggerType;
+            $.metricTriggerType = metricTriggerType;
             return this;
         }
+
         public Builder threshold(@Nullable Double threshold) {
-            this.threshold = threshold;
+            $.threshold = threshold;
             return this;
         }
+
         public Builder thresholdOperator(@Nullable String thresholdOperator) {
-            this.thresholdOperator = thresholdOperator;
+            $.thresholdOperator = thresholdOperator;
             return this;
-        }        public LogMetricTriggerResponse build() {
-            return new LogMetricTriggerResponse(metricColumn, metricTriggerType, threshold, thresholdOperator);
+        }
+
+        public LogMetricTriggerResponse build() {
+            return $;
         }
     }
+
 }

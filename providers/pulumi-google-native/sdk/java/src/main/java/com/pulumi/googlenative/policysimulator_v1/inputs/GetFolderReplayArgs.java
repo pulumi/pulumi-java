@@ -13,78 +13,73 @@ public final class GetFolderReplayArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFolderReplayArgs Empty = new GetFolderReplayArgs();
 
     @Import(name="folderId", required=true)
-      private final String folderId;
+    private String folderId;
 
     public String folderId() {
         return this.folderId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="replayId", required=true)
-      private final String replayId;
+    private String replayId;
 
     public String replayId() {
         return this.replayId;
     }
 
-    public GetFolderReplayArgs(
-        String folderId,
-        String location,
-        String replayId) {
-        this.folderId = Objects.requireNonNull(folderId, "expected parameter 'folderId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.replayId = Objects.requireNonNull(replayId, "expected parameter 'replayId' to be non-null");
-    }
+    private GetFolderReplayArgs() {}
 
-    private GetFolderReplayArgs() {
-        this.folderId = null;
-        this.location = null;
-        this.replayId = null;
+    private GetFolderReplayArgs(GetFolderReplayArgs $) {
+        this.folderId = $.folderId;
+        this.location = $.location;
+        this.replayId = $.replayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFolderReplayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String folderId;
-        private String location;
-        private String replayId;
+        private GetFolderReplayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFolderReplayArgs();
         }
 
         public Builder(GetFolderReplayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.folderId = defaults.folderId;
-    	      this.location = defaults.location;
-    	      this.replayId = defaults.replayId;
+            $ = new GetFolderReplayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder folderId(String folderId) {
-            this.folderId = Objects.requireNonNull(folderId);
+            $.folderId = folderId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder replayId(String replayId) {
-            this.replayId = Objects.requireNonNull(replayId);
+            $.replayId = replayId;
             return this;
-        }        public GetFolderReplayArgs build() {
-            return new GetFolderReplayArgs(folderId, location, replayId);
+        }
+
+        public GetFolderReplayArgs build() {
+            $.folderId = Objects.requireNonNull($.folderId, "expected parameter 'folderId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.replayId = Objects.requireNonNull($.replayId, "expected parameter 'replayId' to be non-null");
+            return $;
         }
     }
+
 }

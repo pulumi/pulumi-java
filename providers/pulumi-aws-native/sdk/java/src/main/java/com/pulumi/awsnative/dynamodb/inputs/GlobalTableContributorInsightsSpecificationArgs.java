@@ -5,7 +5,6 @@ package com.pulumi.awsnative.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class GlobalTableContributorInsightsSpecificationArgs extends com.p
     public static final GlobalTableContributorInsightsSpecificationArgs Empty = new GlobalTableContributorInsightsSpecificationArgs();
 
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public GlobalTableContributorInsightsSpecificationArgs(Output<Boolean> enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GlobalTableContributorInsightsSpecificationArgs() {}
 
-    private GlobalTableContributorInsightsSpecificationArgs() {
-        this.enabled = Codegen.empty();
+    private GlobalTableContributorInsightsSpecificationArgs(GlobalTableContributorInsightsSpecificationArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableContributorInsightsSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
+        private GlobalTableContributorInsightsSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableContributorInsightsSpecificationArgs();
         }
 
         public Builder(GlobalTableContributorInsightsSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GlobalTableContributorInsightsSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public GlobalTableContributorInsightsSpecificationArgs build() {
-            return new GlobalTableContributorInsightsSpecificationArgs(enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public GlobalTableContributorInsightsSpecificationArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

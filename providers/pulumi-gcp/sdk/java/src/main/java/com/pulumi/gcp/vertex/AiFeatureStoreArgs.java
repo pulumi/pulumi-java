@@ -5,12 +5,12 @@ package com.pulumi.gcp.vertex;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.vertex.inputs.AiFeatureStoreOnlineServingConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AiFeatureStoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AiFeatureStoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AiFeatureStoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AiFeatureStoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="onlineServingConfig")
-      private final @Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
+    private @Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
 
-    public Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig() {
-        return this.onlineServingConfig == null ? Codegen.empty() : this.onlineServingConfig;
+    public Optional<Output<AiFeatureStoreOnlineServingConfigArgs>> onlineServingConfig() {
+        return Optional.ofNullable(this.onlineServingConfig);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AiFeatureStoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class AiFeatureStoreArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public AiFeatureStoreArgs(
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.forceDestroy = forceDestroy;
-        this.labels = labels;
-        this.name = name;
-        this.onlineServingConfig = onlineServingConfig;
-        this.project = project;
-        this.region = region;
-    }
+    private AiFeatureStoreArgs() {}
 
-    private AiFeatureStoreArgs() {
-        this.forceDestroy = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.onlineServingConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private AiFeatureStoreArgs(AiFeatureStoreArgs $) {
+        this.forceDestroy = $.forceDestroy;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.onlineServingConfig = $.onlineServingConfig;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiFeatureStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private AiFeatureStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiFeatureStoreArgs();
         }
 
         public Builder(AiFeatureStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.onlineServingConfig = defaults.onlineServingConfig;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new AiFeatureStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder onlineServingConfig(@Nullable Output<AiFeatureStoreOnlineServingConfigArgs> onlineServingConfig) {
-            this.onlineServingConfig = onlineServingConfig;
+            $.onlineServingConfig = onlineServingConfig;
             return this;
         }
-        public Builder onlineServingConfig(@Nullable AiFeatureStoreOnlineServingConfigArgs onlineServingConfig) {
-            this.onlineServingConfig = Codegen.ofNullable(onlineServingConfig);
-            return this;
+
+        public Builder onlineServingConfig(AiFeatureStoreOnlineServingConfigArgs onlineServingConfig) {
+            return onlineServingConfig(Output.of(onlineServingConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public AiFeatureStoreArgs build() {
-            return new AiFeatureStoreArgs(forceDestroy, labels, name, onlineServingConfig, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public AiFeatureStoreArgs build() {
+            return $;
         }
     }
+
 }

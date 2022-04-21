@@ -25,7 +25,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alg", required=true)
-      private final Output<Either<String,AccessPolicyRsaAlgo>> alg;
+    private Output<Either<String,AccessPolicyRsaAlgo>> alg;
 
     public Output<Either<String,AccessPolicyRsaAlgo>> alg() {
         return this.alg;
@@ -36,7 +36,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="e", required=true)
-      private final Output<String> e;
+    private Output<String> e;
 
     public Output<String> e() {
         return this.e;
@@ -47,7 +47,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kid", required=true)
-      private final Output<String> kid;
+    private Output<String> kid;
 
     public Output<String> kid() {
         return this.kid;
@@ -58,7 +58,7 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="n", required=true)
-      private final Output<String> n;
+    private Output<String> n;
 
     public Output<String> n() {
         return this.n;
@@ -70,102 +70,93 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public RsaTokenKeyArgs(
-        Output<Either<String,AccessPolicyRsaAlgo>> alg,
-        Output<String> e,
-        Output<String> kid,
-        Output<String> n,
-        Output<String> type) {
-        this.alg = Objects.requireNonNull(alg, "expected parameter 'alg' to be non-null");
-        this.e = Objects.requireNonNull(e, "expected parameter 'e' to be non-null");
-        this.kid = Objects.requireNonNull(kid, "expected parameter 'kid' to be non-null");
-        this.n = Objects.requireNonNull(n, "expected parameter 'n' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private RsaTokenKeyArgs() {}
 
-    private RsaTokenKeyArgs() {
-        this.alg = Codegen.empty();
-        this.e = Codegen.empty();
-        this.kid = Codegen.empty();
-        this.n = Codegen.empty();
-        this.type = Codegen.empty();
+    private RsaTokenKeyArgs(RsaTokenKeyArgs $) {
+        this.alg = $.alg;
+        this.e = $.e;
+        this.kid = $.kid;
+        this.n = $.n;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RsaTokenKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,AccessPolicyRsaAlgo>> alg;
-        private Output<String> e;
-        private Output<String> kid;
-        private Output<String> n;
-        private Output<String> type;
+        private RsaTokenKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RsaTokenKeyArgs();
         }
 
         public Builder(RsaTokenKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alg = defaults.alg;
-    	      this.e = defaults.e;
-    	      this.kid = defaults.kid;
-    	      this.n = defaults.n;
-    	      this.type = defaults.type;
+            $ = new RsaTokenKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alg(Output<Either<String,AccessPolicyRsaAlgo>> alg) {
-            this.alg = Objects.requireNonNull(alg);
+            $.alg = alg;
             return this;
         }
+
         public Builder alg(Either<String,AccessPolicyRsaAlgo> alg) {
-            this.alg = Output.of(Objects.requireNonNull(alg));
-            return this;
+            return alg(Output.of(alg));
         }
+
         public Builder e(Output<String> e) {
-            this.e = Objects.requireNonNull(e);
+            $.e = e;
             return this;
         }
+
         public Builder e(String e) {
-            this.e = Output.of(Objects.requireNonNull(e));
-            return this;
+            return e(Output.of(e));
         }
+
         public Builder kid(Output<String> kid) {
-            this.kid = Objects.requireNonNull(kid);
+            $.kid = kid;
             return this;
         }
+
         public Builder kid(String kid) {
-            this.kid = Output.of(Objects.requireNonNull(kid));
-            return this;
+            return kid(Output.of(kid));
         }
+
         public Builder n(Output<String> n) {
-            this.n = Objects.requireNonNull(n);
+            $.n = n;
             return this;
         }
+
         public Builder n(String n) {
-            this.n = Output.of(Objects.requireNonNull(n));
-            return this;
+            return n(Output.of(n));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public RsaTokenKeyArgs build() {
-            return new RsaTokenKeyArgs(alg, e, kid, n, type);
+            return type(Output.of(type));
+        }
+
+        public RsaTokenKeyArgs build() {
+            $.alg = Objects.requireNonNull($.alg, "expected parameter 'alg' to be non-null");
+            $.e = Objects.requireNonNull($.e, "expected parameter 'e' to be non-null");
+            $.kid = Objects.requireNonNull($.kid, "expected parameter 'kid' to be non-null");
+            $.n = Objects.requireNonNull($.n, "expected parameter 'n' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

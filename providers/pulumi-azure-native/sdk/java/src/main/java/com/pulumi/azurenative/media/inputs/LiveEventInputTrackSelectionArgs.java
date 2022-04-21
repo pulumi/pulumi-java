@@ -5,9 +5,9 @@ package com.pulumi.azurenative.media.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="operation")
-      private final @Nullable Output<String> operation;
+    private @Nullable Output<String> operation;
 
-    public Output<String> operation() {
-        return this.operation == null ? Codegen.empty() : this.operation;
+    public Optional<Output<String>> operation() {
+        return Optional.ofNullable(this.operation);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="property")
-      private final @Nullable Output<String> property;
+    private @Nullable Output<String> property;
 
-    public Output<String> property() {
-        return this.property == null ? Codegen.empty() : this.property;
+    public Optional<Output<String>> property() {
+        return Optional.ofNullable(this.property);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class LiveEventInputTrackSelectionArgs extends com.pulumi.resources
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public LiveEventInputTrackSelectionArgs(
-        @Nullable Output<String> operation,
-        @Nullable Output<String> property,
-        @Nullable Output<String> value) {
-        this.operation = operation;
-        this.property = property;
-        this.value = value;
-    }
+    private LiveEventInputTrackSelectionArgs() {}
 
-    private LiveEventInputTrackSelectionArgs() {
-        this.operation = Codegen.empty();
-        this.property = Codegen.empty();
-        this.value = Codegen.empty();
+    private LiveEventInputTrackSelectionArgs(LiveEventInputTrackSelectionArgs $) {
+        this.operation = $.operation;
+        this.property = $.property;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiveEventInputTrackSelectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> operation;
-        private @Nullable Output<String> property;
-        private @Nullable Output<String> value;
+        private LiveEventInputTrackSelectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiveEventInputTrackSelectionArgs();
         }
 
         public Builder(LiveEventInputTrackSelectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operation = defaults.operation;
-    	      this.property = defaults.property;
-    	      this.value = defaults.value;
+            $ = new LiveEventInputTrackSelectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operation(@Nullable Output<String> operation) {
-            this.operation = operation;
+            $.operation = operation;
             return this;
         }
-        public Builder operation(@Nullable String operation) {
-            this.operation = Codegen.ofNullable(operation);
-            return this;
+
+        public Builder operation(String operation) {
+            return operation(Output.of(operation));
         }
+
         public Builder property(@Nullable Output<String> property) {
-            this.property = property;
+            $.property = property;
             return this;
         }
-        public Builder property(@Nullable String property) {
-            this.property = Codegen.ofNullable(property);
-            return this;
+
+        public Builder property(String property) {
+            return property(Output.of(property));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public LiveEventInputTrackSelectionArgs build() {
-            return new LiveEventInputTrackSelectionArgs(operation, property, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public LiveEventInputTrackSelectionArgs build() {
+            return $;
         }
     }
+
 }

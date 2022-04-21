@@ -5,9 +5,9 @@ package com.pulumi.aws.codeartifact.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RepositoryPermissionsPolicyState extends com.pulumi.resources
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RepositoryPermissionsPolicyState extends com.pulumi.resources
      * 
      */
     @Import(name="domainOwner")
-      private final @Nullable Output<String> domainOwner;
+    private @Nullable Output<String> domainOwner;
 
-    public Output<String> domainOwner() {
-        return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
+    public Optional<Output<String>> domainOwner() {
+        return Optional.ofNullable(this.domainOwner);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RepositoryPermissionsPolicyState extends com.pulumi.resources
      * 
      */
     @Import(name="policyDocument")
-      private final @Nullable Output<String> policyDocument;
+    private @Nullable Output<String> policyDocument;
 
-    public Output<String> policyDocument() {
-        return this.policyDocument == null ? Codegen.empty() : this.policyDocument;
+    public Optional<Output<String>> policyDocument() {
+        return Optional.ofNullable(this.policyDocument);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class RepositoryPermissionsPolicyState extends com.pulumi.resources
      * 
      */
     @Import(name="policyRevision")
-      private final @Nullable Output<String> policyRevision;
+    private @Nullable Output<String> policyRevision;
 
-    public Output<String> policyRevision() {
-        return this.policyRevision == null ? Codegen.empty() : this.policyRevision;
+    public Optional<Output<String>> policyRevision() {
+        return Optional.ofNullable(this.policyRevision);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class RepositoryPermissionsPolicyState extends com.pulumi.resources
      * 
      */
     @Import(name="repository")
-      private final @Nullable Output<String> repository;
+    private @Nullable Output<String> repository;
 
-    public Output<String> repository() {
-        return this.repository == null ? Codegen.empty() : this.repository;
+    public Optional<Output<String>> repository() {
+        return Optional.ofNullable(this.repository);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class RepositoryPermissionsPolicyState extends com.pulumi.resources
      * 
      */
     @Import(name="resourceArn")
-      private final @Nullable Output<String> resourceArn;
+    private @Nullable Output<String> resourceArn;
 
-    public Output<String> resourceArn() {
-        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
+    public Optional<Output<String>> resourceArn() {
+        return Optional.ofNullable(this.resourceArn);
     }
 
-    public RepositoryPermissionsPolicyState(
-        @Nullable Output<String> domain,
-        @Nullable Output<String> domainOwner,
-        @Nullable Output<String> policyDocument,
-        @Nullable Output<String> policyRevision,
-        @Nullable Output<String> repository,
-        @Nullable Output<String> resourceArn) {
-        this.domain = domain;
-        this.domainOwner = domainOwner;
-        this.policyDocument = policyDocument;
-        this.policyRevision = policyRevision;
-        this.repository = repository;
-        this.resourceArn = resourceArn;
-    }
+    private RepositoryPermissionsPolicyState() {}
 
-    private RepositoryPermissionsPolicyState() {
-        this.domain = Codegen.empty();
-        this.domainOwner = Codegen.empty();
-        this.policyDocument = Codegen.empty();
-        this.policyRevision = Codegen.empty();
-        this.repository = Codegen.empty();
-        this.resourceArn = Codegen.empty();
+    private RepositoryPermissionsPolicyState(RepositoryPermissionsPolicyState $) {
+        this.domain = $.domain;
+        this.domainOwner = $.domainOwner;
+        this.policyDocument = $.policyDocument;
+        this.policyRevision = $.policyRevision;
+        this.repository = $.repository;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryPermissionsPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> domainOwner;
-        private @Nullable Output<String> policyDocument;
-        private @Nullable Output<String> policyRevision;
-        private @Nullable Output<String> repository;
-        private @Nullable Output<String> resourceArn;
+        private RepositoryPermissionsPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryPermissionsPolicyState();
         }
 
         public Builder(RepositoryPermissionsPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.domainOwner = defaults.domainOwner;
-    	      this.policyDocument = defaults.policyDocument;
-    	      this.policyRevision = defaults.policyRevision;
-    	      this.repository = defaults.repository;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new RepositoryPermissionsPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
-            this.domainOwner = domainOwner;
+            $.domainOwner = domainOwner;
             return this;
         }
-        public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = Codegen.ofNullable(domainOwner);
-            return this;
+
+        public Builder domainOwner(String domainOwner) {
+            return domainOwner(Output.of(domainOwner));
         }
+
         public Builder policyDocument(@Nullable Output<String> policyDocument) {
-            this.policyDocument = policyDocument;
+            $.policyDocument = policyDocument;
             return this;
         }
-        public Builder policyDocument(@Nullable String policyDocument) {
-            this.policyDocument = Codegen.ofNullable(policyDocument);
-            return this;
+
+        public Builder policyDocument(String policyDocument) {
+            return policyDocument(Output.of(policyDocument));
         }
+
         public Builder policyRevision(@Nullable Output<String> policyRevision) {
-            this.policyRevision = policyRevision;
+            $.policyRevision = policyRevision;
             return this;
         }
-        public Builder policyRevision(@Nullable String policyRevision) {
-            this.policyRevision = Codegen.ofNullable(policyRevision);
-            return this;
+
+        public Builder policyRevision(String policyRevision) {
+            return policyRevision(Output.of(policyRevision));
         }
+
         public Builder repository(@Nullable Output<String> repository) {
-            this.repository = repository;
+            $.repository = repository;
             return this;
         }
-        public Builder repository(@Nullable String repository) {
-            this.repository = Codegen.ofNullable(repository);
-            return this;
+
+        public Builder repository(String repository) {
+            return repository(Output.of(repository));
         }
+
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
-            this.resourceArn = resourceArn;
+            $.resourceArn = resourceArn;
             return this;
         }
-        public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Codegen.ofNullable(resourceArn);
-            return this;
-        }        public RepositoryPermissionsPolicyState build() {
-            return new RepositoryPermissionsPolicyState(domain, domainOwner, policyDocument, policyRevision, repository, resourceArn);
+
+        public Builder resourceArn(String resourceArn) {
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public RepositoryPermissionsPolicyState build() {
+            return $;
         }
     }
+
 }

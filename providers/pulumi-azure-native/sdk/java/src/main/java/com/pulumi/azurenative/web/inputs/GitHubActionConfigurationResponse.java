@@ -25,10 +25,10 @@ public final class GitHubActionConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="codeConfiguration")
-      private final @Nullable GitHubActionCodeConfigurationResponse codeConfiguration;
+    private @Nullable GitHubActionCodeConfigurationResponse codeConfiguration;
 
     public Optional<GitHubActionCodeConfigurationResponse> codeConfiguration() {
-        return this.codeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.codeConfiguration);
+        return Optional.ofNullable(this.codeConfiguration);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GitHubActionConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="containerConfiguration")
-      private final @Nullable GitHubActionContainerConfigurationResponse containerConfiguration;
+    private @Nullable GitHubActionContainerConfigurationResponse containerConfiguration;
 
     public Optional<GitHubActionContainerConfigurationResponse> containerConfiguration() {
-        return this.containerConfiguration == null ? Optional.empty() : Optional.ofNullable(this.containerConfiguration);
+        return Optional.ofNullable(this.containerConfiguration);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GitHubActionConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="generateWorkflowFile")
-      private final @Nullable Boolean generateWorkflowFile;
+    private @Nullable Boolean generateWorkflowFile;
 
     public Optional<Boolean> generateWorkflowFile() {
-        return this.generateWorkflowFile == null ? Optional.empty() : Optional.ofNullable(this.generateWorkflowFile);
+        return Optional.ofNullable(this.generateWorkflowFile);
     }
 
     /**
@@ -58,73 +58,62 @@ public final class GitHubActionConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="isLinux")
-      private final @Nullable Boolean isLinux;
+    private @Nullable Boolean isLinux;
 
     public Optional<Boolean> isLinux() {
-        return this.isLinux == null ? Optional.empty() : Optional.ofNullable(this.isLinux);
+        return Optional.ofNullable(this.isLinux);
     }
 
-    public GitHubActionConfigurationResponse(
-        @Nullable GitHubActionCodeConfigurationResponse codeConfiguration,
-        @Nullable GitHubActionContainerConfigurationResponse containerConfiguration,
-        @Nullable Boolean generateWorkflowFile,
-        @Nullable Boolean isLinux) {
-        this.codeConfiguration = codeConfiguration;
-        this.containerConfiguration = containerConfiguration;
-        this.generateWorkflowFile = generateWorkflowFile;
-        this.isLinux = isLinux;
-    }
+    private GitHubActionConfigurationResponse() {}
 
-    private GitHubActionConfigurationResponse() {
-        this.codeConfiguration = null;
-        this.containerConfiguration = null;
-        this.generateWorkflowFile = null;
-        this.isLinux = null;
+    private GitHubActionConfigurationResponse(GitHubActionConfigurationResponse $) {
+        this.codeConfiguration = $.codeConfiguration;
+        this.containerConfiguration = $.containerConfiguration;
+        this.generateWorkflowFile = $.generateWorkflowFile;
+        this.isLinux = $.isLinux;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubActionConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable GitHubActionCodeConfigurationResponse codeConfiguration;
-        private @Nullable GitHubActionContainerConfigurationResponse containerConfiguration;
-        private @Nullable Boolean generateWorkflowFile;
-        private @Nullable Boolean isLinux;
+        private GitHubActionConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubActionConfigurationResponse();
         }
 
         public Builder(GitHubActionConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeConfiguration = defaults.codeConfiguration;
-    	      this.containerConfiguration = defaults.containerConfiguration;
-    	      this.generateWorkflowFile = defaults.generateWorkflowFile;
-    	      this.isLinux = defaults.isLinux;
+            $ = new GitHubActionConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder codeConfiguration(@Nullable GitHubActionCodeConfigurationResponse codeConfiguration) {
-            this.codeConfiguration = codeConfiguration;
+            $.codeConfiguration = codeConfiguration;
             return this;
         }
+
         public Builder containerConfiguration(@Nullable GitHubActionContainerConfigurationResponse containerConfiguration) {
-            this.containerConfiguration = containerConfiguration;
+            $.containerConfiguration = containerConfiguration;
             return this;
         }
+
         public Builder generateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
-            this.generateWorkflowFile = generateWorkflowFile;
+            $.generateWorkflowFile = generateWorkflowFile;
             return this;
         }
+
         public Builder isLinux(@Nullable Boolean isLinux) {
-            this.isLinux = isLinux;
+            $.isLinux = isLinux;
             return this;
-        }        public GitHubActionConfigurationResponse build() {
-            return new GitHubActionConfigurationResponse(codeConfiguration, containerConfiguration, generateWorkflowFile, isLinux);
+        }
+
+        public GitHubActionConfigurationResponse build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ComputePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -34,10 +34,10 @@ public final class ComputePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="computePolicyName")
-      private final @Nullable Output<String> computePolicyName;
+    private @Nullable Output<String> computePolicyName;
 
-    public Output<String> computePolicyName() {
-        return this.computePolicyName == null ? Codegen.empty() : this.computePolicyName;
+    public Optional<Output<String>> computePolicyName() {
+        return Optional.ofNullable(this.computePolicyName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ComputePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxDegreeOfParallelismPerJob")
-      private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
+    private @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
-    public Output<Integer> maxDegreeOfParallelismPerJob() {
-        return this.maxDegreeOfParallelismPerJob == null ? Codegen.empty() : this.maxDegreeOfParallelismPerJob;
+    public Optional<Output<Integer>> maxDegreeOfParallelismPerJob() {
+        return Optional.ofNullable(this.maxDegreeOfParallelismPerJob);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ComputePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minPriorityPerJob")
-      private final @Nullable Output<Integer> minPriorityPerJob;
+    private @Nullable Output<Integer> minPriorityPerJob;
 
-    public Output<Integer> minPriorityPerJob() {
-        return this.minPriorityPerJob == null ? Codegen.empty() : this.minPriorityPerJob;
+    public Optional<Output<Integer>> minPriorityPerJob() {
+        return Optional.ofNullable(this.minPriorityPerJob);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class ComputePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<String> objectId;
+    private Output<String> objectId;
 
     public Output<String> objectId() {
         return this.objectId;
@@ -78,7 +78,7 @@ public final class ComputePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectType", required=true)
-      private final Output<Either<String,AADObjectType>> objectType;
+    private Output<Either<String,AADObjectType>> objectType;
 
     public Output<Either<String,AADObjectType>> objectType() {
         return this.objectType;
@@ -89,128 +89,112 @@ public final class ComputePolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ComputePolicyArgs(
-        Output<String> accountName,
-        @Nullable Output<String> computePolicyName,
-        @Nullable Output<Integer> maxDegreeOfParallelismPerJob,
-        @Nullable Output<Integer> minPriorityPerJob,
-        Output<String> objectId,
-        Output<Either<String,AADObjectType>> objectType,
-        Output<String> resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.computePolicyName = computePolicyName;
-        this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
-        this.minPriorityPerJob = minPriorityPerJob;
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ComputePolicyArgs() {}
 
-    private ComputePolicyArgs() {
-        this.accountName = Codegen.empty();
-        this.computePolicyName = Codegen.empty();
-        this.maxDegreeOfParallelismPerJob = Codegen.empty();
-        this.minPriorityPerJob = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.objectType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ComputePolicyArgs(ComputePolicyArgs $) {
+        this.accountName = $.accountName;
+        this.computePolicyName = $.computePolicyName;
+        this.maxDegreeOfParallelismPerJob = $.maxDegreeOfParallelismPerJob;
+        this.minPriorityPerJob = $.minPriorityPerJob;
+        this.objectId = $.objectId;
+        this.objectType = $.objectType;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> computePolicyName;
-        private @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
-        private @Nullable Output<Integer> minPriorityPerJob;
-        private Output<String> objectId;
-        private Output<Either<String,AADObjectType>> objectType;
-        private Output<String> resourceGroupName;
+        private ComputePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputePolicyArgs();
         }
 
         public Builder(ComputePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.computePolicyName = defaults.computePolicyName;
-    	      this.maxDegreeOfParallelismPerJob = defaults.maxDegreeOfParallelismPerJob;
-    	      this.minPriorityPerJob = defaults.minPriorityPerJob;
-    	      this.objectId = defaults.objectId;
-    	      this.objectType = defaults.objectType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ComputePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder computePolicyName(@Nullable Output<String> computePolicyName) {
-            this.computePolicyName = computePolicyName;
+            $.computePolicyName = computePolicyName;
             return this;
         }
-        public Builder computePolicyName(@Nullable String computePolicyName) {
-            this.computePolicyName = Codegen.ofNullable(computePolicyName);
-            return this;
+
+        public Builder computePolicyName(String computePolicyName) {
+            return computePolicyName(Output.of(computePolicyName));
         }
+
         public Builder maxDegreeOfParallelismPerJob(@Nullable Output<Integer> maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
+            $.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
-        public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = Codegen.ofNullable(maxDegreeOfParallelismPerJob);
-            return this;
+
+        public Builder maxDegreeOfParallelismPerJob(Integer maxDegreeOfParallelismPerJob) {
+            return maxDegreeOfParallelismPerJob(Output.of(maxDegreeOfParallelismPerJob));
         }
+
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
-            this.minPriorityPerJob = minPriorityPerJob;
+            $.minPriorityPerJob = minPriorityPerJob;
             return this;
         }
-        public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
-            this.minPriorityPerJob = Codegen.ofNullable(minPriorityPerJob);
-            return this;
+
+        public Builder minPriorityPerJob(Integer minPriorityPerJob) {
+            return minPriorityPerJob(Output.of(minPriorityPerJob));
         }
+
         public Builder objectId(Output<String> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(String objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
+            return objectId(Output.of(objectId));
         }
+
         public Builder objectType(Output<Either<String,AADObjectType>> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(Either<String,AADObjectType> objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
+            return objectType(Output.of(objectType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ComputePolicyArgs build() {
-            return new ComputePolicyArgs(accountName, computePolicyName, maxDegreeOfParallelismPerJob, minPriorityPerJob, objectId, objectType, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ComputePolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

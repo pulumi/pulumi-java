@@ -8,10 +8,10 @@ import com.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import com.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="adminPassword")
-      private final @Nullable Output<String> adminPassword;
+    private @Nullable Output<String> adminPassword;
 
-    public Output<String> adminPassword() {
-        return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
+    public Optional<Output<String>> adminPassword() {
+        return Optional.ofNullable(this.adminPassword);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="adminUsername")
-      private final @Nullable Output<String> adminUsername;
+    private @Nullable Output<String> adminUsername;
 
-    public Output<String> adminUsername() {
-        return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
+    public Optional<Output<String>> adminUsername() {
+        return Optional.ofNullable(this.adminUsername);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="computerNamePrefix")
-      private final @Nullable Output<String> computerNamePrefix;
+    private @Nullable Output<String> computerNamePrefix;
 
-    public Output<String> computerNamePrefix() {
-        return this.computerNamePrefix == null ? Codegen.empty() : this.computerNamePrefix;
+    public Optional<Output<String>> computerNamePrefix() {
+        return Optional.ofNullable(this.computerNamePrefix);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="customData")
-      private final @Nullable Output<String> customData;
+    private @Nullable Output<String> customData;
 
-    public Output<String> customData() {
-        return this.customData == null ? Codegen.empty() : this.customData;
+    public Optional<Output<String>> customData() {
+        return Optional.ofNullable(this.customData);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="linuxConfiguration")
-      private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
+    private @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
-    public Output<LinuxConfigurationArgs> linuxConfiguration() {
-        return this.linuxConfiguration == null ? Codegen.empty() : this.linuxConfiguration;
+    public Optional<Output<LinuxConfigurationArgs>> linuxConfiguration() {
+        return Optional.ofNullable(this.linuxConfiguration);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="secrets")
-      private final @Nullable Output<List<VaultSecretGroupArgs>> secrets;
+    private @Nullable Output<List<VaultSecretGroupArgs>> secrets;
 
-    public Output<List<VaultSecretGroupArgs>> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<List<VaultSecretGroupArgs>>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     /**
@@ -94,131 +94,112 @@ public final class VirtualMachineScaleSetOSProfileArgs extends com.pulumi.resour
      * 
      */
     @Import(name="windowsConfiguration")
-      private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
+    private @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
-    public Output<WindowsConfigurationArgs> windowsConfiguration() {
-        return this.windowsConfiguration == null ? Codegen.empty() : this.windowsConfiguration;
+    public Optional<Output<WindowsConfigurationArgs>> windowsConfiguration() {
+        return Optional.ofNullable(this.windowsConfiguration);
     }
 
-    public VirtualMachineScaleSetOSProfileArgs(
-        @Nullable Output<String> adminPassword,
-        @Nullable Output<String> adminUsername,
-        @Nullable Output<String> computerNamePrefix,
-        @Nullable Output<String> customData,
-        @Nullable Output<LinuxConfigurationArgs> linuxConfiguration,
-        @Nullable Output<List<VaultSecretGroupArgs>> secrets,
-        @Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
-        this.adminPassword = adminPassword;
-        this.adminUsername = adminUsername;
-        this.computerNamePrefix = computerNamePrefix;
-        this.customData = customData;
-        this.linuxConfiguration = linuxConfiguration;
-        this.secrets = secrets;
-        this.windowsConfiguration = windowsConfiguration;
-    }
+    private VirtualMachineScaleSetOSProfileArgs() {}
 
-    private VirtualMachineScaleSetOSProfileArgs() {
-        this.adminPassword = Codegen.empty();
-        this.adminUsername = Codegen.empty();
-        this.computerNamePrefix = Codegen.empty();
-        this.customData = Codegen.empty();
-        this.linuxConfiguration = Codegen.empty();
-        this.secrets = Codegen.empty();
-        this.windowsConfiguration = Codegen.empty();
+    private VirtualMachineScaleSetOSProfileArgs(VirtualMachineScaleSetOSProfileArgs $) {
+        this.adminPassword = $.adminPassword;
+        this.adminUsername = $.adminUsername;
+        this.computerNamePrefix = $.computerNamePrefix;
+        this.customData = $.customData;
+        this.linuxConfiguration = $.linuxConfiguration;
+        this.secrets = $.secrets;
+        this.windowsConfiguration = $.windowsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineScaleSetOSProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> adminPassword;
-        private @Nullable Output<String> adminUsername;
-        private @Nullable Output<String> computerNamePrefix;
-        private @Nullable Output<String> customData;
-        private @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
-        private @Nullable Output<List<VaultSecretGroupArgs>> secrets;
-        private @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
+        private VirtualMachineScaleSetOSProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineScaleSetOSProfileArgs();
         }
 
         public Builder(VirtualMachineScaleSetOSProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminPassword = defaults.adminPassword;
-    	      this.adminUsername = defaults.adminUsername;
-    	      this.computerNamePrefix = defaults.computerNamePrefix;
-    	      this.customData = defaults.customData;
-    	      this.linuxConfiguration = defaults.linuxConfiguration;
-    	      this.secrets = defaults.secrets;
-    	      this.windowsConfiguration = defaults.windowsConfiguration;
+            $ = new VirtualMachineScaleSetOSProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminPassword(@Nullable Output<String> adminPassword) {
-            this.adminPassword = adminPassword;
+            $.adminPassword = adminPassword;
             return this;
         }
-        public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Codegen.ofNullable(adminPassword);
-            return this;
+
+        public Builder adminPassword(String adminPassword) {
+            return adminPassword(Output.of(adminPassword));
         }
+
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
-            this.adminUsername = adminUsername;
+            $.adminUsername = adminUsername;
             return this;
         }
-        public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Codegen.ofNullable(adminUsername);
-            return this;
+
+        public Builder adminUsername(String adminUsername) {
+            return adminUsername(Output.of(adminUsername));
         }
+
         public Builder computerNamePrefix(@Nullable Output<String> computerNamePrefix) {
-            this.computerNamePrefix = computerNamePrefix;
+            $.computerNamePrefix = computerNamePrefix;
             return this;
         }
-        public Builder computerNamePrefix(@Nullable String computerNamePrefix) {
-            this.computerNamePrefix = Codegen.ofNullable(computerNamePrefix);
-            return this;
+
+        public Builder computerNamePrefix(String computerNamePrefix) {
+            return computerNamePrefix(Output.of(computerNamePrefix));
         }
+
         public Builder customData(@Nullable Output<String> customData) {
-            this.customData = customData;
+            $.customData = customData;
             return this;
         }
-        public Builder customData(@Nullable String customData) {
-            this.customData = Codegen.ofNullable(customData);
-            return this;
+
+        public Builder customData(String customData) {
+            return customData(Output.of(customData));
         }
+
         public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
-            this.linuxConfiguration = linuxConfiguration;
+            $.linuxConfiguration = linuxConfiguration;
             return this;
         }
-        public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
-            this.linuxConfiguration = Codegen.ofNullable(linuxConfiguration);
-            return this;
+
+        public Builder linuxConfiguration(LinuxConfigurationArgs linuxConfiguration) {
+            return linuxConfiguration(Output.of(linuxConfiguration));
         }
+
         public Builder secrets(@Nullable Output<List<VaultSecretGroupArgs>> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(List<VaultSecretGroupArgs> secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder secrets(VaultSecretGroupArgs... secrets) {
             return secrets(List.of(secrets));
         }
+
         public Builder windowsConfiguration(@Nullable Output<WindowsConfigurationArgs> windowsConfiguration) {
-            this.windowsConfiguration = windowsConfiguration;
+            $.windowsConfiguration = windowsConfiguration;
             return this;
         }
-        public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
-            this.windowsConfiguration = Codegen.ofNullable(windowsConfiguration);
-            return this;
-        }        public VirtualMachineScaleSetOSProfileArgs build() {
-            return new VirtualMachineScaleSetOSProfileArgs(adminPassword, adminUsername, computerNamePrefix, customData, linuxConfiguration, secrets, windowsConfiguration);
+
+        public Builder windowsConfiguration(WindowsConfigurationArgs windowsConfiguration) {
+            return windowsConfiguration(Output.of(windowsConfiguration));
+        }
+
+        public VirtualMachineScaleSetOSProfileArgs build() {
+            return $;
         }
     }
+
 }

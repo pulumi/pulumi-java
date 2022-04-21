@@ -5,9 +5,9 @@ package com.pulumi.aws.sqs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class QueuePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -31,59 +31,58 @@ public final class QueuePolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queueUrl")
-      private final @Nullable Output<String> queueUrl;
+    private @Nullable Output<String> queueUrl;
 
-    public Output<String> queueUrl() {
-        return this.queueUrl == null ? Codegen.empty() : this.queueUrl;
+    public Optional<Output<String>> queueUrl() {
+        return Optional.ofNullable(this.queueUrl);
     }
 
-    public QueuePolicyState(
-        @Nullable Output<String> policy,
-        @Nullable Output<String> queueUrl) {
-        this.policy = policy;
-        this.queueUrl = queueUrl;
-    }
+    private QueuePolicyState() {}
 
-    private QueuePolicyState() {
-        this.policy = Codegen.empty();
-        this.queueUrl = Codegen.empty();
+    private QueuePolicyState(QueuePolicyState $) {
+        this.policy = $.policy;
+        this.queueUrl = $.queueUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueuePolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> queueUrl;
+        private QueuePolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueuePolicyState();
         }
 
         public Builder(QueuePolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.queueUrl = defaults.queueUrl;
+            $ = new QueuePolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
         public Builder queueUrl(@Nullable Output<String> queueUrl) {
-            this.queueUrl = queueUrl;
+            $.queueUrl = queueUrl;
             return this;
         }
-        public Builder queueUrl(@Nullable String queueUrl) {
-            this.queueUrl = Codegen.ofNullable(queueUrl);
-            return this;
-        }        public QueuePolicyState build() {
-            return new QueuePolicyState(policy, queueUrl);
+
+        public Builder queueUrl(String queueUrl) {
+            return queueUrl(Output.of(queueUrl));
+        }
+
+        public QueuePolicyState build() {
+            return $;
         }
     }
+
 }

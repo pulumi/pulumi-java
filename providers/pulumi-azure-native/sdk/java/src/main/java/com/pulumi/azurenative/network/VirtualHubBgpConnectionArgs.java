@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="connectionName")
-      private final @Nullable Output<String> connectionName;
+    private @Nullable Output<String> connectionName;
 
-    public Output<String> connectionName() {
-        return this.connectionName == null ? Codegen.empty() : this.connectionName;
+    public Optional<Output<String>> connectionName() {
+        return Optional.ofNullable(this.connectionName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="peerAsn")
-      private final @Nullable Output<Double> peerAsn;
+    private @Nullable Output<Double> peerAsn;
 
-    public Output<Double> peerAsn() {
-        return this.peerAsn == null ? Codegen.empty() : this.peerAsn;
+    public Optional<Output<Double>> peerAsn() {
+        return Optional.ofNullable(this.peerAsn);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="peerIp")
-      private final @Nullable Output<String> peerIp;
+    private @Nullable Output<String> peerIp;
 
-    public Output<String> peerIp() {
-        return this.peerIp == null ? Codegen.empty() : this.peerIp;
+    public Optional<Output<String>> peerIp() {
+        return Optional.ofNullable(this.peerIp);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -87,128 +87,110 @@ public final class VirtualHubBgpConnectionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="virtualHubName", required=true)
-      private final Output<String> virtualHubName;
+    private Output<String> virtualHubName;
 
     public Output<String> virtualHubName() {
         return this.virtualHubName;
     }
 
-    public VirtualHubBgpConnectionArgs(
-        @Nullable Output<String> connectionName,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<Double> peerAsn,
-        @Nullable Output<String> peerIp,
-        Output<String> resourceGroupName,
-        Output<String> virtualHubName) {
-        this.connectionName = connectionName;
-        this.id = id;
-        this.name = name;
-        this.peerAsn = peerAsn;
-        this.peerIp = peerIp;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualHubName = Objects.requireNonNull(virtualHubName, "expected parameter 'virtualHubName' to be non-null");
-    }
+    private VirtualHubBgpConnectionArgs() {}
 
-    private VirtualHubBgpConnectionArgs() {
-        this.connectionName = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.peerAsn = Codegen.empty();
-        this.peerIp = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.virtualHubName = Codegen.empty();
+    private VirtualHubBgpConnectionArgs(VirtualHubBgpConnectionArgs $) {
+        this.connectionName = $.connectionName;
+        this.id = $.id;
+        this.name = $.name;
+        this.peerAsn = $.peerAsn;
+        this.peerIp = $.peerIp;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualHubName = $.virtualHubName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubBgpConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectionName;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Double> peerAsn;
-        private @Nullable Output<String> peerIp;
-        private Output<String> resourceGroupName;
-        private Output<String> virtualHubName;
+        private VirtualHubBgpConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubBgpConnectionArgs();
         }
 
         public Builder(VirtualHubBgpConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.peerAsn = defaults.peerAsn;
-    	      this.peerIp = defaults.peerIp;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualHubName = defaults.virtualHubName;
+            $ = new VirtualHubBgpConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(@Nullable Output<String> connectionName) {
-            this.connectionName = connectionName;
+            $.connectionName = connectionName;
             return this;
         }
-        public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Codegen.ofNullable(connectionName);
-            return this;
+
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder peerAsn(@Nullable Output<Double> peerAsn) {
-            this.peerAsn = peerAsn;
+            $.peerAsn = peerAsn;
             return this;
         }
-        public Builder peerAsn(@Nullable Double peerAsn) {
-            this.peerAsn = Codegen.ofNullable(peerAsn);
-            return this;
+
+        public Builder peerAsn(Double peerAsn) {
+            return peerAsn(Output.of(peerAsn));
         }
+
         public Builder peerIp(@Nullable Output<String> peerIp) {
-            this.peerIp = peerIp;
+            $.peerIp = peerIp;
             return this;
         }
-        public Builder peerIp(@Nullable String peerIp) {
-            this.peerIp = Codegen.ofNullable(peerIp);
-            return this;
+
+        public Builder peerIp(String peerIp) {
+            return peerIp(Output.of(peerIp));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder virtualHubName(Output<String> virtualHubName) {
-            this.virtualHubName = Objects.requireNonNull(virtualHubName);
+            $.virtualHubName = virtualHubName;
             return this;
         }
+
         public Builder virtualHubName(String virtualHubName) {
-            this.virtualHubName = Output.of(Objects.requireNonNull(virtualHubName));
-            return this;
-        }        public VirtualHubBgpConnectionArgs build() {
-            return new VirtualHubBgpConnectionArgs(connectionName, id, name, peerAsn, peerIp, resourceGroupName, virtualHubName);
+            return virtualHubName(Output.of(virtualHubName));
+        }
+
+        public VirtualHubBgpConnectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualHubName = Objects.requireNonNull($.virtualHubName, "expected parameter 'virtualHubName' to be non-null");
+            return $;
         }
     }
+
 }

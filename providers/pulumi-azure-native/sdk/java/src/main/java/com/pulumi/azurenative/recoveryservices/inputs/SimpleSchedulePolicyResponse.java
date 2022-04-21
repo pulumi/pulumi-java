@@ -27,7 +27,7 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="schedulePolicyType", required=true)
-      private final String schedulePolicyType;
+    private String schedulePolicyType;
 
     public String schedulePolicyType() {
         return this.schedulePolicyType;
@@ -38,10 +38,10 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scheduleRunDays")
-      private final @Nullable List<String> scheduleRunDays;
+    private @Nullable List<String> scheduleRunDays;
 
-    public List<String> scheduleRunDays() {
-        return this.scheduleRunDays == null ? List.of() : this.scheduleRunDays;
+    public Optional<List<String>> scheduleRunDays() {
+        return Optional.ofNullable(this.scheduleRunDays);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scheduleRunFrequency")
-      private final @Nullable String scheduleRunFrequency;
+    private @Nullable String scheduleRunFrequency;
 
     public Optional<String> scheduleRunFrequency() {
-        return this.scheduleRunFrequency == null ? Optional.empty() : Optional.ofNullable(this.scheduleRunFrequency);
+        return Optional.ofNullable(this.scheduleRunFrequency);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scheduleRunTimes")
-      private final @Nullable List<String> scheduleRunTimes;
+    private @Nullable List<String> scheduleRunTimes;
 
-    public List<String> scheduleRunTimes() {
-        return this.scheduleRunTimes == null ? List.of() : this.scheduleRunTimes;
+    public Optional<List<String>> scheduleRunTimes() {
+        return Optional.ofNullable(this.scheduleRunTimes);
     }
 
     /**
@@ -71,88 +71,77 @@ public final class SimpleSchedulePolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="scheduleWeeklyFrequency")
-      private final @Nullable Integer scheduleWeeklyFrequency;
+    private @Nullable Integer scheduleWeeklyFrequency;
 
     public Optional<Integer> scheduleWeeklyFrequency() {
-        return this.scheduleWeeklyFrequency == null ? Optional.empty() : Optional.ofNullable(this.scheduleWeeklyFrequency);
+        return Optional.ofNullable(this.scheduleWeeklyFrequency);
     }
 
-    public SimpleSchedulePolicyResponse(
-        String schedulePolicyType,
-        @Nullable List<String> scheduleRunDays,
-        @Nullable String scheduleRunFrequency,
-        @Nullable List<String> scheduleRunTimes,
-        @Nullable Integer scheduleWeeklyFrequency) {
-        this.schedulePolicyType = Codegen.stringProp("schedulePolicyType").arg(schedulePolicyType).require();
-        this.scheduleRunDays = scheduleRunDays;
-        this.scheduleRunFrequency = scheduleRunFrequency;
-        this.scheduleRunTimes = scheduleRunTimes;
-        this.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
-    }
+    private SimpleSchedulePolicyResponse() {}
 
-    private SimpleSchedulePolicyResponse() {
-        this.schedulePolicyType = null;
-        this.scheduleRunDays = List.of();
-        this.scheduleRunFrequency = null;
-        this.scheduleRunTimes = List.of();
-        this.scheduleWeeklyFrequency = null;
+    private SimpleSchedulePolicyResponse(SimpleSchedulePolicyResponse $) {
+        this.schedulePolicyType = $.schedulePolicyType;
+        this.scheduleRunDays = $.scheduleRunDays;
+        this.scheduleRunFrequency = $.scheduleRunFrequency;
+        this.scheduleRunTimes = $.scheduleRunTimes;
+        this.scheduleWeeklyFrequency = $.scheduleWeeklyFrequency;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SimpleSchedulePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String schedulePolicyType;
-        private @Nullable List<String> scheduleRunDays;
-        private @Nullable String scheduleRunFrequency;
-        private @Nullable List<String> scheduleRunTimes;
-        private @Nullable Integer scheduleWeeklyFrequency;
+        private SimpleSchedulePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SimpleSchedulePolicyResponse();
         }
 
         public Builder(SimpleSchedulePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedulePolicyType = defaults.schedulePolicyType;
-    	      this.scheduleRunDays = defaults.scheduleRunDays;
-    	      this.scheduleRunFrequency = defaults.scheduleRunFrequency;
-    	      this.scheduleRunTimes = defaults.scheduleRunTimes;
-    	      this.scheduleWeeklyFrequency = defaults.scheduleWeeklyFrequency;
+            $ = new SimpleSchedulePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder schedulePolicyType(String schedulePolicyType) {
-            this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
+            $.schedulePolicyType = schedulePolicyType;
             return this;
         }
+
         public Builder scheduleRunDays(@Nullable List<String> scheduleRunDays) {
-            this.scheduleRunDays = scheduleRunDays;
+            $.scheduleRunDays = scheduleRunDays;
             return this;
         }
+
         public Builder scheduleRunDays(String... scheduleRunDays) {
             return scheduleRunDays(List.of(scheduleRunDays));
         }
+
         public Builder scheduleRunFrequency(@Nullable String scheduleRunFrequency) {
-            this.scheduleRunFrequency = scheduleRunFrequency;
+            $.scheduleRunFrequency = scheduleRunFrequency;
             return this;
         }
+
         public Builder scheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
-            this.scheduleRunTimes = scheduleRunTimes;
+            $.scheduleRunTimes = scheduleRunTimes;
             return this;
         }
+
         public Builder scheduleRunTimes(String... scheduleRunTimes) {
             return scheduleRunTimes(List.of(scheduleRunTimes));
         }
+
         public Builder scheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
-            this.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
+            $.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
             return this;
-        }        public SimpleSchedulePolicyResponse build() {
-            return new SimpleSchedulePolicyResponse(schedulePolicyType, scheduleRunDays, scheduleRunFrequency, scheduleRunTimes, scheduleWeeklyFrequency);
+        }
+
+        public SimpleSchedulePolicyResponse build() {
+            $.schedulePolicyType = Codegen.stringProp("schedulePolicyType").arg($.schedulePolicyType).require();
+            return $;
         }
     }
+
 }

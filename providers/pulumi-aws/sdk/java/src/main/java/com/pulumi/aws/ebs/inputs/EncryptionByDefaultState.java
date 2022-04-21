@@ -5,9 +5,9 @@ package com.pulumi.aws.ebs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class EncryptionByDefaultState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public EncryptionByDefaultState(@Nullable Output<Boolean> enabled) {
-        this.enabled = enabled;
-    }
+    private EncryptionByDefaultState() {}
 
-    private EncryptionByDefaultState() {
-        this.enabled = Codegen.empty();
+    private EncryptionByDefaultState(EncryptionByDefaultState $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionByDefaultState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
+        private EncryptionByDefaultState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionByDefaultState();
         }
 
         public Builder(EncryptionByDefaultState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new EncryptionByDefaultState(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public EncryptionByDefaultState build() {
-            return new EncryptionByDefaultState(enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public EncryptionByDefaultState build() {
+            return $;
         }
     }
+
 }

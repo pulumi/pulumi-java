@@ -5,9 +5,9 @@ package com.pulumi.aws.synthetics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CanaryArtifactConfigS3EncryptionGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="encryptionMode")
-      private final @Nullable Output<String> encryptionMode;
+    private @Nullable Output<String> encryptionMode;
 
-    public Output<String> encryptionMode() {
-        return this.encryptionMode == null ? Codegen.empty() : this.encryptionMode;
+    public Optional<Output<String>> encryptionMode() {
+        return Optional.ofNullable(this.encryptionMode);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class CanaryArtifactConfigS3EncryptionGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
-    public CanaryArtifactConfigS3EncryptionGetArgs(
-        @Nullable Output<String> encryptionMode,
-        @Nullable Output<String> kmsKeyArn) {
-        this.encryptionMode = encryptionMode;
-        this.kmsKeyArn = kmsKeyArn;
-    }
+    private CanaryArtifactConfigS3EncryptionGetArgs() {}
 
-    private CanaryArtifactConfigS3EncryptionGetArgs() {
-        this.encryptionMode = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
+    private CanaryArtifactConfigS3EncryptionGetArgs(CanaryArtifactConfigS3EncryptionGetArgs $) {
+        this.encryptionMode = $.encryptionMode;
+        this.kmsKeyArn = $.kmsKeyArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CanaryArtifactConfigS3EncryptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encryptionMode;
-        private @Nullable Output<String> kmsKeyArn;
+        private CanaryArtifactConfigS3EncryptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CanaryArtifactConfigS3EncryptionGetArgs();
         }
 
         public Builder(CanaryArtifactConfigS3EncryptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionMode = defaults.encryptionMode;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
+            $ = new CanaryArtifactConfigS3EncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionMode(@Nullable Output<String> encryptionMode) {
-            this.encryptionMode = encryptionMode;
+            $.encryptionMode = encryptionMode;
             return this;
         }
-        public Builder encryptionMode(@Nullable String encryptionMode) {
-            this.encryptionMode = Codegen.ofNullable(encryptionMode);
-            return this;
+
+        public Builder encryptionMode(String encryptionMode) {
+            return encryptionMode(Output.of(encryptionMode));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
-        }        public CanaryArtifactConfigS3EncryptionGetArgs build() {
-            return new CanaryArtifactConfigS3EncryptionGetArgs(encryptionMode, kmsKeyArn);
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
+        }
+
+        public CanaryArtifactConfigS3EncryptionGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetComponentVersionArgs extends com.pulumi.resources.InvokeAr
     public static final GetComponentVersionArgs Empty = new GetComponentVersionArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetComponentVersionArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetComponentVersionArgs() {}
 
-    private GetComponentVersionArgs() {
-        this.arn = null;
+    private GetComponentVersionArgs(GetComponentVersionArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetComponentVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetComponentVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetComponentVersionArgs();
         }
 
         public Builder(GetComponentVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetComponentVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetComponentVersionArgs build() {
-            return new GetComponentVersionArgs(arn);
+        }
+
+        public GetComponentVersionArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

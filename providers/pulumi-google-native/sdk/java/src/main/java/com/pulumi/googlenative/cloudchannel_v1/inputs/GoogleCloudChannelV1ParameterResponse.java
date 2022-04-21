@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1ParameterResponse extends com.pulumi.reso
      * 
      */
     @Import(name="editable", required=true)
-      private final Boolean editable;
+    private Boolean editable;
 
     public Boolean editable() {
         return this.editable;
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1ParameterResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,59 @@ public final class GoogleCloudChannelV1ParameterResponse extends com.pulumi.reso
      * 
      */
     @Import(name="value", required=true)
-      private final GoogleCloudChannelV1ValueResponse value;
+    private GoogleCloudChannelV1ValueResponse value;
 
     public GoogleCloudChannelV1ValueResponse value() {
         return this.value;
     }
 
-    public GoogleCloudChannelV1ParameterResponse(
-        Boolean editable,
-        String name,
-        GoogleCloudChannelV1ValueResponse value) {
-        this.editable = Objects.requireNonNull(editable, "expected parameter 'editable' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudChannelV1ParameterResponse() {}
 
-    private GoogleCloudChannelV1ParameterResponse() {
-        this.editable = null;
-        this.name = null;
-        this.value = null;
+    private GoogleCloudChannelV1ParameterResponse(GoogleCloudChannelV1ParameterResponse $) {
+        this.editable = $.editable;
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1ParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean editable;
-        private String name;
-        private GoogleCloudChannelV1ValueResponse value;
+        private GoogleCloudChannelV1ParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1ParameterResponse();
         }
 
         public Builder(GoogleCloudChannelV1ParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.editable = defaults.editable;
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudChannelV1ParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder editable(Boolean editable) {
-            this.editable = Objects.requireNonNull(editable);
+            $.editable = editable;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(GoogleCloudChannelV1ValueResponse value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GoogleCloudChannelV1ParameterResponse build() {
-            return new GoogleCloudChannelV1ParameterResponse(editable, name, value);
+        }
+
+        public GoogleCloudChannelV1ParameterResponse build() {
+            $.editable = Objects.requireNonNull($.editable, "expected parameter 'editable' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

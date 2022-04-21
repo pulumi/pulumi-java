@@ -21,7 +21,7 @@ public final class DataSourceRdsParameters extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="database", required=true)
-      private final String database;
+    private String database;
 
     public String database() {
         return this.database;
@@ -32,55 +32,52 @@ public final class DataSourceRdsParameters extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
-    public DataSourceRdsParameters(
-        String database,
-        String instanceId) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-    }
+    private DataSourceRdsParameters() {}
 
-    private DataSourceRdsParameters() {
-        this.database = null;
-        this.instanceId = null;
+    private DataSourceRdsParameters(DataSourceRdsParameters $) {
+        this.database = $.database;
+        this.instanceId = $.instanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceRdsParameters defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String database;
-        private String instanceId;
+        private DataSourceRdsParameters $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceRdsParameters();
         }
 
         public Builder(DataSourceRdsParameters defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.instanceId = defaults.instanceId;
+            $ = new DataSourceRdsParameters(Objects.requireNonNull(defaults));
         }
 
         public Builder database(String database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
-        }        public DataSourceRdsParameters build() {
-            return new DataSourceRdsParameters(database, instanceId);
+        }
+
+        public DataSourceRdsParameters build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

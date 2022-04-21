@@ -5,9 +5,9 @@ package com.pulumi.awsnative.appsync;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class DomainNameArgs extends com.pulumi.resources.ResourceArgs {
     public static final DomainNameArgs Empty = new DomainNameArgs();
 
     @Import(name="certificateArn", required=true)
-      private final Output<String> certificateArn;
+    private Output<String> certificateArn;
 
     public Output<String> certificateArn() {
         return this.certificateArn;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
-    public DomainNameArgs(
-        Output<String> certificateArn,
-        @Nullable Output<String> description) {
-        this.certificateArn = Objects.requireNonNull(certificateArn, "expected parameter 'certificateArn' to be non-null");
-        this.description = description;
-    }
+    private DomainNameArgs() {}
 
-    private DomainNameArgs() {
-        this.certificateArn = Codegen.empty();
-        this.description = Codegen.empty();
+    private DomainNameArgs(DomainNameArgs $) {
+        this.certificateArn = $.certificateArn;
+        this.description = $.description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateArn;
-        private @Nullable Output<String> description;
+        private DomainNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainNameArgs();
         }
 
         public Builder(DomainNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
-    	      this.description = defaults.description;
+            $ = new DomainNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(Output<String> certificateArn) {
-            this.certificateArn = Objects.requireNonNull(certificateArn);
+            $.certificateArn = certificateArn;
             return this;
         }
+
         public Builder certificateArn(String certificateArn) {
-            this.certificateArn = Output.of(Objects.requireNonNull(certificateArn));
-            return this;
+            return certificateArn(Output.of(certificateArn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
-        }        public DomainNameArgs build() {
-            return new DomainNameArgs(certificateArn, description);
+
+        public Builder description(String description) {
+            return description(Output.of(description));
+        }
+
+        public DomainNameArgs build() {
+            $.certificateArn = Objects.requireNonNull($.certificateArn, "expected parameter 'certificateArn' to be non-null");
+            return $;
         }
     }
+
 }

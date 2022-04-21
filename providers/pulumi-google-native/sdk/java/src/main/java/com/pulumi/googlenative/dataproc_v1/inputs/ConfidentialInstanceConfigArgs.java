@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConfidentialInstanceConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="enableConfidentialCompute")
-      private final @Nullable Output<Boolean> enableConfidentialCompute;
+    private @Nullable Output<Boolean> enableConfidentialCompute;
 
-    public Output<Boolean> enableConfidentialCompute() {
-        return this.enableConfidentialCompute == null ? Codegen.empty() : this.enableConfidentialCompute;
+    public Optional<Output<Boolean>> enableConfidentialCompute() {
+        return Optional.ofNullable(this.enableConfidentialCompute);
     }
 
-    public ConfidentialInstanceConfigArgs(@Nullable Output<Boolean> enableConfidentialCompute) {
-        this.enableConfidentialCompute = enableConfidentialCompute;
-    }
+    private ConfidentialInstanceConfigArgs() {}
 
-    private ConfidentialInstanceConfigArgs() {
-        this.enableConfidentialCompute = Codegen.empty();
+    private ConfidentialInstanceConfigArgs(ConfidentialInstanceConfigArgs $) {
+        this.enableConfidentialCompute = $.enableConfidentialCompute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfidentialInstanceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableConfidentialCompute;
+        private ConfidentialInstanceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfidentialInstanceConfigArgs();
         }
 
         public Builder(ConfidentialInstanceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
+            $ = new ConfidentialInstanceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableConfidentialCompute(@Nullable Output<Boolean> enableConfidentialCompute) {
-            this.enableConfidentialCompute = enableConfidentialCompute;
+            $.enableConfidentialCompute = enableConfidentialCompute;
             return this;
         }
-        public Builder enableConfidentialCompute(@Nullable Boolean enableConfidentialCompute) {
-            this.enableConfidentialCompute = Codegen.ofNullable(enableConfidentialCompute);
-            return this;
-        }        public ConfidentialInstanceConfigArgs build() {
-            return new ConfidentialInstanceConfigArgs(enableConfidentialCompute);
+
+        public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
+            return enableConfidentialCompute(Output.of(enableConfidentialCompute));
+        }
+
+        public ConfidentialInstanceConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.azurenative.datafactory.inputs;
 import com.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -24,7 +23,7 @@ public final class RedshiftUnloadSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<Object> bucketName;
+    private Output<Object> bucketName;
 
     public Output<Object> bucketName() {
         return this.bucketName;
@@ -35,63 +34,60 @@ public final class RedshiftUnloadSettingsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="s3LinkedServiceName", required=true)
-      private final Output<LinkedServiceReferenceArgs> s3LinkedServiceName;
+    private Output<LinkedServiceReferenceArgs> s3LinkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> s3LinkedServiceName() {
         return this.s3LinkedServiceName;
     }
 
-    public RedshiftUnloadSettingsArgs(
-        Output<Object> bucketName,
-        Output<LinkedServiceReferenceArgs> s3LinkedServiceName) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName, "expected parameter 's3LinkedServiceName' to be non-null");
-    }
+    private RedshiftUnloadSettingsArgs() {}
 
-    private RedshiftUnloadSettingsArgs() {
-        this.bucketName = Codegen.empty();
-        this.s3LinkedServiceName = Codegen.empty();
+    private RedshiftUnloadSettingsArgs(RedshiftUnloadSettingsArgs $) {
+        this.bucketName = $.bucketName;
+        this.s3LinkedServiceName = $.s3LinkedServiceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RedshiftUnloadSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> bucketName;
-        private Output<LinkedServiceReferenceArgs> s3LinkedServiceName;
+        private RedshiftUnloadSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RedshiftUnloadSettingsArgs();
         }
 
         public Builder(RedshiftUnloadSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.s3LinkedServiceName = defaults.s3LinkedServiceName;
+            $ = new RedshiftUnloadSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Output<Object> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(Object bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder s3LinkedServiceName(Output<LinkedServiceReferenceArgs> s3LinkedServiceName) {
-            this.s3LinkedServiceName = Objects.requireNonNull(s3LinkedServiceName);
+            $.s3LinkedServiceName = s3LinkedServiceName;
             return this;
         }
+
         public Builder s3LinkedServiceName(LinkedServiceReferenceArgs s3LinkedServiceName) {
-            this.s3LinkedServiceName = Output.of(Objects.requireNonNull(s3LinkedServiceName));
-            return this;
-        }        public RedshiftUnloadSettingsArgs build() {
-            return new RedshiftUnloadSettingsArgs(bucketName, s3LinkedServiceName);
+            return s3LinkedServiceName(Output.of(s3LinkedServiceName));
+        }
+
+        public RedshiftUnloadSettingsArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.s3LinkedServiceName = Objects.requireNonNull($.s3LinkedServiceName, "expected parameter 's3LinkedServiceName' to be non-null");
+            return $;
         }
     }
+
 }

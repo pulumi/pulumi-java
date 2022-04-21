@@ -24,10 +24,10 @@ public final class OriginEndpointStreamSelection extends com.pulumi.resources.In
      * 
      */
     @Import(name="maxVideoBitsPerSecond")
-      private final @Nullable Integer maxVideoBitsPerSecond;
+    private @Nullable Integer maxVideoBitsPerSecond;
 
     public Optional<Integer> maxVideoBitsPerSecond() {
-        return this.maxVideoBitsPerSecond == null ? Optional.empty() : Optional.ofNullable(this.maxVideoBitsPerSecond);
+        return Optional.ofNullable(this.maxVideoBitsPerSecond);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OriginEndpointStreamSelection extends com.pulumi.resources.In
      * 
      */
     @Import(name="minVideoBitsPerSecond")
-      private final @Nullable Integer minVideoBitsPerSecond;
+    private @Nullable Integer minVideoBitsPerSecond;
 
     public Optional<Integer> minVideoBitsPerSecond() {
-        return this.minVideoBitsPerSecond == null ? Optional.empty() : Optional.ofNullable(this.minVideoBitsPerSecond);
+        return Optional.ofNullable(this.minVideoBitsPerSecond);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class OriginEndpointStreamSelection extends com.pulumi.resources.In
      * 
      */
     @Import(name="streamOrder")
-      private final @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder;
+    private @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder;
 
     public Optional<OriginEndpointStreamSelectionStreamOrder> streamOrder() {
-        return this.streamOrder == null ? Optional.empty() : Optional.ofNullable(this.streamOrder);
+        return Optional.ofNullable(this.streamOrder);
     }
 
-    public OriginEndpointStreamSelection(
-        @Nullable Integer maxVideoBitsPerSecond,
-        @Nullable Integer minVideoBitsPerSecond,
-        @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
-        this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
-        this.minVideoBitsPerSecond = minVideoBitsPerSecond;
-        this.streamOrder = streamOrder;
-    }
+    private OriginEndpointStreamSelection() {}
 
-    private OriginEndpointStreamSelection() {
-        this.maxVideoBitsPerSecond = null;
-        this.minVideoBitsPerSecond = null;
-        this.streamOrder = null;
+    private OriginEndpointStreamSelection(OriginEndpointStreamSelection $) {
+        this.maxVideoBitsPerSecond = $.maxVideoBitsPerSecond;
+        this.minVideoBitsPerSecond = $.minVideoBitsPerSecond;
+        this.streamOrder = $.streamOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OriginEndpointStreamSelection defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxVideoBitsPerSecond;
-        private @Nullable Integer minVideoBitsPerSecond;
-        private @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder;
+        private OriginEndpointStreamSelection $;
 
         public Builder() {
-    	      // Empty
+            $ = new OriginEndpointStreamSelection();
         }
 
         public Builder(OriginEndpointStreamSelection defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxVideoBitsPerSecond = defaults.maxVideoBitsPerSecond;
-    	      this.minVideoBitsPerSecond = defaults.minVideoBitsPerSecond;
-    	      this.streamOrder = defaults.streamOrder;
+            $ = new OriginEndpointStreamSelection(Objects.requireNonNull(defaults));
         }
 
         public Builder maxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
-            this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
+            $.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
+
         public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
-            this.minVideoBitsPerSecond = minVideoBitsPerSecond;
+            $.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
+
         public Builder streamOrder(@Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
-            this.streamOrder = streamOrder;
+            $.streamOrder = streamOrder;
             return this;
-        }        public OriginEndpointStreamSelection build() {
-            return new OriginEndpointStreamSelection(maxVideoBitsPerSecond, minVideoBitsPerSecond, streamOrder);
+        }
+
+        public OriginEndpointStreamSelection build() {
+            return $;
         }
     }
+
 }

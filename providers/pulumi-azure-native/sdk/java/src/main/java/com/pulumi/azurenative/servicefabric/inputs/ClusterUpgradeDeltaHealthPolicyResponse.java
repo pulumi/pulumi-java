@@ -26,10 +26,10 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="applicationDeltaHealthPolicies")
-      private final @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
+    private @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
 
-    public Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies() {
-        return this.applicationDeltaHealthPolicies == null ? Map.of() : this.applicationDeltaHealthPolicies;
+    public Optional<Map<String,ApplicationDeltaHealthPolicyResponse>> applicationDeltaHealthPolicies() {
+        return Optional.ofNullable(this.applicationDeltaHealthPolicies);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxPercentDeltaUnhealthyApplications", required=true)
-      private final Integer maxPercentDeltaUnhealthyApplications;
+    private Integer maxPercentDeltaUnhealthyApplications;
 
     public Integer maxPercentDeltaUnhealthyApplications() {
         return this.maxPercentDeltaUnhealthyApplications;
@@ -52,7 +52,7 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxPercentDeltaUnhealthyNodes", required=true)
-      private final Integer maxPercentDeltaUnhealthyNodes;
+    private Integer maxPercentDeltaUnhealthyNodes;
 
     public Integer maxPercentDeltaUnhealthyNodes() {
         return this.maxPercentDeltaUnhealthyNodes;
@@ -65,73 +65,65 @@ public final class ClusterUpgradeDeltaHealthPolicyResponse extends com.pulumi.re
      * 
      */
     @Import(name="maxPercentUpgradeDomainDeltaUnhealthyNodes", required=true)
-      private final Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
+    private Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
 
     public Integer maxPercentUpgradeDomainDeltaUnhealthyNodes() {
         return this.maxPercentUpgradeDomainDeltaUnhealthyNodes;
     }
 
-    public ClusterUpgradeDeltaHealthPolicyResponse(
-        @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies,
-        Integer maxPercentDeltaUnhealthyApplications,
-        Integer maxPercentDeltaUnhealthyNodes,
-        Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
-        this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
-        this.maxPercentDeltaUnhealthyApplications = Objects.requireNonNull(maxPercentDeltaUnhealthyApplications, "expected parameter 'maxPercentDeltaUnhealthyApplications' to be non-null");
-        this.maxPercentDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentDeltaUnhealthyNodes, "expected parameter 'maxPercentDeltaUnhealthyNodes' to be non-null");
-        this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes, "expected parameter 'maxPercentUpgradeDomainDeltaUnhealthyNodes' to be non-null");
-    }
+    private ClusterUpgradeDeltaHealthPolicyResponse() {}
 
-    private ClusterUpgradeDeltaHealthPolicyResponse() {
-        this.applicationDeltaHealthPolicies = Map.of();
-        this.maxPercentDeltaUnhealthyApplications = null;
-        this.maxPercentDeltaUnhealthyNodes = null;
-        this.maxPercentUpgradeDomainDeltaUnhealthyNodes = null;
+    private ClusterUpgradeDeltaHealthPolicyResponse(ClusterUpgradeDeltaHealthPolicyResponse $) {
+        this.applicationDeltaHealthPolicies = $.applicationDeltaHealthPolicies;
+        this.maxPercentDeltaUnhealthyApplications = $.maxPercentDeltaUnhealthyApplications;
+        this.maxPercentDeltaUnhealthyNodes = $.maxPercentDeltaUnhealthyNodes;
+        this.maxPercentUpgradeDomainDeltaUnhealthyNodes = $.maxPercentUpgradeDomainDeltaUnhealthyNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterUpgradeDeltaHealthPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies;
-        private Integer maxPercentDeltaUnhealthyApplications;
-        private Integer maxPercentDeltaUnhealthyNodes;
-        private Integer maxPercentUpgradeDomainDeltaUnhealthyNodes;
+        private ClusterUpgradeDeltaHealthPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterUpgradeDeltaHealthPolicyResponse();
         }
 
         public Builder(ClusterUpgradeDeltaHealthPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationDeltaHealthPolicies = defaults.applicationDeltaHealthPolicies;
-    	      this.maxPercentDeltaUnhealthyApplications = defaults.maxPercentDeltaUnhealthyApplications;
-    	      this.maxPercentDeltaUnhealthyNodes = defaults.maxPercentDeltaUnhealthyNodes;
-    	      this.maxPercentUpgradeDomainDeltaUnhealthyNodes = defaults.maxPercentUpgradeDomainDeltaUnhealthyNodes;
+            $ = new ClusterUpgradeDeltaHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationDeltaHealthPolicies(@Nullable Map<String,ApplicationDeltaHealthPolicyResponse> applicationDeltaHealthPolicies) {
-            this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
+            $.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
             return this;
         }
+
         public Builder maxPercentDeltaUnhealthyApplications(Integer maxPercentDeltaUnhealthyApplications) {
-            this.maxPercentDeltaUnhealthyApplications = Objects.requireNonNull(maxPercentDeltaUnhealthyApplications);
+            $.maxPercentDeltaUnhealthyApplications = maxPercentDeltaUnhealthyApplications;
             return this;
         }
+
         public Builder maxPercentDeltaUnhealthyNodes(Integer maxPercentDeltaUnhealthyNodes) {
-            this.maxPercentDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentDeltaUnhealthyNodes);
+            $.maxPercentDeltaUnhealthyNodes = maxPercentDeltaUnhealthyNodes;
             return this;
         }
+
         public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
-            this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes);
+            $.maxPercentUpgradeDomainDeltaUnhealthyNodes = maxPercentUpgradeDomainDeltaUnhealthyNodes;
             return this;
-        }        public ClusterUpgradeDeltaHealthPolicyResponse build() {
-            return new ClusterUpgradeDeltaHealthPolicyResponse(applicationDeltaHealthPolicies, maxPercentDeltaUnhealthyApplications, maxPercentDeltaUnhealthyNodes, maxPercentUpgradeDomainDeltaUnhealthyNodes);
+        }
+
+        public ClusterUpgradeDeltaHealthPolicyResponse build() {
+            $.maxPercentDeltaUnhealthyApplications = Objects.requireNonNull($.maxPercentDeltaUnhealthyApplications, "expected parameter 'maxPercentDeltaUnhealthyApplications' to be non-null");
+            $.maxPercentDeltaUnhealthyNodes = Objects.requireNonNull($.maxPercentDeltaUnhealthyNodes, "expected parameter 'maxPercentDeltaUnhealthyNodes' to be non-null");
+            $.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull($.maxPercentUpgradeDomainDeltaUnhealthyNodes, "expected parameter 'maxPercentUpgradeDomainDeltaUnhealthyNodes' to be non-null");
+            return $;
         }
     }
+
 }

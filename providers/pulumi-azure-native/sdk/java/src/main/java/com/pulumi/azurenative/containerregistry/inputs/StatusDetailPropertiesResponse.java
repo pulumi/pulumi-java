@@ -21,7 +21,7 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,7 +32,7 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="correlationId", required=true)
-      private final String correlationId;
+    private String correlationId;
 
     public String correlationId() {
         return this.correlationId;
@@ -43,7 +43,7 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -54,7 +54,7 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="timestamp", required=true)
-      private final String timestamp;
+    private String timestamp;
 
     public String timestamp() {
         return this.timestamp;
@@ -65,82 +65,73 @@ public final class StatusDetailPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public StatusDetailPropertiesResponse(
-        String code,
-        String correlationId,
-        String description,
-        String timestamp,
-        String type) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.correlationId = Objects.requireNonNull(correlationId, "expected parameter 'correlationId' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.timestamp = Objects.requireNonNull(timestamp, "expected parameter 'timestamp' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private StatusDetailPropertiesResponse() {}
 
-    private StatusDetailPropertiesResponse() {
-        this.code = null;
-        this.correlationId = null;
-        this.description = null;
-        this.timestamp = null;
-        this.type = null;
+    private StatusDetailPropertiesResponse(StatusDetailPropertiesResponse $) {
+        this.code = $.code;
+        this.correlationId = $.correlationId;
+        this.description = $.description;
+        this.timestamp = $.timestamp;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusDetailPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String correlationId;
-        private String description;
-        private String timestamp;
-        private String type;
+        private StatusDetailPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusDetailPropertiesResponse();
         }
 
         public Builder(StatusDetailPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.correlationId = defaults.correlationId;
-    	      this.description = defaults.description;
-    	      this.timestamp = defaults.timestamp;
-    	      this.type = defaults.type;
+            $ = new StatusDetailPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder correlationId(String correlationId) {
-            this.correlationId = Objects.requireNonNull(correlationId);
+            $.correlationId = correlationId;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder timestamp(String timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp);
+            $.timestamp = timestamp;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public StatusDetailPropertiesResponse build() {
-            return new StatusDetailPropertiesResponse(code, correlationId, description, timestamp, type);
+        }
+
+        public StatusDetailPropertiesResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.correlationId = Objects.requireNonNull($.correlationId, "expected parameter 'correlationId' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.timestamp = Objects.requireNonNull($.timestamp, "expected parameter 'timestamp' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

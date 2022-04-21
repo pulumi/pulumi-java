@@ -24,10 +24,10 @@ public final class FeedbackPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="lockDurationAsIso8601")
-      private final @Nullable String lockDurationAsIso8601;
+    private @Nullable String lockDurationAsIso8601;
 
     public Optional<String> lockDurationAsIso8601() {
-        return this.lockDurationAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.lockDurationAsIso8601);
+        return Optional.ofNullable(this.lockDurationAsIso8601);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FeedbackPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="maxDeliveryCount")
-      private final @Nullable Integer maxDeliveryCount;
+    private @Nullable Integer maxDeliveryCount;
 
     public Optional<Integer> maxDeliveryCount() {
-        return this.maxDeliveryCount == null ? Optional.empty() : Optional.ofNullable(this.maxDeliveryCount);
+        return Optional.ofNullable(this.maxDeliveryCount);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class FeedbackPropertiesResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ttlAsIso8601")
-      private final @Nullable String ttlAsIso8601;
+    private @Nullable String ttlAsIso8601;
 
     public Optional<String> ttlAsIso8601() {
-        return this.ttlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.ttlAsIso8601);
+        return Optional.ofNullable(this.ttlAsIso8601);
     }
 
-    public FeedbackPropertiesResponse(
-        @Nullable String lockDurationAsIso8601,
-        @Nullable Integer maxDeliveryCount,
-        @Nullable String ttlAsIso8601) {
-        this.lockDurationAsIso8601 = lockDurationAsIso8601;
-        this.maxDeliveryCount = maxDeliveryCount;
-        this.ttlAsIso8601 = ttlAsIso8601;
-    }
+    private FeedbackPropertiesResponse() {}
 
-    private FeedbackPropertiesResponse() {
-        this.lockDurationAsIso8601 = null;
-        this.maxDeliveryCount = null;
-        this.ttlAsIso8601 = null;
+    private FeedbackPropertiesResponse(FeedbackPropertiesResponse $) {
+        this.lockDurationAsIso8601 = $.lockDurationAsIso8601;
+        this.maxDeliveryCount = $.maxDeliveryCount;
+        this.ttlAsIso8601 = $.ttlAsIso8601;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeedbackPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String lockDurationAsIso8601;
-        private @Nullable Integer maxDeliveryCount;
-        private @Nullable String ttlAsIso8601;
+        private FeedbackPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeedbackPropertiesResponse();
         }
 
         public Builder(FeedbackPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lockDurationAsIso8601 = defaults.lockDurationAsIso8601;
-    	      this.maxDeliveryCount = defaults.maxDeliveryCount;
-    	      this.ttlAsIso8601 = defaults.ttlAsIso8601;
+            $ = new FeedbackPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lockDurationAsIso8601(@Nullable String lockDurationAsIso8601) {
-            this.lockDurationAsIso8601 = lockDurationAsIso8601;
+            $.lockDurationAsIso8601 = lockDurationAsIso8601;
             return this;
         }
+
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
-            this.maxDeliveryCount = maxDeliveryCount;
+            $.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
+
         public Builder ttlAsIso8601(@Nullable String ttlAsIso8601) {
-            this.ttlAsIso8601 = ttlAsIso8601;
+            $.ttlAsIso8601 = ttlAsIso8601;
             return this;
-        }        public FeedbackPropertiesResponse build() {
-            return new FeedbackPropertiesResponse(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);
+        }
+
+        public FeedbackPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class DeliveryStreamElasticsearchBufferingHintsArgs extends com.pul
     public static final DeliveryStreamElasticsearchBufferingHintsArgs Empty = new DeliveryStreamElasticsearchBufferingHintsArgs();
 
     @Import(name="intervalInSeconds")
-      private final @Nullable Output<Integer> intervalInSeconds;
+    private @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
+    public Optional<Output<Integer>> intervalInSeconds() {
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     @Import(name="sizeInMBs")
-      private final @Nullable Output<Integer> sizeInMBs;
+    private @Nullable Output<Integer> sizeInMBs;
 
-    public Output<Integer> sizeInMBs() {
-        return this.sizeInMBs == null ? Codegen.empty() : this.sizeInMBs;
+    public Optional<Output<Integer>> sizeInMBs() {
+        return Optional.ofNullable(this.sizeInMBs);
     }
 
-    public DeliveryStreamElasticsearchBufferingHintsArgs(
-        @Nullable Output<Integer> intervalInSeconds,
-        @Nullable Output<Integer> sizeInMBs) {
-        this.intervalInSeconds = intervalInSeconds;
-        this.sizeInMBs = sizeInMBs;
-    }
+    private DeliveryStreamElasticsearchBufferingHintsArgs() {}
 
-    private DeliveryStreamElasticsearchBufferingHintsArgs() {
-        this.intervalInSeconds = Codegen.empty();
-        this.sizeInMBs = Codegen.empty();
+    private DeliveryStreamElasticsearchBufferingHintsArgs(DeliveryStreamElasticsearchBufferingHintsArgs $) {
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.sizeInMBs = $.sizeInMBs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamElasticsearchBufferingHintsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> intervalInSeconds;
-        private @Nullable Output<Integer> sizeInMBs;
+        private DeliveryStreamElasticsearchBufferingHintsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamElasticsearchBufferingHintsArgs();
         }
 
         public Builder(DeliveryStreamElasticsearchBufferingHintsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.sizeInMBs = defaults.sizeInMBs;
+            $ = new DeliveryStreamElasticsearchBufferingHintsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
-        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
-            return this;
+
+        public Builder intervalInSeconds(Integer intervalInSeconds) {
+            return intervalInSeconds(Output.of(intervalInSeconds));
         }
+
         public Builder sizeInMBs(@Nullable Output<Integer> sizeInMBs) {
-            this.sizeInMBs = sizeInMBs;
+            $.sizeInMBs = sizeInMBs;
             return this;
         }
-        public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
-            this.sizeInMBs = Codegen.ofNullable(sizeInMBs);
-            return this;
-        }        public DeliveryStreamElasticsearchBufferingHintsArgs build() {
-            return new DeliveryStreamElasticsearchBufferingHintsArgs(intervalInSeconds, sizeInMBs);
+
+        public Builder sizeInMBs(Integer sizeInMBs) {
+            return sizeInMBs(Output.of(sizeInMBs));
+        }
+
+        public DeliveryStreamElasticsearchBufferingHintsArgs build() {
+            return $;
         }
     }
+
 }

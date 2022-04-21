@@ -5,11 +5,11 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.inputs.ImageArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SignatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<ImageArgs> image;
+    private @Nullable Output<ImageArgs> image;
 
-    public Output<ImageArgs> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<ImageArgs>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SignatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SignatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="signatureTime")
-      private final @Nullable Output<String> signatureTime;
+    private @Nullable Output<String> signatureTime;
 
-    public Output<String> signatureTime() {
-        return this.signatureTime == null ? Codegen.empty() : this.signatureTime;
+    public Optional<Output<String>> signatureTime() {
+        return Optional.ofNullable(this.signatureTime);
     }
 
     /**
@@ -59,89 +59,79 @@ public final class SignatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public SignatureArgs(
-        @Nullable Output<ImageArgs> image,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> signatureTime,
-        Output<String> userId) {
-        this.image = image;
-        this.metadata = metadata;
-        this.signatureTime = signatureTime;
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private SignatureArgs() {}
 
-    private SignatureArgs() {
-        this.image = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.signatureTime = Codegen.empty();
-        this.userId = Codegen.empty();
+    private SignatureArgs(SignatureArgs $) {
+        this.image = $.image;
+        this.metadata = $.metadata;
+        this.signatureTime = $.signatureTime;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SignatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ImageArgs> image;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> signatureTime;
-        private Output<String> userId;
+        private SignatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SignatureArgs();
         }
 
         public Builder(SignatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
-    	      this.metadata = defaults.metadata;
-    	      this.signatureTime = defaults.signatureTime;
-    	      this.userId = defaults.userId;
+            $ = new SignatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder image(@Nullable Output<ImageArgs> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable ImageArgs image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(ImageArgs image) {
+            return image(Output.of(image));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder signatureTime(@Nullable Output<String> signatureTime) {
-            this.signatureTime = signatureTime;
+            $.signatureTime = signatureTime;
             return this;
         }
-        public Builder signatureTime(@Nullable String signatureTime) {
-            this.signatureTime = Codegen.ofNullable(signatureTime);
-            return this;
+
+        public Builder signatureTime(String signatureTime) {
+            return signatureTime(Output.of(signatureTime));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public SignatureArgs build() {
-            return new SignatureArgs(image, metadata, signatureTime, userId);
+            return userId(Output.of(userId));
+        }
+
+        public SignatureArgs build() {
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs;
 import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleGetArgs;
 import com.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends com.pulum
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy;
+    private @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy() {
-        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
+    public Optional<Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs>> retentionPolicy() {
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends com.pulum
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule;
+    private Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule;
 
     public Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule() {
         return this.schedule;
@@ -46,76 +46,69 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends com.pulum
      * 
      */
     @Import(name="snapshotProperties")
-      private final @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties;
+    private @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties;
 
-    public Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties() {
-        return this.snapshotProperties == null ? Codegen.empty() : this.snapshotProperties;
+    public Optional<Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs>> snapshotProperties() {
+        return Optional.ofNullable(this.snapshotProperties);
     }
 
-    public ResourcePolicySnapshotSchedulePolicyGetArgs(
-        @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy,
-        Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule,
-        @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties) {
-        this.retentionPolicy = retentionPolicy;
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.snapshotProperties = snapshotProperties;
-    }
+    private ResourcePolicySnapshotSchedulePolicyGetArgs() {}
 
-    private ResourcePolicySnapshotSchedulePolicyGetArgs() {
-        this.retentionPolicy = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.snapshotProperties = Codegen.empty();
+    private ResourcePolicySnapshotSchedulePolicyGetArgs(ResourcePolicySnapshotSchedulePolicyGetArgs $) {
+        this.retentionPolicy = $.retentionPolicy;
+        this.schedule = $.schedule;
+        this.snapshotProperties = $.snapshotProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy;
-        private Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule;
-        private @Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties;
+        private ResourcePolicySnapshotSchedulePolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicyGetArgs();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.schedule = defaults.schedule;
-    	      this.snapshotProperties = defaults.snapshotProperties;
+            $ = new ResourcePolicySnapshotSchedulePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retentionPolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
-        public Builder retentionPolicy(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs retentionPolicy) {
-            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
-            return this;
+
+        public Builder retentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs retentionPolicy) {
+            return retentionPolicy(Output.of(retentionPolicy));
         }
+
         public Builder schedule(Output<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(ResourcePolicySnapshotSchedulePolicyScheduleGetArgs schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
+            return schedule(Output.of(schedule));
         }
+
         public Builder snapshotProperties(@Nullable Output<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties) {
-            this.snapshotProperties = snapshotProperties;
+            $.snapshotProperties = snapshotProperties;
             return this;
         }
-        public Builder snapshotProperties(@Nullable ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs snapshotProperties) {
-            this.snapshotProperties = Codegen.ofNullable(snapshotProperties);
-            return this;
-        }        public ResourcePolicySnapshotSchedulePolicyGetArgs build() {
-            return new ResourcePolicySnapshotSchedulePolicyGetArgs(retentionPolicy, schedule, snapshotProperties);
+
+        public Builder snapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs snapshotProperties) {
+            return snapshotProperties(Output.of(snapshotProperties));
+        }
+
+        public ResourcePolicySnapshotSchedulePolicyGetArgs build() {
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            return $;
         }
     }
+
 }

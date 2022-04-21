@@ -21,7 +21,7 @@ public final class AzureActiveDirectoryAppResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="appKey", required=true)
-      private final String appKey;
+    private String appKey;
 
     public String appKey() {
         return this.appKey;
@@ -32,7 +32,7 @@ public final class AzureActiveDirectoryAppResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="applicationId", required=true)
-      private final String applicationId;
+    private String applicationId;
 
     public String applicationId() {
         return this.applicationId;
@@ -43,64 +43,59 @@ public final class AzureActiveDirectoryAppResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
     }
 
-    public AzureActiveDirectoryAppResponse(
-        String appKey,
-        String applicationId,
-        String tenantId) {
-        this.appKey = Objects.requireNonNull(appKey, "expected parameter 'appKey' to be non-null");
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-    }
+    private AzureActiveDirectoryAppResponse() {}
 
-    private AzureActiveDirectoryAppResponse() {
-        this.appKey = null;
-        this.applicationId = null;
-        this.tenantId = null;
+    private AzureActiveDirectoryAppResponse(AzureActiveDirectoryAppResponse $) {
+        this.appKey = $.appKey;
+        this.applicationId = $.applicationId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureActiveDirectoryAppResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appKey;
-        private String applicationId;
-        private String tenantId;
+        private AzureActiveDirectoryAppResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureActiveDirectoryAppResponse();
         }
 
         public Builder(AzureActiveDirectoryAppResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appKey = defaults.appKey;
-    	      this.applicationId = defaults.applicationId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AzureActiveDirectoryAppResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appKey(String appKey) {
-            this.appKey = Objects.requireNonNull(appKey);
+            $.appKey = appKey;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
-        }        public AzureActiveDirectoryAppResponse build() {
-            return new AzureActiveDirectoryAppResponse(appKey, applicationId, tenantId);
+        }
+
+        public AzureActiveDirectoryAppResponse build() {
+            $.appKey = Objects.requireNonNull($.appKey, "expected parameter 'appKey' to be non-null");
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            return $;
         }
     }
+
 }

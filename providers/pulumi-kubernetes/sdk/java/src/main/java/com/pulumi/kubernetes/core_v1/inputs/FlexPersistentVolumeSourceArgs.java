@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="driver", required=true)
-      private final Output<String> driver;
+    private Output<String> driver;
 
     public Output<String> driver() {
         return this.driver;
@@ -38,10 +38,10 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<Map<String,String>> options;
+    private @Nullable Output<Map<String,String>> options;
 
-    public Output<Map<String,String>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<Map<String,String>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -71,102 +71,89 @@ public final class FlexPersistentVolumeSourceArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable Output<SecretReferenceArgs> secretRef;
+    private @Nullable Output<SecretReferenceArgs> secretRef;
 
-    public Output<SecretReferenceArgs> secretRef() {
-        return this.secretRef == null ? Codegen.empty() : this.secretRef;
+    public Optional<Output<SecretReferenceArgs>> secretRef() {
+        return Optional.ofNullable(this.secretRef);
     }
 
-    public FlexPersistentVolumeSourceArgs(
-        Output<String> driver,
-        @Nullable Output<String> fsType,
-        @Nullable Output<Map<String,String>> options,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<SecretReferenceArgs> secretRef) {
-        this.driver = Objects.requireNonNull(driver, "expected parameter 'driver' to be non-null");
-        this.fsType = fsType;
-        this.options = options;
-        this.readOnly = readOnly;
-        this.secretRef = secretRef;
-    }
+    private FlexPersistentVolumeSourceArgs() {}
 
-    private FlexPersistentVolumeSourceArgs() {
-        this.driver = Codegen.empty();
-        this.fsType = Codegen.empty();
-        this.options = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.secretRef = Codegen.empty();
+    private FlexPersistentVolumeSourceArgs(FlexPersistentVolumeSourceArgs $) {
+        this.driver = $.driver;
+        this.fsType = $.fsType;
+        this.options = $.options;
+        this.readOnly = $.readOnly;
+        this.secretRef = $.secretRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexPersistentVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> driver;
-        private @Nullable Output<String> fsType;
-        private @Nullable Output<Map<String,String>> options;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<SecretReferenceArgs> secretRef;
+        private FlexPersistentVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexPersistentVolumeSourceArgs();
         }
 
         public Builder(FlexPersistentVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driver = defaults.driver;
-    	      this.fsType = defaults.fsType;
-    	      this.options = defaults.options;
-    	      this.readOnly = defaults.readOnly;
-    	      this.secretRef = defaults.secretRef;
+            $ = new FlexPersistentVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder driver(Output<String> driver) {
-            this.driver = Objects.requireNonNull(driver);
+            $.driver = driver;
             return this;
         }
+
         public Builder driver(String driver) {
-            this.driver = Output.of(Objects.requireNonNull(driver));
-            return this;
+            return driver(Output.of(driver));
         }
+
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder options(@Nullable Output<Map<String,String>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable Map<String,String> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(Map<String,String> options) {
+            return options(Output.of(options));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder secretRef(@Nullable Output<SecretReferenceArgs> secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
-        public Builder secretRef(@Nullable SecretReferenceArgs secretRef) {
-            this.secretRef = Codegen.ofNullable(secretRef);
-            return this;
-        }        public FlexPersistentVolumeSourceArgs build() {
-            return new FlexPersistentVolumeSourceArgs(driver, fsType, options, readOnly, secretRef);
+
+        public Builder secretRef(SecretReferenceArgs secretRef) {
+            return secretRef(Output.of(secretRef));
+        }
+
+        public FlexPersistentVolumeSourceArgs build() {
+            $.driver = Objects.requireNonNull($.driver, "expected parameter 'driver' to be non-null");
+            return $;
         }
     }
+
 }

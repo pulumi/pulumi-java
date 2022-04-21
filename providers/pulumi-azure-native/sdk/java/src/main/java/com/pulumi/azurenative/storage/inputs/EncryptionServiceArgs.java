@@ -7,10 +7,10 @@ import com.pulumi.azurenative.storage.enums.KeyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class EncryptionServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class EncryptionServiceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Output<Either<String,KeyType>> keyType;
+    private @Nullable Output<Either<String,KeyType>> keyType;
 
-    public Output<Either<String,KeyType>> keyType() {
-        return this.keyType == null ? Codegen.empty() : this.keyType;
+    public Optional<Output<Either<String,KeyType>>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
-    public EncryptionServiceArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Either<String,KeyType>> keyType) {
-        this.enabled = enabled;
-        this.keyType = keyType;
-    }
+    private EncryptionServiceArgs() {}
 
-    private EncryptionServiceArgs() {
-        this.enabled = Codegen.empty();
-        this.keyType = Codegen.empty();
+    private EncryptionServiceArgs(EncryptionServiceArgs $) {
+        this.enabled = $.enabled;
+        this.keyType = $.keyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Either<String,KeyType>> keyType;
+        private EncryptionServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionServiceArgs();
         }
 
         public Builder(EncryptionServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.keyType = defaults.keyType;
+            $ = new EncryptionServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder keyType(@Nullable Output<Either<String,KeyType>> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
-        public Builder keyType(@Nullable Either<String,KeyType> keyType) {
-            this.keyType = Codegen.ofNullable(keyType);
-            return this;
-        }        public EncryptionServiceArgs build() {
-            return new EncryptionServiceArgs(enabled, keyType);
+
+        public Builder keyType(Either<String,KeyType> keyType) {
+            return keyType(Output.of(keyType));
+        }
+
+        public EncryptionServiceArgs build() {
+            return $;
         }
     }
+
 }

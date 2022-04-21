@@ -5,9 +5,9 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class CertificateCertificateDescriptionSubjectKeyIdArgs extends com
     public static final CertificateCertificateDescriptionSubjectKeyIdArgs Empty = new CertificateCertificateDescriptionSubjectKeyIdArgs();
 
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
-    public CertificateCertificateDescriptionSubjectKeyIdArgs(@Nullable Output<String> keyId) {
-        this.keyId = keyId;
-    }
+    private CertificateCertificateDescriptionSubjectKeyIdArgs() {}
 
-    private CertificateCertificateDescriptionSubjectKeyIdArgs() {
-        this.keyId = Codegen.empty();
+    private CertificateCertificateDescriptionSubjectKeyIdArgs(CertificateCertificateDescriptionSubjectKeyIdArgs $) {
+        this.keyId = $.keyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionSubjectKeyIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyId;
+        private CertificateCertificateDescriptionSubjectKeyIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionSubjectKeyIdArgs();
         }
 
         public Builder(CertificateCertificateDescriptionSubjectKeyIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
+            $ = new CertificateCertificateDescriptionSubjectKeyIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
-        }        public CertificateCertificateDescriptionSubjectKeyIdArgs build() {
-            return new CertificateCertificateDescriptionSubjectKeyIdArgs(keyId);
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
+        }
+
+        public CertificateCertificateDescriptionSubjectKeyIdArgs build() {
+            return $;
         }
     }
+
 }

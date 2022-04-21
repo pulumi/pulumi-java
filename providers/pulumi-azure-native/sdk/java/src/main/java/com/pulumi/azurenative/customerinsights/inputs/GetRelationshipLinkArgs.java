@@ -17,7 +17,7 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="hubName", required=true)
-      private final String hubName;
+    private String hubName;
 
     public String hubName() {
         return this.hubName;
@@ -28,7 +28,7 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="relationshipLinkName", required=true)
-      private final String relationshipLinkName;
+    private String relationshipLinkName;
 
     public String relationshipLinkName() {
         return this.relationshipLinkName;
@@ -39,64 +39,59 @@ public final class GetRelationshipLinkArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetRelationshipLinkArgs(
-        String hubName,
-        String relationshipLinkName,
-        String resourceGroupName) {
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.relationshipLinkName = Objects.requireNonNull(relationshipLinkName, "expected parameter 'relationshipLinkName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetRelationshipLinkArgs() {}
 
-    private GetRelationshipLinkArgs() {
-        this.hubName = null;
-        this.relationshipLinkName = null;
-        this.resourceGroupName = null;
+    private GetRelationshipLinkArgs(GetRelationshipLinkArgs $) {
+        this.hubName = $.hubName;
+        this.relationshipLinkName = $.relationshipLinkName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRelationshipLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hubName;
-        private String relationshipLinkName;
-        private String resourceGroupName;
+        private GetRelationshipLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRelationshipLinkArgs();
         }
 
         public Builder(GetRelationshipLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubName = defaults.hubName;
-    	      this.relationshipLinkName = defaults.relationshipLinkName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetRelationshipLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder relationshipLinkName(String relationshipLinkName) {
-            this.relationshipLinkName = Objects.requireNonNull(relationshipLinkName);
+            $.relationshipLinkName = relationshipLinkName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetRelationshipLinkArgs build() {
-            return new GetRelationshipLinkArgs(hubName, relationshipLinkName, resourceGroupName);
+        }
+
+        public GetRelationshipLinkArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.relationshipLinkName = Objects.requireNonNull($.relationshipLinkName, "expected parameter 'relationshipLinkName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,11 +9,11 @@ import com.pulumi.azurenative.netapp.inputs.MonthlyScheduleArgs;
 import com.pulumi.azurenative.netapp.inputs.WeeklyScheduleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -37,10 +37,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dailySchedule")
-      private final @Nullable Output<DailyScheduleArgs> dailySchedule;
+    private @Nullable Output<DailyScheduleArgs> dailySchedule;
 
-    public Output<DailyScheduleArgs> dailySchedule() {
-        return this.dailySchedule == null ? Codegen.empty() : this.dailySchedule;
+    public Optional<Output<DailyScheduleArgs>> dailySchedule() {
+        return Optional.ofNullable(this.dailySchedule);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hourlySchedule")
-      private final @Nullable Output<HourlyScheduleArgs> hourlySchedule;
+    private @Nullable Output<HourlyScheduleArgs> hourlySchedule;
 
-    public Output<HourlyScheduleArgs> hourlySchedule() {
-        return this.hourlySchedule == null ? Codegen.empty() : this.hourlySchedule;
+    public Optional<Output<HourlyScheduleArgs>> hourlySchedule() {
+        return Optional.ofNullable(this.hourlySchedule);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="monthlySchedule")
-      private final @Nullable Output<MonthlyScheduleArgs> monthlySchedule;
+    private @Nullable Output<MonthlyScheduleArgs> monthlySchedule;
 
-    public Output<MonthlyScheduleArgs> monthlySchedule() {
-        return this.monthlySchedule == null ? Codegen.empty() : this.monthlySchedule;
+    public Optional<Output<MonthlyScheduleArgs>> monthlySchedule() {
+        return Optional.ofNullable(this.monthlySchedule);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -103,10 +103,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="snapshotPolicyName")
-      private final @Nullable Output<String> snapshotPolicyName;
+    private @Nullable Output<String> snapshotPolicyName;
 
-    public Output<String> snapshotPolicyName() {
-        return this.snapshotPolicyName == null ? Codegen.empty() : this.snapshotPolicyName;
+    public Optional<Output<String>> snapshotPolicyName() {
+        return Optional.ofNullable(this.snapshotPolicyName);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -125,167 +125,140 @@ public final class SnapshotPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="weeklySchedule")
-      private final @Nullable Output<WeeklyScheduleArgs> weeklySchedule;
+    private @Nullable Output<WeeklyScheduleArgs> weeklySchedule;
 
-    public Output<WeeklyScheduleArgs> weeklySchedule() {
-        return this.weeklySchedule == null ? Codegen.empty() : this.weeklySchedule;
+    public Optional<Output<WeeklyScheduleArgs>> weeklySchedule() {
+        return Optional.ofNullable(this.weeklySchedule);
     }
 
-    public SnapshotPolicyArgs(
-        Output<String> accountName,
-        @Nullable Output<DailyScheduleArgs> dailySchedule,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<HourlyScheduleArgs> hourlySchedule,
-        @Nullable Output<String> location,
-        @Nullable Output<MonthlyScheduleArgs> monthlySchedule,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> snapshotPolicyName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<WeeklyScheduleArgs> weeklySchedule) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.dailySchedule = dailySchedule;
-        this.enabled = enabled;
-        this.hourlySchedule = hourlySchedule;
-        this.location = location;
-        this.monthlySchedule = monthlySchedule;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.snapshotPolicyName = snapshotPolicyName;
-        this.tags = tags;
-        this.weeklySchedule = weeklySchedule;
-    }
+    private SnapshotPolicyArgs() {}
 
-    private SnapshotPolicyArgs() {
-        this.accountName = Codegen.empty();
-        this.dailySchedule = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.hourlySchedule = Codegen.empty();
-        this.location = Codegen.empty();
-        this.monthlySchedule = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.snapshotPolicyName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.weeklySchedule = Codegen.empty();
+    private SnapshotPolicyArgs(SnapshotPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.dailySchedule = $.dailySchedule;
+        this.enabled = $.enabled;
+        this.hourlySchedule = $.hourlySchedule;
+        this.location = $.location;
+        this.monthlySchedule = $.monthlySchedule;
+        this.resourceGroupName = $.resourceGroupName;
+        this.snapshotPolicyName = $.snapshotPolicyName;
+        this.tags = $.tags;
+        this.weeklySchedule = $.weeklySchedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<DailyScheduleArgs> dailySchedule;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<HourlyScheduleArgs> hourlySchedule;
-        private @Nullable Output<String> location;
-        private @Nullable Output<MonthlyScheduleArgs> monthlySchedule;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> snapshotPolicyName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<WeeklyScheduleArgs> weeklySchedule;
+        private SnapshotPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotPolicyArgs();
         }
 
         public Builder(SnapshotPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.dailySchedule = defaults.dailySchedule;
-    	      this.enabled = defaults.enabled;
-    	      this.hourlySchedule = defaults.hourlySchedule;
-    	      this.location = defaults.location;
-    	      this.monthlySchedule = defaults.monthlySchedule;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.snapshotPolicyName = defaults.snapshotPolicyName;
-    	      this.tags = defaults.tags;
-    	      this.weeklySchedule = defaults.weeklySchedule;
+            $ = new SnapshotPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder dailySchedule(@Nullable Output<DailyScheduleArgs> dailySchedule) {
-            this.dailySchedule = dailySchedule;
+            $.dailySchedule = dailySchedule;
             return this;
         }
-        public Builder dailySchedule(@Nullable DailyScheduleArgs dailySchedule) {
-            this.dailySchedule = Codegen.ofNullable(dailySchedule);
-            return this;
+
+        public Builder dailySchedule(DailyScheduleArgs dailySchedule) {
+            return dailySchedule(Output.of(dailySchedule));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder hourlySchedule(@Nullable Output<HourlyScheduleArgs> hourlySchedule) {
-            this.hourlySchedule = hourlySchedule;
+            $.hourlySchedule = hourlySchedule;
             return this;
         }
-        public Builder hourlySchedule(@Nullable HourlyScheduleArgs hourlySchedule) {
-            this.hourlySchedule = Codegen.ofNullable(hourlySchedule);
-            return this;
+
+        public Builder hourlySchedule(HourlyScheduleArgs hourlySchedule) {
+            return hourlySchedule(Output.of(hourlySchedule));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder monthlySchedule(@Nullable Output<MonthlyScheduleArgs> monthlySchedule) {
-            this.monthlySchedule = monthlySchedule;
+            $.monthlySchedule = monthlySchedule;
             return this;
         }
-        public Builder monthlySchedule(@Nullable MonthlyScheduleArgs monthlySchedule) {
-            this.monthlySchedule = Codegen.ofNullable(monthlySchedule);
-            return this;
+
+        public Builder monthlySchedule(MonthlyScheduleArgs monthlySchedule) {
+            return monthlySchedule(Output.of(monthlySchedule));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder snapshotPolicyName(@Nullable Output<String> snapshotPolicyName) {
-            this.snapshotPolicyName = snapshotPolicyName;
+            $.snapshotPolicyName = snapshotPolicyName;
             return this;
         }
-        public Builder snapshotPolicyName(@Nullable String snapshotPolicyName) {
-            this.snapshotPolicyName = Codegen.ofNullable(snapshotPolicyName);
-            return this;
+
+        public Builder snapshotPolicyName(String snapshotPolicyName) {
+            return snapshotPolicyName(Output.of(snapshotPolicyName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder weeklySchedule(@Nullable Output<WeeklyScheduleArgs> weeklySchedule) {
-            this.weeklySchedule = weeklySchedule;
+            $.weeklySchedule = weeklySchedule;
             return this;
         }
-        public Builder weeklySchedule(@Nullable WeeklyScheduleArgs weeklySchedule) {
-            this.weeklySchedule = Codegen.ofNullable(weeklySchedule);
-            return this;
-        }        public SnapshotPolicyArgs build() {
-            return new SnapshotPolicyArgs(accountName, dailySchedule, enabled, hourlySchedule, location, monthlySchedule, resourceGroupName, snapshotPolicyName, tags, weeklySchedule);
+
+        public Builder weeklySchedule(WeeklyScheduleArgs weeklySchedule) {
+            return weeklySchedule(Output.of(weeklySchedule));
+        }
+
+        public SnapshotPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

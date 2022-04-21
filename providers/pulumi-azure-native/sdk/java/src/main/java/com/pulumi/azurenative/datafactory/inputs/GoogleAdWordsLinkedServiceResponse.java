@@ -32,10 +32,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable String authenticationType;
+    private @Nullable String authenticationType;
 
     public Optional<String> authenticationType() {
-        return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="clientCustomerID")
-      private final @Nullable Object clientCustomerID;
+    private @Nullable Object clientCustomerID;
 
     public Optional<Object> clientCustomerID() {
-        return this.clientCustomerID == null ? Optional.empty() : Optional.ofNullable(this.clientCustomerID);
+        return Optional.ofNullable(this.clientCustomerID);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="clientId")
-      private final @Nullable Object clientId;
+    private @Nullable Object clientId;
 
     public Optional<Object> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="clientSecret")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret() {
-        return this.clientSecret == null ? null : this.clientSecret;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clientSecret() {
+        return Optional.ofNullable(this.clientSecret);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="connectionProperties")
-      private final @Nullable Object connectionProperties;
+    private @Nullable Object connectionProperties;
 
     public Optional<Object> connectionProperties() {
-        return this.connectionProperties == null ? Optional.empty() : Optional.ofNullable(this.connectionProperties);
+        return Optional.ofNullable(this.connectionProperties);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="developerToken")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken() {
-        return this.developerToken == null ? null : this.developerToken;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> developerToken() {
+        return Optional.ofNullable(this.developerToken);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="email")
-      private final @Nullable Object email;
+    private @Nullable Object email;
 
     public Optional<Object> email() {
-        return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="keyFilePath")
-      private final @Nullable Object keyFilePath;
+    private @Nullable Object keyFilePath;
 
     public Optional<Object> keyFilePath() {
-        return this.keyFilePath == null ? Optional.empty() : Optional.ofNullable(this.keyFilePath);
+        return Optional.ofNullable(this.keyFilePath);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken() {
-        return this.refreshToken == null ? null : this.refreshToken;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> refreshToken() {
+        return Optional.ofNullable(this.refreshToken);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="trustedCertPath")
-      private final @Nullable Object trustedCertPath;
+    private @Nullable Object trustedCertPath;
 
     public Optional<Object> trustedCertPath() {
-        return this.trustedCertPath == null ? Optional.empty() : Optional.ofNullable(this.trustedCertPath);
+        return Optional.ofNullable(this.trustedCertPath);
     }
 
     /**
@@ -198,7 +198,7 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -209,193 +209,145 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="useSystemTrustStore")
-      private final @Nullable Object useSystemTrustStore;
+    private @Nullable Object useSystemTrustStore;
 
     public Optional<Object> useSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Optional.empty() : Optional.ofNullable(this.useSystemTrustStore);
+        return Optional.ofNullable(this.useSystemTrustStore);
     }
 
-    public GoogleAdWordsLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String authenticationType,
-        @Nullable Object clientCustomerID,
-        @Nullable Object clientId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionProperties,
-        @Nullable String description,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken,
-        @Nullable Object email,
-        @Nullable Object encryptedCredential,
-        @Nullable Object keyFilePath,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
-        @Nullable Object trustedCertPath,
-        String type,
-        @Nullable Object useSystemTrustStore) {
-        this.annotations = annotations;
-        this.authenticationType = authenticationType;
-        this.clientCustomerID = clientCustomerID;
-        this.clientId = clientId;
-        this.clientSecret = clientSecret;
-        this.connectVia = connectVia;
-        this.connectionProperties = connectionProperties;
-        this.description = description;
-        this.developerToken = developerToken;
-        this.email = email;
-        this.encryptedCredential = encryptedCredential;
-        this.keyFilePath = keyFilePath;
-        this.parameters = parameters;
-        this.refreshToken = refreshToken;
-        this.trustedCertPath = trustedCertPath;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.useSystemTrustStore = useSystemTrustStore;
-    }
+    private GoogleAdWordsLinkedServiceResponse() {}
 
-    private GoogleAdWordsLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.authenticationType = null;
-        this.clientCustomerID = null;
-        this.clientId = null;
-        this.clientSecret = null;
-        this.connectVia = null;
-        this.connectionProperties = null;
-        this.description = null;
-        this.developerToken = null;
-        this.email = null;
-        this.encryptedCredential = null;
-        this.keyFilePath = null;
-        this.parameters = Map.of();
-        this.refreshToken = null;
-        this.trustedCertPath = null;
-        this.type = null;
-        this.useSystemTrustStore = null;
+    private GoogleAdWordsLinkedServiceResponse(GoogleAdWordsLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.authenticationType = $.authenticationType;
+        this.clientCustomerID = $.clientCustomerID;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.connectVia = $.connectVia;
+        this.connectionProperties = $.connectionProperties;
+        this.description = $.description;
+        this.developerToken = $.developerToken;
+        this.email = $.email;
+        this.encryptedCredential = $.encryptedCredential;
+        this.keyFilePath = $.keyFilePath;
+        this.parameters = $.parameters;
+        this.refreshToken = $.refreshToken;
+        this.trustedCertPath = $.trustedCertPath;
+        this.type = $.type;
+        this.useSystemTrustStore = $.useSystemTrustStore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleAdWordsLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable String authenticationType;
-        private @Nullable Object clientCustomerID;
-        private @Nullable Object clientId;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable Object connectionProperties;
-        private @Nullable String description;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken;
-        private @Nullable Object email;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object keyFilePath;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
-        private @Nullable Object trustedCertPath;
-        private String type;
-        private @Nullable Object useSystemTrustStore;
+        private GoogleAdWordsLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleAdWordsLinkedServiceResponse();
         }
 
         public Builder(GoogleAdWordsLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.clientCustomerID = defaults.clientCustomerID;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionProperties = defaults.connectionProperties;
-    	      this.description = defaults.description;
-    	      this.developerToken = defaults.developerToken;
-    	      this.email = defaults.email;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.keyFilePath = defaults.keyFilePath;
-    	      this.parameters = defaults.parameters;
-    	      this.refreshToken = defaults.refreshToken;
-    	      this.trustedCertPath = defaults.trustedCertPath;
-    	      this.type = defaults.type;
-    	      this.useSystemTrustStore = defaults.useSystemTrustStore;
+            $ = new GoogleAdWordsLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder clientCustomerID(@Nullable Object clientCustomerID) {
-            this.clientCustomerID = clientCustomerID;
+            $.clientCustomerID = clientCustomerID;
             return this;
         }
+
         public Builder clientId(@Nullable Object clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
-            this.clientSecret = clientSecret;
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = connectionProperties;
+            $.connectionProperties = connectionProperties;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder developerToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken) {
-            this.developerToken = developerToken;
+            $.developerToken = developerToken;
             return this;
         }
+
         public Builder email(@Nullable Object email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder keyFilePath(@Nullable Object keyFilePath) {
-            this.keyFilePath = keyFilePath;
+            $.keyFilePath = keyFilePath;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
+
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = trustedCertPath;
+            $.trustedCertPath = trustedCertPath;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = useSystemTrustStore;
+            $.useSystemTrustStore = useSystemTrustStore;
             return this;
-        }        public GoogleAdWordsLinkedServiceResponse build() {
-            return new GoogleAdWordsLinkedServiceResponse(annotations, authenticationType, clientCustomerID, clientId, clientSecret, connectVia, connectionProperties, description, developerToken, email, encryptedCredential, keyFilePath, parameters, refreshToken, trustedCertPath, type, useSystemTrustStore);
+        }
+
+        public GoogleAdWordsLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

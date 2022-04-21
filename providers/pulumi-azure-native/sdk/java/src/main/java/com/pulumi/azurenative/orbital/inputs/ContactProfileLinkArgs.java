@@ -9,11 +9,11 @@ import com.pulumi.azurenative.orbital.inputs.ContactProfileLinkChannelArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="channels", required=true)
-      private final Output<List<ContactProfileLinkChannelArgs>> channels;
+    private Output<List<ContactProfileLinkChannelArgs>> channels;
 
     public Output<List<ContactProfileLinkChannelArgs>> channels() {
         return this.channels;
@@ -41,7 +41,7 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="direction", required=true)
-      private final Output<Either<String,Direction>> direction;
+    private Output<Either<String,Direction>> direction;
 
     public Output<Either<String,Direction>> direction() {
         return this.direction;
@@ -52,10 +52,10 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="eirpdBW")
-      private final @Nullable Output<Double> eirpdBW;
+    private @Nullable Output<Double> eirpdBW;
 
-    public Output<Double> eirpdBW() {
-        return this.eirpdBW == null ? Codegen.empty() : this.eirpdBW;
+    public Optional<Output<Double>> eirpdBW() {
+        return Optional.ofNullable(this.eirpdBW);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="gainOverTemperature")
-      private final @Nullable Output<Double> gainOverTemperature;
+    private @Nullable Output<Double> gainOverTemperature;
 
-    public Output<Double> gainOverTemperature() {
-        return this.gainOverTemperature == null ? Codegen.empty() : this.gainOverTemperature;
+    public Optional<Output<Double>> gainOverTemperature() {
+        return Optional.ofNullable(this.gainOverTemperature);
     }
 
     /**
@@ -74,105 +74,95 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="polarization", required=true)
-      private final Output<Either<String,Polarization>> polarization;
+    private Output<Either<String,Polarization>> polarization;
 
     public Output<Either<String,Polarization>> polarization() {
         return this.polarization;
     }
 
-    public ContactProfileLinkArgs(
-        Output<List<ContactProfileLinkChannelArgs>> channels,
-        Output<Either<String,Direction>> direction,
-        @Nullable Output<Double> eirpdBW,
-        @Nullable Output<Double> gainOverTemperature,
-        Output<Either<String,Polarization>> polarization) {
-        this.channels = Objects.requireNonNull(channels, "expected parameter 'channels' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.eirpdBW = eirpdBW;
-        this.gainOverTemperature = gainOverTemperature;
-        this.polarization = Objects.requireNonNull(polarization, "expected parameter 'polarization' to be non-null");
-    }
+    private ContactProfileLinkArgs() {}
 
-    private ContactProfileLinkArgs() {
-        this.channels = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.eirpdBW = Codegen.empty();
-        this.gainOverTemperature = Codegen.empty();
-        this.polarization = Codegen.empty();
+    private ContactProfileLinkArgs(ContactProfileLinkArgs $) {
+        this.channels = $.channels;
+        this.direction = $.direction;
+        this.eirpdBW = $.eirpdBW;
+        this.gainOverTemperature = $.gainOverTemperature;
+        this.polarization = $.polarization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactProfileLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ContactProfileLinkChannelArgs>> channels;
-        private Output<Either<String,Direction>> direction;
-        private @Nullable Output<Double> eirpdBW;
-        private @Nullable Output<Double> gainOverTemperature;
-        private Output<Either<String,Polarization>> polarization;
+        private ContactProfileLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactProfileLinkArgs();
         }
 
         public Builder(ContactProfileLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channels = defaults.channels;
-    	      this.direction = defaults.direction;
-    	      this.eirpdBW = defaults.eirpdBW;
-    	      this.gainOverTemperature = defaults.gainOverTemperature;
-    	      this.polarization = defaults.polarization;
+            $ = new ContactProfileLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channels(Output<List<ContactProfileLinkChannelArgs>> channels) {
-            this.channels = Objects.requireNonNull(channels);
+            $.channels = channels;
             return this;
         }
+
         public Builder channels(List<ContactProfileLinkChannelArgs> channels) {
-            this.channels = Output.of(Objects.requireNonNull(channels));
-            return this;
+            return channels(Output.of(channels));
         }
+
         public Builder channels(ContactProfileLinkChannelArgs... channels) {
             return channels(List.of(channels));
         }
+
         public Builder direction(Output<Either<String,Direction>> direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder direction(Either<String,Direction> direction) {
-            this.direction = Output.of(Objects.requireNonNull(direction));
-            return this;
+            return direction(Output.of(direction));
         }
+
         public Builder eirpdBW(@Nullable Output<Double> eirpdBW) {
-            this.eirpdBW = eirpdBW;
+            $.eirpdBW = eirpdBW;
             return this;
         }
-        public Builder eirpdBW(@Nullable Double eirpdBW) {
-            this.eirpdBW = Codegen.ofNullable(eirpdBW);
-            return this;
+
+        public Builder eirpdBW(Double eirpdBW) {
+            return eirpdBW(Output.of(eirpdBW));
         }
+
         public Builder gainOverTemperature(@Nullable Output<Double> gainOverTemperature) {
-            this.gainOverTemperature = gainOverTemperature;
+            $.gainOverTemperature = gainOverTemperature;
             return this;
         }
-        public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
-            this.gainOverTemperature = Codegen.ofNullable(gainOverTemperature);
-            return this;
+
+        public Builder gainOverTemperature(Double gainOverTemperature) {
+            return gainOverTemperature(Output.of(gainOverTemperature));
         }
+
         public Builder polarization(Output<Either<String,Polarization>> polarization) {
-            this.polarization = Objects.requireNonNull(polarization);
+            $.polarization = polarization;
             return this;
         }
+
         public Builder polarization(Either<String,Polarization> polarization) {
-            this.polarization = Output.of(Objects.requireNonNull(polarization));
-            return this;
-        }        public ContactProfileLinkArgs build() {
-            return new ContactProfileLinkArgs(channels, direction, eirpdBW, gainOverTemperature, polarization);
+            return polarization(Output.of(polarization));
+        }
+
+        public ContactProfileLinkArgs build() {
+            $.channels = Objects.requireNonNull($.channels, "expected parameter 'channels' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.polarization = Objects.requireNonNull($.polarization, "expected parameter 'polarization' to be non-null");
+            return $;
         }
     }
+
 }

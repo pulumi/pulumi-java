@@ -23,7 +23,7 @@ public final class AutoScalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="mechanism", required=true)
-      private final AddRemoveReplicaScalingMechanismResponse mechanism;
+    private AddRemoveReplicaScalingMechanismResponse mechanism;
 
     public AddRemoveReplicaScalingMechanismResponse mechanism() {
         return this.mechanism;
@@ -34,7 +34,7 @@ public final class AutoScalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,59 @@ public final class AutoScalingPolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="trigger", required=true)
-      private final AverageLoadScalingTriggerResponse trigger;
+    private AverageLoadScalingTriggerResponse trigger;
 
     public AverageLoadScalingTriggerResponse trigger() {
         return this.trigger;
     }
 
-    public AutoScalingPolicyResponse(
-        AddRemoveReplicaScalingMechanismResponse mechanism,
-        String name,
-        AverageLoadScalingTriggerResponse trigger) {
-        this.mechanism = Objects.requireNonNull(mechanism, "expected parameter 'mechanism' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");
-    }
+    private AutoScalingPolicyResponse() {}
 
-    private AutoScalingPolicyResponse() {
-        this.mechanism = null;
-        this.name = null;
-        this.trigger = null;
+    private AutoScalingPolicyResponse(AutoScalingPolicyResponse $) {
+        this.mechanism = $.mechanism;
+        this.name = $.name;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScalingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AddRemoveReplicaScalingMechanismResponse mechanism;
-        private String name;
-        private AverageLoadScalingTriggerResponse trigger;
+        private AutoScalingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScalingPolicyResponse();
         }
 
         public Builder(AutoScalingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mechanism = defaults.mechanism;
-    	      this.name = defaults.name;
-    	      this.trigger = defaults.trigger;
+            $ = new AutoScalingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mechanism(AddRemoveReplicaScalingMechanismResponse mechanism) {
-            this.mechanism = Objects.requireNonNull(mechanism);
+            $.mechanism = mechanism;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder trigger(AverageLoadScalingTriggerResponse trigger) {
-            this.trigger = Objects.requireNonNull(trigger);
+            $.trigger = trigger;
             return this;
-        }        public AutoScalingPolicyResponse build() {
-            return new AutoScalingPolicyResponse(mechanism, name, trigger);
+        }
+
+        public AutoScalingPolicyResponse build() {
+            $.mechanism = Objects.requireNonNull($.mechanism, "expected parameter 'mechanism' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.trigger = Objects.requireNonNull($.trigger, "expected parameter 'trigger' to be non-null");
+            return $;
         }
     }
+
 }

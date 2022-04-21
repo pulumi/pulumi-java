@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudwatch;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardBody", required=true)
-      private final Output<String> dashboardBody;
+    private Output<String> dashboardBody;
 
     public Output<String> dashboardBody() {
         return this.dashboardBody;
@@ -30,63 +29,60 @@ public final class DashboardArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dashboardName", required=true)
-      private final Output<String> dashboardName;
+    private Output<String> dashboardName;
 
     public Output<String> dashboardName() {
         return this.dashboardName;
     }
 
-    public DashboardArgs(
-        Output<String> dashboardBody,
-        Output<String> dashboardName) {
-        this.dashboardBody = Objects.requireNonNull(dashboardBody, "expected parameter 'dashboardBody' to be non-null");
-        this.dashboardName = Objects.requireNonNull(dashboardName, "expected parameter 'dashboardName' to be non-null");
-    }
+    private DashboardArgs() {}
 
-    private DashboardArgs() {
-        this.dashboardBody = Codegen.empty();
-        this.dashboardName = Codegen.empty();
+    private DashboardArgs(DashboardArgs $) {
+        this.dashboardBody = $.dashboardBody;
+        this.dashboardName = $.dashboardName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dashboardBody;
-        private Output<String> dashboardName;
+        private DashboardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardArgs();
         }
 
         public Builder(DashboardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dashboardBody = defaults.dashboardBody;
-    	      this.dashboardName = defaults.dashboardName;
+            $ = new DashboardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dashboardBody(Output<String> dashboardBody) {
-            this.dashboardBody = Objects.requireNonNull(dashboardBody);
+            $.dashboardBody = dashboardBody;
             return this;
         }
+
         public Builder dashboardBody(String dashboardBody) {
-            this.dashboardBody = Output.of(Objects.requireNonNull(dashboardBody));
-            return this;
+            return dashboardBody(Output.of(dashboardBody));
         }
+
         public Builder dashboardName(Output<String> dashboardName) {
-            this.dashboardName = Objects.requireNonNull(dashboardName);
+            $.dashboardName = dashboardName;
             return this;
         }
+
         public Builder dashboardName(String dashboardName) {
-            this.dashboardName = Output.of(Objects.requireNonNull(dashboardName));
-            return this;
-        }        public DashboardArgs build() {
-            return new DashboardArgs(dashboardBody, dashboardName);
+            return dashboardName(Output.of(dashboardName));
+        }
+
+        public DashboardArgs build() {
+            $.dashboardBody = Objects.requireNonNull($.dashboardBody, "expected parameter 'dashboardBody' to be non-null");
+            $.dashboardName = Objects.requireNonNull($.dashboardName, "expected parameter 'dashboardName' to be non-null");
+            return $;
         }
     }
+
 }

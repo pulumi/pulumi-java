@@ -5,10 +5,10 @@ package com.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gameservices_v1beta.enums.CloudAuditOptionsLogName;
 import com.pulumi.googlenative.gameservices_v1beta.inputs.AuthorizationLoggingOptionsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CloudAuditOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="authorizationLoggingOptions")
-      private final @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
+    private @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
-    public Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions() {
-        return this.authorizationLoggingOptions == null ? Codegen.empty() : this.authorizationLoggingOptions;
+    public Optional<Output<AuthorizationLoggingOptionsArgs>> authorizationLoggingOptions() {
+        return Optional.ofNullable(this.authorizationLoggingOptions);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CloudAuditOptionsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="logName")
-      private final @Nullable Output<CloudAuditOptionsLogName> logName;
+    private @Nullable Output<CloudAuditOptionsLogName> logName;
 
-    public Output<CloudAuditOptionsLogName> logName() {
-        return this.logName == null ? Codegen.empty() : this.logName;
+    public Optional<Output<CloudAuditOptionsLogName>> logName() {
+        return Optional.ofNullable(this.logName);
     }
 
-    public CloudAuditOptionsArgs(
-        @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions,
-        @Nullable Output<CloudAuditOptionsLogName> logName) {
-        this.authorizationLoggingOptions = authorizationLoggingOptions;
-        this.logName = logName;
-    }
+    private CloudAuditOptionsArgs() {}
 
-    private CloudAuditOptionsArgs() {
-        this.authorizationLoggingOptions = Codegen.empty();
-        this.logName = Codegen.empty();
+    private CloudAuditOptionsArgs(CloudAuditOptionsArgs $) {
+        this.authorizationLoggingOptions = $.authorizationLoggingOptions;
+        this.logName = $.logName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudAuditOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
-        private @Nullable Output<CloudAuditOptionsLogName> logName;
+        private CloudAuditOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudAuditOptionsArgs();
         }
 
         public Builder(CloudAuditOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationLoggingOptions = defaults.authorizationLoggingOptions;
-    	      this.logName = defaults.logName;
+            $ = new CloudAuditOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationLoggingOptions(@Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions) {
-            this.authorizationLoggingOptions = authorizationLoggingOptions;
+            $.authorizationLoggingOptions = authorizationLoggingOptions;
             return this;
         }
-        public Builder authorizationLoggingOptions(@Nullable AuthorizationLoggingOptionsArgs authorizationLoggingOptions) {
-            this.authorizationLoggingOptions = Codegen.ofNullable(authorizationLoggingOptions);
-            return this;
+
+        public Builder authorizationLoggingOptions(AuthorizationLoggingOptionsArgs authorizationLoggingOptions) {
+            return authorizationLoggingOptions(Output.of(authorizationLoggingOptions));
         }
+
         public Builder logName(@Nullable Output<CloudAuditOptionsLogName> logName) {
-            this.logName = logName;
+            $.logName = logName;
             return this;
         }
-        public Builder logName(@Nullable CloudAuditOptionsLogName logName) {
-            this.logName = Codegen.ofNullable(logName);
-            return this;
-        }        public CloudAuditOptionsArgs build() {
-            return new CloudAuditOptionsArgs(authorizationLoggingOptions, logName);
+
+        public Builder logName(CloudAuditOptionsLogName logName) {
+            return logName(Output.of(logName));
+        }
+
+        public CloudAuditOptionsArgs build() {
+            return $;
         }
     }
+
 }

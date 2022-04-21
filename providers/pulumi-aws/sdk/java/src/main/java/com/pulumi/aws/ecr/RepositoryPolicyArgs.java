@@ -5,7 +5,6 @@ package com.pulumi.aws.ecr;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class RepositoryPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policy", required=true)
-      private final Output<String> policy;
+    private Output<String> policy;
 
     public Output<String> policy() {
         return this.policy;
@@ -30,59 +29,60 @@ public final class RepositoryPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="repository", required=true)
-      private final Output<String> repository;
+    private Output<String> repository;
 
     public Output<String> repository() {
         return this.repository;
     }
 
-    public RepositoryPolicyArgs(
-        Output<String> policy,
-        Output<String> repository) {
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-    }
+    private RepositoryPolicyArgs() {}
 
-    private RepositoryPolicyArgs() {
-        this.policy = Codegen.empty();
-        this.repository = Codegen.empty();
+    private RepositoryPolicyArgs(RepositoryPolicyArgs $) {
+        this.policy = $.policy;
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policy;
-        private Output<String> repository;
+        private RepositoryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryPolicyArgs();
         }
 
         public Builder(RepositoryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.repository = defaults.repository;
+            $ = new RepositoryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(Output<String> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
         public Builder repository(Output<String> repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
         }
+
         public Builder repository(String repository) {
-            this.repository = Output.of(Objects.requireNonNull(repository));
-            return this;
-        }        public RepositoryPolicyArgs build() {
-            return new RepositoryPolicyArgs(policy, repository);
+            return repository(Output.of(repository));
+        }
+
+        public RepositoryPolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,10 +8,10 @@ import com.pulumi.awsnative.iotsitewise.inputs.AssetPropertyArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.AssetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
     public static final AssetArgs Empty = new AssetArgs();
 
     @Import(name="assetHierarchies")
-      private final @Nullable Output<List<AssetHierarchyArgs>> assetHierarchies;
+    private @Nullable Output<List<AssetHierarchyArgs>> assetHierarchies;
 
-    public Output<List<AssetHierarchyArgs>> assetHierarchies() {
-        return this.assetHierarchies == null ? Codegen.empty() : this.assetHierarchies;
+    public Optional<Output<List<AssetHierarchyArgs>>> assetHierarchies() {
+        return Optional.ofNullable(this.assetHierarchies);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetModelId", required=true)
-      private final Output<String> assetModelId;
+    private Output<String> assetModelId;
 
     public Output<String> assetModelId() {
         return this.assetModelId;
@@ -42,17 +42,17 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetName")
-      private final @Nullable Output<String> assetName;
+    private @Nullable Output<String> assetName;
 
-    public Output<String> assetName() {
-        return this.assetName == null ? Codegen.empty() : this.assetName;
+    public Optional<Output<String>> assetName() {
+        return Optional.ofNullable(this.assetName);
     }
 
     @Import(name="assetProperties")
-      private final @Nullable Output<List<AssetPropertyArgs>> assetProperties;
+    private @Nullable Output<List<AssetPropertyArgs>> assetProperties;
 
-    public Output<List<AssetPropertyArgs>> assetProperties() {
-        return this.assetProperties == null ? Codegen.empty() : this.assetProperties;
+    public Optional<Output<List<AssetPropertyArgs>>> assetProperties() {
+        return Optional.ofNullable(this.assetProperties);
     }
 
     /**
@@ -60,111 +60,101 @@ public final class AssetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<AssetTagArgs>> tags;
+    private @Nullable Output<List<AssetTagArgs>> tags;
 
-    public Output<List<AssetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<AssetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AssetArgs(
-        @Nullable Output<List<AssetHierarchyArgs>> assetHierarchies,
-        Output<String> assetModelId,
-        @Nullable Output<String> assetName,
-        @Nullable Output<List<AssetPropertyArgs>> assetProperties,
-        @Nullable Output<List<AssetTagArgs>> tags) {
-        this.assetHierarchies = assetHierarchies;
-        this.assetModelId = Objects.requireNonNull(assetModelId, "expected parameter 'assetModelId' to be non-null");
-        this.assetName = assetName;
-        this.assetProperties = assetProperties;
-        this.tags = tags;
-    }
+    private AssetArgs() {}
 
-    private AssetArgs() {
-        this.assetHierarchies = Codegen.empty();
-        this.assetModelId = Codegen.empty();
-        this.assetName = Codegen.empty();
-        this.assetProperties = Codegen.empty();
-        this.tags = Codegen.empty();
+    private AssetArgs(AssetArgs $) {
+        this.assetHierarchies = $.assetHierarchies;
+        this.assetModelId = $.assetModelId;
+        this.assetName = $.assetName;
+        this.assetProperties = $.assetProperties;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AssetHierarchyArgs>> assetHierarchies;
-        private Output<String> assetModelId;
-        private @Nullable Output<String> assetName;
-        private @Nullable Output<List<AssetPropertyArgs>> assetProperties;
-        private @Nullable Output<List<AssetTagArgs>> tags;
+        private AssetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetArgs();
         }
 
         public Builder(AssetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetHierarchies = defaults.assetHierarchies;
-    	      this.assetModelId = defaults.assetModelId;
-    	      this.assetName = defaults.assetName;
-    	      this.assetProperties = defaults.assetProperties;
-    	      this.tags = defaults.tags;
+            $ = new AssetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetHierarchies(@Nullable Output<List<AssetHierarchyArgs>> assetHierarchies) {
-            this.assetHierarchies = assetHierarchies;
+            $.assetHierarchies = assetHierarchies;
             return this;
         }
-        public Builder assetHierarchies(@Nullable List<AssetHierarchyArgs> assetHierarchies) {
-            this.assetHierarchies = Codegen.ofNullable(assetHierarchies);
-            return this;
+
+        public Builder assetHierarchies(List<AssetHierarchyArgs> assetHierarchies) {
+            return assetHierarchies(Output.of(assetHierarchies));
         }
+
         public Builder assetHierarchies(AssetHierarchyArgs... assetHierarchies) {
             return assetHierarchies(List.of(assetHierarchies));
         }
+
         public Builder assetModelId(Output<String> assetModelId) {
-            this.assetModelId = Objects.requireNonNull(assetModelId);
+            $.assetModelId = assetModelId;
             return this;
         }
+
         public Builder assetModelId(String assetModelId) {
-            this.assetModelId = Output.of(Objects.requireNonNull(assetModelId));
-            return this;
+            return assetModelId(Output.of(assetModelId));
         }
+
         public Builder assetName(@Nullable Output<String> assetName) {
-            this.assetName = assetName;
+            $.assetName = assetName;
             return this;
         }
-        public Builder assetName(@Nullable String assetName) {
-            this.assetName = Codegen.ofNullable(assetName);
-            return this;
+
+        public Builder assetName(String assetName) {
+            return assetName(Output.of(assetName));
         }
+
         public Builder assetProperties(@Nullable Output<List<AssetPropertyArgs>> assetProperties) {
-            this.assetProperties = assetProperties;
+            $.assetProperties = assetProperties;
             return this;
         }
-        public Builder assetProperties(@Nullable List<AssetPropertyArgs> assetProperties) {
-            this.assetProperties = Codegen.ofNullable(assetProperties);
-            return this;
+
+        public Builder assetProperties(List<AssetPropertyArgs> assetProperties) {
+            return assetProperties(Output.of(assetProperties));
         }
+
         public Builder assetProperties(AssetPropertyArgs... assetProperties) {
             return assetProperties(List.of(assetProperties));
         }
+
         public Builder tags(@Nullable Output<List<AssetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<AssetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<AssetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(AssetTagArgs... tags) {
             return tags(List.of(tags));
-        }        public AssetArgs build() {
-            return new AssetArgs(assetHierarchies, assetModelId, assetName, assetProperties, tags);
+        }
+
+        public AssetArgs build() {
+            $.assetModelId = Objects.requireNonNull($.assetModelId, "expected parameter 'assetModelId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,10 +22,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="amazonSideAsn")
-      private final @Nullable String amazonSideAsn;
+    private @Nullable String amazonSideAsn;
 
     public Optional<String> amazonSideAsn() {
-        return this.amazonSideAsn == null ? Optional.empty() : Optional.ofNullable(this.amazonSideAsn);
+        return Optional.ofNullable(this.amazonSideAsn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attachedVpcId")
-      private final @Nullable String attachedVpcId;
+    private @Nullable String attachedVpcId;
 
     public Optional<String> attachedVpcId() {
-        return this.attachedVpcId == null ? Optional.empty() : Optional.ofNullable(this.attachedVpcId);
+        return Optional.ofNullable(this.attachedVpcId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityZone")
-      private final @Nullable String availabilityZone;
+    private @Nullable String availabilityZone;
 
     public Optional<String> availabilityZone() {
-        return this.availabilityZone == null ? Optional.empty() : Optional.ofNullable(this.availabilityZone);
+        return Optional.ofNullable(this.availabilityZone);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpnGatewayFilter> filters;
+    private @Nullable List<GetVpnGatewayFilter> filters;
 
-    public List<GetVpnGatewayFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpnGatewayFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -89,103 +89,84 @@ public final class GetVpnGatewayArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVpnGatewayArgs(
-        @Nullable String amazonSideAsn,
-        @Nullable String attachedVpcId,
-        @Nullable String availabilityZone,
-        @Nullable List<GetVpnGatewayFilter> filters,
-        @Nullable String id,
-        @Nullable String state,
-        @Nullable Map<String,String> tags) {
-        this.amazonSideAsn = amazonSideAsn;
-        this.attachedVpcId = attachedVpcId;
-        this.availabilityZone = availabilityZone;
-        this.filters = filters;
-        this.id = id;
-        this.state = state;
-        this.tags = tags;
-    }
+    private GetVpnGatewayArgs() {}
 
-    private GetVpnGatewayArgs() {
-        this.amazonSideAsn = null;
-        this.attachedVpcId = null;
-        this.availabilityZone = null;
-        this.filters = List.of();
-        this.id = null;
-        this.state = null;
-        this.tags = Map.of();
+    private GetVpnGatewayArgs(GetVpnGatewayArgs $) {
+        this.amazonSideAsn = $.amazonSideAsn;
+        this.attachedVpcId = $.attachedVpcId;
+        this.availabilityZone = $.availabilityZone;
+        this.filters = $.filters;
+        this.id = $.id;
+        this.state = $.state;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpnGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String amazonSideAsn;
-        private @Nullable String attachedVpcId;
-        private @Nullable String availabilityZone;
-        private @Nullable List<GetVpnGatewayFilter> filters;
-        private @Nullable String id;
-        private @Nullable String state;
-        private @Nullable Map<String,String> tags;
+        private GetVpnGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpnGatewayArgs();
         }
 
         public Builder(GetVpnGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amazonSideAsn = defaults.amazonSideAsn;
-    	      this.attachedVpcId = defaults.attachedVpcId;
-    	      this.availabilityZone = defaults.availabilityZone;
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.state = defaults.state;
-    	      this.tags = defaults.tags;
+            $ = new GetVpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
-            this.amazonSideAsn = amazonSideAsn;
+            $.amazonSideAsn = amazonSideAsn;
             return this;
         }
+
         public Builder attachedVpcId(@Nullable String attachedVpcId) {
-            this.attachedVpcId = attachedVpcId;
+            $.attachedVpcId = attachedVpcId;
             return this;
         }
+
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = availabilityZone;
+            $.availabilityZone = availabilityZone;
             return this;
         }
+
         public Builder filters(@Nullable List<GetVpnGatewayFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpnGatewayFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVpnGatewayArgs build() {
-            return new GetVpnGatewayArgs(amazonSideAsn, attachedVpcId, availabilityZone, filters, id, state, tags);
+        }
+
+        public GetVpnGatewayArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatasetFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,70 @@ public final class DatasetQueryActionArgs extends com.pulumi.resources.ResourceA
     public static final DatasetQueryActionArgs Empty = new DatasetQueryActionArgs();
 
     @Import(name="filters")
-      private final @Nullable Output<List<DatasetFilterArgs>> filters;
+    private @Nullable Output<List<DatasetFilterArgs>> filters;
 
-    public Output<List<DatasetFilterArgs>> filters() {
-        return this.filters == null ? Codegen.empty() : this.filters;
+    public Optional<Output<List<DatasetFilterArgs>>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     @Import(name="sqlQuery", required=true)
-      private final Output<String> sqlQuery;
+    private Output<String> sqlQuery;
 
     public Output<String> sqlQuery() {
         return this.sqlQuery;
     }
 
-    public DatasetQueryActionArgs(
-        @Nullable Output<List<DatasetFilterArgs>> filters,
-        Output<String> sqlQuery) {
-        this.filters = filters;
-        this.sqlQuery = Objects.requireNonNull(sqlQuery, "expected parameter 'sqlQuery' to be non-null");
-    }
+    private DatasetQueryActionArgs() {}
 
-    private DatasetQueryActionArgs() {
-        this.filters = Codegen.empty();
-        this.sqlQuery = Codegen.empty();
+    private DatasetQueryActionArgs(DatasetQueryActionArgs $) {
+        this.filters = $.filters;
+        this.sqlQuery = $.sqlQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetQueryActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DatasetFilterArgs>> filters;
-        private Output<String> sqlQuery;
+        private DatasetQueryActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetQueryActionArgs();
         }
 
         public Builder(DatasetQueryActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.sqlQuery = defaults.sqlQuery;
+            $ = new DatasetQueryActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable Output<List<DatasetFilterArgs>> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
-        public Builder filters(@Nullable List<DatasetFilterArgs> filters) {
-            this.filters = Codegen.ofNullable(filters);
-            return this;
+
+        public Builder filters(List<DatasetFilterArgs> filters) {
+            return filters(Output.of(filters));
         }
+
         public Builder filters(DatasetFilterArgs... filters) {
             return filters(List.of(filters));
         }
+
         public Builder sqlQuery(Output<String> sqlQuery) {
-            this.sqlQuery = Objects.requireNonNull(sqlQuery);
+            $.sqlQuery = sqlQuery;
             return this;
         }
+
         public Builder sqlQuery(String sqlQuery) {
-            this.sqlQuery = Output.of(Objects.requireNonNull(sqlQuery));
-            return this;
-        }        public DatasetQueryActionArgs build() {
-            return new DatasetQueryActionArgs(filters, sqlQuery);
+            return sqlQuery(Output.of(sqlQuery));
+        }
+
+        public DatasetQueryActionArgs build() {
+            $.sqlQuery = Objects.requireNonNull($.sqlQuery, "expected parameter 'sqlQuery' to be non-null");
+            return $;
         }
     }
+
 }

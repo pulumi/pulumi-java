@@ -24,7 +24,7 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="error", required=true)
-      private final StatusResponse error;
+    private StatusResponse error;
 
     public StatusResponse error() {
         return this.error;
@@ -35,7 +35,7 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="result", required=true)
-      private final String result;
+    private String result;
 
     public String result() {
         return this.result;
@@ -46,7 +46,7 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="traces", required=true)
-      private final List<TraceResponse> traces;
+    private List<TraceResponse> traces;
 
     public List<TraceResponse> traces() {
         return this.traces;
@@ -57,76 +57,70 @@ public final class ReachabilityDetailsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="verifyTime", required=true)
-      private final String verifyTime;
+    private String verifyTime;
 
     public String verifyTime() {
         return this.verifyTime;
     }
 
-    public ReachabilityDetailsResponse(
-        StatusResponse error,
-        String result,
-        List<TraceResponse> traces,
-        String verifyTime) {
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.result = Objects.requireNonNull(result, "expected parameter 'result' to be non-null");
-        this.traces = Objects.requireNonNull(traces, "expected parameter 'traces' to be non-null");
-        this.verifyTime = Objects.requireNonNull(verifyTime, "expected parameter 'verifyTime' to be non-null");
-    }
+    private ReachabilityDetailsResponse() {}
 
-    private ReachabilityDetailsResponse() {
-        this.error = null;
-        this.result = null;
-        this.traces = List.of();
-        this.verifyTime = null;
+    private ReachabilityDetailsResponse(ReachabilityDetailsResponse $) {
+        this.error = $.error;
+        this.result = $.result;
+        this.traces = $.traces;
+        this.verifyTime = $.verifyTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReachabilityDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private StatusResponse error;
-        private String result;
-        private List<TraceResponse> traces;
-        private String verifyTime;
+        private ReachabilityDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReachabilityDetailsResponse();
         }
 
         public Builder(ReachabilityDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.error = defaults.error;
-    	      this.result = defaults.result;
-    	      this.traces = defaults.traces;
-    	      this.verifyTime = defaults.verifyTime;
+            $ = new ReachabilityDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder error(StatusResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder result(String result) {
-            this.result = Objects.requireNonNull(result);
+            $.result = result;
             return this;
         }
+
         public Builder traces(List<TraceResponse> traces) {
-            this.traces = Objects.requireNonNull(traces);
+            $.traces = traces;
             return this;
         }
+
         public Builder traces(TraceResponse... traces) {
             return traces(List.of(traces));
         }
+
         public Builder verifyTime(String verifyTime) {
-            this.verifyTime = Objects.requireNonNull(verifyTime);
+            $.verifyTime = verifyTime;
             return this;
-        }        public ReachabilityDetailsResponse build() {
-            return new ReachabilityDetailsResponse(error, result, traces, verifyTime);
+        }
+
+        public ReachabilityDetailsResponse build() {
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.result = Objects.requireNonNull($.result, "expected parameter 'result' to be non-null");
+            $.traces = Objects.requireNonNull($.traces, "expected parameter 'traces' to be non-null");
+            $.verifyTime = Objects.requireNonNull($.verifyTime, "expected parameter 'verifyTime' to be non-null");
+            return $;
         }
     }
+
 }

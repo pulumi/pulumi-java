@@ -7,9 +7,9 @@ import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypePro
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FieldLevelEncryptionConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class FieldLevelEncryptionConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="contentTypeProfileConfig", required=true)
-      private final Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
+    private Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
 
     public Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig() {
         return this.contentTypeProfileConfig;
@@ -44,76 +44,70 @@ public final class FieldLevelEncryptionConfigArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="queryArgProfileConfig", required=true)
-      private final Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
+    private Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
 
     public Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig() {
         return this.queryArgProfileConfig;
     }
 
-    public FieldLevelEncryptionConfigArgs(
-        @Nullable Output<String> comment,
-        Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig,
-        Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
-        this.comment = comment;
-        this.contentTypeProfileConfig = Objects.requireNonNull(contentTypeProfileConfig, "expected parameter 'contentTypeProfileConfig' to be non-null");
-        this.queryArgProfileConfig = Objects.requireNonNull(queryArgProfileConfig, "expected parameter 'queryArgProfileConfig' to be non-null");
-    }
+    private FieldLevelEncryptionConfigArgs() {}
 
-    private FieldLevelEncryptionConfigArgs() {
-        this.comment = Codegen.empty();
-        this.contentTypeProfileConfig = Codegen.empty();
-        this.queryArgProfileConfig = Codegen.empty();
+    private FieldLevelEncryptionConfigArgs(FieldLevelEncryptionConfigArgs $) {
+        this.comment = $.comment;
+        this.contentTypeProfileConfig = $.contentTypeProfileConfig;
+        this.queryArgProfileConfig = $.queryArgProfileConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
-        private Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
-        private Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
+        private FieldLevelEncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionConfigArgs();
         }
 
         public Builder(FieldLevelEncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
-    	      this.contentTypeProfileConfig = defaults.contentTypeProfileConfig;
-    	      this.queryArgProfileConfig = defaults.queryArgProfileConfig;
+            $ = new FieldLevelEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder contentTypeProfileConfig(Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig) {
-            this.contentTypeProfileConfig = Objects.requireNonNull(contentTypeProfileConfig);
+            $.contentTypeProfileConfig = contentTypeProfileConfig;
             return this;
         }
+
         public Builder contentTypeProfileConfig(FieldLevelEncryptionConfigContentTypeProfileConfigArgs contentTypeProfileConfig) {
-            this.contentTypeProfileConfig = Output.of(Objects.requireNonNull(contentTypeProfileConfig));
-            return this;
+            return contentTypeProfileConfig(Output.of(contentTypeProfileConfig));
         }
+
         public Builder queryArgProfileConfig(Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
-            this.queryArgProfileConfig = Objects.requireNonNull(queryArgProfileConfig);
+            $.queryArgProfileConfig = queryArgProfileConfig;
             return this;
         }
+
         public Builder queryArgProfileConfig(FieldLevelEncryptionConfigQueryArgProfileConfigArgs queryArgProfileConfig) {
-            this.queryArgProfileConfig = Output.of(Objects.requireNonNull(queryArgProfileConfig));
-            return this;
-        }        public FieldLevelEncryptionConfigArgs build() {
-            return new FieldLevelEncryptionConfigArgs(comment, contentTypeProfileConfig, queryArgProfileConfig);
+            return queryArgProfileConfig(Output.of(queryArgProfileConfig));
+        }
+
+        public FieldLevelEncryptionConfigArgs build() {
+            $.contentTypeProfileConfig = Objects.requireNonNull($.contentTypeProfileConfig, "expected parameter 'contentTypeProfileConfig' to be non-null");
+            $.queryArgProfileConfig = Objects.requireNonNull($.queryArgProfileConfig, "expected parameter 'queryArgProfileConfig' to be non-null");
+            return $;
         }
     }
+
 }

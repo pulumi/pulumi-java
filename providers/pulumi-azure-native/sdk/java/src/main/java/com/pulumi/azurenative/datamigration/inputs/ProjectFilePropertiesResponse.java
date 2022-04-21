@@ -24,10 +24,10 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="extension")
-      private final @Nullable String extension;
+    private @Nullable String extension;
 
     public Optional<String> extension() {
-        return this.extension == null ? Optional.empty() : Optional.ofNullable(this.extension);
+        return Optional.ofNullable(this.extension);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="filePath")
-      private final @Nullable String filePath;
+    private @Nullable String filePath;
 
     public Optional<String> filePath() {
-        return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
+        return Optional.ofNullable(this.filePath);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lastModified", required=true)
-      private final String lastModified;
+    private String lastModified;
 
     public String lastModified() {
         return this.lastModified;
@@ -57,10 +57,10 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="mediaType")
-      private final @Nullable String mediaType;
+    private @Nullable String mediaType;
 
     public Optional<String> mediaType() {
-        return this.mediaType == null ? Optional.empty() : Optional.ofNullable(this.mediaType);
+        return Optional.ofNullable(this.mediaType);
     }
 
     /**
@@ -68,82 +68,70 @@ public final class ProjectFilePropertiesResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="size", required=true)
-      private final Double size;
+    private Double size;
 
     public Double size() {
         return this.size;
     }
 
-    public ProjectFilePropertiesResponse(
-        @Nullable String extension,
-        @Nullable String filePath,
-        String lastModified,
-        @Nullable String mediaType,
-        Double size) {
-        this.extension = extension;
-        this.filePath = filePath;
-        this.lastModified = Objects.requireNonNull(lastModified, "expected parameter 'lastModified' to be non-null");
-        this.mediaType = mediaType;
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-    }
+    private ProjectFilePropertiesResponse() {}
 
-    private ProjectFilePropertiesResponse() {
-        this.extension = null;
-        this.filePath = null;
-        this.lastModified = null;
-        this.mediaType = null;
-        this.size = null;
+    private ProjectFilePropertiesResponse(ProjectFilePropertiesResponse $) {
+        this.extension = $.extension;
+        this.filePath = $.filePath;
+        this.lastModified = $.lastModified;
+        this.mediaType = $.mediaType;
+        this.size = $.size;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectFilePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String extension;
-        private @Nullable String filePath;
-        private String lastModified;
-        private @Nullable String mediaType;
-        private Double size;
+        private ProjectFilePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectFilePropertiesResponse();
         }
 
         public Builder(ProjectFilePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extension = defaults.extension;
-    	      this.filePath = defaults.filePath;
-    	      this.lastModified = defaults.lastModified;
-    	      this.mediaType = defaults.mediaType;
-    	      this.size = defaults.size;
+            $ = new ProjectFilePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extension(@Nullable String extension) {
-            this.extension = extension;
+            $.extension = extension;
             return this;
         }
+
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = filePath;
+            $.filePath = filePath;
             return this;
         }
+
         public Builder lastModified(String lastModified) {
-            this.lastModified = Objects.requireNonNull(lastModified);
+            $.lastModified = lastModified;
             return this;
         }
+
         public Builder mediaType(@Nullable String mediaType) {
-            this.mediaType = mediaType;
+            $.mediaType = mediaType;
             return this;
         }
+
         public Builder size(Double size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
-        }        public ProjectFilePropertiesResponse build() {
-            return new ProjectFilePropertiesResponse(extension, filePath, lastModified, mediaType, size);
+        }
+
+        public ProjectFilePropertiesResponse build() {
+            $.lastModified = Objects.requireNonNull($.lastModified, "expected parameter 'lastModified' to be non-null");
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            return $;
         }
     }
+
 }

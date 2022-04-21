@@ -26,7 +26,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="backendPort", required=true)
-      private final Integer backendPort;
+    private Integer backendPort;
 
     public Integer backendPort() {
         return this.backendPort;
@@ -37,10 +37,10 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enableFloatingIP")
-      private final @Nullable Boolean enableFloatingIP;
+    private @Nullable Boolean enableFloatingIP;
 
     public Optional<Boolean> enableFloatingIP() {
-        return this.enableFloatingIP == null ? Optional.empty() : Optional.ofNullable(this.enableFloatingIP);
+        return Optional.ofNullable(this.enableFloatingIP);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enableTcpReset")
-      private final @Nullable Boolean enableTcpReset;
+    private @Nullable Boolean enableTcpReset;
 
     public Optional<Boolean> enableTcpReset() {
-        return this.enableTcpReset == null ? Optional.empty() : Optional.ofNullable(this.enableTcpReset);
+        return Optional.ofNullable(this.enableTcpReset);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -70,10 +70,10 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="frontendIPConfiguration")
-      private final @Nullable SubResourceResponse frontendIPConfiguration;
+    private @Nullable SubResourceResponse frontendIPConfiguration;
 
     public Optional<SubResourceResponse> frontendIPConfiguration() {
-        return this.frontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.frontendIPConfiguration);
+        return Optional.ofNullable(this.frontendIPConfiguration);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="frontendPortRangeEnd", required=true)
-      private final Integer frontendPortRangeEnd;
+    private Integer frontendPortRangeEnd;
 
     public Integer frontendPortRangeEnd() {
         return this.frontendPortRangeEnd;
@@ -92,7 +92,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="frontendPortRangeStart", required=true)
-      private final Integer frontendPortRangeStart;
+    private Integer frontendPortRangeStart;
 
     public Integer frontendPortRangeStart() {
         return this.frontendPortRangeStart;
@@ -103,10 +103,10 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="idleTimeoutInMinutes")
-      private final @Nullable Integer idleTimeoutInMinutes;
+    private @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
+        return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -136,7 +136,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
@@ -147,7 +147,7 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -158,154 +158,123 @@ public final class InboundNatPoolResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public InboundNatPoolResponse(
-        Integer backendPort,
-        @Nullable Boolean enableFloatingIP,
-        @Nullable Boolean enableTcpReset,
-        String etag,
-        @Nullable SubResourceResponse frontendIPConfiguration,
-        Integer frontendPortRangeEnd,
-        Integer frontendPortRangeStart,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String name,
-        String protocol,
-        String provisioningState,
-        String type) {
-        this.backendPort = Objects.requireNonNull(backendPort, "expected parameter 'backendPort' to be non-null");
-        this.enableFloatingIP = enableFloatingIP;
-        this.enableTcpReset = enableTcpReset;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.frontendIPConfiguration = frontendIPConfiguration;
-        this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd, "expected parameter 'frontendPortRangeEnd' to be non-null");
-        this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart, "expected parameter 'frontendPortRangeStart' to be non-null");
-        this.id = id;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes;
-        this.name = name;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private InboundNatPoolResponse() {}
 
-    private InboundNatPoolResponse() {
-        this.backendPort = null;
-        this.enableFloatingIP = null;
-        this.enableTcpReset = null;
-        this.etag = null;
-        this.frontendIPConfiguration = null;
-        this.frontendPortRangeEnd = null;
-        this.frontendPortRangeStart = null;
-        this.id = null;
-        this.idleTimeoutInMinutes = null;
-        this.name = null;
-        this.protocol = null;
-        this.provisioningState = null;
-        this.type = null;
+    private InboundNatPoolResponse(InboundNatPoolResponse $) {
+        this.backendPort = $.backendPort;
+        this.enableFloatingIP = $.enableFloatingIP;
+        this.enableTcpReset = $.enableTcpReset;
+        this.etag = $.etag;
+        this.frontendIPConfiguration = $.frontendIPConfiguration;
+        this.frontendPortRangeEnd = $.frontendPortRangeEnd;
+        this.frontendPortRangeStart = $.frontendPortRangeStart;
+        this.id = $.id;
+        this.idleTimeoutInMinutes = $.idleTimeoutInMinutes;
+        this.name = $.name;
+        this.protocol = $.protocol;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InboundNatPoolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer backendPort;
-        private @Nullable Boolean enableFloatingIP;
-        private @Nullable Boolean enableTcpReset;
-        private String etag;
-        private @Nullable SubResourceResponse frontendIPConfiguration;
-        private Integer frontendPortRangeEnd;
-        private Integer frontendPortRangeStart;
-        private @Nullable String id;
-        private @Nullable Integer idleTimeoutInMinutes;
-        private @Nullable String name;
-        private String protocol;
-        private String provisioningState;
-        private String type;
+        private InboundNatPoolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InboundNatPoolResponse();
         }
 
         public Builder(InboundNatPoolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPort = defaults.backendPort;
-    	      this.enableFloatingIP = defaults.enableFloatingIP;
-    	      this.enableTcpReset = defaults.enableTcpReset;
-    	      this.etag = defaults.etag;
-    	      this.frontendIPConfiguration = defaults.frontendIPConfiguration;
-    	      this.frontendPortRangeEnd = defaults.frontendPortRangeEnd;
-    	      this.frontendPortRangeStart = defaults.frontendPortRangeStart;
-    	      this.id = defaults.id;
-    	      this.idleTimeoutInMinutes = defaults.idleTimeoutInMinutes;
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new InboundNatPoolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPort(Integer backendPort) {
-            this.backendPort = Objects.requireNonNull(backendPort);
+            $.backendPort = backendPort;
             return this;
         }
+
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
-            this.enableFloatingIP = enableFloatingIP;
+            $.enableFloatingIP = enableFloatingIP;
             return this;
         }
+
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
-            this.enableTcpReset = enableTcpReset;
+            $.enableTcpReset = enableTcpReset;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
-            this.frontendIPConfiguration = frontendIPConfiguration;
+            $.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
+
         public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
-            this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
+            $.frontendPortRangeEnd = frontendPortRangeEnd;
             return this;
         }
+
         public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
-            this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
+            $.frontendPortRangeStart = frontendPortRangeStart;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = idleTimeoutInMinutes;
+            $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public InboundNatPoolResponse build() {
-            return new InboundNatPoolResponse(backendPort, enableFloatingIP, enableTcpReset, etag, frontendIPConfiguration, frontendPortRangeEnd, frontendPortRangeStart, id, idleTimeoutInMinutes, name, protocol, provisioningState, type);
+        }
+
+        public InboundNatPoolResponse build() {
+            $.backendPort = Objects.requireNonNull($.backendPort, "expected parameter 'backendPort' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.frontendPortRangeEnd = Objects.requireNonNull($.frontendPortRangeEnd, "expected parameter 'frontendPortRangeEnd' to be non-null");
+            $.frontendPortRangeStart = Objects.requireNonNull($.frontendPortRangeStart, "expected parameter 'frontendPortRangeStart' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

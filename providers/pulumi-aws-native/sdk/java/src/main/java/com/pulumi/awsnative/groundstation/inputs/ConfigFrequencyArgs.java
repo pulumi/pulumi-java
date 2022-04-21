@@ -6,9 +6,9 @@ package com.pulumi.awsnative.groundstation.inputs;
 import com.pulumi.awsnative.groundstation.enums.ConfigFrequencyUnits;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ConfigFrequencyArgs extends com.pulumi.resources.ResourceArgs
     public static final ConfigFrequencyArgs Empty = new ConfigFrequencyArgs();
 
     @Import(name="units")
-      private final @Nullable Output<ConfigFrequencyUnits> units;
+    private @Nullable Output<ConfigFrequencyUnits> units;
 
-    public Output<ConfigFrequencyUnits> units() {
-        return this.units == null ? Codegen.empty() : this.units;
+    public Optional<Output<ConfigFrequencyUnits>> units() {
+        return Optional.ofNullable(this.units);
     }
 
     @Import(name="value")
-      private final @Nullable Output<Double> value;
+    private @Nullable Output<Double> value;
 
-    public Output<Double> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Double>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ConfigFrequencyArgs(
-        @Nullable Output<ConfigFrequencyUnits> units,
-        @Nullable Output<Double> value) {
-        this.units = units;
-        this.value = value;
-    }
+    private ConfigFrequencyArgs() {}
 
-    private ConfigFrequencyArgs() {
-        this.units = Codegen.empty();
-        this.value = Codegen.empty();
+    private ConfigFrequencyArgs(ConfigFrequencyArgs $) {
+        this.units = $.units;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigFrequencyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigFrequencyUnits> units;
-        private @Nullable Output<Double> value;
+        private ConfigFrequencyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigFrequencyArgs();
         }
 
         public Builder(ConfigFrequencyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.units = defaults.units;
-    	      this.value = defaults.value;
+            $ = new ConfigFrequencyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder units(@Nullable Output<ConfigFrequencyUnits> units) {
-            this.units = units;
+            $.units = units;
             return this;
         }
-        public Builder units(@Nullable ConfigFrequencyUnits units) {
-            this.units = Codegen.ofNullable(units);
-            return this;
+
+        public Builder units(ConfigFrequencyUnits units) {
+            return units(Output.of(units));
         }
+
         public Builder value(@Nullable Output<Double> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Double value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ConfigFrequencyArgs build() {
-            return new ConfigFrequencyArgs(units, value);
+
+        public Builder value(Double value) {
+            return value(Output.of(value));
+        }
+
+        public ConfigFrequencyArgs build() {
+            return $;
         }
     }
+
 }

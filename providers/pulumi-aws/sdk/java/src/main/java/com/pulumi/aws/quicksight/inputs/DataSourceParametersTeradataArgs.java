@@ -5,7 +5,6 @@ package com.pulumi.aws.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class DataSourceParametersTeradataArgs extends com.pulumi.resources
      * 
      */
     @Import(name="database", required=true)
-      private final Output<String> database;
+    private Output<String> database;
 
     public Output<String> database() {
         return this.database;
@@ -31,7 +30,7 @@ public final class DataSourceParametersTeradataArgs extends com.pulumi.resources
      * 
      */
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
@@ -42,76 +41,71 @@ public final class DataSourceParametersTeradataArgs extends com.pulumi.resources
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
     }
 
-    public DataSourceParametersTeradataArgs(
-        Output<String> database,
-        Output<String> host,
-        Output<Integer> port) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private DataSourceParametersTeradataArgs() {}
 
-    private DataSourceParametersTeradataArgs() {
-        this.database = Codegen.empty();
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
+    private DataSourceParametersTeradataArgs(DataSourceParametersTeradataArgs $) {
+        this.database = $.database;
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceParametersTeradataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> database;
-        private Output<String> host;
-        private Output<Integer> port;
+        private DataSourceParametersTeradataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceParametersTeradataArgs();
         }
 
         public Builder(DataSourceParametersTeradataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourceParametersTeradataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder database(Output<String> database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Output.of(Objects.requireNonNull(database));
-            return this;
+            return database(Output.of(database));
         }
+
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
-        }        public DataSourceParametersTeradataArgs build() {
-            return new DataSourceParametersTeradataArgs(database, host, port);
+            return port(Output.of(port));
+        }
+
+        public DataSourceParametersTeradataArgs build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

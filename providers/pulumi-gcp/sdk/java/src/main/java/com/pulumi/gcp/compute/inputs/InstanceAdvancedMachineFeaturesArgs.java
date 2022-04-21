@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceAdvancedMachineFeaturesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="enableNestedVirtualization")
-      private final @Nullable Output<Boolean> enableNestedVirtualization;
+    private @Nullable Output<Boolean> enableNestedVirtualization;
 
-    public Output<Boolean> enableNestedVirtualization() {
-        return this.enableNestedVirtualization == null ? Codegen.empty() : this.enableNestedVirtualization;
+    public Optional<Output<Boolean>> enableNestedVirtualization() {
+        return Optional.ofNullable(this.enableNestedVirtualization);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class InstanceAdvancedMachineFeaturesArgs extends com.pulumi.resour
      * 
      */
     @Import(name="threadsPerCore")
-      private final @Nullable Output<Integer> threadsPerCore;
+    private @Nullable Output<Integer> threadsPerCore;
 
-    public Output<Integer> threadsPerCore() {
-        return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
+    public Optional<Output<Integer>> threadsPerCore() {
+        return Optional.ofNullable(this.threadsPerCore);
     }
 
-    public InstanceAdvancedMachineFeaturesArgs(
-        @Nullable Output<Boolean> enableNestedVirtualization,
-        @Nullable Output<Integer> threadsPerCore) {
-        this.enableNestedVirtualization = enableNestedVirtualization;
-        this.threadsPerCore = threadsPerCore;
-    }
+    private InstanceAdvancedMachineFeaturesArgs() {}
 
-    private InstanceAdvancedMachineFeaturesArgs() {
-        this.enableNestedVirtualization = Codegen.empty();
-        this.threadsPerCore = Codegen.empty();
+    private InstanceAdvancedMachineFeaturesArgs(InstanceAdvancedMachineFeaturesArgs $) {
+        this.enableNestedVirtualization = $.enableNestedVirtualization;
+        this.threadsPerCore = $.threadsPerCore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAdvancedMachineFeaturesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableNestedVirtualization;
-        private @Nullable Output<Integer> threadsPerCore;
+        private InstanceAdvancedMachineFeaturesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAdvancedMachineFeaturesArgs();
         }
 
         public Builder(InstanceAdvancedMachineFeaturesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableNestedVirtualization = defaults.enableNestedVirtualization;
-    	      this.threadsPerCore = defaults.threadsPerCore;
+            $ = new InstanceAdvancedMachineFeaturesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableNestedVirtualization(@Nullable Output<Boolean> enableNestedVirtualization) {
-            this.enableNestedVirtualization = enableNestedVirtualization;
+            $.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
-        public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
-            this.enableNestedVirtualization = Codegen.ofNullable(enableNestedVirtualization);
-            return this;
+
+        public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
+            return enableNestedVirtualization(Output.of(enableNestedVirtualization));
         }
+
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
-            this.threadsPerCore = threadsPerCore;
+            $.threadsPerCore = threadsPerCore;
             return this;
         }
-        public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
-            this.threadsPerCore = Codegen.ofNullable(threadsPerCore);
-            return this;
-        }        public InstanceAdvancedMachineFeaturesArgs build() {
-            return new InstanceAdvancedMachineFeaturesArgs(enableNestedVirtualization, threadsPerCore);
+
+        public Builder threadsPerCore(Integer threadsPerCore) {
+            return threadsPerCore(Output.of(threadsPerCore));
+        }
+
+        public InstanceAdvancedMachineFeaturesArgs build() {
+            return $;
         }
     }
+
 }

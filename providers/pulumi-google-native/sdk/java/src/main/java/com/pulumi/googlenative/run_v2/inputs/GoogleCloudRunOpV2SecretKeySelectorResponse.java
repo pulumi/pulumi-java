@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends com.pulum
      * 
      */
     @Import(name="secret", required=true)
-      private final String secret;
+    private String secret;
 
     public String secret() {
         return this.secret;
@@ -32,55 +32,52 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends com.pulum
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public GoogleCloudRunOpV2SecretKeySelectorResponse(
-        String secret,
-        String version) {
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GoogleCloudRunOpV2SecretKeySelectorResponse() {}
 
-    private GoogleCloudRunOpV2SecretKeySelectorResponse() {
-        this.secret = null;
-        this.version = null;
+    private GoogleCloudRunOpV2SecretKeySelectorResponse(GoogleCloudRunOpV2SecretKeySelectorResponse $) {
+        this.secret = $.secret;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2SecretKeySelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String secret;
-        private String version;
+        private GoogleCloudRunOpV2SecretKeySelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2SecretKeySelectorResponse();
         }
 
         public Builder(GoogleCloudRunOpV2SecretKeySelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secret = defaults.secret;
-    	      this.version = defaults.version;
+            $ = new GoogleCloudRunOpV2SecretKeySelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder secret(String secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public GoogleCloudRunOpV2SecretKeySelectorResponse build() {
-            return new GoogleCloudRunOpV2SecretKeySelectorResponse(secret, version);
+        }
+
+        public GoogleCloudRunOpV2SecretKeySelectorResponse build() {
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

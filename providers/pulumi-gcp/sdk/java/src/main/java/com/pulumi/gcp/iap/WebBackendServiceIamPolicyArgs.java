@@ -5,9 +5,9 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class WebBackendServiceIamPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -33,10 +33,10 @@ public final class WebBackendServiceIamPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -44,76 +44,70 @@ public final class WebBackendServiceIamPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="webBackendService", required=true)
-      private final Output<String> webBackendService;
+    private Output<String> webBackendService;
 
     public Output<String> webBackendService() {
         return this.webBackendService;
     }
 
-    public WebBackendServiceIamPolicyArgs(
-        Output<String> policyData,
-        @Nullable Output<String> project,
-        Output<String> webBackendService) {
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-        this.webBackendService = Objects.requireNonNull(webBackendService, "expected parameter 'webBackendService' to be non-null");
-    }
+    private WebBackendServiceIamPolicyArgs() {}
 
-    private WebBackendServiceIamPolicyArgs() {
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.webBackendService = Codegen.empty();
+    private WebBackendServiceIamPolicyArgs(WebBackendServiceIamPolicyArgs $) {
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.webBackendService = $.webBackendService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebBackendServiceIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
-        private Output<String> webBackendService;
+        private WebBackendServiceIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebBackendServiceIamPolicyArgs();
         }
 
         public Builder(WebBackendServiceIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.webBackendService = defaults.webBackendService;
+            $ = new WebBackendServiceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder webBackendService(Output<String> webBackendService) {
-            this.webBackendService = Objects.requireNonNull(webBackendService);
+            $.webBackendService = webBackendService;
             return this;
         }
+
         public Builder webBackendService(String webBackendService) {
-            this.webBackendService = Output.of(Objects.requireNonNull(webBackendService));
-            return this;
-        }        public WebBackendServiceIamPolicyArgs build() {
-            return new WebBackendServiceIamPolicyArgs(policyData, project, webBackendService);
+            return webBackendService(Output.of(webBackendService));
+        }
+
+        public WebBackendServiceIamPolicyArgs build() {
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.webBackendService = Objects.requireNonNull($.webBackendService, "expected parameter 'webBackendService' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.aws.batch.inputs;
 import com.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyEvaluateOnExitArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class JobDefinitionRetryStrategyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="attempts")
-      private final @Nullable Output<Integer> attempts;
+    private @Nullable Output<Integer> attempts;
 
-    public Output<Integer> attempts() {
-        return this.attempts == null ? Codegen.empty() : this.attempts;
+    public Optional<Output<Integer>> attempts() {
+        return Optional.ofNullable(this.attempts);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class JobDefinitionRetryStrategyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="evaluateOnExits")
-      private final @Nullable Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits;
+    private @Nullable Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits;
 
-    public Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits() {
-        return this.evaluateOnExits == null ? Codegen.empty() : this.evaluateOnExits;
+    public Optional<Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>>> evaluateOnExits() {
+        return Optional.ofNullable(this.evaluateOnExits);
     }
 
-    public JobDefinitionRetryStrategyArgs(
-        @Nullable Output<Integer> attempts,
-        @Nullable Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits) {
-        this.attempts = attempts;
-        this.evaluateOnExits = evaluateOnExits;
-    }
+    private JobDefinitionRetryStrategyArgs() {}
 
-    private JobDefinitionRetryStrategyArgs() {
-        this.attempts = Codegen.empty();
-        this.evaluateOnExits = Codegen.empty();
+    private JobDefinitionRetryStrategyArgs(JobDefinitionRetryStrategyArgs $) {
+        this.attempts = $.attempts;
+        this.evaluateOnExits = $.evaluateOnExits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobDefinitionRetryStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> attempts;
-        private @Nullable Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits;
+        private JobDefinitionRetryStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobDefinitionRetryStrategyArgs();
         }
 
         public Builder(JobDefinitionRetryStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attempts = defaults.attempts;
-    	      this.evaluateOnExits = defaults.evaluateOnExits;
+            $ = new JobDefinitionRetryStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attempts(@Nullable Output<Integer> attempts) {
-            this.attempts = attempts;
+            $.attempts = attempts;
             return this;
         }
-        public Builder attempts(@Nullable Integer attempts) {
-            this.attempts = Codegen.ofNullable(attempts);
-            return this;
+
+        public Builder attempts(Integer attempts) {
+            return attempts(Output.of(attempts));
         }
+
         public Builder evaluateOnExits(@Nullable Output<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits) {
-            this.evaluateOnExits = evaluateOnExits;
+            $.evaluateOnExits = evaluateOnExits;
             return this;
         }
-        public Builder evaluateOnExits(@Nullable List<JobDefinitionRetryStrategyEvaluateOnExitArgs> evaluateOnExits) {
-            this.evaluateOnExits = Codegen.ofNullable(evaluateOnExits);
-            return this;
+
+        public Builder evaluateOnExits(List<JobDefinitionRetryStrategyEvaluateOnExitArgs> evaluateOnExits) {
+            return evaluateOnExits(Output.of(evaluateOnExits));
         }
+
         public Builder evaluateOnExits(JobDefinitionRetryStrategyEvaluateOnExitArgs... evaluateOnExits) {
             return evaluateOnExits(List.of(evaluateOnExits));
-        }        public JobDefinitionRetryStrategyArgs build() {
-            return new JobDefinitionRetryStrategyArgs(attempts, evaluateOnExits);
+        }
+
+        public JobDefinitionRetryStrategyArgs build() {
+            return $;
         }
     }
+
 }

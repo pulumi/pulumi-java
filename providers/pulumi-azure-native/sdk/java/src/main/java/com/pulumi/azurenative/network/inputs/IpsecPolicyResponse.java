@@ -22,7 +22,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dhGroup", required=true)
-      private final String dhGroup;
+    private String dhGroup;
 
     public String dhGroup() {
         return this.dhGroup;
@@ -33,7 +33,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ikeEncryption", required=true)
-      private final String ikeEncryption;
+    private String ikeEncryption;
 
     public String ikeEncryption() {
         return this.ikeEncryption;
@@ -44,7 +44,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ikeIntegrity", required=true)
-      private final String ikeIntegrity;
+    private String ikeIntegrity;
 
     public String ikeIntegrity() {
         return this.ikeIntegrity;
@@ -55,7 +55,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipsecEncryption", required=true)
-      private final String ipsecEncryption;
+    private String ipsecEncryption;
 
     public String ipsecEncryption() {
         return this.ipsecEncryption;
@@ -66,7 +66,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipsecIntegrity", required=true)
-      private final String ipsecIntegrity;
+    private String ipsecIntegrity;
 
     public String ipsecIntegrity() {
         return this.ipsecIntegrity;
@@ -77,7 +77,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pfsGroup", required=true)
-      private final String pfsGroup;
+    private String pfsGroup;
 
     public String pfsGroup() {
         return this.pfsGroup;
@@ -88,7 +88,7 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="saDataSizeKilobytes", required=true)
-      private final Integer saDataSizeKilobytes;
+    private Integer saDataSizeKilobytes;
 
     public Integer saDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
@@ -99,109 +99,94 @@ public final class IpsecPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="saLifeTimeSeconds", required=true)
-      private final Integer saLifeTimeSeconds;
+    private Integer saLifeTimeSeconds;
 
     public Integer saLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }
 
-    public IpsecPolicyResponse(
-        String dhGroup,
-        String ikeEncryption,
-        String ikeIntegrity,
-        String ipsecEncryption,
-        String ipsecIntegrity,
-        String pfsGroup,
-        Integer saDataSizeKilobytes,
-        Integer saLifeTimeSeconds) {
-        this.dhGroup = Objects.requireNonNull(dhGroup, "expected parameter 'dhGroup' to be non-null");
-        this.ikeEncryption = Objects.requireNonNull(ikeEncryption, "expected parameter 'ikeEncryption' to be non-null");
-        this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity, "expected parameter 'ikeIntegrity' to be non-null");
-        this.ipsecEncryption = Objects.requireNonNull(ipsecEncryption, "expected parameter 'ipsecEncryption' to be non-null");
-        this.ipsecIntegrity = Objects.requireNonNull(ipsecIntegrity, "expected parameter 'ipsecIntegrity' to be non-null");
-        this.pfsGroup = Objects.requireNonNull(pfsGroup, "expected parameter 'pfsGroup' to be non-null");
-        this.saDataSizeKilobytes = Objects.requireNonNull(saDataSizeKilobytes, "expected parameter 'saDataSizeKilobytes' to be non-null");
-        this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds, "expected parameter 'saLifeTimeSeconds' to be non-null");
-    }
+    private IpsecPolicyResponse() {}
 
-    private IpsecPolicyResponse() {
-        this.dhGroup = null;
-        this.ikeEncryption = null;
-        this.ikeIntegrity = null;
-        this.ipsecEncryption = null;
-        this.ipsecIntegrity = null;
-        this.pfsGroup = null;
-        this.saDataSizeKilobytes = null;
-        this.saLifeTimeSeconds = null;
+    private IpsecPolicyResponse(IpsecPolicyResponse $) {
+        this.dhGroup = $.dhGroup;
+        this.ikeEncryption = $.ikeEncryption;
+        this.ikeIntegrity = $.ikeIntegrity;
+        this.ipsecEncryption = $.ipsecEncryption;
+        this.ipsecIntegrity = $.ipsecIntegrity;
+        this.pfsGroup = $.pfsGroup;
+        this.saDataSizeKilobytes = $.saDataSizeKilobytes;
+        this.saLifeTimeSeconds = $.saLifeTimeSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpsecPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dhGroup;
-        private String ikeEncryption;
-        private String ikeIntegrity;
-        private String ipsecEncryption;
-        private String ipsecIntegrity;
-        private String pfsGroup;
-        private Integer saDataSizeKilobytes;
-        private Integer saLifeTimeSeconds;
+        private IpsecPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpsecPolicyResponse();
         }
 
         public Builder(IpsecPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dhGroup = defaults.dhGroup;
-    	      this.ikeEncryption = defaults.ikeEncryption;
-    	      this.ikeIntegrity = defaults.ikeIntegrity;
-    	      this.ipsecEncryption = defaults.ipsecEncryption;
-    	      this.ipsecIntegrity = defaults.ipsecIntegrity;
-    	      this.pfsGroup = defaults.pfsGroup;
-    	      this.saDataSizeKilobytes = defaults.saDataSizeKilobytes;
-    	      this.saLifeTimeSeconds = defaults.saLifeTimeSeconds;
+            $ = new IpsecPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dhGroup(String dhGroup) {
-            this.dhGroup = Objects.requireNonNull(dhGroup);
+            $.dhGroup = dhGroup;
             return this;
         }
+
         public Builder ikeEncryption(String ikeEncryption) {
-            this.ikeEncryption = Objects.requireNonNull(ikeEncryption);
+            $.ikeEncryption = ikeEncryption;
             return this;
         }
+
         public Builder ikeIntegrity(String ikeIntegrity) {
-            this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity);
+            $.ikeIntegrity = ikeIntegrity;
             return this;
         }
+
         public Builder ipsecEncryption(String ipsecEncryption) {
-            this.ipsecEncryption = Objects.requireNonNull(ipsecEncryption);
+            $.ipsecEncryption = ipsecEncryption;
             return this;
         }
+
         public Builder ipsecIntegrity(String ipsecIntegrity) {
-            this.ipsecIntegrity = Objects.requireNonNull(ipsecIntegrity);
+            $.ipsecIntegrity = ipsecIntegrity;
             return this;
         }
+
         public Builder pfsGroup(String pfsGroup) {
-            this.pfsGroup = Objects.requireNonNull(pfsGroup);
+            $.pfsGroup = pfsGroup;
             return this;
         }
+
         public Builder saDataSizeKilobytes(Integer saDataSizeKilobytes) {
-            this.saDataSizeKilobytes = Objects.requireNonNull(saDataSizeKilobytes);
+            $.saDataSizeKilobytes = saDataSizeKilobytes;
             return this;
         }
+
         public Builder saLifeTimeSeconds(Integer saLifeTimeSeconds) {
-            this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
+            $.saLifeTimeSeconds = saLifeTimeSeconds;
             return this;
-        }        public IpsecPolicyResponse build() {
-            return new IpsecPolicyResponse(dhGroup, ikeEncryption, ikeIntegrity, ipsecEncryption, ipsecIntegrity, pfsGroup, saDataSizeKilobytes, saLifeTimeSeconds);
+        }
+
+        public IpsecPolicyResponse build() {
+            $.dhGroup = Objects.requireNonNull($.dhGroup, "expected parameter 'dhGroup' to be non-null");
+            $.ikeEncryption = Objects.requireNonNull($.ikeEncryption, "expected parameter 'ikeEncryption' to be non-null");
+            $.ikeIntegrity = Objects.requireNonNull($.ikeIntegrity, "expected parameter 'ikeIntegrity' to be non-null");
+            $.ipsecEncryption = Objects.requireNonNull($.ipsecEncryption, "expected parameter 'ipsecEncryption' to be non-null");
+            $.ipsecIntegrity = Objects.requireNonNull($.ipsecIntegrity, "expected parameter 'ipsecIntegrity' to be non-null");
+            $.pfsGroup = Objects.requireNonNull($.pfsGroup, "expected parameter 'pfsGroup' to be non-null");
+            $.saDataSizeKilobytes = Objects.requireNonNull($.saDataSizeKilobytes, "expected parameter 'saDataSizeKilobytes' to be non-null");
+            $.saLifeTimeSeconds = Objects.requireNonNull($.saLifeTimeSeconds, "expected parameter 'saLifeTimeSeconds' to be non-null");
+            return $;
         }
     }
+
 }

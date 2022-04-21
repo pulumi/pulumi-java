@@ -24,48 +24,48 @@ public final class SharedPublicIpAddressConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="inboundNatRules")
-      private final @Nullable List<InboundNatRuleResponse> inboundNatRules;
+    private @Nullable List<InboundNatRuleResponse> inboundNatRules;
 
-    public List<InboundNatRuleResponse> inboundNatRules() {
-        return this.inboundNatRules == null ? List.of() : this.inboundNatRules;
+    public Optional<List<InboundNatRuleResponse>> inboundNatRules() {
+        return Optional.ofNullable(this.inboundNatRules);
     }
 
-    public SharedPublicIpAddressConfigurationResponse(@Nullable List<InboundNatRuleResponse> inboundNatRules) {
-        this.inboundNatRules = inboundNatRules;
-    }
+    private SharedPublicIpAddressConfigurationResponse() {}
 
-    private SharedPublicIpAddressConfigurationResponse() {
-        this.inboundNatRules = List.of();
+    private SharedPublicIpAddressConfigurationResponse(SharedPublicIpAddressConfigurationResponse $) {
+        this.inboundNatRules = $.inboundNatRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedPublicIpAddressConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<InboundNatRuleResponse> inboundNatRules;
+        private SharedPublicIpAddressConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedPublicIpAddressConfigurationResponse();
         }
 
         public Builder(SharedPublicIpAddressConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inboundNatRules = defaults.inboundNatRules;
+            $ = new SharedPublicIpAddressConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inboundNatRules(@Nullable List<InboundNatRuleResponse> inboundNatRules) {
-            this.inboundNatRules = inboundNatRules;
+            $.inboundNatRules = inboundNatRules;
             return this;
         }
+
         public Builder inboundNatRules(InboundNatRuleResponse... inboundNatRules) {
             return inboundNatRules(List.of(inboundNatRules));
-        }        public SharedPublicIpAddressConfigurationResponse build() {
-            return new SharedPublicIpAddressConfigurationResponse(inboundNatRules);
+        }
+
+        public SharedPublicIpAddressConfigurationResponse build() {
+            return $;
         }
     }
+
 }

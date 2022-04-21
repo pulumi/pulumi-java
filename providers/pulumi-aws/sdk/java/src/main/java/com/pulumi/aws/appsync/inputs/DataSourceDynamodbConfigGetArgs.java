@@ -6,10 +6,10 @@ package com.pulumi.aws.appsync.inputs;
 import com.pulumi.aws.appsync.inputs.DataSourceDynamodbConfigDeltaSyncConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class DataSourceDynamodbConfigGetArgs extends com.pulumi.resources.
     public static final DataSourceDynamodbConfigGetArgs Empty = new DataSourceDynamodbConfigGetArgs();
 
     @Import(name="deltaSyncConfig")
-      private final @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig;
+    private @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig;
 
-    public Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig() {
-        return this.deltaSyncConfig == null ? Codegen.empty() : this.deltaSyncConfig;
+    public Optional<Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs>> deltaSyncConfig() {
+        return Optional.ofNullable(this.deltaSyncConfig);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class DataSourceDynamodbConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class DataSourceDynamodbConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
@@ -51,109 +51,96 @@ public final class DataSourceDynamodbConfigGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="useCallerCredentials")
-      private final @Nullable Output<Boolean> useCallerCredentials;
+    private @Nullable Output<Boolean> useCallerCredentials;
 
-    public Output<Boolean> useCallerCredentials() {
-        return this.useCallerCredentials == null ? Codegen.empty() : this.useCallerCredentials;
+    public Optional<Output<Boolean>> useCallerCredentials() {
+        return Optional.ofNullable(this.useCallerCredentials);
     }
 
     @Import(name="versioned")
-      private final @Nullable Output<Boolean> versioned;
+    private @Nullable Output<Boolean> versioned;
 
-    public Output<Boolean> versioned() {
-        return this.versioned == null ? Codegen.empty() : this.versioned;
+    public Optional<Output<Boolean>> versioned() {
+        return Optional.ofNullable(this.versioned);
     }
 
-    public DataSourceDynamodbConfigGetArgs(
-        @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig,
-        @Nullable Output<String> region,
-        Output<String> tableName,
-        @Nullable Output<Boolean> useCallerCredentials,
-        @Nullable Output<Boolean> versioned) {
-        this.deltaSyncConfig = deltaSyncConfig;
-        this.region = region;
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.useCallerCredentials = useCallerCredentials;
-        this.versioned = versioned;
-    }
+    private DataSourceDynamodbConfigGetArgs() {}
 
-    private DataSourceDynamodbConfigGetArgs() {
-        this.deltaSyncConfig = Codegen.empty();
-        this.region = Codegen.empty();
-        this.tableName = Codegen.empty();
-        this.useCallerCredentials = Codegen.empty();
-        this.versioned = Codegen.empty();
+    private DataSourceDynamodbConfigGetArgs(DataSourceDynamodbConfigGetArgs $) {
+        this.deltaSyncConfig = $.deltaSyncConfig;
+        this.region = $.region;
+        this.tableName = $.tableName;
+        this.useCallerCredentials = $.useCallerCredentials;
+        this.versioned = $.versioned;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceDynamodbConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig;
-        private @Nullable Output<String> region;
-        private Output<String> tableName;
-        private @Nullable Output<Boolean> useCallerCredentials;
-        private @Nullable Output<Boolean> versioned;
+        private DataSourceDynamodbConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceDynamodbConfigGetArgs();
         }
 
         public Builder(DataSourceDynamodbConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deltaSyncConfig = defaults.deltaSyncConfig;
-    	      this.region = defaults.region;
-    	      this.tableName = defaults.tableName;
-    	      this.useCallerCredentials = defaults.useCallerCredentials;
-    	      this.versioned = defaults.versioned;
+            $ = new DataSourceDynamodbConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deltaSyncConfig(@Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig) {
-            this.deltaSyncConfig = deltaSyncConfig;
+            $.deltaSyncConfig = deltaSyncConfig;
             return this;
         }
-        public Builder deltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfigGetArgs deltaSyncConfig) {
-            this.deltaSyncConfig = Codegen.ofNullable(deltaSyncConfig);
-            return this;
+
+        public Builder deltaSyncConfig(DataSourceDynamodbConfigDeltaSyncConfigGetArgs deltaSyncConfig) {
+            return deltaSyncConfig(Output.of(deltaSyncConfig));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
+            return tableName(Output.of(tableName));
         }
+
         public Builder useCallerCredentials(@Nullable Output<Boolean> useCallerCredentials) {
-            this.useCallerCredentials = useCallerCredentials;
+            $.useCallerCredentials = useCallerCredentials;
             return this;
         }
-        public Builder useCallerCredentials(@Nullable Boolean useCallerCredentials) {
-            this.useCallerCredentials = Codegen.ofNullable(useCallerCredentials);
-            return this;
+
+        public Builder useCallerCredentials(Boolean useCallerCredentials) {
+            return useCallerCredentials(Output.of(useCallerCredentials));
         }
+
         public Builder versioned(@Nullable Output<Boolean> versioned) {
-            this.versioned = versioned;
+            $.versioned = versioned;
             return this;
         }
-        public Builder versioned(@Nullable Boolean versioned) {
-            this.versioned = Codegen.ofNullable(versioned);
-            return this;
-        }        public DataSourceDynamodbConfigGetArgs build() {
-            return new DataSourceDynamodbConfigGetArgs(deltaSyncConfig, region, tableName, useCallerCredentials, versioned);
+
+        public Builder versioned(Boolean versioned) {
+            return versioned(Output.of(versioned));
+        }
+
+        public DataSourceDynamodbConfigGetArgs build() {
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

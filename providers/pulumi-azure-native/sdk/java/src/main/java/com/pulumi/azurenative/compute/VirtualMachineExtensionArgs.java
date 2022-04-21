@@ -6,12 +6,12 @@ package com.pulumi.azurenative.compute;
 import com.pulumi.azurenative.compute.inputs.VirtualMachineExtensionInstanceViewArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="autoUpgradeMinorVersion")
-      private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
+    private @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
+    public Optional<Output<Boolean>> autoUpgradeMinorVersion() {
+        return Optional.ofNullable(this.autoUpgradeMinorVersion);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enableAutomaticUpgrade")
-      private final @Nullable Output<Boolean> enableAutomaticUpgrade;
+    private @Nullable Output<Boolean> enableAutomaticUpgrade;
 
-    public Output<Boolean> enableAutomaticUpgrade() {
-        return this.enableAutomaticUpgrade == null ? Codegen.empty() : this.enableAutomaticUpgrade;
+    public Optional<Output<Boolean>> enableAutomaticUpgrade() {
+        return Optional.ofNullable(this.enableAutomaticUpgrade);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="forceUpdateTag")
-      private final @Nullable Output<String> forceUpdateTag;
+    private @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> forceUpdateTag() {
-        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
+    public Optional<Output<String>> forceUpdateTag() {
+        return Optional.ofNullable(this.forceUpdateTag);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="instanceView")
-      private final @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
+    private @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
 
-    public Output<VirtualMachineExtensionInstanceViewArgs> instanceView() {
-        return this.instanceView == null ? Codegen.empty() : this.instanceView;
+    public Optional<Output<VirtualMachineExtensionInstanceViewArgs>> instanceView() {
+        return Optional.ofNullable(this.instanceView);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="protectedSettings")
-      private final @Nullable Output<Object> protectedSettings;
+    private @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> protectedSettings() {
-        return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
+    public Optional<Output<Object>> protectedSettings() {
+        return Optional.ofNullable(this.protectedSettings);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="publisher")
-      private final @Nullable Output<String> publisher;
+    private @Nullable Output<String> publisher;
 
-    public Output<String> publisher() {
-        return this.publisher == null ? Codegen.empty() : this.publisher;
+    public Optional<Output<String>> publisher() {
+        return Optional.ofNullable(this.publisher);
     }
 
     /**
@@ -101,7 +101,7 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -112,10 +112,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<Object> settings;
+    private @Nullable Output<Object> settings;
 
-    public Output<Object> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<Object>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="typeHandlerVersion")
-      private final @Nullable Output<String> typeHandlerVersion;
+    private @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> typeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
+    public Optional<Output<String>> typeHandlerVersion() {
+        return Optional.ofNullable(this.typeHandlerVersion);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="vmExtensionName")
-      private final @Nullable Output<String> vmExtensionName;
+    private @Nullable Output<String> vmExtensionName;
 
-    public Output<String> vmExtensionName() {
-        return this.vmExtensionName == null ? Codegen.empty() : this.vmExtensionName;
+    public Optional<Output<String>> vmExtensionName() {
+        return Optional.ofNullable(this.vmExtensionName);
     }
 
     /**
@@ -167,219 +167,180 @@ public final class VirtualMachineExtensionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="vmName", required=true)
-      private final Output<String> vmName;
+    private Output<String> vmName;
 
     public Output<String> vmName() {
         return this.vmName;
     }
 
-    public VirtualMachineExtensionArgs(
-        @Nullable Output<Boolean> autoUpgradeMinorVersion,
-        @Nullable Output<Boolean> enableAutomaticUpgrade,
-        @Nullable Output<String> forceUpdateTag,
-        @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView,
-        @Nullable Output<String> location,
-        @Nullable Output<Object> protectedSettings,
-        @Nullable Output<String> publisher,
-        Output<String> resourceGroupName,
-        @Nullable Output<Object> settings,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> type,
-        @Nullable Output<String> typeHandlerVersion,
-        @Nullable Output<String> vmExtensionName,
-        Output<String> vmName) {
-        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
-        this.enableAutomaticUpgrade = enableAutomaticUpgrade;
-        this.forceUpdateTag = forceUpdateTag;
-        this.instanceView = instanceView;
-        this.location = location;
-        this.protectedSettings = protectedSettings;
-        this.publisher = publisher;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.settings = settings;
-        this.tags = tags;
-        this.type = type;
-        this.typeHandlerVersion = typeHandlerVersion;
-        this.vmExtensionName = vmExtensionName;
-        this.vmName = Objects.requireNonNull(vmName, "expected parameter 'vmName' to be non-null");
-    }
+    private VirtualMachineExtensionArgs() {}
 
-    private VirtualMachineExtensionArgs() {
-        this.autoUpgradeMinorVersion = Codegen.empty();
-        this.enableAutomaticUpgrade = Codegen.empty();
-        this.forceUpdateTag = Codegen.empty();
-        this.instanceView = Codegen.empty();
-        this.location = Codegen.empty();
-        this.protectedSettings = Codegen.empty();
-        this.publisher = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
-        this.typeHandlerVersion = Codegen.empty();
-        this.vmExtensionName = Codegen.empty();
-        this.vmName = Codegen.empty();
+    private VirtualMachineExtensionArgs(VirtualMachineExtensionArgs $) {
+        this.autoUpgradeMinorVersion = $.autoUpgradeMinorVersion;
+        this.enableAutomaticUpgrade = $.enableAutomaticUpgrade;
+        this.forceUpdateTag = $.forceUpdateTag;
+        this.instanceView = $.instanceView;
+        this.location = $.location;
+        this.protectedSettings = $.protectedSettings;
+        this.publisher = $.publisher;
+        this.resourceGroupName = $.resourceGroupName;
+        this.settings = $.settings;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.typeHandlerVersion = $.typeHandlerVersion;
+        this.vmExtensionName = $.vmExtensionName;
+        this.vmName = $.vmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoUpgradeMinorVersion;
-        private @Nullable Output<Boolean> enableAutomaticUpgrade;
-        private @Nullable Output<String> forceUpdateTag;
-        private @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Object> protectedSettings;
-        private @Nullable Output<String> publisher;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Object> settings;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> typeHandlerVersion;
-        private @Nullable Output<String> vmExtensionName;
-        private Output<String> vmName;
+        private VirtualMachineExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineExtensionArgs();
         }
 
         public Builder(VirtualMachineExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoUpgradeMinorVersion = defaults.autoUpgradeMinorVersion;
-    	      this.enableAutomaticUpgrade = defaults.enableAutomaticUpgrade;
-    	      this.forceUpdateTag = defaults.forceUpdateTag;
-    	      this.instanceView = defaults.instanceView;
-    	      this.location = defaults.location;
-    	      this.protectedSettings = defaults.protectedSettings;
-    	      this.publisher = defaults.publisher;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.settings = defaults.settings;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.typeHandlerVersion = defaults.typeHandlerVersion;
-    	      this.vmExtensionName = defaults.vmExtensionName;
-    	      this.vmName = defaults.vmName;
+            $ = new VirtualMachineExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoUpgradeMinorVersion(@Nullable Output<Boolean> autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+            $.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
-        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Codegen.ofNullable(autoUpgradeMinorVersion);
-            return this;
+
+        public Builder autoUpgradeMinorVersion(Boolean autoUpgradeMinorVersion) {
+            return autoUpgradeMinorVersion(Output.of(autoUpgradeMinorVersion));
         }
+
         public Builder enableAutomaticUpgrade(@Nullable Output<Boolean> enableAutomaticUpgrade) {
-            this.enableAutomaticUpgrade = enableAutomaticUpgrade;
+            $.enableAutomaticUpgrade = enableAutomaticUpgrade;
             return this;
         }
-        public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
-            this.enableAutomaticUpgrade = Codegen.ofNullable(enableAutomaticUpgrade);
-            return this;
+
+        public Builder enableAutomaticUpgrade(Boolean enableAutomaticUpgrade) {
+            return enableAutomaticUpgrade(Output.of(enableAutomaticUpgrade));
         }
+
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
-            this.forceUpdateTag = forceUpdateTag;
+            $.forceUpdateTag = forceUpdateTag;
             return this;
         }
-        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
-            return this;
+
+        public Builder forceUpdateTag(String forceUpdateTag) {
+            return forceUpdateTag(Output.of(forceUpdateTag));
         }
+
         public Builder instanceView(@Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView) {
-            this.instanceView = instanceView;
+            $.instanceView = instanceView;
             return this;
         }
-        public Builder instanceView(@Nullable VirtualMachineExtensionInstanceViewArgs instanceView) {
-            this.instanceView = Codegen.ofNullable(instanceView);
-            return this;
+
+        public Builder instanceView(VirtualMachineExtensionInstanceViewArgs instanceView) {
+            return instanceView(Output.of(instanceView));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
-            this.protectedSettings = protectedSettings;
+            $.protectedSettings = protectedSettings;
             return this;
         }
-        public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Codegen.ofNullable(protectedSettings);
-            return this;
+
+        public Builder protectedSettings(Object protectedSettings) {
+            return protectedSettings(Output.of(protectedSettings));
         }
+
         public Builder publisher(@Nullable Output<String> publisher) {
-            this.publisher = publisher;
+            $.publisher = publisher;
             return this;
         }
-        public Builder publisher(@Nullable String publisher) {
-            this.publisher = Codegen.ofNullable(publisher);
-            return this;
+
+        public Builder publisher(String publisher) {
+            return publisher(Output.of(publisher));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder settings(@Nullable Output<Object> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable Object settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(Object settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
-            this.typeHandlerVersion = typeHandlerVersion;
+            $.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
-        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Codegen.ofNullable(typeHandlerVersion);
-            return this;
+
+        public Builder typeHandlerVersion(String typeHandlerVersion) {
+            return typeHandlerVersion(Output.of(typeHandlerVersion));
         }
+
         public Builder vmExtensionName(@Nullable Output<String> vmExtensionName) {
-            this.vmExtensionName = vmExtensionName;
+            $.vmExtensionName = vmExtensionName;
             return this;
         }
-        public Builder vmExtensionName(@Nullable String vmExtensionName) {
-            this.vmExtensionName = Codegen.ofNullable(vmExtensionName);
-            return this;
+
+        public Builder vmExtensionName(String vmExtensionName) {
+            return vmExtensionName(Output.of(vmExtensionName));
         }
+
         public Builder vmName(Output<String> vmName) {
-            this.vmName = Objects.requireNonNull(vmName);
+            $.vmName = vmName;
             return this;
         }
+
         public Builder vmName(String vmName) {
-            this.vmName = Output.of(Objects.requireNonNull(vmName));
-            return this;
-        }        public VirtualMachineExtensionArgs build() {
-            return new VirtualMachineExtensionArgs(autoUpgradeMinorVersion, enableAutomaticUpgrade, forceUpdateTag, instanceView, location, protectedSettings, publisher, resourceGroupName, settings, tags, type, typeHandlerVersion, vmExtensionName, vmName);
+            return vmName(Output.of(vmName));
+        }
+
+        public VirtualMachineExtensionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vmName = Objects.requireNonNull($.vmName, "expected parameter 'vmName' to be non-null");
+            return $;
         }
     }
+
 }

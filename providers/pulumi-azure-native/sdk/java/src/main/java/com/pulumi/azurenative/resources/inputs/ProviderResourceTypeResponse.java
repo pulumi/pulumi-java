@@ -29,10 +29,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="aliases")
-      private final @Nullable List<AliasResponse> aliases;
+    private @Nullable List<AliasResponse> aliases;
 
-    public List<AliasResponse> aliases() {
-        return this.aliases == null ? List.of() : this.aliases;
+    public Optional<List<AliasResponse>> aliases() {
+        return Optional.ofNullable(this.aliases);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="apiProfiles", required=true)
-      private final List<ApiProfileResponse> apiProfiles;
+    private List<ApiProfileResponse> apiProfiles;
 
     public List<ApiProfileResponse> apiProfiles() {
         return this.apiProfiles;
@@ -51,10 +51,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="apiVersions")
-      private final @Nullable List<String> apiVersions;
+    private @Nullable List<String> apiVersions;
 
-    public List<String> apiVersions() {
-        return this.apiVersions == null ? List.of() : this.apiVersions;
+    public Optional<List<String>> apiVersions() {
+        return Optional.ofNullable(this.apiVersions);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="capabilities")
-      private final @Nullable String capabilities;
+    private @Nullable String capabilities;
 
     public Optional<String> capabilities() {
-        return this.capabilities == null ? Optional.empty() : Optional.ofNullable(this.capabilities);
+        return Optional.ofNullable(this.capabilities);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="defaultApiVersion", required=true)
-      private final String defaultApiVersion;
+    private String defaultApiVersion;
 
     public String defaultApiVersion() {
         return this.defaultApiVersion;
@@ -84,10 +84,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="locationMappings")
-      private final @Nullable List<ProviderExtendedLocationResponse> locationMappings;
+    private @Nullable List<ProviderExtendedLocationResponse> locationMappings;
 
-    public List<ProviderExtendedLocationResponse> locationMappings() {
-        return this.locationMappings == null ? List.of() : this.locationMappings;
+    public Optional<List<ProviderExtendedLocationResponse>> locationMappings() {
+        return Optional.ofNullable(this.locationMappings);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="locations")
-      private final @Nullable List<String> locations;
+    private @Nullable List<String> locations;
 
-    public List<String> locations() {
-        return this.locations == null ? List.of() : this.locations;
+    public Optional<List<String>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -117,152 +117,131 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable String resourceType;
+    private @Nullable String resourceType;
 
     public Optional<String> resourceType() {
-        return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
+        return Optional.ofNullable(this.resourceType);
     }
 
     @Import(name="zoneMappings")
-      private final @Nullable List<ZoneMappingResponse> zoneMappings;
+    private @Nullable List<ZoneMappingResponse> zoneMappings;
 
-    public List<ZoneMappingResponse> zoneMappings() {
-        return this.zoneMappings == null ? List.of() : this.zoneMappings;
+    public Optional<List<ZoneMappingResponse>> zoneMappings() {
+        return Optional.ofNullable(this.zoneMappings);
     }
 
-    public ProviderResourceTypeResponse(
-        @Nullable List<AliasResponse> aliases,
-        List<ApiProfileResponse> apiProfiles,
-        @Nullable List<String> apiVersions,
-        @Nullable String capabilities,
-        String defaultApiVersion,
-        @Nullable List<ProviderExtendedLocationResponse> locationMappings,
-        @Nullable List<String> locations,
-        @Nullable Map<String,String> properties,
-        @Nullable String resourceType,
-        @Nullable List<ZoneMappingResponse> zoneMappings) {
-        this.aliases = aliases;
-        this.apiProfiles = Objects.requireNonNull(apiProfiles, "expected parameter 'apiProfiles' to be non-null");
-        this.apiVersions = apiVersions;
-        this.capabilities = capabilities;
-        this.defaultApiVersion = Objects.requireNonNull(defaultApiVersion, "expected parameter 'defaultApiVersion' to be non-null");
-        this.locationMappings = locationMappings;
-        this.locations = locations;
-        this.properties = properties;
-        this.resourceType = resourceType;
-        this.zoneMappings = zoneMappings;
-    }
+    private ProviderResourceTypeResponse() {}
 
-    private ProviderResourceTypeResponse() {
-        this.aliases = List.of();
-        this.apiProfiles = List.of();
-        this.apiVersions = List.of();
-        this.capabilities = null;
-        this.defaultApiVersion = null;
-        this.locationMappings = List.of();
-        this.locations = List.of();
-        this.properties = Map.of();
-        this.resourceType = null;
-        this.zoneMappings = List.of();
+    private ProviderResourceTypeResponse(ProviderResourceTypeResponse $) {
+        this.aliases = $.aliases;
+        this.apiProfiles = $.apiProfiles;
+        this.apiVersions = $.apiVersions;
+        this.capabilities = $.capabilities;
+        this.defaultApiVersion = $.defaultApiVersion;
+        this.locationMappings = $.locationMappings;
+        this.locations = $.locations;
+        this.properties = $.properties;
+        this.resourceType = $.resourceType;
+        this.zoneMappings = $.zoneMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderResourceTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<AliasResponse> aliases;
-        private List<ApiProfileResponse> apiProfiles;
-        private @Nullable List<String> apiVersions;
-        private @Nullable String capabilities;
-        private String defaultApiVersion;
-        private @Nullable List<ProviderExtendedLocationResponse> locationMappings;
-        private @Nullable List<String> locations;
-        private @Nullable Map<String,String> properties;
-        private @Nullable String resourceType;
-        private @Nullable List<ZoneMappingResponse> zoneMappings;
+        private ProviderResourceTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderResourceTypeResponse();
         }
 
         public Builder(ProviderResourceTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliases = defaults.aliases;
-    	      this.apiProfiles = defaults.apiProfiles;
-    	      this.apiVersions = defaults.apiVersions;
-    	      this.capabilities = defaults.capabilities;
-    	      this.defaultApiVersion = defaults.defaultApiVersion;
-    	      this.locationMappings = defaults.locationMappings;
-    	      this.locations = defaults.locations;
-    	      this.properties = defaults.properties;
-    	      this.resourceType = defaults.resourceType;
-    	      this.zoneMappings = defaults.zoneMappings;
+            $ = new ProviderResourceTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aliases(@Nullable List<AliasResponse> aliases) {
-            this.aliases = aliases;
+            $.aliases = aliases;
             return this;
         }
+
         public Builder aliases(AliasResponse... aliases) {
             return aliases(List.of(aliases));
         }
+
         public Builder apiProfiles(List<ApiProfileResponse> apiProfiles) {
-            this.apiProfiles = Objects.requireNonNull(apiProfiles);
+            $.apiProfiles = apiProfiles;
             return this;
         }
+
         public Builder apiProfiles(ApiProfileResponse... apiProfiles) {
             return apiProfiles(List.of(apiProfiles));
         }
+
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = apiVersions;
+            $.apiVersions = apiVersions;
             return this;
         }
+
         public Builder apiVersions(String... apiVersions) {
             return apiVersions(List.of(apiVersions));
         }
+
         public Builder capabilities(@Nullable String capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
+
         public Builder defaultApiVersion(String defaultApiVersion) {
-            this.defaultApiVersion = Objects.requireNonNull(defaultApiVersion);
+            $.defaultApiVersion = defaultApiVersion;
             return this;
         }
+
         public Builder locationMappings(@Nullable List<ProviderExtendedLocationResponse> locationMappings) {
-            this.locationMappings = locationMappings;
+            $.locationMappings = locationMappings;
             return this;
         }
+
         public Builder locationMappings(ProviderExtendedLocationResponse... locationMappings) {
             return locationMappings(List.of(locationMappings));
         }
+
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder zoneMappings(@Nullable List<ZoneMappingResponse> zoneMappings) {
-            this.zoneMappings = zoneMappings;
+            $.zoneMappings = zoneMappings;
             return this;
         }
+
         public Builder zoneMappings(ZoneMappingResponse... zoneMappings) {
             return zoneMappings(List.of(zoneMappings));
-        }        public ProviderResourceTypeResponse build() {
-            return new ProviderResourceTypeResponse(aliases, apiProfiles, apiVersions, capabilities, defaultApiVersion, locationMappings, locations, properties, resourceType, zoneMappings);
+        }
+
+        public ProviderResourceTypeResponse build() {
+            $.apiProfiles = Objects.requireNonNull($.apiProfiles, "expected parameter 'apiProfiles' to be non-null");
+            $.defaultApiVersion = Objects.requireNonNull($.defaultApiVersion, "expected parameter 'defaultApiVersion' to be non-null");
+            return $;
         }
     }
+
 }

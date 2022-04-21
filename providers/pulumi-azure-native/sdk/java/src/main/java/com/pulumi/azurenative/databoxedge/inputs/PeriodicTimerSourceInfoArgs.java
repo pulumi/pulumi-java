@@ -5,9 +5,9 @@ package com.pulumi.azurenative.databoxedge.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="schedule", required=true)
-      private final Output<String> schedule;
+    private Output<String> schedule;
 
     public Output<String> schedule() {
         return this.schedule;
@@ -35,7 +35,7 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
@@ -46,76 +46,70 @@ public final class PeriodicTimerSourceInfoArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public PeriodicTimerSourceInfoArgs(
-        Output<String> schedule,
-        Output<String> startTime,
-        @Nullable Output<String> topic) {
-        this.schedule = Objects.requireNonNull(schedule, "expected parameter 'schedule' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.topic = topic;
-    }
+    private PeriodicTimerSourceInfoArgs() {}
 
-    private PeriodicTimerSourceInfoArgs() {
-        this.schedule = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.topic = Codegen.empty();
+    private PeriodicTimerSourceInfoArgs(PeriodicTimerSourceInfoArgs $) {
+        this.schedule = $.schedule;
+        this.startTime = $.startTime;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeriodicTimerSourceInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> schedule;
-        private Output<String> startTime;
-        private @Nullable Output<String> topic;
+        private PeriodicTimerSourceInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeriodicTimerSourceInfoArgs();
         }
 
         public Builder(PeriodicTimerSourceInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
-    	      this.startTime = defaults.startTime;
-    	      this.topic = defaults.topic;
+            $ = new PeriodicTimerSourceInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(Output<String> schedule) {
-            this.schedule = Objects.requireNonNull(schedule);
+            $.schedule = schedule;
             return this;
         }
+
         public Builder schedule(String schedule) {
-            this.schedule = Output.of(Objects.requireNonNull(schedule));
-            return this;
+            return schedule(Output.of(schedule));
         }
+
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
+            return startTime(Output.of(startTime));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public PeriodicTimerSourceInfoArgs build() {
-            return new PeriodicTimerSourceInfoArgs(schedule, startTime, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public PeriodicTimerSourceInfoArgs build() {
+            $.schedule = Objects.requireNonNull($.schedule, "expected parameter 'schedule' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

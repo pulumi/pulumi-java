@@ -6,9 +6,9 @@ package com.pulumi.azurenative.migrate;
 import com.pulumi.azurenative.migrate.inputs.ImportCollectorPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ImportCollectorArgs extends com.pulumi.resources.ResourceArgs
     public static final ImportCollectorArgs Empty = new ImportCollectorArgs();
 
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class ImportCollectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="importCollectorName")
-      private final @Nullable Output<String> importCollectorName;
+    private @Nullable Output<String> importCollectorName;
 
-    public Output<String> importCollectorName() {
-        return this.importCollectorName == null ? Codegen.empty() : this.importCollectorName;
+    public Optional<Output<String>> importCollectorName() {
+        return Optional.ofNullable(this.importCollectorName);
     }
 
     /**
@@ -39,17 +39,17 @@ public final class ImportCollectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="projectName", required=true)
-      private final Output<String> projectName;
+    private Output<String> projectName;
 
     public Output<String> projectName() {
         return this.projectName;
     }
 
     @Import(name="properties")
-      private final @Nullable Output<ImportCollectorPropertiesArgs> properties;
+    private @Nullable Output<ImportCollectorPropertiesArgs> properties;
 
-    public Output<ImportCollectorPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ImportCollectorPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -57,102 +57,90 @@ public final class ImportCollectorArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ImportCollectorArgs(
-        @Nullable Output<String> eTag,
-        @Nullable Output<String> importCollectorName,
-        Output<String> projectName,
-        @Nullable Output<ImportCollectorPropertiesArgs> properties,
-        Output<String> resourceGroupName) {
-        this.eTag = eTag;
-        this.importCollectorName = importCollectorName;
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ImportCollectorArgs() {}
 
-    private ImportCollectorArgs() {
-        this.eTag = Codegen.empty();
-        this.importCollectorName = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ImportCollectorArgs(ImportCollectorArgs $) {
+        this.eTag = $.eTag;
+        this.importCollectorName = $.importCollectorName;
+        this.projectName = $.projectName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImportCollectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<String> importCollectorName;
-        private Output<String> projectName;
-        private @Nullable Output<ImportCollectorPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
+        private ImportCollectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImportCollectorArgs();
         }
 
         public Builder(ImportCollectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.importCollectorName = defaults.importCollectorName;
-    	      this.projectName = defaults.projectName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ImportCollectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder importCollectorName(@Nullable Output<String> importCollectorName) {
-            this.importCollectorName = importCollectorName;
+            $.importCollectorName = importCollectorName;
             return this;
         }
-        public Builder importCollectorName(@Nullable String importCollectorName) {
-            this.importCollectorName = Codegen.ofNullable(importCollectorName);
-            return this;
+
+        public Builder importCollectorName(String importCollectorName) {
+            return importCollectorName(Output.of(importCollectorName));
         }
+
         public Builder projectName(Output<String> projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Output.of(Objects.requireNonNull(projectName));
-            return this;
+            return projectName(Output.of(projectName));
         }
+
         public Builder properties(@Nullable Output<ImportCollectorPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ImportCollectorPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(ImportCollectorPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ImportCollectorArgs build() {
-            return new ImportCollectorArgs(eTag, importCollectorName, projectName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ImportCollectorArgs build() {
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

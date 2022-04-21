@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs exte
      * 
      */
     @Import(name="objectIdPaths", required=true)
-      private final Output<List<Integer>> objectIdPaths;
+    private Output<List<Integer>> objectIdPaths;
 
     public Output<List<Integer>> objectIdPaths() {
         return this.objectIdPaths;
     }
 
-    public AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs(Output<List<Integer>> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths, "expected parameter 'objectIdPaths' to be non-null");
-    }
+    private AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs() {}
 
-    private AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs() {
-        this.objectIdPaths = Codegen.empty();
+    private AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs(AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs $) {
+        this.objectIdPaths = $.objectIdPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Integer>> objectIdPaths;
+        private AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs();
         }
 
         public Builder(AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectIdPaths = defaults.objectIdPaths;
+            $ = new AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectIdPaths(Output<List<Integer>> objectIdPaths) {
-            this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+            $.objectIdPaths = objectIdPaths;
             return this;
         }
+
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
-            this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
-            return this;
+            return objectIdPaths(Output.of(objectIdPaths));
         }
+
         public Builder objectIdPaths(Integer... objectIdPaths) {
             return objectIdPaths(List.of(objectIdPaths));
-        }        public AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs build() {
-            return new AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs(objectIdPaths);
+        }
+
+        public AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs build() {
+            $.objectIdPaths = Objects.requireNonNull($.objectIdPaths, "expected parameter 'objectIdPaths' to be non-null");
+            return $;
         }
     }
+
 }

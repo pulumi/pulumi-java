@@ -5,7 +5,6 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class InviteAccepterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="masterId", required=true)
-      private final Output<String> masterId;
+    private Output<String> masterId;
 
     public Output<String> masterId() {
         return this.masterId;
     }
 
-    public InviteAccepterArgs(Output<String> masterId) {
-        this.masterId = Objects.requireNonNull(masterId, "expected parameter 'masterId' to be non-null");
-    }
+    private InviteAccepterArgs() {}
 
-    private InviteAccepterArgs() {
-        this.masterId = Codegen.empty();
+    private InviteAccepterArgs(InviteAccepterArgs $) {
+        this.masterId = $.masterId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InviteAccepterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> masterId;
+        private InviteAccepterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InviteAccepterArgs();
         }
 
         public Builder(InviteAccepterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.masterId = defaults.masterId;
+            $ = new InviteAccepterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder masterId(Output<String> masterId) {
-            this.masterId = Objects.requireNonNull(masterId);
+            $.masterId = masterId;
             return this;
         }
+
         public Builder masterId(String masterId) {
-            this.masterId = Output.of(Objects.requireNonNull(masterId));
-            return this;
-        }        public InviteAccepterArgs build() {
-            return new InviteAccepterArgs(masterId);
+            return masterId(Output.of(masterId));
+        }
+
+        public InviteAccepterArgs build() {
+            $.masterId = Objects.requireNonNull($.masterId, "expected parameter 'masterId' to be non-null");
+            return $;
         }
     }
+
 }

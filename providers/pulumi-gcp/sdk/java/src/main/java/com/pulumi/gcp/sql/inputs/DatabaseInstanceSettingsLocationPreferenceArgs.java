@@ -5,9 +5,9 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends com.pu
      * 
      */
     @Import(name="followGaeApplication")
-      private final @Nullable Output<String> followGaeApplication;
+    private @Nullable Output<String> followGaeApplication;
 
-    public Output<String> followGaeApplication() {
-        return this.followGaeApplication == null ? Codegen.empty() : this.followGaeApplication;
+    public Optional<Output<String>> followGaeApplication() {
+        return Optional.ofNullable(this.followGaeApplication);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends com.pu
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public DatabaseInstanceSettingsLocationPreferenceArgs(
-        @Nullable Output<String> followGaeApplication,
-        @Nullable Output<String> zone) {
-        this.followGaeApplication = followGaeApplication;
-        this.zone = zone;
-    }
+    private DatabaseInstanceSettingsLocationPreferenceArgs() {}
 
-    private DatabaseInstanceSettingsLocationPreferenceArgs() {
-        this.followGaeApplication = Codegen.empty();
-        this.zone = Codegen.empty();
+    private DatabaseInstanceSettingsLocationPreferenceArgs(DatabaseInstanceSettingsLocationPreferenceArgs $) {
+        this.followGaeApplication = $.followGaeApplication;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceSettingsLocationPreferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> followGaeApplication;
-        private @Nullable Output<String> zone;
+        private DatabaseInstanceSettingsLocationPreferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceSettingsLocationPreferenceArgs();
         }
 
         public Builder(DatabaseInstanceSettingsLocationPreferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.followGaeApplication = defaults.followGaeApplication;
-    	      this.zone = defaults.zone;
+            $ = new DatabaseInstanceSettingsLocationPreferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder followGaeApplication(@Nullable Output<String> followGaeApplication) {
-            this.followGaeApplication = followGaeApplication;
+            $.followGaeApplication = followGaeApplication;
             return this;
         }
-        public Builder followGaeApplication(@Nullable String followGaeApplication) {
-            this.followGaeApplication = Codegen.ofNullable(followGaeApplication);
-            return this;
+
+        public Builder followGaeApplication(String followGaeApplication) {
+            return followGaeApplication(Output.of(followGaeApplication));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public DatabaseInstanceSettingsLocationPreferenceArgs build() {
-            return new DatabaseInstanceSettingsLocationPreferenceArgs(followGaeApplication, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public DatabaseInstanceSettingsLocationPreferenceArgs build() {
+            return $;
         }
     }
+
 }

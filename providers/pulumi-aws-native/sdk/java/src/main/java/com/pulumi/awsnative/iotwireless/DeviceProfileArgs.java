@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iotwireless.inputs.DeviceProfileLoRaWANDeviceProfile
 import com.pulumi.awsnative.iotwireless.inputs.DeviceProfileTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DeviceProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loRaWAN")
-      private final @Nullable Output<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN;
+    private @Nullable Output<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN;
 
-    public Output<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN() {
-        return this.loRaWAN == null ? Codegen.empty() : this.loRaWAN;
+    public Optional<Output<DeviceProfileLoRaWANDeviceProfileArgs>> loRaWAN() {
+        return Optional.ofNullable(this.loRaWAN);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeviceProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,79 +45,72 @@ public final class DeviceProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<DeviceProfileTagArgs>> tags;
+    private @Nullable Output<List<DeviceProfileTagArgs>> tags;
 
-    public Output<List<DeviceProfileTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<DeviceProfileTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DeviceProfileArgs(
-        @Nullable Output<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN,
-        @Nullable Output<String> name,
-        @Nullable Output<List<DeviceProfileTagArgs>> tags) {
-        this.loRaWAN = loRaWAN;
-        this.name = name;
-        this.tags = tags;
-    }
+    private DeviceProfileArgs() {}
 
-    private DeviceProfileArgs() {
-        this.loRaWAN = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private DeviceProfileArgs(DeviceProfileArgs $) {
+        this.loRaWAN = $.loRaWAN;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<DeviceProfileTagArgs>> tags;
+        private DeviceProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceProfileArgs();
         }
 
         public Builder(DeviceProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loRaWAN = defaults.loRaWAN;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new DeviceProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loRaWAN(@Nullable Output<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN) {
-            this.loRaWAN = loRaWAN;
+            $.loRaWAN = loRaWAN;
             return this;
         }
-        public Builder loRaWAN(@Nullable DeviceProfileLoRaWANDeviceProfileArgs loRaWAN) {
-            this.loRaWAN = Codegen.ofNullable(loRaWAN);
-            return this;
+
+        public Builder loRaWAN(DeviceProfileLoRaWANDeviceProfileArgs loRaWAN) {
+            return loRaWAN(Output.of(loRaWAN));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<DeviceProfileTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<DeviceProfileTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<DeviceProfileTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(DeviceProfileTagArgs... tags) {
             return tags(List.of(tags));
-        }        public DeviceProfileArgs build() {
-            return new DeviceProfileArgs(loRaWAN, name, tags);
+        }
+
+        public DeviceProfileArgs build() {
+            return $;
         }
     }
+
 }

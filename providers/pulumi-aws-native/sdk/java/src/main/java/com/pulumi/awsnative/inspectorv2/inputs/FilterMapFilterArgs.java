@@ -6,9 +6,9 @@ package com.pulumi.awsnative.inspectorv2.inputs;
 import com.pulumi.awsnative.inspectorv2.enums.FilterMapComparison;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,83 @@ public final class FilterMapFilterArgs extends com.pulumi.resources.ResourceArgs
     public static final FilterMapFilterArgs Empty = new FilterMapFilterArgs();
 
     @Import(name="comparison", required=true)
-      private final Output<FilterMapComparison> comparison;
+    private Output<FilterMapComparison> comparison;
 
     public Output<FilterMapComparison> comparison() {
         return this.comparison;
     }
 
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public FilterMapFilterArgs(
-        Output<FilterMapComparison> comparison,
-        @Nullable Output<String> key,
-        @Nullable Output<String> value) {
-        this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
-        this.key = key;
-        this.value = value;
-    }
+    private FilterMapFilterArgs() {}
 
-    private FilterMapFilterArgs() {
-        this.comparison = Codegen.empty();
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private FilterMapFilterArgs(FilterMapFilterArgs $) {
+        this.comparison = $.comparison;
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterMapFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FilterMapComparison> comparison;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> value;
+        private FilterMapFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterMapFilterArgs();
         }
 
         public Builder(FilterMapFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparison = defaults.comparison;
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new FilterMapFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comparison(Output<FilterMapComparison> comparison) {
-            this.comparison = Objects.requireNonNull(comparison);
+            $.comparison = comparison;
             return this;
         }
+
         public Builder comparison(FilterMapComparison comparison) {
-            this.comparison = Output.of(Objects.requireNonNull(comparison));
-            return this;
+            return comparison(Output.of(comparison));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public FilterMapFilterArgs build() {
-            return new FilterMapFilterArgs(comparison, key, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public FilterMapFilterArgs build() {
+            $.comparison = Objects.requireNonNull($.comparison, "expected parameter 'comparison' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,45 +23,49 @@ public final class SourceInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceFiles", required=true)
-      private final List<Map<String,String>> sourceFiles;
+    private List<Map<String,String>> sourceFiles;
 
     public List<Map<String,String>> sourceFiles() {
         return this.sourceFiles;
     }
 
-    public SourceInfoResponse(List<Map<String,String>> sourceFiles) {
-        this.sourceFiles = Objects.requireNonNull(sourceFiles, "expected parameter 'sourceFiles' to be non-null");
-    }
+    private SourceInfoResponse() {}
 
-    private SourceInfoResponse() {
-        this.sourceFiles = List.of();
+    private SourceInfoResponse(SourceInfoResponse $) {
+        this.sourceFiles = $.sourceFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Map<String,String>> sourceFiles;
+        private SourceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceInfoResponse();
         }
 
         public Builder(SourceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceFiles = defaults.sourceFiles;
+            $ = new SourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceFiles(List<Map<String,String>> sourceFiles) {
-            this.sourceFiles = Objects.requireNonNull(sourceFiles);
+            $.sourceFiles = sourceFiles;
             return this;
-        }        public SourceInfoResponse build() {
-            return new SourceInfoResponse(sourceFiles);
+        }
+
+        public Builder sourceFiles(Map<String,String>... sourceFiles) {
+            return sourceFiles(List.of(sourceFiles));
+        }
+
+        public SourceInfoResponse build() {
+            $.sourceFiles = Objects.requireNonNull($.sourceFiles, "expected parameter 'sourceFiles' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="hours", required=true)
-      private final Output<Integer> hours;
+    private Output<Integer> hours;
 
     public Output<Integer> hours() {
         return this.hours;
@@ -30,7 +29,7 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="minutes", required=true)
-      private final Output<Integer> minutes;
+    private Output<Integer> minutes;
 
     public Output<Integer> minutes() {
         return this.minutes;
@@ -41,7 +40,7 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="nanos", required=true)
-      private final Output<Integer> nanos;
+    private Output<Integer> nanos;
 
     public Output<Integer> nanos() {
         return this.nanos;
@@ -52,89 +51,82 @@ public final class TransferJobScheduleStartTimeOfDayGetArgs extends com.pulumi.r
      * 
      */
     @Import(name="seconds", required=true)
-      private final Output<Integer> seconds;
+    private Output<Integer> seconds;
 
     public Output<Integer> seconds() {
         return this.seconds;
     }
 
-    public TransferJobScheduleStartTimeOfDayGetArgs(
-        Output<Integer> hours,
-        Output<Integer> minutes,
-        Output<Integer> nanos,
-        Output<Integer> seconds) {
-        this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-        this.nanos = Objects.requireNonNull(nanos, "expected parameter 'nanos' to be non-null");
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private TransferJobScheduleStartTimeOfDayGetArgs() {}
 
-    private TransferJobScheduleStartTimeOfDayGetArgs() {
-        this.hours = Codegen.empty();
-        this.minutes = Codegen.empty();
-        this.nanos = Codegen.empty();
-        this.seconds = Codegen.empty();
+    private TransferJobScheduleStartTimeOfDayGetArgs(TransferJobScheduleStartTimeOfDayGetArgs $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.nanos = $.nanos;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferJobScheduleStartTimeOfDayGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> hours;
-        private Output<Integer> minutes;
-        private Output<Integer> nanos;
-        private Output<Integer> seconds;
+        private TransferJobScheduleStartTimeOfDayGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferJobScheduleStartTimeOfDayGetArgs();
         }
 
         public Builder(TransferJobScheduleStartTimeOfDayGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.nanos = defaults.nanos;
-    	      this.seconds = defaults.seconds;
+            $ = new TransferJobScheduleStartTimeOfDayGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(Output<Integer> hours) {
-            this.hours = Objects.requireNonNull(hours);
+            $.hours = hours;
             return this;
         }
+
         public Builder hours(Integer hours) {
-            this.hours = Output.of(Objects.requireNonNull(hours));
-            return this;
+            return hours(Output.of(hours));
         }
+
         public Builder minutes(Output<Integer> minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder minutes(Integer minutes) {
-            this.minutes = Output.of(Objects.requireNonNull(minutes));
-            return this;
+            return minutes(Output.of(minutes));
         }
+
         public Builder nanos(Output<Integer> nanos) {
-            this.nanos = Objects.requireNonNull(nanos);
+            $.nanos = nanos;
             return this;
         }
+
         public Builder nanos(Integer nanos) {
-            this.nanos = Output.of(Objects.requireNonNull(nanos));
-            return this;
+            return nanos(Output.of(nanos));
         }
+
         public Builder seconds(Output<Integer> seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
         }
+
         public Builder seconds(Integer seconds) {
-            this.seconds = Output.of(Objects.requireNonNull(seconds));
-            return this;
-        }        public TransferJobScheduleStartTimeOfDayGetArgs build() {
-            return new TransferJobScheduleStartTimeOfDayGetArgs(hours, minutes, nanos, seconds);
+            return seconds(Output.of(seconds));
+        }
+
+        public TransferJobScheduleStartTimeOfDayGetArgs build() {
+            $.hours = Objects.requireNonNull($.hours, "expected parameter 'hours' to be non-null");
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            $.nanos = Objects.requireNonNull($.nanos, "expected parameter 'nanos' to be non-null");
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

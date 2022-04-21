@@ -17,45 +17,45 @@ public final class GetDiagnosticSettingArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetDiagnosticSettingArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetDiagnosticSettingArgs() {}
 
-    private GetDiagnosticSettingArgs() {
-        this.name = null;
+    private GetDiagnosticSettingArgs(GetDiagnosticSettingArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDiagnosticSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetDiagnosticSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDiagnosticSettingArgs();
         }
 
         public Builder(GetDiagnosticSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetDiagnosticSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetDiagnosticSettingArgs build() {
-            return new GetDiagnosticSettingArgs(name);
+        }
+
+        public GetDiagnosticSettingArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

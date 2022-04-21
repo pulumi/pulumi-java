@@ -21,7 +21,7 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="cert", required=true)
-      private final String cert;
+    private String cert;
 
     public String cert() {
         return this.cert;
@@ -32,7 +32,7 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -43,7 +43,7 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expireTime", required=true)
-      private final String expireTime;
+    private String expireTime;
 
     public String expireTime() {
         return this.expireTime;
@@ -54,7 +54,7 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="serialNumber", required=true)
-      private final String serialNumber;
+    private String serialNumber;
 
     public String serialNumber() {
         return this.serialNumber;
@@ -65,82 +65,73 @@ public final class TlsCertificateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sha1Fingerprint", required=true)
-      private final String sha1Fingerprint;
+    private String sha1Fingerprint;
 
     public String sha1Fingerprint() {
         return this.sha1Fingerprint;
     }
 
-    public TlsCertificateResponse(
-        String cert,
-        String createTime,
-        String expireTime,
-        String serialNumber,
-        String sha1Fingerprint) {
-        this.cert = Objects.requireNonNull(cert, "expected parameter 'cert' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.expireTime = Objects.requireNonNull(expireTime, "expected parameter 'expireTime' to be non-null");
-        this.serialNumber = Objects.requireNonNull(serialNumber, "expected parameter 'serialNumber' to be non-null");
-        this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint, "expected parameter 'sha1Fingerprint' to be non-null");
-    }
+    private TlsCertificateResponse() {}
 
-    private TlsCertificateResponse() {
-        this.cert = null;
-        this.createTime = null;
-        this.expireTime = null;
-        this.serialNumber = null;
-        this.sha1Fingerprint = null;
+    private TlsCertificateResponse(TlsCertificateResponse $) {
+        this.cert = $.cert;
+        this.createTime = $.createTime;
+        this.expireTime = $.expireTime;
+        this.serialNumber = $.serialNumber;
+        this.sha1Fingerprint = $.sha1Fingerprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cert;
-        private String createTime;
-        private String expireTime;
-        private String serialNumber;
-        private String sha1Fingerprint;
+        private TlsCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsCertificateResponse();
         }
 
         public Builder(TlsCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.createTime = defaults.createTime;
-    	      this.expireTime = defaults.expireTime;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.sha1Fingerprint = defaults.sha1Fingerprint;
+            $ = new TlsCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(String cert) {
-            this.cert = Objects.requireNonNull(cert);
+            $.cert = cert;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder expireTime(String expireTime) {
-            this.expireTime = Objects.requireNonNull(expireTime);
+            $.expireTime = expireTime;
             return this;
         }
+
         public Builder serialNumber(String serialNumber) {
-            this.serialNumber = Objects.requireNonNull(serialNumber);
+            $.serialNumber = serialNumber;
             return this;
         }
+
         public Builder sha1Fingerprint(String sha1Fingerprint) {
-            this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
+            $.sha1Fingerprint = sha1Fingerprint;
             return this;
-        }        public TlsCertificateResponse build() {
-            return new TlsCertificateResponse(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
+        }
+
+        public TlsCertificateResponse build() {
+            $.cert = Objects.requireNonNull($.cert, "expected parameter 'cert' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.expireTime = Objects.requireNonNull($.expireTime, "expected parameter 'expireTime' to be non-null");
+            $.serialNumber = Objects.requireNonNull($.serialNumber, "expected parameter 'serialNumber' to be non-null");
+            $.sha1Fingerprint = Objects.requireNonNull($.sha1Fingerprint, "expected parameter 'sha1Fingerprint' to be non-null");
+            return $;
         }
     }
+
 }

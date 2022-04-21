@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apikeys_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class V2IosKeyRestrictionsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="allowedBundleIds")
-      private final @Nullable Output<List<String>> allowedBundleIds;
+    private @Nullable Output<List<String>> allowedBundleIds;
 
-    public Output<List<String>> allowedBundleIds() {
-        return this.allowedBundleIds == null ? Codegen.empty() : this.allowedBundleIds;
+    public Optional<Output<List<String>>> allowedBundleIds() {
+        return Optional.ofNullable(this.allowedBundleIds);
     }
 
-    public V2IosKeyRestrictionsArgs(@Nullable Output<List<String>> allowedBundleIds) {
-        this.allowedBundleIds = allowedBundleIds;
-    }
+    private V2IosKeyRestrictionsArgs() {}
 
-    private V2IosKeyRestrictionsArgs() {
-        this.allowedBundleIds = Codegen.empty();
+    private V2IosKeyRestrictionsArgs(V2IosKeyRestrictionsArgs $) {
+        this.allowedBundleIds = $.allowedBundleIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2IosKeyRestrictionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedBundleIds;
+        private V2IosKeyRestrictionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2IosKeyRestrictionsArgs();
         }
 
         public Builder(V2IosKeyRestrictionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedBundleIds = defaults.allowedBundleIds;
+            $ = new V2IosKeyRestrictionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedBundleIds(@Nullable Output<List<String>> allowedBundleIds) {
-            this.allowedBundleIds = allowedBundleIds;
+            $.allowedBundleIds = allowedBundleIds;
             return this;
         }
-        public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
-            this.allowedBundleIds = Codegen.ofNullable(allowedBundleIds);
-            return this;
+
+        public Builder allowedBundleIds(List<String> allowedBundleIds) {
+            return allowedBundleIds(Output.of(allowedBundleIds));
         }
+
         public Builder allowedBundleIds(String... allowedBundleIds) {
             return allowedBundleIds(List.of(allowedBundleIds));
-        }        public V2IosKeyRestrictionsArgs build() {
-            return new V2IosKeyRestrictionsArgs(allowedBundleIds);
+        }
+
+        public V2IosKeyRestrictionsArgs build() {
+            return $;
         }
     }
+
 }

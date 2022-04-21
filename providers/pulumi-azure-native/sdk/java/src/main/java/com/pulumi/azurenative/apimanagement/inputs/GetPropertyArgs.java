@@ -17,7 +17,7 @@ public final class GetPropertyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="propId", required=true)
-      private final String propId;
+    private String propId;
 
     public String propId() {
         return this.propId;
@@ -28,7 +28,7 @@ public final class GetPropertyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetPropertyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetPropertyArgs(
-        String propId,
-        String resourceGroupName,
-        String serviceName) {
-        this.propId = Objects.requireNonNull(propId, "expected parameter 'propId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetPropertyArgs() {}
 
-    private GetPropertyArgs() {
-        this.propId = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
+    private GetPropertyArgs(GetPropertyArgs $) {
+        this.propId = $.propId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String propId;
-        private String resourceGroupName;
-        private String serviceName;
+        private GetPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPropertyArgs();
         }
 
         public Builder(GetPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.propId = defaults.propId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder propId(String propId) {
-            this.propId = Objects.requireNonNull(propId);
+            $.propId = propId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetPropertyArgs build() {
-            return new GetPropertyArgs(propId, resourceGroupName, serviceName);
+        }
+
+        public GetPropertyArgs build() {
+            $.propId = Objects.requireNonNull($.propId, "expected parameter 'propId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

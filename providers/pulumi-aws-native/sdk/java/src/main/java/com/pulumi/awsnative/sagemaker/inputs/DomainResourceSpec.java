@@ -20,10 +20,10 @@ public final class DomainResourceSpec extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable DomainResourceSpecInstanceType instanceType;
+    private @Nullable DomainResourceSpecInstanceType instanceType;
 
     public Optional<DomainResourceSpecInstanceType> instanceType() {
-        return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DomainResourceSpec extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sageMakerImageArn")
-      private final @Nullable String sageMakerImageArn;
+    private @Nullable String sageMakerImageArn;
 
     public Optional<String> sageMakerImageArn() {
-        return this.sageMakerImageArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageArn);
+        return Optional.ofNullable(this.sageMakerImageArn);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class DomainResourceSpec extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sageMakerImageVersionArn")
-      private final @Nullable String sageMakerImageVersionArn;
+    private @Nullable String sageMakerImageVersionArn;
 
     public Optional<String> sageMakerImageVersionArn() {
-        return this.sageMakerImageVersionArn == null ? Optional.empty() : Optional.ofNullable(this.sageMakerImageVersionArn);
+        return Optional.ofNullable(this.sageMakerImageVersionArn);
     }
 
-    public DomainResourceSpec(
-        @Nullable DomainResourceSpecInstanceType instanceType,
-        @Nullable String sageMakerImageArn,
-        @Nullable String sageMakerImageVersionArn) {
-        this.instanceType = instanceType;
-        this.sageMakerImageArn = sageMakerImageArn;
-        this.sageMakerImageVersionArn = sageMakerImageVersionArn;
-    }
+    private DomainResourceSpec() {}
 
-    private DomainResourceSpec() {
-        this.instanceType = null;
-        this.sageMakerImageArn = null;
-        this.sageMakerImageVersionArn = null;
+    private DomainResourceSpec(DomainResourceSpec $) {
+        this.instanceType = $.instanceType;
+        this.sageMakerImageArn = $.sageMakerImageArn;
+        this.sageMakerImageVersionArn = $.sageMakerImageVersionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainResourceSpec defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DomainResourceSpecInstanceType instanceType;
-        private @Nullable String sageMakerImageArn;
-        private @Nullable String sageMakerImageVersionArn;
+        private DomainResourceSpec $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainResourceSpec();
         }
 
         public Builder(DomainResourceSpec defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
-    	      this.sageMakerImageArn = defaults.sageMakerImageArn;
-    	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
+            $ = new DomainResourceSpec(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable DomainResourceSpecInstanceType instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
-            this.sageMakerImageArn = sageMakerImageArn;
+            $.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
+
         public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
-            this.sageMakerImageVersionArn = sageMakerImageVersionArn;
+            $.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
-        }        public DomainResourceSpec build() {
-            return new DomainResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
+        }
+
+        public DomainResourceSpec build() {
+            return $;
         }
     }
+
 }

@@ -14,62 +14,59 @@ public final class GetClusterAddonsConfigIstioConfig extends com.pulumi.resource
     public static final GetClusterAddonsConfigIstioConfig Empty = new GetClusterAddonsConfigIstioConfig();
 
     @Import(name="auth", required=true)
-      private final String auth;
+    private String auth;
 
     public String auth() {
         return this.auth;
     }
 
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public GetClusterAddonsConfigIstioConfig(
-        String auth,
-        Boolean disabled) {
-        this.auth = Objects.requireNonNull(auth, "expected parameter 'auth' to be non-null");
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private GetClusterAddonsConfigIstioConfig() {}
 
-    private GetClusterAddonsConfigIstioConfig() {
-        this.auth = null;
-        this.disabled = null;
+    private GetClusterAddonsConfigIstioConfig(GetClusterAddonsConfigIstioConfig $) {
+        this.auth = $.auth;
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterAddonsConfigIstioConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String auth;
-        private Boolean disabled;
+        private GetClusterAddonsConfigIstioConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterAddonsConfigIstioConfig();
         }
 
         public Builder(GetClusterAddonsConfigIstioConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.disabled = defaults.disabled;
+            $ = new GetClusterAddonsConfigIstioConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(String auth) {
-            this.auth = Objects.requireNonNull(auth);
+            $.auth = auth;
             return this;
         }
+
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public GetClusterAddonsConfigIstioConfig build() {
-            return new GetClusterAddonsConfigIstioConfig(auth, disabled);
+        }
+
+        public GetClusterAddonsConfigIstioConfig build() {
+            $.auth = Objects.requireNonNull($.auth, "expected parameter 'auth' to be non-null");
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,10 +22,10 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="hours")
-      private final @Nullable List<Integer> hours;
+    private @Nullable List<Integer> hours;
 
-    public List<Integer> hours() {
-        return this.hours == null ? List.of() : this.hours;
+    public Optional<List<Integer>> hours() {
+        return Optional.ofNullable(this.hours);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="minutes")
-      private final @Nullable List<Integer> minutes;
+    private @Nullable List<Integer> minutes;
 
-    public List<Integer> minutes() {
-        return this.minutes == null ? List.of() : this.minutes;
+    public Optional<List<Integer>> minutes() {
+        return Optional.ofNullable(this.minutes);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="monthDays")
-      private final @Nullable List<Integer> monthDays;
+    private @Nullable List<Integer> monthDays;
 
-    public List<Integer> monthDays() {
-        return this.monthDays == null ? List.of() : this.monthDays;
+    public Optional<List<Integer>> monthDays() {
+        return Optional.ofNullable(this.monthDays);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="monthlyOccurrences")
-      private final @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
+    private @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
 
-    public List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences() {
-        return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
+    public Optional<List<JobRecurrenceScheduleMonthlyOccurrenceResponse>> monthlyOccurrences() {
+        return Optional.ofNullable(this.monthlyOccurrences);
     }
 
     /**
@@ -66,97 +66,88 @@ public final class JobRecurrenceScheduleResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="weekDays")
-      private final @Nullable List<String> weekDays;
+    private @Nullable List<String> weekDays;
 
-    public List<String> weekDays() {
-        return this.weekDays == null ? List.of() : this.weekDays;
+    public Optional<List<String>> weekDays() {
+        return Optional.ofNullable(this.weekDays);
     }
 
-    public JobRecurrenceScheduleResponse(
-        @Nullable List<Integer> hours,
-        @Nullable List<Integer> minutes,
-        @Nullable List<Integer> monthDays,
-        @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
-        @Nullable List<String> weekDays) {
-        this.hours = hours;
-        this.minutes = minutes;
-        this.monthDays = monthDays;
-        this.monthlyOccurrences = monthlyOccurrences;
-        this.weekDays = weekDays;
-    }
+    private JobRecurrenceScheduleResponse() {}
 
-    private JobRecurrenceScheduleResponse() {
-        this.hours = List.of();
-        this.minutes = List.of();
-        this.monthDays = List.of();
-        this.monthlyOccurrences = List.of();
-        this.weekDays = List.of();
+    private JobRecurrenceScheduleResponse(JobRecurrenceScheduleResponse $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.monthDays = $.monthDays;
+        this.monthlyOccurrences = $.monthlyOccurrences;
+        this.weekDays = $.weekDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobRecurrenceScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Integer> hours;
-        private @Nullable List<Integer> minutes;
-        private @Nullable List<Integer> monthDays;
-        private @Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences;
-        private @Nullable List<String> weekDays;
+        private JobRecurrenceScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobRecurrenceScheduleResponse();
         }
 
         public Builder(JobRecurrenceScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.monthDays = defaults.monthDays;
-    	      this.monthlyOccurrences = defaults.monthlyOccurrences;
-    	      this.weekDays = defaults.weekDays;
+            $ = new JobRecurrenceScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(@Nullable List<Integer> hours) {
-            this.hours = hours;
+            $.hours = hours;
             return this;
         }
+
         public Builder hours(Integer... hours) {
             return hours(List.of(hours));
         }
+
         public Builder minutes(@Nullable List<Integer> minutes) {
-            this.minutes = minutes;
+            $.minutes = minutes;
             return this;
         }
+
         public Builder minutes(Integer... minutes) {
             return minutes(List.of(minutes));
         }
+
         public Builder monthDays(@Nullable List<Integer> monthDays) {
-            this.monthDays = monthDays;
+            $.monthDays = monthDays;
             return this;
         }
+
         public Builder monthDays(Integer... monthDays) {
             return monthDays(List.of(monthDays));
         }
+
         public Builder monthlyOccurrences(@Nullable List<JobRecurrenceScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
-            this.monthlyOccurrences = monthlyOccurrences;
+            $.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
+
         public Builder monthlyOccurrences(JobRecurrenceScheduleMonthlyOccurrenceResponse... monthlyOccurrences) {
             return monthlyOccurrences(List.of(monthlyOccurrences));
         }
+
         public Builder weekDays(@Nullable List<String> weekDays) {
-            this.weekDays = weekDays;
+            $.weekDays = weekDays;
             return this;
         }
+
         public Builder weekDays(String... weekDays) {
             return weekDays(List.of(weekDays));
-        }        public JobRecurrenceScheduleResponse build() {
-            return new JobRecurrenceScheduleResponse(hours, minutes, monthDays, monthlyOccurrences, weekDays);
+        }
+
+        public JobRecurrenceScheduleResponse build() {
+            return $;
         }
     }
+
 }

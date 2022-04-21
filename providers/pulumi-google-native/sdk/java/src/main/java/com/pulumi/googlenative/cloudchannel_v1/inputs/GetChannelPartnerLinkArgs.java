@@ -15,78 +15,72 @@ public final class GetChannelPartnerLinkArgs extends com.pulumi.resources.Invoke
     public static final GetChannelPartnerLinkArgs Empty = new GetChannelPartnerLinkArgs();
 
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
     }
 
     @Import(name="channelPartnerLinkId", required=true)
-      private final String channelPartnerLinkId;
+    private String channelPartnerLinkId;
 
     public String channelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetChannelPartnerLinkArgs(
-        String accountId,
-        String channelPartnerLinkId,
-        @Nullable String view) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId, "expected parameter 'channelPartnerLinkId' to be non-null");
-        this.view = view;
-    }
+    private GetChannelPartnerLinkArgs() {}
 
-    private GetChannelPartnerLinkArgs() {
-        this.accountId = null;
-        this.channelPartnerLinkId = null;
-        this.view = null;
+    private GetChannelPartnerLinkArgs(GetChannelPartnerLinkArgs $) {
+        this.accountId = $.accountId;
+        this.channelPartnerLinkId = $.channelPartnerLinkId;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetChannelPartnerLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
-        private String channelPartnerLinkId;
-        private @Nullable String view;
+        private GetChannelPartnerLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetChannelPartnerLinkArgs();
         }
 
         public Builder(GetChannelPartnerLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.channelPartnerLinkId = defaults.channelPartnerLinkId;
-    	      this.view = defaults.view;
+            $ = new GetChannelPartnerLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder channelPartnerLinkId(String channelPartnerLinkId) {
-            this.channelPartnerLinkId = Objects.requireNonNull(channelPartnerLinkId);
+            $.channelPartnerLinkId = channelPartnerLinkId;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetChannelPartnerLinkArgs build() {
-            return new GetChannelPartnerLinkArgs(accountId, channelPartnerLinkId, view);
+        }
+
+        public GetChannelPartnerLinkArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.channelPartnerLinkId = Objects.requireNonNull($.channelPartnerLinkId, "expected parameter 'channelPartnerLinkId' to be non-null");
+            return $;
         }
     }
+
 }

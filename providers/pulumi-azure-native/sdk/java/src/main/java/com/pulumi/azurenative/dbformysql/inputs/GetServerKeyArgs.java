@@ -17,7 +17,7 @@ public final class GetServerKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyName", required=true)
-      private final String keyName;
+    private String keyName;
 
     public String keyName() {
         return this.keyName;
@@ -28,7 +28,7 @@ public final class GetServerKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetServerKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetServerKeyArgs(
-        String keyName,
-        String resourceGroupName,
-        String serverName) {
-        this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetServerKeyArgs() {}
 
-    private GetServerKeyArgs() {
-        this.keyName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetServerKeyArgs(GetServerKeyArgs $) {
+        this.keyName = $.keyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetServerKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerKeyArgs();
         }
 
         public Builder(GetServerKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetServerKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Objects.requireNonNull(keyName);
+            $.keyName = keyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetServerKeyArgs build() {
-            return new GetServerKeyArgs(keyName, resourceGroupName, serverName);
+        }
+
+        public GetServerKeyArgs build() {
+            $.keyName = Objects.requireNonNull($.keyName, "expected parameter 'keyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

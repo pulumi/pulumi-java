@@ -26,7 +26,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="bootDiskKmsKey", required=true)
-      private final String bootDiskKmsKey;
+    private String bootDiskKmsKey;
 
     public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
@@ -37,7 +37,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final Integer diskSizeGb;
+    private Integer diskSizeGb;
 
     public Integer diskSizeGb() {
         return this.diskSizeGb;
@@ -48,7 +48,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
@@ -59,7 +59,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="imageType", required=true)
-      private final String imageType;
+    private String imageType;
 
     public String imageType() {
         return this.imageType;
@@ -70,7 +70,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="management", required=true)
-      private final NodeManagementResponse management;
+    private NodeManagementResponse management;
 
     public NodeManagementResponse management() {
         return this.management;
@@ -81,7 +81,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="minCpuPlatform", required=true)
-      private final String minCpuPlatform;
+    private String minCpuPlatform;
 
     public String minCpuPlatform() {
         return this.minCpuPlatform;
@@ -92,7 +92,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="oauthScopes", required=true)
-      private final List<String> oauthScopes;
+    private List<String> oauthScopes;
 
     public List<String> oauthScopes() {
         return this.oauthScopes;
@@ -103,7 +103,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -114,7 +114,7 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="shieldedInstanceConfig", required=true)
-      private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
+    private ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
     public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
@@ -125,130 +125,112 @@ public final class AutoprovisioningNodePoolDefaultsResponse extends com.pulumi.r
      * 
      */
     @Import(name="upgradeSettings", required=true)
-      private final UpgradeSettingsResponse upgradeSettings;
+    private UpgradeSettingsResponse upgradeSettings;
 
     public UpgradeSettingsResponse upgradeSettings() {
         return this.upgradeSettings;
     }
 
-    public AutoprovisioningNodePoolDefaultsResponse(
-        String bootDiskKmsKey,
-        Integer diskSizeGb,
-        String diskType,
-        String imageType,
-        NodeManagementResponse management,
-        String minCpuPlatform,
-        List<String> oauthScopes,
-        String serviceAccount,
-        ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        UpgradeSettingsResponse upgradeSettings) {
-        this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey, "expected parameter 'bootDiskKmsKey' to be non-null");
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.imageType = Objects.requireNonNull(imageType, "expected parameter 'imageType' to be non-null");
-        this.management = Objects.requireNonNull(management, "expected parameter 'management' to be non-null");
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
-        this.oauthScopes = Objects.requireNonNull(oauthScopes, "expected parameter 'oauthScopes' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig, "expected parameter 'shieldedInstanceConfig' to be non-null");
-        this.upgradeSettings = Objects.requireNonNull(upgradeSettings, "expected parameter 'upgradeSettings' to be non-null");
-    }
+    private AutoprovisioningNodePoolDefaultsResponse() {}
 
-    private AutoprovisioningNodePoolDefaultsResponse() {
-        this.bootDiskKmsKey = null;
-        this.diskSizeGb = null;
-        this.diskType = null;
-        this.imageType = null;
-        this.management = null;
-        this.minCpuPlatform = null;
-        this.oauthScopes = List.of();
-        this.serviceAccount = null;
-        this.shieldedInstanceConfig = null;
-        this.upgradeSettings = null;
+    private AutoprovisioningNodePoolDefaultsResponse(AutoprovisioningNodePoolDefaultsResponse $) {
+        this.bootDiskKmsKey = $.bootDiskKmsKey;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.imageType = $.imageType;
+        this.management = $.management;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.oauthScopes = $.oauthScopes;
+        this.serviceAccount = $.serviceAccount;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.upgradeSettings = $.upgradeSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoprovisioningNodePoolDefaultsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bootDiskKmsKey;
-        private Integer diskSizeGb;
-        private String diskType;
-        private String imageType;
-        private NodeManagementResponse management;
-        private String minCpuPlatform;
-        private List<String> oauthScopes;
-        private String serviceAccount;
-        private ShieldedInstanceConfigResponse shieldedInstanceConfig;
-        private UpgradeSettingsResponse upgradeSettings;
+        private AutoprovisioningNodePoolDefaultsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoprovisioningNodePoolDefaultsResponse();
         }
 
         public Builder(AutoprovisioningNodePoolDefaultsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiskKmsKey = defaults.bootDiskKmsKey;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.imageType = defaults.imageType;
-    	      this.management = defaults.management;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.upgradeSettings = defaults.upgradeSettings;
+            $ = new AutoprovisioningNodePoolDefaultsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiskKmsKey(String bootDiskKmsKey) {
-            this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
+            $.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
+
         public Builder diskSizeGb(Integer diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder imageType(String imageType) {
-            this.imageType = Objects.requireNonNull(imageType);
+            $.imageType = imageType;
             return this;
         }
+
         public Builder management(NodeManagementResponse management) {
-            this.management = Objects.requireNonNull(management);
+            $.management = management;
             return this;
         }
+
         public Builder minCpuPlatform(String minCpuPlatform) {
-            this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
+
         public Builder oauthScopes(List<String> oauthScopes) {
-            this.oauthScopes = Objects.requireNonNull(oauthScopes);
+            $.oauthScopes = oauthScopes;
             return this;
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
+
         public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
-            this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
+            $.upgradeSettings = upgradeSettings;
             return this;
-        }        public AutoprovisioningNodePoolDefaultsResponse build() {
-            return new AutoprovisioningNodePoolDefaultsResponse(bootDiskKmsKey, diskSizeGb, diskType, imageType, management, minCpuPlatform, oauthScopes, serviceAccount, shieldedInstanceConfig, upgradeSettings);
+        }
+
+        public AutoprovisioningNodePoolDefaultsResponse build() {
+            $.bootDiskKmsKey = Objects.requireNonNull($.bootDiskKmsKey, "expected parameter 'bootDiskKmsKey' to be non-null");
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.imageType = Objects.requireNonNull($.imageType, "expected parameter 'imageType' to be non-null");
+            $.management = Objects.requireNonNull($.management, "expected parameter 'management' to be non-null");
+            $.minCpuPlatform = Objects.requireNonNull($.minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
+            $.oauthScopes = Objects.requireNonNull($.oauthScopes, "expected parameter 'oauthScopes' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.shieldedInstanceConfig = Objects.requireNonNull($.shieldedInstanceConfig, "expected parameter 'shieldedInstanceConfig' to be non-null");
+            $.upgradeSettings = Objects.requireNonNull($.upgradeSettings, "expected parameter 'upgradeSettings' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.policy_v1beta1.inputs.AllowedCSIDriverArgs;
 import com.pulumi.kubernetes.policy_v1beta1.inputs.AllowedFlexVolumeArgs;
 import com.pulumi.kubernetes.policy_v1beta1.inputs.AllowedHostPathArgs;
@@ -20,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -36,10 +36,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowPrivilegeEscalation")
-      private final @Nullable Output<Boolean> allowPrivilegeEscalation;
+    private @Nullable Output<Boolean> allowPrivilegeEscalation;
 
-    public Output<Boolean> allowPrivilegeEscalation() {
-        return this.allowPrivilegeEscalation == null ? Codegen.empty() : this.allowPrivilegeEscalation;
+    public Optional<Output<Boolean>> allowPrivilegeEscalation() {
+        return Optional.ofNullable(this.allowPrivilegeEscalation);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowedCSIDrivers")
-      private final @Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers;
+    private @Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers;
 
-    public Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers() {
-        return this.allowedCSIDrivers == null ? Codegen.empty() : this.allowedCSIDrivers;
+    public Optional<Output<List<AllowedCSIDriverArgs>>> allowedCSIDrivers() {
+        return Optional.ofNullable(this.allowedCSIDrivers);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowedCapabilities")
-      private final @Nullable Output<List<String>> allowedCapabilities;
+    private @Nullable Output<List<String>> allowedCapabilities;
 
-    public Output<List<String>> allowedCapabilities() {
-        return this.allowedCapabilities == null ? Codegen.empty() : this.allowedCapabilities;
+    public Optional<Output<List<String>>> allowedCapabilities() {
+        return Optional.ofNullable(this.allowedCapabilities);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowedFlexVolumes")
-      private final @Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes;
+    private @Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes;
 
-    public Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes() {
-        return this.allowedFlexVolumes == null ? Codegen.empty() : this.allowedFlexVolumes;
+    public Optional<Output<List<AllowedFlexVolumeArgs>>> allowedFlexVolumes() {
+        return Optional.ofNullable(this.allowedFlexVolumes);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowedHostPaths")
-      private final @Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths;
+    private @Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths;
 
-    public Output<List<AllowedHostPathArgs>> allowedHostPaths() {
-        return this.allowedHostPaths == null ? Codegen.empty() : this.allowedHostPaths;
+    public Optional<Output<List<AllowedHostPathArgs>>> allowedHostPaths() {
+        return Optional.ofNullable(this.allowedHostPaths);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowedProcMountTypes")
-      private final @Nullable Output<List<String>> allowedProcMountTypes;
+    private @Nullable Output<List<String>> allowedProcMountTypes;
 
-    public Output<List<String>> allowedProcMountTypes() {
-        return this.allowedProcMountTypes == null ? Codegen.empty() : this.allowedProcMountTypes;
+    public Optional<Output<List<String>>> allowedProcMountTypes() {
+        return Optional.ofNullable(this.allowedProcMountTypes);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="allowedUnsafeSysctls")
-      private final @Nullable Output<List<String>> allowedUnsafeSysctls;
+    private @Nullable Output<List<String>> allowedUnsafeSysctls;
 
-    public Output<List<String>> allowedUnsafeSysctls() {
-        return this.allowedUnsafeSysctls == null ? Codegen.empty() : this.allowedUnsafeSysctls;
+    public Optional<Output<List<String>>> allowedUnsafeSysctls() {
+        return Optional.ofNullable(this.allowedUnsafeSysctls);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="defaultAddCapabilities")
-      private final @Nullable Output<List<String>> defaultAddCapabilities;
+    private @Nullable Output<List<String>> defaultAddCapabilities;
 
-    public Output<List<String>> defaultAddCapabilities() {
-        return this.defaultAddCapabilities == null ? Codegen.empty() : this.defaultAddCapabilities;
+    public Optional<Output<List<String>>> defaultAddCapabilities() {
+        return Optional.ofNullable(this.defaultAddCapabilities);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="defaultAllowPrivilegeEscalation")
-      private final @Nullable Output<Boolean> defaultAllowPrivilegeEscalation;
+    private @Nullable Output<Boolean> defaultAllowPrivilegeEscalation;
 
-    public Output<Boolean> defaultAllowPrivilegeEscalation() {
-        return this.defaultAllowPrivilegeEscalation == null ? Codegen.empty() : this.defaultAllowPrivilegeEscalation;
+    public Optional<Output<Boolean>> defaultAllowPrivilegeEscalation() {
+        return Optional.ofNullable(this.defaultAllowPrivilegeEscalation);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="forbiddenSysctls")
-      private final @Nullable Output<List<String>> forbiddenSysctls;
+    private @Nullable Output<List<String>> forbiddenSysctls;
 
-    public Output<List<String>> forbiddenSysctls() {
-        return this.forbiddenSysctls == null ? Codegen.empty() : this.forbiddenSysctls;
+    public Optional<Output<List<String>>> forbiddenSysctls() {
+        return Optional.ofNullable(this.forbiddenSysctls);
     }
 
     /**
@@ -150,7 +150,7 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="fsGroup", required=true)
-      private final Output<FSGroupStrategyOptionsArgs> fsGroup;
+    private Output<FSGroupStrategyOptionsArgs> fsGroup;
 
     public Output<FSGroupStrategyOptionsArgs> fsGroup() {
         return this.fsGroup;
@@ -161,10 +161,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="hostIPC")
-      private final @Nullable Output<Boolean> hostIPC;
+    private @Nullable Output<Boolean> hostIPC;
 
-    public Output<Boolean> hostIPC() {
-        return this.hostIPC == null ? Codegen.empty() : this.hostIPC;
+    public Optional<Output<Boolean>> hostIPC() {
+        return Optional.ofNullable(this.hostIPC);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="hostNetwork")
-      private final @Nullable Output<Boolean> hostNetwork;
+    private @Nullable Output<Boolean> hostNetwork;
 
-    public Output<Boolean> hostNetwork() {
-        return this.hostNetwork == null ? Codegen.empty() : this.hostNetwork;
+    public Optional<Output<Boolean>> hostNetwork() {
+        return Optional.ofNullable(this.hostNetwork);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="hostPID")
-      private final @Nullable Output<Boolean> hostPID;
+    private @Nullable Output<Boolean> hostPID;
 
-    public Output<Boolean> hostPID() {
-        return this.hostPID == null ? Codegen.empty() : this.hostPID;
+    public Optional<Output<Boolean>> hostPID() {
+        return Optional.ofNullable(this.hostPID);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="hostPorts")
-      private final @Nullable Output<List<HostPortRangeArgs>> hostPorts;
+    private @Nullable Output<List<HostPortRangeArgs>> hostPorts;
 
-    public Output<List<HostPortRangeArgs>> hostPorts() {
-        return this.hostPorts == null ? Codegen.empty() : this.hostPorts;
+    public Optional<Output<List<HostPortRangeArgs>>> hostPorts() {
+        return Optional.ofNullable(this.hostPorts);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="privileged")
-      private final @Nullable Output<Boolean> privileged;
+    private @Nullable Output<Boolean> privileged;
 
-    public Output<Boolean> privileged() {
-        return this.privileged == null ? Codegen.empty() : this.privileged;
+    public Optional<Output<Boolean>> privileged() {
+        return Optional.ofNullable(this.privileged);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="readOnlyRootFilesystem")
-      private final @Nullable Output<Boolean> readOnlyRootFilesystem;
+    private @Nullable Output<Boolean> readOnlyRootFilesystem;
 
-    public Output<Boolean> readOnlyRootFilesystem() {
-        return this.readOnlyRootFilesystem == null ? Codegen.empty() : this.readOnlyRootFilesystem;
+    public Optional<Output<Boolean>> readOnlyRootFilesystem() {
+        return Optional.ofNullable(this.readOnlyRootFilesystem);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="requiredDropCapabilities")
-      private final @Nullable Output<List<String>> requiredDropCapabilities;
+    private @Nullable Output<List<String>> requiredDropCapabilities;
 
-    public Output<List<String>> requiredDropCapabilities() {
-        return this.requiredDropCapabilities == null ? Codegen.empty() : this.requiredDropCapabilities;
+    public Optional<Output<List<String>>> requiredDropCapabilities() {
+        return Optional.ofNullable(this.requiredDropCapabilities);
     }
 
     /**
@@ -238,10 +238,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="runAsGroup")
-      private final @Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup;
+    private @Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup;
 
-    public Output<RunAsGroupStrategyOptionsArgs> runAsGroup() {
-        return this.runAsGroup == null ? Codegen.empty() : this.runAsGroup;
+    public Optional<Output<RunAsGroupStrategyOptionsArgs>> runAsGroup() {
+        return Optional.ofNullable(this.runAsGroup);
     }
 
     /**
@@ -249,7 +249,7 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="runAsUser", required=true)
-      private final Output<RunAsUserStrategyOptionsArgs> runAsUser;
+    private Output<RunAsUserStrategyOptionsArgs> runAsUser;
 
     public Output<RunAsUserStrategyOptionsArgs> runAsUser() {
         return this.runAsUser;
@@ -260,10 +260,10 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="runtimeClass")
-      private final @Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass;
+    private @Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass;
 
-    public Output<RuntimeClassStrategyOptionsArgs> runtimeClass() {
-        return this.runtimeClass == null ? Codegen.empty() : this.runtimeClass;
+    public Optional<Output<RuntimeClassStrategyOptionsArgs>> runtimeClass() {
+        return Optional.ofNullable(this.runtimeClass);
     }
 
     /**
@@ -271,7 +271,7 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="seLinux", required=true)
-      private final Output<SELinuxStrategyOptionsArgs> seLinux;
+    private Output<SELinuxStrategyOptionsArgs> seLinux;
 
     public Output<SELinuxStrategyOptionsArgs> seLinux() {
         return this.seLinux;
@@ -282,7 +282,7 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="supplementalGroups", required=true)
-      private final Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups;
+    private Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups;
 
     public Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups() {
         return this.supplementalGroups;
@@ -293,382 +293,326 @@ public final class PodSecurityPolicySpecArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<String>> volumes;
+    private @Nullable Output<List<String>> volumes;
 
-    public Output<List<String>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<String>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public PodSecurityPolicySpecArgs(
-        @Nullable Output<Boolean> allowPrivilegeEscalation,
-        @Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers,
-        @Nullable Output<List<String>> allowedCapabilities,
-        @Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes,
-        @Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths,
-        @Nullable Output<List<String>> allowedProcMountTypes,
-        @Nullable Output<List<String>> allowedUnsafeSysctls,
-        @Nullable Output<List<String>> defaultAddCapabilities,
-        @Nullable Output<Boolean> defaultAllowPrivilegeEscalation,
-        @Nullable Output<List<String>> forbiddenSysctls,
-        Output<FSGroupStrategyOptionsArgs> fsGroup,
-        @Nullable Output<Boolean> hostIPC,
-        @Nullable Output<Boolean> hostNetwork,
-        @Nullable Output<Boolean> hostPID,
-        @Nullable Output<List<HostPortRangeArgs>> hostPorts,
-        @Nullable Output<Boolean> privileged,
-        @Nullable Output<Boolean> readOnlyRootFilesystem,
-        @Nullable Output<List<String>> requiredDropCapabilities,
-        @Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup,
-        Output<RunAsUserStrategyOptionsArgs> runAsUser,
-        @Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass,
-        Output<SELinuxStrategyOptionsArgs> seLinux,
-        Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups,
-        @Nullable Output<List<String>> volumes) {
-        this.allowPrivilegeEscalation = allowPrivilegeEscalation;
-        this.allowedCSIDrivers = allowedCSIDrivers;
-        this.allowedCapabilities = allowedCapabilities;
-        this.allowedFlexVolumes = allowedFlexVolumes;
-        this.allowedHostPaths = allowedHostPaths;
-        this.allowedProcMountTypes = allowedProcMountTypes;
-        this.allowedUnsafeSysctls = allowedUnsafeSysctls;
-        this.defaultAddCapabilities = defaultAddCapabilities;
-        this.defaultAllowPrivilegeEscalation = defaultAllowPrivilegeEscalation;
-        this.forbiddenSysctls = forbiddenSysctls;
-        this.fsGroup = Objects.requireNonNull(fsGroup, "expected parameter 'fsGroup' to be non-null");
-        this.hostIPC = hostIPC;
-        this.hostNetwork = hostNetwork;
-        this.hostPID = hostPID;
-        this.hostPorts = hostPorts;
-        this.privileged = privileged;
-        this.readOnlyRootFilesystem = readOnlyRootFilesystem;
-        this.requiredDropCapabilities = requiredDropCapabilities;
-        this.runAsGroup = runAsGroup;
-        this.runAsUser = Objects.requireNonNull(runAsUser, "expected parameter 'runAsUser' to be non-null");
-        this.runtimeClass = runtimeClass;
-        this.seLinux = Objects.requireNonNull(seLinux, "expected parameter 'seLinux' to be non-null");
-        this.supplementalGroups = Objects.requireNonNull(supplementalGroups, "expected parameter 'supplementalGroups' to be non-null");
-        this.volumes = volumes;
-    }
+    private PodSecurityPolicySpecArgs() {}
 
-    private PodSecurityPolicySpecArgs() {
-        this.allowPrivilegeEscalation = Codegen.empty();
-        this.allowedCSIDrivers = Codegen.empty();
-        this.allowedCapabilities = Codegen.empty();
-        this.allowedFlexVolumes = Codegen.empty();
-        this.allowedHostPaths = Codegen.empty();
-        this.allowedProcMountTypes = Codegen.empty();
-        this.allowedUnsafeSysctls = Codegen.empty();
-        this.defaultAddCapabilities = Codegen.empty();
-        this.defaultAllowPrivilegeEscalation = Codegen.empty();
-        this.forbiddenSysctls = Codegen.empty();
-        this.fsGroup = Codegen.empty();
-        this.hostIPC = Codegen.empty();
-        this.hostNetwork = Codegen.empty();
-        this.hostPID = Codegen.empty();
-        this.hostPorts = Codegen.empty();
-        this.privileged = Codegen.empty();
-        this.readOnlyRootFilesystem = Codegen.empty();
-        this.requiredDropCapabilities = Codegen.empty();
-        this.runAsGroup = Codegen.empty();
-        this.runAsUser = Codegen.empty();
-        this.runtimeClass = Codegen.empty();
-        this.seLinux = Codegen.empty();
-        this.supplementalGroups = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private PodSecurityPolicySpecArgs(PodSecurityPolicySpecArgs $) {
+        this.allowPrivilegeEscalation = $.allowPrivilegeEscalation;
+        this.allowedCSIDrivers = $.allowedCSIDrivers;
+        this.allowedCapabilities = $.allowedCapabilities;
+        this.allowedFlexVolumes = $.allowedFlexVolumes;
+        this.allowedHostPaths = $.allowedHostPaths;
+        this.allowedProcMountTypes = $.allowedProcMountTypes;
+        this.allowedUnsafeSysctls = $.allowedUnsafeSysctls;
+        this.defaultAddCapabilities = $.defaultAddCapabilities;
+        this.defaultAllowPrivilegeEscalation = $.defaultAllowPrivilegeEscalation;
+        this.forbiddenSysctls = $.forbiddenSysctls;
+        this.fsGroup = $.fsGroup;
+        this.hostIPC = $.hostIPC;
+        this.hostNetwork = $.hostNetwork;
+        this.hostPID = $.hostPID;
+        this.hostPorts = $.hostPorts;
+        this.privileged = $.privileged;
+        this.readOnlyRootFilesystem = $.readOnlyRootFilesystem;
+        this.requiredDropCapabilities = $.requiredDropCapabilities;
+        this.runAsGroup = $.runAsGroup;
+        this.runAsUser = $.runAsUser;
+        this.runtimeClass = $.runtimeClass;
+        this.seLinux = $.seLinux;
+        this.supplementalGroups = $.supplementalGroups;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodSecurityPolicySpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowPrivilegeEscalation;
-        private @Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers;
-        private @Nullable Output<List<String>> allowedCapabilities;
-        private @Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes;
-        private @Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths;
-        private @Nullable Output<List<String>> allowedProcMountTypes;
-        private @Nullable Output<List<String>> allowedUnsafeSysctls;
-        private @Nullable Output<List<String>> defaultAddCapabilities;
-        private @Nullable Output<Boolean> defaultAllowPrivilegeEscalation;
-        private @Nullable Output<List<String>> forbiddenSysctls;
-        private Output<FSGroupStrategyOptionsArgs> fsGroup;
-        private @Nullable Output<Boolean> hostIPC;
-        private @Nullable Output<Boolean> hostNetwork;
-        private @Nullable Output<Boolean> hostPID;
-        private @Nullable Output<List<HostPortRangeArgs>> hostPorts;
-        private @Nullable Output<Boolean> privileged;
-        private @Nullable Output<Boolean> readOnlyRootFilesystem;
-        private @Nullable Output<List<String>> requiredDropCapabilities;
-        private @Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup;
-        private Output<RunAsUserStrategyOptionsArgs> runAsUser;
-        private @Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass;
-        private Output<SELinuxStrategyOptionsArgs> seLinux;
-        private Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups;
-        private @Nullable Output<List<String>> volumes;
+        private PodSecurityPolicySpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodSecurityPolicySpecArgs();
         }
 
         public Builder(PodSecurityPolicySpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowPrivilegeEscalation = defaults.allowPrivilegeEscalation;
-    	      this.allowedCSIDrivers = defaults.allowedCSIDrivers;
-    	      this.allowedCapabilities = defaults.allowedCapabilities;
-    	      this.allowedFlexVolumes = defaults.allowedFlexVolumes;
-    	      this.allowedHostPaths = defaults.allowedHostPaths;
-    	      this.allowedProcMountTypes = defaults.allowedProcMountTypes;
-    	      this.allowedUnsafeSysctls = defaults.allowedUnsafeSysctls;
-    	      this.defaultAddCapabilities = defaults.defaultAddCapabilities;
-    	      this.defaultAllowPrivilegeEscalation = defaults.defaultAllowPrivilegeEscalation;
-    	      this.forbiddenSysctls = defaults.forbiddenSysctls;
-    	      this.fsGroup = defaults.fsGroup;
-    	      this.hostIPC = defaults.hostIPC;
-    	      this.hostNetwork = defaults.hostNetwork;
-    	      this.hostPID = defaults.hostPID;
-    	      this.hostPorts = defaults.hostPorts;
-    	      this.privileged = defaults.privileged;
-    	      this.readOnlyRootFilesystem = defaults.readOnlyRootFilesystem;
-    	      this.requiredDropCapabilities = defaults.requiredDropCapabilities;
-    	      this.runAsGroup = defaults.runAsGroup;
-    	      this.runAsUser = defaults.runAsUser;
-    	      this.runtimeClass = defaults.runtimeClass;
-    	      this.seLinux = defaults.seLinux;
-    	      this.supplementalGroups = defaults.supplementalGroups;
-    	      this.volumes = defaults.volumes;
+            $ = new PodSecurityPolicySpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowPrivilegeEscalation(@Nullable Output<Boolean> allowPrivilegeEscalation) {
-            this.allowPrivilegeEscalation = allowPrivilegeEscalation;
+            $.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
-        public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
-            this.allowPrivilegeEscalation = Codegen.ofNullable(allowPrivilegeEscalation);
-            return this;
+
+        public Builder allowPrivilegeEscalation(Boolean allowPrivilegeEscalation) {
+            return allowPrivilegeEscalation(Output.of(allowPrivilegeEscalation));
         }
+
         public Builder allowedCSIDrivers(@Nullable Output<List<AllowedCSIDriverArgs>> allowedCSIDrivers) {
-            this.allowedCSIDrivers = allowedCSIDrivers;
+            $.allowedCSIDrivers = allowedCSIDrivers;
             return this;
         }
-        public Builder allowedCSIDrivers(@Nullable List<AllowedCSIDriverArgs> allowedCSIDrivers) {
-            this.allowedCSIDrivers = Codegen.ofNullable(allowedCSIDrivers);
-            return this;
+
+        public Builder allowedCSIDrivers(List<AllowedCSIDriverArgs> allowedCSIDrivers) {
+            return allowedCSIDrivers(Output.of(allowedCSIDrivers));
         }
+
         public Builder allowedCSIDrivers(AllowedCSIDriverArgs... allowedCSIDrivers) {
             return allowedCSIDrivers(List.of(allowedCSIDrivers));
         }
+
         public Builder allowedCapabilities(@Nullable Output<List<String>> allowedCapabilities) {
-            this.allowedCapabilities = allowedCapabilities;
+            $.allowedCapabilities = allowedCapabilities;
             return this;
         }
-        public Builder allowedCapabilities(@Nullable List<String> allowedCapabilities) {
-            this.allowedCapabilities = Codegen.ofNullable(allowedCapabilities);
-            return this;
+
+        public Builder allowedCapabilities(List<String> allowedCapabilities) {
+            return allowedCapabilities(Output.of(allowedCapabilities));
         }
+
         public Builder allowedCapabilities(String... allowedCapabilities) {
             return allowedCapabilities(List.of(allowedCapabilities));
         }
+
         public Builder allowedFlexVolumes(@Nullable Output<List<AllowedFlexVolumeArgs>> allowedFlexVolumes) {
-            this.allowedFlexVolumes = allowedFlexVolumes;
+            $.allowedFlexVolumes = allowedFlexVolumes;
             return this;
         }
-        public Builder allowedFlexVolumes(@Nullable List<AllowedFlexVolumeArgs> allowedFlexVolumes) {
-            this.allowedFlexVolumes = Codegen.ofNullable(allowedFlexVolumes);
-            return this;
+
+        public Builder allowedFlexVolumes(List<AllowedFlexVolumeArgs> allowedFlexVolumes) {
+            return allowedFlexVolumes(Output.of(allowedFlexVolumes));
         }
+
         public Builder allowedFlexVolumes(AllowedFlexVolumeArgs... allowedFlexVolumes) {
             return allowedFlexVolumes(List.of(allowedFlexVolumes));
         }
+
         public Builder allowedHostPaths(@Nullable Output<List<AllowedHostPathArgs>> allowedHostPaths) {
-            this.allowedHostPaths = allowedHostPaths;
+            $.allowedHostPaths = allowedHostPaths;
             return this;
         }
-        public Builder allowedHostPaths(@Nullable List<AllowedHostPathArgs> allowedHostPaths) {
-            this.allowedHostPaths = Codegen.ofNullable(allowedHostPaths);
-            return this;
+
+        public Builder allowedHostPaths(List<AllowedHostPathArgs> allowedHostPaths) {
+            return allowedHostPaths(Output.of(allowedHostPaths));
         }
+
         public Builder allowedHostPaths(AllowedHostPathArgs... allowedHostPaths) {
             return allowedHostPaths(List.of(allowedHostPaths));
         }
+
         public Builder allowedProcMountTypes(@Nullable Output<List<String>> allowedProcMountTypes) {
-            this.allowedProcMountTypes = allowedProcMountTypes;
+            $.allowedProcMountTypes = allowedProcMountTypes;
             return this;
         }
-        public Builder allowedProcMountTypes(@Nullable List<String> allowedProcMountTypes) {
-            this.allowedProcMountTypes = Codegen.ofNullable(allowedProcMountTypes);
-            return this;
+
+        public Builder allowedProcMountTypes(List<String> allowedProcMountTypes) {
+            return allowedProcMountTypes(Output.of(allowedProcMountTypes));
         }
+
         public Builder allowedProcMountTypes(String... allowedProcMountTypes) {
             return allowedProcMountTypes(List.of(allowedProcMountTypes));
         }
+
         public Builder allowedUnsafeSysctls(@Nullable Output<List<String>> allowedUnsafeSysctls) {
-            this.allowedUnsafeSysctls = allowedUnsafeSysctls;
+            $.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
-        public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
-            this.allowedUnsafeSysctls = Codegen.ofNullable(allowedUnsafeSysctls);
-            return this;
+
+        public Builder allowedUnsafeSysctls(List<String> allowedUnsafeSysctls) {
+            return allowedUnsafeSysctls(Output.of(allowedUnsafeSysctls));
         }
+
         public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
             return allowedUnsafeSysctls(List.of(allowedUnsafeSysctls));
         }
+
         public Builder defaultAddCapabilities(@Nullable Output<List<String>> defaultAddCapabilities) {
-            this.defaultAddCapabilities = defaultAddCapabilities;
+            $.defaultAddCapabilities = defaultAddCapabilities;
             return this;
         }
-        public Builder defaultAddCapabilities(@Nullable List<String> defaultAddCapabilities) {
-            this.defaultAddCapabilities = Codegen.ofNullable(defaultAddCapabilities);
-            return this;
+
+        public Builder defaultAddCapabilities(List<String> defaultAddCapabilities) {
+            return defaultAddCapabilities(Output.of(defaultAddCapabilities));
         }
+
         public Builder defaultAddCapabilities(String... defaultAddCapabilities) {
             return defaultAddCapabilities(List.of(defaultAddCapabilities));
         }
+
         public Builder defaultAllowPrivilegeEscalation(@Nullable Output<Boolean> defaultAllowPrivilegeEscalation) {
-            this.defaultAllowPrivilegeEscalation = defaultAllowPrivilegeEscalation;
+            $.defaultAllowPrivilegeEscalation = defaultAllowPrivilegeEscalation;
             return this;
         }
-        public Builder defaultAllowPrivilegeEscalation(@Nullable Boolean defaultAllowPrivilegeEscalation) {
-            this.defaultAllowPrivilegeEscalation = Codegen.ofNullable(defaultAllowPrivilegeEscalation);
-            return this;
+
+        public Builder defaultAllowPrivilegeEscalation(Boolean defaultAllowPrivilegeEscalation) {
+            return defaultAllowPrivilegeEscalation(Output.of(defaultAllowPrivilegeEscalation));
         }
+
         public Builder forbiddenSysctls(@Nullable Output<List<String>> forbiddenSysctls) {
-            this.forbiddenSysctls = forbiddenSysctls;
+            $.forbiddenSysctls = forbiddenSysctls;
             return this;
         }
-        public Builder forbiddenSysctls(@Nullable List<String> forbiddenSysctls) {
-            this.forbiddenSysctls = Codegen.ofNullable(forbiddenSysctls);
-            return this;
+
+        public Builder forbiddenSysctls(List<String> forbiddenSysctls) {
+            return forbiddenSysctls(Output.of(forbiddenSysctls));
         }
+
         public Builder forbiddenSysctls(String... forbiddenSysctls) {
             return forbiddenSysctls(List.of(forbiddenSysctls));
         }
+
         public Builder fsGroup(Output<FSGroupStrategyOptionsArgs> fsGroup) {
-            this.fsGroup = Objects.requireNonNull(fsGroup);
+            $.fsGroup = fsGroup;
             return this;
         }
+
         public Builder fsGroup(FSGroupStrategyOptionsArgs fsGroup) {
-            this.fsGroup = Output.of(Objects.requireNonNull(fsGroup));
-            return this;
+            return fsGroup(Output.of(fsGroup));
         }
+
         public Builder hostIPC(@Nullable Output<Boolean> hostIPC) {
-            this.hostIPC = hostIPC;
+            $.hostIPC = hostIPC;
             return this;
         }
-        public Builder hostIPC(@Nullable Boolean hostIPC) {
-            this.hostIPC = Codegen.ofNullable(hostIPC);
-            return this;
+
+        public Builder hostIPC(Boolean hostIPC) {
+            return hostIPC(Output.of(hostIPC));
         }
+
         public Builder hostNetwork(@Nullable Output<Boolean> hostNetwork) {
-            this.hostNetwork = hostNetwork;
+            $.hostNetwork = hostNetwork;
             return this;
         }
-        public Builder hostNetwork(@Nullable Boolean hostNetwork) {
-            this.hostNetwork = Codegen.ofNullable(hostNetwork);
-            return this;
+
+        public Builder hostNetwork(Boolean hostNetwork) {
+            return hostNetwork(Output.of(hostNetwork));
         }
+
         public Builder hostPID(@Nullable Output<Boolean> hostPID) {
-            this.hostPID = hostPID;
+            $.hostPID = hostPID;
             return this;
         }
-        public Builder hostPID(@Nullable Boolean hostPID) {
-            this.hostPID = Codegen.ofNullable(hostPID);
-            return this;
+
+        public Builder hostPID(Boolean hostPID) {
+            return hostPID(Output.of(hostPID));
         }
+
         public Builder hostPorts(@Nullable Output<List<HostPortRangeArgs>> hostPorts) {
-            this.hostPorts = hostPorts;
+            $.hostPorts = hostPorts;
             return this;
         }
-        public Builder hostPorts(@Nullable List<HostPortRangeArgs> hostPorts) {
-            this.hostPorts = Codegen.ofNullable(hostPorts);
-            return this;
+
+        public Builder hostPorts(List<HostPortRangeArgs> hostPorts) {
+            return hostPorts(Output.of(hostPorts));
         }
+
         public Builder hostPorts(HostPortRangeArgs... hostPorts) {
             return hostPorts(List.of(hostPorts));
         }
+
         public Builder privileged(@Nullable Output<Boolean> privileged) {
-            this.privileged = privileged;
+            $.privileged = privileged;
             return this;
         }
-        public Builder privileged(@Nullable Boolean privileged) {
-            this.privileged = Codegen.ofNullable(privileged);
-            return this;
+
+        public Builder privileged(Boolean privileged) {
+            return privileged(Output.of(privileged));
         }
+
         public Builder readOnlyRootFilesystem(@Nullable Output<Boolean> readOnlyRootFilesystem) {
-            this.readOnlyRootFilesystem = readOnlyRootFilesystem;
+            $.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
-        public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
-            this.readOnlyRootFilesystem = Codegen.ofNullable(readOnlyRootFilesystem);
-            return this;
+
+        public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
+            return readOnlyRootFilesystem(Output.of(readOnlyRootFilesystem));
         }
+
         public Builder requiredDropCapabilities(@Nullable Output<List<String>> requiredDropCapabilities) {
-            this.requiredDropCapabilities = requiredDropCapabilities;
+            $.requiredDropCapabilities = requiredDropCapabilities;
             return this;
         }
-        public Builder requiredDropCapabilities(@Nullable List<String> requiredDropCapabilities) {
-            this.requiredDropCapabilities = Codegen.ofNullable(requiredDropCapabilities);
-            return this;
+
+        public Builder requiredDropCapabilities(List<String> requiredDropCapabilities) {
+            return requiredDropCapabilities(Output.of(requiredDropCapabilities));
         }
+
         public Builder requiredDropCapabilities(String... requiredDropCapabilities) {
             return requiredDropCapabilities(List.of(requiredDropCapabilities));
         }
+
         public Builder runAsGroup(@Nullable Output<RunAsGroupStrategyOptionsArgs> runAsGroup) {
-            this.runAsGroup = runAsGroup;
+            $.runAsGroup = runAsGroup;
             return this;
         }
-        public Builder runAsGroup(@Nullable RunAsGroupStrategyOptionsArgs runAsGroup) {
-            this.runAsGroup = Codegen.ofNullable(runAsGroup);
-            return this;
+
+        public Builder runAsGroup(RunAsGroupStrategyOptionsArgs runAsGroup) {
+            return runAsGroup(Output.of(runAsGroup));
         }
+
         public Builder runAsUser(Output<RunAsUserStrategyOptionsArgs> runAsUser) {
-            this.runAsUser = Objects.requireNonNull(runAsUser);
+            $.runAsUser = runAsUser;
             return this;
         }
+
         public Builder runAsUser(RunAsUserStrategyOptionsArgs runAsUser) {
-            this.runAsUser = Output.of(Objects.requireNonNull(runAsUser));
-            return this;
+            return runAsUser(Output.of(runAsUser));
         }
+
         public Builder runtimeClass(@Nullable Output<RuntimeClassStrategyOptionsArgs> runtimeClass) {
-            this.runtimeClass = runtimeClass;
+            $.runtimeClass = runtimeClass;
             return this;
         }
-        public Builder runtimeClass(@Nullable RuntimeClassStrategyOptionsArgs runtimeClass) {
-            this.runtimeClass = Codegen.ofNullable(runtimeClass);
-            return this;
+
+        public Builder runtimeClass(RuntimeClassStrategyOptionsArgs runtimeClass) {
+            return runtimeClass(Output.of(runtimeClass));
         }
+
         public Builder seLinux(Output<SELinuxStrategyOptionsArgs> seLinux) {
-            this.seLinux = Objects.requireNonNull(seLinux);
+            $.seLinux = seLinux;
             return this;
         }
+
         public Builder seLinux(SELinuxStrategyOptionsArgs seLinux) {
-            this.seLinux = Output.of(Objects.requireNonNull(seLinux));
-            return this;
+            return seLinux(Output.of(seLinux));
         }
+
         public Builder supplementalGroups(Output<SupplementalGroupsStrategyOptionsArgs> supplementalGroups) {
-            this.supplementalGroups = Objects.requireNonNull(supplementalGroups);
+            $.supplementalGroups = supplementalGroups;
             return this;
         }
+
         public Builder supplementalGroups(SupplementalGroupsStrategyOptionsArgs supplementalGroups) {
-            this.supplementalGroups = Output.of(Objects.requireNonNull(supplementalGroups));
-            return this;
+            return supplementalGroups(Output.of(supplementalGroups));
         }
+
         public Builder volumes(@Nullable Output<List<String>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<String> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<String> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(String... volumes) {
             return volumes(List.of(volumes));
-        }        public PodSecurityPolicySpecArgs build() {
-            return new PodSecurityPolicySpecArgs(allowPrivilegeEscalation, allowedCSIDrivers, allowedCapabilities, allowedFlexVolumes, allowedHostPaths, allowedProcMountTypes, allowedUnsafeSysctls, defaultAddCapabilities, defaultAllowPrivilegeEscalation, forbiddenSysctls, fsGroup, hostIPC, hostNetwork, hostPID, hostPorts, privileged, readOnlyRootFilesystem, requiredDropCapabilities, runAsGroup, runAsUser, runtimeClass, seLinux, supplementalGroups, volumes);
+        }
+
+        public PodSecurityPolicySpecArgs build() {
+            $.fsGroup = Objects.requireNonNull($.fsGroup, "expected parameter 'fsGroup' to be non-null");
+            $.runAsUser = Objects.requireNonNull($.runAsUser, "expected parameter 'runAsUser' to be non-null");
+            $.seLinux = Objects.requireNonNull($.seLinux, "expected parameter 'seLinux' to be non-null");
+            $.supplementalGroups = Objects.requireNonNull($.supplementalGroups, "expected parameter 'supplementalGroups' to be non-null");
+            return $;
         }
     }
+
 }

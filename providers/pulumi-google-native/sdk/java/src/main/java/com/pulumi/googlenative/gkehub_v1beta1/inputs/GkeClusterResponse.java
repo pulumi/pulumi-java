@@ -22,7 +22,7 @@ public final class GkeClusterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterMissing", required=true)
-      private final Boolean clusterMissing;
+    private Boolean clusterMissing;
 
     public Boolean clusterMissing() {
         return this.clusterMissing;
@@ -33,55 +33,52 @@ public final class GkeClusterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceLink", required=true)
-      private final String resourceLink;
+    private String resourceLink;
 
     public String resourceLink() {
         return this.resourceLink;
     }
 
-    public GkeClusterResponse(
-        Boolean clusterMissing,
-        String resourceLink) {
-        this.clusterMissing = Objects.requireNonNull(clusterMissing, "expected parameter 'clusterMissing' to be non-null");
-        this.resourceLink = Objects.requireNonNull(resourceLink, "expected parameter 'resourceLink' to be non-null");
-    }
+    private GkeClusterResponse() {}
 
-    private GkeClusterResponse() {
-        this.clusterMissing = null;
-        this.resourceLink = null;
+    private GkeClusterResponse(GkeClusterResponse $) {
+        this.clusterMissing = $.clusterMissing;
+        this.resourceLink = $.resourceLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GkeClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean clusterMissing;
-        private String resourceLink;
+        private GkeClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GkeClusterResponse();
         }
 
         public Builder(GkeClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterMissing = defaults.clusterMissing;
-    	      this.resourceLink = defaults.resourceLink;
+            $ = new GkeClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterMissing(Boolean clusterMissing) {
-            this.clusterMissing = Objects.requireNonNull(clusterMissing);
+            $.clusterMissing = clusterMissing;
             return this;
         }
+
         public Builder resourceLink(String resourceLink) {
-            this.resourceLink = Objects.requireNonNull(resourceLink);
+            $.resourceLink = resourceLink;
             return this;
-        }        public GkeClusterResponse build() {
-            return new GkeClusterResponse(clusterMissing, resourceLink);
+        }
+
+        public GkeClusterResponse build() {
+            $.clusterMissing = Objects.requireNonNull($.clusterMissing, "expected parameter 'clusterMissing' to be non-null");
+            $.resourceLink = Objects.requireNonNull($.resourceLink, "expected parameter 'resourceLink' to be non-null");
+            return $;
         }
     }
+
 }

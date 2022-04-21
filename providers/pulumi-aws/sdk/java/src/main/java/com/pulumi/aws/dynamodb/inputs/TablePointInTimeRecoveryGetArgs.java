@@ -5,7 +5,6 @@ package com.pulumi.aws.dynamodb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class TablePointInTimeRecoveryGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public TablePointInTimeRecoveryGetArgs(Output<Boolean> enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private TablePointInTimeRecoveryGetArgs() {}
 
-    private TablePointInTimeRecoveryGetArgs() {
-        this.enabled = Codegen.empty();
+    private TablePointInTimeRecoveryGetArgs(TablePointInTimeRecoveryGetArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TablePointInTimeRecoveryGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
+        private TablePointInTimeRecoveryGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TablePointInTimeRecoveryGetArgs();
         }
 
         public Builder(TablePointInTimeRecoveryGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new TablePointInTimeRecoveryGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public TablePointInTimeRecoveryGetArgs build() {
-            return new TablePointInTimeRecoveryGetArgs(enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public TablePointInTimeRecoveryGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

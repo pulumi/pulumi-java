@@ -24,7 +24,7 @@ public final class UpgradeOccurrenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="distribution", required=true)
-      private final UpgradeDistributionResponse distribution;
+    private UpgradeDistributionResponse distribution;
 
     public UpgradeDistributionResponse distribution() {
         return this.distribution;
@@ -35,7 +35,7 @@ public final class UpgradeOccurrenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="package", required=true)
-      private final String package_;
+    private String package_;
 
     public String package_() {
         return this.package_;
@@ -46,7 +46,7 @@ public final class UpgradeOccurrenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="parsedVersion", required=true)
-      private final VersionResponse parsedVersion;
+    private VersionResponse parsedVersion;
 
     public VersionResponse parsedVersion() {
         return this.parsedVersion;
@@ -57,73 +57,66 @@ public final class UpgradeOccurrenceResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="windowsUpdate", required=true)
-      private final WindowsUpdateResponse windowsUpdate;
+    private WindowsUpdateResponse windowsUpdate;
 
     public WindowsUpdateResponse windowsUpdate() {
         return this.windowsUpdate;
     }
 
-    public UpgradeOccurrenceResponse(
-        UpgradeDistributionResponse distribution,
-        String package_,
-        VersionResponse parsedVersion,
-        WindowsUpdateResponse windowsUpdate) {
-        this.distribution = Objects.requireNonNull(distribution, "expected parameter 'distribution' to be non-null");
-        this.package_ = Objects.requireNonNull(package_, "expected parameter 'package' to be non-null");
-        this.parsedVersion = Objects.requireNonNull(parsedVersion, "expected parameter 'parsedVersion' to be non-null");
-        this.windowsUpdate = Objects.requireNonNull(windowsUpdate, "expected parameter 'windowsUpdate' to be non-null");
-    }
+    private UpgradeOccurrenceResponse() {}
 
-    private UpgradeOccurrenceResponse() {
-        this.distribution = null;
-        this.package_ = null;
-        this.parsedVersion = null;
-        this.windowsUpdate = null;
+    private UpgradeOccurrenceResponse(UpgradeOccurrenceResponse $) {
+        this.distribution = $.distribution;
+        this.package_ = $.package_;
+        this.parsedVersion = $.parsedVersion;
+        this.windowsUpdate = $.windowsUpdate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private UpgradeDistributionResponse distribution;
-        private String package_;
-        private VersionResponse parsedVersion;
-        private WindowsUpdateResponse windowsUpdate;
+        private UpgradeOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeOccurrenceResponse();
         }
 
         public Builder(UpgradeOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distribution = defaults.distribution;
-    	      this.package_ = defaults.package_;
-    	      this.parsedVersion = defaults.parsedVersion;
-    	      this.windowsUpdate = defaults.windowsUpdate;
+            $ = new UpgradeOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distribution(UpgradeDistributionResponse distribution) {
-            this.distribution = Objects.requireNonNull(distribution);
+            $.distribution = distribution;
             return this;
         }
+
         public Builder package_(String package_) {
-            this.package_ = Objects.requireNonNull(package_);
+            $.package_ = package_;
             return this;
         }
+
         public Builder parsedVersion(VersionResponse parsedVersion) {
-            this.parsedVersion = Objects.requireNonNull(parsedVersion);
+            $.parsedVersion = parsedVersion;
             return this;
         }
+
         public Builder windowsUpdate(WindowsUpdateResponse windowsUpdate) {
-            this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
+            $.windowsUpdate = windowsUpdate;
             return this;
-        }        public UpgradeOccurrenceResponse build() {
-            return new UpgradeOccurrenceResponse(distribution, package_, parsedVersion, windowsUpdate);
+        }
+
+        public UpgradeOccurrenceResponse build() {
+            $.distribution = Objects.requireNonNull($.distribution, "expected parameter 'distribution' to be non-null");
+            $.package_ = Objects.requireNonNull($.package_, "expected parameter 'package' to be non-null");
+            $.parsedVersion = Objects.requireNonNull($.parsedVersion, "expected parameter 'parsedVersion' to be non-null");
+            $.windowsUpdate = Objects.requireNonNull($.windowsUpdate, "expected parameter 'windowsUpdate' to be non-null");
+            return $;
         }
     }
+
 }

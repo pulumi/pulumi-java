@@ -23,10 +23,10 @@ public final class DriveBitLockerKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="bitLockerKey")
-      private final @Nullable String bitLockerKey;
+    private @Nullable String bitLockerKey;
 
     public Optional<String> bitLockerKey() {
-        return this.bitLockerKey == null ? Optional.empty() : Optional.ofNullable(this.bitLockerKey);
+        return Optional.ofNullable(this.bitLockerKey);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DriveBitLockerKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="driveId")
-      private final @Nullable String driveId;
+    private @Nullable String driveId;
 
     public Optional<String> driveId() {
-        return this.driveId == null ? Optional.empty() : Optional.ofNullable(this.driveId);
+        return Optional.ofNullable(this.driveId);
     }
 
-    public DriveBitLockerKeyResponse(
-        @Nullable String bitLockerKey,
-        @Nullable String driveId) {
-        this.bitLockerKey = bitLockerKey;
-        this.driveId = driveId;
-    }
+    private DriveBitLockerKeyResponse() {}
 
-    private DriveBitLockerKeyResponse() {
-        this.bitLockerKey = null;
-        this.driveId = null;
+    private DriveBitLockerKeyResponse(DriveBitLockerKeyResponse $) {
+        this.bitLockerKey = $.bitLockerKey;
+        this.driveId = $.driveId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DriveBitLockerKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bitLockerKey;
-        private @Nullable String driveId;
+        private DriveBitLockerKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DriveBitLockerKeyResponse();
         }
 
         public Builder(DriveBitLockerKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitLockerKey = defaults.bitLockerKey;
-    	      this.driveId = defaults.driveId;
+            $ = new DriveBitLockerKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bitLockerKey(@Nullable String bitLockerKey) {
-            this.bitLockerKey = bitLockerKey;
+            $.bitLockerKey = bitLockerKey;
             return this;
         }
+
         public Builder driveId(@Nullable String driveId) {
-            this.driveId = driveId;
+            $.driveId = driveId;
             return this;
-        }        public DriveBitLockerKeyResponse build() {
-            return new DriveBitLockerKeyResponse(bitLockerKey, driveId);
+        }
+
+        public DriveBitLockerKeyResponse build() {
+            return $;
         }
     }
+
 }

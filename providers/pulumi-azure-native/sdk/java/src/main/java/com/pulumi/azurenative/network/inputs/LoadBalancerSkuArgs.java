@@ -8,9 +8,9 @@ import com.pulumi.azurenative.network.enums.LoadBalancerSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LoadBalancerSkuArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,LoadBalancerSkuName>> name;
+    private @Nullable Output<Either<String,LoadBalancerSkuName>> name;
 
-    public Output<Either<String,LoadBalancerSkuName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,LoadBalancerSkuName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class LoadBalancerSkuArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,LoadBalancerSkuTier>> tier;
+    private @Nullable Output<Either<String,LoadBalancerSkuTier>> tier;
 
-    public Output<Either<String,LoadBalancerSkuTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,LoadBalancerSkuTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public LoadBalancerSkuArgs(
-        @Nullable Output<Either<String,LoadBalancerSkuName>> name,
-        @Nullable Output<Either<String,LoadBalancerSkuTier>> tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private LoadBalancerSkuArgs() {}
 
-    private LoadBalancerSkuArgs() {
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private LoadBalancerSkuArgs(LoadBalancerSkuArgs $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoadBalancerSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,LoadBalancerSkuName>> name;
-        private @Nullable Output<Either<String,LoadBalancerSkuTier>> tier;
+        private LoadBalancerSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoadBalancerSkuArgs();
         }
 
         public Builder(LoadBalancerSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new LoadBalancerSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,LoadBalancerSkuName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,LoadBalancerSkuName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Either<String,LoadBalancerSkuName> name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,LoadBalancerSkuTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,LoadBalancerSkuTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public LoadBalancerSkuArgs build() {
-            return new LoadBalancerSkuArgs(name, tier);
+
+        public Builder tier(Either<String,LoadBalancerSkuTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public LoadBalancerSkuArgs build() {
+            return $;
         }
     }
+
 }

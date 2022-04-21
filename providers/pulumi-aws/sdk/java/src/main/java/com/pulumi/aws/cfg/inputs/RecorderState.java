@@ -6,9 +6,9 @@ package com.pulumi.aws.cfg.inputs;
 import com.pulumi.aws.cfg.inputs.RecorderRecordingGroupGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RecorderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RecorderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recordingGroup")
-      private final @Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup;
+    private @Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup;
 
-    public Output<RecorderRecordingGroupGetArgs> recordingGroup() {
-        return this.recordingGroup == null ? Codegen.empty() : this.recordingGroup;
+    public Optional<Output<RecorderRecordingGroupGetArgs>> recordingGroup() {
+        return Optional.ofNullable(this.recordingGroup);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class RecorderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public RecorderState(
-        @Nullable Output<String> name,
-        @Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup,
-        @Nullable Output<String> roleArn) {
-        this.name = name;
-        this.recordingGroup = recordingGroup;
-        this.roleArn = roleArn;
-    }
+    private RecorderState() {}
 
-    private RecorderState() {
-        this.name = Codegen.empty();
-        this.recordingGroup = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private RecorderState(RecorderState $) {
+        this.name = $.name;
+        this.recordingGroup = $.recordingGroup;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RecorderState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup;
-        private @Nullable Output<String> roleArn;
+        private RecorderState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RecorderState();
         }
 
         public Builder(RecorderState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.recordingGroup = defaults.recordingGroup;
-    	      this.roleArn = defaults.roleArn;
+            $ = new RecorderState(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder recordingGroup(@Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup) {
-            this.recordingGroup = recordingGroup;
+            $.recordingGroup = recordingGroup;
             return this;
         }
-        public Builder recordingGroup(@Nullable RecorderRecordingGroupGetArgs recordingGroup) {
-            this.recordingGroup = Codegen.ofNullable(recordingGroup);
-            return this;
+
+        public Builder recordingGroup(RecorderRecordingGroupGetArgs recordingGroup) {
+            return recordingGroup(Output.of(recordingGroup));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public RecorderState build() {
-            return new RecorderState(name, recordingGroup, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public RecorderState build() {
+            return $;
         }
     }
+
 }

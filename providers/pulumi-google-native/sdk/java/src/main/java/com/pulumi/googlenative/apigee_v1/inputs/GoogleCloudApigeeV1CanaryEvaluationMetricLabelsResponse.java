@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
      * 
      */
     @Import(name="env", required=true)
-      private final String env;
+    private String env;
 
     public String env() {
         return this.env;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -43,64 +43,59 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
-    public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(
-        String env,
-        String instanceId,
-        String location) {
-        this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse() {}
 
-    private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse() {
-        this.env = null;
-        this.instanceId = null;
-        this.location = null;
+    private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse $) {
+        this.env = $.env;
+        this.instanceId = $.instanceId;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String env;
-        private String instanceId;
-        private String location;
+        private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse();
         }
 
         public Builder(GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.env = defaults.env;
-    	      this.instanceId = defaults.instanceId;
-    	      this.location = defaults.location;
+            $ = new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder env(String env) {
-            this.env = Objects.requireNonNull(env);
+            $.env = env;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
-        }        public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse build() {
-            return new GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(env, instanceId, location);
+        }
+
+        public GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse build() {
+            $.env = Objects.requireNonNull($.env, "expected parameter 'env' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class VolumeAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
@@ -36,10 +36,10 @@ public final class VolumeAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="forceDetach")
-      private final @Nullable Output<Boolean> forceDetach;
+    private @Nullable Output<Boolean> forceDetach;
 
-    public Output<Boolean> forceDetach() {
-        return this.forceDetach == null ? Codegen.empty() : this.forceDetach;
+    public Optional<Output<Boolean>> forceDetach() {
+        return Optional.ofNullable(this.forceDetach);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class VolumeAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -62,10 +62,10 @@ public final class VolumeAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="skipDestroy")
-      private final @Nullable Output<Boolean> skipDestroy;
+    private @Nullable Output<Boolean> skipDestroy;
 
-    public Output<Boolean> skipDestroy() {
-        return this.skipDestroy == null ? Codegen.empty() : this.skipDestroy;
+    public Optional<Output<Boolean>> skipDestroy() {
+        return Optional.ofNullable(this.skipDestroy);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class VolumeAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="stopInstanceBeforeDetaching")
-      private final @Nullable Output<Boolean> stopInstanceBeforeDetaching;
+    private @Nullable Output<Boolean> stopInstanceBeforeDetaching;
 
-    public Output<Boolean> stopInstanceBeforeDetaching() {
-        return this.stopInstanceBeforeDetaching == null ? Codegen.empty() : this.stopInstanceBeforeDetaching;
+    public Optional<Output<Boolean>> stopInstanceBeforeDetaching() {
+        return Optional.ofNullable(this.stopInstanceBeforeDetaching);
     }
 
     /**
@@ -85,115 +85,101 @@ public final class VolumeAttachmentArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="volumeId", required=true)
-      private final Output<String> volumeId;
+    private Output<String> volumeId;
 
     public Output<String> volumeId() {
         return this.volumeId;
     }
 
-    public VolumeAttachmentArgs(
-        Output<String> deviceName,
-        @Nullable Output<Boolean> forceDetach,
-        Output<String> instanceId,
-        @Nullable Output<Boolean> skipDestroy,
-        @Nullable Output<Boolean> stopInstanceBeforeDetaching,
-        Output<String> volumeId) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.forceDetach = forceDetach;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.skipDestroy = skipDestroy;
-        this.stopInstanceBeforeDetaching = stopInstanceBeforeDetaching;
-        this.volumeId = Objects.requireNonNull(volumeId, "expected parameter 'volumeId' to be non-null");
-    }
+    private VolumeAttachmentArgs() {}
 
-    private VolumeAttachmentArgs() {
-        this.deviceName = Codegen.empty();
-        this.forceDetach = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.skipDestroy = Codegen.empty();
-        this.stopInstanceBeforeDetaching = Codegen.empty();
-        this.volumeId = Codegen.empty();
+    private VolumeAttachmentArgs(VolumeAttachmentArgs $) {
+        this.deviceName = $.deviceName;
+        this.forceDetach = $.forceDetach;
+        this.instanceId = $.instanceId;
+        this.skipDestroy = $.skipDestroy;
+        this.stopInstanceBeforeDetaching = $.stopInstanceBeforeDetaching;
+        this.volumeId = $.volumeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> deviceName;
-        private @Nullable Output<Boolean> forceDetach;
-        private Output<String> instanceId;
-        private @Nullable Output<Boolean> skipDestroy;
-        private @Nullable Output<Boolean> stopInstanceBeforeDetaching;
-        private Output<String> volumeId;
+        private VolumeAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeAttachmentArgs();
         }
 
         public Builder(VolumeAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.forceDetach = defaults.forceDetach;
-    	      this.instanceId = defaults.instanceId;
-    	      this.skipDestroy = defaults.skipDestroy;
-    	      this.stopInstanceBeforeDetaching = defaults.stopInstanceBeforeDetaching;
-    	      this.volumeId = defaults.volumeId;
+            $ = new VolumeAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder forceDetach(@Nullable Output<Boolean> forceDetach) {
-            this.forceDetach = forceDetach;
+            $.forceDetach = forceDetach;
             return this;
         }
-        public Builder forceDetach(@Nullable Boolean forceDetach) {
-            this.forceDetach = Codegen.ofNullable(forceDetach);
-            return this;
+
+        public Builder forceDetach(Boolean forceDetach) {
+            return forceDetach(Output.of(forceDetach));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder skipDestroy(@Nullable Output<Boolean> skipDestroy) {
-            this.skipDestroy = skipDestroy;
+            $.skipDestroy = skipDestroy;
             return this;
         }
-        public Builder skipDestroy(@Nullable Boolean skipDestroy) {
-            this.skipDestroy = Codegen.ofNullable(skipDestroy);
-            return this;
+
+        public Builder skipDestroy(Boolean skipDestroy) {
+            return skipDestroy(Output.of(skipDestroy));
         }
+
         public Builder stopInstanceBeforeDetaching(@Nullable Output<Boolean> stopInstanceBeforeDetaching) {
-            this.stopInstanceBeforeDetaching = stopInstanceBeforeDetaching;
+            $.stopInstanceBeforeDetaching = stopInstanceBeforeDetaching;
             return this;
         }
-        public Builder stopInstanceBeforeDetaching(@Nullable Boolean stopInstanceBeforeDetaching) {
-            this.stopInstanceBeforeDetaching = Codegen.ofNullable(stopInstanceBeforeDetaching);
-            return this;
+
+        public Builder stopInstanceBeforeDetaching(Boolean stopInstanceBeforeDetaching) {
+            return stopInstanceBeforeDetaching(Output.of(stopInstanceBeforeDetaching));
         }
+
         public Builder volumeId(Output<String> volumeId) {
-            this.volumeId = Objects.requireNonNull(volumeId);
+            $.volumeId = volumeId;
             return this;
         }
+
         public Builder volumeId(String volumeId) {
-            this.volumeId = Output.of(Objects.requireNonNull(volumeId));
-            return this;
-        }        public VolumeAttachmentArgs build() {
-            return new VolumeAttachmentArgs(deviceName, forceDetach, instanceId, skipDestroy, stopInstanceBeforeDetaching, volumeId);
+            return volumeId(Output.of(volumeId));
+        }
+
+        public VolumeAttachmentArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.volumeId = Objects.requireNonNull($.volumeId, "expected parameter 'volumeId' to be non-null");
+            return $;
         }
     }
+
 }

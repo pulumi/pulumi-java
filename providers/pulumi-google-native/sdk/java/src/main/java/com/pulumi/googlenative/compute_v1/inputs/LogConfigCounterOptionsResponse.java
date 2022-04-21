@@ -23,7 +23,7 @@ public final class LogConfigCounterOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="customFields", required=true)
-      private final List<LogConfigCounterOptionsCustomFieldResponse> customFields;
+    private List<LogConfigCounterOptionsCustomFieldResponse> customFields;
 
     public List<LogConfigCounterOptionsCustomFieldResponse> customFields() {
         return this.customFields;
@@ -34,7 +34,7 @@ public final class LogConfigCounterOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="field", required=true)
-      private final String field;
+    private String field;
 
     public String field() {
         return this.field;
@@ -45,67 +45,63 @@ public final class LogConfigCounterOptionsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="metric", required=true)
-      private final String metric;
+    private String metric;
 
     public String metric() {
         return this.metric;
     }
 
-    public LogConfigCounterOptionsResponse(
-        List<LogConfigCounterOptionsCustomFieldResponse> customFields,
-        String field,
-        String metric) {
-        this.customFields = Objects.requireNonNull(customFields, "expected parameter 'customFields' to be non-null");
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-    }
+    private LogConfigCounterOptionsResponse() {}
 
-    private LogConfigCounterOptionsResponse() {
-        this.customFields = List.of();
-        this.field = null;
-        this.metric = null;
+    private LogConfigCounterOptionsResponse(LogConfigCounterOptionsResponse $) {
+        this.customFields = $.customFields;
+        this.field = $.field;
+        this.metric = $.metric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogConfigCounterOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<LogConfigCounterOptionsCustomFieldResponse> customFields;
-        private String field;
-        private String metric;
+        private LogConfigCounterOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogConfigCounterOptionsResponse();
         }
 
         public Builder(LogConfigCounterOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customFields = defaults.customFields;
-    	      this.field = defaults.field;
-    	      this.metric = defaults.metric;
+            $ = new LogConfigCounterOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customFields(List<LogConfigCounterOptionsCustomFieldResponse> customFields) {
-            this.customFields = Objects.requireNonNull(customFields);
+            $.customFields = customFields;
             return this;
         }
+
         public Builder customFields(LogConfigCounterOptionsCustomFieldResponse... customFields) {
             return customFields(List.of(customFields));
         }
+
         public Builder field(String field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder metric(String metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
-        }        public LogConfigCounterOptionsResponse build() {
-            return new LogConfigCounterOptionsResponse(customFields, field, metric);
+        }
+
+        public LogConfigCounterOptionsResponse build() {
+            $.customFields = Objects.requireNonNull($.customFields, "expected parameter 'customFields' to be non-null");
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            return $;
         }
     }
+
 }

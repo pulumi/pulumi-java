@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GooglePrivacyDlpV2ThrowErrorArgs extends com.pulumi.resources
 
     public static final GooglePrivacyDlpV2ThrowErrorArgs Empty = new GooglePrivacyDlpV2ThrowErrorArgs();
 
-    public GooglePrivacyDlpV2ThrowErrorArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GooglePrivacyDlpV2ThrowErrorArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GooglePrivacyDlpV2ThrowErrorArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GooglePrivacyDlpV2ThrowErrorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GooglePrivacyDlpV2ThrowErrorArgs();
         }
         public GooglePrivacyDlpV2ThrowErrorArgs build() {
-            return new GooglePrivacyDlpV2ThrowErrorArgs();
+            return $;
         }
     }
+
 }

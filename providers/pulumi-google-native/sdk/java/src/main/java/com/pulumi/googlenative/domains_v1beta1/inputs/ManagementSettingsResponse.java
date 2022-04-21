@@ -21,7 +21,7 @@ public final class ManagementSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="renewalMethod", required=true)
-      private final String renewalMethod;
+    private String renewalMethod;
 
     public String renewalMethod() {
         return this.renewalMethod;
@@ -32,55 +32,52 @@ public final class ManagementSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="transferLockState", required=true)
-      private final String transferLockState;
+    private String transferLockState;
 
     public String transferLockState() {
         return this.transferLockState;
     }
 
-    public ManagementSettingsResponse(
-        String renewalMethod,
-        String transferLockState) {
-        this.renewalMethod = Objects.requireNonNull(renewalMethod, "expected parameter 'renewalMethod' to be non-null");
-        this.transferLockState = Objects.requireNonNull(transferLockState, "expected parameter 'transferLockState' to be non-null");
-    }
+    private ManagementSettingsResponse() {}
 
-    private ManagementSettingsResponse() {
-        this.renewalMethod = null;
-        this.transferLockState = null;
+    private ManagementSettingsResponse(ManagementSettingsResponse $) {
+        this.renewalMethod = $.renewalMethod;
+        this.transferLockState = $.transferLockState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String renewalMethod;
-        private String transferLockState;
+        private ManagementSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementSettingsResponse();
         }
 
         public Builder(ManagementSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.renewalMethod = defaults.renewalMethod;
-    	      this.transferLockState = defaults.transferLockState;
+            $ = new ManagementSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder renewalMethod(String renewalMethod) {
-            this.renewalMethod = Objects.requireNonNull(renewalMethod);
+            $.renewalMethod = renewalMethod;
             return this;
         }
+
         public Builder transferLockState(String transferLockState) {
-            this.transferLockState = Objects.requireNonNull(transferLockState);
+            $.transferLockState = transferLockState;
             return this;
-        }        public ManagementSettingsResponse build() {
-            return new ManagementSettingsResponse(renewalMethod, transferLockState);
+        }
+
+        public ManagementSettingsResponse build() {
+            $.renewalMethod = Objects.requireNonNull($.renewalMethod, "expected parameter 'renewalMethod' to be non-null");
+            $.transferLockState = Objects.requireNonNull($.transferLockState, "expected parameter 'transferLockState' to be non-null");
+            return $;
         }
     }
+
 }

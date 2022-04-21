@@ -21,45 +21,45 @@ public final class EncryptionConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="gcePdKmsKeyName", required=true)
-      private final String gcePdKmsKeyName;
+    private String gcePdKmsKeyName;
 
     public String gcePdKmsKeyName() {
         return this.gcePdKmsKeyName;
     }
 
-    public EncryptionConfigResponse(String gcePdKmsKeyName) {
-        this.gcePdKmsKeyName = Objects.requireNonNull(gcePdKmsKeyName, "expected parameter 'gcePdKmsKeyName' to be non-null");
-    }
+    private EncryptionConfigResponse() {}
 
-    private EncryptionConfigResponse() {
-        this.gcePdKmsKeyName = null;
+    private EncryptionConfigResponse(EncryptionConfigResponse $) {
+        this.gcePdKmsKeyName = $.gcePdKmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gcePdKmsKeyName;
+        private EncryptionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigResponse();
         }
 
         public Builder(EncryptionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcePdKmsKeyName = defaults.gcePdKmsKeyName;
+            $ = new EncryptionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gcePdKmsKeyName(String gcePdKmsKeyName) {
-            this.gcePdKmsKeyName = Objects.requireNonNull(gcePdKmsKeyName);
+            $.gcePdKmsKeyName = gcePdKmsKeyName;
             return this;
-        }        public EncryptionConfigResponse build() {
-            return new EncryptionConfigResponse(gcePdKmsKeyName);
+        }
+
+        public EncryptionConfigResponse build() {
+            $.gcePdKmsKeyName = Objects.requireNonNull($.gcePdKmsKeyName, "expected parameter 'gcePdKmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

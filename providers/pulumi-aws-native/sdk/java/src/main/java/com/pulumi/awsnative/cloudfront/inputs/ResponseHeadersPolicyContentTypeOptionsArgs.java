@@ -5,7 +5,6 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class ResponseHeadersPolicyContentTypeOptionsArgs extends com.pulum
     public static final ResponseHeadersPolicyContentTypeOptionsArgs Empty = new ResponseHeadersPolicyContentTypeOptionsArgs();
 
     @Import(name="override", required=true)
-      private final Output<Boolean> override;
+    private Output<Boolean> override;
 
     public Output<Boolean> override() {
         return this.override;
     }
 
-    public ResponseHeadersPolicyContentTypeOptionsArgs(Output<Boolean> override) {
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-    }
+    private ResponseHeadersPolicyContentTypeOptionsArgs() {}
 
-    private ResponseHeadersPolicyContentTypeOptionsArgs() {
-        this.override = Codegen.empty();
+    private ResponseHeadersPolicyContentTypeOptionsArgs(ResponseHeadersPolicyContentTypeOptionsArgs $) {
+        this.override = $.override;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyContentTypeOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> override;
+        private ResponseHeadersPolicyContentTypeOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyContentTypeOptionsArgs();
         }
 
         public Builder(ResponseHeadersPolicyContentTypeOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.override = defaults.override;
+            $ = new ResponseHeadersPolicyContentTypeOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder override(Output<Boolean> override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Output.of(Objects.requireNonNull(override));
-            return this;
-        }        public ResponseHeadersPolicyContentTypeOptionsArgs build() {
-            return new ResponseHeadersPolicyContentTypeOptionsArgs(override);
+            return override(Output.of(override));
+        }
+
+        public ResponseHeadersPolicyContentTypeOptionsArgs build() {
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            return $;
         }
     }
+
 }

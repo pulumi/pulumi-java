@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.enums.EnvironmentFlexResourceSchedulingGoal;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.DebugOptionsArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.WorkerPoolArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterManagerApiService")
-      private final @Nullable Output<String> clusterManagerApiService;
+    private @Nullable Output<String> clusterManagerApiService;
 
-    public Output<String> clusterManagerApiService() {
-        return this.clusterManagerApiService == null ? Codegen.empty() : this.clusterManagerApiService;
+    public Optional<Output<String>> clusterManagerApiService() {
+        return Optional.ofNullable(this.clusterManagerApiService);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<String> dataset;
+    private @Nullable Output<String> dataset;
 
-    public Output<String> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<String>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="debugOptions")
-      private final @Nullable Output<DebugOptionsArgs> debugOptions;
+    private @Nullable Output<DebugOptionsArgs> debugOptions;
 
-    public Output<DebugOptionsArgs> debugOptions() {
-        return this.debugOptions == null ? Codegen.empty() : this.debugOptions;
+    public Optional<Output<DebugOptionsArgs>> debugOptions() {
+        return Optional.ofNullable(this.debugOptions);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="experiments")
-      private final @Nullable Output<List<String>> experiments;
+    private @Nullable Output<List<String>> experiments;
 
-    public Output<List<String>> experiments() {
-        return this.experiments == null ? Codegen.empty() : this.experiments;
+    public Optional<Output<List<String>>> experiments() {
+        return Optional.ofNullable(this.experiments);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flexResourceSchedulingGoal")
-      private final @Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
+    private @Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
 
-    public Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal() {
-        return this.flexResourceSchedulingGoal == null ? Codegen.empty() : this.flexResourceSchedulingGoal;
+    public Optional<Output<EnvironmentFlexResourceSchedulingGoal>> flexResourceSchedulingGoal() {
+        return Optional.ofNullable(this.flexResourceSchedulingGoal);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="internalExperiments")
-      private final @Nullable Output<Map<String,String>> internalExperiments;
+    private @Nullable Output<Map<String,String>> internalExperiments;
 
-    public Output<Map<String,String>> internalExperiments() {
-        return this.internalExperiments == null ? Codegen.empty() : this.internalExperiments;
+    public Optional<Output<Map<String,String>>> internalExperiments() {
+        return Optional.ofNullable(this.internalExperiments);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sdkPipelineOptions")
-      private final @Nullable Output<Map<String,String>> sdkPipelineOptions;
+    private @Nullable Output<Map<String,String>> sdkPipelineOptions;
 
-    public Output<Map<String,String>> sdkPipelineOptions() {
-        return this.sdkPipelineOptions == null ? Codegen.empty() : this.sdkPipelineOptions;
+    public Optional<Output<Map<String,String>>> sdkPipelineOptions() {
+        return Optional.ofNullable(this.sdkPipelineOptions);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountEmail")
-      private final @Nullable Output<String> serviceAccountEmail;
+    private @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> serviceAccountEmail() {
-        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
+    public Optional<Output<String>> serviceAccountEmail() {
+        return Optional.ofNullable(this.serviceAccountEmail);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceKmsKeyName")
-      private final @Nullable Output<String> serviceKmsKeyName;
+    private @Nullable Output<String> serviceKmsKeyName;
 
-    public Output<String> serviceKmsKeyName() {
-        return this.serviceKmsKeyName == null ? Codegen.empty() : this.serviceKmsKeyName;
+    public Optional<Output<String>> serviceKmsKeyName() {
+        return Optional.ofNullable(this.serviceKmsKeyName);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceOptions")
-      private final @Nullable Output<List<String>> serviceOptions;
+    private @Nullable Output<List<String>> serviceOptions;
 
-    public Output<List<String>> serviceOptions() {
-        return this.serviceOptions == null ? Codegen.empty() : this.serviceOptions;
+    public Optional<Output<List<String>>> serviceOptions() {
+        return Optional.ofNullable(this.serviceOptions);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tempStoragePrefix")
-      private final @Nullable Output<String> tempStoragePrefix;
+    private @Nullable Output<String> tempStoragePrefix;
 
-    public Output<String> tempStoragePrefix() {
-        return this.tempStoragePrefix == null ? Codegen.empty() : this.tempStoragePrefix;
+    public Optional<Output<String>> tempStoragePrefix() {
+        return Optional.ofNullable(this.tempStoragePrefix);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userAgent")
-      private final @Nullable Output<Map<String,String>> userAgent;
+    private @Nullable Output<Map<String,String>> userAgent;
 
-    public Output<Map<String,String>> userAgent() {
-        return this.userAgent == null ? Codegen.empty() : this.userAgent;
+    public Optional<Output<Map<String,String>>> userAgent() {
+        return Optional.ofNullable(this.userAgent);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Map<String,String>> version;
+    private @Nullable Output<Map<String,String>> version;
 
-    public Output<Map<String,String>> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Map<String,String>>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerPools")
-      private final @Nullable Output<List<WorkerPoolArgs>> workerPools;
+    private @Nullable Output<List<WorkerPoolArgs>> workerPools;
 
-    public Output<List<WorkerPoolArgs>> workerPools() {
-        return this.workerPools == null ? Codegen.empty() : this.workerPools;
+    public Optional<Output<List<WorkerPoolArgs>>> workerPools() {
+        return Optional.ofNullable(this.workerPools);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerRegion")
-      private final @Nullable Output<String> workerRegion;
+    private @Nullable Output<String> workerRegion;
 
-    public Output<String> workerRegion() {
-        return this.workerRegion == null ? Codegen.empty() : this.workerRegion;
+    public Optional<Output<String>> workerRegion() {
+        return Optional.ofNullable(this.workerRegion);
     }
 
     /**
@@ -194,254 +194,210 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerZone")
-      private final @Nullable Output<String> workerZone;
+    private @Nullable Output<String> workerZone;
 
-    public Output<String> workerZone() {
-        return this.workerZone == null ? Codegen.empty() : this.workerZone;
+    public Optional<Output<String>> workerZone() {
+        return Optional.ofNullable(this.workerZone);
     }
 
-    public EnvironmentArgs(
-        @Nullable Output<String> clusterManagerApiService,
-        @Nullable Output<String> dataset,
-        @Nullable Output<DebugOptionsArgs> debugOptions,
-        @Nullable Output<List<String>> experiments,
-        @Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal,
-        @Nullable Output<Map<String,String>> internalExperiments,
-        @Nullable Output<Map<String,String>> sdkPipelineOptions,
-        @Nullable Output<String> serviceAccountEmail,
-        @Nullable Output<String> serviceKmsKeyName,
-        @Nullable Output<List<String>> serviceOptions,
-        @Nullable Output<String> tempStoragePrefix,
-        @Nullable Output<Map<String,String>> userAgent,
-        @Nullable Output<Map<String,String>> version,
-        @Nullable Output<List<WorkerPoolArgs>> workerPools,
-        @Nullable Output<String> workerRegion,
-        @Nullable Output<String> workerZone) {
-        this.clusterManagerApiService = clusterManagerApiService;
-        this.dataset = dataset;
-        this.debugOptions = debugOptions;
-        this.experiments = experiments;
-        this.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
-        this.internalExperiments = internalExperiments;
-        this.sdkPipelineOptions = sdkPipelineOptions;
-        this.serviceAccountEmail = serviceAccountEmail;
-        this.serviceKmsKeyName = serviceKmsKeyName;
-        this.serviceOptions = serviceOptions;
-        this.tempStoragePrefix = tempStoragePrefix;
-        this.userAgent = userAgent;
-        this.version = version;
-        this.workerPools = workerPools;
-        this.workerRegion = workerRegion;
-        this.workerZone = workerZone;
-    }
+    private EnvironmentArgs() {}
 
-    private EnvironmentArgs() {
-        this.clusterManagerApiService = Codegen.empty();
-        this.dataset = Codegen.empty();
-        this.debugOptions = Codegen.empty();
-        this.experiments = Codegen.empty();
-        this.flexResourceSchedulingGoal = Codegen.empty();
-        this.internalExperiments = Codegen.empty();
-        this.sdkPipelineOptions = Codegen.empty();
-        this.serviceAccountEmail = Codegen.empty();
-        this.serviceKmsKeyName = Codegen.empty();
-        this.serviceOptions = Codegen.empty();
-        this.tempStoragePrefix = Codegen.empty();
-        this.userAgent = Codegen.empty();
-        this.version = Codegen.empty();
-        this.workerPools = Codegen.empty();
-        this.workerRegion = Codegen.empty();
-        this.workerZone = Codegen.empty();
+    private EnvironmentArgs(EnvironmentArgs $) {
+        this.clusterManagerApiService = $.clusterManagerApiService;
+        this.dataset = $.dataset;
+        this.debugOptions = $.debugOptions;
+        this.experiments = $.experiments;
+        this.flexResourceSchedulingGoal = $.flexResourceSchedulingGoal;
+        this.internalExperiments = $.internalExperiments;
+        this.sdkPipelineOptions = $.sdkPipelineOptions;
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.serviceKmsKeyName = $.serviceKmsKeyName;
+        this.serviceOptions = $.serviceOptions;
+        this.tempStoragePrefix = $.tempStoragePrefix;
+        this.userAgent = $.userAgent;
+        this.version = $.version;
+        this.workerPools = $.workerPools;
+        this.workerRegion = $.workerRegion;
+        this.workerZone = $.workerZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterManagerApiService;
-        private @Nullable Output<String> dataset;
-        private @Nullable Output<DebugOptionsArgs> debugOptions;
-        private @Nullable Output<List<String>> experiments;
-        private @Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
-        private @Nullable Output<Map<String,String>> internalExperiments;
-        private @Nullable Output<Map<String,String>> sdkPipelineOptions;
-        private @Nullable Output<String> serviceAccountEmail;
-        private @Nullable Output<String> serviceKmsKeyName;
-        private @Nullable Output<List<String>> serviceOptions;
-        private @Nullable Output<String> tempStoragePrefix;
-        private @Nullable Output<Map<String,String>> userAgent;
-        private @Nullable Output<Map<String,String>> version;
-        private @Nullable Output<List<WorkerPoolArgs>> workerPools;
-        private @Nullable Output<String> workerRegion;
-        private @Nullable Output<String> workerZone;
+        private EnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentArgs();
         }
 
         public Builder(EnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterManagerApiService = defaults.clusterManagerApiService;
-    	      this.dataset = defaults.dataset;
-    	      this.debugOptions = defaults.debugOptions;
-    	      this.experiments = defaults.experiments;
-    	      this.flexResourceSchedulingGoal = defaults.flexResourceSchedulingGoal;
-    	      this.internalExperiments = defaults.internalExperiments;
-    	      this.sdkPipelineOptions = defaults.sdkPipelineOptions;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.serviceKmsKeyName = defaults.serviceKmsKeyName;
-    	      this.serviceOptions = defaults.serviceOptions;
-    	      this.tempStoragePrefix = defaults.tempStoragePrefix;
-    	      this.userAgent = defaults.userAgent;
-    	      this.version = defaults.version;
-    	      this.workerPools = defaults.workerPools;
-    	      this.workerRegion = defaults.workerRegion;
-    	      this.workerZone = defaults.workerZone;
+            $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterManagerApiService(@Nullable Output<String> clusterManagerApiService) {
-            this.clusterManagerApiService = clusterManagerApiService;
+            $.clusterManagerApiService = clusterManagerApiService;
             return this;
         }
-        public Builder clusterManagerApiService(@Nullable String clusterManagerApiService) {
-            this.clusterManagerApiService = Codegen.ofNullable(clusterManagerApiService);
-            return this;
+
+        public Builder clusterManagerApiService(String clusterManagerApiService) {
+            return clusterManagerApiService(Output.of(clusterManagerApiService));
         }
+
         public Builder dataset(@Nullable Output<String> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable String dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(String dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder debugOptions(@Nullable Output<DebugOptionsArgs> debugOptions) {
-            this.debugOptions = debugOptions;
+            $.debugOptions = debugOptions;
             return this;
         }
-        public Builder debugOptions(@Nullable DebugOptionsArgs debugOptions) {
-            this.debugOptions = Codegen.ofNullable(debugOptions);
-            return this;
+
+        public Builder debugOptions(DebugOptionsArgs debugOptions) {
+            return debugOptions(Output.of(debugOptions));
         }
+
         public Builder experiments(@Nullable Output<List<String>> experiments) {
-            this.experiments = experiments;
+            $.experiments = experiments;
             return this;
         }
-        public Builder experiments(@Nullable List<String> experiments) {
-            this.experiments = Codegen.ofNullable(experiments);
-            return this;
+
+        public Builder experiments(List<String> experiments) {
+            return experiments(Output.of(experiments));
         }
+
         public Builder experiments(String... experiments) {
             return experiments(List.of(experiments));
         }
+
         public Builder flexResourceSchedulingGoal(@Nullable Output<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal) {
-            this.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
+            $.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
             return this;
         }
-        public Builder flexResourceSchedulingGoal(@Nullable EnvironmentFlexResourceSchedulingGoal flexResourceSchedulingGoal) {
-            this.flexResourceSchedulingGoal = Codegen.ofNullable(flexResourceSchedulingGoal);
-            return this;
+
+        public Builder flexResourceSchedulingGoal(EnvironmentFlexResourceSchedulingGoal flexResourceSchedulingGoal) {
+            return flexResourceSchedulingGoal(Output.of(flexResourceSchedulingGoal));
         }
+
         public Builder internalExperiments(@Nullable Output<Map<String,String>> internalExperiments) {
-            this.internalExperiments = internalExperiments;
+            $.internalExperiments = internalExperiments;
             return this;
         }
-        public Builder internalExperiments(@Nullable Map<String,String> internalExperiments) {
-            this.internalExperiments = Codegen.ofNullable(internalExperiments);
-            return this;
+
+        public Builder internalExperiments(Map<String,String> internalExperiments) {
+            return internalExperiments(Output.of(internalExperiments));
         }
+
         public Builder sdkPipelineOptions(@Nullable Output<Map<String,String>> sdkPipelineOptions) {
-            this.sdkPipelineOptions = sdkPipelineOptions;
+            $.sdkPipelineOptions = sdkPipelineOptions;
             return this;
         }
-        public Builder sdkPipelineOptions(@Nullable Map<String,String> sdkPipelineOptions) {
-            this.sdkPipelineOptions = Codegen.ofNullable(sdkPipelineOptions);
-            return this;
+
+        public Builder sdkPipelineOptions(Map<String,String> sdkPipelineOptions) {
+            return sdkPipelineOptions(Output.of(sdkPipelineOptions));
         }
+
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = serviceAccountEmail;
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
-            return this;
+
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
+
         public Builder serviceKmsKeyName(@Nullable Output<String> serviceKmsKeyName) {
-            this.serviceKmsKeyName = serviceKmsKeyName;
+            $.serviceKmsKeyName = serviceKmsKeyName;
             return this;
         }
-        public Builder serviceKmsKeyName(@Nullable String serviceKmsKeyName) {
-            this.serviceKmsKeyName = Codegen.ofNullable(serviceKmsKeyName);
-            return this;
+
+        public Builder serviceKmsKeyName(String serviceKmsKeyName) {
+            return serviceKmsKeyName(Output.of(serviceKmsKeyName));
         }
+
         public Builder serviceOptions(@Nullable Output<List<String>> serviceOptions) {
-            this.serviceOptions = serviceOptions;
+            $.serviceOptions = serviceOptions;
             return this;
         }
-        public Builder serviceOptions(@Nullable List<String> serviceOptions) {
-            this.serviceOptions = Codegen.ofNullable(serviceOptions);
-            return this;
+
+        public Builder serviceOptions(List<String> serviceOptions) {
+            return serviceOptions(Output.of(serviceOptions));
         }
+
         public Builder serviceOptions(String... serviceOptions) {
             return serviceOptions(List.of(serviceOptions));
         }
+
         public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
-            this.tempStoragePrefix = tempStoragePrefix;
+            $.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
-        public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
-            this.tempStoragePrefix = Codegen.ofNullable(tempStoragePrefix);
-            return this;
+
+        public Builder tempStoragePrefix(String tempStoragePrefix) {
+            return tempStoragePrefix(Output.of(tempStoragePrefix));
         }
+
         public Builder userAgent(@Nullable Output<Map<String,String>> userAgent) {
-            this.userAgent = userAgent;
+            $.userAgent = userAgent;
             return this;
         }
-        public Builder userAgent(@Nullable Map<String,String> userAgent) {
-            this.userAgent = Codegen.ofNullable(userAgent);
-            return this;
+
+        public Builder userAgent(Map<String,String> userAgent) {
+            return userAgent(Output.of(userAgent));
         }
+
         public Builder version(@Nullable Output<Map<String,String>> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Map<String,String> version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(Map<String,String> version) {
+            return version(Output.of(version));
         }
+
         public Builder workerPools(@Nullable Output<List<WorkerPoolArgs>> workerPools) {
-            this.workerPools = workerPools;
+            $.workerPools = workerPools;
             return this;
         }
-        public Builder workerPools(@Nullable List<WorkerPoolArgs> workerPools) {
-            this.workerPools = Codegen.ofNullable(workerPools);
-            return this;
+
+        public Builder workerPools(List<WorkerPoolArgs> workerPools) {
+            return workerPools(Output.of(workerPools));
         }
+
         public Builder workerPools(WorkerPoolArgs... workerPools) {
             return workerPools(List.of(workerPools));
         }
+
         public Builder workerRegion(@Nullable Output<String> workerRegion) {
-            this.workerRegion = workerRegion;
+            $.workerRegion = workerRegion;
             return this;
         }
-        public Builder workerRegion(@Nullable String workerRegion) {
-            this.workerRegion = Codegen.ofNullable(workerRegion);
-            return this;
+
+        public Builder workerRegion(String workerRegion) {
+            return workerRegion(Output.of(workerRegion));
         }
+
         public Builder workerZone(@Nullable Output<String> workerZone) {
-            this.workerZone = workerZone;
+            $.workerZone = workerZone;
             return this;
         }
-        public Builder workerZone(@Nullable String workerZone) {
-            this.workerZone = Codegen.ofNullable(workerZone);
-            return this;
-        }        public EnvironmentArgs build() {
-            return new EnvironmentArgs(clusterManagerApiService, dataset, debugOptions, experiments, flexResourceSchedulingGoal, internalExperiments, sdkPipelineOptions, serviceAccountEmail, serviceKmsKeyName, serviceOptions, tempStoragePrefix, userAgent, version, workerPools, workerRegion, workerZone);
+
+        public Builder workerZone(String workerZone) {
+            return workerZone(Output.of(workerZone));
+        }
+
+        public EnvironmentArgs build() {
+            return $;
         }
     }
+
 }

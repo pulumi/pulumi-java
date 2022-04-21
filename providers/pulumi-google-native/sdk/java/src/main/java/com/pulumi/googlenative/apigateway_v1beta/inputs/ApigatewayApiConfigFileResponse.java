@@ -21,7 +21,7 @@ public final class ApigatewayApiConfigFileResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="contents", required=true)
-      private final String contents;
+    private String contents;
 
     public String contents() {
         return this.contents;
@@ -32,55 +32,52 @@ public final class ApigatewayApiConfigFileResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public ApigatewayApiConfigFileResponse(
-        String contents,
-        String path) {
-        this.contents = Objects.requireNonNull(contents, "expected parameter 'contents' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private ApigatewayApiConfigFileResponse() {}
 
-    private ApigatewayApiConfigFileResponse() {
-        this.contents = null;
-        this.path = null;
+    private ApigatewayApiConfigFileResponse(ApigatewayApiConfigFileResponse $) {
+        this.contents = $.contents;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayApiConfigFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contents;
-        private String path;
+        private ApigatewayApiConfigFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayApiConfigFileResponse();
         }
 
         public Builder(ApigatewayApiConfigFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contents = defaults.contents;
-    	      this.path = defaults.path;
+            $ = new ApigatewayApiConfigFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contents(String contents) {
-            this.contents = Objects.requireNonNull(contents);
+            $.contents = contents;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public ApigatewayApiConfigFileResponse build() {
-            return new ApigatewayApiConfigFileResponse(contents, path);
+        }
+
+        public ApigatewayApiConfigFileResponse build() {
+            $.contents = Objects.requireNonNull($.contents, "expected parameter 'contents' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

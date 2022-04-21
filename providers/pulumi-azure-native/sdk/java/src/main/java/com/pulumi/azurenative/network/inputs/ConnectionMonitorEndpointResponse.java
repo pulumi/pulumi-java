@@ -25,10 +25,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
      * 
      */
     @Import(name="coverageLevel")
-      private final @Nullable String coverageLevel;
+    private @Nullable String coverageLevel;
 
     public Optional<String> coverageLevel() {
-        return this.coverageLevel == null ? Optional.empty() : Optional.ofNullable(this.coverageLevel);
+        return Optional.ofNullable(this.coverageLevel);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
      * 
      */
     @Import(name="filter")
-      private final @Nullable ConnectionMonitorEndpointFilterResponse filter;
+    private @Nullable ConnectionMonitorEndpointFilterResponse filter;
 
     public Optional<ConnectionMonitorEndpointFilterResponse> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -69,10 +69,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
      * 
      */
     @Import(name="scope")
-      private final @Nullable ConnectionMonitorEndpointScopeResponse scope;
+    private @Nullable ConnectionMonitorEndpointScopeResponse scope;
 
     public Optional<ConnectionMonitorEndpointScopeResponse> scope() {
-        return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -91,100 +91,81 @@ public final class ConnectionMonitorEndpointResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ConnectionMonitorEndpointResponse(
-        @Nullable String address,
-        @Nullable String coverageLevel,
-        @Nullable ConnectionMonitorEndpointFilterResponse filter,
-        String name,
-        @Nullable String resourceId,
-        @Nullable ConnectionMonitorEndpointScopeResponse scope,
-        @Nullable String type) {
-        this.address = address;
-        this.coverageLevel = coverageLevel;
-        this.filter = filter;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceId = resourceId;
-        this.scope = scope;
-        this.type = type;
-    }
+    private ConnectionMonitorEndpointResponse() {}
 
-    private ConnectionMonitorEndpointResponse() {
-        this.address = null;
-        this.coverageLevel = null;
-        this.filter = null;
-        this.name = null;
-        this.resourceId = null;
-        this.scope = null;
-        this.type = null;
+    private ConnectionMonitorEndpointResponse(ConnectionMonitorEndpointResponse $) {
+        this.address = $.address;
+        this.coverageLevel = $.coverageLevel;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.resourceId = $.resourceId;
+        this.scope = $.scope;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable String coverageLevel;
-        private @Nullable ConnectionMonitorEndpointFilterResponse filter;
-        private String name;
-        private @Nullable String resourceId;
-        private @Nullable ConnectionMonitorEndpointScopeResponse scope;
-        private @Nullable String type;
+        private ConnectionMonitorEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorEndpointResponse();
         }
 
         public Builder(ConnectionMonitorEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.coverageLevel = defaults.coverageLevel;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.resourceId = defaults.resourceId;
-    	      this.scope = defaults.scope;
-    	      this.type = defaults.type;
+            $ = new ConnectionMonitorEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder coverageLevel(@Nullable String coverageLevel) {
-            this.coverageLevel = coverageLevel;
+            $.coverageLevel = coverageLevel;
             return this;
         }
+
         public Builder filter(@Nullable ConnectionMonitorEndpointFilterResponse filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder scope(@Nullable ConnectionMonitorEndpointScopeResponse scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ConnectionMonitorEndpointResponse build() {
-            return new ConnectionMonitorEndpointResponse(address, coverageLevel, filter, name, resourceId, scope, type);
+        }
+
+        public ConnectionMonitorEndpointResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

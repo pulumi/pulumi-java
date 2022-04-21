@@ -6,10 +6,10 @@ package com.pulumi.eks.inputs;
 import com.pulumi.aws.eks.inputs.FargateProfileSelectorArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="podExecutionRoleArn")
-      private final @Nullable Output<String> podExecutionRoleArn;
+    private @Nullable Output<String> podExecutionRoleArn;
 
-    public Output<String> podExecutionRoleArn() {
-        return this.podExecutionRoleArn == null ? Codegen.empty() : this.podExecutionRoleArn;
+    public Optional<Output<String>> podExecutionRoleArn() {
+        return Optional.ofNullable(this.podExecutionRoleArn);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="selectors")
-      private final @Nullable Output<List<FargateProfileSelectorArgs>> selectors;
+    private @Nullable Output<List<FargateProfileSelectorArgs>> selectors;
 
-    public Output<List<FargateProfileSelectorArgs>> selectors() {
-        return this.selectors == null ? Codegen.empty() : this.selectors;
+    public Optional<Output<List<FargateProfileSelectorArgs>>> selectors() {
+        return Optional.ofNullable(this.selectors);
     }
 
     /**
@@ -48,82 +48,76 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
-    public FargateProfileArgs(
-        @Nullable Output<String> podExecutionRoleArn,
-        @Nullable Output<List<FargateProfileSelectorArgs>> selectors,
-        @Nullable Output<List<String>> subnetIds) {
-        this.podExecutionRoleArn = podExecutionRoleArn;
-        this.selectors = selectors;
-        this.subnetIds = subnetIds;
-    }
+    private FargateProfileArgs() {}
 
-    private FargateProfileArgs() {
-        this.podExecutionRoleArn = Codegen.empty();
-        this.selectors = Codegen.empty();
-        this.subnetIds = Codegen.empty();
+    private FargateProfileArgs(FargateProfileArgs $) {
+        this.podExecutionRoleArn = $.podExecutionRoleArn;
+        this.selectors = $.selectors;
+        this.subnetIds = $.subnetIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FargateProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> podExecutionRoleArn;
-        private @Nullable Output<List<FargateProfileSelectorArgs>> selectors;
-        private @Nullable Output<List<String>> subnetIds;
+        private FargateProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FargateProfileArgs();
         }
 
         public Builder(FargateProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.podExecutionRoleArn = defaults.podExecutionRoleArn;
-    	      this.selectors = defaults.selectors;
-    	      this.subnetIds = defaults.subnetIds;
+            $ = new FargateProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder podExecutionRoleArn(@Nullable Output<String> podExecutionRoleArn) {
-            this.podExecutionRoleArn = podExecutionRoleArn;
+            $.podExecutionRoleArn = podExecutionRoleArn;
             return this;
         }
-        public Builder podExecutionRoleArn(@Nullable String podExecutionRoleArn) {
-            this.podExecutionRoleArn = Codegen.ofNullable(podExecutionRoleArn);
-            return this;
+
+        public Builder podExecutionRoleArn(String podExecutionRoleArn) {
+            return podExecutionRoleArn(Output.of(podExecutionRoleArn));
         }
+
         public Builder selectors(@Nullable Output<List<FargateProfileSelectorArgs>> selectors) {
-            this.selectors = selectors;
+            $.selectors = selectors;
             return this;
         }
-        public Builder selectors(@Nullable List<FargateProfileSelectorArgs> selectors) {
-            this.selectors = Codegen.ofNullable(selectors);
-            return this;
+
+        public Builder selectors(List<FargateProfileSelectorArgs> selectors) {
+            return selectors(Output.of(selectors));
         }
+
         public Builder selectors(FargateProfileSelectorArgs... selectors) {
             return selectors(List.of(selectors));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
-        }        public FargateProfileArgs build() {
-            return new FargateProfileArgs(podExecutionRoleArn, selectors, subnetIds);
+        }
+
+        public FargateProfileArgs build() {
+            return $;
         }
     }
+
 }

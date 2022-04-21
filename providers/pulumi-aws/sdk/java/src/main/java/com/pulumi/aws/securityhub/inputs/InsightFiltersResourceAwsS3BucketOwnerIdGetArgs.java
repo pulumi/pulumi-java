@@ -5,7 +5,6 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class InsightFiltersResourceAwsS3BucketOwnerIdGetArgs extends com.p
      * 
      */
     @Import(name="comparison", required=true)
-      private final Output<String> comparison;
+    private Output<String> comparison;
 
     public Output<String> comparison() {
         return this.comparison;
@@ -30,63 +29,60 @@ public final class InsightFiltersResourceAwsS3BucketOwnerIdGetArgs extends com.p
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public InsightFiltersResourceAwsS3BucketOwnerIdGetArgs(
-        Output<String> comparison,
-        Output<String> value) {
-        this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private InsightFiltersResourceAwsS3BucketOwnerIdGetArgs() {}
 
-    private InsightFiltersResourceAwsS3BucketOwnerIdGetArgs() {
-        this.comparison = Codegen.empty();
-        this.value = Codegen.empty();
+    private InsightFiltersResourceAwsS3BucketOwnerIdGetArgs(InsightFiltersResourceAwsS3BucketOwnerIdGetArgs $) {
+        this.comparison = $.comparison;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightFiltersResourceAwsS3BucketOwnerIdGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> comparison;
-        private Output<String> value;
+        private InsightFiltersResourceAwsS3BucketOwnerIdGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightFiltersResourceAwsS3BucketOwnerIdGetArgs();
         }
 
         public Builder(InsightFiltersResourceAwsS3BucketOwnerIdGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comparison = defaults.comparison;
-    	      this.value = defaults.value;
+            $ = new InsightFiltersResourceAwsS3BucketOwnerIdGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comparison(Output<String> comparison) {
-            this.comparison = Objects.requireNonNull(comparison);
+            $.comparison = comparison;
             return this;
         }
+
         public Builder comparison(String comparison) {
-            this.comparison = Output.of(Objects.requireNonNull(comparison));
-            return this;
+            return comparison(Output.of(comparison));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public InsightFiltersResourceAwsS3BucketOwnerIdGetArgs build() {
-            return new InsightFiltersResourceAwsS3BucketOwnerIdGetArgs(comparison, value);
+            return value(Output.of(value));
+        }
+
+        public InsightFiltersResourceAwsS3BucketOwnerIdGetArgs build() {
+            $.comparison = Objects.requireNonNull($.comparison, "expected parameter 'comparison' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

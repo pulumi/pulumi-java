@@ -6,9 +6,9 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.VirtualHubRouteArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class VirtualHubRouteTableArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="routes")
-      private final @Nullable Output<List<VirtualHubRouteArgs>> routes;
+    private @Nullable Output<List<VirtualHubRouteArgs>> routes;
 
-    public Output<List<VirtualHubRouteArgs>> routes() {
-        return this.routes == null ? Codegen.empty() : this.routes;
+    public Optional<Output<List<VirtualHubRouteArgs>>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
-    public VirtualHubRouteTableArgs(@Nullable Output<List<VirtualHubRouteArgs>> routes) {
-        this.routes = routes;
-    }
+    private VirtualHubRouteTableArgs() {}
 
-    private VirtualHubRouteTableArgs() {
-        this.routes = Codegen.empty();
+    private VirtualHubRouteTableArgs(VirtualHubRouteTableArgs $) {
+        this.routes = $.routes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualHubRouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<VirtualHubRouteArgs>> routes;
+        private VirtualHubRouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualHubRouteTableArgs();
         }
 
         public Builder(VirtualHubRouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.routes = defaults.routes;
+            $ = new VirtualHubRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder routes(@Nullable Output<List<VirtualHubRouteArgs>> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
-        public Builder routes(@Nullable List<VirtualHubRouteArgs> routes) {
-            this.routes = Codegen.ofNullable(routes);
-            return this;
+
+        public Builder routes(List<VirtualHubRouteArgs> routes) {
+            return routes(Output.of(routes));
         }
+
         public Builder routes(VirtualHubRouteArgs... routes) {
             return routes(List.of(routes));
-        }        public VirtualHubRouteTableArgs build() {
-            return new VirtualHubRouteTableArgs(routes);
+        }
+
+        public VirtualHubRouteTableArgs build() {
+            return $;
         }
     }
+
 }

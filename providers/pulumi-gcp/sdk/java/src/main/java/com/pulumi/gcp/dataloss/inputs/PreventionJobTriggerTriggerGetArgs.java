@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerScheduleGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class PreventionJobTriggerTriggerGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
+    private @Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
 
-    public Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<PreventionJobTriggerTriggerScheduleGetArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
-    public PreventionJobTriggerTriggerGetArgs(@Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule) {
-        this.schedule = schedule;
-    }
+    private PreventionJobTriggerTriggerGetArgs() {}
 
-    private PreventionJobTriggerTriggerGetArgs() {
-        this.schedule = Codegen.empty();
+    private PreventionJobTriggerTriggerGetArgs(PreventionJobTriggerTriggerGetArgs $) {
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerTriggerGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
+        private PreventionJobTriggerTriggerGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerTriggerGetArgs();
         }
 
         public Builder(PreventionJobTriggerTriggerGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedule = defaults.schedule;
+            $ = new PreventionJobTriggerTriggerGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder schedule(@Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable PreventionJobTriggerTriggerScheduleGetArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
-        }        public PreventionJobTriggerTriggerGetArgs build() {
-            return new PreventionJobTriggerTriggerGetArgs(schedule);
+
+        public Builder schedule(PreventionJobTriggerTriggerScheduleGetArgs schedule) {
+            return schedule(Output.of(schedule));
+        }
+
+        public PreventionJobTriggerTriggerGetArgs build() {
+            return $;
         }
     }
+
 }

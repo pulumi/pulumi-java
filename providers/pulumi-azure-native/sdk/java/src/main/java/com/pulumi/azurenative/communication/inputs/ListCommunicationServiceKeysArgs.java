@@ -17,7 +17,7 @@ public final class ListCommunicationServiceKeysArgs extends com.pulumi.resources
      * 
      */
     @Import(name="communicationServiceName", required=true)
-      private final String communicationServiceName;
+    private String communicationServiceName;
 
     public String communicationServiceName() {
         return this.communicationServiceName;
@@ -28,55 +28,52 @@ public final class ListCommunicationServiceKeysArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListCommunicationServiceKeysArgs(
-        String communicationServiceName,
-        String resourceGroupName) {
-        this.communicationServiceName = Objects.requireNonNull(communicationServiceName, "expected parameter 'communicationServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListCommunicationServiceKeysArgs() {}
 
-    private ListCommunicationServiceKeysArgs() {
-        this.communicationServiceName = null;
-        this.resourceGroupName = null;
+    private ListCommunicationServiceKeysArgs(ListCommunicationServiceKeysArgs $) {
+        this.communicationServiceName = $.communicationServiceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListCommunicationServiceKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String communicationServiceName;
-        private String resourceGroupName;
+        private ListCommunicationServiceKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListCommunicationServiceKeysArgs();
         }
 
         public Builder(ListCommunicationServiceKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.communicationServiceName = defaults.communicationServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListCommunicationServiceKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder communicationServiceName(String communicationServiceName) {
-            this.communicationServiceName = Objects.requireNonNull(communicationServiceName);
+            $.communicationServiceName = communicationServiceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListCommunicationServiceKeysArgs build() {
-            return new ListCommunicationServiceKeysArgs(communicationServiceName, resourceGroupName);
+        }
+
+        public ListCommunicationServiceKeysArgs build() {
+            $.communicationServiceName = Objects.requireNonNull($.communicationServiceName, "expected parameter 'communicationServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

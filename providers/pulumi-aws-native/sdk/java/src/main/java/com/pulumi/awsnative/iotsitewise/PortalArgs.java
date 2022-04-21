@@ -7,10 +7,10 @@ import com.pulumi.awsnative.iotsitewise.inputs.AlarmsPropertiesArgs;
 import com.pulumi.awsnative.iotsitewise.inputs.PortalTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alarms")
-      private final @Nullable Output<AlarmsPropertiesArgs> alarms;
+    private @Nullable Output<AlarmsPropertiesArgs> alarms;
 
-    public Output<AlarmsPropertiesArgs> alarms() {
-        return this.alarms == null ? Codegen.empty() : this.alarms;
+    public Optional<Output<AlarmsPropertiesArgs>> alarms() {
+        return Optional.ofNullable(this.alarms);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationSenderEmail")
-      private final @Nullable Output<String> notificationSenderEmail;
+    private @Nullable Output<String> notificationSenderEmail;
 
-    public Output<String> notificationSenderEmail() {
-        return this.notificationSenderEmail == null ? Codegen.empty() : this.notificationSenderEmail;
+    public Optional<Output<String>> notificationSenderEmail() {
+        return Optional.ofNullable(this.notificationSenderEmail);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portalAuthMode")
-      private final @Nullable Output<String> portalAuthMode;
+    private @Nullable Output<String> portalAuthMode;
 
-    public Output<String> portalAuthMode() {
-        return this.portalAuthMode == null ? Codegen.empty() : this.portalAuthMode;
+    public Optional<Output<String>> portalAuthMode() {
+        return Optional.ofNullable(this.portalAuthMode);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portalContactEmail", required=true)
-      private final Output<String> portalContactEmail;
+    private Output<String> portalContactEmail;
 
     public Output<String> portalContactEmail() {
         return this.portalContactEmail;
@@ -67,10 +67,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portalDescription")
-      private final @Nullable Output<String> portalDescription;
+    private @Nullable Output<String> portalDescription;
 
-    public Output<String> portalDescription() {
-        return this.portalDescription == null ? Codegen.empty() : this.portalDescription;
+    public Optional<Output<String>> portalDescription() {
+        return Optional.ofNullable(this.portalDescription);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portalName")
-      private final @Nullable Output<String> portalName;
+    private @Nullable Output<String> portalName;
 
-    public Output<String> portalName() {
-        return this.portalName == null ? Codegen.empty() : this.portalName;
+    public Optional<Output<String>> portalName() {
+        return Optional.ofNullable(this.portalName);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -100,144 +100,124 @@ public final class PortalArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<PortalTagArgs>> tags;
+    private @Nullable Output<List<PortalTagArgs>> tags;
 
-    public Output<List<PortalTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<PortalTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PortalArgs(
-        @Nullable Output<AlarmsPropertiesArgs> alarms,
-        @Nullable Output<String> notificationSenderEmail,
-        @Nullable Output<String> portalAuthMode,
-        Output<String> portalContactEmail,
-        @Nullable Output<String> portalDescription,
-        @Nullable Output<String> portalName,
-        Output<String> roleArn,
-        @Nullable Output<List<PortalTagArgs>> tags) {
-        this.alarms = alarms;
-        this.notificationSenderEmail = notificationSenderEmail;
-        this.portalAuthMode = portalAuthMode;
-        this.portalContactEmail = Objects.requireNonNull(portalContactEmail, "expected parameter 'portalContactEmail' to be non-null");
-        this.portalDescription = portalDescription;
-        this.portalName = portalName;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tags = tags;
-    }
+    private PortalArgs() {}
 
-    private PortalArgs() {
-        this.alarms = Codegen.empty();
-        this.notificationSenderEmail = Codegen.empty();
-        this.portalAuthMode = Codegen.empty();
-        this.portalContactEmail = Codegen.empty();
-        this.portalDescription = Codegen.empty();
-        this.portalName = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PortalArgs(PortalArgs $) {
+        this.alarms = $.alarms;
+        this.notificationSenderEmail = $.notificationSenderEmail;
+        this.portalAuthMode = $.portalAuthMode;
+        this.portalContactEmail = $.portalContactEmail;
+        this.portalDescription = $.portalDescription;
+        this.portalName = $.portalName;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PortalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AlarmsPropertiesArgs> alarms;
-        private @Nullable Output<String> notificationSenderEmail;
-        private @Nullable Output<String> portalAuthMode;
-        private Output<String> portalContactEmail;
-        private @Nullable Output<String> portalDescription;
-        private @Nullable Output<String> portalName;
-        private Output<String> roleArn;
-        private @Nullable Output<List<PortalTagArgs>> tags;
+        private PortalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PortalArgs();
         }
 
         public Builder(PortalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarms = defaults.alarms;
-    	      this.notificationSenderEmail = defaults.notificationSenderEmail;
-    	      this.portalAuthMode = defaults.portalAuthMode;
-    	      this.portalContactEmail = defaults.portalContactEmail;
-    	      this.portalDescription = defaults.portalDescription;
-    	      this.portalName = defaults.portalName;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
+            $ = new PortalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarms(@Nullable Output<AlarmsPropertiesArgs> alarms) {
-            this.alarms = alarms;
+            $.alarms = alarms;
             return this;
         }
-        public Builder alarms(@Nullable AlarmsPropertiesArgs alarms) {
-            this.alarms = Codegen.ofNullable(alarms);
-            return this;
+
+        public Builder alarms(AlarmsPropertiesArgs alarms) {
+            return alarms(Output.of(alarms));
         }
+
         public Builder notificationSenderEmail(@Nullable Output<String> notificationSenderEmail) {
-            this.notificationSenderEmail = notificationSenderEmail;
+            $.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
-        public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
-            this.notificationSenderEmail = Codegen.ofNullable(notificationSenderEmail);
-            return this;
+
+        public Builder notificationSenderEmail(String notificationSenderEmail) {
+            return notificationSenderEmail(Output.of(notificationSenderEmail));
         }
+
         public Builder portalAuthMode(@Nullable Output<String> portalAuthMode) {
-            this.portalAuthMode = portalAuthMode;
+            $.portalAuthMode = portalAuthMode;
             return this;
         }
-        public Builder portalAuthMode(@Nullable String portalAuthMode) {
-            this.portalAuthMode = Codegen.ofNullable(portalAuthMode);
-            return this;
+
+        public Builder portalAuthMode(String portalAuthMode) {
+            return portalAuthMode(Output.of(portalAuthMode));
         }
+
         public Builder portalContactEmail(Output<String> portalContactEmail) {
-            this.portalContactEmail = Objects.requireNonNull(portalContactEmail);
+            $.portalContactEmail = portalContactEmail;
             return this;
         }
+
         public Builder portalContactEmail(String portalContactEmail) {
-            this.portalContactEmail = Output.of(Objects.requireNonNull(portalContactEmail));
-            return this;
+            return portalContactEmail(Output.of(portalContactEmail));
         }
+
         public Builder portalDescription(@Nullable Output<String> portalDescription) {
-            this.portalDescription = portalDescription;
+            $.portalDescription = portalDescription;
             return this;
         }
-        public Builder portalDescription(@Nullable String portalDescription) {
-            this.portalDescription = Codegen.ofNullable(portalDescription);
-            return this;
+
+        public Builder portalDescription(String portalDescription) {
+            return portalDescription(Output.of(portalDescription));
         }
+
         public Builder portalName(@Nullable Output<String> portalName) {
-            this.portalName = portalName;
+            $.portalName = portalName;
             return this;
         }
-        public Builder portalName(@Nullable String portalName) {
-            this.portalName = Codegen.ofNullable(portalName);
-            return this;
+
+        public Builder portalName(String portalName) {
+            return portalName(Output.of(portalName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<List<PortalTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<PortalTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<PortalTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(PortalTagArgs... tags) {
             return tags(List.of(tags));
-        }        public PortalArgs build() {
-            return new PortalArgs(alarms, notificationSenderEmail, portalAuthMode, portalContactEmail, portalDescription, portalName, roleArn, tags);
+        }
+
+        public PortalArgs build() {
+            $.portalContactEmail = Objects.requireNonNull($.portalContactEmail, "expected parameter 'portalContactEmail' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

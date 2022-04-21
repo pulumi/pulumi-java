@@ -5,11 +5,11 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LinkedServiceReferenceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,Object>> parameters;
+    private @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,Object>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class LinkedServiceReferenceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="referenceName", required=true)
-      private final Output<String> referenceName;
+    private Output<String> referenceName;
 
     public Output<String> referenceName() {
         return this.referenceName;
@@ -48,76 +48,70 @@ public final class LinkedServiceReferenceArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public LinkedServiceReferenceArgs(
-        @Nullable Output<Map<String,Object>> parameters,
-        Output<String> referenceName,
-        Output<String> type) {
-        this.parameters = parameters;
-        this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private LinkedServiceReferenceArgs() {}
 
-    private LinkedServiceReferenceArgs() {
-        this.parameters = Codegen.empty();
-        this.referenceName = Codegen.empty();
-        this.type = Codegen.empty();
+    private LinkedServiceReferenceArgs(LinkedServiceReferenceArgs $) {
+        this.parameters = $.parameters;
+        this.referenceName = $.referenceName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedServiceReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> parameters;
-        private Output<String> referenceName;
-        private Output<String> type;
+        private LinkedServiceReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedServiceReferenceArgs();
         }
 
         public Builder(LinkedServiceReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.referenceName = defaults.referenceName;
-    	      this.type = defaults.type;
+            $ = new LinkedServiceReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,Object> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder referenceName(Output<String> referenceName) {
-            this.referenceName = Objects.requireNonNull(referenceName);
+            $.referenceName = referenceName;
             return this;
         }
+
         public Builder referenceName(String referenceName) {
-            this.referenceName = Output.of(Objects.requireNonNull(referenceName));
-            return this;
+            return referenceName(Output.of(referenceName));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public LinkedServiceReferenceArgs build() {
-            return new LinkedServiceReferenceArgs(parameters, referenceName, type);
+            return type(Output.of(type));
+        }
+
+        public LinkedServiceReferenceArgs build() {
+            $.referenceName = Objects.requireNonNull($.referenceName, "expected parameter 'referenceName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

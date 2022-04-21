@@ -17,7 +17,7 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -28,7 +28,7 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetStorageAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="storageAccountName", required=true)
-      private final String storageAccountName;
+    private String storageAccountName;
 
     public String storageAccountName() {
         return this.storageAccountName;
     }
 
-    public GetStorageAccountArgs(
-        String deviceName,
-        String resourceGroupName,
-        String storageAccountName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccountName = Objects.requireNonNull(storageAccountName, "expected parameter 'storageAccountName' to be non-null");
-    }
+    private GetStorageAccountArgs() {}
 
-    private GetStorageAccountArgs() {
-        this.deviceName = null;
-        this.resourceGroupName = null;
-        this.storageAccountName = null;
+    private GetStorageAccountArgs(GetStorageAccountArgs $) {
+        this.deviceName = $.deviceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccountName = $.storageAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStorageAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private String resourceGroupName;
-        private String storageAccountName;
+        private GetStorageAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStorageAccountArgs();
         }
 
         public Builder(GetStorageAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccountName = defaults.storageAccountName;
+            $ = new GetStorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder storageAccountName(String storageAccountName) {
-            this.storageAccountName = Objects.requireNonNull(storageAccountName);
+            $.storageAccountName = storageAccountName;
             return this;
-        }        public GetStorageAccountArgs build() {
-            return new GetStorageAccountArgs(deviceName, resourceGroupName, storageAccountName);
+        }
+
+        public GetStorageAccountArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageAccountName = Objects.requireNonNull($.storageAccountName, "expected parameter 'storageAccountName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ApplicationCustomComponent extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="componentName", required=true)
-      private final String componentName;
+    private String componentName;
 
     public String componentName() {
         return this.componentName;
@@ -33,58 +33,56 @@ public final class ApplicationCustomComponent extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceList", required=true)
-      private final List<String> resourceList;
+    private List<String> resourceList;
 
     public List<String> resourceList() {
         return this.resourceList;
     }
 
-    public ApplicationCustomComponent(
-        String componentName,
-        List<String> resourceList) {
-        this.componentName = Objects.requireNonNull(componentName, "expected parameter 'componentName' to be non-null");
-        this.resourceList = Objects.requireNonNull(resourceList, "expected parameter 'resourceList' to be non-null");
-    }
+    private ApplicationCustomComponent() {}
 
-    private ApplicationCustomComponent() {
-        this.componentName = null;
-        this.resourceList = List.of();
+    private ApplicationCustomComponent(ApplicationCustomComponent $) {
+        this.componentName = $.componentName;
+        this.resourceList = $.resourceList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationCustomComponent defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String componentName;
-        private List<String> resourceList;
+        private ApplicationCustomComponent $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationCustomComponent();
         }
 
         public Builder(ApplicationCustomComponent defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentName = defaults.componentName;
-    	      this.resourceList = defaults.resourceList;
+            $ = new ApplicationCustomComponent(Objects.requireNonNull(defaults));
         }
 
         public Builder componentName(String componentName) {
-            this.componentName = Objects.requireNonNull(componentName);
+            $.componentName = componentName;
             return this;
         }
+
         public Builder resourceList(List<String> resourceList) {
-            this.resourceList = Objects.requireNonNull(resourceList);
+            $.resourceList = resourceList;
             return this;
         }
+
         public Builder resourceList(String... resourceList) {
             return resourceList(List.of(resourceList));
-        }        public ApplicationCustomComponent build() {
-            return new ApplicationCustomComponent(componentName, resourceList);
+        }
+
+        public ApplicationCustomComponent build() {
+            $.componentName = Objects.requireNonNull($.componentName, "expected parameter 'componentName' to be non-null");
+            $.resourceList = Objects.requireNonNull($.resourceList, "expected parameter 'resourceList' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class FlowAmplitudeSourceProperties extends com.pulumi.resources.In
     public static final FlowAmplitudeSourceProperties Empty = new FlowAmplitudeSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowAmplitudeSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowAmplitudeSourceProperties() {}
 
-    private FlowAmplitudeSourceProperties() {
-        this.object = null;
+    private FlowAmplitudeSourceProperties(FlowAmplitudeSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowAmplitudeSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowAmplitudeSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowAmplitudeSourceProperties();
         }
 
         public Builder(FlowAmplitudeSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowAmplitudeSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowAmplitudeSourceProperties build() {
-            return new FlowAmplitudeSourceProperties(object);
+        }
+
+        public FlowAmplitudeSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

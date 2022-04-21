@@ -22,48 +22,49 @@ public final class GoogleCloudDatacatalogV1ContactsResponse extends com.pulumi.r
      * 
      */
     @Import(name="people", required=true)
-      private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
+    private List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
 
     public List<GoogleCloudDatacatalogV1ContactsPersonResponse> people() {
         return this.people;
     }
 
-    public GoogleCloudDatacatalogV1ContactsResponse(List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
-        this.people = Objects.requireNonNull(people, "expected parameter 'people' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1ContactsResponse() {}
 
-    private GoogleCloudDatacatalogV1ContactsResponse() {
-        this.people = List.of();
+    private GoogleCloudDatacatalogV1ContactsResponse(GoogleCloudDatacatalogV1ContactsResponse $) {
+        this.people = $.people;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1ContactsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
+        private GoogleCloudDatacatalogV1ContactsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1ContactsResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1ContactsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.people = defaults.people;
+            $ = new GoogleCloudDatacatalogV1ContactsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder people(List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
-            this.people = Objects.requireNonNull(people);
+            $.people = people;
             return this;
         }
+
         public Builder people(GoogleCloudDatacatalogV1ContactsPersonResponse... people) {
             return people(List.of(people));
-        }        public GoogleCloudDatacatalogV1ContactsResponse build() {
-            return new GoogleCloudDatacatalogV1ContactsResponse(people);
+        }
+
+        public GoogleCloudDatacatalogV1ContactsResponse build() {
+            $.people = Objects.requireNonNull($.people, "expected parameter 'people' to be non-null");
+            return $;
         }
     }
+
 }

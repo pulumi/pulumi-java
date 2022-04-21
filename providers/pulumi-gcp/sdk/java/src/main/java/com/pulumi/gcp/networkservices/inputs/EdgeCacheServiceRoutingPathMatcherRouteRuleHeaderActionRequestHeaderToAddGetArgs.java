@@ -5,10 +5,10 @@ package com.pulumi.gcp.networkservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @Import(name="headerName", required=true)
-      private final Output<String> headerName;
+    private Output<String> headerName;
 
     public Output<String> headerName() {
         return this.headerName;
@@ -33,7 +33,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @Import(name="headerValue", required=true)
-      private final Output<String> headerValue;
+    private Output<String> headerValue;
 
     public Output<String> headerValue() {
         return this.headerValue;
@@ -44,76 +44,70 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      * 
      */
     @Import(name="replace")
-      private final @Nullable Output<Boolean> replace;
+    private @Nullable Output<Boolean> replace;
 
-    public Output<Boolean> replace() {
-        return this.replace == null ? Codegen.empty() : this.replace;
+    public Optional<Output<Boolean>> replace() {
+        return Optional.ofNullable(this.replace);
     }
 
-    public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs(
-        Output<String> headerName,
-        Output<String> headerValue,
-        @Nullable Output<Boolean> replace) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
-        this.replace = replace;
-    }
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs() {}
 
-    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs() {
-        this.headerName = Codegen.empty();
-        this.headerValue = Codegen.empty();
-        this.replace = Codegen.empty();
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
+        this.replace = $.replace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> headerName;
-        private Output<String> headerValue;
-        private @Nullable Output<Boolean> replace;
+        private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs();
         }
 
         public Builder(EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
-    	      this.replace = defaults.replace;
+            $ = new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(Output<String> headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Output.of(Objects.requireNonNull(headerName));
-            return this;
+            return headerName(Output.of(headerName));
         }
+
         public Builder headerValue(Output<String> headerValue) {
-            this.headerValue = Objects.requireNonNull(headerValue);
+            $.headerValue = headerValue;
             return this;
         }
+
         public Builder headerValue(String headerValue) {
-            this.headerValue = Output.of(Objects.requireNonNull(headerValue));
-            return this;
+            return headerValue(Output.of(headerValue));
         }
+
         public Builder replace(@Nullable Output<Boolean> replace) {
-            this.replace = replace;
+            $.replace = replace;
             return this;
         }
-        public Builder replace(@Nullable Boolean replace) {
-            this.replace = Codegen.ofNullable(replace);
-            return this;
-        }        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs build() {
-            return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs(headerName, headerValue, replace);
+
+        public Builder replace(Boolean replace) {
+            return replace(Output.of(replace));
+        }
+
+        public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.headerValue = Objects.requireNonNull($.headerValue, "expected parameter 'headerValue' to be non-null");
+            return $;
         }
     }
+
 }

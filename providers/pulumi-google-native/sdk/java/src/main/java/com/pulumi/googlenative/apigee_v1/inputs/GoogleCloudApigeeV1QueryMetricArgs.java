@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="alias")
-      private final @Nullable Output<String> alias;
+    private @Nullable Output<String> alias;
 
-    public Output<String> alias() {
-        return this.alias == null ? Codegen.empty() : this.alias;
+    public Optional<Output<String>> alias() {
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="function")
-      private final @Nullable Output<String> function;
+    private @Nullable Output<String> function;
 
-    public Output<String> function() {
-        return this.function == null ? Codegen.empty() : this.function;
+    public Optional<Output<String>> function() {
+        return Optional.ofNullable(this.function);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -57,10 +57,10 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="operator")
-      private final @Nullable Output<String> operator;
+    private @Nullable Output<String> operator;
 
-    public Output<String> operator() {
-        return this.operator == null ? Codegen.empty() : this.operator;
+    public Optional<Output<String>> operator() {
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -68,102 +68,89 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public GoogleCloudApigeeV1QueryMetricArgs(
-        @Nullable Output<String> alias,
-        @Nullable Output<String> function,
-        Output<String> name,
-        @Nullable Output<String> operator,
-        @Nullable Output<String> value) {
-        this.alias = alias;
-        this.function = function;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.operator = operator;
-        this.value = value;
-    }
+    private GoogleCloudApigeeV1QueryMetricArgs() {}
 
-    private GoogleCloudApigeeV1QueryMetricArgs() {
-        this.alias = Codegen.empty();
-        this.function = Codegen.empty();
-        this.name = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.value = Codegen.empty();
+    private GoogleCloudApigeeV1QueryMetricArgs(GoogleCloudApigeeV1QueryMetricArgs $) {
+        this.alias = $.alias;
+        this.function = $.function;
+        this.name = $.name;
+        this.operator = $.operator;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1QueryMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alias;
-        private @Nullable Output<String> function;
-        private Output<String> name;
-        private @Nullable Output<String> operator;
-        private @Nullable Output<String> value;
+        private GoogleCloudApigeeV1QueryMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1QueryMetricArgs();
         }
 
         public Builder(GoogleCloudApigeeV1QueryMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.function = defaults.function;
-    	      this.name = defaults.name;
-    	      this.operator = defaults.operator;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudApigeeV1QueryMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable Output<String> alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
-        public Builder alias(@Nullable String alias) {
-            this.alias = Codegen.ofNullable(alias);
-            return this;
+
+        public Builder alias(String alias) {
+            return alias(Output.of(alias));
         }
+
         public Builder function(@Nullable Output<String> function) {
-            this.function = function;
+            $.function = function;
             return this;
         }
-        public Builder function(@Nullable String function) {
-            this.function = Codegen.ofNullable(function);
-            return this;
+
+        public Builder function(String function) {
+            return function(Output.of(function));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder operator(@Nullable Output<String> operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
-        public Builder operator(@Nullable String operator) {
-            this.operator = Codegen.ofNullable(operator);
-            return this;
+
+        public Builder operator(String operator) {
+            return operator(Output.of(operator));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public GoogleCloudApigeeV1QueryMetricArgs build() {
-            return new GoogleCloudApigeeV1QueryMetricArgs(alias, function, name, operator, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public GoogleCloudApigeeV1QueryMetricArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends com
      * 
      */
     @Import(name="column", required=true)
-      private final String column;
+    private String column;
 
     public String column() {
         return this.column;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends com
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends com
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -55,7 +55,7 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends com
      * 
      */
     @Import(name="subcolumns", required=true)
-      private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns;
+    private List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns;
 
     public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns() {
         return this.subcolumns;
@@ -66,85 +66,77 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse extends com
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(
-        String column,
-        String description,
-        String mode,
-        List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns,
-        String type) {
-        this.column = Objects.requireNonNull(column, "expected parameter 'column' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.subcolumns = Objects.requireNonNull(subcolumns, "expected parameter 'subcolumns' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1beta1ColumnSchemaResponse() {}
 
-    private GoogleCloudDatacatalogV1beta1ColumnSchemaResponse() {
-        this.column = null;
-        this.description = null;
-        this.mode = null;
-        this.subcolumns = List.of();
-        this.type = null;
+    private GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(GoogleCloudDatacatalogV1beta1ColumnSchemaResponse $) {
+        this.column = $.column;
+        this.description = $.description;
+        this.mode = $.mode;
+        this.subcolumns = $.subcolumns;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1beta1ColumnSchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String column;
-        private String description;
-        private String mode;
-        private List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns;
-        private String type;
+        private GoogleCloudDatacatalogV1beta1ColumnSchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1beta1ColumnSchemaResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1beta1ColumnSchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.column = defaults.column;
-    	      this.description = defaults.description;
-    	      this.mode = defaults.mode;
-    	      this.subcolumns = defaults.subcolumns;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder column(String column) {
-            this.column = Objects.requireNonNull(column);
+            $.column = column;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder subcolumns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns) {
-            this.subcolumns = Objects.requireNonNull(subcolumns);
+            $.subcolumns = subcolumns;
             return this;
         }
+
         public Builder subcolumns(GoogleCloudDatacatalogV1beta1ColumnSchemaResponse... subcolumns) {
             return subcolumns(List.of(subcolumns));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudDatacatalogV1beta1ColumnSchemaResponse build() {
-            return new GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(column, description, mode, subcolumns, type);
+        }
+
+        public GoogleCloudDatacatalogV1beta1ColumnSchemaResponse build() {
+            $.column = Objects.requireNonNull($.column, "expected parameter 'column' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.subcolumns = Objects.requireNonNull($.subcolumns, "expected parameter 'subcolumns' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

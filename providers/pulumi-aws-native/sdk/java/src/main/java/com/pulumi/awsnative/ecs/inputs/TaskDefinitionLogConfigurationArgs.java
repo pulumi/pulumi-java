@@ -6,11 +6,11 @@ package com.pulumi.awsnative.ecs.inputs;
 import com.pulumi.awsnative.ecs.inputs.TaskDefinitionSecretArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,93 +19,87 @@ public final class TaskDefinitionLogConfigurationArgs extends com.pulumi.resourc
     public static final TaskDefinitionLogConfigurationArgs Empty = new TaskDefinitionLogConfigurationArgs();
 
     @Import(name="logDriver", required=true)
-      private final Output<String> logDriver;
+    private Output<String> logDriver;
 
     public Output<String> logDriver() {
         return this.logDriver;
     }
 
     @Import(name="options")
-      private final @Nullable Output<Object> options;
+    private @Nullable Output<Object> options;
 
-    public Output<Object> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<Object>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     @Import(name="secretOptions")
-      private final @Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions;
+    private @Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions;
 
-    public Output<List<TaskDefinitionSecretArgs>> secretOptions() {
-        return this.secretOptions == null ? Codegen.empty() : this.secretOptions;
+    public Optional<Output<List<TaskDefinitionSecretArgs>>> secretOptions() {
+        return Optional.ofNullable(this.secretOptions);
     }
 
-    public TaskDefinitionLogConfigurationArgs(
-        Output<String> logDriver,
-        @Nullable Output<Object> options,
-        @Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions) {
-        this.logDriver = Objects.requireNonNull(logDriver, "expected parameter 'logDriver' to be non-null");
-        this.options = options;
-        this.secretOptions = secretOptions;
-    }
+    private TaskDefinitionLogConfigurationArgs() {}
 
-    private TaskDefinitionLogConfigurationArgs() {
-        this.logDriver = Codegen.empty();
-        this.options = Codegen.empty();
-        this.secretOptions = Codegen.empty();
+    private TaskDefinitionLogConfigurationArgs(TaskDefinitionLogConfigurationArgs $) {
+        this.logDriver = $.logDriver;
+        this.options = $.options;
+        this.secretOptions = $.secretOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionLogConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> logDriver;
-        private @Nullable Output<Object> options;
-        private @Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions;
+        private TaskDefinitionLogConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionLogConfigurationArgs();
         }
 
         public Builder(TaskDefinitionLogConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logDriver = defaults.logDriver;
-    	      this.options = defaults.options;
-    	      this.secretOptions = defaults.secretOptions;
+            $ = new TaskDefinitionLogConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logDriver(Output<String> logDriver) {
-            this.logDriver = Objects.requireNonNull(logDriver);
+            $.logDriver = logDriver;
             return this;
         }
+
         public Builder logDriver(String logDriver) {
-            this.logDriver = Output.of(Objects.requireNonNull(logDriver));
-            return this;
+            return logDriver(Output.of(logDriver));
         }
+
         public Builder options(@Nullable Output<Object> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable Object options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(Object options) {
+            return options(Output.of(options));
         }
+
         public Builder secretOptions(@Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions) {
-            this.secretOptions = secretOptions;
+            $.secretOptions = secretOptions;
             return this;
         }
-        public Builder secretOptions(@Nullable List<TaskDefinitionSecretArgs> secretOptions) {
-            this.secretOptions = Codegen.ofNullable(secretOptions);
-            return this;
+
+        public Builder secretOptions(List<TaskDefinitionSecretArgs> secretOptions) {
+            return secretOptions(Output.of(secretOptions));
         }
+
         public Builder secretOptions(TaskDefinitionSecretArgs... secretOptions) {
             return secretOptions(List.of(secretOptions));
-        }        public TaskDefinitionLogConfigurationArgs build() {
-            return new TaskDefinitionLogConfigurationArgs(logDriver, options, secretOptions);
+        }
+
+        public TaskDefinitionLogConfigurationArgs build() {
+            $.logDriver = Objects.requireNonNull($.logDriver, "expected parameter 'logDriver' to be non-null");
+            return $;
         }
     }
+
 }

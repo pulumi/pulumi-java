@@ -25,10 +25,10 @@ public final class VolumeBackupsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="backupsCount")
-      private final @Nullable Integer backupsCount;
+    private @Nullable Integer backupsCount;
 
     public Optional<Integer> backupsCount() {
-        return this.backupsCount == null ? Optional.empty() : Optional.ofNullable(this.backupsCount);
+        return Optional.ofNullable(this.backupsCount);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VolumeBackupsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="policyEnabled")
-      private final @Nullable Boolean policyEnabled;
+    private @Nullable Boolean policyEnabled;
 
     public Optional<Boolean> policyEnabled() {
-        return this.policyEnabled == null ? Optional.empty() : Optional.ofNullable(this.policyEnabled);
+        return Optional.ofNullable(this.policyEnabled);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class VolumeBackupsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="volumeName")
-      private final @Nullable String volumeName;
+    private @Nullable String volumeName;
 
     public Optional<String> volumeName() {
-        return this.volumeName == null ? Optional.empty() : Optional.ofNullable(this.volumeName);
+        return Optional.ofNullable(this.volumeName);
     }
 
-    public VolumeBackupsResponse(
-        @Nullable Integer backupsCount,
-        @Nullable Boolean policyEnabled,
-        @Nullable String volumeName) {
-        this.backupsCount = backupsCount;
-        this.policyEnabled = policyEnabled;
-        this.volumeName = volumeName;
-    }
+    private VolumeBackupsResponse() {}
 
-    private VolumeBackupsResponse() {
-        this.backupsCount = null;
-        this.policyEnabled = null;
-        this.volumeName = null;
+    private VolumeBackupsResponse(VolumeBackupsResponse $) {
+        this.backupsCount = $.backupsCount;
+        this.policyEnabled = $.policyEnabled;
+        this.volumeName = $.volumeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeBackupsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer backupsCount;
-        private @Nullable Boolean policyEnabled;
-        private @Nullable String volumeName;
+        private VolumeBackupsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeBackupsResponse();
         }
 
         public Builder(VolumeBackupsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupsCount = defaults.backupsCount;
-    	      this.policyEnabled = defaults.policyEnabled;
-    	      this.volumeName = defaults.volumeName;
+            $ = new VolumeBackupsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupsCount(@Nullable Integer backupsCount) {
-            this.backupsCount = backupsCount;
+            $.backupsCount = backupsCount;
             return this;
         }
+
         public Builder policyEnabled(@Nullable Boolean policyEnabled) {
-            this.policyEnabled = policyEnabled;
+            $.policyEnabled = policyEnabled;
             return this;
         }
+
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = volumeName;
+            $.volumeName = volumeName;
             return this;
-        }        public VolumeBackupsResponse build() {
-            return new VolumeBackupsResponse(backupsCount, policyEnabled, volumeName);
+        }
+
+        public VolumeBackupsResponse build() {
+            return $;
         }
     }
+
 }

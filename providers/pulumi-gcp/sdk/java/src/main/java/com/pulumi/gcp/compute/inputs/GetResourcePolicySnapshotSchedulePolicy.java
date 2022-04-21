@@ -16,87 +16,85 @@ public final class GetResourcePolicySnapshotSchedulePolicy extends com.pulumi.re
     public static final GetResourcePolicySnapshotSchedulePolicy Empty = new GetResourcePolicySnapshotSchedulePolicy();
 
     @Import(name="retentionPolicies", required=true)
-      private final List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies;
+    private List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies;
 
     public List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies() {
         return this.retentionPolicies;
     }
 
     @Import(name="schedules", required=true)
-      private final List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules;
+    private List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules;
 
     public List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules() {
         return this.schedules;
     }
 
     @Import(name="snapshotProperties", required=true)
-      private final List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties;
+    private List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties;
 
     public List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties() {
         return this.snapshotProperties;
     }
 
-    public GetResourcePolicySnapshotSchedulePolicy(
-        List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies,
-        List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules,
-        List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
-        this.retentionPolicies = Objects.requireNonNull(retentionPolicies, "expected parameter 'retentionPolicies' to be non-null");
-        this.schedules = Objects.requireNonNull(schedules, "expected parameter 'schedules' to be non-null");
-        this.snapshotProperties = Objects.requireNonNull(snapshotProperties, "expected parameter 'snapshotProperties' to be non-null");
-    }
+    private GetResourcePolicySnapshotSchedulePolicy() {}
 
-    private GetResourcePolicySnapshotSchedulePolicy() {
-        this.retentionPolicies = List.of();
-        this.schedules = List.of();
-        this.snapshotProperties = List.of();
+    private GetResourcePolicySnapshotSchedulePolicy(GetResourcePolicySnapshotSchedulePolicy $) {
+        this.retentionPolicies = $.retentionPolicies;
+        this.schedules = $.schedules;
+        this.snapshotProperties = $.snapshotProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePolicySnapshotSchedulePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies;
-        private List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules;
-        private List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties;
+        private GetResourcePolicySnapshotSchedulePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePolicySnapshotSchedulePolicy();
         }
 
         public Builder(GetResourcePolicySnapshotSchedulePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retentionPolicies = defaults.retentionPolicies;
-    	      this.schedules = defaults.schedules;
-    	      this.snapshotProperties = defaults.snapshotProperties;
+            $ = new GetResourcePolicySnapshotSchedulePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder retentionPolicies(List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies) {
-            this.retentionPolicies = Objects.requireNonNull(retentionPolicies);
+            $.retentionPolicies = retentionPolicies;
             return this;
         }
+
         public Builder retentionPolicies(GetResourcePolicySnapshotSchedulePolicyRetentionPolicy... retentionPolicies) {
             return retentionPolicies(List.of(retentionPolicies));
         }
+
         public Builder schedules(List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules) {
-            this.schedules = Objects.requireNonNull(schedules);
+            $.schedules = schedules;
             return this;
         }
+
         public Builder schedules(GetResourcePolicySnapshotSchedulePolicySchedule... schedules) {
             return schedules(List.of(schedules));
         }
+
         public Builder snapshotProperties(List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
-            this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
+            $.snapshotProperties = snapshotProperties;
             return this;
         }
+
         public Builder snapshotProperties(GetResourcePolicySnapshotSchedulePolicySnapshotProperty... snapshotProperties) {
             return snapshotProperties(List.of(snapshotProperties));
-        }        public GetResourcePolicySnapshotSchedulePolicy build() {
-            return new GetResourcePolicySnapshotSchedulePolicy(retentionPolicies, schedules, snapshotProperties);
+        }
+
+        public GetResourcePolicySnapshotSchedulePolicy build() {
+            $.retentionPolicies = Objects.requireNonNull($.retentionPolicies, "expected parameter 'retentionPolicies' to be non-null");
+            $.schedules = Objects.requireNonNull($.schedules, "expected parameter 'schedules' to be non-null");
+            $.snapshotProperties = Objects.requireNonNull($.snapshotProperties, "expected parameter 'snapshotProperties' to be non-null");
+            return $;
         }
     }
+
 }

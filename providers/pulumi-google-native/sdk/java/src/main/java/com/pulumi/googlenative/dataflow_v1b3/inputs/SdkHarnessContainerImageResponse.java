@@ -22,7 +22,7 @@ public final class SdkHarnessContainerImageResponse extends com.pulumi.resources
      * 
      */
     @Import(name="containerImage", required=true)
-      private final String containerImage;
+    private String containerImage;
 
     public String containerImage() {
         return this.containerImage;
@@ -33,7 +33,7 @@ public final class SdkHarnessContainerImageResponse extends com.pulumi.resources
      * 
      */
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
@@ -44,64 +44,59 @@ public final class SdkHarnessContainerImageResponse extends com.pulumi.resources
      * 
      */
     @Import(name="useSingleCorePerContainer", required=true)
-      private final Boolean useSingleCorePerContainer;
+    private Boolean useSingleCorePerContainer;
 
     public Boolean useSingleCorePerContainer() {
         return this.useSingleCorePerContainer;
     }
 
-    public SdkHarnessContainerImageResponse(
-        String containerImage,
-        String environmentId,
-        Boolean useSingleCorePerContainer) {
-        this.containerImage = Objects.requireNonNull(containerImage, "expected parameter 'containerImage' to be non-null");
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.useSingleCorePerContainer = Objects.requireNonNull(useSingleCorePerContainer, "expected parameter 'useSingleCorePerContainer' to be non-null");
-    }
+    private SdkHarnessContainerImageResponse() {}
 
-    private SdkHarnessContainerImageResponse() {
-        this.containerImage = null;
-        this.environmentId = null;
-        this.useSingleCorePerContainer = null;
+    private SdkHarnessContainerImageResponse(SdkHarnessContainerImageResponse $) {
+        this.containerImage = $.containerImage;
+        this.environmentId = $.environmentId;
+        this.useSingleCorePerContainer = $.useSingleCorePerContainer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SdkHarnessContainerImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerImage;
-        private String environmentId;
-        private Boolean useSingleCorePerContainer;
+        private SdkHarnessContainerImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SdkHarnessContainerImageResponse();
         }
 
         public Builder(SdkHarnessContainerImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerImage = defaults.containerImage;
-    	      this.environmentId = defaults.environmentId;
-    	      this.useSingleCorePerContainer = defaults.useSingleCorePerContainer;
+            $ = new SdkHarnessContainerImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerImage(String containerImage) {
-            this.containerImage = Objects.requireNonNull(containerImage);
+            $.containerImage = containerImage;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder useSingleCorePerContainer(Boolean useSingleCorePerContainer) {
-            this.useSingleCorePerContainer = Objects.requireNonNull(useSingleCorePerContainer);
+            $.useSingleCorePerContainer = useSingleCorePerContainer;
             return this;
-        }        public SdkHarnessContainerImageResponse build() {
-            return new SdkHarnessContainerImageResponse(containerImage, environmentId, useSingleCorePerContainer);
+        }
+
+        public SdkHarnessContainerImageResponse build() {
+            $.containerImage = Objects.requireNonNull($.containerImage, "expected parameter 'containerImage' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.useSingleCorePerContainer = Objects.requireNonNull($.useSingleCorePerContainer, "expected parameter 'useSingleCorePerContainer' to be non-null");
+            return $;
         }
     }
+
 }

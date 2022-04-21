@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends com.pulumi.r
      * 
      */
     @Import(name="detectionRules", required=true)
-      private final List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules;
+    private List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules;
 
     public List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules() {
         return this.detectionRules;
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends com.pulumi.r
      * 
      */
     @Import(name="dictionary", required=true)
-      private final GooglePrivacyDlpV2DictionaryResponse dictionary;
+    private GooglePrivacyDlpV2DictionaryResponse dictionary;
 
     public GooglePrivacyDlpV2DictionaryResponse dictionary() {
         return this.dictionary;
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends com.pulumi.r
      * 
      */
     @Import(name="exclusionType", required=true)
-      private final String exclusionType;
+    private String exclusionType;
 
     public String exclusionType() {
         return this.exclusionType;
@@ -61,7 +61,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends com.pulumi.r
      * 
      */
     @Import(name="infoType", required=true)
-      private final GooglePrivacyDlpV2InfoTypeResponse infoType;
+    private GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse infoType() {
         return this.infoType;
@@ -72,7 +72,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends com.pulumi.r
      * 
      */
     @Import(name="likelihood", required=true)
-      private final String likelihood;
+    private String likelihood;
 
     public String likelihood() {
         return this.likelihood;
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends com.pulumi.r
      * 
      */
     @Import(name="regex", required=true)
-      private final GooglePrivacyDlpV2RegexResponse regex;
+    private GooglePrivacyDlpV2RegexResponse regex;
 
     public GooglePrivacyDlpV2RegexResponse regex() {
         return this.regex;
@@ -94,7 +94,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends com.pulumi.r
      * 
      */
     @Import(name="storedType", required=true)
-      private final GooglePrivacyDlpV2StoredTypeResponse storedType;
+    private GooglePrivacyDlpV2StoredTypeResponse storedType;
 
     public GooglePrivacyDlpV2StoredTypeResponse storedType() {
         return this.storedType;
@@ -105,112 +105,98 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends com.pulumi.r
      * 
      */
     @Import(name="surrogateType", required=true)
-      private final GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
+    private GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
 
     public GooglePrivacyDlpV2SurrogateTypeResponse surrogateType() {
         return this.surrogateType;
     }
 
-    public GooglePrivacyDlpV2CustomInfoTypeResponse(
-        List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules,
-        GooglePrivacyDlpV2DictionaryResponse dictionary,
-        String exclusionType,
-        GooglePrivacyDlpV2InfoTypeResponse infoType,
-        String likelihood,
-        GooglePrivacyDlpV2RegexResponse regex,
-        GooglePrivacyDlpV2StoredTypeResponse storedType,
-        GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
-        this.detectionRules = Objects.requireNonNull(detectionRules, "expected parameter 'detectionRules' to be non-null");
-        this.dictionary = Objects.requireNonNull(dictionary, "expected parameter 'dictionary' to be non-null");
-        this.exclusionType = Objects.requireNonNull(exclusionType, "expected parameter 'exclusionType' to be non-null");
-        this.infoType = Objects.requireNonNull(infoType, "expected parameter 'infoType' to be non-null");
-        this.likelihood = Objects.requireNonNull(likelihood, "expected parameter 'likelihood' to be non-null");
-        this.regex = Objects.requireNonNull(regex, "expected parameter 'regex' to be non-null");
-        this.storedType = Objects.requireNonNull(storedType, "expected parameter 'storedType' to be non-null");
-        this.surrogateType = Objects.requireNonNull(surrogateType, "expected parameter 'surrogateType' to be non-null");
-    }
+    private GooglePrivacyDlpV2CustomInfoTypeResponse() {}
 
-    private GooglePrivacyDlpV2CustomInfoTypeResponse() {
-        this.detectionRules = List.of();
-        this.dictionary = null;
-        this.exclusionType = null;
-        this.infoType = null;
-        this.likelihood = null;
-        this.regex = null;
-        this.storedType = null;
-        this.surrogateType = null;
+    private GooglePrivacyDlpV2CustomInfoTypeResponse(GooglePrivacyDlpV2CustomInfoTypeResponse $) {
+        this.detectionRules = $.detectionRules;
+        this.dictionary = $.dictionary;
+        this.exclusionType = $.exclusionType;
+        this.infoType = $.infoType;
+        this.likelihood = $.likelihood;
+        this.regex = $.regex;
+        this.storedType = $.storedType;
+        this.surrogateType = $.surrogateType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CustomInfoTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules;
-        private GooglePrivacyDlpV2DictionaryResponse dictionary;
-        private String exclusionType;
-        private GooglePrivacyDlpV2InfoTypeResponse infoType;
-        private String likelihood;
-        private GooglePrivacyDlpV2RegexResponse regex;
-        private GooglePrivacyDlpV2StoredTypeResponse storedType;
-        private GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
+        private GooglePrivacyDlpV2CustomInfoTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CustomInfoTypeResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CustomInfoTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detectionRules = defaults.detectionRules;
-    	      this.dictionary = defaults.dictionary;
-    	      this.exclusionType = defaults.exclusionType;
-    	      this.infoType = defaults.infoType;
-    	      this.likelihood = defaults.likelihood;
-    	      this.regex = defaults.regex;
-    	      this.storedType = defaults.storedType;
-    	      this.surrogateType = defaults.surrogateType;
+            $ = new GooglePrivacyDlpV2CustomInfoTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder detectionRules(List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules) {
-            this.detectionRules = Objects.requireNonNull(detectionRules);
+            $.detectionRules = detectionRules;
             return this;
         }
+
         public Builder detectionRules(GooglePrivacyDlpV2DetectionRuleResponse... detectionRules) {
             return detectionRules(List.of(detectionRules));
         }
+
         public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
-            this.dictionary = Objects.requireNonNull(dictionary);
+            $.dictionary = dictionary;
             return this;
         }
+
         public Builder exclusionType(String exclusionType) {
-            this.exclusionType = Objects.requireNonNull(exclusionType);
+            $.exclusionType = exclusionType;
             return this;
         }
+
         public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
-            this.infoType = Objects.requireNonNull(infoType);
+            $.infoType = infoType;
             return this;
         }
+
         public Builder likelihood(String likelihood) {
-            this.likelihood = Objects.requireNonNull(likelihood);
+            $.likelihood = likelihood;
             return this;
         }
+
         public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
-            this.regex = Objects.requireNonNull(regex);
+            $.regex = regex;
             return this;
         }
+
         public Builder storedType(GooglePrivacyDlpV2StoredTypeResponse storedType) {
-            this.storedType = Objects.requireNonNull(storedType);
+            $.storedType = storedType;
             return this;
         }
+
         public Builder surrogateType(GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
-            this.surrogateType = Objects.requireNonNull(surrogateType);
+            $.surrogateType = surrogateType;
             return this;
-        }        public GooglePrivacyDlpV2CustomInfoTypeResponse build() {
-            return new GooglePrivacyDlpV2CustomInfoTypeResponse(detectionRules, dictionary, exclusionType, infoType, likelihood, regex, storedType, surrogateType);
+        }
+
+        public GooglePrivacyDlpV2CustomInfoTypeResponse build() {
+            $.detectionRules = Objects.requireNonNull($.detectionRules, "expected parameter 'detectionRules' to be non-null");
+            $.dictionary = Objects.requireNonNull($.dictionary, "expected parameter 'dictionary' to be non-null");
+            $.exclusionType = Objects.requireNonNull($.exclusionType, "expected parameter 'exclusionType' to be non-null");
+            $.infoType = Objects.requireNonNull($.infoType, "expected parameter 'infoType' to be non-null");
+            $.likelihood = Objects.requireNonNull($.likelihood, "expected parameter 'likelihood' to be non-null");
+            $.regex = Objects.requireNonNull($.regex, "expected parameter 'regex' to be non-null");
+            $.storedType = Objects.requireNonNull($.storedType, "expected parameter 'storedType' to be non-null");
+            $.surrogateType = Objects.requireNonNull($.surrogateType, "expected parameter 'surrogateType' to be non-null");
+            return $;
         }
     }
+
 }

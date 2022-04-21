@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.certificates.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -40,10 +40,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      * 
      */
     @Import(name="expirationSeconds")
-      private final @Nullable Output<Integer> expirationSeconds;
+    private @Nullable Output<Integer> expirationSeconds;
 
-    public Output<Integer> expirationSeconds() {
-        return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
+    public Optional<Output<Integer>> expirationSeconds() {
+        return Optional.ofNullable(this.expirationSeconds);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      * 
      */
     @Import(name="extra")
-      private final @Nullable Output<Map<String,List<String>>> extra;
+    private @Nullable Output<Map<String,List<String>>> extra;
 
-    public Output<Map<String,List<String>>> extra() {
-        return this.extra == null ? Codegen.empty() : this.extra;
+    public Optional<Output<Map<String,List<String>>>> extra() {
+        return Optional.ofNullable(this.extra);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      * 
      */
     @Import(name="groups")
-      private final @Nullable Output<List<String>> groups;
+    private @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> groups() {
-        return this.groups == null ? Codegen.empty() : this.groups;
+    public Optional<Output<List<String>>> groups() {
+        return Optional.ofNullable(this.groups);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      * 
      */
     @Import(name="request", required=true)
-      private final Output<String> request;
+    private Output<String> request;
 
     public Output<String> request() {
         return this.request;
@@ -104,7 +104,7 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      * 
      */
     @Import(name="signerName", required=true)
-      private final Output<String> signerName;
+    private Output<String> signerName;
 
     public Output<String> signerName() {
         return this.signerName;
@@ -115,10 +115,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      * 
      */
     @Import(name="usages")
-      private final @Nullable Output<List<String>> usages;
+    private @Nullable Output<List<String>> usages;
 
-    public Output<List<String>> usages() {
-        return this.usages == null ? Codegen.empty() : this.usages;
+    public Optional<Output<List<String>>> usages() {
+        return Optional.ofNullable(this.usages);
     }
 
     /**
@@ -150,147 +150,128 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public CertificateSigningRequestSpecArgs(
-        @Nullable Output<Integer> expirationSeconds,
-        @Nullable Output<Map<String,List<String>>> extra,
-        @Nullable Output<List<String>> groups,
-        Output<String> request,
-        Output<String> signerName,
-        @Nullable Output<String> uid,
-        @Nullable Output<List<String>> usages,
-        @Nullable Output<String> username) {
-        this.expirationSeconds = expirationSeconds;
-        this.extra = extra;
-        this.groups = groups;
-        this.request = Objects.requireNonNull(request, "expected parameter 'request' to be non-null");
-        this.signerName = Objects.requireNonNull(signerName, "expected parameter 'signerName' to be non-null");
-        this.uid = uid;
-        this.usages = usages;
-        this.username = username;
-    }
+    private CertificateSigningRequestSpecArgs() {}
 
-    private CertificateSigningRequestSpecArgs() {
-        this.expirationSeconds = Codegen.empty();
-        this.extra = Codegen.empty();
-        this.groups = Codegen.empty();
-        this.request = Codegen.empty();
-        this.signerName = Codegen.empty();
-        this.uid = Codegen.empty();
-        this.usages = Codegen.empty();
-        this.username = Codegen.empty();
+    private CertificateSigningRequestSpecArgs(CertificateSigningRequestSpecArgs $) {
+        this.expirationSeconds = $.expirationSeconds;
+        this.extra = $.extra;
+        this.groups = $.groups;
+        this.request = $.request;
+        this.signerName = $.signerName;
+        this.uid = $.uid;
+        this.usages = $.usages;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateSigningRequestSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> expirationSeconds;
-        private @Nullable Output<Map<String,List<String>>> extra;
-        private @Nullable Output<List<String>> groups;
-        private Output<String> request;
-        private Output<String> signerName;
-        private @Nullable Output<String> uid;
-        private @Nullable Output<List<String>> usages;
-        private @Nullable Output<String> username;
+        private CertificateSigningRequestSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateSigningRequestSpecArgs();
         }
 
         public Builder(CertificateSigningRequestSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationSeconds = defaults.expirationSeconds;
-    	      this.extra = defaults.extra;
-    	      this.groups = defaults.groups;
-    	      this.request = defaults.request;
-    	      this.signerName = defaults.signerName;
-    	      this.uid = defaults.uid;
-    	      this.usages = defaults.usages;
-    	      this.username = defaults.username;
+            $ = new CertificateSigningRequestSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
-            this.expirationSeconds = expirationSeconds;
+            $.expirationSeconds = expirationSeconds;
             return this;
         }
-        public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Codegen.ofNullable(expirationSeconds);
-            return this;
+
+        public Builder expirationSeconds(Integer expirationSeconds) {
+            return expirationSeconds(Output.of(expirationSeconds));
         }
+
         public Builder extra(@Nullable Output<Map<String,List<String>>> extra) {
-            this.extra = extra;
+            $.extra = extra;
             return this;
         }
-        public Builder extra(@Nullable Map<String,List<String>> extra) {
-            this.extra = Codegen.ofNullable(extra);
-            return this;
+
+        public Builder extra(Map<String,List<String>> extra) {
+            return extra(Output.of(extra));
         }
+
         public Builder groups(@Nullable Output<List<String>> groups) {
-            this.groups = groups;
+            $.groups = groups;
             return this;
         }
-        public Builder groups(@Nullable List<String> groups) {
-            this.groups = Codegen.ofNullable(groups);
-            return this;
+
+        public Builder groups(List<String> groups) {
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder request(Output<String> request) {
-            this.request = Objects.requireNonNull(request);
+            $.request = request;
             return this;
         }
+
         public Builder request(String request) {
-            this.request = Output.of(Objects.requireNonNull(request));
-            return this;
+            return request(Output.of(request));
         }
+
         public Builder signerName(Output<String> signerName) {
-            this.signerName = Objects.requireNonNull(signerName);
+            $.signerName = signerName;
             return this;
         }
+
         public Builder signerName(String signerName) {
-            this.signerName = Output.of(Objects.requireNonNull(signerName));
-            return this;
+            return signerName(Output.of(signerName));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
         }
+
         public Builder usages(@Nullable Output<List<String>> usages) {
-            this.usages = usages;
+            $.usages = usages;
             return this;
         }
-        public Builder usages(@Nullable List<String> usages) {
-            this.usages = Codegen.ofNullable(usages);
-            return this;
+
+        public Builder usages(List<String> usages) {
+            return usages(Output.of(usages));
         }
+
         public Builder usages(String... usages) {
             return usages(List.of(usages));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public CertificateSigningRequestSpecArgs build() {
-            return new CertificateSigningRequestSpecArgs(expirationSeconds, extra, groups, request, signerName, uid, usages, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public CertificateSigningRequestSpecArgs build() {
+            $.request = Objects.requireNonNull($.request, "expected parameter 'request' to be non-null");
+            $.signerName = Objects.requireNonNull($.signerName, "expected parameter 'signerName' to be non-null");
+            return $;
         }
     }
+
 }

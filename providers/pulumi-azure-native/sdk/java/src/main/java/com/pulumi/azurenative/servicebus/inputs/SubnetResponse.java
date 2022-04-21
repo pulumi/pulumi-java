@@ -21,45 +21,45 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public SubnetResponse(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private SubnetResponse() {}
 
-    private SubnetResponse() {
-        this.id = null;
+    private SubnetResponse(SubnetResponse $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private SubnetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetResponse();
         }
 
         public Builder(SubnetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new SubnetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public SubnetResponse build() {
-            return new SubnetResponse(id);
+        }
+
+        public SubnetResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,78 +13,73 @@ public final class GetKeystoreArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeystoreArgs Empty = new GetKeystoreArgs();
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="keystoreId", required=true)
-      private final String keystoreId;
+    private String keystoreId;
 
     public String keystoreId() {
         return this.keystoreId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetKeystoreArgs(
-        String environmentId,
-        String keystoreId,
-        String organizationId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.keystoreId = Objects.requireNonNull(keystoreId, "expected parameter 'keystoreId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetKeystoreArgs() {}
 
-    private GetKeystoreArgs() {
-        this.environmentId = null;
-        this.keystoreId = null;
-        this.organizationId = null;
+    private GetKeystoreArgs(GetKeystoreArgs $) {
+        this.environmentId = $.environmentId;
+        this.keystoreId = $.keystoreId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeystoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private String keystoreId;
-        private String organizationId;
+        private GetKeystoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeystoreArgs();
         }
 
         public Builder(GetKeystoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.keystoreId = defaults.keystoreId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetKeystoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder keystoreId(String keystoreId) {
-            this.keystoreId = Objects.requireNonNull(keystoreId);
+            $.keystoreId = keystoreId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetKeystoreArgs build() {
-            return new GetKeystoreArgs(environmentId, keystoreId, organizationId);
+        }
+
+        public GetKeystoreArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.keystoreId = Objects.requireNonNull($.keystoreId, "expected parameter 'keystoreId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

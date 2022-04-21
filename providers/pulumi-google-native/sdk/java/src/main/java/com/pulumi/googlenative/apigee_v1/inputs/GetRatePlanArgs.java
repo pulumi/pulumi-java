@@ -13,78 +13,73 @@ public final class GetRatePlanArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRatePlanArgs Empty = new GetRatePlanArgs();
 
     @Import(name="apiproductId", required=true)
-      private final String apiproductId;
+    private String apiproductId;
 
     public String apiproductId() {
         return this.apiproductId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="rateplanId", required=true)
-      private final String rateplanId;
+    private String rateplanId;
 
     public String rateplanId() {
         return this.rateplanId;
     }
 
-    public GetRatePlanArgs(
-        String apiproductId,
-        String organizationId,
-        String rateplanId) {
-        this.apiproductId = Objects.requireNonNull(apiproductId, "expected parameter 'apiproductId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.rateplanId = Objects.requireNonNull(rateplanId, "expected parameter 'rateplanId' to be non-null");
-    }
+    private GetRatePlanArgs() {}
 
-    private GetRatePlanArgs() {
-        this.apiproductId = null;
-        this.organizationId = null;
-        this.rateplanId = null;
+    private GetRatePlanArgs(GetRatePlanArgs $) {
+        this.apiproductId = $.apiproductId;
+        this.organizationId = $.organizationId;
+        this.rateplanId = $.rateplanId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRatePlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiproductId;
-        private String organizationId;
-        private String rateplanId;
+        private GetRatePlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRatePlanArgs();
         }
 
         public Builder(GetRatePlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiproductId = defaults.apiproductId;
-    	      this.organizationId = defaults.organizationId;
-    	      this.rateplanId = defaults.rateplanId;
+            $ = new GetRatePlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiproductId(String apiproductId) {
-            this.apiproductId = Objects.requireNonNull(apiproductId);
+            $.apiproductId = apiproductId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder rateplanId(String rateplanId) {
-            this.rateplanId = Objects.requireNonNull(rateplanId);
+            $.rateplanId = rateplanId;
             return this;
-        }        public GetRatePlanArgs build() {
-            return new GetRatePlanArgs(apiproductId, organizationId, rateplanId);
+        }
+
+        public GetRatePlanArgs build() {
+            $.apiproductId = Objects.requireNonNull($.apiproductId, "expected parameter 'apiproductId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.rateplanId = Objects.requireNonNull($.rateplanId, "expected parameter 'rateplanId' to be non-null");
+            return $;
         }
     }
+
 }

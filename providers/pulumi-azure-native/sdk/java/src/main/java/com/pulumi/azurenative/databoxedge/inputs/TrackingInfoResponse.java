@@ -23,10 +23,10 @@ public final class TrackingInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="carrierName")
-      private final @Nullable String carrierName;
+    private @Nullable String carrierName;
 
     public Optional<String> carrierName() {
-        return this.carrierName == null ? Optional.empty() : Optional.ofNullable(this.carrierName);
+        return Optional.ofNullable(this.carrierName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TrackingInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serialNumber")
-      private final @Nullable String serialNumber;
+    private @Nullable String serialNumber;
 
     public Optional<String> serialNumber() {
-        return this.serialNumber == null ? Optional.empty() : Optional.ofNullable(this.serialNumber);
+        return Optional.ofNullable(this.serialNumber);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TrackingInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="trackingId")
-      private final @Nullable String trackingId;
+    private @Nullable String trackingId;
 
     public Optional<String> trackingId() {
-        return this.trackingId == null ? Optional.empty() : Optional.ofNullable(this.trackingId);
+        return Optional.ofNullable(this.trackingId);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class TrackingInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="trackingUrl")
-      private final @Nullable String trackingUrl;
+    private @Nullable String trackingUrl;
 
     public Optional<String> trackingUrl() {
-        return this.trackingUrl == null ? Optional.empty() : Optional.ofNullable(this.trackingUrl);
+        return Optional.ofNullable(this.trackingUrl);
     }
 
-    public TrackingInfoResponse(
-        @Nullable String carrierName,
-        @Nullable String serialNumber,
-        @Nullable String trackingId,
-        @Nullable String trackingUrl) {
-        this.carrierName = carrierName;
-        this.serialNumber = serialNumber;
-        this.trackingId = trackingId;
-        this.trackingUrl = trackingUrl;
-    }
+    private TrackingInfoResponse() {}
 
-    private TrackingInfoResponse() {
-        this.carrierName = null;
-        this.serialNumber = null;
-        this.trackingId = null;
-        this.trackingUrl = null;
+    private TrackingInfoResponse(TrackingInfoResponse $) {
+        this.carrierName = $.carrierName;
+        this.serialNumber = $.serialNumber;
+        this.trackingId = $.trackingId;
+        this.trackingUrl = $.trackingUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrackingInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String carrierName;
-        private @Nullable String serialNumber;
-        private @Nullable String trackingId;
-        private @Nullable String trackingUrl;
+        private TrackingInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrackingInfoResponse();
         }
 
         public Builder(TrackingInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.carrierName = defaults.carrierName;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.trackingId = defaults.trackingId;
-    	      this.trackingUrl = defaults.trackingUrl;
+            $ = new TrackingInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder carrierName(@Nullable String carrierName) {
-            this.carrierName = carrierName;
+            $.carrierName = carrierName;
             return this;
         }
+
         public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = serialNumber;
+            $.serialNumber = serialNumber;
             return this;
         }
+
         public Builder trackingId(@Nullable String trackingId) {
-            this.trackingId = trackingId;
+            $.trackingId = trackingId;
             return this;
         }
+
         public Builder trackingUrl(@Nullable String trackingUrl) {
-            this.trackingUrl = trackingUrl;
+            $.trackingUrl = trackingUrl;
             return this;
-        }        public TrackingInfoResponse build() {
-            return new TrackingInfoResponse(carrierName, serialNumber, trackingId, trackingUrl);
+        }
+
+        public TrackingInfoResponse build() {
+            return $;
         }
     }
+
 }

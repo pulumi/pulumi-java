@@ -21,45 +21,45 @@ public final class MembershipRoleRestrictionEvaluationResponse extends com.pulum
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public MembershipRoleRestrictionEvaluationResponse(String state) {
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private MembershipRoleRestrictionEvaluationResponse() {}
 
-    private MembershipRoleRestrictionEvaluationResponse() {
-        this.state = null;
+    private MembershipRoleRestrictionEvaluationResponse(MembershipRoleRestrictionEvaluationResponse $) {
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipRoleRestrictionEvaluationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String state;
+        private MembershipRoleRestrictionEvaluationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipRoleRestrictionEvaluationResponse();
         }
 
         public Builder(MembershipRoleRestrictionEvaluationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.state = defaults.state;
+            $ = new MembershipRoleRestrictionEvaluationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public MembershipRoleRestrictionEvaluationResponse build() {
-            return new MembershipRoleRestrictionEvaluationResponse(state);
+        }
+
+        public MembershipRoleRestrictionEvaluationResponse build() {
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

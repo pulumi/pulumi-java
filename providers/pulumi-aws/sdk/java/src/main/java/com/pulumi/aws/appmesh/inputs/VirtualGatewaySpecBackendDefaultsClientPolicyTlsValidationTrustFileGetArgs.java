@@ -5,7 +5,6 @@ package com.pulumi.aws.appmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
      * 
      */
     @Import(name="certificateChain", required=true)
-      private final Output<String> certificateChain;
+    private Output<String> certificateChain;
 
     public Output<String> certificateChain() {
         return this.certificateChain;
     }
 
-    public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs(Output<String> certificateChain) {
-        this.certificateChain = Objects.requireNonNull(certificateChain, "expected parameter 'certificateChain' to be non-null");
-    }
+    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs() {}
 
-    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs() {
-        this.certificateChain = Codegen.empty();
+    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs $) {
+        this.certificateChain = $.certificateChain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateChain;
+        private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs();
         }
 
         public Builder(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateChain = defaults.certificateChain;
+            $ = new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateChain(Output<String> certificateChain) {
-            this.certificateChain = Objects.requireNonNull(certificateChain);
+            $.certificateChain = certificateChain;
             return this;
         }
+
         public Builder certificateChain(String certificateChain) {
-            this.certificateChain = Output.of(Objects.requireNonNull(certificateChain));
-            return this;
-        }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs build() {
-            return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs(certificateChain);
+            return certificateChain(Output.of(certificateChain));
+        }
+
+        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs build() {
+            $.certificateChain = Objects.requireNonNull($.certificateChain, "expected parameter 'certificateChain' to be non-null");
+            return $;
         }
     }
+
 }

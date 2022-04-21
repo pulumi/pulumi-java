@@ -17,7 +17,7 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assignmentId", required=true)
-      private final String assignmentId;
+    private String assignmentId;
 
     public String assignmentId() {
         return this.assignmentId;
@@ -28,55 +28,52 @@ public final class GetAssignmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAssignmentArgs(
-        String assignmentId,
-        String resourceGroupName) {
-        this.assignmentId = Objects.requireNonNull(assignmentId, "expected parameter 'assignmentId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAssignmentArgs() {}
 
-    private GetAssignmentArgs() {
-        this.assignmentId = null;
-        this.resourceGroupName = null;
+    private GetAssignmentArgs(GetAssignmentArgs $) {
+        this.assignmentId = $.assignmentId;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assignmentId;
-        private String resourceGroupName;
+        private GetAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssignmentArgs();
         }
 
         public Builder(GetAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignmentId = defaults.assignmentId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assignmentId(String assignmentId) {
-            this.assignmentId = Objects.requireNonNull(assignmentId);
+            $.assignmentId = assignmentId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAssignmentArgs build() {
-            return new GetAssignmentArgs(assignmentId, resourceGroupName);
+        }
+
+        public GetAssignmentArgs build() {
+            $.assignmentId = Objects.requireNonNull($.assignmentId, "expected parameter 'assignmentId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

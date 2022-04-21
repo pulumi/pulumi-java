@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse extends
      * 
      */
     @Import(name="leaveUntransformed", required=true)
-      private final GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed;
+    private GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed;
 
     public GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed() {
         return this.leaveUntransformed;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse extends
      * 
      */
     @Import(name="throwError", required=true)
-      private final GooglePrivacyDlpV2ThrowErrorResponse throwError;
+    private GooglePrivacyDlpV2ThrowErrorResponse throwError;
 
     public GooglePrivacyDlpV2ThrowErrorResponse throwError() {
         return this.throwError;
     }
 
-    public GooglePrivacyDlpV2TransformationErrorHandlingResponse(
-        GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed,
-        GooglePrivacyDlpV2ThrowErrorResponse throwError) {
-        this.leaveUntransformed = Objects.requireNonNull(leaveUntransformed, "expected parameter 'leaveUntransformed' to be non-null");
-        this.throwError = Objects.requireNonNull(throwError, "expected parameter 'throwError' to be non-null");
-    }
+    private GooglePrivacyDlpV2TransformationErrorHandlingResponse() {}
 
-    private GooglePrivacyDlpV2TransformationErrorHandlingResponse() {
-        this.leaveUntransformed = null;
-        this.throwError = null;
+    private GooglePrivacyDlpV2TransformationErrorHandlingResponse(GooglePrivacyDlpV2TransformationErrorHandlingResponse $) {
+        this.leaveUntransformed = $.leaveUntransformed;
+        this.throwError = $.throwError;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TransformationErrorHandlingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed;
-        private GooglePrivacyDlpV2ThrowErrorResponse throwError;
+        private GooglePrivacyDlpV2TransformationErrorHandlingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TransformationErrorHandlingResponse();
         }
 
         public Builder(GooglePrivacyDlpV2TransformationErrorHandlingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.leaveUntransformed = defaults.leaveUntransformed;
-    	      this.throwError = defaults.throwError;
+            $ = new GooglePrivacyDlpV2TransformationErrorHandlingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder leaveUntransformed(GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed) {
-            this.leaveUntransformed = Objects.requireNonNull(leaveUntransformed);
+            $.leaveUntransformed = leaveUntransformed;
             return this;
         }
+
         public Builder throwError(GooglePrivacyDlpV2ThrowErrorResponse throwError) {
-            this.throwError = Objects.requireNonNull(throwError);
+            $.throwError = throwError;
             return this;
-        }        public GooglePrivacyDlpV2TransformationErrorHandlingResponse build() {
-            return new GooglePrivacyDlpV2TransformationErrorHandlingResponse(leaveUntransformed, throwError);
+        }
+
+        public GooglePrivacyDlpV2TransformationErrorHandlingResponse build() {
+            $.leaveUntransformed = Objects.requireNonNull($.leaveUntransformed, "expected parameter 'leaveUntransformed' to be non-null");
+            $.throwError = Objects.requireNonNull($.throwError, "expected parameter 'throwError' to be non-null");
+            return $;
         }
     }
+
 }

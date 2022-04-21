@@ -21,45 +21,45 @@ public final class KubernetesDashboardResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public KubernetesDashboardResponse(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private KubernetesDashboardResponse() {}
 
-    private KubernetesDashboardResponse() {
-        this.disabled = null;
+    private KubernetesDashboardResponse(KubernetesDashboardResponse $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesDashboardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
+        private KubernetesDashboardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesDashboardResponse();
         }
 
         public Builder(KubernetesDashboardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new KubernetesDashboardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public KubernetesDashboardResponse build() {
-            return new KubernetesDashboardResponse(disabled);
+        }
+
+        public KubernetesDashboardResponse build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

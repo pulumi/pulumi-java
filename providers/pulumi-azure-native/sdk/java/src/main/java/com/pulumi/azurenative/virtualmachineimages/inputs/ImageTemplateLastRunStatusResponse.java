@@ -23,10 +23,10 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="runState")
-      private final @Nullable String runState;
+    private @Nullable String runState;
 
     public Optional<String> runState() {
-        return this.runState == null ? Optional.empty() : Optional.ofNullable(this.runState);
+        return Optional.ofNullable(this.runState);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="runSubState")
-      private final @Nullable String runSubState;
+    private @Nullable String runSubState;
 
     public Optional<String> runSubState() {
-        return this.runSubState == null ? Optional.empty() : Optional.ofNullable(this.runSubState);
+        return Optional.ofNullable(this.runSubState);
     }
 
     /**
@@ -67,82 +67,68 @@ public final class ImageTemplateLastRunStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
-    public ImageTemplateLastRunStatusResponse(
-        @Nullable String endTime,
-        @Nullable String message,
-        @Nullable String runState,
-        @Nullable String runSubState,
-        @Nullable String startTime) {
-        this.endTime = endTime;
-        this.message = message;
-        this.runState = runState;
-        this.runSubState = runSubState;
-        this.startTime = startTime;
-    }
+    private ImageTemplateLastRunStatusResponse() {}
 
-    private ImageTemplateLastRunStatusResponse() {
-        this.endTime = null;
-        this.message = null;
-        this.runState = null;
-        this.runSubState = null;
-        this.startTime = null;
+    private ImageTemplateLastRunStatusResponse(ImageTemplateLastRunStatusResponse $) {
+        this.endTime = $.endTime;
+        this.message = $.message;
+        this.runState = $.runState;
+        this.runSubState = $.runSubState;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageTemplateLastRunStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endTime;
-        private @Nullable String message;
-        private @Nullable String runState;
-        private @Nullable String runSubState;
-        private @Nullable String startTime;
+        private ImageTemplateLastRunStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageTemplateLastRunStatusResponse();
         }
 
         public Builder(ImageTemplateLastRunStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.message = defaults.message;
-    	      this.runState = defaults.runState;
-    	      this.runSubState = defaults.runSubState;
-    	      this.startTime = defaults.startTime;
+            $ = new ImageTemplateLastRunStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder runState(@Nullable String runState) {
-            this.runState = runState;
+            $.runState = runState;
             return this;
         }
+
         public Builder runSubState(@Nullable String runSubState) {
-            this.runSubState = runSubState;
+            $.runSubState = runSubState;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
-        }        public ImageTemplateLastRunStatusResponse build() {
-            return new ImageTemplateLastRunStatusResponse(endTime, message, runState, runSubState, startTime);
+        }
+
+        public ImageTemplateLastRunStatusResponse build() {
+            return $;
         }
     }
+
 }

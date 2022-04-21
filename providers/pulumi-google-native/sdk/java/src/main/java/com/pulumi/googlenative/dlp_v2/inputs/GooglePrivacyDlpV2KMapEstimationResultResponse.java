@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2KMapEstimationResultResponse extends com.pu
      * 
      */
     @Import(name="kMapEstimationHistogram", required=true)
-      private final List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram;
+    private List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram;
 
     public List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram() {
         return this.kMapEstimationHistogram;
     }
 
-    public GooglePrivacyDlpV2KMapEstimationResultResponse(List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram) {
-        this.kMapEstimationHistogram = Objects.requireNonNull(kMapEstimationHistogram, "expected parameter 'kMapEstimationHistogram' to be non-null");
-    }
+    private GooglePrivacyDlpV2KMapEstimationResultResponse() {}
 
-    private GooglePrivacyDlpV2KMapEstimationResultResponse() {
-        this.kMapEstimationHistogram = List.of();
+    private GooglePrivacyDlpV2KMapEstimationResultResponse(GooglePrivacyDlpV2KMapEstimationResultResponse $) {
+        this.kMapEstimationHistogram = $.kMapEstimationHistogram;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KMapEstimationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram;
+        private GooglePrivacyDlpV2KMapEstimationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KMapEstimationResultResponse();
         }
 
         public Builder(GooglePrivacyDlpV2KMapEstimationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kMapEstimationHistogram = defaults.kMapEstimationHistogram;
+            $ = new GooglePrivacyDlpV2KMapEstimationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kMapEstimationHistogram(List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram) {
-            this.kMapEstimationHistogram = Objects.requireNonNull(kMapEstimationHistogram);
+            $.kMapEstimationHistogram = kMapEstimationHistogram;
             return this;
         }
+
         public Builder kMapEstimationHistogram(GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse... kMapEstimationHistogram) {
             return kMapEstimationHistogram(List.of(kMapEstimationHistogram));
-        }        public GooglePrivacyDlpV2KMapEstimationResultResponse build() {
-            return new GooglePrivacyDlpV2KMapEstimationResultResponse(kMapEstimationHistogram);
+        }
+
+        public GooglePrivacyDlpV2KMapEstimationResultResponse build() {
+            $.kMapEstimationHistogram = Objects.requireNonNull($.kMapEstimationHistogram, "expected parameter 'kMapEstimationHistogram' to be non-null");
+            return $;
         }
     }
+
 }

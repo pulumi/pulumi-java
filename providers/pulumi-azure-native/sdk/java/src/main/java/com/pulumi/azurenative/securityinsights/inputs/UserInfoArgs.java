@@ -5,7 +5,6 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class UserInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<String> objectId;
+    private Output<String> objectId;
 
     public Output<String> objectId() {
         return this.objectId;
     }
 
-    public UserInfoArgs(Output<String> objectId) {
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-    }
+    private UserInfoArgs() {}
 
-    private UserInfoArgs() {
-        this.objectId = Codegen.empty();
+    private UserInfoArgs(UserInfoArgs $) {
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> objectId;
+        private UserInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserInfoArgs();
         }
 
         public Builder(UserInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
+            $ = new UserInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(Output<String> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(String objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
-        }        public UserInfoArgs build() {
-            return new UserInfoArgs(objectId);
+            return objectId(Output.of(objectId));
+        }
+
+        public UserInfoArgs build() {
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            return $;
         }
     }
+
 }

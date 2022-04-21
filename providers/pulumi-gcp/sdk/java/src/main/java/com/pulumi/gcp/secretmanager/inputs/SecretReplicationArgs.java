@@ -5,10 +5,10 @@ package com.pulumi.gcp.secretmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecretReplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="automatic")
-      private final @Nullable Output<Boolean> automatic;
+    private @Nullable Output<Boolean> automatic;
 
-    public Output<Boolean> automatic() {
-        return this.automatic == null ? Codegen.empty() : this.automatic;
+    public Optional<Output<Boolean>> automatic() {
+        return Optional.ofNullable(this.automatic);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class SecretReplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="userManaged")
-      private final @Nullable Output<SecretReplicationUserManagedArgs> userManaged;
+    private @Nullable Output<SecretReplicationUserManagedArgs> userManaged;
 
-    public Output<SecretReplicationUserManagedArgs> userManaged() {
-        return this.userManaged == null ? Codegen.empty() : this.userManaged;
+    public Optional<Output<SecretReplicationUserManagedArgs>> userManaged() {
+        return Optional.ofNullable(this.userManaged);
     }
 
-    public SecretReplicationArgs(
-        @Nullable Output<Boolean> automatic,
-        @Nullable Output<SecretReplicationUserManagedArgs> userManaged) {
-        this.automatic = automatic;
-        this.userManaged = userManaged;
-    }
+    private SecretReplicationArgs() {}
 
-    private SecretReplicationArgs() {
-        this.automatic = Codegen.empty();
-        this.userManaged = Codegen.empty();
+    private SecretReplicationArgs(SecretReplicationArgs $) {
+        this.automatic = $.automatic;
+        this.userManaged = $.userManaged;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretReplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> automatic;
-        private @Nullable Output<SecretReplicationUserManagedArgs> userManaged;
+        private SecretReplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretReplicationArgs();
         }
 
         public Builder(SecretReplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatic = defaults.automatic;
-    	      this.userManaged = defaults.userManaged;
+            $ = new SecretReplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automatic(@Nullable Output<Boolean> automatic) {
-            this.automatic = automatic;
+            $.automatic = automatic;
             return this;
         }
-        public Builder automatic(@Nullable Boolean automatic) {
-            this.automatic = Codegen.ofNullable(automatic);
-            return this;
+
+        public Builder automatic(Boolean automatic) {
+            return automatic(Output.of(automatic));
         }
+
         public Builder userManaged(@Nullable Output<SecretReplicationUserManagedArgs> userManaged) {
-            this.userManaged = userManaged;
+            $.userManaged = userManaged;
             return this;
         }
-        public Builder userManaged(@Nullable SecretReplicationUserManagedArgs userManaged) {
-            this.userManaged = Codegen.ofNullable(userManaged);
-            return this;
-        }        public SecretReplicationArgs build() {
-            return new SecretReplicationArgs(automatic, userManaged);
+
+        public Builder userManaged(SecretReplicationUserManagedArgs userManaged) {
+            return userManaged(Output.of(userManaged));
+        }
+
+        public SecretReplicationArgs build() {
+            return $;
         }
     }
+
 }

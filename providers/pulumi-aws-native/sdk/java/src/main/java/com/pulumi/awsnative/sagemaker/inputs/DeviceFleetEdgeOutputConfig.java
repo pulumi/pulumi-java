@@ -19,10 +19,10 @@ public final class DeviceFleetEdgeOutputConfig extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable String kmsKeyId;
+    private @Nullable String kmsKeyId;
 
     public Optional<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.kmsKeyId);
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -30,55 +30,51 @@ public final class DeviceFleetEdgeOutputConfig extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="s3OutputLocation", required=true)
-      private final String s3OutputLocation;
+    private String s3OutputLocation;
 
     public String s3OutputLocation() {
         return this.s3OutputLocation;
     }
 
-    public DeviceFleetEdgeOutputConfig(
-        @Nullable String kmsKeyId,
-        String s3OutputLocation) {
-        this.kmsKeyId = kmsKeyId;
-        this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation, "expected parameter 's3OutputLocation' to be non-null");
-    }
+    private DeviceFleetEdgeOutputConfig() {}
 
-    private DeviceFleetEdgeOutputConfig() {
-        this.kmsKeyId = null;
-        this.s3OutputLocation = null;
+    private DeviceFleetEdgeOutputConfig(DeviceFleetEdgeOutputConfig $) {
+        this.kmsKeyId = $.kmsKeyId;
+        this.s3OutputLocation = $.s3OutputLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceFleetEdgeOutputConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String kmsKeyId;
-        private String s3OutputLocation;
+        private DeviceFleetEdgeOutputConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceFleetEdgeOutputConfig();
         }
 
         public Builder(DeviceFleetEdgeOutputConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.s3OutputLocation = defaults.s3OutputLocation;
+            $ = new DeviceFleetEdgeOutputConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
+
         public Builder s3OutputLocation(String s3OutputLocation) {
-            this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
+            $.s3OutputLocation = s3OutputLocation;
             return this;
-        }        public DeviceFleetEdgeOutputConfig build() {
-            return new DeviceFleetEdgeOutputConfig(kmsKeyId, s3OutputLocation);
+        }
+
+        public DeviceFleetEdgeOutputConfig build() {
+            $.s3OutputLocation = Objects.requireNonNull($.s3OutputLocation, "expected parameter 's3OutputLocation' to be non-null");
+            return $;
         }
     }
+
 }

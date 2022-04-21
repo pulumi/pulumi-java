@@ -21,7 +21,7 @@ public final class OAuthTokenResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
@@ -32,55 +32,52 @@ public final class OAuthTokenResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceAccountEmail", required=true)
-      private final String serviceAccountEmail;
+    private String serviceAccountEmail;
 
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
-    public OAuthTokenResponse(
-        String scope,
-        String serviceAccountEmail) {
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
-    }
+    private OAuthTokenResponse() {}
 
-    private OAuthTokenResponse() {
-        this.scope = null;
-        this.serviceAccountEmail = null;
+    private OAuthTokenResponse(OAuthTokenResponse $) {
+        this.scope = $.scope;
+        this.serviceAccountEmail = $.serviceAccountEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OAuthTokenResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scope;
-        private String serviceAccountEmail;
+        private OAuthTokenResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OAuthTokenResponse();
         }
 
         public Builder(OAuthTokenResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
+            $ = new OAuthTokenResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
-        }        public OAuthTokenResponse build() {
-            return new OAuthTokenResponse(scope, serviceAccountEmail);
+        }
+
+        public OAuthTokenResponse build() {
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.serviceAccountEmail = Objects.requireNonNull($.serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
+            return $;
         }
     }
+
 }

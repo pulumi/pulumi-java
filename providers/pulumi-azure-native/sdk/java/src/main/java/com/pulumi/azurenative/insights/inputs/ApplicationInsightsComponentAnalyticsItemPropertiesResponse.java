@@ -23,45 +23,44 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse e
      * 
      */
     @Import(name="functionAlias")
-      private final @Nullable String functionAlias;
+    private @Nullable String functionAlias;
 
     public Optional<String> functionAlias() {
-        return this.functionAlias == null ? Optional.empty() : Optional.ofNullable(this.functionAlias);
+        return Optional.ofNullable(this.functionAlias);
     }
 
-    public ApplicationInsightsComponentAnalyticsItemPropertiesResponse(@Nullable String functionAlias) {
-        this.functionAlias = functionAlias;
-    }
+    private ApplicationInsightsComponentAnalyticsItemPropertiesResponse() {}
 
-    private ApplicationInsightsComponentAnalyticsItemPropertiesResponse() {
-        this.functionAlias = null;
+    private ApplicationInsightsComponentAnalyticsItemPropertiesResponse(ApplicationInsightsComponentAnalyticsItemPropertiesResponse $) {
+        this.functionAlias = $.functionAlias;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationInsightsComponentAnalyticsItemPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String functionAlias;
+        private ApplicationInsightsComponentAnalyticsItemPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationInsightsComponentAnalyticsItemPropertiesResponse();
         }
 
         public Builder(ApplicationInsightsComponentAnalyticsItemPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionAlias = defaults.functionAlias;
+            $ = new ApplicationInsightsComponentAnalyticsItemPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = functionAlias;
+            $.functionAlias = functionAlias;
             return this;
-        }        public ApplicationInsightsComponentAnalyticsItemPropertiesResponse build() {
-            return new ApplicationInsightsComponentAnalyticsItemPropertiesResponse(functionAlias);
+        }
+
+        public ApplicationInsightsComponentAnalyticsItemPropertiesResponse build() {
+            return $;
         }
     }
+
 }

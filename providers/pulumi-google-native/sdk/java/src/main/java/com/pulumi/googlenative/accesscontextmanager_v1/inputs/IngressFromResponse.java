@@ -23,7 +23,7 @@ public final class IngressFromResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identities", required=true)
-      private final List<String> identities;
+    private List<String> identities;
 
     public List<String> identities() {
         return this.identities;
@@ -34,7 +34,7 @@ public final class IngressFromResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityType", required=true)
-      private final String identityType;
+    private String identityType;
 
     public String identityType() {
         return this.identityType;
@@ -45,70 +45,67 @@ public final class IngressFromResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sources", required=true)
-      private final List<IngressSourceResponse> sources;
+    private List<IngressSourceResponse> sources;
 
     public List<IngressSourceResponse> sources() {
         return this.sources;
     }
 
-    public IngressFromResponse(
-        List<String> identities,
-        String identityType,
-        List<IngressSourceResponse> sources) {
-        this.identities = Objects.requireNonNull(identities, "expected parameter 'identities' to be non-null");
-        this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
-        this.sources = Objects.requireNonNull(sources, "expected parameter 'sources' to be non-null");
-    }
+    private IngressFromResponse() {}
 
-    private IngressFromResponse() {
-        this.identities = List.of();
-        this.identityType = null;
-        this.sources = List.of();
+    private IngressFromResponse(IngressFromResponse $) {
+        this.identities = $.identities;
+        this.identityType = $.identityType;
+        this.sources = $.sources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressFromResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> identities;
-        private String identityType;
-        private List<IngressSourceResponse> sources;
+        private IngressFromResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressFromResponse();
         }
 
         public Builder(IngressFromResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identities = defaults.identities;
-    	      this.identityType = defaults.identityType;
-    	      this.sources = defaults.sources;
+            $ = new IngressFromResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identities(List<String> identities) {
-            this.identities = Objects.requireNonNull(identities);
+            $.identities = identities;
             return this;
         }
+
         public Builder identities(String... identities) {
             return identities(List.of(identities));
         }
+
         public Builder identityType(String identityType) {
-            this.identityType = Objects.requireNonNull(identityType);
+            $.identityType = identityType;
             return this;
         }
+
         public Builder sources(List<IngressSourceResponse> sources) {
-            this.sources = Objects.requireNonNull(sources);
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(IngressSourceResponse... sources) {
             return sources(List.of(sources));
-        }        public IngressFromResponse build() {
-            return new IngressFromResponse(identities, identityType, sources);
+        }
+
+        public IngressFromResponse build() {
+            $.identities = Objects.requireNonNull($.identities, "expected parameter 'identities' to be non-null");
+            $.identityType = Objects.requireNonNull($.identityType, "expected parameter 'identityType' to be non-null");
+            $.sources = Objects.requireNonNull($.sources, "expected parameter 'sources' to be non-null");
+            return $;
         }
     }
+
 }

@@ -28,10 +28,10 @@ public final class DashboardLensResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Map<String,Object> metadata;
+    private @Nullable Map<String,Object> metadata;
 
-    public Map<String,Object> metadata() {
-        return this.metadata == null ? Map.of() : this.metadata;
+    public Optional<Map<String,Object>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class DashboardLensResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="order", required=true)
-      private final Integer order;
+    private Integer order;
 
     public Integer order() {
         return this.order;
@@ -50,67 +50,62 @@ public final class DashboardLensResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="parts", required=true)
-      private final List<DashboardPartsResponse> parts;
+    private List<DashboardPartsResponse> parts;
 
     public List<DashboardPartsResponse> parts() {
         return this.parts;
     }
 
-    public DashboardLensResponse(
-        @Nullable Map<String,Object> metadata,
-        Integer order,
-        List<DashboardPartsResponse> parts) {
-        this.metadata = metadata;
-        this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
-        this.parts = Objects.requireNonNull(parts, "expected parameter 'parts' to be non-null");
-    }
+    private DashboardLensResponse() {}
 
-    private DashboardLensResponse() {
-        this.metadata = Map.of();
-        this.order = null;
-        this.parts = List.of();
+    private DashboardLensResponse(DashboardLensResponse $) {
+        this.metadata = $.metadata;
+        this.order = $.order;
+        this.parts = $.parts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardLensResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,Object> metadata;
-        private Integer order;
-        private List<DashboardPartsResponse> parts;
+        private DashboardLensResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardLensResponse();
         }
 
         public Builder(DashboardLensResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.order = defaults.order;
-    	      this.parts = defaults.parts;
+            $ = new DashboardLensResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
+
         public Builder order(Integer order) {
-            this.order = Objects.requireNonNull(order);
+            $.order = order;
             return this;
         }
+
         public Builder parts(List<DashboardPartsResponse> parts) {
-            this.parts = Objects.requireNonNull(parts);
+            $.parts = parts;
             return this;
         }
+
         public Builder parts(DashboardPartsResponse... parts) {
             return parts(List.of(parts));
-        }        public DashboardLensResponse build() {
-            return new DashboardLensResponse(metadata, order, parts);
+        }
+
+        public DashboardLensResponse build() {
+            $.order = Objects.requireNonNull($.order, "expected parameter 'order' to be non-null");
+            $.parts = Objects.requireNonNull($.parts, "expected parameter 'parts' to be non-null");
+            return $;
         }
     }
+
 }

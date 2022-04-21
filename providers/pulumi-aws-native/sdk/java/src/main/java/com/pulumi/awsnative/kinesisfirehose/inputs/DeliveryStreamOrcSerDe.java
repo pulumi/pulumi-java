@@ -19,193 +19,165 @@ public final class DeliveryStreamOrcSerDe extends com.pulumi.resources.InvokeArg
     public static final DeliveryStreamOrcSerDe Empty = new DeliveryStreamOrcSerDe();
 
     @Import(name="blockSizeBytes")
-      private final @Nullable Integer blockSizeBytes;
+    private @Nullable Integer blockSizeBytes;
 
     public Optional<Integer> blockSizeBytes() {
-        return this.blockSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.blockSizeBytes);
+        return Optional.ofNullable(this.blockSizeBytes);
     }
 
     @Import(name="bloomFilterColumns")
-      private final @Nullable List<String> bloomFilterColumns;
+    private @Nullable List<String> bloomFilterColumns;
 
-    public List<String> bloomFilterColumns() {
-        return this.bloomFilterColumns == null ? List.of() : this.bloomFilterColumns;
+    public Optional<List<String>> bloomFilterColumns() {
+        return Optional.ofNullable(this.bloomFilterColumns);
     }
 
     @Import(name="bloomFilterFalsePositiveProbability")
-      private final @Nullable Double bloomFilterFalsePositiveProbability;
+    private @Nullable Double bloomFilterFalsePositiveProbability;
 
     public Optional<Double> bloomFilterFalsePositiveProbability() {
-        return this.bloomFilterFalsePositiveProbability == null ? Optional.empty() : Optional.ofNullable(this.bloomFilterFalsePositiveProbability);
+        return Optional.ofNullable(this.bloomFilterFalsePositiveProbability);
     }
 
     @Import(name="compression")
-      private final @Nullable String compression;
+    private @Nullable String compression;
 
     public Optional<String> compression() {
-        return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
+        return Optional.ofNullable(this.compression);
     }
 
     @Import(name="dictionaryKeyThreshold")
-      private final @Nullable Double dictionaryKeyThreshold;
+    private @Nullable Double dictionaryKeyThreshold;
 
     public Optional<Double> dictionaryKeyThreshold() {
-        return this.dictionaryKeyThreshold == null ? Optional.empty() : Optional.ofNullable(this.dictionaryKeyThreshold);
+        return Optional.ofNullable(this.dictionaryKeyThreshold);
     }
 
     @Import(name="enablePadding")
-      private final @Nullable Boolean enablePadding;
+    private @Nullable Boolean enablePadding;
 
     public Optional<Boolean> enablePadding() {
-        return this.enablePadding == null ? Optional.empty() : Optional.ofNullable(this.enablePadding);
+        return Optional.ofNullable(this.enablePadding);
     }
 
     @Import(name="formatVersion")
-      private final @Nullable String formatVersion;
+    private @Nullable String formatVersion;
 
     public Optional<String> formatVersion() {
-        return this.formatVersion == null ? Optional.empty() : Optional.ofNullable(this.formatVersion);
+        return Optional.ofNullable(this.formatVersion);
     }
 
     @Import(name="paddingTolerance")
-      private final @Nullable Double paddingTolerance;
+    private @Nullable Double paddingTolerance;
 
     public Optional<Double> paddingTolerance() {
-        return this.paddingTolerance == null ? Optional.empty() : Optional.ofNullable(this.paddingTolerance);
+        return Optional.ofNullable(this.paddingTolerance);
     }
 
     @Import(name="rowIndexStride")
-      private final @Nullable Integer rowIndexStride;
+    private @Nullable Integer rowIndexStride;
 
     public Optional<Integer> rowIndexStride() {
-        return this.rowIndexStride == null ? Optional.empty() : Optional.ofNullable(this.rowIndexStride);
+        return Optional.ofNullable(this.rowIndexStride);
     }
 
     @Import(name="stripeSizeBytes")
-      private final @Nullable Integer stripeSizeBytes;
+    private @Nullable Integer stripeSizeBytes;
 
     public Optional<Integer> stripeSizeBytes() {
-        return this.stripeSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.stripeSizeBytes);
+        return Optional.ofNullable(this.stripeSizeBytes);
     }
 
-    public DeliveryStreamOrcSerDe(
-        @Nullable Integer blockSizeBytes,
-        @Nullable List<String> bloomFilterColumns,
-        @Nullable Double bloomFilterFalsePositiveProbability,
-        @Nullable String compression,
-        @Nullable Double dictionaryKeyThreshold,
-        @Nullable Boolean enablePadding,
-        @Nullable String formatVersion,
-        @Nullable Double paddingTolerance,
-        @Nullable Integer rowIndexStride,
-        @Nullable Integer stripeSizeBytes) {
-        this.blockSizeBytes = blockSizeBytes;
-        this.bloomFilterColumns = bloomFilterColumns;
-        this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
-        this.compression = compression;
-        this.dictionaryKeyThreshold = dictionaryKeyThreshold;
-        this.enablePadding = enablePadding;
-        this.formatVersion = formatVersion;
-        this.paddingTolerance = paddingTolerance;
-        this.rowIndexStride = rowIndexStride;
-        this.stripeSizeBytes = stripeSizeBytes;
-    }
+    private DeliveryStreamOrcSerDe() {}
 
-    private DeliveryStreamOrcSerDe() {
-        this.blockSizeBytes = null;
-        this.bloomFilterColumns = List.of();
-        this.bloomFilterFalsePositiveProbability = null;
-        this.compression = null;
-        this.dictionaryKeyThreshold = null;
-        this.enablePadding = null;
-        this.formatVersion = null;
-        this.paddingTolerance = null;
-        this.rowIndexStride = null;
-        this.stripeSizeBytes = null;
+    private DeliveryStreamOrcSerDe(DeliveryStreamOrcSerDe $) {
+        this.blockSizeBytes = $.blockSizeBytes;
+        this.bloomFilterColumns = $.bloomFilterColumns;
+        this.bloomFilterFalsePositiveProbability = $.bloomFilterFalsePositiveProbability;
+        this.compression = $.compression;
+        this.dictionaryKeyThreshold = $.dictionaryKeyThreshold;
+        this.enablePadding = $.enablePadding;
+        this.formatVersion = $.formatVersion;
+        this.paddingTolerance = $.paddingTolerance;
+        this.rowIndexStride = $.rowIndexStride;
+        this.stripeSizeBytes = $.stripeSizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamOrcSerDe defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer blockSizeBytes;
-        private @Nullable List<String> bloomFilterColumns;
-        private @Nullable Double bloomFilterFalsePositiveProbability;
-        private @Nullable String compression;
-        private @Nullable Double dictionaryKeyThreshold;
-        private @Nullable Boolean enablePadding;
-        private @Nullable String formatVersion;
-        private @Nullable Double paddingTolerance;
-        private @Nullable Integer rowIndexStride;
-        private @Nullable Integer stripeSizeBytes;
+        private DeliveryStreamOrcSerDe $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamOrcSerDe();
         }
 
         public Builder(DeliveryStreamOrcSerDe defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blockSizeBytes = defaults.blockSizeBytes;
-    	      this.bloomFilterColumns = defaults.bloomFilterColumns;
-    	      this.bloomFilterFalsePositiveProbability = defaults.bloomFilterFalsePositiveProbability;
-    	      this.compression = defaults.compression;
-    	      this.dictionaryKeyThreshold = defaults.dictionaryKeyThreshold;
-    	      this.enablePadding = defaults.enablePadding;
-    	      this.formatVersion = defaults.formatVersion;
-    	      this.paddingTolerance = defaults.paddingTolerance;
-    	      this.rowIndexStride = defaults.rowIndexStride;
-    	      this.stripeSizeBytes = defaults.stripeSizeBytes;
+            $ = new DeliveryStreamOrcSerDe(Objects.requireNonNull(defaults));
         }
 
         public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
-            this.blockSizeBytes = blockSizeBytes;
+            $.blockSizeBytes = blockSizeBytes;
             return this;
         }
+
         public Builder bloomFilterColumns(@Nullable List<String> bloomFilterColumns) {
-            this.bloomFilterColumns = bloomFilterColumns;
+            $.bloomFilterColumns = bloomFilterColumns;
             return this;
         }
+
         public Builder bloomFilterColumns(String... bloomFilterColumns) {
             return bloomFilterColumns(List.of(bloomFilterColumns));
         }
+
         public Builder bloomFilterFalsePositiveProbability(@Nullable Double bloomFilterFalsePositiveProbability) {
-            this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
+            $.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
             return this;
         }
+
         public Builder compression(@Nullable String compression) {
-            this.compression = compression;
+            $.compression = compression;
             return this;
         }
+
         public Builder dictionaryKeyThreshold(@Nullable Double dictionaryKeyThreshold) {
-            this.dictionaryKeyThreshold = dictionaryKeyThreshold;
+            $.dictionaryKeyThreshold = dictionaryKeyThreshold;
             return this;
         }
+
         public Builder enablePadding(@Nullable Boolean enablePadding) {
-            this.enablePadding = enablePadding;
+            $.enablePadding = enablePadding;
             return this;
         }
+
         public Builder formatVersion(@Nullable String formatVersion) {
-            this.formatVersion = formatVersion;
+            $.formatVersion = formatVersion;
             return this;
         }
+
         public Builder paddingTolerance(@Nullable Double paddingTolerance) {
-            this.paddingTolerance = paddingTolerance;
+            $.paddingTolerance = paddingTolerance;
             return this;
         }
+
         public Builder rowIndexStride(@Nullable Integer rowIndexStride) {
-            this.rowIndexStride = rowIndexStride;
+            $.rowIndexStride = rowIndexStride;
             return this;
         }
+
         public Builder stripeSizeBytes(@Nullable Integer stripeSizeBytes) {
-            this.stripeSizeBytes = stripeSizeBytes;
+            $.stripeSizeBytes = stripeSizeBytes;
             return this;
-        }        public DeliveryStreamOrcSerDe build() {
-            return new DeliveryStreamOrcSerDe(blockSizeBytes, bloomFilterColumns, bloomFilterFalsePositiveProbability, compression, dictionaryKeyThreshold, enablePadding, formatVersion, paddingTolerance, rowIndexStride, stripeSizeBytes);
+        }
+
+        public DeliveryStreamOrcSerDe build() {
+            return $;
         }
     }
+
 }

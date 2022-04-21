@@ -17,7 +17,7 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends com.pulumi.re
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends com.pulumi.re
      * 
      */
     @Import(name="notebookWorkspaceName", required=true)
-      private final String notebookWorkspaceName;
+    private String notebookWorkspaceName;
 
     public String notebookWorkspaceName() {
         return this.notebookWorkspaceName;
@@ -39,64 +39,59 @@ public final class ListNotebookWorkspaceConnectionInfoArgs extends com.pulumi.re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListNotebookWorkspaceConnectionInfoArgs(
-        String accountName,
-        String notebookWorkspaceName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.notebookWorkspaceName = Objects.requireNonNull(notebookWorkspaceName, "expected parameter 'notebookWorkspaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListNotebookWorkspaceConnectionInfoArgs() {}
 
-    private ListNotebookWorkspaceConnectionInfoArgs() {
-        this.accountName = null;
-        this.notebookWorkspaceName = null;
-        this.resourceGroupName = null;
+    private ListNotebookWorkspaceConnectionInfoArgs(ListNotebookWorkspaceConnectionInfoArgs $) {
+        this.accountName = $.accountName;
+        this.notebookWorkspaceName = $.notebookWorkspaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListNotebookWorkspaceConnectionInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String notebookWorkspaceName;
-        private String resourceGroupName;
+        private ListNotebookWorkspaceConnectionInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListNotebookWorkspaceConnectionInfoArgs();
         }
 
         public Builder(ListNotebookWorkspaceConnectionInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.notebookWorkspaceName = defaults.notebookWorkspaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListNotebookWorkspaceConnectionInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder notebookWorkspaceName(String notebookWorkspaceName) {
-            this.notebookWorkspaceName = Objects.requireNonNull(notebookWorkspaceName);
+            $.notebookWorkspaceName = notebookWorkspaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListNotebookWorkspaceConnectionInfoArgs build() {
-            return new ListNotebookWorkspaceConnectionInfoArgs(accountName, notebookWorkspaceName, resourceGroupName);
+        }
+
+        public ListNotebookWorkspaceConnectionInfoArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.notebookWorkspaceName = Objects.requireNonNull($.notebookWorkspaceName, "expected parameter 'notebookWorkspaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

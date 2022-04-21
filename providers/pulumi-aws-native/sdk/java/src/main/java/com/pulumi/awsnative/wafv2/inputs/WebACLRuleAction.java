@@ -22,94 +22,83 @@ public final class WebACLRuleAction extends com.pulumi.resources.InvokeArgs {
     public static final WebACLRuleAction Empty = new WebACLRuleAction();
 
     @Import(name="allow")
-      private final @Nullable WebACLAllowAction allow;
+    private @Nullable WebACLAllowAction allow;
 
     public Optional<WebACLAllowAction> allow() {
-        return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
+        return Optional.ofNullable(this.allow);
     }
 
     @Import(name="block")
-      private final @Nullable WebACLBlockAction block;
+    private @Nullable WebACLBlockAction block;
 
     public Optional<WebACLBlockAction> block() {
-        return this.block == null ? Optional.empty() : Optional.ofNullable(this.block);
+        return Optional.ofNullable(this.block);
     }
 
     @Import(name="captcha")
-      private final @Nullable WebACLCaptchaAction captcha;
+    private @Nullable WebACLCaptchaAction captcha;
 
     public Optional<WebACLCaptchaAction> captcha() {
-        return this.captcha == null ? Optional.empty() : Optional.ofNullable(this.captcha);
+        return Optional.ofNullable(this.captcha);
     }
 
     @Import(name="count")
-      private final @Nullable WebACLCountAction count;
+    private @Nullable WebACLCountAction count;
 
     public Optional<WebACLCountAction> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
-    public WebACLRuleAction(
-        @Nullable WebACLAllowAction allow,
-        @Nullable WebACLBlockAction block,
-        @Nullable WebACLCaptchaAction captcha,
-        @Nullable WebACLCountAction count) {
-        this.allow = allow;
-        this.block = block;
-        this.captcha = captcha;
-        this.count = count;
-    }
+    private WebACLRuleAction() {}
 
-    private WebACLRuleAction() {
-        this.allow = null;
-        this.block = null;
-        this.captcha = null;
-        this.count = null;
+    private WebACLRuleAction(WebACLRuleAction $) {
+        this.allow = $.allow;
+        this.block = $.block;
+        this.captcha = $.captcha;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLRuleAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable WebACLAllowAction allow;
-        private @Nullable WebACLBlockAction block;
-        private @Nullable WebACLCaptchaAction captcha;
-        private @Nullable WebACLCountAction count;
+        private WebACLRuleAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLRuleAction();
         }
 
         public Builder(WebACLRuleAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.block = defaults.block;
-    	      this.captcha = defaults.captcha;
-    	      this.count = defaults.count;
+            $ = new WebACLRuleAction(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable WebACLAllowAction allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
+
         public Builder block(@Nullable WebACLBlockAction block) {
-            this.block = block;
+            $.block = block;
             return this;
         }
+
         public Builder captcha(@Nullable WebACLCaptchaAction captcha) {
-            this.captcha = captcha;
+            $.captcha = captcha;
             return this;
         }
+
         public Builder count(@Nullable WebACLCountAction count) {
-            this.count = count;
+            $.count = count;
             return this;
-        }        public WebACLRuleAction build() {
-            return new WebACLRuleAction(allow, block, captcha, count);
+        }
+
+        public WebACLRuleAction build() {
+            return $;
         }
     }
+
 }

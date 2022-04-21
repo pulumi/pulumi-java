@@ -25,10 +25,10 @@ public final class CookiesMatchConditionParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="matchValues")
-      private final @Nullable List<String> matchValues;
+    private @Nullable List<String> matchValues;
 
-    public List<String> matchValues() {
-        return this.matchValues == null ? List.of() : this.matchValues;
+    public Optional<List<String>> matchValues() {
+        return Optional.ofNullable(this.matchValues);
     }
 
     /**
@@ -36,14 +36,14 @@ public final class CookiesMatchConditionParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="negateCondition")
-      private final @Nullable Boolean negateCondition;
+    private @Nullable Boolean negateCondition;
 
     public Optional<Boolean> negateCondition() {
-        return this.negateCondition == null ? Optional.empty() : Optional.ofNullable(this.negateCondition);
+        return Optional.ofNullable(this.negateCondition);
     }
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -54,7 +54,7 @@ public final class CookiesMatchConditionParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -65,10 +65,10 @@ public final class CookiesMatchConditionParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="selector")
-      private final @Nullable String selector;
+    private @Nullable String selector;
 
     public Optional<String> selector() {
-        return this.selector == null ? Optional.empty() : Optional.ofNullable(this.selector);
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -76,97 +76,84 @@ public final class CookiesMatchConditionParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="transforms")
-      private final @Nullable List<String> transforms;
+    private @Nullable List<String> transforms;
 
-    public List<String> transforms() {
-        return this.transforms == null ? List.of() : this.transforms;
+    public Optional<List<String>> transforms() {
+        return Optional.ofNullable(this.transforms);
     }
 
-    public CookiesMatchConditionParametersResponse(
-        @Nullable List<String> matchValues,
-        @Nullable Boolean negateCondition,
-        String odataType,
-        String operator,
-        @Nullable String selector,
-        @Nullable List<String> transforms) {
-        this.matchValues = matchValues;
-        this.negateCondition = negateCondition;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.selector = selector;
-        this.transforms = transforms;
-    }
+    private CookiesMatchConditionParametersResponse() {}
 
-    private CookiesMatchConditionParametersResponse() {
-        this.matchValues = List.of();
-        this.negateCondition = null;
-        this.odataType = null;
-        this.operator = null;
-        this.selector = null;
-        this.transforms = List.of();
+    private CookiesMatchConditionParametersResponse(CookiesMatchConditionParametersResponse $) {
+        this.matchValues = $.matchValues;
+        this.negateCondition = $.negateCondition;
+        this.odataType = $.odataType;
+        this.operator = $.operator;
+        this.selector = $.selector;
+        this.transforms = $.transforms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CookiesMatchConditionParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> matchValues;
-        private @Nullable Boolean negateCondition;
-        private String odataType;
-        private String operator;
-        private @Nullable String selector;
-        private @Nullable List<String> transforms;
+        private CookiesMatchConditionParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CookiesMatchConditionParametersResponse();
         }
 
         public Builder(CookiesMatchConditionParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchValues = defaults.matchValues;
-    	      this.negateCondition = defaults.negateCondition;
-    	      this.odataType = defaults.odataType;
-    	      this.operator = defaults.operator;
-    	      this.selector = defaults.selector;
-    	      this.transforms = defaults.transforms;
+            $ = new CookiesMatchConditionParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder matchValues(@Nullable List<String> matchValues) {
-            this.matchValues = matchValues;
+            $.matchValues = matchValues;
             return this;
         }
+
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
+
         public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = negateCondition;
+            $.negateCondition = negateCondition;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder selector(@Nullable String selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
+
         public Builder transforms(@Nullable List<String> transforms) {
-            this.transforms = transforms;
+            $.transforms = transforms;
             return this;
         }
+
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
-        }        public CookiesMatchConditionParametersResponse build() {
-            return new CookiesMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator, selector, transforms);
+        }
+
+        public CookiesMatchConditionParametersResponse build() {
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            return $;
         }
     }
+
 }

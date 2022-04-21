@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
      * 
      */
     @Import(name="parameter")
-      private final @Nullable Output<String> parameter;
+    private @Nullable Output<String> parameter;
 
-    public Output<String> parameter() {
-        return this.parameter == null ? Codegen.empty() : this.parameter;
+    public Optional<Output<String>> parameter() {
+        return Optional.ofNullable(this.parameter);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Object> value;
+    private @Nullable Output<Object> value;
 
-    public Output<Object> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Object>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs(
-        @Nullable Output<String> parameter,
-        @Nullable Output<Object> value) {
-        this.parameter = parameter;
-        this.value = value;
-    }
+    private GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs() {
-        this.parameter = Codegen.empty();
-        this.value = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs(GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs $) {
+        this.parameter = $.parameter;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> parameter;
-        private @Nullable Output<Object> value;
+        private GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameter = defaults.parameter;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameter(@Nullable Output<String> parameter) {
-            this.parameter = parameter;
+            $.parameter = parameter;
             return this;
         }
-        public Builder parameter(@Nullable String parameter) {
-            this.parameter = Codegen.ofNullable(parameter);
-            return this;
+
+        public Builder parameter(String parameter) {
+            return parameter(Output.of(parameter));
         }
+
         public Builder value(@Nullable Output<Object> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Object value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs(parameter, value);
+
+        public Builder value(Object value) {
+            return value(Output.of(value));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs build() {
+            return $;
         }
     }
+
 }

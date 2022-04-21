@@ -6,11 +6,11 @@ package com.pulumi.aws.ec2.inputs;
 import com.pulumi.aws.ec2.inputs.FlowLogDestinationOptionsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationOptions")
-      private final @Nullable Output<FlowLogDestinationOptionsGetArgs> destinationOptions;
+    private @Nullable Output<FlowLogDestinationOptionsGetArgs> destinationOptions;
 
-    public Output<FlowLogDestinationOptionsGetArgs> destinationOptions() {
-        return this.destinationOptions == null ? Codegen.empty() : this.destinationOptions;
+    public Optional<Output<FlowLogDestinationOptionsGetArgs>> destinationOptions() {
+        return Optional.ofNullable(this.destinationOptions);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eniId")
-      private final @Nullable Output<String> eniId;
+    private @Nullable Output<String> eniId;
 
-    public Output<String> eniId() {
-        return this.eniId == null ? Codegen.empty() : this.eniId;
+    public Optional<Output<String>> eniId() {
+        return Optional.ofNullable(this.eniId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamRoleArn")
-      private final @Nullable Output<String> iamRoleArn;
+    private @Nullable Output<String> iamRoleArn;
 
-    public Output<String> iamRoleArn() {
-        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
+    public Optional<Output<String>> iamRoleArn() {
+        return Optional.ofNullable(this.iamRoleArn);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logDestination")
-      private final @Nullable Output<String> logDestination;
+    private @Nullable Output<String> logDestination;
 
-    public Output<String> logDestination() {
-        return this.logDestination == null ? Codegen.empty() : this.logDestination;
+    public Optional<Output<String>> logDestination() {
+        return Optional.ofNullable(this.logDestination);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logDestinationType")
-      private final @Nullable Output<String> logDestinationType;
+    private @Nullable Output<String> logDestinationType;
 
-    public Output<String> logDestinationType() {
-        return this.logDestinationType == null ? Codegen.empty() : this.logDestinationType;
+    public Optional<Output<String>> logDestinationType() {
+        return Optional.ofNullable(this.logDestinationType);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logFormat")
-      private final @Nullable Output<String> logFormat;
+    private @Nullable Output<String> logFormat;
 
-    public Output<String> logFormat() {
-        return this.logFormat == null ? Codegen.empty() : this.logFormat;
+    public Optional<Output<String>> logFormat() {
+        return Optional.ofNullable(this.logFormat);
     }
 
     /**
@@ -104,11 +104,11 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* use 'log_destination' argument instead */
     @Import(name="logGroupName")
-      private final @Nullable Output<String> logGroupName;
+    private @Nullable Output<String> logGroupName;
 
     @Deprecated /* use 'log_destination' argument instead */
-    public Output<String> logGroupName() {
-        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
+    public Optional<Output<String>> logGroupName() {
+        return Optional.ofNullable(this.logGroupName);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxAggregationInterval")
-      private final @Nullable Output<Integer> maxAggregationInterval;
+    private @Nullable Output<Integer> maxAggregationInterval;
 
-    public Output<Integer> maxAggregationInterval() {
-        return this.maxAggregationInterval == null ? Codegen.empty() : this.maxAggregationInterval;
+    public Optional<Output<Integer>> maxAggregationInterval() {
+        return Optional.ofNullable(this.maxAggregationInterval);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trafficType")
-      private final @Nullable Output<String> trafficType;
+    private @Nullable Output<String> trafficType;
 
-    public Output<String> trafficType() {
-        return this.trafficType == null ? Codegen.empty() : this.trafficType;
+    public Optional<Output<String>> trafficType() {
+        return Optional.ofNullable(this.trafficType);
     }
 
     /**
@@ -174,219 +174,178 @@ public final class FlowLogState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public FlowLogState(
-        @Nullable Output<String> arn,
-        @Nullable Output<FlowLogDestinationOptionsGetArgs> destinationOptions,
-        @Nullable Output<String> eniId,
-        @Nullable Output<String> iamRoleArn,
-        @Nullable Output<String> logDestination,
-        @Nullable Output<String> logDestinationType,
-        @Nullable Output<String> logFormat,
-        @Nullable Output<String> logGroupName,
-        @Nullable Output<Integer> maxAggregationInterval,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> trafficType,
-        @Nullable Output<String> vpcId) {
-        this.arn = arn;
-        this.destinationOptions = destinationOptions;
-        this.eniId = eniId;
-        this.iamRoleArn = iamRoleArn;
-        this.logDestination = logDestination;
-        this.logDestinationType = logDestinationType;
-        this.logFormat = logFormat;
-        this.logGroupName = logGroupName;
-        this.maxAggregationInterval = maxAggregationInterval;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.trafficType = trafficType;
-        this.vpcId = vpcId;
-    }
+    private FlowLogState() {}
 
-    private FlowLogState() {
-        this.arn = Codegen.empty();
-        this.destinationOptions = Codegen.empty();
-        this.eniId = Codegen.empty();
-        this.iamRoleArn = Codegen.empty();
-        this.logDestination = Codegen.empty();
-        this.logDestinationType = Codegen.empty();
-        this.logFormat = Codegen.empty();
-        this.logGroupName = Codegen.empty();
-        this.maxAggregationInterval = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.trafficType = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private FlowLogState(FlowLogState $) {
+        this.arn = $.arn;
+        this.destinationOptions = $.destinationOptions;
+        this.eniId = $.eniId;
+        this.iamRoleArn = $.iamRoleArn;
+        this.logDestination = $.logDestination;
+        this.logDestinationType = $.logDestinationType;
+        this.logFormat = $.logFormat;
+        this.logGroupName = $.logGroupName;
+        this.maxAggregationInterval = $.maxAggregationInterval;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.trafficType = $.trafficType;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowLogState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<FlowLogDestinationOptionsGetArgs> destinationOptions;
-        private @Nullable Output<String> eniId;
-        private @Nullable Output<String> iamRoleArn;
-        private @Nullable Output<String> logDestination;
-        private @Nullable Output<String> logDestinationType;
-        private @Nullable Output<String> logFormat;
-        private @Nullable Output<String> logGroupName;
-        private @Nullable Output<Integer> maxAggregationInterval;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> trafficType;
-        private @Nullable Output<String> vpcId;
+        private FlowLogState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowLogState();
         }
 
         public Builder(FlowLogState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.destinationOptions = defaults.destinationOptions;
-    	      this.eniId = defaults.eniId;
-    	      this.iamRoleArn = defaults.iamRoleArn;
-    	      this.logDestination = defaults.logDestination;
-    	      this.logDestinationType = defaults.logDestinationType;
-    	      this.logFormat = defaults.logFormat;
-    	      this.logGroupName = defaults.logGroupName;
-    	      this.maxAggregationInterval = defaults.maxAggregationInterval;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.trafficType = defaults.trafficType;
-    	      this.vpcId = defaults.vpcId;
+            $ = new FlowLogState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder destinationOptions(@Nullable Output<FlowLogDestinationOptionsGetArgs> destinationOptions) {
-            this.destinationOptions = destinationOptions;
+            $.destinationOptions = destinationOptions;
             return this;
         }
-        public Builder destinationOptions(@Nullable FlowLogDestinationOptionsGetArgs destinationOptions) {
-            this.destinationOptions = Codegen.ofNullable(destinationOptions);
-            return this;
+
+        public Builder destinationOptions(FlowLogDestinationOptionsGetArgs destinationOptions) {
+            return destinationOptions(Output.of(destinationOptions));
         }
+
         public Builder eniId(@Nullable Output<String> eniId) {
-            this.eniId = eniId;
+            $.eniId = eniId;
             return this;
         }
-        public Builder eniId(@Nullable String eniId) {
-            this.eniId = Codegen.ofNullable(eniId);
-            return this;
+
+        public Builder eniId(String eniId) {
+            return eniId(Output.of(eniId));
         }
+
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
-            this.iamRoleArn = iamRoleArn;
+            $.iamRoleArn = iamRoleArn;
             return this;
         }
-        public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
-            return this;
+
+        public Builder iamRoleArn(String iamRoleArn) {
+            return iamRoleArn(Output.of(iamRoleArn));
         }
+
         public Builder logDestination(@Nullable Output<String> logDestination) {
-            this.logDestination = logDestination;
+            $.logDestination = logDestination;
             return this;
         }
-        public Builder logDestination(@Nullable String logDestination) {
-            this.logDestination = Codegen.ofNullable(logDestination);
-            return this;
+
+        public Builder logDestination(String logDestination) {
+            return logDestination(Output.of(logDestination));
         }
+
         public Builder logDestinationType(@Nullable Output<String> logDestinationType) {
-            this.logDestinationType = logDestinationType;
+            $.logDestinationType = logDestinationType;
             return this;
         }
-        public Builder logDestinationType(@Nullable String logDestinationType) {
-            this.logDestinationType = Codegen.ofNullable(logDestinationType);
-            return this;
+
+        public Builder logDestinationType(String logDestinationType) {
+            return logDestinationType(Output.of(logDestinationType));
         }
+
         public Builder logFormat(@Nullable Output<String> logFormat) {
-            this.logFormat = logFormat;
+            $.logFormat = logFormat;
             return this;
         }
-        public Builder logFormat(@Nullable String logFormat) {
-            this.logFormat = Codegen.ofNullable(logFormat);
-            return this;
+
+        public Builder logFormat(String logFormat) {
+            return logFormat(Output.of(logFormat));
         }
+
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
-            this.logGroupName = logGroupName;
+            $.logGroupName = logGroupName;
             return this;
         }
-        public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Codegen.ofNullable(logGroupName);
-            return this;
+
+        public Builder logGroupName(String logGroupName) {
+            return logGroupName(Output.of(logGroupName));
         }
+
         public Builder maxAggregationInterval(@Nullable Output<Integer> maxAggregationInterval) {
-            this.maxAggregationInterval = maxAggregationInterval;
+            $.maxAggregationInterval = maxAggregationInterval;
             return this;
         }
-        public Builder maxAggregationInterval(@Nullable Integer maxAggregationInterval) {
-            this.maxAggregationInterval = Codegen.ofNullable(maxAggregationInterval);
-            return this;
+
+        public Builder maxAggregationInterval(Integer maxAggregationInterval) {
+            return maxAggregationInterval(Output.of(maxAggregationInterval));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder trafficType(@Nullable Output<String> trafficType) {
-            this.trafficType = trafficType;
+            $.trafficType = trafficType;
             return this;
         }
-        public Builder trafficType(@Nullable String trafficType) {
-            this.trafficType = Codegen.ofNullable(trafficType);
-            return this;
+
+        public Builder trafficType(String trafficType) {
+            return trafficType(Output.of(trafficType));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public FlowLogState build() {
-            return new FlowLogState(arn, destinationOptions, eniId, iamRoleArn, logDestination, logDestinationType, logFormat, logGroupName, maxAggregationInterval, subnetId, tags, tagsAll, trafficType, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public FlowLogState build() {
+            return $;
         }
     }
+
 }

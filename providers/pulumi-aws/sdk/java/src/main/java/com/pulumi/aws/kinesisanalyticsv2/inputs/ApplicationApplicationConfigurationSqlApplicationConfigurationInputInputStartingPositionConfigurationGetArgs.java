@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="inputStartingPosition")
-      private final @Nullable Output<String> inputStartingPosition;
+    private @Nullable Output<String> inputStartingPosition;
 
-    public Output<String> inputStartingPosition() {
-        return this.inputStartingPosition == null ? Codegen.empty() : this.inputStartingPosition;
+    public Optional<Output<String>> inputStartingPosition() {
+        return Optional.ofNullable(this.inputStartingPosition);
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs(@Nullable Output<String> inputStartingPosition) {
-        this.inputStartingPosition = inputStartingPosition;
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs() {
-        this.inputStartingPosition = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs $) {
+        this.inputStartingPosition = $.inputStartingPosition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> inputStartingPosition;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputStartingPosition = defaults.inputStartingPosition;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputStartingPosition(@Nullable Output<String> inputStartingPosition) {
-            this.inputStartingPosition = inputStartingPosition;
+            $.inputStartingPosition = inputStartingPosition;
             return this;
         }
-        public Builder inputStartingPosition(@Nullable String inputStartingPosition) {
-            this.inputStartingPosition = Codegen.ofNullable(inputStartingPosition);
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs(inputStartingPosition);
+
+        public Builder inputStartingPosition(String inputStartingPosition) {
+            return inputStartingPosition(Output.of(inputStartingPosition));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

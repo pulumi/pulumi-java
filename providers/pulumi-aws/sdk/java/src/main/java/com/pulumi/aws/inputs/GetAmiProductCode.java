@@ -13,62 +13,59 @@ public final class GetAmiProductCode extends com.pulumi.resources.InvokeArgs {
     public static final GetAmiProductCode Empty = new GetAmiProductCode();
 
     @Import(name="productCodeId", required=true)
-      private final String productCodeId;
+    private String productCodeId;
 
     public String productCodeId() {
         return this.productCodeId;
     }
 
     @Import(name="productCodeType", required=true)
-      private final String productCodeType;
+    private String productCodeType;
 
     public String productCodeType() {
         return this.productCodeType;
     }
 
-    public GetAmiProductCode(
-        String productCodeId,
-        String productCodeType) {
-        this.productCodeId = Objects.requireNonNull(productCodeId, "expected parameter 'productCodeId' to be non-null");
-        this.productCodeType = Objects.requireNonNull(productCodeType, "expected parameter 'productCodeType' to be non-null");
-    }
+    private GetAmiProductCode() {}
 
-    private GetAmiProductCode() {
-        this.productCodeId = null;
-        this.productCodeType = null;
+    private GetAmiProductCode(GetAmiProductCode $) {
+        this.productCodeId = $.productCodeId;
+        this.productCodeType = $.productCodeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAmiProductCode defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String productCodeId;
-        private String productCodeType;
+        private GetAmiProductCode $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAmiProductCode();
         }
 
         public Builder(GetAmiProductCode defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.productCodeId = defaults.productCodeId;
-    	      this.productCodeType = defaults.productCodeType;
+            $ = new GetAmiProductCode(Objects.requireNonNull(defaults));
         }
 
         public Builder productCodeId(String productCodeId) {
-            this.productCodeId = Objects.requireNonNull(productCodeId);
+            $.productCodeId = productCodeId;
             return this;
         }
+
         public Builder productCodeType(String productCodeType) {
-            this.productCodeType = Objects.requireNonNull(productCodeType);
+            $.productCodeType = productCodeType;
             return this;
-        }        public GetAmiProductCode build() {
-            return new GetAmiProductCode(productCodeId, productCodeType);
+        }
+
+        public GetAmiProductCode build() {
+            $.productCodeId = Objects.requireNonNull($.productCodeId, "expected parameter 'productCodeId' to be non-null");
+            $.productCodeType = Objects.requireNonNull($.productCodeType, "expected parameter 'productCodeType' to be non-null");
+            return $;
         }
     }
+
 }

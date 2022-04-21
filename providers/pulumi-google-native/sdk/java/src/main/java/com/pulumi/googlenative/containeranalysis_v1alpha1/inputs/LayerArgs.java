@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.LayerDirective;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<String> arguments;
+    private @Nullable Output<String> arguments;
 
-    public Output<String> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<String>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class LayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="directive")
-      private final @Nullable Output<LayerDirective> directive;
+    private @Nullable Output<LayerDirective> directive;
 
-    public Output<LayerDirective> directive() {
-        return this.directive == null ? Codegen.empty() : this.directive;
+    public Optional<Output<LayerDirective>> directive() {
+        return Optional.ofNullable(this.directive);
     }
 
-    public LayerArgs(
-        @Nullable Output<String> arguments,
-        @Nullable Output<LayerDirective> directive) {
-        this.arguments = arguments;
-        this.directive = directive;
-    }
+    private LayerArgs() {}
 
-    private LayerArgs() {
-        this.arguments = Codegen.empty();
-        this.directive = Codegen.empty();
+    private LayerArgs(LayerArgs $) {
+        this.arguments = $.arguments;
+        this.directive = $.directive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LayerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arguments;
-        private @Nullable Output<LayerDirective> directive;
+        private LayerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LayerArgs();
         }
 
         public Builder(LayerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.directive = defaults.directive;
+            $ = new LayerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<String> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable String arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(String arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder directive(@Nullable Output<LayerDirective> directive) {
-            this.directive = directive;
+            $.directive = directive;
             return this;
         }
-        public Builder directive(@Nullable LayerDirective directive) {
-            this.directive = Codegen.ofNullable(directive);
-            return this;
-        }        public LayerArgs build() {
-            return new LayerArgs(arguments, directive);
+
+        public Builder directive(LayerDirective directive) {
+            return directive(Output.of(directive));
+        }
+
+        public LayerArgs build() {
+            return $;
         }
     }
+
 }

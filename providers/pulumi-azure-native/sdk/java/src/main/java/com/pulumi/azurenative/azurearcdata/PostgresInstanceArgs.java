@@ -8,10 +8,10 @@ import com.pulumi.azurenative.azurearcdata.inputs.PostgresInstancePropertiesArgs
 import com.pulumi.azurenative.azurearcdata.inputs.PostgresInstanceSkuArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PostgresInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="extendedLocation")
-      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
+    private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Output<ExtendedLocationArgs> extendedLocation() {
-        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
+    public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
+        return Optional.ofNullable(this.extendedLocation);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PostgresInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PostgresInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="postgresInstanceName")
-      private final @Nullable Output<String> postgresInstanceName;
+    private @Nullable Output<String> postgresInstanceName;
 
-    public Output<String> postgresInstanceName() {
-        return this.postgresInstanceName == null ? Codegen.empty() : this.postgresInstanceName;
+    public Optional<Output<String>> postgresInstanceName() {
+        return Optional.ofNullable(this.postgresInstanceName);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class PostgresInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<PostgresInstancePropertiesArgs> properties;
+    private Output<PostgresInstancePropertiesArgs> properties;
 
     public Output<PostgresInstancePropertiesArgs> properties() {
         return this.properties;
@@ -68,7 +68,7 @@ public final class PostgresInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -79,10 +79,10 @@ public final class PostgresInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<PostgresInstanceSkuArgs> sku;
+    private @Nullable Output<PostgresInstanceSkuArgs> sku;
 
-    public Output<PostgresInstanceSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<PostgresInstanceSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -90,128 +90,110 @@ public final class PostgresInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PostgresInstanceArgs(
-        @Nullable Output<ExtendedLocationArgs> extendedLocation,
-        @Nullable Output<String> location,
-        @Nullable Output<String> postgresInstanceName,
-        Output<PostgresInstancePropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        @Nullable Output<PostgresInstanceSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.extendedLocation = extendedLocation;
-        this.location = location;
-        this.postgresInstanceName = postgresInstanceName;
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private PostgresInstanceArgs() {}
 
-    private PostgresInstanceArgs() {
-        this.extendedLocation = Codegen.empty();
-        this.location = Codegen.empty();
-        this.postgresInstanceName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PostgresInstanceArgs(PostgresInstanceArgs $) {
+        this.extendedLocation = $.extendedLocation;
+        this.location = $.location;
+        this.postgresInstanceName = $.postgresInstanceName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PostgresInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> postgresInstanceName;
-        private Output<PostgresInstancePropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<PostgresInstanceSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private PostgresInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PostgresInstanceArgs();
         }
 
         public Builder(PostgresInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extendedLocation = defaults.extendedLocation;
-    	      this.location = defaults.location;
-    	      this.postgresInstanceName = defaults.postgresInstanceName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new PostgresInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
-            this.extendedLocation = extendedLocation;
+            $.extendedLocation = extendedLocation;
             return this;
         }
-        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Codegen.ofNullable(extendedLocation);
-            return this;
+
+        public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
+            return extendedLocation(Output.of(extendedLocation));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder postgresInstanceName(@Nullable Output<String> postgresInstanceName) {
-            this.postgresInstanceName = postgresInstanceName;
+            $.postgresInstanceName = postgresInstanceName;
             return this;
         }
-        public Builder postgresInstanceName(@Nullable String postgresInstanceName) {
-            this.postgresInstanceName = Codegen.ofNullable(postgresInstanceName);
-            return this;
+
+        public Builder postgresInstanceName(String postgresInstanceName) {
+            return postgresInstanceName(Output.of(postgresInstanceName));
         }
+
         public Builder properties(Output<PostgresInstancePropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(PostgresInstancePropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sku(@Nullable Output<PostgresInstanceSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable PostgresInstanceSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(PostgresInstanceSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PostgresInstanceArgs build() {
-            return new PostgresInstanceArgs(extendedLocation, location, postgresInstanceName, properties, resourceGroupName, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PostgresInstanceArgs build() {
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

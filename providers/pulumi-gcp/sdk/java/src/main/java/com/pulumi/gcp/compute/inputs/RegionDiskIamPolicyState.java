@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RegionDiskIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RegionDiskIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RegionDiskIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -55,109 +55,95 @@ public final class RegionDiskIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public RegionDiskIamPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> name,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.etag = etag;
-        this.name = name;
-        this.policyData = policyData;
-        this.project = project;
-        this.region = region;
-    }
+    private RegionDiskIamPolicyState() {}
 
-    private RegionDiskIamPolicyState() {
-        this.etag = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private RegionDiskIamPolicyState(RegionDiskIamPolicyState $) {
+        this.etag = $.etag;
+        this.name = $.name;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionDiskIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private RegionDiskIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionDiskIamPolicyState();
         }
 
         public Builder(RegionDiskIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.name = defaults.name;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new RegionDiskIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public RegionDiskIamPolicyState build() {
-            return new RegionDiskIamPolicyState(etag, name, policyData, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public RegionDiskIamPolicyState build() {
+            return $;
         }
     }
+
 }

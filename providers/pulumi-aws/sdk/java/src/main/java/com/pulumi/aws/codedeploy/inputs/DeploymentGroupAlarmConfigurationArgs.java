@@ -5,11 +5,11 @@ package com.pulumi.aws.codedeploy.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DeploymentGroupAlarmConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="alarms")
-      private final @Nullable Output<List<String>> alarms;
+    private @Nullable Output<List<String>> alarms;
 
-    public Output<List<String>> alarms() {
-        return this.alarms == null ? Codegen.empty() : this.alarms;
+    public Optional<Output<List<String>>> alarms() {
+        return Optional.ofNullable(this.alarms);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DeploymentGroupAlarmConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -46,79 +46,72 @@ public final class DeploymentGroupAlarmConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="ignorePollAlarmFailure")
-      private final @Nullable Output<Boolean> ignorePollAlarmFailure;
+    private @Nullable Output<Boolean> ignorePollAlarmFailure;
 
-    public Output<Boolean> ignorePollAlarmFailure() {
-        return this.ignorePollAlarmFailure == null ? Codegen.empty() : this.ignorePollAlarmFailure;
+    public Optional<Output<Boolean>> ignorePollAlarmFailure() {
+        return Optional.ofNullable(this.ignorePollAlarmFailure);
     }
 
-    public DeploymentGroupAlarmConfigurationArgs(
-        @Nullable Output<List<String>> alarms,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Boolean> ignorePollAlarmFailure) {
-        this.alarms = alarms;
-        this.enabled = enabled;
-        this.ignorePollAlarmFailure = ignorePollAlarmFailure;
-    }
+    private DeploymentGroupAlarmConfigurationArgs() {}
 
-    private DeploymentGroupAlarmConfigurationArgs() {
-        this.alarms = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.ignorePollAlarmFailure = Codegen.empty();
+    private DeploymentGroupAlarmConfigurationArgs(DeploymentGroupAlarmConfigurationArgs $) {
+        this.alarms = $.alarms;
+        this.enabled = $.enabled;
+        this.ignorePollAlarmFailure = $.ignorePollAlarmFailure;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentGroupAlarmConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> alarms;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Boolean> ignorePollAlarmFailure;
+        private DeploymentGroupAlarmConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentGroupAlarmConfigurationArgs();
         }
 
         public Builder(DeploymentGroupAlarmConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarms = defaults.alarms;
-    	      this.enabled = defaults.enabled;
-    	      this.ignorePollAlarmFailure = defaults.ignorePollAlarmFailure;
+            $ = new DeploymentGroupAlarmConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarms(@Nullable Output<List<String>> alarms) {
-            this.alarms = alarms;
+            $.alarms = alarms;
             return this;
         }
-        public Builder alarms(@Nullable List<String> alarms) {
-            this.alarms = Codegen.ofNullable(alarms);
-            return this;
+
+        public Builder alarms(List<String> alarms) {
+            return alarms(Output.of(alarms));
         }
+
         public Builder alarms(String... alarms) {
             return alarms(List.of(alarms));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder ignorePollAlarmFailure(@Nullable Output<Boolean> ignorePollAlarmFailure) {
-            this.ignorePollAlarmFailure = ignorePollAlarmFailure;
+            $.ignorePollAlarmFailure = ignorePollAlarmFailure;
             return this;
         }
-        public Builder ignorePollAlarmFailure(@Nullable Boolean ignorePollAlarmFailure) {
-            this.ignorePollAlarmFailure = Codegen.ofNullable(ignorePollAlarmFailure);
-            return this;
-        }        public DeploymentGroupAlarmConfigurationArgs build() {
-            return new DeploymentGroupAlarmConfigurationArgs(alarms, enabled, ignorePollAlarmFailure);
+
+        public Builder ignorePollAlarmFailure(Boolean ignorePollAlarmFailure) {
+            return ignorePollAlarmFailure(Output.of(ignorePollAlarmFailure));
+        }
+
+        public DeploymentGroupAlarmConfigurationArgs build() {
+            return $;
         }
     }
+
 }

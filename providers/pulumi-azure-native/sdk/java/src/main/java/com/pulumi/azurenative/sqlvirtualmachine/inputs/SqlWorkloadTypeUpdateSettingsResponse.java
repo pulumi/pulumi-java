@@ -23,45 +23,44 @@ public final class SqlWorkloadTypeUpdateSettingsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="sqlWorkloadType")
-      private final @Nullable String sqlWorkloadType;
+    private @Nullable String sqlWorkloadType;
 
     public Optional<String> sqlWorkloadType() {
-        return this.sqlWorkloadType == null ? Optional.empty() : Optional.ofNullable(this.sqlWorkloadType);
+        return Optional.ofNullable(this.sqlWorkloadType);
     }
 
-    public SqlWorkloadTypeUpdateSettingsResponse(@Nullable String sqlWorkloadType) {
-        this.sqlWorkloadType = sqlWorkloadType;
-    }
+    private SqlWorkloadTypeUpdateSettingsResponse() {}
 
-    private SqlWorkloadTypeUpdateSettingsResponse() {
-        this.sqlWorkloadType = null;
+    private SqlWorkloadTypeUpdateSettingsResponse(SqlWorkloadTypeUpdateSettingsResponse $) {
+        this.sqlWorkloadType = $.sqlWorkloadType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlWorkloadTypeUpdateSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String sqlWorkloadType;
+        private SqlWorkloadTypeUpdateSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlWorkloadTypeUpdateSettingsResponse();
         }
 
         public Builder(SqlWorkloadTypeUpdateSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sqlWorkloadType = defaults.sqlWorkloadType;
+            $ = new SqlWorkloadTypeUpdateSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sqlWorkloadType(@Nullable String sqlWorkloadType) {
-            this.sqlWorkloadType = sqlWorkloadType;
+            $.sqlWorkloadType = sqlWorkloadType;
             return this;
-        }        public SqlWorkloadTypeUpdateSettingsResponse build() {
-            return new SqlWorkloadTypeUpdateSettingsResponse(sqlWorkloadType);
+        }
+
+        public SqlWorkloadTypeUpdateSettingsResponse build() {
+            return $;
         }
     }
+
 }

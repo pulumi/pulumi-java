@@ -14,84 +14,81 @@ public final class GetFunctionVpcConfig extends com.pulumi.resources.InvokeArgs 
     public static final GetFunctionVpcConfig Empty = new GetFunctionVpcConfig();
 
     @Import(name="securityGroupIds", required=true)
-      private final List<String> securityGroupIds;
+    private List<String> securityGroupIds;
 
     public List<String> securityGroupIds() {
         return this.securityGroupIds;
     }
 
     @Import(name="subnetIds", required=true)
-      private final List<String> subnetIds;
+    private List<String> subnetIds;
 
     public List<String> subnetIds() {
         return this.subnetIds;
     }
 
     @Import(name="vpcId", required=true)
-      private final String vpcId;
+    private String vpcId;
 
     public String vpcId() {
         return this.vpcId;
     }
 
-    public GetFunctionVpcConfig(
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        String vpcId) {
-        this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
-        this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private GetFunctionVpcConfig() {}
 
-    private GetFunctionVpcConfig() {
-        this.securityGroupIds = List.of();
-        this.subnetIds = List.of();
-        this.vpcId = null;
+    private GetFunctionVpcConfig(GetFunctionVpcConfig $) {
+        this.securityGroupIds = $.securityGroupIds;
+        this.subnetIds = $.subnetIds;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionVpcConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> securityGroupIds;
-        private List<String> subnetIds;
-        private String vpcId;
+        private GetFunctionVpcConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionVpcConfig();
         }
 
         public Builder(GetFunctionVpcConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetFunctionVpcConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Objects.requireNonNull(subnetIds);
+            $.subnetIds = subnetIds;
             return this;
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
-        }        public GetFunctionVpcConfig build() {
-            return new GetFunctionVpcConfig(securityGroupIds, subnetIds, vpcId);
+        }
+
+        public GetFunctionVpcConfig build() {
+            $.securityGroupIds = Objects.requireNonNull($.securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
+            $.subnetIds = Objects.requireNonNull($.subnetIds, "expected parameter 'subnetIds' to be non-null");
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

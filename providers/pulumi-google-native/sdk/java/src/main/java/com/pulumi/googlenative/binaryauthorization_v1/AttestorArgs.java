@@ -5,10 +5,10 @@ package com.pulumi.googlenative.binaryauthorization_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.binaryauthorization_v1.inputs.UserOwnedGrafeasNoteArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
     public static final AttestorArgs Empty = new AttestorArgs();
 
     @Import(name="attestorId", required=true)
-      private final Output<String> attestorId;
+    private Output<String> attestorId;
 
     public Output<String> attestorId() {
         return this.attestorId;
@@ -28,10 +28,10 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -39,17 +39,17 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -57,102 +57,89 @@ public final class AttestorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userOwnedGrafeasNote")
-      private final @Nullable Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote;
+    private @Nullable Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote;
 
-    public Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote() {
-        return this.userOwnedGrafeasNote == null ? Codegen.empty() : this.userOwnedGrafeasNote;
+    public Optional<Output<UserOwnedGrafeasNoteArgs>> userOwnedGrafeasNote() {
+        return Optional.ofNullable(this.userOwnedGrafeasNote);
     }
 
-    public AttestorArgs(
-        Output<String> attestorId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote) {
-        this.attestorId = Objects.requireNonNull(attestorId, "expected parameter 'attestorId' to be non-null");
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.userOwnedGrafeasNote = userOwnedGrafeasNote;
-    }
+    private AttestorArgs() {}
 
-    private AttestorArgs() {
-        this.attestorId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.userOwnedGrafeasNote = Codegen.empty();
+    private AttestorArgs(AttestorArgs $) {
+        this.attestorId = $.attestorId;
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.userOwnedGrafeasNote = $.userOwnedGrafeasNote;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attestorId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote;
+        private AttestorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestorArgs();
         }
 
         public Builder(AttestorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestorId = defaults.attestorId;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.userOwnedGrafeasNote = defaults.userOwnedGrafeasNote;
+            $ = new AttestorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestorId(Output<String> attestorId) {
-            this.attestorId = Objects.requireNonNull(attestorId);
+            $.attestorId = attestorId;
             return this;
         }
+
         public Builder attestorId(String attestorId) {
-            this.attestorId = Output.of(Objects.requireNonNull(attestorId));
-            return this;
+            return attestorId(Output.of(attestorId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder userOwnedGrafeasNote(@Nullable Output<UserOwnedGrafeasNoteArgs> userOwnedGrafeasNote) {
-            this.userOwnedGrafeasNote = userOwnedGrafeasNote;
+            $.userOwnedGrafeasNote = userOwnedGrafeasNote;
             return this;
         }
-        public Builder userOwnedGrafeasNote(@Nullable UserOwnedGrafeasNoteArgs userOwnedGrafeasNote) {
-            this.userOwnedGrafeasNote = Codegen.ofNullable(userOwnedGrafeasNote);
-            return this;
-        }        public AttestorArgs build() {
-            return new AttestorArgs(attestorId, description, name, project, userOwnedGrafeasNote);
+
+        public Builder userOwnedGrafeasNote(UserOwnedGrafeasNoteArgs userOwnedGrafeasNote) {
+            return userOwnedGrafeasNote(Output.of(userOwnedGrafeasNote));
+        }
+
+        public AttestorArgs build() {
+            $.attestorId = Objects.requireNonNull($.attestorId, "expected parameter 'attestorId' to be non-null");
+            return $;
         }
     }
+
 }

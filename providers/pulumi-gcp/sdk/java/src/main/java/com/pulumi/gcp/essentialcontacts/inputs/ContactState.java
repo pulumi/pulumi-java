@@ -5,10 +5,10 @@ package com.pulumi.gcp.essentialcontacts.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ContactState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ContactState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageTag")
-      private final @Nullable Output<String> languageTag;
+    private @Nullable Output<String> languageTag;
 
-    public Output<String> languageTag() {
-        return this.languageTag == null ? Codegen.empty() : this.languageTag;
+    public Optional<Output<String>> languageTag() {
+        return Optional.ofNullable(this.languageTag);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ContactState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ContactState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationCategorySubscriptions")
-      private final @Nullable Output<List<String>> notificationCategorySubscriptions;
+    private @Nullable Output<List<String>> notificationCategorySubscriptions;
 
-    public Output<List<String>> notificationCategorySubscriptions() {
-        return this.notificationCategorySubscriptions == null ? Codegen.empty() : this.notificationCategorySubscriptions;
+    public Optional<Output<List<String>>> notificationCategorySubscriptions() {
+        return Optional.ofNullable(this.notificationCategorySubscriptions);
     }
 
     /**
@@ -65,105 +65,92 @@ public final class ContactState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
-    public ContactState(
-        @Nullable Output<String> email,
-        @Nullable Output<String> languageTag,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> notificationCategorySubscriptions,
-        @Nullable Output<String> parent) {
-        this.email = email;
-        this.languageTag = languageTag;
-        this.name = name;
-        this.notificationCategorySubscriptions = notificationCategorySubscriptions;
-        this.parent = parent;
-    }
+    private ContactState() {}
 
-    private ContactState() {
-        this.email = Codegen.empty();
-        this.languageTag = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationCategorySubscriptions = Codegen.empty();
-        this.parent = Codegen.empty();
+    private ContactState(ContactState $) {
+        this.email = $.email;
+        this.languageTag = $.languageTag;
+        this.name = $.name;
+        this.notificationCategorySubscriptions = $.notificationCategorySubscriptions;
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> languageTag;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> notificationCategorySubscriptions;
-        private @Nullable Output<String> parent;
+        private ContactState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactState();
         }
 
         public Builder(ContactState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.languageTag = defaults.languageTag;
-    	      this.name = defaults.name;
-    	      this.notificationCategorySubscriptions = defaults.notificationCategorySubscriptions;
-    	      this.parent = defaults.parent;
+            $ = new ContactState(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder languageTag(@Nullable Output<String> languageTag) {
-            this.languageTag = languageTag;
+            $.languageTag = languageTag;
             return this;
         }
-        public Builder languageTag(@Nullable String languageTag) {
-            this.languageTag = Codegen.ofNullable(languageTag);
-            return this;
+
+        public Builder languageTag(String languageTag) {
+            return languageTag(Output.of(languageTag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationCategorySubscriptions(@Nullable Output<List<String>> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = notificationCategorySubscriptions;
+            $.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
-        public Builder notificationCategorySubscriptions(@Nullable List<String> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Codegen.ofNullable(notificationCategorySubscriptions);
-            return this;
+
+        public Builder notificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
+            return notificationCategorySubscriptions(Output.of(notificationCategorySubscriptions));
         }
+
         public Builder notificationCategorySubscriptions(String... notificationCategorySubscriptions) {
             return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
-        }        public ContactState build() {
-            return new ContactState(email, languageTag, name, notificationCategorySubscriptions, parent);
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
+        }
+
+        public ContactState build() {
+            return $;
         }
     }
+
 }

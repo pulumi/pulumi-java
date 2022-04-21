@@ -6,9 +6,9 @@ package com.pulumi.awsnative.athena.inputs;
 import com.pulumi.awsnative.athena.enums.WorkGroupEncryptionOption;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,66 @@ public final class WorkGroupEncryptionConfigurationArgs extends com.pulumi.resou
     public static final WorkGroupEncryptionConfigurationArgs Empty = new WorkGroupEncryptionConfigurationArgs();
 
     @Import(name="encryptionOption", required=true)
-      private final Output<WorkGroupEncryptionOption> encryptionOption;
+    private Output<WorkGroupEncryptionOption> encryptionOption;
 
     public Output<WorkGroupEncryptionOption> encryptionOption() {
         return this.encryptionOption;
     }
 
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
-    public WorkGroupEncryptionConfigurationArgs(
-        Output<WorkGroupEncryptionOption> encryptionOption,
-        @Nullable Output<String> kmsKey) {
-        this.encryptionOption = Objects.requireNonNull(encryptionOption, "expected parameter 'encryptionOption' to be non-null");
-        this.kmsKey = kmsKey;
-    }
+    private WorkGroupEncryptionConfigurationArgs() {}
 
-    private WorkGroupEncryptionConfigurationArgs() {
-        this.encryptionOption = Codegen.empty();
-        this.kmsKey = Codegen.empty();
+    private WorkGroupEncryptionConfigurationArgs(WorkGroupEncryptionConfigurationArgs $) {
+        this.encryptionOption = $.encryptionOption;
+        this.kmsKey = $.kmsKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkGroupEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<WorkGroupEncryptionOption> encryptionOption;
-        private @Nullable Output<String> kmsKey;
+        private WorkGroupEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkGroupEncryptionConfigurationArgs();
         }
 
         public Builder(WorkGroupEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionOption = defaults.encryptionOption;
-    	      this.kmsKey = defaults.kmsKey;
+            $ = new WorkGroupEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionOption(Output<WorkGroupEncryptionOption> encryptionOption) {
-            this.encryptionOption = Objects.requireNonNull(encryptionOption);
+            $.encryptionOption = encryptionOption;
             return this;
         }
+
         public Builder encryptionOption(WorkGroupEncryptionOption encryptionOption) {
-            this.encryptionOption = Output.of(Objects.requireNonNull(encryptionOption));
-            return this;
+            return encryptionOption(Output.of(encryptionOption));
         }
+
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
-        }        public WorkGroupEncryptionConfigurationArgs build() {
-            return new WorkGroupEncryptionConfigurationArgs(encryptionOption, kmsKey);
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
+        }
+
+        public WorkGroupEncryptionConfigurationArgs build() {
+            $.encryptionOption = Objects.requireNonNull($.encryptionOption, "expected parameter 'encryptionOption' to be non-null");
+            return $;
         }
     }
+
 }

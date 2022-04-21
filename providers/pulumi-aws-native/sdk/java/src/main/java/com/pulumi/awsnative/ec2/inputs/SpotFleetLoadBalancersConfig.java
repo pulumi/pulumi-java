@@ -16,62 +16,57 @@ public final class SpotFleetLoadBalancersConfig extends com.pulumi.resources.Inv
     public static final SpotFleetLoadBalancersConfig Empty = new SpotFleetLoadBalancersConfig();
 
     @Import(name="classicLoadBalancersConfig")
-      private final @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig;
+    private @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig;
 
     public Optional<SpotFleetClassicLoadBalancersConfig> classicLoadBalancersConfig() {
-        return this.classicLoadBalancersConfig == null ? Optional.empty() : Optional.ofNullable(this.classicLoadBalancersConfig);
+        return Optional.ofNullable(this.classicLoadBalancersConfig);
     }
 
     @Import(name="targetGroupsConfig")
-      private final @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig;
+    private @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig;
 
     public Optional<SpotFleetTargetGroupsConfig> targetGroupsConfig() {
-        return this.targetGroupsConfig == null ? Optional.empty() : Optional.ofNullable(this.targetGroupsConfig);
+        return Optional.ofNullable(this.targetGroupsConfig);
     }
 
-    public SpotFleetLoadBalancersConfig(
-        @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig,
-        @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig) {
-        this.classicLoadBalancersConfig = classicLoadBalancersConfig;
-        this.targetGroupsConfig = targetGroupsConfig;
-    }
+    private SpotFleetLoadBalancersConfig() {}
 
-    private SpotFleetLoadBalancersConfig() {
-        this.classicLoadBalancersConfig = null;
-        this.targetGroupsConfig = null;
+    private SpotFleetLoadBalancersConfig(SpotFleetLoadBalancersConfig $) {
+        this.classicLoadBalancersConfig = $.classicLoadBalancersConfig;
+        this.targetGroupsConfig = $.targetGroupsConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetLoadBalancersConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig;
-        private @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig;
+        private SpotFleetLoadBalancersConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetLoadBalancersConfig();
         }
 
         public Builder(SpotFleetLoadBalancersConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classicLoadBalancersConfig = defaults.classicLoadBalancersConfig;
-    	      this.targetGroupsConfig = defaults.targetGroupsConfig;
+            $ = new SpotFleetLoadBalancersConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder classicLoadBalancersConfig(@Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig) {
-            this.classicLoadBalancersConfig = classicLoadBalancersConfig;
+            $.classicLoadBalancersConfig = classicLoadBalancersConfig;
             return this;
         }
+
         public Builder targetGroupsConfig(@Nullable SpotFleetTargetGroupsConfig targetGroupsConfig) {
-            this.targetGroupsConfig = targetGroupsConfig;
+            $.targetGroupsConfig = targetGroupsConfig;
             return this;
-        }        public SpotFleetLoadBalancersConfig build() {
-            return new SpotFleetLoadBalancersConfig(classicLoadBalancersConfig, targetGroupsConfig);
+        }
+
+        public SpotFleetLoadBalancersConfig build() {
+            return $;
         }
     }
+
 }

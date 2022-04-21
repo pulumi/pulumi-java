@@ -23,7 +23,7 @@ public final class ImageAnnotationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="boundingPolys", required=true)
-      private final List<BoundingPolyResponse> boundingPolys;
+    private List<BoundingPolyResponse> boundingPolys;
 
     public List<BoundingPolyResponse> boundingPolys() {
         return this.boundingPolys;
@@ -34,58 +34,56 @@ public final class ImageAnnotationResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="frameIndex", required=true)
-      private final Integer frameIndex;
+    private Integer frameIndex;
 
     public Integer frameIndex() {
         return this.frameIndex;
     }
 
-    public ImageAnnotationResponse(
-        List<BoundingPolyResponse> boundingPolys,
-        Integer frameIndex) {
-        this.boundingPolys = Objects.requireNonNull(boundingPolys, "expected parameter 'boundingPolys' to be non-null");
-        this.frameIndex = Objects.requireNonNull(frameIndex, "expected parameter 'frameIndex' to be non-null");
-    }
+    private ImageAnnotationResponse() {}
 
-    private ImageAnnotationResponse() {
-        this.boundingPolys = List.of();
-        this.frameIndex = null;
+    private ImageAnnotationResponse(ImageAnnotationResponse $) {
+        this.boundingPolys = $.boundingPolys;
+        this.frameIndex = $.frameIndex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageAnnotationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BoundingPolyResponse> boundingPolys;
-        private Integer frameIndex;
+        private ImageAnnotationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageAnnotationResponse();
         }
 
         public Builder(ImageAnnotationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boundingPolys = defaults.boundingPolys;
-    	      this.frameIndex = defaults.frameIndex;
+            $ = new ImageAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder boundingPolys(List<BoundingPolyResponse> boundingPolys) {
-            this.boundingPolys = Objects.requireNonNull(boundingPolys);
+            $.boundingPolys = boundingPolys;
             return this;
         }
+
         public Builder boundingPolys(BoundingPolyResponse... boundingPolys) {
             return boundingPolys(List.of(boundingPolys));
         }
+
         public Builder frameIndex(Integer frameIndex) {
-            this.frameIndex = Objects.requireNonNull(frameIndex);
+            $.frameIndex = frameIndex;
             return this;
-        }        public ImageAnnotationResponse build() {
-            return new ImageAnnotationResponse(boundingPolys, frameIndex);
+        }
+
+        public ImageAnnotationResponse build() {
+            $.boundingPolys = Objects.requireNonNull($.boundingPolys, "expected parameter 'boundingPolys' to be non-null");
+            $.frameIndex = Objects.requireNonNull($.frameIndex, "expected parameter 'frameIndex' to be non-null");
+            return $;
         }
     }
+
 }

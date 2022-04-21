@@ -15,62 +15,58 @@ public final class GetBrandArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBrandArgs Empty = new GetBrandArgs();
 
     @Import(name="brandId", required=true)
-      private final String brandId;
+    private String brandId;
 
     public String brandId() {
         return this.brandId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetBrandArgs(
-        String brandId,
-        @Nullable String project) {
-        this.brandId = Objects.requireNonNull(brandId, "expected parameter 'brandId' to be non-null");
-        this.project = project;
-    }
+    private GetBrandArgs() {}
 
-    private GetBrandArgs() {
-        this.brandId = null;
-        this.project = null;
+    private GetBrandArgs(GetBrandArgs $) {
+        this.brandId = $.brandId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBrandArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String brandId;
-        private @Nullable String project;
+        private GetBrandArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBrandArgs();
         }
 
         public Builder(GetBrandArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brandId = defaults.brandId;
-    	      this.project = defaults.project;
+            $ = new GetBrandArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brandId(String brandId) {
-            this.brandId = Objects.requireNonNull(brandId);
+            $.brandId = brandId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetBrandArgs build() {
-            return new GetBrandArgs(brandId, project);
+        }
+
+        public GetBrandArgs build() {
+            $.brandId = Objects.requireNonNull($.brandId, "expected parameter 'brandId' to be non-null");
+            return $;
         }
     }
+
 }

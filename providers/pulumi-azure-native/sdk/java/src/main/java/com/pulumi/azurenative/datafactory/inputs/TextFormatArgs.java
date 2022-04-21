@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columnDelimiter")
-      private final @Nullable Output<Object> columnDelimiter;
+    private @Nullable Output<Object> columnDelimiter;
 
-    public Output<Object> columnDelimiter() {
-        return this.columnDelimiter == null ? Codegen.empty() : this.columnDelimiter;
+    public Optional<Output<Object>> columnDelimiter() {
+        return Optional.ofNullable(this.columnDelimiter);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deserializer")
-      private final @Nullable Output<Object> deserializer;
+    private @Nullable Output<Object> deserializer;
 
-    public Output<Object> deserializer() {
-        return this.deserializer == null ? Codegen.empty() : this.deserializer;
+    public Optional<Output<Object>> deserializer() {
+        return Optional.ofNullable(this.deserializer);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encodingName")
-      private final @Nullable Output<Object> encodingName;
+    private @Nullable Output<Object> encodingName;
 
-    public Output<Object> encodingName() {
-        return this.encodingName == null ? Codegen.empty() : this.encodingName;
+    public Optional<Output<Object>> encodingName() {
+        return Optional.ofNullable(this.encodingName);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="escapeChar")
-      private final @Nullable Output<Object> escapeChar;
+    private @Nullable Output<Object> escapeChar;
 
-    public Output<Object> escapeChar() {
-        return this.escapeChar == null ? Codegen.empty() : this.escapeChar;
+    public Optional<Output<Object>> escapeChar() {
+        return Optional.ofNullable(this.escapeChar);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstRowAsHeader")
-      private final @Nullable Output<Object> firstRowAsHeader;
+    private @Nullable Output<Object> firstRowAsHeader;
 
-    public Output<Object> firstRowAsHeader() {
-        return this.firstRowAsHeader == null ? Codegen.empty() : this.firstRowAsHeader;
+    public Optional<Output<Object>> firstRowAsHeader() {
+        return Optional.ofNullable(this.firstRowAsHeader);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nullValue")
-      private final @Nullable Output<Object> nullValue;
+    private @Nullable Output<Object> nullValue;
 
-    public Output<Object> nullValue() {
-        return this.nullValue == null ? Codegen.empty() : this.nullValue;
+    public Optional<Output<Object>> nullValue() {
+        return Optional.ofNullable(this.nullValue);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quoteChar")
-      private final @Nullable Output<Object> quoteChar;
+    private @Nullable Output<Object> quoteChar;
 
-    public Output<Object> quoteChar() {
-        return this.quoteChar == null ? Codegen.empty() : this.quoteChar;
+    public Optional<Output<Object>> quoteChar() {
+        return Optional.ofNullable(this.quoteChar);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rowDelimiter")
-      private final @Nullable Output<Object> rowDelimiter;
+    private @Nullable Output<Object> rowDelimiter;
 
-    public Output<Object> rowDelimiter() {
-        return this.rowDelimiter == null ? Codegen.empty() : this.rowDelimiter;
+    public Optional<Output<Object>> rowDelimiter() {
+        return Optional.ofNullable(this.rowDelimiter);
     }
 
     /**
@@ -113,10 +114,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serializer")
-      private final @Nullable Output<Object> serializer;
+    private @Nullable Output<Object> serializer;
 
-    public Output<Object> serializer() {
-        return this.serializer == null ? Codegen.empty() : this.serializer;
+    public Optional<Output<Object>> serializer() {
+        return Optional.ofNullable(this.serializer);
     }
 
     /**
@@ -124,10 +125,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skipLineCount")
-      private final @Nullable Output<Object> skipLineCount;
+    private @Nullable Output<Object> skipLineCount;
 
-    public Output<Object> skipLineCount() {
-        return this.skipLineCount == null ? Codegen.empty() : this.skipLineCount;
+    public Optional<Output<Object>> skipLineCount() {
+        return Optional.ofNullable(this.skipLineCount);
     }
 
     /**
@@ -135,10 +136,10 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="treatEmptyAsNull")
-      private final @Nullable Output<Object> treatEmptyAsNull;
+    private @Nullable Output<Object> treatEmptyAsNull;
 
-    public Output<Object> treatEmptyAsNull() {
-        return this.treatEmptyAsNull == null ? Codegen.empty() : this.treatEmptyAsNull;
+    public Optional<Output<Object>> treatEmptyAsNull() {
+        return Optional.ofNullable(this.treatEmptyAsNull);
     }
 
     /**
@@ -147,193 +148,159 @@ public final class TextFormatArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public TextFormatArgs(
-        @Nullable Output<Object> columnDelimiter,
-        @Nullable Output<Object> deserializer,
-        @Nullable Output<Object> encodingName,
-        @Nullable Output<Object> escapeChar,
-        @Nullable Output<Object> firstRowAsHeader,
-        @Nullable Output<Object> nullValue,
-        @Nullable Output<Object> quoteChar,
-        @Nullable Output<Object> rowDelimiter,
-        @Nullable Output<Object> serializer,
-        @Nullable Output<Object> skipLineCount,
-        @Nullable Output<Object> treatEmptyAsNull,
-        Output<String> type) {
-        this.columnDelimiter = columnDelimiter;
-        this.deserializer = deserializer;
-        this.encodingName = encodingName;
-        this.escapeChar = escapeChar;
-        this.firstRowAsHeader = firstRowAsHeader;
-        this.nullValue = nullValue;
-        this.quoteChar = quoteChar;
-        this.rowDelimiter = rowDelimiter;
-        this.serializer = serializer;
-        this.skipLineCount = skipLineCount;
-        this.treatEmptyAsNull = treatEmptyAsNull;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private TextFormatArgs() {}
 
-    private TextFormatArgs() {
-        this.columnDelimiter = Codegen.empty();
-        this.deserializer = Codegen.empty();
-        this.encodingName = Codegen.empty();
-        this.escapeChar = Codegen.empty();
-        this.firstRowAsHeader = Codegen.empty();
-        this.nullValue = Codegen.empty();
-        this.quoteChar = Codegen.empty();
-        this.rowDelimiter = Codegen.empty();
-        this.serializer = Codegen.empty();
-        this.skipLineCount = Codegen.empty();
-        this.treatEmptyAsNull = Codegen.empty();
-        this.type = Codegen.empty();
+    private TextFormatArgs(TextFormatArgs $) {
+        this.columnDelimiter = $.columnDelimiter;
+        this.deserializer = $.deserializer;
+        this.encodingName = $.encodingName;
+        this.escapeChar = $.escapeChar;
+        this.firstRowAsHeader = $.firstRowAsHeader;
+        this.nullValue = $.nullValue;
+        this.quoteChar = $.quoteChar;
+        this.rowDelimiter = $.rowDelimiter;
+        this.serializer = $.serializer;
+        this.skipLineCount = $.skipLineCount;
+        this.treatEmptyAsNull = $.treatEmptyAsNull;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TextFormatArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> columnDelimiter;
-        private @Nullable Output<Object> deserializer;
-        private @Nullable Output<Object> encodingName;
-        private @Nullable Output<Object> escapeChar;
-        private @Nullable Output<Object> firstRowAsHeader;
-        private @Nullable Output<Object> nullValue;
-        private @Nullable Output<Object> quoteChar;
-        private @Nullable Output<Object> rowDelimiter;
-        private @Nullable Output<Object> serializer;
-        private @Nullable Output<Object> skipLineCount;
-        private @Nullable Output<Object> treatEmptyAsNull;
-        private Output<String> type;
+        private TextFormatArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TextFormatArgs();
         }
 
         public Builder(TextFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnDelimiter = defaults.columnDelimiter;
-    	      this.deserializer = defaults.deserializer;
-    	      this.encodingName = defaults.encodingName;
-    	      this.escapeChar = defaults.escapeChar;
-    	      this.firstRowAsHeader = defaults.firstRowAsHeader;
-    	      this.nullValue = defaults.nullValue;
-    	      this.quoteChar = defaults.quoteChar;
-    	      this.rowDelimiter = defaults.rowDelimiter;
-    	      this.serializer = defaults.serializer;
-    	      this.skipLineCount = defaults.skipLineCount;
-    	      this.treatEmptyAsNull = defaults.treatEmptyAsNull;
-    	      this.type = defaults.type;
+            $ = new TextFormatArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnDelimiter(@Nullable Output<Object> columnDelimiter) {
-            this.columnDelimiter = columnDelimiter;
+            $.columnDelimiter = columnDelimiter;
             return this;
         }
-        public Builder columnDelimiter(@Nullable Object columnDelimiter) {
-            this.columnDelimiter = Codegen.ofNullable(columnDelimiter);
-            return this;
+
+        public Builder columnDelimiter(Object columnDelimiter) {
+            return columnDelimiter(Output.of(columnDelimiter));
         }
+
         public Builder deserializer(@Nullable Output<Object> deserializer) {
-            this.deserializer = deserializer;
+            $.deserializer = deserializer;
             return this;
         }
-        public Builder deserializer(@Nullable Object deserializer) {
-            this.deserializer = Codegen.ofNullable(deserializer);
-            return this;
+
+        public Builder deserializer(Object deserializer) {
+            return deserializer(Output.of(deserializer));
         }
+
         public Builder encodingName(@Nullable Output<Object> encodingName) {
-            this.encodingName = encodingName;
+            $.encodingName = encodingName;
             return this;
         }
-        public Builder encodingName(@Nullable Object encodingName) {
-            this.encodingName = Codegen.ofNullable(encodingName);
-            return this;
+
+        public Builder encodingName(Object encodingName) {
+            return encodingName(Output.of(encodingName));
         }
+
         public Builder escapeChar(@Nullable Output<Object> escapeChar) {
-            this.escapeChar = escapeChar;
+            $.escapeChar = escapeChar;
             return this;
         }
-        public Builder escapeChar(@Nullable Object escapeChar) {
-            this.escapeChar = Codegen.ofNullable(escapeChar);
-            return this;
+
+        public Builder escapeChar(Object escapeChar) {
+            return escapeChar(Output.of(escapeChar));
         }
+
         public Builder firstRowAsHeader(@Nullable Output<Object> firstRowAsHeader) {
-            this.firstRowAsHeader = firstRowAsHeader;
+            $.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
-        public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
-            this.firstRowAsHeader = Codegen.ofNullable(firstRowAsHeader);
-            return this;
+
+        public Builder firstRowAsHeader(Object firstRowAsHeader) {
+            return firstRowAsHeader(Output.of(firstRowAsHeader));
         }
+
         public Builder nullValue(@Nullable Output<Object> nullValue) {
-            this.nullValue = nullValue;
+            $.nullValue = nullValue;
             return this;
         }
-        public Builder nullValue(@Nullable Object nullValue) {
-            this.nullValue = Codegen.ofNullable(nullValue);
-            return this;
+
+        public Builder nullValue(Object nullValue) {
+            return nullValue(Output.of(nullValue));
         }
+
         public Builder quoteChar(@Nullable Output<Object> quoteChar) {
-            this.quoteChar = quoteChar;
+            $.quoteChar = quoteChar;
             return this;
         }
-        public Builder quoteChar(@Nullable Object quoteChar) {
-            this.quoteChar = Codegen.ofNullable(quoteChar);
-            return this;
+
+        public Builder quoteChar(Object quoteChar) {
+            return quoteChar(Output.of(quoteChar));
         }
+
         public Builder rowDelimiter(@Nullable Output<Object> rowDelimiter) {
-            this.rowDelimiter = rowDelimiter;
+            $.rowDelimiter = rowDelimiter;
             return this;
         }
-        public Builder rowDelimiter(@Nullable Object rowDelimiter) {
-            this.rowDelimiter = Codegen.ofNullable(rowDelimiter);
-            return this;
+
+        public Builder rowDelimiter(Object rowDelimiter) {
+            return rowDelimiter(Output.of(rowDelimiter));
         }
+
         public Builder serializer(@Nullable Output<Object> serializer) {
-            this.serializer = serializer;
+            $.serializer = serializer;
             return this;
         }
-        public Builder serializer(@Nullable Object serializer) {
-            this.serializer = Codegen.ofNullable(serializer);
-            return this;
+
+        public Builder serializer(Object serializer) {
+            return serializer(Output.of(serializer));
         }
+
         public Builder skipLineCount(@Nullable Output<Object> skipLineCount) {
-            this.skipLineCount = skipLineCount;
+            $.skipLineCount = skipLineCount;
             return this;
         }
-        public Builder skipLineCount(@Nullable Object skipLineCount) {
-            this.skipLineCount = Codegen.ofNullable(skipLineCount);
-            return this;
+
+        public Builder skipLineCount(Object skipLineCount) {
+            return skipLineCount(Output.of(skipLineCount));
         }
+
         public Builder treatEmptyAsNull(@Nullable Output<Object> treatEmptyAsNull) {
-            this.treatEmptyAsNull = treatEmptyAsNull;
+            $.treatEmptyAsNull = treatEmptyAsNull;
             return this;
         }
-        public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
-            this.treatEmptyAsNull = Codegen.ofNullable(treatEmptyAsNull);
-            return this;
+
+        public Builder treatEmptyAsNull(Object treatEmptyAsNull) {
+            return treatEmptyAsNull(Output.of(treatEmptyAsNull));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public TextFormatArgs build() {
-            return new TextFormatArgs(columnDelimiter, deserializer, encodingName, escapeChar, firstRowAsHeader, nullValue, quoteChar, rowDelimiter, serializer, skipLineCount, treatEmptyAsNull, type);
+            return type(Output.of(type));
+        }
+
+        public TextFormatArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

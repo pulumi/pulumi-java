@@ -19,7 +19,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="cdcDeleteCounter", required=true)
-      private final Double cdcDeleteCounter;
+    private Double cdcDeleteCounter;
 
     public Double cdcDeleteCounter() {
         return this.cdcDeleteCounter;
@@ -30,7 +30,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="cdcInsertCounter", required=true)
-      private final Double cdcInsertCounter;
+    private Double cdcInsertCounter;
 
     public Double cdcInsertCounter() {
         return this.cdcInsertCounter;
@@ -41,7 +41,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="cdcUpdateCounter", required=true)
-      private final Double cdcUpdateCounter;
+    private Double cdcUpdateCounter;
 
     public Double cdcUpdateCounter() {
         return this.cdcUpdateCounter;
@@ -52,7 +52,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="dataErrorsCounter", required=true)
-      private final Double dataErrorsCounter;
+    private Double dataErrorsCounter;
 
     public Double dataErrorsCounter() {
         return this.dataErrorsCounter;
@@ -63,7 +63,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -74,7 +74,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="fullLoadEndedOn", required=true)
-      private final String fullLoadEndedOn;
+    private String fullLoadEndedOn;
 
     public String fullLoadEndedOn() {
         return this.fullLoadEndedOn;
@@ -85,7 +85,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="fullLoadEstFinishTime", required=true)
-      private final String fullLoadEstFinishTime;
+    private String fullLoadEstFinishTime;
 
     public String fullLoadEstFinishTime() {
         return this.fullLoadEstFinishTime;
@@ -96,7 +96,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="fullLoadStartedOn", required=true)
-      private final String fullLoadStartedOn;
+    private String fullLoadStartedOn;
 
     public String fullLoadStartedOn() {
         return this.fullLoadStartedOn;
@@ -107,7 +107,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="fullLoadTotalRows", required=true)
-      private final Double fullLoadTotalRows;
+    private Double fullLoadTotalRows;
 
     public Double fullLoadTotalRows() {
         return this.fullLoadTotalRows;
@@ -118,7 +118,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -129,7 +129,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="lastModifiedTime", required=true)
-      private final String lastModifiedTime;
+    private String lastModifiedTime;
 
     public String lastModifiedTime() {
         return this.lastModifiedTime;
@@ -141,7 +141,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -152,7 +152,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -163,7 +163,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
@@ -174,172 +174,143 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevel
      * 
      */
     @Import(name="totalChangesApplied", required=true)
-      private final Double totalChangesApplied;
+    private Double totalChangesApplied;
 
     public Double totalChangesApplied() {
         return this.totalChangesApplied;
     }
 
-    public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse(
-        Double cdcDeleteCounter,
-        Double cdcInsertCounter,
-        Double cdcUpdateCounter,
-        Double dataErrorsCounter,
-        String databaseName,
-        String fullLoadEndedOn,
-        String fullLoadEstFinishTime,
-        String fullLoadStartedOn,
-        Double fullLoadTotalRows,
-        String id,
-        String lastModifiedTime,
-        String resultType,
-        String state,
-        String tableName,
-        Double totalChangesApplied) {
-        this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter, "expected parameter 'cdcDeleteCounter' to be non-null");
-        this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter, "expected parameter 'cdcInsertCounter' to be non-null");
-        this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter, "expected parameter 'cdcUpdateCounter' to be non-null");
-        this.dataErrorsCounter = Objects.requireNonNull(dataErrorsCounter, "expected parameter 'dataErrorsCounter' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.fullLoadEndedOn = Objects.requireNonNull(fullLoadEndedOn, "expected parameter 'fullLoadEndedOn' to be non-null");
-        this.fullLoadEstFinishTime = Objects.requireNonNull(fullLoadEstFinishTime, "expected parameter 'fullLoadEstFinishTime' to be non-null");
-        this.fullLoadStartedOn = Objects.requireNonNull(fullLoadStartedOn, "expected parameter 'fullLoadStartedOn' to be non-null");
-        this.fullLoadTotalRows = Objects.requireNonNull(fullLoadTotalRows, "expected parameter 'fullLoadTotalRows' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-        this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied, "expected parameter 'totalChangesApplied' to be non-null");
-    }
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse() {}
 
-    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse() {
-        this.cdcDeleteCounter = null;
-        this.cdcInsertCounter = null;
-        this.cdcUpdateCounter = null;
-        this.dataErrorsCounter = null;
-        this.databaseName = null;
-        this.fullLoadEndedOn = null;
-        this.fullLoadEstFinishTime = null;
-        this.fullLoadStartedOn = null;
-        this.fullLoadTotalRows = null;
-        this.id = null;
-        this.lastModifiedTime = null;
-        this.resultType = null;
-        this.state = null;
-        this.tableName = null;
-        this.totalChangesApplied = null;
+    private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse $) {
+        this.cdcDeleteCounter = $.cdcDeleteCounter;
+        this.cdcInsertCounter = $.cdcInsertCounter;
+        this.cdcUpdateCounter = $.cdcUpdateCounter;
+        this.dataErrorsCounter = $.dataErrorsCounter;
+        this.databaseName = $.databaseName;
+        this.fullLoadEndedOn = $.fullLoadEndedOn;
+        this.fullLoadEstFinishTime = $.fullLoadEstFinishTime;
+        this.fullLoadStartedOn = $.fullLoadStartedOn;
+        this.fullLoadTotalRows = $.fullLoadTotalRows;
+        this.id = $.id;
+        this.lastModifiedTime = $.lastModifiedTime;
+        this.resultType = $.resultType;
+        this.state = $.state;
+        this.tableName = $.tableName;
+        this.totalChangesApplied = $.totalChangesApplied;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cdcDeleteCounter;
-        private Double cdcInsertCounter;
-        private Double cdcUpdateCounter;
-        private Double dataErrorsCounter;
-        private String databaseName;
-        private String fullLoadEndedOn;
-        private String fullLoadEstFinishTime;
-        private String fullLoadStartedOn;
-        private Double fullLoadTotalRows;
-        private String id;
-        private String lastModifiedTime;
-        private String resultType;
-        private String state;
-        private String tableName;
-        private Double totalChangesApplied;
+        private MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse();
         }
 
         public Builder(MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cdcDeleteCounter = defaults.cdcDeleteCounter;
-    	      this.cdcInsertCounter = defaults.cdcInsertCounter;
-    	      this.cdcUpdateCounter = defaults.cdcUpdateCounter;
-    	      this.dataErrorsCounter = defaults.dataErrorsCounter;
-    	      this.databaseName = defaults.databaseName;
-    	      this.fullLoadEndedOn = defaults.fullLoadEndedOn;
-    	      this.fullLoadEstFinishTime = defaults.fullLoadEstFinishTime;
-    	      this.fullLoadStartedOn = defaults.fullLoadStartedOn;
-    	      this.fullLoadTotalRows = defaults.fullLoadTotalRows;
-    	      this.id = defaults.id;
-    	      this.lastModifiedTime = defaults.lastModifiedTime;
-    	      this.resultType = defaults.resultType;
-    	      this.state = defaults.state;
-    	      this.tableName = defaults.tableName;
-    	      this.totalChangesApplied = defaults.totalChangesApplied;
+            $ = new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cdcDeleteCounter(Double cdcDeleteCounter) {
-            this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter);
+            $.cdcDeleteCounter = cdcDeleteCounter;
             return this;
         }
+
         public Builder cdcInsertCounter(Double cdcInsertCounter) {
-            this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter);
+            $.cdcInsertCounter = cdcInsertCounter;
             return this;
         }
+
         public Builder cdcUpdateCounter(Double cdcUpdateCounter) {
-            this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter);
+            $.cdcUpdateCounter = cdcUpdateCounter;
             return this;
         }
+
         public Builder dataErrorsCounter(Double dataErrorsCounter) {
-            this.dataErrorsCounter = Objects.requireNonNull(dataErrorsCounter);
+            $.dataErrorsCounter = dataErrorsCounter;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder fullLoadEndedOn(String fullLoadEndedOn) {
-            this.fullLoadEndedOn = Objects.requireNonNull(fullLoadEndedOn);
+            $.fullLoadEndedOn = fullLoadEndedOn;
             return this;
         }
+
         public Builder fullLoadEstFinishTime(String fullLoadEstFinishTime) {
-            this.fullLoadEstFinishTime = Objects.requireNonNull(fullLoadEstFinishTime);
+            $.fullLoadEstFinishTime = fullLoadEstFinishTime;
             return this;
         }
+
         public Builder fullLoadStartedOn(String fullLoadStartedOn) {
-            this.fullLoadStartedOn = Objects.requireNonNull(fullLoadStartedOn);
+            $.fullLoadStartedOn = fullLoadStartedOn;
             return this;
         }
+
         public Builder fullLoadTotalRows(Double fullLoadTotalRows) {
-            this.fullLoadTotalRows = Objects.requireNonNull(fullLoadTotalRows);
+            $.fullLoadTotalRows = fullLoadTotalRows;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder lastModifiedTime(String lastModifiedTime) {
-            this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
+            $.lastModifiedTime = lastModifiedTime;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder totalChangesApplied(Double totalChangesApplied) {
-            this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
+            $.totalChangesApplied = totalChangesApplied;
             return this;
-        }        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse build() {
-            return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse(cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, dataErrorsCounter, databaseName, fullLoadEndedOn, fullLoadEstFinishTime, fullLoadStartedOn, fullLoadTotalRows, id, lastModifiedTime, resultType, state, tableName, totalChangesApplied);
+        }
+
+        public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputTableLevelResponse build() {
+            $.cdcDeleteCounter = Objects.requireNonNull($.cdcDeleteCounter, "expected parameter 'cdcDeleteCounter' to be non-null");
+            $.cdcInsertCounter = Objects.requireNonNull($.cdcInsertCounter, "expected parameter 'cdcInsertCounter' to be non-null");
+            $.cdcUpdateCounter = Objects.requireNonNull($.cdcUpdateCounter, "expected parameter 'cdcUpdateCounter' to be non-null");
+            $.dataErrorsCounter = Objects.requireNonNull($.dataErrorsCounter, "expected parameter 'dataErrorsCounter' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.fullLoadEndedOn = Objects.requireNonNull($.fullLoadEndedOn, "expected parameter 'fullLoadEndedOn' to be non-null");
+            $.fullLoadEstFinishTime = Objects.requireNonNull($.fullLoadEstFinishTime, "expected parameter 'fullLoadEstFinishTime' to be non-null");
+            $.fullLoadStartedOn = Objects.requireNonNull($.fullLoadStartedOn, "expected parameter 'fullLoadStartedOn' to be non-null");
+            $.fullLoadTotalRows = Objects.requireNonNull($.fullLoadTotalRows, "expected parameter 'fullLoadTotalRows' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.lastModifiedTime = Objects.requireNonNull($.lastModifiedTime, "expected parameter 'lastModifiedTime' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            $.totalChangesApplied = Objects.requireNonNull($.totalChangesApplied, "expected parameter 'totalChangesApplied' to be non-null");
+            return $;
         }
     }
+
 }

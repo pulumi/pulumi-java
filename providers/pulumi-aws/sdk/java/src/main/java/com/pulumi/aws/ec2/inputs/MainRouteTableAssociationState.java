@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="originalRouteTableId")
-      private final @Nullable Output<String> originalRouteTableId;
+    private @Nullable Output<String> originalRouteTableId;
 
-    public Output<String> originalRouteTableId() {
-        return this.originalRouteTableId == null ? Codegen.empty() : this.originalRouteTableId;
+    public Optional<Output<String>> originalRouteTableId() {
+        return Optional.ofNullable(this.originalRouteTableId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="routeTableId")
-      private final @Nullable Output<String> routeTableId;
+    private @Nullable Output<String> routeTableId;
 
-    public Output<String> routeTableId() {
-        return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
+    public Optional<Output<String>> routeTableId() {
+        return Optional.ofNullable(this.routeTableId);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class MainRouteTableAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public MainRouteTableAssociationState(
-        @Nullable Output<String> originalRouteTableId,
-        @Nullable Output<String> routeTableId,
-        @Nullable Output<String> vpcId) {
-        this.originalRouteTableId = originalRouteTableId;
-        this.routeTableId = routeTableId;
-        this.vpcId = vpcId;
-    }
+    private MainRouteTableAssociationState() {}
 
-    private MainRouteTableAssociationState() {
-        this.originalRouteTableId = Codegen.empty();
-        this.routeTableId = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private MainRouteTableAssociationState(MainRouteTableAssociationState $) {
+        this.originalRouteTableId = $.originalRouteTableId;
+        this.routeTableId = $.routeTableId;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MainRouteTableAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> originalRouteTableId;
-        private @Nullable Output<String> routeTableId;
-        private @Nullable Output<String> vpcId;
+        private MainRouteTableAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MainRouteTableAssociationState();
         }
 
         public Builder(MainRouteTableAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.originalRouteTableId = defaults.originalRouteTableId;
-    	      this.routeTableId = defaults.routeTableId;
-    	      this.vpcId = defaults.vpcId;
+            $ = new MainRouteTableAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder originalRouteTableId(@Nullable Output<String> originalRouteTableId) {
-            this.originalRouteTableId = originalRouteTableId;
+            $.originalRouteTableId = originalRouteTableId;
             return this;
         }
-        public Builder originalRouteTableId(@Nullable String originalRouteTableId) {
-            this.originalRouteTableId = Codegen.ofNullable(originalRouteTableId);
-            return this;
+
+        public Builder originalRouteTableId(String originalRouteTableId) {
+            return originalRouteTableId(Output.of(originalRouteTableId));
         }
+
         public Builder routeTableId(@Nullable Output<String> routeTableId) {
-            this.routeTableId = routeTableId;
+            $.routeTableId = routeTableId;
             return this;
         }
-        public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = Codegen.ofNullable(routeTableId);
-            return this;
+
+        public Builder routeTableId(String routeTableId) {
+            return routeTableId(Output.of(routeTableId));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public MainRouteTableAssociationState build() {
-            return new MainRouteTableAssociationState(originalRouteTableId, routeTableId, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public MainRouteTableAssociationState build() {
+            return $;
         }
     }
+
 }

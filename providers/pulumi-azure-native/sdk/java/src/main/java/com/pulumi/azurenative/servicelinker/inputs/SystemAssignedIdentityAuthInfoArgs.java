@@ -24,49 +24,49 @@ public final class SystemAssignedIdentityAuthInfoArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="authType", required=true)
-      private final Output<String> authType;
+    private Output<String> authType;
 
     public Output<String> authType() {
         return this.authType;
     }
 
-    public SystemAssignedIdentityAuthInfoArgs(Output<String> authType) {
-        this.authType = Codegen.stringProp("authType").output().arg(authType).require();
-    }
+    private SystemAssignedIdentityAuthInfoArgs() {}
 
-    private SystemAssignedIdentityAuthInfoArgs() {
-        this.authType = Codegen.empty();
+    private SystemAssignedIdentityAuthInfoArgs(SystemAssignedIdentityAuthInfoArgs $) {
+        this.authType = $.authType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemAssignedIdentityAuthInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authType;
+        private SystemAssignedIdentityAuthInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemAssignedIdentityAuthInfoArgs();
         }
 
         public Builder(SystemAssignedIdentityAuthInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authType = defaults.authType;
+            $ = new SystemAssignedIdentityAuthInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authType(Output<String> authType) {
-            this.authType = Objects.requireNonNull(authType);
+            $.authType = authType;
             return this;
         }
+
         public Builder authType(String authType) {
-            this.authType = Output.of(Objects.requireNonNull(authType));
-            return this;
-        }        public SystemAssignedIdentityAuthInfoArgs build() {
-            return new SystemAssignedIdentityAuthInfoArgs(authType);
+            return authType(Output.of(authType));
+        }
+
+        public SystemAssignedIdentityAuthInfoArgs build() {
+            $.authType = Codegen.stringProp("authType").output().arg($.authType).require();
+            return $;
         }
     }
+
 }

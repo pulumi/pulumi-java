@@ -6,9 +6,9 @@ package com.pulumi.azurenative.apimanagement;
 import com.pulumi.azurenative.apimanagement.inputs.PrivateEndpointConnectionRequestPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
      * 
      */
     @Import(name="privateEndpointConnectionName")
-      private final @Nullable Output<String> privateEndpointConnectionName;
+    private @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> privateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
+    public Optional<Output<String>> privateEndpointConnectionName() {
+        return Optional.ofNullable(this.privateEndpointConnectionName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties;
+    private @Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties;
 
-    public Output<PrivateEndpointConnectionRequestPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<PrivateEndpointConnectionRequestPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -65,102 +65,90 @@ public final class PrivateEndpointConnectionByNameArgs extends com.pulumi.resour
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public PrivateEndpointConnectionByNameArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> privateEndpointConnectionName,
-        @Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> serviceName) {
-        this.id = id;
-        this.privateEndpointConnectionName = privateEndpointConnectionName;
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private PrivateEndpointConnectionByNameArgs() {}
 
-    private PrivateEndpointConnectionByNameArgs() {
-        this.id = Codegen.empty();
-        this.privateEndpointConnectionName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private PrivateEndpointConnectionByNameArgs(PrivateEndpointConnectionByNameArgs $) {
+        this.id = $.id;
+        this.privateEndpointConnectionName = $.privateEndpointConnectionName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionByNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> privateEndpointConnectionName;
-        private @Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> serviceName;
+        private PrivateEndpointConnectionByNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionByNameArgs();
         }
 
         public Builder(PrivateEndpointConnectionByNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.privateEndpointConnectionName = defaults.privateEndpointConnectionName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
+            $ = new PrivateEndpointConnectionByNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = privateEndpointConnectionName;
+            $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
-        public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
-            return this;
+
+        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
+            return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
+
         public Builder properties(@Nullable Output<PrivateEndpointConnectionRequestPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable PrivateEndpointConnectionRequestPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(PrivateEndpointConnectionRequestPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public PrivateEndpointConnectionByNameArgs build() {
-            return new PrivateEndpointConnectionByNameArgs(id, privateEndpointConnectionName, properties, resourceGroupName, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public PrivateEndpointConnectionByNameArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

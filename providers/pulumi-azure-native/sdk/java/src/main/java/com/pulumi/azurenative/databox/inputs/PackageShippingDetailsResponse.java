@@ -21,7 +21,7 @@ public final class PackageShippingDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="carrierName", required=true)
-      private final String carrierName;
+    private String carrierName;
 
     public String carrierName() {
         return this.carrierName;
@@ -32,7 +32,7 @@ public final class PackageShippingDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="trackingId", required=true)
-      private final String trackingId;
+    private String trackingId;
 
     public String trackingId() {
         return this.trackingId;
@@ -43,64 +43,59 @@ public final class PackageShippingDetailsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="trackingUrl", required=true)
-      private final String trackingUrl;
+    private String trackingUrl;
 
     public String trackingUrl() {
         return this.trackingUrl;
     }
 
-    public PackageShippingDetailsResponse(
-        String carrierName,
-        String trackingId,
-        String trackingUrl) {
-        this.carrierName = Objects.requireNonNull(carrierName, "expected parameter 'carrierName' to be non-null");
-        this.trackingId = Objects.requireNonNull(trackingId, "expected parameter 'trackingId' to be non-null");
-        this.trackingUrl = Objects.requireNonNull(trackingUrl, "expected parameter 'trackingUrl' to be non-null");
-    }
+    private PackageShippingDetailsResponse() {}
 
-    private PackageShippingDetailsResponse() {
-        this.carrierName = null;
-        this.trackingId = null;
-        this.trackingUrl = null;
+    private PackageShippingDetailsResponse(PackageShippingDetailsResponse $) {
+        this.carrierName = $.carrierName;
+        this.trackingId = $.trackingId;
+        this.trackingUrl = $.trackingUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageShippingDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String carrierName;
-        private String trackingId;
-        private String trackingUrl;
+        private PackageShippingDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageShippingDetailsResponse();
         }
 
         public Builder(PackageShippingDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.carrierName = defaults.carrierName;
-    	      this.trackingId = defaults.trackingId;
-    	      this.trackingUrl = defaults.trackingUrl;
+            $ = new PackageShippingDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder carrierName(String carrierName) {
-            this.carrierName = Objects.requireNonNull(carrierName);
+            $.carrierName = carrierName;
             return this;
         }
+
         public Builder trackingId(String trackingId) {
-            this.trackingId = Objects.requireNonNull(trackingId);
+            $.trackingId = trackingId;
             return this;
         }
+
         public Builder trackingUrl(String trackingUrl) {
-            this.trackingUrl = Objects.requireNonNull(trackingUrl);
+            $.trackingUrl = trackingUrl;
             return this;
-        }        public PackageShippingDetailsResponse build() {
-            return new PackageShippingDetailsResponse(carrierName, trackingId, trackingUrl);
+        }
+
+        public PackageShippingDetailsResponse build() {
+            $.carrierName = Objects.requireNonNull($.carrierName, "expected parameter 'carrierName' to be non-null");
+            $.trackingId = Objects.requireNonNull($.trackingId, "expected parameter 'trackingId' to be non-null");
+            $.trackingUrl = Objects.requireNonNull($.trackingUrl, "expected parameter 'trackingUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VolumeErrorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class VolumeErrorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="time")
-      private final @Nullable Output<String> time;
+    private @Nullable Output<String> time;
 
-    public Output<String> time() {
-        return this.time == null ? Codegen.empty() : this.time;
+    public Optional<Output<String>> time() {
+        return Optional.ofNullable(this.time);
     }
 
-    public VolumeErrorArgs(
-        @Nullable Output<String> message,
-        @Nullable Output<String> time) {
-        this.message = message;
-        this.time = time;
-    }
+    private VolumeErrorArgs() {}
 
-    private VolumeErrorArgs() {
-        this.message = Codegen.empty();
-        this.time = Codegen.empty();
+    private VolumeErrorArgs(VolumeErrorArgs $) {
+        this.message = $.message;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeErrorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> time;
+        private VolumeErrorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeErrorArgs();
         }
 
         public Builder(VolumeErrorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.time = defaults.time;
+            $ = new VolumeErrorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder time(@Nullable Output<String> time) {
-            this.time = time;
+            $.time = time;
             return this;
         }
-        public Builder time(@Nullable String time) {
-            this.time = Codegen.ofNullable(time);
-            return this;
-        }        public VolumeErrorArgs build() {
-            return new VolumeErrorArgs(message, time);
+
+        public Builder time(String time) {
+            return time(Output.of(time));
+        }
+
+        public VolumeErrorArgs build() {
+            return $;
         }
     }
+
 }

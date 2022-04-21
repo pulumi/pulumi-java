@@ -6,7 +6,6 @@ package com.pulumi.awsnative.budgets.inputs;
 import com.pulumi.awsnative.budgets.enums.BudgetsActionActionThresholdType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class BudgetsActionActionThresholdArgs extends com.pulumi.resources
     public static final BudgetsActionActionThresholdArgs Empty = new BudgetsActionActionThresholdArgs();
 
     @Import(name="type", required=true)
-      private final Output<BudgetsActionActionThresholdType> type;
+    private Output<BudgetsActionActionThresholdType> type;
 
     public Output<BudgetsActionActionThresholdType> type() {
         return this.type;
     }
 
     @Import(name="value", required=true)
-      private final Output<Double> value;
+    private Output<Double> value;
 
     public Output<Double> value() {
         return this.value;
     }
 
-    public BudgetsActionActionThresholdArgs(
-        Output<BudgetsActionActionThresholdType> type,
-        Output<Double> value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private BudgetsActionActionThresholdArgs() {}
 
-    private BudgetsActionActionThresholdArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private BudgetsActionActionThresholdArgs(BudgetsActionActionThresholdArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetsActionActionThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BudgetsActionActionThresholdType> type;
-        private Output<Double> value;
+        private BudgetsActionActionThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetsActionActionThresholdArgs();
         }
 
         public Builder(BudgetsActionActionThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new BudgetsActionActionThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<BudgetsActionActionThresholdType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(BudgetsActionActionThresholdType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(Output<Double> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(Double value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public BudgetsActionActionThresholdArgs build() {
-            return new BudgetsActionActionThresholdArgs(type, value);
+            return value(Output.of(value));
+        }
+
+        public BudgetsActionActionThresholdArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class VirtualMachineHealthStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="status", required=true)
-      private final InstanceViewStatusResponse status;
+    private InstanceViewStatusResponse status;
 
     public InstanceViewStatusResponse status() {
         return this.status;
     }
 
-    public VirtualMachineHealthStatusResponse(InstanceViewStatusResponse status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private VirtualMachineHealthStatusResponse() {}
 
-    private VirtualMachineHealthStatusResponse() {
-        this.status = null;
+    private VirtualMachineHealthStatusResponse(VirtualMachineHealthStatusResponse $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineHealthStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private InstanceViewStatusResponse status;
+        private VirtualMachineHealthStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineHealthStatusResponse();
         }
 
         public Builder(VirtualMachineHealthStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new VirtualMachineHealthStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder status(InstanceViewStatusResponse status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public VirtualMachineHealthStatusResponse build() {
-            return new VirtualMachineHealthStatusResponse(status);
+        }
+
+        public VirtualMachineHealthStatusResponse build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

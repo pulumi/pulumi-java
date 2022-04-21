@@ -26,7 +26,7 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="channels", required=true)
-      private final List<ContactProfileLinkChannelResponse> channels;
+    private List<ContactProfileLinkChannelResponse> channels;
 
     public List<ContactProfileLinkChannelResponse> channels() {
         return this.channels;
@@ -37,7 +37,7 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -48,10 +48,10 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="eirpdBW")
-      private final @Nullable Double eirpdBW;
+    private @Nullable Double eirpdBW;
 
     public Optional<Double> eirpdBW() {
-        return this.eirpdBW == null ? Optional.empty() : Optional.ofNullable(this.eirpdBW);
+        return Optional.ofNullable(this.eirpdBW);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="gainOverTemperature")
-      private final @Nullable Double gainOverTemperature;
+    private @Nullable Double gainOverTemperature;
 
     public Optional<Double> gainOverTemperature() {
-        return this.gainOverTemperature == null ? Optional.empty() : Optional.ofNullable(this.gainOverTemperature);
+        return Optional.ofNullable(this.gainOverTemperature);
     }
 
     /**
@@ -70,85 +70,75 @@ public final class ContactProfileLinkResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="polarization", required=true)
-      private final String polarization;
+    private String polarization;
 
     public String polarization() {
         return this.polarization;
     }
 
-    public ContactProfileLinkResponse(
-        List<ContactProfileLinkChannelResponse> channels,
-        String direction,
-        @Nullable Double eirpdBW,
-        @Nullable Double gainOverTemperature,
-        String polarization) {
-        this.channels = Objects.requireNonNull(channels, "expected parameter 'channels' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.eirpdBW = eirpdBW;
-        this.gainOverTemperature = gainOverTemperature;
-        this.polarization = Objects.requireNonNull(polarization, "expected parameter 'polarization' to be non-null");
-    }
+    private ContactProfileLinkResponse() {}
 
-    private ContactProfileLinkResponse() {
-        this.channels = List.of();
-        this.direction = null;
-        this.eirpdBW = null;
-        this.gainOverTemperature = null;
-        this.polarization = null;
+    private ContactProfileLinkResponse(ContactProfileLinkResponse $) {
+        this.channels = $.channels;
+        this.direction = $.direction;
+        this.eirpdBW = $.eirpdBW;
+        this.gainOverTemperature = $.gainOverTemperature;
+        this.polarization = $.polarization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactProfileLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ContactProfileLinkChannelResponse> channels;
-        private String direction;
-        private @Nullable Double eirpdBW;
-        private @Nullable Double gainOverTemperature;
-        private String polarization;
+        private ContactProfileLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactProfileLinkResponse();
         }
 
         public Builder(ContactProfileLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channels = defaults.channels;
-    	      this.direction = defaults.direction;
-    	      this.eirpdBW = defaults.eirpdBW;
-    	      this.gainOverTemperature = defaults.gainOverTemperature;
-    	      this.polarization = defaults.polarization;
+            $ = new ContactProfileLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder channels(List<ContactProfileLinkChannelResponse> channels) {
-            this.channels = Objects.requireNonNull(channels);
+            $.channels = channels;
             return this;
         }
+
         public Builder channels(ContactProfileLinkChannelResponse... channels) {
             return channels(List.of(channels));
         }
+
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder eirpdBW(@Nullable Double eirpdBW) {
-            this.eirpdBW = eirpdBW;
+            $.eirpdBW = eirpdBW;
             return this;
         }
+
         public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
-            this.gainOverTemperature = gainOverTemperature;
+            $.gainOverTemperature = gainOverTemperature;
             return this;
         }
+
         public Builder polarization(String polarization) {
-            this.polarization = Objects.requireNonNull(polarization);
+            $.polarization = polarization;
             return this;
-        }        public ContactProfileLinkResponse build() {
-            return new ContactProfileLinkResponse(channels, direction, eirpdBW, gainOverTemperature, polarization);
+        }
+
+        public ContactProfileLinkResponse build() {
+            $.channels = Objects.requireNonNull($.channels, "expected parameter 'channels' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.polarization = Objects.requireNonNull($.polarization, "expected parameter 'polarization' to be non-null");
+            return $;
         }
     }
+
 }

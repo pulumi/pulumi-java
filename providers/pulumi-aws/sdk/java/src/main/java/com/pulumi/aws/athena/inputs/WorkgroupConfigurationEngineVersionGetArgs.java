@@ -5,9 +5,9 @@ package com.pulumi.aws.athena.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends com.pulumi
      * 
      */
     @Import(name="effectiveEngineVersion")
-      private final @Nullable Output<String> effectiveEngineVersion;
+    private @Nullable Output<String> effectiveEngineVersion;
 
-    public Output<String> effectiveEngineVersion() {
-        return this.effectiveEngineVersion == null ? Codegen.empty() : this.effectiveEngineVersion;
+    public Optional<Output<String>> effectiveEngineVersion() {
+        return Optional.ofNullable(this.effectiveEngineVersion);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends com.pulumi
      * 
      */
     @Import(name="selectedEngineVersion")
-      private final @Nullable Output<String> selectedEngineVersion;
+    private @Nullable Output<String> selectedEngineVersion;
 
-    public Output<String> selectedEngineVersion() {
-        return this.selectedEngineVersion == null ? Codegen.empty() : this.selectedEngineVersion;
+    public Optional<Output<String>> selectedEngineVersion() {
+        return Optional.ofNullable(this.selectedEngineVersion);
     }
 
-    public WorkgroupConfigurationEngineVersionGetArgs(
-        @Nullable Output<String> effectiveEngineVersion,
-        @Nullable Output<String> selectedEngineVersion) {
-        this.effectiveEngineVersion = effectiveEngineVersion;
-        this.selectedEngineVersion = selectedEngineVersion;
-    }
+    private WorkgroupConfigurationEngineVersionGetArgs() {}
 
-    private WorkgroupConfigurationEngineVersionGetArgs() {
-        this.effectiveEngineVersion = Codegen.empty();
-        this.selectedEngineVersion = Codegen.empty();
+    private WorkgroupConfigurationEngineVersionGetArgs(WorkgroupConfigurationEngineVersionGetArgs $) {
+        this.effectiveEngineVersion = $.effectiveEngineVersion;
+        this.selectedEngineVersion = $.selectedEngineVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkgroupConfigurationEngineVersionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> effectiveEngineVersion;
-        private @Nullable Output<String> selectedEngineVersion;
+        private WorkgroupConfigurationEngineVersionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkgroupConfigurationEngineVersionGetArgs();
         }
 
         public Builder(WorkgroupConfigurationEngineVersionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effectiveEngineVersion = defaults.effectiveEngineVersion;
-    	      this.selectedEngineVersion = defaults.selectedEngineVersion;
+            $ = new WorkgroupConfigurationEngineVersionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder effectiveEngineVersion(@Nullable Output<String> effectiveEngineVersion) {
-            this.effectiveEngineVersion = effectiveEngineVersion;
+            $.effectiveEngineVersion = effectiveEngineVersion;
             return this;
         }
-        public Builder effectiveEngineVersion(@Nullable String effectiveEngineVersion) {
-            this.effectiveEngineVersion = Codegen.ofNullable(effectiveEngineVersion);
-            return this;
+
+        public Builder effectiveEngineVersion(String effectiveEngineVersion) {
+            return effectiveEngineVersion(Output.of(effectiveEngineVersion));
         }
+
         public Builder selectedEngineVersion(@Nullable Output<String> selectedEngineVersion) {
-            this.selectedEngineVersion = selectedEngineVersion;
+            $.selectedEngineVersion = selectedEngineVersion;
             return this;
         }
-        public Builder selectedEngineVersion(@Nullable String selectedEngineVersion) {
-            this.selectedEngineVersion = Codegen.ofNullable(selectedEngineVersion);
-            return this;
-        }        public WorkgroupConfigurationEngineVersionGetArgs build() {
-            return new WorkgroupConfigurationEngineVersionGetArgs(effectiveEngineVersion, selectedEngineVersion);
+
+        public Builder selectedEngineVersion(String selectedEngineVersion) {
+            return selectedEngineVersion(Output.of(selectedEngineVersion));
+        }
+
+        public WorkgroupConfigurationEngineVersionGetArgs build() {
+            return $;
         }
     }
+
 }

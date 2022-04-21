@@ -50,6 +50,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -66,7 +67,7 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activities", required=true)
-      private final Output<List<Object>> activities;
+    private Output<List<Object>> activities;
 
     public Output<List<Object>> activities() {
         return this.activities;
@@ -77,10 +78,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -99,7 +100,7 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expression", required=true)
-      private final Output<ExpressionArgs> expression;
+    private Output<ExpressionArgs> expression;
 
     public Output<ExpressionArgs> expression() {
         return this.expression;
@@ -110,7 +111,7 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -121,10 +122,10 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<Object> timeout;
+    private @Nullable Output<Object> timeout;
 
-    public Output<Object> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<Object>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -133,7 +134,7 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -144,150 +145,134 @@ public final class UntilActivityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public UntilActivityArgs(
-        Output<List<Object>> activities,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        Output<ExpressionArgs> expression,
-        Output<String> name,
-        @Nullable Output<Object> timeout,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.activities = Objects.requireNonNull(activities, "expected parameter 'activities' to be non-null");
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.timeout = timeout;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private UntilActivityArgs() {}
 
-    private UntilActivityArgs() {
-        this.activities = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.expression = Codegen.empty();
-        this.name = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private UntilActivityArgs(UntilActivityArgs $) {
+        this.activities = $.activities;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.expression = $.expression;
+        this.name = $.name;
+        this.timeout = $.timeout;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UntilActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Object>> activities;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private Output<ExpressionArgs> expression;
-        private Output<String> name;
-        private @Nullable Output<Object> timeout;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private UntilActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UntilActivityArgs();
         }
 
         public Builder(UntilActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activities = defaults.activities;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.expression = defaults.expression;
-    	      this.name = defaults.name;
-    	      this.timeout = defaults.timeout;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new UntilActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activities(Output<List<Object>> activities) {
-            this.activities = Objects.requireNonNull(activities);
+            $.activities = activities;
             return this;
         }
+
         public Builder activities(List<Object> activities) {
-            this.activities = Output.of(Objects.requireNonNull(activities));
-            return this;
+            return activities(Output.of(activities));
         }
+
         public Builder activities(Object... activities) {
             return activities(List.of(activities));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expression(Output<ExpressionArgs> expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder expression(ExpressionArgs expression) {
-            this.expression = Output.of(Objects.requireNonNull(expression));
-            return this;
+            return expression(Output.of(expression));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder timeout(@Nullable Output<Object> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable Object timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(Object timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public UntilActivityArgs build() {
-            return new UntilActivityArgs(activities, dependsOn, description, expression, name, timeout, type, userProperties);
+        }
+
+        public UntilActivityArgs build() {
+            $.activities = Objects.requireNonNull($.activities, "expected parameter 'activities' to be non-null");
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

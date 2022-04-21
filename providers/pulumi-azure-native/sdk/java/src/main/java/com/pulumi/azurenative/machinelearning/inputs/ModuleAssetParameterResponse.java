@@ -25,10 +25,10 @@ public final class ModuleAssetParameterResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="modeValuesInfo")
-      private final @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo;
+    private @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo;
 
-    public Map<String,ModeValueInfoResponse> modeValuesInfo() {
-        return this.modeValuesInfo == null ? Map.of() : this.modeValuesInfo;
+    public Optional<Map<String,ModeValueInfoResponse>> modeValuesInfo() {
+        return Optional.ofNullable(this.modeValuesInfo);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ModuleAssetParameterResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class ModuleAssetParameterResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parameterType")
-      private final @Nullable String parameterType;
+    private @Nullable String parameterType;
 
     public Optional<String> parameterType() {
-        return this.parameterType == null ? Optional.empty() : Optional.ofNullable(this.parameterType);
+        return Optional.ofNullable(this.parameterType);
     }
 
-    public ModuleAssetParameterResponse(
-        @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo,
-        @Nullable String name,
-        @Nullable String parameterType) {
-        this.modeValuesInfo = modeValuesInfo;
-        this.name = name;
-        this.parameterType = parameterType;
-    }
+    private ModuleAssetParameterResponse() {}
 
-    private ModuleAssetParameterResponse() {
-        this.modeValuesInfo = Map.of();
-        this.name = null;
-        this.parameterType = null;
+    private ModuleAssetParameterResponse(ModuleAssetParameterResponse $) {
+        this.modeValuesInfo = $.modeValuesInfo;
+        this.name = $.name;
+        this.parameterType = $.parameterType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModuleAssetParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo;
-        private @Nullable String name;
-        private @Nullable String parameterType;
+        private ModuleAssetParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModuleAssetParameterResponse();
         }
 
         public Builder(ModuleAssetParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modeValuesInfo = defaults.modeValuesInfo;
-    	      this.name = defaults.name;
-    	      this.parameterType = defaults.parameterType;
+            $ = new ModuleAssetParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder modeValuesInfo(@Nullable Map<String,ModeValueInfoResponse> modeValuesInfo) {
-            this.modeValuesInfo = modeValuesInfo;
+            $.modeValuesInfo = modeValuesInfo;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder parameterType(@Nullable String parameterType) {
-            this.parameterType = parameterType;
+            $.parameterType = parameterType;
             return this;
-        }        public ModuleAssetParameterResponse build() {
-            return new ModuleAssetParameterResponse(modeValuesInfo, name, parameterType);
+        }
+
+        public ModuleAssetParameterResponse build() {
+            return $;
         }
     }
+
 }

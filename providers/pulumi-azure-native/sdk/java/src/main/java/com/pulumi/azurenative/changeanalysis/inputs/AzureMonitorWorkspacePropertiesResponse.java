@@ -23,10 +23,10 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="includeChangeDetails")
-      private final @Nullable String includeChangeDetails;
+    private @Nullable String includeChangeDetails;
 
     public Optional<String> includeChangeDetails() {
-        return this.includeChangeDetails == null ? Optional.empty() : Optional.ofNullable(this.includeChangeDetails);
+        return Optional.ofNullable(this.includeChangeDetails);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="workspaceId")
-      private final @Nullable String workspaceId;
+    private @Nullable String workspaceId;
 
     public Optional<String> workspaceId() {
-        return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
+        return Optional.ofNullable(this.workspaceId);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class AzureMonitorWorkspacePropertiesResponse extends com.pulumi.re
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable String workspaceResourceId;
+    private @Nullable String workspaceResourceId;
 
     public Optional<String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public AzureMonitorWorkspacePropertiesResponse(
-        @Nullable String includeChangeDetails,
-        @Nullable String workspaceId,
-        @Nullable String workspaceResourceId) {
-        this.includeChangeDetails = includeChangeDetails;
-        this.workspaceId = workspaceId;
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private AzureMonitorWorkspacePropertiesResponse() {}
 
-    private AzureMonitorWorkspacePropertiesResponse() {
-        this.includeChangeDetails = null;
-        this.workspaceId = null;
-        this.workspaceResourceId = null;
+    private AzureMonitorWorkspacePropertiesResponse(AzureMonitorWorkspacePropertiesResponse $) {
+        this.includeChangeDetails = $.includeChangeDetails;
+        this.workspaceId = $.workspaceId;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMonitorWorkspacePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String includeChangeDetails;
-        private @Nullable String workspaceId;
-        private @Nullable String workspaceResourceId;
+        private AzureMonitorWorkspacePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMonitorWorkspacePropertiesResponse();
         }
 
         public Builder(AzureMonitorWorkspacePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeChangeDetails = defaults.includeChangeDetails;
-    	      this.workspaceId = defaults.workspaceId;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new AzureMonitorWorkspacePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder includeChangeDetails(@Nullable String includeChangeDetails) {
-            this.includeChangeDetails = includeChangeDetails;
+            $.includeChangeDetails = includeChangeDetails;
             return this;
         }
+
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = workspaceId;
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
-        }        public AzureMonitorWorkspacePropertiesResponse build() {
-            return new AzureMonitorWorkspacePropertiesResponse(includeChangeDetails, workspaceId, workspaceResourceId);
+        }
+
+        public AzureMonitorWorkspacePropertiesResponse build() {
+            return $;
         }
     }
+
 }

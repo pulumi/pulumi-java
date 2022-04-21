@@ -17,7 +17,7 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="firewallPolicyName", required=true)
-      private final String firewallPolicyName;
+    private String firewallPolicyName;
 
     public String firewallPolicyName() {
         return this.firewallPolicyName;
@@ -28,7 +28,7 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetFirewallPolicyRuleCollectionGroupArgs extends com.pulumi.r
      * 
      */
     @Import(name="ruleCollectionGroupName", required=true)
-      private final String ruleCollectionGroupName;
+    private String ruleCollectionGroupName;
 
     public String ruleCollectionGroupName() {
         return this.ruleCollectionGroupName;
     }
 
-    public GetFirewallPolicyRuleCollectionGroupArgs(
-        String firewallPolicyName,
-        String resourceGroupName,
-        String ruleCollectionGroupName) {
-        this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName, "expected parameter 'firewallPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleCollectionGroupName = Objects.requireNonNull(ruleCollectionGroupName, "expected parameter 'ruleCollectionGroupName' to be non-null");
-    }
+    private GetFirewallPolicyRuleCollectionGroupArgs() {}
 
-    private GetFirewallPolicyRuleCollectionGroupArgs() {
-        this.firewallPolicyName = null;
-        this.resourceGroupName = null;
-        this.ruleCollectionGroupName = null;
+    private GetFirewallPolicyRuleCollectionGroupArgs(GetFirewallPolicyRuleCollectionGroupArgs $) {
+        this.firewallPolicyName = $.firewallPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleCollectionGroupName = $.ruleCollectionGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFirewallPolicyRuleCollectionGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String firewallPolicyName;
-        private String resourceGroupName;
-        private String ruleCollectionGroupName;
+        private GetFirewallPolicyRuleCollectionGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFirewallPolicyRuleCollectionGroupArgs();
         }
 
         public Builder(GetFirewallPolicyRuleCollectionGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firewallPolicyName = defaults.firewallPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleCollectionGroupName = defaults.ruleCollectionGroupName;
+            $ = new GetFirewallPolicyRuleCollectionGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firewallPolicyName(String firewallPolicyName) {
-            this.firewallPolicyName = Objects.requireNonNull(firewallPolicyName);
+            $.firewallPolicyName = firewallPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleCollectionGroupName(String ruleCollectionGroupName) {
-            this.ruleCollectionGroupName = Objects.requireNonNull(ruleCollectionGroupName);
+            $.ruleCollectionGroupName = ruleCollectionGroupName;
             return this;
-        }        public GetFirewallPolicyRuleCollectionGroupArgs build() {
-            return new GetFirewallPolicyRuleCollectionGroupArgs(firewallPolicyName, resourceGroupName, ruleCollectionGroupName);
+        }
+
+        public GetFirewallPolicyRuleCollectionGroupArgs build() {
+            $.firewallPolicyName = Objects.requireNonNull($.firewallPolicyName, "expected parameter 'firewallPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleCollectionGroupName = Objects.requireNonNull($.ruleCollectionGroupName, "expected parameter 'ruleCollectionGroupName' to be non-null");
+            return $;
         }
     }
+
 }

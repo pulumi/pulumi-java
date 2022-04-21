@@ -21,7 +21,7 @@ public final class RuntimeShieldedInstanceConfigResponse extends com.pulumi.reso
      * 
      */
     @Import(name="enableIntegrityMonitoring", required=true)
-      private final Boolean enableIntegrityMonitoring;
+    private Boolean enableIntegrityMonitoring;
 
     public Boolean enableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
@@ -32,7 +32,7 @@ public final class RuntimeShieldedInstanceConfigResponse extends com.pulumi.reso
      * 
      */
     @Import(name="enableSecureBoot", required=true)
-      private final Boolean enableSecureBoot;
+    private Boolean enableSecureBoot;
 
     public Boolean enableSecureBoot() {
         return this.enableSecureBoot;
@@ -43,64 +43,59 @@ public final class RuntimeShieldedInstanceConfigResponse extends com.pulumi.reso
      * 
      */
     @Import(name="enableVtpm", required=true)
-      private final Boolean enableVtpm;
+    private Boolean enableVtpm;
 
     public Boolean enableVtpm() {
         return this.enableVtpm;
     }
 
-    public RuntimeShieldedInstanceConfigResponse(
-        Boolean enableIntegrityMonitoring,
-        Boolean enableSecureBoot,
-        Boolean enableVtpm) {
-        this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring, "expected parameter 'enableIntegrityMonitoring' to be non-null");
-        this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot, "expected parameter 'enableSecureBoot' to be non-null");
-        this.enableVtpm = Objects.requireNonNull(enableVtpm, "expected parameter 'enableVtpm' to be non-null");
-    }
+    private RuntimeShieldedInstanceConfigResponse() {}
 
-    private RuntimeShieldedInstanceConfigResponse() {
-        this.enableIntegrityMonitoring = null;
-        this.enableSecureBoot = null;
-        this.enableVtpm = null;
+    private RuntimeShieldedInstanceConfigResponse(RuntimeShieldedInstanceConfigResponse $) {
+        this.enableIntegrityMonitoring = $.enableIntegrityMonitoring;
+        this.enableSecureBoot = $.enableSecureBoot;
+        this.enableVtpm = $.enableVtpm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeShieldedInstanceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableIntegrityMonitoring;
-        private Boolean enableSecureBoot;
-        private Boolean enableVtpm;
+        private RuntimeShieldedInstanceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeShieldedInstanceConfigResponse();
         }
 
         public Builder(RuntimeShieldedInstanceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableIntegrityMonitoring = defaults.enableIntegrityMonitoring;
-    	      this.enableSecureBoot = defaults.enableSecureBoot;
-    	      this.enableVtpm = defaults.enableVtpm;
+            $ = new RuntimeShieldedInstanceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
-            this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
+            $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
+
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
-            this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
+            $.enableSecureBoot = enableSecureBoot;
             return this;
         }
+
         public Builder enableVtpm(Boolean enableVtpm) {
-            this.enableVtpm = Objects.requireNonNull(enableVtpm);
+            $.enableVtpm = enableVtpm;
             return this;
-        }        public RuntimeShieldedInstanceConfigResponse build() {
-            return new RuntimeShieldedInstanceConfigResponse(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
+        }
+
+        public RuntimeShieldedInstanceConfigResponse build() {
+            $.enableIntegrityMonitoring = Objects.requireNonNull($.enableIntegrityMonitoring, "expected parameter 'enableIntegrityMonitoring' to be non-null");
+            $.enableSecureBoot = Objects.requireNonNull($.enableSecureBoot, "expected parameter 'enableSecureBoot' to be non-null");
+            $.enableVtpm = Objects.requireNonNull($.enableVtpm, "expected parameter 'enableVtpm' to be non-null");
+            return $;
         }
     }
+
 }

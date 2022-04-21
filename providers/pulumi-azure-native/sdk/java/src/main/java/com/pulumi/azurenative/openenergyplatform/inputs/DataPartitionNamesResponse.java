@@ -19,45 +19,44 @@ public final class DataPartitionNamesResponse extends com.pulumi.resources.Invok
     public static final DataPartitionNamesResponse Empty = new DataPartitionNamesResponse();
 
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public DataPartitionNamesResponse(@Nullable String name) {
-        this.name = name;
-    }
+    private DataPartitionNamesResponse() {}
 
-    private DataPartitionNamesResponse() {
-        this.name = null;
+    private DataPartitionNamesResponse(DataPartitionNamesResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataPartitionNamesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
+        private DataPartitionNamesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataPartitionNamesResponse();
         }
 
         public Builder(DataPartitionNamesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new DataPartitionNamesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public DataPartitionNamesResponse build() {
-            return new DataPartitionNamesResponse(name);
+        }
+
+        public DataPartitionNamesResponse build() {
+            return $;
         }
     }
+
 }

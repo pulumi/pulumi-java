@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class HttpSettingsRoutesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="apiPrefix")
-      private final @Nullable Output<String> apiPrefix;
+    private @Nullable Output<String> apiPrefix;
 
-    public Output<String> apiPrefix() {
-        return this.apiPrefix == null ? Codegen.empty() : this.apiPrefix;
+    public Optional<Output<String>> apiPrefix() {
+        return Optional.ofNullable(this.apiPrefix);
     }
 
-    public HttpSettingsRoutesArgs(@Nullable Output<String> apiPrefix) {
-        this.apiPrefix = apiPrefix;
-    }
+    private HttpSettingsRoutesArgs() {}
 
-    private HttpSettingsRoutesArgs() {
-        this.apiPrefix = Codegen.empty();
+    private HttpSettingsRoutesArgs(HttpSettingsRoutesArgs $) {
+        this.apiPrefix = $.apiPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpSettingsRoutesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiPrefix;
+        private HttpSettingsRoutesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpSettingsRoutesArgs();
         }
 
         public Builder(HttpSettingsRoutesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiPrefix = defaults.apiPrefix;
+            $ = new HttpSettingsRoutesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiPrefix(@Nullable Output<String> apiPrefix) {
-            this.apiPrefix = apiPrefix;
+            $.apiPrefix = apiPrefix;
             return this;
         }
-        public Builder apiPrefix(@Nullable String apiPrefix) {
-            this.apiPrefix = Codegen.ofNullable(apiPrefix);
-            return this;
-        }        public HttpSettingsRoutesArgs build() {
-            return new HttpSettingsRoutesArgs(apiPrefix);
+
+        public Builder apiPrefix(String apiPrefix) {
+            return apiPrefix(Output.of(apiPrefix));
+        }
+
+        public HttpSettingsRoutesArgs build() {
+            return $;
         }
     }
+
 }

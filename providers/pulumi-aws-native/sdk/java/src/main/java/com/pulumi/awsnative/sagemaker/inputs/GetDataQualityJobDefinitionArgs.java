@@ -17,45 +17,45 @@ public final class GetDataQualityJobDefinitionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="jobDefinitionArn", required=true)
-      private final String jobDefinitionArn;
+    private String jobDefinitionArn;
 
     public String jobDefinitionArn() {
         return this.jobDefinitionArn;
     }
 
-    public GetDataQualityJobDefinitionArgs(String jobDefinitionArn) {
-        this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn, "expected parameter 'jobDefinitionArn' to be non-null");
-    }
+    private GetDataQualityJobDefinitionArgs() {}
 
-    private GetDataQualityJobDefinitionArgs() {
-        this.jobDefinitionArn = null;
+    private GetDataQualityJobDefinitionArgs(GetDataQualityJobDefinitionArgs $) {
+        this.jobDefinitionArn = $.jobDefinitionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataQualityJobDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String jobDefinitionArn;
+        private GetDataQualityJobDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataQualityJobDefinitionArgs();
         }
 
         public Builder(GetDataQualityJobDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jobDefinitionArn = defaults.jobDefinitionArn;
+            $ = new GetDataQualityJobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jobDefinitionArn(String jobDefinitionArn) {
-            this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
+            $.jobDefinitionArn = jobDefinitionArn;
             return this;
-        }        public GetDataQualityJobDefinitionArgs build() {
-            return new GetDataQualityJobDefinitionArgs(jobDefinitionArn);
+        }
+
+        public GetDataQualityJobDefinitionArgs build() {
+            $.jobDefinitionArn = Objects.requireNonNull($.jobDefinitionArn, "expected parameter 'jobDefinitionArn' to be non-null");
+            return $;
         }
     }
+
 }

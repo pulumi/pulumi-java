@@ -17,7 +17,7 @@ public final class GetSupportPlanTypeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="planTypeName", required=true)
-      private final String planTypeName;
+    private String planTypeName;
 
     public String planTypeName() {
         return this.planTypeName;
@@ -28,55 +28,52 @@ public final class GetSupportPlanTypeArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="providerName", required=true)
-      private final String providerName;
+    private String providerName;
 
     public String providerName() {
         return this.providerName;
     }
 
-    public GetSupportPlanTypeArgs(
-        String planTypeName,
-        String providerName) {
-        this.planTypeName = Objects.requireNonNull(planTypeName, "expected parameter 'planTypeName' to be non-null");
-        this.providerName = Objects.requireNonNull(providerName, "expected parameter 'providerName' to be non-null");
-    }
+    private GetSupportPlanTypeArgs() {}
 
-    private GetSupportPlanTypeArgs() {
-        this.planTypeName = null;
-        this.providerName = null;
+    private GetSupportPlanTypeArgs(GetSupportPlanTypeArgs $) {
+        this.planTypeName = $.planTypeName;
+        this.providerName = $.providerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSupportPlanTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String planTypeName;
-        private String providerName;
+        private GetSupportPlanTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSupportPlanTypeArgs();
         }
 
         public Builder(GetSupportPlanTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.planTypeName = defaults.planTypeName;
-    	      this.providerName = defaults.providerName;
+            $ = new GetSupportPlanTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder planTypeName(String planTypeName) {
-            this.planTypeName = Objects.requireNonNull(planTypeName);
+            $.planTypeName = planTypeName;
             return this;
         }
+
         public Builder providerName(String providerName) {
-            this.providerName = Objects.requireNonNull(providerName);
+            $.providerName = providerName;
             return this;
-        }        public GetSupportPlanTypeArgs build() {
-            return new GetSupportPlanTypeArgs(planTypeName, providerName);
+        }
+
+        public GetSupportPlanTypeArgs build() {
+            $.planTypeName = Objects.requireNonNull($.planTypeName, "expected parameter 'planTypeName' to be non-null");
+            $.providerName = Objects.requireNonNull($.providerName, "expected parameter 'providerName' to be non-null");
+            return $;
         }
     }
+
 }

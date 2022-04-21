@@ -5,10 +5,10 @@ package com.pulumi.aws.pinpoint;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -32,10 +32,10 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationSet")
-      private final @Nullable Output<String> configurationSet;
+    private @Nullable Output<String> configurationSet;
 
-    public Output<String> configurationSet() {
-        return this.configurationSet == null ? Codegen.empty() : this.configurationSet;
+    public Optional<Output<String>> configurationSet() {
+        return Optional.ofNullable(this.configurationSet);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fromAddress", required=true)
-      private final Output<String> fromAddress;
+    private Output<String> fromAddress;
 
     public Output<String> fromAddress() {
         return this.fromAddress;
@@ -65,7 +65,7 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity", required=true)
-      private final Output<String> identity;
+    private Output<String> identity;
 
     public Output<String> identity() {
         return this.identity;
@@ -76,115 +76,101 @@ public final class EmailChannelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public EmailChannelArgs(
-        Output<String> applicationId,
-        @Nullable Output<String> configurationSet,
-        @Nullable Output<Boolean> enabled,
-        Output<String> fromAddress,
-        Output<String> identity,
-        @Nullable Output<String> roleArn) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.configurationSet = configurationSet;
-        this.enabled = enabled;
-        this.fromAddress = Objects.requireNonNull(fromAddress, "expected parameter 'fromAddress' to be non-null");
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-        this.roleArn = roleArn;
-    }
+    private EmailChannelArgs() {}
 
-    private EmailChannelArgs() {
-        this.applicationId = Codegen.empty();
-        this.configurationSet = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.fromAddress = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private EmailChannelArgs(EmailChannelArgs $) {
+        this.applicationId = $.applicationId;
+        this.configurationSet = $.configurationSet;
+        this.enabled = $.enabled;
+        this.fromAddress = $.fromAddress;
+        this.identity = $.identity;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationId;
-        private @Nullable Output<String> configurationSet;
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> fromAddress;
-        private Output<String> identity;
-        private @Nullable Output<String> roleArn;
+        private EmailChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailChannelArgs();
         }
 
         public Builder(EmailChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.configurationSet = defaults.configurationSet;
-    	      this.enabled = defaults.enabled;
-    	      this.fromAddress = defaults.fromAddress;
-    	      this.identity = defaults.identity;
-    	      this.roleArn = defaults.roleArn;
+            $ = new EmailChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder configurationSet(@Nullable Output<String> configurationSet) {
-            this.configurationSet = configurationSet;
+            $.configurationSet = configurationSet;
             return this;
         }
-        public Builder configurationSet(@Nullable String configurationSet) {
-            this.configurationSet = Codegen.ofNullable(configurationSet);
-            return this;
+
+        public Builder configurationSet(String configurationSet) {
+            return configurationSet(Output.of(configurationSet));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder fromAddress(Output<String> fromAddress) {
-            this.fromAddress = Objects.requireNonNull(fromAddress);
+            $.fromAddress = fromAddress;
             return this;
         }
+
         public Builder fromAddress(String fromAddress) {
-            this.fromAddress = Output.of(Objects.requireNonNull(fromAddress));
-            return this;
+            return fromAddress(Output.of(fromAddress));
         }
+
         public Builder identity(Output<String> identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
         }
+
         public Builder identity(String identity) {
-            this.identity = Output.of(Objects.requireNonNull(identity));
-            return this;
+            return identity(Output.of(identity));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public EmailChannelArgs build() {
-            return new EmailChannelArgs(applicationId, configurationSet, enabled, fromAddress, identity, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public EmailChannelArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.fromAddress = Objects.requireNonNull($.fromAddress, "expected parameter 'fromAddress' to be non-null");
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            return $;
         }
     }
+
 }

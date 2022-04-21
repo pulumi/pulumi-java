@@ -5,9 +5,9 @@ package com.pulumi.azurenative.securityinsights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="incidentCommentId")
-      private final @Nullable Output<String> incidentCommentId;
+    private @Nullable Output<String> incidentCommentId;
 
-    public Output<String> incidentCommentId() {
-        return this.incidentCommentId == null ? Codegen.empty() : this.incidentCommentId;
+    public Optional<Output<String>> incidentCommentId() {
+        return Optional.ofNullable(this.incidentCommentId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="incidentId", required=true)
-      private final Output<String> incidentId;
+    private Output<String> incidentId;
 
     public Output<String> incidentId() {
         return this.incidentId;
@@ -42,7 +42,7 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="message", required=true)
-      private final Output<String> message;
+    private Output<String> message;
 
     public Output<String> message() {
         return this.message;
@@ -53,7 +53,7 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final Output<String> operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -64,7 +64,7 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -75,115 +75,103 @@ public final class IncidentCommentArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public IncidentCommentArgs(
-        @Nullable Output<String> incidentCommentId,
-        Output<String> incidentId,
-        Output<String> message,
-        Output<String> operationalInsightsResourceProvider,
-        Output<String> resourceGroupName,
-        Output<String> workspaceName) {
-        this.incidentCommentId = incidentCommentId;
-        this.incidentId = Objects.requireNonNull(incidentId, "expected parameter 'incidentId' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private IncidentCommentArgs() {}
 
-    private IncidentCommentArgs() {
-        this.incidentCommentId = Codegen.empty();
-        this.incidentId = Codegen.empty();
-        this.message = Codegen.empty();
-        this.operationalInsightsResourceProvider = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private IncidentCommentArgs(IncidentCommentArgs $) {
+        this.incidentCommentId = $.incidentCommentId;
+        this.incidentId = $.incidentId;
+        this.message = $.message;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncidentCommentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> incidentCommentId;
-        private Output<String> incidentId;
-        private Output<String> message;
-        private Output<String> operationalInsightsResourceProvider;
-        private Output<String> resourceGroupName;
-        private Output<String> workspaceName;
+        private IncidentCommentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncidentCommentArgs();
         }
 
         public Builder(IncidentCommentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.incidentCommentId = defaults.incidentCommentId;
-    	      this.incidentId = defaults.incidentId;
-    	      this.message = defaults.message;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new IncidentCommentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder incidentCommentId(@Nullable Output<String> incidentCommentId) {
-            this.incidentCommentId = incidentCommentId;
+            $.incidentCommentId = incidentCommentId;
             return this;
         }
-        public Builder incidentCommentId(@Nullable String incidentCommentId) {
-            this.incidentCommentId = Codegen.ofNullable(incidentCommentId);
-            return this;
+
+        public Builder incidentCommentId(String incidentCommentId) {
+            return incidentCommentId(Output.of(incidentCommentId));
         }
+
         public Builder incidentId(Output<String> incidentId) {
-            this.incidentId = Objects.requireNonNull(incidentId);
+            $.incidentId = incidentId;
             return this;
         }
+
         public Builder incidentId(String incidentId) {
-            this.incidentId = Output.of(Objects.requireNonNull(incidentId));
-            return this;
+            return incidentId(Output.of(incidentId));
         }
+
         public Builder message(Output<String> message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Output.of(Objects.requireNonNull(message));
-            return this;
+            return message(Output.of(message));
         }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
-            return this;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public IncidentCommentArgs build() {
-            return new IncidentCommentArgs(incidentCommentId, incidentId, message, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public IncidentCommentArgs build() {
+            $.incidentId = Objects.requireNonNull($.incidentId, "expected parameter 'incidentId' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

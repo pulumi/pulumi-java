@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dataproc_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RegionJobIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -34,28 +34,28 @@ public final class RegionJobIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="jobId", required=true)
-      private final Output<String> jobId;
+    private Output<String> jobId;
 
     public Output<String> jobId() {
         return this.jobId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
-      private final Output<String> regionId;
+    private Output<String> regionId;
 
     public Output<String> regionId() {
         return this.regionId;
@@ -66,118 +66,104 @@ public final class RegionJobIamPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public RegionJobIamPolicyArgs(
-        @Nullable Output<List<BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        Output<String> jobId,
-        @Nullable Output<String> project,
-        Output<String> regionId,
-        @Nullable Output<Integer> version) {
-        this.bindings = bindings;
-        this.etag = etag;
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.project = project;
-        this.regionId = Objects.requireNonNull(regionId, "expected parameter 'regionId' to be non-null");
-        this.version = version;
-    }
+    private RegionJobIamPolicyArgs() {}
 
-    private RegionJobIamPolicyArgs() {
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.jobId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.regionId = Codegen.empty();
-        this.version = Codegen.empty();
+    private RegionJobIamPolicyArgs(RegionJobIamPolicyArgs $) {
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.jobId = $.jobId;
+        this.project = $.project;
+        this.regionId = $.regionId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionJobIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private Output<String> jobId;
-        private @Nullable Output<String> project;
-        private Output<String> regionId;
-        private @Nullable Output<Integer> version;
+        private RegionJobIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionJobIamPolicyArgs();
         }
 
         public Builder(RegionJobIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.jobId = defaults.jobId;
-    	      this.project = defaults.project;
-    	      this.regionId = defaults.regionId;
-    	      this.version = defaults.version;
+            $ = new RegionJobIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder jobId(Output<String> jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder jobId(String jobId) {
-            this.jobId = Output.of(Objects.requireNonNull(jobId));
-            return this;
+            return jobId(Output.of(jobId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder regionId(Output<String> regionId) {
-            this.regionId = Objects.requireNonNull(regionId);
+            $.regionId = regionId;
             return this;
         }
+
         public Builder regionId(String regionId) {
-            this.regionId = Output.of(Objects.requireNonNull(regionId));
-            return this;
+            return regionId(Output.of(regionId));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public RegionJobIamPolicyArgs build() {
-            return new RegionJobIamPolicyArgs(bindings, etag, jobId, project, regionId, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public RegionJobIamPolicyArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            $.regionId = Objects.requireNonNull($.regionId, "expected parameter 'regionId' to be non-null");
+            return $;
         }
     }
+
 }

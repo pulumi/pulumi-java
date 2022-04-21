@@ -17,45 +17,45 @@ public final class GetQuickConnectQuickConnectConfigPhoneConfig extends com.pulu
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final String phoneNumber;
+    private String phoneNumber;
 
     public String phoneNumber() {
         return this.phoneNumber;
     }
 
-    public GetQuickConnectQuickConnectConfigPhoneConfig(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-    }
+    private GetQuickConnectQuickConnectConfigPhoneConfig() {}
 
-    private GetQuickConnectQuickConnectConfigPhoneConfig() {
-        this.phoneNumber = null;
+    private GetQuickConnectQuickConnectConfigPhoneConfig(GetQuickConnectQuickConnectConfigPhoneConfig $) {
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQuickConnectQuickConnectConfigPhoneConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String phoneNumber;
+        private GetQuickConnectQuickConnectConfigPhoneConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQuickConnectQuickConnectConfigPhoneConfig();
         }
 
         public Builder(GetQuickConnectQuickConnectConfigPhoneConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new GetQuickConnectQuickConnectConfigPhoneConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
-        }        public GetQuickConnectQuickConnectConfigPhoneConfig build() {
-            return new GetQuickConnectQuickConnectConfigPhoneConfig(phoneNumber);
+        }
+
+        public GetQuickConnectQuickConnectConfigPhoneConfig build() {
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            return $;
         }
     }
+
 }

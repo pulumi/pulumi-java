@@ -8,11 +8,11 @@ import com.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckConfigGetArgs;
 import com.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckCustomConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsConfig")
-      private final @Nullable Output<ServiceDnsConfigGetArgs> dnsConfig;
+    private @Nullable Output<ServiceDnsConfigGetArgs> dnsConfig;
 
-    public Output<ServiceDnsConfigGetArgs> dnsConfig() {
-        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
+    public Optional<Output<ServiceDnsConfigGetArgs>> dnsConfig() {
+        return Optional.ofNullable(this.dnsConfig);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDestroy")
-      private final @Nullable Output<Boolean> forceDestroy;
+    private @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> forceDestroy() {
-        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
+    public Optional<Output<Boolean>> forceDestroy() {
+        return Optional.ofNullable(this.forceDestroy);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckConfig")
-      private final @Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig;
+    private @Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig;
 
-    public Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig() {
-        return this.healthCheckConfig == null ? Codegen.empty() : this.healthCheckConfig;
+    public Optional<Output<ServiceHealthCheckConfigGetArgs>> healthCheckConfig() {
+        return Optional.ofNullable(this.healthCheckConfig);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheckCustomConfig")
-      private final @Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig;
+    private @Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig;
 
-    public Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig() {
-        return this.healthCheckCustomConfig == null ? Codegen.empty() : this.healthCheckCustomConfig;
+    public Optional<Output<ServiceHealthCheckCustomConfigGetArgs>> healthCheckCustomConfig() {
+        return Optional.ofNullable(this.healthCheckCustomConfig);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceId")
-      private final @Nullable Output<String> namespaceId;
+    private @Nullable Output<String> namespaceId;
 
-    public Output<String> namespaceId() {
-        return this.namespaceId == null ? Codegen.empty() : this.namespaceId;
+    public Optional<Output<String>> namespaceId() {
+        return Optional.ofNullable(this.namespaceId);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -124,167 +124,138 @@ public final class ServiceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ServiceState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> description,
-        @Nullable Output<ServiceDnsConfigGetArgs> dnsConfig,
-        @Nullable Output<Boolean> forceDestroy,
-        @Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig,
-        @Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namespaceId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.description = description;
-        this.dnsConfig = dnsConfig;
-        this.forceDestroy = forceDestroy;
-        this.healthCheckConfig = healthCheckConfig;
-        this.healthCheckCustomConfig = healthCheckCustomConfig;
-        this.name = name;
-        this.namespaceId = namespaceId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ServiceState() {}
 
-    private ServiceState() {
-        this.arn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.dnsConfig = Codegen.empty();
-        this.forceDestroy = Codegen.empty();
-        this.healthCheckConfig = Codegen.empty();
-        this.healthCheckCustomConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespaceId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ServiceState(ServiceState $) {
+        this.arn = $.arn;
+        this.description = $.description;
+        this.dnsConfig = $.dnsConfig;
+        this.forceDestroy = $.forceDestroy;
+        this.healthCheckConfig = $.healthCheckConfig;
+        this.healthCheckCustomConfig = $.healthCheckCustomConfig;
+        this.name = $.name;
+        this.namespaceId = $.namespaceId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<ServiceDnsConfigGetArgs> dnsConfig;
-        private @Nullable Output<Boolean> forceDestroy;
-        private @Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig;
-        private @Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namespaceId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ServiceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceState();
         }
 
         public Builder(ServiceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.description = defaults.description;
-    	      this.dnsConfig = defaults.dnsConfig;
-    	      this.forceDestroy = defaults.forceDestroy;
-    	      this.healthCheckConfig = defaults.healthCheckConfig;
-    	      this.healthCheckCustomConfig = defaults.healthCheckCustomConfig;
-    	      this.name = defaults.name;
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ServiceState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder dnsConfig(@Nullable Output<ServiceDnsConfigGetArgs> dnsConfig) {
-            this.dnsConfig = dnsConfig;
+            $.dnsConfig = dnsConfig;
             return this;
         }
-        public Builder dnsConfig(@Nullable ServiceDnsConfigGetArgs dnsConfig) {
-            this.dnsConfig = Codegen.ofNullable(dnsConfig);
-            return this;
+
+        public Builder dnsConfig(ServiceDnsConfigGetArgs dnsConfig) {
+            return dnsConfig(Output.of(dnsConfig));
         }
+
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
-            this.forceDestroy = forceDestroy;
+            $.forceDestroy = forceDestroy;
             return this;
         }
-        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Codegen.ofNullable(forceDestroy);
-            return this;
+
+        public Builder forceDestroy(Boolean forceDestroy) {
+            return forceDestroy(Output.of(forceDestroy));
         }
+
         public Builder healthCheckConfig(@Nullable Output<ServiceHealthCheckConfigGetArgs> healthCheckConfig) {
-            this.healthCheckConfig = healthCheckConfig;
+            $.healthCheckConfig = healthCheckConfig;
             return this;
         }
-        public Builder healthCheckConfig(@Nullable ServiceHealthCheckConfigGetArgs healthCheckConfig) {
-            this.healthCheckConfig = Codegen.ofNullable(healthCheckConfig);
-            return this;
+
+        public Builder healthCheckConfig(ServiceHealthCheckConfigGetArgs healthCheckConfig) {
+            return healthCheckConfig(Output.of(healthCheckConfig));
         }
+
         public Builder healthCheckCustomConfig(@Nullable Output<ServiceHealthCheckCustomConfigGetArgs> healthCheckCustomConfig) {
-            this.healthCheckCustomConfig = healthCheckCustomConfig;
+            $.healthCheckCustomConfig = healthCheckCustomConfig;
             return this;
         }
-        public Builder healthCheckCustomConfig(@Nullable ServiceHealthCheckCustomConfigGetArgs healthCheckCustomConfig) {
-            this.healthCheckCustomConfig = Codegen.ofNullable(healthCheckCustomConfig);
-            return this;
+
+        public Builder healthCheckCustomConfig(ServiceHealthCheckCustomConfigGetArgs healthCheckCustomConfig) {
+            return healthCheckCustomConfig(Output.of(healthCheckCustomConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namespaceId(@Nullable Output<String> namespaceId) {
-            this.namespaceId = namespaceId;
+            $.namespaceId = namespaceId;
             return this;
         }
-        public Builder namespaceId(@Nullable String namespaceId) {
-            this.namespaceId = Codegen.ofNullable(namespaceId);
-            return this;
+
+        public Builder namespaceId(String namespaceId) {
+            return namespaceId(Output.of(namespaceId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ServiceState build() {
-            return new ServiceState(arn, description, dnsConfig, forceDestroy, healthCheckConfig, healthCheckCustomConfig, name, namespaceId, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ServiceState build() {
+            return $;
         }
     }
+
 }

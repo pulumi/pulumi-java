@@ -17,7 +17,7 @@ public final class GetSynchronizationSettingArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSynchronizationSettingArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSynchronizationSettingArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="shareName", required=true)
-      private final String shareName;
+    private String shareName;
 
     public String shareName() {
         return this.shareName;
@@ -50,73 +50,66 @@ public final class GetSynchronizationSettingArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="synchronizationSettingName", required=true)
-      private final String synchronizationSettingName;
+    private String synchronizationSettingName;
 
     public String synchronizationSettingName() {
         return this.synchronizationSettingName;
     }
 
-    public GetSynchronizationSettingArgs(
-        String accountName,
-        String resourceGroupName,
-        String shareName,
-        String synchronizationSettingName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-        this.synchronizationSettingName = Objects.requireNonNull(synchronizationSettingName, "expected parameter 'synchronizationSettingName' to be non-null");
-    }
+    private GetSynchronizationSettingArgs() {}
 
-    private GetSynchronizationSettingArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.shareName = null;
-        this.synchronizationSettingName = null;
+    private GetSynchronizationSettingArgs(GetSynchronizationSettingArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
+        this.synchronizationSettingName = $.synchronizationSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSynchronizationSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String shareName;
-        private String synchronizationSettingName;
+        private GetSynchronizationSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSynchronizationSettingArgs();
         }
 
         public Builder(GetSynchronizationSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
-    	      this.synchronizationSettingName = defaults.synchronizationSettingName;
+            $ = new GetSynchronizationSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder synchronizationSettingName(String synchronizationSettingName) {
-            this.synchronizationSettingName = Objects.requireNonNull(synchronizationSettingName);
+            $.synchronizationSettingName = synchronizationSettingName;
             return this;
-        }        public GetSynchronizationSettingArgs build() {
-            return new GetSynchronizationSettingArgs(accountName, resourceGroupName, shareName, synchronizationSettingName);
+        }
+
+        public GetSynchronizationSettingArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            $.synchronizationSettingName = Objects.requireNonNull($.synchronizationSettingName, "expected parameter 'synchronizationSettingName' to be non-null");
+            return $;
         }
     }
+
 }

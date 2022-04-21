@@ -22,10 +22,10 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateZone")
-      private final @Nullable Boolean privateZone;
+    private @Nullable Boolean privateZone;
 
     public Optional<Boolean> privateZone() {
-        return this.privateZone == null ? Optional.empty() : Optional.ofNullable(this.privateZone);
+        return Optional.ofNullable(this.privateZone);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceRecordSetCount")
-      private final @Nullable Integer resourceRecordSetCount;
+    private @Nullable Integer resourceRecordSetCount;
 
     public Optional<Integer> resourceRecordSetCount() {
-        return this.resourceRecordSetCount == null ? Optional.empty() : Optional.ofNullable(this.resourceRecordSetCount);
+        return Optional.ofNullable(this.resourceRecordSetCount);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
     /**
@@ -77,91 +77,74 @@ public final class GetZoneArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zoneId")
-      private final @Nullable String zoneId;
+    private @Nullable String zoneId;
 
     public Optional<String> zoneId() {
-        return this.zoneId == null ? Optional.empty() : Optional.ofNullable(this.zoneId);
+        return Optional.ofNullable(this.zoneId);
     }
 
-    public GetZoneArgs(
-        @Nullable String name,
-        @Nullable Boolean privateZone,
-        @Nullable Integer resourceRecordSetCount,
-        @Nullable Map<String,String> tags,
-        @Nullable String vpcId,
-        @Nullable String zoneId) {
-        this.name = name;
-        this.privateZone = privateZone;
-        this.resourceRecordSetCount = resourceRecordSetCount;
-        this.tags = tags;
-        this.vpcId = vpcId;
-        this.zoneId = zoneId;
-    }
+    private GetZoneArgs() {}
 
-    private GetZoneArgs() {
-        this.name = null;
-        this.privateZone = null;
-        this.resourceRecordSetCount = null;
-        this.tags = Map.of();
-        this.vpcId = null;
-        this.zoneId = null;
+    private GetZoneArgs(GetZoneArgs $) {
+        this.name = $.name;
+        this.privateZone = $.privateZone;
+        this.resourceRecordSetCount = $.resourceRecordSetCount;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
+        this.zoneId = $.zoneId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetZoneArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable Boolean privateZone;
-        private @Nullable Integer resourceRecordSetCount;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String vpcId;
-        private @Nullable String zoneId;
+        private GetZoneArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetZoneArgs();
         }
 
         public Builder(GetZoneArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.privateZone = defaults.privateZone;
-    	      this.resourceRecordSetCount = defaults.resourceRecordSetCount;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
-    	      this.zoneId = defaults.zoneId;
+            $ = new GetZoneArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateZone(@Nullable Boolean privateZone) {
-            this.privateZone = privateZone;
+            $.privateZone = privateZone;
             return this;
         }
+
         public Builder resourceRecordSetCount(@Nullable Integer resourceRecordSetCount) {
-            this.resourceRecordSetCount = resourceRecordSetCount;
+            $.resourceRecordSetCount = resourceRecordSetCount;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder zoneId(@Nullable String zoneId) {
-            this.zoneId = zoneId;
+            $.zoneId = zoneId;
             return this;
-        }        public GetZoneArgs build() {
-            return new GetZoneArgs(name, privateZone, resourceRecordSetCount, tags, vpcId, zoneId);
+        }
+
+        public GetZoneArgs build() {
+            return $;
         }
     }
+
 }

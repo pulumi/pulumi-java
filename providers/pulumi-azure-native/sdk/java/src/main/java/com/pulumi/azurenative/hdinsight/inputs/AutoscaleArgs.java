@@ -7,8 +7,8 @@ import com.pulumi.azurenative.hdinsight.inputs.AutoscaleCapacityArgs;
 import com.pulumi.azurenative.hdinsight.inputs.AutoscaleRecurrenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AutoscaleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<AutoscaleCapacityArgs> capacity;
+    private @Nullable Output<AutoscaleCapacityArgs> capacity;
 
-    public Output<AutoscaleCapacityArgs> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<AutoscaleCapacityArgs>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AutoscaleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable Output<AutoscaleRecurrenceArgs> recurrence;
+    private @Nullable Output<AutoscaleRecurrenceArgs> recurrence;
 
-    public Output<AutoscaleRecurrenceArgs> recurrence() {
-        return this.recurrence == null ? Codegen.empty() : this.recurrence;
+    public Optional<Output<AutoscaleRecurrenceArgs>> recurrence() {
+        return Optional.ofNullable(this.recurrence);
     }
 
-    public AutoscaleArgs(
-        @Nullable Output<AutoscaleCapacityArgs> capacity,
-        @Nullable Output<AutoscaleRecurrenceArgs> recurrence) {
-        this.capacity = capacity;
-        this.recurrence = recurrence;
-    }
+    private AutoscaleArgs() {}
 
-    private AutoscaleArgs() {
-        this.capacity = Codegen.empty();
-        this.recurrence = Codegen.empty();
+    private AutoscaleArgs(AutoscaleArgs $) {
+        this.capacity = $.capacity;
+        this.recurrence = $.recurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoscaleCapacityArgs> capacity;
-        private @Nullable Output<AutoscaleRecurrenceArgs> recurrence;
+        private AutoscaleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleArgs();
         }
 
         public Builder(AutoscaleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.recurrence = defaults.recurrence;
+            $ = new AutoscaleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<AutoscaleCapacityArgs> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable AutoscaleCapacityArgs capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(AutoscaleCapacityArgs capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder recurrence(@Nullable Output<AutoscaleRecurrenceArgs> recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
         }
-        public Builder recurrence(@Nullable AutoscaleRecurrenceArgs recurrence) {
-            this.recurrence = Codegen.ofNullable(recurrence);
-            return this;
-        }        public AutoscaleArgs build() {
-            return new AutoscaleArgs(capacity, recurrence);
+
+        public Builder recurrence(AutoscaleRecurrenceArgs recurrence) {
+            return recurrence(Output.of(recurrence));
+        }
+
+        public AutoscaleArgs build() {
+            return $;
         }
     }
+
 }

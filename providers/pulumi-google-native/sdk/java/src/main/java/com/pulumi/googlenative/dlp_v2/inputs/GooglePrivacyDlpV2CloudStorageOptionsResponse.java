@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
      * 
      */
     @Import(name="bytesLimitPerFile", required=true)
-      private final String bytesLimitPerFile;
+    private String bytesLimitPerFile;
 
     public String bytesLimitPerFile() {
         return this.bytesLimitPerFile;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
      * 
      */
     @Import(name="bytesLimitPerFilePercent", required=true)
-      private final Integer bytesLimitPerFilePercent;
+    private Integer bytesLimitPerFilePercent;
 
     public Integer bytesLimitPerFilePercent() {
         return this.bytesLimitPerFilePercent;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
      * 
      */
     @Import(name="fileSet", required=true)
-      private final GooglePrivacyDlpV2FileSetResponse fileSet;
+    private GooglePrivacyDlpV2FileSetResponse fileSet;
 
     public GooglePrivacyDlpV2FileSetResponse fileSet() {
         return this.fileSet;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
      * 
      */
     @Import(name="fileTypes", required=true)
-      private final List<String> fileTypes;
+    private List<String> fileTypes;
 
     public List<String> fileTypes() {
         return this.fileTypes;
@@ -68,101 +68,91 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends com.pul
      * 
      */
     @Import(name="filesLimitPercent", required=true)
-      private final Integer filesLimitPercent;
+    private Integer filesLimitPercent;
 
     public Integer filesLimitPercent() {
         return this.filesLimitPercent;
     }
 
     @Import(name="sampleMethod", required=true)
-      private final String sampleMethod;
+    private String sampleMethod;
 
     public String sampleMethod() {
         return this.sampleMethod;
     }
 
-    public GooglePrivacyDlpV2CloudStorageOptionsResponse(
-        String bytesLimitPerFile,
-        Integer bytesLimitPerFilePercent,
-        GooglePrivacyDlpV2FileSetResponse fileSet,
-        List<String> fileTypes,
-        Integer filesLimitPercent,
-        String sampleMethod) {
-        this.bytesLimitPerFile = Objects.requireNonNull(bytesLimitPerFile, "expected parameter 'bytesLimitPerFile' to be non-null");
-        this.bytesLimitPerFilePercent = Objects.requireNonNull(bytesLimitPerFilePercent, "expected parameter 'bytesLimitPerFilePercent' to be non-null");
-        this.fileSet = Objects.requireNonNull(fileSet, "expected parameter 'fileSet' to be non-null");
-        this.fileTypes = Objects.requireNonNull(fileTypes, "expected parameter 'fileTypes' to be non-null");
-        this.filesLimitPercent = Objects.requireNonNull(filesLimitPercent, "expected parameter 'filesLimitPercent' to be non-null");
-        this.sampleMethod = Objects.requireNonNull(sampleMethod, "expected parameter 'sampleMethod' to be non-null");
-    }
+    private GooglePrivacyDlpV2CloudStorageOptionsResponse() {}
 
-    private GooglePrivacyDlpV2CloudStorageOptionsResponse() {
-        this.bytesLimitPerFile = null;
-        this.bytesLimitPerFilePercent = null;
-        this.fileSet = null;
-        this.fileTypes = List.of();
-        this.filesLimitPercent = null;
-        this.sampleMethod = null;
+    private GooglePrivacyDlpV2CloudStorageOptionsResponse(GooglePrivacyDlpV2CloudStorageOptionsResponse $) {
+        this.bytesLimitPerFile = $.bytesLimitPerFile;
+        this.bytesLimitPerFilePercent = $.bytesLimitPerFilePercent;
+        this.fileSet = $.fileSet;
+        this.fileTypes = $.fileTypes;
+        this.filesLimitPercent = $.filesLimitPercent;
+        this.sampleMethod = $.sampleMethod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CloudStorageOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bytesLimitPerFile;
-        private Integer bytesLimitPerFilePercent;
-        private GooglePrivacyDlpV2FileSetResponse fileSet;
-        private List<String> fileTypes;
-        private Integer filesLimitPercent;
-        private String sampleMethod;
+        private GooglePrivacyDlpV2CloudStorageOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CloudStorageOptionsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CloudStorageOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bytesLimitPerFile = defaults.bytesLimitPerFile;
-    	      this.bytesLimitPerFilePercent = defaults.bytesLimitPerFilePercent;
-    	      this.fileSet = defaults.fileSet;
-    	      this.fileTypes = defaults.fileTypes;
-    	      this.filesLimitPercent = defaults.filesLimitPercent;
-    	      this.sampleMethod = defaults.sampleMethod;
+            $ = new GooglePrivacyDlpV2CloudStorageOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bytesLimitPerFile(String bytesLimitPerFile) {
-            this.bytesLimitPerFile = Objects.requireNonNull(bytesLimitPerFile);
+            $.bytesLimitPerFile = bytesLimitPerFile;
             return this;
         }
+
         public Builder bytesLimitPerFilePercent(Integer bytesLimitPerFilePercent) {
-            this.bytesLimitPerFilePercent = Objects.requireNonNull(bytesLimitPerFilePercent);
+            $.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
             return this;
         }
+
         public Builder fileSet(GooglePrivacyDlpV2FileSetResponse fileSet) {
-            this.fileSet = Objects.requireNonNull(fileSet);
+            $.fileSet = fileSet;
             return this;
         }
+
         public Builder fileTypes(List<String> fileTypes) {
-            this.fileTypes = Objects.requireNonNull(fileTypes);
+            $.fileTypes = fileTypes;
             return this;
         }
+
         public Builder fileTypes(String... fileTypes) {
             return fileTypes(List.of(fileTypes));
         }
+
         public Builder filesLimitPercent(Integer filesLimitPercent) {
-            this.filesLimitPercent = Objects.requireNonNull(filesLimitPercent);
+            $.filesLimitPercent = filesLimitPercent;
             return this;
         }
+
         public Builder sampleMethod(String sampleMethod) {
-            this.sampleMethod = Objects.requireNonNull(sampleMethod);
+            $.sampleMethod = sampleMethod;
             return this;
-        }        public GooglePrivacyDlpV2CloudStorageOptionsResponse build() {
-            return new GooglePrivacyDlpV2CloudStorageOptionsResponse(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
+        }
+
+        public GooglePrivacyDlpV2CloudStorageOptionsResponse build() {
+            $.bytesLimitPerFile = Objects.requireNonNull($.bytesLimitPerFile, "expected parameter 'bytesLimitPerFile' to be non-null");
+            $.bytesLimitPerFilePercent = Objects.requireNonNull($.bytesLimitPerFilePercent, "expected parameter 'bytesLimitPerFilePercent' to be non-null");
+            $.fileSet = Objects.requireNonNull($.fileSet, "expected parameter 'fileSet' to be non-null");
+            $.fileTypes = Objects.requireNonNull($.fileTypes, "expected parameter 'fileTypes' to be non-null");
+            $.filesLimitPercent = Objects.requireNonNull($.filesLimitPercent, "expected parameter 'filesLimitPercent' to be non-null");
+            $.sampleMethod = Objects.requireNonNull($.sampleMethod, "expected parameter 'sampleMethod' to be non-null");
+            return $;
         }
     }
+
 }

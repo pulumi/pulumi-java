@@ -5,12 +5,12 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,213 +19,189 @@ public final class RemoteImageBuildArgs extends com.pulumi.resources.ResourceArg
     public static final RemoteImageBuildArgs Empty = new RemoteImageBuildArgs();
 
     @Import(name="buildArg")
-      private final @Nullable Output<Map<String,String>> buildArg;
+    private @Nullable Output<Map<String,String>> buildArg;
 
-    public Output<Map<String,String>> buildArg() {
-        return this.buildArg == null ? Codegen.empty() : this.buildArg;
+    public Optional<Output<Map<String,String>>> buildArg() {
+        return Optional.ofNullable(this.buildArg);
     }
 
     @Import(name="dockerfile")
-      private final @Nullable Output<String> dockerfile;
+    private @Nullable Output<String> dockerfile;
 
-    public Output<String> dockerfile() {
-        return this.dockerfile == null ? Codegen.empty() : this.dockerfile;
+    public Optional<Output<String>> dockerfile() {
+        return Optional.ofNullable(this.dockerfile);
     }
 
     @Import(name="forceRemove")
-      private final @Nullable Output<Boolean> forceRemove;
+    private @Nullable Output<Boolean> forceRemove;
 
-    public Output<Boolean> forceRemove() {
-        return this.forceRemove == null ? Codegen.empty() : this.forceRemove;
+    public Optional<Output<Boolean>> forceRemove() {
+        return Optional.ofNullable(this.forceRemove);
     }
 
     @Import(name="label")
-      private final @Nullable Output<Map<String,String>> label;
+    private @Nullable Output<Map<String,String>> label;
 
-    public Output<Map<String,String>> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<Map<String,String>>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     @Import(name="noCache")
-      private final @Nullable Output<Boolean> noCache;
+    private @Nullable Output<Boolean> noCache;
 
-    public Output<Boolean> noCache() {
-        return this.noCache == null ? Codegen.empty() : this.noCache;
+    public Optional<Output<Boolean>> noCache() {
+        return Optional.ofNullable(this.noCache);
     }
 
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
     @Import(name="remove")
-      private final @Nullable Output<Boolean> remove;
+    private @Nullable Output<Boolean> remove;
 
-    public Output<Boolean> remove() {
-        return this.remove == null ? Codegen.empty() : this.remove;
+    public Optional<Output<Boolean>> remove() {
+        return Optional.ofNullable(this.remove);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public RemoteImageBuildArgs(
-        @Nullable Output<Map<String,String>> buildArg,
-        @Nullable Output<String> dockerfile,
-        @Nullable Output<Boolean> forceRemove,
-        @Nullable Output<Map<String,String>> label,
-        @Nullable Output<Boolean> noCache,
-        Output<String> path,
-        @Nullable Output<Boolean> remove,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> target) {
-        this.buildArg = buildArg;
-        this.dockerfile = dockerfile;
-        this.forceRemove = forceRemove;
-        this.label = label;
-        this.noCache = noCache;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.remove = remove;
-        this.tags = tags;
-        this.target = target;
-    }
+    private RemoteImageBuildArgs() {}
 
-    private RemoteImageBuildArgs() {
-        this.buildArg = Codegen.empty();
-        this.dockerfile = Codegen.empty();
-        this.forceRemove = Codegen.empty();
-        this.label = Codegen.empty();
-        this.noCache = Codegen.empty();
-        this.path = Codegen.empty();
-        this.remove = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.target = Codegen.empty();
+    private RemoteImageBuildArgs(RemoteImageBuildArgs $) {
+        this.buildArg = $.buildArg;
+        this.dockerfile = $.dockerfile;
+        this.forceRemove = $.forceRemove;
+        this.label = $.label;
+        this.noCache = $.noCache;
+        this.path = $.path;
+        this.remove = $.remove;
+        this.tags = $.tags;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemoteImageBuildArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> buildArg;
-        private @Nullable Output<String> dockerfile;
-        private @Nullable Output<Boolean> forceRemove;
-        private @Nullable Output<Map<String,String>> label;
-        private @Nullable Output<Boolean> noCache;
-        private Output<String> path;
-        private @Nullable Output<Boolean> remove;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> target;
+        private RemoteImageBuildArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemoteImageBuildArgs();
         }
 
         public Builder(RemoteImageBuildArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildArg = defaults.buildArg;
-    	      this.dockerfile = defaults.dockerfile;
-    	      this.forceRemove = defaults.forceRemove;
-    	      this.label = defaults.label;
-    	      this.noCache = defaults.noCache;
-    	      this.path = defaults.path;
-    	      this.remove = defaults.remove;
-    	      this.tags = defaults.tags;
-    	      this.target = defaults.target;
+            $ = new RemoteImageBuildArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildArg(@Nullable Output<Map<String,String>> buildArg) {
-            this.buildArg = buildArg;
+            $.buildArg = buildArg;
             return this;
         }
-        public Builder buildArg(@Nullable Map<String,String> buildArg) {
-            this.buildArg = Codegen.ofNullable(buildArg);
-            return this;
+
+        public Builder buildArg(Map<String,String> buildArg) {
+            return buildArg(Output.of(buildArg));
         }
+
         public Builder dockerfile(@Nullable Output<String> dockerfile) {
-            this.dockerfile = dockerfile;
+            $.dockerfile = dockerfile;
             return this;
         }
-        public Builder dockerfile(@Nullable String dockerfile) {
-            this.dockerfile = Codegen.ofNullable(dockerfile);
-            return this;
+
+        public Builder dockerfile(String dockerfile) {
+            return dockerfile(Output.of(dockerfile));
         }
+
         public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
-            this.forceRemove = forceRemove;
+            $.forceRemove = forceRemove;
             return this;
         }
-        public Builder forceRemove(@Nullable Boolean forceRemove) {
-            this.forceRemove = Codegen.ofNullable(forceRemove);
-            return this;
+
+        public Builder forceRemove(Boolean forceRemove) {
+            return forceRemove(Output.of(forceRemove));
         }
+
         public Builder label(@Nullable Output<Map<String,String>> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable Map<String,String> label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(Map<String,String> label) {
+            return label(Output.of(label));
         }
+
         public Builder noCache(@Nullable Output<Boolean> noCache) {
-            this.noCache = noCache;
+            $.noCache = noCache;
             return this;
         }
-        public Builder noCache(@Nullable Boolean noCache) {
-            this.noCache = Codegen.ofNullable(noCache);
-            return this;
+
+        public Builder noCache(Boolean noCache) {
+            return noCache(Output.of(noCache));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder remove(@Nullable Output<Boolean> remove) {
-            this.remove = remove;
+            $.remove = remove;
             return this;
         }
-        public Builder remove(@Nullable Boolean remove) {
-            this.remove = Codegen.ofNullable(remove);
-            return this;
+
+        public Builder remove(Boolean remove) {
+            return remove(Output.of(remove));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public RemoteImageBuildArgs build() {
-            return new RemoteImageBuildArgs(buildArg, dockerfile, forceRemove, label, noCache, path, remove, tags, target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public RemoteImageBuildArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

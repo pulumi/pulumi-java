@@ -5,9 +5,9 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetA
      * 
      */
     @Import(name="kmsKey")
-      private final @Nullable Output<String> kmsKey;
+    private @Nullable Output<String> kmsKey;
 
-    public Output<String> kmsKey() {
-        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
+    public Optional<Output<String>> kmsKey() {
+        return Optional.ofNullable(this.kmsKey);
     }
 
-    public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs(@Nullable Output<String> kmsKey) {
-        this.kmsKey = kmsKey;
-    }
+    private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs() {}
 
-    private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs() {
-        this.kmsKey = Codegen.empty();
+    private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs(RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs $) {
+        this.kmsKey = $.kmsKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKey;
+        private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs();
         }
 
         public Builder(RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKey = defaults.kmsKey;
+            $ = new RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
-            this.kmsKey = kmsKey;
+            $.kmsKey = kmsKey;
             return this;
         }
-        public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Codegen.ofNullable(kmsKey);
-            return this;
-        }        public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs build() {
-            return new RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs(kmsKey);
+
+        public Builder kmsKey(String kmsKey) {
+            return kmsKey(Output.of(kmsKey));
+        }
+
+        public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs build() {
+            return $;
         }
     }
+
 }

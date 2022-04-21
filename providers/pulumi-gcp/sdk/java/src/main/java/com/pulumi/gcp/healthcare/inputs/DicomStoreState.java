@@ -5,13 +5,13 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigGetArgs;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<String> dataset;
+    private @Nullable Output<String> dataset;
 
-    public Output<String> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<String>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfig")
-      private final @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig;
+    private @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig;
 
-    public Output<DicomStoreNotificationConfigGetArgs> notificationConfig() {
-        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
+    public Optional<Output<DicomStoreNotificationConfigGetArgs>> notificationConfig() {
+        return Optional.ofNullable(this.notificationConfig);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -91,118 +91,102 @@ public final class DicomStoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamConfigs")
-      private final @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
+    private @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
 
-    public Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs() {
-        return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
+    public Optional<Output<List<DicomStoreStreamConfigGetArgs>>> streamConfigs() {
+        return Optional.ofNullable(this.streamConfigs);
     }
 
-    public DicomStoreState(
-        @Nullable Output<String> dataset,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
-        this.dataset = dataset;
-        this.labels = labels;
-        this.name = name;
-        this.notificationConfig = notificationConfig;
-        this.selfLink = selfLink;
-        this.streamConfigs = streamConfigs;
-    }
+    private DicomStoreState() {}
 
-    private DicomStoreState() {
-        this.dataset = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationConfig = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.streamConfigs = Codegen.empty();
+    private DicomStoreState(DicomStoreState $) {
+        this.dataset = $.dataset;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.notificationConfig = $.notificationConfig;
+        this.selfLink = $.selfLink;
+        this.streamConfigs = $.streamConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DicomStoreState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataset;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
+        private DicomStoreState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DicomStoreState();
         }
 
         public Builder(DicomStoreState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.notificationConfig = defaults.notificationConfig;
-    	      this.selfLink = defaults.selfLink;
-    	      this.streamConfigs = defaults.streamConfigs;
+            $ = new DicomStoreState(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable Output<String> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable String dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(String dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationConfig(@Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig) {
-            this.notificationConfig = notificationConfig;
+            $.notificationConfig = notificationConfig;
             return this;
         }
-        public Builder notificationConfig(@Nullable DicomStoreNotificationConfigGetArgs notificationConfig) {
-            this.notificationConfig = Codegen.ofNullable(notificationConfig);
-            return this;
+
+        public Builder notificationConfig(DicomStoreNotificationConfigGetArgs notificationConfig) {
+            return notificationConfig(Output.of(notificationConfig));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder streamConfigs(@Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
-            this.streamConfigs = streamConfigs;
+            $.streamConfigs = streamConfigs;
             return this;
         }
-        public Builder streamConfigs(@Nullable List<DicomStoreStreamConfigGetArgs> streamConfigs) {
-            this.streamConfigs = Codegen.ofNullable(streamConfigs);
-            return this;
+
+        public Builder streamConfigs(List<DicomStoreStreamConfigGetArgs> streamConfigs) {
+            return streamConfigs(Output.of(streamConfigs));
         }
+
         public Builder streamConfigs(DicomStoreStreamConfigGetArgs... streamConfigs) {
             return streamConfigs(List.of(streamConfigs));
-        }        public DicomStoreState build() {
-            return new DicomStoreState(dataset, labels, name, notificationConfig, selfLink, streamConfigs);
+        }
+
+        public DicomStoreState build() {
+            return $;
         }
     }
+
 }

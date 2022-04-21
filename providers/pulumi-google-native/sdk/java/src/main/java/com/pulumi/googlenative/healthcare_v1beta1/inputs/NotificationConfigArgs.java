@@ -5,10 +5,10 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="pubsubTopic")
-      private final @Nullable Output<String> pubsubTopic;
+    private @Nullable Output<String> pubsubTopic;
 
-    public Output<String> pubsubTopic() {
-        return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
+    public Optional<Output<String>> pubsubTopic() {
+        return Optional.ofNullable(this.pubsubTopic);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sendForBulkImport")
-      private final @Nullable Output<Boolean> sendForBulkImport;
+    private @Nullable Output<Boolean> sendForBulkImport;
 
-    public Output<Boolean> sendForBulkImport() {
-        return this.sendForBulkImport == null ? Codegen.empty() : this.sendForBulkImport;
+    public Optional<Output<Boolean>> sendForBulkImport() {
+        return Optional.ofNullable(this.sendForBulkImport);
     }
 
-    public NotificationConfigArgs(
-        @Nullable Output<String> pubsubTopic,
-        @Nullable Output<Boolean> sendForBulkImport) {
-        this.pubsubTopic = pubsubTopic;
-        this.sendForBulkImport = sendForBulkImport;
-    }
+    private NotificationConfigArgs() {}
 
-    private NotificationConfigArgs() {
-        this.pubsubTopic = Codegen.empty();
-        this.sendForBulkImport = Codegen.empty();
+    private NotificationConfigArgs(NotificationConfigArgs $) {
+        this.pubsubTopic = $.pubsubTopic;
+        this.sendForBulkImport = $.sendForBulkImport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pubsubTopic;
-        private @Nullable Output<Boolean> sendForBulkImport;
+        private NotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigArgs();
         }
 
         public Builder(NotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopic = defaults.pubsubTopic;
-    	      this.sendForBulkImport = defaults.sendForBulkImport;
+            $ = new NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
-            this.pubsubTopic = pubsubTopic;
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
-        public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Codegen.ofNullable(pubsubTopic);
-            return this;
+
+        public Builder pubsubTopic(String pubsubTopic) {
+            return pubsubTopic(Output.of(pubsubTopic));
         }
+
         public Builder sendForBulkImport(@Nullable Output<Boolean> sendForBulkImport) {
-            this.sendForBulkImport = sendForBulkImport;
+            $.sendForBulkImport = sendForBulkImport;
             return this;
         }
-        public Builder sendForBulkImport(@Nullable Boolean sendForBulkImport) {
-            this.sendForBulkImport = Codegen.ofNullable(sendForBulkImport);
-            return this;
-        }        public NotificationConfigArgs build() {
-            return new NotificationConfigArgs(pubsubTopic, sendForBulkImport);
+
+        public Builder sendForBulkImport(Boolean sendForBulkImport) {
+            return sendForBulkImport(Output.of(sendForBulkImport));
+        }
+
+        public NotificationConfigArgs build() {
+            return $;
         }
     }
+
 }

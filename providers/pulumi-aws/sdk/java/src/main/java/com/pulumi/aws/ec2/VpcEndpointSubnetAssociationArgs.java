@@ -5,7 +5,6 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class VpcEndpointSubnetAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
@@ -30,63 +29,60 @@ public final class VpcEndpointSubnetAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="vpcEndpointId", required=true)
-      private final Output<String> vpcEndpointId;
+    private Output<String> vpcEndpointId;
 
     public Output<String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
 
-    public VpcEndpointSubnetAssociationArgs(
-        Output<String> subnetId,
-        Output<String> vpcEndpointId) {
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId, "expected parameter 'vpcEndpointId' to be non-null");
-    }
+    private VpcEndpointSubnetAssociationArgs() {}
 
-    private VpcEndpointSubnetAssociationArgs() {
-        this.subnetId = Codegen.empty();
-        this.vpcEndpointId = Codegen.empty();
+    private VpcEndpointSubnetAssociationArgs(VpcEndpointSubnetAssociationArgs $) {
+        this.subnetId = $.subnetId;
+        this.vpcEndpointId = $.vpcEndpointId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcEndpointSubnetAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> subnetId;
-        private Output<String> vpcEndpointId;
+        private VpcEndpointSubnetAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcEndpointSubnetAssociationArgs();
         }
 
         public Builder(VpcEndpointSubnetAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subnetId = defaults.subnetId;
-    	      this.vpcEndpointId = defaults.vpcEndpointId;
+            $ = new VpcEndpointSubnetAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder vpcEndpointId(Output<String> vpcEndpointId) {
-            this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId);
+            $.vpcEndpointId = vpcEndpointId;
             return this;
         }
+
         public Builder vpcEndpointId(String vpcEndpointId) {
-            this.vpcEndpointId = Output.of(Objects.requireNonNull(vpcEndpointId));
-            return this;
-        }        public VpcEndpointSubnetAssociationArgs build() {
-            return new VpcEndpointSubnetAssociationArgs(subnetId, vpcEndpointId);
+            return vpcEndpointId(Output.of(vpcEndpointId));
+        }
+
+        public VpcEndpointSubnetAssociationArgs build() {
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            $.vpcEndpointId = Objects.requireNonNull($.vpcEndpointId, "expected parameter 'vpcEndpointId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,45 +19,44 @@ public final class RepositoryImageScanningConfiguration extends com.pulumi.resou
     public static final RepositoryImageScanningConfiguration Empty = new RepositoryImageScanningConfiguration();
 
     @Import(name="scanOnPush")
-      private final @Nullable Boolean scanOnPush;
+    private @Nullable Boolean scanOnPush;
 
     public Optional<Boolean> scanOnPush() {
-        return this.scanOnPush == null ? Optional.empty() : Optional.ofNullable(this.scanOnPush);
+        return Optional.ofNullable(this.scanOnPush);
     }
 
-    public RepositoryImageScanningConfiguration(@Nullable Boolean scanOnPush) {
-        this.scanOnPush = scanOnPush;
-    }
+    private RepositoryImageScanningConfiguration() {}
 
-    private RepositoryImageScanningConfiguration() {
-        this.scanOnPush = null;
+    private RepositoryImageScanningConfiguration(RepositoryImageScanningConfiguration $) {
+        this.scanOnPush = $.scanOnPush;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryImageScanningConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean scanOnPush;
+        private RepositoryImageScanningConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryImageScanningConfiguration();
         }
 
         public Builder(RepositoryImageScanningConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scanOnPush = defaults.scanOnPush;
+            $ = new RepositoryImageScanningConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder scanOnPush(@Nullable Boolean scanOnPush) {
-            this.scanOnPush = scanOnPush;
+            $.scanOnPush = scanOnPush;
             return this;
-        }        public RepositoryImageScanningConfiguration build() {
-            return new RepositoryImageScanningConfiguration(scanOnPush);
+        }
+
+        public RepositoryImageScanningConfiguration build() {
+            return $;
         }
     }
+
 }

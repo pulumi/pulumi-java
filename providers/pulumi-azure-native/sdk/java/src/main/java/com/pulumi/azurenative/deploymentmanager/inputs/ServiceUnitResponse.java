@@ -26,10 +26,10 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="artifacts")
-      private final @Nullable ServiceUnitArtifactsResponse artifacts;
+    private @Nullable ServiceUnitArtifactsResponse artifacts;
 
     public Optional<ServiceUnitArtifactsResponse> artifacts() {
-        return this.artifacts == null ? Optional.empty() : Optional.ofNullable(this.artifacts);
+        return Optional.ofNullable(this.artifacts);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deploymentMode", required=true)
-      private final String deploymentMode;
+    private String deploymentMode;
 
     public String deploymentMode() {
         return this.deploymentMode;
@@ -48,10 +48,10 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="steps")
-      private final @Nullable List<RolloutStepResponse> steps;
+    private @Nullable List<RolloutStepResponse> steps;
 
-    public List<RolloutStepResponse> steps() {
-        return this.steps == null ? List.of() : this.steps;
+    public Optional<List<RolloutStepResponse>> steps() {
+        return Optional.ofNullable(this.steps);
     }
 
     /**
@@ -70,85 +70,74 @@ public final class ServiceUnitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetResourceGroup", required=true)
-      private final String targetResourceGroup;
+    private String targetResourceGroup;
 
     public String targetResourceGroup() {
         return this.targetResourceGroup;
     }
 
-    public ServiceUnitResponse(
-        @Nullable ServiceUnitArtifactsResponse artifacts,
-        String deploymentMode,
-        @Nullable String name,
-        @Nullable List<RolloutStepResponse> steps,
-        String targetResourceGroup) {
-        this.artifacts = artifacts;
-        this.deploymentMode = Objects.requireNonNull(deploymentMode, "expected parameter 'deploymentMode' to be non-null");
-        this.name = name;
-        this.steps = steps;
-        this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup, "expected parameter 'targetResourceGroup' to be non-null");
-    }
+    private ServiceUnitResponse() {}
 
-    private ServiceUnitResponse() {
-        this.artifacts = null;
-        this.deploymentMode = null;
-        this.name = null;
-        this.steps = List.of();
-        this.targetResourceGroup = null;
+    private ServiceUnitResponse(ServiceUnitResponse $) {
+        this.artifacts = $.artifacts;
+        this.deploymentMode = $.deploymentMode;
+        this.name = $.name;
+        this.steps = $.steps;
+        this.targetResourceGroup = $.targetResourceGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceUnitResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceUnitArtifactsResponse artifacts;
-        private String deploymentMode;
-        private @Nullable String name;
-        private @Nullable List<RolloutStepResponse> steps;
-        private String targetResourceGroup;
+        private ServiceUnitResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceUnitResponse();
         }
 
         public Builder(ServiceUnitResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifacts = defaults.artifacts;
-    	      this.deploymentMode = defaults.deploymentMode;
-    	      this.name = defaults.name;
-    	      this.steps = defaults.steps;
-    	      this.targetResourceGroup = defaults.targetResourceGroup;
+            $ = new ServiceUnitResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifacts(@Nullable ServiceUnitArtifactsResponse artifacts) {
-            this.artifacts = artifacts;
+            $.artifacts = artifacts;
             return this;
         }
+
         public Builder deploymentMode(String deploymentMode) {
-            this.deploymentMode = Objects.requireNonNull(deploymentMode);
+            $.deploymentMode = deploymentMode;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder steps(@Nullable List<RolloutStepResponse> steps) {
-            this.steps = steps;
+            $.steps = steps;
             return this;
         }
+
         public Builder steps(RolloutStepResponse... steps) {
             return steps(List.of(steps));
         }
+
         public Builder targetResourceGroup(String targetResourceGroup) {
-            this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
+            $.targetResourceGroup = targetResourceGroup;
             return this;
-        }        public ServiceUnitResponse build() {
-            return new ServiceUnitResponse(artifacts, deploymentMode, name, steps, targetResourceGroup);
+        }
+
+        public ServiceUnitResponse build() {
+            $.deploymentMode = Objects.requireNonNull($.deploymentMode, "expected parameter 'deploymentMode' to be non-null");
+            $.targetResourceGroup = Objects.requireNonNull($.targetResourceGroup, "expected parameter 'targetResourceGroup' to be non-null");
+            return $;
         }
     }
+
 }

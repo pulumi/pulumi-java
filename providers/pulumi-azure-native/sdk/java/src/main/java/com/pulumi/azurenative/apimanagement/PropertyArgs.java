@@ -5,11 +5,11 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -33,10 +33,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="propId")
-      private final @Nullable Output<String> propId;
+    private @Nullable Output<String> propId;
 
-    public Output<String> propId() {
-        return this.propId == null ? Codegen.empty() : this.propId;
+    public Optional<Output<String>> propId() {
+        return Optional.ofNullable(this.propId);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,10 +55,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<Boolean> secret;
+    private @Nullable Output<Boolean> secret;
 
-    public Output<Boolean> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<Boolean>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -77,10 +77,10 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -88,131 +88,116 @@ public final class PropertyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public PropertyArgs(
-        Output<String> displayName,
-        @Nullable Output<String> propId,
-        Output<String> resourceGroupName,
-        @Nullable Output<Boolean> secret,
-        Output<String> serviceName,
-        @Nullable Output<List<String>> tags,
-        Output<String> value) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.propId = propId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secret = secret;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.tags = tags;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private PropertyArgs() {}
 
-    private PropertyArgs() {
-        this.displayName = Codegen.empty();
-        this.propId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.value = Codegen.empty();
+    private PropertyArgs(PropertyArgs $) {
+        this.displayName = $.displayName;
+        this.propId = $.propId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.secret = $.secret;
+        this.serviceName = $.serviceName;
+        this.tags = $.tags;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<String> propId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Boolean> secret;
-        private Output<String> serviceName;
-        private @Nullable Output<List<String>> tags;
-        private Output<String> value;
+        private PropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PropertyArgs();
         }
 
         public Builder(PropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.propId = defaults.propId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secret = defaults.secret;
-    	      this.serviceName = defaults.serviceName;
-    	      this.tags = defaults.tags;
-    	      this.value = defaults.value;
+            $ = new PropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder propId(@Nullable Output<String> propId) {
-            this.propId = propId;
+            $.propId = propId;
             return this;
         }
-        public Builder propId(@Nullable String propId) {
-            this.propId = Codegen.ofNullable(propId);
-            return this;
+
+        public Builder propId(String propId) {
+            return propId(Output.of(propId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder secret(@Nullable Output<Boolean> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable Boolean secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(Boolean secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public PropertyArgs build() {
-            return new PropertyArgs(displayName, propId, resourceGroupName, secret, serviceName, tags, value);
+            return value(Output.of(value));
+        }
+
+        public PropertyArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

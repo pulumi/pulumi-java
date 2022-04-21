@@ -5,9 +5,9 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SubnetReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class SubnetReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sourceArmResourceId", required=true)
-      private final Output<String> sourceArmResourceId;
+    private Output<String> sourceArmResourceId;
 
     public Output<String> sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
-    public SubnetReferenceArgs(
-        @Nullable Output<String> name,
-        Output<String> sourceArmResourceId) {
-        this.name = name;
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
-    }
+    private SubnetReferenceArgs() {}
 
-    private SubnetReferenceArgs() {
-        this.name = Codegen.empty();
-        this.sourceArmResourceId = Codegen.empty();
+    private SubnetReferenceArgs(SubnetReferenceArgs $) {
+        this.name = $.name;
+        this.sourceArmResourceId = $.sourceArmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> sourceArmResourceId;
+        private SubnetReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetReferenceArgs();
         }
 
         public Builder(SubnetReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sourceArmResourceId = defaults.sourceArmResourceId;
+            $ = new SubnetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sourceArmResourceId(Output<String> sourceArmResourceId) {
-            this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+            $.sourceArmResourceId = sourceArmResourceId;
             return this;
         }
+
         public Builder sourceArmResourceId(String sourceArmResourceId) {
-            this.sourceArmResourceId = Output.of(Objects.requireNonNull(sourceArmResourceId));
-            return this;
-        }        public SubnetReferenceArgs build() {
-            return new SubnetReferenceArgs(name, sourceArmResourceId);
+            return sourceArmResourceId(Output.of(sourceArmResourceId));
+        }
+
+        public SubnetReferenceArgs build() {
+            $.sourceArmResourceId = Objects.requireNonNull($.sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
+            return $;
         }
     }
+
 }

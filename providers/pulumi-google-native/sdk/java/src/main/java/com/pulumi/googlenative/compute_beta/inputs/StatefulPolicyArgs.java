@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.StatefulPolicyPreservedStateArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class StatefulPolicyArgs extends com.pulumi.resources.ResourceArgs 
     public static final StatefulPolicyArgs Empty = new StatefulPolicyArgs();
 
     @Import(name="preservedState")
-      private final @Nullable Output<StatefulPolicyPreservedStateArgs> preservedState;
+    private @Nullable Output<StatefulPolicyPreservedStateArgs> preservedState;
 
-    public Output<StatefulPolicyPreservedStateArgs> preservedState() {
-        return this.preservedState == null ? Codegen.empty() : this.preservedState;
+    public Optional<Output<StatefulPolicyPreservedStateArgs>> preservedState() {
+        return Optional.ofNullable(this.preservedState);
     }
 
-    public StatefulPolicyArgs(@Nullable Output<StatefulPolicyPreservedStateArgs> preservedState) {
-        this.preservedState = preservedState;
-    }
+    private StatefulPolicyArgs() {}
 
-    private StatefulPolicyArgs() {
-        this.preservedState = Codegen.empty();
+    private StatefulPolicyArgs(StatefulPolicyArgs $) {
+        this.preservedState = $.preservedState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StatefulPolicyPreservedStateArgs> preservedState;
+        private StatefulPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulPolicyArgs();
         }
 
         public Builder(StatefulPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preservedState = defaults.preservedState;
+            $ = new StatefulPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preservedState(@Nullable Output<StatefulPolicyPreservedStateArgs> preservedState) {
-            this.preservedState = preservedState;
+            $.preservedState = preservedState;
             return this;
         }
-        public Builder preservedState(@Nullable StatefulPolicyPreservedStateArgs preservedState) {
-            this.preservedState = Codegen.ofNullable(preservedState);
-            return this;
-        }        public StatefulPolicyArgs build() {
-            return new StatefulPolicyArgs(preservedState);
+
+        public Builder preservedState(StatefulPolicyPreservedStateArgs preservedState) {
+            return preservedState(Output.of(preservedState));
+        }
+
+        public StatefulPolicyArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetRegionAutoscalerArgs extends com.pulumi.resources.InvokeAr
     public static final GetRegionAutoscalerArgs Empty = new GetRegionAutoscalerArgs();
 
     @Import(name="autoscaler", required=true)
-      private final String autoscaler;
+    private String autoscaler;
 
     public String autoscaler() {
         return this.autoscaler;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetRegionAutoscalerArgs(
-        String autoscaler,
-        @Nullable String project,
-        String region) {
-        this.autoscaler = Objects.requireNonNull(autoscaler, "expected parameter 'autoscaler' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetRegionAutoscalerArgs() {}
 
-    private GetRegionAutoscalerArgs() {
-        this.autoscaler = null;
-        this.project = null;
-        this.region = null;
+    private GetRegionAutoscalerArgs(GetRegionAutoscalerArgs $) {
+        this.autoscaler = $.autoscaler;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionAutoscalerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String autoscaler;
-        private @Nullable String project;
-        private String region;
+        private GetRegionAutoscalerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionAutoscalerArgs();
         }
 
         public Builder(GetRegionAutoscalerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaler = defaults.autoscaler;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRegionAutoscalerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaler(String autoscaler) {
-            this.autoscaler = Objects.requireNonNull(autoscaler);
+            $.autoscaler = autoscaler;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetRegionAutoscalerArgs build() {
-            return new GetRegionAutoscalerArgs(autoscaler, project, region);
+        }
+
+        public GetRegionAutoscalerArgs build() {
+            $.autoscaler = Objects.requireNonNull($.autoscaler, "expected parameter 'autoscaler' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

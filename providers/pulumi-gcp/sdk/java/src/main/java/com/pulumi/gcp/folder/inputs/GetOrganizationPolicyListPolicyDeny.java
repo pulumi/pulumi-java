@@ -15,65 +15,63 @@ public final class GetOrganizationPolicyListPolicyDeny extends com.pulumi.resour
     public static final GetOrganizationPolicyListPolicyDeny Empty = new GetOrganizationPolicyListPolicyDeny();
 
     @Import(name="all", required=true)
-      private final Boolean all;
+    private Boolean all;
 
     public Boolean all() {
         return this.all;
     }
 
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public GetOrganizationPolicyListPolicyDeny(
-        Boolean all,
-        List<String> values) {
-        this.all = Objects.requireNonNull(all, "expected parameter 'all' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private GetOrganizationPolicyListPolicyDeny() {}
 
-    private GetOrganizationPolicyListPolicyDeny() {
-        this.all = null;
-        this.values = List.of();
+    private GetOrganizationPolicyListPolicyDeny(GetOrganizationPolicyListPolicyDeny $) {
+        this.all = $.all;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationPolicyListPolicyDeny defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean all;
-        private List<String> values;
+        private GetOrganizationPolicyListPolicyDeny $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationPolicyListPolicyDeny();
         }
 
         public Builder(GetOrganizationPolicyListPolicyDeny defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.all = defaults.all;
-    	      this.values = defaults.values;
+            $ = new GetOrganizationPolicyListPolicyDeny(Objects.requireNonNull(defaults));
         }
 
         public Builder all(Boolean all) {
-            this.all = Objects.requireNonNull(all);
+            $.all = all;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public GetOrganizationPolicyListPolicyDeny build() {
-            return new GetOrganizationPolicyListPolicyDeny(all, values);
+        }
+
+        public GetOrganizationPolicyListPolicyDeny build() {
+            $.all = Objects.requireNonNull($.all, "expected parameter 'all' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

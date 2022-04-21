@@ -22,7 +22,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,7 +33,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -44,64 +44,59 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
      * 
      */
     @Import(name="ttl", required=true)
-      private final DurationResponse ttl;
+    private DurationResponse ttl;
 
     public DurationResponse ttl() {
         return this.ttl;
     }
 
-    public ConsistentHashLoadBalancerSettingsHttpCookieResponse(
-        String name,
-        String path,
-        DurationResponse ttl) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
-    }
+    private ConsistentHashLoadBalancerSettingsHttpCookieResponse() {}
 
-    private ConsistentHashLoadBalancerSettingsHttpCookieResponse() {
-        this.name = null;
-        this.path = null;
-        this.ttl = null;
+    private ConsistentHashLoadBalancerSettingsHttpCookieResponse(ConsistentHashLoadBalancerSettingsHttpCookieResponse $) {
+        this.name = $.name;
+        this.path = $.path;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsistentHashLoadBalancerSettingsHttpCookieResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String path;
-        private DurationResponse ttl;
+        private ConsistentHashLoadBalancerSettingsHttpCookieResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsistentHashLoadBalancerSettingsHttpCookieResponse();
         }
 
         public Builder(ConsistentHashLoadBalancerSettingsHttpCookieResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.ttl = defaults.ttl;
+            $ = new ConsistentHashLoadBalancerSettingsHttpCookieResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder ttl(DurationResponse ttl) {
-            this.ttl = Objects.requireNonNull(ttl);
+            $.ttl = ttl;
             return this;
-        }        public ConsistentHashLoadBalancerSettingsHttpCookieResponse build() {
-            return new ConsistentHashLoadBalancerSettingsHttpCookieResponse(name, path, ttl);
+        }
+
+        public ConsistentHashLoadBalancerSettingsHttpCookieResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
+            return $;
         }
     }
+
 }

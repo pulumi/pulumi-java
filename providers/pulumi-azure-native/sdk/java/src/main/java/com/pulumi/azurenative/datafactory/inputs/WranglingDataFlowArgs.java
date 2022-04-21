@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<List<Object>> annotations;
+    private @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<List<Object>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="documentLocale")
-      private final @Nullable Output<String> documentLocale;
+    private @Nullable Output<String> documentLocale;
 
-    public Output<String> documentLocale() {
-        return this.documentLocale == null ? Codegen.empty() : this.documentLocale;
+    public Optional<Output<String>> documentLocale() {
+        return Optional.ofNullable(this.documentLocale);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="folder")
-      private final @Nullable Output<DataFlowFolderArgs> folder;
+    private @Nullable Output<DataFlowFolderArgs> folder;
 
-    public Output<DataFlowFolderArgs> folder() {
-        return this.folder == null ? Codegen.empty() : this.folder;
+    public Optional<Output<DataFlowFolderArgs>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sources")
-      private final @Nullable Output<List<PowerQuerySourceArgs>> sources;
+    private @Nullable Output<List<PowerQuerySourceArgs>> sources;
 
-    public Output<List<PowerQuerySourceArgs>> sources() {
-        return this.sources == null ? Codegen.empty() : this.sources;
+    public Optional<Output<List<PowerQuerySourceArgs>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     /**
@@ -95,134 +96,117 @@ public final class WranglingDataFlowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public WranglingDataFlowArgs(
-        @Nullable Output<List<Object>> annotations,
-        @Nullable Output<String> description,
-        @Nullable Output<String> documentLocale,
-        @Nullable Output<DataFlowFolderArgs> folder,
-        @Nullable Output<String> script,
-        @Nullable Output<List<PowerQuerySourceArgs>> sources,
-        Output<String> type) {
-        this.annotations = annotations;
-        this.description = description;
-        this.documentLocale = documentLocale;
-        this.folder = folder;
-        this.script = script;
-        this.sources = sources;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private WranglingDataFlowArgs() {}
 
-    private WranglingDataFlowArgs() {
-        this.annotations = Codegen.empty();
-        this.description = Codegen.empty();
-        this.documentLocale = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.script = Codegen.empty();
-        this.sources = Codegen.empty();
-        this.type = Codegen.empty();
+    private WranglingDataFlowArgs(WranglingDataFlowArgs $) {
+        this.annotations = $.annotations;
+        this.description = $.description;
+        this.documentLocale = $.documentLocale;
+        this.folder = $.folder;
+        this.script = $.script;
+        this.sources = $.sources;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WranglingDataFlowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> annotations;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> documentLocale;
-        private @Nullable Output<DataFlowFolderArgs> folder;
-        private @Nullable Output<String> script;
-        private @Nullable Output<List<PowerQuerySourceArgs>> sources;
-        private Output<String> type;
+        private WranglingDataFlowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WranglingDataFlowArgs();
         }
 
         public Builder(WranglingDataFlowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.description = defaults.description;
-    	      this.documentLocale = defaults.documentLocale;
-    	      this.folder = defaults.folder;
-    	      this.script = defaults.script;
-    	      this.sources = defaults.sources;
-    	      this.type = defaults.type;
+            $ = new WranglingDataFlowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(List<Object> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder documentLocale(@Nullable Output<String> documentLocale) {
-            this.documentLocale = documentLocale;
+            $.documentLocale = documentLocale;
             return this;
         }
-        public Builder documentLocale(@Nullable String documentLocale) {
-            this.documentLocale = Codegen.ofNullable(documentLocale);
-            return this;
+
+        public Builder documentLocale(String documentLocale) {
+            return documentLocale(Output.of(documentLocale));
         }
+
         public Builder folder(@Nullable Output<DataFlowFolderArgs> folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
-        public Builder folder(@Nullable DataFlowFolderArgs folder) {
-            this.folder = Codegen.ofNullable(folder);
-            return this;
+
+        public Builder folder(DataFlowFolderArgs folder) {
+            return folder(Output.of(folder));
         }
+
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
+
+        public Builder script(String script) {
+            return script(Output.of(script));
         }
+
         public Builder sources(@Nullable Output<List<PowerQuerySourceArgs>> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
-        public Builder sources(@Nullable List<PowerQuerySourceArgs> sources) {
-            this.sources = Codegen.ofNullable(sources);
-            return this;
+
+        public Builder sources(List<PowerQuerySourceArgs> sources) {
+            return sources(Output.of(sources));
         }
+
         public Builder sources(PowerQuerySourceArgs... sources) {
             return sources(List.of(sources));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public WranglingDataFlowArgs build() {
-            return new WranglingDataFlowArgs(annotations, description, documentLocale, folder, script, sources, type);
+            return type(Output.of(type));
+        }
+
+        public WranglingDataFlowArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

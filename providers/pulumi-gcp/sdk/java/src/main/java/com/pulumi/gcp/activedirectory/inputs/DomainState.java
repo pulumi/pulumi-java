@@ -5,11 +5,11 @@ package com.pulumi.gcp.activedirectory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="admin")
-      private final @Nullable Output<String> admin;
+    private @Nullable Output<String> admin;
 
-    public Output<String> admin() {
-        return this.admin == null ? Codegen.empty() : this.admin;
+    public Optional<Output<String>> admin() {
+        return Optional.ofNullable(this.admin);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizedNetworks")
-      private final @Nullable Output<List<String>> authorizedNetworks;
+    private @Nullable Output<List<String>> authorizedNetworks;
 
-    public Output<List<String>> authorizedNetworks() {
-        return this.authorizedNetworks == null ? Codegen.empty() : this.authorizedNetworks;
+    public Optional<Output<List<String>>> authorizedNetworks() {
+        return Optional.ofNullable(this.authorizedNetworks);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable Output<String> fqdn;
+    private @Nullable Output<String> fqdn;
 
-    public Output<String> fqdn() {
-        return this.fqdn == null ? Codegen.empty() : this.fqdn;
+    public Optional<Output<String>> fqdn() {
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locations")
-      private final @Nullable Output<List<String>> locations;
+    private @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<String>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -117,160 +117,136 @@ public final class DomainState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservedIpRange")
-      private final @Nullable Output<String> reservedIpRange;
+    private @Nullable Output<String> reservedIpRange;
 
-    public Output<String> reservedIpRange() {
-        return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
+    public Optional<Output<String>> reservedIpRange() {
+        return Optional.ofNullable(this.reservedIpRange);
     }
 
-    public DomainState(
-        @Nullable Output<String> admin,
-        @Nullable Output<List<String>> authorizedNetworks,
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> fqdn,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> locations,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> reservedIpRange) {
-        this.admin = admin;
-        this.authorizedNetworks = authorizedNetworks;
-        this.domainName = domainName;
-        this.fqdn = fqdn;
-        this.labels = labels;
-        this.locations = locations;
-        this.name = name;
-        this.project = project;
-        this.reservedIpRange = reservedIpRange;
-    }
+    private DomainState() {}
 
-    private DomainState() {
-        this.admin = Codegen.empty();
-        this.authorizedNetworks = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.fqdn = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.reservedIpRange = Codegen.empty();
+    private DomainState(DomainState $) {
+        this.admin = $.admin;
+        this.authorizedNetworks = $.authorizedNetworks;
+        this.domainName = $.domainName;
+        this.fqdn = $.fqdn;
+        this.labels = $.labels;
+        this.locations = $.locations;
+        this.name = $.name;
+        this.project = $.project;
+        this.reservedIpRange = $.reservedIpRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> admin;
-        private @Nullable Output<List<String>> authorizedNetworks;
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> fqdn;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> locations;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> reservedIpRange;
+        private DomainState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainState();
         }
 
         public Builder(DomainState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.admin = defaults.admin;
-    	      this.authorizedNetworks = defaults.authorizedNetworks;
-    	      this.domainName = defaults.domainName;
-    	      this.fqdn = defaults.fqdn;
-    	      this.labels = defaults.labels;
-    	      this.locations = defaults.locations;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.reservedIpRange = defaults.reservedIpRange;
+            $ = new DomainState(Objects.requireNonNull(defaults));
         }
 
         public Builder admin(@Nullable Output<String> admin) {
-            this.admin = admin;
+            $.admin = admin;
             return this;
         }
-        public Builder admin(@Nullable String admin) {
-            this.admin = Codegen.ofNullable(admin);
-            return this;
+
+        public Builder admin(String admin) {
+            return admin(Output.of(admin));
         }
+
         public Builder authorizedNetworks(@Nullable Output<List<String>> authorizedNetworks) {
-            this.authorizedNetworks = authorizedNetworks;
+            $.authorizedNetworks = authorizedNetworks;
             return this;
         }
-        public Builder authorizedNetworks(@Nullable List<String> authorizedNetworks) {
-            this.authorizedNetworks = Codegen.ofNullable(authorizedNetworks);
-            return this;
+
+        public Builder authorizedNetworks(List<String> authorizedNetworks) {
+            return authorizedNetworks(Output.of(authorizedNetworks));
         }
+
         public Builder authorizedNetworks(String... authorizedNetworks) {
             return authorizedNetworks(List.of(authorizedNetworks));
         }
+
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder fqdn(@Nullable Output<String> fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
-        public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Codegen.ofNullable(fqdn);
-            return this;
+
+        public Builder fqdn(String fqdn) {
+            return fqdn(Output.of(fqdn));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder locations(@Nullable Output<List<String>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<String> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
-            this.reservedIpRange = reservedIpRange;
+            $.reservedIpRange = reservedIpRange;
             return this;
         }
-        public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Codegen.ofNullable(reservedIpRange);
-            return this;
-        }        public DomainState build() {
-            return new DomainState(admin, authorizedNetworks, domainName, fqdn, labels, locations, name, project, reservedIpRange);
+
+        public Builder reservedIpRange(String reservedIpRange) {
+            return reservedIpRange(Output.of(reservedIpRange));
+        }
+
+        public DomainState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.msk.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ClusterClientAuthenticationTlsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="certificateAuthorityArns")
-      private final @Nullable Output<List<String>> certificateAuthorityArns;
+    private @Nullable Output<List<String>> certificateAuthorityArns;
 
-    public Output<List<String>> certificateAuthorityArns() {
-        return this.certificateAuthorityArns == null ? Codegen.empty() : this.certificateAuthorityArns;
+    public Optional<Output<List<String>>> certificateAuthorityArns() {
+        return Optional.ofNullable(this.certificateAuthorityArns);
     }
 
-    public ClusterClientAuthenticationTlsArgs(@Nullable Output<List<String>> certificateAuthorityArns) {
-        this.certificateAuthorityArns = certificateAuthorityArns;
-    }
+    private ClusterClientAuthenticationTlsArgs() {}
 
-    private ClusterClientAuthenticationTlsArgs() {
-        this.certificateAuthorityArns = Codegen.empty();
+    private ClusterClientAuthenticationTlsArgs(ClusterClientAuthenticationTlsArgs $) {
+        this.certificateAuthorityArns = $.certificateAuthorityArns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClientAuthenticationTlsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> certificateAuthorityArns;
+        private ClusterClientAuthenticationTlsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClientAuthenticationTlsArgs();
         }
 
         public Builder(ClusterClientAuthenticationTlsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthorityArns = defaults.certificateAuthorityArns;
+            $ = new ClusterClientAuthenticationTlsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthorityArns(@Nullable Output<List<String>> certificateAuthorityArns) {
-            this.certificateAuthorityArns = certificateAuthorityArns;
+            $.certificateAuthorityArns = certificateAuthorityArns;
             return this;
         }
-        public Builder certificateAuthorityArns(@Nullable List<String> certificateAuthorityArns) {
-            this.certificateAuthorityArns = Codegen.ofNullable(certificateAuthorityArns);
-            return this;
+
+        public Builder certificateAuthorityArns(List<String> certificateAuthorityArns) {
+            return certificateAuthorityArns(Output.of(certificateAuthorityArns));
         }
+
         public Builder certificateAuthorityArns(String... certificateAuthorityArns) {
             return certificateAuthorityArns(List.of(certificateAuthorityArns));
-        }        public ClusterClientAuthenticationTlsArgs build() {
-            return new ClusterClientAuthenticationTlsArgs(certificateAuthorityArns);
+        }
+
+        public ClusterClientAuthenticationTlsArgs build() {
+            return $;
         }
     }
+
 }

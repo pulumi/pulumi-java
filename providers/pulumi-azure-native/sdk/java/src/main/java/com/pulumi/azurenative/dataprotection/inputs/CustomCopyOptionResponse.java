@@ -24,10 +24,10 @@ public final class CustomCopyOptionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="duration")
-      private final @Nullable String duration;
+    private @Nullable String duration;
 
     public Optional<String> duration() {
-        return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class CustomCopyOptionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
     }
 
-    public CustomCopyOptionResponse(
-        @Nullable String duration,
-        String objectType) {
-        this.duration = duration;
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-    }
+    private CustomCopyOptionResponse() {}
 
-    private CustomCopyOptionResponse() {
-        this.duration = null;
-        this.objectType = null;
+    private CustomCopyOptionResponse(CustomCopyOptionResponse $) {
+        this.duration = $.duration;
+        this.objectType = $.objectType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomCopyOptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String duration;
-        private String objectType;
+        private CustomCopyOptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomCopyOptionResponse();
         }
 
         public Builder(CustomCopyOptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.objectType = defaults.objectType;
+            $ = new CustomCopyOptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
-        }        public CustomCopyOptionResponse build() {
-            return new CustomCopyOptionResponse(duration, objectType);
+        }
+
+        public CustomCopyOptionResponse build() {
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            return $;
         }
     }
+
 }

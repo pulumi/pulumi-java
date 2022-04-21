@@ -7,9 +7,9 @@ import com.pulumi.azurenative.timeseriesinsights.enums.PropertyType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TimeSeriesIdPropertyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class TimeSeriesIdPropertyArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,PropertyType>> type;
+    private @Nullable Output<Either<String,PropertyType>> type;
 
-    public Output<Either<String,PropertyType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,PropertyType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public TimeSeriesIdPropertyArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,PropertyType>> type) {
-        this.name = name;
-        this.type = type;
-    }
+    private TimeSeriesIdPropertyArgs() {}
 
-    private TimeSeriesIdPropertyArgs() {
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private TimeSeriesIdPropertyArgs(TimeSeriesIdPropertyArgs $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesIdPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,PropertyType>> type;
+        private TimeSeriesIdPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesIdPropertyArgs();
         }
 
         public Builder(TimeSeriesIdPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new TimeSeriesIdPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<Either<String,PropertyType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,PropertyType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public TimeSeriesIdPropertyArgs build() {
-            return new TimeSeriesIdPropertyArgs(name, type);
+
+        public Builder type(Either<String,PropertyType> type) {
+            return type(Output.of(type));
+        }
+
+        public TimeSeriesIdPropertyArgs build() {
+            return $;
         }
     }
+
 }

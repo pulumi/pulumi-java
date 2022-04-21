@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MetadataCredentialsFromPluginArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class MetadataCredentialsFromPluginArgs extends com.pulumi.resource
      * 
      */
     @Import(name="structConfig")
-      private final @Nullable Output<String> structConfig;
+    private @Nullable Output<String> structConfig;
 
-    public Output<String> structConfig() {
-        return this.structConfig == null ? Codegen.empty() : this.structConfig;
+    public Optional<Output<String>> structConfig() {
+        return Optional.ofNullable(this.structConfig);
     }
 
-    public MetadataCredentialsFromPluginArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> structConfig) {
-        this.name = name;
-        this.structConfig = structConfig;
-    }
+    private MetadataCredentialsFromPluginArgs() {}
 
-    private MetadataCredentialsFromPluginArgs() {
-        this.name = Codegen.empty();
-        this.structConfig = Codegen.empty();
+    private MetadataCredentialsFromPluginArgs(MetadataCredentialsFromPluginArgs $) {
+        this.name = $.name;
+        this.structConfig = $.structConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataCredentialsFromPluginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> structConfig;
+        private MetadataCredentialsFromPluginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataCredentialsFromPluginArgs();
         }
 
         public Builder(MetadataCredentialsFromPluginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.structConfig = defaults.structConfig;
+            $ = new MetadataCredentialsFromPluginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder structConfig(@Nullable Output<String> structConfig) {
-            this.structConfig = structConfig;
+            $.structConfig = structConfig;
             return this;
         }
-        public Builder structConfig(@Nullable String structConfig) {
-            this.structConfig = Codegen.ofNullable(structConfig);
-            return this;
-        }        public MetadataCredentialsFromPluginArgs build() {
-            return new MetadataCredentialsFromPluginArgs(name, structConfig);
+
+        public Builder structConfig(String structConfig) {
+            return structConfig(Output.of(structConfig));
+        }
+
+        public MetadataCredentialsFromPluginArgs build() {
+            return $;
         }
     }
+
 }

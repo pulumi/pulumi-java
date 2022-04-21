@@ -6,10 +6,10 @@ package com.pulumi.awsnative.iam;
 import com.pulumi.awsnative.iam.inputs.OIDCProviderTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,119 +18,112 @@ public final class OIDCProviderArgs extends com.pulumi.resources.ResourceArgs {
     public static final OIDCProviderArgs Empty = new OIDCProviderArgs();
 
     @Import(name="clientIdList")
-      private final @Nullable Output<List<String>> clientIdList;
+    private @Nullable Output<List<String>> clientIdList;
 
-    public Output<List<String>> clientIdList() {
-        return this.clientIdList == null ? Codegen.empty() : this.clientIdList;
+    public Optional<Output<List<String>>> clientIdList() {
+        return Optional.ofNullable(this.clientIdList);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<OIDCProviderTagArgs>> tags;
+    private @Nullable Output<List<OIDCProviderTagArgs>> tags;
 
-    public Output<List<OIDCProviderTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<OIDCProviderTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="thumbprintList", required=true)
-      private final Output<List<String>> thumbprintList;
+    private Output<List<String>> thumbprintList;
 
     public Output<List<String>> thumbprintList() {
         return this.thumbprintList;
     }
 
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public OIDCProviderArgs(
-        @Nullable Output<List<String>> clientIdList,
-        @Nullable Output<List<OIDCProviderTagArgs>> tags,
-        Output<List<String>> thumbprintList,
-        @Nullable Output<String> url) {
-        this.clientIdList = clientIdList;
-        this.tags = tags;
-        this.thumbprintList = Objects.requireNonNull(thumbprintList, "expected parameter 'thumbprintList' to be non-null");
-        this.url = url;
-    }
+    private OIDCProviderArgs() {}
 
-    private OIDCProviderArgs() {
-        this.clientIdList = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.thumbprintList = Codegen.empty();
-        this.url = Codegen.empty();
+    private OIDCProviderArgs(OIDCProviderArgs $) {
+        this.clientIdList = $.clientIdList;
+        this.tags = $.tags;
+        this.thumbprintList = $.thumbprintList;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OIDCProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> clientIdList;
-        private @Nullable Output<List<OIDCProviderTagArgs>> tags;
-        private Output<List<String>> thumbprintList;
-        private @Nullable Output<String> url;
+        private OIDCProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OIDCProviderArgs();
         }
 
         public Builder(OIDCProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientIdList = defaults.clientIdList;
-    	      this.tags = defaults.tags;
-    	      this.thumbprintList = defaults.thumbprintList;
-    	      this.url = defaults.url;
+            $ = new OIDCProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientIdList(@Nullable Output<List<String>> clientIdList) {
-            this.clientIdList = clientIdList;
+            $.clientIdList = clientIdList;
             return this;
         }
-        public Builder clientIdList(@Nullable List<String> clientIdList) {
-            this.clientIdList = Codegen.ofNullable(clientIdList);
-            return this;
+
+        public Builder clientIdList(List<String> clientIdList) {
+            return clientIdList(Output.of(clientIdList));
         }
+
         public Builder clientIdList(String... clientIdList) {
             return clientIdList(List.of(clientIdList));
         }
+
         public Builder tags(@Nullable Output<List<OIDCProviderTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<OIDCProviderTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<OIDCProviderTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(OIDCProviderTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder thumbprintList(Output<List<String>> thumbprintList) {
-            this.thumbprintList = Objects.requireNonNull(thumbprintList);
+            $.thumbprintList = thumbprintList;
             return this;
         }
+
         public Builder thumbprintList(List<String> thumbprintList) {
-            this.thumbprintList = Output.of(Objects.requireNonNull(thumbprintList));
-            return this;
+            return thumbprintList(Output.of(thumbprintList));
         }
+
         public Builder thumbprintList(String... thumbprintList) {
             return thumbprintList(List.of(thumbprintList));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public OIDCProviderArgs build() {
-            return new OIDCProviderArgs(clientIdList, tags, thumbprintList, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public OIDCProviderArgs build() {
+            $.thumbprintList = Objects.requireNonNull($.thumbprintList, "expected parameter 'thumbprintList' to be non-null");
+            return $;
         }
     }
+
 }

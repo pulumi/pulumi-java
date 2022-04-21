@@ -6,10 +6,10 @@ package com.pulumi.aws.organizations.inputs;
 import com.pulumi.aws.organizations.inputs.OrganizationRootPolicyTypeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class OrganizationRootArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OrganizationRootArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OrganizationRootArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,92 +55,82 @@ public final class OrganizationRootArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyTypes")
-      private final @Nullable Output<List<OrganizationRootPolicyTypeArgs>> policyTypes;
+    private @Nullable Output<List<OrganizationRootPolicyTypeArgs>> policyTypes;
 
-    public Output<List<OrganizationRootPolicyTypeArgs>> policyTypes() {
-        return this.policyTypes == null ? Codegen.empty() : this.policyTypes;
+    public Optional<Output<List<OrganizationRootPolicyTypeArgs>>> policyTypes() {
+        return Optional.ofNullable(this.policyTypes);
     }
 
-    public OrganizationRootArgs(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<List<OrganizationRootPolicyTypeArgs>> policyTypes) {
-        this.arn = arn;
-        this.id = id;
-        this.name = name;
-        this.policyTypes = policyTypes;
-    }
+    private OrganizationRootArgs() {}
 
-    private OrganizationRootArgs() {
-        this.arn = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policyTypes = Codegen.empty();
+    private OrganizationRootArgs(OrganizationRootArgs $) {
+        this.arn = $.arn;
+        this.id = $.id;
+        this.name = $.name;
+        this.policyTypes = $.policyTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationRootArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<OrganizationRootPolicyTypeArgs>> policyTypes;
+        private OrganizationRootArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationRootArgs();
         }
 
         public Builder(OrganizationRootArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.policyTypes = defaults.policyTypes;
+            $ = new OrganizationRootArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policyTypes(@Nullable Output<List<OrganizationRootPolicyTypeArgs>> policyTypes) {
-            this.policyTypes = policyTypes;
+            $.policyTypes = policyTypes;
             return this;
         }
-        public Builder policyTypes(@Nullable List<OrganizationRootPolicyTypeArgs> policyTypes) {
-            this.policyTypes = Codegen.ofNullable(policyTypes);
-            return this;
+
+        public Builder policyTypes(List<OrganizationRootPolicyTypeArgs> policyTypes) {
+            return policyTypes(Output.of(policyTypes));
         }
+
         public Builder policyTypes(OrganizationRootPolicyTypeArgs... policyTypes) {
             return policyTypes(List.of(policyTypes));
-        }        public OrganizationRootArgs build() {
-            return new OrganizationRootArgs(arn, id, name, policyTypes);
+        }
+
+        public OrganizationRootArgs build() {
+            return $;
         }
     }
+
 }

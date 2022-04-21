@@ -17,45 +17,45 @@ public final class GetQuickConnectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quickConnectArn", required=true)
-      private final String quickConnectArn;
+    private String quickConnectArn;
 
     public String quickConnectArn() {
         return this.quickConnectArn;
     }
 
-    public GetQuickConnectArgs(String quickConnectArn) {
-        this.quickConnectArn = Objects.requireNonNull(quickConnectArn, "expected parameter 'quickConnectArn' to be non-null");
-    }
+    private GetQuickConnectArgs() {}
 
-    private GetQuickConnectArgs() {
-        this.quickConnectArn = null;
+    private GetQuickConnectArgs(GetQuickConnectArgs $) {
+        this.quickConnectArn = $.quickConnectArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetQuickConnectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String quickConnectArn;
+        private GetQuickConnectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetQuickConnectArgs();
         }
 
         public Builder(GetQuickConnectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quickConnectArn = defaults.quickConnectArn;
+            $ = new GetQuickConnectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quickConnectArn(String quickConnectArn) {
-            this.quickConnectArn = Objects.requireNonNull(quickConnectArn);
+            $.quickConnectArn = quickConnectArn;
             return this;
-        }        public GetQuickConnectArgs build() {
-            return new GetQuickConnectArgs(quickConnectArn);
+        }
+
+        public GetQuickConnectArgs build() {
+            $.quickConnectArn = Objects.requireNonNull($.quickConnectArn, "expected parameter 'quickConnectArn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,10 +20,10 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable Boolean expand;
+    private @Nullable Boolean expand;
 
     public Optional<Boolean> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -53,73 +53,65 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetAKSServiceArgs(
-        @Nullable Boolean expand,
-        String resourceGroupName,
-        String serviceName,
-        String workspaceName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetAKSServiceArgs() {}
 
-    private GetAKSServiceArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.serviceName = null;
-        this.workspaceName = null;
+    private GetAKSServiceArgs(GetAKSServiceArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceName = $.serviceName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAKSServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean expand;
-        private String resourceGroupName;
-        private String serviceName;
-        private String workspaceName;
+        private GetAKSServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAKSServiceArgs();
         }
 
         public Builder(GetAKSServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceName = defaults.serviceName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetAKSServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable Boolean expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetAKSServiceArgs build() {
-            return new GetAKSServiceArgs(expand, resourceGroupName, serviceName, workspaceName);
+        }
+
+        public GetAKSServiceArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

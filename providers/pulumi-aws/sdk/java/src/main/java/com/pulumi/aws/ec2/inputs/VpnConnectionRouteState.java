@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class VpnConnectionRouteState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="destinationCidrBlock")
-      private final @Nullable Output<String> destinationCidrBlock;
+    private @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> destinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
+    public Optional<Output<String>> destinationCidrBlock() {
+        return Optional.ofNullable(this.destinationCidrBlock);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class VpnConnectionRouteState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vpnConnectionId")
-      private final @Nullable Output<String> vpnConnectionId;
+    private @Nullable Output<String> vpnConnectionId;
 
-    public Output<String> vpnConnectionId() {
-        return this.vpnConnectionId == null ? Codegen.empty() : this.vpnConnectionId;
+    public Optional<Output<String>> vpnConnectionId() {
+        return Optional.ofNullable(this.vpnConnectionId);
     }
 
-    public VpnConnectionRouteState(
-        @Nullable Output<String> destinationCidrBlock,
-        @Nullable Output<String> vpnConnectionId) {
-        this.destinationCidrBlock = destinationCidrBlock;
-        this.vpnConnectionId = vpnConnectionId;
-    }
+    private VpnConnectionRouteState() {}
 
-    private VpnConnectionRouteState() {
-        this.destinationCidrBlock = Codegen.empty();
-        this.vpnConnectionId = Codegen.empty();
+    private VpnConnectionRouteState(VpnConnectionRouteState $) {
+        this.destinationCidrBlock = $.destinationCidrBlock;
+        this.vpnConnectionId = $.vpnConnectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnConnectionRouteState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationCidrBlock;
-        private @Nullable Output<String> vpnConnectionId;
+        private VpnConnectionRouteState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnConnectionRouteState();
         }
 
         public Builder(VpnConnectionRouteState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationCidrBlock = defaults.destinationCidrBlock;
-    	      this.vpnConnectionId = defaults.vpnConnectionId;
+            $ = new VpnConnectionRouteState(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
-            this.destinationCidrBlock = destinationCidrBlock;
+            $.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
-        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
-            return this;
+
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
+            return destinationCidrBlock(Output.of(destinationCidrBlock));
         }
+
         public Builder vpnConnectionId(@Nullable Output<String> vpnConnectionId) {
-            this.vpnConnectionId = vpnConnectionId;
+            $.vpnConnectionId = vpnConnectionId;
             return this;
         }
-        public Builder vpnConnectionId(@Nullable String vpnConnectionId) {
-            this.vpnConnectionId = Codegen.ofNullable(vpnConnectionId);
-            return this;
-        }        public VpnConnectionRouteState build() {
-            return new VpnConnectionRouteState(destinationCidrBlock, vpnConnectionId);
+
+        public Builder vpnConnectionId(String vpnConnectionId) {
+            return vpnConnectionId(Output.of(vpnConnectionId));
+        }
+
+        public VpnConnectionRouteState build() {
+            return $;
         }
     }
+
 }

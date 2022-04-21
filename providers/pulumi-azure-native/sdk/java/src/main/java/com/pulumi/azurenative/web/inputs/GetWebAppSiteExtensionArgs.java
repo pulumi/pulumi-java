@@ -17,7 +17,7 @@ public final class GetWebAppSiteExtensionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppSiteExtensionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetWebAppSiteExtensionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="siteExtensionId", required=true)
-      private final String siteExtensionId;
+    private String siteExtensionId;
 
     public String siteExtensionId() {
         return this.siteExtensionId;
     }
 
-    public GetWebAppSiteExtensionArgs(
-        String name,
-        String resourceGroupName,
-        String siteExtensionId) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.siteExtensionId = Objects.requireNonNull(siteExtensionId, "expected parameter 'siteExtensionId' to be non-null");
-    }
+    private GetWebAppSiteExtensionArgs() {}
 
-    private GetWebAppSiteExtensionArgs() {
-        this.name = null;
-        this.resourceGroupName = null;
-        this.siteExtensionId = null;
+    private GetWebAppSiteExtensionArgs(GetWebAppSiteExtensionArgs $) {
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.siteExtensionId = $.siteExtensionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppSiteExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String resourceGroupName;
-        private String siteExtensionId;
+        private GetWebAppSiteExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppSiteExtensionArgs();
         }
 
         public Builder(GetWebAppSiteExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.siteExtensionId = defaults.siteExtensionId;
+            $ = new GetWebAppSiteExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder siteExtensionId(String siteExtensionId) {
-            this.siteExtensionId = Objects.requireNonNull(siteExtensionId);
+            $.siteExtensionId = siteExtensionId;
             return this;
-        }        public GetWebAppSiteExtensionArgs build() {
-            return new GetWebAppSiteExtensionArgs(name, resourceGroupName, siteExtensionId);
+        }
+
+        public GetWebAppSiteExtensionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.siteExtensionId = Objects.requireNonNull($.siteExtensionId, "expected parameter 'siteExtensionId' to be non-null");
+            return $;
         }
     }
+
 }

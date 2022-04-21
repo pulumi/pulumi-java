@@ -12,6 +12,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="additionalColumns")
-      private final @Nullable Output<Object> additionalColumns;
+    private @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> additionalColumns() {
-        return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
+    public Optional<Output<Object>> additionalColumns() {
+        return Optional.ofNullable(this.additionalColumns);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Output<Object> disableMetricsCollection;
+    private @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
+    public Optional<Output<Object>> disableMetricsCollection() {
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Output<Object> maxConcurrentConnections;
+    private @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
+    public Optional<Output<Object>> maxConcurrentConnections() {
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -61,10 +62,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="partitionOption")
-      private final @Nullable Output<Object> partitionOption;
+    private @Nullable Output<Object> partitionOption;
 
-    public Output<Object> partitionOption() {
-        return this.partitionOption == null ? Codegen.empty() : this.partitionOption;
+    public Optional<Output<Object>> partitionOption() {
+        return Optional.ofNullable(this.partitionOption);
     }
 
     /**
@@ -72,10 +73,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="partitionSettings")
-      private final @Nullable Output<SqlPartitionSettingsArgs> partitionSettings;
+    private @Nullable Output<SqlPartitionSettingsArgs> partitionSettings;
 
-    public Output<SqlPartitionSettingsArgs> partitionSettings() {
-        return this.partitionSettings == null ? Codegen.empty() : this.partitionSettings;
+    public Optional<Output<SqlPartitionSettingsArgs>> partitionSettings() {
+        return Optional.ofNullable(this.partitionSettings);
     }
 
     /**
@@ -83,10 +84,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="produceAdditionalTypes")
-      private final @Nullable Output<Object> produceAdditionalTypes;
+    private @Nullable Output<Object> produceAdditionalTypes;
 
-    public Output<Object> produceAdditionalTypes() {
-        return this.produceAdditionalTypes == null ? Codegen.empty() : this.produceAdditionalTypes;
+    public Optional<Output<Object>> produceAdditionalTypes() {
+        return Optional.ofNullable(this.produceAdditionalTypes);
     }
 
     /**
@@ -94,10 +95,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="queryTimeout")
-      private final @Nullable Output<Object> queryTimeout;
+    private @Nullable Output<Object> queryTimeout;
 
-    public Output<Object> queryTimeout() {
-        return this.queryTimeout == null ? Codegen.empty() : this.queryTimeout;
+    public Optional<Output<Object>> queryTimeout() {
+        return Optional.ofNullable(this.queryTimeout);
     }
 
     /**
@@ -105,10 +106,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Output<Object> sourceRetryCount;
+    private @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
+    public Optional<Output<Object>> sourceRetryCount() {
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -116,10 +117,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Output<Object> sourceRetryWait;
+    private @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
+    public Optional<Output<Object>> sourceRetryWait() {
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -127,10 +128,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sqlReaderQuery")
-      private final @Nullable Output<Object> sqlReaderQuery;
+    private @Nullable Output<Object> sqlReaderQuery;
 
-    public Output<Object> sqlReaderQuery() {
-        return this.sqlReaderQuery == null ? Codegen.empty() : this.sqlReaderQuery;
+    public Optional<Output<Object>> sqlReaderQuery() {
+        return Optional.ofNullable(this.sqlReaderQuery);
     }
 
     /**
@@ -138,10 +139,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sqlReaderStoredProcedureName")
-      private final @Nullable Output<Object> sqlReaderStoredProcedureName;
+    private @Nullable Output<Object> sqlReaderStoredProcedureName;
 
-    public Output<Object> sqlReaderStoredProcedureName() {
-        return this.sqlReaderStoredProcedureName == null ? Codegen.empty() : this.sqlReaderStoredProcedureName;
+    public Optional<Output<Object>> sqlReaderStoredProcedureName() {
+        return Optional.ofNullable(this.sqlReaderStoredProcedureName);
     }
 
     /**
@@ -149,10 +150,10 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="storedProcedureParameters")
-      private final @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
+    private @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
-    public Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters() {
-        return this.storedProcedureParameters == null ? Codegen.empty() : this.storedProcedureParameters;
+    public Optional<Output<Map<String,StoredProcedureParameterArgs>>> storedProcedureParameters() {
+        return Optional.ofNullable(this.storedProcedureParameters);
     }
 
     /**
@@ -161,206 +162,169 @@ public final class AzureSqlSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public AzureSqlSourceArgs(
-        @Nullable Output<Object> additionalColumns,
-        @Nullable Output<Object> disableMetricsCollection,
-        @Nullable Output<Object> maxConcurrentConnections,
-        @Nullable Output<Object> partitionOption,
-        @Nullable Output<SqlPartitionSettingsArgs> partitionSettings,
-        @Nullable Output<Object> produceAdditionalTypes,
-        @Nullable Output<Object> queryTimeout,
-        @Nullable Output<Object> sourceRetryCount,
-        @Nullable Output<Object> sourceRetryWait,
-        @Nullable Output<Object> sqlReaderQuery,
-        @Nullable Output<Object> sqlReaderStoredProcedureName,
-        @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters,
-        Output<String> type) {
-        this.additionalColumns = additionalColumns;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.partitionOption = partitionOption;
-        this.partitionSettings = partitionSettings;
-        this.produceAdditionalTypes = produceAdditionalTypes;
-        this.queryTimeout = queryTimeout;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.sqlReaderQuery = sqlReaderQuery;
-        this.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
-        this.storedProcedureParameters = storedProcedureParameters;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private AzureSqlSourceArgs() {}
 
-    private AzureSqlSourceArgs() {
-        this.additionalColumns = Codegen.empty();
-        this.disableMetricsCollection = Codegen.empty();
-        this.maxConcurrentConnections = Codegen.empty();
-        this.partitionOption = Codegen.empty();
-        this.partitionSettings = Codegen.empty();
-        this.produceAdditionalTypes = Codegen.empty();
-        this.queryTimeout = Codegen.empty();
-        this.sourceRetryCount = Codegen.empty();
-        this.sourceRetryWait = Codegen.empty();
-        this.sqlReaderQuery = Codegen.empty();
-        this.sqlReaderStoredProcedureName = Codegen.empty();
-        this.storedProcedureParameters = Codegen.empty();
-        this.type = Codegen.empty();
+    private AzureSqlSourceArgs(AzureSqlSourceArgs $) {
+        this.additionalColumns = $.additionalColumns;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.partitionOption = $.partitionOption;
+        this.partitionSettings = $.partitionSettings;
+        this.produceAdditionalTypes = $.produceAdditionalTypes;
+        this.queryTimeout = $.queryTimeout;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.sqlReaderQuery = $.sqlReaderQuery;
+        this.sqlReaderStoredProcedureName = $.sqlReaderStoredProcedureName;
+        this.storedProcedureParameters = $.storedProcedureParameters;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> additionalColumns;
-        private @Nullable Output<Object> disableMetricsCollection;
-        private @Nullable Output<Object> maxConcurrentConnections;
-        private @Nullable Output<Object> partitionOption;
-        private @Nullable Output<SqlPartitionSettingsArgs> partitionSettings;
-        private @Nullable Output<Object> produceAdditionalTypes;
-        private @Nullable Output<Object> queryTimeout;
-        private @Nullable Output<Object> sourceRetryCount;
-        private @Nullable Output<Object> sourceRetryWait;
-        private @Nullable Output<Object> sqlReaderQuery;
-        private @Nullable Output<Object> sqlReaderStoredProcedureName;
-        private @Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
-        private Output<String> type;
+        private AzureSqlSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlSourceArgs();
         }
 
         public Builder(AzureSqlSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalColumns = defaults.additionalColumns;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.partitionOption = defaults.partitionOption;
-    	      this.partitionSettings = defaults.partitionSettings;
-    	      this.produceAdditionalTypes = defaults.produceAdditionalTypes;
-    	      this.queryTimeout = defaults.queryTimeout;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.sqlReaderQuery = defaults.sqlReaderQuery;
-    	      this.sqlReaderStoredProcedureName = defaults.sqlReaderStoredProcedureName;
-    	      this.storedProcedureParameters = defaults.storedProcedureParameters;
-    	      this.type = defaults.type;
+            $ = new AzureSqlSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
-            this.additionalColumns = additionalColumns;
+            $.additionalColumns = additionalColumns;
             return this;
         }
-        public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Codegen.ofNullable(additionalColumns);
-            return this;
+
+        public Builder additionalColumns(Object additionalColumns) {
+            return additionalColumns(Output.of(additionalColumns));
         }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
-        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
-            return this;
+
+        public Builder disableMetricsCollection(Object disableMetricsCollection) {
+            return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
+
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
-        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
-            return this;
+
+        public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
+            return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
+
         public Builder partitionOption(@Nullable Output<Object> partitionOption) {
-            this.partitionOption = partitionOption;
+            $.partitionOption = partitionOption;
             return this;
         }
-        public Builder partitionOption(@Nullable Object partitionOption) {
-            this.partitionOption = Codegen.ofNullable(partitionOption);
-            return this;
+
+        public Builder partitionOption(Object partitionOption) {
+            return partitionOption(Output.of(partitionOption));
         }
+
         public Builder partitionSettings(@Nullable Output<SqlPartitionSettingsArgs> partitionSettings) {
-            this.partitionSettings = partitionSettings;
+            $.partitionSettings = partitionSettings;
             return this;
         }
-        public Builder partitionSettings(@Nullable SqlPartitionSettingsArgs partitionSettings) {
-            this.partitionSettings = Codegen.ofNullable(partitionSettings);
-            return this;
+
+        public Builder partitionSettings(SqlPartitionSettingsArgs partitionSettings) {
+            return partitionSettings(Output.of(partitionSettings));
         }
+
         public Builder produceAdditionalTypes(@Nullable Output<Object> produceAdditionalTypes) {
-            this.produceAdditionalTypes = produceAdditionalTypes;
+            $.produceAdditionalTypes = produceAdditionalTypes;
             return this;
         }
-        public Builder produceAdditionalTypes(@Nullable Object produceAdditionalTypes) {
-            this.produceAdditionalTypes = Codegen.ofNullable(produceAdditionalTypes);
-            return this;
+
+        public Builder produceAdditionalTypes(Object produceAdditionalTypes) {
+            return produceAdditionalTypes(Output.of(produceAdditionalTypes));
         }
+
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
-            this.queryTimeout = queryTimeout;
+            $.queryTimeout = queryTimeout;
             return this;
         }
-        public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = Codegen.ofNullable(queryTimeout);
-            return this;
+
+        public Builder queryTimeout(Object queryTimeout) {
+            return queryTimeout(Output.of(queryTimeout));
         }
+
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
-        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
-            return this;
+
+        public Builder sourceRetryCount(Object sourceRetryCount) {
+            return sourceRetryCount(Output.of(sourceRetryCount));
         }
+
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
-        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
-            return this;
+
+        public Builder sourceRetryWait(Object sourceRetryWait) {
+            return sourceRetryWait(Output.of(sourceRetryWait));
         }
+
         public Builder sqlReaderQuery(@Nullable Output<Object> sqlReaderQuery) {
-            this.sqlReaderQuery = sqlReaderQuery;
+            $.sqlReaderQuery = sqlReaderQuery;
             return this;
         }
-        public Builder sqlReaderQuery(@Nullable Object sqlReaderQuery) {
-            this.sqlReaderQuery = Codegen.ofNullable(sqlReaderQuery);
-            return this;
+
+        public Builder sqlReaderQuery(Object sqlReaderQuery) {
+            return sqlReaderQuery(Output.of(sqlReaderQuery));
         }
+
         public Builder sqlReaderStoredProcedureName(@Nullable Output<Object> sqlReaderStoredProcedureName) {
-            this.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
+            $.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
             return this;
         }
-        public Builder sqlReaderStoredProcedureName(@Nullable Object sqlReaderStoredProcedureName) {
-            this.sqlReaderStoredProcedureName = Codegen.ofNullable(sqlReaderStoredProcedureName);
-            return this;
+
+        public Builder sqlReaderStoredProcedureName(Object sqlReaderStoredProcedureName) {
+            return sqlReaderStoredProcedureName(Output.of(sqlReaderStoredProcedureName));
         }
+
         public Builder storedProcedureParameters(@Nullable Output<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
-            this.storedProcedureParameters = storedProcedureParameters;
+            $.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
-        public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
-            this.storedProcedureParameters = Codegen.ofNullable(storedProcedureParameters);
-            return this;
+
+        public Builder storedProcedureParameters(Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
+            return storedProcedureParameters(Output.of(storedProcedureParameters));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public AzureSqlSourceArgs build() {
-            return new AzureSqlSourceArgs(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, produceAdditionalTypes, queryTimeout, sourceRetryCount, sourceRetryWait, sqlReaderQuery, sqlReaderStoredProcedureName, storedProcedureParameters, type);
+            return type(Output.of(type));
+        }
+
+        public AzureSqlSourceArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

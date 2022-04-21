@@ -5,13 +5,13 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMatchedLogArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageArgs;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AlertPolicyConditionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="conditionAbsent")
-      private final @Nullable Output<AlertPolicyConditionConditionAbsentArgs> conditionAbsent;
+    private @Nullable Output<AlertPolicyConditionConditionAbsentArgs> conditionAbsent;
 
-    public Output<AlertPolicyConditionConditionAbsentArgs> conditionAbsent() {
-        return this.conditionAbsent == null ? Codegen.empty() : this.conditionAbsent;
+    public Optional<Output<AlertPolicyConditionConditionAbsentArgs>> conditionAbsent() {
+        return Optional.ofNullable(this.conditionAbsent);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AlertPolicyConditionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="conditionMatchedLog")
-      private final @Nullable Output<AlertPolicyConditionConditionMatchedLogArgs> conditionMatchedLog;
+    private @Nullable Output<AlertPolicyConditionConditionMatchedLogArgs> conditionMatchedLog;
 
-    public Output<AlertPolicyConditionConditionMatchedLogArgs> conditionMatchedLog() {
-        return this.conditionMatchedLog == null ? Codegen.empty() : this.conditionMatchedLog;
+    public Optional<Output<AlertPolicyConditionConditionMatchedLogArgs>> conditionMatchedLog() {
+        return Optional.ofNullable(this.conditionMatchedLog);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AlertPolicyConditionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="conditionMonitoringQueryLanguage")
-      private final @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> conditionMonitoringQueryLanguage;
+    private @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> conditionMonitoringQueryLanguage;
 
-    public Output<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> conditionMonitoringQueryLanguage() {
-        return this.conditionMonitoringQueryLanguage == null ? Codegen.empty() : this.conditionMonitoringQueryLanguage;
+    public Optional<Output<AlertPolicyConditionConditionMonitoringQueryLanguageArgs>> conditionMonitoringQueryLanguage() {
+        return Optional.ofNullable(this.conditionMonitoringQueryLanguage);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AlertPolicyConditionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="conditionThreshold")
-      private final @Nullable Output<AlertPolicyConditionConditionThresholdArgs> conditionThreshold;
+    private @Nullable Output<AlertPolicyConditionConditionThresholdArgs> conditionThreshold;
 
-    public Output<AlertPolicyConditionConditionThresholdArgs> conditionThreshold() {
-        return this.conditionThreshold == null ? Codegen.empty() : this.conditionThreshold;
+    public Optional<Output<AlertPolicyConditionConditionThresholdArgs>> conditionThreshold() {
+        return Optional.ofNullable(this.conditionThreshold);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class AlertPolicyConditionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -96,115 +96,99 @@ public final class AlertPolicyConditionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public AlertPolicyConditionArgs(
-        @Nullable Output<AlertPolicyConditionConditionAbsentArgs> conditionAbsent,
-        @Nullable Output<AlertPolicyConditionConditionMatchedLogArgs> conditionMatchedLog,
-        @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> conditionMonitoringQueryLanguage,
-        @Nullable Output<AlertPolicyConditionConditionThresholdArgs> conditionThreshold,
-        Output<String> displayName,
-        @Nullable Output<String> name) {
-        this.conditionAbsent = conditionAbsent;
-        this.conditionMatchedLog = conditionMatchedLog;
-        this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
-        this.conditionThreshold = conditionThreshold;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.name = name;
-    }
+    private AlertPolicyConditionArgs() {}
 
-    private AlertPolicyConditionArgs() {
-        this.conditionAbsent = Codegen.empty();
-        this.conditionMatchedLog = Codegen.empty();
-        this.conditionMonitoringQueryLanguage = Codegen.empty();
-        this.conditionThreshold = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
+    private AlertPolicyConditionArgs(AlertPolicyConditionArgs $) {
+        this.conditionAbsent = $.conditionAbsent;
+        this.conditionMatchedLog = $.conditionMatchedLog;
+        this.conditionMonitoringQueryLanguage = $.conditionMonitoringQueryLanguage;
+        this.conditionThreshold = $.conditionThreshold;
+        this.displayName = $.displayName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AlertPolicyConditionConditionAbsentArgs> conditionAbsent;
-        private @Nullable Output<AlertPolicyConditionConditionMatchedLogArgs> conditionMatchedLog;
-        private @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> conditionMonitoringQueryLanguage;
-        private @Nullable Output<AlertPolicyConditionConditionThresholdArgs> conditionThreshold;
-        private Output<String> displayName;
-        private @Nullable Output<String> name;
+        private AlertPolicyConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyConditionArgs();
         }
 
         public Builder(AlertPolicyConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionAbsent = defaults.conditionAbsent;
-    	      this.conditionMatchedLog = defaults.conditionMatchedLog;
-    	      this.conditionMonitoringQueryLanguage = defaults.conditionMonitoringQueryLanguage;
-    	      this.conditionThreshold = defaults.conditionThreshold;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
+            $ = new AlertPolicyConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionAbsent(@Nullable Output<AlertPolicyConditionConditionAbsentArgs> conditionAbsent) {
-            this.conditionAbsent = conditionAbsent;
+            $.conditionAbsent = conditionAbsent;
             return this;
         }
-        public Builder conditionAbsent(@Nullable AlertPolicyConditionConditionAbsentArgs conditionAbsent) {
-            this.conditionAbsent = Codegen.ofNullable(conditionAbsent);
-            return this;
+
+        public Builder conditionAbsent(AlertPolicyConditionConditionAbsentArgs conditionAbsent) {
+            return conditionAbsent(Output.of(conditionAbsent));
         }
+
         public Builder conditionMatchedLog(@Nullable Output<AlertPolicyConditionConditionMatchedLogArgs> conditionMatchedLog) {
-            this.conditionMatchedLog = conditionMatchedLog;
+            $.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
-        public Builder conditionMatchedLog(@Nullable AlertPolicyConditionConditionMatchedLogArgs conditionMatchedLog) {
-            this.conditionMatchedLog = Codegen.ofNullable(conditionMatchedLog);
-            return this;
+
+        public Builder conditionMatchedLog(AlertPolicyConditionConditionMatchedLogArgs conditionMatchedLog) {
+            return conditionMatchedLog(Output.of(conditionMatchedLog));
         }
+
         public Builder conditionMonitoringQueryLanguage(@Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> conditionMonitoringQueryLanguage) {
-            this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
+            $.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
-        public Builder conditionMonitoringQueryLanguage(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageArgs conditionMonitoringQueryLanguage) {
-            this.conditionMonitoringQueryLanguage = Codegen.ofNullable(conditionMonitoringQueryLanguage);
-            return this;
+
+        public Builder conditionMonitoringQueryLanguage(AlertPolicyConditionConditionMonitoringQueryLanguageArgs conditionMonitoringQueryLanguage) {
+            return conditionMonitoringQueryLanguage(Output.of(conditionMonitoringQueryLanguage));
         }
+
         public Builder conditionThreshold(@Nullable Output<AlertPolicyConditionConditionThresholdArgs> conditionThreshold) {
-            this.conditionThreshold = conditionThreshold;
+            $.conditionThreshold = conditionThreshold;
             return this;
         }
-        public Builder conditionThreshold(@Nullable AlertPolicyConditionConditionThresholdArgs conditionThreshold) {
-            this.conditionThreshold = Codegen.ofNullable(conditionThreshold);
-            return this;
+
+        public Builder conditionThreshold(AlertPolicyConditionConditionThresholdArgs conditionThreshold) {
+            return conditionThreshold(Output.of(conditionThreshold));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public AlertPolicyConditionArgs build() {
-            return new AlertPolicyConditionArgs(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public AlertPolicyConditionArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,85 @@ public final class AppPhysicalResourceId extends com.pulumi.resources.InvokeArgs
     public static final AppPhysicalResourceId Empty = new AppPhysicalResourceId();
 
     @Import(name="awsAccountId")
-      private final @Nullable String awsAccountId;
+    private @Nullable String awsAccountId;
 
     public Optional<String> awsAccountId() {
-        return this.awsAccountId == null ? Optional.empty() : Optional.ofNullable(this.awsAccountId);
+        return Optional.ofNullable(this.awsAccountId);
     }
 
     @Import(name="awsRegion")
-      private final @Nullable String awsRegion;
+    private @Nullable String awsRegion;
 
     public Optional<String> awsRegion() {
-        return this.awsRegion == null ? Optional.empty() : Optional.ofNullable(this.awsRegion);
+        return Optional.ofNullable(this.awsRegion);
     }
 
     @Import(name="identifier", required=true)
-      private final String identifier;
+    private String identifier;
 
     public String identifier() {
         return this.identifier;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public AppPhysicalResourceId(
-        @Nullable String awsAccountId,
-        @Nullable String awsRegion,
-        String identifier,
-        String type) {
-        this.awsAccountId = awsAccountId;
-        this.awsRegion = awsRegion;
-        this.identifier = Objects.requireNonNull(identifier, "expected parameter 'identifier' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private AppPhysicalResourceId() {}
 
-    private AppPhysicalResourceId() {
-        this.awsAccountId = null;
-        this.awsRegion = null;
-        this.identifier = null;
-        this.type = null;
+    private AppPhysicalResourceId(AppPhysicalResourceId $) {
+        this.awsAccountId = $.awsAccountId;
+        this.awsRegion = $.awsRegion;
+        this.identifier = $.identifier;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppPhysicalResourceId defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String awsAccountId;
-        private @Nullable String awsRegion;
-        private String identifier;
-        private String type;
+        private AppPhysicalResourceId $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppPhysicalResourceId();
         }
 
         public Builder(AppPhysicalResourceId defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccountId = defaults.awsAccountId;
-    	      this.awsRegion = defaults.awsRegion;
-    	      this.identifier = defaults.identifier;
-    	      this.type = defaults.type;
+            $ = new AppPhysicalResourceId(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = awsAccountId;
+            $.awsAccountId = awsAccountId;
             return this;
         }
+
         public Builder awsRegion(@Nullable String awsRegion) {
-            this.awsRegion = awsRegion;
+            $.awsRegion = awsRegion;
             return this;
         }
+
         public Builder identifier(String identifier) {
-            this.identifier = Objects.requireNonNull(identifier);
+            $.identifier = identifier;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public AppPhysicalResourceId build() {
-            return new AppPhysicalResourceId(awsAccountId, awsRegion, identifier, type);
+        }
+
+        public AppPhysicalResourceId build() {
+            $.identifier = Objects.requireNonNull($.identifier, "expected parameter 'identifier' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

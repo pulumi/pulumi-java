@@ -17,7 +17,7 @@ public final class GetPipelineTopologyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetPipelineTopologyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="pipelineTopologyName", required=true)
-      private final String pipelineTopologyName;
+    private String pipelineTopologyName;
 
     public String pipelineTopologyName() {
         return this.pipelineTopologyName;
@@ -39,64 +39,59 @@ public final class GetPipelineTopologyArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPipelineTopologyArgs(
-        String accountName,
-        String pipelineTopologyName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.pipelineTopologyName = Objects.requireNonNull(pipelineTopologyName, "expected parameter 'pipelineTopologyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPipelineTopologyArgs() {}
 
-    private GetPipelineTopologyArgs() {
-        this.accountName = null;
-        this.pipelineTopologyName = null;
-        this.resourceGroupName = null;
+    private GetPipelineTopologyArgs(GetPipelineTopologyArgs $) {
+        this.accountName = $.accountName;
+        this.pipelineTopologyName = $.pipelineTopologyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPipelineTopologyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String pipelineTopologyName;
-        private String resourceGroupName;
+        private GetPipelineTopologyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPipelineTopologyArgs();
         }
 
         public Builder(GetPipelineTopologyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.pipelineTopologyName = defaults.pipelineTopologyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPipelineTopologyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder pipelineTopologyName(String pipelineTopologyName) {
-            this.pipelineTopologyName = Objects.requireNonNull(pipelineTopologyName);
+            $.pipelineTopologyName = pipelineTopologyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPipelineTopologyArgs build() {
-            return new GetPipelineTopologyArgs(accountName, pipelineTopologyName, resourceGroupName);
+        }
+
+        public GetPipelineTopologyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.pipelineTopologyName = Objects.requireNonNull($.pipelineTopologyName, "expected parameter 'pipelineTopologyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

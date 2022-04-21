@@ -15,78 +15,72 @@ public final class GetDomainMappingArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetDomainMappingArgs Empty = new GetDomainMappingArgs();
 
     @Import(name="domainmappingId", required=true)
-      private final String domainmappingId;
+    private String domainmappingId;
 
     public String domainmappingId() {
         return this.domainmappingId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDomainMappingArgs(
-        String domainmappingId,
-        String location,
-        @Nullable String project) {
-        this.domainmappingId = Objects.requireNonNull(domainmappingId, "expected parameter 'domainmappingId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetDomainMappingArgs() {}
 
-    private GetDomainMappingArgs() {
-        this.domainmappingId = null;
-        this.location = null;
-        this.project = null;
+    private GetDomainMappingArgs(GetDomainMappingArgs $) {
+        this.domainmappingId = $.domainmappingId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainmappingId;
-        private String location;
-        private @Nullable String project;
+        private GetDomainMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainMappingArgs();
         }
 
         public Builder(GetDomainMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainmappingId = defaults.domainmappingId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetDomainMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainmappingId(String domainmappingId) {
-            this.domainmappingId = Objects.requireNonNull(domainmappingId);
+            $.domainmappingId = domainmappingId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDomainMappingArgs build() {
-            return new GetDomainMappingArgs(domainmappingId, location, project);
+        }
+
+        public GetDomainMappingArgs build() {
+            $.domainmappingId = Objects.requireNonNull($.domainmappingId, "expected parameter 'domainmappingId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

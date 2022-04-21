@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +21,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends com.
      * 
      */
     @Import(name="critical", required=true)
-      private final Output<Boolean> critical;
+    private Output<Boolean> critical;
 
     public Output<Boolean> critical() {
         return this.critical;
@@ -34,7 +33,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends com.
      * 
      */
     @Import(name="objectId", required=true)
-      private final Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId;
+    private Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId;
 
     public Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId() {
         return this.objectId;
@@ -45,76 +44,71 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends com.
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public AuthorityConfigX509ConfigAdditionalExtensionArgs(
-        Output<Boolean> critical,
-        Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId,
-        Output<String> value) {
-        this.critical = Objects.requireNonNull(critical, "expected parameter 'critical' to be non-null");
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private AuthorityConfigX509ConfigAdditionalExtensionArgs() {}
 
-    private AuthorityConfigX509ConfigAdditionalExtensionArgs() {
-        this.critical = Codegen.empty();
-        this.objectId = Codegen.empty();
-        this.value = Codegen.empty();
+    private AuthorityConfigX509ConfigAdditionalExtensionArgs(AuthorityConfigX509ConfigAdditionalExtensionArgs $) {
+        this.critical = $.critical;
+        this.objectId = $.objectId;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityConfigX509ConfigAdditionalExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> critical;
-        private Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId;
-        private Output<String> value;
+        private AuthorityConfigX509ConfigAdditionalExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityConfigX509ConfigAdditionalExtensionArgs();
         }
 
         public Builder(AuthorityConfigX509ConfigAdditionalExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.critical = defaults.critical;
-    	      this.objectId = defaults.objectId;
-    	      this.value = defaults.value;
+            $ = new AuthorityConfigX509ConfigAdditionalExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder critical(Output<Boolean> critical) {
-            this.critical = Objects.requireNonNull(critical);
+            $.critical = critical;
             return this;
         }
+
         public Builder critical(Boolean critical) {
-            this.critical = Output.of(Objects.requireNonNull(critical));
-            return this;
+            return critical(Output.of(critical));
         }
+
         public Builder objectId(Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder objectId(AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs objectId) {
-            this.objectId = Output.of(Objects.requireNonNull(objectId));
-            return this;
+            return objectId(Output.of(objectId));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public AuthorityConfigX509ConfigAdditionalExtensionArgs build() {
-            return new AuthorityConfigX509ConfigAdditionalExtensionArgs(critical, objectId, value);
+            return value(Output.of(value));
+        }
+
+        public AuthorityConfigX509ConfigAdditionalExtensionArgs build() {
+            $.critical = Objects.requireNonNull($.critical, "expected parameter 'critical' to be non-null");
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

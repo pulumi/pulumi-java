@@ -23,45 +23,45 @@ public final class ContinuousModeBackupPolicyResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ContinuousModeBackupPolicyResponse(String type) {
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ContinuousModeBackupPolicyResponse() {}
 
-    private ContinuousModeBackupPolicyResponse() {
-        this.type = null;
+    private ContinuousModeBackupPolicyResponse(ContinuousModeBackupPolicyResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContinuousModeBackupPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private ContinuousModeBackupPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContinuousModeBackupPolicyResponse();
         }
 
         public Builder(ContinuousModeBackupPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ContinuousModeBackupPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ContinuousModeBackupPolicyResponse build() {
-            return new ContinuousModeBackupPolicyResponse(type);
+        }
+
+        public ContinuousModeBackupPolicyResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

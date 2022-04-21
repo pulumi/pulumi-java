@@ -5,9 +5,9 @@ package com.pulumi.aws.kinesis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class StreamConsumerState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="streamArn")
-      private final @Nullable Output<String> streamArn;
+    private @Nullable Output<String> streamArn;
 
-    public Output<String> streamArn() {
-        return this.streamArn == null ? Codegen.empty() : this.streamArn;
+    public Optional<Output<String>> streamArn() {
+        return Optional.ofNullable(this.streamArn);
     }
 
-    public StreamConsumerState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> name,
-        @Nullable Output<String> streamArn) {
-        this.arn = arn;
-        this.creationTimestamp = creationTimestamp;
-        this.name = name;
-        this.streamArn = streamArn;
-    }
+    private StreamConsumerState() {}
 
-    private StreamConsumerState() {
-        this.arn = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.name = Codegen.empty();
-        this.streamArn = Codegen.empty();
+    private StreamConsumerState(StreamConsumerState $) {
+        this.arn = $.arn;
+        this.creationTimestamp = $.creationTimestamp;
+        this.name = $.name;
+        this.streamArn = $.streamArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamConsumerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> streamArn;
+        private StreamConsumerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamConsumerState();
         }
 
         public Builder(StreamConsumerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.name = defaults.name;
-    	      this.streamArn = defaults.streamArn;
+            $ = new StreamConsumerState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder streamArn(@Nullable Output<String> streamArn) {
-            this.streamArn = streamArn;
+            $.streamArn = streamArn;
             return this;
         }
-        public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Codegen.ofNullable(streamArn);
-            return this;
-        }        public StreamConsumerState build() {
-            return new StreamConsumerState(arn, creationTimestamp, name, streamArn);
+
+        public Builder streamArn(String streamArn) {
+            return streamArn(Output.of(streamArn));
+        }
+
+        public StreamConsumerState build() {
+            return $;
         }
     }
+
 }

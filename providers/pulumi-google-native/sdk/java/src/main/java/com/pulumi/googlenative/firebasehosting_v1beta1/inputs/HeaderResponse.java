@@ -22,7 +22,7 @@ public final class HeaderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="glob", required=true)
-      private final String glob;
+    private String glob;
 
     public String glob() {
         return this.glob;
@@ -33,7 +33,7 @@ public final class HeaderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="headers", required=true)
-      private final Map<String,String> headers;
+    private Map<String,String> headers;
 
     public Map<String,String> headers() {
         return this.headers;
@@ -44,64 +44,59 @@ public final class HeaderResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regex", required=true)
-      private final String regex;
+    private String regex;
 
     public String regex() {
         return this.regex;
     }
 
-    public HeaderResponse(
-        String glob,
-        Map<String,String> headers,
-        String regex) {
-        this.glob = Objects.requireNonNull(glob, "expected parameter 'glob' to be non-null");
-        this.headers = Objects.requireNonNull(headers, "expected parameter 'headers' to be non-null");
-        this.regex = Objects.requireNonNull(regex, "expected parameter 'regex' to be non-null");
-    }
+    private HeaderResponse() {}
 
-    private HeaderResponse() {
-        this.glob = null;
-        this.headers = Map.of();
-        this.regex = null;
+    private HeaderResponse(HeaderResponse $) {
+        this.glob = $.glob;
+        this.headers = $.headers;
+        this.regex = $.regex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HeaderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String glob;
-        private Map<String,String> headers;
-        private String regex;
+        private HeaderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HeaderResponse();
         }
 
         public Builder(HeaderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.glob = defaults.glob;
-    	      this.headers = defaults.headers;
-    	      this.regex = defaults.regex;
+            $ = new HeaderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder glob(String glob) {
-            this.glob = Objects.requireNonNull(glob);
+            $.glob = glob;
             return this;
         }
+
         public Builder headers(Map<String,String> headers) {
-            this.headers = Objects.requireNonNull(headers);
+            $.headers = headers;
             return this;
         }
+
         public Builder regex(String regex) {
-            this.regex = Objects.requireNonNull(regex);
+            $.regex = regex;
             return this;
-        }        public HeaderResponse build() {
-            return new HeaderResponse(glob, headers, regex);
+        }
+
+        public HeaderResponse build() {
+            $.glob = Objects.requireNonNull($.glob, "expected parameter 'glob' to be non-null");
+            $.headers = Objects.requireNonNull($.headers, "expected parameter 'headers' to be non-null");
+            $.regex = Objects.requireNonNull($.regex, "expected parameter 'regex' to be non-null");
+            return $;
         }
     }
+
 }

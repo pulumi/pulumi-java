@@ -17,7 +17,7 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="artifactSourceName", required=true)
-      private final String artifactSourceName;
+    private String artifactSourceName;
 
     public String artifactSourceName() {
         return this.artifactSourceName;
@@ -28,55 +28,52 @@ public final class GetArtifactSourceArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetArtifactSourceArgs(
-        String artifactSourceName,
-        String resourceGroupName) {
-        this.artifactSourceName = Objects.requireNonNull(artifactSourceName, "expected parameter 'artifactSourceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetArtifactSourceArgs() {}
 
-    private GetArtifactSourceArgs() {
-        this.artifactSourceName = null;
-        this.resourceGroupName = null;
+    private GetArtifactSourceArgs(GetArtifactSourceArgs $) {
+        this.artifactSourceName = $.artifactSourceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetArtifactSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactSourceName;
-        private String resourceGroupName;
+        private GetArtifactSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetArtifactSourceArgs();
         }
 
         public Builder(GetArtifactSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactSourceName = defaults.artifactSourceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetArtifactSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactSourceName(String artifactSourceName) {
-            this.artifactSourceName = Objects.requireNonNull(artifactSourceName);
+            $.artifactSourceName = artifactSourceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetArtifactSourceArgs build() {
-            return new GetArtifactSourceArgs(artifactSourceName, resourceGroupName);
+        }
+
+        public GetArtifactSourceArgs build() {
+            $.artifactSourceName = Objects.requireNonNull($.artifactSourceName, "expected parameter 'artifactSourceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

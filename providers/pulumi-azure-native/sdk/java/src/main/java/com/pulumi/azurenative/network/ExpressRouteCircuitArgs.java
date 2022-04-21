@@ -12,13 +12,13 @@ import com.pulumi.azurenative.network.inputs.SubResourceArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="allowClassicOperations")
-      private final @Nullable Output<Boolean> allowClassicOperations;
+    private @Nullable Output<Boolean> allowClassicOperations;
 
-    public Output<Boolean> allowClassicOperations() {
-        return this.allowClassicOperations == null ? Codegen.empty() : this.allowClassicOperations;
+    public Optional<Output<Boolean>> allowClassicOperations() {
+        return Optional.ofNullable(this.allowClassicOperations);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="authorizations")
-      private final @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
+    private @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
 
-    public Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations() {
-        return this.authorizations == null ? Codegen.empty() : this.authorizations;
+    public Optional<Output<List<ExpressRouteCircuitAuthorizationArgs>>> authorizations() {
+        return Optional.ofNullable(this.authorizations);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="bandwidthInGbps")
-      private final @Nullable Output<Double> bandwidthInGbps;
+    private @Nullable Output<Double> bandwidthInGbps;
 
-    public Output<Double> bandwidthInGbps() {
-        return this.bandwidthInGbps == null ? Codegen.empty() : this.bandwidthInGbps;
+    public Optional<Output<Double>> bandwidthInGbps() {
+        return Optional.ofNullable(this.bandwidthInGbps);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="circuitName")
-      private final @Nullable Output<String> circuitName;
+    private @Nullable Output<String> circuitName;
 
-    public Output<String> circuitName() {
-        return this.circuitName == null ? Codegen.empty() : this.circuitName;
+    public Optional<Output<String>> circuitName() {
+        return Optional.ofNullable(this.circuitName);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="circuitProvisioningState")
-      private final @Nullable Output<String> circuitProvisioningState;
+    private @Nullable Output<String> circuitProvisioningState;
 
-    public Output<String> circuitProvisioningState() {
-        return this.circuitProvisioningState == null ? Codegen.empty() : this.circuitProvisioningState;
+    public Optional<Output<String>> circuitProvisioningState() {
+        return Optional.ofNullable(this.circuitProvisioningState);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="expressRoutePort")
-      private final @Nullable Output<SubResourceArgs> expressRoutePort;
+    private @Nullable Output<SubResourceArgs> expressRoutePort;
 
-    public Output<SubResourceArgs> expressRoutePort() {
-        return this.expressRoutePort == null ? Codegen.empty() : this.expressRoutePort;
+    public Optional<Output<SubResourceArgs>> expressRoutePort() {
+        return Optional.ofNullable(this.expressRoutePort);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="gatewayManagerEtag")
-      private final @Nullable Output<String> gatewayManagerEtag;
+    private @Nullable Output<String> gatewayManagerEtag;
 
-    public Output<String> gatewayManagerEtag() {
-        return this.gatewayManagerEtag == null ? Codegen.empty() : this.gatewayManagerEtag;
+    public Optional<Output<String>> gatewayManagerEtag() {
+        return Optional.ofNullable(this.gatewayManagerEtag);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="globalReachEnabled")
-      private final @Nullable Output<Boolean> globalReachEnabled;
+    private @Nullable Output<Boolean> globalReachEnabled;
 
-    public Output<Boolean> globalReachEnabled() {
-        return this.globalReachEnabled == null ? Codegen.empty() : this.globalReachEnabled;
+    public Optional<Output<Boolean>> globalReachEnabled() {
+        return Optional.ofNullable(this.globalReachEnabled);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="peerings")
-      private final @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings;
+    private @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings;
 
-    public Output<List<ExpressRouteCircuitPeeringArgs>> peerings() {
-        return this.peerings == null ? Codegen.empty() : this.peerings;
+    public Optional<Output<List<ExpressRouteCircuitPeeringArgs>>> peerings() {
+        return Optional.ofNullable(this.peerings);
     }
 
     /**
@@ -152,7 +152,7 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -163,10 +163,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceKey")
-      private final @Nullable Output<String> serviceKey;
+    private @Nullable Output<String> serviceKey;
 
-    public Output<String> serviceKey() {
-        return this.serviceKey == null ? Codegen.empty() : this.serviceKey;
+    public Optional<Output<String>> serviceKey() {
+        return Optional.ofNullable(this.serviceKey);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceProviderNotes")
-      private final @Nullable Output<String> serviceProviderNotes;
+    private @Nullable Output<String> serviceProviderNotes;
 
-    public Output<String> serviceProviderNotes() {
-        return this.serviceProviderNotes == null ? Codegen.empty() : this.serviceProviderNotes;
+    public Optional<Output<String>> serviceProviderNotes() {
+        return Optional.ofNullable(this.serviceProviderNotes);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceProviderProperties")
-      private final @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
+    private @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
 
-    public Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties() {
-        return this.serviceProviderProperties == null ? Codegen.empty() : this.serviceProviderProperties;
+    public Optional<Output<ExpressRouteCircuitServiceProviderPropertiesArgs>> serviceProviderProperties() {
+        return Optional.ofNullable(this.serviceProviderProperties);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="serviceProviderProvisioningState")
-      private final @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
+    private @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
 
-    public Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState() {
-        return this.serviceProviderProvisioningState == null ? Codegen.empty() : this.serviceProviderProvisioningState;
+    public Optional<Output<Either<String,ServiceProviderProvisioningState>>> serviceProviderProvisioningState() {
+        return Optional.ofNullable(this.serviceProviderProvisioningState);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<ExpressRouteCircuitSkuArgs> sku;
+    private @Nullable Output<ExpressRouteCircuitSkuArgs> sku;
 
-    public Output<ExpressRouteCircuitSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<ExpressRouteCircuitSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -218,277 +218,227 @@ public final class ExpressRouteCircuitArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ExpressRouteCircuitArgs(
-        @Nullable Output<Boolean> allowClassicOperations,
-        @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations,
-        @Nullable Output<Double> bandwidthInGbps,
-        @Nullable Output<String> circuitName,
-        @Nullable Output<String> circuitProvisioningState,
-        @Nullable Output<SubResourceArgs> expressRoutePort,
-        @Nullable Output<String> gatewayManagerEtag,
-        @Nullable Output<Boolean> globalReachEnabled,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> serviceKey,
-        @Nullable Output<String> serviceProviderNotes,
-        @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties,
-        @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState,
-        @Nullable Output<ExpressRouteCircuitSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags) {
-        this.allowClassicOperations = allowClassicOperations;
-        this.authorizations = authorizations;
-        this.bandwidthInGbps = bandwidthInGbps;
-        this.circuitName = circuitName;
-        this.circuitProvisioningState = circuitProvisioningState;
-        this.expressRoutePort = expressRoutePort;
-        this.gatewayManagerEtag = gatewayManagerEtag;
-        this.globalReachEnabled = globalReachEnabled;
-        this.id = id;
-        this.location = location;
-        this.peerings = peerings;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceKey = serviceKey;
-        this.serviceProviderNotes = serviceProviderNotes;
-        this.serviceProviderProperties = serviceProviderProperties;
-        this.serviceProviderProvisioningState = serviceProviderProvisioningState;
-        this.sku = sku;
-        this.tags = tags;
-    }
+    private ExpressRouteCircuitArgs() {}
 
-    private ExpressRouteCircuitArgs() {
-        this.allowClassicOperations = Codegen.empty();
-        this.authorizations = Codegen.empty();
-        this.bandwidthInGbps = Codegen.empty();
-        this.circuitName = Codegen.empty();
-        this.circuitProvisioningState = Codegen.empty();
-        this.expressRoutePort = Codegen.empty();
-        this.gatewayManagerEtag = Codegen.empty();
-        this.globalReachEnabled = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.peerings = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceKey = Codegen.empty();
-        this.serviceProviderNotes = Codegen.empty();
-        this.serviceProviderProperties = Codegen.empty();
-        this.serviceProviderProvisioningState = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ExpressRouteCircuitArgs(ExpressRouteCircuitArgs $) {
+        this.allowClassicOperations = $.allowClassicOperations;
+        this.authorizations = $.authorizations;
+        this.bandwidthInGbps = $.bandwidthInGbps;
+        this.circuitName = $.circuitName;
+        this.circuitProvisioningState = $.circuitProvisioningState;
+        this.expressRoutePort = $.expressRoutePort;
+        this.gatewayManagerEtag = $.gatewayManagerEtag;
+        this.globalReachEnabled = $.globalReachEnabled;
+        this.id = $.id;
+        this.location = $.location;
+        this.peerings = $.peerings;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceKey = $.serviceKey;
+        this.serviceProviderNotes = $.serviceProviderNotes;
+        this.serviceProviderProperties = $.serviceProviderProperties;
+        this.serviceProviderProvisioningState = $.serviceProviderProvisioningState;
+        this.sku = $.sku;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExpressRouteCircuitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowClassicOperations;
-        private @Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations;
-        private @Nullable Output<Double> bandwidthInGbps;
-        private @Nullable Output<String> circuitName;
-        private @Nullable Output<String> circuitProvisioningState;
-        private @Nullable Output<SubResourceArgs> expressRoutePort;
-        private @Nullable Output<String> gatewayManagerEtag;
-        private @Nullable Output<Boolean> globalReachEnabled;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> serviceKey;
-        private @Nullable Output<String> serviceProviderNotes;
-        private @Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties;
-        private @Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState;
-        private @Nullable Output<ExpressRouteCircuitSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
+        private ExpressRouteCircuitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExpressRouteCircuitArgs();
         }
 
         public Builder(ExpressRouteCircuitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowClassicOperations = defaults.allowClassicOperations;
-    	      this.authorizations = defaults.authorizations;
-    	      this.bandwidthInGbps = defaults.bandwidthInGbps;
-    	      this.circuitName = defaults.circuitName;
-    	      this.circuitProvisioningState = defaults.circuitProvisioningState;
-    	      this.expressRoutePort = defaults.expressRoutePort;
-    	      this.gatewayManagerEtag = defaults.gatewayManagerEtag;
-    	      this.globalReachEnabled = defaults.globalReachEnabled;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.peerings = defaults.peerings;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceKey = defaults.serviceKey;
-    	      this.serviceProviderNotes = defaults.serviceProviderNotes;
-    	      this.serviceProviderProperties = defaults.serviceProviderProperties;
-    	      this.serviceProviderProvisioningState = defaults.serviceProviderProvisioningState;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
+            $ = new ExpressRouteCircuitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowClassicOperations(@Nullable Output<Boolean> allowClassicOperations) {
-            this.allowClassicOperations = allowClassicOperations;
+            $.allowClassicOperations = allowClassicOperations;
             return this;
         }
-        public Builder allowClassicOperations(@Nullable Boolean allowClassicOperations) {
-            this.allowClassicOperations = Codegen.ofNullable(allowClassicOperations);
-            return this;
+
+        public Builder allowClassicOperations(Boolean allowClassicOperations) {
+            return allowClassicOperations(Output.of(allowClassicOperations));
         }
+
         public Builder authorizations(@Nullable Output<List<ExpressRouteCircuitAuthorizationArgs>> authorizations) {
-            this.authorizations = authorizations;
+            $.authorizations = authorizations;
             return this;
         }
-        public Builder authorizations(@Nullable List<ExpressRouteCircuitAuthorizationArgs> authorizations) {
-            this.authorizations = Codegen.ofNullable(authorizations);
-            return this;
+
+        public Builder authorizations(List<ExpressRouteCircuitAuthorizationArgs> authorizations) {
+            return authorizations(Output.of(authorizations));
         }
+
         public Builder authorizations(ExpressRouteCircuitAuthorizationArgs... authorizations) {
             return authorizations(List.of(authorizations));
         }
+
         public Builder bandwidthInGbps(@Nullable Output<Double> bandwidthInGbps) {
-            this.bandwidthInGbps = bandwidthInGbps;
+            $.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
-        public Builder bandwidthInGbps(@Nullable Double bandwidthInGbps) {
-            this.bandwidthInGbps = Codegen.ofNullable(bandwidthInGbps);
-            return this;
+
+        public Builder bandwidthInGbps(Double bandwidthInGbps) {
+            return bandwidthInGbps(Output.of(bandwidthInGbps));
         }
+
         public Builder circuitName(@Nullable Output<String> circuitName) {
-            this.circuitName = circuitName;
+            $.circuitName = circuitName;
             return this;
         }
-        public Builder circuitName(@Nullable String circuitName) {
-            this.circuitName = Codegen.ofNullable(circuitName);
-            return this;
+
+        public Builder circuitName(String circuitName) {
+            return circuitName(Output.of(circuitName));
         }
+
         public Builder circuitProvisioningState(@Nullable Output<String> circuitProvisioningState) {
-            this.circuitProvisioningState = circuitProvisioningState;
+            $.circuitProvisioningState = circuitProvisioningState;
             return this;
         }
-        public Builder circuitProvisioningState(@Nullable String circuitProvisioningState) {
-            this.circuitProvisioningState = Codegen.ofNullable(circuitProvisioningState);
-            return this;
+
+        public Builder circuitProvisioningState(String circuitProvisioningState) {
+            return circuitProvisioningState(Output.of(circuitProvisioningState));
         }
+
         public Builder expressRoutePort(@Nullable Output<SubResourceArgs> expressRoutePort) {
-            this.expressRoutePort = expressRoutePort;
+            $.expressRoutePort = expressRoutePort;
             return this;
         }
-        public Builder expressRoutePort(@Nullable SubResourceArgs expressRoutePort) {
-            this.expressRoutePort = Codegen.ofNullable(expressRoutePort);
-            return this;
+
+        public Builder expressRoutePort(SubResourceArgs expressRoutePort) {
+            return expressRoutePort(Output.of(expressRoutePort));
         }
+
         public Builder gatewayManagerEtag(@Nullable Output<String> gatewayManagerEtag) {
-            this.gatewayManagerEtag = gatewayManagerEtag;
+            $.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
-        public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
-            this.gatewayManagerEtag = Codegen.ofNullable(gatewayManagerEtag);
-            return this;
+
+        public Builder gatewayManagerEtag(String gatewayManagerEtag) {
+            return gatewayManagerEtag(Output.of(gatewayManagerEtag));
         }
+
         public Builder globalReachEnabled(@Nullable Output<Boolean> globalReachEnabled) {
-            this.globalReachEnabled = globalReachEnabled;
+            $.globalReachEnabled = globalReachEnabled;
             return this;
         }
-        public Builder globalReachEnabled(@Nullable Boolean globalReachEnabled) {
-            this.globalReachEnabled = Codegen.ofNullable(globalReachEnabled);
-            return this;
+
+        public Builder globalReachEnabled(Boolean globalReachEnabled) {
+            return globalReachEnabled(Output.of(globalReachEnabled));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder peerings(@Nullable Output<List<ExpressRouteCircuitPeeringArgs>> peerings) {
-            this.peerings = peerings;
+            $.peerings = peerings;
             return this;
         }
-        public Builder peerings(@Nullable List<ExpressRouteCircuitPeeringArgs> peerings) {
-            this.peerings = Codegen.ofNullable(peerings);
-            return this;
+
+        public Builder peerings(List<ExpressRouteCircuitPeeringArgs> peerings) {
+            return peerings(Output.of(peerings));
         }
+
         public Builder peerings(ExpressRouteCircuitPeeringArgs... peerings) {
             return peerings(List.of(peerings));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceKey(@Nullable Output<String> serviceKey) {
-            this.serviceKey = serviceKey;
+            $.serviceKey = serviceKey;
             return this;
         }
-        public Builder serviceKey(@Nullable String serviceKey) {
-            this.serviceKey = Codegen.ofNullable(serviceKey);
-            return this;
+
+        public Builder serviceKey(String serviceKey) {
+            return serviceKey(Output.of(serviceKey));
         }
+
         public Builder serviceProviderNotes(@Nullable Output<String> serviceProviderNotes) {
-            this.serviceProviderNotes = serviceProviderNotes;
+            $.serviceProviderNotes = serviceProviderNotes;
             return this;
         }
-        public Builder serviceProviderNotes(@Nullable String serviceProviderNotes) {
-            this.serviceProviderNotes = Codegen.ofNullable(serviceProviderNotes);
-            return this;
+
+        public Builder serviceProviderNotes(String serviceProviderNotes) {
+            return serviceProviderNotes(Output.of(serviceProviderNotes));
         }
+
         public Builder serviceProviderProperties(@Nullable Output<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties) {
-            this.serviceProviderProperties = serviceProviderProperties;
+            $.serviceProviderProperties = serviceProviderProperties;
             return this;
         }
-        public Builder serviceProviderProperties(@Nullable ExpressRouteCircuitServiceProviderPropertiesArgs serviceProviderProperties) {
-            this.serviceProviderProperties = Codegen.ofNullable(serviceProviderProperties);
-            return this;
+
+        public Builder serviceProviderProperties(ExpressRouteCircuitServiceProviderPropertiesArgs serviceProviderProperties) {
+            return serviceProviderProperties(Output.of(serviceProviderProperties));
         }
+
         public Builder serviceProviderProvisioningState(@Nullable Output<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState) {
-            this.serviceProviderProvisioningState = serviceProviderProvisioningState;
+            $.serviceProviderProvisioningState = serviceProviderProvisioningState;
             return this;
         }
-        public Builder serviceProviderProvisioningState(@Nullable Either<String,ServiceProviderProvisioningState> serviceProviderProvisioningState) {
-            this.serviceProviderProvisioningState = Codegen.ofNullable(serviceProviderProvisioningState);
-            return this;
+
+        public Builder serviceProviderProvisioningState(Either<String,ServiceProviderProvisioningState> serviceProviderProvisioningState) {
+            return serviceProviderProvisioningState(Output.of(serviceProviderProvisioningState));
         }
+
         public Builder sku(@Nullable Output<ExpressRouteCircuitSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable ExpressRouteCircuitSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(ExpressRouteCircuitSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ExpressRouteCircuitArgs build() {
-            return new ExpressRouteCircuitArgs(allowClassicOperations, authorizations, bandwidthInGbps, circuitName, circuitProvisioningState, expressRoutePort, gatewayManagerEtag, globalReachEnabled, id, location, peerings, resourceGroupName, serviceKey, serviceProviderNotes, serviceProviderProperties, serviceProviderProvisioningState, sku, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ExpressRouteCircuitArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

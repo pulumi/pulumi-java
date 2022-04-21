@@ -21,45 +21,45 @@ public final class DetectorModelResetTimer extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="timerName", required=true)
-      private final String timerName;
+    private String timerName;
 
     public String timerName() {
         return this.timerName;
     }
 
-    public DetectorModelResetTimer(String timerName) {
-        this.timerName = Objects.requireNonNull(timerName, "expected parameter 'timerName' to be non-null");
-    }
+    private DetectorModelResetTimer() {}
 
-    private DetectorModelResetTimer() {
-        this.timerName = null;
+    private DetectorModelResetTimer(DetectorModelResetTimer $) {
+        this.timerName = $.timerName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelResetTimer defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String timerName;
+        private DetectorModelResetTimer $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelResetTimer();
         }
 
         public Builder(DetectorModelResetTimer defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timerName = defaults.timerName;
+            $ = new DetectorModelResetTimer(Objects.requireNonNull(defaults));
         }
 
         public Builder timerName(String timerName) {
-            this.timerName = Objects.requireNonNull(timerName);
+            $.timerName = timerName;
             return this;
-        }        public DetectorModelResetTimer build() {
-            return new DetectorModelResetTimer(timerName);
+        }
+
+        public DetectorModelResetTimer build() {
+            $.timerName = Objects.requireNonNull($.timerName, "expected parameter 'timerName' to be non-null");
+            return $;
         }
     }
+
 }

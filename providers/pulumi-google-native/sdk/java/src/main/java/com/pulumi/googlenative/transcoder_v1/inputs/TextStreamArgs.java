@@ -5,11 +5,11 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.TextMappingArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TextStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="codec")
-      private final @Nullable Output<String> codec;
+    private @Nullable Output<String> codec;
 
-    public Output<String> codec() {
-        return this.codec == null ? Codegen.empty() : this.codec;
+    public Optional<Output<String>> codec() {
+        return Optional.ofNullable(this.codec);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class TextStreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mapping")
-      private final @Nullable Output<List<TextMappingArgs>> mapping;
+    private @Nullable Output<List<TextMappingArgs>> mapping;
 
-    public Output<List<TextMappingArgs>> mapping() {
-        return this.mapping == null ? Codegen.empty() : this.mapping;
+    public Optional<Output<List<TextMappingArgs>>> mapping() {
+        return Optional.ofNullable(this.mapping);
     }
 
-    public TextStreamArgs(
-        @Nullable Output<String> codec,
-        @Nullable Output<List<TextMappingArgs>> mapping) {
-        this.codec = codec;
-        this.mapping = mapping;
-    }
+    private TextStreamArgs() {}
 
-    private TextStreamArgs() {
-        this.codec = Codegen.empty();
-        this.mapping = Codegen.empty();
+    private TextStreamArgs(TextStreamArgs $) {
+        this.codec = $.codec;
+        this.mapping = $.mapping;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TextStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> codec;
-        private @Nullable Output<List<TextMappingArgs>> mapping;
+        private TextStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TextStreamArgs();
         }
 
         public Builder(TextStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codec = defaults.codec;
-    	      this.mapping = defaults.mapping;
+            $ = new TextStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder codec(@Nullable Output<String> codec) {
-            this.codec = codec;
+            $.codec = codec;
             return this;
         }
-        public Builder codec(@Nullable String codec) {
-            this.codec = Codegen.ofNullable(codec);
-            return this;
+
+        public Builder codec(String codec) {
+            return codec(Output.of(codec));
         }
+
         public Builder mapping(@Nullable Output<List<TextMappingArgs>> mapping) {
-            this.mapping = mapping;
+            $.mapping = mapping;
             return this;
         }
-        public Builder mapping(@Nullable List<TextMappingArgs> mapping) {
-            this.mapping = Codegen.ofNullable(mapping);
-            return this;
+
+        public Builder mapping(List<TextMappingArgs> mapping) {
+            return mapping(Output.of(mapping));
         }
+
         public Builder mapping(TextMappingArgs... mapping) {
             return mapping(List.of(mapping));
-        }        public TextStreamArgs build() {
-            return new TextStreamArgs(codec, mapping);
+        }
+
+        public TextStreamArgs build() {
+            return $;
         }
     }
+
 }

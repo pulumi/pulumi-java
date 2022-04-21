@@ -22,7 +22,7 @@ public final class TrafficSelectorPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="localAddressRanges", required=true)
-      private final List<String> localAddressRanges;
+    private List<String> localAddressRanges;
 
     public List<String> localAddressRanges() {
         return this.localAddressRanges;
@@ -33,61 +33,60 @@ public final class TrafficSelectorPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="remoteAddressRanges", required=true)
-      private final List<String> remoteAddressRanges;
+    private List<String> remoteAddressRanges;
 
     public List<String> remoteAddressRanges() {
         return this.remoteAddressRanges;
     }
 
-    public TrafficSelectorPolicyResponse(
-        List<String> localAddressRanges,
-        List<String> remoteAddressRanges) {
-        this.localAddressRanges = Objects.requireNonNull(localAddressRanges, "expected parameter 'localAddressRanges' to be non-null");
-        this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges, "expected parameter 'remoteAddressRanges' to be non-null");
-    }
+    private TrafficSelectorPolicyResponse() {}
 
-    private TrafficSelectorPolicyResponse() {
-        this.localAddressRanges = List.of();
-        this.remoteAddressRanges = List.of();
+    private TrafficSelectorPolicyResponse(TrafficSelectorPolicyResponse $) {
+        this.localAddressRanges = $.localAddressRanges;
+        this.remoteAddressRanges = $.remoteAddressRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficSelectorPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> localAddressRanges;
-        private List<String> remoteAddressRanges;
+        private TrafficSelectorPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficSelectorPolicyResponse();
         }
 
         public Builder(TrafficSelectorPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localAddressRanges = defaults.localAddressRanges;
-    	      this.remoteAddressRanges = defaults.remoteAddressRanges;
+            $ = new TrafficSelectorPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder localAddressRanges(List<String> localAddressRanges) {
-            this.localAddressRanges = Objects.requireNonNull(localAddressRanges);
+            $.localAddressRanges = localAddressRanges;
             return this;
         }
+
         public Builder localAddressRanges(String... localAddressRanges) {
             return localAddressRanges(List.of(localAddressRanges));
         }
+
         public Builder remoteAddressRanges(List<String> remoteAddressRanges) {
-            this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
+            $.remoteAddressRanges = remoteAddressRanges;
             return this;
         }
+
         public Builder remoteAddressRanges(String... remoteAddressRanges) {
             return remoteAddressRanges(List.of(remoteAddressRanges));
-        }        public TrafficSelectorPolicyResponse build() {
-            return new TrafficSelectorPolicyResponse(localAddressRanges, remoteAddressRanges);
+        }
+
+        public TrafficSelectorPolicyResponse build() {
+            $.localAddressRanges = Objects.requireNonNull($.localAddressRanges, "expected parameter 'localAddressRanges' to be non-null");
+            $.remoteAddressRanges = Objects.requireNonNull($.remoteAddressRanges, "expected parameter 'remoteAddressRanges' to be non-null");
+            return $;
         }
     }
+
 }

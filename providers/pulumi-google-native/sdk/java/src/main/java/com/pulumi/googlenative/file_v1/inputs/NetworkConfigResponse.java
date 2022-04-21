@@ -22,7 +22,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="connectMode", required=true)
-      private final String connectMode;
+    private String connectMode;
 
     public String connectMode() {
         return this.connectMode;
@@ -33,7 +33,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipAddresses", required=true)
-      private final List<String> ipAddresses;
+    private List<String> ipAddresses;
 
     public List<String> ipAddresses() {
         return this.ipAddresses;
@@ -44,7 +44,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="modes", required=true)
-      private final List<String> modes;
+    private List<String> modes;
 
     public List<String> modes() {
         return this.modes;
@@ -55,7 +55,7 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -66,88 +66,81 @@ public final class NetworkConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="reservedIpRange", required=true)
-      private final String reservedIpRange;
+    private String reservedIpRange;
 
     public String reservedIpRange() {
         return this.reservedIpRange;
     }
 
-    public NetworkConfigResponse(
-        String connectMode,
-        List<String> ipAddresses,
-        List<String> modes,
-        String network,
-        String reservedIpRange) {
-        this.connectMode = Objects.requireNonNull(connectMode, "expected parameter 'connectMode' to be non-null");
-        this.ipAddresses = Objects.requireNonNull(ipAddresses, "expected parameter 'ipAddresses' to be non-null");
-        this.modes = Objects.requireNonNull(modes, "expected parameter 'modes' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.reservedIpRange = Objects.requireNonNull(reservedIpRange, "expected parameter 'reservedIpRange' to be non-null");
-    }
+    private NetworkConfigResponse() {}
 
-    private NetworkConfigResponse() {
-        this.connectMode = null;
-        this.ipAddresses = List.of();
-        this.modes = List.of();
-        this.network = null;
-        this.reservedIpRange = null;
+    private NetworkConfigResponse(NetworkConfigResponse $) {
+        this.connectMode = $.connectMode;
+        this.ipAddresses = $.ipAddresses;
+        this.modes = $.modes;
+        this.network = $.network;
+        this.reservedIpRange = $.reservedIpRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectMode;
-        private List<String> ipAddresses;
-        private List<String> modes;
-        private String network;
-        private String reservedIpRange;
+        private NetworkConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigResponse();
         }
 
         public Builder(NetworkConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectMode = defaults.connectMode;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.modes = defaults.modes;
-    	      this.network = defaults.network;
-    	      this.reservedIpRange = defaults.reservedIpRange;
+            $ = new NetworkConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectMode(String connectMode) {
-            this.connectMode = Objects.requireNonNull(connectMode);
+            $.connectMode = connectMode;
             return this;
         }
+
         public Builder ipAddresses(List<String> ipAddresses) {
-            this.ipAddresses = Objects.requireNonNull(ipAddresses);
+            $.ipAddresses = ipAddresses;
             return this;
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder modes(List<String> modes) {
-            this.modes = Objects.requireNonNull(modes);
+            $.modes = modes;
             return this;
         }
+
         public Builder modes(String... modes) {
             return modes(List.of(modes));
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder reservedIpRange(String reservedIpRange) {
-            this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
+            $.reservedIpRange = reservedIpRange;
             return this;
-        }        public NetworkConfigResponse build() {
-            return new NetworkConfigResponse(connectMode, ipAddresses, modes, network, reservedIpRange);
+        }
+
+        public NetworkConfigResponse build() {
+            $.connectMode = Objects.requireNonNull($.connectMode, "expected parameter 'connectMode' to be non-null");
+            $.ipAddresses = Objects.requireNonNull($.ipAddresses, "expected parameter 'ipAddresses' to be non-null");
+            $.modes = Objects.requireNonNull($.modes, "expected parameter 'modes' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.reservedIpRange = Objects.requireNonNull($.reservedIpRange, "expected parameter 'reservedIpRange' to be non-null");
+            return $;
         }
     }
+
 }

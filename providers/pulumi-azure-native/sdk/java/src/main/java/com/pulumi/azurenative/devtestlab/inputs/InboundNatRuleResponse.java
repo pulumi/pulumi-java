@@ -24,10 +24,10 @@ public final class InboundNatRuleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="backendPort")
-      private final @Nullable Integer backendPort;
+    private @Nullable Integer backendPort;
 
     public Optional<Integer> backendPort() {
-        return this.backendPort == null ? Optional.empty() : Optional.ofNullable(this.backendPort);
+        return Optional.ofNullable(this.backendPort);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InboundNatRuleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="frontendPort")
-      private final @Nullable Integer frontendPort;
+    private @Nullable Integer frontendPort;
 
     public Optional<Integer> frontendPort() {
-        return this.frontendPort == null ? Optional.empty() : Optional.ofNullable(this.frontendPort);
+        return Optional.ofNullable(this.frontendPort);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class InboundNatRuleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="transportProtocol")
-      private final @Nullable String transportProtocol;
+    private @Nullable String transportProtocol;
 
     public Optional<String> transportProtocol() {
-        return this.transportProtocol == null ? Optional.empty() : Optional.ofNullable(this.transportProtocol);
+        return Optional.ofNullable(this.transportProtocol);
     }
 
-    public InboundNatRuleResponse(
-        @Nullable Integer backendPort,
-        @Nullable Integer frontendPort,
-        @Nullable String transportProtocol) {
-        this.backendPort = backendPort;
-        this.frontendPort = frontendPort;
-        this.transportProtocol = transportProtocol;
-    }
+    private InboundNatRuleResponse() {}
 
-    private InboundNatRuleResponse() {
-        this.backendPort = null;
-        this.frontendPort = null;
-        this.transportProtocol = null;
+    private InboundNatRuleResponse(InboundNatRuleResponse $) {
+        this.backendPort = $.backendPort;
+        this.frontendPort = $.frontendPort;
+        this.transportProtocol = $.transportProtocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InboundNatRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer backendPort;
-        private @Nullable Integer frontendPort;
-        private @Nullable String transportProtocol;
+        private InboundNatRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InboundNatRuleResponse();
         }
 
         public Builder(InboundNatRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPort = defaults.backendPort;
-    	      this.frontendPort = defaults.frontendPort;
-    	      this.transportProtocol = defaults.transportProtocol;
+            $ = new InboundNatRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = backendPort;
+            $.backendPort = backendPort;
             return this;
         }
+
         public Builder frontendPort(@Nullable Integer frontendPort) {
-            this.frontendPort = frontendPort;
+            $.frontendPort = frontendPort;
             return this;
         }
+
         public Builder transportProtocol(@Nullable String transportProtocol) {
-            this.transportProtocol = transportProtocol;
+            $.transportProtocol = transportProtocol;
             return this;
-        }        public InboundNatRuleResponse build() {
-            return new InboundNatRuleResponse(backendPort, frontendPort, transportProtocol);
+        }
+
+        public InboundNatRuleResponse build() {
+            return $;
         }
     }
+
 }

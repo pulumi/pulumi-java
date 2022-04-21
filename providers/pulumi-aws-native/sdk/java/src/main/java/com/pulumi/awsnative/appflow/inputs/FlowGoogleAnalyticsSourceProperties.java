@@ -13,45 +13,45 @@ public final class FlowGoogleAnalyticsSourceProperties extends com.pulumi.resour
     public static final FlowGoogleAnalyticsSourceProperties Empty = new FlowGoogleAnalyticsSourceProperties();
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowGoogleAnalyticsSourceProperties(String object) {
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowGoogleAnalyticsSourceProperties() {}
 
-    private FlowGoogleAnalyticsSourceProperties() {
-        this.object = null;
+    private FlowGoogleAnalyticsSourceProperties(FlowGoogleAnalyticsSourceProperties $) {
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowGoogleAnalyticsSourceProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String object;
+        private FlowGoogleAnalyticsSourceProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowGoogleAnalyticsSourceProperties();
         }
 
         public Builder(FlowGoogleAnalyticsSourceProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.object = defaults.object;
+            $ = new FlowGoogleAnalyticsSourceProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowGoogleAnalyticsSourceProperties build() {
-            return new FlowGoogleAnalyticsSourceProperties(object);
+        }
+
+        public FlowGoogleAnalyticsSourceProperties build() {
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

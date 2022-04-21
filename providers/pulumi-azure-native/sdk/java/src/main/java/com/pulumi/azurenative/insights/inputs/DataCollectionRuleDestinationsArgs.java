@@ -7,9 +7,9 @@ import com.pulumi.azurenative.insights.inputs.DestinationsSpecAzureMonitorMetric
 import com.pulumi.azurenative.insights.inputs.LogAnalyticsDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DataCollectionRuleDestinationsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="azureMonitorMetrics")
-      private final @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
+    private @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
 
-    public Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics() {
-        return this.azureMonitorMetrics == null ? Codegen.empty() : this.azureMonitorMetrics;
+    public Optional<Output<DestinationsSpecAzureMonitorMetricsArgs>> azureMonitorMetrics() {
+        return Optional.ofNullable(this.azureMonitorMetrics);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class DataCollectionRuleDestinationsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="logAnalytics")
-      private final @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics;
+    private @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics;
 
-    public Output<List<LogAnalyticsDestinationArgs>> logAnalytics() {
-        return this.logAnalytics == null ? Codegen.empty() : this.logAnalytics;
+    public Optional<Output<List<LogAnalyticsDestinationArgs>>> logAnalytics() {
+        return Optional.ofNullable(this.logAnalytics);
     }
 
-    public DataCollectionRuleDestinationsArgs(
-        @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics,
-        @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics) {
-        this.azureMonitorMetrics = azureMonitorMetrics;
-        this.logAnalytics = logAnalytics;
-    }
+    private DataCollectionRuleDestinationsArgs() {}
 
-    private DataCollectionRuleDestinationsArgs() {
-        this.azureMonitorMetrics = Codegen.empty();
-        this.logAnalytics = Codegen.empty();
+    private DataCollectionRuleDestinationsArgs(DataCollectionRuleDestinationsArgs $) {
+        this.azureMonitorMetrics = $.azureMonitorMetrics;
+        this.logAnalytics = $.logAnalytics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectionRuleDestinationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
-        private @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics;
+        private DataCollectionRuleDestinationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectionRuleDestinationsArgs();
         }
 
         public Builder(DataCollectionRuleDestinationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureMonitorMetrics = defaults.azureMonitorMetrics;
-    	      this.logAnalytics = defaults.logAnalytics;
+            $ = new DataCollectionRuleDestinationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder azureMonitorMetrics(@Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics) {
-            this.azureMonitorMetrics = azureMonitorMetrics;
+            $.azureMonitorMetrics = azureMonitorMetrics;
             return this;
         }
-        public Builder azureMonitorMetrics(@Nullable DestinationsSpecAzureMonitorMetricsArgs azureMonitorMetrics) {
-            this.azureMonitorMetrics = Codegen.ofNullable(azureMonitorMetrics);
-            return this;
+
+        public Builder azureMonitorMetrics(DestinationsSpecAzureMonitorMetricsArgs azureMonitorMetrics) {
+            return azureMonitorMetrics(Output.of(azureMonitorMetrics));
         }
+
         public Builder logAnalytics(@Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics) {
-            this.logAnalytics = logAnalytics;
+            $.logAnalytics = logAnalytics;
             return this;
         }
-        public Builder logAnalytics(@Nullable List<LogAnalyticsDestinationArgs> logAnalytics) {
-            this.logAnalytics = Codegen.ofNullable(logAnalytics);
-            return this;
+
+        public Builder logAnalytics(List<LogAnalyticsDestinationArgs> logAnalytics) {
+            return logAnalytics(Output.of(logAnalytics));
         }
+
         public Builder logAnalytics(LogAnalyticsDestinationArgs... logAnalytics) {
             return logAnalytics(List.of(logAnalytics));
-        }        public DataCollectionRuleDestinationsArgs build() {
-            return new DataCollectionRuleDestinationsArgs(azureMonitorMetrics, logAnalytics);
+        }
+
+        public DataCollectionRuleDestinationsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.azurenative.synapse;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="endIpAddress")
-      private final @Nullable Output<String> endIpAddress;
+    private @Nullable Output<String> endIpAddress;
 
-    public Output<String> endIpAddress() {
-        return this.endIpAddress == null ? Codegen.empty() : this.endIpAddress;
+    public Optional<Output<String>> endIpAddress() {
+        return Optional.ofNullable(this.endIpAddress);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -42,10 +42,10 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="startIpAddress")
-      private final @Nullable Output<String> startIpAddress;
+    private @Nullable Output<String> startIpAddress;
 
-    public Output<String> startIpAddress() {
-        return this.startIpAddress == null ? Codegen.empty() : this.startIpAddress;
+    public Optional<Output<String>> startIpAddress() {
+        return Optional.ofNullable(this.startIpAddress);
     }
 
     /**
@@ -64,102 +64,90 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public IpFirewallRuleArgs(
-        @Nullable Output<String> endIpAddress,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> ruleName,
-        @Nullable Output<String> startIpAddress,
-        Output<String> workspaceName) {
-        this.endIpAddress = endIpAddress;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleName = ruleName;
-        this.startIpAddress = startIpAddress;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private IpFirewallRuleArgs() {}
 
-    private IpFirewallRuleArgs() {
-        this.endIpAddress = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ruleName = Codegen.empty();
-        this.startIpAddress = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private IpFirewallRuleArgs(IpFirewallRuleArgs $) {
+        this.endIpAddress = $.endIpAddress;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleName = $.ruleName;
+        this.startIpAddress = $.startIpAddress;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpFirewallRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endIpAddress;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> ruleName;
-        private @Nullable Output<String> startIpAddress;
-        private Output<String> workspaceName;
+        private IpFirewallRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpFirewallRuleArgs();
         }
 
         public Builder(IpFirewallRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endIpAddress = defaults.endIpAddress;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleName = defaults.ruleName;
-    	      this.startIpAddress = defaults.startIpAddress;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new IpFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endIpAddress(@Nullable Output<String> endIpAddress) {
-            this.endIpAddress = endIpAddress;
+            $.endIpAddress = endIpAddress;
             return this;
         }
-        public Builder endIpAddress(@Nullable String endIpAddress) {
-            this.endIpAddress = Codegen.ofNullable(endIpAddress);
-            return this;
+
+        public Builder endIpAddress(String endIpAddress) {
+            return endIpAddress(Output.of(endIpAddress));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
         }
+
         public Builder startIpAddress(@Nullable Output<String> startIpAddress) {
-            this.startIpAddress = startIpAddress;
+            $.startIpAddress = startIpAddress;
             return this;
         }
-        public Builder startIpAddress(@Nullable String startIpAddress) {
-            this.startIpAddress = Codegen.ofNullable(startIpAddress);
-            return this;
+
+        public Builder startIpAddress(String startIpAddress) {
+            return startIpAddress(Output.of(startIpAddress));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public IpFirewallRuleArgs build() {
-            return new IpFirewallRuleArgs(endIpAddress, resourceGroupName, ruleName, startIpAddress, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public IpFirewallRuleArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

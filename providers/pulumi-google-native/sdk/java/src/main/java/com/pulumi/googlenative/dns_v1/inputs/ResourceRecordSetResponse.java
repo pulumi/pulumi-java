@@ -20,7 +20,7 @@ public final class ResourceRecordSetResponse extends com.pulumi.resources.Invoke
     public static final ResourceRecordSetResponse Empty = new ResourceRecordSetResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -31,7 +31,7 @@ public final class ResourceRecordSetResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -42,7 +42,7 @@ public final class ResourceRecordSetResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="routingPolicy", required=true)
-      private final RRSetRoutingPolicyResponse routingPolicy;
+    private RRSetRoutingPolicyResponse routingPolicy;
 
     public RRSetRoutingPolicyResponse routingPolicy() {
         return this.routingPolicy;
@@ -53,7 +53,7 @@ public final class ResourceRecordSetResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rrdatas", required=true)
-      private final List<String> rrdatas;
+    private List<String> rrdatas;
 
     public List<String> rrdatas() {
         return this.rrdatas;
@@ -64,7 +64,7 @@ public final class ResourceRecordSetResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="signatureRrdatas", required=true)
-      private final List<String> signatureRrdatas;
+    private List<String> signatureRrdatas;
 
     public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
@@ -75,7 +75,7 @@ public final class ResourceRecordSetResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ttl", required=true)
-      private final Integer ttl;
+    private Integer ttl;
 
     public Integer ttl() {
         return this.ttl;
@@ -86,106 +86,95 @@ public final class ResourceRecordSetResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ResourceRecordSetResponse(
-        String kind,
-        String name,
-        RRSetRoutingPolicyResponse routingPolicy,
-        List<String> rrdatas,
-        List<String> signatureRrdatas,
-        Integer ttl,
-        String type) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.routingPolicy = Objects.requireNonNull(routingPolicy, "expected parameter 'routingPolicy' to be non-null");
-        this.rrdatas = Objects.requireNonNull(rrdatas, "expected parameter 'rrdatas' to be non-null");
-        this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas, "expected parameter 'signatureRrdatas' to be non-null");
-        this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ResourceRecordSetResponse() {}
 
-    private ResourceRecordSetResponse() {
-        this.kind = null;
-        this.name = null;
-        this.routingPolicy = null;
-        this.rrdatas = List.of();
-        this.signatureRrdatas = List.of();
-        this.ttl = null;
-        this.type = null;
+    private ResourceRecordSetResponse(ResourceRecordSetResponse $) {
+        this.kind = $.kind;
+        this.name = $.name;
+        this.routingPolicy = $.routingPolicy;
+        this.rrdatas = $.rrdatas;
+        this.signatureRrdatas = $.signatureRrdatas;
+        this.ttl = $.ttl;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRecordSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String name;
-        private RRSetRoutingPolicyResponse routingPolicy;
-        private List<String> rrdatas;
-        private List<String> signatureRrdatas;
-        private Integer ttl;
-        private String type;
+        private ResourceRecordSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRecordSetResponse();
         }
 
         public Builder(ResourceRecordSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.routingPolicy = defaults.routingPolicy;
-    	      this.rrdatas = defaults.rrdatas;
-    	      this.signatureRrdatas = defaults.signatureRrdatas;
-    	      this.ttl = defaults.ttl;
-    	      this.type = defaults.type;
+            $ = new ResourceRecordSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder routingPolicy(RRSetRoutingPolicyResponse routingPolicy) {
-            this.routingPolicy = Objects.requireNonNull(routingPolicy);
+            $.routingPolicy = routingPolicy;
             return this;
         }
+
         public Builder rrdatas(List<String> rrdatas) {
-            this.rrdatas = Objects.requireNonNull(rrdatas);
+            $.rrdatas = rrdatas;
             return this;
         }
+
         public Builder rrdatas(String... rrdatas) {
             return rrdatas(List.of(rrdatas));
         }
+
         public Builder signatureRrdatas(List<String> signatureRrdatas) {
-            this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
+            $.signatureRrdatas = signatureRrdatas;
             return this;
         }
+
         public Builder signatureRrdatas(String... signatureRrdatas) {
             return signatureRrdatas(List.of(signatureRrdatas));
         }
+
         public Builder ttl(Integer ttl) {
-            this.ttl = Objects.requireNonNull(ttl);
+            $.ttl = ttl;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ResourceRecordSetResponse build() {
-            return new ResourceRecordSetResponse(kind, name, routingPolicy, rrdatas, signatureRrdatas, ttl, type);
+        }
+
+        public ResourceRecordSetResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.routingPolicy = Objects.requireNonNull($.routingPolicy, "expected parameter 'routingPolicy' to be non-null");
+            $.rrdatas = Objects.requireNonNull($.rrdatas, "expected parameter 'rrdatas' to be non-null");
+            $.signatureRrdatas = Objects.requireNonNull($.signatureRrdatas, "expected parameter 'signatureRrdatas' to be non-null");
+            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

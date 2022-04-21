@@ -5,9 +5,9 @@ package com.pulumi.azurenative.security.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="binaryName")
-      private final @Nullable Output<String> binaryName;
+    private @Nullable Output<String> binaryName;
 
-    public Output<String> binaryName() {
-        return this.binaryName == null ? Codegen.empty() : this.binaryName;
+    public Optional<Output<String>> binaryName() {
+        return Optional.ofNullable(this.binaryName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="productName")
-      private final @Nullable Output<String> productName;
+    private @Nullable Output<String> productName;
 
-    public Output<String> productName() {
-        return this.productName == null ? Codegen.empty() : this.productName;
+    public Optional<Output<String>> productName() {
+        return Optional.ofNullable(this.productName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publisherName")
-      private final @Nullable Output<String> publisherName;
+    private @Nullable Output<String> publisherName;
 
-    public Output<String> publisherName() {
-        return this.publisherName == null ? Codegen.empty() : this.publisherName;
+    public Optional<Output<String>> publisherName() {
+        return Optional.ofNullable(this.publisherName);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class PublisherInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public PublisherInfoArgs(
-        @Nullable Output<String> binaryName,
-        @Nullable Output<String> productName,
-        @Nullable Output<String> publisherName,
-        @Nullable Output<String> version) {
-        this.binaryName = binaryName;
-        this.productName = productName;
-        this.publisherName = publisherName;
-        this.version = version;
-    }
+    private PublisherInfoArgs() {}
 
-    private PublisherInfoArgs() {
-        this.binaryName = Codegen.empty();
-        this.productName = Codegen.empty();
-        this.publisherName = Codegen.empty();
-        this.version = Codegen.empty();
+    private PublisherInfoArgs(PublisherInfoArgs $) {
+        this.binaryName = $.binaryName;
+        this.productName = $.productName;
+        this.publisherName = $.publisherName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublisherInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> binaryName;
-        private @Nullable Output<String> productName;
-        private @Nullable Output<String> publisherName;
-        private @Nullable Output<String> version;
+        private PublisherInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublisherInfoArgs();
         }
 
         public Builder(PublisherInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.binaryName = defaults.binaryName;
-    	      this.productName = defaults.productName;
-    	      this.publisherName = defaults.publisherName;
-    	      this.version = defaults.version;
+            $ = new PublisherInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder binaryName(@Nullable Output<String> binaryName) {
-            this.binaryName = binaryName;
+            $.binaryName = binaryName;
             return this;
         }
-        public Builder binaryName(@Nullable String binaryName) {
-            this.binaryName = Codegen.ofNullable(binaryName);
-            return this;
+
+        public Builder binaryName(String binaryName) {
+            return binaryName(Output.of(binaryName));
         }
+
         public Builder productName(@Nullable Output<String> productName) {
-            this.productName = productName;
+            $.productName = productName;
             return this;
         }
-        public Builder productName(@Nullable String productName) {
-            this.productName = Codegen.ofNullable(productName);
-            return this;
+
+        public Builder productName(String productName) {
+            return productName(Output.of(productName));
         }
+
         public Builder publisherName(@Nullable Output<String> publisherName) {
-            this.publisherName = publisherName;
+            $.publisherName = publisherName;
             return this;
         }
-        public Builder publisherName(@Nullable String publisherName) {
-            this.publisherName = Codegen.ofNullable(publisherName);
-            return this;
+
+        public Builder publisherName(String publisherName) {
+            return publisherName(Output.of(publisherName));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public PublisherInfoArgs build() {
-            return new PublisherInfoArgs(binaryName, productName, publisherName, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public PublisherInfoArgs build() {
+            return $;
         }
     }
+
 }

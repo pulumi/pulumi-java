@@ -6,10 +6,10 @@ package com.pulumi.awsnative.acmpca.inputs;
 import com.pulumi.awsnative.acmpca.inputs.CertificatePolicyQualifierInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,73 +22,70 @@ public final class CertificatePolicyInformationArgs extends com.pulumi.resources
     public static final CertificatePolicyInformationArgs Empty = new CertificatePolicyInformationArgs();
 
     @Import(name="certPolicyId", required=true)
-      private final Output<String> certPolicyId;
+    private Output<String> certPolicyId;
 
     public Output<String> certPolicyId() {
         return this.certPolicyId;
     }
 
     @Import(name="policyQualifiers")
-      private final @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
+    private @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
 
-    public Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers() {
-        return this.policyQualifiers == null ? Codegen.empty() : this.policyQualifiers;
+    public Optional<Output<List<CertificatePolicyQualifierInfoArgs>>> policyQualifiers() {
+        return Optional.ofNullable(this.policyQualifiers);
     }
 
-    public CertificatePolicyInformationArgs(
-        Output<String> certPolicyId,
-        @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers) {
-        this.certPolicyId = Objects.requireNonNull(certPolicyId, "expected parameter 'certPolicyId' to be non-null");
-        this.policyQualifiers = policyQualifiers;
-    }
+    private CertificatePolicyInformationArgs() {}
 
-    private CertificatePolicyInformationArgs() {
-        this.certPolicyId = Codegen.empty();
-        this.policyQualifiers = Codegen.empty();
+    private CertificatePolicyInformationArgs(CertificatePolicyInformationArgs $) {
+        this.certPolicyId = $.certPolicyId;
+        this.policyQualifiers = $.policyQualifiers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificatePolicyInformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certPolicyId;
-        private @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
+        private CertificatePolicyInformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificatePolicyInformationArgs();
         }
 
         public Builder(CertificatePolicyInformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certPolicyId = defaults.certPolicyId;
-    	      this.policyQualifiers = defaults.policyQualifiers;
+            $ = new CertificatePolicyInformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certPolicyId(Output<String> certPolicyId) {
-            this.certPolicyId = Objects.requireNonNull(certPolicyId);
+            $.certPolicyId = certPolicyId;
             return this;
         }
+
         public Builder certPolicyId(String certPolicyId) {
-            this.certPolicyId = Output.of(Objects.requireNonNull(certPolicyId));
-            return this;
+            return certPolicyId(Output.of(certPolicyId));
         }
+
         public Builder policyQualifiers(@Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers) {
-            this.policyQualifiers = policyQualifiers;
+            $.policyQualifiers = policyQualifiers;
             return this;
         }
-        public Builder policyQualifiers(@Nullable List<CertificatePolicyQualifierInfoArgs> policyQualifiers) {
-            this.policyQualifiers = Codegen.ofNullable(policyQualifiers);
-            return this;
+
+        public Builder policyQualifiers(List<CertificatePolicyQualifierInfoArgs> policyQualifiers) {
+            return policyQualifiers(Output.of(policyQualifiers));
         }
+
         public Builder policyQualifiers(CertificatePolicyQualifierInfoArgs... policyQualifiers) {
             return policyQualifiers(List.of(policyQualifiers));
-        }        public CertificatePolicyInformationArgs build() {
-            return new CertificatePolicyInformationArgs(certPolicyId, policyQualifiers);
+        }
+
+        public CertificatePolicyInformationArgs build() {
+            $.certPolicyId = Objects.requireNonNull($.certPolicyId, "expected parameter 'certPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

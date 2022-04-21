@@ -5,9 +5,9 @@ package com.pulumi.awsnative.robomaker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class RobotApplicationVersionArgs extends com.pulumi.resources.Reso
     public static final RobotApplicationVersionArgs Empty = new RobotApplicationVersionArgs();
 
     @Import(name="application", required=true)
-      private final Output<String> application;
+    private Output<String> application;
 
     public Output<String> application() {
         return this.application;
@@ -27,63 +27,59 @@ public final class RobotApplicationVersionArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="currentRevisionId")
-      private final @Nullable Output<String> currentRevisionId;
+    private @Nullable Output<String> currentRevisionId;
 
-    public Output<String> currentRevisionId() {
-        return this.currentRevisionId == null ? Codegen.empty() : this.currentRevisionId;
+    public Optional<Output<String>> currentRevisionId() {
+        return Optional.ofNullable(this.currentRevisionId);
     }
 
-    public RobotApplicationVersionArgs(
-        Output<String> application,
-        @Nullable Output<String> currentRevisionId) {
-        this.application = Objects.requireNonNull(application, "expected parameter 'application' to be non-null");
-        this.currentRevisionId = currentRevisionId;
-    }
+    private RobotApplicationVersionArgs() {}
 
-    private RobotApplicationVersionArgs() {
-        this.application = Codegen.empty();
-        this.currentRevisionId = Codegen.empty();
+    private RobotApplicationVersionArgs(RobotApplicationVersionArgs $) {
+        this.application = $.application;
+        this.currentRevisionId = $.currentRevisionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RobotApplicationVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> application;
-        private @Nullable Output<String> currentRevisionId;
+        private RobotApplicationVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RobotApplicationVersionArgs();
         }
 
         public Builder(RobotApplicationVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.application = defaults.application;
-    	      this.currentRevisionId = defaults.currentRevisionId;
+            $ = new RobotApplicationVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder application(Output<String> application) {
-            this.application = Objects.requireNonNull(application);
+            $.application = application;
             return this;
         }
+
         public Builder application(String application) {
-            this.application = Output.of(Objects.requireNonNull(application));
-            return this;
+            return application(Output.of(application));
         }
+
         public Builder currentRevisionId(@Nullable Output<String> currentRevisionId) {
-            this.currentRevisionId = currentRevisionId;
+            $.currentRevisionId = currentRevisionId;
             return this;
         }
-        public Builder currentRevisionId(@Nullable String currentRevisionId) {
-            this.currentRevisionId = Codegen.ofNullable(currentRevisionId);
-            return this;
-        }        public RobotApplicationVersionArgs build() {
-            return new RobotApplicationVersionArgs(application, currentRevisionId);
+
+        public Builder currentRevisionId(String currentRevisionId) {
+            return currentRevisionId(Output.of(currentRevisionId));
+        }
+
+        public RobotApplicationVersionArgs build() {
+            $.application = Objects.requireNonNull($.application, "expected parameter 'application' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,10 +24,10 @@ public final class EndpointPropertiesResponseSubnets extends com.pulumi.resource
      * 
      */
     @Import(name="first")
-      private final @Nullable String first;
+    private @Nullable String first;
 
     public Optional<String> first() {
-        return this.first == null ? Optional.empty() : Optional.ofNullable(this.first);
+        return Optional.ofNullable(this.first);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EndpointPropertiesResponseSubnets extends com.pulumi.resource
      * 
      */
     @Import(name="last")
-      private final @Nullable String last;
+    private @Nullable String last;
 
     public Optional<String> last() {
-        return this.last == null ? Optional.empty() : Optional.ofNullable(this.last);
+        return Optional.ofNullable(this.last);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class EndpointPropertiesResponseSubnets extends com.pulumi.resource
      * 
      */
     @Import(name="scope")
-      private final @Nullable Integer scope;
+    private @Nullable Integer scope;
 
     public Optional<Integer> scope() {
-        return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
+        return Optional.ofNullable(this.scope);
     }
 
-    public EndpointPropertiesResponseSubnets(
-        @Nullable String first,
-        @Nullable String last,
-        @Nullable Integer scope) {
-        this.first = first;
-        this.last = last;
-        this.scope = scope;
-    }
+    private EndpointPropertiesResponseSubnets() {}
 
-    private EndpointPropertiesResponseSubnets() {
-        this.first = null;
-        this.last = null;
-        this.scope = null;
+    private EndpointPropertiesResponseSubnets(EndpointPropertiesResponseSubnets $) {
+        this.first = $.first;
+        this.last = $.last;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointPropertiesResponseSubnets defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String first;
-        private @Nullable String last;
-        private @Nullable Integer scope;
+        private EndpointPropertiesResponseSubnets $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointPropertiesResponseSubnets();
         }
 
         public Builder(EndpointPropertiesResponseSubnets defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.first = defaults.first;
-    	      this.last = defaults.last;
-    	      this.scope = defaults.scope;
+            $ = new EndpointPropertiesResponseSubnets(Objects.requireNonNull(defaults));
         }
 
         public Builder first(@Nullable String first) {
-            this.first = first;
+            $.first = first;
             return this;
         }
+
         public Builder last(@Nullable String last) {
-            this.last = last;
+            $.last = last;
             return this;
         }
+
         public Builder scope(@Nullable Integer scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
-        }        public EndpointPropertiesResponseSubnets build() {
-            return new EndpointPropertiesResponseSubnets(first, last, scope);
+        }
+
+        public EndpointPropertiesResponseSubnets build() {
+            return $;
         }
     }
+
 }

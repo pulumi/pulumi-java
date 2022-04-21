@@ -24,10 +24,10 @@ public final class WsdlServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointQualifiedNames")
-      private final @Nullable List<String> endpointQualifiedNames;
+    private @Nullable List<String> endpointQualifiedNames;
 
-    public List<String> endpointQualifiedNames() {
-        return this.endpointQualifiedNames == null ? List.of() : this.endpointQualifiedNames;
+    public Optional<List<String>> endpointQualifiedNames() {
+        return Optional.ofNullable(this.endpointQualifiedNames);
     }
 
     /**
@@ -35,58 +35,54 @@ public final class WsdlServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="qualifiedName")
-      private final @Nullable String qualifiedName;
+    private @Nullable String qualifiedName;
 
     public Optional<String> qualifiedName() {
-        return this.qualifiedName == null ? Optional.empty() : Optional.ofNullable(this.qualifiedName);
+        return Optional.ofNullable(this.qualifiedName);
     }
 
-    public WsdlServiceResponse(
-        @Nullable List<String> endpointQualifiedNames,
-        @Nullable String qualifiedName) {
-        this.endpointQualifiedNames = endpointQualifiedNames;
-        this.qualifiedName = qualifiedName;
-    }
+    private WsdlServiceResponse() {}
 
-    private WsdlServiceResponse() {
-        this.endpointQualifiedNames = List.of();
-        this.qualifiedName = null;
+    private WsdlServiceResponse(WsdlServiceResponse $) {
+        this.endpointQualifiedNames = $.endpointQualifiedNames;
+        this.qualifiedName = $.qualifiedName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WsdlServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> endpointQualifiedNames;
-        private @Nullable String qualifiedName;
+        private WsdlServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WsdlServiceResponse();
         }
 
         public Builder(WsdlServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointQualifiedNames = defaults.endpointQualifiedNames;
-    	      this.qualifiedName = defaults.qualifiedName;
+            $ = new WsdlServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
-            this.endpointQualifiedNames = endpointQualifiedNames;
+            $.endpointQualifiedNames = endpointQualifiedNames;
             return this;
         }
+
         public Builder endpointQualifiedNames(String... endpointQualifiedNames) {
             return endpointQualifiedNames(List.of(endpointQualifiedNames));
         }
+
         public Builder qualifiedName(@Nullable String qualifiedName) {
-            this.qualifiedName = qualifiedName;
+            $.qualifiedName = qualifiedName;
             return this;
-        }        public WsdlServiceResponse build() {
-            return new WsdlServiceResponse(endpointQualifiedNames, qualifiedName);
+        }
+
+        public WsdlServiceResponse build() {
+            return $;
         }
     }
+
 }

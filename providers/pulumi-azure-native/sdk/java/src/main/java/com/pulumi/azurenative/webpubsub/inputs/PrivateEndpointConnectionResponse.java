@@ -26,7 +26,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -37,7 +37,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -48,10 +48,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateEndpoint")
-      private final @Nullable PrivateEndpointResponse privateEndpoint;
+    private @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> privateEndpoint() {
-        return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
+        return Optional.ofNullable(this.privateEndpoint);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="privateLinkServiceConnectionState")
-      private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+    private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
+        return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -81,7 +81,7 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="systemData", required=true)
-      private final SystemDataResponse systemData;
+    private SystemDataResponse systemData;
 
     public SystemDataResponse systemData() {
         return this.systemData;
@@ -92,100 +92,85 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PrivateEndpointConnectionResponse(
-        String id,
-        String name,
-        @Nullable PrivateEndpointResponse privateEndpoint,
-        @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateEndpoint = privateEndpoint;
-        this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.systemData = Objects.requireNonNull(systemData, "expected parameter 'systemData' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PrivateEndpointConnectionResponse() {}
 
-    private PrivateEndpointConnectionResponse() {
-        this.id = null;
-        this.name = null;
-        this.privateEndpoint = null;
-        this.privateLinkServiceConnectionState = null;
-        this.provisioningState = null;
-        this.systemData = null;
-        this.type = null;
+    private PrivateEndpointConnectionResponse(PrivateEndpointConnectionResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.privateEndpoint = $.privateEndpoint;
+        this.privateLinkServiceConnectionState = $.privateLinkServiceConnectionState;
+        this.provisioningState = $.provisioningState;
+        this.systemData = $.systemData;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private @Nullable PrivateEndpointResponse privateEndpoint;
-        private @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
-        private String provisioningState;
-        private SystemDataResponse systemData;
-        private String type;
+        private PrivateEndpointConnectionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionResponse();
         }
 
         public Builder(PrivateEndpointConnectionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateEndpoint = defaults.privateEndpoint;
-    	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.systemData = defaults.systemData;
-    	      this.type = defaults.type;
+            $ = new PrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateEndpoint(@Nullable PrivateEndpointResponse privateEndpoint) {
-            this.privateEndpoint = privateEndpoint;
+            $.privateEndpoint = privateEndpoint;
             return this;
         }
+
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
+            $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder systemData(SystemDataResponse systemData) {
-            this.systemData = Objects.requireNonNull(systemData);
+            $.systemData = systemData;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PrivateEndpointConnectionResponse build() {
-            return new PrivateEndpointConnectionResponse(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
+        }
+
+        public PrivateEndpointConnectionResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.systemData = Objects.requireNonNull($.systemData, "expected parameter 'systemData' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

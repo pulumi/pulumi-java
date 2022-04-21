@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<Either<String,Encoding>> encoding;
+    private @Nullable Output<Either<String,Encoding>> encoding;
 
-    public Output<Either<String,Encoding>> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<Either<String,Encoding>>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<Either<String,JsonOutputSerializationFormat>> format;
+    private @Nullable Output<Either<String,JsonOutputSerializationFormat>> format;
 
-    public Output<Either<String,JsonOutputSerializationFormat>> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<Either<String,JsonOutputSerializationFormat>>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -50,76 +51,69 @@ public final class JsonSerializationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JsonSerializationArgs(
-        @Nullable Output<Either<String,Encoding>> encoding,
-        @Nullable Output<Either<String,JsonOutputSerializationFormat>> format,
-        Output<String> type) {
-        this.encoding = encoding;
-        this.format = format;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private JsonSerializationArgs() {}
 
-    private JsonSerializationArgs() {
-        this.encoding = Codegen.empty();
-        this.format = Codegen.empty();
-        this.type = Codegen.empty();
+    private JsonSerializationArgs(JsonSerializationArgs $) {
+        this.encoding = $.encoding;
+        this.format = $.format;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonSerializationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,Encoding>> encoding;
-        private @Nullable Output<Either<String,JsonOutputSerializationFormat>> format;
-        private Output<String> type;
+        private JsonSerializationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonSerializationArgs();
         }
 
         public Builder(JsonSerializationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.format = defaults.format;
-    	      this.type = defaults.type;
+            $ = new JsonSerializationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable Output<Either<String,Encoding>> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable Either<String,Encoding> encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(Either<String,Encoding> encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder format(@Nullable Output<Either<String,JsonOutputSerializationFormat>> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable Either<String,JsonOutputSerializationFormat> format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(Either<String,JsonOutputSerializationFormat> format) {
+            return format(Output.of(format));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JsonSerializationArgs build() {
-            return new JsonSerializationArgs(encoding, format, type);
+            return type(Output.of(type));
+        }
+
+        public JsonSerializationArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

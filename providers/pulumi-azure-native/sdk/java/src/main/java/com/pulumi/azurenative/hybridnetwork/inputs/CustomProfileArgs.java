@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hybridnetwork.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CustomProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadataConfigurationPath")
-      private final @Nullable Output<String> metadataConfigurationPath;
+    private @Nullable Output<String> metadataConfigurationPath;
 
-    public Output<String> metadataConfigurationPath() {
-        return this.metadataConfigurationPath == null ? Codegen.empty() : this.metadataConfigurationPath;
+    public Optional<Output<String>> metadataConfigurationPath() {
+        return Optional.ofNullable(this.metadataConfigurationPath);
     }
 
-    public CustomProfileArgs(@Nullable Output<String> metadataConfigurationPath) {
-        this.metadataConfigurationPath = metadataConfigurationPath;
-    }
+    private CustomProfileArgs() {}
 
-    private CustomProfileArgs() {
-        this.metadataConfigurationPath = Codegen.empty();
+    private CustomProfileArgs(CustomProfileArgs $) {
+        this.metadataConfigurationPath = $.metadataConfigurationPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> metadataConfigurationPath;
+        private CustomProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomProfileArgs();
         }
 
         public Builder(CustomProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataConfigurationPath = defaults.metadataConfigurationPath;
+            $ = new CustomProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataConfigurationPath(@Nullable Output<String> metadataConfigurationPath) {
-            this.metadataConfigurationPath = metadataConfigurationPath;
+            $.metadataConfigurationPath = metadataConfigurationPath;
             return this;
         }
-        public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
-            this.metadataConfigurationPath = Codegen.ofNullable(metadataConfigurationPath);
-            return this;
-        }        public CustomProfileArgs build() {
-            return new CustomProfileArgs(metadataConfigurationPath);
+
+        public Builder metadataConfigurationPath(String metadataConfigurationPath) {
+            return metadataConfigurationPath(Output.of(metadataConfigurationPath));
+        }
+
+        public CustomProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.globalaccelerator.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AcceleratorIpSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<String>> ipAddresses;
+    private @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<String>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -32,66 +32,62 @@ public final class AcceleratorIpSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipFamily")
-      private final @Nullable Output<String> ipFamily;
+    private @Nullable Output<String> ipFamily;
 
-    public Output<String> ipFamily() {
-        return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
+    public Optional<Output<String>> ipFamily() {
+        return Optional.ofNullable(this.ipFamily);
     }
 
-    public AcceleratorIpSetArgs(
-        @Nullable Output<List<String>> ipAddresses,
-        @Nullable Output<String> ipFamily) {
-        this.ipAddresses = ipAddresses;
-        this.ipFamily = ipFamily;
-    }
+    private AcceleratorIpSetArgs() {}
 
-    private AcceleratorIpSetArgs() {
-        this.ipAddresses = Codegen.empty();
-        this.ipFamily = Codegen.empty();
+    private AcceleratorIpSetArgs(AcceleratorIpSetArgs $) {
+        this.ipAddresses = $.ipAddresses;
+        this.ipFamily = $.ipFamily;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorIpSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> ipAddresses;
-        private @Nullable Output<String> ipFamily;
+        private AcceleratorIpSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorIpSetArgs();
         }
 
         public Builder(AcceleratorIpSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.ipFamily = defaults.ipFamily;
+            $ = new AcceleratorIpSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<String> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder ipFamily(@Nullable Output<String> ipFamily) {
-            this.ipFamily = ipFamily;
+            $.ipFamily = ipFamily;
             return this;
         }
-        public Builder ipFamily(@Nullable String ipFamily) {
-            this.ipFamily = Codegen.ofNullable(ipFamily);
-            return this;
-        }        public AcceleratorIpSetArgs build() {
-            return new AcceleratorIpSetArgs(ipAddresses, ipFamily);
+
+        public Builder ipFamily(String ipFamily) {
+            return ipFamily(Output.of(ipFamily));
+        }
+
+        public AcceleratorIpSetArgs build() {
+            return $;
         }
     }
+
 }

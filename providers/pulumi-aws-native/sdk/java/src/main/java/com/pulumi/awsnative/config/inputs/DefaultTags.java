@@ -24,45 +24,44 @@ public final class DefaultTags extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public DefaultTags(@Nullable Map<String,String> tags) {
-        this.tags = tags;
-    }
+    private DefaultTags() {}
 
-    private DefaultTags() {
-        this.tags = Map.of();
+    private DefaultTags(DefaultTags $) {
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultTags defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> tags;
+        private DefaultTags $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultTags();
         }
 
         public Builder(DefaultTags defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tags = defaults.tags;
+            $ = new DefaultTags(Objects.requireNonNull(defaults));
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public DefaultTags build() {
-            return new DefaultTags(tags);
+        }
+
+        public DefaultTags build() {
+            return $;
         }
     }
+
 }

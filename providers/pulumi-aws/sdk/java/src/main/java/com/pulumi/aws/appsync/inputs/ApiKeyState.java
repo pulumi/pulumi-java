@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +21,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId")
-      private final @Nullable Output<String> apiId;
+    private @Nullable Output<String> apiId;
 
-    public Output<String> apiId() {
-        return this.apiId == null ? Codegen.empty() : this.apiId;
+    public Optional<Output<String>> apiId() {
+        return Optional.ofNullable(this.apiId);
     }
 
     /**
@@ -31,10 +32,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expires")
-      private final @Nullable Output<String> expires;
+    private @Nullable Output<String> expires;
 
-    public Output<String> expires() {
-        return this.expires == null ? Codegen.empty() : this.expires;
+    public Optional<Output<String>> expires() {
+        return Optional.ofNullable(this.expires);
     }
 
     /**
@@ -53,89 +54,79 @@ public final class ApiKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
-    public ApiKeyState(
-        @Nullable Output<String> apiId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> expires,
-        @Nullable Output<String> key) {
-        this.apiId = apiId;
-        this.description = Codegen.stringProp("description").output().arg(description).def("Managed by Pulumi").getNullable();
-        this.expires = expires;
-        this.key = key;
-    }
+    private ApiKeyState() {}
 
-    private ApiKeyState() {
-        this.apiId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.expires = Codegen.empty();
-        this.key = Codegen.empty();
+    private ApiKeyState(ApiKeyState $) {
+        this.apiId = $.apiId;
+        this.description = $.description;
+        this.expires = $.expires;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> expires;
-        private @Nullable Output<String> key;
+        private ApiKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiKeyState();
         }
 
         public Builder(ApiKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.description = defaults.description;
-    	      this.expires = defaults.expires;
-    	      this.key = defaults.key;
+            $ = new ApiKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(@Nullable Output<String> apiId) {
-            this.apiId = apiId;
+            $.apiId = apiId;
             return this;
         }
-        public Builder apiId(@Nullable String apiId) {
-            this.apiId = Codegen.ofNullable(apiId);
-            return this;
+
+        public Builder apiId(String apiId) {
+            return apiId(Output.of(apiId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expires(@Nullable Output<String> expires) {
-            this.expires = expires;
+            $.expires = expires;
             return this;
         }
-        public Builder expires(@Nullable String expires) {
-            this.expires = Codegen.ofNullable(expires);
-            return this;
+
+        public Builder expires(String expires) {
+            return expires(Output.of(expires));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
-        }        public ApiKeyState build() {
-            return new ApiKeyState(apiId, description, expires, key);
+
+        public Builder key(String key) {
+            return key(Output.of(key));
+        }
+
+        public ApiKeyState build() {
+            $.description = Codegen.stringProp("description").output().arg($.description).def("Managed by Pulumi").getNullable();
+            return $;
         }
     }
+
 }

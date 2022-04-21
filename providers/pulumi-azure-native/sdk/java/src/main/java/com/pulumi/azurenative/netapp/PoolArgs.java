@@ -13,6 +13,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -36,10 +37,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="poolName")
-      private final @Nullable Output<String> poolName;
+    private @Nullable Output<String> poolName;
 
-    public Output<String> poolName() {
-        return this.poolName == null ? Codegen.empty() : this.poolName;
+    public Optional<Output<String>> poolName() {
+        return Optional.ofNullable(this.poolName);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="qosType")
-      private final @Nullable Output<Either<String,QosType>> qosType;
+    private @Nullable Output<Either<String,QosType>> qosType;
 
-    public Output<Either<String,QosType>> qosType() {
-        return this.qosType == null ? Codegen.empty() : this.qosType;
+    public Optional<Output<Either<String,QosType>>> qosType() {
+        return Optional.ofNullable(this.qosType);
     }
 
     /**
@@ -69,7 +70,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -80,7 +81,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceLevel", required=true)
-      private final Output<Either<String,ServiceLevel>> serviceLevel;
+    private Output<Either<String,ServiceLevel>> serviceLevel;
 
     public Output<Either<String,ServiceLevel>> serviceLevel() {
         return this.serviceLevel;
@@ -91,7 +92,7 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size", required=true)
-      private final Output<Double> size;
+    private Output<Double> size;
 
     public Output<Double> size() {
         return this.size;
@@ -102,141 +103,123 @@ public final class PoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public PoolArgs(
-        Output<String> accountName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> poolName,
-        @Nullable Output<Either<String,QosType>> qosType,
-        Output<String> resourceGroupName,
-        Output<Either<String,ServiceLevel>> serviceLevel,
-        Output<Double> size,
-        @Nullable Output<Map<String,String>> tags) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.location = location;
-        this.poolName = poolName;
-        this.qosType = Codegen.stringProp("qosType").left(QosType.class).output().arg(qosType).def("Auto").getNullable();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceLevel = Codegen.stringProp("serviceLevel").left(ServiceLevel.class).output().arg(serviceLevel).def("Premium").require();
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-        this.tags = tags;
-    }
+    private PoolArgs() {}
 
-    private PoolArgs() {
-        this.accountName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.poolName = Codegen.empty();
-        this.qosType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.serviceLevel = Codegen.empty();
-        this.size = Codegen.empty();
-        this.tags = Codegen.empty();
+    private PoolArgs(PoolArgs $) {
+        this.accountName = $.accountName;
+        this.location = $.location;
+        this.poolName = $.poolName;
+        this.qosType = $.qosType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceLevel = $.serviceLevel;
+        this.size = $.size;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> poolName;
-        private @Nullable Output<Either<String,QosType>> qosType;
-        private Output<String> resourceGroupName;
-        private Output<Either<String,ServiceLevel>> serviceLevel;
-        private Output<Double> size;
-        private @Nullable Output<Map<String,String>> tags;
+        private PoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PoolArgs();
         }
 
         public Builder(PoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.location = defaults.location;
-    	      this.poolName = defaults.poolName;
-    	      this.qosType = defaults.qosType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceLevel = defaults.serviceLevel;
-    	      this.size = defaults.size;
-    	      this.tags = defaults.tags;
+            $ = new PoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder poolName(@Nullable Output<String> poolName) {
-            this.poolName = poolName;
+            $.poolName = poolName;
             return this;
         }
-        public Builder poolName(@Nullable String poolName) {
-            this.poolName = Codegen.ofNullable(poolName);
-            return this;
+
+        public Builder poolName(String poolName) {
+            return poolName(Output.of(poolName));
         }
+
         public Builder qosType(@Nullable Output<Either<String,QosType>> qosType) {
-            this.qosType = qosType;
+            $.qosType = qosType;
             return this;
         }
-        public Builder qosType(@Nullable Either<String,QosType> qosType) {
-            this.qosType = Codegen.ofNullable(qosType);
-            return this;
+
+        public Builder qosType(Either<String,QosType> qosType) {
+            return qosType(Output.of(qosType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder serviceLevel(Output<Either<String,ServiceLevel>> serviceLevel) {
-            this.serviceLevel = Objects.requireNonNull(serviceLevel);
+            $.serviceLevel = serviceLevel;
             return this;
         }
+
         public Builder serviceLevel(Either<String,ServiceLevel> serviceLevel) {
-            this.serviceLevel = Output.of(Objects.requireNonNull(serviceLevel));
-            return this;
+            return serviceLevel(Output.of(serviceLevel));
         }
+
         public Builder size(Output<Double> size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder size(Double size) {
-            this.size = Output.of(Objects.requireNonNull(size));
-            return this;
+            return size(Output.of(size));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public PoolArgs build() {
-            return new PoolArgs(accountName, location, poolName, qosType, resourceGroupName, serviceLevel, size, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public PoolArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.qosType = Codegen.stringProp("qosType").left(QosType.class).output().arg($.qosType).def("Auto").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceLevel = Codegen.stringProp("serviceLevel").left(ServiceLevel.class).output().arg($.serviceLevel).def("Premium").require();
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            return $;
         }
     }
+
 }

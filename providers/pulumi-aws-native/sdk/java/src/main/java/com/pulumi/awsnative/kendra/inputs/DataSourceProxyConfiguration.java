@@ -16,78 +16,72 @@ public final class DataSourceProxyConfiguration extends com.pulumi.resources.Inv
     public static final DataSourceProxyConfiguration Empty = new DataSourceProxyConfiguration();
 
     @Import(name="credentials")
-      private final @Nullable String credentials;
+    private @Nullable String credentials;
 
     public Optional<String> credentials() {
-        return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
+        return Optional.ofNullable(this.credentials);
     }
 
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
     }
 
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public DataSourceProxyConfiguration(
-        @Nullable String credentials,
-        String host,
-        Integer port) {
-        this.credentials = credentials;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private DataSourceProxyConfiguration() {}
 
-    private DataSourceProxyConfiguration() {
-        this.credentials = null;
-        this.host = null;
-        this.port = null;
+    private DataSourceProxyConfiguration(DataSourceProxyConfiguration $) {
+        this.credentials = $.credentials;
+        this.host = $.host;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceProxyConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String credentials;
-        private String host;
-        private Integer port;
+        private DataSourceProxyConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceProxyConfiguration();
         }
 
         public Builder(DataSourceProxyConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
+            $ = new DataSourceProxyConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable String credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public DataSourceProxyConfiguration build() {
-            return new DataSourceProxyConfiguration(credentials, host, port);
+        }
+
+        public DataSourceProxyConfiguration build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

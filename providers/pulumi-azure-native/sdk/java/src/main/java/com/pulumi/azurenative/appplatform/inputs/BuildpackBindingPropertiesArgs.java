@@ -8,9 +8,9 @@ import com.pulumi.azurenative.appplatform.inputs.BuildpackBindingLaunchPropertie
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BuildpackBindingPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="bindingType")
-      private final @Nullable Output<Either<String,BindingType>> bindingType;
+    private @Nullable Output<Either<String,BindingType>> bindingType;
 
-    public Output<Either<String,BindingType>> bindingType() {
-        return this.bindingType == null ? Codegen.empty() : this.bindingType;
+    public Optional<Output<Either<String,BindingType>>> bindingType() {
+        return Optional.ofNullable(this.bindingType);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class BuildpackBindingPropertiesArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="launchProperties")
-      private final @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties;
+    private @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 
-    public Output<BuildpackBindingLaunchPropertiesArgs> launchProperties() {
-        return this.launchProperties == null ? Codegen.empty() : this.launchProperties;
+    public Optional<Output<BuildpackBindingLaunchPropertiesArgs>> launchProperties() {
+        return Optional.ofNullable(this.launchProperties);
     }
 
-    public BuildpackBindingPropertiesArgs(
-        @Nullable Output<Either<String,BindingType>> bindingType,
-        @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
-        this.bindingType = bindingType;
-        this.launchProperties = launchProperties;
-    }
+    private BuildpackBindingPropertiesArgs() {}
 
-    private BuildpackBindingPropertiesArgs() {
-        this.bindingType = Codegen.empty();
-        this.launchProperties = Codegen.empty();
+    private BuildpackBindingPropertiesArgs(BuildpackBindingPropertiesArgs $) {
+        this.bindingType = $.bindingType;
+        this.launchProperties = $.launchProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildpackBindingPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,BindingType>> bindingType;
-        private @Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties;
+        private BuildpackBindingPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildpackBindingPropertiesArgs();
         }
 
         public Builder(BuildpackBindingPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindingType = defaults.bindingType;
-    	      this.launchProperties = defaults.launchProperties;
+            $ = new BuildpackBindingPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindingType(@Nullable Output<Either<String,BindingType>> bindingType) {
-            this.bindingType = bindingType;
+            $.bindingType = bindingType;
             return this;
         }
-        public Builder bindingType(@Nullable Either<String,BindingType> bindingType) {
-            this.bindingType = Codegen.ofNullable(bindingType);
-            return this;
+
+        public Builder bindingType(Either<String,BindingType> bindingType) {
+            return bindingType(Output.of(bindingType));
         }
+
         public Builder launchProperties(@Nullable Output<BuildpackBindingLaunchPropertiesArgs> launchProperties) {
-            this.launchProperties = launchProperties;
+            $.launchProperties = launchProperties;
             return this;
         }
-        public Builder launchProperties(@Nullable BuildpackBindingLaunchPropertiesArgs launchProperties) {
-            this.launchProperties = Codegen.ofNullable(launchProperties);
-            return this;
-        }        public BuildpackBindingPropertiesArgs build() {
-            return new BuildpackBindingPropertiesArgs(bindingType, launchProperties);
+
+        public Builder launchProperties(BuildpackBindingLaunchPropertiesArgs launchProperties) {
+            return launchProperties(Output.of(launchProperties));
+        }
+
+        public BuildpackBindingPropertiesArgs build() {
+            return $;
         }
     }
+
 }

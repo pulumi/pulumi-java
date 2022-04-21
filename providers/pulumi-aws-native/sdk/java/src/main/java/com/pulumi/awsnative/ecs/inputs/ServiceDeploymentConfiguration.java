@@ -16,78 +16,70 @@ public final class ServiceDeploymentConfiguration extends com.pulumi.resources.I
     public static final ServiceDeploymentConfiguration Empty = new ServiceDeploymentConfiguration();
 
     @Import(name="deploymentCircuitBreaker")
-      private final @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker;
+    private @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker;
 
     public Optional<ServiceDeploymentCircuitBreaker> deploymentCircuitBreaker() {
-        return this.deploymentCircuitBreaker == null ? Optional.empty() : Optional.ofNullable(this.deploymentCircuitBreaker);
+        return Optional.ofNullable(this.deploymentCircuitBreaker);
     }
 
     @Import(name="maximumPercent")
-      private final @Nullable Integer maximumPercent;
+    private @Nullable Integer maximumPercent;
 
     public Optional<Integer> maximumPercent() {
-        return this.maximumPercent == null ? Optional.empty() : Optional.ofNullable(this.maximumPercent);
+        return Optional.ofNullable(this.maximumPercent);
     }
 
     @Import(name="minimumHealthyPercent")
-      private final @Nullable Integer minimumHealthyPercent;
+    private @Nullable Integer minimumHealthyPercent;
 
     public Optional<Integer> minimumHealthyPercent() {
-        return this.minimumHealthyPercent == null ? Optional.empty() : Optional.ofNullable(this.minimumHealthyPercent);
+        return Optional.ofNullable(this.minimumHealthyPercent);
     }
 
-    public ServiceDeploymentConfiguration(
-        @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker,
-        @Nullable Integer maximumPercent,
-        @Nullable Integer minimumHealthyPercent) {
-        this.deploymentCircuitBreaker = deploymentCircuitBreaker;
-        this.maximumPercent = maximumPercent;
-        this.minimumHealthyPercent = minimumHealthyPercent;
-    }
+    private ServiceDeploymentConfiguration() {}
 
-    private ServiceDeploymentConfiguration() {
-        this.deploymentCircuitBreaker = null;
-        this.maximumPercent = null;
-        this.minimumHealthyPercent = null;
+    private ServiceDeploymentConfiguration(ServiceDeploymentConfiguration $) {
+        this.deploymentCircuitBreaker = $.deploymentCircuitBreaker;
+        this.maximumPercent = $.maximumPercent;
+        this.minimumHealthyPercent = $.minimumHealthyPercent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceDeploymentConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker;
-        private @Nullable Integer maximumPercent;
-        private @Nullable Integer minimumHealthyPercent;
+        private ServiceDeploymentConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceDeploymentConfiguration();
         }
 
         public Builder(ServiceDeploymentConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentCircuitBreaker = defaults.deploymentCircuitBreaker;
-    	      this.maximumPercent = defaults.maximumPercent;
-    	      this.minimumHealthyPercent = defaults.minimumHealthyPercent;
+            $ = new ServiceDeploymentConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker) {
-            this.deploymentCircuitBreaker = deploymentCircuitBreaker;
+            $.deploymentCircuitBreaker = deploymentCircuitBreaker;
             return this;
         }
+
         public Builder maximumPercent(@Nullable Integer maximumPercent) {
-            this.maximumPercent = maximumPercent;
+            $.maximumPercent = maximumPercent;
             return this;
         }
+
         public Builder minimumHealthyPercent(@Nullable Integer minimumHealthyPercent) {
-            this.minimumHealthyPercent = minimumHealthyPercent;
+            $.minimumHealthyPercent = minimumHealthyPercent;
             return this;
-        }        public ServiceDeploymentConfiguration build() {
-            return new ServiceDeploymentConfiguration(deploymentCircuitBreaker, maximumPercent, minimumHealthyPercent);
+        }
+
+        public ServiceDeploymentConfiguration build() {
+            return $;
         }
     }
+
 }

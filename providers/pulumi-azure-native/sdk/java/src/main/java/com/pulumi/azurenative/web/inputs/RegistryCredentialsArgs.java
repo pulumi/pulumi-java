@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="passwordSecretRef")
-      private final @Nullable Output<String> passwordSecretRef;
+    private @Nullable Output<String> passwordSecretRef;
 
-    public Output<String> passwordSecretRef() {
-        return this.passwordSecretRef == null ? Codegen.empty() : this.passwordSecretRef;
+    public Optional<Output<String>> passwordSecretRef() {
+        return Optional.ofNullable(this.passwordSecretRef);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="server")
-      private final @Nullable Output<String> server;
+    private @Nullable Output<String> server;
 
-    public Output<String> server() {
-        return this.server == null ? Codegen.empty() : this.server;
+    public Optional<Output<String>> server() {
+        return Optional.ofNullable(this.server);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class RegistryCredentialsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public RegistryCredentialsArgs(
-        @Nullable Output<String> passwordSecretRef,
-        @Nullable Output<String> server,
-        @Nullable Output<String> username) {
-        this.passwordSecretRef = passwordSecretRef;
-        this.server = server;
-        this.username = username;
-    }
+    private RegistryCredentialsArgs() {}
 
-    private RegistryCredentialsArgs() {
-        this.passwordSecretRef = Codegen.empty();
-        this.server = Codegen.empty();
-        this.username = Codegen.empty();
+    private RegistryCredentialsArgs(RegistryCredentialsArgs $) {
+        this.passwordSecretRef = $.passwordSecretRef;
+        this.server = $.server;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> passwordSecretRef;
-        private @Nullable Output<String> server;
-        private @Nullable Output<String> username;
+        private RegistryCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryCredentialsArgs();
         }
 
         public Builder(RegistryCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.passwordSecretRef = defaults.passwordSecretRef;
-    	      this.server = defaults.server;
-    	      this.username = defaults.username;
+            $ = new RegistryCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder passwordSecretRef(@Nullable Output<String> passwordSecretRef) {
-            this.passwordSecretRef = passwordSecretRef;
+            $.passwordSecretRef = passwordSecretRef;
             return this;
         }
-        public Builder passwordSecretRef(@Nullable String passwordSecretRef) {
-            this.passwordSecretRef = Codegen.ofNullable(passwordSecretRef);
-            return this;
+
+        public Builder passwordSecretRef(String passwordSecretRef) {
+            return passwordSecretRef(Output.of(passwordSecretRef));
         }
+
         public Builder server(@Nullable Output<String> server) {
-            this.server = server;
+            $.server = server;
             return this;
         }
-        public Builder server(@Nullable String server) {
-            this.server = Codegen.ofNullable(server);
-            return this;
+
+        public Builder server(String server) {
+            return server(Output.of(server));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public RegistryCredentialsArgs build() {
-            return new RegistryCredentialsArgs(passwordSecretRef, server, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public RegistryCredentialsArgs build() {
+            return $;
         }
     }
+
 }

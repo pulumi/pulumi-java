@@ -17,7 +17,7 @@ public final class GetWorkloadGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetWorkloadGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWorkloadGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -50,73 +50,66 @@ public final class GetWorkloadGroupArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="workloadGroupName", required=true)
-      private final String workloadGroupName;
+    private String workloadGroupName;
 
     public String workloadGroupName() {
         return this.workloadGroupName;
     }
 
-    public GetWorkloadGroupArgs(
-        String databaseName,
-        String resourceGroupName,
-        String serverName,
-        String workloadGroupName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.workloadGroupName = Objects.requireNonNull(workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
-    }
+    private GetWorkloadGroupArgs() {}
 
-    private GetWorkloadGroupArgs() {
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
-        this.workloadGroupName = null;
+    private GetWorkloadGroupArgs(GetWorkloadGroupArgs $) {
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.workloadGroupName = $.workloadGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String resourceGroupName;
-        private String serverName;
-        private String workloadGroupName;
+        private GetWorkloadGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadGroupArgs();
         }
 
         public Builder(GetWorkloadGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.workloadGroupName = defaults.workloadGroupName;
+            $ = new GetWorkloadGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder workloadGroupName(String workloadGroupName) {
-            this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
+            $.workloadGroupName = workloadGroupName;
             return this;
-        }        public GetWorkloadGroupArgs build() {
-            return new GetWorkloadGroupArgs(databaseName, resourceGroupName, serverName, workloadGroupName);
+        }
+
+        public GetWorkloadGroupArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.workloadGroupName = Objects.requireNonNull($.workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
+            return $;
         }
     }
+
 }

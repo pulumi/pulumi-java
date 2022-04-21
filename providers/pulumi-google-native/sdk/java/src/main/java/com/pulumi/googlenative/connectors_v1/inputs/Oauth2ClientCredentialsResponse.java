@@ -22,7 +22,7 @@ public final class Oauth2ClientCredentialsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
@@ -33,55 +33,52 @@ public final class Oauth2ClientCredentialsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="clientSecret", required=true)
-      private final SecretResponse clientSecret;
+    private SecretResponse clientSecret;
 
     public SecretResponse clientSecret() {
         return this.clientSecret;
     }
 
-    public Oauth2ClientCredentialsResponse(
-        String clientId,
-        SecretResponse clientSecret) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
-    }
+    private Oauth2ClientCredentialsResponse() {}
 
-    private Oauth2ClientCredentialsResponse() {
-        this.clientId = null;
-        this.clientSecret = null;
+    private Oauth2ClientCredentialsResponse(Oauth2ClientCredentialsResponse $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Oauth2ClientCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientId;
-        private SecretResponse clientSecret;
+        private Oauth2ClientCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Oauth2ClientCredentialsResponse();
         }
 
         public Builder(Oauth2ClientCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
+            $ = new Oauth2ClientCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(SecretResponse clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            $.clientSecret = clientSecret;
             return this;
-        }        public Oauth2ClientCredentialsResponse build() {
-            return new Oauth2ClientCredentialsResponse(clientId, clientSecret);
+        }
+
+        public Oauth2ClientCredentialsResponse build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
+            return $;
         }
     }
+
 }

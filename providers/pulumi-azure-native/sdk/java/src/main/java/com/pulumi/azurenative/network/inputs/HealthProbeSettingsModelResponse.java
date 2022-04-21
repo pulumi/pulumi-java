@@ -25,10 +25,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
      * 
      */
     @Import(name="enabledState")
-      private final @Nullable String enabledState;
+    private @Nullable String enabledState;
 
     public Optional<String> enabledState() {
-        return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
+        return Optional.ofNullable(this.enabledState);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
      * 
      */
     @Import(name="healthProbeMethod")
-      private final @Nullable String healthProbeMethod;
+    private @Nullable String healthProbeMethod;
 
     public Optional<String> healthProbeMethod() {
-        return this.healthProbeMethod == null ? Optional.empty() : Optional.ofNullable(this.healthProbeMethod);
+        return Optional.ofNullable(this.healthProbeMethod);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
      * 
      */
     @Import(name="intervalInSeconds")
-      private final @Nullable Integer intervalInSeconds;
+    private @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> intervalInSeconds() {
-        return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
+        return Optional.ofNullable(this.intervalInSeconds);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
      * 
      */
     @Import(name="resourceState", required=true)
-      private final String resourceState;
+    private String resourceState;
 
     public String resourceState() {
         return this.resourceState;
@@ -113,118 +113,95 @@ public final class HealthProbeSettingsModelResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public HealthProbeSettingsModelResponse(
-        @Nullable String enabledState,
-        @Nullable String healthProbeMethod,
-        @Nullable String id,
-        @Nullable Integer intervalInSeconds,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable String protocol,
-        String resourceState,
-        String type) {
-        this.enabledState = enabledState;
-        this.healthProbeMethod = Codegen.stringProp("healthProbeMethod").arg(healthProbeMethod).def("HEAD").getNullable();
-        this.id = id;
-        this.intervalInSeconds = intervalInSeconds;
-        this.name = name;
-        this.path = path;
-        this.protocol = protocol;
-        this.resourceState = Objects.requireNonNull(resourceState, "expected parameter 'resourceState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private HealthProbeSettingsModelResponse() {}
 
-    private HealthProbeSettingsModelResponse() {
-        this.enabledState = null;
-        this.healthProbeMethod = null;
-        this.id = null;
-        this.intervalInSeconds = null;
-        this.name = null;
-        this.path = null;
-        this.protocol = null;
-        this.resourceState = null;
-        this.type = null;
+    private HealthProbeSettingsModelResponse(HealthProbeSettingsModelResponse $) {
+        this.enabledState = $.enabledState;
+        this.healthProbeMethod = $.healthProbeMethod;
+        this.id = $.id;
+        this.intervalInSeconds = $.intervalInSeconds;
+        this.name = $.name;
+        this.path = $.path;
+        this.protocol = $.protocol;
+        this.resourceState = $.resourceState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthProbeSettingsModelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String enabledState;
-        private @Nullable String healthProbeMethod;
-        private @Nullable String id;
-        private @Nullable Integer intervalInSeconds;
-        private @Nullable String name;
-        private @Nullable String path;
-        private @Nullable String protocol;
-        private String resourceState;
-        private String type;
+        private HealthProbeSettingsModelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthProbeSettingsModelResponse();
         }
 
         public Builder(HealthProbeSettingsModelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabledState = defaults.enabledState;
-    	      this.healthProbeMethod = defaults.healthProbeMethod;
-    	      this.id = defaults.id;
-    	      this.intervalInSeconds = defaults.intervalInSeconds;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.protocol = defaults.protocol;
-    	      this.resourceState = defaults.resourceState;
-    	      this.type = defaults.type;
+            $ = new HealthProbeSettingsModelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabledState(@Nullable String enabledState) {
-            this.enabledState = enabledState;
+            $.enabledState = enabledState;
             return this;
         }
+
         public Builder healthProbeMethod(@Nullable String healthProbeMethod) {
-            this.healthProbeMethod = healthProbeMethod;
+            $.healthProbeMethod = healthProbeMethod;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = intervalInSeconds;
+            $.intervalInSeconds = intervalInSeconds;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder resourceState(String resourceState) {
-            this.resourceState = Objects.requireNonNull(resourceState);
+            $.resourceState = resourceState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public HealthProbeSettingsModelResponse build() {
-            return new HealthProbeSettingsModelResponse(enabledState, healthProbeMethod, id, intervalInSeconds, name, path, protocol, resourceState, type);
+        }
+
+        public HealthProbeSettingsModelResponse build() {
+            $.healthProbeMethod = Codegen.stringProp("healthProbeMethod").arg($.healthProbeMethod).def("HEAD").getNullable();
+            $.resourceState = Objects.requireNonNull($.resourceState, "expected parameter 'resourceState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

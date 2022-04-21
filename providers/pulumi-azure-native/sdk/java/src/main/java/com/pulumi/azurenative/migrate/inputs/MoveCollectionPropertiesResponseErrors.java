@@ -23,45 +23,44 @@ public final class MoveCollectionPropertiesResponseErrors extends com.pulumi.res
      * 
      */
     @Import(name="properties")
-      private final @Nullable MoveResourceErrorBodyResponse properties;
+    private @Nullable MoveResourceErrorBodyResponse properties;
 
     public Optional<MoveResourceErrorBodyResponse> properties() {
-        return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
+        return Optional.ofNullable(this.properties);
     }
 
-    public MoveCollectionPropertiesResponseErrors(@Nullable MoveResourceErrorBodyResponse properties) {
-        this.properties = properties;
-    }
+    private MoveCollectionPropertiesResponseErrors() {}
 
-    private MoveCollectionPropertiesResponseErrors() {
-        this.properties = null;
+    private MoveCollectionPropertiesResponseErrors(MoveCollectionPropertiesResponseErrors $) {
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveCollectionPropertiesResponseErrors defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MoveResourceErrorBodyResponse properties;
+        private MoveCollectionPropertiesResponseErrors $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveCollectionPropertiesResponseErrors();
         }
 
         public Builder(MoveCollectionPropertiesResponseErrors defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
+            $ = new MoveCollectionPropertiesResponseErrors(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable MoveResourceErrorBodyResponse properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
-        }        public MoveCollectionPropertiesResponseErrors build() {
-            return new MoveCollectionPropertiesResponseErrors(properties);
+        }
+
+        public MoveCollectionPropertiesResponseErrors build() {
+            return $;
         }
     }
+
 }

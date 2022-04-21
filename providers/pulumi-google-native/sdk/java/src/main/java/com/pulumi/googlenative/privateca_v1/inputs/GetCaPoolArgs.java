@@ -15,78 +15,72 @@ public final class GetCaPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCaPoolArgs Empty = new GetCaPoolArgs();
 
     @Import(name="caPoolId", required=true)
-      private final String caPoolId;
+    private String caPoolId;
 
     public String caPoolId() {
         return this.caPoolId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetCaPoolArgs(
-        String caPoolId,
-        String location,
-        @Nullable String project) {
-        this.caPoolId = Objects.requireNonNull(caPoolId, "expected parameter 'caPoolId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetCaPoolArgs() {}
 
-    private GetCaPoolArgs() {
-        this.caPoolId = null;
-        this.location = null;
-        this.project = null;
+    private GetCaPoolArgs(GetCaPoolArgs $) {
+        this.caPoolId = $.caPoolId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCaPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String caPoolId;
-        private String location;
-        private @Nullable String project;
+        private GetCaPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCaPoolArgs();
         }
 
         public Builder(GetCaPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caPoolId = defaults.caPoolId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetCaPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caPoolId(String caPoolId) {
-            this.caPoolId = Objects.requireNonNull(caPoolId);
+            $.caPoolId = caPoolId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetCaPoolArgs build() {
-            return new GetCaPoolArgs(caPoolId, location, project);
+        }
+
+        public GetCaPoolArgs build() {
+            $.caPoolId = Objects.requireNonNull($.caPoolId, "expected parameter 'caPoolId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

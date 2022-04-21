@@ -17,7 +17,7 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="departmentId", required=true)
-      private final String departmentId;
+    private String departmentId;
 
     public String departmentId() {
         return this.departmentId;
@@ -28,55 +28,52 @@ public final class GetReportByDepartmentArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="reportName", required=true)
-      private final String reportName;
+    private String reportName;
 
     public String reportName() {
         return this.reportName;
     }
 
-    public GetReportByDepartmentArgs(
-        String departmentId,
-        String reportName) {
-        this.departmentId = Objects.requireNonNull(departmentId, "expected parameter 'departmentId' to be non-null");
-        this.reportName = Objects.requireNonNull(reportName, "expected parameter 'reportName' to be non-null");
-    }
+    private GetReportByDepartmentArgs() {}
 
-    private GetReportByDepartmentArgs() {
-        this.departmentId = null;
-        this.reportName = null;
+    private GetReportByDepartmentArgs(GetReportByDepartmentArgs $) {
+        this.departmentId = $.departmentId;
+        this.reportName = $.reportName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReportByDepartmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String departmentId;
-        private String reportName;
+        private GetReportByDepartmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReportByDepartmentArgs();
         }
 
         public Builder(GetReportByDepartmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.departmentId = defaults.departmentId;
-    	      this.reportName = defaults.reportName;
+            $ = new GetReportByDepartmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder departmentId(String departmentId) {
-            this.departmentId = Objects.requireNonNull(departmentId);
+            $.departmentId = departmentId;
             return this;
         }
+
         public Builder reportName(String reportName) {
-            this.reportName = Objects.requireNonNull(reportName);
+            $.reportName = reportName;
             return this;
-        }        public GetReportByDepartmentArgs build() {
-            return new GetReportByDepartmentArgs(departmentId, reportName);
+        }
+
+        public GetReportByDepartmentArgs build() {
+            $.departmentId = Objects.requireNonNull($.departmentId, "expected parameter 'departmentId' to be non-null");
+            $.reportName = Objects.requireNonNull($.reportName, "expected parameter 'reportName' to be non-null");
+            return $;
         }
     }
+
 }

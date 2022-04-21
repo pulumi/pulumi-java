@@ -5,12 +5,12 @@ package com.pulumi.googlenative.managedidentities_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.managedidentities_v1alpha1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PeeringIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -34,24 +34,24 @@ public final class PeeringIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="peeringId", required=true)
-      private final Output<String> peeringId;
+    private Output<String> peeringId;
 
     public Output<String> peeringId() {
         return this.peeringId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -59,105 +59,93 @@ public final class PeeringIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public PeeringIamPolicyArgs(
-        @Nullable Output<List<BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        Output<String> peeringId,
-        @Nullable Output<String> project,
-        @Nullable Output<Integer> version) {
-        this.bindings = bindings;
-        this.etag = etag;
-        this.peeringId = Objects.requireNonNull(peeringId, "expected parameter 'peeringId' to be non-null");
-        this.project = project;
-        this.version = version;
-    }
+    private PeeringIamPolicyArgs() {}
 
-    private PeeringIamPolicyArgs() {
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.peeringId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.version = Codegen.empty();
+    private PeeringIamPolicyArgs(PeeringIamPolicyArgs $) {
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.peeringId = $.peeringId;
+        this.project = $.project;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeeringIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private Output<String> peeringId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Integer> version;
+        private PeeringIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeeringIamPolicyArgs();
         }
 
         public Builder(PeeringIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.peeringId = defaults.peeringId;
-    	      this.project = defaults.project;
-    	      this.version = defaults.version;
+            $ = new PeeringIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder peeringId(Output<String> peeringId) {
-            this.peeringId = Objects.requireNonNull(peeringId);
+            $.peeringId = peeringId;
             return this;
         }
+
         public Builder peeringId(String peeringId) {
-            this.peeringId = Output.of(Objects.requireNonNull(peeringId));
-            return this;
+            return peeringId(Output.of(peeringId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public PeeringIamPolicyArgs build() {
-            return new PeeringIamPolicyArgs(bindings, etag, peeringId, project, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public PeeringIamPolicyArgs build() {
+            $.peeringId = Objects.requireNonNull($.peeringId, "expected parameter 'peeringId' to be non-null");
+            return $;
         }
     }
+
 }

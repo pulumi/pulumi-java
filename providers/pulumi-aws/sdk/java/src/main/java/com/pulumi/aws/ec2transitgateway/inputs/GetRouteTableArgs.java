@@ -22,10 +22,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetRouteTableFilter> filters;
+    private @Nullable List<GetRouteTableFilter> filters;
 
-    public List<GetRouteTableFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetRouteTableFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -44,67 +44,60 @@ public final class GetRouteTableArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetRouteTableArgs(
-        @Nullable List<GetRouteTableFilter> filters,
-        @Nullable String id,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.id = id;
-        this.tags = tags;
-    }
+    private GetRouteTableArgs() {}
 
-    private GetRouteTableArgs() {
-        this.filters = List.of();
-        this.id = null;
-        this.tags = Map.of();
+    private GetRouteTableArgs(GetRouteTableArgs $) {
+        this.filters = $.filters;
+        this.id = $.id;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetRouteTableFilter> filters;
-        private @Nullable String id;
-        private @Nullable Map<String,String> tags;
+        private GetRouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteTableArgs();
         }
 
         public Builder(GetRouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.tags = defaults.tags;
+            $ = new GetRouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetRouteTableFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetRouteTableArgs build() {
-            return new GetRouteTableArgs(filters, id, tags);
+        }
+
+        public GetRouteTableArgs build() {
+            return $;
         }
     }
+
 }

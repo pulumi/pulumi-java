@@ -20,7 +20,7 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -31,10 +31,10 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retryAttempt")
-      private final @Nullable Integer retryAttempt;
+    private @Nullable Integer retryAttempt;
 
     public Optional<Integer> retryAttempt() {
-        return this.retryAttempt == null ? Optional.empty() : Optional.ofNullable(this.retryAttempt);
+        return Optional.ofNullable(this.retryAttempt);
     }
 
     /**
@@ -42,64 +42,58 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rolloutName", required=true)
-      private final String rolloutName;
+    private String rolloutName;
 
     public String rolloutName() {
         return this.rolloutName;
     }
 
-    public GetRolloutArgs(
-        String resourceGroupName,
-        @Nullable Integer retryAttempt,
-        String rolloutName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.retryAttempt = retryAttempt;
-        this.rolloutName = Objects.requireNonNull(rolloutName, "expected parameter 'rolloutName' to be non-null");
-    }
+    private GetRolloutArgs() {}
 
-    private GetRolloutArgs() {
-        this.resourceGroupName = null;
-        this.retryAttempt = null;
-        this.rolloutName = null;
+    private GetRolloutArgs(GetRolloutArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.retryAttempt = $.retryAttempt;
+        this.rolloutName = $.rolloutName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private @Nullable Integer retryAttempt;
-        private String rolloutName;
+        private GetRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRolloutArgs();
         }
 
         public Builder(GetRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.retryAttempt = defaults.retryAttempt;
-    	      this.rolloutName = defaults.rolloutName;
+            $ = new GetRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder retryAttempt(@Nullable Integer retryAttempt) {
-            this.retryAttempt = retryAttempt;
+            $.retryAttempt = retryAttempt;
             return this;
         }
+
         public Builder rolloutName(String rolloutName) {
-            this.rolloutName = Objects.requireNonNull(rolloutName);
+            $.rolloutName = rolloutName;
             return this;
-        }        public GetRolloutArgs build() {
-            return new GetRolloutArgs(resourceGroupName, retryAttempt, rolloutName);
+        }
+
+        public GetRolloutArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.rolloutName = Objects.requireNonNull($.rolloutName, "expected parameter 'rolloutName' to be non-null");
+            return $;
         }
     }
+
 }

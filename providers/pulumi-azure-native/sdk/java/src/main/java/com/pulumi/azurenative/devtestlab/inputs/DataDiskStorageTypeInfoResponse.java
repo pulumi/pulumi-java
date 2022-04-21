@@ -23,10 +23,10 @@ public final class DataDiskStorageTypeInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="lun")
-      private final @Nullable String lun;
+    private @Nullable String lun;
 
     public Optional<String> lun() {
-        return this.lun == null ? Optional.empty() : Optional.ofNullable(this.lun);
+        return Optional.ofNullable(this.lun);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class DataDiskStorageTypeInfoResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="storageType")
-      private final @Nullable String storageType;
+    private @Nullable String storageType;
 
     public Optional<String> storageType() {
-        return this.storageType == null ? Optional.empty() : Optional.ofNullable(this.storageType);
+        return Optional.ofNullable(this.storageType);
     }
 
-    public DataDiskStorageTypeInfoResponse(
-        @Nullable String lun,
-        @Nullable String storageType) {
-        this.lun = lun;
-        this.storageType = storageType;
-    }
+    private DataDiskStorageTypeInfoResponse() {}
 
-    private DataDiskStorageTypeInfoResponse() {
-        this.lun = null;
-        this.storageType = null;
+    private DataDiskStorageTypeInfoResponse(DataDiskStorageTypeInfoResponse $) {
+        this.lun = $.lun;
+        this.storageType = $.storageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskStorageTypeInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String lun;
-        private @Nullable String storageType;
+        private DataDiskStorageTypeInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskStorageTypeInfoResponse();
         }
 
         public Builder(DataDiskStorageTypeInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lun = defaults.lun;
-    	      this.storageType = defaults.storageType;
+            $ = new DataDiskStorageTypeInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lun(@Nullable String lun) {
-            this.lun = lun;
+            $.lun = lun;
             return this;
         }
+
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = storageType;
+            $.storageType = storageType;
             return this;
-        }        public DataDiskStorageTypeInfoResponse build() {
-            return new DataDiskStorageTypeInfoResponse(lun, storageType);
+        }
+
+        public DataDiskStorageTypeInfoResponse build() {
+            return $;
         }
     }
+
 }

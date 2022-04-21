@@ -5,10 +5,10 @@ package com.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.ValidationCAArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class MTLSPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientValidationCa")
-      private final @Nullable Output<List<ValidationCAArgs>> clientValidationCa;
+    private @Nullable Output<List<ValidationCAArgs>> clientValidationCa;
 
-    public Output<List<ValidationCAArgs>> clientValidationCa() {
-        return this.clientValidationCa == null ? Codegen.empty() : this.clientValidationCa;
+    public Optional<Output<List<ValidationCAArgs>>> clientValidationCa() {
+        return Optional.ofNullable(this.clientValidationCa);
     }
 
-    public MTLSPolicyArgs(@Nullable Output<List<ValidationCAArgs>> clientValidationCa) {
-        this.clientValidationCa = clientValidationCa;
-    }
+    private MTLSPolicyArgs() {}
 
-    private MTLSPolicyArgs() {
-        this.clientValidationCa = Codegen.empty();
+    private MTLSPolicyArgs(MTLSPolicyArgs $) {
+        this.clientValidationCa = $.clientValidationCa;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MTLSPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ValidationCAArgs>> clientValidationCa;
+        private MTLSPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MTLSPolicyArgs();
         }
 
         public Builder(MTLSPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientValidationCa = defaults.clientValidationCa;
+            $ = new MTLSPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientValidationCa(@Nullable Output<List<ValidationCAArgs>> clientValidationCa) {
-            this.clientValidationCa = clientValidationCa;
+            $.clientValidationCa = clientValidationCa;
             return this;
         }
-        public Builder clientValidationCa(@Nullable List<ValidationCAArgs> clientValidationCa) {
-            this.clientValidationCa = Codegen.ofNullable(clientValidationCa);
-            return this;
+
+        public Builder clientValidationCa(List<ValidationCAArgs> clientValidationCa) {
+            return clientValidationCa(Output.of(clientValidationCa));
         }
+
         public Builder clientValidationCa(ValidationCAArgs... clientValidationCa) {
             return clientValidationCa(List.of(clientValidationCa));
-        }        public MTLSPolicyArgs build() {
-            return new MTLSPolicyArgs(clientValidationCa);
+        }
+
+        public MTLSPolicyArgs build() {
+            return $;
         }
     }
+
 }

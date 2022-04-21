@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class FirewallPolicyAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="attachmentTarget", required=true)
-      private final Output<String> attachmentTarget;
+    private Output<String> attachmentTarget;
 
     public Output<String> attachmentTarget() {
         return this.attachmentTarget;
@@ -31,7 +31,7 @@ public final class FirewallPolicyAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="firewallPolicy", required=true)
-      private final Output<String> firewallPolicy;
+    private Output<String> firewallPolicy;
 
     public Output<String> firewallPolicy() {
         return this.firewallPolicy;
@@ -42,76 +42,70 @@ public final class FirewallPolicyAssociationArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public FirewallPolicyAssociationArgs(
-        Output<String> attachmentTarget,
-        Output<String> firewallPolicy,
-        @Nullable Output<String> name) {
-        this.attachmentTarget = Objects.requireNonNull(attachmentTarget, "expected parameter 'attachmentTarget' to be non-null");
-        this.firewallPolicy = Objects.requireNonNull(firewallPolicy, "expected parameter 'firewallPolicy' to be non-null");
-        this.name = name;
-    }
+    private FirewallPolicyAssociationArgs() {}
 
-    private FirewallPolicyAssociationArgs() {
-        this.attachmentTarget = Codegen.empty();
-        this.firewallPolicy = Codegen.empty();
-        this.name = Codegen.empty();
+    private FirewallPolicyAssociationArgs(FirewallPolicyAssociationArgs $) {
+        this.attachmentTarget = $.attachmentTarget;
+        this.firewallPolicy = $.firewallPolicy;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attachmentTarget;
-        private Output<String> firewallPolicy;
-        private @Nullable Output<String> name;
+        private FirewallPolicyAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyAssociationArgs();
         }
 
         public Builder(FirewallPolicyAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentTarget = defaults.attachmentTarget;
-    	      this.firewallPolicy = defaults.firewallPolicy;
-    	      this.name = defaults.name;
+            $ = new FirewallPolicyAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentTarget(Output<String> attachmentTarget) {
-            this.attachmentTarget = Objects.requireNonNull(attachmentTarget);
+            $.attachmentTarget = attachmentTarget;
             return this;
         }
+
         public Builder attachmentTarget(String attachmentTarget) {
-            this.attachmentTarget = Output.of(Objects.requireNonNull(attachmentTarget));
-            return this;
+            return attachmentTarget(Output.of(attachmentTarget));
         }
+
         public Builder firewallPolicy(Output<String> firewallPolicy) {
-            this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
+            $.firewallPolicy = firewallPolicy;
             return this;
         }
+
         public Builder firewallPolicy(String firewallPolicy) {
-            this.firewallPolicy = Output.of(Objects.requireNonNull(firewallPolicy));
-            return this;
+            return firewallPolicy(Output.of(firewallPolicy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public FirewallPolicyAssociationArgs build() {
-            return new FirewallPolicyAssociationArgs(attachmentTarget, firewallPolicy, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public FirewallPolicyAssociationArgs build() {
+            $.attachmentTarget = Objects.requireNonNull($.attachmentTarget, "expected parameter 'attachmentTarget' to be non-null");
+            $.firewallPolicy = Objects.requireNonNull($.firewallPolicy, "expected parameter 'firewallPolicy' to be non-null");
+            return $;
         }
     }
+
 }

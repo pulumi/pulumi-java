@@ -17,7 +17,7 @@ public final class GetVirtualNetworkTapArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVirtualNetworkTapArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tapName", required=true)
-      private final String tapName;
+    private String tapName;
 
     public String tapName() {
         return this.tapName;
     }
 
-    public GetVirtualNetworkTapArgs(
-        String resourceGroupName,
-        String tapName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tapName = Objects.requireNonNull(tapName, "expected parameter 'tapName' to be non-null");
-    }
+    private GetVirtualNetworkTapArgs() {}
 
-    private GetVirtualNetworkTapArgs() {
-        this.resourceGroupName = null;
-        this.tapName = null;
+    private GetVirtualNetworkTapArgs(GetVirtualNetworkTapArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.tapName = $.tapName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkTapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String tapName;
+        private GetVirtualNetworkTapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkTapArgs();
         }
 
         public Builder(GetVirtualNetworkTapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tapName = defaults.tapName;
+            $ = new GetVirtualNetworkTapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder tapName(String tapName) {
-            this.tapName = Objects.requireNonNull(tapName);
+            $.tapName = tapName;
             return this;
-        }        public GetVirtualNetworkTapArgs build() {
-            return new GetVirtualNetworkTapArgs(resourceGroupName, tapName);
+        }
+
+        public GetVirtualNetworkTapArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.tapName = Objects.requireNonNull($.tapName, "expected parameter 'tapName' to be non-null");
+            return $;
         }
     }
+
 }

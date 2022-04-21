@@ -15,62 +15,58 @@ public final class GetTargetHttpProxyArgs extends com.pulumi.resources.InvokeArg
     public static final GetTargetHttpProxyArgs Empty = new GetTargetHttpProxyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="targetHttpProxy", required=true)
-      private final String targetHttpProxy;
+    private String targetHttpProxy;
 
     public String targetHttpProxy() {
         return this.targetHttpProxy;
     }
 
-    public GetTargetHttpProxyArgs(
-        @Nullable String project,
-        String targetHttpProxy) {
-        this.project = project;
-        this.targetHttpProxy = Objects.requireNonNull(targetHttpProxy, "expected parameter 'targetHttpProxy' to be non-null");
-    }
+    private GetTargetHttpProxyArgs() {}
 
-    private GetTargetHttpProxyArgs() {
-        this.project = null;
-        this.targetHttpProxy = null;
+    private GetTargetHttpProxyArgs(GetTargetHttpProxyArgs $) {
+        this.project = $.project;
+        this.targetHttpProxy = $.targetHttpProxy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetHttpProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String targetHttpProxy;
+        private GetTargetHttpProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetHttpProxyArgs();
         }
 
         public Builder(GetTargetHttpProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.targetHttpProxy = defaults.targetHttpProxy;
+            $ = new GetTargetHttpProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder targetHttpProxy(String targetHttpProxy) {
-            this.targetHttpProxy = Objects.requireNonNull(targetHttpProxy);
+            $.targetHttpProxy = targetHttpProxy;
             return this;
-        }        public GetTargetHttpProxyArgs build() {
-            return new GetTargetHttpProxyArgs(project, targetHttpProxy);
+        }
+
+        public GetTargetHttpProxyArgs build() {
+            $.targetHttpProxy = Objects.requireNonNull($.targetHttpProxy, "expected parameter 'targetHttpProxy' to be non-null");
+            return $;
         }
     }
+
 }

@@ -12,6 +12,7 @@ import com.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs.SubjectAr
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class RoleBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class RoleBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class RoleBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -61,7 +62,7 @@ public final class RoleBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleRef", required=true)
-      private final Output<RoleRefArgs> roleRef;
+    private Output<RoleRefArgs> roleRef;
 
     public Output<RoleRefArgs> roleRef() {
         return this.roleRef;
@@ -72,105 +73,95 @@ public final class RoleBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subjects")
-      private final @Nullable Output<List<SubjectArgs>> subjects;
+    private @Nullable Output<List<SubjectArgs>> subjects;
 
-    public Output<List<SubjectArgs>> subjects() {
-        return this.subjects == null ? Codegen.empty() : this.subjects;
+    public Optional<Output<List<SubjectArgs>>> subjects() {
+        return Optional.ofNullable(this.subjects);
     }
 
-    public RoleBindingArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> kind,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        Output<RoleRefArgs> roleRef,
-        @Nullable Output<List<SubjectArgs>> subjects) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-        this.roleRef = Objects.requireNonNull(roleRef, "expected parameter 'roleRef' to be non-null");
-        this.subjects = subjects;
-    }
+    private RoleBindingArgs() {}
 
-    private RoleBindingArgs() {
-        this.apiVersion = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.roleRef = Codegen.empty();
-        this.subjects = Codegen.empty();
+    private RoleBindingArgs(RoleBindingArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
+        this.roleRef = $.roleRef;
+        this.subjects = $.subjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private Output<RoleRefArgs> roleRef;
-        private @Nullable Output<List<SubjectArgs>> subjects;
+        private RoleBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleBindingArgs();
         }
 
         public Builder(RoleBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
-    	      this.roleRef = defaults.roleRef;
-    	      this.subjects = defaults.subjects;
+            $ = new RoleBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder roleRef(Output<RoleRefArgs> roleRef) {
-            this.roleRef = Objects.requireNonNull(roleRef);
+            $.roleRef = roleRef;
             return this;
         }
+
         public Builder roleRef(RoleRefArgs roleRef) {
-            this.roleRef = Output.of(Objects.requireNonNull(roleRef));
-            return this;
+            return roleRef(Output.of(roleRef));
         }
+
         public Builder subjects(@Nullable Output<List<SubjectArgs>> subjects) {
-            this.subjects = subjects;
+            $.subjects = subjects;
             return this;
         }
-        public Builder subjects(@Nullable List<SubjectArgs> subjects) {
-            this.subjects = Codegen.ofNullable(subjects);
-            return this;
+
+        public Builder subjects(List<SubjectArgs> subjects) {
+            return subjects(Output.of(subjects));
         }
+
         public Builder subjects(SubjectArgs... subjects) {
             return subjects(List.of(subjects));
-        }        public RoleBindingArgs build() {
-            return new RoleBindingArgs(apiVersion, kind, metadata, roleRef, subjects);
+        }
+
+        public RoleBindingArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            $.roleRef = Objects.requireNonNull($.roleRef, "expected parameter 'roleRef' to be non-null");
+            return $;
         }
     }
+
 }

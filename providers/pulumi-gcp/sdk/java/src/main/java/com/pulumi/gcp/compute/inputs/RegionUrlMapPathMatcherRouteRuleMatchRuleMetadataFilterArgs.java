@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +23,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs e
      * 
      */
     @Import(name="filterLabels", required=true)
-      private final Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels;
+    private Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels;
 
     public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels() {
         return this.filterLabels;
@@ -41,66 +40,64 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs e
      * 
      */
     @Import(name="filterMatchCriteria", required=true)
-      private final Output<String> filterMatchCriteria;
+    private Output<String> filterMatchCriteria;
 
     public Output<String> filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
 
-    public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs(
-        Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels,
-        Output<String> filterMatchCriteria) {
-        this.filterLabels = Objects.requireNonNull(filterLabels, "expected parameter 'filterLabels' to be non-null");
-        this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria, "expected parameter 'filterMatchCriteria' to be non-null");
-    }
+    private RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs() {}
 
-    private RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs() {
-        this.filterLabels = Codegen.empty();
-        this.filterMatchCriteria = Codegen.empty();
+    private RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs $) {
+        this.filterLabels = $.filterLabels;
+        this.filterMatchCriteria = $.filterMatchCriteria;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels;
-        private Output<String> filterMatchCriteria;
+        private RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs();
         }
 
         public Builder(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterLabels = defaults.filterLabels;
-    	      this.filterMatchCriteria = defaults.filterMatchCriteria;
+            $ = new RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterLabels(Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs>> filterLabels) {
-            this.filterLabels = Objects.requireNonNull(filterLabels);
+            $.filterLabels = filterLabels;
             return this;
         }
+
         public Builder filterLabels(List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs> filterLabels) {
-            this.filterLabels = Output.of(Objects.requireNonNull(filterLabels));
-            return this;
+            return filterLabels(Output.of(filterLabels));
         }
+
         public Builder filterLabels(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs... filterLabels) {
             return filterLabels(List.of(filterLabels));
         }
+
         public Builder filterMatchCriteria(Output<String> filterMatchCriteria) {
-            this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
+            $.filterMatchCriteria = filterMatchCriteria;
             return this;
         }
+
         public Builder filterMatchCriteria(String filterMatchCriteria) {
-            this.filterMatchCriteria = Output.of(Objects.requireNonNull(filterMatchCriteria));
-            return this;
-        }        public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs build() {
-            return new RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs(filterLabels, filterMatchCriteria);
+            return filterMatchCriteria(Output.of(filterMatchCriteria));
+        }
+
+        public RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs build() {
+            $.filterLabels = Objects.requireNonNull($.filterLabels, "expected parameter 'filterLabels' to be non-null");
+            $.filterMatchCriteria = Objects.requireNonNull($.filterMatchCriteria, "expected parameter 'filterMatchCriteria' to be non-null");
+            return $;
         }
     }
+
 }

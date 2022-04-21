@@ -5,9 +5,9 @@ package com.pulumi.azurenative.synapse;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="administratorType")
-      private final @Nullable Output<String> administratorType;
+    private @Nullable Output<String> administratorType;
 
-    public Output<String> administratorType() {
-        return this.administratorType == null ? Codegen.empty() : this.administratorType;
+    public Optional<Output<String>> administratorType() {
+        return Optional.ofNullable(this.administratorType);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<String> login;
+    private @Nullable Output<String> login;
 
-    public Output<String> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<String>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,10 +53,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sid")
-      private final @Nullable Output<String> sid;
+    private @Nullable Output<String> sid;
 
-    public Output<String> sid() {
-        return this.sid == null ? Codegen.empty() : this.sid;
+    public Optional<Output<String>> sid() {
+        return Optional.ofNullable(this.sid);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable Output<String> tenantId;
+    private @Nullable Output<String> tenantId;
 
-    public Output<String> tenantId() {
-        return this.tenantId == null ? Codegen.empty() : this.tenantId;
+    public Optional<Output<String>> tenantId() {
+        return Optional.ofNullable(this.tenantId);
     }
 
     /**
@@ -75,115 +75,100 @@ public final class WorkspaceAadAdminArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public WorkspaceAadAdminArgs(
-        @Nullable Output<String> administratorType,
-        @Nullable Output<String> login,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> sid,
-        @Nullable Output<String> tenantId,
-        Output<String> workspaceName) {
-        this.administratorType = administratorType;
-        this.login = login;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sid = sid;
-        this.tenantId = tenantId;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private WorkspaceAadAdminArgs() {}
 
-    private WorkspaceAadAdminArgs() {
-        this.administratorType = Codegen.empty();
-        this.login = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sid = Codegen.empty();
-        this.tenantId = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private WorkspaceAadAdminArgs(WorkspaceAadAdminArgs $) {
+        this.administratorType = $.administratorType;
+        this.login = $.login;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sid = $.sid;
+        this.tenantId = $.tenantId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceAadAdminArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> administratorType;
-        private @Nullable Output<String> login;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> sid;
-        private @Nullable Output<String> tenantId;
-        private Output<String> workspaceName;
+        private WorkspaceAadAdminArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceAadAdminArgs();
         }
 
         public Builder(WorkspaceAadAdminArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorType = defaults.administratorType;
-    	      this.login = defaults.login;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sid = defaults.sid;
-    	      this.tenantId = defaults.tenantId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new WorkspaceAadAdminArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorType(@Nullable Output<String> administratorType) {
-            this.administratorType = administratorType;
+            $.administratorType = administratorType;
             return this;
         }
-        public Builder administratorType(@Nullable String administratorType) {
-            this.administratorType = Codegen.ofNullable(administratorType);
-            return this;
+
+        public Builder administratorType(String administratorType) {
+            return administratorType(Output.of(administratorType));
         }
+
         public Builder login(@Nullable Output<String> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable String login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(String login) {
+            return login(Output.of(login));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sid(@Nullable Output<String> sid) {
-            this.sid = sid;
+            $.sid = sid;
             return this;
         }
-        public Builder sid(@Nullable String sid) {
-            this.sid = Codegen.ofNullable(sid);
-            return this;
+
+        public Builder sid(String sid) {
+            return sid(Output.of(sid));
         }
+
         public Builder tenantId(@Nullable Output<String> tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
         }
-        public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Codegen.ofNullable(tenantId);
-            return this;
+
+        public Builder tenantId(String tenantId) {
+            return tenantId(Output.of(tenantId));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public WorkspaceAadAdminArgs build() {
-            return new WorkspaceAadAdminArgs(administratorType, login, resourceGroupName, sid, tenantId, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public WorkspaceAadAdminArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

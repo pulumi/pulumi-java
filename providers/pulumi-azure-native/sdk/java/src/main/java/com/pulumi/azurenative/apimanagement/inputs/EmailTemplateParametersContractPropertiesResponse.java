@@ -23,10 +23,10 @@ public final class EmailTemplateParametersContractPropertiesResponse extends com
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EmailTemplateParametersContractPropertiesResponse extends com
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class EmailTemplateParametersContractPropertiesResponse extends com
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
-    public EmailTemplateParametersContractPropertiesResponse(
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable String title) {
-        this.description = description;
-        this.name = name;
-        this.title = title;
-    }
+    private EmailTemplateParametersContractPropertiesResponse() {}
 
-    private EmailTemplateParametersContractPropertiesResponse() {
-        this.description = null;
-        this.name = null;
-        this.title = null;
+    private EmailTemplateParametersContractPropertiesResponse(EmailTemplateParametersContractPropertiesResponse $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailTemplateParametersContractPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String name;
-        private @Nullable String title;
+        private EmailTemplateParametersContractPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailTemplateParametersContractPropertiesResponse();
         }
 
         public Builder(EmailTemplateParametersContractPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.title = defaults.title;
+            $ = new EmailTemplateParametersContractPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
-        }        public EmailTemplateParametersContractPropertiesResponse build() {
-            return new EmailTemplateParametersContractPropertiesResponse(description, name, title);
+        }
+
+        public EmailTemplateParametersContractPropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.azurenative.managedservices.inputs;
 import com.pulumi.azurenative.managedservices.inputs.AuthorizationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="authorizations", required=true)
-      private final Output<List<AuthorizationArgs>> authorizations;
+    private Output<List<AuthorizationArgs>> authorizations;
 
     public Output<List<AuthorizationArgs>> authorizations() {
         return this.authorizations;
@@ -37,10 +37,10 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="managedByTenantId", required=true)
-      private final Output<String> managedByTenantId;
+    private Output<String> managedByTenantId;
 
     public Output<String> managedByTenantId() {
         return this.managedByTenantId;
@@ -59,92 +59,84 @@ public final class RegistrationDefinitionPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="registrationDefinitionName")
-      private final @Nullable Output<String> registrationDefinitionName;
+    private @Nullable Output<String> registrationDefinitionName;
 
-    public Output<String> registrationDefinitionName() {
-        return this.registrationDefinitionName == null ? Codegen.empty() : this.registrationDefinitionName;
+    public Optional<Output<String>> registrationDefinitionName() {
+        return Optional.ofNullable(this.registrationDefinitionName);
     }
 
-    public RegistrationDefinitionPropertiesArgs(
-        Output<List<AuthorizationArgs>> authorizations,
-        @Nullable Output<String> description,
-        Output<String> managedByTenantId,
-        @Nullable Output<String> registrationDefinitionName) {
-        this.authorizations = Objects.requireNonNull(authorizations, "expected parameter 'authorizations' to be non-null");
-        this.description = description;
-        this.managedByTenantId = Objects.requireNonNull(managedByTenantId, "expected parameter 'managedByTenantId' to be non-null");
-        this.registrationDefinitionName = registrationDefinitionName;
-    }
+    private RegistrationDefinitionPropertiesArgs() {}
 
-    private RegistrationDefinitionPropertiesArgs() {
-        this.authorizations = Codegen.empty();
-        this.description = Codegen.empty();
-        this.managedByTenantId = Codegen.empty();
-        this.registrationDefinitionName = Codegen.empty();
+    private RegistrationDefinitionPropertiesArgs(RegistrationDefinitionPropertiesArgs $) {
+        this.authorizations = $.authorizations;
+        this.description = $.description;
+        this.managedByTenantId = $.managedByTenantId;
+        this.registrationDefinitionName = $.registrationDefinitionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationDefinitionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AuthorizationArgs>> authorizations;
-        private @Nullable Output<String> description;
-        private Output<String> managedByTenantId;
-        private @Nullable Output<String> registrationDefinitionName;
+        private RegistrationDefinitionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationDefinitionPropertiesArgs();
         }
 
         public Builder(RegistrationDefinitionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizations = defaults.authorizations;
-    	      this.description = defaults.description;
-    	      this.managedByTenantId = defaults.managedByTenantId;
-    	      this.registrationDefinitionName = defaults.registrationDefinitionName;
+            $ = new RegistrationDefinitionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizations(Output<List<AuthorizationArgs>> authorizations) {
-            this.authorizations = Objects.requireNonNull(authorizations);
+            $.authorizations = authorizations;
             return this;
         }
+
         public Builder authorizations(List<AuthorizationArgs> authorizations) {
-            this.authorizations = Output.of(Objects.requireNonNull(authorizations));
-            return this;
+            return authorizations(Output.of(authorizations));
         }
+
         public Builder authorizations(AuthorizationArgs... authorizations) {
             return authorizations(List.of(authorizations));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder managedByTenantId(Output<String> managedByTenantId) {
-            this.managedByTenantId = Objects.requireNonNull(managedByTenantId);
+            $.managedByTenantId = managedByTenantId;
             return this;
         }
+
         public Builder managedByTenantId(String managedByTenantId) {
-            this.managedByTenantId = Output.of(Objects.requireNonNull(managedByTenantId));
-            return this;
+            return managedByTenantId(Output.of(managedByTenantId));
         }
+
         public Builder registrationDefinitionName(@Nullable Output<String> registrationDefinitionName) {
-            this.registrationDefinitionName = registrationDefinitionName;
+            $.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
-        public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
-            this.registrationDefinitionName = Codegen.ofNullable(registrationDefinitionName);
-            return this;
-        }        public RegistrationDefinitionPropertiesArgs build() {
-            return new RegistrationDefinitionPropertiesArgs(authorizations, description, managedByTenantId, registrationDefinitionName);
+
+        public Builder registrationDefinitionName(String registrationDefinitionName) {
+            return registrationDefinitionName(Output.of(registrationDefinitionName));
+        }
+
+        public RegistrationDefinitionPropertiesArgs build() {
+            $.authorizations = Objects.requireNonNull($.authorizations, "expected parameter 'authorizations' to be non-null");
+            $.managedByTenantId = Objects.requireNonNull($.managedByTenantId, "expected parameter 'managedByTenantId' to be non-null");
+            return $;
         }
     }
+
 }

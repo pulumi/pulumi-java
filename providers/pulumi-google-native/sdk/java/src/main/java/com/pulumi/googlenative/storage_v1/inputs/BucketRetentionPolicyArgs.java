@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BucketRetentionPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="effectiveTime")
-      private final @Nullable Output<String> effectiveTime;
+    private @Nullable Output<String> effectiveTime;
 
-    public Output<String> effectiveTime() {
-        return this.effectiveTime == null ? Codegen.empty() : this.effectiveTime;
+    public Optional<Output<String>> effectiveTime() {
+        return Optional.ofNullable(this.effectiveTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BucketRetentionPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="isLocked")
-      private final @Nullable Output<Boolean> isLocked;
+    private @Nullable Output<Boolean> isLocked;
 
-    public Output<Boolean> isLocked() {
-        return this.isLocked == null ? Codegen.empty() : this.isLocked;
+    public Optional<Output<Boolean>> isLocked() {
+        return Optional.ofNullable(this.isLocked);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class BucketRetentionPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="retentionPeriod")
-      private final @Nullable Output<String> retentionPeriod;
+    private @Nullable Output<String> retentionPeriod;
 
-    public Output<String> retentionPeriod() {
-        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
+    public Optional<Output<String>> retentionPeriod() {
+        return Optional.ofNullable(this.retentionPeriod);
     }
 
-    public BucketRetentionPolicyArgs(
-        @Nullable Output<String> effectiveTime,
-        @Nullable Output<Boolean> isLocked,
-        @Nullable Output<String> retentionPeriod) {
-        this.effectiveTime = effectiveTime;
-        this.isLocked = isLocked;
-        this.retentionPeriod = retentionPeriod;
-    }
+    private BucketRetentionPolicyArgs() {}
 
-    private BucketRetentionPolicyArgs() {
-        this.effectiveTime = Codegen.empty();
-        this.isLocked = Codegen.empty();
-        this.retentionPeriod = Codegen.empty();
+    private BucketRetentionPolicyArgs(BucketRetentionPolicyArgs $) {
+        this.effectiveTime = $.effectiveTime;
+        this.isLocked = $.isLocked;
+        this.retentionPeriod = $.retentionPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> effectiveTime;
-        private @Nullable Output<Boolean> isLocked;
-        private @Nullable Output<String> retentionPeriod;
+        private BucketRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRetentionPolicyArgs();
         }
 
         public Builder(BucketRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.effectiveTime = defaults.effectiveTime;
-    	      this.isLocked = defaults.isLocked;
-    	      this.retentionPeriod = defaults.retentionPeriod;
+            $ = new BucketRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder effectiveTime(@Nullable Output<String> effectiveTime) {
-            this.effectiveTime = effectiveTime;
+            $.effectiveTime = effectiveTime;
             return this;
         }
-        public Builder effectiveTime(@Nullable String effectiveTime) {
-            this.effectiveTime = Codegen.ofNullable(effectiveTime);
-            return this;
+
+        public Builder effectiveTime(String effectiveTime) {
+            return effectiveTime(Output.of(effectiveTime));
         }
+
         public Builder isLocked(@Nullable Output<Boolean> isLocked) {
-            this.isLocked = isLocked;
+            $.isLocked = isLocked;
             return this;
         }
-        public Builder isLocked(@Nullable Boolean isLocked) {
-            this.isLocked = Codegen.ofNullable(isLocked);
-            return this;
+
+        public Builder isLocked(Boolean isLocked) {
+            return isLocked(Output.of(isLocked));
         }
+
         public Builder retentionPeriod(@Nullable Output<String> retentionPeriod) {
-            this.retentionPeriod = retentionPeriod;
+            $.retentionPeriod = retentionPeriod;
             return this;
         }
-        public Builder retentionPeriod(@Nullable String retentionPeriod) {
-            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
-            return this;
-        }        public BucketRetentionPolicyArgs build() {
-            return new BucketRetentionPolicyArgs(effectiveTime, isLocked, retentionPeriod);
+
+        public Builder retentionPeriod(String retentionPeriod) {
+            return retentionPeriod(Output.of(retentionPeriod));
+        }
+
+        public BucketRetentionPolicyArgs build() {
+            return $;
         }
     }
+
 }

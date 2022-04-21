@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudscheduler.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends com.pul
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends com.pul
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -45,76 +45,68 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends com.pul
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public JobAppEngineHttpTargetAppEngineRoutingGetArgs(
-        @Nullable Output<String> instance,
-        @Nullable Output<String> service,
-        @Nullable Output<String> version) {
-        this.instance = instance;
-        this.service = service;
-        this.version = version;
-    }
+    private JobAppEngineHttpTargetAppEngineRoutingGetArgs() {}
 
-    private JobAppEngineHttpTargetAppEngineRoutingGetArgs() {
-        this.instance = Codegen.empty();
-        this.service = Codegen.empty();
-        this.version = Codegen.empty();
+    private JobAppEngineHttpTargetAppEngineRoutingGetArgs(JobAppEngineHttpTargetAppEngineRoutingGetArgs $) {
+        this.instance = $.instance;
+        this.service = $.service;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobAppEngineHttpTargetAppEngineRoutingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> service;
-        private @Nullable Output<String> version;
+        private JobAppEngineHttpTargetAppEngineRoutingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobAppEngineHttpTargetAppEngineRoutingGetArgs();
         }
 
         public Builder(JobAppEngineHttpTargetAppEngineRoutingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instance = defaults.instance;
-    	      this.service = defaults.service;
-    	      this.version = defaults.version;
+            $ = new JobAppEngineHttpTargetAppEngineRoutingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
+
+        public Builder service(String service) {
+            return service(Output.of(service));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public JobAppEngineHttpTargetAppEngineRoutingGetArgs build() {
-            return new JobAppEngineHttpTargetAppEngineRoutingGetArgs(instance, service, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public JobAppEngineHttpTargetAppEngineRoutingGetArgs build() {
+            return $;
         }
     }
+
 }

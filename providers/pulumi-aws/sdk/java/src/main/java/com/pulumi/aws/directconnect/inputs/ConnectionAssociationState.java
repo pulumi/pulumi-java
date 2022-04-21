@@ -5,9 +5,9 @@ package com.pulumi.aws.directconnect.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConnectionAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="connectionId")
-      private final @Nullable Output<String> connectionId;
+    private @Nullable Output<String> connectionId;
 
-    public Output<String> connectionId() {
-        return this.connectionId == null ? Codegen.empty() : this.connectionId;
+    public Optional<Output<String>> connectionId() {
+        return Optional.ofNullable(this.connectionId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ConnectionAssociationState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="lagId")
-      private final @Nullable Output<String> lagId;
+    private @Nullable Output<String> lagId;
 
-    public Output<String> lagId() {
-        return this.lagId == null ? Codegen.empty() : this.lagId;
+    public Optional<Output<String>> lagId() {
+        return Optional.ofNullable(this.lagId);
     }
 
-    public ConnectionAssociationState(
-        @Nullable Output<String> connectionId,
-        @Nullable Output<String> lagId) {
-        this.connectionId = connectionId;
-        this.lagId = lagId;
-    }
+    private ConnectionAssociationState() {}
 
-    private ConnectionAssociationState() {
-        this.connectionId = Codegen.empty();
-        this.lagId = Codegen.empty();
+    private ConnectionAssociationState(ConnectionAssociationState $) {
+        this.connectionId = $.connectionId;
+        this.lagId = $.lagId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectionId;
-        private @Nullable Output<String> lagId;
+        private ConnectionAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionAssociationState();
         }
 
         public Builder(ConnectionAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionId = defaults.connectionId;
-    	      this.lagId = defaults.lagId;
+            $ = new ConnectionAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionId(@Nullable Output<String> connectionId) {
-            this.connectionId = connectionId;
+            $.connectionId = connectionId;
             return this;
         }
-        public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Codegen.ofNullable(connectionId);
-            return this;
+
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder lagId(@Nullable Output<String> lagId) {
-            this.lagId = lagId;
+            $.lagId = lagId;
             return this;
         }
-        public Builder lagId(@Nullable String lagId) {
-            this.lagId = Codegen.ofNullable(lagId);
-            return this;
-        }        public ConnectionAssociationState build() {
-            return new ConnectionAssociationState(connectionId, lagId);
+
+        public Builder lagId(String lagId) {
+            return lagId(Output.of(lagId));
+        }
+
+        public ConnectionAssociationState build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appintegrations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="firstExecutionFrom", required=true)
-      private final Output<String> firstExecutionFrom;
+    private Output<String> firstExecutionFrom;
 
     public Output<String> firstExecutionFrom() {
         return this.firstExecutionFrom;
@@ -30,7 +29,7 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
@@ -41,76 +40,71 @@ public final class DataIntegrationScheduleConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="scheduleExpression", required=true)
-      private final Output<String> scheduleExpression;
+    private Output<String> scheduleExpression;
 
     public Output<String> scheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public DataIntegrationScheduleConfigArgs(
-        Output<String> firstExecutionFrom,
-        Output<String> object,
-        Output<String> scheduleExpression) {
-        this.firstExecutionFrom = Objects.requireNonNull(firstExecutionFrom, "expected parameter 'firstExecutionFrom' to be non-null");
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-        this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
-    }
+    private DataIntegrationScheduleConfigArgs() {}
 
-    private DataIntegrationScheduleConfigArgs() {
-        this.firstExecutionFrom = Codegen.empty();
-        this.object = Codegen.empty();
-        this.scheduleExpression = Codegen.empty();
+    private DataIntegrationScheduleConfigArgs(DataIntegrationScheduleConfigArgs $) {
+        this.firstExecutionFrom = $.firstExecutionFrom;
+        this.object = $.object;
+        this.scheduleExpression = $.scheduleExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataIntegrationScheduleConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> firstExecutionFrom;
-        private Output<String> object;
-        private Output<String> scheduleExpression;
+        private DataIntegrationScheduleConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataIntegrationScheduleConfigArgs();
         }
 
         public Builder(DataIntegrationScheduleConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.firstExecutionFrom = defaults.firstExecutionFrom;
-    	      this.object = defaults.object;
-    	      this.scheduleExpression = defaults.scheduleExpression;
+            $ = new DataIntegrationScheduleConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder firstExecutionFrom(Output<String> firstExecutionFrom) {
-            this.firstExecutionFrom = Objects.requireNonNull(firstExecutionFrom);
+            $.firstExecutionFrom = firstExecutionFrom;
             return this;
         }
+
         public Builder firstExecutionFrom(String firstExecutionFrom) {
-            this.firstExecutionFrom = Output.of(Objects.requireNonNull(firstExecutionFrom));
-            return this;
+            return firstExecutionFrom(Output.of(firstExecutionFrom));
         }
+
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
+            return object(Output.of(object));
         }
+
         public Builder scheduleExpression(Output<String> scheduleExpression) {
-            this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
+            $.scheduleExpression = scheduleExpression;
             return this;
         }
+
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
-            return this;
-        }        public DataIntegrationScheduleConfigArgs build() {
-            return new DataIntegrationScheduleConfigArgs(firstExecutionFrom, object, scheduleExpression);
+            return scheduleExpression(Output.of(scheduleExpression));
+        }
+
+        public DataIntegrationScheduleConfigArgs build() {
+            $.firstExecutionFrom = Objects.requireNonNull($.firstExecutionFrom, "expected parameter 'firstExecutionFrom' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            $.scheduleExpression = Objects.requireNonNull($.scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
+            return $;
         }
     }
+
 }

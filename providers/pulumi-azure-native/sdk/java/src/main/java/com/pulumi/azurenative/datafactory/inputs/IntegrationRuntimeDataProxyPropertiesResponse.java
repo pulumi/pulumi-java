@@ -24,10 +24,10 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable EntityReferenceResponse connectVia;
+    private @Nullable EntityReferenceResponse connectVia;
 
     public Optional<EntityReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends com.pul
      * 
      */
     @Import(name="stagingLinkedService")
-      private final @Nullable EntityReferenceResponse stagingLinkedService;
+    private @Nullable EntityReferenceResponse stagingLinkedService;
 
     public Optional<EntityReferenceResponse> stagingLinkedService() {
-        return this.stagingLinkedService == null ? Optional.empty() : Optional.ofNullable(this.stagingLinkedService);
+        return Optional.ofNullable(this.stagingLinkedService);
     }
 
-    public IntegrationRuntimeDataProxyPropertiesResponse(
-        @Nullable EntityReferenceResponse connectVia,
-        @Nullable String path,
-        @Nullable EntityReferenceResponse stagingLinkedService) {
-        this.connectVia = connectVia;
-        this.path = path;
-        this.stagingLinkedService = stagingLinkedService;
-    }
+    private IntegrationRuntimeDataProxyPropertiesResponse() {}
 
-    private IntegrationRuntimeDataProxyPropertiesResponse() {
-        this.connectVia = null;
-        this.path = null;
-        this.stagingLinkedService = null;
+    private IntegrationRuntimeDataProxyPropertiesResponse(IntegrationRuntimeDataProxyPropertiesResponse $) {
+        this.connectVia = $.connectVia;
+        this.path = $.path;
+        this.stagingLinkedService = $.stagingLinkedService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeDataProxyPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable EntityReferenceResponse connectVia;
-        private @Nullable String path;
-        private @Nullable EntityReferenceResponse stagingLinkedService;
+        private IntegrationRuntimeDataProxyPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeDataProxyPropertiesResponse();
         }
 
         public Builder(IntegrationRuntimeDataProxyPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectVia = defaults.connectVia;
-    	      this.path = defaults.path;
-    	      this.stagingLinkedService = defaults.stagingLinkedService;
+            $ = new IntegrationRuntimeDataProxyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectVia(@Nullable EntityReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
+
         public Builder stagingLinkedService(@Nullable EntityReferenceResponse stagingLinkedService) {
-            this.stagingLinkedService = stagingLinkedService;
+            $.stagingLinkedService = stagingLinkedService;
             return this;
-        }        public IntegrationRuntimeDataProxyPropertiesResponse build() {
-            return new IntegrationRuntimeDataProxyPropertiesResponse(connectVia, path, stagingLinkedService);
+        }
+
+        public IntegrationRuntimeDataProxyPropertiesResponse build() {
+            return $;
         }
     }
+
 }

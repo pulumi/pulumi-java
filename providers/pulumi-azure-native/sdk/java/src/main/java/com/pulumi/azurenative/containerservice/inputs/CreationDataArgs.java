@@ -5,9 +5,9 @@ package com.pulumi.azurenative.containerservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable Output<String> sourceResourceId;
+    private @Nullable Output<String> sourceResourceId;
 
-    public Output<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
+    public Optional<Output<String>> sourceResourceId() {
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
-    public CreationDataArgs(@Nullable Output<String> sourceResourceId) {
-        this.sourceResourceId = sourceResourceId;
-    }
+    private CreationDataArgs() {}
 
-    private CreationDataArgs() {
-        this.sourceResourceId = Codegen.empty();
+    private CreationDataArgs(CreationDataArgs $) {
+        this.sourceResourceId = $.sourceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreationDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sourceResourceId;
+        private CreationDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreationDataArgs();
         }
 
         public Builder(CreationDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceResourceId = defaults.sourceResourceId;
+            $ = new CreationDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
-        public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
-            return this;
-        }        public CreationDataArgs build() {
-            return new CreationDataArgs(sourceResourceId);
+
+        public Builder sourceResourceId(String sourceResourceId) {
+            return sourceResourceId(Output.of(sourceResourceId));
+        }
+
+        public CreationDataArgs build() {
+            return $;
         }
     }
+
 }

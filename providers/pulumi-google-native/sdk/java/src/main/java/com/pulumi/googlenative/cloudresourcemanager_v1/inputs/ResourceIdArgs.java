@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudresourcemanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ResourceIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ResourceIdArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> type) {
-        this.id = id;
-        this.type = type;
-    }
+    private ResourceIdArgs() {}
 
-    private ResourceIdArgs() {
-        this.id = Codegen.empty();
-        this.type = Codegen.empty();
+    private ResourceIdArgs(ResourceIdArgs $) {
+        this.id = $.id;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> type;
+        private ResourceIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceIdArgs();
         }
 
         public Builder(ResourceIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.type = defaults.type;
+            $ = new ResourceIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ResourceIdArgs build() {
-            return new ResourceIdArgs(id, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ResourceIdArgs build() {
+            return $;
         }
     }
+
 }

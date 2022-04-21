@@ -23,10 +23,10 @@ public final class MoveResourceDependencyOverrideResponse extends com.pulumi.res
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class MoveResourceDependencyOverrideResponse extends com.pulumi.res
      * 
      */
     @Import(name="targetId")
-      private final @Nullable String targetId;
+    private @Nullable String targetId;
 
     public Optional<String> targetId() {
-        return this.targetId == null ? Optional.empty() : Optional.ofNullable(this.targetId);
+        return Optional.ofNullable(this.targetId);
     }
 
-    public MoveResourceDependencyOverrideResponse(
-        @Nullable String id,
-        @Nullable String targetId) {
-        this.id = id;
-        this.targetId = targetId;
-    }
+    private MoveResourceDependencyOverrideResponse() {}
 
-    private MoveResourceDependencyOverrideResponse() {
-        this.id = null;
-        this.targetId = null;
+    private MoveResourceDependencyOverrideResponse(MoveResourceDependencyOverrideResponse $) {
+        this.id = $.id;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveResourceDependencyOverrideResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String targetId;
+        private MoveResourceDependencyOverrideResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveResourceDependencyOverrideResponse();
         }
 
         public Builder(MoveResourceDependencyOverrideResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.targetId = defaults.targetId;
+            $ = new MoveResourceDependencyOverrideResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
-        }        public MoveResourceDependencyOverrideResponse build() {
-            return new MoveResourceDependencyOverrideResponse(id, targetId);
+        }
+
+        public MoveResourceDependencyOverrideResponse build() {
+            return $;
         }
     }
+
 }

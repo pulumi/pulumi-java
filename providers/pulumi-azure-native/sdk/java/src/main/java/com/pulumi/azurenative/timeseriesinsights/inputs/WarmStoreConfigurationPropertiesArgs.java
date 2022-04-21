@@ -5,7 +5,6 @@ package com.pulumi.azurenative.timeseriesinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class WarmStoreConfigurationPropertiesArgs extends com.pulumi.resou
      * 
      */
     @Import(name="dataRetention", required=true)
-      private final Output<String> dataRetention;
+    private Output<String> dataRetention;
 
     public Output<String> dataRetention() {
         return this.dataRetention;
     }
 
-    public WarmStoreConfigurationPropertiesArgs(Output<String> dataRetention) {
-        this.dataRetention = Objects.requireNonNull(dataRetention, "expected parameter 'dataRetention' to be non-null");
-    }
+    private WarmStoreConfigurationPropertiesArgs() {}
 
-    private WarmStoreConfigurationPropertiesArgs() {
-        this.dataRetention = Codegen.empty();
+    private WarmStoreConfigurationPropertiesArgs(WarmStoreConfigurationPropertiesArgs $) {
+        this.dataRetention = $.dataRetention;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WarmStoreConfigurationPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataRetention;
+        private WarmStoreConfigurationPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WarmStoreConfigurationPropertiesArgs();
         }
 
         public Builder(WarmStoreConfigurationPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataRetention = defaults.dataRetention;
+            $ = new WarmStoreConfigurationPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataRetention(Output<String> dataRetention) {
-            this.dataRetention = Objects.requireNonNull(dataRetention);
+            $.dataRetention = dataRetention;
             return this;
         }
+
         public Builder dataRetention(String dataRetention) {
-            this.dataRetention = Output.of(Objects.requireNonNull(dataRetention));
-            return this;
-        }        public WarmStoreConfigurationPropertiesArgs build() {
-            return new WarmStoreConfigurationPropertiesArgs(dataRetention);
+            return dataRetention(Output.of(dataRetention));
+        }
+
+        public WarmStoreConfigurationPropertiesArgs build() {
+            $.dataRetention = Objects.requireNonNull($.dataRetention, "expected parameter 'dataRetention' to be non-null");
+            return $;
         }
     }
+
 }

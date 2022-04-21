@@ -5,10 +5,10 @@ package com.pulumi.gcp.pubsub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LiteReservationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LiteReservationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class LiteReservationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -57,89 +57,79 @@ public final class LiteReservationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="throughputCapacity", required=true)
-      private final Output<Integer> throughputCapacity;
+    private Output<Integer> throughputCapacity;
 
     public Output<Integer> throughputCapacity() {
         return this.throughputCapacity;
     }
 
-    public LiteReservationArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<Integer> throughputCapacity) {
-        this.name = name;
-        this.project = project;
-        this.region = region;
-        this.throughputCapacity = Objects.requireNonNull(throughputCapacity, "expected parameter 'throughputCapacity' to be non-null");
-    }
+    private LiteReservationArgs() {}
 
-    private LiteReservationArgs() {
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.throughputCapacity = Codegen.empty();
+    private LiteReservationArgs(LiteReservationArgs $) {
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.throughputCapacity = $.throughputCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiteReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<Integer> throughputCapacity;
+        private LiteReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiteReservationArgs();
         }
 
         public Builder(LiteReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.throughputCapacity = defaults.throughputCapacity;
+            $ = new LiteReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder throughputCapacity(Output<Integer> throughputCapacity) {
-            this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
+            $.throughputCapacity = throughputCapacity;
             return this;
         }
+
         public Builder throughputCapacity(Integer throughputCapacity) {
-            this.throughputCapacity = Output.of(Objects.requireNonNull(throughputCapacity));
-            return this;
-        }        public LiteReservationArgs build() {
-            return new LiteReservationArgs(name, project, region, throughputCapacity);
+            return throughputCapacity(Output.of(throughputCapacity));
+        }
+
+        public LiteReservationArgs build() {
+            $.throughputCapacity = Objects.requireNonNull($.throughputCapacity, "expected parameter 'throughputCapacity' to be non-null");
+            return $;
         }
     }
+
 }

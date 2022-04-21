@@ -21,7 +21,7 @@ public final class VmImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageFamily", required=true)
-      private final String imageFamily;
+    private String imageFamily;
 
     public String imageFamily() {
         return this.imageFamily;
@@ -32,7 +32,7 @@ public final class VmImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageName", required=true)
-      private final String imageName;
+    private String imageName;
 
     public String imageName() {
         return this.imageName;
@@ -43,64 +43,59 @@ public final class VmImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public VmImageResponse(
-        String imageFamily,
-        String imageName,
-        String project) {
-        this.imageFamily = Objects.requireNonNull(imageFamily, "expected parameter 'imageFamily' to be non-null");
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private VmImageResponse() {}
 
-    private VmImageResponse() {
-        this.imageFamily = null;
-        this.imageName = null;
-        this.project = null;
+    private VmImageResponse(VmImageResponse $) {
+        this.imageFamily = $.imageFamily;
+        this.imageName = $.imageName;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageFamily;
-        private String imageName;
-        private String project;
+        private VmImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmImageResponse();
         }
 
         public Builder(VmImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageFamily = defaults.imageFamily;
-    	      this.imageName = defaults.imageName;
-    	      this.project = defaults.project;
+            $ = new VmImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imageFamily(String imageFamily) {
-            this.imageFamily = Objects.requireNonNull(imageFamily);
+            $.imageFamily = imageFamily;
             return this;
         }
+
         public Builder imageName(String imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public VmImageResponse build() {
-            return new VmImageResponse(imageFamily, imageName, project);
+        }
+
+        public VmImageResponse build() {
+            $.imageFamily = Objects.requireNonNull($.imageFamily, "expected parameter 'imageFamily' to be non-null");
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetTableIamPolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetTableIamPolicyArgs Empty = new GetTableIamPolicyArgs();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="tableId", required=true)
-      private final String tableId;
+    private String tableId;
 
     public String tableId() {
         return this.tableId;
     }
 
-    public GetTableIamPolicyArgs(
-        String datasetId,
-        @Nullable String project,
-        String tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.project = project;
-        this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
-    }
+    private GetTableIamPolicyArgs() {}
 
-    private GetTableIamPolicyArgs() {
-        this.datasetId = null;
-        this.project = null;
-        this.tableId = null;
+    private GetTableIamPolicyArgs(GetTableIamPolicyArgs $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTableIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private @Nullable String project;
-        private String tableId;
+        private GetTableIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTableIamPolicyArgs();
         }
 
         public Builder(GetTableIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
-    	      this.tableId = defaults.tableId;
+            $ = new GetTableIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder tableId(String tableId) {
-            this.tableId = Objects.requireNonNull(tableId);
+            $.tableId = tableId;
             return this;
-        }        public GetTableIamPolicyArgs build() {
-            return new GetTableIamPolicyArgs(datasetId, project, tableId);
+        }
+
+        public GetTableIamPolicyArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.tableId = Objects.requireNonNull($.tableId, "expected parameter 'tableId' to be non-null");
+            return $;
         }
     }
+
 }

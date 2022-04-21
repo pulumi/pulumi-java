@@ -25,10 +25,10 @@ public final class LogSchedulePolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="scheduleFrequencyInMins")
-      private final @Nullable Integer scheduleFrequencyInMins;
+    private @Nullable Integer scheduleFrequencyInMins;
 
     public Optional<Integer> scheduleFrequencyInMins() {
-        return this.scheduleFrequencyInMins == null ? Optional.empty() : Optional.ofNullable(this.scheduleFrequencyInMins);
+        return Optional.ofNullable(this.scheduleFrequencyInMins);
     }
 
     /**
@@ -37,55 +37,51 @@ public final class LogSchedulePolicyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="schedulePolicyType", required=true)
-      private final String schedulePolicyType;
+    private String schedulePolicyType;
 
     public String schedulePolicyType() {
         return this.schedulePolicyType;
     }
 
-    public LogSchedulePolicyResponse(
-        @Nullable Integer scheduleFrequencyInMins,
-        String schedulePolicyType) {
-        this.scheduleFrequencyInMins = scheduleFrequencyInMins;
-        this.schedulePolicyType = Codegen.stringProp("schedulePolicyType").arg(schedulePolicyType).require();
-    }
+    private LogSchedulePolicyResponse() {}
 
-    private LogSchedulePolicyResponse() {
-        this.scheduleFrequencyInMins = null;
-        this.schedulePolicyType = null;
+    private LogSchedulePolicyResponse(LogSchedulePolicyResponse $) {
+        this.scheduleFrequencyInMins = $.scheduleFrequencyInMins;
+        this.schedulePolicyType = $.schedulePolicyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogSchedulePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer scheduleFrequencyInMins;
-        private String schedulePolicyType;
+        private LogSchedulePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogSchedulePolicyResponse();
         }
 
         public Builder(LogSchedulePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduleFrequencyInMins = defaults.scheduleFrequencyInMins;
-    	      this.schedulePolicyType = defaults.schedulePolicyType;
+            $ = new LogSchedulePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduleFrequencyInMins(@Nullable Integer scheduleFrequencyInMins) {
-            this.scheduleFrequencyInMins = scheduleFrequencyInMins;
+            $.scheduleFrequencyInMins = scheduleFrequencyInMins;
             return this;
         }
+
         public Builder schedulePolicyType(String schedulePolicyType) {
-            this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
+            $.schedulePolicyType = schedulePolicyType;
             return this;
-        }        public LogSchedulePolicyResponse build() {
-            return new LogSchedulePolicyResponse(scheduleFrequencyInMins, schedulePolicyType);
+        }
+
+        public LogSchedulePolicyResponse build() {
+            $.schedulePolicyType = Codegen.stringProp("schedulePolicyType").arg($.schedulePolicyType).require();
+            return $;
         }
     }
+
 }

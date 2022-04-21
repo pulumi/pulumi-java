@@ -6,8 +6,8 @@ package com.pulumi.awsnative.groundstation.inputs;
 import com.pulumi.awsnative.groundstation.inputs.ConfigSpectrumConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ConfigAntennaDownlinkConfigArgs extends com.pulumi.resources.
     public static final ConfigAntennaDownlinkConfigArgs Empty = new ConfigAntennaDownlinkConfigArgs();
 
     @Import(name="spectrumConfig")
-      private final @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
+    private @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
 
-    public Output<ConfigSpectrumConfigArgs> spectrumConfig() {
-        return this.spectrumConfig == null ? Codegen.empty() : this.spectrumConfig;
+    public Optional<Output<ConfigSpectrumConfigArgs>> spectrumConfig() {
+        return Optional.ofNullable(this.spectrumConfig);
     }
 
-    public ConfigAntennaDownlinkConfigArgs(@Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig) {
-        this.spectrumConfig = spectrumConfig;
-    }
+    private ConfigAntennaDownlinkConfigArgs() {}
 
-    private ConfigAntennaDownlinkConfigArgs() {
-        this.spectrumConfig = Codegen.empty();
+    private ConfigAntennaDownlinkConfigArgs(ConfigAntennaDownlinkConfigArgs $) {
+        this.spectrumConfig = $.spectrumConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigAntennaDownlinkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
+        private ConfigAntennaDownlinkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigAntennaDownlinkConfigArgs();
         }
 
         public Builder(ConfigAntennaDownlinkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spectrumConfig = defaults.spectrumConfig;
+            $ = new ConfigAntennaDownlinkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder spectrumConfig(@Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig) {
-            this.spectrumConfig = spectrumConfig;
+            $.spectrumConfig = spectrumConfig;
             return this;
         }
-        public Builder spectrumConfig(@Nullable ConfigSpectrumConfigArgs spectrumConfig) {
-            this.spectrumConfig = Codegen.ofNullable(spectrumConfig);
-            return this;
-        }        public ConfigAntennaDownlinkConfigArgs build() {
-            return new ConfigAntennaDownlinkConfigArgs(spectrumConfig);
+
+        public Builder spectrumConfig(ConfigSpectrumConfigArgs spectrumConfig) {
+            return spectrumConfig(Output.of(spectrumConfig));
+        }
+
+        public ConfigAntennaDownlinkConfigArgs build() {
+            return $;
         }
     }
+
 }

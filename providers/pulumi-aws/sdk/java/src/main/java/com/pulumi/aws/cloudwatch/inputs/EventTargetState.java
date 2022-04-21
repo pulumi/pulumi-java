@@ -15,10 +15,10 @@ import com.pulumi.aws.cloudwatch.inputs.EventTargetRunCommandTargetGetArgs;
 import com.pulumi.aws.cloudwatch.inputs.EventTargetSqsTargetGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="batchTarget")
-      private final @Nullable Output<EventTargetBatchTargetGetArgs> batchTarget;
+    private @Nullable Output<EventTargetBatchTargetGetArgs> batchTarget;
 
-    public Output<EventTargetBatchTargetGetArgs> batchTarget() {
-        return this.batchTarget == null ? Codegen.empty() : this.batchTarget;
+    public Optional<Output<EventTargetBatchTargetGetArgs>> batchTarget() {
+        return Optional.ofNullable(this.batchTarget);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterConfig")
-      private final @Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig;
+    private @Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig;
 
-    public Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig() {
-        return this.deadLetterConfig == null ? Codegen.empty() : this.deadLetterConfig;
+    public Optional<Output<EventTargetDeadLetterConfigGetArgs>> deadLetterConfig() {
+        return Optional.ofNullable(this.deadLetterConfig);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ecsTarget")
-      private final @Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget;
+    private @Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget;
 
-    public Output<EventTargetEcsTargetGetArgs> ecsTarget() {
-        return this.ecsTarget == null ? Codegen.empty() : this.ecsTarget;
+    public Optional<Output<EventTargetEcsTargetGetArgs>> ecsTarget() {
+        return Optional.ofNullable(this.ecsTarget);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventBusName")
-      private final @Nullable Output<String> eventBusName;
+    private @Nullable Output<String> eventBusName;
 
-    public Output<String> eventBusName() {
-        return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
+    public Optional<Output<String>> eventBusName() {
+        return Optional.ofNullable(this.eventBusName);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpTarget")
-      private final @Nullable Output<EventTargetHttpTargetGetArgs> httpTarget;
+    private @Nullable Output<EventTargetHttpTargetGetArgs> httpTarget;
 
-    public Output<EventTargetHttpTargetGetArgs> httpTarget() {
-        return this.httpTarget == null ? Codegen.empty() : this.httpTarget;
+    public Optional<Output<EventTargetHttpTargetGetArgs>> httpTarget() {
+        return Optional.ofNullable(this.httpTarget);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="input")
-      private final @Nullable Output<String> input;
+    private @Nullable Output<String> input;
 
-    public Output<String> input() {
-        return this.input == null ? Codegen.empty() : this.input;
+    public Optional<Output<String>> input() {
+        return Optional.ofNullable(this.input);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputPath")
-      private final @Nullable Output<String> inputPath;
+    private @Nullable Output<String> inputPath;
 
-    public Output<String> inputPath() {
-        return this.inputPath == null ? Codegen.empty() : this.inputPath;
+    public Optional<Output<String>> inputPath() {
+        return Optional.ofNullable(this.inputPath);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputTransformer")
-      private final @Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer;
+    private @Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer;
 
-    public Output<EventTargetInputTransformerGetArgs> inputTransformer() {
-        return this.inputTransformer == null ? Codegen.empty() : this.inputTransformer;
+    public Optional<Output<EventTargetInputTransformerGetArgs>> inputTransformer() {
+        return Optional.ofNullable(this.inputTransformer);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kinesisTarget")
-      private final @Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget;
+    private @Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget;
 
-    public Output<EventTargetKinesisTargetGetArgs> kinesisTarget() {
-        return this.kinesisTarget == null ? Codegen.empty() : this.kinesisTarget;
+    public Optional<Output<EventTargetKinesisTargetGetArgs>> kinesisTarget() {
+        return Optional.ofNullable(this.kinesisTarget);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redshiftTarget")
-      private final @Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget;
+    private @Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget;
 
-    public Output<EventTargetRedshiftTargetGetArgs> redshiftTarget() {
-        return this.redshiftTarget == null ? Codegen.empty() : this.redshiftTarget;
+    public Optional<Output<EventTargetRedshiftTargetGetArgs>> redshiftTarget() {
+        return Optional.ofNullable(this.redshiftTarget);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy;
+    private @Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy;
 
-    public Output<EventTargetRetryPolicyGetArgs> retryPolicy() {
-        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
+    public Optional<Output<EventTargetRetryPolicyGetArgs>> retryPolicy() {
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rule")
-      private final @Nullable Output<String> rule;
+    private @Nullable Output<String> rule;
 
-    public Output<String> rule() {
-        return this.rule == null ? Codegen.empty() : this.rule;
+    public Optional<Output<String>> rule() {
+        return Optional.ofNullable(this.rule);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runCommandTargets")
-      private final @Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets;
+    private @Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets;
 
-    public Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets() {
-        return this.runCommandTargets == null ? Codegen.empty() : this.runCommandTargets;
+    public Optional<Output<List<EventTargetRunCommandTargetGetArgs>>> runCommandTargets() {
+        return Optional.ofNullable(this.runCommandTargets);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sqsTarget")
-      private final @Nullable Output<EventTargetSqsTargetGetArgs> sqsTarget;
+    private @Nullable Output<EventTargetSqsTargetGetArgs> sqsTarget;
 
-    public Output<EventTargetSqsTargetGetArgs> sqsTarget() {
-        return this.sqsTarget == null ? Codegen.empty() : this.sqsTarget;
+    public Optional<Output<EventTargetSqsTargetGetArgs>> sqsTarget() {
+        return Optional.ofNullable(this.sqsTarget);
     }
 
     /**
@@ -207,261 +207,212 @@ public final class EventTargetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetId")
-      private final @Nullable Output<String> targetId;
+    private @Nullable Output<String> targetId;
 
-    public Output<String> targetId() {
-        return this.targetId == null ? Codegen.empty() : this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
-    public EventTargetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<EventTargetBatchTargetGetArgs> batchTarget,
-        @Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig,
-        @Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget,
-        @Nullable Output<String> eventBusName,
-        @Nullable Output<EventTargetHttpTargetGetArgs> httpTarget,
-        @Nullable Output<String> input,
-        @Nullable Output<String> inputPath,
-        @Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer,
-        @Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget,
-        @Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget,
-        @Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy,
-        @Nullable Output<String> roleArn,
-        @Nullable Output<String> rule,
-        @Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets,
-        @Nullable Output<EventTargetSqsTargetGetArgs> sqsTarget,
-        @Nullable Output<String> targetId) {
-        this.arn = arn;
-        this.batchTarget = batchTarget;
-        this.deadLetterConfig = deadLetterConfig;
-        this.ecsTarget = ecsTarget;
-        this.eventBusName = eventBusName;
-        this.httpTarget = httpTarget;
-        this.input = input;
-        this.inputPath = inputPath;
-        this.inputTransformer = inputTransformer;
-        this.kinesisTarget = kinesisTarget;
-        this.redshiftTarget = redshiftTarget;
-        this.retryPolicy = retryPolicy;
-        this.roleArn = roleArn;
-        this.rule = rule;
-        this.runCommandTargets = runCommandTargets;
-        this.sqsTarget = sqsTarget;
-        this.targetId = targetId;
-    }
+    private EventTargetState() {}
 
-    private EventTargetState() {
-        this.arn = Codegen.empty();
-        this.batchTarget = Codegen.empty();
-        this.deadLetterConfig = Codegen.empty();
-        this.ecsTarget = Codegen.empty();
-        this.eventBusName = Codegen.empty();
-        this.httpTarget = Codegen.empty();
-        this.input = Codegen.empty();
-        this.inputPath = Codegen.empty();
-        this.inputTransformer = Codegen.empty();
-        this.kinesisTarget = Codegen.empty();
-        this.redshiftTarget = Codegen.empty();
-        this.retryPolicy = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.rule = Codegen.empty();
-        this.runCommandTargets = Codegen.empty();
-        this.sqsTarget = Codegen.empty();
-        this.targetId = Codegen.empty();
+    private EventTargetState(EventTargetState $) {
+        this.arn = $.arn;
+        this.batchTarget = $.batchTarget;
+        this.deadLetterConfig = $.deadLetterConfig;
+        this.ecsTarget = $.ecsTarget;
+        this.eventBusName = $.eventBusName;
+        this.httpTarget = $.httpTarget;
+        this.input = $.input;
+        this.inputPath = $.inputPath;
+        this.inputTransformer = $.inputTransformer;
+        this.kinesisTarget = $.kinesisTarget;
+        this.redshiftTarget = $.redshiftTarget;
+        this.retryPolicy = $.retryPolicy;
+        this.roleArn = $.roleArn;
+        this.rule = $.rule;
+        this.runCommandTargets = $.runCommandTargets;
+        this.sqsTarget = $.sqsTarget;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTargetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<EventTargetBatchTargetGetArgs> batchTarget;
-        private @Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig;
-        private @Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget;
-        private @Nullable Output<String> eventBusName;
-        private @Nullable Output<EventTargetHttpTargetGetArgs> httpTarget;
-        private @Nullable Output<String> input;
-        private @Nullable Output<String> inputPath;
-        private @Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer;
-        private @Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget;
-        private @Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget;
-        private @Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy;
-        private @Nullable Output<String> roleArn;
-        private @Nullable Output<String> rule;
-        private @Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets;
-        private @Nullable Output<EventTargetSqsTargetGetArgs> sqsTarget;
-        private @Nullable Output<String> targetId;
+        private EventTargetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTargetState();
         }
 
         public Builder(EventTargetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.batchTarget = defaults.batchTarget;
-    	      this.deadLetterConfig = defaults.deadLetterConfig;
-    	      this.ecsTarget = defaults.ecsTarget;
-    	      this.eventBusName = defaults.eventBusName;
-    	      this.httpTarget = defaults.httpTarget;
-    	      this.input = defaults.input;
-    	      this.inputPath = defaults.inputPath;
-    	      this.inputTransformer = defaults.inputTransformer;
-    	      this.kinesisTarget = defaults.kinesisTarget;
-    	      this.redshiftTarget = defaults.redshiftTarget;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.roleArn = defaults.roleArn;
-    	      this.rule = defaults.rule;
-    	      this.runCommandTargets = defaults.runCommandTargets;
-    	      this.sqsTarget = defaults.sqsTarget;
-    	      this.targetId = defaults.targetId;
+            $ = new EventTargetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder batchTarget(@Nullable Output<EventTargetBatchTargetGetArgs> batchTarget) {
-            this.batchTarget = batchTarget;
+            $.batchTarget = batchTarget;
             return this;
         }
-        public Builder batchTarget(@Nullable EventTargetBatchTargetGetArgs batchTarget) {
-            this.batchTarget = Codegen.ofNullable(batchTarget);
-            return this;
+
+        public Builder batchTarget(EventTargetBatchTargetGetArgs batchTarget) {
+            return batchTarget(Output.of(batchTarget));
         }
+
         public Builder deadLetterConfig(@Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig) {
-            this.deadLetterConfig = deadLetterConfig;
+            $.deadLetterConfig = deadLetterConfig;
             return this;
         }
-        public Builder deadLetterConfig(@Nullable EventTargetDeadLetterConfigGetArgs deadLetterConfig) {
-            this.deadLetterConfig = Codegen.ofNullable(deadLetterConfig);
-            return this;
+
+        public Builder deadLetterConfig(EventTargetDeadLetterConfigGetArgs deadLetterConfig) {
+            return deadLetterConfig(Output.of(deadLetterConfig));
         }
+
         public Builder ecsTarget(@Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget) {
-            this.ecsTarget = ecsTarget;
+            $.ecsTarget = ecsTarget;
             return this;
         }
-        public Builder ecsTarget(@Nullable EventTargetEcsTargetGetArgs ecsTarget) {
-            this.ecsTarget = Codegen.ofNullable(ecsTarget);
-            return this;
+
+        public Builder ecsTarget(EventTargetEcsTargetGetArgs ecsTarget) {
+            return ecsTarget(Output.of(ecsTarget));
         }
+
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
-            this.eventBusName = eventBusName;
+            $.eventBusName = eventBusName;
             return this;
         }
-        public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Codegen.ofNullable(eventBusName);
-            return this;
+
+        public Builder eventBusName(String eventBusName) {
+            return eventBusName(Output.of(eventBusName));
         }
+
         public Builder httpTarget(@Nullable Output<EventTargetHttpTargetGetArgs> httpTarget) {
-            this.httpTarget = httpTarget;
+            $.httpTarget = httpTarget;
             return this;
         }
-        public Builder httpTarget(@Nullable EventTargetHttpTargetGetArgs httpTarget) {
-            this.httpTarget = Codegen.ofNullable(httpTarget);
-            return this;
+
+        public Builder httpTarget(EventTargetHttpTargetGetArgs httpTarget) {
+            return httpTarget(Output.of(httpTarget));
         }
+
         public Builder input(@Nullable Output<String> input) {
-            this.input = input;
+            $.input = input;
             return this;
         }
-        public Builder input(@Nullable String input) {
-            this.input = Codegen.ofNullable(input);
-            return this;
+
+        public Builder input(String input) {
+            return input(Output.of(input));
         }
+
         public Builder inputPath(@Nullable Output<String> inputPath) {
-            this.inputPath = inputPath;
+            $.inputPath = inputPath;
             return this;
         }
-        public Builder inputPath(@Nullable String inputPath) {
-            this.inputPath = Codegen.ofNullable(inputPath);
-            return this;
+
+        public Builder inputPath(String inputPath) {
+            return inputPath(Output.of(inputPath));
         }
+
         public Builder inputTransformer(@Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer) {
-            this.inputTransformer = inputTransformer;
+            $.inputTransformer = inputTransformer;
             return this;
         }
-        public Builder inputTransformer(@Nullable EventTargetInputTransformerGetArgs inputTransformer) {
-            this.inputTransformer = Codegen.ofNullable(inputTransformer);
-            return this;
+
+        public Builder inputTransformer(EventTargetInputTransformerGetArgs inputTransformer) {
+            return inputTransformer(Output.of(inputTransformer));
         }
+
         public Builder kinesisTarget(@Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget) {
-            this.kinesisTarget = kinesisTarget;
+            $.kinesisTarget = kinesisTarget;
             return this;
         }
-        public Builder kinesisTarget(@Nullable EventTargetKinesisTargetGetArgs kinesisTarget) {
-            this.kinesisTarget = Codegen.ofNullable(kinesisTarget);
-            return this;
+
+        public Builder kinesisTarget(EventTargetKinesisTargetGetArgs kinesisTarget) {
+            return kinesisTarget(Output.of(kinesisTarget));
         }
+
         public Builder redshiftTarget(@Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget) {
-            this.redshiftTarget = redshiftTarget;
+            $.redshiftTarget = redshiftTarget;
             return this;
         }
-        public Builder redshiftTarget(@Nullable EventTargetRedshiftTargetGetArgs redshiftTarget) {
-            this.redshiftTarget = Codegen.ofNullable(redshiftTarget);
-            return this;
+
+        public Builder redshiftTarget(EventTargetRedshiftTargetGetArgs redshiftTarget) {
+            return redshiftTarget(Output.of(redshiftTarget));
         }
+
         public Builder retryPolicy(@Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
-        public Builder retryPolicy(@Nullable EventTargetRetryPolicyGetArgs retryPolicy) {
-            this.retryPolicy = Codegen.ofNullable(retryPolicy);
-            return this;
+
+        public Builder retryPolicy(EventTargetRetryPolicyGetArgs retryPolicy) {
+            return retryPolicy(Output.of(retryPolicy));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder rule(@Nullable Output<String> rule) {
-            this.rule = rule;
+            $.rule = rule;
             return this;
         }
-        public Builder rule(@Nullable String rule) {
-            this.rule = Codegen.ofNullable(rule);
-            return this;
+
+        public Builder rule(String rule) {
+            return rule(Output.of(rule));
         }
+
         public Builder runCommandTargets(@Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets) {
-            this.runCommandTargets = runCommandTargets;
+            $.runCommandTargets = runCommandTargets;
             return this;
         }
-        public Builder runCommandTargets(@Nullable List<EventTargetRunCommandTargetGetArgs> runCommandTargets) {
-            this.runCommandTargets = Codegen.ofNullable(runCommandTargets);
-            return this;
+
+        public Builder runCommandTargets(List<EventTargetRunCommandTargetGetArgs> runCommandTargets) {
+            return runCommandTargets(Output.of(runCommandTargets));
         }
+
         public Builder runCommandTargets(EventTargetRunCommandTargetGetArgs... runCommandTargets) {
             return runCommandTargets(List.of(runCommandTargets));
         }
+
         public Builder sqsTarget(@Nullable Output<EventTargetSqsTargetGetArgs> sqsTarget) {
-            this.sqsTarget = sqsTarget;
+            $.sqsTarget = sqsTarget;
             return this;
         }
-        public Builder sqsTarget(@Nullable EventTargetSqsTargetGetArgs sqsTarget) {
-            this.sqsTarget = Codegen.ofNullable(sqsTarget);
-            return this;
+
+        public Builder sqsTarget(EventTargetSqsTargetGetArgs sqsTarget) {
+            return sqsTarget(Output.of(sqsTarget));
         }
+
         public Builder targetId(@Nullable Output<String> targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
         }
-        public Builder targetId(@Nullable String targetId) {
-            this.targetId = Codegen.ofNullable(targetId);
-            return this;
-        }        public EventTargetState build() {
-            return new EventTargetState(arn, batchTarget, deadLetterConfig, ecsTarget, eventBusName, httpTarget, input, inputPath, inputTransformer, kinesisTarget, redshiftTarget, retryPolicy, roleArn, rule, runCommandTargets, sqsTarget, targetId);
+
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
+        }
+
+        public EventTargetState build() {
+            return $;
         }
     }
+
 }

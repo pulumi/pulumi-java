@@ -23,7 +23,7 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mountPoint", required=true)
-      private final String mountPoint;
+    private String mountPoint;
 
     public String mountPoint() {
         return this.mountPoint;
@@ -34,7 +34,7 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,7 +45,7 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="readOnly", required=true)
-      private final Boolean readOnly;
+    private Boolean readOnly;
 
     public Boolean readOnly() {
         return this.readOnly;
@@ -56,7 +56,7 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sizeGb", required=true)
-      private final Integer sizeGb;
+    private Integer sizeGb;
 
     public Integer sizeGb() {
         return this.sizeGb;
@@ -67,7 +67,7 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -78,91 +78,80 @@ public final class DiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DiskResponse(
-        String mountPoint,
-        String name,
-        Boolean readOnly,
-        Integer sizeGb,
-        String source,
-        String type) {
-        this.mountPoint = Objects.requireNonNull(mountPoint, "expected parameter 'mountPoint' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.readOnly = Objects.requireNonNull(readOnly, "expected parameter 'readOnly' to be non-null");
-        this.sizeGb = Objects.requireNonNull(sizeGb, "expected parameter 'sizeGb' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DiskResponse() {}
 
-    private DiskResponse() {
-        this.mountPoint = null;
-        this.name = null;
-        this.readOnly = null;
-        this.sizeGb = null;
-        this.source = null;
-        this.type = null;
+    private DiskResponse(DiskResponse $) {
+        this.mountPoint = $.mountPoint;
+        this.name = $.name;
+        this.readOnly = $.readOnly;
+        this.sizeGb = $.sizeGb;
+        this.source = $.source;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mountPoint;
-        private String name;
-        private Boolean readOnly;
-        private Integer sizeGb;
-        private String source;
-        private String type;
+        private DiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskResponse();
         }
 
         public Builder(DiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPoint = defaults.mountPoint;
-    	      this.name = defaults.name;
-    	      this.readOnly = defaults.readOnly;
-    	      this.sizeGb = defaults.sizeGb;
-    	      this.source = defaults.source;
-    	      this.type = defaults.type;
+            $ = new DiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPoint(String mountPoint) {
-            this.mountPoint = Objects.requireNonNull(mountPoint);
+            $.mountPoint = mountPoint;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder readOnly(Boolean readOnly) {
-            this.readOnly = Objects.requireNonNull(readOnly);
+            $.readOnly = readOnly;
             return this;
         }
+
         public Builder sizeGb(Integer sizeGb) {
-            this.sizeGb = Objects.requireNonNull(sizeGb);
+            $.sizeGb = sizeGb;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DiskResponse build() {
-            return new DiskResponse(mountPoint, name, readOnly, sizeGb, source, type);
+        }
+
+        public DiskResponse build() {
+            $.mountPoint = Objects.requireNonNull($.mountPoint, "expected parameter 'mountPoint' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.readOnly = Objects.requireNonNull($.readOnly, "expected parameter 'readOnly' to be non-null");
+            $.sizeGb = Objects.requireNonNull($.sizeGb, "expected parameter 'sizeGb' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

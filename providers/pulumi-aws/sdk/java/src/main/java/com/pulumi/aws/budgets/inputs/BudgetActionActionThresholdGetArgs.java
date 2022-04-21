@@ -5,7 +5,6 @@ package com.pulumi.aws.budgets.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class BudgetActionActionThresholdGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="actionThresholdType", required=true)
-      private final Output<String> actionThresholdType;
+    private Output<String> actionThresholdType;
 
     public Output<String> actionThresholdType() {
         return this.actionThresholdType;
@@ -31,63 +30,60 @@ public final class BudgetActionActionThresholdGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="actionThresholdValue", required=true)
-      private final Output<Double> actionThresholdValue;
+    private Output<Double> actionThresholdValue;
 
     public Output<Double> actionThresholdValue() {
         return this.actionThresholdValue;
     }
 
-    public BudgetActionActionThresholdGetArgs(
-        Output<String> actionThresholdType,
-        Output<Double> actionThresholdValue) {
-        this.actionThresholdType = Objects.requireNonNull(actionThresholdType, "expected parameter 'actionThresholdType' to be non-null");
-        this.actionThresholdValue = Objects.requireNonNull(actionThresholdValue, "expected parameter 'actionThresholdValue' to be non-null");
-    }
+    private BudgetActionActionThresholdGetArgs() {}
 
-    private BudgetActionActionThresholdGetArgs() {
-        this.actionThresholdType = Codegen.empty();
-        this.actionThresholdValue = Codegen.empty();
+    private BudgetActionActionThresholdGetArgs(BudgetActionActionThresholdGetArgs $) {
+        this.actionThresholdType = $.actionThresholdType;
+        this.actionThresholdValue = $.actionThresholdValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetActionActionThresholdGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> actionThresholdType;
-        private Output<Double> actionThresholdValue;
+        private BudgetActionActionThresholdGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetActionActionThresholdGetArgs();
         }
 
         public Builder(BudgetActionActionThresholdGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionThresholdType = defaults.actionThresholdType;
-    	      this.actionThresholdValue = defaults.actionThresholdValue;
+            $ = new BudgetActionActionThresholdGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionThresholdType(Output<String> actionThresholdType) {
-            this.actionThresholdType = Objects.requireNonNull(actionThresholdType);
+            $.actionThresholdType = actionThresholdType;
             return this;
         }
+
         public Builder actionThresholdType(String actionThresholdType) {
-            this.actionThresholdType = Output.of(Objects.requireNonNull(actionThresholdType));
-            return this;
+            return actionThresholdType(Output.of(actionThresholdType));
         }
+
         public Builder actionThresholdValue(Output<Double> actionThresholdValue) {
-            this.actionThresholdValue = Objects.requireNonNull(actionThresholdValue);
+            $.actionThresholdValue = actionThresholdValue;
             return this;
         }
+
         public Builder actionThresholdValue(Double actionThresholdValue) {
-            this.actionThresholdValue = Output.of(Objects.requireNonNull(actionThresholdValue));
-            return this;
-        }        public BudgetActionActionThresholdGetArgs build() {
-            return new BudgetActionActionThresholdGetArgs(actionThresholdType, actionThresholdValue);
+            return actionThresholdValue(Output.of(actionThresholdValue));
+        }
+
+        public BudgetActionActionThresholdGetArgs build() {
+            $.actionThresholdType = Objects.requireNonNull($.actionThresholdType, "expected parameter 'actionThresholdType' to be non-null");
+            $.actionThresholdValue = Objects.requireNonNull($.actionThresholdValue, "expected parameter 'actionThresholdValue' to be non-null");
+            return $;
         }
     }
+
 }

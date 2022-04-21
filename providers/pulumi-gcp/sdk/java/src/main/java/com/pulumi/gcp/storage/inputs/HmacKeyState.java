@@ -5,9 +5,9 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessId")
-      private final @Nullable Output<String> accessId;
+    private @Nullable Output<String> accessId;
 
-    public Output<String> accessId() {
-        return this.accessId == null ? Codegen.empty() : this.accessId;
+    public Optional<Output<String>> accessId() {
+        return Optional.ofNullable(this.accessId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountEmail")
-      private final @Nullable Output<String> serviceAccountEmail;
+    private @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> serviceAccountEmail() {
-        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
+    public Optional<Output<String>> serviceAccountEmail() {
+        return Optional.ofNullable(this.serviceAccountEmail);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeCreated")
-      private final @Nullable Output<String> timeCreated;
+    private @Nullable Output<String> timeCreated;
 
-    public Output<String> timeCreated() {
-        return this.timeCreated == null ? Codegen.empty() : this.timeCreated;
+    public Optional<Output<String>> timeCreated() {
+        return Optional.ofNullable(this.timeCreated);
     }
 
     /**
@@ -89,128 +89,108 @@ public final class HmacKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updated")
-      private final @Nullable Output<String> updated;
+    private @Nullable Output<String> updated;
 
-    public Output<String> updated() {
-        return this.updated == null ? Codegen.empty() : this.updated;
+    public Optional<Output<String>> updated() {
+        return Optional.ofNullable(this.updated);
     }
 
-    public HmacKeyState(
-        @Nullable Output<String> accessId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> secret,
-        @Nullable Output<String> serviceAccountEmail,
-        @Nullable Output<String> state,
-        @Nullable Output<String> timeCreated,
-        @Nullable Output<String> updated) {
-        this.accessId = accessId;
-        this.project = project;
-        this.secret = secret;
-        this.serviceAccountEmail = serviceAccountEmail;
-        this.state = state;
-        this.timeCreated = timeCreated;
-        this.updated = updated;
-    }
+    private HmacKeyState() {}
 
-    private HmacKeyState() {
-        this.accessId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.serviceAccountEmail = Codegen.empty();
-        this.state = Codegen.empty();
-        this.timeCreated = Codegen.empty();
-        this.updated = Codegen.empty();
+    private HmacKeyState(HmacKeyState $) {
+        this.accessId = $.accessId;
+        this.project = $.project;
+        this.secret = $.secret;
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.state = $.state;
+        this.timeCreated = $.timeCreated;
+        this.updated = $.updated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HmacKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> secret;
-        private @Nullable Output<String> serviceAccountEmail;
-        private @Nullable Output<String> state;
-        private @Nullable Output<String> timeCreated;
-        private @Nullable Output<String> updated;
+        private HmacKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new HmacKeyState();
         }
 
         public Builder(HmacKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessId = defaults.accessId;
-    	      this.project = defaults.project;
-    	      this.secret = defaults.secret;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.state = defaults.state;
-    	      this.timeCreated = defaults.timeCreated;
-    	      this.updated = defaults.updated;
+            $ = new HmacKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessId(@Nullable Output<String> accessId) {
-            this.accessId = accessId;
+            $.accessId = accessId;
             return this;
         }
-        public Builder accessId(@Nullable String accessId) {
-            this.accessId = Codegen.ofNullable(accessId);
-            return this;
+
+        public Builder accessId(String accessId) {
+            return accessId(Output.of(accessId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = serviceAccountEmail;
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
-            return this;
+
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(String state) {
+            return state(Output.of(state));
         }
+
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
-            this.timeCreated = timeCreated;
+            $.timeCreated = timeCreated;
             return this;
         }
-        public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = Codegen.ofNullable(timeCreated);
-            return this;
+
+        public Builder timeCreated(String timeCreated) {
+            return timeCreated(Output.of(timeCreated));
         }
+
         public Builder updated(@Nullable Output<String> updated) {
-            this.updated = updated;
+            $.updated = updated;
             return this;
         }
-        public Builder updated(@Nullable String updated) {
-            this.updated = Codegen.ofNullable(updated);
-            return this;
-        }        public HmacKeyState build() {
-            return new HmacKeyState(accessId, project, secret, serviceAccountEmail, state, timeCreated, updated);
+
+        public Builder updated(String updated) {
+            return updated(Output.of(updated));
+        }
+
+        public HmacKeyState build() {
+            return $;
         }
     }
+
 }

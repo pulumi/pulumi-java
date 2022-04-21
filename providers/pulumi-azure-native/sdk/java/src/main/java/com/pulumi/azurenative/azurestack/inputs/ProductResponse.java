@@ -29,10 +29,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="billingPartNumber")
-      private final @Nullable String billingPartNumber;
+    private @Nullable String billingPartNumber;
 
     public Optional<String> billingPartNumber() {
-        return this.billingPartNumber == null ? Optional.empty() : Optional.ofNullable(this.billingPartNumber);
+        return Optional.ofNullable(this.billingPartNumber);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compatibility")
-      private final @Nullable CompatibilityResponse compatibility;
+    private @Nullable CompatibilityResponse compatibility;
 
     public Optional<CompatibilityResponse> compatibility() {
-        return this.compatibility == null ? Optional.empty() : Optional.ofNullable(this.compatibility);
+        return Optional.ofNullable(this.compatibility);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable String etag;
+    private @Nullable String etag;
 
     public Optional<String> etag() {
-        return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="galleryItemIdentity")
-      private final @Nullable String galleryItemIdentity;
+    private @Nullable String galleryItemIdentity;
 
     public Optional<String> galleryItemIdentity() {
-        return this.galleryItemIdentity == null ? Optional.empty() : Optional.ofNullable(this.galleryItemIdentity);
+        return Optional.ofNullable(this.galleryItemIdentity);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iconUris")
-      private final @Nullable IconUrisResponse iconUris;
+    private @Nullable IconUrisResponse iconUris;
 
     public Optional<IconUrisResponse> iconUris() {
-        return this.iconUris == null ? Optional.empty() : Optional.ofNullable(this.iconUris);
+        return Optional.ofNullable(this.iconUris);
     }
 
     /**
@@ -106,7 +106,7 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -117,10 +117,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="legalTerms")
-      private final @Nullable String legalTerms;
+    private @Nullable String legalTerms;
 
     public Optional<String> legalTerms() {
-        return this.legalTerms == null ? Optional.empty() : Optional.ofNullable(this.legalTerms);
+        return Optional.ofNullable(this.legalTerms);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="links")
-      private final @Nullable List<ProductLinkResponse> links;
+    private @Nullable List<ProductLinkResponse> links;
 
-    public List<ProductLinkResponse> links() {
-        return this.links == null ? List.of() : this.links;
+    public Optional<List<ProductLinkResponse>> links() {
+        return Optional.ofNullable(this.links);
     }
 
     /**
@@ -139,7 +139,7 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -150,10 +150,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="offer")
-      private final @Nullable String offer;
+    private @Nullable String offer;
 
     public Optional<String> offer() {
-        return this.offer == null ? Optional.empty() : Optional.ofNullable(this.offer);
+        return Optional.ofNullable(this.offer);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="offerVersion")
-      private final @Nullable String offerVersion;
+    private @Nullable String offerVersion;
 
     public Optional<String> offerVersion() {
-        return this.offerVersion == null ? Optional.empty() : Optional.ofNullable(this.offerVersion);
+        return Optional.ofNullable(this.offerVersion);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="payloadLength")
-      private final @Nullable Double payloadLength;
+    private @Nullable Double payloadLength;
 
     public Optional<Double> payloadLength() {
-        return this.payloadLength == null ? Optional.empty() : Optional.ofNullable(this.payloadLength);
+        return Optional.ofNullable(this.payloadLength);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privacyPolicy")
-      private final @Nullable String privacyPolicy;
+    private @Nullable String privacyPolicy;
 
     public Optional<String> privacyPolicy() {
-        return this.privacyPolicy == null ? Optional.empty() : Optional.ofNullable(this.privacyPolicy);
+        return Optional.ofNullable(this.privacyPolicy);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="productKind")
-      private final @Nullable String productKind;
+    private @Nullable String productKind;
 
     public Optional<String> productKind() {
-        return this.productKind == null ? Optional.empty() : Optional.ofNullable(this.productKind);
+        return Optional.ofNullable(this.productKind);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="productProperties")
-      private final @Nullable ProductPropertiesResponse productProperties;
+    private @Nullable ProductPropertiesResponse productProperties;
 
     public Optional<ProductPropertiesResponse> productProperties() {
-        return this.productProperties == null ? Optional.empty() : Optional.ofNullable(this.productProperties);
+        return Optional.ofNullable(this.productProperties);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publisherDisplayName")
-      private final @Nullable String publisherDisplayName;
+    private @Nullable String publisherDisplayName;
 
     public Optional<String> publisherDisplayName() {
-        return this.publisherDisplayName == null ? Optional.empty() : Optional.ofNullable(this.publisherDisplayName);
+        return Optional.ofNullable(this.publisherDisplayName);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publisherIdentifier")
-      private final @Nullable String publisherIdentifier;
+    private @Nullable String publisherIdentifier;
 
     public Optional<String> publisherIdentifier() {
-        return this.publisherIdentifier == null ? Optional.empty() : Optional.ofNullable(this.publisherIdentifier);
+        return Optional.ofNullable(this.publisherIdentifier);
     }
 
     /**
@@ -238,10 +238,10 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable String sku;
+    private @Nullable String sku;
 
     public Optional<String> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -249,7 +249,7 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -260,238 +260,177 @@ public final class ProductResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vmExtensionType")
-      private final @Nullable String vmExtensionType;
+    private @Nullable String vmExtensionType;
 
     public Optional<String> vmExtensionType() {
-        return this.vmExtensionType == null ? Optional.empty() : Optional.ofNullable(this.vmExtensionType);
+        return Optional.ofNullable(this.vmExtensionType);
     }
 
-    public ProductResponse(
-        @Nullable String billingPartNumber,
-        @Nullable CompatibilityResponse compatibility,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String etag,
-        @Nullable String galleryItemIdentity,
-        @Nullable IconUrisResponse iconUris,
-        String id,
-        @Nullable String legalTerms,
-        @Nullable List<ProductLinkResponse> links,
-        String name,
-        @Nullable String offer,
-        @Nullable String offerVersion,
-        @Nullable Double payloadLength,
-        @Nullable String privacyPolicy,
-        @Nullable String productKind,
-        @Nullable ProductPropertiesResponse productProperties,
-        @Nullable String publisherDisplayName,
-        @Nullable String publisherIdentifier,
-        @Nullable String sku,
-        String type,
-        @Nullable String vmExtensionType) {
-        this.billingPartNumber = billingPartNumber;
-        this.compatibility = compatibility;
-        this.description = description;
-        this.displayName = displayName;
-        this.etag = etag;
-        this.galleryItemIdentity = galleryItemIdentity;
-        this.iconUris = iconUris;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.legalTerms = legalTerms;
-        this.links = links;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.offer = offer;
-        this.offerVersion = offerVersion;
-        this.payloadLength = payloadLength;
-        this.privacyPolicy = privacyPolicy;
-        this.productKind = productKind;
-        this.productProperties = productProperties;
-        this.publisherDisplayName = publisherDisplayName;
-        this.publisherIdentifier = publisherIdentifier;
-        this.sku = sku;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.vmExtensionType = vmExtensionType;
-    }
+    private ProductResponse() {}
 
-    private ProductResponse() {
-        this.billingPartNumber = null;
-        this.compatibility = null;
-        this.description = null;
-        this.displayName = null;
-        this.etag = null;
-        this.galleryItemIdentity = null;
-        this.iconUris = null;
-        this.id = null;
-        this.legalTerms = null;
-        this.links = List.of();
-        this.name = null;
-        this.offer = null;
-        this.offerVersion = null;
-        this.payloadLength = null;
-        this.privacyPolicy = null;
-        this.productKind = null;
-        this.productProperties = null;
-        this.publisherDisplayName = null;
-        this.publisherIdentifier = null;
-        this.sku = null;
-        this.type = null;
-        this.vmExtensionType = null;
+    private ProductResponse(ProductResponse $) {
+        this.billingPartNumber = $.billingPartNumber;
+        this.compatibility = $.compatibility;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.etag = $.etag;
+        this.galleryItemIdentity = $.galleryItemIdentity;
+        this.iconUris = $.iconUris;
+        this.id = $.id;
+        this.legalTerms = $.legalTerms;
+        this.links = $.links;
+        this.name = $.name;
+        this.offer = $.offer;
+        this.offerVersion = $.offerVersion;
+        this.payloadLength = $.payloadLength;
+        this.privacyPolicy = $.privacyPolicy;
+        this.productKind = $.productKind;
+        this.productProperties = $.productProperties;
+        this.publisherDisplayName = $.publisherDisplayName;
+        this.publisherIdentifier = $.publisherIdentifier;
+        this.sku = $.sku;
+        this.type = $.type;
+        this.vmExtensionType = $.vmExtensionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String billingPartNumber;
-        private @Nullable CompatibilityResponse compatibility;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable String etag;
-        private @Nullable String galleryItemIdentity;
-        private @Nullable IconUrisResponse iconUris;
-        private String id;
-        private @Nullable String legalTerms;
-        private @Nullable List<ProductLinkResponse> links;
-        private String name;
-        private @Nullable String offer;
-        private @Nullable String offerVersion;
-        private @Nullable Double payloadLength;
-        private @Nullable String privacyPolicy;
-        private @Nullable String productKind;
-        private @Nullable ProductPropertiesResponse productProperties;
-        private @Nullable String publisherDisplayName;
-        private @Nullable String publisherIdentifier;
-        private @Nullable String sku;
-        private String type;
-        private @Nullable String vmExtensionType;
+        private ProductResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductResponse();
         }
 
         public Builder(ProductResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingPartNumber = defaults.billingPartNumber;
-    	      this.compatibility = defaults.compatibility;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.etag = defaults.etag;
-    	      this.galleryItemIdentity = defaults.galleryItemIdentity;
-    	      this.iconUris = defaults.iconUris;
-    	      this.id = defaults.id;
-    	      this.legalTerms = defaults.legalTerms;
-    	      this.links = defaults.links;
-    	      this.name = defaults.name;
-    	      this.offer = defaults.offer;
-    	      this.offerVersion = defaults.offerVersion;
-    	      this.payloadLength = defaults.payloadLength;
-    	      this.privacyPolicy = defaults.privacyPolicy;
-    	      this.productKind = defaults.productKind;
-    	      this.productProperties = defaults.productProperties;
-    	      this.publisherDisplayName = defaults.publisherDisplayName;
-    	      this.publisherIdentifier = defaults.publisherIdentifier;
-    	      this.sku = defaults.sku;
-    	      this.type = defaults.type;
-    	      this.vmExtensionType = defaults.vmExtensionType;
+            $ = new ProductResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder billingPartNumber(@Nullable String billingPartNumber) {
-            this.billingPartNumber = billingPartNumber;
+            $.billingPartNumber = billingPartNumber;
             return this;
         }
+
         public Builder compatibility(@Nullable CompatibilityResponse compatibility) {
-            this.compatibility = compatibility;
+            $.compatibility = compatibility;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder etag(@Nullable String etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
+
         public Builder galleryItemIdentity(@Nullable String galleryItemIdentity) {
-            this.galleryItemIdentity = galleryItemIdentity;
+            $.galleryItemIdentity = galleryItemIdentity;
             return this;
         }
+
         public Builder iconUris(@Nullable IconUrisResponse iconUris) {
-            this.iconUris = iconUris;
+            $.iconUris = iconUris;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder legalTerms(@Nullable String legalTerms) {
-            this.legalTerms = legalTerms;
+            $.legalTerms = legalTerms;
             return this;
         }
+
         public Builder links(@Nullable List<ProductLinkResponse> links) {
-            this.links = links;
+            $.links = links;
             return this;
         }
+
         public Builder links(ProductLinkResponse... links) {
             return links(List.of(links));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder offer(@Nullable String offer) {
-            this.offer = offer;
+            $.offer = offer;
             return this;
         }
+
         public Builder offerVersion(@Nullable String offerVersion) {
-            this.offerVersion = offerVersion;
+            $.offerVersion = offerVersion;
             return this;
         }
+
         public Builder payloadLength(@Nullable Double payloadLength) {
-            this.payloadLength = payloadLength;
+            $.payloadLength = payloadLength;
             return this;
         }
+
         public Builder privacyPolicy(@Nullable String privacyPolicy) {
-            this.privacyPolicy = privacyPolicy;
+            $.privacyPolicy = privacyPolicy;
             return this;
         }
+
         public Builder productKind(@Nullable String productKind) {
-            this.productKind = productKind;
+            $.productKind = productKind;
             return this;
         }
+
         public Builder productProperties(@Nullable ProductPropertiesResponse productProperties) {
-            this.productProperties = productProperties;
+            $.productProperties = productProperties;
             return this;
         }
+
         public Builder publisherDisplayName(@Nullable String publisherDisplayName) {
-            this.publisherDisplayName = publisherDisplayName;
+            $.publisherDisplayName = publisherDisplayName;
             return this;
         }
+
         public Builder publisherIdentifier(@Nullable String publisherIdentifier) {
-            this.publisherIdentifier = publisherIdentifier;
+            $.publisherIdentifier = publisherIdentifier;
             return this;
         }
+
         public Builder sku(@Nullable String sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder vmExtensionType(@Nullable String vmExtensionType) {
-            this.vmExtensionType = vmExtensionType;
+            $.vmExtensionType = vmExtensionType;
             return this;
-        }        public ProductResponse build() {
-            return new ProductResponse(billingPartNumber, compatibility, description, displayName, etag, galleryItemIdentity, iconUris, id, legalTerms, links, name, offer, offerVersion, payloadLength, privacyPolicy, productKind, productProperties, publisherDisplayName, publisherIdentifier, sku, type, vmExtensionType);
+        }
+
+        public ProductResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

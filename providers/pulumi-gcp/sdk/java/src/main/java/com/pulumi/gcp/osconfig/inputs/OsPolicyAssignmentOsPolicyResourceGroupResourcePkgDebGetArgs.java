@@ -5,10 +5,10 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs 
      * 
      */
     @Import(name="pullDeps")
-      private final @Nullable Output<Boolean> pullDeps;
+    private @Nullable Output<Boolean> pullDeps;
 
-    public Output<Boolean> pullDeps() {
-        return this.pullDeps == null ? Codegen.empty() : this.pullDeps;
+    public Optional<Output<Boolean>> pullDeps() {
+        return Optional.ofNullable(this.pullDeps);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs 
      * 
      */
     @Import(name="source", required=true)
-      private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs> source;
+    private Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs> source;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs> source() {
         return this.source;
     }
 
-    public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs(
-        @Nullable Output<Boolean> pullDeps,
-        Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs> source) {
-        this.pullDeps = pullDeps;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs() {}
 
-    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs() {
-        this.pullDeps = Codegen.empty();
-        this.source = Codegen.empty();
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs $) {
+        this.pullDeps = $.pullDeps;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> pullDeps;
-        private Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs> source;
+        private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs();
         }
 
         public Builder(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pullDeps = defaults.pullDeps;
-    	      this.source = defaults.source;
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pullDeps(@Nullable Output<Boolean> pullDeps) {
-            this.pullDeps = pullDeps;
+            $.pullDeps = pullDeps;
             return this;
         }
-        public Builder pullDeps(@Nullable Boolean pullDeps) {
-            this.pullDeps = Codegen.ofNullable(pullDeps);
-            return this;
+
+        public Builder pullDeps(Boolean pullDeps) {
+            return pullDeps(Output.of(pullDeps));
         }
+
         public Builder source(Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGetArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs build() {
-            return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs(pullDeps, source);
+            return source(Output.of(source));
+        }
+
+        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

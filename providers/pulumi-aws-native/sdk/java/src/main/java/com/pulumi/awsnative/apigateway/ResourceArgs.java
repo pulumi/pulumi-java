@@ -5,7 +5,6 @@ package com.pulumi.awsnative.apigateway;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentId", required=true)
-      private final Output<String> parentId;
+    private Output<String> parentId;
 
     public Output<String> parentId() {
         return this.parentId;
@@ -30,7 +29,7 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pathPart", required=true)
-      private final Output<String> pathPart;
+    private Output<String> pathPart;
 
     public Output<String> pathPart() {
         return this.pathPart;
@@ -41,76 +40,71 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restApiId", required=true)
-      private final Output<String> restApiId;
+    private Output<String> restApiId;
 
     public Output<String> restApiId() {
         return this.restApiId;
     }
 
-    public ResourceArgs(
-        Output<String> parentId,
-        Output<String> pathPart,
-        Output<String> restApiId) {
-        this.parentId = Objects.requireNonNull(parentId, "expected parameter 'parentId' to be non-null");
-        this.pathPart = Objects.requireNonNull(pathPart, "expected parameter 'pathPart' to be non-null");
-        this.restApiId = Objects.requireNonNull(restApiId, "expected parameter 'restApiId' to be non-null");
-    }
+    private ResourceArgs() {}
 
-    private ResourceArgs() {
-        this.parentId = Codegen.empty();
-        this.pathPart = Codegen.empty();
-        this.restApiId = Codegen.empty();
+    private ResourceArgs(ResourceArgs $) {
+        this.parentId = $.parentId;
+        this.pathPart = $.pathPart;
+        this.restApiId = $.restApiId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> parentId;
-        private Output<String> pathPart;
-        private Output<String> restApiId;
+        private ResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceArgs();
         }
 
         public Builder(ResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parentId = defaults.parentId;
-    	      this.pathPart = defaults.pathPart;
-    	      this.restApiId = defaults.restApiId;
+            $ = new ResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parentId(Output<String> parentId) {
-            this.parentId = Objects.requireNonNull(parentId);
+            $.parentId = parentId;
             return this;
         }
+
         public Builder parentId(String parentId) {
-            this.parentId = Output.of(Objects.requireNonNull(parentId));
-            return this;
+            return parentId(Output.of(parentId));
         }
+
         public Builder pathPart(Output<String> pathPart) {
-            this.pathPart = Objects.requireNonNull(pathPart);
+            $.pathPart = pathPart;
             return this;
         }
+
         public Builder pathPart(String pathPart) {
-            this.pathPart = Output.of(Objects.requireNonNull(pathPart));
-            return this;
+            return pathPart(Output.of(pathPart));
         }
+
         public Builder restApiId(Output<String> restApiId) {
-            this.restApiId = Objects.requireNonNull(restApiId);
+            $.restApiId = restApiId;
             return this;
         }
+
         public Builder restApiId(String restApiId) {
-            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
-            return this;
-        }        public ResourceArgs build() {
-            return new ResourceArgs(parentId, pathPart, restApiId);
+            return restApiId(Output.of(restApiId));
+        }
+
+        public ResourceArgs build() {
+            $.parentId = Objects.requireNonNull($.parentId, "expected parameter 'parentId' to be non-null");
+            $.pathPart = Objects.requireNonNull($.pathPart, "expected parameter 'pathPart' to be non-null");
+            $.restApiId = Objects.requireNonNull($.restApiId, "expected parameter 'restApiId' to be non-null");
+            return $;
         }
     }
+
 }

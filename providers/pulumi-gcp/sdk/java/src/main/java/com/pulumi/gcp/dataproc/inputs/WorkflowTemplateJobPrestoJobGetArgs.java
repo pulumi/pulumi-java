@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPrestoJobLoggingConfigGetArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPrestoJobQueryListGetArgs;
 import java.lang.Boolean;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="clientTags")
-      private final @Nullable Output<List<String>> clientTags;
+    private @Nullable Output<List<String>> clientTags;
 
-    public Output<List<String>> clientTags() {
-        return this.clientTags == null ? Codegen.empty() : this.clientTags;
+    public Optional<Output<List<String>>> clientTags() {
+        return Optional.ofNullable(this.clientTags);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="continueOnFailure")
-      private final @Nullable Output<Boolean> continueOnFailure;
+    private @Nullable Output<Boolean> continueOnFailure;
 
-    public Output<Boolean> continueOnFailure() {
-        return this.continueOnFailure == null ? Codegen.empty() : this.continueOnFailure;
+    public Optional<Output<Boolean>> continueOnFailure() {
+        return Optional.ofNullable(this.continueOnFailure);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="loggingConfig")
-      private final @Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig;
+    private @Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig;
 
-    public Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig() {
-        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
+    public Optional<Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs>> loggingConfig() {
+        return Optional.ofNullable(this.loggingConfig);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="outputFormat")
-      private final @Nullable Output<String> outputFormat;
+    private @Nullable Output<String> outputFormat;
 
-    public Output<String> outputFormat() {
-        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
+    public Optional<Output<String>> outputFormat() {
+        return Optional.ofNullable(this.outputFormat);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="queryFileUri")
-      private final @Nullable Output<String> queryFileUri;
+    private @Nullable Output<String> queryFileUri;
 
-    public Output<String> queryFileUri() {
-        return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
+    public Optional<Output<String>> queryFileUri() {
+        return Optional.ofNullable(this.queryFileUri);
     }
 
     /**
@@ -91,131 +91,112 @@ public final class WorkflowTemplateJobPrestoJobGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="queryList")
-      private final @Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList;
+    private @Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList;
 
-    public Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList() {
-        return this.queryList == null ? Codegen.empty() : this.queryList;
+    public Optional<Output<WorkflowTemplateJobPrestoJobQueryListGetArgs>> queryList() {
+        return Optional.ofNullable(this.queryList);
     }
 
-    public WorkflowTemplateJobPrestoJobGetArgs(
-        @Nullable Output<List<String>> clientTags,
-        @Nullable Output<Boolean> continueOnFailure,
-        @Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig,
-        @Nullable Output<String> outputFormat,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<String> queryFileUri,
-        @Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList) {
-        this.clientTags = clientTags;
-        this.continueOnFailure = continueOnFailure;
-        this.loggingConfig = loggingConfig;
-        this.outputFormat = outputFormat;
-        this.properties = properties;
-        this.queryFileUri = queryFileUri;
-        this.queryList = queryList;
-    }
+    private WorkflowTemplateJobPrestoJobGetArgs() {}
 
-    private WorkflowTemplateJobPrestoJobGetArgs() {
-        this.clientTags = Codegen.empty();
-        this.continueOnFailure = Codegen.empty();
-        this.loggingConfig = Codegen.empty();
-        this.outputFormat = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.queryFileUri = Codegen.empty();
-        this.queryList = Codegen.empty();
+    private WorkflowTemplateJobPrestoJobGetArgs(WorkflowTemplateJobPrestoJobGetArgs $) {
+        this.clientTags = $.clientTags;
+        this.continueOnFailure = $.continueOnFailure;
+        this.loggingConfig = $.loggingConfig;
+        this.outputFormat = $.outputFormat;
+        this.properties = $.properties;
+        this.queryFileUri = $.queryFileUri;
+        this.queryList = $.queryList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateJobPrestoJobGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> clientTags;
-        private @Nullable Output<Boolean> continueOnFailure;
-        private @Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig;
-        private @Nullable Output<String> outputFormat;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<String> queryFileUri;
-        private @Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList;
+        private WorkflowTemplateJobPrestoJobGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateJobPrestoJobGetArgs();
         }
 
         public Builder(WorkflowTemplateJobPrestoJobGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientTags = defaults.clientTags;
-    	      this.continueOnFailure = defaults.continueOnFailure;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.outputFormat = defaults.outputFormat;
-    	      this.properties = defaults.properties;
-    	      this.queryFileUri = defaults.queryFileUri;
-    	      this.queryList = defaults.queryList;
+            $ = new WorkflowTemplateJobPrestoJobGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientTags(@Nullable Output<List<String>> clientTags) {
-            this.clientTags = clientTags;
+            $.clientTags = clientTags;
             return this;
         }
-        public Builder clientTags(@Nullable List<String> clientTags) {
-            this.clientTags = Codegen.ofNullable(clientTags);
-            return this;
+
+        public Builder clientTags(List<String> clientTags) {
+            return clientTags(Output.of(clientTags));
         }
+
         public Builder clientTags(String... clientTags) {
             return clientTags(List.of(clientTags));
         }
+
         public Builder continueOnFailure(@Nullable Output<Boolean> continueOnFailure) {
-            this.continueOnFailure = continueOnFailure;
+            $.continueOnFailure = continueOnFailure;
             return this;
         }
-        public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
-            this.continueOnFailure = Codegen.ofNullable(continueOnFailure);
-            return this;
+
+        public Builder continueOnFailure(Boolean continueOnFailure) {
+            return continueOnFailure(Output.of(continueOnFailure));
         }
+
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobPrestoJobLoggingConfigGetArgs> loggingConfig) {
-            this.loggingConfig = loggingConfig;
+            $.loggingConfig = loggingConfig;
             return this;
         }
-        public Builder loggingConfig(@Nullable WorkflowTemplateJobPrestoJobLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Codegen.ofNullable(loggingConfig);
-            return this;
+
+        public Builder loggingConfig(WorkflowTemplateJobPrestoJobLoggingConfigGetArgs loggingConfig) {
+            return loggingConfig(Output.of(loggingConfig));
         }
+
         public Builder outputFormat(@Nullable Output<String> outputFormat) {
-            this.outputFormat = outputFormat;
+            $.outputFormat = outputFormat;
             return this;
         }
-        public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Codegen.ofNullable(outputFormat);
-            return this;
+
+        public Builder outputFormat(String outputFormat) {
+            return outputFormat(Output.of(outputFormat));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
-            this.queryFileUri = queryFileUri;
+            $.queryFileUri = queryFileUri;
             return this;
         }
-        public Builder queryFileUri(@Nullable String queryFileUri) {
-            this.queryFileUri = Codegen.ofNullable(queryFileUri);
-            return this;
+
+        public Builder queryFileUri(String queryFileUri) {
+            return queryFileUri(Output.of(queryFileUri));
         }
+
         public Builder queryList(@Nullable Output<WorkflowTemplateJobPrestoJobQueryListGetArgs> queryList) {
-            this.queryList = queryList;
+            $.queryList = queryList;
             return this;
         }
-        public Builder queryList(@Nullable WorkflowTemplateJobPrestoJobQueryListGetArgs queryList) {
-            this.queryList = Codegen.ofNullable(queryList);
-            return this;
-        }        public WorkflowTemplateJobPrestoJobGetArgs build() {
-            return new WorkflowTemplateJobPrestoJobGetArgs(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);
+
+        public Builder queryList(WorkflowTemplateJobPrestoJobQueryListGetArgs queryList) {
+            return queryList(Output.of(queryList));
+        }
+
+        public WorkflowTemplateJobPrestoJobGetArgs build() {
+            return $;
         }
     }
+
 }

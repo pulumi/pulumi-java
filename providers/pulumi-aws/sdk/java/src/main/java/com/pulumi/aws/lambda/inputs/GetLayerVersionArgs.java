@@ -20,10 +20,10 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compatibleArchitecture")
-      private final @Nullable String compatibleArchitecture;
+    private @Nullable String compatibleArchitecture;
 
     public Optional<String> compatibleArchitecture() {
-        return this.compatibleArchitecture == null ? Optional.empty() : Optional.ofNullable(this.compatibleArchitecture);
+        return Optional.ofNullable(this.compatibleArchitecture);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compatibleRuntime")
-      private final @Nullable String compatibleRuntime;
+    private @Nullable String compatibleRuntime;
 
     public Optional<String> compatibleRuntime() {
-        return this.compatibleRuntime == null ? Optional.empty() : Optional.ofNullable(this.compatibleRuntime);
+        return Optional.ofNullable(this.compatibleRuntime);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="layerName", required=true)
-      private final String layerName;
+    private String layerName;
 
     public String layerName() {
         return this.layerName;
@@ -53,73 +53,63 @@ public final class GetLayerVersionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Integer version;
+    private @Nullable Integer version;
 
     public Optional<Integer> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GetLayerVersionArgs(
-        @Nullable String compatibleArchitecture,
-        @Nullable String compatibleRuntime,
-        String layerName,
-        @Nullable Integer version) {
-        this.compatibleArchitecture = compatibleArchitecture;
-        this.compatibleRuntime = compatibleRuntime;
-        this.layerName = Objects.requireNonNull(layerName, "expected parameter 'layerName' to be non-null");
-        this.version = version;
-    }
+    private GetLayerVersionArgs() {}
 
-    private GetLayerVersionArgs() {
-        this.compatibleArchitecture = null;
-        this.compatibleRuntime = null;
-        this.layerName = null;
-        this.version = null;
+    private GetLayerVersionArgs(GetLayerVersionArgs $) {
+        this.compatibleArchitecture = $.compatibleArchitecture;
+        this.compatibleRuntime = $.compatibleRuntime;
+        this.layerName = $.layerName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLayerVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String compatibleArchitecture;
-        private @Nullable String compatibleRuntime;
-        private String layerName;
-        private @Nullable Integer version;
+        private GetLayerVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLayerVersionArgs();
         }
 
         public Builder(GetLayerVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compatibleArchitecture = defaults.compatibleArchitecture;
-    	      this.compatibleRuntime = defaults.compatibleRuntime;
-    	      this.layerName = defaults.layerName;
-    	      this.version = defaults.version;
+            $ = new GetLayerVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compatibleArchitecture(@Nullable String compatibleArchitecture) {
-            this.compatibleArchitecture = compatibleArchitecture;
+            $.compatibleArchitecture = compatibleArchitecture;
             return this;
         }
+
         public Builder compatibleRuntime(@Nullable String compatibleRuntime) {
-            this.compatibleRuntime = compatibleRuntime;
+            $.compatibleRuntime = compatibleRuntime;
             return this;
         }
+
         public Builder layerName(String layerName) {
-            this.layerName = Objects.requireNonNull(layerName);
+            $.layerName = layerName;
             return this;
         }
+
         public Builder version(@Nullable Integer version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GetLayerVersionArgs build() {
-            return new GetLayerVersionArgs(compatibleArchitecture, compatibleRuntime, layerName, version);
+        }
+
+        public GetLayerVersionArgs build() {
+            $.layerName = Objects.requireNonNull($.layerName, "expected parameter 'layerName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PodTemplateSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class PodTemplateSpecArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<PodSpecArgs> spec;
+    private @Nullable Output<PodSpecArgs> spec;
 
-    public Output<PodSpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<PodSpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
-    public PodTemplateSpecArgs(
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<PodSpecArgs> spec) {
-        this.metadata = metadata;
-        this.spec = spec;
-    }
+    private PodTemplateSpecArgs() {}
 
-    private PodTemplateSpecArgs() {
-        this.metadata = Codegen.empty();
-        this.spec = Codegen.empty();
+    private PodTemplateSpecArgs(PodTemplateSpecArgs $) {
+        this.metadata = $.metadata;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodTemplateSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<PodSpecArgs> spec;
+        private PodTemplateSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodTemplateSpecArgs();
         }
 
         public Builder(PodTemplateSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.spec = defaults.spec;
+            $ = new PodTemplateSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder spec(@Nullable Output<PodSpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable PodSpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
-        }        public PodTemplateSpecArgs build() {
-            return new PodTemplateSpecArgs(metadata, spec);
+
+        public Builder spec(PodSpecArgs spec) {
+            return spec(Output.of(spec));
+        }
+
+        public PodTemplateSpecArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alg", required=true)
-      private final String alg;
+    private String alg;
 
     public String alg() {
         return this.alg;
@@ -33,7 +33,7 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kid", required=true)
-      private final String kid;
+    private String kid;
 
     public String kid() {
         return this.kid;
@@ -45,7 +45,7 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -56,7 +56,7 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="x", required=true)
-      private final String x;
+    private String x;
 
     public String x() {
         return this.x;
@@ -67,82 +67,73 @@ public final class EccTokenKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="y", required=true)
-      private final String y;
+    private String y;
 
     public String y() {
         return this.y;
     }
 
-    public EccTokenKeyResponse(
-        String alg,
-        String kid,
-        String type,
-        String x,
-        String y) {
-        this.alg = Objects.requireNonNull(alg, "expected parameter 'alg' to be non-null");
-        this.kid = Objects.requireNonNull(kid, "expected parameter 'kid' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.x = Objects.requireNonNull(x, "expected parameter 'x' to be non-null");
-        this.y = Objects.requireNonNull(y, "expected parameter 'y' to be non-null");
-    }
+    private EccTokenKeyResponse() {}
 
-    private EccTokenKeyResponse() {
-        this.alg = null;
-        this.kid = null;
-        this.type = null;
-        this.x = null;
-        this.y = null;
+    private EccTokenKeyResponse(EccTokenKeyResponse $) {
+        this.alg = $.alg;
+        this.kid = $.kid;
+        this.type = $.type;
+        this.x = $.x;
+        this.y = $.y;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EccTokenKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alg;
-        private String kid;
-        private String type;
-        private String x;
-        private String y;
+        private EccTokenKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EccTokenKeyResponse();
         }
 
         public Builder(EccTokenKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alg = defaults.alg;
-    	      this.kid = defaults.kid;
-    	      this.type = defaults.type;
-    	      this.x = defaults.x;
-    	      this.y = defaults.y;
+            $ = new EccTokenKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alg(String alg) {
-            this.alg = Objects.requireNonNull(alg);
+            $.alg = alg;
             return this;
         }
+
         public Builder kid(String kid) {
-            this.kid = Objects.requireNonNull(kid);
+            $.kid = kid;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder x(String x) {
-            this.x = Objects.requireNonNull(x);
+            $.x = x;
             return this;
         }
+
         public Builder y(String y) {
-            this.y = Objects.requireNonNull(y);
+            $.y = y;
             return this;
-        }        public EccTokenKeyResponse build() {
-            return new EccTokenKeyResponse(alg, kid, type, x, y);
+        }
+
+        public EccTokenKeyResponse build() {
+            $.alg = Objects.requireNonNull($.alg, "expected parameter 'alg' to be non-null");
+            $.kid = Objects.requireNonNull($.kid, "expected parameter 'kid' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            $.x = Objects.requireNonNull($.x, "expected parameter 'x' to be non-null");
+            $.y = Objects.requireNonNull($.y, "expected parameter 'y' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,11 +6,11 @@ package com.pulumi.aws.imagebuilder.inputs;
 import com.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="amiTags")
-      private final @Nullable Output<Map<String,String>> amiTags;
+    private @Nullable Output<Map<String,String>> amiTags;
 
-    public Output<Map<String,String>> amiTags() {
-        return this.amiTags == null ? Codegen.empty() : this.amiTags;
+    public Optional<Output<Map<String,String>>> amiTags() {
+        return Optional.ofNullable(this.amiTags);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="launchPermission")
-      private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
+    private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
 
-    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission() {
-        return this.launchPermission == null ? Codegen.empty() : this.launchPermission;
+    public Optional<Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs>> launchPermission() {
+        return Optional.ofNullable(this.launchPermission);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,118 +78,102 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * 
      */
     @Import(name="targetAccountIds")
-      private final @Nullable Output<List<String>> targetAccountIds;
+    private @Nullable Output<List<String>> targetAccountIds;
 
-    public Output<List<String>> targetAccountIds() {
-        return this.targetAccountIds == null ? Codegen.empty() : this.targetAccountIds;
+    public Optional<Output<List<String>>> targetAccountIds() {
+        return Optional.ofNullable(this.targetAccountIds);
     }
 
-    public DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs(
-        @Nullable Output<Map<String,String>> amiTags,
-        @Nullable Output<String> description,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> targetAccountIds) {
-        this.amiTags = amiTags;
-        this.description = description;
-        this.kmsKeyId = kmsKeyId;
-        this.launchPermission = launchPermission;
-        this.name = name;
-        this.targetAccountIds = targetAccountIds;
-    }
+    private DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs() {}
 
-    private DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs() {
-        this.amiTags = Codegen.empty();
-        this.description = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.launchPermission = Codegen.empty();
-        this.name = Codegen.empty();
-        this.targetAccountIds = Codegen.empty();
+    private DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs(DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs $) {
+        this.amiTags = $.amiTags;
+        this.description = $.description;
+        this.kmsKeyId = $.kmsKeyId;
+        this.launchPermission = $.launchPermission;
+        this.name = $.name;
+        this.targetAccountIds = $.targetAccountIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> amiTags;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> targetAccountIds;
+        private DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs();
         }
 
         public Builder(DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amiTags = defaults.amiTags;
-    	      this.description = defaults.description;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.launchPermission = defaults.launchPermission;
-    	      this.name = defaults.name;
-    	      this.targetAccountIds = defaults.targetAccountIds;
+            $ = new DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amiTags(@Nullable Output<Map<String,String>> amiTags) {
-            this.amiTags = amiTags;
+            $.amiTags = amiTags;
             return this;
         }
-        public Builder amiTags(@Nullable Map<String,String> amiTags) {
-            this.amiTags = Codegen.ofNullable(amiTags);
-            return this;
+
+        public Builder amiTags(Map<String,String> amiTags) {
+            return amiTags(Output.of(amiTags));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder launchPermission(@Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission) {
-            this.launchPermission = launchPermission;
+            $.launchPermission = launchPermission;
             return this;
         }
-        public Builder launchPermission(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs launchPermission) {
-            this.launchPermission = Codegen.ofNullable(launchPermission);
-            return this;
+
+        public Builder launchPermission(DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs launchPermission) {
+            return launchPermission(Output.of(launchPermission));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder targetAccountIds(@Nullable Output<List<String>> targetAccountIds) {
-            this.targetAccountIds = targetAccountIds;
+            $.targetAccountIds = targetAccountIds;
             return this;
         }
-        public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
-            this.targetAccountIds = Codegen.ofNullable(targetAccountIds);
-            return this;
+
+        public Builder targetAccountIds(List<String> targetAccountIds) {
+            return targetAccountIds(Output.of(targetAccountIds));
         }
+
         public Builder targetAccountIds(String... targetAccountIds) {
             return targetAccountIds(List.of(targetAccountIds));
-        }        public DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs build() {
-            return new DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs(amiTags, description, kmsKeyId, launchPermission, name, targetAccountIds);
+        }
+
+        public DistributionConfigurationDistributionAmiDistributionConfigurationGetArgs build() {
+            return $;
         }
     }
+
 }

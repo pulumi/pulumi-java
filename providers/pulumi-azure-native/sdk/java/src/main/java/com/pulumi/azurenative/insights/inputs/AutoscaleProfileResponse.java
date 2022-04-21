@@ -28,7 +28,7 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="capacity", required=true)
-      private final ScaleCapacityResponse capacity;
+    private ScaleCapacityResponse capacity;
 
     public ScaleCapacityResponse capacity() {
         return this.capacity;
@@ -39,10 +39,10 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fixedDate")
-      private final @Nullable TimeWindowResponse fixedDate;
+    private @Nullable TimeWindowResponse fixedDate;
 
     public Optional<TimeWindowResponse> fixedDate() {
-        return this.fixedDate == null ? Optional.empty() : Optional.ofNullable(this.fixedDate);
+        return Optional.ofNullable(this.fixedDate);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -61,10 +61,10 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable RecurrenceResponse recurrence;
+    private @Nullable RecurrenceResponse recurrence;
 
     public Optional<RecurrenceResponse> recurrence() {
-        return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
+        return Optional.ofNullable(this.recurrence);
     }
 
     /**
@@ -72,85 +72,75 @@ public final class AutoscaleProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rules", required=true)
-      private final List<ScaleRuleResponse> rules;
+    private List<ScaleRuleResponse> rules;
 
     public List<ScaleRuleResponse> rules() {
         return this.rules;
     }
 
-    public AutoscaleProfileResponse(
-        ScaleCapacityResponse capacity,
-        @Nullable TimeWindowResponse fixedDate,
-        String name,
-        @Nullable RecurrenceResponse recurrence,
-        List<ScaleRuleResponse> rules) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.fixedDate = fixedDate;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.recurrence = recurrence;
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-    }
+    private AutoscaleProfileResponse() {}
 
-    private AutoscaleProfileResponse() {
-        this.capacity = null;
-        this.fixedDate = null;
-        this.name = null;
-        this.recurrence = null;
-        this.rules = List.of();
+    private AutoscaleProfileResponse(AutoscaleProfileResponse $) {
+        this.capacity = $.capacity;
+        this.fixedDate = $.fixedDate;
+        this.name = $.name;
+        this.recurrence = $.recurrence;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ScaleCapacityResponse capacity;
-        private @Nullable TimeWindowResponse fixedDate;
-        private String name;
-        private @Nullable RecurrenceResponse recurrence;
-        private List<ScaleRuleResponse> rules;
+        private AutoscaleProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleProfileResponse();
         }
 
         public Builder(AutoscaleProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.fixedDate = defaults.fixedDate;
-    	      this.name = defaults.name;
-    	      this.recurrence = defaults.recurrence;
-    	      this.rules = defaults.rules;
+            $ = new AutoscaleProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(ScaleCapacityResponse capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder fixedDate(@Nullable TimeWindowResponse fixedDate) {
-            this.fixedDate = fixedDate;
+            $.fixedDate = fixedDate;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder recurrence(@Nullable RecurrenceResponse recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
         }
+
         public Builder rules(List<ScaleRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(ScaleRuleResponse... rules) {
             return rules(List.of(rules));
-        }        public AutoscaleProfileResponse build() {
-            return new AutoscaleProfileResponse(capacity, fixedDate, name, recurrence, rules);
+        }
+
+        public AutoscaleProfileResponse build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            return $;
         }
     }
+
 }

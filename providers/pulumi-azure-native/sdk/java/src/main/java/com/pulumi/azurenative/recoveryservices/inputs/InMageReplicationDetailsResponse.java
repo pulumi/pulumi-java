@@ -34,10 +34,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="activeSiteType")
-      private final @Nullable String activeSiteType;
+    private @Nullable String activeSiteType;
 
     public Optional<String> activeSiteType() {
-        return this.activeSiteType == null ? Optional.empty() : Optional.ofNullable(this.activeSiteType);
+        return Optional.ofNullable(this.activeSiteType);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="agentDetails")
-      private final @Nullable InMageAgentDetailsResponse agentDetails;
+    private @Nullable InMageAgentDetailsResponse agentDetails;
 
     public Optional<InMageAgentDetailsResponse> agentDetails() {
-        return this.agentDetails == null ? Optional.empty() : Optional.ofNullable(this.agentDetails);
+        return Optional.ofNullable(this.agentDetails);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="azureStorageAccountId")
-      private final @Nullable String azureStorageAccountId;
+    private @Nullable String azureStorageAccountId;
 
     public Optional<String> azureStorageAccountId() {
-        return this.azureStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.azureStorageAccountId);
+        return Optional.ofNullable(this.azureStorageAccountId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="compressedDataRateInMB")
-      private final @Nullable Double compressedDataRateInMB;
+    private @Nullable Double compressedDataRateInMB;
 
     public Optional<Double> compressedDataRateInMB() {
-        return this.compressedDataRateInMB == null ? Optional.empty() : Optional.ofNullable(this.compressedDataRateInMB);
+        return Optional.ofNullable(this.compressedDataRateInMB);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="consistencyPoints")
-      private final @Nullable Map<String,String> consistencyPoints;
+    private @Nullable Map<String,String> consistencyPoints;
 
-    public Map<String,String> consistencyPoints() {
-        return this.consistencyPoints == null ? Map.of() : this.consistencyPoints;
+    public Optional<Map<String,String>> consistencyPoints() {
+        return Optional.ofNullable(this.consistencyPoints);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="datastores")
-      private final @Nullable List<String> datastores;
+    private @Nullable List<String> datastores;
 
-    public List<String> datastores() {
-        return this.datastores == null ? List.of() : this.datastores;
+    public Optional<List<String>> datastores() {
+        return Optional.ofNullable(this.datastores);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="discoveryType")
-      private final @Nullable String discoveryType;
+    private @Nullable String discoveryType;
 
     public Optional<String> discoveryType() {
-        return this.discoveryType == null ? Optional.empty() : Optional.ofNullable(this.discoveryType);
+        return Optional.ofNullable(this.discoveryType);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="diskResized")
-      private final @Nullable String diskResized;
+    private @Nullable String diskResized;
 
     public Optional<String> diskResized() {
-        return this.diskResized == null ? Optional.empty() : Optional.ofNullable(this.diskResized);
+        return Optional.ofNullable(this.diskResized);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="infrastructureVmId")
-      private final @Nullable String infrastructureVmId;
+    private @Nullable String infrastructureVmId;
 
     public Optional<String> infrastructureVmId() {
-        return this.infrastructureVmId == null ? Optional.empty() : Optional.ofNullable(this.infrastructureVmId);
+        return Optional.ofNullable(this.infrastructureVmId);
     }
 
     /**
@@ -134,7 +134,7 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -145,10 +145,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastHeartbeat")
-      private final @Nullable String lastHeartbeat;
+    private @Nullable String lastHeartbeat;
 
     public Optional<String> lastHeartbeat() {
-        return this.lastHeartbeat == null ? Optional.empty() : Optional.ofNullable(this.lastHeartbeat);
+        return Optional.ofNullable(this.lastHeartbeat);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastRpoCalculatedTime")
-      private final @Nullable String lastRpoCalculatedTime;
+    private @Nullable String lastRpoCalculatedTime;
 
     public Optional<String> lastRpoCalculatedTime() {
-        return this.lastRpoCalculatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastRpoCalculatedTime);
+        return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="lastUpdateReceivedTime")
-      private final @Nullable String lastUpdateReceivedTime;
+    private @Nullable String lastUpdateReceivedTime;
 
     public Optional<String> lastUpdateReceivedTime() {
-        return this.lastUpdateReceivedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdateReceivedTime);
+        return Optional.ofNullable(this.lastUpdateReceivedTime);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="masterTargetId")
-      private final @Nullable String masterTargetId;
+    private @Nullable String masterTargetId;
 
     public Optional<String> masterTargetId() {
-        return this.masterTargetId == null ? Optional.empty() : Optional.ofNullable(this.masterTargetId);
+        return Optional.ofNullable(this.masterTargetId);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="multiVmGroupId")
-      private final @Nullable String multiVmGroupId;
+    private @Nullable String multiVmGroupId;
 
     public Optional<String> multiVmGroupId() {
-        return this.multiVmGroupId == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupId);
+        return Optional.ofNullable(this.multiVmGroupId);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="multiVmGroupName")
-      private final @Nullable String multiVmGroupName;
+    private @Nullable String multiVmGroupName;
 
     public Optional<String> multiVmGroupName() {
-        return this.multiVmGroupName == null ? Optional.empty() : Optional.ofNullable(this.multiVmGroupName);
+        return Optional.ofNullable(this.multiVmGroupName);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="multiVmSyncStatus")
-      private final @Nullable String multiVmSyncStatus;
+    private @Nullable String multiVmSyncStatus;
 
     public Optional<String> multiVmSyncStatus() {
-        return this.multiVmSyncStatus == null ? Optional.empty() : Optional.ofNullable(this.multiVmSyncStatus);
+        return Optional.ofNullable(this.multiVmSyncStatus);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="osDetails")
-      private final @Nullable OSDiskDetailsResponse osDetails;
+    private @Nullable OSDiskDetailsResponse osDetails;
 
     public Optional<OSDiskDetailsResponse> osDetails() {
-        return this.osDetails == null ? Optional.empty() : Optional.ofNullable(this.osDetails);
+        return Optional.ofNullable(this.osDetails);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="osVersion")
-      private final @Nullable String osVersion;
+    private @Nullable String osVersion;
 
     public Optional<String> osVersion() {
-        return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
+        return Optional.ofNullable(this.osVersion);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="processServerId")
-      private final @Nullable String processServerId;
+    private @Nullable String processServerId;
 
     public Optional<String> processServerId() {
-        return this.processServerId == null ? Optional.empty() : Optional.ofNullable(this.processServerId);
+        return Optional.ofNullable(this.processServerId);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protectedDisks")
-      private final @Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks;
+    private @Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks;
 
-    public List<InMageProtectedDiskDetailsResponse> protectedDisks() {
-        return this.protectedDisks == null ? List.of() : this.protectedDisks;
+    public Optional<List<InMageProtectedDiskDetailsResponse>> protectedDisks() {
+        return Optional.ofNullable(this.protectedDisks);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="protectionStage")
-      private final @Nullable String protectionStage;
+    private @Nullable String protectionStage;
 
     public Optional<String> protectionStage() {
-        return this.protectionStage == null ? Optional.empty() : Optional.ofNullable(this.protectionStage);
+        return Optional.ofNullable(this.protectionStage);
     }
 
     /**
@@ -288,10 +288,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="rebootAfterUpdateStatus")
-      private final @Nullable String rebootAfterUpdateStatus;
+    private @Nullable String rebootAfterUpdateStatus;
 
     public Optional<String> rebootAfterUpdateStatus() {
-        return this.rebootAfterUpdateStatus == null ? Optional.empty() : Optional.ofNullable(this.rebootAfterUpdateStatus);
+        return Optional.ofNullable(this.rebootAfterUpdateStatus);
     }
 
     /**
@@ -299,10 +299,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="replicaId")
-      private final @Nullable String replicaId;
+    private @Nullable String replicaId;
 
     public Optional<String> replicaId() {
-        return this.replicaId == null ? Optional.empty() : Optional.ofNullable(this.replicaId);
+        return Optional.ofNullable(this.replicaId);
     }
 
     /**
@@ -310,10 +310,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="resyncDetails")
-      private final @Nullable InitialReplicationDetailsResponse resyncDetails;
+    private @Nullable InitialReplicationDetailsResponse resyncDetails;
 
     public Optional<InitialReplicationDetailsResponse> resyncDetails() {
-        return this.resyncDetails == null ? Optional.empty() : Optional.ofNullable(this.resyncDetails);
+        return Optional.ofNullable(this.resyncDetails);
     }
 
     /**
@@ -321,10 +321,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="retentionWindowEnd")
-      private final @Nullable String retentionWindowEnd;
+    private @Nullable String retentionWindowEnd;
 
     public Optional<String> retentionWindowEnd() {
-        return this.retentionWindowEnd == null ? Optional.empty() : Optional.ofNullable(this.retentionWindowEnd);
+        return Optional.ofNullable(this.retentionWindowEnd);
     }
 
     /**
@@ -332,10 +332,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="retentionWindowStart")
-      private final @Nullable String retentionWindowStart;
+    private @Nullable String retentionWindowStart;
 
     public Optional<String> retentionWindowStart() {
-        return this.retentionWindowStart == null ? Optional.empty() : Optional.ofNullable(this.retentionWindowStart);
+        return Optional.ofNullable(this.retentionWindowStart);
     }
 
     /**
@@ -343,10 +343,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="rpoInSeconds")
-      private final @Nullable Double rpoInSeconds;
+    private @Nullable Double rpoInSeconds;
 
     public Optional<Double> rpoInSeconds() {
-        return this.rpoInSeconds == null ? Optional.empty() : Optional.ofNullable(this.rpoInSeconds);
+        return Optional.ofNullable(this.rpoInSeconds);
     }
 
     /**
@@ -354,10 +354,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sourceVmCpuCount")
-      private final @Nullable Integer sourceVmCpuCount;
+    private @Nullable Integer sourceVmCpuCount;
 
     public Optional<Integer> sourceVmCpuCount() {
-        return this.sourceVmCpuCount == null ? Optional.empty() : Optional.ofNullable(this.sourceVmCpuCount);
+        return Optional.ofNullable(this.sourceVmCpuCount);
     }
 
     /**
@@ -365,10 +365,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="sourceVmRamSizeInMB")
-      private final @Nullable Integer sourceVmRamSizeInMB;
+    private @Nullable Integer sourceVmRamSizeInMB;
 
     public Optional<Integer> sourceVmRamSizeInMB() {
-        return this.sourceVmRamSizeInMB == null ? Optional.empty() : Optional.ofNullable(this.sourceVmRamSizeInMB);
+        return Optional.ofNullable(this.sourceVmRamSizeInMB);
     }
 
     /**
@@ -376,10 +376,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="uncompressedDataRateInMB")
-      private final @Nullable Double uncompressedDataRateInMB;
+    private @Nullable Double uncompressedDataRateInMB;
 
     public Optional<Double> uncompressedDataRateInMB() {
-        return this.uncompressedDataRateInMB == null ? Optional.empty() : Optional.ofNullable(this.uncompressedDataRateInMB);
+        return Optional.ofNullable(this.uncompressedDataRateInMB);
     }
 
     /**
@@ -387,10 +387,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="vCenterInfrastructureId")
-      private final @Nullable String vCenterInfrastructureId;
+    private @Nullable String vCenterInfrastructureId;
 
     public Optional<String> vCenterInfrastructureId() {
-        return this.vCenterInfrastructureId == null ? Optional.empty() : Optional.ofNullable(this.vCenterInfrastructureId);
+        return Optional.ofNullable(this.vCenterInfrastructureId);
     }
 
     /**
@@ -398,10 +398,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="validationErrors")
-      private final @Nullable List<HealthErrorResponse> validationErrors;
+    private @Nullable List<HealthErrorResponse> validationErrors;
 
-    public List<HealthErrorResponse> validationErrors() {
-        return this.validationErrors == null ? List.of() : this.validationErrors;
+    public Optional<List<HealthErrorResponse>> validationErrors() {
+        return Optional.ofNullable(this.validationErrors);
     }
 
     /**
@@ -409,10 +409,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="vmId")
-      private final @Nullable String vmId;
+    private @Nullable String vmId;
 
     public Optional<String> vmId() {
-        return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
+        return Optional.ofNullable(this.vmId);
     }
 
     /**
@@ -420,10 +420,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="vmNics")
-      private final @Nullable List<VMNicDetailsResponse> vmNics;
+    private @Nullable List<VMNicDetailsResponse> vmNics;
 
-    public List<VMNicDetailsResponse> vmNics() {
-        return this.vmNics == null ? List.of() : this.vmNics;
+    public Optional<List<VMNicDetailsResponse>> vmNics() {
+        return Optional.ofNullable(this.vmNics);
     }
 
     /**
@@ -431,10 +431,10 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="vmProtectionState")
-      private final @Nullable String vmProtectionState;
+    private @Nullable String vmProtectionState;
 
     public Optional<String> vmProtectionState() {
-        return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
+        return Optional.ofNullable(this.vmProtectionState);
     }
 
     /**
@@ -442,391 +442,283 @@ public final class InMageReplicationDetailsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="vmProtectionStateDescription")
-      private final @Nullable String vmProtectionStateDescription;
+    private @Nullable String vmProtectionStateDescription;
 
     public Optional<String> vmProtectionStateDescription() {
-        return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
+        return Optional.ofNullable(this.vmProtectionStateDescription);
     }
 
-    public InMageReplicationDetailsResponse(
-        @Nullable String activeSiteType,
-        @Nullable InMageAgentDetailsResponse agentDetails,
-        @Nullable String azureStorageAccountId,
-        @Nullable Double compressedDataRateInMB,
-        @Nullable Map<String,String> consistencyPoints,
-        @Nullable List<String> datastores,
-        @Nullable String discoveryType,
-        @Nullable String diskResized,
-        @Nullable String infrastructureVmId,
-        String instanceType,
-        @Nullable String ipAddress,
-        @Nullable String lastHeartbeat,
-        @Nullable String lastRpoCalculatedTime,
-        @Nullable String lastUpdateReceivedTime,
-        @Nullable String masterTargetId,
-        @Nullable String multiVmGroupId,
-        @Nullable String multiVmGroupName,
-        @Nullable String multiVmSyncStatus,
-        @Nullable OSDiskDetailsResponse osDetails,
-        @Nullable String osVersion,
-        @Nullable String processServerId,
-        @Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks,
-        @Nullable String protectionStage,
-        @Nullable String rebootAfterUpdateStatus,
-        @Nullable String replicaId,
-        @Nullable InitialReplicationDetailsResponse resyncDetails,
-        @Nullable String retentionWindowEnd,
-        @Nullable String retentionWindowStart,
-        @Nullable Double rpoInSeconds,
-        @Nullable Integer sourceVmCpuCount,
-        @Nullable Integer sourceVmRamSizeInMB,
-        @Nullable Double uncompressedDataRateInMB,
-        @Nullable String vCenterInfrastructureId,
-        @Nullable List<HealthErrorResponse> validationErrors,
-        @Nullable String vmId,
-        @Nullable List<VMNicDetailsResponse> vmNics,
-        @Nullable String vmProtectionState,
-        @Nullable String vmProtectionStateDescription) {
-        this.activeSiteType = activeSiteType;
-        this.agentDetails = agentDetails;
-        this.azureStorageAccountId = azureStorageAccountId;
-        this.compressedDataRateInMB = compressedDataRateInMB;
-        this.consistencyPoints = consistencyPoints;
-        this.datastores = datastores;
-        this.discoveryType = discoveryType;
-        this.diskResized = diskResized;
-        this.infrastructureVmId = infrastructureVmId;
-        this.instanceType = Codegen.stringProp("instanceType").arg(instanceType).require();
-        this.ipAddress = ipAddress;
-        this.lastHeartbeat = lastHeartbeat;
-        this.lastRpoCalculatedTime = lastRpoCalculatedTime;
-        this.lastUpdateReceivedTime = lastUpdateReceivedTime;
-        this.masterTargetId = masterTargetId;
-        this.multiVmGroupId = multiVmGroupId;
-        this.multiVmGroupName = multiVmGroupName;
-        this.multiVmSyncStatus = multiVmSyncStatus;
-        this.osDetails = osDetails;
-        this.osVersion = osVersion;
-        this.processServerId = processServerId;
-        this.protectedDisks = protectedDisks;
-        this.protectionStage = protectionStage;
-        this.rebootAfterUpdateStatus = rebootAfterUpdateStatus;
-        this.replicaId = replicaId;
-        this.resyncDetails = resyncDetails;
-        this.retentionWindowEnd = retentionWindowEnd;
-        this.retentionWindowStart = retentionWindowStart;
-        this.rpoInSeconds = rpoInSeconds;
-        this.sourceVmCpuCount = sourceVmCpuCount;
-        this.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
-        this.uncompressedDataRateInMB = uncompressedDataRateInMB;
-        this.vCenterInfrastructureId = vCenterInfrastructureId;
-        this.validationErrors = validationErrors;
-        this.vmId = vmId;
-        this.vmNics = vmNics;
-        this.vmProtectionState = vmProtectionState;
-        this.vmProtectionStateDescription = vmProtectionStateDescription;
-    }
+    private InMageReplicationDetailsResponse() {}
 
-    private InMageReplicationDetailsResponse() {
-        this.activeSiteType = null;
-        this.agentDetails = null;
-        this.azureStorageAccountId = null;
-        this.compressedDataRateInMB = null;
-        this.consistencyPoints = Map.of();
-        this.datastores = List.of();
-        this.discoveryType = null;
-        this.diskResized = null;
-        this.infrastructureVmId = null;
-        this.instanceType = null;
-        this.ipAddress = null;
-        this.lastHeartbeat = null;
-        this.lastRpoCalculatedTime = null;
-        this.lastUpdateReceivedTime = null;
-        this.masterTargetId = null;
-        this.multiVmGroupId = null;
-        this.multiVmGroupName = null;
-        this.multiVmSyncStatus = null;
-        this.osDetails = null;
-        this.osVersion = null;
-        this.processServerId = null;
-        this.protectedDisks = List.of();
-        this.protectionStage = null;
-        this.rebootAfterUpdateStatus = null;
-        this.replicaId = null;
-        this.resyncDetails = null;
-        this.retentionWindowEnd = null;
-        this.retentionWindowStart = null;
-        this.rpoInSeconds = null;
-        this.sourceVmCpuCount = null;
-        this.sourceVmRamSizeInMB = null;
-        this.uncompressedDataRateInMB = null;
-        this.vCenterInfrastructureId = null;
-        this.validationErrors = List.of();
-        this.vmId = null;
-        this.vmNics = List.of();
-        this.vmProtectionState = null;
-        this.vmProtectionStateDescription = null;
+    private InMageReplicationDetailsResponse(InMageReplicationDetailsResponse $) {
+        this.activeSiteType = $.activeSiteType;
+        this.agentDetails = $.agentDetails;
+        this.azureStorageAccountId = $.azureStorageAccountId;
+        this.compressedDataRateInMB = $.compressedDataRateInMB;
+        this.consistencyPoints = $.consistencyPoints;
+        this.datastores = $.datastores;
+        this.discoveryType = $.discoveryType;
+        this.diskResized = $.diskResized;
+        this.infrastructureVmId = $.infrastructureVmId;
+        this.instanceType = $.instanceType;
+        this.ipAddress = $.ipAddress;
+        this.lastHeartbeat = $.lastHeartbeat;
+        this.lastRpoCalculatedTime = $.lastRpoCalculatedTime;
+        this.lastUpdateReceivedTime = $.lastUpdateReceivedTime;
+        this.masterTargetId = $.masterTargetId;
+        this.multiVmGroupId = $.multiVmGroupId;
+        this.multiVmGroupName = $.multiVmGroupName;
+        this.multiVmSyncStatus = $.multiVmSyncStatus;
+        this.osDetails = $.osDetails;
+        this.osVersion = $.osVersion;
+        this.processServerId = $.processServerId;
+        this.protectedDisks = $.protectedDisks;
+        this.protectionStage = $.protectionStage;
+        this.rebootAfterUpdateStatus = $.rebootAfterUpdateStatus;
+        this.replicaId = $.replicaId;
+        this.resyncDetails = $.resyncDetails;
+        this.retentionWindowEnd = $.retentionWindowEnd;
+        this.retentionWindowStart = $.retentionWindowStart;
+        this.rpoInSeconds = $.rpoInSeconds;
+        this.sourceVmCpuCount = $.sourceVmCpuCount;
+        this.sourceVmRamSizeInMB = $.sourceVmRamSizeInMB;
+        this.uncompressedDataRateInMB = $.uncompressedDataRateInMB;
+        this.vCenterInfrastructureId = $.vCenterInfrastructureId;
+        this.validationErrors = $.validationErrors;
+        this.vmId = $.vmId;
+        this.vmNics = $.vmNics;
+        this.vmProtectionState = $.vmProtectionState;
+        this.vmProtectionStateDescription = $.vmProtectionStateDescription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InMageReplicationDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String activeSiteType;
-        private @Nullable InMageAgentDetailsResponse agentDetails;
-        private @Nullable String azureStorageAccountId;
-        private @Nullable Double compressedDataRateInMB;
-        private @Nullable Map<String,String> consistencyPoints;
-        private @Nullable List<String> datastores;
-        private @Nullable String discoveryType;
-        private @Nullable String diskResized;
-        private @Nullable String infrastructureVmId;
-        private String instanceType;
-        private @Nullable String ipAddress;
-        private @Nullable String lastHeartbeat;
-        private @Nullable String lastRpoCalculatedTime;
-        private @Nullable String lastUpdateReceivedTime;
-        private @Nullable String masterTargetId;
-        private @Nullable String multiVmGroupId;
-        private @Nullable String multiVmGroupName;
-        private @Nullable String multiVmSyncStatus;
-        private @Nullable OSDiskDetailsResponse osDetails;
-        private @Nullable String osVersion;
-        private @Nullable String processServerId;
-        private @Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks;
-        private @Nullable String protectionStage;
-        private @Nullable String rebootAfterUpdateStatus;
-        private @Nullable String replicaId;
-        private @Nullable InitialReplicationDetailsResponse resyncDetails;
-        private @Nullable String retentionWindowEnd;
-        private @Nullable String retentionWindowStart;
-        private @Nullable Double rpoInSeconds;
-        private @Nullable Integer sourceVmCpuCount;
-        private @Nullable Integer sourceVmRamSizeInMB;
-        private @Nullable Double uncompressedDataRateInMB;
-        private @Nullable String vCenterInfrastructureId;
-        private @Nullable List<HealthErrorResponse> validationErrors;
-        private @Nullable String vmId;
-        private @Nullable List<VMNicDetailsResponse> vmNics;
-        private @Nullable String vmProtectionState;
-        private @Nullable String vmProtectionStateDescription;
+        private InMageReplicationDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InMageReplicationDetailsResponse();
         }
 
         public Builder(InMageReplicationDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeSiteType = defaults.activeSiteType;
-    	      this.agentDetails = defaults.agentDetails;
-    	      this.azureStorageAccountId = defaults.azureStorageAccountId;
-    	      this.compressedDataRateInMB = defaults.compressedDataRateInMB;
-    	      this.consistencyPoints = defaults.consistencyPoints;
-    	      this.datastores = defaults.datastores;
-    	      this.discoveryType = defaults.discoveryType;
-    	      this.diskResized = defaults.diskResized;
-    	      this.infrastructureVmId = defaults.infrastructureVmId;
-    	      this.instanceType = defaults.instanceType;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.lastHeartbeat = defaults.lastHeartbeat;
-    	      this.lastRpoCalculatedTime = defaults.lastRpoCalculatedTime;
-    	      this.lastUpdateReceivedTime = defaults.lastUpdateReceivedTime;
-    	      this.masterTargetId = defaults.masterTargetId;
-    	      this.multiVmGroupId = defaults.multiVmGroupId;
-    	      this.multiVmGroupName = defaults.multiVmGroupName;
-    	      this.multiVmSyncStatus = defaults.multiVmSyncStatus;
-    	      this.osDetails = defaults.osDetails;
-    	      this.osVersion = defaults.osVersion;
-    	      this.processServerId = defaults.processServerId;
-    	      this.protectedDisks = defaults.protectedDisks;
-    	      this.protectionStage = defaults.protectionStage;
-    	      this.rebootAfterUpdateStatus = defaults.rebootAfterUpdateStatus;
-    	      this.replicaId = defaults.replicaId;
-    	      this.resyncDetails = defaults.resyncDetails;
-    	      this.retentionWindowEnd = defaults.retentionWindowEnd;
-    	      this.retentionWindowStart = defaults.retentionWindowStart;
-    	      this.rpoInSeconds = defaults.rpoInSeconds;
-    	      this.sourceVmCpuCount = defaults.sourceVmCpuCount;
-    	      this.sourceVmRamSizeInMB = defaults.sourceVmRamSizeInMB;
-    	      this.uncompressedDataRateInMB = defaults.uncompressedDataRateInMB;
-    	      this.vCenterInfrastructureId = defaults.vCenterInfrastructureId;
-    	      this.validationErrors = defaults.validationErrors;
-    	      this.vmId = defaults.vmId;
-    	      this.vmNics = defaults.vmNics;
-    	      this.vmProtectionState = defaults.vmProtectionState;
-    	      this.vmProtectionStateDescription = defaults.vmProtectionStateDescription;
+            $ = new InMageReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeSiteType(@Nullable String activeSiteType) {
-            this.activeSiteType = activeSiteType;
+            $.activeSiteType = activeSiteType;
             return this;
         }
+
         public Builder agentDetails(@Nullable InMageAgentDetailsResponse agentDetails) {
-            this.agentDetails = agentDetails;
+            $.agentDetails = agentDetails;
             return this;
         }
+
         public Builder azureStorageAccountId(@Nullable String azureStorageAccountId) {
-            this.azureStorageAccountId = azureStorageAccountId;
+            $.azureStorageAccountId = azureStorageAccountId;
             return this;
         }
+
         public Builder compressedDataRateInMB(@Nullable Double compressedDataRateInMB) {
-            this.compressedDataRateInMB = compressedDataRateInMB;
+            $.compressedDataRateInMB = compressedDataRateInMB;
             return this;
         }
+
         public Builder consistencyPoints(@Nullable Map<String,String> consistencyPoints) {
-            this.consistencyPoints = consistencyPoints;
+            $.consistencyPoints = consistencyPoints;
             return this;
         }
+
         public Builder datastores(@Nullable List<String> datastores) {
-            this.datastores = datastores;
+            $.datastores = datastores;
             return this;
         }
+
         public Builder datastores(String... datastores) {
             return datastores(List.of(datastores));
         }
+
         public Builder discoveryType(@Nullable String discoveryType) {
-            this.discoveryType = discoveryType;
+            $.discoveryType = discoveryType;
             return this;
         }
+
         public Builder diskResized(@Nullable String diskResized) {
-            this.diskResized = diskResized;
+            $.diskResized = diskResized;
             return this;
         }
+
         public Builder infrastructureVmId(@Nullable String infrastructureVmId) {
-            this.infrastructureVmId = infrastructureVmId;
+            $.infrastructureVmId = infrastructureVmId;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
-            this.lastHeartbeat = lastHeartbeat;
+            $.lastHeartbeat = lastHeartbeat;
             return this;
         }
+
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
-            this.lastRpoCalculatedTime = lastRpoCalculatedTime;
+            $.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
+
         public Builder lastUpdateReceivedTime(@Nullable String lastUpdateReceivedTime) {
-            this.lastUpdateReceivedTime = lastUpdateReceivedTime;
+            $.lastUpdateReceivedTime = lastUpdateReceivedTime;
             return this;
         }
+
         public Builder masterTargetId(@Nullable String masterTargetId) {
-            this.masterTargetId = masterTargetId;
+            $.masterTargetId = masterTargetId;
             return this;
         }
+
         public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
-            this.multiVmGroupId = multiVmGroupId;
+            $.multiVmGroupId = multiVmGroupId;
             return this;
         }
+
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
-            this.multiVmGroupName = multiVmGroupName;
+            $.multiVmGroupName = multiVmGroupName;
             return this;
         }
+
         public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
-            this.multiVmSyncStatus = multiVmSyncStatus;
+            $.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
+
         public Builder osDetails(@Nullable OSDiskDetailsResponse osDetails) {
-            this.osDetails = osDetails;
+            $.osDetails = osDetails;
             return this;
         }
+
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = osVersion;
+            $.osVersion = osVersion;
             return this;
         }
+
         public Builder processServerId(@Nullable String processServerId) {
-            this.processServerId = processServerId;
+            $.processServerId = processServerId;
             return this;
         }
+
         public Builder protectedDisks(@Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks) {
-            this.protectedDisks = protectedDisks;
+            $.protectedDisks = protectedDisks;
             return this;
         }
+
         public Builder protectedDisks(InMageProtectedDiskDetailsResponse... protectedDisks) {
             return protectedDisks(List.of(protectedDisks));
         }
+
         public Builder protectionStage(@Nullable String protectionStage) {
-            this.protectionStage = protectionStage;
+            $.protectionStage = protectionStage;
             return this;
         }
+
         public Builder rebootAfterUpdateStatus(@Nullable String rebootAfterUpdateStatus) {
-            this.rebootAfterUpdateStatus = rebootAfterUpdateStatus;
+            $.rebootAfterUpdateStatus = rebootAfterUpdateStatus;
             return this;
         }
+
         public Builder replicaId(@Nullable String replicaId) {
-            this.replicaId = replicaId;
+            $.replicaId = replicaId;
             return this;
         }
+
         public Builder resyncDetails(@Nullable InitialReplicationDetailsResponse resyncDetails) {
-            this.resyncDetails = resyncDetails;
+            $.resyncDetails = resyncDetails;
             return this;
         }
+
         public Builder retentionWindowEnd(@Nullable String retentionWindowEnd) {
-            this.retentionWindowEnd = retentionWindowEnd;
+            $.retentionWindowEnd = retentionWindowEnd;
             return this;
         }
+
         public Builder retentionWindowStart(@Nullable String retentionWindowStart) {
-            this.retentionWindowStart = retentionWindowStart;
+            $.retentionWindowStart = retentionWindowStart;
             return this;
         }
+
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
-            this.rpoInSeconds = rpoInSeconds;
+            $.rpoInSeconds = rpoInSeconds;
             return this;
         }
+
         public Builder sourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
-            this.sourceVmCpuCount = sourceVmCpuCount;
+            $.sourceVmCpuCount = sourceVmCpuCount;
             return this;
         }
+
         public Builder sourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
-            this.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
+            $.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
             return this;
         }
+
         public Builder uncompressedDataRateInMB(@Nullable Double uncompressedDataRateInMB) {
-            this.uncompressedDataRateInMB = uncompressedDataRateInMB;
+            $.uncompressedDataRateInMB = uncompressedDataRateInMB;
             return this;
         }
+
         public Builder vCenterInfrastructureId(@Nullable String vCenterInfrastructureId) {
-            this.vCenterInfrastructureId = vCenterInfrastructureId;
+            $.vCenterInfrastructureId = vCenterInfrastructureId;
             return this;
         }
+
         public Builder validationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
-            this.validationErrors = validationErrors;
+            $.validationErrors = validationErrors;
             return this;
         }
+
         public Builder validationErrors(HealthErrorResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }
+
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = vmId;
+            $.vmId = vmId;
             return this;
         }
+
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
-            this.vmNics = vmNics;
+            $.vmNics = vmNics;
             return this;
         }
+
         public Builder vmNics(VMNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
+
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
-            this.vmProtectionState = vmProtectionState;
+            $.vmProtectionState = vmProtectionState;
             return this;
         }
+
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
-            this.vmProtectionStateDescription = vmProtectionStateDescription;
+            $.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
-        }        public InMageReplicationDetailsResponse build() {
-            return new InMageReplicationDetailsResponse(activeSiteType, agentDetails, azureStorageAccountId, compressedDataRateInMB, consistencyPoints, datastores, discoveryType, diskResized, infrastructureVmId, instanceType, ipAddress, lastHeartbeat, lastRpoCalculatedTime, lastUpdateReceivedTime, masterTargetId, multiVmGroupId, multiVmGroupName, multiVmSyncStatus, osDetails, osVersion, processServerId, protectedDisks, protectionStage, rebootAfterUpdateStatus, replicaId, resyncDetails, retentionWindowEnd, retentionWindowStart, rpoInSeconds, sourceVmCpuCount, sourceVmRamSizeInMB, uncompressedDataRateInMB, vCenterInfrastructureId, validationErrors, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
+        }
+
+        public InMageReplicationDetailsResponse build() {
+            $.instanceType = Codegen.stringProp("instanceType").arg($.instanceType).require();
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.datashare.enums.SynchronizationSettingKind;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,SynchronizationSettingKind>> kind;
+    private Output<Either<String,SynchronizationSettingKind>> kind;
 
     public Output<Either<String,SynchronizationSettingKind>> kind() {
         return this.kind;
@@ -44,7 +44,7 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -55,7 +55,7 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="shareName", required=true)
-      private final Output<String> shareName;
+    private Output<String> shareName;
 
     public Output<String> shareName() {
         return this.shareName;
@@ -66,102 +66,92 @@ public final class SynchronizationSettingArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="synchronizationSettingName")
-      private final @Nullable Output<String> synchronizationSettingName;
+    private @Nullable Output<String> synchronizationSettingName;
 
-    public Output<String> synchronizationSettingName() {
-        return this.synchronizationSettingName == null ? Codegen.empty() : this.synchronizationSettingName;
+    public Optional<Output<String>> synchronizationSettingName() {
+        return Optional.ofNullable(this.synchronizationSettingName);
     }
 
-    public SynchronizationSettingArgs(
-        Output<String> accountName,
-        Output<Either<String,SynchronizationSettingKind>> kind,
-        Output<String> resourceGroupName,
-        Output<String> shareName,
-        @Nullable Output<String> synchronizationSettingName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
-        this.synchronizationSettingName = synchronizationSettingName;
-    }
+    private SynchronizationSettingArgs() {}
 
-    private SynchronizationSettingArgs() {
-        this.accountName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.shareName = Codegen.empty();
-        this.synchronizationSettingName = Codegen.empty();
+    private SynchronizationSettingArgs(SynchronizationSettingArgs $) {
+        this.accountName = $.accountName;
+        this.kind = $.kind;
+        this.resourceGroupName = $.resourceGroupName;
+        this.shareName = $.shareName;
+        this.synchronizationSettingName = $.synchronizationSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SynchronizationSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<Either<String,SynchronizationSettingKind>> kind;
-        private Output<String> resourceGroupName;
-        private Output<String> shareName;
-        private @Nullable Output<String> synchronizationSettingName;
+        private SynchronizationSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SynchronizationSettingArgs();
         }
 
         public Builder(SynchronizationSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.kind = defaults.kind;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.shareName = defaults.shareName;
-    	      this.synchronizationSettingName = defaults.synchronizationSettingName;
+            $ = new SynchronizationSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder kind(Output<Either<String,SynchronizationSettingKind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,SynchronizationSettingKind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder shareName(Output<String> shareName) {
-            this.shareName = Objects.requireNonNull(shareName);
+            $.shareName = shareName;
             return this;
         }
+
         public Builder shareName(String shareName) {
-            this.shareName = Output.of(Objects.requireNonNull(shareName));
-            return this;
+            return shareName(Output.of(shareName));
         }
+
         public Builder synchronizationSettingName(@Nullable Output<String> synchronizationSettingName) {
-            this.synchronizationSettingName = synchronizationSettingName;
+            $.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
-        public Builder synchronizationSettingName(@Nullable String synchronizationSettingName) {
-            this.synchronizationSettingName = Codegen.ofNullable(synchronizationSettingName);
-            return this;
-        }        public SynchronizationSettingArgs build() {
-            return new SynchronizationSettingArgs(accountName, kind, resourceGroupName, shareName, synchronizationSettingName);
+
+        public Builder synchronizationSettingName(String synchronizationSettingName) {
+            return synchronizationSettingName(Output.of(synchronizationSettingName));
+        }
+
+        public SynchronizationSettingArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.shareName = Objects.requireNonNull($.shareName, "expected parameter 'shareName' to be non-null");
+            return $;
         }
     }
+
 }

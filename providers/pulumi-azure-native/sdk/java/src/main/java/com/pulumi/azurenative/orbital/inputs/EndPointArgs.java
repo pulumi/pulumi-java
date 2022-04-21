@@ -7,7 +7,6 @@ import com.pulumi.azurenative.orbital.enums.Protocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endPointName", required=true)
-      private final Output<String> endPointName;
+    private Output<String> endPointName;
 
     public Output<String> endPointName() {
         return this.endPointName;
@@ -36,7 +35,7 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final Output<String> ipAddress;
+    private Output<String> ipAddress;
 
     public Output<String> ipAddress() {
         return this.ipAddress;
@@ -47,7 +46,7 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<String> port;
+    private Output<String> port;
 
     public Output<String> port() {
         return this.port;
@@ -58,89 +57,82 @@ public final class EndPointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<Either<String,Protocol>> protocol;
+    private Output<Either<String,Protocol>> protocol;
 
     public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
 
-    public EndPointArgs(
-        Output<String> endPointName,
-        Output<String> ipAddress,
-        Output<String> port,
-        Output<Either<String,Protocol>> protocol) {
-        this.endPointName = Objects.requireNonNull(endPointName, "expected parameter 'endPointName' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-    }
+    private EndPointArgs() {}
 
-    private EndPointArgs() {
-        this.endPointName = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private EndPointArgs(EndPointArgs $) {
+        this.endPointName = $.endPointName;
+        this.ipAddress = $.ipAddress;
+        this.port = $.port;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndPointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endPointName;
-        private Output<String> ipAddress;
-        private Output<String> port;
-        private Output<Either<String,Protocol>> protocol;
+        private EndPointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndPointArgs();
         }
 
         public Builder(EndPointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endPointName = defaults.endPointName;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
+            $ = new EndPointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endPointName(Output<String> endPointName) {
-            this.endPointName = Objects.requireNonNull(endPointName);
+            $.endPointName = endPointName;
             return this;
         }
+
         public Builder endPointName(String endPointName) {
-            this.endPointName = Output.of(Objects.requireNonNull(endPointName));
-            return this;
+            return endPointName(Output.of(endPointName));
         }
+
         public Builder ipAddress(Output<String> ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Output.of(Objects.requireNonNull(ipAddress));
-            return this;
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder port(Output<String> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(String port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder protocol(Output<Either<String,Protocol>> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(Either<String,Protocol> protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
-        }        public EndPointArgs build() {
-            return new EndPointArgs(endPointName, ipAddress, port, protocol);
+            return protocol(Output.of(protocol));
+        }
+
+        public EndPointArgs build() {
+            $.endPointName = Objects.requireNonNull($.endPointName, "expected parameter 'endPointName' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            return $;
         }
     }
+
 }

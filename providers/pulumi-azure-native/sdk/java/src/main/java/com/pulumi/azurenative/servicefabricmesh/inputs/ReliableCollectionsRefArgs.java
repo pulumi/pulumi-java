@@ -5,10 +5,10 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ReliableCollectionsRefArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="doNotPersistState")
-      private final @Nullable Output<Boolean> doNotPersistState;
+    private @Nullable Output<Boolean> doNotPersistState;
 
-    public Output<Boolean> doNotPersistState() {
-        return this.doNotPersistState == null ? Codegen.empty() : this.doNotPersistState;
+    public Optional<Output<Boolean>> doNotPersistState() {
+        return Optional.ofNullable(this.doNotPersistState);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class ReliableCollectionsRefArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public ReliableCollectionsRefArgs(
-        @Nullable Output<Boolean> doNotPersistState,
-        Output<String> name) {
-        this.doNotPersistState = doNotPersistState;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ReliableCollectionsRefArgs() {}
 
-    private ReliableCollectionsRefArgs() {
-        this.doNotPersistState = Codegen.empty();
-        this.name = Codegen.empty();
+    private ReliableCollectionsRefArgs(ReliableCollectionsRefArgs $) {
+        this.doNotPersistState = $.doNotPersistState;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReliableCollectionsRefArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> doNotPersistState;
-        private Output<String> name;
+        private ReliableCollectionsRefArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReliableCollectionsRefArgs();
         }
 
         public Builder(ReliableCollectionsRefArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.doNotPersistState = defaults.doNotPersistState;
-    	      this.name = defaults.name;
+            $ = new ReliableCollectionsRefArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder doNotPersistState(@Nullable Output<Boolean> doNotPersistState) {
-            this.doNotPersistState = doNotPersistState;
+            $.doNotPersistState = doNotPersistState;
             return this;
         }
-        public Builder doNotPersistState(@Nullable Boolean doNotPersistState) {
-            this.doNotPersistState = Codegen.ofNullable(doNotPersistState);
-            return this;
+
+        public Builder doNotPersistState(Boolean doNotPersistState) {
+            return doNotPersistState(Output.of(doNotPersistState));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ReliableCollectionsRefArgs build() {
-            return new ReliableCollectionsRefArgs(doNotPersistState, name);
+            return name(Output.of(name));
+        }
+
+        public ReliableCollectionsRefArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

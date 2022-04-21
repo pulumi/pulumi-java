@@ -6,11 +6,11 @@ package com.pulumi.aws.cognito.inputs;
 import com.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
      * 
      */
     @Import(name="identityPoolId")
-      private final @Nullable Output<String> identityPoolId;
+    private @Nullable Output<String> identityPoolId;
 
-    public Output<String> identityPoolId() {
-        return this.identityPoolId == null ? Codegen.empty() : this.identityPoolId;
+    public Optional<Output<String>> identityPoolId() {
+        return Optional.ofNullable(this.identityPoolId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
      * 
      */
     @Import(name="roleMappings")
-      private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings;
+    private @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings;
 
-    public Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings() {
-        return this.roleMappings == null ? Codegen.empty() : this.roleMappings;
+    public Optional<Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>>> roleMappings() {
+        return Optional.ofNullable(this.roleMappings);
     }
 
     /**
@@ -45,79 +45,72 @@ public final class IdentityPoolRoleAttachmentState extends com.pulumi.resources.
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<Map<String,String>> roles;
+    private @Nullable Output<Map<String,String>> roles;
 
-    public Output<Map<String,String>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<Map<String,String>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
-    public IdentityPoolRoleAttachmentState(
-        @Nullable Output<String> identityPoolId,
-        @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings,
-        @Nullable Output<Map<String,String>> roles) {
-        this.identityPoolId = identityPoolId;
-        this.roleMappings = roleMappings;
-        this.roles = roles;
-    }
+    private IdentityPoolRoleAttachmentState() {}
 
-    private IdentityPoolRoleAttachmentState() {
-        this.identityPoolId = Codegen.empty();
-        this.roleMappings = Codegen.empty();
-        this.roles = Codegen.empty();
+    private IdentityPoolRoleAttachmentState(IdentityPoolRoleAttachmentState $) {
+        this.identityPoolId = $.identityPoolId;
+        this.roleMappings = $.roleMappings;
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityPoolRoleAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identityPoolId;
-        private @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings;
-        private @Nullable Output<Map<String,String>> roles;
+        private IdentityPoolRoleAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityPoolRoleAttachmentState();
         }
 
         public Builder(IdentityPoolRoleAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityPoolId = defaults.identityPoolId;
-    	      this.roleMappings = defaults.roleMappings;
-    	      this.roles = defaults.roles;
+            $ = new IdentityPoolRoleAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder identityPoolId(@Nullable Output<String> identityPoolId) {
-            this.identityPoolId = identityPoolId;
+            $.identityPoolId = identityPoolId;
             return this;
         }
-        public Builder identityPoolId(@Nullable String identityPoolId) {
-            this.identityPoolId = Codegen.ofNullable(identityPoolId);
-            return this;
+
+        public Builder identityPoolId(String identityPoolId) {
+            return identityPoolId(Output.of(identityPoolId));
         }
+
         public Builder roleMappings(@Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingGetArgs>> roleMappings) {
-            this.roleMappings = roleMappings;
+            $.roleMappings = roleMappings;
             return this;
         }
-        public Builder roleMappings(@Nullable List<IdentityPoolRoleAttachmentRoleMappingGetArgs> roleMappings) {
-            this.roleMappings = Codegen.ofNullable(roleMappings);
-            return this;
+
+        public Builder roleMappings(List<IdentityPoolRoleAttachmentRoleMappingGetArgs> roleMappings) {
+            return roleMappings(Output.of(roleMappings));
         }
+
         public Builder roleMappings(IdentityPoolRoleAttachmentRoleMappingGetArgs... roleMappings) {
             return roleMappings(List.of(roleMappings));
         }
+
         public Builder roles(@Nullable Output<Map<String,String>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable Map<String,String> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
-        }        public IdentityPoolRoleAttachmentState build() {
-            return new IdentityPoolRoleAttachmentState(identityPoolId, roleMappings, roles);
+
+        public Builder roles(Map<String,String> roles) {
+            return roles(Output.of(roles));
+        }
+
+        public IdentityPoolRoleAttachmentState build() {
+            return $;
         }
     }
+
 }

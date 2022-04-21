@@ -21,7 +21,7 @@ public final class CertDnsChallengeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -32,55 +32,52 @@ public final class CertDnsChallengeResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="token", required=true)
-      private final String token;
+    private String token;
 
     public String token() {
         return this.token;
     }
 
-    public CertDnsChallengeResponse(
-        String domainName,
-        String token) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.token = Objects.requireNonNull(token, "expected parameter 'token' to be non-null");
-    }
+    private CertDnsChallengeResponse() {}
 
-    private CertDnsChallengeResponse() {
-        this.domainName = null;
-        this.token = null;
+    private CertDnsChallengeResponse(CertDnsChallengeResponse $) {
+        this.domainName = $.domainName;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertDnsChallengeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainName;
-        private String token;
+        private CertDnsChallengeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertDnsChallengeResponse();
         }
 
         public Builder(CertDnsChallengeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.token = defaults.token;
+            $ = new CertDnsChallengeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder token(String token) {
-            this.token = Objects.requireNonNull(token);
+            $.token = token;
             return this;
-        }        public CertDnsChallengeResponse build() {
-            return new CertDnsChallengeResponse(domainName, token);
+        }
+
+        public CertDnsChallengeResponse build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.token = Objects.requireNonNull($.token, "expected parameter 'token' to be non-null");
+            return $;
         }
     }
+
 }

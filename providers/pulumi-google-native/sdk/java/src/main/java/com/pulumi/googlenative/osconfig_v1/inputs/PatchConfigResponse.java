@@ -28,7 +28,7 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apt", required=true)
-      private final AptSettingsResponse apt;
+    private AptSettingsResponse apt;
 
     public AptSettingsResponse apt() {
         return this.apt;
@@ -39,7 +39,7 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="goo", required=true)
-      private final GooSettingsResponse goo;
+    private GooSettingsResponse goo;
 
     public GooSettingsResponse goo() {
         return this.goo;
@@ -50,7 +50,7 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="migInstancesAllowed", required=true)
-      private final Boolean migInstancesAllowed;
+    private Boolean migInstancesAllowed;
 
     public Boolean migInstancesAllowed() {
         return this.migInstancesAllowed;
@@ -61,7 +61,7 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="postStep", required=true)
-      private final ExecStepResponse postStep;
+    private ExecStepResponse postStep;
 
     public ExecStepResponse postStep() {
         return this.postStep;
@@ -72,7 +72,7 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="preStep", required=true)
-      private final ExecStepResponse preStep;
+    private ExecStepResponse preStep;
 
     public ExecStepResponse preStep() {
         return this.preStep;
@@ -83,7 +83,7 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rebootConfig", required=true)
-      private final String rebootConfig;
+    private String rebootConfig;
 
     public String rebootConfig() {
         return this.rebootConfig;
@@ -94,7 +94,7 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="windowsUpdate", required=true)
-      private final WindowsUpdateSettingsResponse windowsUpdate;
+    private WindowsUpdateSettingsResponse windowsUpdate;
 
     public WindowsUpdateSettingsResponse windowsUpdate() {
         return this.windowsUpdate;
@@ -105,7 +105,7 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="yum", required=true)
-      private final YumSettingsResponse yum;
+    private YumSettingsResponse yum;
 
     public YumSettingsResponse yum() {
         return this.yum;
@@ -116,118 +116,101 @@ public final class PatchConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zypper", required=true)
-      private final ZypperSettingsResponse zypper;
+    private ZypperSettingsResponse zypper;
 
     public ZypperSettingsResponse zypper() {
         return this.zypper;
     }
 
-    public PatchConfigResponse(
-        AptSettingsResponse apt,
-        GooSettingsResponse goo,
-        Boolean migInstancesAllowed,
-        ExecStepResponse postStep,
-        ExecStepResponse preStep,
-        String rebootConfig,
-        WindowsUpdateSettingsResponse windowsUpdate,
-        YumSettingsResponse yum,
-        ZypperSettingsResponse zypper) {
-        this.apt = Objects.requireNonNull(apt, "expected parameter 'apt' to be non-null");
-        this.goo = Objects.requireNonNull(goo, "expected parameter 'goo' to be non-null");
-        this.migInstancesAllowed = Objects.requireNonNull(migInstancesAllowed, "expected parameter 'migInstancesAllowed' to be non-null");
-        this.postStep = Objects.requireNonNull(postStep, "expected parameter 'postStep' to be non-null");
-        this.preStep = Objects.requireNonNull(preStep, "expected parameter 'preStep' to be non-null");
-        this.rebootConfig = Objects.requireNonNull(rebootConfig, "expected parameter 'rebootConfig' to be non-null");
-        this.windowsUpdate = Objects.requireNonNull(windowsUpdate, "expected parameter 'windowsUpdate' to be non-null");
-        this.yum = Objects.requireNonNull(yum, "expected parameter 'yum' to be non-null");
-        this.zypper = Objects.requireNonNull(zypper, "expected parameter 'zypper' to be non-null");
-    }
+    private PatchConfigResponse() {}
 
-    private PatchConfigResponse() {
-        this.apt = null;
-        this.goo = null;
-        this.migInstancesAllowed = null;
-        this.postStep = null;
-        this.preStep = null;
-        this.rebootConfig = null;
-        this.windowsUpdate = null;
-        this.yum = null;
-        this.zypper = null;
+    private PatchConfigResponse(PatchConfigResponse $) {
+        this.apt = $.apt;
+        this.goo = $.goo;
+        this.migInstancesAllowed = $.migInstancesAllowed;
+        this.postStep = $.postStep;
+        this.preStep = $.preStep;
+        this.rebootConfig = $.rebootConfig;
+        this.windowsUpdate = $.windowsUpdate;
+        this.yum = $.yum;
+        this.zypper = $.zypper;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AptSettingsResponse apt;
-        private GooSettingsResponse goo;
-        private Boolean migInstancesAllowed;
-        private ExecStepResponse postStep;
-        private ExecStepResponse preStep;
-        private String rebootConfig;
-        private WindowsUpdateSettingsResponse windowsUpdate;
-        private YumSettingsResponse yum;
-        private ZypperSettingsResponse zypper;
+        private PatchConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchConfigResponse();
         }
 
         public Builder(PatchConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apt = defaults.apt;
-    	      this.goo = defaults.goo;
-    	      this.migInstancesAllowed = defaults.migInstancesAllowed;
-    	      this.postStep = defaults.postStep;
-    	      this.preStep = defaults.preStep;
-    	      this.rebootConfig = defaults.rebootConfig;
-    	      this.windowsUpdate = defaults.windowsUpdate;
-    	      this.yum = defaults.yum;
-    	      this.zypper = defaults.zypper;
+            $ = new PatchConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apt(AptSettingsResponse apt) {
-            this.apt = Objects.requireNonNull(apt);
+            $.apt = apt;
             return this;
         }
+
         public Builder goo(GooSettingsResponse goo) {
-            this.goo = Objects.requireNonNull(goo);
+            $.goo = goo;
             return this;
         }
+
         public Builder migInstancesAllowed(Boolean migInstancesAllowed) {
-            this.migInstancesAllowed = Objects.requireNonNull(migInstancesAllowed);
+            $.migInstancesAllowed = migInstancesAllowed;
             return this;
         }
+
         public Builder postStep(ExecStepResponse postStep) {
-            this.postStep = Objects.requireNonNull(postStep);
+            $.postStep = postStep;
             return this;
         }
+
         public Builder preStep(ExecStepResponse preStep) {
-            this.preStep = Objects.requireNonNull(preStep);
+            $.preStep = preStep;
             return this;
         }
+
         public Builder rebootConfig(String rebootConfig) {
-            this.rebootConfig = Objects.requireNonNull(rebootConfig);
+            $.rebootConfig = rebootConfig;
             return this;
         }
+
         public Builder windowsUpdate(WindowsUpdateSettingsResponse windowsUpdate) {
-            this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
+            $.windowsUpdate = windowsUpdate;
             return this;
         }
+
         public Builder yum(YumSettingsResponse yum) {
-            this.yum = Objects.requireNonNull(yum);
+            $.yum = yum;
             return this;
         }
+
         public Builder zypper(ZypperSettingsResponse zypper) {
-            this.zypper = Objects.requireNonNull(zypper);
+            $.zypper = zypper;
             return this;
-        }        public PatchConfigResponse build() {
-            return new PatchConfigResponse(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
+        }
+
+        public PatchConfigResponse build() {
+            $.apt = Objects.requireNonNull($.apt, "expected parameter 'apt' to be non-null");
+            $.goo = Objects.requireNonNull($.goo, "expected parameter 'goo' to be non-null");
+            $.migInstancesAllowed = Objects.requireNonNull($.migInstancesAllowed, "expected parameter 'migInstancesAllowed' to be non-null");
+            $.postStep = Objects.requireNonNull($.postStep, "expected parameter 'postStep' to be non-null");
+            $.preStep = Objects.requireNonNull($.preStep, "expected parameter 'preStep' to be non-null");
+            $.rebootConfig = Objects.requireNonNull($.rebootConfig, "expected parameter 'rebootConfig' to be non-null");
+            $.windowsUpdate = Objects.requireNonNull($.windowsUpdate, "expected parameter 'windowsUpdate' to be non-null");
+            $.yum = Objects.requireNonNull($.yum, "expected parameter 'yum' to be non-null");
+            $.zypper = Objects.requireNonNull($.zypper, "expected parameter 'zypper' to be non-null");
+            return $;
         }
     }
+
 }

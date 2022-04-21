@@ -5,10 +5,10 @@ package com.pulumi.azurenative.streamanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class TransformationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="streamingUnits")
-      private final @Nullable Output<Integer> streamingUnits;
+    private @Nullable Output<Integer> streamingUnits;
 
-    public Output<Integer> streamingUnits() {
-        return this.streamingUnits == null ? Codegen.empty() : this.streamingUnits;
+    public Optional<Output<Integer>> streamingUnits() {
+        return Optional.ofNullable(this.streamingUnits);
     }
 
-    public TransformationArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> query,
-        @Nullable Output<Integer> streamingUnits) {
-        this.name = name;
-        this.query = query;
-        this.streamingUnits = streamingUnits;
-    }
+    private TransformationArgs() {}
 
-    private TransformationArgs() {
-        this.name = Codegen.empty();
-        this.query = Codegen.empty();
-        this.streamingUnits = Codegen.empty();
+    private TransformationArgs(TransformationArgs $) {
+        this.name = $.name;
+        this.query = $.query;
+        this.streamingUnits = $.streamingUnits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> query;
-        private @Nullable Output<Integer> streamingUnits;
+        private TransformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransformationArgs();
         }
 
         public Builder(TransformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.query = defaults.query;
-    	      this.streamingUnits = defaults.streamingUnits;
+            $ = new TransformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(String query) {
+            return query(Output.of(query));
         }
+
         public Builder streamingUnits(@Nullable Output<Integer> streamingUnits) {
-            this.streamingUnits = streamingUnits;
+            $.streamingUnits = streamingUnits;
             return this;
         }
-        public Builder streamingUnits(@Nullable Integer streamingUnits) {
-            this.streamingUnits = Codegen.ofNullable(streamingUnits);
-            return this;
-        }        public TransformationArgs build() {
-            return new TransformationArgs(name, query, streamingUnits);
+
+        public Builder streamingUnits(Integer streamingUnits) {
+            return streamingUnits(Output.of(streamingUnits));
+        }
+
+        public TransformationArgs build() {
+            return $;
         }
     }
+
 }

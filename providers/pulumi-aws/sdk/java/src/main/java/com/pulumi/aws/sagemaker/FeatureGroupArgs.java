@@ -8,11 +8,11 @@ import com.pulumi.aws.sagemaker.inputs.FeatureGroupOfflineStoreConfigArgs;
 import com.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventTimeFeatureName", required=true)
-      private final Output<String> eventTimeFeatureName;
+    private Output<String> eventTimeFeatureName;
 
     public Output<String> eventTimeFeatureName() {
         return this.eventTimeFeatureName;
@@ -47,7 +47,7 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featureDefinitions", required=true)
-      private final Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
+    private Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
 
     public Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions() {
         return this.featureDefinitions;
@@ -58,7 +58,7 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="featureGroupName", required=true)
-      private final Output<String> featureGroupName;
+    private Output<String> featureGroupName;
 
     public Output<String> featureGroupName() {
         return this.featureGroupName;
@@ -69,10 +69,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="offlineStoreConfig")
-      private final @Nullable Output<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig;
+    private @Nullable Output<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig;
 
-    public Output<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig() {
-        return this.offlineStoreConfig == null ? Codegen.empty() : this.offlineStoreConfig;
+    public Optional<Output<FeatureGroupOfflineStoreConfigArgs>> offlineStoreConfig() {
+        return Optional.ofNullable(this.offlineStoreConfig);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onlineStoreConfig")
-      private final @Nullable Output<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig;
+    private @Nullable Output<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig;
 
-    public Output<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig() {
-        return this.onlineStoreConfig == null ? Codegen.empty() : this.onlineStoreConfig;
+    public Optional<Output<FeatureGroupOnlineStoreConfigArgs>> onlineStoreConfig() {
+        return Optional.ofNullable(this.onlineStoreConfig);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recordIdentifierFeatureName", required=true)
-      private final Output<String> recordIdentifierFeatureName;
+    private Output<String> recordIdentifierFeatureName;
 
     public Output<String> recordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName;
@@ -102,7 +102,7 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -113,157 +113,137 @@ public final class FeatureGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FeatureGroupArgs(
-        @Nullable Output<String> description,
-        Output<String> eventTimeFeatureName,
-        Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions,
-        Output<String> featureGroupName,
-        @Nullable Output<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig,
-        @Nullable Output<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig,
-        Output<String> recordIdentifierFeatureName,
-        Output<String> roleArn,
-        @Nullable Output<Map<String,String>> tags) {
-        this.description = description;
-        this.eventTimeFeatureName = Objects.requireNonNull(eventTimeFeatureName, "expected parameter 'eventTimeFeatureName' to be non-null");
-        this.featureDefinitions = Objects.requireNonNull(featureDefinitions, "expected parameter 'featureDefinitions' to be non-null");
-        this.featureGroupName = Objects.requireNonNull(featureGroupName, "expected parameter 'featureGroupName' to be non-null");
-        this.offlineStoreConfig = offlineStoreConfig;
-        this.onlineStoreConfig = onlineStoreConfig;
-        this.recordIdentifierFeatureName = Objects.requireNonNull(recordIdentifierFeatureName, "expected parameter 'recordIdentifierFeatureName' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.tags = tags;
-    }
+    private FeatureGroupArgs() {}
 
-    private FeatureGroupArgs() {
-        this.description = Codegen.empty();
-        this.eventTimeFeatureName = Codegen.empty();
-        this.featureDefinitions = Codegen.empty();
-        this.featureGroupName = Codegen.empty();
-        this.offlineStoreConfig = Codegen.empty();
-        this.onlineStoreConfig = Codegen.empty();
-        this.recordIdentifierFeatureName = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.tags = Codegen.empty();
+    private FeatureGroupArgs(FeatureGroupArgs $) {
+        this.description = $.description;
+        this.eventTimeFeatureName = $.eventTimeFeatureName;
+        this.featureDefinitions = $.featureDefinitions;
+        this.featureGroupName = $.featureGroupName;
+        this.offlineStoreConfig = $.offlineStoreConfig;
+        this.onlineStoreConfig = $.onlineStoreConfig;
+        this.recordIdentifierFeatureName = $.recordIdentifierFeatureName;
+        this.roleArn = $.roleArn;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> eventTimeFeatureName;
-        private Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
-        private Output<String> featureGroupName;
-        private @Nullable Output<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig;
-        private @Nullable Output<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig;
-        private Output<String> recordIdentifierFeatureName;
-        private Output<String> roleArn;
-        private @Nullable Output<Map<String,String>> tags;
+        private FeatureGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureGroupArgs();
         }
 
         public Builder(FeatureGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.eventTimeFeatureName = defaults.eventTimeFeatureName;
-    	      this.featureDefinitions = defaults.featureDefinitions;
-    	      this.featureGroupName = defaults.featureGroupName;
-    	      this.offlineStoreConfig = defaults.offlineStoreConfig;
-    	      this.onlineStoreConfig = defaults.onlineStoreConfig;
-    	      this.recordIdentifierFeatureName = defaults.recordIdentifierFeatureName;
-    	      this.roleArn = defaults.roleArn;
-    	      this.tags = defaults.tags;
+            $ = new FeatureGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder eventTimeFeatureName(Output<String> eventTimeFeatureName) {
-            this.eventTimeFeatureName = Objects.requireNonNull(eventTimeFeatureName);
+            $.eventTimeFeatureName = eventTimeFeatureName;
             return this;
         }
+
         public Builder eventTimeFeatureName(String eventTimeFeatureName) {
-            this.eventTimeFeatureName = Output.of(Objects.requireNonNull(eventTimeFeatureName));
-            return this;
+            return eventTimeFeatureName(Output.of(eventTimeFeatureName));
         }
+
         public Builder featureDefinitions(Output<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions) {
-            this.featureDefinitions = Objects.requireNonNull(featureDefinitions);
+            $.featureDefinitions = featureDefinitions;
             return this;
         }
+
         public Builder featureDefinitions(List<FeatureGroupFeatureDefinitionArgs> featureDefinitions) {
-            this.featureDefinitions = Output.of(Objects.requireNonNull(featureDefinitions));
-            return this;
+            return featureDefinitions(Output.of(featureDefinitions));
         }
+
         public Builder featureDefinitions(FeatureGroupFeatureDefinitionArgs... featureDefinitions) {
             return featureDefinitions(List.of(featureDefinitions));
         }
+
         public Builder featureGroupName(Output<String> featureGroupName) {
-            this.featureGroupName = Objects.requireNonNull(featureGroupName);
+            $.featureGroupName = featureGroupName;
             return this;
         }
+
         public Builder featureGroupName(String featureGroupName) {
-            this.featureGroupName = Output.of(Objects.requireNonNull(featureGroupName));
-            return this;
+            return featureGroupName(Output.of(featureGroupName));
         }
+
         public Builder offlineStoreConfig(@Nullable Output<FeatureGroupOfflineStoreConfigArgs> offlineStoreConfig) {
-            this.offlineStoreConfig = offlineStoreConfig;
+            $.offlineStoreConfig = offlineStoreConfig;
             return this;
         }
-        public Builder offlineStoreConfig(@Nullable FeatureGroupOfflineStoreConfigArgs offlineStoreConfig) {
-            this.offlineStoreConfig = Codegen.ofNullable(offlineStoreConfig);
-            return this;
+
+        public Builder offlineStoreConfig(FeatureGroupOfflineStoreConfigArgs offlineStoreConfig) {
+            return offlineStoreConfig(Output.of(offlineStoreConfig));
         }
+
         public Builder onlineStoreConfig(@Nullable Output<FeatureGroupOnlineStoreConfigArgs> onlineStoreConfig) {
-            this.onlineStoreConfig = onlineStoreConfig;
+            $.onlineStoreConfig = onlineStoreConfig;
             return this;
         }
-        public Builder onlineStoreConfig(@Nullable FeatureGroupOnlineStoreConfigArgs onlineStoreConfig) {
-            this.onlineStoreConfig = Codegen.ofNullable(onlineStoreConfig);
-            return this;
+
+        public Builder onlineStoreConfig(FeatureGroupOnlineStoreConfigArgs onlineStoreConfig) {
+            return onlineStoreConfig(Output.of(onlineStoreConfig));
         }
+
         public Builder recordIdentifierFeatureName(Output<String> recordIdentifierFeatureName) {
-            this.recordIdentifierFeatureName = Objects.requireNonNull(recordIdentifierFeatureName);
+            $.recordIdentifierFeatureName = recordIdentifierFeatureName;
             return this;
         }
+
         public Builder recordIdentifierFeatureName(String recordIdentifierFeatureName) {
-            this.recordIdentifierFeatureName = Output.of(Objects.requireNonNull(recordIdentifierFeatureName));
-            return this;
+            return recordIdentifierFeatureName(Output.of(recordIdentifierFeatureName));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public FeatureGroupArgs build() {
-            return new FeatureGroupArgs(description, eventTimeFeatureName, featureDefinitions, featureGroupName, offlineStoreConfig, onlineStoreConfig, recordIdentifierFeatureName, roleArn, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public FeatureGroupArgs build() {
+            $.eventTimeFeatureName = Objects.requireNonNull($.eventTimeFeatureName, "expected parameter 'eventTimeFeatureName' to be non-null");
+            $.featureDefinitions = Objects.requireNonNull($.featureDefinitions, "expected parameter 'featureDefinitions' to be non-null");
+            $.featureGroupName = Objects.requireNonNull($.featureGroupName, "expected parameter 'featureGroupName' to be non-null");
+            $.recordIdentifierFeatureName = Objects.requireNonNull($.recordIdentifierFeatureName, "expected parameter 'recordIdentifierFeatureName' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

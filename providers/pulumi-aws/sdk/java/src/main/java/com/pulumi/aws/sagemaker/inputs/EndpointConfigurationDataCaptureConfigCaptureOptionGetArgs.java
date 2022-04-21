@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs ex
      * 
      */
     @Import(name="captureMode", required=true)
-      private final Output<String> captureMode;
+    private Output<String> captureMode;
 
     public Output<String> captureMode() {
         return this.captureMode;
     }
 
-    public EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs(Output<String> captureMode) {
-        this.captureMode = Objects.requireNonNull(captureMode, "expected parameter 'captureMode' to be non-null");
-    }
+    private EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs() {}
 
-    private EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs() {
-        this.captureMode = Codegen.empty();
+    private EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs(EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs $) {
+        this.captureMode = $.captureMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> captureMode;
+        private EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs();
         }
 
         public Builder(EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.captureMode = defaults.captureMode;
+            $ = new EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder captureMode(Output<String> captureMode) {
-            this.captureMode = Objects.requireNonNull(captureMode);
+            $.captureMode = captureMode;
             return this;
         }
+
         public Builder captureMode(String captureMode) {
-            this.captureMode = Output.of(Objects.requireNonNull(captureMode));
-            return this;
-        }        public EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs build() {
-            return new EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs(captureMode);
+            return captureMode(Output.of(captureMode));
+        }
+
+        public EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs build() {
+            $.captureMode = Objects.requireNonNull($.captureMode, "expected parameter 'captureMode' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.awsnative.iotwireless.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,310 +18,269 @@ public final class DeviceProfileLoRaWANDeviceProfileArgs extends com.pulumi.reso
     public static final DeviceProfileLoRaWANDeviceProfileArgs Empty = new DeviceProfileLoRaWANDeviceProfileArgs();
 
     @Import(name="classBTimeout")
-      private final @Nullable Output<Integer> classBTimeout;
+    private @Nullable Output<Integer> classBTimeout;
 
-    public Output<Integer> classBTimeout() {
-        return this.classBTimeout == null ? Codegen.empty() : this.classBTimeout;
+    public Optional<Output<Integer>> classBTimeout() {
+        return Optional.ofNullable(this.classBTimeout);
     }
 
     @Import(name="classCTimeout")
-      private final @Nullable Output<Integer> classCTimeout;
+    private @Nullable Output<Integer> classCTimeout;
 
-    public Output<Integer> classCTimeout() {
-        return this.classCTimeout == null ? Codegen.empty() : this.classCTimeout;
+    public Optional<Output<Integer>> classCTimeout() {
+        return Optional.ofNullable(this.classCTimeout);
     }
 
     @Import(name="macVersion")
-      private final @Nullable Output<String> macVersion;
+    private @Nullable Output<String> macVersion;
 
-    public Output<String> macVersion() {
-        return this.macVersion == null ? Codegen.empty() : this.macVersion;
+    public Optional<Output<String>> macVersion() {
+        return Optional.ofNullable(this.macVersion);
     }
 
     @Import(name="maxDutyCycle")
-      private final @Nullable Output<Integer> maxDutyCycle;
+    private @Nullable Output<Integer> maxDutyCycle;
 
-    public Output<Integer> maxDutyCycle() {
-        return this.maxDutyCycle == null ? Codegen.empty() : this.maxDutyCycle;
+    public Optional<Output<Integer>> maxDutyCycle() {
+        return Optional.ofNullable(this.maxDutyCycle);
     }
 
     @Import(name="maxEirp")
-      private final @Nullable Output<Integer> maxEirp;
+    private @Nullable Output<Integer> maxEirp;
 
-    public Output<Integer> maxEirp() {
-        return this.maxEirp == null ? Codegen.empty() : this.maxEirp;
+    public Optional<Output<Integer>> maxEirp() {
+        return Optional.ofNullable(this.maxEirp);
     }
 
     @Import(name="pingSlotDr")
-      private final @Nullable Output<Integer> pingSlotDr;
+    private @Nullable Output<Integer> pingSlotDr;
 
-    public Output<Integer> pingSlotDr() {
-        return this.pingSlotDr == null ? Codegen.empty() : this.pingSlotDr;
+    public Optional<Output<Integer>> pingSlotDr() {
+        return Optional.ofNullable(this.pingSlotDr);
     }
 
     @Import(name="pingSlotFreq")
-      private final @Nullable Output<Integer> pingSlotFreq;
+    private @Nullable Output<Integer> pingSlotFreq;
 
-    public Output<Integer> pingSlotFreq() {
-        return this.pingSlotFreq == null ? Codegen.empty() : this.pingSlotFreq;
+    public Optional<Output<Integer>> pingSlotFreq() {
+        return Optional.ofNullable(this.pingSlotFreq);
     }
 
     @Import(name="pingSlotPeriod")
-      private final @Nullable Output<Integer> pingSlotPeriod;
+    private @Nullable Output<Integer> pingSlotPeriod;
 
-    public Output<Integer> pingSlotPeriod() {
-        return this.pingSlotPeriod == null ? Codegen.empty() : this.pingSlotPeriod;
+    public Optional<Output<Integer>> pingSlotPeriod() {
+        return Optional.ofNullable(this.pingSlotPeriod);
     }
 
     @Import(name="regParamsRevision")
-      private final @Nullable Output<String> regParamsRevision;
+    private @Nullable Output<String> regParamsRevision;
 
-    public Output<String> regParamsRevision() {
-        return this.regParamsRevision == null ? Codegen.empty() : this.regParamsRevision;
+    public Optional<Output<String>> regParamsRevision() {
+        return Optional.ofNullable(this.regParamsRevision);
     }
 
     @Import(name="rfRegion")
-      private final @Nullable Output<String> rfRegion;
+    private @Nullable Output<String> rfRegion;
 
-    public Output<String> rfRegion() {
-        return this.rfRegion == null ? Codegen.empty() : this.rfRegion;
+    public Optional<Output<String>> rfRegion() {
+        return Optional.ofNullable(this.rfRegion);
     }
 
     @Import(name="supports32BitFCnt")
-      private final @Nullable Output<Boolean> supports32BitFCnt;
+    private @Nullable Output<Boolean> supports32BitFCnt;
 
-    public Output<Boolean> supports32BitFCnt() {
-        return this.supports32BitFCnt == null ? Codegen.empty() : this.supports32BitFCnt;
+    public Optional<Output<Boolean>> supports32BitFCnt() {
+        return Optional.ofNullable(this.supports32BitFCnt);
     }
 
     @Import(name="supportsClassB")
-      private final @Nullable Output<Boolean> supportsClassB;
+    private @Nullable Output<Boolean> supportsClassB;
 
-    public Output<Boolean> supportsClassB() {
-        return this.supportsClassB == null ? Codegen.empty() : this.supportsClassB;
+    public Optional<Output<Boolean>> supportsClassB() {
+        return Optional.ofNullable(this.supportsClassB);
     }
 
     @Import(name="supportsClassC")
-      private final @Nullable Output<Boolean> supportsClassC;
+    private @Nullable Output<Boolean> supportsClassC;
 
-    public Output<Boolean> supportsClassC() {
-        return this.supportsClassC == null ? Codegen.empty() : this.supportsClassC;
+    public Optional<Output<Boolean>> supportsClassC() {
+        return Optional.ofNullable(this.supportsClassC);
     }
 
     @Import(name="supportsJoin")
-      private final @Nullable Output<Boolean> supportsJoin;
+    private @Nullable Output<Boolean> supportsJoin;
 
-    public Output<Boolean> supportsJoin() {
-        return this.supportsJoin == null ? Codegen.empty() : this.supportsJoin;
+    public Optional<Output<Boolean>> supportsJoin() {
+        return Optional.ofNullable(this.supportsJoin);
     }
 
-    public DeviceProfileLoRaWANDeviceProfileArgs(
-        @Nullable Output<Integer> classBTimeout,
-        @Nullable Output<Integer> classCTimeout,
-        @Nullable Output<String> macVersion,
-        @Nullable Output<Integer> maxDutyCycle,
-        @Nullable Output<Integer> maxEirp,
-        @Nullable Output<Integer> pingSlotDr,
-        @Nullable Output<Integer> pingSlotFreq,
-        @Nullable Output<Integer> pingSlotPeriod,
-        @Nullable Output<String> regParamsRevision,
-        @Nullable Output<String> rfRegion,
-        @Nullable Output<Boolean> supports32BitFCnt,
-        @Nullable Output<Boolean> supportsClassB,
-        @Nullable Output<Boolean> supportsClassC,
-        @Nullable Output<Boolean> supportsJoin) {
-        this.classBTimeout = classBTimeout;
-        this.classCTimeout = classCTimeout;
-        this.macVersion = macVersion;
-        this.maxDutyCycle = maxDutyCycle;
-        this.maxEirp = maxEirp;
-        this.pingSlotDr = pingSlotDr;
-        this.pingSlotFreq = pingSlotFreq;
-        this.pingSlotPeriod = pingSlotPeriod;
-        this.regParamsRevision = regParamsRevision;
-        this.rfRegion = rfRegion;
-        this.supports32BitFCnt = supports32BitFCnt;
-        this.supportsClassB = supportsClassB;
-        this.supportsClassC = supportsClassC;
-        this.supportsJoin = supportsJoin;
-    }
+    private DeviceProfileLoRaWANDeviceProfileArgs() {}
 
-    private DeviceProfileLoRaWANDeviceProfileArgs() {
-        this.classBTimeout = Codegen.empty();
-        this.classCTimeout = Codegen.empty();
-        this.macVersion = Codegen.empty();
-        this.maxDutyCycle = Codegen.empty();
-        this.maxEirp = Codegen.empty();
-        this.pingSlotDr = Codegen.empty();
-        this.pingSlotFreq = Codegen.empty();
-        this.pingSlotPeriod = Codegen.empty();
-        this.regParamsRevision = Codegen.empty();
-        this.rfRegion = Codegen.empty();
-        this.supports32BitFCnt = Codegen.empty();
-        this.supportsClassB = Codegen.empty();
-        this.supportsClassC = Codegen.empty();
-        this.supportsJoin = Codegen.empty();
+    private DeviceProfileLoRaWANDeviceProfileArgs(DeviceProfileLoRaWANDeviceProfileArgs $) {
+        this.classBTimeout = $.classBTimeout;
+        this.classCTimeout = $.classCTimeout;
+        this.macVersion = $.macVersion;
+        this.maxDutyCycle = $.maxDutyCycle;
+        this.maxEirp = $.maxEirp;
+        this.pingSlotDr = $.pingSlotDr;
+        this.pingSlotFreq = $.pingSlotFreq;
+        this.pingSlotPeriod = $.pingSlotPeriod;
+        this.regParamsRevision = $.regParamsRevision;
+        this.rfRegion = $.rfRegion;
+        this.supports32BitFCnt = $.supports32BitFCnt;
+        this.supportsClassB = $.supportsClassB;
+        this.supportsClassC = $.supportsClassC;
+        this.supportsJoin = $.supportsJoin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceProfileLoRaWANDeviceProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> classBTimeout;
-        private @Nullable Output<Integer> classCTimeout;
-        private @Nullable Output<String> macVersion;
-        private @Nullable Output<Integer> maxDutyCycle;
-        private @Nullable Output<Integer> maxEirp;
-        private @Nullable Output<Integer> pingSlotDr;
-        private @Nullable Output<Integer> pingSlotFreq;
-        private @Nullable Output<Integer> pingSlotPeriod;
-        private @Nullable Output<String> regParamsRevision;
-        private @Nullable Output<String> rfRegion;
-        private @Nullable Output<Boolean> supports32BitFCnt;
-        private @Nullable Output<Boolean> supportsClassB;
-        private @Nullable Output<Boolean> supportsClassC;
-        private @Nullable Output<Boolean> supportsJoin;
+        private DeviceProfileLoRaWANDeviceProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceProfileLoRaWANDeviceProfileArgs();
         }
 
         public Builder(DeviceProfileLoRaWANDeviceProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classBTimeout = defaults.classBTimeout;
-    	      this.classCTimeout = defaults.classCTimeout;
-    	      this.macVersion = defaults.macVersion;
-    	      this.maxDutyCycle = defaults.maxDutyCycle;
-    	      this.maxEirp = defaults.maxEirp;
-    	      this.pingSlotDr = defaults.pingSlotDr;
-    	      this.pingSlotFreq = defaults.pingSlotFreq;
-    	      this.pingSlotPeriod = defaults.pingSlotPeriod;
-    	      this.regParamsRevision = defaults.regParamsRevision;
-    	      this.rfRegion = defaults.rfRegion;
-    	      this.supports32BitFCnt = defaults.supports32BitFCnt;
-    	      this.supportsClassB = defaults.supportsClassB;
-    	      this.supportsClassC = defaults.supportsClassC;
-    	      this.supportsJoin = defaults.supportsJoin;
+            $ = new DeviceProfileLoRaWANDeviceProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classBTimeout(@Nullable Output<Integer> classBTimeout) {
-            this.classBTimeout = classBTimeout;
+            $.classBTimeout = classBTimeout;
             return this;
         }
-        public Builder classBTimeout(@Nullable Integer classBTimeout) {
-            this.classBTimeout = Codegen.ofNullable(classBTimeout);
-            return this;
+
+        public Builder classBTimeout(Integer classBTimeout) {
+            return classBTimeout(Output.of(classBTimeout));
         }
+
         public Builder classCTimeout(@Nullable Output<Integer> classCTimeout) {
-            this.classCTimeout = classCTimeout;
+            $.classCTimeout = classCTimeout;
             return this;
         }
-        public Builder classCTimeout(@Nullable Integer classCTimeout) {
-            this.classCTimeout = Codegen.ofNullable(classCTimeout);
-            return this;
+
+        public Builder classCTimeout(Integer classCTimeout) {
+            return classCTimeout(Output.of(classCTimeout));
         }
+
         public Builder macVersion(@Nullable Output<String> macVersion) {
-            this.macVersion = macVersion;
+            $.macVersion = macVersion;
             return this;
         }
-        public Builder macVersion(@Nullable String macVersion) {
-            this.macVersion = Codegen.ofNullable(macVersion);
-            return this;
+
+        public Builder macVersion(String macVersion) {
+            return macVersion(Output.of(macVersion));
         }
+
         public Builder maxDutyCycle(@Nullable Output<Integer> maxDutyCycle) {
-            this.maxDutyCycle = maxDutyCycle;
+            $.maxDutyCycle = maxDutyCycle;
             return this;
         }
-        public Builder maxDutyCycle(@Nullable Integer maxDutyCycle) {
-            this.maxDutyCycle = Codegen.ofNullable(maxDutyCycle);
-            return this;
+
+        public Builder maxDutyCycle(Integer maxDutyCycle) {
+            return maxDutyCycle(Output.of(maxDutyCycle));
         }
+
         public Builder maxEirp(@Nullable Output<Integer> maxEirp) {
-            this.maxEirp = maxEirp;
+            $.maxEirp = maxEirp;
             return this;
         }
-        public Builder maxEirp(@Nullable Integer maxEirp) {
-            this.maxEirp = Codegen.ofNullable(maxEirp);
-            return this;
+
+        public Builder maxEirp(Integer maxEirp) {
+            return maxEirp(Output.of(maxEirp));
         }
+
         public Builder pingSlotDr(@Nullable Output<Integer> pingSlotDr) {
-            this.pingSlotDr = pingSlotDr;
+            $.pingSlotDr = pingSlotDr;
             return this;
         }
-        public Builder pingSlotDr(@Nullable Integer pingSlotDr) {
-            this.pingSlotDr = Codegen.ofNullable(pingSlotDr);
-            return this;
+
+        public Builder pingSlotDr(Integer pingSlotDr) {
+            return pingSlotDr(Output.of(pingSlotDr));
         }
+
         public Builder pingSlotFreq(@Nullable Output<Integer> pingSlotFreq) {
-            this.pingSlotFreq = pingSlotFreq;
+            $.pingSlotFreq = pingSlotFreq;
             return this;
         }
-        public Builder pingSlotFreq(@Nullable Integer pingSlotFreq) {
-            this.pingSlotFreq = Codegen.ofNullable(pingSlotFreq);
-            return this;
+
+        public Builder pingSlotFreq(Integer pingSlotFreq) {
+            return pingSlotFreq(Output.of(pingSlotFreq));
         }
+
         public Builder pingSlotPeriod(@Nullable Output<Integer> pingSlotPeriod) {
-            this.pingSlotPeriod = pingSlotPeriod;
+            $.pingSlotPeriod = pingSlotPeriod;
             return this;
         }
-        public Builder pingSlotPeriod(@Nullable Integer pingSlotPeriod) {
-            this.pingSlotPeriod = Codegen.ofNullable(pingSlotPeriod);
-            return this;
+
+        public Builder pingSlotPeriod(Integer pingSlotPeriod) {
+            return pingSlotPeriod(Output.of(pingSlotPeriod));
         }
+
         public Builder regParamsRevision(@Nullable Output<String> regParamsRevision) {
-            this.regParamsRevision = regParamsRevision;
+            $.regParamsRevision = regParamsRevision;
             return this;
         }
-        public Builder regParamsRevision(@Nullable String regParamsRevision) {
-            this.regParamsRevision = Codegen.ofNullable(regParamsRevision);
-            return this;
+
+        public Builder regParamsRevision(String regParamsRevision) {
+            return regParamsRevision(Output.of(regParamsRevision));
         }
+
         public Builder rfRegion(@Nullable Output<String> rfRegion) {
-            this.rfRegion = rfRegion;
+            $.rfRegion = rfRegion;
             return this;
         }
-        public Builder rfRegion(@Nullable String rfRegion) {
-            this.rfRegion = Codegen.ofNullable(rfRegion);
-            return this;
+
+        public Builder rfRegion(String rfRegion) {
+            return rfRegion(Output.of(rfRegion));
         }
+
         public Builder supports32BitFCnt(@Nullable Output<Boolean> supports32BitFCnt) {
-            this.supports32BitFCnt = supports32BitFCnt;
+            $.supports32BitFCnt = supports32BitFCnt;
             return this;
         }
-        public Builder supports32BitFCnt(@Nullable Boolean supports32BitFCnt) {
-            this.supports32BitFCnt = Codegen.ofNullable(supports32BitFCnt);
-            return this;
+
+        public Builder supports32BitFCnt(Boolean supports32BitFCnt) {
+            return supports32BitFCnt(Output.of(supports32BitFCnt));
         }
+
         public Builder supportsClassB(@Nullable Output<Boolean> supportsClassB) {
-            this.supportsClassB = supportsClassB;
+            $.supportsClassB = supportsClassB;
             return this;
         }
-        public Builder supportsClassB(@Nullable Boolean supportsClassB) {
-            this.supportsClassB = Codegen.ofNullable(supportsClassB);
-            return this;
+
+        public Builder supportsClassB(Boolean supportsClassB) {
+            return supportsClassB(Output.of(supportsClassB));
         }
+
         public Builder supportsClassC(@Nullable Output<Boolean> supportsClassC) {
-            this.supportsClassC = supportsClassC;
+            $.supportsClassC = supportsClassC;
             return this;
         }
-        public Builder supportsClassC(@Nullable Boolean supportsClassC) {
-            this.supportsClassC = Codegen.ofNullable(supportsClassC);
-            return this;
+
+        public Builder supportsClassC(Boolean supportsClassC) {
+            return supportsClassC(Output.of(supportsClassC));
         }
+
         public Builder supportsJoin(@Nullable Output<Boolean> supportsJoin) {
-            this.supportsJoin = supportsJoin;
+            $.supportsJoin = supportsJoin;
             return this;
         }
-        public Builder supportsJoin(@Nullable Boolean supportsJoin) {
-            this.supportsJoin = Codegen.ofNullable(supportsJoin);
-            return this;
-        }        public DeviceProfileLoRaWANDeviceProfileArgs build() {
-            return new DeviceProfileLoRaWANDeviceProfileArgs(classBTimeout, classCTimeout, macVersion, maxDutyCycle, maxEirp, pingSlotDr, pingSlotFreq, pingSlotPeriod, regParamsRevision, rfRegion, supports32BitFCnt, supportsClassB, supportsClassC, supportsJoin);
+
+        public Builder supportsJoin(Boolean supportsJoin) {
+            return supportsJoin(Output.of(supportsJoin));
+        }
+
+        public DeviceProfileLoRaWANDeviceProfileArgs build() {
+            return $;
         }
     }
+
 }

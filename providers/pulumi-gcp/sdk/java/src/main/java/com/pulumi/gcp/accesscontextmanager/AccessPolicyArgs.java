@@ -5,7 +5,6 @@ package com.pulumi.gcp.accesscontextmanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
@@ -31,63 +30,60 @@ public final class AccessPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public AccessPolicyArgs(
-        Output<String> parent,
-        Output<String> title) {
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private AccessPolicyArgs() {}
 
-    private AccessPolicyArgs() {
-        this.parent = Codegen.empty();
-        this.title = Codegen.empty();
+    private AccessPolicyArgs(AccessPolicyArgs $) {
+        this.parent = $.parent;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> parent;
-        private Output<String> title;
+        private AccessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyArgs();
         }
 
         public Builder(AccessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parent = defaults.parent;
-    	      this.title = defaults.title;
+            $ = new AccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
+            return parent(Output.of(parent));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public AccessPolicyArgs build() {
-            return new AccessPolicyArgs(parent, title);
+            return title(Output.of(title));
+        }
+
+        public AccessPolicyArgs build() {
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

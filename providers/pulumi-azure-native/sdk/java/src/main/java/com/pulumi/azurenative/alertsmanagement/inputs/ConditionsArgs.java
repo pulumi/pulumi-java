@@ -6,8 +6,8 @@ package com.pulumi.azurenative.alertsmanagement.inputs;
 import com.pulumi.azurenative.alertsmanagement.inputs.ConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alertContext")
-      private final @Nullable Output<ConditionArgs> alertContext;
+    private @Nullable Output<ConditionArgs> alertContext;
 
-    public Output<ConditionArgs> alertContext() {
-        return this.alertContext == null ? Codegen.empty() : this.alertContext;
+    public Optional<Output<ConditionArgs>> alertContext() {
+        return Optional.ofNullable(this.alertContext);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alertRuleId")
-      private final @Nullable Output<ConditionArgs> alertRuleId;
+    private @Nullable Output<ConditionArgs> alertRuleId;
 
-    public Output<ConditionArgs> alertRuleId() {
-        return this.alertRuleId == null ? Codegen.empty() : this.alertRuleId;
+    public Optional<Output<ConditionArgs>> alertRuleId() {
+        return Optional.ofNullable(this.alertRuleId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<ConditionArgs> description;
+    private @Nullable Output<ConditionArgs> description;
 
-    public Output<ConditionArgs> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<ConditionArgs>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitorCondition")
-      private final @Nullable Output<ConditionArgs> monitorCondition;
+    private @Nullable Output<ConditionArgs> monitorCondition;
 
-    public Output<ConditionArgs> monitorCondition() {
-        return this.monitorCondition == null ? Codegen.empty() : this.monitorCondition;
+    public Optional<Output<ConditionArgs>> monitorCondition() {
+        return Optional.ofNullable(this.monitorCondition);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="monitorService")
-      private final @Nullable Output<ConditionArgs> monitorService;
+    private @Nullable Output<ConditionArgs> monitorService;
 
-    public Output<ConditionArgs> monitorService() {
-        return this.monitorService == null ? Codegen.empty() : this.monitorService;
+    public Optional<Output<ConditionArgs>> monitorService() {
+        return Optional.ofNullable(this.monitorService);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="severity")
-      private final @Nullable Output<ConditionArgs> severity;
+    private @Nullable Output<ConditionArgs> severity;
 
-    public Output<ConditionArgs> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<ConditionArgs>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -90,128 +90,108 @@ public final class ConditionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetResourceType")
-      private final @Nullable Output<ConditionArgs> targetResourceType;
+    private @Nullable Output<ConditionArgs> targetResourceType;
 
-    public Output<ConditionArgs> targetResourceType() {
-        return this.targetResourceType == null ? Codegen.empty() : this.targetResourceType;
+    public Optional<Output<ConditionArgs>> targetResourceType() {
+        return Optional.ofNullable(this.targetResourceType);
     }
 
-    public ConditionsArgs(
-        @Nullable Output<ConditionArgs> alertContext,
-        @Nullable Output<ConditionArgs> alertRuleId,
-        @Nullable Output<ConditionArgs> description,
-        @Nullable Output<ConditionArgs> monitorCondition,
-        @Nullable Output<ConditionArgs> monitorService,
-        @Nullable Output<ConditionArgs> severity,
-        @Nullable Output<ConditionArgs> targetResourceType) {
-        this.alertContext = alertContext;
-        this.alertRuleId = alertRuleId;
-        this.description = description;
-        this.monitorCondition = monitorCondition;
-        this.monitorService = monitorService;
-        this.severity = severity;
-        this.targetResourceType = targetResourceType;
-    }
+    private ConditionsArgs() {}
 
-    private ConditionsArgs() {
-        this.alertContext = Codegen.empty();
-        this.alertRuleId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.monitorCondition = Codegen.empty();
-        this.monitorService = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.targetResourceType = Codegen.empty();
+    private ConditionsArgs(ConditionsArgs $) {
+        this.alertContext = $.alertContext;
+        this.alertRuleId = $.alertRuleId;
+        this.description = $.description;
+        this.monitorCondition = $.monitorCondition;
+        this.monitorService = $.monitorService;
+        this.severity = $.severity;
+        this.targetResourceType = $.targetResourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConditionArgs> alertContext;
-        private @Nullable Output<ConditionArgs> alertRuleId;
-        private @Nullable Output<ConditionArgs> description;
-        private @Nullable Output<ConditionArgs> monitorCondition;
-        private @Nullable Output<ConditionArgs> monitorService;
-        private @Nullable Output<ConditionArgs> severity;
-        private @Nullable Output<ConditionArgs> targetResourceType;
+        private ConditionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionsArgs();
         }
 
         public Builder(ConditionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertContext = defaults.alertContext;
-    	      this.alertRuleId = defaults.alertRuleId;
-    	      this.description = defaults.description;
-    	      this.monitorCondition = defaults.monitorCondition;
-    	      this.monitorService = defaults.monitorService;
-    	      this.severity = defaults.severity;
-    	      this.targetResourceType = defaults.targetResourceType;
+            $ = new ConditionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertContext(@Nullable Output<ConditionArgs> alertContext) {
-            this.alertContext = alertContext;
+            $.alertContext = alertContext;
             return this;
         }
-        public Builder alertContext(@Nullable ConditionArgs alertContext) {
-            this.alertContext = Codegen.ofNullable(alertContext);
-            return this;
+
+        public Builder alertContext(ConditionArgs alertContext) {
+            return alertContext(Output.of(alertContext));
         }
+
         public Builder alertRuleId(@Nullable Output<ConditionArgs> alertRuleId) {
-            this.alertRuleId = alertRuleId;
+            $.alertRuleId = alertRuleId;
             return this;
         }
-        public Builder alertRuleId(@Nullable ConditionArgs alertRuleId) {
-            this.alertRuleId = Codegen.ofNullable(alertRuleId);
-            return this;
+
+        public Builder alertRuleId(ConditionArgs alertRuleId) {
+            return alertRuleId(Output.of(alertRuleId));
         }
+
         public Builder description(@Nullable Output<ConditionArgs> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable ConditionArgs description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(ConditionArgs description) {
+            return description(Output.of(description));
         }
+
         public Builder monitorCondition(@Nullable Output<ConditionArgs> monitorCondition) {
-            this.monitorCondition = monitorCondition;
+            $.monitorCondition = monitorCondition;
             return this;
         }
-        public Builder monitorCondition(@Nullable ConditionArgs monitorCondition) {
-            this.monitorCondition = Codegen.ofNullable(monitorCondition);
-            return this;
+
+        public Builder monitorCondition(ConditionArgs monitorCondition) {
+            return monitorCondition(Output.of(monitorCondition));
         }
+
         public Builder monitorService(@Nullable Output<ConditionArgs> monitorService) {
-            this.monitorService = monitorService;
+            $.monitorService = monitorService;
             return this;
         }
-        public Builder monitorService(@Nullable ConditionArgs monitorService) {
-            this.monitorService = Codegen.ofNullable(monitorService);
-            return this;
+
+        public Builder monitorService(ConditionArgs monitorService) {
+            return monitorService(Output.of(monitorService));
         }
+
         public Builder severity(@Nullable Output<ConditionArgs> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable ConditionArgs severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
+
+        public Builder severity(ConditionArgs severity) {
+            return severity(Output.of(severity));
         }
+
         public Builder targetResourceType(@Nullable Output<ConditionArgs> targetResourceType) {
-            this.targetResourceType = targetResourceType;
+            $.targetResourceType = targetResourceType;
             return this;
         }
-        public Builder targetResourceType(@Nullable ConditionArgs targetResourceType) {
-            this.targetResourceType = Codegen.ofNullable(targetResourceType);
-            return this;
-        }        public ConditionsArgs build() {
-            return new ConditionsArgs(alertContext, alertRuleId, description, monitorCondition, monitorService, severity, targetResourceType);
+
+        public Builder targetResourceType(ConditionArgs targetResourceType) {
+            return targetResourceType(Output.of(targetResourceType));
+        }
+
+        public ConditionsArgs build() {
+            return $;
         }
     }
+
 }

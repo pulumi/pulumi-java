@@ -25,7 +25,7 @@ public final class AndroidTestLoopResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="appApk", required=true)
-      private final FileReferenceResponse appApk;
+    private FileReferenceResponse appApk;
 
     public FileReferenceResponse appApk() {
         return this.appApk;
@@ -36,7 +36,7 @@ public final class AndroidTestLoopResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="appBundle", required=true)
-      private final AppBundleResponse appBundle;
+    private AppBundleResponse appBundle;
 
     public AppBundleResponse appBundle() {
         return this.appBundle;
@@ -47,7 +47,7 @@ public final class AndroidTestLoopResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="appPackageId", required=true)
-      private final String appPackageId;
+    private String appPackageId;
 
     public String appPackageId() {
         return this.appPackageId;
@@ -58,7 +58,7 @@ public final class AndroidTestLoopResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scenarioLabels", required=true)
-      private final List<String> scenarioLabels;
+    private List<String> scenarioLabels;
 
     public List<String> scenarioLabels() {
         return this.scenarioLabels;
@@ -69,88 +69,81 @@ public final class AndroidTestLoopResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="scenarios", required=true)
-      private final List<Integer> scenarios;
+    private List<Integer> scenarios;
 
     public List<Integer> scenarios() {
         return this.scenarios;
     }
 
-    public AndroidTestLoopResponse(
-        FileReferenceResponse appApk,
-        AppBundleResponse appBundle,
-        String appPackageId,
-        List<String> scenarioLabels,
-        List<Integer> scenarios) {
-        this.appApk = Objects.requireNonNull(appApk, "expected parameter 'appApk' to be non-null");
-        this.appBundle = Objects.requireNonNull(appBundle, "expected parameter 'appBundle' to be non-null");
-        this.appPackageId = Objects.requireNonNull(appPackageId, "expected parameter 'appPackageId' to be non-null");
-        this.scenarioLabels = Objects.requireNonNull(scenarioLabels, "expected parameter 'scenarioLabels' to be non-null");
-        this.scenarios = Objects.requireNonNull(scenarios, "expected parameter 'scenarios' to be non-null");
-    }
+    private AndroidTestLoopResponse() {}
 
-    private AndroidTestLoopResponse() {
-        this.appApk = null;
-        this.appBundle = null;
-        this.appPackageId = null;
-        this.scenarioLabels = List.of();
-        this.scenarios = List.of();
+    private AndroidTestLoopResponse(AndroidTestLoopResponse $) {
+        this.appApk = $.appApk;
+        this.appBundle = $.appBundle;
+        this.appPackageId = $.appPackageId;
+        this.scenarioLabels = $.scenarioLabels;
+        this.scenarios = $.scenarios;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidTestLoopResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FileReferenceResponse appApk;
-        private AppBundleResponse appBundle;
-        private String appPackageId;
-        private List<String> scenarioLabels;
-        private List<Integer> scenarios;
+        private AndroidTestLoopResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidTestLoopResponse();
         }
 
         public Builder(AndroidTestLoopResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appApk = defaults.appApk;
-    	      this.appBundle = defaults.appBundle;
-    	      this.appPackageId = defaults.appPackageId;
-    	      this.scenarioLabels = defaults.scenarioLabels;
-    	      this.scenarios = defaults.scenarios;
+            $ = new AndroidTestLoopResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appApk(FileReferenceResponse appApk) {
-            this.appApk = Objects.requireNonNull(appApk);
+            $.appApk = appApk;
             return this;
         }
+
         public Builder appBundle(AppBundleResponse appBundle) {
-            this.appBundle = Objects.requireNonNull(appBundle);
+            $.appBundle = appBundle;
             return this;
         }
+
         public Builder appPackageId(String appPackageId) {
-            this.appPackageId = Objects.requireNonNull(appPackageId);
+            $.appPackageId = appPackageId;
             return this;
         }
+
         public Builder scenarioLabels(List<String> scenarioLabels) {
-            this.scenarioLabels = Objects.requireNonNull(scenarioLabels);
+            $.scenarioLabels = scenarioLabels;
             return this;
         }
+
         public Builder scenarioLabels(String... scenarioLabels) {
             return scenarioLabels(List.of(scenarioLabels));
         }
+
         public Builder scenarios(List<Integer> scenarios) {
-            this.scenarios = Objects.requireNonNull(scenarios);
+            $.scenarios = scenarios;
             return this;
         }
+
         public Builder scenarios(Integer... scenarios) {
             return scenarios(List.of(scenarios));
-        }        public AndroidTestLoopResponse build() {
-            return new AndroidTestLoopResponse(appApk, appBundle, appPackageId, scenarioLabels, scenarios);
+        }
+
+        public AndroidTestLoopResponse build() {
+            $.appApk = Objects.requireNonNull($.appApk, "expected parameter 'appApk' to be non-null");
+            $.appBundle = Objects.requireNonNull($.appBundle, "expected parameter 'appBundle' to be non-null");
+            $.appPackageId = Objects.requireNonNull($.appPackageId, "expected parameter 'appPackageId' to be non-null");
+            $.scenarioLabels = Objects.requireNonNull($.scenarioLabels, "expected parameter 'scenarioLabels' to be non-null");
+            $.scenarios = Objects.requireNonNull($.scenarios, "expected parameter 'scenarios' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="diagnosticSettingsName", required=true)
-      private final String diagnosticSettingsName;
+    private String diagnosticSettingsName;
 
     public String diagnosticSettingsName() {
         return this.diagnosticSettingsName;
@@ -28,55 +28,52 @@ public final class GetguestDiagnosticsSettingArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetguestDiagnosticsSettingArgs(
-        String diagnosticSettingsName,
-        String resourceGroupName) {
-        this.diagnosticSettingsName = Objects.requireNonNull(diagnosticSettingsName, "expected parameter 'diagnosticSettingsName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetguestDiagnosticsSettingArgs() {}
 
-    private GetguestDiagnosticsSettingArgs() {
-        this.diagnosticSettingsName = null;
-        this.resourceGroupName = null;
+    private GetguestDiagnosticsSettingArgs(GetguestDiagnosticsSettingArgs $) {
+        this.diagnosticSettingsName = $.diagnosticSettingsName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetguestDiagnosticsSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diagnosticSettingsName;
-        private String resourceGroupName;
+        private GetguestDiagnosticsSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetguestDiagnosticsSettingArgs();
         }
 
         public Builder(GetguestDiagnosticsSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diagnosticSettingsName = defaults.diagnosticSettingsName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetguestDiagnosticsSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diagnosticSettingsName(String diagnosticSettingsName) {
-            this.diagnosticSettingsName = Objects.requireNonNull(diagnosticSettingsName);
+            $.diagnosticSettingsName = diagnosticSettingsName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetguestDiagnosticsSettingArgs build() {
-            return new GetguestDiagnosticsSettingArgs(diagnosticSettingsName, resourceGroupName);
+        }
+
+        public GetguestDiagnosticsSettingArgs build() {
+            $.diagnosticSettingsName = Objects.requireNonNull($.diagnosticSettingsName, "expected parameter 'diagnosticSettingsName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

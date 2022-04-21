@@ -5,10 +5,10 @@ package com.pulumi.awsnative.cloudformation.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StackSetDeploymentTargetsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="accounts")
-      private final @Nullable Output<List<String>> accounts;
+    private @Nullable Output<List<String>> accounts;
 
-    public Output<List<String>> accounts() {
-        return this.accounts == null ? Codegen.empty() : this.accounts;
+    public Optional<Output<List<String>>> accounts() {
+        return Optional.ofNullable(this.accounts);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class StackSetDeploymentTargetsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="organizationalUnitIds")
-      private final @Nullable Output<List<String>> organizationalUnitIds;
+    private @Nullable Output<List<String>> organizationalUnitIds;
 
-    public Output<List<String>> organizationalUnitIds() {
-        return this.organizationalUnitIds == null ? Codegen.empty() : this.organizationalUnitIds;
+    public Optional<Output<List<String>>> organizationalUnitIds() {
+        return Optional.ofNullable(this.organizationalUnitIds);
     }
 
-    public StackSetDeploymentTargetsArgs(
-        @Nullable Output<List<String>> accounts,
-        @Nullable Output<List<String>> organizationalUnitIds) {
-        this.accounts = accounts;
-        this.organizationalUnitIds = organizationalUnitIds;
-    }
+    private StackSetDeploymentTargetsArgs() {}
 
-    private StackSetDeploymentTargetsArgs() {
-        this.accounts = Codegen.empty();
-        this.organizationalUnitIds = Codegen.empty();
+    private StackSetDeploymentTargetsArgs(StackSetDeploymentTargetsArgs $) {
+        this.accounts = $.accounts;
+        this.organizationalUnitIds = $.organizationalUnitIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetDeploymentTargetsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> accounts;
-        private @Nullable Output<List<String>> organizationalUnitIds;
+        private StackSetDeploymentTargetsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetDeploymentTargetsArgs();
         }
 
         public Builder(StackSetDeploymentTargetsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accounts = defaults.accounts;
-    	      this.organizationalUnitIds = defaults.organizationalUnitIds;
+            $ = new StackSetDeploymentTargetsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accounts(@Nullable Output<List<String>> accounts) {
-            this.accounts = accounts;
+            $.accounts = accounts;
             return this;
         }
-        public Builder accounts(@Nullable List<String> accounts) {
-            this.accounts = Codegen.ofNullable(accounts);
-            return this;
+
+        public Builder accounts(List<String> accounts) {
+            return accounts(Output.of(accounts));
         }
+
         public Builder accounts(String... accounts) {
             return accounts(List.of(accounts));
         }
+
         public Builder organizationalUnitIds(@Nullable Output<List<String>> organizationalUnitIds) {
-            this.organizationalUnitIds = organizationalUnitIds;
+            $.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
-        public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
-            this.organizationalUnitIds = Codegen.ofNullable(organizationalUnitIds);
-            return this;
+
+        public Builder organizationalUnitIds(List<String> organizationalUnitIds) {
+            return organizationalUnitIds(Output.of(organizationalUnitIds));
         }
+
         public Builder organizationalUnitIds(String... organizationalUnitIds) {
             return organizationalUnitIds(List.of(organizationalUnitIds));
-        }        public StackSetDeploymentTargetsArgs build() {
-            return new StackSetDeploymentTargetsArgs(accounts, organizationalUnitIds);
+        }
+
+        public StackSetDeploymentTargetsArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetGroupsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final String parent;
+    private String parent;
 
     public String parent() {
         return this.parent;
     }
 
-    public GetGroupsArgs(String parent) {
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-    }
+    private GetGroupsArgs() {}
 
-    private GetGroupsArgs() {
-        this.parent = null;
+    private GetGroupsArgs(GetGroupsArgs $) {
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parent;
+        private GetGroupsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupsArgs();
         }
 
         public Builder(GetGroupsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parent = defaults.parent;
+            $ = new GetGroupsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parent(String parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
-        }        public GetGroupsArgs build() {
-            return new GetGroupsArgs(parent);
+        }
+
+        public GetGroupsArgs build() {
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

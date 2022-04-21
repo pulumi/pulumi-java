@@ -7,10 +7,10 @@ import com.pulumi.azurenative.security.inputs.JitNetworkAccessPolicyVirtualMachi
 import com.pulumi.azurenative.security.inputs.JitNetworkAccessRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="ascLocation", required=true)
-      private final Output<String> ascLocation;
+    private Output<String> ascLocation;
 
     public Output<String> ascLocation() {
         return this.ascLocation;
@@ -34,10 +34,10 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="jitNetworkAccessPolicyName")
-      private final @Nullable Output<String> jitNetworkAccessPolicyName;
+    private @Nullable Output<String> jitNetworkAccessPolicyName;
 
-    public Output<String> jitNetworkAccessPolicyName() {
-        return this.jitNetworkAccessPolicyName == null ? Codegen.empty() : this.jitNetworkAccessPolicyName;
+    public Optional<Output<String>> jitNetworkAccessPolicyName() {
+        return Optional.ofNullable(this.jitNetworkAccessPolicyName);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     @Import(name="requests")
-      private final @Nullable Output<List<JitNetworkAccessRequestArgs>> requests;
+    private @Nullable Output<List<JitNetworkAccessRequestArgs>> requests;
 
-    public Output<List<JitNetworkAccessRequestArgs>> requests() {
-        return this.requests == null ? Codegen.empty() : this.requests;
+    public Optional<Output<List<JitNetworkAccessRequestArgs>>> requests() {
+        return Optional.ofNullable(this.requests);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -74,121 +74,109 @@ public final class JitNetworkAccessPolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="virtualMachines", required=true)
-      private final Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;
+    private Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;
 
     public Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines() {
         return this.virtualMachines;
     }
 
-    public JitNetworkAccessPolicyArgs(
-        Output<String> ascLocation,
-        @Nullable Output<String> jitNetworkAccessPolicyName,
-        @Nullable Output<String> kind,
-        @Nullable Output<List<JitNetworkAccessRequestArgs>> requests,
-        Output<String> resourceGroupName,
-        Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines) {
-        this.ascLocation = Objects.requireNonNull(ascLocation, "expected parameter 'ascLocation' to be non-null");
-        this.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
-        this.kind = kind;
-        this.requests = requests;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualMachines = Objects.requireNonNull(virtualMachines, "expected parameter 'virtualMachines' to be non-null");
-    }
+    private JitNetworkAccessPolicyArgs() {}
 
-    private JitNetworkAccessPolicyArgs() {
-        this.ascLocation = Codegen.empty();
-        this.jitNetworkAccessPolicyName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.requests = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.virtualMachines = Codegen.empty();
+    private JitNetworkAccessPolicyArgs(JitNetworkAccessPolicyArgs $) {
+        this.ascLocation = $.ascLocation;
+        this.jitNetworkAccessPolicyName = $.jitNetworkAccessPolicyName;
+        this.kind = $.kind;
+        this.requests = $.requests;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualMachines = $.virtualMachines;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitNetworkAccessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ascLocation;
-        private @Nullable Output<String> jitNetworkAccessPolicyName;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<List<JitNetworkAccessRequestArgs>> requests;
-        private Output<String> resourceGroupName;
-        private Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;
+        private JitNetworkAccessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitNetworkAccessPolicyArgs();
         }
 
         public Builder(JitNetworkAccessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ascLocation = defaults.ascLocation;
-    	      this.jitNetworkAccessPolicyName = defaults.jitNetworkAccessPolicyName;
-    	      this.kind = defaults.kind;
-    	      this.requests = defaults.requests;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualMachines = defaults.virtualMachines;
+            $ = new JitNetworkAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ascLocation(Output<String> ascLocation) {
-            this.ascLocation = Objects.requireNonNull(ascLocation);
+            $.ascLocation = ascLocation;
             return this;
         }
+
         public Builder ascLocation(String ascLocation) {
-            this.ascLocation = Output.of(Objects.requireNonNull(ascLocation));
-            return this;
+            return ascLocation(Output.of(ascLocation));
         }
+
         public Builder jitNetworkAccessPolicyName(@Nullable Output<String> jitNetworkAccessPolicyName) {
-            this.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
+            $.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
             return this;
         }
-        public Builder jitNetworkAccessPolicyName(@Nullable String jitNetworkAccessPolicyName) {
-            this.jitNetworkAccessPolicyName = Codegen.ofNullable(jitNetworkAccessPolicyName);
-            return this;
+
+        public Builder jitNetworkAccessPolicyName(String jitNetworkAccessPolicyName) {
+            return jitNetworkAccessPolicyName(Output.of(jitNetworkAccessPolicyName));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder requests(@Nullable Output<List<JitNetworkAccessRequestArgs>> requests) {
-            this.requests = requests;
+            $.requests = requests;
             return this;
         }
-        public Builder requests(@Nullable List<JitNetworkAccessRequestArgs> requests) {
-            this.requests = Codegen.ofNullable(requests);
-            return this;
+
+        public Builder requests(List<JitNetworkAccessRequestArgs> requests) {
+            return requests(Output.of(requests));
         }
+
         public Builder requests(JitNetworkAccessRequestArgs... requests) {
             return requests(List.of(requests));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder virtualMachines(Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines) {
-            this.virtualMachines = Objects.requireNonNull(virtualMachines);
+            $.virtualMachines = virtualMachines;
             return this;
         }
+
         public Builder virtualMachines(List<JitNetworkAccessPolicyVirtualMachineArgs> virtualMachines) {
-            this.virtualMachines = Output.of(Objects.requireNonNull(virtualMachines));
-            return this;
+            return virtualMachines(Output.of(virtualMachines));
         }
+
         public Builder virtualMachines(JitNetworkAccessPolicyVirtualMachineArgs... virtualMachines) {
             return virtualMachines(List.of(virtualMachines));
-        }        public JitNetworkAccessPolicyArgs build() {
-            return new JitNetworkAccessPolicyArgs(ascLocation, jitNetworkAccessPolicyName, kind, requests, resourceGroupName, virtualMachines);
+        }
+
+        public JitNetworkAccessPolicyArgs build() {
+            $.ascLocation = Objects.requireNonNull($.ascLocation, "expected parameter 'ascLocation' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualMachines = Objects.requireNonNull($.virtualMachines, "expected parameter 'virtualMachines' to be non-null");
+            return $;
         }
     }
+
 }

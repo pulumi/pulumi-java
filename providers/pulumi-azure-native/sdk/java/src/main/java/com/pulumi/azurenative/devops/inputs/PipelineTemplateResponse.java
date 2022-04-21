@@ -24,7 +24,7 @@ public final class PipelineTemplateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -35,55 +35,51 @@ public final class PipelineTemplateResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,String> parameters;
+    private @Nullable Map<String,String> parameters;
 
-    public Map<String,String> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,String>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public PipelineTemplateResponse(
-        String id,
-        @Nullable Map<String,String> parameters) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.parameters = parameters;
-    }
+    private PipelineTemplateResponse() {}
 
-    private PipelineTemplateResponse() {
-        this.id = null;
-        this.parameters = Map.of();
+    private PipelineTemplateResponse(PipelineTemplateResponse $) {
+        this.id = $.id;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineTemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private @Nullable Map<String,String> parameters;
+        private PipelineTemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineTemplateResponse();
         }
 
         public Builder(PipelineTemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.parameters = defaults.parameters;
+            $ = new PipelineTemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
-        }        public PipelineTemplateResponse build() {
-            return new PipelineTemplateResponse(id, parameters);
+        }
+
+        public PipelineTemplateResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

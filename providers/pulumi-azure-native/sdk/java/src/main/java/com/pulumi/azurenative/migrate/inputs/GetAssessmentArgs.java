@@ -17,7 +17,7 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="assessmentName", required=true)
-      private final String assessmentName;
+    private String assessmentName;
 
     public String assessmentName() {
         return this.assessmentName;
@@ -28,7 +28,7 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final String groupName;
+    private String groupName;
 
     public String groupName() {
         return this.groupName;
@@ -39,7 +39,7 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectName", required=true)
-      private final String projectName;
+    private String projectName;
 
     public String projectName() {
         return this.projectName;
@@ -50,73 +50,66 @@ public final class GetAssessmentArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAssessmentArgs(
-        String assessmentName,
-        String groupName,
-        String projectName,
-        String resourceGroupName) {
-        this.assessmentName = Objects.requireNonNull(assessmentName, "expected parameter 'assessmentName' to be non-null");
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAssessmentArgs() {}
 
-    private GetAssessmentArgs() {
-        this.assessmentName = null;
-        this.groupName = null;
-        this.projectName = null;
-        this.resourceGroupName = null;
+    private GetAssessmentArgs(GetAssessmentArgs $) {
+        this.assessmentName = $.assessmentName;
+        this.groupName = $.groupName;
+        this.projectName = $.projectName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAssessmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assessmentName;
-        private String groupName;
-        private String projectName;
-        private String resourceGroupName;
+        private GetAssessmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAssessmentArgs();
         }
 
         public Builder(GetAssessmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assessmentName = defaults.assessmentName;
-    	      this.groupName = defaults.groupName;
-    	      this.projectName = defaults.projectName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAssessmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assessmentName(String assessmentName) {
-            this.assessmentName = Objects.requireNonNull(assessmentName);
+            $.assessmentName = assessmentName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAssessmentArgs build() {
-            return new GetAssessmentArgs(assessmentName, groupName, projectName, resourceGroupName);
+        }
+
+        public GetAssessmentArgs build() {
+            $.assessmentName = Objects.requireNonNull($.assessmentName, "expected parameter 'assessmentName' to be non-null");
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

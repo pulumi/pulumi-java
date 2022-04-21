@@ -21,7 +21,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends co
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -32,7 +32,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends co
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,7 +43,7 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends co
      * 
      */
     @Import(name="sqlDedicatedGatewayEndpoint", required=true)
-      private final String sqlDedicatedGatewayEndpoint;
+    private String sqlDedicatedGatewayEndpoint;
 
     public String sqlDedicatedGatewayEndpoint() {
         return this.sqlDedicatedGatewayEndpoint;
@@ -54,73 +54,66 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse extends co
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public SqlDedicatedGatewayRegionalServiceResourceResponse(
-        String location,
-        String name,
-        String sqlDedicatedGatewayEndpoint,
-        String status) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sqlDedicatedGatewayEndpoint = Objects.requireNonNull(sqlDedicatedGatewayEndpoint, "expected parameter 'sqlDedicatedGatewayEndpoint' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private SqlDedicatedGatewayRegionalServiceResourceResponse() {}
 
-    private SqlDedicatedGatewayRegionalServiceResourceResponse() {
-        this.location = null;
-        this.name = null;
-        this.sqlDedicatedGatewayEndpoint = null;
-        this.status = null;
+    private SqlDedicatedGatewayRegionalServiceResourceResponse(SqlDedicatedGatewayRegionalServiceResourceResponse $) {
+        this.location = $.location;
+        this.name = $.name;
+        this.sqlDedicatedGatewayEndpoint = $.sqlDedicatedGatewayEndpoint;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlDedicatedGatewayRegionalServiceResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String name;
-        private String sqlDedicatedGatewayEndpoint;
-        private String status;
+        private SqlDedicatedGatewayRegionalServiceResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlDedicatedGatewayRegionalServiceResourceResponse();
         }
 
         public Builder(SqlDedicatedGatewayRegionalServiceResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.sqlDedicatedGatewayEndpoint = defaults.sqlDedicatedGatewayEndpoint;
-    	      this.status = defaults.status;
+            $ = new SqlDedicatedGatewayRegionalServiceResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder sqlDedicatedGatewayEndpoint(String sqlDedicatedGatewayEndpoint) {
-            this.sqlDedicatedGatewayEndpoint = Objects.requireNonNull(sqlDedicatedGatewayEndpoint);
+            $.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public SqlDedicatedGatewayRegionalServiceResourceResponse build() {
-            return new SqlDedicatedGatewayRegionalServiceResourceResponse(location, name, sqlDedicatedGatewayEndpoint, status);
+        }
+
+        public SqlDedicatedGatewayRegionalServiceResourceResponse build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sqlDedicatedGatewayEndpoint = Objects.requireNonNull($.sqlDedicatedGatewayEndpoint, "expected parameter 'sqlDedicatedGatewayEndpoint' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

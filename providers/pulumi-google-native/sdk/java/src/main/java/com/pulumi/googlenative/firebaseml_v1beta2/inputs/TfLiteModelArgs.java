@@ -5,9 +5,9 @@ package com.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TfLiteModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automlModel")
-      private final @Nullable Output<String> automlModel;
+    private @Nullable Output<String> automlModel;
 
-    public Output<String> automlModel() {
-        return this.automlModel == null ? Codegen.empty() : this.automlModel;
+    public Optional<Output<String>> automlModel() {
+        return Optional.ofNullable(this.automlModel);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class TfLiteModelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsTfliteUri")
-      private final @Nullable Output<String> gcsTfliteUri;
+    private @Nullable Output<String> gcsTfliteUri;
 
-    public Output<String> gcsTfliteUri() {
-        return this.gcsTfliteUri == null ? Codegen.empty() : this.gcsTfliteUri;
+    public Optional<Output<String>> gcsTfliteUri() {
+        return Optional.ofNullable(this.gcsTfliteUri);
     }
 
-    public TfLiteModelArgs(
-        @Nullable Output<String> automlModel,
-        @Nullable Output<String> gcsTfliteUri) {
-        this.automlModel = automlModel;
-        this.gcsTfliteUri = gcsTfliteUri;
-    }
+    private TfLiteModelArgs() {}
 
-    private TfLiteModelArgs() {
-        this.automlModel = Codegen.empty();
-        this.gcsTfliteUri = Codegen.empty();
+    private TfLiteModelArgs(TfLiteModelArgs $) {
+        this.automlModel = $.automlModel;
+        this.gcsTfliteUri = $.gcsTfliteUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TfLiteModelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> automlModel;
-        private @Nullable Output<String> gcsTfliteUri;
+        private TfLiteModelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TfLiteModelArgs();
         }
 
         public Builder(TfLiteModelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automlModel = defaults.automlModel;
-    	      this.gcsTfliteUri = defaults.gcsTfliteUri;
+            $ = new TfLiteModelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automlModel(@Nullable Output<String> automlModel) {
-            this.automlModel = automlModel;
+            $.automlModel = automlModel;
             return this;
         }
-        public Builder automlModel(@Nullable String automlModel) {
-            this.automlModel = Codegen.ofNullable(automlModel);
-            return this;
+
+        public Builder automlModel(String automlModel) {
+            return automlModel(Output.of(automlModel));
         }
+
         public Builder gcsTfliteUri(@Nullable Output<String> gcsTfliteUri) {
-            this.gcsTfliteUri = gcsTfliteUri;
+            $.gcsTfliteUri = gcsTfliteUri;
             return this;
         }
-        public Builder gcsTfliteUri(@Nullable String gcsTfliteUri) {
-            this.gcsTfliteUri = Codegen.ofNullable(gcsTfliteUri);
-            return this;
-        }        public TfLiteModelArgs build() {
-            return new TfLiteModelArgs(automlModel, gcsTfliteUri);
+
+        public Builder gcsTfliteUri(String gcsTfliteUri) {
+            return gcsTfliteUri(Output.of(gcsTfliteUri));
+        }
+
+        public TfLiteModelArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.vpcaccess;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.vpcaccess.inputs.ConnectorSubnetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipCidrRange")
-      private final @Nullable Output<String> ipCidrRange;
+    private @Nullable Output<String> ipCidrRange;
 
-    public Output<String> ipCidrRange() {
-        return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
+    public Optional<Output<String>> ipCidrRange() {
+        return Optional.ofNullable(this.ipCidrRange);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxInstances")
-      private final @Nullable Output<Integer> maxInstances;
+    private @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> maxInstances() {
-        return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
+    public Optional<Output<Integer>> maxInstances() {
+        return Optional.ofNullable(this.maxInstances);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxThroughput")
-      private final @Nullable Output<Integer> maxThroughput;
+    private @Nullable Output<Integer> maxThroughput;
 
-    public Output<Integer> maxThroughput() {
-        return this.maxThroughput == null ? Codegen.empty() : this.maxThroughput;
+    public Optional<Output<Integer>> maxThroughput() {
+        return Optional.ofNullable(this.maxThroughput);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minInstances")
-      private final @Nullable Output<Integer> minInstances;
+    private @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> minInstances() {
-        return this.minInstances == null ? Codegen.empty() : this.minInstances;
+    public Optional<Output<Integer>> minInstances() {
+        return Optional.ofNullable(this.minInstances);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minThroughput")
-      private final @Nullable Output<Integer> minThroughput;
+    private @Nullable Output<Integer> minThroughput;
 
-    public Output<Integer> minThroughput() {
-        return this.minThroughput == null ? Codegen.empty() : this.minThroughput;
+    public Optional<Output<Integer>> minThroughput() {
+        return Optional.ofNullable(this.minThroughput);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -135,180 +135,148 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<ConnectorSubnetArgs> subnet;
+    private @Nullable Output<ConnectorSubnetArgs> subnet;
 
-    public Output<ConnectorSubnetArgs> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<ConnectorSubnetArgs>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
-    public ConnectorArgs(
-        @Nullable Output<String> ipCidrRange,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Integer> maxInstances,
-        @Nullable Output<Integer> maxThroughput,
-        @Nullable Output<Integer> minInstances,
-        @Nullable Output<Integer> minThroughput,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<ConnectorSubnetArgs> subnet) {
-        this.ipCidrRange = ipCidrRange;
-        this.machineType = machineType;
-        this.maxInstances = maxInstances;
-        this.maxThroughput = maxThroughput;
-        this.minInstances = minInstances;
-        this.minThroughput = minThroughput;
-        this.name = name;
-        this.network = network;
-        this.project = project;
-        this.region = region;
-        this.subnet = subnet;
-    }
+    private ConnectorArgs() {}
 
-    private ConnectorArgs() {
-        this.ipCidrRange = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.maxInstances = Codegen.empty();
-        this.maxThroughput = Codegen.empty();
-        this.minInstances = Codegen.empty();
-        this.minThroughput = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.subnet = Codegen.empty();
+    private ConnectorArgs(ConnectorArgs $) {
+        this.ipCidrRange = $.ipCidrRange;
+        this.machineType = $.machineType;
+        this.maxInstances = $.maxInstances;
+        this.maxThroughput = $.maxThroughput;
+        this.minInstances = $.minInstances;
+        this.minThroughput = $.minThroughput;
+        this.name = $.name;
+        this.network = $.network;
+        this.project = $.project;
+        this.region = $.region;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipCidrRange;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Integer> maxInstances;
-        private @Nullable Output<Integer> maxThroughput;
-        private @Nullable Output<Integer> minInstances;
-        private @Nullable Output<Integer> minThroughput;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<ConnectorSubnetArgs> subnet;
+        private ConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorArgs();
         }
 
         public Builder(ConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.machineType = defaults.machineType;
-    	      this.maxInstances = defaults.maxInstances;
-    	      this.maxThroughput = defaults.maxThroughput;
-    	      this.minInstances = defaults.minInstances;
-    	      this.minThroughput = defaults.minThroughput;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.subnet = defaults.subnet;
+            $ = new ConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
-            this.ipCidrRange = ipCidrRange;
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
-        public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Codegen.ofNullable(ipCidrRange);
-            return this;
+
+        public Builder ipCidrRange(String ipCidrRange) {
+            return ipCidrRange(Output.of(ipCidrRange));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
-            this.maxInstances = maxInstances;
+            $.maxInstances = maxInstances;
             return this;
         }
-        public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Codegen.ofNullable(maxInstances);
-            return this;
+
+        public Builder maxInstances(Integer maxInstances) {
+            return maxInstances(Output.of(maxInstances));
         }
+
         public Builder maxThroughput(@Nullable Output<Integer> maxThroughput) {
-            this.maxThroughput = maxThroughput;
+            $.maxThroughput = maxThroughput;
             return this;
         }
-        public Builder maxThroughput(@Nullable Integer maxThroughput) {
-            this.maxThroughput = Codegen.ofNullable(maxThroughput);
-            return this;
+
+        public Builder maxThroughput(Integer maxThroughput) {
+            return maxThroughput(Output.of(maxThroughput));
         }
+
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
-            this.minInstances = minInstances;
+            $.minInstances = minInstances;
             return this;
         }
-        public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Codegen.ofNullable(minInstances);
-            return this;
+
+        public Builder minInstances(Integer minInstances) {
+            return minInstances(Output.of(minInstances));
         }
+
         public Builder minThroughput(@Nullable Output<Integer> minThroughput) {
-            this.minThroughput = minThroughput;
+            $.minThroughput = minThroughput;
             return this;
         }
-        public Builder minThroughput(@Nullable Integer minThroughput) {
-            this.minThroughput = Codegen.ofNullable(minThroughput);
-            return this;
+
+        public Builder minThroughput(Integer minThroughput) {
+            return minThroughput(Output.of(minThroughput));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder subnet(@Nullable Output<ConnectorSubnetArgs> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable ConnectorSubnetArgs subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
-        }        public ConnectorArgs build() {
-            return new ConnectorArgs(ipCidrRange, machineType, maxInstances, maxThroughput, minInstances, minThroughput, name, network, project, region, subnet);
+
+        public Builder subnet(ConnectorSubnetArgs subnet) {
+            return subnet(Output.of(subnet));
+        }
+
+        public ConnectorArgs build() {
+            return $;
         }
     }
+
 }

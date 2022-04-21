@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DatasetReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="datasetId")
-      private final @Nullable Output<String> datasetId;
+    private @Nullable Output<String> datasetId;
 
-    public Output<String> datasetId() {
-        return this.datasetId == null ? Codegen.empty() : this.datasetId;
+    public Optional<Output<String>> datasetId() {
+        return Optional.ofNullable(this.datasetId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DatasetReferenceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DatasetReferenceArgs(
-        @Nullable Output<String> datasetId,
-        @Nullable Output<String> project) {
-        this.datasetId = datasetId;
-        this.project = project;
-    }
+    private DatasetReferenceArgs() {}
 
-    private DatasetReferenceArgs() {
-        this.datasetId = Codegen.empty();
-        this.project = Codegen.empty();
+    private DatasetReferenceArgs(DatasetReferenceArgs $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datasetId;
-        private @Nullable Output<String> project;
+        private DatasetReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetReferenceArgs();
         }
 
         public Builder(DatasetReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
+            $ = new DatasetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(@Nullable Output<String> datasetId) {
-            this.datasetId = datasetId;
+            $.datasetId = datasetId;
             return this;
         }
-        public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Codegen.ofNullable(datasetId);
-            return this;
+
+        public Builder datasetId(String datasetId) {
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DatasetReferenceArgs build() {
-            return new DatasetReferenceArgs(datasetId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DatasetReferenceArgs build() {
+            return $;
         }
     }
+
 }

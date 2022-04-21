@@ -6,9 +6,9 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.LogAnalyticsConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class AppLogsConfigurationArgs extends com.pulumi.resources.Resourc
     public static final AppLogsConfigurationArgs Empty = new AppLogsConfigurationArgs();
 
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     @Import(name="logAnalyticsConfiguration")
-      private final @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
+    private @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
 
-    public Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration() {
-        return this.logAnalyticsConfiguration == null ? Codegen.empty() : this.logAnalyticsConfiguration;
+    public Optional<Output<LogAnalyticsConfigurationArgs>> logAnalyticsConfiguration() {
+        return Optional.ofNullable(this.logAnalyticsConfiguration);
     }
 
-    public AppLogsConfigurationArgs(
-        @Nullable Output<String> destination,
-        @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration) {
-        this.destination = destination;
-        this.logAnalyticsConfiguration = logAnalyticsConfiguration;
-    }
+    private AppLogsConfigurationArgs() {}
 
-    private AppLogsConfigurationArgs() {
-        this.destination = Codegen.empty();
-        this.logAnalyticsConfiguration = Codegen.empty();
+    private AppLogsConfigurationArgs(AppLogsConfigurationArgs $) {
+        this.destination = $.destination;
+        this.logAnalyticsConfiguration = $.logAnalyticsConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppLogsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destination;
-        private @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
+        private AppLogsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppLogsConfigurationArgs();
         }
 
         public Builder(AppLogsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.logAnalyticsConfiguration = defaults.logAnalyticsConfiguration;
+            $ = new AppLogsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder logAnalyticsConfiguration(@Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration) {
-            this.logAnalyticsConfiguration = logAnalyticsConfiguration;
+            $.logAnalyticsConfiguration = logAnalyticsConfiguration;
             return this;
         }
-        public Builder logAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationArgs logAnalyticsConfiguration) {
-            this.logAnalyticsConfiguration = Codegen.ofNullable(logAnalyticsConfiguration);
-            return this;
-        }        public AppLogsConfigurationArgs build() {
-            return new AppLogsConfigurationArgs(destination, logAnalyticsConfiguration);
+
+        public Builder logAnalyticsConfiguration(LogAnalyticsConfigurationArgs logAnalyticsConfiguration) {
+            return logAnalyticsConfiguration(Output.of(logAnalyticsConfiguration));
+        }
+
+        public AppLogsConfigurationArgs build() {
+            return $;
         }
     }
+
 }

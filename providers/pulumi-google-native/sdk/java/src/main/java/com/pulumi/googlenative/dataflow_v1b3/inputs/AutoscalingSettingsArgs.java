@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.enums.AutoscalingSettingsAlgorithm;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AutoscalingSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="algorithm")
-      private final @Nullable Output<AutoscalingSettingsAlgorithm> algorithm;
+    private @Nullable Output<AutoscalingSettingsAlgorithm> algorithm;
 
-    public Output<AutoscalingSettingsAlgorithm> algorithm() {
-        return this.algorithm == null ? Codegen.empty() : this.algorithm;
+    public Optional<Output<AutoscalingSettingsAlgorithm>> algorithm() {
+        return Optional.ofNullable(this.algorithm);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AutoscalingSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="maxNumWorkers")
-      private final @Nullable Output<Integer> maxNumWorkers;
+    private @Nullable Output<Integer> maxNumWorkers;
 
-    public Output<Integer> maxNumWorkers() {
-        return this.maxNumWorkers == null ? Codegen.empty() : this.maxNumWorkers;
+    public Optional<Output<Integer>> maxNumWorkers() {
+        return Optional.ofNullable(this.maxNumWorkers);
     }
 
-    public AutoscalingSettingsArgs(
-        @Nullable Output<AutoscalingSettingsAlgorithm> algorithm,
-        @Nullable Output<Integer> maxNumWorkers) {
-        this.algorithm = algorithm;
-        this.maxNumWorkers = maxNumWorkers;
-    }
+    private AutoscalingSettingsArgs() {}
 
-    private AutoscalingSettingsArgs() {
-        this.algorithm = Codegen.empty();
-        this.maxNumWorkers = Codegen.empty();
+    private AutoscalingSettingsArgs(AutoscalingSettingsArgs $) {
+        this.algorithm = $.algorithm;
+        this.maxNumWorkers = $.maxNumWorkers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoscalingSettingsAlgorithm> algorithm;
-        private @Nullable Output<Integer> maxNumWorkers;
+        private AutoscalingSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingSettingsArgs();
         }
 
         public Builder(AutoscalingSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.maxNumWorkers = defaults.maxNumWorkers;
+            $ = new AutoscalingSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(@Nullable Output<AutoscalingSettingsAlgorithm> algorithm) {
-            this.algorithm = algorithm;
+            $.algorithm = algorithm;
             return this;
         }
-        public Builder algorithm(@Nullable AutoscalingSettingsAlgorithm algorithm) {
-            this.algorithm = Codegen.ofNullable(algorithm);
-            return this;
+
+        public Builder algorithm(AutoscalingSettingsAlgorithm algorithm) {
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder maxNumWorkers(@Nullable Output<Integer> maxNumWorkers) {
-            this.maxNumWorkers = maxNumWorkers;
+            $.maxNumWorkers = maxNumWorkers;
             return this;
         }
-        public Builder maxNumWorkers(@Nullable Integer maxNumWorkers) {
-            this.maxNumWorkers = Codegen.ofNullable(maxNumWorkers);
-            return this;
-        }        public AutoscalingSettingsArgs build() {
-            return new AutoscalingSettingsArgs(algorithm, maxNumWorkers);
+
+        public Builder maxNumWorkers(Integer maxNumWorkers) {
+            return maxNumWorkers(Output.of(maxNumWorkers));
+        }
+
+        public AutoscalingSettingsArgs build() {
+            return $;
         }
     }
+
 }

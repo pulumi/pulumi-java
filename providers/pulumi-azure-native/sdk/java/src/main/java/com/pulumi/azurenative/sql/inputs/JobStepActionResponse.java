@@ -24,10 +24,10 @@ public final class JobStepActionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="source")
-      private final @Nullable String source;
+    private @Nullable String source;
 
     public Optional<String> source() {
-        return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JobStepActionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -46,64 +46,59 @@ public final class JobStepActionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public JobStepActionResponse(
-        @Nullable String source,
-        @Nullable String type,
-        String value) {
-        this.source = Codegen.stringProp("source").arg(source).def("Inline").getNullable();
-        this.type = Codegen.stringProp("type").arg(type).def("TSql").getNullable();
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private JobStepActionResponse() {}
 
-    private JobStepActionResponse() {
-        this.source = null;
-        this.type = null;
-        this.value = null;
+    private JobStepActionResponse(JobStepActionResponse $) {
+        this.source = $.source;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStepActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String source;
-        private @Nullable String type;
-        private String value;
+        private JobStepActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStepActionResponse();
         }
 
         public Builder(JobStepActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.source = defaults.source;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new JobStepActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder source(@Nullable String source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public JobStepActionResponse build() {
-            return new JobStepActionResponse(source, type, value);
+        }
+
+        public JobStepActionResponse build() {
+            $.source = Codegen.stringProp("source").arg($.source).def("Inline").getNullable();
+            $.type = Codegen.stringProp("type").arg($.type).def("TSql").getNullable();
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

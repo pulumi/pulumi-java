@@ -21,45 +21,45 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
     }
 
-    public UserInfoResponse(String email) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-    }
+    private UserInfoResponse() {}
 
-    private UserInfoResponse() {
-        this.email = null;
+    private UserInfoResponse(UserInfoResponse $) {
+        this.email = $.email;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String email;
+        private UserInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserInfoResponse();
         }
 
         public Builder(UserInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
+            $ = new UserInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
-        }        public UserInfoResponse build() {
-            return new UserInfoResponse(email);
+        }
+
+        public UserInfoResponse build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            return $;
         }
     }
+
 }

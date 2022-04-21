@@ -6,9 +6,9 @@ package com.pulumi.azurenative.cdn;
 import com.pulumi.azurenative.cdn.inputs.SecurityPolicyWebApplicationFirewallParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
+    private @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
 
-    public Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<SecurityPolicyWebApplicationFirewallParametersArgs>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -43,7 +43,7 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,89 +54,80 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="securityPolicyName")
-      private final @Nullable Output<String> securityPolicyName;
+    private @Nullable Output<String> securityPolicyName;
 
-    public Output<String> securityPolicyName() {
-        return this.securityPolicyName == null ? Codegen.empty() : this.securityPolicyName;
+    public Optional<Output<String>> securityPolicyName() {
+        return Optional.ofNullable(this.securityPolicyName);
     }
 
-    public SecurityPolicyArgs(
-        @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters,
-        Output<String> profileName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> securityPolicyName) {
-        this.parameters = parameters;
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.securityPolicyName = securityPolicyName;
-    }
+    private SecurityPolicyArgs() {}
 
-    private SecurityPolicyArgs() {
-        this.parameters = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.securityPolicyName = Codegen.empty();
+    private SecurityPolicyArgs(SecurityPolicyArgs $) {
+        this.parameters = $.parameters;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.securityPolicyName = $.securityPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
-        private Output<String> profileName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> securityPolicyName;
+        private SecurityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyArgs();
         }
 
         public Builder(SecurityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.securityPolicyName = defaults.securityPolicyName;
+            $ = new SecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable SecurityPolicyWebApplicationFirewallParametersArgs parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(SecurityPolicyWebApplicationFirewallParametersArgs parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder securityPolicyName(@Nullable Output<String> securityPolicyName) {
-            this.securityPolicyName = securityPolicyName;
+            $.securityPolicyName = securityPolicyName;
             return this;
         }
-        public Builder securityPolicyName(@Nullable String securityPolicyName) {
-            this.securityPolicyName = Codegen.ofNullable(securityPolicyName);
-            return this;
-        }        public SecurityPolicyArgs build() {
-            return new SecurityPolicyArgs(parameters, profileName, resourceGroupName, securityPolicyName);
+
+        public Builder securityPolicyName(String securityPolicyName) {
+            return securityPolicyName(Output.of(securityPolicyName));
+        }
+
+        public SecurityPolicyArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

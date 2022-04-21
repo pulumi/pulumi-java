@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.NodeConfigSourceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NodeConfigStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="active")
-      private final @Nullable Output<NodeConfigSourceArgs> active;
+    private @Nullable Output<NodeConfigSourceArgs> active;
 
-    public Output<NodeConfigSourceArgs> active() {
-        return this.active == null ? Codegen.empty() : this.active;
+    public Optional<Output<NodeConfigSourceArgs>> active() {
+        return Optional.ofNullable(this.active);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NodeConfigStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="assigned")
-      private final @Nullable Output<NodeConfigSourceArgs> assigned;
+    private @Nullable Output<NodeConfigSourceArgs> assigned;
 
-    public Output<NodeConfigSourceArgs> assigned() {
-        return this.assigned == null ? Codegen.empty() : this.assigned;
+    public Optional<Output<NodeConfigSourceArgs>> assigned() {
+        return Optional.ofNullable(this.assigned);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NodeConfigStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="error")
-      private final @Nullable Output<String> error;
+    private @Nullable Output<String> error;
 
-    public Output<String> error() {
-        return this.error == null ? Codegen.empty() : this.error;
+    public Optional<Output<String>> error() {
+        return Optional.ofNullable(this.error);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class NodeConfigStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="lastKnownGood")
-      private final @Nullable Output<NodeConfigSourceArgs> lastKnownGood;
+    private @Nullable Output<NodeConfigSourceArgs> lastKnownGood;
 
-    public Output<NodeConfigSourceArgs> lastKnownGood() {
-        return this.lastKnownGood == null ? Codegen.empty() : this.lastKnownGood;
+    public Optional<Output<NodeConfigSourceArgs>> lastKnownGood() {
+        return Optional.ofNullable(this.lastKnownGood);
     }
 
-    public NodeConfigStatusArgs(
-        @Nullable Output<NodeConfigSourceArgs> active,
-        @Nullable Output<NodeConfigSourceArgs> assigned,
-        @Nullable Output<String> error,
-        @Nullable Output<NodeConfigSourceArgs> lastKnownGood) {
-        this.active = active;
-        this.assigned = assigned;
-        this.error = error;
-        this.lastKnownGood = lastKnownGood;
-    }
+    private NodeConfigStatusArgs() {}
 
-    private NodeConfigStatusArgs() {
-        this.active = Codegen.empty();
-        this.assigned = Codegen.empty();
-        this.error = Codegen.empty();
-        this.lastKnownGood = Codegen.empty();
+    private NodeConfigStatusArgs(NodeConfigStatusArgs $) {
+        this.active = $.active;
+        this.assigned = $.assigned;
+        this.error = $.error;
+        this.lastKnownGood = $.lastKnownGood;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeConfigStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodeConfigSourceArgs> active;
-        private @Nullable Output<NodeConfigSourceArgs> assigned;
-        private @Nullable Output<String> error;
-        private @Nullable Output<NodeConfigSourceArgs> lastKnownGood;
+        private NodeConfigStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeConfigStatusArgs();
         }
 
         public Builder(NodeConfigStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
-    	      this.assigned = defaults.assigned;
-    	      this.error = defaults.error;
-    	      this.lastKnownGood = defaults.lastKnownGood;
+            $ = new NodeConfigStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder active(@Nullable Output<NodeConfigSourceArgs> active) {
-            this.active = active;
+            $.active = active;
             return this;
         }
-        public Builder active(@Nullable NodeConfigSourceArgs active) {
-            this.active = Codegen.ofNullable(active);
-            return this;
+
+        public Builder active(NodeConfigSourceArgs active) {
+            return active(Output.of(active));
         }
+
         public Builder assigned(@Nullable Output<NodeConfigSourceArgs> assigned) {
-            this.assigned = assigned;
+            $.assigned = assigned;
             return this;
         }
-        public Builder assigned(@Nullable NodeConfigSourceArgs assigned) {
-            this.assigned = Codegen.ofNullable(assigned);
-            return this;
+
+        public Builder assigned(NodeConfigSourceArgs assigned) {
+            return assigned(Output.of(assigned));
         }
+
         public Builder error(@Nullable Output<String> error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
-        public Builder error(@Nullable String error) {
-            this.error = Codegen.ofNullable(error);
-            return this;
+
+        public Builder error(String error) {
+            return error(Output.of(error));
         }
+
         public Builder lastKnownGood(@Nullable Output<NodeConfigSourceArgs> lastKnownGood) {
-            this.lastKnownGood = lastKnownGood;
+            $.lastKnownGood = lastKnownGood;
             return this;
         }
-        public Builder lastKnownGood(@Nullable NodeConfigSourceArgs lastKnownGood) {
-            this.lastKnownGood = Codegen.ofNullable(lastKnownGood);
-            return this;
-        }        public NodeConfigStatusArgs build() {
-            return new NodeConfigStatusArgs(active, assigned, error, lastKnownGood);
+
+        public Builder lastKnownGood(NodeConfigSourceArgs lastKnownGood) {
+            return lastKnownGood(Output.of(lastKnownGood));
+        }
+
+        public NodeConfigStatusArgs build() {
+            return $;
         }
     }
+
 }

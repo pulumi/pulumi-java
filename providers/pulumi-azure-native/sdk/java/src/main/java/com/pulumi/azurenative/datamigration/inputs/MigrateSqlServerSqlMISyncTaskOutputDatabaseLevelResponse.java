@@ -22,7 +22,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="activeBackupSets", required=true)
-      private final List<BackupSetInfoResponse> activeBackupSets;
+    private List<BackupSetInfoResponse> activeBackupSets;
 
     public List<BackupSetInfoResponse> activeBackupSets() {
         return this.activeBackupSets;
@@ -33,7 +33,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="containerName", required=true)
-      private final String containerName;
+    private String containerName;
 
     public String containerName() {
         return this.containerName;
@@ -44,7 +44,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -55,7 +55,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="errorPrefix", required=true)
-      private final String errorPrefix;
+    private String errorPrefix;
 
     public String errorPrefix() {
         return this.errorPrefix;
@@ -66,7 +66,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="exceptionsAndWarnings", required=true)
-      private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+    private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -77,7 +77,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="fullBackupSetInfo", required=true)
-      private final BackupSetInfoResponse fullBackupSetInfo;
+    private BackupSetInfoResponse fullBackupSetInfo;
 
     public BackupSetInfoResponse fullBackupSetInfo() {
         return this.fullBackupSetInfo;
@@ -88,7 +88,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -99,7 +99,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="isFullBackupRestored", required=true)
-      private final Boolean isFullBackupRestored;
+    private Boolean isFullBackupRestored;
 
     public Boolean isFullBackupRestored() {
         return this.isFullBackupRestored;
@@ -110,7 +110,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="lastRestoredBackupSetInfo", required=true)
-      private final BackupSetInfoResponse lastRestoredBackupSetInfo;
+    private BackupSetInfoResponse lastRestoredBackupSetInfo;
 
     public BackupSetInfoResponse lastRestoredBackupSetInfo() {
         return this.lastRestoredBackupSetInfo;
@@ -121,7 +121,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="migrationState", required=true)
-      private final String migrationState;
+    private String migrationState;
 
     public String migrationState() {
         return this.migrationState;
@@ -133,7 +133,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -144,7 +144,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="sourceDatabaseName", required=true)
-      private final String sourceDatabaseName;
+    private String sourceDatabaseName;
 
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
@@ -155,160 +155,137 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
     }
 
-    public MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(
-        List<BackupSetInfoResponse> activeBackupSets,
-        String containerName,
-        String endedOn,
-        String errorPrefix,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        BackupSetInfoResponse fullBackupSetInfo,
-        String id,
-        Boolean isFullBackupRestored,
-        BackupSetInfoResponse lastRestoredBackupSetInfo,
-        String migrationState,
-        String resultType,
-        String sourceDatabaseName,
-        String startedOn) {
-        this.activeBackupSets = Objects.requireNonNull(activeBackupSets, "expected parameter 'activeBackupSets' to be non-null");
-        this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.errorPrefix = Objects.requireNonNull(errorPrefix, "expected parameter 'errorPrefix' to be non-null");
-        this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
-        this.fullBackupSetInfo = Objects.requireNonNull(fullBackupSetInfo, "expected parameter 'fullBackupSetInfo' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.isFullBackupRestored = Objects.requireNonNull(isFullBackupRestored, "expected parameter 'isFullBackupRestored' to be non-null");
-        this.lastRestoredBackupSetInfo = Objects.requireNonNull(lastRestoredBackupSetInfo, "expected parameter 'lastRestoredBackupSetInfo' to be non-null");
-        this.migrationState = Objects.requireNonNull(migrationState, "expected parameter 'migrationState' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-    }
+    private MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse() {}
 
-    private MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse() {
-        this.activeBackupSets = List.of();
-        this.containerName = null;
-        this.endedOn = null;
-        this.errorPrefix = null;
-        this.exceptionsAndWarnings = List.of();
-        this.fullBackupSetInfo = null;
-        this.id = null;
-        this.isFullBackupRestored = null;
-        this.lastRestoredBackupSetInfo = null;
-        this.migrationState = null;
-        this.resultType = null;
-        this.sourceDatabaseName = null;
-        this.startedOn = null;
+    private MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse $) {
+        this.activeBackupSets = $.activeBackupSets;
+        this.containerName = $.containerName;
+        this.endedOn = $.endedOn;
+        this.errorPrefix = $.errorPrefix;
+        this.exceptionsAndWarnings = $.exceptionsAndWarnings;
+        this.fullBackupSetInfo = $.fullBackupSetInfo;
+        this.id = $.id;
+        this.isFullBackupRestored = $.isFullBackupRestored;
+        this.lastRestoredBackupSetInfo = $.lastRestoredBackupSetInfo;
+        this.migrationState = $.migrationState;
+        this.resultType = $.resultType;
+        this.sourceDatabaseName = $.sourceDatabaseName;
+        this.startedOn = $.startedOn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BackupSetInfoResponse> activeBackupSets;
-        private String containerName;
-        private String endedOn;
-        private String errorPrefix;
-        private List<ReportableExceptionResponse> exceptionsAndWarnings;
-        private BackupSetInfoResponse fullBackupSetInfo;
-        private String id;
-        private Boolean isFullBackupRestored;
-        private BackupSetInfoResponse lastRestoredBackupSetInfo;
-        private String migrationState;
-        private String resultType;
-        private String sourceDatabaseName;
-        private String startedOn;
+        private MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse();
         }
 
         public Builder(MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeBackupSets = defaults.activeBackupSets;
-    	      this.containerName = defaults.containerName;
-    	      this.endedOn = defaults.endedOn;
-    	      this.errorPrefix = defaults.errorPrefix;
-    	      this.exceptionsAndWarnings = defaults.exceptionsAndWarnings;
-    	      this.fullBackupSetInfo = defaults.fullBackupSetInfo;
-    	      this.id = defaults.id;
-    	      this.isFullBackupRestored = defaults.isFullBackupRestored;
-    	      this.lastRestoredBackupSetInfo = defaults.lastRestoredBackupSetInfo;
-    	      this.migrationState = defaults.migrationState;
-    	      this.resultType = defaults.resultType;
-    	      this.sourceDatabaseName = defaults.sourceDatabaseName;
-    	      this.startedOn = defaults.startedOn;
+            $ = new MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeBackupSets(List<BackupSetInfoResponse> activeBackupSets) {
-            this.activeBackupSets = Objects.requireNonNull(activeBackupSets);
+            $.activeBackupSets = activeBackupSets;
             return this;
         }
+
         public Builder activeBackupSets(BackupSetInfoResponse... activeBackupSets) {
             return activeBackupSets(List.of(activeBackupSets));
         }
+
         public Builder containerName(String containerName) {
-            this.containerName = Objects.requireNonNull(containerName);
+            $.containerName = containerName;
             return this;
         }
+
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder errorPrefix(String errorPrefix) {
-            this.errorPrefix = Objects.requireNonNull(errorPrefix);
+            $.errorPrefix = errorPrefix;
             return this;
         }
+
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
-            this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
+            $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
+
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
+
         public Builder fullBackupSetInfo(BackupSetInfoResponse fullBackupSetInfo) {
-            this.fullBackupSetInfo = Objects.requireNonNull(fullBackupSetInfo);
+            $.fullBackupSetInfo = fullBackupSetInfo;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder isFullBackupRestored(Boolean isFullBackupRestored) {
-            this.isFullBackupRestored = Objects.requireNonNull(isFullBackupRestored);
+            $.isFullBackupRestored = isFullBackupRestored;
             return this;
         }
+
         public Builder lastRestoredBackupSetInfo(BackupSetInfoResponse lastRestoredBackupSetInfo) {
-            this.lastRestoredBackupSetInfo = Objects.requireNonNull(lastRestoredBackupSetInfo);
+            $.lastRestoredBackupSetInfo = lastRestoredBackupSetInfo;
             return this;
         }
+
         public Builder migrationState(String migrationState) {
-            this.migrationState = Objects.requireNonNull(migrationState);
+            $.migrationState = migrationState;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder sourceDatabaseName(String sourceDatabaseName) {
-            this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
+            $.sourceDatabaseName = sourceDatabaseName;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
-        }        public MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse build() {
-            return new MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(activeBackupSets, containerName, endedOn, errorPrefix, exceptionsAndWarnings, fullBackupSetInfo, id, isFullBackupRestored, lastRestoredBackupSetInfo, migrationState, resultType, sourceDatabaseName, startedOn);
+        }
+
+        public MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse build() {
+            $.activeBackupSets = Objects.requireNonNull($.activeBackupSets, "expected parameter 'activeBackupSets' to be non-null");
+            $.containerName = Objects.requireNonNull($.containerName, "expected parameter 'containerName' to be non-null");
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.errorPrefix = Objects.requireNonNull($.errorPrefix, "expected parameter 'errorPrefix' to be non-null");
+            $.exceptionsAndWarnings = Objects.requireNonNull($.exceptionsAndWarnings, "expected parameter 'exceptionsAndWarnings' to be non-null");
+            $.fullBackupSetInfo = Objects.requireNonNull($.fullBackupSetInfo, "expected parameter 'fullBackupSetInfo' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.isFullBackupRestored = Objects.requireNonNull($.isFullBackupRestored, "expected parameter 'isFullBackupRestored' to be non-null");
+            $.lastRestoredBackupSetInfo = Objects.requireNonNull($.lastRestoredBackupSetInfo, "expected parameter 'lastRestoredBackupSetInfo' to be non-null");
+            $.migrationState = Objects.requireNonNull($.migrationState, "expected parameter 'migrationState' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.sourceDatabaseName = Objects.requireNonNull($.sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            return $;
         }
     }
+
 }

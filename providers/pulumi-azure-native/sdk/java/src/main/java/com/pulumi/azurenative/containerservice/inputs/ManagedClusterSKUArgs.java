@@ -8,9 +8,9 @@ import com.pulumi.azurenative.containerservice.enums.ManagedClusterSKUTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ManagedClusterSKUArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,ManagedClusterSKUName>> name;
+    private @Nullable Output<Either<String,ManagedClusterSKUName>> name;
 
-    public Output<Either<String,ManagedClusterSKUName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,ManagedClusterSKUName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class ManagedClusterSKUArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,ManagedClusterSKUTier>> tier;
+    private @Nullable Output<Either<String,ManagedClusterSKUTier>> tier;
 
-    public Output<Either<String,ManagedClusterSKUTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,ManagedClusterSKUTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public ManagedClusterSKUArgs(
-        @Nullable Output<Either<String,ManagedClusterSKUName>> name,
-        @Nullable Output<Either<String,ManagedClusterSKUTier>> tier) {
-        this.name = name;
-        this.tier = tier;
-    }
+    private ManagedClusterSKUArgs() {}
 
-    private ManagedClusterSKUArgs() {
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private ManagedClusterSKUArgs(ManagedClusterSKUArgs $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterSKUArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ManagedClusterSKUName>> name;
-        private @Nullable Output<Either<String,ManagedClusterSKUTier>> tier;
+        private ManagedClusterSKUArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterSKUArgs();
         }
 
         public Builder(ManagedClusterSKUArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new ManagedClusterSKUArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Either<String,ManagedClusterSKUName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,ManagedClusterSKUName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Either<String,ManagedClusterSKUName> name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,ManagedClusterSKUTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,ManagedClusterSKUTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public ManagedClusterSKUArgs build() {
-            return new ManagedClusterSKUArgs(name, tier);
+
+        public Builder tier(Either<String,ManagedClusterSKUTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public ManagedClusterSKUArgs build() {
+            return $;
         }
     }
+
 }

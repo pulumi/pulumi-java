@@ -13,62 +13,59 @@ public final class GetClusterNodePoolNodeConfigShieldedInstanceConfig extends co
     public static final GetClusterNodePoolNodeConfigShieldedInstanceConfig Empty = new GetClusterNodePoolNodeConfigShieldedInstanceConfig();
 
     @Import(name="enableIntegrityMonitoring", required=true)
-      private final Boolean enableIntegrityMonitoring;
+    private Boolean enableIntegrityMonitoring;
 
     public Boolean enableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
 
     @Import(name="enableSecureBoot", required=true)
-      private final Boolean enableSecureBoot;
+    private Boolean enableSecureBoot;
 
     public Boolean enableSecureBoot() {
         return this.enableSecureBoot;
     }
 
-    public GetClusterNodePoolNodeConfigShieldedInstanceConfig(
-        Boolean enableIntegrityMonitoring,
-        Boolean enableSecureBoot) {
-        this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring, "expected parameter 'enableIntegrityMonitoring' to be non-null");
-        this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot, "expected parameter 'enableSecureBoot' to be non-null");
-    }
+    private GetClusterNodePoolNodeConfigShieldedInstanceConfig() {}
 
-    private GetClusterNodePoolNodeConfigShieldedInstanceConfig() {
-        this.enableIntegrityMonitoring = null;
-        this.enableSecureBoot = null;
+    private GetClusterNodePoolNodeConfigShieldedInstanceConfig(GetClusterNodePoolNodeConfigShieldedInstanceConfig $) {
+        this.enableIntegrityMonitoring = $.enableIntegrityMonitoring;
+        this.enableSecureBoot = $.enableSecureBoot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolNodeConfigShieldedInstanceConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableIntegrityMonitoring;
-        private Boolean enableSecureBoot;
+        private GetClusterNodePoolNodeConfigShieldedInstanceConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolNodeConfigShieldedInstanceConfig();
         }
 
         public Builder(GetClusterNodePoolNodeConfigShieldedInstanceConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableIntegrityMonitoring = defaults.enableIntegrityMonitoring;
-    	      this.enableSecureBoot = defaults.enableSecureBoot;
+            $ = new GetClusterNodePoolNodeConfigShieldedInstanceConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
-            this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
+            $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
+
         public Builder enableSecureBoot(Boolean enableSecureBoot) {
-            this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
+            $.enableSecureBoot = enableSecureBoot;
             return this;
-        }        public GetClusterNodePoolNodeConfigShieldedInstanceConfig build() {
-            return new GetClusterNodePoolNodeConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot);
+        }
+
+        public GetClusterNodePoolNodeConfigShieldedInstanceConfig build() {
+            $.enableIntegrityMonitoring = Objects.requireNonNull($.enableIntegrityMonitoring, "expected parameter 'enableIntegrityMonitoring' to be non-null");
+            $.enableSecureBoot = Objects.requireNonNull($.enableSecureBoot, "expected parameter 'enableSecureBoot' to be non-null");
+            return $;
         }
     }
+
 }

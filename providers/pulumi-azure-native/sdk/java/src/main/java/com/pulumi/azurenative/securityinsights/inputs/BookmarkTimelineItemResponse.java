@@ -26,7 +26,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azureResourceId", required=true)
-      private final String azureResourceId;
+    private String azureResourceId;
 
     public String azureResourceId() {
         return this.azureResourceId;
@@ -37,10 +37,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="createdBy")
-      private final @Nullable UserInfoResponse createdBy;
+    private @Nullable UserInfoResponse createdBy;
 
     public Optional<UserInfoResponse> createdBy() {
-        return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
+        return Optional.ofNullable(this.createdBy);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="endTimeUtc")
-      private final @Nullable String endTimeUtc;
+    private @Nullable String endTimeUtc;
 
     public Optional<String> endTimeUtc() {
-        return this.endTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.endTimeUtc);
+        return Optional.ofNullable(this.endTimeUtc);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="eventTime")
-      private final @Nullable String eventTime;
+    private @Nullable String eventTime;
 
     public Optional<String> eventTime() {
-        return this.eventTime == null ? Optional.empty() : Optional.ofNullable(this.eventTime);
+        return Optional.ofNullable(this.eventTime);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -93,10 +93,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="labels")
-      private final @Nullable List<String> labels;
+    private @Nullable List<String> labels;
 
-    public List<String> labels() {
-        return this.labels == null ? List.of() : this.labels;
+    public Optional<List<String>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="notes")
-      private final @Nullable String notes;
+    private @Nullable String notes;
 
     public Optional<String> notes() {
-        return this.notes == null ? Optional.empty() : Optional.ofNullable(this.notes);
+        return Optional.ofNullable(this.notes);
     }
 
     /**
@@ -115,121 +115,98 @@ public final class BookmarkTimelineItemResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="startTimeUtc")
-      private final @Nullable String startTimeUtc;
+    private @Nullable String startTimeUtc;
 
     public Optional<String> startTimeUtc() {
-        return this.startTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.startTimeUtc);
+        return Optional.ofNullable(this.startTimeUtc);
     }
 
-    public BookmarkTimelineItemResponse(
-        String azureResourceId,
-        @Nullable UserInfoResponse createdBy,
-        @Nullable String displayName,
-        @Nullable String endTimeUtc,
-        @Nullable String eventTime,
-        String kind,
-        @Nullable List<String> labels,
-        @Nullable String notes,
-        @Nullable String startTimeUtc) {
-        this.azureResourceId = Objects.requireNonNull(azureResourceId, "expected parameter 'azureResourceId' to be non-null");
-        this.createdBy = createdBy;
-        this.displayName = displayName;
-        this.endTimeUtc = endTimeUtc;
-        this.eventTime = eventTime;
-        this.kind = Codegen.stringProp("kind").arg(kind).require();
-        this.labels = labels;
-        this.notes = notes;
-        this.startTimeUtc = startTimeUtc;
-    }
+    private BookmarkTimelineItemResponse() {}
 
-    private BookmarkTimelineItemResponse() {
-        this.azureResourceId = null;
-        this.createdBy = null;
-        this.displayName = null;
-        this.endTimeUtc = null;
-        this.eventTime = null;
-        this.kind = null;
-        this.labels = List.of();
-        this.notes = null;
-        this.startTimeUtc = null;
+    private BookmarkTimelineItemResponse(BookmarkTimelineItemResponse $) {
+        this.azureResourceId = $.azureResourceId;
+        this.createdBy = $.createdBy;
+        this.displayName = $.displayName;
+        this.endTimeUtc = $.endTimeUtc;
+        this.eventTime = $.eventTime;
+        this.kind = $.kind;
+        this.labels = $.labels;
+        this.notes = $.notes;
+        this.startTimeUtc = $.startTimeUtc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BookmarkTimelineItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String azureResourceId;
-        private @Nullable UserInfoResponse createdBy;
-        private @Nullable String displayName;
-        private @Nullable String endTimeUtc;
-        private @Nullable String eventTime;
-        private String kind;
-        private @Nullable List<String> labels;
-        private @Nullable String notes;
-        private @Nullable String startTimeUtc;
+        private BookmarkTimelineItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BookmarkTimelineItemResponse();
         }
 
         public Builder(BookmarkTimelineItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.azureResourceId = defaults.azureResourceId;
-    	      this.createdBy = defaults.createdBy;
-    	      this.displayName = defaults.displayName;
-    	      this.endTimeUtc = defaults.endTimeUtc;
-    	      this.eventTime = defaults.eventTime;
-    	      this.kind = defaults.kind;
-    	      this.labels = defaults.labels;
-    	      this.notes = defaults.notes;
-    	      this.startTimeUtc = defaults.startTimeUtc;
+            $ = new BookmarkTimelineItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder azureResourceId(String azureResourceId) {
-            this.azureResourceId = Objects.requireNonNull(azureResourceId);
+            $.azureResourceId = azureResourceId;
             return this;
         }
+
         public Builder createdBy(@Nullable UserInfoResponse createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder endTimeUtc(@Nullable String endTimeUtc) {
-            this.endTimeUtc = endTimeUtc;
+            $.endTimeUtc = endTimeUtc;
             return this;
         }
+
         public Builder eventTime(@Nullable String eventTime) {
-            this.eventTime = eventTime;
+            $.eventTime = eventTime;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
+
         public Builder notes(@Nullable String notes) {
-            this.notes = notes;
+            $.notes = notes;
             return this;
         }
+
         public Builder startTimeUtc(@Nullable String startTimeUtc) {
-            this.startTimeUtc = startTimeUtc;
+            $.startTimeUtc = startTimeUtc;
             return this;
-        }        public BookmarkTimelineItemResponse build() {
-            return new BookmarkTimelineItemResponse(azureResourceId, createdBy, displayName, endTimeUtc, eventTime, kind, labels, notes, startTimeUtc);
+        }
+
+        public BookmarkTimelineItemResponse build() {
+            $.azureResourceId = Objects.requireNonNull($.azureResourceId, "expected parameter 'azureResourceId' to be non-null");
+            $.kind = Codegen.stringProp("kind").arg($.kind).require();
+            return $;
         }
     }
+
 }

@@ -14,78 +14,73 @@ public final class GetInstanceTypeInstanceDisk extends com.pulumi.resources.Invo
     public static final GetInstanceTypeInstanceDisk Empty = new GetInstanceTypeInstanceDisk();
 
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
     }
 
     @Import(name="size", required=true)
-      private final Integer size;
+    private Integer size;
 
     public Integer size() {
         return this.size;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetInstanceTypeInstanceDisk(
-        Integer count,
-        Integer size,
-        String type) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.size = Objects.requireNonNull(size, "expected parameter 'size' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetInstanceTypeInstanceDisk() {}
 
-    private GetInstanceTypeInstanceDisk() {
-        this.count = null;
-        this.size = null;
-        this.type = null;
+    private GetInstanceTypeInstanceDisk(GetInstanceTypeInstanceDisk $) {
+        this.count = $.count;
+        this.size = $.size;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTypeInstanceDisk defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private Integer size;
-        private String type;
+        private GetInstanceTypeInstanceDisk $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTypeInstanceDisk();
         }
 
         public Builder(GetInstanceTypeInstanceDisk defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.size = defaults.size;
-    	      this.type = defaults.type;
+            $ = new GetInstanceTypeInstanceDisk(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder size(Integer size) {
-            this.size = Objects.requireNonNull(size);
+            $.size = size;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetInstanceTypeInstanceDisk build() {
-            return new GetInstanceTypeInstanceDisk(count, size, type);
+        }
+
+        public GetInstanceTypeInstanceDisk build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.size = Objects.requireNonNull($.size, "expected parameter 'size' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

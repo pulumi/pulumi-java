@@ -7,11 +7,11 @@ import com.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleAction
 import com.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleConditionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="actionSet")
-      private final @Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet;
+    private @Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet;
 
-    public Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet() {
-        return this.actionSet == null ? Codegen.empty() : this.actionSet;
+    public Optional<Output<ApplicationGatewayRewriteRuleActionSetArgs>> actionSet() {
+        return Optional.ofNullable(this.actionSet);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions;
+    private @Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions;
 
-    public Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<ApplicationGatewayRewriteRuleConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class ApplicationGatewayRewriteRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ruleSequence")
-      private final @Nullable Output<Integer> ruleSequence;
+    private @Nullable Output<Integer> ruleSequence;
 
-    public Output<Integer> ruleSequence() {
-        return this.ruleSequence == null ? Codegen.empty() : this.ruleSequence;
+    public Optional<Output<Integer>> ruleSequence() {
+        return Optional.ofNullable(this.ruleSequence);
     }
 
-    public ApplicationGatewayRewriteRuleArgs(
-        @Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet,
-        @Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> ruleSequence) {
-        this.actionSet = actionSet;
-        this.conditions = conditions;
-        this.name = name;
-        this.ruleSequence = ruleSequence;
-    }
+    private ApplicationGatewayRewriteRuleArgs() {}
 
-    private ApplicationGatewayRewriteRuleArgs() {
-        this.actionSet = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ruleSequence = Codegen.empty();
+    private ApplicationGatewayRewriteRuleArgs(ApplicationGatewayRewriteRuleArgs $) {
+        this.actionSet = $.actionSet;
+        this.conditions = $.conditions;
+        this.name = $.name;
+        this.ruleSequence = $.ruleSequence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayRewriteRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet;
-        private @Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> ruleSequence;
+        private ApplicationGatewayRewriteRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayRewriteRuleArgs();
         }
 
         public Builder(ApplicationGatewayRewriteRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionSet = defaults.actionSet;
-    	      this.conditions = defaults.conditions;
-    	      this.name = defaults.name;
-    	      this.ruleSequence = defaults.ruleSequence;
+            $ = new ApplicationGatewayRewriteRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionSet(@Nullable Output<ApplicationGatewayRewriteRuleActionSetArgs> actionSet) {
-            this.actionSet = actionSet;
+            $.actionSet = actionSet;
             return this;
         }
-        public Builder actionSet(@Nullable ApplicationGatewayRewriteRuleActionSetArgs actionSet) {
-            this.actionSet = Codegen.ofNullable(actionSet);
-            return this;
+
+        public Builder actionSet(ApplicationGatewayRewriteRuleActionSetArgs actionSet) {
+            return actionSet(Output.of(actionSet));
         }
+
         public Builder conditions(@Nullable Output<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<ApplicationGatewayRewriteRuleConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<ApplicationGatewayRewriteRuleConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(ApplicationGatewayRewriteRuleConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ruleSequence(@Nullable Output<Integer> ruleSequence) {
-            this.ruleSequence = ruleSequence;
+            $.ruleSequence = ruleSequence;
             return this;
         }
-        public Builder ruleSequence(@Nullable Integer ruleSequence) {
-            this.ruleSequence = Codegen.ofNullable(ruleSequence);
-            return this;
-        }        public ApplicationGatewayRewriteRuleArgs build() {
-            return new ApplicationGatewayRewriteRuleArgs(actionSet, conditions, name, ruleSequence);
+
+        public Builder ruleSequence(Integer ruleSequence) {
+            return ruleSequence(Output.of(ruleSequence));
+        }
+
+        public ApplicationGatewayRewriteRuleArgs build() {
+            return $;
         }
     }
+
 }

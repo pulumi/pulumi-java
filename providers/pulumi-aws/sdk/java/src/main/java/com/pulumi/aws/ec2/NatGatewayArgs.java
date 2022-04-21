@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allocationId")
-      private final @Nullable Output<String> allocationId;
+    private @Nullable Output<String> allocationId;
 
-    public Output<String> allocationId() {
-        return this.allocationId == null ? Codegen.empty() : this.allocationId;
+    public Optional<Output<String>> allocationId() {
+        return Optional.ofNullable(this.allocationId);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectivityType")
-      private final @Nullable Output<String> connectivityType;
+    private @Nullable Output<String> connectivityType;
 
-    public Output<String> connectivityType() {
-        return this.connectivityType == null ? Codegen.empty() : this.connectivityType;
+    public Optional<Output<String>> connectivityType() {
+        return Optional.ofNullable(this.connectivityType);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
@@ -54,89 +54,79 @@ public final class NatGatewayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NatGatewayArgs(
-        @Nullable Output<String> allocationId,
-        @Nullable Output<String> connectivityType,
-        Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags) {
-        this.allocationId = allocationId;
-        this.connectivityType = connectivityType;
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.tags = tags;
-    }
+    private NatGatewayArgs() {}
 
-    private NatGatewayArgs() {
-        this.allocationId = Codegen.empty();
-        this.connectivityType = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NatGatewayArgs(NatGatewayArgs $) {
+        this.allocationId = $.allocationId;
+        this.connectivityType = $.connectivityType;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NatGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> allocationId;
-        private @Nullable Output<String> connectivityType;
-        private Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
+        private NatGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NatGatewayArgs();
         }
 
         public Builder(NatGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationId = defaults.allocationId;
-    	      this.connectivityType = defaults.connectivityType;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
+            $ = new NatGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationId(@Nullable Output<String> allocationId) {
-            this.allocationId = allocationId;
+            $.allocationId = allocationId;
             return this;
         }
-        public Builder allocationId(@Nullable String allocationId) {
-            this.allocationId = Codegen.ofNullable(allocationId);
-            return this;
+
+        public Builder allocationId(String allocationId) {
+            return allocationId(Output.of(allocationId));
         }
+
         public Builder connectivityType(@Nullable Output<String> connectivityType) {
-            this.connectivityType = connectivityType;
+            $.connectivityType = connectivityType;
             return this;
         }
-        public Builder connectivityType(@Nullable String connectivityType) {
-            this.connectivityType = Codegen.ofNullable(connectivityType);
-            return this;
+
+        public Builder connectivityType(String connectivityType) {
+            return connectivityType(Output.of(connectivityType));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public NatGatewayArgs build() {
-            return new NatGatewayArgs(allocationId, connectivityType, subnetId, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public NatGatewayArgs build() {
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

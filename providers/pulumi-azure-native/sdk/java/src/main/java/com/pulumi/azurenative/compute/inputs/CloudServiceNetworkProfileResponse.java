@@ -25,10 +25,10 @@ public final class CloudServiceNetworkProfileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="loadBalancerConfigurations")
-      private final @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations;
+    private @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations;
 
-    public List<LoadBalancerConfigurationResponse> loadBalancerConfigurations() {
-        return this.loadBalancerConfigurations == null ? List.of() : this.loadBalancerConfigurations;
+    public Optional<List<LoadBalancerConfigurationResponse>> loadBalancerConfigurations() {
+        return Optional.ofNullable(this.loadBalancerConfigurations);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class CloudServiceNetworkProfileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="swappableCloudService")
-      private final @Nullable SubResourceResponse swappableCloudService;
+    private @Nullable SubResourceResponse swappableCloudService;
 
     public Optional<SubResourceResponse> swappableCloudService() {
-        return this.swappableCloudService == null ? Optional.empty() : Optional.ofNullable(this.swappableCloudService);
+        return Optional.ofNullable(this.swappableCloudService);
     }
 
-    public CloudServiceNetworkProfileResponse(
-        @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
-        @Nullable SubResourceResponse swappableCloudService) {
-        this.loadBalancerConfigurations = loadBalancerConfigurations;
-        this.swappableCloudService = swappableCloudService;
-    }
+    private CloudServiceNetworkProfileResponse() {}
 
-    private CloudServiceNetworkProfileResponse() {
-        this.loadBalancerConfigurations = List.of();
-        this.swappableCloudService = null;
+    private CloudServiceNetworkProfileResponse(CloudServiceNetworkProfileResponse $) {
+        this.loadBalancerConfigurations = $.loadBalancerConfigurations;
+        this.swappableCloudService = $.swappableCloudService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceNetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations;
-        private @Nullable SubResourceResponse swappableCloudService;
+        private CloudServiceNetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceNetworkProfileResponse();
         }
 
         public Builder(CloudServiceNetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loadBalancerConfigurations = defaults.loadBalancerConfigurations;
-    	      this.swappableCloudService = defaults.swappableCloudService;
+            $ = new CloudServiceNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations) {
-            this.loadBalancerConfigurations = loadBalancerConfigurations;
+            $.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
+
         public Builder loadBalancerConfigurations(LoadBalancerConfigurationResponse... loadBalancerConfigurations) {
             return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
         }
+
         public Builder swappableCloudService(@Nullable SubResourceResponse swappableCloudService) {
-            this.swappableCloudService = swappableCloudService;
+            $.swappableCloudService = swappableCloudService;
             return this;
-        }        public CloudServiceNetworkProfileResponse build() {
-            return new CloudServiceNetworkProfileResponse(loadBalancerConfigurations, swappableCloudService);
+        }
+
+        public CloudServiceNetworkProfileResponse build() {
+            return $;
         }
     }
+
 }

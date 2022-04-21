@@ -6,8 +6,8 @@ package com.pulumi.aws.wafv2.inputs;
 import com.pulumi.aws.wafv2.inputs.RuleGroupRuleActionBlockCustomResponseGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class RuleGroupRuleActionBlockGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="customResponse")
-      private final @Nullable Output<RuleGroupRuleActionBlockCustomResponseGetArgs> customResponse;
+    private @Nullable Output<RuleGroupRuleActionBlockCustomResponseGetArgs> customResponse;
 
-    public Output<RuleGroupRuleActionBlockCustomResponseGetArgs> customResponse() {
-        return this.customResponse == null ? Codegen.empty() : this.customResponse;
+    public Optional<Output<RuleGroupRuleActionBlockCustomResponseGetArgs>> customResponse() {
+        return Optional.ofNullable(this.customResponse);
     }
 
-    public RuleGroupRuleActionBlockGetArgs(@Nullable Output<RuleGroupRuleActionBlockCustomResponseGetArgs> customResponse) {
-        this.customResponse = customResponse;
-    }
+    private RuleGroupRuleActionBlockGetArgs() {}
 
-    private RuleGroupRuleActionBlockGetArgs() {
-        this.customResponse = Codegen.empty();
+    private RuleGroupRuleActionBlockGetArgs(RuleGroupRuleActionBlockGetArgs $) {
+        this.customResponse = $.customResponse;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupRuleActionBlockGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuleGroupRuleActionBlockCustomResponseGetArgs> customResponse;
+        private RuleGroupRuleActionBlockGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupRuleActionBlockGetArgs();
         }
 
         public Builder(RuleGroupRuleActionBlockGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customResponse = defaults.customResponse;
+            $ = new RuleGroupRuleActionBlockGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customResponse(@Nullable Output<RuleGroupRuleActionBlockCustomResponseGetArgs> customResponse) {
-            this.customResponse = customResponse;
+            $.customResponse = customResponse;
             return this;
         }
-        public Builder customResponse(@Nullable RuleGroupRuleActionBlockCustomResponseGetArgs customResponse) {
-            this.customResponse = Codegen.ofNullable(customResponse);
-            return this;
-        }        public RuleGroupRuleActionBlockGetArgs build() {
-            return new RuleGroupRuleActionBlockGetArgs(customResponse);
+
+        public Builder customResponse(RuleGroupRuleActionBlockCustomResponseGetArgs customResponse) {
+            return customResponse(Output.of(customResponse));
+        }
+
+        public RuleGroupRuleActionBlockGetArgs build() {
+            return $;
         }
     }
+
 }

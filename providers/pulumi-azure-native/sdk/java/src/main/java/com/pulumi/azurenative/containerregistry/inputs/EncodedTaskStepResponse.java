@@ -27,7 +27,7 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="baseImageDependencies", required=true)
-      private final List<BaseImageDependencyResponse> baseImageDependencies;
+    private List<BaseImageDependencyResponse> baseImageDependencies;
 
     public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
@@ -38,10 +38,10 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="contextAccessToken")
-      private final @Nullable String contextAccessToken;
+    private @Nullable String contextAccessToken;
 
     public Optional<String> contextAccessToken() {
-        return this.contextAccessToken == null ? Optional.empty() : Optional.ofNullable(this.contextAccessToken);
+        return Optional.ofNullable(this.contextAccessToken);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="contextPath")
-      private final @Nullable String contextPath;
+    private @Nullable String contextPath;
 
     public Optional<String> contextPath() {
-        return this.contextPath == null ? Optional.empty() : Optional.ofNullable(this.contextPath);
+        return Optional.ofNullable(this.contextPath);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="encodedTaskContent", required=true)
-      private final String encodedTaskContent;
+    private String encodedTaskContent;
 
     public String encodedTaskContent() {
         return this.encodedTaskContent;
@@ -71,10 +71,10 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="encodedValuesContent")
-      private final @Nullable String encodedValuesContent;
+    private @Nullable String encodedValuesContent;
 
     public Optional<String> encodedValuesContent() {
-        return this.encodedValuesContent == null ? Optional.empty() : Optional.ofNullable(this.encodedValuesContent);
+        return Optional.ofNullable(this.encodedValuesContent);
     }
 
     /**
@@ -83,7 +83,7 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -94,106 +94,91 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="values")
-      private final @Nullable List<SetValueResponse> values;
+    private @Nullable List<SetValueResponse> values;
 
-    public List<SetValueResponse> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<SetValueResponse>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public EncodedTaskStepResponse(
-        List<BaseImageDependencyResponse> baseImageDependencies,
-        @Nullable String contextAccessToken,
-        @Nullable String contextPath,
-        String encodedTaskContent,
-        @Nullable String encodedValuesContent,
-        String type,
-        @Nullable List<SetValueResponse> values) {
-        this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies, "expected parameter 'baseImageDependencies' to be non-null");
-        this.contextAccessToken = contextAccessToken;
-        this.contextPath = contextPath;
-        this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent, "expected parameter 'encodedTaskContent' to be non-null");
-        this.encodedValuesContent = encodedValuesContent;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.values = values;
-    }
+    private EncodedTaskStepResponse() {}
 
-    private EncodedTaskStepResponse() {
-        this.baseImageDependencies = List.of();
-        this.contextAccessToken = null;
-        this.contextPath = null;
-        this.encodedTaskContent = null;
-        this.encodedValuesContent = null;
-        this.type = null;
-        this.values = List.of();
+    private EncodedTaskStepResponse(EncodedTaskStepResponse $) {
+        this.baseImageDependencies = $.baseImageDependencies;
+        this.contextAccessToken = $.contextAccessToken;
+        this.contextPath = $.contextPath;
+        this.encodedTaskContent = $.encodedTaskContent;
+        this.encodedValuesContent = $.encodedValuesContent;
+        this.type = $.type;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncodedTaskStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BaseImageDependencyResponse> baseImageDependencies;
-        private @Nullable String contextAccessToken;
-        private @Nullable String contextPath;
-        private String encodedTaskContent;
-        private @Nullable String encodedValuesContent;
-        private String type;
-        private @Nullable List<SetValueResponse> values;
+        private EncodedTaskStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncodedTaskStepResponse();
         }
 
         public Builder(EncodedTaskStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseImageDependencies = defaults.baseImageDependencies;
-    	      this.contextAccessToken = defaults.contextAccessToken;
-    	      this.contextPath = defaults.contextPath;
-    	      this.encodedTaskContent = defaults.encodedTaskContent;
-    	      this.encodedValuesContent = defaults.encodedValuesContent;
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
+            $ = new EncodedTaskStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
-            this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
+            $.baseImageDependencies = baseImageDependencies;
             return this;
         }
+
         public Builder baseImageDependencies(BaseImageDependencyResponse... baseImageDependencies) {
             return baseImageDependencies(List.of(baseImageDependencies));
         }
+
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
-            this.contextAccessToken = contextAccessToken;
+            $.contextAccessToken = contextAccessToken;
             return this;
         }
+
         public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = contextPath;
+            $.contextPath = contextPath;
             return this;
         }
+
         public Builder encodedTaskContent(String encodedTaskContent) {
-            this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
+            $.encodedTaskContent = encodedTaskContent;
             return this;
         }
+
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
-            this.encodedValuesContent = encodedValuesContent;
+            $.encodedValuesContent = encodedValuesContent;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder values(@Nullable List<SetValueResponse> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(SetValueResponse... values) {
             return values(List.of(values));
-        }        public EncodedTaskStepResponse build() {
-            return new EncodedTaskStepResponse(baseImageDependencies, contextAccessToken, contextPath, encodedTaskContent, encodedValuesContent, type, values);
+        }
+
+        public EncodedTaskStepResponse build() {
+            $.baseImageDependencies = Objects.requireNonNull($.baseImageDependencies, "expected parameter 'baseImageDependencies' to be non-null");
+            $.encodedTaskContent = Objects.requireNonNull($.encodedTaskContent, "expected parameter 'encodedTaskContent' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

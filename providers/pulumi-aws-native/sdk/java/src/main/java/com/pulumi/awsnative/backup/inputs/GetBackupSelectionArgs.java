@@ -13,45 +13,45 @@ public final class GetBackupSelectionArgs extends com.pulumi.resources.InvokeArg
     public static final GetBackupSelectionArgs Empty = new GetBackupSelectionArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetBackupSelectionArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetBackupSelectionArgs() {}
 
-    private GetBackupSelectionArgs() {
-        this.id = null;
+    private GetBackupSelectionArgs(GetBackupSelectionArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupSelectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetBackupSelectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupSelectionArgs();
         }
 
         public Builder(GetBackupSelectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetBackupSelectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetBackupSelectionArgs build() {
-            return new GetBackupSelectionArgs(id);
+        }
+
+        public GetBackupSelectionArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

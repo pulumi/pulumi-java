@@ -6,9 +6,9 @@ package com.pulumi.awsnative.iotevents.inputs;
 import com.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,70 +25,66 @@ public final class DetectorModelIotTopicPublishArgs extends com.pulumi.resources
      * 
      */
     @Import(name="mqttTopic", required=true)
-      private final Output<String> mqttTopic;
+    private Output<String> mqttTopic;
 
     public Output<String> mqttTopic() {
         return this.mqttTopic;
     }
 
     @Import(name="payload")
-      private final @Nullable Output<DetectorModelPayloadArgs> payload;
+    private @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> payload() {
-        return this.payload == null ? Codegen.empty() : this.payload;
+    public Optional<Output<DetectorModelPayloadArgs>> payload() {
+        return Optional.ofNullable(this.payload);
     }
 
-    public DetectorModelIotTopicPublishArgs(
-        Output<String> mqttTopic,
-        @Nullable Output<DetectorModelPayloadArgs> payload) {
-        this.mqttTopic = Objects.requireNonNull(mqttTopic, "expected parameter 'mqttTopic' to be non-null");
-        this.payload = payload;
-    }
+    private DetectorModelIotTopicPublishArgs() {}
 
-    private DetectorModelIotTopicPublishArgs() {
-        this.mqttTopic = Codegen.empty();
-        this.payload = Codegen.empty();
+    private DetectorModelIotTopicPublishArgs(DetectorModelIotTopicPublishArgs $) {
+        this.mqttTopic = $.mqttTopic;
+        this.payload = $.payload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelIotTopicPublishArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> mqttTopic;
-        private @Nullable Output<DetectorModelPayloadArgs> payload;
+        private DetectorModelIotTopicPublishArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelIotTopicPublishArgs();
         }
 
         public Builder(DetectorModelIotTopicPublishArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mqttTopic = defaults.mqttTopic;
-    	      this.payload = defaults.payload;
+            $ = new DetectorModelIotTopicPublishArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mqttTopic(Output<String> mqttTopic) {
-            this.mqttTopic = Objects.requireNonNull(mqttTopic);
+            $.mqttTopic = mqttTopic;
             return this;
         }
+
         public Builder mqttTopic(String mqttTopic) {
-            this.mqttTopic = Output.of(Objects.requireNonNull(mqttTopic));
-            return this;
+            return mqttTopic(Output.of(mqttTopic));
         }
+
         public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
-        public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Codegen.ofNullable(payload);
-            return this;
-        }        public DetectorModelIotTopicPublishArgs build() {
-            return new DetectorModelIotTopicPublishArgs(mqttTopic, payload);
+
+        public Builder payload(DetectorModelPayloadArgs payload) {
+            return payload(Output.of(payload));
+        }
+
+        public DetectorModelIotTopicPublishArgs build() {
+            $.mqttTopic = Objects.requireNonNull($.mqttTopic, "expected parameter 'mqttTopic' to be non-null");
+            return $;
         }
     }
+
 }

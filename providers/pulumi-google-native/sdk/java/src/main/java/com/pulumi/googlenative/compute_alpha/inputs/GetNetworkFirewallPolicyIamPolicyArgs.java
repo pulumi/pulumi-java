@@ -15,78 +15,71 @@ public final class GetNetworkFirewallPolicyIamPolicyArgs extends com.pulumi.reso
     public static final GetNetworkFirewallPolicyIamPolicyArgs Empty = new GetNetworkFirewallPolicyIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
     }
 
-    public GetNetworkFirewallPolicyIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String resource) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private GetNetworkFirewallPolicyIamPolicyArgs() {}
 
-    private GetNetworkFirewallPolicyIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.resource = null;
+    private GetNetworkFirewallPolicyIamPolicyArgs(GetNetworkFirewallPolicyIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkFirewallPolicyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String resource;
+        private GetNetworkFirewallPolicyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkFirewallPolicyIamPolicyArgs();
         }
 
         public Builder(GetNetworkFirewallPolicyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.resource = defaults.resource;
+            $ = new GetNetworkFirewallPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
-        }        public GetNetworkFirewallPolicyIamPolicyArgs build() {
-            return new GetNetworkFirewallPolicyIamPolicyArgs(optionsRequestedPolicyVersion, project, resource);
+        }
+
+        public GetNetworkFirewallPolicyIamPolicyArgs build() {
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

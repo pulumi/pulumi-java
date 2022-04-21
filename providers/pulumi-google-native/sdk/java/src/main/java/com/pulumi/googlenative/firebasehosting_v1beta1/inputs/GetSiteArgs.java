@@ -15,62 +15,58 @@ public final class GetSiteArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSiteArgs Empty = new GetSiteArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="siteId", required=true)
-      private final String siteId;
+    private String siteId;
 
     public String siteId() {
         return this.siteId;
     }
 
-    public GetSiteArgs(
-        @Nullable String project,
-        String siteId) {
-        this.project = project;
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-    }
+    private GetSiteArgs() {}
 
-    private GetSiteArgs() {
-        this.project = null;
-        this.siteId = null;
+    private GetSiteArgs(GetSiteArgs $) {
+        this.project = $.project;
+        this.siteId = $.siteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String siteId;
+        private GetSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSiteArgs();
         }
 
         public Builder(GetSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.siteId = defaults.siteId;
+            $ = new GetSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
-        }        public GetSiteArgs build() {
-            return new GetSiteArgs(project, siteId);
+        }
+
+        public GetSiteArgs build() {
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.AutoscalingPolicyCpuUtilizationPredictiveMethod;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="predictiveMethod")
-      private final @Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
+    private @Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
 
-    public Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod() {
-        return this.predictiveMethod == null ? Codegen.empty() : this.predictiveMethod;
+    public Optional<Output<AutoscalingPolicyCpuUtilizationPredictiveMethod>> predictiveMethod() {
+        return Optional.ofNullable(this.predictiveMethod);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends com.pulumi.resour
      * 
      */
     @Import(name="utilizationTarget")
-      private final @Nullable Output<Double> utilizationTarget;
+    private @Nullable Output<Double> utilizationTarget;
 
-    public Output<Double> utilizationTarget() {
-        return this.utilizationTarget == null ? Codegen.empty() : this.utilizationTarget;
+    public Optional<Output<Double>> utilizationTarget() {
+        return Optional.ofNullable(this.utilizationTarget);
     }
 
-    public AutoscalingPolicyCpuUtilizationArgs(
-        @Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod,
-        @Nullable Output<Double> utilizationTarget) {
-        this.predictiveMethod = predictiveMethod;
-        this.utilizationTarget = utilizationTarget;
-    }
+    private AutoscalingPolicyCpuUtilizationArgs() {}
 
-    private AutoscalingPolicyCpuUtilizationArgs() {
-        this.predictiveMethod = Codegen.empty();
-        this.utilizationTarget = Codegen.empty();
+    private AutoscalingPolicyCpuUtilizationArgs(AutoscalingPolicyCpuUtilizationArgs $) {
+        this.predictiveMethod = $.predictiveMethod;
+        this.utilizationTarget = $.utilizationTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyCpuUtilizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod;
-        private @Nullable Output<Double> utilizationTarget;
+        private AutoscalingPolicyCpuUtilizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyCpuUtilizationArgs();
         }
 
         public Builder(AutoscalingPolicyCpuUtilizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.predictiveMethod = defaults.predictiveMethod;
-    	      this.utilizationTarget = defaults.utilizationTarget;
+            $ = new AutoscalingPolicyCpuUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder predictiveMethod(@Nullable Output<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod) {
-            this.predictiveMethod = predictiveMethod;
+            $.predictiveMethod = predictiveMethod;
             return this;
         }
-        public Builder predictiveMethod(@Nullable AutoscalingPolicyCpuUtilizationPredictiveMethod predictiveMethod) {
-            this.predictiveMethod = Codegen.ofNullable(predictiveMethod);
-            return this;
+
+        public Builder predictiveMethod(AutoscalingPolicyCpuUtilizationPredictiveMethod predictiveMethod) {
+            return predictiveMethod(Output.of(predictiveMethod));
         }
+
         public Builder utilizationTarget(@Nullable Output<Double> utilizationTarget) {
-            this.utilizationTarget = utilizationTarget;
+            $.utilizationTarget = utilizationTarget;
             return this;
         }
-        public Builder utilizationTarget(@Nullable Double utilizationTarget) {
-            this.utilizationTarget = Codegen.ofNullable(utilizationTarget);
-            return this;
-        }        public AutoscalingPolicyCpuUtilizationArgs build() {
-            return new AutoscalingPolicyCpuUtilizationArgs(predictiveMethod, utilizationTarget);
+
+        public Builder utilizationTarget(Double utilizationTarget) {
+            return utilizationTarget(Output.of(utilizationTarget));
+        }
+
+        public AutoscalingPolicyCpuUtilizationArgs build() {
+            return $;
         }
     }
+
 }

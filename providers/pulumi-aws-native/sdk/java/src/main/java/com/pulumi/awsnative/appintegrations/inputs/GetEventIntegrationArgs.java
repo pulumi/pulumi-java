@@ -17,45 +17,45 @@ public final class GetEventIntegrationArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetEventIntegrationArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetEventIntegrationArgs() {}
 
-    private GetEventIntegrationArgs() {
-        this.name = null;
+    private GetEventIntegrationArgs(GetEventIntegrationArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEventIntegrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetEventIntegrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEventIntegrationArgs();
         }
 
         public Builder(GetEventIntegrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetEventIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetEventIntegrationArgs build() {
-            return new GetEventIntegrationArgs(name);
+        }
+
+        public GetEventIntegrationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

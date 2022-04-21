@@ -25,10 +25,10 @@ public final class TemporaryDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mountPath")
-      private final @Nullable String mountPath;
+    private @Nullable String mountPath;
 
     public Optional<String> mountPath() {
-        return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
+        return Optional.ofNullable(this.mountPath);
     }
 
     /**
@@ -36,55 +36,51 @@ public final class TemporaryDiskResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sizeInGB")
-      private final @Nullable Integer sizeInGB;
+    private @Nullable Integer sizeInGB;
 
     public Optional<Integer> sizeInGB() {
-        return this.sizeInGB == null ? Optional.empty() : Optional.ofNullable(this.sizeInGB);
+        return Optional.ofNullable(this.sizeInGB);
     }
 
-    public TemporaryDiskResponse(
-        @Nullable String mountPath,
-        @Nullable Integer sizeInGB) {
-        this.mountPath = Codegen.stringProp("mountPath").arg(mountPath).def("/tmp").getNullable();
-        this.sizeInGB = sizeInGB;
-    }
+    private TemporaryDiskResponse() {}
 
-    private TemporaryDiskResponse() {
-        this.mountPath = null;
-        this.sizeInGB = null;
+    private TemporaryDiskResponse(TemporaryDiskResponse $) {
+        this.mountPath = $.mountPath;
+        this.sizeInGB = $.sizeInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemporaryDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String mountPath;
-        private @Nullable Integer sizeInGB;
+        private TemporaryDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemporaryDiskResponse();
         }
 
         public Builder(TemporaryDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPath = defaults.mountPath;
-    	      this.sizeInGB = defaults.sizeInGB;
+            $ = new TemporaryDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = mountPath;
+            $.mountPath = mountPath;
             return this;
         }
+
         public Builder sizeInGB(@Nullable Integer sizeInGB) {
-            this.sizeInGB = sizeInGB;
+            $.sizeInGB = sizeInGB;
             return this;
-        }        public TemporaryDiskResponse build() {
-            return new TemporaryDiskResponse(mountPath, sizeInGB);
+        }
+
+        public TemporaryDiskResponse build() {
+            $.mountPath = Codegen.stringProp("mountPath").arg($.mountPath).def("/tmp").getNullable();
+            return $;
         }
     }
+
 }

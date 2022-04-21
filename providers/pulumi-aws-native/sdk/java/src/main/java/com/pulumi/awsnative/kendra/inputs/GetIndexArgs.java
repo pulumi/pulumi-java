@@ -13,45 +13,45 @@ public final class GetIndexArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetIndexArgs Empty = new GetIndexArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetIndexArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetIndexArgs() {}
 
-    private GetIndexArgs() {
-        this.id = null;
+    private GetIndexArgs(GetIndexArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIndexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetIndexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIndexArgs();
         }
 
         public Builder(GetIndexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetIndexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetIndexArgs build() {
-            return new GetIndexArgs(id);
+        }
+
+        public GetIndexArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

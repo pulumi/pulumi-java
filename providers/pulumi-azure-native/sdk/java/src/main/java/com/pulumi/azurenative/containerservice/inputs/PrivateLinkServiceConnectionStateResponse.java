@@ -23,10 +23,10 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class PrivateLinkServiceConnectionStateResponse extends com.pulumi.
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public PrivateLinkServiceConnectionStateResponse(
-        @Nullable String description,
-        @Nullable String status) {
-        this.description = description;
-        this.status = status;
-    }
+    private PrivateLinkServiceConnectionStateResponse() {}
 
-    private PrivateLinkServiceConnectionStateResponse() {
-        this.description = null;
-        this.status = null;
+    private PrivateLinkServiceConnectionStateResponse(PrivateLinkServiceConnectionStateResponse $) {
+        this.description = $.description;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateLinkServiceConnectionStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private @Nullable String status;
+        private PrivateLinkServiceConnectionStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateLinkServiceConnectionStateResponse();
         }
 
         public Builder(PrivateLinkServiceConnectionStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.status = defaults.status;
+            $ = new PrivateLinkServiceConnectionStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public PrivateLinkServiceConnectionStateResponse build() {
-            return new PrivateLinkServiceConnectionStateResponse(description, status);
+        }
+
+        public PrivateLinkServiceConnectionStateResponse build() {
+            return $;
         }
     }
+
 }

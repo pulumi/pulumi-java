@@ -5,10 +5,10 @@ package com.pulumi.aws.securityhub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -32,7 +32,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -43,76 +43,70 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invite")
-      private final @Nullable Output<Boolean> invite;
+    private @Nullable Output<Boolean> invite;
 
-    public Output<Boolean> invite() {
-        return this.invite == null ? Codegen.empty() : this.invite;
+    public Optional<Output<Boolean>> invite() {
+        return Optional.ofNullable(this.invite);
     }
 
-    public MemberArgs(
-        Output<String> accountId,
-        Output<String> email,
-        @Nullable Output<Boolean> invite) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.invite = invite;
-    }
+    private MemberArgs() {}
 
-    private MemberArgs() {
-        this.accountId = Codegen.empty();
-        this.email = Codegen.empty();
-        this.invite = Codegen.empty();
+    private MemberArgs(MemberArgs $) {
+        this.accountId = $.accountId;
+        this.email = $.email;
+        this.invite = $.invite;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private Output<String> email;
-        private @Nullable Output<Boolean> invite;
+        private MemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemberArgs();
         }
 
         public Builder(MemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.email = defaults.email;
-    	      this.invite = defaults.invite;
+            $ = new MemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder invite(@Nullable Output<Boolean> invite) {
-            this.invite = invite;
+            $.invite = invite;
             return this;
         }
-        public Builder invite(@Nullable Boolean invite) {
-            this.invite = Codegen.ofNullable(invite);
-            return this;
-        }        public MemberArgs build() {
-            return new MemberArgs(accountId, email, invite);
+
+        public Builder invite(Boolean invite) {
+            return invite(Output.of(invite));
+        }
+
+        public MemberArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            return $;
         }
     }
+
 }

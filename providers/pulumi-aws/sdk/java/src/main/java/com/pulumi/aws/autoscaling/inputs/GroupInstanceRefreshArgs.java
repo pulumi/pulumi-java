@@ -6,10 +6,10 @@ package com.pulumi.aws.autoscaling.inputs;
 import com.pulumi.aws.autoscaling.inputs.GroupInstanceRefreshPreferencesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GroupInstanceRefreshArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="preferences")
-      private final @Nullable Output<GroupInstanceRefreshPreferencesArgs> preferences;
+    private @Nullable Output<GroupInstanceRefreshPreferencesArgs> preferences;
 
-    public Output<GroupInstanceRefreshPreferencesArgs> preferences() {
-        return this.preferences == null ? Codegen.empty() : this.preferences;
+    public Optional<Output<GroupInstanceRefreshPreferencesArgs>> preferences() {
+        return Optional.ofNullable(this.preferences);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class GroupInstanceRefreshArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="strategy", required=true)
-      private final Output<String> strategy;
+    private Output<String> strategy;
 
     public Output<String> strategy() {
         return this.strategy;
@@ -44,79 +44,73 @@ public final class GroupInstanceRefreshArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="triggers")
-      private final @Nullable Output<List<String>> triggers;
+    private @Nullable Output<List<String>> triggers;
 
-    public Output<List<String>> triggers() {
-        return this.triggers == null ? Codegen.empty() : this.triggers;
+    public Optional<Output<List<String>>> triggers() {
+        return Optional.ofNullable(this.triggers);
     }
 
-    public GroupInstanceRefreshArgs(
-        @Nullable Output<GroupInstanceRefreshPreferencesArgs> preferences,
-        Output<String> strategy,
-        @Nullable Output<List<String>> triggers) {
-        this.preferences = preferences;
-        this.strategy = Objects.requireNonNull(strategy, "expected parameter 'strategy' to be non-null");
-        this.triggers = triggers;
-    }
+    private GroupInstanceRefreshArgs() {}
 
-    private GroupInstanceRefreshArgs() {
-        this.preferences = Codegen.empty();
-        this.strategy = Codegen.empty();
-        this.triggers = Codegen.empty();
+    private GroupInstanceRefreshArgs(GroupInstanceRefreshArgs $) {
+        this.preferences = $.preferences;
+        this.strategy = $.strategy;
+        this.triggers = $.triggers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupInstanceRefreshArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GroupInstanceRefreshPreferencesArgs> preferences;
-        private Output<String> strategy;
-        private @Nullable Output<List<String>> triggers;
+        private GroupInstanceRefreshArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupInstanceRefreshArgs();
         }
 
         public Builder(GroupInstanceRefreshArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preferences = defaults.preferences;
-    	      this.strategy = defaults.strategy;
-    	      this.triggers = defaults.triggers;
+            $ = new GroupInstanceRefreshArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder preferences(@Nullable Output<GroupInstanceRefreshPreferencesArgs> preferences) {
-            this.preferences = preferences;
+            $.preferences = preferences;
             return this;
         }
-        public Builder preferences(@Nullable GroupInstanceRefreshPreferencesArgs preferences) {
-            this.preferences = Codegen.ofNullable(preferences);
-            return this;
+
+        public Builder preferences(GroupInstanceRefreshPreferencesArgs preferences) {
+            return preferences(Output.of(preferences));
         }
+
         public Builder strategy(Output<String> strategy) {
-            this.strategy = Objects.requireNonNull(strategy);
+            $.strategy = strategy;
             return this;
         }
+
         public Builder strategy(String strategy) {
-            this.strategy = Output.of(Objects.requireNonNull(strategy));
-            return this;
+            return strategy(Output.of(strategy));
         }
+
         public Builder triggers(@Nullable Output<List<String>> triggers) {
-            this.triggers = triggers;
+            $.triggers = triggers;
             return this;
         }
-        public Builder triggers(@Nullable List<String> triggers) {
-            this.triggers = Codegen.ofNullable(triggers);
-            return this;
+
+        public Builder triggers(List<String> triggers) {
+            return triggers(Output.of(triggers));
         }
+
         public Builder triggers(String... triggers) {
             return triggers(List.of(triggers));
-        }        public GroupInstanceRefreshArgs build() {
-            return new GroupInstanceRefreshArgs(preferences, strategy, triggers);
+        }
+
+        public GroupInstanceRefreshArgs build() {
+            $.strategy = Objects.requireNonNull($.strategy, "expected parameter 'strategy' to be non-null");
+            return $;
         }
     }
+
 }

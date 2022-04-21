@@ -15,174 +15,157 @@ public final class GetTargetGroupHealthCheck extends com.pulumi.resources.Invoke
     public static final GetTargetGroupHealthCheck Empty = new GetTargetGroupHealthCheck();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="healthyThreshold", required=true)
-      private final Integer healthyThreshold;
+    private Integer healthyThreshold;
 
     public Integer healthyThreshold() {
         return this.healthyThreshold;
     }
 
     @Import(name="interval", required=true)
-      private final Integer interval;
+    private Integer interval;
 
     public Integer interval() {
         return this.interval;
     }
 
     @Import(name="matcher", required=true)
-      private final String matcher;
+    private String matcher;
 
     public String matcher() {
         return this.matcher;
     }
 
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
     @Import(name="port", required=true)
-      private final String port;
+    private String port;
 
     public String port() {
         return this.port;
     }
 
     @Import(name="protocol", required=true)
-      private final String protocol;
+    private String protocol;
 
     public String protocol() {
         return this.protocol;
     }
 
     @Import(name="timeout", required=true)
-      private final Integer timeout;
+    private Integer timeout;
 
     public Integer timeout() {
         return this.timeout;
     }
 
     @Import(name="unhealthyThreshold", required=true)
-      private final Integer unhealthyThreshold;
+    private Integer unhealthyThreshold;
 
     public Integer unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
-    public GetTargetGroupHealthCheck(
-        Boolean enabled,
-        Integer healthyThreshold,
-        Integer interval,
-        String matcher,
-        String path,
-        String port,
-        String protocol,
-        Integer timeout,
-        Integer unhealthyThreshold) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.healthyThreshold = Objects.requireNonNull(healthyThreshold, "expected parameter 'healthyThreshold' to be non-null");
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.matcher = Objects.requireNonNull(matcher, "expected parameter 'matcher' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.timeout = Objects.requireNonNull(timeout, "expected parameter 'timeout' to be non-null");
-        this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold, "expected parameter 'unhealthyThreshold' to be non-null");
-    }
+    private GetTargetGroupHealthCheck() {}
 
-    private GetTargetGroupHealthCheck() {
-        this.enabled = null;
-        this.healthyThreshold = null;
-        this.interval = null;
-        this.matcher = null;
-        this.path = null;
-        this.port = null;
-        this.protocol = null;
-        this.timeout = null;
-        this.unhealthyThreshold = null;
+    private GetTargetGroupHealthCheck(GetTargetGroupHealthCheck $) {
+        this.enabled = $.enabled;
+        this.healthyThreshold = $.healthyThreshold;
+        this.interval = $.interval;
+        this.matcher = $.matcher;
+        this.path = $.path;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.timeout = $.timeout;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetGroupHealthCheck defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private Integer healthyThreshold;
-        private Integer interval;
-        private String matcher;
-        private String path;
-        private String port;
-        private String protocol;
-        private Integer timeout;
-        private Integer unhealthyThreshold;
+        private GetTargetGroupHealthCheck $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetGroupHealthCheck();
         }
 
         public Builder(GetTargetGroupHealthCheck defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.interval = defaults.interval;
-    	      this.matcher = defaults.matcher;
-    	      this.path = defaults.path;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.timeout = defaults.timeout;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new GetTargetGroupHealthCheck(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder healthyThreshold(Integer healthyThreshold) {
-            this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
+
         public Builder interval(Integer interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder matcher(String matcher) {
-            this.matcher = Objects.requireNonNull(matcher);
+            $.matcher = matcher;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder port(String port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder protocol(String protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder timeout(Integer timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            $.timeout = timeout;
             return this;
         }
+
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
-        }        public GetTargetGroupHealthCheck build() {
-            return new GetTargetGroupHealthCheck(enabled, healthyThreshold, interval, matcher, path, port, protocol, timeout, unhealthyThreshold);
+        }
+
+        public GetTargetGroupHealthCheck build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.healthyThreshold = Objects.requireNonNull($.healthyThreshold, "expected parameter 'healthyThreshold' to be non-null");
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.matcher = Objects.requireNonNull($.matcher, "expected parameter 'matcher' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.timeout = Objects.requireNonNull($.timeout, "expected parameter 'timeout' to be non-null");
+            $.unhealthyThreshold = Objects.requireNonNull($.unhealthyThreshold, "expected parameter 'unhealthyThreshold' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetAr
     public static final ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs Empty = new ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs();
 
     @Import(name="items")
-      private final @Nullable Output<List<String>> items;
+    private @Nullable Output<List<String>> items;
 
-    public Output<List<String>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<String>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs(@Nullable Output<List<String>> items) {
-        this.items = items;
-    }
+    private ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs() {}
 
-    private ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs() {
-        this.items = Codegen.empty();
+    private ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs(ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> items;
+        private ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs();
         }
 
         public Builder(ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<String>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<String> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<String> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(String... items) {
             return items(List.of(items));
-        }        public ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs build() {
-            return new ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs(items);
+        }
+
+        public ResponseHeadersPolicyCorsConfigAccessControlAllowOriginsGetArgs build() {
+            return $;
         }
     }
+
 }

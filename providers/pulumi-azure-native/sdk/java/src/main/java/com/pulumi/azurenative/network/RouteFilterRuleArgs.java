@@ -8,10 +8,10 @@ import com.pulumi.azurenative.network.enums.RouteFilterRuleType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="access", required=true)
-      private final Output<Either<String,Access>> access;
+    private Output<Either<String,Access>> access;
 
     public Output<Either<String,Access>> access() {
         return this.access;
@@ -35,7 +35,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="communities", required=true)
-      private final Output<List<String>> communities;
+    private Output<List<String>> communities;
 
     public Output<List<String>> communities() {
         return this.communities;
@@ -46,10 +46,10 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="routeFilterName", required=true)
-      private final Output<String> routeFilterName;
+    private Output<String> routeFilterName;
 
     public Output<String> routeFilterName() {
         return this.routeFilterName;
@@ -101,7 +101,7 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="routeFilterRuleType", required=true)
-      private final Output<Either<String,RouteFilterRuleType>> routeFilterRuleType;
+    private Output<Either<String,RouteFilterRuleType>> routeFilterRuleType;
 
     public Output<Either<String,RouteFilterRuleType>> routeFilterRuleType() {
         return this.routeFilterRuleType;
@@ -112,157 +112,137 @@ public final class RouteFilterRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ruleName")
-      private final @Nullable Output<String> ruleName;
+    private @Nullable Output<String> ruleName;
 
-    public Output<String> ruleName() {
-        return this.ruleName == null ? Codegen.empty() : this.ruleName;
+    public Optional<Output<String>> ruleName() {
+        return Optional.ofNullable(this.ruleName);
     }
 
-    public RouteFilterRuleArgs(
-        Output<Either<String,Access>> access,
-        Output<List<String>> communities,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> resourceGroupName,
-        Output<String> routeFilterName,
-        Output<Either<String,RouteFilterRuleType>> routeFilterRuleType,
-        @Nullable Output<String> ruleName) {
-        this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
-        this.communities = Objects.requireNonNull(communities, "expected parameter 'communities' to be non-null");
-        this.id = id;
-        this.location = location;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.routeFilterName = Objects.requireNonNull(routeFilterName, "expected parameter 'routeFilterName' to be non-null");
-        this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType, "expected parameter 'routeFilterRuleType' to be non-null");
-        this.ruleName = ruleName;
-    }
+    private RouteFilterRuleArgs() {}
 
-    private RouteFilterRuleArgs() {
-        this.access = Codegen.empty();
-        this.communities = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.routeFilterName = Codegen.empty();
-        this.routeFilterRuleType = Codegen.empty();
-        this.ruleName = Codegen.empty();
+    private RouteFilterRuleArgs(RouteFilterRuleArgs $) {
+        this.access = $.access;
+        this.communities = $.communities;
+        this.id = $.id;
+        this.location = $.location;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.routeFilterName = $.routeFilterName;
+        this.routeFilterRuleType = $.routeFilterRuleType;
+        this.ruleName = $.ruleName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteFilterRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,Access>> access;
-        private Output<List<String>> communities;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> resourceGroupName;
-        private Output<String> routeFilterName;
-        private Output<Either<String,RouteFilterRuleType>> routeFilterRuleType;
-        private @Nullable Output<String> ruleName;
+        private RouteFilterRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteFilterRuleArgs();
         }
 
         public Builder(RouteFilterRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.access = defaults.access;
-    	      this.communities = defaults.communities;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.routeFilterName = defaults.routeFilterName;
-    	      this.routeFilterRuleType = defaults.routeFilterRuleType;
-    	      this.ruleName = defaults.ruleName;
+            $ = new RouteFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder access(Output<Either<String,Access>> access) {
-            this.access = Objects.requireNonNull(access);
+            $.access = access;
             return this;
         }
+
         public Builder access(Either<String,Access> access) {
-            this.access = Output.of(Objects.requireNonNull(access));
-            return this;
+            return access(Output.of(access));
         }
+
         public Builder communities(Output<List<String>> communities) {
-            this.communities = Objects.requireNonNull(communities);
+            $.communities = communities;
             return this;
         }
+
         public Builder communities(List<String> communities) {
-            this.communities = Output.of(Objects.requireNonNull(communities));
-            return this;
+            return communities(Output.of(communities));
         }
+
         public Builder communities(String... communities) {
             return communities(List.of(communities));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder routeFilterName(Output<String> routeFilterName) {
-            this.routeFilterName = Objects.requireNonNull(routeFilterName);
+            $.routeFilterName = routeFilterName;
             return this;
         }
+
         public Builder routeFilterName(String routeFilterName) {
-            this.routeFilterName = Output.of(Objects.requireNonNull(routeFilterName));
-            return this;
+            return routeFilterName(Output.of(routeFilterName));
         }
+
         public Builder routeFilterRuleType(Output<Either<String,RouteFilterRuleType>> routeFilterRuleType) {
-            this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
+            $.routeFilterRuleType = routeFilterRuleType;
             return this;
         }
+
         public Builder routeFilterRuleType(Either<String,RouteFilterRuleType> routeFilterRuleType) {
-            this.routeFilterRuleType = Output.of(Objects.requireNonNull(routeFilterRuleType));
-            return this;
+            return routeFilterRuleType(Output.of(routeFilterRuleType));
         }
+
         public Builder ruleName(@Nullable Output<String> ruleName) {
-            this.ruleName = ruleName;
+            $.ruleName = ruleName;
             return this;
         }
-        public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Codegen.ofNullable(ruleName);
-            return this;
-        }        public RouteFilterRuleArgs build() {
-            return new RouteFilterRuleArgs(access, communities, id, location, name, resourceGroupName, routeFilterName, routeFilterRuleType, ruleName);
+
+        public Builder ruleName(String ruleName) {
+            return ruleName(Output.of(ruleName));
+        }
+
+        public RouteFilterRuleArgs build() {
+            $.access = Objects.requireNonNull($.access, "expected parameter 'access' to be non-null");
+            $.communities = Objects.requireNonNull($.communities, "expected parameter 'communities' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.routeFilterName = Objects.requireNonNull($.routeFilterName, "expected parameter 'routeFilterName' to be non-null");
+            $.routeFilterRuleType = Objects.requireNonNull($.routeFilterRuleType, "expected parameter 'routeFilterRuleType' to be non-null");
+            return $;
         }
     }
+
 }

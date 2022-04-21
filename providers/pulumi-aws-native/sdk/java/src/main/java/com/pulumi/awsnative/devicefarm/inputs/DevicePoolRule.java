@@ -25,10 +25,10 @@ public final class DevicePoolRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attribute")
-      private final @Nullable DevicePoolRuleAttribute attribute;
+    private @Nullable DevicePoolRuleAttribute attribute;
 
     public Optional<DevicePoolRuleAttribute> attribute() {
-        return this.attribute == null ? Optional.empty() : Optional.ofNullable(this.attribute);
+        return Optional.ofNullable(this.attribute);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DevicePoolRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operator")
-      private final @Nullable DevicePoolRuleOperator operator;
+    private @Nullable DevicePoolRuleOperator operator;
 
     public Optional<DevicePoolRuleOperator> operator() {
-        return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
+        return Optional.ofNullable(this.operator);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class DevicePoolRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable String value;
+    private @Nullable String value;
 
     public Optional<String> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public DevicePoolRule(
-        @Nullable DevicePoolRuleAttribute attribute,
-        @Nullable DevicePoolRuleOperator operator,
-        @Nullable String value) {
-        this.attribute = attribute;
-        this.operator = operator;
-        this.value = value;
-    }
+    private DevicePoolRule() {}
 
-    private DevicePoolRule() {
-        this.attribute = null;
-        this.operator = null;
-        this.value = null;
+    private DevicePoolRule(DevicePoolRule $) {
+        this.attribute = $.attribute;
+        this.operator = $.operator;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DevicePoolRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DevicePoolRuleAttribute attribute;
-        private @Nullable DevicePoolRuleOperator operator;
-        private @Nullable String value;
+        private DevicePoolRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new DevicePoolRule();
         }
 
         public Builder(DevicePoolRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.operator = defaults.operator;
-    	      this.value = defaults.value;
+            $ = new DevicePoolRule(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(@Nullable DevicePoolRuleAttribute attribute) {
-            this.attribute = attribute;
+            $.attribute = attribute;
             return this;
         }
+
         public Builder operator(@Nullable DevicePoolRuleOperator operator) {
-            this.operator = operator;
+            $.operator = operator;
             return this;
         }
+
         public Builder value(@Nullable String value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public DevicePoolRule build() {
-            return new DevicePoolRule(attribute, operator, value);
+        }
+
+        public DevicePoolRule build() {
+            return $;
         }
     }
+
 }

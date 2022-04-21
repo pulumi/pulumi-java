@@ -6,9 +6,9 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.BucketObjectLockConfigurationRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BucketObjectLockConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="objectLockEnabled", required=true)
-      private final Output<String> objectLockEnabled;
+    private Output<String> objectLockEnabled;
 
     public Output<String> objectLockEnabled() {
         return this.objectLockEnabled;
@@ -32,63 +32,59 @@ public final class BucketObjectLockConfigurationArgs extends com.pulumi.resource
      * 
      */
     @Import(name="rule")
-      private final @Nullable Output<BucketObjectLockConfigurationRuleArgs> rule;
+    private @Nullable Output<BucketObjectLockConfigurationRuleArgs> rule;
 
-    public Output<BucketObjectLockConfigurationRuleArgs> rule() {
-        return this.rule == null ? Codegen.empty() : this.rule;
+    public Optional<Output<BucketObjectLockConfigurationRuleArgs>> rule() {
+        return Optional.ofNullable(this.rule);
     }
 
-    public BucketObjectLockConfigurationArgs(
-        Output<String> objectLockEnabled,
-        @Nullable Output<BucketObjectLockConfigurationRuleArgs> rule) {
-        this.objectLockEnabled = Objects.requireNonNull(objectLockEnabled, "expected parameter 'objectLockEnabled' to be non-null");
-        this.rule = rule;
-    }
+    private BucketObjectLockConfigurationArgs() {}
 
-    private BucketObjectLockConfigurationArgs() {
-        this.objectLockEnabled = Codegen.empty();
-        this.rule = Codegen.empty();
+    private BucketObjectLockConfigurationArgs(BucketObjectLockConfigurationArgs $) {
+        this.objectLockEnabled = $.objectLockEnabled;
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectLockConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> objectLockEnabled;
-        private @Nullable Output<BucketObjectLockConfigurationRuleArgs> rule;
+        private BucketObjectLockConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectLockConfigurationArgs();
         }
 
         public Builder(BucketObjectLockConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectLockEnabled = defaults.objectLockEnabled;
-    	      this.rule = defaults.rule;
+            $ = new BucketObjectLockConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectLockEnabled(Output<String> objectLockEnabled) {
-            this.objectLockEnabled = Objects.requireNonNull(objectLockEnabled);
+            $.objectLockEnabled = objectLockEnabled;
             return this;
         }
+
         public Builder objectLockEnabled(String objectLockEnabled) {
-            this.objectLockEnabled = Output.of(Objects.requireNonNull(objectLockEnabled));
-            return this;
+            return objectLockEnabled(Output.of(objectLockEnabled));
         }
+
         public Builder rule(@Nullable Output<BucketObjectLockConfigurationRuleArgs> rule) {
-            this.rule = rule;
+            $.rule = rule;
             return this;
         }
-        public Builder rule(@Nullable BucketObjectLockConfigurationRuleArgs rule) {
-            this.rule = Codegen.ofNullable(rule);
-            return this;
-        }        public BucketObjectLockConfigurationArgs build() {
-            return new BucketObjectLockConfigurationArgs(objectLockEnabled, rule);
+
+        public Builder rule(BucketObjectLockConfigurationRuleArgs rule) {
+            return rule(Output.of(rule));
+        }
+
+        public BucketObjectLockConfigurationArgs build() {
+            $.objectLockEnabled = Objects.requireNonNull($.objectLockEnabled, "expected parameter 'objectLockEnabled' to be non-null");
+            return $;
         }
     }
+
 }

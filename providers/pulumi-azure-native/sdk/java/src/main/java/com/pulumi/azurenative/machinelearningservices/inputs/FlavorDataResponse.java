@@ -20,45 +20,44 @@ public final class FlavorDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Map<String,String> data;
+    private @Nullable Map<String,String> data;
 
-    public Map<String,String> data() {
-        return this.data == null ? Map.of() : this.data;
+    public Optional<Map<String,String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
-    public FlavorDataResponse(@Nullable Map<String,String> data) {
-        this.data = data;
-    }
+    private FlavorDataResponse() {}
 
-    private FlavorDataResponse() {
-        this.data = Map.of();
+    private FlavorDataResponse(FlavorDataResponse $) {
+        this.data = $.data;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlavorDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> data;
+        private FlavorDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlavorDataResponse();
         }
 
         public Builder(FlavorDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
+            $ = new FlavorDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Map<String,String> data) {
-            this.data = data;
+            $.data = data;
             return this;
-        }        public FlavorDataResponse build() {
-            return new FlavorDataResponse(data);
+        }
+
+        public FlavorDataResponse build() {
+            return $;
         }
     }
+
 }

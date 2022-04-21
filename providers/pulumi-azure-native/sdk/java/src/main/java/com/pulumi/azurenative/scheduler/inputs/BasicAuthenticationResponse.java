@@ -20,10 +20,10 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -43,64 +43,57 @@ public final class BasicAuthenticationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public BasicAuthenticationResponse(
-        @Nullable String password,
-        String type,
-        @Nullable String username) {
-        this.password = password;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.username = username;
-    }
+    private BasicAuthenticationResponse() {}
 
-    private BasicAuthenticationResponse() {
-        this.password = null;
-        this.type = null;
-        this.username = null;
+    private BasicAuthenticationResponse(BasicAuthenticationResponse $) {
+        this.password = $.password;
+        this.type = $.type;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String password;
-        private String type;
-        private @Nullable String username;
+        private BasicAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicAuthenticationResponse();
         }
 
         public Builder(BasicAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.username = defaults.username;
+            $ = new BasicAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public BasicAuthenticationResponse build() {
-            return new BasicAuthenticationResponse(password, type, username);
+        }
+
+        public BasicAuthenticationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

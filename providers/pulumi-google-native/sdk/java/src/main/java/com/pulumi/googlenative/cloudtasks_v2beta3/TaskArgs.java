@@ -5,13 +5,13 @@ package com.pulumi.googlenative.cloudtasks_v2beta3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudtasks_v2beta3.enums.TaskResponseView;
 import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.AppEngineHttpRequestArgs;
 import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.HttpRequestArgs;
 import com.pulumi.googlenative.cloudtasks_v2beta3.inputs.PullMessageArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appEngineHttpRequest")
-      private final @Nullable Output<AppEngineHttpRequestArgs> appEngineHttpRequest;
+    private @Nullable Output<AppEngineHttpRequestArgs> appEngineHttpRequest;
 
-    public Output<AppEngineHttpRequestArgs> appEngineHttpRequest() {
-        return this.appEngineHttpRequest == null ? Codegen.empty() : this.appEngineHttpRequest;
+    public Optional<Output<AppEngineHttpRequestArgs>> appEngineHttpRequest() {
+        return Optional.ofNullable(this.appEngineHttpRequest);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dispatchDeadline")
-      private final @Nullable Output<String> dispatchDeadline;
+    private @Nullable Output<String> dispatchDeadline;
 
-    public Output<String> dispatchDeadline() {
-        return this.dispatchDeadline == null ? Codegen.empty() : this.dispatchDeadline;
+    public Optional<Output<String>> dispatchDeadline() {
+        return Optional.ofNullable(this.dispatchDeadline);
     }
 
     /**
@@ -46,17 +46,17 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpRequest")
-      private final @Nullable Output<HttpRequestArgs> httpRequest;
+    private @Nullable Output<HttpRequestArgs> httpRequest;
 
-    public Output<HttpRequestArgs> httpRequest() {
-        return this.httpRequest == null ? Codegen.empty() : this.httpRequest;
+    public Optional<Output<HttpRequestArgs>> httpRequest() {
+        return Optional.ofNullable(this.httpRequest);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -64,17 +64,17 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -82,14 +82,14 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pullMessage")
-      private final @Nullable Output<PullMessageArgs> pullMessage;
+    private @Nullable Output<PullMessageArgs> pullMessage;
 
-    public Output<PullMessageArgs> pullMessage() {
-        return this.pullMessage == null ? Codegen.empty() : this.pullMessage;
+    public Optional<Output<PullMessageArgs>> pullMessage() {
+        return Optional.ofNullable(this.pullMessage);
     }
 
     @Import(name="queueId", required=true)
-      private final Output<String> queueId;
+    private Output<String> queueId;
 
     public Output<String> queueId() {
         return this.queueId;
@@ -100,10 +100,10 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseView")
-      private final @Nullable Output<TaskResponseView> responseView;
+    private @Nullable Output<TaskResponseView> responseView;
 
-    public Output<TaskResponseView> responseView() {
-        return this.responseView == null ? Codegen.empty() : this.responseView;
+    public Optional<Output<TaskResponseView>> responseView() {
+        return Optional.ofNullable(this.responseView);
     }
 
     /**
@@ -111,167 +111,139 @@ public final class TaskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleTime")
-      private final @Nullable Output<String> scheduleTime;
+    private @Nullable Output<String> scheduleTime;
 
-    public Output<String> scheduleTime() {
-        return this.scheduleTime == null ? Codegen.empty() : this.scheduleTime;
+    public Optional<Output<String>> scheduleTime() {
+        return Optional.ofNullable(this.scheduleTime);
     }
 
-    public TaskArgs(
-        @Nullable Output<AppEngineHttpRequestArgs> appEngineHttpRequest,
-        @Nullable Output<String> dispatchDeadline,
-        @Nullable Output<HttpRequestArgs> httpRequest,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<PullMessageArgs> pullMessage,
-        Output<String> queueId,
-        @Nullable Output<TaskResponseView> responseView,
-        @Nullable Output<String> scheduleTime) {
-        this.appEngineHttpRequest = appEngineHttpRequest;
-        this.dispatchDeadline = dispatchDeadline;
-        this.httpRequest = httpRequest;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.pullMessage = pullMessage;
-        this.queueId = Objects.requireNonNull(queueId, "expected parameter 'queueId' to be non-null");
-        this.responseView = responseView;
-        this.scheduleTime = scheduleTime;
-    }
+    private TaskArgs() {}
 
-    private TaskArgs() {
-        this.appEngineHttpRequest = Codegen.empty();
-        this.dispatchDeadline = Codegen.empty();
-        this.httpRequest = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pullMessage = Codegen.empty();
-        this.queueId = Codegen.empty();
-        this.responseView = Codegen.empty();
-        this.scheduleTime = Codegen.empty();
+    private TaskArgs(TaskArgs $) {
+        this.appEngineHttpRequest = $.appEngineHttpRequest;
+        this.dispatchDeadline = $.dispatchDeadline;
+        this.httpRequest = $.httpRequest;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.pullMessage = $.pullMessage;
+        this.queueId = $.queueId;
+        this.responseView = $.responseView;
+        this.scheduleTime = $.scheduleTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AppEngineHttpRequestArgs> appEngineHttpRequest;
-        private @Nullable Output<String> dispatchDeadline;
-        private @Nullable Output<HttpRequestArgs> httpRequest;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<PullMessageArgs> pullMessage;
-        private Output<String> queueId;
-        private @Nullable Output<TaskResponseView> responseView;
-        private @Nullable Output<String> scheduleTime;
+        private TaskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskArgs();
         }
 
         public Builder(TaskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngineHttpRequest = defaults.appEngineHttpRequest;
-    	      this.dispatchDeadline = defaults.dispatchDeadline;
-    	      this.httpRequest = defaults.httpRequest;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.pullMessage = defaults.pullMessage;
-    	      this.queueId = defaults.queueId;
-    	      this.responseView = defaults.responseView;
-    	      this.scheduleTime = defaults.scheduleTime;
+            $ = new TaskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngineHttpRequest(@Nullable Output<AppEngineHttpRequestArgs> appEngineHttpRequest) {
-            this.appEngineHttpRequest = appEngineHttpRequest;
+            $.appEngineHttpRequest = appEngineHttpRequest;
             return this;
         }
-        public Builder appEngineHttpRequest(@Nullable AppEngineHttpRequestArgs appEngineHttpRequest) {
-            this.appEngineHttpRequest = Codegen.ofNullable(appEngineHttpRequest);
-            return this;
+
+        public Builder appEngineHttpRequest(AppEngineHttpRequestArgs appEngineHttpRequest) {
+            return appEngineHttpRequest(Output.of(appEngineHttpRequest));
         }
+
         public Builder dispatchDeadline(@Nullable Output<String> dispatchDeadline) {
-            this.dispatchDeadline = dispatchDeadline;
+            $.dispatchDeadline = dispatchDeadline;
             return this;
         }
-        public Builder dispatchDeadline(@Nullable String dispatchDeadline) {
-            this.dispatchDeadline = Codegen.ofNullable(dispatchDeadline);
-            return this;
+
+        public Builder dispatchDeadline(String dispatchDeadline) {
+            return dispatchDeadline(Output.of(dispatchDeadline));
         }
+
         public Builder httpRequest(@Nullable Output<HttpRequestArgs> httpRequest) {
-            this.httpRequest = httpRequest;
+            $.httpRequest = httpRequest;
             return this;
         }
-        public Builder httpRequest(@Nullable HttpRequestArgs httpRequest) {
-            this.httpRequest = Codegen.ofNullable(httpRequest);
-            return this;
+
+        public Builder httpRequest(HttpRequestArgs httpRequest) {
+            return httpRequest(Output.of(httpRequest));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pullMessage(@Nullable Output<PullMessageArgs> pullMessage) {
-            this.pullMessage = pullMessage;
+            $.pullMessage = pullMessage;
             return this;
         }
-        public Builder pullMessage(@Nullable PullMessageArgs pullMessage) {
-            this.pullMessage = Codegen.ofNullable(pullMessage);
-            return this;
+
+        public Builder pullMessage(PullMessageArgs pullMessage) {
+            return pullMessage(Output.of(pullMessage));
         }
+
         public Builder queueId(Output<String> queueId) {
-            this.queueId = Objects.requireNonNull(queueId);
+            $.queueId = queueId;
             return this;
         }
+
         public Builder queueId(String queueId) {
-            this.queueId = Output.of(Objects.requireNonNull(queueId));
-            return this;
+            return queueId(Output.of(queueId));
         }
+
         public Builder responseView(@Nullable Output<TaskResponseView> responseView) {
-            this.responseView = responseView;
+            $.responseView = responseView;
             return this;
         }
-        public Builder responseView(@Nullable TaskResponseView responseView) {
-            this.responseView = Codegen.ofNullable(responseView);
-            return this;
+
+        public Builder responseView(TaskResponseView responseView) {
+            return responseView(Output.of(responseView));
         }
+
         public Builder scheduleTime(@Nullable Output<String> scheduleTime) {
-            this.scheduleTime = scheduleTime;
+            $.scheduleTime = scheduleTime;
             return this;
         }
-        public Builder scheduleTime(@Nullable String scheduleTime) {
-            this.scheduleTime = Codegen.ofNullable(scheduleTime);
-            return this;
-        }        public TaskArgs build() {
-            return new TaskArgs(appEngineHttpRequest, dispatchDeadline, httpRequest, location, name, project, pullMessage, queueId, responseView, scheduleTime);
+
+        public Builder scheduleTime(String scheduleTime) {
+            return scheduleTime(Output.of(scheduleTime));
+        }
+
+        public TaskArgs build() {
+            $.queueId = Objects.requireNonNull($.queueId, "expected parameter 'queueId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.containeranalysis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationSignatureArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +21,7 @@ public final class OccurenceAttestationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serializedPayload", required=true)
-      private final Output<String> serializedPayload;
+    private Output<String> serializedPayload;
 
     public Output<String> serializedPayload() {
         return this.serializedPayload;
@@ -38,66 +37,64 @@ public final class OccurenceAttestationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="signatures", required=true)
-      private final Output<List<OccurenceAttestationSignatureArgs>> signatures;
+    private Output<List<OccurenceAttestationSignatureArgs>> signatures;
 
     public Output<List<OccurenceAttestationSignatureArgs>> signatures() {
         return this.signatures;
     }
 
-    public OccurenceAttestationArgs(
-        Output<String> serializedPayload,
-        Output<List<OccurenceAttestationSignatureArgs>> signatures) {
-        this.serializedPayload = Objects.requireNonNull(serializedPayload, "expected parameter 'serializedPayload' to be non-null");
-        this.signatures = Objects.requireNonNull(signatures, "expected parameter 'signatures' to be non-null");
-    }
+    private OccurenceAttestationArgs() {}
 
-    private OccurenceAttestationArgs() {
-        this.serializedPayload = Codegen.empty();
-        this.signatures = Codegen.empty();
+    private OccurenceAttestationArgs(OccurenceAttestationArgs $) {
+        this.serializedPayload = $.serializedPayload;
+        this.signatures = $.signatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OccurenceAttestationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> serializedPayload;
-        private Output<List<OccurenceAttestationSignatureArgs>> signatures;
+        private OccurenceAttestationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OccurenceAttestationArgs();
         }
 
         public Builder(OccurenceAttestationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serializedPayload = defaults.serializedPayload;
-    	      this.signatures = defaults.signatures;
+            $ = new OccurenceAttestationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serializedPayload(Output<String> serializedPayload) {
-            this.serializedPayload = Objects.requireNonNull(serializedPayload);
+            $.serializedPayload = serializedPayload;
             return this;
         }
+
         public Builder serializedPayload(String serializedPayload) {
-            this.serializedPayload = Output.of(Objects.requireNonNull(serializedPayload));
-            return this;
+            return serializedPayload(Output.of(serializedPayload));
         }
+
         public Builder signatures(Output<List<OccurenceAttestationSignatureArgs>> signatures) {
-            this.signatures = Objects.requireNonNull(signatures);
+            $.signatures = signatures;
             return this;
         }
+
         public Builder signatures(List<OccurenceAttestationSignatureArgs> signatures) {
-            this.signatures = Output.of(Objects.requireNonNull(signatures));
-            return this;
+            return signatures(Output.of(signatures));
         }
+
         public Builder signatures(OccurenceAttestationSignatureArgs... signatures) {
             return signatures(List.of(signatures));
-        }        public OccurenceAttestationArgs build() {
-            return new OccurenceAttestationArgs(serializedPayload, signatures);
+        }
+
+        public OccurenceAttestationArgs build() {
+            $.serializedPayload = Objects.requireNonNull($.serializedPayload, "expected parameter 'serializedPayload' to be non-null");
+            $.signatures = Objects.requireNonNull($.signatures, "expected parameter 'signatures' to be non-null");
+            return $;
         }
     }
+
 }

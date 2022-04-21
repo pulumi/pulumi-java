@@ -5,7 +5,6 @@ package com.pulumi.azurenative.solutions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class JitAuthorizationPoliciesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="principalId", required=true)
-      private final Output<String> principalId;
+    private Output<String> principalId;
 
     public Output<String> principalId() {
         return this.principalId;
@@ -34,63 +33,60 @@ public final class JitAuthorizationPoliciesArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="roleDefinitionId", required=true)
-      private final Output<String> roleDefinitionId;
+    private Output<String> roleDefinitionId;
 
     public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
-    public JitAuthorizationPoliciesArgs(
-        Output<String> principalId,
-        Output<String> roleDefinitionId) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
-    }
+    private JitAuthorizationPoliciesArgs() {}
 
-    private JitAuthorizationPoliciesArgs() {
-        this.principalId = Codegen.empty();
-        this.roleDefinitionId = Codegen.empty();
+    private JitAuthorizationPoliciesArgs(JitAuthorizationPoliciesArgs $) {
+        this.principalId = $.principalId;
+        this.roleDefinitionId = $.roleDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JitAuthorizationPoliciesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> principalId;
-        private Output<String> roleDefinitionId;
+        private JitAuthorizationPoliciesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JitAuthorizationPoliciesArgs();
         }
 
         public Builder(JitAuthorizationPoliciesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
+            $ = new JitAuthorizationPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(Output<String> principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Output.of(Objects.requireNonNull(principalId));
-            return this;
+            return principalId(Output.of(principalId));
         }
+
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
-            this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+            $.roleDefinitionId = roleDefinitionId;
             return this;
         }
+
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Output.of(Objects.requireNonNull(roleDefinitionId));
-            return this;
-        }        public JitAuthorizationPoliciesArgs build() {
-            return new JitAuthorizationPoliciesArgs(principalId, roleDefinitionId);
+            return roleDefinitionId(Output.of(roleDefinitionId));
+        }
+
+        public JitAuthorizationPoliciesArgs build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.roleDefinitionId = Objects.requireNonNull($.roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

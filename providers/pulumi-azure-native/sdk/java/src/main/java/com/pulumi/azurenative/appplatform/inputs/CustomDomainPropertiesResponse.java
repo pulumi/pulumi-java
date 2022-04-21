@@ -23,7 +23,7 @@ public final class CustomDomainPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="appName", required=true)
-      private final String appName;
+    private String appName;
 
     public String appName() {
         return this.appName;
@@ -34,10 +34,10 @@ public final class CustomDomainPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="certName")
-      private final @Nullable String certName;
+    private @Nullable String certName;
 
     public Optional<String> certName() {
-        return this.certName == null ? Optional.empty() : Optional.ofNullable(this.certName);
+        return Optional.ofNullable(this.certName);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class CustomDomainPropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable String thumbprint;
+    private @Nullable String thumbprint;
 
     public Optional<String> thumbprint() {
-        return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public CustomDomainPropertiesResponse(
-        String appName,
-        @Nullable String certName,
-        @Nullable String thumbprint) {
-        this.appName = Objects.requireNonNull(appName, "expected parameter 'appName' to be non-null");
-        this.certName = certName;
-        this.thumbprint = thumbprint;
-    }
+    private CustomDomainPropertiesResponse() {}
 
-    private CustomDomainPropertiesResponse() {
-        this.appName = null;
-        this.certName = null;
-        this.thumbprint = null;
+    private CustomDomainPropertiesResponse(CustomDomainPropertiesResponse $) {
+        this.appName = $.appName;
+        this.certName = $.certName;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomDomainPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appName;
-        private @Nullable String certName;
-        private @Nullable String thumbprint;
+        private CustomDomainPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomDomainPropertiesResponse();
         }
 
         public Builder(CustomDomainPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appName = defaults.appName;
-    	      this.certName = defaults.certName;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new CustomDomainPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appName(String appName) {
-            this.appName = Objects.requireNonNull(appName);
+            $.appName = appName;
             return this;
         }
+
         public Builder certName(@Nullable String certName) {
-            this.certName = certName;
+            $.certName = certName;
             return this;
         }
+
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
-        }        public CustomDomainPropertiesResponse build() {
-            return new CustomDomainPropertiesResponse(appName, certName, thumbprint);
+        }
+
+        public CustomDomainPropertiesResponse build() {
+            $.appName = Objects.requireNonNull($.appName, "expected parameter 'appName' to be non-null");
+            return $;
         }
     }
+
 }

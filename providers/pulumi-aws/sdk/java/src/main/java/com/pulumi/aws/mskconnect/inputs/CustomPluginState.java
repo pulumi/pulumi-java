@@ -6,10 +6,10 @@ package com.pulumi.aws.mskconnect.inputs;
 import com.pulumi.aws.mskconnect.inputs.CustomPluginLocationGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latestRevision")
-      private final @Nullable Output<Integer> latestRevision;
+    private @Nullable Output<Integer> latestRevision;
 
-    public Output<Integer> latestRevision() {
-        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
+    public Optional<Output<Integer>> latestRevision() {
+        return Optional.ofNullable(this.latestRevision);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<CustomPluginLocationGetArgs> location;
+    private @Nullable Output<CustomPluginLocationGetArgs> location;
 
-    public Output<CustomPluginLocationGetArgs> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<CustomPluginLocationGetArgs>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,128 +88,108 @@ public final class CustomPluginState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public CustomPluginState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> latestRevision,
-        @Nullable Output<CustomPluginLocationGetArgs> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> state) {
-        this.arn = arn;
-        this.contentType = contentType;
-        this.description = description;
-        this.latestRevision = latestRevision;
-        this.location = location;
-        this.name = name;
-        this.state = state;
-    }
+    private CustomPluginState() {}
 
-    private CustomPluginState() {
-        this.arn = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.latestRevision = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.state = Codegen.empty();
+    private CustomPluginState(CustomPluginState $) {
+        this.arn = $.arn;
+        this.contentType = $.contentType;
+        this.description = $.description;
+        this.latestRevision = $.latestRevision;
+        this.location = $.location;
+        this.name = $.name;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomPluginState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> latestRevision;
-        private @Nullable Output<CustomPluginLocationGetArgs> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> state;
+        private CustomPluginState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomPluginState();
         }
 
         public Builder(CustomPluginState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.contentType = defaults.contentType;
-    	      this.description = defaults.description;
-    	      this.latestRevision = defaults.latestRevision;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
+            $ = new CustomPluginState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
-            this.latestRevision = latestRevision;
+            $.latestRevision = latestRevision;
             return this;
         }
-        public Builder latestRevision(@Nullable Integer latestRevision) {
-            this.latestRevision = Codegen.ofNullable(latestRevision);
-            return this;
+
+        public Builder latestRevision(Integer latestRevision) {
+            return latestRevision(Output.of(latestRevision));
         }
+
         public Builder location(@Nullable Output<CustomPluginLocationGetArgs> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable CustomPluginLocationGetArgs location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(CustomPluginLocationGetArgs location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public CustomPluginState build() {
-            return new CustomPluginState(arn, contentType, description, latestRevision, location, name, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public CustomPluginState build() {
+            return $;
         }
     }
+
 }

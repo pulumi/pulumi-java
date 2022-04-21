@@ -15,62 +15,58 @@ public final class GetMuteConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetMuteConfigArgs Empty = new GetMuteConfigArgs();
 
     @Import(name="muteConfigId", required=true)
-      private final String muteConfigId;
+    private String muteConfigId;
 
     public String muteConfigId() {
         return this.muteConfigId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetMuteConfigArgs(
-        String muteConfigId,
-        @Nullable String project) {
-        this.muteConfigId = Objects.requireNonNull(muteConfigId, "expected parameter 'muteConfigId' to be non-null");
-        this.project = project;
-    }
+    private GetMuteConfigArgs() {}
 
-    private GetMuteConfigArgs() {
-        this.muteConfigId = null;
-        this.project = null;
+    private GetMuteConfigArgs(GetMuteConfigArgs $) {
+        this.muteConfigId = $.muteConfigId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMuteConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String muteConfigId;
-        private @Nullable String project;
+        private GetMuteConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMuteConfigArgs();
         }
 
         public Builder(GetMuteConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.muteConfigId = defaults.muteConfigId;
-    	      this.project = defaults.project;
+            $ = new GetMuteConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder muteConfigId(String muteConfigId) {
-            this.muteConfigId = Objects.requireNonNull(muteConfigId);
+            $.muteConfigId = muteConfigId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetMuteConfigArgs build() {
-            return new GetMuteConfigArgs(muteConfigId, project);
+        }
+
+        public GetMuteConfigArgs build() {
+            $.muteConfigId = Objects.requireNonNull($.muteConfigId, "expected parameter 'muteConfigId' to be non-null");
+            return $;
         }
     }
+
 }

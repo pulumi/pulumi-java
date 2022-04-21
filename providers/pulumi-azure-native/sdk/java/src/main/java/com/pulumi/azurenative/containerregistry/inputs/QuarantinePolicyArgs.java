@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +27,49 @@ public final class QuarantinePolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<Either<String,PolicyStatus>> status;
+    private @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<Either<String,PolicyStatus>>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public QuarantinePolicyArgs(@Nullable Output<Either<String,PolicyStatus>> status) {
-        this.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg(status).def("disabled").getNullable();
-    }
+    private QuarantinePolicyArgs() {}
 
-    private QuarantinePolicyArgs() {
-        this.status = Codegen.empty();
+    private QuarantinePolicyArgs(QuarantinePolicyArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuarantinePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,PolicyStatus>> status;
+        private QuarantinePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuarantinePolicyArgs();
         }
 
         public Builder(QuarantinePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new QuarantinePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public QuarantinePolicyArgs build() {
-            return new QuarantinePolicyArgs(status);
+
+        public Builder status(Either<String,PolicyStatus> status) {
+            return status(Output.of(status));
+        }
+
+        public QuarantinePolicyArgs build() {
+            $.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg($.status).def("disabled").getNullable();
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs;
 import com.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * 
      */
     @Import(name="guestAccelerators")
-      private final @Nullable Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators;
+    private @Nullable Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators;
 
-    public Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators() {
-        return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
+    public Optional<Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>>> guestAccelerators() {
+        return Optional.ofNullable(this.guestAccelerators);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * 
      */
     @Import(name="localSsds")
-      private final @Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds;
+    private @Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds;
 
-    public Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds() {
-        return this.localSsds == null ? Codegen.empty() : this.localSsds;
+    public Optional<Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>>> localSsds() {
+        return Optional.ofNullable(this.localSsds);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * 
      */
     @Import(name="machineType", required=true)
-      private final Output<String> machineType;
+    private Output<String> machineType;
 
     public Output<String> machineType() {
         return this.machineType;
@@ -62,95 +62,87 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
-    public ReservationSpecificReservationInstancePropertiesGetArgs(
-        @Nullable Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators,
-        @Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds,
-        Output<String> machineType,
-        @Nullable Output<String> minCpuPlatform) {
-        this.guestAccelerators = guestAccelerators;
-        this.localSsds = localSsds;
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.minCpuPlatform = minCpuPlatform;
-    }
+    private ReservationSpecificReservationInstancePropertiesGetArgs() {}
 
-    private ReservationSpecificReservationInstancePropertiesGetArgs() {
-        this.guestAccelerators = Codegen.empty();
-        this.localSsds = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
+    private ReservationSpecificReservationInstancePropertiesGetArgs(ReservationSpecificReservationInstancePropertiesGetArgs $) {
+        this.guestAccelerators = $.guestAccelerators;
+        this.localSsds = $.localSsds;
+        this.machineType = $.machineType;
+        this.minCpuPlatform = $.minCpuPlatform;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationSpecificReservationInstancePropertiesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators;
-        private @Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds;
-        private Output<String> machineType;
-        private @Nullable Output<String> minCpuPlatform;
+        private ReservationSpecificReservationInstancePropertiesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationSpecificReservationInstancePropertiesGetArgs();
         }
 
         public Builder(ReservationSpecificReservationInstancePropertiesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.guestAccelerators = defaults.guestAccelerators;
-    	      this.localSsds = defaults.localSsds;
-    	      this.machineType = defaults.machineType;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
+            $ = new ReservationSpecificReservationInstancePropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder guestAccelerators(@Nullable Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators) {
-            this.guestAccelerators = guestAccelerators;
+            $.guestAccelerators = guestAccelerators;
             return this;
         }
-        public Builder guestAccelerators(@Nullable List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs> guestAccelerators) {
-            this.guestAccelerators = Codegen.ofNullable(guestAccelerators);
-            return this;
+
+        public Builder guestAccelerators(List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs> guestAccelerators) {
+            return guestAccelerators(Output.of(guestAccelerators));
         }
+
         public Builder guestAccelerators(ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
+
         public Builder localSsds(@Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds) {
-            this.localSsds = localSsds;
+            $.localSsds = localSsds;
             return this;
         }
-        public Builder localSsds(@Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs> localSsds) {
-            this.localSsds = Codegen.ofNullable(localSsds);
-            return this;
+
+        public Builder localSsds(List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs> localSsds) {
+            return localSsds(Output.of(localSsds));
         }
+
         public Builder localSsds(ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs... localSsds) {
             return localSsds(List.of(localSsds));
         }
+
         public Builder machineType(Output<String> machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Output.of(Objects.requireNonNull(machineType));
-            return this;
+            return machineType(Output.of(machineType));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
-        }        public ReservationSpecificReservationInstancePropertiesGetArgs build() {
-            return new ReservationSpecificReservationInstancePropertiesGetArgs(guestAccelerators, localSsds, machineType, minCpuPlatform);
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
+        }
+
+        public ReservationSpecificReservationInstancePropertiesGetArgs build() {
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            return $;
         }
     }
+
 }

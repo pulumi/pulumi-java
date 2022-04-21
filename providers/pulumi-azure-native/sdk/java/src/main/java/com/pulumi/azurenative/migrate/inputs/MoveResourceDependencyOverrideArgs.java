@@ -5,9 +5,9 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MoveResourceDependencyOverrideArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MoveResourceDependencyOverrideArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="targetId")
-      private final @Nullable Output<String> targetId;
+    private @Nullable Output<String> targetId;
 
-    public Output<String> targetId() {
-        return this.targetId == null ? Codegen.empty() : this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
-    public MoveResourceDependencyOverrideArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> targetId) {
-        this.id = id;
-        this.targetId = targetId;
-    }
+    private MoveResourceDependencyOverrideArgs() {}
 
-    private MoveResourceDependencyOverrideArgs() {
-        this.id = Codegen.empty();
-        this.targetId = Codegen.empty();
+    private MoveResourceDependencyOverrideArgs(MoveResourceDependencyOverrideArgs $) {
+        this.id = $.id;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MoveResourceDependencyOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> targetId;
+        private MoveResourceDependencyOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MoveResourceDependencyOverrideArgs();
         }
 
         public Builder(MoveResourceDependencyOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.targetId = defaults.targetId;
+            $ = new MoveResourceDependencyOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder targetId(@Nullable Output<String> targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
         }
-        public Builder targetId(@Nullable String targetId) {
-            this.targetId = Codegen.ofNullable(targetId);
-            return this;
-        }        public MoveResourceDependencyOverrideArgs build() {
-            return new MoveResourceDependencyOverrideArgs(id, targetId);
+
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
+        }
+
+        public MoveResourceDependencyOverrideArgs build() {
+            return $;
         }
     }
+
 }

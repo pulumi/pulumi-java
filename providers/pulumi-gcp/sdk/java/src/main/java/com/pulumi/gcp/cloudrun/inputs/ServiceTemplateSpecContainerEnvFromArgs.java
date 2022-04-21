@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromSecretRefArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends com.pulumi.re
      * 
      */
     @Import(name="configMapRef")
-      private final @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
+    private @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
 
-    public Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef() {
-        return this.configMapRef == null ? Codegen.empty() : this.configMapRef;
+    public Optional<Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs>> configMapRef() {
+        return Optional.ofNullable(this.configMapRef);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends com.pulumi.re
      * 
      */
     @Import(name="prefix")
-      private final @Nullable Output<String> prefix;
+    private @Nullable Output<String> prefix;
 
-    public Output<String> prefix() {
-        return this.prefix == null ? Codegen.empty() : this.prefix;
+    public Optional<Output<String>> prefix() {
+        return Optional.ofNullable(this.prefix);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends com.pulumi.re
      * 
      */
     @Import(name="secretRef")
-      private final @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
+    private @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
 
-    public Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef() {
-        return this.secretRef == null ? Codegen.empty() : this.secretRef;
+    public Optional<Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs>> secretRef() {
+        return Optional.ofNullable(this.secretRef);
     }
 
-    public ServiceTemplateSpecContainerEnvFromArgs(
-        @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef,
-        @Nullable Output<String> prefix,
-        @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef) {
-        this.configMapRef = configMapRef;
-        this.prefix = prefix;
-        this.secretRef = secretRef;
-    }
+    private ServiceTemplateSpecContainerEnvFromArgs() {}
 
-    private ServiceTemplateSpecContainerEnvFromArgs() {
-        this.configMapRef = Codegen.empty();
-        this.prefix = Codegen.empty();
-        this.secretRef = Codegen.empty();
+    private ServiceTemplateSpecContainerEnvFromArgs(ServiceTemplateSpecContainerEnvFromArgs $) {
+        this.configMapRef = $.configMapRef;
+        this.prefix = $.prefix;
+        this.secretRef = $.secretRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecContainerEnvFromArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
-        private @Nullable Output<String> prefix;
-        private @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
+        private ServiceTemplateSpecContainerEnvFromArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecContainerEnvFromArgs();
         }
 
         public Builder(ServiceTemplateSpecContainerEnvFromArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMapRef = defaults.configMapRef;
-    	      this.prefix = defaults.prefix;
-    	      this.secretRef = defaults.secretRef;
+            $ = new ServiceTemplateSpecContainerEnvFromArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configMapRef(@Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef) {
-            this.configMapRef = configMapRef;
+            $.configMapRef = configMapRef;
             return this;
         }
-        public Builder configMapRef(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefArgs configMapRef) {
-            this.configMapRef = Codegen.ofNullable(configMapRef);
-            return this;
+
+        public Builder configMapRef(ServiceTemplateSpecContainerEnvFromConfigMapRefArgs configMapRef) {
+            return configMapRef(Output.of(configMapRef));
         }
+
         public Builder prefix(@Nullable Output<String> prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
-        public Builder prefix(@Nullable String prefix) {
-            this.prefix = Codegen.ofNullable(prefix);
-            return this;
+
+        public Builder prefix(String prefix) {
+            return prefix(Output.of(prefix));
         }
+
         public Builder secretRef(@Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef) {
-            this.secretRef = secretRef;
+            $.secretRef = secretRef;
             return this;
         }
-        public Builder secretRef(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefArgs secretRef) {
-            this.secretRef = Codegen.ofNullable(secretRef);
-            return this;
-        }        public ServiceTemplateSpecContainerEnvFromArgs build() {
-            return new ServiceTemplateSpecContainerEnvFromArgs(configMapRef, prefix, secretRef);
+
+        public Builder secretRef(ServiceTemplateSpecContainerEnvFromSecretRefArgs secretRef) {
+            return secretRef(Output.of(secretRef));
+        }
+
+        public ServiceTemplateSpecContainerEnvFromArgs build() {
+            return $;
         }
     }
+
 }

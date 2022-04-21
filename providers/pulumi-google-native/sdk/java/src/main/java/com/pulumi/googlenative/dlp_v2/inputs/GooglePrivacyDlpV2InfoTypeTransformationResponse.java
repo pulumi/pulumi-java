@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends com.
      * 
      */
     @Import(name="infoTypes", required=true)
-      private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
+    private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
     public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
@@ -34,58 +34,56 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse extends com.
      * 
      */
     @Import(name="primitiveTransformation", required=true)
-      private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
+    private GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
     public GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation() {
         return this.primitiveTransformation;
     }
 
-    public GooglePrivacyDlpV2InfoTypeTransformationResponse(
-        List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
-        this.infoTypes = Objects.requireNonNull(infoTypes, "expected parameter 'infoTypes' to be non-null");
-        this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation, "expected parameter 'primitiveTransformation' to be non-null");
-    }
+    private GooglePrivacyDlpV2InfoTypeTransformationResponse() {}
 
-    private GooglePrivacyDlpV2InfoTypeTransformationResponse() {
-        this.infoTypes = List.of();
-        this.primitiveTransformation = null;
+    private GooglePrivacyDlpV2InfoTypeTransformationResponse(GooglePrivacyDlpV2InfoTypeTransformationResponse $) {
+        this.infoTypes = $.infoTypes;
+        this.primitiveTransformation = $.primitiveTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InfoTypeTransformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
-        private GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
+        private GooglePrivacyDlpV2InfoTypeTransformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InfoTypeTransformationResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InfoTypeTransformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypes = defaults.infoTypes;
-    	      this.primitiveTransformation = defaults.primitiveTransformation;
+            $ = new GooglePrivacyDlpV2InfoTypeTransformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
-            this.infoTypes = Objects.requireNonNull(infoTypes);
+            $.infoTypes = infoTypes;
             return this;
         }
+
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
+
         public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
-            this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
+            $.primitiveTransformation = primitiveTransformation;
             return this;
-        }        public GooglePrivacyDlpV2InfoTypeTransformationResponse build() {
-            return new GooglePrivacyDlpV2InfoTypeTransformationResponse(infoTypes, primitiveTransformation);
+        }
+
+        public GooglePrivacyDlpV2InfoTypeTransformationResponse build() {
+            $.infoTypes = Objects.requireNonNull($.infoTypes, "expected parameter 'infoTypes' to be non-null");
+            $.primitiveTransformation = Objects.requireNonNull($.primitiveTransformation, "expected parameter 'primitiveTransformation' to be non-null");
+            return $;
         }
     }
+
 }

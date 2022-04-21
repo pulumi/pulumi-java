@@ -5,9 +5,9 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FhirStoreIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class FhirStoreIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="fhirStoreId")
-      private final @Nullable Output<String> fhirStoreId;
+    private @Nullable Output<String> fhirStoreId;
 
-    public Output<String> fhirStoreId() {
-        return this.fhirStoreId == null ? Codegen.empty() : this.fhirStoreId;
+    public Optional<Output<String>> fhirStoreId() {
+        return Optional.ofNullable(this.fhirStoreId);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class FhirStoreIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public FhirStoreIamPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> fhirStoreId,
-        @Nullable Output<String> policyData) {
-        this.etag = etag;
-        this.fhirStoreId = fhirStoreId;
-        this.policyData = policyData;
-    }
+    private FhirStoreIamPolicyState() {}
 
-    private FhirStoreIamPolicyState() {
-        this.etag = Codegen.empty();
-        this.fhirStoreId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private FhirStoreIamPolicyState(FhirStoreIamPolicyState $) {
+        this.etag = $.etag;
+        this.fhirStoreId = $.fhirStoreId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirStoreIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> fhirStoreId;
-        private @Nullable Output<String> policyData;
+        private FhirStoreIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirStoreIamPolicyState();
         }
 
         public Builder(FhirStoreIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.fhirStoreId = defaults.fhirStoreId;
-    	      this.policyData = defaults.policyData;
+            $ = new FhirStoreIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
-            this.fhirStoreId = fhirStoreId;
+            $.fhirStoreId = fhirStoreId;
             return this;
         }
-        public Builder fhirStoreId(@Nullable String fhirStoreId) {
-            this.fhirStoreId = Codegen.ofNullable(fhirStoreId);
-            return this;
+
+        public Builder fhirStoreId(String fhirStoreId) {
+            return fhirStoreId(Output.of(fhirStoreId));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public FhirStoreIamPolicyState build() {
-            return new FhirStoreIamPolicyState(etag, fhirStoreId, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public FhirStoreIamPolicyState build() {
+            return $;
         }
     }
+
 }

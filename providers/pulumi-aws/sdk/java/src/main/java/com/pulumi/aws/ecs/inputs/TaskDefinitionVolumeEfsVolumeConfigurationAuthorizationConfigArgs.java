@@ -5,9 +5,9 @@ package com.pulumi.aws.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      * 
      */
     @Import(name="accessPointId")
-      private final @Nullable Output<String> accessPointId;
+    private @Nullable Output<String> accessPointId;
 
-    public Output<String> accessPointId() {
-        return this.accessPointId == null ? Codegen.empty() : this.accessPointId;
+    public Optional<Output<String>> accessPointId() {
+        return Optional.ofNullable(this.accessPointId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      * 
      */
     @Import(name="iam")
-      private final @Nullable Output<String> iam;
+    private @Nullable Output<String> iam;
 
-    public Output<String> iam() {
-        return this.iam == null ? Codegen.empty() : this.iam;
+    public Optional<Output<String>> iam() {
+        return Optional.ofNullable(this.iam);
     }
 
-    public TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs(
-        @Nullable Output<String> accessPointId,
-        @Nullable Output<String> iam) {
-        this.accessPointId = accessPointId;
-        this.iam = iam;
-    }
+    private TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs() {}
 
-    private TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs() {
-        this.accessPointId = Codegen.empty();
-        this.iam = Codegen.empty();
+    private TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs(TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs $) {
+        this.accessPointId = $.accessPointId;
+        this.iam = $.iam;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessPointId;
-        private @Nullable Output<String> iam;
+        private TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs();
         }
 
         public Builder(TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPointId = defaults.accessPointId;
-    	      this.iam = defaults.iam;
+            $ = new TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPointId(@Nullable Output<String> accessPointId) {
-            this.accessPointId = accessPointId;
+            $.accessPointId = accessPointId;
             return this;
         }
-        public Builder accessPointId(@Nullable String accessPointId) {
-            this.accessPointId = Codegen.ofNullable(accessPointId);
-            return this;
+
+        public Builder accessPointId(String accessPointId) {
+            return accessPointId(Output.of(accessPointId));
         }
+
         public Builder iam(@Nullable Output<String> iam) {
-            this.iam = iam;
+            $.iam = iam;
             return this;
         }
-        public Builder iam(@Nullable String iam) {
-            this.iam = Codegen.ofNullable(iam);
-            return this;
-        }        public TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs build() {
-            return new TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs(accessPointId, iam);
+
+        public Builder iam(String iam) {
+            return iam(Output.of(iam));
+        }
+
+        public TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigArgs build() {
+            return $;
         }
     }
+
 }

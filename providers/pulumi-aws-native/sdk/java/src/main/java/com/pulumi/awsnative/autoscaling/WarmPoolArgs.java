@@ -6,10 +6,10 @@ package com.pulumi.awsnative.autoscaling;
 import com.pulumi.awsnative.autoscaling.inputs.WarmPoolInstanceReusePolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,130 +18,117 @@ public final class WarmPoolArgs extends com.pulumi.resources.ResourceArgs {
     public static final WarmPoolArgs Empty = new WarmPoolArgs();
 
     @Import(name="autoScalingGroupName", required=true)
-      private final Output<String> autoScalingGroupName;
+    private Output<String> autoScalingGroupName;
 
     public Output<String> autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
     @Import(name="instanceReusePolicy")
-      private final @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
+    private @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
 
-    public Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy() {
-        return this.instanceReusePolicy == null ? Codegen.empty() : this.instanceReusePolicy;
+    public Optional<Output<WarmPoolInstanceReusePolicyArgs>> instanceReusePolicy() {
+        return Optional.ofNullable(this.instanceReusePolicy);
     }
 
     @Import(name="maxGroupPreparedCapacity")
-      private final @Nullable Output<Integer> maxGroupPreparedCapacity;
+    private @Nullable Output<Integer> maxGroupPreparedCapacity;
 
-    public Output<Integer> maxGroupPreparedCapacity() {
-        return this.maxGroupPreparedCapacity == null ? Codegen.empty() : this.maxGroupPreparedCapacity;
+    public Optional<Output<Integer>> maxGroupPreparedCapacity() {
+        return Optional.ofNullable(this.maxGroupPreparedCapacity);
     }
 
     @Import(name="minSize")
-      private final @Nullable Output<Integer> minSize;
+    private @Nullable Output<Integer> minSize;
 
-    public Output<Integer> minSize() {
-        return this.minSize == null ? Codegen.empty() : this.minSize;
+    public Optional<Output<Integer>> minSize() {
+        return Optional.ofNullable(this.minSize);
     }
 
     @Import(name="poolState")
-      private final @Nullable Output<String> poolState;
+    private @Nullable Output<String> poolState;
 
-    public Output<String> poolState() {
-        return this.poolState == null ? Codegen.empty() : this.poolState;
+    public Optional<Output<String>> poolState() {
+        return Optional.ofNullable(this.poolState);
     }
 
-    public WarmPoolArgs(
-        Output<String> autoScalingGroupName,
-        @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy,
-        @Nullable Output<Integer> maxGroupPreparedCapacity,
-        @Nullable Output<Integer> minSize,
-        @Nullable Output<String> poolState) {
-        this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName, "expected parameter 'autoScalingGroupName' to be non-null");
-        this.instanceReusePolicy = instanceReusePolicy;
-        this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
-        this.minSize = minSize;
-        this.poolState = poolState;
-    }
+    private WarmPoolArgs() {}
 
-    private WarmPoolArgs() {
-        this.autoScalingGroupName = Codegen.empty();
-        this.instanceReusePolicy = Codegen.empty();
-        this.maxGroupPreparedCapacity = Codegen.empty();
-        this.minSize = Codegen.empty();
-        this.poolState = Codegen.empty();
+    private WarmPoolArgs(WarmPoolArgs $) {
+        this.autoScalingGroupName = $.autoScalingGroupName;
+        this.instanceReusePolicy = $.instanceReusePolicy;
+        this.maxGroupPreparedCapacity = $.maxGroupPreparedCapacity;
+        this.minSize = $.minSize;
+        this.poolState = $.poolState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WarmPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> autoScalingGroupName;
-        private @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
-        private @Nullable Output<Integer> maxGroupPreparedCapacity;
-        private @Nullable Output<Integer> minSize;
-        private @Nullable Output<String> poolState;
+        private WarmPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WarmPoolArgs();
         }
 
         public Builder(WarmPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoScalingGroupName = defaults.autoScalingGroupName;
-    	      this.instanceReusePolicy = defaults.instanceReusePolicy;
-    	      this.maxGroupPreparedCapacity = defaults.maxGroupPreparedCapacity;
-    	      this.minSize = defaults.minSize;
-    	      this.poolState = defaults.poolState;
+            $ = new WarmPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoScalingGroupName(Output<String> autoScalingGroupName) {
-            this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
+            $.autoScalingGroupName = autoScalingGroupName;
             return this;
         }
+
         public Builder autoScalingGroupName(String autoScalingGroupName) {
-            this.autoScalingGroupName = Output.of(Objects.requireNonNull(autoScalingGroupName));
-            return this;
+            return autoScalingGroupName(Output.of(autoScalingGroupName));
         }
+
         public Builder instanceReusePolicy(@Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy) {
-            this.instanceReusePolicy = instanceReusePolicy;
+            $.instanceReusePolicy = instanceReusePolicy;
             return this;
         }
-        public Builder instanceReusePolicy(@Nullable WarmPoolInstanceReusePolicyArgs instanceReusePolicy) {
-            this.instanceReusePolicy = Codegen.ofNullable(instanceReusePolicy);
-            return this;
+
+        public Builder instanceReusePolicy(WarmPoolInstanceReusePolicyArgs instanceReusePolicy) {
+            return instanceReusePolicy(Output.of(instanceReusePolicy));
         }
+
         public Builder maxGroupPreparedCapacity(@Nullable Output<Integer> maxGroupPreparedCapacity) {
-            this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
+            $.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
             return this;
         }
-        public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
-            this.maxGroupPreparedCapacity = Codegen.ofNullable(maxGroupPreparedCapacity);
-            return this;
+
+        public Builder maxGroupPreparedCapacity(Integer maxGroupPreparedCapacity) {
+            return maxGroupPreparedCapacity(Output.of(maxGroupPreparedCapacity));
         }
+
         public Builder minSize(@Nullable Output<Integer> minSize) {
-            this.minSize = minSize;
+            $.minSize = minSize;
             return this;
         }
-        public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Codegen.ofNullable(minSize);
-            return this;
+
+        public Builder minSize(Integer minSize) {
+            return minSize(Output.of(minSize));
         }
+
         public Builder poolState(@Nullable Output<String> poolState) {
-            this.poolState = poolState;
+            $.poolState = poolState;
             return this;
         }
-        public Builder poolState(@Nullable String poolState) {
-            this.poolState = Codegen.ofNullable(poolState);
-            return this;
-        }        public WarmPoolArgs build() {
-            return new WarmPoolArgs(autoScalingGroupName, instanceReusePolicy, maxGroupPreparedCapacity, minSize, poolState);
+
+        public Builder poolState(String poolState) {
+            return poolState(Output.of(poolState));
+        }
+
+        public WarmPoolArgs build() {
+            $.autoScalingGroupName = Objects.requireNonNull($.autoScalingGroupName, "expected parameter 'autoScalingGroupName' to be non-null");
+            return $;
         }
     }
+
 }

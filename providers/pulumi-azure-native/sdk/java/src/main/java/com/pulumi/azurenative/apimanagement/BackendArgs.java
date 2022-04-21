@@ -11,9 +11,9 @@ import com.pulumi.azurenative.apimanagement.inputs.BackendTlsPropertiesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backendId")
-      private final @Nullable Output<String> backendId;
+    private @Nullable Output<String> backendId;
 
-    public Output<String> backendId() {
-        return this.backendId == null ? Codegen.empty() : this.backendId;
+    public Optional<Output<String>> backendId() {
+        return Optional.ofNullable(this.backendId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<BackendCredentialsContractArgs> credentials;
+    private @Nullable Output<BackendCredentialsContractArgs> credentials;
 
-    public Output<BackendCredentialsContractArgs> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<BackendCredentialsContractArgs>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<BackendPropertiesArgs> properties;
+    private @Nullable Output<BackendPropertiesArgs> properties;
 
-    public Output<BackendPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<BackendPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol", required=true)
-      private final Output<Either<String,BackendProtocol>> protocol;
+    private Output<Either<String,BackendProtocol>> protocol;
 
     public Output<Either<String,BackendProtocol>> protocol() {
         return this.protocol;
@@ -81,10 +81,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="proxy")
-      private final @Nullable Output<BackendProxyContractArgs> proxy;
+    private @Nullable Output<BackendProxyContractArgs> proxy;
 
-    public Output<BackendProxyContractArgs> proxy() {
-        return this.proxy == null ? Codegen.empty() : this.proxy;
+    public Optional<Output<BackendProxyContractArgs>> proxy() {
+        return Optional.ofNullable(this.proxy);
     }
 
     /**
@@ -92,7 +92,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -103,10 +103,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -114,7 +114,7 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -125,10 +125,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tls")
-      private final @Nullable Output<BackendTlsPropertiesArgs> tls;
+    private @Nullable Output<BackendTlsPropertiesArgs> tls;
 
-    public Output<BackendTlsPropertiesArgs> tls() {
-        return this.tls == null ? Codegen.empty() : this.tls;
+    public Optional<Output<BackendTlsPropertiesArgs>> tls() {
+        return Optional.ofNullable(this.tls);
     }
 
     /**
@@ -147,193 +147,162 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
     }
 
-    public BackendArgs(
-        @Nullable Output<String> backendId,
-        @Nullable Output<BackendCredentialsContractArgs> credentials,
-        @Nullable Output<String> description,
-        @Nullable Output<BackendPropertiesArgs> properties,
-        Output<Either<String,BackendProtocol>> protocol,
-        @Nullable Output<BackendProxyContractArgs> proxy,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceId,
-        Output<String> serviceName,
-        @Nullable Output<String> title,
-        @Nullable Output<BackendTlsPropertiesArgs> tls,
-        Output<String> url) {
-        this.backendId = backendId;
-        this.credentials = credentials;
-        this.description = description;
-        this.properties = properties;
-        this.protocol = Objects.requireNonNull(protocol, "expected parameter 'protocol' to be non-null");
-        this.proxy = proxy;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceId = resourceId;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.title = title;
-        this.tls = tls;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private BackendArgs() {}
 
-    private BackendArgs() {
-        this.backendId = Codegen.empty();
-        this.credentials = Codegen.empty();
-        this.description = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.proxy = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.title = Codegen.empty();
-        this.tls = Codegen.empty();
-        this.url = Codegen.empty();
+    private BackendArgs(BackendArgs $) {
+        this.backendId = $.backendId;
+        this.credentials = $.credentials;
+        this.description = $.description;
+        this.properties = $.properties;
+        this.protocol = $.protocol;
+        this.proxy = $.proxy;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceId = $.resourceId;
+        this.serviceName = $.serviceName;
+        this.title = $.title;
+        this.tls = $.tls;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> backendId;
-        private @Nullable Output<BackendCredentialsContractArgs> credentials;
-        private @Nullable Output<String> description;
-        private @Nullable Output<BackendPropertiesArgs> properties;
-        private Output<Either<String,BackendProtocol>> protocol;
-        private @Nullable Output<BackendProxyContractArgs> proxy;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceId;
-        private Output<String> serviceName;
-        private @Nullable Output<String> title;
-        private @Nullable Output<BackendTlsPropertiesArgs> tls;
-        private Output<String> url;
+        private BackendArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendArgs();
         }
 
         public Builder(BackendArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendId = defaults.backendId;
-    	      this.credentials = defaults.credentials;
-    	      this.description = defaults.description;
-    	      this.properties = defaults.properties;
-    	      this.protocol = defaults.protocol;
-    	      this.proxy = defaults.proxy;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.serviceName = defaults.serviceName;
-    	      this.title = defaults.title;
-    	      this.tls = defaults.tls;
-    	      this.url = defaults.url;
+            $ = new BackendArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendId(@Nullable Output<String> backendId) {
-            this.backendId = backendId;
+            $.backendId = backendId;
             return this;
         }
-        public Builder backendId(@Nullable String backendId) {
-            this.backendId = Codegen.ofNullable(backendId);
-            return this;
+
+        public Builder backendId(String backendId) {
+            return backendId(Output.of(backendId));
         }
+
         public Builder credentials(@Nullable Output<BackendCredentialsContractArgs> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable BackendCredentialsContractArgs credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(BackendCredentialsContractArgs credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder properties(@Nullable Output<BackendPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable BackendPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(BackendPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder protocol(Output<Either<String,BackendProtocol>> protocol) {
-            this.protocol = Objects.requireNonNull(protocol);
+            $.protocol = protocol;
             return this;
         }
+
         public Builder protocol(Either<String,BackendProtocol> protocol) {
-            this.protocol = Output.of(Objects.requireNonNull(protocol));
-            return this;
+            return protocol(Output.of(protocol));
         }
+
         public Builder proxy(@Nullable Output<BackendProxyContractArgs> proxy) {
-            this.proxy = proxy;
+            $.proxy = proxy;
             return this;
         }
-        public Builder proxy(@Nullable BackendProxyContractArgs proxy) {
-            this.proxy = Codegen.ofNullable(proxy);
-            return this;
+
+        public Builder proxy(BackendProxyContractArgs proxy) {
+            return proxy(Output.of(proxy));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder tls(@Nullable Output<BackendTlsPropertiesArgs> tls) {
-            this.tls = tls;
+            $.tls = tls;
             return this;
         }
-        public Builder tls(@Nullable BackendTlsPropertiesArgs tls) {
-            this.tls = Codegen.ofNullable(tls);
-            return this;
+
+        public Builder tls(BackendTlsPropertiesArgs tls) {
+            return tls(Output.of(tls));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
-        }        public BackendArgs build() {
-            return new BackendArgs(backendId, credentials, description, properties, protocol, proxy, resourceGroupName, resourceId, serviceName, title, tls, url);
+            return url(Output.of(url));
+        }
+
+        public BackendArgs build() {
+            $.protocol = Objects.requireNonNull($.protocol, "expected parameter 'protocol' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

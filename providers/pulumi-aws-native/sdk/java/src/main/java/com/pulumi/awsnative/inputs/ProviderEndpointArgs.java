@@ -5,9 +5,9 @@ package com.pulumi.awsnative.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="accessanalyzer")
-      private final @Nullable Output<String> accessanalyzer;
+    private @Nullable Output<String> accessanalyzer;
 
-    public Output<String> accessanalyzer() {
-        return this.accessanalyzer == null ? Codegen.empty() : this.accessanalyzer;
+    public Optional<Output<String>> accessanalyzer() {
+        return Optional.ofNullable(this.accessanalyzer);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="acm")
-      private final @Nullable Output<String> acm;
+    private @Nullable Output<String> acm;
 
-    public Output<String> acm() {
-        return this.acm == null ? Codegen.empty() : this.acm;
+    public Optional<Output<String>> acm() {
+        return Optional.ofNullable(this.acm);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="acmpca")
-      private final @Nullable Output<String> acmpca;
+    private @Nullable Output<String> acmpca;
 
-    public Output<String> acmpca() {
-        return this.acmpca == null ? Codegen.empty() : this.acmpca;
+    public Optional<Output<String>> acmpca() {
+        return Optional.ofNullable(this.acmpca);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="amplify")
-      private final @Nullable Output<String> amplify;
+    private @Nullable Output<String> amplify;
 
-    public Output<String> amplify() {
-        return this.amplify == null ? Codegen.empty() : this.amplify;
+    public Optional<Output<String>> amplify() {
+        return Optional.ofNullable(this.amplify);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="appconfig")
-      private final @Nullable Output<String> appconfig;
+    private @Nullable Output<String> appconfig;
 
-    public Output<String> appconfig() {
-        return this.appconfig == null ? Codegen.empty() : this.appconfig;
+    public Optional<Output<String>> appconfig() {
+        return Optional.ofNullable(this.appconfig);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="applicationautoscaling")
-      private final @Nullable Output<String> applicationautoscaling;
+    private @Nullable Output<String> applicationautoscaling;
 
-    public Output<String> applicationautoscaling() {
-        return this.applicationautoscaling == null ? Codegen.empty() : this.applicationautoscaling;
+    public Optional<Output<String>> applicationautoscaling() {
+        return Optional.ofNullable(this.applicationautoscaling);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="applicationinsights")
-      private final @Nullable Output<String> applicationinsights;
+    private @Nullable Output<String> applicationinsights;
 
-    public Output<String> applicationinsights() {
-        return this.applicationinsights == null ? Codegen.empty() : this.applicationinsights;
+    public Optional<Output<String>> applicationinsights() {
+        return Optional.ofNullable(this.applicationinsights);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="appmesh")
-      private final @Nullable Output<String> appmesh;
+    private @Nullable Output<String> appmesh;
 
-    public Output<String> appmesh() {
-        return this.appmesh == null ? Codegen.empty() : this.appmesh;
+    public Optional<Output<String>> appmesh() {
+        return Optional.ofNullable(this.appmesh);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="apprunner")
-      private final @Nullable Output<String> apprunner;
+    private @Nullable Output<String> apprunner;
 
-    public Output<String> apprunner() {
-        return this.apprunner == null ? Codegen.empty() : this.apprunner;
+    public Optional<Output<String>> apprunner() {
+        return Optional.ofNullable(this.apprunner);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="appstream")
-      private final @Nullable Output<String> appstream;
+    private @Nullable Output<String> appstream;
 
-    public Output<String> appstream() {
-        return this.appstream == null ? Codegen.empty() : this.appstream;
+    public Optional<Output<String>> appstream() {
+        return Optional.ofNullable(this.appstream);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="appsync")
-      private final @Nullable Output<String> appsync;
+    private @Nullable Output<String> appsync;
 
-    public Output<String> appsync() {
-        return this.appsync == null ? Codegen.empty() : this.appsync;
+    public Optional<Output<String>> appsync() {
+        return Optional.ofNullable(this.appsync);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="athena")
-      private final @Nullable Output<String> athena;
+    private @Nullable Output<String> athena;
 
-    public Output<String> athena() {
-        return this.athena == null ? Codegen.empty() : this.athena;
+    public Optional<Output<String>> athena() {
+        return Optional.ofNullable(this.athena);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="auditmanager")
-      private final @Nullable Output<String> auditmanager;
+    private @Nullable Output<String> auditmanager;
 
-    public Output<String> auditmanager() {
-        return this.auditmanager == null ? Codegen.empty() : this.auditmanager;
+    public Optional<Output<String>> auditmanager() {
+        return Optional.ofNullable(this.auditmanager);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="autoscaling")
-      private final @Nullable Output<String> autoscaling;
+    private @Nullable Output<String> autoscaling;
 
-    public Output<String> autoscaling() {
-        return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
+    public Optional<Output<String>> autoscaling() {
+        return Optional.ofNullable(this.autoscaling);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="backup")
-      private final @Nullable Output<String> backup;
+    private @Nullable Output<String> backup;
 
-    public Output<String> backup() {
-        return this.backup == null ? Codegen.empty() : this.backup;
+    public Optional<Output<String>> backup() {
+        return Optional.ofNullable(this.backup);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="batch")
-      private final @Nullable Output<String> batch;
+    private @Nullable Output<String> batch;
 
-    public Output<String> batch() {
-        return this.batch == null ? Codegen.empty() : this.batch;
+    public Optional<Output<String>> batch() {
+        return Optional.ofNullable(this.batch);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="budgets")
-      private final @Nullable Output<String> budgets;
+    private @Nullable Output<String> budgets;
 
-    public Output<String> budgets() {
-        return this.budgets == null ? Codegen.empty() : this.budgets;
+    public Optional<Output<String>> budgets() {
+        return Optional.ofNullable(this.budgets);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="chime")
-      private final @Nullable Output<String> chime;
+    private @Nullable Output<String> chime;
 
-    public Output<String> chime() {
-        return this.chime == null ? Codegen.empty() : this.chime;
+    public Optional<Output<String>> chime() {
+        return Optional.ofNullable(this.chime);
     }
 
     /**
@@ -222,10 +222,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloud9")
-      private final @Nullable Output<String> cloud9;
+    private @Nullable Output<String> cloud9;
 
-    public Output<String> cloud9() {
-        return this.cloud9 == null ? Codegen.empty() : this.cloud9;
+    public Optional<Output<String>> cloud9() {
+        return Optional.ofNullable(this.cloud9);
     }
 
     /**
@@ -233,10 +233,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudformation")
-      private final @Nullable Output<String> cloudformation;
+    private @Nullable Output<String> cloudformation;
 
-    public Output<String> cloudformation() {
-        return this.cloudformation == null ? Codegen.empty() : this.cloudformation;
+    public Optional<Output<String>> cloudformation() {
+        return Optional.ofNullable(this.cloudformation);
     }
 
     /**
@@ -244,10 +244,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudfront")
-      private final @Nullable Output<String> cloudfront;
+    private @Nullable Output<String> cloudfront;
 
-    public Output<String> cloudfront() {
-        return this.cloudfront == null ? Codegen.empty() : this.cloudfront;
+    public Optional<Output<String>> cloudfront() {
+        return Optional.ofNullable(this.cloudfront);
     }
 
     /**
@@ -255,10 +255,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudhsm")
-      private final @Nullable Output<String> cloudhsm;
+    private @Nullable Output<String> cloudhsm;
 
-    public Output<String> cloudhsm() {
-        return this.cloudhsm == null ? Codegen.empty() : this.cloudhsm;
+    public Optional<Output<String>> cloudhsm() {
+        return Optional.ofNullable(this.cloudhsm);
     }
 
     /**
@@ -266,10 +266,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudsearch")
-      private final @Nullable Output<String> cloudsearch;
+    private @Nullable Output<String> cloudsearch;
 
-    public Output<String> cloudsearch() {
-        return this.cloudsearch == null ? Codegen.empty() : this.cloudsearch;
+    public Optional<Output<String>> cloudsearch() {
+        return Optional.ofNullable(this.cloudsearch);
     }
 
     /**
@@ -277,10 +277,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudtrail")
-      private final @Nullable Output<String> cloudtrail;
+    private @Nullable Output<String> cloudtrail;
 
-    public Output<String> cloudtrail() {
-        return this.cloudtrail == null ? Codegen.empty() : this.cloudtrail;
+    public Optional<Output<String>> cloudtrail() {
+        return Optional.ofNullable(this.cloudtrail);
     }
 
     /**
@@ -288,10 +288,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudwatch")
-      private final @Nullable Output<String> cloudwatch;
+    private @Nullable Output<String> cloudwatch;
 
-    public Output<String> cloudwatch() {
-        return this.cloudwatch == null ? Codegen.empty() : this.cloudwatch;
+    public Optional<Output<String>> cloudwatch() {
+        return Optional.ofNullable(this.cloudwatch);
     }
 
     /**
@@ -299,10 +299,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudwatchevents")
-      private final @Nullable Output<String> cloudwatchevents;
+    private @Nullable Output<String> cloudwatchevents;
 
-    public Output<String> cloudwatchevents() {
-        return this.cloudwatchevents == null ? Codegen.empty() : this.cloudwatchevents;
+    public Optional<Output<String>> cloudwatchevents() {
+        return Optional.ofNullable(this.cloudwatchevents);
     }
 
     /**
@@ -310,10 +310,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cloudwatchlogs")
-      private final @Nullable Output<String> cloudwatchlogs;
+    private @Nullable Output<String> cloudwatchlogs;
 
-    public Output<String> cloudwatchlogs() {
-        return this.cloudwatchlogs == null ? Codegen.empty() : this.cloudwatchlogs;
+    public Optional<Output<String>> cloudwatchlogs() {
+        return Optional.ofNullable(this.cloudwatchlogs);
     }
 
     /**
@@ -321,10 +321,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="codeartifact")
-      private final @Nullable Output<String> codeartifact;
+    private @Nullable Output<String> codeartifact;
 
-    public Output<String> codeartifact() {
-        return this.codeartifact == null ? Codegen.empty() : this.codeartifact;
+    public Optional<Output<String>> codeartifact() {
+        return Optional.ofNullable(this.codeartifact);
     }
 
     /**
@@ -332,10 +332,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="codebuild")
-      private final @Nullable Output<String> codebuild;
+    private @Nullable Output<String> codebuild;
 
-    public Output<String> codebuild() {
-        return this.codebuild == null ? Codegen.empty() : this.codebuild;
+    public Optional<Output<String>> codebuild() {
+        return Optional.ofNullable(this.codebuild);
     }
 
     /**
@@ -343,10 +343,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="codecommit")
-      private final @Nullable Output<String> codecommit;
+    private @Nullable Output<String> codecommit;
 
-    public Output<String> codecommit() {
-        return this.codecommit == null ? Codegen.empty() : this.codecommit;
+    public Optional<Output<String>> codecommit() {
+        return Optional.ofNullable(this.codecommit);
     }
 
     /**
@@ -354,10 +354,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="codedeploy")
-      private final @Nullable Output<String> codedeploy;
+    private @Nullable Output<String> codedeploy;
 
-    public Output<String> codedeploy() {
-        return this.codedeploy == null ? Codegen.empty() : this.codedeploy;
+    public Optional<Output<String>> codedeploy() {
+        return Optional.ofNullable(this.codedeploy);
     }
 
     /**
@@ -365,10 +365,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="codepipeline")
-      private final @Nullable Output<String> codepipeline;
+    private @Nullable Output<String> codepipeline;
 
-    public Output<String> codepipeline() {
-        return this.codepipeline == null ? Codegen.empty() : this.codepipeline;
+    public Optional<Output<String>> codepipeline() {
+        return Optional.ofNullable(this.codepipeline);
     }
 
     /**
@@ -376,10 +376,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="codestarconnections")
-      private final @Nullable Output<String> codestarconnections;
+    private @Nullable Output<String> codestarconnections;
 
-    public Output<String> codestarconnections() {
-        return this.codestarconnections == null ? Codegen.empty() : this.codestarconnections;
+    public Optional<Output<String>> codestarconnections() {
+        return Optional.ofNullable(this.codestarconnections);
     }
 
     /**
@@ -387,10 +387,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cognitoidentity")
-      private final @Nullable Output<String> cognitoidentity;
+    private @Nullable Output<String> cognitoidentity;
 
-    public Output<String> cognitoidentity() {
-        return this.cognitoidentity == null ? Codegen.empty() : this.cognitoidentity;
+    public Optional<Output<String>> cognitoidentity() {
+        return Optional.ofNullable(this.cognitoidentity);
     }
 
     /**
@@ -398,10 +398,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="configservice")
-      private final @Nullable Output<String> configservice;
+    private @Nullable Output<String> configservice;
 
-    public Output<String> configservice() {
-        return this.configservice == null ? Codegen.empty() : this.configservice;
+    public Optional<Output<String>> configservice() {
+        return Optional.ofNullable(this.configservice);
     }
 
     /**
@@ -409,10 +409,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="connect")
-      private final @Nullable Output<String> connect;
+    private @Nullable Output<String> connect;
 
-    public Output<String> connect() {
-        return this.connect == null ? Codegen.empty() : this.connect;
+    public Optional<Output<String>> connect() {
+        return Optional.ofNullable(this.connect);
     }
 
     /**
@@ -420,10 +420,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cur")
-      private final @Nullable Output<String> cur;
+    private @Nullable Output<String> cur;
 
-    public Output<String> cur() {
-        return this.cur == null ? Codegen.empty() : this.cur;
+    public Optional<Output<String>> cur() {
+        return Optional.ofNullable(this.cur);
     }
 
     /**
@@ -431,10 +431,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataexchange")
-      private final @Nullable Output<String> dataexchange;
+    private @Nullable Output<String> dataexchange;
 
-    public Output<String> dataexchange() {
-        return this.dataexchange == null ? Codegen.empty() : this.dataexchange;
+    public Optional<Output<String>> dataexchange() {
+        return Optional.ofNullable(this.dataexchange);
     }
 
     /**
@@ -442,10 +442,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="datapipeline")
-      private final @Nullable Output<String> datapipeline;
+    private @Nullable Output<String> datapipeline;
 
-    public Output<String> datapipeline() {
-        return this.datapipeline == null ? Codegen.empty() : this.datapipeline;
+    public Optional<Output<String>> datapipeline() {
+        return Optional.ofNullable(this.datapipeline);
     }
 
     /**
@@ -453,10 +453,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="datasync")
-      private final @Nullable Output<String> datasync;
+    private @Nullable Output<String> datasync;
 
-    public Output<String> datasync() {
-        return this.datasync == null ? Codegen.empty() : this.datasync;
+    public Optional<Output<String>> datasync() {
+        return Optional.ofNullable(this.datasync);
     }
 
     /**
@@ -464,10 +464,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dax")
-      private final @Nullable Output<String> dax;
+    private @Nullable Output<String> dax;
 
-    public Output<String> dax() {
-        return this.dax == null ? Codegen.empty() : this.dax;
+    public Optional<Output<String>> dax() {
+        return Optional.ofNullable(this.dax);
     }
 
     /**
@@ -475,10 +475,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="detective")
-      private final @Nullable Output<String> detective;
+    private @Nullable Output<String> detective;
 
-    public Output<String> detective() {
-        return this.detective == null ? Codegen.empty() : this.detective;
+    public Optional<Output<String>> detective() {
+        return Optional.ofNullable(this.detective);
     }
 
     /**
@@ -486,10 +486,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="devicefarm")
-      private final @Nullable Output<String> devicefarm;
+    private @Nullable Output<String> devicefarm;
 
-    public Output<String> devicefarm() {
-        return this.devicefarm == null ? Codegen.empty() : this.devicefarm;
+    public Optional<Output<String>> devicefarm() {
+        return Optional.ofNullable(this.devicefarm);
     }
 
     /**
@@ -497,10 +497,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="directconnect")
-      private final @Nullable Output<String> directconnect;
+    private @Nullable Output<String> directconnect;
 
-    public Output<String> directconnect() {
-        return this.directconnect == null ? Codegen.empty() : this.directconnect;
+    public Optional<Output<String>> directconnect() {
+        return Optional.ofNullable(this.directconnect);
     }
 
     /**
@@ -508,10 +508,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dlm")
-      private final @Nullable Output<String> dlm;
+    private @Nullable Output<String> dlm;
 
-    public Output<String> dlm() {
-        return this.dlm == null ? Codegen.empty() : this.dlm;
+    public Optional<Output<String>> dlm() {
+        return Optional.ofNullable(this.dlm);
     }
 
     /**
@@ -519,10 +519,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dms")
-      private final @Nullable Output<String> dms;
+    private @Nullable Output<String> dms;
 
-    public Output<String> dms() {
-        return this.dms == null ? Codegen.empty() : this.dms;
+    public Optional<Output<String>> dms() {
+        return Optional.ofNullable(this.dms);
     }
 
     /**
@@ -530,10 +530,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="docdb")
-      private final @Nullable Output<String> docdb;
+    private @Nullable Output<String> docdb;
 
-    public Output<String> docdb() {
-        return this.docdb == null ? Codegen.empty() : this.docdb;
+    public Optional<Output<String>> docdb() {
+        return Optional.ofNullable(this.docdb);
     }
 
     /**
@@ -541,10 +541,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ds")
-      private final @Nullable Output<String> ds;
+    private @Nullable Output<String> ds;
 
-    public Output<String> ds() {
-        return this.ds == null ? Codegen.empty() : this.ds;
+    public Optional<Output<String>> ds() {
+        return Optional.ofNullable(this.ds);
     }
 
     /**
@@ -552,10 +552,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dynamodb")
-      private final @Nullable Output<String> dynamodb;
+    private @Nullable Output<String> dynamodb;
 
-    public Output<String> dynamodb() {
-        return this.dynamodb == null ? Codegen.empty() : this.dynamodb;
+    public Optional<Output<String>> dynamodb() {
+        return Optional.ofNullable(this.dynamodb);
     }
 
     /**
@@ -563,10 +563,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ec2")
-      private final @Nullable Output<String> ec2;
+    private @Nullable Output<String> ec2;
 
-    public Output<String> ec2() {
-        return this.ec2 == null ? Codegen.empty() : this.ec2;
+    public Optional<Output<String>> ec2() {
+        return Optional.ofNullable(this.ec2);
     }
 
     /**
@@ -574,10 +574,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ecr")
-      private final @Nullable Output<String> ecr;
+    private @Nullable Output<String> ecr;
 
-    public Output<String> ecr() {
-        return this.ecr == null ? Codegen.empty() : this.ecr;
+    public Optional<Output<String>> ecr() {
+        return Optional.ofNullable(this.ecr);
     }
 
     /**
@@ -585,10 +585,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ecrpublic")
-      private final @Nullable Output<String> ecrpublic;
+    private @Nullable Output<String> ecrpublic;
 
-    public Output<String> ecrpublic() {
-        return this.ecrpublic == null ? Codegen.empty() : this.ecrpublic;
+    public Optional<Output<String>> ecrpublic() {
+        return Optional.ofNullable(this.ecrpublic);
     }
 
     /**
@@ -596,10 +596,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ecs")
-      private final @Nullable Output<String> ecs;
+    private @Nullable Output<String> ecs;
 
-    public Output<String> ecs() {
-        return this.ecs == null ? Codegen.empty() : this.ecs;
+    public Optional<Output<String>> ecs() {
+        return Optional.ofNullable(this.ecs);
     }
 
     /**
@@ -607,10 +607,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="efs")
-      private final @Nullable Output<String> efs;
+    private @Nullable Output<String> efs;
 
-    public Output<String> efs() {
-        return this.efs == null ? Codegen.empty() : this.efs;
+    public Optional<Output<String>> efs() {
+        return Optional.ofNullable(this.efs);
     }
 
     /**
@@ -618,10 +618,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="eks")
-      private final @Nullable Output<String> eks;
+    private @Nullable Output<String> eks;
 
-    public Output<String> eks() {
-        return this.eks == null ? Codegen.empty() : this.eks;
+    public Optional<Output<String>> eks() {
+        return Optional.ofNullable(this.eks);
     }
 
     /**
@@ -629,10 +629,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="elasticache")
-      private final @Nullable Output<String> elasticache;
+    private @Nullable Output<String> elasticache;
 
-    public Output<String> elasticache() {
-        return this.elasticache == null ? Codegen.empty() : this.elasticache;
+    public Optional<Output<String>> elasticache() {
+        return Optional.ofNullable(this.elasticache);
     }
 
     /**
@@ -640,10 +640,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="elasticbeanstalk")
-      private final @Nullable Output<String> elasticbeanstalk;
+    private @Nullable Output<String> elasticbeanstalk;
 
-    public Output<String> elasticbeanstalk() {
-        return this.elasticbeanstalk == null ? Codegen.empty() : this.elasticbeanstalk;
+    public Optional<Output<String>> elasticbeanstalk() {
+        return Optional.ofNullable(this.elasticbeanstalk);
     }
 
     /**
@@ -651,10 +651,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="elastictranscoder")
-      private final @Nullable Output<String> elastictranscoder;
+    private @Nullable Output<String> elastictranscoder;
 
-    public Output<String> elastictranscoder() {
-        return this.elastictranscoder == null ? Codegen.empty() : this.elastictranscoder;
+    public Optional<Output<String>> elastictranscoder() {
+        return Optional.ofNullable(this.elastictranscoder);
     }
 
     /**
@@ -662,10 +662,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="elb")
-      private final @Nullable Output<String> elb;
+    private @Nullable Output<String> elb;
 
-    public Output<String> elb() {
-        return this.elb == null ? Codegen.empty() : this.elb;
+    public Optional<Output<String>> elb() {
+        return Optional.ofNullable(this.elb);
     }
 
     /**
@@ -673,10 +673,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="elbv2")
-      private final @Nullable Output<String> elbv2;
+    private @Nullable Output<String> elbv2;
 
-    public Output<String> elbv2() {
-        return this.elbv2 == null ? Codegen.empty() : this.elbv2;
+    public Optional<Output<String>> elbv2() {
+        return Optional.ofNullable(this.elbv2);
     }
 
     /**
@@ -684,10 +684,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="emr")
-      private final @Nullable Output<String> emr;
+    private @Nullable Output<String> emr;
 
-    public Output<String> emr() {
-        return this.emr == null ? Codegen.empty() : this.emr;
+    public Optional<Output<String>> emr() {
+        return Optional.ofNullable(this.emr);
     }
 
     /**
@@ -695,10 +695,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="emrcontainers")
-      private final @Nullable Output<String> emrcontainers;
+    private @Nullable Output<String> emrcontainers;
 
-    public Output<String> emrcontainers() {
-        return this.emrcontainers == null ? Codegen.empty() : this.emrcontainers;
+    public Optional<Output<String>> emrcontainers() {
+        return Optional.ofNullable(this.emrcontainers);
     }
 
     /**
@@ -706,10 +706,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="es")
-      private final @Nullable Output<String> es;
+    private @Nullable Output<String> es;
 
-    public Output<String> es() {
-        return this.es == null ? Codegen.empty() : this.es;
+    public Optional<Output<String>> es() {
+        return Optional.ofNullable(this.es);
     }
 
     /**
@@ -717,10 +717,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="firehose")
-      private final @Nullable Output<String> firehose;
+    private @Nullable Output<String> firehose;
 
-    public Output<String> firehose() {
-        return this.firehose == null ? Codegen.empty() : this.firehose;
+    public Optional<Output<String>> firehose() {
+        return Optional.ofNullable(this.firehose);
     }
 
     /**
@@ -728,10 +728,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fms")
-      private final @Nullable Output<String> fms;
+    private @Nullable Output<String> fms;
 
-    public Output<String> fms() {
-        return this.fms == null ? Codegen.empty() : this.fms;
+    public Optional<Output<String>> fms() {
+        return Optional.ofNullable(this.fms);
     }
 
     /**
@@ -739,10 +739,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="forecast")
-      private final @Nullable Output<String> forecast;
+    private @Nullable Output<String> forecast;
 
-    public Output<String> forecast() {
-        return this.forecast == null ? Codegen.empty() : this.forecast;
+    public Optional<Output<String>> forecast() {
+        return Optional.ofNullable(this.forecast);
     }
 
     /**
@@ -750,10 +750,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fsx")
-      private final @Nullable Output<String> fsx;
+    private @Nullable Output<String> fsx;
 
-    public Output<String> fsx() {
-        return this.fsx == null ? Codegen.empty() : this.fsx;
+    public Optional<Output<String>> fsx() {
+        return Optional.ofNullable(this.fsx);
     }
 
     /**
@@ -761,10 +761,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="gamelift")
-      private final @Nullable Output<String> gamelift;
+    private @Nullable Output<String> gamelift;
 
-    public Output<String> gamelift() {
-        return this.gamelift == null ? Codegen.empty() : this.gamelift;
+    public Optional<Output<String>> gamelift() {
+        return Optional.ofNullable(this.gamelift);
     }
 
     /**
@@ -772,10 +772,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="glacier")
-      private final @Nullable Output<String> glacier;
+    private @Nullable Output<String> glacier;
 
-    public Output<String> glacier() {
-        return this.glacier == null ? Codegen.empty() : this.glacier;
+    public Optional<Output<String>> glacier() {
+        return Optional.ofNullable(this.glacier);
     }
 
     /**
@@ -783,10 +783,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="globalaccelerator")
-      private final @Nullable Output<String> globalaccelerator;
+    private @Nullable Output<String> globalaccelerator;
 
-    public Output<String> globalaccelerator() {
-        return this.globalaccelerator == null ? Codegen.empty() : this.globalaccelerator;
+    public Optional<Output<String>> globalaccelerator() {
+        return Optional.ofNullable(this.globalaccelerator);
     }
 
     /**
@@ -794,10 +794,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="glue")
-      private final @Nullable Output<String> glue;
+    private @Nullable Output<String> glue;
 
-    public Output<String> glue() {
-        return this.glue == null ? Codegen.empty() : this.glue;
+    public Optional<Output<String>> glue() {
+        return Optional.ofNullable(this.glue);
     }
 
     /**
@@ -805,10 +805,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="greengrass")
-      private final @Nullable Output<String> greengrass;
+    private @Nullable Output<String> greengrass;
 
-    public Output<String> greengrass() {
-        return this.greengrass == null ? Codegen.empty() : this.greengrass;
+    public Optional<Output<String>> greengrass() {
+        return Optional.ofNullable(this.greengrass);
     }
 
     /**
@@ -816,10 +816,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="guardduty")
-      private final @Nullable Output<String> guardduty;
+    private @Nullable Output<String> guardduty;
 
-    public Output<String> guardduty() {
-        return this.guardduty == null ? Codegen.empty() : this.guardduty;
+    public Optional<Output<String>> guardduty() {
+        return Optional.ofNullable(this.guardduty);
     }
 
     /**
@@ -827,10 +827,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="iam")
-      private final @Nullable Output<String> iam;
+    private @Nullable Output<String> iam;
 
-    public Output<String> iam() {
-        return this.iam == null ? Codegen.empty() : this.iam;
+    public Optional<Output<String>> iam() {
+        return Optional.ofNullable(this.iam);
     }
 
     /**
@@ -838,10 +838,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="identitystore")
-      private final @Nullable Output<String> identitystore;
+    private @Nullable Output<String> identitystore;
 
-    public Output<String> identitystore() {
-        return this.identitystore == null ? Codegen.empty() : this.identitystore;
+    public Optional<Output<String>> identitystore() {
+        return Optional.ofNullable(this.identitystore);
     }
 
     /**
@@ -849,10 +849,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="imagebuilder")
-      private final @Nullable Output<String> imagebuilder;
+    private @Nullable Output<String> imagebuilder;
 
-    public Output<String> imagebuilder() {
-        return this.imagebuilder == null ? Codegen.empty() : this.imagebuilder;
+    public Optional<Output<String>> imagebuilder() {
+        return Optional.ofNullable(this.imagebuilder);
     }
 
     /**
@@ -860,10 +860,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="inspector")
-      private final @Nullable Output<String> inspector;
+    private @Nullable Output<String> inspector;
 
-    public Output<String> inspector() {
-        return this.inspector == null ? Codegen.empty() : this.inspector;
+    public Optional<Output<String>> inspector() {
+        return Optional.ofNullable(this.inspector);
     }
 
     /**
@@ -871,10 +871,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="iot")
-      private final @Nullable Output<String> iot;
+    private @Nullable Output<String> iot;
 
-    public Output<String> iot() {
-        return this.iot == null ? Codegen.empty() : this.iot;
+    public Optional<Output<String>> iot() {
+        return Optional.ofNullable(this.iot);
     }
 
     /**
@@ -882,10 +882,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="iotanalytics")
-      private final @Nullable Output<String> iotanalytics;
+    private @Nullable Output<String> iotanalytics;
 
-    public Output<String> iotanalytics() {
-        return this.iotanalytics == null ? Codegen.empty() : this.iotanalytics;
+    public Optional<Output<String>> iotanalytics() {
+        return Optional.ofNullable(this.iotanalytics);
     }
 
     /**
@@ -893,10 +893,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="iotevents")
-      private final @Nullable Output<String> iotevents;
+    private @Nullable Output<String> iotevents;
 
-    public Output<String> iotevents() {
-        return this.iotevents == null ? Codegen.empty() : this.iotevents;
+    public Optional<Output<String>> iotevents() {
+        return Optional.ofNullable(this.iotevents);
     }
 
     /**
@@ -904,10 +904,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kafka")
-      private final @Nullable Output<String> kafka;
+    private @Nullable Output<String> kafka;
 
-    public Output<String> kafka() {
-        return this.kafka == null ? Codegen.empty() : this.kafka;
+    public Optional<Output<String>> kafka() {
+        return Optional.ofNullable(this.kafka);
     }
 
     /**
@@ -915,10 +915,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kinesis")
-      private final @Nullable Output<String> kinesis;
+    private @Nullable Output<String> kinesis;
 
-    public Output<String> kinesis() {
-        return this.kinesis == null ? Codegen.empty() : this.kinesis;
+    public Optional<Output<String>> kinesis() {
+        return Optional.ofNullable(this.kinesis);
     }
 
     /**
@@ -926,10 +926,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kinesisanalytics")
-      private final @Nullable Output<String> kinesisanalytics;
+    private @Nullable Output<String> kinesisanalytics;
 
-    public Output<String> kinesisanalytics() {
-        return this.kinesisanalytics == null ? Codegen.empty() : this.kinesisanalytics;
+    public Optional<Output<String>> kinesisanalytics() {
+        return Optional.ofNullable(this.kinesisanalytics);
     }
 
     /**
@@ -937,10 +937,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kinesisanalyticsv2")
-      private final @Nullable Output<String> kinesisanalyticsv2;
+    private @Nullable Output<String> kinesisanalyticsv2;
 
-    public Output<String> kinesisanalyticsv2() {
-        return this.kinesisanalyticsv2 == null ? Codegen.empty() : this.kinesisanalyticsv2;
+    public Optional<Output<String>> kinesisanalyticsv2() {
+        return Optional.ofNullable(this.kinesisanalyticsv2);
     }
 
     /**
@@ -948,10 +948,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kinesisvideo")
-      private final @Nullable Output<String> kinesisvideo;
+    private @Nullable Output<String> kinesisvideo;
 
-    public Output<String> kinesisvideo() {
-        return this.kinesisvideo == null ? Codegen.empty() : this.kinesisvideo;
+    public Optional<Output<String>> kinesisvideo() {
+        return Optional.ofNullable(this.kinesisvideo);
     }
 
     /**
@@ -959,10 +959,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kms")
-      private final @Nullable Output<String> kms;
+    private @Nullable Output<String> kms;
 
-    public Output<String> kms() {
-        return this.kms == null ? Codegen.empty() : this.kms;
+    public Optional<Output<String>> kms() {
+        return Optional.ofNullable(this.kms);
     }
 
     /**
@@ -970,10 +970,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="lakeformation")
-      private final @Nullable Output<String> lakeformation;
+    private @Nullable Output<String> lakeformation;
 
-    public Output<String> lakeformation() {
-        return this.lakeformation == null ? Codegen.empty() : this.lakeformation;
+    public Optional<Output<String>> lakeformation() {
+        return Optional.ofNullable(this.lakeformation);
     }
 
     /**
@@ -981,10 +981,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="lambda")
-      private final @Nullable Output<String> lambda;
+    private @Nullable Output<String> lambda;
 
-    public Output<String> lambda() {
-        return this.lambda == null ? Codegen.empty() : this.lambda;
+    public Optional<Output<String>> lambda() {
+        return Optional.ofNullable(this.lambda);
     }
 
     /**
@@ -992,10 +992,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="lexmodels")
-      private final @Nullable Output<String> lexmodels;
+    private @Nullable Output<String> lexmodels;
 
-    public Output<String> lexmodels() {
-        return this.lexmodels == null ? Codegen.empty() : this.lexmodels;
+    public Optional<Output<String>> lexmodels() {
+        return Optional.ofNullable(this.lexmodels);
     }
 
     /**
@@ -1003,10 +1003,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="licensemanager")
-      private final @Nullable Output<String> licensemanager;
+    private @Nullable Output<String> licensemanager;
 
-    public Output<String> licensemanager() {
-        return this.licensemanager == null ? Codegen.empty() : this.licensemanager;
+    public Optional<Output<String>> licensemanager() {
+        return Optional.ofNullable(this.licensemanager);
     }
 
     /**
@@ -1014,10 +1014,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="lightsail")
-      private final @Nullable Output<String> lightsail;
+    private @Nullable Output<String> lightsail;
 
-    public Output<String> lightsail() {
-        return this.lightsail == null ? Codegen.empty() : this.lightsail;
+    public Optional<Output<String>> lightsail() {
+        return Optional.ofNullable(this.lightsail);
     }
 
     /**
@@ -1025,10 +1025,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -1036,10 +1036,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="macie")
-      private final @Nullable Output<String> macie;
+    private @Nullable Output<String> macie;
 
-    public Output<String> macie() {
-        return this.macie == null ? Codegen.empty() : this.macie;
+    public Optional<Output<String>> macie() {
+        return Optional.ofNullable(this.macie);
     }
 
     /**
@@ -1047,10 +1047,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="macie2")
-      private final @Nullable Output<String> macie2;
+    private @Nullable Output<String> macie2;
 
-    public Output<String> macie2() {
-        return this.macie2 == null ? Codegen.empty() : this.macie2;
+    public Optional<Output<String>> macie2() {
+        return Optional.ofNullable(this.macie2);
     }
 
     /**
@@ -1058,10 +1058,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="managedblockchain")
-      private final @Nullable Output<String> managedblockchain;
+    private @Nullable Output<String> managedblockchain;
 
-    public Output<String> managedblockchain() {
-        return this.managedblockchain == null ? Codegen.empty() : this.managedblockchain;
+    public Optional<Output<String>> managedblockchain() {
+        return Optional.ofNullable(this.managedblockchain);
     }
 
     /**
@@ -1069,10 +1069,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="marketplacecatalog")
-      private final @Nullable Output<String> marketplacecatalog;
+    private @Nullable Output<String> marketplacecatalog;
 
-    public Output<String> marketplacecatalog() {
-        return this.marketplacecatalog == null ? Codegen.empty() : this.marketplacecatalog;
+    public Optional<Output<String>> marketplacecatalog() {
+        return Optional.ofNullable(this.marketplacecatalog);
     }
 
     /**
@@ -1080,10 +1080,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mediaconnect")
-      private final @Nullable Output<String> mediaconnect;
+    private @Nullable Output<String> mediaconnect;
 
-    public Output<String> mediaconnect() {
-        return this.mediaconnect == null ? Codegen.empty() : this.mediaconnect;
+    public Optional<Output<String>> mediaconnect() {
+        return Optional.ofNullable(this.mediaconnect);
     }
 
     /**
@@ -1091,10 +1091,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mediaconvert")
-      private final @Nullable Output<String> mediaconvert;
+    private @Nullable Output<String> mediaconvert;
 
-    public Output<String> mediaconvert() {
-        return this.mediaconvert == null ? Codegen.empty() : this.mediaconvert;
+    public Optional<Output<String>> mediaconvert() {
+        return Optional.ofNullable(this.mediaconvert);
     }
 
     /**
@@ -1102,10 +1102,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="medialive")
-      private final @Nullable Output<String> medialive;
+    private @Nullable Output<String> medialive;
 
-    public Output<String> medialive() {
-        return this.medialive == null ? Codegen.empty() : this.medialive;
+    public Optional<Output<String>> medialive() {
+        return Optional.ofNullable(this.medialive);
     }
 
     /**
@@ -1113,10 +1113,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mediapackage")
-      private final @Nullable Output<String> mediapackage;
+    private @Nullable Output<String> mediapackage;
 
-    public Output<String> mediapackage() {
-        return this.mediapackage == null ? Codegen.empty() : this.mediapackage;
+    public Optional<Output<String>> mediapackage() {
+        return Optional.ofNullable(this.mediapackage);
     }
 
     /**
@@ -1124,10 +1124,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mediastore")
-      private final @Nullable Output<String> mediastore;
+    private @Nullable Output<String> mediastore;
 
-    public Output<String> mediastore() {
-        return this.mediastore == null ? Codegen.empty() : this.mediastore;
+    public Optional<Output<String>> mediastore() {
+        return Optional.ofNullable(this.mediastore);
     }
 
     /**
@@ -1135,10 +1135,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mediastoredata")
-      private final @Nullable Output<String> mediastoredata;
+    private @Nullable Output<String> mediastoredata;
 
-    public Output<String> mediastoredata() {
-        return this.mediastoredata == null ? Codegen.empty() : this.mediastoredata;
+    public Optional<Output<String>> mediastoredata() {
+        return Optional.ofNullable(this.mediastoredata);
     }
 
     /**
@@ -1146,10 +1146,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="memorydb")
-      private final @Nullable Output<String> memorydb;
+    private @Nullable Output<String> memorydb;
 
-    public Output<String> memorydb() {
-        return this.memorydb == null ? Codegen.empty() : this.memorydb;
+    public Optional<Output<String>> memorydb() {
+        return Optional.ofNullable(this.memorydb);
     }
 
     /**
@@ -1157,10 +1157,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mq")
-      private final @Nullable Output<String> mq;
+    private @Nullable Output<String> mq;
 
-    public Output<String> mq() {
-        return this.mq == null ? Codegen.empty() : this.mq;
+    public Optional<Output<String>> mq() {
+        return Optional.ofNullable(this.mq);
     }
 
     /**
@@ -1168,10 +1168,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mwaa")
-      private final @Nullable Output<String> mwaa;
+    private @Nullable Output<String> mwaa;
 
-    public Output<String> mwaa() {
-        return this.mwaa == null ? Codegen.empty() : this.mwaa;
+    public Optional<Output<String>> mwaa() {
+        return Optional.ofNullable(this.mwaa);
     }
 
     /**
@@ -1179,10 +1179,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="neptune")
-      private final @Nullable Output<String> neptune;
+    private @Nullable Output<String> neptune;
 
-    public Output<String> neptune() {
-        return this.neptune == null ? Codegen.empty() : this.neptune;
+    public Optional<Output<String>> neptune() {
+        return Optional.ofNullable(this.neptune);
     }
 
     /**
@@ -1190,10 +1190,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkfirewall")
-      private final @Nullable Output<String> networkfirewall;
+    private @Nullable Output<String> networkfirewall;
 
-    public Output<String> networkfirewall() {
-        return this.networkfirewall == null ? Codegen.empty() : this.networkfirewall;
+    public Optional<Output<String>> networkfirewall() {
+        return Optional.ofNullable(this.networkfirewall);
     }
 
     /**
@@ -1201,10 +1201,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkmanager")
-      private final @Nullable Output<String> networkmanager;
+    private @Nullable Output<String> networkmanager;
 
-    public Output<String> networkmanager() {
-        return this.networkmanager == null ? Codegen.empty() : this.networkmanager;
+    public Optional<Output<String>> networkmanager() {
+        return Optional.ofNullable(this.networkmanager);
     }
 
     /**
@@ -1212,10 +1212,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="opsworks")
-      private final @Nullable Output<String> opsworks;
+    private @Nullable Output<String> opsworks;
 
-    public Output<String> opsworks() {
-        return this.opsworks == null ? Codegen.empty() : this.opsworks;
+    public Optional<Output<String>> opsworks() {
+        return Optional.ofNullable(this.opsworks);
     }
 
     /**
@@ -1223,10 +1223,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="organizations")
-      private final @Nullable Output<String> organizations;
+    private @Nullable Output<String> organizations;
 
-    public Output<String> organizations() {
-        return this.organizations == null ? Codegen.empty() : this.organizations;
+    public Optional<Output<String>> organizations() {
+        return Optional.ofNullable(this.organizations);
     }
 
     /**
@@ -1234,10 +1234,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="outposts")
-      private final @Nullable Output<String> outposts;
+    private @Nullable Output<String> outposts;
 
-    public Output<String> outposts() {
-        return this.outposts == null ? Codegen.empty() : this.outposts;
+    public Optional<Output<String>> outposts() {
+        return Optional.ofNullable(this.outposts);
     }
 
     /**
@@ -1245,10 +1245,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="personalize")
-      private final @Nullable Output<String> personalize;
+    private @Nullable Output<String> personalize;
 
-    public Output<String> personalize() {
-        return this.personalize == null ? Codegen.empty() : this.personalize;
+    public Optional<Output<String>> personalize() {
+        return Optional.ofNullable(this.personalize);
     }
 
     /**
@@ -1256,10 +1256,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="pinpoint")
-      private final @Nullable Output<String> pinpoint;
+    private @Nullable Output<String> pinpoint;
 
-    public Output<String> pinpoint() {
-        return this.pinpoint == null ? Codegen.empty() : this.pinpoint;
+    public Optional<Output<String>> pinpoint() {
+        return Optional.ofNullable(this.pinpoint);
     }
 
     /**
@@ -1267,10 +1267,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="pricing")
-      private final @Nullable Output<String> pricing;
+    private @Nullable Output<String> pricing;
 
-    public Output<String> pricing() {
-        return this.pricing == null ? Codegen.empty() : this.pricing;
+    public Optional<Output<String>> pricing() {
+        return Optional.ofNullable(this.pricing);
     }
 
     /**
@@ -1278,10 +1278,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="qldb")
-      private final @Nullable Output<String> qldb;
+    private @Nullable Output<String> qldb;
 
-    public Output<String> qldb() {
-        return this.qldb == null ? Codegen.empty() : this.qldb;
+    public Optional<Output<String>> qldb() {
+        return Optional.ofNullable(this.qldb);
     }
 
     /**
@@ -1289,10 +1289,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="quicksight")
-      private final @Nullable Output<String> quicksight;
+    private @Nullable Output<String> quicksight;
 
-    public Output<String> quicksight() {
-        return this.quicksight == null ? Codegen.empty() : this.quicksight;
+    public Optional<Output<String>> quicksight() {
+        return Optional.ofNullable(this.quicksight);
     }
 
     /**
@@ -1300,10 +1300,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ram")
-      private final @Nullable Output<String> ram;
+    private @Nullable Output<String> ram;
 
-    public Output<String> ram() {
-        return this.ram == null ? Codegen.empty() : this.ram;
+    public Optional<Output<String>> ram() {
+        return Optional.ofNullable(this.ram);
     }
 
     /**
@@ -1311,10 +1311,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rds")
-      private final @Nullable Output<String> rds;
+    private @Nullable Output<String> rds;
 
-    public Output<String> rds() {
-        return this.rds == null ? Codegen.empty() : this.rds;
+    public Optional<Output<String>> rds() {
+        return Optional.ofNullable(this.rds);
     }
 
     /**
@@ -1322,10 +1322,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="redshift")
-      private final @Nullable Output<String> redshift;
+    private @Nullable Output<String> redshift;
 
-    public Output<String> redshift() {
-        return this.redshift == null ? Codegen.empty() : this.redshift;
+    public Optional<Output<String>> redshift() {
+        return Optional.ofNullable(this.redshift);
     }
 
     /**
@@ -1333,10 +1333,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourcegroups")
-      private final @Nullable Output<String> resourcegroups;
+    private @Nullable Output<String> resourcegroups;
 
-    public Output<String> resourcegroups() {
-        return this.resourcegroups == null ? Codegen.empty() : this.resourcegroups;
+    public Optional<Output<String>> resourcegroups() {
+        return Optional.ofNullable(this.resourcegroups);
     }
 
     /**
@@ -1344,10 +1344,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourcegroupstaggingapi")
-      private final @Nullable Output<String> resourcegroupstaggingapi;
+    private @Nullable Output<String> resourcegroupstaggingapi;
 
-    public Output<String> resourcegroupstaggingapi() {
-        return this.resourcegroupstaggingapi == null ? Codegen.empty() : this.resourcegroupstaggingapi;
+    public Optional<Output<String>> resourcegroupstaggingapi() {
+        return Optional.ofNullable(this.resourcegroupstaggingapi);
     }
 
     /**
@@ -1355,10 +1355,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="route53")
-      private final @Nullable Output<String> route53;
+    private @Nullable Output<String> route53;
 
-    public Output<String> route53() {
-        return this.route53 == null ? Codegen.empty() : this.route53;
+    public Optional<Output<String>> route53() {
+        return Optional.ofNullable(this.route53);
     }
 
     /**
@@ -1366,10 +1366,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="route53domains")
-      private final @Nullable Output<String> route53domains;
+    private @Nullable Output<String> route53domains;
 
-    public Output<String> route53domains() {
-        return this.route53domains == null ? Codegen.empty() : this.route53domains;
+    public Optional<Output<String>> route53domains() {
+        return Optional.ofNullable(this.route53domains);
     }
 
     /**
@@ -1377,10 +1377,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="route53recoverycontrolconfig")
-      private final @Nullable Output<String> route53recoverycontrolconfig;
+    private @Nullable Output<String> route53recoverycontrolconfig;
 
-    public Output<String> route53recoverycontrolconfig() {
-        return this.route53recoverycontrolconfig == null ? Codegen.empty() : this.route53recoverycontrolconfig;
+    public Optional<Output<String>> route53recoverycontrolconfig() {
+        return Optional.ofNullable(this.route53recoverycontrolconfig);
     }
 
     /**
@@ -1388,10 +1388,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="route53recoveryreadiness")
-      private final @Nullable Output<String> route53recoveryreadiness;
+    private @Nullable Output<String> route53recoveryreadiness;
 
-    public Output<String> route53recoveryreadiness() {
-        return this.route53recoveryreadiness == null ? Codegen.empty() : this.route53recoveryreadiness;
+    public Optional<Output<String>> route53recoveryreadiness() {
+        return Optional.ofNullable(this.route53recoveryreadiness);
     }
 
     /**
@@ -1399,10 +1399,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="route53resolver")
-      private final @Nullable Output<String> route53resolver;
+    private @Nullable Output<String> route53resolver;
 
-    public Output<String> route53resolver() {
-        return this.route53resolver == null ? Codegen.empty() : this.route53resolver;
+    public Optional<Output<String>> route53resolver() {
+        return Optional.ofNullable(this.route53resolver);
     }
 
     /**
@@ -1410,10 +1410,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="s3")
-      private final @Nullable Output<String> s3;
+    private @Nullable Output<String> s3;
 
-    public Output<String> s3() {
-        return this.s3 == null ? Codegen.empty() : this.s3;
+    public Optional<Output<String>> s3() {
+        return Optional.ofNullable(this.s3);
     }
 
     /**
@@ -1421,10 +1421,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="s3control")
-      private final @Nullable Output<String> s3control;
+    private @Nullable Output<String> s3control;
 
-    public Output<String> s3control() {
-        return this.s3control == null ? Codegen.empty() : this.s3control;
+    public Optional<Output<String>> s3control() {
+        return Optional.ofNullable(this.s3control);
     }
 
     /**
@@ -1432,10 +1432,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="s3outposts")
-      private final @Nullable Output<String> s3outposts;
+    private @Nullable Output<String> s3outposts;
 
-    public Output<String> s3outposts() {
-        return this.s3outposts == null ? Codegen.empty() : this.s3outposts;
+    public Optional<Output<String>> s3outposts() {
+        return Optional.ofNullable(this.s3outposts);
     }
 
     /**
@@ -1443,10 +1443,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sagemaker")
-      private final @Nullable Output<String> sagemaker;
+    private @Nullable Output<String> sagemaker;
 
-    public Output<String> sagemaker() {
-        return this.sagemaker == null ? Codegen.empty() : this.sagemaker;
+    public Optional<Output<String>> sagemaker() {
+        return Optional.ofNullable(this.sagemaker);
     }
 
     /**
@@ -1454,10 +1454,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="schemas")
-      private final @Nullable Output<String> schemas;
+    private @Nullable Output<String> schemas;
 
-    public Output<String> schemas() {
-        return this.schemas == null ? Codegen.empty() : this.schemas;
+    public Optional<Output<String>> schemas() {
+        return Optional.ofNullable(this.schemas);
     }
 
     /**
@@ -1465,10 +1465,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sdb")
-      private final @Nullable Output<String> sdb;
+    private @Nullable Output<String> sdb;
 
-    public Output<String> sdb() {
-        return this.sdb == null ? Codegen.empty() : this.sdb;
+    public Optional<Output<String>> sdb() {
+        return Optional.ofNullable(this.sdb);
     }
 
     /**
@@ -1476,10 +1476,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="secretsmanager")
-      private final @Nullable Output<String> secretsmanager;
+    private @Nullable Output<String> secretsmanager;
 
-    public Output<String> secretsmanager() {
-        return this.secretsmanager == null ? Codegen.empty() : this.secretsmanager;
+    public Optional<Output<String>> secretsmanager() {
+        return Optional.ofNullable(this.secretsmanager);
     }
 
     /**
@@ -1487,10 +1487,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="securityhub")
-      private final @Nullable Output<String> securityhub;
+    private @Nullable Output<String> securityhub;
 
-    public Output<String> securityhub() {
-        return this.securityhub == null ? Codegen.empty() : this.securityhub;
+    public Optional<Output<String>> securityhub() {
+        return Optional.ofNullable(this.securityhub);
     }
 
     /**
@@ -1498,10 +1498,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serverlessrepo")
-      private final @Nullable Output<String> serverlessrepo;
+    private @Nullable Output<String> serverlessrepo;
 
-    public Output<String> serverlessrepo() {
-        return this.serverlessrepo == null ? Codegen.empty() : this.serverlessrepo;
+    public Optional<Output<String>> serverlessrepo() {
+        return Optional.ofNullable(this.serverlessrepo);
     }
 
     /**
@@ -1509,10 +1509,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="servicecatalog")
-      private final @Nullable Output<String> servicecatalog;
+    private @Nullable Output<String> servicecatalog;
 
-    public Output<String> servicecatalog() {
-        return this.servicecatalog == null ? Codegen.empty() : this.servicecatalog;
+    public Optional<Output<String>> servicecatalog() {
+        return Optional.ofNullable(this.servicecatalog);
     }
 
     /**
@@ -1520,10 +1520,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="servicediscovery")
-      private final @Nullable Output<String> servicediscovery;
+    private @Nullable Output<String> servicediscovery;
 
-    public Output<String> servicediscovery() {
-        return this.servicediscovery == null ? Codegen.empty() : this.servicediscovery;
+    public Optional<Output<String>> servicediscovery() {
+        return Optional.ofNullable(this.servicediscovery);
     }
 
     /**
@@ -1531,10 +1531,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="servicequotas")
-      private final @Nullable Output<String> servicequotas;
+    private @Nullable Output<String> servicequotas;
 
-    public Output<String> servicequotas() {
-        return this.servicequotas == null ? Codegen.empty() : this.servicequotas;
+    public Optional<Output<String>> servicequotas() {
+        return Optional.ofNullable(this.servicequotas);
     }
 
     /**
@@ -1542,10 +1542,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ses")
-      private final @Nullable Output<String> ses;
+    private @Nullable Output<String> ses;
 
-    public Output<String> ses() {
-        return this.ses == null ? Codegen.empty() : this.ses;
+    public Optional<Output<String>> ses() {
+        return Optional.ofNullable(this.ses);
     }
 
     /**
@@ -1553,10 +1553,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="shield")
-      private final @Nullable Output<String> shield;
+    private @Nullable Output<String> shield;
 
-    public Output<String> shield() {
-        return this.shield == null ? Codegen.empty() : this.shield;
+    public Optional<Output<String>> shield() {
+        return Optional.ofNullable(this.shield);
     }
 
     /**
@@ -1564,10 +1564,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="signer")
-      private final @Nullable Output<String> signer;
+    private @Nullable Output<String> signer;
 
-    public Output<String> signer() {
-        return this.signer == null ? Codegen.empty() : this.signer;
+    public Optional<Output<String>> signer() {
+        return Optional.ofNullable(this.signer);
     }
 
     /**
@@ -1575,10 +1575,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sns")
-      private final @Nullable Output<String> sns;
+    private @Nullable Output<String> sns;
 
-    public Output<String> sns() {
-        return this.sns == null ? Codegen.empty() : this.sns;
+    public Optional<Output<String>> sns() {
+        return Optional.ofNullable(this.sns);
     }
 
     /**
@@ -1586,10 +1586,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sqs")
-      private final @Nullable Output<String> sqs;
+    private @Nullable Output<String> sqs;
 
-    public Output<String> sqs() {
-        return this.sqs == null ? Codegen.empty() : this.sqs;
+    public Optional<Output<String>> sqs() {
+        return Optional.ofNullable(this.sqs);
     }
 
     /**
@@ -1597,10 +1597,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ssm")
-      private final @Nullable Output<String> ssm;
+    private @Nullable Output<String> ssm;
 
-    public Output<String> ssm() {
-        return this.ssm == null ? Codegen.empty() : this.ssm;
+    public Optional<Output<String>> ssm() {
+        return Optional.ofNullable(this.ssm);
     }
 
     /**
@@ -1608,10 +1608,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ssoadmin")
-      private final @Nullable Output<String> ssoadmin;
+    private @Nullable Output<String> ssoadmin;
 
-    public Output<String> ssoadmin() {
-        return this.ssoadmin == null ? Codegen.empty() : this.ssoadmin;
+    public Optional<Output<String>> ssoadmin() {
+        return Optional.ofNullable(this.ssoadmin);
     }
 
     /**
@@ -1619,10 +1619,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="stepfunctions")
-      private final @Nullable Output<String> stepfunctions;
+    private @Nullable Output<String> stepfunctions;
 
-    public Output<String> stepfunctions() {
-        return this.stepfunctions == null ? Codegen.empty() : this.stepfunctions;
+    public Optional<Output<String>> stepfunctions() {
+        return Optional.ofNullable(this.stepfunctions);
     }
 
     /**
@@ -1630,10 +1630,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="storagegateway")
-      private final @Nullable Output<String> storagegateway;
+    private @Nullable Output<String> storagegateway;
 
-    public Output<String> storagegateway() {
-        return this.storagegateway == null ? Codegen.empty() : this.storagegateway;
+    public Optional<Output<String>> storagegateway() {
+        return Optional.ofNullable(this.storagegateway);
     }
 
     /**
@@ -1641,10 +1641,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sts")
-      private final @Nullable Output<String> sts;
+    private @Nullable Output<String> sts;
 
-    public Output<String> sts() {
-        return this.sts == null ? Codegen.empty() : this.sts;
+    public Optional<Output<String>> sts() {
+        return Optional.ofNullable(this.sts);
     }
 
     /**
@@ -1652,10 +1652,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="swf")
-      private final @Nullable Output<String> swf;
+    private @Nullable Output<String> swf;
 
-    public Output<String> swf() {
-        return this.swf == null ? Codegen.empty() : this.swf;
+    public Optional<Output<String>> swf() {
+        return Optional.ofNullable(this.swf);
     }
 
     /**
@@ -1663,10 +1663,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="synthetics")
-      private final @Nullable Output<String> synthetics;
+    private @Nullable Output<String> synthetics;
 
-    public Output<String> synthetics() {
-        return this.synthetics == null ? Codegen.empty() : this.synthetics;
+    public Optional<Output<String>> synthetics() {
+        return Optional.ofNullable(this.synthetics);
     }
 
     /**
@@ -1674,10 +1674,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timestreamwrite")
-      private final @Nullable Output<String> timestreamwrite;
+    private @Nullable Output<String> timestreamwrite;
 
-    public Output<String> timestreamwrite() {
-        return this.timestreamwrite == null ? Codegen.empty() : this.timestreamwrite;
+    public Optional<Output<String>> timestreamwrite() {
+        return Optional.ofNullable(this.timestreamwrite);
     }
 
     /**
@@ -1685,10 +1685,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="transfer")
-      private final @Nullable Output<String> transfer;
+    private @Nullable Output<String> transfer;
 
-    public Output<String> transfer() {
-        return this.transfer == null ? Codegen.empty() : this.transfer;
+    public Optional<Output<String>> transfer() {
+        return Optional.ofNullable(this.transfer);
     }
 
     /**
@@ -1696,10 +1696,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="waf")
-      private final @Nullable Output<String> waf;
+    private @Nullable Output<String> waf;
 
-    public Output<String> waf() {
-        return this.waf == null ? Codegen.empty() : this.waf;
+    public Optional<Output<String>> waf() {
+        return Optional.ofNullable(this.waf);
     }
 
     /**
@@ -1707,10 +1707,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="wafregional")
-      private final @Nullable Output<String> wafregional;
+    private @Nullable Output<String> wafregional;
 
-    public Output<String> wafregional() {
-        return this.wafregional == null ? Codegen.empty() : this.wafregional;
+    public Optional<Output<String>> wafregional() {
+        return Optional.ofNullable(this.wafregional);
     }
 
     /**
@@ -1718,10 +1718,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="wafv2")
-      private final @Nullable Output<String> wafv2;
+    private @Nullable Output<String> wafv2;
 
-    public Output<String> wafv2() {
-        return this.wafv2 == null ? Codegen.empty() : this.wafv2;
+    public Optional<Output<String>> wafv2() {
+        return Optional.ofNullable(this.wafv2);
     }
 
     /**
@@ -1729,10 +1729,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="worklink")
-      private final @Nullable Output<String> worklink;
+    private @Nullable Output<String> worklink;
 
-    public Output<String> worklink() {
-        return this.worklink == null ? Codegen.empty() : this.worklink;
+    public Optional<Output<String>> worklink() {
+        return Optional.ofNullable(this.worklink);
     }
 
     /**
@@ -1740,10 +1740,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="workmail")
-      private final @Nullable Output<String> workmail;
+    private @Nullable Output<String> workmail;
 
-    public Output<String> workmail() {
-        return this.workmail == null ? Codegen.empty() : this.workmail;
+    public Optional<Output<String>> workmail() {
+        return Optional.ofNullable(this.workmail);
     }
 
     /**
@@ -1751,10 +1751,10 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="workspaces")
-      private final @Nullable Output<String> workspaces;
+    private @Nullable Output<String> workspaces;
 
-    public Output<String> workspaces() {
-        return this.workspaces == null ? Codegen.empty() : this.workspaces;
+    public Optional<Output<String>> workspaces() {
+        return Optional.ofNullable(this.workspaces);
     }
 
     /**
@@ -1762,2104 +1762,1628 @@ public final class ProviderEndpointArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="xray")
-      private final @Nullable Output<String> xray;
+    private @Nullable Output<String> xray;
 
-    public Output<String> xray() {
-        return this.xray == null ? Codegen.empty() : this.xray;
+    public Optional<Output<String>> xray() {
+        return Optional.ofNullable(this.xray);
     }
 
-    public ProviderEndpointArgs(
-        @Nullable Output<String> accessanalyzer,
-        @Nullable Output<String> acm,
-        @Nullable Output<String> acmpca,
-        @Nullable Output<String> amplify,
-        @Nullable Output<String> appconfig,
-        @Nullable Output<String> applicationautoscaling,
-        @Nullable Output<String> applicationinsights,
-        @Nullable Output<String> appmesh,
-        @Nullable Output<String> apprunner,
-        @Nullable Output<String> appstream,
-        @Nullable Output<String> appsync,
-        @Nullable Output<String> athena,
-        @Nullable Output<String> auditmanager,
-        @Nullable Output<String> autoscaling,
-        @Nullable Output<String> backup,
-        @Nullable Output<String> batch,
-        @Nullable Output<String> budgets,
-        @Nullable Output<String> chime,
-        @Nullable Output<String> cloud9,
-        @Nullable Output<String> cloudformation,
-        @Nullable Output<String> cloudfront,
-        @Nullable Output<String> cloudhsm,
-        @Nullable Output<String> cloudsearch,
-        @Nullable Output<String> cloudtrail,
-        @Nullable Output<String> cloudwatch,
-        @Nullable Output<String> cloudwatchevents,
-        @Nullable Output<String> cloudwatchlogs,
-        @Nullable Output<String> codeartifact,
-        @Nullable Output<String> codebuild,
-        @Nullable Output<String> codecommit,
-        @Nullable Output<String> codedeploy,
-        @Nullable Output<String> codepipeline,
-        @Nullable Output<String> codestarconnections,
-        @Nullable Output<String> cognitoidentity,
-        @Nullable Output<String> configservice,
-        @Nullable Output<String> connect,
-        @Nullable Output<String> cur,
-        @Nullable Output<String> dataexchange,
-        @Nullable Output<String> datapipeline,
-        @Nullable Output<String> datasync,
-        @Nullable Output<String> dax,
-        @Nullable Output<String> detective,
-        @Nullable Output<String> devicefarm,
-        @Nullable Output<String> directconnect,
-        @Nullable Output<String> dlm,
-        @Nullable Output<String> dms,
-        @Nullable Output<String> docdb,
-        @Nullable Output<String> ds,
-        @Nullable Output<String> dynamodb,
-        @Nullable Output<String> ec2,
-        @Nullable Output<String> ecr,
-        @Nullable Output<String> ecrpublic,
-        @Nullable Output<String> ecs,
-        @Nullable Output<String> efs,
-        @Nullable Output<String> eks,
-        @Nullable Output<String> elasticache,
-        @Nullable Output<String> elasticbeanstalk,
-        @Nullable Output<String> elastictranscoder,
-        @Nullable Output<String> elb,
-        @Nullable Output<String> elbv2,
-        @Nullable Output<String> emr,
-        @Nullable Output<String> emrcontainers,
-        @Nullable Output<String> es,
-        @Nullable Output<String> firehose,
-        @Nullable Output<String> fms,
-        @Nullable Output<String> forecast,
-        @Nullable Output<String> fsx,
-        @Nullable Output<String> gamelift,
-        @Nullable Output<String> glacier,
-        @Nullable Output<String> globalaccelerator,
-        @Nullable Output<String> glue,
-        @Nullable Output<String> greengrass,
-        @Nullable Output<String> guardduty,
-        @Nullable Output<String> iam,
-        @Nullable Output<String> identitystore,
-        @Nullable Output<String> imagebuilder,
-        @Nullable Output<String> inspector,
-        @Nullable Output<String> iot,
-        @Nullable Output<String> iotanalytics,
-        @Nullable Output<String> iotevents,
-        @Nullable Output<String> kafka,
-        @Nullable Output<String> kinesis,
-        @Nullable Output<String> kinesisanalytics,
-        @Nullable Output<String> kinesisanalyticsv2,
-        @Nullable Output<String> kinesisvideo,
-        @Nullable Output<String> kms,
-        @Nullable Output<String> lakeformation,
-        @Nullable Output<String> lambda,
-        @Nullable Output<String> lexmodels,
-        @Nullable Output<String> licensemanager,
-        @Nullable Output<String> lightsail,
-        @Nullable Output<String> location,
-        @Nullable Output<String> macie,
-        @Nullable Output<String> macie2,
-        @Nullable Output<String> managedblockchain,
-        @Nullable Output<String> marketplacecatalog,
-        @Nullable Output<String> mediaconnect,
-        @Nullable Output<String> mediaconvert,
-        @Nullable Output<String> medialive,
-        @Nullable Output<String> mediapackage,
-        @Nullable Output<String> mediastore,
-        @Nullable Output<String> mediastoredata,
-        @Nullable Output<String> memorydb,
-        @Nullable Output<String> mq,
-        @Nullable Output<String> mwaa,
-        @Nullable Output<String> neptune,
-        @Nullable Output<String> networkfirewall,
-        @Nullable Output<String> networkmanager,
-        @Nullable Output<String> opsworks,
-        @Nullable Output<String> organizations,
-        @Nullable Output<String> outposts,
-        @Nullable Output<String> personalize,
-        @Nullable Output<String> pinpoint,
-        @Nullable Output<String> pricing,
-        @Nullable Output<String> qldb,
-        @Nullable Output<String> quicksight,
-        @Nullable Output<String> ram,
-        @Nullable Output<String> rds,
-        @Nullable Output<String> redshift,
-        @Nullable Output<String> resourcegroups,
-        @Nullable Output<String> resourcegroupstaggingapi,
-        @Nullable Output<String> route53,
-        @Nullable Output<String> route53domains,
-        @Nullable Output<String> route53recoverycontrolconfig,
-        @Nullable Output<String> route53recoveryreadiness,
-        @Nullable Output<String> route53resolver,
-        @Nullable Output<String> s3,
-        @Nullable Output<String> s3control,
-        @Nullable Output<String> s3outposts,
-        @Nullable Output<String> sagemaker,
-        @Nullable Output<String> schemas,
-        @Nullable Output<String> sdb,
-        @Nullable Output<String> secretsmanager,
-        @Nullable Output<String> securityhub,
-        @Nullable Output<String> serverlessrepo,
-        @Nullable Output<String> servicecatalog,
-        @Nullable Output<String> servicediscovery,
-        @Nullable Output<String> servicequotas,
-        @Nullable Output<String> ses,
-        @Nullable Output<String> shield,
-        @Nullable Output<String> signer,
-        @Nullable Output<String> sns,
-        @Nullable Output<String> sqs,
-        @Nullable Output<String> ssm,
-        @Nullable Output<String> ssoadmin,
-        @Nullable Output<String> stepfunctions,
-        @Nullable Output<String> storagegateway,
-        @Nullable Output<String> sts,
-        @Nullable Output<String> swf,
-        @Nullable Output<String> synthetics,
-        @Nullable Output<String> timestreamwrite,
-        @Nullable Output<String> transfer,
-        @Nullable Output<String> waf,
-        @Nullable Output<String> wafregional,
-        @Nullable Output<String> wafv2,
-        @Nullable Output<String> worklink,
-        @Nullable Output<String> workmail,
-        @Nullable Output<String> workspaces,
-        @Nullable Output<String> xray) {
-        this.accessanalyzer = accessanalyzer;
-        this.acm = acm;
-        this.acmpca = acmpca;
-        this.amplify = amplify;
-        this.appconfig = appconfig;
-        this.applicationautoscaling = applicationautoscaling;
-        this.applicationinsights = applicationinsights;
-        this.appmesh = appmesh;
-        this.apprunner = apprunner;
-        this.appstream = appstream;
-        this.appsync = appsync;
-        this.athena = athena;
-        this.auditmanager = auditmanager;
-        this.autoscaling = autoscaling;
-        this.backup = backup;
-        this.batch = batch;
-        this.budgets = budgets;
-        this.chime = chime;
-        this.cloud9 = cloud9;
-        this.cloudformation = cloudformation;
-        this.cloudfront = cloudfront;
-        this.cloudhsm = cloudhsm;
-        this.cloudsearch = cloudsearch;
-        this.cloudtrail = cloudtrail;
-        this.cloudwatch = cloudwatch;
-        this.cloudwatchevents = cloudwatchevents;
-        this.cloudwatchlogs = cloudwatchlogs;
-        this.codeartifact = codeartifact;
-        this.codebuild = codebuild;
-        this.codecommit = codecommit;
-        this.codedeploy = codedeploy;
-        this.codepipeline = codepipeline;
-        this.codestarconnections = codestarconnections;
-        this.cognitoidentity = cognitoidentity;
-        this.configservice = configservice;
-        this.connect = connect;
-        this.cur = cur;
-        this.dataexchange = dataexchange;
-        this.datapipeline = datapipeline;
-        this.datasync = datasync;
-        this.dax = dax;
-        this.detective = detective;
-        this.devicefarm = devicefarm;
-        this.directconnect = directconnect;
-        this.dlm = dlm;
-        this.dms = dms;
-        this.docdb = docdb;
-        this.ds = ds;
-        this.dynamodb = dynamodb;
-        this.ec2 = ec2;
-        this.ecr = ecr;
-        this.ecrpublic = ecrpublic;
-        this.ecs = ecs;
-        this.efs = efs;
-        this.eks = eks;
-        this.elasticache = elasticache;
-        this.elasticbeanstalk = elasticbeanstalk;
-        this.elastictranscoder = elastictranscoder;
-        this.elb = elb;
-        this.elbv2 = elbv2;
-        this.emr = emr;
-        this.emrcontainers = emrcontainers;
-        this.es = es;
-        this.firehose = firehose;
-        this.fms = fms;
-        this.forecast = forecast;
-        this.fsx = fsx;
-        this.gamelift = gamelift;
-        this.glacier = glacier;
-        this.globalaccelerator = globalaccelerator;
-        this.glue = glue;
-        this.greengrass = greengrass;
-        this.guardduty = guardduty;
-        this.iam = iam;
-        this.identitystore = identitystore;
-        this.imagebuilder = imagebuilder;
-        this.inspector = inspector;
-        this.iot = iot;
-        this.iotanalytics = iotanalytics;
-        this.iotevents = iotevents;
-        this.kafka = kafka;
-        this.kinesis = kinesis;
-        this.kinesisanalytics = kinesisanalytics;
-        this.kinesisanalyticsv2 = kinesisanalyticsv2;
-        this.kinesisvideo = kinesisvideo;
-        this.kms = kms;
-        this.lakeformation = lakeformation;
-        this.lambda = lambda;
-        this.lexmodels = lexmodels;
-        this.licensemanager = licensemanager;
-        this.lightsail = lightsail;
-        this.location = location;
-        this.macie = macie;
-        this.macie2 = macie2;
-        this.managedblockchain = managedblockchain;
-        this.marketplacecatalog = marketplacecatalog;
-        this.mediaconnect = mediaconnect;
-        this.mediaconvert = mediaconvert;
-        this.medialive = medialive;
-        this.mediapackage = mediapackage;
-        this.mediastore = mediastore;
-        this.mediastoredata = mediastoredata;
-        this.memorydb = memorydb;
-        this.mq = mq;
-        this.mwaa = mwaa;
-        this.neptune = neptune;
-        this.networkfirewall = networkfirewall;
-        this.networkmanager = networkmanager;
-        this.opsworks = opsworks;
-        this.organizations = organizations;
-        this.outposts = outposts;
-        this.personalize = personalize;
-        this.pinpoint = pinpoint;
-        this.pricing = pricing;
-        this.qldb = qldb;
-        this.quicksight = quicksight;
-        this.ram = ram;
-        this.rds = rds;
-        this.redshift = redshift;
-        this.resourcegroups = resourcegroups;
-        this.resourcegroupstaggingapi = resourcegroupstaggingapi;
-        this.route53 = route53;
-        this.route53domains = route53domains;
-        this.route53recoverycontrolconfig = route53recoverycontrolconfig;
-        this.route53recoveryreadiness = route53recoveryreadiness;
-        this.route53resolver = route53resolver;
-        this.s3 = s3;
-        this.s3control = s3control;
-        this.s3outposts = s3outposts;
-        this.sagemaker = sagemaker;
-        this.schemas = schemas;
-        this.sdb = sdb;
-        this.secretsmanager = secretsmanager;
-        this.securityhub = securityhub;
-        this.serverlessrepo = serverlessrepo;
-        this.servicecatalog = servicecatalog;
-        this.servicediscovery = servicediscovery;
-        this.servicequotas = servicequotas;
-        this.ses = ses;
-        this.shield = shield;
-        this.signer = signer;
-        this.sns = sns;
-        this.sqs = sqs;
-        this.ssm = ssm;
-        this.ssoadmin = ssoadmin;
-        this.stepfunctions = stepfunctions;
-        this.storagegateway = storagegateway;
-        this.sts = sts;
-        this.swf = swf;
-        this.synthetics = synthetics;
-        this.timestreamwrite = timestreamwrite;
-        this.transfer = transfer;
-        this.waf = waf;
-        this.wafregional = wafregional;
-        this.wafv2 = wafv2;
-        this.worklink = worklink;
-        this.workmail = workmail;
-        this.workspaces = workspaces;
-        this.xray = xray;
-    }
+    private ProviderEndpointArgs() {}
 
-    private ProviderEndpointArgs() {
-        this.accessanalyzer = Codegen.empty();
-        this.acm = Codegen.empty();
-        this.acmpca = Codegen.empty();
-        this.amplify = Codegen.empty();
-        this.appconfig = Codegen.empty();
-        this.applicationautoscaling = Codegen.empty();
-        this.applicationinsights = Codegen.empty();
-        this.appmesh = Codegen.empty();
-        this.apprunner = Codegen.empty();
-        this.appstream = Codegen.empty();
-        this.appsync = Codegen.empty();
-        this.athena = Codegen.empty();
-        this.auditmanager = Codegen.empty();
-        this.autoscaling = Codegen.empty();
-        this.backup = Codegen.empty();
-        this.batch = Codegen.empty();
-        this.budgets = Codegen.empty();
-        this.chime = Codegen.empty();
-        this.cloud9 = Codegen.empty();
-        this.cloudformation = Codegen.empty();
-        this.cloudfront = Codegen.empty();
-        this.cloudhsm = Codegen.empty();
-        this.cloudsearch = Codegen.empty();
-        this.cloudtrail = Codegen.empty();
-        this.cloudwatch = Codegen.empty();
-        this.cloudwatchevents = Codegen.empty();
-        this.cloudwatchlogs = Codegen.empty();
-        this.codeartifact = Codegen.empty();
-        this.codebuild = Codegen.empty();
-        this.codecommit = Codegen.empty();
-        this.codedeploy = Codegen.empty();
-        this.codepipeline = Codegen.empty();
-        this.codestarconnections = Codegen.empty();
-        this.cognitoidentity = Codegen.empty();
-        this.configservice = Codegen.empty();
-        this.connect = Codegen.empty();
-        this.cur = Codegen.empty();
-        this.dataexchange = Codegen.empty();
-        this.datapipeline = Codegen.empty();
-        this.datasync = Codegen.empty();
-        this.dax = Codegen.empty();
-        this.detective = Codegen.empty();
-        this.devicefarm = Codegen.empty();
-        this.directconnect = Codegen.empty();
-        this.dlm = Codegen.empty();
-        this.dms = Codegen.empty();
-        this.docdb = Codegen.empty();
-        this.ds = Codegen.empty();
-        this.dynamodb = Codegen.empty();
-        this.ec2 = Codegen.empty();
-        this.ecr = Codegen.empty();
-        this.ecrpublic = Codegen.empty();
-        this.ecs = Codegen.empty();
-        this.efs = Codegen.empty();
-        this.eks = Codegen.empty();
-        this.elasticache = Codegen.empty();
-        this.elasticbeanstalk = Codegen.empty();
-        this.elastictranscoder = Codegen.empty();
-        this.elb = Codegen.empty();
-        this.elbv2 = Codegen.empty();
-        this.emr = Codegen.empty();
-        this.emrcontainers = Codegen.empty();
-        this.es = Codegen.empty();
-        this.firehose = Codegen.empty();
-        this.fms = Codegen.empty();
-        this.forecast = Codegen.empty();
-        this.fsx = Codegen.empty();
-        this.gamelift = Codegen.empty();
-        this.glacier = Codegen.empty();
-        this.globalaccelerator = Codegen.empty();
-        this.glue = Codegen.empty();
-        this.greengrass = Codegen.empty();
-        this.guardduty = Codegen.empty();
-        this.iam = Codegen.empty();
-        this.identitystore = Codegen.empty();
-        this.imagebuilder = Codegen.empty();
-        this.inspector = Codegen.empty();
-        this.iot = Codegen.empty();
-        this.iotanalytics = Codegen.empty();
-        this.iotevents = Codegen.empty();
-        this.kafka = Codegen.empty();
-        this.kinesis = Codegen.empty();
-        this.kinesisanalytics = Codegen.empty();
-        this.kinesisanalyticsv2 = Codegen.empty();
-        this.kinesisvideo = Codegen.empty();
-        this.kms = Codegen.empty();
-        this.lakeformation = Codegen.empty();
-        this.lambda = Codegen.empty();
-        this.lexmodels = Codegen.empty();
-        this.licensemanager = Codegen.empty();
-        this.lightsail = Codegen.empty();
-        this.location = Codegen.empty();
-        this.macie = Codegen.empty();
-        this.macie2 = Codegen.empty();
-        this.managedblockchain = Codegen.empty();
-        this.marketplacecatalog = Codegen.empty();
-        this.mediaconnect = Codegen.empty();
-        this.mediaconvert = Codegen.empty();
-        this.medialive = Codegen.empty();
-        this.mediapackage = Codegen.empty();
-        this.mediastore = Codegen.empty();
-        this.mediastoredata = Codegen.empty();
-        this.memorydb = Codegen.empty();
-        this.mq = Codegen.empty();
-        this.mwaa = Codegen.empty();
-        this.neptune = Codegen.empty();
-        this.networkfirewall = Codegen.empty();
-        this.networkmanager = Codegen.empty();
-        this.opsworks = Codegen.empty();
-        this.organizations = Codegen.empty();
-        this.outposts = Codegen.empty();
-        this.personalize = Codegen.empty();
-        this.pinpoint = Codegen.empty();
-        this.pricing = Codegen.empty();
-        this.qldb = Codegen.empty();
-        this.quicksight = Codegen.empty();
-        this.ram = Codegen.empty();
-        this.rds = Codegen.empty();
-        this.redshift = Codegen.empty();
-        this.resourcegroups = Codegen.empty();
-        this.resourcegroupstaggingapi = Codegen.empty();
-        this.route53 = Codegen.empty();
-        this.route53domains = Codegen.empty();
-        this.route53recoverycontrolconfig = Codegen.empty();
-        this.route53recoveryreadiness = Codegen.empty();
-        this.route53resolver = Codegen.empty();
-        this.s3 = Codegen.empty();
-        this.s3control = Codegen.empty();
-        this.s3outposts = Codegen.empty();
-        this.sagemaker = Codegen.empty();
-        this.schemas = Codegen.empty();
-        this.sdb = Codegen.empty();
-        this.secretsmanager = Codegen.empty();
-        this.securityhub = Codegen.empty();
-        this.serverlessrepo = Codegen.empty();
-        this.servicecatalog = Codegen.empty();
-        this.servicediscovery = Codegen.empty();
-        this.servicequotas = Codegen.empty();
-        this.ses = Codegen.empty();
-        this.shield = Codegen.empty();
-        this.signer = Codegen.empty();
-        this.sns = Codegen.empty();
-        this.sqs = Codegen.empty();
-        this.ssm = Codegen.empty();
-        this.ssoadmin = Codegen.empty();
-        this.stepfunctions = Codegen.empty();
-        this.storagegateway = Codegen.empty();
-        this.sts = Codegen.empty();
-        this.swf = Codegen.empty();
-        this.synthetics = Codegen.empty();
-        this.timestreamwrite = Codegen.empty();
-        this.transfer = Codegen.empty();
-        this.waf = Codegen.empty();
-        this.wafregional = Codegen.empty();
-        this.wafv2 = Codegen.empty();
-        this.worklink = Codegen.empty();
-        this.workmail = Codegen.empty();
-        this.workspaces = Codegen.empty();
-        this.xray = Codegen.empty();
+    private ProviderEndpointArgs(ProviderEndpointArgs $) {
+        this.accessanalyzer = $.accessanalyzer;
+        this.acm = $.acm;
+        this.acmpca = $.acmpca;
+        this.amplify = $.amplify;
+        this.appconfig = $.appconfig;
+        this.applicationautoscaling = $.applicationautoscaling;
+        this.applicationinsights = $.applicationinsights;
+        this.appmesh = $.appmesh;
+        this.apprunner = $.apprunner;
+        this.appstream = $.appstream;
+        this.appsync = $.appsync;
+        this.athena = $.athena;
+        this.auditmanager = $.auditmanager;
+        this.autoscaling = $.autoscaling;
+        this.backup = $.backup;
+        this.batch = $.batch;
+        this.budgets = $.budgets;
+        this.chime = $.chime;
+        this.cloud9 = $.cloud9;
+        this.cloudformation = $.cloudformation;
+        this.cloudfront = $.cloudfront;
+        this.cloudhsm = $.cloudhsm;
+        this.cloudsearch = $.cloudsearch;
+        this.cloudtrail = $.cloudtrail;
+        this.cloudwatch = $.cloudwatch;
+        this.cloudwatchevents = $.cloudwatchevents;
+        this.cloudwatchlogs = $.cloudwatchlogs;
+        this.codeartifact = $.codeartifact;
+        this.codebuild = $.codebuild;
+        this.codecommit = $.codecommit;
+        this.codedeploy = $.codedeploy;
+        this.codepipeline = $.codepipeline;
+        this.codestarconnections = $.codestarconnections;
+        this.cognitoidentity = $.cognitoidentity;
+        this.configservice = $.configservice;
+        this.connect = $.connect;
+        this.cur = $.cur;
+        this.dataexchange = $.dataexchange;
+        this.datapipeline = $.datapipeline;
+        this.datasync = $.datasync;
+        this.dax = $.dax;
+        this.detective = $.detective;
+        this.devicefarm = $.devicefarm;
+        this.directconnect = $.directconnect;
+        this.dlm = $.dlm;
+        this.dms = $.dms;
+        this.docdb = $.docdb;
+        this.ds = $.ds;
+        this.dynamodb = $.dynamodb;
+        this.ec2 = $.ec2;
+        this.ecr = $.ecr;
+        this.ecrpublic = $.ecrpublic;
+        this.ecs = $.ecs;
+        this.efs = $.efs;
+        this.eks = $.eks;
+        this.elasticache = $.elasticache;
+        this.elasticbeanstalk = $.elasticbeanstalk;
+        this.elastictranscoder = $.elastictranscoder;
+        this.elb = $.elb;
+        this.elbv2 = $.elbv2;
+        this.emr = $.emr;
+        this.emrcontainers = $.emrcontainers;
+        this.es = $.es;
+        this.firehose = $.firehose;
+        this.fms = $.fms;
+        this.forecast = $.forecast;
+        this.fsx = $.fsx;
+        this.gamelift = $.gamelift;
+        this.glacier = $.glacier;
+        this.globalaccelerator = $.globalaccelerator;
+        this.glue = $.glue;
+        this.greengrass = $.greengrass;
+        this.guardduty = $.guardduty;
+        this.iam = $.iam;
+        this.identitystore = $.identitystore;
+        this.imagebuilder = $.imagebuilder;
+        this.inspector = $.inspector;
+        this.iot = $.iot;
+        this.iotanalytics = $.iotanalytics;
+        this.iotevents = $.iotevents;
+        this.kafka = $.kafka;
+        this.kinesis = $.kinesis;
+        this.kinesisanalytics = $.kinesisanalytics;
+        this.kinesisanalyticsv2 = $.kinesisanalyticsv2;
+        this.kinesisvideo = $.kinesisvideo;
+        this.kms = $.kms;
+        this.lakeformation = $.lakeformation;
+        this.lambda = $.lambda;
+        this.lexmodels = $.lexmodels;
+        this.licensemanager = $.licensemanager;
+        this.lightsail = $.lightsail;
+        this.location = $.location;
+        this.macie = $.macie;
+        this.macie2 = $.macie2;
+        this.managedblockchain = $.managedblockchain;
+        this.marketplacecatalog = $.marketplacecatalog;
+        this.mediaconnect = $.mediaconnect;
+        this.mediaconvert = $.mediaconvert;
+        this.medialive = $.medialive;
+        this.mediapackage = $.mediapackage;
+        this.mediastore = $.mediastore;
+        this.mediastoredata = $.mediastoredata;
+        this.memorydb = $.memorydb;
+        this.mq = $.mq;
+        this.mwaa = $.mwaa;
+        this.neptune = $.neptune;
+        this.networkfirewall = $.networkfirewall;
+        this.networkmanager = $.networkmanager;
+        this.opsworks = $.opsworks;
+        this.organizations = $.organizations;
+        this.outposts = $.outposts;
+        this.personalize = $.personalize;
+        this.pinpoint = $.pinpoint;
+        this.pricing = $.pricing;
+        this.qldb = $.qldb;
+        this.quicksight = $.quicksight;
+        this.ram = $.ram;
+        this.rds = $.rds;
+        this.redshift = $.redshift;
+        this.resourcegroups = $.resourcegroups;
+        this.resourcegroupstaggingapi = $.resourcegroupstaggingapi;
+        this.route53 = $.route53;
+        this.route53domains = $.route53domains;
+        this.route53recoverycontrolconfig = $.route53recoverycontrolconfig;
+        this.route53recoveryreadiness = $.route53recoveryreadiness;
+        this.route53resolver = $.route53resolver;
+        this.s3 = $.s3;
+        this.s3control = $.s3control;
+        this.s3outposts = $.s3outposts;
+        this.sagemaker = $.sagemaker;
+        this.schemas = $.schemas;
+        this.sdb = $.sdb;
+        this.secretsmanager = $.secretsmanager;
+        this.securityhub = $.securityhub;
+        this.serverlessrepo = $.serverlessrepo;
+        this.servicecatalog = $.servicecatalog;
+        this.servicediscovery = $.servicediscovery;
+        this.servicequotas = $.servicequotas;
+        this.ses = $.ses;
+        this.shield = $.shield;
+        this.signer = $.signer;
+        this.sns = $.sns;
+        this.sqs = $.sqs;
+        this.ssm = $.ssm;
+        this.ssoadmin = $.ssoadmin;
+        this.stepfunctions = $.stepfunctions;
+        this.storagegateway = $.storagegateway;
+        this.sts = $.sts;
+        this.swf = $.swf;
+        this.synthetics = $.synthetics;
+        this.timestreamwrite = $.timestreamwrite;
+        this.transfer = $.transfer;
+        this.waf = $.waf;
+        this.wafregional = $.wafregional;
+        this.wafv2 = $.wafv2;
+        this.worklink = $.worklink;
+        this.workmail = $.workmail;
+        this.workspaces = $.workspaces;
+        this.xray = $.xray;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessanalyzer;
-        private @Nullable Output<String> acm;
-        private @Nullable Output<String> acmpca;
-        private @Nullable Output<String> amplify;
-        private @Nullable Output<String> appconfig;
-        private @Nullable Output<String> applicationautoscaling;
-        private @Nullable Output<String> applicationinsights;
-        private @Nullable Output<String> appmesh;
-        private @Nullable Output<String> apprunner;
-        private @Nullable Output<String> appstream;
-        private @Nullable Output<String> appsync;
-        private @Nullable Output<String> athena;
-        private @Nullable Output<String> auditmanager;
-        private @Nullable Output<String> autoscaling;
-        private @Nullable Output<String> backup;
-        private @Nullable Output<String> batch;
-        private @Nullable Output<String> budgets;
-        private @Nullable Output<String> chime;
-        private @Nullable Output<String> cloud9;
-        private @Nullable Output<String> cloudformation;
-        private @Nullable Output<String> cloudfront;
-        private @Nullable Output<String> cloudhsm;
-        private @Nullable Output<String> cloudsearch;
-        private @Nullable Output<String> cloudtrail;
-        private @Nullable Output<String> cloudwatch;
-        private @Nullable Output<String> cloudwatchevents;
-        private @Nullable Output<String> cloudwatchlogs;
-        private @Nullable Output<String> codeartifact;
-        private @Nullable Output<String> codebuild;
-        private @Nullable Output<String> codecommit;
-        private @Nullable Output<String> codedeploy;
-        private @Nullable Output<String> codepipeline;
-        private @Nullable Output<String> codestarconnections;
-        private @Nullable Output<String> cognitoidentity;
-        private @Nullable Output<String> configservice;
-        private @Nullable Output<String> connect;
-        private @Nullable Output<String> cur;
-        private @Nullable Output<String> dataexchange;
-        private @Nullable Output<String> datapipeline;
-        private @Nullable Output<String> datasync;
-        private @Nullable Output<String> dax;
-        private @Nullable Output<String> detective;
-        private @Nullable Output<String> devicefarm;
-        private @Nullable Output<String> directconnect;
-        private @Nullable Output<String> dlm;
-        private @Nullable Output<String> dms;
-        private @Nullable Output<String> docdb;
-        private @Nullable Output<String> ds;
-        private @Nullable Output<String> dynamodb;
-        private @Nullable Output<String> ec2;
-        private @Nullable Output<String> ecr;
-        private @Nullable Output<String> ecrpublic;
-        private @Nullable Output<String> ecs;
-        private @Nullable Output<String> efs;
-        private @Nullable Output<String> eks;
-        private @Nullable Output<String> elasticache;
-        private @Nullable Output<String> elasticbeanstalk;
-        private @Nullable Output<String> elastictranscoder;
-        private @Nullable Output<String> elb;
-        private @Nullable Output<String> elbv2;
-        private @Nullable Output<String> emr;
-        private @Nullable Output<String> emrcontainers;
-        private @Nullable Output<String> es;
-        private @Nullable Output<String> firehose;
-        private @Nullable Output<String> fms;
-        private @Nullable Output<String> forecast;
-        private @Nullable Output<String> fsx;
-        private @Nullable Output<String> gamelift;
-        private @Nullable Output<String> glacier;
-        private @Nullable Output<String> globalaccelerator;
-        private @Nullable Output<String> glue;
-        private @Nullable Output<String> greengrass;
-        private @Nullable Output<String> guardduty;
-        private @Nullable Output<String> iam;
-        private @Nullable Output<String> identitystore;
-        private @Nullable Output<String> imagebuilder;
-        private @Nullable Output<String> inspector;
-        private @Nullable Output<String> iot;
-        private @Nullable Output<String> iotanalytics;
-        private @Nullable Output<String> iotevents;
-        private @Nullable Output<String> kafka;
-        private @Nullable Output<String> kinesis;
-        private @Nullable Output<String> kinesisanalytics;
-        private @Nullable Output<String> kinesisanalyticsv2;
-        private @Nullable Output<String> kinesisvideo;
-        private @Nullable Output<String> kms;
-        private @Nullable Output<String> lakeformation;
-        private @Nullable Output<String> lambda;
-        private @Nullable Output<String> lexmodels;
-        private @Nullable Output<String> licensemanager;
-        private @Nullable Output<String> lightsail;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> macie;
-        private @Nullable Output<String> macie2;
-        private @Nullable Output<String> managedblockchain;
-        private @Nullable Output<String> marketplacecatalog;
-        private @Nullable Output<String> mediaconnect;
-        private @Nullable Output<String> mediaconvert;
-        private @Nullable Output<String> medialive;
-        private @Nullable Output<String> mediapackage;
-        private @Nullable Output<String> mediastore;
-        private @Nullable Output<String> mediastoredata;
-        private @Nullable Output<String> memorydb;
-        private @Nullable Output<String> mq;
-        private @Nullable Output<String> mwaa;
-        private @Nullable Output<String> neptune;
-        private @Nullable Output<String> networkfirewall;
-        private @Nullable Output<String> networkmanager;
-        private @Nullable Output<String> opsworks;
-        private @Nullable Output<String> organizations;
-        private @Nullable Output<String> outposts;
-        private @Nullable Output<String> personalize;
-        private @Nullable Output<String> pinpoint;
-        private @Nullable Output<String> pricing;
-        private @Nullable Output<String> qldb;
-        private @Nullable Output<String> quicksight;
-        private @Nullable Output<String> ram;
-        private @Nullable Output<String> rds;
-        private @Nullable Output<String> redshift;
-        private @Nullable Output<String> resourcegroups;
-        private @Nullable Output<String> resourcegroupstaggingapi;
-        private @Nullable Output<String> route53;
-        private @Nullable Output<String> route53domains;
-        private @Nullable Output<String> route53recoverycontrolconfig;
-        private @Nullable Output<String> route53recoveryreadiness;
-        private @Nullable Output<String> route53resolver;
-        private @Nullable Output<String> s3;
-        private @Nullable Output<String> s3control;
-        private @Nullable Output<String> s3outposts;
-        private @Nullable Output<String> sagemaker;
-        private @Nullable Output<String> schemas;
-        private @Nullable Output<String> sdb;
-        private @Nullable Output<String> secretsmanager;
-        private @Nullable Output<String> securityhub;
-        private @Nullable Output<String> serverlessrepo;
-        private @Nullable Output<String> servicecatalog;
-        private @Nullable Output<String> servicediscovery;
-        private @Nullable Output<String> servicequotas;
-        private @Nullable Output<String> ses;
-        private @Nullable Output<String> shield;
-        private @Nullable Output<String> signer;
-        private @Nullable Output<String> sns;
-        private @Nullable Output<String> sqs;
-        private @Nullable Output<String> ssm;
-        private @Nullable Output<String> ssoadmin;
-        private @Nullable Output<String> stepfunctions;
-        private @Nullable Output<String> storagegateway;
-        private @Nullable Output<String> sts;
-        private @Nullable Output<String> swf;
-        private @Nullable Output<String> synthetics;
-        private @Nullable Output<String> timestreamwrite;
-        private @Nullable Output<String> transfer;
-        private @Nullable Output<String> waf;
-        private @Nullable Output<String> wafregional;
-        private @Nullable Output<String> wafv2;
-        private @Nullable Output<String> worklink;
-        private @Nullable Output<String> workmail;
-        private @Nullable Output<String> workspaces;
-        private @Nullable Output<String> xray;
+        private ProviderEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderEndpointArgs();
         }
 
         public Builder(ProviderEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessanalyzer = defaults.accessanalyzer;
-    	      this.acm = defaults.acm;
-    	      this.acmpca = defaults.acmpca;
-    	      this.amplify = defaults.amplify;
-    	      this.appconfig = defaults.appconfig;
-    	      this.applicationautoscaling = defaults.applicationautoscaling;
-    	      this.applicationinsights = defaults.applicationinsights;
-    	      this.appmesh = defaults.appmesh;
-    	      this.apprunner = defaults.apprunner;
-    	      this.appstream = defaults.appstream;
-    	      this.appsync = defaults.appsync;
-    	      this.athena = defaults.athena;
-    	      this.auditmanager = defaults.auditmanager;
-    	      this.autoscaling = defaults.autoscaling;
-    	      this.backup = defaults.backup;
-    	      this.batch = defaults.batch;
-    	      this.budgets = defaults.budgets;
-    	      this.chime = defaults.chime;
-    	      this.cloud9 = defaults.cloud9;
-    	      this.cloudformation = defaults.cloudformation;
-    	      this.cloudfront = defaults.cloudfront;
-    	      this.cloudhsm = defaults.cloudhsm;
-    	      this.cloudsearch = defaults.cloudsearch;
-    	      this.cloudtrail = defaults.cloudtrail;
-    	      this.cloudwatch = defaults.cloudwatch;
-    	      this.cloudwatchevents = defaults.cloudwatchevents;
-    	      this.cloudwatchlogs = defaults.cloudwatchlogs;
-    	      this.codeartifact = defaults.codeartifact;
-    	      this.codebuild = defaults.codebuild;
-    	      this.codecommit = defaults.codecommit;
-    	      this.codedeploy = defaults.codedeploy;
-    	      this.codepipeline = defaults.codepipeline;
-    	      this.codestarconnections = defaults.codestarconnections;
-    	      this.cognitoidentity = defaults.cognitoidentity;
-    	      this.configservice = defaults.configservice;
-    	      this.connect = defaults.connect;
-    	      this.cur = defaults.cur;
-    	      this.dataexchange = defaults.dataexchange;
-    	      this.datapipeline = defaults.datapipeline;
-    	      this.datasync = defaults.datasync;
-    	      this.dax = defaults.dax;
-    	      this.detective = defaults.detective;
-    	      this.devicefarm = defaults.devicefarm;
-    	      this.directconnect = defaults.directconnect;
-    	      this.dlm = defaults.dlm;
-    	      this.dms = defaults.dms;
-    	      this.docdb = defaults.docdb;
-    	      this.ds = defaults.ds;
-    	      this.dynamodb = defaults.dynamodb;
-    	      this.ec2 = defaults.ec2;
-    	      this.ecr = defaults.ecr;
-    	      this.ecrpublic = defaults.ecrpublic;
-    	      this.ecs = defaults.ecs;
-    	      this.efs = defaults.efs;
-    	      this.eks = defaults.eks;
-    	      this.elasticache = defaults.elasticache;
-    	      this.elasticbeanstalk = defaults.elasticbeanstalk;
-    	      this.elastictranscoder = defaults.elastictranscoder;
-    	      this.elb = defaults.elb;
-    	      this.elbv2 = defaults.elbv2;
-    	      this.emr = defaults.emr;
-    	      this.emrcontainers = defaults.emrcontainers;
-    	      this.es = defaults.es;
-    	      this.firehose = defaults.firehose;
-    	      this.fms = defaults.fms;
-    	      this.forecast = defaults.forecast;
-    	      this.fsx = defaults.fsx;
-    	      this.gamelift = defaults.gamelift;
-    	      this.glacier = defaults.glacier;
-    	      this.globalaccelerator = defaults.globalaccelerator;
-    	      this.glue = defaults.glue;
-    	      this.greengrass = defaults.greengrass;
-    	      this.guardduty = defaults.guardduty;
-    	      this.iam = defaults.iam;
-    	      this.identitystore = defaults.identitystore;
-    	      this.imagebuilder = defaults.imagebuilder;
-    	      this.inspector = defaults.inspector;
-    	      this.iot = defaults.iot;
-    	      this.iotanalytics = defaults.iotanalytics;
-    	      this.iotevents = defaults.iotevents;
-    	      this.kafka = defaults.kafka;
-    	      this.kinesis = defaults.kinesis;
-    	      this.kinesisanalytics = defaults.kinesisanalytics;
-    	      this.kinesisanalyticsv2 = defaults.kinesisanalyticsv2;
-    	      this.kinesisvideo = defaults.kinesisvideo;
-    	      this.kms = defaults.kms;
-    	      this.lakeformation = defaults.lakeformation;
-    	      this.lambda = defaults.lambda;
-    	      this.lexmodels = defaults.lexmodels;
-    	      this.licensemanager = defaults.licensemanager;
-    	      this.lightsail = defaults.lightsail;
-    	      this.location = defaults.location;
-    	      this.macie = defaults.macie;
-    	      this.macie2 = defaults.macie2;
-    	      this.managedblockchain = defaults.managedblockchain;
-    	      this.marketplacecatalog = defaults.marketplacecatalog;
-    	      this.mediaconnect = defaults.mediaconnect;
-    	      this.mediaconvert = defaults.mediaconvert;
-    	      this.medialive = defaults.medialive;
-    	      this.mediapackage = defaults.mediapackage;
-    	      this.mediastore = defaults.mediastore;
-    	      this.mediastoredata = defaults.mediastoredata;
-    	      this.memorydb = defaults.memorydb;
-    	      this.mq = defaults.mq;
-    	      this.mwaa = defaults.mwaa;
-    	      this.neptune = defaults.neptune;
-    	      this.networkfirewall = defaults.networkfirewall;
-    	      this.networkmanager = defaults.networkmanager;
-    	      this.opsworks = defaults.opsworks;
-    	      this.organizations = defaults.organizations;
-    	      this.outposts = defaults.outposts;
-    	      this.personalize = defaults.personalize;
-    	      this.pinpoint = defaults.pinpoint;
-    	      this.pricing = defaults.pricing;
-    	      this.qldb = defaults.qldb;
-    	      this.quicksight = defaults.quicksight;
-    	      this.ram = defaults.ram;
-    	      this.rds = defaults.rds;
-    	      this.redshift = defaults.redshift;
-    	      this.resourcegroups = defaults.resourcegroups;
-    	      this.resourcegroupstaggingapi = defaults.resourcegroupstaggingapi;
-    	      this.route53 = defaults.route53;
-    	      this.route53domains = defaults.route53domains;
-    	      this.route53recoverycontrolconfig = defaults.route53recoverycontrolconfig;
-    	      this.route53recoveryreadiness = defaults.route53recoveryreadiness;
-    	      this.route53resolver = defaults.route53resolver;
-    	      this.s3 = defaults.s3;
-    	      this.s3control = defaults.s3control;
-    	      this.s3outposts = defaults.s3outposts;
-    	      this.sagemaker = defaults.sagemaker;
-    	      this.schemas = defaults.schemas;
-    	      this.sdb = defaults.sdb;
-    	      this.secretsmanager = defaults.secretsmanager;
-    	      this.securityhub = defaults.securityhub;
-    	      this.serverlessrepo = defaults.serverlessrepo;
-    	      this.servicecatalog = defaults.servicecatalog;
-    	      this.servicediscovery = defaults.servicediscovery;
-    	      this.servicequotas = defaults.servicequotas;
-    	      this.ses = defaults.ses;
-    	      this.shield = defaults.shield;
-    	      this.signer = defaults.signer;
-    	      this.sns = defaults.sns;
-    	      this.sqs = defaults.sqs;
-    	      this.ssm = defaults.ssm;
-    	      this.ssoadmin = defaults.ssoadmin;
-    	      this.stepfunctions = defaults.stepfunctions;
-    	      this.storagegateway = defaults.storagegateway;
-    	      this.sts = defaults.sts;
-    	      this.swf = defaults.swf;
-    	      this.synthetics = defaults.synthetics;
-    	      this.timestreamwrite = defaults.timestreamwrite;
-    	      this.transfer = defaults.transfer;
-    	      this.waf = defaults.waf;
-    	      this.wafregional = defaults.wafregional;
-    	      this.wafv2 = defaults.wafv2;
-    	      this.worklink = defaults.worklink;
-    	      this.workmail = defaults.workmail;
-    	      this.workspaces = defaults.workspaces;
-    	      this.xray = defaults.xray;
+            $ = new ProviderEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessanalyzer(@Nullable Output<String> accessanalyzer) {
-            this.accessanalyzer = accessanalyzer;
+            $.accessanalyzer = accessanalyzer;
             return this;
         }
-        public Builder accessanalyzer(@Nullable String accessanalyzer) {
-            this.accessanalyzer = Codegen.ofNullable(accessanalyzer);
-            return this;
+
+        public Builder accessanalyzer(String accessanalyzer) {
+            return accessanalyzer(Output.of(accessanalyzer));
         }
+
         public Builder acm(@Nullable Output<String> acm) {
-            this.acm = acm;
+            $.acm = acm;
             return this;
         }
-        public Builder acm(@Nullable String acm) {
-            this.acm = Codegen.ofNullable(acm);
-            return this;
+
+        public Builder acm(String acm) {
+            return acm(Output.of(acm));
         }
+
         public Builder acmpca(@Nullable Output<String> acmpca) {
-            this.acmpca = acmpca;
+            $.acmpca = acmpca;
             return this;
         }
-        public Builder acmpca(@Nullable String acmpca) {
-            this.acmpca = Codegen.ofNullable(acmpca);
-            return this;
+
+        public Builder acmpca(String acmpca) {
+            return acmpca(Output.of(acmpca));
         }
+
         public Builder amplify(@Nullable Output<String> amplify) {
-            this.amplify = amplify;
+            $.amplify = amplify;
             return this;
         }
-        public Builder amplify(@Nullable String amplify) {
-            this.amplify = Codegen.ofNullable(amplify);
-            return this;
+
+        public Builder amplify(String amplify) {
+            return amplify(Output.of(amplify));
         }
+
         public Builder appconfig(@Nullable Output<String> appconfig) {
-            this.appconfig = appconfig;
+            $.appconfig = appconfig;
             return this;
         }
-        public Builder appconfig(@Nullable String appconfig) {
-            this.appconfig = Codegen.ofNullable(appconfig);
-            return this;
+
+        public Builder appconfig(String appconfig) {
+            return appconfig(Output.of(appconfig));
         }
+
         public Builder applicationautoscaling(@Nullable Output<String> applicationautoscaling) {
-            this.applicationautoscaling = applicationautoscaling;
+            $.applicationautoscaling = applicationautoscaling;
             return this;
         }
-        public Builder applicationautoscaling(@Nullable String applicationautoscaling) {
-            this.applicationautoscaling = Codegen.ofNullable(applicationautoscaling);
-            return this;
+
+        public Builder applicationautoscaling(String applicationautoscaling) {
+            return applicationautoscaling(Output.of(applicationautoscaling));
         }
+
         public Builder applicationinsights(@Nullable Output<String> applicationinsights) {
-            this.applicationinsights = applicationinsights;
+            $.applicationinsights = applicationinsights;
             return this;
         }
-        public Builder applicationinsights(@Nullable String applicationinsights) {
-            this.applicationinsights = Codegen.ofNullable(applicationinsights);
-            return this;
+
+        public Builder applicationinsights(String applicationinsights) {
+            return applicationinsights(Output.of(applicationinsights));
         }
+
         public Builder appmesh(@Nullable Output<String> appmesh) {
-            this.appmesh = appmesh;
+            $.appmesh = appmesh;
             return this;
         }
-        public Builder appmesh(@Nullable String appmesh) {
-            this.appmesh = Codegen.ofNullable(appmesh);
-            return this;
+
+        public Builder appmesh(String appmesh) {
+            return appmesh(Output.of(appmesh));
         }
+
         public Builder apprunner(@Nullable Output<String> apprunner) {
-            this.apprunner = apprunner;
+            $.apprunner = apprunner;
             return this;
         }
-        public Builder apprunner(@Nullable String apprunner) {
-            this.apprunner = Codegen.ofNullable(apprunner);
-            return this;
+
+        public Builder apprunner(String apprunner) {
+            return apprunner(Output.of(apprunner));
         }
+
         public Builder appstream(@Nullable Output<String> appstream) {
-            this.appstream = appstream;
+            $.appstream = appstream;
             return this;
         }
-        public Builder appstream(@Nullable String appstream) {
-            this.appstream = Codegen.ofNullable(appstream);
-            return this;
+
+        public Builder appstream(String appstream) {
+            return appstream(Output.of(appstream));
         }
+
         public Builder appsync(@Nullable Output<String> appsync) {
-            this.appsync = appsync;
+            $.appsync = appsync;
             return this;
         }
-        public Builder appsync(@Nullable String appsync) {
-            this.appsync = Codegen.ofNullable(appsync);
-            return this;
+
+        public Builder appsync(String appsync) {
+            return appsync(Output.of(appsync));
         }
+
         public Builder athena(@Nullable Output<String> athena) {
-            this.athena = athena;
+            $.athena = athena;
             return this;
         }
-        public Builder athena(@Nullable String athena) {
-            this.athena = Codegen.ofNullable(athena);
-            return this;
+
+        public Builder athena(String athena) {
+            return athena(Output.of(athena));
         }
+
         public Builder auditmanager(@Nullable Output<String> auditmanager) {
-            this.auditmanager = auditmanager;
+            $.auditmanager = auditmanager;
             return this;
         }
-        public Builder auditmanager(@Nullable String auditmanager) {
-            this.auditmanager = Codegen.ofNullable(auditmanager);
-            return this;
+
+        public Builder auditmanager(String auditmanager) {
+            return auditmanager(Output.of(auditmanager));
         }
+
         public Builder autoscaling(@Nullable Output<String> autoscaling) {
-            this.autoscaling = autoscaling;
+            $.autoscaling = autoscaling;
             return this;
         }
-        public Builder autoscaling(@Nullable String autoscaling) {
-            this.autoscaling = Codegen.ofNullable(autoscaling);
-            return this;
+
+        public Builder autoscaling(String autoscaling) {
+            return autoscaling(Output.of(autoscaling));
         }
+
         public Builder backup(@Nullable Output<String> backup) {
-            this.backup = backup;
+            $.backup = backup;
             return this;
         }
-        public Builder backup(@Nullable String backup) {
-            this.backup = Codegen.ofNullable(backup);
-            return this;
+
+        public Builder backup(String backup) {
+            return backup(Output.of(backup));
         }
+
         public Builder batch(@Nullable Output<String> batch) {
-            this.batch = batch;
+            $.batch = batch;
             return this;
         }
-        public Builder batch(@Nullable String batch) {
-            this.batch = Codegen.ofNullable(batch);
-            return this;
+
+        public Builder batch(String batch) {
+            return batch(Output.of(batch));
         }
+
         public Builder budgets(@Nullable Output<String> budgets) {
-            this.budgets = budgets;
+            $.budgets = budgets;
             return this;
         }
-        public Builder budgets(@Nullable String budgets) {
-            this.budgets = Codegen.ofNullable(budgets);
-            return this;
+
+        public Builder budgets(String budgets) {
+            return budgets(Output.of(budgets));
         }
+
         public Builder chime(@Nullable Output<String> chime) {
-            this.chime = chime;
+            $.chime = chime;
             return this;
         }
-        public Builder chime(@Nullable String chime) {
-            this.chime = Codegen.ofNullable(chime);
-            return this;
+
+        public Builder chime(String chime) {
+            return chime(Output.of(chime));
         }
+
         public Builder cloud9(@Nullable Output<String> cloud9) {
-            this.cloud9 = cloud9;
+            $.cloud9 = cloud9;
             return this;
         }
-        public Builder cloud9(@Nullable String cloud9) {
-            this.cloud9 = Codegen.ofNullable(cloud9);
-            return this;
+
+        public Builder cloud9(String cloud9) {
+            return cloud9(Output.of(cloud9));
         }
+
         public Builder cloudformation(@Nullable Output<String> cloudformation) {
-            this.cloudformation = cloudformation;
+            $.cloudformation = cloudformation;
             return this;
         }
-        public Builder cloudformation(@Nullable String cloudformation) {
-            this.cloudformation = Codegen.ofNullable(cloudformation);
-            return this;
+
+        public Builder cloudformation(String cloudformation) {
+            return cloudformation(Output.of(cloudformation));
         }
+
         public Builder cloudfront(@Nullable Output<String> cloudfront) {
-            this.cloudfront = cloudfront;
+            $.cloudfront = cloudfront;
             return this;
         }
-        public Builder cloudfront(@Nullable String cloudfront) {
-            this.cloudfront = Codegen.ofNullable(cloudfront);
-            return this;
+
+        public Builder cloudfront(String cloudfront) {
+            return cloudfront(Output.of(cloudfront));
         }
+
         public Builder cloudhsm(@Nullable Output<String> cloudhsm) {
-            this.cloudhsm = cloudhsm;
+            $.cloudhsm = cloudhsm;
             return this;
         }
-        public Builder cloudhsm(@Nullable String cloudhsm) {
-            this.cloudhsm = Codegen.ofNullable(cloudhsm);
-            return this;
+
+        public Builder cloudhsm(String cloudhsm) {
+            return cloudhsm(Output.of(cloudhsm));
         }
+
         public Builder cloudsearch(@Nullable Output<String> cloudsearch) {
-            this.cloudsearch = cloudsearch;
+            $.cloudsearch = cloudsearch;
             return this;
         }
-        public Builder cloudsearch(@Nullable String cloudsearch) {
-            this.cloudsearch = Codegen.ofNullable(cloudsearch);
-            return this;
+
+        public Builder cloudsearch(String cloudsearch) {
+            return cloudsearch(Output.of(cloudsearch));
         }
+
         public Builder cloudtrail(@Nullable Output<String> cloudtrail) {
-            this.cloudtrail = cloudtrail;
+            $.cloudtrail = cloudtrail;
             return this;
         }
-        public Builder cloudtrail(@Nullable String cloudtrail) {
-            this.cloudtrail = Codegen.ofNullable(cloudtrail);
-            return this;
+
+        public Builder cloudtrail(String cloudtrail) {
+            return cloudtrail(Output.of(cloudtrail));
         }
+
         public Builder cloudwatch(@Nullable Output<String> cloudwatch) {
-            this.cloudwatch = cloudwatch;
+            $.cloudwatch = cloudwatch;
             return this;
         }
-        public Builder cloudwatch(@Nullable String cloudwatch) {
-            this.cloudwatch = Codegen.ofNullable(cloudwatch);
-            return this;
+
+        public Builder cloudwatch(String cloudwatch) {
+            return cloudwatch(Output.of(cloudwatch));
         }
+
         public Builder cloudwatchevents(@Nullable Output<String> cloudwatchevents) {
-            this.cloudwatchevents = cloudwatchevents;
+            $.cloudwatchevents = cloudwatchevents;
             return this;
         }
-        public Builder cloudwatchevents(@Nullable String cloudwatchevents) {
-            this.cloudwatchevents = Codegen.ofNullable(cloudwatchevents);
-            return this;
+
+        public Builder cloudwatchevents(String cloudwatchevents) {
+            return cloudwatchevents(Output.of(cloudwatchevents));
         }
+
         public Builder cloudwatchlogs(@Nullable Output<String> cloudwatchlogs) {
-            this.cloudwatchlogs = cloudwatchlogs;
+            $.cloudwatchlogs = cloudwatchlogs;
             return this;
         }
-        public Builder cloudwatchlogs(@Nullable String cloudwatchlogs) {
-            this.cloudwatchlogs = Codegen.ofNullable(cloudwatchlogs);
-            return this;
+
+        public Builder cloudwatchlogs(String cloudwatchlogs) {
+            return cloudwatchlogs(Output.of(cloudwatchlogs));
         }
+
         public Builder codeartifact(@Nullable Output<String> codeartifact) {
-            this.codeartifact = codeartifact;
+            $.codeartifact = codeartifact;
             return this;
         }
-        public Builder codeartifact(@Nullable String codeartifact) {
-            this.codeartifact = Codegen.ofNullable(codeartifact);
-            return this;
+
+        public Builder codeartifact(String codeartifact) {
+            return codeartifact(Output.of(codeartifact));
         }
+
         public Builder codebuild(@Nullable Output<String> codebuild) {
-            this.codebuild = codebuild;
+            $.codebuild = codebuild;
             return this;
         }
-        public Builder codebuild(@Nullable String codebuild) {
-            this.codebuild = Codegen.ofNullable(codebuild);
-            return this;
+
+        public Builder codebuild(String codebuild) {
+            return codebuild(Output.of(codebuild));
         }
+
         public Builder codecommit(@Nullable Output<String> codecommit) {
-            this.codecommit = codecommit;
+            $.codecommit = codecommit;
             return this;
         }
-        public Builder codecommit(@Nullable String codecommit) {
-            this.codecommit = Codegen.ofNullable(codecommit);
-            return this;
+
+        public Builder codecommit(String codecommit) {
+            return codecommit(Output.of(codecommit));
         }
+
         public Builder codedeploy(@Nullable Output<String> codedeploy) {
-            this.codedeploy = codedeploy;
+            $.codedeploy = codedeploy;
             return this;
         }
-        public Builder codedeploy(@Nullable String codedeploy) {
-            this.codedeploy = Codegen.ofNullable(codedeploy);
-            return this;
+
+        public Builder codedeploy(String codedeploy) {
+            return codedeploy(Output.of(codedeploy));
         }
+
         public Builder codepipeline(@Nullable Output<String> codepipeline) {
-            this.codepipeline = codepipeline;
+            $.codepipeline = codepipeline;
             return this;
         }
-        public Builder codepipeline(@Nullable String codepipeline) {
-            this.codepipeline = Codegen.ofNullable(codepipeline);
-            return this;
+
+        public Builder codepipeline(String codepipeline) {
+            return codepipeline(Output.of(codepipeline));
         }
+
         public Builder codestarconnections(@Nullable Output<String> codestarconnections) {
-            this.codestarconnections = codestarconnections;
+            $.codestarconnections = codestarconnections;
             return this;
         }
-        public Builder codestarconnections(@Nullable String codestarconnections) {
-            this.codestarconnections = Codegen.ofNullable(codestarconnections);
-            return this;
+
+        public Builder codestarconnections(String codestarconnections) {
+            return codestarconnections(Output.of(codestarconnections));
         }
+
         public Builder cognitoidentity(@Nullable Output<String> cognitoidentity) {
-            this.cognitoidentity = cognitoidentity;
+            $.cognitoidentity = cognitoidentity;
             return this;
         }
-        public Builder cognitoidentity(@Nullable String cognitoidentity) {
-            this.cognitoidentity = Codegen.ofNullable(cognitoidentity);
-            return this;
+
+        public Builder cognitoidentity(String cognitoidentity) {
+            return cognitoidentity(Output.of(cognitoidentity));
         }
+
         public Builder configservice(@Nullable Output<String> configservice) {
-            this.configservice = configservice;
+            $.configservice = configservice;
             return this;
         }
-        public Builder configservice(@Nullable String configservice) {
-            this.configservice = Codegen.ofNullable(configservice);
-            return this;
+
+        public Builder configservice(String configservice) {
+            return configservice(Output.of(configservice));
         }
+
         public Builder connect(@Nullable Output<String> connect) {
-            this.connect = connect;
+            $.connect = connect;
             return this;
         }
-        public Builder connect(@Nullable String connect) {
-            this.connect = Codegen.ofNullable(connect);
-            return this;
+
+        public Builder connect(String connect) {
+            return connect(Output.of(connect));
         }
+
         public Builder cur(@Nullable Output<String> cur) {
-            this.cur = cur;
+            $.cur = cur;
             return this;
         }
-        public Builder cur(@Nullable String cur) {
-            this.cur = Codegen.ofNullable(cur);
-            return this;
+
+        public Builder cur(String cur) {
+            return cur(Output.of(cur));
         }
+
         public Builder dataexchange(@Nullable Output<String> dataexchange) {
-            this.dataexchange = dataexchange;
+            $.dataexchange = dataexchange;
             return this;
         }
-        public Builder dataexchange(@Nullable String dataexchange) {
-            this.dataexchange = Codegen.ofNullable(dataexchange);
-            return this;
+
+        public Builder dataexchange(String dataexchange) {
+            return dataexchange(Output.of(dataexchange));
         }
+
         public Builder datapipeline(@Nullable Output<String> datapipeline) {
-            this.datapipeline = datapipeline;
+            $.datapipeline = datapipeline;
             return this;
         }
-        public Builder datapipeline(@Nullable String datapipeline) {
-            this.datapipeline = Codegen.ofNullable(datapipeline);
-            return this;
+
+        public Builder datapipeline(String datapipeline) {
+            return datapipeline(Output.of(datapipeline));
         }
+
         public Builder datasync(@Nullable Output<String> datasync) {
-            this.datasync = datasync;
+            $.datasync = datasync;
             return this;
         }
-        public Builder datasync(@Nullable String datasync) {
-            this.datasync = Codegen.ofNullable(datasync);
-            return this;
+
+        public Builder datasync(String datasync) {
+            return datasync(Output.of(datasync));
         }
+
         public Builder dax(@Nullable Output<String> dax) {
-            this.dax = dax;
+            $.dax = dax;
             return this;
         }
-        public Builder dax(@Nullable String dax) {
-            this.dax = Codegen.ofNullable(dax);
-            return this;
+
+        public Builder dax(String dax) {
+            return dax(Output.of(dax));
         }
+
         public Builder detective(@Nullable Output<String> detective) {
-            this.detective = detective;
+            $.detective = detective;
             return this;
         }
-        public Builder detective(@Nullable String detective) {
-            this.detective = Codegen.ofNullable(detective);
-            return this;
+
+        public Builder detective(String detective) {
+            return detective(Output.of(detective));
         }
+
         public Builder devicefarm(@Nullable Output<String> devicefarm) {
-            this.devicefarm = devicefarm;
+            $.devicefarm = devicefarm;
             return this;
         }
-        public Builder devicefarm(@Nullable String devicefarm) {
-            this.devicefarm = Codegen.ofNullable(devicefarm);
-            return this;
+
+        public Builder devicefarm(String devicefarm) {
+            return devicefarm(Output.of(devicefarm));
         }
+
         public Builder directconnect(@Nullable Output<String> directconnect) {
-            this.directconnect = directconnect;
+            $.directconnect = directconnect;
             return this;
         }
-        public Builder directconnect(@Nullable String directconnect) {
-            this.directconnect = Codegen.ofNullable(directconnect);
-            return this;
+
+        public Builder directconnect(String directconnect) {
+            return directconnect(Output.of(directconnect));
         }
+
         public Builder dlm(@Nullable Output<String> dlm) {
-            this.dlm = dlm;
+            $.dlm = dlm;
             return this;
         }
-        public Builder dlm(@Nullable String dlm) {
-            this.dlm = Codegen.ofNullable(dlm);
-            return this;
+
+        public Builder dlm(String dlm) {
+            return dlm(Output.of(dlm));
         }
+
         public Builder dms(@Nullable Output<String> dms) {
-            this.dms = dms;
+            $.dms = dms;
             return this;
         }
-        public Builder dms(@Nullable String dms) {
-            this.dms = Codegen.ofNullable(dms);
-            return this;
+
+        public Builder dms(String dms) {
+            return dms(Output.of(dms));
         }
+
         public Builder docdb(@Nullable Output<String> docdb) {
-            this.docdb = docdb;
+            $.docdb = docdb;
             return this;
         }
-        public Builder docdb(@Nullable String docdb) {
-            this.docdb = Codegen.ofNullable(docdb);
-            return this;
+
+        public Builder docdb(String docdb) {
+            return docdb(Output.of(docdb));
         }
+
         public Builder ds(@Nullable Output<String> ds) {
-            this.ds = ds;
+            $.ds = ds;
             return this;
         }
-        public Builder ds(@Nullable String ds) {
-            this.ds = Codegen.ofNullable(ds);
-            return this;
+
+        public Builder ds(String ds) {
+            return ds(Output.of(ds));
         }
+
         public Builder dynamodb(@Nullable Output<String> dynamodb) {
-            this.dynamodb = dynamodb;
+            $.dynamodb = dynamodb;
             return this;
         }
-        public Builder dynamodb(@Nullable String dynamodb) {
-            this.dynamodb = Codegen.ofNullable(dynamodb);
-            return this;
+
+        public Builder dynamodb(String dynamodb) {
+            return dynamodb(Output.of(dynamodb));
         }
+
         public Builder ec2(@Nullable Output<String> ec2) {
-            this.ec2 = ec2;
+            $.ec2 = ec2;
             return this;
         }
-        public Builder ec2(@Nullable String ec2) {
-            this.ec2 = Codegen.ofNullable(ec2);
-            return this;
+
+        public Builder ec2(String ec2) {
+            return ec2(Output.of(ec2));
         }
+
         public Builder ecr(@Nullable Output<String> ecr) {
-            this.ecr = ecr;
+            $.ecr = ecr;
             return this;
         }
-        public Builder ecr(@Nullable String ecr) {
-            this.ecr = Codegen.ofNullable(ecr);
-            return this;
+
+        public Builder ecr(String ecr) {
+            return ecr(Output.of(ecr));
         }
+
         public Builder ecrpublic(@Nullable Output<String> ecrpublic) {
-            this.ecrpublic = ecrpublic;
+            $.ecrpublic = ecrpublic;
             return this;
         }
-        public Builder ecrpublic(@Nullable String ecrpublic) {
-            this.ecrpublic = Codegen.ofNullable(ecrpublic);
-            return this;
+
+        public Builder ecrpublic(String ecrpublic) {
+            return ecrpublic(Output.of(ecrpublic));
         }
+
         public Builder ecs(@Nullable Output<String> ecs) {
-            this.ecs = ecs;
+            $.ecs = ecs;
             return this;
         }
-        public Builder ecs(@Nullable String ecs) {
-            this.ecs = Codegen.ofNullable(ecs);
-            return this;
+
+        public Builder ecs(String ecs) {
+            return ecs(Output.of(ecs));
         }
+
         public Builder efs(@Nullable Output<String> efs) {
-            this.efs = efs;
+            $.efs = efs;
             return this;
         }
-        public Builder efs(@Nullable String efs) {
-            this.efs = Codegen.ofNullable(efs);
-            return this;
+
+        public Builder efs(String efs) {
+            return efs(Output.of(efs));
         }
+
         public Builder eks(@Nullable Output<String> eks) {
-            this.eks = eks;
+            $.eks = eks;
             return this;
         }
-        public Builder eks(@Nullable String eks) {
-            this.eks = Codegen.ofNullable(eks);
-            return this;
+
+        public Builder eks(String eks) {
+            return eks(Output.of(eks));
         }
+
         public Builder elasticache(@Nullable Output<String> elasticache) {
-            this.elasticache = elasticache;
+            $.elasticache = elasticache;
             return this;
         }
-        public Builder elasticache(@Nullable String elasticache) {
-            this.elasticache = Codegen.ofNullable(elasticache);
-            return this;
+
+        public Builder elasticache(String elasticache) {
+            return elasticache(Output.of(elasticache));
         }
+
         public Builder elasticbeanstalk(@Nullable Output<String> elasticbeanstalk) {
-            this.elasticbeanstalk = elasticbeanstalk;
+            $.elasticbeanstalk = elasticbeanstalk;
             return this;
         }
-        public Builder elasticbeanstalk(@Nullable String elasticbeanstalk) {
-            this.elasticbeanstalk = Codegen.ofNullable(elasticbeanstalk);
-            return this;
+
+        public Builder elasticbeanstalk(String elasticbeanstalk) {
+            return elasticbeanstalk(Output.of(elasticbeanstalk));
         }
+
         public Builder elastictranscoder(@Nullable Output<String> elastictranscoder) {
-            this.elastictranscoder = elastictranscoder;
+            $.elastictranscoder = elastictranscoder;
             return this;
         }
-        public Builder elastictranscoder(@Nullable String elastictranscoder) {
-            this.elastictranscoder = Codegen.ofNullable(elastictranscoder);
-            return this;
+
+        public Builder elastictranscoder(String elastictranscoder) {
+            return elastictranscoder(Output.of(elastictranscoder));
         }
+
         public Builder elb(@Nullable Output<String> elb) {
-            this.elb = elb;
+            $.elb = elb;
             return this;
         }
-        public Builder elb(@Nullable String elb) {
-            this.elb = Codegen.ofNullable(elb);
-            return this;
+
+        public Builder elb(String elb) {
+            return elb(Output.of(elb));
         }
+
         public Builder elbv2(@Nullable Output<String> elbv2) {
-            this.elbv2 = elbv2;
+            $.elbv2 = elbv2;
             return this;
         }
-        public Builder elbv2(@Nullable String elbv2) {
-            this.elbv2 = Codegen.ofNullable(elbv2);
-            return this;
+
+        public Builder elbv2(String elbv2) {
+            return elbv2(Output.of(elbv2));
         }
+
         public Builder emr(@Nullable Output<String> emr) {
-            this.emr = emr;
+            $.emr = emr;
             return this;
         }
-        public Builder emr(@Nullable String emr) {
-            this.emr = Codegen.ofNullable(emr);
-            return this;
+
+        public Builder emr(String emr) {
+            return emr(Output.of(emr));
         }
+
         public Builder emrcontainers(@Nullable Output<String> emrcontainers) {
-            this.emrcontainers = emrcontainers;
+            $.emrcontainers = emrcontainers;
             return this;
         }
-        public Builder emrcontainers(@Nullable String emrcontainers) {
-            this.emrcontainers = Codegen.ofNullable(emrcontainers);
-            return this;
+
+        public Builder emrcontainers(String emrcontainers) {
+            return emrcontainers(Output.of(emrcontainers));
         }
+
         public Builder es(@Nullable Output<String> es) {
-            this.es = es;
+            $.es = es;
             return this;
         }
-        public Builder es(@Nullable String es) {
-            this.es = Codegen.ofNullable(es);
-            return this;
+
+        public Builder es(String es) {
+            return es(Output.of(es));
         }
+
         public Builder firehose(@Nullable Output<String> firehose) {
-            this.firehose = firehose;
+            $.firehose = firehose;
             return this;
         }
-        public Builder firehose(@Nullable String firehose) {
-            this.firehose = Codegen.ofNullable(firehose);
-            return this;
+
+        public Builder firehose(String firehose) {
+            return firehose(Output.of(firehose));
         }
+
         public Builder fms(@Nullable Output<String> fms) {
-            this.fms = fms;
+            $.fms = fms;
             return this;
         }
-        public Builder fms(@Nullable String fms) {
-            this.fms = Codegen.ofNullable(fms);
-            return this;
+
+        public Builder fms(String fms) {
+            return fms(Output.of(fms));
         }
+
         public Builder forecast(@Nullable Output<String> forecast) {
-            this.forecast = forecast;
+            $.forecast = forecast;
             return this;
         }
-        public Builder forecast(@Nullable String forecast) {
-            this.forecast = Codegen.ofNullable(forecast);
-            return this;
+
+        public Builder forecast(String forecast) {
+            return forecast(Output.of(forecast));
         }
+
         public Builder fsx(@Nullable Output<String> fsx) {
-            this.fsx = fsx;
+            $.fsx = fsx;
             return this;
         }
-        public Builder fsx(@Nullable String fsx) {
-            this.fsx = Codegen.ofNullable(fsx);
-            return this;
+
+        public Builder fsx(String fsx) {
+            return fsx(Output.of(fsx));
         }
+
         public Builder gamelift(@Nullable Output<String> gamelift) {
-            this.gamelift = gamelift;
+            $.gamelift = gamelift;
             return this;
         }
-        public Builder gamelift(@Nullable String gamelift) {
-            this.gamelift = Codegen.ofNullable(gamelift);
-            return this;
+
+        public Builder gamelift(String gamelift) {
+            return gamelift(Output.of(gamelift));
         }
+
         public Builder glacier(@Nullable Output<String> glacier) {
-            this.glacier = glacier;
+            $.glacier = glacier;
             return this;
         }
-        public Builder glacier(@Nullable String glacier) {
-            this.glacier = Codegen.ofNullable(glacier);
-            return this;
+
+        public Builder glacier(String glacier) {
+            return glacier(Output.of(glacier));
         }
+
         public Builder globalaccelerator(@Nullable Output<String> globalaccelerator) {
-            this.globalaccelerator = globalaccelerator;
+            $.globalaccelerator = globalaccelerator;
             return this;
         }
-        public Builder globalaccelerator(@Nullable String globalaccelerator) {
-            this.globalaccelerator = Codegen.ofNullable(globalaccelerator);
-            return this;
+
+        public Builder globalaccelerator(String globalaccelerator) {
+            return globalaccelerator(Output.of(globalaccelerator));
         }
+
         public Builder glue(@Nullable Output<String> glue) {
-            this.glue = glue;
+            $.glue = glue;
             return this;
         }
-        public Builder glue(@Nullable String glue) {
-            this.glue = Codegen.ofNullable(glue);
-            return this;
+
+        public Builder glue(String glue) {
+            return glue(Output.of(glue));
         }
+
         public Builder greengrass(@Nullable Output<String> greengrass) {
-            this.greengrass = greengrass;
+            $.greengrass = greengrass;
             return this;
         }
-        public Builder greengrass(@Nullable String greengrass) {
-            this.greengrass = Codegen.ofNullable(greengrass);
-            return this;
+
+        public Builder greengrass(String greengrass) {
+            return greengrass(Output.of(greengrass));
         }
+
         public Builder guardduty(@Nullable Output<String> guardduty) {
-            this.guardduty = guardduty;
+            $.guardduty = guardduty;
             return this;
         }
-        public Builder guardduty(@Nullable String guardduty) {
-            this.guardduty = Codegen.ofNullable(guardduty);
-            return this;
+
+        public Builder guardduty(String guardduty) {
+            return guardduty(Output.of(guardduty));
         }
+
         public Builder iam(@Nullable Output<String> iam) {
-            this.iam = iam;
+            $.iam = iam;
             return this;
         }
-        public Builder iam(@Nullable String iam) {
-            this.iam = Codegen.ofNullable(iam);
-            return this;
+
+        public Builder iam(String iam) {
+            return iam(Output.of(iam));
         }
+
         public Builder identitystore(@Nullable Output<String> identitystore) {
-            this.identitystore = identitystore;
+            $.identitystore = identitystore;
             return this;
         }
-        public Builder identitystore(@Nullable String identitystore) {
-            this.identitystore = Codegen.ofNullable(identitystore);
-            return this;
+
+        public Builder identitystore(String identitystore) {
+            return identitystore(Output.of(identitystore));
         }
+
         public Builder imagebuilder(@Nullable Output<String> imagebuilder) {
-            this.imagebuilder = imagebuilder;
+            $.imagebuilder = imagebuilder;
             return this;
         }
-        public Builder imagebuilder(@Nullable String imagebuilder) {
-            this.imagebuilder = Codegen.ofNullable(imagebuilder);
-            return this;
+
+        public Builder imagebuilder(String imagebuilder) {
+            return imagebuilder(Output.of(imagebuilder));
         }
+
         public Builder inspector(@Nullable Output<String> inspector) {
-            this.inspector = inspector;
+            $.inspector = inspector;
             return this;
         }
-        public Builder inspector(@Nullable String inspector) {
-            this.inspector = Codegen.ofNullable(inspector);
-            return this;
+
+        public Builder inspector(String inspector) {
+            return inspector(Output.of(inspector));
         }
+
         public Builder iot(@Nullable Output<String> iot) {
-            this.iot = iot;
+            $.iot = iot;
             return this;
         }
-        public Builder iot(@Nullable String iot) {
-            this.iot = Codegen.ofNullable(iot);
-            return this;
+
+        public Builder iot(String iot) {
+            return iot(Output.of(iot));
         }
+
         public Builder iotanalytics(@Nullable Output<String> iotanalytics) {
-            this.iotanalytics = iotanalytics;
+            $.iotanalytics = iotanalytics;
             return this;
         }
-        public Builder iotanalytics(@Nullable String iotanalytics) {
-            this.iotanalytics = Codegen.ofNullable(iotanalytics);
-            return this;
+
+        public Builder iotanalytics(String iotanalytics) {
+            return iotanalytics(Output.of(iotanalytics));
         }
+
         public Builder iotevents(@Nullable Output<String> iotevents) {
-            this.iotevents = iotevents;
+            $.iotevents = iotevents;
             return this;
         }
-        public Builder iotevents(@Nullable String iotevents) {
-            this.iotevents = Codegen.ofNullable(iotevents);
-            return this;
+
+        public Builder iotevents(String iotevents) {
+            return iotevents(Output.of(iotevents));
         }
+
         public Builder kafka(@Nullable Output<String> kafka) {
-            this.kafka = kafka;
+            $.kafka = kafka;
             return this;
         }
-        public Builder kafka(@Nullable String kafka) {
-            this.kafka = Codegen.ofNullable(kafka);
-            return this;
+
+        public Builder kafka(String kafka) {
+            return kafka(Output.of(kafka));
         }
+
         public Builder kinesis(@Nullable Output<String> kinesis) {
-            this.kinesis = kinesis;
+            $.kinesis = kinesis;
             return this;
         }
-        public Builder kinesis(@Nullable String kinesis) {
-            this.kinesis = Codegen.ofNullable(kinesis);
-            return this;
+
+        public Builder kinesis(String kinesis) {
+            return kinesis(Output.of(kinesis));
         }
+
         public Builder kinesisanalytics(@Nullable Output<String> kinesisanalytics) {
-            this.kinesisanalytics = kinesisanalytics;
+            $.kinesisanalytics = kinesisanalytics;
             return this;
         }
-        public Builder kinesisanalytics(@Nullable String kinesisanalytics) {
-            this.kinesisanalytics = Codegen.ofNullable(kinesisanalytics);
-            return this;
+
+        public Builder kinesisanalytics(String kinesisanalytics) {
+            return kinesisanalytics(Output.of(kinesisanalytics));
         }
+
         public Builder kinesisanalyticsv2(@Nullable Output<String> kinesisanalyticsv2) {
-            this.kinesisanalyticsv2 = kinesisanalyticsv2;
+            $.kinesisanalyticsv2 = kinesisanalyticsv2;
             return this;
         }
-        public Builder kinesisanalyticsv2(@Nullable String kinesisanalyticsv2) {
-            this.kinesisanalyticsv2 = Codegen.ofNullable(kinesisanalyticsv2);
-            return this;
+
+        public Builder kinesisanalyticsv2(String kinesisanalyticsv2) {
+            return kinesisanalyticsv2(Output.of(kinesisanalyticsv2));
         }
+
         public Builder kinesisvideo(@Nullable Output<String> kinesisvideo) {
-            this.kinesisvideo = kinesisvideo;
+            $.kinesisvideo = kinesisvideo;
             return this;
         }
-        public Builder kinesisvideo(@Nullable String kinesisvideo) {
-            this.kinesisvideo = Codegen.ofNullable(kinesisvideo);
-            return this;
+
+        public Builder kinesisvideo(String kinesisvideo) {
+            return kinesisvideo(Output.of(kinesisvideo));
         }
+
         public Builder kms(@Nullable Output<String> kms) {
-            this.kms = kms;
+            $.kms = kms;
             return this;
         }
-        public Builder kms(@Nullable String kms) {
-            this.kms = Codegen.ofNullable(kms);
-            return this;
+
+        public Builder kms(String kms) {
+            return kms(Output.of(kms));
         }
+
         public Builder lakeformation(@Nullable Output<String> lakeformation) {
-            this.lakeformation = lakeformation;
+            $.lakeformation = lakeformation;
             return this;
         }
-        public Builder lakeformation(@Nullable String lakeformation) {
-            this.lakeformation = Codegen.ofNullable(lakeformation);
-            return this;
+
+        public Builder lakeformation(String lakeformation) {
+            return lakeformation(Output.of(lakeformation));
         }
+
         public Builder lambda(@Nullable Output<String> lambda) {
-            this.lambda = lambda;
+            $.lambda = lambda;
             return this;
         }
-        public Builder lambda(@Nullable String lambda) {
-            this.lambda = Codegen.ofNullable(lambda);
-            return this;
+
+        public Builder lambda(String lambda) {
+            return lambda(Output.of(lambda));
         }
+
         public Builder lexmodels(@Nullable Output<String> lexmodels) {
-            this.lexmodels = lexmodels;
+            $.lexmodels = lexmodels;
             return this;
         }
-        public Builder lexmodels(@Nullable String lexmodels) {
-            this.lexmodels = Codegen.ofNullable(lexmodels);
-            return this;
+
+        public Builder lexmodels(String lexmodels) {
+            return lexmodels(Output.of(lexmodels));
         }
+
         public Builder licensemanager(@Nullable Output<String> licensemanager) {
-            this.licensemanager = licensemanager;
+            $.licensemanager = licensemanager;
             return this;
         }
-        public Builder licensemanager(@Nullable String licensemanager) {
-            this.licensemanager = Codegen.ofNullable(licensemanager);
-            return this;
+
+        public Builder licensemanager(String licensemanager) {
+            return licensemanager(Output.of(licensemanager));
         }
+
         public Builder lightsail(@Nullable Output<String> lightsail) {
-            this.lightsail = lightsail;
+            $.lightsail = lightsail;
             return this;
         }
-        public Builder lightsail(@Nullable String lightsail) {
-            this.lightsail = Codegen.ofNullable(lightsail);
-            return this;
+
+        public Builder lightsail(String lightsail) {
+            return lightsail(Output.of(lightsail));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder macie(@Nullable Output<String> macie) {
-            this.macie = macie;
+            $.macie = macie;
             return this;
         }
-        public Builder macie(@Nullable String macie) {
-            this.macie = Codegen.ofNullable(macie);
-            return this;
+
+        public Builder macie(String macie) {
+            return macie(Output.of(macie));
         }
+
         public Builder macie2(@Nullable Output<String> macie2) {
-            this.macie2 = macie2;
+            $.macie2 = macie2;
             return this;
         }
-        public Builder macie2(@Nullable String macie2) {
-            this.macie2 = Codegen.ofNullable(macie2);
-            return this;
+
+        public Builder macie2(String macie2) {
+            return macie2(Output.of(macie2));
         }
+
         public Builder managedblockchain(@Nullable Output<String> managedblockchain) {
-            this.managedblockchain = managedblockchain;
+            $.managedblockchain = managedblockchain;
             return this;
         }
-        public Builder managedblockchain(@Nullable String managedblockchain) {
-            this.managedblockchain = Codegen.ofNullable(managedblockchain);
-            return this;
+
+        public Builder managedblockchain(String managedblockchain) {
+            return managedblockchain(Output.of(managedblockchain));
         }
+
         public Builder marketplacecatalog(@Nullable Output<String> marketplacecatalog) {
-            this.marketplacecatalog = marketplacecatalog;
+            $.marketplacecatalog = marketplacecatalog;
             return this;
         }
-        public Builder marketplacecatalog(@Nullable String marketplacecatalog) {
-            this.marketplacecatalog = Codegen.ofNullable(marketplacecatalog);
-            return this;
+
+        public Builder marketplacecatalog(String marketplacecatalog) {
+            return marketplacecatalog(Output.of(marketplacecatalog));
         }
+
         public Builder mediaconnect(@Nullable Output<String> mediaconnect) {
-            this.mediaconnect = mediaconnect;
+            $.mediaconnect = mediaconnect;
             return this;
         }
-        public Builder mediaconnect(@Nullable String mediaconnect) {
-            this.mediaconnect = Codegen.ofNullable(mediaconnect);
-            return this;
+
+        public Builder mediaconnect(String mediaconnect) {
+            return mediaconnect(Output.of(mediaconnect));
         }
+
         public Builder mediaconvert(@Nullable Output<String> mediaconvert) {
-            this.mediaconvert = mediaconvert;
+            $.mediaconvert = mediaconvert;
             return this;
         }
-        public Builder mediaconvert(@Nullable String mediaconvert) {
-            this.mediaconvert = Codegen.ofNullable(mediaconvert);
-            return this;
+
+        public Builder mediaconvert(String mediaconvert) {
+            return mediaconvert(Output.of(mediaconvert));
         }
+
         public Builder medialive(@Nullable Output<String> medialive) {
-            this.medialive = medialive;
+            $.medialive = medialive;
             return this;
         }
-        public Builder medialive(@Nullable String medialive) {
-            this.medialive = Codegen.ofNullable(medialive);
-            return this;
+
+        public Builder medialive(String medialive) {
+            return medialive(Output.of(medialive));
         }
+
         public Builder mediapackage(@Nullable Output<String> mediapackage) {
-            this.mediapackage = mediapackage;
+            $.mediapackage = mediapackage;
             return this;
         }
-        public Builder mediapackage(@Nullable String mediapackage) {
-            this.mediapackage = Codegen.ofNullable(mediapackage);
-            return this;
+
+        public Builder mediapackage(String mediapackage) {
+            return mediapackage(Output.of(mediapackage));
         }
+
         public Builder mediastore(@Nullable Output<String> mediastore) {
-            this.mediastore = mediastore;
+            $.mediastore = mediastore;
             return this;
         }
-        public Builder mediastore(@Nullable String mediastore) {
-            this.mediastore = Codegen.ofNullable(mediastore);
-            return this;
+
+        public Builder mediastore(String mediastore) {
+            return mediastore(Output.of(mediastore));
         }
+
         public Builder mediastoredata(@Nullable Output<String> mediastoredata) {
-            this.mediastoredata = mediastoredata;
+            $.mediastoredata = mediastoredata;
             return this;
         }
-        public Builder mediastoredata(@Nullable String mediastoredata) {
-            this.mediastoredata = Codegen.ofNullable(mediastoredata);
-            return this;
+
+        public Builder mediastoredata(String mediastoredata) {
+            return mediastoredata(Output.of(mediastoredata));
         }
+
         public Builder memorydb(@Nullable Output<String> memorydb) {
-            this.memorydb = memorydb;
+            $.memorydb = memorydb;
             return this;
         }
-        public Builder memorydb(@Nullable String memorydb) {
-            this.memorydb = Codegen.ofNullable(memorydb);
-            return this;
+
+        public Builder memorydb(String memorydb) {
+            return memorydb(Output.of(memorydb));
         }
+
         public Builder mq(@Nullable Output<String> mq) {
-            this.mq = mq;
+            $.mq = mq;
             return this;
         }
-        public Builder mq(@Nullable String mq) {
-            this.mq = Codegen.ofNullable(mq);
-            return this;
+
+        public Builder mq(String mq) {
+            return mq(Output.of(mq));
         }
+
         public Builder mwaa(@Nullable Output<String> mwaa) {
-            this.mwaa = mwaa;
+            $.mwaa = mwaa;
             return this;
         }
-        public Builder mwaa(@Nullable String mwaa) {
-            this.mwaa = Codegen.ofNullable(mwaa);
-            return this;
+
+        public Builder mwaa(String mwaa) {
+            return mwaa(Output.of(mwaa));
         }
+
         public Builder neptune(@Nullable Output<String> neptune) {
-            this.neptune = neptune;
+            $.neptune = neptune;
             return this;
         }
-        public Builder neptune(@Nullable String neptune) {
-            this.neptune = Codegen.ofNullable(neptune);
-            return this;
+
+        public Builder neptune(String neptune) {
+            return neptune(Output.of(neptune));
         }
+
         public Builder networkfirewall(@Nullable Output<String> networkfirewall) {
-            this.networkfirewall = networkfirewall;
+            $.networkfirewall = networkfirewall;
             return this;
         }
-        public Builder networkfirewall(@Nullable String networkfirewall) {
-            this.networkfirewall = Codegen.ofNullable(networkfirewall);
-            return this;
+
+        public Builder networkfirewall(String networkfirewall) {
+            return networkfirewall(Output.of(networkfirewall));
         }
+
         public Builder networkmanager(@Nullable Output<String> networkmanager) {
-            this.networkmanager = networkmanager;
+            $.networkmanager = networkmanager;
             return this;
         }
-        public Builder networkmanager(@Nullable String networkmanager) {
-            this.networkmanager = Codegen.ofNullable(networkmanager);
-            return this;
+
+        public Builder networkmanager(String networkmanager) {
+            return networkmanager(Output.of(networkmanager));
         }
+
         public Builder opsworks(@Nullable Output<String> opsworks) {
-            this.opsworks = opsworks;
+            $.opsworks = opsworks;
             return this;
         }
-        public Builder opsworks(@Nullable String opsworks) {
-            this.opsworks = Codegen.ofNullable(opsworks);
-            return this;
+
+        public Builder opsworks(String opsworks) {
+            return opsworks(Output.of(opsworks));
         }
+
         public Builder organizations(@Nullable Output<String> organizations) {
-            this.organizations = organizations;
+            $.organizations = organizations;
             return this;
         }
-        public Builder organizations(@Nullable String organizations) {
-            this.organizations = Codegen.ofNullable(organizations);
-            return this;
+
+        public Builder organizations(String organizations) {
+            return organizations(Output.of(organizations));
         }
+
         public Builder outposts(@Nullable Output<String> outposts) {
-            this.outposts = outposts;
+            $.outposts = outposts;
             return this;
         }
-        public Builder outposts(@Nullable String outposts) {
-            this.outposts = Codegen.ofNullable(outposts);
-            return this;
+
+        public Builder outposts(String outposts) {
+            return outposts(Output.of(outposts));
         }
+
         public Builder personalize(@Nullable Output<String> personalize) {
-            this.personalize = personalize;
+            $.personalize = personalize;
             return this;
         }
-        public Builder personalize(@Nullable String personalize) {
-            this.personalize = Codegen.ofNullable(personalize);
-            return this;
+
+        public Builder personalize(String personalize) {
+            return personalize(Output.of(personalize));
         }
+
         public Builder pinpoint(@Nullable Output<String> pinpoint) {
-            this.pinpoint = pinpoint;
+            $.pinpoint = pinpoint;
             return this;
         }
-        public Builder pinpoint(@Nullable String pinpoint) {
-            this.pinpoint = Codegen.ofNullable(pinpoint);
-            return this;
+
+        public Builder pinpoint(String pinpoint) {
+            return pinpoint(Output.of(pinpoint));
         }
+
         public Builder pricing(@Nullable Output<String> pricing) {
-            this.pricing = pricing;
+            $.pricing = pricing;
             return this;
         }
-        public Builder pricing(@Nullable String pricing) {
-            this.pricing = Codegen.ofNullable(pricing);
-            return this;
+
+        public Builder pricing(String pricing) {
+            return pricing(Output.of(pricing));
         }
+
         public Builder qldb(@Nullable Output<String> qldb) {
-            this.qldb = qldb;
+            $.qldb = qldb;
             return this;
         }
-        public Builder qldb(@Nullable String qldb) {
-            this.qldb = Codegen.ofNullable(qldb);
-            return this;
+
+        public Builder qldb(String qldb) {
+            return qldb(Output.of(qldb));
         }
+
         public Builder quicksight(@Nullable Output<String> quicksight) {
-            this.quicksight = quicksight;
+            $.quicksight = quicksight;
             return this;
         }
-        public Builder quicksight(@Nullable String quicksight) {
-            this.quicksight = Codegen.ofNullable(quicksight);
-            return this;
+
+        public Builder quicksight(String quicksight) {
+            return quicksight(Output.of(quicksight));
         }
+
         public Builder ram(@Nullable Output<String> ram) {
-            this.ram = ram;
+            $.ram = ram;
             return this;
         }
-        public Builder ram(@Nullable String ram) {
-            this.ram = Codegen.ofNullable(ram);
-            return this;
+
+        public Builder ram(String ram) {
+            return ram(Output.of(ram));
         }
+
         public Builder rds(@Nullable Output<String> rds) {
-            this.rds = rds;
+            $.rds = rds;
             return this;
         }
-        public Builder rds(@Nullable String rds) {
-            this.rds = Codegen.ofNullable(rds);
-            return this;
+
+        public Builder rds(String rds) {
+            return rds(Output.of(rds));
         }
+
         public Builder redshift(@Nullable Output<String> redshift) {
-            this.redshift = redshift;
+            $.redshift = redshift;
             return this;
         }
-        public Builder redshift(@Nullable String redshift) {
-            this.redshift = Codegen.ofNullable(redshift);
-            return this;
+
+        public Builder redshift(String redshift) {
+            return redshift(Output.of(redshift));
         }
+
         public Builder resourcegroups(@Nullable Output<String> resourcegroups) {
-            this.resourcegroups = resourcegroups;
+            $.resourcegroups = resourcegroups;
             return this;
         }
-        public Builder resourcegroups(@Nullable String resourcegroups) {
-            this.resourcegroups = Codegen.ofNullable(resourcegroups);
-            return this;
+
+        public Builder resourcegroups(String resourcegroups) {
+            return resourcegroups(Output.of(resourcegroups));
         }
+
         public Builder resourcegroupstaggingapi(@Nullable Output<String> resourcegroupstaggingapi) {
-            this.resourcegroupstaggingapi = resourcegroupstaggingapi;
+            $.resourcegroupstaggingapi = resourcegroupstaggingapi;
             return this;
         }
-        public Builder resourcegroupstaggingapi(@Nullable String resourcegroupstaggingapi) {
-            this.resourcegroupstaggingapi = Codegen.ofNullable(resourcegroupstaggingapi);
-            return this;
+
+        public Builder resourcegroupstaggingapi(String resourcegroupstaggingapi) {
+            return resourcegroupstaggingapi(Output.of(resourcegroupstaggingapi));
         }
+
         public Builder route53(@Nullable Output<String> route53) {
-            this.route53 = route53;
+            $.route53 = route53;
             return this;
         }
-        public Builder route53(@Nullable String route53) {
-            this.route53 = Codegen.ofNullable(route53);
-            return this;
+
+        public Builder route53(String route53) {
+            return route53(Output.of(route53));
         }
+
         public Builder route53domains(@Nullable Output<String> route53domains) {
-            this.route53domains = route53domains;
+            $.route53domains = route53domains;
             return this;
         }
-        public Builder route53domains(@Nullable String route53domains) {
-            this.route53domains = Codegen.ofNullable(route53domains);
-            return this;
+
+        public Builder route53domains(String route53domains) {
+            return route53domains(Output.of(route53domains));
         }
+
         public Builder route53recoverycontrolconfig(@Nullable Output<String> route53recoverycontrolconfig) {
-            this.route53recoverycontrolconfig = route53recoverycontrolconfig;
+            $.route53recoverycontrolconfig = route53recoverycontrolconfig;
             return this;
         }
-        public Builder route53recoverycontrolconfig(@Nullable String route53recoverycontrolconfig) {
-            this.route53recoverycontrolconfig = Codegen.ofNullable(route53recoverycontrolconfig);
-            return this;
+
+        public Builder route53recoverycontrolconfig(String route53recoverycontrolconfig) {
+            return route53recoverycontrolconfig(Output.of(route53recoverycontrolconfig));
         }
+
         public Builder route53recoveryreadiness(@Nullable Output<String> route53recoveryreadiness) {
-            this.route53recoveryreadiness = route53recoveryreadiness;
+            $.route53recoveryreadiness = route53recoveryreadiness;
             return this;
         }
-        public Builder route53recoveryreadiness(@Nullable String route53recoveryreadiness) {
-            this.route53recoveryreadiness = Codegen.ofNullable(route53recoveryreadiness);
-            return this;
+
+        public Builder route53recoveryreadiness(String route53recoveryreadiness) {
+            return route53recoveryreadiness(Output.of(route53recoveryreadiness));
         }
+
         public Builder route53resolver(@Nullable Output<String> route53resolver) {
-            this.route53resolver = route53resolver;
+            $.route53resolver = route53resolver;
             return this;
         }
-        public Builder route53resolver(@Nullable String route53resolver) {
-            this.route53resolver = Codegen.ofNullable(route53resolver);
-            return this;
+
+        public Builder route53resolver(String route53resolver) {
+            return route53resolver(Output.of(route53resolver));
         }
+
         public Builder s3(@Nullable Output<String> s3) {
-            this.s3 = s3;
+            $.s3 = s3;
             return this;
         }
-        public Builder s3(@Nullable String s3) {
-            this.s3 = Codegen.ofNullable(s3);
-            return this;
+
+        public Builder s3(String s3) {
+            return s3(Output.of(s3));
         }
+
         public Builder s3control(@Nullable Output<String> s3control) {
-            this.s3control = s3control;
+            $.s3control = s3control;
             return this;
         }
-        public Builder s3control(@Nullable String s3control) {
-            this.s3control = Codegen.ofNullable(s3control);
-            return this;
+
+        public Builder s3control(String s3control) {
+            return s3control(Output.of(s3control));
         }
+
         public Builder s3outposts(@Nullable Output<String> s3outposts) {
-            this.s3outposts = s3outposts;
+            $.s3outposts = s3outposts;
             return this;
         }
-        public Builder s3outposts(@Nullable String s3outposts) {
-            this.s3outposts = Codegen.ofNullable(s3outposts);
-            return this;
+
+        public Builder s3outposts(String s3outposts) {
+            return s3outposts(Output.of(s3outposts));
         }
+
         public Builder sagemaker(@Nullable Output<String> sagemaker) {
-            this.sagemaker = sagemaker;
+            $.sagemaker = sagemaker;
             return this;
         }
-        public Builder sagemaker(@Nullable String sagemaker) {
-            this.sagemaker = Codegen.ofNullable(sagemaker);
-            return this;
+
+        public Builder sagemaker(String sagemaker) {
+            return sagemaker(Output.of(sagemaker));
         }
+
         public Builder schemas(@Nullable Output<String> schemas) {
-            this.schemas = schemas;
+            $.schemas = schemas;
             return this;
         }
-        public Builder schemas(@Nullable String schemas) {
-            this.schemas = Codegen.ofNullable(schemas);
-            return this;
+
+        public Builder schemas(String schemas) {
+            return schemas(Output.of(schemas));
         }
+
         public Builder sdb(@Nullable Output<String> sdb) {
-            this.sdb = sdb;
+            $.sdb = sdb;
             return this;
         }
-        public Builder sdb(@Nullable String sdb) {
-            this.sdb = Codegen.ofNullable(sdb);
-            return this;
+
+        public Builder sdb(String sdb) {
+            return sdb(Output.of(sdb));
         }
+
         public Builder secretsmanager(@Nullable Output<String> secretsmanager) {
-            this.secretsmanager = secretsmanager;
+            $.secretsmanager = secretsmanager;
             return this;
         }
-        public Builder secretsmanager(@Nullable String secretsmanager) {
-            this.secretsmanager = Codegen.ofNullable(secretsmanager);
-            return this;
+
+        public Builder secretsmanager(String secretsmanager) {
+            return secretsmanager(Output.of(secretsmanager));
         }
+
         public Builder securityhub(@Nullable Output<String> securityhub) {
-            this.securityhub = securityhub;
+            $.securityhub = securityhub;
             return this;
         }
-        public Builder securityhub(@Nullable String securityhub) {
-            this.securityhub = Codegen.ofNullable(securityhub);
-            return this;
+
+        public Builder securityhub(String securityhub) {
+            return securityhub(Output.of(securityhub));
         }
+
         public Builder serverlessrepo(@Nullable Output<String> serverlessrepo) {
-            this.serverlessrepo = serverlessrepo;
+            $.serverlessrepo = serverlessrepo;
             return this;
         }
-        public Builder serverlessrepo(@Nullable String serverlessrepo) {
-            this.serverlessrepo = Codegen.ofNullable(serverlessrepo);
-            return this;
+
+        public Builder serverlessrepo(String serverlessrepo) {
+            return serverlessrepo(Output.of(serverlessrepo));
         }
+
         public Builder servicecatalog(@Nullable Output<String> servicecatalog) {
-            this.servicecatalog = servicecatalog;
+            $.servicecatalog = servicecatalog;
             return this;
         }
-        public Builder servicecatalog(@Nullable String servicecatalog) {
-            this.servicecatalog = Codegen.ofNullable(servicecatalog);
-            return this;
+
+        public Builder servicecatalog(String servicecatalog) {
+            return servicecatalog(Output.of(servicecatalog));
         }
+
         public Builder servicediscovery(@Nullable Output<String> servicediscovery) {
-            this.servicediscovery = servicediscovery;
+            $.servicediscovery = servicediscovery;
             return this;
         }
-        public Builder servicediscovery(@Nullable String servicediscovery) {
-            this.servicediscovery = Codegen.ofNullable(servicediscovery);
-            return this;
+
+        public Builder servicediscovery(String servicediscovery) {
+            return servicediscovery(Output.of(servicediscovery));
         }
+
         public Builder servicequotas(@Nullable Output<String> servicequotas) {
-            this.servicequotas = servicequotas;
+            $.servicequotas = servicequotas;
             return this;
         }
-        public Builder servicequotas(@Nullable String servicequotas) {
-            this.servicequotas = Codegen.ofNullable(servicequotas);
-            return this;
+
+        public Builder servicequotas(String servicequotas) {
+            return servicequotas(Output.of(servicequotas));
         }
+
         public Builder ses(@Nullable Output<String> ses) {
-            this.ses = ses;
+            $.ses = ses;
             return this;
         }
-        public Builder ses(@Nullable String ses) {
-            this.ses = Codegen.ofNullable(ses);
-            return this;
+
+        public Builder ses(String ses) {
+            return ses(Output.of(ses));
         }
+
         public Builder shield(@Nullable Output<String> shield) {
-            this.shield = shield;
+            $.shield = shield;
             return this;
         }
-        public Builder shield(@Nullable String shield) {
-            this.shield = Codegen.ofNullable(shield);
-            return this;
+
+        public Builder shield(String shield) {
+            return shield(Output.of(shield));
         }
+
         public Builder signer(@Nullable Output<String> signer) {
-            this.signer = signer;
+            $.signer = signer;
             return this;
         }
-        public Builder signer(@Nullable String signer) {
-            this.signer = Codegen.ofNullable(signer);
-            return this;
+
+        public Builder signer(String signer) {
+            return signer(Output.of(signer));
         }
+
         public Builder sns(@Nullable Output<String> sns) {
-            this.sns = sns;
+            $.sns = sns;
             return this;
         }
-        public Builder sns(@Nullable String sns) {
-            this.sns = Codegen.ofNullable(sns);
-            return this;
+
+        public Builder sns(String sns) {
+            return sns(Output.of(sns));
         }
+
         public Builder sqs(@Nullable Output<String> sqs) {
-            this.sqs = sqs;
+            $.sqs = sqs;
             return this;
         }
-        public Builder sqs(@Nullable String sqs) {
-            this.sqs = Codegen.ofNullable(sqs);
-            return this;
+
+        public Builder sqs(String sqs) {
+            return sqs(Output.of(sqs));
         }
+
         public Builder ssm(@Nullable Output<String> ssm) {
-            this.ssm = ssm;
+            $.ssm = ssm;
             return this;
         }
-        public Builder ssm(@Nullable String ssm) {
-            this.ssm = Codegen.ofNullable(ssm);
-            return this;
+
+        public Builder ssm(String ssm) {
+            return ssm(Output.of(ssm));
         }
+
         public Builder ssoadmin(@Nullable Output<String> ssoadmin) {
-            this.ssoadmin = ssoadmin;
+            $.ssoadmin = ssoadmin;
             return this;
         }
-        public Builder ssoadmin(@Nullable String ssoadmin) {
-            this.ssoadmin = Codegen.ofNullable(ssoadmin);
-            return this;
+
+        public Builder ssoadmin(String ssoadmin) {
+            return ssoadmin(Output.of(ssoadmin));
         }
+
         public Builder stepfunctions(@Nullable Output<String> stepfunctions) {
-            this.stepfunctions = stepfunctions;
+            $.stepfunctions = stepfunctions;
             return this;
         }
-        public Builder stepfunctions(@Nullable String stepfunctions) {
-            this.stepfunctions = Codegen.ofNullable(stepfunctions);
-            return this;
+
+        public Builder stepfunctions(String stepfunctions) {
+            return stepfunctions(Output.of(stepfunctions));
         }
+
         public Builder storagegateway(@Nullable Output<String> storagegateway) {
-            this.storagegateway = storagegateway;
+            $.storagegateway = storagegateway;
             return this;
         }
-        public Builder storagegateway(@Nullable String storagegateway) {
-            this.storagegateway = Codegen.ofNullable(storagegateway);
-            return this;
+
+        public Builder storagegateway(String storagegateway) {
+            return storagegateway(Output.of(storagegateway));
         }
+
         public Builder sts(@Nullable Output<String> sts) {
-            this.sts = sts;
+            $.sts = sts;
             return this;
         }
-        public Builder sts(@Nullable String sts) {
-            this.sts = Codegen.ofNullable(sts);
-            return this;
+
+        public Builder sts(String sts) {
+            return sts(Output.of(sts));
         }
+
         public Builder swf(@Nullable Output<String> swf) {
-            this.swf = swf;
+            $.swf = swf;
             return this;
         }
-        public Builder swf(@Nullable String swf) {
-            this.swf = Codegen.ofNullable(swf);
-            return this;
+
+        public Builder swf(String swf) {
+            return swf(Output.of(swf));
         }
+
         public Builder synthetics(@Nullable Output<String> synthetics) {
-            this.synthetics = synthetics;
+            $.synthetics = synthetics;
             return this;
         }
-        public Builder synthetics(@Nullable String synthetics) {
-            this.synthetics = Codegen.ofNullable(synthetics);
-            return this;
+
+        public Builder synthetics(String synthetics) {
+            return synthetics(Output.of(synthetics));
         }
+
         public Builder timestreamwrite(@Nullable Output<String> timestreamwrite) {
-            this.timestreamwrite = timestreamwrite;
+            $.timestreamwrite = timestreamwrite;
             return this;
         }
-        public Builder timestreamwrite(@Nullable String timestreamwrite) {
-            this.timestreamwrite = Codegen.ofNullable(timestreamwrite);
-            return this;
+
+        public Builder timestreamwrite(String timestreamwrite) {
+            return timestreamwrite(Output.of(timestreamwrite));
         }
+
         public Builder transfer(@Nullable Output<String> transfer) {
-            this.transfer = transfer;
+            $.transfer = transfer;
             return this;
         }
-        public Builder transfer(@Nullable String transfer) {
-            this.transfer = Codegen.ofNullable(transfer);
-            return this;
+
+        public Builder transfer(String transfer) {
+            return transfer(Output.of(transfer));
         }
+
         public Builder waf(@Nullable Output<String> waf) {
-            this.waf = waf;
+            $.waf = waf;
             return this;
         }
-        public Builder waf(@Nullable String waf) {
-            this.waf = Codegen.ofNullable(waf);
-            return this;
+
+        public Builder waf(String waf) {
+            return waf(Output.of(waf));
         }
+
         public Builder wafregional(@Nullable Output<String> wafregional) {
-            this.wafregional = wafregional;
+            $.wafregional = wafregional;
             return this;
         }
-        public Builder wafregional(@Nullable String wafregional) {
-            this.wafregional = Codegen.ofNullable(wafregional);
-            return this;
+
+        public Builder wafregional(String wafregional) {
+            return wafregional(Output.of(wafregional));
         }
+
         public Builder wafv2(@Nullable Output<String> wafv2) {
-            this.wafv2 = wafv2;
+            $.wafv2 = wafv2;
             return this;
         }
-        public Builder wafv2(@Nullable String wafv2) {
-            this.wafv2 = Codegen.ofNullable(wafv2);
-            return this;
+
+        public Builder wafv2(String wafv2) {
+            return wafv2(Output.of(wafv2));
         }
+
         public Builder worklink(@Nullable Output<String> worklink) {
-            this.worklink = worklink;
+            $.worklink = worklink;
             return this;
         }
-        public Builder worklink(@Nullable String worklink) {
-            this.worklink = Codegen.ofNullable(worklink);
-            return this;
+
+        public Builder worklink(String worklink) {
+            return worklink(Output.of(worklink));
         }
+
         public Builder workmail(@Nullable Output<String> workmail) {
-            this.workmail = workmail;
+            $.workmail = workmail;
             return this;
         }
-        public Builder workmail(@Nullable String workmail) {
-            this.workmail = Codegen.ofNullable(workmail);
-            return this;
+
+        public Builder workmail(String workmail) {
+            return workmail(Output.of(workmail));
         }
+
         public Builder workspaces(@Nullable Output<String> workspaces) {
-            this.workspaces = workspaces;
+            $.workspaces = workspaces;
             return this;
         }
-        public Builder workspaces(@Nullable String workspaces) {
-            this.workspaces = Codegen.ofNullable(workspaces);
-            return this;
+
+        public Builder workspaces(String workspaces) {
+            return workspaces(Output.of(workspaces));
         }
+
         public Builder xray(@Nullable Output<String> xray) {
-            this.xray = xray;
+            $.xray = xray;
             return this;
         }
-        public Builder xray(@Nullable String xray) {
-            this.xray = Codegen.ofNullable(xray);
-            return this;
-        }        public ProviderEndpointArgs build() {
-            return new ProviderEndpointArgs(accessanalyzer, acm, acmpca, amplify, appconfig, applicationautoscaling, applicationinsights, appmesh, apprunner, appstream, appsync, athena, auditmanager, autoscaling, backup, batch, budgets, chime, cloud9, cloudformation, cloudfront, cloudhsm, cloudsearch, cloudtrail, cloudwatch, cloudwatchevents, cloudwatchlogs, codeartifact, codebuild, codecommit, codedeploy, codepipeline, codestarconnections, cognitoidentity, configservice, connect, cur, dataexchange, datapipeline, datasync, dax, detective, devicefarm, directconnect, dlm, dms, docdb, ds, dynamodb, ec2, ecr, ecrpublic, ecs, efs, eks, elasticache, elasticbeanstalk, elastictranscoder, elb, elbv2, emr, emrcontainers, es, firehose, fms, forecast, fsx, gamelift, glacier, globalaccelerator, glue, greengrass, guardduty, iam, identitystore, imagebuilder, inspector, iot, iotanalytics, iotevents, kafka, kinesis, kinesisanalytics, kinesisanalyticsv2, kinesisvideo, kms, lakeformation, lambda, lexmodels, licensemanager, lightsail, location, macie, macie2, managedblockchain, marketplacecatalog, mediaconnect, mediaconvert, medialive, mediapackage, mediastore, mediastoredata, memorydb, mq, mwaa, neptune, networkfirewall, networkmanager, opsworks, organizations, outposts, personalize, pinpoint, pricing, qldb, quicksight, ram, rds, redshift, resourcegroups, resourcegroupstaggingapi, route53, route53domains, route53recoverycontrolconfig, route53recoveryreadiness, route53resolver, s3, s3control, s3outposts, sagemaker, schemas, sdb, secretsmanager, securityhub, serverlessrepo, servicecatalog, servicediscovery, servicequotas, ses, shield, signer, sns, sqs, ssm, ssoadmin, stepfunctions, storagegateway, sts, swf, synthetics, timestreamwrite, transfer, waf, wafregional, wafv2, worklink, workmail, workspaces, xray);
+
+        public Builder xray(String xray) {
+            return xray(Output.of(xray));
+        }
+
+        public ProviderEndpointArgs build() {
+            return $;
         }
     }
+
 }

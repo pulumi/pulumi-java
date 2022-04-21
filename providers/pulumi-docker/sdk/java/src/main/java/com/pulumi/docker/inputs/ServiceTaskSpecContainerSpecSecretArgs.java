@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,150 +17,135 @@ public final class ServiceTaskSpecContainerSpecSecretArgs extends com.pulumi.res
     public static final ServiceTaskSpecContainerSpecSecretArgs Empty = new ServiceTaskSpecContainerSpecSecretArgs();
 
     @Import(name="fileGid")
-      private final @Nullable Output<String> fileGid;
+    private @Nullable Output<String> fileGid;
 
-    public Output<String> fileGid() {
-        return this.fileGid == null ? Codegen.empty() : this.fileGid;
+    public Optional<Output<String>> fileGid() {
+        return Optional.ofNullable(this.fileGid);
     }
 
     @Import(name="fileMode")
-      private final @Nullable Output<Integer> fileMode;
+    private @Nullable Output<Integer> fileMode;
 
-    public Output<Integer> fileMode() {
-        return this.fileMode == null ? Codegen.empty() : this.fileMode;
+    public Optional<Output<Integer>> fileMode() {
+        return Optional.ofNullable(this.fileMode);
     }
 
     @Import(name="fileName", required=true)
-      private final Output<String> fileName;
+    private Output<String> fileName;
 
     public Output<String> fileName() {
         return this.fileName;
     }
 
     @Import(name="fileUid")
-      private final @Nullable Output<String> fileUid;
+    private @Nullable Output<String> fileUid;
 
-    public Output<String> fileUid() {
-        return this.fileUid == null ? Codegen.empty() : this.fileUid;
+    public Optional<Output<String>> fileUid() {
+        return Optional.ofNullable(this.fileUid);
     }
 
     @Import(name="secretId", required=true)
-      private final Output<String> secretId;
+    private Output<String> secretId;
 
     public Output<String> secretId() {
         return this.secretId;
     }
 
     @Import(name="secretName")
-      private final @Nullable Output<String> secretName;
+    private @Nullable Output<String> secretName;
 
-    public Output<String> secretName() {
-        return this.secretName == null ? Codegen.empty() : this.secretName;
+    public Optional<Output<String>> secretName() {
+        return Optional.ofNullable(this.secretName);
     }
 
-    public ServiceTaskSpecContainerSpecSecretArgs(
-        @Nullable Output<String> fileGid,
-        @Nullable Output<Integer> fileMode,
-        Output<String> fileName,
-        @Nullable Output<String> fileUid,
-        Output<String> secretId,
-        @Nullable Output<String> secretName) {
-        this.fileGid = fileGid;
-        this.fileMode = fileMode;
-        this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
-        this.fileUid = fileUid;
-        this.secretId = Objects.requireNonNull(secretId, "expected parameter 'secretId' to be non-null");
-        this.secretName = secretName;
-    }
+    private ServiceTaskSpecContainerSpecSecretArgs() {}
 
-    private ServiceTaskSpecContainerSpecSecretArgs() {
-        this.fileGid = Codegen.empty();
-        this.fileMode = Codegen.empty();
-        this.fileName = Codegen.empty();
-        this.fileUid = Codegen.empty();
-        this.secretId = Codegen.empty();
-        this.secretName = Codegen.empty();
+    private ServiceTaskSpecContainerSpecSecretArgs(ServiceTaskSpecContainerSpecSecretArgs $) {
+        this.fileGid = $.fileGid;
+        this.fileMode = $.fileMode;
+        this.fileName = $.fileName;
+        this.fileUid = $.fileUid;
+        this.secretId = $.secretId;
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecSecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fileGid;
-        private @Nullable Output<Integer> fileMode;
-        private Output<String> fileName;
-        private @Nullable Output<String> fileUid;
-        private Output<String> secretId;
-        private @Nullable Output<String> secretName;
+        private ServiceTaskSpecContainerSpecSecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecSecretArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecSecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileGid = defaults.fileGid;
-    	      this.fileMode = defaults.fileMode;
-    	      this.fileName = defaults.fileName;
-    	      this.fileUid = defaults.fileUid;
-    	      this.secretId = defaults.secretId;
-    	      this.secretName = defaults.secretName;
+            $ = new ServiceTaskSpecContainerSpecSecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileGid(@Nullable Output<String> fileGid) {
-            this.fileGid = fileGid;
+            $.fileGid = fileGid;
             return this;
         }
-        public Builder fileGid(@Nullable String fileGid) {
-            this.fileGid = Codegen.ofNullable(fileGid);
-            return this;
+
+        public Builder fileGid(String fileGid) {
+            return fileGid(Output.of(fileGid));
         }
+
         public Builder fileMode(@Nullable Output<Integer> fileMode) {
-            this.fileMode = fileMode;
+            $.fileMode = fileMode;
             return this;
         }
-        public Builder fileMode(@Nullable Integer fileMode) {
-            this.fileMode = Codegen.ofNullable(fileMode);
-            return this;
+
+        public Builder fileMode(Integer fileMode) {
+            return fileMode(Output.of(fileMode));
         }
+
         public Builder fileName(Output<String> fileName) {
-            this.fileName = Objects.requireNonNull(fileName);
+            $.fileName = fileName;
             return this;
         }
+
         public Builder fileName(String fileName) {
-            this.fileName = Output.of(Objects.requireNonNull(fileName));
-            return this;
+            return fileName(Output.of(fileName));
         }
+
         public Builder fileUid(@Nullable Output<String> fileUid) {
-            this.fileUid = fileUid;
+            $.fileUid = fileUid;
             return this;
         }
-        public Builder fileUid(@Nullable String fileUid) {
-            this.fileUid = Codegen.ofNullable(fileUid);
-            return this;
+
+        public Builder fileUid(String fileUid) {
+            return fileUid(Output.of(fileUid));
         }
+
         public Builder secretId(Output<String> secretId) {
-            this.secretId = Objects.requireNonNull(secretId);
+            $.secretId = secretId;
             return this;
         }
+
         public Builder secretId(String secretId) {
-            this.secretId = Output.of(Objects.requireNonNull(secretId));
-            return this;
+            return secretId(Output.of(secretId));
         }
+
         public Builder secretName(@Nullable Output<String> secretName) {
-            this.secretName = secretName;
+            $.secretName = secretName;
             return this;
         }
-        public Builder secretName(@Nullable String secretName) {
-            this.secretName = Codegen.ofNullable(secretName);
-            return this;
-        }        public ServiceTaskSpecContainerSpecSecretArgs build() {
-            return new ServiceTaskSpecContainerSpecSecretArgs(fileGid, fileMode, fileName, fileUid, secretId, secretName);
+
+        public Builder secretName(String secretName) {
+            return secretName(Output.of(secretName));
+        }
+
+        public ServiceTaskSpecContainerSpecSecretArgs build() {
+            $.fileName = Objects.requireNonNull($.fileName, "expected parameter 'fileName' to be non-null");
+            $.secretId = Objects.requireNonNull($.secretId, "expected parameter 'secretId' to be non-null");
+            return $;
         }
     }
+
 }

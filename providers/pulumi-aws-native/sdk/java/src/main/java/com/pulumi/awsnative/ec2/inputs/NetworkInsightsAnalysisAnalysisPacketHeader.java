@@ -17,122 +17,112 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader extends com.pulum
     public static final NetworkInsightsAnalysisAnalysisPacketHeader Empty = new NetworkInsightsAnalysisAnalysisPacketHeader();
 
     @Import(name="destinationAddresses")
-      private final @Nullable List<String> destinationAddresses;
+    private @Nullable List<String> destinationAddresses;
 
-    public List<String> destinationAddresses() {
-        return this.destinationAddresses == null ? List.of() : this.destinationAddresses;
+    public Optional<List<String>> destinationAddresses() {
+        return Optional.ofNullable(this.destinationAddresses);
     }
 
     @Import(name="destinationPortRanges")
-      private final @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges;
+    private @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges;
 
-    public List<NetworkInsightsAnalysisPortRange> destinationPortRanges() {
-        return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
+    public Optional<List<NetworkInsightsAnalysisPortRange>> destinationPortRanges() {
+        return Optional.ofNullable(this.destinationPortRanges);
     }
 
     @Import(name="protocol")
-      private final @Nullable String protocol;
+    private @Nullable String protocol;
 
     public Optional<String> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
     @Import(name="sourceAddresses")
-      private final @Nullable List<String> sourceAddresses;
+    private @Nullable List<String> sourceAddresses;
 
-    public List<String> sourceAddresses() {
-        return this.sourceAddresses == null ? List.of() : this.sourceAddresses;
+    public Optional<List<String>> sourceAddresses() {
+        return Optional.ofNullable(this.sourceAddresses);
     }
 
     @Import(name="sourcePortRanges")
-      private final @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges;
+    private @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges;
 
-    public List<NetworkInsightsAnalysisPortRange> sourcePortRanges() {
-        return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
+    public Optional<List<NetworkInsightsAnalysisPortRange>> sourcePortRanges() {
+        return Optional.ofNullable(this.sourcePortRanges);
     }
 
-    public NetworkInsightsAnalysisAnalysisPacketHeader(
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges,
-        @Nullable String protocol,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
-        this.destinationAddresses = destinationAddresses;
-        this.destinationPortRanges = destinationPortRanges;
-        this.protocol = protocol;
-        this.sourceAddresses = sourceAddresses;
-        this.sourcePortRanges = sourcePortRanges;
-    }
+    private NetworkInsightsAnalysisAnalysisPacketHeader() {}
 
-    private NetworkInsightsAnalysisAnalysisPacketHeader() {
-        this.destinationAddresses = List.of();
-        this.destinationPortRanges = List.of();
-        this.protocol = null;
-        this.sourceAddresses = List.of();
-        this.sourcePortRanges = List.of();
+    private NetworkInsightsAnalysisAnalysisPacketHeader(NetworkInsightsAnalysisAnalysisPacketHeader $) {
+        this.destinationAddresses = $.destinationAddresses;
+        this.destinationPortRanges = $.destinationPortRanges;
+        this.protocol = $.protocol;
+        this.sourceAddresses = $.sourceAddresses;
+        this.sourcePortRanges = $.sourcePortRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInsightsAnalysisAnalysisPacketHeader defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> destinationAddresses;
-        private @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges;
-        private @Nullable String protocol;
-        private @Nullable List<String> sourceAddresses;
-        private @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges;
+        private NetworkInsightsAnalysisAnalysisPacketHeader $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInsightsAnalysisAnalysisPacketHeader();
         }
 
         public Builder(NetworkInsightsAnalysisAnalysisPacketHeader defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationAddresses = defaults.destinationAddresses;
-    	      this.destinationPortRanges = defaults.destinationPortRanges;
-    	      this.protocol = defaults.protocol;
-    	      this.sourceAddresses = defaults.sourceAddresses;
-    	      this.sourcePortRanges = defaults.sourcePortRanges;
+            $ = new NetworkInsightsAnalysisAnalysisPacketHeader(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = destinationAddresses;
+            $.destinationAddresses = destinationAddresses;
             return this;
         }
+
         public Builder destinationAddresses(String... destinationAddresses) {
             return destinationAddresses(List.of(destinationAddresses));
         }
+
         public Builder destinationPortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges) {
-            this.destinationPortRanges = destinationPortRanges;
+            $.destinationPortRanges = destinationPortRanges;
             return this;
         }
+
         public Builder destinationPortRanges(NetworkInsightsAnalysisPortRange... destinationPortRanges) {
             return destinationPortRanges(List.of(destinationPortRanges));
         }
+
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
+
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = sourceAddresses;
+            $.sourceAddresses = sourceAddresses;
             return this;
         }
+
         public Builder sourceAddresses(String... sourceAddresses) {
             return sourceAddresses(List.of(sourceAddresses));
         }
+
         public Builder sourcePortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
-            this.sourcePortRanges = sourcePortRanges;
+            $.sourcePortRanges = sourcePortRanges;
             return this;
         }
+
         public Builder sourcePortRanges(NetworkInsightsAnalysisPortRange... sourcePortRanges) {
             return sourcePortRanges(List.of(sourcePortRanges));
-        }        public NetworkInsightsAnalysisAnalysisPacketHeader build() {
-            return new NetworkInsightsAnalysisAnalysisPacketHeader(destinationAddresses, destinationPortRanges, protocol, sourceAddresses, sourcePortRanges);
+        }
+
+        public NetworkInsightsAnalysisAnalysisPacketHeader build() {
+            return $;
         }
     }
+
 }

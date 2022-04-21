@@ -5,13 +5,13 @@ package com.pulumi.gcp.folder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.folder.inputs.OrganizationPolicyBooleanPolicyGetArgs;
 import com.pulumi.gcp.folder.inputs.OrganizationPolicyListPolicyGetArgs;
 import com.pulumi.gcp.folder.inputs.OrganizationPolicyRestorePolicyGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OrganizationPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="booleanPolicy")
-      private final @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
+    private @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
 
-    public Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy() {
-        return this.booleanPolicy == null ? Codegen.empty() : this.booleanPolicy;
+    public Optional<Output<OrganizationPolicyBooleanPolicyGetArgs>> booleanPolicy() {
+        return Optional.ofNullable(this.booleanPolicy);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OrganizationPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="constraint")
-      private final @Nullable Output<String> constraint;
+    private @Nullable Output<String> constraint;
 
-    public Output<String> constraint() {
-        return this.constraint == null ? Codegen.empty() : this.constraint;
+    public Optional<Output<String>> constraint() {
+        return Optional.ofNullable(this.constraint);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OrganizationPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class OrganizationPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="folder")
-      private final @Nullable Output<String> folder;
+    private @Nullable Output<String> folder;
 
-    public Output<String> folder() {
-        return this.folder == null ? Codegen.empty() : this.folder;
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class OrganizationPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="listPolicy")
-      private final @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy;
+    private @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy;
 
-    public Output<OrganizationPolicyListPolicyGetArgs> listPolicy() {
-        return this.listPolicy == null ? Codegen.empty() : this.listPolicy;
+    public Optional<Output<OrganizationPolicyListPolicyGetArgs>> listPolicy() {
+        return Optional.ofNullable(this.listPolicy);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class OrganizationPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="restorePolicy")
-      private final @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
+    private @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
 
-    public Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy() {
-        return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
+    public Optional<Output<OrganizationPolicyRestorePolicyGetArgs>> restorePolicy() {
+        return Optional.ofNullable(this.restorePolicy);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class OrganizationPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -102,141 +102,118 @@ public final class OrganizationPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public OrganizationPolicyState(
-        @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy,
-        @Nullable Output<String> constraint,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> folder,
-        @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy,
-        @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<Integer> version) {
-        this.booleanPolicy = booleanPolicy;
-        this.constraint = constraint;
-        this.etag = etag;
-        this.folder = folder;
-        this.listPolicy = listPolicy;
-        this.restorePolicy = restorePolicy;
-        this.updateTime = updateTime;
-        this.version = version;
-    }
+    private OrganizationPolicyState() {}
 
-    private OrganizationPolicyState() {
-        this.booleanPolicy = Codegen.empty();
-        this.constraint = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.listPolicy = Codegen.empty();
-        this.restorePolicy = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.version = Codegen.empty();
+    private OrganizationPolicyState(OrganizationPolicyState $) {
+        this.booleanPolicy = $.booleanPolicy;
+        this.constraint = $.constraint;
+        this.etag = $.etag;
+        this.folder = $.folder;
+        this.listPolicy = $.listPolicy;
+        this.restorePolicy = $.restorePolicy;
+        this.updateTime = $.updateTime;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy;
-        private @Nullable Output<String> constraint;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> folder;
-        private @Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy;
-        private @Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<Integer> version;
+        private OrganizationPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationPolicyState();
         }
 
         public Builder(OrganizationPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanPolicy = defaults.booleanPolicy;
-    	      this.constraint = defaults.constraint;
-    	      this.etag = defaults.etag;
-    	      this.folder = defaults.folder;
-    	      this.listPolicy = defaults.listPolicy;
-    	      this.restorePolicy = defaults.restorePolicy;
-    	      this.updateTime = defaults.updateTime;
-    	      this.version = defaults.version;
+            $ = new OrganizationPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanPolicy(@Nullable Output<OrganizationPolicyBooleanPolicyGetArgs> booleanPolicy) {
-            this.booleanPolicy = booleanPolicy;
+            $.booleanPolicy = booleanPolicy;
             return this;
         }
-        public Builder booleanPolicy(@Nullable OrganizationPolicyBooleanPolicyGetArgs booleanPolicy) {
-            this.booleanPolicy = Codegen.ofNullable(booleanPolicy);
-            return this;
+
+        public Builder booleanPolicy(OrganizationPolicyBooleanPolicyGetArgs booleanPolicy) {
+            return booleanPolicy(Output.of(booleanPolicy));
         }
+
         public Builder constraint(@Nullable Output<String> constraint) {
-            this.constraint = constraint;
+            $.constraint = constraint;
             return this;
         }
-        public Builder constraint(@Nullable String constraint) {
-            this.constraint = Codegen.ofNullable(constraint);
-            return this;
+
+        public Builder constraint(String constraint) {
+            return constraint(Output.of(constraint));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder folder(@Nullable Output<String> folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
-        public Builder folder(@Nullable String folder) {
-            this.folder = Codegen.ofNullable(folder);
-            return this;
+
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
+
         public Builder listPolicy(@Nullable Output<OrganizationPolicyListPolicyGetArgs> listPolicy) {
-            this.listPolicy = listPolicy;
+            $.listPolicy = listPolicy;
             return this;
         }
-        public Builder listPolicy(@Nullable OrganizationPolicyListPolicyGetArgs listPolicy) {
-            this.listPolicy = Codegen.ofNullable(listPolicy);
-            return this;
+
+        public Builder listPolicy(OrganizationPolicyListPolicyGetArgs listPolicy) {
+            return listPolicy(Output.of(listPolicy));
         }
+
         public Builder restorePolicy(@Nullable Output<OrganizationPolicyRestorePolicyGetArgs> restorePolicy) {
-            this.restorePolicy = restorePolicy;
+            $.restorePolicy = restorePolicy;
             return this;
         }
-        public Builder restorePolicy(@Nullable OrganizationPolicyRestorePolicyGetArgs restorePolicy) {
-            this.restorePolicy = Codegen.ofNullable(restorePolicy);
-            return this;
+
+        public Builder restorePolicy(OrganizationPolicyRestorePolicyGetArgs restorePolicy) {
+            return restorePolicy(Output.of(restorePolicy));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public OrganizationPolicyState build() {
-            return new OrganizationPolicyState(booleanPolicy, constraint, etag, folder, listPolicy, restorePolicy, updateTime, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public OrganizationPolicyState build() {
+            return $;
         }
     }
+
 }

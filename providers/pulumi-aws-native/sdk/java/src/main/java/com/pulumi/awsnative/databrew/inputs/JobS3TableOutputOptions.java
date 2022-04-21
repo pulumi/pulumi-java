@@ -13,45 +13,45 @@ public final class JobS3TableOutputOptions extends com.pulumi.resources.InvokeAr
     public static final JobS3TableOutputOptions Empty = new JobS3TableOutputOptions();
 
     @Import(name="location", required=true)
-      private final JobS3Location location;
+    private JobS3Location location;
 
     public JobS3Location location() {
         return this.location;
     }
 
-    public JobS3TableOutputOptions(JobS3Location location) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private JobS3TableOutputOptions() {}
 
-    private JobS3TableOutputOptions() {
-        this.location = null;
+    private JobS3TableOutputOptions(JobS3TableOutputOptions $) {
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobS3TableOutputOptions defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private JobS3Location location;
+        private JobS3TableOutputOptions $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobS3TableOutputOptions();
         }
 
         public Builder(JobS3TableOutputOptions defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
+            $ = new JobS3TableOutputOptions(Objects.requireNonNull(defaults));
         }
 
         public Builder location(JobS3Location location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
-        }        public JobS3TableOutputOptions build() {
-            return new JobS3TableOutputOptions(location);
+        }
+
+        public JobS3TableOutputOptions build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

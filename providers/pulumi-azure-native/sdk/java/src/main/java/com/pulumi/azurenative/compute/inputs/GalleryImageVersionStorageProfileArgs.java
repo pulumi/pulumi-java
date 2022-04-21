@@ -8,9 +8,9 @@ import com.pulumi.azurenative.compute.inputs.GalleryDataDiskImageArgs;
 import com.pulumi.azurenative.compute.inputs.GalleryOSDiskImageArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
      * 
      */
     @Import(name="dataDiskImages")
-      private final @Nullable Output<List<GalleryDataDiskImageArgs>> dataDiskImages;
+    private @Nullable Output<List<GalleryDataDiskImageArgs>> dataDiskImages;
 
-    public Output<List<GalleryDataDiskImageArgs>> dataDiskImages() {
-        return this.dataDiskImages == null ? Codegen.empty() : this.dataDiskImages;
+    public Optional<Output<List<GalleryDataDiskImageArgs>>> dataDiskImages() {
+        return Optional.ofNullable(this.dataDiskImages);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
      * 
      */
     @Import(name="osDiskImage")
-      private final @Nullable Output<GalleryOSDiskImageArgs> osDiskImage;
+    private @Nullable Output<GalleryOSDiskImageArgs> osDiskImage;
 
-    public Output<GalleryOSDiskImageArgs> osDiskImage() {
-        return this.osDiskImage == null ? Codegen.empty() : this.osDiskImage;
+    public Optional<Output<GalleryOSDiskImageArgs>> osDiskImage() {
+        return Optional.ofNullable(this.osDiskImage);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
+    private @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
-    public Output<GalleryArtifactVersionSourceArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<GalleryArtifactVersionSourceArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public GalleryImageVersionStorageProfileArgs(
-        @Nullable Output<List<GalleryDataDiskImageArgs>> dataDiskImages,
-        @Nullable Output<GalleryOSDiskImageArgs> osDiskImage,
-        @Nullable Output<GalleryArtifactVersionSourceArgs> source) {
-        this.dataDiskImages = dataDiskImages;
-        this.osDiskImage = osDiskImage;
-        this.source = source;
-    }
+    private GalleryImageVersionStorageProfileArgs() {}
 
-    private GalleryImageVersionStorageProfileArgs() {
-        this.dataDiskImages = Codegen.empty();
-        this.osDiskImage = Codegen.empty();
-        this.source = Codegen.empty();
+    private GalleryImageVersionStorageProfileArgs(GalleryImageVersionStorageProfileArgs $) {
+        this.dataDiskImages = $.dataDiskImages;
+        this.osDiskImage = $.osDiskImage;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GalleryImageVersionStorageProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GalleryDataDiskImageArgs>> dataDiskImages;
-        private @Nullable Output<GalleryOSDiskImageArgs> osDiskImage;
-        private @Nullable Output<GalleryArtifactVersionSourceArgs> source;
+        private GalleryImageVersionStorageProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GalleryImageVersionStorageProfileArgs();
         }
 
         public Builder(GalleryImageVersionStorageProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataDiskImages = defaults.dataDiskImages;
-    	      this.osDiskImage = defaults.osDiskImage;
-    	      this.source = defaults.source;
+            $ = new GalleryImageVersionStorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataDiskImages(@Nullable Output<List<GalleryDataDiskImageArgs>> dataDiskImages) {
-            this.dataDiskImages = dataDiskImages;
+            $.dataDiskImages = dataDiskImages;
             return this;
         }
-        public Builder dataDiskImages(@Nullable List<GalleryDataDiskImageArgs> dataDiskImages) {
-            this.dataDiskImages = Codegen.ofNullable(dataDiskImages);
-            return this;
+
+        public Builder dataDiskImages(List<GalleryDataDiskImageArgs> dataDiskImages) {
+            return dataDiskImages(Output.of(dataDiskImages));
         }
+
         public Builder dataDiskImages(GalleryDataDiskImageArgs... dataDiskImages) {
             return dataDiskImages(List.of(dataDiskImages));
         }
+
         public Builder osDiskImage(@Nullable Output<GalleryOSDiskImageArgs> osDiskImage) {
-            this.osDiskImage = osDiskImage;
+            $.osDiskImage = osDiskImage;
             return this;
         }
-        public Builder osDiskImage(@Nullable GalleryOSDiskImageArgs osDiskImage) {
-            this.osDiskImage = Codegen.ofNullable(osDiskImage);
-            return this;
+
+        public Builder osDiskImage(GalleryOSDiskImageArgs osDiskImage) {
+            return osDiskImage(Output.of(osDiskImage));
         }
+
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public GalleryImageVersionStorageProfileArgs build() {
-            return new GalleryImageVersionStorageProfileArgs(dataDiskImages, osDiskImage, source);
+
+        public Builder source(GalleryArtifactVersionSourceArgs source) {
+            return source(Output.of(source));
+        }
+
+        public GalleryImageVersionStorageProfileArgs build() {
+            return $;
         }
     }
+
 }

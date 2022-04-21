@@ -17,65 +17,61 @@ public final class ProviderRegistrationPropertiesResponseSubscriptionLifecycleNo
     public static final ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications Empty = new ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications();
 
     @Import(name="softDeleteTTL")
-      private final @Nullable String softDeleteTTL;
+    private @Nullable String softDeleteTTL;
 
     public Optional<String> softDeleteTTL() {
-        return this.softDeleteTTL == null ? Optional.empty() : Optional.ofNullable(this.softDeleteTTL);
+        return Optional.ofNullable(this.softDeleteTTL);
     }
 
     @Import(name="subscriptionStateOverrideActions")
-      private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
+    private @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
 
-    public List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions() {
-        return this.subscriptionStateOverrideActions == null ? List.of() : this.subscriptionStateOverrideActions;
+    public Optional<List<SubscriptionStateOverrideActionResponse>> subscriptionStateOverrideActions() {
+        return Optional.ofNullable(this.subscriptionStateOverrideActions);
     }
 
-    public ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(
-        @Nullable String softDeleteTTL,
-        @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
-        this.softDeleteTTL = softDeleteTTL;
-        this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
-    }
+    private ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications() {}
 
-    private ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications() {
-        this.softDeleteTTL = null;
-        this.subscriptionStateOverrideActions = List.of();
+    private ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications $) {
+        this.softDeleteTTL = $.softDeleteTTL;
+        this.subscriptionStateOverrideActions = $.subscriptionStateOverrideActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String softDeleteTTL;
-        private @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
+        private ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications();
         }
 
         public Builder(ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.softDeleteTTL = defaults.softDeleteTTL;
-    	      this.subscriptionStateOverrideActions = defaults.subscriptionStateOverrideActions;
+            $ = new ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(Objects.requireNonNull(defaults));
         }
 
         public Builder softDeleteTTL(@Nullable String softDeleteTTL) {
-            this.softDeleteTTL = softDeleteTTL;
+            $.softDeleteTTL = softDeleteTTL;
             return this;
         }
+
         public Builder subscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
-            this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
+            $.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }
+
         public Builder subscriptionStateOverrideActions(SubscriptionStateOverrideActionResponse... subscriptionStateOverrideActions) {
             return subscriptionStateOverrideActions(List.of(subscriptionStateOverrideActions));
-        }        public ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications build() {
-            return new ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(softDeleteTTL, subscriptionStateOverrideActions);
+        }
+
+        public ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications build() {
+            return $;
         }
     }
+
 }

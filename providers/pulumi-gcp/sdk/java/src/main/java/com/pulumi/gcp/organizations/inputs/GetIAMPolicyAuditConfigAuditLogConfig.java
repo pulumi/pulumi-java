@@ -20,10 +20,10 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig extends com.pulumi.reso
      * 
      */
     @Import(name="exemptedMembers")
-      private final @Nullable List<String> exemptedMembers;
+    private @Nullable List<String> exemptedMembers;
 
-    public List<String> exemptedMembers() {
-        return this.exemptedMembers == null ? List.of() : this.exemptedMembers;
+    public Optional<List<String>> exemptedMembers() {
+        return Optional.ofNullable(this.exemptedMembers);
     }
 
     /**
@@ -31,58 +31,55 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig extends com.pulumi.reso
      * 
      */
     @Import(name="logType", required=true)
-      private final String logType;
+    private String logType;
 
     public String logType() {
         return this.logType;
     }
 
-    public GetIAMPolicyAuditConfigAuditLogConfig(
-        @Nullable List<String> exemptedMembers,
-        String logType) {
-        this.exemptedMembers = exemptedMembers;
-        this.logType = Objects.requireNonNull(logType, "expected parameter 'logType' to be non-null");
-    }
+    private GetIAMPolicyAuditConfigAuditLogConfig() {}
 
-    private GetIAMPolicyAuditConfigAuditLogConfig() {
-        this.exemptedMembers = List.of();
-        this.logType = null;
+    private GetIAMPolicyAuditConfigAuditLogConfig(GetIAMPolicyAuditConfigAuditLogConfig $) {
+        this.exemptedMembers = $.exemptedMembers;
+        this.logType = $.logType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIAMPolicyAuditConfigAuditLogConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> exemptedMembers;
-        private String logType;
+        private GetIAMPolicyAuditConfigAuditLogConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIAMPolicyAuditConfigAuditLogConfig();
         }
 
         public Builder(GetIAMPolicyAuditConfigAuditLogConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exemptedMembers = defaults.exemptedMembers;
-    	      this.logType = defaults.logType;
+            $ = new GetIAMPolicyAuditConfigAuditLogConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = exemptedMembers;
+            $.exemptedMembers = exemptedMembers;
             return this;
         }
+
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
+
         public Builder logType(String logType) {
-            this.logType = Objects.requireNonNull(logType);
+            $.logType = logType;
             return this;
-        }        public GetIAMPolicyAuditConfigAuditLogConfig build() {
-            return new GetIAMPolicyAuditConfigAuditLogConfig(exemptedMembers, logType);
+        }
+
+        public GetIAMPolicyAuditConfigAuditLogConfig build() {
+            $.logType = Objects.requireNonNull($.logType, "expected parameter 'logType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.ApiOperationArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class IngressToArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operations")
-      private final @Nullable Output<List<ApiOperationArgs>> operations;
+    private @Nullable Output<List<ApiOperationArgs>> operations;
 
-    public Output<List<ApiOperationArgs>> operations() {
-        return this.operations == null ? Codegen.empty() : this.operations;
+    public Optional<Output<List<ApiOperationArgs>>> operations() {
+        return Optional.ofNullable(this.operations);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class IngressToArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<List<String>> resources;
+    private @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<List<String>>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
-    public IngressToArgs(
-        @Nullable Output<List<ApiOperationArgs>> operations,
-        @Nullable Output<List<String>> resources) {
-        this.operations = operations;
-        this.resources = resources;
-    }
+    private IngressToArgs() {}
 
-    private IngressToArgs() {
-        this.operations = Codegen.empty();
-        this.resources = Codegen.empty();
+    private IngressToArgs(IngressToArgs $) {
+        this.operations = $.operations;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressToArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ApiOperationArgs>> operations;
-        private @Nullable Output<List<String>> resources;
+        private IngressToArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressToArgs();
         }
 
         public Builder(IngressToArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operations = defaults.operations;
-    	      this.resources = defaults.resources;
+            $ = new IngressToArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operations(@Nullable Output<List<ApiOperationArgs>> operations) {
-            this.operations = operations;
+            $.operations = operations;
             return this;
         }
-        public Builder operations(@Nullable List<ApiOperationArgs> operations) {
-            this.operations = Codegen.ofNullable(operations);
-            return this;
+
+        public Builder operations(List<ApiOperationArgs> operations) {
+            return operations(Output.of(operations));
         }
+
         public Builder operations(ApiOperationArgs... operations) {
             return operations(List.of(operations));
         }
+
         public Builder resources(@Nullable Output<List<String>> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable List<String> resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(List<String> resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
-        }        public IngressToArgs build() {
-            return new IngressToArgs(operations, resources);
+        }
+
+        public IngressToArgs build() {
+            return $;
         }
     }
+
 }

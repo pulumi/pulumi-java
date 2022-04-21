@@ -17,45 +17,45 @@ public final class GetScheduledActionArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="scheduledActionName", required=true)
-      private final String scheduledActionName;
+    private String scheduledActionName;
 
     public String scheduledActionName() {
         return this.scheduledActionName;
     }
 
-    public GetScheduledActionArgs(String scheduledActionName) {
-        this.scheduledActionName = Objects.requireNonNull(scheduledActionName, "expected parameter 'scheduledActionName' to be non-null");
-    }
+    private GetScheduledActionArgs() {}
 
-    private GetScheduledActionArgs() {
-        this.scheduledActionName = null;
+    private GetScheduledActionArgs(GetScheduledActionArgs $) {
+        this.scheduledActionName = $.scheduledActionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScheduledActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String scheduledActionName;
+        private GetScheduledActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScheduledActionArgs();
         }
 
         public Builder(GetScheduledActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduledActionName = defaults.scheduledActionName;
+            $ = new GetScheduledActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduledActionName(String scheduledActionName) {
-            this.scheduledActionName = Objects.requireNonNull(scheduledActionName);
+            $.scheduledActionName = scheduledActionName;
             return this;
-        }        public GetScheduledActionArgs build() {
-            return new GetScheduledActionArgs(scheduledActionName);
+        }
+
+        public GetScheduledActionArgs build() {
+            $.scheduledActionName = Objects.requireNonNull($.scheduledActionName, "expected parameter 'scheduledActionName' to be non-null");
+            return $;
         }
     }
+
 }

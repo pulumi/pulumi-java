@@ -17,7 +17,7 @@ public final class ListDatabaseAccountConnectionStringsArgs extends com.pulumi.r
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,55 +28,52 @@ public final class ListDatabaseAccountConnectionStringsArgs extends com.pulumi.r
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListDatabaseAccountConnectionStringsArgs(
-        String accountName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListDatabaseAccountConnectionStringsArgs() {}
 
-    private ListDatabaseAccountConnectionStringsArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
+    private ListDatabaseAccountConnectionStringsArgs(ListDatabaseAccountConnectionStringsArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListDatabaseAccountConnectionStringsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
+        private ListDatabaseAccountConnectionStringsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListDatabaseAccountConnectionStringsArgs();
         }
 
         public Builder(ListDatabaseAccountConnectionStringsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListDatabaseAccountConnectionStringsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListDatabaseAccountConnectionStringsArgs build() {
-            return new ListDatabaseAccountConnectionStringsArgs(accountName, resourceGroupName);
+        }
+
+        public ListDatabaseAccountConnectionStringsArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

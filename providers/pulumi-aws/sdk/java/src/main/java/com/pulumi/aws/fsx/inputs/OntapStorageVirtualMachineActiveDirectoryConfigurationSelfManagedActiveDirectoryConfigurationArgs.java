@@ -5,10 +5,10 @@ package com.pulumi.aws.fsx.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @Import(name="dnsIps", required=true)
-      private final Output<List<String>> dnsIps;
+    private Output<List<String>> dnsIps;
 
     public Output<List<String>> dnsIps() {
         return this.dnsIps;
@@ -32,7 +32,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -43,10 +43,10 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @Import(name="fileSystemAdministratorsGroup")
-      private final @Nullable Output<String> fileSystemAdministratorsGroup;
+    private @Nullable Output<String> fileSystemAdministratorsGroup;
 
-    public Output<String> fileSystemAdministratorsGroup() {
-        return this.fileSystemAdministratorsGroup == null ? Codegen.empty() : this.fileSystemAdministratorsGroup;
+    public Optional<Output<String>> fileSystemAdministratorsGroup() {
+        return Optional.ofNullable(this.fileSystemAdministratorsGroup);
     }
 
     /**
@@ -56,11 +56,11 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      */
     @Deprecated /* use 'organizational_unit_distinguished_name' instead */
     @Import(name="organizationalUnitDistinguidshedName")
-      private final @Nullable Output<String> organizationalUnitDistinguidshedName;
+    private @Nullable Output<String> organizationalUnitDistinguidshedName;
 
     @Deprecated /* use 'organizational_unit_distinguished_name' instead */
-    public Output<String> organizationalUnitDistinguidshedName() {
-        return this.organizationalUnitDistinguidshedName == null ? Codegen.empty() : this.organizationalUnitDistinguidshedName;
+    public Optional<Output<String>> organizationalUnitDistinguidshedName() {
+        return Optional.ofNullable(this.organizationalUnitDistinguidshedName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @Import(name="organizationalUnitDistinguishedName")
-      private final @Nullable Output<String> organizationalUnitDistinguishedName;
+    private @Nullable Output<String> organizationalUnitDistinguishedName;
 
-    public Output<String> organizationalUnitDistinguishedName() {
-        return this.organizationalUnitDistinguishedName == null ? Codegen.empty() : this.organizationalUnitDistinguishedName;
+    public Optional<Output<String>> organizationalUnitDistinguishedName() {
+        return Optional.ofNullable(this.organizationalUnitDistinguishedName);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -90,131 +90,116 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs(
-        Output<List<String>> dnsIps,
-        Output<String> domainName,
-        @Nullable Output<String> fileSystemAdministratorsGroup,
-        @Nullable Output<String> organizationalUnitDistinguidshedName,
-        @Nullable Output<String> organizationalUnitDistinguishedName,
-        Output<String> password,
-        Output<String> username) {
-        this.dnsIps = Objects.requireNonNull(dnsIps, "expected parameter 'dnsIps' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
-        this.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
-        this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs() {}
 
-    private OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs() {
-        this.dnsIps = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.fileSystemAdministratorsGroup = Codegen.empty();
-        this.organizationalUnitDistinguidshedName = Codegen.empty();
-        this.organizationalUnitDistinguishedName = Codegen.empty();
-        this.password = Codegen.empty();
-        this.username = Codegen.empty();
+    private OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs(OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs $) {
+        this.dnsIps = $.dnsIps;
+        this.domainName = $.domainName;
+        this.fileSystemAdministratorsGroup = $.fileSystemAdministratorsGroup;
+        this.organizationalUnitDistinguidshedName = $.organizationalUnitDistinguidshedName;
+        this.organizationalUnitDistinguishedName = $.organizationalUnitDistinguishedName;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> dnsIps;
-        private Output<String> domainName;
-        private @Nullable Output<String> fileSystemAdministratorsGroup;
-        private @Nullable Output<String> organizationalUnitDistinguidshedName;
-        private @Nullable Output<String> organizationalUnitDistinguishedName;
-        private Output<String> password;
-        private Output<String> username;
+        private OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs();
         }
 
         public Builder(OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsIps = defaults.dnsIps;
-    	      this.domainName = defaults.domainName;
-    	      this.fileSystemAdministratorsGroup = defaults.fileSystemAdministratorsGroup;
-    	      this.organizationalUnitDistinguidshedName = defaults.organizationalUnitDistinguidshedName;
-    	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsIps(Output<List<String>> dnsIps) {
-            this.dnsIps = Objects.requireNonNull(dnsIps);
+            $.dnsIps = dnsIps;
             return this;
         }
+
         public Builder dnsIps(List<String> dnsIps) {
-            this.dnsIps = Output.of(Objects.requireNonNull(dnsIps));
-            return this;
+            return dnsIps(Output.of(dnsIps));
         }
+
         public Builder dnsIps(String... dnsIps) {
             return dnsIps(List.of(dnsIps));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder fileSystemAdministratorsGroup(@Nullable Output<String> fileSystemAdministratorsGroup) {
-            this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
+            $.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
             return this;
         }
-        public Builder fileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
-            this.fileSystemAdministratorsGroup = Codegen.ofNullable(fileSystemAdministratorsGroup);
-            return this;
+
+        public Builder fileSystemAdministratorsGroup(String fileSystemAdministratorsGroup) {
+            return fileSystemAdministratorsGroup(Output.of(fileSystemAdministratorsGroup));
         }
+
         public Builder organizationalUnitDistinguidshedName(@Nullable Output<String> organizationalUnitDistinguidshedName) {
-            this.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
+            $.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
             return this;
         }
-        public Builder organizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
-            this.organizationalUnitDistinguidshedName = Codegen.ofNullable(organizationalUnitDistinguidshedName);
-            return this;
+
+        public Builder organizationalUnitDistinguidshedName(String organizationalUnitDistinguidshedName) {
+            return organizationalUnitDistinguidshedName(Output.of(organizationalUnitDistinguidshedName));
         }
+
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
+            $.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
-        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = Codegen.ofNullable(organizationalUnitDistinguishedName);
-            return this;
+
+        public Builder organizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
+            return organizationalUnitDistinguishedName(Output.of(organizationalUnitDistinguishedName));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs build() {
-            return new OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs(dnsIps, domainName, fileSystemAdministratorsGroup, organizationalUnitDistinguidshedName, organizationalUnitDistinguishedName, password, username);
+            return username(Output.of(username));
+        }
+
+        public OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs build() {
+            $.dnsIps = Objects.requireNonNull($.dnsIps, "expected parameter 'dnsIps' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

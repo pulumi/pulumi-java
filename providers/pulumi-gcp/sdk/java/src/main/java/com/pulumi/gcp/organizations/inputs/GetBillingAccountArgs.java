@@ -20,10 +20,10 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="billingAccount")
-      private final @Nullable String billingAccount;
+    private @Nullable String billingAccount;
 
     public Optional<String> billingAccount() {
-        return this.billingAccount == null ? Optional.empty() : Optional.ofNullable(this.billingAccount);
+        return Optional.ofNullable(this.billingAccount);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -42,64 +42,56 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="open")
-      private final @Nullable Boolean open;
+    private @Nullable Boolean open;
 
     public Optional<Boolean> open() {
-        return this.open == null ? Optional.empty() : Optional.ofNullable(this.open);
+        return Optional.ofNullable(this.open);
     }
 
-    public GetBillingAccountArgs(
-        @Nullable String billingAccount,
-        @Nullable String displayName,
-        @Nullable Boolean open) {
-        this.billingAccount = billingAccount;
-        this.displayName = displayName;
-        this.open = open;
-    }
+    private GetBillingAccountArgs() {}
 
-    private GetBillingAccountArgs() {
-        this.billingAccount = null;
-        this.displayName = null;
-        this.open = null;
+    private GetBillingAccountArgs(GetBillingAccountArgs $) {
+        this.billingAccount = $.billingAccount;
+        this.displayName = $.displayName;
+        this.open = $.open;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBillingAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String billingAccount;
-        private @Nullable String displayName;
-        private @Nullable Boolean open;
+        private GetBillingAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBillingAccountArgs();
         }
 
         public Builder(GetBillingAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccount = defaults.billingAccount;
-    	      this.displayName = defaults.displayName;
-    	      this.open = defaults.open;
+            $ = new GetBillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = billingAccount;
+            $.billingAccount = billingAccount;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder open(@Nullable Boolean open) {
-            this.open = open;
+            $.open = open;
             return this;
-        }        public GetBillingAccountArgs build() {
-            return new GetBillingAccountArgs(billingAccount, displayName, open);
+        }
+
+        public GetBillingAccountArgs build() {
+            return $;
         }
     }
+
 }

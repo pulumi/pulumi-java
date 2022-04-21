@@ -23,10 +23,10 @@ public final class ApiDeploymentParameterMetadataSetResponse extends com.pulumi.
      * 
      */
     @Import(name="packageContentLink")
-      private final @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
+    private @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
 
     public Optional<ApiDeploymentParameterMetadataResponse> packageContentLink() {
-        return this.packageContentLink == null ? Optional.empty() : Optional.ofNullable(this.packageContentLink);
+        return Optional.ofNullable(this.packageContentLink);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ApiDeploymentParameterMetadataSetResponse extends com.pulumi.
      * 
      */
     @Import(name="redisCacheConnectionString")
-      private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
+    private @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 
     public Optional<ApiDeploymentParameterMetadataResponse> redisCacheConnectionString() {
-        return this.redisCacheConnectionString == null ? Optional.empty() : Optional.ofNullable(this.redisCacheConnectionString);
+        return Optional.ofNullable(this.redisCacheConnectionString);
     }
 
-    public ApiDeploymentParameterMetadataSetResponse(
-        @Nullable ApiDeploymentParameterMetadataResponse packageContentLink,
-        @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
-        this.packageContentLink = packageContentLink;
-        this.redisCacheConnectionString = redisCacheConnectionString;
-    }
+    private ApiDeploymentParameterMetadataSetResponse() {}
 
-    private ApiDeploymentParameterMetadataSetResponse() {
-        this.packageContentLink = null;
-        this.redisCacheConnectionString = null;
+    private ApiDeploymentParameterMetadataSetResponse(ApiDeploymentParameterMetadataSetResponse $) {
+        this.packageContentLink = $.packageContentLink;
+        this.redisCacheConnectionString = $.redisCacheConnectionString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiDeploymentParameterMetadataSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
-        private @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
+        private ApiDeploymentParameterMetadataSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiDeploymentParameterMetadataSetResponse();
         }
 
         public Builder(ApiDeploymentParameterMetadataSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.packageContentLink = defaults.packageContentLink;
-    	      this.redisCacheConnectionString = defaults.redisCacheConnectionString;
+            $ = new ApiDeploymentParameterMetadataSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder packageContentLink(@Nullable ApiDeploymentParameterMetadataResponse packageContentLink) {
-            this.packageContentLink = packageContentLink;
+            $.packageContentLink = packageContentLink;
             return this;
         }
+
         public Builder redisCacheConnectionString(@Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
-            this.redisCacheConnectionString = redisCacheConnectionString;
+            $.redisCacheConnectionString = redisCacheConnectionString;
             return this;
-        }        public ApiDeploymentParameterMetadataSetResponse build() {
-            return new ApiDeploymentParameterMetadataSetResponse(packageContentLink, redisCacheConnectionString);
+        }
+
+        public ApiDeploymentParameterMetadataSetResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxPageFormParameterArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,52 +22,52 @@ public final class CxPageFormArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<CxPageFormParameterArgs>> parameters;
+    private @Nullable Output<List<CxPageFormParameterArgs>> parameters;
 
-    public Output<List<CxPageFormParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<CxPageFormParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public CxPageFormArgs(@Nullable Output<List<CxPageFormParameterArgs>> parameters) {
-        this.parameters = parameters;
-    }
+    private CxPageFormArgs() {}
 
-    private CxPageFormArgs() {
-        this.parameters = Codegen.empty();
+    private CxPageFormArgs(CxPageFormArgs $) {
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxPageFormArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CxPageFormParameterArgs>> parameters;
+        private CxPageFormArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxPageFormArgs();
         }
 
         public Builder(CxPageFormArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
+            $ = new CxPageFormArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<List<CxPageFormParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<CxPageFormParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<CxPageFormParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(CxPageFormParameterArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public CxPageFormArgs build() {
-            return new CxPageFormArgs(parameters);
+        }
+
+        public CxPageFormArgs build() {
+            return $;
         }
     }
+
 }

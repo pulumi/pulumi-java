@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceQuotaStatusArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="hard")
-      private final @Nullable Output<Map<String,String>> hard;
+    private @Nullable Output<Map<String,String>> hard;
 
-    public Output<Map<String,String>> hard() {
-        return this.hard == null ? Codegen.empty() : this.hard;
+    public Optional<Output<Map<String,String>>> hard() {
+        return Optional.ofNullable(this.hard);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ResourceQuotaStatusArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="used")
-      private final @Nullable Output<Map<String,String>> used;
+    private @Nullable Output<Map<String,String>> used;
 
-    public Output<Map<String,String>> used() {
-        return this.used == null ? Codegen.empty() : this.used;
+    public Optional<Output<Map<String,String>>> used() {
+        return Optional.ofNullable(this.used);
     }
 
-    public ResourceQuotaStatusArgs(
-        @Nullable Output<Map<String,String>> hard,
-        @Nullable Output<Map<String,String>> used) {
-        this.hard = hard;
-        this.used = used;
-    }
+    private ResourceQuotaStatusArgs() {}
 
-    private ResourceQuotaStatusArgs() {
-        this.hard = Codegen.empty();
-        this.used = Codegen.empty();
+    private ResourceQuotaStatusArgs(ResourceQuotaStatusArgs $) {
+        this.hard = $.hard;
+        this.used = $.used;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceQuotaStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> hard;
-        private @Nullable Output<Map<String,String>> used;
+        private ResourceQuotaStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceQuotaStatusArgs();
         }
 
         public Builder(ResourceQuotaStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hard = defaults.hard;
-    	      this.used = defaults.used;
+            $ = new ResourceQuotaStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hard(@Nullable Output<Map<String,String>> hard) {
-            this.hard = hard;
+            $.hard = hard;
             return this;
         }
-        public Builder hard(@Nullable Map<String,String> hard) {
-            this.hard = Codegen.ofNullable(hard);
-            return this;
+
+        public Builder hard(Map<String,String> hard) {
+            return hard(Output.of(hard));
         }
+
         public Builder used(@Nullable Output<Map<String,String>> used) {
-            this.used = used;
+            $.used = used;
             return this;
         }
-        public Builder used(@Nullable Map<String,String> used) {
-            this.used = Codegen.ofNullable(used);
-            return this;
-        }        public ResourceQuotaStatusArgs build() {
-            return new ResourceQuotaStatusArgs(hard, used);
+
+        public Builder used(Map<String,String> used) {
+            return used(Output.of(used));
+        }
+
+        public ResourceQuotaStatusArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class PoliciesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quarantinePolicy")
-      private final @Nullable QuarantinePolicyResponse quarantinePolicy;
+    private @Nullable QuarantinePolicyResponse quarantinePolicy;
 
     public Optional<QuarantinePolicyResponse> quarantinePolicy() {
-        return this.quarantinePolicy == null ? Optional.empty() : Optional.ofNullable(this.quarantinePolicy);
+        return Optional.ofNullable(this.quarantinePolicy);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PoliciesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retentionPolicy")
-      private final @Nullable RetentionPolicyResponse retentionPolicy;
+    private @Nullable RetentionPolicyResponse retentionPolicy;
 
     public Optional<RetentionPolicyResponse> retentionPolicy() {
-        return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
+        return Optional.ofNullable(this.retentionPolicy);
     }
 
     /**
@@ -47,64 +47,56 @@ public final class PoliciesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trustPolicy")
-      private final @Nullable TrustPolicyResponse trustPolicy;
+    private @Nullable TrustPolicyResponse trustPolicy;
 
     public Optional<TrustPolicyResponse> trustPolicy() {
-        return this.trustPolicy == null ? Optional.empty() : Optional.ofNullable(this.trustPolicy);
+        return Optional.ofNullable(this.trustPolicy);
     }
 
-    public PoliciesResponse(
-        @Nullable QuarantinePolicyResponse quarantinePolicy,
-        @Nullable RetentionPolicyResponse retentionPolicy,
-        @Nullable TrustPolicyResponse trustPolicy) {
-        this.quarantinePolicy = quarantinePolicy;
-        this.retentionPolicy = retentionPolicy;
-        this.trustPolicy = trustPolicy;
-    }
+    private PoliciesResponse() {}
 
-    private PoliciesResponse() {
-        this.quarantinePolicy = null;
-        this.retentionPolicy = null;
-        this.trustPolicy = null;
+    private PoliciesResponse(PoliciesResponse $) {
+        this.quarantinePolicy = $.quarantinePolicy;
+        this.retentionPolicy = $.retentionPolicy;
+        this.trustPolicy = $.trustPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PoliciesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable QuarantinePolicyResponse quarantinePolicy;
-        private @Nullable RetentionPolicyResponse retentionPolicy;
-        private @Nullable TrustPolicyResponse trustPolicy;
+        private PoliciesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PoliciesResponse();
         }
 
         public Builder(PoliciesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quarantinePolicy = defaults.quarantinePolicy;
-    	      this.retentionPolicy = defaults.retentionPolicy;
-    	      this.trustPolicy = defaults.trustPolicy;
+            $ = new PoliciesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder quarantinePolicy(@Nullable QuarantinePolicyResponse quarantinePolicy) {
-            this.quarantinePolicy = quarantinePolicy;
+            $.quarantinePolicy = quarantinePolicy;
             return this;
         }
+
         public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
-            this.retentionPolicy = retentionPolicy;
+            $.retentionPolicy = retentionPolicy;
             return this;
         }
+
         public Builder trustPolicy(@Nullable TrustPolicyResponse trustPolicy) {
-            this.trustPolicy = trustPolicy;
+            $.trustPolicy = trustPolicy;
             return this;
-        }        public PoliciesResponse build() {
-            return new PoliciesResponse(quarantinePolicy, retentionPolicy, trustPolicy);
+        }
+
+        public PoliciesResponse build() {
+            return $;
         }
     }
+
 }

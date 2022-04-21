@@ -10,12 +10,12 @@ import com.pulumi.aws.appsync.inputs.GraphQLApiOpenidConnectConfigGetArgs;
 import com.pulumi.aws.appsync.inputs.GraphQLApiUserPoolConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="additionalAuthenticationProviders")
-      private final @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders;
+    private @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders;
 
-    public Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders() {
-        return this.additionalAuthenticationProviders == null ? Codegen.empty() : this.additionalAuthenticationProviders;
+    public Optional<Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>>> additionalAuthenticationProviders() {
+        return Optional.ofNullable(this.additionalAuthenticationProviders);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationType")
-      private final @Nullable Output<String> authenticationType;
+    private @Nullable Output<String> authenticationType;
 
-    public Output<String> authenticationType() {
-        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
+    public Optional<Output<String>> authenticationType() {
+        return Optional.ofNullable(this.authenticationType);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lambdaAuthorizerConfig")
-      private final @Nullable Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
+    private @Nullable Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
 
-    public Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig() {
-        return this.lambdaAuthorizerConfig == null ? Codegen.empty() : this.lambdaAuthorizerConfig;
+    public Optional<Output<GraphQLApiLambdaAuthorizerConfigGetArgs>> lambdaAuthorizerConfig() {
+        return Optional.ofNullable(this.lambdaAuthorizerConfig);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logConfig")
-      private final @Nullable Output<GraphQLApiLogConfigGetArgs> logConfig;
+    private @Nullable Output<GraphQLApiLogConfigGetArgs> logConfig;
 
-    public Output<GraphQLApiLogConfigGetArgs> logConfig() {
-        return this.logConfig == null ? Codegen.empty() : this.logConfig;
+    public Optional<Output<GraphQLApiLogConfigGetArgs>> logConfig() {
+        return Optional.ofNullable(this.logConfig);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="openidConnectConfig")
-      private final @Nullable Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig;
+    private @Nullable Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig;
 
-    public Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig() {
-        return this.openidConnectConfig == null ? Codegen.empty() : this.openidConnectConfig;
+    public Optional<Output<GraphQLApiOpenidConnectConfigGetArgs>> openidConnectConfig() {
+        return Optional.ofNullable(this.openidConnectConfig);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schema")
-      private final @Nullable Output<String> schema;
+    private @Nullable Output<String> schema;
 
-    public Output<String> schema() {
-        return this.schema == null ? Codegen.empty() : this.schema;
+    public Optional<Output<String>> schema() {
+        return Optional.ofNullable(this.schema);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uris")
-      private final @Nullable Output<Map<String,String>> uris;
+    private @Nullable Output<Map<String,String>> uris;
 
-    public Output<Map<String,String>> uris() {
-        return this.uris == null ? Codegen.empty() : this.uris;
+    public Optional<Output<Map<String,String>>> uris() {
+        return Optional.ofNullable(this.uris);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userPoolConfig")
-      private final @Nullable Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig;
+    private @Nullable Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig;
 
-    public Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig() {
-        return this.userPoolConfig == null ? Codegen.empty() : this.userPoolConfig;
+    public Optional<Output<GraphQLApiUserPoolConfigGetArgs>> userPoolConfig() {
+        return Optional.ofNullable(this.userPoolConfig);
     }
 
     /**
@@ -160,209 +160,172 @@ public final class GraphQLApiState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xrayEnabled")
-      private final @Nullable Output<Boolean> xrayEnabled;
+    private @Nullable Output<Boolean> xrayEnabled;
 
-    public Output<Boolean> xrayEnabled() {
-        return this.xrayEnabled == null ? Codegen.empty() : this.xrayEnabled;
+    public Optional<Output<Boolean>> xrayEnabled() {
+        return Optional.ofNullable(this.xrayEnabled);
     }
 
-    public GraphQLApiState(
-        @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders,
-        @Nullable Output<String> arn,
-        @Nullable Output<String> authenticationType,
-        @Nullable Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig,
-        @Nullable Output<GraphQLApiLogConfigGetArgs> logConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig,
-        @Nullable Output<String> schema,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<Map<String,String>> uris,
-        @Nullable Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig,
-        @Nullable Output<Boolean> xrayEnabled) {
-        this.additionalAuthenticationProviders = additionalAuthenticationProviders;
-        this.arn = arn;
-        this.authenticationType = authenticationType;
-        this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
-        this.logConfig = logConfig;
-        this.name = name;
-        this.openidConnectConfig = openidConnectConfig;
-        this.schema = schema;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.uris = uris;
-        this.userPoolConfig = userPoolConfig;
-        this.xrayEnabled = xrayEnabled;
-    }
+    private GraphQLApiState() {}
 
-    private GraphQLApiState() {
-        this.additionalAuthenticationProviders = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.authenticationType = Codegen.empty();
-        this.lambdaAuthorizerConfig = Codegen.empty();
-        this.logConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.openidConnectConfig = Codegen.empty();
-        this.schema = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.uris = Codegen.empty();
-        this.userPoolConfig = Codegen.empty();
-        this.xrayEnabled = Codegen.empty();
+    private GraphQLApiState(GraphQLApiState $) {
+        this.additionalAuthenticationProviders = $.additionalAuthenticationProviders;
+        this.arn = $.arn;
+        this.authenticationType = $.authenticationType;
+        this.lambdaAuthorizerConfig = $.lambdaAuthorizerConfig;
+        this.logConfig = $.logConfig;
+        this.name = $.name;
+        this.openidConnectConfig = $.openidConnectConfig;
+        this.schema = $.schema;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.uris = $.uris;
+        this.userPoolConfig = $.userPoolConfig;
+        this.xrayEnabled = $.xrayEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GraphQLApiState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> authenticationType;
-        private @Nullable Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig;
-        private @Nullable Output<GraphQLApiLogConfigGetArgs> logConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig;
-        private @Nullable Output<String> schema;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<Map<String,String>> uris;
-        private @Nullable Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig;
-        private @Nullable Output<Boolean> xrayEnabled;
+        private GraphQLApiState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GraphQLApiState();
         }
 
         public Builder(GraphQLApiState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalAuthenticationProviders = defaults.additionalAuthenticationProviders;
-    	      this.arn = defaults.arn;
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.lambdaAuthorizerConfig = defaults.lambdaAuthorizerConfig;
-    	      this.logConfig = defaults.logConfig;
-    	      this.name = defaults.name;
-    	      this.openidConnectConfig = defaults.openidConnectConfig;
-    	      this.schema = defaults.schema;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.uris = defaults.uris;
-    	      this.userPoolConfig = defaults.userPoolConfig;
-    	      this.xrayEnabled = defaults.xrayEnabled;
+            $ = new GraphQLApiState(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalAuthenticationProviders(@Nullable Output<List<GraphQLApiAdditionalAuthenticationProviderGetArgs>> additionalAuthenticationProviders) {
-            this.additionalAuthenticationProviders = additionalAuthenticationProviders;
+            $.additionalAuthenticationProviders = additionalAuthenticationProviders;
             return this;
         }
-        public Builder additionalAuthenticationProviders(@Nullable List<GraphQLApiAdditionalAuthenticationProviderGetArgs> additionalAuthenticationProviders) {
-            this.additionalAuthenticationProviders = Codegen.ofNullable(additionalAuthenticationProviders);
-            return this;
+
+        public Builder additionalAuthenticationProviders(List<GraphQLApiAdditionalAuthenticationProviderGetArgs> additionalAuthenticationProviders) {
+            return additionalAuthenticationProviders(Output.of(additionalAuthenticationProviders));
         }
+
         public Builder additionalAuthenticationProviders(GraphQLApiAdditionalAuthenticationProviderGetArgs... additionalAuthenticationProviders) {
             return additionalAuthenticationProviders(List.of(additionalAuthenticationProviders));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder authenticationType(@Nullable Output<String> authenticationType) {
-            this.authenticationType = authenticationType;
+            $.authenticationType = authenticationType;
             return this;
         }
-        public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = Codegen.ofNullable(authenticationType);
-            return this;
+
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder lambdaAuthorizerConfig(@Nullable Output<GraphQLApiLambdaAuthorizerConfigGetArgs> lambdaAuthorizerConfig) {
-            this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
+            $.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
-        public Builder lambdaAuthorizerConfig(@Nullable GraphQLApiLambdaAuthorizerConfigGetArgs lambdaAuthorizerConfig) {
-            this.lambdaAuthorizerConfig = Codegen.ofNullable(lambdaAuthorizerConfig);
-            return this;
+
+        public Builder lambdaAuthorizerConfig(GraphQLApiLambdaAuthorizerConfigGetArgs lambdaAuthorizerConfig) {
+            return lambdaAuthorizerConfig(Output.of(lambdaAuthorizerConfig));
         }
+
         public Builder logConfig(@Nullable Output<GraphQLApiLogConfigGetArgs> logConfig) {
-            this.logConfig = logConfig;
+            $.logConfig = logConfig;
             return this;
         }
-        public Builder logConfig(@Nullable GraphQLApiLogConfigGetArgs logConfig) {
-            this.logConfig = Codegen.ofNullable(logConfig);
-            return this;
+
+        public Builder logConfig(GraphQLApiLogConfigGetArgs logConfig) {
+            return logConfig(Output.of(logConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder openidConnectConfig(@Nullable Output<GraphQLApiOpenidConnectConfigGetArgs> openidConnectConfig) {
-            this.openidConnectConfig = openidConnectConfig;
+            $.openidConnectConfig = openidConnectConfig;
             return this;
         }
-        public Builder openidConnectConfig(@Nullable GraphQLApiOpenidConnectConfigGetArgs openidConnectConfig) {
-            this.openidConnectConfig = Codegen.ofNullable(openidConnectConfig);
-            return this;
+
+        public Builder openidConnectConfig(GraphQLApiOpenidConnectConfigGetArgs openidConnectConfig) {
+            return openidConnectConfig(Output.of(openidConnectConfig));
         }
+
         public Builder schema(@Nullable Output<String> schema) {
-            this.schema = schema;
+            $.schema = schema;
             return this;
         }
-        public Builder schema(@Nullable String schema) {
-            this.schema = Codegen.ofNullable(schema);
-            return this;
+
+        public Builder schema(String schema) {
+            return schema(Output.of(schema));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder uris(@Nullable Output<Map<String,String>> uris) {
-            this.uris = uris;
+            $.uris = uris;
             return this;
         }
-        public Builder uris(@Nullable Map<String,String> uris) {
-            this.uris = Codegen.ofNullable(uris);
-            return this;
+
+        public Builder uris(Map<String,String> uris) {
+            return uris(Output.of(uris));
         }
+
         public Builder userPoolConfig(@Nullable Output<GraphQLApiUserPoolConfigGetArgs> userPoolConfig) {
-            this.userPoolConfig = userPoolConfig;
+            $.userPoolConfig = userPoolConfig;
             return this;
         }
-        public Builder userPoolConfig(@Nullable GraphQLApiUserPoolConfigGetArgs userPoolConfig) {
-            this.userPoolConfig = Codegen.ofNullable(userPoolConfig);
-            return this;
+
+        public Builder userPoolConfig(GraphQLApiUserPoolConfigGetArgs userPoolConfig) {
+            return userPoolConfig(Output.of(userPoolConfig));
         }
+
         public Builder xrayEnabled(@Nullable Output<Boolean> xrayEnabled) {
-            this.xrayEnabled = xrayEnabled;
+            $.xrayEnabled = xrayEnabled;
             return this;
         }
-        public Builder xrayEnabled(@Nullable Boolean xrayEnabled) {
-            this.xrayEnabled = Codegen.ofNullable(xrayEnabled);
-            return this;
-        }        public GraphQLApiState build() {
-            return new GraphQLApiState(additionalAuthenticationProviders, arn, authenticationType, lambdaAuthorizerConfig, logConfig, name, openidConnectConfig, schema, tags, tagsAll, uris, userPoolConfig, xrayEnabled);
+
+        public Builder xrayEnabled(Boolean xrayEnabled) {
+            return xrayEnabled(Output.of(xrayEnabled));
+        }
+
+        public GraphQLApiState build() {
+            return $;
         }
     }
+
 }

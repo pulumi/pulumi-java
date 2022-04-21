@@ -21,45 +21,45 @@ public final class BucketVersioningConfiguration extends com.pulumi.resources.In
      * 
      */
     @Import(name="status", required=true)
-      private final BucketVersioningConfigurationStatus status;
+    private BucketVersioningConfigurationStatus status;
 
     public BucketVersioningConfigurationStatus status() {
         return this.status;
     }
 
-    public BucketVersioningConfiguration(BucketVersioningConfigurationStatus status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketVersioningConfiguration() {}
 
-    private BucketVersioningConfiguration() {
-        this.status = null;
+    private BucketVersioningConfiguration(BucketVersioningConfiguration $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketVersioningConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketVersioningConfigurationStatus status;
+        private BucketVersioningConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketVersioningConfiguration();
         }
 
         public Builder(BucketVersioningConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketVersioningConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder status(BucketVersioningConfigurationStatus status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public BucketVersioningConfiguration build() {
-            return new BucketVersioningConfiguration(status);
+        }
+
+        public BucketVersioningConfiguration build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

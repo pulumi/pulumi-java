@@ -5,9 +5,9 @@ package com.pulumi.googlenative.documentai_v1beta3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultProcessorVersion")
-      private final @Nullable Output<String> defaultProcessorVersion;
+    private @Nullable Output<String> defaultProcessorVersion;
 
-    public Output<String> defaultProcessorVersion() {
-        return this.defaultProcessorVersion == null ? Codegen.empty() : this.defaultProcessorVersion;
+    public Optional<Output<String>> defaultProcessorVersion() {
+        return Optional.ofNullable(this.defaultProcessorVersion);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -53,24 +53,24 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -78,128 +78,108 @@ public final class ProcessorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ProcessorArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> defaultProcessorVersion,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> kmsKeyName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<String> type) {
-        this.createTime = createTime;
-        this.defaultProcessorVersion = defaultProcessorVersion;
-        this.displayName = displayName;
-        this.kmsKeyName = kmsKeyName;
-        this.location = location;
-        this.project = project;
-        this.type = type;
-    }
+    private ProcessorArgs() {}
 
-    private ProcessorArgs() {
-        this.createTime = Codegen.empty();
-        this.defaultProcessorVersion = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.kmsKeyName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProcessorArgs(ProcessorArgs $) {
+        this.createTime = $.createTime;
+        this.defaultProcessorVersion = $.defaultProcessorVersion;
+        this.displayName = $.displayName;
+        this.kmsKeyName = $.kmsKeyName;
+        this.location = $.location;
+        this.project = $.project;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProcessorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> defaultProcessorVersion;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> kmsKeyName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> type;
+        private ProcessorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProcessorArgs();
         }
 
         public Builder(ProcessorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.defaultProcessorVersion = defaults.defaultProcessorVersion;
-    	      this.displayName = defaults.displayName;
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.type = defaults.type;
+            $ = new ProcessorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder defaultProcessorVersion(@Nullable Output<String> defaultProcessorVersion) {
-            this.defaultProcessorVersion = defaultProcessorVersion;
+            $.defaultProcessorVersion = defaultProcessorVersion;
             return this;
         }
-        public Builder defaultProcessorVersion(@Nullable String defaultProcessorVersion) {
-            this.defaultProcessorVersion = Codegen.ofNullable(defaultProcessorVersion);
-            return this;
+
+        public Builder defaultProcessorVersion(String defaultProcessorVersion) {
+            return defaultProcessorVersion(Output.of(defaultProcessorVersion));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ProcessorArgs build() {
-            return new ProcessorArgs(createTime, defaultProcessorVersion, displayName, kmsKeyName, location, project, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ProcessorArgs build() {
+            return $;
         }
     }
+
 }

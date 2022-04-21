@@ -25,10 +25,10 @@ public final class SelectAudioTrackByIdResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="channelMapping")
-      private final @Nullable String channelMapping;
+    private @Nullable String channelMapping;
 
     public Optional<String> channelMapping() {
-        return this.channelMapping == null ? Optional.empty() : Optional.ofNullable(this.channelMapping);
+        return Optional.ofNullable(this.channelMapping);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class SelectAudioTrackByIdResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -48,64 +48,58 @@ public final class SelectAudioTrackByIdResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="trackId", required=true)
-      private final Double trackId;
+    private Double trackId;
 
     public Double trackId() {
         return this.trackId;
     }
 
-    public SelectAudioTrackByIdResponse(
-        @Nullable String channelMapping,
-        String odataType,
-        Double trackId) {
-        this.channelMapping = channelMapping;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.trackId = Objects.requireNonNull(trackId, "expected parameter 'trackId' to be non-null");
-    }
+    private SelectAudioTrackByIdResponse() {}
 
-    private SelectAudioTrackByIdResponse() {
-        this.channelMapping = null;
-        this.odataType = null;
-        this.trackId = null;
+    private SelectAudioTrackByIdResponse(SelectAudioTrackByIdResponse $) {
+        this.channelMapping = $.channelMapping;
+        this.odataType = $.odataType;
+        this.trackId = $.trackId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectAudioTrackByIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String channelMapping;
-        private String odataType;
-        private Double trackId;
+        private SelectAudioTrackByIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectAudioTrackByIdResponse();
         }
 
         public Builder(SelectAudioTrackByIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelMapping = defaults.channelMapping;
-    	      this.odataType = defaults.odataType;
-    	      this.trackId = defaults.trackId;
+            $ = new SelectAudioTrackByIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder channelMapping(@Nullable String channelMapping) {
-            this.channelMapping = channelMapping;
+            $.channelMapping = channelMapping;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder trackId(Double trackId) {
-            this.trackId = Objects.requireNonNull(trackId);
+            $.trackId = trackId;
             return this;
-        }        public SelectAudioTrackByIdResponse build() {
-            return new SelectAudioTrackByIdResponse(channelMapping, odataType, trackId);
+        }
+
+        public SelectAudioTrackByIdResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.trackId = Objects.requireNonNull($.trackId, "expected parameter 'trackId' to be non-null");
+            return $;
         }
     }
+
 }

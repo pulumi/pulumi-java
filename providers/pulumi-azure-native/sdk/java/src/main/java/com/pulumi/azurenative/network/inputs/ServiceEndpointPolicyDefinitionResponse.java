@@ -24,10 +24,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -46,10 +46,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -79,10 +79,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="service")
-      private final @Nullable String service;
+    private @Nullable String service;
 
     public Optional<String> service() {
-        return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
+        return Optional.ofNullable(this.service);
     }
 
     /**
@@ -90,103 +90,86 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
      * 
      */
     @Import(name="serviceResources")
-      private final @Nullable List<String> serviceResources;
+    private @Nullable List<String> serviceResources;
 
-    public List<String> serviceResources() {
-        return this.serviceResources == null ? List.of() : this.serviceResources;
+    public Optional<List<String>> serviceResources() {
+        return Optional.ofNullable(this.serviceResources);
     }
 
-    public ServiceEndpointPolicyDefinitionResponse(
-        @Nullable String description,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable String service,
-        @Nullable List<String> serviceResources) {
-        this.description = description;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.service = service;
-        this.serviceResources = serviceResources;
-    }
+    private ServiceEndpointPolicyDefinitionResponse() {}
 
-    private ServiceEndpointPolicyDefinitionResponse() {
-        this.description = null;
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.service = null;
-        this.serviceResources = List.of();
+    private ServiceEndpointPolicyDefinitionResponse(ServiceEndpointPolicyDefinitionResponse $) {
+        this.description = $.description;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.service = $.service;
+        this.serviceResources = $.serviceResources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceEndpointPolicyDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String description;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String provisioningState;
-        private @Nullable String service;
-        private @Nullable List<String> serviceResources;
+        private ServiceEndpointPolicyDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceEndpointPolicyDefinitionResponse();
         }
 
         public Builder(ServiceEndpointPolicyDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.service = defaults.service;
-    	      this.serviceResources = defaults.serviceResources;
+            $ = new ServiceEndpointPolicyDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder service(@Nullable String service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
+
         public Builder serviceResources(@Nullable List<String> serviceResources) {
-            this.serviceResources = serviceResources;
+            $.serviceResources = serviceResources;
             return this;
         }
+
         public Builder serviceResources(String... serviceResources) {
             return serviceResources(List.of(serviceResources));
-        }        public ServiceEndpointPolicyDefinitionResponse build() {
-            return new ServiceEndpointPolicyDefinitionResponse(description, etag, id, name, provisioningState, service, serviceResources);
+        }
+
+        public ServiceEndpointPolicyDefinitionResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

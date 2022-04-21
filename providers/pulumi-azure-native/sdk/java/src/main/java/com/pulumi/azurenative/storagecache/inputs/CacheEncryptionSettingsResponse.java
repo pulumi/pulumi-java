@@ -23,45 +23,44 @@ public final class CacheEncryptionSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="keyEncryptionKey")
-      private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
+    private @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
     public Optional<KeyVaultKeyReferenceResponse> keyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
+        return Optional.ofNullable(this.keyEncryptionKey);
     }
 
-    public CacheEncryptionSettingsResponse(@Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
-        this.keyEncryptionKey = keyEncryptionKey;
-    }
+    private CacheEncryptionSettingsResponse() {}
 
-    private CacheEncryptionSettingsResponse() {
-        this.keyEncryptionKey = null;
+    private CacheEncryptionSettingsResponse(CacheEncryptionSettingsResponse $) {
+        this.keyEncryptionKey = $.keyEncryptionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheEncryptionSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
+        private CacheEncryptionSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheEncryptionSettingsResponse();
         }
 
         public Builder(CacheEncryptionSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyEncryptionKey = defaults.keyEncryptionKey;
+            $ = new CacheEncryptionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
-            this.keyEncryptionKey = keyEncryptionKey;
+            $.keyEncryptionKey = keyEncryptionKey;
             return this;
-        }        public CacheEncryptionSettingsResponse build() {
-            return new CacheEncryptionSettingsResponse(keyEncryptionKey);
+        }
+
+        public CacheEncryptionSettingsResponse build() {
+            return $;
         }
     }
+
 }

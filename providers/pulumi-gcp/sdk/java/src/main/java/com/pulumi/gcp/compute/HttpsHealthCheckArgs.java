@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="checkIntervalSec")
-      private final @Nullable Output<Integer> checkIntervalSec;
+    private @Nullable Output<Integer> checkIntervalSec;
 
-    public Output<Integer> checkIntervalSec() {
-        return this.checkIntervalSec == null ? Codegen.empty() : this.checkIntervalSec;
+    public Optional<Output<Integer>> checkIntervalSec() {
+        return Optional.ofNullable(this.checkIntervalSec);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="healthyThreshold")
-      private final @Nullable Output<Integer> healthyThreshold;
+    private @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> healthyThreshold() {
-        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
+    public Optional<Output<Integer>> healthyThreshold() {
+        return Optional.ofNullable(this.healthyThreshold);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="requestPath")
-      private final @Nullable Output<String> requestPath;
+    private @Nullable Output<String> requestPath;
 
-    public Output<String> requestPath() {
-        return this.requestPath == null ? Codegen.empty() : this.requestPath;
+    public Optional<Output<String>> requestPath() {
+        return Optional.ofNullable(this.requestPath);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="timeoutSec")
-      private final @Nullable Output<Integer> timeoutSec;
+    private @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> timeoutSec() {
-        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
+    public Optional<Output<Integer>> timeoutSec() {
+        return Optional.ofNullable(this.timeoutSec);
     }
 
     /**
@@ -137,167 +137,138 @@ public final class HttpsHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="unhealthyThreshold")
-      private final @Nullable Output<Integer> unhealthyThreshold;
+    private @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> unhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
+    public Optional<Output<Integer>> unhealthyThreshold() {
+        return Optional.ofNullable(this.unhealthyThreshold);
     }
 
-    public HttpsHealthCheckArgs(
-        @Nullable Output<Integer> checkIntervalSec,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> healthyThreshold,
-        @Nullable Output<String> host,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestPath,
-        @Nullable Output<Integer> timeoutSec,
-        @Nullable Output<Integer> unhealthyThreshold) {
-        this.checkIntervalSec = checkIntervalSec;
-        this.description = description;
-        this.healthyThreshold = healthyThreshold;
-        this.host = host;
-        this.name = name;
-        this.port = port;
-        this.project = project;
-        this.requestPath = requestPath;
-        this.timeoutSec = timeoutSec;
-        this.unhealthyThreshold = unhealthyThreshold;
-    }
+    private HttpsHealthCheckArgs() {}
 
-    private HttpsHealthCheckArgs() {
-        this.checkIntervalSec = Codegen.empty();
-        this.description = Codegen.empty();
-        this.healthyThreshold = Codegen.empty();
-        this.host = Codegen.empty();
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestPath = Codegen.empty();
-        this.timeoutSec = Codegen.empty();
-        this.unhealthyThreshold = Codegen.empty();
+    private HttpsHealthCheckArgs(HttpsHealthCheckArgs $) {
+        this.checkIntervalSec = $.checkIntervalSec;
+        this.description = $.description;
+        this.healthyThreshold = $.healthyThreshold;
+        this.host = $.host;
+        this.name = $.name;
+        this.port = $.port;
+        this.project = $.project;
+        this.requestPath = $.requestPath;
+        this.timeoutSec = $.timeoutSec;
+        this.unhealthyThreshold = $.unhealthyThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpsHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> checkIntervalSec;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> healthyThreshold;
-        private @Nullable Output<String> host;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestPath;
-        private @Nullable Output<Integer> timeoutSec;
-        private @Nullable Output<Integer> unhealthyThreshold;
+        private HttpsHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpsHealthCheckArgs();
         }
 
         public Builder(HttpsHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkIntervalSec = defaults.checkIntervalSec;
-    	      this.description = defaults.description;
-    	      this.healthyThreshold = defaults.healthyThreshold;
-    	      this.host = defaults.host;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.requestPath = defaults.requestPath;
-    	      this.timeoutSec = defaults.timeoutSec;
-    	      this.unhealthyThreshold = defaults.unhealthyThreshold;
+            $ = new HttpsHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checkIntervalSec(@Nullable Output<Integer> checkIntervalSec) {
-            this.checkIntervalSec = checkIntervalSec;
+            $.checkIntervalSec = checkIntervalSec;
             return this;
         }
-        public Builder checkIntervalSec(@Nullable Integer checkIntervalSec) {
-            this.checkIntervalSec = Codegen.ofNullable(checkIntervalSec);
-            return this;
+
+        public Builder checkIntervalSec(Integer checkIntervalSec) {
+            return checkIntervalSec(Output.of(checkIntervalSec));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
-            this.healthyThreshold = healthyThreshold;
+            $.healthyThreshold = healthyThreshold;
             return this;
         }
-        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
-            return this;
+
+        public Builder healthyThreshold(Integer healthyThreshold) {
+            return healthyThreshold(Output.of(healthyThreshold));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestPath(@Nullable Output<String> requestPath) {
-            this.requestPath = requestPath;
+            $.requestPath = requestPath;
             return this;
         }
-        public Builder requestPath(@Nullable String requestPath) {
-            this.requestPath = Codegen.ofNullable(requestPath);
-            return this;
+
+        public Builder requestPath(String requestPath) {
+            return requestPath(Output.of(requestPath));
         }
+
         public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
-            this.timeoutSec = timeoutSec;
+            $.timeoutSec = timeoutSec;
             return this;
         }
-        public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Codegen.ofNullable(timeoutSec);
-            return this;
+
+        public Builder timeoutSec(Integer timeoutSec) {
+            return timeoutSec(Output.of(timeoutSec));
         }
+
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
-            this.unhealthyThreshold = unhealthyThreshold;
+            $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
-            return this;
-        }        public HttpsHealthCheckArgs build() {
-            return new HttpsHealthCheckArgs(checkIntervalSec, description, healthyThreshold, host, name, port, project, requestPath, timeoutSec, unhealthyThreshold);
+
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
+            return unhealthyThreshold(Output.of(unhealthyThreshold));
+        }
+
+        public HttpsHealthCheckArgs build() {
+            return $;
         }
     }
+
 }

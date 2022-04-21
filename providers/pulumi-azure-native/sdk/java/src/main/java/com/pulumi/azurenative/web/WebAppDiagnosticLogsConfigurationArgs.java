@@ -8,9 +8,9 @@ import com.pulumi.azurenative.web.inputs.EnabledConfigArgs;
 import com.pulumi.azurenative.web.inputs.HttpLogsConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="applicationLogs")
-      private final @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
+    private @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
 
-    public Output<ApplicationLogsConfigArgs> applicationLogs() {
-        return this.applicationLogs == null ? Codegen.empty() : this.applicationLogs;
+    public Optional<Output<ApplicationLogsConfigArgs>> applicationLogs() {
+        return Optional.ofNullable(this.applicationLogs);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="detailedErrorMessages")
-      private final @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
+    private @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
 
-    public Output<EnabledConfigArgs> detailedErrorMessages() {
-        return this.detailedErrorMessages == null ? Codegen.empty() : this.detailedErrorMessages;
+    public Optional<Output<EnabledConfigArgs>> detailedErrorMessages() {
+        return Optional.ofNullable(this.detailedErrorMessages);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="failedRequestsTracing")
-      private final @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
+    private @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
 
-    public Output<EnabledConfigArgs> failedRequestsTracing() {
-        return this.failedRequestsTracing == null ? Codegen.empty() : this.failedRequestsTracing;
+    public Optional<Output<EnabledConfigArgs>> failedRequestsTracing() {
+        return Optional.ofNullable(this.failedRequestsTracing);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="httpLogs")
-      private final @Nullable Output<HttpLogsConfigArgs> httpLogs;
+    private @Nullable Output<HttpLogsConfigArgs> httpLogs;
 
-    public Output<HttpLogsConfigArgs> httpLogs() {
-        return this.httpLogs == null ? Codegen.empty() : this.httpLogs;
+    public Optional<Output<HttpLogsConfigArgs>> httpLogs() {
+        return Optional.ofNullable(this.httpLogs);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -89,128 +89,110 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public WebAppDiagnosticLogsConfigurationArgs(
-        @Nullable Output<ApplicationLogsConfigArgs> applicationLogs,
-        @Nullable Output<EnabledConfigArgs> detailedErrorMessages,
-        @Nullable Output<EnabledConfigArgs> failedRequestsTracing,
-        @Nullable Output<HttpLogsConfigArgs> httpLogs,
-        @Nullable Output<String> kind,
-        Output<String> name,
-        Output<String> resourceGroupName) {
-        this.applicationLogs = applicationLogs;
-        this.detailedErrorMessages = detailedErrorMessages;
-        this.failedRequestsTracing = failedRequestsTracing;
-        this.httpLogs = httpLogs;
-        this.kind = kind;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private WebAppDiagnosticLogsConfigurationArgs() {}
 
-    private WebAppDiagnosticLogsConfigurationArgs() {
-        this.applicationLogs = Codegen.empty();
-        this.detailedErrorMessages = Codegen.empty();
-        this.failedRequestsTracing = Codegen.empty();
-        this.httpLogs = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private WebAppDiagnosticLogsConfigurationArgs(WebAppDiagnosticLogsConfigurationArgs $) {
+        this.applicationLogs = $.applicationLogs;
+        this.detailedErrorMessages = $.detailedErrorMessages;
+        this.failedRequestsTracing = $.failedRequestsTracing;
+        this.httpLogs = $.httpLogs;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppDiagnosticLogsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
-        private @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
-        private @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
-        private @Nullable Output<HttpLogsConfigArgs> httpLogs;
-        private @Nullable Output<String> kind;
-        private Output<String> name;
-        private Output<String> resourceGroupName;
+        private WebAppDiagnosticLogsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppDiagnosticLogsConfigurationArgs();
         }
 
         public Builder(WebAppDiagnosticLogsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationLogs = defaults.applicationLogs;
-    	      this.detailedErrorMessages = defaults.detailedErrorMessages;
-    	      this.failedRequestsTracing = defaults.failedRequestsTracing;
-    	      this.httpLogs = defaults.httpLogs;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new WebAppDiagnosticLogsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationLogs(@Nullable Output<ApplicationLogsConfigArgs> applicationLogs) {
-            this.applicationLogs = applicationLogs;
+            $.applicationLogs = applicationLogs;
             return this;
         }
-        public Builder applicationLogs(@Nullable ApplicationLogsConfigArgs applicationLogs) {
-            this.applicationLogs = Codegen.ofNullable(applicationLogs);
-            return this;
+
+        public Builder applicationLogs(ApplicationLogsConfigArgs applicationLogs) {
+            return applicationLogs(Output.of(applicationLogs));
         }
+
         public Builder detailedErrorMessages(@Nullable Output<EnabledConfigArgs> detailedErrorMessages) {
-            this.detailedErrorMessages = detailedErrorMessages;
+            $.detailedErrorMessages = detailedErrorMessages;
             return this;
         }
-        public Builder detailedErrorMessages(@Nullable EnabledConfigArgs detailedErrorMessages) {
-            this.detailedErrorMessages = Codegen.ofNullable(detailedErrorMessages);
-            return this;
+
+        public Builder detailedErrorMessages(EnabledConfigArgs detailedErrorMessages) {
+            return detailedErrorMessages(Output.of(detailedErrorMessages));
         }
+
         public Builder failedRequestsTracing(@Nullable Output<EnabledConfigArgs> failedRequestsTracing) {
-            this.failedRequestsTracing = failedRequestsTracing;
+            $.failedRequestsTracing = failedRequestsTracing;
             return this;
         }
-        public Builder failedRequestsTracing(@Nullable EnabledConfigArgs failedRequestsTracing) {
-            this.failedRequestsTracing = Codegen.ofNullable(failedRequestsTracing);
-            return this;
+
+        public Builder failedRequestsTracing(EnabledConfigArgs failedRequestsTracing) {
+            return failedRequestsTracing(Output.of(failedRequestsTracing));
         }
+
         public Builder httpLogs(@Nullable Output<HttpLogsConfigArgs> httpLogs) {
-            this.httpLogs = httpLogs;
+            $.httpLogs = httpLogs;
             return this;
         }
-        public Builder httpLogs(@Nullable HttpLogsConfigArgs httpLogs) {
-            this.httpLogs = Codegen.ofNullable(httpLogs);
-            return this;
+
+        public Builder httpLogs(HttpLogsConfigArgs httpLogs) {
+            return httpLogs(Output.of(httpLogs));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public WebAppDiagnosticLogsConfigurationArgs build() {
-            return new WebAppDiagnosticLogsConfigurationArgs(applicationLogs, detailedErrorMessages, failedRequestsTracing, httpLogs, kind, name, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public WebAppDiagnosticLogsConfigurationArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

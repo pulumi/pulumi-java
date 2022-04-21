@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datalakestore;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TrustedIdProviderArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class TrustedIdProviderArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="idProvider", required=true)
-      private final Output<String> idProvider;
+    private Output<String> idProvider;
 
     public Output<String> idProvider() {
         return this.idProvider;
@@ -42,7 +42,7 @@ public final class TrustedIdProviderArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,89 +53,81 @@ public final class TrustedIdProviderArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="trustedIdProviderName")
-      private final @Nullable Output<String> trustedIdProviderName;
+    private @Nullable Output<String> trustedIdProviderName;
 
-    public Output<String> trustedIdProviderName() {
-        return this.trustedIdProviderName == null ? Codegen.empty() : this.trustedIdProviderName;
+    public Optional<Output<String>> trustedIdProviderName() {
+        return Optional.ofNullable(this.trustedIdProviderName);
     }
 
-    public TrustedIdProviderArgs(
-        Output<String> accountName,
-        Output<String> idProvider,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> trustedIdProviderName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.idProvider = Objects.requireNonNull(idProvider, "expected parameter 'idProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.trustedIdProviderName = trustedIdProviderName;
-    }
+    private TrustedIdProviderArgs() {}
 
-    private TrustedIdProviderArgs() {
-        this.accountName = Codegen.empty();
-        this.idProvider = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.trustedIdProviderName = Codegen.empty();
+    private TrustedIdProviderArgs(TrustedIdProviderArgs $) {
+        this.accountName = $.accountName;
+        this.idProvider = $.idProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.trustedIdProviderName = $.trustedIdProviderName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrustedIdProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private Output<String> idProvider;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> trustedIdProviderName;
+        private TrustedIdProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrustedIdProviderArgs();
         }
 
         public Builder(TrustedIdProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.idProvider = defaults.idProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.trustedIdProviderName = defaults.trustedIdProviderName;
+            $ = new TrustedIdProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder idProvider(Output<String> idProvider) {
-            this.idProvider = Objects.requireNonNull(idProvider);
+            $.idProvider = idProvider;
             return this;
         }
+
         public Builder idProvider(String idProvider) {
-            this.idProvider = Output.of(Objects.requireNonNull(idProvider));
-            return this;
+            return idProvider(Output.of(idProvider));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder trustedIdProviderName(@Nullable Output<String> trustedIdProviderName) {
-            this.trustedIdProviderName = trustedIdProviderName;
+            $.trustedIdProviderName = trustedIdProviderName;
             return this;
         }
-        public Builder trustedIdProviderName(@Nullable String trustedIdProviderName) {
-            this.trustedIdProviderName = Codegen.ofNullable(trustedIdProviderName);
-            return this;
-        }        public TrustedIdProviderArgs build() {
-            return new TrustedIdProviderArgs(accountName, idProvider, resourceGroupName, trustedIdProviderName);
+
+        public Builder trustedIdProviderName(String trustedIdProviderName) {
+            return trustedIdProviderName(Output.of(trustedIdProviderName));
+        }
+
+        public TrustedIdProviderArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.idProvider = Objects.requireNonNull($.idProvider, "expected parameter 'idProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

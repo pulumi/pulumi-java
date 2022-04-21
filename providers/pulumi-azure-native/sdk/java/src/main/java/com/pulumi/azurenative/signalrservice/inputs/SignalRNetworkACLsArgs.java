@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="defaultAction")
-      private final @Nullable Output<Either<String,ACLAction>> defaultAction;
+    private @Nullable Output<Either<String,ACLAction>> defaultAction;
 
-    public Output<Either<String,ACLAction>> defaultAction() {
-        return this.defaultAction == null ? Codegen.empty() : this.defaultAction;
+    public Optional<Output<Either<String,ACLAction>>> defaultAction() {
+        return Optional.ofNullable(this.defaultAction);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privateEndpoints")
-      private final @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints;
+    private @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints;
 
-    public Output<List<PrivateEndpointACLArgs>> privateEndpoints() {
-        return this.privateEndpoints == null ? Codegen.empty() : this.privateEndpoints;
+    public Optional<Output<List<PrivateEndpointACLArgs>>> privateEndpoints() {
+        return Optional.ofNullable(this.privateEndpoints);
     }
 
     /**
@@ -51,79 +52,73 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="publicNetwork")
-      private final @Nullable Output<NetworkACLArgs> publicNetwork;
+    private @Nullable Output<NetworkACLArgs> publicNetwork;
 
-    public Output<NetworkACLArgs> publicNetwork() {
-        return this.publicNetwork == null ? Codegen.empty() : this.publicNetwork;
+    public Optional<Output<NetworkACLArgs>> publicNetwork() {
+        return Optional.ofNullable(this.publicNetwork);
     }
 
-    public SignalRNetworkACLsArgs(
-        @Nullable Output<Either<String,ACLAction>> defaultAction,
-        @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints,
-        @Nullable Output<NetworkACLArgs> publicNetwork) {
-        this.defaultAction = Codegen.stringProp("defaultAction").left(ACLAction.class).output().arg(defaultAction).def("Deny").getNullable();
-        this.privateEndpoints = privateEndpoints;
-        this.publicNetwork = publicNetwork;
-    }
+    private SignalRNetworkACLsArgs() {}
 
-    private SignalRNetworkACLsArgs() {
-        this.defaultAction = Codegen.empty();
-        this.privateEndpoints = Codegen.empty();
-        this.publicNetwork = Codegen.empty();
+    private SignalRNetworkACLsArgs(SignalRNetworkACLsArgs $) {
+        this.defaultAction = $.defaultAction;
+        this.privateEndpoints = $.privateEndpoints;
+        this.publicNetwork = $.publicNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SignalRNetworkACLsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ACLAction>> defaultAction;
-        private @Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints;
-        private @Nullable Output<NetworkACLArgs> publicNetwork;
+        private SignalRNetworkACLsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SignalRNetworkACLsArgs();
         }
 
         public Builder(SignalRNetworkACLsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.privateEndpoints = defaults.privateEndpoints;
-    	      this.publicNetwork = defaults.publicNetwork;
+            $ = new SignalRNetworkACLsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultAction(@Nullable Output<Either<String,ACLAction>> defaultAction) {
-            this.defaultAction = defaultAction;
+            $.defaultAction = defaultAction;
             return this;
         }
-        public Builder defaultAction(@Nullable Either<String,ACLAction> defaultAction) {
-            this.defaultAction = Codegen.ofNullable(defaultAction);
-            return this;
+
+        public Builder defaultAction(Either<String,ACLAction> defaultAction) {
+            return defaultAction(Output.of(defaultAction));
         }
+
         public Builder privateEndpoints(@Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints) {
-            this.privateEndpoints = privateEndpoints;
+            $.privateEndpoints = privateEndpoints;
             return this;
         }
-        public Builder privateEndpoints(@Nullable List<PrivateEndpointACLArgs> privateEndpoints) {
-            this.privateEndpoints = Codegen.ofNullable(privateEndpoints);
-            return this;
+
+        public Builder privateEndpoints(List<PrivateEndpointACLArgs> privateEndpoints) {
+            return privateEndpoints(Output.of(privateEndpoints));
         }
+
         public Builder privateEndpoints(PrivateEndpointACLArgs... privateEndpoints) {
             return privateEndpoints(List.of(privateEndpoints));
         }
+
         public Builder publicNetwork(@Nullable Output<NetworkACLArgs> publicNetwork) {
-            this.publicNetwork = publicNetwork;
+            $.publicNetwork = publicNetwork;
             return this;
         }
-        public Builder publicNetwork(@Nullable NetworkACLArgs publicNetwork) {
-            this.publicNetwork = Codegen.ofNullable(publicNetwork);
-            return this;
-        }        public SignalRNetworkACLsArgs build() {
-            return new SignalRNetworkACLsArgs(defaultAction, privateEndpoints, publicNetwork);
+
+        public Builder publicNetwork(NetworkACLArgs publicNetwork) {
+            return publicNetwork(Output.of(publicNetwork));
+        }
+
+        public SignalRNetworkACLsArgs build() {
+            $.defaultAction = Codegen.stringProp("defaultAction").left(ACLAction.class).output().arg($.defaultAction).def("Deny").getNullable();
+            return $;
         }
     }
+
 }

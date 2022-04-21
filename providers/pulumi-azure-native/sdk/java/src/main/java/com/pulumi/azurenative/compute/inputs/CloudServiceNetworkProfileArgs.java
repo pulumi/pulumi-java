@@ -7,9 +7,9 @@ import com.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationArgs;
 import com.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CloudServiceNetworkProfileArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="loadBalancerConfigurations")
-      private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
+    private @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
-    public Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations() {
-        return this.loadBalancerConfigurations == null ? Codegen.empty() : this.loadBalancerConfigurations;
+    public Optional<Output<List<LoadBalancerConfigurationArgs>>> loadBalancerConfigurations() {
+        return Optional.ofNullable(this.loadBalancerConfigurations);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class CloudServiceNetworkProfileArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="swappableCloudService")
-      private final @Nullable Output<SubResourceArgs> swappableCloudService;
+    private @Nullable Output<SubResourceArgs> swappableCloudService;
 
-    public Output<SubResourceArgs> swappableCloudService() {
-        return this.swappableCloudService == null ? Codegen.empty() : this.swappableCloudService;
+    public Optional<Output<SubResourceArgs>> swappableCloudService() {
+        return Optional.ofNullable(this.swappableCloudService);
     }
 
-    public CloudServiceNetworkProfileArgs(
-        @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations,
-        @Nullable Output<SubResourceArgs> swappableCloudService) {
-        this.loadBalancerConfigurations = loadBalancerConfigurations;
-        this.swappableCloudService = swappableCloudService;
-    }
+    private CloudServiceNetworkProfileArgs() {}
 
-    private CloudServiceNetworkProfileArgs() {
-        this.loadBalancerConfigurations = Codegen.empty();
-        this.swappableCloudService = Codegen.empty();
+    private CloudServiceNetworkProfileArgs(CloudServiceNetworkProfileArgs $) {
+        this.loadBalancerConfigurations = $.loadBalancerConfigurations;
+        this.swappableCloudService = $.swappableCloudService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceNetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
-        private @Nullable Output<SubResourceArgs> swappableCloudService;
+        private CloudServiceNetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceNetworkProfileArgs();
         }
 
         public Builder(CloudServiceNetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loadBalancerConfigurations = defaults.loadBalancerConfigurations;
-    	      this.swappableCloudService = defaults.swappableCloudService;
+            $ = new CloudServiceNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loadBalancerConfigurations(@Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
-            this.loadBalancerConfigurations = loadBalancerConfigurations;
+            $.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
-        public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
-            this.loadBalancerConfigurations = Codegen.ofNullable(loadBalancerConfigurations);
-            return this;
+
+        public Builder loadBalancerConfigurations(List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
+            return loadBalancerConfigurations(Output.of(loadBalancerConfigurations));
         }
+
         public Builder loadBalancerConfigurations(LoadBalancerConfigurationArgs... loadBalancerConfigurations) {
             return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
         }
+
         public Builder swappableCloudService(@Nullable Output<SubResourceArgs> swappableCloudService) {
-            this.swappableCloudService = swappableCloudService;
+            $.swappableCloudService = swappableCloudService;
             return this;
         }
-        public Builder swappableCloudService(@Nullable SubResourceArgs swappableCloudService) {
-            this.swappableCloudService = Codegen.ofNullable(swappableCloudService);
-            return this;
-        }        public CloudServiceNetworkProfileArgs build() {
-            return new CloudServiceNetworkProfileArgs(loadBalancerConfigurations, swappableCloudService);
+
+        public Builder swappableCloudService(SubResourceArgs swappableCloudService) {
+            return swappableCloudService(Output.of(swappableCloudService));
+        }
+
+        public CloudServiceNetworkProfileArgs build() {
+            return $;
         }
     }
+
 }

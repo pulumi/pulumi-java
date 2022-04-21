@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class IPBlockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cidr", required=true)
-      private final Output<String> cidr;
+    private Output<String> cidr;
 
     public Output<String> cidr() {
         return this.cidr;
@@ -36,66 +36,63 @@ public final class IPBlockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="except")
-      private final @Nullable Output<List<String>> except;
+    private @Nullable Output<List<String>> except;
 
-    public Output<List<String>> except() {
-        return this.except == null ? Codegen.empty() : this.except;
+    public Optional<Output<List<String>>> except() {
+        return Optional.ofNullable(this.except);
     }
 
-    public IPBlockArgs(
-        Output<String> cidr,
-        @Nullable Output<List<String>> except) {
-        this.cidr = Objects.requireNonNull(cidr, "expected parameter 'cidr' to be non-null");
-        this.except = except;
-    }
+    private IPBlockArgs() {}
 
-    private IPBlockArgs() {
-        this.cidr = Codegen.empty();
-        this.except = Codegen.empty();
+    private IPBlockArgs(IPBlockArgs $) {
+        this.cidr = $.cidr;
+        this.except = $.except;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IPBlockArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cidr;
-        private @Nullable Output<List<String>> except;
+        private IPBlockArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IPBlockArgs();
         }
 
         public Builder(IPBlockArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidr = defaults.cidr;
-    	      this.except = defaults.except;
+            $ = new IPBlockArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidr(Output<String> cidr) {
-            this.cidr = Objects.requireNonNull(cidr);
+            $.cidr = cidr;
             return this;
         }
+
         public Builder cidr(String cidr) {
-            this.cidr = Output.of(Objects.requireNonNull(cidr));
-            return this;
+            return cidr(Output.of(cidr));
         }
+
         public Builder except(@Nullable Output<List<String>> except) {
-            this.except = except;
+            $.except = except;
             return this;
         }
-        public Builder except(@Nullable List<String> except) {
-            this.except = Codegen.ofNullable(except);
-            return this;
+
+        public Builder except(List<String> except) {
+            return except(Output.of(except));
         }
+
         public Builder except(String... except) {
             return except(List.of(except));
-        }        public IPBlockArgs build() {
-            return new IPBlockArgs(cidr, except);
+        }
+
+        public IPBlockArgs build() {
+            $.cidr = Objects.requireNonNull($.cidr, "expected parameter 'cidr' to be non-null");
+            return $;
         }
     }
+
 }

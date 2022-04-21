@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class SSLPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customFeatures")
-      private final @Nullable Output<List<String>> customFeatures;
+    private @Nullable Output<List<String>> customFeatures;
 
-    public Output<List<String>> customFeatures() {
-        return this.customFeatures == null ? Codegen.empty() : this.customFeatures;
+    public Optional<Output<List<String>>> customFeatures() {
+        return Optional.ofNullable(this.customFeatures);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class SSLPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SSLPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minTlsVersion")
-      private final @Nullable Output<String> minTlsVersion;
+    private @Nullable Output<String> minTlsVersion;
 
-    public Output<String> minTlsVersion() {
-        return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
+    public Optional<Output<String>> minTlsVersion() {
+        return Optional.ofNullable(this.minTlsVersion);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class SSLPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SSLPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profile")
-      private final @Nullable Output<String> profile;
+    private @Nullable Output<String> profile;
 
-    public Output<String> profile() {
-        return this.profile == null ? Codegen.empty() : this.profile;
+    public Optional<Output<String>> profile() {
+        return Optional.ofNullable(this.profile);
     }
 
     /**
@@ -102,118 +102,102 @@ public final class SSLPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public SSLPolicyArgs(
-        @Nullable Output<List<String>> customFeatures,
-        @Nullable Output<String> description,
-        @Nullable Output<String> minTlsVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<String> profile,
-        @Nullable Output<String> project) {
-        this.customFeatures = customFeatures;
-        this.description = description;
-        this.minTlsVersion = minTlsVersion;
-        this.name = name;
-        this.profile = profile;
-        this.project = project;
-    }
+    private SSLPolicyArgs() {}
 
-    private SSLPolicyArgs() {
-        this.customFeatures = Codegen.empty();
-        this.description = Codegen.empty();
-        this.minTlsVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.profile = Codegen.empty();
-        this.project = Codegen.empty();
+    private SSLPolicyArgs(SSLPolicyArgs $) {
+        this.customFeatures = $.customFeatures;
+        this.description = $.description;
+        this.minTlsVersion = $.minTlsVersion;
+        this.name = $.name;
+        this.profile = $.profile;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SSLPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> customFeatures;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> minTlsVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> profile;
-        private @Nullable Output<String> project;
+        private SSLPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SSLPolicyArgs();
         }
 
         public Builder(SSLPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customFeatures = defaults.customFeatures;
-    	      this.description = defaults.description;
-    	      this.minTlsVersion = defaults.minTlsVersion;
-    	      this.name = defaults.name;
-    	      this.profile = defaults.profile;
-    	      this.project = defaults.project;
+            $ = new SSLPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customFeatures(@Nullable Output<List<String>> customFeatures) {
-            this.customFeatures = customFeatures;
+            $.customFeatures = customFeatures;
             return this;
         }
-        public Builder customFeatures(@Nullable List<String> customFeatures) {
-            this.customFeatures = Codegen.ofNullable(customFeatures);
-            return this;
+
+        public Builder customFeatures(List<String> customFeatures) {
+            return customFeatures(Output.of(customFeatures));
         }
+
         public Builder customFeatures(String... customFeatures) {
             return customFeatures(List.of(customFeatures));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder minTlsVersion(@Nullable Output<String> minTlsVersion) {
-            this.minTlsVersion = minTlsVersion;
+            $.minTlsVersion = minTlsVersion;
             return this;
         }
-        public Builder minTlsVersion(@Nullable String minTlsVersion) {
-            this.minTlsVersion = Codegen.ofNullable(minTlsVersion);
-            return this;
+
+        public Builder minTlsVersion(String minTlsVersion) {
+            return minTlsVersion(Output.of(minTlsVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder profile(@Nullable Output<String> profile) {
-            this.profile = profile;
+            $.profile = profile;
             return this;
         }
-        public Builder profile(@Nullable String profile) {
-            this.profile = Codegen.ofNullable(profile);
-            return this;
+
+        public Builder profile(String profile) {
+            return profile(Output.of(profile));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public SSLPolicyArgs build() {
-            return new SSLPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public SSLPolicyArgs build() {
+            return $;
         }
     }
+
 }

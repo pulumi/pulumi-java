@@ -5,10 +5,10 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iap.inputs.TunnelInstanceIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TunnelInstanceIAMMemberArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<TunnelInstanceIAMMemberConditionArgs> condition;
+    private @Nullable Output<TunnelInstanceIAMMemberConditionArgs> condition;
 
-    public Output<TunnelInstanceIAMMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TunnelInstanceIAMMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -33,14 +33,14 @@ public final class TunnelInstanceIAMMemberArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -52,10 +52,10 @@ public final class TunnelInstanceIAMMemberArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -65,122 +65,108 @@ public final class TunnelInstanceIAMMemberArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public TunnelInstanceIAMMemberArgs(
-        @Nullable Output<TunnelInstanceIAMMemberConditionArgs> condition,
-        Output<String> instance,
-        Output<String> member,
-        @Nullable Output<String> project,
-        Output<String> role,
-        @Nullable Output<String> zone) {
-        this.condition = condition;
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.zone = zone;
-    }
+    private TunnelInstanceIAMMemberArgs() {}
 
-    private TunnelInstanceIAMMemberArgs() {
-        this.condition = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.zone = Codegen.empty();
+    private TunnelInstanceIAMMemberArgs(TunnelInstanceIAMMemberArgs $) {
+        this.condition = $.condition;
+        this.instance = $.instance;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TunnelInstanceIAMMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TunnelInstanceIAMMemberConditionArgs> condition;
-        private Output<String> instance;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private @Nullable Output<String> zone;
+        private TunnelInstanceIAMMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TunnelInstanceIAMMemberArgs();
         }
 
         public Builder(TunnelInstanceIAMMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.instance = defaults.instance;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.zone = defaults.zone;
+            $ = new TunnelInstanceIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TunnelInstanceIAMMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TunnelInstanceIAMMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TunnelInstanceIAMMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public TunnelInstanceIAMMemberArgs build() {
-            return new TunnelInstanceIAMMemberArgs(condition, instance, member, project, role, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public TunnelInstanceIAMMemberArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

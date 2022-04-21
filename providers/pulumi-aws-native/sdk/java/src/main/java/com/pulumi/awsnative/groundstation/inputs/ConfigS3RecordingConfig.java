@@ -15,78 +15,70 @@ public final class ConfigS3RecordingConfig extends com.pulumi.resources.InvokeAr
     public static final ConfigS3RecordingConfig Empty = new ConfigS3RecordingConfig();
 
     @Import(name="bucketArn")
-      private final @Nullable String bucketArn;
+    private @Nullable String bucketArn;
 
     public Optional<String> bucketArn() {
-        return this.bucketArn == null ? Optional.empty() : Optional.ofNullable(this.bucketArn);
+        return Optional.ofNullable(this.bucketArn);
     }
 
     @Import(name="prefix")
-      private final @Nullable String prefix;
+    private @Nullable String prefix;
 
     public Optional<String> prefix() {
-        return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
+        return Optional.ofNullable(this.prefix);
     }
 
     @Import(name="roleArn")
-      private final @Nullable String roleArn;
+    private @Nullable String roleArn;
 
     public Optional<String> roleArn() {
-        return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public ConfigS3RecordingConfig(
-        @Nullable String bucketArn,
-        @Nullable String prefix,
-        @Nullable String roleArn) {
-        this.bucketArn = bucketArn;
-        this.prefix = prefix;
-        this.roleArn = roleArn;
-    }
+    private ConfigS3RecordingConfig() {}
 
-    private ConfigS3RecordingConfig() {
-        this.bucketArn = null;
-        this.prefix = null;
-        this.roleArn = null;
+    private ConfigS3RecordingConfig(ConfigS3RecordingConfig $) {
+        this.bucketArn = $.bucketArn;
+        this.prefix = $.prefix;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigS3RecordingConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bucketArn;
-        private @Nullable String prefix;
-        private @Nullable String roleArn;
+        private ConfigS3RecordingConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigS3RecordingConfig();
         }
 
         public Builder(ConfigS3RecordingConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketArn = defaults.bucketArn;
-    	      this.prefix = defaults.prefix;
-    	      this.roleArn = defaults.roleArn;
+            $ = new ConfigS3RecordingConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketArn(@Nullable String bucketArn) {
-            this.bucketArn = bucketArn;
+            $.bucketArn = bucketArn;
             return this;
         }
+
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = prefix;
+            $.prefix = prefix;
             return this;
         }
+
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
-        }        public ConfigS3RecordingConfig build() {
-            return new ConfigS3RecordingConfig(bucketArn, prefix, roleArn);
+        }
+
+        public ConfigS3RecordingConfig build() {
+            return $;
         }
     }
+
 }

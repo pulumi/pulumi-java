@@ -6,9 +6,9 @@ package com.pulumi.azurenative.scheduler.inputs;
 import com.pulumi.azurenative.scheduler.enums.JobScheduleDay;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends com.pulumi
      * 
      */
     @Import(name="day")
-      private final @Nullable Output<JobScheduleDay> day;
+    private @Nullable Output<JobScheduleDay> day;
 
-    public Output<JobScheduleDay> day() {
-        return this.day == null ? Codegen.empty() : this.day;
+    public Optional<Output<JobScheduleDay>> day() {
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends com.pulumi
      * 
      */
     @Import(name="occurrence")
-      private final @Nullable Output<Integer> occurrence;
+    private @Nullable Output<Integer> occurrence;
 
-    public Output<Integer> occurrence() {
-        return this.occurrence == null ? Codegen.empty() : this.occurrence;
+    public Optional<Output<Integer>> occurrence() {
+        return Optional.ofNullable(this.occurrence);
     }
 
-    public JobRecurrenceScheduleMonthlyOccurrenceArgs(
-        @Nullable Output<JobScheduleDay> day,
-        @Nullable Output<Integer> occurrence) {
-        this.day = day;
-        this.occurrence = occurrence;
-    }
+    private JobRecurrenceScheduleMonthlyOccurrenceArgs() {}
 
-    private JobRecurrenceScheduleMonthlyOccurrenceArgs() {
-        this.day = Codegen.empty();
-        this.occurrence = Codegen.empty();
+    private JobRecurrenceScheduleMonthlyOccurrenceArgs(JobRecurrenceScheduleMonthlyOccurrenceArgs $) {
+        this.day = $.day;
+        this.occurrence = $.occurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobRecurrenceScheduleMonthlyOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobScheduleDay> day;
-        private @Nullable Output<Integer> occurrence;
+        private JobRecurrenceScheduleMonthlyOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobRecurrenceScheduleMonthlyOccurrenceArgs();
         }
 
         public Builder(JobRecurrenceScheduleMonthlyOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.occurrence = defaults.occurrence;
+            $ = new JobRecurrenceScheduleMonthlyOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable Output<JobScheduleDay> day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
-        public Builder day(@Nullable JobScheduleDay day) {
-            this.day = Codegen.ofNullable(day);
-            return this;
+
+        public Builder day(JobScheduleDay day) {
+            return day(Output.of(day));
         }
+
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
-            this.occurrence = occurrence;
+            $.occurrence = occurrence;
             return this;
         }
-        public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = Codegen.ofNullable(occurrence);
-            return this;
-        }        public JobRecurrenceScheduleMonthlyOccurrenceArgs build() {
-            return new JobRecurrenceScheduleMonthlyOccurrenceArgs(day, occurrence);
+
+        public Builder occurrence(Integer occurrence) {
+            return occurrence(Output.of(occurrence));
+        }
+
+        public JobRecurrenceScheduleMonthlyOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

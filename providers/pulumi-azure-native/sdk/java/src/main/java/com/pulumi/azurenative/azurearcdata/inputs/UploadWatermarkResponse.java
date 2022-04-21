@@ -23,10 +23,10 @@ public final class UploadWatermarkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="logs")
-      private final @Nullable String logs;
+    private @Nullable String logs;
 
     public Optional<String> logs() {
-        return this.logs == null ? Optional.empty() : Optional.ofNullable(this.logs);
+        return Optional.ofNullable(this.logs);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UploadWatermarkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="metrics")
-      private final @Nullable String metrics;
+    private @Nullable String metrics;
 
     public Optional<String> metrics() {
-        return this.metrics == null ? Optional.empty() : Optional.ofNullable(this.metrics);
+        return Optional.ofNullable(this.metrics);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class UploadWatermarkResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="usages")
-      private final @Nullable String usages;
+    private @Nullable String usages;
 
     public Optional<String> usages() {
-        return this.usages == null ? Optional.empty() : Optional.ofNullable(this.usages);
+        return Optional.ofNullable(this.usages);
     }
 
-    public UploadWatermarkResponse(
-        @Nullable String logs,
-        @Nullable String metrics,
-        @Nullable String usages) {
-        this.logs = logs;
-        this.metrics = metrics;
-        this.usages = usages;
-    }
+    private UploadWatermarkResponse() {}
 
-    private UploadWatermarkResponse() {
-        this.logs = null;
-        this.metrics = null;
-        this.usages = null;
+    private UploadWatermarkResponse(UploadWatermarkResponse $) {
+        this.logs = $.logs;
+        this.metrics = $.metrics;
+        this.usages = $.usages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UploadWatermarkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String logs;
-        private @Nullable String metrics;
-        private @Nullable String usages;
+        private UploadWatermarkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UploadWatermarkResponse();
         }
 
         public Builder(UploadWatermarkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logs = defaults.logs;
-    	      this.metrics = defaults.metrics;
-    	      this.usages = defaults.usages;
+            $ = new UploadWatermarkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logs(@Nullable String logs) {
-            this.logs = logs;
+            $.logs = logs;
             return this;
         }
+
         public Builder metrics(@Nullable String metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
+
         public Builder usages(@Nullable String usages) {
-            this.usages = usages;
+            $.usages = usages;
             return this;
-        }        public UploadWatermarkResponse build() {
-            return new UploadWatermarkResponse(logs, metrics, usages);
+        }
+
+        public UploadWatermarkResponse build() {
+            return $;
         }
     }
+
 }

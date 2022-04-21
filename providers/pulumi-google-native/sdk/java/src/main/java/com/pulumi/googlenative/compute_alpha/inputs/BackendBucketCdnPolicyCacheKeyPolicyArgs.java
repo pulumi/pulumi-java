@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends com.pulumi.r
      * 
      */
     @Import(name="includeHttpHeaders")
-      private final @Nullable Output<List<String>> includeHttpHeaders;
+    private @Nullable Output<List<String>> includeHttpHeaders;
 
-    public Output<List<String>> includeHttpHeaders() {
-        return this.includeHttpHeaders == null ? Codegen.empty() : this.includeHttpHeaders;
+    public Optional<Output<List<String>>> includeHttpHeaders() {
+        return Optional.ofNullable(this.includeHttpHeaders);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends com.pulumi.r
      * 
      */
     @Import(name="queryStringWhitelist")
-      private final @Nullable Output<List<String>> queryStringWhitelist;
+    private @Nullable Output<List<String>> queryStringWhitelist;
 
-    public Output<List<String>> queryStringWhitelist() {
-        return this.queryStringWhitelist == null ? Codegen.empty() : this.queryStringWhitelist;
+    public Optional<Output<List<String>>> queryStringWhitelist() {
+        return Optional.ofNullable(this.queryStringWhitelist);
     }
 
-    public BackendBucketCdnPolicyCacheKeyPolicyArgs(
-        @Nullable Output<List<String>> includeHttpHeaders,
-        @Nullable Output<List<String>> queryStringWhitelist) {
-        this.includeHttpHeaders = includeHttpHeaders;
-        this.queryStringWhitelist = queryStringWhitelist;
-    }
+    private BackendBucketCdnPolicyCacheKeyPolicyArgs() {}
 
-    private BackendBucketCdnPolicyCacheKeyPolicyArgs() {
-        this.includeHttpHeaders = Codegen.empty();
-        this.queryStringWhitelist = Codegen.empty();
+    private BackendBucketCdnPolicyCacheKeyPolicyArgs(BackendBucketCdnPolicyCacheKeyPolicyArgs $) {
+        this.includeHttpHeaders = $.includeHttpHeaders;
+        this.queryStringWhitelist = $.queryStringWhitelist;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendBucketCdnPolicyCacheKeyPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> includeHttpHeaders;
-        private @Nullable Output<List<String>> queryStringWhitelist;
+        private BackendBucketCdnPolicyCacheKeyPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendBucketCdnPolicyCacheKeyPolicyArgs();
         }
 
         public Builder(BackendBucketCdnPolicyCacheKeyPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeHttpHeaders = defaults.includeHttpHeaders;
-    	      this.queryStringWhitelist = defaults.queryStringWhitelist;
+            $ = new BackendBucketCdnPolicyCacheKeyPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder includeHttpHeaders(@Nullable Output<List<String>> includeHttpHeaders) {
-            this.includeHttpHeaders = includeHttpHeaders;
+            $.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
-        public Builder includeHttpHeaders(@Nullable List<String> includeHttpHeaders) {
-            this.includeHttpHeaders = Codegen.ofNullable(includeHttpHeaders);
-            return this;
+
+        public Builder includeHttpHeaders(List<String> includeHttpHeaders) {
+            return includeHttpHeaders(Output.of(includeHttpHeaders));
         }
+
         public Builder includeHttpHeaders(String... includeHttpHeaders) {
             return includeHttpHeaders(List.of(includeHttpHeaders));
         }
+
         public Builder queryStringWhitelist(@Nullable Output<List<String>> queryStringWhitelist) {
-            this.queryStringWhitelist = queryStringWhitelist;
+            $.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
-        public Builder queryStringWhitelist(@Nullable List<String> queryStringWhitelist) {
-            this.queryStringWhitelist = Codegen.ofNullable(queryStringWhitelist);
-            return this;
+
+        public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
+            return queryStringWhitelist(Output.of(queryStringWhitelist));
         }
+
         public Builder queryStringWhitelist(String... queryStringWhitelist) {
             return queryStringWhitelist(List.of(queryStringWhitelist));
-        }        public BackendBucketCdnPolicyCacheKeyPolicyArgs build() {
-            return new BackendBucketCdnPolicyCacheKeyPolicyArgs(includeHttpHeaders, queryStringWhitelist);
+        }
+
+        public BackendBucketCdnPolicyCacheKeyPolicyArgs build() {
+            return $;
         }
     }
+
 }

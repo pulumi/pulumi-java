@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class RegionBackendServiceConnectionTrackingPolicyArgs extends com.
      * 
      */
     @Import(name="connectionPersistenceOnUnhealthyBackends")
-      private final @Nullable Output<String> connectionPersistenceOnUnhealthyBackends;
+    private @Nullable Output<String> connectionPersistenceOnUnhealthyBackends;
 
-    public Output<String> connectionPersistenceOnUnhealthyBackends() {
-        return this.connectionPersistenceOnUnhealthyBackends == null ? Codegen.empty() : this.connectionPersistenceOnUnhealthyBackends;
+    public Optional<Output<String>> connectionPersistenceOnUnhealthyBackends() {
+        return Optional.ofNullable(this.connectionPersistenceOnUnhealthyBackends);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RegionBackendServiceConnectionTrackingPolicyArgs extends com.
      * 
      */
     @Import(name="idleTimeoutSec")
-      private final @Nullable Output<Integer> idleTimeoutSec;
+    private @Nullable Output<Integer> idleTimeoutSec;
 
-    public Output<Integer> idleTimeoutSec() {
-        return this.idleTimeoutSec == null ? Codegen.empty() : this.idleTimeoutSec;
+    public Optional<Output<Integer>> idleTimeoutSec() {
+        return Optional.ofNullable(this.idleTimeoutSec);
     }
 
     /**
@@ -66,76 +66,68 @@ public final class RegionBackendServiceConnectionTrackingPolicyArgs extends com.
      * 
      */
     @Import(name="trackingMode")
-      private final @Nullable Output<String> trackingMode;
+    private @Nullable Output<String> trackingMode;
 
-    public Output<String> trackingMode() {
-        return this.trackingMode == null ? Codegen.empty() : this.trackingMode;
+    public Optional<Output<String>> trackingMode() {
+        return Optional.ofNullable(this.trackingMode);
     }
 
-    public RegionBackendServiceConnectionTrackingPolicyArgs(
-        @Nullable Output<String> connectionPersistenceOnUnhealthyBackends,
-        @Nullable Output<Integer> idleTimeoutSec,
-        @Nullable Output<String> trackingMode) {
-        this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
-        this.idleTimeoutSec = idleTimeoutSec;
-        this.trackingMode = trackingMode;
-    }
+    private RegionBackendServiceConnectionTrackingPolicyArgs() {}
 
-    private RegionBackendServiceConnectionTrackingPolicyArgs() {
-        this.connectionPersistenceOnUnhealthyBackends = Codegen.empty();
-        this.idleTimeoutSec = Codegen.empty();
-        this.trackingMode = Codegen.empty();
+    private RegionBackendServiceConnectionTrackingPolicyArgs(RegionBackendServiceConnectionTrackingPolicyArgs $) {
+        this.connectionPersistenceOnUnhealthyBackends = $.connectionPersistenceOnUnhealthyBackends;
+        this.idleTimeoutSec = $.idleTimeoutSec;
+        this.trackingMode = $.trackingMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionBackendServiceConnectionTrackingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectionPersistenceOnUnhealthyBackends;
-        private @Nullable Output<Integer> idleTimeoutSec;
-        private @Nullable Output<String> trackingMode;
+        private RegionBackendServiceConnectionTrackingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionBackendServiceConnectionTrackingPolicyArgs();
         }
 
         public Builder(RegionBackendServiceConnectionTrackingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionPersistenceOnUnhealthyBackends = defaults.connectionPersistenceOnUnhealthyBackends;
-    	      this.idleTimeoutSec = defaults.idleTimeoutSec;
-    	      this.trackingMode = defaults.trackingMode;
+            $ = new RegionBackendServiceConnectionTrackingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionPersistenceOnUnhealthyBackends(@Nullable Output<String> connectionPersistenceOnUnhealthyBackends) {
-            this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
+            $.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
-        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable String connectionPersistenceOnUnhealthyBackends) {
-            this.connectionPersistenceOnUnhealthyBackends = Codegen.ofNullable(connectionPersistenceOnUnhealthyBackends);
-            return this;
+
+        public Builder connectionPersistenceOnUnhealthyBackends(String connectionPersistenceOnUnhealthyBackends) {
+            return connectionPersistenceOnUnhealthyBackends(Output.of(connectionPersistenceOnUnhealthyBackends));
         }
+
         public Builder idleTimeoutSec(@Nullable Output<Integer> idleTimeoutSec) {
-            this.idleTimeoutSec = idleTimeoutSec;
+            $.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
-        public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
-            this.idleTimeoutSec = Codegen.ofNullable(idleTimeoutSec);
-            return this;
+
+        public Builder idleTimeoutSec(Integer idleTimeoutSec) {
+            return idleTimeoutSec(Output.of(idleTimeoutSec));
         }
+
         public Builder trackingMode(@Nullable Output<String> trackingMode) {
-            this.trackingMode = trackingMode;
+            $.trackingMode = trackingMode;
             return this;
         }
-        public Builder trackingMode(@Nullable String trackingMode) {
-            this.trackingMode = Codegen.ofNullable(trackingMode);
-            return this;
-        }        public RegionBackendServiceConnectionTrackingPolicyArgs build() {
-            return new RegionBackendServiceConnectionTrackingPolicyArgs(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);
+
+        public Builder trackingMode(String trackingMode) {
+            return trackingMode(Output.of(trackingMode));
+        }
+
+        public RegionBackendServiceConnectionTrackingPolicyArgs build() {
+            return $;
         }
     }
+
 }

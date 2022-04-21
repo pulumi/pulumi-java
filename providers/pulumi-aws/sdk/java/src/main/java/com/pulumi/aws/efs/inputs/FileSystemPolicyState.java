@@ -5,10 +5,10 @@ package com.pulumi.aws.efs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FileSystemPolicyState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="bypassPolicyLockoutSafetyCheck")
-      private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
+    private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Optional<Output<Boolean>> bypassPolicyLockoutSafetyCheck() {
+        return Optional.ofNullable(this.bypassPolicyLockoutSafetyCheck);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FileSystemPolicyState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="fileSystemId")
-      private final @Nullable Output<String> fileSystemId;
+    private @Nullable Output<String> fileSystemId;
 
-    public Output<String> fileSystemId() {
-        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
+    public Optional<Output<String>> fileSystemId() {
+        return Optional.ofNullable(this.fileSystemId);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class FileSystemPolicyState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
-    public FileSystemPolicyState(
-        @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck,
-        @Nullable Output<String> fileSystemId,
-        @Nullable Output<String> policy) {
-        this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
-        this.fileSystemId = fileSystemId;
-        this.policy = policy;
-    }
+    private FileSystemPolicyState() {}
 
-    private FileSystemPolicyState() {
-        this.bypassPolicyLockoutSafetyCheck = Codegen.empty();
-        this.fileSystemId = Codegen.empty();
-        this.policy = Codegen.empty();
+    private FileSystemPolicyState(FileSystemPolicyState $) {
+        this.bypassPolicyLockoutSafetyCheck = $.bypassPolicyLockoutSafetyCheck;
+        this.fileSystemId = $.fileSystemId;
+        this.policy = $.policy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileSystemPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
-        private @Nullable Output<String> fileSystemId;
-        private @Nullable Output<String> policy;
+        private FileSystemPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileSystemPolicyState();
         }
 
         public Builder(FileSystemPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bypassPolicyLockoutSafetyCheck = defaults.bypassPolicyLockoutSafetyCheck;
-    	      this.fileSystemId = defaults.fileSystemId;
-    	      this.policy = defaults.policy;
+            $ = new FileSystemPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
+            $.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
-        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Codegen.ofNullable(bypassPolicyLockoutSafetyCheck);
-            return this;
+
+        public Builder bypassPolicyLockoutSafetyCheck(Boolean bypassPolicyLockoutSafetyCheck) {
+            return bypassPolicyLockoutSafetyCheck(Output.of(bypassPolicyLockoutSafetyCheck));
         }
+
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
-            this.fileSystemId = fileSystemId;
+            $.fileSystemId = fileSystemId;
             return this;
         }
-        public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Codegen.ofNullable(fileSystemId);
-            return this;
+
+        public Builder fileSystemId(String fileSystemId) {
+            return fileSystemId(Output.of(fileSystemId));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
-        }        public FileSystemPolicyState build() {
-            return new FileSystemPolicyState(bypassPolicyLockoutSafetyCheck, fileSystemId, policy);
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
+        }
+
+        public FileSystemPolicyState build() {
+            return $;
         }
     }
+
 }

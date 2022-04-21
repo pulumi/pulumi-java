@@ -17,45 +17,45 @@ public final class JwtResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compactJwt", required=true)
-      private final String compactJwt;
+    private String compactJwt;
 
     public String compactJwt() {
         return this.compactJwt;
     }
 
-    public JwtResponse(String compactJwt) {
-        this.compactJwt = Objects.requireNonNull(compactJwt, "expected parameter 'compactJwt' to be non-null");
-    }
+    private JwtResponse() {}
 
-    private JwtResponse() {
-        this.compactJwt = null;
+    private JwtResponse(JwtResponse $) {
+        this.compactJwt = $.compactJwt;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JwtResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String compactJwt;
+        private JwtResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JwtResponse();
         }
 
         public Builder(JwtResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compactJwt = defaults.compactJwt;
+            $ = new JwtResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compactJwt(String compactJwt) {
-            this.compactJwt = Objects.requireNonNull(compactJwt);
+            $.compactJwt = compactJwt;
             return this;
-        }        public JwtResponse build() {
-            return new JwtResponse(compactJwt);
+        }
+
+        public JwtResponse build() {
+            $.compactJwt = Objects.requireNonNull($.compactJwt, "expected parameter 'compactJwt' to be non-null");
+            return $;
         }
     }
+
 }

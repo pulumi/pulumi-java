@@ -5,9 +5,9 @@ package com.pulumi.azurenative.connectedvmwarevsphere;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="metadataName")
-      private final @Nullable Output<String> metadataName;
+    private @Nullable Output<String> metadataName;
 
-    public Output<String> metadataName() {
-        return this.metadataName == null ? Codegen.empty() : this.metadataName;
+    public Optional<Output<String>> metadataName() {
+        return Optional.ofNullable(this.metadataName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="publicKey")
-      private final @Nullable Output<String> publicKey;
+    private @Nullable Output<String> publicKey;
 
-    public Output<String> publicKey() {
-        return this.publicKey == null ? Codegen.empty() : this.publicKey;
+    public Optional<Output<String>> publicKey() {
+        return Optional.ofNullable(this.publicKey);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="virtualMachineName", required=true)
-      private final Output<String> virtualMachineName;
+    private Output<String> virtualMachineName;
 
     public Output<String> virtualMachineName() {
         return this.virtualMachineName;
@@ -64,102 +64,90 @@ public final class HybridIdentityMetadatumArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="vmId")
-      private final @Nullable Output<String> vmId;
+    private @Nullable Output<String> vmId;
 
-    public Output<String> vmId() {
-        return this.vmId == null ? Codegen.empty() : this.vmId;
+    public Optional<Output<String>> vmId() {
+        return Optional.ofNullable(this.vmId);
     }
 
-    public HybridIdentityMetadatumArgs(
-        @Nullable Output<String> metadataName,
-        @Nullable Output<String> publicKey,
-        Output<String> resourceGroupName,
-        Output<String> virtualMachineName,
-        @Nullable Output<String> vmId) {
-        this.metadataName = metadataName;
-        this.publicKey = publicKey;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualMachineName = Objects.requireNonNull(virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
-        this.vmId = vmId;
-    }
+    private HybridIdentityMetadatumArgs() {}
 
-    private HybridIdentityMetadatumArgs() {
-        this.metadataName = Codegen.empty();
-        this.publicKey = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.virtualMachineName = Codegen.empty();
-        this.vmId = Codegen.empty();
+    private HybridIdentityMetadatumArgs(HybridIdentityMetadatumArgs $) {
+        this.metadataName = $.metadataName;
+        this.publicKey = $.publicKey;
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualMachineName = $.virtualMachineName;
+        this.vmId = $.vmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HybridIdentityMetadatumArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> metadataName;
-        private @Nullable Output<String> publicKey;
-        private Output<String> resourceGroupName;
-        private Output<String> virtualMachineName;
-        private @Nullable Output<String> vmId;
+        private HybridIdentityMetadatumArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HybridIdentityMetadatumArgs();
         }
 
         public Builder(HybridIdentityMetadatumArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataName = defaults.metadataName;
-    	      this.publicKey = defaults.publicKey;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualMachineName = defaults.virtualMachineName;
-    	      this.vmId = defaults.vmId;
+            $ = new HybridIdentityMetadatumArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataName(@Nullable Output<String> metadataName) {
-            this.metadataName = metadataName;
+            $.metadataName = metadataName;
             return this;
         }
-        public Builder metadataName(@Nullable String metadataName) {
-            this.metadataName = Codegen.ofNullable(metadataName);
-            return this;
+
+        public Builder metadataName(String metadataName) {
+            return metadataName(Output.of(metadataName));
         }
+
         public Builder publicKey(@Nullable Output<String> publicKey) {
-            this.publicKey = publicKey;
+            $.publicKey = publicKey;
             return this;
         }
-        public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Codegen.ofNullable(publicKey);
-            return this;
+
+        public Builder publicKey(String publicKey) {
+            return publicKey(Output.of(publicKey));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder virtualMachineName(Output<String> virtualMachineName) {
-            this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
+            $.virtualMachineName = virtualMachineName;
             return this;
         }
+
         public Builder virtualMachineName(String virtualMachineName) {
-            this.virtualMachineName = Output.of(Objects.requireNonNull(virtualMachineName));
-            return this;
+            return virtualMachineName(Output.of(virtualMachineName));
         }
+
         public Builder vmId(@Nullable Output<String> vmId) {
-            this.vmId = vmId;
+            $.vmId = vmId;
             return this;
         }
-        public Builder vmId(@Nullable String vmId) {
-            this.vmId = Codegen.ofNullable(vmId);
-            return this;
-        }        public HybridIdentityMetadatumArgs build() {
-            return new HybridIdentityMetadatumArgs(metadataName, publicKey, resourceGroupName, virtualMachineName, vmId);
+
+        public Builder vmId(String vmId) {
+            return vmId(Output.of(vmId));
+        }
+
+        public HybridIdentityMetadatumArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualMachineName = Objects.requireNonNull($.virtualMachineName, "expected parameter 'virtualMachineName' to be non-null");
+            return $;
         }
     }
+
 }

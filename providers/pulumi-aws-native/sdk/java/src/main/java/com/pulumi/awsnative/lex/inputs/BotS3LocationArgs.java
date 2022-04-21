@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3Bucket", required=true)
-      private final Output<String> s3Bucket;
+    private Output<String> s3Bucket;
 
     public Output<String> s3Bucket() {
         return this.s3Bucket;
@@ -35,7 +35,7 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3ObjectKey", required=true)
-      private final Output<String> s3ObjectKey;
+    private Output<String> s3ObjectKey;
 
     public Output<String> s3ObjectKey() {
         return this.s3ObjectKey;
@@ -46,76 +46,70 @@ public final class BotS3LocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="s3ObjectVersion")
-      private final @Nullable Output<String> s3ObjectVersion;
+    private @Nullable Output<String> s3ObjectVersion;
 
-    public Output<String> s3ObjectVersion() {
-        return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
+    public Optional<Output<String>> s3ObjectVersion() {
+        return Optional.ofNullable(this.s3ObjectVersion);
     }
 
-    public BotS3LocationArgs(
-        Output<String> s3Bucket,
-        Output<String> s3ObjectKey,
-        @Nullable Output<String> s3ObjectVersion) {
-        this.s3Bucket = Objects.requireNonNull(s3Bucket, "expected parameter 's3Bucket' to be non-null");
-        this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey, "expected parameter 's3ObjectKey' to be non-null");
-        this.s3ObjectVersion = s3ObjectVersion;
-    }
+    private BotS3LocationArgs() {}
 
-    private BotS3LocationArgs() {
-        this.s3Bucket = Codegen.empty();
-        this.s3ObjectKey = Codegen.empty();
-        this.s3ObjectVersion = Codegen.empty();
+    private BotS3LocationArgs(BotS3LocationArgs $) {
+        this.s3Bucket = $.s3Bucket;
+        this.s3ObjectKey = $.s3ObjectKey;
+        this.s3ObjectVersion = $.s3ObjectVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotS3LocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> s3Bucket;
-        private Output<String> s3ObjectKey;
-        private @Nullable Output<String> s3ObjectVersion;
+        private BotS3LocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotS3LocationArgs();
         }
 
         public Builder(BotS3LocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Bucket = defaults.s3Bucket;
-    	      this.s3ObjectKey = defaults.s3ObjectKey;
-    	      this.s3ObjectVersion = defaults.s3ObjectVersion;
+            $ = new BotS3LocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Bucket(Output<String> s3Bucket) {
-            this.s3Bucket = Objects.requireNonNull(s3Bucket);
+            $.s3Bucket = s3Bucket;
             return this;
         }
+
         public Builder s3Bucket(String s3Bucket) {
-            this.s3Bucket = Output.of(Objects.requireNonNull(s3Bucket));
-            return this;
+            return s3Bucket(Output.of(s3Bucket));
         }
+
         public Builder s3ObjectKey(Output<String> s3ObjectKey) {
-            this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
+            $.s3ObjectKey = s3ObjectKey;
             return this;
         }
+
         public Builder s3ObjectKey(String s3ObjectKey) {
-            this.s3ObjectKey = Output.of(Objects.requireNonNull(s3ObjectKey));
-            return this;
+            return s3ObjectKey(Output.of(s3ObjectKey));
         }
+
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
-            this.s3ObjectVersion = s3ObjectVersion;
+            $.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-        public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
-            this.s3ObjectVersion = Codegen.ofNullable(s3ObjectVersion);
-            return this;
-        }        public BotS3LocationArgs build() {
-            return new BotS3LocationArgs(s3Bucket, s3ObjectKey, s3ObjectVersion);
+
+        public Builder s3ObjectVersion(String s3ObjectVersion) {
+            return s3ObjectVersion(Output.of(s3ObjectVersion));
+        }
+
+        public BotS3LocationArgs build() {
+            $.s3Bucket = Objects.requireNonNull($.s3Bucket, "expected parameter 's3Bucket' to be non-null");
+            $.s3ObjectKey = Objects.requireNonNull($.s3ObjectKey, "expected parameter 's3ObjectKey' to be non-null");
+            return $;
         }
     }
+
 }

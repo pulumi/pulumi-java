@@ -26,10 +26,10 @@ public final class SqlManagedInstanceSkuResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Integer capacity;
+    private @Nullable Integer capacity;
 
     public Optional<Integer> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SqlManagedInstanceSkuResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dev")
-      private final @Nullable Boolean dev;
+    private @Nullable Boolean dev;
 
     public Optional<Boolean> dev() {
-        return this.dev == null ? Optional.empty() : Optional.ofNullable(this.dev);
+        return Optional.ofNullable(this.dev);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SqlManagedInstanceSkuResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="family")
-      private final @Nullable String family;
+    private @Nullable String family;
 
     public Optional<String> family() {
-        return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
+        return Optional.ofNullable(this.family);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class SqlManagedInstanceSkuResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -70,10 +70,10 @@ public final class SqlManagedInstanceSkuResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="size")
-      private final @Nullable String size;
+    private @Nullable String size;
 
     public Optional<String> size() {
-        return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -81,91 +81,77 @@ public final class SqlManagedInstanceSkuResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public SqlManagedInstanceSkuResponse(
-        @Nullable Integer capacity,
-        @Nullable Boolean dev,
-        @Nullable String family,
-        String name,
-        @Nullable String size,
-        @Nullable String tier) {
-        this.capacity = capacity;
-        this.dev = Codegen.booleanProp("dev").arg(dev).def(true).getNullable();
-        this.family = family;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.size = size;
-        this.tier = Codegen.stringProp("tier").arg(tier).def("GeneralPurpose").getNullable();
-    }
+    private SqlManagedInstanceSkuResponse() {}
 
-    private SqlManagedInstanceSkuResponse() {
-        this.capacity = null;
-        this.dev = null;
-        this.family = null;
-        this.name = null;
-        this.size = null;
-        this.tier = null;
+    private SqlManagedInstanceSkuResponse(SqlManagedInstanceSkuResponse $) {
+        this.capacity = $.capacity;
+        this.dev = $.dev;
+        this.family = $.family;
+        this.name = $.name;
+        this.size = $.size;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlManagedInstanceSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer capacity;
-        private @Nullable Boolean dev;
-        private @Nullable String family;
-        private String name;
-        private @Nullable String size;
-        private @Nullable String tier;
+        private SqlManagedInstanceSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlManagedInstanceSkuResponse();
         }
 
         public Builder(SqlManagedInstanceSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.dev = defaults.dev;
-    	      this.family = defaults.family;
-    	      this.name = defaults.name;
-    	      this.size = defaults.size;
-    	      this.tier = defaults.tier;
+            $ = new SqlManagedInstanceSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder dev(@Nullable Boolean dev) {
-            this.dev = dev;
+            $.dev = dev;
             return this;
         }
+
         public Builder family(@Nullable String family) {
-            this.family = family;
+            $.family = family;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder size(@Nullable String size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public SqlManagedInstanceSkuResponse build() {
-            return new SqlManagedInstanceSkuResponse(capacity, dev, family, name, size, tier);
+        }
+
+        public SqlManagedInstanceSkuResponse build() {
+            $.dev = Codegen.booleanProp("dev").arg($.dev).def(true).getNullable();
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.tier = Codegen.stringProp("tier").arg($.tier).def("GeneralPurpose").getNullable();
+            return $;
         }
     }
+
 }

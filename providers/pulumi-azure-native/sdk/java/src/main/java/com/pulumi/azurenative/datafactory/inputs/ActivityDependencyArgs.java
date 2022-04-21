@@ -7,7 +7,6 @@ import com.pulumi.azurenative.datafactory.enums.DependencyCondition;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class ActivityDependencyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="activity", required=true)
-      private final Output<String> activity;
+    private Output<String> activity;
 
     public Output<String> activity() {
         return this.activity;
@@ -37,66 +36,64 @@ public final class ActivityDependencyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dependencyConditions", required=true)
-      private final Output<List<Either<String,DependencyCondition>>> dependencyConditions;
+    private Output<List<Either<String,DependencyCondition>>> dependencyConditions;
 
     public Output<List<Either<String,DependencyCondition>>> dependencyConditions() {
         return this.dependencyConditions;
     }
 
-    public ActivityDependencyArgs(
-        Output<String> activity,
-        Output<List<Either<String,DependencyCondition>>> dependencyConditions) {
-        this.activity = Objects.requireNonNull(activity, "expected parameter 'activity' to be non-null");
-        this.dependencyConditions = Objects.requireNonNull(dependencyConditions, "expected parameter 'dependencyConditions' to be non-null");
-    }
+    private ActivityDependencyArgs() {}
 
-    private ActivityDependencyArgs() {
-        this.activity = Codegen.empty();
-        this.dependencyConditions = Codegen.empty();
+    private ActivityDependencyArgs(ActivityDependencyArgs $) {
+        this.activity = $.activity;
+        this.dependencyConditions = $.dependencyConditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActivityDependencyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> activity;
-        private Output<List<Either<String,DependencyCondition>>> dependencyConditions;
+        private ActivityDependencyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActivityDependencyArgs();
         }
 
         public Builder(ActivityDependencyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activity = defaults.activity;
-    	      this.dependencyConditions = defaults.dependencyConditions;
+            $ = new ActivityDependencyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activity(Output<String> activity) {
-            this.activity = Objects.requireNonNull(activity);
+            $.activity = activity;
             return this;
         }
+
         public Builder activity(String activity) {
-            this.activity = Output.of(Objects.requireNonNull(activity));
-            return this;
+            return activity(Output.of(activity));
         }
+
         public Builder dependencyConditions(Output<List<Either<String,DependencyCondition>>> dependencyConditions) {
-            this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
+            $.dependencyConditions = dependencyConditions;
             return this;
         }
+
         public Builder dependencyConditions(List<Either<String,DependencyCondition>> dependencyConditions) {
-            this.dependencyConditions = Output.of(Objects.requireNonNull(dependencyConditions));
-            return this;
+            return dependencyConditions(Output.of(dependencyConditions));
         }
+
         public Builder dependencyConditions(Either<String,DependencyCondition>... dependencyConditions) {
             return dependencyConditions(List.of(dependencyConditions));
-        }        public ActivityDependencyArgs build() {
-            return new ActivityDependencyArgs(activity, dependencyConditions);
+        }
+
+        public ActivityDependencyArgs build() {
+            $.activity = Objects.requireNonNull($.activity, "expected parameter 'activity' to be non-null");
+            $.dependencyConditions = Objects.requireNonNull($.dependencyConditions, "expected parameter 'dependencyConditions' to be non-null");
+            return $;
         }
     }
+
 }

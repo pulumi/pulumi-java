@@ -17,7 +17,7 @@ public final class GetMultipleActivationKeyArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="multipleActivationKeyName", required=true)
-      private final String multipleActivationKeyName;
+    private String multipleActivationKeyName;
 
     public String multipleActivationKeyName() {
         return this.multipleActivationKeyName;
@@ -28,55 +28,52 @@ public final class GetMultipleActivationKeyArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMultipleActivationKeyArgs(
-        String multipleActivationKeyName,
-        String resourceGroupName) {
-        this.multipleActivationKeyName = Objects.requireNonNull(multipleActivationKeyName, "expected parameter 'multipleActivationKeyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMultipleActivationKeyArgs() {}
 
-    private GetMultipleActivationKeyArgs() {
-        this.multipleActivationKeyName = null;
-        this.resourceGroupName = null;
+    private GetMultipleActivationKeyArgs(GetMultipleActivationKeyArgs $) {
+        this.multipleActivationKeyName = $.multipleActivationKeyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMultipleActivationKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String multipleActivationKeyName;
-        private String resourceGroupName;
+        private GetMultipleActivationKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMultipleActivationKeyArgs();
         }
 
         public Builder(GetMultipleActivationKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.multipleActivationKeyName = defaults.multipleActivationKeyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMultipleActivationKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder multipleActivationKeyName(String multipleActivationKeyName) {
-            this.multipleActivationKeyName = Objects.requireNonNull(multipleActivationKeyName);
+            $.multipleActivationKeyName = multipleActivationKeyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMultipleActivationKeyArgs build() {
-            return new GetMultipleActivationKeyArgs(multipleActivationKeyName, resourceGroupName);
+        }
+
+        public GetMultipleActivationKeyArgs build() {
+            $.multipleActivationKeyName = Objects.requireNonNull($.multipleActivationKeyName, "expected parameter 'multipleActivationKeyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

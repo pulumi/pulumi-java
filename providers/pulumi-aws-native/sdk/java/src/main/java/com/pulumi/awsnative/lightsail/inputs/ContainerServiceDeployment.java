@@ -25,10 +25,10 @@ public final class ContainerServiceDeployment extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="containers")
-      private final @Nullable List<Container> containers;
+    private @Nullable List<Container> containers;
 
-    public List<Container> containers() {
-        return this.containers == null ? List.of() : this.containers;
+    public Optional<List<Container>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -36,58 +36,54 @@ public final class ContainerServiceDeployment extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="publicEndpoint")
-      private final @Nullable ContainerPublicEndpoint publicEndpoint;
+    private @Nullable ContainerPublicEndpoint publicEndpoint;
 
     public Optional<ContainerPublicEndpoint> publicEndpoint() {
-        return this.publicEndpoint == null ? Optional.empty() : Optional.ofNullable(this.publicEndpoint);
+        return Optional.ofNullable(this.publicEndpoint);
     }
 
-    public ContainerServiceDeployment(
-        @Nullable List<Container> containers,
-        @Nullable ContainerPublicEndpoint publicEndpoint) {
-        this.containers = containers;
-        this.publicEndpoint = publicEndpoint;
-    }
+    private ContainerServiceDeployment() {}
 
-    private ContainerServiceDeployment() {
-        this.containers = List.of();
-        this.publicEndpoint = null;
+    private ContainerServiceDeployment(ContainerServiceDeployment $) {
+        this.containers = $.containers;
+        this.publicEndpoint = $.publicEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceDeployment defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Container> containers;
-        private @Nullable ContainerPublicEndpoint publicEndpoint;
+        private ContainerServiceDeployment $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceDeployment();
         }
 
         public Builder(ContainerServiceDeployment defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containers = defaults.containers;
-    	      this.publicEndpoint = defaults.publicEndpoint;
+            $ = new ContainerServiceDeployment(Objects.requireNonNull(defaults));
         }
 
         public Builder containers(@Nullable List<Container> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
+
         public Builder containers(Container... containers) {
             return containers(List.of(containers));
         }
+
         public Builder publicEndpoint(@Nullable ContainerPublicEndpoint publicEndpoint) {
-            this.publicEndpoint = publicEndpoint;
+            $.publicEndpoint = publicEndpoint;
             return this;
-        }        public ContainerServiceDeployment build() {
-            return new ContainerServiceDeployment(containers, publicEndpoint);
+        }
+
+        public ContainerServiceDeployment build() {
+            return $;
         }
     }
+
 }

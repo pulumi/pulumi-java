@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheId")
-      private final @Nullable Output<String> cacheId;
+    private @Nullable Output<String> cacheId;
 
-    public Output<String> cacheId() {
-        return this.cacheId == null ? Codegen.empty() : this.cacheId;
+    public Optional<Output<String>> cacheId() {
+        return Optional.ofNullable(this.cacheId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionString", required=true)
-      private final Output<String> connectionString;
+    private Output<String> connectionString;
 
     public Output<String> connectionString() {
         return this.connectionString;
@@ -42,10 +42,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -64,10 +64,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -86,128 +86,112 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useFromLocation", required=true)
-      private final Output<String> useFromLocation;
+    private Output<String> useFromLocation;
 
     public Output<String> useFromLocation() {
         return this.useFromLocation;
     }
 
-    public CacheArgs(
-        @Nullable Output<String> cacheId,
-        Output<String> connectionString,
-        @Nullable Output<String> description,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceId,
-        Output<String> serviceName,
-        Output<String> useFromLocation) {
-        this.cacheId = cacheId;
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.description = description;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceId = resourceId;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.useFromLocation = Objects.requireNonNull(useFromLocation, "expected parameter 'useFromLocation' to be non-null");
-    }
+    private CacheArgs() {}
 
-    private CacheArgs() {
-        this.cacheId = Codegen.empty();
-        this.connectionString = Codegen.empty();
-        this.description = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.useFromLocation = Codegen.empty();
+    private CacheArgs(CacheArgs $) {
+        this.cacheId = $.cacheId;
+        this.connectionString = $.connectionString;
+        this.description = $.description;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceId = $.resourceId;
+        this.serviceName = $.serviceName;
+        this.useFromLocation = $.useFromLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cacheId;
-        private Output<String> connectionString;
-        private @Nullable Output<String> description;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceId;
-        private Output<String> serviceName;
-        private Output<String> useFromLocation;
+        private CacheArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheArgs();
         }
 
         public Builder(CacheArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheId = defaults.cacheId;
-    	      this.connectionString = defaults.connectionString;
-    	      this.description = defaults.description;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.serviceName = defaults.serviceName;
-    	      this.useFromLocation = defaults.useFromLocation;
+            $ = new CacheArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheId(@Nullable Output<String> cacheId) {
-            this.cacheId = cacheId;
+            $.cacheId = cacheId;
             return this;
         }
-        public Builder cacheId(@Nullable String cacheId) {
-            this.cacheId = Codegen.ofNullable(cacheId);
-            return this;
+
+        public Builder cacheId(String cacheId) {
+            return cacheId(Output.of(cacheId));
         }
+
         public Builder connectionString(Output<String> connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder connectionString(String connectionString) {
-            this.connectionString = Output.of(Objects.requireNonNull(connectionString));
-            return this;
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder useFromLocation(Output<String> useFromLocation) {
-            this.useFromLocation = Objects.requireNonNull(useFromLocation);
+            $.useFromLocation = useFromLocation;
             return this;
         }
+
         public Builder useFromLocation(String useFromLocation) {
-            this.useFromLocation = Output.of(Objects.requireNonNull(useFromLocation));
-            return this;
-        }        public CacheArgs build() {
-            return new CacheArgs(cacheId, connectionString, description, resourceGroupName, resourceId, serviceName, useFromLocation);
+            return useFromLocation(Output.of(useFromLocation));
+        }
+
+        public CacheArgs build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.useFromLocation = Objects.requireNonNull($.useFromLocation, "expected parameter 'useFromLocation' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.contactcenterinsights_v1.enums.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigAr
      * 
      */
     @Import(name="medium")
-      private final @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
+    private @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
 
-    public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium() {
-        return this.medium == null ? Codegen.empty() : this.medium;
+    public Optional<Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium>> medium() {
+        return Optional.ofNullable(this.medium);
     }
 
-    public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs(
-        @Nullable Output<String> filter,
-        @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium) {
-        this.filter = filter;
-        this.medium = medium;
-    }
+    private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs() {}
 
-    private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs() {
-        this.filter = Codegen.empty();
-        this.medium = Codegen.empty();
+    private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs $) {
+        this.filter = $.filter;
+        this.medium = $.medium;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
-        private @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium;
+        private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.medium = defaults.medium;
+            $ = new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder medium(@Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium> medium) {
-            this.medium = medium;
+            $.medium = medium;
             return this;
         }
-        public Builder medium(@Nullable GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium medium) {
-            this.medium = Codegen.ofNullable(medium);
-            return this;
-        }        public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs build() {
-            return new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs(filter, medium);
+
+        public Builder medium(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigMedium medium) {
+            return medium(Output.of(medium));
+        }
+
+        public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs build() {
+            return $;
         }
     }
+
 }

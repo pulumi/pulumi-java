@@ -23,10 +23,10 @@ public final class ResourceLocationDataContractResponse extends com.pulumi.resou
      * 
      */
     @Import(name="city")
-      private final @Nullable String city;
+    private @Nullable String city;
 
     public Optional<String> city() {
-        return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
+        return Optional.ofNullable(this.city);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ResourceLocationDataContractResponse extends com.pulumi.resou
      * 
      */
     @Import(name="countryOrRegion")
-      private final @Nullable String countryOrRegion;
+    private @Nullable String countryOrRegion;
 
     public Optional<String> countryOrRegion() {
-        return this.countryOrRegion == null ? Optional.empty() : Optional.ofNullable(this.countryOrRegion);
+        return Optional.ofNullable(this.countryOrRegion);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ResourceLocationDataContractResponse extends com.pulumi.resou
      * 
      */
     @Import(name="district")
-      private final @Nullable String district;
+    private @Nullable String district;
 
     public Optional<String> district() {
-        return this.district == null ? Optional.empty() : Optional.ofNullable(this.district);
+        return Optional.ofNullable(this.district);
     }
 
     /**
@@ -56,73 +56,63 @@ public final class ResourceLocationDataContractResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ResourceLocationDataContractResponse(
-        @Nullable String city,
-        @Nullable String countryOrRegion,
-        @Nullable String district,
-        String name) {
-        this.city = city;
-        this.countryOrRegion = countryOrRegion;
-        this.district = district;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ResourceLocationDataContractResponse() {}
 
-    private ResourceLocationDataContractResponse() {
-        this.city = null;
-        this.countryOrRegion = null;
-        this.district = null;
-        this.name = null;
+    private ResourceLocationDataContractResponse(ResourceLocationDataContractResponse $) {
+        this.city = $.city;
+        this.countryOrRegion = $.countryOrRegion;
+        this.district = $.district;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceLocationDataContractResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String city;
-        private @Nullable String countryOrRegion;
-        private @Nullable String district;
-        private String name;
+        private ResourceLocationDataContractResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceLocationDataContractResponse();
         }
 
         public Builder(ResourceLocationDataContractResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.city = defaults.city;
-    	      this.countryOrRegion = defaults.countryOrRegion;
-    	      this.district = defaults.district;
-    	      this.name = defaults.name;
+            $ = new ResourceLocationDataContractResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder city(@Nullable String city) {
-            this.city = city;
+            $.city = city;
             return this;
         }
+
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
-            this.countryOrRegion = countryOrRegion;
+            $.countryOrRegion = countryOrRegion;
             return this;
         }
+
         public Builder district(@Nullable String district) {
-            this.district = district;
+            $.district = district;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ResourceLocationDataContractResponse build() {
-            return new ResourceLocationDataContractResponse(city, countryOrRegion, district, name);
+        }
+
+        public ResourceLocationDataContractResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

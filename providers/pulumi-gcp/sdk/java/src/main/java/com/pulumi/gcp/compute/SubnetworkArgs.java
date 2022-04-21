@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SubnetworkLogConfigArgs;
 import com.pulumi.gcp.compute.inputs.SubnetworkSecondaryIpRangeArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipCidrRange", required=true)
-      private final Output<String> ipCidrRange;
+    private Output<String> ipCidrRange;
 
     public Output<String> ipCidrRange() {
         return this.ipCidrRange;
@@ -54,10 +54,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipv6AccessType")
-      private final @Nullable Output<String> ipv6AccessType;
+    private @Nullable Output<String> ipv6AccessType;
 
-    public Output<String> ipv6AccessType() {
-        return this.ipv6AccessType == null ? Codegen.empty() : this.ipv6AccessType;
+    public Optional<Output<String>> ipv6AccessType() {
+        return Optional.ofNullable(this.ipv6AccessType);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logConfig")
-      private final @Nullable Output<SubnetworkLogConfigArgs> logConfig;
+    private @Nullable Output<SubnetworkLogConfigArgs> logConfig;
 
-    public Output<SubnetworkLogConfigArgs> logConfig() {
-        return this.logConfig == null ? Codegen.empty() : this.logConfig;
+    public Optional<Output<SubnetworkLogConfigArgs>> logConfig() {
+        return Optional.ofNullable(this.logConfig);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -97,7 +97,7 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final Output<String> network;
+    private Output<String> network;
 
     public Output<String> network() {
         return this.network;
@@ -109,10 +109,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateIpGoogleAccess")
-      private final @Nullable Output<Boolean> privateIpGoogleAccess;
+    private @Nullable Output<Boolean> privateIpGoogleAccess;
 
-    public Output<Boolean> privateIpGoogleAccess() {
-        return this.privateIpGoogleAccess == null ? Codegen.empty() : this.privateIpGoogleAccess;
+    public Optional<Output<Boolean>> privateIpGoogleAccess() {
+        return Optional.ofNullable(this.privateIpGoogleAccess);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateIpv6GoogleAccess")
-      private final @Nullable Output<String> privateIpv6GoogleAccess;
+    private @Nullable Output<String> privateIpv6GoogleAccess;
 
-    public Output<String> privateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
+    public Optional<Output<String>> privateIpv6GoogleAccess() {
+        return Optional.ofNullable(this.privateIpv6GoogleAccess);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="purpose")
-      private final @Nullable Output<String> purpose;
+    private @Nullable Output<String> purpose;
 
-    public Output<String> purpose() {
-        return this.purpose == null ? Codegen.empty() : this.purpose;
+    public Optional<Output<String>> purpose() {
+        return Optional.ofNullable(this.purpose);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -188,10 +188,10 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondaryIpRanges")
-      private final @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
+    private @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
 
-    public Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges() {
-        return this.secondaryIpRanges == null ? Codegen.empty() : this.secondaryIpRanges;
+    public Optional<Output<List<SubnetworkSecondaryIpRangeArgs>>> secondaryIpRanges() {
+        return Optional.ofNullable(this.secondaryIpRanges);
     }
 
     /**
@@ -201,222 +201,184 @@ public final class SubnetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackType")
-      private final @Nullable Output<String> stackType;
+    private @Nullable Output<String> stackType;
 
-    public Output<String> stackType() {
-        return this.stackType == null ? Codegen.empty() : this.stackType;
+    public Optional<Output<String>> stackType() {
+        return Optional.ofNullable(this.stackType);
     }
 
-    public SubnetworkArgs(
-        @Nullable Output<String> description,
-        Output<String> ipCidrRange,
-        @Nullable Output<String> ipv6AccessType,
-        @Nullable Output<SubnetworkLogConfigArgs> logConfig,
-        @Nullable Output<String> name,
-        Output<String> network,
-        @Nullable Output<Boolean> privateIpGoogleAccess,
-        @Nullable Output<String> privateIpv6GoogleAccess,
-        @Nullable Output<String> project,
-        @Nullable Output<String> purpose,
-        @Nullable Output<String> region,
-        @Nullable Output<String> role,
-        @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges,
-        @Nullable Output<String> stackType) {
-        this.description = description;
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
-        this.ipv6AccessType = ipv6AccessType;
-        this.logConfig = logConfig;
-        this.name = name;
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.privateIpGoogleAccess = privateIpGoogleAccess;
-        this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
-        this.project = project;
-        this.purpose = purpose;
-        this.region = region;
-        this.role = role;
-        this.secondaryIpRanges = secondaryIpRanges;
-        this.stackType = stackType;
-    }
+    private SubnetworkArgs() {}
 
-    private SubnetworkArgs() {
-        this.description = Codegen.empty();
-        this.ipCidrRange = Codegen.empty();
-        this.ipv6AccessType = Codegen.empty();
-        this.logConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.privateIpGoogleAccess = Codegen.empty();
-        this.privateIpv6GoogleAccess = Codegen.empty();
-        this.project = Codegen.empty();
-        this.purpose = Codegen.empty();
-        this.region = Codegen.empty();
-        this.role = Codegen.empty();
-        this.secondaryIpRanges = Codegen.empty();
-        this.stackType = Codegen.empty();
+    private SubnetworkArgs(SubnetworkArgs $) {
+        this.description = $.description;
+        this.ipCidrRange = $.ipCidrRange;
+        this.ipv6AccessType = $.ipv6AccessType;
+        this.logConfig = $.logConfig;
+        this.name = $.name;
+        this.network = $.network;
+        this.privateIpGoogleAccess = $.privateIpGoogleAccess;
+        this.privateIpv6GoogleAccess = $.privateIpv6GoogleAccess;
+        this.project = $.project;
+        this.purpose = $.purpose;
+        this.region = $.region;
+        this.role = $.role;
+        this.secondaryIpRanges = $.secondaryIpRanges;
+        this.stackType = $.stackType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> ipCidrRange;
-        private @Nullable Output<String> ipv6AccessType;
-        private @Nullable Output<SubnetworkLogConfigArgs> logConfig;
-        private @Nullable Output<String> name;
-        private Output<String> network;
-        private @Nullable Output<Boolean> privateIpGoogleAccess;
-        private @Nullable Output<String> privateIpv6GoogleAccess;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> purpose;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> role;
-        private @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
-        private @Nullable Output<String> stackType;
+        private SubnetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetworkArgs();
         }
 
         public Builder(SubnetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.ipv6AccessType = defaults.ipv6AccessType;
-    	      this.logConfig = defaults.logConfig;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.privateIpGoogleAccess = defaults.privateIpGoogleAccess;
-    	      this.privateIpv6GoogleAccess = defaults.privateIpv6GoogleAccess;
-    	      this.project = defaults.project;
-    	      this.purpose = defaults.purpose;
-    	      this.region = defaults.region;
-    	      this.role = defaults.role;
-    	      this.secondaryIpRanges = defaults.secondaryIpRanges;
-    	      this.stackType = defaults.stackType;
+            $ = new SubnetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ipCidrRange(Output<String> ipCidrRange) {
-            this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
+
         public Builder ipCidrRange(String ipCidrRange) {
-            this.ipCidrRange = Output.of(Objects.requireNonNull(ipCidrRange));
-            return this;
+            return ipCidrRange(Output.of(ipCidrRange));
         }
+
         public Builder ipv6AccessType(@Nullable Output<String> ipv6AccessType) {
-            this.ipv6AccessType = ipv6AccessType;
+            $.ipv6AccessType = ipv6AccessType;
             return this;
         }
-        public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
-            this.ipv6AccessType = Codegen.ofNullable(ipv6AccessType);
-            return this;
+
+        public Builder ipv6AccessType(String ipv6AccessType) {
+            return ipv6AccessType(Output.of(ipv6AccessType));
         }
+
         public Builder logConfig(@Nullable Output<SubnetworkLogConfigArgs> logConfig) {
-            this.logConfig = logConfig;
+            $.logConfig = logConfig;
             return this;
         }
-        public Builder logConfig(@Nullable SubnetworkLogConfigArgs logConfig) {
-            this.logConfig = Codegen.ofNullable(logConfig);
-            return this;
+
+        public Builder logConfig(SubnetworkLogConfigArgs logConfig) {
+            return logConfig(Output.of(logConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(Output<String> network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Output.of(Objects.requireNonNull(network));
-            return this;
+            return network(Output.of(network));
         }
+
         public Builder privateIpGoogleAccess(@Nullable Output<Boolean> privateIpGoogleAccess) {
-            this.privateIpGoogleAccess = privateIpGoogleAccess;
+            $.privateIpGoogleAccess = privateIpGoogleAccess;
             return this;
         }
-        public Builder privateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
-            this.privateIpGoogleAccess = Codegen.ofNullable(privateIpGoogleAccess);
-            return this;
+
+        public Builder privateIpGoogleAccess(Boolean privateIpGoogleAccess) {
+            return privateIpGoogleAccess(Output.of(privateIpGoogleAccess));
         }
+
         public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+            $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
-        public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Codegen.ofNullable(privateIpv6GoogleAccess);
-            return this;
+
+        public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
+            return privateIpv6GoogleAccess(Output.of(privateIpv6GoogleAccess));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder purpose(@Nullable Output<String> purpose) {
-            this.purpose = purpose;
+            $.purpose = purpose;
             return this;
         }
-        public Builder purpose(@Nullable String purpose) {
-            this.purpose = Codegen.ofNullable(purpose);
-            return this;
+
+        public Builder purpose(String purpose) {
+            return purpose(Output.of(purpose));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder secondaryIpRanges(@Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges) {
-            this.secondaryIpRanges = secondaryIpRanges;
+            $.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
-        public Builder secondaryIpRanges(@Nullable List<SubnetworkSecondaryIpRangeArgs> secondaryIpRanges) {
-            this.secondaryIpRanges = Codegen.ofNullable(secondaryIpRanges);
-            return this;
+
+        public Builder secondaryIpRanges(List<SubnetworkSecondaryIpRangeArgs> secondaryIpRanges) {
+            return secondaryIpRanges(Output.of(secondaryIpRanges));
         }
+
         public Builder secondaryIpRanges(SubnetworkSecondaryIpRangeArgs... secondaryIpRanges) {
             return secondaryIpRanges(List.of(secondaryIpRanges));
         }
+
         public Builder stackType(@Nullable Output<String> stackType) {
-            this.stackType = stackType;
+            $.stackType = stackType;
             return this;
         }
-        public Builder stackType(@Nullable String stackType) {
-            this.stackType = Codegen.ofNullable(stackType);
-            return this;
-        }        public SubnetworkArgs build() {
-            return new SubnetworkArgs(description, ipCidrRange, ipv6AccessType, logConfig, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, project, purpose, region, role, secondaryIpRanges, stackType);
+
+        public Builder stackType(String stackType) {
+            return stackType(Output.of(stackType));
+        }
+
+        public SubnetworkArgs build() {
+            $.ipCidrRange = Objects.requireNonNull($.ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

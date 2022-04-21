@@ -5,9 +5,9 @@ package com.pulumi.aws.eks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ClusterCertificateAuthorityGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
-    public ClusterCertificateAuthorityGetArgs(@Nullable Output<String> data) {
-        this.data = data;
-    }
+    private ClusterCertificateAuthorityGetArgs() {}
 
-    private ClusterCertificateAuthorityGetArgs() {
-        this.data = Codegen.empty();
+    private ClusterCertificateAuthorityGetArgs(ClusterCertificateAuthorityGetArgs $) {
+        this.data = $.data;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCertificateAuthorityGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> data;
+        private ClusterCertificateAuthorityGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCertificateAuthorityGetArgs();
         }
 
         public Builder(ClusterCertificateAuthorityGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
+            $ = new ClusterCertificateAuthorityGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
-        }        public ClusterCertificateAuthorityGetArgs build() {
-            return new ClusterCertificateAuthorityGetArgs(data);
+
+        public Builder data(String data) {
+            return data(Output.of(data));
+        }
+
+        public ClusterCertificateAuthorityGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -19,45 +19,44 @@ public final class ServiceManagedResourcesSettingsResponse extends com.pulumi.re
      * 
      */
     @Import(name="cosmosDb")
-      private final @Nullable CosmosDbSettingsResponse cosmosDb;
+    private @Nullable CosmosDbSettingsResponse cosmosDb;
 
     public Optional<CosmosDbSettingsResponse> cosmosDb() {
-        return this.cosmosDb == null ? Optional.empty() : Optional.ofNullable(this.cosmosDb);
+        return Optional.ofNullable(this.cosmosDb);
     }
 
-    public ServiceManagedResourcesSettingsResponse(@Nullable CosmosDbSettingsResponse cosmosDb) {
-        this.cosmosDb = cosmosDb;
-    }
+    private ServiceManagedResourcesSettingsResponse() {}
 
-    private ServiceManagedResourcesSettingsResponse() {
-        this.cosmosDb = null;
+    private ServiceManagedResourcesSettingsResponse(ServiceManagedResourcesSettingsResponse $) {
+        this.cosmosDb = $.cosmosDb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceManagedResourcesSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CosmosDbSettingsResponse cosmosDb;
+        private ServiceManagedResourcesSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceManagedResourcesSettingsResponse();
         }
 
         public Builder(ServiceManagedResourcesSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cosmosDb = defaults.cosmosDb;
+            $ = new ServiceManagedResourcesSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cosmosDb(@Nullable CosmosDbSettingsResponse cosmosDb) {
-            this.cosmosDb = cosmosDb;
+            $.cosmosDb = cosmosDb;
             return this;
-        }        public ServiceManagedResourcesSettingsResponse build() {
-            return new ServiceManagedResourcesSettingsResponse(cosmosDb);
+        }
+
+        public ServiceManagedResourcesSettingsResponse build() {
+            return $;
         }
     }
+
 }

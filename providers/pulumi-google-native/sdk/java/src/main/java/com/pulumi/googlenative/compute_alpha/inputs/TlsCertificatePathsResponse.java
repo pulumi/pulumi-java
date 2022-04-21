@@ -21,7 +21,7 @@ public final class TlsCertificatePathsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="certificatePath", required=true)
-      private final String certificatePath;
+    private String certificatePath;
 
     public String certificatePath() {
         return this.certificatePath;
@@ -32,55 +32,52 @@ public final class TlsCertificatePathsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="privateKeyPath", required=true)
-      private final String privateKeyPath;
+    private String privateKeyPath;
 
     public String privateKeyPath() {
         return this.privateKeyPath;
     }
 
-    public TlsCertificatePathsResponse(
-        String certificatePath,
-        String privateKeyPath) {
-        this.certificatePath = Objects.requireNonNull(certificatePath, "expected parameter 'certificatePath' to be non-null");
-        this.privateKeyPath = Objects.requireNonNull(privateKeyPath, "expected parameter 'privateKeyPath' to be non-null");
-    }
+    private TlsCertificatePathsResponse() {}
 
-    private TlsCertificatePathsResponse() {
-        this.certificatePath = null;
-        this.privateKeyPath = null;
+    private TlsCertificatePathsResponse(TlsCertificatePathsResponse $) {
+        this.certificatePath = $.certificatePath;
+        this.privateKeyPath = $.privateKeyPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsCertificatePathsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificatePath;
-        private String privateKeyPath;
+        private TlsCertificatePathsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsCertificatePathsResponse();
         }
 
         public Builder(TlsCertificatePathsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificatePath = defaults.certificatePath;
-    	      this.privateKeyPath = defaults.privateKeyPath;
+            $ = new TlsCertificatePathsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificatePath(String certificatePath) {
-            this.certificatePath = Objects.requireNonNull(certificatePath);
+            $.certificatePath = certificatePath;
             return this;
         }
+
         public Builder privateKeyPath(String privateKeyPath) {
-            this.privateKeyPath = Objects.requireNonNull(privateKeyPath);
+            $.privateKeyPath = privateKeyPath;
             return this;
-        }        public TlsCertificatePathsResponse build() {
-            return new TlsCertificatePathsResponse(certificatePath, privateKeyPath);
+        }
+
+        public TlsCertificatePathsResponse build() {
+            $.certificatePath = Objects.requireNonNull($.certificatePath, "expected parameter 'certificatePath' to be non-null");
+            $.privateKeyPath = Objects.requireNonNull($.privateKeyPath, "expected parameter 'privateKeyPath' to be non-null");
+            return $;
         }
     }
+
 }

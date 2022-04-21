@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.ContextRuleArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ContextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<ContextRuleArgs>> rules;
+    private @Nullable Output<List<ContextRuleArgs>> rules;
 
-    public Output<List<ContextRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<ContextRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public ContextArgs(@Nullable Output<List<ContextRuleArgs>> rules) {
-        this.rules = rules;
-    }
+    private ContextArgs() {}
 
-    private ContextArgs() {
-        this.rules = Codegen.empty();
+    private ContextArgs(ContextArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ContextRuleArgs>> rules;
+        private ContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContextArgs();
         }
 
         public Builder(ContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new ContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<ContextRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<ContextRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<ContextRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(ContextRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public ContextArgs build() {
-            return new ContextArgs(rules);
+        }
+
+        public ContextArgs build() {
+            return $;
         }
     }
+
 }

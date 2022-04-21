@@ -5,11 +5,11 @@ package com.pulumi.gcp.composer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigSchedulerArgs;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWebServerArgs;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWorkerArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class EnvironmentConfigWorkloadsConfigArgs extends com.pulumi.resou
     public static final EnvironmentConfigWorkloadsConfigArgs Empty = new EnvironmentConfigWorkloadsConfigArgs();
 
     @Import(name="scheduler")
-      private final @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler;
+    private @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler;
 
-    public Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler() {
-        return this.scheduler == null ? Codegen.empty() : this.scheduler;
+    public Optional<Output<EnvironmentConfigWorkloadsConfigSchedulerArgs>> scheduler() {
+        return Optional.ofNullable(this.scheduler);
     }
 
     @Import(name="webServer")
-      private final @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer;
+    private @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer;
 
-    public Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer() {
-        return this.webServer == null ? Codegen.empty() : this.webServer;
+    public Optional<Output<EnvironmentConfigWorkloadsConfigWebServerArgs>> webServer() {
+        return Optional.ofNullable(this.webServer);
     }
 
     @Import(name="worker")
-      private final @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker;
+    private @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker;
 
-    public Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker() {
-        return this.worker == null ? Codegen.empty() : this.worker;
+    public Optional<Output<EnvironmentConfigWorkloadsConfigWorkerArgs>> worker() {
+        return Optional.ofNullable(this.worker);
     }
 
-    public EnvironmentConfigWorkloadsConfigArgs(
-        @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler,
-        @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer,
-        @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker) {
-        this.scheduler = scheduler;
-        this.webServer = webServer;
-        this.worker = worker;
-    }
+    private EnvironmentConfigWorkloadsConfigArgs() {}
 
-    private EnvironmentConfigWorkloadsConfigArgs() {
-        this.scheduler = Codegen.empty();
-        this.webServer = Codegen.empty();
-        this.worker = Codegen.empty();
+    private EnvironmentConfigWorkloadsConfigArgs(EnvironmentConfigWorkloadsConfigArgs $) {
+        this.scheduler = $.scheduler;
+        this.webServer = $.webServer;
+        this.worker = $.worker;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentConfigWorkloadsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler;
-        private @Nullable Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer;
-        private @Nullable Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker;
+        private EnvironmentConfigWorkloadsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentConfigWorkloadsConfigArgs();
         }
 
         public Builder(EnvironmentConfigWorkloadsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduler = defaults.scheduler;
-    	      this.webServer = defaults.webServer;
-    	      this.worker = defaults.worker;
+            $ = new EnvironmentConfigWorkloadsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduler(@Nullable Output<EnvironmentConfigWorkloadsConfigSchedulerArgs> scheduler) {
-            this.scheduler = scheduler;
+            $.scheduler = scheduler;
             return this;
         }
-        public Builder scheduler(@Nullable EnvironmentConfigWorkloadsConfigSchedulerArgs scheduler) {
-            this.scheduler = Codegen.ofNullable(scheduler);
-            return this;
+
+        public Builder scheduler(EnvironmentConfigWorkloadsConfigSchedulerArgs scheduler) {
+            return scheduler(Output.of(scheduler));
         }
+
         public Builder webServer(@Nullable Output<EnvironmentConfigWorkloadsConfigWebServerArgs> webServer) {
-            this.webServer = webServer;
+            $.webServer = webServer;
             return this;
         }
-        public Builder webServer(@Nullable EnvironmentConfigWorkloadsConfigWebServerArgs webServer) {
-            this.webServer = Codegen.ofNullable(webServer);
-            return this;
+
+        public Builder webServer(EnvironmentConfigWorkloadsConfigWebServerArgs webServer) {
+            return webServer(Output.of(webServer));
         }
+
         public Builder worker(@Nullable Output<EnvironmentConfigWorkloadsConfigWorkerArgs> worker) {
-            this.worker = worker;
+            $.worker = worker;
             return this;
         }
-        public Builder worker(@Nullable EnvironmentConfigWorkloadsConfigWorkerArgs worker) {
-            this.worker = Codegen.ofNullable(worker);
-            return this;
-        }        public EnvironmentConfigWorkloadsConfigArgs build() {
-            return new EnvironmentConfigWorkloadsConfigArgs(scheduler, webServer, worker);
+
+        public Builder worker(EnvironmentConfigWorkloadsConfigWorkerArgs worker) {
+            return worker(Output.of(worker));
+        }
+
+        public EnvironmentConfigWorkloadsConfigArgs build() {
+            return $;
         }
     }
+
 }

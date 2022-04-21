@@ -24,7 +24,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -35,10 +35,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="privateIPAddress")
-      private final @Nullable String privateIPAddress;
+    private @Nullable String privateIPAddress;
 
     public Optional<String> privateIPAddress() {
-        return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
+        return Optional.ofNullable(this.privateIPAddress);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="privateIPAllocationMethod")
-      private final @Nullable String privateIPAllocationMethod;
+    private @Nullable String privateIPAllocationMethod;
 
     public Optional<String> privateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
+        return Optional.ofNullable(this.privateIPAllocationMethod);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="privateLinkConfiguration")
-      private final @Nullable SubResourceResponse privateLinkConfiguration;
+    private @Nullable SubResourceResponse privateLinkConfiguration;
 
     public Optional<SubResourceResponse> privateLinkConfiguration() {
-        return this.privateLinkConfiguration == null ? Optional.empty() : Optional.ofNullable(this.privateLinkConfiguration);
+        return Optional.ofNullable(this.privateLinkConfiguration);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -101,10 +101,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="publicIPAddress")
-      private final @Nullable SubResourceResponse publicIPAddress;
+    private @Nullable SubResourceResponse publicIPAddress;
 
     public Optional<SubResourceResponse> publicIPAddress() {
-        return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
+        return Optional.ofNullable(this.publicIPAddress);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="subnet")
-      private final @Nullable SubResourceResponse subnet;
+    private @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -123,127 +123,101 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse extends com
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewayFrontendIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAllocationMethod,
-        @Nullable SubResourceResponse privateLinkConfiguration,
-        String provisioningState,
-        @Nullable SubResourceResponse publicIPAddress,
-        @Nullable SubResourceResponse subnet,
-        String type) {
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.privateIPAddress = privateIPAddress;
-        this.privateIPAllocationMethod = privateIPAllocationMethod;
-        this.privateLinkConfiguration = privateLinkConfiguration;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicIPAddress = publicIPAddress;
-        this.subnet = subnet;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewayFrontendIPConfigurationResponse() {}
 
-    private ApplicationGatewayFrontendIPConfigurationResponse() {
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.privateIPAddress = null;
-        this.privateIPAllocationMethod = null;
-        this.privateLinkConfiguration = null;
-        this.provisioningState = null;
-        this.publicIPAddress = null;
-        this.subnet = null;
-        this.type = null;
+    private ApplicationGatewayFrontendIPConfigurationResponse(ApplicationGatewayFrontendIPConfigurationResponse $) {
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.privateIPAddress = $.privateIPAddress;
+        this.privateIPAllocationMethod = $.privateIPAllocationMethod;
+        this.privateLinkConfiguration = $.privateLinkConfiguration;
+        this.provisioningState = $.provisioningState;
+        this.publicIPAddress = $.publicIPAddress;
+        this.subnet = $.subnet;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayFrontendIPConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable String privateIPAddress;
-        private @Nullable String privateIPAllocationMethod;
-        private @Nullable SubResourceResponse privateLinkConfiguration;
-        private String provisioningState;
-        private @Nullable SubResourceResponse publicIPAddress;
-        private @Nullable SubResourceResponse subnet;
-        private String type;
+        private ApplicationGatewayFrontendIPConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayFrontendIPConfigurationResponse();
         }
 
         public Builder(ApplicationGatewayFrontendIPConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.privateIPAddress = defaults.privateIPAddress;
-    	      this.privateIPAllocationMethod = defaults.privateIPAllocationMethod;
-    	      this.privateLinkConfiguration = defaults.privateLinkConfiguration;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicIPAddress = defaults.publicIPAddress;
-    	      this.subnet = defaults.subnet;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewayFrontendIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = privateIPAddress;
+            $.privateIPAddress = privateIPAddress;
             return this;
         }
+
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = privateIPAllocationMethod;
+            $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
+
         public Builder privateLinkConfiguration(@Nullable SubResourceResponse privateLinkConfiguration) {
-            this.privateLinkConfiguration = privateLinkConfiguration;
+            $.privateLinkConfiguration = privateLinkConfiguration;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
-            this.publicIPAddress = publicIPAddress;
+            $.publicIPAddress = publicIPAddress;
             return this;
         }
+
         public Builder subnet(@Nullable SubResourceResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewayFrontendIPConfigurationResponse build() {
-            return new ApplicationGatewayFrontendIPConfigurationResponse(etag, id, name, privateIPAddress, privateIPAllocationMethod, privateLinkConfiguration, provisioningState, publicIPAddress, subnet, type);
+        }
+
+        public ApplicationGatewayFrontendIPConfigurationResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

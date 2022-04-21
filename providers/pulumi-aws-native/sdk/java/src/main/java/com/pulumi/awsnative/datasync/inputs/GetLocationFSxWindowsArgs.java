@@ -17,45 +17,45 @@ public final class GetLocationFSxWindowsArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="locationArn", required=true)
-      private final String locationArn;
+    private String locationArn;
 
     public String locationArn() {
         return this.locationArn;
     }
 
-    public GetLocationFSxWindowsArgs(String locationArn) {
-        this.locationArn = Objects.requireNonNull(locationArn, "expected parameter 'locationArn' to be non-null");
-    }
+    private GetLocationFSxWindowsArgs() {}
 
-    private GetLocationFSxWindowsArgs() {
-        this.locationArn = null;
+    private GetLocationFSxWindowsArgs(GetLocationFSxWindowsArgs $) {
+        this.locationArn = $.locationArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLocationFSxWindowsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String locationArn;
+        private GetLocationFSxWindowsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLocationFSxWindowsArgs();
         }
 
         public Builder(GetLocationFSxWindowsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locationArn = defaults.locationArn;
+            $ = new GetLocationFSxWindowsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locationArn(String locationArn) {
-            this.locationArn = Objects.requireNonNull(locationArn);
+            $.locationArn = locationArn;
             return this;
-        }        public GetLocationFSxWindowsArgs build() {
-            return new GetLocationFSxWindowsArgs(locationArn);
+        }
+
+        public GetLocationFSxWindowsArgs build() {
+            $.locationArn = Objects.requireNonNull($.locationArn, "expected parameter 'locationArn' to be non-null");
+            return $;
         }
     }
+
 }

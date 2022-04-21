@@ -21,7 +21,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends com.pul
      * 
      */
     @Import(name="interconnectName", required=true)
-      private final String interconnectName;
+    private String interconnectName;
 
     public String interconnectName() {
         return this.interconnectName;
@@ -32,7 +32,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends com.pul
      * 
      */
     @Import(name="partnerName", required=true)
-      private final String partnerName;
+    private String partnerName;
 
     public String partnerName() {
         return this.partnerName;
@@ -43,64 +43,59 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends com.pul
      * 
      */
     @Import(name="portalUrl", required=true)
-      private final String portalUrl;
+    private String portalUrl;
 
     public String portalUrl() {
         return this.portalUrl;
     }
 
-    public InterconnectAttachmentPartnerMetadataResponse(
-        String interconnectName,
-        String partnerName,
-        String portalUrl) {
-        this.interconnectName = Objects.requireNonNull(interconnectName, "expected parameter 'interconnectName' to be non-null");
-        this.partnerName = Objects.requireNonNull(partnerName, "expected parameter 'partnerName' to be non-null");
-        this.portalUrl = Objects.requireNonNull(portalUrl, "expected parameter 'portalUrl' to be non-null");
-    }
+    private InterconnectAttachmentPartnerMetadataResponse() {}
 
-    private InterconnectAttachmentPartnerMetadataResponse() {
-        this.interconnectName = null;
-        this.partnerName = null;
-        this.portalUrl = null;
+    private InterconnectAttachmentPartnerMetadataResponse(InterconnectAttachmentPartnerMetadataResponse $) {
+        this.interconnectName = $.interconnectName;
+        this.partnerName = $.partnerName;
+        this.portalUrl = $.portalUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectAttachmentPartnerMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String interconnectName;
-        private String partnerName;
-        private String portalUrl;
+        private InterconnectAttachmentPartnerMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectAttachmentPartnerMetadataResponse();
         }
 
         public Builder(InterconnectAttachmentPartnerMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interconnectName = defaults.interconnectName;
-    	      this.partnerName = defaults.partnerName;
-    	      this.portalUrl = defaults.portalUrl;
+            $ = new InterconnectAttachmentPartnerMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder interconnectName(String interconnectName) {
-            this.interconnectName = Objects.requireNonNull(interconnectName);
+            $.interconnectName = interconnectName;
             return this;
         }
+
         public Builder partnerName(String partnerName) {
-            this.partnerName = Objects.requireNonNull(partnerName);
+            $.partnerName = partnerName;
             return this;
         }
+
         public Builder portalUrl(String portalUrl) {
-            this.portalUrl = Objects.requireNonNull(portalUrl);
+            $.portalUrl = portalUrl;
             return this;
-        }        public InterconnectAttachmentPartnerMetadataResponse build() {
-            return new InterconnectAttachmentPartnerMetadataResponse(interconnectName, partnerName, portalUrl);
+        }
+
+        public InterconnectAttachmentPartnerMetadataResponse build() {
+            $.interconnectName = Objects.requireNonNull($.interconnectName, "expected parameter 'interconnectName' to be non-null");
+            $.partnerName = Objects.requireNonNull($.partnerName, "expected parameter 'partnerName' to be non-null");
+            $.portalUrl = Objects.requireNonNull($.portalUrl, "expected parameter 'portalUrl' to be non-null");
+            return $;
         }
     }
+
 }

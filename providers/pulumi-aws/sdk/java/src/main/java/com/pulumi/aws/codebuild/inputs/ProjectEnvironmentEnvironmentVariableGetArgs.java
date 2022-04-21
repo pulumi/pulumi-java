@@ -5,9 +5,9 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -31,10 +31,10 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends com.pulu
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class ProjectEnvironmentEnvironmentVariableGetArgs extends com.pulu
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public ProjectEnvironmentEnvironmentVariableGetArgs(
-        Output<String> name,
-        @Nullable Output<String> type,
-        Output<String> value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = type;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ProjectEnvironmentEnvironmentVariableGetArgs() {}
 
-    private ProjectEnvironmentEnvironmentVariableGetArgs() {
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private ProjectEnvironmentEnvironmentVariableGetArgs(ProjectEnvironmentEnvironmentVariableGetArgs $) {
+        this.name = $.name;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectEnvironmentEnvironmentVariableGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<String> type;
-        private Output<String> value;
+        private ProjectEnvironmentEnvironmentVariableGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectEnvironmentEnvironmentVariableGetArgs();
         }
 
         public Builder(ProjectEnvironmentEnvironmentVariableGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new ProjectEnvironmentEnvironmentVariableGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public ProjectEnvironmentEnvironmentVariableGetArgs build() {
-            return new ProjectEnvironmentEnvironmentVariableGetArgs(name, type, value);
+            return value(Output.of(value));
+        }
+
+        public ProjectEnvironmentEnvironmentVariableGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

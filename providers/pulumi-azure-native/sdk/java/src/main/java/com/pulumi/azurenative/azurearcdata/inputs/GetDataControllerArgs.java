@@ -13,7 +13,7 @@ public final class GetDataControllerArgs extends com.pulumi.resources.InvokeArgs
     public static final GetDataControllerArgs Empty = new GetDataControllerArgs();
 
     @Import(name="dataControllerName", required=true)
-      private final String dataControllerName;
+    private String dataControllerName;
 
     public String dataControllerName() {
         return this.dataControllerName;
@@ -24,55 +24,52 @@ public final class GetDataControllerArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetDataControllerArgs(
-        String dataControllerName,
-        String resourceGroupName) {
-        this.dataControllerName = Objects.requireNonNull(dataControllerName, "expected parameter 'dataControllerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetDataControllerArgs() {}
 
-    private GetDataControllerArgs() {
-        this.dataControllerName = null;
-        this.resourceGroupName = null;
+    private GetDataControllerArgs(GetDataControllerArgs $) {
+        this.dataControllerName = $.dataControllerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataControllerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataControllerName;
-        private String resourceGroupName;
+        private GetDataControllerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataControllerArgs();
         }
 
         public Builder(GetDataControllerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataControllerName = defaults.dataControllerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetDataControllerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataControllerName(String dataControllerName) {
-            this.dataControllerName = Objects.requireNonNull(dataControllerName);
+            $.dataControllerName = dataControllerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetDataControllerArgs build() {
-            return new GetDataControllerArgs(dataControllerName, resourceGroupName);
+        }
+
+        public GetDataControllerArgs build() {
+            $.dataControllerName = Objects.requireNonNull($.dataControllerName, "expected parameter 'dataControllerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

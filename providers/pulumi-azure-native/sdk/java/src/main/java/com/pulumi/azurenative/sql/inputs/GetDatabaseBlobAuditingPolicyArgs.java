@@ -17,7 +17,7 @@ public final class GetDatabaseBlobAuditingPolicyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="blobAuditingPolicyName", required=true)
-      private final String blobAuditingPolicyName;
+    private String blobAuditingPolicyName;
 
     public String blobAuditingPolicyName() {
         return this.blobAuditingPolicyName;
@@ -28,7 +28,7 @@ public final class GetDatabaseBlobAuditingPolicyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetDatabaseBlobAuditingPolicyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetDatabaseBlobAuditingPolicyArgs extends com.pulumi.resource
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetDatabaseBlobAuditingPolicyArgs(
-        String blobAuditingPolicyName,
-        String databaseName,
-        String resourceGroupName,
-        String serverName) {
-        this.blobAuditingPolicyName = Objects.requireNonNull(blobAuditingPolicyName, "expected parameter 'blobAuditingPolicyName' to be non-null");
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetDatabaseBlobAuditingPolicyArgs() {}
 
-    private GetDatabaseBlobAuditingPolicyArgs() {
-        this.blobAuditingPolicyName = null;
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetDatabaseBlobAuditingPolicyArgs(GetDatabaseBlobAuditingPolicyArgs $) {
+        this.blobAuditingPolicyName = $.blobAuditingPolicyName;
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseBlobAuditingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blobAuditingPolicyName;
-        private String databaseName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetDatabaseBlobAuditingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseBlobAuditingPolicyArgs();
         }
 
         public Builder(GetDatabaseBlobAuditingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobAuditingPolicyName = defaults.blobAuditingPolicyName;
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetDatabaseBlobAuditingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobAuditingPolicyName(String blobAuditingPolicyName) {
-            this.blobAuditingPolicyName = Objects.requireNonNull(blobAuditingPolicyName);
+            $.blobAuditingPolicyName = blobAuditingPolicyName;
             return this;
         }
+
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetDatabaseBlobAuditingPolicyArgs build() {
-            return new GetDatabaseBlobAuditingPolicyArgs(blobAuditingPolicyName, databaseName, resourceGroupName, serverName);
+        }
+
+        public GetDatabaseBlobAuditingPolicyArgs build() {
+            $.blobAuditingPolicyName = Objects.requireNonNull($.blobAuditingPolicyName, "expected parameter 'blobAuditingPolicyName' to be non-null");
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

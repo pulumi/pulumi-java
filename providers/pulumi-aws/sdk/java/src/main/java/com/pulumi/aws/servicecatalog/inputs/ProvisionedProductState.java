@@ -7,12 +7,12 @@ import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductProvisioningParame
 import com.pulumi.aws.servicecatalog.inputs.ProvisionedProductStackSetProvisioningPreferencesGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="cloudwatchDashboardNames")
-      private final @Nullable Output<List<String>> cloudwatchDashboardNames;
+    private @Nullable Output<List<String>> cloudwatchDashboardNames;
 
-    public Output<List<String>> cloudwatchDashboardNames() {
-        return this.cloudwatchDashboardNames == null ? Codegen.empty() : this.cloudwatchDashboardNames;
+    public Optional<Output<List<String>>> cloudwatchDashboardNames() {
+        return Optional.ofNullable(this.cloudwatchDashboardNames);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable Output<String> createdTime;
+    private @Nullable Output<String> createdTime;
 
-    public Output<String> createdTime() {
-        return this.createdTime == null ? Codegen.empty() : this.createdTime;
+    public Optional<Output<String>> createdTime() {
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ignoreErrors")
-      private final @Nullable Output<Boolean> ignoreErrors;
+    private @Nullable Output<Boolean> ignoreErrors;
 
-    public Output<Boolean> ignoreErrors() {
-        return this.ignoreErrors == null ? Codegen.empty() : this.ignoreErrors;
+    public Optional<Output<Boolean>> ignoreErrors() {
+        return Optional.ofNullable(this.ignoreErrors);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="lastProvisioningRecordId")
-      private final @Nullable Output<String> lastProvisioningRecordId;
+    private @Nullable Output<String> lastProvisioningRecordId;
 
-    public Output<String> lastProvisioningRecordId() {
-        return this.lastProvisioningRecordId == null ? Codegen.empty() : this.lastProvisioningRecordId;
+    public Optional<Output<String>> lastProvisioningRecordId() {
+        return Optional.ofNullable(this.lastProvisioningRecordId);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="lastRecordId")
-      private final @Nullable Output<String> lastRecordId;
+    private @Nullable Output<String> lastRecordId;
 
-    public Output<String> lastRecordId() {
-        return this.lastRecordId == null ? Codegen.empty() : this.lastRecordId;
+    public Optional<Output<String>> lastRecordId() {
+        return Optional.ofNullable(this.lastRecordId);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="lastSuccessfulProvisioningRecordId")
-      private final @Nullable Output<String> lastSuccessfulProvisioningRecordId;
+    private @Nullable Output<String> lastSuccessfulProvisioningRecordId;
 
-    public Output<String> lastSuccessfulProvisioningRecordId() {
-        return this.lastSuccessfulProvisioningRecordId == null ? Codegen.empty() : this.lastSuccessfulProvisioningRecordId;
+    public Optional<Output<String>> lastSuccessfulProvisioningRecordId() {
+        return Optional.ofNullable(this.lastSuccessfulProvisioningRecordId);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="launchRoleArn")
-      private final @Nullable Output<String> launchRoleArn;
+    private @Nullable Output<String> launchRoleArn;
 
-    public Output<String> launchRoleArn() {
-        return this.launchRoleArn == null ? Codegen.empty() : this.launchRoleArn;
+    public Optional<Output<String>> launchRoleArn() {
+        return Optional.ofNullable(this.launchRoleArn);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="notificationArns")
-      private final @Nullable Output<List<String>> notificationArns;
+    private @Nullable Output<List<String>> notificationArns;
 
-    public Output<List<String>> notificationArns() {
-        return this.notificationArns == null ? Codegen.empty() : this.notificationArns;
+    public Optional<Output<List<String>>> notificationArns() {
+        return Optional.ofNullable(this.notificationArns);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pathId")
-      private final @Nullable Output<String> pathId;
+    private @Nullable Output<String> pathId;
 
-    public Output<String> pathId() {
-        return this.pathId == null ? Codegen.empty() : this.pathId;
+    public Optional<Output<String>> pathId() {
+        return Optional.ofNullable(this.pathId);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pathName")
-      private final @Nullable Output<String> pathName;
+    private @Nullable Output<String> pathName;
 
-    public Output<String> pathName() {
-        return this.pathName == null ? Codegen.empty() : this.pathName;
+    public Optional<Output<String>> pathName() {
+        return Optional.ofNullable(this.pathName);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="productId")
-      private final @Nullable Output<String> productId;
+    private @Nullable Output<String> productId;
 
-    public Output<String> productId() {
-        return this.productId == null ? Codegen.empty() : this.productId;
+    public Optional<Output<String>> productId() {
+        return Optional.ofNullable(this.productId);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="productName")
-      private final @Nullable Output<String> productName;
+    private @Nullable Output<String> productName;
 
-    public Output<String> productName() {
-        return this.productName == null ? Codegen.empty() : this.productName;
+    public Optional<Output<String>> productName() {
+        return Optional.ofNullable(this.productName);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="provisioningArtifactId")
-      private final @Nullable Output<String> provisioningArtifactId;
+    private @Nullable Output<String> provisioningArtifactId;
 
-    public Output<String> provisioningArtifactId() {
-        return this.provisioningArtifactId == null ? Codegen.empty() : this.provisioningArtifactId;
+    public Optional<Output<String>> provisioningArtifactId() {
+        return Optional.ofNullable(this.provisioningArtifactId);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="provisioningArtifactName")
-      private final @Nullable Output<String> provisioningArtifactName;
+    private @Nullable Output<String> provisioningArtifactName;
 
-    public Output<String> provisioningArtifactName() {
-        return this.provisioningArtifactName == null ? Codegen.empty() : this.provisioningArtifactName;
+    public Optional<Output<String>> provisioningArtifactName() {
+        return Optional.ofNullable(this.provisioningArtifactName);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="provisioningParameters")
-      private final @Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters;
+    private @Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters;
 
-    public Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters() {
-        return this.provisioningParameters == null ? Codegen.empty() : this.provisioningParameters;
+    public Optional<Output<List<ProvisionedProductProvisioningParameterGetArgs>>> provisioningParameters() {
+        return Optional.ofNullable(this.provisioningParameters);
     }
 
     /**
@@ -223,10 +223,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="retainPhysicalResources")
-      private final @Nullable Output<Boolean> retainPhysicalResources;
+    private @Nullable Output<Boolean> retainPhysicalResources;
 
-    public Output<Boolean> retainPhysicalResources() {
-        return this.retainPhysicalResources == null ? Codegen.empty() : this.retainPhysicalResources;
+    public Optional<Output<Boolean>> retainPhysicalResources() {
+        return Optional.ofNullable(this.retainPhysicalResources);
     }
 
     /**
@@ -234,10 +234,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="stackSetProvisioningPreferences")
-      private final @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences;
+    private @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences;
 
-    public Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences() {
-        return this.stackSetProvisioningPreferences == null ? Codegen.empty() : this.stackSetProvisioningPreferences;
+    public Optional<Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs>> stackSetProvisioningPreferences() {
+        return Optional.ofNullable(this.stackSetProvisioningPreferences);
     }
 
     /**
@@ -245,10 +245,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -256,10 +256,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="statusMessage")
-      private final @Nullable Output<String> statusMessage;
+    private @Nullable Output<String> statusMessage;
 
-    public Output<String> statusMessage() {
-        return this.statusMessage == null ? Codegen.empty() : this.statusMessage;
+    public Optional<Output<String>> statusMessage() {
+        return Optional.ofNullable(this.statusMessage);
     }
 
     /**
@@ -267,10 +267,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -278,10 +278,10 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -289,371 +289,300 @@ public final class ProvisionedProductState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ProvisionedProductState(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> cloudwatchDashboardNames,
-        @Nullable Output<String> createdTime,
-        @Nullable Output<Boolean> ignoreErrors,
-        @Nullable Output<String> lastProvisioningRecordId,
-        @Nullable Output<String> lastRecordId,
-        @Nullable Output<String> lastSuccessfulProvisioningRecordId,
-        @Nullable Output<String> launchRoleArn,
-        @Nullable Output<String> name,
-        @Nullable Output<List<String>> notificationArns,
-        @Nullable Output<String> pathId,
-        @Nullable Output<String> pathName,
-        @Nullable Output<String> productId,
-        @Nullable Output<String> productName,
-        @Nullable Output<String> provisioningArtifactId,
-        @Nullable Output<String> provisioningArtifactName,
-        @Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters,
-        @Nullable Output<Boolean> retainPhysicalResources,
-        @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences,
-        @Nullable Output<String> status,
-        @Nullable Output<String> statusMessage,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> type) {
-        this.acceptLanguage = acceptLanguage;
-        this.arn = arn;
-        this.cloudwatchDashboardNames = cloudwatchDashboardNames;
-        this.createdTime = createdTime;
-        this.ignoreErrors = ignoreErrors;
-        this.lastProvisioningRecordId = lastProvisioningRecordId;
-        this.lastRecordId = lastRecordId;
-        this.lastSuccessfulProvisioningRecordId = lastSuccessfulProvisioningRecordId;
-        this.launchRoleArn = launchRoleArn;
-        this.name = name;
-        this.notificationArns = notificationArns;
-        this.pathId = pathId;
-        this.pathName = pathName;
-        this.productId = productId;
-        this.productName = productName;
-        this.provisioningArtifactId = provisioningArtifactId;
-        this.provisioningArtifactName = provisioningArtifactName;
-        this.provisioningParameters = provisioningParameters;
-        this.retainPhysicalResources = retainPhysicalResources;
-        this.stackSetProvisioningPreferences = stackSetProvisioningPreferences;
-        this.status = status;
-        this.statusMessage = statusMessage;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.type = type;
-    }
+    private ProvisionedProductState() {}
 
-    private ProvisionedProductState() {
-        this.acceptLanguage = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.cloudwatchDashboardNames = Codegen.empty();
-        this.createdTime = Codegen.empty();
-        this.ignoreErrors = Codegen.empty();
-        this.lastProvisioningRecordId = Codegen.empty();
-        this.lastRecordId = Codegen.empty();
-        this.lastSuccessfulProvisioningRecordId = Codegen.empty();
-        this.launchRoleArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationArns = Codegen.empty();
-        this.pathId = Codegen.empty();
-        this.pathName = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.productName = Codegen.empty();
-        this.provisioningArtifactId = Codegen.empty();
-        this.provisioningArtifactName = Codegen.empty();
-        this.provisioningParameters = Codegen.empty();
-        this.retainPhysicalResources = Codegen.empty();
-        this.stackSetProvisioningPreferences = Codegen.empty();
-        this.status = Codegen.empty();
-        this.statusMessage = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.type = Codegen.empty();
+    private ProvisionedProductState(ProvisionedProductState $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.arn = $.arn;
+        this.cloudwatchDashboardNames = $.cloudwatchDashboardNames;
+        this.createdTime = $.createdTime;
+        this.ignoreErrors = $.ignoreErrors;
+        this.lastProvisioningRecordId = $.lastProvisioningRecordId;
+        this.lastRecordId = $.lastRecordId;
+        this.lastSuccessfulProvisioningRecordId = $.lastSuccessfulProvisioningRecordId;
+        this.launchRoleArn = $.launchRoleArn;
+        this.name = $.name;
+        this.notificationArns = $.notificationArns;
+        this.pathId = $.pathId;
+        this.pathName = $.pathName;
+        this.productId = $.productId;
+        this.productName = $.productName;
+        this.provisioningArtifactId = $.provisioningArtifactId;
+        this.provisioningArtifactName = $.provisioningArtifactName;
+        this.provisioningParameters = $.provisioningParameters;
+        this.retainPhysicalResources = $.retainPhysicalResources;
+        this.stackSetProvisioningPreferences = $.stackSetProvisioningPreferences;
+        this.status = $.status;
+        this.statusMessage = $.statusMessage;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProvisionedProductState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> cloudwatchDashboardNames;
-        private @Nullable Output<String> createdTime;
-        private @Nullable Output<Boolean> ignoreErrors;
-        private @Nullable Output<String> lastProvisioningRecordId;
-        private @Nullable Output<String> lastRecordId;
-        private @Nullable Output<String> lastSuccessfulProvisioningRecordId;
-        private @Nullable Output<String> launchRoleArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<String>> notificationArns;
-        private @Nullable Output<String> pathId;
-        private @Nullable Output<String> pathName;
-        private @Nullable Output<String> productId;
-        private @Nullable Output<String> productName;
-        private @Nullable Output<String> provisioningArtifactId;
-        private @Nullable Output<String> provisioningArtifactName;
-        private @Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters;
-        private @Nullable Output<Boolean> retainPhysicalResources;
-        private @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences;
-        private @Nullable Output<String> status;
-        private @Nullable Output<String> statusMessage;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> type;
+        private ProvisionedProductState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProvisionedProductState();
         }
 
         public Builder(ProvisionedProductState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.arn = defaults.arn;
-    	      this.cloudwatchDashboardNames = defaults.cloudwatchDashboardNames;
-    	      this.createdTime = defaults.createdTime;
-    	      this.ignoreErrors = defaults.ignoreErrors;
-    	      this.lastProvisioningRecordId = defaults.lastProvisioningRecordId;
-    	      this.lastRecordId = defaults.lastRecordId;
-    	      this.lastSuccessfulProvisioningRecordId = defaults.lastSuccessfulProvisioningRecordId;
-    	      this.launchRoleArn = defaults.launchRoleArn;
-    	      this.name = defaults.name;
-    	      this.notificationArns = defaults.notificationArns;
-    	      this.pathId = defaults.pathId;
-    	      this.pathName = defaults.pathName;
-    	      this.productId = defaults.productId;
-    	      this.productName = defaults.productName;
-    	      this.provisioningArtifactId = defaults.provisioningArtifactId;
-    	      this.provisioningArtifactName = defaults.provisioningArtifactName;
-    	      this.provisioningParameters = defaults.provisioningParameters;
-    	      this.retainPhysicalResources = defaults.retainPhysicalResources;
-    	      this.stackSetProvisioningPreferences = defaults.stackSetProvisioningPreferences;
-    	      this.status = defaults.status;
-    	      this.statusMessage = defaults.statusMessage;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.type = defaults.type;
+            $ = new ProvisionedProductState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder cloudwatchDashboardNames(@Nullable Output<List<String>> cloudwatchDashboardNames) {
-            this.cloudwatchDashboardNames = cloudwatchDashboardNames;
+            $.cloudwatchDashboardNames = cloudwatchDashboardNames;
             return this;
         }
-        public Builder cloudwatchDashboardNames(@Nullable List<String> cloudwatchDashboardNames) {
-            this.cloudwatchDashboardNames = Codegen.ofNullable(cloudwatchDashboardNames);
-            return this;
+
+        public Builder cloudwatchDashboardNames(List<String> cloudwatchDashboardNames) {
+            return cloudwatchDashboardNames(Output.of(cloudwatchDashboardNames));
         }
+
         public Builder cloudwatchDashboardNames(String... cloudwatchDashboardNames) {
             return cloudwatchDashboardNames(List.of(cloudwatchDashboardNames));
         }
+
         public Builder createdTime(@Nullable Output<String> createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
-        public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Codegen.ofNullable(createdTime);
-            return this;
+
+        public Builder createdTime(String createdTime) {
+            return createdTime(Output.of(createdTime));
         }
+
         public Builder ignoreErrors(@Nullable Output<Boolean> ignoreErrors) {
-            this.ignoreErrors = ignoreErrors;
+            $.ignoreErrors = ignoreErrors;
             return this;
         }
-        public Builder ignoreErrors(@Nullable Boolean ignoreErrors) {
-            this.ignoreErrors = Codegen.ofNullable(ignoreErrors);
-            return this;
+
+        public Builder ignoreErrors(Boolean ignoreErrors) {
+            return ignoreErrors(Output.of(ignoreErrors));
         }
+
         public Builder lastProvisioningRecordId(@Nullable Output<String> lastProvisioningRecordId) {
-            this.lastProvisioningRecordId = lastProvisioningRecordId;
+            $.lastProvisioningRecordId = lastProvisioningRecordId;
             return this;
         }
-        public Builder lastProvisioningRecordId(@Nullable String lastProvisioningRecordId) {
-            this.lastProvisioningRecordId = Codegen.ofNullable(lastProvisioningRecordId);
-            return this;
+
+        public Builder lastProvisioningRecordId(String lastProvisioningRecordId) {
+            return lastProvisioningRecordId(Output.of(lastProvisioningRecordId));
         }
+
         public Builder lastRecordId(@Nullable Output<String> lastRecordId) {
-            this.lastRecordId = lastRecordId;
+            $.lastRecordId = lastRecordId;
             return this;
         }
-        public Builder lastRecordId(@Nullable String lastRecordId) {
-            this.lastRecordId = Codegen.ofNullable(lastRecordId);
-            return this;
+
+        public Builder lastRecordId(String lastRecordId) {
+            return lastRecordId(Output.of(lastRecordId));
         }
+
         public Builder lastSuccessfulProvisioningRecordId(@Nullable Output<String> lastSuccessfulProvisioningRecordId) {
-            this.lastSuccessfulProvisioningRecordId = lastSuccessfulProvisioningRecordId;
+            $.lastSuccessfulProvisioningRecordId = lastSuccessfulProvisioningRecordId;
             return this;
         }
-        public Builder lastSuccessfulProvisioningRecordId(@Nullable String lastSuccessfulProvisioningRecordId) {
-            this.lastSuccessfulProvisioningRecordId = Codegen.ofNullable(lastSuccessfulProvisioningRecordId);
-            return this;
+
+        public Builder lastSuccessfulProvisioningRecordId(String lastSuccessfulProvisioningRecordId) {
+            return lastSuccessfulProvisioningRecordId(Output.of(lastSuccessfulProvisioningRecordId));
         }
+
         public Builder launchRoleArn(@Nullable Output<String> launchRoleArn) {
-            this.launchRoleArn = launchRoleArn;
+            $.launchRoleArn = launchRoleArn;
             return this;
         }
-        public Builder launchRoleArn(@Nullable String launchRoleArn) {
-            this.launchRoleArn = Codegen.ofNullable(launchRoleArn);
-            return this;
+
+        public Builder launchRoleArn(String launchRoleArn) {
+            return launchRoleArn(Output.of(launchRoleArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
-            this.notificationArns = notificationArns;
+            $.notificationArns = notificationArns;
             return this;
         }
-        public Builder notificationArns(@Nullable List<String> notificationArns) {
-            this.notificationArns = Codegen.ofNullable(notificationArns);
-            return this;
+
+        public Builder notificationArns(List<String> notificationArns) {
+            return notificationArns(Output.of(notificationArns));
         }
+
         public Builder notificationArns(String... notificationArns) {
             return notificationArns(List.of(notificationArns));
         }
+
         public Builder pathId(@Nullable Output<String> pathId) {
-            this.pathId = pathId;
+            $.pathId = pathId;
             return this;
         }
-        public Builder pathId(@Nullable String pathId) {
-            this.pathId = Codegen.ofNullable(pathId);
-            return this;
+
+        public Builder pathId(String pathId) {
+            return pathId(Output.of(pathId));
         }
+
         public Builder pathName(@Nullable Output<String> pathName) {
-            this.pathName = pathName;
+            $.pathName = pathName;
             return this;
         }
-        public Builder pathName(@Nullable String pathName) {
-            this.pathName = Codegen.ofNullable(pathName);
-            return this;
+
+        public Builder pathName(String pathName) {
+            return pathName(Output.of(pathName));
         }
+
         public Builder productId(@Nullable Output<String> productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
         }
-        public Builder productId(@Nullable String productId) {
-            this.productId = Codegen.ofNullable(productId);
-            return this;
+
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
         }
+
         public Builder productName(@Nullable Output<String> productName) {
-            this.productName = productName;
+            $.productName = productName;
             return this;
         }
-        public Builder productName(@Nullable String productName) {
-            this.productName = Codegen.ofNullable(productName);
-            return this;
+
+        public Builder productName(String productName) {
+            return productName(Output.of(productName));
         }
+
         public Builder provisioningArtifactId(@Nullable Output<String> provisioningArtifactId) {
-            this.provisioningArtifactId = provisioningArtifactId;
+            $.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
-        public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
-            this.provisioningArtifactId = Codegen.ofNullable(provisioningArtifactId);
-            return this;
+
+        public Builder provisioningArtifactId(String provisioningArtifactId) {
+            return provisioningArtifactId(Output.of(provisioningArtifactId));
         }
+
         public Builder provisioningArtifactName(@Nullable Output<String> provisioningArtifactName) {
-            this.provisioningArtifactName = provisioningArtifactName;
+            $.provisioningArtifactName = provisioningArtifactName;
             return this;
         }
-        public Builder provisioningArtifactName(@Nullable String provisioningArtifactName) {
-            this.provisioningArtifactName = Codegen.ofNullable(provisioningArtifactName);
-            return this;
+
+        public Builder provisioningArtifactName(String provisioningArtifactName) {
+            return provisioningArtifactName(Output.of(provisioningArtifactName));
         }
+
         public Builder provisioningParameters(@Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters) {
-            this.provisioningParameters = provisioningParameters;
+            $.provisioningParameters = provisioningParameters;
             return this;
         }
-        public Builder provisioningParameters(@Nullable List<ProvisionedProductProvisioningParameterGetArgs> provisioningParameters) {
-            this.provisioningParameters = Codegen.ofNullable(provisioningParameters);
-            return this;
+
+        public Builder provisioningParameters(List<ProvisionedProductProvisioningParameterGetArgs> provisioningParameters) {
+            return provisioningParameters(Output.of(provisioningParameters));
         }
+
         public Builder provisioningParameters(ProvisionedProductProvisioningParameterGetArgs... provisioningParameters) {
             return provisioningParameters(List.of(provisioningParameters));
         }
+
         public Builder retainPhysicalResources(@Nullable Output<Boolean> retainPhysicalResources) {
-            this.retainPhysicalResources = retainPhysicalResources;
+            $.retainPhysicalResources = retainPhysicalResources;
             return this;
         }
-        public Builder retainPhysicalResources(@Nullable Boolean retainPhysicalResources) {
-            this.retainPhysicalResources = Codegen.ofNullable(retainPhysicalResources);
-            return this;
+
+        public Builder retainPhysicalResources(Boolean retainPhysicalResources) {
+            return retainPhysicalResources(Output.of(retainPhysicalResources));
         }
+
         public Builder stackSetProvisioningPreferences(@Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences) {
-            this.stackSetProvisioningPreferences = stackSetProvisioningPreferences;
+            $.stackSetProvisioningPreferences = stackSetProvisioningPreferences;
             return this;
         }
-        public Builder stackSetProvisioningPreferences(@Nullable ProvisionedProductStackSetProvisioningPreferencesGetArgs stackSetProvisioningPreferences) {
-            this.stackSetProvisioningPreferences = Codegen.ofNullable(stackSetProvisioningPreferences);
-            return this;
+
+        public Builder stackSetProvisioningPreferences(ProvisionedProductStackSetProvisioningPreferencesGetArgs stackSetProvisioningPreferences) {
+            return stackSetProvisioningPreferences(Output.of(stackSetProvisioningPreferences));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder statusMessage(@Nullable Output<String> statusMessage) {
-            this.statusMessage = statusMessage;
+            $.statusMessage = statusMessage;
             return this;
         }
-        public Builder statusMessage(@Nullable String statusMessage) {
-            this.statusMessage = Codegen.ofNullable(statusMessage);
-            return this;
+
+        public Builder statusMessage(String statusMessage) {
+            return statusMessage(Output.of(statusMessage));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ProvisionedProductState build() {
-            return new ProvisionedProductState(acceptLanguage, arn, cloudwatchDashboardNames, createdTime, ignoreErrors, lastProvisioningRecordId, lastRecordId, lastSuccessfulProvisioningRecordId, launchRoleArn, name, notificationArns, pathId, pathName, productId, productName, provisioningArtifactId, provisioningArtifactName, provisioningParameters, retainPhysicalResources, stackSetProvisioningPreferences, status, statusMessage, tags, tagsAll, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ProvisionedProductState build() {
+            return $;
         }
     }
+
 }

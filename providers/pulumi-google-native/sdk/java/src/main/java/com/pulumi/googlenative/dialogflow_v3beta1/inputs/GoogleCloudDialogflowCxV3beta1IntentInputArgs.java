@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputArgs extends com.pul
      * 
      */
     @Import(name="intent", required=true)
-      private final Output<String> intent;
+    private Output<String> intent;
 
     public Output<String> intent() {
         return this.intent;
     }
 
-    public GoogleCloudDialogflowCxV3beta1IntentInputArgs(Output<String> intent) {
-        this.intent = Objects.requireNonNull(intent, "expected parameter 'intent' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1IntentInputArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1IntentInputArgs() {
-        this.intent = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1IntentInputArgs(GoogleCloudDialogflowCxV3beta1IntentInputArgs $) {
+        this.intent = $.intent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1IntentInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> intent;
+        private GoogleCloudDialogflowCxV3beta1IntentInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1IntentInputArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1IntentInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intent = defaults.intent;
+            $ = new GoogleCloudDialogflowCxV3beta1IntentInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder intent(Output<String> intent) {
-            this.intent = Objects.requireNonNull(intent);
+            $.intent = intent;
             return this;
         }
+
         public Builder intent(String intent) {
-            this.intent = Output.of(Objects.requireNonNull(intent));
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1IntentInputArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1IntentInputArgs(intent);
+            return intent(Output.of(intent));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1IntentInputArgs build() {
+            $.intent = Objects.requireNonNull($.intent, "expected parameter 'intent' to be non-null");
+            return $;
         }
     }
+
 }

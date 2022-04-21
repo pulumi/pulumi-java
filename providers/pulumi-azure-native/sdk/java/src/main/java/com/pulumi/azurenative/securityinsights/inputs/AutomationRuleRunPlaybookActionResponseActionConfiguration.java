@@ -23,10 +23,10 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
      * 
      */
     @Import(name="logicAppResourceId")
-      private final @Nullable String logicAppResourceId;
+    private @Nullable String logicAppResourceId;
 
     public Optional<String> logicAppResourceId() {
-        return this.logicAppResourceId == null ? Optional.empty() : Optional.ofNullable(this.logicAppResourceId);
+        return Optional.ofNullable(this.logicAppResourceId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration ex
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public AutomationRuleRunPlaybookActionResponseActionConfiguration(
-        @Nullable String logicAppResourceId,
-        @Nullable String tenantId) {
-        this.logicAppResourceId = logicAppResourceId;
-        this.tenantId = tenantId;
-    }
+    private AutomationRuleRunPlaybookActionResponseActionConfiguration() {}
 
-    private AutomationRuleRunPlaybookActionResponseActionConfiguration() {
-        this.logicAppResourceId = null;
-        this.tenantId = null;
+    private AutomationRuleRunPlaybookActionResponseActionConfiguration(AutomationRuleRunPlaybookActionResponseActionConfiguration $) {
+        this.logicAppResourceId = $.logicAppResourceId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomationRuleRunPlaybookActionResponseActionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String logicAppResourceId;
-        private @Nullable String tenantId;
+        private AutomationRuleRunPlaybookActionResponseActionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomationRuleRunPlaybookActionResponseActionConfiguration();
         }
 
         public Builder(AutomationRuleRunPlaybookActionResponseActionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logicAppResourceId = defaults.logicAppResourceId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AutomationRuleRunPlaybookActionResponseActionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
-            this.logicAppResourceId = logicAppResourceId;
+            $.logicAppResourceId = logicAppResourceId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public AutomationRuleRunPlaybookActionResponseActionConfiguration build() {
-            return new AutomationRuleRunPlaybookActionResponseActionConfiguration(logicAppResourceId, tenantId);
+        }
+
+        public AutomationRuleRunPlaybookActionResponseActionConfiguration build() {
+            return $;
         }
     }
+
 }

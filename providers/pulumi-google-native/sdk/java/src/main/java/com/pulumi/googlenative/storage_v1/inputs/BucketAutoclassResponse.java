@@ -22,7 +22,7 @@ public final class BucketAutoclassResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -33,55 +33,52 @@ public final class BucketAutoclassResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="toggleTime", required=true)
-      private final String toggleTime;
+    private String toggleTime;
 
     public String toggleTime() {
         return this.toggleTime;
     }
 
-    public BucketAutoclassResponse(
-        Boolean enabled,
-        String toggleTime) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.toggleTime = Objects.requireNonNull(toggleTime, "expected parameter 'toggleTime' to be non-null");
-    }
+    private BucketAutoclassResponse() {}
 
-    private BucketAutoclassResponse() {
-        this.enabled = null;
-        this.toggleTime = null;
+    private BucketAutoclassResponse(BucketAutoclassResponse $) {
+        this.enabled = $.enabled;
+        this.toggleTime = $.toggleTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAutoclassResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String toggleTime;
+        private BucketAutoclassResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAutoclassResponse();
         }
 
         public Builder(BucketAutoclassResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.toggleTime = defaults.toggleTime;
+            $ = new BucketAutoclassResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder toggleTime(String toggleTime) {
-            this.toggleTime = Objects.requireNonNull(toggleTime);
+            $.toggleTime = toggleTime;
             return this;
-        }        public BucketAutoclassResponse build() {
-            return new BucketAutoclassResponse(enabled, toggleTime);
+        }
+
+        public BucketAutoclassResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.toggleTime = Objects.requireNonNull($.toggleTime, "expected parameter 'toggleTime' to be non-null");
+            return $;
         }
     }
+
 }

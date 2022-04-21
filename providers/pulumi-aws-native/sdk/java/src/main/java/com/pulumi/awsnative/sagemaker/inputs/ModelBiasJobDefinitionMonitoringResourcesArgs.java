@@ -6,7 +6,6 @@ package com.pulumi.awsnative.sagemaker.inputs;
 import com.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionClusterConfigArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class ModelBiasJobDefinitionMonitoringResourcesArgs extends com.pul
     public static final ModelBiasJobDefinitionMonitoringResourcesArgs Empty = new ModelBiasJobDefinitionMonitoringResourcesArgs();
 
     @Import(name="clusterConfig", required=true)
-      private final Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
+    private Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
 
     public Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig() {
         return this.clusterConfig;
     }
 
-    public ModelBiasJobDefinitionMonitoringResourcesArgs(Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig) {
-        this.clusterConfig = Objects.requireNonNull(clusterConfig, "expected parameter 'clusterConfig' to be non-null");
-    }
+    private ModelBiasJobDefinitionMonitoringResourcesArgs() {}
 
-    private ModelBiasJobDefinitionMonitoringResourcesArgs() {
-        this.clusterConfig = Codegen.empty();
+    private ModelBiasJobDefinitionMonitoringResourcesArgs(ModelBiasJobDefinitionMonitoringResourcesArgs $) {
+        this.clusterConfig = $.clusterConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelBiasJobDefinitionMonitoringResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
+        private ModelBiasJobDefinitionMonitoringResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelBiasJobDefinitionMonitoringResourcesArgs();
         }
 
         public Builder(ModelBiasJobDefinitionMonitoringResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterConfig = defaults.clusterConfig;
+            $ = new ModelBiasJobDefinitionMonitoringResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterConfig(Output<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig) {
-            this.clusterConfig = Objects.requireNonNull(clusterConfig);
+            $.clusterConfig = clusterConfig;
             return this;
         }
+
         public Builder clusterConfig(ModelBiasJobDefinitionClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Output.of(Objects.requireNonNull(clusterConfig));
-            return this;
-        }        public ModelBiasJobDefinitionMonitoringResourcesArgs build() {
-            return new ModelBiasJobDefinitionMonitoringResourcesArgs(clusterConfig);
+            return clusterConfig(Output.of(clusterConfig));
+        }
+
+        public ModelBiasJobDefinitionMonitoringResourcesArgs build() {
+            $.clusterConfig = Objects.requireNonNull($.clusterConfig, "expected parameter 'clusterConfig' to be non-null");
+            return $;
         }
     }
+
 }

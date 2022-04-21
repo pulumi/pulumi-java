@@ -7,9 +7,9 @@ import com.pulumi.azurenative.connectedvmwarevsphere.enums.InventoryType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inventoryItemName")
-      private final @Nullable Output<String> inventoryItemName;
+    private @Nullable Output<String> inventoryItemName;
 
-    public Output<String> inventoryItemName() {
-        return this.inventoryItemName == null ? Codegen.empty() : this.inventoryItemName;
+    public Optional<Output<String>> inventoryItemName() {
+        return Optional.ofNullable(this.inventoryItemName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inventoryType", required=true)
-      private final Output<Either<String,InventoryType>> inventoryType;
+    private Output<Either<String,InventoryType>> inventoryType;
 
     public Output<Either<String,InventoryType>> inventoryType() {
         return this.inventoryType;
@@ -44,10 +44,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedResourceId")
-      private final @Nullable Output<String> managedResourceId;
+    private @Nullable Output<String> managedResourceId;
 
-    public Output<String> managedResourceId() {
-        return this.managedResourceId == null ? Codegen.empty() : this.managedResourceId;
+    public Optional<Output<String>> managedResourceId() {
+        return Optional.ofNullable(this.managedResourceId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="moName")
-      private final @Nullable Output<String> moName;
+    private @Nullable Output<String> moName;
 
-    public Output<String> moName() {
-        return this.moName == null ? Codegen.empty() : this.moName;
+    public Optional<Output<String>> moName() {
+        return Optional.ofNullable(this.moName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="moRefId")
-      private final @Nullable Output<String> moRefId;
+    private @Nullable Output<String> moRefId;
 
-    public Output<String> moRefId() {
-        return this.moRefId == null ? Codegen.empty() : this.moRefId;
+    public Optional<Output<String>> moRefId() {
+        return Optional.ofNullable(this.moRefId);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -99,141 +99,121 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vcenterName", required=true)
-      private final Output<String> vcenterName;
+    private Output<String> vcenterName;
 
     public Output<String> vcenterName() {
         return this.vcenterName;
     }
 
-    public InventoryItemArgs(
-        @Nullable Output<String> inventoryItemName,
-        Output<Either<String,InventoryType>> inventoryType,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> managedResourceId,
-        @Nullable Output<String> moName,
-        @Nullable Output<String> moRefId,
-        Output<String> resourceGroupName,
-        Output<String> vcenterName) {
-        this.inventoryItemName = inventoryItemName;
-        this.inventoryType = Objects.requireNonNull(inventoryType, "expected parameter 'inventoryType' to be non-null");
-        this.kind = kind;
-        this.managedResourceId = managedResourceId;
-        this.moName = moName;
-        this.moRefId = moRefId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.vcenterName = Objects.requireNonNull(vcenterName, "expected parameter 'vcenterName' to be non-null");
-    }
+    private InventoryItemArgs() {}
 
-    private InventoryItemArgs() {
-        this.inventoryItemName = Codegen.empty();
-        this.inventoryType = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.managedResourceId = Codegen.empty();
-        this.moName = Codegen.empty();
-        this.moRefId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.vcenterName = Codegen.empty();
+    private InventoryItemArgs(InventoryItemArgs $) {
+        this.inventoryItemName = $.inventoryItemName;
+        this.inventoryType = $.inventoryType;
+        this.kind = $.kind;
+        this.managedResourceId = $.managedResourceId;
+        this.moName = $.moName;
+        this.moRefId = $.moRefId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.vcenterName = $.vcenterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InventoryItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> inventoryItemName;
-        private Output<Either<String,InventoryType>> inventoryType;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> managedResourceId;
-        private @Nullable Output<String> moName;
-        private @Nullable Output<String> moRefId;
-        private Output<String> resourceGroupName;
-        private Output<String> vcenterName;
+        private InventoryItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InventoryItemArgs();
         }
 
         public Builder(InventoryItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inventoryItemName = defaults.inventoryItemName;
-    	      this.inventoryType = defaults.inventoryType;
-    	      this.kind = defaults.kind;
-    	      this.managedResourceId = defaults.managedResourceId;
-    	      this.moName = defaults.moName;
-    	      this.moRefId = defaults.moRefId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.vcenterName = defaults.vcenterName;
+            $ = new InventoryItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inventoryItemName(@Nullable Output<String> inventoryItemName) {
-            this.inventoryItemName = inventoryItemName;
+            $.inventoryItemName = inventoryItemName;
             return this;
         }
-        public Builder inventoryItemName(@Nullable String inventoryItemName) {
-            this.inventoryItemName = Codegen.ofNullable(inventoryItemName);
-            return this;
+
+        public Builder inventoryItemName(String inventoryItemName) {
+            return inventoryItemName(Output.of(inventoryItemName));
         }
+
         public Builder inventoryType(Output<Either<String,InventoryType>> inventoryType) {
-            this.inventoryType = Objects.requireNonNull(inventoryType);
+            $.inventoryType = inventoryType;
             return this;
         }
+
         public Builder inventoryType(Either<String,InventoryType> inventoryType) {
-            this.inventoryType = Output.of(Objects.requireNonNull(inventoryType));
-            return this;
+            return inventoryType(Output.of(inventoryType));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder managedResourceId(@Nullable Output<String> managedResourceId) {
-            this.managedResourceId = managedResourceId;
+            $.managedResourceId = managedResourceId;
             return this;
         }
-        public Builder managedResourceId(@Nullable String managedResourceId) {
-            this.managedResourceId = Codegen.ofNullable(managedResourceId);
-            return this;
+
+        public Builder managedResourceId(String managedResourceId) {
+            return managedResourceId(Output.of(managedResourceId));
         }
+
         public Builder moName(@Nullable Output<String> moName) {
-            this.moName = moName;
+            $.moName = moName;
             return this;
         }
-        public Builder moName(@Nullable String moName) {
-            this.moName = Codegen.ofNullable(moName);
-            return this;
+
+        public Builder moName(String moName) {
+            return moName(Output.of(moName));
         }
+
         public Builder moRefId(@Nullable Output<String> moRefId) {
-            this.moRefId = moRefId;
+            $.moRefId = moRefId;
             return this;
         }
-        public Builder moRefId(@Nullable String moRefId) {
-            this.moRefId = Codegen.ofNullable(moRefId);
-            return this;
+
+        public Builder moRefId(String moRefId) {
+            return moRefId(Output.of(moRefId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder vcenterName(Output<String> vcenterName) {
-            this.vcenterName = Objects.requireNonNull(vcenterName);
+            $.vcenterName = vcenterName;
             return this;
         }
+
         public Builder vcenterName(String vcenterName) {
-            this.vcenterName = Output.of(Objects.requireNonNull(vcenterName));
-            return this;
-        }        public InventoryItemArgs build() {
-            return new InventoryItemArgs(inventoryItemName, inventoryType, kind, managedResourceId, moName, moRefId, resourceGroupName, vcenterName);
+            return vcenterName(Output.of(vcenterName));
+        }
+
+        public InventoryItemArgs build() {
+            $.inventoryType = Objects.requireNonNull($.inventoryType, "expected parameter 'inventoryType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.vcenterName = Objects.requireNonNull($.vcenterName, "expected parameter 'vcenterName' to be non-null");
+            return $;
         }
     }
+
 }

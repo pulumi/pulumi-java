@@ -24,48 +24,48 @@ public final class ServerlessUpstreamSettingsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="templates")
-      private final @Nullable List<UpstreamTemplateResponse> templates;
+    private @Nullable List<UpstreamTemplateResponse> templates;
 
-    public List<UpstreamTemplateResponse> templates() {
-        return this.templates == null ? List.of() : this.templates;
+    public Optional<List<UpstreamTemplateResponse>> templates() {
+        return Optional.ofNullable(this.templates);
     }
 
-    public ServerlessUpstreamSettingsResponse(@Nullable List<UpstreamTemplateResponse> templates) {
-        this.templates = templates;
-    }
+    private ServerlessUpstreamSettingsResponse() {}
 
-    private ServerlessUpstreamSettingsResponse() {
-        this.templates = List.of();
+    private ServerlessUpstreamSettingsResponse(ServerlessUpstreamSettingsResponse $) {
+        this.templates = $.templates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerlessUpstreamSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<UpstreamTemplateResponse> templates;
+        private ServerlessUpstreamSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerlessUpstreamSettingsResponse();
         }
 
         public Builder(ServerlessUpstreamSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.templates = defaults.templates;
+            $ = new ServerlessUpstreamSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder templates(@Nullable List<UpstreamTemplateResponse> templates) {
-            this.templates = templates;
+            $.templates = templates;
             return this;
         }
+
         public Builder templates(UpstreamTemplateResponse... templates) {
             return templates(List.of(templates));
-        }        public ServerlessUpstreamSettingsResponse build() {
-            return new ServerlessUpstreamSettingsResponse(templates);
+        }
+
+        public ServerlessUpstreamSettingsResponse build() {
+            return $;
         }
     }
+
 }

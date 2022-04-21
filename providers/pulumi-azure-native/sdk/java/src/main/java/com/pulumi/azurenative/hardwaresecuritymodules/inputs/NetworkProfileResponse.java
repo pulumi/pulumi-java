@@ -21,10 +21,10 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable List<NetworkInterfaceResponse> networkInterfaces;
+    private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
-    public List<NetworkInterfaceResponse> networkInterfaces() {
-        return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
+    public Optional<List<NetworkInterfaceResponse>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
     /**
@@ -32,58 +32,54 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="subnet")
-      private final @Nullable ApiEntityReferenceResponse subnet;
+    private @Nullable ApiEntityReferenceResponse subnet;
 
     public Optional<ApiEntityReferenceResponse> subnet() {
-        return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
+        return Optional.ofNullable(this.subnet);
     }
 
-    public NetworkProfileResponse(
-        @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable ApiEntityReferenceResponse subnet) {
-        this.networkInterfaces = networkInterfaces;
-        this.subnet = subnet;
-    }
+    private NetworkProfileResponse() {}
 
-    private NetworkProfileResponse() {
-        this.networkInterfaces = List.of();
-        this.subnet = null;
+    private NetworkProfileResponse(NetworkProfileResponse $) {
+        this.networkInterfaces = $.networkInterfaces;
+        this.subnet = $.subnet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
-        private @Nullable ApiEntityReferenceResponse subnet;
+        private NetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileResponse();
         }
 
         public Builder(NetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.subnet = defaults.subnet;
+            $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder subnet(@Nullable ApiEntityReferenceResponse subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
-        }        public NetworkProfileResponse build() {
-            return new NetworkProfileResponse(networkInterfaces, subnet);
+        }
+
+        public NetworkProfileResponse build() {
+            return $;
         }
     }
+
 }

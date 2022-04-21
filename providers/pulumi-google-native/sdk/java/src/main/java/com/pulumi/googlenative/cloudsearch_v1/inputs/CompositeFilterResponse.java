@@ -19,7 +19,7 @@ public final class CompositeFilterResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="logicOperator", required=true)
-      private final String logicOperator;
+    private String logicOperator;
 
     public String logicOperator() {
         return this.logicOperator;
@@ -30,58 +30,56 @@ public final class CompositeFilterResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="subFilters", required=true)
-      private final List<FilterResponse> subFilters;
+    private List<FilterResponse> subFilters;
 
     public List<FilterResponse> subFilters() {
         return this.subFilters;
     }
 
-    public CompositeFilterResponse(
-        String logicOperator,
-        List<FilterResponse> subFilters) {
-        this.logicOperator = Objects.requireNonNull(logicOperator, "expected parameter 'logicOperator' to be non-null");
-        this.subFilters = Objects.requireNonNull(subFilters, "expected parameter 'subFilters' to be non-null");
-    }
+    private CompositeFilterResponse() {}
 
-    private CompositeFilterResponse() {
-        this.logicOperator = null;
-        this.subFilters = List.of();
+    private CompositeFilterResponse(CompositeFilterResponse $) {
+        this.logicOperator = $.logicOperator;
+        this.subFilters = $.subFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompositeFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String logicOperator;
-        private List<FilterResponse> subFilters;
+        private CompositeFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompositeFilterResponse();
         }
 
         public Builder(CompositeFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logicOperator = defaults.logicOperator;
-    	      this.subFilters = defaults.subFilters;
+            $ = new CompositeFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logicOperator(String logicOperator) {
-            this.logicOperator = Objects.requireNonNull(logicOperator);
+            $.logicOperator = logicOperator;
             return this;
         }
+
         public Builder subFilters(List<FilterResponse> subFilters) {
-            this.subFilters = Objects.requireNonNull(subFilters);
+            $.subFilters = subFilters;
             return this;
         }
+
         public Builder subFilters(FilterResponse... subFilters) {
             return subFilters(List.of(subFilters));
-        }        public CompositeFilterResponse build() {
-            return new CompositeFilterResponse(logicOperator, subFilters);
+        }
+
+        public CompositeFilterResponse build() {
+            $.logicOperator = Objects.requireNonNull($.logicOperator, "expected parameter 'logicOperator' to be non-null");
+            $.subFilters = Objects.requireNonNull($.subFilters, "expected parameter 'subFilters' to be non-null");
+            return $;
         }
     }
+
 }

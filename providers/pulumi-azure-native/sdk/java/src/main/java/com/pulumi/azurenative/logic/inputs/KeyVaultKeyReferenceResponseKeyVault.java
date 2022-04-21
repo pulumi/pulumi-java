@@ -23,10 +23,10 @@ public final class KeyVaultKeyReferenceResponseKeyVault extends com.pulumi.resou
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class KeyVaultKeyReferenceResponseKeyVault extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,58 @@ public final class KeyVaultKeyReferenceResponseKeyVault extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public KeyVaultKeyReferenceResponseKeyVault(
-        @Nullable String id,
-        String name,
-        String type) {
-        this.id = id;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private KeyVaultKeyReferenceResponseKeyVault() {}
 
-    private KeyVaultKeyReferenceResponseKeyVault() {
-        this.id = null;
-        this.name = null;
-        this.type = null;
+    private KeyVaultKeyReferenceResponseKeyVault(KeyVaultKeyReferenceResponseKeyVault $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultKeyReferenceResponseKeyVault defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private String name;
-        private String type;
+        private KeyVaultKeyReferenceResponseKeyVault $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultKeyReferenceResponseKeyVault();
         }
 
         public Builder(KeyVaultKeyReferenceResponseKeyVault defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new KeyVaultKeyReferenceResponseKeyVault(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public KeyVaultKeyReferenceResponseKeyVault build() {
-            return new KeyVaultKeyReferenceResponseKeyVault(id, name, type);
+        }
+
+        public KeyVaultKeyReferenceResponseKeyVault build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

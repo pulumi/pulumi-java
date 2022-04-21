@@ -5,10 +5,10 @@ package com.pulumi.awsnative.eventschemas;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,84 @@ public final class RegistryPolicyArgs extends com.pulumi.resources.ResourceArgs 
     public static final RegistryPolicyArgs Empty = new RegistryPolicyArgs();
 
     @Import(name="policy", required=true)
-      private final Output<Object> policy;
+    private Output<Object> policy;
 
     public Output<Object> policy() {
         return this.policy;
     }
 
     @Import(name="registryName", required=true)
-      private final Output<String> registryName;
+    private Output<String> registryName;
 
     public Output<String> registryName() {
         return this.registryName;
     }
 
     @Import(name="revisionId")
-      private final @Nullable Output<String> revisionId;
+    private @Nullable Output<String> revisionId;
 
-    public Output<String> revisionId() {
-        return this.revisionId == null ? Codegen.empty() : this.revisionId;
+    public Optional<Output<String>> revisionId() {
+        return Optional.ofNullable(this.revisionId);
     }
 
-    public RegistryPolicyArgs(
-        Output<Object> policy,
-        Output<String> registryName,
-        @Nullable Output<String> revisionId) {
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.revisionId = revisionId;
-    }
+    private RegistryPolicyArgs() {}
 
-    private RegistryPolicyArgs() {
-        this.policy = Codegen.empty();
-        this.registryName = Codegen.empty();
-        this.revisionId = Codegen.empty();
+    private RegistryPolicyArgs(RegistryPolicyArgs $) {
+        this.policy = $.policy;
+        this.registryName = $.registryName;
+        this.revisionId = $.revisionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Object> policy;
-        private Output<String> registryName;
-        private @Nullable Output<String> revisionId;
+        private RegistryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryPolicyArgs();
         }
 
         public Builder(RegistryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.registryName = defaults.registryName;
-    	      this.revisionId = defaults.revisionId;
+            $ = new RegistryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(Output<Object> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(Object policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
+            return policy(Output.of(policy));
         }
+
         public Builder registryName(Output<String> registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Output.of(Objects.requireNonNull(registryName));
-            return this;
+            return registryName(Output.of(registryName));
         }
+
         public Builder revisionId(@Nullable Output<String> revisionId) {
-            this.revisionId = revisionId;
+            $.revisionId = revisionId;
             return this;
         }
-        public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Codegen.ofNullable(revisionId);
-            return this;
-        }        public RegistryPolicyArgs build() {
-            return new RegistryPolicyArgs(policy, registryName, revisionId);
+
+        public Builder revisionId(String revisionId) {
+            return revisionId(Output.of(revisionId));
+        }
+
+        public RegistryPolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.googlenative.osconfig_v1alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentInstanceFilterArgs;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyAssignmentRolloutArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -46,17 +46,17 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="instanceFilter", required=true)
-      private final Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter;
+    private Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
     public Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter() {
         return this.instanceFilter;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,24 +75,24 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="osPolicies", required=true)
-      private final Output<List<OSPolicyArgs>> osPolicies;
+    private Output<List<OSPolicyArgs>> osPolicies;
 
     public Output<List<OSPolicyArgs>> osPolicies() {
         return this.osPolicies;
     }
 
     @Import(name="osPolicyAssignmentId", required=true)
-      private final Output<String> osPolicyAssignmentId;
+    private Output<String> osPolicyAssignmentId;
 
     public Output<String> osPolicyAssignmentId() {
         return this.osPolicyAssignmentId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -100,157 +100,136 @@ public final class OsPolicyAssignmentArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="rollout", required=true)
-      private final Output<OSPolicyAssignmentRolloutArgs> rollout;
+    private Output<OSPolicyAssignmentRolloutArgs> rollout;
 
     public Output<OSPolicyAssignmentRolloutArgs> rollout() {
         return this.rollout;
     }
 
-    public OsPolicyAssignmentArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> etag,
-        Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<List<OSPolicyArgs>> osPolicies,
-        Output<String> osPolicyAssignmentId,
-        @Nullable Output<String> project,
-        Output<OSPolicyAssignmentRolloutArgs> rollout) {
-        this.description = description;
-        this.etag = etag;
-        this.instanceFilter = Objects.requireNonNull(instanceFilter, "expected parameter 'instanceFilter' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.osPolicies = Objects.requireNonNull(osPolicies, "expected parameter 'osPolicies' to be non-null");
-        this.osPolicyAssignmentId = Objects.requireNonNull(osPolicyAssignmentId, "expected parameter 'osPolicyAssignmentId' to be non-null");
-        this.project = project;
-        this.rollout = Objects.requireNonNull(rollout, "expected parameter 'rollout' to be non-null");
-    }
+    private OsPolicyAssignmentArgs() {}
 
-    private OsPolicyAssignmentArgs() {
-        this.description = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.instanceFilter = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.osPolicies = Codegen.empty();
-        this.osPolicyAssignmentId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rollout = Codegen.empty();
+    private OsPolicyAssignmentArgs(OsPolicyAssignmentArgs $) {
+        this.description = $.description;
+        this.etag = $.etag;
+        this.instanceFilter = $.instanceFilter;
+        this.location = $.location;
+        this.name = $.name;
+        this.osPolicies = $.osPolicies;
+        this.osPolicyAssignmentId = $.osPolicyAssignmentId;
+        this.project = $.project;
+        this.rollout = $.rollout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> etag;
-        private Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<List<OSPolicyArgs>> osPolicies;
-        private Output<String> osPolicyAssignmentId;
-        private @Nullable Output<String> project;
-        private Output<OSPolicyAssignmentRolloutArgs> rollout;
+        private OsPolicyAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentArgs();
         }
 
         public Builder(OsPolicyAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.instanceFilter = defaults.instanceFilter;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.osPolicies = defaults.osPolicies;
-    	      this.osPolicyAssignmentId = defaults.osPolicyAssignmentId;
-    	      this.project = defaults.project;
-    	      this.rollout = defaults.rollout;
+            $ = new OsPolicyAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder instanceFilter(Output<OSPolicyAssignmentInstanceFilterArgs> instanceFilter) {
-            this.instanceFilter = Objects.requireNonNull(instanceFilter);
+            $.instanceFilter = instanceFilter;
             return this;
         }
+
         public Builder instanceFilter(OSPolicyAssignmentInstanceFilterArgs instanceFilter) {
-            this.instanceFilter = Output.of(Objects.requireNonNull(instanceFilter));
-            return this;
+            return instanceFilter(Output.of(instanceFilter));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder osPolicies(Output<List<OSPolicyArgs>> osPolicies) {
-            this.osPolicies = Objects.requireNonNull(osPolicies);
+            $.osPolicies = osPolicies;
             return this;
         }
+
         public Builder osPolicies(List<OSPolicyArgs> osPolicies) {
-            this.osPolicies = Output.of(Objects.requireNonNull(osPolicies));
-            return this;
+            return osPolicies(Output.of(osPolicies));
         }
+
         public Builder osPolicies(OSPolicyArgs... osPolicies) {
             return osPolicies(List.of(osPolicies));
         }
+
         public Builder osPolicyAssignmentId(Output<String> osPolicyAssignmentId) {
-            this.osPolicyAssignmentId = Objects.requireNonNull(osPolicyAssignmentId);
+            $.osPolicyAssignmentId = osPolicyAssignmentId;
             return this;
         }
+
         public Builder osPolicyAssignmentId(String osPolicyAssignmentId) {
-            this.osPolicyAssignmentId = Output.of(Objects.requireNonNull(osPolicyAssignmentId));
-            return this;
+            return osPolicyAssignmentId(Output.of(osPolicyAssignmentId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rollout(Output<OSPolicyAssignmentRolloutArgs> rollout) {
-            this.rollout = Objects.requireNonNull(rollout);
+            $.rollout = rollout;
             return this;
         }
+
         public Builder rollout(OSPolicyAssignmentRolloutArgs rollout) {
-            this.rollout = Output.of(Objects.requireNonNull(rollout));
-            return this;
-        }        public OsPolicyAssignmentArgs build() {
-            return new OsPolicyAssignmentArgs(description, etag, instanceFilter, location, name, osPolicies, osPolicyAssignmentId, project, rollout);
+            return rollout(Output.of(rollout));
+        }
+
+        public OsPolicyAssignmentArgs build() {
+            $.instanceFilter = Objects.requireNonNull($.instanceFilter, "expected parameter 'instanceFilter' to be non-null");
+            $.osPolicies = Objects.requireNonNull($.osPolicies, "expected parameter 'osPolicies' to be non-null");
+            $.osPolicyAssignmentId = Objects.requireNonNull($.osPolicyAssignmentId, "expected parameter 'osPolicyAssignmentId' to be non-null");
+            $.rollout = Objects.requireNonNull($.rollout, "expected parameter 'rollout' to be non-null");
+            return $;
         }
     }
+
 }

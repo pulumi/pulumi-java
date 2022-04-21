@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DocumentNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataLicence")
-      private final @Nullable Output<String> dataLicence;
+    private @Nullable Output<String> dataLicence;
 
-    public Output<String> dataLicence() {
-        return this.dataLicence == null ? Codegen.empty() : this.dataLicence;
+    public Optional<Output<String>> dataLicence() {
+        return Optional.ofNullable(this.dataLicence);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class DocumentNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spdxVersion")
-      private final @Nullable Output<String> spdxVersion;
+    private @Nullable Output<String> spdxVersion;
 
-    public Output<String> spdxVersion() {
-        return this.spdxVersion == null ? Codegen.empty() : this.spdxVersion;
+    public Optional<Output<String>> spdxVersion() {
+        return Optional.ofNullable(this.spdxVersion);
     }
 
-    public DocumentNoteArgs(
-        @Nullable Output<String> dataLicence,
-        @Nullable Output<String> spdxVersion) {
-        this.dataLicence = dataLicence;
-        this.spdxVersion = spdxVersion;
-    }
+    private DocumentNoteArgs() {}
 
-    private DocumentNoteArgs() {
-        this.dataLicence = Codegen.empty();
-        this.spdxVersion = Codegen.empty();
+    private DocumentNoteArgs(DocumentNoteArgs $) {
+        this.dataLicence = $.dataLicence;
+        this.spdxVersion = $.spdxVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataLicence;
-        private @Nullable Output<String> spdxVersion;
+        private DocumentNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentNoteArgs();
         }
 
         public Builder(DocumentNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataLicence = defaults.dataLicence;
-    	      this.spdxVersion = defaults.spdxVersion;
+            $ = new DocumentNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataLicence(@Nullable Output<String> dataLicence) {
-            this.dataLicence = dataLicence;
+            $.dataLicence = dataLicence;
             return this;
         }
-        public Builder dataLicence(@Nullable String dataLicence) {
-            this.dataLicence = Codegen.ofNullable(dataLicence);
-            return this;
+
+        public Builder dataLicence(String dataLicence) {
+            return dataLicence(Output.of(dataLicence));
         }
+
         public Builder spdxVersion(@Nullable Output<String> spdxVersion) {
-            this.spdxVersion = spdxVersion;
+            $.spdxVersion = spdxVersion;
             return this;
         }
-        public Builder spdxVersion(@Nullable String spdxVersion) {
-            this.spdxVersion = Codegen.ofNullable(spdxVersion);
-            return this;
-        }        public DocumentNoteArgs build() {
-            return new DocumentNoteArgs(dataLicence, spdxVersion);
+
+        public Builder spdxVersion(String spdxVersion) {
+            return spdxVersion(Output.of(spdxVersion));
+        }
+
+        public DocumentNoteArgs build() {
+            return $;
         }
     }
+
 }

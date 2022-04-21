@@ -5,9 +5,9 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends com.pulumi
      * 
      */
     @Import(name="fixed")
-      private final @Nullable Output<Integer> fixed;
+    private @Nullable Output<Integer> fixed;
 
-    public Output<Integer> fixed() {
-        return this.fixed == null ? Codegen.empty() : this.fixed;
+    public Optional<Output<Integer>> fixed() {
+        return Optional.ofNullable(this.fixed);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class PatchDeploymentRolloutDisruptionBudgetArgs extends com.pulumi
      * 
      */
     @Import(name="percentage")
-      private final @Nullable Output<Integer> percentage;
+    private @Nullable Output<Integer> percentage;
 
-    public Output<Integer> percentage() {
-        return this.percentage == null ? Codegen.empty() : this.percentage;
+    public Optional<Output<Integer>> percentage() {
+        return Optional.ofNullable(this.percentage);
     }
 
-    public PatchDeploymentRolloutDisruptionBudgetArgs(
-        @Nullable Output<Integer> fixed,
-        @Nullable Output<Integer> percentage) {
-        this.fixed = fixed;
-        this.percentage = percentage;
-    }
+    private PatchDeploymentRolloutDisruptionBudgetArgs() {}
 
-    private PatchDeploymentRolloutDisruptionBudgetArgs() {
-        this.fixed = Codegen.empty();
-        this.percentage = Codegen.empty();
+    private PatchDeploymentRolloutDisruptionBudgetArgs(PatchDeploymentRolloutDisruptionBudgetArgs $) {
+        this.fixed = $.fixed;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentRolloutDisruptionBudgetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> fixed;
-        private @Nullable Output<Integer> percentage;
+        private PatchDeploymentRolloutDisruptionBudgetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentRolloutDisruptionBudgetArgs();
         }
 
         public Builder(PatchDeploymentRolloutDisruptionBudgetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fixed = defaults.fixed;
-    	      this.percentage = defaults.percentage;
+            $ = new PatchDeploymentRolloutDisruptionBudgetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fixed(@Nullable Output<Integer> fixed) {
-            this.fixed = fixed;
+            $.fixed = fixed;
             return this;
         }
-        public Builder fixed(@Nullable Integer fixed) {
-            this.fixed = Codegen.ofNullable(fixed);
-            return this;
+
+        public Builder fixed(Integer fixed) {
+            return fixed(Output.of(fixed));
         }
+
         public Builder percentage(@Nullable Output<Integer> percentage) {
-            this.percentage = percentage;
+            $.percentage = percentage;
             return this;
         }
-        public Builder percentage(@Nullable Integer percentage) {
-            this.percentage = Codegen.ofNullable(percentage);
-            return this;
-        }        public PatchDeploymentRolloutDisruptionBudgetArgs build() {
-            return new PatchDeploymentRolloutDisruptionBudgetArgs(fixed, percentage);
+
+        public Builder percentage(Integer percentage) {
+            return percentage(Output.of(percentage));
+        }
+
+        public PatchDeploymentRolloutDisruptionBudgetArgs build() {
+            return $;
         }
     }
+
 }

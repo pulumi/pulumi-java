@@ -5,10 +5,10 @@ package com.pulumi.awsnative.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Output<Integer> timeoutSeconds;
+    private @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
+    public Optional<Output<Integer>> timeoutSeconds() {
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
-    public WorkflowStepCustomStepDetailsPropertiesArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> target,
-        @Nullable Output<Integer> timeoutSeconds) {
-        this.name = name;
-        this.target = target;
-        this.timeoutSeconds = timeoutSeconds;
-    }
+    private WorkflowStepCustomStepDetailsPropertiesArgs() {}
 
-    private WorkflowStepCustomStepDetailsPropertiesArgs() {
-        this.name = Codegen.empty();
-        this.target = Codegen.empty();
-        this.timeoutSeconds = Codegen.empty();
+    private WorkflowStepCustomStepDetailsPropertiesArgs(WorkflowStepCustomStepDetailsPropertiesArgs $) {
+        this.name = $.name;
+        this.target = $.target;
+        this.timeoutSeconds = $.timeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowStepCustomStepDetailsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> target;
-        private @Nullable Output<Integer> timeoutSeconds;
+        private WorkflowStepCustomStepDetailsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowStepCustomStepDetailsPropertiesArgs();
         }
 
         public Builder(WorkflowStepCustomStepDetailsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.target = defaults.target;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
+            $ = new WorkflowStepCustomStepDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
-        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
-            return this;
-        }        public WorkflowStepCustomStepDetailsPropertiesArgs build() {
-            return new WorkflowStepCustomStepDetailsPropertiesArgs(name, target, timeoutSeconds);
+
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
+            return timeoutSeconds(Output.of(timeoutSeconds));
+        }
+
+        public WorkflowStepCustomStepDetailsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

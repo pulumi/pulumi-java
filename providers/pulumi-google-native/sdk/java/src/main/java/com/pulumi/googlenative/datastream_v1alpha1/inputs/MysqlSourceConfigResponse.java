@@ -21,7 +21,7 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="allowlist", required=true)
-      private final MysqlRdbmsResponse allowlist;
+    private MysqlRdbmsResponse allowlist;
 
     public MysqlRdbmsResponse allowlist() {
         return this.allowlist;
@@ -32,55 +32,52 @@ public final class MysqlSourceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rejectlist", required=true)
-      private final MysqlRdbmsResponse rejectlist;
+    private MysqlRdbmsResponse rejectlist;
 
     public MysqlRdbmsResponse rejectlist() {
         return this.rejectlist;
     }
 
-    public MysqlSourceConfigResponse(
-        MysqlRdbmsResponse allowlist,
-        MysqlRdbmsResponse rejectlist) {
-        this.allowlist = Objects.requireNonNull(allowlist, "expected parameter 'allowlist' to be non-null");
-        this.rejectlist = Objects.requireNonNull(rejectlist, "expected parameter 'rejectlist' to be non-null");
-    }
+    private MysqlSourceConfigResponse() {}
 
-    private MysqlSourceConfigResponse() {
-        this.allowlist = null;
-        this.rejectlist = null;
+    private MysqlSourceConfigResponse(MysqlSourceConfigResponse $) {
+        this.allowlist = $.allowlist;
+        this.rejectlist = $.rejectlist;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlSourceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MysqlRdbmsResponse allowlist;
-        private MysqlRdbmsResponse rejectlist;
+        private MysqlSourceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlSourceConfigResponse();
         }
 
         public Builder(MysqlSourceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowlist = defaults.allowlist;
-    	      this.rejectlist = defaults.rejectlist;
+            $ = new MysqlSourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowlist(MysqlRdbmsResponse allowlist) {
-            this.allowlist = Objects.requireNonNull(allowlist);
+            $.allowlist = allowlist;
             return this;
         }
+
         public Builder rejectlist(MysqlRdbmsResponse rejectlist) {
-            this.rejectlist = Objects.requireNonNull(rejectlist);
+            $.rejectlist = rejectlist;
             return this;
-        }        public MysqlSourceConfigResponse build() {
-            return new MysqlSourceConfigResponse(allowlist, rejectlist);
+        }
+
+        public MysqlSourceConfigResponse build() {
+            $.allowlist = Objects.requireNonNull($.allowlist, "expected parameter 'allowlist' to be non-null");
+            $.rejectlist = Objects.requireNonNull($.rejectlist, "expected parameter 'rejectlist' to be non-null");
+            return $;
         }
     }
+
 }

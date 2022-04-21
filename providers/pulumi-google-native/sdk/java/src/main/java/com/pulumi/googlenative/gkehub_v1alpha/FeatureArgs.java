@@ -5,11 +5,11 @@ package com.pulumi.googlenative.gkehub_v1alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.gkehub_v1alpha.inputs.CommonFeatureSpecArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
     public static final FeatureArgs Empty = new FeatureArgs();
 
     @Import(name="featureId")
-      private final @Nullable Output<String> featureId;
+    private @Nullable Output<String> featureId;
 
-    public Output<String> featureId() {
-        return this.featureId == null ? Codegen.empty() : this.featureId;
+    public Optional<Output<String>> featureId() {
+        return Optional.ofNullable(this.featureId);
     }
 
     /**
@@ -29,17 +29,17 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -47,24 +47,24 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="membershipSpecs")
-      private final @Nullable Output<Map<String,String>> membershipSpecs;
+    private @Nullable Output<Map<String,String>> membershipSpecs;
 
-    public Output<Map<String,String>> membershipSpecs() {
-        return this.membershipSpecs == null ? Codegen.empty() : this.membershipSpecs;
+    public Optional<Output<Map<String,String>>> membershipSpecs() {
+        return Optional.ofNullable(this.membershipSpecs);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -72,128 +72,108 @@ public final class FeatureArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<CommonFeatureSpecArgs> spec;
+    private @Nullable Output<CommonFeatureSpecArgs> spec;
 
-    public Output<CommonFeatureSpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<CommonFeatureSpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
-    public FeatureArgs(
-        @Nullable Output<String> featureId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> membershipSpecs,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<CommonFeatureSpecArgs> spec) {
-        this.featureId = featureId;
-        this.labels = labels;
-        this.location = location;
-        this.membershipSpecs = membershipSpecs;
-        this.project = project;
-        this.requestId = requestId;
-        this.spec = spec;
-    }
+    private FeatureArgs() {}
 
-    private FeatureArgs() {
-        this.featureId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.membershipSpecs = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.spec = Codegen.empty();
+    private FeatureArgs(FeatureArgs $) {
+        this.featureId = $.featureId;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.membershipSpecs = $.membershipSpecs;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> featureId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> membershipSpecs;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<CommonFeatureSpecArgs> spec;
+        private FeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureArgs();
         }
 
         public Builder(FeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featureId = defaults.featureId;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.membershipSpecs = defaults.membershipSpecs;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.spec = defaults.spec;
+            $ = new FeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder featureId(@Nullable Output<String> featureId) {
-            this.featureId = featureId;
+            $.featureId = featureId;
             return this;
         }
-        public Builder featureId(@Nullable String featureId) {
-            this.featureId = Codegen.ofNullable(featureId);
-            return this;
+
+        public Builder featureId(String featureId) {
+            return featureId(Output.of(featureId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder membershipSpecs(@Nullable Output<Map<String,String>> membershipSpecs) {
-            this.membershipSpecs = membershipSpecs;
+            $.membershipSpecs = membershipSpecs;
             return this;
         }
-        public Builder membershipSpecs(@Nullable Map<String,String> membershipSpecs) {
-            this.membershipSpecs = Codegen.ofNullable(membershipSpecs);
-            return this;
+
+        public Builder membershipSpecs(Map<String,String> membershipSpecs) {
+            return membershipSpecs(Output.of(membershipSpecs));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder spec(@Nullable Output<CommonFeatureSpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable CommonFeatureSpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
-        }        public FeatureArgs build() {
-            return new FeatureArgs(featureId, labels, location, membershipSpecs, project, requestId, spec);
+
+        public Builder spec(CommonFeatureSpecArgs spec) {
+            return spec(Output.of(spec));
+        }
+
+        public FeatureArgs build() {
+            return $;
         }
     }
+
 }

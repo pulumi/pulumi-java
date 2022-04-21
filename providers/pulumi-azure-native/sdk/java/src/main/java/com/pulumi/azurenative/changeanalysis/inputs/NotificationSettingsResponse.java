@@ -24,10 +24,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="activationState")
-      private final @Nullable String activationState;
+    private @Nullable String activationState;
 
     public Optional<String> activationState() {
-        return this.activationState == null ? Optional.empty() : Optional.ofNullable(this.activationState);
+        return Optional.ofNullable(this.activationState);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="azureMonitorWorkspaceProperties")
-      private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
+    private @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 
     public Optional<AzureMonitorWorkspacePropertiesResponse> azureMonitorWorkspaceProperties() {
-        return this.azureMonitorWorkspaceProperties == null ? Optional.empty() : Optional.ofNullable(this.azureMonitorWorkspaceProperties);
+        return Optional.ofNullable(this.azureMonitorWorkspaceProperties);
     }
 
-    public NotificationSettingsResponse(
-        @Nullable String activationState,
-        @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
-        this.activationState = activationState;
-        this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
-    }
+    private NotificationSettingsResponse() {}
 
-    private NotificationSettingsResponse() {
-        this.activationState = null;
-        this.azureMonitorWorkspaceProperties = null;
+    private NotificationSettingsResponse(NotificationSettingsResponse $) {
+        this.activationState = $.activationState;
+        this.azureMonitorWorkspaceProperties = $.azureMonitorWorkspaceProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String activationState;
-        private @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
+        private NotificationSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationSettingsResponse();
         }
 
         public Builder(NotificationSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationState = defaults.activationState;
-    	      this.azureMonitorWorkspaceProperties = defaults.azureMonitorWorkspaceProperties;
+            $ = new NotificationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activationState(@Nullable String activationState) {
-            this.activationState = activationState;
+            $.activationState = activationState;
             return this;
         }
+
         public Builder azureMonitorWorkspaceProperties(@Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
-            this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
+            $.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;
-        }        public NotificationSettingsResponse build() {
-            return new NotificationSettingsResponse(activationState, azureMonitorWorkspaceProperties);
+        }
+
+        public NotificationSettingsResponse build() {
+            return $;
         }
     }
+
 }

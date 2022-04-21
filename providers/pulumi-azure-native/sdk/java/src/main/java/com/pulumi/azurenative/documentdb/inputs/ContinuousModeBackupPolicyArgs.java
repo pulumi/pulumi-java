@@ -24,49 +24,49 @@ public final class ContinuousModeBackupPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ContinuousModeBackupPolicyArgs(Output<String> type) {
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private ContinuousModeBackupPolicyArgs() {}
 
-    private ContinuousModeBackupPolicyArgs() {
-        this.type = Codegen.empty();
+    private ContinuousModeBackupPolicyArgs(ContinuousModeBackupPolicyArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContinuousModeBackupPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private ContinuousModeBackupPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContinuousModeBackupPolicyArgs();
         }
 
         public Builder(ContinuousModeBackupPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ContinuousModeBackupPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ContinuousModeBackupPolicyArgs build() {
-            return new ContinuousModeBackupPolicyArgs(type);
+            return type(Output.of(type));
+        }
+
+        public ContinuousModeBackupPolicyArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

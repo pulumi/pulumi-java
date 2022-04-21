@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +20,7 @@ public final class TriggerBuildStepVolumeArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -34,63 +33,60 @@ public final class TriggerBuildStepVolumeArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public TriggerBuildStepVolumeArgs(
-        Output<String> name,
-        Output<String> path) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private TriggerBuildStepVolumeArgs() {}
 
-    private TriggerBuildStepVolumeArgs() {
-        this.name = Codegen.empty();
-        this.path = Codegen.empty();
+    private TriggerBuildStepVolumeArgs(TriggerBuildStepVolumeArgs $) {
+        this.name = $.name;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildStepVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> path;
+        private TriggerBuildStepVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildStepVolumeArgs();
         }
 
         public Builder(TriggerBuildStepVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
+            $ = new TriggerBuildStepVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public TriggerBuildStepVolumeArgs build() {
-            return new TriggerBuildStepVolumeArgs(name, path);
+            return path(Output.of(path));
+        }
+
+        public TriggerBuildStepVolumeArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

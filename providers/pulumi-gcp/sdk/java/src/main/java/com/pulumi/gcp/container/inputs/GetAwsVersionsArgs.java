@@ -19,10 +19,10 @@ public final class GetAwsVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class GetAwsVersionsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAwsVersionsArgs(
-        @Nullable String location,
-        @Nullable String project) {
-        this.location = location;
-        this.project = project;
-    }
+    private GetAwsVersionsArgs() {}
 
-    private GetAwsVersionsArgs() {
-        this.location = null;
-        this.project = null;
+    private GetAwsVersionsArgs(GetAwsVersionsArgs $) {
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAwsVersionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String location;
-        private @Nullable String project;
+        private GetAwsVersionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAwsVersionsArgs();
         }
 
         public Builder(GetAwsVersionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetAwsVersionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAwsVersionsArgs build() {
-            return new GetAwsVersionsArgs(location, project);
+        }
+
+        public GetAwsVersionsArgs build() {
+            return $;
         }
     }
+
 }

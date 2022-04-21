@@ -6,9 +6,9 @@ package com.pulumi.azurenative.migrate;
 import com.pulumi.azurenative.migrate.inputs.GroupPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectName", required=true)
-      private final Output<String> projectName;
+    private Output<String> projectName;
 
     public Output<String> projectName() {
         return this.projectName;
@@ -54,7 +54,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Output<GroupPropertiesArgs> properties;
+    private Output<GroupPropertiesArgs> properties;
 
     public Output<GroupPropertiesArgs> properties() {
         return this.properties;
@@ -65,102 +65,91 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GroupArgs(
-        @Nullable Output<String> eTag,
-        @Nullable Output<String> groupName,
-        Output<String> projectName,
-        Output<GroupPropertiesArgs> properties,
-        Output<String> resourceGroupName) {
-        this.eTag = eTag;
-        this.groupName = groupName;
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GroupArgs() {}
 
-    private GroupArgs() {
-        this.eTag = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.projectName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private GroupArgs(GroupArgs $) {
+        this.eTag = $.eTag;
+        this.groupName = $.groupName;
+        this.projectName = $.projectName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> eTag;
-        private @Nullable Output<String> groupName;
-        private Output<String> projectName;
-        private Output<GroupPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
+        private GroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupArgs();
         }
 
         public Builder(GroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eTag = defaults.eTag;
-    	      this.groupName = defaults.groupName;
-    	      this.projectName = defaults.projectName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
         }
+
         public Builder projectName(Output<String> projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Output.of(Objects.requireNonNull(projectName));
-            return this;
+            return projectName(Output.of(projectName));
         }
+
         public Builder properties(Output<GroupPropertiesArgs> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder properties(GroupPropertiesArgs properties) {
-            this.properties = Output.of(Objects.requireNonNull(properties));
-            return this;
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public GroupArgs build() {
-            return new GroupArgs(eTag, groupName, projectName, properties, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public GroupArgs build() {
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

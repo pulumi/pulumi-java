@@ -25,45 +25,44 @@ public final class SourceRegistryCredentialsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="loginMode")
-      private final @Nullable String loginMode;
+    private @Nullable String loginMode;
 
     public Optional<String> loginMode() {
-        return this.loginMode == null ? Optional.empty() : Optional.ofNullable(this.loginMode);
+        return Optional.ofNullable(this.loginMode);
     }
 
-    public SourceRegistryCredentialsResponse(@Nullable String loginMode) {
-        this.loginMode = loginMode;
-    }
+    private SourceRegistryCredentialsResponse() {}
 
-    private SourceRegistryCredentialsResponse() {
-        this.loginMode = null;
+    private SourceRegistryCredentialsResponse(SourceRegistryCredentialsResponse $) {
+        this.loginMode = $.loginMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceRegistryCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String loginMode;
+        private SourceRegistryCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceRegistryCredentialsResponse();
         }
 
         public Builder(SourceRegistryCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginMode = defaults.loginMode;
+            $ = new SourceRegistryCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder loginMode(@Nullable String loginMode) {
-            this.loginMode = loginMode;
+            $.loginMode = loginMode;
             return this;
-        }        public SourceRegistryCredentialsResponse build() {
-            return new SourceRegistryCredentialsResponse(loginMode);
+        }
+
+        public SourceRegistryCredentialsResponse build() {
+            return $;
         }
     }
+
 }

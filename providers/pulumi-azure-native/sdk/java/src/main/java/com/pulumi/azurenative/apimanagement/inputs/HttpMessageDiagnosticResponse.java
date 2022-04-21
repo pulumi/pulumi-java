@@ -26,10 +26,10 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="body")
-      private final @Nullable BodyDiagnosticSettingsResponse body;
+    private @Nullable BodyDiagnosticSettingsResponse body;
 
     public Optional<BodyDiagnosticSettingsResponse> body() {
-        return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="dataMasking")
-      private final @Nullable DataMaskingResponse dataMasking;
+    private @Nullable DataMaskingResponse dataMasking;
 
     public Optional<DataMaskingResponse> dataMasking() {
-        return this.dataMasking == null ? Optional.empty() : Optional.ofNullable(this.dataMasking);
+        return Optional.ofNullable(this.dataMasking);
     }
 
     /**
@@ -48,67 +48,60 @@ public final class HttpMessageDiagnosticResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="headers")
-      private final @Nullable List<String> headers;
+    private @Nullable List<String> headers;
 
-    public List<String> headers() {
-        return this.headers == null ? List.of() : this.headers;
+    public Optional<List<String>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
-    public HttpMessageDiagnosticResponse(
-        @Nullable BodyDiagnosticSettingsResponse body,
-        @Nullable DataMaskingResponse dataMasking,
-        @Nullable List<String> headers) {
-        this.body = body;
-        this.dataMasking = dataMasking;
-        this.headers = headers;
-    }
+    private HttpMessageDiagnosticResponse() {}
 
-    private HttpMessageDiagnosticResponse() {
-        this.body = null;
-        this.dataMasking = null;
-        this.headers = List.of();
+    private HttpMessageDiagnosticResponse(HttpMessageDiagnosticResponse $) {
+        this.body = $.body;
+        this.dataMasking = $.dataMasking;
+        this.headers = $.headers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpMessageDiagnosticResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable BodyDiagnosticSettingsResponse body;
-        private @Nullable DataMaskingResponse dataMasking;
-        private @Nullable List<String> headers;
+        private HttpMessageDiagnosticResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpMessageDiagnosticResponse();
         }
 
         public Builder(HttpMessageDiagnosticResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.dataMasking = defaults.dataMasking;
-    	      this.headers = defaults.headers;
+            $ = new HttpMessageDiagnosticResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder body(@Nullable BodyDiagnosticSettingsResponse body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
+
         public Builder dataMasking(@Nullable DataMaskingResponse dataMasking) {
-            this.dataMasking = dataMasking;
+            $.dataMasking = dataMasking;
             return this;
         }
+
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(String... headers) {
             return headers(List.of(headers));
-        }        public HttpMessageDiagnosticResponse build() {
-            return new HttpMessageDiagnosticResponse(body, dataMasking, headers);
+        }
+
+        public HttpMessageDiagnosticResponse build() {
+            return $;
         }
     }
+
 }

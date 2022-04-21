@@ -25,10 +25,10 @@ public final class FrameworkControlControlScopeProperties extends com.pulumi.res
      * 
      */
     @Import(name="complianceResourceIds")
-      private final @Nullable List<String> complianceResourceIds;
+    private @Nullable List<String> complianceResourceIds;
 
-    public List<String> complianceResourceIds() {
-        return this.complianceResourceIds == null ? List.of() : this.complianceResourceIds;
+    public Optional<List<String>> complianceResourceIds() {
+        return Optional.ofNullable(this.complianceResourceIds);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FrameworkControlControlScopeProperties extends com.pulumi.res
      * 
      */
     @Import(name="complianceResourceTypes")
-      private final @Nullable List<String> complianceResourceTypes;
+    private @Nullable List<String> complianceResourceTypes;
 
-    public List<String> complianceResourceTypes() {
-        return this.complianceResourceTypes == null ? List.of() : this.complianceResourceTypes;
+    public Optional<List<String>> complianceResourceTypes() {
+        return Optional.ofNullable(this.complianceResourceTypes);
     }
 
     /**
@@ -47,73 +47,68 @@ public final class FrameworkControlControlScopeProperties extends com.pulumi.res
      * 
      */
     @Import(name="tags")
-      private final @Nullable List<FrameworkTag> tags;
+    private @Nullable List<FrameworkTag> tags;
 
-    public List<FrameworkTag> tags() {
-        return this.tags == null ? List.of() : this.tags;
+    public Optional<List<FrameworkTag>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public FrameworkControlControlScopeProperties(
-        @Nullable List<String> complianceResourceIds,
-        @Nullable List<String> complianceResourceTypes,
-        @Nullable List<FrameworkTag> tags) {
-        this.complianceResourceIds = complianceResourceIds;
-        this.complianceResourceTypes = complianceResourceTypes;
-        this.tags = tags;
-    }
+    private FrameworkControlControlScopeProperties() {}
 
-    private FrameworkControlControlScopeProperties() {
-        this.complianceResourceIds = List.of();
-        this.complianceResourceTypes = List.of();
-        this.tags = List.of();
+    private FrameworkControlControlScopeProperties(FrameworkControlControlScopeProperties $) {
+        this.complianceResourceIds = $.complianceResourceIds;
+        this.complianceResourceTypes = $.complianceResourceTypes;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FrameworkControlControlScopeProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> complianceResourceIds;
-        private @Nullable List<String> complianceResourceTypes;
-        private @Nullable List<FrameworkTag> tags;
+        private FrameworkControlControlScopeProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FrameworkControlControlScopeProperties();
         }
 
         public Builder(FrameworkControlControlScopeProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.complianceResourceIds = defaults.complianceResourceIds;
-    	      this.complianceResourceTypes = defaults.complianceResourceTypes;
-    	      this.tags = defaults.tags;
+            $ = new FrameworkControlControlScopeProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder complianceResourceIds(@Nullable List<String> complianceResourceIds) {
-            this.complianceResourceIds = complianceResourceIds;
+            $.complianceResourceIds = complianceResourceIds;
             return this;
         }
+
         public Builder complianceResourceIds(String... complianceResourceIds) {
             return complianceResourceIds(List.of(complianceResourceIds));
         }
+
         public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
-            this.complianceResourceTypes = complianceResourceTypes;
+            $.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
+
         public Builder complianceResourceTypes(String... complianceResourceTypes) {
             return complianceResourceTypes(List.of(complianceResourceTypes));
         }
+
         public Builder tags(@Nullable List<FrameworkTag> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(FrameworkTag... tags) {
             return tags(List.of(tags));
-        }        public FrameworkControlControlScopeProperties build() {
-            return new FrameworkControlControlScopeProperties(complianceResourceIds, complianceResourceTypes, tags);
+        }
+
+        public FrameworkControlControlScopeProperties build() {
+            return $;
         }
     }
+
 }

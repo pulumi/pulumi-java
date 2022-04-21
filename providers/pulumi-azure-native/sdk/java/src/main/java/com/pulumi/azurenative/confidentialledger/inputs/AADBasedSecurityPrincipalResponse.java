@@ -23,10 +23,10 @@ public final class AADBasedSecurityPrincipalResponse extends com.pulumi.resource
      * 
      */
     @Import(name="ledgerRoleName")
-      private final @Nullable String ledgerRoleName;
+    private @Nullable String ledgerRoleName;
 
     public Optional<String> ledgerRoleName() {
-        return this.ledgerRoleName == null ? Optional.empty() : Optional.ofNullable(this.ledgerRoleName);
+        return Optional.ofNullable(this.ledgerRoleName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AADBasedSecurityPrincipalResponse extends com.pulumi.resource
      * 
      */
     @Import(name="principalId")
-      private final @Nullable String principalId;
+    private @Nullable String principalId;
 
     public Optional<String> principalId() {
-        return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class AADBasedSecurityPrincipalResponse extends com.pulumi.resource
      * 
      */
     @Import(name="tenantId")
-      private final @Nullable String tenantId;
+    private @Nullable String tenantId;
 
     public Optional<String> tenantId() {
-        return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
+        return Optional.ofNullable(this.tenantId);
     }
 
-    public AADBasedSecurityPrincipalResponse(
-        @Nullable String ledgerRoleName,
-        @Nullable String principalId,
-        @Nullable String tenantId) {
-        this.ledgerRoleName = ledgerRoleName;
-        this.principalId = principalId;
-        this.tenantId = tenantId;
-    }
+    private AADBasedSecurityPrincipalResponse() {}
 
-    private AADBasedSecurityPrincipalResponse() {
-        this.ledgerRoleName = null;
-        this.principalId = null;
-        this.tenantId = null;
+    private AADBasedSecurityPrincipalResponse(AADBasedSecurityPrincipalResponse $) {
+        this.ledgerRoleName = $.ledgerRoleName;
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AADBasedSecurityPrincipalResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String ledgerRoleName;
-        private @Nullable String principalId;
-        private @Nullable String tenantId;
+        private AADBasedSecurityPrincipalResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AADBasedSecurityPrincipalResponse();
         }
 
         public Builder(AADBasedSecurityPrincipalResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ledgerRoleName = defaults.ledgerRoleName;
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
+            $ = new AADBasedSecurityPrincipalResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ledgerRoleName(@Nullable String ledgerRoleName) {
-            this.ledgerRoleName = ledgerRoleName;
+            $.ledgerRoleName = ledgerRoleName;
             return this;
         }
+
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = tenantId;
+            $.tenantId = tenantId;
             return this;
-        }        public AADBasedSecurityPrincipalResponse build() {
-            return new AADBasedSecurityPrincipalResponse(ledgerRoleName, principalId, tenantId);
+        }
+
+        public AADBasedSecurityPrincipalResponse build() {
+            return $;
         }
     }
+
 }

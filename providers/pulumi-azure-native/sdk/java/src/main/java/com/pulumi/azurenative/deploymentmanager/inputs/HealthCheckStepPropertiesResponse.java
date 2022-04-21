@@ -23,7 +23,7 @@ public final class HealthCheckStepPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="attributes", required=true)
-      private final RestHealthCheckStepAttributesResponse attributes;
+    private RestHealthCheckStepAttributesResponse attributes;
 
     public RestHealthCheckStepAttributesResponse attributes() {
         return this.attributes;
@@ -35,55 +35,52 @@ public final class HealthCheckStepPropertiesResponse extends com.pulumi.resource
      * 
      */
     @Import(name="stepType", required=true)
-      private final String stepType;
+    private String stepType;
 
     public String stepType() {
         return this.stepType;
     }
 
-    public HealthCheckStepPropertiesResponse(
-        RestHealthCheckStepAttributesResponse attributes,
-        String stepType) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.stepType = Codegen.stringProp("stepType").arg(stepType).require();
-    }
+    private HealthCheckStepPropertiesResponse() {}
 
-    private HealthCheckStepPropertiesResponse() {
-        this.attributes = null;
-        this.stepType = null;
+    private HealthCheckStepPropertiesResponse(HealthCheckStepPropertiesResponse $) {
+        this.attributes = $.attributes;
+        this.stepType = $.stepType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckStepPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RestHealthCheckStepAttributesResponse attributes;
-        private String stepType;
+        private HealthCheckStepPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckStepPropertiesResponse();
         }
 
         public Builder(HealthCheckStepPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.stepType = defaults.stepType;
+            $ = new HealthCheckStepPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(RestHealthCheckStepAttributesResponse attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder stepType(String stepType) {
-            this.stepType = Objects.requireNonNull(stepType);
+            $.stepType = stepType;
             return this;
-        }        public HealthCheckStepPropertiesResponse build() {
-            return new HealthCheckStepPropertiesResponse(attributes, stepType);
+        }
+
+        public HealthCheckStepPropertiesResponse build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.stepType = Codegen.stringProp("stepType").arg($.stepType).require();
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class NfsExportOptionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accessMode", required=true)
-      private final String accessMode;
+    private String accessMode;
 
     public String accessMode() {
         return this.accessMode;
@@ -33,7 +33,7 @@ public final class NfsExportOptionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="anonGid", required=true)
-      private final String anonGid;
+    private String anonGid;
 
     public String anonGid() {
         return this.anonGid;
@@ -44,7 +44,7 @@ public final class NfsExportOptionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="anonUid", required=true)
-      private final String anonUid;
+    private String anonUid;
 
     public String anonUid() {
         return this.anonUid;
@@ -55,7 +55,7 @@ public final class NfsExportOptionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipRanges", required=true)
-      private final List<String> ipRanges;
+    private List<String> ipRanges;
 
     public List<String> ipRanges() {
         return this.ipRanges;
@@ -66,85 +66,77 @@ public final class NfsExportOptionsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="squashMode", required=true)
-      private final String squashMode;
+    private String squashMode;
 
     public String squashMode() {
         return this.squashMode;
     }
 
-    public NfsExportOptionsResponse(
-        String accessMode,
-        String anonGid,
-        String anonUid,
-        List<String> ipRanges,
-        String squashMode) {
-        this.accessMode = Objects.requireNonNull(accessMode, "expected parameter 'accessMode' to be non-null");
-        this.anonGid = Objects.requireNonNull(anonGid, "expected parameter 'anonGid' to be non-null");
-        this.anonUid = Objects.requireNonNull(anonUid, "expected parameter 'anonUid' to be non-null");
-        this.ipRanges = Objects.requireNonNull(ipRanges, "expected parameter 'ipRanges' to be non-null");
-        this.squashMode = Objects.requireNonNull(squashMode, "expected parameter 'squashMode' to be non-null");
-    }
+    private NfsExportOptionsResponse() {}
 
-    private NfsExportOptionsResponse() {
-        this.accessMode = null;
-        this.anonGid = null;
-        this.anonUid = null;
-        this.ipRanges = List.of();
-        this.squashMode = null;
+    private NfsExportOptionsResponse(NfsExportOptionsResponse $) {
+        this.accessMode = $.accessMode;
+        this.anonGid = $.anonGid;
+        this.anonUid = $.anonUid;
+        this.ipRanges = $.ipRanges;
+        this.squashMode = $.squashMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NfsExportOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessMode;
-        private String anonGid;
-        private String anonUid;
-        private List<String> ipRanges;
-        private String squashMode;
+        private NfsExportOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NfsExportOptionsResponse();
         }
 
         public Builder(NfsExportOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessMode = defaults.accessMode;
-    	      this.anonGid = defaults.anonGid;
-    	      this.anonUid = defaults.anonUid;
-    	      this.ipRanges = defaults.ipRanges;
-    	      this.squashMode = defaults.squashMode;
+            $ = new NfsExportOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessMode(String accessMode) {
-            this.accessMode = Objects.requireNonNull(accessMode);
+            $.accessMode = accessMode;
             return this;
         }
+
         public Builder anonGid(String anonGid) {
-            this.anonGid = Objects.requireNonNull(anonGid);
+            $.anonGid = anonGid;
             return this;
         }
+
         public Builder anonUid(String anonUid) {
-            this.anonUid = Objects.requireNonNull(anonUid);
+            $.anonUid = anonUid;
             return this;
         }
+
         public Builder ipRanges(List<String> ipRanges) {
-            this.ipRanges = Objects.requireNonNull(ipRanges);
+            $.ipRanges = ipRanges;
             return this;
         }
+
         public Builder ipRanges(String... ipRanges) {
             return ipRanges(List.of(ipRanges));
         }
+
         public Builder squashMode(String squashMode) {
-            this.squashMode = Objects.requireNonNull(squashMode);
+            $.squashMode = squashMode;
             return this;
-        }        public NfsExportOptionsResponse build() {
-            return new NfsExportOptionsResponse(accessMode, anonGid, anonUid, ipRanges, squashMode);
+        }
+
+        public NfsExportOptionsResponse build() {
+            $.accessMode = Objects.requireNonNull($.accessMode, "expected parameter 'accessMode' to be non-null");
+            $.anonGid = Objects.requireNonNull($.anonGid, "expected parameter 'anonGid' to be non-null");
+            $.anonUid = Objects.requireNonNull($.anonUid, "expected parameter 'anonUid' to be non-null");
+            $.ipRanges = Objects.requireNonNull($.ipRanges, "expected parameter 'ipRanges' to be non-null");
+            $.squashMode = Objects.requireNonNull($.squashMode, "expected parameter 'squashMode' to be non-null");
+            return $;
         }
     }
+
 }

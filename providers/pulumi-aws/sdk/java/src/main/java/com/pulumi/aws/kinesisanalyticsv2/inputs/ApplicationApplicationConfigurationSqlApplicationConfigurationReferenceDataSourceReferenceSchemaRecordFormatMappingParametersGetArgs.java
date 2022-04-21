@@ -7,8 +7,8 @@ import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurat
 import com.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="csvMappingParameters")
-      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters;
+    private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters() {
-        return this.csvMappingParameters == null ? Codegen.empty() : this.csvMappingParameters;
+    public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs>> csvMappingParameters() {
+        return Optional.ofNullable(this.csvMappingParameters);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * 
      */
     @Import(name="jsonMappingParameters")
-      private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters;
+    private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters() {
-        return this.jsonMappingParameters == null ? Codegen.empty() : this.jsonMappingParameters;
+    public Optional<Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs>> jsonMappingParameters() {
+        return Optional.ofNullable(this.jsonMappingParameters);
     }
 
-    public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs(
-        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters,
-        @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters) {
-        this.csvMappingParameters = csvMappingParameters;
-        this.jsonMappingParameters = jsonMappingParameters;
-    }
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs() {}
 
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs() {
-        this.csvMappingParameters = Codegen.empty();
-        this.jsonMappingParameters = Codegen.empty();
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs $) {
+        this.csvMappingParameters = $.csvMappingParameters;
+        this.jsonMappingParameters = $.jsonMappingParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters;
-        private @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters;
+        private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs();
         }
 
         public Builder(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.csvMappingParameters = defaults.csvMappingParameters;
-    	      this.jsonMappingParameters = defaults.jsonMappingParameters;
+            $ = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder csvMappingParameters(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs> csvMappingParameters) {
-            this.csvMappingParameters = csvMappingParameters;
+            $.csvMappingParameters = csvMappingParameters;
             return this;
         }
-        public Builder csvMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs csvMappingParameters) {
-            this.csvMappingParameters = Codegen.ofNullable(csvMappingParameters);
-            return this;
+
+        public Builder csvMappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs csvMappingParameters) {
+            return csvMappingParameters(Output.of(csvMappingParameters));
         }
+
         public Builder jsonMappingParameters(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs> jsonMappingParameters) {
-            this.jsonMappingParameters = jsonMappingParameters;
+            $.jsonMappingParameters = jsonMappingParameters;
             return this;
         }
-        public Builder jsonMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs jsonMappingParameters) {
-            this.jsonMappingParameters = Codegen.ofNullable(jsonMappingParameters);
-            return this;
-        }        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs build() {
-            return new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs(csvMappingParameters, jsonMappingParameters);
+
+        public Builder jsonMappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersGetArgs jsonMappingParameters) {
+            return jsonMappingParameters(Output.of(jsonMappingParameters));
+        }
+
+        public ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersGetArgs build() {
+            return $;
         }
     }
+
 }

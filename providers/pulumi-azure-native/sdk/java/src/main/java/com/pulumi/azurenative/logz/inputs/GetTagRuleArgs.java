@@ -17,7 +17,7 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="monitorName", required=true)
-      private final String monitorName;
+    private String monitorName;
 
     public String monitorName() {
         return this.monitorName;
@@ -28,71 +28,66 @@ public final class GetTagRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
     @Import(name="ruleSetName", required=true)
-      private final String ruleSetName;
+    private String ruleSetName;
 
     public String ruleSetName() {
         return this.ruleSetName;
     }
 
-    public GetTagRuleArgs(
-        String monitorName,
-        String resourceGroupName,
-        String ruleSetName) {
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ruleSetName = Objects.requireNonNull(ruleSetName, "expected parameter 'ruleSetName' to be non-null");
-    }
+    private GetTagRuleArgs() {}
 
-    private GetTagRuleArgs() {
-        this.monitorName = null;
-        this.resourceGroupName = null;
-        this.ruleSetName = null;
+    private GetTagRuleArgs(GetTagRuleArgs $) {
+        this.monitorName = $.monitorName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ruleSetName = $.ruleSetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTagRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String monitorName;
-        private String resourceGroupName;
-        private String ruleSetName;
+        private GetTagRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTagRuleArgs();
         }
 
         public Builder(GetTagRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monitorName = defaults.monitorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ruleSetName = defaults.ruleSetName;
+            $ = new GetTagRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder monitorName(String monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder ruleSetName(String ruleSetName) {
-            this.ruleSetName = Objects.requireNonNull(ruleSetName);
+            $.ruleSetName = ruleSetName;
             return this;
-        }        public GetTagRuleArgs build() {
-            return new GetTagRuleArgs(monitorName, resourceGroupName, ruleSetName);
+        }
+
+        public GetTagRuleArgs build() {
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.ruleSetName = Objects.requireNonNull($.ruleSetName, "expected parameter 'ruleSetName' to be non-null");
+            return $;
         }
     }
+
 }

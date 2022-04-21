@@ -6,7 +6,6 @@ package com.pulumi.googlenative.storage_v1;
 import com.pulumi.asset.AssetOrArchive;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storage_v1.inputs.BucketObjectCustomerEncryptionArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketObjectOwnerArgs;
 import com.pulumi.googlenative.storage_v1.inputs.ObjectAccessControlArgs;
@@ -16,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="acl")
-      private final @Nullable Output<List<ObjectAccessControlArgs>> acl;
+    private @Nullable Output<List<ObjectAccessControlArgs>> acl;
 
-    public Output<List<ObjectAccessControlArgs>> acl() {
-        return this.acl == null ? Codegen.empty() : this.acl;
+    public Optional<Output<List<ObjectAccessControlArgs>>> acl() {
+        return Optional.ofNullable(this.acl);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -50,10 +50,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cacheControl")
-      private final @Nullable Output<String> cacheControl;
+    private @Nullable Output<String> cacheControl;
 
-    public Output<String> cacheControl() {
-        return this.cacheControl == null ? Codegen.empty() : this.cacheControl;
+    public Optional<Output<String>> cacheControl() {
+        return Optional.ofNullable(this.cacheControl);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="componentCount")
-      private final @Nullable Output<Integer> componentCount;
+    private @Nullable Output<Integer> componentCount;
 
-    public Output<Integer> componentCount() {
-        return this.componentCount == null ? Codegen.empty() : this.componentCount;
+    public Optional<Output<Integer>> componentCount() {
+        return Optional.ofNullable(this.componentCount);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentDisposition")
-      private final @Nullable Output<String> contentDisposition;
+    private @Nullable Output<String> contentDisposition;
 
-    public Output<String> contentDisposition() {
-        return this.contentDisposition == null ? Codegen.empty() : this.contentDisposition;
+    public Optional<Output<String>> contentDisposition() {
+        return Optional.ofNullable(this.contentDisposition);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentEncoding")
-      private final @Nullable Output<String> contentEncoding;
+    private @Nullable Output<String> contentEncoding;
 
-    public Output<String> contentEncoding() {
-        return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
+    public Optional<Output<String>> contentEncoding() {
+        return Optional.ofNullable(this.contentEncoding);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentLanguage")
-      private final @Nullable Output<String> contentLanguage;
+    private @Nullable Output<String> contentLanguage;
 
-    public Output<String> contentLanguage() {
-        return this.contentLanguage == null ? Codegen.empty() : this.contentLanguage;
+    public Optional<Output<String>> contentLanguage() {
+        return Optional.ofNullable(this.contentLanguage);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="crc32c")
-      private final @Nullable Output<String> crc32c;
+    private @Nullable Output<String> crc32c;
 
-    public Output<String> crc32c() {
-        return this.crc32c == null ? Codegen.empty() : this.crc32c;
+    public Optional<Output<String>> crc32c() {
+        return Optional.ofNullable(this.crc32c);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customTime")
-      private final @Nullable Output<String> customTime;
+    private @Nullable Output<String> customTime;
 
-    public Output<String> customTime() {
-        return this.customTime == null ? Codegen.empty() : this.customTime;
+    public Optional<Output<String>> customTime() {
+        return Optional.ofNullable(this.customTime);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerEncryption")
-      private final @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
+    private @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
-    public Output<BucketObjectCustomerEncryptionArgs> customerEncryption() {
-        return this.customerEncryption == null ? Codegen.empty() : this.customerEncryption;
+    public Optional<Output<BucketObjectCustomerEncryptionArgs>> customerEncryption() {
+        return Optional.ofNullable(this.customerEncryption);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventBasedHold")
-      private final @Nullable Output<Boolean> eventBasedHold;
+    private @Nullable Output<Boolean> eventBasedHold;
 
-    public Output<Boolean> eventBasedHold() {
-        return this.eventBasedHold == null ? Codegen.empty() : this.eventBasedHold;
+    public Optional<Output<Boolean>> eventBasedHold() {
+        return Optional.ofNullable(this.eventBasedHold);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="generation")
-      private final @Nullable Output<String> generation;
+    private @Nullable Output<String> generation;
 
-    public Output<String> generation() {
-        return this.generation == null ? Codegen.empty() : this.generation;
+    public Optional<Output<String>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     /**
@@ -182,38 +182,38 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="ifGenerationMatch")
-      private final @Nullable Output<String> ifGenerationMatch;
+    private @Nullable Output<String> ifGenerationMatch;
 
-    public Output<String> ifGenerationMatch() {
-        return this.ifGenerationMatch == null ? Codegen.empty() : this.ifGenerationMatch;
+    public Optional<Output<String>> ifGenerationMatch() {
+        return Optional.ofNullable(this.ifGenerationMatch);
     }
 
     @Import(name="ifGenerationNotMatch")
-      private final @Nullable Output<String> ifGenerationNotMatch;
+    private @Nullable Output<String> ifGenerationNotMatch;
 
-    public Output<String> ifGenerationNotMatch() {
-        return this.ifGenerationNotMatch == null ? Codegen.empty() : this.ifGenerationNotMatch;
+    public Optional<Output<String>> ifGenerationNotMatch() {
+        return Optional.ofNullable(this.ifGenerationNotMatch);
     }
 
     @Import(name="ifMetagenerationMatch")
-      private final @Nullable Output<String> ifMetagenerationMatch;
+    private @Nullable Output<String> ifMetagenerationMatch;
 
-    public Output<String> ifMetagenerationMatch() {
-        return this.ifMetagenerationMatch == null ? Codegen.empty() : this.ifMetagenerationMatch;
+    public Optional<Output<String>> ifMetagenerationMatch() {
+        return Optional.ofNullable(this.ifMetagenerationMatch);
     }
 
     @Import(name="ifMetagenerationNotMatch")
-      private final @Nullable Output<String> ifMetagenerationNotMatch;
+    private @Nullable Output<String> ifMetagenerationNotMatch;
 
-    public Output<String> ifMetagenerationNotMatch() {
-        return this.ifMetagenerationNotMatch == null ? Codegen.empty() : this.ifMetagenerationNotMatch;
+    public Optional<Output<String>> ifMetagenerationNotMatch() {
+        return Optional.ofNullable(this.ifMetagenerationNotMatch);
     }
 
     /**
@@ -221,10 +221,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="md5Hash")
-      private final @Nullable Output<String> md5Hash;
+    private @Nullable Output<String> md5Hash;
 
-    public Output<String> md5Hash() {
-        return this.md5Hash == null ? Codegen.empty() : this.md5Hash;
+    public Optional<Output<String>> md5Hash() {
+        return Optional.ofNullable(this.md5Hash);
     }
 
     /**
@@ -254,10 +254,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mediaLink")
-      private final @Nullable Output<String> mediaLink;
+    private @Nullable Output<String> mediaLink;
 
-    public Output<String> mediaLink() {
-        return this.mediaLink == null ? Codegen.empty() : this.mediaLink;
+    public Optional<Output<String>> mediaLink() {
+        return Optional.ofNullable(this.mediaLink);
     }
 
     /**
@@ -265,10 +265,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -276,10 +276,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metageneration")
-      private final @Nullable Output<String> metageneration;
+    private @Nullable Output<String> metageneration;
 
-    public Output<String> metageneration() {
-        return this.metageneration == null ? Codegen.empty() : this.metageneration;
+    public Optional<Output<String>> metageneration() {
+        return Optional.ofNullable(this.metageneration);
     }
 
     /**
@@ -287,10 +287,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -298,31 +298,31 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<BucketObjectOwnerArgs> owner;
+    private @Nullable Output<BucketObjectOwnerArgs> owner;
 
-    public Output<BucketObjectOwnerArgs> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<BucketObjectOwnerArgs>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     @Import(name="predefinedAcl")
-      private final @Nullable Output<String> predefinedAcl;
+    private @Nullable Output<String> predefinedAcl;
 
-    public Output<String> predefinedAcl() {
-        return this.predefinedAcl == null ? Codegen.empty() : this.predefinedAcl;
+    public Optional<Output<String>> predefinedAcl() {
+        return Optional.ofNullable(this.predefinedAcl);
     }
 
     @Import(name="projection")
-      private final @Nullable Output<String> projection;
+    private @Nullable Output<String> projection;
 
-    public Output<String> projection() {
-        return this.projection == null ? Codegen.empty() : this.projection;
+    public Optional<Output<String>> projection() {
+        return Optional.ofNullable(this.projection);
     }
 
     @Import(name="provisionalUserProject")
-      private final @Nullable Output<String> provisionalUserProject;
+    private @Nullable Output<String> provisionalUserProject;
 
-    public Output<String> provisionalUserProject() {
-        return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
+    public Optional<Output<String>> provisionalUserProject() {
+        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     /**
@@ -330,10 +330,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionExpirationTime")
-      private final @Nullable Output<String> retentionExpirationTime;
+    private @Nullable Output<String> retentionExpirationTime;
 
-    public Output<String> retentionExpirationTime() {
-        return this.retentionExpirationTime == null ? Codegen.empty() : this.retentionExpirationTime;
+    public Optional<Output<String>> retentionExpirationTime() {
+        return Optional.ofNullable(this.retentionExpirationTime);
     }
 
     /**
@@ -341,10 +341,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -352,17 +352,17 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<String> size;
+    private @Nullable Output<String> size;
 
-    public Output<String> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<String>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     @Import(name="source")
-      private final @Nullable Output<AssetOrArchive> source;
+    private @Nullable Output<AssetOrArchive> source;
 
-    public Output<AssetOrArchive> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<AssetOrArchive>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -370,10 +370,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageClass")
-      private final @Nullable Output<String> storageClass;
+    private @Nullable Output<String> storageClass;
 
-    public Output<String> storageClass() {
-        return this.storageClass == null ? Codegen.empty() : this.storageClass;
+    public Optional<Output<String>> storageClass() {
+        return Optional.ofNullable(this.storageClass);
     }
 
     /**
@@ -381,10 +381,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="temporaryHold")
-      private final @Nullable Output<Boolean> temporaryHold;
+    private @Nullable Output<Boolean> temporaryHold;
 
-    public Output<Boolean> temporaryHold() {
-        return this.temporaryHold == null ? Codegen.empty() : this.temporaryHold;
+    public Optional<Output<Boolean>> temporaryHold() {
+        return Optional.ofNullable(this.temporaryHold);
     }
 
     /**
@@ -392,10 +392,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeCreated")
-      private final @Nullable Output<String> timeCreated;
+    private @Nullable Output<String> timeCreated;
 
-    public Output<String> timeCreated() {
-        return this.timeCreated == null ? Codegen.empty() : this.timeCreated;
+    public Optional<Output<String>> timeCreated() {
+        return Optional.ofNullable(this.timeCreated);
     }
 
     /**
@@ -403,10 +403,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeDeleted")
-      private final @Nullable Output<String> timeDeleted;
+    private @Nullable Output<String> timeDeleted;
 
-    public Output<String> timeDeleted() {
-        return this.timeDeleted == null ? Codegen.empty() : this.timeDeleted;
+    public Optional<Output<String>> timeDeleted() {
+        return Optional.ofNullable(this.timeDeleted);
     }
 
     /**
@@ -414,10 +414,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeStorageClassUpdated")
-      private final @Nullable Output<String> timeStorageClassUpdated;
+    private @Nullable Output<String> timeStorageClassUpdated;
 
-    public Output<String> timeStorageClassUpdated() {
-        return this.timeStorageClassUpdated == null ? Codegen.empty() : this.timeStorageClassUpdated;
+    public Optional<Output<String>> timeStorageClassUpdated() {
+        return Optional.ofNullable(this.timeStorageClassUpdated);
     }
 
     /**
@@ -425,580 +425,460 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updated")
-      private final @Nullable Output<String> updated;
+    private @Nullable Output<String> updated;
 
-    public Output<String> updated() {
-        return this.updated == null ? Codegen.empty() : this.updated;
+    public Optional<Output<String>> updated() {
+        return Optional.ofNullable(this.updated);
     }
 
     @Import(name="userProject")
-      private final @Nullable Output<String> userProject;
+    private @Nullable Output<String> userProject;
 
-    public Output<String> userProject() {
-        return this.userProject == null ? Codegen.empty() : this.userProject;
+    public Optional<Output<String>> userProject() {
+        return Optional.ofNullable(this.userProject);
     }
 
-    public BucketObjectArgs(
-        @Nullable Output<List<ObjectAccessControlArgs>> acl,
-        Output<String> bucket,
-        @Nullable Output<String> cacheControl,
-        @Nullable Output<Integer> componentCount,
-        @Nullable Output<String> contentDisposition,
-        @Nullable Output<String> contentEncoding,
-        @Nullable Output<String> contentLanguage,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> crc32c,
-        @Nullable Output<String> customTime,
-        @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption,
-        @Nullable Output<String> etag,
-        @Nullable Output<Boolean> eventBasedHold,
-        @Nullable Output<String> generation,
-        @Nullable Output<String> id,
-        @Nullable Output<String> ifGenerationMatch,
-        @Nullable Output<String> ifGenerationNotMatch,
-        @Nullable Output<String> ifMetagenerationMatch,
-        @Nullable Output<String> ifMetagenerationNotMatch,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> kmsKeyName,
-        @Nullable Output<String> md5Hash,
-        @Nullable Output<String> mediaLink,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> metageneration,
-        @Nullable Output<String> name,
-        @Nullable Output<BucketObjectOwnerArgs> owner,
-        @Nullable Output<String> predefinedAcl,
-        @Nullable Output<String> projection,
-        @Nullable Output<String> provisionalUserProject,
-        @Nullable Output<String> retentionExpirationTime,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> size,
-        @Nullable Output<AssetOrArchive> source,
-        @Nullable Output<String> storageClass,
-        @Nullable Output<Boolean> temporaryHold,
-        @Nullable Output<String> timeCreated,
-        @Nullable Output<String> timeDeleted,
-        @Nullable Output<String> timeStorageClassUpdated,
-        @Nullable Output<String> updated,
-        @Nullable Output<String> userProject) {
-        this.acl = acl;
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.cacheControl = cacheControl;
-        this.componentCount = componentCount;
-        this.contentDisposition = contentDisposition;
-        this.contentEncoding = contentEncoding;
-        this.contentLanguage = contentLanguage;
-        this.contentType = contentType;
-        this.crc32c = crc32c;
-        this.customTime = customTime;
-        this.customerEncryption = customerEncryption;
-        this.etag = etag;
-        this.eventBasedHold = eventBasedHold;
-        this.generation = generation;
-        this.id = id;
-        this.ifGenerationMatch = ifGenerationMatch;
-        this.ifGenerationNotMatch = ifGenerationNotMatch;
-        this.ifMetagenerationMatch = ifMetagenerationMatch;
-        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
-        this.kind = kind;
-        this.kmsKeyName = kmsKeyName;
-        this.md5Hash = md5Hash;
-        this.mediaLink = mediaLink;
-        this.metadata = metadata;
-        this.metageneration = metageneration;
-        this.name = name;
-        this.owner = owner;
-        this.predefinedAcl = predefinedAcl;
-        this.projection = projection;
-        this.provisionalUserProject = provisionalUserProject;
-        this.retentionExpirationTime = retentionExpirationTime;
-        this.selfLink = selfLink;
-        this.size = size;
-        this.source = source;
-        this.storageClass = storageClass;
-        this.temporaryHold = temporaryHold;
-        this.timeCreated = timeCreated;
-        this.timeDeleted = timeDeleted;
-        this.timeStorageClassUpdated = timeStorageClassUpdated;
-        this.updated = updated;
-        this.userProject = userProject;
-    }
+    private BucketObjectArgs() {}
 
-    private BucketObjectArgs() {
-        this.acl = Codegen.empty();
-        this.bucket = Codegen.empty();
-        this.cacheControl = Codegen.empty();
-        this.componentCount = Codegen.empty();
-        this.contentDisposition = Codegen.empty();
-        this.contentEncoding = Codegen.empty();
-        this.contentLanguage = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.crc32c = Codegen.empty();
-        this.customTime = Codegen.empty();
-        this.customerEncryption = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.eventBasedHold = Codegen.empty();
-        this.generation = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ifGenerationMatch = Codegen.empty();
-        this.ifGenerationNotMatch = Codegen.empty();
-        this.ifMetagenerationMatch = Codegen.empty();
-        this.ifMetagenerationNotMatch = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.kmsKeyName = Codegen.empty();
-        this.md5Hash = Codegen.empty();
-        this.mediaLink = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.metageneration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.predefinedAcl = Codegen.empty();
-        this.projection = Codegen.empty();
-        this.provisionalUserProject = Codegen.empty();
-        this.retentionExpirationTime = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.size = Codegen.empty();
-        this.source = Codegen.empty();
-        this.storageClass = Codegen.empty();
-        this.temporaryHold = Codegen.empty();
-        this.timeCreated = Codegen.empty();
-        this.timeDeleted = Codegen.empty();
-        this.timeStorageClassUpdated = Codegen.empty();
-        this.updated = Codegen.empty();
-        this.userProject = Codegen.empty();
+    private BucketObjectArgs(BucketObjectArgs $) {
+        this.acl = $.acl;
+        this.bucket = $.bucket;
+        this.cacheControl = $.cacheControl;
+        this.componentCount = $.componentCount;
+        this.contentDisposition = $.contentDisposition;
+        this.contentEncoding = $.contentEncoding;
+        this.contentLanguage = $.contentLanguage;
+        this.contentType = $.contentType;
+        this.crc32c = $.crc32c;
+        this.customTime = $.customTime;
+        this.customerEncryption = $.customerEncryption;
+        this.etag = $.etag;
+        this.eventBasedHold = $.eventBasedHold;
+        this.generation = $.generation;
+        this.id = $.id;
+        this.ifGenerationMatch = $.ifGenerationMatch;
+        this.ifGenerationNotMatch = $.ifGenerationNotMatch;
+        this.ifMetagenerationMatch = $.ifMetagenerationMatch;
+        this.ifMetagenerationNotMatch = $.ifMetagenerationNotMatch;
+        this.kind = $.kind;
+        this.kmsKeyName = $.kmsKeyName;
+        this.md5Hash = $.md5Hash;
+        this.mediaLink = $.mediaLink;
+        this.metadata = $.metadata;
+        this.metageneration = $.metageneration;
+        this.name = $.name;
+        this.owner = $.owner;
+        this.predefinedAcl = $.predefinedAcl;
+        this.projection = $.projection;
+        this.provisionalUserProject = $.provisionalUserProject;
+        this.retentionExpirationTime = $.retentionExpirationTime;
+        this.selfLink = $.selfLink;
+        this.size = $.size;
+        this.source = $.source;
+        this.storageClass = $.storageClass;
+        this.temporaryHold = $.temporaryHold;
+        this.timeCreated = $.timeCreated;
+        this.timeDeleted = $.timeDeleted;
+        this.timeStorageClassUpdated = $.timeStorageClassUpdated;
+        this.updated = $.updated;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ObjectAccessControlArgs>> acl;
-        private Output<String> bucket;
-        private @Nullable Output<String> cacheControl;
-        private @Nullable Output<Integer> componentCount;
-        private @Nullable Output<String> contentDisposition;
-        private @Nullable Output<String> contentEncoding;
-        private @Nullable Output<String> contentLanguage;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> crc32c;
-        private @Nullable Output<String> customTime;
-        private @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<Boolean> eventBasedHold;
-        private @Nullable Output<String> generation;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> ifGenerationMatch;
-        private @Nullable Output<String> ifGenerationNotMatch;
-        private @Nullable Output<String> ifMetagenerationMatch;
-        private @Nullable Output<String> ifMetagenerationNotMatch;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> kmsKeyName;
-        private @Nullable Output<String> md5Hash;
-        private @Nullable Output<String> mediaLink;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> metageneration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<BucketObjectOwnerArgs> owner;
-        private @Nullable Output<String> predefinedAcl;
-        private @Nullable Output<String> projection;
-        private @Nullable Output<String> provisionalUserProject;
-        private @Nullable Output<String> retentionExpirationTime;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> size;
-        private @Nullable Output<AssetOrArchive> source;
-        private @Nullable Output<String> storageClass;
-        private @Nullable Output<Boolean> temporaryHold;
-        private @Nullable Output<String> timeCreated;
-        private @Nullable Output<String> timeDeleted;
-        private @Nullable Output<String> timeStorageClassUpdated;
-        private @Nullable Output<String> updated;
-        private @Nullable Output<String> userProject;
+        private BucketObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectArgs();
         }
 
         public Builder(BucketObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acl = defaults.acl;
-    	      this.bucket = defaults.bucket;
-    	      this.cacheControl = defaults.cacheControl;
-    	      this.componentCount = defaults.componentCount;
-    	      this.contentDisposition = defaults.contentDisposition;
-    	      this.contentEncoding = defaults.contentEncoding;
-    	      this.contentLanguage = defaults.contentLanguage;
-    	      this.contentType = defaults.contentType;
-    	      this.crc32c = defaults.crc32c;
-    	      this.customTime = defaults.customTime;
-    	      this.customerEncryption = defaults.customerEncryption;
-    	      this.etag = defaults.etag;
-    	      this.eventBasedHold = defaults.eventBasedHold;
-    	      this.generation = defaults.generation;
-    	      this.id = defaults.id;
-    	      this.ifGenerationMatch = defaults.ifGenerationMatch;
-    	      this.ifGenerationNotMatch = defaults.ifGenerationNotMatch;
-    	      this.ifMetagenerationMatch = defaults.ifMetagenerationMatch;
-    	      this.ifMetagenerationNotMatch = defaults.ifMetagenerationNotMatch;
-    	      this.kind = defaults.kind;
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.md5Hash = defaults.md5Hash;
-    	      this.mediaLink = defaults.mediaLink;
-    	      this.metadata = defaults.metadata;
-    	      this.metageneration = defaults.metageneration;
-    	      this.name = defaults.name;
-    	      this.owner = defaults.owner;
-    	      this.predefinedAcl = defaults.predefinedAcl;
-    	      this.projection = defaults.projection;
-    	      this.provisionalUserProject = defaults.provisionalUserProject;
-    	      this.retentionExpirationTime = defaults.retentionExpirationTime;
-    	      this.selfLink = defaults.selfLink;
-    	      this.size = defaults.size;
-    	      this.source = defaults.source;
-    	      this.storageClass = defaults.storageClass;
-    	      this.temporaryHold = defaults.temporaryHold;
-    	      this.timeCreated = defaults.timeCreated;
-    	      this.timeDeleted = defaults.timeDeleted;
-    	      this.timeStorageClassUpdated = defaults.timeStorageClassUpdated;
-    	      this.updated = defaults.updated;
-    	      this.userProject = defaults.userProject;
+            $ = new BucketObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acl(@Nullable Output<List<ObjectAccessControlArgs>> acl) {
-            this.acl = acl;
+            $.acl = acl;
             return this;
         }
-        public Builder acl(@Nullable List<ObjectAccessControlArgs> acl) {
-            this.acl = Codegen.ofNullable(acl);
-            return this;
+
+        public Builder acl(List<ObjectAccessControlArgs> acl) {
+            return acl(Output.of(acl));
         }
+
         public Builder acl(ObjectAccessControlArgs... acl) {
             return acl(List.of(acl));
         }
+
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder cacheControl(@Nullable Output<String> cacheControl) {
-            this.cacheControl = cacheControl;
+            $.cacheControl = cacheControl;
             return this;
         }
-        public Builder cacheControl(@Nullable String cacheControl) {
-            this.cacheControl = Codegen.ofNullable(cacheControl);
-            return this;
+
+        public Builder cacheControl(String cacheControl) {
+            return cacheControl(Output.of(cacheControl));
         }
+
         public Builder componentCount(@Nullable Output<Integer> componentCount) {
-            this.componentCount = componentCount;
+            $.componentCount = componentCount;
             return this;
         }
-        public Builder componentCount(@Nullable Integer componentCount) {
-            this.componentCount = Codegen.ofNullable(componentCount);
-            return this;
+
+        public Builder componentCount(Integer componentCount) {
+            return componentCount(Output.of(componentCount));
         }
+
         public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
-            this.contentDisposition = contentDisposition;
+            $.contentDisposition = contentDisposition;
             return this;
         }
-        public Builder contentDisposition(@Nullable String contentDisposition) {
-            this.contentDisposition = Codegen.ofNullable(contentDisposition);
-            return this;
+
+        public Builder contentDisposition(String contentDisposition) {
+            return contentDisposition(Output.of(contentDisposition));
         }
+
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
-            this.contentEncoding = contentEncoding;
+            $.contentEncoding = contentEncoding;
             return this;
         }
-        public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = Codegen.ofNullable(contentEncoding);
-            return this;
+
+        public Builder contentEncoding(String contentEncoding) {
+            return contentEncoding(Output.of(contentEncoding));
         }
+
         public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
-            this.contentLanguage = contentLanguage;
+            $.contentLanguage = contentLanguage;
             return this;
         }
-        public Builder contentLanguage(@Nullable String contentLanguage) {
-            this.contentLanguage = Codegen.ofNullable(contentLanguage);
-            return this;
+
+        public Builder contentLanguage(String contentLanguage) {
+            return contentLanguage(Output.of(contentLanguage));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder crc32c(@Nullable Output<String> crc32c) {
-            this.crc32c = crc32c;
+            $.crc32c = crc32c;
             return this;
         }
-        public Builder crc32c(@Nullable String crc32c) {
-            this.crc32c = Codegen.ofNullable(crc32c);
-            return this;
+
+        public Builder crc32c(String crc32c) {
+            return crc32c(Output.of(crc32c));
         }
+
         public Builder customTime(@Nullable Output<String> customTime) {
-            this.customTime = customTime;
+            $.customTime = customTime;
             return this;
         }
-        public Builder customTime(@Nullable String customTime) {
-            this.customTime = Codegen.ofNullable(customTime);
-            return this;
+
+        public Builder customTime(String customTime) {
+            return customTime(Output.of(customTime));
         }
+
         public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption) {
-            this.customerEncryption = customerEncryption;
+            $.customerEncryption = customerEncryption;
             return this;
         }
-        public Builder customerEncryption(@Nullable BucketObjectCustomerEncryptionArgs customerEncryption) {
-            this.customerEncryption = Codegen.ofNullable(customerEncryption);
-            return this;
+
+        public Builder customerEncryption(BucketObjectCustomerEncryptionArgs customerEncryption) {
+            return customerEncryption(Output.of(customerEncryption));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder eventBasedHold(@Nullable Output<Boolean> eventBasedHold) {
-            this.eventBasedHold = eventBasedHold;
+            $.eventBasedHold = eventBasedHold;
             return this;
         }
-        public Builder eventBasedHold(@Nullable Boolean eventBasedHold) {
-            this.eventBasedHold = Codegen.ofNullable(eventBasedHold);
-            return this;
+
+        public Builder eventBasedHold(Boolean eventBasedHold) {
+            return eventBasedHold(Output.of(eventBasedHold));
         }
+
         public Builder generation(@Nullable Output<String> generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
-        public Builder generation(@Nullable String generation) {
-            this.generation = Codegen.ofNullable(generation);
-            return this;
+
+        public Builder generation(String generation) {
+            return generation(Output.of(generation));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ifGenerationMatch(@Nullable Output<String> ifGenerationMatch) {
-            this.ifGenerationMatch = ifGenerationMatch;
+            $.ifGenerationMatch = ifGenerationMatch;
             return this;
         }
-        public Builder ifGenerationMatch(@Nullable String ifGenerationMatch) {
-            this.ifGenerationMatch = Codegen.ofNullable(ifGenerationMatch);
-            return this;
+
+        public Builder ifGenerationMatch(String ifGenerationMatch) {
+            return ifGenerationMatch(Output.of(ifGenerationMatch));
         }
+
         public Builder ifGenerationNotMatch(@Nullable Output<String> ifGenerationNotMatch) {
-            this.ifGenerationNotMatch = ifGenerationNotMatch;
+            $.ifGenerationNotMatch = ifGenerationNotMatch;
             return this;
         }
-        public Builder ifGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
-            this.ifGenerationNotMatch = Codegen.ofNullable(ifGenerationNotMatch);
-            return this;
+
+        public Builder ifGenerationNotMatch(String ifGenerationNotMatch) {
+            return ifGenerationNotMatch(Output.of(ifGenerationNotMatch));
         }
+
         public Builder ifMetagenerationMatch(@Nullable Output<String> ifMetagenerationMatch) {
-            this.ifMetagenerationMatch = ifMetagenerationMatch;
+            $.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
-        public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
-            this.ifMetagenerationMatch = Codegen.ofNullable(ifMetagenerationMatch);
-            return this;
+
+        public Builder ifMetagenerationMatch(String ifMetagenerationMatch) {
+            return ifMetagenerationMatch(Output.of(ifMetagenerationMatch));
         }
+
         public Builder ifMetagenerationNotMatch(@Nullable Output<String> ifMetagenerationNotMatch) {
-            this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+            $.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
-        public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
-            this.ifMetagenerationNotMatch = Codegen.ofNullable(ifMetagenerationNotMatch);
-            return this;
+
+        public Builder ifMetagenerationNotMatch(String ifMetagenerationNotMatch) {
+            return ifMetagenerationNotMatch(Output.of(ifMetagenerationNotMatch));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder md5Hash(@Nullable Output<String> md5Hash) {
-            this.md5Hash = md5Hash;
+            $.md5Hash = md5Hash;
             return this;
         }
-        public Builder md5Hash(@Nullable String md5Hash) {
-            this.md5Hash = Codegen.ofNullable(md5Hash);
-            return this;
+
+        public Builder md5Hash(String md5Hash) {
+            return md5Hash(Output.of(md5Hash));
         }
+
         public Builder mediaLink(@Nullable Output<String> mediaLink) {
-            this.mediaLink = mediaLink;
+            $.mediaLink = mediaLink;
             return this;
         }
-        public Builder mediaLink(@Nullable String mediaLink) {
-            this.mediaLink = Codegen.ofNullable(mediaLink);
-            return this;
+
+        public Builder mediaLink(String mediaLink) {
+            return mediaLink(Output.of(mediaLink));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder metageneration(@Nullable Output<String> metageneration) {
-            this.metageneration = metageneration;
+            $.metageneration = metageneration;
             return this;
         }
-        public Builder metageneration(@Nullable String metageneration) {
-            this.metageneration = Codegen.ofNullable(metageneration);
-            return this;
+
+        public Builder metageneration(String metageneration) {
+            return metageneration(Output.of(metageneration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder owner(@Nullable Output<BucketObjectOwnerArgs> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable BucketObjectOwnerArgs owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(BucketObjectOwnerArgs owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
-            this.predefinedAcl = predefinedAcl;
+            $.predefinedAcl = predefinedAcl;
             return this;
         }
-        public Builder predefinedAcl(@Nullable String predefinedAcl) {
-            this.predefinedAcl = Codegen.ofNullable(predefinedAcl);
-            return this;
+
+        public Builder predefinedAcl(String predefinedAcl) {
+            return predefinedAcl(Output.of(predefinedAcl));
         }
+
         public Builder projection(@Nullable Output<String> projection) {
-            this.projection = projection;
+            $.projection = projection;
             return this;
         }
-        public Builder projection(@Nullable String projection) {
-            this.projection = Codegen.ofNullable(projection);
-            return this;
+
+        public Builder projection(String projection) {
+            return projection(Output.of(projection));
         }
+
         public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
-            this.provisionalUserProject = provisionalUserProject;
+            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
-        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = Codegen.ofNullable(provisionalUserProject);
-            return this;
+
+        public Builder provisionalUserProject(String provisionalUserProject) {
+            return provisionalUserProject(Output.of(provisionalUserProject));
         }
+
         public Builder retentionExpirationTime(@Nullable Output<String> retentionExpirationTime) {
-            this.retentionExpirationTime = retentionExpirationTime;
+            $.retentionExpirationTime = retentionExpirationTime;
             return this;
         }
-        public Builder retentionExpirationTime(@Nullable String retentionExpirationTime) {
-            this.retentionExpirationTime = Codegen.ofNullable(retentionExpirationTime);
-            return this;
+
+        public Builder retentionExpirationTime(String retentionExpirationTime) {
+            return retentionExpirationTime(Output.of(retentionExpirationTime));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder size(@Nullable Output<String> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable String size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(String size) {
+            return size(Output.of(size));
         }
+
         public Builder source(@Nullable Output<AssetOrArchive> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(AssetOrArchive source) {
+            return source(Output.of(source));
         }
+
         public Builder storageClass(@Nullable Output<String> storageClass) {
-            this.storageClass = storageClass;
+            $.storageClass = storageClass;
             return this;
         }
-        public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Codegen.ofNullable(storageClass);
-            return this;
+
+        public Builder storageClass(String storageClass) {
+            return storageClass(Output.of(storageClass));
         }
+
         public Builder temporaryHold(@Nullable Output<Boolean> temporaryHold) {
-            this.temporaryHold = temporaryHold;
+            $.temporaryHold = temporaryHold;
             return this;
         }
-        public Builder temporaryHold(@Nullable Boolean temporaryHold) {
-            this.temporaryHold = Codegen.ofNullable(temporaryHold);
-            return this;
+
+        public Builder temporaryHold(Boolean temporaryHold) {
+            return temporaryHold(Output.of(temporaryHold));
         }
+
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
-            this.timeCreated = timeCreated;
+            $.timeCreated = timeCreated;
             return this;
         }
-        public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = Codegen.ofNullable(timeCreated);
-            return this;
+
+        public Builder timeCreated(String timeCreated) {
+            return timeCreated(Output.of(timeCreated));
         }
+
         public Builder timeDeleted(@Nullable Output<String> timeDeleted) {
-            this.timeDeleted = timeDeleted;
+            $.timeDeleted = timeDeleted;
             return this;
         }
-        public Builder timeDeleted(@Nullable String timeDeleted) {
-            this.timeDeleted = Codegen.ofNullable(timeDeleted);
-            return this;
+
+        public Builder timeDeleted(String timeDeleted) {
+            return timeDeleted(Output.of(timeDeleted));
         }
+
         public Builder timeStorageClassUpdated(@Nullable Output<String> timeStorageClassUpdated) {
-            this.timeStorageClassUpdated = timeStorageClassUpdated;
+            $.timeStorageClassUpdated = timeStorageClassUpdated;
             return this;
         }
-        public Builder timeStorageClassUpdated(@Nullable String timeStorageClassUpdated) {
-            this.timeStorageClassUpdated = Codegen.ofNullable(timeStorageClassUpdated);
-            return this;
+
+        public Builder timeStorageClassUpdated(String timeStorageClassUpdated) {
+            return timeStorageClassUpdated(Output.of(timeStorageClassUpdated));
         }
+
         public Builder updated(@Nullable Output<String> updated) {
-            this.updated = updated;
+            $.updated = updated;
             return this;
         }
-        public Builder updated(@Nullable String updated) {
-            this.updated = Codegen.ofNullable(updated);
-            return this;
+
+        public Builder updated(String updated) {
+            return updated(Output.of(updated));
         }
+
         public Builder userProject(@Nullable Output<String> userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
         }
-        public Builder userProject(@Nullable String userProject) {
-            this.userProject = Codegen.ofNullable(userProject);
-            return this;
-        }        public BucketObjectArgs build() {
-            return new BucketObjectArgs(acl, bucket, cacheControl, componentCount, contentDisposition, contentEncoding, contentLanguage, contentType, crc32c, customTime, customerEncryption, etag, eventBasedHold, generation, id, ifGenerationMatch, ifGenerationNotMatch, ifMetagenerationMatch, ifMetagenerationNotMatch, kind, kmsKeyName, md5Hash, mediaLink, metadata, metageneration, name, owner, predefinedAcl, projection, provisionalUserProject, retentionExpirationTime, selfLink, size, source, storageClass, temporaryHold, timeCreated, timeDeleted, timeStorageClassUpdated, updated, userProject);
+
+        public Builder userProject(String userProject) {
+            return userProject(Output.of(userProject));
+        }
+
+        public BucketObjectArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

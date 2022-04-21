@@ -7,8 +7,8 @@ import com.pulumi.azurenative.datalakestore.enums.EncryptionConfigType;
 import com.pulumi.azurenative.datalakestore.inputs.KeyVaultMetaInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="keyVaultMetaInfo")
-      private final @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
+    private @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
 
-    public Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo() {
-        return this.keyVaultMetaInfo == null ? Codegen.empty() : this.keyVaultMetaInfo;
+    public Optional<Output<KeyVaultMetaInfoArgs>> keyVaultMetaInfo() {
+        return Optional.ofNullable(this.keyVaultMetaInfo);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class EncryptionConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="type", required=true)
-      private final Output<EncryptionConfigType> type;
+    private Output<EncryptionConfigType> type;
 
     public Output<EncryptionConfigType> type() {
         return this.type;
     }
 
-    public EncryptionConfigArgs(
-        @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo,
-        Output<EncryptionConfigType> type) {
-        this.keyVaultMetaInfo = keyVaultMetaInfo;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private EncryptionConfigArgs() {}
 
-    private EncryptionConfigArgs() {
-        this.keyVaultMetaInfo = Codegen.empty();
-        this.type = Codegen.empty();
+    private EncryptionConfigArgs(EncryptionConfigArgs $) {
+        this.keyVaultMetaInfo = $.keyVaultMetaInfo;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
-        private Output<EncryptionConfigType> type;
+        private EncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionConfigArgs();
         }
 
         public Builder(EncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultMetaInfo = defaults.keyVaultMetaInfo;
-    	      this.type = defaults.type;
+            $ = new EncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultMetaInfo(@Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo) {
-            this.keyVaultMetaInfo = keyVaultMetaInfo;
+            $.keyVaultMetaInfo = keyVaultMetaInfo;
             return this;
         }
-        public Builder keyVaultMetaInfo(@Nullable KeyVaultMetaInfoArgs keyVaultMetaInfo) {
-            this.keyVaultMetaInfo = Codegen.ofNullable(keyVaultMetaInfo);
-            return this;
+
+        public Builder keyVaultMetaInfo(KeyVaultMetaInfoArgs keyVaultMetaInfo) {
+            return keyVaultMetaInfo(Output.of(keyVaultMetaInfo));
         }
+
         public Builder type(Output<EncryptionConfigType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(EncryptionConfigType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public EncryptionConfigArgs build() {
-            return new EncryptionConfigArgs(keyVaultMetaInfo, type);
+            return type(Output.of(type));
+        }
+
+        public EncryptionConfigArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

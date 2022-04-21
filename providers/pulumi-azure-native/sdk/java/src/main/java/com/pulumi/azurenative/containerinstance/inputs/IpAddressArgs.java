@@ -8,10 +8,10 @@ import com.pulumi.azurenative.containerinstance.inputs.PortArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsNameLabel")
-      private final @Nullable Output<String> dnsNameLabel;
+    private @Nullable Output<String> dnsNameLabel;
 
-    public Output<String> dnsNameLabel() {
-        return this.dnsNameLabel == null ? Codegen.empty() : this.dnsNameLabel;
+    public Optional<Output<String>> dnsNameLabel() {
+        return Optional.ofNullable(this.dnsNameLabel);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<String> ip;
+    private @Nullable Output<String> ip;
 
-    public Output<String> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ports", required=true)
-      private final Output<List<PortArgs>> ports;
+    private Output<List<PortArgs>> ports;
 
     public Output<List<PortArgs>> ports() {
         return this.ports;
@@ -61,92 +61,84 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,ContainerGroupIpAddressType>> type;
+    private Output<Either<String,ContainerGroupIpAddressType>> type;
 
     public Output<Either<String,ContainerGroupIpAddressType>> type() {
         return this.type;
     }
 
-    public IpAddressArgs(
-        @Nullable Output<String> dnsNameLabel,
-        @Nullable Output<String> ip,
-        Output<List<PortArgs>> ports,
-        Output<Either<String,ContainerGroupIpAddressType>> type) {
-        this.dnsNameLabel = dnsNameLabel;
-        this.ip = ip;
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private IpAddressArgs() {}
 
-    private IpAddressArgs() {
-        this.dnsNameLabel = Codegen.empty();
-        this.ip = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.type = Codegen.empty();
+    private IpAddressArgs(IpAddressArgs $) {
+        this.dnsNameLabel = $.dnsNameLabel;
+        this.ip = $.ip;
+        this.ports = $.ports;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dnsNameLabel;
-        private @Nullable Output<String> ip;
-        private Output<List<PortArgs>> ports;
-        private Output<Either<String,ContainerGroupIpAddressType>> type;
+        private IpAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpAddressArgs();
         }
 
         public Builder(IpAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsNameLabel = defaults.dnsNameLabel;
-    	      this.ip = defaults.ip;
-    	      this.ports = defaults.ports;
-    	      this.type = defaults.type;
+            $ = new IpAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsNameLabel(@Nullable Output<String> dnsNameLabel) {
-            this.dnsNameLabel = dnsNameLabel;
+            $.dnsNameLabel = dnsNameLabel;
             return this;
         }
-        public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
-            this.dnsNameLabel = Codegen.ofNullable(dnsNameLabel);
-            return this;
+
+        public Builder dnsNameLabel(String dnsNameLabel) {
+            return dnsNameLabel(Output.of(dnsNameLabel));
         }
+
         public Builder ip(@Nullable Output<String> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable String ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
+
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
         }
+
         public Builder ports(Output<List<PortArgs>> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(List<PortArgs> ports) {
-            this.ports = Output.of(Objects.requireNonNull(ports));
-            return this;
+            return ports(Output.of(ports));
         }
+
         public Builder ports(PortArgs... ports) {
             return ports(List.of(ports));
         }
+
         public Builder type(Output<Either<String,ContainerGroupIpAddressType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,ContainerGroupIpAddressType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public IpAddressArgs build() {
-            return new IpAddressArgs(dnsNameLabel, ip, ports, type);
+            return type(Output.of(type));
+        }
+
+        public IpAddressArgs build() {
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,45 +15,44 @@ public final class FindingsFilterFindingCriteria extends com.pulumi.resources.In
     public static final FindingsFilterFindingCriteria Empty = new FindingsFilterFindingCriteria();
 
     @Import(name="criterion")
-      private final @Nullable FindingsFilterCriterion criterion;
+    private @Nullable FindingsFilterCriterion criterion;
 
     public Optional<FindingsFilterCriterion> criterion() {
-        return this.criterion == null ? Optional.empty() : Optional.ofNullable(this.criterion);
+        return Optional.ofNullable(this.criterion);
     }
 
-    public FindingsFilterFindingCriteria(@Nullable FindingsFilterCriterion criterion) {
-        this.criterion = criterion;
-    }
+    private FindingsFilterFindingCriteria() {}
 
-    private FindingsFilterFindingCriteria() {
-        this.criterion = null;
+    private FindingsFilterFindingCriteria(FindingsFilterFindingCriteria $) {
+        this.criterion = $.criterion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FindingsFilterFindingCriteria defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable FindingsFilterCriterion criterion;
+        private FindingsFilterFindingCriteria $;
 
         public Builder() {
-    	      // Empty
+            $ = new FindingsFilterFindingCriteria();
         }
 
         public Builder(FindingsFilterFindingCriteria defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.criterion = defaults.criterion;
+            $ = new FindingsFilterFindingCriteria(Objects.requireNonNull(defaults));
         }
 
         public Builder criterion(@Nullable FindingsFilterCriterion criterion) {
-            this.criterion = criterion;
+            $.criterion = criterion;
             return this;
-        }        public FindingsFilterFindingCriteria build() {
-            return new FindingsFilterFindingCriteria(criterion);
+        }
+
+        public FindingsFilterFindingCriteria build() {
+            return $;
         }
     }
+
 }

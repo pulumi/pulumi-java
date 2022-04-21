@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="infoTypes")
-      private final @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes;
+    private @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes;
 
-    public Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes() {
-        return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
+    public Optional<Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>>> infoTypes() {
+        return Optional.ofNullable(this.infoTypes);
     }
 
     /**
@@ -36,66 +36,63 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="primitiveTransformation", required=true)
-      private final Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation;
+    private Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation() {
         return this.primitiveTransformation;
     }
 
-    public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(
-        @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes,
-        Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation) {
-        this.infoTypes = infoTypes;
-        this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation, "expected parameter 'primitiveTransformation' to be non-null");
-    }
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs() {}
 
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs() {
-        this.infoTypes = Codegen.empty();
-        this.primitiveTransformation = Codegen.empty();
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs $) {
+        this.infoTypes = $.infoTypes;
+        this.primitiveTransformation = $.primitiveTransformation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes;
-        private Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation;
+        private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs();
         }
 
         public Builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypes = defaults.infoTypes;
-    	      this.primitiveTransformation = defaults.primitiveTransformation;
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypes(@Nullable Output<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes) {
-            this.infoTypes = infoTypes;
+            $.infoTypes = infoTypes;
             return this;
         }
-        public Builder infoTypes(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs> infoTypes) {
-            this.infoTypes = Codegen.ofNullable(infoTypes);
-            return this;
+
+        public Builder infoTypes(List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs> infoTypes) {
+            return infoTypes(Output.of(infoTypes));
         }
+
         public Builder infoTypes(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
+
         public Builder primitiveTransformation(Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation) {
-            this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
+            $.primitiveTransformation = primitiveTransformation;
             return this;
         }
+
         public Builder primitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs primitiveTransformation) {
-            this.primitiveTransformation = Output.of(Objects.requireNonNull(primitiveTransformation));
-            return this;
-        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs build() {
-            return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs(infoTypes, primitiveTransformation);
+            return primitiveTransformation(Output.of(primitiveTransformation));
+        }
+
+        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs build() {
+            $.primitiveTransformation = Objects.requireNonNull($.primitiveTransformation, "expected parameter 'primitiveTransformation' to be non-null");
+            return $;
         }
     }
+
 }

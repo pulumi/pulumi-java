@@ -15,45 +15,44 @@ public final class DatastoreIotSiteWiseMultiLayerStorage extends com.pulumi.reso
     public static final DatastoreIotSiteWiseMultiLayerStorage Empty = new DatastoreIotSiteWiseMultiLayerStorage();
 
     @Import(name="customerManagedS3Storage")
-      private final @Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage;
+    private @Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage;
 
     public Optional<DatastoreCustomerManagedS3Storage> customerManagedS3Storage() {
-        return this.customerManagedS3Storage == null ? Optional.empty() : Optional.ofNullable(this.customerManagedS3Storage);
+        return Optional.ofNullable(this.customerManagedS3Storage);
     }
 
-    public DatastoreIotSiteWiseMultiLayerStorage(@Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage) {
-        this.customerManagedS3Storage = customerManagedS3Storage;
-    }
+    private DatastoreIotSiteWiseMultiLayerStorage() {}
 
-    private DatastoreIotSiteWiseMultiLayerStorage() {
-        this.customerManagedS3Storage = null;
+    private DatastoreIotSiteWiseMultiLayerStorage(DatastoreIotSiteWiseMultiLayerStorage $) {
+        this.customerManagedS3Storage = $.customerManagedS3Storage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastoreIotSiteWiseMultiLayerStorage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage;
+        private DatastoreIotSiteWiseMultiLayerStorage $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastoreIotSiteWiseMultiLayerStorage();
         }
 
         public Builder(DatastoreIotSiteWiseMultiLayerStorage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerManagedS3Storage = defaults.customerManagedS3Storage;
+            $ = new DatastoreIotSiteWiseMultiLayerStorage(Objects.requireNonNull(defaults));
         }
 
         public Builder customerManagedS3Storage(@Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage) {
-            this.customerManagedS3Storage = customerManagedS3Storage;
+            $.customerManagedS3Storage = customerManagedS3Storage;
             return this;
-        }        public DatastoreIotSiteWiseMultiLayerStorage build() {
-            return new DatastoreIotSiteWiseMultiLayerStorage(customerManagedS3Storage);
+        }
+
+        public DatastoreIotSiteWiseMultiLayerStorage build() {
+            return $;
         }
     }
+
 }

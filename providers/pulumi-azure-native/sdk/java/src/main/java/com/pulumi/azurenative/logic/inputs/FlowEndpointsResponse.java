@@ -24,10 +24,10 @@ public final class FlowEndpointsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="accessEndpointIpAddresses")
-      private final @Nullable List<IpAddressResponse> accessEndpointIpAddresses;
+    private @Nullable List<IpAddressResponse> accessEndpointIpAddresses;
 
-    public List<IpAddressResponse> accessEndpointIpAddresses() {
-        return this.accessEndpointIpAddresses == null ? List.of() : this.accessEndpointIpAddresses;
+    public Optional<List<IpAddressResponse>> accessEndpointIpAddresses() {
+        return Optional.ofNullable(this.accessEndpointIpAddresses);
     }
 
     /**
@@ -35,61 +35,58 @@ public final class FlowEndpointsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="outgoingIpAddresses")
-      private final @Nullable List<IpAddressResponse> outgoingIpAddresses;
+    private @Nullable List<IpAddressResponse> outgoingIpAddresses;
 
-    public List<IpAddressResponse> outgoingIpAddresses() {
-        return this.outgoingIpAddresses == null ? List.of() : this.outgoingIpAddresses;
+    public Optional<List<IpAddressResponse>> outgoingIpAddresses() {
+        return Optional.ofNullable(this.outgoingIpAddresses);
     }
 
-    public FlowEndpointsResponse(
-        @Nullable List<IpAddressResponse> accessEndpointIpAddresses,
-        @Nullable List<IpAddressResponse> outgoingIpAddresses) {
-        this.accessEndpointIpAddresses = accessEndpointIpAddresses;
-        this.outgoingIpAddresses = outgoingIpAddresses;
-    }
+    private FlowEndpointsResponse() {}
 
-    private FlowEndpointsResponse() {
-        this.accessEndpointIpAddresses = List.of();
-        this.outgoingIpAddresses = List.of();
+    private FlowEndpointsResponse(FlowEndpointsResponse $) {
+        this.accessEndpointIpAddresses = $.accessEndpointIpAddresses;
+        this.outgoingIpAddresses = $.outgoingIpAddresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowEndpointsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<IpAddressResponse> accessEndpointIpAddresses;
-        private @Nullable List<IpAddressResponse> outgoingIpAddresses;
+        private FlowEndpointsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowEndpointsResponse();
         }
 
         public Builder(FlowEndpointsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessEndpointIpAddresses = defaults.accessEndpointIpAddresses;
-    	      this.outgoingIpAddresses = defaults.outgoingIpAddresses;
+            $ = new FlowEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessEndpointIpAddresses(@Nullable List<IpAddressResponse> accessEndpointIpAddresses) {
-            this.accessEndpointIpAddresses = accessEndpointIpAddresses;
+            $.accessEndpointIpAddresses = accessEndpointIpAddresses;
             return this;
         }
+
         public Builder accessEndpointIpAddresses(IpAddressResponse... accessEndpointIpAddresses) {
             return accessEndpointIpAddresses(List.of(accessEndpointIpAddresses));
         }
+
         public Builder outgoingIpAddresses(@Nullable List<IpAddressResponse> outgoingIpAddresses) {
-            this.outgoingIpAddresses = outgoingIpAddresses;
+            $.outgoingIpAddresses = outgoingIpAddresses;
             return this;
         }
+
         public Builder outgoingIpAddresses(IpAddressResponse... outgoingIpAddresses) {
             return outgoingIpAddresses(List.of(outgoingIpAddresses));
-        }        public FlowEndpointsResponse build() {
-            return new FlowEndpointsResponse(accessEndpointIpAddresses, outgoingIpAddresses);
+        }
+
+        public FlowEndpointsResponse build() {
+            return $;
         }
     }
+
 }

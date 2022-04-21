@@ -6,11 +6,11 @@ package com.pulumi.awsnative.elasticache;
 import com.pulumi.awsnative.elasticache.enums.UserEngine;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessString")
-      private final @Nullable Output<String> accessString;
+    private @Nullable Output<String> accessString;
 
-    public Output<String> accessString() {
-        return this.accessString == null ? Codegen.empty() : this.accessString;
+    public Optional<Output<String>> accessString() {
+        return Optional.ofNullable(this.accessString);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engine", required=true)
-      private final Output<UserEngine> engine;
+    private Output<UserEngine> engine;
 
     public Output<UserEngine> engine() {
         return this.engine;
@@ -45,10 +45,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="noPasswordRequired")
-      private final @Nullable Output<Boolean> noPasswordRequired;
+    private @Nullable Output<Boolean> noPasswordRequired;
 
-    public Output<Boolean> noPasswordRequired() {
-        return this.noPasswordRequired == null ? Codegen.empty() : this.noPasswordRequired;
+    public Optional<Output<Boolean>> noPasswordRequired() {
+        return Optional.ofNullable(this.noPasswordRequired);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="passwords")
-      private final @Nullable Output<List<String>> passwords;
+    private @Nullable Output<List<String>> passwords;
 
-    public Output<List<String>> passwords() {
-        return this.passwords == null ? Codegen.empty() : this.passwords;
+    public Optional<Output<List<String>>> passwords() {
+        return Optional.ofNullable(this.passwords);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
@@ -78,118 +78,104 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public UserArgs(
-        @Nullable Output<String> accessString,
-        Output<UserEngine> engine,
-        @Nullable Output<Boolean> noPasswordRequired,
-        @Nullable Output<List<String>> passwords,
-        Output<String> userId,
-        @Nullable Output<String> userName) {
-        this.accessString = accessString;
-        this.engine = Objects.requireNonNull(engine, "expected parameter 'engine' to be non-null");
-        this.noPasswordRequired = noPasswordRequired;
-        this.passwords = passwords;
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-        this.userName = userName;
-    }
+    private UserArgs() {}
 
-    private UserArgs() {
-        this.accessString = Codegen.empty();
-        this.engine = Codegen.empty();
-        this.noPasswordRequired = Codegen.empty();
-        this.passwords = Codegen.empty();
-        this.userId = Codegen.empty();
-        this.userName = Codegen.empty();
+    private UserArgs(UserArgs $) {
+        this.accessString = $.accessString;
+        this.engine = $.engine;
+        this.noPasswordRequired = $.noPasswordRequired;
+        this.passwords = $.passwords;
+        this.userId = $.userId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessString;
-        private Output<UserEngine> engine;
-        private @Nullable Output<Boolean> noPasswordRequired;
-        private @Nullable Output<List<String>> passwords;
-        private Output<String> userId;
-        private @Nullable Output<String> userName;
+        private UserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArgs();
         }
 
         public Builder(UserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessString = defaults.accessString;
-    	      this.engine = defaults.engine;
-    	      this.noPasswordRequired = defaults.noPasswordRequired;
-    	      this.passwords = defaults.passwords;
-    	      this.userId = defaults.userId;
-    	      this.userName = defaults.userName;
+            $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessString(@Nullable Output<String> accessString) {
-            this.accessString = accessString;
+            $.accessString = accessString;
             return this;
         }
-        public Builder accessString(@Nullable String accessString) {
-            this.accessString = Codegen.ofNullable(accessString);
-            return this;
+
+        public Builder accessString(String accessString) {
+            return accessString(Output.of(accessString));
         }
+
         public Builder engine(Output<UserEngine> engine) {
-            this.engine = Objects.requireNonNull(engine);
+            $.engine = engine;
             return this;
         }
+
         public Builder engine(UserEngine engine) {
-            this.engine = Output.of(Objects.requireNonNull(engine));
-            return this;
+            return engine(Output.of(engine));
         }
+
         public Builder noPasswordRequired(@Nullable Output<Boolean> noPasswordRequired) {
-            this.noPasswordRequired = noPasswordRequired;
+            $.noPasswordRequired = noPasswordRequired;
             return this;
         }
-        public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
-            this.noPasswordRequired = Codegen.ofNullable(noPasswordRequired);
-            return this;
+
+        public Builder noPasswordRequired(Boolean noPasswordRequired) {
+            return noPasswordRequired(Output.of(noPasswordRequired));
         }
+
         public Builder passwords(@Nullable Output<List<String>> passwords) {
-            this.passwords = passwords;
+            $.passwords = passwords;
             return this;
         }
-        public Builder passwords(@Nullable List<String> passwords) {
-            this.passwords = Codegen.ofNullable(passwords);
-            return this;
+
+        public Builder passwords(List<String> passwords) {
+            return passwords(Output.of(passwords));
         }
+
         public Builder passwords(String... passwords) {
             return passwords(List.of(passwords));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
+            return userId(Output.of(userId));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public UserArgs build() {
-            return new UserArgs(accessString, engine, noPasswordRequired, passwords, userId, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public UserArgs build() {
+            $.engine = Objects.requireNonNull($.engine, "expected parameter 'engine' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

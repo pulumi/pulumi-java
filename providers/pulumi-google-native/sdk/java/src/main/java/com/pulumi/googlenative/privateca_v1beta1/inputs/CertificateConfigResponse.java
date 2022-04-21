@@ -23,7 +23,7 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publicKey", required=true)
-      private final PublicKeyResponse publicKey;
+    private PublicKeyResponse publicKey;
 
     public PublicKeyResponse publicKey() {
         return this.publicKey;
@@ -34,7 +34,7 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="reusableConfig", required=true)
-      private final ReusableConfigWrapperResponse reusableConfig;
+    private ReusableConfigWrapperResponse reusableConfig;
 
     public ReusableConfigWrapperResponse reusableConfig() {
         return this.reusableConfig;
@@ -45,64 +45,59 @@ public final class CertificateConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="subjectConfig", required=true)
-      private final SubjectConfigResponse subjectConfig;
+    private SubjectConfigResponse subjectConfig;
 
     public SubjectConfigResponse subjectConfig() {
         return this.subjectConfig;
     }
 
-    public CertificateConfigResponse(
-        PublicKeyResponse publicKey,
-        ReusableConfigWrapperResponse reusableConfig,
-        SubjectConfigResponse subjectConfig) {
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-        this.reusableConfig = Objects.requireNonNull(reusableConfig, "expected parameter 'reusableConfig' to be non-null");
-        this.subjectConfig = Objects.requireNonNull(subjectConfig, "expected parameter 'subjectConfig' to be non-null");
-    }
+    private CertificateConfigResponse() {}
 
-    private CertificateConfigResponse() {
-        this.publicKey = null;
-        this.reusableConfig = null;
-        this.subjectConfig = null;
+    private CertificateConfigResponse(CertificateConfigResponse $) {
+        this.publicKey = $.publicKey;
+        this.reusableConfig = $.reusableConfig;
+        this.subjectConfig = $.subjectConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PublicKeyResponse publicKey;
-        private ReusableConfigWrapperResponse reusableConfig;
-        private SubjectConfigResponse subjectConfig;
+        private CertificateConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateConfigResponse();
         }
 
         public Builder(CertificateConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKey = defaults.publicKey;
-    	      this.reusableConfig = defaults.reusableConfig;
-    	      this.subjectConfig = defaults.subjectConfig;
+            $ = new CertificateConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKey(PublicKeyResponse publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
         }
+
         public Builder reusableConfig(ReusableConfigWrapperResponse reusableConfig) {
-            this.reusableConfig = Objects.requireNonNull(reusableConfig);
+            $.reusableConfig = reusableConfig;
             return this;
         }
+
         public Builder subjectConfig(SubjectConfigResponse subjectConfig) {
-            this.subjectConfig = Objects.requireNonNull(subjectConfig);
+            $.subjectConfig = subjectConfig;
             return this;
-        }        public CertificateConfigResponse build() {
-            return new CertificateConfigResponse(publicKey, reusableConfig, subjectConfig);
+        }
+
+        public CertificateConfigResponse build() {
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            $.reusableConfig = Objects.requireNonNull($.reusableConfig, "expected parameter 'reusableConfig' to be non-null");
+            $.subjectConfig = Objects.requireNonNull($.subjectConfig, "expected parameter 'subjectConfig' to be non-null");
+            return $;
         }
     }
+
 }

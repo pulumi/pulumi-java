@@ -21,7 +21,7 @@ public final class HashResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -32,55 +32,52 @@ public final class HashResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public HashResponse(
-        String type,
-        String value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private HashResponse() {}
 
-    private HashResponse() {
-        this.type = null;
-        this.value = null;
+    private HashResponse(HashResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HashResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private String value;
+        private HashResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HashResponse();
         }
 
         public Builder(HashResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new HashResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public HashResponse build() {
-            return new HashResponse(type, value);
+        }
+
+        public HashResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

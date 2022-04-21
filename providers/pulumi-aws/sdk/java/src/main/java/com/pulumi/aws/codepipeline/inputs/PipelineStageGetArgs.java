@@ -6,7 +6,6 @@ package com.pulumi.aws.codepipeline.inputs;
 import com.pulumi.aws.codepipeline.inputs.PipelineStageActionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class PipelineStageGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="actions", required=true)
-      private final Output<List<PipelineStageActionGetArgs>> actions;
+    private Output<List<PipelineStageActionGetArgs>> actions;
 
     public Output<List<PipelineStageActionGetArgs>> actions() {
         return this.actions;
@@ -32,66 +31,64 @@ public final class PipelineStageGetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public PipelineStageGetArgs(
-        Output<List<PipelineStageActionGetArgs>> actions,
-        Output<String> name) {
-        this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private PipelineStageGetArgs() {}
 
-    private PipelineStageGetArgs() {
-        this.actions = Codegen.empty();
-        this.name = Codegen.empty();
+    private PipelineStageGetArgs(PipelineStageGetArgs $) {
+        this.actions = $.actions;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineStageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<PipelineStageActionGetArgs>> actions;
-        private Output<String> name;
+        private PipelineStageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineStageGetArgs();
         }
 
         public Builder(PipelineStageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.name = defaults.name;
+            $ = new PipelineStageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(Output<List<PipelineStageActionGetArgs>> actions) {
-            this.actions = Objects.requireNonNull(actions);
+            $.actions = actions;
             return this;
         }
+
         public Builder actions(List<PipelineStageActionGetArgs> actions) {
-            this.actions = Output.of(Objects.requireNonNull(actions));
-            return this;
+            return actions(Output.of(actions));
         }
+
         public Builder actions(PipelineStageActionGetArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public PipelineStageGetArgs build() {
-            return new PipelineStageGetArgs(actions, name);
+            return name(Output.of(name));
+        }
+
+        public PipelineStageGetArgs build() {
+            $.actions = Objects.requireNonNull($.actions, "expected parameter 'actions' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

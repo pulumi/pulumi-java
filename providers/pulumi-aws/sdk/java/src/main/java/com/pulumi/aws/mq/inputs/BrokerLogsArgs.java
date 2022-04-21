@@ -5,9 +5,9 @@ package com.pulumi.aws.mq.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BrokerLogsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audit")
-      private final @Nullable Output<Boolean> audit;
+    private @Nullable Output<Boolean> audit;
 
-    public Output<Boolean> audit() {
-        return this.audit == null ? Codegen.empty() : this.audit;
+    public Optional<Output<Boolean>> audit() {
+        return Optional.ofNullable(this.audit);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class BrokerLogsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="general")
-      private final @Nullable Output<Boolean> general;
+    private @Nullable Output<Boolean> general;
 
-    public Output<Boolean> general() {
-        return this.general == null ? Codegen.empty() : this.general;
+    public Optional<Output<Boolean>> general() {
+        return Optional.ofNullable(this.general);
     }
 
-    public BrokerLogsArgs(
-        @Nullable Output<Boolean> audit,
-        @Nullable Output<Boolean> general) {
-        this.audit = audit;
-        this.general = general;
-    }
+    private BrokerLogsArgs() {}
 
-    private BrokerLogsArgs() {
-        this.audit = Codegen.empty();
-        this.general = Codegen.empty();
+    private BrokerLogsArgs(BrokerLogsArgs $) {
+        this.audit = $.audit;
+        this.general = $.general;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BrokerLogsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> audit;
-        private @Nullable Output<Boolean> general;
+        private BrokerLogsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BrokerLogsArgs();
         }
 
         public Builder(BrokerLogsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audit = defaults.audit;
-    	      this.general = defaults.general;
+            $ = new BrokerLogsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audit(@Nullable Output<Boolean> audit) {
-            this.audit = audit;
+            $.audit = audit;
             return this;
         }
-        public Builder audit(@Nullable Boolean audit) {
-            this.audit = Codegen.ofNullable(audit);
-            return this;
+
+        public Builder audit(Boolean audit) {
+            return audit(Output.of(audit));
         }
+
         public Builder general(@Nullable Output<Boolean> general) {
-            this.general = general;
+            $.general = general;
             return this;
         }
-        public Builder general(@Nullable Boolean general) {
-            this.general = Codegen.ofNullable(general);
-            return this;
-        }        public BrokerLogsArgs build() {
-            return new BrokerLogsArgs(audit, general);
+
+        public Builder general(Boolean general) {
+            return general(Output.of(general));
+        }
+
+        public BrokerLogsArgs build() {
+            return $;
         }
     }
+
 }

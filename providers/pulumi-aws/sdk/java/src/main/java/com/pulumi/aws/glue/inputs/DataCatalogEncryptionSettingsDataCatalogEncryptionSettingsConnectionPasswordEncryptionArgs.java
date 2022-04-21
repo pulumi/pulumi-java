@@ -5,10 +5,10 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
      * 
      */
     @Import(name="awsKmsKeyId")
-      private final @Nullable Output<String> awsKmsKeyId;
+    private @Nullable Output<String> awsKmsKeyId;
 
-    public Output<String> awsKmsKeyId() {
-        return this.awsKmsKeyId == null ? Codegen.empty() : this.awsKmsKeyId;
+    public Optional<Output<String>> awsKmsKeyId() {
+        return Optional.ofNullable(this.awsKmsKeyId);
     }
 
     /**
@@ -32,63 +32,59 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
      * 
      */
     @Import(name="returnConnectionPasswordEncrypted", required=true)
-      private final Output<Boolean> returnConnectionPasswordEncrypted;
+    private Output<Boolean> returnConnectionPasswordEncrypted;
 
     public Output<Boolean> returnConnectionPasswordEncrypted() {
         return this.returnConnectionPasswordEncrypted;
     }
 
-    public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs(
-        @Nullable Output<String> awsKmsKeyId,
-        Output<Boolean> returnConnectionPasswordEncrypted) {
-        this.awsKmsKeyId = awsKmsKeyId;
-        this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted, "expected parameter 'returnConnectionPasswordEncrypted' to be non-null");
-    }
+    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs() {}
 
-    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs() {
-        this.awsKmsKeyId = Codegen.empty();
-        this.returnConnectionPasswordEncrypted = Codegen.empty();
+    private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs $) {
+        this.awsKmsKeyId = $.awsKmsKeyId;
+        this.returnConnectionPasswordEncrypted = $.returnConnectionPasswordEncrypted;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> awsKmsKeyId;
-        private Output<Boolean> returnConnectionPasswordEncrypted;
+        private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs();
         }
 
         public Builder(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsKmsKeyId = defaults.awsKmsKeyId;
-    	      this.returnConnectionPasswordEncrypted = defaults.returnConnectionPasswordEncrypted;
+            $ = new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsKmsKeyId(@Nullable Output<String> awsKmsKeyId) {
-            this.awsKmsKeyId = awsKmsKeyId;
+            $.awsKmsKeyId = awsKmsKeyId;
             return this;
         }
-        public Builder awsKmsKeyId(@Nullable String awsKmsKeyId) {
-            this.awsKmsKeyId = Codegen.ofNullable(awsKmsKeyId);
-            return this;
+
+        public Builder awsKmsKeyId(String awsKmsKeyId) {
+            return awsKmsKeyId(Output.of(awsKmsKeyId));
         }
+
         public Builder returnConnectionPasswordEncrypted(Output<Boolean> returnConnectionPasswordEncrypted) {
-            this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted);
+            $.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
             return this;
         }
+
         public Builder returnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
-            this.returnConnectionPasswordEncrypted = Output.of(Objects.requireNonNull(returnConnectionPasswordEncrypted));
-            return this;
-        }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs build() {
-            return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs(awsKmsKeyId, returnConnectionPasswordEncrypted);
+            return returnConnectionPasswordEncrypted(Output.of(returnConnectionPasswordEncrypted));
+        }
+
+        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs build() {
+            $.returnConnectionPasswordEncrypted = Objects.requireNonNull($.returnConnectionPasswordEncrypted, "expected parameter 'returnConnectionPasswordEncrypted' to be non-null");
+            return $;
         }
     }
+
 }

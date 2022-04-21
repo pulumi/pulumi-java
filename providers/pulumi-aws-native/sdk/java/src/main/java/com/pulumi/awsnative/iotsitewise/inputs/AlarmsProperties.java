@@ -23,10 +23,10 @@ public final class AlarmsProperties extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alarmRoleArn")
-      private final @Nullable String alarmRoleArn;
+    private @Nullable String alarmRoleArn;
 
     public Optional<String> alarmRoleArn() {
-        return this.alarmRoleArn == null ? Optional.empty() : Optional.ofNullable(this.alarmRoleArn);
+        return Optional.ofNullable(this.alarmRoleArn);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class AlarmsProperties extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="notificationLambdaArn")
-      private final @Nullable String notificationLambdaArn;
+    private @Nullable String notificationLambdaArn;
 
     public Optional<String> notificationLambdaArn() {
-        return this.notificationLambdaArn == null ? Optional.empty() : Optional.ofNullable(this.notificationLambdaArn);
+        return Optional.ofNullable(this.notificationLambdaArn);
     }
 
-    public AlarmsProperties(
-        @Nullable String alarmRoleArn,
-        @Nullable String notificationLambdaArn) {
-        this.alarmRoleArn = alarmRoleArn;
-        this.notificationLambdaArn = notificationLambdaArn;
-    }
+    private AlarmsProperties() {}
 
-    private AlarmsProperties() {
-        this.alarmRoleArn = null;
-        this.notificationLambdaArn = null;
+    private AlarmsProperties(AlarmsProperties $) {
+        this.alarmRoleArn = $.alarmRoleArn;
+        this.notificationLambdaArn = $.notificationLambdaArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlarmsProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String alarmRoleArn;
-        private @Nullable String notificationLambdaArn;
+        private AlarmsProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlarmsProperties();
         }
 
         public Builder(AlarmsProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmRoleArn = defaults.alarmRoleArn;
-    	      this.notificationLambdaArn = defaults.notificationLambdaArn;
+            $ = new AlarmsProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
-            this.alarmRoleArn = alarmRoleArn;
+            $.alarmRoleArn = alarmRoleArn;
             return this;
         }
+
         public Builder notificationLambdaArn(@Nullable String notificationLambdaArn) {
-            this.notificationLambdaArn = notificationLambdaArn;
+            $.notificationLambdaArn = notificationLambdaArn;
             return this;
-        }        public AlarmsProperties build() {
-            return new AlarmsProperties(alarmRoleArn, notificationLambdaArn);
+        }
+
+        public AlarmsProperties build() {
+            return $;
         }
     }
+
 }

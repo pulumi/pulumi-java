@@ -6,9 +6,9 @@ package com.pulumi.azurenative.blueprint.inputs;
 import com.pulumi.azurenative.blueprint.inputs.SecretValueReferenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ParameterValueArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="reference")
-      private final @Nullable Output<SecretValueReferenceArgs> reference;
+    private @Nullable Output<SecretValueReferenceArgs> reference;
 
-    public Output<SecretValueReferenceArgs> reference() {
-        return this.reference == null ? Codegen.empty() : this.reference;
+    public Optional<Output<SecretValueReferenceArgs>> reference() {
+        return Optional.ofNullable(this.reference);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ParameterValueArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Object> value;
+    private @Nullable Output<Object> value;
 
-    public Output<Object> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Object>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ParameterValueArgs(
-        @Nullable Output<SecretValueReferenceArgs> reference,
-        @Nullable Output<Object> value) {
-        this.reference = reference;
-        this.value = value;
-    }
+    private ParameterValueArgs() {}
 
-    private ParameterValueArgs() {
-        this.reference = Codegen.empty();
-        this.value = Codegen.empty();
+    private ParameterValueArgs(ParameterValueArgs $) {
+        this.reference = $.reference;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecretValueReferenceArgs> reference;
-        private @Nullable Output<Object> value;
+        private ParameterValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterValueArgs();
         }
 
         public Builder(ParameterValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reference = defaults.reference;
-    	      this.value = defaults.value;
+            $ = new ParameterValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder reference(@Nullable Output<SecretValueReferenceArgs> reference) {
-            this.reference = reference;
+            $.reference = reference;
             return this;
         }
-        public Builder reference(@Nullable SecretValueReferenceArgs reference) {
-            this.reference = Codegen.ofNullable(reference);
-            return this;
+
+        public Builder reference(SecretValueReferenceArgs reference) {
+            return reference(Output.of(reference));
         }
+
         public Builder value(@Nullable Output<Object> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Object value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ParameterValueArgs build() {
-            return new ParameterValueArgs(reference, value);
+
+        public Builder value(Object value) {
+            return value(Output.of(value));
+        }
+
+        public ParameterValueArgs build() {
+            return $;
         }
     }
+
 }

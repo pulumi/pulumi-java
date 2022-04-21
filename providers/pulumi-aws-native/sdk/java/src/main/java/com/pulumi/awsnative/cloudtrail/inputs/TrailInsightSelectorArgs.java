@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudtrail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class TrailInsightSelectorArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="insightType")
-      private final @Nullable Output<String> insightType;
+    private @Nullable Output<String> insightType;
 
-    public Output<String> insightType() {
-        return this.insightType == null ? Codegen.empty() : this.insightType;
+    public Optional<Output<String>> insightType() {
+        return Optional.ofNullable(this.insightType);
     }
 
-    public TrailInsightSelectorArgs(@Nullable Output<String> insightType) {
-        this.insightType = insightType;
-    }
+    private TrailInsightSelectorArgs() {}
 
-    private TrailInsightSelectorArgs() {
-        this.insightType = Codegen.empty();
+    private TrailInsightSelectorArgs(TrailInsightSelectorArgs $) {
+        this.insightType = $.insightType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrailInsightSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> insightType;
+        private TrailInsightSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrailInsightSelectorArgs();
         }
 
         public Builder(TrailInsightSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.insightType = defaults.insightType;
+            $ = new TrailInsightSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder insightType(@Nullable Output<String> insightType) {
-            this.insightType = insightType;
+            $.insightType = insightType;
             return this;
         }
-        public Builder insightType(@Nullable String insightType) {
-            this.insightType = Codegen.ofNullable(insightType);
-            return this;
-        }        public TrailInsightSelectorArgs build() {
-            return new TrailInsightSelectorArgs(insightType);
+
+        public Builder insightType(String insightType) {
+            return insightType(Output.of(insightType));
+        }
+
+        public TrailInsightSelectorArgs build() {
+            return $;
         }
     }
+
 }

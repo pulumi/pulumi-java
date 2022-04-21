@@ -23,10 +23,10 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="branch")
-      private final @Nullable String branch;
+    private @Nullable String branch;
 
     public Optional<String> branch() {
-        return this.branch == null ? Optional.empty() : Optional.ofNullable(this.branch);
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="commit")
-      private final @Nullable String commit;
+    private @Nullable String commit;
 
     public Optional<String> commit() {
-        return this.commit == null ? Optional.empty() : Optional.ofNullable(this.commit);
+        return Optional.ofNullable(this.commit);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="semver")
-      private final @Nullable String semver;
+    private @Nullable String semver;
 
     public Optional<String> semver() {
-        return this.semver == null ? Optional.empty() : Optional.ofNullable(this.semver);
+        return Optional.ofNullable(this.semver);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class RepositoryRefDefinitionResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="tag")
-      private final @Nullable String tag;
+    private @Nullable String tag;
 
     public Optional<String> tag() {
-        return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
+        return Optional.ofNullable(this.tag);
     }
 
-    public RepositoryRefDefinitionResponse(
-        @Nullable String branch,
-        @Nullable String commit,
-        @Nullable String semver,
-        @Nullable String tag) {
-        this.branch = branch;
-        this.commit = commit;
-        this.semver = semver;
-        this.tag = tag;
-    }
+    private RepositoryRefDefinitionResponse() {}
 
-    private RepositoryRefDefinitionResponse() {
-        this.branch = null;
-        this.commit = null;
-        this.semver = null;
-        this.tag = null;
+    private RepositoryRefDefinitionResponse(RepositoryRefDefinitionResponse $) {
+        this.branch = $.branch;
+        this.commit = $.commit;
+        this.semver = $.semver;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryRefDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String branch;
-        private @Nullable String commit;
-        private @Nullable String semver;
-        private @Nullable String tag;
+        private RepositoryRefDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryRefDefinitionResponse();
         }
 
         public Builder(RepositoryRefDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.commit = defaults.commit;
-    	      this.semver = defaults.semver;
-    	      this.tag = defaults.tag;
+            $ = new RepositoryRefDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
+
         public Builder commit(@Nullable String commit) {
-            this.commit = commit;
+            $.commit = commit;
             return this;
         }
+
         public Builder semver(@Nullable String semver) {
-            this.semver = semver;
+            $.semver = semver;
             return this;
         }
+
         public Builder tag(@Nullable String tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
-        }        public RepositoryRefDefinitionResponse build() {
-            return new RepositoryRefDefinitionResponse(branch, commit, semver, tag);
+        }
+
+        public RepositoryRefDefinitionResponse build() {
+            return $;
         }
     }
+
 }

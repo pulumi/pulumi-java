@@ -25,7 +25,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principalId", required=true)
-      private final String principalId;
+    private String principalId;
 
     public String principalId() {
         return this.principalId;
@@ -36,7 +36,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tenantId", required=true)
-      private final String tenantId;
+    private String tenantId;
 
     public String tenantId() {
         return this.tenantId;
@@ -47,7 +47,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -58,73 +58,65 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userAssignedIdentities")
-      private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
+    private @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
 
-    public Map<String,UserIdentityPropertiesResponse> userAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
+    public Optional<Map<String,UserIdentityPropertiesResponse>> userAssignedIdentities() {
+        return Optional.ofNullable(this.userAssignedIdentities);
     }
 
-    public IdentityResponse(
-        String principalId,
-        String tenantId,
-        String type,
-        @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-        this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.userAssignedIdentities = userAssignedIdentities;
-    }
+    private IdentityResponse() {}
 
-    private IdentityResponse() {
-        this.principalId = null;
-        this.tenantId = null;
-        this.type = null;
-        this.userAssignedIdentities = Map.of();
+    private IdentityResponse(IdentityResponse $) {
+        this.principalId = $.principalId;
+        this.tenantId = $.tenantId;
+        this.type = $.type;
+        this.userAssignedIdentities = $.userAssignedIdentities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String principalId;
-        private String tenantId;
-        private String type;
-        private @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
+        private IdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityResponse();
         }
 
         public Builder(IdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.principalId = defaults.principalId;
-    	      this.tenantId = defaults.tenantId;
-    	      this.type = defaults.type;
-    	      this.userAssignedIdentities = defaults.userAssignedIdentities;
+            $ = new IdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder principalId(String principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder tenantId(String tenantId) {
-            this.tenantId = Objects.requireNonNull(tenantId);
+            $.tenantId = tenantId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userAssignedIdentities(@Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities) {
-            this.userAssignedIdentities = userAssignedIdentities;
+            $.userAssignedIdentities = userAssignedIdentities;
             return this;
-        }        public IdentityResponse build() {
-            return new IdentityResponse(principalId, tenantId, type, userAssignedIdentities);
+        }
+
+        public IdentityResponse build() {
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            $.tenantId = Objects.requireNonNull($.tenantId, "expected parameter 'tenantId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

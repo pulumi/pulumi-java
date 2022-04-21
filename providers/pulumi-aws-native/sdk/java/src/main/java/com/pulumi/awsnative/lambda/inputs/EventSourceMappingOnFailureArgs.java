@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EventSourceMappingOnFailureArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
-    public EventSourceMappingOnFailureArgs(@Nullable Output<String> destination) {
-        this.destination = destination;
-    }
+    private EventSourceMappingOnFailureArgs() {}
 
-    private EventSourceMappingOnFailureArgs() {
-        this.destination = Codegen.empty();
+    private EventSourceMappingOnFailureArgs(EventSourceMappingOnFailureArgs $) {
+        this.destination = $.destination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingOnFailureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destination;
+        private EventSourceMappingOnFailureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingOnFailureArgs();
         }
 
         public Builder(EventSourceMappingOnFailureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
+            $ = new EventSourceMappingOnFailureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
-        }        public EventSourceMappingOnFailureArgs build() {
-            return new EventSourceMappingOnFailureArgs(destination);
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
+        }
+
+        public EventSourceMappingOnFailureArgs build() {
+            return $;
         }
     }
+
 }

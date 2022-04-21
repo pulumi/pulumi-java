@@ -23,7 +23,7 @@ public final class GoogleIamV1__AuditConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="auditLogConfigs", required=true)
-      private final List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs;
+    private List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs;
 
     public List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
@@ -34,58 +34,56 @@ public final class GoogleIamV1__AuditConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public GoogleIamV1__AuditConfigResponse(
-        List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs,
-        String service) {
-        this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private GoogleIamV1__AuditConfigResponse() {}
 
-    private GoogleIamV1__AuditConfigResponse() {
-        this.auditLogConfigs = List.of();
-        this.service = null;
+    private GoogleIamV1__AuditConfigResponse(GoogleIamV1__AuditConfigResponse $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleIamV1__AuditConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs;
-        private String service;
+        private GoogleIamV1__AuditConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleIamV1__AuditConfigResponse();
         }
 
         public Builder(GoogleIamV1__AuditConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.service = defaults.service;
+            $ = new GoogleIamV1__AuditConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs) {
-            this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
+
         public Builder auditLogConfigs(GoogleIamV1__AuditLogConfigResponse... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public GoogleIamV1__AuditConfigResponse build() {
-            return new GoogleIamV1__AuditConfigResponse(auditLogConfigs, service);
+        }
+
+        public GoogleIamV1__AuditConfigResponse build() {
+            $.auditLogConfigs = Objects.requireNonNull($.auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,11 +8,11 @@ import com.pulumi.awsnative.databrew.inputs.RulesetSubstitutionValueArgs;
 import com.pulumi.awsnative.databrew.inputs.RulesetThresholdArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,24 +25,24 @@ public final class RulesetRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final RulesetRuleArgs Empty = new RulesetRuleArgs();
 
     @Import(name="checkExpression", required=true)
-      private final Output<String> checkExpression;
+    private Output<String> checkExpression;
 
     public Output<String> checkExpression() {
         return this.checkExpression;
     }
 
     @Import(name="columnSelectors")
-      private final @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors;
+    private @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors;
 
-    public Output<List<RulesetColumnSelectorArgs>> columnSelectors() {
-        return this.columnSelectors == null ? Codegen.empty() : this.columnSelectors;
+    public Optional<Output<List<RulesetColumnSelectorArgs>>> columnSelectors() {
+        return Optional.ofNullable(this.columnSelectors);
     }
 
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -50,135 +50,122 @@ public final class RulesetRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
     @Import(name="substitutionMap")
-      private final @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap;
+    private @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap;
 
-    public Output<List<RulesetSubstitutionValueArgs>> substitutionMap() {
-        return this.substitutionMap == null ? Codegen.empty() : this.substitutionMap;
+    public Optional<Output<List<RulesetSubstitutionValueArgs>>> substitutionMap() {
+        return Optional.ofNullable(this.substitutionMap);
     }
 
     @Import(name="threshold")
-      private final @Nullable Output<RulesetThresholdArgs> threshold;
+    private @Nullable Output<RulesetThresholdArgs> threshold;
 
-    public Output<RulesetThresholdArgs> threshold() {
-        return this.threshold == null ? Codegen.empty() : this.threshold;
+    public Optional<Output<RulesetThresholdArgs>> threshold() {
+        return Optional.ofNullable(this.threshold);
     }
 
-    public RulesetRuleArgs(
-        Output<String> checkExpression,
-        @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors,
-        @Nullable Output<Boolean> disabled,
-        Output<String> name,
-        @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap,
-        @Nullable Output<RulesetThresholdArgs> threshold) {
-        this.checkExpression = Objects.requireNonNull(checkExpression, "expected parameter 'checkExpression' to be non-null");
-        this.columnSelectors = columnSelectors;
-        this.disabled = disabled;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.substitutionMap = substitutionMap;
-        this.threshold = threshold;
-    }
+    private RulesetRuleArgs() {}
 
-    private RulesetRuleArgs() {
-        this.checkExpression = Codegen.empty();
-        this.columnSelectors = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.name = Codegen.empty();
-        this.substitutionMap = Codegen.empty();
-        this.threshold = Codegen.empty();
+    private RulesetRuleArgs(RulesetRuleArgs $) {
+        this.checkExpression = $.checkExpression;
+        this.columnSelectors = $.columnSelectors;
+        this.disabled = $.disabled;
+        this.name = $.name;
+        this.substitutionMap = $.substitutionMap;
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesetRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> checkExpression;
-        private @Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors;
-        private @Nullable Output<Boolean> disabled;
-        private Output<String> name;
-        private @Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap;
-        private @Nullable Output<RulesetThresholdArgs> threshold;
+        private RulesetRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesetRuleArgs();
         }
 
         public Builder(RulesetRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkExpression = defaults.checkExpression;
-    	      this.columnSelectors = defaults.columnSelectors;
-    	      this.disabled = defaults.disabled;
-    	      this.name = defaults.name;
-    	      this.substitutionMap = defaults.substitutionMap;
-    	      this.threshold = defaults.threshold;
+            $ = new RulesetRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checkExpression(Output<String> checkExpression) {
-            this.checkExpression = Objects.requireNonNull(checkExpression);
+            $.checkExpression = checkExpression;
             return this;
         }
+
         public Builder checkExpression(String checkExpression) {
-            this.checkExpression = Output.of(Objects.requireNonNull(checkExpression));
-            return this;
+            return checkExpression(Output.of(checkExpression));
         }
+
         public Builder columnSelectors(@Nullable Output<List<RulesetColumnSelectorArgs>> columnSelectors) {
-            this.columnSelectors = columnSelectors;
+            $.columnSelectors = columnSelectors;
             return this;
         }
-        public Builder columnSelectors(@Nullable List<RulesetColumnSelectorArgs> columnSelectors) {
-            this.columnSelectors = Codegen.ofNullable(columnSelectors);
-            return this;
+
+        public Builder columnSelectors(List<RulesetColumnSelectorArgs> columnSelectors) {
+            return columnSelectors(Output.of(columnSelectors));
         }
+
         public Builder columnSelectors(RulesetColumnSelectorArgs... columnSelectors) {
             return columnSelectors(List.of(columnSelectors));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder substitutionMap(@Nullable Output<List<RulesetSubstitutionValueArgs>> substitutionMap) {
-            this.substitutionMap = substitutionMap;
+            $.substitutionMap = substitutionMap;
             return this;
         }
-        public Builder substitutionMap(@Nullable List<RulesetSubstitutionValueArgs> substitutionMap) {
-            this.substitutionMap = Codegen.ofNullable(substitutionMap);
-            return this;
+
+        public Builder substitutionMap(List<RulesetSubstitutionValueArgs> substitutionMap) {
+            return substitutionMap(Output.of(substitutionMap));
         }
+
         public Builder substitutionMap(RulesetSubstitutionValueArgs... substitutionMap) {
             return substitutionMap(List.of(substitutionMap));
         }
+
         public Builder threshold(@Nullable Output<RulesetThresholdArgs> threshold) {
-            this.threshold = threshold;
+            $.threshold = threshold;
             return this;
         }
-        public Builder threshold(@Nullable RulesetThresholdArgs threshold) {
-            this.threshold = Codegen.ofNullable(threshold);
-            return this;
-        }        public RulesetRuleArgs build() {
-            return new RulesetRuleArgs(checkExpression, columnSelectors, disabled, name, substitutionMap, threshold);
+
+        public Builder threshold(RulesetThresholdArgs threshold) {
+            return threshold(Output.of(threshold));
+        }
+
+        public RulesetRuleArgs build() {
+            $.checkExpression = Objects.requireNonNull($.checkExpression, "expected parameter 'checkExpression' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

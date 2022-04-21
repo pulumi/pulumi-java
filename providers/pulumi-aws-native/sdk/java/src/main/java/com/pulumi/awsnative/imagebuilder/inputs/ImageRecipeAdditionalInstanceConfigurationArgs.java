@@ -6,9 +6,9 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.inputs.ImageRecipeSystemsManagerAgentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends com.pu
      * 
      */
     @Import(name="systemsManagerAgent")
-      private final @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
+    private @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
 
-    public Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent() {
-        return this.systemsManagerAgent == null ? Codegen.empty() : this.systemsManagerAgent;
+    public Optional<Output<ImageRecipeSystemsManagerAgentArgs>> systemsManagerAgent() {
+        return Optional.ofNullable(this.systemsManagerAgent);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends com.pu
      * 
      */
     @Import(name="userDataOverride")
-      private final @Nullable Output<String> userDataOverride;
+    private @Nullable Output<String> userDataOverride;
 
-    public Output<String> userDataOverride() {
-        return this.userDataOverride == null ? Codegen.empty() : this.userDataOverride;
+    public Optional<Output<String>> userDataOverride() {
+        return Optional.ofNullable(this.userDataOverride);
     }
 
-    public ImageRecipeAdditionalInstanceConfigurationArgs(
-        @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent,
-        @Nullable Output<String> userDataOverride) {
-        this.systemsManagerAgent = systemsManagerAgent;
-        this.userDataOverride = userDataOverride;
-    }
+    private ImageRecipeAdditionalInstanceConfigurationArgs() {}
 
-    private ImageRecipeAdditionalInstanceConfigurationArgs() {
-        this.systemsManagerAgent = Codegen.empty();
-        this.userDataOverride = Codegen.empty();
+    private ImageRecipeAdditionalInstanceConfigurationArgs(ImageRecipeAdditionalInstanceConfigurationArgs $) {
+        this.systemsManagerAgent = $.systemsManagerAgent;
+        this.userDataOverride = $.userDataOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRecipeAdditionalInstanceConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
-        private @Nullable Output<String> userDataOverride;
+        private ImageRecipeAdditionalInstanceConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRecipeAdditionalInstanceConfigurationArgs();
         }
 
         public Builder(ImageRecipeAdditionalInstanceConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.systemsManagerAgent = defaults.systemsManagerAgent;
-    	      this.userDataOverride = defaults.userDataOverride;
+            $ = new ImageRecipeAdditionalInstanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder systemsManagerAgent(@Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent) {
-            this.systemsManagerAgent = systemsManagerAgent;
+            $.systemsManagerAgent = systemsManagerAgent;
             return this;
         }
-        public Builder systemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgentArgs systemsManagerAgent) {
-            this.systemsManagerAgent = Codegen.ofNullable(systemsManagerAgent);
-            return this;
+
+        public Builder systemsManagerAgent(ImageRecipeSystemsManagerAgentArgs systemsManagerAgent) {
+            return systemsManagerAgent(Output.of(systemsManagerAgent));
         }
+
         public Builder userDataOverride(@Nullable Output<String> userDataOverride) {
-            this.userDataOverride = userDataOverride;
+            $.userDataOverride = userDataOverride;
             return this;
         }
-        public Builder userDataOverride(@Nullable String userDataOverride) {
-            this.userDataOverride = Codegen.ofNullable(userDataOverride);
-            return this;
-        }        public ImageRecipeAdditionalInstanceConfigurationArgs build() {
-            return new ImageRecipeAdditionalInstanceConfigurationArgs(systemsManagerAgent, userDataOverride);
+
+        public Builder userDataOverride(String userDataOverride) {
+            return userDataOverride(Output.of(userDataOverride));
+        }
+
+        public ImageRecipeAdditionalInstanceConfigurationArgs build() {
+            return $;
         }
     }
+
 }

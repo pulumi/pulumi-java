@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs;
 import com.pulumi.kubernetes.core_v1.inputs.ResourceFieldSelectorArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DownwardAPIVolumeFileArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="fieldRef")
-      private final @Nullable Output<ObjectFieldSelectorArgs> fieldRef;
+    private @Nullable Output<ObjectFieldSelectorArgs> fieldRef;
 
-    public Output<ObjectFieldSelectorArgs> fieldRef() {
-        return this.fieldRef == null ? Codegen.empty() : this.fieldRef;
+    public Optional<Output<ObjectFieldSelectorArgs>> fieldRef() {
+        return Optional.ofNullable(this.fieldRef);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DownwardAPIVolumeFileArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Integer> mode;
+    private @Nullable Output<Integer> mode;
 
-    public Output<Integer> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Integer>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class DownwardAPIVolumeFileArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -60,89 +60,79 @@ public final class DownwardAPIVolumeFileArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceFieldRef")
-      private final @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef;
+    private @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef;
 
-    public Output<ResourceFieldSelectorArgs> resourceFieldRef() {
-        return this.resourceFieldRef == null ? Codegen.empty() : this.resourceFieldRef;
+    public Optional<Output<ResourceFieldSelectorArgs>> resourceFieldRef() {
+        return Optional.ofNullable(this.resourceFieldRef);
     }
 
-    public DownwardAPIVolumeFileArgs(
-        @Nullable Output<ObjectFieldSelectorArgs> fieldRef,
-        @Nullable Output<Integer> mode,
-        Output<String> path,
-        @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef) {
-        this.fieldRef = fieldRef;
-        this.mode = mode;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.resourceFieldRef = resourceFieldRef;
-    }
+    private DownwardAPIVolumeFileArgs() {}
 
-    private DownwardAPIVolumeFileArgs() {
-        this.fieldRef = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.path = Codegen.empty();
-        this.resourceFieldRef = Codegen.empty();
+    private DownwardAPIVolumeFileArgs(DownwardAPIVolumeFileArgs $) {
+        this.fieldRef = $.fieldRef;
+        this.mode = $.mode;
+        this.path = $.path;
+        this.resourceFieldRef = $.resourceFieldRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DownwardAPIVolumeFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ObjectFieldSelectorArgs> fieldRef;
-        private @Nullable Output<Integer> mode;
-        private Output<String> path;
-        private @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef;
+        private DownwardAPIVolumeFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DownwardAPIVolumeFileArgs();
         }
 
         public Builder(DownwardAPIVolumeFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldRef = defaults.fieldRef;
-    	      this.mode = defaults.mode;
-    	      this.path = defaults.path;
-    	      this.resourceFieldRef = defaults.resourceFieldRef;
+            $ = new DownwardAPIVolumeFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldRef(@Nullable Output<ObjectFieldSelectorArgs> fieldRef) {
-            this.fieldRef = fieldRef;
+            $.fieldRef = fieldRef;
             return this;
         }
-        public Builder fieldRef(@Nullable ObjectFieldSelectorArgs fieldRef) {
-            this.fieldRef = Codegen.ofNullable(fieldRef);
-            return this;
+
+        public Builder fieldRef(ObjectFieldSelectorArgs fieldRef) {
+            return fieldRef(Output.of(fieldRef));
         }
+
         public Builder mode(@Nullable Output<Integer> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Integer mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Integer mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder resourceFieldRef(@Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef) {
-            this.resourceFieldRef = resourceFieldRef;
+            $.resourceFieldRef = resourceFieldRef;
             return this;
         }
-        public Builder resourceFieldRef(@Nullable ResourceFieldSelectorArgs resourceFieldRef) {
-            this.resourceFieldRef = Codegen.ofNullable(resourceFieldRef);
-            return this;
-        }        public DownwardAPIVolumeFileArgs build() {
-            return new DownwardAPIVolumeFileArgs(fieldRef, mode, path, resourceFieldRef);
+
+        public Builder resourceFieldRef(ResourceFieldSelectorArgs resourceFieldRef) {
+            return resourceFieldRef(Output.of(resourceFieldRef));
+        }
+
+        public DownwardAPIVolumeFileArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

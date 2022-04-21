@@ -18,48 +18,49 @@ public final class ResponsePolicyRuleLocalDataResponse extends com.pulumi.resour
      * 
      */
     @Import(name="localDatas", required=true)
-      private final List<ResourceRecordSetResponse> localDatas;
+    private List<ResourceRecordSetResponse> localDatas;
 
     public List<ResourceRecordSetResponse> localDatas() {
         return this.localDatas;
     }
 
-    public ResponsePolicyRuleLocalDataResponse(List<ResourceRecordSetResponse> localDatas) {
-        this.localDatas = Objects.requireNonNull(localDatas, "expected parameter 'localDatas' to be non-null");
-    }
+    private ResponsePolicyRuleLocalDataResponse() {}
 
-    private ResponsePolicyRuleLocalDataResponse() {
-        this.localDatas = List.of();
+    private ResponsePolicyRuleLocalDataResponse(ResponsePolicyRuleLocalDataResponse $) {
+        this.localDatas = $.localDatas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePolicyRuleLocalDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ResourceRecordSetResponse> localDatas;
+        private ResponsePolicyRuleLocalDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePolicyRuleLocalDataResponse();
         }
 
         public Builder(ResponsePolicyRuleLocalDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localDatas = defaults.localDatas;
+            $ = new ResponsePolicyRuleLocalDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder localDatas(List<ResourceRecordSetResponse> localDatas) {
-            this.localDatas = Objects.requireNonNull(localDatas);
+            $.localDatas = localDatas;
             return this;
         }
+
         public Builder localDatas(ResourceRecordSetResponse... localDatas) {
             return localDatas(List.of(localDatas));
-        }        public ResponsePolicyRuleLocalDataResponse build() {
-            return new ResponsePolicyRuleLocalDataResponse(localDatas);
+        }
+
+        public ResponsePolicyRuleLocalDataResponse build() {
+            $.localDatas = Objects.requireNonNull($.localDatas, "expected parameter 'localDatas' to be non-null");
+            return $;
         }
     }
+
 }

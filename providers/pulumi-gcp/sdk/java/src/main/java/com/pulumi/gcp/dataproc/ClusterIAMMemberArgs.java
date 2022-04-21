@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataproc;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.ClusterIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cluster", required=true)
-      private final Output<String> cluster;
+    private Output<String> cluster;
 
     public Output<String> cluster() {
         return this.cluster;
     }
 
     @Import(name="condition")
-      private final @Nullable Output<ClusterIAMMemberConditionArgs> condition;
+    private @Nullable Output<ClusterIAMMemberConditionArgs> condition;
 
-    public Output<ClusterIAMMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ClusterIAMMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -47,10 +47,10 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -72,115 +72,101 @@ public final class ClusterIAMMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public ClusterIAMMemberArgs(
-        Output<String> cluster,
-        @Nullable Output<ClusterIAMMemberConditionArgs> condition,
-        Output<String> member,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> role) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.region = region;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private ClusterIAMMemberArgs() {}
 
-    private ClusterIAMMemberArgs() {
-        this.cluster = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.role = Codegen.empty();
+    private ClusterIAMMemberArgs(ClusterIAMMemberArgs $) {
+        this.cluster = $.cluster;
+        this.condition = $.condition;
+        this.member = $.member;
+        this.project = $.project;
+        this.region = $.region;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterIAMMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cluster;
-        private @Nullable Output<ClusterIAMMemberConditionArgs> condition;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> role;
+        private ClusterIAMMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterIAMMemberArgs();
         }
 
         public Builder(ClusterIAMMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.role = defaults.role;
+            $ = new ClusterIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(Output<String> cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
         }
+
         public Builder cluster(String cluster) {
-            this.cluster = Output.of(Objects.requireNonNull(cluster));
-            return this;
+            return cluster(Output.of(cluster));
         }
+
         public Builder condition(@Nullable Output<ClusterIAMMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ClusterIAMMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ClusterIAMMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public ClusterIAMMemberArgs build() {
-            return new ClusterIAMMemberArgs(cluster, condition, member, project, region, role);
+            return role(Output.of(role));
+        }
+
+        public ClusterIAMMemberArgs build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

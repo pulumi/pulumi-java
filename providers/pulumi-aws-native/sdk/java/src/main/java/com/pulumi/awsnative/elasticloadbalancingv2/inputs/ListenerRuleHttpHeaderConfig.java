@@ -16,65 +16,61 @@ public final class ListenerRuleHttpHeaderConfig extends com.pulumi.resources.Inv
     public static final ListenerRuleHttpHeaderConfig Empty = new ListenerRuleHttpHeaderConfig();
 
     @Import(name="httpHeaderName")
-      private final @Nullable String httpHeaderName;
+    private @Nullable String httpHeaderName;
 
     public Optional<String> httpHeaderName() {
-        return this.httpHeaderName == null ? Optional.empty() : Optional.ofNullable(this.httpHeaderName);
+        return Optional.ofNullable(this.httpHeaderName);
     }
 
     @Import(name="values")
-      private final @Nullable List<String> values;
+    private @Nullable List<String> values;
 
-    public List<String> values() {
-        return this.values == null ? List.of() : this.values;
+    public Optional<List<String>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public ListenerRuleHttpHeaderConfig(
-        @Nullable String httpHeaderName,
-        @Nullable List<String> values) {
-        this.httpHeaderName = httpHeaderName;
-        this.values = values;
-    }
+    private ListenerRuleHttpHeaderConfig() {}
 
-    private ListenerRuleHttpHeaderConfig() {
-        this.httpHeaderName = null;
-        this.values = List.of();
+    private ListenerRuleHttpHeaderConfig(ListenerRuleHttpHeaderConfig $) {
+        this.httpHeaderName = $.httpHeaderName;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerRuleHttpHeaderConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String httpHeaderName;
-        private @Nullable List<String> values;
+        private ListenerRuleHttpHeaderConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerRuleHttpHeaderConfig();
         }
 
         public Builder(ListenerRuleHttpHeaderConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpHeaderName = defaults.httpHeaderName;
-    	      this.values = defaults.values;
+            $ = new ListenerRuleHttpHeaderConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder httpHeaderName(@Nullable String httpHeaderName) {
-            this.httpHeaderName = httpHeaderName;
+            $.httpHeaderName = httpHeaderName;
             return this;
         }
+
         public Builder values(@Nullable List<String> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public ListenerRuleHttpHeaderConfig build() {
-            return new ListenerRuleHttpHeaderConfig(httpHeaderName, values);
+        }
+
+        public ListenerRuleHttpHeaderConfig build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class RuntimeInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diagnosticOutputUri", required=true)
-      private final String diagnosticOutputUri;
+    private String diagnosticOutputUri;
 
     public String diagnosticOutputUri() {
         return this.diagnosticOutputUri;
@@ -33,7 +33,7 @@ public final class RuntimeInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpoints", required=true)
-      private final Map<String,String> endpoints;
+    private Map<String,String> endpoints;
 
     public Map<String,String> endpoints() {
         return this.endpoints;
@@ -44,64 +44,59 @@ public final class RuntimeInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputUri", required=true)
-      private final String outputUri;
+    private String outputUri;
 
     public String outputUri() {
         return this.outputUri;
     }
 
-    public RuntimeInfoResponse(
-        String diagnosticOutputUri,
-        Map<String,String> endpoints,
-        String outputUri) {
-        this.diagnosticOutputUri = Objects.requireNonNull(diagnosticOutputUri, "expected parameter 'diagnosticOutputUri' to be non-null");
-        this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
-        this.outputUri = Objects.requireNonNull(outputUri, "expected parameter 'outputUri' to be non-null");
-    }
+    private RuntimeInfoResponse() {}
 
-    private RuntimeInfoResponse() {
-        this.diagnosticOutputUri = null;
-        this.endpoints = Map.of();
-        this.outputUri = null;
+    private RuntimeInfoResponse(RuntimeInfoResponse $) {
+        this.diagnosticOutputUri = $.diagnosticOutputUri;
+        this.endpoints = $.endpoints;
+        this.outputUri = $.outputUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diagnosticOutputUri;
-        private Map<String,String> endpoints;
-        private String outputUri;
+        private RuntimeInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeInfoResponse();
         }
 
         public Builder(RuntimeInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diagnosticOutputUri = defaults.diagnosticOutputUri;
-    	      this.endpoints = defaults.endpoints;
-    	      this.outputUri = defaults.outputUri;
+            $ = new RuntimeInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diagnosticOutputUri(String diagnosticOutputUri) {
-            this.diagnosticOutputUri = Objects.requireNonNull(diagnosticOutputUri);
+            $.diagnosticOutputUri = diagnosticOutputUri;
             return this;
         }
+
         public Builder endpoints(Map<String,String> endpoints) {
-            this.endpoints = Objects.requireNonNull(endpoints);
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder outputUri(String outputUri) {
-            this.outputUri = Objects.requireNonNull(outputUri);
+            $.outputUri = outputUri;
             return this;
-        }        public RuntimeInfoResponse build() {
-            return new RuntimeInfoResponse(diagnosticOutputUri, endpoints, outputUri);
+        }
+
+        public RuntimeInfoResponse build() {
+            $.diagnosticOutputUri = Objects.requireNonNull($.diagnosticOutputUri, "expected parameter 'diagnosticOutputUri' to be non-null");
+            $.endpoints = Objects.requireNonNull($.endpoints, "expected parameter 'endpoints' to be non-null");
+            $.outputUri = Objects.requireNonNull($.outputUri, "expected parameter 'outputUri' to be non-null");
+            return $;
         }
     }
+
 }

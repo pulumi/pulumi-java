@@ -25,65 +25,61 @@ public final class RuleGroupJsonMatchPattern extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="all")
-      private final @Nullable Object all;
+    private @Nullable Object all;
 
     public Optional<Object> all() {
-        return this.all == null ? Optional.empty() : Optional.ofNullable(this.all);
+        return Optional.ofNullable(this.all);
     }
 
     @Import(name="includedPaths")
-      private final @Nullable List<String> includedPaths;
+    private @Nullable List<String> includedPaths;
 
-    public List<String> includedPaths() {
-        return this.includedPaths == null ? List.of() : this.includedPaths;
+    public Optional<List<String>> includedPaths() {
+        return Optional.ofNullable(this.includedPaths);
     }
 
-    public RuleGroupJsonMatchPattern(
-        @Nullable Object all,
-        @Nullable List<String> includedPaths) {
-        this.all = all;
-        this.includedPaths = includedPaths;
-    }
+    private RuleGroupJsonMatchPattern() {}
 
-    private RuleGroupJsonMatchPattern() {
-        this.all = null;
-        this.includedPaths = List.of();
+    private RuleGroupJsonMatchPattern(RuleGroupJsonMatchPattern $) {
+        this.all = $.all;
+        this.includedPaths = $.includedPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupJsonMatchPattern defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object all;
-        private @Nullable List<String> includedPaths;
+        private RuleGroupJsonMatchPattern $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupJsonMatchPattern();
         }
 
         public Builder(RuleGroupJsonMatchPattern defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.all = defaults.all;
-    	      this.includedPaths = defaults.includedPaths;
+            $ = new RuleGroupJsonMatchPattern(Objects.requireNonNull(defaults));
         }
 
         public Builder all(@Nullable Object all) {
-            this.all = all;
+            $.all = all;
             return this;
         }
+
         public Builder includedPaths(@Nullable List<String> includedPaths) {
-            this.includedPaths = includedPaths;
+            $.includedPaths = includedPaths;
             return this;
         }
+
         public Builder includedPaths(String... includedPaths) {
             return includedPaths(List.of(includedPaths));
-        }        public RuleGroupJsonMatchPattern build() {
-            return new RuleGroupJsonMatchPattern(all, includedPaths);
+        }
+
+        public RuleGroupJsonMatchPattern build() {
+            return $;
         }
     }
+
 }

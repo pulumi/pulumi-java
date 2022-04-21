@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DicomStoreStreamConfigBigqueryDestinationGetArgs extends com.
      * 
      */
     @Import(name="tableUri", required=true)
-      private final Output<String> tableUri;
+    private Output<String> tableUri;
 
     public Output<String> tableUri() {
         return this.tableUri;
     }
 
-    public DicomStoreStreamConfigBigqueryDestinationGetArgs(Output<String> tableUri) {
-        this.tableUri = Objects.requireNonNull(tableUri, "expected parameter 'tableUri' to be non-null");
-    }
+    private DicomStoreStreamConfigBigqueryDestinationGetArgs() {}
 
-    private DicomStoreStreamConfigBigqueryDestinationGetArgs() {
-        this.tableUri = Codegen.empty();
+    private DicomStoreStreamConfigBigqueryDestinationGetArgs(DicomStoreStreamConfigBigqueryDestinationGetArgs $) {
+        this.tableUri = $.tableUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DicomStoreStreamConfigBigqueryDestinationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> tableUri;
+        private DicomStoreStreamConfigBigqueryDestinationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DicomStoreStreamConfigBigqueryDestinationGetArgs();
         }
 
         public Builder(DicomStoreStreamConfigBigqueryDestinationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tableUri = defaults.tableUri;
+            $ = new DicomStoreStreamConfigBigqueryDestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tableUri(Output<String> tableUri) {
-            this.tableUri = Objects.requireNonNull(tableUri);
+            $.tableUri = tableUri;
             return this;
         }
+
         public Builder tableUri(String tableUri) {
-            this.tableUri = Output.of(Objects.requireNonNull(tableUri));
-            return this;
-        }        public DicomStoreStreamConfigBigqueryDestinationGetArgs build() {
-            return new DicomStoreStreamConfigBigqueryDestinationGetArgs(tableUri);
+            return tableUri(Output.of(tableUri));
+        }
+
+        public DicomStoreStreamConfigBigqueryDestinationGetArgs build() {
+            $.tableUri = Objects.requireNonNull($.tableUri, "expected parameter 'tableUri' to be non-null");
+            return $;
         }
     }
+
 }

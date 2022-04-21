@@ -14,48 +14,49 @@ public final class BucketCorsConfiguration extends com.pulumi.resources.InvokeAr
     public static final BucketCorsConfiguration Empty = new BucketCorsConfiguration();
 
     @Import(name="corsRules", required=true)
-      private final List<BucketCorsRule> corsRules;
+    private List<BucketCorsRule> corsRules;
 
     public List<BucketCorsRule> corsRules() {
         return this.corsRules;
     }
 
-    public BucketCorsConfiguration(List<BucketCorsRule> corsRules) {
-        this.corsRules = Objects.requireNonNull(corsRules, "expected parameter 'corsRules' to be non-null");
-    }
+    private BucketCorsConfiguration() {}
 
-    private BucketCorsConfiguration() {
-        this.corsRules = List.of();
+    private BucketCorsConfiguration(BucketCorsConfiguration $) {
+        this.corsRules = $.corsRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketCorsConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BucketCorsRule> corsRules;
+        private BucketCorsConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketCorsConfiguration();
         }
 
         public Builder(BucketCorsConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.corsRules = defaults.corsRules;
+            $ = new BucketCorsConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder corsRules(List<BucketCorsRule> corsRules) {
-            this.corsRules = Objects.requireNonNull(corsRules);
+            $.corsRules = corsRules;
             return this;
         }
+
         public Builder corsRules(BucketCorsRule... corsRules) {
             return corsRules(List.of(corsRules));
-        }        public BucketCorsConfiguration build() {
-            return new BucketCorsConfiguration(corsRules);
+        }
+
+        public BucketCorsConfiguration build() {
+            $.corsRules = Objects.requireNonNull($.corsRules, "expected parameter 'corsRules' to be non-null");
+            return $;
         }
     }
+
 }

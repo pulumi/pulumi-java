@@ -22,7 +22,7 @@ public final class BackupRetentionSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retainedBackups", required=true)
-      private final Integer retainedBackups;
+    private Integer retainedBackups;
 
     public Integer retainedBackups() {
         return this.retainedBackups;
@@ -33,55 +33,52 @@ public final class BackupRetentionSettingsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionUnit", required=true)
-      private final String retentionUnit;
+    private String retentionUnit;
 
     public String retentionUnit() {
         return this.retentionUnit;
     }
 
-    public BackupRetentionSettingsResponse(
-        Integer retainedBackups,
-        String retentionUnit) {
-        this.retainedBackups = Objects.requireNonNull(retainedBackups, "expected parameter 'retainedBackups' to be non-null");
-        this.retentionUnit = Objects.requireNonNull(retentionUnit, "expected parameter 'retentionUnit' to be non-null");
-    }
+    private BackupRetentionSettingsResponse() {}
 
-    private BackupRetentionSettingsResponse() {
-        this.retainedBackups = null;
-        this.retentionUnit = null;
+    private BackupRetentionSettingsResponse(BackupRetentionSettingsResponse $) {
+        this.retainedBackups = $.retainedBackups;
+        this.retentionUnit = $.retentionUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupRetentionSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer retainedBackups;
-        private String retentionUnit;
+        private BackupRetentionSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupRetentionSettingsResponse();
         }
 
         public Builder(BackupRetentionSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retainedBackups = defaults.retainedBackups;
-    	      this.retentionUnit = defaults.retentionUnit;
+            $ = new BackupRetentionSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder retainedBackups(Integer retainedBackups) {
-            this.retainedBackups = Objects.requireNonNull(retainedBackups);
+            $.retainedBackups = retainedBackups;
             return this;
         }
+
         public Builder retentionUnit(String retentionUnit) {
-            this.retentionUnit = Objects.requireNonNull(retentionUnit);
+            $.retentionUnit = retentionUnit;
             return this;
-        }        public BackupRetentionSettingsResponse build() {
-            return new BackupRetentionSettingsResponse(retainedBackups, retentionUnit);
+        }
+
+        public BackupRetentionSettingsResponse build() {
+            $.retainedBackups = Objects.requireNonNull($.retainedBackups, "expected parameter 'retainedBackups' to be non-null");
+            $.retentionUnit = Objects.requireNonNull($.retentionUnit, "expected parameter 'retentionUnit' to be non-null");
+            return $;
         }
     }
+
 }
